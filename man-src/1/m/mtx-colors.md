@@ -15,8 +15,8 @@ description: "mtx-colors – ConTeXt Color Management"
 <p> <code>ConTeXt Color Management</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;table</code></p>
-<dd> show icc table</dl>
+<dt><code>&#8211;table</code></dt>
+<dd> show icc table</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

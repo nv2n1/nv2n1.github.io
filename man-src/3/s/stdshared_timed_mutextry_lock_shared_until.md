@@ -12,7 +12,6 @@ std::shared_timed_mutex::try_lock_shared_until - std::shared_timed_mutex::try_lo
 
 <pre><code>template &lt;class Clock, class Duration&gt;
 (since C++ 14)
-
     bool try_lock_shared_until(const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time);</code></pre> 
 Tries to lock the mutex in shared mode. Blocks until specified timeout_time has been reached or the lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false. 
 If timeout_time has already passed, this function behaves like try_lock_shared(). 

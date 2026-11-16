@@ -54,8 +54,8 @@ description: "podsleuth_selinux – Security Enhanced Linux Policy for the podsl
 <p> <code>podsleuth_exec_t</code> </p>
 <p> &#8211; Set files with the podsleuth_exec_t type, if you want to transition an executable to the podsleuth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/podsleuth, /usr/libexec/hal-podsleuth </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/podsleuth, /usr/libexec/hal-podsleuth </dd>
 </dl>
 <p> <code>podsleuth_tmp_t</code> </p>
 <p> &#8211; Set files with the podsleuth_tmp_t type, if you want to store podsleuth temporary files in the /tmp directories. </p>

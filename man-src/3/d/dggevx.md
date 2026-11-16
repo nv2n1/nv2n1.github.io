@@ -19,7 +19,7 @@ description: "dggevx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DGGEVX computes for a pair of N-by-N real nonsymmetric matrices (A,B)
  the generalized eigenvalues, and optionally, the left and/or right
@@ -42,11 +42,11 @@ description: "dggevx.f –"
      of(A, B) satisfies
      u(j) **H *A = lambda(j) * u(j) * *H * B.where u(j) * *H is the conjugate - transpose of u(j).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>BALANC</i> </p>
+</dt><dd> <i>BALANC</i> </dd>
 <p>BALANC is CHARACTER * 1 Specifies the balance option to be performed.= &#8216;N&#8217; : do not diagonally scale or permute;<br />
 = &#8216;P&#8217; : permute only;<br />
 = &#8216;S&#8217; : scale only;<br />
@@ -276,18 +276,18 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Balancing a matrix pair (A,B) includes, first, permuting rows and
   columns to isolate eigenvalues, second, applying diagonal similarity
@@ -307,8 +307,9 @@ the routine
   For further explanation of the reciprocal condition numbers RCONDE
   and RCONDV, see section 4.11 of LAPACK User's Guide.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 389 of file dggevx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

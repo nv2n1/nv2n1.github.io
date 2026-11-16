@@ -11,10 +11,8 @@ std::negative_binomial_distribution - std::negative_binomial_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;random&gt;
-
     template &lt;class IntType = int&gt;
     (since C++ 11)
-
         class negative_binomial_distribution;</code></pre> 
 Produces random non-negative integer values i, distributed according to discrete probability function: \(P(i|k, p) = \binom{k + i - 1}{i} \cdot p^k \cdot (1 - p)^i\)P(i|k,p) =⎛
 ⎜
@@ -72,16 +70,11 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

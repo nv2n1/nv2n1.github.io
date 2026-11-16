@@ -10,7 +10,6 @@ description: "sem_destroy – destroy an unnamed semaphore"
 <p>sem_destroy &#8211; destroy an unnamed semaphore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;semaphore.h&gt;
-
 int sem_destroy(sem_t *sem);</code></pre>
 <p> Link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -22,8 +21,8 @@ int sem_destroy(sem_t *sem);</code></pre>
 <p><code>sem_destroy</code>() returns 0 on success; on error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>sem</i> is not a valid semaphore.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>sem</i> is not a valid semaphore.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

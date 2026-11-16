@@ -15,15 +15,15 @@ audit_compare_dname_path - compare given dentry name with last component in give
 <h2>Arguments</h2>
 
 <i>dname</i>
-<dl><dd><dd>dentry name that we're comparing</dl>
+<dl><dd></dd><dd>dentry name that we're comparing</dd></dl>
  
 
  <i>path</i>
-<dl><dd>full pathname that we're comparing</dl>
+<dl><dd>full pathname that we're comparing</dd></dl>
  
 
  <i>parentlen</i>
-<dl><dd>length of the parent if known. Passing in AUDIT_NAME_FULL here indicates that we must compute this value.</dl>
+<dl><dd>length of the parent if known. Passing in AUDIT_NAME_FULL here indicates that we must compute this value.</dd></dl>
 
 <h2>Copyright</h2>
 

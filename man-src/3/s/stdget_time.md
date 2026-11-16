@@ -11,10 +11,8 @@ std::get_time - std::get_time
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iomanip&gt;
-
     template &lt;class CharT&gt;
     (since C++ 11)
-
     /*unspecified*/ get_time(std::tm *tmb, const CharT *fmt);</code></pre> 
 When used in an expression in &gt;&gt; get_time(tmb, fmt), parses the character input as a date/time value according to format string fmt according to the std::time_get facet of the locale currently imbued in the input stream in. The resultant value is stored in a std::tm object pointed to by tmb. 
 
@@ -114,14 +112,10 @@ As specified in std::time_get::do_get, which this function calls, it's unspecifi
 
 note: choose clang to observe the output. libstdc++ does not correctly implement the %b specifier: bug_78714 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     std::tm t = {};
     std::istringstream ss(&quot;2011-Februar-18 23:12:34&quot;);

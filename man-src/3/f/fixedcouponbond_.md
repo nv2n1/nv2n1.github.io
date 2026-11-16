@@ -39,16 +39,16 @@ description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rat
 <p> <code>Example: </code> <code>valuation of a repo on a fixed-rate bond </code> </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Add preconditions and tests</dl>
+<dd>Add preconditions and tests</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Create switch- if coupon goes to seller is toggled on, don&#8217;t consider income in the $ P_{DirtyFwd}(t) $ calculation.</dl>
+<dd>Create switch- if coupon goes to seller is toggled on, don&#8217;t consider income in the $ P_{DirtyFwd}(t) $ calculation.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Verify this works when the underlying is paper (in which case ignore all AI.)</dl>
+<dd>Verify this works when the underlying is paper (in which case ignore all AI.)</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class still needs to be rigorously tested</dl>
+<dd>This class still needs to be rigorously tested</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Repo.cpp</code>.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>

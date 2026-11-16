@@ -19,39 +19,39 @@ description: "mesg – display (or do not display) messages from other users"
 <p> <code>n</code></p>
 <dl>
 <dt>
-<dd> Disallow messages.</dl>
+</dt><dd> Disallow messages.</dd></dl>
 <p> <code>y</code></p>
 <dl>
 <dt>
-<dd> Allow messages to be displayed.</dl>
+</dt><dd> Allow messages to be displayed.</dd></dl>
 <p> If no arguments are given, <code>mesg</code> shows the current message status on standard error output.</p>
 <h2>OPTIONS</h2>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Explain what is being done.</dl>
+</dt><dd> Explain what is being done.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>mesg</code> utility exits with one of the following values: </p>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Messages are allowed.</dl>
+</dt><dd> Messages are allowed.</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Messages are not allowed.</dl>
+</dt><dd> Messages are not allowed.</dd></dl>
 <p> <code>&gt;1</code></p>
 <dl>
 <dt>
-<dd> An error has occurred.</dl>
+</dt><dd> An error has occurred.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/dev/[pt]ty[pq]?</i></p>
 <h2>HISTORY</h2>

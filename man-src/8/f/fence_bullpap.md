@@ -14,39 +14,39 @@ description: "fence_bullpap – I/O Fencing agent for Bull FAME architecture con
 <p>fence_bullpap is an I/O Fencing agent which can be used with Bull&#8217;s NovaScale machines controlled by PAP management consoles. This agent calls Bull&#8217;s support software provided by the NSMasterHW RPM available from Bull. fence_bullpap accepts options on the command line as well as from stdin. fenced sends the options through stdin when it execs the agent. fence_bullpap can be run by itself with command line options which is useful for testing. Vendor URL: <a rel="nofollow" href="http://www.bull.com">http://www.bull.com</a> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code> <i>IPaddress</i></p>
-<dd>IP address or hostname of the PAP management console.</p>
-<dt><code>-h</code></p>
-<dd>Print out a help message describing available options, then exit.</p>
-<dt><code>-l</code> <i>login</i></p>
-<dd>Login with administrative privileges.</p>
-<dt><code>-d</code> <i>domain</i></p>
-<dd>This is the domain name of the Bull machine to power-cycle.</p>
-<dt><code>-o</code> <i>option</i></p>
-<dd>Action to perform (on, off, reboot, status).</p>
-<dt><code>-p</code> <i>password</i></p>
-<dd>Password for login.</p>
-<dt><code>-S</code> <i>path</i></p>
-<dd>Full path to an executable to generate the password for login.</p>
-<dt><code>-q</code></p>
-<dd>Quiet operation. Only print out error messages.</p>
-<dt><code>-V</code></p>
-<dd>Print out a version message, then exit. </p>
+<dt><code>-a</code> <i>IPaddress</i></dt>
+<dd>IP address or hostname of the PAP management console.</dd>
+<dt><code>-h</code></dt>
+<dd>Print out a help message describing available options, then exit.</dd>
+<dt><code>-l</code> <i>login</i></dt>
+<dd>Login with administrative privileges.</dd>
+<dt><code>-d</code> <i>domain</i></dt>
+<dd>This is the domain name of the Bull machine to power-cycle.</dd>
+<dt><code>-o</code> <i>option</i></dt>
+<dd>Action to perform (on, off, reboot, status).</dd>
+<dt><code>-p</code> <i>password</i></dt>
+<dd>Password for login.</dd>
+<dt><code>-S</code> <i>path</i></dt>
+<dd>Full path to an executable to generate the password for login.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet operation. Only print out error messages.</dd>
+<dt><code>-V</code></dt>
+<dd>Print out a version message, then exit. </dd>
 </dl>
 <h2>Stdin Parameters</h2>
 <dl>
-<dt><i>ipaddr = &lt; hostname | ip &gt;</i></p>
-<dd>IP address or hostname of the PAP management console.</p>
-<dt><i>login= &lt; param &gt;</i></p>
-<dd>Login with administrative privileges.</p>
-<dt><i>domain = &lt; param &gt;</i></p>
-<dd>This is the domain name of the Bull machine to power-cycle.</p>
-<dt><i>option = &lt; param &gt;</i></p>
-<dd>Action to perform (on, off, reboot, status).</p>
-<dt><i>passwd = &lt; param &gt;</i></p>
-<dd>Password for login.</p>
-<dt><i>passwd_script = &lt; param &gt;</i></p>
-<dd>Full path to an executable to generate the password for login. </p>
+<dt><i>ipaddr = &lt; hostname | ip &gt;</i></dt>
+<dd>IP address or hostname of the PAP management console.</dd>
+<dt><i>login= &lt; param &gt;</i></dt>
+<dd>Login with administrative privileges.</dd>
+<dt><i>domain = &lt; param &gt;</i></dt>
+<dd>This is the domain name of the Bull machine to power-cycle.</dd>
+<dt><i>option = &lt; param &gt;</i></dt>
+<dd>Action to perform (on, off, reboot, status).</dd>
+<dt><i>passwd = &lt; param &gt;</i></dt>
+<dd>Password for login.</dd>
+<dt><i>passwd_script = &lt; param &gt;</i></dt>
+<dd>Full path to an executable to generate the password for login. </dd>
 </dl>
 <h2>See Also</h2>
 <p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>

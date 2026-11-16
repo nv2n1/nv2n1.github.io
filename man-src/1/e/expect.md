@@ -17,19 +17,17 @@ description: "expect – programmed dialogue with interactive programs, Version 
 <p> The name &quot;Expect&quot; comes from the idea of <i>send/expect</i> sequences popularized by uucp, kermit and other modem control programs. However unlike uucp, <code>Expect</code> is generalized so that it can be run as a user-level command with any program and task in mind. <code>Expect</code> can actually talk to several programs at the same time. </p>
 <p> For example, here are some things <code>Expect</code> can do:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Cause your computer to dial you back, so that you can login without paying for the call.</p>
-<dt>&bull;</p>
-<dd> Start a game (e.g., rogue) and if the optimal configuration doesn&#8217;t appear, restart it (again and again) until it does, then hand over control to you.</p>
-<dt>&bull;</p>
-<dd> Run fsck, and in response to its questions, answer &quot;yes&quot;, &quot;no&quot; or give control back to you, based on predetermined criteria.</p>
-<dt>&bull;</p>
-<dd> Connect to another network or BBS (e.g., MCI Mail, CompuServe) and automatically retrieve your mail so that it appears as if it was originally sent to your local system.</p>
-<dt>&bull;</p>
-<dd> Carry environment variables, current directory, or any kind of information across rlogin, telnet, tip, su, chgrp, etc.</dl>
+<dt>&bull;</dt>
+<dd> Cause your computer to dial you back, so that you can login without paying for the call.</dd>
+<dt>&bull;</dt>
+<dd> Start a game (e.g., rogue) and if the optimal configuration doesn&#8217;t appear, restart it (again and again) until it does, then hand over control to you.</dd>
+<dt>&bull;</dt>
+<dd> Run fsck, and in response to its questions, answer &quot;yes&quot;, &quot;no&quot; or give control back to you, based on predetermined criteria.</dd>
+<dt>&bull;</dt>
+<dd> Connect to another network or BBS (e.g., MCI Mail, CompuServe) and automatically retrieve your mail so that it appears as if it was originally sent to your local system.</dd>
+<dt>&bull;</dt>
+<dd> Carry environment variables, current directory, or any kind of information across rlogin, telnet, tip, su, chgrp, etc.</dd></dl>
 </dl>
 <p> There are a variety of reasons why the shell cannot perform these tasks. (Try, you&#8217;ll see.) All are possible with <code>Expect</code>. </p>
 <p> In general, <code>Expect</code> is useful for running any program which requires interaction between the program and the user. All that is necessary is that the interaction can be characterized programmatically. <code>Expect</code> can also give the user back control (without halting the program being controlled) if desired. Similarly, the user can return control to the script at any time.</p>
@@ -61,22 +59,22 @@ description: "expect – programmed dialogue with interactive programs, Version 
 <p> Note that the best introduction to the language (both Expect and Tcl) is provided in the book &quot;Exploring Expect&quot; (see SEE ALSO below). Examples are included in this man page but they are very limited since this man page is meant primarily as reference material. </p>
 <p> Note that in the text of this man page, &quot;Expect&quot; with an uppercase &quot;E&quot; refers to the <code>Expect</code> program while &quot;expect&quot; with a lower-case &quot;e&quot; refers to the <code>expect</code> command within the <code>Expect</code> program.) <i></p>
 <dl>
-<dt></i><code>close</code><i> [-slave] [-onexec 0|1] [-i spawn_id]</i></p>
-<dd> closes the connection to the current process. Most interactive programs will detect EOF on their stdin and exit; thus <code>close</code> usually suffices to kill the process as well. The <code>-i</code> flag declares the process to close corresponding to the named spawn_id. </p>
+<dt></i><code>close</code><i> [-slave] [-onexec 0|1] [-i spawn_id]</i></dt>
+<dd> closes the connection to the current process. Most interactive programs will detect EOF on their stdin and exit; thus <code>close</code> usually suffices to kill the process as well. The <code>-i</code> flag declares the process to close corresponding to the named spawn_id. </dd>
 <p> Both <code>expect</code> and <code>interact</code> will detect when the current process exits and implicitly do a <code>close</code>. But if you kill the process by, say, &quot;exec kill $pid&quot;, you will need to explicitly call <code>close</code>. </p>
 <p> The <code>-onexec</code> flag determines whether the spawn id will be closed in any new spawned processes or if the process is overlayed. To leave a spawn id open, use the value 0. A non-zero integer value will force the spawn closed (the default) in any new processes. </p>
 <p> The <code>-slave</code> flag closes the slave associated with the spawn id. (See &quot;spawn -pty&quot;.) When the connection is closed, the slave is automatically closed as well if still open. </p>
 <p> No matter whether the connection is closed implicitly or explicitly, you should call <code>wait</code> to clear up the corresponding kernel process slot. <code>close</code> does not call <code>wait</code> since there is no guarantee that closing a process connection will cause it to exit. See <code>wait</code> below for more info.</p>
-<dt><code>debug</code><i> [[-now] 0|1]</i></p>
-<dd> controls a Tcl debugger allowing you to step through statements, set breakpoints, etc. </p>
+<dt><code>debug</code><i> [[-now] 0|1]</i></dt>
+<dd> controls a Tcl debugger allowing you to step through statements, set breakpoints, etc. </dd>
 <p> With no arguments, a 1 is returned if the debugger is not running, otherwise a 0 is returned. </p>
 <p> With a 1 argument, the debugger is started. With a 0 argument, the debugger is stopped. If a 1 argument is preceded by the <code>-now</code> flag, the debugger is started immediately (i.e., in the middle of the <code>debug</code> command itself). Otherwise, the debugger is started with the next Tcl statement. </p>
 <p> The <code>debug</code> command does not change any traps. Compare this to starting Expect with the <code>-D</code> flag (see above). </p>
 <p> See the README file or SEE ALSO (below) for more information on the debugger.</p>
-<dt><code>disconnect</code></p>
-<dd> disconnects a forked process from the terminal. It continues running in the background. The process is given its own process group (if possible). Standard I/O is redirected to /dev/null.</p>
+<dt><code>disconnect</code></dt>
+<dd> disconnects a forked process from the terminal. It continues running in the background. The process is given its own process group (if possible). Standard I/O is redirected to /dev/null.</dd>
 <dt>
-<dd> The following fragment uses <code>disconnect</code> to continue running the script in the background. </p>
+</dt><dd> The following fragment uses <code>disconnect</code> to continue running the script in the background. </dd>
 <pre><code>
 if {
     [fork] != 0
@@ -108,62 +106,62 @@ exit
                                       &#8230;exit<br />
     }<br />
  An advantage to using <code>disconnect</code> over the shell asynchronous process feature (&amp;) is that <code>Expect</code> can save the terminal parameters prior to disconnection, and then later apply them to new ptys. With &amp;, <code>Expect</code> does not have a chance to read the terminal&#8217;s parameters since the terminal is already disconnected by the time <code>Expect</code> receives control.</p>
-<dt><code>exit</code><i> [-opts] [status]</i></p>
-<dd> causes <code>Expect</code> to exit or otherwise prepare to do so. </p>
+<dt><code>exit</code><i> [-opts] [status]</i></dt>
+<dd> causes <code>Expect</code> to exit or otherwise prepare to do so. </dd>
 <p> The <code>-onexit</code> flag causes the next argument to be used as an exit handler. Without an argument, the current exit handler is returned. </p>
 <p> The <code>-noexit</code> flag causes <code>Expect</code> to prepare to exit but stop short of actually returning control to the operating system. The user-defined exit handler is run as well as Expect&#8217;s own internal handlers. No further Expect commands should be executed. This is useful if you are running Expect with other Tcl extensions. The current interpreter (and main window if in the Tk environment) remain so that other Tcl extensions can clean up. If Expect&#8217;s <code>exit</code> is called again (however this might occur), the handlers are not rerun. </p>
 <p> Upon exiting, all connections to spawned processes are closed. Closure will be detected as an EOF by spawned processes. <code>exit</code> takes no other actions beyond what the normal _exit(2) procedure does. Thus, spawned processes that do not check for EOF may continue to run. (A variety of conditions are important to determining, for example, what signals a spawned process will be sent, but these are system-dependent, typically documented under <a href="/docs/linux/man/3-exit/">exit</a>(3).) Spawned processes that continue to run will be inherited by init. </p>
 <p> <i>status</i> (or 0 if not specified) is returned as the exit status of <code>Expect</code>. <code>exit</code> is implicitly executed if the end of the script is reached.</p>
-<dt><code>exp_continue</code> [-continue_timer]</p>
-<dd> The command <code>exp_continue</code> allows <code>expect</code> itself to continue executing rather than returning as it normally would. By default <code>exp_continue</code> resets the timeout timer. The <i>-continue_timer</i> flag prevents timer from being restarted. (See <code>expect</code> for more information.)</p>
-<dt><code>exp_internal</code><i> [-f file] value</i></p>
-<dd> causes further commands to send diagnostic information internal to <code>Expect</code> to stderr if <i>value</i> is non-zero. This output is disabled if <i>value</i> is 0. The diagnostic information includes every character received, and every attempt made to match the current output against the patterns.</p>
+<dt><code>exp_continue</code> [-continue_timer]</dt>
+<dd> The command <code>exp_continue</code> allows <code>expect</code> itself to continue executing rather than returning as it normally would. By default <code>exp_continue</code> resets the timeout timer. The <i>-continue_timer</i> flag prevents timer from being restarted. (See <code>expect</code> for more information.)</dd>
+<dt><code>exp_internal</code><i> [-f file] value</i></dt>
+<dd> causes further commands to send diagnostic information internal to <code>Expect</code> to stderr if <i>value</i> is non-zero. This output is disabled if <i>value</i> is 0. The diagnostic information includes every character received, and every attempt made to match the current output against the patterns.</dd>
 <dt>
-<dd> If the optional <i>file</i> is supplied, all normal and debugging output is written to that file (regardless of the value of <i>value</i>). Any previous diagnostic output file is closed. </p>
+</dt><dd> If the optional <i>file</i> is supplied, all normal and debugging output is written to that file (regardless of the value of <i>value</i>). Any previous diagnostic output file is closed. </dd>
 <p> The <code>-info</code> flag causes exp_internal to return a description of the most recent non-info arguments given.</p>
-<dt><code>exp_open</code><i> [args] [-i spawn_id]</i></p>
-<dd> returns a Tcl file identifier that corresponds to the original spawn id. The file identifier can then be used as if it were opened by Tcl&#8217;s <code>open</code> command. (The spawn id should no longer be used. A <code>wait</code> should not be executed. </p>
+<dt><code>exp_open</code><i> [args] [-i spawn_id]</i></dt>
+<dd> returns a Tcl file identifier that corresponds to the original spawn id. The file identifier can then be used as if it were opened by Tcl&#8217;s <code>open</code> command. (The spawn id should no longer be used. A <code>wait</code> should not be executed. </dd>
 <p> The <code>-leaveopen</code> flag leaves the spawn id open for access through Expect commands. A <code>wait</code> must be executed on the spawn id.</p>
-<dt><code>exp_pid</code><i> [-i spawn_id]</i></p>
-<dd> returns the process id corresponding to the currently spawned process. If the <code>-i</code> flag is used, the pid returned corresponds to that of the given spawn id.</p>
-<dt><code>exp_send</code></p>
-<dd> is an alias for <code>send</code>.</p>
-<dt><code>exp_send_error</code></p>
-<dd> is an alias for <code>send_error</code>.</p>
-<dt><code>exp_send_log</code></p>
-<dd> is an alias for <code>send_log</code>.</p>
-<dt><code>exp_send_tty</code></p>
-<dd> is an alias for <code>send_tty</code>.</p>
-<dt><code>exp_send_user</code></p>
-<dd> is an alias for <code>send_user</code>.</p>
-<dt><code>exp_version</code><i> [[-exit] version]</i></p>
-<dd> is useful for assuring that the script is compatible with the current version of Expect.</p>
+<dt><code>exp_pid</code><i> [-i spawn_id]</i></dt>
+<dd> returns the process id corresponding to the currently spawned process. If the <code>-i</code> flag is used, the pid returned corresponds to that of the given spawn id.</dd>
+<dt><code>exp_send</code></dt>
+<dd> is an alias for <code>send</code>.</dd>
+<dt><code>exp_send_error</code></dt>
+<dd> is an alias for <code>send_error</code>.</dd>
+<dt><code>exp_send_log</code></dt>
+<dd> is an alias for <code>send_log</code>.</dd>
+<dt><code>exp_send_tty</code></dt>
+<dd> is an alias for <code>send_tty</code>.</dd>
+<dt><code>exp_send_user</code></dt>
+<dd> is an alias for <code>send_user</code>.</dd>
+<dt><code>exp_version</code><i> [[-exit] version]</i></dt>
+<dd> is useful for assuring that the script is compatible with the current version of Expect.</dd>
 <dt>
-<dd> With no arguments, the current version of <code>Expect</code> is returned. This version may then be encoded in your script. If you actually know that you are not using features of recent versions, you can specify an earlier version.</p>
+</dt><dd> With no arguments, the current version of <code>Expect</code> is returned. This version may then be encoded in your script. If you actually know that you are not using features of recent versions, you can specify an earlier version.</dd>
 <dt>
-<dd> Versions consist of three numbers separated by dots. First is the major number. Scripts written for versions of <code>Expect</code> with a different major number will almost certainly not work. <code>exp_version </code> returns an error if the major numbers do not match.</p>
+</dt><dd> Versions consist of three numbers separated by dots. First is the major number. Scripts written for versions of <code>Expect</code> with a different major number will almost certainly not work. <code>exp_version </code> returns an error if the major numbers do not match.</dd>
 <dt>
-<dd> Second is the minor number. Scripts written for a version with a greater minor number than the current version may depend upon some new feature and might not run. <code>exp_version</code> returns an error if the major numbers match, but the script minor number is greater than that of the running <code>Expect</code>.</p>
+</dt><dd> Second is the minor number. Scripts written for a version with a greater minor number than the current version may depend upon some new feature and might not run. <code>exp_version</code> returns an error if the major numbers match, but the script minor number is greater than that of the running <code>Expect</code>.</dd>
 <dt>
-<dd> Third is a number that plays no part in the version comparison. However, it is incremented when the <code>Expect</code> software distribution is changed in any way, such as by additional documentation or optimization. It is reset to 0 upon each new minor version.</p>
+</dt><dd> Third is a number that plays no part in the version comparison. However, it is incremented when the <code>Expect</code> software distribution is changed in any way, such as by additional documentation or optimization. It is reset to 0 upon each new minor version.</dd>
 <dt>
-<dd> With the <code>-exit</code> flag, <code>Expect</code> prints an error and exits if the version is out of date.</p>
-<dt><code>expect</code><i> [[-opts] pat1 body1] &#8230; [-opts] patn [bodyn]</i></p>
-<dd> waits until one of the patterns matches the output of a spawned process, a specified time period has passed, or an end-of-file is seen. If the final body is empty, it may be omitted.</p>
+</dt><dd> With the <code>-exit</code> flag, <code>Expect</code> prints an error and exits if the version is out of date.</dd>
+<dt><code>expect</code><i> [[-opts] pat1 body1] &#8230; [-opts] patn [bodyn]</i></dt>
+<dd> waits until one of the patterns matches the output of a spawned process, a specified time period has passed, or an end-of-file is seen. If the final body is empty, it may be omitted.</dd>
 <dt>
-<dd> Patterns from the most recent <code>expect_before</code> command are implicitly used before any other patterns. Patterns from the most recent <code>expect_after</code> command are implicitly used after any other patterns.</p>
+</dt><dd> Patterns from the most recent <code>expect_before</code> command are implicitly used before any other patterns. Patterns from the most recent <code>expect_after</code> command are implicitly used after any other patterns.</dd>
 <dt>
-<dd> If the arguments to the entire <code>expect</code> statement require more than one line, all the arguments may be &quot;braced&quot; into one so as to avoid terminating each line with a backslash. In this one case, the usual Tcl substitutions will occur despite the braces.</p>
+</dt><dd> If the arguments to the entire <code>expect</code> statement require more than one line, all the arguments may be &quot;braced&quot; into one so as to avoid terminating each line with a backslash. In this one case, the usual Tcl substitutions will occur despite the braces.</dd>
 <dt>
-<dd> If a pattern is the keyword <code>eof</code>, the corresponding body is executed upon end-of-file. If a pattern is the keyword <code>timeout</code>, the corresponding body is executed upon timeout. If no timeout keyword is used, an implicit null action is executed upon timeout. The default timeout period is 10 seconds but may be set, for example to 30, by the command &quot;set timeout 30&quot;. An infinite timeout may be designated by the value -1. If a pattern is the keyword <code>default</code>, the corresponding body is executed upon either timeout or end-of-file.</p>
+</dt><dd> If a pattern is the keyword <code>eof</code>, the corresponding body is executed upon end-of-file. If a pattern is the keyword <code>timeout</code>, the corresponding body is executed upon timeout. If no timeout keyword is used, an implicit null action is executed upon timeout. The default timeout period is 10 seconds but may be set, for example to 30, by the command &quot;set timeout 30&quot;. An infinite timeout may be designated by the value -1. If a pattern is the keyword <code>default</code>, the corresponding body is executed upon either timeout or end-of-file.</dd>
 <dt>
-<dd> If a pattern matches, then the corresponding body is executed. <code>expect</code> returns the result of the body (or the empty string if no pattern matched). In the event that multiple patterns match, the one appearing first is used to select a body.</p>
+</dt><dd> If a pattern matches, then the corresponding body is executed. <code>expect</code> returns the result of the body (or the empty string if no pattern matched). In the event that multiple patterns match, the one appearing first is used to select a body.</dd>
 <dt>
-<dd> Each time new output arrives, it is compared to each pattern in the order they are listed. Thus, you may test for absence of a match by making the last pattern something guaranteed to appear, such as a prompt. In situations where there is no prompt, you must use <code>timeout</code> (just like you would if you were interacting manually).</p>
+</dt><dd> Each time new output arrives, it is compared to each pattern in the order they are listed. Thus, you may test for absence of a match by making the last pattern something guaranteed to appear, such as a prompt. In situations where there is no prompt, you must use <code>timeout</code> (just like you would if you were interacting manually).</dd>
 <dt>
-<dd> Patterns are specified in three ways. By default, patterns are specified as with Tcl&#8217;s <code>string match</code> command. (Such patterns are also similar to C-shell regular expressions usually referred to as &quot;glob&quot; patterns). The <code>-gl</code> flag may may be used to protect patterns that might otherwise match <code>expect</code> flags from doing so. Any pattern beginning with a &quot;-&quot; should be protected this way. (All strings starting with &quot;-&quot; are reserved for future options.) </p>
+</dt><dd> Patterns are specified in three ways. By default, patterns are specified as with Tcl&#8217;s <code>string match</code> command. (Such patterns are also similar to C-shell regular expressions usually referred to as &quot;glob&quot; patterns). The <code>-gl</code> flag may may be used to protect patterns that might otherwise match <code>expect</code> flags from doing so. Any pattern beginning with a &quot;-&quot; should be protected this way. (All strings starting with &quot;-&quot; are reserved for future options.) </dd>
 <dt>
-<dd> For example, the following fragment looks for a successful login. (Note that <code>abort</code> is presumed to be a procedure defined elsewhere in the script.)<br />
+</dt><dd> For example, the following fragment looks for a successful login. (Note that <code>abort</code> is presumed to be a procedure defined elsewhere in the script.)<br />
 expect<br />
 {<br />
     busy<br />
@@ -177,9 +175,9 @@ expect<br />
             timeout abort<br />
                 connected<br />
 }<br />
- Quotes are necessary on the fourth pattern since it contains a space, which would otherwise separate the pattern from the action. Patterns with the same action (such as the 3rd and 4th) require listing the actions again. This can be avoid by using regexp-style patterns (see below). More information on forming glob-style patterns can be found in the Tcl manual.</p>
+ Quotes are necessary on the fourth pattern since it contains a space, which would otherwise separate the pattern from the action. Patterns with the same action (such as the 3rd and 4th) require listing the actions again. This can be avoid by using regexp-style patterns (see below). More information on forming glob-style patterns can be found in the Tcl manual.</dd>
 <dt>
-<dd> Regexp-style patterns follow the syntax defined by Tcl&#8217;s <code>regexp</code> (short for &quot;regular expression&quot;) command. regexp patterns are introduced with the flag <code>-re</code>. The previous example can be rewritten using a regexp as:<br />
+</dt><dd> Regexp-style patterns follow the syntax defined by Tcl&#8217;s <code>regexp</code> (short for &quot;regular expression&quot;) command. regexp patterns are introduced with the flag <code>-re</code>. The previous example can be rewritten using a regexp as:<br />
 expect<br />
 {<br />
     busy<br />
@@ -192,13 +190,13 @@ expect<br />
         timeout abort<br />
             connected<br />
 }<br />
- Both types of patterns are &quot;unanchored&quot;. This means that patterns do not have to match the entire string, but can begin and end the match anywhere in the string (as long as everything else matches). Use ^ to match the beginning of a string, and $ to match the end. Note that if you do not wait for the end of a string, your responses can easily end up in the middle of the string as they are echoed from the spawned process. While still producing correct results, the output can look unnatural. Thus, use of $ is encouraged if you can exactly describe the characters at the end of a string. </p>
+ Both types of patterns are &quot;unanchored&quot;. This means that patterns do not have to match the entire string, but can begin and end the match anywhere in the string (as long as everything else matches). Use ^ to match the beginning of a string, and $ to match the end. Note that if you do not wait for the end of a string, your responses can easily end up in the middle of the string as they are echoed from the spawned process. While still producing correct results, the output can look unnatural. Thus, use of $ is encouraged if you can exactly describe the characters at the end of a string. </dd>
 <p> Note that in many editors, the ^ and $ match the beginning and end of lines respectively. However, because expect is not line oriented, these characters match the beginning and end of the data (as opposed to lines) currently in the expect matching buffer. (Also, see the note below on &quot;system indigestion.&quot;) </p>
 <p> The <code>-ex</code> flag causes the pattern to be matched as an &quot;exact&quot; string. No interpretation of *, ^, etc is made (although the usual Tcl conventions must still be observed). Exact patterns are always unanchored. </p>
 <dt>
-<dd> The <code>-nocase</code> flag causes uppercase characters of the output to compare as if they were lowercase characters. The pattern is not affected.</p>
+</dt><dd> The <code>-nocase</code> flag causes uppercase characters of the output to compare as if they were lowercase characters. The pattern is not affected.</dd>
 <dt>
-<dd> While reading output, more than 2000 bytes can force earlier bytes to be &quot;forgotten&quot;. This may be changed with the function <code>match_max</code>. (Note that excessively large values can slow down the pattern matcher.) If <i>patlist</i> is <code>full_buffer</code>, the corresponding body is executed if <i>match_max</i> bytes have been received and no other patterns have matched. Whether or not the <code>full_buffer</code> keyword is used, the forgotten characters are written to expect_out(buffer). </p>
+</dt><dd> While reading output, more than 2000 bytes can force earlier bytes to be &quot;forgotten&quot;. This may be changed with the function <code>match_max</code>. (Note that excessively large values can slow down the pattern matcher.) If <i>patlist</i> is <code>full_buffer</code>, the corresponding body is executed if <i>match_max</i> bytes have been received and no other patterns have matched. Whether or not the <code>full_buffer</code> keyword is used, the forgotten characters are written to expect_out(buffer). </dd>
 <p> If <i>patlist</i> is the keyword <code>null</code>, and nulls are allowed (via the <code>remove_nulls</code> command), the corresponding body is executed if a single ASCII 0 is matched. It is not possible to match 0 bytes via glob or regexp patterns. </p>
 <p> Upon matching a pattern (or eof or full_buffer), any matching and previously unmatched output is saved in the variable <i>expect_out(buffer)</i>. Up to 9 regexp substring matches are saved in the variables <i>expect_out(1,string)</i> through <i>expect_out(9,string)</i>. If the <code>-indices</code> flag is used before a pattern, the starting and ending indices (in a form suitable for <code>lrange</code>) of the 10 strings are stored in the variables <i>expect_out(X,start)</i> and <i>expect_out(X,end)</i> where X is a digit, corresponds to the substring position in the buffer. 0 refers to strings which matched the entire pattern and is generated for glob patterns as well as regexp patterns. For example, if a process has produced output of &quot;abcdefgh
 &quot;, the result of: </p>
@@ -232,7 +230,7 @@ expect<br />
 <p> and &quot;a
 &quot; is left in the output buffer. The pattern &quot;*&quot; (and -re &quot;.*&quot;) will flush the output buffer without reading any more output from the process.</p>
 <dt>
-<dd> Normally, the matched output is discarded from Expect&#8217;s internal buffers. This may be prevented by prefixing a pattern with the <code>-notransfer</code> flag. This flag is especially useful in experimenting (and can be abbreviated to &quot;-not&quot; for convenience while experimenting). </p>
+</dt><dd> Normally, the matched output is discarded from Expect&#8217;s internal buffers. This may be prevented by prefixing a pattern with the <code>-notransfer</code> flag. This flag is especially useful in experimenting (and can be abbreviated to &quot;-not&quot; for convenience while experimenting). </dd>
 <p> The spawn id associated with the matching output (or eof or full_buffer) is stored in <i>expect_out(spawn_id)</i>. </p>
 <p> The <code>-timeout</code> flag causes the current expect command to use the following value as a timeout instead of using the value of the timeout variable. </p>
 <p> By default, patterns are matched against output from the current process, however the <code>-i</code> flag declares the output from the named spawn_id list be matched against any following patterns (up to the next <code>-i</code>). The spawn_id list should either be a whitespace separated list of spawn_ids or a variable referring to such a list of spawn_ids. </p>
@@ -253,7 +251,7 @@ expect<br />
 <p> The <code>-i</code> flag may also name a global variable in which case the variable is read for a list of spawn ids. The variable is reread whenever it changes. This provides a way of changing the I/O source while the command is in execution. Spawn ids provided this way are called &quot;indirect&quot; spawn ids. </p>
 <p> Actions such as <code>break</code> and <code>continue</code> cause control structures (i.e., <code>for</code>, <code>proc</code>) to behave in the usual way. The command <code>exp_continue</code> allows <code>expect</code> itself to continue executing rather than returning as it normally would.</p>
 <dt>
-<dd> This is useful for avoiding explicit loops or repeated expect statements. The following example is part of a fragment to automate rlogin. The <code>exp_continue</code> avoids having to write a second <code>expect</code> statement (to look for the prompt again) if the rlogin prompts for a password.<br />
+</dt><dd> This is useful for avoiding explicit loops or repeated expect statements. The following example is part of a fragment to automate rlogin. The <code>exp_continue</code> avoids having to write a second <code>expect</code> statement (to look for the prompt again) if the rlogin prompts for a password.<br />
 expect<br />
 {<br />
 Password : {<br />
@@ -279,8 +277,6 @@ stty raw &#8211; echo<br />
         &#8220;p&#8221;<br />
     {<br />
         send &#8220;
-
-
 &#8221;;<br />
         exp_continue<br />
     }<br />
@@ -295,17 +291,17 @@ stty raw &#8211; echo<br />
         exp_continue<br />
     }<br />
     &#8220;quit&#8221; exit<br />
-}</p>
+}</dd>
 <dt>
-<dd> By default, <code>exp_continue</code> resets the timeout timer. The timer is not restarted, if <code>exp_continue</code> is called with the <code>-continue_timer</code> flag.</p>
-<dt><code>expect_after</code><i> [expect_args]</i></p>
-<dd> works identically to the <code>expect_before</code> except that if patterns from both <code>expect</code> and <code>expect_after</code> can match, the <code>expect</code> pattern is used. See the <code>expect_before</code> command for more information.</p>
-<dt><code>expect_background</code><i> [expect_args]</i></p>
-<dd> takes the same arguments as <code>expect</code>, however it returns immediately. Patterns are tested whenever new input arrives. The pattern <code>timeout</code> and <code>default</code> are meaningless to <code>expect_background</code> and are silently discarded. Otherwise, the <code>expect_background</code> command uses <code>expect_before</code> and <code>expect_after</code> patterns just like <code>expect</code> does. </p>
+</dt><dd> By default, <code>exp_continue</code> resets the timeout timer. The timer is not restarted, if <code>exp_continue</code> is called with the <code>-continue_timer</code> flag.</dd>
+<dt><code>expect_after</code><i> [expect_args]</i></dt>
+<dd> works identically to the <code>expect_before</code> except that if patterns from both <code>expect</code> and <code>expect_after</code> can match, the <code>expect</code> pattern is used. See the <code>expect_before</code> command for more information.</dd>
+<dt><code>expect_background</code><i> [expect_args]</i></dt>
+<dd> takes the same arguments as <code>expect</code>, however it returns immediately. Patterns are tested whenever new input arrives. The pattern <code>timeout</code> and <code>default</code> are meaningless to <code>expect_background</code> and are silently discarded. Otherwise, the <code>expect_background</code> command uses <code>expect_before</code> and <code>expect_after</code> patterns just like <code>expect</code> does. </dd>
 <p> When <code>expect_background</code> actions are being evaluated, background processing for the same spawn id is blocked. Background processing is unblocked when the action completes. While background processing is blocked, it is possible to do a (foreground) <code>expect</code> on the same spawn id. </p>
 <p> It is not possible to execute an <code>expect</code> while an <code>expect_background</code> is unblocked. <code>expect_background</code> for a particular spawn id is deleted by declaring a new expect_background with the same spawn id. Declaring <code>expect_background</code> with no pattern removes the given spawn id from the ability to match patterns in the background.</p>
-<dt><code>expect_before</code><i> [expect_args]</i></p>
-<dd> takes the same arguments as <code>expect</code>, however it returns immediately. Pattern-action pairs from the most recent <code>expect_before</code> with the same spawn id are implicitly added to any following <code>expect</code> commands. If a pattern matches, it is treated as if it had been specified in the <code>expect</code> command itself, and the associated body is executed in the context of the <code>expect</code> command. If patterns from both <code>expect_before</code> and <code>expect</code> can match, the <code>expect_before</code> pattern is used. </p>
+<dt><code>expect_before</code><i> [expect_args]</i></dt>
+<dd> takes the same arguments as <code>expect</code>, however it returns immediately. Pattern-action pairs from the most recent <code>expect_before</code> with the same spawn id are implicitly added to any following <code>expect</code> commands. If a pattern matches, it is treated as if it had been specified in the <code>expect</code> command itself, and the associated body is executed in the context of the <code>expect</code> command. If patterns from both <code>expect_before</code> and <code>expect</code> can match, the <code>expect_before</code> pattern is used. </dd>
 <p> If no pattern is specified, the spawn id is not checked for any patterns. </p>
 <p> Unless overridden by a <code>-i</code> flag, <code>expect_before</code> patterns match against the spawn id defined at the time that the <code>expect_before</code> command was executed (not when its pattern is matched). </p>
 <p> The -info flag causes <code>expect_before</code> to return the current specifications of what patterns it will match. By default, it reports on the current spawn id. An optional spawn id specification may be given for information on that spawn id. For example </p>
@@ -315,24 +311,24 @@ stty raw &#8211; echo<br />
 <p> At most one spawn id specification may be given. The flag -indirect suppresses direct spawn ids that come only from indirect specifications. </p>
 <p> Instead of a spawn id specification, the flag &quot;-all&quot; will cause &quot;-info&quot; to report on all spawn ids. </p>
 <p> The output of the -info flag can be reused as the argument to expect_before.</p>
-<dt><code>expect_tty</code><i> [expect_args]</i></p>
-<dd> is like <code>expect</code> but it reads characters from /dev/tty (i.e. keystrokes from the user). By default, reading is performed in cooked mode. Thus, lines must end with a return in order for <code>expect</code> to see them. This may be changed via <code>stty</code> (see the <code>stty</code> command below).</p>
-<dt><code>expect_user</code><i> [expect_args]</i></p>
-<dd> is like <code>expect</code> but it reads characters from stdin (i.e. keystrokes from the user). By default, reading is performed in cooked mode. Thus, lines must end with a return in order for <code>expect</code> to see them. This may be changed via <code>stty</code> (see the <code>stty</code> command below).</p>
-<dt><code>fork</code></p>
-<dd> creates a new process. The new process is an exact copy of the current <code>Expect</code> process. On success, <code>fork</code> returns 0 to the new (child) process and returns the process ID of the child process to the parent process. On failure (invariably due to lack of resources, e.g., swap space, memory), <code>fork</code> returns -1 to the parent process, and no child process is created.</p>
+<dt><code>expect_tty</code><i> [expect_args]</i></dt>
+<dd> is like <code>expect</code> but it reads characters from /dev/tty (i.e. keystrokes from the user). By default, reading is performed in cooked mode. Thus, lines must end with a return in order for <code>expect</code> to see them. This may be changed via <code>stty</code> (see the <code>stty</code> command below).</dd>
+<dt><code>expect_user</code><i> [expect_args]</i></dt>
+<dd> is like <code>expect</code> but it reads characters from stdin (i.e. keystrokes from the user). By default, reading is performed in cooked mode. Thus, lines must end with a return in order for <code>expect</code> to see them. This may be changed via <code>stty</code> (see the <code>stty</code> command below).</dd>
+<dt><code>fork</code></dt>
+<dd> creates a new process. The new process is an exact copy of the current <code>Expect</code> process. On success, <code>fork</code> returns 0 to the new (child) process and returns the process ID of the child process to the parent process. On failure (invariably due to lack of resources, e.g., swap space, memory), <code>fork</code> returns -1 to the parent process, and no child process is created.</dd>
 <dt>
-<dd> Forked processes exit via the <code>exit</code> command, just like the original process. Forked processes are allowed to write to the log files. If you do not disable debugging or logging in most of the processes, the result can be confusing.</p>
+</dt><dd> Forked processes exit via the <code>exit</code> command, just like the original process. Forked processes are allowed to write to the log files. If you do not disable debugging or logging in most of the processes, the result can be confusing.</dd>
 <dt>
-<dd> Some pty implementations may be confused by multiple readers and writers, even momentarily. Thus, it is safest to <code>fork</code> before spawning processes.</p>
-<dt><code>interact</code><i> [string1 body1] &#8230; [stringn [bodyn]]</i></p>
-<dd> gives control of the current process to the user, so that keystrokes are sent to the current process, and the stdout and stderr of the current process are returned.</p>
+</dt><dd> Some pty implementations may be confused by multiple readers and writers, even momentarily. Thus, it is safest to <code>fork</code> before spawning processes.</dd>
+<dt><code>interact</code><i> [string1 body1] &#8230; [stringn [bodyn]]</i></dt>
+<dd> gives control of the current process to the user, so that keystrokes are sent to the current process, and the stdout and stderr of the current process are returned.</dd>
 <dt>
-<dd> String-body pairs may be specified as arguments, in which case the body is executed when the corresponding string is entered. (By default, the string is not sent to the current process.) The <code>interpreter</code> command is assumed, if the final body is missing.</p>
+</dt><dd> String-body pairs may be specified as arguments, in which case the body is executed when the corresponding string is entered. (By default, the string is not sent to the current process.) The <code>interpreter</code> command is assumed, if the final body is missing.</dd>
 <dt>
-<dd> If the arguments to the entire <code>interact</code> statement require more than one line, all the arguments may be &quot;braced&quot; into one so as to avoid terminating each line with a backslash. In this one case, the usual Tcl substitutions will occur despite the braces.</p>
+</dt><dd> If the arguments to the entire <code>interact</code> statement require more than one line, all the arguments may be &quot;braced&quot; into one so as to avoid terminating each line with a backslash. In this one case, the usual Tcl substitutions will occur despite the braces.</dd>
 <dt>
-<dd> For example, the following command runs interact with the following string-body pairs defined: When ^Z is pressed, <code>Expect</code> is suspended. (The <code>-reset</code> flag restores the terminal modes.) When ^A is pressed, the user sees &quot;you typed a control-A&quot; and the process is sent a ^A. When $ is pressed, the user sees the date. When ^C is pressed, <code>Expect</code> exits. If &quot;foo&quot; is entered, the user sees &quot;bar&quot;. When ~~ is pressed, the <code>Expect</code> interpreter runs interactively.<br />
+</dt><dd> For example, the following command runs interact with the following string-body pairs defined: When ^Z is pressed, <code>Expect</code> is suspended. (The <code>-reset</code> flag restores the terminal modes.) When ^A is pressed, the user sees &quot;you typed a control-A&quot; and the process is sent a ^A. When $ is pressed, the user sees the date. When ^C is pressed, <code>Expect</code> exits. If &quot;foo&quot; is entered, the user sees &quot;bar&quot;. When ~~ is pressed, the <code>Expect</code> interpreter runs interactively.<br />
 set CTRLZ  interact<br />
 {<br />
     -reset $CTRLZ<br />
@@ -355,11 +351,11 @@ set CTRLZ  interact<br />
         send_user &#8220;bar&#8221;<br />
     }<br />
     ~~<br />
-}</p>
+}</dd>
 <dt>
-<dd> In string-body pairs, strings are matched in the order they are listed as arguments. Strings that partially match are not sent to the current process in anticipation of the remainder coming. If characters are then entered such that there can no longer possibly be a match, only the part of the string will be sent to the process that cannot possibly begin another match. Thus, strings that are substrings of partial matches can match later, if the original strings that was attempting to be match ultimately fails.</p>
+</dt><dd> In string-body pairs, strings are matched in the order they are listed as arguments. Strings that partially match are not sent to the current process in anticipation of the remainder coming. If characters are then entered such that there can no longer possibly be a match, only the part of the string will be sent to the process that cannot possibly begin another match. Thus, strings that are substrings of partial matches can match later, if the original strings that was attempting to be match ultimately fails.</dd>
 <dt>
-<dd> By default, string matching is exact with no wild cards. (In contrast, the <code>expect</code> command uses glob-style patterns by default.) The <code>-ex</code> flag may be used to protect patterns that might otherwise match <code>interact</code> flags from doing so. Any pattern beginning with a &quot;-&quot; should be protected this way. (All strings starting with &quot;-&quot; are reserved for future options.) </p>
+</dt><dd> By default, string matching is exact with no wild cards. (In contrast, the <code>expect</code> command uses glob-style patterns by default.) The <code>-ex</code> flag may be used to protect patterns that might otherwise match <code>interact</code> flags from doing so. Any pattern beginning with a &quot;-&quot; should be protected this way. (All strings starting with &quot;-&quot; are reserved for future options.) </dd>
 <p> The <code>-re</code> flag forces the string to be interpreted as a regexp-style pattern. In this case, matching substrings are stored in the variable <i>interact_out</i> similarly to the way <code>expect</code> stores its output in the variable <code>expect_out</code>. The <code>-indices</code> flag is similarly supported. </p>
 <p> The pattern <code>eof</code> introduces an action that is executed upon end-of-file. A separate <code>eof</code> pattern may also follow the <code>-output</code> flag in which case it is matched if an eof is detected while writing output. The default <code>eof</code> action is &quot;return&quot;, so that <code>interact</code> simply returns upon any EOF. </p>
 <p> The pattern <code>timeout</code> introduces a timeout (in seconds) and action that is executed after no characters have been read for a given time. The <code>timeout</code> pattern applies to the most recently specified process. There is no default timeout. The special variable &quot;timeout&quot; (used by the <code>expect</code> command) has no affect on this timeout. </p>
@@ -372,15 +368,15 @@ set CTRLZ  interact<br />
 <p> Prefacing a pattern with the flag <code>-iwrite</code> causes the variable <i>interact_out(spawn_id)</i> to be set to the spawn_id which matched the pattern (or eof). </p>
 <p> Actions such as <code>break</code> and <code>continue</code> cause control structures (i.e., <code>for</code>, <code>proc</code>) to behave in the usual way. However <code>return</code> causes interact to return to its caller, while <code>inter_return</code> causes <code>interact</code> to cause a return in its caller. For example, if &quot;proc foo&quot; called <code>interact</code> which then executed the action <code>inter_return</code>, <code>proc foo</code> would return. (This means that if <code>interact</code> calls <code>interpreter</code> interactively typing <code>return</code> will cause the interact to continue, while <code>inter_return</code> will cause the interact to return to its caller.)</p>
 <dt>
-<dd> During <code>interact</code>, raw mode is used so that all characters may be passed to the current process. If the current process does not catch job control signals, it will stop if sent a stop signal (by default ^Z). To restart it, send a continue signal (such as by &quot;kill -CONT &lt;pid&gt;&quot;). If you really want to send a SIGSTOP to such a process (by ^Z), consider spawning csh first and then running your program. On the other hand, if you want to send a SIGSTOP to <code>Expect</code> itself, first call interpreter (perhaps by using an escape character), and then press ^Z.</p>
+</dt><dd> During <code>interact</code>, raw mode is used so that all characters may be passed to the current process. If the current process does not catch job control signals, it will stop if sent a stop signal (by default ^Z). To restart it, send a continue signal (such as by &quot;kill -CONT &lt;pid&gt;&quot;). If you really want to send a SIGSTOP to such a process (by ^Z), consider spawning csh first and then running your program. On the other hand, if you want to send a SIGSTOP to <code>Expect</code> itself, first call interpreter (perhaps by using an escape character), and then press ^Z.</dd>
 <dt>
-<dd> String-body pairs can be used as a shorthand for avoiding having to enter the interpreter and execute commands interactively. The previous terminal mode is used while the body of a string-body pair is being executed.</p>
+</dt><dd> String-body pairs can be used as a shorthand for avoiding having to enter the interpreter and execute commands interactively. The previous terminal mode is used while the body of a string-body pair is being executed.</dd>
 <dt>
-<dd> For speed, actions execute in raw mode by default. The <code>-reset</code> flag resets the terminal to the mode it had before <code>interact</code> was executed (invariably, cooked mode). Note that characters entered when the mode is being switched may be lost (an unfortunate feature of the terminal driver on some systems). The only reason to use <code>-reset</code> is if your action depends on running in cooked mode.</p>
+</dt><dd> For speed, actions execute in raw mode by default. The <code>-reset</code> flag resets the terminal to the mode it had before <code>interact</code> was executed (invariably, cooked mode). Note that characters entered when the mode is being switched may be lost (an unfortunate feature of the terminal driver on some systems). The only reason to use <code>-reset</code> is if your action depends on running in cooked mode.</dd>
 <dt>
-<dd> The <code>-echo</code> flag sends characters that match the following pattern back to the process that generated them as each character is read. This may be useful when the user needs to see feedback from partially typed patterns.</p>
+</dt><dd> The <code>-echo</code> flag sends characters that match the following pattern back to the process that generated them as each character is read. This may be useful when the user needs to see feedback from partially typed patterns.</dd>
 <dt>
-<dd> If a pattern is being echoed but eventually fails to match, the characters are sent to the spawned process. If the spawned process then echoes them, the user will see the characters twice. <code>-echo</code> is probably only appropriate in situations where the user is unlikely to not complete the pattern. For example, the following excerpt is from rftp, the recursive-ftp script, where the user is prompted to enter ~g, ~p, or ~l, to get, put, or list the current directory recursively. These are so far away from the normal ftp commands, that the user is unlikely to type ~ followed by anything else, except mistakenly, in which case, they&#8217;ll probably just ignore the result anyway.<br />
+</dt><dd> If a pattern is being echoed but eventually fails to match, the characters are sent to the spawned process. If the spawned process then echoes them, the user will see the characters twice. <code>-echo</code> is probably only appropriate in situations where the user is unlikely to not complete the pattern. For example, the following excerpt is from rftp, the recursive-ftp script, where the user is prompted to enter ~g, ~p, or ~l, to get, put, or list the current directory recursively. These are so far away from the normal ftp commands, that the user is unlikely to type ~ followed by anything else, except mistakenly, in which case, they&#8217;ll probably just ignore the result anyway.<br />
 interact<br />
 {<br />
     -echo ~g{getcurdirectory 1} &#8211; echo ~l{getcurdirectory 0} &#8211; echo ~p<br />
@@ -388,22 +384,22 @@ interact<br />
         putcurdirectory<br />
     }<br />
 }<br />
- The <code>-nobuffer</code> flag sends characters that match the following pattern on to the output process as characters are read. </p>
+ The <code>-nobuffer</code> flag sends characters that match the following pattern on to the output process as characters are read. </dd>
 <p> This is useful when you wish to let a program echo back the pattern. For example, the following might be used to monitor where a person is dialing (a Hayes-style modem). Each time &quot;atd&quot; is seen the script logs the rest of the line.<br />
 proc lognumber{} {<br />
     interact &#8211; nobuffer &#8211; re &#8220;(.*)
 &#8221; return puts $log &#8220;[clock format [clock seconds]]: dialed $interact_out(1,string)&#8221;} interact &#8211;<br />
     nobuffer &#8220;atd&#8221; lognumber</p>
 <dt>
-<dd> During <code>interact</code>, previous use of <code>log_user</code> is ignored. In particular, <code>interact</code> will force its output to be logged (sent to the standard output) since it is presumed the user doesn&#8217;t wish to interact blindly.</p>
+</dt><dd> During <code>interact</code>, previous use of <code>log_user</code> is ignored. In particular, <code>interact</code> will force its output to be logged (sent to the standard output) since it is presumed the user doesn&#8217;t wish to interact blindly.</dd>
 <dt>
-<dd> The <code>-o</code> flag causes any following key-body pairs to be applied to the output of the current process. This can be useful, for example, when dealing with hosts that send unwanted characters during a telnet session.</p>
+</dt><dd> The <code>-o</code> flag causes any following key-body pairs to be applied to the output of the current process. This can be useful, for example, when dealing with hosts that send unwanted characters during a telnet session.</dd>
 <dt>
-<dd> By default, <code>interact</code> expects the user to be writing stdin and reading stdout of the <code>Expect</code> process itself. The <code>-u</code> flag (for &quot;user&quot;) makes <code>interact</code> look for the user as the process named by its argument (which must be a spawned id).</p>
+</dt><dd> By default, <code>interact</code> expects the user to be writing stdin and reading stdout of the <code>Expect</code> process itself. The <code>-u</code> flag (for &quot;user&quot;) makes <code>interact</code> look for the user as the process named by its argument (which must be a spawned id).</dd>
 <dt>
-<dd> This allows two unrelated processes to be joined together without using an explicit loop. To aid in debugging, Expect diagnostics always go to stderr (or stdout for certain logging and debugging information). For the same reason, the <code>interpreter</code> command will read interactively from stdin.</p>
+</dt><dd> This allows two unrelated processes to be joined together without using an explicit loop. To aid in debugging, Expect diagnostics always go to stderr (or stdout for certain logging and debugging information). For the same reason, the <code>interpreter</code> command will read interactively from stdin.</dd>
 <dt>
-<dd> For example, the following fragment creates a login process. Then it dials the user (not shown), and finally connects the two together. Of course, any process may be substituted for login. A shell, for example, would allow the user to work without supplying an account and password. </p>
+</dt><dd> For example, the following fragment creates a login process. Then it dials the user (not shown), and finally connects the two together. Of course, any process may be substituted for login. A shell, for example, would allow the user to work without supplying an account and password. </dd>
 <pre>
     spawn login
     set login $spawn_id
@@ -416,58 +412,58 @@ proc lognumber{} {<br />
 <p> The two implied input processes default to having their outputs specified as $spawn_id and $user_spawn_id (in reverse). If a <code>-input</code> flag appears with no <code>-output</code> flag, characters from that process are discarded. </p>
 <p> The <code>-i</code> flag introduces a replacement for the current spawn_id when no other <code>-input</code> or <code>-output</code> flags are used. A -i flag implies a -o flag. </p>
 <p> It is possible to change the processes that are being interacted with by using indirect spawn ids. (Indirect spawn ids are described in the section on the expect command.) Indirect spawn ids may be specified with the -i, -u, -input, or -output flags.</p>
-<dt><code>interpreter [args]</code></p>
-<dd> causes the user to be interactively prompted for <code>Expect</code> and Tcl commands. The result of each command is printed.</p>
+<dt><code>interpreter [args]</code></dt>
+<dd> causes the user to be interactively prompted for <code>Expect</code> and Tcl commands. The result of each command is printed.</dd>
 <dt>
-<dd> Actions such as <code>break</code> and <code>continue</code> cause control structures (i.e., <code>for</code>, <code>proc</code>) to behave in the usual way. However <code>return</code> causes interpreter to return to its caller, while <code>inter_return</code> causes <code>interpreter</code> to cause a return in its caller. For example, if &quot;proc foo&quot; called <code>interpreter</code> which then executed the action <code>inter_return</code>, <code>proc foo</code> would return. Any other command causes <code>interpreter</code> to continue prompting for new commands.</p>
+</dt><dd> Actions such as <code>break</code> and <code>continue</code> cause control structures (i.e., <code>for</code>, <code>proc</code>) to behave in the usual way. However <code>return</code> causes interpreter to return to its caller, while <code>inter_return</code> causes <code>interpreter</code> to cause a return in its caller. For example, if &quot;proc foo&quot; called <code>interpreter</code> which then executed the action <code>inter_return</code>, <code>proc foo</code> would return. Any other command causes <code>interpreter</code> to continue prompting for new commands.</dd>
 <dt>
-<dd> By default, the prompt contains two integers. The first integer describes the depth of the evaluation stack (i.e., how many times Tcl_Eval has been called). The second integer is the Tcl history identifier. The prompt can be set by defining a procedure called &quot;prompt1&quot; whose return value becomes the next prompt. If a statement has open quotes, parens, braces, or brackets, a secondary prompt (by default &quot;+&gt; &quot;) is issued upon newline. The secondary prompt may be set by defining a procedure called &quot;prompt2&quot;.</p>
+</dt><dd> By default, the prompt contains two integers. The first integer describes the depth of the evaluation stack (i.e., how many times Tcl_Eval has been called). The second integer is the Tcl history identifier. The prompt can be set by defining a procedure called &quot;prompt1&quot; whose return value becomes the next prompt. If a statement has open quotes, parens, braces, or brackets, a secondary prompt (by default &quot;+&gt; &quot;) is issued upon newline. The secondary prompt may be set by defining a procedure called &quot;prompt2&quot;.</dd>
 <dt>
-<dd> During <code>interpreter</code>, cooked mode is used, even if the its caller was using raw mode.</p>
+</dt><dd> During <code>interpreter</code>, cooked mode is used, even if the its caller was using raw mode.</dd>
 <dt>
-<dd> If stdin is closed, <code>interpreter</code> will return unless the <code>-eof</code> flag is used, in which case the subsequent argument is invoked.</p>
-<dt><code>log_file</code><i> [args] [[-a] file]</i></p>
-<dd> If a filename is provided, <code>log_file</code> will record a transcript of the session (beginning at that point) in the file. <code>log_file</code> will stop recording if no argument is given. Any previous log file is closed. </p>
+</dt><dd> If stdin is closed, <code>interpreter</code> will return unless the <code>-eof</code> flag is used, in which case the subsequent argument is invoked.</dd>
+<dt><code>log_file</code><i> [args] [[-a] file]</i></dt>
+<dd> If a filename is provided, <code>log_file</code> will record a transcript of the session (beginning at that point) in the file. <code>log_file</code> will stop recording if no argument is given. Any previous log file is closed. </dd>
 <p> Instead of a filename, a Tcl file identifier may be provided by using the <code>-open</code> or <code>-leaveopen</code> flags. This is similar to the <code>spawn</code> command. (See <code>spawn</code> for more info.) </p>
 <p> The <code>-a</code> flag forces output to be logged that was suppressed by the <code>log_user</code> command. </p>
 <p> By default, the <code>log_file</code> command <i>appends</i> to old files rather than truncating them, for the convenience of being able to turn logging off and on multiple times in one session. To truncate files, use the <code>-noappend</code> flag. </p>
 <p> The <code>-info</code> flag causes log_file to return a description of the most recent non-info arguments given.</p>
-<dt><code>log_user</code><i> -info|0|1</i></p>
-<dd> By default, the send/expect dialogue is logged to stdout (and a logfile if open). The logging to stdout is disabled by the command &quot;log_user 0&quot; and reenabled by &quot;log_user 1&quot;. Logging to the logfile is unchanged. </p>
+<dt><code>log_user</code><i> -info|0|1</i></dt>
+<dd> By default, the send/expect dialogue is logged to stdout (and a logfile if open). The logging to stdout is disabled by the command &quot;log_user 0&quot; and reenabled by &quot;log_user 1&quot;. Logging to the logfile is unchanged. </dd>
 <p> The <code>-info</code> flag causes log_user to return a description of the most recent non-info arguments given.</p>
-<dt><code>match_max</code><i> [-d] [-i spawn_id] [size]</i></p>
-<dd> defines the size of the buffer (in bytes) used internally by <code>expect</code>. With no <i>size</i> argument, the current size is returned.</p>
+<dt><code>match_max</code><i> [-d] [-i spawn_id] [size]</i></dt>
+<dd> defines the size of the buffer (in bytes) used internally by <code>expect</code>. With no <i>size</i> argument, the current size is returned.</dd>
 <dt>
-<dd> With the <code>-d</code> flag, the default size is set. (The initial default is 2000.) With the <code>-i</code> flag, the size is set for the named spawn id, otherwise it is set for the current process.</p>
-<dt><code>overlay</code><i> [-# spawn_id] [-# spawn_id] [&#8230;] program [args]</i></p>
-<dd> executes <i>program args</i> in place of the current <code>Expect</code> program, which terminates. A bare hyphen argument forces a hyphen in front of the command name as if it was a login shell. All spawn_ids are closed except for those named as arguments. These are mapped onto the named file identifiers.</p>
+</dt><dd> With the <code>-d</code> flag, the default size is set. (The initial default is 2000.) With the <code>-i</code> flag, the size is set for the named spawn id, otherwise it is set for the current process.</dd>
+<dt><code>overlay</code><i> [-# spawn_id] [-# spawn_id] [&#8230;] program [args]</i></dt>
+<dd> executes <i>program args</i> in place of the current <code>Expect</code> program, which terminates. A bare hyphen argument forces a hyphen in front of the command name as if it was a login shell. All spawn_ids are closed except for those named as arguments. These are mapped onto the named file identifiers.</dd>
 <dt>
-<dd> Spawn_ids are mapped to file identifiers for the new program to inherit. For example, the following line runs chess and allows it to be controlled by the current process &#8211; say, a chess master. </p>
+</dt><dd> Spawn_ids are mapped to file identifiers for the new program to inherit. For example, the following line runs chess and allows it to be controlled by the current process &#8211; say, a chess master. </dd>
 <pre>
     overlay -0 $spawn_id -1 $spawn_id -2 $spawn_id chess
 </pre>
 <p> This is more efficient than &quot;interact -u&quot;, however, it sacrifices the ability to do programmed interaction since the <code>Expect</code> process is no longer in control.</p>
 <dt>
-<dd> Note that no controlling terminal is provided. Thus, if you disconnect or remap standard input, programs that do job control (shells, login, etc) will not function properly.</p>
-<dt><code>parity</code><i> [-d] [-i spawn_id] [value]</i></p>
-<dd> defines whether parity should be retained or stripped from the output of spawned processes. If <i>value</i> is zero, parity is stripped, otherwise it is not stripped. With no <i>value</i> argument, the current value is returned.</p>
+</dt><dd> Note that no controlling terminal is provided. Thus, if you disconnect or remap standard input, programs that do job control (shells, login, etc) will not function properly.</dd>
+<dt><code>parity</code><i> [-d] [-i spawn_id] [value]</i></dt>
+<dd> defines whether parity should be retained or stripped from the output of spawned processes. If <i>value</i> is zero, parity is stripped, otherwise it is not stripped. With no <i>value</i> argument, the current value is returned.</dd>
 <dt>
-<dd> With the <code>-d</code> flag, the default parity value is set. (The initial default is 1, i.e., parity is not stripped.) With the <code>-i</code> flag, the parity value is set for the named spawn id, otherwise it is set for the current process.</p>
-<dt><code>remove_nulls</code><i> [-d] [-i spawn_id] [value]</i></p>
-<dd> defines whether nulls are retained or removed from the output of spawned processes before pattern matching or storing in the variable <i>expect_out </i> or <i>interact_out</i>. If <i>value</i> is 1, nulls are removed. If <i>value</i> is 0, nulls are not removed. With no <i>value</i> argument, the current value is returned.</p>
+</dt><dd> With the <code>-d</code> flag, the default parity value is set. (The initial default is 1, i.e., parity is not stripped.) With the <code>-i</code> flag, the parity value is set for the named spawn id, otherwise it is set for the current process.</dd>
+<dt><code>remove_nulls</code><i> [-d] [-i spawn_id] [value]</i></dt>
+<dd> defines whether nulls are retained or removed from the output of spawned processes before pattern matching or storing in the variable <i>expect_out </i> or <i>interact_out</i>. If <i>value</i> is 1, nulls are removed. If <i>value</i> is 0, nulls are not removed. With no <i>value</i> argument, the current value is returned.</dd>
 <dt>
-<dd> With the <code>-d</code> flag, the default value is set. (The initial default is 1, i.e., nulls are removed.) With the <code>-i</code> flag, the value is set for the named spawn id, otherwise it is set for the current process. </p>
+</dt><dd> With the <code>-d</code> flag, the default value is set. (The initial default is 1, i.e., nulls are removed.) With the <code>-i</code> flag, the value is set for the named spawn id, otherwise it is set for the current process. </dd>
 <p> Whether or not nulls are removed, <code>Expect</code> will record null bytes to the log and stdout.</p>
-<dt><code>send</code><i> [-flags] string</i></p>
-<dd> Sends <i>string</i> to the current process. For example, the command </p>
+<dt><code>send</code><i> [-flags] string</i></dt>
+<dd> Sends <i>string</i> to the current process. For example, the command </dd>
 <pre>
     send &quot;hello world
 &quot;
 </pre>
 <p> sends the characters, h e l l o &lt;blank&gt; w o r l d &lt;return&gt; to the current process. (Tcl includes a printf-like command (called <code>format</code>) which can build arbitrarily complex strings.)</p>
 <dt>
-<dd> Characters are sent immediately although programs with line-buffered input will not read the characters until a return character is sent. A return character is denoted &quot;
-&quot;. </p>
+</dt><dd> Characters are sent immediately although programs with line-buffered input will not read the characters until a return character is sent. A return character is denoted &quot;
+&quot;. </dd>
 <p> The <code>&#8212;</code> flag forces the next argument to be interpreted as a string rather than a flag. Any string can be preceded by &quot;&#8211;&quot; whether or not it actually looks like a flag. This provides a reliable mechanism to specify variable strings without being tripped up by those that accidentally look like flags. (All strings starting with &quot;-&quot; are reserved for future options.) </p>
 <p> The <code>-i</code> flag declares that the string be sent to the named spawn_id. If the spawn_id is <i>user_spawn_id</i>, and the terminal is in raw mode, newlines in the string are translated to return-newline sequences so that they appear as if the terminal was in cooked mode. The <code>-raw</code> flag disables this translation. </p>
 <p> The <code>-null</code> flag sends null characters (0 bytes). By default, one null is sent. An integer may follow the <code>-null</code> to indicate how many nulls to send. </p>
@@ -496,25 +492,25 @@ proc lognumber{} {<br />
     send password
 </pre>
 <p> <code>exp_send</code> is an alias for <code>send</code><i>.</i> If you are using Expectk or some other variant of Expect in the Tk environment, <code>send</code> is defined by Tk for an entirely different purpose. <code>exp_send</code> is provided for compatibility between environments. Similar aliases are provided for other Expect&#8217;s other send commands.</p>
-<dt><code>send_error</code><i> [-flags] string</i></p>
-<dd> is like <code>send</code>, except that the output is sent to stderr rather than the current process.</p>
-<dt><code>send_log</code><i> [&#8211;] string</i></p>
-<dd> is like <code>send</code>, except that the string is only sent to the log file (see <code>log_file</code>.) The arguments are ignored if no log file is open.</p>
-<dt><code>send_tty</code><i> [-flags] string</i></p>
-<dd> is like <code>send</code>, except that the output is sent to /dev/tty rather than the current process.</p>
-<dt><code>send_user</code><i> [-flags] string</i></p>
-<dd> is like <code>send</code>, except that the output is sent to stdout rather than the current process.</p>
-<dt><code>sleep</code><i> seconds</i></p>
-<dd> causes the script to sleep for the given number of seconds. Seconds may be a decimal number. Interrupts (and Tk events if you are using Expectk) are processed while Expect sleeps.</p>
-<dt><code>spawn</code><i> [args] program [args]</i></p>
-<dd> creates a new process running <i>program args</i>. Its stdin, stdout and stderr are connected to Expect, so that they may be read and written by other <code>Expect</code> commands. The connection is broken by <code>close</code> or if the process itself closes any of the file identifiers.</p>
+<dt><code>send_error</code><i> [-flags] string</i></dt>
+<dd> is like <code>send</code>, except that the output is sent to stderr rather than the current process.</dd>
+<dt><code>send_log</code><i> [&#8211;] string</i></dt>
+<dd> is like <code>send</code>, except that the string is only sent to the log file (see <code>log_file</code>.) The arguments are ignored if no log file is open.</dd>
+<dt><code>send_tty</code><i> [-flags] string</i></dt>
+<dd> is like <code>send</code>, except that the output is sent to /dev/tty rather than the current process.</dd>
+<dt><code>send_user</code><i> [-flags] string</i></dt>
+<dd> is like <code>send</code>, except that the output is sent to stdout rather than the current process.</dd>
+<dt><code>sleep</code><i> seconds</i></dt>
+<dd> causes the script to sleep for the given number of seconds. Seconds may be a decimal number. Interrupts (and Tk events if you are using Expectk) are processed while Expect sleeps.</dd>
+<dt><code>spawn</code><i> [args] program [args]</i></dt>
+<dd> creates a new process running <i>program args</i>. Its stdin, stdout and stderr are connected to Expect, so that they may be read and written by other <code>Expect</code> commands. The connection is broken by <code>close</code> or if the process itself closes any of the file identifiers.</dd>
 <dt>
-<dd> When a process is started by <code>spawn</code>, the variable <i>spawn_id</i> is set to a descriptor referring to that process. The process described by <i>spawn_id</i> is considered the <i>current process</i>. <i>spawn_id</i> may be read or written, in effect providing job control.</p>
+</dt><dd> When a process is started by <code>spawn</code>, the variable <i>spawn_id</i> is set to a descriptor referring to that process. The process described by <i>spawn_id</i> is considered the <i>current process</i>. <i>spawn_id</i> may be read or written, in effect providing job control.</dd>
 <dt>
-<dd> <i>user_spawn_id</i> is a global variable containing a descriptor which refers to the user. For example, when <i>spawn_id</i> is set to this value, <code>expect</code> behaves like <code>expect_user</code>. </p>
+</dt><dd> <i>user_spawn_id</i> is a global variable containing a descriptor which refers to the user. For example, when <i>spawn_id</i> is set to this value, <code>expect</code> behaves like <code>expect_user</code>. </dd>
 <p> <i>error_spawn_id</i> is a global variable containing a descriptor which refers to the standard error. For example, when <i>spawn_id</i> is set to this value, <code>send</code> behaves like <code>send_error</code>.</p>
 <dt>
-<dd> <i>tty_spawn_id</i> is a global variable containing a descriptor which refers to /dev/tty. If /dev/tty does not exist (such as in a cron, at, or batch script), then <i>tty_spawn_id</i> is not defined. This may be tested as:<br />
+</dt><dd> <i>tty_spawn_id</i> is a global variable containing a descriptor which refers to /dev/tty. If /dev/tty does not exist (such as in a cron, at, or batch script), then <i>tty_spawn_id</i> is not defined. This may be tested as:<br />
 if {<br />
     [info vars tty_spawn_id]<br />
 }<br />
@@ -525,34 +521,34 @@ else<br />
 {<br />
 #/ dev / tty doesn&#8217;t exist<br />
 #probably in cron, batch, or at script<br />
-}</p>
+}</dd>
 <dt>
-<dd> <code>spawn</code> returns the UNIX process id. If no process is spawned, 0 is returned. The variable <i>spawn_out(slave,name)</i> is set to the name of the pty slave device.</p>
+</dt><dd> <code>spawn</code> returns the UNIX process id. If no process is spawned, 0 is returned. The variable <i>spawn_out(slave,name)</i> is set to the name of the pty slave device.</dd>
 <dt>
-<dd> By default, <code>spawn</code> echoes the command name and arguments. The <code>-noecho</code> flag stops <code>spawn</code> from doing this.</p>
+</dt><dd> By default, <code>spawn</code> echoes the command name and arguments. The <code>-noecho</code> flag stops <code>spawn</code> from doing this.</dd>
 <dt>
-<dd> The <code>-console</code> flag causes console output to be redirected to the spawned process. This is not supported on all systems. </p>
+</dt><dd> The <code>-console</code> flag causes console output to be redirected to the spawned process. This is not supported on all systems. </dd>
 <p> Internally, <code>spawn</code> uses a pty, initialized the same way as the user&#8217;s tty. This is further initialized so that all settings are &quot;sane&quot; (according to <a href="/docs/linux/man/1-stty/">stty</a>(1)). If the variable <i>stty_init</i> is defined, it is interpreted in the style of stty arguments as further configuration. For example, &quot;set stty_init raw&quot; will cause further spawned processes&#8217;s terminals to start in raw mode. <code>-nottycopy</code> skips the initialization based on the user&#8217;s tty. <code>-nottyinit</code> skips the &quot;sane&quot; initialization.</p>
 <dt>
-<dd> Normally, <code>spawn</code> takes little time to execute. If you notice spawn taking a significant amount of time, it is probably encountering ptys that are wedged. A number of tests are run on ptys to avoid entanglements with errant processes. (These take 10 seconds per wedged pty.) Running Expect with the <code>-d</code> option will show if <code>Expect</code> is encountering many ptys in odd states. If you cannot kill the processes to which these ptys are attached, your only recourse may be to reboot. </p>
+</dt><dd> Normally, <code>spawn</code> takes little time to execute. If you notice spawn taking a significant amount of time, it is probably encountering ptys that are wedged. A number of tests are run on ptys to avoid entanglements with errant processes. (These take 10 seconds per wedged pty.) Running Expect with the <code>-d</code> option will show if <code>Expect</code> is encountering many ptys in odd states. If you cannot kill the processes to which these ptys are attached, your only recourse may be to reboot. </dd>
 <p> If <i>program</i> cannot be spawned successfully because exec(2) fails (e.g. when <i>program</i> doesn&#8217;t exist), an error message will be returned by the next <code>interact</code> or <code>expect</code> command as if <i>program</i> had run and produced the error message as output. This behavior is a natural consequence of the implementation of <code>spawn</code>. Internally, spawn forks, after which the spawned process has no way to communicate with the original <code>Expect</code> process except by communication via the spawn_id. </p>
 <p> The <code>-open</code> flag causes the next argument to be interpreted as a Tcl file identifier (i.e., returned by <code>open</code>.) The spawn id can then be used as if it were a spawned process. (The file identifier should no longer be used.) This lets you treat raw devices, files, and pipelines as spawned processes without using a pty. 0 is returned to indicate there is no associated process. When the connection to the spawned process is closed, so is the Tcl file identifier. The <code>-leaveopen</code> flag is similar to <code>-open</code> except that <code>-leaveopen</code> causes the file identifier to be left open even after the spawn id is closed. </p>
 <p> The <code>-pty</code> flag causes a pty to be opened but no process spawned. 0 is returned to indicate there is no associated process. Spawn_id is set as usual. </p>
 <p> The variable <i>spawn_out(slave,fd)</i> is set to a file identifier corresponding to the pty slave. It can be closed using &quot;close -slave&quot;. </p>
 <p> The <code>-ignore</code> flag names a signal to be ignored in the spawned process. Otherwise, signals get the default behavior. Signals are named as in the <code>trap</code> command, except that each signal requires a separate flag.</p>
-<dt><code>strace</code><i> level</i></p>
-<dd> causes following statements to be printed before being executed. (Tcl&#8217;s trace command traces variables.) <i>level</i> indicates how far down in the call stack to trace. For example, the following command runs <code>Expect</code> while tracing the first 4 levels of calls, but none below that. </p>
+<dt><code>strace</code><i> level</i></dt>
+<dd> causes following statements to be printed before being executed. (Tcl&#8217;s trace command traces variables.) <i>level</i> indicates how far down in the call stack to trace. For example, the following command runs <code>Expect</code> while tracing the first 4 levels of calls, but none below that. </dd>
 <pre>
     expect -c &quot;strace 4&quot; script.exp
 </pre>
 <p> The <code>-info</code> flag causes strace to return a description of the most recent non-info arguments given.</p>
-<dt><code>stty</code><i> args</i></p>
-<dd> changes terminal modes similarly to the external stty command. </p>
+<dt><code>stty</code><i> args</i></dt>
+<dd> changes terminal modes similarly to the external stty command. </dd>
 <p> By default, the controlling terminal is accessed. Other terminals can be accessed by appending &quot;&lt; /dev/tty&#8230;&quot; to the command. (Note that the arguments should not be grouped into a single argument.) </p>
 <p> Requests for status return it as the result of the command. If no status is requested and the controlling terminal is accessed, the previous status of the raw and echo attributes are returned in a form which can later be used by the command. </p>
 <p> For example, the arguments <code>raw</code> or <code>-cooked</code> put the terminal into raw mode. The arguments <code>-raw</code> or <code>cooked</code> put the terminal into cooked mode. The arguments <code>echo</code> and <code>-echo</code> put the terminal into echo and noecho mode respectively.</p>
 <dt>
-<dd> The following example illustrates how to temporarily disable echoing. This could be used in otherwise-automatic scripts to avoid embedding passwords in them. (See more discussion on this under EXPECT HINTS below.) </p>
+</dt><dd> The following example illustrates how to temporarily disable echoing. This could be used in otherwise-automatic scripts to avoid embedding passwords in them. (See more discussion on this under EXPECT HINTS below.) </dd>
 <pre>
     stty -echo
     send_user &quot;Password: &quot;
@@ -561,12 +557,12 @@ else<br />
     set password $expect_out(1,string)
     stty echo
 </pre>
-<dt><code>system</code><i> args</i></p>
-<dd> gives <i>args</i> to <a href="/docs/linux/man/1-sh/">sh</a>(1) as input, just as if it had been typed as a command from a terminal. <code>Expect</code> waits until the shell terminates. The return status from sh is handled the same way that <code>exec</code> handles its return status.</p>
+<dt><code>system</code><i> args</i></dt>
+<dd> gives <i>args</i> to <a href="/docs/linux/man/1-sh/">sh</a>(1) as input, just as if it had been typed as a command from a terminal. <code>Expect</code> waits until the shell terminates. The return status from sh is handled the same way that <code>exec</code> handles its return status.</dd>
 <dt>
-<dd> In contrast to <code>exec</code> which redirects stdin and stdout to the script, <code>system</code> performs no redirection (other than that indicated by the string itself). Thus, it is possible to use programs which must talk directly to /dev/tty. For the same reason, the results of <code>system</code> are not recorded in the log.</p>
-<dt><code>timestamp</code><i> [args]</i></p>
-<dd> returns a timestamp. With no arguments, the number of seconds since the epoch is returned. </p>
+</dt><dd> In contrast to <code>exec</code> which redirects stdin and stdout to the script, <code>system</code> performs no redirection (other than that indicated by the string itself). Thus, it is possible to use programs which must talk directly to /dev/tty. For the same reason, the results of <code>system</code> are not recorded in the log.</dd>
+<dt><code>timestamp</code><i> [args]</i></dt>
+<dd> returns a timestamp. With no arguments, the number of seconds since the epoch is returned. </dd>
 <p> The <code>-format</code> flag introduces a string which is returned but with substitutions made according to the POSIX rules for strftime. For example %a is replaced by an abbreviated weekday name (i.e., Sat). Others are: </p>
 <pre>
     %a      abbreviated weekday name
@@ -597,8 +593,8 @@ else<br />
 <p> Other % specifications are undefined. Other characters will be passed through untouched. Only the C locale is supported. </p>
 <p> The <code>-seconds</code> flag introduces a number of seconds since the epoch to be used as a source from which to format. Otherwise, the current time is used. </p>
 <p> The <code>-gmt</code> flag forces timestamp output to use the GMT timezone. With no flag, the local timezone is used.</p>
-<dt><code>trap</code><i> [[command] signals]</i></p>
-<dd> causes the given <i>command</i> to be executed upon future receipt of any of the given signals. The command is executed in the global scope. If <i>command</i> is absent, the signal action is returned. If <i>command </i> is the string SIG_IGN, the signals are ignored. If <i>command</i> is the string SIG_DFL, the signals are result to the system default. <i>signals</i> is either a single signal or a list of signals. Signals may be specified numerically or symbolically as per signal(3). The &quot;SIG&quot; prefix may be omitted. </p>
+<dt><code>trap</code><i> [[command] signals]</i></dt>
+<dd> causes the given <i>command</i> to be executed upon future receipt of any of the given signals. The command is executed in the global scope. If <i>command</i> is absent, the signal action is returned. If <i>command </i> is the string SIG_IGN, the signals are ignored. If <i>command</i> is the string SIG_DFL, the signals are result to the system default. <i>signals</i> is either a single signal or a list of signals. Signals may be specified numerically or symbolically as per signal(3). The &quot;SIG&quot; prefix may be omitted. </dd>
 <p> With no arguments (or the argument -number), <code>trap</code> returns the signal number of the trap command currently being executed. </p>
 <p> The <code>-code</code> flag uses the return code of the command in place of whatever code Tcl was about to return when the command originally started running. </p>
 <p> The <code>-interp</code> flag causes the command to be evaluated using the interpreter active at the time the command started running rather than when the trap was declared. </p>
@@ -625,13 +621,13 @@ if {<br />
  Alternatively, you can trap to the debugger using some other signal. </p>
 <p> <code>trap</code> will not let you override the action for SIGALRM as this is used internally to <code>Expect</code>. The disconnect command sets SIGALRM to SIG_IGN (ignore). You can reenable this as long as you disable it during subsequent spawn commands. </p>
 <p> See signal(3) for more info.</p>
-<dt><code>wait</code><i> [args]</i></p>
-<dd> delays until a spawned process (or the current process if none is named) terminates.</p>
+<dt><code>wait</code><i> [args]</i></dt>
+<dd> delays until a spawned process (or the current process if none is named) terminates.</dd>
 <dt>
-<dd> <code>wait</code> normally returns a list of four integers. The first integer is the pid of the process that was waited upon. The second integer is the corresponding spawn id. The third integer is -1 if an operating system error occurred, or 0 otherwise. If the third integer was 0, the fourth integer is the status returned by the spawned process. If the third integer was -1, the fourth integer is the value of errno set by the operating system. The global variable errorCode is also set. </p>
+</dt><dd> <code>wait</code> normally returns a list of four integers. The first integer is the pid of the process that was waited upon. The second integer is the corresponding spawn id. The third integer is -1 if an operating system error occurred, or 0 otherwise. If the third integer was 0, the fourth integer is the status returned by the spawned process. If the third integer was -1, the fourth integer is the value of errno set by the operating system. The global variable errorCode is also set. </dd>
 <p> Additional elements may appear at the end of the return value from <code>wait</code>. An optional fifth element identifies a class of information. Currently, the only possible value for this element is CHILDKILLED in which case the next two values are the C-style signal name and a short textual description.</p>
 <dt>
-<dd> The <code>-i</code> flag declares the process to wait corresponding to the named spawn_id (NOT the process id). Inside a SIGCHLD handler, it is possible to wait for any spawned process by using the spawn id -1. </p>
+</dt><dd> The <code>-i</code> flag declares the process to wait corresponding to the named spawn_id (NOT the process id). Inside a SIGCHLD handler, it is possible to wait for any spawned process by using the spawn id -1. </dd>
 <p> The <code>-nowait</code> flag causes the wait to return immediately with the indication of a successful wait. When the process exits (later), it will automatically disappear without the need for an explicit wait. </p>
 <p> The <code>wait</code> command may also be used wait for a forked process using the arguments &quot;-i -1&quot;. Unlike its use with spawned processes, this command can be executed at any time. There is no control over which process is reaped. However, the return value can be checked for the process id. </p>
 </dl>

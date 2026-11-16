@@ -16,7 +16,6 @@ description: "ldap_dup, ldap_destroy, – Duplicate and destroy LDAP session han
 #include &lt;ldap.h&gt;
 LDAP *ldap_dup(
     LDAP *old);
-
 int ldap_destroy(
     LDAP *old);
 </code></pre>

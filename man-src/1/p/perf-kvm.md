@@ -18,16 +18,16 @@ perf kvm[--host][--guest][--guestmount = &lt;path&gt;[--guestkallsyms = &lt;path
 <p> There are a couple of variants of perf kvm: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm [options] top &lt;command&gt;' to generates and displays
 a performance counter profile of guest os in realtime
 of an arbitrary workload.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 'perf kvm record &lt;command&gt;' to record the performance counter profile
     of an arbitrary workload and save it into a perf data file.We set the default behavior of perf kvm as-- guest,
@@ -38,26 +38,26 @@ of an arbitrary workload.
         perf.data.host,
     please input-- host-- no - guest.The behaviors are shown as following : Default('')-&gt;perf.data.guest-- host-&gt;perf.data.kvm-- guest-&gt;perf.data.guest-- host-- guest-&gt;perf.data.kvm-- host-- no - guest-&gt;perf.data.host
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm report' to display the performance counter profile information
 recorded via perf kvm record.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm diff' to displays the performance difference amongst two perf.data
 files captured via perf record.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm buildid-list' to  display the buildids found in a perf data file,
 so that other tools can be used to fetch packages with matching symbol tables
@@ -65,10 +65,10 @@ for use by perf report. As buildid is read from /sys/kernel/notes in os, then
 if you want to list the buildid for guest, please make sure your perf data file
 was captured with --guestmount in perf kvm record.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm stat &lt;command&gt;' to run a command and gather performance counter
 statistics.
@@ -79,111 +79,111 @@ and the events between start and end &lt;command&gt;.
 And this command produces a file which contains tracing results of kvm
 events.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm stat report' reports statistical data which includes events
 handled time, samples, and so on.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kvm stat live' reports statistical data in a live mode (similar to
 record + report but with statistical data updated live at a given display
 rate).
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -i, &#8211;input=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Input file name.</dl>
+</dt><dd> Input file name.</dd></dl>
 <p> -o, &#8211;output=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Output file name.</dl>
+</dt><dd> Output file name.</dd></dl>
 <p> &#8211;host</p>
 <dl>
 <dt>
-<dd> Collect host side performance profile.</dl>
+</dt><dd> Collect host side performance profile.</dd></dl>
 <p> &#8211;guest</p>
 <dl>
 <dt>
-<dd> Collect guest side performance profile.</dl>
+</dt><dd> Collect guest side performance profile.</dd></dl>
 <p> &#8211;guestmount=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Guest os root file system mount directory. Users mounts guest os root directories under &lt;path&gt; by a specific filesystem access method, typically, sshfs. For example, start 2 guest os. The one&#8217;s pid is 8888 and the other&#8217;s is 9999. #mkdir /guestmount; cd/guestmount #sshfs -o allow_other,direct_io -p 5551 localhost:/ 8888/ #sshfs -o allow_other,direct_io -p 5552 localhost:/ 9999/ #perf kvm &#8211;host &#8211;guest &#8211;guestmount=~/guestmount top</dl>
+</dt><dd> Guest os root file system mount directory. Users mounts guest os root directories under &lt;path&gt; by a specific filesystem access method, typically, sshfs. For example, start 2 guest os. The one&#8217;s pid is 8888 and the other&#8217;s is 9999. #mkdir /guestmount; cd/guestmount #sshfs -o allow_other,direct_io -p 5551 localhost:/ 8888/ #sshfs -o allow_other,direct_io -p 5552 localhost:/ 9999/ #perf kvm &#8211;host &#8211;guest &#8211;guestmount=~/guestmount top</dd></dl>
 <p> &#8211;guestkallsyms=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Guest os /proc/kallsyms file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel symbols. Users copy it out from guest os.</dl>
+</dt><dd> Guest os /proc/kallsyms file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel symbols. Users copy it out from guest os.</dd></dl>
 <p> &#8211;guestmodules=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Guest os /proc/modules file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel module information. Users copy it out from guest os.</dl>
+</dt><dd> Guest os /proc/modules file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel module information. Users copy it out from guest os.</dd></dl>
 <p> &#8211;guestvmlinux=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Guest os kernel vmlinux.</dl>
+</dt><dd> Guest os kernel vmlinux.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be more verbose (show counter open errors, etc).</dl>
+</dt><dd> Be more verbose (show counter open errors, etc).</dd></dl>
 <h2>STAT REPORT OPTIONS</h2>
 <p> &#8211;vcpu=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> analyze events which occur on this vcpu. (default: all vcpus)</dl>
+</dt><dd> analyze events which occur on this vcpu. (default: all vcpus)</dd></dl>
 <p> &#8211;event=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dl>
+</dt><dd> event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dd></dl>
 <p> -k, &#8211;key=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dl>
+</dt><dd> Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dd></dl>
 <p> -p, &#8211;pid=</p>
 <dl>
 <dt>
-<dd> Analyze events only for given process ID(s) (comma separated list).</dl>
+</dt><dd> Analyze events only for given process ID(s) (comma separated list).</dd></dl>
 <h2>STAT LIVE OPTIONS</h2>
 <p> -d, &#8211;display</p>
 <dl>
 <dt>
-<dd> Time in seconds between display updates</dl>
+</dt><dd> Time in seconds between display updates</dd></dl>
 <p> -m, &#8211;mmap-pages=</p>
 <dl>
 <dt>
-<dd> Number of mmap data pages (must be a power of two) or size specification with appended unit character &#8211; B/K/M/G. The size is rounded up to have nearest pages power of two value.</dl>
+</dt><dd> Number of mmap data pages (must be a power of two) or size specification with appended unit character &#8211; B/K/M/G. The size is rounded up to have nearest pages power of two value.</dd></dl>
 <p> -a, &#8211;all-cpus</p>
 <dl>
 <dt>
-<dd> System-wide collection from all CPUs.</dl>
+</dt><dd> System-wide collection from all CPUs.</dd></dl>
 <p> -p, &#8211;pid=</p>
 <dl>
 <dt>
-<dd> Analyze events only for given process ID(s) (comma separated list).</dl>
+</dt><dd> Analyze events only for given process ID(s) (comma separated list).</dd></dl>
 <p> &#8211;vcpu=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> analyze events which occur on this vcpu. (default: all vcpus)</dl>
+</dt><dd> analyze events which occur on this vcpu. (default: all vcpus)</dd></dl>
 <p> &#8211;event=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dl>
+</dt><dd> event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dd></dl>
 <p> -k, &#8211;key=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dl>
+</dt><dd> Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dd></dl>
 <p> &#8211;duration=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> Show events other than HLT (x86 only) or Wait state (s390 only) that take longer than duration usecs.</dl>
+</dt><dd> Show events other than HLT (x86 only) or Wait state (s390 only) that take longer than duration usecs.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1), <code><a href="/docs/linux/man/1-perf-diff/">perf-diff</a></code>(1), <code><a href="/docs/linux/man/1-perf-buildid-list/">perf-buildid-list</a></code>(1), <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1) </p>
 <h2>Index</h2>

@@ -11,12 +11,12 @@ description: "XkbOutOfRangeGroupNumber – Returns the out-of-range group number
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>unsigned char XkbOutOfRangeGroupNumber</code> <code>(unsigned char </code><i>grp_inf</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; grp_inf</i></p>
+<dt><i>&#8211; grp_inf</i></dt>
 <dd>
-<dd>Xkb description of interest</dl>
+</dd><dd>Xkb description of interest</dd></dl>
 <h2>Description</h2>
 <p><i>XkbOutOfRangeGroupNumber </i> returns the out-of-range group number, represented as a group index, from the <i>group_info </i> field of an XkbSymMapRec structure. </p>
 <p> The <i>group_info </i> field of an XkbSymMapRec is an encoded value containing the number of groups of symbols bound to the key as well as the specification of the treatment of out-of-range groups. It is legal for a key to have zero groups, in which case it also has zero symbols and all events from that key yield NoSymbol. To obtain the number of groups of symbols bound to the key, use <i>XkbKeyNumGroups. </i> To change the number of groups bound to a key, use <i>XkbChangeTypesOfKey. </i> To obtain a mask that determines the treatment of out-of-range groups, use <i>XkbKeyGroupInfo </i> and <i>XkbOutOfRangeGroupInfo.</i> </p>
@@ -62,7 +62,6 @@ description: "XkbOutOfRangeGroupNumber – Returns the out-of-range group number
 <p>The KeySymMapRec structure is defined as follows: </p>
 <pre> #define XkbNumKbdGroups 4
  #define XkbMaxKbdGroup (XkbNumKbdGroups-1)
- 
  typedef struct { /* map to keysyms for a single keycode */
  unsigned char kt_index[XkbNumKbdGroups]; /* key type index for each group */
  unsigned char group_info; /* # of groups and out of range group handling */
@@ -72,8 +71,6 @@ description: "XkbOutOfRangeGroupNumber – Returns the out-of-range group number
 <pre>The XkbControlsRec structure is defined as follows:
  #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven mouse */
  unsigned char num_groups; /* number of keyboard groups */
@@ -101,8 +98,6 @@ description: "XkbOutOfRangeGroupNumber – Returns the out-of-range group number
 <pre>The XkbControlsRec structure is defined as follows:
  #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven mouse */
  unsigned char num_groups; /* number of keyboard groups */

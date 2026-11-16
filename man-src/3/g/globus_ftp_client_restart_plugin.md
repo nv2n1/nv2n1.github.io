@@ -31,46 +31,46 @@ description: "Restart Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> A pointer to a GridFTP restart plugin, previously initialized by calling <code>globus_ftp_client_restart_plugin_init()</code></dl>
+</dt><dd> <i>plugin</i> A pointer to a GridFTP restart plugin, previously initialized by calling <code>globus_ftp_client_restart_plugin_init()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns an error if</p>
+</dt><dd> This function returns an error if</dd>
 <dl>
-<dt>&bull;</p>
-<dd> plugin is null</p>
-<dt>&bull;</p>
-<dd> plugin is not a restart plugin</dl>
+<dt>&bull;</dt>
+<dd> plugin is null</dd>
+<dt>&bull;</dt>
+<dd> plugin is not a restart plugin</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_plugin_init (<code>globus_ftp_client_plugin_t</code> *plugin, intmax_retries, globus_reltime_t *interval, globus_abstime_t *deadline)</h3>
 <p> Initialize an instance of the GridFTP restart plugin </p>
 <p> This function will initialize the plugin-specific instance data for this plugin, and will make the plugin usable for ftp client handle attribute and handle creation. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a restart plugin.<br />
+</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a restart plugin.<br />
  <i>max_retries</i> The maximum number of times to retry the operation before giving up on the transfer. If this value is less than or equal to 0, then the restart plugin will keep trying to restart the operation until it completes or the deadline is reached with an unsuccessful operation.<br />
  <i>interval</i> The interval to wait after a failures before retrying the transfer. If the interval is 0 seconds or GLOBUS_NULL, then an exponential backoff will be used.<br />
- <i>deadline</i> An absolute timeout. If the deadline is GLOBUS_NULL then the retry will never timeout.</dl>
+ <i>deadline</i> An absolute timeout. If the deadline is GLOBUS_NULL then the retry will never timeout.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns an error if</p>
+</dt><dd> This function returns an error if</dd>
 <dl>
-<dt>&bull;</p>
-<dd> plugin is null</dl>
+<dt>&bull;</dt>
+<dd> plugin is null</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <p> <code>Examples: </code> <code>globus_ftp_client_restart_plugin.example</code>.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

@@ -11,58 +11,39 @@ std::Boolean - std::Boolean
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class B&gt;
-
     concept Boolean =
-
         std::Movable&lt;std::remove_cvref_t&lt;B&gt;&gt; &amp;&amp;
-
     requires(const std::remove_reference_t&lt;B&gt; &amp;b1,
-
              const std::remove_reference_t&lt;B&gt; &amp;b2, const bool a)
 {
-
     requires std::ConvertibleTo &lt; const std::remove_reference_t&lt;B&gt;
     &amp;, bool &gt; ;
-
     !b1;
     requires std::ConvertibleTo&lt;decltype(!b1), bool&gt;;
-
     b1 &amp;&amp;a;
     requires std::Same&lt;decltype(b1 &amp;&amp; a), bool&gt;;
-
     b1 || a;
     requires std::Same&lt;decltype(b1 || a), bool&gt;;
-
     b1 &amp;&amp;b2;
     requires std::Same&lt;decltype(b1 &amp;&amp; b2), bool&gt;;
     (since C++ 20)
-
         a &amp;&amp;b2;
     requires std::Same&lt;decltype(a &amp;&amp; b2), bool&gt;;
-
     b1 || b2;
     requires std::Same&lt;decltype(b1 || b2), bool&gt;;
-
     a || b2;
     requires std::Same&lt;decltype(a || b2), bool&gt;;
-
     b1 == b2;
     requires std::ConvertibleTo&lt;decltype(b1 == b2), bool&gt;;
-
     b1 == a;
     requires std::ConvertibleTo&lt;decltype(b1 == a), bool&gt;;
-
     a == b2;
     requires std::ConvertibleTo&lt;decltype(a == b2), bool&gt;;
-
     b1 != b2;
     requires std::ConvertibleTo&lt;decltype(b1 != b2), bool&gt;;
-
     b1 != a;
     requires std::ConvertibleTo&lt;decltype(b1 != a), bool&gt;;
-
     a != b2;
     requires std::ConvertibleTo&lt;decltype(a != b2), bool&gt;;
 };</code></pre> 

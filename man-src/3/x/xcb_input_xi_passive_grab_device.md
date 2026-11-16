@@ -10,9 +10,7 @@ description: "xcb_input_xi_passive_grab_device –"
 <p>xcb_input_xi_passive_grab_device &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xinput.h&gt;
-
 Request function
-
     xcb_input_xi_passive_grab_device_cookie_t
     xcb_input_xi_passive_grab_device(xcb_connection_t *conn, xcb_timestamp_t time, xcb_window_t grab_window, xcb_cursor_t cursor, uint32_t detail, xcb_input_device_id_t deviceid, uint16_t num_modifiers, uint16_t mask_len, uint8_t grab_type, uint8_t grab_mode, uint8_t paired_device_mode, uint8_t owner_events, const uint32_t *mask, const uint32_t *modifiers);</code></pre>
 <h3>Reply datastructure</h3>
@@ -26,53 +24,53 @@ Request function
 } <code>xcb_input_xi_passive_grab_device_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_input_xi_passive_grab_device_reply_t *<code>xcb_input_xi_passive_grab_device_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_input_xi_passive_grab_device_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_input_xi_passive_grab_device_reply_t *<code>xcb_input_xi_passive_grab_device_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_input_xi_passive_grab_device_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_input_grab_modifier_info_t *<code>xcb_input_xi_passive_grab_device_modifiers</code>(const xcb_input_xi_passive_grab_device_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_input_xi_passive_grab_device_modifiers_length</code>(const xcb_input_xi_passive_grab_device_reply_t *<i>reply</i>);</p>
+<dd>xcb_input_grab_modifier_info_t *<code>xcb_input_xi_passive_grab_device_modifiers</code>(const xcb_input_xi_passive_grab_device_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_input_xi_passive_grab_device_modifiers_length</code>(const xcb_input_xi_passive_grab_device_reply_t *<i>reply</i>);</dd>
 <dd>xcb_input_grab_modifier_info_iterator_t <code>xcb_input_xi_passive_grab_device_modifiers_iterator</code>(const xcb_input_xi_passive_grab_device_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>time</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>grab_window</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>cursor</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>detail</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>deviceid</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_modifiers</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mask_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>grab_type</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>grab_mode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>paired_device_mode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>owner_events</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>modifiers</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>time</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>grab_window</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>cursor</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>detail</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>deviceid</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_modifiers</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mask_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>grab_type</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>grab_mode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>paired_device_mode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>owner_events</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>modifiers</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_INPUT_XI_PASSIVE_GRAB_DEVICE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>num_modifiers</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_INPUT_XI_PASSIVE_GRAB_DEVICE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>num_modifiers</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_input_xi_passive_grab_device_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_input_xi_passive_grab_device_reply</i>. </p>

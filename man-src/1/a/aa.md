@@ -17,20 +17,20 @@ description: "aa, autoarchive – simple backup utility"
 <p> Command &#8216;autoarchive&#8217; is alias for &#8216;aa&#8217;; commands are equivalent.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Turns on verbose output.</p>
-<dt><code>-a</code> ARCHIVER, <code>&#8211;archiver</code>=<i>ARCHIVER</i></p>
-<dd> Specify archiver type. Supported types are: (&#8216;tar&#8217;, &#8216;targz&#8217;, &#8216;tarbz2&#8217;, &#8216;tarlzma&#8217;, &#8216;tarxz&#8217;) (default: tarbz2).</p>
-<dt><code>-i</code>, <code>&#8211;incremental</code></p>
-<dd> Perform incremental backup.</p>
-<dt><code>-l</code> LEVEL, <code>&#8211;level</code>=<i>LEVEL</i></p>
-<dd> Specify backup level which should be created. Informations about higher levels will be erased. If not present, creates next level in a row.</p>
-<dt><code>-c</code> NUM, <code>&#8211;compression-level</code>=<i>NUM</i></p>
-<dd> Compression level. If not specified, default behaviour of underlying compression program will be used.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Turns on verbose output.</dd>
+<dt><code>-a</code> ARCHIVER, <code>&#8211;archiver</code>=<i>ARCHIVER</i></dt>
+<dd> Specify archiver type. Supported types are: (&#8216;tar&#8217;, &#8216;targz&#8217;, &#8216;tarbz2&#8217;, &#8216;tarlzma&#8217;, &#8216;tarxz&#8217;) (default: tarbz2).</dd>
+<dt><code>-i</code>, <code>&#8211;incremental</code></dt>
+<dd> Perform incremental backup.</dd>
+<dt><code>-l</code> LEVEL, <code>&#8211;level</code>=<i>LEVEL</i></dt>
+<dd> Specify backup level which should be created. Informations about higher levels will be erased. If not present, creates next level in a row.</dd>
+<dt><code>-c</code> NUM, <code>&#8211;compression-level</code>=<i>NUM</i></dt>
+<dd> Compression level. If not specified, default behaviour of underlying compression program will be used.</dd></dl>
 <p> AA_SPEC is an archive spec file. It specifies what should be archived and the archive name. Its standard file name extension is &quot;.aa&quot;. For syntax please see README file. It is possible to specify multiple &quot;.aa&quot; files.</p>
 <h2>EXAMPLES</h2>
 <p> Let&#8217;s say that we want make a backup of configuration files of all users except user <i>foo</i>. Assume that our system has unix-like style of home directories (directory /home contains directories of all users; configuration files begins with dot). Name of this backup will be &#8216;users-config&#8217;. </p>
@@ -50,7 +50,7 @@ description: "aa, autoarchive – simple backup utility"
 <p> <i>~/.config/aa/snapshots/*.snar</i></p>
 <dl>
 <dt>
-<dd> Files stores informations about incremental backup. They are created by <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) archiver.</dl>
+</dt><dd> Files stores informations about incremental backup. They are created by <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) archiver.</dd></dl>
 <h2>BUGS</h2>
 <p> When creating incremental backup, files and directories specified in &#8216;include_files&#8217; are always added to archive, even if they did not changed. This is bug/feature of <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1).</p>
 <h2>AUTHOR</h2>

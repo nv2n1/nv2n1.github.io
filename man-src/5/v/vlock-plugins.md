@@ -14,19 +14,19 @@ description: "vlock-plugins – plugin support for vlock"
 <p>The following plugins are provided when installing vlock with default options: </p>
 <p> <code>all</code></p>
 <dl>
-<dd>This plugin locks all sessions by disabling console switching. It is also loaded when giving the <code>-a,&#8211;all</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1). </p>
+<dd>This plugin locks all sessions by disabling console switching. It is also loaded when giving the <code>-a,&#8211;all</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1). </dd>
 </dl>
 <p> <code>new</code></p>
 <dl>
-<dd>This plugin switches to a new virtual console before disabling console switching through the &quot;all&quot; plugin. It is also loaded when giving the <code>-n,&#8211;new</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1).</dl>
+<dd>This plugin switches to a new virtual console before disabling console switching through the &quot;all&quot; plugin. It is also loaded when giving the <code>-n,&#8211;new</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1).</dd></dl>
 <p> <code>nosysrq</code></p>
 <dl>
-<dd>Linux only. This plugin disables the Linux SysRQ mechanism before the console switching is locked by the &quot;all&quot; plugin. It is also loaded when giving the <code>-s,&#8211;disable-sysrq</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1).</dl>
+<dd>Linux only. This plugin disables the Linux SysRQ mechanism before the console switching is locked by the &quot;all&quot; plugin. It is also loaded when giving the <code>-s,&#8211;disable-sysrq</code> option to <a href="/docs/linux/man/1-vlock/">vlock</a>(1).</dd></dl>
 <h2>Additional Plugins</h2>
 <p>The following plugins are only available if explicitly selected at build time: </p>
 <p> <code>caca</code></p>
 <dl>
-<dd>This plugin runs a random libcaca screensaver when the screen is locked.</dl>
+<dd>This plugin runs a random libcaca screensaver when the screen is locked.</dd></dl>
 <h2>Writing Plugins</h2>
 <p>For information about writing plugins see the PLUGINS file in the vlock source distribution.</p>
 <h2>See Also</h2>

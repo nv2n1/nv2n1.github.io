@@ -25,10 +25,10 @@ description: "login, logout – write utmp and wtmp entries"
 <p> The <code>logout</code>() function returns 1 if the entry was successfully written to the database, or 0 if an error occurred.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/run/utmp</i></p>
-<dd> user accounting database, configured through <code>_PATH_UTMP</code> in <i>&lt;paths.h&gt;</i></p>
-<dt><i>/var/log/wtmp</i></p>
-<dd> user accounting log file, configured through <code>_PATH_WTMP</code> in <i>&lt;paths.h&gt;</i></dl>
+<dt><i>/var/run/utmp</i></dt>
+<dd> user accounting database, configured through <code>_PATH_UTMP</code> in <i>&lt;paths.h&gt;</i></dd>
+<dt><i>/var/log/wtmp</i></dt>
+<dd> user accounting log file, configured through <code>_PATH_WTMP</code> in <i>&lt;paths.h&gt;</i></dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

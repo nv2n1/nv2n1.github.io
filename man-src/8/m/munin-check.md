@@ -12,11 +12,11 @@ description: "munin-check – A program to fix permissions of Munin directories 
 <p>munin-check [&#8211;options]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h|&#8211;help</code></p>
+<dt><code>-h|&#8211;help</code></dt>
 <dd>
 <pre> Display usage information.</pre>
-<dt><code>-f|&#8211;fix-permissions</code></p>
-<dd>Fix the permissions of the munin dirs and files.</dl>
+</dd><dt><code>-f|&#8211;fix-permissions</code></dt>
+<dd>Fix the permissions of the munin dirs and files.</dd></dl>
 <h2>Description</h2>
 <p>munin-check is a utility that fixes the permissions of the munin directories and files. </p>
 <p> Note: munin-check needs superuser rights. </p>

@@ -13,64 +13,64 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <h2>Description</h2>
 <p><code>rbldnsd</code> is a small DNS-protocol daemon which is designed to handle queries to DNS-based IP-listing or NAME-listing services. Such services are a simple way to share/publish a list of IP addresses or (domain) names which are &quot;listed&quot; for for some reason, for example in order to be able to refuse a service to a client which is &quot;listed&quot; in some blocklist. <code>rbldnsd</code> is not a general-purpose nameserver. It will answer to A and TXT (and SOA and NS if such RRs are specified) queries, and has limited ability to answer to some other types of queries. <code>rbldnsd</code> tries to handle data from two different perspectives: given a set (or several) of &quot;listed entries&quot; (e.g. IP address ranges or domain names), it builds and serves a DNS zone. Note the two are not the same: list of spammer&#8217;s IPs is NOT a DNS zone, but may be represented and used as such, provided that some additional information necessary to build complete DNS zone (e.g. NS and SOA records, maybe A records necessary for http to work) is available. In this context, <code>rbldnsd</code> is very different from other general-purpose nameservers such as BIND or NSD: <code>rbldnsd</code> operates with <i>datasets</i> (sets of entries &#8211; IP addresses or domain names, logically grouped together), while other general-purpose nameservers operates with zones. The way how <code>rbldnsd</code> operates may be somewhat confusing to BIND experts. For <code>rbldnsd</code>, a building block is a dataset: e.g., set of insecure/abuseable hosts (IP addresses), set of network ranges that belongs to various spam operations (IP ranges), domain names that belong to spammers (RHSBL) and so on. Usually, different kind of information is placed into separate file, for easy maintenance. From a number of such datasets, <code>rbldnsd</code> constructs a number of DNS zones as specified on command line. A single dataset may be used for several zones, and a single zone may be constructed from several datasets. <code>rbldnsd</code> will answer queries to DNS zones specified on the command line as a set of zone specifications. Each zone specification consists of zone basename, dataset type and a comma-separated list of files that forms a given dataset: <i>zone</i>:<i>type</i>:<i>file</i>,<i>file</i>,&#8230; Several zones may be specified in command line, so that <code>rbldnsd</code> will answer queries to any of them. Also, a single zone may be specified several times with different datasets, so it is possible to form a zone from a combination of several different dataset. The same dataset may be reused for several zones too (and in this case, it will be read into memory only once). There are several dataset formats available, each is suitable and optimized (in terms of memory, speed and ease of use) for a specific task. Available dataset types may be grouped into the following categories:</p>
 <dl>
-<dd>lists of IP addresses. When a query is done to a zone with such data, query is interpreted as an IP address in a reverse form (similar to in-addr.arpa zone). If the address is found in dataset data, <code>rbldnsd</code> will return A and TXT records specified in data for that IP. This is a classical IP-based blocklist.</p>
-<dd>lists of domain names. Similar to list of IP addresses, but with generic domain names instead of IPs (wildcards allowed). This type of data may be used to form a blocklist of e.g. sender domain names.</p>
-<dd>generic list of various types of records, as an auxilary data to form a complete nameserver. This format is similar to bind-style datafiles, but very simplified. One may specify A, TXT, NS and MX records here.</p>
-<dd>combined set, different datasets from the list above combined in the single (set of) source files, for easy maintenance.</p>
-<dd>acl, or Access Control List. This is a pseudo dataset, that works by overweriting query results based on the requestor (peer) IP address. </p>
+<dd>lists of IP addresses. When a query is done to a zone with such data, query is interpreted as an IP address in a reverse form (similar to in-addr.arpa zone). If the address is found in dataset data, <code>rbldnsd</code> will return A and TXT records specified in data for that IP. This is a classical IP-based blocklist.</dd>
+<dd>lists of domain names. Similar to list of IP addresses, but with generic domain names instead of IPs (wildcards allowed). This type of data may be used to form a blocklist of e.g. sender domain names.</dd>
+<dd>generic list of various types of records, as an auxilary data to form a complete nameserver. This format is similar to bind-style datafiles, but very simplified. One may specify A, TXT, NS and MX records here.</dd>
+<dd>combined set, different datasets from the list above combined in the single (set of) source files, for easy maintenance.</dd>
+<dd>acl, or Access Control List. This is a pseudo dataset, that works by overweriting query results based on the requestor (peer) IP address. </dd>
 <h2>Options</h2>
 <p>The following options may be specified: </p>
 <dl>
-<dt><code>-u</code> <i>user</i>[:<i>group</i>]</p>
-<dd><code>rbldnsd</code> will change its userid to the specified <i>user</i>, which defaults to <code>rbldns</code>, and <i>group</i>, which by default is the primary group of a <i>user</i>. <code>rbldnsd</code> will refuse to run as the root user, since this is insecure. </p>
-<dt><code>-r</code> <i>rootdir</i></p>
-<dd><code>rbldnsd</code> will chroot to <i>rootdir</i> if specified. Data files should be available inside <i>rootdir</i>. </p>
-<dt><code>-w</code> <i>workdir</i></p>
-<dd><code>rbldnsd</code> will change its working directory to <i>workdir</i> (after chrooting to <i>rootdir</i> if <code>-r</code> option is also specified). May be used to shorten filename paths. </p>
-<dt><code>-b</code> <i>address</i>/<i>port</i></p>
-<dd>This option is <i>required</i>. <code>rbldnsd</code> will bind to specified <i>address</i> and <i>port</i> (port defaults to port 53, domain). Either numeric IP address or a hostname may be specified, and either port number or service name is accepted. It is possible to specify several addresses to listen on this way, by repeating <code>-b</code> option. Additionally, if there are several addresses listed for a hostname, <code>rbldnsd</code> will listen on all of them. Note that <code>rbldnsd</code> will work slightly faster if only one listening address is specified. Note the delimiter between host and port is a slash (/), not a colon, to be able to correctly handle IPv6 addresses. </p>
-<dt><code>-4</code></p>
-<dd>Use IPv4 listening socket/transport, do not attempt to use IPv6 (ignored if <code>rbldnsd</code> was built without IPv6 support). </p>
-<dt><code>-6</code></p>
-<dd>Use IPv6 listening socket/transport, do not attempt to use IPv4 (this option will be reported as error if IPv6 support was not compiled in). </p>
-<dt><code>-t</code> <i>defttl</i>:<i>minttl</i>:<i>maxttl</i></p>
-<dd>Set default reply time-to-live (TTL) value to be <i>defttl</i>, and set constraints for TTL to <i>minttl</i> and <i>maxttl</i>. Default applies when there&#8217;s no TTL defined in a given scope (in data file), and constraints are applied when such value provided in data. Any of the values may be omitted, including trailing colon (:) characters, e.g. &quot;<code>-t</code>&nbsp;<wbr>30&quot; set default TTL to be 30 secound, and &quot;<code>-t</code>&nbsp;<wbr>::120&quot; or &quot;<code>-t</code>&nbsp;<wbr>::2m&quot; sets maximum allowed TTL to 2 minutes. All 3 values are in time units, with optional suffix: <code>s</code> (secounds, default), <code>m</code> (minutes), <code>h</code> (hours), <code>d</code> (days) or <code>w</code> (weeks). Zero <i>minttl</i> or maxttl means no corresponding constraint will be enforced. Default <i>defttl</i> is 35m. </p>
-<dt><code>-c</code> <i>check</i></p>
-<dd>Set interval between checking for zone file changes to be <i>check</i>, default is 1m (one minute). <code>rbldnsd</code> will check zone file&#8217;s last modification time every so often, and if it detects a change, zone will be automatically reloaded. Setting this value to 0 disables automatic zone change detection. This procedure may also be triggered by sending a SIGHUP signal to <code>rbldnsd</code> (see SIGNALS section below). </p>
-<dt><code>-e</code></p>
-<dd>Allow non-network addresses to be used in CIDR ranges. Normally, <code>rbldnsd</code> rejects addresses such as 127.2.3.4/24, where prefix is not within the network mask derived from bit number (in this case, correct form is 127.2.3.0/24, note the trailing zero in prefix). This is done in order to catch possible typos in zones (<code>rbldnsd</code> will warn about a problem and will ignore such entry). This option disables checking whether the CIDR prefix fits within the network mask. </p>
-<dt><code>-q</code></p>
-<dd>Quick and quiet start. Normally, <code>rbldnsd</code> does socket initialization and zone load in foreground, writing progress and statistic to standard output, and aborts in case of any errors. With this flag, nothing will be printed and first zone load will be done in background (unless <code>-n</code> option is also given), and zone load errors will be non-fatal. </p>
-<dt><code>-p</code> <i>pidfile</i></p>
-<dd>Write rbldnsd&#8217;s pid to the specified <i>pidfile</i>, so it will be easily findable. This file gets written before entering a chroot jail (if specified) and before changing userid, so it&#8217;s ok to specify e.g. /var/run/rbldnsd.pid here. </p>
-<dt><code>-l</code> <i>logfile</i></p>
-<dd>Specifies a file to which log all requests made. This file is created after entering a chroot jail and becoming a user. Logfiles may be quite large, esp. on busy sites (<code>rbldnsd</code> will log <i>every</i> recognized request if this option is specified). This option is mainly intended for debugging purposes. Upon receiption of SIGHUP signal, <code>rbldnsd</code> reopens its logfile. If <i>logfile</i> prefixed with a plus sign (+), logging will not be buffered (i.e. each line will be flushed to disk); by default, logging is buffered to reduce system load. Specify a single hyphen (-) as a filename to log to standard output (filedescriptor 1), either buffered by default, or line-buffered if specified as `+-&#8216; (standard output will not be &quot;reopened&quot; upon receiving SIGHUP signal, but will be flushed in case logging is buffered). </p>
-<dt><code>-s</code> <i>statsfile</i></p>
-<dd>Specifies a file where <code>rbldnsd</code> will write a line with short statistic summary of queries made per zone, every check (<code>-c</code>) interval. Format of each line is: </p>
+<dt><code>-u</code> <i>user</i>[:<i>group</i>]</dt>
+<dd><code>rbldnsd</code> will change its userid to the specified <i>user</i>, which defaults to <code>rbldns</code>, and <i>group</i>, which by default is the primary group of a <i>user</i>. <code>rbldnsd</code> will refuse to run as the root user, since this is insecure. </dd>
+<dt><code>-r</code> <i>rootdir</i></dt>
+<dd><code>rbldnsd</code> will chroot to <i>rootdir</i> if specified. Data files should be available inside <i>rootdir</i>. </dd>
+<dt><code>-w</code> <i>workdir</i></dt>
+<dd><code>rbldnsd</code> will change its working directory to <i>workdir</i> (after chrooting to <i>rootdir</i> if <code>-r</code> option is also specified). May be used to shorten filename paths. </dd>
+<dt><code>-b</code> <i>address</i>/<i>port</i></dt>
+<dd>This option is <i>required</i>. <code>rbldnsd</code> will bind to specified <i>address</i> and <i>port</i> (port defaults to port 53, domain). Either numeric IP address or a hostname may be specified, and either port number or service name is accepted. It is possible to specify several addresses to listen on this way, by repeating <code>-b</code> option. Additionally, if there are several addresses listed for a hostname, <code>rbldnsd</code> will listen on all of them. Note that <code>rbldnsd</code> will work slightly faster if only one listening address is specified. Note the delimiter between host and port is a slash (/), not a colon, to be able to correctly handle IPv6 addresses. </dd>
+<dt><code>-4</code></dt>
+<dd>Use IPv4 listening socket/transport, do not attempt to use IPv6 (ignored if <code>rbldnsd</code> was built without IPv6 support). </dd>
+<dt><code>-6</code></dt>
+<dd>Use IPv6 listening socket/transport, do not attempt to use IPv4 (this option will be reported as error if IPv6 support was not compiled in). </dd>
+<dt><code>-t</code> <i>defttl</i>:<i>minttl</i>:<i>maxttl</i></dt>
+<dd>Set default reply time-to-live (TTL) value to be <i>defttl</i>, and set constraints for TTL to <i>minttl</i> and <i>maxttl</i>. Default applies when there&#8217;s no TTL defined in a given scope (in data file), and constraints are applied when such value provided in data. Any of the values may be omitted, including trailing colon (:) characters, e.g. &quot;<code>-t</code>&nbsp;<wbr>30&quot; set default TTL to be 30 secound, and &quot;<code>-t</code>&nbsp;<wbr>::120&quot; or &quot;<code>-t</code>&nbsp;<wbr>::2m&quot; sets maximum allowed TTL to 2 minutes. All 3 values are in time units, with optional suffix: <code>s</code> (secounds, default), <code>m</code> (minutes), <code>h</code> (hours), <code>d</code> (days) or <code>w</code> (weeks). Zero <i>minttl</i> or maxttl means no corresponding constraint will be enforced. Default <i>defttl</i> is 35m. </dd>
+<dt><code>-c</code> <i>check</i></dt>
+<dd>Set interval between checking for zone file changes to be <i>check</i>, default is 1m (one minute). <code>rbldnsd</code> will check zone file&#8217;s last modification time every so often, and if it detects a change, zone will be automatically reloaded. Setting this value to 0 disables automatic zone change detection. This procedure may also be triggered by sending a SIGHUP signal to <code>rbldnsd</code> (see SIGNALS section below). </dd>
+<dt><code>-e</code></dt>
+<dd>Allow non-network addresses to be used in CIDR ranges. Normally, <code>rbldnsd</code> rejects addresses such as 127.2.3.4/24, where prefix is not within the network mask derived from bit number (in this case, correct form is 127.2.3.0/24, note the trailing zero in prefix). This is done in order to catch possible typos in zones (<code>rbldnsd</code> will warn about a problem and will ignore such entry). This option disables checking whether the CIDR prefix fits within the network mask. </dd>
+<dt><code>-q</code></dt>
+<dd>Quick and quiet start. Normally, <code>rbldnsd</code> does socket initialization and zone load in foreground, writing progress and statistic to standard output, and aborts in case of any errors. With this flag, nothing will be printed and first zone load will be done in background (unless <code>-n</code> option is also given), and zone load errors will be non-fatal. </dd>
+<dt><code>-p</code> <i>pidfile</i></dt>
+<dd>Write rbldnsd&#8217;s pid to the specified <i>pidfile</i>, so it will be easily findable. This file gets written before entering a chroot jail (if specified) and before changing userid, so it&#8217;s ok to specify e.g. /var/run/rbldnsd.pid here. </dd>
+<dt><code>-l</code> <i>logfile</i></dt>
+<dd>Specifies a file to which log all requests made. This file is created after entering a chroot jail and becoming a user. Logfiles may be quite large, esp. on busy sites (<code>rbldnsd</code> will log <i>every</i> recognized request if this option is specified). This option is mainly intended for debugging purposes. Upon receiption of SIGHUP signal, <code>rbldnsd</code> reopens its logfile. If <i>logfile</i> prefixed with a plus sign (+), logging will not be buffered (i.e. each line will be flushed to disk); by default, logging is buffered to reduce system load. Specify a single hyphen (-) as a filename to log to standard output (filedescriptor 1), either buffered by default, or line-buffered if specified as `+-&#8216; (standard output will not be &quot;reopened&quot; upon receiving SIGHUP signal, but will be flushed in case logging is buffered). </dd>
+<dt><code>-s</code> <i>statsfile</i></dt>
+<dd>Specifies a file where <code>rbldnsd</code> will write a line with short statistic summary of queries made per zone, every check (<code>-c</code>) interval. Format of each line is: </dd>
 <pre> <i>timestamp</i> <i>zone</i>:<i>qtot</i>:<i>qok</i>:<i>qnxd</i>:<i>bin</i>:<i>bout</i> <i>zone</i>:...</pre>
 <p>where <i>timestamp</i> is unix time (secounds since epoch), <i>zone</i> is the name of the base zone, <i>qtot</i> is the total number of queries received, <i>qok</i> &#8211; number of positive replies, <i>qnxd</i> &#8211; number of NXDOMAIN replies, <i>bin</i> is the total number of bytes read from network (excluding IP/UDP overhead and dropped packets), <i>bout</i> is the total number of bytes written to network. Ther are as many such tuples as there are zones, and one extra, total typle at the end, with <i>zone</i> being &quot;*&quot;, like: </p>
 <pre> 1234 bl1.ex:10:5:4:311:432 bl2.ex:24:13:7:248:375 *:98:35:12:820:987</pre>
 <p>Note the total values may be larger than the sum of per-zone values, due to queries made against unlisted zones, or bad/broken packets. </p>
 <p> <code>Rbldnsd</code> will write bare timestamp to <i>statsfile</i> when it is starting up, shutting down or when statistic counters are being reset after receiving SIGUSR2 signal (see below), to indicate the points where the counters are starting back from zero. </p>
 <p> By default, <code>rbldnsd</code> writes absolute counter values into <i>statsfile</i> (number of packets (bytes) since startup or last reset). <i>statsfile</i> may be prefixed with plus sign (+), in which case <code>rbldnsd</code> will write delta values, that is, number of packets or bytes since last write, or number of packets (bytes) per unit of time (&quot;incremental&quot; mode, hence the &quot;+&quot; sign). </p>
-<dt><code>-n</code></p>
-<dd>Do not become a daemon. Normally, <code>rbldnsd</code> will fork and go to the background after successful initialization. This option disables this behaviour. </p>
-<dt><code>-f</code></p>
-<dd>Request <code>rbldnsd</code> to continue processing requests during data reloads. <code>Rbldnsd</code> forks a child process to handle requests while parent reloads the data. This ensures smooth operations, but requires more memory, since two copies of data is keept in memory during reload process. </p>
-<dt><code>-d</code></p>
-<dd>Dump all zones to stdout in BIND format and exit. This may be suitable to convert easily editable rbldnsd-style data into BIND zone. <code>rbldnsd</code> dumps all zones as one stream, so one may want to specify only one zone with <code>-d</code>. Zone file will have appropriate $ORIGIN tags. Note that data generated may be really huge (as BIND format isn&#8217;t appropriate for this sort of things), and some entries may not be really the same in BIND as in <code>rbldnsd</code> (e.g., IP netblocks of large size will be represented as wildcard entries &#8211; 10.0.0.0/8 will become *.10; excluded entries will be represented by a CNAME to `excluded&#8217; name, so such name should not be present in a data set). In this mode, <code>rbldnsd</code> ignores <code>-r</code> (root directory) option. </p>
-<dt><code>-v</code></p>
-<dd>Do not show exact version information in response to version.bind CH TXT queries (by default <code>rbldnsd</code> responds to such queries since version 0.98). With single <code>-v</code>, <code>rbldnsd</code> will only return &quot;rbldnsd&quot; to the caller, without the version number. Second <code>-v</code> disables providing any information in response to such requests, i.e. <code>rbldnsd</code> will return REFUSE code. </p>
-<dt><code>-C</code></p>
-<dd>Disable automatic on-the-fly uncompression of data files if this feature is compiled in (see below). </p>
-<dt><code>-A</code></p>
+<dt><code>-n</code></dt>
+<dd>Do not become a daemon. Normally, <code>rbldnsd</code> will fork and go to the background after successful initialization. This option disables this behaviour. </dd>
+<dt><code>-f</code></dt>
+<dd>Request <code>rbldnsd</code> to continue processing requests during data reloads. <code>Rbldnsd</code> forks a child process to handle requests while parent reloads the data. This ensures smooth operations, but requires more memory, since two copies of data is keept in memory during reload process. </dd>
+<dt><code>-d</code></dt>
+<dd>Dump all zones to stdout in BIND format and exit. This may be suitable to convert easily editable rbldnsd-style data into BIND zone. <code>rbldnsd</code> dumps all zones as one stream, so one may want to specify only one zone with <code>-d</code>. Zone file will have appropriate $ORIGIN tags. Note that data generated may be really huge (as BIND format isn&#8217;t appropriate for this sort of things), and some entries may not be really the same in BIND as in <code>rbldnsd</code> (e.g., IP netblocks of large size will be represented as wildcard entries &#8211; 10.0.0.0/8 will become *.10; excluded entries will be represented by a CNAME to `excluded&#8217; name, so such name should not be present in a data set). In this mode, <code>rbldnsd</code> ignores <code>-r</code> (root directory) option. </dd>
+<dt><code>-v</code></dt>
+<dd>Do not show exact version information in response to version.bind CH TXT queries (by default <code>rbldnsd</code> responds to such queries since version 0.98). With single <code>-v</code>, <code>rbldnsd</code> will only return &quot;rbldnsd&quot; to the caller, without the version number. Second <code>-v</code> disables providing any information in response to such requests, i.e. <code>rbldnsd</code> will return REFUSE code. </dd>
+<dt><code>-C</code></dt>
+<dd>Disable automatic on-the-fly uncompression of data files if this feature is compiled in (see below). </dd>
+<dt><code>-A</code></dt>
 <dd>
-<dt><code>-a</code></p>
-<dd>Controls &quot;laziness&quot; of <code>rbldnsd</code> when constructing replies. With <code>-a</code> specified, <code>rbldnsd</code> does not add AUTH section (containing NS records) to replies unless explicitly asked for NS records. It is equivalent to BIND9 &quot;minimal-answers&quot; configuration setting. While with <code>-A</code> specified, <code>rbldnsd</code> will always fill in AUTH section, increasing size of replies dramatically but allowing (caching) resolver clients to react faster to changes in nameserver lists. Currently (as of 0.998 version), non-lazy (as with <code>-A</code>) mode is the default, but it will change in future release. </p>
-<dt><code>-x</code> <i>extension</i></p>
-<dd>Load the given <i>extension</i> file (a dynamically-linked library, usually with &quot;.so&quot; suffix). This allows to gather custom statistics or perform other custom tasks. See separate document for details about building and using extensions. This feature is not available on all platforms, and can be disabled at compile time. </p>
-<dt><code>-X</code> <i>extarg</i></p>
-<dd>Pass the given argument, <i>extarg</i>, to the extension loaded with <code>-x</code>. </p>
+</dd><dt><code>-a</code></dt>
+<dd>Controls &quot;laziness&quot; of <code>rbldnsd</code> when constructing replies. With <code>-a</code> specified, <code>rbldnsd</code> does not add AUTH section (containing NS records) to replies unless explicitly asked for NS records. It is equivalent to BIND9 &quot;minimal-answers&quot; configuration setting. While with <code>-A</code> specified, <code>rbldnsd</code> will always fill in AUTH section, increasing size of replies dramatically but allowing (caching) resolver clients to react faster to changes in nameserver lists. Currently (as of 0.998 version), non-lazy (as with <code>-A</code>) mode is the default, but it will change in future release. </dd>
+<dt><code>-x</code> <i>extension</i></dt>
+<dd>Load the given <i>extension</i> file (a dynamically-linked library, usually with &quot;.so&quot; suffix). This allows to gather custom statistics or perform other custom tasks. See separate document for details about building and using extensions. This feature is not available on all platforms, and can be disabled at compile time. </dd>
+<dt><code>-X</code> <i>extarg</i></dt>
+<dd>Pass the given argument, <i>extarg</i>, to the extension loaded with <code>-x</code>. </dd>
 </dl>
 <h2>Dataset Types And Formats</h2>
 <p>Dataset files are text files which are interpreted depending on type specified in command line. Empty lines and lines starting with hash character (#) or semicolon (;) are ignored, except for a special case outlined below in section titled &quot;Special Entries&quot;. </p>
@@ -80,27 +80,27 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <h3>Special Entries</h3>
 <p>If a line starts with a dollar sign ($), hash character and a dollar sign (#$), semicolon and dollar sign (;#) or colon and a dollar sign (:$), it is interpreted in a special way, regardless of dataset type (this is one exception where a line starting with hash character is not ignored &#8211; to be able to use zone files for both <code>rbldnsd</code> and for DJB&#8217;s rbldns). The following keywords, following a dollar sign, are recognized: </p>
 <dl>
-<dt><code>$SOA</code> <i>ttl origindn persondn serial refresh retry expire minttl</p>
-<dd>Specifies SOA (Start Of Authority) record for all zones using this dataset. Only first SOA record is interpreted. This is the only way to specify SOA &#8211; by default, </i><code>rbldnsd</code> will not add any SOA record into answers, and will REFUSE to answer to certain queries (notably, SOA query to zone&#8217;s base domain name). It is recommended, but not mandatory to specify SOA record for every zone. If no SOA is given, negative replies will not be cacheable by caching nameservers. Only one, first $SOA line is recognized in every dataset (all subsequent $SOA lines encountered in the same dataset are silently ignored). When constructing a zone, SOA will be taken from <i>first</i> dataset where $SOA line is found, in an order as specified in command line, subsequent $SOA lines, if any, are ignored. This way, one may overwrite $SOA found in 3rd party data by <i>prepending</i> small local file to the dataset in question, listing it before any other files.</p>
-<dd>If <i>serial</i> value specified is zero, timestamp of most recent modified file will be substituted as <i>serial</i>.</p>
-<dd>If <i>ttl</i> field is zero, default ttl (<code>-t</code> option or last <code>$TTL</code> value, see below) will be used.</p>
-<dd>All time fields (ttl, refresh, retry, expire, minttl) may be specified in time units. See <code>-t</code> option for details. </p>
-<dt><code>$NS</code> <i>ttl</i> <i>nameserverdn</i> <i>nameserverdn&#8230;</p>
-<dd>Specifies NS (Name Server) records for all zones using this dataset. Only first $NS line in a dataset is recognized, all subsequent lines are silently ignored. When constructing a zone from several datasets, rbldnsd uses nameservers from $NS line in only first dataset where $NS line is given, in command-line order, just like for $SOA record. Only first 32 namservers are recognized. Individual nameserver(s) may be prefixed with a minus sign (-), which means this single nameserver will be ignored by </i><code>rbldnsd</code>. This is useful to temporary comment out one nameserver entry without removing it from the list. If <i>ttl</i> is zero, default ttl will be used. The list of NS records, just like $SOA value, are taken from the <i>first</i> data file in a dataset where the $NS line is found, subsequent $NS lines, if any, are ignored. </p>
-<dt><code>$TTL</code> <i>time-to-live</i></p>
-<dd>Specifies TTL (time-to-live) value for all records in current dataset. See also <code>-t</code> option. <code>$TTL</code> special overrides <code>-t</code> value on a per-dataset basis. </p>
-<dt><code>$TIMESTAMP</code> <i>dstamp</i> [<i>expires</i>]</p>
-<dd>(experimental) Specifies the data timestamp <i>dstamp</i> when the data has been generated, and optionally when it will expire. The timestamps are in form <i>yyyy</i>:<i>mm</i>:<i>dd</i>[:<i>hh</i>[:<i>mi</i>[:<i>ss</i>]]], where <i>yyyy</i> is the year like 2005, <i>mm</i> is the month number (01..12), <i>dd</i> is the month day number (01..31), <i>hh</i> is hour (00..23), <i>mi</i> and <i>ss</i> are minutes and secounds (00.59); hours, minutes and secounds are optional and defaults to 0; the delimiters (either colon or dash may be used) are optional too, but are allowed for readability. Also, single zero (0) or dash (-) may be used as <i>dstamp</i> and/or <i>expires</i>, indicating the value is not given. <i>expires</i> may also be specified as <code>+</code><i>rel</i>, where <i>rel</i> is a time specification (probably with suffix like s, m, h, d) as an offset to <i>dstamp</i>. <code>rbldnsd</code> compares <i>dstamp</i> with current timestamp and refuses to load the file if <i>dstamp</i> specifies time in the future. And if <i>expires</i> is specified, <code>rbldnsd</code> will refuse to service requests for that data if current time is greather than the value specified in <i>expires</i> field.</p>
-<dd>Note that <code>rbldnsd</code> will check the data expiry time every time it checks for data file updates (when receiving SIGHUP signal or every <code>-c</code> interval). If automatic data reload timer (<code>-c</code> option) is disabled, zones will not be exipired automatically. </p>
-<dt><code>$MAXRANGE4</code> <i>range-size</i></p>
-<dd>Specifies maximum size of IPv4 range allowed for IPv4-based datasets. If an entry covers more IP addresses than <i>range-size</i>, it will be ignored (and a warning will be logged). <i>range-size</i> may be specified as a number of hosts, like 256, or as network prefix lenght, like /24 (the two are the same): </p>
+<dt><code>$SOA</code> <i>ttl origindn persondn serial refresh retry expire minttl</dt>
+<dd>Specifies SOA (Start Of Authority) record for all zones using this dataset. Only first SOA record is interpreted. This is the only way to specify SOA &#8211; by default, </i><code>rbldnsd</code> will not add any SOA record into answers, and will REFUSE to answer to certain queries (notably, SOA query to zone&#8217;s base domain name). It is recommended, but not mandatory to specify SOA record for every zone. If no SOA is given, negative replies will not be cacheable by caching nameservers. Only one, first $SOA line is recognized in every dataset (all subsequent $SOA lines encountered in the same dataset are silently ignored). When constructing a zone, SOA will be taken from <i>first</i> dataset where $SOA line is found, in an order as specified in command line, subsequent $SOA lines, if any, are ignored. This way, one may overwrite $SOA found in 3rd party data by <i>prepending</i> small local file to the dataset in question, listing it before any other files.</dd>
+<dd>If <i>serial</i> value specified is zero, timestamp of most recent modified file will be substituted as <i>serial</i>.</dd>
+<dd>If <i>ttl</i> field is zero, default ttl (<code>-t</code> option or last <code>$TTL</code> value, see below) will be used.</dd>
+<dd>All time fields (ttl, refresh, retry, expire, minttl) may be specified in time units. See <code>-t</code> option for details. </dd>
+<dt><code>$NS</code> <i>ttl</i> <i>nameserverdn</i> <i>nameserverdn&#8230;</dt>
+<dd>Specifies NS (Name Server) records for all zones using this dataset. Only first $NS line in a dataset is recognized, all subsequent lines are silently ignored. When constructing a zone from several datasets, rbldnsd uses nameservers from $NS line in only first dataset where $NS line is given, in command-line order, just like for $SOA record. Only first 32 namservers are recognized. Individual nameserver(s) may be prefixed with a minus sign (-), which means this single nameserver will be ignored by </i><code>rbldnsd</code>. This is useful to temporary comment out one nameserver entry without removing it from the list. If <i>ttl</i> is zero, default ttl will be used. The list of NS records, just like $SOA value, are taken from the <i>first</i> data file in a dataset where the $NS line is found, subsequent $NS lines, if any, are ignored. </dd>
+<dt><code>$TTL</code> <i>time-to-live</i></dt>
+<dd>Specifies TTL (time-to-live) value for all records in current dataset. See also <code>-t</code> option. <code>$TTL</code> special overrides <code>-t</code> value on a per-dataset basis. </dd>
+<dt><code>$TIMESTAMP</code> <i>dstamp</i> [<i>expires</i>]</dt>
+<dd>(experimental) Specifies the data timestamp <i>dstamp</i> when the data has been generated, and optionally when it will expire. The timestamps are in form <i>yyyy</i>:<i>mm</i>:<i>dd</i>[:<i>hh</i>[:<i>mi</i>[:<i>ss</i>]]], where <i>yyyy</i> is the year like 2005, <i>mm</i> is the month number (01..12), <i>dd</i> is the month day number (01..31), <i>hh</i> is hour (00..23), <i>mi</i> and <i>ss</i> are minutes and secounds (00.59); hours, minutes and secounds are optional and defaults to 0; the delimiters (either colon or dash may be used) are optional too, but are allowed for readability. Also, single zero (0) or dash (-) may be used as <i>dstamp</i> and/or <i>expires</i>, indicating the value is not given. <i>expires</i> may also be specified as <code>+</code><i>rel</i>, where <i>rel</i> is a time specification (probably with suffix like s, m, h, d) as an offset to <i>dstamp</i>. <code>rbldnsd</code> compares <i>dstamp</i> with current timestamp and refuses to load the file if <i>dstamp</i> specifies time in the future. And if <i>expires</i> is specified, <code>rbldnsd</code> will refuse to service requests for that data if current time is greather than the value specified in <i>expires</i> field.</dd>
+<dd>Note that <code>rbldnsd</code> will check the data expiry time every time it checks for data file updates (when receiving SIGHUP signal or every <code>-c</code> interval). If automatic data reload timer (<code>-c</code> option) is disabled, zones will not be exipired automatically. </dd>
+<dt><code>$MAXRANGE4</code> <i>range-size</i></dt>
+<dd>Specifies maximum size of IPv4 range allowed for IPv4-based datasets. If an entry covers more IP addresses than <i>range-size</i>, it will be ignored (and a warning will be logged). <i>range-size</i> may be specified as a number of hosts, like 256, or as network prefix lenght, like /24 (the two are the same): </dd>
 <pre> $MAXRANGE4 /24
  $MAXRANGE4 256</pre>
 <p>This constraint is active for a dataset it is specified in, and can be owerwritten (by subsequent $MAXRANGE statement) by a smaller value, but can not be increased. </p>
-<dt><code>$</code><i>n</i> <i>text</i></p>
-<dd>(<i>n</i> is a single digit). Specifies a <i>substitution variable</i> for use as $<i>n</i> placeholders (the <code>$</code><i>n</i> entries are ignored in generic daaset). See section &quot;Resulting A values and TXT templates&quot; below for description and usage examples. </p>
-<dt><code>$=</code> <i>text</i></p>
-<dd>Set the base template for all individual TXT records. See section &quot;Resulting A values and TXT templates&quot; below for more information. </p>
+<dt><code>$</code><i>n</i> <i>text</i></dt>
+<dd>(<i>n</i> is a single digit). Specifies a <i>substitution variable</i> for use as $<i>n</i> placeholders (the <code>$</code><i>n</i> entries are ignored in generic daaset). See section &quot;Resulting A values and TXT templates&quot; below for description and usage examples. </dd>
+<dt><code>$=</code> <i>text</i></dt>
+<dd>Set the base template for all individual TXT records. See section &quot;Resulting A values and TXT templates&quot; below for more information. </dd>
 </dl>
 <h3>ip4set Dataset</h3>
 <p>A set of IP addresses or CIDR address ranges, together with A and TXT resulting values. IP addresses are specified one per line, by an IP address prefix (initial octets), complete IP address, CIDR range, or IP prefix range (two IP prefixes or complete addresses delimited by a dash, inclusive). Examples, to specify 127.0.0.0/24: </p>
@@ -155,12 +155,12 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <p>Set of (possible wildcarded) domain names with associated A and TXT values. Similar to <code>ip4set</code>, but instead of IP addresses, data consists of domain names (<i>not</i> in reverse form). One domain name per line, possible starting with wildcard (either with star-dot (*.) or just a dot). Entry starting with exclamation sign is exclusion. Default value for all subsequent lines may be specified by a line starting with a colon. </p>
 <p> Wildcards are interpreted as follows:</p>
 <dl>
-<dt>example.com</p>
-<dd>only example.com domain is listed, not subdomains thereof. Not a wildcard entry.</p>
-<dt>*.example.com</p>
-<dd>all subdomains of example.com are listed, but not example.com itself.</p>
-<dt>.example.com</p>
-<dd>all subdomains of example.com <i>and</i> example.com itself are listed. This is a shortcut: to list a domain name itself and all it&#8217;s subdomains, one may either specify two lines (example.com and *.example.com), or one line (.example.com).</dl>
+<dt>example.com</dt>
+<dd>only example.com domain is listed, not subdomains thereof. Not a wildcard entry.</dd>
+<dt>*.example.com</dt>
+<dd>all subdomains of example.com are listed, but not example.com itself.</dd>
+<dt>.example.com</dt>
+<dd>all subdomains of example.com <i>and</i> example.com itself are listed. This is a shortcut: to list a domain name itself and all it&#8217;s subdomains, one may either specify two lines (example.com and *.example.com), or one line (.example.com).</dd></dl>
 <p> This dataset type may be used instead of <code>ip4set</code>, provided all CIDR ranges are expanded and reversed (but in this case, TXT template will be expanded differently).</p>
 <h3>generic Dataset</h3>
 <p>Generic type, simplified bind-style format. Every record should be on one line (line continuations are not supported), and should be specified completely (i.e. all domain names in values should be fully-qualified, entry name may not be omitted). No wildcards are accepted. Only A, TXT, and MX records are recognized. TTL value may be specified before record type. Examples:</p>
@@ -172,7 +172,7 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
  # record with TTL
  www 3000 A 127.0.0.1
  about TXT &quot;ex.com combined blocklist&quot;</pre>
-</dl>
+</dd></dl>
 <h3>combined Dataset</h3>
 <p>This is a special dataset that stores no data by itself but acts like a container for several other datasets of any type except of combined type itself. The data file contains an optional common section, where various specials are recognized like $NS, $SOA, $TTL (see above), and a series of sections, each of which defines one (nested) dataset and several subzones of the base zone, for which this dataset should be consulted. New (nested) dataset starts with a line </p>
 <pre> $DATASET <i>type</i>[:<i>name</i>] <i>subzone</i> <i>subzone</i>...</pre>
@@ -261,16 +261,16 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <h3>acl Dataset</h3>
 <p>This is not a real dataset, while the syntax and usage is the same as with other datasets. Instead of defining which records exists in a given zone and which do not, the <code>acl</code> dataset specifies which client hosts (peers) are allowed to query the given zone. The dataset specifies a set of IPv4 and/or IPv6 CIDR ranges (with the syntax exactly the same as understood by the <code>ip4trie</code> and <code>ip6trie</code> datasets), together with action specifiers. When a query is made from an IP address listed (not <i>for</i> the IP address), the specified action changes rules used to construct the reply. Possible actions and their meanings are:</p>
 <dl>
-<dt>:<code>ignore</code></p>
-<dd>ignore all queries from this IP address altogether. <code>rbldnsd</code> acts like there was no query received at all. This is the default action.</p>
-<dt>:<code>refuse</code></p>
-<dd>refuse all queries from the IP in question. <code>rbldnsd</code> will always return REFUSED DNS response code.</p>
-<dt>:<code>empty</code></p>
-<dd>pretend there&#8217;s no data in all other datasets for the given zone. This means that all the clients in question will always receive reply from <code>rbldnsd</code> telling that the requested IP address or domain name is not listed in a given DNSBL. <code>rbldnsd</code> still replies to metadata queries (SOA and NS records, and to all queries satisfied by generic dataset if specified for the given zone) as usual.</p>
-<dt>:<code>pass</code></p>
-<dd>process the request as usual. This may be used to add a &quot;whitelisting&quot; entry for a network/host bloked by another (larger) ACL entry.</p>
-<dt><i>a_txt_template</i></p>
-<dd>usual A+TXT template as used by other datasets. This means that <code>rbldnsd</code> will reply to any valid DNSBL query with &quot;it is listed&quot; answer, so that the client in question will see every IP address or domain name is listed in a given DNSBL. TXT record used in the reply is taken from the acl dataset instead of real datasets. Again, just like with <code>empty</code> case, <code>rbldnsd</code> will continue replying to metadata queries (including generic datasets if any) as usual.</dl>
+<dt>:<code>ignore</code></dt>
+<dd>ignore all queries from this IP address altogether. <code>rbldnsd</code> acts like there was no query received at all. This is the default action.</dd>
+<dt>:<code>refuse</code></dt>
+<dd>refuse all queries from the IP in question. <code>rbldnsd</code> will always return REFUSED DNS response code.</dd>
+<dt>:<code>empty</code></dt>
+<dd>pretend there&#8217;s no data in all other datasets for the given zone. This means that all the clients in question will always receive reply from <code>rbldnsd</code> telling that the requested IP address or domain name is not listed in a given DNSBL. <code>rbldnsd</code> still replies to metadata queries (SOA and NS records, and to all queries satisfied by generic dataset if specified for the given zone) as usual.</dd>
+<dt>:<code>pass</code></dt>
+<dd>process the request as usual. This may be used to add a &quot;whitelisting&quot; entry for a network/host bloked by another (larger) ACL entry.</dd>
+<dt><i>a_txt_template</i></dt>
+<dd>usual A+TXT template as used by other datasets. This means that <code>rbldnsd</code> will reply to any valid DNSBL query with &quot;it is listed&quot; answer, so that the client in question will see every IP address or domain name is listed in a given DNSBL. TXT record used in the reply is taken from the acl dataset instead of real datasets. Again, just like with <code>empty</code> case, <code>rbldnsd</code> will continue replying to metadata queries (including generic datasets if any) as usual.</dd></dl>
 <p> Only one ACL dataset can be specified for a given zone, and each zone must have at least one non-acl dataset. It is also possible to specify one global ACL dataset, by specifying empty zone name (which is not allowed for other dataset types), like </p>
 <pre> <code>rbldnsd</code> ... :<code>acl</code>:<i>filename</i>...</pre>
 <p>In this case the ACL defined in <i>filename</i> applies to all zones. If there are both global ACL and local zone-specific ACL specified, both will be consulted and actions taken in the order specified above, ie, if either ACL returns <code>ignore</code> for this IP, the request will be ignored, else if either ACL returns <code>refuse</code>, the query will be refused, and so on. If both ACLs specifies &quot;always listed&quot; A+TXT template, the reply will contain A+TXT from global ACL. </p>
@@ -278,14 +278,14 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <h2>Signals</h2>
 <p><code>Rbldnsd</code> handles the following signals: </p>
 <dl>
-<dt><code>SIGHUP</code></p>
-<dd>recheck zone files and reload any outdated ones. This is done automatically if enabled, see <code>-c</code> option. Additionally, <code>rbldnsd</code> will reopen logfile upon receiving SIGHUP, if specified (<code>-l</code> option). </p>
-<dt><code>SIGTERM</code>, <code>SIGINT</code></p>
-<dd>Terminate process. </p>
-<dt><code>SIGUSR1</code></p>
-<dd>Log current statistic counters into syslog. <code>Rbldnsd</code> collects how many packets it handled, how many bytes was received, sent, how many OK requests/replies (and how many answer records) was received/sent, how many NXDOMAIN answers was sent, and how many errors/refusals/etc was sent, in a period of time. </p>
-<dt><code>SIGUSR2</code></p>
-<dd>The same as SIGUSR1, but reset all counters and start new sample period. </p>
+<dt><code>SIGHUP</code></dt>
+<dd>recheck zone files and reload any outdated ones. This is done automatically if enabled, see <code>-c</code> option. Additionally, <code>rbldnsd</code> will reopen logfile upon receiving SIGHUP, if specified (<code>-l</code> option). </dd>
+<dt><code>SIGTERM</code>, <code>SIGINT</code></dt>
+<dd>Terminate process. </dd>
+<dt><code>SIGUSR1</code></dt>
+<dd>Log current statistic counters into syslog. <code>Rbldnsd</code> collects how many packets it handled, how many bytes was received, sent, how many OK requests/replies (and how many answer records) was received/sent, how many NXDOMAIN answers was sent, and how many errors/refusals/etc was sent, in a period of time. </dd>
+<dt><code>SIGUSR2</code></dt>
+<dd>The same as SIGUSR1, but reset all counters and start new sample period. </dd>
 </dl>
 <h2>Notes</h2>
 <p>Some unsorted usage notes follows.</p>
@@ -335,3 +335,4 @@ description: "rbldnsd – DNS daemon suitable for running DNS-based blocklists"
 <p>The <code>rbldnsd</code> daemon written by Michael Tokarev &lt;mjt+rbldnsd [at] corpit.ru&gt;, based on ideas by Dan Bernstein and his djbdns package, with excellent contributions by Geoffrey T. Dairiki &lt;dairiki [at] dairiki.org&gt;.</p>
 <h2>Licence</h2>
 <p>Mostly GPL, with some code licensed under 3-clause BSD license.</p>
+</dl>

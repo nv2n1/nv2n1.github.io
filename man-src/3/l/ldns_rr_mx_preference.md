@@ -17,11 +17,11 @@ description: "ldns_rr_mx_preference, ldns_rr_mx_exchange"
 <p> ldns_rdf* ldns_rr_mx_exchange(const ldns_rr *r); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_mx_preference</i>()</p>
-<dd>returns the mx pref. of a LDNS_RR_TYPE_MX rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the preference or NULL on failure</dl>
+<dt> <i>ldns_rr_mx_preference</i>()</dt>
+<dd>returns the mx pref. of a LDNS_RR_TYPE_MX rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the preference or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_mx_exchange</i>()</p>
-<dd>returns the mx host of a LDNS_RR_TYPE_MX rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the name of the MX host or NULL on failure</dl>
+<dt> <i>ldns_rr_mx_exchange</i>()</dt>
+<dd>returns the mx host of a LDNS_RR_TYPE_MX rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the name of the MX host or NULL on failure</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

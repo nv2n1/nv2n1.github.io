@@ -13,10 +13,10 @@ description: "pskc_get_key_data_time – API function"
 <p> <code>uint32_t pskc_get_key_data_time(pskc_key_t * </code><i>key</i><code>, int * </code><i>present</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int * present</p>
-<dd>output variable indicating whether data was provided or not.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Data Time value. This element contains the time for time-based OTP algorithms. (If time intervals are used, this element carries the number of time intervals passed from a specific start point, normally it is algorithm dependent). </p>
 <p> If <i>present</i> is non-NULL, it will be 0 if the field is not present or 1 if it was present.</p>

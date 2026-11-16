@@ -22,24 +22,24 @@ description: "gst-xmllaunch – build and run a GStreamer pipeline from an XML s
 <h2>Options</h2>
 <p><i>gst-xmllaunch</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print help synopsis and available FLAGS</p>
-<dt><code>&#8211;silent</code></p>
-<dd>Do not output status information</p>
-<dt><code>&#8211;exclude=TYPE, -XTYPE</code></p>
-<dd>Do not output status information of TYPE</p>
-<dt><code>&#8211;output=FILE, -oFILE</code></p>
-<dd>Save XML representation of pipeline to FILE and exit</p>
-<dt><code>&#8211;gst-info-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> info flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-debug-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> debugging flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> info and debugging flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-plugin-spew</code></p>
-<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</p>
-<dt><code>&#8211;gst-plugin-path=PATH</code></p>
-<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Print help synopsis and available FLAGS</dd>
+<dt><code>&#8211;silent</code></dt>
+<dd>Do not output status information</dd>
+<dt><code>&#8211;exclude=TYPE, -XTYPE</code></dt>
+<dd>Do not output status information of TYPE</dd>
+<dt><code>&#8211;output=FILE, -oFILE</code></dt>
+<dd>Save XML representation of pipeline to FILE and exit</dd>
+<dt><code>&#8211;gst-info-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> info flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-debug-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> debugging flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> info and debugging flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-plugin-spew</code></dt>
+<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</dd>
+<dt><code>&#8211;gst-plugin-path=PATH</code></dt>
+<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dd></dl>
 <h2>See Also</h2>
 <p><code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>Author</h2>

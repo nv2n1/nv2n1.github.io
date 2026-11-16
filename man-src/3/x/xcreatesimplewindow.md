@@ -10,38 +10,38 @@ description: "XCreateWindow, XCreateSimpleWindow, XSetWindowAttributes – creat
 <p>XCreateWindow, XCreateSimpleWindow, XSetWindowAttributes &#8211; create windows and window attributes structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Window XCreateWindow(Display *<i>display</i>, Window <i>parent</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int <i>border_width</i>, int <i>depth</i>, unsigned int <i>class</i>, Visual *<i>visual</i>, unsigned long <i>valuemask</i>, XSetWindowAttributes *<i>attributes</i>);</p>
-<dd>Window XCreateSimpleWindow(Display *<i>display</i>, Window <i>parent</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int <i>border_width</i>, unsigned long <i>border</i>, unsigned long <i>background</i>);</dl>
+<dd>Window XCreateWindow(Display *<i>display</i>, Window <i>parent</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int <i>border_width</i>, int <i>depth</i>, unsigned int <i>class</i>, Visual *<i>visual</i>, unsigned long <i>valuemask</i>, XSetWindowAttributes *<i>attributes</i>);</dd>
+<dd>Window XCreateSimpleWindow(Display *<i>display</i>, Window <i>parent</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int <i>border_width</i>, unsigned long <i>border</i>, unsigned long <i>background</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>attributes</i></p>
-<dd>Specifies the structure from which the values (as specified by the value mask) are to be taken. The value mask should have the appropriate bits set to indicate which attributes have been set in the structure.</p>
-<dt><i>background</i></p>
-<dd>Specifies the background pixel value of the window. </p>
-<dt><i>border</i></p>
-<dd>Specifies the border pixel value of the window.</p>
-<dt><i>border_width</i></p>
-<dd>Specifies the width of the created window&#8217;s border in pixels.</p>
-<dt><i>class</i></p>
-<dd>Specifies the created window&#8217;s class. You can pass <code>InputOutput</code>, <code>InputOnly</code>, or <code>CopyFromParent</code>. A class of <code>CopyFromParent</code> means the class is taken from the parent.</p>
-<dt><i>depth</i></p>
-<dd>Specifies the window&#8217;s depth. A depth of <code>CopyFromParent</code> means the depth is taken from the parent.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>parent</i></p>
-<dd>Specifies the parent window.</p>
-<dt><i>valuemask</i></p>
-<dd>Specifies which window attributes are defined in the attributes argument. This mask is the bitwise inclusive OR of the valid attribute mask bits. If valuemask is zero, the attributes are ignored and are not referenced.</p>
-<dt><i>visual</i></p>
-<dd>Specifies the visual type. A visual of <code>CopyFromParent</code> means the visual type is taken from the parent.</p>
-<dt><i>width</i></p>
+<dt><i>attributes</i></dt>
+<dd>Specifies the structure from which the values (as specified by the value mask) are to be taken. The value mask should have the appropriate bits set to indicate which attributes have been set in the structure.</dd>
+<dt><i>background</i></dt>
+<dd>Specifies the background pixel value of the window. </dd>
+<dt><i>border</i></dt>
+<dd>Specifies the border pixel value of the window.</dd>
+<dt><i>border_width</i></dt>
+<dd>Specifies the width of the created window&#8217;s border in pixels.</dd>
+<dt><i>class</i></dt>
+<dd>Specifies the created window&#8217;s class. You can pass <code>InputOutput</code>, <code>InputOnly</code>, or <code>CopyFromParent</code>. A class of <code>CopyFromParent</code> means the class is taken from the parent.</dd>
+<dt><i>depth</i></dt>
+<dd>Specifies the window&#8217;s depth. A depth of <code>CopyFromParent</code> means the depth is taken from the parent.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent window.</dd>
+<dt><i>valuemask</i></dt>
+<dd>Specifies which window attributes are defined in the attributes argument. This mask is the bitwise inclusive OR of the valid attribute mask bits. If valuemask is zero, the attributes are ignored and are not referenced.</dd>
+<dt><i>visual</i></dt>
+<dd>Specifies the visual type. A visual of <code>CopyFromParent</code> means the visual type is taken from the parent.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height, which are the created window&#8217;s inside dimensions and do not include the created window&#8217;s borders.</p>
-<dt><i>x</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height, which are the created window&#8217;s inside dimensions and do not include the created window&#8217;s borders.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates, which are the top-left outside corner of the window&#8217;s borders and are relative to the inside of the parent window&#8217;s borders.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which are the top-left outside corner of the window&#8217;s borders and are relative to the inside of the parent window&#8217;s borders.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XCreateWindow</code> function creates an unmapped subwindow for a specified parent window, returns the window ID of the created window, and causes the X server to generate a <code>CreateNotify</code> event. The created window is placed on top in the stacking order with respect to siblings. </p>
 <p> The coordinate system has the X axis horizontal and the Y axis vertical with the origin [0, 0] at the upper-left corner. Coordinates are integral, in terms of pixels, and coincide with pixel centers. Each window and pixmap has its own coordinate system. For a window, the origin is inside the border at the inside, upper-left corner. </p>
@@ -165,22 +165,22 @@ description: "XCreateWindow, XCreateSimpleWindow, XSetWindowAttributes – creat
 <p> For a detailed explanation of the members of this structure, see <i>Xlib &#8211; C Language X Interface</i>.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadColor</code></p>
-<dd>A value for a Colormap argument does not name a defined Colormap.</p>
-<dt><code>BadCursor</code></p>
-<dd>A value for a Cursor argument does not name a defined Cursor.</p>
-<dt><code>BadMatch</code></p>
-<dd>The values do not exist for an <code>InputOnly</code> window.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadPixmap</code></p>
-<dd>A value for a Pixmap argument does not name a defined Pixmap.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadColor</code></dt>
+<dd>A value for a Colormap argument does not name a defined Colormap.</dd>
+<dt><code>BadCursor</code></dt>
+<dd>A value for a Cursor argument does not name a defined Cursor.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>The values do not exist for an <code>InputOnly</code> window.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadPixmap</code></dt>
+<dd>A value for a Pixmap argument does not name a defined Pixmap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xconfigurewindow/">XConfigureWindow</a>(3), <a href="/docs/linux/man/3-xdefinecursor/">XDefineCursor</a>(3), <a href="/docs/linux/man/3-xdestroywindow/">XDestroyWindow</a>(3), <a href="/docs/linux/man/3-xmapwindow/">XMapWindow</a>(3), <a href="/docs/linux/man/3-xraisewindow/">XRaiseWindow</a>(3), <a href="/docs/linux/man/3-xunmapwindow/">XUnmapWindow</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -27,10 +27,10 @@ struct ibv_srq_attr {
 </code></pre>
 <p> The argument <i>srq_attr_mask</i> specifies the SRQ attributes to be modified. The argument is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_SRQ_MAX_WR </code> Resize the SRQ</p>
+<dt><code>IBV_SRQ_MAX_WR </code> Resize the SRQ</dt>
 <dd>
-<dt><code>IBV_SRQ_LIMIT </code> Set the SRQ limit</p>
-<dd></dl>
+</dd><dt><code>IBV_SRQ_LIMIT </code> Set the SRQ limit</dt>
+<dd></dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_modify_srq()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>NOTES</h2>
@@ -41,7 +41,7 @@ struct ibv_srq_attr {
 <p> <code>ibv_query_device</code>(3), <code>ibv_create_srq</code>(3), <code>ibv_destroy_srq</code>(3), <code>ibv_query_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -27,28 +27,21 @@ producer | streamzip[opts] | consumer producer | streamzip[opts] - zipfile = out
 
 <dl>
 <dt>-zip64
-<dd> Create a Zip64-compliant zip container. Use this option if the input is greater than 4Gig. 
-
+</dt><dd> Create a Zip64-compliant zip container. Use this option if the input is greater than 4Gig. 
  Default is disabled.
-<dt>-zipfile=F
-<dd> Write zip container to the filename <tt>&quot;F&quot;</tt>. 
-
+</dd><dt>-zipfile=F
+</dt><dd> Write zip container to the filename <tt>&quot;F&quot;</tt>. 
  Use the <tt>&quot;Stream&quot;</tt> option to force the creation of a streamed zip file.
-<dt>-member-name=M
-<dd> This option is used to name the ``file'' in the zip container. 
-
+</dd><dt>-member-name=M
+</dt><dd> This option is used to name the ``file'' in the zip container. 
  Default is '-'.
-<dt>-stream
-<dd> Ignored when writing to <tt>&quot;stdout&quot;</tt>. 
-
+</dd><dt>-stream
+</dt><dd> Ignored when writing to <tt>&quot;stdout&quot;</tt>. 
  If the <tt>&quot;zipfile&quot;</tt> option is specified, including this option will trigger the creation of a streamed zip file. 
-
  Default: Always enabled when writing to <tt>&quot;stdout&quot;</tt>, otherwise disabled.
-<dt>-method=M
-<dd> Compress using method <tt>&quot;M&quot;</tt>. 
-
+</dd><dt>-method=M
+</dt><dd> Compress using method <tt>&quot;M&quot;</tt>. 
  Valid method names are 
-
  <pre>
     * store    Store without compression
     * deflate  Use Deflate compression [Deflault]
@@ -57,22 +50,17 @@ producer | streamzip[opts] | consumer producer | streamzip[opts] - zipfile = out
     * xz       Use xz compression
     * zstd     Use Zstandard compression
 </pre> 
-
  Note that Lzma compress needs <tt>&quot;IO::Compress::Lzma&quot;</tt> to be installed. 
-
  Note that Zstd compress needs <tt>&quot;IO::Compress::Zstd&quot;</tt> to be installed. 
-
  Default is <tt>&quot;deflate&quot;</tt>.
-<dt>-0, -1, -2, -3, -4, -5, -6, -7, -8, -9
-<dd> Sets the compression level for <tt>&quot;deflate&quot;</tt>. Ignored for all other compression methods. 
-
+</dd><dt>-0, -1, -2, -3, -4, -5, -6, -7, -8, -9
+</dt><dd> Sets the compression level for <tt>&quot;deflate&quot;</tt>. Ignored for all other compression methods. 
  <tt>&quot;-0&quot;</tt> means no compression and <tt>&quot;-9&quot;</tt> for maximum compression. 
-
  Default is 6
-<dt>-version
-<dd> Display version number
-<dt>-help
-<dd> Display help</dl>
+</dd><dt>-version
+</dt><dd> Display version number
+</dd><dt>-help
+</dt><dd> Display help</dd></dl>
 
 <h3>Examples</h3>
 
@@ -131,8 +119,8 @@ $ echo Lorem ipsum dolor sit | perl./ bin / streamzip - member - name latin &gt;
 
 
 <dt><a HREF="#lbAH">SUPPORT</a>
-<dd>
-<dt><a HREF="#lbAI">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbAJ">COPYRIGHT</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">COPYRIGHT</a>
+</dt><dd></dd></dl>

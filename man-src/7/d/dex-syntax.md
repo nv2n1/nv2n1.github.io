@@ -16,77 +16,77 @@ description: "Syntax of syntax highlighting files used by dex."
 <h3>Main commands</h3>
 <p>syntax &lt;name&gt;</p>
 <dl>
-<dd>Begin a new syntax. One syntax file can contain multiple syntax definitions, but you should only define one real syntax in one syntax file.</dl>
+<dd>Begin a new syntax. One syntax file can contain multiple syntax definitions, but you should only define one real syntax in one syntax file.</dd></dl>
 <dl>
-<dd>See also SUB-SYNTAXES.</dl>
+<dd>See also SUB-SYNTAXES.</dd></dl>
 <p> state &lt;name&gt; [emit-color]</p>
 <dl>
-<dd>Add new state. Conditionals (if any) and one default action must follow. First state is the start state.</dl>
+<dd>Add new state. Conditionals (if any) and one default action must follow. First state is the start state.</dd></dl>
 <p> default &lt;color&gt; &lt;name&gt;&#8230;</p>
 <dl>
-<dd>Set default color for emitted name.</dl>
+<dd>Set default color for emitted name.</dd></dl>
 <dl>
-<dd>Example:</p>
+<dd>Example:</dd>
 <dl>
-<dd>default numeric oct dec hex</dl>
+<dd>default numeric oct dec hex</dd></dl>
 </dl>
 <dl>
-<dd>If there is no color defined for oct, dec or hex then color numeric is used instead.</dl>
+<dd>If there is no color defined for oct, dec or hex then color numeric is used instead.</dd></dl>
 <p> list [-i] &lt;name&gt; &lt;string&gt;&#8230;</p>
 <dl>
-<dd>Define a list of strings.</dl>
+<dd>Define a list of strings.</dd></dl>
 <dl>
-<dd>Example:</p>
+<dd>Example:</dd>
 <dl>
-<dd>list keyword if else for while do continue switch case</dl>
+<dd>list keyword if else for while do continue switch case</dd></dl>
 </dl>
 <dl>
-<dd>Use conditional <code>inlist</code> to test if a buffered string is in a list.</dl>
+<dd>Use conditional <code>inlist</code> to test if a buffered string is in a list.</dd></dl>
 <dl>
-<dd>&nbsp;<wbr>-i Make list case-insensitive.</dl>
+<dd>&nbsp;<wbr>-i Make list case-insensitive.</dd></dl>
 <h3>Conditionals</h3>
 <p>bufis [-i] &lt;string&gt; &lt;destination&gt; [emit-name]</p>
 <dl>
-<dd>Test if buffered bytes are same as <i>string</i>. If they are emit <i>emit-name</i> and jump to destination state.</dl>
+<dd>Test if buffered bytes are same as <i>string</i>. If they are emit <i>emit-name</i> and jump to destination state.</dd></dl>
 <p> char [-bn] &lt;characters&gt; &lt;destination&gt; [emit-name]</p>
 <dl>
-<dd>Test if current byte is in the character list. If it is then emit <i>emit-color</i> and jump to destination state. If <i>emit-name</i> is not given then destination states emit name is used.</dl>
+<dd>Test if current byte is in the character list. If it is then emit <i>emit-color</i> and jump to destination state. If <i>emit-name</i> is not given then destination states emit name is used.</dd></dl>
 <dl>
-<dd>Characters is a list of strings. Ranges are supported (a-d is same as abcd).</dl>
+<dd>Characters is a list of strings. Ranges are supported (a-d is same as abcd).</dd></dl>
 <dl>
-<dd>-b Add byte to buffer.</dl>
+<dd>-b Add byte to buffer.</dd></dl>
 <dl>
-<dd>-n Invert character bitmap.</dl>
+<dd>-n Invert character bitmap.</dd></dl>
 <p> heredocend &lt;destination&gt;</p>
 <dl>
-<dd>Compare following characters to heredoc end delimiter and go to destination state if comparison is true.</dl>
+<dd>Compare following characters to heredoc end delimiter and go to destination state if comparison is true.</dd></dl>
 <p> inlist &lt;list&gt; &lt;destination&gt; [emit-name]</p>
 <dl>
-<dd>Test if buffered bytes are found in <i>list</i>. If found emit <i>emit-name</i> and jump to destination state.</dl>
+<dd>Test if buffered bytes are found in <i>list</i>. If found emit <i>emit-name</i> and jump to destination state.</dd></dl>
 <p> str [-i] &lt;string&gt; &lt;destination&gt; [emit-name]</p>
 <dl>
-<dd>See if following bytes are same as <i>string</i>. If they are emit <i>emit-name</i> and jump to destination state.</dl>
+<dd>See if following bytes are same as <i>string</i>. If they are emit <i>emit-name</i> and jump to destination state.</dd></dl>
 <dl>
-<dd>-i case-insensitive.</dl>
+<dd>-i case-insensitive.</dd></dl>
 <dl>
-<dd>NOTE: This conditional can be slow, especially if string is longer than two bytes.</dl>
+<dd>NOTE: This conditional can be slow, especially if string is longer than two bytes.</dd></dl>
 <h3>Default actions</h3>
 <p>Last command of every state must be default action. It is an unconditional jump. </p>
 <p> eat &lt;destination&gt; [emit-name]</p>
 <dl>
-<dd>Consume byte, emit <i>emit-name</i> color and continue to destination state.</dl>
+<dd>Consume byte, emit <i>emit-name</i> color and continue to destination state.</dd></dl>
 <p> heredocbegin &lt;subsyntax&gt; &lt;return-state&gt;</p>
 <dl>
-<dd>Store buffered bytes as heredoc end delimiter and go to subsyntax. Subsyntax is like any other subsyntax but it must contain heredocend conditional.</dl>
+<dd>Store buffered bytes as heredoc end delimiter and go to subsyntax. Subsyntax is like any other subsyntax but it must contain heredocend conditional.</dd></dl>
 <p> noeat [-b] &lt;destination&gt;</p>
 <dl>
-<dd>Continue to destination state without emitting color or consuming byte.</dl>
+<dd>Continue to destination state without emitting color or consuming byte.</dd></dl>
 <dl>
-<dd>-b Don&#8217;t stop buffering.</dl>
+<dd>-b Don&#8217;t stop buffering.</dd></dl>
 <h3>Other commands</h3>
 <p>recolor &lt;color&gt; [count]</p>
 <dl>
-<dd>If count is given, recolor count previous bytes, otherwise recolor buffered bytes.</dl>
+<dd>If count is given, recolor count previous bytes, otherwise recolor buffered bytes.</dd></dl>
 <h2>Sub-Syntaxes</h2>
 <p>Sub-syntaxes are useful when same states are needed in many contexts. </p>
 <p> Sub-syntax name must be prefixed with &quot;.&quot;. It is recommended to also use main syntax&#8217;s name in the prefix. For example &quot;.c-comment&quot; if &quot;c&quot; is the main syntax. </p>
@@ -94,25 +94,25 @@ description: "Syntax of syntax highlighting files used by dex."
 <p> Example: </p>
 <dl>
 <dd># sub-syntax<br />
- syntax .c-comment</dl>
+ syntax .c-comment</dd></dl>
 <dl>
-<dd>state comment</p>
+<dd>state comment</dd>
 <dl>
 <dd>char &quot;*&quot; star<br />
- eat comment</dl>
+ eat comment</dd></dl>
 </dl>
 <dl>
-<dd>state star comment</p>
+<dd>state star comment</dd>
 <dl>
 <dd># END is a special state name<br />
  char / END comment<br />
- noeat comment</dl>
+ noeat comment</dd></dl>
 </dl>
 <dl>
 <dd># main syntax<br />
- syntax c</dl>
+ syntax c</dd></dl>
 <dl>
-<dd>state c code</p>
+<dd>state c code</dd>
 <dl>
 <dd>char &quot; 	
 &quot; c<br />
@@ -121,10 +121,10 @@ description: "Syntax of syntax highlighting files used by dex."
  char &quot;&#8217;&quot; char<br />
  # call sub-syntax<br />
  str &quot;/*&quot; .c-comment:c<br />
- eat c</dl>
+ eat c</dd></dl>
 </dl>
 <dl>
-<dd># other states removed</dl>
+<dd># other states removed</dd></dl>
 <p> In this example the destination state .c-comment:c is special syntax for calling a sub-syntax. &quot;.c-comment&quot; is name of the sub-syntax and &quot;c&quot; is the return state defined in the main syntax. Whole sub-syntax tree is copied into the main syntax and all destination states in the sub-syntax whose name is END are replaced with &quot;c&quot;.</p>
 <h2>Authors</h2>
 <p>Timo Hirvonen &lt;tihirvon [at] gmail.com&gt;</p>

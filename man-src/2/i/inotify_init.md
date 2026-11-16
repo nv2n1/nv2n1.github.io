@@ -20,24 +20,24 @@ int inotify_init1(int flags);
 <p> <code>inotify_init</code>() initializes a new inotify instance and returns a file descriptor associated with a new inotify event queue. </p>
 <p> If <i>flags</i> is 0, then <code>inotify_init1</code>() is the same as <code>inotify_init</code>(). The following values can be bitwise ORed in <i>flags</i> to obtain different behavior:</p>
 <dl>
-<dt><code>IN_NONBLOCK</code></p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</p>
-<dt><code>IN_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dl>
+<dt><code>IN_NONBLOCK</code></dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd>
+<dt><code>IN_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, these system calls return a new file descriptor. On error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> (<code>inotify_init1</code>()) An invalid value was specified in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The user limit on the total number of inotify instances has been reached.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory is available.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>inotify_init1</code>()) An invalid value was specified in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The user limit on the total number of inotify instances has been reached.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory is available.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>inotify_init</code>() first appeared in Linux 2.6.13; library support was added to glibc in version 2.4. <code>inotify_init1</code>() was added in Linux 2.6.27; library support was added to glibc in version 2.9.</p>
 <h2>CONFORMING TO</h2>

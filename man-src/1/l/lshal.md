@@ -16,18 +16,18 @@ description: "lshal – list HAL devices"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>-m, &#8211;monitor</i></p>
-<dd> Print changes emitted by the <code>hald</code> daemon.</p>
-<dt><i>-s, &#8211;short</i></p>
-<dd> Short output.</p>
-<dt><i>-t, &#8211;tree</i></p>
-<dd> Display the devices organized in a tree.</p>
-<dt><i>-u, &#8211;show</i></p>
-<dd> Show only the given UDI (<i>Unique Device Identifier</i>).</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>-V, &#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>-m, &#8211;monitor</i></dt>
+<dd> Print changes emitted by the <code>hald</code> daemon.</dd>
+<dt><i>-s, &#8211;short</i></dt>
+<dd> Short output.</dd>
+<dt><i>-t, &#8211;tree</i></dt>
+<dd> Display the devices organized in a tree.</dd>
+<dt><i>-u, &#8211;show</i></dt>
+<dd> Show only the given UDI (<i>Unique Device Identifier</i>).</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>-V, &#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please send bug reports to either the distribution or the HAL mailing list, see <i><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/hal">http://lists.freedesktop.org/mailman/listinfo/hal</a></i> on how to subscribe. </p>

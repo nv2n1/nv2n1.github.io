@@ -29,242 +29,242 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> This will run X copies of <i>&lt;program&gt;</i> in your current run-time environment (if running under a supported resource manager, Open MPI&#8217;s <i>mpirun</i> will usually automatically use the corresponding resource manager process starter, as opposed to, for example, <i>rsh</i> or <i>ssh</i>, which require the use of a hostfile, or will default to running all X copies on the localhost), scheduling (by default) in a round-robin fashion by CPU slot. See the rest of this page for more details. </p>
 <p> Please note that mpirun automatically binds processes as of the start of the v1.8 series. Three binding patterns are used in the absence of any further directives:</p>
 <dl>
-<dt><code>Bind to core:</code></p>
-<dd> when the number of processes is &lt;= 2</p>
-<dt><code>Bind to socket:</code></p>
-<dd> when the number of processes is &gt; 2</p>
-<dt><code>Bind to none:</code></p>
-<dd> when oversubscribed</dl>
+<dt><code>Bind to core:</code></dt>
+<dd> when the number of processes is &lt;= 2</dd>
+<dt><code>Bind to socket:</code></dt>
+<dd> when the number of processes is &gt; 2</dd>
+<dt><code>Bind to none:</code></dt>
+<dd> when oversubscribed</dd></dl>
 <p> If your application uses threads, then you probably want to ensure that you are either not bound at all (by specifying &#8211;bind-to none), or bound to multiple cores using an appropriate binding level or specific number of processing elements per application process.</p>
 <h2>OPTIONS</h2>
 <p> <i>mpirun</i> will send the name of the directory where it was invoked on the local node to each of the remote nodes, and attempt to change to that directory. See the &quot;Current Working Directory&quot; section below for further details.</p>
 <dl>
-<dt><code>&lt;program&gt;</code></p>
-<dd> The program executable. This is identified as the first non-recognized argument to mpirun.</p>
-<dt><code>&lt;args&gt;</code></p>
-<dd> Pass these run-time arguments to every new process. These must always be the last arguments to <i>mpirun</i>. If an app context file is used, <i>&lt;args&gt;</i> will be ignored.</p>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Display help for this command</p>
-<dt><code>-q</code>, &#8211;quiet</p>
-<dd> Suppress informative messages from orterun during application execution.</p>
-<dt><code>-v</code>, &#8211;verbose</p>
-<dd> Be verbose</p>
-<dt><code>-V</code>, &#8211;version</p>
-<dd> Print version number. If no other arguments are given, this will also cause orterun to exit.</p>
-<dt><code>-N </code>&lt;num&gt;</p>
+<dt><code>&lt;program&gt;</code></dt>
+<dd> The program executable. This is identified as the first non-recognized argument to mpirun.</dd>
+<dt><code>&lt;args&gt;</code></dt>
+<dd> Pass these run-time arguments to every new process. These must always be the last arguments to <i>mpirun</i>. If an app context file is used, <i>&lt;args&gt;</i> will be ignored.</dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Display help for this command</dd>
+<dt><code>-q</code>, &#8211;quiet</dt>
+<dd> Suppress informative messages from orterun during application execution.</dd>
+<dt><code>-v</code>, &#8211;verbose</dt>
+<dd> Be verbose</dd>
+<dt><code>-V</code>, &#8211;version</dt>
+<dd> Print version number. If no other arguments are given, this will also cause orterun to exit.</dd>
+<dt><code>-N </code>&lt;num&gt;</dt>
 <dd>
- Launch num processes per node on all allocated nodes (synonym for npernode).</p>
-<dt><code>-display-map</code>, &#8211;display-map</p>
-<dd> Display a table showing the mapped location of each process prior to launch.</p>
-<dt><code>-display-allocation</code>, &#8211;display-allocation</p>
-<dd> Display the detected resource allocation.</p>
-<dt><code>-output-proctable</code>, &#8211;output-proctable</p>
-<dd> Output the debugger proctable after launch.</p>
-<dt><code>-dvm</code>, &#8211;dvm</p>
-<dd> Create a persistent distributed virtual machine (DVM).</p>
-<dt><code>-max-vm-size</code>, &#8211;max-vm-size &lt;size&gt;</p>
-<dd> Number of processes to run.</p>
-<dt><code>-novm</code>, &#8211;novm</p>
-<dd> Execute without creating an allocation-spanning virtual machine (only start daemons on nodes hosting application procs).</p>
-<dt><code>-hnp</code>, &#8211;hnp &lt;arg0&gt;</p>
-<dd> Specify the URI of the Head Node Process (HNP), or the name of the file (specified as file:filename) that contains that info.</dl>
+ Launch num processes per node on all allocated nodes (synonym for npernode).</dd>
+<dt><code>-display-map</code>, &#8211;display-map</dt>
+<dd> Display a table showing the mapped location of each process prior to launch.</dd>
+<dt><code>-display-allocation</code>, &#8211;display-allocation</dt>
+<dd> Display the detected resource allocation.</dd>
+<dt><code>-output-proctable</code>, &#8211;output-proctable</dt>
+<dd> Output the debugger proctable after launch.</dd>
+<dt><code>-dvm</code>, &#8211;dvm</dt>
+<dd> Create a persistent distributed virtual machine (DVM).</dd>
+<dt><code>-max-vm-size</code>, &#8211;max-vm-size &lt;size&gt;</dt>
+<dd> Number of processes to run.</dd>
+<dt><code>-novm</code>, &#8211;novm</dt>
+<dd> Execute without creating an allocation-spanning virtual machine (only start daemons on nodes hosting application procs).</dd>
+<dt><code>-hnp</code>, &#8211;hnp &lt;arg0&gt;</dt>
+<dd> Specify the URI of the Head Node Process (HNP), or the name of the file (specified as file:filename) that contains that info.</dd></dl>
 <p> Use one of the following options to specify which hosts (nodes) of the cluster to run on. Note that as of the start of the v1.8 release, mpirun will launch a daemon onto each host in the allocation (as modified by the following options) at the very beginning of execution, regardless of whether or not application processes will eventually be mapped to execute there. This is done to allow collection of hardware topology information from the remote nodes, thus allowing us to map processes against known topology. However, it is a change from the behavior in prior releases where daemons were only launched after mapping was complete, and thus only occurred on nodes where application processes would actually be executing.</p>
 <dl>
-<dt><code>-H</code>, -host, &#8211;host &lt;host1,host2,&#8230;,hostN&gt;</p>
-<dd> List of hosts on which to invoke processes.</p>
-<dt><code>-hostfile</code>, &#8211;hostfile &lt;hostfile&gt;</p>
-<dd> Provide a hostfile to use.</p>
-<dt><code>-default-hostfile</code>, &#8211;default-hostfile &lt;hostfile&gt;</p>
-<dd> Provide a default hostfile.</p>
-<dt><code>-machinefile</code>, &#8211;machinefile &lt;machinefile&gt;</p>
-<dd> Synonym for <i>-hostfile</i>.</p>
-<dt><code>-cpu-set</code>, &#8211;cpu-set &lt;list&gt;</p>
-<dd> Restrict launched processes to the specified logical cpus on each node (comma-separated list). Note that the binding options will still apply within the specified envelope &#8211; e.g., you can elect to bind each process to only one cpu within the specified cpu set.</dl>
+<dt><code>-H</code>, -host, &#8211;host &lt;host1,host2,&#8230;,hostN&gt;</dt>
+<dd> List of hosts on which to invoke processes.</dd>
+<dt><code>-hostfile</code>, &#8211;hostfile &lt;hostfile&gt;</dt>
+<dd> Provide a hostfile to use.</dd>
+<dt><code>-default-hostfile</code>, &#8211;default-hostfile &lt;hostfile&gt;</dt>
+<dd> Provide a default hostfile.</dd>
+<dt><code>-machinefile</code>, &#8211;machinefile &lt;machinefile&gt;</dt>
+<dd> Synonym for <i>-hostfile</i>.</dd>
+<dt><code>-cpu-set</code>, &#8211;cpu-set &lt;list&gt;</dt>
+<dd> Restrict launched processes to the specified logical cpus on each node (comma-separated list). Note that the binding options will still apply within the specified envelope &#8211; e.g., you can elect to bind each process to only one cpu within the specified cpu set.</dd></dl>
 <p> The following options specify the number of processes to launch. Note that none of the options imply a particular binding policy &#8211; e.g., requesting N processes for each socket does not imply that the processes will be bound to the socket.</p>
 <dl>
-<dt><code>-c</code>, -n, &#8211;n, -np &lt;#&gt;</p>
-<dd> Run this many copies of the program on the given nodes. This option indicates that the specified file is an executable program and not an application context. If no value is provided for the number of copies to execute (i.e., neither the &quot;-np&quot; nor its synonyms are provided on the command line), Open MPI will automatically execute a copy of the program on each process slot (see below for description of a &quot;process slot&quot;). This feature, however, can only be used in the SPMD model and will return an error (without beginning execution of the application) otherwise.</p>
-<dt><code>—map-by ppr:N:&lt;object&gt;</code></p>
-<dd> Launch N times the number of objects of the specified type on each node.</p>
-<dt><code>-npersocket</code>, &#8211;npersocket &lt;#persocket&gt;</p>
-<dd> On each node, launch this many processes times the number of processor sockets on the node. The <i>-npersocket</i> option also turns on the <i>-bind-to-socket</i> option. (deprecated in favor of &#8211;map-by ppr:n:socket)</p>
-<dt><code>-npernode</code>, &#8211;npernode &lt;#pernode&gt;</p>
-<dd> On each node, launch this many processes. (deprecated in favor of &#8211;map-by ppr:n:node)</p>
-<dt><code>-pernode</code>, &#8211;pernode</p>
-<dd> On each node, launch one process &#8212; equivalent to <i>-npernode</i> 1. (deprecated in favor of &#8211;map-by ppr:1:node)</dl>
+<dt><code>-c</code>, -n, &#8211;n, -np &lt;#&gt;</dt>
+<dd> Run this many copies of the program on the given nodes. This option indicates that the specified file is an executable program and not an application context. If no value is provided for the number of copies to execute (i.e., neither the &quot;-np&quot; nor its synonyms are provided on the command line), Open MPI will automatically execute a copy of the program on each process slot (see below for description of a &quot;process slot&quot;). This feature, however, can only be used in the SPMD model and will return an error (without beginning execution of the application) otherwise.</dd>
+<dt><code>—map-by ppr:N:&lt;object&gt;</code></dt>
+<dd> Launch N times the number of objects of the specified type on each node.</dd>
+<dt><code>-npersocket</code>, &#8211;npersocket &lt;#persocket&gt;</dt>
+<dd> On each node, launch this many processes times the number of processor sockets on the node. The <i>-npersocket</i> option also turns on the <i>-bind-to-socket</i> option. (deprecated in favor of &#8211;map-by ppr:n:socket)</dd>
+<dt><code>-npernode</code>, &#8211;npernode &lt;#pernode&gt;</dt>
+<dd> On each node, launch this many processes. (deprecated in favor of &#8211;map-by ppr:n:node)</dd>
+<dt><code>-pernode</code>, &#8211;pernode</dt>
+<dd> On each node, launch one process &#8212; equivalent to <i>-npernode</i> 1. (deprecated in favor of &#8211;map-by ppr:1:node)</dd></dl>
 <p> To map processes:</p>
 <dl>
-<dt><code>&#8211;map-by </code>&lt;foo&gt;</p>
-<dd> Map to the specified object, defaults to <i>socket</i>. Supported options include slot, hwthread, core, L1cache, L2cache, L3cache, socket, numa, board, node, sequential, distance, and ppr. Any object can include modifiers by adding a : and any combination of PE=n (bind n processing elements to each proc), SPAN (load balance the processes across the allocation), OVERSUBSCRIBE (allow more processes on a node than processing elements), and NOOVERSUBSCRIBE. This includes PPR, where the pattern would be terminated by another colon to separate it from the modifiers.</p>
-<dt><code>-bycore</code>, &#8211;bycore</p>
-<dd> Map processes by core (deprecated in favor of &#8211;map-by core)</p>
-<dt><code>-byslot</code>, &#8211;byslot</p>
-<dd> Map and rank processes round-robin by slot.</p>
-<dt><code>-nolocal</code>, &#8211;nolocal</p>
-<dd> Do not run any copies of the launched application on the same node as orterun is running. This option will override listing the localhost with <code>&#8211;host</code> or any other host-specifying mechanism.</p>
-<dt><code>-nooversubscribe</code>, &#8211;nooversubscribe</p>
-<dd> Do not oversubscribe any nodes; error (without starting any processes) if the requested number of processes would cause oversubscription. This option implicitly sets &quot;max_slots&quot; equal to the &quot;slots&quot; value for each node. (Enabled by default).</p>
-<dt><code>-oversubscribe</code>, &#8211;oversubscribe</p>
-<dd> Nodes are allowed to be oversubscribed, even on a managed system, and overloading of processing elements.</p>
-<dt><code>-bynode</code>, &#8211;bynode</p>
-<dd> Launch processes one per node, cycling by node in a round-robin fashion. This spreads processes evenly among nodes and assigns MPI_COMM_WORLD ranks in a round-robin, &quot;by node&quot; manner.</p>
-<dt><code>-cpu-list</code>, &#8211;cpu-list &lt;cpus&gt;</p>
-<dd> Comma-delimited list of processor IDs to which to bind processes [default=NULL]. Processor IDs are interpreted as hwloc logical core IDs. Run the hwloc <i>lstopo(1)</i> command to see a list of available cores and their logical IDs.</dl>
+<dt><code>&#8211;map-by </code>&lt;foo&gt;</dt>
+<dd> Map to the specified object, defaults to <i>socket</i>. Supported options include slot, hwthread, core, L1cache, L2cache, L3cache, socket, numa, board, node, sequential, distance, and ppr. Any object can include modifiers by adding a : and any combination of PE=n (bind n processing elements to each proc), SPAN (load balance the processes across the allocation), OVERSUBSCRIBE (allow more processes on a node than processing elements), and NOOVERSUBSCRIBE. This includes PPR, where the pattern would be terminated by another colon to separate it from the modifiers.</dd>
+<dt><code>-bycore</code>, &#8211;bycore</dt>
+<dd> Map processes by core (deprecated in favor of &#8211;map-by core)</dd>
+<dt><code>-byslot</code>, &#8211;byslot</dt>
+<dd> Map and rank processes round-robin by slot.</dd>
+<dt><code>-nolocal</code>, &#8211;nolocal</dt>
+<dd> Do not run any copies of the launched application on the same node as orterun is running. This option will override listing the localhost with <code>&#8211;host</code> or any other host-specifying mechanism.</dd>
+<dt><code>-nooversubscribe</code>, &#8211;nooversubscribe</dt>
+<dd> Do not oversubscribe any nodes; error (without starting any processes) if the requested number of processes would cause oversubscription. This option implicitly sets &quot;max_slots&quot; equal to the &quot;slots&quot; value for each node. (Enabled by default).</dd>
+<dt><code>-oversubscribe</code>, &#8211;oversubscribe</dt>
+<dd> Nodes are allowed to be oversubscribed, even on a managed system, and overloading of processing elements.</dd>
+<dt><code>-bynode</code>, &#8211;bynode</dt>
+<dd> Launch processes one per node, cycling by node in a round-robin fashion. This spreads processes evenly among nodes and assigns MPI_COMM_WORLD ranks in a round-robin, &quot;by node&quot; manner.</dd>
+<dt><code>-cpu-list</code>, &#8211;cpu-list &lt;cpus&gt;</dt>
+<dd> Comma-delimited list of processor IDs to which to bind processes [default=NULL]. Processor IDs are interpreted as hwloc logical core IDs. Run the hwloc <i>lstopo(1)</i> command to see a list of available cores and their logical IDs.</dd></dl>
 <p> To order processes&#8217; ranks in MPI_COMM_WORLD:</p>
 <dl>
-<dt><code>&#8211;rank-by </code>&lt;foo&gt;</p>
-<dd> Rank in round-robin fashion according to the specified object, defaults to <i>slot</i>. Supported options include slot, hwthread, core, L1cache, L2cache, L3cache, socket, numa, board, and node.</dl>
+<dt><code>&#8211;rank-by </code>&lt;foo&gt;</dt>
+<dd> Rank in round-robin fashion according to the specified object, defaults to <i>slot</i>. Supported options include slot, hwthread, core, L1cache, L2cache, L3cache, socket, numa, board, and node.</dd></dl>
 <p> For process binding:</p>
 <dl>
-<dt><code>&#8211;bind-to </code>&lt;foo&gt;</p>
-<dd> Bind processes to the specified object, defaults to <i>core</i>. Supported options include slot, hwthread, core, l1cache, l2cache, l3cache, socket, numa, board, cpu-list, and none.</p>
-<dt><code>-cpus-per-proc</code>, &#8211;cpus-per-proc &lt;#perproc&gt;</p>
-<dd> Bind each process to the specified number of cpus. (deprecated in favor of &#8211;map-by &lt;obj&gt;:PE=n)</p>
-<dt><code>-cpus-per-rank</code>, &#8211;cpus-per-rank &lt;#perrank&gt;</p>
-<dd> Alias for <i>-cpus-per-proc</i>. (deprecated in favor of &#8211;map-by &lt;obj&gt;:PE=n)</p>
-<dt><code>-bind-to-core</code>, &#8211;bind-to-core</p>
-<dd> Bind processes to cores (deprecated in favor of &#8211;bind-to core)</p>
-<dt><code>-bind-to-socket</code>, &#8211;bind-to-socket</p>
-<dd> Bind processes to processor sockets (deprecated in favor of &#8211;bind-to socket)</p>
-<dt><code>-report-bindings</code>, &#8211;report-bindings</p>
-<dd> Report any bindings for launched processes.</dl>
+<dt><code>&#8211;bind-to </code>&lt;foo&gt;</dt>
+<dd> Bind processes to the specified object, defaults to <i>core</i>. Supported options include slot, hwthread, core, l1cache, l2cache, l3cache, socket, numa, board, cpu-list, and none.</dd>
+<dt><code>-cpus-per-proc</code>, &#8211;cpus-per-proc &lt;#perproc&gt;</dt>
+<dd> Bind each process to the specified number of cpus. (deprecated in favor of &#8211;map-by &lt;obj&gt;:PE=n)</dd>
+<dt><code>-cpus-per-rank</code>, &#8211;cpus-per-rank &lt;#perrank&gt;</dt>
+<dd> Alias for <i>-cpus-per-proc</i>. (deprecated in favor of &#8211;map-by &lt;obj&gt;:PE=n)</dd>
+<dt><code>-bind-to-core</code>, &#8211;bind-to-core</dt>
+<dd> Bind processes to cores (deprecated in favor of &#8211;bind-to core)</dd>
+<dt><code>-bind-to-socket</code>, &#8211;bind-to-socket</dt>
+<dd> Bind processes to processor sockets (deprecated in favor of &#8211;bind-to socket)</dd>
+<dt><code>-report-bindings</code>, &#8211;report-bindings</dt>
+<dd> Report any bindings for launched processes.</dd></dl>
 <p> For rankfiles:</p>
 <dl>
-<dt><code>-rf</code>, &#8211;rankfile &lt;rankfile&gt;</p>
-<dd> Provide a rankfile file.</dl>
+<dt><code>-rf</code>, &#8211;rankfile &lt;rankfile&gt;</dt>
+<dd> Provide a rankfile file.</dd></dl>
 <p> To manage standard I/O:</p>
 <dl>
-<dt><code>-output-filename</code>, &#8211;output-filename &lt;filename&gt;</p>
-<dd> Redirect the stdout, stderr, and stddiag of all processes to a process-unique version of the specified filename. Any directories in the filename will automatically be created. Each output file will consist of filename.id, where the id will be the processes&#8217; rank in MPI_COMM_WORLD, left-filled with zero&#8217;s for correct ordering in listings. A relative path value will be converted to an absolute path based on the cwd where mpirun is executed. Note that this <i>will not</i> work on environments where the file system on compute nodes differs from that where mpirun is executed.</p>
-<dt><code>-stdin</code>, &#8211;stdin &lt;rank&gt;</p>
-<dd> The MPI_COMM_WORLD rank of the process that is to receive stdin. The default is to forward stdin to MPI_COMM_WORLD rank 0, but this option can be used to forward stdin to any process. It is also acceptable to specify <i>none</i>, indicating that no processes are to receive stdin.</p>
-<dt><code>-merge-stderr-to-stdout</code>, &#8211;merge-stderr-to-stdout</p>
-<dd> Merge stderr to stdout for each process.</p>
-<dt><code>-tag-output</code>, &#8211;tag-output</p>
-<dd> Tag each line of output to stdout, stderr, and stddiag with <code>[jobid, MCW_rank]&lt;stdxxx&gt;</code> indicating the process jobid and MPI_COMM_WORLD rank of the process that generated the output, and the channel which generated it.</p>
-<dt><code>-timestamp-output</code>, &#8211;timestamp-output</p>
-<dd> Timestamp each line of output to stdout, stderr, and stddiag.</p>
-<dt><code>-xml</code>, &#8211;xml</p>
-<dd> Provide all output to stdout, stderr, and stddiag in an xml format.</p>
-<dt><code>-xml-file</code>, &#8211;xml-file &lt;filename&gt;</p>
-<dd> Provide all output in XML format to the specified file.</p>
-<dt><code>-xterm</code>, &#8211;xterm &lt;ranks&gt;</p>
-<dd> Display the output from the processes identified by their MPI_COMM_WORLD ranks in separate xterm windows. The ranks are specified as a comma-separated list of ranges, with a -1 indicating all. A separate window will be created for each specified process. <code>Note:</code> xterm will normally terminate the window upon termination of the process running within it. However, by adding a &quot;!&quot; to the end of the list of specified ranks, the proper options will be provided to ensure that xterm keeps the window open <i>after</i> the process terminates, thus allowing you to see the process&#8217; output. Each xterm window will subsequently need to be manually closed. <code>Note:</code> In some environments, xterm may require that the executable be in the user&#8217;s path, or be specified in absolute or relative terms. Thus, it may be necessary to specify a local executable as &quot;./foo&quot; instead of just &quot;foo&quot;. If xterm fails to find the executable, mpirun will hang, but still respond correctly to a ctrl-c. If this happens, please check that the executable is being specified correctly and try again.</dl>
+<dt><code>-output-filename</code>, &#8211;output-filename &lt;filename&gt;</dt>
+<dd> Redirect the stdout, stderr, and stddiag of all processes to a process-unique version of the specified filename. Any directories in the filename will automatically be created. Each output file will consist of filename.id, where the id will be the processes&#8217; rank in MPI_COMM_WORLD, left-filled with zero&#8217;s for correct ordering in listings. A relative path value will be converted to an absolute path based on the cwd where mpirun is executed. Note that this <i>will not</i> work on environments where the file system on compute nodes differs from that where mpirun is executed.</dd>
+<dt><code>-stdin</code>, &#8211;stdin &lt;rank&gt;</dt>
+<dd> The MPI_COMM_WORLD rank of the process that is to receive stdin. The default is to forward stdin to MPI_COMM_WORLD rank 0, but this option can be used to forward stdin to any process. It is also acceptable to specify <i>none</i>, indicating that no processes are to receive stdin.</dd>
+<dt><code>-merge-stderr-to-stdout</code>, &#8211;merge-stderr-to-stdout</dt>
+<dd> Merge stderr to stdout for each process.</dd>
+<dt><code>-tag-output</code>, &#8211;tag-output</dt>
+<dd> Tag each line of output to stdout, stderr, and stddiag with <code>[jobid, MCW_rank]&lt;stdxxx&gt;</code> indicating the process jobid and MPI_COMM_WORLD rank of the process that generated the output, and the channel which generated it.</dd>
+<dt><code>-timestamp-output</code>, &#8211;timestamp-output</dt>
+<dd> Timestamp each line of output to stdout, stderr, and stddiag.</dd>
+<dt><code>-xml</code>, &#8211;xml</dt>
+<dd> Provide all output to stdout, stderr, and stddiag in an xml format.</dd>
+<dt><code>-xml-file</code>, &#8211;xml-file &lt;filename&gt;</dt>
+<dd> Provide all output in XML format to the specified file.</dd>
+<dt><code>-xterm</code>, &#8211;xterm &lt;ranks&gt;</dt>
+<dd> Display the output from the processes identified by their MPI_COMM_WORLD ranks in separate xterm windows. The ranks are specified as a comma-separated list of ranges, with a -1 indicating all. A separate window will be created for each specified process. <code>Note:</code> xterm will normally terminate the window upon termination of the process running within it. However, by adding a &quot;!&quot; to the end of the list of specified ranks, the proper options will be provided to ensure that xterm keeps the window open <i>after</i> the process terminates, thus allowing you to see the process&#8217; output. Each xterm window will subsequently need to be manually closed. <code>Note:</code> In some environments, xterm may require that the executable be in the user&#8217;s path, or be specified in absolute or relative terms. Thus, it may be necessary to specify a local executable as &quot;./foo&quot; instead of just &quot;foo&quot;. If xterm fails to find the executable, mpirun will hang, but still respond correctly to a ctrl-c. If this happens, please check that the executable is being specified correctly and try again.</dd></dl>
 <p> To manage files and runtime environment:</p>
 <dl>
-<dt><code>-path</code>, &#8211;path &lt;path&gt;</p>
-<dd> &lt;path&gt; that will be used when attempting to locate the requested executables. This is used prior to using the local PATH setting.</p>
-<dt><code>&#8211;prefix </code>&lt;dir&gt;</p>
-<dd> Prefix directory that will be used to set the <i>PATH</i> and <i>LD_LIBRARY_PATH</i> on the remote node before invoking Open MPI or the target process. See the &quot;Remote Execution&quot; section, below.</p>
-<dt><code>&#8211;noprefix</code></p>
-<dd> Disable the automatic &#8211;prefix behavior</p>
-<dt><code>-s</code>, &#8211;preload-binary</p>
-<dd> Copy the specified executable(s) to remote machines prior to starting remote processes. The executables will be copied to the Open MPI session directory and will be deleted upon completion of the job.</p>
-<dt><code>&#8211;preload-files </code>&lt;files&gt;</p>
-<dd> Preload the comma separated list of files to the current working directory of the remote machines where processes will be launched prior to starting those processes.</p>
-<dt><code>-set-cwd-to-session-dir</code>, &#8211;set-cwd-to-session-dir</p>
-<dd> Set the working directory of the started processes to their session directory.</p>
-<dt><code>-wd </code>&lt;dir&gt;</p>
-<dd> Synonym for <i>-wdir</i>.</p>
-<dt><code>-wdir </code>&lt;dir&gt;</p>
-<dd> Change to the directory &lt;dir&gt; before the user&#8217;s program executes. See the &quot;Current Working Directory&quot; section for notes on relative paths. <code>Note:</code> If the <i>-wdir</i> option appears both on the command line and in an application context, the context will take precedence over the command line. Thus, if the path to the desired wdir is different on the backend nodes, then it must be specified as an absolute path that is correct for the backend node.</p>
-<dt><code>-x </code>&lt;env&gt;</p>
+<dt><code>-path</code>, &#8211;path &lt;path&gt;</dt>
+<dd> &lt;path&gt; that will be used when attempting to locate the requested executables. This is used prior to using the local PATH setting.</dd>
+<dt><code>&#8211;prefix </code>&lt;dir&gt;</dt>
+<dd> Prefix directory that will be used to set the <i>PATH</i> and <i>LD_LIBRARY_PATH</i> on the remote node before invoking Open MPI or the target process. See the &quot;Remote Execution&quot; section, below.</dd>
+<dt><code>&#8211;noprefix</code></dt>
+<dd> Disable the automatic &#8211;prefix behavior</dd>
+<dt><code>-s</code>, &#8211;preload-binary</dt>
+<dd> Copy the specified executable(s) to remote machines prior to starting remote processes. The executables will be copied to the Open MPI session directory and will be deleted upon completion of the job.</dd>
+<dt><code>&#8211;preload-files </code>&lt;files&gt;</dt>
+<dd> Preload the comma separated list of files to the current working directory of the remote machines where processes will be launched prior to starting those processes.</dd>
+<dt><code>-set-cwd-to-session-dir</code>, &#8211;set-cwd-to-session-dir</dt>
+<dd> Set the working directory of the started processes to their session directory.</dd>
+<dt><code>-wd </code>&lt;dir&gt;</dt>
+<dd> Synonym for <i>-wdir</i>.</dd>
+<dt><code>-wdir </code>&lt;dir&gt;</dt>
+<dd> Change to the directory &lt;dir&gt; before the user&#8217;s program executes. See the &quot;Current Working Directory&quot; section for notes on relative paths. <code>Note:</code> If the <i>-wdir</i> option appears both on the command line and in an application context, the context will take precedence over the command line. Thus, if the path to the desired wdir is different on the backend nodes, then it must be specified as an absolute path that is correct for the backend node.</dd>
+<dt><code>-x </code>&lt;env&gt;</dt>
 <dd> Export the specified environment variables to the remote nodes before executing the program. Only one environment variable can be specified per <i>-x</i> option. Existing environment variables can be specified or new variable names specified with corresponding values. For example:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;mpirun -x DISPLAY -x OFILE=/tmp/out &#8230; </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;mpirun -x DISPLAY -x OFILE=/tmp/out &#8230; </dd>
 <p> The parser for the <i>-x</i> option is not very sophisticated; it does not even understand quoted values. Users are advised to set variables in the environment, and then use <i>-x</i> to export (not define) them.</dl>
 <p> Setting MCA parameters:</p>
 <dl>
-<dt><code>-gmca</code>, &#8211;gmca &lt;key&gt; &lt;value&gt;</p>
-<dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</p>
-<dt><code>-mca</code>, &#8211;mca &lt;key&gt; &lt;value&gt;</p>
-<dd> Send arguments to various MCA modules. See the &quot;MCA&quot; section, below.</p>
-<dt><code>-am </code>&lt;arg0&gt;</p>
-<dd> Aggregate MCA parameter set file list.</p>
-<dt><code>-tune</code>, &#8211;tune &lt;tune_file&gt;</p>
-<dd> Specify a tune file to set arguments for various MCA modules and environment variables. See the &quot;Setting MCA parameters and environment variables from file&quot; section, below.</dl>
+<dt><code>-gmca</code>, &#8211;gmca &lt;key&gt; &lt;value&gt;</dt>
+<dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</dd>
+<dt><code>-mca</code>, &#8211;mca &lt;key&gt; &lt;value&gt;</dt>
+<dd> Send arguments to various MCA modules. See the &quot;MCA&quot; section, below.</dd>
+<dt><code>-am </code>&lt;arg0&gt;</dt>
+<dd> Aggregate MCA parameter set file list.</dd>
+<dt><code>-tune</code>, &#8211;tune &lt;tune_file&gt;</dt>
+<dd> Specify a tune file to set arguments for various MCA modules and environment variables. See the &quot;Setting MCA parameters and environment variables from file&quot; section, below.</dd></dl>
 <p> For debugging:</p>
 <dl>
-<dt><code>-debug</code>, &#8211;debug</p>
-<dd> Invoke the user-level debugger indicated by the <i>orte_base_user_debugger</i> MCA parameter.</p>
-<dt><code>&#8211;get-stack-traces</code></p>
-<dd> When paired with the <code>&#8211;timeout</code> option, <i>mpirun</i> will obtain and print out stack traces from all launched processes that are still alive when the timeout expires. Note that obtaining stack traces can take a little time and produce a lot of output, especially for large process-count jobs.</p>
-<dt><code>-debugger</code>, &#8211;debugger &lt;args&gt;</p>
-<dd> Sequence of debuggers to search for when <i>&#8211;debug</i> is used (i.e. a synonym for <i>orte_base_user_debugger</i> MCA parameter).</p>
-<dt><code>&#8211;timeout </code>&lt;seconds&gt;</p>
-<dd> The maximum number of seconds that <i>mpirun</i> (also known as <i>mpiexec</i>,<i> oshrun</i>,<i> orterun</i>,<i></i> etc.) will run. After this many seconds, <i>mpirun</i> will abort the launched job and exit with a non-zero exit status. Using <code>&#8211;timeout</code> can be also useful when combined with the <code>&#8211;get-stack-traces</code> option.</p>
-<dt><code>-tv</code>, &#8211;tv</p>
-<dd> Launch processes under the TotalView debugger. Deprecated backwards compatibility flag. Synonym for <i>&#8211;debug</i>.</dl>
+<dt><code>-debug</code>, &#8211;debug</dt>
+<dd> Invoke the user-level debugger indicated by the <i>orte_base_user_debugger</i> MCA parameter.</dd>
+<dt><code>&#8211;get-stack-traces</code></dt>
+<dd> When paired with the <code>&#8211;timeout</code> option, <i>mpirun</i> will obtain and print out stack traces from all launched processes that are still alive when the timeout expires. Note that obtaining stack traces can take a little time and produce a lot of output, especially for large process-count jobs.</dd>
+<dt><code>-debugger</code>, &#8211;debugger &lt;args&gt;</dt>
+<dd> Sequence of debuggers to search for when <i>&#8211;debug</i> is used (i.e. a synonym for <i>orte_base_user_debugger</i> MCA parameter).</dd>
+<dt><code>&#8211;timeout </code>&lt;seconds&gt;</dt>
+<dd> The maximum number of seconds that <i>mpirun</i> (also known as <i>mpiexec</i>,<i> oshrun</i>,<i> orterun</i>,<i></i> etc.) will run. After this many seconds, <i>mpirun</i> will abort the launched job and exit with a non-zero exit status. Using <code>&#8211;timeout</code> can be also useful when combined with the <code>&#8211;get-stack-traces</code> option.</dd>
+<dt><code>-tv</code>, &#8211;tv</dt>
+<dd> Launch processes under the TotalView debugger. Deprecated backwards compatibility flag. Synonym for <i>&#8211;debug</i>.</dd></dl>
 <p> There are also other options:</p>
 <dl>
-<dt><code>&#8211;allow-run-as-root</code></p>
-<dd> Allow <i>mpirun</i> to run when executed by the root user (<i>mpirun</i> defaults to aborting when launched as the root user). Be sure to see the <i>Running as root</i> section, below, for more detail.</p>
-<dt><code>&#8211;app </code>&lt;appfile&gt;</p>
-<dd> Provide an appfile, ignoring all other command line options.</p>
-<dt><code>-cf</code>, &#8211;cartofile &lt;cartofile&gt;</p>
-<dd> Provide a cartography file.</p>
-<dt><code>-continuous</code>, &#8211;continuous</p>
-<dd> Job is to run until explicitly terminated.</p>
-<dt><code>-disable-recovery</code>, &#8211;disable-recovery</p>
-<dd> Disable recovery (resets all recovery options to off).</p>
-<dt><code>-do-not-launch</code>, &#8211;do-not-launch</p>
-<dd> Perform all necessary operations to prepare to launch the application, but do not actually launch it.</p>
-<dt><code>-do-not-resolve</code>, &#8211;do-not-resolve</p>
-<dd> Do not attempt to resolve interfaces.</p>
-<dt><code>-enable-recovery</code>, &#8211;enable-recovery</p>
-<dd> Enable recovery from process failure [Default = disabled].</p>
-<dt><code>-index-argv-by-rank</code>, &#8211;index-argv-by-rank</p>
-<dd> Uniquely index argv[0] for each process using its rank.</p>
-<dt><code>-leave-session-attached</code>, &#8211;leave-session-attached</p>
-<dd> Do not detach OmpiRTE daemons used by this application. This allows error messages from the daemons as well as the underlying environment (e.g., when failing to launch a daemon) to be output.</p>
-<dt><code>-max-restarts</code>, &#8211;max-restarts &lt;num&gt;</p>
-<dd> Max number of times to restart a failed process.</p>
-<dt><code>-ompi-server</code>, &#8211;ompi-server &lt;uri or file&gt;</p>
-<dd> Specify the URI of the Open MPI server (or the mpirun to be used as the server), the name of the file (specified as file:filename) that contains that info, or the PID (specified as pid:#) of the mpirun to be used as the server. The Open MPI server is used to support multi-application data exchange via the MPI-2 MPI_Publish_name and MPI_Lookup_name functions.</p>
-<dt><code>-personality</code>, &#8211;personality &lt;list&gt;</p>
-<dd> Comma-separated list of programming model, languages, and containers being used (default=&quot;ompi&quot;).</p>
-<dt><code>&#8211;ppr </code>&lt;list&gt;</p>
-<dd> Comma-separated list of number of processes on a given resource type [default: none].</p>
-<dt><code>-report-child-jobs-separately</code>, &#8211;report-child-jobs-separately</p>
-<dd> Return the exit status of the primary job only.</p>
-<dt><code>-report-events</code>, &#8211;report-events &lt;URI&gt;</p>
-<dd> Report events to a tool listening at the specified URI.</p>
-<dt><code>-report-pid</code>, &#8211;report-pid &lt;channel&gt;</p>
-<dd> Print out mpirun&#8217;s PID during startup. The channel must be either a &#8216;-&#8216; to indicate that the pid is to be output to stdout, a &#8216;+&#8217; to indicate that the pid is to be output to stderr, or a filename to which the pid is to be written.</p>
-<dt><code>-report-uri</code>, &#8211;report-uri &lt;channel&gt;</p>
-<dd> Print out mpirun&#8217;s URI during startup. The channel must be either a &#8216;-&#8216; to indicate that the URI is to be output to stdout, a &#8216;+&#8217; to indicate that the URI is to be output to stderr, or a filename to which the URI is to be written.</p>
-<dt><code>-show-progress</code>, &#8211;show-progress</p>
-<dd> Output a brief periodic report on launch progress.</p>
-<dt><code>-terminate</code>, &#8211;terminate</p>
-<dd> Terminate the DVM.</p>
-<dt><code>-use-hwthread-cpus</code>, &#8211;use-hwthread-cpus</p>
-<dd> Use hardware threads as independent cpus.</p>
-<dt><code>-use-regexp</code>, &#8211;use-regexp</p>
-<dd> Use regular expressions for launch.</dl>
+<dt><code>&#8211;allow-run-as-root</code></dt>
+<dd> Allow <i>mpirun</i> to run when executed by the root user (<i>mpirun</i> defaults to aborting when launched as the root user). Be sure to see the <i>Running as root</i> section, below, for more detail.</dd>
+<dt><code>&#8211;app </code>&lt;appfile&gt;</dt>
+<dd> Provide an appfile, ignoring all other command line options.</dd>
+<dt><code>-cf</code>, &#8211;cartofile &lt;cartofile&gt;</dt>
+<dd> Provide a cartography file.</dd>
+<dt><code>-continuous</code>, &#8211;continuous</dt>
+<dd> Job is to run until explicitly terminated.</dd>
+<dt><code>-disable-recovery</code>, &#8211;disable-recovery</dt>
+<dd> Disable recovery (resets all recovery options to off).</dd>
+<dt><code>-do-not-launch</code>, &#8211;do-not-launch</dt>
+<dd> Perform all necessary operations to prepare to launch the application, but do not actually launch it.</dd>
+<dt><code>-do-not-resolve</code>, &#8211;do-not-resolve</dt>
+<dd> Do not attempt to resolve interfaces.</dd>
+<dt><code>-enable-recovery</code>, &#8211;enable-recovery</dt>
+<dd> Enable recovery from process failure [Default = disabled].</dd>
+<dt><code>-index-argv-by-rank</code>, &#8211;index-argv-by-rank</dt>
+<dd> Uniquely index argv[0] for each process using its rank.</dd>
+<dt><code>-leave-session-attached</code>, &#8211;leave-session-attached</dt>
+<dd> Do not detach OmpiRTE daemons used by this application. This allows error messages from the daemons as well as the underlying environment (e.g., when failing to launch a daemon) to be output.</dd>
+<dt><code>-max-restarts</code>, &#8211;max-restarts &lt;num&gt;</dt>
+<dd> Max number of times to restart a failed process.</dd>
+<dt><code>-ompi-server</code>, &#8211;ompi-server &lt;uri or file&gt;</dt>
+<dd> Specify the URI of the Open MPI server (or the mpirun to be used as the server), the name of the file (specified as file:filename) that contains that info, or the PID (specified as pid:#) of the mpirun to be used as the server. The Open MPI server is used to support multi-application data exchange via the MPI-2 MPI_Publish_name and MPI_Lookup_name functions.</dd>
+<dt><code>-personality</code>, &#8211;personality &lt;list&gt;</dt>
+<dd> Comma-separated list of programming model, languages, and containers being used (default=&quot;ompi&quot;).</dd>
+<dt><code>&#8211;ppr </code>&lt;list&gt;</dt>
+<dd> Comma-separated list of number of processes on a given resource type [default: none].</dd>
+<dt><code>-report-child-jobs-separately</code>, &#8211;report-child-jobs-separately</dt>
+<dd> Return the exit status of the primary job only.</dd>
+<dt><code>-report-events</code>, &#8211;report-events &lt;URI&gt;</dt>
+<dd> Report events to a tool listening at the specified URI.</dd>
+<dt><code>-report-pid</code>, &#8211;report-pid &lt;channel&gt;</dt>
+<dd> Print out mpirun&#8217;s PID during startup. The channel must be either a &#8216;-&#8216; to indicate that the pid is to be output to stdout, a &#8216;+&#8217; to indicate that the pid is to be output to stderr, or a filename to which the pid is to be written.</dd>
+<dt><code>-report-uri</code>, &#8211;report-uri &lt;channel&gt;</dt>
+<dd> Print out mpirun&#8217;s URI during startup. The channel must be either a &#8216;-&#8216; to indicate that the URI is to be output to stdout, a &#8216;+&#8217; to indicate that the URI is to be output to stderr, or a filename to which the URI is to be written.</dd>
+<dt><code>-show-progress</code>, &#8211;show-progress</dt>
+<dd> Output a brief periodic report on launch progress.</dd>
+<dt><code>-terminate</code>, &#8211;terminate</dt>
+<dd> Terminate the DVM.</dd>
+<dt><code>-use-hwthread-cpus</code>, &#8211;use-hwthread-cpus</dt>
+<dd> Use hardware threads as independent cpus.</dd>
+<dt><code>-use-regexp</code>, &#8211;use-regexp</dt>
+<dd> Use regular expressions for launch.</dd></dl>
 <p> The following options are useful for developers; they are not generally useful to most ORTE and/or MPI users:</p>
 <dl>
-<dt><code>-d</code>, &#8211;debug-devel</p>
-<dd> Enable debugging of the OmpiRTE (the run-time layer in Open MPI). This is not generally useful for most users.</p>
-<dt><code>&#8211;debug-daemons</code></p>
-<dd> Enable debugging of any OmpiRTE daemons used by this application.</p>
-<dt><code>&#8211;debug-daemons-file</code></p>
-<dd> Enable debugging of any OmpiRTE daemons used by this application, storing output in files.</p>
-<dt><code>-display-devel-allocation</code>, &#8211;display-devel-allocation</p>
-<dd> Display a detailed list of the allocation being used by this job.</p>
-<dt><code>-display-devel-map</code>, &#8211;display-devel-map</p>
-<dd> Display a more detailed table showing the mapped location of each process prior to launch.</p>
-<dt><code>-display-diffable-map</code>, &#8211;display-diffable-map</p>
-<dd> Display a diffable process map just before launch.</p>
-<dt><code>-display-topo</code>, &#8211;display-topo</p>
-<dd> Display the topology as part of the process map just before launch.</p>
-<dt><code>-launch-agent</code>, &#8211;launch-agent</p>
-<dd> Name of the executable that is to be used to start processes on the remote nodes. The default is &quot;orted&quot;. This option can be used to test new daemon concepts, or to pass options back to the daemons without having mpirun itself see them. For example, specifying a launch agent of orted -mca odls_base_verbose 5 allows the developer to ask the orted for debugging output without clutter from mpirun itself.</p>
-<dt><code>&#8211;report-state-on-timeout</code></p>
-<dd> When paired with the <code>&#8211;timeout</code> command line option, report the run-time subsystem state of each process when the timeout expires.</dl>
+<dt><code>-d</code>, &#8211;debug-devel</dt>
+<dd> Enable debugging of the OmpiRTE (the run-time layer in Open MPI). This is not generally useful for most users.</dd>
+<dt><code>&#8211;debug-daemons</code></dt>
+<dd> Enable debugging of any OmpiRTE daemons used by this application.</dd>
+<dt><code>&#8211;debug-daemons-file</code></dt>
+<dd> Enable debugging of any OmpiRTE daemons used by this application, storing output in files.</dd>
+<dt><code>-display-devel-allocation</code>, &#8211;display-devel-allocation</dt>
+<dd> Display a detailed list of the allocation being used by this job.</dd>
+<dt><code>-display-devel-map</code>, &#8211;display-devel-map</dt>
+<dd> Display a more detailed table showing the mapped location of each process prior to launch.</dd>
+<dt><code>-display-diffable-map</code>, &#8211;display-diffable-map</dt>
+<dd> Display a diffable process map just before launch.</dd>
+<dt><code>-display-topo</code>, &#8211;display-topo</dt>
+<dd> Display the topology as part of the process map just before launch.</dd>
+<dt><code>-launch-agent</code>, &#8211;launch-agent</dt>
+<dd> Name of the executable that is to be used to start processes on the remote nodes. The default is &quot;orted&quot;. This option can be used to test new daemon concepts, or to pass options back to the daemons without having mpirun itself see them. For example, specifying a launch agent of orted -mca odls_base_verbose 5 allows the developer to ask the orted for debugging output without clutter from mpirun itself.</dd>
+<dt><code>&#8211;report-state-on-timeout</code></dt>
+<dd> When paired with the <code>&#8211;timeout</code> command line option, report the run-time subsystem state of each process when the timeout expires.</dd></dl>
 <p> There may be other options listed with <i>mpirun &#8211;help</i>.</p>
 <h3>Environment Variables</h3>
 <dl>
-<dt><code>MPIEXEC_TIMEOUT</code></p>
-<dd> Synonym for the <code>&#8211;timeout</code> command line option.</dl>
+<dt><code>MPIEXEC_TIMEOUT</code></dt>
+<dd> Synonym for the <code>&#8211;timeout</code> command line option.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> One invocation of <i>mpirun</i> starts an MPI application running under Open MPI. If the application is single process multiple data (SPMD), the application can be specified on the <i>mpirun</i> command line. </p>
 <p> If the application is multiple instruction multiple data (MIMD), comprising of multiple programs, the set of programs and argument can be specified in one of two ways: Extended Command Line Arguments, and Application Context. </p>
@@ -274,8 +274,8 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> Host nodes can be identified on the <i>mpirun</i> command line with the <i>-host</i> option or in a hostfile. </p>
 <p> For example,</p>
 <dl>
-<dt>mpirun -H aa,aa,bb ./a.out</p>
-<dd> launches two processes on node aa and one on bb.</dl>
+<dt>mpirun -H aa,aa,bb ./a.out</dt>
+<dd> launches two processes on node aa and one on bb.</dd></dl>
 <p> Or, consider the hostfile </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br />
@@ -283,28 +283,28 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;cc slots=2 </p>
 <p> Here, we list both the host names (aa, bb, and cc) but also how many &quot;slots&quot; there are for each. Slots indicate how many processes can potentially execute on a node. For best performance, the number of slots may be chosen to be the number of cores on the node or the number of processor sockets. If the hostfile does not provide slots information, Open MPI will attempt to discover the number of cores (or hwthreads, if the use-hwthreads-as-cpus option is set) and set the number of slots to that value. This default behavior also occurs when specifying the <i>-host</i> option with a single hostname. Thus, the command</p>
 <dl>
-<dt>mpirun -H aa ./a.out</p>
-<dd> launches a number of processes equal to the number of cores on node aa.</dl>
+<dt>mpirun -H aa ./a.out</dt>
+<dd> launches a number of processes equal to the number of cores on node aa.</dd></dl>
 <dl>
-<dt>mpirun -hostfile myhostfile ./a.out</p>
-<dd> will launch two processes on each of the three nodes.</p>
-<dt>mpirun -hostfile myhostfile -host aa ./a.out</p>
-<dd> will launch two processes, both on node aa.</p>
-<dt>mpirun -hostfile myhostfile -host dd ./a.out</p>
-<dd> will find no hosts to run on and abort with an error. That is, the specified host dd is not in the specified hostfile.</dl>
+<dt>mpirun -hostfile myhostfile ./a.out</dt>
+<dd> will launch two processes on each of the three nodes.</dd>
+<dt>mpirun -hostfile myhostfile -host aa ./a.out</dt>
+<dd> will launch two processes, both on node aa.</dd>
+<dt>mpirun -hostfile myhostfile -host dd ./a.out</dt>
+<dd> will find no hosts to run on and abort with an error. That is, the specified host dd is not in the specified hostfile.</dd></dl>
 <p> When running under resource managers (e.g., SLURM, Torque, etc.), Open MPI will obtain both the hostnames and the number of slots directly from the resource manger.</p>
 <h3>Specifying Number of Processes</h3>
 <p> As we have just seen, the number of processes to run can be set using the hostfile. Other mechanisms exist. </p>
 <p> The number of processes launched can be specified as a multiple of the number of nodes or processor sockets available. For example,</p>
 <dl>
-<dt>mpirun -H aa,bb -npersocket 2 ./a.out</p>
-<dd> launches processes 0-3 on node aa and process 4-7 on node bb, where aa and bb are both dual-socket nodes. The <i>-npersocket</i> option also turns on the <i>-bind-to-socket</i> option, which is discussed in a later section.</p>
-<dt>mpirun -H aa,bb -npernode 2 ./a.out</p>
-<dd> launches processes 0-1 on node aa and processes 2-3 on node bb.</p>
-<dt>mpirun -H aa,bb -npernode 1 ./a.out</p>
-<dd> launches one process per host node.</p>
-<dt>mpirun -H aa,bb -pernode ./a.out</p>
-<dd> is the same as <i>-npernode</i> 1.</dl>
+<dt>mpirun -H aa,bb -npersocket 2 ./a.out</dt>
+<dd> launches processes 0-3 on node aa and process 4-7 on node bb, where aa and bb are both dual-socket nodes. The <i>-npersocket</i> option also turns on the <i>-bind-to-socket</i> option, which is discussed in a later section.</dd>
+<dt>mpirun -H aa,bb -npernode 2 ./a.out</dt>
+<dd> launches processes 0-1 on node aa and processes 2-3 on node bb.</dd>
+<dt>mpirun -H aa,bb -npernode 1 ./a.out</dt>
+<dd> launches one process per host node.</dd>
+<dt>mpirun -H aa,bb -pernode ./a.out</dt>
+<dd> is the same as <i>-npernode</i> 1.</dd></dl>
 <p> Another alternative is to specify the number of processes with the <i>-np</i> option. Consider now the hostfile </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=4<br />
@@ -312,8 +312,8 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;cc slots=4 </p>
 <p> Now,</p>
 <dl>
-<dt>mpirun -hostfile myhostfile -np 6 ./a.out</p>
-<dd> will launch processes 0-3 on node aa and processes 4-5 on node bb. The remaining slots in the hostfile will not be used since the <i>-np</i> option indicated that only 6 processes should be launched.</dl>
+<dt>mpirun -hostfile myhostfile -np 6 ./a.out</dt>
+<dd> will launch processes 0-3 on node aa and processes 4-5 on node bb. The remaining slots in the hostfile will not be used since the <i>-np</i> option indicated that only 6 processes should be launched.</dd></dl>
 <h3>Mapping Processes to Nodes: Using Policies</h3>
 <p> The examples above illustrate the default mapping of process processes to nodes. This mapping can also be controlled with various <i>mpirun</i> options that describe mapping policies. </p>
 <p> Consider the same hostfile as above, again with <i>-np</i> 6: </p>
@@ -325,12 +325,12 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> The <i>-nolocal</i> option prevents any processes from being mapped onto the local host (in this case node aa). While <i>mpirun</i> typically consumes few system resources, <i>-nolocal</i> can be helpful for launching very large jobs where <i>mpirun</i> may actually need to use noticeable amounts of memory and/or processing time. </p>
 <p> Just as <i>-np</i> can specify fewer processes than there are slots, it can also oversubscribe the slots. For example, with the same hostfile:</p>
 <dl>
-<dt>mpirun -hostfile myhostfile -np 14 ./a.out</p>
-<dd> will launch processes 0-3 on node aa, 4-7 on bb, and 8-11 on cc. It will then add the remaining two processes to whichever nodes it chooses.</dl>
+<dt>mpirun -hostfile myhostfile -np 14 ./a.out</dt>
+<dd> will launch processes 0-3 on node aa, 4-7 on bb, and 8-11 on cc. It will then add the remaining two processes to whichever nodes it chooses.</dd></dl>
 <p> One can also specify limits to oversubscription. For example, with the same hostfile:</p>
 <dl>
-<dt>mpirun -hostfile myhostfile -np 14 -nooversubscribe ./a.out</p>
-<dd> will produce an error since <i>-nooversubscribe</i> prevents oversubscription.</dl>
+<dt>mpirun -hostfile myhostfile -np 14 -nooversubscribe ./a.out</dt>
+<dd> will produce an error since <i>-nooversubscribe</i> prevents oversubscription.</dd></dl>
 <p> Limits to oversubscription can also be specified in the hostfile itself:<br />
 &nbsp;%&nbsp;cat myhostfile<br />
 &nbsp;aa slots=4 max_slots=4<br />
@@ -338,26 +338,26 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 &nbsp;cc slots=4 </p>
 <p> The <i>max_slots</i> field specifies such a limit. When it does, the <i>slots</i> value defaults to the limit. Now:</p>
 <dl>
-<dt>mpirun -hostfile myhostfile -np 14 ./a.out</p>
-<dd> causes the first 12 processes to be launched as before, but the remaining two processes will be forced onto node cc. The other two nodes are protected by the hostfile against oversubscription by this job.</dl>
+<dt>mpirun -hostfile myhostfile -np 14 ./a.out</dt>
+<dd> causes the first 12 processes to be launched as before, but the remaining two processes will be forced onto node cc. The other two nodes are protected by the hostfile against oversubscription by this job.</dd></dl>
 <p> Using the <i>&#8211;nooversubscribe</i> option can be helpful since Open MPI currently does not get &quot;max_slots&quot; values from the resource manager. </p>
 <p> Of course, <i>-np</i> can also be used with the <i>-H</i> or <i>-host</i> option. For example,</p>
 <dl>
-<dt>mpirun -H aa,bb -np 8 ./a.out</p>
-<dd> launches 8 processes. Since only two hosts are specified, after the first two processes are mapped, one to aa and one to bb, the remaining processes oversubscribe the specified hosts.</dl>
+<dt>mpirun -H aa,bb -np 8 ./a.out</dt>
+<dd> launches 8 processes. Since only two hosts are specified, after the first two processes are mapped, one to aa and one to bb, the remaining processes oversubscribe the specified hosts.</dd></dl>
 <p> And here is a MIMD example:</p>
 <dl>
-<dt>mpirun -H aa -np 1 hostname : -H bb,cc -np 2 uptime</p>
-<dd> will launch process 0 running <i>hostname</i> on node aa and processes 1 and 2 each running <i>uptime</i> on nodes bb and cc, respectively.</dl>
+<dt>mpirun -H aa -np 1 hostname : -H bb,cc -np 2 uptime</dt>
+<dd> will launch process 0 running <i>hostname</i> on node aa and processes 1 and 2 each running <i>uptime</i> on nodes bb and cc, respectively.</dd></dl>
 <h3>Mapping, Ranking, and Binding: Oh My!</h3>
 <p> Open MPI employs a three-phase procedure for assigning process locations and ranks:</p>
 <dl>
-<dt><code>mapping</code></p>
-<dd> Assigns a default location to each process</p>
-<dt><code>ranking</code></p>
-<dd> Assigns an MPI_COMM_WORLD rank value to each process</p>
-<dt><code>binding</code></p>
-<dd> Constrains each process to run on specific processors</dl>
+<dt><code>mapping</code></dt>
+<dd> Assigns a default location to each process</dd>
+<dt><code>ranking</code></dt>
+<dd> Assigns an MPI_COMM_WORLD rank value to each process</dd>
+<dt><code>binding</code></dt>
+<dd> Constrains each process to run on specific processors</dd></dl>
 <p> The <i>mapping</i> step is used to assign a default location to each process based on the mapper being employed. Mapping by slot, node, and sequentially results in the assignment of the processes to the node level. In contrast, mapping by object, allows the mapper to assign the process to an actual object on each node. </p>
 <p> <code>Note:</code> the location assigned to the process is independent of where it will be bound &#8211; the assignment is used solely as input to the binding algorithm. </p>
 <p> The mapping of process processes to nodes can be defined not just with general policies but also, if necessary, using arbitrary mappings that cannot be described by a simple policy. One can use the &quot;sequential mapper,&quot; which reads the hostfile line by line, assigning processes to nodes in whatever order the hostfile specifies. Use the <i>-mca rmaps seq</i> option. For example, using the same hostfile as before: </p>
@@ -468,10 +468,10 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> The <i>&#8211;prefix</i> option takes a single argument: the base directory on the remote node where Open MPI is installed. Open MPI will use this directory to set the remote <i>PATH</i> and <i>LD_LIBRARY_PATH</i> before executing any Open MPI or user applications. This allows running Open MPI jobs without having pre-configured the <i>PATH</i> and <i>LD_LIBRARY_PATH</i> on the remote nodes. </p>
 <p> Open MPI adds the basename of the current node&#8217;s &quot;bindir&quot; (the directory where Open MPI&#8217;s executables are installed) to the prefix and uses that to set the <i>PATH</i> on the remote node. Similarly, Open MPI adds the basename of the current node&#8217;s &quot;libdir&quot; (the directory where Open MPI&#8217;s libraries are installed) to the prefix and uses that to set the <i>LD_LIBRARY_PATH</i> on the remote node. For example:</p>
 <dl>
-<dt>Local bindir:</p>
-<dd> /local/node/directory/bin</p>
-<dt>Local libdir:</p>
-<dd> /local/node/directory/lib64</dl>
+<dt>Local bindir:</dt>
+<dd> /local/node/directory/bin</dd>
+<dt>Local libdir:</dt>
+<dd> /local/node/directory/lib64</dd></dl>
 <p> If the following command line is used: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;mpirun &#8211;prefix&nbsp;/remote/node/directory </p>
 <p> Open MPI will add &quot;/remote/node/directory/bin&quot; to the <i>PATH</i> and &quot;/remote/node/directory/lib64&quot; to the <i>LD_LIBRARY_PATH</i> on the remote node before attempting to execute anything. </p>
@@ -486,10 +486,10 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> The <i>-mca</i> switch allows the passing of parameters to various MCA (Modular Component Architecture) modules. MCA modules have direct impact on MPI programs because they allow tunable parameters to be set at run time (such as which BTL communication device driver to use, what parameters to pass to that BTL, etc.). </p>
 <p> The <i>-mca</i> switch takes two arguments: <i>&lt;key&gt;</i> and <i>&lt;value&gt;</i>. The <i>&lt;key&gt;</i> argument generally specifies which MCA module will receive the value. For example, the <i>&lt;key&gt;</i> &quot;btl&quot; is used to select which BTL to be used for transporting MPI messages. The <i>&lt;value&gt;</i> argument is the value that is passed. For example:</p>
 <dl>
-<dt>mpirun -mca btl tcp,self -np 1 foo</p>
-<dd> Tells Open MPI to use the &quot;tcp&quot; and &quot;self&quot; BTLs, and to run a single copy of &quot;foo&quot; an allocated node.</p>
-<dt>mpirun -mca btl self -np 1 foo</p>
-<dd> Tells Open MPI to use the &quot;self&quot; BTL, and to run a single copy of &quot;foo&quot; an allocated node.</dl>
+<dt>mpirun -mca btl tcp,self -np 1 foo</dt>
+<dd> Tells Open MPI to use the &quot;tcp&quot; and &quot;self&quot; BTLs, and to run a single copy of &quot;foo&quot; an allocated node.</dd>
+<dt>mpirun -mca btl self -np 1 foo</dt>
+<dd> Tells Open MPI to use the &quot;self&quot; BTL, and to run a single copy of &quot;foo&quot; an allocated node.</dd></dl>
 <p> The <i>-mca</i> switch can be used multiple times to specify different <i>&lt;key&gt;</i> and/or <i>&lt;value&gt;</i> arguments. If the same <i>&lt;key&gt;</i> is specified more than once, the <i>&lt;value&gt;</i>s are concatenated with a comma (&quot;,&quot;) separating them. </p>
 <p> Note that the <i>-mca</i> switch is simply a shortcut for setting environment variables. The same effect may be accomplished by setting corresponding environment variables before running <i>mpirun</i>. The form of the environment variables that Open MPI sets is: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;OMPI_MCA_&lt;key&gt;=&lt;value&gt; </p>
@@ -506,14 +506,14 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <h3>Exit status</h3>
 <p> There is no standard definition for what <i>mpirun</i> should return as an exit status. After considerable discussion, we settled on the following method for assigning the <i>mpirun</i> exit status (note: in the following description, the &quot;primary&quot; job is the initial application started by mpirun &#8211; all jobs that are spawned by that job are designated &quot;secondary&quot; jobs):</p>
 <dl>
-<dt>&bull;</p>
-<dd> if all processes in the primary job normally terminate with exit status 0, we return 0</p>
-<dt>&bull;</p>
-<dd> if one or more processes in the primary job normally terminate with non-zero exit status, we return the exit status of the process with the lowest MPI_COMM_WORLD rank to have a non-zero status</p>
-<dt>&bull;</p>
-<dd> if all processes in the primary job normally terminate with exit status 0, and one or more processes in a secondary job normally terminate with non-zero exit status, we (a) return the exit status of the process with the lowest MPI_COMM_WORLD rank in the lowest jobid to have a non-zero status, and (b) output a message summarizing the exit status of the primary and all secondary jobs.</p>
-<dt>&bull;</p>
-<dd> if the cmd line option &#8211;report-child-jobs-separately is set, we will return -only- the exit status of the primary job. Any non-zero exit status in secondary jobs will be reported solely in a summary print statement.</dl>
+<dt>&bull;</dt>
+<dd> if all processes in the primary job normally terminate with exit status 0, we return 0</dd>
+<dt>&bull;</dt>
+<dd> if one or more processes in the primary job normally terminate with non-zero exit status, we return the exit status of the process with the lowest MPI_COMM_WORLD rank to have a non-zero status</dd>
+<dt>&bull;</dt>
+<dd> if all processes in the primary job normally terminate with exit status 0, and one or more processes in a secondary job normally terminate with non-zero exit status, we (a) return the exit status of the process with the lowest MPI_COMM_WORLD rank in the lowest jobid to have a non-zero status, and (b) output a message summarizing the exit status of the primary and all secondary jobs.</dd>
+<dt>&bull;</dt>
+<dd> if the cmd line option &#8211;report-child-jobs-separately is set, we will return -only- the exit status of the primary job. Any non-zero exit status in secondary jobs will be reported solely in a summary print statement.</dd></dl>
 <p> By default, OMPI records and notes that MPI processes exited with non-zero termination status. This is generally not considered an &quot;abnormal termination&quot; &#8211; i.e., OMPI will not abort an MPI job if one or more processes return a non-zero status. Instead, the default behavior simply reports the number of processes terminating with non-zero status upon completion of the job. </p>
 <p> However, in some cases it can be desirable to have the job abort when any process terminates with non-zero status. For example, a non-MPI job might detect a bad result from a calculation and want to abort, but doesn&#8217;t want to generate a core file. Or an MPI job might continue past a call to MPI_Finalize, but indicate that all processes should abort due to some post-MPI result. </p>
 <p> It is not anticipated that this situation will occur frequently. However, in the interest of serving the broader community, OMPI now has a means for allowing users to direct that jobs be aborted upon any process exiting with non-zero status. Setting the MCA parameter &quot;orte_abort_on_non_zero_status&quot; to 1 will cause OMPI to abort all processes once any process<br />
@@ -522,12 +522,12 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <h2>EXAMPLES</h2>
 <p> Be sure also to see the examples throughout the sections above.</p>
 <dl>
-<dt>mpirun -np 4 -mca btl ib,tcp,self prog1</p>
-<dd> Run 4 copies of prog1 using the &quot;ib&quot;, &quot;tcp&quot;, and &quot;self&quot; BTL&#8217;s for the transport of MPI messages.</p>
-<dt>mpirun -np 4 -mca btl tcp,sm,self</p>
+<dt>mpirun -np 4 -mca btl ib,tcp,self prog1</dt>
+<dd> Run 4 copies of prog1 using the &quot;ib&quot;, &quot;tcp&quot;, and &quot;self&quot; BTL&#8217;s for the transport of MPI messages.</dd>
+<dt>mpirun -np 4 -mca btl tcp,sm,self</dt>
 <dd>
  &#8211;mca btl_tcp_if_include eth0 prog1<br />
- Run 4 copies of prog1 using the &quot;tcp&quot;, &quot;sm&quot; and &quot;self&quot; BTLs for the transport of MPI messages, with TCP using only the eth0 interface to communicate. Note that other BTLs have similar if_include MCA parameters.</dl>
+ Run 4 copies of prog1 using the &quot;tcp&quot;, &quot;sm&quot; and &quot;self&quot; BTLs for the transport of MPI messages, with TCP using only the eth0 interface to communicate. Note that other BTLs have similar if_include MCA parameters.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <i>mpirun</i> returns 0 if all processes started by <i>mpirun</i> exit after calling MPI_FINALIZE. A non-zero value is returned if an internal error occurred in mpirun, or one or more processes exited before calling MPI_FINALIZE. If an internal error occurred in mpirun, the corresponding error code is returned. In the event that one or more processes exit before calling MPI_FINALIZE, the return value of the MPI_COMM_WORLD rank of the process that <i>mpirun</i> first notices died before calling MPI_FINALIZE will be returned. Note that, in general, this will be the first process that died but is not guaranteed to be so. </p>
 <p> If the <code>&#8211;timeout</code> command line option is used and the timeout expires before the job completes (thereby forcing <i>mpirun</i> to kill the job) <i>mpirun</i> will return an exit status equivalent to the value of <code>ETIMEDOUT</code> (which is typically 110 on Linux and OS X systems). </p>

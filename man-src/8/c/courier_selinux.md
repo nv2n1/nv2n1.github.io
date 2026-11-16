@@ -26,28 +26,28 @@ description: "courier_selinux – Security Enhanced Linux Policy for the courier
 <p> <code>courier_etc_t </code> </p>
 <p> &#8211; Set files with the courier_etc_t type, if you want to store courier files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/courier/rootcerts(/.*)?, /etc/courier(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/courier/rootcerts(/.*)?, /etc/courier(/.*)? </dd>
 </dl>
 <p> <code>courier_exec_t </code> </p>
 <p> &#8211; Set files with the courier_exec_t type, if you want to transition an executable to the courier_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/courierlogger, /usr/lib/courier/courier/.*, /usr/sbin/courierldapaliasd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/courierlogger, /usr/lib/courier/courier/.*, /usr/sbin/courierldapaliasd </dd>
 </dl>
 <p> <code>courier_pcp_exec_t </code> </p>
 <p> &#8211; Set files with the courier_pcp_exec_t type, if you want to transition an executable to the courier_pcp_t domain. </p>
 <p> <code>courier_pop_exec_t </code> </p>
 <p> &#8211; Set files with the courier_pop_exec_t type, if you want to transition an executable to the courier_pop_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/courier/imapd, /usr/lib/courier/courier/courierpop.*, /usr/lib/courier/pop3d, /usr/lib/courier/courier/imaplogin, /usr/bin/imapd </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/courier/imapd, /usr/lib/courier/courier/courierpop.*, /usr/lib/courier/pop3d, /usr/lib/courier/courier/imaplogin, /usr/bin/imapd </dd>
 </dl>
 <p> <code>courier_spool_t </code> </p>
 <p> &#8211; Set files with the courier_spool_t type, if you want to store the courier files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/authdaemon(/.*)?, /var/spool/courier(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/authdaemon(/.*)?, /var/spool/courier(/.*)? </dd>
 </dl>
 <p> <code>courier_sqwebmail_exec_t </code> </p>
 <p> &#8211; Set files with the courier_sqwebmail_exec_t type, if you want to transition an executable to the courier_sqwebmail_t domain. </p>

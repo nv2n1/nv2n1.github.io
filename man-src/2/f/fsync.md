@@ -32,16 +32,16 @@ description: "fsync, fdatasync – synchronize a file’s in-core state with sto
 <p> On success, these system calls return zero. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid open file descriptor.</p>
-<dt><code>EIO</code></p>
-<dd> An error occurred during synchronization. This error may relate to data written to some other file descriptor on the same file. Since Linux 4.13, errors from write-back will be reported to all file descriptors that might have written the data which triggered the error. Some filesystems (e.g., NFS) keep close track of which data came through which file descriptor, and give more precise reporting. Other filesystems (e.g., most local filesystems) will report errors to all file descriptors that were open on the file when the error was recorded.</p>
-<dt><code>ENOSPC</code></p>
-<dd> Disk space was exhausted while synchronizing.</p>
-<dt><code>EROFS</code>, <code>EINVAL</code></p>
-<dd> <i>fd</i> is bound to a special file (e.g., a pipe, FIFO, or socket) which does not support synchronization.</p>
-<dt><code>ENOSPC</code>, <code>EDQUOT</code></p>
-<dd> <i>fd</i> is bound to a file on NFS or another filesystem which does not allocate space at the time of a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) system call, and some previous write failed due to insufficient storage space.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid open file descriptor.</dd>
+<dt><code>EIO</code></dt>
+<dd> An error occurred during synchronization. This error may relate to data written to some other file descriptor on the same file. Since Linux 4.13, errors from write-back will be reported to all file descriptors that might have written the data which triggered the error. Some filesystems (e.g., NFS) keep close track of which data came through which file descriptor, and give more precise reporting. Other filesystems (e.g., most local filesystems) will report errors to all file descriptors that were open on the file when the error was recorded.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> Disk space was exhausted while synchronizing.</dd>
+<dt><code>EROFS</code>, <code>EINVAL</code></dt>
+<dd> <i>fd</i> is bound to a special file (e.g., a pipe, FIFO, or socket) which does not support synchronization.</dd>
+<dt><code>ENOSPC</code>, <code>EDQUOT</code></dt>
+<dd> <i>fd</i> is bound to a file on NFS or another filesystem which does not allocate space at the time of a <code><a href="/docs/linux/man/2-write/">write</a></code>(2) system call, and some previous write failed due to insufficient storage space.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.3BSD. </p>
 <p> On POSIX systems on which <code>fdatasync</code>() is available, <code>_POSIX_SYNCHRONIZED_IO</code> is defined in <i>&lt;unistd.h&gt;</i> to a value greater than 0. (See also <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3).)</p>

@@ -15,11 +15,11 @@ try_to_release_page - release old fs-specific metadata on a page
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>the page which the kernel is trying to free</dl>
+<dl><dd></dd><dd>the page which the kernel is trying to free</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags (and I/O mode)</dl>
+<dl><dd>memory allocation flags (and I/O mode)</dd></dl>
 
 <h2>Description</h2>
 

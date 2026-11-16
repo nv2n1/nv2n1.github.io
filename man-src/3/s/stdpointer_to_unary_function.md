@@ -11,11 +11,8 @@ std::pointer_to_unary_function - std::pointer_to_unary_function
 <h2>Synopsis</h2>
 
 <pre><code>template&lt;
-
 class Arg,                                                                    (deprecated in C++11)
-
 class Result                                                                  (removed in C++17)
-
 &gt; class pointer_to_unary_function : public std::unary_function&lt;Arg, Result&gt;;</code></pre> 
 std::pointer_to_unary_function is a function object that acts as a wrapper around a unary function. 
 

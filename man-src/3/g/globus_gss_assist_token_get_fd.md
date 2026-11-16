@@ -28,16 +28,16 @@ description: "Token Transport –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>arg</i> the FILE * stream cast to a void pointer<br />
+</dt><dd> <i>arg</i> the FILE * stream cast to a void pointer<br />
  <i>bufp</i> the resulting token<br />
- <i>sizep</i> the size (number of bytes) read into bufp</dl>
+ <i>sizep</i> the size (number of bytes) read into bufp</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <dl>
 <dt>
-<dd> 0 is internal return </p>
+</dt><dd> 0 is internal return </dd>
 </dl>
 <p> &lt; 0 is the -errno</dl>
 <h3>int globus_gss_assist_token_send_fd (void *arg, void *buf, size_tsize)</h3>
@@ -45,25 +45,25 @@ description: "Token Transport –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>arg</i> the FILE * stream to send the token on<br />
+</dt><dd> <i>arg</i> the FILE * stream to send the token on<br />
  <i>buf</i> the token<br />
- <i>size</i> the size of the token in bytes</dl>
+ <i>size</i> the size of the token in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success &gt;0 on error &lt;0 on errno error</dl>
+</dt><dd> 0 on success &gt;0 on error &lt;0 on errno error</dd></dl>
 <h3>int globus_gss_assist_token_send_fd_ex (void *exp, void *buf, size_tsize)</h3>
 <p> Send a token to a FILE *. Write a token to the open FILE *. This function will look at the flag to determine if the length field needs to be written. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>exp</i> the globus_gss_assist_ex variable that holds the FILE * stream and flags to bet set<br />
+</dt><dd> <i>exp</i> the globus_gss_assist_ex variable that holds the FILE * stream and flags to bet set<br />
  <i>buf</i> the token buffer to send<br />
- <i>size</i> size of the token buffer</dl>
+ <i>size</i> size of the token buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success &gt;0 on error &lt;0 on errno error (-errno)</dl>
+</dt><dd> 0 on success &gt;0 on error &lt;0 on errno error (-errno)</dd></dl>
 <h3>int globus_gss_assist_token_send_fd_without_length (void *arg, void *buf, size_tsize)</h3>
 <p> Send token to a FILE *. Write a token to the open FILE. This function will write it without a length, so that the FILE stream only contains GSSAPI tokens.</p>
 <h2>Author</h2>

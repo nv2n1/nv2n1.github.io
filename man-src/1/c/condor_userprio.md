@@ -17,45 +17,38 @@ description: "condor_userprio Manage user priorities"
 <p> <code>Effective Priority</code></p>
 <dl>
 <dt>
-<dd> The effective priority value of the user, which is used to calculate the user&#8217;s share when allocating resources. A lower value means a higher priority, and the minimum value (highest priority) is 0.5. The effective priority is calculated by multiplying the real priority by the priority factor.</p>
-<dt>
-<dd></dl>
+</dt><dd> The effective priority value of the user, which is used to calculate the user&#8217;s share when allocating resources. A lower value means a higher priority, and the minimum value (highest priority) is 0.5. The effective priority is calculated by multiplying the real priority by the priority factor.</dd>
+</dl>
 <p> <code>Real Priority</code></p>
 <dl>
 <dt>
-<dd> The value of the real priority of the user. This value follows the user&#8217;s resource usage.</p>
-<dt>
-<dd></dl>
+</dt><dd> The value of the real priority of the user. This value follows the user&#8217;s resource usage.</dd>
+</dl>
 <p> <code>Priority Factor</code></p>
 <dl>
 <dt>
-<dd> The system administrator can set this value for each user, thus controlling a user&#8217;s effective priority relative to other users. This can be used to create different classes of users.</p>
-<dt>
-<dd></dl>
+</dt><dd> The system administrator can set this value for each user, thus controlling a user&#8217;s effective priority relative to other users. This can be used to create different classes of users.</dd>
+</dl>
 <p> <code>Res Used</code></p>
 <dl>
 <dt>
-<dd> The number of resources currently used.</p>
-<dt>
-<dd></dl>
+</dt><dd> The number of resources currently used.</dd>
+</dl>
 <p> <code>Accumulated Usage</code></p>
 <dl>
 <dt>
-<dd> The accumulated number of resource-hours used by the user since the usage start time.</p>
-<dt>
-<dd></dl>
+</dt><dd> The accumulated number of resource-hours used by the user since the usage start time.</dd>
+</dl>
 <p> <code>Usage Start Time</code></p>
 <dl>
 <dt>
-<dd> The time since when usage has been recorded for the user. This time is set when a user job runs for the first time. It is reset to the present time when the usage for the user is reset.</p>
-<dt>
-<dd></dl>
+</dt><dd> The time since when usage has been recorded for the user. This time is set when a user job runs for the first time. It is reset to the present time when the usage for the user is reset.</dd>
+</dl>
 <p> <code>Last Usage Time</code></p>
 <dl>
 <dt>
-<dd> The most recent time a resource usage has been recorded for the user.</p>
-<dt>
-<dd></dl>
+</dt><dd> The most recent time a resource usage has been recorded for the user.</dd>
+</dl>
 <p> By default only users for whom usage was recorded in the last 24 hours, or whose priority is greater than the minimum are listed. </p>
 <p> The <code>-pool</code> option can be used to contact a different central manager than the local one (the default). </p>
 <p> For security purposes of authentication and authorization, specifying an Edit Option requires the ADMINISTRATOR level of access. </p>
@@ -63,261 +56,171 @@ description: "condor_userprio Manage user priorities"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit.</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Contact the specified <i>centralmanagerhostname</i> with an optional port number, instead of the local central manager. This can be used to check other pools. NOTE: The host name (and optional port) specified refer to the host name (and port) of the <i>condor_negotiator</i> to query for user priorities. This is slightly different than most HTCondor tools that support a <code>-pool</code> option, and instead expect the host name (and port) of the <i>condor_collector</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Contact the specified <i>centralmanagerhostname</i> with an optional port number, instead of the local central manager. This can be used to check other pools. NOTE: The host name (and optional port) specified refer to the host name (and port) of the <i>condor_negotiator</i> to query for user priorities. This is slightly different than most HTCondor tools that support a <code>-pool</code> option, and instead expect the host name (and port) of the <i>condor_collector</i> .</dd>
+</dl>
 <p> <code>-inputfile </code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Introduced for debugging purposes, read priority information from <i>filename</i> . The contents of <i>filename</i> are expected to be the same as captured output from running a condor_userprio -long command.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Introduced for debugging purposes, read priority information from <i>filename</i> . The contents of <i>filename</i> are expected to be the same as captured output from running a condor_userprio -long command.</dd>
+</dl>
 <p> <code>-delete </code> <i>username</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Remove the specified <i>username</i> from HTCondor&#8217;s accounting.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Remove the specified <i>username</i> from HTCondor&#8217;s accounting.</dd>
+</dl>
 <p> <code>-resetall</code></p>
 <dl>
 <dt>
-<dd> (Edit option) Reset the accumulated usage of all the users to zero.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Reset the accumulated usage of all the users to zero.</dd>
+</dl>
 <p> <code>-resetusage </code> <i>username</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Reset the accumulated usage of the user specified by <i>username</i> to zero.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Reset the accumulated usage of the user specified by <i>username</i> to zero.</dd>
+</dl>
 <p> <code>-setaccum </code> <i>username value</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Set the accumulated usage of the user specified by <i>username</i> to the specified floating point <i>value</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Set the accumulated usage of the user specified by <i>username</i> to the specified floating point <i>value</i> .</dd>
+</dl>
 <p> <code>-setbegin </code> <i>username value</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Set the begin usage time of the user specified by <i>username</i> to the specified <i>value</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Set the begin usage time of the user specified by <i>username</i> to the specified <i>value</i> .</dd>
+</dl>
 <p> <code>-setfactor </code> <i>username value</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Set the priority factor of the user specified by <i>username</i> to the specified <i>value</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Set the priority factor of the user specified by <i>username</i> to the specified <i>value</i> .</dd>
+</dl>
 <p> <code>-setlast </code> <i>username value</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Set the last usage time of the user specified by <i>username</i> to the specified <i>value</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Set the last usage time of the user specified by <i>username</i> to the specified <i>value</i> .</dd>
+</dl>
 <p> <code>-setprio </code> <i>username value</i></p>
 <dl>
 <dt>
-<dd> (Edit option) Set the real priority of the user specified by <i>username</i> to the specified <i>value</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Edit option) Set the real priority of the user specified by <i>username</i> to the specified <i>value</i> .</dd>
+</dl>
 <p> <code>-activefrom </code> <i>month day year</i></p>
 <dl>
 <dt>
-<dd> (Display option) Display information for users who have some recorded accumulated usage since the specified date.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display information for users who have some recorded accumulated usage since the specified date.</dd>
+</dl>
 <p> <code>-af[:rtgn,lVh] </code> <i>attr1 [attr2 &#8230;]</i></p>
 <dl>
 <dt>
-<dd> (Display option) The same as <code>-autoformat</code> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) The same as <code>-autoformat</code> .</dd>
+</dl>
 <p> <code>-all</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display all available fields about each group or user.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display all available fields about each group or user.</dd>
+</dl>
 <p> <code>-allusers</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display information for all the users who have some recorded accumulated usage.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display information for all the users who have some recorded accumulated usage.</dd>
+</dl>
 <p> <code>-autoformat[:rtgn,lVh] </code> <i>attr1 [attr2 &#8230;]</i></p>
 <dl>
 <dt>
-<dd> (Display option) Modifies the display of information when using the <code>-long</code> option. Implies use of the <code>-modular</code> option and displays ClassAd attribute values formatted in a default way according to their attribute types and with attribute names consistent with the <code>-modular</code> option. This option takes an arbitrary number of attribute names as arguments, and prints out their values. It is assumed that no attribute names begin with a dash character, so that the next word that begins with dash is the start of the next option. Option <code>-autoformat:h</code> gives a tabular output with column headings. The <code>-autoformat</code> option may be followed by a colon character and formatting qualifiers:</p>
+</dt><dd> (Display option) Modifies the display of information when using the <code>-long</code> option. Implies use of the <code>-modular</code> option and displays ClassAd attribute values formatted in a default way according to their attribute types and with attribute names consistent with the <code>-modular</code> option. This option takes an arbitrary number of attribute names as arguments, and prints out their values. It is assumed that no attribute names begin with a dash character, so that the next word that begins with dash is the start of the next option. Option <code>-autoformat:h</code> gives a tabular output with column headings. The <code>-autoformat</code> option may be followed by a colon character and formatting qualifiers:</dd>
 <dt>
-<dd> <code>r</code> print unevaluated, or raw values,</p>
+</dt><dd> <code>r</code> print unevaluated, or raw values,</dd>
 <dt>
-<dd> <code>t</code> add a tab character before each field instead of the default space character,</p>
+</dt><dd> <code>t</code> add a tab character before each field instead of the default space character,</dd>
 <dt>
-<dd> <code>g</code> inject a newline between ClassAds,</p>
+</dt><dd> <code>g</code> inject a newline between ClassAds,</dd>
 <dt>
-<dd> <code>n</code> add a newline character after each field,</p>
+</dt><dd> <code>n</code> add a newline character after each field,</dd>
 <dt>
-<dd> <code>,</code> add a comma character after each field,</p>
+</dt><dd> <code>,</code> add a comma character after each field,</dd>
 <dt>
-<dd> <code>l</code> label each field,</p>
+</dt><dd> <code>l</code> label each field,</dd>
 <dt>
-<dd> <code>V</code> use %V formatting, where string values are quoted,</p>
+</dt><dd> <code>V</code> use %V formatting, where string values are quoted,</dd>
 <dt>
-<dd> <code>h</code> print headings before the first line of output.</p>
+</dt><dd> <code>h</code> print headings before the first line of output.</dd>
 <dt>
-<dd> The newline and comma characters may <i>not</i> be used together.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> The newline and comma characters may <i>not</i> be used together.</dd>
+</dl>
 <p> <code>-constraint </code> <i>&lt;expr&gt;</i></p>
 <dl>
 <dt>
-<dd> (Display option) To be used in conjunction with the <code>-long</code> <code>-modular</code> or the <code>-autoformat</code> options. Displays users and groups that match the &lt;expr&gt; .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) To be used in conjunction with the <code>-long</code> <code>-modular</code> or the <code>-autoformat</code> options. Displays users and groups that match the &lt;expr&gt; .</dd>
+</dl>
 <p> <code>-debug[:&lt;opts&gt;]</code></p>
 <dl>
 <dt>
-<dd> (Display option) Without <code>:&lt;opts&gt;</code> specified, use configured debug level to send debugging output to stderr . With <code>:&lt;opts&gt;</code> specified, these options are debug levels that override any configured debug levels for this command&#8217;s execution to send debugging output to stderr .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Without <code>:&lt;opts&gt;</code> specified, use configured debug level to send debugging output to stderr . With <code>:&lt;opts&gt;</code> specified, these options are debug levels that override any configured debug levels for this command&#8217;s execution to send debugging output to stderr .</dd>
+</dl>
 <p> <code>-flat</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display information such that users within hierarchical groups are <i>not</i> listed with their group.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display information such that users within hierarchical groups are <i>not</i> listed with their group.</dd>
+</dl>
 <p> <code>-getreslist </code> <i>username</i></p>
 <dl>
 <dt>
-<dd> (Display option) Display all the resources currently allocated to the user specified by <i>username</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display all the resources currently allocated to the user specified by <i>username</i> .</dd>
+</dl>
 <p> <code>-grouporder</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display submitter information with accounting group entries at the top of the list, and in breadth-first order within the group hierarchy tree.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display submitter information with accounting group entries at the top of the list, and in breadth-first order within the group hierarchy tree.</dd>
+</dl>
 <p> <code>-grouprollup</code></p>
 <dl>
 <dt>
-<dd> (Display option) For hierarchical groups, the display shows sums as computed for groups, and these sums include sub groups.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) For hierarchical groups, the display shows sums as computed for groups, and these sums include sub groups.</dd>
+</dl>
 <p> <code>-hierarchical</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display information such that users within hierarchical groups are listed with their group.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display information such that users within hierarchical groups are listed with their group.</dd>
+</dl>
 <p> <code>-legacy</code></p>
 <dl>
 <dt>
-<dd> (Display option) For use with the <code>-long</code> option, displays attribute names and values as a single ClassAd.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) For use with the <code>-long</code> option, displays attribute names and values as a single ClassAd.</dd>
+</dl>
 <p> <code>-long</code></p>
 <dl>
 <dt>
-<dd> (Display option) A verbose output which displays entire ClassAds.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) A verbose output which displays entire ClassAds.</dd>
+</dl>
 <p> <code>-modular</code></p>
 <dl>
 <dt>
-<dd> (Display option) Modifies the display when using the <code>-long</code> option, such that attribute names and values are shown as distinct ClassAds.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Modifies the display when using the <code>-long</code> option, such that attribute names and values are shown as distinct ClassAds.</dd>
+</dl>
 <p> <code>-most</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display fields considered to be the most useful. This is the default set of fields displayed.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display fields considered to be the most useful. This is the default set of fields displayed.</dd>
+</dl>
 <p> <code>-priority</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display fields with user priority information.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display fields with user priority information.</dd>
+</dl>
 <p> <code>-quotas</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display fields relevant to hierarchical group quotas.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display fields relevant to hierarchical group quotas.</dd>
+</dl>
 <p> <code>-usage</code></p>
 <dl>
 <dt>
-<dd> (Display option) Display usage information for each group or user.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> (Display option) Display usage information for each group or user.</dd>
+</dl>
 <h2>Examples</h2>
 <p> <i>Example 1</i> Since the output varies due to command line arguments, here is an example of the default output for a pool that does not use Hierarchical Group Quotas. This default output is the same as given with the <code>-most</code> Display option. </p>
 <p> Last Priority Update: 1/19 13:14 </p>

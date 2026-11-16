@@ -15,11 +15,11 @@ dev_set_mtu - Change maximum transfer unit
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>new_mtu</i>
-<dl><dd>new transfer unit</dl>
+<dl><dd>new transfer unit</dd></dl>
 
 <h2>Description</h2>
 

@@ -19,7 +19,7 @@ description: "fdim, fdimf, fdiml – positive difference"
 <p> <code>fdimf</code>(), <code>fdiml</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return the positive difference, max(<i>x</i>&#8211;<i>y</i>,0), between their arguments.</p>
 <h2>RETURN VALUE</h2>
@@ -30,8 +30,8 @@ description: "fdim, fdimf, fdiml – positive difference"
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Range error: result overflow</p>
-<dd> <i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dl>
+<dt>Range error: result overflow</dt>
+<dd> <i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>
 <h2>ATTRIBUTES</h2>

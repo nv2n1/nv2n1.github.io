@@ -21,12 +21,12 @@ url: "/docs/linux/man/3-ibv_port_state_str/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 const char *ibv_event_type_str(enum ibv_event_type event_type);
 const char *ibv_node_type_str(enum ibv_node_type node_type);
 const char *ibv_port_state_str(enum ibv_port_state port_state);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

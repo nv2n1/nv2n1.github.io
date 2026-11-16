@@ -20,31 +20,27 @@ description: "cpupower-monitor – Report processor frequency and idle statistic
 <p> -l</p>
 <dl>
 <dt>
-<dd> List available monitors on your system. Additional details about each monitor are shown:</p>
+</dt><dd> List available monitors on your system. Additional details about each monitor are shown:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The name in quotation marks which can be passed to the -m parameter.</p>
-<dt>&bull;</p>
-<dd> The number of different counters the monitor supports in brackets.</p>
-<dt>&bull;</p>
-<dd> The amount of time in seconds the counters might overflow, due to implementation constraints.</p>
-<dt>&bull;</p>
-<dd> The name and a description of each counter and its processor hierarchy level coverage in square brackets:</p>
+<dt>&bull;</dt>
+<dd> The name in quotation marks which can be passed to the -m parameter.</dd>
+<dt>&bull;</dt>
+<dd> The number of different counters the monitor supports in brackets.</dd>
+<dt>&bull;</dt>
+<dd> The amount of time in seconds the counters might overflow, due to implementation constraints.</dd>
+<dt>&bull;</dt>
+<dd> The name and a description of each counter and its processor hierarchy level coverage in square brackets:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> [T] -&gt; Thread</p>
-<dt>&bull;</p>
-<dd> [C] -&gt; Core</p>
-<dt>&bull;</p>
-<dd> [P] -&gt; Processor Package (Socket)</p>
-<dt>&bull;</p>
-<dd> [M] -&gt; Machine/Platform wide counter</dl>
+<dt>&bull;</dt>
+<dd> [T] -&gt; Thread</dd>
+<dt>&bull;</dt>
+<dd> [C] -&gt; Core</dd>
+<dt>&bull;</dt>
+<dd> [P] -&gt; Processor Package (Socket)</dd>
+<dt>&bull;</dt>
+<dd> [M] -&gt; Machine/Platform wide counter</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -52,23 +48,23 @@ description: "cpupower-monitor – Report processor frequency and idle statistic
 <p> -m &lt;mon1&gt;,&lt;mon2&gt;,&#8230;</p>
 <dl>
 <dt>
-<dd> Only display specific monitors. Use the monitor string(s) provided by -l option.</dl>
+</dt><dd> Only display specific monitors. Use the monitor string(s) provided by -l option.</dd></dl>
 <p> -i seconds</p>
 <dl>
 <dt>
-<dd> Measure intervall.</dl>
+</dt><dd> Measure intervall.</dd></dl>
 <p> -c</p>
 <dl>
 <dt>
-<dd> Schedule the process on every core before starting and ending measuring. This could be needed for the Idle_Stats monitor when no other MSR based monitor (has to be run on the core that is measured) is run in parallel. This is to wake up the processors from deeper sleep states and let the kernel re -account its cpuidle (C-state) information before reading the cpuidle timings from sysfs.</dl>
+</dt><dd> Schedule the process on every core before starting and ending measuring. This could be needed for the Idle_Stats monitor when no other MSR based monitor (has to be run on the core that is measured) is run in parallel. This is to wake up the processors from deeper sleep states and let the kernel re -account its cpuidle (C-state) information before reading the cpuidle timings from sysfs.</dd></dl>
 <p> command</p>
 <dl>
 <dt>
-<dd> Measure idle and frequency characteristics of an arbitrary command/workload. The executable <code>command</code> is forked and upon its exit, statistics gathered since it was forked are displayed.</dl>
+</dt><dd> Measure idle and frequency characteristics of an arbitrary command/workload. The executable <code>command</code> is forked and upon its exit, statistics gathered since it was forked are displayed.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Increase verbosity if the binary was compiled with the DEBUG option set.</dl>
+</dt><dd> Increase verbosity if the binary was compiled with the DEBUG option set.</dd></dl>
 <h2>MONITOR DESCRIPTIONS</h2>
 <h3>Idle_Stats</h3>
 <p> Shows statistics of the cpuidle kernel subsystem. Values are retrieved from /sys/devices/system/cpu/cpu*/cpuidle/state*/. The kernel updates these values every time an idle state is entered or left. Therefore there can be some inaccuracy when cores are in an idle state for some time when the measure starts or ends. In worst case it can happen that one core stayed in an idle state for the whole measure time and the idle state usage time as exported by the kernel did not get updated. In this case a state residency of 0 percent is shown while it was 100. </p>
@@ -83,7 +79,7 @@ description: "cpupower-monitor – Report processor frequency and idle statistic
 <p> cpupower monitor -l&quot; may show:</p>
 <dl>
 <dt>
-<dd> Monitor &quot;Mperf&quot; (3 states) &#8211; Might overflow after 922000000 s </p>
+</dt><dd> Monitor &quot;Mperf&quot; (3 states) &#8211; Might overflow after 922000000 s </dd>
 <p>&#8230; </p>
 <p> Monitor &quot;Idle_Stats&quot; (3 states) &#8211; Might overflow after 4294967295 s </p>
 <p>&#8230; </p>

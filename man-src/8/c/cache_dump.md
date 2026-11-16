@@ -15,14 +15,14 @@ description: "cache_dump – dump cache metadata from device or file to standard
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-r</code>, <code>&#8211;repair</code></p>
-<dd>Repair the metadata whilst dumping it.</p>
-<dt><code>-o</code> {xml file}</p>
-<dd>Specify an output file for the xml, rather than printing to stdout.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-r</code>, <code>&#8211;repair</code></dt>
+<dd>Repair the metadata whilst dumping it.</dd>
+<dt><code>-o</code> {xml file}</dt>
+<dd>Specify an output file for the xml, rather than printing to stdout.</dd></dl>
 <h2>Examples</h2>
 <p>Dumps the cache metadata on logical volume /dev/vg/metadata to standard output in XML format: </p>
 <pre> $ cache_dump /dev/vg/metadata</pre>

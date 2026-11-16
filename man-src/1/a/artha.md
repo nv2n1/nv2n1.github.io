@@ -22,29 +22,28 @@ description: "Artha – An cross-platform thesaurus based on WordNet"
 <p> Regular expressions can be used to search for a term when you vaguely know it and want to locate it in the thesaurus. Artha&#8217;s regular expression pattern closely follows Wildmat syntax by Rich Salz owing to its simplicity.</p>
 <dl>
 <dt>
-<dd> * (wildcard) matches any number of (including 0) unknown characters</p>
+</dt><dd> * (wildcard) matches any number of (including 0) unknown characters</dd>
 <dt>
-<dd> ? (joker) matches one unknown character</p>
+</dt><dd> ? (joker) matches one unknown character</dd>
 <dt>
-<dd> [&#8230;] (range) matches one unknown character within the range specified</p>
+</dt><dd> [&#8230;] (range) matches one unknown character within the range specified</dd>
 <dt>
-<dd> {m, n} (limits) upper &amp; lower limits of the number of characters in a range</p>
+</dt><dd> {m, n} (limits) upper &amp; lower limits of the number of characters in a range</dd>
 <dt>
-<dd> [^&#8230;] (not in the range) matches one unknown character NOT within the range specified</p>
+</dt><dd> [^&#8230;] (not in the range) matches one unknown character NOT within the range specified</dd>
 <dt>
-<dd> EXAMPLES:</p>
+</dt><dd> EXAMPLES:</dd>
 <dt>
-<dd> Expr. `cro*p` means the term you want to corner starts with `cro` and ends with `p` while the number of characters in between are unknown. It fetches crop, crop up, croup, crock up and crow step.</p>
+</dt><dd> Expr. `cro*p` means the term you want to corner starts with `cro` and ends with `p` while the number of characters in between are unknown. It fetches crop, crop up, croup, crock up and crow step.</dd>
 <dt>
-<dd> Expr. `*chester` means the searched word ends with a `chester` while the beginning and its number characters are unknown. It fetches chester, manchester, rochester, winchester and toy manchester.</p>
+</dt><dd> Expr. `*chester` means the searched word ends with a `chester` while the beginning and its number characters are unknown. It fetches chester, manchester, rochester, winchester and toy manchester.</dd>
 <dt>
-<dd> Expr. `can????r` means the term sought starts with `can` and ends with `r` while you are sure that there are 5 unknown characters in between. It fetches canister and cannular.</p>
+</dt><dd> Expr. `can????r` means the term sought starts with `can` and ends with `r` while you are sure that there are 5 unknown characters in between. It fetches canister and cannular.</dd>
 <dt>
-<dd> Expr. `andre*[x|y|z]` means the word searched for starts with andre and ends with either an x or y or z, and there could be any number of terms in betweem these. It fetches andre malraux, andrei tarkovsky, andres martinez, etc.</p>
+</dt><dd> Expr. `andre*[x|y|z]` means the word searched for starts with andre and ends with either an x or y or z, and there could be any number of terms in betweem these. It fetches andre malraux, andrei tarkovsky, andres martinez, etc.</dd>
 <dt>
-<dd> Expr. `a[c|d|e]{2,}` means the word looked for starts with a and then there are minimum 2 or more occurances of c, d or e. It fetches acc, accede, ace, add, ade and aec.</p>
-<dt>
-<dd></dl>
+</dt><dd> Expr. `a[c|d|e]{2,}` means the word looked for starts with a and then there are minimum 2 or more occurances of c, d or e. It fetches acc, accede, ace, add, ade and aec.</dd>
+</dl>
 <h2>NOTIFICATIONS</h2>
 <p> Should the user prefer passive desktop notifications (balloon tips), rather than the application popping up with the definitions, it can be done by enabling Notifications. This is done via the Notify tool button or by right-clicking on Artha&#8217;s system tray icon, and tick off the &#8216;Notifications&#8217; check box in the menu. When notifications are enabled, and the user selects text in a window and presses the hotkey combo, Artha takes the prime definition of that term from WordNet and shows that definition as a system tray notification. </p>
 <p> Note: For the notifications feature to be present, notify library&#8217;s binary (libnotify.so.1) should be available on your system. If not, Artha will not expose the feature at all. Also the notification-daemon should installed for the notifications to show up.</p>

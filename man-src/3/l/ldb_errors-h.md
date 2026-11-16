@@ -94,7 +94,7 @@ description: "include/ldb_errors.h –"
 <p> Many LDB function calls return an integer value (int). As shown in the function documentation, those return values may indicate whether the function call worked correctly (in which case it returns LDB_SUCCESS) or some problem occurred (in which case some other value will be returned). As a special case, LDB_ERR_COMPARE_FALSE or LDB_ERR_COMPARE_TRUE may be returned, which does not indicate an error. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Not all error codes make sense for LDB, however they are based on the LDAP error codes, and are kept for reference and to avoid overlap. </p>
+<dd>Not all error codes make sense for LDB, however they are based on the LDAP error codes, and are kept for reference and to avoid overlap. </dd>
 <p> Some of this documentation is based on information in the OpenLDAP documentation, as developed and maintained by the The OpenLDAP Project.</dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define LDB_ERR_ADMIN_LIMIT_EXCEEDED 11</h3>
@@ -115,12 +115,12 @@ description: "include/ldb_errors.h –"
 <p>The function was for value comparison, and the comparison operation returned false. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is a status value, and doesn&#8217;t normally indicate an error.</dl>
+<dd>This is a status value, and doesn&#8217;t normally indicate an error.</dd></dl>
 <h3>#define LDB_ERR_COMPARE_TRUE 6</h3>
 <p>The function was for value comparison, and the comparison operation returned true. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is a status value, and doesn&#8217;t normally indicate an error.</dl>
+<dd>This is a status value, and doesn&#8217;t normally indicate an error.</dd></dl>
 <h3>#define LDB_ERR_CONFIDENTIALITY_REQUIRED 13</h3>
 <p>The function involved a transaction or database operation that could not be performed without a secure link.</p>
 <h3>#define LDB_ERR_CONSTRAINT_VIOLATION 19</h3>
@@ -167,7 +167,7 @@ description: "include/ldb_errors.h –"
 <p>This is an intermediate result code for SASL bind operations that have more than one step. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is a result code that does not normally indicate an error has occurred.</dl>
+<dd>This is a result code that does not normally indicate an error has occurred.</dd></dl>
 <h3>#define LDB_ERR_SIZE_LIMIT_EXCEEDED 4</h3>
 <p>The function call failed because a size limit was exceeded.</p>
 <h3>#define LDB_ERR_STRONG_AUTH_REQUIRED 8</h3>

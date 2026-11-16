@@ -14,19 +14,19 @@ description: "get_request – get a free request"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>request_queue to allocate request from</dl>
+</dd><dd>request_queue to allocate request from</dd></dl>
 <p> <i>op</i></p>
 <dl>
-<dd>REQ_OP_READ/REQ_OP_WRITE</dl>
+<dd>REQ_OP_READ/REQ_OP_WRITE</dd></dl>
 <p> <i>op_flags</i></p>
 <dl>
-<dd>rq_flag_bits</dl>
+<dd>rq_flag_bits</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>bio to allocate request for (can be <code>NULL</code>)</dl>
+<dd>bio to allocate request for (can be <code>NULL</code>)</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>allocation mask</dl>
+<dd>allocation mask</dd></dl>
 <h2>Description</h2>
 <p>Get a free request from <i>q</i>. If <code>__GFP_DIRECT_RECLAIM</code> is set in <i>gfp_mask</i>, this function keeps retrying under memory pressure and fails iff <i>q</i> is dead. </p>
 <p> Must be called with <i>q</i>-&gt;queue_lock held and, Returns ERR_PTR on failure, with <i>q</i>-&gt;queue_lock held. Returns request pointer on success, with <i>q</i>-&gt;queue_lock *not held*.</p>

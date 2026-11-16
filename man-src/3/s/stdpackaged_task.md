@@ -11,11 +11,8 @@ std::packaged_task - std::packaged_task
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;future&gt;
-
 template&lt; class &gt; class packaged_task; //not defined (1) (since C++11)
-
 template&lt; class R, class ...Args &gt;                   (2) (since C++11)
-
 class packaged_task&lt;R(Args...)&gt;;</code></pre> 
 The class template std::packaged_task wraps any Callable target <i>(function, lambda expression, bind expression, or another function object) so that it can be invoked asynchronously. Its return value or ex</i>ception thrown is stored in a shared state which can be accessed through std::future objects. 
 Just like std::function, std::packaged_task is a polymorphic, allocator-aware container: the stored callable target may be allocated on heap or with a provided allocator. <i>(until C++17)</i> 
@@ -62,22 +59,16 @@ std::uses_allocator&lt;std::packaged_task&gt; specializes the std::uses_allocato
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;future&gt;
-
 #include &lt;functional&gt;
 // unique function to avoid disambiguating the std::pow overload set
-
 int f(int x, int y)
 {
     return std::pow(x, y);
 }
 void task_lambda()
-
 {
     std::packaged_task&lt;int(int, int)&gt; task([](int a, int b) {
         return std::pow(a, b);
@@ -87,7 +78,6 @@ void task_lambda()
     std::cout &lt;&lt; &quot;task_lambda:\t&quot; &lt;&lt; result.get() &lt;&lt; '\n';
 }
 void task_bind()
-
 {
     std::packaged_task&lt;int()&gt; task(std::bind(f, 2, 11));
     std::future&lt;int&gt; result = task.get_future();
@@ -95,7 +85,6 @@ void task_bind()
     std::cout &lt;&lt; &quot;task_bind:\t&quot; &lt;&lt; result.get() &lt;&lt; '\n';
 }
 void task_thread()
-
 {
     std::packaged_task&lt;int(int, int)&gt; task(f);
     std::future&lt;int&gt; result = task.get_future();
@@ -104,7 +93,6 @@ void task_thread()
     std::cout &lt;&lt; &quot;task_thread:\t&quot; &lt;&lt; result.get() &lt;&lt; '\n';
 }
 int main()
-
 {
     task_lambda();
     task_bind();

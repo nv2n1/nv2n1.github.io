@@ -10,7 +10,6 @@ description: "wmemset – fill an array of wide-characters with a constant wide 
 <p>wmemset &#8211; fill an array of wide-characters with a constant wide character</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wmemset(wchar_t *wcs, wchar_t wc, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>wmemset</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3) function. It fills the array of <i>n</i> wide-characters starting at <i>wcs</i> with <i>n</i> copies of the wide character <i>wc</i>.</p>

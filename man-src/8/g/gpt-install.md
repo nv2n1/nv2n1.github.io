@@ -24,20 +24,20 @@ description: "gpt-install – Installs GPT packages."
 <p><code>gpt-install</code> takes a <font SIZE="-1">GPT</font> described package or bundle and installs it. The program can install either <font SIZE="-1">RPM</font>&#8216;s or <font SIZE="-1">GPT</font> packages.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-force</code></p>
-<dd>forces all action to be taken, regardless of state.</p>
-<dt><code>-tmpdir</code></p>
-<dd>Place to unpack bundles.</p>
-<dt><code>-installdir</code></p>
-<dd>Directory to which files shall be written. Default is <tt>$GLOBUS_LOCATION</tt></p>
-<dt><code>-loose</code></p>
-<dd>pgm packages can replace a pgm_static package (and vice versa) or a pgm package with a different flavor.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-force</code></dt>
+<dd>forces all action to be taken, regardless of state.</dd>
+<dt><code>-tmpdir</code></dt>
+<dd>Place to unpack bundles.</dd>
+<dt><code>-installdir</code></dt>
+<dd>Directory to which files shall be written. Default is <tt>$GLOBUS_LOCATION</tt></dd>
+<dt><code>-loose</code></dt>
+<dd>pgm packages can replace a pgm_static package (and vice versa) or a pgm package with a different flavor.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>Examples</h2>
 <p>For the command: </p>
 <pre> gpt-install foo-2.1-gcc32-pgm.tar.gz

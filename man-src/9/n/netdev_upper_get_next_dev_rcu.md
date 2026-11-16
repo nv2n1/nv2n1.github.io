@@ -15,11 +15,11 @@ netdev_upper_get_next_dev_rcu - Get the next dev from upper list
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>iter</i>
-<dl><dd>list_head ** of the current position</dl>
+<dl><dd>list_head ** of the current position</dd></dl>
 
 <h2>Description</h2>
 

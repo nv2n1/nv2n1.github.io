@@ -13,10 +13,10 @@ description: "Icecream – A distributed compile system"
 <h2>How To Use Icecream</h2>
 <p>You need: </p>
 <dl>
-<dt>*</p>
-<dd>One machine that runs the scheduler (&quot;./scheduler -d&quot;)</p>
-<dt>*</p>
-<dd>Many machines that run the daemon (&quot;./iceccd -d&quot;)</dl>
+<dt>*</dt>
+<dd>One machine that runs the scheduler (&quot;./scheduler -d&quot;)</dd>
+<dt>*</dt>
+<dd>Many machines that run the daemon (&quot;./iceccd -d&quot;)</dd></dl>
 <p> If you want to compile using icecream, make sure $prefix/bin is the first first entry in your path, e.g. type <code>export PATH=/opt/icecream/bin:$PATH</code> (Hint: put this in ~/.bashrc or /etc/profile to not have to type it in everytime) </p>
 <p> Then you just compile with <code>make -j &lt;num&gt;</code>, where &lt;num&gt; is the amount of jobs you want to compile in parallel. Don&#8217;t exaggerate. Numbers greater than 15 normally cause trouble. </p>
 <p> WARNING: Never use icecream in untrusted environments. Run the deamons and the scheduler as unpriviliged user in such networks if you have to! But you will have to rely on homogeneous networks then (see below). </p>
@@ -44,7 +44,7 @@ description: "Icecream – A distributed compile system"
 &nbsp;<wbr>export CCACHE_PATH=/opt/icecream/bin<br />
 &nbsp;<wbr>export PATH=/opt/icecream/bin:/usr/bin:$PATH<br />
 &nbsp;<wbr>ccache g++&nbsp;<wbr>&quot;$@&quot;<br />
-&nbsp;<wbr> </p>
+&nbsp;<wbr> </dd>
 </dl>
 <p> Then you can replace /opt/icecream/bin with /opt/ccache/bin in your <i>$PATH</i> and all icecream calls will go through ccache (and Qt will compile in 62s :) </p>
 <p> Note however that ccache isn&#8217;t really worth the trouble if you&#8217;re not recompiling your KDE three times a day from scratch (it adds quite some overhead in comparing the preprocessor output and uses quite some disc space and I found a cache hit of 18% a bit too few, so I disabled it again).</p>
@@ -53,28 +53,28 @@ description: "Icecream – A distributed compile system"
 <h2>Some Numbers</h2>
 <p>Numbers of my test case (some STL C++ genetic algorithm) </p>
 <dl>
-<dt>*</p>
-<dd>g++ on my machine: 1.6s</p>
-<dt>*</p>
-<dd>g++ on fast machine: 1.1s</p>
-<dt>*</p>
-<dd>icecream using my machine as remote machine: 1.9s</p>
-<dt>*</p>
-<dd>icecream using fast machine: 1.8s</dl>
+<dt>*</dt>
+<dd>g++ on my machine: 1.6s</dd>
+<dt>*</dt>
+<dd>g++ on fast machine: 1.1s</dd>
+<dt>*</dt>
+<dd>icecream using my machine as remote machine: 1.9s</dd>
+<dt>*</dt>
+<dd>icecream using fast machine: 1.8s</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> The icecream overhead is quite huge as you might notice, but the compiler can&#8217;t interleave preprocessing with compilation and the file needs to be read/written once more and in between the file is transfered. </p>
 <p> But even if the other computer is faster, using g++ on my local machine is faster. If you&#8217;re (for whatever reason) alone in your network at some point, you loose all advantages of distributed compiling and only add the overhead. So icecream got a special case for local compilations (the same special meaning that localhost got within $DISTCC_HOSTS). This makes compiling on my machine using icecream down to 1.7s (the overhead is actually less than 0.1s in average). </p>
 <p> As the scheduler is aware of that meaning, it will prefer your own computer if it&#8217;s free and got not less than 70% of the fastest available computer. </p>
 <p> Keep in mind, that this affects only the first compile job, the second one is distributed anyway. So if I had to compile two of my files, I would get </p>
 <dl>
-<dt>*</p>
-<dd>g++ -j1 on my machine: 3.2s</p>
-<dt>*</p>
-<dd>g++ -j1 on the fast machine: 2.2s</p>
-<dt>*</p>
-<dd>using icecream -j2 on my machine: max(1.7,1.8)=1.8s</p>
-<dt>*</p>
-<dd>(using icecream -j2 on the other machine: max(1.1,1.8)=1.8s)</dl>
+<dt>*</dt>
+<dd>g++ -j1 on my machine: 3.2s</dd>
+<dt>*</dt>
+<dd>g++ -j1 on the fast machine: 2.2s</dd>
+<dt>*</dt>
+<dd>using icecream -j2 on my machine: max(1.7,1.8)=1.8s</dd>
+<dt>*</dt>
+<dd>(using icecream -j2 on the other machine: max(1.1,1.8)=1.8s)</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> The math is a bit tricky and depends a lot on the current state of the compilation network, but make sure you&#8217;re not blindly assuming make -j2 halfs your compilation time.</p>
 <h2>What Is The Best Environment For Icecream</h2>
@@ -84,14 +84,14 @@ description: "Icecream – A distributed compile system"
 <h2>Network Setup For Icecream (Firewalls)</h2>
 <p>A short overview of the ports icecream requires: </p>
 <dl>
-<dt>*</p>
-<dd>TCP/10245 on the daemon computers (required)</p>
-<dt>*</p>
-<dd>TCP/8765 for the the scheduler computer (required)</p>
-<dt>*</p>
-<dd>TCP/8766 for the telnet interface to the scheduler (optional)</p>
-<dt>*</p>
-<dd>UDP/8765 for broadcast to find the scheduler (optional)</dl>
+<dt>*</dt>
+<dd>TCP/10245 on the daemon computers (required)</dd>
+<dt>*</dt>
+<dd>TCP/8765 for the the scheduler computer (required)</dd>
+<dt>*</dt>
+<dd>TCP/8766 for the telnet interface to the scheduler (optional)</dd>
+<dt>*</dt>
+<dd>UDP/8765 for broadcast to find the scheduler (optional)</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> Note that the SuSEfirewall2 on SUSE &lt; 9.1 got some problems configuring broadcast. So you might need the -s option for the daemon in any case there. If the monitor can&#8217;t find the scheduler, use USE_SCHEDULER=&lt;host&gt; icemon (or send me a patch :)</p>
 <h2>See Also</h2>

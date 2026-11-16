@@ -11,7 +11,6 @@ description: "sc::GuessMolecularHessian –"
 <p> <code>GuessMolecularHessian</code> is an implementation of <code>MolecularHessian</code> that estimates the hessian based on the internal coordinates.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;hess.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>

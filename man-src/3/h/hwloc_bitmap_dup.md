@@ -135,7 +135,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> CPU sets and nodesets are described in <b>Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)</b>.</dl>
+</dt><dd> CPU sets and nodesets are described in <b>Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)</b>.</dd></dl>
  
 
  A bitmap may be of infinite size. 
@@ -143,7 +143,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Several examples of using the bitmap API are available under the doc/examples/ directory in the source tree. Regression tests such as tests/hwloc/hwloc_bitmap*.c also make intensive use of this API.</dl>
+</dt><dd> Several examples of using the bitmap API are available under the doc/examples/ directory in the source tree. Regression tests such as tests/hwloc/hwloc_bitmap*.c also make intensive use of this API.</dd></dl>
  
 
  
@@ -175,7 +175,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>See also:</b>
 <dl>
 <dt>
-<dd> <b>hwloc_bitmap_foreach_begin()</b></dl>
+</dt><dd> <b>hwloc_bitmap_foreach_begin()</b></dd></dl>
  
 
  
@@ -223,7 +223,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> A valid bitmap or NULL.</dl>
+</dt><dd> A valid bitmap or NULL.</dd></dl>
  
 
  The bitmap should be freed by a corresponding call to <b>hwloc_bitmap_free()</b>.
@@ -287,7 +287,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> This is different from the non-existing hwloc_bitmap_compare_last() which would only compare the highest index of each bitmap.</dl>
+</dt><dd> This is different from the non-existing hwloc_bitmap_compare_last() which would only compare the highest index of each bitmap.</dd></dl>
  
 
  
@@ -335,7 +335,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> -1 if no index is set.</dl>
+</dt><dd> -1 if no index is set.</dd></dl>
  
 
  
@@ -423,7 +423,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> -1 if no index is bitmap, or if the index bitmap is infinite.</dl>
+</dt><dd> -1 if no index is bitmap, or if the index bitmap is infinite.</dd></dl>
  
 
  
@@ -451,7 +451,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dl>
+</dt><dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dd></dl>
  
 
  
@@ -475,7 +475,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> -1 if no index with higher index is bitmap.</dl>
+</dt><dd> -1 if no index with higher index is bitmap.</dd></dl>
  
 
  
@@ -549,7 +549,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dl>
+</dt><dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dd></dl>
  
 
  
@@ -585,7 +585,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dl>
+</dt><dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending \0).</dd></dl>
  
 
  
@@ -625,7 +625,7 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> the number of indexes that are in the bitmap.</dl>
+</dt><dd> the number of indexes that are in the bitmap.</dd></dl>
  
 
  
@@ -657,8 +657,8 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
 
 
 <dt><a HREF="#lbAM">Function Documentation</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbCG">Author</a>
-<dd></dl>
+</dd><dt><a HREF="#lbCG">Author</a>
+</dt><dd></dd></dl>

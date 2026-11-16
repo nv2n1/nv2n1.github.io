@@ -33,10 +33,10 @@ Options:
 <p>See Also </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>Running the schema generator (schemagen): [ <i>command-line instructions</i> @ <a rel="nofollow" href="https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagen.html,">https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagen.html,</a> <i>using the SchemaGen Ant task</i> @ <a rel="nofollow" href="https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagenTask.html]">https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagenTask.html]</a></p>
-<dt>o</p>
-<dd><i>Java Architecture for XML Binding (JAXB)</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html</a></dl>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>Running the schema generator (schemagen): [ <i>command-line instructions</i> @ <a rel="nofollow" href="https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagen.html,">https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagen.html,</a> <i>using the SchemaGen Ant task</i> @ <a rel="nofollow" href="https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagenTask.html]">https://jaxb.dev.java.net/nonav/2.1.3/docs/schemagenTask.html]</a></dd>
+<dt>o</dt>
+<dd><i>Java Architecture for XML Binding (JAXB)</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

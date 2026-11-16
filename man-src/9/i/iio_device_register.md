@@ -14,9 +14,9 @@ description: "iio_device_register – register a device with the IIO subsystem"
 <p><i>indio_dev</i></p>
 <dl>
 <dd>
-<dd>Device structure filled by the device driver</dl>
+</dd><dd>Device structure filled by the device driver</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

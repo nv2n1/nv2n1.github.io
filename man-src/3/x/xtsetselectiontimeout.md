@@ -11,12 +11,12 @@ description: "XtGetSelectionTimeout, XtSetSelectionTimeout – set and obtain se
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>unsigned long XtGetSelectionTimeout(void);</p>
-<dd>void XtSetSelectionTimeout(unsigned long <i>timeout</i>);</dl>
+<dd>unsigned long XtGetSelectionTimeout(void);</dd>
+<dd>void XtSetSelectionTimeout(unsigned long <i>timeout</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>timeout</i></p>
-<dd>Specifies the selection timeout in milliseconds.</dl>
+<dt><i>timeout</i></dt>
+<dd>Specifies the selection timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtGetSelectionTimeout</code> function has been superceded by <code>XtAppGetSelectionTimeout</code>. </p>
 <p> The <code>XtSetSelectionTimeout</code> function has been superceded by <code>XtAppSetSelectionTimeout</code>.</p>

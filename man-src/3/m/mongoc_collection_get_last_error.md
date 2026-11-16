@@ -13,8 +13,8 @@ description: "mongoc_collection_get_last_error() – The mongoc_collection_get_l
 mongoc_collection_get_last_error (const mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>The mongoc_collection_get_last_error() function shall return getLastError document, according to write_concern on last executed command for current collection instance. </p>
 <p> A write_concern must be at least <code>MONGOC_WRITE_CONCERN_W_DEFAULT</code> in last command execution for this to be available. </p>

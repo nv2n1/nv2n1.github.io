@@ -15,23 +15,23 @@ snd_soc_dai_set_channel_map - configure DAI audio channel map
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>tx_num</i>
-<dl><dd>how many TX channels</dl>
+<dl><dd>how many TX channels</dd></dl>
  
 
  <i>tx_slot</i>
-<dl><dd>pointer to an array which imply the TX slot number channel 0~num-1 uses</dl>
+<dl><dd>pointer to an array which imply the TX slot number channel 0~num-1 uses</dd></dl>
  
 
  <i>rx_num</i>
-<dl><dd>how many RX channels</dl>
+<dl><dd>how many RX channels</dd></dl>
  
 
  <i>rx_slot</i>
-<dl><dd>pointer to an array which imply the RX slot number channel 0~num-1 uses</dl>
+<dl><dd>pointer to an array which imply the RX slot number channel 0~num-1 uses</dd></dl>
 
 <h2>Description</h2>
 

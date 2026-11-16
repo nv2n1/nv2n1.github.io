@@ -11,55 +11,32 @@ description: "std::bitset<N>::bitset – std::bitset<N>::bitset"
 <h2>Synopsis</h2>
 <pre><code>bitset();
 (until C++ 11)
-
     constexpr bitset() noexcept;
 (since C++ 11)
-
     bitset(unsigned long val);
 (until C++ 11)
-
     constexpr bitset(unsigned long long val) noexcept;
 (since C++ 11)
-
     template &lt;class CharT, class Traits, class Alloc&gt;
-
     explicit bitset(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;str,
-
                     typename std::basic_string&lt;CharT, Traits, Alloc&gt;::size_type(until C++ 11)
-
                         pos = 0,
-
                     typename std::basic_string&lt;CharT, Traits, Alloc&gt;::size_type
-
                         n = std::basic_string&lt;CharT, Traits, Alloc&gt;::npos);
-
 template &lt;class CharT, class Traits, class Alloc&gt;
-
 explicit bitset(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;str, (1)
-
                                                                         typename std::basic_string&lt;CharT, Traits, Alloc&gt;::size_type(2)
-
                                                                             pos = 0,
                 (3)(since C++ 11)
-
                     typename std::basic_string&lt;CharT, Traits, Alloc&gt;::size_type
-
                         n = std::basic_string&lt;CharT, Traits, Alloc&gt;::npos,
-
                 CharT zero = CharT('0'),
-
                 CharT one = CharT('1'));
-
 template &lt;class CharT&gt;
-
 explicit bitset(const CharT *str,
-
                 typename std::basic_string&lt;CharT&gt;::size_type(4)(since C++ 11)
-
                     n = std::basic_string&lt;CharT&gt;::npos,
-
                 CharT zero = CharT('0'),
-
                 CharT one = CharT('1'));</code></pre>
 <p>Constructs a new bitset from one of several optional data sources:<br />
 1) Default constructor. Constructs a bitset with all bits set to zero.<br />
@@ -87,14 +64,10 @@ zero &#8211; alternate character for unset bits in str</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;bitset&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;climits&gt;
 int main()
-
 {
     // empty constructor
     std::bitset&lt;8&gt; b1;              // [0,0,0,0,0,0,0,0]

@@ -14,56 +14,54 @@ description: "mimeview – display files, using mailcap mechanism."
 <h2>DESCRIPTION</h2>
 <p> GNU mimeview <code>&#8212;</code> display files, using mailcap mechanism.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;no-ask</code>[=<i>,TYPE-LIST/</i>]</p>
-<dd> do not ask for confirmation before displaying files, or, if TYPE-LIST is given, do not ask for confirmation before displaying such files whose MIME type matches one of the patterns from TYPE-LIST</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>[=<i>,FLAGS/</i>]</p>
-<dd> enable debugging output</p>
-<dt><code>-f</code>, <code>&#8211;mimetypes</code>=<i>,FILE/</i></p>
-<dd> use this mime.types file</p>
-<dt><code>-h</code>, <code>&#8211;no-interactive</code>, <code>&#8211;print</code></p>
-<dd> disable interactive mode</p>
-<dt><code>-i</code>, <code>&#8211;[no-]identify</code></p>
-<dd> identify MIME type of each file</p>
-<dt><code>&#8211;metamail</code>[=<i>,FILE/</i>]</p>
-<dd> use metamail to display files</p>
-<dt><code>-n</code>, <code>&#8211;[no-]dry-run</code></p>
-<dd> do nothing, just print what would have been done</p>
-<dt><code>-t</code>, <code>&#8211;[no-]lint</code></p>
-<dd> test mime.types syntax and exit</p>
+<dt><code>-a</code>, <code>&#8211;no-ask</code>[=<i>,TYPE-LIST/</i>]</dt>
+<dd> do not ask for confirmation before displaying files, or, if TYPE-LIST is given, do not ask for confirmation before displaying such files whose MIME type matches one of the patterns from TYPE-LIST</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>[=<i>,FLAGS/</i>]</dt>
+<dd> enable debugging output</dd>
+<dt><code>-f</code>, <code>&#8211;mimetypes</code>=<i>,FILE/</i></dt>
+<dd> use this mime.types file</dd>
+<dt><code>-h</code>, <code>&#8211;no-interactive</code>, <code>&#8211;print</code></dt>
+<dd> disable interactive mode</dd>
+<dt><code>-i</code>, <code>&#8211;[no-]identify</code></dt>
+<dd> identify MIME type of each file</dd>
+<dt><code>&#8211;metamail</code>[=<i>,FILE/</i>]</dt>
+<dd> use metamail to display files</dd>
+<dt><code>-n</code>, <code>&#8211;[no-]dry-run</code></dt>
+<dd> do nothing, just print what would have been done</dd>
+<dt><code>-t</code>, <code>&#8211;[no-]lint</code></dt>
+<dd> test mime.types syntax and exit</dd>
 <dt>
-<dd> Global debugging settings</p>
-<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></p>
-<dd> set Mailutils debugging level</p>
-<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</p>
+</dt><dd> Global debugging settings</dd>
+<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></dt>
+<dd> set Mailutils debugging level</dd>
+<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</dt>
+<dd>Configuration handling</dd>
+<dt><code>&#8211;config-file</code>=<i>,FILE/</i></dt>
+<dd> load this configuration file; implies <code>&#8211;no-config</code></dd>
+<dt><code>&#8211;config-lint</code></dt>
+<dd> check configuration file syntax and exit</dd>
+<dt><code>&#8211;config-verbose</code></dt>
+<dd> verbosely log parsing of the configuration files</dd>
+<dt><code>&#8211;no-config</code></dt>
+<dd> do not load site and user configuration files</dd>
+<dt><code>&#8211;no-site-config</code></dt>
+<dd> do not load site-wide configuration file</dd>
+<dt><code>&#8211;no-user-config</code></dt>
+<dd> do not load user configuration file</dd>
+<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></dt>
+<dd> set configuration parameter</dd>
 <dt>
-<dd>
-<dd>Configuration handling</p>
-<dt><code>&#8211;config-file</code>=<i>,FILE/</i></p>
-<dd> load this configuration file; implies <code>&#8211;no-config</code></p>
-<dt><code>&#8211;config-lint</code></p>
-<dd> check configuration file syntax and exit</p>
-<dt><code>&#8211;config-verbose</code></p>
-<dd> verbosely log parsing of the configuration files</p>
-<dt><code>&#8211;no-config</code></p>
-<dd> do not load site and user configuration files</p>
-<dt><code>&#8211;no-site-config</code></p>
-<dd> do not load site-wide configuration file</p>
-<dt><code>&#8211;no-user-config</code></p>
-<dd> do not load user configuration file</p>
-<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></p>
-<dd> set configuration parameter</p>
-<dt>
-<dd> Informational options</p>
-<dt><code>&#8211;config-help</code></p>
-<dd> show configuration file summary</p>
-<dt><code>&#8211;show-config-options</code></p>
-<dd> show compilation options</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+</dt><dd> Informational options</dd>
+<dt><code>&#8211;config-help</code></dt>
+<dd> show configuration file summary</dd>
+<dt><code>&#8211;show-config-options</code></dt>
+<dd> show compilation options</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options. </p>
 <p> Debug flags are: g &#8211; Mime.types parser traces l &#8211; Mime.types lexical analyzer traces 0-9 &#8211; Set debugging level</p>
 <h2>REPORTING BUGS</h2>
@@ -77,7 +75,7 @@ description: "mimeview – display files, using mailcap mechanism."
 <p> The complete GNU mailutils documentation is maintained as a Texinfo manual. If the <code>mailutils-doc</code> package is installed, the command</p>
 <dl>
 <dt>
-<dd> <code>info mailutils</code></dl>
+</dt><dd> <code>info mailutils</code></dd></dl>
 <p> should give you access to the complete manual.<br />
  You can also find this manual online in the GNU mailutils webpage:<br />
  <a rel="nofollow" href="https://www.gnu.org/software/mailutils/manual/index.html.">https://www.gnu.org/software/mailutils/manual/index.html.</a><br />

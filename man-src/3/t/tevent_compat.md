@@ -9,6 +9,6 @@ description: "The tevent compatibility functions – The following definitions a
 
 <p>The tevent compatibility functions &#8211; The following definitions are usueful only for compatibility with the implementation originally developed within the samba4 code and will be soon removed. The following definitions are usueful only for compatibility with the implementation originally developed within the samba4 code and will be soon removed. Please NEVER use in new code. <code>Todo</code></p>
 <dl>
-<dd>Ignore it?</dl>
+<dd>Ignore it?</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for tevent from the source code.</p>

@@ -17,18 +17,18 @@ description: "g.version – Displays version and copyright information."
  <code>g.version</code> [-<code>cb</code>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
-<dt><code>-c</code></p>
+<dt><code>-c</code></dt>
 <dd>
- Print the copyright message</p>
-<dt><code>-b</code></p>
+ Print the copyright message</dd>
+<dt><code>-b</code></dt>
 <dd>
- Print the GRASS build information</p>
-<dt><code>&#8211;verbose</code></p>
+ Print the GRASS build information</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd>
- Verbose module output</p>
-<dt><code>&#8211;quiet</code></p>
+ Verbose module output</dd>
+<dt><code>&#8211;quiet</code></dt>
 <dd>
- Quiet module output</dl>
+ Quiet module output</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>g.version</i> prints to standard output the GRASS version number, date, the GRASS copyright and GRASS build information.</p>
 <h2>NOTES</h2>

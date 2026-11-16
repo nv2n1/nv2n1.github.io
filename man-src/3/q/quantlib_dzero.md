@@ -20,6 +20,6 @@ description: "QuantLib::DZero – $ D_{0} $ matricial representation"
  artial x} pprox ac{u_{i+1}-u_{i-1}}{2h} = D_{0} u_{i} ] </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dl>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

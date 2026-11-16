@@ -18,45 +18,45 @@ description: "pam_wrapper – A preloadable wrapper to test PAM applications and
 <p> <code>PAM_WRAPPER</code></p>
 <dl>
 <dt>
-<dd> If you load the pam_wrapper and enable it with setting PAM_WRAPPER=1 all PAM calls will be wrapped so you are able to specify a directory with the service files pam_wrapper should be using.</dl>
+</dt><dd> If you load the pam_wrapper and enable it with setting PAM_WRAPPER=1 all PAM calls will be wrapped so you are able to specify a directory with the service files pam_wrapper should be using.</dd></dl>
 <p> <code>PAM_WRAPPER_SERVICE_DIR</code></p>
 <dl>
 <dt>
-<dd> The directory to read PAM service files from.</dl>
+</dt><dd> The directory to read PAM service files from.</dd></dl>
 <p> If you want to use pam_matrix (see below) or want to test your own PAM module you need to specify the absolute path to your module in the service files. </p>
 <p> <code>PAM_WRAPPER_DEBUGLEVEL</code></p>
 <dl>
 <dt>
-<dd> If you need to see what is going on in pam_wrapper itself or try to find a bug, you can enable logging support in pam_wrapper if you built it with debug symbols. </p>
+</dt><dd> If you need to see what is going on in pam_wrapper itself or try to find a bug, you can enable logging support in pam_wrapper if you built it with debug symbols. </dd>
 <dl>
 <dt>
-<dd> &bull; 0 = ERROR</dl>
+</dt><dd> &bull; 0 = ERROR</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 1 = WARNING</dl>
+</dt><dd> &bull; 1 = WARNING</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 2 = DEBUG</dl>
+</dt><dd> &bull; 2 = DEBUG</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 3 = TRACE</dl>
+</dt><dd> &bull; 3 = TRACE</dd></dl>
 </dl>
 <p> <code>PAM_WRAPPER_KEEP_DIR</code></p>
 <dl>
 <dt>
-<dd> If this option is set to 1, then pam_wrapper won&#8217;t delete its temporary directories. Mostly useful for pam_wrapper development.</dl>
+</dt><dd> If this option is set to 1, then pam_wrapper won&#8217;t delete its temporary directories. Mostly useful for pam_wrapper development.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> A service file for pam_wrapper should look like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 auth            required        /usr/lib/pam_wrapper/pam_matrix.so passdb=/path/to/pdb
 account         required        /usr/lib/pam_wrapper/pam_matrix.so passdb=/path/to/pdb
 password        required        /usr/lib/pam_wrapper/pam_matrix.so passdb=/path/to/pdb
 session         required        /usr/lib/pam_wrapper/pam_matrix.so passdb=/path/to/pdb
 </pre>
-</dl>
+</dd></dl>
 <p> The name of the file should represent the service name used by your PAM application. </p>
 <p> LD_PRELOAD=./libpam_wrapper.so PAM_WRAPPER=1 PAM_WRAPPER_SERVICE_DIR=pam_services/ ./my_pam_app</p>
 <h2>PAM_MATRIX</h2>

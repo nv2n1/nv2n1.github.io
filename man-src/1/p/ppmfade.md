@@ -16,30 +16,29 @@ description: "ppmfade – generate a transition between two image files using sp
 <p> Another way to convert by steps from one image to another is morphing. You can use <code>xmorph</code> to do that. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f first.ppm</code></p>
-<dd> This is the image file (PPM format) to be used at the beginning of the transition. If not specified, the fade will start from black.</p>
-<dt><code>-l last.ppm</code></p>
-<dd> This is the image file (PPM format) to be used at the ending of the transition. If not specified, the fade will end with black.</p>
-<dt><code>-mix</code></p>
-<dd> The two images are superimposed with the brightness of the first image decreasing from full to none and the brightness of the final image increasing from none to full. The transition is quadratic in brightness with faster transition in the beginning and slower at the end.</p>
-<dt><code>-spread</code></p>
-<dd> The pixels in the first image will be moved (spread) further and further from their original location and then moved into the proper location in the final image. This is the default transition.</p>
-<dt><code>-shift</code></p>
-<dd> The pixels in the first image will be shifted further and further horizontally from their original location and then moved into the proper location in the final image.</p>
-<dt><code>-relief</code></p>
-<dd> The first image is faded to a Laplacian relief filtered version of the first image. This is then faded to a Laplacian relief filtered version of the second image and finally faded to the final image.</p>
-<dt><code>-oil</code></p>
-<dd> The first image is faded to an &quot;oil transfer&quot; version of the first image. This is then faded to an &quot;oil transfer&quot; version of the second image and finally faded to the final image.</p>
-<dt><code>-edge</code></p>
-<dd> The first image is faded to an edge detected version of the first image. This is then faded to an edge detected version of the second image and finally faded to the final image.</p>
-<dt><code>-bentley</code></p>
-<dd> The first image is faded to a &quot;Bentley Effect&quot; version of the first image. This is then faded to a &quot;Bentley Effect&quot; version of the second image and finally faded to the final image.</p>
-<dt><code>-block</code></p>
-<dd> The first image is defocused to small blocks. The small blocks are converted to match a defocused version of the last image. The block version of the last image is then focused to the final image.</p>
-<dt><code>-base</code><i>name</i></p>
-<dd> This forms part of the output filenames, as described above.</p>
-<dt>
-<dd></dl>
+<dt><code>-f first.ppm</code></dt>
+<dd> This is the image file (PPM format) to be used at the beginning of the transition. If not specified, the fade will start from black.</dd>
+<dt><code>-l last.ppm</code></dt>
+<dd> This is the image file (PPM format) to be used at the ending of the transition. If not specified, the fade will end with black.</dd>
+<dt><code>-mix</code></dt>
+<dd> The two images are superimposed with the brightness of the first image decreasing from full to none and the brightness of the final image increasing from none to full. The transition is quadratic in brightness with faster transition in the beginning and slower at the end.</dd>
+<dt><code>-spread</code></dt>
+<dd> The pixels in the first image will be moved (spread) further and further from their original location and then moved into the proper location in the final image. This is the default transition.</dd>
+<dt><code>-shift</code></dt>
+<dd> The pixels in the first image will be shifted further and further horizontally from their original location and then moved into the proper location in the final image.</dd>
+<dt><code>-relief</code></dt>
+<dd> The first image is faded to a Laplacian relief filtered version of the first image. This is then faded to a Laplacian relief filtered version of the second image and finally faded to the final image.</dd>
+<dt><code>-oil</code></dt>
+<dd> The first image is faded to an &quot;oil transfer&quot; version of the first image. This is then faded to an &quot;oil transfer&quot; version of the second image and finally faded to the final image.</dd>
+<dt><code>-edge</code></dt>
+<dd> The first image is faded to an edge detected version of the first image. This is then faded to an edge detected version of the second image and finally faded to the final image.</dd>
+<dt><code>-bentley</code></dt>
+<dd> The first image is faded to a &quot;Bentley Effect&quot; version of the first image. This is then faded to a &quot;Bentley Effect&quot; version of the second image and finally faded to the final image.</dd>
+<dt><code>-block</code></dt>
+<dd> The first image is defocused to small blocks. The small blocks are converted to match a defocused version of the last image. The block version of the last image is then focused to the final image.</dd>
+<dt><code>-base</code><i>name</i></dt>
+<dd> This forms part of the output filenames, as described above.</dd>
+</dl>
 <h2>EXAMPLES</h2>
 <p> <code>ppmfade -f teapot.ppm -l pyr.ppm</code> </p>
 <p> Fade from teapot.ppm to pyr.ppm generating fade.0001.ppm to fade.0030.ppm using the &quot;spread&quot; transition. </p>

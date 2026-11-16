@@ -16,46 +16,46 @@ description: "pskctool – Portable Symmetric Key Container (PSKC) tool"
 <p> Manipulate Portable Symmetric Key Container (PSKC) data. </p>
 <p> This tool allows you to parse, print, validate, sign and verify PSKC data. The input is provided in FILE or on standard input.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>&#8211;strict</code></p>
-<dd> Fail hard on PSKC parse error (default=off)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Show debug mesages on stderr (default=off)</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Quiet operation (default=off)</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Produce more output (default=off)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> Fail hard on PSKC parse error (default=off)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Show debug mesages on stderr (default=off)</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Quiet operation (default=off)</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Produce more output (default=off)</dd></dl>
 <p> Selecting one of the following modes is required:</p>
 <dl>
 <dt>
-<dd> Mode: info</p>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd> Parse and print human readable summary of PSKC input (default=off)</p>
+</dt><dd> Mode: info</dd>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd> Parse and print human readable summary of PSKC input (default=off)</dd>
 <dt>
-<dd> Mode: validate</p>
-<dt><code>-e</code>, <code>&#8211;validate</code></p>
-<dd> Validate PSKC input against XML Schema (default=off)</p>
+</dt><dd> Mode: validate</dd>
+<dt><code>-e</code>, <code>&#8211;validate</code></dt>
+<dd> Validate PSKC input against XML Schema (default=off)</dd>
 <dt>
-<dd> Mode: sign</p>
+</dt><dd> Mode: sign</dd>
 <dt>
-<dd> Digitally sign PSKC data</p>
-<dt><code>&#8211;sign</code></p>
-<dd> Sign PSKC input (default=off)</p>
-<dt><code>&#8211;sign-key</code>=<i>FILE</i></p>
-<dd> Private key to sign with</p>
-<dt><code>&#8211;sign-crt</code>=<i>FILE</i></p>
-<dd> X.509 certificate to sign with</p>
+</dt><dd> Digitally sign PSKC data</dd>
+<dt><code>&#8211;sign</code></dt>
+<dd> Sign PSKC input (default=off)</dd>
+<dt><code>&#8211;sign-key</code>=<i>FILE</i></dt>
+<dd> Private key to sign with</dd>
+<dt><code>&#8211;sign-crt</code>=<i>FILE</i></dt>
+<dd> X.509 certificate to sign with</dd>
 <dt>
-<dd> Mode: verify</p>
+</dt><dd> Mode: verify</dd>
 <dt>
-<dd> Verify digitally signed PSKC data</p>
-<dt><code>&#8211;verify</code></p>
-<dd> Verify signed PSKC input (default=off)</p>
-<dt><code>&#8211;verify-crt</code>=<i>FILE</i></p>
-<dd> Trusted X.509 certificate for verification</dl>
+</dt><dd> Verify digitally signed PSKC data</dd>
+<dt><code>&#8211;verify</code></dt>
+<dd> Verify signed PSKC input (default=off)</dd>
+<dt><code>&#8211;verify-crt</code>=<i>FILE</i></dt>
+<dd> Trusted X.509 certificate for verification</dd></dl>
 <h2>EXAMPLES</h2>
 <p> See &lt;<a rel="nofollow" href="http://www.nongnu.org/oath-toolkit/libpskc-api/pskc-tutorial-pskctool.html">http://www.nongnu.org/oath-toolkit/libpskc-api/pskc-tutorial-pskctool.html</a>&gt;.</p>
 <h2>AUTHOR</h2>

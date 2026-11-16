@@ -15,15 +15,15 @@ snd_soc_add_platform - Add a platform to the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The parent device for the platform</dl>
+<dl><dd></dd><dd>The parent device for the platform</dd></dl>
  
 
  <i>platform</i>
-<dl><dd>The platform to add</dl>
+<dl><dd>The platform to add</dd></dl>
  
 
  <i>platform_drv</i>
-<dl><dd>The driver for the platform</dl>
+<dl><dd>The driver for the platform</dd></dl>
 
 <h2>Copyright</h2>
 

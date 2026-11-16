@@ -22,15 +22,15 @@ description: "loadkeys – load keyboard translation tables"
 <p> If the input file does not contain any compose key definitions, the kernel accent table is left unchanged, unless the <i>-c</i> (or <i>&#8211;clearcompose</i> ) option is given, in which case the kernel accent table is emptied. If the input file does contain compose key definitions, then all old definitions are removed, and replaced by the specified new entries. The kernel accent table is a sequence of (by default 68) entries describing how dead diacritical signs and compose keys behave. For example, a line </p>
 <dl>
 <dt>
-<dd> compose &#8216;,&#8217; &#8216;c&#8217; to ccedilla</dl>
+</dt><dd> compose &#8216;,&#8217; &#8216;c&#8217; to ccedilla</dd></dl>
 <p> means that &lt;ComposeKey&gt;&lt;,&gt;&lt;c&gt; must be combined to &lt;ccedilla&gt;. The current content of this table can be see using `dumpkeys &#8211;compose-only&#8217;.</p>
 <h2>LOAD KERNEL STRING TABLE</h2>
 <p> The option <i>-s</i> (or <i>&#8211;clearstrings</i> ) clears the kernel string table. If this option is not given, <code>loadkeys</code> will only add or replace strings, not remove them. (Thus, the option -s is required to reach a well-defined state.) The kernel string table is a sequence of strings with names like F31. One can make function key F5 (on an ordinary PC keyboard) produce the text `Hello!&#8217;, and Shift+F5 `Goodbye!&#8217; using lines </p>
 <dl>
 <dt>
-<dd> keycode 63 = F70 F71<br />
+</dt><dd> keycode 63 = F70 F71<br />
  string F70 = &quot;Hello!&quot;<br />
- string F71 = &quot;Goodbye!&quot;</dl>
+ string F71 = &quot;Goodbye!&quot;</dd></dl>
 <p> in the keymap. The default bindings for the function keys are certain escape sequences mostly inspired by the VT100 terminal.</p>
 <h2>CREATE KERNEL SOURCE TABLE</h2>
 <p> If the <i>-m</i> (or <i>&#8211;mktable</i> ) option is given <code>loadkeys</code> prints to the standard output a file that may be used as <i>/usr/src/linux/drivers/char/defkeymap.c,</i> specifying the default key bindings for a kernel (and does not modify the current keymap).</p>
@@ -42,26 +42,26 @@ description: "loadkeys – load keyboard translation tables"
 <p> It is recommended to run <code><a href="/docs/linux/man/1-kbd_mode/">kbd_mode</a></code>(1) before <code>loadkeys</code> instead of using the <i>-u</i> option.</p>
 <h2>OTHER OPTIONS</h2>
 <dl>
-<dt><code>-a &#8211;ascii</code></p>
-<dd> Force conversion to ASCII.</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> <code>loadkeys</code> prints its version number and a short usage message to the programs standard error output and exits.</p>
-<dt><code>-p &#8211;parse</code></p>
-<dd> <code>loadkeys</code> searches and parses keymap without action.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> <code>loadkeys</code> suppresses all normal output.</p>
-<dt><code>-V &#8211;version</code></p>
-<dd> <code>loadkeys</code> prints version number and exits.</dl>
+<dt><code>-a &#8211;ascii</code></dt>
+<dd> Force conversion to ASCII.</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> <code>loadkeys</code> prints its version number and a short usage message to the programs standard error output and exits.</dd>
+<dt><code>-p &#8211;parse</code></dt>
+<dd> <code>loadkeys</code> searches and parses keymap without action.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> <code>loadkeys</code> suppresses all normal output.</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> <code>loadkeys</code> prints version number and exits.</dd></dl>
 <h2>WARNING</h2>
 <p> Note that anyone having read access to <code>/dev/console</code> can run <code>loadkeys</code> and thus change the keyboard layout, possibly making it unusable. Note that the keyboard translation table is common for all the virtual consoles, so any changes to the keyboard bindings affect all the virtual consoles simultaneously. </p>
 <p> Note that because the changes affect all the virtual consoles, they also outlive your session. This means that even at the login prompt the key bindings may not be what the user expects.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/share/keymaps</i></p>
-<dd> default directory for keymaps.</dl>
+<dt><i>/usr/share/keymaps</i></dt>
+<dd> default directory for keymaps.</dd></dl>
 <dl>
-<dt><i>/usr/src/linux/drivers/char/defkeymap.map</i></p>
-<dd> default kernel keymap.</dl>
+<dt><i>/usr/src/linux/drivers/char/defkeymap.map</i></dt>
+<dd> default kernel keymap.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1), <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) </p>
 <h2>Index</h2>

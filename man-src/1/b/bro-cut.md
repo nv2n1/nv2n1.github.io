@@ -17,25 +17,25 @@ description: "bro-cut – parse Bro logs"
 <p> The ASCII Bro logs read on standard input must have intact format header blocks because <code>bro-cut</code> needs this information to correctly interpret the log file format. In fact, <code>bro-cut</code> can process the concatenation of multiple ASCII log files that have different column layouts.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Include the first format header block into the output.</p>
-<dt><code>-C</code></p>
-<dd> Include all format header blocks into the output.</p>
-<dt><code>-d</code></p>
-<dd> Convert time values into human-readable format.</p>
-<dt> <code>-D</code> &lt;fmt&gt; Like <code>-d</code>, but specify format for time (see <a href="/docs/linux/man/3-strftime/">strftime</a>(3) for syntax).</p>
-<dt> <code>-F</code> &lt;ofs&gt; Sets a different output field separator.</p>
-<dt><code>-n</code></p>
+<dt><code>-c</code></dt>
+<dd> Include the first format header block into the output.</dd>
+<dt><code>-C</code></dt>
+<dd> Include all format header blocks into the output.</dd>
+<dt><code>-d</code></dt>
+<dd> Convert time values into human-readable format.</dd>
+<dt> <code>-D</code> &lt;fmt&gt; Like <code>-d</code>, but specify format for time (see <a href="/docs/linux/man/3-strftime/">strftime</a>(3) for syntax).</dt>
+<dt> <code>-F</code> &lt;ofs&gt; Sets a different output field separator.</dt>
+<dt><code>-n</code></dt>
 <dd>
-<dd>Print all fields except those specified.</p>
-<dt><code>-u</code></p>
-<dd> Like <code>-d</code>, but print timestamps in UTC instead of local time.</p>
-<dt> <code>-U</code> &lt;fmt&gt; Like <code>-D</code>, but print timestamps in UTC instead of local time.</dl>
+</dd><dd>Print all fields except those specified.</dd>
+<dt><code>-u</code></dt>
+<dd> Like <code>-d</code>, but print timestamps in UTC instead of local time.</dd>
+<dt> <code>-U</code> &lt;fmt&gt; Like <code>-D</code>, but print timestamps in UTC instead of local time.</dt></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>BRO_CUT_TIMEFMT</code></p>
+<dt><code>BRO_CUT_TIMEFMT</code></dt>
 <dd>
-<dd>For time conversion option <code>-d</code> or <code>-u</code>, the format string can be specified by setting this environment variable.</dl>
+</dd><dd>For time conversion option <code>-d</code> or <code>-u</code>, the format string can be specified by setting this environment variable.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Output three columns and convert time values:<br />
  cat conn.log | bro-cut -d ts id.orig_h id.orig_p </p>

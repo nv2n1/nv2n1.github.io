@@ -19,30 +19,30 @@ description: "xml-resolver – A simple command-line resolver"
 <p> <code>-c</code> catalogfile</p>
 <dl>
 <dt>
-<dd> Load a particular catalog file</dl>
+</dt><dd> Load a particular catalog file</dd></dl>
 <p> <code>-n</code> name</p>
 <dl>
 <dt>
-<dd> Sets the name</dl>
+</dt><dd> Sets the name</dd></dl>
 <p> <code>-p</code> publicId</p>
 <dl>
 <dt>
-<dd> Sets the public identifier</dl>
+</dt><dd> Sets the public identifier</dd></dl>
 <p> <code>-s</code> systemId</p>
 <dl>
 <dt>
-<dd> Sets the system identifier</dl>
+</dt><dd> Sets the system identifier</dd></dl>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> Absolute system URI</dl>
+</dt><dd> Absolute system URI</dd></dl>
 <p> <code>-u</code> uri</p>
 <dl>
 <dt>
-<dd> Sets the URI</dl>
+</dt><dd> Sets the URI</dd></dl>
 <p> <code>-d</code> integer</p>
 <dl>
 <dt>
-<dd> Set the debug level</dl>
+</dt><dd> Set the debug level</dd></dl>
 <p> And keyword is one of: doctype, document, entity, notation, public, system, or uri. </p>
 <h2>Index</h2>

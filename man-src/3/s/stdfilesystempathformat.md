@@ -11,13 +11,9 @@ std::filesystem::path::format - std::filesystem::path::format
 <h2>Synopsis</h2>
 
 <pre><code>enum format {
-
     native_format,
-
     generic_format,  (since C++17)
-
     auto_format
-
 };</code></pre> 
 Determines how string representations of pathnames are interpreted by the constructors of std::filesystem::path that accept strings. 
 

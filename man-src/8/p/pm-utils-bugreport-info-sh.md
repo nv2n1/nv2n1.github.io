@@ -10,16 +10,16 @@ description: "pm-utils-bugreport-info.sh – Print pm-utils bug report"
 <p>pm-utils-bugreport-info.sh &#8211; Print pm-utils bug report</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pm-utils-bugreport-info.sh</code></dl>
+<dt> <code>pm-utils-bugreport-info.sh</code></dt></dl>
 <h2>Description</h2>
 <p><code>pm-utils-bugreport-info.sh</code></p>
-<dd>can be used to print pm-utils bug report including your HW configuration and pm-utils logs. This can help developers to diagnose problems regarding suspend / hibernate.</p>
+<dd>can be used to print pm-utils bug report including your HW configuration and pm-utils logs. This can help developers to diagnose problems regarding suspend / hibernate.</dd>
 <h2>See Also</h2>
 <p><code>pm-suspend</code>(8), <code>pm-hibernate</code>(8)</p>
 <h2>Author</h2>
 <p><code>Jaroslav Škarvada</code> &lt;jskarvad [at] redhat.com&gt;</p>
 <dl>
-<dd>Manpage author.</dl>
+<dd>Manpage author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2014 Jaroslav Škarvada </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or (at your option) any later version published by the Free Software Foundation.</p>

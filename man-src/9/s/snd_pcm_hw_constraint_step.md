@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_step - add a hw constraint step rule
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the step constraint</dl>
+<dl><dd>hw_params variable to apply the step constraint</dd></dl>
  
 
  <i>step</i>
-<dl><dd>step size</dl>
+<dl><dd>step size</dd></dl>
 
 <h2>Return</h2>
 

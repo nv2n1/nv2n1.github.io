@@ -13,36 +13,36 @@ description: "tcttest – test cases of the table database API"
 <p> The command `<code>tcttest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. </p>
 <dl>
 <dt>
-<dd>
- <code>tcttest write </code>[<code>-mt</code>][<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-rc </code><i>num</i>][<code>-lc </code><i>num</i>][<code>-nc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-ip</code>][<code>-is</code>][<code>-in</code>][<code>-it</code>][<code>-if</code>][<code>-ix</code>][<code>-nl</code>|<code>-nb</code>][<code>-rnd</code>]<i>path</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]]</p>
+</dt><dd>
+ <code>tcttest write </code>[<code>-mt</code>][<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-rc </code><i>num</i>][<code>-lc </code><i>num</i>][<code>-nc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-ip</code>][<code>-is</code>][<code>-in</code>][<code>-it</code>][<code>-if</code>][<code>-ix</code>][<code>-nl</code>|<code>-nb</code>][<code>-rnd</code>]<i>path</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]]</dd>
 <dl>
 <dt>
-<dd> Store records with columns &quot;str&quot;, &quot;num&quot;, &quot;type&quot;, and &quot;flag&quot;.</dl>
+</dt><dd> Store records with columns &quot;str&quot;, &quot;num&quot;, &quot;type&quot;, and &quot;flag&quot;.</dd></dl>
 <p> <code>tcttest read </code>[<code>-mt</code>][<code>-rc </code><i>num</i>][<code>-lc </code><i>num</i>][<code>-nc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-rnd</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Retrieve all records of the database above.</dl>
+</dt><dd> Retrieve all records of the database above.</dd></dl>
 <p> <code>tcttest remove </code>[<code>-mt</code>][<code>-rc </code><i>num</i>][<code>-lc </code><i>num</i>][<code>-nc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-rnd</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Remove all records of the database above.</dl>
+</dt><dd> Remove all records of the database above.</dd></dl>
 <p> <code>tcttest rcat </code>[<code>-mt</code>][<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-rc </code><i>num</i>][<code>-lc </code><i>num</i>][<code>-nc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-ip</code>][<code>-is</code>][<code>-in</code>][<code>-it</code>][<code>-if</code>][<code>-ix</code>][<code>-nl</code>|<code>-nb</code>][<code>-pn </code><i>num</i>][<code>-dai</code>|<code>-dad</code>|<code>-rl</code>|<code>-ru</code>]<i>path</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]]</p>
 <dl>
 <dt>
-<dd> Store records with partway duplicated keys using concatenate mode.</dl>
+</dt><dd> Store records with partway duplicated keys using concatenate mode.</dd></dl>
 <p> <code>tcttest misc </code>[<code>-mt</code>][<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-nl</code>|<code>-nb</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform miscellaneous test of various operations.</dl>
+</dt><dd> Perform miscellaneous test of various operations.</dd></dl>
 <p> <code>tcttest wicked </code>[<code>-mt</code>][<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-nl</code>|<code>-nb</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform updating operations selected at random.</dl>
+</dt><dd> Perform updating operations selected at random.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-mt</code> : call the function `tctdbsetmutex&#8217;.<br />
+</dt><dd> <code>-mt</code> : call the function `tctdbsetmutex&#8217;.<br />
  <code>-tl</code> : enable the option `TDBTLARGE&#8217;.<br />
  <code>-td</code> : enable the option `TDBTDEFLATE&#8217;.<br />
  <code>-tb</code> : enable the option `TDBTBZIP&#8217;.<br />
@@ -67,7 +67,7 @@ description: "tcttest – test cases of the table database API"
  <code>-dad</code> : use the function `tctdbadddouble&#8217; instead of `tctdbputcat&#8217;.<br />
  <code>-rl</code> : set the length of values at random.<br />
  <code>-ru</code> : select update operations at random.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tctmttest/">tctmttest</a></code>(1), <code><a href="/docs/linux/man/1-tctmgr/">tctmgr</a></code>(1), <code><a href="/docs/linux/man/3-tctdb/">tctdb</a></code>(3), <code><a href="/docs/linux/man/3-tokyocabinet/">tokyocabinet</a></code>(3) </p>

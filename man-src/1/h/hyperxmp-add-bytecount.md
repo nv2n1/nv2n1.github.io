@@ -16,10 +16,10 @@ description: "hyperxmp-add-bytecount – adds/updates byteCount specification in
 <p> If no XMP packet of a compatible form is found in the PDF file, no change is made to the file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Write usage summary and exit.</p>
-<dt><code>-version</code></p>
-<dd> Output version information and exit.</dl>
+<dt><code>-help</code></dt>
+<dd> Write usage summary and exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Email bug reports to John Collins and/or Scott Pakin </p>
 <h2>Index</h2>

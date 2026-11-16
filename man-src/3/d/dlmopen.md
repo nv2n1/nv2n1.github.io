@@ -22,35 +22,35 @@ description: "dlclose, dlopen, dlmopen – open and close a shared object"
 <p> The function <code>dlopen</code>() loads the dynamic shared object (shared library) file named by the null-terminated string <i>filename</i> and returns an opaque &quot;handle&quot; for the loaded object. This handle is employed with other functions in the dlopen API, such as <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3), <code><a href="/docs/linux/man/3-dladdr/">dladdr</a></code>(3), <code><a href="/docs/linux/man/3-dlinfo/">dlinfo</a></code>(3), and <code>dlclose</code>(). </p>
 <p> If <i>filename</i> is NULL, then the returned handle is for the main program. If <i>filename</i> contains a slash (&quot;/&quot;), then it is interpreted as a (relative or absolute) pathname. Otherwise, the dynamic linker searches for the object as follows (see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for further details):</p>
 <dl>
-<dt>o</p>
-<dd> (ELF only) If the calling object (i.e., the shared library or executable from which <code>dlopen</code>() is called) contains a DT_RPATH tag, and does not contain a DT_RUNPATH tag, then the directories listed in the DT_RPATH tag are searched.</p>
-<dt>o</p>
-<dd> If, at the time that the program was started, the environment variable <code>LD_LIBRARY_PATH</code> was defined to contain a colon-separated list of directories, then these are searched. (As a security measure, this variable is ignored for set-user-ID and set-group-ID programs.)</p>
-<dt>o</p>
-<dd> (ELF only) If the calling object contains a DT_RUNPATH tag, then the directories listed in that tag are searched.</p>
-<dt>o</p>
-<dd> The cache file <i>/etc/ld.so.cache</i> (maintained by <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8)) is checked to see whether it contains an entry for <i>filename</i>.</p>
-<dt>o</p>
-<dd> The directories <i>/lib</i> and <i>/usr/lib</i> are searched (in that order).</dl>
+<dt>o</dt>
+<dd> (ELF only) If the calling object (i.e., the shared library or executable from which <code>dlopen</code>() is called) contains a DT_RPATH tag, and does not contain a DT_RUNPATH tag, then the directories listed in the DT_RPATH tag are searched.</dd>
+<dt>o</dt>
+<dd> If, at the time that the program was started, the environment variable <code>LD_LIBRARY_PATH</code> was defined to contain a colon-separated list of directories, then these are searched. (As a security measure, this variable is ignored for set-user-ID and set-group-ID programs.)</dd>
+<dt>o</dt>
+<dd> (ELF only) If the calling object contains a DT_RUNPATH tag, then the directories listed in that tag are searched.</dd>
+<dt>o</dt>
+<dd> The cache file <i>/etc/ld.so.cache</i> (maintained by <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8)) is checked to see whether it contains an entry for <i>filename</i>.</dd>
+<dt>o</dt>
+<dd> The directories <i>/lib</i> and <i>/usr/lib</i> are searched (in that order).</dd></dl>
 <p> If the object specified by <i>filename</i> has dependencies on other shared objects, then these are also automatically loaded by the dynamic linker using the same rules. (This process may occur recursively, if those objects in turn have dependencies, and so on.) </p>
 <p> One of the following two values must be included in <i>flags</i>:</p>
 <dl>
-<dt><code>RTLD_LAZY</code></p>
-<dd> Perform lazy binding. Resolve symbols only as the code that references them is executed. If the symbol is never referenced, then it is never resolved. (Lazy binding is performed only for function references; references to variables are always immediately bound when the shared object is loaded.) Since glibc 2.1.1, this flag is overridden by the effect of the <code>LD_BIND_NOW</code> environment variable.</p>
-<dt><code>RTLD_NOW</code></p>
-<dd> If this value is specified, or the environment variable <code>LD_BIND_NOW</code> is set to a nonempty string, all undefined symbols in the shared object are resolved before <code>dlopen</code>() returns. If this cannot be done, an error is returned.</dl>
+<dt><code>RTLD_LAZY</code></dt>
+<dd> Perform lazy binding. Resolve symbols only as the code that references them is executed. If the symbol is never referenced, then it is never resolved. (Lazy binding is performed only for function references; references to variables are always immediately bound when the shared object is loaded.) Since glibc 2.1.1, this flag is overridden by the effect of the <code>LD_BIND_NOW</code> environment variable.</dd>
+<dt><code>RTLD_NOW</code></dt>
+<dd> If this value is specified, or the environment variable <code>LD_BIND_NOW</code> is set to a nonempty string, all undefined symbols in the shared object are resolved before <code>dlopen</code>() returns. If this cannot be done, an error is returned.</dd></dl>
 <p> Zero or more of the following values may also be ORed in <i>flags</i>:</p>
 <dl>
-<dt><code>RTLD_GLOBAL</code></p>
-<dd> The symbols defined by this shared object will be made available for symbol resolution of subsequently loaded shared objects.</p>
-<dt><code>RTLD_LOCAL</code></p>
-<dd> This is the converse of <code>RTLD_GLOBAL</code>, and the default if neither flag is specified. Symbols defined in this shared object are not made available to resolve references in subsequently loaded shared objects.</p>
-<dt><code>RTLD_NODELETE</code> (since glibc 2.2)</p>
-<dd> Do not unload the shared object during <code>dlclose</code>(). Consequently, the object&#8217;s static and global variables are not reinitialized if the object is reloaded with <code>dlopen</code>() at a later time.</p>
-<dt><code>RTLD_NOLOAD</code> (since glibc 2.2)</p>
-<dd> Don&#8217;t load the shared object. This can be used to test if the object is already resident (<code>dlopen</code>() returns NULL if it is not, or the object&#8217;s handle if it is resident). This flag can also be used to promote the flags on a shared object that is already loaded. For example, a shared object that was previously loaded with <code>RTLD_LOCAL</code> can be reopened with <code>RTLD_NOLOAD | RTLD_GLOBAL</code>.</p>
-<dt><code>RTLD_DEEPBIND</code> (since glibc 2.3.4)</p>
-<dd> Place the lookup scope of the symbols in this shared object ahead of the global scope. This means that a self-contained object will use its own symbols in preference to global symbols with the same name contained in objects that have already been loaded.</dl>
+<dt><code>RTLD_GLOBAL</code></dt>
+<dd> The symbols defined by this shared object will be made available for symbol resolution of subsequently loaded shared objects.</dd>
+<dt><code>RTLD_LOCAL</code></dt>
+<dd> This is the converse of <code>RTLD_GLOBAL</code>, and the default if neither flag is specified. Symbols defined in this shared object are not made available to resolve references in subsequently loaded shared objects.</dd>
+<dt><code>RTLD_NODELETE</code> (since glibc 2.2)</dt>
+<dd> Do not unload the shared object during <code>dlclose</code>(). Consequently, the object&#8217;s static and global variables are not reinitialized if the object is reloaded with <code>dlopen</code>() at a later time.</dd>
+<dt><code>RTLD_NOLOAD</code> (since glibc 2.2)</dt>
+<dd> Don&#8217;t load the shared object. This can be used to test if the object is already resident (<code>dlopen</code>() returns NULL if it is not, or the object&#8217;s handle if it is resident). This flag can also be used to promote the flags on a shared object that is already loaded. For example, a shared object that was previously loaded with <code>RTLD_LOCAL</code> can be reopened with <code>RTLD_NOLOAD | RTLD_GLOBAL</code>.</dd>
+<dt><code>RTLD_DEEPBIND</code> (since glibc 2.3.4)</dt>
+<dd> Place the lookup scope of the symbols in this shared object ahead of the global scope. This means that a self-contained object will use its own symbols in preference to global symbols with the same name contained in objects that have already been loaded.</dd></dl>
 <p> If <i>filename</i> is NULL, then the returned handle is for the main program. When given to <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3), this handle causes a search for a symbol in the main program, followed by all shared objects loaded at program startup, and then all shared objects loaded by <code>dlopen</code>() with the flag <code>RTLD_GLOBAL</code>. </p>
 <p> Symbol references in the shared object are resolved using (in order): symbols in the link map of objects loaded for the main program and its dependencies; symbols in shared objects (and their dependencies) that were previously opened with <code>dlopen</code>() using the <code>RTLD_GLOBAL</code> flag; and definitions in the shared object itself (and any dependencies that were loaded for that object). </p>
 <p> Any global symbols in the executable that were placed into its dynamic symbol table by <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) can also be used to resolve references in a dynamically loaded shared object. Symbols may be placed in the dynamic symbol table either because the executable was linked with the flag &quot;-rdynamic&quot; (or, synonymously, &quot;&#8211;export-dynamic&quot;), which causes all of the executable&#8217;s global symbols to be placed in the dynamic symbol table, or because <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) noted a dependency on a symbol in another object during static linking. </p>
@@ -62,10 +62,10 @@ description: "dlclose, dlopen, dlmopen – open and close a shared object"
 <p> The <code>dlmopen</code>() function differs from <code>dlopen</code>() primarily in that it accepts an additional argument, <i>lmid</i>, that specifies the link-map list (also referred to as a <i>namespace</i>) in which the shared object should be loaded. (By comparison, <code>dlopen</code>() adds the dynamically loaded shared object to the same namespace as the shared object from which the <code>dlopen</code>() call is made.) The <i>Lmid_t</i> type is an opaque handle that refers to a namespace. </p>
 <p> The <i>lmid</i> argument is either the ID of an existing namespace (which can be obtained using the <code><a href="/docs/linux/man/3-dlinfo/">dlinfo</a></code>(3) <code>RTLD_DI_LMID</code> request) or one of the following special values:</p>
 <dl>
-<dt><code>LM_ID_BASE</code></p>
-<dd> Load the shared object in the initial namespace (i.e., the application&#8217;s namespace).</p>
-<dt><code>LM_ID_NEWLM</code></p>
-<dd> Create a new namespace and load the shared object in that namespace. The object must have been correctly linked to reference all of the other shared objects that it requires, since the new namespace is initially empty.</dl>
+<dt><code>LM_ID_BASE</code></dt>
+<dd> Load the shared object in the initial namespace (i.e., the application&#8217;s namespace).</dd>
+<dt><code>LM_ID_NEWLM</code></dt>
+<dd> Create a new namespace and load the shared object in that namespace. The object must have been correctly linked to reference all of the other shared objects that it requires, since the new namespace is initially empty.</dd></dl>
 <p> If <i>filename</i> is NULL, then the only permitted value for <i>lmid</i> is <code>LM_ID_BASE</code>.</p>
 <h3>dlclose()</h3>
 <p> The function <code>dlclose</code>() decrements the reference count on the dynamically loaded shared object referred to by <i>handle</i>. </p>

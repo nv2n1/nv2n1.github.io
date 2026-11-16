@@ -17,98 +17,98 @@ description: "vorbisgain – calculate the replay gain for Ogg Vorbis files"
 <p> All streams in a chained file are processed, but the ReplayGain tags are only written to (or removed from) the first stream. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Show command help. </p>
-<dt>-a, &#8211;album</p>
-<dd> Activates album mode, in which the album gain (sometimes called the audiophile gain) is calculated in addition to the track gain (sometimes called the radio gain). </p>
-<dt>-g n, &#8211;album-gain=n</p>
-<dd> Sets the album gain value to use. Default is to calculate it, if <i>-a</i> is specified. Implies <i>-a</i> in the sense that the album gain tag is written. This is a relative value, in dB, specifying the <code>change</code> in volume that should be applied. </p>
-<dt>-c, &#8211;clean</p>
-<dd> Remove any ReplayGain tags from the specified files. If a file does not contain any ReplayGain tags, the file is not modified. </p>
-<dt>-C, &#8211;convert</p>
-<dd> Convert old format ReplayGain tags to a new format (see section TAG FORMAT below for details). If a file does not contain all ReplayGain tags that are needed for a conversion, the file is not modified. The album peak tag is only created if <i>-a</i> is specified, and the album gain value is then checked for consistency. Otherwise any album gain is converted without any checks. </p>
-<dt>-d, &#8211;display-only</p>
-<dd> Display the result only; do not write anything to disk. This applies to all options. </p>
-<dt>-f, &#8211;fast</p>
-<dd> Only calculate the gain for files that do not contain all replay gain tags needed (the album gain and peak tags are only considered if <i>-a</i> has been specified). </p>
-<dt>-n, &#8211;no-progress</p>
-<dd> Only display results, but don&#8217;t show progress in percentages and times. This can be useful if the output is piped into other programs. </p>
-<dt>-q, &#8211;quiet</p>
-<dd> Do not display any output while processing. Only error and warning messages will be printed. </p>
-<dt>-r, &#8211;recursive</p>
-<dd> Enter directories (recursively) and search for files, if directories or file patterns are specified. <i>Note:</i> Only available if <code>vorbisgain</code> was configured with &#8211;enable-recursive. </p>
-<dt>-s, &#8211;silent</p>
-<dd> Silently skip any non-Vorbis files found. Vorbis files that can&#8217;t be processed for some reason are skipped as well, though not silently. Default is to stop when such files are encountered. </p>
-<dt>-v, &#8211;version</p>
-<dd> Display the version of the program. </p>
+<dt>-h, &#8211;help</dt>
+<dd> Show command help. </dd>
+<dt>-a, &#8211;album</dt>
+<dd> Activates album mode, in which the album gain (sometimes called the audiophile gain) is calculated in addition to the track gain (sometimes called the radio gain). </dd>
+<dt>-g n, &#8211;album-gain=n</dt>
+<dd> Sets the album gain value to use. Default is to calculate it, if <i>-a</i> is specified. Implies <i>-a</i> in the sense that the album gain tag is written. This is a relative value, in dB, specifying the <code>change</code> in volume that should be applied. </dd>
+<dt>-c, &#8211;clean</dt>
+<dd> Remove any ReplayGain tags from the specified files. If a file does not contain any ReplayGain tags, the file is not modified. </dd>
+<dt>-C, &#8211;convert</dt>
+<dd> Convert old format ReplayGain tags to a new format (see section TAG FORMAT below for details). If a file does not contain all ReplayGain tags that are needed for a conversion, the file is not modified. The album peak tag is only created if <i>-a</i> is specified, and the album gain value is then checked for consistency. Otherwise any album gain is converted without any checks. </dd>
+<dt>-d, &#8211;display-only</dt>
+<dd> Display the result only; do not write anything to disk. This applies to all options. </dd>
+<dt>-f, &#8211;fast</dt>
+<dd> Only calculate the gain for files that do not contain all replay gain tags needed (the album gain and peak tags are only considered if <i>-a</i> has been specified). </dd>
+<dt>-n, &#8211;no-progress</dt>
+<dd> Only display results, but don&#8217;t show progress in percentages and times. This can be useful if the output is piped into other programs. </dd>
+<dt>-q, &#8211;quiet</dt>
+<dd> Do not display any output while processing. Only error and warning messages will be printed. </dd>
+<dt>-r, &#8211;recursive</dt>
+<dd> Enter directories (recursively) and search for files, if directories or file patterns are specified. <i>Note:</i> Only available if <code>vorbisgain</code> was configured with &#8211;enable-recursive. </dd>
+<dt>-s, &#8211;silent</dt>
+<dd> Silently skip any non-Vorbis files found. Vorbis files that can&#8217;t be processed for some reason are skipped as well, though not silently. Default is to stop when such files are encountered. </dd>
+<dt>-v, &#8211;version</dt>
+<dd> Display the version of the program. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Simplest version. Calculate the track gain and peak only. </p>
 <dl>
 <dt>
-<dd> vorbisgain somefile.ogg</dl>
+</dt><dd> vorbisgain somefile.ogg</dd></dl>
 <p> Note that the following examples are only possible if <code>vorbisgain</code> was configured with &#8211;enable-recursive. </p>
 <p> Calculate the album gain and peak, in addition to the track gain and peak, for all .ogg files in the directory &quot;music&quot; (and all subdirectories). All files in one directory are treated as belonging to the same album. Files that already have ReplayGain tags are not re-calculated. Note the quotes, as they cause the shell to not do any filename globbing: </p>
 <dl>
 <dt>
-<dd> vorbisgain -a -f -r &quot;music/*.ogg&quot;</dl>
+</dt><dd> vorbisgain -a -f -r &quot;music/*.ogg&quot;</dd></dl>
 <p> Calculate the album gain. The files specified before the directory &quot;album&quot; are treated as one album, the files in the directory &quot;album&quot; as another album and the remaining files as a third album: </p>
 <dl>
 <dt>
-<dd> vorbisgain -a -r a.ogg b.ogg c.ogg album d.ogg e.ogg f.ogg</dl>
+</dt><dd> vorbisgain -a -r a.ogg b.ogg c.ogg album d.ogg e.ogg f.ogg</dd></dl>
 <p> Remove all replaygain tags from a collection of oggs: </p>
 <dl>
 <dt>
-<dd> vorbisgain -c -r &quot;music/*.ogg&quot;</dl>
+</dt><dd> vorbisgain -c -r &quot;music/*.ogg&quot;</dd></dl>
 <h2>TAG FORMAT</h2>
 <p> <code>vorbisgain</code> creates tags like these (when in <i>-a</i> mode): </p>
 <dl>
 <dt>
-<dd> REPLAYGAIN_TRACK_GAIN=-7.03 dB</dl>
+</dt><dd> REPLAYGAIN_TRACK_GAIN=-7.03 dB</dd></dl>
 <dl>
 <dt>
-<dd> REPLAYGAIN_TRACK_PEAK=1.21822226</dl>
+</dt><dd> REPLAYGAIN_TRACK_PEAK=1.21822226</dd></dl>
 <dl>
 <dt>
-<dd> REPLAYGAIN_ALBUM_GAIN=-6.37 dB</dl>
+</dt><dd> REPLAYGAIN_ALBUM_GAIN=-6.37 dB</dd></dl>
 <dl>
 <dt>
-<dd> REPLAYGAIN_ALBUM_PEAK=1.21822226</dl>
+</dt><dd> REPLAYGAIN_ALBUM_PEAK=1.21822226</dd></dl>
 <p> Gain specifies how much the volume should be changed before playback, in dB. Peak is the maximum sample value of the file before any gain has been applied, where 1.0 means &quot;full sample value&quot; (32,767 when decoding to signed 16 bit samples). </p>
 <p> Earlier versions of <code>vorbisgain</code> (before 0.30) created the following tags: </p>
 <dl>
 <dt>
-<dd> RG_RADIO</dl>
+</dt><dd> RG_RADIO</dd></dl>
 <dl>
 <dt>
-<dd> RG_PEAK</dl>
+</dt><dd> RG_PEAK</dd></dl>
 <dl>
 <dt>
-<dd> RG_AUDIOPHILE</dl>
+</dt><dd> RG_AUDIOPHILE</dd></dl>
 <p> When <i>-c</i> is used, RG_RADIO is converted to REPLAYGAIN_TRACK_GAIN, RG_PEAK to REPLAYGAIN_TRACK_PEAK, RG_AUDIOPHILE to REPLAYGAIN_ALBUM_GAIN and REPLAYGAIN_ALBUM_PEAK is calculated as the maximum of all RG_PEAK tags in the album. </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Program Code:</p>
+<dt>Program Code:</dt>
 <dd>
  Gian-Carlo Pascutto &lt;gcp [at] sjeng.org&gt;<br />
- Magnus Holmgren &lt;lear [at] algonet.se&gt; </p>
-<dt>ReplayGain Analysis Code:</p>
+ Magnus Holmgren &lt;lear [at] algonet.se&gt; </dd>
+<dt>ReplayGain Analysis Code:</dt>
 <dd>
  Glen Sawyer &lt;glensawyer [at] hotmail.com&gt;<br />
- Frank Klemm (<a rel="nofollow" href="http://www.uni-jena.de/~pfk/)">http://www.uni-jena.de/~pfk/)</a> </p>
-<dt>Man Page:</p>
+ Frank Klemm (<a rel="nofollow" href="http://www.uni-jena.de/~pfk/)">http://www.uni-jena.de/~pfk/)</a> </dd>
+<dt>Man Page:</dt>
 <dd>
- Magnus Holmgren &lt;lear [at] algonet.se&gt; </p>
+ Magnus Holmgren &lt;lear [at] algonet.se&gt; </dd>
 </dl>
 <h2>BUGS</h2>
 <p> None known. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><a rel="nofollow" href="http://sjeng.org/vorbisgain.html">http://sjeng.org/vorbisgain.html</a></p>
-<dd> Home page for VorbisGain. The latest version, and a Windows executable, can be found here. </p>
-<dt><a rel="nofollow" href="http://www.replaygain.org/">http://www.replaygain.org/</a></p>
-<dd> Contains detailed information about ReplayGain and how it is calculated. </p>
-<dt><a rel="nofollow" href="http://www.hydrogenaudio.org/">http://www.hydrogenaudio.org/</a></p>
-<dd> Discussion forum for audio compression and related issues, including Ogg Vorbis and VorbisGain. </p>
+<dt><a rel="nofollow" href="http://sjeng.org/vorbisgain.html">http://sjeng.org/vorbisgain.html</a></dt>
+<dd> Home page for VorbisGain. The latest version, and a Windows executable, can be found here. </dd>
+<dt><a rel="nofollow" href="http://www.replaygain.org/">http://www.replaygain.org/</a></dt>
+<dd> Contains detailed information about ReplayGain and how it is calculated. </dd>
+<dt><a rel="nofollow" href="http://www.hydrogenaudio.org/">http://www.hydrogenaudio.org/</a></dt>
+<dd> Discussion forum for audio compression and related issues, including Ogg Vorbis and VorbisGain. </dd>
 </dl>
 <h2>Index</h2>

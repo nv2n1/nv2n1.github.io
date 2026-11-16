@@ -15,11 +15,11 @@ pcie_set_mps - set PCI Express maximum payload size
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
  
 
  <i>mps</i>
-<dl><dd>maximum payload size in bytes valid values are 128, 256, 512, 1024, 2048, 4096</dl>
+<dl><dd>maximum payload size in bytes valid values are 128, 256, 512, 1024, 2048, 4096</dd></dl>
 
 <h2>Description</h2>
 

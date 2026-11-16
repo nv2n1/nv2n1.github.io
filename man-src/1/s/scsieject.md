@@ -17,18 +17,18 @@ description: "scsieject – control SCSI tape devices"
 <p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your tape drive. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally /dev/sg0 through /dev/sg15, under FreeBSD these are /dev/pass0 through /dev/passX. Under Solaris this is usually the same as your tape drive (Solaris has a SCSI passthrough ioctl). You can set the STAPE or TAPE environment variable rather than use -f. </p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>load</code></p>
-<dd> Load the medium into the drive. When this command is issued to a CD/DVD drive and the tray is extended the tray will be retracted if the drive is capable of it. </p>
-<dt><code>unload</code></p>
-<dd> Unload the medium from the drive (also known as eject). When this command is issued to a CD/DVD drive or a tape drive the media will be ejected if the device supports it. </p>
-<dt><code>start</code></p>
-<dd> Start the device. Some devices require a start command after a media changer has loaded new media into the device. </p>
-<dt><code>stop</code></p>
-<dd> Stop the device. Some devices require a stop command prior to unloading the medium from the device when using a media changer. </p>
-<dt><code>lock</code></p>
-<dd> Lock the device. Locks the device so that the medium cannot be removed manually. </p>
-<dt><code>unlock</code></p>
-<dd> Unlock the device. Unlocks the device so that the medium can be removed manually. </p>
+<dt><code>load</code></dt>
+<dd> Load the medium into the drive. When this command is issued to a CD/DVD drive and the tray is extended the tray will be retracted if the drive is capable of it. </dd>
+<dt><code>unload</code></dt>
+<dd> Unload the medium from the drive (also known as eject). When this command is issued to a CD/DVD drive or a tape drive the media will be ejected if the device supports it. </dd>
+<dt><code>start</code></dt>
+<dd> Start the device. Some devices require a start command after a media changer has loaded new media into the device. </dd>
+<dt><code>stop</code></dt>
+<dd> Stop the device. Some devices require a stop command prior to unloading the medium from the device when using a media changer. </dd>
+<dt><code>lock</code></dt>
+<dd> Lock the device. Locks the device so that the medium cannot be removed manually. </dd>
+<dt><code>unlock</code></dt>
+<dd> Unlock the device. Unlocks the device so that the medium can be removed manually. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> This program was written by Robert Nelson &lt;robertnelson [at] users.sourceforge.net&gt; based on the scsitape program written by Eric Lee Green &lt;eric [at] badtux.org&gt;. Major portions of the &#8216;mtxl.c&#8217; library used herein were written by Leonard Zubkoff. </p>

@@ -15,7 +15,7 @@ deactivate_locked_super - drop an active reference to superblock
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>superblock to deactivate</dl>
+<dl><dd></dd><dd>superblock to deactivate</dd></dl>
 
 <h2>Description</h2>
 

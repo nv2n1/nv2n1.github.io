@@ -18,29 +18,27 @@ description: "fprcp – Free Pascal windres preprocessor program."
 <h2>OPTIONS</h2>
 <p> fprcp has a small number of options to control its behaviour: </p>
 <dl>
-<dt><code>-C </code></p>
-<dd> Define the symbol <i>symbol</i> before processing is started.</p>
-<dt><code>-i file</code></p>
-<dd> Specify the input file name. This argument is mandatory.</p>
-<dt><code>-l language</code></p>
-<dd> Set the programming language for include files. The <i>language</i> constant may be one of the following:</p>
+<dt><code>-C </code></dt>
+<dd> Define the symbol <i>symbol</i> before processing is started.</dd>
+<dt><code>-i file</code></dt>
+<dd> Specify the input file name. This argument is mandatory.</dd>
+<dt><code>-l language</code></dt>
+<dd> Set the programming language for include files. The <i>language</i> constant may be one of the following:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>C</i></p>
-<dd> The C programming language.</p>
-<dt><i>PASCAL</i></p>
-<dd> the Pascal programming language</dl>
+<dt><i>C</i></dt>
+<dd> The C programming language.</dd>
+<dt><i>PASCAL</i></dt>
+<dd> the Pascal programming language</dd></dl>
 </dl>
-<dt><code>-n </code></p>
-<dd> Do not support nested comments. By default, pascal nested comments are enabled.</p>
-<dt><code>-p path</code></p>
-<dd> Set the include path. This may contain several files, separated by semicolons. </p>
+<dt><code>-n </code></dt>
+<dd> Do not support nested comments. By default, pascal nested comments are enabled.</dd>
+<dt><code>-p path</code></dt>
+<dd> Set the include path. This may contain several files, separated by semicolons. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code>windres</code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code>windres</code>(1) </dd>
 </dl>
 <h2>Index</h2>

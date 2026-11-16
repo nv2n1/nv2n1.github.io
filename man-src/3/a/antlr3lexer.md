@@ -26,21 +26,21 @@ description: "include/antlr3lexer.h –"
 <p> Base interface for any ANTLR3 lexer. </p>
 <p> An ANLTR3 lexer builds from two sets of components: </p>
 <dl>
-<dt>*</p>
-<dd> The runtime components that provide common functionality such as traversing character streams, building tokens for output and so on.</p>
-<dt>*</p>
-<dd> The generated rules and struutre of the actual lexer, which call upon the runtime components.</dl>
+<dt>*</dt>
+<dd> The runtime components that provide common functionality such as traversing character streams, building tokens for output and so on.</dd>
+<dt>*</dt>
+<dd> The generated rules and struutre of the actual lexer, which call upon the runtime components.</dd></dl>
 <p> A lexer class contains a character input stream, a base recognizer interface (which it will normally implement) and a token source interface (which it also implements. The Tokensource interface is called by a token consumer (such as a parser, but in theory it can be anything that wants a set of abstract tokens in place of a raw character stream. </p>
 <p> So then, we set up a lexer in a sequence akin to: </p>
 <dl>
-<dt>*</p>
-<dd> Create a character stream (something which implements ANTLR3_INPUT_STREAM) and initialize it.</p>
-<dt>*</p>
-<dd> Create a lexer interface and tell it where it its input stream is. This will cause the creation of a base recognizer class, which it will override with its own implementations of some methods. The lexer creator can also then in turn override anything it likes.</p>
-<dt>*</p>
-<dd> The lexer token source interface is then passed to some interface that knows how to use it, byte calling for a next token.</p>
-<dt>*</p>
-<dd> When a next token is called, let ze lexing begin.</dl>
+<dt>*</dt>
+<dd> Create a character stream (something which implements ANTLR3_INPUT_STREAM) and initialize it.</dd>
+<dt>*</dt>
+<dd> Create a lexer interface and tell it where it its input stream is. This will cause the creation of a base recognizer class, which it will override with its own implementations of some methods. The lexer creator can also then in turn override anything it likes.</dd>
+<dt>*</dt>
+<dd> The lexer token source interface is then passed to some interface that knows how to use it, byte calling for a next token.</dd>
+<dt>*</dt>
+<dd> When a next token is called, let ze lexing begin.</dd></dl>
 <h2>Define Documentation</h2>
 <h3>#define ANTLR3_STRING_TERMINATOR 0xFFFFFFFF</h3>
 <p> Referenced by matchs().</p>
@@ -50,5 +50,5 @@ description: "include/antlr3lexer.h –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

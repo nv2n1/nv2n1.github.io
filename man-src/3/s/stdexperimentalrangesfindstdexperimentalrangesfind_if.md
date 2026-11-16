@@ -10,9 +10,7 @@ description: "std::experimental::ranges::find,std::experimental::ranges::find_if
 <p>std::experimental::ranges::find,std::experimental::ranges::find_if, &#8211; std::experimental::ranges::find,std::experimental::ranges::find_if,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class T, class Proj =
-
 ranges::identity &gt;</code></pre>
 <p>requires IndirectRelation&lt;ranges::equal_to&lt;&gt;, projected&lt;I, Proj&gt;,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(1)</code>&nbsp;<wbr>(ranges TS)<br />
 const T*&gt; I find(I first, S last, const T &amp;value, Proj proj = Proj{});</p>
@@ -39,7 +37,6 @@ I find_if_not(I first, S last, Pred pred, Proj proj = Proj{});</p>
 IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt;&nbsp;<wbr>Pred<br />
 &gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(6)</code>&nbsp;<wbr>(ranges TS) </p>
 <pre><code>ranges::safe_iterator_t&lt;R&gt; find_if_not(R&amp;&amp; r, Pred pred, Proj proj =
-
 Proj{});</code></pre>
 <p>Returns the first element in the range&nbsp;<wbr>[first, last)&nbsp;<wbr>that satisfies specific<br />
 criteria:<br />

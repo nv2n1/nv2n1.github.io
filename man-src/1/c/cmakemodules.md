@@ -19,11 +19,11 @@ description: "cmakemodules – Reference of available CMake modules."
 </pre>
 <p> This is the documentation for the modules and scripts coming with CMake. Using these modules you can check the computer system for installed software packages, features of the compiler and the existence of headers to name just a few. </p>
 <dl>
-<dt><code>AddFileDependencies</code></p>
-<dd> ADD_FILE_DEPENDENCIES(source_file depend_files&#8230;) </p>
+<dt><code>AddFileDependencies</code></dt>
+<dd> ADD_FILE_DEPENDENCIES(source_file depend_files&#8230;) </dd>
 <p> Adds the given files as dependencies to source_file </p>
-<dt><code>BundleUtilities</code></p>
-<dd> Functions to help assemble a standalone bundle application. </p>
+<dt><code>BundleUtilities</code></dt>
+<dd> Functions to help assemble a standalone bundle application. </dd>
 <p> A collection of CMake utility functions useful for dealing with .app bundles on the Mac and bundle-like directories on any OS. </p>
 <p> The following functions are provided by this module: </p>
 <pre>
@@ -121,8 +121,8 @@ description: "cmakemodules – Reference of available CMake modules."
   VERIFY_BUNDLE_SYMLINKS(&lt;bundle&gt; &lt;result_var&gt; &lt;info_var&gt;)
 </pre>
 <p> Verifies that any symlinks found in the bundle point to other files that are already also in the bundle&#8230; Anything that points to an external file causes this function to fail the verification. </p>
-<dt><code>CMakeAddFortranSubdirectory</code></p>
-<dd> Use MinGW gfortran from VS if a fortran compiler is not found. </p>
+<dt><code>CMakeAddFortranSubdirectory</code></dt>
+<dd> Use MinGW gfortran from VS if a fortran compiler is not found. </dd>
 <p> The &#8216;add_fortran_subdirectory&#8217; function adds a subdirectory to a project that contains a fortran only sub-project. The module will check the current compiler and see if it can support fortran. If no fortran compiler is found and the compiler is MSVC, then this module will find the MinGW gfortran. It will then use an external project to build with the MinGW tools. It will also create imported targets for the libraries created. This will only work if the fortran code is built into a dll, so BUILD_SHARED_LIBS is turned on in the project. In addition the CMAKE_GNUtoMS option is set to on, so that the MS .lib files are created. Usage is as follows: </p>
 <pre>
   cmake_add_fortran_subdirectory(
@@ -140,8 +140,8 @@ description: "cmakemodules – Reference of available CMake modules."
 <p> Relative paths in ARCHIVE_DIR and RUNTIME_DIR are interpreted with respect to the build directory corresponding to the source directory in which the function is invoked. </p>
 <p> Limitations: </p>
 <p> NO_EXTERNAL_INSTALL is required for forward compatibility with a future version that supports installation of the external project binaries during &quot;make install&quot;. </p>
-<dt><code>CMakeBackwardCompatibilityCXX</code></p>
-<dd> define a bunch of backwards compatibility variables </p>
+<dt><code>CMakeBackwardCompatibilityCXX</code></dt>
+<dd> define a bunch of backwards compatibility variables </dd>
 <pre><code>
   CMAKE_ANSI_CXXFLAGS - flag for ansi c++
   CMAKE_HAS_ANSI_STRING_STREAM - has &lt;strstream&gt;
@@ -150,16 +150,16 @@ description: "cmakemodules – Reference of available CMake modules."
   include(TestForSTDNamespace)
   include(TestForANSIForScope)
 </code></pre>
-<dt><code>CMakeDependentOption</code></p>
-<dd> Macro to provide an option dependent on other options. </p>
+<dt><code>CMakeDependentOption</code></dt>
+<dd> Macro to provide an option dependent on other options. </dd>
 <p> This macro presents an option to the user only if a set of other conditions are true. When the option is not presented a default value is used, but any value set by the user is preserved for when the option is presented again. Example invocation: </p>
 <pre>
   CMAKE_DEPENDENT_OPTION(USE_FOO &quot;Use Foo&quot; ON
                          &quot;USE_BAR;NOT USE_ZOT&quot; OFF)
 </pre>
 <p> If USE_BAR is true and USE_ZOT is false, this provides an option called USE_FOO that defaults to ON. Otherwise, it sets USE_FOO to OFF. If the status of USE_BAR or USE_ZOT ever changes, any value for the USE_FOO option is saved so that when the option is re-enabled it retains its old value. </p>
-<dt><code>CMakeDetermineVSServicePack</code></p>
-<dd> Determine the Visual Studio service pack of the &#8216;cl&#8217; in use. </p>
+<dt><code>CMakeDetermineVSServicePack</code></dt>
+<dd> Determine the Visual Studio service pack of the &#8216;cl&#8217; in use. </dd>
 <p> The functionality of this module has been superseded by the platform variable CMAKE_&lt;LANG&gt;_COMPILER_VERSION that contains the compiler version number. </p>
 <p> Usage: </p>
 <p>if (MSVC)<br />
@@ -175,7 +175,7 @@ include(CMakeDetermineVSServicePack)<br />
   vc100, vc100sp1
   vc110, vc110sp1, vc110sp2
 </pre>
-<dt><code>CMakeExpandImportedTargets</code></p>
+<dt><code>CMakeExpandImportedTargets</code></dt>
 <dd>
 <p> CMAKE_EXPAND_IMPORTED_TARGETS(&lt;var&gt; LIBRARIES lib1 lib2&#8230;libN </p>
 <pre>
@@ -183,9 +183,9 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> CMAKE_EXPAND_IMPORTED_TARGETS() takes a list of libraries and replaces all imported targets contained in this list with their actual file paths of the referenced libraries on disk, including the libraries from their link interfaces. If a CONFIGURATION is given, it uses the respective configuration of the imported targets if it exists. If no CONFIGURATION is given, it uses the first configuration from ${CMAKE_CONFIGURATION_TYPES} if set, otherwise ${CMAKE_BUILD_TYPE}. This macro is used by all Check*.cmake files which use try_compile() or try_run() and support CMAKE_REQUIRED_LIBRARIES , so that these checks support imported targets in CMAKE_REQUIRED_LIBRARIES: </p>
 <p>cmake_expand_imported_targets(expandedLibs LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} CONFIGURATION &#8220;${CMAKE_TRY_COMPILE_CONFIGURATION}&#8221;)</p>
-<dt><code>CMakeFindFrameworks</code></p>
-<dd> helper module to find OSX frameworks </p>
-<dt><code>CMakeFindPackageMode</code></p>
+</dd><dt><code>CMakeFindFrameworks</code></dt>
+<dd> helper module to find OSX frameworks </dd>
+<dt><code>CMakeFindPackageMode</code></dt>
 <dd>
 <p> This file is executed by cmake when invoked with &#8211;find-package. It expects that the following variables are set using -D: </p>
 <p>   NAME = name of the package<br />
@@ -195,7 +195,7 @@ include(CMakeDetermineVSServicePack)<br />
           COMPILE : print the flags needed for compiling an object file which uses the given package<br />
           LINK : print the flags needed for linking when using the given package<br />
    QUIET = if TRUE, don&#8217;t print anything</p>
-<dt><code>CMakeForceCompiler</code></p>
+</dd><dt><code>CMakeForceCompiler</code></dt>
 <dd>
 <p> This module defines macros intended for use by cross-compiling toolchain files when CMake is not able to automatically detect the compiler identification. </p>
 <p> Macro CMAKE_FORCE_C_COMPILER has the following signature: </p>
@@ -220,8 +220,8 @@ include(CMakeDetermineVSServicePack)<br />
    CMAKE_FORCE_C_COMPILER   (chc12 MetrowerksHicross)
    CMAKE_FORCE_CXX_COMPILER (chc12 MetrowerksHicross)
 </pre>
-<dt><code>CMakeGraphVizOptions</code></p>
-<dd> The builtin graphviz support of CMake. </p>
+</dd><dt><code>CMakeGraphVizOptions</code></dt>
+<dd> The builtin graphviz support of CMake. </dd>
 <p> CMake can generate graphviz files, showing the dependencies between the targets in a project and also external libraries which are linked against. When CMake is run with the &#8211;graphiz=foo option, it will produce </p>
 <pre>
     * a foo.dot file showing all dependencies in the project
@@ -259,8 +259,8 @@ include(CMakeDetermineVSServicePack)<br />
   GRAPHVIZ_IGNORE_TARGETS &#8211; A list of regular expressions for ignoring targets.<br />
      Mandatory : NO<br />
      Default   : empty</p>
-<dt><code>CMakePackageConfigHelpers</code></p>
-<dd> CONFIGURE_PACKAGE_CONFIG_FILE(), WRITE_BASIC_PACKAGE_VERSION_FILE() </p>
+<dt><code>CMakePackageConfigHelpers</code></dt>
+<dd> CONFIGURE_PACKAGE_CONFIG_FILE(), WRITE_BASIC_PACKAGE_VERSION_FILE() </dd>
 <p>CONFIGURE_PACKAGE_CONFIG_FILE(&lt;input&gt;&lt;output&gt; INSTALL_DESTINATION&lt;path&gt;[PATH_VARS&lt;var1&gt;&lt;var2&gt;&#8230;&lt;varN&gt;]<br />
                                                                        [NO_SET_AND_CHECK_MACRO]<br />
                                                                        [NO_CHECK_REQUIRED_COMPONENTS_MACRO])</p>
@@ -319,7 +319,7 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
    check_required_components(Foo)
 </pre>
-<dt><code>CMakeParseArguments</code></p>
+<dt><code>CMakeParseArguments</code></dt>
 <dd>
 <p> CMAKE_PARSE_ARGUMENTS(&lt;prefix&gt; &lt;options&gt; &lt;one_value_keywords&gt; &lt;multi_value_keywords&gt; args&#8230;) </p>
 <p> CMAKE_PARSE_ARGUMENTS() is intended to be used in macros or functions for parsing the arguments given to that macro or function. It processes the arguments and defines a set of variables which hold the values of the respective options. </p>
@@ -352,8 +352,8 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> You can then continue and process these variables. </p>
 <p> Keywords terminate lists of values, e.g. if directly after a one_value_keyword another recognized keyword follows, this is interpreted as the beginning of the new option. E.g. my_install(TARGETS foo DESTINATION OPTIONAL) would result in MY_INSTALL_DESTINATION set to &quot;OPTIONAL&quot;, but MY_INSTALL_DESTINATION would be empty and MY_INSTALL_OPTIONAL would be set to TRUE therefor. </p>
-<dt><code>CMakePrintHelpers</code></p>
-<dd> Convenience macros for printing properties and variables, useful e.g. for debugging. </p>
+</dd><dt><code>CMakePrintHelpers</code></dt>
+<dd> Convenience macros for printing properties and variables, useful e.g. for debugging. </dd>
 <p> CMAKE_PRINT_PROPERTIES([TARGETS target1 .. targetN] </p>
 <p>                        [SOURCES source1 .. sourceN]<br />
                         [DIRECTORIES dir1 .. dirN]<br />
@@ -374,10 +374,10 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
    -- CMAKE_C_COMPILER=&quot;/usr/bin/gcc&quot; ; CMAKE_MAJOR_VERSION=&quot;2&quot; ; THIS_ONE_DOES_NOT_EXIST=&quot;&quot;
 </pre>
-<dt><code>CMakePrintSystemInformation</code></p>
-<dd> print system information </p>
+<dt><code>CMakePrintSystemInformation</code></dt>
+<dd> print system information </dd>
 <p> This file can be used for diagnostic purposes just include it in a project to see various internal CMake variables. </p>
-<dt><code>CMakePushCheckState</code></p>
+<dt><code>CMakePushCheckState</code></dt>
 <dd>
 <p> This module defines three macros: CMAKE_PUSH_CHECK_STATE() CMAKE_POP_CHECK_STATE() and CMAKE_RESET_CHECK_STATE() These macros can be used to save, restore and reset (i.e., clear contents) the state of the variables CMAKE_REQUIRED_FLAGS, CMAKE_REQUIRED_DEFINITIONS, CMAKE_REQUIRED_LIBRARIES and CMAKE_REQUIRED_INCLUDES used by the various Check-files coming with CMake, like e.g. check_function_exists() etc. The variable contents are pushed on a stack, pushing multiple times is supported. This is useful e.g. when executing such tests in a Find-module, where they have to be set, but after the Find-module has been executed they should have the same value as they had before. </p>
 <p> CMAKE_PUSH_CHECK_STATE() macro receives optional argument RESET. Whether it&#8217;s specified, CMAKE_PUSH_CHECK_STATE() will set all CMAKE_REQUIRED_* variables to empty values, same as CMAKE_RESET_CHECK_STATE() call will do. </p>
@@ -391,12 +391,12 @@ include(CMakeDetermineVSServicePack)<br />
    check_function_exists(...)
    cmake_pop_check_state()
 </pre>
-<dt><code>CMakeVerifyManifest</code></p>
+</dd><dt><code>CMakeVerifyManifest</code></dt>
 <dd>
 <p> CMakeVerifyManifest.cmake </p>
 <p> This script is used to verify that embeded manifests and side by side manifests for a project match. To run this script, cd to a directory and run the script with cmake -P. On the command line you can pass in versions that are OK even if not found in the .manifest files. For example, cmake -Dallow_versions=8.0.50608.0 -PCmakeVerifyManifest.cmake could be used to allow an embeded manifest of 8.0.50608.0 to be used in a project even if that version was not found in the .manifest file. </p>
-<dt><code>CPack</code></p>
-<dd> Build binary and source package installers. </p>
+</dd><dt><code>CPack</code></dt>
+<dd> Build binary and source package installers. </dd>
 <p> The CPack module generates binary and source installers in a variety of formats using the cpack program. Inclusion of the CPack module adds two new targets to the resulting makefiles, package and package_source, which build the binary and source installers, respectively. The generated binary installers contain everything installed via CMake&#8217;s INSTALL command (and the deprecated INSTALL_FILES, INSTALL_PROGRAMS, and INSTALL_TARGETS commands). </p>
 <p> For certain kinds of binary installers (including the graphical installers on Mac OS X and Windows), CPack generates installers that allow users to select individual application components to install. See CPackComponent module for that. </p>
 <p> The CPACK_GENERATOR variable has different meanings in different contexts. In your CMakeLists.txt file, CPACK_GENERATOR is a *list of generators*: when run with no other arguments, CPack will iterate over that list and produce one package for each generator. In a CPACK_PROJECT_CONFIG_FILE, though, CPACK_GENERATOR is a *string naming a single generator*. If you need per-cpack- generator logic to control *other* cpack settings, then you need a CPACK_PROJECT_CONFIG_FILE. </p>
@@ -598,8 +598,8 @@ include(CMakeDetermineVSServicePack)<br />
    The default value is based on the installation directory.
    CPACK_CREATE_DESKTOP_LINKS - List of desktop links to create.
 </pre>
-<dt><code>CPackBundle</code></p>
-<dd> CPack Bundle generator (Mac OS X) specific options </p>
+<dt><code>CPackBundle</code></dt>
+<dd> CPack Bundle generator (Mac OS X) specific options </dd>
 <p> Installers built on Mac OS X using the Bundle generator use the aforementioned DragNDrop (CPACK_DMG_xxx) variables, plus the following Bundle-specific parameters (CPACK_BUNDLE_xxx). </p>
 <pre>
   CPACK_BUNDLE_NAME - The name of the generated bundle. This
@@ -621,8 +621,8 @@ include(CMakeDetermineVSServicePack)<br />
   an executable or script that will be run whenever an end-user double-clicks
   the generated bundle in the OSX Finder. Optional.
 </pre>
-<dt><code>CPackComponent</code></p>
-<dd> Build binary and source package installers </p>
+<dt><code>CPackComponent</code></dt>
+<dd> Build binary and source package installers </dd>
 <p> The CPackComponent module is the module which handles the component part of CPack. See CPack module for general information about CPack. </p>
 <p> For certain kinds of binary installers (including the graphical installers on Mac OS X and Windows), CPack generates installers that allow users to select individual application components to install. The contents of each of the components are identified by the COMPONENT argument of CMake&#8217;s INSTALL command. These components can be annotated with user-friendly names and descriptions, inter-component dependencies, etc., and grouped in various ways to customize the resulting installer. See the cpack_add_* commands, described below, for more information about component-specific installations. </p>
 <p> Component-specific installation allows users to select specific sets of components to install during the install process. Installation components are identified by the COMPONENT argument of CMake&#8217;s INSTALL commands, and should be further described by the following CPack commands: </p>
@@ -711,8 +711,8 @@ include(CMakeDetermineVSServicePack)<br />
 <p> UPLOAD_DIRECTORY is the local directory where CPack will create the various archives for each of the components. The contents of this directory should be uploaded to a location accessible by the URL given in the site argument. If omitted, CPack will use the directory CPackUploads inside the CMake binary directory to store the generated archives. </p>
 <p> The ALL flag indicates that all components be downloaded. Otherwise, only those components explicitly marked as DOWNLOADED or that have a specified ARCHIVE_FILE will be downloaded. Additionally, the ALL option implies ADD_REMOVE (unless NO_ADD_REMOVE is specified). </p>
 <p> ADD_REMOVE indicates that CPack should install a copy of the installer that can be called from Windows&#8217; Add/Remove Programs dialog (via the &quot;Modify&quot; button) to change the set of installed components. NO_ADD_REMOVE turns off this behavior. This option is ignored on Mac OS X. </p>
-<dt><code>CPackCygwin</code></p>
-<dd> Cygwin CPack generator (Cygwin). </p>
+<dt><code>CPackCygwin</code></dt>
+<dd> Cygwin CPack generator (Cygwin). </dd>
 <p> The following variable is specific to installers build on and/or for Cygwin: </p>
 <pre>
    CPACK_CYGWIN_PATCH_NUMBER - The Cygwin patch number.
@@ -722,8 +722,8 @@ include(CMakeDetermineVSServicePack)<br />
    CPACK_CYGWIN_BUILD_SCRIPT - The Cygwin build script.
    FIXME: This documentation is incomplete.
 </pre>
-<dt><code>CPackDMG</code></p>
-<dd> DragNDrop CPack generator (Mac OS X). </p>
+<dt><code>CPackDMG</code></dt>
+<dd> DragNDrop CPack generator (Mac OS X). </dd>
 <p> The following variables are specific to the DragNDrop installers built on Mac OS X: </p>
 <pre>
   CPACK_DMG_VOLUME_NAME - The volume name of the generated disk
@@ -768,8 +768,8 @@ include(CMakeDetermineVSServicePack)<br />
   automatically detected command (or specify its location if the
   auto-detection fails to find it.)
 </pre>
-<dt><code>CPackDeb</code></p>
-<dd> The builtin (binary) CPack Deb generator (Unix only) </p>
+<dt><code>CPackDeb</code></dt>
+<dd> The builtin (binary) CPack Deb generator (Unix only) </dd>
 <p> CPackDeb may be used to create Deb package using CPack. CPackDeb is a CPack generator thus it uses the CPACK_XXX variables used by CPack : <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake:CPackConfiguration.">http://www.cmake.org/Wiki/CMake:CPackConfiguration.</a> CPackDeb generator should work on any linux host but it will produce better deb package when Debian specific tools &#8216;dpkg-xxx&#8217; are usable on the build system. </p>
 <p> CPackDeb has specific features which are controlled by the specifics CPACK_DEBIAN_XXX variables.You&#8217;ll find a detailed usage on the wiki: </p>
 <pre>
@@ -922,8 +922,8 @@ include(CMakeDetermineVSServicePack)<br />
      Typical usage is for conffiles, postinst, postrm, prerm.<br />
      Usage: set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA<br />
             &#8220;${CMAKE_CURRENT_SOURCE_DIR/prerm;${CMAKE_CURRENT_SOURCE_DIR}/postrm&#8221;)</p>
-<dt><code>CPackNSIS</code></p>
-<dd> CPack NSIS generator specific options </p>
+<dt><code>CPackNSIS</code></dt>
+<dd> CPack NSIS generator specific options </dd>
 <p> The following variables are specific to the graphical installers built on Windows using the Nullsoft Installation System. </p>
 <p>CPACK_NSIS_INSTALL_ROOT &#8211; The default installation directory presented<br />
                                   to the end user by the NSIS installer is under this root dir.The full<br />
@@ -1023,8 +1023,8 @@ include(CMakeDetermineVSServicePack)<br />
                                                       &#8220;CMake Help&#8221;<br />
                                                       &#8220;http://www.cmake.org&#8221;<br />
                                                       &#8220;CMake Web Site&#8221;)</p>
-<dt><code>CPackPackageMaker</code></p>
-<dd> PackageMaker CPack generator (Mac OS X). </p>
+<dt><code>CPackPackageMaker</code></dt>
+<dd> PackageMaker CPack generator (Mac OS X). </dd>
 <p> The following variable is specific to installers built on Mac OS X using PackageMaker: </p>
 <pre>
   CPACK_OSX_PACKAGE_VERSION - The version of Mac OS X that the
@@ -1040,8 +1040,8 @@ include(CMakeDetermineVSServicePack)<br />
   don't mind missing extra features available in the installer
   shipping with later versions of Mac OS X.
 </pre>
-<dt><code>CPackRPM</code></p>
-<dd> The builtin (binary) CPack RPM generator (Unix only) </p>
+<dt><code>CPackRPM</code></dt>
+<dd> The builtin (binary) CPack RPM generator (Unix only) </dd>
 <p> CPackRPM may be used to create RPM package using CPack. CPackRPM is a CPack generator thus it uses the CPACK_XXX variables used by CPack : <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake:CPackConfiguration">http://www.cmake.org/Wiki/CMake:CPackConfiguration</a> </p>
 <p> However CPackRPM has specific features which are controlled by the specifics CPACK_RPM_XXX variables. CPackRPM is a component aware generator so when CPACK_RPM_COMPONENT_INSTALL is ON some more CPACK_RPM_&lt;ComponentName&gt;_XXXX variables may be used in order to have component specific values. Note however that &lt;componentName&gt; refers to the **grouping name**. This may be either a component name or a component GROUP name. Usually those vars correspond to RPM spec file entities, one may find information about spec files here <a rel="nofollow" href="http://www.rpm.org/wiki/Docs.">http://www.rpm.org/wiki/Docs.</a> You&#8217;ll find a detailed usage of CPackRPM on the wiki: </p>
 <pre>
@@ -1176,8 +1176,8 @@ include(CMakeDetermineVSServicePack)<br />
      Default   : &#8211;<br />
      May be used to add more exclude path (directories or files) from the initial<br />
      default list of excluded paths. See CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST.</p>
-<dt><code>CPackWIX</code></p>
-<dd> CPack WiX generator specific options </p>
+<dt><code>CPackWIX</code></dt>
+<dd> CPack WiX generator specific options </dd>
 <p> The following variables are specific to the installers built on Windows using WiX. </p>
 <pre>
   CPACK_WIX_UPGRADE_GUID - Upgrade GUID (Product/@UpgradeCode)
@@ -1215,8 +1215,8 @@ include(CMakeDetermineVSServicePack)<br />
 <p> CPACK_WIX_TEMPLATE &#8211; Template file for WiX generation </p>
 <p> If this variable is set, the specified template will be used to generate the WiX wxs file. This should be used if further customization of the output is required. </p>
 <p> If this variable is not set, the default MSI template included with CMake will be used. </p>
-<dt><code>CTest</code></p>
-<dd> Configure a project for testing with CTest/CDash </p>
+<dt><code>CTest</code></dt>
+<dd> Configure a project for testing with CTest/CDash </dd>
 <p> Include this module in the top CMakeLists.txt file of a project to enable testing with CTest and dashboard submissions to CDash: </p>
 <pre>
    project(MyProject)
@@ -1245,24 +1245,24 @@ include(CMakeDetermineVSServicePack)<br />
    set(CTEST_USE_LAUNCHERS 1)
 </pre>
 <p> to the CTestConfig.cmake file. When this option is enabled, the CTest module tells CMake&#8217;s Makefile generators to invoke every command in the generated build system through a CTest launcher program. (Currently the CTEST_USE_LAUNCHERS option is ignored on non-Makefile generators.) During a manual build each launcher transparently runs the command it wraps. During a CTest-driven build for submission to CDash each launcher reports detailed information when its command fails or warns. (Setting CTEST_USE_LAUNCHERS in CTestConfig.cmake is convenient, but also adds the launcher overhead even for manual builds. One may instead set it in a CTest dashboard script and add it to the CMake cache for the build tree.) </p>
-<dt><code>CTestScriptMode</code></p>
+<dt><code>CTestScriptMode</code></dt>
 <dd>
 <p> This file is read by ctest in script mode (-S) </p>
-<dt><code>CTestUseLaunchers</code></p>
-<dd> Set the RULE_LAUNCH_* global properties when CTEST_USE_LAUNCHERS is on. </p>
+</dd><dt><code>CTestUseLaunchers</code></dt>
+<dd> Set the RULE_LAUNCH_* global properties when CTEST_USE_LAUNCHERS is on. </dd>
 <p> CTestUseLaunchers is automatically included when you include(CTest). However, it is split out into its own module file so projects can use the CTEST_USE_LAUNCHERS functionality independently. </p>
 <p> To use launchers, set CTEST_USE_LAUNCHERS to ON in a ctest -S dashboard script, and then also set it in the cache of the configured project. Both cmake and ctest need to know the value of it for the launchers to work properly. CMake needs to know in order to generate proper build rules, and ctest, in order to produce the proper error and warning analysis. </p>
 <p> For convenience, you may set the ENV variable CTEST_USE_LAUNCHERS_DEFAULT in your ctest -S script, too. Then, as long as your CMakeLists uses include(CTest) or include(CTestUseLaunchers), it will use the value of the ENV variable to initialize a CTEST_USE_LAUNCHERS cache variable. This cache variable initialization only occurs if CTEST_USE_LAUNCHERS is not already defined. </p>
-<dt><code>CheckCCompilerFlag</code></p>
-<dd> Check whether the C compiler supports a given flag. </p>
+<dt><code>CheckCCompilerFlag</code></dt>
+<dd> Check whether the C compiler supports a given flag. </dd>
 <p> CHECK_C_COMPILER_FLAG(&lt;flag&gt; &lt;var&gt;) </p>
 <pre>
   &lt;flag&gt; - the compiler flag
   &lt;var&gt;  - variable to store the result
 </pre>
 <p> This internally calls the check_c_source_compiles macro and sets CMAKE_REQUIRED_DEFINITIONS to &lt;flag&gt;. See help for CheckCSourceCompiles for a listing of variables that can otherwise modify the build. The result only tells that the compiler does not give an error message when it encounters the flag. If the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<dt><code>CheckCSourceCompiles</code></p>
-<dd> Check if given C source compiles and links into an executable </p>
+<dt><code>CheckCSourceCompiles</code></dt>
+<dd> Check if given C source compiles and links into an executable </dd>
 <p> CHECK_C_SOURCE_COMPILES(&lt;code&gt; &lt;var&gt; [FAIL_REGEX &lt;fail-regex&gt;]) </p>
 <pre>
   &lt;code&gt;       - source code to try to compile, must define 'main'
@@ -1276,8 +1276,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCSourceRuns</code></p>
-<dd> Check if the given C source code compiles and runs. </p>
+<dt><code>CheckCSourceRuns</code></dt>
+<dd> Check if the given C source code compiles and runs. </dd>
 <p> CHECK_C_SOURCE_RUNS(&lt;code&gt; &lt;var&gt;) </p>
 <pre>
   &lt;code&gt;   - source code to try to compile
@@ -1291,16 +1291,16 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCXXCompilerFlag</code></p>
-<dd> Check whether the CXX compiler supports a given flag. </p>
+<dt><code>CheckCXXCompilerFlag</code></dt>
+<dd> Check whether the CXX compiler supports a given flag. </dd>
 <p> CHECK_CXX_COMPILER_FLAG(&lt;flag&gt; &lt;var&gt;) </p>
 <pre>
   &lt;flag&gt; - the compiler flag
   &lt;var&gt;  - variable to store the result
 </pre>
 <p> This internally calls the check_cxx_source_compiles macro and sets CMAKE_REQUIRED_DEFINITIONS to &lt;flag&gt;. See help for CheckCXXSourceCompiles for a listing of variables that can otherwise modify the build. The result only tells that the compiler does not give an error message when it encounters the flag. If the flag has any effect or even a specific one is beyond the scope of this module. </p>
-<dt><code>CheckCXXSourceCompiles</code></p>
-<dd> Check if given C++ source compiles and links into an executable </p>
+<dt><code>CheckCXXSourceCompiles</code></dt>
+<dd> Check if given C++ source compiles and links into an executable </dd>
 <p> CHECK_CXX_SOURCE_COMPILES(&lt;code&gt; &lt;var&gt; [FAIL_REGEX &lt;fail-regex&gt;]) </p>
 <pre>
   &lt;code&gt;       - source code to try to compile, must define 'main'
@@ -1314,8 +1314,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCXXSourceRuns</code></p>
-<dd> Check if the given C++ source code compiles and runs. </p>
+<dt><code>CheckCXXSourceRuns</code></dt>
+<dd> Check if the given C++ source code compiles and runs. </dd>
 <p> CHECK_CXX_SOURCE_RUNS(&lt;code&gt; &lt;var&gt;) </p>
 <pre>
   &lt;code&gt;   - source code to try to compile
@@ -1329,8 +1329,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCXXSymbolExists</code></p>
-<dd> Check if a symbol exists as a function, variable, or macro in C++ </p>
+<dt><code>CheckCXXSymbolExists</code></dt>
+<dd> Check if a symbol exists as a function, variable, or macro in C++ </dd>
 <p> CHECK_CXX_SYMBOL_EXISTS(&lt;symbol&gt; &lt;files&gt; &lt;variable&gt;) </p>
 <p> Check that the &lt;symbol&gt; is available after including given header &lt;files&gt; and store the result in a &lt;variable&gt;. Specify the list of files in one argument as a semicolon-separated list. CHECK_CXX_SYMBOL_EXISTS() can be used to check in C++ files, as opposed to CHECK_SYMBOL_EXISTS(), which works only for C. </p>
 <p> If the header files define the symbol as a macro it is considered available and assumed to work. If the header files declare the symbol as a function or variable then the symbol must also be available for linking. If the symbol is a type or enum value it will not be recognized (consider using CheckTypeSize or CheckCSourceCompiles). </p>
@@ -1341,8 +1341,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckFortranFunctionExists</code></p>
-<dd> macro which checks if the Fortran function exists </p>
+<dt><code>CheckFortranFunctionExists</code></dt>
+<dd> macro which checks if the Fortran function exists </dd>
 <p> CHECK_FORTRAN_FUNCTION_EXISTS(FUNCTION VARIABLE) </p>
 <pre>
   FUNCTION - the name of the Fortran function
@@ -1352,8 +1352,8 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckFunctionExists</code></p>
-<dd> Check if a C function can be linked </p>
+<dt><code>CheckFunctionExists</code></dt>
+<dd> Check if a C function can be linked </dd>
 <p> CHECK_FUNCTION_EXISTS(&lt;function&gt; &lt;variable&gt;) </p>
 <p> Check that the &lt;function&gt; is provided by libraries on the system and store the result in a &lt;variable&gt;. This does not verify that any system header file declares the function, only that it can be found at link time (consider using CheckSymbolExists). </p>
 <p> The following variables may be set before calling this macro to modify the way the check is run: </p>
@@ -1363,8 +1363,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckIncludeFile</code></p>
-<dd> macro which checks the include file exists. </p>
+<dt><code>CheckIncludeFile</code></dt>
+<dd> macro which checks the include file exists. </dd>
 <p> CHECK_INCLUDE_FILE(INCLUDE VARIABLE) </p>
 <pre>
   INCLUDE  - name of include file
@@ -1377,8 +1377,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>CheckIncludeFileCXX</code></p>
-<dd> Check if the include file exists. </p>
+<dt><code>CheckIncludeFileCXX</code></dt>
+<dd> Check if the include file exists. </dd>
 <pre>
   CHECK_INCLUDE_FILE_CXX(INCLUDE VARIABLE)
 </pre>
@@ -1393,8 +1393,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>CheckIncludeFiles</code></p>
-<dd> Check if the files can be included </p>
+<dt><code>CheckIncludeFiles</code></dt>
+<dd> Check if the files can be included </dd>
 <p> CHECK_INCLUDE_FILES(INCLUDE VARIABLE) </p>
 <pre>
   INCLUDE  - list of files to include
@@ -1406,8 +1406,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>CheckLanguage</code></p>
-<dd> Check if a language can be enabled </p>
+<dt><code>CheckLanguage</code></dt>
+<dd> Check if a language can be enabled </dd>
 <p> Usage: </p>
 <pre>
   check_language(&lt;lang&gt;)
@@ -1422,8 +1422,8 @@ include(CMakeDetermineVSServicePack)<br />
     message(STATUS &quot;No Fortran support&quot;)
   endif()
 </pre>
-<dt><code>CheckLibraryExists</code></p>
-<dd> Check if the function exists. </p>
+<dt><code>CheckLibraryExists</code></dt>
+<dd> Check if the function exists. </dd>
 <p> CHECK_LIBRARY_EXISTS (LIBRARY FUNCTION LOCATION VARIABLE) </p>
 <pre>
   LIBRARY  - the name of the library you are looking for
@@ -1437,8 +1437,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckPrototypeDefinition</code></p>
-<dd> Check if the protoype we expect is correct. </p>
+<dt><code>CheckPrototypeDefinition</code></dt>
+<dd> Check if the protoype we expect is correct. </dd>
 <p> check_prototype_definition(FUNCTION PROTOTYPE RETURN HEADER VARIABLE) </p>
 <pre>
   FUNCTION - The name of the function (used to check if prototype exists)
@@ -1459,8 +1459,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckStructHasMember</code></p>
-<dd> Check if the given struct or class has the specified member variable </p>
+<dt><code>CheckStructHasMember</code></dt>
+<dd> Check if the given struct or class has the specified member variable </dd>
 <p> CHECK_STRUCT_HAS_MEMBER (STRUCT MEMBER HEADER VARIABLE) </p>
 <pre>
   STRUCT - the name of the struct or class you are interested in
@@ -1475,8 +1475,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
 <p> Example: CHECK_STRUCT_HAS_MEMBER(&quot;struct timeval&quot; tv_sec sys/select.h HAVE_TIMEVAL_TV_SEC) </p>
-<dt><code>CheckSymbolExists</code></p>
-<dd> Check if a symbol exists as a function, variable, or macro </p>
+<dt><code>CheckSymbolExists</code></dt>
+<dd> Check if a symbol exists as a function, variable, or macro </dd>
 <p> CHECK_SYMBOL_EXISTS(&lt;symbol&gt; &lt;files&gt; &lt;variable&gt;) </p>
 <p> Check that the &lt;symbol&gt; is available after including given header &lt;files&gt; and store the result in a &lt;variable&gt;. Specify the list of files in one argument as a semicolon-separated list. </p>
 <p> If the header files define the symbol as a macro it is considered available and assumed to work. If the header files declare the symbol as a function or variable then the symbol must also be available for linking. If the symbol is a type or enum value it will not be recognized (consider using CheckTypeSize or CheckCSourceCompiles). If the check needs to be done in C++, consider using CHECK_CXX_SYMBOL_EXISTS(), which does the same as CHECK_SYMBOL_EXISTS(), but in C++. </p>
@@ -1487,8 +1487,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckTypeSize</code></p>
-<dd> Check sizeof a type </p>
+<dt><code>CheckTypeSize</code></dt>
+<dd> Check sizeof a type </dd>
 <pre>
   CHECK_TYPE_SIZE(TYPE VARIABLE [BUILTIN_TYPES_ONLY])
 </pre>
@@ -1513,8 +1513,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
   CMAKE_EXTRA_INCLUDE_FILES = list of extra headers to include
 </pre>
-<dt><code>CheckVariableExists</code></p>
-<dd> Check if the variable exists. </p>
+<dt><code>CheckVariableExists</code></dt>
+<dd> Check if the variable exists. </dd>
 <pre>
   CHECK_VARIABLE_EXISTS(VAR VARIABLE)
 </pre>
@@ -1529,8 +1529,8 @@ include(CMakeDetermineVSServicePack)<br />
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>Dart</code></p>
-<dd> Configure a project for testing with CTest or old Dart Tcl Client </p>
+<dt><code>Dart</code></dt>
+<dd> Configure a project for testing with CTest or old Dart Tcl Client </dd>
 <p> This file is the backwards-compatibility version of the CTest module. It supports using the old Dart 1 Tcl client for driving dashboard submissions as well as testing with CTest. This module should be included in the CMakeLists.txt file at the top of a project. Typical usage: </p>
 <pre>
   include(Dart)
@@ -1539,8 +1539,8 @@ include(CMakeDetermineVSServicePack)<br />
   endif()
 </pre>
 <p> The BUILD_TESTING option is created by the Dart module to determine whether testing support should be enabled. The default is ON. </p>
-<dt><code>DeployQt4</code></p>
-<dd> Functions to help assemble a standalone Qt4 executable. </p>
+<dt><code>DeployQt4</code></dt>
+<dd> Functions to help assemble a standalone Qt4 executable. </dd>
 <p> A collection of CMake utility functions useful for deploying Qt4 executables. </p>
 <p> The following functions are provided by this module: </p>
 <pre>
@@ -1584,11 +1584,11 @@ include(CMakeDetermineVSServicePack)<br />
   INSTALL_QT4_EXECUTABLE(&lt;executable&gt; [&lt;qtplugins&gt; &lt;libs&gt; &lt;dirs&gt; &lt;plugins_dir&gt; &lt;request_qt_conf&gt; &lt;component&gt;])
 </pre>
 <p> Installs Qt plugins, writes a Qt configuration file (if needed) and fixes up a Qt4 executable using BundleUtilities so it is standalone and can be drag-and-drop copied to another machine as long as all of the system libraries are compatible. The executable will be fixed-up at install time. &lt;component&gt; is the COMPONENT used for bundle fixup and plugin installation. See documentation of FIXUP_QT4_BUNDLE. </p>
-<dt><code>Documentation</code></p>
-<dd> DocumentationVTK.cmake </p>
+<dt><code>Documentation</code></dt>
+<dd> DocumentationVTK.cmake </dd>
 <p> This file provides support for the VTK documentation framework. It relies on several tools (Doxygen, Perl, etc). </p>
-<dt><code>ExternalData</code></p>
-<dd> Manage data files stored outside source tree </p>
+<dt><code>ExternalData</code></dt>
+<dd> Manage data files stored outside source tree </dd>
 <p> Use this module to unambiguously reference data files stored outside the source tree and fetch them at build time from arbitrary local and remote content-addressed locations. Functions provided by this module recognize arguments with the syntax &quot;DATA{&lt;name&gt;}&quot; as references to external data, replace them with full paths to local copies of those data, and create build rules to fetch and update the local copies. </p>
 <p> The DATA{} syntax is literal and the &lt;name&gt; is a full or relative path within the source tree. The source tree must contain either a real data file at &lt;name&gt; or a &quot;content link&quot; at &lt;name&gt;&lt;ext&gt; containing a hash of the real file using a hash algorithm corresponding to &lt;ext&gt;. For example, the argument &quot;DATA{img.png}&quot; may be satisfied by either a real &quot;img.png&quot; file in the current source directory or a &quot;img.png.md5&quot; file containing its MD5 sum. </p>
 <p> The &#8216;ExternalData_Expand_Arguments&#8217; function evaluates DATA{} references in its arguments and constructs a new list of arguments: </p>
@@ -1660,8 +1660,8 @@ include(CMakeDetermineVSServicePack)<br />
 <p> The variable ExternalData_SOURCE_ROOT may be set to the highest source directory containing any path named by a DATA{} reference. The default is CMAKE_SOURCE_DIR. ExternalData_SOURCE_ROOT and CMAKE_SOURCE_DIR must refer to directories within a single source distribution (e.g. they come together in one tarball). </p>
 <p> The variable ExternalData_BINARY_ROOT may be set to the directory to hold the real data files named by expanded DATA{} references. The default is CMAKE_BINARY_DIR. The directory layout will mirror that of content links under ExternalData_SOURCE_ROOT. </p>
 <p> Variables ExternalData_TIMEOUT_INACTIVITY and ExternalData_TIMEOUT_ABSOLUTE set the download inactivity and absolute timeouts, in seconds. The defaults are 60 seconds and 300 seconds, respectively. Set either timeout to 0 seconds to disable enforcement. </p>
-<dt><code>ExternalProject</code></p>
-<dd> Create custom targets to build projects in external trees </p>
+<dt><code>ExternalProject</code></dt>
+<dd> Create custom targets to build projects in external trees </dd>
 <p> The &#8216;ExternalProject_Add&#8217; function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </p>
 <p>  ExternalProject_Add(&lt;name&gt;    # Name for custom target<br />
     [DEPENDS projects&#8230;]       # Targets on which the project depends<br />
@@ -1772,8 +1772,8 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
    set_property(DIRECTORY PROPERTY EP_STEP_TARGETS configure build test)
 </pre>
-<dt><code>FeatureSummary</code></p>
-<dd> Macros for generating a summary of enabled/disabled features </p>
+<dt><code>FeatureSummary</code></dt>
+<dd> Macros for generating a summary of enabled/disabled features </dd>
 <p> This module provides the macros feature_summary(), set_package_properties() and add_feature_info(). For compatibility it also still provides set_package_info(), set_feature_info(), print_enabled_features() and print_disabled_features(). </p>
 <p> These macros can be used to generate a summary of enabled and disabled packages and/or feature for a build tree: </p>
 <pre>
@@ -1879,8 +1879,8 @@ include(CMakeDetermineVSServicePack)<br />
     SET_FEATURE_INFO(&lt;name&gt; &lt;description&gt; [&lt;url&gt;] )
 </pre>
 <p> Does the same as SET_PACKAGE_INFO(&lt;name&gt; &lt;description&gt; &lt;url&gt; ) </p>
-<dt><code>FindALSA</code></p>
-<dd> Find alsa </p>
+<dt><code>FindALSA</code></dt>
+<dd> Find alsa </dd>
 <p> Find the alsa libraries (asound) </p>
 <pre>
   This module defines the following variables:
@@ -1893,8 +1893,8 @@ include(CMakeDetermineVSServicePack)<br />
      ALSA_LIBRARY     - the asound library
      ALSA_VERSION_STRING - the version of alsa found (since CMake 2.8.8)
 </pre>
-<dt><code>FindASPELL</code></p>
-<dd> Try to find ASPELL </p>
+<dt><code>FindASPELL</code></dt>
+<dd> Try to find ASPELL </dd>
 <p> Once done this will define </p>
 <pre>
   ASPELL_FOUND - system has ASPELL
@@ -1903,8 +1903,8 @@ include(CMakeDetermineVSServicePack)<br />
   ASPELL_LIBRARIES - The libraries needed to use ASPELL
   ASPELL_DEFINITIONS - Compiler switches required for using ASPELL
 </pre>
-<dt><code>FindAVIFile</code></p>
-<dd> Locate AVIFILE library and include paths </p>
+<dt><code>FindAVIFile</code></dt>
+<dd> Locate AVIFILE library and include paths </dd>
 <p> AVIFILE (<a rel="nofollow" href="http://avifile.sourceforge.net/)is">http://avifile.sourceforge.net/)is</a> a set of libraries for i386 machines to use various AVI codecs. Support is limited beyond Linux. Windows provides native AVI support, and so doesn&#8217;t need this library. This module defines </p>
 <pre>
   AVIFILE_INCLUDE_DIR, where to find avifile.h , etc.
@@ -1912,8 +1912,8 @@ include(CMakeDetermineVSServicePack)<br />
   AVIFILE_DEFINITIONS, definitions to use when compiling
   AVIFILE_FOUND, If false, don't try to use AVIFILE
 </pre>
-<dt><code>FindArmadillo</code></p>
-<dd> Find Armadillo </p>
+<dt><code>FindArmadillo</code></dt>
+<dd> Find Armadillo </dd>
 <p> Find the Armadillo C++ library </p>
 <p> Using Armadillo: </p>
 <p>find_package(Armadillo REQUIRED)<br />
@@ -1931,8 +1931,8 @@ include(CMakeDetermineVSServicePack)<br />
   ARMADILLO_VERSION_STRING - version number as a string (ex: &quot;1.0.4&quot;)
   ARMADILLO_VERSION_NAME - name of the version (ex: &quot;Antipodean Antileech&quot;)
 </pre>
-<dt><code>FindBISON</code></p>
-<dd> Find bison executable and provides macros to generate custom build rules </p>
+<dt><code>FindBISON</code></dt>
+<dd> Find bison executable and provides macros to generate custom build rules </dd>
 <p> The module defines the following variables: </p>
 <pre>
   BISON_EXECUTABLE - path to the bison program
@@ -1956,8 +1956,8 @@ include(CMakeDetermineVSServicePack)<br />
         BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR} / parser.cpp)<br />
             add_executable(Foo main.cpp ${BISON_MyParser_OUTPUTS}) == ==<br />
     == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
-<dt><code>FindBLAS</code></p>
-<dd> Find BLAS library </p>
+<dt><code>FindBLAS</code></dt>
+<dd> Find BLAS library </dd>
 <p> This module finds an installed fortran library that implements the BLAS linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/blas/">http://www.netlib.org/blas/</a>). The list of libraries searched for is taken from the autoconf macro file, acx_blas.m4 (distributed at <a href="http://ac-archive.sourceforge.net/ac-archive/acx_blas.html">http://ac-archive.sourceforge.net/ac-archive/acx_blas.html</a>). </p>
 <p> This module sets the following variables: </p>
 <p>  BLAS_FOUND &#8211; set to true if a library implementing the BLAS interface<br />
@@ -1975,8 +1975,8 @@ include(CMakeDetermineVSServicePack)<br />
      all the possibilities<br />
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
 <p> C/CXX should be enabled to use Intel mkl </p>
-<dt><code>FindBZip2</code></p>
-<dd> Try to find BZip2 </p>
+<dt><code>FindBZip2</code></dt>
+<dd> Try to find BZip2 </dd>
 <p> Once done this will define </p>
 <pre>
   BZIP2_FOUND - system has BZip2
@@ -1985,8 +1985,8 @@ include(CMakeDetermineVSServicePack)<br />
   BZIP2_NEED_PREFIX - this is set if the functions are prefixed with BZ2_
   BZIP2_VERSION_STRING - the version of BZip2 found (since CMake 2.8.8)
 </pre>
-<dt><code>FindBoost</code></p>
-<dd> Find Boost include dirs and libraries </p>
+<dt><code>FindBoost</code></dt>
+<dd> Find Boost include dirs and libraries </dd>
 <p> Use this module by invoking find_package with the form: </p>
 <p>  find_package(Boost<br />
     [version] [EXACT]      # Minimum or EXACT version e.g. 1.36.0<br />
@@ -2091,8 +2091,8 @@ include(CMakeDetermineVSServicePack)<br />
 <p> Boost CMake &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- </p>
 <p> If Boost was built using the boost-cmake project it provides a package configuration file for use with find_package&#8217;s Config mode. This module looks for the package configuration file called BoostConfig.cmake or boost-config.cmake and stores the result in cache entry &quot;Boost_DIR&quot;. If found, the package configuration file is loaded and this module returns with no further action. See documentation of the Boost CMake package configuration for details on what it provides. </p>
 <p> Set Boost_NO_BOOST_CMAKE to ON to disable the search for boost-cmake. </p>
-<dt><code>FindBullet</code></p>
-<dd> Try to find the Bullet physics engine </p>
+<dt><code>FindBullet</code></dt>
+<dd> Try to find the Bullet physics engine </dd>
 <pre>
   This module defines the following variables
 </pre>
@@ -2109,8 +2109,8 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
   BULLET_ROOT - Can be set to bullet install path or Windows build path
 </pre>
-<dt><code>FindCABLE</code></p>
-<dd> Find CABLE </p>
+<dt><code>FindCABLE</code></dt>
+<dd> Find CABLE </dd>
 <p> This module finds if CABLE is installed and determines where the include files and libraries are. This code sets the following variables: </p>
 <pre>
   CABLE             the path to the cable executable
@@ -2118,8 +2118,8 @@ include(CMakeDetermineVSServicePack)<br />
   CABLE_INCLUDE_DIR the path to the include directory
 </pre>
 <p> To build Tcl wrappers, you should add shared library and link it to ${CABLE_TCL_LIBRARY}. You should also add ${CABLE_INCLUDE_DIR} as an include directory. </p>
-<dt><code>FindCUDA</code></p>
-<dd> Tools for building CUDA C files: libraries and build dependencies. </p>
+<dt><code>FindCUDA</code></dt>
+<dd> Tools for building CUDA C files: libraries and build dependencies. </dd>
 <p> This script locates the NVIDIA CUDA C tools. It should work on linux, windows, and mac and should be reasonably up to date with CUDA C releases. </p>
 <p> This script makes use of the standard find_package arguments of &lt;VERSION&gt;, REQUIRED and QUIET. CUDA_FOUND will report if an acceptable version of CUDA was found. </p>
 <p> The script will prompt the user to specify CUDA_TOOLKIT_ROOT_DIR if the prefix cannot be determined by the location of nvcc in the system path and REQUIRED is specified to find_package(). To use a different installed version of the toolkit set the environment variable CUDA_BIN_PATH before running cmake (e.g. CUDA_BIN_PATH=/usr/local/cuda1.0 instead of the default /usr/local/cuda) or set CUDA_TOOLKIT_ROOT_DIR after configuring. If you change the value of CUDA_TOOLKIT_ROOT_DIR, various components that depend on the path will be relocated. </p>
@@ -2406,8 +2406,8 @@ include(CMakeDetermineVSServicePack)<br />
   This code is licensed under the MIT License.  See the FindCUDA.cmake script
   for the text of the license.
 </pre>
-<dt><code>FindCURL</code></p>
-<dd> Find curl </p>
+<dt><code>FindCURL</code></dt>
+<dd> Find curl </dd>
 <p> Find the native CURL headers and libraries. </p>
 <pre>
   CURL_INCLUDE_DIRS   - where to find curl/curl.h, etc.
@@ -2415,7 +2415,7 @@ include(CMakeDetermineVSServicePack)<br />
   CURL_FOUND          - True if curl found.
   CURL_VERSION_STRING - the version of curl found (since CMake 2.8.8)
 </pre>
-<dt><code>FindCVS</code></p>
+<dt><code>FindCVS</code></dt>
 <dd>
 <p> The module defines the following variables: </p>
 <pre>
@@ -2426,8 +2426,8 @@ include(CMakeDetermineVSServicePack)<br />
 <p>find_package(CVS) if (CVS_FOUND)<br />
     message(&#8220;CVS found: ${CVS_EXECUTABLE}&#8221;)<br />
         endif()</p>
-<dt><code>FindCoin3D</code></p>
-<dd> Find Coin3D (Open Inventor) </p>
+</dd><dt><code>FindCoin3D</code></dt>
+<dd> Find Coin3D (Open Inventor) </dd>
 <p> Coin3D is an implementation of the Open Inventor API. It provides data structures and algorithms for 3D visualization <a rel="nofollow" href="http://www.coin3d.org/">http://www.coin3d.org/</a> </p>
 <p> This module defines the following variables </p>
 <pre>
@@ -2435,8 +2435,8 @@ include(CMakeDetermineVSServicePack)<br />
   COIN3D_INCLUDE_DIRS  - where the Inventor include directory can be found
   COIN3D_LIBRARIES     - Link to this to use Coin3D
 </pre>
-<dt><code>FindCups</code></p>
-<dd> Try to find the Cups printing system </p>
+<dt><code>FindCups</code></dt>
+<dd> Try to find the Cups printing system </dd>
 <p> Once done this will define </p>
 <pre>
   CUPS_FOUND - system has Cups
@@ -2446,8 +2446,8 @@ include(CMakeDetermineVSServicePack)<br />
   Set CUPS_REQUIRE_IPP_DELETE_ATTRIBUTE to TRUE if you need a version which
   features this function (i.e. at least 1.1.19)
 </pre>
-<dt><code>FindCurses</code></p>
-<dd> Find the curses include file and library </p>
+<dt><code>FindCurses</code></dt>
+<dd> Find the curses include file and library </dd>
 <p>  CURSES_FOUND &#8211; system has Curses<br />
   CURSES_INCLUDE_DIR &#8211; the Curses include directory<br />
   CURSES_LIBRARIES &#8211; The libraries needed to use Curses<br />
@@ -2457,8 +2457,8 @@ include(CMakeDetermineVSServicePack)<br />
   CURSES_HAVE_NCURSES_CURSES_H &#8211; true if ncurses/curses.h is available<br />
   CURSES_LIBRARY &#8211; set for backwards compatibility with 2.4 CMake</p>
 <p> Set CURSES_NEED_NCURSES to TRUE before the find_package() command if NCurses functionality is required. </p>
-<dt><code>FindCxxTest</code></p>
-<dd> Find CxxTest </p>
+<dt><code>FindCxxTest</code></dt>
+<dd> Find CxxTest </dd>
 <p> Find the CxxTest suite and declare a helper macro for creating unit tests and integrating them with CTest. For more details on CxxTest see <a rel="nofollow" href="http://cxxtest.tigris.org">http://cxxtest.tigris.org</a> </p>
 <p> INPUT Variables </p>
 <p>   CXXTEST_USE_PYTHON [deprecated since 1.3]<br />
@@ -2539,14 +2539,14 @@ Example foo_test.h:</p>
         TS_ASSERT_EQUALS(1 + 1, 2);<br />
     }<br />
 };</p>
-<dt><code>FindCygwin</code></p>
-<dd> this module looks for Cygwin </p>
-<dt><code>FindDCMTK</code></p>
-<dd> find DCMTK libraries and applications </p>
-<dt><code>FindDart</code></p>
-<dd> Find DART </p>
+<dt><code>FindCygwin</code></dt>
+<dd> this module looks for Cygwin </dd>
+<dt><code>FindDCMTK</code></dt>
+<dd> find DCMTK libraries and applications </dd>
+<dt><code>FindDart</code></dt>
+<dd> Find DART </dd>
 <p> This module looks for the dart testing software and sets DART_ROOT to point to where it found it. </p>
-<dt><code>FindDevIL</code></p>
+<dt><code>FindDevIL</code></dt>
 <dd>
 <p> This module locates the developer&#8217;s image library. <a rel="nofollow" href="http://openil.sourceforge.net/">http://openil.sourceforge.net/</a> </p>
 <p> This module sets: </p>
@@ -2566,8 +2566,8 @@ Example foo_test.h:</p>
                     even if they are not needed. In most systems, if one<br />
                     library is found all the others are as well. That&#8217;s the<br />
                     way the DevIL developers release it.</p>
-<dt><code>FindDoxygen</code></p>
-<dd> This module looks for Doxygen and the path to Graphviz&#8217;s dot </p>
+</dd><dt><code>FindDoxygen</code></dt>
+<dd> This module looks for Doxygen and the path to Graphviz&#8217;s dot </dd>
 <p> Doxygen is a documentation generation tool. Please see <a rel="nofollow" href="http://www.doxygen.org">http://www.doxygen.org</a> </p>
 <p> This module accepts the following optional variables: </p>
 <pre>
@@ -2585,16 +2585,16 @@ Example foo_test.h:</p>
    DOXYGEN_DOT_FOUND      = Was Dot found or not?
    DOXYGEN_DOT_PATH       = The path to dot not including the executable
 </pre>
-<dt><code>FindEXPAT</code></p>
-<dd> Find expat </p>
+<dt><code>FindEXPAT</code></dt>
+<dd> Find expat </dd>
 <p> Find the native EXPAT headers and libraries. </p>
 <pre>
   EXPAT_INCLUDE_DIRS - where to find expat.h, etc.
   EXPAT_LIBRARIES    - List of libraries when using expat.
   EXPAT_FOUND        - True if expat found.
 </pre>
-<dt><code>FindFLEX</code></p>
-<dd> Find flex executable and provides a macro to generate custom build rules </p>
+<dt><code>FindFLEX</code></dt>
+<dd> Find flex executable and provides a macro to generate custom build rules </dd>
 <p> The module defines the following variables: </p>
 <pre>
   FLEX_FOUND - true is flex executable is found
@@ -2635,8 +2635,8 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
                            Foo.cc<br />
                                ${BISON_MyParser_OUTPUTS} ${FLEX_MyScanner_OUTPUTS}) == ==<br />
     == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
-<dt><code>FindFLTK</code></p>
-<dd> Find the native FLTK includes and library </p>
+<dt><code>FindFLTK</code></dt>
+<dd> Find the native FLTK includes and library </dd>
 <p> By default FindFLTK.cmake will search for all of the FLTK components and add them to the FLTK_LIBRARIES variable. </p>
 <pre>
    You can limit the components which get placed in FLTK_LIBRARIES by
@@ -2667,8 +2667,8 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
      FLTK_FORMS_LIBRARY  = the full path to fltk_forms.lib
      FLTK_IMAGES_LIBRARY = the full path to fltk_images.lib
 </pre>
-<dt><code>FindFLTK2</code></p>
-<dd> Find the native FLTK2 includes and library </p>
+<dt><code>FindFLTK2</code></dt>
+<dd> Find the native FLTK2 includes and library </dd>
 <p> The following settings are defined </p>
 <pre>
   FLTK2_FLUID_EXECUTABLE, where to find the Fluid tool
@@ -2683,8 +2683,8 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
   FLTK2_GL_LIBRARY     = the full path to fltk2_gl.lib
   FLTK2_IMAGES_LIBRARY = the full path to fltk2_images.lib
 </pre>
-<dt><code>FindFreetype</code></p>
-<dd> Locate FreeType library </p>
+<dt><code>FindFreetype</code></dt>
+<dd> Locate FreeType library </dd>
 <p> This module defines </p>
 <pre>
   FREETYPE_LIBRARIES, the library to link against
@@ -2696,13 +2696,13 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
   FREETYPE_INCLUDE_DIR_freetype2
 </pre>
 <p> $FREETYPE_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$FREETYPE_DIR used in building FREETYPE. </p>
-<dt><code>FindGCCXML</code></p>
-<dd> Find the GCC-XML front-end executable. </p>
+<dt><code>FindGCCXML</code></dt>
+<dd> Find the GCC-XML front-end executable. </dd>
 <p> This module will define the following variables: </p>
 <pre>
   GCCXML - the GCC-XML front-end executable.
 </pre>
-<dt><code>FindGDAL</code></p>
+<dt><code>FindGDAL</code></dt>
 <dd>
 <p> Locate gdal </p>
 <p> This module accepts the following environment variables: </p>
@@ -2715,21 +2715,21 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
     GDAL_LIBRARY - A variable pointing to the GDAL library
     GDAL_INCLUDE_DIR - Where to find the headers
 </pre>
-<dt><code>FindGIF</code></p>
+</dd><dt><code>FindGIF</code></dt>
 <dd>
 <p> This module searches giflib and defines GIF_LIBRARIES &#8211; libraries to link to in order to use GIF GIF_FOUND, if false, do not try to link GIF_INCLUDE_DIR, where to find the headers GIF_VERSION, reports either version 4 or 3 (for everything before version 4) </p>
 <p> The minimum required version of giflib can be specified using the standard syntax, e.g. find_package(GIF 4) </p>
 <p> $GIF_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$GIF_DIR </p>
-<dt><code>FindGLEW</code></p>
-<dd> Find the OpenGL Extension Wrangler Library (GLEW) </p>
+</dd><dt><code>FindGLEW</code></dt>
+<dd> Find the OpenGL Extension Wrangler Library (GLEW) </dd>
 <p> This module defines the following variables: </p>
 <pre>
   GLEW_INCLUDE_DIRS - include directories for GLEW
   GLEW_LIBRARIES - libraries to link against GLEW
   GLEW_FOUND - true if GLEW has been found and can be used
 </pre>
-<dt><code>FindGLUT</code></p>
-<dd> try to find glut library and include files </p>
+<dt><code>FindGLUT</code></dt>
+<dd> try to find glut library and include files </dd>
 <pre>
   GLUT_INCLUDE_DIR, where to find GL/glut.h, etc.
   GLUT_LIBRARIES, the libraries to link against
@@ -2741,16 +2741,16 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
   GLUT_Xmu_LIBRARY  = the full path to the Xmu library.
   GLUT_Xi_LIBRARY   = the full path to the Xi Library.
 </pre>
-<dt><code>FindGTK</code></p>
-<dd> try to find GTK (and glib) and GTKGLArea </p>
+<dt><code>FindGTK</code></dt>
+<dd> try to find GTK (and glib) and GTKGLArea </dd>
 <pre>
   GTK_INCLUDE_DIR   - Directories to include to use GTK
   GTK_LIBRARIES     - Files to link against to use GTK
   GTK_FOUND         - GTK was found
   GTK_GL_FOUND      - GTK's GL features were found
 </pre>
-<dt><code>FindGTK2</code></p>
-<dd> FindGTK2.cmake </p>
+<dt><code>FindGTK2</code></dt>
+<dd> FindGTK2.cmake </dd>
 <p> This module can find the GTK2 widget libraries and several of its other optional components like gtkmm, glade, and glademm. </p>
 <p> NOTE: If you intend to use version checking, CMake 2.6.2 or later is </p>
 <pre>
@@ -2803,8 +2803,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
     add_executable(mygui mygui.cc)<br />
         target_link_libraries(mygui ${GTK2_LIBRARIES})<br />
             endif()</p>
-<dt><code>FindGTest</code></p>
-<dd> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </p>
+<dt><code>FindGTest</code></dt>
+<dd> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </dd>
 <p> Locate the Google C++ Testing Framework. </p>
 <p> Defines the following variables: </p>
 <pre>
@@ -2852,8 +2852,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p>Example : set(FooTestArgs&#8211; foo 1 &#8211;bar 2)<br />
               add_executable(FooTest FooUnitTest.cc)<br />
                   GTEST_ADD_TESTS(FooTest &#8220;${FooTestArgs}&#8221; FooUnitTest.cc)</p>
-<dt><code>FindGettext</code></p>
-<dd> Find GNU gettext tools </p>
+<dt><code>FindGettext</code></dt>
+<dd> Find GNU gettext tools </dd>
 <p> This module looks for the GNU gettext tools. This module defines the following values: </p>
 <pre>
   GETTEXT_MSGMERGE_EXECUTABLE: the full path to the msgmerge tool.
@@ -2884,7 +2884,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
      If ALL is specified, the po files are processed when building the all traget.
      It creates a custom target &quot;pofiles&quot;.
 </pre>
-<dt><code>FindGit</code></p>
+<dt><code>FindGit</code></dt>
 <dd>
 <p> The module defines the following variables: </p>
 <pre>
@@ -2896,8 +2896,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p>find_package(Git) if (GIT_FOUND)<br />
     message(&#8220;git found: ${GIT_EXECUTABLE}&#8221;)<br />
         endif()</p>
-<dt><code>FindGnuTLS</code></p>
-<dd> Try to find the GNU Transport Layer Security library (gnutls) </p>
+</dd><dt><code>FindGnuTLS</code></dt>
+<dd> Try to find the GNU Transport Layer Security library (gnutls) </dd>
 <p> Once done this will define </p>
 <pre>
   GNUTLS_FOUND - System has gnutls
@@ -2905,8 +2905,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   GNUTLS_LIBRARIES - The libraries needed to use gnutls
   GNUTLS_DEFINITIONS - Compiler switches required for using gnutls
 </pre>
-<dt><code>FindGnuplot</code></p>
-<dd> this module looks for gnuplot </p>
+<dt><code>FindGnuplot</code></dt>
+<dd> this module looks for gnuplot </dd>
 <p> Once done this will define </p>
 <pre>
   GNUPLOT_FOUND - system has Gnuplot
@@ -2914,8 +2914,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   GNUPLOT_VERSION_STRING - the version of Gnuplot found (since CMake 2.8.8)
 </pre>
 <p> GNUPLOT_VERSION_STRING will not work for old versions like 3.7.1. </p>
-<dt><code>FindHDF5</code></p>
-<dd> Find HDF5, a library for reading and writing self describing array data. </p>
+<dt><code>FindHDF5</code></dt>
+<dd> Find HDF5, a library for reading and writing self describing array data. </dd>
 <p> This module invokes the HDF5 wrapper compiler that should be installed alongside HDF5. Depending upon the HDF5 Configuration, the wrapper compiler is called either h5cc or h5pcc. If this succeeds, the module will then call the compiler with the -show argument to see what flags are used when compiling an HDF5 client application. </p>
 <p> The module will optionally accept the COMPONENTS argument. If no COMPONENTS are specified, then the find module will default to finding only the HDF5 C library. If one or more COMPONENTS are specified, the module will attempt to find the language bindings for the specified components. The only valid components are C, CXX, Fortran, HL, and Fortran_HL. If the COMPONENTS argument is not given, the module will attempt to find only the C bindings. </p>
 <p> On UNIX systems, this module will read the variable HDF5_USE_STATIC_LIBRARIES to determine whether or not to prefer a static link to a dynamic link for HDF5 and all of it&#8217;s dependencies. To use this feature, make sure that the HDF5_USE_STATIC_LIBRARIES variable is set before the call to find_package. </p>
@@ -2939,8 +2939,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   HDF5_CXX_COMPILER_EXECUTABLE &#8211; the path to the HDF5 C++ wrapper compiler<br />
   HDF5_Fortran_COMPILER_EXECUTABLE &#8211; the path to the HDF5 Fortran wrapper compiler<br />
   HDF5_DIFF_EXECUTABLE &#8211; the path to the HDF5 dataset comparison tool</p>
-<dt><code>FindHSPELL</code></p>
-<dd> Try to find Hspell </p>
+<dt><code>FindHSPELL</code></dt>
+<dd> Try to find Hspell </dd>
 <p> Once done this will define </p>
 <pre>
   HSPELL_FOUND - system has Hspell
@@ -2953,15 +2953,15 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   HSPELL_MAJOR_VERSION  - the major version of Hspell
   HSPELL_MINOR_VERSION  - The minor version of Hspell
 </pre>
-<dt><code>FindHTMLHelp</code></p>
-<dd> This module looks for Microsoft HTML Help Compiler </p>
+<dt><code>FindHTMLHelp</code></dt>
+<dd> This module looks for Microsoft HTML Help Compiler </dd>
 <p> It defines: </p>
 <pre>
    HTML_HELP_COMPILER     : full path to the Compiler (hhc.exe)
    HTML_HELP_INCLUDE_PATH : include path to the API (htmlhelp.h)
    HTML_HELP_LIBRARY      : full path to the library (htmlhelp.lib)
 </pre>
-<dt><code>FindHg</code></p>
+<dt><code>FindHg</code></dt>
 <dd>
 <p> The module defines the following variables: </p>
 <pre>
@@ -2973,18 +2973,18 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p>find_package(Hg) if (HG_FOUND)<br />
     message(&#8220;hg found: ${HG_EXECUTABLE}&#8221;)<br />
         endif()</p>
-<dt><code>FindITK</code></p>
-<dd> Find an ITK installation or build tree. </p>
-<dt><code>FindIcotool</code></p>
-<dd> Find icotool </p>
+</dd><dt><code>FindITK</code></dt>
+<dd> Find an ITK installation or build tree. </dd>
+<dt><code>FindIcotool</code></dt>
+<dd> Find icotool </dd>
 <p> This module looks for icotool. This module defines the following values: </p>
 <pre>
   ICOTOOL_EXECUTABLE: the full path to the icotool tool.
   ICOTOOL_FOUND: True if icotool has been found.
   ICOTOOL_VERSION_STRING: the version of icotool found.
 </pre>
-<dt><code>FindImageMagick</code></p>
-<dd> Find the ImageMagick binary suite. </p>
+<dt><code>FindImageMagick</code></dt>
+<dd> Find the ImageMagick binary suite. </dd>
 <p> This module will search for a set of ImageMagick tools specified as components in the FIND_PACKAGE call. Typical components include, but are not limited to (future versions of ImageMagick might have additional components not listed here): </p>
 <pre>
   animate
@@ -3026,8 +3026,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   find_package(ImageMagick COMPONENTS Magick++ convert)
 </pre>
 <p> Note that the standard FIND_PACKAGE features are supported (i.e., QUIET, REQUIRED, etc.). </p>
-<dt><code>FindJNI</code></p>
-<dd> Find JNI java libraries. </p>
+<dt><code>FindJNI</code></dt>
+<dd> Find JNI java libraries. </dd>
 <p> This module finds if Java is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <p>JNI_INCLUDE_DIRS = the include dirs to use<br />
     JNI_LIBRARIES = the libraries to use<br />
@@ -3036,8 +3036,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
                 JAVA_INCLUDE_PATH = the include path to jni.h<br />
                                         JAVA_INCLUDE_PATH2 = the include path to jni_md.h<br />
                                                                  JAVA_AWT_INCLUDE_PATH = the include path to jawt.h</p>
-<dt><code>FindJPEG</code></p>
-<dd> Find JPEG </p>
+<dt><code>FindJPEG</code></dt>
+<dd> Find JPEG </dd>
 <p> Find the native JPEG includes and library This module defines </p>
 <pre>
   JPEG_INCLUDE_DIR, where to find jpeglib.h, etc.
@@ -3048,8 +3048,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <pre>
   JPEG_LIBRARY, where to find the JPEG library.
 </pre>
-<dt><code>FindJasper</code></p>
-<dd> Try to find the Jasper JPEG2000 library </p>
+<dt><code>FindJasper</code></dt>
+<dd> Try to find the Jasper JPEG2000 library </dd>
 <p> Once done this will define </p>
 <pre>
   JASPER_FOUND - system has Jasper
@@ -3057,8 +3057,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   JASPER_LIBRARIES - the libraries needed to use Jasper
   JASPER_VERSION_STRING - the version of Jasper found (since CMake 2.8.8)
 </pre>
-<dt><code>FindJava</code></p>
-<dd> Find Java </p>
+<dt><code>FindJava</code></dt>
+<dd> Find Java </dd>
 <p> This module finds if Java is installed and determines where the include files and libraries are. This code sets the following variables: </p>
 <pre>
   Java_JAVA_EXECUTABLE    = the full path to the Java runtime
@@ -3089,8 +3089,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   find_package(Java COMPONENTS Runtime)
   find_package(Java COMPONENTS Development)
 </pre>
-<dt><code>FindKDE3</code></p>
-<dd> Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </p>
+<dt><code>FindKDE3</code></dt>
+<dd> Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </dd>
 <p> This module defines the following variables: </p>
 <p>  KDE3_DEFINITIONS         &#8211; compiler definitions required for compiling KDE software<br />
   KDE3_INCLUDE_DIR         &#8211; the KDE include directory<br />
@@ -3156,7 +3156,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 </pre>
 <p> The option KDE3_ENABLE_FINAL to enable all-in-one compilation is no longer supported. </p>
 <p> Author: Alexander Neundorf &lt;neundorf [at] kde.org&gt; </p>
-<dt><code>FindKDE4</code></p>
+<dt><code>FindKDE4</code></dt>
 <dd>
 <p> Find KDE4 and provide all necessary variables and macros to compile software for it. It looks for KDE 4 in the following directories in the given order: </p>
 <pre>
@@ -3166,8 +3166,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 </pre>
 <p> Please look in FindKDE4Internal.cmake and KDE4Macros.cmake for more information. They are installed with the KDE 4 libraries in $KDEDIRS/share/apps/cmake/modules/. </p>
 <p> Author: Alexander Neundorf &lt;neundorf [at] kde.org&gt; </p>
-<dt><code>FindLAPACK</code></p>
-<dd> Find LAPACK library </p>
+</dd><dt><code>FindLAPACK</code></dt>
+<dd> Find LAPACK library </dd>
 <p> This module finds an installed fortran library that implements the LAPACK linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/lapack/">http://www.netlib.org/lapack/</a>). </p>
 <p> The approach follows that taken for the autoconf macro file, acx_lapack.m4 (distributed at <a rel="nofollow" href="http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html">http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html</a>). </p>
 <p> This module sets the following variables: </p>
@@ -3185,8 +3185,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   BLA_VENDOR  if set checks only the specified vendor, if not set checks<br />
      all the possibilities<br />
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
-<dt><code>FindLATEX</code></p>
-<dd> Find Latex </p>
+<dt><code>FindLATEX</code></dt>
+<dd> Find Latex </dd>
 <p> This module finds if Latex is installed and determines where the executables are. This code sets the following variables: </p>
 <pre>
   LATEX_COMPILER:       path to the LaTeX compiler
@@ -3197,8 +3197,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   PS2PDF_CONVERTER:     path to the PS2PDF converter
   LATEX2HTML_CONVERTER: path to the LaTeX2Html converter
 </pre>
-<dt><code>FindLibArchive</code></p>
-<dd> Find libarchive library and headers </p>
+<dt><code>FindLibArchive</code></dt>
+<dd> Find libarchive library and headers </dd>
 <p> The module defines the following variables: </p>
 <pre>
   LibArchive_FOUND        - true if libarchive was found
@@ -3206,13 +3206,13 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   LibArchive_LIBRARIES    - libraries to link
   LibArchive_VERSION      - libarchive 3-component version number
 </pre>
-<dt><code>FindLibLZMA</code></p>
-<dd> Find LibLZMA </p>
+<dt><code>FindLibLZMA</code></dt>
+<dd> Find LibLZMA </dd>
 <p> Find LibLZMA headers and library </p>
 <p>LIBLZMA_FOUND &#8211; True if liblzma is found.LIBLZMA_INCLUDE_DIRS &#8211; Directory where liblzma headers are located.LIBLZMA_LIBRARIES &#8211; Lzma libraries to link against.LIBLZMA_HAS_AUTO_DECODER &#8211; True if lzma_auto_decoder () is found(required).LIBLZMA_HAS_EASY_ENCODER &#8211; True if lzma_easy_encoder () is found(required).LIBLZMA_HAS_LZMA_PRESET &#8211; True if lzma_lzma_preset () is found(required).LIBLZMA_VERSION_MAJOR &#8211; The major version of lzma LIBLZMA_VERSION_MINOR &#8211; The minor version of lzma LIBLZMA_VERSION_PATCH &#8211; The patch version of lzma LIBLZMA_VERSION_STRING &#8211; version number as a string(ex<br />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         : &#8220;5.0.3&#8221;)</p>
-<dt><code>FindLibXml2</code></p>
-<dd> Try to find the LibXml2 xml processing library </p>
+<dt><code>FindLibXml2</code></dt>
+<dd> Try to find the LibXml2 xml processing library </dd>
 <p> Once done this will define </p>
 <pre>
   LIBXML2_FOUND - System has LibXml2
@@ -3222,8 +3222,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   LIBXML2_XMLLINT_EXECUTABLE - The XML checking tool xmllint coming with LibXml2
   LIBXML2_VERSION_STRING - the version of LibXml2 found (since CMake 2.8.8)
 </pre>
-<dt><code>FindLibXslt</code></p>
-<dd> Try to find the LibXslt library </p>
+<dt><code>FindLibXslt</code></dt>
+<dd> Try to find the LibXslt library </dd>
 <p> Once done this will define </p>
 <pre>
   LIBXSLT_FOUND - system has LibXslt
@@ -3237,7 +3237,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   LIBXSLT_EXSLT_LIBRARIES - Link to these if you need to link against the exslt library
   LIBXSLT_XSLTPROC_EXECUTABLE - Contains the full path to the xsltproc executable if found
 </pre>
-<dt><code>FindLua50</code></p>
+<dt><code>FindLua50</code></dt>
 <dd>
 <p> Locate Lua library This module defines </p>
 <pre>
@@ -3250,7 +3250,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> and not </p>
 <p>#include &lt;lua/lua.h&gt;</p>
 <p> This is because, the lua location is not standardized and may exist in locations other than lua/ </p>
-<dt><code>FindLua51</code></p>
+</dd><dt><code>FindLua51</code></dt>
 <dd>
 <p> Locate Lua library This module defines </p>
 <pre>
@@ -3264,15 +3264,15 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> and not </p>
 <p>#include &lt;lua/lua.h&gt;</p>
 <p> This is because, the lua location is not standardized and may exist in locations other than lua/ </p>
-<dt><code>FindMFC</code></p>
-<dd> Find MFC on Windows </p>
+</dd><dt><code>FindMFC</code></dt>
+<dd> Find MFC on Windows </dd>
 <p> Find the native MFC &#8211; i.e. decide if an application can link to the MFC libraries. </p>
 <pre>
   MFC_FOUND - Was MFC support found
 </pre>
 <p> You don&#8217;t need to include anything or link anything to use it. </p>
-<dt><code>FindMPEG</code></p>
-<dd> Find the native MPEG includes and library </p>
+<dt><code>FindMPEG</code></dt>
+<dd> Find the native MPEG includes and library </dd>
 <p> This module defines </p>
 <pre>
   MPEG_INCLUDE_DIR, where to find MPEG.h, etc.
@@ -3284,8 +3284,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   MPEG_mpeg2_LIBRARY, where to find the MPEG library.
   MPEG_vo_LIBRARY, where to find the vo library.
 </pre>
-<dt><code>FindMPEG2</code></p>
-<dd> Find the native MPEG2 includes and library </p>
+<dt><code>FindMPEG2</code></dt>
+<dd> Find the native MPEG2 includes and library </dd>
 <p> This module defines </p>
 <pre>
   MPEG2_INCLUDE_DIR, path to mpeg2dec/mpeg2.h, etc.
@@ -3297,8 +3297,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   MPEG2_mpeg2_LIBRARY, where to find the MPEG2 library.
   MPEG2_vo_LIBRARY, where to find the vo library.
 </pre>
-<dt><code>FindMPI</code></p>
-<dd> Find a Message Passing Interface (MPI) implementation </p>
+<dt><code>FindMPI</code></dt>
+<dd> Find a Message Passing Interface (MPI) implementation </dd>
 <p> The Message Passing Interface (MPI) is a library used to write high-performance distributed-memory parallel applications, and is typically deployed on a cluster. MPI is a standard interface (defined by the MPI forum) for which many implementations are available. All of them have somewhat different include paths, libraries to link against, etc., and this module tries to smooth out those differences. </p>
 <p> === Variables === </p>
 <p> This module will set the following variables per language in your project, where &lt;lang&gt; is one of C, CXX, or Fortran: </p>
@@ -3342,8 +3342,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
    MPI_LINK_FLAGS      MPI_LIBRARIES
 </pre>
 <p> In new projects, please use the MPI_&lt;lang&gt;_XXX equivalents. </p>
-<dt><code>FindMatlab</code></p>
-<dd> this module looks for Matlab </p>
+<dt><code>FindMatlab</code></dt>
+<dd> this module looks for Matlab </dd>
 <p> Defines: </p>
 <pre>
   MATLAB_INCLUDE_DIR: include path for mex.h, engine.h
@@ -3352,21 +3352,21 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   MATLAB_MX_LIBRARY:  path to libmx.lib
   MATLAB_ENG_LIBRARY: path to libeng.lib
 </pre>
-<dt><code>FindMotif</code></p>
-<dd> Try to find Motif (or lesstif) </p>
+<dt><code>FindMotif</code></dt>
+<dd> Try to find Motif (or lesstif) </dd>
 <p> Once done this will define: </p>
 <pre>
   MOTIF_FOUND        - system has MOTIF
   MOTIF_INCLUDE_DIR  - include paths to use Motif
   MOTIF_LIBRARIES    - Link these to use Motif
 </pre>
-<dt><code>FindOpenAL</code></p>
+<dt><code>FindOpenAL</code></dt>
 <dd>
 <p> Locate OpenAL This module defines OPENAL_LIBRARY OPENAL_FOUND, if false, do not try to link to OpenAL OPENAL_INCLUDE_DIR, where to find the headers </p>
 <p> $OPENALDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OPENALDIR used in building OpenAL. </p>
 <p> Created by Eric Wing. This was influenced by the FindSDL.cmake module. </p>
-<dt><code>FindOpenGL</code></p>
-<dd> Try to find OpenGL </p>
+</dd><dt><code>FindOpenGL</code></dt>
+<dd> Try to find OpenGL </dd>
 <p> Once done this will define </p>
 <pre>
   OPENGL_FOUND        - system has OpenGL
@@ -3381,8 +3381,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   OPENGL_glu_LIBRARY  - Path to GLU Library
 </pre>
 <p> On OSX default to using the framework version of opengl People will have to change the cache values of OPENGL_glu_LIBRARY and OPENGL_gl_LIBRARY to use OpenGL with X11 on OSX </p>
-<dt><code>FindOpenMP</code></p>
-<dd> Finds OpenMP support </p>
+<dt><code>FindOpenMP</code></dt>
+<dd> Finds OpenMP support </dd>
 <p> This module can be used to detect OpenMP support in a compiler. If the compiler supports OpenMP, the flags required to compile with OpenMP support are returned in variables for the different languages. The variables may be empty if the compiler does not need a special flag to support OpenMP. </p>
 <p> The following variables are set: </p>
 <pre>
@@ -3391,8 +3391,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
    OPENMP_FOUND - true if openmp is detected
 </pre>
 <p> Supported compilers can be found at <a rel="nofollow" href="http://openmp.org/wp/openmp-compilers/">http://openmp.org/wp/openmp-compilers/</a> </p>
-<dt><code>FindOpenSSL</code></p>
-<dd> Try to find the OpenSSL encryption library </p>
+<dt><code>FindOpenSSL</code></dt>
+<dd> Try to find the OpenSSL encryption library </dd>
 <p> Once done this will define </p>
 <pre>
   OPENSSL_ROOT_DIR - Set this variable to the root installation of OpenSSL
@@ -3404,8 +3404,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   OPENSSL_LIBRARIES - The libraries needed to use OpenSSL
   OPENSSL_VERSION - This is set to $major.$minor.$revision$path (eg. 0.9.8s)
 </pre>
-<dt><code>FindOpenSceneGraph</code></p>
-<dd> Find OpenSceneGraph </p>
+<dt><code>FindOpenSceneGraph</code></dt>
+<dd> Find OpenSceneGraph </dd>
 <p> This module searches for the OpenSceneGraph core &quot;osg&quot; library as well as OpenThreads, and whatever additional COMPONENTS (nodekits) that you specify. </p>
 <pre>
     See <a rel="nofollow" href="http://www.openscenegraph.org">http://www.openscenegraph.org</a>
@@ -3451,22 +3451,22 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
   add_executable(foo foo.cc)
   target_link_libraries(foo ${OPENSCENEGRAPH_LIBRARIES})
 </pre>
-<dt><code>FindOpenThreads</code></p>
+<dt><code>FindOpenThreads</code></dt>
 <dd>
 <p> OpenThreads is a C++ based threading library. Its largest userbase seems to OpenSceneGraph so you might notice I accept OSGDIR as an environment path. I consider this part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. </p>
 <p> Locate OpenThreads This module defines OPENTHREADS_LIBRARY OPENTHREADS_FOUND, if false, do not try to link to OpenThreads OPENTHREADS_INCLUDE_DIR, where to find the headers </p>
 <p> $OPENTHREADS_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OPENTHREADS_DIR used in building osg. </p>
 <p> [CMake 2.8.10]: The CMake variables OPENTHREADS_DIR or OSG_DIR can now be used as well to influence detection, instead of needing to specify an environment variable. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindPHP4</code></p>
-<dd> Find PHP4 </p>
+</dd><dt><code>FindPHP4</code></dt>
+<dd> Find PHP4 </dd>
 <p> This module finds if PHP4 is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   PHP4_INCLUDE_PATH       = path to where php.h can be found
   PHP4_EXECUTABLE         = full path to the php4 binary
 </pre>
-<dt><code>FindPNG</code></p>
-<dd> Find the native PNG includes and library </p>
+<dt><code>FindPNG</code></dt>
+<dd> Find the native PNG includes and library </dd>
 <p> This module searches libpng, the library for working with PNG images. </p>
 <p> It defines the following variables </p>
 <pre>
@@ -3482,7 +3482,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 </pre>
 <p> For backward compatiblity the variable PNG_INCLUDE_DIR is also set. It has the same value as PNG_INCLUDE_DIRS. </p>
 <p> Since PNG depends on the ZLib compression library, none of the above will be defined unless ZLib can be found. </p>
-<dt><code>FindPackageHandleStandardArgs</code></p>
+<dt><code>FindPackageHandleStandardArgs</code></dt>
 <dd>
 <p> FIND_PACKAGE_HANDLE_STANDARD_ARGS(&lt;name&gt; &#8230; ) </p>
 <p> This function is intended to be used in FindXXX.cmake modules files. It handles the REQUIRED, QUIET and version-related arguments to find_package(). It also sets the &lt;packagename&gt;_FOUND variable. The package is considered found if all variables &lt;var1&gt;&#8230; listed contain valid results, e.g. valid filepaths. </p>
@@ -3519,7 +3519,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
     find_package_handle_standard_args(Automoc4  CONFIG_MODE)
 </pre>
 <p> In this case, FindAutmoc4.cmake wraps a call to find_package(Automoc4 NO_MODULE) and adds an additional search directory for automoc4. Here the result will be stored in AUTOMOC4_FOUND. The following FIND_PACKAGE_HANDLE_STANDARD_ARGS() call produces a proper success/error message. </p>
-<dt><code>FindPackageMessage</code></p>
+</dd><dt><code>FindPackageMessage</code></dt>
 <dd>
 <p> FIND_PACKAGE_MESSAGE(&lt;name&gt; &quot;message for user&quot; &quot;find result details&quot;) </p>
 <p> This macro is intended to be used in FindXXX.cmake modules files. It will print a message once for each unique find result. This is useful for telling the user where a package was found. The first argument specifies the name (XXX) of the package. The second argument specifies the message to display. The third argument lists details about the find result so that if they change the message will be displayed again. The macro also obeys the QUIET argument to the find_package command. </p>
@@ -3529,16 +3529,16 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
                              &#8220;[${X11_X11_LIB}][${X11_INCLUDE_DIR}]&#8221;)<br />
 else<br />
     ()&#8230; endif()</p>
-<dt><code>FindPerl</code></p>
-<dd> Find perl </p>
+</dd><dt><code>FindPerl</code></dt>
+<dd> Find perl </dd>
 <p> this module looks for Perl </p>
 <pre>
   PERL_EXECUTABLE     - the full path to perl
   PERL_FOUND          - If false, don't attempt to use perl.
   PERL_VERSION_STRING - version of perl found (since CMake 2.8.8)
 </pre>
-<dt><code>FindPerlLibs</code></p>
-<dd> Find Perl libraries </p>
+<dt><code>FindPerlLibs</code></dt>
+<dd> Find Perl libraries </dd>
 <p> This module finds if PERL is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   PERLLIBS_FOUND    = True if perl.h &amp; libperl were found
@@ -3560,20 +3560,20 @@ else<br />
   PERL_PRIVLIB       = path to the priv lib install directory
   PERL_EXTRA_C_FLAGS = Compilation flags used to build perl
 </pre>
-<dt><code>FindPhysFS</code></p>
+<dt><code>FindPhysFS</code></dt>
 <dd>
 <p> Locate PhysFS library This module defines PHYSFS_LIBRARY, the name of the library to link against PHYSFS_FOUND, if false, do not try to link to PHYSFS PHYSFS_INCLUDE_DIR, where to find physfs.h </p>
 <p> $PHYSFSDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$PHYSFSDIR used in building PHYSFS. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindPike</code></p>
-<dd> Find Pike </p>
+</dd><dt><code>FindPike</code></dt>
+<dd> Find Pike </dd>
 <p> This module finds if PIKE is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   PIKE_INCLUDE_PATH       = path to where program.h is found
   PIKE_EXECUTABLE         = full path to the pike binary
 </pre>
-<dt><code>FindPkgConfig</code></p>
-<dd> a pkg-config module for CMake </p>
+<dt><code>FindPkgConfig</code></dt>
+<dd> a pkg-config module for CMake </dd>
 <p> Usage: </p>
 <p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
      checks for all the given modules</p>
@@ -3640,8 +3640,8 @@ Xdmcp</p>
 <pre>
    pkg_search_module (BAR     libxml-2.0 libxml2 libxml&gt;=2)
 </pre>
-<dt><code>FindPostgreSQL</code></p>
-<dd> Find the PostgreSQL installation. </p>
+<dt><code>FindPostgreSQL</code></dt>
+<dd> Find the PostgreSQL installation. </dd>
 <p> In Windows, we make the assumption that, if the PostgreSQL files are installed, the default directory will be C:\Program Files\PostgreSQL. </p>
 <p> This module defines </p>
 <pre>
@@ -3649,14 +3649,14 @@ Xdmcp</p>
   PostgreSQL_INCLUDE_DIRS - the directories of the PostgreSQL headers
   PostgreSQL_VERSION_STRING - the version of PostgreSQL found (since CMake 2.8.8)
 </pre>
-<dt><code>FindProducer</code></p>
+<dt><code>FindProducer</code></dt>
 <dd>
 <p> Though Producer isn&#8217;t directly part of OpenSceneGraph, its primary user is OSG so I consider this part of the Findosg* suite used to find OpenSceneGraph components. You&#8217;ll notice that I accept OSGDIR as an environment path. </p>
 <p> Each component is separate and you must opt in to each module. You must also opt into OpenGL (and OpenThreads?) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate Producer This module defines PRODUCER_LIBRARY PRODUCER_FOUND, if false, do not try to link to Producer PRODUCER_INCLUDE_DIR, where to find the headers </p>
 <p> $PRODUCER_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$PRODUCER_DIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindProtobuf</code></p>
+</dd><dt><code>FindProtobuf</code></dt>
 <dd>
 <p> Locate and configure the Google Protocol Buffers library. </p>
 <p> The following variables can be set and are optional: </p>
@@ -3723,8 +3723,8 @@ Xdmcp</p>
    ARGN = proto files
 </pre>
 <p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
-<dt><code>FindPythonInterp</code></p>
-<dd> Find python interpreter </p>
+</dd><dt><code>FindPythonInterp</code></dt>
+<dd> Find python interpreter </dd>
 <p> This module finds if Python interpreter is installed and determines where the executables are. This code sets the following variables: </p>
 <pre>
   PYTHONINTERP_FOUND         - Was the Python executable found
@@ -3737,8 +3737,8 @@ Xdmcp</p>
   PYTHON_VERSION_PATCH       - Python patch version found e.g. 2
 </pre>
 <p> The Python_ADDITIONAL_VERSIONS variable can be used to specify a list of version numbers that should be taken into account when searching for Python. You need to set this variable before calling find_package(PythonInterp). </p>
-<dt><code>FindPythonLibs</code></p>
-<dd> Find python libraries </p>
+<dt><code>FindPythonLibs</code></dt>
+<dd> Find python libraries </dd>
 <p> This module finds if Python is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   PYTHONLIBS_FOUND           - have the Python libs been found
@@ -3754,8 +3754,8 @@ Xdmcp</p>
   PYTHON_LIBRARY             - path to the python library
   PYTHON_INCLUDE_DIR         - path to where Python.h is found
 </pre>
-<dt><code>FindQt</code></p>
-<dd> Searches for all installed versions of Qt. </p>
+<dt><code>FindQt</code></dt>
+<dd> Searches for all installed versions of Qt. </dd>
 <p> This should only be used if your project can work with multiple versions of Qt. If not, you should just directly use FindQt4 or FindQt3. If multiple versions of Qt are found on the machine, then The user must set the option DESIRED_QT_VERSION to the version they want to use. If only one version of qt is found on the machine, then the DESIRED_QT_VERSION is set to that version and the matching FindQt3 or FindQt4 module is included. Once the user sets DESIRED_QT_VERSION, then the FindQt3 or FindQt4 module is included. </p>
 <pre>
   QT_REQUIRED if this is set to TRUE then if CMake can
@@ -3767,8 +3767,8 @@ Xdmcp</p>
   QT4_INSTALLED is set to TRUE if qt4 is found.
   QT3_INSTALLED is set to TRUE if qt3 is found.
 </pre>
-<dt><code>FindQt3</code></p>
-<dd> Locate Qt include paths and libraries </p>
+<dt><code>FindQt3</code></dt>
+<dd> Locate Qt include paths and libraries </dd>
 <p> This module defines: </p>
 <pre>
   QT_INCLUDE_DIR    - where to find qt.h, etc.
@@ -3787,8 +3787,8 @@ Xdmcp</p>
   QT_QTMAIN_LIBRARY, where to find the qtmain
    library. This is only required by Qt3 on Windows.
 </pre>
-<dt><code>FindQt4</code></p>
-<dd> Find Qt 4 </p>
+<dt><code>FindQt4</code></dt>
+<dd> Find Qt 4 </dd>
 <p> This module can be used to find Qt4. The most important issue is that the Qt4 qmake is available via the system path. This qmake is then used to detect basically everything else. This module defines a number of key variables and macros. The variable QT_USE_FILE is set which is the path to a CMake file that can be included to compile Qt 4 applications and libraries. It sets up the compilation environment for include directories, preprocessor defines and populates a QT_LIBRARIES variable. </p>
 <p> Typical usage could be something like: </p>
 <p>find_package(Qt4 4.4.3 REQUIRED QtCore QtGui QtXml)<br />
@@ -4088,13 +4088,13 @@ Xdmcp</p>
 <pre>
   QT_QT_LIBRARY        Qt-Library is now split
 </pre>
-<dt><code>FindQuickTime</code></p>
+<dt><code>FindQuickTime</code></dt>
 <dd>
 <p> Locate QuickTime This module defines QUICKTIME_LIBRARY QUICKTIME_FOUND, if false, do not try to link to gdal QUICKTIME_INCLUDE_DIR, where to find the headers </p>
 <p> $QUICKTIME_DIR is an environment variable that would correspond to the ./configure &#8211;prefix=$QUICKTIME_DIR </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindRTI</code></p>
-<dd> Try to find M&amp;S HLA RTI libraries </p>
+</dd><dt><code>FindRTI</code></dt>
+<dd> Try to find M&amp;S HLA RTI libraries </dd>
 <p> This module finds if any HLA RTI is installed and locates the standard RTI include files and libraries. </p>
 <p> RTI is a simulation infrastructure standardized by IEEE and SISO. It has a well defined C++ API that assures that simulation applications are independent on a particular RTI implementation. </p>
 <pre>
@@ -4108,8 +4108,8 @@ Xdmcp</p>
   RTI_FOUND = Set to FALSE if any HLA RTI was not found
 </pre>
 <p> Report problems to &lt;certi-devel [at] nongnu.org&gt; </p>
-<dt><code>FindRuby</code></p>
-<dd> Find Ruby </p>
+<dt><code>FindRuby</code></dt>
+<dd> Find Ruby </dd>
 <p> This module finds if Ruby is installed and determines where the include files and libraries are. Ruby 1.8 and 1.9 are supported. </p>
 <p> The minimum required version of Ruby can be specified using the standard syntax, e.g. find_package(Ruby 1.8) </p>
 <p> It also determines what the name of the library is. This code sets the following variables: </p>
@@ -4123,8 +4123,8 @@ Xdmcp</p>
 <pre>
   RUBY_INCLUDE_PATH = same as RUBY_INCLUDE_DIRS, only provided for compatibility reasons, don't use it
 </pre>
-<dt><code>FindSDL</code></p>
-<dd> Locate SDL library </p>
+<dt><code>FindSDL</code></dt>
+<dd> Locate SDL library </dd>
 <p> This module defines </p>
 <pre>
   SDL_LIBRARY, the name of the library to link against
@@ -4147,8 +4147,8 @@ Xdmcp</p>
 <p> Modified by Eric Wing. Added code to assist with automated building by using environmental variables and providing a more controlled/consistent search behavior. Added new modifications to recognize OS X frameworks and additional Unix paths (FreeBSD, etc). Also corrected the header search path to follow &quot;proper&quot; SDL guidelines. Added a search for SDLmain which is needed by some platforms. Added a search for threads which is needed by some platforms. Added needed compile switches for MinGW. </p>
 <p> On OSX, this will prefer the Framework version (if found) over others. People will have to manually change the cache values of SDL_LIBRARY to override this selection or set the CMake environment CMAKE_INCLUDE_PATH to modify the search paths. </p>
 <p> Note that the header path has changed from SDL/SDL.h to just SDL.h This needed to change because &quot;proper&quot; SDL convention is #include &quot;SDL.h&quot;, not &lt;SDL/SDL.h&gt;. This is done for portability reasons because not all systems place things in SDL/ (see FreeBSD). </p>
-<dt><code>FindSDL_image</code></p>
-<dd> Locate SDL_image library </p>
+<dt><code>FindSDL_image</code></dt>
+<dd> Locate SDL_image library </dd>
 <p> This module defines: </p>
 <pre>
   SDL_IMAGE_LIBRARIES, the name of the library to link against
@@ -4164,8 +4164,8 @@ Xdmcp</p>
 </pre>
 <p> $SDLDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. </p>
 <p> Created by Eric Wing. This was influenced by the FindSDL.cmake module, but with modifications to recognize OS X frameworks and additional Unix paths (FreeBSD, etc). </p>
-<dt><code>FindSDL_mixer</code></p>
-<dd> Locate SDL_mixer library </p>
+<dt><code>FindSDL_mixer</code></dt>
+<dd> Locate SDL_mixer library </dd>
 <p> This module defines: </p>
 <pre>
   SDL_MIXER_LIBRARIES, the name of the library to link against
@@ -4181,8 +4181,8 @@ Xdmcp</p>
 </pre>
 <p> $SDLDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. </p>
 <p> Created by Eric Wing. This was influenced by the FindSDL.cmake module, but with modifications to recognize OS X frameworks and additional Unix paths (FreeBSD, etc). </p>
-<dt><code>FindSDL_net</code></p>
-<dd> Locate SDL_net library </p>
+<dt><code>FindSDL_net</code></dt>
+<dd> Locate SDL_net library </dd>
 <p> This module defines: </p>
 <pre>
   SDL_NET_LIBRARIES, the name of the library to link against
@@ -4198,8 +4198,8 @@ Xdmcp</p>
 </pre>
 <p> $SDLDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. </p>
 <p> Created by Eric Wing. This was influenced by the FindSDL.cmake module, but with modifications to recognize OS X frameworks and additional Unix paths (FreeBSD, etc). </p>
-<dt><code>FindSDL_sound</code></p>
-<dd> Locates the SDL_sound library </p>
+<dt><code>FindSDL_sound</code></dt>
+<dd> Locates the SDL_sound library </dd>
 <p> This module depends on SDL being found and must be called AFTER FindSDL.cmake is called. </p>
 <p> This module defines </p>
 <pre>
@@ -4232,8 +4232,8 @@ Xdmcp</p>
 <p> Created by Eric Wing. This module is a bit more complicated than the other FindSDL* family modules. The reason is that SDL_sound can be compiled in a large variety of different ways which are independent of platform. SDL_sound may dynamically link against other 3rd party libraries to get additional codec support, such as Ogg Vorbis, SMPEG, ModPlug, MikMod, FLAC, Speex, and potentially others. Under some circumstances which I don&#8217;t fully understand, there seems to be a requirement that dependent libraries of libraries you use must also be explicitly linked against in order to successfully compile. SDL_sound does not currently have any system in place to know how it was compiled. So this CMake module does the hard work in trying to discover which 3rd party libraries are required for building (if any). This module uses a brute force approach to create a test program that uses SDL_sound, and then tries to build it. If the build fails, it parses the error output for known symbol names to figure out which libraries are needed. </p>
 <p> Responds to the $SDLDIR and $SDLSOUNDDIR environmental variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. </p>
 <p> On OSX, this will prefer the Framework version (if found) over others. People will have to manually change the cache values of SDL_LIBRARY to override this selectionor set the CMake environment CMAKE_INCLUDE_PATH to modify the search paths. </p>
-<dt><code>FindSDL_ttf</code></p>
-<dd> Locate SDL_ttf library </p>
+<dt><code>FindSDL_ttf</code></dt>
+<dd> Locate SDL_ttf library </dd>
 <p> This module defines: </p>
 <pre>
   SDL_TTF_LIBRARIES, the name of the library to link against
@@ -4249,8 +4249,8 @@ Xdmcp</p>
 </pre>
 <p> $SDLDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$SDLDIR used in building SDL. </p>
 <p> Created by Eric Wing. This was influenced by the FindSDL.cmake module, but with modifications to recognize OS X frameworks and additional Unix paths (FreeBSD, etc). </p>
-<dt><code>FindSWIG</code></p>
-<dd> Find SWIG </p>
+<dt><code>FindSWIG</code></dt>
+<dd> Find SWIG </dd>
 <p> This module finds an installed SWIG. It sets the following variables: </p>
 <pre>
   SWIG_FOUND - set to true if SWIG is found
@@ -4260,14 +4260,14 @@ Xdmcp</p>
 </pre>
 <p> The minimum required version of SWIG can be specified using the standard syntax, e.g. find_package(SWIG 1.1) </p>
 <p> All information is collected from the SWIG_EXECUTABLE so the version to be found can be changed from the command line by means of setting SWIG_EXECUTABLE </p>
-<dt><code>FindSelfPackers</code></p>
-<dd> Find upx </p>
+<dt><code>FindSelfPackers</code></dt>
+<dd> Find upx </dd>
 <p> This module looks for some executable packers (i.e. software that compress executables or shared libs into on-the-fly self-extracting executables or shared libs. Examples: </p>
 <pre>
   UPX: <a rel="nofollow" href="http://wildsau.idv.uni-linz.ac.at/mfx/upx.html">http://wildsau.idv.uni-linz.ac.at/mfx/upx.html</a>
 </pre>
-<dt><code>FindSquish</code></p>
-<dd> &#8212; Typical Use </p>
+<dt><code>FindSquish</code></dt>
+<dd> &#8212; Typical Use </dd>
 <p> This module can be used to find Squish. Currently Squish versions 3 and 4 are supported. </p>
 <pre>
   SQUISH_FOUND                    If false, don't try to use Squish
@@ -4325,8 +4325,8 @@ Xdmcp</p>
 <pre>
    This is deprecated. Use SQUISH_V3_ADD_TEST() if you are using Squish 3.x instead.
 </pre>
-<dt><code>FindSubversion</code></p>
-<dd> Extract information from a subversion working copy </p>
+<dt><code>FindSubversion</code></dt>
+<dd> Extract information from a subversion working copy </dd>
 <p> The module defines the following variables: </p>
 <pre>
   Subversion_SVN_EXECUTABLE - path to svn command line client
@@ -4361,8 +4361,8 @@ Xdmcp</p>
             Subversion_WC_LOG(${PROJECT_SOURCE_DIR} Project)<br />
                 message(&#8220;Last changed log is ${Project_LAST_CHANGED_LOG}&#8221;)<br />
                     endif()</p>
-<dt><code>FindTCL</code></p>
-<dd> TK_INTERNAL_PATH was removed. </p>
+<dt><code>FindTCL</code></dt>
+<dd> TK_INTERNAL_PATH was removed. </dd>
 <p> This module finds if Tcl is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   TCL_FOUND              = Tcl was found
@@ -4390,8 +4390,8 @@ Xdmcp</p>
       this point it is safer you ask directly where the *source* tree is
       and dig from there.
 </pre>
-<dt><code>FindTIFF</code></p>
-<dd> Find TIFF library </p>
+<dt><code>FindTIFF</code></dt>
+<dd> Find TIFF library </dd>
 <p> Find the native TIFF includes and library This module defines </p>
 <pre>
   TIFF_INCLUDE_DIR, where to find tiff.h, etc.
@@ -4402,8 +4402,8 @@ Xdmcp</p>
 <pre>
   TIFF_LIBRARY, where to find the TIFF library.
 </pre>
-<dt><code>FindTclStub</code></p>
-<dd> TCL_STUB_LIBRARY_DEBUG and TK_STUB_LIBRARY_DEBUG were removed. </p>
+<dt><code>FindTclStub</code></dt>
+<dd> TCL_STUB_LIBRARY_DEBUG and TK_STUB_LIBRARY_DEBUG were removed. </dd>
 <p> This module finds Tcl stub libraries. It first finds Tcl include files and libraries by calling FindTCL.cmake. How to Use the Tcl Stubs Library: </p>
 <pre>
    <a rel="nofollow" href="http://tcl.activestate.com/doc/howto/stubs.html">http://tcl.activestate.com/doc/howto/stubs.html</a>
@@ -4427,16 +4427,16 @@ Xdmcp</p>
       Let's leave that choice to the user by allowing him to assign
       TCL_STUB_LIBRARY to any Tcl library, debug or not.
 </pre>
-<dt><code>FindTclsh</code></p>
-<dd> Find tclsh </p>
+<dt><code>FindTclsh</code></dt>
+<dd> Find tclsh </dd>
 <p> This module finds if TCL is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   TCLSH_FOUND = TRUE if tclsh has been found
   TCL_TCLSH = the path to the tclsh executable
 </pre>
 <p> In cygwin, look for the cygwin version first. Don&#8217;t look for it later to avoid finding the cygwin version on a Win32 build. </p>
-<dt><code>FindThreads</code></p>
-<dd> This module determines the thread library of the system. </p>
+<dt><code>FindThreads</code></dt>
+<dd> This module determines the thread library of the system. </dd>
 <p> The following variables are set </p>
 <pre>
   CMAKE_THREAD_LIBS_INIT     - the thread library
@@ -4449,11 +4449,11 @@ Xdmcp</p>
 <pre>
   CMAKE_THREAD_PREFER_PTHREAD
 </pre>
-<dt><code>FindUnixCommands</code></p>
-<dd> Find unix commands from cygwin </p>
+<dt><code>FindUnixCommands</code></dt>
+<dd> Find unix commands from cygwin </dd>
 <p> This module looks for some usual Unix commands. </p>
-<dt><code>FindVTK</code></p>
-<dd> Find a VTK installation or build tree. </p>
+<dt><code>FindVTK</code></dt>
+<dd> Find a VTK installation or build tree. </dd>
 <p> The following variables are set if VTK is found. If VTK is not found, VTK_FOUND is set to false. </p>
 <pre>
   VTK_FOUND         - Set to true when VTK is found.
@@ -4484,22 +4484,22 @@ Xdmcp</p>
                  compatibility.  Use VTK_USE_FILE
                  instead.
 </pre>
-<dt><code>FindWget</code></p>
-<dd> Find wget </p>
+<dt><code>FindWget</code></dt>
+<dd> Find wget </dd>
 <p> This module looks for wget. This module defines the following values: </p>
 <pre>
   WGET_EXECUTABLE: the full path to the wget tool.
   WGET_FOUND: True if wget has been found.
 </pre>
-<dt><code>FindWish</code></p>
-<dd> Find wish installation </p>
+<dt><code>FindWish</code></dt>
+<dd> Find wish installation </dd>
 <p> This module finds if TCL is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   TK_WISH = the path to the wish executable
 </pre>
 <p> if UNIX is defined, then it will look for the cygwin version first </p>
-<dt><code>FindX11</code></p>
-<dd> Find X11 installation </p>
+<dt><code>FindX11</code></dt>
+<dd> Find X11 installation </dd>
 <p> Try to find X11 on UNIX systems. The following values are defined </p>
 <pre>
   X11_FOUND        - True if X11 is available
@@ -4542,8 +4542,8 @@ Xdmcp</p>
                 X11_Xv_INCLUDE_PATH,           X11_Xv_LIB,         X11_Xv_FOUND
                 X11_XSync_INCLUDE_PATH,        (in X11_Xext_LIB),  X11_XSync_FOUND
 </pre>
-<dt><code>FindXMLRPC</code></p>
-<dd> Find xmlrpc </p>
+<dt><code>FindXMLRPC</code></dt>
+<dd> Find xmlrpc </dd>
 <p> Find the native XMLRPC headers and libraries. </p>
 <pre>
   XMLRPC_INCLUDE_DIRS      - where to find xmlrpc.h, etc.
@@ -4561,8 +4561,8 @@ Xdmcp</p>
 <pre>
   find_package(XMLRPC REQUIRED libwww-client)
 </pre>
-<dt><code>FindZLIB</code></p>
-<dd> Find zlib </p>
+<dt><code>FindZLIB</code></dt>
+<dd> Find zlib </dd>
 <p> Find the native ZLIB includes and library. Once done this will define </p>
 <pre>
   ZLIB_INCLUDE_DIRS   - where to find zlib.h, etc.
@@ -4583,7 +4583,7 @@ Xdmcp</p>
   ZLIB_PATCH_VERSION  - The patch version of zlib
 </pre>
 <p> An includer may set ZLIB_ROOT to a zlib installation root to tell this module where to look. </p>
-<dt><code>Findosg</code></p>
+<dt><code>Findosg</code></dt>
 <dd>
 <p> NOTE: It is highly recommended that you use the new FindOpenSceneGraph.cmake introduced in CMake 2.6.3 and not use this Find module directly. </p>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
@@ -4592,7 +4592,7 @@ Xdmcp</p>
 <p> OSG_LIBRARY &#8211; The OSG library OSG_LIBRARY_DEBUG &#8211; The OSG debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgAnimation</code></p>
+</dd><dt><code>FindosgAnimation</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgAnimation This module defines </p>
@@ -4600,7 +4600,7 @@ Xdmcp</p>
 <p> OSGANIMATION_LIBRARY &#8211; The OSG library OSGANIMATION_LIBRARY_DEBUG &#8211; The OSG debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgDB</code></p>
+</dd><dt><code>FindosgDB</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgDB This module defines </p>
@@ -4608,7 +4608,7 @@ Xdmcp</p>
 <p> OSGDB_LIBRARY &#8211; The osgDB library OSGDB_LIBRARY_DEBUG &#8211; The osgDB debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgFX</code></p>
+</dd><dt><code>FindosgFX</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgFX This module defines </p>
@@ -4616,7 +4616,7 @@ Xdmcp</p>
 <p> OSGFX_LIBRARY &#8211; The osgFX library OSGFX_LIBRARY_DEBUG &#8211; The osgFX debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgGA</code></p>
+</dd><dt><code>FindosgGA</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgGA This module defines </p>
@@ -4624,7 +4624,7 @@ Xdmcp</p>
 <p> OSGGA_LIBRARY &#8211; The osgGA library OSGGA_LIBRARY_DEBUG &#8211; The osgGA debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgIntrospection</code></p>
+</dd><dt><code>FindosgIntrospection</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgINTROSPECTION This module defines </p>
@@ -4632,7 +4632,7 @@ Xdmcp</p>
 <p> OSGINTROSPECTION_LIBRARY &#8211; The osgIntrospection library OSGINTROSPECTION_LIBRARY_DEBUG &#8211; The osgIntrospection debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgManipulator</code></p>
+</dd><dt><code>FindosgManipulator</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgManipulator This module defines </p>
@@ -4640,7 +4640,7 @@ Xdmcp</p>
 <p> OSGMANIPULATOR_LIBRARY &#8211; The osgManipulator library OSGMANIPULATOR_LIBRARY_DEBUG &#8211; The osgManipulator debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgParticle</code></p>
+</dd><dt><code>FindosgParticle</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgParticle This module defines </p>
@@ -4648,7 +4648,7 @@ Xdmcp</p>
 <p> OSGPARTICLE_LIBRARY &#8211; The osgParticle library OSGPARTICLE_LIBRARY_DEBUG &#8211; The osgParticle debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgPresentation</code></p>
+</dd><dt><code>FindosgPresentation</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgPresentation This module defines </p>
@@ -4656,7 +4656,7 @@ Xdmcp</p>
 <p> OSGPRESENTATION_LIBRARY &#8211; The osgPresentation library OSGPRESENTATION_LIBRARY_DEBUG &#8211; The osgPresentation debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. Modified to work with osgPresentation by Robert Osfield, January 2012. </p>
-<dt><code>FindosgProducer</code></p>
+</dd><dt><code>FindosgProducer</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgProducer This module defines </p>
@@ -4664,7 +4664,7 @@ Xdmcp</p>
 <p> OSGPRODUCER_LIBRARY &#8211; The osgProducer library OSGPRODUCER_LIBRARY_DEBUG &#8211; The osgProducer debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgQt</code></p>
+</dd><dt><code>FindosgQt</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgQt This module defines </p>
@@ -4672,7 +4672,7 @@ Xdmcp</p>
 <p> OSGQT_LIBRARY &#8211; The osgQt library OSGQT_LIBRARY_DEBUG &#8211; The osgQt debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. Modified to work with osgQt by Robert Osfield, January 2012. </p>
-<dt><code>FindosgShadow</code></p>
+</dd><dt><code>FindosgShadow</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgShadow This module defines </p>
@@ -4680,7 +4680,7 @@ Xdmcp</p>
 <p> OSGSHADOW_LIBRARY &#8211; The osgShadow library OSGSHADOW_LIBRARY_DEBUG &#8211; The osgShadow debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgSim</code></p>
+</dd><dt><code>FindosgSim</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgSim This module defines </p>
@@ -4688,7 +4688,7 @@ Xdmcp</p>
 <p> OSGSIM_LIBRARY &#8211; The osgSim library OSGSIM_LIBRARY_DEBUG &#8211; The osgSim debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgTerrain</code></p>
+</dd><dt><code>FindosgTerrain</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgTerrain This module defines </p>
@@ -4696,7 +4696,7 @@ Xdmcp</p>
 <p> OSGTERRAIN_LIBRARY &#8211; The osgTerrain library OSGTERRAIN_LIBRARY_DEBUG &#8211; The osgTerrain debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgText</code></p>
+</dd><dt><code>FindosgText</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgText This module defines </p>
@@ -4704,7 +4704,7 @@ Xdmcp</p>
 <p> OSGTEXT_LIBRARY &#8211; The osgText library OSGTEXT_LIBRARY_DEBUG &#8211; The osgText debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgUtil</code></p>
+</dd><dt><code>FindosgUtil</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgUtil This module defines </p>
@@ -4712,7 +4712,7 @@ Xdmcp</p>
 <p> OSGUTIL_LIBRARY &#8211; The osgUtil library OSGUTIL_LIBRARY_DEBUG &#8211; The osgUtil debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgViewer</code></p>
+</dd><dt><code>FindosgViewer</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgViewer This module defines </p>
@@ -4720,7 +4720,7 @@ Xdmcp</p>
 <p> OSGVIEWER_LIBRARY &#8211; The osgViewer library OSGVIEWER_LIBRARY_DEBUG &#8211; The osgViewer debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgVolume</code></p>
+</dd><dt><code>FindosgVolume</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgVolume This module defines </p>
@@ -4728,7 +4728,7 @@ Xdmcp</p>
 <p> OSGVOLUME_LIBRARY &#8211; The osgVolume library OSGVOLUME_LIBRARY_DEBUG &#8211; The osgVolume debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> Created by Eric Wing. </p>
-<dt><code>FindosgWidget</code></p>
+</dd><dt><code>FindosgWidget</code></dt>
 <dd>
 <p> This is part of the Findosg* suite used to find OpenSceneGraph components. Each component is separate and you must opt in to each module. You must also opt into OpenGL and OpenThreads (and Producer if needed) as these modules won&#8217;t do it for you. This is to allow you control over your own system piece by piece in case you need to opt out of certain components or change the Find behavior for a particular module (perhaps because the default FindOpenGL.cmake module doesn&#8217;t work with your system as an example). If you want to use a more convenient module that includes everything, use the FindOpenSceneGraph.cmake instead of the Findosg*.cmake modules. </p>
 <p> Locate osgWidget This module defines </p>
@@ -4736,11 +4736,11 @@ Xdmcp</p>
 <p> OSGWIDGET_LIBRARY &#8211; The osgWidget library OSGWIDGET_LIBRARY_DEBUG &#8211; The osgWidget debug library </p>
 <p> $OSGDIR is an environment variable that would correspond to the ./configure &#8211;prefix=$OSGDIR used in building osg. </p>
 <p> FindosgWidget.cmake tweaked from Findosg* suite as created by Eric Wing. </p>
-<dt><code>Findosg_functions</code></p>
+</dd><dt><code>Findosg_functions</code></dt>
 <dd>
 <p> This CMake file contains two macros to assist with searching for OSG libraries and nodekits. Please see FindOpenSceneGraph.cmake for full documentation. </p>
-<dt><code>FindwxWidgets</code></p>
-<dd> Find a wxWidgets (a.k.a., wxWindows) installation. </p>
+</dd><dt><code>FindwxWidgets</code></dt>
+<dd> Find a wxWidgets (a.k.a., wxWindows) installation. </dd>
 <p> This module finds if wxWidgets is installed and selects a default configuration to use. wxWidgets is a modular library. To specify the modules that you will use, you need to name them as components to the package: </p>
 <p> find_package(wxWidgets COMPONENTS core base &#8230;) </p>
 <p> There are two search branches: a windows style and a unix style. For windows, the following variables are searched for and set to defaults in case of multiple choices. Change them if the defaults are not desired (i.e., these are the only variables you should change to select a configuration): </p>
@@ -4796,8 +4796,8 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
     include(${wxWidgets_USE_FILE})<br />
 #and for each of your dependent executable / library targets:<br />
         target_link_libraries(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})</p>
-<dt><code>FindwxWindows</code></p>
-<dd> Find wxWindows (wxWidgets) installation </p>
+<dt><code>FindwxWindows</code></dt>
+<dd> Find wxWindows (wxWidgets) installation </dd>
 <p> This module finds if wxWindows/wxWidgets is installed and determines where the include files and libraries are. It also determines what the name of the library is. Please note this file is DEPRECATED and replaced by FindwxWidgets.cmake. This code sets the following variables: </p>
 <p>  WXWINDOWS_FOUND     = system has WxWindows<br />
   WXWINDOWS_LIBRARIES = path to the wxWindows libraries<br />
@@ -4837,8 +4837,8 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
   WXWINDOWS_INCLUDE_PATH
 </pre>
 <p> AUTHOR Jan Woetzel &lt;<a rel="nofollow" href="http://www.mip.informatik.uni-kiel.de/~jw">http://www.mip.informatik.uni-kiel.de/~jw</a>&gt; (07/2003-01/2006) </p>
-<dt><code>FortranCInterface</code></p>
-<dd> Fortran/C Interface Detection </p>
+<dt><code>FortranCInterface</code></dt>
+<dd> Fortran/C Interface Detection </dd>
 <p> This module automatically detects the API by which C and Fortran languages interact. Variables indicate if the mangling is found: </p>
 <pre>
    FortranCInterface_GLOBAL_FOUND = Global subroutines and functions
@@ -4899,8 +4899,8 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
    include(FortranCInterface)
 </pre>
 <p> tells FortranCInterface to try given GLOBAL and MODULE manglings. (The carets point at raw symbol names for clarity in this example but are not needed.) </p>
-<dt><code>GNUInstallDirs</code></p>
-<dd> Define GNU standard installation directories </p>
+<dt><code>GNUInstallDirs</code></dt>
+<dd> Define GNU standard installation directories </dd>
 <p> Provides install directory variables as defined for GNU software: </p>
 <pre>
   <a rel="nofollow" href="http://www.gnu.org/prep/standards/html_node/Directory-Variables.html">http://www.gnu.org/prep/standards/html_node/Directory-Variables.html</a>
@@ -4929,8 +4929,8 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
   DOCDIR           - documentation root (DATAROOTDIR/doc/PROJECT_NAME)
 </pre>
 <p> Each CMAKE_INSTALL_&lt;dir&gt; value may be passed to the DESTINATION options of install() commands for the corresponding file type. If the includer does not define a value the above-shown default will be used and the value will appear in the cache for editing by the user. Each CMAKE_INSTALL_FULL_&lt;dir&gt; value contains an absolute path constructed from the corresponding destination by prepending (if necessary) the value of CMAKE_INSTALL_PREFIX. </p>
-<dt><code>GenerateExportHeader</code></p>
-<dd> Function for generation of export macros for libraries </p>
+<dt><code>GenerateExportHeader</code></dt>
+<dd> Function for generation of export macros for libraries </dd>
 <p> This module provides the function GENERATE_EXPORT_HEADER() and the accompanying ADD_COMPILER_EXPORT_FLAGS() function. </p>
 <p> The GENERATE_EXPORT_HEADER function can be used to generate a file suitable for preprocessor inclusion which contains EXPORT macros to be used in library classes. </p>
 <p> GENERATE_EXPORT_HEADER( LIBRARY_TARGET </p>
@@ -5018,8 +5018,8 @@ void SomeClass::oldMethod()<br />
    generate_export_header(somelib PREFIX_NAME VTK_)
 </pre>
 <p> Generates the macros VTK_SOMELIB_EXPORT etc. </p>
-<dt><code>GetPrerequisites</code></p>
-<dd> Functions to analyze and list executable file prerequisites. </p>
+<dt><code>GetPrerequisites</code></dt>
+<dd> Functions to analyze and list executable file prerequisites. </dd>
 <p> This module provides functions to list the .dll, .dylib or .so files that an executable or shared library file depends on. (Its prerequisites.) </p>
 <p> It uses various tools to obtain the list of required shared library files: </p>
 <pre>
@@ -5100,15 +5100,15 @@ void SomeClass::oldMethod()<br />
    embedded
    other
 </pre>
-<dt><code>InstallRequiredSystemLibraries</code></p>
+<dt><code>InstallRequiredSystemLibraries</code></dt>
 <dd>
 <p> By including this file, all library files listed in the variable CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS will be installed with install(PROGRAMS &#8230;) into bin for WIN32 and lib for non-WIN32. If CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP is set to TRUE before including this file, then the INSTALL command is not called. The user can use the variable CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS to use a custom install command and install them however they want. If it is the MSVC compiler, then the microsoft run time libraries will be found and automatically added to the CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS, and installed. If CMAKE_INSTALL_DEBUG_LIBRARIES is set and it is the MSVC compiler, then the debug libraries are installed when available. If CMAKE_INSTALL_DEBUG_LIBRARIES_ONLY is set then only the debug libraries are installed when both debug and release are available. If CMAKE_INSTALL_MFC_LIBRARIES is set then the MFC run time libraries are installed as well as the CRT run time libraries. If CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION is set then the libraries are installed to that directory rather than the default. If CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS is NOT set, then this file warns about required files that do not exist. You can set this variable to ON before including this file to avoid the warning. For example, the Visual Studio Express editions do not include the redistributable files, so if you include this file on a machine with only VS Express installed, you&#8217;ll get the warning. </p>
-<dt><code>MacroAddFileDependencies</code></p>
-<dd> MACRO_ADD_FILE_DEPENDENCIES(&lt;_file&gt; depend_files&#8230;) </p>
+</dd><dt><code>MacroAddFileDependencies</code></dt>
+<dd> MACRO_ADD_FILE_DEPENDENCIES(&lt;_file&gt; depend_files&#8230;) </dd>
 <p> Using the macro MACRO_ADD_FILE_DEPENDENCIES() is discouraged. There are usually better ways to specify the correct dependencies. </p>
 <p> MACRO_ADD_FILE_DEPENDENCIES(&lt;_file&gt; depend_files&#8230;) is just a convenience wrapper around the OBJECT_DEPENDS source file property. You can just use set_property(SOURCE &lt;file&gt; APPEND PROPERTY OBJECT_DEPENDS depend_files) instead. </p>
-<dt><code>ProcessorCount</code></p>
-<dd> ProcessorCount(var) </p>
+<dt><code>ProcessorCount</code></dt>
+<dd> ProcessorCount(var) </dd>
 <p> Determine the number of processors/cores and save value in ${var} </p>
 <p> Sets the variable named ${var} to the number of physical cores available on the machine if the information can be determined. Otherwise it is set to 0. Currently this functionality is implemented for AIX, cygwin, FreeBSD, HPUX, IRIX, Linux, Mac OS X, QNX, Sun and Windows. </p>
 <p> This function is guaranteed to return a positive integer (&gt;=1) if it succeeds. It returns 0 if there&#8217;s a problem determining the processor count. </p>
@@ -5119,30 +5119,30 @@ void SomeClass::oldMethod()<br />
             set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})<br />
                 endif()</p>
 <p> This function is intended to offer an approximation of the value of the number of compute cores available on the current machine, such that you may use that value for parallel building and parallel testing. It is meant to help utilize as much of the machine as seems reasonable. Of course, knowledge of what else might be running on the machine simultaneously should be used when deciding whether to request a machine&#8217;s full capacity all for yourself. </p>
-<dt><code>Qt4ConfigDependentSettings</code></p>
+<dt><code>Qt4ConfigDependentSettings</code></dt>
 <dd>
 <p> This file is included by FindQt4.cmake, don&#8217;t include it directly. </p>
-<dt><code>Qt4Macros</code></p>
+</dd><dt><code>Qt4Macros</code></dt>
 <dd>
 <p> This file is included by FindQt4.cmake, don&#8217;t include it directly. </p>
-<dt><code>SelectLibraryConfigurations</code></p>
+</dd><dt><code>SelectLibraryConfigurations</code></dt>
 <dd>
 <p> select_library_configurations( basename ) </p>
 <p> This macro takes a library base name as an argument, and will choose good values for basename_LIBRARY, basename_LIBRARIES, basename_LIBRARY_DEBUG, and basename_LIBRARY_RELEASE depending on what has been found and set. If only basename_LIBRARY_RELEASE is defined, basename_LIBRARY will be set to the release value, and basename_LIBRARY_DEBUG will be set to basename_LIBRARY_DEBUG-NOTFOUND. If only basename_LIBRARY_DEBUG is defined, then basename_LIBRARY will take the debug value, and basename_LIBRARY_RELEASE will be set to basename_LIBRARY_RELEASE-NOTFOUND. </p>
 <p> If the generator supports configuration types, then basename_LIBRARY and basename_LIBRARIES will be set with debug and optimized flags specifying the library to be used for the given configuration. If no build type has been set or the generator in use does not support configuration types, then basename_LIBRARY and basename_LIBRARIES will take only the release value, or the debug value if the release one is not set. </p>
-<dt><code>SquishTestScript</code></p>
+</dd><dt><code>SquishTestScript</code></dt>
 <dd>
 <p> This script launches a GUI test using Squish. You should not call the script directly; instead, you should access it via the SQUISH_ADD_TEST macro that is defined in FindSquish.cmake. </p>
 <p> This script starts the Squish server, launches the test on the client, and finally stops the squish server. If any of these steps fail (including if the tests do not pass) then a fatal error is raised. </p>
-<dt><code>TestBigEndian</code></p>
-<dd> Define macro to determine endian type </p>
+</dd><dt><code>TestBigEndian</code></dt>
+<dd> Define macro to determine endian type </dd>
 <p> Check if the system is big endian or little endian </p>
 <pre>
   TEST_BIG_ENDIAN(VARIABLE)
   VARIABLE - variable to store the result to
 </pre>
-<dt><code>TestCXXAcceptsFlag</code></p>
-<dd> Test CXX compiler for a flag </p>
+<dt><code>TestCXXAcceptsFlag</code></dt>
+<dd> Test CXX compiler for a flag </dd>
 <p> Check if the CXX compiler accepts a flag </p>
 <pre>
   Macro CHECK_CXX_ACCEPTS_FLAG(FLAGS VARIABLE) -
@@ -5150,40 +5150,40 @@ void SomeClass::oldMethod()<br />
   FLAGS - the flags to try
   VARIABLE - variable to store the result
 </pre>
-<dt><code>TestForANSIForScope</code></p>
-<dd> Check for ANSI for scope support </p>
+<dt><code>TestForANSIForScope</code></dt>
+<dd> Check for ANSI for scope support </dd>
 <p> Check if the compiler restricts the scope of variables declared in a for-init-statement to the loop body. </p>
 <pre>
   CMAKE_NO_ANSI_FOR_SCOPE - holds result
 </pre>
-<dt><code>TestForANSIStreamHeaders</code></p>
-<dd> Test for compiler support of ANSI stream headers iostream, etc. </p>
+<dt><code>TestForANSIStreamHeaders</code></dt>
+<dd> Test for compiler support of ANSI stream headers iostream, etc. </dd>
 <p> check if the compiler supports the standard ANSI iostream header (without the .h) </p>
 <pre>
   CMAKE_NO_ANSI_STREAM_HEADERS - defined by the results
 </pre>
-<dt><code>TestForSSTREAM</code></p>
-<dd> Test for compiler support of ANSI sstream header </p>
+<dt><code>TestForSSTREAM</code></dt>
+<dd> Test for compiler support of ANSI sstream header </dd>
 <p> check if the compiler supports the standard ANSI sstream header </p>
 <pre>
   CMAKE_NO_ANSI_STRING_STREAM - defined by the results
 </pre>
-<dt><code>TestForSTDNamespace</code></p>
-<dd> Test for std:: namespace support </p>
+<dt><code>TestForSTDNamespace</code></dt>
+<dd> Test for std:: namespace support </dd>
 <p> check if the compiler supports std:: on stl classes </p>
 <pre>
   CMAKE_NO_STD_NAMESPACE - defined by the results
 </pre>
-<dt><code>UseEcos</code></p>
-<dd> This module defines variables and macros required to build eCos application. </p>
+<dt><code>UseEcos</code></dt>
+<dd> This module defines variables and macros required to build eCos application. </dd>
 <p> This file contains the following macros: ECOS_ADD_INCLUDE_DIRECTORIES() &#8211; add the eCos include dirs ECOS_ADD_EXECUTABLE(name source1 &#8230; sourceN ) &#8211; create an eCos executable ECOS_ADJUST_DIRECTORY(VAR source1 &#8230; sourceN ) &#8211; adjusts the path of the source files and puts the result into VAR </p>
 <p> Macros for selecting the toolchain: ECOS_USE_ARM_ELF_TOOLS() &#8211; enable the ARM ELF toolchain for the directory where it is called ECOS_USE_I386_ELF_TOOLS() &#8211; enable the i386 ELF toolchain for the directory where it is called ECOS_USE_PPC_EABI_TOOLS() &#8211; enable the PowerPC toolchain for the directory where it is called </p>
 <p> It contains the following variables: ECOS_DEFINITIONS ECOSCONFIG_EXECUTABLE ECOS_CONFIG_FILE &#8211; defaults to ecos.ecc, if your eCos configuration file has a different name, adjust this variable for internal use only: </p>
 <pre>
   ECOS_ADD_TARGET_LIB
 </pre>
-<dt><code>UseJava</code></p>
-<dd> Use Module for Java </p>
+<dt><code>UseJava</code></dt>
+<dd> Use Module for Java </dd>
 <p> This file provides functions for Java. It is assumed that FindJava.cmake has already been loaded. See FindJava.cmake for information on how to load Java into your CMake project. </p>
 <p> add_jar(target_name </p>
 <p>         [SOURCES] source1 [source2 &#8230;] [resource1 &#8230;]<br />
@@ -5328,22 +5328,22 @@ void SomeClass::oldMethod()<br />
    ${CMAKE_INSTALL_PREFIX}/share/javadoc/&lt;VAR&gt;
 </pre>
 <p> if you don&#8217;t set the INSTALLPATH. </p>
-<dt><code>UseJavaClassFilelist</code></p>
+<dt><code>UseJavaClassFilelist</code></dt>
 <dd>
 <p> This script create a list of compiled Java class files to be added to a jar file. This avoids including cmake files which get created in the binary directory. </p>
-<dt><code>UseJavaSymlinks</code></p>
+</dd><dt><code>UseJavaSymlinks</code></dt>
 <dd>
 <p> Helper script for UseJava.cmake </p>
-<dt><code>UsePkgConfig</code></p>
-<dd> Obsolete pkg-config module for CMake, use FindPkgConfig instead. </p>
+</dd><dt><code>UsePkgConfig</code></dt>
+<dd> Obsolete pkg-config module for CMake, use FindPkgConfig instead. </dd>
 <p> This module defines the following macro: </p>
 <p> PKGCONFIG(package includedir libdir linkflags cflags) </p>
 <p> Calling PKGCONFIG will fill the desired information into the 4 given arguments, e.g. PKGCONFIG(libart-2.0 LIBART_INCLUDE_DIR LIBART_LINK_DIR LIBART_LINK_FLAGS LIBART_CFLAGS) if pkg-config was NOT found or the specified software package doesn&#8217;t exist, the variable will be empty when the function returns, otherwise they will contain the respective information </p>
-<dt><code>UseQt4</code></p>
-<dd> Use Module for QT4 </p>
+<dt><code>UseQt4</code></dt>
+<dd> Use Module for QT4 </dd>
 <p> Sets up C and C++ to use Qt 4. It is assumed that FindQt.cmake has already been loaded. See FindQt.cmake for information on how to load Qt 4 into your CMake project. </p>
-<dt><code>UseSWIG</code></p>
-<dd> SWIG module for CMake </p>
+<dt><code>UseSWIG</code></dt>
+<dd> SWIG module for CMake </dd>
 <p> Defines the following macros: </p>
 <p>SWIG_ADD_MODULE(name language[files])<br />
 &#8211; Define swig module with given name and specified language<br />
@@ -5353,8 +5353,8 @@ void SomeClass::oldMethod()<br />
 <pre>
         PROPERTIES COMPILE_FLAGS &quot;-bla&quot;)
 </pre>
-<dt><code>Use_wxWindows</code></p>
-<dd> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; </p>
+<dt><code>Use_wxWindows</code></dt>
+<dd> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; </dd>
 <p> This convenience include finds if wxWindows is installed and set the appropriate libs, incdirs, flags etc. author Jan Woetzel &lt;jw -at- mip.informatik.uni-kiel.de&gt; (07/2003) USAGE: </p>
 <pre>
    just include Use_wxWindows.cmake
@@ -5368,8 +5368,8 @@ void SomeClass::oldMethod()<br />
 <pre>
    *before* you include this file.
 </pre>
-<dt><code>UsewxWidgets</code></p>
-<dd> Convenience include for using wxWidgets library. </p>
+<dt><code>UsewxWidgets</code></dt>
+<dd> Convenience include for using wxWidgets library. </dd>
 <p> Determines if wxWidgets was FOUND and sets the appropriate libs, incdirs, flags, etc. INCLUDE_DIRECTORIES and LINK_DIRECTORIES are called. </p>
 <p> USAGE </p>
 <pre><code>
@@ -5387,13 +5387,13 @@ find_package(wxWidgets REQUIRED net gl core base)
 <pre>
   Jan Woetzel &lt;jw -at- mip.informatik.uni-kiel.de&gt;
 </pre>
-<dt><code>WriteBasicConfigVersionFile</code></p>
+<dt><code>WriteBasicConfigVersionFile</code></dt>
 <dd>
 <pre>
   WRITE_BASIC_CONFIG_VERSION_FILE( filename VERSION major.minor.patch COMPATIBILITY (AnyNewerVersion|SameMajorVersion) )
 </pre>
 <p> Deprecated, see WRITE_BASIC_PACKAGE_VERSION_FILE(), it is identical. </p>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2000-2012 Kitware, Inc., Insight Software Consortium. All rights reserved. </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: </p>
@@ -5405,17 +5405,17 @@ find_package(wxWidgets REQUIRED net gl core base)
 <p> <code><a href="/docs/linux/man/1-ccmake/">ccmake</a>(1), <a href="/docs/linux/man/1-cpack/">cpack</a>(1), <a href="/docs/linux/man/1-ctest/">ctest</a>(1), <a href="/docs/linux/man/1-cmakecommands/">cmakecommands</a>(1), <a href="/docs/linux/man/1-cmakecompat/">cmakecompat</a>(1), <a href="/docs/linux/man/1-cmakemodules/">cmakemodules</a>(1), <a href="/docs/linux/man/1-cmakeprops/">cmakeprops</a>(1), <a href="/docs/linux/man/1-cmakevars/">cmakevars</a>(1)</code> </p>
 <p> The following resources are available to get help using CMake: </p>
 <dl>
-<dt><code>Home Page</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </p>
+<dt><code>Home Page</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </dd>
 <p> The primary starting point for learning about CMake. </p>
-<dt><code>Frequently Asked Questions</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </p>
+<dt><code>Frequently Asked Questions</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </dd>
 <p> A Wiki is provided containing answers to frequently asked questions. </p>
-<dt><code>Online Documentation</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </p>
+<dt><code>Online Documentation</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </dd>
 <p> Links to available documentation may be found on this web page. </p>
-<dt><code>Mailing List</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </p>
+<dt><code>Mailing List</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </dd>
 <p> For help and discussion about using cmake, a mailing list is provided at cmake [at] cmake.org. The list is member-post-only but one may sign up on the CMake web page. Please first read the full documentation at <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> before posting questions to the list. </p>
 </dl>
 <h2>Index</h2>

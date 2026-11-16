@@ -17,19 +17,19 @@ description: "defrag.f2fs – relocate blocks in a given area to the specified r
 <p> The exit code returned by <code>defrag.f2fs</code> is 0 on success and -1 on failure.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s</code><i> start block address</i></p>
-<dd>Specify the starting block address.</p>
-<dt><code>-l</code><i> number of blocks</i></p>
-<dd>Specifiy the number of blocks to move.</p>
-<dt><code>-t</code><i> target block address</i></p>
-<dd>Specify the destination block address.</p>
-<dt><code>-i</code><i> direction</i></p>
-<dd>Set the direction to left. If it is not set, the direction becomes right by default.</p>
-<dt><code>-d</code><i> debug-level</i></p>
-<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</p>
-<dt></dl>
+<dt><code>-s</code><i> start block address</i></dt>
+<dd>Specify the starting block address.</dd>
+<dt><code>-l</code><i> number of blocks</i></dt>
+<dd>Specifiy the number of blocks to move.</dd>
+<dt><code>-t</code><i> target block address</i></dt>
+<dd>Specify the destination block address.</dd>
+<dt><code>-i</code><i> direction</i></dt>
+<dd>Set the direction to left. If it is not set, the direction becomes right by default.</dd>
+<dt><code>-d</code><i> debug-level</i></dt>
+<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</dd>
+<dt></dt></dl>
 <h2>Author</h2>
-<dd>This version of <code>defrag.f2fs</code> has been written by Jaegeuk Kim &lt;jaegeuk [at] kernel.org&gt;.</p>
+<dd>This version of <code>defrag.f2fs</code> has been written by Jaegeuk Kim &lt;jaegeuk [at] kernel.org&gt;.</dd>
 <h2>Availability</h2>
 <p><code>defrag.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
 <h2>See Also</h2>

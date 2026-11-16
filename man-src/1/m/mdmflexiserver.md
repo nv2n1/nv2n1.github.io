@@ -16,14 +16,14 @@ description: "mdmflexiserver – start a MDM session using the MDM flexible serv
 <h2>OPTIONS</h2>
 <p> In addition to the common Gtk and <font SIZE="-1">GNOME</font> options, <code>mdmflexiserver</code> accepts the following options:</p>
 <dl>
-<dt><code>-c</code> <i>command</i>, <code>&#8211;command</code>=<i>command</i></p>
-<dd> Send the specified protocol command to mdm</p>
-<dt><code>-l</code>, <code>&#8211;no-lock</code></p>
-<dd> Do not lock current screen</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Debugging output</p>
-<dt><code>-a</code>, <code>&#8211;authenticate</code></p>
-<dd> Authenticate before running <code>&#8211;command</code></dl>
+<dt><code>-c</code> <i>command</i>, <code>&#8211;command</code>=<i>command</i></dt>
+<dd> Send the specified protocol command to mdm</dd>
+<dt><code>-l</code>, <code>&#8211;no-lock</code></dt>
+<dd> Do not lock current screen</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Debugging output</dd>
+<dt><code>-a</code>, <code>&#8211;authenticate</code></dt>
+<dd> Authenticate before running <code>&#8211;command</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8)</p>
 <h2>AUTHORS</h2>

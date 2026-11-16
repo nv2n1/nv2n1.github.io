@@ -11,31 +11,20 @@ std::fma,std::fmaf,std::fmal - std::fma,std::fmaf,std::fmal
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cmath&gt;
-
     float fma(float x, float y, float z);
 (1)(since C++ 11)
-
     float fmaf(float x, float y, float z);
-
 double fma(double x, double y, double z);
 (2)(since C++ 11)
-
     long double fma(long double x, long double y, long double z);
 (3)(since C++ 11)
-
     long double fmal(long double x, long double y, long double z);
-
 Promoted fma(Arithmetic1 x, Arithmetic2 y, Arithmetic3 z);    (4) (since C++11)
-
 #define FP_FAST_FMA /* implementation-defined */ (5)(since C++ 11)
-
 #define FP_FAST_FMAF /* implementation-defined */ (6)(since C++ 11)
-
 #define FP_FAST_FMAL /* implementation-defined */ (7)(since C++ 11)
 1-3) Computes (x*y) + z as if to infinite precision and rounded only once to fit the result type.
-
 4) A set of overloads or a function template for all combinations of arguments of arithmetic_type not covered by 1-3). If any argument has integral_type, it is cast to double. If any other argument is long double, then the return type is long double, otherwise it is double.
-
 5-7) If the macro constants FP_FAST_FMAF, FP_FAST_FMA, or FP_FAST_FMAL are defined, the function std::fma evaluates faster (in addition to being more precise) than the expression x*y+z for float, double, and long double arguments, respectively. If defined, these macros evaluate to integer 1.
 </code></pre>
 
@@ -71,17 +60,11 @@ As with all floating-point expressions, the expression (x*y) + z may be compiled
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     // demo the difference between fma and built-in operators
     double in = 0.1;

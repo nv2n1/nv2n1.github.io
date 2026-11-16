@@ -57,62 +57,62 @@ description: "pkcs15-init – smart card personalization utility"
 <p> <code>&#8211;profile</code> <i>name</i>, <code>-p</code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to load the specified general profile. Currently, the only application profile defined is <code>pkcs15</code>, but you can write your own profiles and specify them using this option. </p>
+</dt><dd> Tells <code>pkcs15-init</code> to load the specified general profile. Currently, the only application profile defined is <code>pkcs15</code>, but you can write your own profiles and specify them using this option. </dd>
 <p> The profile name can be combined with one or more <i>profile options</i>, which slightly modify the profile&#8217;s behavior. For instance, the default OpenSC profile supports the <code>openpin</code> option, which installs a single PIN during card initialization. This PIN is then used both as the SO PIN as well as the user PIN for all keys stored on the card. </p>
 <p> Profile name and options are separated by a <code>+</code> character, as in <code>pkcs15+onepin</code>.</dl>
 <p> <code>&#8211;card-profile</code> <i>name</i>, <code>-c</code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to load the specified card profile option. You will rarely need this option.</dl>
+</dt><dd> Tells <code>pkcs15-init</code> to load the specified card profile option. You will rarely need this option.</dd></dl>
 <p> <code>&#8211;create-pkcs15, -C</code></p>
 <dl>
 <dt>
-<dd> This tells <code>pkcs15-init</code> to create a PKCS #15 structure on the card, and initialize any PINs.</dl>
+</dt><dd> This tells <code>pkcs15-init</code> to create a PKCS #15 structure on the card, and initialize any PINs.</dd></dl>
 <p> <code>&#8211;erase-card, -E</code></p>
 <dl>
 <dt>
-<dd> This will erase the card prior to creating the PKCS #15 structure, if the card supports it. If the card does not support erasing, <code>pkcs15-init</code> will fail.</dl>
+</dt><dd> This will erase the card prior to creating the PKCS #15 structure, if the card supports it. If the card does not support erasing, <code>pkcs15-init</code> will fail.</dd></dl>
 <p> <code>&#8211;generate-key</code> <i>keyspec</i>, <code>-G</code> <i>keyspec</i></p>
 <dl>
 <dt>
-<dd> Tells the card to generate new key and store it on the card. <i>keyspec</i> consists of an algorithm name (currently, the only supported name is <code>RSA</code>), optionally followed by a slash and the length of the key in bits. It is a good idea to specify the key ID along with this command, using the <code>id</code> option.</dl>
+</dt><dd> Tells the card to generate new key and store it on the card. <i>keyspec</i> consists of an algorithm name (currently, the only supported name is <code>RSA</code>), optionally followed by a slash and the length of the key in bits. It is a good idea to specify the key ID along with this command, using the <code>id</code> option.</dd></dl>
 <p> <code>&#8211;store-private-key</code> <i>filename</i>, <code>-S</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to download the specified private key to the card. This command will also create a public key object containing the public key portion. By default, the file is assumed to contain the key in PEM format. Alternative formats can be specified using <code>&#8211;format</code>. It is a good idea to specify the key ID along with this command, using the <code>&#8211;id</code> option.</dl>
+</dt><dd> Tells <code>pkcs15-init</code> to download the specified private key to the card. This command will also create a public key object containing the public key portion. By default, the file is assumed to contain the key in PEM format. Alternative formats can be specified using <code>&#8211;format</code>. It is a good idea to specify the key ID along with this command, using the <code>&#8211;id</code> option.</dd></dl>
 <p> <code>&#8211;store-public-key</code> <i>filename</i>, <code>-P</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to download the specified public key to the card and create a public key object with the key ID specified via the <code>&#8211;id</code>. By default, the file is assumed to contain the key in PEM format. Alternative formats can be specified using <code>&#8211;format</code>.</dl>
+</dt><dd> Tells <code>pkcs15-init</code> to download the specified public key to the card and create a public key object with the key ID specified via the <code>&#8211;id</code>. By default, the file is assumed to contain the key in PEM format. Alternative formats can be specified using <code>&#8211;format</code>.</dd></dl>
 <p> <code>&#8211;store-certificate</code> <i>filename</i>, <code>-X</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to store the certificate given in <code>filename</code> on the card, creating a certificate object with the ID specified via the <code>&#8211;id</code> option. The file is assumed to contain the DER encoded certificate.</dl>
+</dt><dd> Tells <code>pkcs15-init</code> to store the certificate given in <code>filename</code> on the card, creating a certificate object with the ID specified via the <code>&#8211;id</code> option. The file is assumed to contain the DER encoded certificate.</dd></dl>
 <p> <code>&#8211;so-pin, &#8211;so-puk, &#8211;pin, &#8211;puk</code></p>
 <dl>
 <dt>
-<dd> These options can be used to specify PIN/PUK values on the command line. Note that on most operation systems, any user can display the command line of any process on the system using utilities such as <code><a href="/docs/linux/man/1-ps/">ps</a>(1)</code>. Therefore, you should use these options only on a secured system, or in an options file specified with <code>&#8211;options-file</code>.</dl>
+</dt><dd> These options can be used to specify PIN/PUK values on the command line. Note that on most operation systems, any user can display the command line of any process on the system using utilities such as <code><a href="/docs/linux/man/1-ps/">ps</a>(1)</code>. Therefore, you should use these options only on a secured system, or in an options file specified with <code>&#8211;options-file</code>.</dd></dl>
 <p> <code>&#8211;passphrase</code></p>
 <dl>
 <dt>
-<dd> When downloading a private key, this option can be used to specify the pass phrase to unlock the private key. The same caveat applies here as in the case of the <code>&#8211;pin</code> options.</dl>
+</dt><dd> When downloading a private key, this option can be used to specify the pass phrase to unlock the private key. The same caveat applies here as in the case of the <code>&#8211;pin</code> options.</dd></dl>
 <p> <code>&#8211;options-file</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Tells <code>pkcs15-init</code> to read additional options from <i>filename</i>. The file is supposed to contain one long option per line, without the leading dashes, for instance: </p>
+</dt><dd> Tells <code>pkcs15-init</code> to read additional options from <i>filename</i>. The file is supposed to contain one long option per line, without the leading dashes, for instance: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         pin             frank
         puk             zappa
 </pre>
-</dl>
+</dd></dl>
 <p> You can specify <code>&#8211;options-file</code> several times.</dl>
 <p> <code>&#8211;verbose, -v</code></p>
 <dl>
 <dt>
-<dd> Causes <code>pkcs15-init</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dl>
+</dt><dd> Causes <code>pkcs15-init</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pkcs15-profile/">pkcs15-profile</a>(5) </p>
 <h2>Index</h2>

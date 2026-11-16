@@ -14,10 +14,10 @@ description: "snd_device_register – register the device"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>device_data</i></p>
 <dl>
-<dd>the data pointer to register</dl>
+<dd>the data pointer to register</dd></dl>
 <h2>Description</h2>
 <p>Registers the device which was already created via <code>snd_device_new</code>. Usually this is called from <code>snd_card_register</code>, but it can be called later if any new devices are created after invocation of <code>snd_card_register</code>.</p>
 <h2>Return</h2>

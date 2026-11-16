@@ -15,7 +15,7 @@ phy_change - Scheduled by the phy_interrupt/timer to handle PHY changes
 <h2>Arguments</h2>
 
 <i>work</i>
-<dl><dd><dd>work_struct that describes the work to be done</dl>
+<dl><dd></dd><dd>work_struct that describes the work to be done</dd></dl>
 
 <h2>Copyright</h2>
 

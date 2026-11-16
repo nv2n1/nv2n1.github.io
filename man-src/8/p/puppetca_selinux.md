@@ -45,8 +45,8 @@ description: "puppetca_selinux – Security Enhanced Linux Policy for the puppet
 <p> <code>puppetca_exec_t</code> </p>
 <p> &#8211; Set files with the puppetca_exec_t type, if you want to transition an executable to the puppetca_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/puppetca, /usr/sbin/puppetca, /usr/bin/start-puppet-ca </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/puppetca, /usr/sbin/puppetca, /usr/bin/start-puppet-ca </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

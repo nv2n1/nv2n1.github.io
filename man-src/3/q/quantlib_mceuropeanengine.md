@@ -24,6 +24,6 @@ description: "QuantLib::MCEuropeanEngine – European option pricing engine usin
 <p>European option pricing engine using Monte Carlo simulation. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against analytic results.</dl>
+<dd>the correctness of the returned value is tested by checking it against analytic results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -14,9 +14,9 @@ description: "unregister_adapter_interrupt – unregister adapter interrupt hand
 <p><i>airq</i></p>
 <dl>
 <dd>
-<dd>pointer to adapter interrupt descriptor</dl>
+</dd><dd>pointer to adapter interrupt descriptor</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

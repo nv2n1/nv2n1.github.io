@@ -20,35 +20,35 @@ description: "faxrunq – send fax jobs queued by"
 <p> <i>faxrunq</i> can be run from the command line (but make sure the user doing this has write access to the modem device and to the fax queue, that is, usually this should be done by &quot;fax&quot; or &quot;root&quot;). In a production environment, it&#8217;s more useful to start <i>faxrunq</i> from <i><a href="/docs/linux/man/8-cron/">cron</a>(8)</i> in regular intervals, like &quot;run it every 5 minutes&quot;. See the <i><a href="/docs/linux/man/8-cron/">cron</a>(8)</i> and/or <i><a href="/docs/linux/man/1-crontab/">crontab</a>(1)</i> man pages for this (which man page exists depends on your system). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code></p>
-<dd> Tells <i>faxrunq</i> to be quiet, that is, suppress all status messages. Error messages will still be printed. </p>
+<dt><code>-q</code></dt>
+<dd> Tells <i>faxrunq</i> to be quiet, that is, suppress all status messages. Error messages will still be printed. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/spool/fax/outgoing/stop</code></p>
-<dd> if this file exists, <i>faxrunq </i> (and faxrunqd) will do nothing. You can use this to stop queue processing while testing something, or if you know that the modem(s) are unavailable and do not want to run into oany error messages, etc. </p>
-<dt><code>/var/spool/fax/outgoing/faxqueue_done</code></p>
-<dd> Every time <i>faxrunq</i> (or faxrunqd) run the fax queue, a time stamp is written into that file. It is used by <i>faxspool</i> to display a warning if the queue hasn&#8217;t been run recently (so faxes may get stuck). </p>
+<dt><code>/var/spool/fax/outgoing/stop</code></dt>
+<dd> if this file exists, <i>faxrunq </i> (and faxrunqd) will do nothing. You can use this to stop queue processing while testing something, or if you know that the modem(s) are unavailable and do not want to run into oany error messages, etc. </dd>
+<dt><code>/var/spool/fax/outgoing/faxqueue_done</code></dt>
+<dd> Every time <i>faxrunq</i> (or faxrunqd) run the fax queue, a time stamp is written into that file. It is used by <i>faxspool</i> to display a warning if the queue hasn&#8217;t been run recently (so faxes may get stuck). </dd>
 </dl>
 <h2>CONFIGURATION FILE</h2>
 <p> Some aspects of the behaviour of <i>faxrunq</i> can be controlled by a configuration file, /etc/mgetty+sendfax/faxrunq.config. In this file, you can use the following options:</p>
 <dl>
-<dt><code>success-send-mail [y/n]</code></p>
-<dd> A boolean parameter that controls whether a mail will be sent after successful completition of the fax job. </p>
-<dt><code>failure-send-mail [y/n]</code></p>
-<dd> A boolean parameter that controls whether a mail will be sent after the fax job has failed more than the maximum number of times. </p>
-<dt><code>success-call-program &lt;name&gt;</code></p>
-<dd> Here, you can specify a program that will be run when the fax has been successfully sent. It will be passed two command line parameters. The first is the full path to the fax JOB file (see faxq(5)), the second is the last exit code from <i>sendfax</i> (for success-call-program, this is always &quot;0&quot;). </p>
-<dt><code>failure-call-program &lt;name&gt;</code></p>
-<dd> Similar to the &quot;success-call-program&quot;, this program will be run when the fax has been failed too often and <i>faxrunq</i> gives up. This script could, for example, print out the fax on a printer so that it can be sent manually on a paper fax machine. </p>
-<dt><code>maxfail-costly &lt;n&gt;</code></p>
-<dd> This specifies the number of times that a fax may fail &quot;fatally&quot;, that is, causing telephone costs (explained above). The default value is 5. </p>
-<dt><code>maxfail-total &lt;m&gt;</code></p>
-<dd> This is the absolute maximum number of times that <i>faxrunq</i> will try to send any given fax. The default value is 10. (Right now, it&#8217;s not yet implemented). </p>
-<dt><code>delete-sent-jobs [y/n]</code></p>
-<dd> Determines whether <i>faxrunq</i> should delete jobs after sending, or leave them in the fax queue (while moving the &quot;JOB&quot; file to &quot;JOB.done&quot;) so that they can be seen at by &quot;faxq -o&quot;. The default value is &quot;do not delete sent faxes&quot;. </p>
-<dt><code>acct-log &lt;path&gt;</code></p>
-<dd> Specifies where <i>faxrunq</i> should protocol success and failure of each try to send a fax job. The default location is /var/spool/fax/outgoing/acct.log. </p>
+<dt><code>success-send-mail [y/n]</code></dt>
+<dd> A boolean parameter that controls whether a mail will be sent after successful completition of the fax job. </dd>
+<dt><code>failure-send-mail [y/n]</code></dt>
+<dd> A boolean parameter that controls whether a mail will be sent after the fax job has failed more than the maximum number of times. </dd>
+<dt><code>success-call-program &lt;name&gt;</code></dt>
+<dd> Here, you can specify a program that will be run when the fax has been successfully sent. It will be passed two command line parameters. The first is the full path to the fax JOB file (see faxq(5)), the second is the last exit code from <i>sendfax</i> (for success-call-program, this is always &quot;0&quot;). </dd>
+<dt><code>failure-call-program &lt;name&gt;</code></dt>
+<dd> Similar to the &quot;success-call-program&quot;, this program will be run when the fax has been failed too often and <i>faxrunq</i> gives up. This script could, for example, print out the fax on a printer so that it can be sent manually on a paper fax machine. </dd>
+<dt><code>maxfail-costly &lt;n&gt;</code></dt>
+<dd> This specifies the number of times that a fax may fail &quot;fatally&quot;, that is, causing telephone costs (explained above). The default value is 5. </dd>
+<dt><code>maxfail-total &lt;m&gt;</code></dt>
+<dd> This is the absolute maximum number of times that <i>faxrunq</i> will try to send any given fax. The default value is 10. (Right now, it&#8217;s not yet implemented). </dd>
+<dt><code>delete-sent-jobs [y/n]</code></dt>
+<dd> Determines whether <i>faxrunq</i> should delete jobs after sending, or leave them in the fax queue (while moving the &quot;JOB&quot; file to &quot;JOB.done&quot;) so that they can be seen at by &quot;faxq -o&quot;. The default value is &quot;do not delete sent faxes&quot;. </dd>
+<dt><code>acct-log &lt;path&gt;</code></dt>
+<dd> Specifies where <i>faxrunq</i> should protocol success and failure of each try to send a fax job. The default location is /var/spool/fax/outgoing/acct.log. </dd>
 <p> There are some other options that are allowed, but ignored. These are: <i>max-modems,</i> and <i>faxrunqd-log.</i> </p>
 <p> They are used by <a href="/docs/linux/man/8-faxrunqd/">faxrunqd</a>(8) (which reads the same config file, but has more options). </p>
 </dl>

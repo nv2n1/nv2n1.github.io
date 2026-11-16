@@ -28,19 +28,19 @@ description: "hwlocality_advanced_io – Finding I/O objects"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the first bridge if prev is NULL.</dl>
+</dt><dd> the first bridge if prev is NULL.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_next_osdev (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> prev) [inline], [static]</h3>
 <p> Get the next OS device in the system. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the first OS device if prev is NULL.</dl>
+</dt><dd> the first OS device if prev is NULL.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_next_pcidev (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> prev) [inline], [static]</h3>
 <p> Get the next PCI device in the system. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the first PCI device if prev is NULL.</dl>
+</dt><dd> the first PCI device if prev is NULL.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_non_io_ancestor_obj (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> ioobj) [inline], [static]</h3>
 <p> Get the first non-I/O ancestor object. Given the I/O object ioobj, find the smallest non-I/O ancestor object. This regular object may then be used for binding because its locality is the same as ioobj.</p>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_pcidev_by_busid (<code>hwloc_topology_t</code> topology, unsigned domain, unsigned bus, unsigned dev, unsigned func) [inline], [static]</h3>
@@ -50,5 +50,5 @@ description: "hwlocality_advanced_io – Finding I/O objects"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

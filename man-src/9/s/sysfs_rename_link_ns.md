@@ -15,23 +15,23 @@ sysfs_rename_link_ns - rename symlink in object's directory.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're acting for.</dl>
+<dl><dd></dd><dd>object we're acting for.</dd></dl>
  
 
  <i>targ</i>
-<dl><dd>object we're pointing to.</dl>
+<dl><dd>object we're pointing to.</dd></dl>
  
 
  <i>old</i>
-<dl><dd>previous name of the symlink.</dl>
+<dl><dd>previous name of the symlink.</dd></dl>
  
 
  <i>new</i>
-<dl><dd>new name of the symlink.</dl>
+<dl><dd>new name of the symlink.</dd></dl>
  
 
  <i>new_ns</i>
-<dl><dd>new namespace of the symlink.</dl>
+<dl><dd>new namespace of the symlink.</dd></dl>
 
 <h2>Description</h2>
 

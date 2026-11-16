@@ -16,58 +16,58 @@ description: "gmtmath – Reverse Polish Notation (RPN) calculator for data tabl
 <p> <code>gmtmath</code> will perform operations like add, subtract, multiply, and divide on one or more table data files or constants using Reverse Polish Notation (RPN) syntax (e.g., Hewlett-Packard calculator-style). Arbitrarily complicated expressions may therefore be evaluated; the final result is written to an output file [or standard output]. Data operations are element-by-element, not matrix manipulations (except where noted). Some operators only require one operand (see below). If no data tables are used in the expression then options <code>-T</code>, <code>-N</code> can be set (and optionally <code>-bo</code> to indicate the data type for binary tables). If STDIN is given, the standard input will be read and placed on the stack as if a file with that content had been given on the command line. By default, all columns except the &quot;time&quot; column are operated on, but this can be changed (see <code>-C</code>). Complicated or frequently occurring expressions may be coded as a macro for future use or stored and recalled via named memory locations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>operand</i></p>
-<dd> If <i>operand</i> can be opened as a file it will be read as an ASCII (or binary, see <code>-bi</code>) table data file. If not a file, it is interpreted as a numerical constant or a special symbol (see below). The special argument STDIN means that <i>stdin</i> will be read and placed on the stack; STDIN can appear more than once if necessary.</p>
-<dt><i>outfile</i></p>
-<dd> The name of a table data file that will hold the final result. If not given then the output is sent to stdout.</dl>
+<dt><i>operand</i></dt>
+<dd> If <i>operand</i> can be opened as a file it will be read as an ASCII (or binary, see <code>-bi</code>) table data file. If not a file, it is interpreted as a numerical constant or a special symbol (see below). The special argument STDIN means that <i>stdin</i> will be read and placed on the stack; STDIN can appear more than once if necessary.</dd>
+<dt><i>outfile</i></dt>
+<dd> The name of a table data file that will hold the final result. If not given then the output is sent to stdout.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code><i>t_f(t).d</i>[<code>+e</code>][<code>+s</code>|<code>w</code>]</p>
-<dd> Requires <code>-N</code> and will partially initialize a table with values from the given file containing <i>t</i> and <i>f(t)</i> only. The <i>t</i> is placed in column <i>t_col</i> while <i>f(t)</i> goes into column <i>n_col</i> &#8211; 1 (see <code>-N</code>). If used with operators LSQFIT and SVDFIT you can optionally append the modifier <code>+e</code> which will instead evaluate the solution and write a data set with four columns: t, f(t), the model solution at t, and the the residuals at t, respectively [Default writes one column with model coefficients]. Append <code>+w</code> if <i>t_f(t).d</i> has a third column with weights, or append <code>+s</code> if <i>t_f(t).d</i> has a third column with 1-sigma. In those two cases we find the weighted solution. The weights (or sigmas) will be output as the last column when <code>+e</code> is in effect.</p>
-<dt><code>-C</code><i>cols</i></p>
-<dd> Select the columns that will be operated on until next occurrence of <code>-C</code>. List columns separated by commas; ranges like 1,3-5,7 are allowed. <code>-C</code> (no arguments) resets the default action of using all columns except time column (see <code>-N</code>). <code>-Ca</code> selects all columns, including time column, while <code>-Cr</code> reverses (toggles) the current choices. When <code>-C</code> is in effect it also controls which columns from a file will be placed on the stack.</p>
-<dt><code>-E</code><i>eigen</i></p>
-<dd> Sets the minimum eigenvalue used by operators LSQFIT and SVDFIT [1e-7]. Smaller eigenvalues are set to zero and will not be considered in the solution.</p>
-<dt><code>-I</code></p>
-<dd> Reverses the output row sequence from ascending time to descending [ascending].</p>
-<dt><code>-N</code><i>n_col</i>[/<i>t_col</i>]</p>
-<dd> Select the number of columns and optionally the column number that contains the &quot;time&quot; variable [0]. Columns are numbered starting at 0 [2/0]. If input files are specified then <code>-N</code> will add any missing columns.</p>
-<dt><code>-Q</code></p>
-<dd> Quick mode for scalar calculation. Shorthand for <code>-Ca</code> <code>-N</code>1/0 <code>-T</code>0/0/1.</p>
-<dt><code>-S</code>[<code>f</code>|<code>l</code>]</p>
-<dd> Only report the first or last row of the results [Default is all rows]. This is useful if you have computed a statistic (say the <code>MODE</code>) and only want to report a single number instead of numerous records with identical values. Append <code>l</code> to get the last row and <code>f</code> to get the first row only [Default].</p>
-<dt><code>-T</code><i>t_min</i>/<i>t_max</i>/<i>t_inc</i>[<code>+</code>]|<i>tfile</i></p>
-<dd> Required when no input files are given. Sets the t-coordinates of the first and last point and the equidistant sampling interval for the &quot;time&quot; column (see <code>-N</code>). Append <code>+</code> if you are specifying the number of equidistant points instead. If there is no time column (only data columns), give <code>-T</code> with no arguments; this also implies <code>-Ca</code>. Alternatively, give the name of a file whose first column contains the desired t-coordinates which may be irregular.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input.</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input, but see <code>-o</code>]</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</p>
-<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Set handling of NaN records.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-A</code><i>t_f(t).d</i>[<code>+e</code>][<code>+s</code>|<code>w</code>]</dt>
+<dd> Requires <code>-N</code> and will partially initialize a table with values from the given file containing <i>t</i> and <i>f(t)</i> only. The <i>t</i> is placed in column <i>t_col</i> while <i>f(t)</i> goes into column <i>n_col</i> &#8211; 1 (see <code>-N</code>). If used with operators LSQFIT and SVDFIT you can optionally append the modifier <code>+e</code> which will instead evaluate the solution and write a data set with four columns: t, f(t), the model solution at t, and the the residuals at t, respectively [Default writes one column with model coefficients]. Append <code>+w</code> if <i>t_f(t).d</i> has a third column with weights, or append <code>+s</code> if <i>t_f(t).d</i> has a third column with 1-sigma. In those two cases we find the weighted solution. The weights (or sigmas) will be output as the last column when <code>+e</code> is in effect.</dd>
+<dt><code>-C</code><i>cols</i></dt>
+<dd> Select the columns that will be operated on until next occurrence of <code>-C</code>. List columns separated by commas; ranges like 1,3-5,7 are allowed. <code>-C</code> (no arguments) resets the default action of using all columns except time column (see <code>-N</code>). <code>-Ca</code> selects all columns, including time column, while <code>-Cr</code> reverses (toggles) the current choices. When <code>-C</code> is in effect it also controls which columns from a file will be placed on the stack.</dd>
+<dt><code>-E</code><i>eigen</i></dt>
+<dd> Sets the minimum eigenvalue used by operators LSQFIT and SVDFIT [1e-7]. Smaller eigenvalues are set to zero and will not be considered in the solution.</dd>
+<dt><code>-I</code></dt>
+<dd> Reverses the output row sequence from ascending time to descending [ascending].</dd>
+<dt><code>-N</code><i>n_col</i>[/<i>t_col</i>]</dt>
+<dd> Select the number of columns and optionally the column number that contains the &quot;time&quot; variable [0]. Columns are numbered starting at 0 [2/0]. If input files are specified then <code>-N</code> will add any missing columns.</dd>
+<dt><code>-Q</code></dt>
+<dd> Quick mode for scalar calculation. Shorthand for <code>-Ca</code> <code>-N</code>1/0 <code>-T</code>0/0/1.</dd>
+<dt><code>-S</code>[<code>f</code>|<code>l</code>]</dt>
+<dd> Only report the first or last row of the results [Default is all rows]. This is useful if you have computed a statistic (say the <code>MODE</code>) and only want to report a single number instead of numerous records with identical values. Append <code>l</code> to get the last row and <code>f</code> to get the first row only [Default].</dd>
+<dt><code>-T</code><i>t_min</i>/<i>t_max</i>/<i>t_inc</i>[<code>+</code>]|<i>tfile</i></dt>
+<dd> Required when no input files are given. Sets the t-coordinates of the first and last point and the equidistant sampling interval for the &quot;time&quot; column (see <code>-N</code>). Append <code>+</code> if you are specifying the number of equidistant points instead. If there is no time column (only data columns), give <code>-T</code> with no arguments; this also implies <code>-Ca</code>. Alternatively, give the name of a file whose first column contains the desired t-coordinates which may be irregular.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input.</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input, but see <code>-o</code>]</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd>
+<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Set handling of NaN records.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>OPERATORS</h2>
 <p> Choose among the following 146 operators. &quot;args&quot; are the number of input and output arguments. <center></p>
 <table>
@@ -2061,14 +2061,14 @@ description: "gmtmath – Reverse Polish Notation (RPN) calculator for data tabl
 <p> 1. The operators <code>PLM</code> and <code>PLMg</code> calculate the associated Legendre polynomial of degree L and order M in x which must satisfy -1 &lt;= x &lt;= +1 and 0 &lt;= M &lt;= L. x, L, and M are the three arguments preceding the operator. <code>PLM</code> is not normalized and includes the Condon-Shortley phase (-1)^M. <code>PLMg</code> is normalized in the way that is most commonly used in geophysics. The C-S phase can be added by using -M as argument. <code>PLM</code> will overflow at higher degrees, whereas <code>PLMg</code> is stable until ultra high degrees (at least 3000). </p>
 <p> 2. Files that have the same names as some operators, e.g., <code>ADD</code>, <code>SIGN</code>, <code>=</code>, etc. should be identified by prepending the current directory (i.e., ./).</p>
 <dl>
-<dt>3.</p>
-<dd> The stack depth limit is hard-wired to 100. </p>
+<dt>3.</dt>
+<dd> The stack depth limit is hard-wired to 100. </dd>
 <p> 4. All functions expecting a positive radius (e.g., <code>LOG</code>, <code>KEI</code>, etc.) are passed the absolute value of their argument.</p>
-<dt>5.</p>
-<dd> The <code>DDT</code> and <code>D2DT2</code> functions only work on regularly spaced data. </p>
+<dt>5.</dt>
+<dd> The <code>DDT</code> and <code>D2DT2</code> functions only work on regularly spaced data. </dd>
 <p> 6. All derivatives are based on central finite differences, with natural boundary conditions.</p>
-<dt>7.</p>
-<dd> <code>ROOTS</code> must be the last operator on the stack, only followed by <code>=</code>.</dl>
+<dt>7.</dt>
+<dd> <code>ROOTS</code> must be the last operator on the stack, only followed by <code>=</code>.</dd></dl>
 <h2>STORE, RECALL AND CLEAR</h2>
 <p> You may store intermediate calculations to a named variable that you may recall and place on the stack at a later time. This is useful if you need access to a computed quantity many times in your expression as it will shorten the overall expression and improve readability. To save a result you use the special operator <code>STO</code>@<i>label</i>, where <i>label</i> is the name you choose to give the quantity. To recall the stored result to the stack at a later time, use [<code>RCL</code>]@<i>label</i>, i.e., <code>RCL</code> is optional. To clear memory you may use <code>CLR</code>@<i>label</i>. Note that <code>STO</code> and <code>CLR</code> leave the stack unchanged. </p>
 <p> 8. The bitwise operators (<code>BITAND</code>, <code>BITLEFT</code>, <code>BITNOT</code>, <code>BITOR</code>, <code>BITRIGHT</code>, <code>BITTEST</code>, and <code>BITXOR</code>) convert a tables&#8217;s double precision values to unsigned 64-bit ints to perform the bitwise operations. Consequently, the largest whole integer value that can be stored in a double precision value is 2^53 or 9,007,199,254,740,992. Any higher result will be masked to fit in the lower 54 bits. Thus, bit operations are effectively limited to 54 bits. All bitwise operators return NaN if given NaN arguments or bit-settings &lt;= 0. </p>

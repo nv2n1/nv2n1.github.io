@@ -112,8 +112,8 @@ description: "dspam_selinux – Security Enhanced Linux Policy for the dspam pro
 <p> <code>dspam_script_exec_t</code> </p>
 <p> &#8211; Set files with the dspam_script_exec_t type, if you want to transition an executable to the dspam_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/dspam/.*.cgi, /usr/share/dspam-web/dspam.cgi </p>
+<dt>Paths:</dt>
+<dd>/var/www/dspam/.*.cgi, /usr/share/dspam-web/dspam.cgi </dd>
 </dl>
 <p> <code>dspam_var_lib_t</code> </p>
 <p> &#8211; Set files with the dspam_var_lib_t type, if you want to store the dspam files under the /var/lib directory. </p>

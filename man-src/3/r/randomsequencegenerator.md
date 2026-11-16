@@ -11,9 +11,7 @@ description: "ql/math/randomnumbers/randomsequencegenerator.hpp – Random seque
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/methods/montecarlo/sample.hpp&gt;
-
 #include &lt;ql/errors.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>RandomSequenceGenerator&lt; RNG &gt;</code><br />

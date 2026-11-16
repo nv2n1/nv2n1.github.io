@@ -14,15 +14,15 @@ description: "irq_get_domain_generic_chip – Get a pointer to the generic chip 
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>irq domain pointer</dl>
+</dd><dd>irq domain pointer</dd></dl>
 <p> <i>hw_irq</i></p>
 <dl>
-<dd>Hardware interrupt number</dl>
+<dd>Hardware interrupt number</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

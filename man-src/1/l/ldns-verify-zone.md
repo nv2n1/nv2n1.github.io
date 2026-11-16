@@ -17,27 +17,27 @@ description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 <p> Each name is checked for an NSEC(3), if appropriate. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show usage and exit </p>
-<dt><code>-a</code></p>
-<dd> Apex only, check only the zone apex </p>
-<dt><code>-e</code> <i>period</i></p>
-<dd> Signatures may not expire within this period. Default no period is used. </p>
-<dt><code>-i</code> <i>period</i></p>
-<dd> Signatures must have been valid at least this long. Default signatures should just be valid now. </p>
-<dt><code>-k</code> <i>file</i></p>
-<dd> A file that contains a trusted DNSKEY or DS rr. This option may be given more than once. </p>
+<dt><code>-h</code></dt>
+<dd> Show usage and exit </dd>
+<dt><code>-a</code></dt>
+<dd> Apex only, check only the zone apex </dd>
+<dt><code>-e</code> <i>period</i></dt>
+<dd> Signatures may not expire within this period. Default no period is used. </dd>
+<dt><code>-i</code> <i>period</i></dt>
+<dd> Signatures must have been valid at least this long. Default signatures should just be valid now. </dd>
+<dt><code>-k</code> <i>file</i></dt>
+<dd> A file that contains a trusted DNSKEY or DS rr. This option may be given more than once. </dd>
 <p> Alternatively, if <code>-k</code> is not specified, and a default trust anchor (/var/lib/unbound/root.key) exists and contains a valid DNSKEY or DS record, it will be used as the trust anchor.</p>
-<dt><code>-p</code> <i>[0-100]</i></p>
-<dd> Only check this percentage of the zone. Which names to check is determined randomly. Defaults to 100. </p>
-<dt><code>-S</code></p>
-<dd> Chase signature(s) to a known key. The network may be accessed to validate the zone&#8217;s DNSKEYs. (implies -k) </p>
-<dt><code>-t</code> <i>YYYYMMDDhhmmss | [+|-]offset</i></p>
-<dd> Set the validation time either by an absolute time value or as an offset in seconds from the current time. </p>
-<dt><code>-v</code></p>
-<dd> Show the version and exit </p>
-<dt><code>-V</code> <i>number</i></p>
-<dd> Set the verbosity level (default 3): </p>
+<dt><code>-p</code> <i>[0-100]</i></dt>
+<dd> Only check this percentage of the zone. Which names to check is determined randomly. Defaults to 100. </dd>
+<dt><code>-S</code></dt>
+<dd> Chase signature(s) to a known key. The network may be accessed to validate the zone&#8217;s DNSKEYs. (implies -k) </dd>
+<dt><code>-t</code> <i>YYYYMMDDhhmmss | [+|-]offset</i></dt>
+<dd> Set the validation time either by an absolute time value or as an offset in seconds from the current time. </dd>
+<dt><code>-v</code></dt>
+<dd> Show the version and exit </dd>
+<dt><code>-V</code> <i>number</i></dt>
+<dd> Set the verbosity level (default 3): </dd>
 <p>&nbsp;<wbr>0: Be silent<br />
 &nbsp;<wbr>1: Print result, and any errors<br />
 &nbsp;<wbr>2: Same as 1 for now<br />
@@ -50,12 +50,12 @@ description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 <p> <i>period</i>s are given in ISO 8601 duration format:</p>
 <dl>
 <dt>
-<dd> P[n]Y[n]M[n]DT[n]H[n]M[n]S</dl>
+</dt><dd> P[n]Y[n]M[n]DT[n]H[n]M[n]S</dd></dl>
 <p> If no file is given standard input is read. </p>
 <h2>FILES</h2>
 <dl>
-<dt>/var/lib/unbound/root.key</p>
-<dd> The file from which trusted keys are loaded for signature chasing, when no <code>-k</code> option is given. </p>
+<dt>/var/lib/unbound/root.key</dt>
+<dd> The file from which trusted keys are loaded for signature chasing, when no <code>-k</code> option is given. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-unbound-anchor/">unbound-anchor</a>(8) </p>

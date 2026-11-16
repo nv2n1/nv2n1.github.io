@@ -15,12 +15,12 @@ description: "raw2hdf – Create an .hdf hard disk image from a raw data file"
 <p> raw2hdf converts a binary dump of a hard disk&#8217;s data into an IDE disk image in .hdf format for use with Sinclair ZX Spectrum emulators.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-v version</i></p>
-<dd> specifies the version of .hdf image to be created. Valid values are `<i>1.0</i>&#8216; for a version 1.0 file and `<i>1.1</i>&#8216; for a version 1.1 file. Defaults to creating version 1.1 files.</p>
-<dt><i>rawfile</i></p>
-<dd> specifies a raw data file (or block device corresponding to an actual disk) to be converted.</p>
-<dt><i>hdffile</i></p>
-<dd> specifies the .hdf file to create.</dl>
+<dt><i>-v version</i></dt>
+<dd> specifies the version of .hdf image to be created. Valid values are `<i>1.0</i>&#8216; for a version 1.0 file and `<i>1.1</i>&#8216; for a version 1.1 file. Defaults to creating version 1.1 files.</dd>
+<dt><i>rawfile</i></dt>
+<dd> specifies a raw data file (or block device corresponding to an actual disk) to be converted.</dd>
+<dt><i>hdffile</i></dt>
+<dd> specifies the .hdf file to create.</dd></dl>
 <h2>NOTES</h2>
 <p> Since raw2hdf has no knowledge of the geometry of the disk from which the original image was taken (indeed, the input file need not originate from a real IDE disk at all), there is no guarantee that the information contained in the .hdf file header accurately represents the original disk. However, it will attempt to construct a header that is consistent with the size of the image, to produce an .hdf file which is functionally equivalent.</p>
 <h2>BUGS</h2>

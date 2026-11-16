@@ -13,13 +13,7 @@ description: "sc::RangeLockItem –"
 <p><code>RangeLockItem</code> (<code>RangeLockItem</code> *p, <code>RangeLockItem</code> *n, int s, int f, int v)</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static void * operator new (size_t, Pool *)
-
-
-
 static void operator delete (void *, Pool *)
-
-
-
 Public Attributes</code></pre>
 <p> <code>RangeLockItem</code> * <code>prev</code> </p>
 <p> <code>RangeLockItem</code> * <code>next</code> </p>

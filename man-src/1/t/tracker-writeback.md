@@ -17,14 +17,14 @@ description: "tracker-writeback – Used to write metadata set in Tracker back t
 <p> Data is only written back if write-back is enabled in the tracker-miner-fs configuration. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Returns the version of this binary.</p>
-<dt><code>-v, &#8211;verbosity={0|1|2|3}</code></p>
-<dd> Sets the logging level, 0=errors, 1=minimal, 2=detailed, 3=debug.</p>
-<dt><code>-d, &#8211;disable-shutdown</code></p>
-<dd> Disable shutting down after 30 seconds of inactivity. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Returns the version of this binary.</dd>
+<dt><code>-v, &#8211;verbosity={0|1|2|3}</code></dt>
+<dd> Sets the logging level, 0=errors, 1=minimal, 2=detailed, 3=debug.</dd>
+<dt><code>-d, &#8211;disable-shutdown</code></dt>
+<dd> Disable shutting down after 30 seconds of inactivity. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-miner-fs/">tracker-miner-fs</a></code>(1). <code><a href="/docs/linux/man/1-tracker-extract/">tracker-extract</a></code>(1). </p>

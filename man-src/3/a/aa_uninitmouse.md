@@ -14,8 +14,8 @@ description: "aa_uninitmouse – uninitialize the mouse driver."
 <p> void aa_uninitmouse(aa_context *context); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *context</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *context</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Calls &quot;uninitialize&quot; function of the mouse driver. It ought to undo all actions done by &quot;initialize&quot; function.</p>
 <h2>SEE ALSO</h2>

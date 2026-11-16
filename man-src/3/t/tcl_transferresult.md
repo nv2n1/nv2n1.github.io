@@ -24,16 +24,16 @@ const char *
 <code>Tcl_FreeResult</code>(<i>interp</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (out) Interpreter whose result is to be modified or read.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) Tcl value to become result for <i>interp</i>.</p>
-<dd>char <i>*result</i> (in) String value to become result for <i>interp</i> or to be appended to the existing result.</p>
-<dd>const char <i>*element</i> (in) String value to append as a list element to the existing result of <i>interp</i>.</p>
-<dd>Tcl_FreeProc <i>*freeProc</i> (in) Address of procedure to call to release storage at <i>result</i>, or <code>TCL_STATIC</code>, <code>TCL_DYNAMIC</code>, or <code>TCL_VOLATILE</code>.</p>
-<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>.</p>
-<dd>Tcl_Interp <i>*sourceInterp</i> (in) Interpreter that the result and error information should be copied from.</p>
-<dd>Tcl_Interp <i>*targetInterp</i> (in) Interpreter that the result and error information should be copied to.</p>
+<dd>Tcl_Interp <i>*interp</i> (out) Interpreter whose result is to be modified or read.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) Tcl value to become result for <i>interp</i>.</dd>
+<dd>char <i>*result</i> (in) String value to become result for <i>interp</i> or to be appended to the existing result.</dd>
+<dd>const char <i>*element</i> (in) String value to append as a list element to the existing result of <i>interp</i>.</dd>
+<dd>Tcl_FreeProc <i>*freeProc</i> (in) Address of procedure to call to release storage at <i>result</i>, or <code>TCL_STATIC</code>, <code>TCL_DYNAMIC</code>, or <code>TCL_VOLATILE</code>.</dd>
+<dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>.</dd>
+<dd>Tcl_Interp <i>*sourceInterp</i> (in) Interpreter that the result and error information should be copied from.</dd>
+<dd>Tcl_Interp <i>*targetInterp</i> (in) Interpreter that the result and error information should be copied to.</dd>
 <dd>int <i>result</i> (in) If <code>TCL_OK</code>, only copy the result. If <code>TCL_ERROR</code>, copy the error information as well.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>The procedures described here are utilities for manipulating the result value in a Tcl interpreter. The interpreter result may be either a Tcl value or a string. For example, <code>Tcl_SetObjResult</code> and <code>Tcl_SetResult</code> set the interpreter result to, respectively, a value and a string. Similarly, <code>Tcl_GetObjResult</code> and <code>Tcl_GetStringResult</code> return the interpreter result as a value and as a string. The procedures always keep the string and value forms of the interpreter result consistent. For example, if <code>Tcl_SetObjResult</code> is called to set the result to a value, then <code>Tcl_GetStringResult</code> is called, it will return the value&#8217;s string representation. </p>
 <p> <code>Tcl_SetObjResult</code> arranges for <i>objPtr</i> to be the result for <i>interp</i>, replacing any existing result. The result is left pointing to the value referenced by <i>objPtr</i>. <i>objPtr</i>&#8216;s reference count is incremented since there is now a new reference to it from <i>interp</i>. The reference count for any old result value is decremented and the old result value is freed if no references to it remain. </p>
@@ -54,7 +54,7 @@ const char *
 <dl COMPACT>
 <dd>
 <pre>#define USE_INTERP_RESULT</pre>
-</dl>
+</dd></dl>
 <p> but this is meant only to offer life support to otherwise dead code.</p>
 <h2>The Tcl_Freeproc Argument To Tcl_Setresult</h2>
 <p><code>Tcl_SetResult</code>&#8216;s <i>freeProc</i> argument specifies how the Tcl system is to manage the storage for the <i>result</i> argument. If <code>Tcl_SetResult</code> or <code>Tcl_SetObjResult</code> are called at a time when <i>interp</i> holds a string result, they do whatever is necessary to dispose of the old string result (see the <code>Tcl_Interp</code> manual entry for details on this). </p>
@@ -64,7 +64,7 @@ const char *
 <dd>
 <pre>typedef void <code>Tcl_FreeProc</code>(
  char *<i>blockPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> When <i>freeProc</i> is called, its <i>blockPtr</i> will be set to the value of <i>result</i> passed to <code>Tcl_SetResult</code>.</p>
 <h2>See Also</h2>
 <p>Tcl_AddErrorInfo, Tcl_CreateObjCommand, Tcl_SetErrorCode, Tcl_Interp</p>

@@ -15,12 +15,12 @@ description: "virt-host-validate – validate host virtualization setup"
 <p> This tool validates that the host is configured in a suitable way to run libvirt hypervisor drivers. If invoked without any arguments it will check support for all hypervisor drivers it is aware of. Optionally it can be given a particular hypervisor type (&#8216;qemu&#8217;, &#8216;lxc&#8217; or &#8216;bhyve&#8217;) to restrict the checks to those relevant for that virtualization technology</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&quot;-v&quot;, &quot;&#8211;version&quot;</p>
-<dd> Display the command version</p>
-<dt>&quot;-h&quot;, &quot;&#8211;help&quot;</p>
-<dd> Display the command line help</p>
-<dt>&quot;-q&quot;, &quot;&#8211;quiet&quot;</p>
-<dd> Don&#8217;t display details of individual checks being performed. Only display output if a check does not pass.</dl>
+<dt>&quot;-v&quot;, &quot;&#8211;version&quot;</dt>
+<dd> Display the command version</dd>
+<dt>&quot;-h&quot;, &quot;&#8211;help&quot;</dt>
+<dd> Display the command line help</dd>
+<dt>&quot;-q&quot;, &quot;&#8211;quiet&quot;</dt>
+<dd> Don&#8217;t display details of individual checks being performed. Only display output if a check does not pass.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Upon successful validation, an exit status of 0 will be set. Upon failure a non-zero status will be set.</p>
 <h2>AUTHOR</h2>

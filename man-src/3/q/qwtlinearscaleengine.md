@@ -40,20 +40,20 @@ description: "QwtLinearScaleEngine –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>base</i> Base of the scale engine</dl>
+<dd><i>base</i> Base of the scale engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBase()</code></dl>
+<dd><code>setBase()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtInterval</code> QwtLinearScaleEngine::align (const <code>QwtInterval</code> &amp;interval, doublestepSize) const [protected]</h3>
 <p>Align an interval to a step size. The limits of an interval are aligned that both are integer multiples of the step size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Interval<br />
- <i>stepSize</i> Step size</dl>
+ <i>stepSize</i> Step size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Aligned interval</dl>
+<dd>Aligned interval</dd></dl>
 <h3>void QwtLinearScaleEngine::autoScale (intmaxNumSteps, double &amp;x1, double &amp;x2, double &amp;stepSize) const [virtual]</h3>
 <p>Align and divide an interval </p>
 <p> <code>Parameters:</code></p>
@@ -61,10 +61,10 @@ description: "QwtLinearScaleEngine –"
 <dd><i>maxNumSteps</i> Max. number of steps<br />
  <i>x1</i> First limit of the interval (In/Out)<br />
  <i>x2</i> Second limit of the interval (In/Out)<br />
- <i>stepSize</i> Step size (Out)</dl>
+ <i>stepSize</i> Step size (Out)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAttribute()</code></dl>
+<dd><code>setAttribute()</code></dd></dl>
 <p> Implements <code>QwtScaleEngine</code>. </p>
 <p> Reimplemented in <code>QwtDateScaleEngine</code>.</p>
 <h3>QList&lt; double &gt; QwtLinearScaleEngine::buildMajorTicks (const <code>QwtInterval</code> &amp;interval, doublestepSize) const [protected]</h3>
@@ -72,10 +72,10 @@ description: "QwtLinearScaleEngine –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Interval<br />
- <i>stepSize</i> Step size</dl>
+ <i>stepSize</i> Step size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated ticks</dl>
+<dd>Calculated ticks</dd></dl>
 <h3>void QwtLinearScaleEngine::buildMinorTicks (const QList&lt; double &gt; &amp;majorTicks, intmaxMinorSteps, doublestepSize, QList&lt; double &gt; &amp;minorTicks, QList&lt; double &gt; &amp;mediumTicks) const [protected]</h3>
 <p>Calculate minor/medium ticks for major ticks. </p>
 <p> <code>Parameters:</code></p>
@@ -84,7 +84,7 @@ description: "QwtLinearScaleEngine –"
  <i>maxMinorSteps</i> Maximum number of minor steps<br />
  <i>stepSize</i> Step size<br />
  <i>minorTicks</i> Array to be filled with the calculated minor ticks<br />
- <i>mediumTicks</i> Array to be filled with the calculated medium ticks</dl>
+ <i>mediumTicks</i> Array to be filled with the calculated medium ticks</dd></dl>
 <h3>void QwtLinearScaleEngine::buildTicks (const <code>QwtInterval</code> &amp;interval, doublestepSize, intmaxMinorSteps, QList&lt; double &gt;ticks[QwtScaleDiv::NTickTypes]) const [protected]</h3>
 <p>Calculate ticks for an interval. </p>
 <p> <code>Parameters:</code></p>
@@ -92,10 +92,10 @@ description: "QwtLinearScaleEngine –"
 <dd><i>interval</i> Interval<br />
  <i>stepSize</i> Step size<br />
  <i>maxMinorSteps</i> Maximum number of minor steps<br />
- <i>ticks</i> Arrays to be filled with the calculated ticks</dl>
+ <i>ticks</i> Arrays to be filled with the calculated ticks</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>buildMajorTicks()</code>, <code>buildMinorTicks</code></dl>
+<dd><code>buildMajorTicks()</code>, <code>buildMinorTicks</code></dd></dl>
 <h3><code>QwtScaleDiv</code> QwtLinearScaleEngine::divideScale (doublex1, doublex2, intmaxMajorSteps, intmaxMinorSteps, doublestepSize = 0.0) const [virtual]</h3>
 <p>Calculate a scale division for an interval. </p>
 <p> <code>Parameters:</code></p>
@@ -104,10 +104,10 @@ description: "QwtLinearScaleEngine –"
  <i>x2</i> Second interval limit<br />
  <i>maxMajorSteps</i> Maximum for the number of major steps<br />
  <i>maxMinorSteps</i> Maximum number of minor steps<br />
- <i>stepSize</i> Step size. If stepSize == 0, the engine calculates one.</dl>
+ <i>stepSize</i> Step size. If stepSize == 0, the engine calculates one.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated scale division</dl>
+<dd>Calculated scale division</dd></dl>
 <p> Implements <code>QwtScaleEngine</code>. </p>
 <p> Reimplemented in <code>QwtDateScaleEngine</code>. </p>
 <h2>Author</h2>

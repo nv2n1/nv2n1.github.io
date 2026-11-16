@@ -18,32 +18,32 @@ description: "pilot – simple file system browser in the style of the Alpine Co
 <p> More specific help is available in <i>pilot</i>&#8216;s online help.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Display all files including those beginning with a period (.).</p>
-<dt><code>-f</code></p>
-<dd> Use function keys for commands. This option supported only in conjunction with UW Enhanced NCSA telnet.</p>
-<dt><code>-g</code></p>
-<dd> Enable &quot;Show Cursor&quot; mode. Cause cursor to be positioned before the current selection rather than placed at the lower left of the display.</p>
-<dt><code>-j</code></p>
-<dd> Enable &quot;Goto&quot; command. This enables the command to permit explicitly telling <i>pilot</i> which directory to visit.</p>
-<dt><code>-m</code></p>
-<dd> Enable mouse functionality. This only works when <i>pilot</i> is run from within an X Window System &quot;xterm&quot; window.</p>
-<dt><code>-n</code><i>n</i></p>
-<dd> The -n<i>n</i> option enables new mail notification. The <i>n</i> argument is optional, and specifies how often, in seconds, your mailbox is checked for new mail. For example, -n60 causes <i>pilot</i> to check for new mail once every minute. The default interval is 180 seconds, while the minimum allowed is 30. (Note: no space between &quot;n&quot; and the number)</p>
-<dt><code>-o&nbsp;<wbr></code><i>dir</i></p>
-<dd> Sets operating directory. Only files within the specified directory are accessible and browsing is limited to the specified directory subtree.</p>
-<dt><code>-v</code></p>
-<dd> Enable single vertical column display.</p>
-<dt><code>-x</code></p>
-<dd> Disable keymenu at the bottom of the screen.</p>
-<dt><code>-z</code></p>
-<dd> Enable ^Z suspension of <i>pilot</i>.</p>
-<dt><code>-q</code></p>
-<dd> Termcap or terminfo definition for input escape sequences are used in preference to sequences defined by default. This option is only available if <i>pilot</i> was compiled with the TERMCAP_WINS define turned on.</p>
-<dt><code>-setlocale_ctype</code></p>
-<dd> Do setlocale(LC_CTYPE) if available. Default is to not do this setlocale.</p>
-<dt><code>-no_setlocale_collate</code></p>
-<dd> Do not do setlocale(LC_COLLATE). Default is to do this setlocale.</dl>
+<dt><code>-a</code></dt>
+<dd> Display all files including those beginning with a period (.).</dd>
+<dt><code>-f</code></dt>
+<dd> Use function keys for commands. This option supported only in conjunction with UW Enhanced NCSA telnet.</dd>
+<dt><code>-g</code></dt>
+<dd> Enable &quot;Show Cursor&quot; mode. Cause cursor to be positioned before the current selection rather than placed at the lower left of the display.</dd>
+<dt><code>-j</code></dt>
+<dd> Enable &quot;Goto&quot; command. This enables the command to permit explicitly telling <i>pilot</i> which directory to visit.</dd>
+<dt><code>-m</code></dt>
+<dd> Enable mouse functionality. This only works when <i>pilot</i> is run from within an X Window System &quot;xterm&quot; window.</dd>
+<dt><code>-n</code><i>n</i></dt>
+<dd> The -n<i>n</i> option enables new mail notification. The <i>n</i> argument is optional, and specifies how often, in seconds, your mailbox is checked for new mail. For example, -n60 causes <i>pilot</i> to check for new mail once every minute. The default interval is 180 seconds, while the minimum allowed is 30. (Note: no space between &quot;n&quot; and the number)</dd>
+<dt><code>-o&nbsp;<wbr></code><i>dir</i></dt>
+<dd> Sets operating directory. Only files within the specified directory are accessible and browsing is limited to the specified directory subtree.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable single vertical column display.</dd>
+<dt><code>-x</code></dt>
+<dd> Disable keymenu at the bottom of the screen.</dd>
+<dt><code>-z</code></dt>
+<dd> Enable ^Z suspension of <i>pilot</i>.</dd>
+<dt><code>-q</code></dt>
+<dd> Termcap or terminfo definition for input escape sequences are used in preference to sequences defined by default. This option is only available if <i>pilot</i> was compiled with the TERMCAP_WINS define turned on.</dd>
+<dt><code>-setlocale_ctype</code></dt>
+<dd> Do setlocale(LC_CTYPE) if available. Default is to not do this setlocale.</dd>
+<dt><code>-no_setlocale_collate</code></dt>
+<dd> Do not do setlocale(LC_COLLATE). Default is to do this setlocale.</dd></dl>
 <h2>Authors</h2>
 <p> Michael Seibel &lt;mikes [at] cac.washington.edu&gt;<br />
  Copyright 1994-2007 by the University of Washington.</p>

@@ -15,6 +15,6 @@ description: "SPI_getnspname – return the namespace of the specified relation"
 <h2>Arguments</h2>
 <p>Relation <i>rel</i></p>
 <dl COMPACT>
-<dd>input relation</dl>
+<dd>input relation</dd></dl>
 <h2>Return Value</h2>
 <p>The name of the specified relation&#8217;s namespace.</p>

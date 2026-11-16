@@ -10,7 +10,6 @@ description: "ugetc – Low level helper function for reading Unicode text data.
 <p>ugetc &#8211; Low level helper function for reading Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ugetc(const char *s);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for reading Unicode text data. Example: </p>

@@ -14,7 +14,7 @@ description: "usb_hcd_pci_remove – shutdown processing for PCI-based HCDs"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>USB Host Controller being removed</dl>
+</dd><dd>USB Host Controller being removed</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

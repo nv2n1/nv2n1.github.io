@@ -18,7 +18,7 @@ description: "dtrmm.f –"
 <p> <code>DTRMM</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DTRMM  performs one of the matrix-matrix operations
     B := alpha*op( A )*B,   or   B := alpha*B*op( A ),
@@ -26,11 +26,11 @@ description: "dtrmm.f –"
  non-unit,  upper or lower triangular matrix  and  op( A )  is one  of
     op( A ) = A   or   op( A ) = A**T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
            On entry,  SIDE specifies whether  op( A ) multiplies B from
@@ -124,18 +124,18 @@ description: "dtrmm.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 3 Blas routine.
   -- Written on 8-February-1989.
@@ -144,8 +144,9 @@ description: "dtrmm.f –"
      Jeremy Du Croz, Numerical Algorithms Group Ltd.
      Sven Hammarling, Numerical Algorithms Group Ltd.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 178 of file dtrmm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

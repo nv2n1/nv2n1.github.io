@@ -18,20 +18,17 @@ npm repo &lt;pkgname&gt;
 <h2>CONFIGURATION</h2>
 <h3>browser</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Default: OS X: <code>&quot;open&quot;</code>, Windows: <code>&quot;start&quot;</code>, Others: <code>&quot;xdg-open&quot;</code></p>
-<dt>&bull;</p>
-<dd> Type: String</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> Default: OS X: <code>&quot;open&quot;</code>, Windows: <code>&quot;start&quot;</code>, Others: <code>&quot;xdg-open&quot;</code></dd>
+<dt>&bull;</dt>
+<dd> Type: String</dd>
+</dl>
 <p> The browser that is called by the <code>npm repo</code> command to open websites.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> npm help docs</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>
-<dd>
+<dt>&bull;</dt>
+<dd> npm help docs</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
 </dl>
 <h2>Index</h2>

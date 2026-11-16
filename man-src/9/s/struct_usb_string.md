@@ -16,14 +16,14 @@ description: "struct_usb_string – wraps a C string and its USB id"
 <h2>Members</h2>
 <p>id</p>
 <dl>
-<dd>the (nonzero) ID for this string</dl>
+<dd>the (nonzero) ID for this string</dd></dl>
 <p> s</p>
 <dl>
-<dd>the string, in UTF-8 encoding</dl>
+<dd>the string, in UTF-8 encoding</dd></dl>
 <h2>Description</h2>
 <p>If you&#8217;re using <code>usb_gadget_get_string</code>, use this to wrap a string together with its ID.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ register_filesystem - register a new filesystem
 <h2>Arguments</h2>
 
 <i>fs</i>
-<dl><dd><dd>the file system structure</dl>
+<dl><dd></dd><dd>the file system structure</dd></dl>
 
 <h2>Description</h2>
 

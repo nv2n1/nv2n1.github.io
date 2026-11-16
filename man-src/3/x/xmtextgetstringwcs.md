@@ -15,8 +15,8 @@ description: "XmTextGetStringWcs — A Text function that retrieves a copy of th
 <h2>Description</h2>
 <p><code>XmTextGetStringWcs</code> retrieves a copy of the wide character string value of the Text widget. The application is responsible for freeing the storage associated with the string by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the wide character string value of the Text widget. The function returns an empty string if the length of the Text widget&#8217;s string is 0 (zero).</p>

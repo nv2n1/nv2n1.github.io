@@ -14,23 +14,23 @@ description: "encode_rs16 – Calculate the parity for data values (16bit data w
 <p><i>rs</i></p>
 <dl>
 <dd>
-<dd>the rs control structure</dl>
+</dd><dd>the rs control structure</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>data field of a given type</dl>
+<dd>data field of a given type</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>data length</dl>
+<dd>data length</dd></dl>
 <p> <i>par</i></p>
 <dl>
-<dd>parity data, must be initialized by caller (usually all 0)</dl>
+<dd>parity data, must be initialized by caller (usually all 0)</dd></dl>
 <p> <i>invmsk</i></p>
 <dl>
-<dd>invert data mask (will be xored on data, not on parity!)</dl>
+<dd>invert data mask (will be xored on data, not on parity!)</dd></dl>
 <h2>Description</h2>
 <p>Each field in the data array contains up to symbol size bits of valid data.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

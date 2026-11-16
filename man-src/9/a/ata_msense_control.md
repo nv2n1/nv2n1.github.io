@@ -14,18 +14,18 @@ description: "ata_msense_control – Simulate MODE SENSE control mode page"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device of interest</dl>
+</dd><dd>ATA device of interest</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>output buffer</dl>
+<dd>output buffer</dd></dl>
 <p> <i>changeable</i></p>
 <dl>
-<dd>whether changeable parameters are requested</dl>
+<dd>whether changeable parameters are requested</dd></dl>
 <h2>Description</h2>
 <p>Generate a generic MODE SENSE control mode page. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

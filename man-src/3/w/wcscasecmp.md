@@ -10,16 +10,15 @@ description: "wcscasecmp – compare two wide-character strings, ignoring case"
 <p>wcscasecmp &#8211; compare two wide-character strings, ignoring case</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 int wcscasecmp(const wchar_t *s1, const wchar_t *s2);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>wcscasecmp</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.10:</p>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.10:</dt>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <code>wcscasecmp</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strcasecmp/">strcasecmp</a></code>(3) function. It compares the wide-character string pointed to by <i>s1</i> and the wide-character string pointed to by <i>s2</i>, ignoring case differences (<code><a href="/docs/linux/man/3-towupper/">towupper</a></code>(3), <code><a href="/docs/linux/man/3-towlower/">towlower</a></code>(3)).</p>

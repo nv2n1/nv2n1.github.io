@@ -19,7 +19,7 @@ description: "slaexc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAEXC swaps adjacent diagonal blocks T11 and T22 of order 1 or 2 in
  an upper quasi-triangular matrix T by an orthogonal similarity
@@ -29,11 +29,11 @@ description: "slaexc.f –"
  has its diagonal elemnts equal and its off-diagonal elements of
  opposite sign.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>WANTQ</i> </p>
+</dt><dd> <i>WANTQ</i> </dd>
 <pre>
           WANTQ is LOGICAL
           = .TRUE. : accumulate the transformation in the matrix Q;
@@ -100,14 +100,14 @@ and if WANTQ is.TRUE., LDQ &gt;= N.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 138 of file slaexc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

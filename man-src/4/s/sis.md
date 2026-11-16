@@ -30,18 +30,18 @@ description: "sis – SiS and XGI video driver"
 <p> <i>1. For all supported chipsets</i> </p>
 <p> The following driver <code>options</code> are supported on all chipsets:</p>
 <dl>
-<dt><code>Option &#34;NoAccel&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable 2D acceleration. Default: acceleration is enabled.</p>
-<dt><code>Option &#34;HWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable the HW cursor. Default: HWCursor is on.</p>
-<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>The opposite of HWCursor. Default: SWCursor is off.</p>
-<dt><code>Option &#34;Rotate&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Rotate the display clockwise (&quot;CW&quot;) or counter-clockwise (&quot;CCW&quot;). This mode is unaccelerated. Using this option disables XVideo and the Resize and Rotate extension (RandR). Rotation and reflection (see below) are mutually exclusive. Default: no rotation.</p>
-<dt><code>Option &#34;Reflect&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Reflect (mirror) the display horizontally (&quot;X&quot;), vertically (&quot;Y&quot;) or both (&quot;XY&quot;). This mode is unaccelerated. Using this option disables XVideo and the Resize and Rotate extension (RandR). Rotation (see above) and reflection are mutually exclusive. Default: no reflection.</p>
-<dt><code>Option &#34;CRT1Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable gamma correction. (On the 300 and 315/330/340 series, this option only affects CRT1 output). Default: Gamma correction is enabled.</dl>
+<dt><code>Option &#34;NoAccel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable 2D acceleration. Default: acceleration is enabled.</dd>
+<dt><code>Option &#34;HWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable the HW cursor. Default: HWCursor is on.</dd>
+<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>The opposite of HWCursor. Default: SWCursor is off.</dd>
+<dt><code>Option &#34;Rotate&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Rotate the display clockwise (&quot;CW&quot;) or counter-clockwise (&quot;CCW&quot;). This mode is unaccelerated. Using this option disables XVideo and the Resize and Rotate extension (RandR). Rotation and reflection (see below) are mutually exclusive. Default: no rotation.</dd>
+<dt><code>Option &#34;Reflect&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Reflect (mirror) the display horizontally (&quot;X&quot;), vertically (&quot;Y&quot;) or both (&quot;XY&quot;). This mode is unaccelerated. Using this option disables XVideo and the Resize and Rotate extension (RandR). Rotation (see above) and reflection are mutually exclusive. Default: no reflection.</dd>
+<dt><code>Option &#34;CRT1Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable gamma correction. (On the 300 and 315/330/340 series, this option only affects CRT1 output). Default: Gamma correction is enabled.</dd></dl>
 <p> <i>2. Old series specific information</i> </p>
 <p> The driver will auto-detect the amount of video memory present for all these chips, but in the case of the 6326, it will limit the memory size to 4MB. This is because the 6326&#8217;s 2D engine can only address 4MB. The remaining memory seems to be intended for 3D texture data, since only the 3D engine can address RAM above 4MB. However, you can override this limitation using the <code>&#34;VideoRAM&#34;</code> option in the Device section if your board has more than 4MB and you need to use it. However, 2D acceleration, XVideo and the HWCursor will be disabled in this case. </p>
 <p> For the 6326, the driver has two built-in modes for high resolutions which you should use instead of the default ones. These are named <code>&#34;SIS1280x1024-75&#34;</code> and <code>&#34;SIS1600x1200-60&#34;</code> and they will be added to the list of default modes. To use these modes, just place them in your Screen section. Example: </p>
@@ -51,26 +51,26 @@ description: "sis – SiS and XGI video driver"
 <p> TV output is supported for the 6326. The driver will auto detect a connected TV and in this case add the following display modes to the list of available display modes: &quot;PAL800x600&quot;, &quot;PAL800x600U&quot;, &quot;PAL720x540&quot;, &quot;PAL640x480&quot;, &quot;NTSC640x480&quot;, &quot;NTSC640x480U&quot; and &quot;NTSC640x400&quot;. Use these modes like the hi-res modes described above. </p>
 <p> The following driver <code>Options</code> are supported on the old series:</p>
 <dl>
-<dt><code>Option &#34;TurboQueue&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable TurboQueue mode. Default: off for SIS530/620, on for the others</p>
-<dt><code>Option &#34;FastVram&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable FastVram mode. Enabling this sets the video RAM timing to one cycle per read operation instead of two cycles. Disabling this will set two cycles for read and write operations. Leaving this option out uses the default, which varies depending on the chipset.</p>
-<dt><code>Option &#34;NoHostBus&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>(SiS5597/5598 only). Disable CPU-to-VGA host bus support. This speeds up CPU to video RAM transfers. Default: Host bus is enabled.</p>
-<dt><code>Option &#34;NoXVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable XV (XVideo) extension support. Default: XVideo is on.</p>
-<dt><code>Option &#34;NoYV12&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable YV12 Xv support. This might me required due to hardware bugs in some chipsets. Disabling YV12 support forces Xv-aware applications to use YUV2 or XShm for video output. Default: YV12 support is on.</p>
-<dt><code>Option &#34;TVStandard&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>(6326 only) Valid parameters are <code>PAL</code> or <code>NTSC.</code> The default is set by a jumper on the card.</p>
-<dt><code>Option &#34;TVXPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>(6326 only) This option allows tuning the horizontal position of the image for TV output. The range is from -16 to 16. Default: 0</p>
-<dt><code>Option &#34;TVYPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>(6326 only) This option allows tuning the vertical position of the image for TV output. The range is from -16 to 16. Default: 0</p>
-<dt><code>Option &#34;SIS6326TVEnableYFilter&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>(6326 only) This option allows enabling/disabling the Y (chroma) filter for TV output.</p>
-<dt><code>Option &#34;SIS6326TVAntiFlicker&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>(6326 only) This option allow enabling/disabling the anti flicker facility for TV output. Possible parameters are <code>OFF, LOW, MED, HIGH</code> or <code>ADAPTIVE.</code> By experience, <code>ADAPTIVE</code> yields the best results, hence it is the default.</dl>
+<dt><code>Option &#34;TurboQueue&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable TurboQueue mode. Default: off for SIS530/620, on for the others</dd>
+<dt><code>Option &#34;FastVram&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable FastVram mode. Enabling this sets the video RAM timing to one cycle per read operation instead of two cycles. Disabling this will set two cycles for read and write operations. Leaving this option out uses the default, which varies depending on the chipset.</dd>
+<dt><code>Option &#34;NoHostBus&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>(SiS5597/5598 only). Disable CPU-to-VGA host bus support. This speeds up CPU to video RAM transfers. Default: Host bus is enabled.</dd>
+<dt><code>Option &#34;NoXVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable XV (XVideo) extension support. Default: XVideo is on.</dd>
+<dt><code>Option &#34;NoYV12&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable YV12 Xv support. This might me required due to hardware bugs in some chipsets. Disabling YV12 support forces Xv-aware applications to use YUV2 or XShm for video output. Default: YV12 support is on.</dd>
+<dt><code>Option &#34;TVStandard&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>(6326 only) Valid parameters are <code>PAL</code> or <code>NTSC.</code> The default is set by a jumper on the card.</dd>
+<dt><code>Option &#34;TVXPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>(6326 only) This option allows tuning the horizontal position of the image for TV output. The range is from -16 to 16. Default: 0</dd>
+<dt><code>Option &#34;TVYPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>(6326 only) This option allows tuning the vertical position of the image for TV output. The range is from -16 to 16. Default: 0</dd>
+<dt><code>Option &#34;SIS6326TVEnableYFilter&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>(6326 only) This option allows enabling/disabling the Y (chroma) filter for TV output.</dd>
+<dt><code>Option &#34;SIS6326TVAntiFlicker&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>(6326 only) This option allow enabling/disabling the anti flicker facility for TV output. Possible parameters are <code>OFF, LOW, MED, HIGH</code> or <code>ADAPTIVE.</code> By experience, <code>ADAPTIVE</code> yields the best results, hence it is the default.</dd></dl>
 <p> <i>2. 300 and 315/330/340 series specific information</i> </p>
 <p> The 300 and 315/330/340 series, except the XGI Z7, feature two CRT controllers and very often come with a video bridge for controlling LCD and TV output. Hereinafter, the term <code>CRT1</code> refers to the VGA output of the chip, and <code>CRT2</code> refers to either LCD, TV or secondary VGA. Due to timing reasons, only one CRT2 output can be active at the same time. But this limitation does not apply to using CRT1 and CRT2 at the same time which makes it possible to run the driver in dual head mode. </p>
 <p> The driver supports the following video bridges: </p>
@@ -87,30 +87,30 @@ description: "sis – SiS and XGI video driver"
 <p> Dual head mode with or without Xinerama is fully supported, be it with one card driving two outputs, be it two cards. Note that colordepth 8 is not supported in dual head mode if run on one card with two outputs. </p>
 <p> The following driver <code>Options</code> are supported on the 300 and 315/330/340 series:</p>
 <dl>
-<dt><code>Option &#34;NoXVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable XV (XVideo) extension support. Default: XVideo is on.</p>
-<dt><code>Option &#34;XvOnCRT2&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>On chipsets with only one video overlay, this option can used to bind the overlay to CRT1 ( if a monitor is detected and if this option is either unset or set to <code>false</code> ) or CRT2 ( if a CRT2 device is detected or forced, and if this option is set to <code>true</code> ). If either only CRT1 or CRT2 is detected, the driver decides automatically. In Merged Framebuffer mode, this option is ignored. Default: overlay is used on CRT1</p>
-<dt><code>Option &#34;ForceCRT1&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Force CRT1 to be on of off. If a monitor is connected, it will be detected during server start. However, some old monitors are not detected correctly. In such cases, you may set this option to <code>on</code> in order to make the driver initialize CRT1 anyway. If this option is set to <code>off</code> , the driver will switch off CRT1. Default: auto-detect</p>
-<dt><code>Option &#34;ForceCRT2Type&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Force display type to one of: <code>NONE</code> , <code>TV</code> , <code>SVIDEO</code> , <code>COMPOSITE</code> , <code>SVIDEO+COMPOSITE</code> , <code>SCART</code> , <code>LCD</code> , <code>VGA</code> ; <code>NONE</code> will disable CRT2. The SVIDEO, COMPOSITE, SVIDEO+COMPOSITE and SCART parameters are for SiS video bridges only and can be used to force the driver to use a specific TV output connector (if present). For further parameters, see the author&#8217;s website. Default: auto detect.</p>
-<dt><code>Option &#34;CRT2Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable gamma correction for CRT2. Only supported for SiS video bridges. Default: Gamma correction for CRT2 is on.</p>
-<dt><code>Option &#34;TVStandard&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Force the TV standard to either <code>PAL</code> or <code>NTSC.</code> On some machines with 630, 730 and the 315/330/340 series, <code>PALM</code> , <code>PALN</code> and <code>NTSCJ</code> are supported as well. Default: BIOS setting.</p>
-<dt><code>Option &#34;TVXPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option allows tuning the horizontal position of the image for TV output. The range is from -32 to 32. Not supported on the Chrontel 7019. Default: 0</p>
-<dt><code>Option &#34;TVYPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option allows tuning the vertical position of the image for TV output. The range is from -32 to 32. Not supported on the Chrontel 7019. Default: 0</p>
-<dt><code>Option &#34;SISTVXScale&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option selects the horizontal zooming level for TV output. The range is from -16 to 16. Only supported on SiS video bridges. Default: 0</p>
-<dt><code>Option &#34;SISTVYScale&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option selects the vertical zooming level for TV output in the following modes: 640&#215;480, 800&#215;600. On the 315/330/340 series, also 720&#215;480, 720&#215;576 and 768&#215;576. The range is from -4 to 3. Only supported on SiS video bridges. Default: 0</p>
-<dt><code>Option &#34;CHTVOverscan&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>On machines with a Chrontel TV encoder, this can be used to force the TV mode to overscan or underscan. <code>on</code> means overscan, <code>off</code> means underscan. Default: BIOS setting.</p>
-<dt><code>Option &#34;CHTVSuperOverscan&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>On machines with a Chrontel 7005 TV encoder, this option enables a super-overscan mode. This is only supported if the TV standard is PAL. Super overscan will produce an image on the TV which is larger than the viewable area.</dl>
+<dt><code>Option &#34;NoXVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable XV (XVideo) extension support. Default: XVideo is on.</dd>
+<dt><code>Option &#34;XvOnCRT2&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>On chipsets with only one video overlay, this option can used to bind the overlay to CRT1 ( if a monitor is detected and if this option is either unset or set to <code>false</code> ) or CRT2 ( if a CRT2 device is detected or forced, and if this option is set to <code>true</code> ). If either only CRT1 or CRT2 is detected, the driver decides automatically. In Merged Framebuffer mode, this option is ignored. Default: overlay is used on CRT1</dd>
+<dt><code>Option &#34;ForceCRT1&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Force CRT1 to be on of off. If a monitor is connected, it will be detected during server start. However, some old monitors are not detected correctly. In such cases, you may set this option to <code>on</code> in order to make the driver initialize CRT1 anyway. If this option is set to <code>off</code> , the driver will switch off CRT1. Default: auto-detect</dd>
+<dt><code>Option &#34;ForceCRT2Type&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Force display type to one of: <code>NONE</code> , <code>TV</code> , <code>SVIDEO</code> , <code>COMPOSITE</code> , <code>SVIDEO+COMPOSITE</code> , <code>SCART</code> , <code>LCD</code> , <code>VGA</code> ; <code>NONE</code> will disable CRT2. The SVIDEO, COMPOSITE, SVIDEO+COMPOSITE and SCART parameters are for SiS video bridges only and can be used to force the driver to use a specific TV output connector (if present). For further parameters, see the author&#8217;s website. Default: auto detect.</dd>
+<dt><code>Option &#34;CRT2Gamma&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable gamma correction for CRT2. Only supported for SiS video bridges. Default: Gamma correction for CRT2 is on.</dd>
+<dt><code>Option &#34;TVStandard&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Force the TV standard to either <code>PAL</code> or <code>NTSC.</code> On some machines with 630, 730 and the 315/330/340 series, <code>PALM</code> , <code>PALN</code> and <code>NTSCJ</code> are supported as well. Default: BIOS setting.</dd>
+<dt><code>Option &#34;TVXPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option allows tuning the horizontal position of the image for TV output. The range is from -32 to 32. Not supported on the Chrontel 7019. Default: 0</dd>
+<dt><code>Option &#34;TVYPosOffset&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option allows tuning the vertical position of the image for TV output. The range is from -32 to 32. Not supported on the Chrontel 7019. Default: 0</dd>
+<dt><code>Option &#34;SISTVXScale&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option selects the horizontal zooming level for TV output. The range is from -16 to 16. Only supported on SiS video bridges. Default: 0</dd>
+<dt><code>Option &#34;SISTVYScale&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option selects the vertical zooming level for TV output in the following modes: 640&#215;480, 800&#215;600. On the 315/330/340 series, also 720&#215;480, 720&#215;576 and 768&#215;576. The range is from -4 to 3. Only supported on SiS video bridges. Default: 0</dd>
+<dt><code>Option &#34;CHTVOverscan&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>On machines with a Chrontel TV encoder, this can be used to force the TV mode to overscan or underscan. <code>on</code> means overscan, <code>off</code> means underscan. Default: BIOS setting.</dd>
+<dt><code>Option &#34;CHTVSuperOverscan&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>On machines with a Chrontel 7005 TV encoder, this option enables a super-overscan mode. This is only supported if the TV standard is PAL. Super overscan will produce an image on the TV which is larger than the viewable area.</dd></dl>
 <p> The driver supports many more options. Please see <a rel="nofollow" href="http://www.winischhofer.eu/linuxsisvga.shtml">http://www.winischhofer.eu/linuxsisvga.shtml</a> for more information. </p>
 <p> <i>3. 300 series specific information</i> </p>
 <p> DRI is supported on the 300 series only. On Linux, prior to kernel 2.6.3, DRI requires the kernel&#8217;s SiS framebuffer driver ( <code>sisfb</code> ). The SiS DRM kernel driver as well as the SiS DRI client driver are required in any case. </p>
@@ -118,24 +118,24 @@ description: "sis – SiS and XGI video driver"
 <p> Sisfb can be used for memory management only, or as a complete framebuffer driver. If you start sisfb with a valid mode (ie you gain a graphical console), the X driver can communicate with sisfb and doesn&#8217;t require any manual configuration for finding out about the video memory it is allowed to use. </p>
 <p> However, if you are running a 2.4 series Linux kernel and use sisfb for video memory management only, ie you started sisfb with mode=none and still have a text mode console, there is no communication between sisfb and the X driver. For this purpose, the</p>
 <dl>
-<dt><code>Option &#34;MaxXFBMem&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd></dl>
+<dt><code>Option &#34;MaxXFBMem&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd></dd></dl>
 <p> exists. This option must be set to the same value as given to sisfb through its &quot;mem&quot; parameter, ie the amount of memory to use for X in kilobytes. </p>
 <p> If you started sisfb without the mem argument, sisfb will reserve</p>
 <dl>
-<dt>12288KB if more than 16MB of total video RAM is available,</p>
+<dt>12288KB if more than 16MB of total video RAM is available,</dt>
 <dd>
-<dt>8192KB if between 12 and 16MB of video RAM is available,</p>
+</dd><dt>8192KB if between 12 and 16MB of video RAM is available,</dt>
 <dd>
-<dt>4096KB in all other cases.</p>
-<dd></dl>
+</dd><dt>4096KB in all other cases.</dt>
+<dd></dd></dl>
 <p> If you intend to use DRI on an integrated chipset (540, 630, 730), I recommend setting the total video memory in the BIOS setup utility to 64MB. </p>
 <p> PLEASE NOTE: As of Linux 2.6.3 and under *BSD, sisfb is not required for memory management. Hence, this option is mandatory on such systems not running sisfb to decide how much memory X should reserve for DRI. If the option is omitted, DRI will have no memory assigned, and all DRI applications will quit with errors like &quot;failed to allocate Z-buffer&quot; or the like.</p>
 <dl>
-<dt><code>Option &#34;DRI&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option allows enabling or disabling DRI. By default, DRI is on.</p>
-<dt><code>Option &#34;AGPSize&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option allows selecting the amount of AGP memory to be used for DRI. The amount is to be specified in megabyte, the default is 8.</dl>
+<dt><code>Option &#34;DRI&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option allows enabling or disabling DRI. By default, DRI is on.</dd>
+<dt><code>Option &#34;AGPSize&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option allows selecting the amount of AGP memory to be used for DRI. The amount is to be specified in megabyte, the default is 8.</dd></dl>
 <h2>Known Bugs</h2>
 <p>none.</p>
 <h2>See Also</h2>

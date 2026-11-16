@@ -15,19 +15,19 @@ pci_mmap_resource - map a PCI resource into user memory space
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>kobject for mapping</dl>
+<dl><dd></dd><dd>kobject for mapping</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>struct bin_attribute for the file being mapped</dl>
+<dl><dd>struct bin_attribute for the file being mapped</dd></dl>
  
 
  <i>vma</i>
-<dl><dd>struct vm_area_struct passed into the mmap</dl>
+<dl><dd>struct vm_area_struct passed into the mmap</dd></dl>
  
 
  <i>write_combine</i>
-<dl><dd>1 for write_combine mapping</dl>
+<dl><dd>1 for write_combine mapping</dd></dl>
 
 <h2>Description</h2>
 

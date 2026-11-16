@@ -131,112 +131,77 @@ print "Hello, world\n";
  Perl has three main variable types: scalars, arrays, and hashes.
 <dl>
 <dt>Scalars
-<dd> A scalar represents a single value: 
-
+</dt><dd> A scalar represents a single value: 
  <pre>
  my $animal = &quot;camel&quot;;
  my $answer = 42;
 </pre> 
-
  Scalar values can be strings, integers or floating point numbers, and Perl will automatically convert between them as required. There is no need to pre-declare your variable types, but you have to declare them using the <tt>&quot;my&quot;</tt> keyword the first time you use them. (This is one of the requirements of <tt>&quot;use strict;&quot;</tt>.) 
-
  Scalar values can be used in various ways: 
-
  <pre>
  print $animal;
  print &quot;The animal is $animal\n&quot;;
  print &quot;The square of $answer is &quot;, $answer * $answer, &quot;\n&quot;;
 </pre> 
-
  There are a number of ``magic'' scalars with names that look like punctuation or line noise. These special variables are used for all kinds of purposes, and are documented in perlvar. The only one you need to know about for now is <tt>$_</tt> which is the ``default variable''. It's used as the default argument to a number of functions in Perl, and it's set implicitly by certain looping constructs. 
-
  <pre>
  print;          # prints contents of $_ by default
 </pre>
-<dt>Arrays
-<dd> An array represents a list of values: 
-
- 
+</dd><dt>Arrays
+</dt><dd> An array represents a list of values: 
 my @animals = ("camel", "llama", "owl");
 my @numbers = (23, 42, 69);
 my @mixed = ("camel", 42, 1.23);
- 
-
  Arrays are zero-indexed. Here's how you get at elements in an array: 
-
- 
 print $animals[0];
 #prints "camel" print $animals[1];
 #prints "llama"
- 
-
  The special variable <tt>$#array</tt> tells you the index of the last element of an array: 
-
  <pre>
  print $mixed[$#mixed];       # last element, prints 1.23
 </pre> 
-
  You might be tempted to use <tt>&quot;$#array + 1&quot;</tt> to tell you how many items there are in an array. Don't bother. As it happens, using <tt>@array</tt> where Perl expects to find a scalar value (``in scalar context'') will give you the number of elements in the array: 
-
  <pre>
  if (@animals &lt; 5) { ... }
 </pre> 
-
  The elements we're getting from the array start with a <tt>&quot;$&quot;</tt> because we're getting just a single value out of the array; you ask for a scalar, you get a scalar. 
-
  To get multiple values from an array: 
-
- 
 @animals[0, 1];
 #gives("camel", "llama");
 @animals[0..2];
 #gives("camel", "llama", "owl");
 @animals[1.. $ #animals];
 #gives all except the first element
- 
-
  This is called an ``array slice''. 
-
  You can do various useful things to lists: 
-
  <pre>
  my @sorted    = sort @animals;
  my @backwards = reverse @numbers;
 </pre> 
-
  There are a couple of special arrays too, such as <tt>@ARGV</tt> (the command line arguments to your script) and <tt>@_</tt> (the arguments passed to a subroutine). These are documented in perlvar.
-<dt>Hashes
-<dd> A hash represents a set of key/value pairs: 
-
+</dd><dt>Hashes
+</dt><dd> A hash represents a set of key/value pairs: 
  <pre>
  my %fruit_color = (&quot;apple&quot;, &quot;red&quot;, &quot;banana&quot;, &quot;yellow&quot;);
 </pre> 
-
  You can use whitespace and the <tt>&quot;=&gt;&quot;</tt> operator to lay them out more nicely: 
-
  <pre>
  my %fruit_color = (
      apple  =&gt; &quot;red&quot;,
      banana =&gt; &quot;yellow&quot;,
  );
 </pre> 
-
  To get at hash elements: 
-
  <pre>
  $fruit_color{&quot;apple&quot;};           # gives &quot;red&quot;
 </pre> 
-
  You can get at lists of keys and values with <tt>&quot;keys()&quot;</tt> and <tt>&quot;values()&quot;</tt>. 
-
  <pre>
  my @fruits = keys %fruit_colors;
  my @colors = values %fruit_colors;
 </pre> 
-
  Hashes have no particular internal order, though you can sort the keys and loop through them. 
-
- Just like special scalars and arrays, there are also special hashes. The most well known of these is <tt>%ENV</tt> which contains environment variables. Read all about it (and other special variables) in perlvar.</dl>
+ Just like special scalars and arrays, there are also special hashes. The most well known of these is <tt>%ENV</tt> which contains environment variables. Read all about it (and other special variables) in perlvar.</dd></dl>
  
 
  Scalars, arrays and hashes are documented more fully in perldata. 
@@ -305,7 +270,7 @@ $y has fallen out of scope
  The conditions can be any Perl expression. See the list of operators in the next section for information on comparison and boolean logic operators, which are commonly used in conditional statements.
 <dl>
 <dt>if
-<dd> 
+</dt><dd> 
 if (condition) {
     ...
 }
@@ -317,21 +282,14 @@ else
 {
     ...
 }
- 
-
  There's also a negated version of it: 
-
  <pre>
  unless ( condition ) {
      ...
  }
 </pre> 
-
  This is provided as a more readable version of <tt>&quot;if (!</tt>condition<tt>)&quot;</tt>. 
-
  Note that the braces are required in Perl, even if you've only got one line in the block. However, there is a clever way of making your one-line conditional blocks more English like: 
-
- 
 #the traditional way
 if ($zippy) {
     print "Yow!";
@@ -339,39 +297,30 @@ if ($zippy) {
 #the Perlish post - condition way
 print "Yow!" if $zippy;
 print "We have no bananas" unless $bananas;
-
-<dt>while
-<dd> <pre>
+</dd><dt>while
+</dt><dd> <pre>
  while ( condition ) {
      ...
  }
 </pre> 
-
  There's also a negated version, for the same reason we have <tt>&quot;unless&quot;</tt>: 
-
  <pre>
  until ( condition ) {
      ...
  }
 </pre> 
-
  You can also use <tt>&quot;while&quot;</tt> in a post-condition: 
-
  <pre>
  print &quot;LA LA LA\n&quot; while 1;          # loops forever
 </pre>
-<dt>for
-<dd> Exactly like C: 
-
- 
+</dd><dt>for
+</dt><dd> Exactly like C: 
 for ($i = 0; $i &lt;= $max; $i++) {
     ...
 }
- 
-
  The C style for loop is rarely needed in Perl since Perl provides the more friendly list scanning <tt>&quot;foreach&quot;</tt> loop.
-<dt>foreach
-<dd> 
+</dd><dt>foreach
+</dt><dd> 
 foreach (@array) {
     print "This element is $_\n";
 }
@@ -382,9 +331,7 @@ foreach
     {
         print "The value of $key is $hash{$key}\n";
     }
- 
-
- The <tt>&quot;foreach&quot;</tt> keyword is actually a synonym for the <tt>&quot;for&quot;</tt> keyword. See <tt>&quot;&quot;Foreach Loops&quot; in perlsyn&quot;</tt>.</dl>
+ The <tt>&quot;foreach&quot;</tt> keyword is actually a synonym for the <tt>&quot;for&quot;</tt> keyword. See <tt>&quot;&quot;Foreach Loops&quot; in perlsyn&quot;</tt>.</dd></dl>
  
 
  For more detail on looping constructs (and some that weren't mentioned in this overview) see perlsyn.
@@ -396,18 +343,17 @@ foreach
  Perl operators are documented in full in perlop, but here are a few of the most common ones:
 <dl>
 <dt>Arithmetic
-<dd> <pre>
+</dt><dd> <pre>
  +   addition
  -   subtraction
  *   multiplication
  /   division
 </pre>
-<dt>Numeric comparison
-<dd> 
+</dd><dt>Numeric comparison
+</dt><dd> 
 == equality != inequality&lt;less than&gt; greater than &lt;= less than or equal &gt;= greater than or equal
-
-<dt>String comparison
-<dd> <pre>
+</dd><dt>String comparison
+</dt><dd> <pre>
  eq  equality
  ne  inequality
  lt  less than
@@ -415,23 +361,21 @@ foreach
  le  less than or equal
  ge  greater than or equal
 </pre> 
-
  (Why do we have separate numeric and string comparisons? Because we don't have special variable types, and Perl needs to know whether to sort numerically (where 99 is less than 100) or alphabetically (where 100 comes before 99).
-<dt>Boolean logic
-<dd> <pre>
+</dd><dt>Boolean logic
+</dt><dd> <pre>
  &amp;&amp;  and
  ||  or
  !   not
 </pre> 
-
  (<tt>&quot;and&quot;</tt>, <tt>&quot;or&quot;</tt> and <tt>&quot;not&quot;</tt> aren't just in the above table as descriptions of the operators. They're also supported as operators in their own right. They're more readable than the C-style operators, but have different precedence to <tt>&quot;&amp;&amp;&quot;</tt> and friends. Check perlop for more detail.)
-<dt>Miscellaneous
-<dd> <pre>
+</dd><dt>Miscellaneous
+</dt><dd> <pre>
  =   assignment
  .   string concatenation
  x   string multiplication
  ..  range operator (creates a list of numbers or strings)
-</pre></dl>
+</pre></dd></dl>
  
 
  Many operators can be combined with a <tt>&quot;=&quot;</tt> as follows: 
@@ -490,7 +434,7 @@ while (&lt;$in&gt;) {
  Perl's regular expression support is both broad and deep, and is the subject of lengthy documentation in perlrequick, perlretut, and elsewhere. However, in short:
 <dl>
 <dt>Simple matching
-<dd> 
+</dt><dd> 
 if (/ foo /) {
     ...
 }
@@ -499,22 +443,17 @@ if (/ foo /) {
     ...
 }
 #true if $a contains "foo"
- 
-
  The <tt>&quot;//&quot;</tt> matching operator is documented in perlop. It operates on <tt>$_</tt> by default, or can be bound to another variable using the <tt>&quot;=~&quot;</tt> binding operator (also documented in perlop).
-<dt>Simple substitution
-<dd> <pre>
+</dd><dt>Simple substitution
+</dt><dd> <pre>
  s/foo/bar/;               # replaces foo with bar in $_
  $a =~ s/foo/bar/;         # replaces foo with bar in $a
  $a =~ s/foo/bar/g;        # replaces ALL INSTANCES of foo with bar
                            # in $a
 </pre> 
-
  The <tt>&quot;s///&quot;</tt> substitution operator is documented in perlop.
-<dt>More complex regular expressions
-<dd> You don't just have to match on fixed strings. In fact, you can match on just about anything you could dream of by using more complex regular expressions. These are documented at great length in perlre, but for the meantime, here's a quick cheat sheet: 
-
- 
+</dd><dt>More complex regular expressions
+</dt><dd> You don't just have to match on fixed strings. In fact, you can match on just about anything you could dream of by using more complex regular expressions. These are documented at great length in perlre, but for the meantime, here's a quick cheat sheet: 
 .a single character
  \s a whitespace character(space, tab, newline,
                             ...)
@@ -526,10 +465,7 @@ if (/ foo /) {
  \W a non - word character[aeiou] matches a single character in the given set[^aeiou] matches a single character outside the given set(foo | bar | baz) matches any of the alternatives specified
     ^ start of string
     $ end of string
- 
-
  Quantifiers can be used to specify how many of the previous thing you want to match on, where ``thing'' means either a literal character, one of the metacharacters listed above, or a group of characters or metacharacters in parentheses. 
-
  <pre>
  *                   zero or more of the previous thing
  +                   one or more of the previous thing
@@ -538,10 +474,7 @@ if (/ foo /) {
  {3,6}               matches between 3 and 6 of the previous thing
  {3,}                matches 3 or more of the previous thing
 </pre> 
-
  Some brief examples: 
-
- 
 / ^\d + / string starts with one or more digits / ^$ / nothing in the string(start and end are adjacent) / (\d\s){
                                                                                                                3} /
                                         three digits,
@@ -552,19 +485,15 @@ if (/ foo /) {
     next if / ^$ / ;
     print;
 }
-
-<dt>Parentheses for capturing
-<dd> As well as grouping, parentheses serve a second purpose. They can be used to capture the results of parts of the regexp match for later use. The results end up in <tt>$1</tt>, <tt>$2</tt> and so on. 
-
- 
+</dd><dt>Parentheses for capturing
+</dt><dd> As well as grouping, parentheses serve a second purpose. They can be used to capture the results of parts of the regexp match for later use. The results end up in <tt>$1</tt>, <tt>$2</tt> and so on. 
 #a cheap and nasty way to break an email address up into parts
 if ($email = ~ / ([^@] +) @(.+) /) {
     print "Username is $1\n";
     print "Hostname is $2\n";
 }
-
-<dt>Other regexp features
-<dd> Perl regexps also support backreferences, lookaheads, and all kinds of other complex details. Read all about them in perlrequick, perlretut, and perlre.</dl>
+</dd><dt>Other regexp features
+</dt><dd> Perl regexps also support backreferences, lookaheads, and all kinds of other complex details. Read all about them in perlrequick, perlretut, and perlre.</dd></dl>
 
 <h3>Writing subroutines</h3>
 
@@ -645,4 +574,4 @@ sub square
 
 
 <dt><a HREF="#lbAQ">AUTHOR</a>
-<dd></dl>
+</dt><dd></dd></dl>

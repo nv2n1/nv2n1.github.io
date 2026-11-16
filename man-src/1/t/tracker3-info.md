@@ -19,20 +19,20 @@ description: "tracker3-info – Retrieve all information available for a certain
 <p> <code>-f, &#8211;full-namespaces</code></p>
 <dl>
 <dt>
-<dd> By default, all keys and values reported about any given <i>file</i> are returned in shortened form, for example, <i>nie:title</i> is shown instead of <i><a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nie#title">http://tracker.api.gnome.org/ontology/v3/nie#title</a></i>. This makes things much easier to see generally and the output is less cluttered. This option reverses that so FULL namespaces are shown instead.</dl>
+</dt><dd> By default, all keys and values reported about any given <i>file</i> are returned in shortened form, for example, <i>nie:title</i> is shown instead of <i><a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nie#title">http://tracker.api.gnome.org/ontology/v3/nie#title</a></i>. This makes things much easier to see generally and the output is less cluttered. This option reverses that so FULL namespaces are shown instead.</dd></dl>
 <p> <code>-c, &#8211;plain-text-content</code></p>
 <dl>
 <dt>
-<dd> If the resource being displayed has nie:PlainTextContent (i.e. information about the content of the resource, which could be the contents of a file on the disk), then this option displays that in the output.</dl>
+</dt><dd> If the resource being displayed has nie:PlainTextContent (i.e. information about the content of the resource, which could be the contents of a file on the disk), then this option displays that in the output.</dd></dl>
 <p> <code>-i, &#8211;resource-is-iri</code></p>
 <dl>
 <dt>
-<dd> In most cases, the <i>file</i> argument supplied points to a URL or PATH which is queried for according to the resource associated with it by <i>nie:url</i>. However, in cases where the <i>file</i> specified turns out to be the actual URN itself, this argument is required to tell &quot;tracker3 info&quot; not to do the extra step of looking up the URN related by <i>nie:url</i>.</dl>
+</dt><dd> In most cases, the <i>file</i> argument supplied points to a URL or PATH which is queried for according to the resource associated with it by <i>nie:url</i>. However, in cases where the <i>file</i> specified turns out to be the actual URN itself, this argument is required to tell &quot;tracker3 info&quot; not to do the extra step of looking up the URN related by <i>nie:url</i>.</dd></dl>
 <p> For example, consider that you store URNs by the actual URL itself and use the unique nie:url in another resource (which is quite reasonable when using containers and multi-resource conditions), you would need this argument to tell &quot;tracker3 info&quot; that the <i>file</i> supplied is actually a URN not URL. </p>
 <p> <code>-t, &#8211;turtle</code></p>
 <dl>
 <dt>
-<dd> Output results as Turtle RDF. If -f is enabled, full URIs are shown for subjects, predicates and objects; otherwise, shortened URIs are used, and all the prefixes Tracker knows about are printed at the top of the output.</dl>
+</dt><dd> Output results as Turtle RDF. If -f is enabled, full URIs are shown for subjects, predicates and objects; otherwise, shortened URIs are used, and all the prefixes Tracker knows about are printed at the top of the output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1). </p>
 <p> <code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code> <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code> </p>

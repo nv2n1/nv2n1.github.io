@@ -14,12 +14,10 @@ int pcre_get_named_substring(const pcre *code,
                              const char *subject, int *ovector,
                              int stringcount, const char *stringname,
                              const char **stringptr);
-
 int pcre16_get_named_substring(const pcre16 *code,
                                PCRE_SPTR16 subject, int *ovector,
                                int stringcount, PCRE_SPTR16 stringname,
                                PCRE_SPTR16 *stringptr);
-
 int pcre32_get_named_substring(const pcre32 *code,
                                PCRE_SPTR32 subject, int *ovector,
                                int stringcount, PCRE_SPTR32 stringname,

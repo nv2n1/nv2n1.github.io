@@ -51,30 +51,18 @@ description: "gDesklets – provides an advanced architecture for desktop applet
 <h2>USAGE</h2>
 <p> If you press the right mouse button over a display, a popup menu will open. It depends on the display what you will see there, but the following items are always available: </p>
 <dl>
-<dt> <code>Configure desklet</code></p>
-<dt>
-<dd>
-<dd>Opens the configuration dialog for this display. It depends on the display what you can configure.</p>
-<dt> <code>Move desklet</code></p>
-<dt>
-<dd>
-<dd>Attaches desklet to cursor for moving it around. Click to release it.</p>
-<dt> <code>View Source</code></p>
-<dt>
-<dd>
-<dd>Lets you view the desklet&#8217;s source file (.display).</p>
-<dt> <code>Restart desklet</code></p>
-<dt>
-<dd>
-<dd>Restarts this display. This menu item is mainly for sensor debugging.</p>
-<dt> <code>Remove desklet</code></p>
-<dt>
-<dd>
-<dd>Removes this display from your desktop.</p>
-<dt> <code>About</code></p>
-<dt>
-<dd>
-<dd>Lets you view desklet&#8217;s &quot;About&quot; information, license and readme file. </p>
+<dt> <code>Configure desklet</code></dt>
+<dd>Opens the configuration dialog for this display. It depends on the display what you can configure.</dd>
+<dt> <code>Move desklet</code></dt>
+<dd>Attaches desklet to cursor for moving it around. Click to release it.</dd>
+<dt> <code>View Source</code></dt>
+<dd>Lets you view the desklet&#8217;s source file (.display).</dd>
+<dt> <code>Restart desklet</code></dt>
+<dd>Restarts this display. This menu item is mainly for sensor debugging.</dd>
+<dt> <code>Remove desklet</code></dt>
+<dd>Removes this display from your desktop.</dd>
+<dt> <code>About</code></dt>
+<dd>Lets you view desklet&#8217;s &quot;About&quot; information, license and readme file. </dd>
 </dl>
 <h2>LOGFILE</h2>
 <p> The gdesklets-daemon writes a log file. That file can be found in <code>~/.gdesklets/logs/gdesklets&lt;display&gt;.log</code> where <code>&lt;display&gt; is the name of the X-Display. </p>
@@ -82,20 +70,20 @@ description: "gDesklets – provides an advanced architecture for desktop applet
 <h2>SUPPORTED WINDOW MANAGERS</h2>
 <p> In order to run on as many desktops as possible, gDesklets relies on the EWMH specification from freedesktop.org. This specification is respected among many window managers. We currently know of the following EWMH compliant window managers: </p>
 <dl>
-<dt> <code>* metacity</code></p>
-<dt> <code>* xfwm4</code></p>
-<dt> <code>* openbox</code></p>
-<dt> <code>* enlightenment</code> (&gt;= 0.16.6)</p>
-<dt> <code>* fvwm</code> (2.5.x, see <a rel="nofollow" href="http://www.fvwm.org/features.php)">http://www.fvwm.org/features.php)</a></p>
-<dt> <code>* sawfish</code></p>
-<dt> <code>* kwin</code></p>
-<dt> <code>* evilwm</code></p>
-<dt> <code>* fluxbox</code> (recent versions)</p>
-<dt> <code>* waimea</code></p>
-<dt> * &#8230;and certainly some others which we forgot here. </p>
+<dt> <code>* metacity</code></dt>
+<dt> <code>* xfwm4</code></dt>
+<dt> <code>* openbox</code></dt>
+<dt> <code>* enlightenment</code> (&gt;= 0.16.6)</dt>
+<dt> <code>* fvwm</code> (2.5.x, see <a rel="nofollow" href="http://www.fvwm.org/features.php)">http://www.fvwm.org/features.php)</a></dt>
+<dt> <code>* sawfish</code></dt>
+<dt> <code>* kwin</code></dt>
+<dt> <code>* evilwm</code></dt>
+<dt> <code>* fluxbox</code> (recent versions)</dt>
+<dt> <code>* waimea</code></dt>
+<dt> * &#8230;and certainly some others which we forgot here. </dt>
 </dl>
 <h2>MEMORY CONSUMPTION</h2>
-<dd>This is taken seriously. In every release we&#8217;re addressing these issues. Unfortunately, gDesklets is relying on libraries which contain their own bugs or leaks. In some places it&#8217;s possible to create a work-around. Sometimes, we </p>
+<dd>This is taken seriously. In every release we&#8217;re addressing these issues. Unfortunately, gDesklets is relying on libraries which contain their own bugs or leaks. In some places it&#8217;s possible to create a work-around. Sometimes, we </dd>
 <p> have to wait until an issue in bugzilla is fixed. gDesklets itself shouldn&#8217;t leak. We&#8217;ve checked the relevant C code to make sure of that. </p>
 <p> At startup the program claims approximately 16 MB of RAM. In the future we&#8217;re going to decrease that number. Some people in the GNOME and GTK+ community are also addressing these problems at a lower level (gtk+ and gnome libraries). gDesklets will automatically benefit from these efforts. </p>
 <h2>COMMUNITY</h2>
@@ -133,12 +121,12 @@ description: "gDesklets – provides an advanced architecture for desktop applet
 <h2>COPYRIGHT</h2>
 <p> <code>gdesklets</code> is copyright (c) 2003 &#8211; 2007 by</p>
 <dl>
-<dt> * Martin Grimme &lt;martin [at] pycage.de&gt;,</p>
-<dt> * Christian Meyer &lt;chrisime [at] gnome.org&gt;,</p>
-<dt> * Jesse Andrews &lt;jdandr2 [at] cs.uky.edu&gt;</p>
-<dt> * Benoît Dejean &lt;tazforever [at] dlfp.org&gt;</dl>
+<dt> * Martin Grimme &lt;martin [at] pycage.de&gt;,</dt>
+<dt> * Christian Meyer &lt;chrisime [at] gnome.org&gt;,</dt>
+<dt> * Jesse Andrews &lt;jdandr2 [at] cs.uky.edu&gt;</dt>
+<dt> * Benoît Dejean &lt;tazforever [at] dlfp.org&gt;</dt></dl>
 <p> <code>glibtop Python wrapper</code> in libdesklets is copyright (c) 2003 &#8211; 2005 by</p>
 <dl>
-<dt> * Benoît Dejean &lt;tazforever [at] dlfp.org&gt;</dl>
-<dd>The latest version of <code>gDesklets</code> can be found at <a rel="nofollow" href="http://www.gdesklets.de/">http://www.gdesklets.de/</a> The <code>Desklets</code> bzr repository can be found at <a rel="nofollow" href="https://code.launchpad.net/gdesklets/">https://code.launchpad.net/gdesklets/</a> </p>
+<dt> * Benoît Dejean &lt;tazforever [at] dlfp.org&gt;</dt></dl>
+<dd>The latest version of <code>gDesklets</code> can be found at <a rel="nofollow" href="http://www.gdesklets.de/">http://www.gdesklets.de/</a> The <code>Desklets</code> bzr repository can be found at <a rel="nofollow" href="https://code.launchpad.net/gdesklets/">https://code.launchpad.net/gdesklets/</a> </dd>
 <h2>Index</h2>

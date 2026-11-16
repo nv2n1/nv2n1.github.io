@@ -36,21 +36,9 @@ description: "std::_Base_bitset< _Nw > –"
 <p> bool <code>_M_is_equal</code> (const <code>_Base_bitset</code>&lt; _Nw &gt; &amp;__x) const noexcept</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static constexpr _WordT _S_maskbit (size_t __pos) noexcept
-
-
-
 static constexpr size_t _S_whichbit (size_t __pos) noexcept
-
-
-
 static constexpr size_t _S_whichbyte (size_t __pos) noexcept
-
-
-
 static constexpr size_t _S_whichword (size_t __pos) noexcept
-
-
-
 Public Attributes</code></pre>
 <p> _WordT <code>_M_w</code> [_Nw]</p>
 <h2>Detailed Description</h2>

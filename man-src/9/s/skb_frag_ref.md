@@ -15,11 +15,11 @@ skb_frag_ref - take an addition reference on a paged fragment of an skb.
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the buffer</dl>
+<dl><dd></dd><dd>the buffer</dd></dl>
  
 
  <i>f</i>
-<dl><dd>the fragment offset.</dl>
+<dl><dd>the fragment offset.</dd></dl>
 
 <h2>Description</h2>
 

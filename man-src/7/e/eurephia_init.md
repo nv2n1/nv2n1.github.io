@@ -15,26 +15,26 @@ description: "eurephia_init – Initialisation utility for the eurephia OpenVPN 
 <h2>Options</h2>
 <p>Arguments used by eurephia_init:</p>
 <dl>
-<dt><code>-V</code> | <code>&#8211;version</code></p>
-<dd>Show version information</p>
-<dt><code>-h</code> | <code>&#8211;help</code></p>
-<dd>This help screen</p>
-<dt><code>-l</code> | <code>&#8211;log</code> &lt;filename&gt;</p>
-<dd>Log file for debugging</p>
-<dt><code>-L</code> | <code>&#8211;log-level</code> &lt;log level&gt;</p>
-<dd>Sets the log level</p>
-<dt> <code>-N</code> | <code>&#8211;hash-threshold-min</code> &lt;ms&gt; : Benchmarking parameter, see below. Default 95ms</p>
-<dt> <code>-M</code> | <code>&#8211;hash-threshold-max</code> &lt;ms&gt; : Benchmarking parameter, see below. Default 200ms</p>
-<dt><code>-D</code> | <code>&#8211;database-driver</code> &lt;full path&gt;</p>
+<dt><code>-V</code> | <code>&#8211;version</code></dt>
+<dd>Show version information</dd>
+<dt><code>-h</code> | <code>&#8211;help</code></dt>
+<dd>This help screen</dd>
+<dt><code>-l</code> | <code>&#8211;log</code> &lt;filename&gt;</dt>
+<dd>Log file for debugging</dd>
+<dt><code>-L</code> | <code>&#8211;log-level</code> &lt;log level&gt;</dt>
+<dd>Sets the log level</dd>
+<dt> <code>-N</code> | <code>&#8211;hash-threshold-min</code> &lt;ms&gt; : Benchmarking parameter, see below. Default 95ms</dt>
+<dt> <code>-M</code> | <code>&#8211;hash-threshold-max</code> &lt;ms&gt; : Benchmarking parameter, see below. Default 200ms</dt>
+<dt><code>-D</code> | <code>&#8211;database-driver</code> &lt;full path&gt;</dt>
 <dd>
-<dd>Full path to the database driver (Required)</p>
-<dt><code>-d</code> | <code>&#8211;database-args</code> &lt;arguments&gt;</p>
-<dd>Required database arguments for the driver (Required)</dl>
+</dd><dd>Full path to the database driver (Required)</dd>
+<dt><code>-d</code> | <code>&#8211;database-args</code> &lt;arguments&gt;</dt>
+<dd>Required database arguments for the driver (Required)</dd></dl>
 <h2>Benchmarking</h2>
 <dl>
-<dt>During the initialisation this utility will benchmark the CPU power by doing multiple SHA512 hash calculations. This is to determinate the optimal rounds the password hashes should use on the current computer. To make it more difficult to brute force passwords, eurephia implements dynamic password hash rounds, based on a random number within in a given range. This benchmark will suggest an optimal range. To do this, two limits are defined, the shortest time and the longest time to be used for calculating a hash. The default values are 95ms and 200ms.</p>
+<dt>During the initialisation this utility will benchmark the CPU power by doing multiple SHA512 hash calculations. This is to determinate the optimal rounds the password hashes should use on the current computer. To make it more difficult to brute force passwords, eurephia implements dynamic password hash rounds, based on a random number within in a given range. This benchmark will suggest an optimal range. To do this, two limits are defined, the shortest time and the longest time to be used for calculating a hash. The default values are 95ms and 200ms.</dt>
 <dd>
-<dt>If you want to modify those thresholds, you can do so with the <code>&#8211;hash-threshold-min</code> and <code>&#8211;hash-threshold-max</code> options. By increasing these numbers, you will allow the number of rounds to be increased.</p>
-<dd></dl>
+</dd><dt>If you want to modify those thresholds, you can do so with the <code>&#8211;hash-threshold-min</code> and <code>&#8211;hash-threshold-max</code> options. By increasing these numbers, you will allow the number of rounds to be increased.</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Copyright (C) 2009-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>

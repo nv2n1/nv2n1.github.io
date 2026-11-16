@@ -15,9 +15,9 @@ description: "enum_w1_cn_msg_flags – bitfield flags for struct cn_msg.flags"
 <h2>Constants</h2>
 <p>W1_CN_BUNDLE</p>
 <dl>
-<dd>Request bundling replies into fewer messagse. Be prepared to handle multiple struct cn_msg, struct w1_netlink_msg, and struct w1_netlink_cmd in one packet.</dl>
+<dd>Request bundling replies into fewer messagse. Be prepared to handle multiple struct cn_msg, struct w1_netlink_msg, and struct w1_netlink_cmd in one packet.</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

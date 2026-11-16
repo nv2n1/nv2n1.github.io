@@ -11,13 +11,9 @@ description: "ql/methods/finitedifferences/operatorfactory.hpp – Factory for f
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;
-
 #include &lt;ql/processes/blackscholesprocess.hpp&gt;
-
 #include &lt;ql/methods/finitedifferences/bsmoperator.hpp&gt;
-
 #include &lt;ql/methods/finitedifferences/bsmtermoperator.hpp&gt;
-
 #include &lt;ql/methods/finitedifferences/onefactoroperator.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>OperatorFactory</code><br />

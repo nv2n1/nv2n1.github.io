@@ -17,11 +17,11 @@ description: "ldns_dname_left_chop, ldns_dname_label_count"
 <p> uint8_t ldns_dname_label_count(const ldns_rdf *r); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname_left_chop</i>()</p>
-<dd>chop one label off the left side of a dname. so w<a rel="nofollow" href="http://www.nlnetlabs.nl">www.nlnetlabs.nl</a>, becomes nlnetlabs.nl This new name is a clone and must be freed with ldns_deep_free() .br <code>d</code>: the dname to chop .br Returns the remaining dname</dl>
+<dt> <i>ldns_dname_left_chop</i>()</dt>
+<dd>chop one label off the left side of a dname. so w<a rel="nofollow" href="http://www.nlnetlabs.nl">www.nlnetlabs.nl</a>, becomes nlnetlabs.nl This new name is a clone and must be freed with ldns_deep_free() .br <code>d</code>: the dname to chop .br Returns the remaining dname</dd></dl>
 <dl>
-<dt> <i>ldns_dname_label_count</i>()</p>
-<dd>count the number of labels inside a LDNS_RDF_DNAME type rdf. .br <code>*r</code>: the rdf .br Returns the number of labels</dl>
+<dt> <i>ldns_dname_label_count</i>()</dt>
+<dd>count the number of labels inside a LDNS_RDF_DNAME type rdf. .br <code>*r</code>: the rdf .br Returns the number of labels</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

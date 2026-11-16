@@ -10,11 +10,8 @@ description: "std::ellint_2,std::ellint_2f,std::ellint_2l – std::ellint_2,std:
 <p>std::ellint_2,std::ellint_2f,std::ellint_2l &#8211; std::ellint_2,std::ellint_2f,std::ellint_2l</p>
 <h2>Synopsis</h2>
 <pre><code>double ellint_2( double k, double φ );
-
 float ellint_2f( float k, float φ );                  (1) (since C++17)
-
 long double ellint_2l( long double k, long double φ );
-
 Promoted ellint_2( Arithmetic k, Arithmetic φ );      (2) (since C++17)</code></pre>
 <p>1) Computes the incomplete_elliptic_integral_of_the_second_kind of k and φ.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -39,11 +36,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     double hpi = std::acos(-1) / 2;
     std::cout &lt;&lt; &quot;E(0,π/2) = &quot; &lt;&lt; std::ellint_2(0, hpi) &lt;&lt; '

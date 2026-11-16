@@ -83,11 +83,11 @@ description: "Vanilla option engines –"
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <p> <code>Examples: </code> <code>EquityOption.cpp</code>.</p>
 <h3>typedef FDEngineAdapter&lt;FDAmericanCondition&lt;FDDividendEngine&gt;, DividendVanillaOption::engine&gt; FDDividendAmericanEngine</h3>
@@ -95,36 +95,36 @@ description: "Vanilla option engines –"
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</p>
-<dt>*</p>
-<dd>the invariance of the results upon addition of null dividends is tested.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd>
+<dt>*</dt>
+<dd>the invariance of the results upon addition of null dividends is tested.</dd></dl>
 </dl>
 <p> <code>Bug</code></p>
 <dl>
-<dd>results are not overly reliable. </p>
+<dd>results are not overly reliable. </dd>
 <p> method impliedVolatility() utterly fails</dl>
 <h3>typedef FDEngineAdapter&lt;FDDividendEngine, DividendVanillaOption::engine&gt; FDDividendEuropeanEngine</h3>
 <p>Finite-differences pricing engine for dividend European options. </p>
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</p>
-<dt>*</p>
-<dd>the invariance of the results upon addition of null dividends is tested.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd>
+<dt>*</dt>
+<dd>the invariance of the results upon addition of null dividends is tested.</dd></dl>
 </dl>
 <h3>typedef FDEngineAdapter&lt;FDShoutCondition&lt;FDDividendEngine&gt;, DividendVanillaOption::engine&gt; FDDividendShoutEngine</h3>
 <p>Finite-differences shout engine with dividends. </p>
 <p> <code>Bug</code></p>
 <dl>
-<dd>results are not overly reliable.</dl>
+<dd>results are not overly reliable.</dd></dl>
 <h3>typedef FDEngineAdapter&lt;FDShoutCondition&lt;FDStepConditionEngine&gt;, VanillaOption::engine&gt; FDShoutEngine</h3>
 <p>Finite-differences pricing engine for shout vanilla options. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

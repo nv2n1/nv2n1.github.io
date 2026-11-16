@@ -12,13 +12,10 @@ std::independent_bits_engine&lt;Engine,W,UIntType&gt;::seed - std::independent_b
 
 <pre><code>void seed();
 (1)(since C++ 11)
-
     void seed(result_type value);
 (2)(since C++ 11)
-
     template &lt;class Sseq&gt;
     (3)(since C++ 11)
-
         void seed(Sseq &amp;seq);</code></pre> 
 Reinitializes the internal state of the underlying engine using a new seed value. 
 1) Seeds the underlying engine with the default seed value. Effectively calls e.seed(), where e is the underlying engine. 

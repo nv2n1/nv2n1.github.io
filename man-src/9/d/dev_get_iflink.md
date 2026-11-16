@@ -15,7 +15,7 @@ dev_get_iflink - get 'iflink' value of a interface
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>targeted interface</dl>
+<dl><dd></dd><dd>targeted interface</dd></dl>
 
 <h2>Description</h2>
 

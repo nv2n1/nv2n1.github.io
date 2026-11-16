@@ -12,7 +12,6 @@ std::future&lt;T&gt;::wait_for - std::future&lt;T&gt;::wait_for
 
 <pre><code>template &lt;class Rep, class Period&gt;
 (since C++ 11)
-
     std::future_status wait_for(const std::chrono::duration&lt;Rep, Period&gt; &amp;timeout_duration) const;</code></pre> 
 Waits for the result to become available. Blocks until specified timeout_duration has elapsed or the result becomes available, whichever comes first. Returns value identifies the state of the result. 
 This function may block for longer than timeout_duration due to scheduling or resource contention delays. 
@@ -41,14 +40,10 @@ The implementations are encouraged to detect the case when valid == false before
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     std::future&lt;int&gt; future = std::async(std::launch::async, []() {
         std::this_thread::sleep_for(std::chrono::seconds(3));

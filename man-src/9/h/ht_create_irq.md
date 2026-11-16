@@ -15,11 +15,11 @@ ht_create_irq - create an irq and attach it to a device.
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The hypertransport device to find the irq capability on.</dl>
+<dl><dd></dd><dd>The hypertransport device to find the irq capability on.</dd></dl>
  
 
  <i>idx</i>
-<dl><dd>Which of the possible irqs to attach to.</dl>
+<dl><dd>Which of the possible irqs to attach to.</dd></dl>
 
 <h2>Description</h2>
 

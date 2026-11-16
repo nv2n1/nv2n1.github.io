@@ -28,99 +28,99 @@ description: "hx509 name functions –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> the name to print<br />
- <i>str</i> an allocated string returns the name in string form</dl>
+ <i>str</i> an allocated string returns the name in string form</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_name_binary (const hx509_namename, heim_octet_string *os)</h3>
 <p>Convert a hx509_name object to DER encoded name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> name to concert<br />
- <i>os</i> data to a DER encoded name, free the resulting octet string with hx509_xfree(os-&gt;data).</dl>
+ <i>os</i> data to a DER encoded name, free the resulting octet string with hx509_xfree(os-&gt;data).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_name_cmp (hx509_namen1, hx509_namen2)</h3>
 <p>Compare to hx509 name object, useful for sorting. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>n1</i> a hx509 name object.<br />
- <i>n2</i> a hx509 name object.</dl>
+ <i>n2</i> a hx509 name object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 the objects are the same, returns &gt; 0 is n2 is &#8216;larger&#8217; then n2, &lt; 0 if n1 is &#8216;smaller&#8217; then n2.</dl>
+<dd>0 the objects are the same, returns &gt; 0 is n2 is &#8216;larger&#8217; then n2, &lt; 0 if n1 is &#8216;smaller&#8217; then n2.</dd></dl>
 <h3>int hx509_name_copy (hx509_contextcontext, const hx509_namefrom, hx509_name *to)</h3>
 <p>Copy a hx509 name object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> A hx509 cotext.<br />
  <i>from</i> the name to copy from<br />
- <i>to</i> the name to copy to</dl>
+ <i>to</i> the name to copy to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_name_expand (hx509_contextcontext, hx509_namename, hx509_envenv)</h3>
 <p>Expands variables in the name using env. Variables are on the form ${name}. Useful when dealing with certificate templates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> A hx509 cotext.<br />
  <i>name</i> the name to expand.<br />
- <i>env</i> environment variable to expand.</dl>
+ <i>env</i> environment variable to expand.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <p> Only UTF8String rdnSequence names are allowed</p>
 <h3>void hx509_name_free (hx509_name *name)</h3>
 <p>Free a hx509 name object, upond return *name will be NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> a hx509 name object to be freed.</dl>
+<dd><i>name</i> a hx509 name object to be freed.</dd></dl>
 <h3>int hx509_name_is_null_p (const hx509_namename)</h3>
 <p>Unparse the hx509 name in name into a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> the name to check if its empty/null.</dl>
+<dd><i>name</i> the name to check if its empty/null.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>non zero if the name is empty/null.</dl>
+<dd>non zero if the name is empty/null.</dd></dl>
 <h3>int hx509_name_to_Name (const hx509_namefrom, Name *to)</h3>
 <p>Convert a hx509_name into a Name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>from</i> the name to copy from<br />
- <i>to</i> the name to copy to</dl>
+ <i>to</i> the name to copy to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_name_to_string (const hx509_namename, char **str)</h3>
 <p>Convert the hx509 name object into a printable string. The resulting string should be freed with free(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> name to print<br />
- <i>str</i> the string to return</dl>
+ <i>str</i> the string to return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_parse_name (hx509_contextcontext, const char *str, hx509_name *name)</h3>
 <p>Parse a string into a hx509 name object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> A hx509 context.<br />
  <i>str</i> a string to parse.<br />
- <i>name</i> the resulting object, NULL in case of error.</dl>
+ <i>name</i> the resulting object, NULL in case of error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h3>int hx509_unparse_der_name (const void *data, size_tlength, char **str)</h3>
 <p>Convert a DER encoded name info a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> data to a DER/BER encoded name<br />
  <i>length</i> length of data<br />
- <i>str</i> the resulting string, is NULL on failure.</dl>
+ <i>str</i> the resulting string, is NULL on failure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+<dd>An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Heimdalx509library from the source code.</p>

@@ -17,10 +17,10 @@ description: "hivexml – Convert Windows Registry binary \"hive\" into XML"
 <p> This program converts a single Windows Registry binary &#8220;hive&#8221; file into a self-describing <font SIZE="-1">XML</font> format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable lots of debug messages. If you find a Registry file that this program cannot parse, please enable this option and post the complete output <i>and</i> the Registry file in your bug report.</p>
-<dt><code>-k</code></p>
-<dd> Keep going even if we find errors in the Registry file. This skips over any parts of the Registry that we cannot read.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable lots of debug messages. If you find a Registry file that this program cannot parse, please enable this option and post the complete output <i>and</i> the Registry file in your bug report.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep going even if we find errors in the Registry file. This skips over any parts of the Registry that we cannot read.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexget/">hivexget</a></i>(1), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a href="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1), <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i>guestfs</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1).</p>
 <h2>AUTHORS</h2>

@@ -21,23 +21,23 @@ CALL NGPSWK(PSTYPE, ORIENT, COLOR)
 <h2>Description</h2>
 
 <dl><dt>PSTYPE
-<dd>(an input variable of type CHARACTER) specifying the type of the PostScript file. It can be one of:
-<dl><dd><dl><dt>'PS'
-<dd>regular PostScript
-<dt>'EPS'
-<dd>Encapsulated PostScript (can have only a single picture).
-<dt>'EPSI'
-<dd>Encapsulated PostScript Interchange format (an EPS file containing a preview bitmap).</dl></dl><dt>ORIENT
-<dd>(an input variable of type CHARACTER) specifying the orientation of the output plot. It can be one of:
-<dl><dd><dl><dt>'PORTRAIT'
-<dd>portrait orientation (long side of page is vertical).
-<dt>'LANDSCAPE'
-<dd>landscape orientation (long side of the page is horizontal).</dl></dl><dt>COLOR
-<dd>(an input variable of type CHARACTER) specifying whether the plot will be color or monochrome. It can be one of:
-<dl><dd><dl><dt>'MONOCHROME'
-<dd>the plot with be plotted with all graphics objects being plotted using the foreground color.
-<dt>'COLOR'
-<dd>the plot will be plotted using color, if available, or intensities obtained from the NTSC color to black-and-white intensity mapping if gray-scale is available.</dl></dl>
+</dt><dd>(an input variable of type CHARACTER) specifying the type of the PostScript file. It can be one of:
+</dd><dl><dd></dd><dl><dt>'PS'
+</dt><dd>regular PostScript
+</dd><dt>'EPS'
+</dt><dd>Encapsulated PostScript (can have only a single picture).
+</dd><dt>'EPSI'
+</dt><dd>Encapsulated PostScript Interchange format (an EPS file containing a preview bitmap).</dd></dl></dl><dt>ORIENT
+</dt><dd>(an input variable of type CHARACTER) specifying the orientation of the output plot. It can be one of:
+</dd><dl><dd></dd><dl><dt>'PORTRAIT'
+</dt><dd>portrait orientation (long side of page is vertical).
+</dd><dt>'LANDSCAPE'
+</dt><dd>landscape orientation (long side of the page is horizontal).</dd></dl></dl><dt>COLOR
+</dt><dd>(an input variable of type CHARACTER) specifying whether the plot will be color or monochrome. It can be one of:
+</dd><dl><dd></dd><dl><dt>'MONOCHROME'
+</dt><dd>the plot with be plotted with all graphics objects being plotted using the foreground color.
+</dd><dt>'COLOR'
+</dt><dd>the plot will be plotted using color, if available, or intensities obtained from the NTSC color to black-and-white intensity mapping if gray-scale is available.</dd></dl></dl>
 </dl>
 
 <h2>C-Binding Description</h2>

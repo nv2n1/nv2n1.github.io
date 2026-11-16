@@ -21,30 +21,27 @@ description: "git-psykorebase – Rebase a branch with a merge commit"
 <p> Rebase current branch on top of master:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git psykorebase master --no-ff
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Handle conflicts:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git add README.md
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Continue rebase:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git psykorebase --continue
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Rémy Hubscher &lt;<i>rhubscher [at] mozilla.com</i>&gt; </p>
 <p> Based on Benoît Bryon &lt;<i>benoit [at] marmelune.net</i>&gt; implementation in Python.</p>

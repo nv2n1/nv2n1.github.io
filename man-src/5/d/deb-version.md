@@ -13,18 +13,18 @@ description: "deb-version – Debian package version number format"
 <h2>Description</h2>
 <p>Version numbers as used for Debian binary and source packages consist of three components. These are:</p>
 <dl>
-<dt><i>epoch</i></p>
-<dd>This is a single (generally small) unsigned integer. It may be omitted, in which case zero is assumed. If it is omitted then the <i>upstream-version</i> may not contain any colons.</p>
-<dd>It is provided to allow mistakes in the version numbers of older versions of a package, and also a package&#8217;s previous version numbering schemes, to be left behind.</p>
-<dt><i>upstream-version</i></p>
-<dd>This is the main part of the version number. It is usually the version number of the original (&quot;upstream&quot;) package from which the <i>.deb</i> file has been made, if this is applicable. Usually this will be in the same format as that specified by the upstream author(s); however, it may need to be reformatted to fit into the package management system&#8217;s format and comparison scheme.</p>
-<dd>The comparison behavior of the package management system with respect to the <i>upstream-version</i> is described below. The <i>upstream-version</i> portion of the version number is mandatory.</p>
-<dd>The <i>upstream-version</i> may contain only alphanumerics (&quot;A-Za-z0-9&quot;) and the characters <code>.</code> <code>+</code> <code>&#8211;</code> <code>:</code> <code>~</code> (full stop, plus, hyphen, colon, tilde) and should start with a digit. If there is no <i>debian-revision</i> then hyphens are not allowed; if there is no <i>epoch</i> then colons are not allowed.</p>
-<dt><i>debian-revision</i></p>
-<dd>This part of the version number specifies the version of the Debian package based on the upstream version. It may contain only alphanumerics and the characters <code>+</code> <code>.</code> <code>~</code> (plus, full stop, tilde) and is compared in the same way as the <i>upstream-version</i> is.</p>
-<dd>It is optional; if it isn&#8217;t present then the <i>upstream-version</i> may not contain a hyphen. This format represents the case where a piece of software was written specifically to be turned into a Debian package, and so there is only one &quot;debianisation&quot; of it and therefore no revision indication is required.</p>
-<dd>It is conventional to restart the <i>debian-revision</i> at &#8216;1&#8217; each time time the <i>upstream-version</i> is increased.</p>
-<dd>Dpkg will break the version number apart at the last hyphen in the string (if there is one) to determine the <i>upstream-version</i> and <i>debian-revision</i>. The absence of a <i>debian-revision</i> compares earlier than the presence of one (but note that the <i>debian-revision</i> is the least significant part of the version number).</dl>
+<dt><i>epoch</i></dt>
+<dd>This is a single (generally small) unsigned integer. It may be omitted, in which case zero is assumed. If it is omitted then the <i>upstream-version</i> may not contain any colons.</dd>
+<dd>It is provided to allow mistakes in the version numbers of older versions of a package, and also a package&#8217;s previous version numbering schemes, to be left behind.</dd>
+<dt><i>upstream-version</i></dt>
+<dd>This is the main part of the version number. It is usually the version number of the original (&quot;upstream&quot;) package from which the <i>.deb</i> file has been made, if this is applicable. Usually this will be in the same format as that specified by the upstream author(s); however, it may need to be reformatted to fit into the package management system&#8217;s format and comparison scheme.</dd>
+<dd>The comparison behavior of the package management system with respect to the <i>upstream-version</i> is described below. The <i>upstream-version</i> portion of the version number is mandatory.</dd>
+<dd>The <i>upstream-version</i> may contain only alphanumerics (&quot;A-Za-z0-9&quot;) and the characters <code>.</code> <code>+</code> <code>&#8211;</code> <code>:</code> <code>~</code> (full stop, plus, hyphen, colon, tilde) and should start with a digit. If there is no <i>debian-revision</i> then hyphens are not allowed; if there is no <i>epoch</i> then colons are not allowed.</dd>
+<dt><i>debian-revision</i></dt>
+<dd>This part of the version number specifies the version of the Debian package based on the upstream version. It may contain only alphanumerics and the characters <code>+</code> <code>.</code> <code>~</code> (plus, full stop, tilde) and is compared in the same way as the <i>upstream-version</i> is.</dd>
+<dd>It is optional; if it isn&#8217;t present then the <i>upstream-version</i> may not contain a hyphen. This format represents the case where a piece of software was written specifically to be turned into a Debian package, and so there is only one &quot;debianisation&quot; of it and therefore no revision indication is required.</dd>
+<dd>It is conventional to restart the <i>debian-revision</i> at &#8216;1&#8217; each time time the <i>upstream-version</i> is increased.</dd>
+<dd>Dpkg will break the version number apart at the last hyphen in the string (if there is one) to determine the <i>upstream-version</i> and <i>debian-revision</i>. The absence of a <i>debian-revision</i> compares earlier than the presence of one (but note that the <i>debian-revision</i> is the least significant part of the version number).</dd></dl>
 <h3>Sorting algorithm</h3>
 <p>The <i>upstream-version</i> and <i>debian-revision</i> parts are compared by the package management system using the same algorithm: </p>
 <p> The strings are compared from left to right. </p>

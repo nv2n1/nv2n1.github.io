@@ -14,20 +14,20 @@ description: "scsi_get_sense_info_fld – get information field from sense data 
 <p><i>sense_buffer</i></p>
 <dl>
 <dd>
-<dd>byte array of sense data</dl>
+</dd><dd>byte array of sense data</dd></dl>
 <p> <i>sb_len</i></p>
 <dl>
-<dd>number of valid bytes in sense_buffer</dl>
+<dd>number of valid bytes in sense_buffer</dd></dl>
 <p> <i>info_out</i></p>
 <dl>
-<dd>pointer to 64 integer where 8 or 4 byte information field will be placed if found.</dl>
+<dd>pointer to 64 integer where 8 or 4 byte information field will be placed if found.</dd></dl>
 <h2>Description</h2>
 <p>Return value: 1 if information field found, 0 if not found.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

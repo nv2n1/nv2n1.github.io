@@ -16,10 +16,10 @@ description: "assoGiate – modify the detection and display of file types"
 <p> For full documentation, see the File Types Editor Manual in GNOME help.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display a summary of available command-line options.</p>
-<dt><code>&#8211;user</code></p>
-<dd> Display the user database even if run as the root user. By default, the system database is displayed for the root user.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a summary of available command-line options.</dd>
+<dt><code>&#8211;user</code></dt>
+<dd> Display the user database even if run as the root user. By default, the system database is displayed for the root user.</dd></dl>
 <p> This program also acceps all standard GTK+ options, which follow the usual GNU command line syntax.</p>
 <h2>CONFORMING TO</h2>
 <p> Shared MIME Info Specification &lt;<a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec">http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec</a>&gt;. </p>

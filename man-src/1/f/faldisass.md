@@ -17,26 +17,26 @@ description: "faldissass – The Falcon disassembler"
 <p> The isomorphic mode creates a compilable assembly source that can the be feed into the falcon assembler to obtain a compiled module. In example, this can be used for VM level hand-made finetuning optimizations. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d</p>
-<dd> Dump the dependency table (list of load directives). </p>
-<dt>-h</p>
-<dd> Show version and a short help. </p>
-<dt>-i</p>
-<dd> Create an isomorphic version of the original assembly. </p>
-<dt>-l</p>
-<dd> add line informations. </p>
-<dt>-s</p>
-<dd> Dump the string table. </p>
-<dt>-S</p>
-<dd> Write the strings inline instead of using #strid </p>
-<dt>-y</p>
-<dd> Dump the symbol table. </p>
+<dt>-d</dt>
+<dd> Dump the dependency table (list of load directives). </dd>
+<dt>-h</dt>
+<dd> Show version and a short help. </dd>
+<dt>-i</dt>
+<dd> Create an isomorphic version of the original assembly. </dd>
+<dt>-l</dt>
+<dd> add line informations. </dd>
+<dt>-s</dt>
+<dd> Dump the string table. </dd>
+<dt>-S</dt>
+<dd> Write the strings inline instead of using #strid </dd>
+<dt>-y</dt>
+<dd> Dump the symbol table. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/usr/lib/libfalcon_engine.so</i></p>
 <dl>
 <dt>
-<dd> Default location of the Falcon Engine loadable module.</dl>
+</dt><dd> Default location of the Falcon Engine loadable module.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Giancarlo Niccolai &lt;gc [at] falconpl.org&gt; </p>
 <h2>SEE ALSO</h2>

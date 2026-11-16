@@ -24,6 +24,6 @@ description: "QwtPickerDragLineMachine –"
 <p> A common use case of <code>QwtPickerDragLineMachine</code> are pickers for distance measurements. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dl>
+<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

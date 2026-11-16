@@ -23,12 +23,12 @@ int subpage_prot(unsigned long addr, unsigned long len,
 <p> On success, <code>subpage_prot</code>() returns 0. Otherwise, one of the error codes specified below is returned.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The buffer referred to by <i>map</i> is not accessible.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>addr</i> or <i>len</i> arguments are incorrect. Both of these arguments must be aligned to a multiple of the system page size, and they must not refer to a region outside of the address space of the process or to a region that consists of huge pages.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The buffer referred to by <i>map</i> is not accessible.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>addr</i> or <i>len</i> arguments are incorrect. Both of these arguments must be aligned to a multiple of the system page size, and they must not refer to a region outside of the address space of the process or to a region that consists of huge pages.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is provided on the PowerPC architecture since Linux 2.6.25. The system call is provided only if the kernel is configured with <code>CONFIG_PPC_64K_PAGES</code>. No library support is provided.</p>
 <h2>CONFORMING TO</h2>

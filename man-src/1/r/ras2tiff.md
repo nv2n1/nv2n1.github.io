@@ -16,10 +16,10 @@ description: "ras2tiff – create a TIFF file from a Sun rasterfile"
 <p> Any colormap information in the rasterfile is carried over to the <font SIZE="-1">TIFF</font> file by including a <i>Colormap</i> tag in the output file. If the rasterfile has a colormap, the <i>PhotometricInterpretation</i> tag is set to 3 (palette); otherwise it is set to 2 (RGB) if the depth is 24 or 1 (min-is-black) if the depth is not 24.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Specify a compression scheme to use when writing image data: <code>-c none</code> for no compression, <code>-c packbits</code> for the PackBits compression algorithm, <code>-c jpeg</code> for the baseline JPEG compression algorithm, <code>-c zip</code> for the Deflate compression algorithm, and <code>-c lzw</code> for Lempel-Ziv &amp; Welch (the default).</p>
-<dt><code>-r</code></p>
-<dd> Write data with a specified number of rows per strip; by default the number of rows/strip is selected so that each strip is approximately 8 kilobytes.</dl>
+<dt><code>-c</code></dt>
+<dd> Specify a compression scheme to use when writing image data: <code>-c none</code> for no compression, <code>-c packbits</code> for the PackBits compression algorithm, <code>-c jpeg</code> for the baseline JPEG compression algorithm, <code>-c zip</code> for the Deflate compression algorithm, and <code>-c lzw</code> for Lempel-Ziv &amp; Welch (the default).</dd>
+<dt><code>-r</code></dt>
+<dd> Write data with a specified number of rows per strip; by default the number of rows/strip is selected so that each strip is approximately 8 kilobytes.</dd></dl>
 <h2>BUGS</h2>
 <p> Does not handle all possible rasterfiles. In particular, <i>ras2tiff</i> does not handle run-length encoded images.</p>
 <h2>SEE ALSO</h2>

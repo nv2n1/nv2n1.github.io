@@ -58,9 +58,7 @@ user routine ULPR will be called once for each piece of a boundary line
 resulting from the masking process;
 it may decide to draw(or to not draw)
     each such piece.ULPR will be called using a FORTRAN statement like
-
     CALL ULPR(XCRA, YCRA, NCRA, IAAI, IAGI, NGPS)
-
 where XCRA and YCRA are real arrays holding the normalized device coordinates
 of NCRA points defining a polyline which is part of some boundary line and IAAI
 and IAGI are integer arrays holding NGPS area-identifier/group-identifier pairs

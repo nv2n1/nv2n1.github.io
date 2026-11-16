@@ -15,16 +15,16 @@ description: "ldo65 – linker for o65 object files"
 <p> <code>ldo65</code> is a linker for files in the `o65&#8242; object format, formerly <code>ld65</code> but renamed to avoid conflicts with the <code>cc65</code> package (a separate product). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b? addr</code></p>
-<dd> Relocate segment <code>?</code> to <code>addr</code>. <code>?</code> must be either t, d, b or z to indicate the text, data, bss or zero segment respectively. See the <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) man page for an explanation.</p>
-<dt><code>-o filename</code></p>
-<dd> Set output filename. The default is <code>a.o65</code>.</p>
-<dt><code>-G</code></p>
-<dd> Suppress writing of globals.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program. </p>
+<dt><code>-b? addr</code></dt>
+<dd> Relocate segment <code>?</code> to <code>addr</code>. <code>?</code> must be either t, d, b or z to indicate the text, data, bss or zero segment respectively. See the <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) man page for an explanation.</dd>
+<dt><code>-o filename</code></dt>
+<dd> Set output filename. The default is <code>a.o65</code>.</dd>
+<dt><code>-G</code></dt>
+<dd> Suppress writing of globals.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-file65/">file65</a></code>(1), <code><a href="/docs/linux/man/1-printcbm/">printcbm</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code>dxa</code>(1), <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) </p>

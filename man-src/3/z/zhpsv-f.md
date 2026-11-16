@@ -11,8 +11,6 @@ description: "zhpsv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zhpsv (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)
-
-
 ZHPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpsv (characterUPLO, integerN, integerNRHS, complex*16, dimension( * )AP, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
@@ -31,10 +29,10 @@ ZHPSV computes the solution to system of linear equations A * X = B for OTHER ma
  triangular matrices, D is Hermitian and block diagonal with 1-by-1
  and 2-by-2 diagonal blocks. The factored form of A is then used to
  solve the system of equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -87,13 +85,13 @@ ZHPSV computes the solution to system of linear equations A * X = B for OTHER ma
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -106,7 +104,8 @@ ZHPSV computes the solution to system of linear equations A * X = B for OTHER ma
  a44
  Packed storage of the upper triangle of A:
  AP = [ a11, a12, a22, a13, a23, a33, a14, a24, a34, a44 ]</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file zhpsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

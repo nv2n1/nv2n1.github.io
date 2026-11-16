@@ -16,25 +16,25 @@ description: "pdfseparate – Portable Document Format (PDF) page extractor"
 <p> pdfseparate reads the PDF file <i>PDF-file</i>, extracts one or more pages, and writes one PDF file for each page to <i>PDF-page-pattern.</i> </p>
 <p> PDF-page-pattern should contain <code>%d</code> (or any variant respecting printf format), since %d is replaced by the page number.</p>
 <dl>
-<dt>The PDF-file should not be encrypted.</p>
-<dd></dl>
+<dt>The PDF-file should not be encrypted.</dt>
+<dd></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code><i> number</i></p>
-<dd> Specifies the first page to extract. If -f is omitted, extraction starts with page 1.</p>
-<dt><code>-l</code><i> number</i></p>
-<dd> Specifies the last page to extract. If -l is omitted, extraction ends with the last page.</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-f</code><i> number</i></dt>
+<dd> Specifies the first page to extract. If -f is omitted, extraction starts with page 1.</dd>
+<dt><code>-l</code><i> number</i></dt>
+<dd> Specifies the last page to extract. If -l is omitted, extraction ends with the last page.</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <h2>EXAMPLE</h2>
 <p> pdfseparate sample.pdf sample-%d.pdf</p>
 <dl>
-<dt>extracts all pages from sample.pdf, if i.e. sample.pdf has 3 pages, it produces</p>
+<dt>extracts all pages from sample.pdf, if i.e. sample.pdf has 3 pages, it produces</dt>
 <dd>
-<dt>sample-1.pdf, sample-2.pdf, sample-3.pdf</p>
-<dd></dl>
+</dd><dt>sample-1.pdf, sample-2.pdf, sample-3.pdf</dt>
+<dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> The pdfseparate software and documentation are copyright 1996-2004 Glyph &amp; Cog, LLC and copyright 2005-2011 The Poppler Developers &#8211; <a rel="nofollow" href="http://poppler.freedesktop.org">http://poppler.freedesktop.org</a></p>
 <h2>SEE ALSO</h2>

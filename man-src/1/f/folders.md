@@ -11,15 +11,15 @@ description: "folder, folders – set/list current folder/message"
 <p> folder, folders &#8211; set/list current folder/message </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>folder</code> [<i>+folder</i>] [<i>msg</i>] [<code>-all</code> | <code>-noall</code>] [<code>-create</code> | <code>-nocreate</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-header</code> | <code>-noheader</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-total</code> | <code>-nototal</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-push</code> | <code>-pop</code>] [<code>-pack</code> | <code>-nopack</code>] [<code>-print</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>folder</code> [<i>+folder</i>] [<i>msg</i>] [<code>-all</code> | <code>-noall</code>] [<code>-create</code> | <code>-nocreate</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-header</code> | <code>-noheader</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-total</code> | <code>-nototal</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-push</code> | <code>-pop</code>] [<code>-pack</code> | <code>-nopack</code>] [<code>-print</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
-<dt> <code>folders</code></p>
-<dd>is equivalent to <code>folder</code> <code>-all</code></dl>
+<dt> <code>folders</code></dt>
+<dd>is equivalent to <code>folder</code> <code>-all</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Since the <code>nmh</code> environment is the shell, it is easy to lose track of the current folder from day to day. When <code>folder</code> is given the <code>-print</code> switch (the default), <code>folder</code> will list the current folder, the number of messages in it, the range of the messages (low-high), and the current message within the folder, and will flag extra files if they exist. An example of this summary is: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 inbox + has &amp;nbsp;
 16 messages(&amp;nbsp; &amp;nbsp; 3 - 22);
@@ -27,13 +27,13 @@ cur = &amp;nbsp;
 &amp;nbsp;
 5.
 </code></pre>
-</dl>
+</dd></dl>
 <p> If a <i>+folder</i> and/or <i>msg</i> are specified, they will become the current folder and/or message. By comparison, when a <i>+folder</i> argument is given, this corresponds to a &#8220;cd&#8221; operation in the shell; when no <i>+folder</i> argument is given, this corresponds roughly to a &#8220;pwd&#8221; operation in the shell. </p>
 <p> If the specified (or default) folder doesn&#8217;t exist, the default action is to query the user as to whether the folder should be created; when standard input is not a tty, the answer to the query is assumed to be &#8220;yes&#8221;. </p>
 <p> Specifying <code>-create</code> will cause <code>folder</code> to create new folders without any query. (This is the easy way to create an empty folder for use later.) Specifying <code>-nocreate</code> will cause <code>folder</code> to exit without creating a non-existant folder. Specifying <code>-all</code> will produce a summary line for each top-level folder in the user&#8217;s nmh directory, sorted alphabetically. (If <code>folder</code> is invoked by a name ending with &#8220;s&#8221; (e.g. <code>folders</code>), <code>-all</code> is assumed). Specifying <code>-recurse</code> with <code>-all</code> will also produce a line for all sub-folders. These folders are all preceded by the read-only folders, which occur as &#8220;<i>atr-cur-</i>&#8221; entries in the user&#8217;s <code>nmh</code> context. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 FOLDER &amp;nbsp;
 &amp;nbsp;
@@ -60,7 +60,7 @@ cur = &amp;nbsp;
 6;
 (others).TOTAL = 339 messages in 7 folders
 </code></pre>
-</dl>
+</dd></dl>
 <p> The &#8220;+&#8221; after <i>inbox</i> indicates that it is the current folder. The &#8220;(others)&#8221; indicates that the folder <i>ucom</i> has files which aren&#8217;t messages. These files may either be sub-folders, or files that don&#8217;t belong under the nmh file naming scheme. </p>
 <p> The header is output if either a <code>-all</code> or a <code>-header</code> switch is specified. It is suppressed by <code>-noheader</code>. </p>
 <p> The folder and message totals are output if either a <code>-all</code> or a <code>-total</code> switch is specified. It is suppressed by <code>-nototal</code>. </p>
@@ -76,42 +76,42 @@ cur = &amp;nbsp;
 <p> The <code>-list</code> switch directs <code>folder</code> to list the contents of the <i>folder-stack</i>. No <i>+folder</i> argument is allowed. After a successful <code>-push</code> or <code>-pop</code>, the <code>-list</code> action is taken, unless a <code>-nolist</code> switch follows them on the command line. This corresponds to the &#8220;dirs&#8221; operation in the shell. The <code>-push</code>, <code>-pop</code>, and <code>-list</code> switches turn off <code>-print</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.mh_profile</p>
-<dd> The user&#8217;s profile.</dl>
+<dt>$HOME/.mh_profile</dt>
+<dd> The user&#8217;s profile.</dd></dl>
 <h2>PROFILE COMPONENTS</h2>
 <dl>
-<dt>Path:</p>
-<dd> To determine the user&#8217;s nmh directory.</p>
-<dt>Current-Folder:</p>
-<dd> To find the default current folder.</p>
-<dt>Folder-Protect:</p>
-<dd> To set mode when creating a new folder.</p>
-<dt>Folder-Stack:</p>
-<dd> To determine the folder stack.</dl>
+<dt>Path:</dt>
+<dd> To determine the user&#8217;s nmh directory.</dd>
+<dt>Current-Folder:</dt>
+<dd> To find the default current folder.</dd>
+<dt>Folder-Protect:</dt>
+<dd> To set mode when creating a new folder.</dd>
+<dt>Folder-Stack:</dt>
+<dd> To determine the folder stack.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-mhpath/">mhpath</a></i>(1), <i><a href="/docs/linux/man/1-refile/">refile</a></i>(1), <i><a href="/docs/linux/man/1-rmf/">rmf</a></i>(1)</p>
 <h2>DEFAULTS</h2>
 <dl>
-<dt>+folder</p>
-<dd> The current folder.</p>
-<dt>msg</p>
-<dd> &#8220;none&#8221;</p>
-<dt>-nofast</p>
+<dt>+folder</dt>
+<dd> The current folder.</dd>
+<dt>msg</dt>
+<dd> &#8220;none&#8221;</dd>
+<dt>-nofast</dt>
 <dd>
-<dt>-noheader</p>
+</dd><dt>-noheader</dt>
 <dd>
-<dt>-nototal</p>
+</dd><dt>-nototal</dt>
 <dd>
-<dt>-nopack</p>
+</dd><dt>-nopack</dt>
 <dd>
-<dt>-norecurse</p>
+</dd><dt>-norecurse</dt>
 <dd>
-<dt>-noverbose</p>
+</dd><dt>-noverbose</dt>
 <dd>
-<dt>-print</p>
-<dd> is the default if no <code>-list</code>, <code>-push</code>, or <code>-pop</code> is specified.</p>
-<dt>-list</p>
-<dd> is the default if <code>-push</code>, or <code>-pop</code> is specified.</dl>
+</dd><dt>-print</dt>
+<dd> is the default if no <code>-list</code>, <code>-push</code>, or <code>-pop</code> is specified.</dd>
+<dt>-list</dt>
+<dd> is the default if <code>-push</code>, or <code>-pop</code> is specified.</dd></dl>
 <h2>CONTEXT</h2>
 <p> If <i>+folder</i> and/or <i>msg</i> are given, they will become the current folder and/or message.</p>
 <h2>BUGS</h2>

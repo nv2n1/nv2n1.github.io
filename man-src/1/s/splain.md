@@ -126,11 +126,11 @@ print "done with 4th bogus
 <h2>AUTHOR</h2>
 <p> Tom Christiansen &lt;<i>tchrist [at] mox.perl.com</i>&gt;, 25 June 1995. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">EXAMPLES</a></p>
+<dt><a href="#lbAG">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAH">INTERNALS</a></p>
+</dd><dt><a href="#lbAH">INTERNALS</a></dt>
 <dd>
-<dt><a href="#lbAI">BUGS</a></p>
+</dd><dt><a href="#lbAI">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAJ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
+<dd></dd></dl>

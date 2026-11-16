@@ -478,49 +478,49 @@ description: "XmScrolledWindow — The ScrolledWindow widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNautoDragModel</code></p>
-<dd>Indicates whether automatic drag is enabled (<code>XmAUTO_DRAG_ENABLED</code> or disabled (<code>XmAUTO_DRAG_DISABLED</code>). By default it is enabled.</p>
-<dt><code>XmNclipWindow</code></p>
-<dd>Specifies the widget ID of the clipping area. This is automatically created by ScrolledWindow when the <code>XmNvisualPolicy</code> resource is set to <code>XmCONSTANT</code> and can only be read by the application. Any attempt to set this resource to a new value causes a warning message to be printed by the scrolled window. If the <code>XmNvisualPolicy</code> resource is set to <code>XmVARIABLE</code>, this resource is set to NULL, and no clipping window is created.</p>
-<dt><code>XmNhorizontalScrollBar</code></p>
-<dd>Specifies the widget ID of the horizontal ScrollBar. This is automatically created by ScrolledWindow when the <code>XmNscrollingPolicy</code> is initialized to <code>XmAUTOMATIC</code>; otherwise, the default is NULL.</p>
-<dt><code>XmNscrollBarDisplayPolicy</code></p>
-<dd>Controls the automatic placement of the ScrollBars. If it is set to <code>XmAS_NEEDED</code> and if <code>XmNscrollingPolicy</code> is set to <code>XmAUTOMATIC</code>, ScrollBars are displayed only if the workspace exceeds the clip area in one or both dimensions. A resource value of <code>XmSTATIC</code> causes the ScrolledWindow to display the ScrollBars whenever they are managed, regardless of the relationship between the clip window and the work area. This resource must be <code>XmSTATIC</code> when <code>XmNscrollingPolicy</code> is <code>XmAPPLICATION_DEFINED</code>. The default is <code>XmAS_NEEDED</code> when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, and <code>XmSTATIC</code> otherwise.</p>
-<dt><code>XmNscrollBarPlacement</code></p>
-<dd>Specifies the positioning of the ScrollBars in relation to the work window. The values are</p>
+<dt><code>XmNautoDragModel</code></dt>
+<dd>Indicates whether automatic drag is enabled (<code>XmAUTO_DRAG_ENABLED</code> or disabled (<code>XmAUTO_DRAG_DISABLED</code>). By default it is enabled.</dd>
+<dt><code>XmNclipWindow</code></dt>
+<dd>Specifies the widget ID of the clipping area. This is automatically created by ScrolledWindow when the <code>XmNvisualPolicy</code> resource is set to <code>XmCONSTANT</code> and can only be read by the application. Any attempt to set this resource to a new value causes a warning message to be printed by the scrolled window. If the <code>XmNvisualPolicy</code> resource is set to <code>XmVARIABLE</code>, this resource is set to NULL, and no clipping window is created.</dd>
+<dt><code>XmNhorizontalScrollBar</code></dt>
+<dd>Specifies the widget ID of the horizontal ScrollBar. This is automatically created by ScrolledWindow when the <code>XmNscrollingPolicy</code> is initialized to <code>XmAUTOMATIC</code>; otherwise, the default is NULL.</dd>
+<dt><code>XmNscrollBarDisplayPolicy</code></dt>
+<dd>Controls the automatic placement of the ScrollBars. If it is set to <code>XmAS_NEEDED</code> and if <code>XmNscrollingPolicy</code> is set to <code>XmAUTOMATIC</code>, ScrollBars are displayed only if the workspace exceeds the clip area in one or both dimensions. A resource value of <code>XmSTATIC</code> causes the ScrolledWindow to display the ScrollBars whenever they are managed, regardless of the relationship between the clip window and the work area. This resource must be <code>XmSTATIC</code> when <code>XmNscrollingPolicy</code> is <code>XmAPPLICATION_DEFINED</code>. The default is <code>XmAS_NEEDED</code> when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, and <code>XmSTATIC</code> otherwise.</dd>
+<dt><code>XmNscrollBarPlacement</code></dt>
+<dd>Specifies the positioning of the ScrollBars in relation to the work window. The values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTOP_LEFT</code></p>
-<dd>The horizontal ScrollBar is placed above the work window; the vertical ScrollBar to is placed the left.</p>
-<dt><code>XmBOTTOM_LEFT</code></p>
-<dd>The horizontal ScrollBar is placed below the work window; the vertical ScrollBar to is placed the left.</p>
-<dt><code>XmTOP_RIGHT</code></p>
-<dd>The horizontal ScrollBar is placed above the work window; the vertical ScrollBar to is placed the right.</p>
-<dt><code>XmBOTTOM_RIGHT</code></p>
-<dd>The horizontal ScrollBar is placed below the work window; the vertical ScrollBar to is placed the right.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTOP_LEFT</code></dt>
+<dd>The horizontal ScrollBar is placed above the work window; the vertical ScrollBar to is placed the left.</dd>
+<dt><code>XmBOTTOM_LEFT</code></dt>
+<dd>The horizontal ScrollBar is placed below the work window; the vertical ScrollBar to is placed the left.</dd>
+<dt><code>XmTOP_RIGHT</code></dt>
+<dd>The horizontal ScrollBar is placed above the work window; the vertical ScrollBar to is placed the right.</dd>
+<dt><code>XmBOTTOM_RIGHT</code></dt>
+<dd>The horizontal ScrollBar is placed below the work window; the vertical ScrollBar to is placed the right.</dd></dl>
 </dl>
-<dd>The default value depends on the value of the <code>XmNlayoutDirection</code> resource of the widget.</p>
-<dt><code>XmNscrolledWindowMarginHeight</code></p>
-<dd>Specifies the margin height on the top and bottom of the ScrolledWindow. In order to use the autoscroll drag feature of the Motif drag and drop facility, a user must be able to hold a drag icon over the margin of a scrolled window. Though drag and drop will work with the default margin size of zero, a user may find it difficult to position the icon precisely enough to use the feature easily. The application programmer should ensure that the window margins are set to an adequate size, if the use of the autoscroll drag feature is desired.</p>
-<dt><code>XmNscrolledWindowMarginWidth</code></p>
-<dd>Specifies the margin width on the right and left sides of the ScrolledWindow. Please refer to the warning concerning the default margin size for the <code>XmNscrolledWindowMarginHeight</code> resource, above.</p>
-<dt><code>XmNscrollingPolicy</code></p>
-<dd>Performs automatic scrolling of the work area with no application interaction. If the value of this resource is <code>XmAUTOMATIC</code>, ScrolledWindow automatically creates the ScrollBars; attaches callbacks to the ScrollBars; sets the visual policy to <code>XmCONSTANT</code>; and automatically moves the work area through the clip window in response to any user interaction with the ScrollBars. An application can also add its own callbacks to the ScrollBars. This allows the application to be notified of a scroll event without having to perform any layout procedures.</p>
-<dd><code>NOTE</code>: Since the ScrolledWindow adds callbacks to the ScrollBars, an application should not perform an <code>XtRemoveAllCallbacks</code> on any of the ScrollBar widgets.</p>
-<dd>When <code>XmNscrollingPolicy</code> is set to <code>XmAPPLICATION_DEFINED</code>, the application is responsible for all aspects of scrolling. The ScrollBars must be created by the application, and it is responsible for performing any visual changes in the work area in response to user input.</p>
-<dd>This resource must be set to the desired policy at the time the ScrolledWindow is created. It cannot be changed through <code>SetValues</code>.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the distance that separates the ScrollBars from the work window.</p>
-<dt><code>XmNtraverseObscuredCallback</code></p>
-<dd>Specifies a list of callbacks that is called when traversing to a widget or gadget that is obscured due to its position in the work area relative to the location of the ScrolledWindow viewport. This resource is valid only when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>. If this resource is NULL, an obscured widget cannot be traversed to. The callback reason is <code>XmCR_OBSCURED_TRAVERSAL</code>.</p>
-<dt><code>XmNverticalScrollBar</code></p>
-<dd>Specifies the widget ID of the vertical ScrollBar. This is automatically created by ScrolledWindow when the <code>XmNscrollingPolicy</code> is initialized to <code>XmAUTOMATIC</code>; otherwise, the default is NULL.</p>
-<dt><code>XmNvisualPolicy</code></p>
-<dd>Enlarges the ScrolledWindow to match the size of the work area. It can also be used as a static viewport onto a larger data space. If the visual policy is <code>XmVARIABLE</code>, the ScrolledWindow forces the ScrollBar display policy to <code>XmSTATIC</code> and allows the work area to grow or shrink at any time and adjusts its layout to accommodate the new size. When the policy is <code>XmCONSTANT</code>, the work area grows or shrinks as requested, but a clipping window forces the size of the visible portion to remain constant. The only time the viewing area can grow is in response to a resize from the ScrolledWindow&#8217;s parent. The default is <code>XmCONSTANT</code> when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, and <code>XmVARIABLE</code> otherwise.</p>
-<dd><code>NOTE</code>: This resource must be set to the desired policy at the time the ScrolledWindow is created. It cannot be changed through <code>SetValues</code>.</p>
-<dt><code>XmNworkWindow</code></p>
-<dd>Specifies the widget ID of the viewing area. </p>
+<dd>The default value depends on the value of the <code>XmNlayoutDirection</code> resource of the widget.</dd>
+<dt><code>XmNscrolledWindowMarginHeight</code></dt>
+<dd>Specifies the margin height on the top and bottom of the ScrolledWindow. In order to use the autoscroll drag feature of the Motif drag and drop facility, a user must be able to hold a drag icon over the margin of a scrolled window. Though drag and drop will work with the default margin size of zero, a user may find it difficult to position the icon precisely enough to use the feature easily. The application programmer should ensure that the window margins are set to an adequate size, if the use of the autoscroll drag feature is desired.</dd>
+<dt><code>XmNscrolledWindowMarginWidth</code></dt>
+<dd>Specifies the margin width on the right and left sides of the ScrolledWindow. Please refer to the warning concerning the default margin size for the <code>XmNscrolledWindowMarginHeight</code> resource, above.</dd>
+<dt><code>XmNscrollingPolicy</code></dt>
+<dd>Performs automatic scrolling of the work area with no application interaction. If the value of this resource is <code>XmAUTOMATIC</code>, ScrolledWindow automatically creates the ScrollBars; attaches callbacks to the ScrollBars; sets the visual policy to <code>XmCONSTANT</code>; and automatically moves the work area through the clip window in response to any user interaction with the ScrollBars. An application can also add its own callbacks to the ScrollBars. This allows the application to be notified of a scroll event without having to perform any layout procedures.</dd>
+<dd><code>NOTE</code>: Since the ScrolledWindow adds callbacks to the ScrollBars, an application should not perform an <code>XtRemoveAllCallbacks</code> on any of the ScrollBar widgets.</dd>
+<dd>When <code>XmNscrollingPolicy</code> is set to <code>XmAPPLICATION_DEFINED</code>, the application is responsible for all aspects of scrolling. The ScrollBars must be created by the application, and it is responsible for performing any visual changes in the work area in response to user input.</dd>
+<dd>This resource must be set to the desired policy at the time the ScrolledWindow is created. It cannot be changed through <code>SetValues</code>.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the distance that separates the ScrollBars from the work window.</dd>
+<dt><code>XmNtraverseObscuredCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when traversing to a widget or gadget that is obscured due to its position in the work area relative to the location of the ScrolledWindow viewport. This resource is valid only when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>. If this resource is NULL, an obscured widget cannot be traversed to. The callback reason is <code>XmCR_OBSCURED_TRAVERSAL</code>.</dd>
+<dt><code>XmNverticalScrollBar</code></dt>
+<dd>Specifies the widget ID of the vertical ScrollBar. This is automatically created by ScrolledWindow when the <code>XmNscrollingPolicy</code> is initialized to <code>XmAUTOMATIC</code>; otherwise, the default is NULL.</dd>
+<dt><code>XmNvisualPolicy</code></dt>
+<dd>Enlarges the ScrolledWindow to match the size of the work area. It can also be used as a static viewport onto a larger data space. If the visual policy is <code>XmVARIABLE</code>, the ScrolledWindow forces the ScrollBar display policy to <code>XmSTATIC</code> and allows the work area to grow or shrink at any time and adjusts its layout to accommodate the new size. When the policy is <code>XmCONSTANT</code>, the work area grows or shrinks as requested, but a clipping window forces the size of the visible portion to remain constant. The only time the viewing area can grow is in response to a resize from the ScrolledWindow&#8217;s parent. The default is <code>XmCONSTANT</code> when <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, and <code>XmVARIABLE</code> otherwise.</dd>
+<dd><code>NOTE</code>: This resource must be set to the desired policy at the time the ScrolledWindow is created. It cannot be changed through <code>SetValues</code>.</dd>
+<dt><code>XmNworkWindow</code></dt>
+<dd>Specifies the widget ID of the viewing area. </dd>
 <table BORDER>
 <tr>
 <td>
@@ -581,23 +581,23 @@ description: "XmScrolledWindow — The ScrolledWindow widget class"
 </tr>
 </table>
 </table>
-<dt><code>XmNscrolledWindowChildType</code></p>
-<dd>Specifies what the child is. ScrolledWindow supports a number of child types. The possible values are:</p>
+<dt><code>XmNscrolledWindowChildType</code></dt>
+<dd>Specifies what the child is. ScrolledWindow supports a number of child types. The possible values are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmWORK_AREA</code></p>
-<dd>Indicates a work area child. This specifies that both ScrollBars are limited to moving the child inside the clipping window. If the scrolling policy is <code>XmAUTOMATIC</code>, the work area child can move in both directions.</p>
-<dt><code>XmHOR_SCROLLBAR</code></p>
-<dd>Indicates a horizontal child widget; the child must have the <code>XmQTnavigator</code> trait installed. For example, the <code>XmScrollBar</code> widget has the <code>XmQTnavigator</code> trait installed.</p>
-<dt><code>XmVERT_SCROLLBAR</code></p>
-<dd>Indicates a vertical child widget; the child must have the <code>XmQTnavigator</code> trait installed.</p>
-<dt><code>XmSCROLL_HOR</code></p>
-<dd>Indicates that only the horizontal ScrollBar moves the child. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</p>
-<dt><code>XmSCROLL_VERT</code></p>
-<dd>Indicates that only the vertical ScrollBar moves the child. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</p>
-<dt><code>XmNO_SCROLL</code></p>
-<dd>Indicates that the child does not move with the ScrollBars. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmWORK_AREA</code></dt>
+<dd>Indicates a work area child. This specifies that both ScrollBars are limited to moving the child inside the clipping window. If the scrolling policy is <code>XmAUTOMATIC</code>, the work area child can move in both directions.</dd>
+<dt><code>XmHOR_SCROLLBAR</code></dt>
+<dd>Indicates a horizontal child widget; the child must have the <code>XmQTnavigator</code> trait installed. For example, the <code>XmScrollBar</code> widget has the <code>XmQTnavigator</code> trait installed.</dd>
+<dt><code>XmVERT_SCROLLBAR</code></dt>
+<dd>Indicates a vertical child widget; the child must have the <code>XmQTnavigator</code> trait installed.</dd>
+<dt><code>XmSCROLL_HOR</code></dt>
+<dd>Indicates that only the horizontal ScrollBar moves the child. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</dd>
+<dt><code>XmSCROLL_VERT</code></dt>
+<dd>Indicates that only the vertical ScrollBar moves the child. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</dd>
+<dt><code>XmNO_SCROLL</code></dt>
+<dd>Indicates that the child does not move with the ScrollBars. This value is only meaningful if the scrolling policy is <code>XmAUTOMATIC</code>.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>
@@ -1696,35 +1696,35 @@ description: "XmScrolledWindow — The ScrolledWindow widget class"
  XmTraversalDirection <i>direction</i>;
 } XmTraverseObscuredCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><i>traversal_destination</i></p>
-<dd>Specifies the widget or gadget to traverse to, which will be a descendant of the work window.</p>
-<dt><i>direction</i></p>
-<dd>Specifies the direction of traversal. See the description of the <i>direction</i> parameter in the <code>XmProcessTraversal</code> reference page for an explanation of the valid values.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><i>traversal_destination</i></dt>
+<dd>Specifies the widget or gadget to traverse to, which will be a descendant of the work window.</dd>
+<dt><i>direction</i></dt>
+<dd>Specifies the direction of traversal. See the description of the <i>direction</i> parameter in the <code>XmProcessTraversal</code> reference page for an explanation of the valid values.</dd></dl>
 <h3>Translations</h3>
 <p><code>XmScrolledWindow</code> includes the translations from <code>XmManager</code>.</p>
 <h3>Additional Behavior</h3>
 <p>This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window up the height of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the vertical ScrollBar.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window down the height of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the vertical ScrollBar.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window left the width of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the horizontal ScrollBar.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window right the width of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the horizontal ScrollBar.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window horizontally to the edge corresponding to the horizontal ScrollBar&#8217;s minimum value.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window horizontally to the edge corresponding to the horizontal ScrollBar&#8217;s maximum value.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window vertically to the edge corresponding to the vertical ScrollBar&#8217;s minimum value.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code>:</p>
-<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window vertically to the edge corresponding to the vertical ScrollBar&#8217;s maximum value.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfPageUp&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window up the height of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the vertical ScrollBar.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfPageDown&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window down the height of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the vertical ScrollBar.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfPageLeft&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window left the width of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the horizontal ScrollBar.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfPageRight&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window right the width of the viewport. The distance scrolled may be reduced to provide some overlap. The actual distance scrolled depends on the <code>XmNpageIncrement</code> resource of the horizontal ScrollBar.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfBeginLine&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window horizontally to the edge corresponding to the horizontal ScrollBar&#8217;s minimum value.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfEndLine&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window horizontally to the edge corresponding to the horizontal ScrollBar&#8217;s maximum value.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window vertically to the edge corresponding to the vertical ScrollBar&#8217;s minimum value.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code>:</dt>
+<dd>If <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code>, scrolls the window vertically to the edge corresponding to the vertical ScrollBar&#8217;s maximum value.</dd></dl>
 <p> Certain applications will want to replace the page bindings with ones that are specific to the content of the scrolled area.</p>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>

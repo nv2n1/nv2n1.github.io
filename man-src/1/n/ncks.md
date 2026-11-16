@@ -25,36 +25,36 @@ description: "ncks – netCDF Kitchen Sink"
 <p> Options specific to <code>ncks</code> </p>
 <p> The following list provides a short summary of the features unique to <code>ncks</code>. </p>
 <dl>
-<dt><code>-a </code></p>
-<dd> Do not alphabetize extracted fields. By default, the specified output variables are extracted, printed, and written to disk in alphabetical order. This tends to make long output lists easier to search for particular variables. Specifying <code>-a</code> results in the variables being extracted, printed, and written to disk in the order in which they were saved in the input file. Thus <code>-a</code> retains the original ordering of the variables.</dl>
+<dt><code>-a </code></dt>
+<dd> Do not alphabetize extracted fields. By default, the specified output variables are extracted, printed, and written to disk in alphabetical order. This tends to make long output lists easier to search for particular variables. Specifying <code>-a</code> results in the variables being extracted, printed, and written to disk in the order in which they were saved in the input file. Thus <code>-a</code> retains the original ordering of the variables.</dd></dl>
 <dl>
-<dt><code>-d </code></p>
-<dd> <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>]] Add <i>stride</i> argument to hyperslabber.</dl>
+<dt><code>-d </code></dt>
+<dd> <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>]] Add <i>stride</i> argument to hyperslabber.</dd></dl>
 <dl>
-<dt><code>-H </code></p>
-<dd> Print data to screen. The default behavior is to print data to screen if no netCDF output file is specified. Use <code>-H </code> to print data to screen if a netCDF output is specified (the same behavior applies to <code>-m</code> ). Unless otherwise specified (with <code>-s</code>), each element of the data hyperslab is printed on a separate line containing the names, indices, and, values, if any, of all of the variables dimensions. The dimension and variable indices refer to the location of the corresponding data element with respect to the variable as stored on disk (i.e., not the hyperslab).</p>
+<dt><code>-H </code></dt>
+<dd> Print data to screen. The default behavior is to print data to screen if no netCDF output file is specified. Use <code>-H </code> to print data to screen if a netCDF output is specified (the same behavior applies to <code>-m</code> ). Unless otherwise specified (with <code>-s</code>), each element of the data hyperslab is printed on a separate line containing the names, indices, and, values, if any, of all of the variables dimensions. The dimension and variable indices refer to the location of the corresponding data element with respect to the variable as stored on disk (i.e., not the hyperslab).</dd>
 <dl>
 <dt>
-<dd> % ncks -H -C -v three_dmn_var in.nc<br />
+</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br />
  lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br />
  lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br />
  lat[0]=-90 lev[0]=100 lon[2]=180 three_dmn_var[2]=2<br />
  &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
  lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br />
  lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br />
- lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23</dl>
+ lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23</dd></dl>
 <p> Printing the same variable with the <code>-F</code> option shows the same variable indexed with Fortran conventions</p>
 <dl>
 <dt>
-<dd> % ncks -F -H -C -v three_dmn_var in.nc<br />
+</dt><dd> % ncks -F -H -C -v three_dmn_var in.nc<br />
  lon(1)=0 lev(1)=100 lat(1)=-90 three_dmn_var(1)=0<br />
  lon(2)=90 lev(1)=100 lat(1)=-90 three_dmn_var(2)=1<br />
  lon(3)=180 lev(1)=100 lat(1)=-90 three_dmn_var(3)=2<br />
- &nbsp;<wbr>&#8230;&nbsp;<wbr></dl>
+ &nbsp;<wbr>&#8230;&nbsp;<wbr></dd></dl>
 <p> Printing a hyperslab does not affect the variable or dimension indices since these indices are relative to the full variable (as stored in the input file), and the input file has not changed. However, if the hypserslab is saved to an output file and those values are printed, the indices will change:</p>
 <dl>
 <dt>
-<dd> % ncks -H -d lat,90.0 -d lev,1000.0 -v three_dmn_var in.nc out.nc<br />
+</dt><dd> % ncks -H -d lat,90.0 -d lev,1000.0 -v three_dmn_var in.nc out.nc<br />
  lat[1]=90 lev[2]=1000 lon[0]=0 three_dmn_var[20]=20<br />
  lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br />
  lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br />
@@ -63,37 +63,37 @@ description: "ncks – netCDF Kitchen Sink"
  lat[0]=90 lev[0]=1000 lon[0]=0 three_dmn_var[0]=20<br />
  lat[0]=90 lev[0]=1000 lon[1]=90 three_dmn_var[1]=21<br />
  lat[0]=90 lev[0]=1000 lon[2]=180 three_dmn_var[2]=22<br />
- lat[0]=90 lev[0]=1000 lon[3]=270 three_dmn_var[3]=23</dl>
+ lat[0]=90 lev[0]=1000 lon[3]=270 three_dmn_var[3]=23</dd></dl>
 </dl>
 <dl>
-<dt><code>-M</code></p>
-<dd> Print to screen the global metadata describing the file. This includes file summary information and global attributes.</dl>
+<dt><code>-M</code></dt>
+<dd> Print to screen the global metadata describing the file. This includes file summary information and global attributes.</dd></dl>
 <dl>
-<dt><code>-m</code></p>
-<dd> Print variable metadata to screen (similar to <code>ncdump -h</code>). This displays all metadata pertaining to each variable, one variable at a time.</dl>
+<dt><code>-m</code></dt>
+<dd> Print variable metadata to screen (similar to <code>ncdump -h</code>). This displays all metadata pertaining to each variable, one variable at a time.</dd></dl>
 <dl>
-<dt><code>-q </code></p>
-<dd> Toggle printing of dimension indices and coordinate values when printing arrays. The name of each variable will appear flush left in the output. This is useful when trying to locate specific variables when displaying many variables with different dimensions. The mnemonic for this option is &quot;quiet&quot;.</dl>
+<dt><code>-q </code></dt>
+<dd> Toggle printing of dimension indices and coordinate values when printing arrays. The name of each variable will appear flush left in the output. This is useful when trying to locate specific variables when displaying many variables with different dimensions. The mnemonic for this option is &quot;quiet&quot;.</dd></dl>
 <dl>
-<dt><code>-s </code></p>
-<dd> <i>format</i> String format for text output. Accepts C language escape sequences and <code>printf()</code> formats.</dl>
+<dt><code>-s </code></dt>
+<dd> <i>format</i> String format for text output. Accepts C language escape sequences and <code>printf()</code> formats.</dd></dl>
 <dl>
-<dt><code>-u </code></p>
-<dd> Accompany the printing of a variable&#8217;s values with its units attribute, if it exists.</dl>
+<dt><code>-u </code></dt>
+<dd> Accompany the printing of a variable&#8217;s values with its units attribute, if it exists.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> View all data in netCDF <code>in.nc</code>, printed with Fortran indexing conventions:</p>
 <dl>
 <dt>
-<dd> ncks -H -F in.nc</dl>
+</dt><dd> ncks -H -F in.nc</dd></dl>
 <p> Copy the netCDF file <code>in.nc</code> to file <code>out.nc</code>.</p>
 <dl>
 <dt>
-<dd> ncks -O in.nc out.nc</dl>
+</dt><dd> ncks -O in.nc out.nc</dd></dl>
 <p> Now the file <code>out.nc</code> contains all the data from <code>in.nc</code>. There are, however, two differences between <code>in.nc</code> and <code>out.nc</code>. First, the <code>history</code> global attribute will contain the command used to create <code>out.nc</code>. Second, the variables in <code>out.nc</code> will be defined in alphabetical order. Of course the internal storage of variable in a netCDF file should be transparent to the user, but there are cases when alphabetizing a file is useful (see description of <code>-a</code> switch). </p>
 <p> Print variable <code>three_dmn_var</code> from file <code>in.nc</code> with default notations. Next print <code>three_dmn_var</code> as an un-annotated text column. Then print <code>three_dmn_var</code> signed with very high precision. Finally, print <code>three_dmn_var</code> as a comma-separated list.</p>
 <dl>
 <dt>
-<dd> % ncks -H -C -v three_dmn_var in.nc<br />
+</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br />
  lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br />
  lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br />
  &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
@@ -105,7 +105,7 @@ description: "ncks – netCDF Kitchen Sink"
  &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
  23.000000<br />
  % ncks -s &quot;%+16.10f
-&quot; -H -C -v three_dmn_var in.nc </p>
+&quot; -H -C -v three_dmn_var in.nc </dd>
 <p>+0.0000000000 </p>
 <p>+1.0000000000<br />
  &nbsp;<wbr>&#8230;&nbsp;<wbr> </p>
@@ -116,30 +116,30 @@ description: "ncks – netCDF Kitchen Sink"
 <p> One dimensional arrays of characters stored as netCDF variables are automatically printed as strings, whether or not they are NUL-terminated, e.g.,</p>
 <dl>
 <dt>
-<dd> ncks -v fl_nm in.nc</dl>
+</dt><dd> ncks -v fl_nm in.nc</dd></dl>
 <p> The <code>%c</code> formatting code is useful for printing multidimensional arrays of characters representing fixed length strings</p>
 <dl>
 <dt>
-<dd> ncks -H -s &quot;%c&quot; -v fl_nm_arr in.nc</dl>
+</dt><dd> ncks -H -s &quot;%c&quot; -v fl_nm_arr in.nc</dd></dl>
 <p> Using the <code>%s</code> format code on strings which are not NUL-terminated (and thus not technically strings) is likely to result in a core dump. </p>
 <p> Create netCDF <code>out.nc</code> containing all variables, and any associated coordinates, except variable <code>time</code>, from netCDF <code>in.nc</code>:</p>
 <dl>
 <dt>
-<dd> ncks -x -v time in.nc out.nc</dl>
+</dt><dd> ncks -x -v time in.nc out.nc</dd></dl>
 <p> Extract variables <code>time</code> and <code>pressure</code> from netCDF <code>in.nc</code>. If <code>out.nc</code> does not exist it will be created. Otherwise the you will be prompted whether to append to or to overwrite <code>out.nc</code>:</p>
 <dl>
 <dt>
-<dd> ncks -v time,pressure in.nc out.nc<br />
- ncks -C -v time,pressure in.nc out.nc</dl>
+</dt><dd> ncks -v time,pressure in.nc out.nc<br />
+ ncks -C -v time,pressure in.nc out.nc</dd></dl>
 <p> The first version of the command creates an <code>out.nc</code> which contains <code>time</code>, <code>pressure</code>, and any coordinate variables associated with <i>pressure</i>. The <code>out.nc</code> from the second version is guaranteed to contain only two variables <code>time</code> and <code>pressure</code>. </p>
 <p> Create netCDF <code>out.nc</code> containing all variables from file <code>in.nc</code>. Restrict the dimensions of these variables to a hyperslab. Print (with <code>-H</code>) the hyperslabs to the screen for good measure. The specified hyperslab is: the sixth value in dimension <code>time</code>; the half-open range <i>lat</i> &lt;= 0.0 in coordinate <code>lat</code>; the half-open range <i>lon</i> &gt;= 330.0 in coordinate <code>lon</code>; the closed interval 0.3 &lt;= <i>band</i> &lt;= 0.5 in coordinate <code>band</code>; and cross-section closest to 1000.0 in coordinate <code>lev</code>. Note that limits applied to coordinate values are specified with a decimal point, and limits applied to dimension indices do not have a decimal point.</p>
 <dl>
 <dt>
-<dd> ncks -H -d time,5 -d lat,,0. -d lon,330., -d band,.3,.5 -d lev,1000. in.nc out.nc</dl>
+</dt><dd> ncks -H -d time,5 -d lat,,0. -d lon,330., -d band,.3,.5 -d lev,1000. in.nc out.nc</dd></dl>
 <p> Assume the domain of the monotonically increasing longitude coordinate <code>lon</code> is 0 &lt; <i>lon</i> &lt; 360. Here, <code>lon</code> is an example of a wrapped coordinate. <code>ncks</code> will extract a hyperslab which crosses the Greenwich meridian simply by specifying the westernmost longitude as <i>min</i> and the easternmost longitude as <i>max</i>, as follows:</p>
 <dl>
 <dt>
-<dd> ncks -d lon,260.,45. in.nc out.nc</dl>
+</dt><dd> ncks -d lon,260.,45. in.nc out.nc</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
 <h2>REPORTING BUGS</h2>
@@ -152,7 +152,7 @@ description: "ncks – netCDF Kitchen Sink"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <p> <code><a href="/docs/linux/man/1-ncap/">ncap</a></code>(1), <code><a href="/docs/linux/man/1-ncap2/">ncap2</a></code>(1), <code><a href="/docs/linux/man/1-ncatted/">ncatted</a></code>(1), <code><a href="/docs/linux/man/1-ncbo/">ncbo</a></code>(1), <code><a href="/docs/linux/man/1-ncdiff/">ncdiff</a></code>(1), <code><a href="/docs/linux/man/1-nces/">nces</a></code>(1), <code><a href="/docs/linux/man/1-ncecat/">ncecat</a></code>(1), <code><a href="/docs/linux/man/1-ncflint/">ncflint</a></code>(1), <code><a href="/docs/linux/man/1-ncks/">ncks</a></code>(1), <code><a href="/docs/linux/man/1-nco/">nco</a></code>(1), <code><a href="/docs/linux/man/1-ncpdq/">ncpdq</a></code>(1), <code><a href="/docs/linux/man/1-ncra/">ncra</a></code>(1), <code><a href="/docs/linux/man/1-ncrcat/">ncrcat</a></code>(1), <code><a href="/docs/linux/man/1-ncrename/">ncrename</a></code>(1), <code><a href="/docs/linux/man/1-ncwa/">ncwa</a></code>(1) </p>
 <h2>HOMEPAGE</h2>

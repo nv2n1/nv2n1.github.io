@@ -19,20 +19,20 @@ description: "grid-change-pass-phrase – Change the pass phrase of a private ke
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-change-pass-phrase</code> and exit.</dl>
+</dt><dd> Display the command-line options to <code>grid-change-pass-phrase</code> and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-change-pass-phrase</code> command. The second form includes more details.</dl>
+</dt><dd> Display the version number of the <code>grid-change-pass-phrase</code> command. The second form includes more details.</dd></dl>
 <p> <code>-file </code><i>PRIVATE-KEY</i></p>
 <dl>
 <dt>
-<dd> Change the pass phrase of the private key named by <i>PRIVATE-KEY</i> instead of the default.</dl>
+</dt><dd> Change the pass phrase of the private key named by <i>PRIVATE-KEY</i> instead of the default.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Change the pass phrase of the default private key: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-change-pass-phrase
 Enter pass phrase for /home/juser/.globus/userkey.pem:
@@ -40,13 +40,13 @@ writing RSA key
 Enter PEM pass phrase: XXXXXXXX
 Verifying - Enter PEM pass phrase: XXXXXXXX
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-change-pass-phrase</code>: </p>
 <p> <code>X509_USER_KEY</code></p>
 <dl>
 <dt>
-<dd> Path to the default private key file.</dl>
+</dt><dd> Path to the default private key file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

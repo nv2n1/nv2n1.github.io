@@ -50,35 +50,33 @@ url: "/docs/linux/man/1-perlepoc/"
  Features are left out, because of restrictions of the <font SIZE="-1">POSIX</font> support in <font SIZE="-1">EPOC:</font>
 <dl>
 <dt>&bull;
-<dd> socket <font SIZE="-1">IO</font> is only implemented poorly. You can only use sysread and syswrite on them. The commands read, write, print, &lt;&gt; do not work for sockets. This may change iff epocemx supports sockets.
-<dt>&bull;
-<dd> kill, alarm and signals. Do not try to use them. This may be impossible to implement on <font SIZE="-1">EPOC</font>.
-<dt>&bull;
-<dd> select is missing.
-<dt>&bull;
-<dd> binmode does not exist. (No <font SIZE="-1">CR</font> <font SIZE="-1">LF</font> to <font SIZE="-1">LF</font> translation for text files)
-<dt>&bull;
-<dd> <font SIZE="-1">EPOC</font> does not handle the notion of current drive and current directory very well (i.e. not at all, but it tries hard to emulate one). See <font SIZE="-1">PATH</font>.
-<dt>&bull;
-<dd> Heap is limited to 4MB.
-<dt>&bull;
-<dd> Dynamic loading is not implemented.</dl>
+</dt><dd> socket <font SIZE="-1">IO</font> is only implemented poorly. You can only use sysread and syswrite on them. The commands read, write, print, &lt;&gt; do not work for sockets. This may change iff epocemx supports sockets.
+</dd><dt>&bull;
+</dt><dd> kill, alarm and signals. Do not try to use them. This may be impossible to implement on <font SIZE="-1">EPOC</font>.
+</dd><dt>&bull;
+</dt><dd> select is missing.
+</dd><dt>&bull;
+</dt><dd> binmode does not exist. (No <font SIZE="-1">CR</font> <font SIZE="-1">LF</font> to <font SIZE="-1">LF</font> translation for text files)
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">EPOC</font> does not handle the notion of current drive and current directory very well (i.e. not at all, but it tries hard to emulate one). See <font SIZE="-1">PATH</font>.
+</dd><dt>&bull;
+</dt><dd> Heap is limited to 4MB.
+</dd><dt>&bull;
+</dt><dd> Dynamic loading is not implemented.</dd></dl>
 
 <h3>Compiling Perl 5 on the <font SIZE="-1">EPOC</font> cross compiling environment</h3>
 
  Sorry, this is far too short.
 <dl>
 <dt>&bull;
-<dd> You will need the epocemx <font SIZE="-1">SDK</font> from Eberhard Mattes.
-<dt>&bull;
-<dd> Get the Perl sources from your nearest <font SIZE="-1">CPAN</font> site.
-<dt>&bull;
-<dd> Unpack the sources.
-<dt>&bull;
-<dd> Build a native perl from this sources... Make sure to save the miniperl executable as miniperl.native. 
-
+</dt><dd> You will need the epocemx <font SIZE="-1">SDK</font> from Eberhard Mattes.
+</dd><dt>&bull;
+</dt><dd> Get the Perl sources from your nearest <font SIZE="-1">CPAN</font> site.
+</dd><dt>&bull;
+</dt><dd> Unpack the sources.
+</dd><dt>&bull;
+</dt><dd> Build a native perl from this sources... Make sure to save the miniperl executable as miniperl.native. 
  Start again from scratch 
-
  <pre>
       cp epoc/* .
       ./Configure -S
@@ -88,7 +86,7 @@ url: "/docs/linux/man/1-perlepoc/"
       make
       perl createpkg.pl 
       emxsis perl.pkg perl.sis
-</pre></dl>
+</pre></dd></dl>
 
 <h2>SUPPORT STATUS OF PERL ON EPOC</h2>
 
@@ -109,8 +107,8 @@ url: "/docs/linux/man/1-perlepoc/"
 
 
 <dt><a HREF="#lbAJ">SUPPORT STATUS OF PERL ON EPOC</a>
-<dd>
-<dt><a HREF="#lbAK">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbAL">LAST UPDATE</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">LAST UPDATE</a>
+</dt><dd></dd></dl>

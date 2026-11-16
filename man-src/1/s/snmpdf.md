@@ -17,10 +17,10 @@ description: "snmpdf – display disk space usage on a network entity via SNMP"
 <p> See the <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> manual page on setting up the dskTable using the <i>disk</i> directive in the snmpd.conf file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>COMMON OPTIONS</code></p>
-<dd> Please see <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a list of possible values for COMMON OPTIONS as well as their descriptions.</p>
-<dt><code>-Cu</code></p>
-<dd> Forces the command to use dskTable in mib UCD-SNMP-MIB instead of the default to determine the storage information. Generally, the default use of hrStorageTable in mib HOST-RESOURCES-MIB is preferred because it typically contains more information.</dl>
+<dt><code>COMMON OPTIONS</code></dt>
+<dd> Please see <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a list of possible values for COMMON OPTIONS as well as their descriptions.</dd>
+<dt><code>-Cu</code></dt>
+<dd> Forces the command to use dskTable in mib UCD-SNMP-MIB instead of the default to determine the storage information. Generally, the default use of hrStorageTable in mib HOST-RESOURCES-MIB is preferred because it typically contains more information.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> % snmpdf -v 2c -c public localhost </p>
 <pre>

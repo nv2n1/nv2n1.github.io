@@ -15,23 +15,23 @@ blkdev_issue_discard - queue a discard
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>blockdev to issue discard for</dl>
+<dl><dd></dd><dd>blockdev to issue discard for</dd></dl>
  
 
  <i>sector</i>
-<dl><dd>start sector</dl>
+<dl><dd>start sector</dd></dl>
  
 
  <i>nr_sects</i>
-<dl><dd>number of sectors to discard</dl>
+<dl><dd>number of sectors to discard</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags (for bio_alloc)</dl>
+<dl><dd>memory allocation flags (for bio_alloc)</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>BLKDEV_IFL_* flags to control behaviour</dl>
+<dl><dd>BLKDEV_IFL_* flags to control behaviour</dd></dl>
 
 <h2>Description</h2>
 

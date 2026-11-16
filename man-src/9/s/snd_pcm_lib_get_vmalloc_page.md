@@ -14,10 +14,10 @@ description: "snd_pcm_lib_get_vmalloc_page – map vmalloc buffer offset to page
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream with a buffer allocated by <code>snd_pcm_lib_alloc_vmalloc_buffer</code></dl>
+</dd><dd>the substream with a buffer allocated by <code>snd_pcm_lib_alloc_vmalloc_buffer</code></dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>offset in the buffer</dl>
+<dd>offset in the buffer</dd></dl>
 <h2>Description</h2>
 <p>This function is to be used as the page callback in the PCM ops.</p>
 <h2>Return</h2>

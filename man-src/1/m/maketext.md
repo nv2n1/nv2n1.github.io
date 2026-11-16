@@ -33,25 +33,25 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <dl>
 <dt>-d,--domain=TEXTDOMAIN
-<dd> Retrieve translated messages from <font SIZE="-1">TEXTDOMAIN.</font>
-<dt>-s
-<dd> Adds a new line to the end of the output so that it behaves like the `echo' or the `gettext' command.
-<dt>-h,--help
-<dd> Display the help messages.
-<dt>-V,--version
-<dd> Display version information and exit.
-<dt><font SIZE="-1">MSGKEY</font>
-<dd> The original text used to look up translated text.
-<dt><font SIZE="-1">PARAM...</font>
-<dd> Parameters to Maketext for the plural and other text functions.</dl>
+</dt><dd> Retrieve translated messages from <font SIZE="-1">TEXTDOMAIN.</font>
+</dd><dt>-s
+</dt><dd> Adds a new line to the end of the output so that it behaves like the `echo' or the `gettext' command.
+</dd><dt>-h,--help
+</dt><dd> Display the help messages.
+</dd><dt>-V,--version
+</dt><dd> Display version information and exit.
+</dd><dt><font SIZE="-1">MSGKEY</font>
+</dt><dd> The original text used to look up translated text.
+</dd><dt><font SIZE="-1">PARAM...</font>
+</dt><dd> Parameters to Maketext for the plural and other text functions.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
 <dl>
 <dt><font SIZE="-1">TEXTDOMAIN</font>
-<dd> <font SIZE="-1">TEXTDOMAIN</font> is used to determine the text domain when the -d parameter is not given.
-<dt><font SIZE="-1">TEXTDOMAINDIR</font>
-<dd> <font SIZE="-1">TEXTDOMAINDIR</font> is used to search the message catelog/MO file if it does not reside in the system locale directories.</dl>
+</dt><dd> <font SIZE="-1">TEXTDOMAIN</font> is used to determine the text domain when the -d parameter is not given.
+</dd><dt><font SIZE="-1">TEXTDOMAINDIR</font>
+</dt><dd> <font SIZE="-1">TEXTDOMAINDIR</font> is used to search the message catelog/MO file if it does not reside in the system locale directories.</dd></dl>
 
 <h2>NOTES</h2>
 

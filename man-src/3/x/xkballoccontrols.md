@@ -11,14 +11,14 @@ description: "XkbAllocControls – Allocates an XkbControlsRec structure in the 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocControls</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description in which to allocate ctrls rec</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of components of ctrls to allocate</dl>
+</dd><dd>Xkb description in which to allocate ctrls rec</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of components of ctrls to allocate</dd></dl>
 <h2>Description</h2>
 <p>The need to allocate an XkbControlsRec structure seldom arises; Xkb creates one when an application calls <i>XkbGetControls </i> or a related function. For those situations where there is not an XkbControlsRec structure allocated in the XkbDescRec, allocate one by calling <i>XkbAllocControls.</i> </p>
 <p> <i>XkbAllocControls </i> allocates the <i>ctrls </i> field of the <i>xkb </i> parameter, initializes all fields to zero, and returns Success. If the <i>ctrls </i> field is not NULL, <i>XkbAllocControls </i> simply returns Success. If <i>xkb </i> is NULL, <i>XkbAllocControls </i> reports a BadMatch error. If the <i>ctrls </i> field could not be allocated, it reports a BadAlloc error. </p>
@@ -210,14 +210,14 @@ description: "XkbAllocControls – Allocates an XkbControlsRec structure in the 
 </table>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>SUCCESS</p>
-<dd>allocates the ctrls field of the xkb parameter, initializes all fields to zero </p>
+<dt>SUCCESS</dt>
+<dd>allocates the ctrls field of the xkb parameter, initializes all fields to zero </dd>
 <p> the ctrls field is not NULL</dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbgetcontrols/">XkbGetControls</a></code>(3)</p>

@@ -31,10 +31,10 @@ description: "QuantLib::CDO – collateralized debt obligation"
 <p> For purchased protection, the instrument value is given by the difference of the protection value $ V_1 $ and premium value $ V_2 $, </p>
 <p> [ V = V_1 &#8211; V_2. ].PP The protection leg is priced as follows: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Build the probability distribution for volume of defaults $ L $ (before recovery) or Loss Given Default $ LGD = (1-r),L $ at times/dates $ t_i, i=1, &#8230;, N$ (premium schedule times with intermediate steps)</p>
-<dt>*</p>
-<dd>Determine the expected value $ E_i = E_{t_i},</p>
+<dt>*</dt>
+<dd>Build the probability distribution for volume of defaults $ L $ (before recovery) or Loss Given Default $ LGD = (1-r),L $ at times/dates $ t_i, i=1, &#8230;, N$ (premium schedule times with intermediate steps)</dd>
+<dt>*</dt>
+<dd>Determine the expected value $ E_i = E_{t_i},</dd>
 <hr>
 <p> protection payoff $ Pay(LGD) $ at each time $ t_i$ where [ Pay(L) = min (D_1, LGD) &#8211; min (D_2, LGD) = </p>
 <hr>
@@ -48,7 +48,7 @@ description: "QuantLib::CDO – collateralized debt obligation"
 <p> The pricing algorithm allows for varying notional amounts and default termstructures of the underlyings. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Investigate and fix cases $ E_{i+1} &lt; E_i. $</dl>
+<dd>Investigate and fix cases $ E_{i+1} &lt; E_i. $</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>CDO</code> (<code>Real</code> attachment, <code>Real</code> detachment, const std::vector&lt; <code>Real</code> &gt; &amp; nominals, const std::vector&lt; <code>Handle</code>&lt; <code>DefaultProbabilityTermStructure</code> &gt; &gt; &amp; basket, const <code>Handle</code>&lt; <code>OneFactorCopula</code> &gt; &amp; copula, bool protectionSeller, const <code>Schedule</code> &amp; premiumSchedule, <code>Rate</code> premiumRate, const <code>DayCounter</code> &amp; dayCounter, <code>Rate</code> recoveryRate, <code>Rate</code> upfrontPremiumRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; yieldTS, Size nBuckets, const <code>Period</code> &amp; integrationStep = <code>Period</code>(10, Years))</h3>
 <p><code>Parameters:</code></p>
@@ -63,6 +63,6 @@ description: "QuantLib::CDO – collateralized debt obligation"
  <i>dayCounter</i> day count convention for the premium rate<br />
  <i>upfrontPremiumRate</i> premium as a tranche notional fraction<br />
  <i>yieldTS</i> yield term structure handle<br />
- <i>integrationStep</i> time step for integrating over one premium period; if larger than premium period length, a single step is taken</dl>
+ <i>integrationStep</i> time step for integrating over one premium period; if larger than premium period length, a single step is taken</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

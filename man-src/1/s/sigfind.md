@@ -15,20 +15,20 @@ description: "sigfind – Find a binary signature in a file"
 <p> <code>sigfind</code> searches through a file and looks for the hex_signature at a given offset. This can be used to search for lost boot sectors, superblocks, and partition tables. </p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>-b bsize</p>
-<dd> Specify the block size in which to search. The default is 512 and the value must be a multiple of 512.</p>
-<dt>-o offset</p>
-<dd> Specify the offset in a block in which the signature must exist. The default is 0.</p>
-<dt>-t template</p>
-<dd> Specify a template name that defines the signature value and offset. Run with no options to get a list of supported templates.</p>
-<dt>-l</p>
-<dd> The signature is stored in little-endian ordering and must therefore be reversed.</p>
-<dt>-V</p>
-<dd> Display version</p>
-<dt>[hex_signature]</p>
-<dd> The binary signature that you are searching for. It must be given in hexadecimal format. This argument must exist if -t is not used.</p>
-<dt>file</p>
-<dd> Any raw data. </p>
+<dt>-b bsize</dt>
+<dd> Specify the block size in which to search. The default is 512 and the value must be a multiple of 512.</dd>
+<dt>-o offset</dt>
+<dd> Specify the offset in a block in which the signature must exist. The default is 0.</dd>
+<dt>-t template</dt>
+<dd> Specify a template name that defines the signature value and offset. Run with no options to get a list of supported templates.</dd>
+<dt>-l</dt>
+<dd> The signature is stored in little-endian ordering and must therefore be reversed.</dd>
+<dt>-V</dt>
+<dd> Display version</dd>
+<dt>[hex_signature]</dt>
+<dd> The binary signature that you are searching for. It must be given in hexadecimal format. This argument must exist if -t is not used.</dd>
+<dt>file</dt>
+<dd> Any raw data. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> sigfind -o 510 -l AA55 disk.dd </p>

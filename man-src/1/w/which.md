@@ -15,15 +15,15 @@ description: "which – locate a command"
 <p> <code>which</code> returns the pathnames of the files (or links) which would be executed in the current environment, had its arguments been given as commands in a strictly POSIX-conformant shell. It does this by searching the PATH for executable files matching the names of the arguments. It does not canonicalize path names.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> print all matching pathnames of each argument</dl>
+<dt><code>-a</code></dt>
+<dd> print all matching pathnames of each argument</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> if all specified commands are found and executable</p>
-<dt><code>1</code></p>
-<dd> if one or more specified commands is nonexistent or not executable</p>
-<dt><code>2</code></p>
-<dd> if an invalid option is specified </p>
+<dt><code>0</code></dt>
+<dd> if all specified commands are found and executable</dd>
+<dt><code>1</code></dt>
+<dd> if one or more specified commands is nonexistent or not executable</dd>
+<dt><code>2</code></dt>
+<dd> if an invalid option is specified </dd>
 </dl>
 <h2>Index</h2>

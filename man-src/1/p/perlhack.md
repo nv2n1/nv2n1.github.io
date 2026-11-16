@@ -14,38 +14,38 @@ description: "perlhack – How to hack on Perl"
 <h2>SUPER QUICK PATCH GUIDE</h2>
 <p> If you just want to submit a single small patch like a pod fix, a test for a bug, comment fixes, etc., it&#8217;s easy! Here&#8217;s how:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Check out the source repository </p>
+<dt>&bull;</dt>
+<dd> Check out the source repository </dd>
 <p> The perl source is in a git repository. You can clone the repository with the following command: </p>
 <pre>
   % git clone <a href="git://perl5.git.perl.org/perl.git">git://perl5.git.perl.org/perl.git</a> perl
 </pre>
-<dt>&bull;</p>
-<dd> Ensure you&#8217;re following the latest advice </p>
+<dt>&bull;</dt>
+<dd> Ensure you&#8217;re following the latest advice </dd>
 <p> In case the advice in this guide has been updated recently, read the latest version directly from the perl source: </p>
 <pre>
   % perldoc pod/perlhack.pod
 </pre>
-<dt>&bull;</p>
-<dd> Make your change </p>
+<dt>&bull;</dt>
+<dd> Make your change </dd>
 <p> Hack, hack, hack. Keep in mind that Perl runs on many different platforms, with different operating systems that have different capabilities, different filesystem organizations, and even different character sets. perlhacktips gives advice on this.</p>
-<dt>&bull;</p>
-<dd> Test your change </p>
+<dt>&bull;</dt>
+<dd> Test your change </dd>
 <p> You can run all the tests with the following commands: </p>
 <pre>
   % ./Configure -des -Dusedevel
   % make test
 </pre>
 <p> Keep hacking until the tests pass.</p>
-<dt>&bull;</p>
-<dd> Commit your change </p>
+<dt>&bull;</dt>
+<dd> Commit your change </dd>
 <p> Committing your work will save the change <i>on your local system</i>: </p>
 <pre>
   % git commit -a -m 'Commit message goes here'
 </pre>
 <p> Make sure the commit message describes your change in a single sentence. For example, &#8220;Fixed spelling errors in perlhack.pod&#8221;.</p>
-<dt>&bull;</p>
-<dd> Send your change to perlbug </p>
+<dt>&bull;</dt>
+<dd> Send your change to perlbug </dd>
 <p> The next step is to submit your patch to the Perl core ticket system via email. </p>
 <p> If your changes are in a single git commit, run the following commands to generate the patch file and attach it to your bug report: </p>
 <pre>
@@ -60,15 +60,15 @@ description: "perlhack – How to hack on Perl"
   &gt; 0003-fix3.patch
 </pre>
 <p> When prompted, pick a subject that summarizes your changes.</p>
-<dt>&bull;</p>
-<dd> Thank you </p>
+<dt>&bull;</dt>
+<dd> Thank you </dd>
 <p> The porters appreciate the time you spent helping to make Perl better. Thank you!</p>
-<dt>&bull;</p>
-<dd> Acknowledgement </p>
+<dt>&bull;</dt>
+<dd> Acknowledgement </dd>
 <p> All contributors are credited (by name and email address) in the <font SIZE="-1">AUTHORS</font> file, which is part of the perl distribution, as well as the Git commit history. </p>
 <p> If you don’t want to be included in the <font SIZE="-1">AUTHORS</font> file, just let us know. Otherwise we will take your submission of a patch as permission to credit you in the <font SIZE="-1">AUTHORS</font> file.</p>
-<dt>&bull;</p>
-<dd> Next time </p>
+<dt>&bull;</dt>
+<dd> Next time </dd>
 <p> The next time you wish to make a patch, you need to start from the latest perl in a pristine state. Check you don&#8217;t have any local changes or added files in your perl check-out which you wish to keep, then run these commands: </p>
 <pre>
   % git pull
@@ -153,15 +153,15 @@ description: "perlhack – How to hack on Perl"
 <p> The commit message should include a description of the problem that the patch corrects or new functionality that the patch adds. </p>
 <p> As a general rule of thumb, your commit message should help a programmer who knows the Perl core quickly understand what you were trying to do, how you were trying to do it, and why the change matters to Perl.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Why </p>
+<dt>&bull;</dt>
+<dd> Why </dd>
 <p> Your commit message should describe why the change you are making is important. When someone looks at your change in six months or six years, your intent should be clear. </p>
 <p> If you&#8217;re deprecating a feature with the intent of later simplifying another bit of code, say so. If you&#8217;re fixing a performance problem or adding a new feature to support some other bit of the core, mention that.</p>
-<dt>&bull;</p>
-<dd> What </p>
+<dt>&bull;</dt>
+<dd> What </dd>
 <p> Your commit message should describe what part of the Perl core you&#8217;re changing and what you expect your patch to do.</p>
-<dt>&bull;</p>
-<dd> How </p>
+<dt>&bull;</dt>
+<dd> How </dd>
 <p> While it&#8217;s not necessary for documentation changes, new tests or trivial patches, it&#8217;s often worth explaining how your change works. Even if it&#8217;s clear to you today, it may not be clear to a porter next month or next year.</dl>
 <p> A commit message isn&#8217;t intended to take the place of comments in your code. Commit messages should describe the change you made, while code comments should describe the current state of the code. </p>
 <p> If you&#8217;ve just implemented a new feature, complete with doc, tests and well-commented code, a brief commit message will often suffice. If, however, you&#8217;ve just changed a single character deep in the parser or lexer, you might need to write a small novel to ensure that future readers understand what you did and why you did it. </p>
@@ -172,69 +172,69 @@ description: "perlhack – How to hack on Perl"
 <p> In general, please follow the particular style of the code you are patching. </p>
 <p> In particular, follow these general guidelines for patching Perl sources:</p>
 <dl>
-<dt>&bull;</p>
-<dd> 4-wide indents for code, 2-wide indents for nested <font SIZE="-1">CPP</font> <tt>&quot;#define&quot;</tt>s, with 8-wide tabstops.</p>
-<dt>&bull;</p>
-<dd> Use spaces for indentation, not tab characters. </p>
+<dt>&bull;</dt>
+<dd> 4-wide indents for code, 2-wide indents for nested <font SIZE="-1">CPP</font> <tt>&quot;#define&quot;</tt>s, with 8-wide tabstops.</dd>
+<dt>&bull;</dt>
+<dd> Use spaces for indentation, not tab characters. </dd>
 <p> The codebase is a mixture of tabs and spaces for indentation, and we are moving to spaces only. Converting lines you&#8217;re patching from 8-wide tabs to spaces will help this migration.</p>
-<dt>&bull;</p>
-<dd> Try hard not to exceed 79-columns</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">ANSI C</font> prototypes</p>
-<dt>&bull;</p>
-<dd> Uncuddled elses and &#8220;K&amp;R&#8221; style for indenting control constructs</p>
-<dt>&bull;</p>
-<dd> No C<font SIZE="-2">++</font> style (//) comments</p>
-<dt>&bull;</p>
-<dd> Mark places that need to be revisited with <font SIZE="-1">XXX</font> (and revisit often!)</p>
-<dt>&bull;</p>
-<dd> Opening brace lines up with &#8220;if&#8221; when conditional spans multiple lines; should be at end-of-line otherwise</p>
-<dt>&bull;</p>
-<dd> In function definitions, name starts in column 0 (return value-type is on previous line)</p>
-<dt>&bull;</p>
-<dd> Single space after keywords that are followed by parens, no space between function name and following paren</p>
-<dt>&bull;</p>
-<dd> Avoid assignments in conditionals, but if they&#8217;re unavoidable, use extra paren, e.g. &#8220;if (a &amp;&amp; (b = c)) &#8230;&#8221;</p>
-<dt>&bull;</p>
-<dd> &#8220;return foo;&#8221; rather than &#8220;return(foo);&#8221;</p>
-<dt>&bull;</p>
-<dd> &#8220;if (!foo) &#8230;&#8221; rather than &#8220;if (foo == <font SIZE="-1">FALSE</font>) &#8230;&#8221; etc.</p>
-<dt>&bull;</p>
-<dd> Do not declare variables using &#8220;register&#8221;. It may be counterproductive with modern compilers, and is deprecated in C<font SIZE="-2">++</font>, under which the Perl source is regularly compiled.</p>
-<dt>&bull;</p>
-<dd> In-line functions that are in headers that are accessible to <font SIZE="-1">XS</font> code need to be able to compile without warnings with commonly used extra compilation flags, such as gcc&#8217;s <tt>&quot;-Wswitch-default&quot;</tt> which warns whenever a switch statement does not have a &#8220;default&#8221; case. The use of these extra flags is to catch potential problems in legal C code, and is often used by Perl aggregators, such as Linux distributors.</dl>
+<dt>&bull;</dt>
+<dd> Try hard not to exceed 79-columns</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">ANSI C</font> prototypes</dd>
+<dt>&bull;</dt>
+<dd> Uncuddled elses and &#8220;K&amp;R&#8221; style for indenting control constructs</dd>
+<dt>&bull;</dt>
+<dd> No C<font SIZE="-2">++</font> style (//) comments</dd>
+<dt>&bull;</dt>
+<dd> Mark places that need to be revisited with <font SIZE="-1">XXX</font> (and revisit often!)</dd>
+<dt>&bull;</dt>
+<dd> Opening brace lines up with &#8220;if&#8221; when conditional spans multiple lines; should be at end-of-line otherwise</dd>
+<dt>&bull;</dt>
+<dd> In function definitions, name starts in column 0 (return value-type is on previous line)</dd>
+<dt>&bull;</dt>
+<dd> Single space after keywords that are followed by parens, no space between function name and following paren</dd>
+<dt>&bull;</dt>
+<dd> Avoid assignments in conditionals, but if they&#8217;re unavoidable, use extra paren, e.g. &#8220;if (a &amp;&amp; (b = c)) &#8230;&#8221;</dd>
+<dt>&bull;</dt>
+<dd> &#8220;return foo;&#8221; rather than &#8220;return(foo);&#8221;</dd>
+<dt>&bull;</dt>
+<dd> &#8220;if (!foo) &#8230;&#8221; rather than &#8220;if (foo == <font SIZE="-1">FALSE</font>) &#8230;&#8221; etc.</dd>
+<dt>&bull;</dt>
+<dd> Do not declare variables using &#8220;register&#8221;. It may be counterproductive with modern compilers, and is deprecated in C<font SIZE="-2">++</font>, under which the Perl source is regularly compiled.</dd>
+<dt>&bull;</dt>
+<dd> In-line functions that are in headers that are accessible to <font SIZE="-1">XS</font> code need to be able to compile without warnings with commonly used extra compilation flags, such as gcc&#8217;s <tt>&quot;-Wswitch-default&quot;</tt> which warns whenever a switch statement does not have a &#8220;default&#8221; case. The use of these extra flags is to catch potential problems in legal C code, and is often used by Perl aggregators, such as Linux distributors.</dd></dl>
 <p> <i>Test suite</i> </p>
 <p> If your patch changes code (rather than just changing documentation), you should also include one or more test cases which illustrate the bug you&#8217;re fixing or validate the new functionality you&#8217;re adding. In general, you should update an existing test file rather than create a new one. </p>
 <p> Your test suite additions should generally follow these guidelines (courtesy of Gurusamy Sarathy &lt;gsar [at] activestate.com&gt;):</p>
 <dl>
-<dt>&bull;</p>
-<dd> Know what you&#8217;re testing. Read the docs, and the source.</p>
-<dt>&bull;</p>
-<dd> Tend to fail, not succeed.</p>
-<dt>&bull;</p>
-<dd> Interpret results strictly.</p>
-<dt>&bull;</p>
-<dd> Use unrelated features (this will flush out bizarre interactions).</p>
-<dt>&bull;</p>
-<dd> Use non-standard idioms (otherwise you are not testing <font SIZE="-1">TIMTOWTDI</font>).</p>
-<dt>&bull;</p>
-<dd> Avoid using hardcoded test numbers whenever possible (the <font SIZE="-1">EXPECTED/GOT</font> found in t/op/tie.t is much more maintainable, and gives better failure reports).</p>
-<dt>&bull;</p>
-<dd> Give meaningful error messages when a test fails.</p>
-<dt>&bull;</p>
-<dd> Avoid using qx// and <code>system()</code> unless you are testing for them. If you do use them, make sure that you cover _all_ perl platforms.</p>
-<dt>&bull;</p>
-<dd> Unlink any temporary files you create.</p>
-<dt>&bull;</p>
-<dd> Promote unforeseen warnings to errors with <tt>$SIG</tt>{__WARN__}.</p>
-<dt>&bull;</p>
-<dd> Be sure to use the libraries and modules shipped with the version being tested, not those that were already installed.</p>
-<dt>&bull;</p>
-<dd> Add comments to the code explaining what you are testing for.</p>
-<dt>&bull;</p>
-<dd> Make updating the &#8216;1..42&#8217; string unnecessary. Or make sure that you update it.</p>
-<dt>&bull;</p>
-<dd> Test _all_ behaviors of a given operator, library, or function. </p>
+<dt>&bull;</dt>
+<dd> Know what you&#8217;re testing. Read the docs, and the source.</dd>
+<dt>&bull;</dt>
+<dd> Tend to fail, not succeed.</dd>
+<dt>&bull;</dt>
+<dd> Interpret results strictly.</dd>
+<dt>&bull;</dt>
+<dd> Use unrelated features (this will flush out bizarre interactions).</dd>
+<dt>&bull;</dt>
+<dd> Use non-standard idioms (otherwise you are not testing <font SIZE="-1">TIMTOWTDI</font>).</dd>
+<dt>&bull;</dt>
+<dd> Avoid using hardcoded test numbers whenever possible (the <font SIZE="-1">EXPECTED/GOT</font> found in t/op/tie.t is much more maintainable, and gives better failure reports).</dd>
+<dt>&bull;</dt>
+<dd> Give meaningful error messages when a test fails.</dd>
+<dt>&bull;</dt>
+<dd> Avoid using qx// and <code>system()</code> unless you are testing for them. If you do use them, make sure that you cover _all_ perl platforms.</dd>
+<dt>&bull;</dt>
+<dd> Unlink any temporary files you create.</dd>
+<dt>&bull;</dt>
+<dd> Promote unforeseen warnings to errors with <tt>$SIG</tt>{__WARN__}.</dd>
+<dt>&bull;</dt>
+<dd> Be sure to use the libraries and modules shipped with the version being tested, not those that were already installed.</dd>
+<dt>&bull;</dt>
+<dd> Add comments to the code explaining what you are testing for.</dd>
+<dt>&bull;</dt>
+<dd> Make updating the &#8216;1..42&#8217; string unnecessary. Or make sure that you update it.</dd>
+<dt>&bull;</dt>
+<dd> Test _all_ behaviors of a given operator, library, or function. </dd>
 <p> Test all optional arguments. </p>
 <p> Test return values in various contexts (boolean, scalar, list, lvalue). </p>
 <p> Use both global and lexical variables. </p>
@@ -247,38 +247,38 @@ description: "perlhack – How to hack on Perl"
 <h3>Updating perldelta</h3>
 <p> For changes significant enough to warrant a <i>pod/perldelta.pod</i> entry, the porters will greatly appreciate it if you submit a delta entry along with your actual change. Significant changes include, but are not limited to:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Adding, deprecating, or removing core features</p>
-<dt>&bull;</p>
-<dd> Adding, deprecating, removing, or upgrading core or dual-life modules</p>
-<dt>&bull;</p>
-<dd> Adding new core tests</p>
-<dt>&bull;</p>
-<dd> Fixing security issues and user-visible bugs in the core</p>
-<dt>&bull;</p>
-<dd> Changes that might break existing code, either on the perl or C level</p>
-<dt>&bull;</p>
-<dd> Significant performance improvements</p>
-<dt>&bull;</p>
-<dd> Adding, removing, or significantly changing documentation in the <i>pod/</i> directory</p>
-<dt>&bull;</p>
-<dd> Important platform-specific changes</dl>
+<dt>&bull;</dt>
+<dd> Adding, deprecating, or removing core features</dd>
+<dt>&bull;</dt>
+<dd> Adding, deprecating, removing, or upgrading core or dual-life modules</dd>
+<dt>&bull;</dt>
+<dd> Adding new core tests</dd>
+<dt>&bull;</dt>
+<dd> Fixing security issues and user-visible bugs in the core</dd>
+<dt>&bull;</dt>
+<dd> Changes that might break existing code, either on the perl or C level</dd>
+<dt>&bull;</dt>
+<dd> Significant performance improvements</dd>
+<dt>&bull;</dt>
+<dd> Adding, removing, or significantly changing documentation in the <i>pod/</i> directory</dd>
+<dt>&bull;</dt>
+<dd> Important platform-specific changes</dd></dl>
 <p> Please make sure you add the perldelta entry to the right section within <i>pod/perldelta.pod</i>. More information on how to write good perldelta entries is available in the <tt>&quot;Style&quot;</tt> section of <i>Porting/how_to_write_a_perldelta.pod</i>.</p>
 <h3>What makes for a good patch?</h3>
 <p> New features and extensions to the language can be contentious. There is no specific set of criteria which determine what features get added, but here are some questions to consider when developing a patch: </p>
 <p> <i>Does the concept match the general goals of Perl?</i> </p>
 <p> Our goals include, but are not limited to:</p>
 <dl>
-<dt>1.</p>
-<dd> Keep it fast, simple, and useful.</p>
-<dt>2.</p>
-<dd> Keep features/concepts as orthogonal as possible.</p>
-<dt>3.</p>
-<dd> No arbitrary limits (platforms, data sizes, cultures).</p>
-<dt>4.</p>
-<dd> Keep it open and exciting to use/patch/advocate Perl everywhere.</p>
-<dt>5.</p>
-<dd> Either assimilate new technologies, or build bridges to them.</dl>
+<dt>1.</dt>
+<dd> Keep it fast, simple, and useful.</dd>
+<dt>2.</dt>
+<dd> Keep features/concepts as orthogonal as possible.</dd>
+<dt>3.</dt>
+<dd> No arbitrary limits (platforms, data sizes, cultures).</dd>
+<dt>4.</dt>
+<dd> Keep it open and exciting to use/patch/advocate Perl everywhere.</dd>
+<dt>5.</dt>
+<dd> Either assimilate new technologies, or build bridges to them.</dd></dl>
 <p> <i>Where is the implementation?</i> </p>
 <p> All the talk in the world is useless without an implementation. In almost every case, the person or people who argue for a new feature will be expected to be the ones who implement it. Porters capable of coding new features have their own agendas, and are not available to implement your (possibly good) idea. </p>
 <p> <i>Backwards compatibility</i> </p>
@@ -318,17 +318,18 @@ description: "perlhack – How to hack on Perl"
 <p> The <i>t/test.pl</i> library provides some of the features of Test::More, but avoids loading most modules and uses as few core features as possible. </p>
 <p> If you write your own test, use the Test Anything Protocol &lt;<a rel="nofollow" href="http://testanything.org">http://testanything.org</a>&gt;.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>t/base</i>, <i>t/comp</i> and <i>t/opbasic</i> </p>
+<dt>&bull;</dt>
+<dd> <i>t/base</i>, <i>t/comp</i> and <i>t/opbasic</i> </dd>
 <p> Since we don&#8217;t know if <tt>&quot;require&quot;</tt> works, or even subroutines, use ad hoc tests for these three. Step carefully to avoid using the feature being tested. Tests in <i>t/opbasic</i>, for instance, have been placed there rather than in <i>t/op</i> because they test functionality which <i>t/test.pl</i> presumes has already been demonstrated to work.</p>
-<dt>&bull;</p>
-<dd> <i>t/cmd</i>, <i>t/run</i>, <i>t/io</i> and <i>t/op</i> </p>
+<dt>&bull;</dt>
+<dd> <i>t/cmd</i>, <i>t/run</i>, <i>t/io</i> and <i>t/op</i> </dd>
 <p> Now that basic <code>require()</code> and subroutines are tested, you can use the <i>t/test.pl</i> library. </p>
 <p> You can also use certain libraries like Config conditionally, but be sure to skip the test gracefully if it&#8217;s not there.</p>
-<dt>&bull;</p>
-<dd> Everything else </p>
+<dt>&bull;</dt>
+<dd> Everything else </dd>
 <p> Now that the core of Perl is tested, Test::More can and should be used. You can also use the full suite of core modules in the tests.</dl>
 <p> When you say &#8220;make test&#8221;, Perl uses the <i>t/TEST</i> program to run the test suite (except under Win32 where it uses <i>t/harness</i> instead). All tests are run from the <i>t/</i> directory, <code>not</code> the directory which contains the test. This causes some problems with the tests in <i>lib/</i>, so here&#8217;s some opportunity for some patching. </p>
 <p> You must be triply conscious of cross-platform concerns. This usually boils down to using File::Spec, avoiding things like <tt>&quot;fork()&quot;</tt> and <tt>&quot;system()&quot;</tt> unless absolutely necessary, and not assuming that a given character has a particular ordinal value (code point) or that its <font SIZE="-1">UTF-8</font> representation is composed of particular bytes. </p>
 <p> There are several functions available to specify characters and code points portably in tests. The always-preloaded functions <tt>&quot;utf8::unicode_to_native()&quot;</tt> and its inverse <tt>&quot;utf8::native_to_unicode()&quot;</tt> take code points and translate appropriately. The file <i>t/charset_tools.pl</i> has several functions that can be useful. It has versions of the previous two functions that take strings as inputs &#8212; not single numeric code points: <tt>&quot;uni_to_native()&quot;</tt> and <tt>&quot;native_to_uni()&quot;</tt>. If you must look at the individual bytes comprising a <font SIZE="-1">UTF-8</font> encoded string, <tt>&quot;byte_utf8a_to_utf8n()&quot;</tt> takes as input a string of those bytes encoded for an <font SIZE="-1">ASCII</font> platform, and returns the equivalent string in the native platform. For example, <tt>&quot;byte_utf8a_to_utf8n(&quot; &quot;)&quot;</tt> returns the byte sequence on the current platform that form the <font SIZE="-1">UTF-8</font> for <tt>&quot;U+00A0&quot;</tt>, since <tt>&quot; &quot;</tt> are the <font SIZE="-1">UTF-8</font> bytes on an <font SIZE="-1">ASCII</font> platform for that code point. This function returns <tt>&quot; &quot;</tt> on an <font SIZE="-1">ASCII</font> platform, and <tt>&quot;�A&quot;</tt> on an <font SIZE="-1">EBCDIC 1047</font> one. </p>
 <p> But easiest is, if the character is specifiable as a literal, like <tt>&quot;A&quot;</tt> or <tt>&quot;%&quot;</tt>, to use that; if not so specificable, you can use use <tt>&quot;\N{}&quot;</tt> , if the side effects aren&#8217;t troublesome. Simply specify all your characters in hex, using <tt>&quot;\N{U+ZZ}&quot;</tt> instead of <tt>&quot;
+</p></p>

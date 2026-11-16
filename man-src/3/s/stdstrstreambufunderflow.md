@@ -10,7 +10,6 @@ description: "std::strstreambuf::underflow – std::strstreambuf::underflow"
 <p>std::strstreambuf::underflow &#8211; std::strstreambuf::underflow</p>
 <h2>Synopsis</h2>
 <pre><code>protected:
-
 virtual int_type underflow();</code></pre>
 <p>Reads the next character from the get area of the buffer.<br />
 If the input sequence has a read position available (gptr() &lt; egptr(), returns (unsigned char)(*gptr()).<br />
@@ -23,10 +22,8 @@ Otherwise, returns EOF to indicate failure. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 struct mybuf : std::strstreambuf
-
 {
     int_type overflow(int_type c)
     {
@@ -59,7 +56,6 @@ struct mybuf : std::strstreambuf
     }
 };
 int main()
-
 {
     mybuf sbuf; // read-write dynamic strstreambuf
     std::iostream stream(&amp;sbuf);

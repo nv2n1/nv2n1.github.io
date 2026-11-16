@@ -22,16 +22,16 @@ description: "radixsort sradixsort – radix sort"
 <h2>Return Values</h2>
 <p>Rv -std radixsort</p>
 <h2>Errors</h2>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>The value of the Fa endbyte element of Fa table is not 0 or 255.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>The value of the Fa endbyte element of Fa table is not 0 or 255.</dd></dl>
 <p> Additionally, the Fn sradixsort function may fail and set <i>errno</i> for any of the errors specified for the library routine <a href="/docs/linux/man/3-malloc/">malloc</a>(3).</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-sort/">sort</a>(1), <a href="/docs/linux/man/3-qsort/">qsort</a>(3) </p>
 <dl>
-<dd>Knuth, D.E. 1968 <i>&quot;The Art of Computer Programming&quot;</i> <i>&quot;Sorting and Searching&quot;</i> Vol. 3 pp. 170-178</dl>
+<dd>Knuth, D.E. 1968 <i>&quot;The Art of Computer Programming&quot;</i> <i>&quot;Sorting and Searching&quot;</i> Vol. 3 pp. 170-178</dd></dl>
 <dl>
-<dd>Paige, R. 1987 <i>&quot;Three Partition Refinement Algorithms&quot;</i> <i>&quot;SIAM J. Comput.&quot;</i> Vol. 16 No. 6</dl>
+<dd>Paige, R. 1987 <i>&quot;Three Partition Refinement Algorithms&quot;</i> <i>&quot;SIAM J. Comput.&quot;</i> Vol. 16 No. 6</dd></dl>
 <dl>
-<dd>McIlroy, P. 1993 <i>&quot;Engineering Radix Sort&quot;</i> <i>&quot;Computing Systems&quot;</i> Vol. 6:1 pp. 5-27</dl>
+<dd>McIlroy, P. 1993 <i>&quot;Engineering Radix Sort&quot;</i> <i>&quot;Computing Systems&quot;</i> Vol. 6:1 pp. 5-27</dd></dl>
 <h2>History</h2>
 <p>The Fn radixsort function first appeared in BSD 4.4</p>

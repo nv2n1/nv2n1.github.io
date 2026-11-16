@@ -16,20 +16,20 @@ description: "globus-gridftp-server-setup-chroot – Set up a chroot for the Glo
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Print short usage and exit</dl>
+<dd>Print short usage and exit</dd></dl>
 <p> <code>-r NEW-CHROOT</code></p>
 <dl>
-<dd>Specify the new chroot directory to create.</dl>
+<dd>Specify the new chroot directory to create.</dd></dl>
 <p> <code>-c CERT-DIR</code></p>
 <dl>
-<dd>Specify the trusted certificate dir source.</dl>
+<dd>Specify the trusted certificate dir source.</dd></dl>
 <h2>Exit Status</h2>
 <p>0</p>
 <dl>
-<dd>Successful program execution.</dl>
+<dd>Successful program execution.</dd></dl>
 <p> 1</p>
 <dl>
-<dd>Error</dl>
+<dd>Error</dd></dl>
 <h2>Author</h2>
 <p>Copyright &#169; 1999-2015 University of Chicago</p>
 <h2>See Also</h2>

@@ -10,12 +10,7 @@ description: "xcb_render_query_filters –"
 <p>xcb_render_query_filters &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/render.h&gt;
-
-
 Request function
-
-
-
 xcb_render_query_filters_cookie_t xcb_render_query_filters(xcb_connection_t *conn, xcb_drawable_t drawable);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_render_query_filters_reply_t {
@@ -29,33 +24,33 @@ xcb_render_query_filters_cookie_t xcb_render_query_filters(xcb_connection_t *con
 } <code>xcb_render_query_filters_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_render_query_filters_reply_t *<code>xcb_render_query_filters_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_render_query_filters_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_render_query_filters_reply_t *<code>xcb_render_query_filters_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_render_query_filters_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>uint16_t *<code>xcb_render_query_filters_aliases</code>(const xcb_render_query_filters_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_render_query_filters_aliases_length</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_render_query_filters_aliases_end</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_render_query_filters_filters_length</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</p>
+<dd>uint16_t *<code>xcb_render_query_filters_aliases</code>(const xcb_render_query_filters_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_render_query_filters_aliases_length</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_render_query_filters_aliases_end</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_render_query_filters_filters_length</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);</dd>
 <dd>xcb_str_iterator_t <code>xcb_render_query_filters_filters_iterator</code>(const xcb_render_query_filters_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_RENDER_QUERY_FILTERS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>num_aliases</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_filters</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_RENDER_QUERY_FILTERS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>num_aliases</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_filters</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_render_query_filters_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_render_query_filters_reply</i>. </p>

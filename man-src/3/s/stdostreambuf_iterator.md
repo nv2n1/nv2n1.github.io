@@ -21,13 +21,9 @@ buffer &#8211; the output stream buffer to be accessed by this iterator</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;iterator&gt;
-
 int main()
-
 {
     std::basic_filebuf&lt;char&gt; f;
     f.open(&quot;test.txt&quot;, std::ios::out);

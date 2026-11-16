@@ -13,8 +13,8 @@ description: "GeoConvert — convert geographic coordinates"
 <h2>Description</h2>
 <p><code>GeoConvert</code> reads from standard input interpreting each line as a geographic coordinate and prints the coordinate in the format specified by the options on standard output. The input is interpreted in one of three different ways depending on how many space or comma delimited tokens there are on the line. The options <code>-g</code>, <code>-d</code>, <code>-u</code>, and <code>-m</code> govern the format of output. In all cases, the <font SIZE="-1">WGS84</font> model of the earth is used (<i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563).</p>
 <dl>
-<dt><code>geographic</code></p>
-<dd>2 tokens (output options <code>-g</code>, <code>-d</code>, or <code>-:</code>) given as <i>latitude</i> <i>longitude</i> using decimal degrees or degrees minutes seconds. d, &#8216;, and &quot; are used to denote degrees, minutes, and seconds, with the least significant designator optional. (See &#8220;<font SIZE="-1">QUOTING&#8221;</font> for how to quote the characters &#8216; and &#8220; when entering coordinates on the command line.) Various unicode characters (encoded with <font SIZE="-1">UTF-8</font>) may also be used to denote degrees, minutes, and seconds, e.g., the degree, prime, and double prime symbols; in addition two single quotes can be used to represent &#8221;. Alternatively, : (colon) may be used to separate the various components. Latitude is given first (unless the <code>-w</code> option is given); however, on input, either may be given first by appending or prepending <i>N</i> or <i>S</i> to the latitude and <i>E</i> or <i>W</i> to the longitude. For example, the following are all equivalent </p>
+<dt><code>geographic</code></dt>
+<dd>2 tokens (output options <code>-g</code>, <code>-d</code>, or <code>-:</code>) given as <i>latitude</i> <i>longitude</i> using decimal degrees or degrees minutes seconds. d, &#8216;, and &quot; are used to denote degrees, minutes, and seconds, with the least significant designator optional. (See &#8220;<font SIZE="-1">QUOTING&#8221;</font> for how to quote the characters &#8216; and &#8220; when entering coordinates on the command line.) Various unicode characters (encoded with <font SIZE="-1">UTF-8</font>) may also be used to denote degrees, minutes, and seconds, e.g., the degree, prime, and double prime symbols; in addition two single quotes can be used to represent &#8221;. Alternatively, : (colon) may be used to separate the various components. Latitude is given first (unless the <code>-w</code> option is given); however, on input, either may be given first by appending or prepending <i>N</i> or <i>S</i> to the latitude and <i>E</i> or <i>W</i> to the longitude. For example, the following are all equivalent </dd>
 <pre> 33.3 44.4
  E44.4 N33.3
  33d18'N 44d24'E
@@ -22,63 +22,63 @@ description: "GeoConvert — convert geographic coordinates"
  33:18 44:24</pre>
 <p>It is also possible to carry out addition or subtraction operations in geographic coordinates. For example the point 15&quot; east of 39N 70W is </p>
 <pre> 39N 70W+0:0:15E</pre>
-<dt><font SIZE="-1"><code>UTM/UPS</code></font></p>
-<dd>3 tokens (output option <code>-u</code>) given as <i>zone</i>+<i>hemisphere</i> <i>easting</i> <i>northing</i> or <i>easting</i> <i>northing</i> <i>zone</i>+<i>hemisphere</i>, where <i>hemisphere</i> is either <i>n</i> (or <i>north</i>) or <i>s</i> (or <i>south</i>). The <i>zone</i> is absent for a <font SIZE="-1">UPS</font> specification. For example, </p>
+<dt><font SIZE="-1"><code>UTM/UPS</code></font></dt>
+<dd>3 tokens (output option <code>-u</code>) given as <i>zone</i>+<i>hemisphere</i> <i>easting</i> <i>northing</i> or <i>easting</i> <i>northing</i> <i>zone</i>+<i>hemisphere</i>, where <i>hemisphere</i> is either <i>n</i> (or <i>north</i>) or <i>s</i> (or <i>south</i>). The <i>zone</i> is absent for a <font SIZE="-1">UPS</font> specification. For example, </dd>
 <pre> 38n 444140.54 3684706.36
  444140.54 3684706.36 38n
  s 2173854.98 2985980.58
  2173854.98 2985980.58 s</pre>
-<dt><font SIZE="-1"><code>MRGS</code></font></p>
-<dd>1 token (output option <code>-m</code>) is used to specify the center of an <font SIZE="-1">MGRS</font> grid square. For example, </p>
+<dt><font SIZE="-1"><code>MRGS</code></font></dt>
+<dd>1 token (output option <code>-m</code>) is used to specify the center of an <font SIZE="-1">MGRS</font> grid square. For example, </dd>
 <pre> 38SMB4484
  38SMB44140847064</pre>
 </dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-g</code></p>
-<dd>output latitude and longitude using decimal degrees. Default output mode.</p>
-<dt><code>-d</code></p>
-<dd>output latitude and longitude using degrees, minutes, and seconds (<font SIZE="-1">DMS</font>).</p>
-<dt><code>-:</code></p>
-<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</p>
-<dt><code>-u</code></p>
-<dd>output <font SIZE="-1">UTM</font> or <font SIZE="-1">UPS.</font></p>
-<dt><code>-m</code></p>
-<dd>output <font SIZE="-1">MGRS.</font></p>
-<dt><code>-c</code></p>
-<dd>output meridian convergence and scale for the corresponding <font SIZE="-1">UTM</font> or <font SIZE="-1">UPS</font> projection. Convergence is the bearing of grid north given as degrees clockwise from true north.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 0); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</p>
-<dt><code>-z</code></p>
-<dd>set the zone to <i>zone</i> for output. Use either 0 &lt; <i>zone</i> &lt;= 60 for a <font SIZE="-1">UTM</font> zone or <i>zone</i> = 0 for <font SIZE="-1">UPS. </font> Alternatively use a <i>zone</i>+<i>hemisphere</i> designation, e.g., 38n. See &#8220;<font SIZE="-1">ZONE&#8221;</font>.</p>
-<dt><code>-s</code></p>
-<dd>use the standard <font SIZE="-1">UPS</font> and <font SIZE="-1">UTM</font> zones.</p>
-<dt><code>-t</code></p>
-<dd>similar to <code>-s</code> but forces <font SIZE="-1">UPS</font> regions to the closest <font SIZE="-1">UTM</font> zone.</p>
-<dt><code>-n</code></p>
-<dd>on input, <font SIZE="-1">MGRS</font> coordinates refer to the south-west corner of the <font SIZE="-1">MGRS</font> square instead of the center; see &#8220;<font SIZE="-1">MGRS&#8221;</font>.</p>
-<dt><code>-w</code></p>
-<dd>on input and output, longitude precedes latitude (except that on input this can be overridden by a hemisphere designator, <i>N</i>, <i>S</i>, <i>E</i>, <i>W</i>).</p>
-<dt><code>-l</code></p>
-<dd>on output, <font SIZE="-1">UTM/UPS</font> uses the long forms <i>north</i> and <i>south</i> to designate the hemisphere instead of <i>n</i> or <i>s</i>.</p>
-<dt><code>-a</code></p>
-<dd>on output, <font SIZE="-1">UTM/UPS</font> uses the abbreviations <i>n</i> and <i>s</i> to designate the hemisphere instead of <i>north</i> or <i>south</i>; this is the default representation.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-g</code></dt>
+<dd>output latitude and longitude using decimal degrees. Default output mode.</dd>
+<dt><code>-d</code></dt>
+<dd>output latitude and longitude using degrees, minutes, and seconds (<font SIZE="-1">DMS</font>).</dd>
+<dt><code>-:</code></dt>
+<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</dd>
+<dt><code>-u</code></dt>
+<dd>output <font SIZE="-1">UTM</font> or <font SIZE="-1">UPS.</font></dd>
+<dt><code>-m</code></dt>
+<dd>output <font SIZE="-1">MGRS.</font></dd>
+<dt><code>-c</code></dt>
+<dd>output meridian convergence and scale for the corresponding <font SIZE="-1">UTM</font> or <font SIZE="-1">UPS</font> projection. Convergence is the bearing of grid north given as degrees clockwise from true north.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 0); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</dd>
+<dt><code>-z</code></dt>
+<dd>set the zone to <i>zone</i> for output. Use either 0 &lt; <i>zone</i> &lt;= 60 for a <font SIZE="-1">UTM</font> zone or <i>zone</i> = 0 for <font SIZE="-1">UPS. </font> Alternatively use a <i>zone</i>+<i>hemisphere</i> designation, e.g., 38n. See &#8220;<font SIZE="-1">ZONE&#8221;</font>.</dd>
+<dt><code>-s</code></dt>
+<dd>use the standard <font SIZE="-1">UPS</font> and <font SIZE="-1">UTM</font> zones.</dd>
+<dt><code>-t</code></dt>
+<dd>similar to <code>-s</code> but forces <font SIZE="-1">UPS</font> regions to the closest <font SIZE="-1">UTM</font> zone.</dd>
+<dt><code>-n</code></dt>
+<dd>on input, <font SIZE="-1">MGRS</font> coordinates refer to the south-west corner of the <font SIZE="-1">MGRS</font> square instead of the center; see &#8220;<font SIZE="-1">MGRS&#8221;</font>.</dd>
+<dt><code>-w</code></dt>
+<dd>on input and output, longitude precedes latitude (except that on input this can be overridden by a hemisphere designator, <i>N</i>, <i>S</i>, <i>E</i>, <i>W</i>).</dd>
+<dt><code>-l</code></dt>
+<dd>on output, <font SIZE="-1">UTM/UPS</font> uses the long forms <i>north</i> and <i>south</i> to designate the hemisphere instead of <i>n</i> or <i>s</i>.</dd>
+<dt><code>-a</code></dt>
+<dd>on output, <font SIZE="-1">UTM/UPS</font> uses the abbreviations <i>n</i> and <i>s</i> to designate the hemisphere instead of <i>north</i> or <i>south</i>; this is the default representation.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Precision</h2>
 <p><i>prec</i> gives precision of the output with <i>prec</i> = 0 giving 1 m precision, <i>prec</i> = 3 giving 1 mm precision, etc. <i>prec</i> is the number of digits after the decimal point for <font SIZE="-1">UTM/UPS. </font> The number of digits per coordinate for <font SIZE="-1">MGRS</font> is 5 + <i>prec</i>. For decimal degrees, the number of digits after the decimal point is 5 + <i>prec</i>. For <font SIZE="-1">DMS </font>(degree, minute, seconds) output, the number of digits after the decimal point in the seconds components is 1 + <i>prec</i>; if this is negative then use minutes (<i>prec</i> = -2 or -3) or degrees (<i>prec</i> &lt;= -4) as the least significant component. Print convergence, resp. scale, with 5 + <i>prec</i>, resp. 7 + <i>prec</i>, digits after the decimal point. The minimum value of <i>prec</i> is -5 and the maximum is 9 for <font SIZE="-1">UTM/UPS, 9</font> for decimal degrees, 10 for <font SIZE="-1">DMS, 6</font> for <font SIZE="-1">MGRS,</font> and 8 for convergence and scale.</p>
 <h2>Mgrs</h2>
@@ -104,22 +104,22 @@ description: "GeoConvert — convert geographic coordinates"
 <h2>Quoting</h2>
 <p>Unfortunately the characters &#8216; and &#8220; have special meanings in many shells and have to be entered with care. However note (1) that the trailing designator is optional and that (2) you can use colons as a separator character. Thus 10d20&#8217; can be entered as 10d20 or 10:20 and 10d20&#8217;30&#8221; can be entered as 10:20:30.</p>
 <dl>
-<dt>Unix shells (sh, bash, tsch)</p>
-<dd>The characters &#8216; and &#8220; can be quoted by preceding them with a \ (backslash); or you can quote a string containing &#8216; with a pair of &#8221;s. The two alternatives are illustrated by </p>
+<dt>Unix shells (sh, bash, tsch)</dt>
+<dd>The characters &#8216; and &#8220; can be quoted by preceding them with a \ (backslash); or you can quote a string containing &#8216; with a pair of &#8221;s. The two alternatives are illustrated by </dd>
 <pre> echo 10d20\'30\&quot; &quot;20d30'40&quot; | GeoConvert -d -p -1
  =&gt; 10d20'30&quot;N 020d30'40&quot;E</pre>
 <p>Quoting of command line arguments is similar </p>
 <pre> GeoConvert -d -p -1 --input-string &quot;10d20'30\&quot; 20d30'40&quot;
  =&gt; 10d20'30&quot;N 020d30'40&quot;E</pre>
-<dt>Windows command shell (cmd)</p>
-<dd>The &#8216; character needs no quoting; the &quot; character can either be quoted by a ^ or can be represented by typing &#8216; twice. (This quoting is usually unnecessary because the trailing designator can be omitted.) Thus </p>
+<dt>Windows command shell (cmd)</dt>
+<dd>The &#8216; character needs no quoting; the &quot; character can either be quoted by a ^ or can be represented by typing &#8216; twice. (This quoting is usually unnecessary because the trailing designator can be omitted.) Thus </dd>
 <pre> echo 10d20'30'' 20d30'40 | GeoConvert -d -p -1
  =&gt; 10d20'30&quot;N 020d30'40&quot;E</pre>
 <p>Use \ to quote the &quot; character in a command line argument </p>
 <pre> GeoConvert -d -p -1 --input-string &quot;10d20'30\&quot; 20d30'40&quot;
  =&gt; 10d20'30&quot;N 020d30'40&quot;E</pre>
-<dt>Input from a file</p>
-<dd>No quoting need be done if the input from a file. Thus each line of the file <tt>&quot;input.txt&quot;</tt> should just contain the plain coordinates. </p>
+<dt>Input from a file</dt>
+<dd>No quoting need be done if the input from a file. Thus each line of the file <tt>&quot;input.txt&quot;</tt> should just contain the plain coordinates. </dd>
 <pre> GeoConvert -d -p -1 &lt; input.txt</pre>
 </dl>
 <h2>Examples</h2>
@@ -148,14 +148,14 @@ description: "GeoConvert — convert geographic coordinates"
 <p>An illegal line of input will print an error message to standard output beginning with <tt>&quot;ERROR:&quot;</tt> and causes <code>GeoConvert</code> to return an exit code of 1. However, an error does not cause <code>GeoConvert</code> to terminate; following lines will be converted.</p>
 <h2>Abbreviations</h2>
 <dl>
-<dt><font SIZE="-1"><code>UTM</code></font></p>
-<dd>Universal Transverse Mercator, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system</a>&gt;.</p>
-<dt><font SIZE="-1"><code>UPS</code></font></p>
-<dd>Universal Polar Stereographic, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Universal_Polar_Stereographic">https://en.wikipedia.org/wiki/Universal_Polar_Stereographic</a>&gt;.</p>
-<dt><font SIZE="-1"><code>MGRS</code></font></p>
-<dd>Military Grid Reference System, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Military_grid_reference_system">https://en.wikipedia.org/wiki/Military_grid_reference_system</a>&gt;.</p>
-<dt><font SIZE="-1"><code>WGS84</code></font></p>
-<dd>World Geodetic System 1984, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/WGS84">https://en.wikipedia.org/wiki/WGS84</a>&gt;.</dl>
+<dt><font SIZE="-1"><code>UTM</code></font></dt>
+<dd>Universal Transverse Mercator, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system</a>&gt;.</dd>
+<dt><font SIZE="-1"><code>UPS</code></font></dt>
+<dd>Universal Polar Stereographic, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Universal_Polar_Stereographic">https://en.wikipedia.org/wiki/Universal_Polar_Stereographic</a>&gt;.</dd>
+<dt><font SIZE="-1"><code>MGRS</code></font></dt>
+<dd>Military Grid Reference System, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/Military_grid_reference_system">https://en.wikipedia.org/wiki/Military_grid_reference_system</a>&gt;.</dd>
+<dt><font SIZE="-1"><code>WGS84</code></font></dt>
+<dd>World Geodetic System 1984, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/WGS84">https://en.wikipedia.org/wiki/WGS84</a>&gt;.</dd></dl>
 <h2>See Also</h2>
 <p>An online version of this utility is availbable at &lt;<a rel="nofollow" href="http://geographiclib.sourceforge.net/cgi-bin/GeoConvert">http://geographiclib.sourceforge.net/cgi-bin/GeoConvert</a>&gt;. </p>
 <p> The algorithms for the transverse Mercator projection are described in C. F. F. Karney, <i>Transverse Mercator with an accuracy of a few nanometers</i>, J. Geodesy <code>85</code>(8), 475-485 (Aug. 2011); <font SIZE="-1">DOI </font>&lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-011-0445-3">https://dx.doi.org/10.1007/s00190-011-0445-3</a>&gt;; preprint &lt;<a rel="nofollow" href="http://arxiv.org/abs/1002.1417">http://arxiv.org/abs/1002.1417</a>&gt;.</p>

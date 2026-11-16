@@ -10,9 +10,7 @@ description: "xcb_dri2_get_buffers –"
 <p>xcb_dri2_get_buffers &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/dri2.h&gt;
-
 Request function
-
     xcb_dri2_get_buffers_cookie_t
     xcb_dri2_get_buffers(xcb_connection_t *conn, xcb_drawable_t drawable, uint32_t count, uint32_t attachments_len, const uint32_t *attachments);</code></pre>
 <h3>Reply datastructure</h3>
@@ -28,39 +26,39 @@ Request function
 } <code>xcb_dri2_get_buffers_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_dri2_get_buffers_reply_t *<code>xcb_dri2_get_buffers_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_dri2_get_buffers_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_dri2_get_buffers_reply_t *<code>xcb_dri2_get_buffers_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_dri2_get_buffers_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_dri2_dri2_buffer_t *<code>xcb_dri2_get_buffers_buffers</code>(const xcb_dri2_get_buffers_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_dri2_get_buffers_buffers_length</code>(const xcb_dri2_get_buffers_reply_t *<i>reply</i>);</p>
+<dd>xcb_dri2_dri2_buffer_t *<code>xcb_dri2_get_buffers_buffers</code>(const xcb_dri2_get_buffers_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_dri2_get_buffers_buffers_length</code>(const xcb_dri2_get_buffers_reply_t *<i>reply</i>);</dd>
 <dd>xcb_dri2_dri2_buffer_iterator_t <code>xcb_dri2_get_buffers_buffers_iterator</code>(const xcb_dri2_get_buffers_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>count</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>attachments_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>attachments</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>count</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>attachments_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>attachments</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_DRI2_GET_BUFFERS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>count</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_DRI2_GET_BUFFERS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>count</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_dri2_get_buffers_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_dri2_get_buffers_reply</i>. </p>

@@ -15,27 +15,27 @@ ipcctl_pre_down_nolock - retrieve an ipc and check permissions for some IPC_XXX 
 <h2>Arguments</h2>
 
 <i>ns</i>
-<dl><dd><dd>ipc namespace</dl>
+<dl><dd></dd><dd>ipc namespace</dd></dl>
  
 
  <i>ids</i>
-<dl><dd>the table of ids where to look for the ipc</dl>
+<dl><dd>the table of ids where to look for the ipc</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the id of the ipc to retrieve</dl>
+<dl><dd>the id of the ipc to retrieve</dd></dl>
  
 
  <i>cmd</i>
-<dl><dd>the cmd to check</dl>
+<dl><dd>the cmd to check</dd></dl>
  
 
  <i>perm</i>
-<dl><dd>the permission to set</dl>
+<dl><dd>the permission to set</dd></dl>
  
 
  <i>extra_perm</i>
-<dl><dd>one extra permission parameter used by msq</dl>
+<dl><dd>one extra permission parameter used by msq</dd></dl>
 
 <h2>Description</h2>
 

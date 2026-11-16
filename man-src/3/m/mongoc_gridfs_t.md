@@ -17,7 +17,7 @@ typedef struct _mongoc_gridfs_t mongoc_gridfs_t;</pre>
 <p> mongoc_gridfs also integrates tightly with the <code>mongoc_stream_t</code> abstraction, which provides some convenient wrapping for file creation and reading/writing. It can be used without, but its worth looking to see if your problem can fit that model. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_gridfs_t</code> does not support read preferences. In a replica set, GridFS queries are always routed to the primary. </p>
+<dd><code>mongoc_gridfs_t</code> does not support read preferences. In a replica set, GridFS queries are always routed to the primary. </dd>
 </dl>
 <h2>Thread Safety</h2>
 <p><code>mongoc_gridfs_t</code> is NOT thread-safe and should only be used in the same thread as the owning <code>mongoc_client_t</code> \&amp;. </p>

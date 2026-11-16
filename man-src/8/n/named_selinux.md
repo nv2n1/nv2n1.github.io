@@ -139,56 +139,56 @@ description: "named_selinux – Security Enhanced Linux Policy for the named pro
 <p> <code>named_cache_t</code> </p>
 <p> &#8211; Set files with the named_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/named/data(/.*)?, /var/lib/softhsm(/.*)?, /var/lib/unbound(/.*)?, /var/named/slaves(/.*)?, /var/named/dynamic(/.*)?, /var/named/chroot/var/tmp(/.*)?, /var/named/chroot/var/named/data(/.*)?, /var/named/chroot/var/named/slaves(/.*)?, /var/named/chroot/var/named/dynamic(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/named/data(/.*)?, /var/lib/softhsm(/.*)?, /var/lib/unbound(/.*)?, /var/named/slaves(/.*)?, /var/named/dynamic(/.*)?, /var/named/chroot/var/tmp(/.*)?, /var/named/chroot/var/named/data(/.*)?, /var/named/chroot/var/named/slaves(/.*)?, /var/named/chroot/var/named/dynamic(/.*)? </dd>
 </dl>
 <p> <code>named_checkconf_exec_t</code> </p>
 <p> &#8211; Set files with the named_checkconf_exec_t type, if you want to transition an executable to the named_checkconf_t domain. </p>
 <p> <code>named_conf_t</code> </p>
 <p> &#8211; Set files with the named_conf_t type, if you want to treat the files as named configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rndc.*, /etc/unbound(/.*)?, /var/named/chroot(/.*)?, /etc/named.rfc1912.zones, /var/named/chroot/etc/named.rfc1912.zones, /etc/named.conf, /var/named/named.ca, /etc/named.root.hints, /var/named/chroot/etc/named.conf, /etc/named.caching-nameserver.conf, /var/named/chroot/var/named/named.ca, /var/named/chroot/etc/named.root.hints, /var/named/chroot/etc/named.caching-nameserver.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/rndc.*, /etc/unbound(/.*)?, /var/named/chroot(/.*)?, /etc/named.rfc1912.zones, /var/named/chroot/etc/named.rfc1912.zones, /etc/named.conf, /var/named/named.ca, /etc/named.root.hints, /var/named/chroot/etc/named.conf, /etc/named.caching-nameserver.conf, /var/named/chroot/var/named/named.ca, /var/named/chroot/etc/named.root.hints, /var/named/chroot/etc/named.caching-nameserver.conf </dd>
 </dl>
 <p> <code>named_exec_t</code> </p>
 <p> &#8211; Set files with the named_exec_t type, if you want to transition an executable to the named_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/named, /usr/sbin/lwresd, /usr/sbin/unbound, /usr/sbin/named-sdb, /usr/sbin/named-pkcs11, /usr/sbin/unbound-anchor, /usr/sbin/unbound-control, /usr/sbin/unbound-checkconf </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/named, /usr/sbin/lwresd, /usr/sbin/unbound, /usr/sbin/named-sdb, /usr/sbin/named-pkcs11, /usr/sbin/unbound-anchor, /usr/sbin/unbound-control, /usr/sbin/unbound-checkconf </dd>
 </dl>
 <p> <code>named_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the named_initrc_exec_t type, if you want to transition an executable to the named_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/named, /etc/rc.d/init.d/unbound, /etc/rc.d/init.d/named-sdb </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/named, /etc/rc.d/init.d/unbound, /etc/rc.d/init.d/named-sdb </dd>
 </dl>
 <p> <code>named_keytab_t</code> </p>
 <p> &#8211; Set files with the named_keytab_t type, if you want to treat the files as kerberos keytab files. </p>
 <p> <code>named_log_t</code> </p>
 <p> &#8211; Set files with the named_log_t type, if you want to treat the data as named log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/named.*, /var/named/chroot/var/log/named.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/named.*, /var/named/chroot/var/log/named.* </dd>
 </dl>
 <p> <code>named_tmp_t</code> </p>
 <p> &#8211; Set files with the named_tmp_t type, if you want to store named temporary files in the /tmp directories. </p>
 <p> <code>named_unit_file_t</code> </p>
 <p> &#8211; Set files with the named_unit_file_t type, if you want to treat the files as named unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/named.*, /usr/lib/systemd/system/unbound.*, /usr/lib/systemd/system/named-sdb.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/named.*, /usr/lib/systemd/system/unbound.*, /usr/lib/systemd/system/named-sdb.* </dd>
 </dl>
 <p> <code>named_var_run_t</code> </p>
 <p> &#8211; Set files with the named_var_run_t type, if you want to store the named files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/bind(/.*)?, /var/run/named(/.*)?, /var/run/unbound(/.*)?, /var/named/chroot/run/named.*, /var/named/chroot/var/run/named.*, /var/run/ndc </p>
+<dt>Paths:</dt>
+<dd>/var/run/bind(/.*)?, /var/run/named(/.*)?, /var/run/unbound(/.*)?, /var/named/chroot/run/named.*, /var/named/chroot/var/run/named.*, /var/run/ndc </dd>
 </dl>
 <p> <code>named_zone_t</code> </p>
 <p> &#8211; Set files with the named_zone_t type, if you want to treat the files as named zone data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/named(/.*)?, /var/named/chroot/var/named(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/named(/.*)?, /var/named/chroot/var/named(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

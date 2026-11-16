@@ -27,10 +27,10 @@ description: "sla_syrfsx_extended.f –"
  and ERR_BNDS_COMP for details of the error bounds. Note that this
  subroutine is only resonsible for setting the second fields of
  ERR_BNDS_NORM and ERR_BNDS_COMP.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>PREC_TYPE</i> </p>
+<dd><i>PREC_TYPE</i> </dd>
 <pre> PREC_TYPE is INTEGER
  Specifies the intermediate precision to be used in refinement.
  The value is defined by ILAPREC(P) where P is a CHARACTER and
@@ -244,13 +244,13 @@ description: "sla_syrfsx_extended.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 391 of file sla_syrfsx_extended.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

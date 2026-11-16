@@ -17,201 +17,201 @@ description: "mikmod – play soundtracker etc. modules on a Unix machine."
 <p> Options can be given in any order, and are case-sensitive. For the options which have both a short and a long form, the long form can be prefixed by one or two dashes. Note that the settings in your $HOME/.mikmodrc will override the defaults shown in this man page. </p>
 <h2>OUTPUT OPTIONS</h2>
 <dl>
-<dt><code>-d </code><i>n</i></p>
+<dt><code>-d </code><i>n</i></dt>
 <dd>
-<dt><code>&#8211;driver </code><i>n</i></p>
-<dd> Use the specified device driver for output, 0 is autodetect. The default is 0. If your installed libmikmod engine is recent enough (&gt;=3.1.7), you can also specify the driver with an alias, as well as driver options separated by commas. The list and driver aliases and recognized options can be found in libmikmod&#8217;s documentation.</p>
-<dt><code>-o[utput] </code><i>8m</i>|<i>8s</i>|<i>16m</i>|<i>16s</i></p>
-<dd> Output settings, 8 or 16 bit in stereo or mono. The default is &quot;16s&quot;.</p>
-<dt><code>-f </code><i>freq</i></p>
+</dd><dt><code>&#8211;driver </code><i>n</i></dt>
+<dd> Use the specified device driver for output, 0 is autodetect. The default is 0. If your installed libmikmod engine is recent enough (&gt;=3.1.7), you can also specify the driver with an alias, as well as driver options separated by commas. The list and driver aliases and recognized options can be found in libmikmod&#8217;s documentation.</dd>
+<dt><code>-o[utput] </code><i>8m</i>|<i>8s</i>|<i>16m</i>|<i>16s</i></dt>
+<dd> Output settings, 8 or 16 bit in stereo or mono. The default is &quot;16s&quot;.</dd>
+<dt><code>-f </code><i>freq</i></dt>
 <dd>
-<dt><code>&#8211;frequency </code><i>freq</i></p>
-<dd> Set mixing frequency in hertz. The default is 44100.</p>
-<dt><code>-i</code></p>
+</dd><dt><code>&#8211;frequency </code><i>freq</i></dt>
+<dd> Set mixing frequency in hertz. The default is 44100.</dd>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;interpolate</code></p>
-<dd> Use interpolated mixing. This will generally improve audio quality, at the expense of a bit more CPU usage. Note that this option alters the behaviour of software drivers only ; hardware drivers are not affected (default).</p>
-<dt><code>&#8211;nointerpolate</code></p>
-<dd> Do not use interpolated mixing.</p>
-<dt><code>-hq</code></p>
+</dd><dt><code>&#8211;interpolate</code></dt>
+<dd> Use interpolated mixing. This will generally improve audio quality, at the expense of a bit more CPU usage. Note that this option alters the behaviour of software drivers only ; hardware drivers are not affected (default).</dd>
+<dt><code>&#8211;nointerpolate</code></dt>
+<dd> Do not use interpolated mixing.</dd>
+<dt><code>-hq</code></dt>
 <dd>
-<dt><code>&#8211;hqmixer</code></p>
-<dd> Use high quality software mixer. This improves audio quality, but requires a lot more CPU power. Note that this option alters the behaviour of software drivers only ; hardware drivers are not affected.</p>
-<dt><code>&#8211;nohqmixer</p>
-<dd> Do not use high quality software mixer (default).</p>
-<dt>-s</code></p>
+</dd><dt><code>&#8211;hqmixer</code></dt>
+<dd> Use high quality software mixer. This improves audio quality, but requires a lot more CPU power. Note that this option alters the behaviour of software drivers only ; hardware drivers are not affected.</dd>
+<dt><code>&#8211;nohqmixer</dt>
+<dd> Do not use high quality software mixer (default).</dd>
+<dt>-s</code></dt>
 <dd>
-<dt><code>&#8211;surround</code></p>
-<dd> Use surround mixing.</p>
-<dt><code>&#8211;nosurround</code></p>
-<dd> Do not use surround mixing (default).</p>
-<dt><code>-r </code><i>n</i></p>
+</dd><dt><code>&#8211;surround</code></dt>
+<dd> Use surround mixing.</dd>
+<dt><code>&#8211;nosurround</code></dt>
+<dd> Do not use surround mixing (default).</dd>
+<dt><code>-r </code><i>n</i></dt>
 <dd>
-<dt><code>&#8211;reverb </code><i>n</i></p>
-<dd> Sets reverb amount from 0 (no reverb) to 15 (max reverb). The default is 0 (no reverb). </p>
+</dd><dt><code>&#8211;reverb </code><i>n</i></dt>
+<dd> Sets reverb amount from 0 (no reverb) to 15 (max reverb). The default is 0 (no reverb). </dd>
 </dl>
 <h2>PLAYBACK OPTIONS</h2>
 <dl>
-<dt><code>-v </code><i>volume</i></p>
+<dt><code>-v </code><i>volume</i></dt>
 <dd>
-<dt><code>&#8211;volume </code><i>volume</i></p>
-<dd> Set volume from 0% (silence) to 100%. The default is 100%.</p>
-<dt><code>-F</code></p>
+</dd><dt><code>&#8211;volume </code><i>volume</i></dt>
+<dd> Set volume from 0% (silence) to 100%. The default is 100%.</dd>
+<dt><code>-F</code></dt>
 <dd>
-<dt><code>&#8211;fadeout</code></p>
-<dd> Fade out the volume during the last pattern of each module.</p>
-<dt><code>&#8211;nofadeout</code></p>
-<dd> Do not fade out the volume during the last pattern of each module (default).</p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8211;fadeout</code></dt>
+<dd> Fade out the volume during the last pattern of each module.</dd>
+<dt><code>&#8211;nofadeout</code></dt>
+<dd> Do not fade out the volume during the last pattern of each module (default).</dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;loops</code></p>
-<dd> Enable in-module backwards loops.</p>
-<dt><code>&#8211;noloops</code></p>
-<dd> Disable in-module backwards loops (default).</p>
-<dt><code>-a</code></p>
+</dd><dt><code>&#8211;loops</code></dt>
+<dd> Enable in-module backwards loops.</dd>
+<dt><code>&#8211;noloops</code></dt>
+<dd> Disable in-module backwards loops (default).</dd>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;panning</code></p>
-<dd> Process panning effects (default). This should be disabled (using &#8211;nopanning) for very old demo modules which use the panning effects for synchronization purposes.</p>
-<dt><code>&#8211;nopanning</code></p>
-<dd> Do not process panning effects.</p>
-<dt><code>-x</code></p>
+</dd><dt><code>&#8211;panning</code></dt>
+<dd> Process panning effects (default). This should be disabled (using &#8211;nopanning) for very old demo modules which use the panning effects for synchronization purposes.</dd>
+<dt><code>&#8211;nopanning</code></dt>
+<dd> Do not process panning effects.</dd>
+<dt><code>-x</code></dt>
 <dd>
-<dt><code>&#8211;protracker</code></p>
-<dd> Enable protracker extended speed effect (default). This should be disabled (using &#8211;noprotracker) for very old demo modules which use the extended speed effect for synchronization purposes.</p>
-<dt><code>&#8211;noprotracker</code></p>
-<dd> Disable protracker extended speed effect. </p>
+</dd><dt><code>&#8211;protracker</code></dt>
+<dd> Enable protracker extended speed effect (default). This should be disabled (using &#8211;noprotracker) for very old demo modules which use the extended speed effect for synchronization purposes.</dd>
+<dt><code>&#8211;noprotracker</code></dt>
+<dd> Disable protracker extended speed effect. </dd>
 </dl>
 <h2>LOADING OPTIONS</h2>
 <dl>
-<dt><code>-y </code><i>dir</i></p>
+<dt><code>-y </code><i>dir</i></dt>
 <dd>
-<dt><code>&#8211;directory </code><i>dir</i></p>
-<dd> Scan directory recursively for modules.</p>
-<dt><code>-c</code></p>
+</dd><dt><code>&#8211;directory </code><i>dir</i></dt>
+<dd> Scan directory recursively for modules.</dd>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8211;curious</code></p>
-<dd> Look for hidden patterns in module. Most modules don&#8217;t have hidden patterns, but you can find &quot;bonus&quot; patterns (or just silence) in some modules.</p>
-<dt><code>&#8211;nocurious</code></p>
-<dd> Do not look for hidden patterns in module (default).</p>
-<dt><code>-p </code><i>n</i></p>
+</dd><dt><code>&#8211;curious</code></dt>
+<dd> Look for hidden patterns in module. Most modules don&#8217;t have hidden patterns, but you can find &quot;bonus&quot; patterns (or just silence) in some modules.</dd>
+<dt><code>&#8211;nocurious</code></dt>
+<dd> Do not look for hidden patterns in module (default).</dd>
+<dt><code>-p </code><i>n</i></dt>
 <dd>
-<dt><code>&#8211;playmode </code><i>n</i></p>
-<dd> Playlist mode. The allowed values here are 1, to loop the current module; 2, to play the whole playlist repeatedly; 4, to shuffle the list before playing, and 8, to play the whole list randomly. The default is 2.</p>
-<dt><code>-t</code></p>
+</dd><dt><code>&#8211;playmode </code><i>n</i></dt>
+<dd> Playlist mode. The allowed values here are 1, to loop the current module; 2, to play the whole playlist repeatedly; 4, to shuffle the list before playing, and 8, to play the whole list randomly. The default is 2.</dd>
+<dt><code>-t</code></dt>
 <dd>
-<dt><code>&#8211;tolerant</code></p>
-<dd> Don&#8217;t halt MikMod if a module cannot be read or is an unknown format (default).</p>
-<dt><code>&#8211;notolerant</code></p>
-<dd> Halt MikMod if a module cannot be read or is an unknown format. </p>
+</dd><dt><code>&#8211;tolerant</code></dt>
+<dd> Don&#8217;t halt MikMod if a module cannot be read or is an unknown format (default).</dd>
+<dt><code>&#8211;notolerant</code></dt>
+<dd> Halt MikMod if a module cannot be read or is an unknown format. </dd>
 </dl>
 <h2>SCHEDULING OPTIONS</h2>
 <p> The following options need root privileges (or a setuid root binary), and don&#8217;t work under all systems.</p>
 <dl>
-<dt><code>-s</code></p>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;renice</code></p>
-<dd> Renice to -20 if possible to gain more CPU priority. This option is only available under FreeBSD, Linux, NetBSD, OpenBSD and OS/2.</p>
-<dt><code>&#8211;norenice</code></p>
-<dd> Do not renice to -20 (default).</p>
-<dt><code>-S</code></p>
+</dd><dt><code>&#8211;renice</code></dt>
+<dd> Renice to -20 if possible to gain more CPU priority. This option is only available under FreeBSD, Linux, NetBSD, OpenBSD and OS/2.</dd>
+<dt><code>&#8211;norenice</code></dt>
+<dd> Do not renice to -20 (default).</dd>
+<dt><code>-S</code></dt>
 <dd>
-<dt><code>&#8211;realtime</code></p>
-<dd> Reschedule mikmod to gain real-time priority (and thus more CPU time). <code>DANGEROUS! USE WITH CAUTION!</code> This option is only available under FreeBSD, Linux and OS/2.</p>
-<dt><code>&#8211;norealtime</code></p>
-<dd> Do not reschedule MikMod to gain real-time priority (default). </p>
+</dd><dt><code>&#8211;realtime</code></dt>
+<dd> Reschedule mikmod to gain real-time priority (and thus more CPU time). <code>DANGEROUS! USE WITH CAUTION!</code> This option is only available under FreeBSD, Linux and OS/2.</dd>
+<dt><code>&#8211;norealtime</code></dt>
+<dd> Do not reschedule MikMod to gain real-time priority (default). </dd>
 </dl>
 <h2>DISPLAY OPTIONS</h2>
 <dl>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode. Disables interactive commands and displays only errors. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode. Disables interactive commands and displays only errors. </dd>
 </dl>
 <h2>INFORMATION OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;information</code></p>
-<dd> Display the list of the known drivers and module loaders.</p>
-<dt><code>-N </code><i>n</i></p>
+</dd><dt><code>&#8211;information</code></dt>
+<dd> Display the list of the known drivers and module loaders.</dd>
+<dt><code>-N </code><i>n</i></dt>
 <dd>
-<dt><code>&#8211;drvinfo </code><i>n</i></p>
-<dd> Display information about a specific driver.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;drvinfo </code><i>n</i></dt>
+<dd> Display information about a specific driver.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display MikMod version.</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display MikMod version.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Display a summary of the options. </p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Display a summary of the options. </dd>
 </dl>
 <h2>CONFIGURATION OPTION</h2>
 <dl>
-<dt><code>&#8211;norc</code></p>
-<dd> Do not parse the $HOME/.mikmodrc configuration file. This file contains your default settings, so that you don&#8217;t have to specify them each time you run MikMod. The file is read when you run MikMod and updated on exit. Using this option prevents MikMod from accessing this file. </p>
+<dt><code>&#8211;norc</code></dt>
+<dd> Do not parse the $HOME/.mikmodrc configuration file. This file contains your default settings, so that you don&#8217;t have to specify them each time you run MikMod. The file is read when you run MikMod and updated on exit. Using this option prevents MikMod from accessing this file. </dd>
 </dl>
 <h2>RUNTIME COMMANDS</h2>
 <p> At play time, the following keystrokes offer control over MikMod:</p>
 <dl>
-<dt><code>H</code>, <code>function key F1</code></p>
-<dd> Display help panel.</p>
-<dt><code>S</code>, <code>function key F2</code></p>
-<dd> Display samples panel.</p>
-<dt><code>I</code>, <code>function key F3</code></p>
-<dd> Display instruments panel (if present in the module).</p>
-<dt><code>M</code>, <code>function key F4</code></p>
-<dd> Display song message panel (if present in the module).</p>
-<dt><code>L</code>, <code>function key F5</code></p>
-<dd> Display the playlist panel.</p>
-<dt><code>C</code>, <code>function key F6</code></p>
-<dd> Display the configuration panel.</p>
-<dt><code>V</code>, <code>function key F7</code></p>
-<dd> Display the volume panel.</p>
-<dt><code>digits</code></p>
-<dd> Set volume from 10% (digit 1) to 100% (digit 0).</p>
-<dt><code>&lt;</code></p>
-<dd> Decrease volume.</p>
-<dt><code>&gt;</code></p>
-<dd> Increase volume.</p>
-<dt><code>&#8211;</code>, <code>Left</code></p>
-<dd> Restart current pattern / skip to previous pattern.</p>
-<dt><code>+</code>, <code>Right</code></p>
-<dd> Skip to next pattern in current module.</p>
-<dt><code>Up</code>, <code>Down</code></p>
-<dd> Scroll panel.</p>
-<dt><code>PgUp</code>, <code>PgDown</code></p>
-<dd> Scroll panel (faster).</p>
-<dt><code>Home</code></p>
-<dd> Go on top of the panel.</p>
-<dt><code>End</code></p>
-<dd> Go to the end of the panel.</p>
-<dt><code>(</code></p>
-<dd> Decrease speed variable (module plays faster).</p>
-<dt><code>)</code></p>
-<dd> Increase speed variable (module plays slower).</p>
-<dt><code>{</code></p>
-<dd> Decrease tempo variable (module plays slower).</p>
-<dt><code>}</code></p>
-<dd> Increase tempo variable (module plays faster).</p>
-<dt><code>:</code> or <code>;</code></p>
-<dd> Toggle interpolation mixing.</p>
-<dt><code>U</code></p>
-<dd> Toggle surround mixing.</p>
-<dt><code>Q</code></p>
-<dd> Exit MikMod.</p>
-<dt><code>P</code></p>
-<dd> Switch to previous module in playlist.</p>
-<dt><code>N</code></p>
-<dd> Switch to next module in playlist.</p>
-<dt><code>R</code></p>
-<dd> Restart current module.</p>
-<dt><code>F</code></p>
-<dd> Toggle fake/real volume bars in volume panel.</p>
-<dt><code>space</code></p>
-<dd> Toggle pause.</p>
-<dt><code>Control-L</code></p>
-<dd> Refresh the screen. </p>
+<dt><code>H</code>, <code>function key F1</code></dt>
+<dd> Display help panel.</dd>
+<dt><code>S</code>, <code>function key F2</code></dt>
+<dd> Display samples panel.</dd>
+<dt><code>I</code>, <code>function key F3</code></dt>
+<dd> Display instruments panel (if present in the module).</dd>
+<dt><code>M</code>, <code>function key F4</code></dt>
+<dd> Display song message panel (if present in the module).</dd>
+<dt><code>L</code>, <code>function key F5</code></dt>
+<dd> Display the playlist panel.</dd>
+<dt><code>C</code>, <code>function key F6</code></dt>
+<dd> Display the configuration panel.</dd>
+<dt><code>V</code>, <code>function key F7</code></dt>
+<dd> Display the volume panel.</dd>
+<dt><code>digits</code></dt>
+<dd> Set volume from 10% (digit 1) to 100% (digit 0).</dd>
+<dt><code>&lt;</code></dt>
+<dd> Decrease volume.</dd>
+<dt><code>&gt;</code></dt>
+<dd> Increase volume.</dd>
+<dt><code>&#8211;</code>, <code>Left</code></dt>
+<dd> Restart current pattern / skip to previous pattern.</dd>
+<dt><code>+</code>, <code>Right</code></dt>
+<dd> Skip to next pattern in current module.</dd>
+<dt><code>Up</code>, <code>Down</code></dt>
+<dd> Scroll panel.</dd>
+<dt><code>PgUp</code>, <code>PgDown</code></dt>
+<dd> Scroll panel (faster).</dd>
+<dt><code>Home</code></dt>
+<dd> Go on top of the panel.</dd>
+<dt><code>End</code></dt>
+<dd> Go to the end of the panel.</dd>
+<dt><code>(</code></dt>
+<dd> Decrease speed variable (module plays faster).</dd>
+<dt><code>)</code></dt>
+<dd> Increase speed variable (module plays slower).</dd>
+<dt><code>{</code></dt>
+<dd> Decrease tempo variable (module plays slower).</dd>
+<dt><code>}</code></dt>
+<dd> Increase tempo variable (module plays faster).</dd>
+<dt><code>:</code> or <code>;</code></dt>
+<dd> Toggle interpolation mixing.</dd>
+<dt><code>U</code></dt>
+<dd> Toggle surround mixing.</dd>
+<dt><code>Q</code></dt>
+<dd> Exit MikMod.</dd>
+<dt><code>P</code></dt>
+<dd> Switch to previous module in playlist.</dd>
+<dt><code>N</code></dt>
+<dd> Switch to next module in playlist.</dd>
+<dt><code>R</code></dt>
+<dd> Restart current module.</dd>
+<dt><code>F</code></dt>
+<dd> Toggle fake/real volume bars in volume panel.</dd>
+<dt><code>space</code></dt>
+<dd> Toggle pause.</dd>
+<dt><code>Control-L</code></dt>
+<dd> Refresh the screen. </dd>
 </dl>
 <h2>MENU BASICS</h2>
 <p> Some functions of MikMod are available through menus, in the playlist and configuration panels. </p>
@@ -222,101 +222,101 @@ description: "mikmod – play soundtracker etc. modules on a Unix machine."
 <h2>PLAYLIST MENU</h2>
 <p> When the playlist panel is displayed, pressing the <i>return</i> key will popup a menu. The menu commands are: </p>
 <dl>
-<dt><code>Play</code></p>
-<dd> Continue list playback from the currently highlighted module.</p>
-<dt><code>Remove</code></p>
-<dd> Remove module from the playlist.</p>
-<dt><code>Delete&#8230;</code></p>
-<dd> Remove module from the playlist, and delete module file on disk, or whole archive if the module is stored in an archive file. This function asks you to confirm your choice.</p>
-<dt><code>File &gt;</code></p>
-<dd> This entry opens a submenu with four commands, &quot;<code>Load</code>&quot;, &quot;<code>Insert</code>&quot;, &quot;<code>Save</code>&quot; and &quot;<code>Save as</code>&quot;. The <code>Load</code> and <code>Insert</code> commands ask you for a filename, and replace the playlist with it (load) or merge it with the playlist (insert). No wildcards are allowed. The <code>Save</code> and <code>Save as</code> commands save the current playlist in a file, by default &#8220;playlist.mpl&#8221;, in the current directory. Note that playlist filenames should end in <code>.mpl</code>, or they won&#8217;t be recognized immediately as a playlist by MikMod.</p>
-<dt><code>Shuffle</code></p>
-<dd> Randomize the playlist.</p>
-<dt><code>Sort &gt;</code></p>
-<dd> This entry opens a submenu with sort commands. You can select a normal or <code>reverse</code> order, and then sort the playlist with one of the four criteria: <code>by name</code>, <code>by extension</code>, <code>by path</code> or <code>by time</code>.</p>
-<dt><code>Back</code></p>
-<dd> Discards the menu. </p>
+<dt><code>Play</code></dt>
+<dd> Continue list playback from the currently highlighted module.</dd>
+<dt><code>Remove</code></dt>
+<dd> Remove module from the playlist.</dd>
+<dt><code>Delete&#8230;</code></dt>
+<dd> Remove module from the playlist, and delete module file on disk, or whole archive if the module is stored in an archive file. This function asks you to confirm your choice.</dd>
+<dt><code>File &gt;</code></dt>
+<dd> This entry opens a submenu with four commands, &quot;<code>Load</code>&quot;, &quot;<code>Insert</code>&quot;, &quot;<code>Save</code>&quot; and &quot;<code>Save as</code>&quot;. The <code>Load</code> and <code>Insert</code> commands ask you for a filename, and replace the playlist with it (load) or merge it with the playlist (insert). No wildcards are allowed. The <code>Save</code> and <code>Save as</code> commands save the current playlist in a file, by default &#8220;playlist.mpl&#8221;, in the current directory. Note that playlist filenames should end in <code>.mpl</code>, or they won&#8217;t be recognized immediately as a playlist by MikMod.</dd>
+<dt><code>Shuffle</code></dt>
+<dd> Randomize the playlist.</dd>
+<dt><code>Sort &gt;</code></dt>
+<dd> This entry opens a submenu with sort commands. You can select a normal or <code>reverse</code> order, and then sort the playlist with one of the four criteria: <code>by name</code>, <code>by extension</code>, <code>by path</code> or <code>by time</code>.</dd>
+<dt><code>Back</code></dt>
+<dd> Discards the menu. </dd>
 </dl>
 <h2>CONFIGURATION PANEL</h2>
 <p> The configuration panel lets you customize your MikMod settings, and save them. You can also try some particular settings without losing your previous configuration. </p>
 <dl>
-<dt><code>Output options</code></p>
-<dd> This section lets you choose various vital playback settings, such as the output driver, the stereo/mono and 16/8 bit output settings, the playback frequency, and the software mixer settings.</p>
-<dt><code>Playback options</code></p>
-<dd> This section lets you choose various module playback settings, such as the output volume, the processing of panning effects and bacwards loops, etc.</p>
-<dt><code>Other options</code></p>
-<dd> This section lets you choose the remaining settings, such as the playlist mode, and various program settings. </p>
-<dt><code>Use config</code></p>
-<dd> This command activates the current configuration settings, but does not save them.</p>
-<dt><code>Save config</code></p>
-<dd> This command saves and activates the current configuration settings.</p>
-<dt><code>Revert config</code></p>
-<dd> This command reverts to the on-disk configuration file settings. </p>
+<dt><code>Output options</code></dt>
+<dd> This section lets you choose various vital playback settings, such as the output driver, the stereo/mono and 16/8 bit output settings, the playback frequency, and the software mixer settings.</dd>
+<dt><code>Playback options</code></dt>
+<dd> This section lets you choose various module playback settings, such as the output volume, the processing of panning effects and bacwards loops, etc.</dd>
+<dt><code>Other options</code></dt>
+<dd> This section lets you choose the remaining settings, such as the playlist mode, and various program settings. </dd>
+<dt><code>Use config</code></dt>
+<dd> This command activates the current configuration settings, but does not save them.</dd>
+<dt><code>Save config</code></dt>
+<dd> This command saves and activates the current configuration settings.</dd>
+<dt><code>Revert config</code></dt>
+<dd> This command reverts to the on-disk configuration file settings. </dd>
 </dl>
 <h2>MODULE FORMATS</h2>
 <p> MikMod will currently play the following common and not so common formats:</p>
 <dl>
-<dt><code>669</code></p>
-<dd> Composer 669 and Extended 669 modules.</p>
-<dt><code>AMF</code></p>
-<dd> DSMI internal module format (Advanced Module Format, converted with M2AMF).</p>
-<dt><code>AMF</code></p>
-<dd> ASYLUM Music format (From crusader games)</p>
-<dt><code>DSM</code></p>
-<dd> DSIK&#8217;s internal module format.</p>
-<dt><code>FAR</code></p>
-<dd> Farandole composer modules.</p>
-<dt><code>GDM</code></p>
-<dd> General Digital Munsic internal module format (converted with 2GDM).</p>
-<dt><code>IMF</code></p>
-<dd> Imago Orpheus modules.</p>
-<dt><code>IT</code></p>
-<dd> Impulse Tracker modules.</p>
-<dt><code>MED</code></p>
-<dd> Amiga MED modules, but synthsounds are not supported.</p>
-<dt><code>MOD</code></p>
-<dd> Protracker, Startracker, Fasttracker, Oktalyzer, and Taketracker modules.</p>
-<dt><code>MTM</code></p>
-<dd> Multitracker module editor modules.</p>
-<dt><code>S3M</code></p>
-<dd> Screamtracker version 3 modules.</p>
-<dt><code>STM</code></p>
-<dd> Screamtracker version 2 modules.</p>
-<dt><code>STX</code></p>
-<dd> STMIK converted modules.</p>
-<dt><code>ULT</code></p>
-<dd> Ultratracker modules.</p>
-<dt><code>UNI</code>, <code>APUN</code></p>
-<dd> Old MikMod (UNI) and APlayer (APUN) internal module format.</p>
-<dt><code>XM</code></p>
-<dd> Fasttracker 2 modules. </p>
+<dt><code>669</code></dt>
+<dd> Composer 669 and Extended 669 modules.</dd>
+<dt><code>AMF</code></dt>
+<dd> DSMI internal module format (Advanced Module Format, converted with M2AMF).</dd>
+<dt><code>AMF</code></dt>
+<dd> ASYLUM Music format (From crusader games)</dd>
+<dt><code>DSM</code></dt>
+<dd> DSIK&#8217;s internal module format.</dd>
+<dt><code>FAR</code></dt>
+<dd> Farandole composer modules.</dd>
+<dt><code>GDM</code></dt>
+<dd> General Digital Munsic internal module format (converted with 2GDM).</dd>
+<dt><code>IMF</code></dt>
+<dd> Imago Orpheus modules.</dd>
+<dt><code>IT</code></dt>
+<dd> Impulse Tracker modules.</dd>
+<dt><code>MED</code></dt>
+<dd> Amiga MED modules, but synthsounds are not supported.</dd>
+<dt><code>MOD</code></dt>
+<dd> Protracker, Startracker, Fasttracker, Oktalyzer, and Taketracker modules.</dd>
+<dt><code>MTM</code></dt>
+<dd> Multitracker module editor modules.</dd>
+<dt><code>S3M</code></dt>
+<dd> Screamtracker version 3 modules.</dd>
+<dt><code>STM</code></dt>
+<dd> Screamtracker version 2 modules.</dd>
+<dt><code>STX</code></dt>
+<dd> STMIK converted modules.</dd>
+<dt><code>ULT</code></dt>
+<dd> Ultratracker modules.</dd>
+<dt><code>UNI</code>, <code>APUN</code></dt>
+<dd> Old MikMod (UNI) and APlayer (APUN) internal module format.</dd>
+<dt><code>XM</code></dt>
+<dd> Fasttracker 2 modules. </dd>
 </dl>
 <h2>ARCHIVE FORMATS</h2>
 <p> MikMod should recognize and extract the following common archive formats. However, to use each of these you will need to find the appropriate program(s) for MikMod to use to extract them. These are commonly available and you will most likely find them with this distribution of MikMod. Other archive formats can be configured by editing the configuration file (see <code>FILES</code> below). </p>
 <dl>
-<dt><code>zip</code></p>
-<dd> Info-zip or PkZip archives, commonly used on DOS/Windows platforms.</p>
-<dt><code>lha</code>, <code>lzh</code></p>
-<dd> Lharc archives, commonly used on the Amiga.</p>
-<dt><code>zoo</code></p>
-<dd> Zoo archives, quite rare those days&#8230;</p>
-<dt><code>rar</code></p>
-<dd> Rar archives.</p>
-<dt><code>gz</code></p>
-<dd> Gzip compressed files.</p>
-<dt><code>bz2</code></p>
-<dd> Bzip2 compressed files.</p>
-<dt><code>tar</code>, <code>tar.gz</code> and <code>tar.bz2</code></p>
-<dd> Tar archives, even compressed with gzip or bzip2. </p>
+<dt><code>zip</code></dt>
+<dd> Info-zip or PkZip archives, commonly used on DOS/Windows platforms.</dd>
+<dt><code>lha</code>, <code>lzh</code></dt>
+<dd> Lharc archives, commonly used on the Amiga.</dd>
+<dt><code>zoo</code></dt>
+<dd> Zoo archives, quite rare those days&#8230;</dd>
+<dt><code>rar</code></dt>
+<dd> Rar archives.</dd>
+<dt><code>gz</code></dt>
+<dd> Gzip compressed files.</dd>
+<dt><code>bz2</code></dt>
+<dd> Bzip2 compressed files.</dd>
+<dt><code>tar</code>, <code>tar.gz</code> and <code>tar.bz2</code></dt>
+<dd> Tar archives, even compressed with gzip or bzip2. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.mikmodrc (or mikmod.cfg under OS/2 / Windows)</p>
-<dd> User configuration settings.</p>
-<dt>$HOME/.mikmod_playlist (mikmodpl.cfg/mikmod_playlist.mpl under OS/2 / Windows)</p>
-<dd> The default playlist, loaded if no other files are specified on the command line.</p>
-<dt>playlist.mpl</p>
-<dd> Default playlist filename. </p>
+<dt>$HOME/.mikmodrc (or mikmod.cfg under OS/2 / Windows)</dt>
+<dd> User configuration settings.</dd>
+<dt>$HOME/.mikmod_playlist (mikmodpl.cfg/mikmod_playlist.mpl under OS/2 / Windows)</dt>
+<dd> The default playlist, loaded if no other files are specified on the command line.</dd>
+<dt>playlist.mpl</dt>
+<dd> Default playlist filename. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> <i>MikMod</i> is the result of the work of many people, including: Jean-Paul Mikkers, Jake Stine, Miodrag Vallat, Frank Loemker, Andrew Zabolotny, Raphael Assenat, Steve McIntyre, Peter Amstutz, &quot;MenTaLguY&quot;, Dimitri Boldyrev, Shlomi Fish, Stefan Tibus, Tinic Urou. A full list of people having worked on libmikmod and MikMod is displayed when MikMod starts. </p>

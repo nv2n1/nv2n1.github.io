@@ -15,20 +15,20 @@ description: "nvidia-persistenced – A daemon to maintain persistent software s
 <p> The <code>nvidia-persistenced</code> utility is used to enable persistent software state in the NVIDIA driver. When persistence mode is enabled, the daemon prevents the driver from releasing device state when the device is not in use. This can improve the startup time of new clients in this scenario. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print the utility version and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print usage information for the command line options and exit.</p>
-<dt><code>-V, &#8211;verbose</code></p>
-<dd> Controls how much information is printed. By default, nvidia-persistenced will only print errors and warnings to syslog for unexpected events, as well as startup and shutdown notices. Specifying this flag will cause nvidia-persistenced to also print notices to syslog on state transitions, such as when persistence mode is enabled or disabled, and informational messages on startup and exit.</p>
-<dt><code>-u </code><i>USERNAME</i><code>, &#8211;user=</code><i>USERNAME</i></p>
-<dd> Runs nvidia-persistenced with the user permissions of the user specified by the <i>USERNAME</i> argument. This user must have write access to the /var/run/nvidia-persistenced directory. If this directory does not exist, nvidia-persistenced will attempt to create it prior to changing the process user and group IDs. If this option is not given, nvidia-persistenced will not attempt to change the process user ID.</p>
-<dt><code>-g </code><i>GROUPNAME</i><code>, &#8211;group=</code><i>GROUPNAME</i></p>
-<dd> Runs nvidia-persistenced with the group permissions of the group specified by the <i>GROUPNAME</i> argument. If both this option and the &#8211;user option are given, this option will take precedence when determining the group ID to use. If this option is not given, nvidia-persistenced will use the primary group ID of the user specified by the &#8211;user option argument. If the &#8211;user option is also not given, nvidia-persistenced will not attempt to change the process group ID.</p>
-<dt><code>&#8211;persistence-mode, &#8211;no-persistence-mode</code></p>
-<dd> By default, nvidia-persistenced starts with persistence mode enabled for all devices. Use &#8216;&#8211;no-persistence-mode&#8217; to force persistence mode off for all devices on startup.</p>
-<dt><code>&#8211;nvidia-cfg-path=</code><i>PATH</i></p>
-<dd> The nvidia-cfg library is used to communicate with the NVIDIA kernel module to query and manage GPUs in the system. This library is required by nvidia-persistenced. This option tells nvidia-persistenced where to look for this library (in case it cannot find it on its own). This option should normally not be needed. </p>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print the utility version and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print usage information for the command line options and exit.</dd>
+<dt><code>-V, &#8211;verbose</code></dt>
+<dd> Controls how much information is printed. By default, nvidia-persistenced will only print errors and warnings to syslog for unexpected events, as well as startup and shutdown notices. Specifying this flag will cause nvidia-persistenced to also print notices to syslog on state transitions, such as when persistence mode is enabled or disabled, and informational messages on startup and exit.</dd>
+<dt><code>-u </code><i>USERNAME</i><code>, &#8211;user=</code><i>USERNAME</i></dt>
+<dd> Runs nvidia-persistenced with the user permissions of the user specified by the <i>USERNAME</i> argument. This user must have write access to the /var/run/nvidia-persistenced directory. If this directory does not exist, nvidia-persistenced will attempt to create it prior to changing the process user and group IDs. If this option is not given, nvidia-persistenced will not attempt to change the process user ID.</dd>
+<dt><code>-g </code><i>GROUPNAME</i><code>, &#8211;group=</code><i>GROUPNAME</i></dt>
+<dd> Runs nvidia-persistenced with the group permissions of the group specified by the <i>GROUPNAME</i> argument. If both this option and the &#8211;user option are given, this option will take precedence when determining the group ID to use. If this option is not given, nvidia-persistenced will use the primary group ID of the user specified by the &#8211;user option argument. If the &#8211;user option is also not given, nvidia-persistenced will not attempt to change the process group ID.</dd>
+<dt><code>&#8211;persistence-mode, &#8211;no-persistence-mode</code></dt>
+<dd> By default, nvidia-persistenced starts with persistence mode enabled for all devices. Use &#8216;&#8211;no-persistence-mode&#8217; to force persistence mode off for all devices on startup.</dd>
+<dt><code>&#8211;nvidia-cfg-path=</code><i>PATH</i></dt>
+<dd> The nvidia-cfg library is used to communicate with the NVIDIA kernel module to query and manage GPUs in the system. This library is required by nvidia-persistenced. This option tells nvidia-persistenced where to look for this library (in case it cannot find it on its own). This option should normally not be needed. </dd>
 </dl>
 <h2>INSTALLATION</h2>
 <p> When installed by <code>nvidia-installer</code> , sample init scripts to start the daemon for some of the more prevalent init systems are installed as the compressed tarball /usr/share/doc/NVIDIA_GLX-1.0/sample/nvidia-persistenced-init.tar.bz2. These init scripts should be customized to the user&#8217;s distribution and installed in the proper location by the user to run <code>nvidia-persistenced</code> on system initialization. </p>
@@ -42,12 +42,12 @@ description: "nvidia-persistenced – A daemon to maintain persistent software s
 <p> The source code to <code>nvidia-persistenced</code> is available here: &lt; <a rel="nofollow" href="https://download.nvidia.com/XFree86/nvidia-persistenced/">https://download.nvidia.com/XFree86/nvidia-persistenced/</a> &gt; </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>nvidia-persistenced</code></p>
-<dd> Starts the NVIDIA Persistence Daemon with persistence mode enabled for all NVIDIA devices.</p>
-<dt><code>nvidia-persistenced &#8211;no-persistence-mode</code></p>
-<dd> Starts the NVIDIA Persistence Daemon with persistence mode disabled for all NVIDIA devices.</p>
-<dt><code>nvidia-persistenced &#8211;user=foo</code></p>
-<dd> Starts the NVIDIA Persistence Daemon so that it will run as user &#8216;foo&#8217;. </p>
+<dt><code>nvidia-persistenced</code></dt>
+<dd> Starts the NVIDIA Persistence Daemon with persistence mode enabled for all NVIDIA devices.</dd>
+<dt><code>nvidia-persistenced &#8211;no-persistence-mode</code></dt>
+<dd> Starts the NVIDIA Persistence Daemon with persistence mode disabled for all NVIDIA devices.</dd>
+<dt><code>nvidia-persistenced &#8211;user=foo</code></dt>
+<dd> Starts the NVIDIA Persistence Daemon so that it will run as user &#8216;foo&#8217;. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Will Davis<br />

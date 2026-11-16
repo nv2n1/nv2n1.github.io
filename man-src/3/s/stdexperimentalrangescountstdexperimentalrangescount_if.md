@@ -11,39 +11,24 @@ std::experimental::ranges::count,std::experimental::ranges::count_if - std::expe
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
-
     template &lt;InputIterator I, Sentinel&lt;I&gt; S, class T, class Proj = ranges::identity&gt;
-
 requires IndirectRelation &lt; ranges::equal_to&lt;&gt;, projected&lt;I, Proj&gt;,
 const T * &gt; (1)(ranges TS)
-
                 ranges::difference_type_t&lt;I&gt; count(I first, S last, const T &amp;value, Proj proj = Proj{});
-
 template &lt;InputRange R, class T, class Proj = ranges::identity&gt;
-
 requires IndirectRelation &lt; ranges::equal_to&lt;&gt;,
-
     projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;,
 const T * &gt; (2)(ranges TS)
-
                 ranges::difference_type_t&lt;ranges::iterator_t&lt;R&gt;&gt;
-
     count(R &amp;&amp;r, const T &amp;value, Proj proj = Proj{});
-
 template &lt;InputIterator I, Sentinel&lt;I&gt; S, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred&gt;
 (3)(ranges TS)
-
     ranges::difference_type_t&lt;I&gt; count_if(I first, S last, Pred pred, Proj proj = Proj{});
-
 template &lt;InputRange R, class Proj = ranges::identity,
-
           IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred&gt;
 (4)(ranges TS)
-
     ranges::difference_type_t&lt;ranges::iterator_t&lt;R&gt;&gt;
-
     count_if(R &amp;&amp;r, Pred pred, Proj proj = Proj{});</code></pre> 
 Returns the number of elements in the range [first, last) satisfying specific criteria. 
 1) counts the elements whose projected values are equal to value (i.e., ranges::invoke(proj, *i) == value). 

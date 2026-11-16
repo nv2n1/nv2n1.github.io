@@ -37,6 +37,6 @@ description: "QuantLib::LocalVolSurface – Local volatility surface derived fro
 <p> see <a rel="nofollow" href="http://www.math.nyu.edu">www.math.nyu.edu</a>/fellows_fin_math/gatheral/Lecture1_Fall02.pdf </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>this class is untested, probably unreliable.</dl>
+<dd>this class is untested, probably unreliable.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

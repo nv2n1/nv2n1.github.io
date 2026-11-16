@@ -13,24 +13,24 @@ description: "tuned-profiles – description of basic tuned profiles"
 <h2>Profiles</h2>
 <p>At the moment we&#8217;re providing the following pre-defined profiles: </p>
 <dl>
-<dt><code>balanced</code></p>
-<dd>It is the default profile. It provides balanced power saving and performance. At the moment it enables CPU and disk plugins of tuned and it makes sure the ondemand governor is active (if supported by the current cpufreq driver). It enables ALPM power saving for SATA host adapters and sets the link power management policy to medium_power. It also sets the CPU energy performance bias to normal. It also enables AC97 audio power saving or (it depends on your system) HDA-Intel power savings with 10 seconds timeout. In case your system contains supported Radeon graphics card (with enabled KMS) it configures it to automatic power saving. </p>
-<dt><code>powersave</code></p>
-<dd>Maximal power saving, at the moment it enables USB autosuspend (in case environment variable USB_AUTOSUSPEND is set to 1), enables ALPM power saving for SATA host adapters and sets the link power manamgent policy to min_power. It also enables WiFi power saving, enables multi core power savings scheduler for low wakeup systems and makes sure the ondemand governor is active (if supported by the current cpufreq driver). It sets the CPU energy performance bias to powersave. It also enables AC97 audio power saving or (it depends on your system) HDA-Intel power savings (with 10 seconds timeout). In case your system contains supported Radeon graphics card (with enabled KMS) it configures it to automatic power saving. On Asus Eee PCs dynamic Super Hybrid Engine is enabled. </p>
-<dt><code>throughput-performance</code></p>
-<dd>Profile for typical throughput performance tuning. Disables power saving mechanisms and enables sysctl settings that improve the throughput performance of your disk and network IO. CPU governor is set to performance and CPU energy performance bias is set to performance. Disk readahead values are increased. </p>
-<dt><code>latency-performance</code></p>
-<dd>Profile for low latency performance tuning. Disables power saving mechanisms. CPU governor is set to performance andlocked to the low C states (by PM QoS). CPU energy performance bias to performance. </p>
-<dt><code>network-throughput</code></p>
-<dd>Profile for throughput network tuning. It is based on the throughput-performance profile. It additionaly increases kernel network buffers. </p>
-<dt><code>network-latency</code></p>
-<dd>Profile for low latency network tuning. It is based on the latency-performance profile. It additionaly disables transparent hugepages, NUMA balancing and tunes several other network related sysctl parameters. </p>
-<dt><code>desktop</code></p>
-<dd>Profile optimized for desktops based on balanced profile. It additionaly enables scheduler autogroups for better response of interactive applications. </p>
-<dt><code>virtual-guest</code></p>
-<dd>Profile optimized for virtual guests based on throughput-performance profile. It additionally decreases virtual memory swappiness and increases dirty_ratio settings. </p>
-<dt><code>virtual-host</code></p>
-<dd>Profile optimized for virtual hosts based on throughput-performance profile. It additionally enables more aggresive writeback of dirty pages. </p>
+<dt><code>balanced</code></dt>
+<dd>It is the default profile. It provides balanced power saving and performance. At the moment it enables CPU and disk plugins of tuned and it makes sure the ondemand governor is active (if supported by the current cpufreq driver). It enables ALPM power saving for SATA host adapters and sets the link power management policy to medium_power. It also sets the CPU energy performance bias to normal. It also enables AC97 audio power saving or (it depends on your system) HDA-Intel power savings with 10 seconds timeout. In case your system contains supported Radeon graphics card (with enabled KMS) it configures it to automatic power saving. </dd>
+<dt><code>powersave</code></dt>
+<dd>Maximal power saving, at the moment it enables USB autosuspend (in case environment variable USB_AUTOSUSPEND is set to 1), enables ALPM power saving for SATA host adapters and sets the link power manamgent policy to min_power. It also enables WiFi power saving, enables multi core power savings scheduler for low wakeup systems and makes sure the ondemand governor is active (if supported by the current cpufreq driver). It sets the CPU energy performance bias to powersave. It also enables AC97 audio power saving or (it depends on your system) HDA-Intel power savings (with 10 seconds timeout). In case your system contains supported Radeon graphics card (with enabled KMS) it configures it to automatic power saving. On Asus Eee PCs dynamic Super Hybrid Engine is enabled. </dd>
+<dt><code>throughput-performance</code></dt>
+<dd>Profile for typical throughput performance tuning. Disables power saving mechanisms and enables sysctl settings that improve the throughput performance of your disk and network IO. CPU governor is set to performance and CPU energy performance bias is set to performance. Disk readahead values are increased. </dd>
+<dt><code>latency-performance</code></dt>
+<dd>Profile for low latency performance tuning. Disables power saving mechanisms. CPU governor is set to performance andlocked to the low C states (by PM QoS). CPU energy performance bias to performance. </dd>
+<dt><code>network-throughput</code></dt>
+<dd>Profile for throughput network tuning. It is based on the throughput-performance profile. It additionaly increases kernel network buffers. </dd>
+<dt><code>network-latency</code></dt>
+<dd>Profile for low latency network tuning. It is based on the latency-performance profile. It additionaly disables transparent hugepages, NUMA balancing and tunes several other network related sysctl parameters. </dd>
+<dt><code>desktop</code></dt>
+<dd>Profile optimized for desktops based on balanced profile. It additionaly enables scheduler autogroups for better response of interactive applications. </dd>
+<dt><code>virtual-guest</code></dt>
+<dd>Profile optimized for virtual guests based on throughput-performance profile. It additionally decreases virtual memory swappiness and increases dirty_ratio settings. </dd>
+<dt><code>virtual-host</code></dt>
+<dd>Profile optimized for virtual hosts based on throughput-performance profile. It additionally enables more aggresive writeback of dirty pages. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>

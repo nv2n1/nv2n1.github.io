@@ -22,19 +22,19 @@ url: "/docs/linux/man/1-urxvt-ml-matcher/"
  The 'matcher:select' action enables a mode in which it is possible to iterate over the matches using the keyboard and either activate them or copy them to the clipboard. While the mode is active, normal terminal input/output is suspended and the following bindings are recognized:
 <dl>
 <dt>&quot;Up&quot;
-<dd> Search for a match upwards.
-<dt>&quot;Down&quot;
-<dd> Search for a match downwards.
-<dt>&quot;Home&quot;
-<dd> Jump to the topmost match.
-<dt>&quot;End&quot;
-<dd> Jump to the bottommost match.
-<dt>&quot;Escape&quot;
-<dd> Leave the mode and return to the point where search was started.
-<dt>&quot;Enter&quot;
-<dd> Activate the current match.
-<dt>&quot;y&quot;
-<dd> Copy the current match to the clipboard.</dl>
+</dt><dd> Search for a match upwards.
+</dd><dt>&quot;Down&quot;
+</dt><dd> Search for a match downwards.
+</dd><dt>&quot;Home&quot;
+</dt><dd> Jump to the topmost match.
+</dd><dt>&quot;End&quot;
+</dt><dd> Jump to the bottommost match.
+</dd><dt>&quot;Escape&quot;
+</dt><dd> Leave the mode and return to the point where search was started.
+</dd><dt>&quot;Enter&quot;
+</dt><dd> Activate the current match.
+</dd><dt>&quot;y&quot;
+</dt><dd> Copy the current match to the clipboard.</dd></dl>
  
 
  Example: load and use the matcher extension with defaults. 

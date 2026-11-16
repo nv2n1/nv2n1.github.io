@@ -19,32 +19,32 @@ description: "rpcdebug – set and clear NFS and RPC kernel debug flags"
 <p> The value <code>all</code> may be used to set or clear all the flags for the given module.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Clear the given debug flags.</p>
-<dt><code>-h</code></p>
-<dd>Print a help message and exit. When combined with the <code>-v</code> option, also prints the available debug flags.</p>
-<dt><code>-m</code><i> module</i></p>
-<dd>Specify which module&#8217;s flags to set or clear. Available modules are:</p>
+<dt><code>-c</code></dt>
+<dd>Clear the given debug flags.</dd>
+<dt><code>-h</code></dt>
+<dd>Print a help message and exit. When combined with the <code>-v</code> option, also prints the available debug flags.</dd>
+<dt><code>-m</code><i> module</i></dt>
+<dd>Specify which module&#8217;s flags to set or clear. Available modules are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>nfsd</code></p>
-<dd>The NFS server.</p>
-<dt><code>nfs</code></p>
-<dd>The NFS client.</p>
-<dt><code>nlm</code></p>
-<dd>The Network Lock Manager, in either an NFS client or server.</p>
-<dt><code>rpc</code></p>
-<dd>The Remote Procedure Call module, in either an NFS client or server.</dl>
+</dd><dl>
+<dt><code>nfsd</code></dt>
+<dd>The NFS server.</dd>
+<dt><code>nfs</code></dt>
+<dd>The NFS client.</dd>
+<dt><code>nlm</code></dt>
+<dd>The Network Lock Manager, in either an NFS client or server.</dd>
+<dt><code>rpc</code></dt>
+<dd>The Remote Procedure Call module, in either an NFS client or server.</dd></dl>
 </dl>
-<dt><code>-s</code></p>
-<dd>Set the given debug flags.</p>
-<dt><code>-v</code></p>
-<dd>Increase the verbosity of <code>rpcdebug</code>&#8216;s output.</dl>
+<dt><code>-s</code></dt>
+<dd>Set the given debug flags.</dd>
+<dt><code>-v</code></dt>
+<dd>Increase the verbosity of <code>rpcdebug</code>&#8216;s output.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/proc/sys/sunrpc/{rpc,nfs,nfsd,nlm}_debug</code></p>
-<dd>procfs-based interface to kernel debug flags.</dl>
+<dt><code>/proc/sys/sunrpc/{rpc,nfs,nfsd,nlm}_debug</code></dt>
+<dd>procfs-based interface to kernel debug flags.</dd></dl>
 <h2>See Also</h2>
 <p><code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>

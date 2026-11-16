@@ -10,9 +10,7 @@ description: "std::chrono::is_clock – std::chrono::is_clock"
 <p>std::chrono::is_clock &#8211; std::chrono::is_clock</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class T&gt;
-
     struct is_clock;</code></pre>
 <p>If T satisfies the Clock requirements, provides the member constant value equal true. For any other type, value is false.<br />
 For the purpose of this trait, the extent to which an implementation determines that a type cannot meet the Clock requirements is unspecified, except that a minimum T shall not qualify as a Clock unless it meets all of the following conditions:<br />

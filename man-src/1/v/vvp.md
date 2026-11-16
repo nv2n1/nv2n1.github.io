@@ -16,49 +16,49 @@ description: "vvp – Icarus Verilog vvp runtime engine"
 <h2>OPTIONS</h2>
 <p> <i>vvp</i> accepts the following options:</p>
 <dl>
-<dt><code>-l</code><i>logfile</i></p>
-<dd> This flag specifies a logfile where all MCI &lt;stdlog&gt; output goes. Specify logfile as &#8216;-&#8216; to send log output to &lt;stderr&gt;. $display and friends send their output both to &lt;stdout&gt; and &lt;stdlog&gt;.</p>
-<dt><code>-M</code><i>path</i></p>
-<dd> This flag adds a directory to the path list used to locate VPI modules. The default path includes only the install directory for the system.vpi module, but this flag can add other directories. Multiple paths are allowed, and modules will be searched in order.</p>
-<dt><code>-m</code><i>module</i></p>
-<dd> Tell the vvp run time to load the named module before executing the simulation. The <code>system.vpi</code> module is loaded by default, but additional modules, including modules that you compiled locally, can be specified with this flag. Any number of modules can be loaded, and they will be linked in the order they are listed on the command line. </p>
+<dt><code>-l</code><i>logfile</i></dt>
+<dd> This flag specifies a logfile where all MCI &lt;stdlog&gt; output goes. Specify logfile as &#8216;-&#8216; to send log output to &lt;stderr&gt;. $display and friends send their output both to &lt;stdout&gt; and &lt;stdlog&gt;.</dd>
+<dt><code>-M</code><i>path</i></dt>
+<dd> This flag adds a directory to the path list used to locate VPI modules. The default path includes only the install directory for the system.vpi module, but this flag can add other directories. Multiple paths are allowed, and modules will be searched in order.</dd>
+<dt><code>-m</code><i>module</i></dt>
+<dd> Tell the vvp run time to load the named module before executing the simulation. The <code>system.vpi</code> module is loaded by default, but additional modules, including modules that you compiled locally, can be specified with this flag. Any number of modules can be loaded, and they will be linked in the order they are listed on the command line. </dd>
 <p> Normally, you only need to specify the name of the module, without any directory path or .vpi suffix and the search path is scanned to find the module. However, if the name includes at least one directory character, then the search path is not scanned and the name is assumed to be a complete file name.</p>
-<dt><code>-n</code></p>
-<dd> This flag makes $stop or a &lt;Control-C&gt; a synonym for $finish. It can be used to give the program a more meaningful interface when running in a non-interactive environment.</p>
-<dt><code>-N</code></p>
-<dd> This flag does the same thing as -n, but results in an exit code of 1 if the stimulation calls $stop. It can be used to indicate a simulation failure when running a testbench.</p>
-<dt><code>-s</code></p>
-<dd> Stop. This will cause the simulation to stop in the beginning, before any events are scheduled. This allows the interactive user to get hold of the simulation just before it starts.</p>
-<dt><code>-v</code></p>
-<dd> Turn on verbose messages. This will cause information about run time progress to be printed to standard out.</p>
-<dt><code>-V</code></p>
-<dd> Print the version of the runtime, and exit. </p>
+<dt><code>-n</code></dt>
+<dd> This flag makes $stop or a &lt;Control-C&gt; a synonym for $finish. It can be used to give the program a more meaningful interface when running in a non-interactive environment.</dd>
+<dt><code>-N</code></dt>
+<dd> This flag does the same thing as -n, but results in an exit code of 1 if the stimulation calls $stop. It can be used to indicate a simulation failure when running a testbench.</dd>
+<dt><code>-s</code></dt>
+<dd> Stop. This will cause the simulation to stop in the beginning, before any events are scheduled. This allows the interactive user to get hold of the simulation just before it starts.</dd>
+<dt><code>-v</code></dt>
+<dd> Turn on verbose messages. This will cause information about run time progress to be printed to standard out.</dd>
+<dt><code>-V</code></dt>
+<dd> Print the version of the runtime, and exit. </dd>
 </dl>
 <h2>EXTENDED ARGUMENTS</h2>
 <p> The vvp options described above must come before the design file name. After the design file name, however, there may be any number of unspecified arguments. These arguments are not interpreted by vvp but are instead passed on to the executed design, and are available via the <i>$test$plusargs</i> and <i>$value$plusargs</i> system functions. </p>
 <p> Arguments that do not start with the plus(+) character are not available to the <i>$plusargs</i> system tasks, but can still be accessed via PLI code via the <i>vpi_get_vlog_info</i> function. This means that vpi modules may use arguments that do not start with + and be assured that they do not interfere with user defined plus-args. </p>
 <p> There are a few extended arguments that are interpreted by the standard system.vpi module, which implements the standard system tasks and so is always included. These arguments are described here.</p>
 <dl>
-<dt><code>-vcd</code></p>
-<dd> This extended argument sets the wave dump format to VCD. This is the default in the absence of any <code>IVERILOG_DUMPER</code> environment variable. The VCD dump files are large and ponderous, but are also maximally compatible with third party tools that read waveform dumps. </p>
-<dt><code>-lxt</code>|-lxt-speed|-lxt-space</p>
-<dd> These extended arguments set the wave dump format to lxt, possibly with format optimizations. The <code>-lxt-space</code> flag sets the output format to lxt with full compression enabled. The resulting files are quite small. The <code>-lxt-speed</code> chooses the lxt compression mode that leads to the best execution time and the fastest read time, at the expense of some file size. </p>
-<dt><code>-lxt2</code>|-lx2</p>
-<dd> The LXT2 format is slower then LXT (faster then VCD) but takes less space, and is written out incrementally. Thus, you can view lxt2 files while a simulation is still running (or paused) or if your simulation crashes or is killed, you still have a useful dump. </p>
-<dt><code>-none</code></p>
-<dd> This flag can be used by itself or appended to the end of the above dumpers (vcd/lxt/lxt2/lx2) to suppress all waveform output. This can make long simulations run faster. </p>
-<dt><code>-sdf-warn</code></p>
-<dd> When loading an SDF annotation file, this option causes the annotator to print warnings for questionable but non-fatal issues. </p>
-<dt><code>-sdf-info</code></p>
-<dd> When loading an SDF annotation file, this option causes the annotator to print information about the annotation. </p>
-<dt><code>-sdf-verbose</code></p>
-<dd> This is shorthand for -sdf-info -sdf-warn. </p>
+<dt><code>-vcd</code></dt>
+<dd> This extended argument sets the wave dump format to VCD. This is the default in the absence of any <code>IVERILOG_DUMPER</code> environment variable. The VCD dump files are large and ponderous, but are also maximally compatible with third party tools that read waveform dumps. </dd>
+<dt><code>-lxt</code>|-lxt-speed|-lxt-space</dt>
+<dd> These extended arguments set the wave dump format to lxt, possibly with format optimizations. The <code>-lxt-space</code> flag sets the output format to lxt with full compression enabled. The resulting files are quite small. The <code>-lxt-speed</code> chooses the lxt compression mode that leads to the best execution time and the fastest read time, at the expense of some file size. </dd>
+<dt><code>-lxt2</code>|-lx2</dt>
+<dd> The LXT2 format is slower then LXT (faster then VCD) but takes less space, and is written out incrementally. Thus, you can view lxt2 files while a simulation is still running (or paused) or if your simulation crashes or is killed, you still have a useful dump. </dd>
+<dt><code>-none</code></dt>
+<dd> This flag can be used by itself or appended to the end of the above dumpers (vcd/lxt/lxt2/lx2) to suppress all waveform output. This can make long simulations run faster. </dd>
+<dt><code>-sdf-warn</code></dt>
+<dd> When loading an SDF annotation file, this option causes the annotator to print warnings for questionable but non-fatal issues. </dd>
+<dt><code>-sdf-info</code></dt>
+<dd> When loading an SDF annotation file, this option causes the annotator to print information about the annotation. </dd>
+<dt><code>-sdf-verbose</code></dt>
+<dd> This is shorthand for -sdf-info -sdf-warn. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> The vvp command also accepts some environment variables that control its behavior. These can be used to make semi-permanent changes. </p>
 <dl>
-<dt><code>IVERILOG_DUMPER=</code><i>lxt|lxt2|lx2|vcd|none</i></p>
-<dd> This selects the output format for the waveform output. Normally, waveforms are dumped in vcd format, but this variable can be used to select lxt format, which is far more compact, though limited to gtkwave or compatible viewers. It can also be used to suppress VCD output, a time-saver for regression tests. </p>
+<dt><code>IVERILOG_DUMPER=</code><i>lxt|lxt2|lx2|vcd|none</i></dt>
+<dd> This selects the output format for the waveform output. Normally, waveforms are dumped in vcd format, but this variable can be used to select lxt format, which is far more compact, though limited to gtkwave or compatible viewers. It can also be used to suppress VCD output, a time-saver for regression tests. </dd>
 </dl>
 <h2>INTERACTIVE MODE</h2>
 <p> The simulation engine supports an interactive mode. The user may interrupt the simulation (typically by typing &lt;Control-C&gt;) to get to the interactive prompt. From that prompt, the <i>help</i> command prints a brief summary of the available commands. </p>

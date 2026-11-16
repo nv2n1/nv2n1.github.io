@@ -22,9 +22,9 @@ CALL TDSETR (PNAM,RVAL)
 
 The arguments of TDSETR are as follows:
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first three characters of it will be examined.
-<dt>RVAL
-<dd>(an input expression of type REAL) - The real value you select for the parameter. If the parameter is of type REAL, it will be given the value RVAL; if is is of type INTEGER, it will be given the value INT(RVAL).</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first three characters of it will be examined.
+</dd><dt>RVAL
+</dt><dd>(an input expression of type REAL) - The real value you select for the parameter. If the parameter is of type REAL, it will be given the value RVAL; if is is of type INTEGER, it will be given the value INT(RVAL).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

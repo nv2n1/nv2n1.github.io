@@ -11,131 +11,39 @@ description: "wl_display –"
 <p> Represents a connection to the compositor and acts as a proxy to the <code>wl_display</code> singleton object.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;wayland-client.h&gt;
-
 Public Member Functions
 struct wl_event_queue * wl_display_create_queue (struct wl_display *display)
-
-
-
 struct wl_display * wl_display_connect_to_fd (int fd)
-
-
-
 struct wl_display * wl_display_connect (const char *name)
-
-
-
 void wl_display_disconnect (struct wl_display *display)
-
-
-
 int wl_display_get_fd (struct wl_display *display)
-
-
-
 int wl_display_roundtrip (struct wl_display *display)
-
-
-
 int wl_display_read_events (struct wl_display *display)
-
-
-
 int wl_display_prepare_read (struct wl_display *display)
-
-
-
 void wl_display_cancel_read (struct wl_display *display)
-
-
-
 int wl_display_dispatch_queue (struct wl_display *display, struct wl_event_queue *queue)
-
-
-
 int wl_display_dispatch_queue_pending (struct wl_display *display, struct wl_event_queue *queue)
-
-
-
 int wl_display_dispatch (struct wl_display *display)
-
-
-
 int wl_display_dispatch_pending (struct wl_display *display)
-
-
-
 int wl_display_get_error (struct wl_display *display)
-
-
-
 int wl_display_flush (struct wl_display *display)
-
-
-
 struct wl_client * wl_client_create (struct wl_display *display, int fd)
-
-
-
 struct wl_display * wl_display_create (void)
-
-
-
 uint32_t wl_display_get_serial (struct wl_display *display)
-
-
-
 uint32_t wl_display_next_serial (struct wl_display *display)
-
-
-
 uint32_t * wl_display_add_shm_format (struct wl_display *display, uint32_t format)
-
-
-
 struct wl_array * wl_display_get_additional_shm_formats (struct wl_display *display)
-
-
-
 Public Attributes
 struct wl_event_loop * loop
-
-
-
 int run
-
-
-
 uint32_t id
-
-
-
 uint32_t serial
-
-
-
 struct wl_list registry_resource_list
-
-
-
 struct wl_list global_list
-
-
-
 struct wl_list socket_list
-
-
-
 struct wl_list client_list
-
-
-
 struct wl_signal destroy_signal
-
-
-
 struct wl_array additional_shm_formats</code></pre>
 <h2>Detailed Description</h2>
 <p>Represents a connection to the compositor and acts as a proxy to the <code>wl_display</code> singleton object. </p>
@@ -154,10 +62,10 @@ struct wl_array additional_shm_formats</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>display</i> The display object<br />
- <i>fd</i> The file descriptor for the socket to the client</dl>
+ <i>fd</i> The file descriptor for the socket to the client</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The new client object or NULL on failure.</dl>
+<dd>The new client object or NULL on failure.</dd></dl>
 <p> Given a file descriptor corresponding to one end of a socket, this function will create a <code>wl_client</code> struct and add the new client to the compositors client list. At that point, the client is initialized and ready to run, as if the client had connected to the servers listening socket. When the client eventually sends requests to the compositor, the <code>wl_client</code> argument to the request handler will be the <code>wl_client</code> returned from this function. </p>
 <p> The other end of the socket can be passed to <code>wl_display_connect_to_fd()</code> on the client side or used with the WAYLAND_SOCKET environment variable on the client side. </p>
 <p> On failure this function sets errno accordingly and returns NULL.</p>
@@ -166,103 +74,103 @@ struct wl_array additional_shm_formats</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>display</i> The display object<br />
- <i>format</i> The wl_shm pixel format to advertise</dl>
+ <i>format</i> The wl_shm pixel format to advertise</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to the wl_shm format that was added to the list or NULL if adding it to the list failed.</dl>
+<dd>A pointer to the wl_shm format that was added to the list or NULL if adding it to the list failed.</dd></dl>
 <p> Add the specified wl_shm format to the list of formats the wl_shm object advertises when a client binds to it. Adding a format to the list means that clients will know that the compositor supports this format and may use it for creating wl_shm buffers. The compositor must be able to handle the pixel format when a client requests it. </p>
 <p> The compositor by default supports WL_SHM_FORMAT_ARGB8888 and WL_SHM_FORMAT_XRGB8888.</p>
 <h3>void wl_display_cancel_read (struct <code>wl_display</code> *display)</h3>
 <p>Release exclusive access to display file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> This releases the exclusive access. Useful for canceling the lock when a timed out poll returns fd not readable and we&#8217;re not going to read from the fd anytime soon.</p>
 <h3>struct <code>wl_display</code> * wl_display_connect (const char *name)</h3>
 <p>Connect to a Wayland display </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> Name of the Wayland display to connect to</dl>
+<dd><i>name</i> Name of the Wayland display to connect to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A <code>wl_display</code> object or NULL on failure</dl>
+<dd>A <code>wl_display</code> object or NULL on failure</dd></dl>
 <p> Connect to the Wayland display named name. If name is NULL, its value will be replaced with the WAYLAND_DISPLAY environment variable if it is set, otherwise display &#8216;wayland-0&#8217; will be used.</p>
 <h3>struct <code>wl_display</code> * wl_display_connect_to_fd (intfd)</h3>
 <p>Connect to Wayland display on an already open fd </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>fd</i> The fd to use for the connection</dl>
+<dd><i>fd</i> The fd to use for the connection</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A <code>wl_display</code> object or NULL on failure</dl>
+<dd>A <code>wl_display</code> object or NULL on failure</dd></dl>
 <p> The <code>wl_display</code> takes ownership of the fd and will close it when the display is destroyed. The fd will also be closed in case of failure.</p>
 <h3>struct <code>wl_display</code> * wl_display_create (void)</h3>
 <p>Create Wayland display object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>None</i></dl>
+<dd><i>None</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The Wayland display object. Null if failed to create</dl>
+<dd>The Wayland display object. Null if failed to create</dd></dl>
 <p> This creates the <code>wl_display</code> object.</p>
 <h3>struct <code>wl_event_queue</code> * wl_display_create_queue (struct <code>wl_display</code> *display)</h3>
 <p>Create a new event queue for this display </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new event queue associated with this display or NULL on failure.</dl>
+<dd>A new event queue associated with this display or NULL on failure.</dd></dl>
 <h3>void wl_display_disconnect (struct <code>wl_display</code> *display)</h3>
 <p>Close a connection to a Wayland display </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> Close the connection to display and free all resources associated with it.</p>
 <h3>int wl_display_dispatch (struct <code>wl_display</code> *display)</h3>
 <p>Process incoming events </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of dispatched events on success or -1 on failure</dl>
+<dd>The number of dispatched events on success or -1 on failure</dd></dl>
 <p> Dispatch the display&#8217;s main event queue. </p>
 <p> If the main event queue is empty, this function blocks until there are events to be read from the display fd. Events are read and queued on the appropriate event queues. Finally, events on the main event queue are dispatched. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>It is not possible to check if there are events on the main queue or not. For dispatching main queue events without blocking, see <code>wl_display_dispatch_pending()</code>. </p>
+<dd>It is not possible to check if there are events on the main queue or not. For dispatching main queue events without blocking, see <code>wl_display_dispatch_pending()</code>. </dd>
 <p> Calling this will release the display file descriptor if this thread acquired it using wl_display_acquire_fd().</dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>wl_display_dispatch_pending()</code>, <code>wl_display_dispatch_queue()</code></dl>
+<dd><code>wl_display_dispatch_pending()</code>, <code>wl_display_dispatch_queue()</code></dd></dl>
 <h3>int wl_display_dispatch_pending (struct <code>wl_display</code> *display)</h3>
 <p>Dispatch main queue events without reading from the display fd </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of dispatched events or -1 on failure</dl>
+<dd>The number of dispatched events or -1 on failure</dd></dl>
 <p> This function dispatches events on the main event queue. It does not attempt to read the display fd and simply returns zero if the main queue is empty, i.e., it doesn&#8217;t block. </p>
 <p> This is necessary when a client&#8217;s main loop wakes up on some fd other than the display fd (network socket, timer fd, etc) and calls <code>wl_display_dispatch_queue()</code> from that callback. This may queue up events in the main queue while reading all data from the display fd. When the main thread returns to the main loop to block, the display fd no longer has data, causing a call to <i><a href="/docs/linux/man/2-poll/">poll</a>(2)</i> (or similar functions) to block indefinitely, even though there are events ready to dispatch. </p>
 <p> To proper integrate the wayland display fd into a main loop, the client should always call <code>wl_display_dispatch_pending()</code> and then <code>wl_display_flush()</code> prior to going back to sleep. At that point, the fd typically doesn&#8217;t have data so attempting I/O could block, but events queued up on the main queue should be dispatched. </p>
 <p> A real-world example is a main loop that wakes up on a timerfd (or a sound card fd becoming writable, for example in a video player), which then triggers GL rendering and eventually eglSwapBuffers(). eglSwapBuffers() may call <code>wl_display_dispatch_queue()</code> if it didn&#8217;t receive the frame event for the previous frame, and as such queue events in the main queue. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>Calling this makes the current thread the main one.</dl>
+<dd>Calling this makes the current thread the main one.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>wl_display_dispatch()</code>, <code>wl_display_dispatch_queue()</code>, <code>wl_display_flush()</code></dl>
+<dd><code>wl_display_dispatch()</code>, <code>wl_display_dispatch_queue()</code>, <code>wl_display_flush()</code></dd></dl>
 <h3>int wl_display_dispatch_queue (struct <code>wl_display</code> *display, struct <code>wl_event_queue</code> *queue)</h3>
 <p>Dispatch events in an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>display</i> The display context object<br />
- <i>queue</i> The event queue to dispatch</dl>
+ <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of dispatched events on success or -1 on failure</dl>
+<dd>The number of dispatched events on success or -1 on failure</dd></dl>
 <p> Dispatch all incoming events for objects assigned to the given event queue. On failure -1 is returned and errno set appropriately. </p>
 <p> This function blocks if there are no events to dispatch. If calling from the main thread, it will block reading data from the display fd. For other threads this will block until the main thread queues events on the queue passed as argument.</p>
 <h3>int wl_display_dispatch_queue_pending (struct <code>wl_display</code> *display, struct <code>wl_event_queue</code> *queue)</h3>
@@ -270,74 +178,74 @@ struct wl_array additional_shm_formats</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>display</i> The display context object<br />
- <i>queue</i> The event queue to dispatch</dl>
+ <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of dispatched events on success or -1 on failure</dl>
+<dd>The number of dispatched events on success or -1 on failure</dd></dl>
 <p> Dispatch all incoming events for objects assigned to the given event queue. On failure -1 is returned and errno set appropriately. If there are no events queued, this function returns immediately. </p>
 <p> <code>Since:</code></p>
 <dl>
-<dd>1.0.2</dl>
+<dd>1.0.2</dd></dl>
 <h3>int wl_display_flush (struct <code>wl_display</code> *display)</h3>
 <p>Send all buffered requests on the display to the server </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of bytes sent on success or -1 on failure</dl>
+<dd>The number of bytes sent on success or -1 on failure</dd></dl>
 <p> Send all buffered data on the client side to the server. Clients should call this function before blocking. On success, the number of bytes sent to the server is returned. On failure, this function returns -1 and errno is set appropriately. </p>
 <p> <code>wl_display_flush()</code> never blocks. It will write as much data as possible, but if all data could not be written, errno will be set to EAGAIN and -1 returned. In that case, use poll on the display file descriptor to wait for it to become writable again.</p>
 <h3>struct <code>wl_array</code> * wl_display_get_additional_shm_formats (struct <code>wl_display</code> *display)</h3>
 <p>Get list of additional wl_shm pixel formats </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object</dl>
+<dd><i>display</i> The display object</dd></dl>
 <p> This function returns the list of addition wl_shm pixel formats that the compositor supports. WL_SHM_FORMAT_ARGB8888 and WL_SHM_FORMAT_XRGB8888 are always supported and not included in the array, but all formats added through <code>wl_display_add_shm_format()</code> will be in the array. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>wl_display_add_shm_format()</code></dl>
+<dd><code>wl_display_add_shm_format()</code></dd></dl>
 <h3>int wl_display_get_error (struct <code>wl_display</code> *display)</h3>
 <p>Retrieve the last error that occurred on a display </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The last error that occurred on display or 0 if no error occurred</dl>
+<dd>The last error that occurred on display or 0 if no error occurred</dd></dl>
 <p> Return the last error that occurred on the display. This may be an error sent by the server or caused by the local client. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>Errors are <code>fatal</code>. If this function returns non-zero the display can no longer be used.</dl>
+<dd>Errors are <code>fatal</code>. If this function returns non-zero the display can no longer be used.</dd></dl>
 <h3>int wl_display_get_fd (struct <code>wl_display</code> *display)</h3>
 <p>Get a display context&#8217;s file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Display object file descriptor</dl>
+<dd>Display object file descriptor</dd></dl>
 <p> Return the file descriptor associated with a display so it can be integrated into the client&#8217;s main loop.</p>
 <h3>uint32_t wl_display_get_serial (struct <code>wl_display</code> *display)</h3>
 <p>Get the current serial number </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object</dl>
+<dd><i>display</i> The display object</dd></dl>
 <p> This function returns the most recent serial number, but does not increment it.</p>
 <h3>uint32_t wl_display_next_serial (struct <code>wl_display</code> *display)</h3>
 <p>Get the next serial number </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object</dl>
+<dd><i>display</i> The display object</dd></dl>
 <p> This function increments the display serial number and returns the new value.</p>
 <h3>int wl_display_prepare_read (struct <code>wl_display</code> *display)</h3>
 <p>Prepare to read events after polling file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success or -1 if event queue was not empty</dl>
+<dd>0 on success or -1 if event queue was not empty</dd></dl>
 <p> This function must be called before reading from the file descriptor using <code>wl_display_read_events()</code>. Calling <code>wl_display_prepare_read()</code> announces the calling threads intention to read and ensures that until the thread is ready to read and calls <code>wl_display_read_events()</code>, no other thread will read from the file descriptor. This only succeeds if the event queue is empty though, and if there are undispatched events in the queue, -1 is returned and errno set to EAGAIN. </p>
 <p> If a thread successfully calls <code>wl_display_prepare_read()</code>, it must either call <code>wl_display_read_events()</code> when it&#8217;s ready or cancel the read intention by calling <code>wl_display_cancel_read()</code>. </p>
 <p> Use this function before polling on the display fd or to integrate the fd into a toolkit event loop in a race-free way. Typically, a toolkit will call <code>wl_display_dispatch_pending()</code> before sleeping, to make sure it doesn&#8217;t block with unhandled events. Upon waking up, it will assume the file descriptor is readable and read events from the fd by calling <code>wl_display_dispatch()</code>. Simplified, we have: </p>
@@ -351,20 +259,20 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Read events from display file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success or -1 on error. In case of error errno will be set accordingly</dl>
+<dd>0 on success or -1 on error. In case of error errno will be set accordingly</dd></dl>
 <p> This will read events from the file descriptor for the display. This function does not dispatch events, it only reads and queues events into their corresponding event queues. If no data is avilable on the file descriptor, <code>wl_display_read_events()</code> returns immediately. To dispatch events that may have been queued, call <code>wl_display_dispatch_pending()</code> or <code>wl_display_dispatch_queue_pending()</code>. </p>
 <p> Before calling this function, <code>wl_display_prepare_read()</code> must be called first.</p>
 <h3>int wl_display_roundtrip (struct <code>wl_display</code> *display)</h3>
 <p>Block until all pending request are processed by the server </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object</dl>
+<dd><i>display</i> The display context object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The number of dispatched events on success or -1 on failure</dl>
+<dd>The number of dispatched events on success or -1 on failure</dd></dl>
 <p> Blocks until the server process all currently issued requests and sends out pending events on all event queues.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Wayland from the source code.</p>

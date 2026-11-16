@@ -10,20 +10,14 @@ description: "std::is_copy_constructible,std::is_trivially_copy_constructible,st
 <p>std::is_copy_constructible,std::is_trivially_copy_constructible,std::is_nothrow_copy_constructible &#8211; std::is_copy_constructible,std::is_trivially_copy_constructible,std::is_nothrow_copy_constructible</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct is_copy_constructible;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct is_trivially_copy_constructible;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_copy_constructible;</code></pre>
 <p>1) If T is not a referenceable type (i.e., possibly cv-qualified void or a function type with a cv-qualifier-seq or a ref-qualifier), provides a member constant value equal to false. Otherwise, provides a member constant value equal to std::is_constructible&lt;T, const T&amp;&gt;::value.<br />
 2) Same as <code>(1)</code>, but uses std::is_trivially_constructible&lt;T, const T&amp;&gt;.<br />
@@ -69,12 +63,10 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct Ex1 {
     std::string str; // member has a non-trivial copy ctor
 };
-
 struct Ex2 {
     int n;
     Ex2(const Ex2 &amp;) = default; // trivial and non-throwing

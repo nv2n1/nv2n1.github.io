@@ -17,14 +17,14 @@ bool bson_check_version(int required_major,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>required_major</code></p>
-<dd> The minimum major version required.</dl>
+<dt><code>required_major</code></dt>
+<dd> The minimum major version required.</dd></dl>
 <dl>
-<dt><code>required_minor</code></p>
-<dd> The minimum minor version required.</dl>
+<dt><code>required_minor</code></dt>
+<dd> The minimum minor version required.</dd></dl>
 <dl>
-<dt><code>required_micro</code></p>
-<dd> The minimum micro version required.</dl>
+<dt><code>required_micro</code></dt>
+<dd> The minimum micro version required.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Check at runtime if this release of libbson meets a required version. </p>
 <h2>RETURNS</h2>

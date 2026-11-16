@@ -14,14 +14,14 @@ description: "rct – Displays information (headers) about or size and statistic
 <p>Red Hat Subscription Manager uses X.509 certificates to identify a registered system (identity certificate), the products installed on that system (product certificates), and the subscriptions attached to the system (entitlement certificates), including available content repositories, products, and support levels. All of the information that Subscription Manager requires is contained in the body of the certificate. </p>
 <h2>Commands</h2>
 <dl>
-<dt><code>stat-cert</code></p>
-<dd>Prints the size of the certificate and other details about the certificate. The precise details depend on the type of certificate being checked. </p>
-<dt><code>cat-cert</code></p>
-<dd>Prints the information that is contained in the certificate itself, such as the certificate headers, serial numbers, products, and content sets. Two options, <code>&#8211;no-content</code> and <code>&#8211;no-products</code>, can be used to shorten the output to include only header and descriptive information. </p>
-<dt><code>cat-manifest</code></p>
-<dd>Prints the information that is contained in the subscription service manifest. The manifest is an archive of JSON files which contain all of the subscription information for subscriptions allocated to the on-premise service. The <code>&#8211;no-content</code> option can be used to reduce the detail shown in the output. </p>
-<dt><code>dump-manifest</code></p>
-<dd>Extracts the contents of the manifest archive. </p>
+<dt><code>stat-cert</code></dt>
+<dd>Prints the size of the certificate and other details about the certificate. The precise details depend on the type of certificate being checked. </dd>
+<dt><code>cat-cert</code></dt>
+<dd>Prints the information that is contained in the certificate itself, such as the certificate headers, serial numbers, products, and content sets. Two options, <code>&#8211;no-content</code> and <code>&#8211;no-products</code>, can be used to shorten the output to include only header and descriptive information. </dd>
+<dt><code>cat-manifest</code></dt>
+<dd>Prints the information that is contained in the subscription service manifest. The manifest is an archive of JSON files which contain all of the subscription information for subscriptions allocated to the on-premise service. The <code>&#8211;no-content</code> option can be used to reduce the detail shown in the output. </dd>
+<dt><code>dump-manifest</code></dt>
+<dd>Extracts the contents of the manifest archive. </dd>
 </dl>
 <h2>The Stat-Cert Command</h2>
 <p>The <code>rct</code> tool is used to gather information about the already-issued certificates being used by Subscription Manager. The main reason for that is that certificate sizes, for a number of reasons, impact content delivery service performance. </p>
@@ -30,17 +30,17 @@ description: "rct – Displays information (headers) about or size and statistic
 <p> A large number of content sets is anything over 185 total sets. Both the total number of content sets and the size of the DER encoding in the certificate could affect performance.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>/path/to/cert.pem</i></p>
-<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. This is required. </p>
+<dt><i>/path/to/cert.pem</i></dt>
+<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. This is required. </dd>
 </dl>
 <h3>Examples</h3>
 <p>The statistics for an entitlement certificate show both the DER size and the number of content sets, among other information:</p>
 <dl>
-<dd>* Type (entitlement certificate)</p>
-<dd>* Version (of the certificate style); newer versions will be 3.x, with better performance for handling large content sets</p>
-<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself)</p>
-<dd>* Key size, for the associated key file, in bytes</p>
-<dd>* The total number of available content sets in the subscription </p>
+<dd>* Type (entitlement certificate)</dd>
+<dd>* Version (of the certificate style); newer versions will be 3.x, with better performance for handling large content sets</dd>
+<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself)</dd>
+<dd>* Key size, for the associated key file, in bytes</dd>
+<dd>* The total number of available content sets in the subscription </dd>
 </dl>
 <p> For example:</p>
 <dl>
@@ -51,13 +51,13 @@ Version: 1.0
 DER size: 47555b
 Subject Key ID size: 553b
 Content sets: 100</pre>
-</dl>
+</dd></dl>
 <p> While the size of the certificate is less of an issue for identity and product certificates (which are quite small), the <code>stat-cert</code> command can still be used to view the size and statistics of the certificates. </p>
 <p> For a product certificate, the <code>stat-cert</code> command shows:</p>
 <dl>
-<dd>* Type (product certificate)</p>
-<dd>* Version (of the certificate style)</p>
-<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself) </p>
+<dd>* Type (product certificate)</dd>
+<dd>* Version (of the certificate style)</dd>
+<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself) </dd>
 </dl>
 <p> For example:</p>
 <dl>
@@ -66,13 +66,13 @@ Content sets: 100</pre>
 Type: Product Certificate
 Version: 1.0
 DER size: 1558b</pre>
-</dl>
+</dd></dl>
 <p> For an identity certificate:</p>
 <dl>
-<dd>* Type (identity certificate)</p>
-<dd>* Version (of the certificate style)</p>
-<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself)</p>
-<dd>* Key size, for the associated key file, in bytes </p>
+<dd>* Type (identity certificate)</dd>
+<dd>* Version (of the certificate style)</dd>
+<dd>* DER size, which gives the size of the certificate contents (not the size of the certificate file itself)</dd>
+<dd>* Key size, for the associated key file, in bytes </dd>
 </dl>
 <p> For example:</p>
 <dl>
@@ -82,27 +82,27 @@ Type: Identity Certificate
 Version: 1.0
 DER size: 1488b
 Subject Key ID size: 20b</pre>
-</dl>
+</dd></dl>
 <h2>The Cat-Cert Command</h2>
 <p>Each certificate contains a complete set of information with all of the details for whatever element is being identified. That information can be displayed, in pretty-print form, using the <code>cat-cert</code> command.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>/path/to/cert.pem</i></p>
-<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. This is required. </p>
-<dt><code>&#8211;no-content</code></p>
-<dd>Returns all of the certification information, order information, and product information, but excludes all of the <code>Content</code> sections, which significantly reduced the information printed to stdout. <i>This is for an entitlement certificate only.</i> </p>
-<dt><code>&#8211;no-products</code></p>
-<dd>Returns all of the certification information, order information, and content (repository) information, but excludes all of the <code>Product</code> sections, which significantly reduced the information printed to stdout. <i>This is for an entitlement certificate only.</i> </p>
-<dt><i>/path/to/cert.pem</i></p>
-<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. </p>
+<dt><i>/path/to/cert.pem</i></dt>
+<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. This is required. </dd>
+<dt><code>&#8211;no-content</code></dt>
+<dd>Returns all of the certification information, order information, and product information, but excludes all of the <code>Content</code> sections, which significantly reduced the information printed to stdout. <i>This is for an entitlement certificate only.</i> </dd>
+<dt><code>&#8211;no-products</code></dt>
+<dd>Returns all of the certification information, order information, and content (repository) information, but excludes all of the <code>Product</code> sections, which significantly reduced the information printed to stdout. <i>This is for an entitlement certificate only.</i> </dd>
+<dt><i>/path/to/cert.pem</i></dt>
+<dd>Gives the full path and filename to the PEM certificate for the given subscription, product, or system. </dd>
 </dl>
 <h3>Output</h3>
 <p>The command returns the most basic information about the certificate &#8212; such as its directory path, its serial number and subject name, and its validity period (start and end dates) &#8212; in the <i>Certificate</i> section:</p>
 <dl>
-<dd>* Path &#8212; the filesystem location where the certificate is installed</p>
-<dd>* Version &#8212; the certificate format version <i>&#8212; P</i> * Serial &#8212; the serial number for the certificate</p>
-<dd>* Start/End Date &#8212; the validity period for the certificate</p>
-<dd>* Alt Name &#8212; the subject alternative name, which uses the hostname of the system rather than the UUID (for identity certificates only)</dl>
+<dd>* Path &#8212; the filesystem location where the certificate is installed</dd>
+<dd>* Version &#8212; the certificate format version <i>&#8212; P</i> * Serial &#8212; the serial number for the certificate</dd>
+<dd>* Start/End Date &#8212; the validity period for the certificate</dd>
+<dd>* Alt Name &#8212; the subject alternative name, which uses the hostname of the system rather than the UUID (for identity certificates only)</dd></dl>
 <p> The Subject DN of the certificate is in the <i>Subject</i> section. </p>
 <p> For example, for the identity certificate:</p>
 <dl>
@@ -120,7 +120,7 @@ Certificate:
  Alt Name: server.example.com
 Subject:
  CN: e94bc90e-44a1-4f8c-b6fc-0a3e9d6fac2b</pre>
-</dl>
+</dd></dl>
 <p> A product certificate contains additional information in a <code>Product</code> section, which defines the information for the specific installed product, such as its name, product version, and any yum tags used for that product. For example:</p>
 <dl>
 <dd>
@@ -142,7 +142,7 @@ Product:
  Version: 6.4
  Arch: x86_64
  Tags: rhel-6,rhel-6-server</pre>
-</dl>
+</dd></dl>
 <p> The most information is contained in the entitlement certificate. Along with the <code>Certificate</code> and <code>Subject</code>, it also has a <code>Product</code> section that defines the product group that is covered by the subscription. </p>
 <p> Then, it contains an <code>Order</code> section that details everything related to the purchase of the subscription (such as the contract number, service level, total quantity, quantities assigned to the system, and other details on the subscription). </p>
 <p> A subscription for a product covers the version purchased <i>and</i> every previous version of the product. For example, when a subscription is purchased for Red Hat Enterprise Linux 6.4, the subscription provides full access to all RHEL 6 repositories, <code>plus</code> access to all RHEL 5 repositories and then other included product content repositories, like Subscription Asset Manager. Every available content repository is listed in a <code>Content</code> section that contains the repository name, associated tags, its URL, and a notice on whether the yum repository is enabled by default. For example:</p>
@@ -193,14 +193,14 @@ Content:
  Enabled: True
  Expires: 86400
  Required Tags: rhel-6-server</pre>
-</dl>
+</dd></dl>
 <h2>The Cat-Manifest Command</h2>
 <p>A subscription management service is allocated a specific bloc of subscriptions that are available to an account. This list of subscriptions is the <i>manifest</i> for the service. The <code>cat-manifest</code> command reads and prints the details of the manifest, such as the creation date, the system UUID and name, available products, and subscription details. </p>
 <p> There are multiple JSON files in the archive, identifying different aspects of the subscription service and subscription configuration, such as the general manifest properties, subscription information, content and repository information, and product information.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>/path/to/consumer_export.zip</i></p>
-<dd>Gives the path and filename (by default, <code>consumer_export.zip</code>) for the manifest file on the local system. This is required. </p>
+<dt><i>/path/to/consumer_export.zip</i></dt>
+<dd>Gives the path and filename (by default, <code>consumer_export.zip</code>) for the manifest file on the local system. This is required. </dd>
 </dl>
 <h3>Examples</h3>
 <p>The command pretty-prints all of the details about the manifest itself and the allocated subscriptions, products, and content.</p>
@@ -235,17 +235,17 @@ Subscriptions:
  Entitlement File: /etc/pki/entitlement/2027912482659389239.pem
  Certificate File: /etc/pki/product/69.pem
  Certificate Version: 3</pre>
-</dl>
+</dd></dl>
 <h2>The Dump-Manifest Command</h2>
 <p>A subscription management service is allocated a specific bloc of subscriptions that are available to an account. This list of subscriptions is the <i>manifest</i> for the service. The <code>cat-manifest</code> command prints the contents of the manifest.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>/path/to/consumer_export.zip</i></p>
-<dd>Gives the path and filename (by default, <code>consumer_export.zip</code>) for the manifest file on the local system. This is required. </p>
-<dt><code>&#8211;destination=PATH</code></p>
-<dd>Specifies an export directory to which to extract and save the contents of the manifest archive. If no destination is given, then the archive is extracted to the local directory. </p>
-<dt><code>&#8211;force, -f</code></p>
-<dd>Overwrites any existing archive files. If a manifest archive already exists in the specified location (for example, if the manifest has already been dumped once), then attempting to dump the manifest to the same location will fail. Using the <code>&#8211;force</code> option forces the dump operation to complete and overwrites the previous file. </p>
+<dt><i>/path/to/consumer_export.zip</i></dt>
+<dd>Gives the path and filename (by default, <code>consumer_export.zip</code>) for the manifest file on the local system. This is required. </dd>
+<dt><code>&#8211;destination=PATH</code></dt>
+<dd>Specifies an export directory to which to extract and save the contents of the manifest archive. If no destination is given, then the archive is extracted to the local directory. </dd>
+<dt><code>&#8211;force, -f</code></dt>
+<dd>Overwrites any existing archive files. If a manifest archive already exists in the specified location (for example, if the manifest has already been dumped once), then attempting to dump the manifest to the same location will fail. Using the <code>&#8211;force</code> option forces the dump operation to complete and overwrites the previous file. </dd>
 </dl>
 <h3>Examples</h3>
 <p>This command simply extracts the manifest files to a given location (the working directory by default). The manifest itself contains multiple JSON files, with separate JSON files providing details on the manifest itself, each individual product, each individual subscription, and details for the specific, on-premise subscription management service. </p>
@@ -254,13 +254,13 @@ Subscriptions:
 <dd>
 <pre>[root [at] server ~]# rct dump-manifest --destination /export/archives/sam/manifest /tmp/consumer_export.zip
 The manifest has been dumped to the /export/archives/sam/manifest directory.</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <dl>
-<dd>* Product certificates: /etc/pki/product/*.pem</p>
-<dd>* Subscription certificates: etc/pki/entitlement/&lt;serial#&gt;.pem</p>
-<dd>* System identity certificates: /etc/pki/consumer/cert.pem</p>
-<dd>* The manifest: consumer_export.zip </p>
+<dd>* Product certificates: /etc/pki/product/*.pem</dd>
+<dd>* Subscription certificates: etc/pki/entitlement/&lt;serial#&gt;.pem</dd>
+<dd>* System identity certificates: /etc/pki/consumer/cert.pem</dd>
+<dd>* The manifest: consumer_export.zip </dd>
 </dl>
 <h2>Bugs</h2>
 <p>This tool is part of Red Hat Subscription Manager. To file bugs against this command-line tool, go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com">https://bugzilla.redhat.com</a>&gt;, and select Red Hat &gt; Red Hat Enterprise Linux &gt; subscription-manager. </p>

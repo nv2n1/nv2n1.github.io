@@ -13,8 +13,8 @@ description: "mongoc_gridfs_destroy() – This function shall destroy the gridfs
 mongoc_gridfs_destroy (mongoc_gridfs_t *gridfs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall destroy the gridfs structure referenced by <code>gridfs</code> and any resources associated with the gridfs. </p>
 <h2>Colophon</h2>

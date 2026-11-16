@@ -15,11 +15,11 @@ free_percpu_irq - free an interrupt allocated with request_percpu_irq
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line to free</dl>
+<dl><dd></dd><dd>Interrupt line to free</dd></dl>
  
 
  <i>dev_id</i>
-<dl><dd>Device identity to free</dl>
+<dl><dd>Device identity to free</dd></dl>
 
 <h2>Description</h2>
 

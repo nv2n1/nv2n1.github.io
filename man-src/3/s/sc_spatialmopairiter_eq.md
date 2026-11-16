@@ -11,7 +11,6 @@ description: "sc::SpatialMOPairIter_eq –"
 <p> <code>SpatialMOPairIter_eq</code> gives the ordering of same-spin and different-spin orbital pairs if both orbitals of the pairs are from the same space.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pairiter.h&gt;</code></pre>
 <p> Inherits <code>sc::SpatialMOPairIter</code>.</p>
 <h3>Public Member Functions</h3>

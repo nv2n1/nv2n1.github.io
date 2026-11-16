@@ -59,9 +59,9 @@ url: "/docs/linux/man/1-perl5263delta/"
 
 <dl>
 <dt>&bull;
-<dd> Archive::Tar has been upgraded from version 2.24 to 2.24_01.
-<dt>&bull;
-<dd> Module::CoreList has been upgraded from version 5.20180414_26 to 5.20181129_26.</dl>
+</dt><dd> Archive::Tar has been upgraded from version 2.24 to 2.24_01.
+</dd><dt>&bull;
+</dt><dd> Module::CoreList has been upgraded from version 5.20180414_26 to 5.20181129_26.</dd></dl>
 
 <h2>Diagnostics</h2>
 
@@ -72,39 +72,31 @@ url: "/docs/linux/man/1-perl5263delta/"
  <i>New Errors</i>
 <dl>
 <dt>&bull;
-<dd> Unexpected ']' with no following ')' in (?[... in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
-
+</dt><dd> Unexpected ']' with no following ')' in (?[... in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
  (F) While parsing an extended character class a ']' character was encountered at a point in the definition where the only legal use of ']' is to close the character class definition as part of a '])', you may have forgotten the close paren, or otherwise confused the parser.
-<dt>&bull;
-<dd> Expecting close paren for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
-
+</dd><dt>&bull;
+</dt><dd> Expecting close paren for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
  (F) While parsing a nested extended character class like: 
-
  <pre><code>
     (?[ ... (?flags:(?[ ... ])) ... ])
                              ^
 </code></pre> 
-
  we expected to see a close paren ')' (marked by ^) but did not.
-<dt>&bull;
-<dd> Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
-
+</dd><dt>&bull;
+</dt><dd> Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
  (F) While parsing a nested extended character class like: 
-
  <pre><code>
     (?[ ... (?flags:(?[ ... ])) ... ])
                               ^
 </code></pre> 
-
- we expected to see a close paren ')' (marked by ^) but did not.</dl>
+ we expected to see a close paren ')' (marked by ^) but did not.</dd></dl>
 
 <h3>Changes to Existing Diagnostics</h3>
 
 <dl>
 <dt>&bull;
-<dd> Syntax error in (?[...]) in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
-
- This fatal error message has been slightly expanded (from ``Syntax error in (?[...]) in regex m/%s/'') for greater clarity.</dl>
+</dt><dd> Syntax error in (?[...]) in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
+ This fatal error message has been slightly expanded (from ``Syntax error in (?[...]) in regex m/%s/'') for greater clarity.</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -155,20 +147,20 @@ url: "/docs/linux/man/1-perl5263delta/"
 
 
 <dt><a HREF="#lbAJ">Incompatible Changes</a>
-<dd>
-<dt><a HREF="#lbAK">Modules and Pragmata</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">Modules and Pragmata</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAM">Diagnostics</a>
-<dd>
+</dd><dt><a HREF="#lbAM">Diagnostics</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAP">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAQ">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAR">Give Thanks</a>
-<dd>
-<dt><a HREF="#lbAS">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAP">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAQ">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAR">Give Thanks</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">SEE ALSO</a>
+</dt><dd></dd></dl>

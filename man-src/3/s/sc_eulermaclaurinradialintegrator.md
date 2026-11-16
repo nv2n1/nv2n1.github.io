@@ -11,7 +11,6 @@ description: "sc::EulerMaclaurinRadialIntegrator –"
 <p> An implementation of a radial integrator using the Euler-Maclaurin weights and grid points.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::RadialIntegrator</code>.</p>
 <h3>Public Member Functions</h3>

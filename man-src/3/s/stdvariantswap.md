@@ -37,12 +37,9 @@ std::is_nothrow_swappable_v&lt;Types&gt;) &amp;&amp; ...))
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;variant&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::variant&lt;int, std::string&gt; v1{2}, v2{&quot;abc&quot;};
     std::visit([](auto &amp;&amp;x) { std::cout &lt;&lt; x &lt;&lt; ' '; }, v1);

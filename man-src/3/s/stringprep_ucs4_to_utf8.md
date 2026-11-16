@@ -13,14 +13,14 @@ description: "stringprep_ucs4_to_utf8 – API function"
 char *stringprep_ucs4_to_utf8(const uint32_t *str, ssize_t len, size_t *items_read, size_t *items_written);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const uint32_t * str</p>
-<dd>a UCS-4 encoded string</p>
-<dt>ssize_t len</p>
-<dd>the maximum length of <i>str</i> to use. If <i>len</i> &lt; 0, then the string is terminated with a 0 character.</p>
-<dt>size_t * items_read</p>
-<dd>location to store number of characters read read, or <code>NULL</code>.</p>
-<dt>size_t * items_written</p>
-<dd>location to store number of bytes written or <code>NULL</code>. The value here stored does not include the trailing 0 byte.</dl>
+<dt>const uint32_t * str</dt>
+<dd>a UCS-4 encoded string</dd>
+<dt>ssize_t len</dt>
+<dd>the maximum length of <i>str</i> to use. If <i>len</i> &lt; 0, then the string is terminated with a 0 character.</dd>
+<dt>size_t * items_read</dt>
+<dd>location to store number of characters read read, or <code>NULL</code>.</dd>
+<dt>size_t * items_written</dt>
+<dd>location to store number of bytes written or <code>NULL</code>. The value here stored does not include the trailing 0 byte.</dd></dl>
 <h2>Description</h2>
 <p>Convert a string from a 32-bit fixed width representation as UCS-4. to UTF-8. The result will be terminated with a 0 byte.</p>
 <h2>Return Value</h2>
@@ -33,5 +33,5 @@ char *stringprep_ucs4_to_utf8(const uint32_t *str, ssize_t len, size_t *items_re
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

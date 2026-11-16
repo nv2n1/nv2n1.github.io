@@ -55,9 +55,9 @@ description: "ipsec_selinux – Security Enhanced Linux Policy for the ipsec pro
 <p> Policy governs the access confined processes have to these ports. SELinux ipsec policy is very flexible allowing users to setup their ipsec processes in as secure a method as possible. </p>
 <p> The following port types are defined for ipsec: </p>
 <dl>
-<dt><code>ipsecnat_port_t</code></p>
+<dt><code>ipsecnat_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4500 udp 4500</dl>
+</dd><dd>Default Defined Ports: tcp 4500 udp 4500</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ipsec_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -161,26 +161,26 @@ description: "ipsec_selinux – Security Enhanced Linux Policy for the ipsec pro
 <p> <code>ipsec_conf_file_t</code> </p>
 <p> &#8211; Set files with the ipsec_conf_file_t type, if you want to treat the files as ipsec conf content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/racoon(/.*)?, /etc/strongswan(/.*)?, /etc/strongimcv(/.*)?, /etc/ipsec.conf, /etc/strongswan/ipsec.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/racoon(/.*)?, /etc/strongswan(/.*)?, /etc/strongimcv(/.*)?, /etc/ipsec.conf, /etc/strongswan/ipsec.conf </dd>
 </dl>
 <p> <code>ipsec_exec_t</code> </p>
 <p> &#8211; Set files with the ipsec_exec_t type, if you want to transition an executable to the ipsec_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/strongswan/.*, /usr/libexec/strongimcv/.*, /usr/lib/ipsec/spi, /usr/lib/ipsec/pluto, /usr/lib/ipsec/eroute, /usr/libexec/ipsec/spi, /usr/libexec/ipsec/pluto, /usr/lib/ipsec/klipsdebug, /usr/libexec/ipsec/eroute, /usr/libexec/ipsec/klipsdebug </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/strongswan/.*, /usr/libexec/strongimcv/.*, /usr/lib/ipsec/spi, /usr/lib/ipsec/pluto, /usr/lib/ipsec/eroute, /usr/libexec/ipsec/spi, /usr/libexec/ipsec/pluto, /usr/lib/ipsec/klipsdebug, /usr/libexec/ipsec/eroute, /usr/libexec/ipsec/klipsdebug </dd>
 </dl>
 <p> <code>ipsec_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ipsec_initrc_exec_t type, if you want to transition an executable to the ipsec_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/ipsec, /etc/rc.d/init.d/racoon, /etc/rc.d/init.d/strongswan </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/ipsec, /etc/rc.d/init.d/racoon, /etc/rc.d/init.d/strongswan </dd>
 </dl>
 <p> <code>ipsec_key_file_t</code> </p>
 <p> &#8211; Set files with the ipsec_key_file_t type, if you want to treat the files as ipsec key content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ipsec.d(/.*)?, /etc/racoon/certs(/.*)?, /etc/ipsec.secrets.*, /etc/strongswan/ipsec.d(/.*)?, /etc/strongswan/ipsec.secrets.*, /etc/racoon/psk.txt </p>
+<dt>Paths:</dt>
+<dd>/etc/ipsec.d(/.*)?, /etc/racoon/certs(/.*)?, /etc/ipsec.secrets.*, /etc/strongswan/ipsec.d(/.*)?, /etc/strongswan/ipsec.secrets.*, /etc/racoon/psk.txt </dd>
 </dl>
 <p> <code>ipsec_log_t</code> </p>
 <p> &#8211; Set files with the ipsec_log_t type, if you want to treat the data as ipsec log data, usually stored under the /var/log directory. </p>
@@ -189,34 +189,34 @@ description: "ipsec_selinux – Security Enhanced Linux Policy for the ipsec pro
 <p> <code>ipsec_mgmt_exec_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_exec_t type, if you want to transition an executable to the ipsec_mgmt_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ipsec, /usr/sbin/swanctl, /usr/sbin/strongswan, /usr/sbin/strongimcv, /usr/lib/ipsec/_plutorun, /usr/lib/ipsec/_plutoload, /usr/libexec/ipsec/_plutorun, /usr/libexec/ipsec/_plutoload, /usr/libexec/nm-openswan-service, /usr/libexec/nm-libreswan-service </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ipsec, /usr/sbin/swanctl, /usr/sbin/strongswan, /usr/sbin/strongimcv, /usr/lib/ipsec/_plutorun, /usr/lib/ipsec/_plutoload, /usr/libexec/ipsec/_plutorun, /usr/libexec/ipsec/_plutoload, /usr/libexec/nm-openswan-service, /usr/libexec/nm-libreswan-service </dd>
 </dl>
 <p> <code>ipsec_mgmt_lock_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_lock_t type, if you want to treat the files as ipsec mgmt lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/subsys/ipsec, /var/lock/subsys/strongswan </p>
+<dt>Paths:</dt>
+<dd>/var/lock/subsys/ipsec, /var/lock/subsys/strongswan </dd>
 </dl>
 <p> <code>ipsec_mgmt_unit_file_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_unit_file_t type, if you want to treat the files as ipsec mgmt unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/ipsec.*, /usr/lib/systemd/system/strongswan.*, /usr/lib/systemd/system/strongimcv.*, /usr/lib/systemd/system/strongswan-swanctl.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/ipsec.*, /usr/lib/systemd/system/strongswan.*, /usr/lib/systemd/system/strongimcv.*, /usr/lib/systemd/system/strongswan-swanctl.* </dd>
 </dl>
 <p> <code>ipsec_mgmt_var_run_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_var_run_t type, if you want to store the ipsec mgmt files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pluto/ipsec.info, /var/run/pluto/ipsec_setup.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/pluto/ipsec.info, /var/run/pluto/ipsec_setup.pid </dd>
 </dl>
 <p> <code>ipsec_tmp_t</code> </p>
 <p> &#8211; Set files with the ipsec_tmp_t type, if you want to store ipsec temporary files in the /tmp directories. </p>
 <p> <code>ipsec_var_run_t</code> </p>
 <p> &#8211; Set files with the ipsec_var_run_t type, if you want to store the ipsec files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/racoon(/.*)?, /var/run/pluto(/.*)?, /var/run/charon.*, /var/run/racoon.pid, /var/run/charon.ctl, /var/run/charon.vici </p>
+<dt>Paths:</dt>
+<dd>/var/racoon(/.*)?, /var/run/pluto(/.*)?, /var/run/charon.*, /var/run/racoon.pid, /var/run/charon.ctl, /var/run/charon.vici </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

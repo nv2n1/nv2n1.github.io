@@ -14,22 +14,22 @@ description: "siggen – signature gathering routine for Tripwire"
 <p><code>siggen</code> is a utility that displays the hash function values for the specified files.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-t</code><i>, </i><code>&#8211;terse</code></p>
-<dd>Terse mode. Prints requested hashes for a given file on one line, delimited by spaces, with no extraneous information.</p>
-<dt><code>-h</code><i>, </i><code>&#8211;hexadecimal</code></p>
-<dd>Display results in hexadecimal rather than base64 notation.</p>
-<dt><code>-a</code><i>, </i><code>&#8211;all</code></p>
-<dd>Display all hash function values (default).</p>
-<dt><code>-C</code><i>, </i><code>&#8211;CRC32</code></p>
-<dd>Display CRC-32, POSIX 1003.2 compliant 32-bit Cyclic Redundancy Check.</p>
-<dt><code>-M</code><i>, </i><code>&#8211;MD5</code></p>
-<dd>Display MD5, the RSA Data Security, Inc. Message Digest Algorithm.</p>
-<dt><code>-S</code><i>, </i><code>&#8211;SHA</code></p>
-<dd>Display SHA, <i>Tripwire</i>&#8216;s implementation of the NIST Secure Hash Standard, SHS (NIST FIPS 180).</p>
-<dt><code>-H</code><i>, </i><code>&#8211;HAVAL</code></p>
-<dd>Display Haval value, a 128-bit hash code.</p>
-<dt><i>file1</i> [ <i>file2&#8230; </i>]</p>
-<dd>List of filesystem objects for which to display values.</dl>
+<dt><code>-t</code><i>, </i><code>&#8211;terse</code></dt>
+<dd>Terse mode. Prints requested hashes for a given file on one line, delimited by spaces, with no extraneous information.</dd>
+<dt><code>-h</code><i>, </i><code>&#8211;hexadecimal</code></dt>
+<dd>Display results in hexadecimal rather than base64 notation.</dd>
+<dt><code>-a</code><i>, </i><code>&#8211;all</code></dt>
+<dd>Display all hash function values (default).</dd>
+<dt><code>-C</code><i>, </i><code>&#8211;CRC32</code></dt>
+<dd>Display CRC-32, POSIX 1003.2 compliant 32-bit Cyclic Redundancy Check.</dd>
+<dt><code>-M</code><i>, </i><code>&#8211;MD5</code></dt>
+<dd>Display MD5, the RSA Data Security, Inc. Message Digest Algorithm.</dd>
+<dt><code>-S</code><i>, </i><code>&#8211;SHA</code></dt>
+<dd>Display SHA, <i>Tripwire</i>&#8216;s implementation of the NIST Secure Hash Standard, SHS (NIST FIPS 180).</dd>
+<dt><code>-H</code><i>, </i><code>&#8211;HAVAL</code></dt>
+<dd>Display Haval value, a 128-bit hash code.</dd>
+<dt><i>file1</i> [ <i>file2&#8230; </i>]</dt>
+<dd>List of filesystem objects for which to display values.</dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <code>siggen</code> version 2.4.</p>
 <h2>Authors</h2>

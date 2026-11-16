@@ -32,27 +32,27 @@ description: "globus_extension.h –"
 <p> Also, when builtin (compiled in) extensions are supported, this will activate those directly without needing to load the library. </p>
 <p> Search order:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>extension_name</code> in mappings hash XXX not implemented</p>
-<dt> &bull;</p>
-<dd>mapped name in builtin hash XXX not implemented</p>
-<dt> &bull;</p>
-<dd>mapped name in dll hash XXX not implemented</p>
-<dt> &bull;</p>
-<dd>load mapped name XXX not implemented</dl>
+<dt>&bull;</dt>
+<dd><code>extension_name</code> in mappings hash XXX not implemented</dd>
+<dt> &bull;</dt>
+<dd>mapped name in builtin hash XXX not implemented</dd>
+<dt> &bull;</dt>
+<dd>mapped name in dll hash XXX not implemented</dd>
+<dt> &bull;</dt>
+<dd>load mapped name XXX not implemented</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>extension_name</code> in builtin hash</p>
-<dt>&bull;</p>
-<dd><code>extension_name</code> in dll hash</p>
-<dt>&bull;</p>
-<dd>load library if(strchr(<code>extension_name</code>, &#8216;/&#8217;))</p>
-<dt> &bull;</p>
-<dd>concatenate / + dirname(<code>extension_name</code>) + /lib + basename(<code>extension_name</code>) + _&lt;flavor&gt;.so to $GLOBUS_LOCATION/lib and each search path in mappings file XXX not implemented (eg, for <code>extension_name</code> == wsrf/services/CounterService, load $GLOBUS_LOCATION/lib/wsrf/services/libCounterService_gcc32dbg.so)</p>
-<dt> &bull;</p>
-<dd>lib + basename(<code>entension_name</code>) + _<code>flavor</code>.so subject to LD_LIBRARY_PATH else</p>
-<dt> &bull;</p>
-<dd>load lib<code>extension_name</code>_<code>build_flavor</code> subject to LD_LIBRARY_PATH</dl>
+<dt>&bull;</dt>
+<dd><code>extension_name</code> in builtin hash</dd>
+<dt>&bull;</dt>
+<dd><code>extension_name</code> in dll hash</dd>
+<dt>&bull;</dt>
+<dd>load library if(strchr(<code>extension_name</code>, &#8216;/&#8217;))</dd>
+<dt> &bull;</dt>
+<dd>concatenate / + dirname(<code>extension_name</code>) + /lib + basename(<code>extension_name</code>) + _&lt;flavor&gt;.so to $GLOBUS_LOCATION/lib and each search path in mappings file XXX not implemented (eg, for <code>extension_name</code> == wsrf/services/CounterService, load $GLOBUS_LOCATION/lib/wsrf/services/libCounterService_gcc32dbg.so)</dd>
+<dt> &bull;</dt>
+<dd>lib + basename(<code>entension_name</code>) + _<code>flavor</code>.so subject to LD_LIBRARY_PATH else</dd>
+<dt> &bull;</dt>
+<dd>load lib<code>extension_name</code>_<code>build_flavor</code> subject to LD_LIBRARY_PATH</dd></dl>
 <h3>void* globus_extension_lookup (globus_extension_handle_t *handle, globus_extension_registry_t *registry, void *symbol)</h3>
 <p>Get the datum associated with symbol in this registry. </p>
 <p> You MUST call globus_extension_release() when you are done using the data. the lookup() and release() calls handle the reference counting that prevents an extension from being unloaded while things it provides are being used. Do NOT call release() until you are done accessing the data from * the lookup() call. </p>

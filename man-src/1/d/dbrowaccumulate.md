@@ -17,28 +17,28 @@ description: "dbrowaccumulate – compute a running sum of a column"
 <p> The new column is named by the <tt>&quot;-N&quot;</tt> argument, defaulting to <tt>&quot;accum&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> or <code>&#8211;column</code> <font SIZE="-1">COLUMN</font></p>
-<dd> Accumulate values from the given <font SIZE="-1">COLUMN.</font> No default.</p>
-<dt><code>-C</code> or <code>&#8211;constant</code> K</p>
-<dd> Accumulate the given constant K for each row of input. No default.</p>
-<dt><code>-I</code> or <code>&#8211;initial-value</code> I</p>
-<dd> Start accumulation at value I. Defaults to zero.</p>
-<dt><code>-N</code> or <code>&#8211;new-name</code> N</p>
-<dd> Name the new column N. Defaults to <tt>&quot;accum&quot;</tt>.</dl>
+<dt><code>-c</code> or <code>&#8211;column</code> <font SIZE="-1">COLUMN</font></dt>
+<dd> Accumulate values from the given <font SIZE="-1">COLUMN.</font> No default.</dd>
+<dt><code>-C</code> or <code>&#8211;constant</code> K</dt>
+<dd> Accumulate the given constant K for each row of input. No default.</dd>
+<dt><code>-I</code> or <code>&#8211;initial-value</code> I</dt>
+<dd> Start accumulation at value I. Defaults to zero.</dd>
+<dt><code>-N</code> or <code>&#8211;new-name</code> N</dt>
+<dd> Name the new column N. Defaults to <tt>&quot;accum&quot;</tt>.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

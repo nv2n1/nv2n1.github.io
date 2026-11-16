@@ -17,40 +17,40 @@ description: "loose-envify – replace Node.js environment variables with plain 
 <p> Running this source code: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 if (process.env.NODE_ENV == = "development") {
     console.log('development only')
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> through loose-envify: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 loose-envify index.js &gt; bundle.js
 </pre>
-</dl>
+</dd></dl>
 <p> with NODE_ENV set to production results in: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 if (&#8220;production&#8221; == = &#8220;development&#8221;) {<br />
     console.log(&#8216;development only&#8217;)<br />
 }
-</dl>
+</dd></dl>
 <p> which, when run through a minifier, would be stripped out completely. </p>
 <p> However, if you run the same script through loose-envify with NODE_ENV set to development it gives: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 if ("development" == = "development") {
     console.log('development only')
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> The if statement will evaluate to true, so the code won&#8217;t be removed.</p>
 <h2>AUTHOR</h2>
 <p> Andres Suarez <code>&lt;zertosh [at] gmail.com&gt;</code></p>

@@ -21,26 +21,26 @@ description: "Heimdal Kerberos 4 compatiblity functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br />
  <i>in_cred</i> the credential to convert<br />
- <i>v4creds</i> the converted credential</dl>
+ <i>v4creds</i> the converted credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns 0 to indicate success. Otherwise an kerberos et error code is returned, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> Returns 0 to indicate success. Otherwise an kerberos et error code is returned, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb524_convert_creds_kdc_ccache (krb5_contextcontext, krb5_ccacheccache, krb5_creds *in_cred, struct credentials *v4creds)</h3>
 <p> Convert the v5 credentials in in_cred to v4-dito in v4creds, check the credential cache ccache before checking with the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br />
  <i>ccache</i> credential cache used to check for des-ticket.<br />
  <i>in_cred</i> the credential to convert<br />
- <i>v4creds</i> the converted credential</dl>
+ <i>v4creds</i> the converted credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns 0 to indicate success. Otherwise an kerberos et error code is returned, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> Returns 0 to indicate success. Otherwise an kerberos et error code is returned, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

@@ -19,7 +19,7 @@ description: "slag2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAG2 computes the eigenvalues of a 2 x 2 generalized eigenvalue
  problem  A - w B, with scaling as necessary to avoid over-/underflow.
@@ -28,11 +28,11 @@ description: "slag2.f –"
  where  s  is a non-negative scaling factor chosen so that  w,  w B,
  and  s A  do not overflow and, if possible, do not underflow, either.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is REAL array, dimension (LDA, 2)
           On entry, the 2 x 2 matrix A.  It is assumed that its 1-norm
@@ -119,14 +119,14 @@ diagonal is smaller
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 156 of file slag2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

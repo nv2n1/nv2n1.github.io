@@ -16,24 +16,24 @@ description: "lessecho – expand metacharacters"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-ex</code></p>
-<dd> Specifies &quot;x&quot;, rather than backslash, to be the escape char for metachars. If x is &quot;-&quot;, no escape char is used and arguments containing metachars are surrounded by quotes instead.</p>
-<dt><code>-ox</code></p>
-<dd> Specifies &quot;x&quot;, rather than double-quote, to be the open quote character, which is used if the -e- option is specified.</p>
-<dt><code>-cx</code></p>
-<dd> Specifies &quot;x&quot; to be the close quote character.</p>
-<dt><code>-pn</code></p>
-<dd> Specifies &quot;n&quot; to be the open quote character, as an integer.</p>
-<dt><code>-dn</code></p>
-<dd> Specifies &quot;n&quot; to be the close quote character, as an integer.</p>
-<dt><code>-mx</code></p>
-<dd> Specifies &quot;x&quot; to be a metachar. By default, no characters are considered metachars.</p>
-<dt><code>-nn</code></p>
-<dd> Specifies &quot;n&quot; to be a metachar, as an integer.</p>
-<dt><code>-fn</code></p>
-<dd> Specifies &quot;n&quot; to be the escape char for metachars, as an integer.</p>
-<dt><code>-a</code></p>
-<dd> Specifies that all arguments are to be quoted. The default is that only arguments containing metacharacters are quoted.</dl>
+<dt><code>-ex</code></dt>
+<dd> Specifies &quot;x&quot;, rather than backslash, to be the escape char for metachars. If x is &quot;-&quot;, no escape char is used and arguments containing metachars are surrounded by quotes instead.</dd>
+<dt><code>-ox</code></dt>
+<dd> Specifies &quot;x&quot;, rather than double-quote, to be the open quote character, which is used if the -e- option is specified.</dd>
+<dt><code>-cx</code></dt>
+<dd> Specifies &quot;x&quot; to be the close quote character.</dd>
+<dt><code>-pn</code></dt>
+<dd> Specifies &quot;n&quot; to be the open quote character, as an integer.</dd>
+<dt><code>-dn</code></dt>
+<dd> Specifies &quot;n&quot; to be the close quote character, as an integer.</dd>
+<dt><code>-mx</code></dt>
+<dd> Specifies &quot;x&quot; to be a metachar. By default, no characters are considered metachars.</dd>
+<dt><code>-nn</code></dt>
+<dd> Specifies &quot;n&quot; to be a metachar, as an integer.</dd>
+<dt><code>-fn</code></dt>
+<dd> Specifies &quot;n&quot; to be the escape char for metachars, as an integer.</dd>
+<dt><code>-a</code></dt>
+<dd> Specifies that all arguments are to be quoted. The default is that only arguments containing metacharacters are quoted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-less/">less</a></code>(1)</p>
 <h2>AUTHOR</h2>

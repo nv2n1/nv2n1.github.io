@@ -12,22 +12,20 @@ description: "npm-rebuild – Rebuild a package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm rebuild[[&lt;@scope&gt; / &lt;name&gt;]...] alias : npm rb
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This command runs the <code>npm build</code> command on the matched folders. This is useful when you install a new version of node, and must recompile all your C++ addons with the new binary.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help build</p>
-<dt>&bull;</p>
-<dd> npm help install </p>
+<dt>&bull;</dt>
+<dd> npm help build</dd>
+<dt>&bull;</dt>
+<dd> npm help install </dd>
 </dl>
 </dl>
 <h2>Index</h2>

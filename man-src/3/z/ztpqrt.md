@@ -22,10 +22,10 @@ description: "ztpqrt.f –"
  &quot;triangular-pentagonal&quot; matrix C, which is composed of a 
  triangular block A and pentagonal block B, using the compact 
  WY representation for Q.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix B. 
  M &gt;= 0.</pre>
@@ -73,13 +73,13 @@ description: "ztpqrt.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2013</dl>
+<dd>November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -112,7 +112,8 @@ description: "ztpqrt.f –"
  reflector factor is computed: T1, T2, ..., TB. The NB-by-NB (and IB-by-IB 
  for the last block) T's are stored in the NB-by-N matrix T as
  T = [T1 T2 ... TB].</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 189 of file ztpqrt.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

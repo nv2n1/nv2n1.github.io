@@ -11,13 +11,9 @@ std::experimental::ranges::BidirectionalRange - std::experimental::ranges::Bidir
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/range&gt;
-
 template &lt;class T&gt;
-
 concept bool BidirectionalRange =              (ranges TS)
-
 ForwardRange&lt;T&gt; &amp;&amp;
-
 BidirectionalIterator&lt;ranges::iterator_t&lt;T&gt;&gt;;
 </code></pre> 
 &nbsp;This section is incomplete 

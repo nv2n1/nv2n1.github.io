@@ -28,14 +28,14 @@ description: "mincore – determine whether pages are resident in memory"
 <h2>ERRORS</h2>
 <p> <code>EAGAIN</code> kernel is temporarily out of resources.</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>vec</i> points to an invalid address.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>addr</i> is not a multiple of the page size.</p>
-<dt><code>ENOMEM</code></p>
-<dd> <i>length</i> is greater than (<i>TASK_SIZE</i> &#8211; <i>addr</i>). (This could occur if a negative value is specified for <i>length</i>, since that value will be interpreted as a large unsigned integer.) In Linux 2.6.11 and earlier, the error <code>EINVAL</code> was returned for this condition.</p>
-<dt><code>ENOMEM</code></p>
-<dd> <i>addr</i> to <i>addr</i> + <i>length</i> contained unmapped memory.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>vec</i> points to an invalid address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addr</i> is not a multiple of the page size.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> <i>length</i> is greater than (<i>TASK_SIZE</i> &#8211; <i>addr</i>). (This could occur if a negative value is specified for <i>length</i>, since that value will be interpreted as a large unsigned integer.) In Linux 2.6.11 and earlier, the error <code>EINVAL</code> was returned for this condition.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> <i>addr</i> to <i>addr</i> + <i>length</i> contained unmapped memory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Available since Linux 2.3.99pre1 and glibc 2.2.</p>
 <h2>CONFORMING TO</h2>

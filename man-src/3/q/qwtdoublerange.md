@@ -55,10 +55,10 @@ description: "QwtDoubleRange – A class which controls a value within an interv
 <p>Adjust the value to the closest point in the step raster. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> value</dl>
+<dd><i>x</i> value</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The value is clipped when it lies outside the range. When the range is <code>QwtDoubleRange::periodic</code>, it will be mapped to a point in the interval such that </p>
+<dd>The value is clipped when it lies outside the range. When the range is <code>QwtDoubleRange::periodic</code>, it will be mapped to a point in the interval such that </dd>
 <pre>new value := x + n * (max. value - min. value)</pre>
 <p>&nbsp;<wbr>with an integer number n.&nbsp;<wbr></dl>
 <p> Reimplemented in <code>QwtAbstractSlider</code>.</p>
@@ -66,18 +66,18 @@ description: "QwtDoubleRange – A class which controls a value within an interv
 <p>Increment the value by a specified number of pages. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>nPages</i> Number of pages to increment. A negative number decrements the value.</dl>
+<dd><i>nPages</i> Number of pages to increment. A negative number decrements the value.</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The Page size is specified in the constructor.</dl>
+<dd>The Page size is specified in the constructor.</dd></dl>
 <h3>void QwtDoubleRange::incValue (int nSteps) [virtual]</h3>
 <p>Increment the value by a specified number of steps. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>nSteps</i> Number of steps to increment</dl>
+<dd><i>nSteps</i> Number of steps to increment</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>As a result of this operation, the new value will always be adjusted to the step raster.</dl>
+<dd>As a result of this operation, the new value will always be adjusted to the step raster.</dd></dl>
 <p> Reimplemented in <code>QwtAbstractSlider</code>.</p>
 <h3>bool QwtDoubleRange::isValid () const</h3>
 <p>Indicates if the value is valid. </p>
@@ -87,20 +87,20 @@ description: "QwtDoubleRange – A class which controls a value within an interv
 <p> maxValue returns the value which has been specified as the second parameter in <code>QwtDoubleRange::setRange</code>. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code></dl>
+<dd><code>setRange()</code></dd></dl>
 <h3>double QwtDoubleRange::minValue () const</h3>
 <p>Returns the value at the first border of the range. </p>
 <p> minValue returns the value which has been specified as the first parameter in <code>setRange()</code>. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setRange()</code></dl>
+<dd><code>setRange()</code></dd></dl>
 <h3>int QwtDoubleRange::pageSize () const</h3>
 <p>Returns the page size in steps. </p>
 <h3>bool QwtDoubleRange::periodic () const</h3>
 <p>Returns true if the range is periodic. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setPeriodic()</code></dl>
+<dd><code>setPeriodic()</code></dd></dl>
 <h3>double QwtDoubleRange::prevValue () const [protected]</h3>
 <p>Returns the previous value. </p>
 <h3>void QwtDoubleRange::rangeChange () [protected, virtual]</h3>
@@ -113,8 +113,8 @@ description: "QwtDoubleRange – A class which controls a value within an interv
 <pre>point = value + n * width .fi
 if the user tries to set a new value which is outside the range. If the range is nonperiodic (the default), values outside the range will be clipped.
 <code>Parameters:</code>
-<dl COMPACT><dt><dd><i>tf</i> true for a periodic range 
-</dl></pre>
+<dl COMPACT><dt></dt><dd><i>tf</i> true for a periodic range 
+</dd></dl></pre>
 <h3>void QwtDoubleRange::setRange (double vmin, double vmax, double vstep = 0.0, int pageSize = 1)</h3>
 <p>Specify range and step size. </p>
 <p> <code>Parameters:</code></p>
@@ -122,28 +122,28 @@ if the user tries to set a new value which is outside the range. If the range is
 <dd><i>vmin</i> lower boundary of the interval<br />
  <i>vmax</i> higher boundary of the interval<br />
  <i>vstep</i> step width<br />
- <i>pageSize</i> page size in steps</dl>
+ <i>pageSize</i> page size in steps</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>A change of the range changes the value if it lies outside the new range. The current value will *not* be adjusted to the new step raster.</p>
-<dt>*</p>
-<dd>vmax &lt; vmin is allowed.</p>
-<dt>*</p>
-<dd>If the step size is left out or set to zero, it will be set to 1/100 of the interval length.</p>
-<dt>*</p>
-<dd>If the step size has an absurd value, it will be corrected to a better one.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>A change of the range changes the value if it lies outside the new range. The current value will *not* be adjusted to the new step raster.</dd>
+<dt>*</dt>
+<dd>vmax &lt; vmin is allowed.</dd>
+<dt>*</dt>
+<dd>If the step size is left out or set to zero, it will be set to 1/100 of the interval length.</dd>
+<dt>*</dt>
+<dd>If the step size has an absurd value, it will be corrected to a better one.</dd></dl>
 </dl>
 <h3>void QwtDoubleRange::setStep (double vstep)</h3>
 <p>Change the step raster. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>vstep</i> new step width</dl>
+<dd><i>vstep</i> new step width</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The value will <i>not</i> be adjusted to the new step raster.</dl>
+<dd>The value will <i>not</i> be adjusted to the new step raster.</dd></dl>
 <p> Reimplemented in <code>QwtCounter</code>.</p>
 <h3>void QwtDoubleRange::setValid (bool isValid)</h3>
 <p>Set the value to be valid/invalid. </p>
@@ -152,20 +152,20 @@ if the user tries to set a new value which is outside the range. If the range is
 <p>Set a new value without adjusting to the step raster. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> new value</dl>
+<dd><i>x</i> new value</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The value is clipped when it lies outside the range. When the range is <code>QwtDoubleRange::periodic</code>, it will be mapped to a point in the interval such that </p>
+<dd>The value is clipped when it lies outside the range. When the range is <code>QwtDoubleRange::periodic</code>, it will be mapped to a point in the interval such that </dd>
 <pre>new value := x + n * (max. value - min. value)</pre>
 <p>&nbsp;<wbr>with an integer number n.&nbsp;<wbr></dl>
 <p> Reimplemented in <code>QwtAbstractSlider</code>, and <code>QwtCounter</code>.</p>
 <h3>double QwtDoubleRange::step () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the step size</dl>
+<dd>the step size</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>setStep()</code>, <code>setRange()</code></dl>
+<dd><code>setStep()</code>, <code>setRange()</code></dd></dl>
 <p> Reimplemented in <code>QwtCounter</code>.</p>
 <h3>void QwtDoubleRange::stepChange () [protected, virtual]</h3>
 <p>Notify a change of the step size. </p>

@@ -15,15 +15,15 @@ snd_info_get_str - parse a string token
 <h2>Arguments</h2>
 
 <i>dest</i>
-<dl><dd><dd>the buffer to store the string token</dl>
+<dl><dd></dd><dd>the buffer to store the string token</dd></dl>
  
 
  <i>src</i>
-<dl><dd>the original string</dl>
+<dl><dd>the original string</dd></dl>
  
 
  <i>len</i>
-<dl><dd>the max. length of token - 1</dl>
+<dl><dd>the max. length of token - 1</dd></dl>
 
 <h2>Description</h2>
 

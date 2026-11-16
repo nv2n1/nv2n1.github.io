@@ -15,7 +15,7 @@ snd_pcm_playback_data - check whether any data exists on the playback buffer
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the pcm substream instance</dl>
+<dl><dd></dd><dd>the pcm substream instance</dd></dl>
 
 <h2>Description</h2>
 

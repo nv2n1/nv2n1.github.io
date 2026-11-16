@@ -18,18 +18,18 @@ description: "snmpwalk – retrieve a subtree of management values using SNMP GE
 <p> If the tree search causes attempts to search beyond the end of the MIB, the message &quot;End of MIB&quot; will be displayed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Cc</code></p>
-<dd> Do not check whether the returned OIDs are increasing. Some agents (LaserJets are an example) return OIDs out of order, but can complete the walk anyway. Other agents return OIDs that are out of order and can cause <code>snmpwalk</code> to loop indefinitely. By default, <code>snmpwalk</code> tries to detect this behavior and warns you when it hits an agent acting illegally. Use <code>-Cc</code> to turn off this check.</p>
-<dt><code>-CE {OID}</code></p>
-<dd> End the walk at the specified OID, rather than a simple subtree. This can be used to walk a partial subtree, selected columns of a table, or even two or more tables within a single command.</p>
-<dt><code>-Ci</code></p>
-<dd> Include the given OID in the search range. Normally <code>snmpwalk</code> uses GETNEXT requests starting with the OID you specified and returns all results in the MIB subtree rooted at that OID. Sometimes, you may wish to include the OID specified on the command line in the printed results if it is a valid OID in the tree itself. This option lets you do this explicitly.</p>
-<dt><code>-CI</code></p>
-<dd> In fact, the given OID will be retrieved automatically if the main subtree walk returns no useable values. This allows a walk of a single instance to behave as generally expected, and return the specified instance value. This option turns off this final GET request, so a walk of a single instance will return nothing.</p>
-<dt><code>-Cp</code></p>
-<dd> Upon completion of the walk, print the number of variables found.</p>
-<dt><code>-Ct</code></p>
-<dd> Upon completion of the walk, print the total wall-clock time it took to collect the data (in seconds). Note that the timer is started just before the beginning of the data request series and stopped just after it finishes. Most importantly, this means that it does not include snmp library initialization, shutdown, argument processing, and any other overhead.</dl>
+<dt><code>-Cc</code></dt>
+<dd> Do not check whether the returned OIDs are increasing. Some agents (LaserJets are an example) return OIDs out of order, but can complete the walk anyway. Other agents return OIDs that are out of order and can cause <code>snmpwalk</code> to loop indefinitely. By default, <code>snmpwalk</code> tries to detect this behavior and warns you when it hits an agent acting illegally. Use <code>-Cc</code> to turn off this check.</dd>
+<dt><code>-CE {OID}</code></dt>
+<dd> End the walk at the specified OID, rather than a simple subtree. This can be used to walk a partial subtree, selected columns of a table, or even two or more tables within a single command.</dd>
+<dt><code>-Ci</code></dt>
+<dd> Include the given OID in the search range. Normally <code>snmpwalk</code> uses GETNEXT requests starting with the OID you specified and returns all results in the MIB subtree rooted at that OID. Sometimes, you may wish to include the OID specified on the command line in the printed results if it is a valid OID in the tree itself. This option lets you do this explicitly.</dd>
+<dt><code>-CI</code></dt>
+<dd> In fact, the given OID will be retrieved automatically if the main subtree walk returns no useable values. This allows a walk of a single instance to behave as generally expected, and return the specified instance value. This option turns off this final GET request, so a walk of a single instance will return nothing.</dd>
+<dt><code>-Cp</code></dt>
+<dd> Upon completion of the walk, print the number of variables found.</dd>
+<dt><code>-Ct</code></dt>
+<dd> Upon completion of the walk, print the total wall-clock time it took to collect the data (in seconds). Note that the timer is started just before the beginning of the data request series and stopped just after it finishes. Most importantly, this means that it does not include snmp library initialization, shutdown, argument processing, and any other overhead.</dd></dl>
 <p> In addition to these options, <code>snmpwalk</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page.</p>
 <h2>EXAMPLES</h2>
 <p> Note that <code>snmpbulkget</code> REQUIRES an argument specifying the agent to query and at most one OID argument, as described there. The command: </p>

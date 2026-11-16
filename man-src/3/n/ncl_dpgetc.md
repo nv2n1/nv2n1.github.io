@@ -13,11 +13,11 @@ DPGETC - Retrieves the current character value of an internal parameter.
 
  void c_dpgetc (char *pnam, char *cval, int len)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first three characters of the string. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'CRB', one can use 'CRB - CHARACTER REPRESENTING BREAK'.
-<dt>CVAL
-<dd>(an output variable of type CHARACTER) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first three characters of the string. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'CRB', one can use 'CRB - CHARACTER REPRESENTING BREAK'.
+</dd><dt>CVAL
+</dt><dd>(an output variable of type CHARACTER) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl COMPACT><dt>len
-<dd>The size of cval as dimensioned in the calling program.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Dashpack parameters. For a complete list of parameters available in this utility, see the dashpack_params man page.
+</dt><dd>The size of cval as dimensioned in the calling program.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Dashpack parameters. For a complete list of parameters available in this utility, see the dashpack_params man page.
 <h2>Access</h2>To use DPGETC or c_dpgetc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the dashpack man page for a description of all Dashpack error messages and/or informational messages.
 <h2>See Also</h2>Online: dashpack, dashpack_params, dpcurv, dpdraw, dpfrst, dpgeti, dpgetr, dplast, dpline, dpsetc, dpseti, dpsetr, dpsmth, dpvect, ncarg_cbind. 

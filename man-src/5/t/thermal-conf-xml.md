@@ -13,18 +13,18 @@ description: "thermal-conf.xml – Configuration file for thermal daemon"
 <h2>Description</h2>
 <p><code>thermal-conf.xml</code> is a configuration file for the thermal daemon. It is used to configure thermal sensors, zone and cooling devices.The location of this file depends on the configuration option used during build time. The terminology used in this file conforms to &quot;Advanced Configuration and Power Interface Specification&quot;. The ACPI thermal model is based around conceptual platform regions called thermal zones that physically contain devices, thermal sensors, and cooling controls. For example of a thermal zone can be a CPU or a laptop cover. A zone can contain multiple sensors for monitoring temperature. A cooling device provides interface to reduce the temperature of a source device, which causes increase in the temperature. An example of a cooling device is a FAN or some Linux driver which can throttle the source device. A thermal zone configuration includes one or more trip points. A trip point is a temperature at which a cooling device needs to be activated. A cooling device can be either active or passive. An example of an active device is a FAN, which will not reduce performance at the cost of consuming more power and noise. A passive device uses performance throttling to control temperature. In addition to cooling devices present in the thermal sysfs, the following cooling devices are built into the thermald, which can be used as valid cooling device type:</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; rapl_controller</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; intel_pstate</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; cpufreq</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; rapl_controller</dd>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; intel_pstate</dd>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; cpufreq</dd>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; LCD
-</dl>
+</dd></dl>
 <p> The thermal sysfs under Linux (/sys/class/thermal) provides a way to represent per platform ACPI configuration. The kernel thermal governor uses this data to keep the platform thermals under control. But there are some limitations, which thermald tries to resolve. For example:</p>
 <dl>
-<dt>&#8211; If the ACPI data is not optimized or buggy. In this case thermal-conf.xml can be used to correct the behavior without change in BIOS.</p>
+<dt>&#8211; If the ACPI data is not optimized or buggy. In this case thermal-conf.xml can be used to correct the behavior without change in BIOS.</dt>
 <dd>
-<dd>&#8211; There may be thermal zones exposed by the thermal sysfs without associated cooling actions. In this case thermal conf.xml can be used to tie the cooling devices to those zones.</p>
-<dd>&#8211; The best cooling method may not be in the thermal sysfs. In this case thermal-conf.xml can be used to bind a zone to an external cooling device.</p>
-<dd>&#8211; Specify thermal relationships. A zone can be influenced by multiple source devices with varying degrees. In this case thermal-conf.xml can be used to define the relative influence for apply compensation. </p>
+</dd><dd>&#8211; There may be thermal zones exposed by the thermal sysfs without associated cooling actions. In this case thermal conf.xml can be used to tie the cooling devices to those zones.</dd>
+<dd>&#8211; The best cooling method may not be in the thermal sysfs. In this case thermal-conf.xml can be used to bind a zone to an external cooling device.</dd>
+<dd>&#8211; Specify thermal relationships. A zone can be influenced by multiple source devices with varying degrees. In this case thermal-conf.xml can be used to define the relative influence for apply compensation. </dd>
 <h2>File Format</h2>
 <p>The configuration file format conforms to XML specifications. A set of tags defined to define platform, sensors, zones, cooling devices and trip points. </p>
 <p> &lt;ThermalConfiguration&gt;<br />
@@ -311,3 +311,4 @@ description: "thermal-conf.xml – Configuration file for thermal daemon"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;/CoolingDevice&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;/CoolingDevices&gt;<br />
 &nbsp;<wbr>&nbsp;&lt;/Platform&gt; &lt;/ThermalConfiguration&gt;</p>
+</dl>

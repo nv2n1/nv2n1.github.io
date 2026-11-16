@@ -17,22 +17,22 @@ description: "dotlockfile – Utility to manage lockfiles"
 <p> The names <code>dotlock</code> and <code>lockfile</code> were already taken &#8211; hence the name <code>dotlockfile</code> <i>:)</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd> Create a lockfile. This is the default.</p>
-<dt><code>-u</code></p>
-<dd> Remove a lockfile.</p>
-<dt><code>-c</code></p>
-<dd> Check for the existence of a <code>valid</code> lockfile.</p>
-<dt><code>-t</code></p>
-<dd> Touch an existing lockfile (update the timestamp).</p>
-<dt><code>-p</code></p>
-<dd> Write the <i>process-id</i> of the calling process into the lockfile. Also when testing for an existing lockfile, check the contents for a process-id to find out if the lockfile is still valid.</p>
-<dt><code>-r retries</code></p>
-<dd> The number of times <code>dotlockfile</code> retries to acquire the lock if it failed the first time before giving up. The initial sleep after failing to acquire the lock is 5 seconds. After each next try, a sleep of 5 seconds <i>extra</i> occurs up to a maximum sleep of 60 seconds between tries. The default number of retries is 5.</p>
-<dt><code>-m</code></p>
-<dd> Lock or unlock the current users mailbox. The path to the mailbox is the default system mailspool directory (usually <i>/var/mail</i>) with the username as gotten from <i>getpwuid()</i> appended. If the environment variable <i>$MAIL</i> is set, that is used instead. Then the string <i>&quot;.lock&quot;</i> is appended to get the name of the actual lockfile.</p>
-<dt>lockfile</p>
-<dd> The lockfile to be created/removed, unless the <code>-m</code> option is in effect. </p>
+<dt><code>-l</code></dt>
+<dd> Create a lockfile. This is the default.</dd>
+<dt><code>-u</code></dt>
+<dd> Remove a lockfile.</dd>
+<dt><code>-c</code></dt>
+<dd> Check for the existence of a <code>valid</code> lockfile.</dd>
+<dt><code>-t</code></dt>
+<dd> Touch an existing lockfile (update the timestamp).</dd>
+<dt><code>-p</code></dt>
+<dd> Write the <i>process-id</i> of the calling process into the lockfile. Also when testing for an existing lockfile, check the contents for a process-id to find out if the lockfile is still valid.</dd>
+<dt><code>-r retries</code></dt>
+<dd> The number of times <code>dotlockfile</code> retries to acquire the lock if it failed the first time before giving up. The initial sleep after failing to acquire the lock is 5 seconds. After each next try, a sleep of 5 seconds <i>extra</i> occurs up to a maximum sleep of 60 seconds between tries. The default number of retries is 5.</dd>
+<dt><code>-m</code></dt>
+<dd> Lock or unlock the current users mailbox. The path to the mailbox is the default system mailspool directory (usually <i>/var/mail</i>) with the username as gotten from <i>getpwuid()</i> appended. If the environment variable <i>$MAIL</i> is set, that is used instead. Then the string <i>&quot;.lock&quot;</i> is appended to get the name of the actual lockfile.</dd>
+<dt>lockfile</dt>
+<dd> The lockfile to be created/removed, unless the <code>-m</code> option is in effect. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> Zero on success, and non-zero on failure. For the <code>-c</code> option, sucess means that a valid lockfile is already present. When locking (the default, or the <code>-l</code> option) <code>dotlockfile</code> returns the same values as the library function <i>lockfile_create</i>(3). Unlocking a non-existant lockfile is not an error. </p>

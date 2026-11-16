@@ -15,65 +15,63 @@ description: "t1reencode – re-encode a PostScript Type 1 font"
 <p> <code>T1reencode</code> changes a PostScript Type~1 font&#8217;s embedded encoding. The re-encoded font is written to the standard output (but see the <code>&#8211;output</code> option). If no input font file is supplied, <code>t1reencode</code> reads a PFA or PFB font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;encoding</code>=<i>file</i>, <code>-e</code> <i>file</i></p>
-<dd> Read the encoding from <i>file</i>, which must contain an encoding in format. Alternatively, <i>file</i> can be one of the following special names, in which case the corresponding standard encoding is used. </p>
+<dt><code>&#8211;encoding</code>=<i>file</i>, <code>-e</code> <i>file</i></dt>
+<dd> Read the encoding from <i>file</i>, which must contain an encoding in format. Alternatively, <i>file</i> can be one of the following special names, in which case the corresponding standard encoding is used. </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>Name</code></p>
-<dd> <code>Source</code></p>
-<dt>StandardEncoding</p>
-<dd> Adobe</p>
-<dt>ISOLatin1Encoding</p>
-<dd> Adobe/ISO (synonym: ISO_8859_1_Encoding)</p>
-<dt>ExpertEncoding</p>
-<dd> Adobe</p>
-<dt>ExpertSubsetEncoding</p>
-<dd> Adobe</p>
-<dt>SymbolEncoding</p>
-<dd> Adobe</p>
-<dt>ISOLatin2Encoding</p>
-<dd> ISO (synonym: ISO_8859_2_Encoding)</p>
-<dt>ISOLatin3Encoding</p>
-<dd> ISO (synonym: ISO_8859_3_Encoding)</p>
-<dt>ISOLatin4Encoding</p>
-<dd> ISO (synonym: ISO_8859_4_Encoding)</p>
-<dt>ISOCyrillicEncoding</p>
-<dd> ISO (synonym: ISO_8859_5_Encoding)</p>
-<dt>ISOGreekEncoding</p>
-<dd> ISO (synonym: ISO_8859_7_Encoding)</p>
-<dt>ISOLatin5Encoding</p>
-<dd> ISO (synonym: ISO_8859_9_Encoding)</p>
-<dt>ISOLatin6Encoding</p>
-<dd> ISO (synonym: ISO_8859_10_Encoding)</p>
-<dt>ISOThaiEncoding</p>
-<dd> ISO (synonym: ISO_8859_11_Encoding)</p>
-<dt>ISOLatin7Encoding</p>
-<dd> ISO (synonym: ISO_8859_13_Encoding)</p>
-<dt>ISOLatin8Encoding</p>
-<dd> ISO (synonym: ISO_8859_14_Encoding)</p>
-<dt>ISOLatin9Encoding</p>
-<dd> ISO (synonym: ISO_8859_15_Encoding)</p>
-<dt>KOI8REncoding</p>
-<dd> &#8211;</dl>
+<dt><code>Name</code></dt>
+<dd> <code>Source</code></dd>
+<dt>StandardEncoding</dt>
+<dd> Adobe</dd>
+<dt>ISOLatin1Encoding</dt>
+<dd> Adobe/ISO (synonym: ISO_8859_1_Encoding)</dd>
+<dt>ExpertEncoding</dt>
+<dd> Adobe</dd>
+<dt>ExpertSubsetEncoding</dt>
+<dd> Adobe</dd>
+<dt>SymbolEncoding</dt>
+<dd> Adobe</dd>
+<dt>ISOLatin2Encoding</dt>
+<dd> ISO (synonym: ISO_8859_2_Encoding)</dd>
+<dt>ISOLatin3Encoding</dt>
+<dd> ISO (synonym: ISO_8859_3_Encoding)</dd>
+<dt>ISOLatin4Encoding</dt>
+<dd> ISO (synonym: ISO_8859_4_Encoding)</dd>
+<dt>ISOCyrillicEncoding</dt>
+<dd> ISO (synonym: ISO_8859_5_Encoding)</dd>
+<dt>ISOGreekEncoding</dt>
+<dd> ISO (synonym: ISO_8859_7_Encoding)</dd>
+<dt>ISOLatin5Encoding</dt>
+<dd> ISO (synonym: ISO_8859_9_Encoding)</dd>
+<dt>ISOLatin6Encoding</dt>
+<dd> ISO (synonym: ISO_8859_10_Encoding)</dd>
+<dt>ISOThaiEncoding</dt>
+<dd> ISO (synonym: ISO_8859_11_Encoding)</dd>
+<dt>ISOLatin7Encoding</dt>
+<dd> ISO (synonym: ISO_8859_13_Encoding)</dd>
+<dt>ISOLatin8Encoding</dt>
+<dd> ISO (synonym: ISO_8859_14_Encoding)</dd>
+<dt>ISOLatin9Encoding</dt>
+<dd> ISO (synonym: ISO_8859_15_Encoding)</dd>
+<dt>KOI8REncoding</dt>
+<dd> &#8211;</dd></dl>
 </dl>
-<dt><code>&#8211;encoding-text</code>=<i>text</i>, <code>-E</code> <i>text</i></p>
-<dd> Use the encoding in the <i>text</i> argument, which must be formatted as a encoding. One of <code>&#8211;encoding</code> and <code>&#8211;encoding-text</code> must be supplied. </p>
-<dt><code>&#8211;name</code>=<i>name</i>, <code>-n</code> <i>name</i></p>
-<dd> Set the output font&#8217;s PostScript name to <i>name</i>. The default is the input font name followed by the encoding&#8217;s name. </p>
-<dt><code>&#8211;full-name</code>=<i>name</i>, <code>-N</code> <i>name</i></p>
-<dd> Set the output font&#8217;s FullName to <i>name</i>. The default is the input FullName followed by the encoding&#8217;s name. </p>
-<dt><code>&#8211;output</code>=<i>file</i>, <code>-o</code> <i>file</i></p>
-<dd> Send output to <i>file</i> instead of standard output. </p>
-<dt><code>&#8211;pfb</code>, <code>-b</code></p>
-<dd> Output a PFB font. This is the default. </p>
-<dt><code>&#8211;pfa</code>, <code>-a</code></p>
-<dd> Output a PFA font. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print usage information and exit. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and some short non-warranty information and exit.</dl>
+<dt><code>&#8211;encoding-text</code>=<i>text</i>, <code>-E</code> <i>text</i></dt>
+<dd> Use the encoding in the <i>text</i> argument, which must be formatted as a encoding. One of <code>&#8211;encoding</code> and <code>&#8211;encoding-text</code> must be supplied. </dd>
+<dt><code>&#8211;name</code>=<i>name</i>, <code>-n</code> <i>name</i></dt>
+<dd> Set the output font&#8217;s PostScript name to <i>name</i>. The default is the input font name followed by the encoding&#8217;s name. </dd>
+<dt><code>&#8211;full-name</code>=<i>name</i>, <code>-N</code> <i>name</i></dt>
+<dd> Set the output font&#8217;s FullName to <i>name</i>. The default is the input FullName followed by the encoding&#8217;s name. </dd>
+<dt><code>&#8211;output</code>=<i>file</i>, <code>-o</code> <i>file</i></dt>
+<dd> Send output to <i>file</i> instead of standard output. </dd>
+<dt><code>&#8211;pfb</code>, <code>-b</code></dt>
+<dd> Output a PFB font. This is the default. </dd>
+<dt><code>&#8211;pfa</code>, <code>-a</code></dt>
+<dd> Output a PFA font. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage information and exit. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and some short non-warranty information and exit.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>T1reencode</code> exits with value 0 if a re-encoded font was successfully generated, and 1 otherwise.</p>
 <h2>NOTES</h2>

@@ -10,14 +10,14 @@ description: "XkbSASetGroup – Sets the group_XXX field of act from the group i
 <p>XkbSASetGroup &#8211; Sets the group_XXX field of act from the group index grp </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSASetGroup</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>grp</i><code>);</code></dl>
+<dt> <code>void XkbSASetGroup</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>grp</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action from which to set group</p>
-<dt><i>&#8211; grp</i></p>
-<dd>group index to set in group_XXX</dl>
+</dd><dd>action from which to set group</dd>
+<dt><i>&#8211; grp</i></dt>
+<dd>group index to set in group_XXX</dd></dl>
 <h2>Description</h2>
 <p><i>XkbSASetGroup </i> sets the <i>group_XXX </i> field of <i>act </i> from the group index <i>grp. </i></p>
 <h2>Structure</h2>

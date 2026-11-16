@@ -21,7 +21,7 @@ ibnd_node_t *ibnd_find_node_guid(ibnd_fabric_t *fabric, uint64_t guid)
 <p> <code>ibnd_find_node_guid(), ibnd_find_node_dr()</code> return NULL on failure, otherwise a valid ibnd_node_t object.</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</p>
+<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

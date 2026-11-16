@@ -38,7 +38,7 @@ key.pattern.overridden.with.glob = custom</pre>
 <dl>
 <dd>
 <pre>kernel.domainname=example.com</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Apply settings available only when a certain module is loaded (method one)</code> /etc/udev/rules.d/99-bridge.rules: </p>
 <pre><code>ACTION==&quot;add&quot;, SUBSYSTEM==&quot;module&quot;, KERNEL==&quot;br_netfilter&quot;, \
 RUN+=&quot;/lib/systemd/systemd-sysctl --prefix=/net/bridge&quot;</code></pre>
@@ -48,19 +48,19 @@ RUN+=&quot;/lib/systemd/systemd-sysctl --prefix=/net/bridge&quot;</code></pre>
 <pre>net.bridge.bridge-nf-call-ip6tables = 0
 net.bridge.bridge-nf-call-iptables = 0
 net.bridge.bridge-nf-call-arptables = 0</pre>
-</dl>
+</dd></dl>
 <p> This method applies settings when the module is loaded. Please note that, unless the br_netfilter module is loaded, bridged packets will not be filtered by Netfilter (starting with kernel 3.18), so simply not loading the module is sufficient to avoid filtering. <code>Example 3. Apply settings available only when a certain module is loaded (method two)</code> /etc/modules-load.d/bridge.conf:</p>
 <dl>
 <dd>
 <pre>br_netfilter</pre>
-</dl>
+</dd></dl>
 <p> /etc/sysctl.d/bridge.conf:</p>
 <dl>
 <dd>
 <pre>net.bridge.bridge-nf-call-ip6tables = 0
 net.bridge.bridge-nf-call-iptables = 0
 net.bridge.bridge-nf-call-arptables = 0</pre>
-</dl>
+</dd></dl>
 <p> This method forces the module to be always loaded. Please note that, unless the br_netfilter module is loaded, bridged packets will not be filtered with Netfilter (starting with kernel 3.18), so simply not loading the module is sufficient to avoid filtering. <code>Example 4. Set network routing properties for all interfaces</code> /etc/sysctl.d/20-rp_filter.conf:</p>
 <dl>
 <dd>
@@ -68,7 +68,7 @@ net.bridge.bridge-nf-call-arptables = 0</pre>
 net.ipv4.conf.*.rp_filter = 2
 -net.ipv4.conf.all.rp_filter
 net.ipv4.conf.hub0.rp_filter = 1</pre>
-</dl>
+</dd></dl>
 <p> The <code>rp_filter</code> key will be set to &quot;2&quot; for all interfaces, except &quot;hub0&quot;. We set net.ipv4.conf.default.rp_filter first, so any interfaces which are added <i>later</i> will get this value (this also covers any interfaces detected while we&#8217;re running). The glob matches any interfaces which were detected <i>earlier</i>. The glob will also match net.ipv4.conf.all.rp_filter, which we don&#8217;t want to set at all, so it is explicitly excluded. And &quot;hub0&quot; is excluded from the glob because it has an explicit setting.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8), <code><a href="/docs/linux/man/5-sysctl-conf/">sysctl.conf</a></code>(5), <code><a href="/docs/linux/man/8-modprobe/">modprobe</a></code>(8) </p>

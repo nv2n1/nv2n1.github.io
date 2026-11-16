@@ -17,65 +17,63 @@ description: "pmlogreduce – temporal reduction of Performance Co-Pilot archive
 <h2>COMMAND LINE OPTIONS</h2>
 <p> The command line options for <code>pmlogreduce</code> are as follows: </p>
 <dl>
-<dt><code>-A</code><i> align</i></p>
-<dd> Specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dl>
+<dt><code>-A</code><i> align</i></dt>
+<dd> Specify a &#8220;natural&#8221; alignment of the output sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dd></dl>
 <dl>
-<dt><code>-S</code><i> starttime</i></p>
-<dd> Define the start of a time window to restrict the samples retrieved from the <i>input</i> archives; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dl>
+<dt><code>-S</code><i> starttime</i></dt>
+<dd> Define the start of a time window to restrict the samples retrieved from the <i>input</i> archives; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dd></dl>
 <dl>
-<dt><code>-s</code><i> samples</i></p>
-<dd> The argument <i>samples</i> defines the number of samples to be written to <i>output</i>. If <i>samples</i> is 0 or <code>-s</code> is not specified, <code>pmlogreduce</code> will sample until the end of the set of PCP archives, or the end of the time window as specified by <code>-T</code>, whichever comes first. The <code>-s</code> option will override the <code>-T</code> option if it occurs sooner.</dl>
+<dt><code>-s</code><i> samples</i></dt>
+<dd> The argument <i>samples</i> defines the number of samples to be written to <i>output</i>. If <i>samples</i> is 0 or <code>-s</code> is not specified, <code>pmlogreduce</code> will sample until the end of the set of PCP archives, or the end of the time window as specified by <code>-T</code>, whichever comes first. The <code>-s</code> option will override the <code>-T</code> option if it occurs sooner.</dd></dl>
 <dl>
-<dt><code>-T</code><i> endtime</i></p>
-<dd> Define the termination of a time window to restrict the samples retrieved from the <i>input</i> archives; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dl>
+<dt><code>-T</code><i> endtime</i></dt>
+<dd> Define the termination of a time window to restrict the samples retrieved from the <i>input</i> archives; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</dd></dl>
 <dl>
-<dt><code>-v</code><i> volsamples</i></p>
-<dd> The <i>output</i> archive is potentially a multi-volume data set, and the <code>-v</code> option causes <code>pmlogreduce</code> to start a new volume after <i>volsamples</i> log records have been written to the <i>output</i> archive.</p>
+<dt><code>-v</code><i> volsamples</i></dt>
+<dd> The <i>output</i> archive is potentially a multi-volume data set, and the <code>-v</code> option causes <code>pmlogreduce</code> to start a new volume after <i>volsamples</i> log records have been written to the <i>output</i> archive.</dd>
 <dl>
 <dt>
-<dd>
-<p> Independent of any <code>-v</code> option, each volume of an archive is limited to no more than 2^31 bytes, so <i>pmlogreduce</i> will automatically create a new volume for the archive before this limit is reached.</dl>
+</dt><dd>
+<p> Independent of any <code>-v</code> option, each volume of an archive is limited to no more than 2^31 bytes, so <i>pmlogreduce</i> will automatically create a new volume for the archive before this limit is reached.</dd></dl>
 </dl>
 <dl>
-<dt><code>-t</code><i> interval</i></p>
-<dd> Consecutive samples in the <i>output</i> archive will appear with a time delta defined by <i>interval</i>; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). Note the default value is 600 (seconds, i.e. 10 minutes).</dl>
+<dt><code>-t</code><i> interval</i></dt>
+<dd> Consecutive samples in the <i>output</i> archive will appear with a time delta defined by <i>interval</i>; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). Note the default value is 600 (seconds, i.e. 10 minutes).</dd></dl>
 <dl>
-<dt><code>-Z</code><i> timezone</i></p>
-<dd> Use <i>timezone</i> when displaying the date and time, or interpreting the <code>-S</code> and <code>-T</code> options. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dl>
+<dt><code>-Z</code><i> timezone</i></dt>
+<dd> Use <i>timezone</i> when displaying the date and time, or interpreting the <code>-S</code> and <code>-T</code> options. <i>Timezone</i> is in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd></dl>
 <dl>
-<dt><code>-z</code></p>
-<dd> Use the local timezone of the host from the <i>input</i> archives when displaying the date and time, or interpreting the <code>-S</code> and <code>-T</code> options. The default is to initially use the timezone of the local host.</dl>
+<dt><code>-z</code></dt>
+<dd> Use the local timezone of the host from the <i>input</i> archives when displaying the date and time, or interpreting the <code>-S</code> and <code>-T</code> options. The default is to initially use the timezone of the local host.</dd></dl>
 <h2>DATA REDUCTION</h2>
 <p> The statistical and temporal reduction follows the following rules:</p>
 <dl>
-<dt>1.</p>
-<dd> Consecutive records from <i>input</i> are read without interpolation, and at most one output record is written for each <i>interval</i>, summarizing the performance data over that period.</p>
-<dt>2.</p>
-<dd> If the semantics of a metric indicates it is <code>instantaneous</code> or <code>discrete</code> then <i>output</i> value is computed as the arithmetic mean of the observations (if any) over each <i>interval</i>.</p>
-<dt>3.</p>
-<dd> If the semantics of a metric indicates it is a <code>counter</code> then the following transformations are applied:</p>
+<dt>1.</dt>
+<dd> Consecutive records from <i>input</i> are read without interpolation, and at most one output record is written for each <i>interval</i>, summarizing the performance data over that period.</dd>
+<dt>2.</dt>
+<dd> If the semantics of a metric indicates it is <code>instantaneous</code> or <code>discrete</code> then <i>output</i> value is computed as the arithmetic mean of the observations (if any) over each <i>interval</i>.</dd>
+<dt>3.</dt>
+<dd> If the semantics of a metric indicates it is a <code>counter</code> then the following transformations are applied:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>a)</p>
-<dd> Metrics with 32-bit precision are promoted to 64-bit precision.</p>
-<dt>b)</p>
-<dd> Any counter wrap (overflow) is noted, and appropriate adjustment made in the value of the metric over each <i>interval</i>. This will be correct in the case of a single counter wrap, but will silently <code>underestimate</code> in the case where more than one counter wrap occurs between consecutive observations in the <i>input</i> archives, and silently <code>overestimate</code> in the case where a counter is reset occurs between consecutive observations in the <i>input</i> archives; unfortunately these situations cannot be detected, but are believed to be rare events for the sort of production monitoring environments where <code>pmlogreduce</code> is most likely to be deployed.</dl>
+<dt>a)</dt>
+<dd> Metrics with 32-bit precision are promoted to 64-bit precision.</dd>
+<dt>b)</dt>
+<dd> Any counter wrap (overflow) is noted, and appropriate adjustment made in the value of the metric over each <i>interval</i>. This will be correct in the case of a single counter wrap, but will silently <code>underestimate</code> in the case where more than one counter wrap occurs between consecutive observations in the <i>input</i> archives, and silently <code>overestimate</code> in the case where a counter is reset occurs between consecutive observations in the <i>input</i> archives; unfortunately these situations cannot be detected, but are believed to be rare events for the sort of production monitoring environments where <code>pmlogreduce</code> is most likely to be deployed.</dd></dl>
 </dl>
-<dt>4.</p>
-<dd> Any changes in instance domains, and indeed all metadata, is preserved.</p>
-<dt>5.</p>
-<dd> Any &#8220;mark&#8221; records in the <i>input</i> archives (as created by <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1)) will be preserved in the <i>output</i> archive, so periods where no data is available are maintained, and data interpolation will <code>not</code> occur across these periods when the <i>output</i> archive is subsequently processed with PCP applications.</dl>
+<dt>4.</dt>
+<dd> Any changes in instance domains, and indeed all metadata, is preserved.</dd>
+<dt>5.</dt>
+<dd> Any &#8220;mark&#8221; records in the <i>input</i> archives (as created by <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1)) will be preserved in the <i>output</i> archive, so periods where no data is available are maintained, and data interpolation will <code>not</code> occur across these periods when the <i>output</i> archive is subsequently processed with PCP applications.</dd></dl>
 <h2>FILES</h2>
 <p> For each of the <i>input</i> and <i>output</i> archives, several physical files are used.</p>
 <dl>
-<dt><i>archive</i><code>.meta</p>
-<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</p>
-<dt></code><i>archive</i><code>.0</p>
-<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;) &#8211; for <i>input</i> these files may have been previously compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) and thus may have an additional <code>.bz2</code> or <code>.gz</code> suffix.</p>
-<dt><i>archive</i><code>.index</p>
-<dd> temporal index to support rapid random access to the other files in the archive log.</dl>
+<dt><i>archive</i><code>.meta</dt>
+<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</dd>
+<dt></code><i>archive</i><code>.0</dt>
+<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;) &#8211; for <i>input</i> these files may have been previously compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) and thus may have an additional <code>.bz2</code> or <code>.gz</code> suffix.</dd>
+<dt><i>archive</i><code>.index</dt>
+<dd> temporal index to support rapid random access to the other files in the archive log.</dd></dl>
 <p> </code></p>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>

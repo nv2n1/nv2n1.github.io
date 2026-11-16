@@ -111,14 +111,14 @@ description: "iptables_selinux – Security Enhanced Linux Policy for the iptabl
 <p> <code>iptables_exec_t</code> </p>
 <p> &#8211; Set files with the iptables_exec_t type, if you want to transition an executable to the iptables_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/ip6?tables.*, /sbin/ip6?tables-multi.*, /sbin/ip6?tables-restore.*, /usr/sbin/ip6?tables.*, /usr/sbin/ip6?tables-multi.*, /usr/sbin/ip6?tables-restore.*, /sbin/ipchains.*, /usr/sbin/ipchains.*, /usr/libexec/iptables/iptables.init, /usr/libexec/iptables/ip6tables.init, /sbin/ipset, /sbin/ipvsadm, /sbin/ebtables, /sbin/arptables, /usr/sbin/ipset, /usr/sbin/ipvsadm, /usr/libexec/ipset, /sbin/ipvsadm-save, /usr/sbin/ebtables, /sbin/xtables-multi, /usr/sbin/arptables, /usr/sbin/conntrack, /sbin/arptables-save, /sbin/ipvsadm-restore, /sbin/ebtables-restore, /usr/sbin/ipvsadm-save, /sbin/arptables-restore, /usr/sbin/xtables-multi, /usr/sbin/ipvsadm-restore, /usr/sbin/ebtables-restore </p>
+<dt>Paths:</dt>
+<dd>/sbin/ip6?tables.*, /sbin/ip6?tables-multi.*, /sbin/ip6?tables-restore.*, /usr/sbin/ip6?tables.*, /usr/sbin/ip6?tables-multi.*, /usr/sbin/ip6?tables-restore.*, /sbin/ipchains.*, /usr/sbin/ipchains.*, /usr/libexec/iptables/iptables.init, /usr/libexec/iptables/ip6tables.init, /sbin/ipset, /sbin/ipvsadm, /sbin/ebtables, /sbin/arptables, /usr/sbin/ipset, /usr/sbin/ipvsadm, /usr/libexec/ipset, /sbin/ipvsadm-save, /usr/sbin/ebtables, /sbin/xtables-multi, /usr/sbin/arptables, /usr/sbin/conntrack, /sbin/arptables-save, /sbin/ipvsadm-restore, /sbin/ebtables-restore, /usr/sbin/ipvsadm-save, /sbin/arptables-restore, /usr/sbin/xtables-multi, /usr/sbin/ipvsadm-restore, /usr/sbin/ebtables-restore </dd>
 </dl>
 <p> <code>iptables_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the iptables_initrc_exec_t type, if you want to transition an executable to the iptables_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/ip6?tables, /etc/rc.d/init.d/ebtables </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/ip6?tables, /etc/rc.d/init.d/ebtables </dd>
 </dl>
 <p> <code>iptables_lock_t</code> </p>
 <p> &#8211; Set files with the iptables_lock_t type, if you want to treat the files as iptables lock data, stored under the /var/lock directory </p>
@@ -127,8 +127,8 @@ description: "iptables_selinux – Security Enhanced Linux Policy for the iptabl
 <p> <code>iptables_unit_file_t</code> </p>
 <p> &#8211; Set files with the iptables_unit_file_t type, if you want to treat the files as iptables unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/ppp.*, /usr/lib/systemd/system/ipset.*, /usr/lib/systemd/system/vsftpd.*, /usr/lib/systemd/system/proftpd.*, /usr/lib/systemd/system/iptables.*, /usr/lib/systemd/system/arptables.*, /usr/lib/systemd/system/ip6tables.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/ppp.*, /usr/lib/systemd/system/ipset.*, /usr/lib/systemd/system/vsftpd.*, /usr/lib/systemd/system/proftpd.*, /usr/lib/systemd/system/iptables.*, /usr/lib/systemd/system/arptables.*, /usr/lib/systemd/system/ip6tables.* </dd>
 </dl>
 <p> <code>iptables_var_lib_t</code> </p>
 <p> &#8211; Set files with the iptables_var_lib_t type, if you want to store the iptables files under the /var/lib directory. </p>

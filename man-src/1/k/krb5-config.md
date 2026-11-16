@@ -15,28 +15,28 @@ description: "krb5-config – tool for linking against MIT Kerberos libraries"
 <p> krb5-config tells the application programmer what flags to use to compile and link programs against the installed Kerberos libraries.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code><code>-help</code></p>
-<dd> prints a usage message. This is the default behavior when no options are specified.</p>
-<dt><code>&#8211;</code><code>-all</code></p>
-<dd> prints the version, vendor, prefix, and exec-prefix.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> prints the version number of the Kerberos installation.</p>
-<dt><code>&#8211;</code><code>-vendor</code></p>
-<dd> prints the name of the vendor of the Kerberos installation.</p>
-<dt><code>&#8211;</code><code>-prefix</code></p>
-<dd> prints the prefix for which the Kerberos installation was built.</p>
-<dt><code>&#8211;</code><code>-exec-prefix</code></p>
-<dd> prints the prefix for executables for which the Kerberos installation was built.</p>
-<dt><code>&#8211;</code><code>-defccname</code></p>
-<dd> prints the built-in default credentials cache location.</p>
-<dt><code>&#8211;</code><code>-defktname</code></p>
-<dd> prints the built-in default keytab location.</p>
-<dt><code>&#8211;</code><code>-defcktname</code></p>
-<dd> prints the built-in default client (initiator) keytab location.</p>
-<dt><code>&#8211;</code><code>-cflags</code></p>
-<dd> prints the compilation flags used to build the Kerberos installation.</p>
-<dt><code>&#8211;</code><code>-libs</code> [<i>library</i>]</p>
-<dd> prints the compiler options needed to link against <i>library</i>. Allowed values for <i>library</i> are: <center></p>
+<dt><code>&#8211;</code><code>-help</code></dt>
+<dd> prints a usage message. This is the default behavior when no options are specified.</dd>
+<dt><code>&#8211;</code><code>-all</code></dt>
+<dd> prints the version, vendor, prefix, and exec-prefix.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> prints the version number of the Kerberos installation.</dd>
+<dt><code>&#8211;</code><code>-vendor</code></dt>
+<dd> prints the name of the vendor of the Kerberos installation.</dd>
+<dt><code>&#8211;</code><code>-prefix</code></dt>
+<dd> prints the prefix for which the Kerberos installation was built.</dd>
+<dt><code>&#8211;</code><code>-exec-prefix</code></dt>
+<dd> prints the prefix for executables for which the Kerberos installation was built.</dd>
+<dt><code>&#8211;</code><code>-defccname</code></dt>
+<dd> prints the built-in default credentials cache location.</dd>
+<dt><code>&#8211;</code><code>-defktname</code></dt>
+<dd> prints the built-in default keytab location.</dd>
+<dt><code>&#8211;</code><code>-defcktname</code></dt>
+<dd> prints the built-in default client (initiator) keytab location.</dd>
+<dt><code>&#8211;</code><code>-cflags</code></dt>
+<dd> prints the compilation flags used to build the Kerberos installation.</dd>
+<dt><code>&#8211;</code><code>-libs</code> [<i>library</i>]</dt>
+<dd> prints the compiler options needed to link against <i>library</i>. Allowed values for <i>library</i> are: <center></dd>
 <table>
 <tr VALIGN=top>
 <td COLSPAN=2>
@@ -108,3 +108,4 @@ shell% krb5-config --libs krb5
 <h2>COPYRIGHT</h2>
 <p> 1985-2017, MIT </p>
 <h2>Index</h2>
+</p>

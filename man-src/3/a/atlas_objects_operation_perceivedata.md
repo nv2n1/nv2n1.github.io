@@ -50,14 +50,14 @@ description: "Atlas::Objects::Operation::PerceiveData – Generic base operation
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::GetData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::LookData</code>, <code>Atlas::Objects::Operation::ListenData</code>, <code>Atlas::Objects::Operation::SniffData</code>, and <code>Atlas::Objects::Operation::TouchData</code>.</p>
 <h3>static <code>PerceiveData</code>* Atlas::Objects::Operation::PerceiveData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::GetData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::LookData</code>, <code>Atlas::Objects::Operation::ListenData</code>, <code>Atlas::Objects::Operation::SniffData</code>, and <code>Atlas::Objects::Operation::TouchData</code>. </p>
 <h2>Author</h2>

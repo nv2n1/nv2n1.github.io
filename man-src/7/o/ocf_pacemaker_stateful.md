@@ -15,9 +15,9 @@ description: "ocf_pacemaker_Stateful – Example stateful resource agent"
 <h2>Supported Parameters</h2>
 <p><code>OCF_RESKEY_state</code> = string [/Stateful-.state]</p>
 <dl>
-<dd>State file </p>
+<dd>State file </dd>
 <p> Location to store the resource state in</dl>
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

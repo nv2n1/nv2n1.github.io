@@ -230,7 +230,7 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <dl COMPACT>
 <dd><i>handle</i> This structure is populated when the callback is called and represents a control connection to the client.<br />
  <i>auth_result</i> A globus_ftp_control_auth_result_t containing the values the client sent for gss authentication, user name, password and account. If any of the values were not sent by the client they will be NULL. Based on that information the user can decide if the client will be authorized for use of the server.<br />
- <i>callback_arg</i> The user argument passed to the callback.</dl>
+ <i>callback_arg</i> The user argument passed to the callback.</dd></dl>
 <h3>typedef struct <code>globus_ftp_control_auth_info_s</code></h3>
 <p>&nbsp;<wbr><code>globus_ftp_control_auth_info_t</code>&quot; </p>
 <p> Authentication Values. This structure is populated and passed back to the user via the <code>globus_ftp_control_auth_callback_t()</code>. It contains the information needed to decide if a client may use the server.</p>
@@ -238,16 +238,16 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <p>Authentication requirements. </p>
 <p> The value of this should be a bitwise or of</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_FTP_CONTROL_AUTH_NONE</p>
-<dt>&bull;</p>
-<dd>GLOBUS_FTP_CONTROL_AUTH_GSSAPI</p>
-<dt>&bull;</p>
-<dd>GLOBUS_FTP_CONTROL_AUTH_USER</p>
-<dt>&bull;</p>
-<dd>GLOBUS_FTP_CONTROL_AUTH_PASS</p>
-<dt>&bull;</p>
-<dd>GLOBUS_FTP_CONTROL_AUTH_ACCT</dl>
+<dt>&bull;</dt>
+<dd>GLOBUS_FTP_CONTROL_AUTH_NONE</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_FTP_CONTROL_AUTH_GSSAPI</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_FTP_CONTROL_AUTH_USER</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_FTP_CONTROL_AUTH_PASS</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_FTP_CONTROL_AUTH_ACCT</dd></dl>
 <h3>typedef void(* globus_ftp_control_callback_t)(void *callback_arg, struct globus_ftp_control_handle_s *handle, globus_object_t *error)</h3>
 <p>Asynchronous control callback. </p>
 <p> This callback is used as a generic control operation callback. </p>
@@ -255,7 +255,7 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <dl COMPACT>
 <dd><i>callback_arg</i> User supplied argument to the callback function<br />
  <i>handle</i> A pointer to the GridFTP control handle. Used to identify which control connection the operation was applied to.<br />
- <i>error</i> Pointer to a globus error object containing information about any errors that occurred processing the operation</dl>
+ <i>error</i> Pointer to a globus error object containing information about any errors that occurred processing the operation</dd></dl>
 <h3>typedef void(* globus_ftp_control_command_callback_t)(void *callback_arg, struct globus_ftp_control_handle_s *handle, globus_object_t *error, union globus_ftp_control_command_u *command)</h3>
 <p>Server command callback. </p>
 <p> When a command from a client is received on the control channel a user callback with this signature is called. </p>
@@ -264,7 +264,7 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <dd><i>callback_arg</i> The user argument passed to the callback function.<br />
  <i>handle</i> The control handle that the command was issued on.<br />
  <i>error</i> Indicates if a command was successful read or or if a failure occurred. This object will be freed once this callback returns. If the user wishes to have a copy of the error that persists past the life of this callback, they must make a copy using globus_object_copy(), and free it with globus_object_free().<br />
- <i>command</i> The command structure indicates what type of command the client issued. Based on the &#8216;type&#8217; further information can be extracted. This command structure will be freed once this callback returns. If the user wishes to have a copy of the error that persists past the life of this callback, they must make a copy using <code>globus_ftp_control_command_copy()</code>, and free it with globus_ftp_control_command_free().</dl>
+ <i>command</i> The command structure indicates what type of command the client issued. Based on the &#8216;type&#8217; further information can be extracted. This command structure will be freed once this callback returns. If the user wishes to have a copy of the error that persists past the life of this callback, they must make a copy using <code>globus_ftp_control_command_copy()</code>, and free it with globus_ftp_control_command_free().</dd></dl>
 <h3>typedef void(* globus_ftp_control_data_callback_t)(void *callback_arg, globus_ftp_control_handle_t *handle, globus_object_t *error, globus_byte_t *buffer, globus_size_t length, globus_off_t offset, globus_bool_t eof)</h3>
 <p>Asynchronous data transmission operation callback. </p>
 <p> This callback is called in functions that send or receive data on the data channel(s). </p>
@@ -278,7 +278,7 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
  <i>buffer</i> The user buffer passed as a parameter to <code>globus_ftp_control_data_read()</code> or <code>globus_ftp_control_data_write()</code>.<br />
  <i>length</i> The amount of data in the buffer. In the case of an incoming data channel, this may be less than the buffer size.<br />
  <i>offset</i> The file offset of the data which is contained in the buffer.<br />
- <i>eof</i> This is set to GLOBUS_TRUE then all of the data associated with the transfer has arrived on the data connections associated with this handle. If multiple data callbacks are registered with this handle, there is no guaranteed order of the EOF callback with respect to other data callbacks. If multiple callbacks are registered when EOF is reached on the data connections, at least one callback function will be called with eof set to GLOBUS_TRUE.</dl>
+ <i>eof</i> This is set to GLOBUS_TRUE then all of the data associated with the transfer has arrived on the data connections associated with this handle. If multiple data callbacks are registered with this handle, there is no guaranteed order of the EOF callback with respect to other data callbacks. If multiple callbacks are registered when EOF is reached on the data connections, at least one callback function will be called with eof set to GLOBUS_TRUE.</dd></dl>
 <h3>typedef enum <code>globus_ftp_control_parallelism_mode_e</code> <code>globus_ftp_control_parallelism_mode_t</code></h3>
 <p>control parallelism Types</p>
 <h3>typedef void(* globus_ftp_control_response_callback_t)(void *callback_arg, struct globus_ftp_control_handle_s *handle, globus_object_t *error, globus_ftp_control_response_t *ftp_response)</h3>
@@ -289,7 +289,7 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <dd><i>callback_arg</i> User supplied argument to the callback function<br />
  <i>handle</i> A pointer to the GridFTP control handle. Used to identify which control connection the operation was applied to.<br />
  <i>error</i> Pointer to a globus error object containing information about any errors that occurred processing the operation<br />
- <i>ftp_response</i> Pointer to a response structure containing the FTP response to the command.</dl>
+ <i>ftp_response</i> Pointer to a response structure containing the FTP response to the command.</dd></dl>
 <h3>typedef enum <code>globus_ftp_control_structure_e</code> <code>globus_ftp_control_structure_t</code></h3>
 <p>control structure structure</p>
 <h3>typedef enum <code>globus_ftp_control_tcpbuffer_mode_e</code> <code>globus_ftp_control_tcpbuffer_mode_t</code></h3>
@@ -305,11 +305,11 @@ description: "globus_ftp_control.h – GridFTP Control Connection API."
 <p>TCP Buffer Setting Modes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_DEFAULT </i></p>
-<dd>Don&#8217;t change the TCP buffer/window size from the system default</p>
-<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_FIXED </i></p>
-<dd>Set the TCP buffer/window size to a fixed value</p>
-<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_AUTOMATIC </i></p>
-<dd>Automatically set the TCP buffer/window size</dl>
+<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_DEFAULT </i></dt>
+<dd>Don&#8217;t change the TCP buffer/window size from the system default</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_FIXED </i></dt>
+<dd>Set the TCP buffer/window size to a fixed value</dd>
+<dt><i>GLOBUS_FTP_CONTROL_TCPBUFFER_AUTOMATIC </i></dt>
+<dd>Automatically set the TCP buffer/window size</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_ftp_control from the source code.</p>

@@ -11,10 +11,8 @@ std::call_once - std::call_once
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;mutex&gt;
-
     template &lt;class Callable, class... Args&gt;
     (since C++ 11)
-
         void call_once(std::once_flag &amp;flag, Callable &amp;&amp;f, Args &amp;&amp;...args);</code></pre> 
 Executes the Callable object f exactly once, even if called concurrently, from several threads.
 
@@ -68,18 +66,14 @@ LWG_2442 C++11 the arguments are copied and/or moved before invocation no copyin
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;mutex&gt;
 std::once_flag flag1, flag2;
 void simple_do_once()
-
 {
     std::call_once(flag1, []() { std::cout &lt;&lt; &quot;Simple example: called once\n&quot;; });
 }
 void may_throw_function(bool do_throw)
-
 {
     if (do_throw) {
         std::cout &lt;&lt; &quot;throw: call_once will retry\n&quot;; // this may appear more than once
@@ -88,7 +82,6 @@ void may_throw_function(bool do_throw)
     std::cout &lt;&lt; &quot;Didn't throw, call_once will not attempt again\n&quot;; // guaranteed once
 }
 void do_once(bool do_throw)
-
 {
     try {
         std::call_once(flag2, may_throw_function, do_throw);
@@ -96,7 +89,6 @@ void do_once(bool do_throw)
     }
 }
 int main()
-
 {
     std::thread st1(simple_do_once);
     std::thread st2(simple_do_once);

@@ -10,13 +10,12 @@ description: "trunc, truncf, truncl – round to integer, toward zero"
 <p>trunc, truncf, truncl &#8211; round to integer, toward zero</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double trunc(double x);
 float truncf(float x);
 long double truncl(long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>trunc</code>(), <code>truncf</code>(), <code>truncl</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>These functions round <i>x</i> to the nearest integer value that is not larger in magnitude than <i>x</i>.</p>
 <h2>Return Value</h2>

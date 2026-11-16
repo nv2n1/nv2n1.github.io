@@ -19,14 +19,14 @@ description: "krb5_get_creds krb5_get_creds_opt_add_options krb5_get_creds_opt_a
 <p> The structure <code>krb5_get_creds_opt</code> is allocated with Fn krb5_get_creds_opt_alloc and freed with Fn krb5_get_creds_opt_free . The free function also frees the content of the structure set by the accessor functions. </p>
 <p> Fn krb5_get_creds_opt_add_options and Fn krb5_get_creds_opt_set_options adds and sets options to the Fi krb5_get_creds_opt structure . The possible options to set are</p>
 <dl>
-<dt><code>KRB5_GC_CACHED</code></p>
-<dd> Only check the Fa ccache , don&#8217;t got out on network to fetch credential.</p>
-<dt><code>KRB5_GC_USER_USER</code></p>
-<dd> request a user to user ticket. This options doesn&#8217;t store the resulting user to user credential in the Fa ccache .</p>
-<dt><code>KRB5_GC_EXPIRED_OK</code></p>
-<dd> returns the credential even if it is expired, default behavior is trying to refetch the credential from the KDC.</p>
-<dt><code>KRB5_GC_NO_STORE</code></p>
-<dd> Do not store the resulting credentials in the Fa ccache .</dl>
+<dt><code>KRB5_GC_CACHED</code></dt>
+<dd> Only check the Fa ccache , don&#8217;t got out on network to fetch credential.</dd>
+<dt><code>KRB5_GC_USER_USER</code></dt>
+<dd> request a user to user ticket. This options doesn&#8217;t store the resulting user to user credential in the Fa ccache .</dd>
+<dt><code>KRB5_GC_EXPIRED_OK</code></dt>
+<dd> returns the credential even if it is expired, default behavior is trying to refetch the credential from the KDC.</dd>
+<dt><code>KRB5_GC_NO_STORE</code></dt>
+<dd> Do not store the resulting credentials in the Fa ccache .</dd></dl>
 <p> Fn krb5_get_creds_opt_set_enctype sets the preferred encryption type of the application. Don&#8217;t set this unless you have to since if there is no match in the KDC, the function call will fail. </p>
 <p> Fn krb5_get_creds_opt_set_impersonate sets the principal to impersonate., Returns a ticket that have the impersonation principal as a client and the requestor as the service. Note that the requested principal have to be the same as the client principal in the krbtgt. </p>
 <p> Fn krb5_get_creds_opt_set_ticket sets the extra ticket used in user-to-user or contrained delegation use case.</p>

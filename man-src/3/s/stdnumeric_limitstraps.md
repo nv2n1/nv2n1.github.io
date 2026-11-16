@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::traps – std::numeric_limits<T>::traps"
 <h2>Synopsis</h2>
 <pre><code>static const bool traps;
 (until C++ 11)
-
     static constexpr bool traps;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::traps is true for all arithmetic types T that have at least one value that, if used as an argument to an arithmetic operation, will generate a trap. </p>

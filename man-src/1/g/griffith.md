@@ -15,32 +15,32 @@ description: "griffith – film collection manager"
 <p> Griffith is a film collection manager. Adding items to the movie collection is as quick and easy as typing the film title and selecting a supported source. Griffith will then try to fetch all the related information from the Web.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> Show usage information.</p>
-<dt><code>-D</code> <code>&#8211;debug</code></p>
-<dd> Run in debug mode.</p>
-<dt><code>-C</code> <code>&#8211;clean</code></p>
-<dd> find and delete orphan files in posters directory.</p>
-<dt><code>&#8211;check-dep</code></p>
-<dd> check dependencies &#8211; if all needed Python modules are installed, it prints nothting.</p>
-<dt><code>&#8211;sqlecho</code></p>
-<dd> Prints all SQL queries to standart output.</p>
-<dt><code>&#8211;home DIR</code></p>
-<dd> Set Griffith&#8217;s home directory. Use this option if you want to change the default ~/.griffith</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Show usage information.</dd>
+<dt><code>-D</code> <code>&#8211;debug</code></dt>
+<dd> Run in debug mode.</dd>
+<dt><code>-C</code> <code>&#8211;clean</code></dt>
+<dd> find and delete orphan files in posters directory.</dd>
+<dt><code>&#8211;check-dep</code></dt>
+<dd> check dependencies &#8211; if all needed Python modules are installed, it prints nothting.</dd>
+<dt><code>&#8211;sqlecho</code></dt>
+<dd> Prints all SQL queries to standart output.</dd>
+<dt><code>&#8211;home DIR</code></dt>
+<dd> Set Griffith&#8217;s home directory. Use this option if you want to change the default ~/.griffith</dd></dl>
 <p> Printing movie list:</p>
 <dl>
-<dt><code>-c &lt;expr&gt;</code> <code>&#8211;cast=&lt;expr&gt;</code></p>
-<dd> cast field must contain &lt;expr&gt;</p>
-<dt><code>-d &lt;expr&gt;</code> <code>&#8211;director=&lt;expr&gt;</code></p>
-<dd> director field must contain &lt;expr&gt;</p>
-<dt><code>-o &lt;expr&gt;</code> <code>&#8211;original_title=&lt;expr&gt;</code></p>
-<dd> original title field must contain &lt;expr&gt;</p>
-<dt><code>-t &lt;expr&gt;</code> <code>&#8211;title=&lt;expr&gt;</code></p>
-<dd> title field must contain &lt;expr&gt;</p>
-<dt><code>-y &lt;number&gt;</code> <code>&#8211;year=&lt;number&gt;</code></p>
-<dd> movie must be released in year &lt;number&gt;</p>
-<dt><code>-s &lt;columns&gt;</code> <code>&#8211;sort=&lt;columns&gt;</code></p>
-<dd> set sort columns to &lt;columns&gt;. Example: &#8211;sort=o_title,number,director</dl>
+<dt><code>-c &lt;expr&gt;</code> <code>&#8211;cast=&lt;expr&gt;</code></dt>
+<dd> cast field must contain &lt;expr&gt;</dd>
+<dt><code>-d &lt;expr&gt;</code> <code>&#8211;director=&lt;expr&gt;</code></dt>
+<dd> director field must contain &lt;expr&gt;</dd>
+<dt><code>-o &lt;expr&gt;</code> <code>&#8211;original_title=&lt;expr&gt;</code></dt>
+<dd> original title field must contain &lt;expr&gt;</dd>
+<dt><code>-t &lt;expr&gt;</code> <code>&#8211;title=&lt;expr&gt;</code></dt>
+<dd> title field must contain &lt;expr&gt;</dd>
+<dt><code>-y &lt;number&gt;</code> <code>&#8211;year=&lt;number&gt;</code></dt>
+<dd> movie must be released in year &lt;number&gt;</dd>
+<dt><code>-s &lt;columns&gt;</code> <code>&#8211;sort=&lt;columns&gt;</code></dt>
+<dd> set sort columns to &lt;columns&gt;. Example: &#8211;sort=o_title,number,director</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Homepage: <a href="lahttp://www.griffith.cc/ra">lahttp://www.griffith.cc/ra</a></p>
 <h2>BUGS</h2>

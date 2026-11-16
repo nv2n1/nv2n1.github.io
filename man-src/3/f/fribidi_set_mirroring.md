@@ -21,7 +21,7 @@ url: "/docs/linux/man/3-fribidi_set_mirroring/"
 
 <dl>
 <dt><b>fribidi_boolean state</b>
-<dd> New state to set.</dl>
+</dt><dd> New state to set.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

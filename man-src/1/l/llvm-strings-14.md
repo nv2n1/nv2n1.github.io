@@ -26,14 +26,14 @@ wibble blob
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;all, -a</code></p>
-<dd> Silently ignored. Present for GNU <code>strings</code> compatibility.</p>
-<dt><code>&#8211;bytes=&lt;length&gt;, -n</code></p>
-<dd> Set the minimum number of printable ASCII characters required for a sequence of bytes to be considered a string. The default value is 4.</p>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Display a summary of command line options.</p>
-<dt><code>&#8211;print-file-name, -f</code></p>
-<dd> Display the name of the containing file before each string. </p>
+<dt><code>&#8211;all, -a</code></dt>
+<dd> Silently ignored. Present for GNU <code>strings</code> compatibility.</dd>
+<dt><code>&#8211;bytes=&lt;length&gt;, -n</code></dt>
+<dd> Set the minimum number of printable ASCII characters required for a sequence of bytes to be considered a string. The default value is 4.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Display a summary of command line options.</dd>
+<dt><code>&#8211;print-file-name, -f</code></dt>
+<dd> Display the name of the containing file before each string. </dd>
 <p> Example: </p>
 <pre>
 $ llvm-strings --print-file-name test.o test.elf
@@ -47,8 +47,8 @@ test.elf: _Z5hellov
 test.elf: main
 test.elf: some_bss
 </pre>
-<dt><code>&#8211;radix=&lt;radix&gt;, -t</code></p>
-<dd> Display the offset within the file of each string, before the string and using the specified radix. Valid <code>&lt;radix&gt;</code> values are <code>o</code>, <code>d</code> and <code>x</code> for octal, decimal and hexadecimal respectively. </p>
+<dt><code>&#8211;radix=&lt;radix&gt;, -t</code></dt>
+<dd> Display the offset within the file of each string, before the string and using the specified radix. Valid <code>&lt;radix&gt;</code> values are <code>o</code>, <code>d</code> and <code>x</code> for octal, decimal and hexadecimal respectively. </dd>
 <p> Example: </p>
 <pre>
 $ llvm-strings --radix=o test.o
@@ -76,10 +76,10 @@ $ llvm-strings -t x test.o
     258 test.cpp
     261 main
 </pre>
-<dt><code>&#8211;version</code></p>
-<dd> Display the version of the <code>llvm-strings</code> executable.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options from response file <code>&lt;FILE&gt;</code>.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the version of the <code>llvm-strings</code> executable.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options from response file <code>&lt;FILE&gt;</code>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-strings</code> exits with a non-zero exit code if there is an error. Otherwise, it exits with code 0.</p>
 <h2>BUGS</h2>

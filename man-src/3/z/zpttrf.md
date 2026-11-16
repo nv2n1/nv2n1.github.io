@@ -21,10 +21,10 @@ description: "zpttrf.f –"
 <pre> ZPTTRF computes the L*D*L**H factorization of a complex Hermitian
  positive definite tridiagonal matrix A. The factorization may also
  be regarded as having the form A = U**H *D*U.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix A. N &gt;= 0.</pre>
 <p><i>D</i> </p>
@@ -50,13 +50,13 @@ description: "zpttrf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 93 of file zpttrf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

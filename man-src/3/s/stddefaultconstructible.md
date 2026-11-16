@@ -11,9 +11,7 @@ std::DefaultConstructible - std::DefaultConstructible
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class T &gt;                                   (since C++20)
-
 concept DefaultConstructible = std::Constructible&lt;T&gt;;</code></pre> 
 The DefaultConstructible concept provides a shorthand for the common case when the question is whether a type can be constructed with no arguments. 
 

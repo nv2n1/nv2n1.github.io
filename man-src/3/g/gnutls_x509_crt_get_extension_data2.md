@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_get_extension_data2 – API function"
 <p> <code>int gnutls_x509_crt_get_extension_data2(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned </code><i>indx</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>unsigned indx</p>
-<dd> Specifies which extension OID to read. Use (0) to get the first one.</p>
-<dt>gnutls_datum_t * data</p>
-<dd> will contain the extension DER-encoded data</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>unsigned indx</dt>
+<dd> Specifies which extension OID to read. Use (0) to get the first one.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> will contain the extension DER-encoded data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the requested by the index extension data in the certificate. The extension data will be allocated using <code>gnutls_malloc()</code>. </p>
 <p> Use <code>gnutls_x509_crt_get_extension_info()</code> to extract the OID.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crt_get_extension_data2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

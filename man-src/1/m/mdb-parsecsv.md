@@ -21,34 +21,32 @@ description: "mdb-parsecsv – Convert CSV table dump into C file."
 <p> The <i>file</i> extension is stripped, and the output written to the base name plus a &#8216;.c&#8217; extension.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MDB_JET3_CHARSET</code></p>
-<dd> Defines the charset of the input JET3 (access 97) <i>file</i>. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</p>
-<dt><code>MDBICONV</code></p>
-<dd> Defines the output charset to use for the SQL <i>file</i>. Default is UTF-8. mdbtools must have been compiled with iconv.</p>
-<dt><code>MDBOPTS</code></p>
-<dd> semi-column separated list of options:</p>
+<dt><code>MDB_JET3_CHARSET</code></dt>
+<dd> Defines the charset of the input JET3 (access 97) <i>file</i>. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</dd>
+<dt><code>MDBICONV</code></dt>
+<dd> Defines the output charset to use for the SQL <i>file</i>. Default is UTF-8. mdbtools must have been compiled with iconv.</dd>
+<dt><code>MDBOPTS</code></dt>
+<dd> semi-column separated list of options:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> use_index</p>
-<dt>&bull;</p>
-<dd> no_memo</p>
-<dt>&bull;</p>
-<dd> debug_like</p>
-<dt>&bull;</p>
-<dd> debug_write</p>
-<dt>&bull;</p>
-<dd> debug_usage</p>
-<dt>&bull;</p>
-<dd> debug_ole</p>
-<dt>&bull;</p>
-<dd> debug_row</p>
-<dt>&bull;</p>
-<dd> debug_props</p>
-<dt>&bull;</p>
-<dd> debug_all is a shortcut for all debug_* options</dl>
+<dt>&bull;</dt>
+<dd> use_index</dd>
+<dt>&bull;</dt>
+<dd> no_memo</dd>
+<dt>&bull;</dt>
+<dd> debug_like</dd>
+<dt>&bull;</dt>
+<dd> debug_write</dd>
+<dt>&bull;</dt>
+<dd> debug_usage</dd>
+<dt>&bull;</dt>
+<dd> debug_ole</dd>
+<dt>&bull;</dt>
+<dd> debug_row</dd>
+<dt>&bull;</dt>
+<dd> debug_props</dd>
+<dt>&bull;</dt>
+<dd> debug_all is a shortcut for all debug_* options</dd></dl>
 </dl>
 </dl>
 <h2>SEE ALSO</h2>

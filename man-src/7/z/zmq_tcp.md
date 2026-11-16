@@ -17,16 +17,16 @@ description: "zmq_tcp – 0MQ unicast transport using TCP"
 <p>When assigning a local address to a socket using <i>zmq_bind()</i> with the <i>tcp</i> transport, the <i>endpoint</i> shall be interpreted as an <i>interface</i> followed by a colon and the TCP port number to use. </p>
 <p> An <i>interface</i> may be specified by either of the following: </p>
 <dl>
-<dd>&bull; The wild-card *, meaning all available interfaces.</dl>
+<dd>&bull; The wild-card *, meaning all available interfaces.</dd></dl>
 <dl>
-<dd>&bull; The primary IPv4 or IPv6 address assigned to the interface, in its numeric representation.</dl>
+<dd>&bull; The primary IPv4 or IPv6 address assigned to the interface, in its numeric representation.</dd></dl>
 <dl>
-<dd>&bull; The non-portable interface name as defined by the operating system.</dl>
+<dd>&bull; The non-portable interface name as defined by the operating system.</dd></dl>
 <p> The TCP port number may be specified by: </p>
 <dl>
-<dd>&bull; A numeric value, usually above 1024 on POSIX systems.</dl>
+<dd>&bull; A numeric value, usually above 1024 on POSIX systems.</dd></dl>
 <dl>
-<dd>&bull; The wild-card *, meaning a system-assigned ephemeral port.</dl>
+<dd>&bull; The wild-card *, meaning a system-assigned ephemeral port.</dd></dl>
 <p> When using ephemeral ports, the caller should retrieve the actual assigned port using the ZMQ_LAST_ENDPOINT socket option. See <code><a href="/docs/linux/man/3-zmq_getsockopt/">zmq_getsockopt</a></code>(3) for details.</p>
 <h3>Unbinding wild-card addres from a socket</h3>
 <p>When wild-card * <i>endpoint</i> was used in <i>zmq_bind()</i>, the caller should use real <i>endpoind</i> obtained from the ZMQ_LAST_ENDPOINT socket option to unbind this <i>endpoint</i> from a socket using <i>zmq_unbind()</i>.</p>
@@ -34,9 +34,9 @@ description: "zmq_tcp – 0MQ unicast transport using TCP"
 <p>When connecting a socket to a peer address using <i>zmq_connect()</i> with the <i>tcp</i> transport, the <i>endpoint</i> shall be interpreted as a <i>peer address</i> followed by a colon and the TCP port number to use. You can optionally specify a <i>source_endpoint</i> which will be used as the source address for your connection; tcp://<i>source_endpoint</i>;&#8217;endpoint&#8217;, see the <i>interface</i> description above for details. </p>
 <p> A <i>peer address</i> may be specified by either of the following: </p>
 <dl>
-<dd>&bull; The DNS name of the peer.</dl>
+<dd>&bull; The DNS name of the peer.</dd></dl>
 <dl>
-<dd>&bull; The IPv4 or IPv6 address of the peer, in its numeric representation.</dl>
+<dd>&bull; The IPv4 or IPv6 address of the peer, in its numeric representation.</dd></dl>
 <p> Note: A description of the ZeroMQ Message Transport Protocol (ZMTP) which is used by the TCP transport can be found at m[blue]<code><a rel="nofollow" href="http://rfc.zeromq.org/spec:15">http://rfc.zeromq.org/spec:15</a></code>m[]</p>
 <h2>Examples</h2>
 <p><code>Assigning a local address to a socket</code>. </p>

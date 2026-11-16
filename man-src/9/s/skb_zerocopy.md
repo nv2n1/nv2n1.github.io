@@ -14,16 +14,16 @@ description: "skb_zerocopy – Zero copy skb to skb"
 <p><i>to</i></p>
 <dl>
 <dd>
-<dd>destination buffer</dl>
+</dd><dd>destination buffer</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>source buffer</dl>
+<dd>source buffer</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to copy from source buffer</dl>
+<dd>number of bytes to copy from source buffer</dd></dl>
 <p> <i>hlen</i></p>
 <dl>
-<dd>size of linear headroom in destination buffer</dl>
+<dd>size of linear headroom in destination buffer</dd></dl>
 <h2>Description</h2>
 <p>Copies up to `len` bytes from `from` to `to` by creating references to the frags in the source buffer. </p>
 <p> The `hlen` as calculated by <code>skb_zerocopy_headlen</code> specifies the headroom in the `to` buffer. </p>

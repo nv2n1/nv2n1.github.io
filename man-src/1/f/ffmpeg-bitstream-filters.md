@@ -28,60 +28,51 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>av1_metadata</h3>
 <p> Modify metadata embedded in an <font SIZE="-1">AV1</font> stream.</p>
 <dl>
-<dt><code>td</code></p>
-<dd> Insert or remove temporal delimiter OBUs in all temporal units of the stream.</p>
+<dt><code>td</code></dt>
+<dd> Insert or remove temporal delimiter OBUs in all temporal units of the stream.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>insert</code></p>
-<dd> Insert a <font SIZE="-1">TD</font> at the beginning of every <font SIZE="-1">TU</font> which does not already have one.</p>
-<dt><code>remove</code></p>
-<dd> Remove the <font SIZE="-1">TD</font> from the beginning of every <font SIZE="-1">TU</font> which has one.</dl>
+<dt><code>insert</code></dt>
+<dd> Insert a <font SIZE="-1">TD</font> at the beginning of every <font SIZE="-1">TU</font> which does not already have one.</dd>
+<dt><code>remove</code></dt>
+<dd> Remove the <font SIZE="-1">TD</font> from the beginning of every <font SIZE="-1">TU</font> which has one.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>color_primaries</code></p>
+</dl>
+<dt><code>color_primaries</code></dt>
 <dd>
-<dt><code>transfer_characteristics</code></p>
+</dd><dt><code>transfer_characteristics</code></dt>
 <dd>
-<dt><code>matrix_coefficients</code></p>
-<dd> Set the color description fields in the stream (see <font SIZE="-1">AV1</font> section 6.4.2).</p>
-<dt><code>color_range</code></p>
-<dd> Set the color range in the stream (see <font SIZE="-1">AV1</font> section 6.4.2; note that this cannot be set for streams using <font SIZE="-1">BT.709</font> primaries, sRGB transfer characteristic and identity (<font SIZE="-1">RGB</font>) matrix coefficients).</p>
+</dd><dt><code>matrix_coefficients</code></dt>
+<dd> Set the color description fields in the stream (see <font SIZE="-1">AV1</font> section 6.4.2).</dd>
+<dt><code>color_range</code></dt>
+<dd> Set the color range in the stream (see <font SIZE="-1">AV1</font> section 6.4.2; note that this cannot be set for streams using <font SIZE="-1">BT.709</font> primaries, sRGB transfer characteristic and identity (<font SIZE="-1">RGB</font>) matrix coefficients).</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>tv</code></p>
-<dd> Limited range.</p>
-<dt><code>pc</code></p>
-<dd> Full range.</dl>
+<dt><code>tv</code></dt>
+<dd> Limited range.</dd>
+<dt><code>pc</code></dt>
+<dd> Full range.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>chroma_sample_position</code></p>
-<dd> Set the chroma sample location in the stream (see <font SIZE="-1">AV1</font> section 6.4.2). This can only be set for 4:2:0 streams.</p>
+</dl>
+<dt><code>chroma_sample_position</code></dt>
+<dd> Set the chroma sample location in the stream (see <font SIZE="-1">AV1</font> section 6.4.2). This can only be set for 4:2:0 streams.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>vertical</code></p>
-<dd> Left position (matching the default in <font SIZE="-1">MPEG-2</font> and H.264).</p>
-<dt><code>colocated</code></p>
-<dd> Top-left position.</dl>
+<dt><code>vertical</code></dt>
+<dd> Left position (matching the default in <font SIZE="-1">MPEG-2</font> and H.264).</dd>
+<dt><code>colocated</code></dt>
+<dd> Top-left position.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>tick_rate</code></p>
-<dd> Set the tick rate (<i>num_units_in_display_tick / time_scale</i>) in the timing info in the sequence header.</p>
-<dt><code>num_ticks_per_picture</code></p>
-<dd> Set the number of ticks in each picture, to indicate that the stream has a fixed framerate. Ignored if <code>tick_rate</code> is not also set.</p>
-<dt><code>delete_padding</code></p>
-<dd> Deletes Padding OBUs.</dl>
+</dl>
+<dt><code>tick_rate</code></dt>
+<dd> Set the tick rate (<i>num_units_in_display_tick / time_scale</i>) in the timing info in the sequence header.</dd>
+<dt><code>num_ticks_per_picture</code></dt>
+<dd> Set the number of ticks in each picture, to indicate that the stream has a fixed framerate. Ignored if <code>tick_rate</code> is not also set.</dd>
+<dt><code>delete_padding</code></dt>
+<dd> Deletes Padding OBUs.</dd></dl>
 <h3>chomp</h3>
 <p> Remove zero padding at the end of a packet.</p>
 <h3>dca_core</h3>
@@ -89,24 +80,21 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>dump_extra</h3>
 <p> Add extradata to the beginning of the filtered packets except when said packets already exactly begin with the extradata that is intended to be added.</p>
 <dl>
-<dt><code>freq</code></p>
-<dd> The additional argument specifies which packets should be filtered. It accepts the values:</p>
+<dt><code>freq</code></dt>
+<dd> The additional argument specifies which packets should be filtered. It accepts the values:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>k</code></p>
+<dt><code>k</code></dt>
 <dd>
-<dt><code>keyframe</code></p>
-<dd> add extradata to all key packets</p>
-<dt><code>e</code></p>
+</dd><dt><code>keyframe</code></dt>
+<dd> add extradata to all key packets</dd>
+<dt><code>e</code></dt>
 <dd>
-<dt><code>all</code></p>
-<dd> add extradata to all packets</dl>
+</dd><dt><code>all</code></dt>
+<dd> add extradata to all packets</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> If not specified it is assumed <code>k</code>. </p>
 <p> For example the following <code>ffmpeg</code> command forces a global header (thus disabling individual packet headers) in the H.264 packets generated by the <tt>&quot;libx264&quot;</tt> encoder, but corrects them by adding the header stored in extradata to the key packets: </p>
@@ -120,15 +108,15 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <p> Certain codecs allow the long-term headers (e.g. <font SIZE="-1">MPEG-2</font> sequence headers, or H.264/HEVC (<font SIZE="-1">VPS/</font>)SPS/PPS) to be transmitted either &#8220;in-band&#8221; (i.e. as a part of the bitstream containing the coded frames) or &#8220;out of band&#8221; (e.g. on the container level). This latter form is called &#8220;extradata&#8221; in FFmpeg terminology. </p>
 <p> This bitstream filter detects the in-band headers and makes them available as extradata.</p>
 <dl>
-<dt><code>remove</code></p>
-<dd> When this option is enabled, the long-term headers are removed from the bitstream after extraction.</dl>
+<dt><code>remove</code></dt>
+<dd> When this option is enabled, the long-term headers are removed from the bitstream after extraction.</dd></dl>
 <h3>filter_units</h3>
 <p> Remove units with types in or not in a given set from the stream.</p>
 <dl>
-<dt><code>pass_types</code></p>
-<dd> List of unit types or ranges of unit types to pass through while removing all others. This is specified as a &#8216;|&#8217;-separated list of unit type values or ranges of values with &#8216;-&#8216;.</p>
-<dt><code>remove_types</code></p>
-<dd> Identical to <code>pass_types</code>, except the units in the given set removed and all others passed through.</dl>
+<dt><code>pass_types</code></dt>
+<dd> List of unit types or ranges of unit types to pass through while removing all others. This is specified as a &#8216;|&#8217;-separated list of unit type values or ranges of values with &#8216;-&#8216;.</dd>
+<dt><code>remove_types</code></dt>
+<dd> Identical to <code>pass_types</code>, except the units in the given set removed and all others passed through.</dd></dl>
 <p> Extradata is unchanged by this transformation, but note that if the stream contains inline parameter sets then the output may be unusable if they are removed. </p>
 <p> For example, to remove all non-VCL <font SIZE="-1">NAL</font> units from an H.264 stream: </p>
 <pre>
@@ -141,20 +129,17 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>hapqa_extract</h3>
 <p> Extract Rgb or Alpha part of an <font SIZE="-1">HAPQA</font> file, without recompression, in order to create an <font SIZE="-1">HAPQ</font> or an HAPAlphaOnly file.</p>
 <dl>
-<dt><code>texture</code></p>
-<dd> Specifies the texture to keep.</p>
+<dt><code>texture</code></dt>
+<dd> Specifies the texture to keep.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>color</code></p>
+<dt><code>color</code></dt>
 <dd>
-<dt><code>alpha</code></p>
-<dd></dl>
+</dd><dt><code>alpha</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> Convert <font SIZE="-1">HAPQA</font> to <font SIZE="-1">HAPQ</font> </p>
 <pre>
@@ -167,56 +152,53 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>h264_metadata</h3>
 <p> Modify metadata embedded in an H.264 stream.</p>
 <dl>
-<dt><code>aud</code></p>
-<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</p>
+<dt><code>aud</code></dt>
+<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>insert</code></p>
+<dt><code>insert</code></dt>
 <dd>
-<dt><code>remove</code></p>
-<dd></dl>
+</dd><dt><code>remove</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>sample_aspect_ratio</code></p>
-<dd> Set the sample aspect ratio of the stream in the <font SIZE="-1">VUI</font> parameters.</p>
-<dt><code>overscan_appropriate_flag</code></p>
-<dd> Set whether the stream is suitable for display using overscan or not (see H.264 section E.2.1).</p>
-<dt><code>video_format</code></p>
+</dl>
+<dt><code>sample_aspect_ratio</code></dt>
+<dd> Set the sample aspect ratio of the stream in the <font SIZE="-1">VUI</font> parameters.</dd>
+<dt><code>overscan_appropriate_flag</code></dt>
+<dd> Set whether the stream is suitable for display using overscan or not (see H.264 section E.2.1).</dd>
+<dt><code>video_format</code></dt>
 <dd>
-<dt><code>video_full_range_flag</code></p>
-<dd> Set the video format in the stream (see H.264 section E.2.1 and table E-2).</p>
-<dt><code>colour_primaries</code></p>
+</dd><dt><code>video_full_range_flag</code></dt>
+<dd> Set the video format in the stream (see H.264 section E.2.1 and table E-2).</dd>
+<dt><code>colour_primaries</code></dt>
 <dd>
-<dt><code>transfer_characteristics</code></p>
+</dd><dt><code>transfer_characteristics</code></dt>
 <dd>
-<dt><code>matrix_coefficients</code></p>
-<dd> Set the colour description in the stream (see H.264 section E.2.1 and tables E-3, E-4 and E-5).</p>
-<dt><code>chroma_sample_loc_type</code></p>
-<dd> Set the chroma sample location in the stream (see H.264 section E.2.1 and figure E-1).</p>
-<dt><code>tick_rate</code></p>
-<dd> Set the tick rate (num_units_in_tick / time_scale) in the <font SIZE="-1">VUI</font> parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).</p>
-<dt><code>fixed_frame_rate_flag</code></p>
-<dd> Set whether the stream has fixed framerate &#8211; typically this indicates that the framerate is exactly half the tick rate, but the exact meaning is dependent on interlacing and the picture structure (see H.264 section E.2.1 and table E-6).</p>
-<dt><code>crop_left</code></p>
+</dd><dt><code>matrix_coefficients</code></dt>
+<dd> Set the colour description in the stream (see H.264 section E.2.1 and tables E-3, E-4 and E-5).</dd>
+<dt><code>chroma_sample_loc_type</code></dt>
+<dd> Set the chroma sample location in the stream (see H.264 section E.2.1 and figure E-1).</dd>
+<dt><code>tick_rate</code></dt>
+<dd> Set the tick rate (num_units_in_tick / time_scale) in the <font SIZE="-1">VUI</font> parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).</dd>
+<dt><code>fixed_frame_rate_flag</code></dt>
+<dd> Set whether the stream has fixed framerate &#8211; typically this indicates that the framerate is exactly half the tick rate, but the exact meaning is dependent on interlacing and the picture structure (see H.264 section E.2.1 and table E-6).</dd>
+<dt><code>crop_left</code></dt>
 <dd>
-<dt><code>crop_right</code></p>
+</dd><dt><code>crop_right</code></dt>
 <dd>
-<dt><code>crop_top</code></p>
+</dd><dt><code>crop_top</code></dt>
 <dd>
-<dt><code>crop_bottom</code></p>
-<dd> Set the frame cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </p>
+</dd><dt><code>crop_bottom</code></dt>
+<dd> Set the frame cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </dd>
 <p> These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled or the stream is interlaced (see H.264 section 7.4.2.1.1).</p>
-<dt><code>sei_user_data</code></p>
-<dd> Insert a string as <font SIZE="-1">SEI</font> unregistered user data. The argument must be of the form <i>UUID+string</i>, where the <font SIZE="-1">UUID</font> is as hex digits possibly separated by hyphens, and the string can be anything. </p>
+<dt><code>sei_user_data</code></dt>
+<dd> Insert a string as <font SIZE="-1">SEI</font> unregistered user data. The argument must be of the form <i>UUID+string</i>, where the <font SIZE="-1">UUID</font> is as hex digits possibly separated by hyphens, and the string can be anything. </dd>
 <p> For example, <code>086f3693-b7b3-4f2c-9653-21492feee5b8+hello</code> will insert the string &#8220;hello&#8221; associated with the given <font SIZE="-1">UUID.</font></p>
-<dt><code>delete_filler</code></p>
-<dd> Deletes both filler <font SIZE="-1">NAL</font> units and filler <font SIZE="-1">SEI</font> messages.</p>
-<dt><code>level</code></p>
-<dd> Set the level in the <font SIZE="-1">SPS.</font> Refer to H.264 section A.3 and tables A-1 to A-5. </p>
+<dt><code>delete_filler</code></dt>
+<dd> Deletes both filler <font SIZE="-1">NAL</font> units and filler <font SIZE="-1">SEI</font> messages.</dd>
+<dt><code>level</code></dt>
+<dd> Set the level in the <font SIZE="-1">SPS.</font> Refer to H.264 section A.3 and tables A-1 to A-5. </dd>
 <p> The argument must be the name of a level (for example, <code>4.2</code>), a level_idc value (for example, <code>42</code>), or the special name <code>auto</code> indicating that the filter should attempt to guess the level from the input stream properties.</dl>
 <h3>h264_mp4toannexb</h3>
 <p> Convert an H.264 bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.264 specification). </p>
@@ -232,49 +214,46 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>hevc_metadata</h3>
 <p> Modify metadata embedded in an <font SIZE="-1">HEVC</font> stream.</p>
 <dl>
-<dt><code>aud</code></p>
-<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</p>
+<dt><code>aud</code></dt>
+<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>insert</code></p>
+<dt><code>insert</code></dt>
 <dd>
-<dt><code>remove</code></p>
-<dd></dl>
+</dd><dt><code>remove</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>sample_aspect_ratio</code></p>
-<dd> Set the sample aspect ratio in the stream in the <font SIZE="-1">VUI</font> parameters.</p>
-<dt><code>video_format</code></p>
+</dl>
+<dt><code>sample_aspect_ratio</code></dt>
+<dd> Set the sample aspect ratio in the stream in the <font SIZE="-1">VUI</font> parameters.</dd>
+<dt><code>video_format</code></dt>
 <dd>
-<dt><code>video_full_range_flag</code></p>
-<dd> Set the video format in the stream (see H.265 section E.3.1 and table E.2).</p>
-<dt><code>colour_primaries</code></p>
+</dd><dt><code>video_full_range_flag</code></dt>
+<dd> Set the video format in the stream (see H.265 section E.3.1 and table E.2).</dd>
+<dt><code>colour_primaries</code></dt>
 <dd>
-<dt><code>transfer_characteristics</code></p>
+</dd><dt><code>transfer_characteristics</code></dt>
 <dd>
-<dt><code>matrix_coefficients</code></p>
-<dd> Set the colour description in the stream (see H.265 section E.3.1 and tables E.3, E.4 and E.5).</p>
-<dt><code>chroma_sample_loc_type</code></p>
-<dd> Set the chroma sample location in the stream (see H.265 section E.3.1 and figure E.1).</p>
-<dt><code>tick_rate</code></p>
-<dd> Set the tick rate in the <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> parameters (num_units_in_tick / time_scale). Combined with <code>num_ticks_poc_diff_one</code>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.</p>
-<dt><code>num_ticks_poc_diff_one</code></p>
-<dd> Set poc_proportional_to_timing_flag in <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <code>tick_rate</code> is not also set.</p>
-<dt><code>crop_left</code></p>
+</dd><dt><code>matrix_coefficients</code></dt>
+<dd> Set the colour description in the stream (see H.265 section E.3.1 and tables E.3, E.4 and E.5).</dd>
+<dt><code>chroma_sample_loc_type</code></dt>
+<dd> Set the chroma sample location in the stream (see H.265 section E.3.1 and figure E.1).</dd>
+<dt><code>tick_rate</code></dt>
+<dd> Set the tick rate in the <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> parameters (num_units_in_tick / time_scale). Combined with <code>num_ticks_poc_diff_one</code>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.</dd>
+<dt><code>num_ticks_poc_diff_one</code></dt>
+<dd> Set poc_proportional_to_timing_flag in <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <code>tick_rate</code> is not also set.</dd>
+<dt><code>crop_left</code></dt>
 <dd>
-<dt><code>crop_right</code></p>
+</dd><dt><code>crop_right</code></dt>
 <dd>
-<dt><code>crop_top</code></p>
+</dd><dt><code>crop_top</code></dt>
 <dd>
-<dt><code>crop_bottom</code></p>
-<dd> Set the conformance window cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </p>
+</dd><dt><code>crop_bottom</code></dt>
+<dd> Set the conformance window cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </dd>
 <p> These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled (H.265 section 7.4.3.2.1).</p>
-<dt><code>level</code></p>
-<dd> Set the level in the <font SIZE="-1">VPS</font> and <font SIZE="-1">SPS.</font> See H.265 section A.4 and tables A.6 and A.7. </p>
+<dt><code>level</code></dt>
+<dd> Set the level in the <font SIZE="-1">VPS</font> and <font SIZE="-1">SPS.</font> See H.265 section A.4 and tables A.6 and A.7. </dd>
 <p> The argument must be the name of a level (for example, <code>5.1</code>), a <i>general_level_idc</i> value (for example, <code>153</code> for level 5.1), or the special name <code>auto</code> indicating that the filter should attempt to guess the level from the input stream properties.</dl>
 <h3>hevc_mp4toannexb</h3>
 <p> Convert an <font SIZE="-1">HEVC/H.265</font> bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.265 specification). </p>
@@ -314,34 +293,32 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>mpeg2_metadata</h3>
 <p> Modify metadata embedded in an <font SIZE="-1">MPEG-2</font> stream.</p>
 <dl>
-<dt><code>display_aspect_ratio</code></p>
-<dd> Set the display aspect ratio in the stream. </p>
+<dt><code>display_aspect_ratio</code></dt>
+<dd> Set the display aspect ratio in the stream. </dd>
 <p> The following fixed values are supported:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>4/3</code></p>
+<dt><code>4/3</code></dt>
 <dd>
-<dt><code>16/9</code></p>
+</dd><dt><code>16/9</code></dt>
 <dd>
-<dt><code>221/100</code></p>
-<dd></dl>
+</dd><dt><code>221/100</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
+</dt><dd>
+<p> Any other value will result in square pixels being signalled instead (see H.262 section 6.3.3 and table 6-3).</dd></dl>
+<dt><code>frame_rate</code></dt>
+<dd> Set the frame rate in the stream. This is constructed from a table of known values combined with a small multiplier and divisor &#8211; if the supplied value is not exactly representable, the nearest representable value will be used instead (see H.262 section 6.3.3 and table 6-4).</dd>
+<dt><code>video_format</code></dt>
+<dd> Set the video format in the stream (see H.262 section 6.3.6 and table 6-6).</dd>
+<dt><code>colour_primaries</code></dt>
 <dd>
-<p> Any other value will result in square pixels being signalled instead (see H.262 section 6.3.3 and table 6-3).</dl>
-<dt><code>frame_rate</code></p>
-<dd> Set the frame rate in the stream. This is constructed from a table of known values combined with a small multiplier and divisor &#8211; if the supplied value is not exactly representable, the nearest representable value will be used instead (see H.262 section 6.3.3 and table 6-4).</p>
-<dt><code>video_format</code></p>
-<dd> Set the video format in the stream (see H.262 section 6.3.6 and table 6-6).</p>
-<dt><code>colour_primaries</code></p>
+</dd><dt><code>transfer_characteristics</code></dt>
 <dd>
-<dt><code>transfer_characteristics</code></p>
-<dd>
-<dt><code>matrix_coefficients</code></p>
-<dd> Set the colour description in the stream (see H.262 section 6.3.6 and tables 6-7, 6-8 and 6-9).</dl>
+</dd><dt><code>matrix_coefficients</code></dt>
+<dd> Set the colour description in the stream (see H.262 section 6.3.6 and tables 6-7, 6-8 and 6-9).</dd></dl>
 <h3>mpeg4_unpack_bframes</h3>
 <p> Unpack DivX-style packed B-frames. </p>
 <p> DivX-style packed B-frames are not valid <font SIZE="-1">MPEG-4</font> and were only a workaround for the broken Video for Windows subsystem. They use more space, can cause minor <font SIZE="-1">AV</font> sync issues, require more <font SIZE="-1">CPU</font> power to decode (unless the player has some decoded picture queue to compensate the 2,0,2,0 frame per packet style) and cause trouble if copied into a standard container like mp4 or mpeg-ps/ts, because <font SIZE="-1">MPEG-4</font> decoders may not be able to decode them, since they are not valid <font SIZE="-1">MPEG-4.</font> </p>
@@ -353,10 +330,10 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <p> Damages the contents of packets or simply drops them without damaging the container. Can be used for fuzzing or testing error resilience/concealment. </p>
 <p> Parameters:</p>
 <dl>
-<dt><code>amount</code></p>
-<dd> A numeral string, whose value is related to how often output bytes will be modified. Therefore, values below or equal to 0 are forbidden, and the lower the more frequent bytes will be modified, with 1 meaning every byte is modified.</p>
-<dt><code>dropamount</code></p>
-<dd> A numeral string, whose value is related to how often packets will be dropped. Therefore, values below or equal to 0 are forbidden, and the lower the more frequent packets will be dropped, with 1 meaning every packet is dropped.</dl>
+<dt><code>amount</code></dt>
+<dd> A numeral string, whose value is related to how often output bytes will be modified. Therefore, values below or equal to 0 are forbidden, and the lower the more frequent bytes will be modified, with 1 meaning every byte is modified.</dd>
+<dt><code>dropamount</code></dt>
+<dd> A numeral string, whose value is related to how often packets will be dropped. Therefore, values below or equal to 0 are forbidden, and the lower the more frequent packets will be dropped, with 1 meaning every packet is dropped.</dd></dl>
 <p> The following example applies the modification to every byte but does not drop any packets. </p>
 <pre>
         ffmpeg -i INPUT -c copy -bsf noise[=1] output.mkv
@@ -366,12 +343,12 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>pcm_rechunk</h3>
 <p> Repacketize <font SIZE="-1">PCM</font> audio to a fixed number of samples per packet or a fixed packet rate per second. This is similar to the <code>asetnsamples audio filter</code> but works on audio packets instead of audio frames.</p>
 <dl>
-<dt><code>nb_out_samples, n</code></p>
-<dd> Set the number of samples per each output audio packet. The number is intended as the number of samples <i>per each channel</i>. Default value is 1024.</p>
-<dt><code>pad, p</code></p>
-<dd> If set to 1, the filter will pad the last audio packet with silence, so that it will contain the same number of samples (or roughly the same number of samples, see <code>frame_rate</code>) as the previous ones. Default value is 1.</p>
-<dt><code>frame_rate, r</code></p>
-<dd> This option makes the filter output a fixed number of packets per second instead of a fixed number of samples per packet. If the audio sample rate is not divisible by the frame rate then the number of samples will not be constant but will vary slightly so that each packet will start as close to the frame boundary as possible. Using this option has precedence over <code>nb_out_samples</code>.</dl>
+<dt><code>nb_out_samples, n</code></dt>
+<dd> Set the number of samples per each output audio packet. The number is intended as the number of samples <i>per each channel</i>. Default value is 1024.</dd>
+<dt><code>pad, p</code></dt>
+<dd> If set to 1, the filter will pad the last audio packet with silence, so that it will contain the same number of samples (or roughly the same number of samples, see <code>frame_rate</code>) as the previous ones. Default value is 1.</dd>
+<dt><code>frame_rate, r</code></dt>
+<dd> This option makes the filter output a fixed number of packets per second instead of a fixed number of samples per packet. If the audio sample rate is not divisible by the frame rate then the number of samples will not be constant but will vary slightly so that each packet will start as close to the frame boundary as possible. Using this option has precedence over <code>nb_out_samples</code>.</dd></dl>
 <p> You can generate the well known 1602-1601-1602-1601-1602 pattern of 48kHz audio for <font SIZE="-1">NTSC</font> frame rate using the <code>frame_rate</code> option. </p>
 <pre>
         ffmpeg -f lavfi -i sine=r=48000:d=1 -c pcm_s16le -bsf pcm_rechunk=r=30000/1001 -f framecrc -
@@ -379,72 +356,63 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>prores_metadata</h3>
 <p> Modify color property metadata embedded in prores stream.</p>
 <dl>
-<dt><code>color_primaries</code></p>
-<dd> Set the color primaries. Available values are:</p>
+<dt><code>color_primaries</code></dt>
+<dd> Set the color primaries. Available values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>auto</code></p>
-<dd> Keep the same color primaries property (default).</p>
-<dt><code>unknown</code></p>
+<dt><code>auto</code></dt>
+<dd> Keep the same color primaries property (default).</dd>
+<dt><code>unknown</code></dt>
 <dd>
-<dt><code>bt709</code></p>
+</dd><dt><code>bt709</code></dt>
 <dd>
-<dt><code>bt470bg</code></p>
-<dd> <font SIZE="-1">BT601 625</font></p>
-<dt><code>smpte170m</code></p>
-<dd> <font SIZE="-1">BT601 525</font></p>
-<dt><code>bt2020</code></p>
+</dd><dt><code>bt470bg</code></dt>
+<dd> <font SIZE="-1">BT601 625</font></dd>
+<dt><code>smpte170m</code></dt>
+<dd> <font SIZE="-1">BT601 525</font></dd>
+<dt><code>bt2020</code></dt>
 <dd>
-<dt><code>smpte431</code></p>
-<dd> <font SIZE="-1">DCI P3</font></p>
-<dt><code>smpte432</code></p>
-<dd> P3 D65</dl>
+</dd><dt><code>smpte431</code></dt>
+<dd> <font SIZE="-1">DCI P3</font></dd>
+<dt><code>smpte432</code></dt>
+<dd> P3 D65</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>transfer_characteristics</code></p>
-<dd> Set the color transfer. Available values are:</p>
+</dl>
+<dt><code>transfer_characteristics</code></dt>
+<dd> Set the color transfer. Available values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>auto</code></p>
-<dd> Keep the same transfer characteristics property (default).</p>
-<dt><code>unknown</code></p>
+<dt><code>auto</code></dt>
+<dd> Keep the same transfer characteristics property (default).</dd>
+<dt><code>unknown</code></dt>
 <dd>
-<dt><code>bt709</code></p>
-<dd> <font SIZE="-1">BT 601, BT 709, BT 2020</font></p>
-<dt><code>smpte2084</code></p>
-<dd> <font SIZE="-1">SMPTE ST 2084</font></p>
-<dt><code>arib-std-b67</code></p>
-<dd> <font SIZE="-1">ARIB STD-B67</font></dl>
+</dd><dt><code>bt709</code></dt>
+<dd> <font SIZE="-1">BT 601, BT 709, BT 2020</font></dd>
+<dt><code>smpte2084</code></dt>
+<dd> <font SIZE="-1">SMPTE ST 2084</font></dd>
+<dt><code>arib-std-b67</code></dt>
+<dd> <font SIZE="-1">ARIB STD-B67</font></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>matrix_coefficients</code></p>
-<dd> Set the matrix coefficient. Available values are:</p>
+</dl>
+<dt><code>matrix_coefficients</code></dt>
+<dd> Set the matrix coefficient. Available values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>auto</code></p>
-<dd> Keep the same colorspace property (default).</p>
-<dt><code>unknown</code></p>
+<dt><code>auto</code></dt>
+<dd> Keep the same colorspace property (default).</dd>
+<dt><code>unknown</code></dt>
 <dd>
-<dt><code>bt709</code></p>
+</dd><dt><code>bt709</code></dt>
 <dd>
-<dt><code>smpte170m</code></p>
-<dd> <font SIZE="-1">BT 601</font></p>
-<dt><code>bt2020nc</code></p>
-<dd></dl>
+</dd><dt><code>smpte170m</code></dt>
+<dd> <font SIZE="-1">BT 601</font></dd>
+<dt><code>bt2020nc</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> Set Rec709 colorspace for each frame of the file </p>
 <pre>
@@ -458,61 +426,58 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <p> Remove extradata from packets. </p>
 <p> It accepts the following parameter:</p>
 <dl>
-<dt><code>freq</code></p>
-<dd> Set which frame types to remove extradata from.</p>
+<dt><code>freq</code></dt>
+<dd> Set which frame types to remove extradata from.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>k</code></p>
-<dd> Remove extradata from non-keyframes only.</p>
-<dt><code>keyframe</code></p>
-<dd> Remove extradata from keyframes only.</p>
-<dt><code>e, all</code></p>
-<dd> Remove extradata from all frames.</dl>
+<dt><code>k</code></dt>
+<dd> Remove extradata from non-keyframes only.</dd>
+<dt><code>keyframe</code></dt>
+<dd> Remove extradata from keyframes only.</dd>
+<dt><code>e, all</code></dt>
+<dd> Remove extradata from all frames.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>setts</h3>
 <p> Set <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> in packets. </p>
 <p> It accepts the following parameters:</p>
 <dl>
-<dt><code>ts</code></p>
+<dt><code>ts</code></dt>
 <dd>
-<dt><code>pts</code></p>
+</dd><dt><code>pts</code></dt>
 <dd>
-<dt><code>dts</code></p>
-<dd> Set expressions for <font SIZE="-1">PTS, DTS</font> or both.</dl>
+</dd><dt><code>dts</code></dt>
+<dd> Set expressions for <font SIZE="-1">PTS, DTS</font> or both.</dd></dl>
 <p> The expressions are evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:</p>
 <dl>
-<dt><code>N</code></p>
-<dd> The count of the input packet. Starting from 0.</p>
-<dt><font SIZE="-1"><code>TS</code></font></p>
-<dd> The demux timestamp in input in case of <tt>&quot;ts&quot;</tt> or <tt>&quot;dts&quot;</tt> option or presentation timestamp in case of <tt>&quot;pts&quot;</tt> option.</p>
-<dt><font SIZE="-1"><code>POS</code></font></p>
-<dd> The original position in the file of the packet, or undefined if undefined for the current packet</p>
-<dt><font SIZE="-1"><code>DTS</code></font></p>
-<dd> The demux timestamp in input.</p>
-<dt><font SIZE="-1"><code>PTS</code></font></p>
-<dd> The presentation timestamp in input.</p>
-<dt><font SIZE="-1"><code>STARTDTS</code></font></p>
-<dd> The <font SIZE="-1">DTS</font> of the first packet.</p>
-<dt><font SIZE="-1"><code>STARTPTS</code></font></p>
-<dd> The <font SIZE="-1">PTS</font> of the first packet.</p>
-<dt><font SIZE="-1"><code>PREV_INDTS</code></font></p>
-<dd> The previous input <font SIZE="-1">DTS.</font></p>
-<dt><font SIZE="-1"><code>PREV_INPTS</code></font></p>
-<dd> The previous input <font SIZE="-1">PTS.</font></p>
-<dt><font SIZE="-1"><code>PREV_OUTDTS</code></font></p>
-<dd> The previous output <font SIZE="-1">DTS.</font></p>
-<dt><font SIZE="-1"><code>PREV_OUTPTS</code></font></p>
-<dd> The previous output <font SIZE="-1">PTS.</font></p>
-<dt><font SIZE="-1"><code>TB</code></font></p>
-<dd> The timebase of stream packet belongs.</p>
-<dt><font SIZE="-1"><code>SR</code></font></p>
-<dd> The sample rate of stream packet belongs.</dl>
+<dt><code>N</code></dt>
+<dd> The count of the input packet. Starting from 0.</dd>
+<dt><font SIZE="-1"><code>TS</code></font></dt>
+<dd> The demux timestamp in input in case of <tt>&quot;ts&quot;</tt> or <tt>&quot;dts&quot;</tt> option or presentation timestamp in case of <tt>&quot;pts&quot;</tt> option.</dd>
+<dt><font SIZE="-1"><code>POS</code></font></dt>
+<dd> The original position in the file of the packet, or undefined if undefined for the current packet</dd>
+<dt><font SIZE="-1"><code>DTS</code></font></dt>
+<dd> The demux timestamp in input.</dd>
+<dt><font SIZE="-1"><code>PTS</code></font></dt>
+<dd> The presentation timestamp in input.</dd>
+<dt><font SIZE="-1"><code>STARTDTS</code></font></dt>
+<dd> The <font SIZE="-1">DTS</font> of the first packet.</dd>
+<dt><font SIZE="-1"><code>STARTPTS</code></font></dt>
+<dd> The <font SIZE="-1">PTS</font> of the first packet.</dd>
+<dt><font SIZE="-1"><code>PREV_INDTS</code></font></dt>
+<dd> The previous input <font SIZE="-1">DTS.</font></dd>
+<dt><font SIZE="-1"><code>PREV_INPTS</code></font></dt>
+<dd> The previous input <font SIZE="-1">PTS.</font></dd>
+<dt><font SIZE="-1"><code>PREV_OUTDTS</code></font></dt>
+<dd> The previous output <font SIZE="-1">DTS.</font></dd>
+<dt><font SIZE="-1"><code>PREV_OUTPTS</code></font></dt>
+<dd> The previous output <font SIZE="-1">PTS.</font></dd>
+<dt><font SIZE="-1"><code>TB</code></font></dt>
+<dd> The timebase of stream packet belongs.</dd>
+<dt><font SIZE="-1"><code>SR</code></font></dt>
+<dd> The sample rate of stream packet belongs.</dd></dl>
 <h3>text2movsub</h3>
 <p> Convert text subtitles to <font SIZE="-1">MOV</font> subtitles (as used by the <tt>&quot;mov_text&quot;</tt> codec) with metadata headers. </p>
 <p> See also the <code>mov2textsub</code> filter.</p>
@@ -524,44 +489,38 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>vp9_metadata</h3>
 <p> Modify metadata embedded in a <font SIZE="-1">VP9</font> stream.</p>
 <dl>
-<dt><code>color_space</code></p>
-<dd> Set the color space value in the frame header. Note that any frame set to <font SIZE="-1">RGB</font> will be implicitly set to <font SIZE="-1">PC</font> range and that <font SIZE="-1">RGB</font> is incompatible with profiles 0 and 2.</p>
+<dt><code>color_space</code></dt>
+<dd> Set the color space value in the frame header. Note that any frame set to <font SIZE="-1">RGB</font> will be implicitly set to <font SIZE="-1">PC</font> range and that <font SIZE="-1">RGB</font> is incompatible with profiles 0 and 2.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>unknown</code></p>
+<dt><code>unknown</code></dt>
 <dd>
-<dt><code>bt601</code></p>
+</dd><dt><code>bt601</code></dt>
 <dd>
-<dt><code>bt709</code></p>
+</dd><dt><code>bt709</code></dt>
 <dd>
-<dt><code>smpte170</code></p>
+</dd><dt><code>smpte170</code></dt>
 <dd>
-<dt><code>smpte240</code></p>
+</dd><dt><code>smpte240</code></dt>
 <dd>
-<dt><code>bt2020</code></p>
+</dd><dt><code>bt2020</code></dt>
 <dd>
-<dt><code>rgb</code></p>
-<dd></dl>
+</dd><dt><code>rgb</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>color_range</code></p>
-<dd> Set the color range value in the frame header. Note that any value imposed by the color space will take precedence over this value.</p>
+</dl>
+<dt><code>color_range</code></dt>
+<dd> Set the color range value in the frame header. Note that any value imposed by the color space will take precedence over this value.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>tv</code></p>
+<dt><code>tv</code></dt>
 <dd>
-<dt><code>pc</code></p>
-<dd></dl>
+</dd><dt><code>pc</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>vp9_superframe</h3>
 <p> Merge <font SIZE="-1">VP9</font> invisible (alt-ref) frames back into <font SIZE="-1">VP9</font> superframes. This fixes merging of split/segmented <font SIZE="-1">VP9</font> streams where the alt-ref frame was split from its visible counterpart.</p>

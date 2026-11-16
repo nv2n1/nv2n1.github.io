@@ -15,23 +15,23 @@ gnet_stats_start_copy - start dumping procedure in compatibility mode
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>socket buffer to put statistics TLVs into</dl>
+<dl><dd></dd><dd>socket buffer to put statistics TLVs into</dd></dl>
  
 
  <i>type</i>
-<dl><dd>TLV type for top level statistic TLV</dl>
+<dl><dd>TLV type for top level statistic TLV</dd></dl>
  
 
  <i>lock</i>
-<dl><dd>statistics lock</dl>
+<dl><dd>statistics lock</dd></dl>
  
 
  <i>d</i>
-<dl><dd>dumping handle</dl>
+<dl><dd>dumping handle</dd></dl>
  
 
  <i>padattr</i>
-<dl><dd>padding attribute</dl>
+<dl><dd>padding attribute</dd></dl>
 
 <h2>Description</h2>
 

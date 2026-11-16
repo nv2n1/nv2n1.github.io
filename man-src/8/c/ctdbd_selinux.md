@@ -63,9 +63,9 @@ description: "ctdbd_selinux – Security Enhanced Linux Policy for the ctdbd pro
 <p> Policy governs the access confined processes have to these ports. SELinux ctdbd policy is very flexible allowing users to setup their ctdbd processes in as secure a method as possible. </p>
 <p> The following port types are defined for ctdbd: </p>
 <dl>
-<dt><code>ctdb_port_t</code></p>
+<dt><code>ctdb_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4379 udp 4379</dl>
+</dd><dd>Default Defined Ports: tcp 4379 udp 4379</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ctdbd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cifs_t</code> </p>
@@ -138,16 +138,16 @@ description: "ctdbd_selinux – Security Enhanced Linux Policy for the ctdbd pro
 <p> <code>ctdbd_exec_t</code> </p>
 <p> &#8211; Set files with the ctdbd_exec_t type, if you want to transition an executable to the ctdbd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ctdb/events.d/.*, /usr/sbin/ctdbd, /usr/sbin/ctdbd_wrapper </p>
+<dt>Paths:</dt>
+<dd>/etc/ctdb/events.d/.*, /usr/sbin/ctdbd, /usr/sbin/ctdbd_wrapper </dd>
 </dl>
 <p> <code>ctdbd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ctdbd_initrc_exec_t type, if you want to transition an executable to the ctdbd_initrc_t domain. </p>
 <p> <code>ctdbd_log_t</code> </p>
 <p> &#8211; Set files with the ctdbd_log_t type, if you want to treat the data as ctdbd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/ctdb.log.*, /var/log/log.ctdb.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/ctdb.log.*, /var/log/log.ctdb.* </dd>
 </dl>
 <p> <code>ctdbd_spool_t</code> </p>
 <p> &#8211; Set files with the ctdbd_spool_t type, if you want to store the ctdbd files under the /var/spool directory. </p>
@@ -156,14 +156,14 @@ description: "ctdbd_selinux – Security Enhanced Linux Policy for the ctdbd pro
 <p> <code>ctdbd_var_lib_t</code> </p>
 <p> &#8211; Set files with the ctdbd_var_lib_t type, if you want to store the ctdbd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/ctdb(/.*)?, /var/lib/ctdbd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/ctdb(/.*)?, /var/lib/ctdbd(/.*)? </dd>
 </dl>
 <p> <code>ctdbd_var_run_t</code> </p>
 <p> &#8211; Set files with the ctdbd_var_run_t type, if you want to store the ctdbd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/ctdb(/.*)?, /var/run/ctdbd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/ctdb(/.*)?, /var/run/ctdbd(/.*)? </dd>
 </dl>
 <p> <code>ctdbd_var_t</code> </p>
 <p> &#8211; Set files with the ctdbd_var_t type, if you want to store the c files under the /var directory. </p>

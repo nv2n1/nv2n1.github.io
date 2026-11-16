@@ -22,21 +22,21 @@ description: "scandeps.pl – Scan file prerequisites"
 <p> Finally, modules that has loadable shared object files (usually needing a compiler to install) are marked with <tt>&quot;X&quot;</tt>; with the <tt>&quot;-V&quot;</tt> flag, those files (and all other files found) will be listed before the main output. Additionally, all module files that the scanned code depends on but were not found (and thus not scanned recursively) are listed. These may include genuinely missing modules or false positives. That means, modules your code does not depend on (on this particular platform) but that were picked up by the heuristic anyway.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-e <font SIZE="-1">STRING</font></p>
-<dd>Scan <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a string containing perl code.</p>
-<dt>-c</p>
-<dd>Compiles the code and inspects its <tt>%INC</tt>, in addition to static scanning.</p>
-<dt>-x</p>
-<dd>Executes the code and inspects its <tt>%INC</tt>, in addition to static scanning.</p>
-<dt>-B</p>
-<dd>Include core modules in the output and the recursive search list.</p>
-<dt>-R</p>
-<dd>Only show dependencies found in the files listed and do not recurse.</p>
-<dt>-V</p>
-<dd>Verbose mode: Output all files found during the process; show dependencies between modules and availability. </p>
+<dt>-e <font SIZE="-1">STRING</font></dt>
+<dd>Scan <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a string containing perl code.</dd>
+<dt>-c</dt>
+<dd>Compiles the code and inspects its <tt>%INC</tt>, in addition to static scanning.</dd>
+<dt>-x</dt>
+<dd>Executes the code and inspects its <tt>%INC</tt>, in addition to static scanning.</dd>
+<dt>-B</dt>
+<dd>Include core modules in the output and the recursive search list.</dd>
+<dt>-R</dt>
+<dd>Only show dependencies found in the files listed and do not recurse.</dd>
+<dt>-V</dt>
+<dd>Verbose mode: Output all files found during the process; show dependencies between modules and availability. </dd>
 <p> Additionally, warns of any missing dependencies. If you find missing dependencies that aren&#8217;t really dependencies, you have probably found false positives.</p>
-<dt>-C <font SIZE="-1">CACHEFILE</font></p>
-<dd>Use <font SIZE="-1">CACHEFILE</font> to speed up the scanning process by caching dependencies. Creates <font SIZE="-1">CACHEFILE</font> if it does not exist yet.</dl>
+<dt>-C <font SIZE="-1">CACHEFILE</font></dt>
+<dd>Use <font SIZE="-1">CACHEFILE</font> to speed up the scanning process by caching dependencies. Creates <font SIZE="-1">CACHEFILE</font> if it does not exist yet.</dd></dl>
 <h2>See Also</h2>
 <p>Module::ScanDeps, CPANPLUS::Backend, <font SIZE="-1">PAR</font></p>
 <h2>Acknowledgments</h2>

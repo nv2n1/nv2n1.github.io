@@ -12,18 +12,18 @@ GSWN (Set window) - establishes a window, or rectangular subspace, of world coor
 
  void gset_win(Gint tran_num, const Glimit *win_limits);
 <h2>Description</h2><dl COMPACT><dt>TRNUM
-<dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call GSWN with TRNUM = 0.
-<dt>1
-<dd>A normalization transformation in which the window is defined by XMIN to XMAX and YMIN to YMAX.</dl></dl><dt>XMIN
-<dd>(Real, Input) - The left horizontal coordinate of the window. XMIN &lt; XMAX
-<dt>XMAX
-<dd>(Real, Input) - The right horizontal coordinate of the window.
-<dt>YMIN
-<dd>(Real, Input) - The bottom vertical coordinate of the window. YMIN &lt; YMAX
-<dt>YMAX
-<dd>(Real, Input) - The top vertical coordinate of the window.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call GSWN with TRNUM = 0.
+</dd><dt>1
+</dt><dd>A normalization transformation in which the window is defined by XMIN to XMAX and YMIN to YMAX.</dd></dl></dl><dt>XMIN
+</dt><dd>(Real, Input) - The left horizontal coordinate of the window. XMIN &lt; XMAX
+</dd><dt>XMAX
+</dt><dd>(Real, Input) - The right horizontal coordinate of the window.
+</dd><dt>YMIN
+</dt><dd>(Real, Input) - The bottom vertical coordinate of the window. YMIN &lt; YMAX
+</dd><dt>YMAX
+</dt><dd>(Real, Input) - The top vertical coordinate of the window.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: set, gsvp, gselnt, gqclip, gset_win 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version; User's Guide for NCAR GKS-0A Graphics

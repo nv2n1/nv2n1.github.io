@@ -14,20 +14,20 @@ description: "trace_irq_handler_exit – called immediately after the irq action
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>irq number</dl>
+</dd><dd>irq number</dd></dl>
 <p> <i>action</i></p>
 <dl>
-<dd>pointer to struct irqaction</dl>
+<dd>pointer to struct irqaction</dd></dl>
 <p> <i>ret</i></p>
 <dl>
-<dd>return value</dl>
+<dd>return value</dd></dl>
 <h2>Description</h2>
 <p>If the <i>ret</i> value is set to IRQ_HANDLED, then we know that the corresponding <i>action</i>-&gt;handler successfully handled this irq. Otherwise, the irq might be a shared irq line, or the irq was not handled successfully. Can be used in conjunction with the irq_handler_entry to understand irq handler latencies.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

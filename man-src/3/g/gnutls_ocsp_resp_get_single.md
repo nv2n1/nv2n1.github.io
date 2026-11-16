@@ -14,28 +14,28 @@ description: "gnutls_ocsp_resp_get_single – API function"
 <p> <code>int gnutls_ocsp_resp_get_single(gnutls_ocsp_resp_t </code><i>resp</i><code>, unsigned </code><i>indx</i><code>, gnutls_digest_algorithm_t * </code><i>digest</i><code>, gnutls_datum_t * </code><i>issuer_name_hash</i><code>, gnutls_datum_t * </code><i>issuer_key_hash</i><code>, gnutls_datum_t * </code><i>serial_number</i><code>, unsigned int * </code><i>cert_status</i><code>, time_t * </code><i>this_update</i><code>, time_t * </code><i>next_update</i><code>, time_t * </code><i>revocation_time</i><code>, unsigned int * </code><i>revocation_reason</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ocsp_resp_t resp</p>
-<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</p>
-<dt>unsigned indx</p>
-<dd> Specifies response number to get. Use (0) to get the first one.</p>
-<dt>gnutls_digest_algorithm_t * digest</p>
-<dd> output variable with <code>gnutls_digest_algorithm_t</code> hash algorithm</p>
-<dt>gnutls_datum_t * issuer_name_hash</p>
-<dd> output buffer with hash of issuer&#8217;s DN</p>
-<dt>gnutls_datum_t * issuer_key_hash</p>
-<dd> output buffer with hash of issuer&#8217;s public key</p>
-<dt>gnutls_datum_t * serial_number</p>
-<dd> output buffer with serial number of certificate to check</p>
-<dt>unsigned int * cert_status</p>
-<dd> a certificate status, a <code>gnutls_ocsp_cert_status_t</code> enum.</p>
-<dt>time_t * this_update</p>
-<dd> time at which the status is known to be correct.</p>
-<dt>time_t * next_update</p>
-<dd> when newer information will be available, or (time_t)-1 if unspecified</p>
-<dt>time_t * revocation_time</p>
-<dd> when <i>cert_status</i> is <code>GNUTLS_OCSP_CERT_REVOKED</code>, holds time of revocation.</p>
-<dt>unsigned int * revocation_reason</p>
-<dd> revocation reason, a <code>gnutls_x509_crl_reason_t</code> enum.</dl>
+<dt>gnutls_ocsp_resp_t resp</dt>
+<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd>
+<dt>unsigned indx</dt>
+<dd> Specifies response number to get. Use (0) to get the first one.</dd>
+<dt>gnutls_digest_algorithm_t * digest</dt>
+<dd> output variable with <code>gnutls_digest_algorithm_t</code> hash algorithm</dd>
+<dt>gnutls_datum_t * issuer_name_hash</dt>
+<dd> output buffer with hash of issuer&#8217;s DN</dd>
+<dt>gnutls_datum_t * issuer_key_hash</dt>
+<dd> output buffer with hash of issuer&#8217;s public key</dd>
+<dt>gnutls_datum_t * serial_number</dt>
+<dd> output buffer with serial number of certificate to check</dd>
+<dt>unsigned int * cert_status</dt>
+<dd> a certificate status, a <code>gnutls_ocsp_cert_status_t</code> enum.</dd>
+<dt>time_t * this_update</dt>
+<dd> time at which the status is known to be correct.</dd>
+<dt>time_t * next_update</dt>
+<dd> when newer information will be available, or (time_t)-1 if unspecified</dd>
+<dt>time_t * revocation_time</dt>
+<dd> when <i>cert_status</i> is <code>GNUTLS_OCSP_CERT_REVOKED</code>, holds time of revocation.</dd>
+<dt>unsigned int * revocation_reason</dt>
+<dd> revocation reason, a <code>gnutls_x509_crl_reason_t</code> enum.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the certificate information of the<br />
 &nbsp;<wbr><i>indx</i>&nbsp;<wbr>&#8216;ed response in the Basic OCSP Response&nbsp;<wbr>&nbsp;<wbr><i>resp</i>&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>The information returned corresponds to the OCSP SingleResponse structure except the final singleExtensions. </p>
@@ -51,6 +51,6 @@ description: "gnutls_ocsp_resp_get_single – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

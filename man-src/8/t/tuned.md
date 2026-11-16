@@ -14,24 +14,24 @@ description: "tuned – dynamic adaptive system tuning daemon"
 <p><code>tuned</code> is a dynamic adaptive system tuning daemon that tunes system settings dynamically depending on usage. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i> CONFFILE</i>, <i></i><code>&#8211;conffile=</code><i>CONFFILE</i></p>
-<dd>Specify the name and path of the configuration file. By default the <code>/etc/tuned.conf</code> is used.</p>
-<dt><code>-d</code><i></i>, <code>&#8211;daemon</code></p>
-<dd>This options starts <code>tuned</code> as a daemon as opposed to in the foreground without forking at startup.</p>
-<dt><code>-D</code><i></i>, <code>&#8211;debug</code></p>
-<dd>Sets the highest logging level. This could be very useful when having trouble with <code>tuned</code>.</p>
-<dt><code>-h</code><i></i>, <code>&#8211;help</code></p>
-<dd>Show this help.</p>
-<dt><code>-l</code><i> </i>[<i>LOG</i>], <code>&#8211;log</code><i></i>[<code>=</code><i>LOG</i>]</p>
-<dd>Log to the file <i>LOG</i>. If no <i>LOG</i> file is specified <code>/var/log/tuned/tuned.log</code> is used.</p>
-<dt><code>&#8211;no-dbus</code></p>
-<dd>Do not attach to DBus.</p>
-<dt><code>-P</code><i> </i>[<i>PID</i>], <code>&#8211;pid</code><i></i>[<code>=</code><i>PID</i>]</p>
-<dd>Write process ID to the <code>PID</code> file. If no <i>PID</i> file is specified <code>/run/tuned/tuned.pid</code> is used.</p>
-<dt><code>-p</code><i></i> <i>PROFILE</i><i></i>, <code>&#8211;profile</code><i></i> <i>PROFILE</i></p>
-<dd>Tunning profile to be activated. It will override other settings (e.g. from <code>tuned-adm</code>). This is intended for debugging purposes.</p>
-<dt><code>-v</code><i></i>, <code>&#8211;version</code></p>
-<dd>Show version information.</dl>
+<dt><code>-c</code><i> CONFFILE</i>, <i></i><code>&#8211;conffile=</code><i>CONFFILE</i></dt>
+<dd>Specify the name and path of the configuration file. By default the <code>/etc/tuned.conf</code> is used.</dd>
+<dt><code>-d</code><i></i>, <code>&#8211;daemon</code></dt>
+<dd>This options starts <code>tuned</code> as a daemon as opposed to in the foreground without forking at startup.</dd>
+<dt><code>-D</code><i></i>, <code>&#8211;debug</code></dt>
+<dd>Sets the highest logging level. This could be very useful when having trouble with <code>tuned</code>.</dd>
+<dt><code>-h</code><i></i>, <code>&#8211;help</code></dt>
+<dd>Show this help.</dd>
+<dt><code>-l</code><i> </i>[<i>LOG</i>], <code>&#8211;log</code><i></i>[<code>=</code><i>LOG</i>]</dt>
+<dd>Log to the file <i>LOG</i>. If no <i>LOG</i> file is specified <code>/var/log/tuned/tuned.log</code> is used.</dd>
+<dt><code>&#8211;no-dbus</code></dt>
+<dd>Do not attach to DBus.</dd>
+<dt><code>-P</code><i> </i>[<i>PID</i>], <code>&#8211;pid</code><i></i>[<code>=</code><i>PID</i>]</dt>
+<dd>Write process ID to the <code>PID</code> file. If no <i>PID</i> file is specified <code>/run/tuned/tuned.pid</code> is used.</dd>
+<dt><code>-p</code><i></i> <i>PROFILE</i><i></i>, <code>&#8211;profile</code><i></i> <i>PROFILE</i></dt>
+<dd>Tunning profile to be activated. It will override other settings (e.g. from <code>tuned-adm</code>). This is intended for debugging purposes.</dd>
+<dt><code>-v</code><i></i>, <code>&#8211;version</code></dt>
+<dd>Show version information.</dd></dl>
 <h2>Files</h2>
 <p>/etc/tuned /usr/share/doc/tuned/README</p>
 <h2>See Also</h2>

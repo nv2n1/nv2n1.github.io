@@ -10,9 +10,6 @@ description: "QuantLib::EnergyVanillaSwap – Vanilla energy swap."
 <p>QuantLib::EnergyVanillaSwap &#8211; Vanilla energy swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits QuantLib::EnergySwap.</p>
 <h3>Public Member Functions</h3>
@@ -25,9 +22,6 @@ Protected Attributes</code></pre>
 <p> const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; &amp; <code>index</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Integer</code> <code>payReceive_</code> </p>
 <p> <code>Money</code> <code>fixedPrice_</code> </p>

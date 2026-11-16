@@ -10,7 +10,6 @@ description: "nerr_ignore"
 <p>nerr_ignore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/neo_err.h&gt;
-
 void nerr_ignore(NEOERR **err);
 </code></pre>
 <h2>Description</h2>

@@ -13,16 +13,16 @@ description: "vpSetClientData – define a client data pointer"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpSetClientData(</code><i>vpc, client_data</i><code>)</code></p>
+<dt> <code>vpSetClientData(</code><i>vpc, client_data</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>void *<i>client_data;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>void *<i>client_data;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>client_data</i></p>
-<dd>Pointer to application-specific client data.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>client_data</i></dt>
+<dd>Pointer to application-specific client data.</dd></dl>
 <h2>Description</h2>
 <p><code>vpSetClientData</code> is used to store a pointer to application-specific client data in the VolPack context. This pointer is passed to some of the callback routines (see <a href="/docs/linux/man/3-vpsetcallback/">vpSetCallback</a>(3)) to allow the application to define its own state variables. The pointer is not used by VolPack.</p>
 <h2>Errors</h2>

@@ -122,42 +122,42 @@ Tcl_WideUInt
 <b>Tcl_GetSizeFromStat</b>(<i>statPtr</i>)
 int
 <b>Tcl_GetUserIdFromStat</b>(<i>statPtr</i>)</pre><h2>Arguments</h2><dl COMPACT><dd>const Tcl_Filesystem <i>*fsPtr</i> (in) Points to a structure containing the addresses of procedures that can be called to perform the various filesystem operations.
-<dd>Tcl_Obj <i>*pathPtr</i> (in) The path represented by this value is used for the operation in question. If the value does not already have an internal <b>path</b> representation, it will be converted to have one.
-<dd>Tcl_Obj <i>*srcPathPtr</i> (in) As for <i>pathPtr</i>, but used for the source file for a copy or rename operation.
-<dd>Tcl_Obj <i>*destPathPtr</i> (in) As for <i>pathPtr</i>, but used for the destination filename for a copy or rename operation.
-<dd>const char <i>*encodingName</i> (in) The encoding of the data stored in the file identified by <i>pathPtr</i> and to be evaluated.
-<dd>const char <i>*pattern</i> (in) Only files or directories matching this pattern will be returned.
-<dd>Tcl_GlobTypeData <i>*types</i> (in) Only files or directories matching the type descriptions contained in this structure will be returned. This parameter may be NULL.
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use either for results, evaluation, or reporting error messages.
-<dd>ClientData <i>clientData</i> (in) The native description of the path value to create.
-<dd>Tcl_Obj <i>*firstPtr</i> (in) The first of two path values to compare. The value may be converted to <b>path</b> type.
-<dd>Tcl_Obj <i>*secondPtr</i> (in) The second of two path values to compare. The value may be converted to <b>path</b> type.
-<dd>Tcl_Obj <i>*listObj</i> (in) The list of path elements to operate on with a <b>join</b> operation.
-<dd>int <i>elements</i> (in) If non-negative, the number of elements in the <i>listObj</i> which should be joined together. If negative, then all elements are joined.
-<dd>Tcl_Obj <i>**errorPtr</i> (out) In the case of an error, filled with a value containing the name of the file which caused an error in the various copy/rename operations.
-<dd>Tcl_Obj <i>**objPtrRef</i> (out) Filled with a value containing the result of the operation.
-<dd>Tcl_Obj <i>*resultPtr</i> (out) Pre-allocated value in which to store (using <b>Tcl_ListObjAppendElement</b>) the list of files or directories which are successfully matched.
-<dd>int <i>mode</i> (in) Mask consisting of one or more of R_OK, W_OK, X_OK and F_OK. R_OK, W_OK and X_OK request checking whether the file exists and has read, write and execute permissions, respectively. F_OK just requests checking for the existence of the file.
-<dd>Tcl_StatBuf <i>*statPtr</i> (out) The structure that contains the result of a stat or lstat operation.
-<dd>const char <i>*sym1</i> (in) Name of a procedure to look up in the file's symbol table
-<dd>const char <i>*sym2</i> (in) Name of a procedure to look up in the file's symbol table
-<dd>Tcl_PackageInitProc <i>**proc1Ptr</i> (out) Filled with the init function for this code.
-<dd>Tcl_PackageInitProc <i>**proc2Ptr</i> (out) Filled with the safe-init function for this code.
-<dd>ClientData <i>*clientDataPtr</i> (out) Filled with the clientData value to pass to this code's unload function when it is called.
-<dd>Tcl_LoadHandle <i>*loadHandlePtr</i> (out) Filled with an abstract token representing the loaded file.
-<dd>Tcl_FSUnloadFileProc <i>**unloadProcPtr</i> (out) Filled with the function to use to unload this piece of code.
-<dd>Tcl_LoadHandle <i>loadHandle</i> (in) Handle to the loaded library to be unloaded.
-<dd>utimbuf <i>*tval</i> (in) The access and modification times in this structure are read and used to set those values for a given file.
-<dd>const char <i>*modeString</i> (in) Specifies how the file is to be accessed. May have any of the values allowed for the <i>mode</i> argument to the Tcl <b>open</b> command.
-<dd>int <i>permissions</i> (in) POSIX-style permission flags such as 0644. If a new file is created, these permissions will be set on the created file.
-<dd>int <i>*lenPtr</i> (out) If non-NULL, filled with the number of elements in the split path.
-<dd>Tcl_Obj <i>*basePtr</i> (in) The base path on to which to join the given elements. May be NULL.
-<dd>int <i>objc</i> (in) The number of elements in <i>objv</i>.
-<dd>Tcl_Obj *const <i>objv[]</i> (in) The elements to join to the given base path.
-<dd>Tcl_Obj <i>*linkNamePtr</i> (in) The name of the link to be created or read.
-<dd>Tcl_Obj <i>*toPtr</i> (in) What the link called <i>linkNamePtr</i> should be linked to, or NULL if the symbolic link specified by <i>linkNamePtr</i> is to be read.
-<dd>int <i>linkAction</i> (in) OR-ed combination of flags indicating what kind of link should be created (will be ignored if <i>toPtr</i> is NULL). Valid bits to set are <b>TCL_CREATE_SYMBOLIC_LINK</b> and <b>TCL_CREATE_HARD_LINK</b>. When both flags are set and the underlying filesystem can do either, symbolic links are preferred. 
-</dl><h2>Description</h2>There are several reasons for calling the <b>Tcl_FS</b> API functions (e.g.&nbsp;<wbr><b>Tcl_FSAccess</b> and <b>Tcl_FSStat</b>) rather than calling system level functions like <b>access</b> and <b>stat</b> directly. First, they will work cross-platform, so an extension which calls them should work unmodified on Unix and Windows. Second, the Windows implementation of some of these functions fixes some bugs in the system level calls. Third, these function calls deal with any ``Utf to platform-native'' path conversions which may be required (and may cache the results of such conversions for greater efficiency on subsequent calls). Fourth, and perhaps most importantly, all of these functions are ``virtual filesystem aware''. Any virtual filesystem (VFS for short) which has been registered (through <b>Tcl_FSRegister</b>) may reroute file access to alternative media or access methods. This means that all of these functions (and therefore the corresponding <b>file</b>, <b>glob</b>, <b>pwd</b>, <b>cd</b>, <b>open</b>, etc. Tcl commands) may be operate on ``files'' which are not native files in the native filesystem. This also means that any Tcl extension which accesses the filesystem (FS for short) through this API is automatically ``virtual filesystem aware''. Of course, if an extension accesses the native filesystem directly (through platform-specific APIs, for example), then Tcl cannot intercept such calls. 
+</dd><dd>Tcl_Obj <i>*pathPtr</i> (in) The path represented by this value is used for the operation in question. If the value does not already have an internal <b>path</b> representation, it will be converted to have one.
+</dd><dd>Tcl_Obj <i>*srcPathPtr</i> (in) As for <i>pathPtr</i>, but used for the source file for a copy or rename operation.
+</dd><dd>Tcl_Obj <i>*destPathPtr</i> (in) As for <i>pathPtr</i>, but used for the destination filename for a copy or rename operation.
+</dd><dd>const char <i>*encodingName</i> (in) The encoding of the data stored in the file identified by <i>pathPtr</i> and to be evaluated.
+</dd><dd>const char <i>*pattern</i> (in) Only files or directories matching this pattern will be returned.
+</dd><dd>Tcl_GlobTypeData <i>*types</i> (in) Only files or directories matching the type descriptions contained in this structure will be returned. This parameter may be NULL.
+</dd><dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use either for results, evaluation, or reporting error messages.
+</dd><dd>ClientData <i>clientData</i> (in) The native description of the path value to create.
+</dd><dd>Tcl_Obj <i>*firstPtr</i> (in) The first of two path values to compare. The value may be converted to <b>path</b> type.
+</dd><dd>Tcl_Obj <i>*secondPtr</i> (in) The second of two path values to compare. The value may be converted to <b>path</b> type.
+</dd><dd>Tcl_Obj <i>*listObj</i> (in) The list of path elements to operate on with a <b>join</b> operation.
+</dd><dd>int <i>elements</i> (in) If non-negative, the number of elements in the <i>listObj</i> which should be joined together. If negative, then all elements are joined.
+</dd><dd>Tcl_Obj <i>**errorPtr</i> (out) In the case of an error, filled with a value containing the name of the file which caused an error in the various copy/rename operations.
+</dd><dd>Tcl_Obj <i>**objPtrRef</i> (out) Filled with a value containing the result of the operation.
+</dd><dd>Tcl_Obj <i>*resultPtr</i> (out) Pre-allocated value in which to store (using <b>Tcl_ListObjAppendElement</b>) the list of files or directories which are successfully matched.
+</dd><dd>int <i>mode</i> (in) Mask consisting of one or more of R_OK, W_OK, X_OK and F_OK. R_OK, W_OK and X_OK request checking whether the file exists and has read, write and execute permissions, respectively. F_OK just requests checking for the existence of the file.
+</dd><dd>Tcl_StatBuf <i>*statPtr</i> (out) The structure that contains the result of a stat or lstat operation.
+</dd><dd>const char <i>*sym1</i> (in) Name of a procedure to look up in the file's symbol table
+</dd><dd>const char <i>*sym2</i> (in) Name of a procedure to look up in the file's symbol table
+</dd><dd>Tcl_PackageInitProc <i>**proc1Ptr</i> (out) Filled with the init function for this code.
+</dd><dd>Tcl_PackageInitProc <i>**proc2Ptr</i> (out) Filled with the safe-init function for this code.
+</dd><dd>ClientData <i>*clientDataPtr</i> (out) Filled with the clientData value to pass to this code's unload function when it is called.
+</dd><dd>Tcl_LoadHandle <i>*loadHandlePtr</i> (out) Filled with an abstract token representing the loaded file.
+</dd><dd>Tcl_FSUnloadFileProc <i>**unloadProcPtr</i> (out) Filled with the function to use to unload this piece of code.
+</dd><dd>Tcl_LoadHandle <i>loadHandle</i> (in) Handle to the loaded library to be unloaded.
+</dd><dd>utimbuf <i>*tval</i> (in) The access and modification times in this structure are read and used to set those values for a given file.
+</dd><dd>const char <i>*modeString</i> (in) Specifies how the file is to be accessed. May have any of the values allowed for the <i>mode</i> argument to the Tcl <b>open</b> command.
+</dd><dd>int <i>permissions</i> (in) POSIX-style permission flags such as 0644. If a new file is created, these permissions will be set on the created file.
+</dd><dd>int <i>*lenPtr</i> (out) If non-NULL, filled with the number of elements in the split path.
+</dd><dd>Tcl_Obj <i>*basePtr</i> (in) The base path on to which to join the given elements. May be NULL.
+</dd><dd>int <i>objc</i> (in) The number of elements in <i>objv</i>.
+</dd><dd>Tcl_Obj *const <i>objv[]</i> (in) The elements to join to the given base path.
+</dd><dd>Tcl_Obj <i>*linkNamePtr</i> (in) The name of the link to be created or read.
+</dd><dd>Tcl_Obj <i>*toPtr</i> (in) What the link called <i>linkNamePtr</i> should be linked to, or NULL if the symbolic link specified by <i>linkNamePtr</i> is to be read.
+</dd><dd>int <i>linkAction</i> (in) OR-ed combination of flags indicating what kind of link should be created (will be ignored if <i>toPtr</i> is NULL). Valid bits to set are <b>TCL_CREATE_SYMBOLIC_LINK</b> and <b>TCL_CREATE_HARD_LINK</b>. When both flags are set and the underlying filesystem can do either, symbolic links are preferred. 
+</dd></dl><h2>Description</h2>There are several reasons for calling the <b>Tcl_FS</b> API functions (e.g.&nbsp;<wbr><b>Tcl_FSAccess</b> and <b>Tcl_FSStat</b>) rather than calling system level functions like <b>access</b> and <b>stat</b> directly. First, they will work cross-platform, so an extension which calls them should work unmodified on Unix and Windows. Second, the Windows implementation of some of these functions fixes some bugs in the system level calls. Third, these function calls deal with any ``Utf to platform-native'' path conversions which may be required (and may cache the results of such conversions for greater efficiency on subsequent calls). Fourth, and perhaps most importantly, all of these functions are ``virtual filesystem aware''. Any virtual filesystem (VFS for short) which has been registered (through <b>Tcl_FSRegister</b>) may reroute file access to alternative media or access methods. This means that all of these functions (and therefore the corresponding <b>file</b>, <b>glob</b>, <b>pwd</b>, <b>cd</b>, <b>open</b>, etc. Tcl commands) may be operate on ``files'' which are not native files in the native filesystem. This also means that any Tcl extension which accesses the filesystem (FS for short) through this API is automatically ``virtual filesystem aware''. Of course, if an extension accesses the native filesystem directly (through platform-specific APIs, for example), then Tcl cannot intercept such calls. 
 
  If appropriate VFSes have been registered, the ``files'' may, to give two examples, be remote (e.g. situated on a remote ftp server) or archived (e.g. lying inside a .zip archive). Such registered filesystems provide a lookup table of functions to implement all or some of the functionality listed here. Finally, the <b>Tcl_FSStat</b> and <b>Tcl_FSLstat</b> calls abstract away from what the ``struct stat'' buffer is actually declared to be, allowing the same code to be used both on systems with and systems without support for files larger than 2GB in size. 
 
@@ -165,7 +165,7 @@ int
 
 <dl COMPACT><dd><pre>Tcl_Obj *path = Tcl_NewStringObj(...);
 Tcl_FS<i>Whatever</i>(path);
-Tcl_DecrRefCount(path);</pre></dl>
+Tcl_DecrRefCount(path);</pre></dd></dl>
  
 
  is wrong, and may cause memory errors. The <i>path</i> must have its reference count incremented before passing it in, or decrementing it. For this reason, values with a reference count of zero are considered not to be valid filesystem paths and calling any Tcl_FS API function with such a value will result in no action being taken.
@@ -314,7 +314,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  <b>Tcl_GetChangeTimeFromStat</b> st_ctime
  <b>Tcl_GetSizeFromStat</b> st_size
  <b>Tcl_GetBlocksFromStat</b> st_blocks
- <b>Tcl_GetBlockSizeFromStat</b> st_blksize</pre></dl><h2>The Virtual Filesystem Api</h2>A filesystem provides a <b>Tcl_Filesystem</b> structure that contains pointers to functions that implement the various operations on a filesystem; these operations are invoked as needed by the generic layer, which generally occurs through the functions listed above. 
+ <b>Tcl_GetBlockSizeFromStat</b> st_blksize</pre></dd></dl><h2>The Virtual Filesystem Api</h2>A filesystem provides a <b>Tcl_Filesystem</b> structure that contains pointers to functions that implement the various operations on a filesystem; these operations are invoked as needed by the generic layer, which generally occurs through the functions listed above. 
 
  The <b>Tcl_Filesystem</b> structures are manipulated using the following methods. 
 
@@ -359,7 +359,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_FSLoadFileProc *<i>loadFileProc</i>;
  Tcl_FSGetCwdProc *<i>getCwdProc</i>;
  Tcl_FSChdirProc *<i>chdirProc</i>;
-} <b>Tcl_Filesystem</b>;</pre></dl>
+} <b>Tcl_Filesystem</b>;</pre></dd></dl>
  
 
  Except for the first three fields in this structure which contain simple data elements, all entries contain addresses of functions called by the generic filesystem layer to perform the complete range of filesystem related actions. 
@@ -417,7 +417,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  * internal value is suitable */
  NULL,
  NULL
-};</pre></dl><h2>Filesystem Infrastructure</h2>These fields contain basic information about the filesystem structure and addresses of functions which are used to associate a particular filesystem with a file path, and deal with the internal handling of path representations, for example copying and freeing such representations.
+};</pre></dd></dl><h2>Filesystem Infrastructure</h2>These fields contain basic information about the filesystem structure and addresses of functions which are used to associate a particular filesystem with a file path, and deal with the internal handling of path representations, for example copying and freeing such representations.
 <h3>Typename</h3>The <i>typeName</i> field contains a null-terminated string that identifies the type of the filesystem implemented, e.g. ``native'', ``zip'' or ``vfs''.
 <h3>Structure Length</h3>The <i>structureLength</i> field is generally implemented as <i>sizeof(Tcl_Filesystem)</i>, and is there to allow easier binary backwards compatibility if the size of the structure changes in a future Tcl release.
 <h3>Version</h3>The <i>version</i> field should be set to <b>TCL_FILESYSTEM_VERSION_1</b>.
@@ -425,35 +425,35 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSPathInFilesystemProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- ClientData *<i>clientDataPtr</i>);</pre></dl><h3>Dupinternalrepproc</h3>This function makes a copy of a path's internal representation, and is called when Tcl needs to duplicate a path value. If NULL, Tcl will simply not copy the internal representation, which may then need to be regenerated later. 
+ ClientData *<i>clientDataPtr</i>);</pre></dd></dl><h3>Dupinternalrepproc</h3>This function makes a copy of a path's internal representation, and is called when Tcl needs to duplicate a path value. If NULL, Tcl will simply not copy the internal representation, which may then need to be regenerated later. 
 
 <dl COMPACT><dd><pre>typedef ClientData <b>Tcl_FSDupInternalRepProc</b>(
- ClientData <i>clientData</i>);</pre></dl><h3>Freeinternalrepproc</h3>Free the internal representation. This must be implemented if internal representations need freeing (i.e. if some memory is allocated when an internal representation is generated), but may otherwise be NULL. 
+ ClientData <i>clientData</i>);</pre></dd></dl><h3>Freeinternalrepproc</h3>Free the internal representation. This must be implemented if internal representations need freeing (i.e. if some memory is allocated when an internal representation is generated), but may otherwise be NULL. 
 
 <dl COMPACT><dd><pre>typedef void <b>Tcl_FSFreeInternalRepProc</b>(
- ClientData <i>clientData</i>);</pre></dl><h3>Internaltonormalizedproc</h3>Function to convert internal representation to a normalized path. Only required if the filesystem creates pure path values with no string/path representation. The return value is a Tcl value whose string representation is the normalized path. 
+ ClientData <i>clientData</i>);</pre></dd></dl><h3>Internaltonormalizedproc</h3>Function to convert internal representation to a normalized path. Only required if the filesystem creates pure path values with no string/path representation. The return value is a Tcl value whose string representation is the normalized path. 
 
 <dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSInternalToNormalizedProc</b>(
- ClientData <i>clientData</i>);</pre></dl><h3>Createinternalrepproc</h3>Function to take a path value, and calculate an internal representation for it, and store that native representation in the value. May be NULL if paths have no internal representation, or if the <i>Tcl_FSPathInFilesystemProc</i> for this filesystem always immediately creates an internal representation for paths it accepts. 
+ ClientData <i>clientData</i>);</pre></dd></dl><h3>Createinternalrepproc</h3>Function to take a path value, and calculate an internal representation for it, and store that native representation in the value. May be NULL if paths have no internal representation, or if the <i>Tcl_FSPathInFilesystemProc</i> for this filesystem always immediately creates an internal representation for paths it accepts. 
 
 <dl COMPACT><dd><pre>typedef ClientData <b>Tcl_FSCreateInternalRepProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl><h3>Normalizepathproc</h3>Function to normalize a path. Should be implemented for all filesystems which can have multiple string representations for the same path value. In Tcl, every ``path'' must have a single unique ``normalized'' string representation. Depending on the filesystem, there may be more than one unnormalized string representation which refers to that path (e.g. a relative path, a path with different character case if the filesystem is case insensitive, a path contain a reference to a home directory such as ``~'', a path containing symbolic links, etc). If the very last component in the path is a symbolic link, it should not be converted into the value it points to (but its case or other aspects should be made unique). All other path components should be converted from symbolic links. This one exception is required to agree with Tcl's semantics with <b>file delete</b>, <b>file rename</b>, <b>file copy</b> operating on symbolic links. This function may be called with <i>nextCheckpoint</i> either at the beginning of the path (i.e. zero), at the end of the path, or at any intermediate file separator in the path. It will never point to any other arbitrary position in the path. In the last of the three valid cases, the implementation can assume that the path up to and including the file separator is known and normalized. 
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl><h3>Normalizepathproc</h3>Function to normalize a path. Should be implemented for all filesystems which can have multiple string representations for the same path value. In Tcl, every ``path'' must have a single unique ``normalized'' string representation. Depending on the filesystem, there may be more than one unnormalized string representation which refers to that path (e.g. a relative path, a path with different character case if the filesystem is case insensitive, a path contain a reference to a home directory such as ``~'', a path containing symbolic links, etc). If the very last component in the path is a symbolic link, it should not be converted into the value it points to (but its case or other aspects should be made unique). All other path components should be converted from symbolic links. This one exception is required to agree with Tcl's semantics with <b>file delete</b>, <b>file rename</b>, <b>file copy</b> operating on symbolic links. This function may be called with <i>nextCheckpoint</i> either at the beginning of the path (i.e. zero), at the end of the path, or at any intermediate file separator in the path. It will never point to any other arbitrary position in the path. In the last of the three valid cases, the implementation can assume that the path up to and including the file separator is known and normalized. 
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSNormalizePathProc</b>(
  Tcl_Interp *<i>interp</i>,
  Tcl_Obj *<i>pathPtr</i>,
- int <i>nextCheckpoint</i>);</pre></dl><h2>Filesystem Operations</h2>The fields in this section of the structure contain addresses of functions which are called to carry out the basic filesystem operations. A filesystem which expects to be used with the complete standard Tcl command set must implement all of these. If some of them are not implemented, then certain Tcl commands may fail when operating on paths within that filesystem. However, in some instances this may be desirable (for example, a read-only filesystem should not implement the last four functions, and a filesystem which does not support symbolic links need not implement the <b>readlink</b> function, etc. The Tcl core expects filesystems to behave in this way).
+ int <i>nextCheckpoint</i>);</pre></dd></dl><h2>Filesystem Operations</h2>The fields in this section of the structure contain addresses of functions which are called to carry out the basic filesystem operations. A filesystem which expects to be used with the complete standard Tcl command set must implement all of these. If some of them are not implemented, then certain Tcl commands may fail when operating on paths within that filesystem. However, in some instances this may be desirable (for example, a read-only filesystem should not implement the last four functions, and a filesystem which does not support symbolic links need not implement the <b>readlink</b> function, etc. The Tcl core expects filesystems to behave in this way).
 <h3>Filesystempathtypeproc</h3>Function to determine the type of a path in this filesystem. May be NULL, in which case no type information will be available to users of the filesystem. The ``type'' is used only for informational purposes, and should be returned as the string representation of the Tcl_Obj which is returned. A typical return value might be ``networked'', ``zip'' or ``ftp''. The Tcl_Obj result is owned by the filesystem and so Tcl will increment the reference count of that value if it wishes to retain a reference to it. 
 
 <dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSFilesystemPathTypeProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl><h3>Filesystemseparatorproc</h3>Function to return the separator character(s) for this filesystem. This need only be implemented if the filesystem wishes to use a different separator than the standard string ``/''. Amongst other uses, it is returned by the <b>file separator</b> command. The return value should be a value with reference count of zero. 
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl><h3>Filesystemseparatorproc</h3>Function to return the separator character(s) for this filesystem. This need only be implemented if the filesystem wishes to use a different separator than the standard string ``/''. Amongst other uses, it is returned by the <b>file separator</b> command. The return value should be a value with reference count of zero. 
 
 <dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSFilesystemSeparatorProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl><h3>Statproc</h3>Function to process a <b>Tcl_FSStat</b> call. Must be implemented for any reasonable filesystem, since many Tcl level commands depend crucially upon it (e.g.&nbsp;<wbr><b>file atime</b>, <b>file isdirectory</b>, <b>file size</b>, <b>glob</b>). 
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl><h3>Statproc</h3>Function to process a <b>Tcl_FSStat</b> call. Must be implemented for any reasonable filesystem, since many Tcl level commands depend crucially upon it (e.g.&nbsp;<wbr><b>file atime</b>, <b>file isdirectory</b>, <b>file size</b>, <b>glob</b>). 
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSStatProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- Tcl_StatBuf *<i>statPtr</i>);</pre></dl>
+ Tcl_StatBuf *<i>statPtr</i>);</pre></dd></dl>
  
 
  The <b>Tcl_FSStatProc</b> fills the stat structure <i>statPtr</i> with information about the specified file. You do not need any access rights to the file to get this information but you need search rights to all directories named in the path leading to the file. The stat structure includes info regarding device, inode (always 0 on Windows), privilege mode, nlink (always 1 on Windows), user id (always 0 on Windows), group id (always 0 on Windows), rdev (same as device on Windows), size, last access time, last modification time, and last metadata change time. 
@@ -463,7 +463,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSAccessProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- int <i>mode</i>);</pre></dl>
+ int <i>mode</i>);</pre></dd></dl>
  
 
  The <b>Tcl_FSAccessProc</b> checks whether the process would be allowed to read, write or test for existence of the file (or other filesystem object) whose name is in <i>pathPtr</i>. If the pathname refers to a symbolic link, then the permissions of the file referred by this symbolic link should be tested. 
@@ -475,7 +475,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Interp *<i>interp</i>,
  Tcl_Obj *<i>pathPtr</i>,
  int <i>mode</i>,
- int <i>permissions</i>);</pre></dl>
+ int <i>permissions</i>);</pre></dd></dl>
  
 
  The <b>Tcl_FSOpenFileChannelProc</b> opens a file specified by <i>pathPtr</i> and returns a channel handle that can be used to perform input and output on the file. This API is modeled after the <b>fopen</b> procedure of the Unix standard I/O library. The syntax and meaning of all arguments is similar to those given in the Tcl <b>open</b> command when opening a file, where the <i>mode</i> argument is a combination of the POSIX flags O_RDONLY, O_WRONLY, etc. If an error occurs while opening the channel, the <b>Tcl_FSOpenFileChannelProc</b> returns NULL and records a POSIX error code that can be retrieved with <b>Tcl_GetErrno</b>. In addition, if <i>interp</i> is non-NULL, the <b>Tcl_FSOpenFileChannelProc</b> leaves an error message in <i>interp</i>'s result after any error. 
@@ -488,7 +488,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Obj *<i>resultPtr</i>,
  Tcl_Obj *<i>pathPtr</i>,
  const char *<i>pattern</i>,
- Tcl_GlobTypeData *<i>types</i>);</pre></dl>
+ Tcl_GlobTypeData *<i>types</i>);</pre></dd></dl>
  
 
  The function should return all files or directories (or other filesystem objects) which match the given pattern and accord with the <i>types</i> specification given. There are two ways in which this function may be called. If <i>pattern</i> is NULL, then <i>pathPtr</i> is a full path specification of a single file or directory which should be checked for existence and correct type. Otherwise, <i>pathPtr</i> is a directory, the contents of which the function should search for files or directories which have the correct type. In either case, <i>pathPtr</i> can be assumed to be both non-NULL and non-empty. It is not currently documented whether <i>pathPtr</i> will have a file separator at its end of not, so code should be flexible to both possibilities. 
@@ -506,7 +506,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Obj *<i>macType</i>;
  /* Acceptable mac creator */
  Tcl_Obj *<i>macCreator</i>;
-} <b>Tcl_GlobTypeData</b>;</pre></dl>
+} <b>Tcl_GlobTypeData</b>;</pre></dd></dl>
  
 
  There are two specific cases which it is important to handle correctly, both when <i>types</i> is non-NULL. The two cases are when <i>types-&gt;types &amp; TCL_GLOB_TYPE_DIR</i> or <i>types-&gt;types &amp; TCL_GLOB_TYPE_MOUNT</i> are true (and in particular when the other flags are false). In the first of these cases, the function must list the contained directories. Tcl uses this to implement recursive globbing, so it is critical that filesystems implement directory matching correctly. In the second of these cases, with <b>TCL_GLOB_TYPE_MOUNT</b>, the filesystem must list the mount points which lie within the given <i>pathPtr</i> (and in this case, <i>pathPtr</i> need not lie within the same filesystem - different to all other cases in which this function is called). Support for this is critical if Tcl is to have seamless transitions between from one filesystem to another.
@@ -514,7 +514,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSUtimeProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- struct utimbuf *<i>tval</i>);</pre></dl>
+ struct utimbuf *<i>tval</i>);</pre></dd></dl>
  
 
  The access and modification times of the file specified by <i>pathPtr</i> should be changed to the values given in the <i>tval</i> structure. 
@@ -525,13 +525,13 @@ Tcl_DecrRefCount(path);</pre></dl>
 <dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSLinkProc</b>(
  Tcl_Obj *<i>linkNamePtr</i>,
  Tcl_Obj *<i>toPtr</i>,
- int <i>linkAction</i>);</pre></dl>
+ int <i>linkAction</i>);</pre></dd></dl>
  
 
  If <i>toPtr</i> is NULL, the function is being asked to read the contents of a link. The result is a Tcl_Obj specifying the contents of the link given by <i>linkNamePtr</i>, or NULL if the link could not be read. The result is owned by the caller (and should therefore have its ref count incremented before being returned). Any callers should call <b>Tcl_DecrRefCount</b> on this result when it is no longer needed. If <i>toPtr</i> is not NULL, the function should attempt to create a link. The result in this case should be <i>toPtr</i> if the link was successful and NULL otherwise. In this case the result is not owned by the caller (i.e. no reference count manipulations on either end are needed). See the documentation for <b>Tcl_FSLink</b> for the correct interpretation of the <i>linkAction</i> flags.
 <h3>Listvolumesproc</h3>Function to list any filesystem volumes added by this filesystem. Should be implemented only if the filesystem adds volumes at the head of the filesystem, so that they can be returned by <b>file volumes</b>. 
 
-<dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSListVolumesProc</b>(void);</pre></dl>
+<dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSListVolumesProc</b>(void);</pre></dd></dl>
  
 
  The result should be a list of volumes added by this filesystem, or NULL (or an empty list) if no volumes are provided. The result value is considered to be owned by the filesystem (not by Tcl's core), but should be given a reference count for Tcl. Tcl will use the contents of the list and then decrement that reference count. This allows filesystems to choose whether they actually want to retain a ``master list'' of volumes or not (if not, they generate the list on the fly and pass it to Tcl with a reference count of 1 and then forget about the list, if yes, then they simply increment the reference count of their master list and pass it to Tcl which will copy the contents and then decrement the count back to where it was). 
@@ -541,7 +541,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef const char *const *<b>Tcl_FSFileAttrStringsProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- Tcl_Obj **<i>objPtrRef</i>);</pre></dl>
+ Tcl_Obj **<i>objPtrRef</i>);</pre></dd></dl>
  
 
  The called function may either return an array of strings, or may instead return NULL and place a Tcl list into the given <i>objPtrRef</i>. Tcl will take that list and first increment its reference count before using it. On completion of that use, Tcl will decrement its reference count. Hence if the list should be disposed of by Tcl when done, it should have a reference count of zero, and if the list should not be disposed of, the filesystem should ensure it returns a value with a reference count of at least one.
@@ -551,7 +551,7 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Interp *<i>interp</i>,
  int <i>index</i>,
  Tcl_Obj *<i>pathPtr</i>,
- Tcl_Obj **<i>objPtrRef</i>);</pre></dl>
+ Tcl_Obj **<i>objPtrRef</i>);</pre></dd></dl>
  
 
  Returns a standard Tcl return code. The attribute value retrieved, which corresponds to the <i>index</i>'th element in the list returned by the <b>Tcl_FSFileAttrStringsProc</b>, is a Tcl_Obj placed in <i>objPtrRef</i> (if <b>TCL_OK</b> was returned) and is likely to have a reference count of zero. Either way we must either store it somewhere (e.g. the Tcl result), or Incr/Decr its reference count to ensure it is properly freed.
@@ -561,14 +561,14 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Interp *<i>interp</i>,
  int <i>index</i>,
  Tcl_Obj *<i>pathPtr</i>,
- Tcl_Obj *<i>objPtr</i>);</pre></dl>
+ Tcl_Obj *<i>objPtr</i>);</pre></dd></dl>
  
 
  The attribute value of the <i>index</i>'th element in the list returned by the Tcl_FSFileAttrStringsProc should be set to the <i>objPtr</i> given.
 <h3>Createdirectoryproc</h3>Function to process a <b>Tcl_FSCreateDirectory</b> call. Should be implemented unless the FS is read-only. 
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSCreateDirectoryProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl>
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the process. If successful, a new directory should have been added to the filesystem in the location specified by <i>pathPtr</i>.
@@ -577,14 +577,14 @@ Tcl_DecrRefCount(path);</pre></dl>
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSRemoveDirectoryProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
  int <i>recursive</i>,
- Tcl_Obj **<i>errorPtr</i>);</pre></dl>
+ Tcl_Obj **<i>errorPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the process. If successful, the directory specified by <i>pathPtr</i> should have been removed from the filesystem. If the <i>recursive</i> flag is given, then a non-empty directory should be deleted without error. If this flag is not given, then and the directory is non-empty a POSIX ``EEXIST'' error should be signaled. If an error does occur, the name of the file or directory which caused the error should be placed in <i>errorPtr</i>.
 <h3>Deletefileproc</h3>Function to process a <b>Tcl_FSDeleteFile</b> call. Should be implemented unless the FS is read-only. 
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSDeleteFileProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl>
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the process. If successful, the file specified by <i>pathPtr</i> should have been removed from the filesystem. Note that, if the filesystem supports symbolic links, Tcl will always call this function and not Tcl_FSRemoveDirectoryProc when needed to delete them (even if they are symbolic links to directories).
@@ -593,7 +593,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSLstatProc</b>(
  Tcl_Obj *<i>pathPtr</i>,
- Tcl_StatBuf *<i>statPtr</i>);</pre></dl>
+ Tcl_StatBuf *<i>statPtr</i>);</pre></dd></dl>
  
 
  The behavior of this function is very similar to that of the <b>Tcl_FSStatProc</b> defined above, except that if it is applied to a symbolic link, it returns information about the link, not about the target file.
@@ -601,7 +601,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSCopyFileProc</b>(
  Tcl_Obj *<i>srcPathPtr</i>,
- Tcl_Obj *<i>destPathPtr</i>);</pre></dl>
+ Tcl_Obj *<i>destPathPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the copying process. Note that, <i>destPathPtr</i> is the name of the file which should become the copy of <i>srcPathPtr</i>. It is never the name of a directory into which <i>srcPathPtr</i> could be copied (i.e. the function is much simpler than the Tcl level <b>file copy</b> subcommand). Note that, if the filesystem supports symbolic links, Tcl will always call this function and not <i>copyDirectoryProc</i> when needed to copy them (even if they are symbolic links to directories). Finally, if the filesystem determines it cannot support the <b>file copy</b> action, calling <b>Tcl_SetErrno(EXDEV)</b> and returning a non-<b>TCL_OK</b> result will tell Tcl to use its standard fallback mechanisms.
@@ -609,7 +609,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSRenameFileProc</b>(
  Tcl_Obj *<i>srcPathPtr</i>,
- Tcl_Obj *<i>destPathPtr</i>);</pre></dl>
+ Tcl_Obj *<i>destPathPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the renaming process. If the filesystem determines it cannot support the <b>file rename</b> action, calling <b>Tcl_SetErrno(EXDEV)</b> and returning a non-<b>TCL_OK</b> result will tell Tcl to use its standard fallback mechanisms.
@@ -618,7 +618,7 @@ Tcl_DecrRefCount(path);</pre></dl>
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSCopyDirectoryProc</b>(
  Tcl_Obj *<i>srcPathPtr</i>,
  Tcl_Obj *<i>destPathPtr</i>,
- Tcl_Obj **<i>errorPtr</i>);</pre></dl>
+ Tcl_Obj **<i>errorPtr</i>);</pre></dd></dl>
  
 
  The return value is a standard Tcl result indicating whether an error occurred in the copying process. If an error does occur, the name of the file or directory which caused the error should be placed in <i>errorPtr</i>. Note that, <i>destPathPtr</i> is the name of the directory-name which should become the mirror-image of <i>srcPathPtr</i>. It is not the name of a directory into which <i>srcPathPtr</i> should be copied (i.e. the function is much simpler than the Tcl level <b>file copy</b> subcommand). Finally, if the filesystem determines it cannot support the directory copy action, calling <b>Tcl_SetErrno(EXDEV)</b> and returning a non-<b>TCL_OK</b> result will tell Tcl to use its standard fallback mechanisms.
@@ -628,24 +628,24 @@ Tcl_DecrRefCount(path);</pre></dl>
  Tcl_Interp *<i>interp</i>,
  Tcl_Obj *<i>pathPtr</i>,
  Tcl_LoadHandle *<i>handlePtr</i>,
- Tcl_FSUnloadFileProc *<i>unloadProcPtr</i>);</pre></dl>
+ Tcl_FSUnloadFileProc *<i>unloadProcPtr</i>);</pre></dd></dl>
  
 
  Returns a standard Tcl completion code. If an error occurs, an error message is left in the <i>interp</i>'s result. The function dynamically loads a binary code file into memory. On a successful load, the <i>handlePtr</i> should be filled with a token for the dynamically loaded file, and the <i>unloadProcPtr</i> should be filled in with the address of a procedure. The unload procedure will be called with the given <b>Tcl_LoadHandle</b> as its only parameter when Tcl needs to unload the file. For example, for the native filesystem, the <b>Tcl_LoadHandle</b> returned is currently a token which can be used in the private <b>TclpFindSymbol</b> to access functions in the new code. Each filesystem is free to define the <b>Tcl_LoadHandle</b> as it requires. Finally, if the filesystem determines it cannot support the file load action, calling <b>Tcl_SetErrno(EXDEV)</b> and returning a non-<b>TCL_OK</b> result will tell Tcl to use its standard fallback mechanisms.
 <h3>Unloadfileproc</h3>Function to unload a previously successfully loaded file. If load was implemented, then this should also be implemented, if there is any cleanup action required. 
 
 <dl COMPACT><dd><pre>typedef void <b>Tcl_FSUnloadFileProc</b>(
- Tcl_LoadHandle <i>loadHandle</i>);</pre></dl><h3>Getcwdproc</h3>Function to process a <b>Tcl_FSGetCwd</b> call. Most filesystems need not implement this. It will usually only be called once, if <b>getcwd</b> is called before <b>chdir</b>. May be NULL. 
+ Tcl_LoadHandle <i>loadHandle</i>);</pre></dd></dl><h3>Getcwdproc</h3>Function to process a <b>Tcl_FSGetCwd</b> call. Most filesystems need not implement this. It will usually only be called once, if <b>getcwd</b> is called before <b>chdir</b>. May be NULL. 
 
 <dl COMPACT><dd><pre>typedef Tcl_Obj *<b>Tcl_FSGetCwdProc</b>(
- Tcl_Interp *<i>interp</i>);</pre></dl>
+ Tcl_Interp *<i>interp</i>);</pre></dd></dl>
  
 
  If the filesystem supports a native notion of a current working directory (which might perhaps change independent of Tcl), this function should return that cwd as the result, or NULL if the current directory could not be determined (e.g. the user does not have appropriate permissions on the cwd directory). If NULL is returned, an error message is left in the <i>interp</i>'s result.
 <h3>Chdirproc</h3>Function to process a <b>Tcl_FSChdir</b> call. If filesystems do not implement this, it will be emulated by a series of directory access checks. Otherwise, virtual filesystems which do implement it need only respond with a positive return result if the <i>pathPtr</i> is a valid, accessible directory in their filesystem. They need not remember the result, since that will be automatically remembered for use by <b>Tcl_FSGetCwd</b>. Real filesystems should carry out the correct action (i.e. call the correct system <b>chdir</b> API). 
 
 <dl COMPACT><dd><pre>typedef int <b>Tcl_FSChdirProc</b>(
- Tcl_Obj *<i>pathPtr</i>);</pre></dl>
+ Tcl_Obj *<i>pathPtr</i>);</pre></dd></dl>
  
 
  The <b>Tcl_FSChdirProc</b> changes the applications current working directory to the value specified in <i>pathPtr</i>. The function returns -1 on error or 0 on success.

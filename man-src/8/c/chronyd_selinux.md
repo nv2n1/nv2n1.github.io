@@ -55,9 +55,9 @@ description: "chronyd_selinux – Security Enhanced Linux Policy for the chronyd
 <p> Policy governs the access confined processes have to these ports. SELinux chronyd policy is very flexible allowing users to setup their chronyd processes in as secure a method as possible. </p>
 <p> The following port types are defined for chronyd: </p>
 <dl>
-<dt><code>chronyd_port_t</code></p>
+<dt><code>chronyd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 323</dl>
+</dd><dd>Default Defined Ports: udp 323</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type chronyd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>chronyd_tmpfs_t</code> </p>
@@ -115,8 +115,8 @@ description: "chronyd_selinux – Security Enhanced Linux Policy for the chronyd
 <p> <code>chronyd_exec_t</code> </p>
 <p> &#8211; Set files with the chronyd_exec_t type, if you want to transition an executable to the chronyd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/chronyd, /usr/libexec/chrony-helper </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/chronyd, /usr/libexec/chrony-helper </dd>
 </dl>
 <p> <code>chronyd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the chronyd_initrc_exec_t type, if you want to transition an executable to the chronyd_initrc_t domain. </p>
@@ -133,8 +133,8 @@ description: "chronyd_selinux – Security Enhanced Linux Policy for the chronyd
 <p> <code>chronyd_var_run_t</code> </p>
 <p> &#8211; Set files with the chronyd_var_run_t type, if you want to store the chronyd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/chronyd(/.*)?, /var/run/chrony-helper(/.*)?, /var/run/chronyd.pid, /var/run/chronyd.sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/chronyd(/.*)?, /var/run/chrony-helper(/.*)?, /var/run/chronyd.pid, /var/run/chronyd.sock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

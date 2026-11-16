@@ -14,13 +14,13 @@ description: "devm_request_resource – request and reserve an I/O or memory res
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device for which to request the resource</dl>
+</dd><dd>device for which to request the resource</dd></dl>
 <p> <i>root</i></p>
 <dl>
-<dd>root of the resource tree from which to request the resource</dl>
+<dd>root of the resource tree from which to request the resource</dd></dl>
 <p> <i>new</i></p>
 <dl>
-<dd>descriptor of the resource to request</dl>
+<dd>descriptor of the resource to request</dd></dl>
 <h2>Description</h2>
 <p>This is a device-managed version of <code>request_resource</code>. There is usually no need to release resources requested by this function explicitly since that will be taken care of when the device is unbound from its driver. If for some reason the resource needs to be released explicitly, because of ordering issues for example, drivers must call <code>devm_release_resource</code> rather than the regular <code>release_resource</code>. </p>
 <p> When a conflict is detected between any existing resources and the newly requested resource, an error message will be printed. </p>

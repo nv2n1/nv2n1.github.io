@@ -21,9 +21,9 @@ description: "systemd-timesyncd.service, systemd-timesyncd – Network Time Sync
 <h2>Files</h2>
 <p>/var/lib/systemd/timesync/clock</p>
 <dl>
-<dd>The modification time (&quot;mtime&quot;) of this file indicates the timestamp of the last successful synchronization (or at least the systemd build date, in case synchronization was not possible). It is used to ensure that the system clock remains roughly monotonic across reboots, in case no local RTC is available.</dl>
+<dd>The modification time (&quot;mtime&quot;) of this file indicates the timestamp of the last successful synchronization (or at least the systemd build date, in case synchronization was not possible). It is used to ensure that the system clock remains roughly monotonic across reboots, in case no local RTC is available.</dd></dl>
 <p> /run/systemd/timesync/synchronized</p>
 <dl>
-<dd>A file that is touched on each successful synchronization, to assist systemd-time-wait-sync and other applications to detecting synchronization with accurate reference clocks.</dl>
+<dd>A file that is touched on each successful synchronization, to assist systemd-time-wait-sync and other applications to detecting synchronization with accurate reference clocks.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></code>(5), <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-time-wait-sync-service/">systemd-time-wait-sync.service</a></code>(8), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/1-timedatectl/">timedatectl</a></code>(1), <code><a href="/docs/linux/man/5-localtime/">localtime</a></code>(5), <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) </p>

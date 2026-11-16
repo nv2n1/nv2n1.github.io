@@ -56,7 +56,7 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> high moments are numerically unstable for high average/standardDeviation ratios.</dl>
+</dt><dd> high moments are numerically unstable for high average/standardDeviation ratios.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Real</code> mean () const</h3>
 <p> returns the mean, defined as [ </p>
@@ -91,15 +91,15 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> weight must be positive or null</dl>
+</dt><dd> weight must be positive or null</dd></dl>
 <h3>void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)</h3>
 <p> adds a sequence of data to the set, each with its weight </p>
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> weights must be positive or null</dl>
+</dt><dd> weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAU">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAU">Author</a></dt>
+<dd></dd></dl>

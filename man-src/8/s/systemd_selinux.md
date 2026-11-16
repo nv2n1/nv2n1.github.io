@@ -42,38 +42,38 @@ description: "systemd_selinux – Security Enhanced Linux Policy for the systemd
 <p> <code>systemd_logind_var_run_t </code> </p>
 <p> &#8211; Set files with the systemd_logind_var_run_t type, if you want to store the systemd logind files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/nologin, /var/run/systemd/users(/.*)?, /var/run/systemd/seats(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/nologin, /var/run/systemd/users(/.*)?, /var/run/systemd/seats(/.*)? </dd>
 </dl>
 <p> <code>systemd_notify_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_notify_exec_t type, if you want to transition an executable to the systemd_notify_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemd-notify, /bin/systemd-notify </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemd-notify, /bin/systemd-notify </dd>
 </dl>
 <p> <code>systemd_passwd_agent_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_passwd_agent_exec_t type, if you want to transition an executable to the systemd_passwd_agent_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bin/systemd-tty-ask-password-agent, /usr/bin/systemd-gnome-ask-password-agent, /usr/bin/systemd-tty-ask-password-agent </p>
+<dt>Paths:</dt>
+<dd>/bin/systemd-tty-ask-password-agent, /usr/bin/systemd-gnome-ask-password-agent, /usr/bin/systemd-tty-ask-password-agent </dd>
 </dl>
 <p> <code>systemd_passwd_var_run_t </code> </p>
 <p> &#8211; Set files with the systemd_passwd_var_run_t type, if you want to store the systemd passwd files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/systemd/ask-password(/.*)?, /var/run/systemd/ask-password-block(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/systemd/ask-password(/.*)?, /var/run/systemd/ask-password-block(/.*)? </dd>
 </dl>
 <p> <code>systemd_systemctl_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_systemctl_exec_t type, if you want to transition an executable to the systemd_systemctl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemctl, /bin/systemctl </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemctl, /bin/systemctl </dd>
 </dl>
 <p> <code>systemd_tmpfiles_exec_t </code> </p>
 <p> &#8211; Set files with the systemd_tmpfiles_exec_t type, if you want to transition an executable to the systemd_tmpfiles_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/systemd-tmpfiles, /bin/systemd-tmpfiles, /usr/lib/systemd/systemd-tmpfiles </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/systemd-tmpfiles, /bin/systemd-tmpfiles, /usr/lib/systemd/systemd-tmpfiles </dd>
 </dl>
 <p> <code>systemd_unit_file_t </code> </p>
 <p> &#8211; Set files with the systemd_unit_file_t type, if you want to treat the files as systemd unit content. </p>

@@ -14,10 +14,10 @@ description: "pci_hp_change_slot_info – changes the slot’s information struc
 <p><i>slot</i></p>
 <dl>
 <dd>
-<dd>pointer to the slot whose info has changed</dl>
+</dd><dd>pointer to the slot whose info has changed</dd></dl>
 <p> <i>info</i></p>
 <dl>
-<dd>pointer to the info copy into the slot&#8217;s info structure</dl>
+<dd>pointer to the info copy into the slot&#8217;s info structure</dd></dl>
 <h2>Description</h2>
 <p><i>slot</i> must have been registered with the pci hotplug subsystem previously with a call to <code>pci_hp_register</code>. </p>
 <p> Returns 0 if successful, anything else for an error.</p>

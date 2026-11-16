@@ -16,10 +16,10 @@ description: "nop – pretty-print graph file"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-p</code></p>
-<dd> Produce no output &#8211; just check the input for valid DOT.</p>
-<dt><code>-?</code></p>
-<dd> Print usage information.</dl>
+<dt><code>-p</code></dt>
+<dd> Produce no output &#8211; just check the input for valid DOT.</dd>
+<dt><code>-?</code></dt>
+<dd> Print usage information.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If any errors occurred while processing any input, such as a file not found or a file containing illegal DOT, a non-zero exit value is returned. Otherwise, zero is returned.</p>
 <h2>SEE ALSO</h2>

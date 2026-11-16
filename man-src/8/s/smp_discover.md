@@ -16,42 +16,42 @@ description: "smp_discover – invoke DISCOVER SMP function"
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-A</code>, <code>&#8211;adn</code></p>
-<dd>causes the &quot;attached device name&quot; field to be output when the <i>&#8211;multiple</i> or <i>&#8211;summary</i> option is also given. See the section below on SINGLE LINE PER PHY FORMAT. Note the &quot;attached device name&quot; field was added is SAS-2.</p>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>reduce the decoded response output. If used twice will exit if there is no attached device (after outputting that). When used with <i>&#8211;multiple</i>, unattached phys are not listed; when used twice, trims attached phys output.</p>
-<dt><code>-c</code>, <code>&#8211;cap</code></p>
-<dd>decode and print phy capabilities bits fields (see SNW-3 in draft). Each expander phy has three of these fields: programmed, current and attached. By default these fields are only printed out in hex, or not at all if the <i>&#8211;brief</i> option is given or implied. Of the three the attached phy capability field is probably the most interesting. If the <i>&#8211;verbose</i> option is given, then the various &quot;G&quot; identifiers are expanded (e.g. instead of &quot;G4:&quot; it prints &quot;G4 (12 Gbps):&quot;).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;ignore</code></p>
-<dd>sets the Ignore Zone Group bit in the SMP Discover request. Expander phys hidden by zoning will appear as &quot;phy vacant&quot; unless this option is given.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd>list attributes in &quot;name=value&quot; form, one entry per line.</p>
-<dt><code>-m</code>, <code>&#8211;multiple</code></p>
-<dd>loops over multiple phys within SMP target (typically an expander) and does a DISCOVER request and outputs a one line summary. Phy 0 is queried first, then phy 1, continuing until an error occurs. The starting phy and the number of phys &quot;discovered&quot; can be controlled by <i>&#8211;phy=ID</i> and <i>&#8211;num=NUM</i>. If <i>&#8211;brief</i> is given then there is no output for phys that indicate there is no attached device. When this option is used twice then multi-line output is produced for each phy. See the section below on SINGLE LINE PER PHY FORMAT.</p>
-<dt><code>-M</code>, <code>&#8211;my</code></p>
-<dd>outputs my (this expander&#8217;s) SAS address in hex (prefixed by &quot;0x&quot;). This is obtained from the DISCOVER response of phy id 0 (unless <i>&#8211;phy=ID</i> is given). The expander&#8217;s SAS address is typically available even if a phy is not connected, &quot;vacant&quot; or disabled. This option overrides most other options (e.g. overrides <i>&#8211;multiple</i> and <i>&#8211;summary</i> options).</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>number of phys to fetch, starting at <i>&#8211;phy=ID</i> when the <i>&#8211;multiple</i> option is given. The default value is 0 which is interpreted as &quot;the rest&quot; (i.e. until a &quot;phy does not exist&quot; function result is received). This option is ignored in the absence of the <i>&#8211;multiple</i> option.</p>
-<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></p>
-<dd>phy identifier. <i>ID</i> is a value between 0 and 254. If this option is not given then the <i>&#8211;summary</i> option is assumed.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-S</code>, <code>&#8211;summary</code></p>
-<dd>output a multi line summary, with one line per active phy. Checks all phys (or less is <i>&#8211;num=NUM</i> is given), starting at phy 0 (unless <i>&#8211;phy=ID</i> is given). Equivalent to &#8216;&#8211;multiple &#8211;brief&#8217; (&#8216;-mb&#8217;). See the section below on SINGLE LINE PER PHY FORMAT. If the <i>&#8211;phy=ID</i> is not given then this option is assumed.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd>zero the Allocated Response Length field in the request. This option also zeros the Request Length field in the request. This is required for strict SAS-1.1 compliance. However this option should not be given in SAS-2 and later; if it is given an abridged response may result.</dl>
+<dt><code>-A</code>, <code>&#8211;adn</code></dt>
+<dd>causes the &quot;attached device name&quot; field to be output when the <i>&#8211;multiple</i> or <i>&#8211;summary</i> option is also given. See the section below on SINGLE LINE PER PHY FORMAT. Note the &quot;attached device name&quot; field was added is SAS-2.</dd>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>reduce the decoded response output. If used twice will exit if there is no attached device (after outputting that). When used with <i>&#8211;multiple</i>, unattached phys are not listed; when used twice, trims attached phys output.</dd>
+<dt><code>-c</code>, <code>&#8211;cap</code></dt>
+<dd>decode and print phy capabilities bits fields (see SNW-3 in draft). Each expander phy has three of these fields: programmed, current and attached. By default these fields are only printed out in hex, or not at all if the <i>&#8211;brief</i> option is given or implied. Of the three the attached phy capability field is probably the most interesting. If the <i>&#8211;verbose</i> option is given, then the various &quot;G&quot; identifiers are expanded (e.g. instead of &quot;G4:&quot; it prints &quot;G4 (12 Gbps):&quot;).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;ignore</code></dt>
+<dd>sets the Ignore Zone Group bit in the SMP Discover request. Expander phys hidden by zoning will appear as &quot;phy vacant&quot; unless this option is given.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>list attributes in &quot;name=value&quot; form, one entry per line.</dd>
+<dt><code>-m</code>, <code>&#8211;multiple</code></dt>
+<dd>loops over multiple phys within SMP target (typically an expander) and does a DISCOVER request and outputs a one line summary. Phy 0 is queried first, then phy 1, continuing until an error occurs. The starting phy and the number of phys &quot;discovered&quot; can be controlled by <i>&#8211;phy=ID</i> and <i>&#8211;num=NUM</i>. If <i>&#8211;brief</i> is given then there is no output for phys that indicate there is no attached device. When this option is used twice then multi-line output is produced for each phy. See the section below on SINGLE LINE PER PHY FORMAT.</dd>
+<dt><code>-M</code>, <code>&#8211;my</code></dt>
+<dd>outputs my (this expander&#8217;s) SAS address in hex (prefixed by &quot;0x&quot;). This is obtained from the DISCOVER response of phy id 0 (unless <i>&#8211;phy=ID</i> is given). The expander&#8217;s SAS address is typically available even if a phy is not connected, &quot;vacant&quot; or disabled. This option overrides most other options (e.g. overrides <i>&#8211;multiple</i> and <i>&#8211;summary</i> options).</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>number of phys to fetch, starting at <i>&#8211;phy=ID</i> when the <i>&#8211;multiple</i> option is given. The default value is 0 which is interpreted as &quot;the rest&quot; (i.e. until a &quot;phy does not exist&quot; function result is received). This option is ignored in the absence of the <i>&#8211;multiple</i> option.</dd>
+<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></dt>
+<dd>phy identifier. <i>ID</i> is a value between 0 and 254. If this option is not given then the <i>&#8211;summary</i> option is assumed.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-S</code>, <code>&#8211;summary</code></dt>
+<dd>output a multi line summary, with one line per active phy. Checks all phys (or less is <i>&#8211;num=NUM</i> is given), starting at phy 0 (unless <i>&#8211;phy=ID</i> is given). Equivalent to &#8216;&#8211;multiple &#8211;brief&#8217; (&#8216;-mb&#8217;). See the section below on SINGLE LINE PER PHY FORMAT. If the <i>&#8211;phy=ID</i> is not given then this option is assumed.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd>zero the Allocated Response Length field in the request. This option also zeros the Request Length field in the request. This is required for strict SAS-1.1 compliance. However this option should not be given in SAS-2 and later; if it is given an abridged response may result.</dd></dl>
 <h2>Single Line Per Phy Format</h2>
 <p>The <i>&#8211;summary</i> option causes SMP DISCOVER responses to be compressed to a header followed by one line per phy. To save space SAS addresses are shown in hex without a &#8216;0x&#8217; prefix or &#8216;h&#8217; suffix. The header line gives the SAS address of the SMP target itself and assumes it is an expander. </p>
 <p> Each line starts with &quot; phy &lt;n&gt;:&quot; where &lt;n&gt; is the phy identifier (and they are origin zero). That is followed by the routing attribute represented by a single letter which is either &quot;D&quot; for direct routing, &quot;S&quot; for subtractive routing, &quot;T&quot; or &quot;U&quot;. Both &quot;T&quot; and &quot;U&quot; imply table routing, the difference is that if REPORT GENERAL indicates &quot;table to table supported&quot; then &quot;U&quot; is output to indicate that phy can be part of an enclosure <code>universal</code> port; otherwise &quot;T&quot; is used. Next comes the negotiated physical link rate which is either &quot;disabled&quot;, &quot;reset problem&quot; or &quot;spinup hold&quot;. Other states are mapped to &quot;attached&quot;. This includes enabled phys with nothing connected which appear as &quot;attached:[0000000000000000:00]&quot;. </p>

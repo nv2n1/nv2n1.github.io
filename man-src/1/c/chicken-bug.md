@@ -13,12 +13,12 @@ description: "chicken-bug – generates a bug report from user input"
 <p> <code>chicken-bug</code> [ <i>filename</i> | <i>OPTION &#8230;</i> ] </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Show usage information. </p>
-<dt><code>-to-stdout</code></p>
-<dd> Write bug report to standard output instead of writing it to a file. </p>
-<dt><code>&#8211;</code></p>
-<dd> Read user input from standard input, even if files are given on the command line. </p>
+<dt><code>-help</code></dt>
+<dd> Show usage information. </dd>
+<dt><code>-to-stdout</code></dt>
+<dd> Write bug report to standard output instead of writing it to a file. </dd>
+<dt><code>&#8211;</code></dt>
+<dd> Read user input from standard input, even if files are given on the command line. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>chicken-bug</i> generates a bug report file that collects user-input, optional files and system information obtained from the installed CHICKEN executables and libraries. Non-option arguments given on the command line are inserted into the bug report. If no option is given, or if <code>&#8211;</code> has been passed on the command line, then a description of the problem is read from standard input, until EOF (CTRL-D) or a line consisting only of &quot;.&quot; (period) is read. </p>

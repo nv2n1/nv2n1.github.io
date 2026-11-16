@@ -15,41 +15,41 @@ description: "fig2mpdf – creation of multilayer pdf or eps figures from fig fi
 <p> This tool can create pdf or eps figures using fig files as source. For beamer presentations, for example, you can use the multilayer mode to create multiple figures that can be overlayed to get a dynamic figure. For proper appearance you can use latex to typeset some or all texts, possibly containing formulas. </p>
 <p> The default interpretation of the given fig <i>FILE</i> depends on its suffix.</p>
 <dl>
-<dt><i>fig</i></p>
-<dd> Normal conversion of a fig file. All texts are interpreted as postscript texts and all elements of the figure are included in the resulting figure.</p>
-<dt><i>lfig</i></p>
-<dd> LaTeX interpretation of the file. All texts of the input file that have the special bit set are typeset by pdflatex resp. latex (see: Option <code>-|+l</code>).</p>
-<dt><i>mfig</i></p>
-<dd> Multilayer file interpretation. Depending on the used depths of the figure it is split into multiple parts. For each part an output file is created (see: section <code>MultiLayerOutput</code>).</p>
-<dt><i>mlfig</i> or <i>lmfig</i></p>
-<dd> Combination of multilayer and LaTeX interpretation of the input (see: Suffix <i>lfig</i> and <i>mfig</i>).</dl>
+<dt><i>fig</i></dt>
+<dd> Normal conversion of a fig file. All texts are interpreted as postscript texts and all elements of the figure are included in the resulting figure.</dd>
+<dt><i>lfig</i></dt>
+<dd> LaTeX interpretation of the file. All texts of the input file that have the special bit set are typeset by pdflatex resp. latex (see: Option <code>-|+l</code>).</dd>
+<dt><i>mfig</i></dt>
+<dd> Multilayer file interpretation. Depending on the used depths of the figure it is split into multiple parts. For each part an output file is created (see: section <code>MultiLayerOutput</code>).</dd>
+<dt><i>mlfig</i> or <i>lmfig</i></dt>
+<dd> Combination of multilayer and LaTeX interpretation of the input (see: Suffix <i>lfig</i> and <i>mfig</i>).</dd></dl>
 <p> The default interpretation of the input can be changed by using the options below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e</code></p>
-<dd> produce an eps output file. Instead of creating a pdf file (the default) an eps figure is produced.</p>
-<dt><code>-|+l</code></p>
-<dd> force calling (pdf)latex (-) or do not use (pdf)latex (+) for typesetting the text marked with the special flag. With this option you can change the default behavior given by the input file suffix.</p>
-<dt><code>-|+m</code></p>
-<dd> force set (-) or unset (+) the multilayer interpretation (see: <code>MultiLayerOutput</code> below) which was previously set by the input file suffix.</p>
-<dt><code>-p</code> <i>ranges</i></p>
-<dd> explicitly set the ranges of depths for splitting the input figure in multilayer mode. <i>ranges</i> is a colon separated list of ranges of the form <i>upper-lower</i> or <i>depth</i> where <i>upper</i> is the top and <i>lower</i> the bottom depth in the range. If you use the <i>depth</i> form the range consist of just that depth.</p>
-<dt><code>-i</code></p>
-<dd> include the the bottommost range (that is, the one with the highest depth) into all output figures. This is for compatibility to older versions of this tool.</p>
-<dt><code>-I</code></p>
-<dd> turn on pyramid mode. The figure of a corresponding range in multilayer mode includes all lower ranges too.</p>
-<dt><code>-g</code> <i>gapwidth</i></p>
-<dd> set the allowed gapwidth between two used depths to decide if these depths should be grouped together in one range. With this option you get more flexibility to insert objects with new depths. The default width is zero (no gap = consecutively numbered depths are grouped together).</p>
-<dt><code>-s</code> <i>style</i></p>
-<dd> replace the default style for selecting a font family in LaTeX mode. If this option is omitted the style `times&#8217; is set by default.</p>
-<dt><code>-H</code> <i>header</i></p>
-<dd> replace the default header sequence for creating temporary LaTeX documents in LaTeX mode. To get maximum flexibility you can set the entire document header in the file <i>header</i> (see: <code>Customized Headers</code> below).</p>
-<dt><code>-G</code></p>
-<dd> in multilayer mode change the default output file pattern to the PDF format which is &lt;name&gt;.page&lt;no&gt;.&lt;ext&gt;</p>
-<dt><code>-v</code></p>
-<dd> be verbose and print out all executed commands</p>
-<dt><code>-V</code></p>
-<dd> print out the version of <code>fig2mpdf</code></dl>
+<dt><code>-e</code></dt>
+<dd> produce an eps output file. Instead of creating a pdf file (the default) an eps figure is produced.</dd>
+<dt><code>-|+l</code></dt>
+<dd> force calling (pdf)latex (-) or do not use (pdf)latex (+) for typesetting the text marked with the special flag. With this option you can change the default behavior given by the input file suffix.</dd>
+<dt><code>-|+m</code></dt>
+<dd> force set (-) or unset (+) the multilayer interpretation (see: <code>MultiLayerOutput</code> below) which was previously set by the input file suffix.</dd>
+<dt><code>-p</code> <i>ranges</i></dt>
+<dd> explicitly set the ranges of depths for splitting the input figure in multilayer mode. <i>ranges</i> is a colon separated list of ranges of the form <i>upper-lower</i> or <i>depth</i> where <i>upper</i> is the top and <i>lower</i> the bottom depth in the range. If you use the <i>depth</i> form the range consist of just that depth.</dd>
+<dt><code>-i</code></dt>
+<dd> include the the bottommost range (that is, the one with the highest depth) into all output figures. This is for compatibility to older versions of this tool.</dd>
+<dt><code>-I</code></dt>
+<dd> turn on pyramid mode. The figure of a corresponding range in multilayer mode includes all lower ranges too.</dd>
+<dt><code>-g</code> <i>gapwidth</i></dt>
+<dd> set the allowed gapwidth between two used depths to decide if these depths should be grouped together in one range. With this option you get more flexibility to insert objects with new depths. The default width is zero (no gap = consecutively numbered depths are grouped together).</dd>
+<dt><code>-s</code> <i>style</i></dt>
+<dd> replace the default style for selecting a font family in LaTeX mode. If this option is omitted the style `times&#8217; is set by default.</dd>
+<dt><code>-H</code> <i>header</i></dt>
+<dd> replace the default header sequence for creating temporary LaTeX documents in LaTeX mode. To get maximum flexibility you can set the entire document header in the file <i>header</i> (see: <code>Customized Headers</code> below).</dd>
+<dt><code>-G</code></dt>
+<dd> in multilayer mode change the default output file pattern to the PDF format which is &lt;name&gt;.page&lt;no&gt;.&lt;ext&gt;</dd>
+<dt><code>-v</code></dt>
+<dd> be verbose and print out all executed commands</dd>
+<dt><code>-V</code></dt>
+<dd> print out the version of <code>fig2mpdf</code></dd></dl>
 <h2>MultiLayerOutput</h2>
 <p> In xfig you can assign an individual depth to all objects of the figure. These depths are normally used to determine the order of printing the objects. <code>fig2mpdf</code> uses these depths to group the objects into ranges in automatic mode (if the ranges option is omitted). In the list of used depths, consecutively numbered depths are grouped into one range. That is, all gaps between used depths are used to logically split the figure. With <code>-g</code> you can set the gapwidth which doesn&#8217;t split the figure (default: zero). </p>
 <p> The resulting list of ranges determines the number of output files. In default mode all objects with depths assigned to one range are collected and put into the corresponding output file. The contents of the output files can be changed with the two Options <code>-i</code> and <code>-I</code>. </p>
@@ -74,3 +74,4 @@ description: "fig2mpdf – creation of multilayer pdf or eps figures from fig fi
 <p> The usage of this example file changes the font family to sans serif and adds an additional search path for includegraphics to the `figures&#8217; subdirectory. </p>
 <p>&nbsp;<wbr>&nbsp;\documentclass{article} </p>
 <p>&nbsp;<wbr>&nbsp;
+</p>

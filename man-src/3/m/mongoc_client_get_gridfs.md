@@ -17,17 +17,17 @@ mongoc_client_get_gridfs (mongoc_client_t *client,
 <p>The <code><a href="/docs/linux/man/3-mongoc_client_get_gridfs/">mongoc_client_get_gridfs</a>(3)</code> function shall create a new <code>mongoc_gridfs_t</code> \&amp;. The <code>db</code> parameter is the name of the database which the gridfs instance should exist in. The <code>prefix</code> parameter corresponds to the gridfs collection namespacing; its default is &quot;fs&quot;, thus the default GridFS collection names are &quot;fs.files&quot; and &quot;fs.chunks&quot;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>db</code></p>
-<dd>The database name.</dl>
+<dt><code>db</code></dt>
+<dd>The database name.</dd></dl>
 <dl COMPACT>
-<dt><code>prefix</code></p>
-<dd>Optional prefix for gridfs collection names or <code>NULL</code> \&amp;.</dl>
+<dt><code>prefix</code></dt>
+<dd>Optional prefix for gridfs collection names or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

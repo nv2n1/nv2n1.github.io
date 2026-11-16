@@ -17,20 +17,20 @@ description: "fedfs-delete-junction – send a FEDFS_DELETE_JUNCTION ADMIN proto
 <p>The <code><a href="/docs/linux/man/8-fedfs-delete-junction/">fedfs-delete-junction</a></code>(8) command is part of a collection of low-level single-use programs that is intended for testing the FedFS ADMIN protocol or for use in scripts. It sends a single FEDFS_DELETE_JUNCTION request to a remote FedFS ADMIN protocol service. The FEDFS_DELETE_JUNCTION request deletes a FedFS junction in a local file system on a remote file server. The <code><a href="/docs/linux/man/8-fedfs-delete-junction/">fedfs-delete-junction</a></code>(8) command takes a single positional parameter which is the pathname on the remote server of the junction to be deleted. This pathname is relative to the root of the local file system on the remote server. The FEDFS_DELETE_JUNCTION request does not remove the FSN record associated with the deleted junction. Other junctions may continue to refer to the FSN in the deleted junction. When no junction refers to this FSN, use the <code><a href="/docs/linux/man/8-nsdb-delete-fsn/">nsdb-delete-fsn</a></code>(8) command to delete the FSN and children FSL records. Resolving a junction that contains an FSN UUID without a matching FSN record on the NSDB results in an error on the file server. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;debug</p>
-<dd>Enables debugging messages during operation.</p>
-<dt>-?, &#8211;help</p>
-<dd>Displays <a href="/docs/linux/man/8-fedfs-delete-junction/">fedfs-delete-junction</a></code>(8) version information and a usage message on <i>stderr</i>.</p>
-<dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
-<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
-<dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
-<dt><code>-s, &#8211;security=</code><i>flavor</i></p>
-<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dl>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Enables debugging messages during operation.</dd>
+<dt>-?, &#8211;help</dt>
+<dd>Displays <a href="/docs/linux/man/8-fedfs-delete-junction/">fedfs-delete-junction</a></code>(8) version information and a usage message on <i>stderr</i>.</dd>
+<dt><code>-h, &#8211;hostname=</code><i>hostname</i></dt>
+<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</dd>
+<dt><code>-n, &#8211;nettype=</code><i>nettype</i></dt>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</dd>
+<dt><code>-s, &#8211;security=</code><i>flavor</i></dt>
+<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. To delete the existing FedFS junction <i>/export/junction1</i> on the file server <i>fs.example.net</i>, use:</p>
 <dl>
-<dd>$ fedfs-delete-junction -h fs.example.net /export/junction1</dl>
+<dd>$ fedfs-delete-junction -h fs.example.net /export/junction1</dd></dl>
 <h2>Security</h2>
 <p>By default, or if the <code>sys</code> and <code>unix</code> flavors are specified with the <code>&#8211;security=</code><i>flavor</i> option, the <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8) command uses AUTH_SYS security for the Remote Procedure Call. AUTH_SYS has known weaknesses and should be avoided on untrusted networks. </p>
 <p> The RPC client uses the Kerberos v5 GSS mechanism if a Kerberos security flavor is specified. When specifying a Kerberos security flavor, the user must first obtain a valid Kerberos ticket using <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1) before running <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8). </p>

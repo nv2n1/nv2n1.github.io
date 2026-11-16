@@ -10,7 +10,6 @@ description: "skipFreeList – free a skip list."
 <p>skipFreeList &#8211; free a skip list.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/skiplist.h&gt;
-
 void skipFreeList(skipList list);
 </code></pre>
 <h2>Arguments</h2>

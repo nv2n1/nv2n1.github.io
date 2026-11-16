@@ -686,101 +686,101 @@ description: "VendorShell — The VendorShell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNaudibleWarning</code></p>
-<dd>Determines whether an action activates its associated audible cue. The possible values are <code>XmBELL</code> and <code>XmNONE</code>.</p>
-<dt><code>XmNbuttonFontList</code></p>
-<dd>Specifies the font list used for button descendants. See the <code>XmNbuttonRenderTable</code> resource.</p>
-<dt><code>XmNbuttonRenderTable</code></p>
-<dd>Specifies the render table used for VendorShell&#8217;s button descendants. If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNbuttonRenderTable</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNbuttonRenderTable</code> is initialized to the <code>XmBUTTON_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNdefaultFontList</code></p>
-<dd>Specifies a default font list for VendorShell&#8217;s descendants. This resource is obsolete and exists for compatibility with earlier releases. It has been replaced by <code>XmNbuttonFontList</code>, <code>XmNlabelFontList</code>, and <code>XmNtextFontList</code>.</p>
-<dt><code>XmNdeleteResponse</code></p>
-<dd>Determines what action the shell takes in response to a <code>WM_DELETE_WINDOW</code> message. The setting can be one of three values: <code>XmDESTROY</code>, <code>XmUNMAP</code>, and <code>XmDO_NOTHING</code>. The resource is scanned, and the appropriate action is taken after the <code>WM_DELETE_WINDOW</code> callback list (if any) that is registered with the Protocol manager has been called.</p>
-<dt><code>XmNinputMethod</code></p>
-<dd>Specifies the string that sets the locale modifier for the input method. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</p>
-<dt><code>XmNinputPolicy</code></p>
-<dd>Specifies the policy to follow for creating an Input Context (IC) for this shell. This resource can have the following values:</p>
+<dt><code>XmNaudibleWarning</code></dt>
+<dd>Determines whether an action activates its associated audible cue. The possible values are <code>XmBELL</code> and <code>XmNONE</code>.</dd>
+<dt><code>XmNbuttonFontList</code></dt>
+<dd>Specifies the font list used for button descendants. See the <code>XmNbuttonRenderTable</code> resource.</dd>
+<dt><code>XmNbuttonRenderTable</code></dt>
+<dd>Specifies the render table used for VendorShell&#8217;s button descendants. If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNbuttonRenderTable</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNbuttonRenderTable</code> is initialized to the <code>XmBUTTON_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNdefaultFontList</code></dt>
+<dd>Specifies a default font list for VendorShell&#8217;s descendants. This resource is obsolete and exists for compatibility with earlier releases. It has been replaced by <code>XmNbuttonFontList</code>, <code>XmNlabelFontList</code>, and <code>XmNtextFontList</code>.</dd>
+<dt><code>XmNdeleteResponse</code></dt>
+<dd>Determines what action the shell takes in response to a <code>WM_DELETE_WINDOW</code> message. The setting can be one of three values: <code>XmDESTROY</code>, <code>XmUNMAP</code>, and <code>XmDO_NOTHING</code>. The resource is scanned, and the appropriate action is taken after the <code>WM_DELETE_WINDOW</code> callback list (if any) that is registered with the Protocol manager has been called.</dd>
+<dt><code>XmNinputMethod</code></dt>
+<dd>Specifies the string that sets the locale modifier for the input method. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dd>
+<dt><code>XmNinputPolicy</code></dt>
+<dd>Specifies the policy to follow for creating an Input Context (IC) for this shell. This resource can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPER_SHELL</code></p>
-<dd>Specifies that only one XIC is created per shell.</p>
-<dt><code>XmPER_WIDGET</code></p>
-<dd>Specifies that one XIC is created for each widget.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPER_SHELL</code></dt>
+<dd>Specifies that only one XIC is created per shell.</dd>
+<dt><code>XmPER_WIDGET</code></dt>
+<dd>Specifies that one XIC is created for each widget.</dd></dl>
 </dl>
-<dt><code>XmNkeyboardFocusPolicy</code></p>
-<dd>Determines allocation of keyboard focus within the widget hierarchy rooted at this shell. The X keyboard focus must be directed to somewhere in the hierarchy for this client-side focus management to take effect. Possible values are <code>XmEXPLICIT</code>, specifying a click-to-type policy, and <code>XmPOINTER</code>, specifying a pointer-driven policy.</p>
-<dt><code>XmNlabelFontList</code></p>
-<dd>Specifies the font list used for label descendants. See the <code>XmNlabelRenderTable</code> resource.</p>
-<dt><code>XmNlabelRenderTable</code></p>
-<dd>Specifies the font list used for VendorShell&#8217;s label descendants (Labels and LabelGadgets). If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNlabelFontList</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNlabelRenderTable</code> is initialized to the <code>XmLABEL_RENDER_TABLE</code> of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNlayoutDirection</code></p>
-<dd>Specifies the direction in which the subwidgets, children of a widget, or other visual components are to be laid out. This policy will apply as the default layout policy for all descendants of this VendorShell.</p>
-<dt><code>XmNmwmDecorations</code></p>
-<dd>Specifies the decoration flags (specific decorations to add or remove from the window manager frame) for the <code>_MOTIF_WM_HINTS</code> property. If any decoration flags are specified by the <code>_MOTIF_WM_HINTS</code> property, only decorations indicated by both that property and the MWM <code>clientDecoration</code> and <code>transientDecoration</code> resources are displayed. If no decoration flags are specified by the <code>_MOTIF_WM_HINTS</code> property, decorations indicated by the MWM <code>clientDecoration</code> and <code>transientDecoration</code> resources are displayed. The default for the <code>XmNmwmDecorations</code> resource is not to specify any decoration flags for the <code>_MOTIF_WM_HINTS</code> property.</p>
-<dd>The value of this resource is the bitwise inclusive OR of one or more flag bits. The possible flag bit constants, defined in the include file <code>Xm/MwmUtil.h</code>, are</p>
+<dt><code>XmNkeyboardFocusPolicy</code></dt>
+<dd>Determines allocation of keyboard focus within the widget hierarchy rooted at this shell. The X keyboard focus must be directed to somewhere in the hierarchy for this client-side focus management to take effect. Possible values are <code>XmEXPLICIT</code>, specifying a click-to-type policy, and <code>XmPOINTER</code>, specifying a pointer-driven policy.</dd>
+<dt><code>XmNlabelFontList</code></dt>
+<dd>Specifies the font list used for label descendants. See the <code>XmNlabelRenderTable</code> resource.</dd>
+<dt><code>XmNlabelRenderTable</code></dt>
+<dd>Specifies the font list used for VendorShell&#8217;s label descendants (Labels and LabelGadgets). If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNlabelFontList</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNlabelRenderTable</code> is initialized to the <code>XmLABEL_RENDER_TABLE</code> of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNlayoutDirection</code></dt>
+<dd>Specifies the direction in which the subwidgets, children of a widget, or other visual components are to be laid out. This policy will apply as the default layout policy for all descendants of this VendorShell.</dd>
+<dt><code>XmNmwmDecorations</code></dt>
+<dd>Specifies the decoration flags (specific decorations to add or remove from the window manager frame) for the <code>_MOTIF_WM_HINTS</code> property. If any decoration flags are specified by the <code>_MOTIF_WM_HINTS</code> property, only decorations indicated by both that property and the MWM <code>clientDecoration</code> and <code>transientDecoration</code> resources are displayed. If no decoration flags are specified by the <code>_MOTIF_WM_HINTS</code> property, decorations indicated by the MWM <code>clientDecoration</code> and <code>transientDecoration</code> resources are displayed. The default for the <code>XmNmwmDecorations</code> resource is not to specify any decoration flags for the <code>_MOTIF_WM_HINTS</code> property.</dd>
+<dd>The value of this resource is the bitwise inclusive OR of one or more flag bits. The possible flag bit constants, defined in the include file <code>Xm/MwmUtil.h</code>, are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>MWM_DECOR_ALL</code></p>
-<dd>All decorations <i>except</i> those specified by other flag bits that are set</p>
-<dt><code>MWM_DECOR_BORDER</code></p>
-<dd>Client window border</p>
-<dt><code>MWM_DECOR_RESIZEH</code></p>
-<dd>Resize frame handles</p>
-<dt><code>MWM_DECOR_TITLE</code></p>
-<dd>Title bar</p>
-<dt><code>MWM_DECOR_MENU</code></p>
-<dd>Window menu button</p>
-<dt><code>MWM_DECOR_MINIMIZE</code></p>
-<dd>Minimize window button</p>
-<dt><code>MWM_DECOR_MAXIMIZE</code></p>
-<dd>Maximize window button</dl>
+</dd><dl COMPACT>
+<dt><code>MWM_DECOR_ALL</code></dt>
+<dd>All decorations <i>except</i> those specified by other flag bits that are set</dd>
+<dt><code>MWM_DECOR_BORDER</code></dt>
+<dd>Client window border</dd>
+<dt><code>MWM_DECOR_RESIZEH</code></dt>
+<dd>Resize frame handles</dd>
+<dt><code>MWM_DECOR_TITLE</code></dt>
+<dd>Title bar</dd>
+<dt><code>MWM_DECOR_MENU</code></dt>
+<dd>Window menu button</dd>
+<dt><code>MWM_DECOR_MINIMIZE</code></dt>
+<dd>Minimize window button</dd>
+<dt><code>MWM_DECOR_MAXIMIZE</code></dt>
+<dd>Maximize window button</dd></dl>
 </dl>
-<dt><code>XmNmwmFunctions</code></p>
-<dd>Specifies the function flags (specific window manager functions to apply or not apply to the client window) for the <code>_MOTIF_WM_HINTS</code> property. If any function flags are specified by the <code>_MOTIF_WM_HINTS</code> property, only functions indicated by both that property and the MWM <code>clientFunctions</code> and <code>transientFunctions</code> resources are applied. If no function flags are specified by the <code>_MOTIF_WM_HINTS</code> property, functions indicated by the MWM <code>clientFunctions</code> and <code>transientFunctions</code> resources are applied. The default for the <code>XmNmwmFunctions</code> resource is not to specify any function flags for the <code>_MOTIF_WM_HINTS</code> property.</p>
-<dd>The value of this resource is the bitwise inclusive OR of one or more flag bits. The possible flag bit constants, defined in the include file <code>Xm/MwmUtil.h</code>, are</p>
+<dt><code>XmNmwmFunctions</code></dt>
+<dd>Specifies the function flags (specific window manager functions to apply or not apply to the client window) for the <code>_MOTIF_WM_HINTS</code> property. If any function flags are specified by the <code>_MOTIF_WM_HINTS</code> property, only functions indicated by both that property and the MWM <code>clientFunctions</code> and <code>transientFunctions</code> resources are applied. If no function flags are specified by the <code>_MOTIF_WM_HINTS</code> property, functions indicated by the MWM <code>clientFunctions</code> and <code>transientFunctions</code> resources are applied. The default for the <code>XmNmwmFunctions</code> resource is not to specify any function flags for the <code>_MOTIF_WM_HINTS</code> property.</dd>
+<dd>The value of this resource is the bitwise inclusive OR of one or more flag bits. The possible flag bit constants, defined in the include file <code>Xm/MwmUtil.h</code>, are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>MWM_FUNC_ALL</code></p>
-<dd>All functions <i>except</i> those specified by other flag bits that are set</p>
-<dt><code>MWM_FUNC_RESIZE</code></p>
-<dd><code>f.resize</code></p>
-<dt><code>MWM_FUNC_MOVE</code></p>
-<dd><code>f.move</code></p>
-<dt><code>MWM_FUNC_MINIMIZE</code></p>
-<dd><code>f.minimize</code></p>
-<dt><code>MWM_FUNC_MAXIMIZE</code></p>
-<dd><code>f.maximize</code></p>
-<dt><code>MWM_FUNC_CLOSE</code></p>
-<dd><code>f.kill</code></dl>
+</dd><dl COMPACT>
+<dt><code>MWM_FUNC_ALL</code></dt>
+<dd>All functions <i>except</i> those specified by other flag bits that are set</dd>
+<dt><code>MWM_FUNC_RESIZE</code></dt>
+<dd><code>f.resize</code></dd>
+<dt><code>MWM_FUNC_MOVE</code></dt>
+<dd><code>f.move</code></dd>
+<dt><code>MWM_FUNC_MINIMIZE</code></dt>
+<dd><code>f.minimize</code></dd>
+<dt><code>MWM_FUNC_MAXIMIZE</code></dt>
+<dd><code>f.maximize</code></dd>
+<dt><code>MWM_FUNC_CLOSE</code></dt>
+<dd><code>f.kill</code></dd></dl>
 </dl>
-<dt><code>XmNmwmInputMode</code></p>
-<dd>Specifies the input mode flag (application modal or system modal input constraints) for the <code>_MOTIF_WM_HINTS</code> property. If no input mode flag is specified by the <code>_MOTIF_WM_HINTS</code> property, no input constraints are applied, and input goes to any window. The default for the <code>XmNmwmInputMode</code> resource is not to specify any input mode flag for the <code>_MOTIF_WM_HINTS</code> property.</p>
-<dd>An application that sets input constraints on a dialog usually uses the BulletinBoard&#8217;s <code>XmNdialogStyle</code> resource rather than the parent DialogShell&#8217;s <code>XmNmwmInputMode</code> resource.</p>
-<dd>The possible values for this resource, defined in the include file <code>Xm/MwmUtil.h</code>, are</p>
+<dt><code>XmNmwmInputMode</code></dt>
+<dd>Specifies the input mode flag (application modal or system modal input constraints) for the <code>_MOTIF_WM_HINTS</code> property. If no input mode flag is specified by the <code>_MOTIF_WM_HINTS</code> property, no input constraints are applied, and input goes to any window. The default for the <code>XmNmwmInputMode</code> resource is not to specify any input mode flag for the <code>_MOTIF_WM_HINTS</code> property.</dd>
+<dd>An application that sets input constraints on a dialog usually uses the BulletinBoard&#8217;s <code>XmNdialogStyle</code> resource rather than the parent DialogShell&#8217;s <code>XmNmwmInputMode</code> resource.</dd>
+<dd>The possible values for this resource, defined in the include file <code>Xm/MwmUtil.h</code>, are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>MWM_INPUT_MODELESS</code></p>
-<dd>Input goes to any window.</p>
-<dt><code>MWM_INPUT_PRIMARY_APPLICATION_MODAL</code></p>
-<dd>Input does not go to ancestors of this window.</p>
-<dt><code>MWM_INPUT_SYSTEM_MODAL</code></p>
-<dd>Input goes only to this window.</p>
-<dt><code>MWM_INPUT_FULL_APPLICATION_MODAL</code></p>
-<dd>Input does not go to other windows in this application.</dl>
+</dd><dl COMPACT>
+<dt><code>MWM_INPUT_MODELESS</code></dt>
+<dd>Input goes to any window.</dd>
+<dt><code>MWM_INPUT_PRIMARY_APPLICATION_MODAL</code></dt>
+<dd>Input does not go to ancestors of this window.</dd>
+<dt><code>MWM_INPUT_SYSTEM_MODAL</code></dt>
+<dd>Input goes only to this window.</dd>
+<dt><code>MWM_INPUT_FULL_APPLICATION_MODAL</code></dt>
+<dd>Input does not go to other windows in this application.</dd></dl>
 </dl>
-<dt><code>XmNmwmMenu</code></p>
-<dd>Specifies the menu items that the Motif window manager should add to the end of the window menu. The string contains a list of items separated by <code>fP with the following format:</dl>
+<dt><code>XmNmwmMenu</code></dt>
+<dd>Specifies the menu items that the Motif window manager should add to the end of the window menu. The string contains a list of items separated by <code>fP with the following format:</dd></dl>
 <p> </code></p>
 <pre><i>label [mnemonic] [accelerator] function</i></pre>
 <dl COMPACT>
-<dd>If more than one item is specified, the items should be separated by a newline character.</p>
-<dd>When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</p>
-<dt><code>XmNpreeditType</code></p>
-<dd>Specifies the input method style or styles available to the input manager. The resource can be a comma-separated list of the following values: </p>
+<dd>If more than one item is specified, the items should be separated by a newline character.</dd>
+<dd>When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dd>
+<dt><code>XmNpreeditType</code></dt>
+<dd>Specifies the input method style or styles available to the input manager. The resource can be a comma-separated list of the following values: </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center COLSPAN=2><code>Preedit Values</code>
@@ -865,78 +865,78 @@ description: "VendorShell — The VendorShell widget class"
 </td>
 </tr>
 </table>
-<dd>When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</p>
-<dt><code>XmNshellUnitType</code></p>
-<dd>This resource is obsolete, and is included only for compatibility with earlier releases of Motif. Use the <code>XmNunitType</code> resource instead.</p>
-<dt><code>XmNtextFontList</code></p>
-<dd>Specifies the font list used for text descendants. See the <code>XmNtextRenderTable</code> resource.</p>
-<dt><code>XmNtextRenderTable</code></p>
-<dd>Specifies the render table used for VendorShell&#8217;s Text and List descendants. If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNtextRenderTable</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNtextRenderTable</code> is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNtoolTipEnable</code></p>
-<dd>Specifies whether toolTips are enabled for this shell or not. </p>
-<dt><code>XmNtoolTipPostDelay</code></p>
-<dd>Specifies the time, in milliseconds, to wait after the pointer enters a widget before posting the toolTip associated with this widget. </p>
-<dt><code>XmNtoolTipPostDuration</code></p>
-<dd>Specifies the time, in milliseconds, that the toolTip is displayed. A value of 0 will display the tip indefinitely. </p>
-<dt><code>XmNunitType</code></p>
-<dd>Provides the basic support for resolution independence. It defines the type of units a widget uses with sizing and positioning resources. The resource has a default unit type of <code>XmPIXELS</code>.</p>
-<dd>The unit type can also be specified in resource files, with the following format:</dl>
+<dd>When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dd>
+<dt><code>XmNshellUnitType</code></dt>
+<dd>This resource is obsolete, and is included only for compatibility with earlier releases of Motif. Use the <code>XmNunitType</code> resource instead.</dd>
+<dt><code>XmNtextFontList</code></dt>
+<dd>Specifies the font list used for text descendants. See the <code>XmNtextRenderTable</code> resource.</dd>
+<dt><code>XmNtextRenderTable</code></dt>
+<dd>Specifies the render table used for VendorShell&#8217;s Text and List descendants. If this value is NULL at initialization and if the value of <code>XmNdefaultFontList</code> is not NULL, <code>XmNtextRenderTable</code> is initialized to the value of <code>XmNdefaultFontList</code>. If the value of <code>XmNdefaultFontList</code> is NULL, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, <code>XmNtextRenderTable</code> is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNtoolTipEnable</code></dt>
+<dd>Specifies whether toolTips are enabled for this shell or not. </dd>
+<dt><code>XmNtoolTipPostDelay</code></dt>
+<dd>Specifies the time, in milliseconds, to wait after the pointer enters a widget before posting the toolTip associated with this widget. </dd>
+<dt><code>XmNtoolTipPostDuration</code></dt>
+<dd>Specifies the time, in milliseconds, that the toolTip is displayed. A value of 0 will display the tip indefinitely. </dd>
+<dt><code>XmNunitType</code></dt>
+<dd>Provides the basic support for resolution independence. It defines the type of units a widget uses with sizing and positioning resources. The resource has a default unit type of <code>XmPIXELS</code>.</dd>
+<dd>The unit type can also be specified in resource files, with the following format:</dd></dl>
 <pre><tt></tt><i>&lt;floating value&gt;&lt;unit&gt;</i></pre>
 <dl COMPACT>
-<dd>where:</p>
+<dd>where:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>unit</i></p>
-<dd>is &lt;&quot; &quot;, pixels, inches, centimeters, millimeters, points, font units&gt;</p>
-<dt><i>pixels</i></p>
-<dd>is &lt;<i>pix</i>, <i>pixel</i>, <i>pixels</i>&gt;</p>
-<dt><i>inches</i></p>
-<dd>is &lt;<i>in</i>, <i>inch</i>, <i>inches</i>&gt;</p>
-<dt><i>centimeter</i></p>
-<dd>is &lt;<i>cm</i>, <i>centimeter</i>, <i>centimeters</i>&gt;</p>
-<dt><i>millimeters</i></p>
-<dd>is &lt;<i>mm</i>, <i>millimeter</i>, <i>millimeters</i>&gt;</p>
-<dt><code>points</code></p>
-<dd>is &lt;<i>pt</i>, <i>point</i>, <i>points</i>&gt;</p>
-<dt><code>font units</code></p>
-<dd>is &lt;<i>fu</i>, <code>font_unit</code>, <code>font_units</code>&gt;</p>
-<dt><i>float</i></p>
-<dd>is {&quot;+&quot;|&quot;-&quot;}&#123;&#123;&lt;&quot;0&quot;-&quot;9&quot;&gt;*}.}&lt;&quot;0&quot;-&quot;9&quot;&gt;*</p>
-<dd>Note that the type Dimension must always be positive.</dl>
+</dd><dl COMPACT>
+<dt><i>unit</i></dt>
+<dd>is &lt;&quot; &quot;, pixels, inches, centimeters, millimeters, points, font units&gt;</dd>
+<dt><i>pixels</i></dt>
+<dd>is &lt;<i>pix</i>, <i>pixel</i>, <i>pixels</i>&gt;</dd>
+<dt><i>inches</i></dt>
+<dd>is &lt;<i>in</i>, <i>inch</i>, <i>inches</i>&gt;</dd>
+<dt><i>centimeter</i></dt>
+<dd>is &lt;<i>cm</i>, <i>centimeter</i>, <i>centimeters</i>&gt;</dd>
+<dt><i>millimeters</i></dt>
+<dd>is &lt;<i>mm</i>, <i>millimeter</i>, <i>millimeters</i>&gt;</dd>
+<dt><code>points</code></dt>
+<dd>is &lt;<i>pt</i>, <i>point</i>, <i>points</i>&gt;</dd>
+<dt><code>font units</code></dt>
+<dd>is &lt;<i>fu</i>, <code>font_unit</code>, <code>font_units</code>&gt;</dd>
+<dt><i>float</i></dt>
+<dd>is {&quot;+&quot;|&quot;-&quot;}&#123;&#123;&lt;&quot;0&quot;-&quot;9&quot;&gt;*}.}&lt;&quot;0&quot;-&quot;9&quot;&gt;*</dd>
+<dd>Note that the type Dimension must always be positive.</dd></dl>
 </dl>
-<dd>For example,</dl>
+<dd>For example,</dd></dl>
 <pre><tt>xmfonts*XmMainWindow.height: 10.4cm
 *PostIn.width: 3inches</tt></pre>
 <dl COMPACT>
-<dd><code>XmNunitType</code> can have the following values:</p>
+<dd><code>XmNunitType</code> can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPIXELS</code></p>
-<dd>All values provided to the widget are treated as normal pixel values.</p>
-<dt><code>XmMILLIMETERS</code></p>
-<dd>All values provided to the widget are treated as normal millimeter values.</p>
-<dt><code>Xm100TH_MILLIMETERS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a millimeter.</p>
-<dt><code>XmCENTIMETERS</code></p>
-<dd>All values provided to the widget are treated as normal centimeter values.</p>
-<dt><code>XmINCHES</code></p>
-<dd>All values provided to the widget are treated as normal inch values.</p>
-<dt><code>Xm1000TH_INCHES</code></p>
-<dd>All values provided to the widget are treated as 1/1000 of an inch.</p>
-<dt><code>XmPOINTS</code></p>
-<dd>All values provided to the widget are treated as normal point values. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</p>
-<dt><code>Xm100TH_POINTS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a point. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</p>
-<dt><code>XmFONT_UNITS</code></p>
-<dd>All values provided to the widget are treated as normal font units. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</p>
-<dt><code>Xm100TH_FONT_UNITS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a font unit. A font unit has horizontal and vertical components. These are the values of the <code>XmScreen</code> resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPIXELS</code></dt>
+<dd>All values provided to the widget are treated as normal pixel values.</dd>
+<dt><code>XmMILLIMETERS</code></dt>
+<dd>All values provided to the widget are treated as normal millimeter values.</dd>
+<dt><code>Xm100TH_MILLIMETERS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a millimeter.</dd>
+<dt><code>XmCENTIMETERS</code></dt>
+<dd>All values provided to the widget are treated as normal centimeter values.</dd>
+<dt><code>XmINCHES</code></dt>
+<dd>All values provided to the widget are treated as normal inch values.</dd>
+<dt><code>Xm1000TH_INCHES</code></dt>
+<dd>All values provided to the widget are treated as 1/1000 of an inch.</dd>
+<dt><code>XmPOINTS</code></dt>
+<dd>All values provided to the widget are treated as normal point values. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</dd>
+<dt><code>Xm100TH_POINTS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a point. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</dd>
+<dt><code>XmFONT_UNITS</code></dt>
+<dd>All values provided to the widget are treated as normal font units. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dd>
+<dt><code>Xm100TH_FONT_UNITS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a font unit. A font unit has horizontal and vertical components. These are the values of the <code>XmScreen</code> resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dd></dl>
 </dl>
-<dd>For more information about units, refer to the <code>XmConvertUnits</code> reference page.</p>
-<dt><code>XmNuseAsyncGeometry</code></p>
-<dd>Specifies whether the geometry manager should wait for confirmation of a geometry request to the window manager. When the value of this resource is True, the geometry manager forces <code>XmNwaitForWm</code> to False and <code>XmNwmTimeout</code> to 0, and it relies on asynchronous notification. When the value of this resource is False, <code>XmNwaitForWm</code> and <code>XmNwmTimeout</code> are unaffected. The default is False. </p>
+<dd>For more information about units, refer to the <code>XmConvertUnits</code> reference page.</dd>
+<dt><code>XmNuseAsyncGeometry</code></dt>
+<dd>Specifies whether the geometry manager should wait for confirmation of a geometry request to the window manager. When the value of this resource is True, the geometry manager forces <code>XmNwaitForWm</code> to False and <code>XmNwmTimeout</code> to 0, and it relies on asynchronous notification. When the value of this resource is False, <code>XmNwaitForWm</code> and <code>XmNwmTimeout</code> are unaffected. The default is False. </dd>
 </dl>
 <h3>Inherited Resources</h3>
 <p>VendorShell inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>

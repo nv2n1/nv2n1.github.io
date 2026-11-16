@@ -27,14 +27,14 @@ description: "QuantLib::CashFlow – Base class for cash flows."
 <h3>virtual <code>Date</code> date () const [pure virtual]</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>This is inheriited from the event class</dl>
+<dd>This is inheriited from the event class</dd></dl>
 <p> Implements <code>Event</code>. </p>
 <p> Implemented in <code>Coupon</code>, <code>Dividend</code>, and <code>SimpleCashFlow</code>.</p>
 <h3>virtual <code>Real</code> amount () const [pure virtual]</h3>
 <p>returns the amount of the cash flow </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implemented in <code>Dividend</code>, <code>FixedDividend</code>, <code>FractionalDividend</code>, <code>FixedRateCoupon</code>, <code>FloatingRateCoupon</code>, and <code>SimpleCashFlow</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

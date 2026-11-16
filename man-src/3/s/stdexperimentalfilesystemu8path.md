@@ -11,15 +11,11 @@ std::experimental::filesystem::u8path - std::experimental::filesystem::u8path
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     template &lt;class Source&gt;
     (1)(filesystem TS)
-
         path u8path(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (2)(filesystem TS)
-
     path u8path(InputIt first, InputIt last);</code></pre> 
 Constructs a path p from a UTF-8 encoded sequence of chars, supplied either as an std::string, or as a null-terminated multibyte string, or as a [first, last) iterator pair. 
 * If path::value_type is char and native encoding is UTF-8, constructs a path directly as if by path(source) or path(first, last). Note: this is the typical situation of a POSIX system that uses Unicode, such as Linux. 
@@ -53,18 +49,12 @@ On systems where native path format differs from the generic path format (neithe
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));

@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_ranges - apply list of range constraints to a parameter
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the list of range constraints</dl>
+<dl><dd>hw_params variable to apply the list of range constraints</dd></dl>
  
 
  <i>r</i>
-<dl><dd>ranges</dl>
+<dl><dd>ranges</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,28 +14,28 @@ description: "livecd-creator – creates live CD or DVD images."
 <p><code>livecd-creator</code> creates live <font SIZE="-1">CD</font> or <font SIZE="-1">DVD</font> images(<font SIZE="-1">ISO</font> images) from kickstart files. Kickstart files contain information about packages and configuration settings which are used to build the image.</p>
 <h2>Options</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd>Shows the help message and exits.</dl>
+<dt>-h, &#8211;help</dt>
+<dd>Shows the help message and exits.</dd></dl>
 <h2>Image Options</h2>
 <p>These options define the created image.</p>
 <dl>
-<dt>-c <font SIZE="-1">KSCFG,</font> &#8211;config=KSCFG</p>
-<dd>Path to kickstart configuration file.</p>
-<dt>-b <font SIZE="-1">BASE_ON,</font> &#8211;base-on=BASE_ON</p>
-<dd>Add packages to an existing live <font SIZE="-1">CD</font> iso9660 image.</p>
-<dt>-f <font SIZE="-1">FS_LABEL,</font> &#8211;fslabel=FS_LABEL</p>
-<dd>Defines the file system label. The default is based on the configuration name.</p>
-<dt>&#8211;compression-type=COMPRESSOR</p>
-<dd>Specify a compressor recognized by mksquashfs. xz is the default and works with 2.6.38 and later kernels. gzip works with all kernels. lzo works with 2.6.36 and later kernels. lzma will only work with custom kernels. Set to &#8216;None&#8217; to force reading the compressor used in <font SIZE="-1">BASE_ON.</font> If gzip is used, the -comp option is not passed to mksquashfs to allow the use of older versions of mksquashfs.</p>
-<dt>&#8211;releasever=VER</p>
-<dd>Set the value to substitute for <tt>$releasever</tt> in kickstart repo urls</dl>
+<dt>-c <font SIZE="-1">KSCFG,</font> &#8211;config=KSCFG</dt>
+<dd>Path to kickstart configuration file.</dd>
+<dt>-b <font SIZE="-1">BASE_ON,</font> &#8211;base-on=BASE_ON</dt>
+<dd>Add packages to an existing live <font SIZE="-1">CD</font> iso9660 image.</dd>
+<dt>-f <font SIZE="-1">FS_LABEL,</font> &#8211;fslabel=FS_LABEL</dt>
+<dd>Defines the file system label. The default is based on the configuration name.</dd>
+<dt>&#8211;compression-type=COMPRESSOR</dt>
+<dd>Specify a compressor recognized by mksquashfs. xz is the default and works with 2.6.38 and later kernels. gzip works with all kernels. lzo works with 2.6.36 and later kernels. lzma will only work with custom kernels. Set to &#8216;None&#8217; to force reading the compressor used in <font SIZE="-1">BASE_ON.</font> If gzip is used, the -comp option is not passed to mksquashfs to allow the use of older versions of mksquashfs.</dd>
+<dt>&#8211;releasever=VER</dt>
+<dd>Set the value to substitute for <tt>$releasever</tt> in kickstart repo urls</dd></dl>
 <h2>System Directory Options</h2>
 <p>These options define directories used on your system for creating the live image.</p>
 <dl>
-<dt>-t <font SIZE="-1">TMPDIR,</font> &#8211;tmpdir=TMPDIR</p>
-<dd>defines the temporary directory to use. The default directory is /var/tmp.</p>
-<dt>&#8211;cache=CACHEDIR</p>
-<dd>Defines the cache directory to use (default: private cache).</dl>
+<dt>-t <font SIZE="-1">TMPDIR,</font> &#8211;tmpdir=TMPDIR</dt>
+<dd>defines the temporary directory to use. The default directory is /var/tmp.</dd>
+<dt>&#8211;cache=CACHEDIR</dt>
+<dd>Defines the cache directory to use (default: private cache).</dd></dl>
 <h2>Examples</h2>
 <p>Barebones LiveCD </p>
 <p> livecd-creator \ &#8211;config=/usr/share/livecd-tools/livecd-fedora-minimal.ks </p>

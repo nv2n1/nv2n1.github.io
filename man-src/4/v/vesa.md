@@ -22,14 +22,14 @@ description: "vesa – Generic VESA video driver"
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details. This section only covers configuration details specific to this driver. </p>
 <p> The driver auto-detects the presence of VESA-compatible hardware. The <code>ChipSet</code> name may optionally be specified in the config file <code>&#34;Device&#34;</code> section, and will override the auto-detection: </p>
 <dl>
-<dd>&quot;vesa&quot;</dl>
+<dd>&quot;vesa&quot;</dd></dl>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;ShadowFB&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable use of the shadow framebuffer layer. Default: on. </p>
+<dt><code>Option &#34;ShadowFB&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable use of the shadow framebuffer layer. Default: on. </dd>
 <p> This option is recommended for performance reasons.</p>
-<dt><code>Option &#34;ModeSetClearScreen&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Clear the screen on mode set. Some BIOSes seem to be broken in the sense that the newly set video mode is bogus if they are asked to clear the screen during mode setting. If you experience problems try to turn this option off. Default: on. </p>
+<dt><code>Option &#34;ModeSetClearScreen&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Clear the screen on mode set. Some BIOSes seem to be broken in the sense that the newly set video mode is bogus if they are asked to clear the screen during mode setting. If you experience problems try to turn this option off. Default: on. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7)</p>

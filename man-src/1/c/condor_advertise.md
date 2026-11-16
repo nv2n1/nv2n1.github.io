@@ -18,149 +18,77 @@ description: "condor_advertise Send a ClassAd to the condor_collector daemon"
 <p> The <i>update-command</i> may be one of the following strings: </p>
 <p> <code>UPDATE_STARTD_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_SCHEDD_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_MASTER_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_GATEWAY_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_CKPT_SRVR_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_NEGOTIATOR_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_HAD_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_AD_GENERIC</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_SUBMITTOR_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_COLLECTOR_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_LICENSE_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UPDATE_STORAGE_AD</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <i>condor_advertise</i> can also be used to invalidate and delete ClassAds currently held by the <i>condor_collector</i> daemon. In this case the <i>update-command</i> will be one of the following strings: </p>
 <p> <code>INVALIDATE_STARTD_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_SCHEDD_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_MASTER_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_GATEWAY_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_CKPT_SRVR_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_NEGOTIATOR_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_HAD_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_ADS_GENERIC</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_SUBMITTOR_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_COLLECTOR_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_LICENSE_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>INVALIDATE_STORAGE_ADS</code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> For any of these INVALIDATE commands, the ClassAd in the required file consists of three entries. The file contents will be similar to: </p>
 <p> MyType = &quot;Query&quot;<br />
  TargetType = &quot;Machine&quot;<br />
@@ -170,80 +98,58 @@ description: "condor_advertise Send a ClassAd to the condor_collector daemon"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Print debugging information as the command executes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Print debugging information as the command executes.</dd>
+</dl>
 <p> <code>-multiple</code></p>
 <dl>
 <dt>
-<dd> Send more than one ClassAd, where the boundary between ClassAds is one or more blank lines.</p>
-<dt>
-<dd></dl>
+</dt><dd> Send more than one ClassAd, where the boundary between ClassAds is one or more blank lines.</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portname]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number. The default is the COLLECTOR_HOST specified in the configuration file.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number. The default is the COLLECTOR_HOST specified in the configuration file.</dd>
+</dl>
 <p> <code>-tcp</code></p>
 <dl>
 <dt>
-<dd> Use TCP for communication. Without this option, UDP is used.</p>
-<dt>
-<dd></dl>
+</dt><dd> Use TCP for communication. Without this option, UDP is used.</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> The job and machine ClassAds are regularly updated. Therefore, the result of <i>condor_advertise</i> is likely to be overwritten in a very short time. It is unlikely that either HTCondor users (those who submit jobs) or administrators will ever have a use for this command. If it is desired to update or set a ClassAd attribute, the <i>condor_config_val</i> command is the proper command to use. </p>
 <p> Attributes are defined in Appendix A of the HTCondor manual. </p>
 <p> For those administrators who do need <i>condor_advertise</i> , the following attributes may be included: </p>
 <p> <code>DaemonStartTime </code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UpdateSequenceNumber </code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> If both of the above are included, the <i>condor_collector</i> will automatically include the following attributes: </p>
 <p> <code>UpdatesTotal </code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UpdatesLost </code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UpdatesSequenced </code></p>
 <dl>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dl>
 <p> <code>UpdatesHistory </code></p>
 <dl>
 <dt>
-<dd> Affected by COLLECTOR_DAEMON_HISTORY_SIZE .</p>
-<dt>
-<dd></dl>
+</dt><dd> Affected by COLLECTOR_DAEMON_HISTORY_SIZE .</dd>
+</dl>
 <h2>Examples</h2>
 <p> Assume that a machine called condor.example.com is turned off, yet its <i>condor_startd</i> ClassAd does not expire for another 20 minutes. To avoid this machine being matched, an administrator chooses to delete the machine&#8217;s <i>condor_startd</i> ClassAd. Create a file (called remove_file in this example) with the three required attributes: </p>
 <p> MyType = &quot;Query&quot;<br />

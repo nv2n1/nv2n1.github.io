@@ -11,9 +11,7 @@ std::experimental::atomic_weak_ptr - std::experimental::atomic_weak_ptr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/atomic&gt;
-
 template &lt; class T &gt;                     (concurrency TS)
-
 class atomic_weak_ptr;</code></pre> 
 The class template atomic_weak_ptr provides thread-safe atomic pointer operations over a std::weak_ptr. 
 

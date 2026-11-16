@@ -11,10 +11,8 @@ std::make_signed - std::make_signed
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct make_signed;</code></pre> 
 If T is an integral (except bool) or enumeration type, provides the member typedef type which is the signed integer type corresponding to T, with the same cv-qualifiers. 
 Otherwise, the behavior is undefined. 
@@ -32,7 +30,6 @@ using make_signed_t = typename make_signed&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

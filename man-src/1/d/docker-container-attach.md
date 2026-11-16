@@ -19,21 +19,19 @@ description: "docker-container-attach – Attach local standard input, output, a
 <p> If you want, you can configure an override the Docker key sequence for detach. This is useful if the Docker default sequence conflicts with key sequence you use for other applications. There are two ways to define your own detach key sequence, as a per-container override or as a configuration property on your entire configuration. </p>
 <p> To override the sequence for an individual container, use the &#8211;detach-keys=&quot;&lt;sequence&gt;&quot; flag with the docker attach command. The format of the &lt;sequence&gt; is either a letter [a-Z], or the ctrl- combined with any of the following: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> a-z (a single lowercase alpha character )</p>
-<dt>&bull;</p>
-<dd> @ (at sign)</p>
-<dt>&bull;</p>
-<dd> [ (left bracket)</p>
-<dt>&bull;</p>
-<dd> \ (two backward slashes)</p>
-<dt>&bull;</p>
-<dd> _ (underscore)</p>
-<dt>&bull;</p>
-<dd> ^ (caret) </p>
+<dt>&bull;</dt>
+<dd> a-z (a single lowercase alpha character )</dd>
+<dt>&bull;</dt>
+<dd> @ (at sign)</dd>
+<dt>&bull;</dt>
+<dd> [ (left bracket)</dd>
+<dt>&bull;</dt>
+<dd> \ (two backward slashes)</dd>
+<dt>&bull;</dt>
+<dd> _ (underscore)</dd>
+<dt>&bull;</dt>
+<dd> ^ (caret) </dd>
 </dl>
 </dl>
 <p> These a, ctrl-a, X, or ctrl-\ values are all examples of valid key sequences. To configure a different configuration default key sequence for all containers, see <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>. </p>
@@ -42,7 +40,7 @@ description: "docker-container-attach – Attach local standard input, output, a
 <p> In this example the top command is run inside a container, from an image called fedora, in detached mode. The ID from the container is passed into the <code>docker attach</code> command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ID=$(sudo docker run -d fedora /usr/bin/top -b)
 $ sudo docker attach $ID
@@ -61,7 +59,7 @@ Swap:   786428k total,        0k used,   786428k free,   221776k cached
 PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
 1 root      20   0 17208 1144  932 R    0  0.3   0:00.03 top
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;detach-keys</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Override the key sequence for detaching a container</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for attach</p>

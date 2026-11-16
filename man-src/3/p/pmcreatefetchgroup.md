@@ -30,14 +30,14 @@ description: "pmCreateFetchGroup, pmExtendFetchGroup_item, pmExtendFetchGroup_in
 <h3>Extending a fetchgroup with a metric instance of interest</h3>
 <p><code> int pmExtendFetchGroup_item(pmFG pmfg, const char *metric, const char *instance, const char *scale, pmAtomValue *out_value, int out_type, int *out_sts); This function registers interest in a single metric and optional instance. The metric name is given in the mandatory <i>metric</i> parameter, which is checked immediately via <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3) and other calls. If and only if the metric has an instance domain, the specific instance of interest may be named by the <i>instance</i> parameter, which is checked immediately via <code><a href="/docs/linux/man/3-pmnameindom/">pmNameInDom</a></code>(3); otherwise pass NULL. If the fetchgroup context is a set of archives, it is possible that the metric / instance pair is not yet defined at the current time origin. Therefore, this function may attempt to seek to the <i>end</i> of the current set of archives <i>temporarily</i> to retry the metric / instance lookup. The optional <i>scale</i> parameter specifies desired unit/scale/rate conversions for the metric value. It can take the following values:</p>
 <dl>
-<dt>NULL</p>
-<dd>No unit/scale conversion. If metric has <code>PM_SEM_COUNTER</code> semantics, perform rate conversion.</p>
-<dt>rate</p>
-<dd>Perform rate conversion regardless of semantics, and no unit/scale conversion.</p>
-<dt>instant</p>
-<dd>Perform no rate conversion regardless of semantics, and no unit/scale conversion.</p>
-<dt>EXPRESSION</p>
-<dd>Perform unit/scale/rate conversion as specified by the EXPRESSION, which is parsed by <code><a href="/docs/linux/man/3-pmparseunitsstr/">pmParseUnitsStr</a></code>(3). This may be useful to assert a canonical scaling for the resulting metric value, independent of PCP version or configuration. Dimensionality must match the metric, except if rate conversion is requested, in which case the time dimension must be one smaller than the metric&#8217;s time dimension. Note that the type of rate conversion performed here matches the <code>rate(x)</code> function in derived metric expressions, in that it is calculated as the naive difference between previous and current values of a metric, divided by elapsed time. For example, if a counter wraps around, or a non-counter value decreases, a <i>negative</i> output rate may be computed.</dl>
+<dt>NULL</dt>
+<dd>No unit/scale conversion. If metric has <code>PM_SEM_COUNTER</code> semantics, perform rate conversion.</dd>
+<dt>rate</dt>
+<dd>Perform rate conversion regardless of semantics, and no unit/scale conversion.</dd>
+<dt>instant</dt>
+<dd>Perform no rate conversion regardless of semantics, and no unit/scale conversion.</dd>
+<dt>EXPRESSION</dt>
+<dd>Perform unit/scale/rate conversion as specified by the EXPRESSION, which is parsed by <code><a href="/docs/linux/man/3-pmparseunitsstr/">pmParseUnitsStr</a></code>(3). This may be useful to assert a canonical scaling for the resulting metric value, independent of PCP version or configuration. Dimensionality must match the metric, except if rate conversion is requested, in which case the time dimension must be one smaller than the metric&#8217;s time dimension. Note that the type of rate conversion performed here matches the <code>rate(x)</code> function in derived metric expressions, in that it is calculated as the naive difference between previous and current values of a metric, divided by elapsed time. For example, if a counter wraps around, or a non-counter value decreases, a <i>negative</i> output rate may be computed.</dd></dl>
 <p> The optional but usual <i>out_value</i> parameter specifies the <code>pmAtomValue</code> where the converted result should later be stored. If the value is NULL, fetching and conversions will be attempted, and possible errors reported, but the result tossed away. The mandatory <i>out_type</i> parameter specifes the <code>PM_TYPE_*</code> requested for the output value. It need not match the metric&#8217;s native type, as the fetchgroup facility is capable of casting between all supported types (including to and from strings). Any errors subsequently encountered during fetching, unit/scale/rate conversion, or casting, will result in the assignment of a sentinel value to the output <code>pmAtomValue</code> (see the &#8220;UNUSUAL SITUATIONS&#8221; section below). In addition, if the optional <i>out_sts</i> parameter is specified, an appropriate PMAPI error code will be stored there. As a review, only the <i>pmfg</i>, <i>metric</i>, and <i>out_type</i> parameters are mandatory. Others may be NULL to indicate applicaton disinterest. The normal function return code is zero. This function may fail in case of various lookup, type- and conversion- checking errors. Those are indicated with a negative return code.</p>
 <h3>Extending a fetchgroup with a metric instance domain of interest</h3>
 <p><code> int pmExtendFetchGroup_indom(pmFG pmfg, const char *metric, const char *scale, int out_inst_codes[], char *out_inst_names[], pmAtomValue out_values[], int out_type, int out_stss[], unsigned int out_maxnum, unsigned int *out_num, int *out_sts); This function generalizes the <code>pmExtendFetchGroup_item</code> function by registering interest in a whole instance domain. Therefore, the function registers preallocated <i>vectors</i> for output variables (instead of a singleton). Instances will be stored in sorted order in elements of those vectors. The concepts are otherwise the same. The metric name is specified by the mandatory <i>metric</i> parameter. Note that it <i>may</i> refer to a metric without an instance domain, in which case the single output value will appear as one unnamed instance. The optional <i>scale</i> parameter specifies desired unit/scale/rate conversions for the metric value, same as above. The optional <i>out_inst_codes</i> parameter specifies a vector of integers, where the raw instance number of the fetched metrics should later be stored. The optional <i>out_inst_names</i> parameter specifies a vector of strings, where the instance names of the fetched metrics should later be stored. If an instance does not have a corresponding name, a NULL pointer is stored instead. The application must not modify or <code><a href="/docs/linux/man/3-free/">free</a></code>(3) strings in that vector. The optional <i>out_values</i> parameter specifies a vector of <code>pmAtomValue</code> objects where the converted result should later be stored. The mandatory <i>out_type</i> parameter specifies the <code>PM_TYPE_*</code> requested for the all output values, same as above. The optional <i>out_stss</i> parameter specifies a vector of integers where per-instance error codes should be stored. The mandatory <i>out_maxnum</i> parameter specifies the number of elements of the vectors above. In other words, it tells the fetchgroup the maximum number of instances which are expected. The optional <i>out_num</i> parameter specifies an integer where the actual number of instances should later be stored. It will range between 0 and <i>out_maxnum</i>. It is initialized to 0 by this function. Finally, the optional <i>out_sts</i> parameter specifies a single location where an integer status code for the overall fetch for this metric should be stored. Normally, this will be zero. Other than a severe fetch error, one may see a <code>PM_ERR_TOOBIG</code> here if the number of instances actually encountered was larger than <i>out_maxnum</i>. Any errors subsequently encountered during fetching, unit/scale/rate conversion, or casting, will result in the assignment of a sentinel value to the appropriate output <code>pmAtomValue</code> (see the &#8220;UNUSUAL SITUATIONS&#8221; section below). In addition, if the optional <i>out_stss</i> parameter was specified, a PMAPI error code will be stored in the appropriate position. As a review, only the <i>pmfg</i>, <i>metric</i>, <i>out_type</i>, and <i>out_maxnum</i> parameters are mandatory. Others may be NULL to indicate applicaton disinterest. The normal function return code is zero. This function may fail in case of various lookup, type- and conversion- checking errors. Those are indicated with a negative return code.</p>
@@ -50,18 +50,17 @@ description: "pmCreateFetchGroup, pmExtendFetchGroup_item, pmExtendFetchGroup_in
 <h3>Destroying a fetchgroup</h3>
 <pre>int pmDestroyFetchGroup(pmFG <i>pmfg</i>);</pre>
 <p>When the fetchgroup is no longer needed, it may be explicitly freed with this function. It releases any dynamically stored state, as well as the private PMAPI context. It clears frees any pointers such as indom instance names or strings that may have been stored in output variables.</p>
+</code></code></code></code></code></code></code>
 <h2>Example</h2>
 <p>The following program demonstrates fetchgroup usage. Run it with different $PCP_DISK_UNITS environment variables to see different unit/rate conversion in effect. </p>
 <pre><code>#include &lt;pcp/pmapi.h&gt;
 #include &lt;stdio.h&gt;
-
 #define pcpassert(sts)                          \
     while (sts &lt; 0) {                           \
         fprintf(stderr, &quot;%s
 &quot;, pmErrStr(sts)); \
         exit(42);                               \
     }
-
 int main()
 {
     pmFG fg;
@@ -74,7 +73,6 @@ int main()
     int sts, i;
     char *diskunits = getenv(&quot;PCP_DISK_UNITS&quot;);
     struct timeval t;
-
     sts = pmCreateFetchGroup(&amp;fg, PM_CONTEXT_HOST, &quot;local:&quot;);
     pcpassert(sts);
     sts = pmExtendFetchGroup_item(fg, &quot;kernel.all.load&quot;, &quot;1 minute&quot;,
@@ -90,11 +88,9 @@ int main()
     pcpassert(sts);
     sts = pmExtendFetchGroup_timestamp(fg, &amp;t);
     pcpassert(sts);
-
     for (i = 0; i &lt; 10; i++) {
         unsigned int j;
         char stamp[28];
-
         sts = pmFetchGroup(fg);
         pcpassert(sts);
         printf(&quot;%s&quot;, pmCtime(&amp;t.tv_sec, stamp));
@@ -110,7 +106,6 @@ int main()
         }
         sleep(1);
     }
-
     sts = pmDestroyFetchGroup(fg);
     pcpassert(sts);
     return 0;

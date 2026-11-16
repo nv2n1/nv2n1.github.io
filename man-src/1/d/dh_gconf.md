@@ -16,14 +16,14 @@ description: "dh_gconf – install GConf defaults files and register schemas"
 <p> An appropriate dependency on gconf2 will be generated in <code>${misc:Depends}</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.gconf-defaults</p>
-<dd> Installed into <i>usr/share/gconf/defaults/10_package</i> in the package build directory, with <i>package</i> replaced by the package name.</p>
-<dt>debian/<i>package</i>.gconf-mandatory</p>
-<dd> Installed into <i>usr/share/gconf/mandatory/10_package</i> in the package build directory, with <i>package</i> replaced by the package name.</dl>
+<dt>debian/<i>package</i>.gconf-defaults</dt>
+<dd> Installed into <i>usr/share/gconf/defaults/10_package</i> in the package build directory, with <i>package</i> replaced by the package name.</dd>
+<dt>debian/<i>package</i>.gconf-mandatory</dt>
+<dd> Installed into <i>usr/share/gconf/mandatory/10_package</i> in the package build directory, with <i>package</i> replaced by the package name.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;priority</code> <i>priority</i></p>
-<dd> Use <i>priority</i> (which should be a 2-digit number) as the defaults priority instead of <code>10</code>. Higher values than ten can be used by derived distributions (<code>20</code>), <font SIZE="-1">CDD</font> distributions (<code>50</code>), or site-specific packages (<code>90</code>).</dl>
+<dt><code>&#8211;priority</code> <i>priority</i></dt>
+<dd> Use <i>priority</i> (which should be a 2-digit number) as the defaults priority instead of <code>10</code>. Higher values than ten can be used by derived distributions (<code>20</code>), <font SIZE="-1">CDD</font> distributions (<code>50</code>), or site-specific packages (<code>90</code>).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

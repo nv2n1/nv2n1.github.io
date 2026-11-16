@@ -10,69 +10,69 @@ description: "ocf_heartbeat_dhcpd – Chrooted ISC DHCP server resource agent."
 <p>ocf_heartbeat_dhcpd &#8211; Chrooted ISC DHCP server resource agent.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>dhcpd</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>dhcpd</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Manage an ISC DHCP server service in a chroot environment.</p>
+<dd>Manage an ISC DHCP server service in a chroot environment.</dd>
 <h2>Supported Parameters</h2>
 <p><code>config</code></p>
 <dl>
-<dd>The absolute path to the DHCP server configuration file. </p>
+<dd>The absolute path to the DHCP server configuration file. </dd>
 <p> (unique, required, string, no default)</dl>
 <p> <code>chrooted</code></p>
 <dl>
-<dd>Configure the dhcpd service to run in a chrooted or non-chrooted mode. </p>
+<dd>Configure the dhcpd service to run in a chrooted or non-chrooted mode. </dd>
 <p> (unique, optional, boolean, default true)</dl>
 <p> <code>chrooted_path</code></p>
 <dl>
-<dd>The absolute path of the chrooted DHCP environment. </p>
+<dd>The absolute path of the chrooted DHCP environment. </dd>
 <p> (unique, optional, string, default &quot;/var/lib/dhcp&quot;)</dl>
 <p> <code>binary</code></p>
 <dl>
-<dd>The binary for the DHCP server process. An absolute path definition is not required, but can be used to override environment path. </p>
+<dd>The binary for the DHCP server process. An absolute path definition is not required, but can be used to override environment path. </dd>
 <p> (optional, string, default &quot;dhcpd&quot;)</dl>
 <p> <code>user</code></p>
 <dl>
-<dd>The system user the DHCP server process will run as when it is chrooted. </p>
+<dd>The system user the DHCP server process will run as when it is chrooted. </dd>
 <p> (optional, string, default &quot;dhcpd&quot;)</dl>
 <p> <code>group</code></p>
 <dl>
-<dd>The system group the DHCP server process will run as when it is chrooted. </p>
+<dd>The system group the DHCP server process will run as when it is chrooted. </dd>
 <p> (optional, string, default &quot;nogroup&quot;)</dl>
 <p> <code>interface</code></p>
 <dl>
-<dd>The network interface(s) the DHCP server process will bind to. A blank value will bind the process to all interfaces. </p>
+<dd>The network interface(s) the DHCP server process will bind to. A blank value will bind the process to all interfaces. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>includes</code></p>
 <dl>
-<dd>This parameter provides a means to copy include files into the chrooted environment. If a dhcpd.conf file contains a line similar to this: </p>
+<dd>This parameter provides a means to copy include files into the chrooted environment. If a dhcpd.conf file contains a line similar to this: </dd>
 <p> include &quot;/etc/named.keys&quot;; </p>
 <p> Then an admin also has to tell the dhcpd RA that this file should be pulled into the chrooted environment. This is a space delimited list. </p>
 <p> (optional, string, no default)</dl>
 <p> <code>leases</code></p>
 <dl>
-<dd>The leases database file, relative to chrooted_path. </p>
+<dd>The leases database file, relative to chrooted_path. </dd>
 <p> (optional, string, default &quot;/db/dhcpd.leases&quot;)</dl>
 <p> <code>pid</code></p>
 <dl>
-<dd>The path and filename of the PID file. It is relative to chrooted_path. </p>
+<dd>The path and filename of the PID file. It is relative to chrooted_path. </dd>
 <p> (optional, string, default &quot;/var/run/dhcpd.pid&quot;)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a dhcpd resource using the <code>crm</code>(8) shell: </p>
 <dl>
@@ -81,7 +81,7 @@ description: "ocf_heartbeat_dhcpd – Chrooted ISC DHCP server resource agent."
  params \
  config=<i>string</i> \
  op monitor timeout=&quot;20&quot; interval=&quot;10&quot; depth=&quot;0&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a dhcpd resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
@@ -89,7 +89,7 @@ description: "ocf_heartbeat_dhcpd – Chrooted ISC DHCP server resource agent."
 <pre>pcs resource create p_dhcpd ocf:heartbeat:dhcpd \
  config=<i>string</i> \
  op monitor timeout=&quot;20&quot; interval=&quot;10&quot; depth=&quot;0&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/dhcpd_(resource_agent)">http://www.linux-ha.org/wiki/dhcpd_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

@@ -17,11 +17,11 @@ bson_append_array_end (bson_t *bson,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>child</code></p>
-<dd> The <code>bson_t</code> initialized in a call to <code><a href="/docs/linux/man/3-bson_append_array_begin/">bson_append_array_begin</a>(3)</code> \&amp;.</dl>
+<dt><code>child</code></dt>
+<dd> The <code>bson_t</code> initialized in a call to <code><a href="/docs/linux/man/3-bson_append_array_begin/">bson_append_array_begin</a>(3)</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_array_end/">bson_append_array_end</a>(3)</code> function shall complete the appending of an array field started with <code><a href="/docs/linux/man/3-bson_append_array_begin/">bson_append_array_begin</a>(3)</code> \&amp;. <code>child</code> is invalid after calling this function. </p>
 <h2>RETURNS</h2>

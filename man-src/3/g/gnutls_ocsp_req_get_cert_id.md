@@ -14,18 +14,18 @@ description: "gnutls_ocsp_req_get_cert_id – API function"
 <p> <code>int gnutls_ocsp_req_get_cert_id(gnutls_ocsp_req_t </code><i>req</i><code>, unsigned </code><i>indx</i><code>, gnutls_digest_algorithm_t * </code><i>digest</i><code>, gnutls_datum_t * </code><i>issuer_name_hash</i><code>, gnutls_datum_t * </code><i>issuer_key_hash</i><code>, gnutls_datum_t * </code><i>serial_number</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ocsp_req_t req</p>
-<dd> should contain a <code>gnutls_ocsp_req_t</code> structure</p>
-<dt>unsigned indx</p>
-<dd> Specifies which extension OID to get. Use (0) to get the first one.</p>
-<dt>gnutls_digest_algorithm_t * digest</p>
-<dd> output variable with <code>gnutls_digest_algorithm_t</code> hash algorithm</p>
-<dt>gnutls_datum_t * issuer_name_hash</p>
-<dd> output buffer with hash of issuer&#8217;s DN</p>
-<dt>gnutls_datum_t * issuer_key_hash</p>
-<dd> output buffer with hash of issuer&#8217;s public key</p>
-<dt>gnutls_datum_t * serial_number</p>
-<dd> output buffer with serial number of certificate to check</dl>
+<dt>gnutls_ocsp_req_t req</dt>
+<dd> should contain a <code>gnutls_ocsp_req_t</code> structure</dd>
+<dt>unsigned indx</dt>
+<dd> Specifies which extension OID to get. Use (0) to get the first one.</dd>
+<dt>gnutls_digest_algorithm_t * digest</dt>
+<dd> output variable with <code>gnutls_digest_algorithm_t</code> hash algorithm</dd>
+<dt>gnutls_datum_t * issuer_name_hash</dt>
+<dd> output buffer with hash of issuer&#8217;s DN</dd>
+<dt>gnutls_datum_t * issuer_key_hash</dt>
+<dd> output buffer with hash of issuer&#8217;s public key</dd>
+<dt>gnutls_datum_t * serial_number</dt>
+<dd> output buffer with serial number of certificate to check</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the certificate information of the<br />
 &nbsp;<wbr><i>indx</i>&nbsp;<wbr>&#8216;ed request in the OCSP request.&nbsp;<wbr>&nbsp;<wbr>The information returned corresponds to the CertID structure: </p>
@@ -42,6 +42,6 @@ description: "gnutls_ocsp_req_get_cert_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

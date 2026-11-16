@@ -17,15 +17,15 @@ int PAPI_stop_counters( long long *values, int array_len );</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>*values</i> an array where to put the counter values<br />
- <i>array_len</i> the number of items in the *values array</dl>
+ <i>array_len</i> the number of items in the *values array</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>After this function is called, the values are reset to zero.</dl>
+<dd>After this function is called, the values are reset to zero.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
  <i>PAPI_ENOTRUN</i> The EventSet is not started yet.<br />
- <i>PAPI_ENOEVST</i> The EventSet has not been added yet.</dl>
+ <i>PAPI_ENOEVST</i> The EventSet has not been added yet.</dd></dl>
 <p> The <code>PAPI_stop_counters()</code> function stops the counters and copies the counts into the *values array. The counters must have been started by a previous call to <code>PAPI_start_counters()</code>. </p>
 <pre>int Events[2] = { PAPI_TOT_CYC, PAPI_TOT_INS };
 long long values[2];
@@ -37,6 +37,6 @@ if ( PAPI_stop_counters( values, 2 ) != PAPI_OK )
  * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_read_counters()</code> <code>PAPI_start_counters()</code> <code>PAPI_set_opt()</code></dl>
+<dd><code>PAPI_read_counters()</code> <code>PAPI_start_counters()</code> <code>PAPI_set_opt()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

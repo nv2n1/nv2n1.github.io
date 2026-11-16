@@ -14,8 +14,8 @@ description: "gnutls_session_get_master_secret – get the session’s master se
 <p> <code>const void * gnutls_session_get_master_secret(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Return a pointer to the 48-byte master secret in the session. The pointer must not be modified or deallocated. </p>
 <p> If a master secret value has not yet been established, the output will be garbage; in particular, a <code>NULL</code> return value should not be expected. </p>
@@ -31,6 +31,6 @@ description: "gnutls_session_get_master_secret – get the session’s master se
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

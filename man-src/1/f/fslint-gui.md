@@ -29,14 +29,14 @@ description: "fslint-gui – A GUI wrapper for the individual fslint command lin
 <h2>PARAMETERS</h2>
 <p> If [PATHS] are specified, they become the default search path, otherwise the current directory becomes the default.</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> always print full paths even if only a single path is specified</p>
-<dt><code>-r</code></p>
-<dd> turn OFF recursion</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display the fslint version and exit</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help for tool specific options</dl>
+<dt><code>-f</code></dt>
+<dd> always print full paths even if only a single path is specified</dd>
+<dt><code>-r</code></dt>
+<dd> turn OFF recursion</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the fslint version and exit</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help for tool specific options</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Padraig Brady</p>
 <h2>REPORTING BUGS</h2>

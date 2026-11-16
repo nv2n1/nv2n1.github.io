@@ -10,41 +10,41 @@ description: "XPutImage, XGetImage, XGetSubImage – transfer images"
 <p>XPutImage, XGetImage, XGetSubImage &#8211; transfer images </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XPutImage(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, XImage *<i>image</i>, int <i>src_x</i>, int <i>src_y</i>, int <i>dest_x</i>, int <i>dest_y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>);</p>
-<dd>XImage *XGetImage(Display *<i>display</i>, Drawable <i>d</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>plane_mask</i>, int <i>format</i>);</p>
-<dd>XImage *XGetSubImage(Display *<i>display</i>, Drawable <i>d</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>plane_mask</i>, int <i>format</i>, XImage *<i>dest_image</i>, int <i>dest_x</i>, <i>dest_y</i>);</dl>
+<dd>int XPutImage(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, XImage *<i>image</i>, int <i>src_x</i>, int <i>src_y</i>, int <i>dest_x</i>, int <i>dest_y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>);</dd>
+<dd>XImage *XGetImage(Display *<i>display</i>, Drawable <i>d</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>plane_mask</i>, int <i>format</i>);</dd>
+<dd>XImage *XGetSubImage(Display *<i>display</i>, Drawable <i>d</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>plane_mask</i>, int <i>format</i>, XImage *<i>dest_image</i>, int <i>dest_x</i>, <i>dest_y</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>d</i></p>
-<dd>Specifies the drawable.</p>
-<dt><i>dest_image</i></p>
-<dd>Specifies the destination image.</p>
-<dt><i>dest_x</i></p>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable.</dd>
+<dt><i>dest_image</i></dt>
+<dd>Specifies the destination image.</dd>
+<dt><i>dest_x</i></dt>
 <dd>
-<dt><i>dest_y</i></p>
-<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and are the coordinates of the subimage or which are relative to the origin of the destination rectangle, specify its upper-left corner, and determine where the subimage is placed in the destination image.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>format</i></p>
-<dd>Specifies the format for the image. You can pass <code>XYPixmap</code> or <code>ZPixmap</code>.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>image</i></p>
-<dd>Specifies the image you want combined with the rectangle.</p>
-<dt><i>plane_mask</i></p>
-<dd>Specifies the plane mask.</p>
-<dt><i>src_x</i></p>
-<dd>Specifies the offset in X from the left edge of the image defined by the <code>XImage</code> structure.</p>
-<dt><i>src_y</i></p>
-<dd>Specifies the offset in Y from the top edge of the image defined by the <code>XImage</code> structure.</p>
-<dt><i>width</i></p>
+</dd><dt><i>dest_y</i></dt>
+<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and are the coordinates of the subimage or which are relative to the origin of the destination rectangle, specify its upper-left corner, and determine where the subimage is placed in the destination image.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>format</i></dt>
+<dd>Specifies the format for the image. You can pass <code>XYPixmap</code> or <code>ZPixmap</code>.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>image</i></dt>
+<dd>Specifies the image you want combined with the rectangle.</dd>
+<dt><i>plane_mask</i></dt>
+<dd>Specifies the plane mask.</dd>
+<dt><i>src_x</i></dt>
+<dd>Specifies the offset in X from the left edge of the image defined by the <code>XImage</code> structure.</dd>
+<dt><i>src_y</i></dt>
+<dd>Specifies the offset in Y from the top edge of the image defined by the <code>XImage</code> structure.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height of the subimage, which define the dimensions of the rectangle.</p>
-<dt><i>x</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height of the subimage, which define the dimensions of the rectangle.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and define the upper-left corner of the rectangle.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which are relative to the origin of the drawable and define the upper-left corner of the rectangle.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XPutImage</code> function combines an image with a rectangle of the specified drawable. The section of the image defined by the src_x, src_y, width, and height arguments is drawn on the specified part of the drawable. If <code>XYBitmap</code> format is used, the depth of the image must be one, or a <code>BadMatch</code> error results. The foreground pixel in the GC defines the source for the one bits in the image, and the background pixel defines the source for the zero bits. For <code>XYPixmap</code> and <code>ZPixmap</code>, the depth of the image must match the depth of the drawable, or a <code>BadMatch</code> error results. </p>
 <p> If the characteristics of the image (for example, byte_order and bitmap_unit) differ from what the server requires, <code>XPutImage</code> automatically makes the appropriate conversions. </p>
@@ -59,15 +59,15 @@ description: "XPutImage, XGetImage, XGetSubImage – transfer images"
 <p> <code>XGetSubImage</code> can generate <code>BadDrawable</code>, <code>BadGC</code>, <code>BadMatch</code>, and <code>BadValue</code> errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</p>
-<dt><code>BadGC</code></p>
-<dd>A value for a GContext argument does not name a defined GContext.</p>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><i>Xlib &#8211; C Language X Interface</i></p>

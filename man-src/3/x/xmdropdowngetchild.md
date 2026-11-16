@@ -16,21 +16,21 @@ description: "XmDropDownGetChild — A DropDown function that is used to access 
 <h2>Description</h2>
 <p><code>XmDropDownGetChild</code> is used to access a component within a DropDown. The parameters given to the function are the DropDown widget and a value indicating which component to access.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the DropDown widget ID.</p>
-<dt><i>child</i></p>
-<dd>Specifies a component within the DropDown. The following are legal values for this parameter:</p>
+<dt><i>widget</i></dt>
+<dd>Specifies the DropDown widget ID.</dd>
+<dt><i>child</i></dt>
+<dd>Specifies a component within the DropDown. The following are legal values for this parameter:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmDROPDOWN_LABEL</code></p>
-<dt> &bull;</p>
-<dd><code>XmDROPDOWN_TEXT</code></p>
-<dt> &bull;</p>
-<dd><code>XmDROPDOWN_ARROW_BUTTON</code></p>
-<dt> &bull;</p>
-<dd><code>XmDROPDOWN_LIST</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmDROPDOWN_LABEL</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDROPDOWN_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDROPDOWN_ARROW_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDROPDOWN_LIST</code></dd></dl>
 </dl>
 </dl>
 <p> For a complete definition of DropDown and its associated resources, see <code><a href="/docs/linux/man/3-xmdropdown/">XmDropDown</a></code>(3).</p>

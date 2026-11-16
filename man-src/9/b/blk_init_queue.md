@@ -14,10 +14,10 @@ description: "blk_init_queue – prepare a request queue for use with a block de
 <p><i>rfn</i></p>
 <dl>
 <dd>
-<dd>The function to be called to process requests that have been placed on the queue.</dl>
+</dd><dd>The function to be called to process requests that have been placed on the queue.</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>Request queue spin lock</dl>
+<dd>Request queue spin lock</dd></dl>
 <h2>Description</h2>
 <p>If a block device wishes to use the standard request handling procedures, which sorts requests and coalesces adjacent requests, then it must call <code>blk_init_queue</code>. The function <i>rfn</i> will be called when there are requests on the queue that need to be processed. If the device supports plugging, then <i>rfn</i> may not be called immediately when requests are available on the queue, but may be called at some time later instead. Plugged queues are generally unplugged when a buffer belonging to one of the requests on the queue is needed, or due to memory pressure. </p>
 <p> <i>rfn</i> is not required, or even expected, to remove all requests off the queue, but only as many as it can handle at a time. If it does leave requests on the queue, it is responsible for arranging that the requests get dealt with eventually. </p>

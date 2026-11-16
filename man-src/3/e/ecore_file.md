@@ -85,10 +85,10 @@ description: "Ecore_File.h – Files utility functions."
 <p>Check if the given application is installed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> The name of the application</dl>
+<dd><i>exe</i> The name of the application</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the exe is in PATH and is executable</dl>
+<dd>1 if the exe is in PATH and is executable</dd></dl>
 <p> This function check if the given name exist in PATH and is executable </p>
 <p> References ecore_file_app_installed(), ecore_list_first_goto(), and ecore_list_next(). </p>
 <p> Referenced by ecore_file_app_installed().</p>
@@ -96,59 +96,59 @@ description: "Ecore_File.h – Files utility functions."
 <p>Get a list of all the applications installed on the system. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An Ecore_List containing all the executable files in the system</dl>
+<dd>An Ecore_List containing all the executable files in the system</dd></dl>
 <p> References ecore_file_app_list(), ecore_list_append(), ecore_list_destroy(), ecore_list_first_goto(), ecore_list_free_cb_set(), ecore_list_new(), and ecore_list_next(). </p>
 <p> Referenced by ecore_file_app_list().</p>
 <h3>EAPI int ecore_file_can_exec (const char * file)</h3>
 <p>Check if file can be executed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the file can be executed, 0 otherwise</dl>
+<dd>1 if the file can be executed, 0 otherwise</dd></dl>
 <h3>EAPI int ecore_file_can_read (const char * file)</h3>
 <p>Check if file can be read. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the file is readable, 0 otherwise</dl>
+<dd>1 if the file is readable, 0 otherwise</dd></dl>
 <h3>EAPI int ecore_file_can_write (const char * file)</h3>
 <p>Check if file can be written. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the file is writable, 0 otherwise</dl>
+<dd>1 if the file is writable, 0 otherwise</dd></dl>
 <h3>EAPI int ecore_file_cp (const char * src, const char * dst)</h3>
 <p>Copy a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>src</i> The name of the source file<br />
- <i>dst</i> The name of the destination file</dl>
+ <i>dst</i> The name of the destination file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h3>EAPI char* ecore_file_dir_get (const char * file)</h3>
 <p>Get the directory where file reside. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The directory name</dl>
+<dd>The directory name</dd></dl>
 <h3>EAPI int ecore_file_dir_is_empty (const char * dir)</h3>
 <p>Check if the given directory is empty. </p>
 <p> The &#8216;.&#8217; and &#8216;..&#8217; files will be ignored. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dir</i> The name of the directory to check</dl>
+<dd><i>dir</i> The name of the directory to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if directory is empty, 0 if it has at least one file or -1 in case of errors</dl>
+<dd>1 if directory is empty, 0 if it has at least one file or -1 in case of errors</dd></dl>
 <h3>EAPI int ecore_file_download (const char * url, const char * dst, void(*)(void *data, const char *file, int status) completion_cb, int(*)(void *data, const char *file, long int dltotal, long int dlnow, long int ultotal, long int ulnow) progress_cb, void * data)</h3>
 <p>Download url to the given dst. </p>
 <p> <code>Parameters:</code></p>
@@ -156,10 +156,10 @@ description: "Ecore_File.h – Files utility functions."
 <dd><i>url</i> The complete url to download<br />
  <i>dst</i> The local file to save the downloaded to<br />
  <i>completion_cb</i> A callback called on download complete<br />
- <i>progress_cb</i> A callback called during the download operation</dl>
+ <i>progress_cb</i> A callback called during the download operation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the download start or 0 on failure</dl>
+<dd>1 if the download start or 0 on failure</dd></dl>
 <p> You must provide the full url, including &#8216;<a rel="nofollow" href="http://',">http://&#8217;,</a> &#8216;<a href="ftp://'">ftp://&#8217;</a> or &#8216;file://&#8217;. </p>
 <p>&nbsp;<wbr>If dst already exist it will not be overwritten and the function will fail. </p>
 <p>&nbsp;<wbr>Ecore must be compiled with CURL to download using http and ftp protocols.&nbsp;<wbr> </p>
@@ -169,10 +169,10 @@ description: "Ecore_File.h – Files utility functions."
 <p>Check if the given protocol is available. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>protocol</i> The protocol to check</dl>
+<dd><i>protocol</i> The protocol to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if protocol is handled or 0 if not</dl>
+<dd>1 if protocol is handled or 0 if not</dd></dl>
 <p> protocol can be &#8216;<a rel="nofollow" href="http://',">http://&#8217;,</a> &#8216;<a href="ftp://'">ftp://&#8217;</a> or &#8216;file://&#8217;. </p>
 <p>&nbsp;<wbr>Ecore must be compiled with CURL to handle http and ftp protocols.&nbsp;<wbr> </p>
 <p> References ecore_file_download_protocol_available(). </p>
@@ -181,102 +181,102 @@ description: "Ecore_File.h – Files utility functions."
 <p>Add the escape sequence (&#8216;\&#8217;) to the given filename. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filename</i> The file name</dl>
+<dd><i>filename</i> The file name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The file name with special characters escaped; if the length of the resulting string is longer than PATH_MAX it will return NULL</dl>
+<dd>The file name with special characters escaped; if the length of the resulting string is longer than PATH_MAX it will return NULL</dd></dl>
 <h3>EAPI int ecore_file_exists (const char * file)</h3>
 <p>Check if file exists. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if file exists on local filesystem, 0 otherwise</dl>
+<dd>1 if file exists on local filesystem, 0 otherwise</dd></dl>
 <h3>EAPI const char* ecore_file_file_get (const char * path)</h3>
 <p>Get the filename from a give path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> The complete path</dl>
+<dd><i>path</i> The complete path</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Only the file name</dl>
+<dd>Only the file name</dd></dl>
 <h3>EAPI int ecore_file_init (void)</h3>
 <p>Initialize Ecore_File and the services it will use. </p>
 <p> Call this function once before you use any of the ecore file functions. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Return the number howoften <code>ecore_file_init()</code> was call succesfully; 0 if it failed.</dl>
+<dd>Return the number howoften <code>ecore_file_init()</code> was call succesfully; 0 if it failed.</dd></dl>
 <h3>EAPI int ecore_file_is_dir (const char * file)</h3>
 <p>Check if file is a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if file exist and is a directory, 0 otherwise</dl>
+<dd>1 if file exist and is a directory, 0 otherwise</dd></dl>
 <h3>EAPI Ecore_List* ecore_file_ls (const char * dir)</h3>
 <p>Get the list of the files and directories in a given directory. </p>
 <p> The list will be sorted with strcoll as compare function. That means that you may want to set the current locale for the category LC_COLLATE with setlocale(). For more information see the manual pages of strcoll and setlocale. The list will not contain the directory entries for &#8216;.&#8217; and &#8216;..&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dir</i> The name of the directory to list</dl>
+<dd><i>dir</i> The name of the directory to list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Return an Ecore_List containing all the files in the directory; on failure it returns NULL.</dl>
+<dd>Return an Ecore_List containing all the files in the directory; on failure it returns NULL.</dd></dl>
 <p> References ecore_list_append(), ecore_list_first_goto(), ecore_list_free_cb_set(), ecore_list_new(), and ecore_list_sort().</p>
 <h3>EAPI int ecore_file_mkdir (const char * dir)</h3>
 <p>Create a new directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dir</i> The name of the directory to create</dl>
+<dd><i>dir</i> The name of the directory to create</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on successfull creation, 0 on failure</dl>
+<dd>1 on successfull creation, 0 on failure</dd></dl>
 <p> The directory is created with the mode: S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH</p>
 <h3>EAPI int ecore_file_mkpath (const char * path)</h3>
 <p>Create a complete path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> The path to create</dl>
+<dd><i>path</i> The path to create</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h3>EAPI long long ecore_file_mod_time (const char * file)</h3>
 <p>Get the time of the last modification to the give file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Return the time of the last data modification, if an error should occur it will return 0</dl>
+<dd>Return the time of the last data modification, if an error should occur it will return 0</dd></dl>
 <h3>EAPI Ecore_File_Monitor* ecore_file_monitor_add (const char * path, void(*)(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path) func, void * data)</h3>
 <p>Monitor a path using inotify or polling. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>path</i> The path to monitor<br />
  <i>func</i> The function to call on changes<br />
- <i>data</i> The data passed to func</dl>
+ <i>data</i> The data passed to func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An Ecore_File_Monitor pointer or NULL on failure</dl>
+<dd>An Ecore_File_Monitor pointer or NULL on failure</dd></dl>
 <p> References ecore_file_monitor_add(). </p>
 <p> Referenced by ecore_file_monitor_add().</p>
 <h3>EAPI void ecore_file_monitor_del (Ecore_File_Monitor * em)</h3>
 <p>Stop monitoring a path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>em</i> The Ecore_File_Monitor to stop</dl>
+<dd><i>em</i> The Ecore_File_Monitor to stop</dd></dl>
 <p> References ecore_file_monitor_del(). </p>
 <p> Referenced by ecore_file_monitor_del().</p>
 <h3>EAPI const char* ecore_file_monitor_path_get (Ecore_File_Monitor * em)</h3>
 <p>Get the monitored path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>em</i> The Ecore_File_Monitor to query</dl>
+<dd><i>em</i> The Ecore_File_Monitor to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The path that is monitored by em</dl>
+<dd>The path that is monitored by em</dd></dl>
 <p> References ecore_file_monitor_path_get(). </p>
 <p> Referenced by ecore_file_monitor_path_get().</p>
 <h3>EAPI int ecore_file_mv (const char * src, const char * dst)</h3>
@@ -284,90 +284,90 @@ description: "Ecore_File.h – Files utility functions."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>src</i> The name of the source file<br />
- <i>dst</i> The name of the destination file</dl>
+ <i>dst</i> The name of the destination file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h3>EAPI int ecore_file_path_dir_exists (const char * in_dir)</h3>
 <p>Check if the given directory is in PATH. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>The</i> name of the directory to search in PATH</dl>
+<dd><i>The</i> name of the directory to search in PATH</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the directory exist in PATH, 0 otherwise</dl>
+<dd>1 if the directory exist in PATH, 0 otherwise</dd></dl>
 <p> References ecore_file_path_dir_exists(), ecore_list_first_goto(), and ecore_list_next(). </p>
 <p> Referenced by ecore_file_path_dir_exists().</p>
 <h3>EAPI char* ecore_file_readlink (const char * link)</h3>
 <p>Get the path pointed by link. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>link</i> The name of the link</dl>
+<dd><i>link</i> The name of the link</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The path pointed by link or NULL</dl>
+<dd>The path pointed by link or NULL</dd></dl>
 <h3>EAPI char* ecore_file_realpath (const char * file)</h3>
 <p>Get the canonicalized absolute pathname. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The file path</dl>
+<dd><i>file</i> The file path</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The canonicalized absolute pathname; on failure it will return an empty string</dl>
+<dd>The canonicalized absolute pathname; on failure it will return an empty string</dd></dl>
 <h3>EAPI int ecore_file_recursive_rm (const char * dir)</h3>
 <p>Delete a directory and all its contents. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dir</i> The name of the directory to delete</dl>
+<dd><i>dir</i> The name of the directory to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <p> If dir is a link only the link is removed</p>
 <h3>EAPI int ecore_file_rmdir (const char * dir)</h3>
 <p>Delete the given dir. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dir</i> The name of the directory to delete</dl>
+<dd><i>dir</i> The name of the directory to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h3>EAPI int ecore_file_shutdown (void)</h3>
 <p>Shutdown the Ecore_File. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>returns the number of libraries that still uses Ecore_File</dl>
+<dd>returns the number of libraries that still uses Ecore_File</dd></dl>
 <h3>EAPI long long ecore_file_size (const char * file)</h3>
 <p>Get the size of the given file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file</dl>
+<dd><i>file</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The size of the file in byte</dl>
+<dd>The size of the file in byte</dd></dl>
 <h3>EAPI char* ecore_file_strip_ext (const char * path)</h3>
 <p>Remove the extension from a given path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> The name of the file</dl>
+<dd><i>path</i> The name of the file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A newly allocated string with the extension stripped out or NULL on errors</dl>
+<dd>A newly allocated string with the extension stripped out or NULL on errors</dd></dl>
 <h3>EAPI int ecore_file_symlink (const char * src, const char * dest)</h3>
 <p>Create a symbolic link. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>src</i> The name of the file to link<br />
- <i>dest</i> The name of link</dl>
+ <i>dest</i> The name of link</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h3>EAPI int ecore_file_unlink (const char * file)</h3>
 <p>Delete the given file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The name of the file to delete</dl>
+<dd><i>file</i> The name of the file to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 on success, 0 on failure</dl>
+<dd>1 on success, 0 on failure</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -28,36 +28,36 @@ description: "odmgr – administration utility for QDBM Odeum"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#odeumcli .</p>
 <dl>
-<dt><code>-uri </code></p>
-<dd> specify the URI of the document explicitly.</p>
-<dt><code>-title </code><i>str</i></p>
-<dd> specify the title of the document.</p>
-<dt><code>-author </code><i>str</i></p>
-<dd> specify the author of the document.</p>
-<dt><code>-date </code><i>str</i></p>
-<dd> specify the modified date of the document.</p>
-<dt><code>-wmax </code><i>num</i></p>
-<dd> specify the max number of words to be stored.</p>
-<dt><code>-keep</code></p>
-<dd> the storing mode is not to be overwrite.</p>
-<dt><code>-id</code></p>
-<dd> specify a document not by a URI but by an ID number.</p>
-<dt><code>-t</code></p>
-<dd> output the details of a document in tab separated format.</p>
-<dt><code>-h</code></p>
-<dd> output the details of a document in human-readable format.</p>
-<dt><code>-k</code></p>
-<dd> output keywords of a document.</p>
-<dt><code>-s</code></p>
-<dd> output summary of a document.</p>
-<dt><code>-max </code><i>num</i></p>
-<dd> specify the max number of documents of the output.</p>
-<dt><code>-or</code></p>
-<dd> perform OR search, nut AND search.</p>
-<dt><code>-idf</code></p>
-<dd> tune scores with IDF.</p>
-<dt><code>-n</code></p>
-<dd> show ID numbers and scores only.</dl>
+<dt><code>-uri </code></dt>
+<dd> specify the URI of the document explicitly.</dd>
+<dt><code>-title </code><i>str</i></dt>
+<dd> specify the title of the document.</dd>
+<dt><code>-author </code><i>str</i></dt>
+<dd> specify the author of the document.</dd>
+<dt><code>-date </code><i>str</i></dt>
+<dd> specify the modified date of the document.</dd>
+<dt><code>-wmax </code><i>num</i></dt>
+<dd> specify the max number of words to be stored.</dd>
+<dt><code>-keep</code></dt>
+<dd> the storing mode is not to be overwrite.</dd>
+<dt><code>-id</code></dt>
+<dd> specify a document not by a URI but by an ID number.</dd>
+<dt><code>-t</code></dt>
+<dd> output the details of a document in tab separated format.</dd>
+<dt><code>-h</code></dt>
+<dd> output the details of a document in human-readable format.</dd>
+<dt><code>-k</code></dt>
+<dd> output keywords of a document.</dd>
+<dt><code>-s</code></dt>
+<dd> output summary of a document.</dd>
+<dt><code>-max </code><i>num</i></dt>
+<dd> specify the max number of documents of the output.</dd>
+<dt><code>-or</code></dt>
+<dd> perform OR search, nut AND search.</dd>
+<dt><code>-idf</code></dt>
+<dd> tune scores with IDF.</dd>
+<dt><code>-n</code></dt>
+<dd> show ID numbers and scores only.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-odidx/">odidx</a></code>(1), <code>odeum</code>(3). <code>odopen</code>(3).</p>
 <h2>AUTHOR</h2>

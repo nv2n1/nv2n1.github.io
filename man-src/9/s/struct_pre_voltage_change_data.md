@@ -17,20 +17,20 @@ description: "struct_pre_voltage_change_data – Data sent with PRE_VOLTAGE_CHAN
 <h2>Members</h2>
 <p>old_uV</p>
 <dl>
-<dd>Current voltage before change.</dl>
+<dd>Current voltage before change.</dd></dl>
 <p> min_uV</p>
 <dl>
-<dd>Min voltage we&#8217;ll change to.</dl>
+<dd>Min voltage we&#8217;ll change to.</dd></dl>
 <p> max_uV</p>
 <dl>
-<dd>Max voltage we&#8217;ll change to.</dl>
+<dd>Max voltage we&#8217;ll change to.</dd></dl>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

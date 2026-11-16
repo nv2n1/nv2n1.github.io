@@ -14,10 +14,10 @@ description: "gnutls_x509_crt_get_subject – API function"
 <p> <code>int gnutls_x509_crt_get_subject(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_dn_t * </code><i>dn</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>gnutls_x509_dn_t * dn</p>
-<dd> output variable with pointer to uint8_t DN.</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>gnutls_x509_dn_t * dn</dt>
+<dd> output variable with pointer to uint8_t DN.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Return the Certificate&#8217;s Subject DN as a <code>gnutls_x509_dn_t</code> data type, that can be decoded using <code>gnutls_x509_dn_get_rdn_ava()</code>. </p>
 <p> Note that <i>dn</i> should be treated as constant. Because it points into the <i>cert</i> object, you should not use <i>dn</i> after <i>cert</i> is deallocated.</p>
@@ -32,6 +32,6 @@ description: "gnutls_x509_crt_get_subject – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

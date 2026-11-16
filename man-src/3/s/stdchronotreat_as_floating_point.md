@@ -11,10 +11,8 @@ std::chrono::treat_as_floating_point - std::chrono::treat_as_floating_point
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class Rep&gt;
     (since C++ 11)
-
         struct treat_as_floating_point : std::is_floating_point&lt;Rep&gt; {
 };</code></pre> 
 The std::chrono::treat_as_floating_point trait helps determine if a duration can be converted to another duration with a different tick period. 
@@ -28,18 +26,14 @@ inline constexpr bool treat_as_floating_point_v = treat_as_floating_point&lt;Rep
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
 void timed_piece_of_code()
-
 {
     std::chrono::milliseconds simulated_work(2);
     std::this_thread::sleep_for(simulated_work);
 }
 int main()
-
 {
     auto start = std::chrono::high_resolution_clock::now();
     std::cout &lt;&lt; &quot;Running some timed piece of code...&quot; &lt;&lt; '\n';
@@ -56,7 +50,6 @@ int main()
     auto f_ms = FpMilliseconds(stop - start);
     std::cout &lt;&lt; &quot;Time in milliseconds, using default rep: &quot;
               &lt;&lt; i_ms.count() &lt;&lt; '\n';
-
     std::cout &lt;&lt; &quot;Time in milliseconds, using floating point rep: &quot;
               &lt;&lt; f_ms.count() &lt;&lt; '\n';
 }

@@ -14,52 +14,52 @@ description: "autoheader – Create a template header for configure"
 <h2>DESCRIPTION</h2>
 <p> Create a template file of C &#8216;#define&#8217; statements for &#8216;configure&#8217; to use. To this end, scan TEMPLATE-FILE, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> consider all files obsolete</p>
-<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></p>
-<dd> report the warnings falling in CATEGORY</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> consider all files obsolete</dd>
+<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></dt>
+<dd> report the warnings falling in CATEGORY</dd></dl>
 <h3>Warning categories include:</h3>
 <dl>
-<dt>cross</p>
-<dd> cross compilation issues</p>
-<dt>gnu</p>
-<dd> GNU coding standards (default in gnu and gnits modes)</p>
-<dt>obsolete</p>
-<dd> obsolete features or constructions (default)</p>
-<dt>override</p>
-<dd> user redefinitions of Automake rules or variables</p>
-<dt>portability</p>
-<dd> portability issues (default in gnu and gnits modes)</p>
-<dt>portability-recursive</p>
-<dd> nested Make variables (default with <code>-Wportability</code>)</p>
-<dt>extra-portability</p>
-<dd> extra portability issues related to obscure tools</p>
-<dt>syntax</p>
-<dd> dubious syntactic constructs (default)</p>
-<dt>unsupported</p>
-<dd> unsupported or incomplete features (default)</p>
-<dt>all</p>
-<dd> all the warnings</p>
-<dt>no-CATEGORY</p>
-<dd> turn off warnings in CATEGORY</p>
-<dt>none</p>
-<dd> turn off all the warnings</p>
-<dt>error</p>
-<dd> treat warnings as errors</dl>
+<dt>cross</dt>
+<dd> cross compilation issues</dd>
+<dt>gnu</dt>
+<dd> GNU coding standards (default in gnu and gnits modes)</dd>
+<dt>obsolete</dt>
+<dd> obsolete features or constructions (default)</dd>
+<dt>override</dt>
+<dd> user redefinitions of Automake rules or variables</dd>
+<dt>portability</dt>
+<dd> portability issues (default in gnu and gnits modes)</dd>
+<dt>portability-recursive</dt>
+<dd> nested Make variables (default with <code>-Wportability</code>)</dd>
+<dt>extra-portability</dt>
+<dd> extra portability issues related to obscure tools</dd>
+<dt>syntax</dt>
+<dd> dubious syntactic constructs (default)</dd>
+<dt>unsupported</dt>
+<dd> unsupported or incomplete features (default)</dd>
+<dt>all</dt>
+<dd> all the warnings</dd>
+<dt>no-CATEGORY</dt>
+<dd> turn off warnings in CATEGORY</dd>
+<dt>none</dt>
+<dd> turn off all the warnings</dd>
+<dt>error</dt>
+<dd> treat warnings as errors</dd></dl>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Roland McGrath and Akim Demaille.</p>
 <h2>REPORTING BUGS</h2>
@@ -74,6 +74,6 @@ description: "autoheader – Create a template header for configure"
 <p> The full documentation for <code>autoheader</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autoheader</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autoheader</code></dl>
+</dt><dd> <code>info autoheader</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

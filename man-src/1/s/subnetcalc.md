@@ -16,52 +16,52 @@ description: "subnetcalc – IPv4/IPv6 Subnet Calculator"
 <h2>ARGUMENTS</h2>
 <p> The following arguments have to be provided:</p>
 <dl>
-<dt><code>Address</code></p>
-<dd> The IP address. If a hostname is provided here, it is tried to resolve the address by a DNS server and the first returned address is used. Internationalized Domain Names (IDN) are supported.</p>
-<dt><code>Netmask/Prefix</code></p>
-<dd> The netmask or prefix length (0-32 for IPv4; 0-128 for IPv6).</p>
-<dt><code>-n</code></p>
-<dd> Skip trying a reverse DNS lookup.</p>
-<dt><code>-uniquelocal</code></p>
-<dd> Given an IPv6 address, the first 48 bits of the address are replaced by a randomly chosen IPv6 Unique Local prefix in fc00::/7 (see also RFC 4193). Under Linux, /dev/urandom is used for random number generation.</p>
-<dt><code>-uniquelocalhq</code></p>
-<dd> Like -uniquelocal, but using /dev/random instead on Linux systems for highest-quality random number generation. On other systems, this option is equal to -uniquelocal. Note, that reading from /dev/random may take some time. You can speed up this process by delivering random input e.g. by pressing keys or moving the mouse.</p>
-<dt><code>-nocolour|-nocolor</code></p>
-<dd> Turns colourised output off.</dl>
+<dt><code>Address</code></dt>
+<dd> The IP address. If a hostname is provided here, it is tried to resolve the address by a DNS server and the first returned address is used. Internationalized Domain Names (IDN) are supported.</dd>
+<dt><code>Netmask/Prefix</code></dt>
+<dd> The netmask or prefix length (0-32 for IPv4; 0-128 for IPv6).</dd>
+<dt><code>-n</code></dt>
+<dd> Skip trying a reverse DNS lookup.</dd>
+<dt><code>-uniquelocal</code></dt>
+<dd> Given an IPv6 address, the first 48 bits of the address are replaced by a randomly chosen IPv6 Unique Local prefix in fc00::/7 (see also RFC 4193). Under Linux, /dev/urandom is used for random number generation.</dd>
+<dt><code>-uniquelocalhq</code></dt>
+<dd> Like -uniquelocal, but using /dev/random instead on Linux systems for highest-quality random number generation. On other systems, this option is equal to -uniquelocal. Note, that reading from /dev/random may take some time. You can speed up this process by delivering random input e.g. by pressing keys or moving the mouse.</dd>
+<dt><code>-nocolour|-nocolor</code></dt>
+<dd> Turns colourised output off.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>subnetcalc 132.252.250.0 255.255.255.0</code></p>
+<dt><code>subnetcalc 132.252.250.0 255.255.255.0</code></dt>
 <dd>
-<dt><code>subnetcalc 132.252.250.0/255.255.255.0 -nocolor</code></p>
+</dd><dt><code>subnetcalc 132.252.250.0/255.255.255.0 -nocolor</code></dt>
 <dd>
-<dt><code>subnetcalc 132.252.250.0 24</code></p>
+</dd><dt><code>subnetcalc 132.252.250.0 24</code></dt>
 <dd>
-<dt><code>subnetcalc 132.252.250.0/24 -nocolour</code></p>
+</dd><dt><code>subnetcalc 132.252.250.0/24 -nocolour</code></dt>
 <dd>
-<dt><code>subnetcalc fec0:2345:6789:1111:221:6aff:fe0b:2674 56</code></p>
+</dd><dt><code>subnetcalc fec0:2345:6789:1111:221:6aff:fe0b:2674 56</code></dt>
 <dd>
-<dt><code>subnetcalc 2a00:1450:8007::69 64</code></p>
+</dd><dt><code>subnetcalc 2a00:1450:8007::69 64</code></dt>
 <dd>
-<dt><code>subnetcalc ff08::1:2:3</code></p>
+</dd><dt><code>subnetcalc ff08::1:2:3</code></dt>
 <dd>
-<dt><code>subnetcalc 131.220.6.5/24</code></p>
+</dd><dt><code>subnetcalc 131.220.6.5/24</code></dt>
 <dd>
-<dt><code>subnetcalc 132.252.181.87 -n</code></p>
+</dd><dt><code>subnetcalc 132.252.181.87 -n</code></dt>
 <dd>
-<dt><code>subnetcalc <a rel="nofollow" href="http://www.iem.uni-due.de">www.iem.uni-due.de</a> 24</code></p>
+</dd><dt><code>subnetcalc <a rel="nofollow" href="http://www.iem.uni-due.de">www.iem.uni-due.de</a> 24</code></dt>
 <dd>
-<dt><code>subnetcalc <a rel="nofollow" href="http://www.six.heise.de">www.six.heise.de</a></code></p>
+</dd><dt><code>subnetcalc <a rel="nofollow" href="http://www.six.heise.de">www.six.heise.de</a></code></dt>
 <dd>
-<dt><code>subnetcalc fd00:: 64 -uniquelocal</code></p>
+</dd><dt><code>subnetcalc fd00:: 64 -uniquelocal</code></dt>
 <dd>
-<dt><code>subnetcalc fd00::9876:256:7bff:fe1b:3255 56 -uniquelocalhq</code></p>
+</dd><dt><code>subnetcalc fd00::9876:256:7bff:fe1b:3255 56 -uniquelocalhq</code></dt>
 <dd>
-<dt><code>subnetcalc düsseldorf.de 28</code></p>
+</dd><dt><code>subnetcalc düsseldorf.de 28</code></dt>
 <dd>
-<dt><code>subnetcalc <a rel="nofollow" href="http://www.k">www.k</a>öln.de</code></p>
+</dd><dt><code>subnetcalc <a rel="nofollow" href="http://www.k">www.k</a>öln.de</code></dt>
 <dd>
-<dt><code>subnetcalc räksmörgås.josefsson.org 24</code></p>
-<dd></dl>
+</dd><dt><code>subnetcalc räksmörgås.josefsson.org 24</code></dt>
+<dd></dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Dreibholz<br />
  <a rel="nofollow" href="http://www.iem.uni-due.de/~dreibh/subnetcalc">http://www.iem.uni-due.de/~dreibh/subnetcalc</a><br />

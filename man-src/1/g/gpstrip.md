@@ -17,30 +17,30 @@ description: "gpstrip – discard symbols from object file"
 <p> <code>gpstrip</code> discards symbols from GNU PIC object files. <code>gpstrip</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-g</code>, &#8211;strip-debug</p>
-<dd> Strip debug symbols.</p>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Show the usage message and exit.</p>
-<dt><code>-k SYMBOL</code>,<code> &#8211;keep-symbol SYMBOL</code></p>
-<dd> Keep symbol.</p>
-<dt><code>-n SYMBOL</code>,<code> &#8211;strip-symbol SYMBOL</code></p>
-<dd> Remove symbol.</p>
-<dt><code>-o FILE</code>,<code> &#8211;output FILE</code></p>
-<dd> Alternate name of output file.</p>
-<dt><code>-p</code>, &#8211;preserve-dates</p>
-<dd> Preserve dates.</p>
-<dt><code>-r SECTION</code>,<code> &#8211;remove-section SECTION</code></p>
-<dd> Remove section.</p>
-<dt><code>-s</code>, &#8211;strip-all</p>
-<dd> Remove all symbols.</p>
-<dt><code>-u</code>, &#8211;strip-unneeded</p>
-<dd> Strip symbols not need for relocations.</p>
-<dt><code>-v</code>, &#8211;version</p>
-<dd> Show the version information and exit.</p>
-<dt><code>-V</code>, &#8211;verbose</p>
-<dd> Verbose mode.</p>
-<dt><code>-x</code>, &#8211;discard-all</p>
-<dd> Remove non-global symbols.</dl>
+<dt><code>-g</code>, &#8211;strip-debug</dt>
+<dd> Strip debug symbols.</dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>-k SYMBOL</code>,<code> &#8211;keep-symbol SYMBOL</code></dt>
+<dd> Keep symbol.</dd>
+<dt><code>-n SYMBOL</code>,<code> &#8211;strip-symbol SYMBOL</code></dt>
+<dd> Remove symbol.</dd>
+<dt><code>-o FILE</code>,<code> &#8211;output FILE</code></dt>
+<dd> Alternate name of output file.</dd>
+<dt><code>-p</code>, &#8211;preserve-dates</dt>
+<dd> Preserve dates.</dd>
+<dt><code>-r SECTION</code>,<code> &#8211;remove-section SECTION</code></dt>
+<dd> Remove section.</dd>
+<dt><code>-s</code>, &#8211;strip-all</dt>
+<dd> Remove all symbols.</dd>
+<dt><code>-u</code>, &#8211;strip-unneeded</dt>
+<dd> Strip symbols not need for relocations.</dd>
+<dt><code>-v</code>, &#8211;version</dt>
+<dd> Show the version information and exit.</dd>
+<dt><code>-V</code>, &#8211;verbose</dt>
+<dd> Verbose mode.</dd>
+<dt><code>-x</code>, &#8211;discard-all</dt>
+<dd> Remove non-global symbols.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1)</p>
 <h2>AUTHOR</h2>

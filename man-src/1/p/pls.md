@@ -15,51 +15,51 @@ description: "pls – list directory contents"
 <p> <code>pls</code> list the contents of a directory on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <dl>
-<dt>File attributes</p>
+<dt>File attributes</dt>
 <dd>
+</dd><dt>
+</dt><dd> A Archive</dd>
 <dt>
-<dd> A Archive</p>
+</dt><dd> C Compressed</dd>
 <dt>
-<dd> C Compressed</p>
+</dt><dd> D Directory</dd>
 <dt>
-<dd> D Directory</p>
+</dt><dd> H Hidden</dd>
 <dt>
-<dd> H Hidden</p>
+</dt><dd> I In ROM</dd>
 <dt>
-<dd> I In ROM</p>
+</dt><dd> M ROM module (can only be executed, not read!)</dd>
 <dt>
-<dd> M ROM module (can only be executed, not read!)</p>
+</dt><dd> N Normal</dd>
 <dt>
-<dd> N Normal</p>
+</dt><dd> R Read-only</dd>
 <dt>
-<dd> R Read-only</p>
+</dt><dd> S System</dd>
 <dt>
-<dd> S System</p>
-<dt>
-<dd> T Temporary </p>
+</dt><dd> T Temporary </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d <i>LEVEL</i></p>
-<dd> Set debug log level:</p>
+<dt>-d <i>LEVEL</i></dt>
+<dd> Set debug log level:</dd>
 <dt>
-<dd> 0 &#8211; No logging (default)</p>
+</dt><dd> 0 &#8211; No logging (default)</dd>
 <dt>
-<dd> 1 &#8211; Errors only</p>
+</dt><dd> 1 &#8211; Errors only</dd>
 <dt>
-<dd> 2 &#8211; Errors and warnings</p>
+</dt><dd> 2 &#8211; Errors and warnings</dd>
 <dt>
-<dd> 3 &#8211; Everything </p>
-<dt>-p <i>DEVNAME</i></p>
-<dd> Use the device with the given name, instead of the default. </p>
-<dt>-a</p>
-<dd> Show all files including those marked as hidden. </p>
-<dt>-R</p>
-<dd> Recursively list subdirectories. </p>
-<dt>-h</p>
-<dd> Display help message. </p>
-<dt><i>DIRECTORY</i></p>
-<dd> The full path name to the directory. Wild cards are allowed, but only for the trailing part of the path, and should be protected from the shell. If this parameter is relative, it is assumed to be relative to the &quot;My Documents&quot; folder. Similarly, if this parameter is omitted, the contents of the &quot;My Documents&quot; folder is listed. </p>
+</dt><dd> 3 &#8211; Everything </dd>
+<dt>-p <i>DEVNAME</i></dt>
+<dd> Use the device with the given name, instead of the default. </dd>
+<dt>-a</dt>
+<dd> Show all files including those marked as hidden. </dd>
+<dt>-R</dt>
+<dd> Recursively list subdirectories. </dd>
+<dt>-h</dt>
+<dd> Display help message. </dd>
+<dt><i>DIRECTORY</i></dt>
+<dd> The full path name to the directory. Wild cards are allowed, but only for the trailing part of the path, and should be protected from the shell. If this parameter is relative, it is assumed to be relative to the &quot;My Documents&quot; folder. Similarly, if this parameter is omitted, the contents of the &quot;My Documents&quot; folder is listed. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>

@@ -15,26 +15,26 @@ SHOW ALL</pre>
 <p><code>SHOW</code> will display the current setting of run-time parameters. These variables can be set using the <code>SET</code> statement, by editing the <i>postgresql.conf</i> configuration file, through the <code>PGOPTIONS</code> environmental variable (when using <code>libpq</code> or a <code>libpq</code>-based application), or through command-line flags when starting the <code>postgres</code> server. See in the documentation for details.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of a run-time parameter. Available parameters are documented in in the documentation and on the SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] reference page. In addition, there are a few parameters that can be shown but not set:</p>
+<dt><i>name</i></dt>
+<dd>The name of a run-time parameter. Available parameters are documented in in the documentation and on the SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] reference page. In addition, there are a few parameters that can be shown but not set:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>SERVER_VERSION</code></p>
-<dd>Shows the server&#8217;s version number.</p>
-<dt><code>SERVER_ENCODING</code></p>
-<dd>Shows the server-side character set encoding. At present, this parameter can be shown but not set, because the encoding is determined at database creation time.</p>
-<dt><code>LC_COLLATE</code></p>
-<dd>Shows the database&#8217;s locale setting for collation (text ordering). At present, this parameter can be shown but not set, because the setting is determined at database creation time.</p>
-<dt><code>LC_CTYPE</code></p>
-<dd>Shows the database&#8217;s locale setting for character classification. At present, this parameter can be shown but not set, because the setting is determined at database creation time.</p>
-<dt><code>IS_SUPERUSER</code></p>
-<dd>True if the current role has superuser privileges.</dl>
+</dd><dl>
+<dt><code>SERVER_VERSION</code></dt>
+<dd>Shows the server&#8217;s version number.</dd>
+<dt><code>SERVER_ENCODING</code></dt>
+<dd>Shows the server-side character set encoding. At present, this parameter can be shown but not set, because the encoding is determined at database creation time.</dd>
+<dt><code>LC_COLLATE</code></dt>
+<dd>Shows the database&#8217;s locale setting for collation (text ordering). At present, this parameter can be shown but not set, because the setting is determined at database creation time.</dd>
+<dt><code>LC_CTYPE</code></dt>
+<dd>Shows the database&#8217;s locale setting for character classification. At present, this parameter can be shown but not set, because the setting is determined at database creation time.</dd>
+<dt><code>IS_SUPERUSER</code></dt>
+<dd>True if the current role has superuser privileges.</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><code>ALL</code></p>
-<dd>Show the values of all configuration parameters, with descriptions.</dl>
+<dt><code>ALL</code></dt>
+<dd>Show the values of all configuration parameters, with descriptions.</dd></dl>
 <h2>Notes</h2>
 <p>The function <code>current_setting</code> produces equivalent output; see in the documentation. Also, the <code>pg_settings</code> system view produces the same information.</p>
 <h2>Examples</h2>

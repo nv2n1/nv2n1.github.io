@@ -55,9 +55,9 @@ description: "xend_selinux – Security Enhanced Linux Policy for the xend proce
 <p> Policy governs the access confined processes have to these ports. SELinux xend policy is very flexible allowing users to setup their xend processes in as secure a method as possible. </p>
 <p> The following port types are defined for xend: </p>
 <dl>
-<dt><code>xen_port_t</code></p>
+<dt><code>xen_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8002</dl>
+</dd><dd>Default Defined Ports: tcp 8002</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type xend_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -174,20 +174,20 @@ description: "xend_selinux – Security Enhanced Linux Policy for the xend proce
 <p> <code>xend_var_lib_t</code> </p>
 <p> &#8211; Set files with the xend_var_lib_t type, if you want to store the xend files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/xen(/.*)?, /var/lib/xend(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/xen(/.*)?, /var/lib/xend(/.*)? </dd>
 </dl>
 <p> <code>xend_var_log_t</code> </p>
 <p> &#8211; Set files with the xend_var_log_t type, if you want to treat the data as xend var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/xen(/.*)?, /var/log/xend.log.*, /var/log/xend-debug.log.*, /var/log/xen-hotplug.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/xen(/.*)?, /var/log/xend.log.*, /var/log/xend-debug.log.*, /var/log/xen-hotplug.log.* </dd>
 </dl>
 <p> <code>xend_var_run_t</code> </p>
 <p> &#8211; Set files with the xend_var_run_t type, if you want to store the xend files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/xend(/.*)?, /var/run/xenner(/.*)?, /var/run/xend.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/xend(/.*)?, /var/run/xenner(/.*)?, /var/run/xend.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

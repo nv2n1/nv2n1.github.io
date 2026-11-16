@@ -16,18 +16,18 @@ description: "glite-lb-dump – utility for dumping job events from L&B database
 <p> <code>glite-lb-dump </code> may be run periodically, however the periodic dumps are done by server itself, so check the configuration of the server first. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code><i></i>,<code>&#8211;server</code><i>mkserver</i></p>
-<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is beeing checked. </p>
-<dt><code>-f</code><i></i>,<code>&#8211;from</code><i>YYYYMMDDHHmmss</i></p>
-<dd> Beginning of the time interval for events to be dumped. </p>
-<dt><code>-t</code><i></i>,<code>&#8211;to</code><i>YYYYMMDDHHmmss</i></p>
-<dd> End of the time interval for events to be dumped. </p>
-<dt><code>-h</code><i></i>,<code>&#8211;help</code></p>
-<dd> Display help. </p>
-<dt><code>-v</code><i></i>,<code>&#8211;version</code></p>
-<dd> Display version. </p>
-<dt><code>-d</code>, &#8211;debug</p>
-<dd> Print diagnostics on the <i>stderr</i>. </p>
+<dt><code>-m</code><i></i>,<code>&#8211;server</code><i>mkserver</i></dt>
+<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is beeing checked. </dd>
+<dt><code>-f</code><i></i>,<code>&#8211;from</code><i>YYYYMMDDHHmmss</i></dt>
+<dd> Beginning of the time interval for events to be dumped. </dd>
+<dt><code>-t</code><i></i>,<code>&#8211;to</code><i>YYYYMMDDHHmmss</i></dt>
+<dd> End of the time interval for events to be dumped. </dd>
+<dt><code>-h</code><i></i>,<code>&#8211;help</code></dt>
+<dd> Display help. </dd>
+<dt><code>-v</code><i></i>,<code>&#8211;version</code></dt>
+<dd> Display version. </dd>
+<dt><code>-d</code>, &#8211;debug</dt>
+<dd> Print diagnostics on the <i>stderr</i>. </dd>
 </dl>
 <h2>FILES</h2>
 <p> No configuration files needed. </p>

@@ -15,23 +15,23 @@ set_pfnblock_flags_mask - Set the requested group of flags for a pageblock_nr_pa
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>The page within the block of interest</dl>
+<dl><dd></dd><dd>The page within the block of interest</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>The flags to set</dl>
+<dl><dd>The flags to set</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>The target page frame number</dl>
+<dl><dd>The target page frame number</dd></dl>
  
 
  <i>end_bitidx</i>
-<dl><dd>The last bit of interest</dl>
+<dl><dd>The last bit of interest</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>mask of bits that the caller is interested in</dl>
+<dl><dd>mask of bits that the caller is interested in</dd></dl>
 
 <h2>Copyright</h2>
 

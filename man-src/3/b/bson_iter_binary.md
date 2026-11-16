@@ -20,17 +20,17 @@ void bson_iter_binary(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>subtype</code></p>
-<dd> A location for a <code>bson_subtype_t</code> or NULL.</dl>
+<dt><code>subtype</code></dt>
+<dd> A location for a <code>bson_subtype_t</code> or NULL.</dd></dl>
 <dl>
-<dt><code>binary_len</code></p>
-<dd> A location for the length of <code>binary</code> \&amp;.</dl>
+<dt><code>binary_len</code></dt>
+<dd> A location for the length of <code>binary</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>binary</code></p>
-<dd> A location for a pointer to the immutable buffer.</dl>
+<dt><code>binary</code></dt>
+<dd> A location for a pointer to the immutable buffer.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function shall return the binary data of a BSON_TYPE_BINARY element. It is a programming error to call this function on a field that is not of type BSON_TYPE_BINARY. You can check this with the BSON_ITER_HOLDS_BINARY() macro or <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> \&amp;. </p>
 <h2>COLOPHON</h2>

@@ -11,12 +11,9 @@ std::experimental::filesystem::copy_symlink - std::experimental::filesystem::cop
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void copy_symlink(const path &amp;from, const path &amp;to);
 (1)(filesystem TS)
-
     void copy_symlink(const path &amp;from, const path &amp;to, (2)(filesystem TS)
-
                                                             error_code &amp;ec);</code></pre> 
 Copies a symlink to another location. 
 1) Effectively calls f(read_symlink(from), to) where f is create_symlink() or create_directory_symlink depending on whether from resolves to a file or directory. 

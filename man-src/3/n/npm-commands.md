@@ -16,6 +16,7 @@ description: "npm-commands — npm commands"
 <p> All commands have their own man page. See <code>man npm-&lt;command&gt;</code> for command-line usage, or <code>man 3 npm-&lt;command&gt;</code> for programmatic usage.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help index</p>
+<dt>&bull;</dt>
+<dd>npm help index</dd>
 <dd>
+</dd></dl>

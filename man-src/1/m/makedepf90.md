@@ -16,76 +16,76 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> The original idea was to provide the same functionality for Fortran as</p>
 <dl>
 <dt>
-<dd>
-<p> gcc -MM *.c</dl>
+</dt><dd>
+<p> gcc -MM *.c</dd></dl>
 <p> does for C. Nowadays makedepf90 actually supersedes this functionality, making me wonder if I should extend makedepf90 to support C and C++ too ;-). </p>
 <p> <i>makedepf90</i> supports both <code>modules</code>, <code>include</code>:s, <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) <code>#include</code>:s, <code>f90ppr</code>(1) <code>$include</code>:s and <code>coco</code>(1) <code>??includes</code> and set-files. </p>
 <p> <i>makedepf90</i> reads Fortran source files given on the command line, and writes a dependency list to stdout; for every file it writes a line with the following format:</p>
 <dl>
 <dt>
-<dd>
-<p> <i>targets</i> : <i>prerequisites</i></dl>
+</dt><dd>
+<p> <i>targets</i> : <i>prerequisites</i></dd></dl>
 <p> <i>Targets</i> are the files that will be the result of compiling the file with the <code>-c</code> option, and <i>prerequisites</i> are files that are needed to compile the file. In addition, <i>makedepf90</i> can optionally create the dependency line and make-rule needed to link the final executable.</p>
 <h3>Fortran dependencies</h3>
 <p> The files needed to compile a file, i.e the <i>prerequisites</i> of the file are:</p>
 <dl>
-<dt><code>&#8212; </code></p>
-<dd> The source file itself</p>
-<dt><code>&#8212; </code></p>
-<dd> Files with interface information about USEd modules, created by the compiler while compiling the modules (often named <i>modulename</i>.mod or something similar, hereafter called <i>mod-files</i>).</p>
-<dt><code>&#8212; </code></p>
-<dd> Include-files (including files included and mod-files of modules USEd from these include-files).</p>
-<dt><code>&#8212;</code></p>
-<dd> <code>Coco</code> set-files, if <code>coco</code>(1) is being used and set-files exist.</dl>
+<dt><code>&#8212; </code></dt>
+<dd> The source file itself</dd>
+<dt><code>&#8212; </code></dt>
+<dd> Files with interface information about USEd modules, created by the compiler while compiling the modules (often named <i>modulename</i>.mod or something similar, hereafter called <i>mod-files</i>).</dd>
+<dt><code>&#8212; </code></dt>
+<dd> Include-files (including files included and mod-files of modules USEd from these include-files).</dd>
+<dt><code>&#8212;</code></dt>
+<dd> <code>Coco</code> set-files, if <code>coco</code>(1) is being used and set-files exist.</dd></dl>
 <p> Since different compilers use different naming conventions for the mod-files, listing them in the dependency list results in non-portable makefiles. Therefore it&#8217;s common practise to list the object file (<i>filename</i>.o) corresponding to the sourcefile containing the USEd modules instead. This is the default behaviour of <i>makedepf90</i>. To change this, use the <code>-m</code> option (e.g <code>-m &quot;%m.mod&quot;</code> if your compiler names the mod files <i>modulename</i>.mod) </p>
 <p> Include files not found in the working directory will not be listed in the dependency list, assuming they are part of a (seldom changing) library not part of the program. Neither will mod-files of modules whose definitions aren&#8217;t found be listed by the same reason. </p>
 <h2>OPTIONS</h2>
 <p> These options may be given anywhere, in any order, on the command line. Space between an option and its argument is optional. Options may not be grouped (<code>-hW</code> is not the same thing as <code>-h -W</code>).</p>
 <dl>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd> Print a short help message to stdout and quit.</p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd> Print version and copyright information to stdout and quit</p>
-<dt><code>-W</code> or <code>-Wmissing</code></p>
-<dd> Print warnings about missing modules and include files</p>
-<dt><code>-Wconfused</code></p>
-<dd> Print warnings when confused (either because of bugs in makedepf90 itself, or because of wierd things in your source files). If makedepf90 misses some dependencies, or do other wierd things, this option might give some idea on whats going on.</p>
-<dt><code>-m</code><i> fmt</i></p>
-<dd> Tell <i>makedepf90</i> that mod-files will have names of the format <i>fmt</i>. <i>fmt</i> may contain the modifiers <code>%f</code> for <i>filename</i> (without file name .suffix), <code>%m</code> for <i>modulename</i> (in lowercase), <code>%M</code> for <i>MODULENAME</i> (in uppercase) and <code>%%</code> for &#8216;%&#8217;. Default is &quot;%f.o&quot;.</p>
-<dt><code>-u</code><i> modulename</i></p>
-<dd> Ignore all modules named <i>modulename</i>.</p>
-<dt><code>-d</code><i> file</i></p>
-<dd> Make all targets dependent on <i>file</i>.</p>
-<dt><code>-r</code><i> rule</i></p>
-<dd> Add <i>rule</i> (indented by a tab) to all dependency lines except lines given rule(s) with the <code>-R</code> option.</dl>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd> Print a short help message to stdout and quit.</dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd> Print version and copyright information to stdout and quit</dd>
+<dt><code>-W</code> or <code>-Wmissing</code></dt>
+<dd> Print warnings about missing modules and include files</dd>
+<dt><code>-Wconfused</code></dt>
+<dd> Print warnings when confused (either because of bugs in makedepf90 itself, or because of wierd things in your source files). If makedepf90 misses some dependencies, or do other wierd things, this option might give some idea on whats going on.</dd>
+<dt><code>-m</code><i> fmt</i></dt>
+<dd> Tell <i>makedepf90</i> that mod-files will have names of the format <i>fmt</i>. <i>fmt</i> may contain the modifiers <code>%f</code> for <i>filename</i> (without file name .suffix), <code>%m</code> for <i>modulename</i> (in lowercase), <code>%M</code> for <i>MODULENAME</i> (in uppercase) and <code>%%</code> for &#8216;%&#8217;. Default is &quot;%f.o&quot;.</dd>
+<dt><code>-u</code><i> modulename</i></dt>
+<dd> Ignore all modules named <i>modulename</i>.</dd>
+<dt><code>-d</code><i> file</i></dt>
+<dd> Make all targets dependent on <i>file</i>.</dd>
+<dt><code>-r</code><i> rule</i></dt>
+<dd> Add <i>rule</i> (indented by a tab) to all dependency lines except lines given rule(s) with the <code>-R</code> option.</dd></dl>
 <dl>
 <dt>
-<dd> <i>rule</i> may contains the following modifiers: <code>%f</code> for the name of the source file (without suffix) the dependency line is created for, and <code>%%</code> for &#8216;%&#8217;.</dl>
+</dt><dd> <i>rule</i> may contains the following modifiers: <code>%f</code> for the name of the source file (without suffix) the dependency line is created for, and <code>%%</code> for &#8216;%&#8217;.</dd></dl>
 <dl>
-<dt><code>-R</code><i> &#8216;pattern&#8217; &#8216;rule&#8217;</i></p>
-<dd> Compile files matching the shell pattern <i>pattern</i> using the rule <i>rule</i>. In <i>pattern</i>, the following wildcards can be used: <code>*</code> = any number of any characters, <code>?</code> = any character and <code>[abc]</code> = any of <code>a</code>, <code>b</code> or <code>c</code>. Note that the patter-matching is to be performed by <i>makedepf90</i>, not the shell. Therefore <i>pattern</i> should be enclosed in quotes (<code>&quot;</code> or <code>&#8216;</code>). For <i>rule</i> applies the same rules as for <code>-r</code> above.</dl>
+<dt><code>-R</code><i> &#8216;pattern&#8217; &#8216;rule&#8217;</i></dt>
+<dd> Compile files matching the shell pattern <i>pattern</i> using the rule <i>rule</i>. In <i>pattern</i>, the following wildcards can be used: <code>*</code> = any number of any characters, <code>?</code> = any character and <code>[abc]</code> = any of <code>a</code>, <code>b</code> or <code>c</code>. Note that the patter-matching is to be performed by <i>makedepf90</i>, not the shell. Therefore <i>pattern</i> should be enclosed in quotes (<code>&quot;</code> or <code>&#8216;</code>). For <i>rule</i> applies the same rules as for <code>-r</code> above.</dd></dl>
 <dl>
 <dt>
-<dd> Note that there is a subtle difference between &quot;<code>-r</code> <i>rule</i>&quot; and &quot;<code>-R</code> &#8216;*&#8217; <i>rule</i>&quot;. In the former case <i>rule</i> will be applied only to lines not given any rule using <code>-R</code>, while in the latter case, <i>rule</i> will be applied to <i>all</i> lines.</dl>
+</dt><dd> Note that there is a subtle difference between &quot;<code>-r</code> <i>rule</i>&quot; and &quot;<code>-R</code> &#8216;*&#8217; <i>rule</i>&quot;. In the former case <i>rule</i> will be applied only to lines not given any rule using <code>-R</code>, while in the latter case, <i>rule</i> will be applied to <i>all</i> lines.</dd></dl>
 <dl>
-<dt><code>-fixed</code> / <code>-free</code></p>
-<dd> Treat the files as fixed/free source format. If both options are given, the latter is used. Default: Files with suffixes <code>.f, .F, .for, .FOR </code>or<code> .ftn</code> are treated as fixed format and <code>.f90, .F90, .f95 </code>or<code> .F95</code> are treated as free format.</p>
-<dt><code>-o</code><i> name</i></p>
-<dd> This option will cause <i>makedepf90</i> to define the Makefile macro <code>FOBJ</code>=<i>objectfiles</i>, and a dependency line + rule for the final linking process to create the executable <i>name</i>. To set the linking rule, use the option <code>-l</code>.</p>
-<dt><code>-l</code><i> rule</i></p>
+<dt><code>-fixed</code> / <code>-free</code></dt>
+<dd> Treat the files as fixed/free source format. If both options are given, the latter is used. Default: Files with suffixes <code>.f, .F, .for, .FOR </code>or<code> .ftn</code> are treated as fixed format and <code>.f90, .F90, .f95 </code>or<code> .F95</code> are treated as free format.</dd>
+<dt><code>-o</code><i> name</i></dt>
+<dd> This option will cause <i>makedepf90</i> to define the Makefile macro <code>FOBJ</code>=<i>objectfiles</i>, and a dependency line + rule for the final linking process to create the executable <i>name</i>. To set the linking rule, use the option <code>-l</code>.</dd>
+<dt><code>-l</code><i> rule</i></dt>
 <dd> Use <i>rule</i> when linking the executable. The default is<br />
  <code>$(FC) -o $@ $(FFLAGS) $(LDFLAGS) $(FOBJ) $(LIBS)</code>.<br />
- This option has no effect unless <code>-o</code> is used.</p>
-<dt><code>-coco</code></p>
-<dd> Look for <code>coco</code>(1) set-files (<code>coco</code> ??include:s are supported automatically). This option implies <code>-free</code>.</p>
-<dt><code>-D</code><i> NAME</i></p>
-<dd> Define the pre-processor symbol <i>NAME</i>.</p>
-<dt><code>-b</code><i> path</i></p>
-<dd> Dependency tree and link rule will assume objects are placed in <i>path</i>. This is useful if the build places object files in a different directory than the source files.</p>
-<dt><code>-I</code><i> list-of-paths</i></p>
-<dd> Look for source/include files in the <i>list-of-paths</i>, if not found in current working directory. Here, <i>list-of-paths</i> is a colon separated list of path names.</p>
-<dt><code>-nosrc</code></p>
-<dd> Don&#8217;t list the source file among the prerequisites. </p>
+ This option has no effect unless <code>-o</code> is used.</dd>
+<dt><code>-coco</code></dt>
+<dd> Look for <code>coco</code>(1) set-files (<code>coco</code> ??include:s are supported automatically). This option implies <code>-free</code>.</dd>
+<dt><code>-D</code><i> NAME</i></dt>
+<dd> Define the pre-processor symbol <i>NAME</i>.</dd>
+<dt><code>-b</code><i> path</i></dt>
+<dd> Dependency tree and link rule will assume objects are placed in <i>path</i>. This is useful if the build places object files in a different directory than the source files.</dd>
+<dt><code>-I</code><i> list-of-paths</i></dt>
+<dd> Look for source/include files in the <i>list-of-paths</i>, if not found in current working directory. Here, <i>list-of-paths</i> is a colon separated list of path names.</dd>
+<dt><code>-nosrc</code></dt>
+<dd> Don&#8217;t list the source file among the prerequisites. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <h3>Basic Usage</h3>
@@ -149,8 +149,8 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <h2>DIAGNOSTICS</h2>
 <p> Most error and warning messages are self explanatory, but some of them might need some further explanations:</p>
 <dl>
-<dt><code>WARNING: recursion limit reached in file </code><i>filename</i></p>
-<dd> When recursively parsing include files, makedepf90 has reached the recursion limit. Possible reasons are: either you have some <i>really</i> complicated systems of include files, or you have recursive includes (e.g an include file that includes itself). In the latter case; fix it, your Fortran compiler will not like it either. </p>
+<dt><code>WARNING: recursion limit reached in file </code><i>filename</i></dt>
+<dd> When recursively parsing include files, makedepf90 has reached the recursion limit. Possible reasons are: either you have some <i>really</i> complicated systems of include files, or you have recursive includes (e.g an include file that includes itself). In the latter case; fix it, your Fortran compiler will not like it either. </dd>
 </dl>
 <h2>BUGS AND LIMITATIONS</h2>
 <p> Makedepf90&#8217;s support for pre processor conditionals and macro expension (#if:s, #define:s etc) is rather weak, but should work well enough for most cases. </p>

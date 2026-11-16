@@ -13,8 +13,8 @@ description: "mongoc_write_concern_get_wtimeout() – Fetches the write timeout 
 mongoc_write_concern_get_wtimeout (const mongoc_write_concern_t *write_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the write timeout to use as part of the write concern. If the write has not completed before this timeout, an error will be returned. </p>
 <p> A value of 0 indicates no write timeout. </p>

@@ -15,30 +15,30 @@ description: "fvwm-convert-2.4 – convert fvwm 2.2.x configuration file to fvwm
 <p> By default, <code>fvwm-convert-2.4</code> converts <i>~/.fvwm2rc,</i> saving the results in <i>~/.fvwm/.fvwm2rc.</i> You must create the <i>~/.fvwm</i> directory before running this command. Starting with the 2.4 release, the directory <i>~/.fvwm</i> is the default location for fvwm user configuration files. Different source and destination files may be given. If the destination file already exists, this program exits. While the program runs it will generate a temporary file with the same name as the destination file with the suffix &quot;.pass1&quot; added. </p>
 <p> <code>fvwm-convert-2.4</code> makes the following changes:</p>
 <dl>
-<dt><code>PixmapPath/IconPath</code></p>
-<dd>In fvwm 2.4, the PixmapPath and IconPath commands are replaced by the ImagePath command. In addition, the ImagePath can be compiled into fvwm. <code>fvwm-convert-2.4</code> changes the PixmapPath and IconPath commands to ImagePath commands and removes any directories that are compiled into fvwm. Paths starting with a dollar sign are also removed.</p>
-<dt><code>ModulePath</code></p>
-<dd>In fvwm 2.4, the ModulePath is compiled into fvwm. <code>fvwm-convert-2.4</code> removes any ModulePath commands it finds. If you are using your own modules, (not the ones that come with fvwm), you will have to fix your configuration file after using <code>fvwm-convert-2.4</code>.</p>
-<dt><code>HilightColor</code></p>
-<dd>In fvwm 2.4, the HighlightColor command is replaced by a Style command using the HilightFore and HilightBack arguments. <code>fvwm-convert-2.4</code> makes these changes.</p>
-<dt><code>HilightColorset</code></p>
-<dd>In fvwm 2.4, the HighlightColorset command that was present in some of the 2.3.x beta releases is replaced by a Style command using the HilightColorset style. <code>fvwm-convert-2.4</code> makes these changes.</p>
-<dt><code>WindowShadeAnimate</code></p>
-<dd>In fvwm 2.4, the WindowShadeAnimate command is replaced by the WindowShadeSteps Style option. <code>fvwm-convert-2.4</code> makes this change.</p>
-<dt><code>WindowFont</code></p>
-<dd>In fvwm 2.4, the WindowFont command is replaced by a Style command using the Font argument. <code>fvwm-convert-2.4</code> makes this change.</p>
-<dt><code>ColorLimit</code></p>
-<dd>In fvwm 2.4, the ColorLimit command is automatic. If you have a limited colormap, color limiting is the default. <code>fvwm-convert-2.4</code> removes any ColorLimit command that it finds.</p>
-<dt><code>GlobalOpts</code></p>
-<dd>The GlobalOpts command is converted to <code>Style</code> options and the <code>BugOpts</code> command. Some options can not be converted automatically, though.</p>
-<dt><code>Read</code></p>
-<dd>Prints a message identifying any read commands found. The files being read may need to be converted also.</p>
-<dt><code>Placement Styles</code></p>
-<dd>Any of the old placement Styles found in the file can not be converted automatically. Instead, <code>fvwm-convert-2.4</code> prints a warning. For details about the conversion, please refer to the &quot;Window manager placement&quot; section of the fvwm man page.</p>
-<dt><code>FvwmConfig and FvwmPipe</code></p>
-<dd>These modules are no longer a part of the fvwm distribution. <code>fvwm-convert-2.4</code> prints a warning if these modules are found in the file.</p>
-<dt><code>FvwmButtons panels</code></p>
-<dd>The syntax of panels in FvwmButtons has changed. The conversion can not be done automatically. <code>fvwm-convert-2.4</code> prints a message when it encounters a potential panel definition. For details about the conversion, please refer to the &quot;CONVERTING OLD PANEL CONFIGURATIONS&quot; section of the FvwmButtons man page.</dl>
+<dt><code>PixmapPath/IconPath</code></dt>
+<dd>In fvwm 2.4, the PixmapPath and IconPath commands are replaced by the ImagePath command. In addition, the ImagePath can be compiled into fvwm. <code>fvwm-convert-2.4</code> changes the PixmapPath and IconPath commands to ImagePath commands and removes any directories that are compiled into fvwm. Paths starting with a dollar sign are also removed.</dd>
+<dt><code>ModulePath</code></dt>
+<dd>In fvwm 2.4, the ModulePath is compiled into fvwm. <code>fvwm-convert-2.4</code> removes any ModulePath commands it finds. If you are using your own modules, (not the ones that come with fvwm), you will have to fix your configuration file after using <code>fvwm-convert-2.4</code>.</dd>
+<dt><code>HilightColor</code></dt>
+<dd>In fvwm 2.4, the HighlightColor command is replaced by a Style command using the HilightFore and HilightBack arguments. <code>fvwm-convert-2.4</code> makes these changes.</dd>
+<dt><code>HilightColorset</code></dt>
+<dd>In fvwm 2.4, the HighlightColorset command that was present in some of the 2.3.x beta releases is replaced by a Style command using the HilightColorset style. <code>fvwm-convert-2.4</code> makes these changes.</dd>
+<dt><code>WindowShadeAnimate</code></dt>
+<dd>In fvwm 2.4, the WindowShadeAnimate command is replaced by the WindowShadeSteps Style option. <code>fvwm-convert-2.4</code> makes this change.</dd>
+<dt><code>WindowFont</code></dt>
+<dd>In fvwm 2.4, the WindowFont command is replaced by a Style command using the Font argument. <code>fvwm-convert-2.4</code> makes this change.</dd>
+<dt><code>ColorLimit</code></dt>
+<dd>In fvwm 2.4, the ColorLimit command is automatic. If you have a limited colormap, color limiting is the default. <code>fvwm-convert-2.4</code> removes any ColorLimit command that it finds.</dd>
+<dt><code>GlobalOpts</code></dt>
+<dd>The GlobalOpts command is converted to <code>Style</code> options and the <code>BugOpts</code> command. Some options can not be converted automatically, though.</dd>
+<dt><code>Read</code></dt>
+<dd>Prints a message identifying any read commands found. The files being read may need to be converted also.</dd>
+<dt><code>Placement Styles</code></dt>
+<dd>Any of the old placement Styles found in the file can not be converted automatically. Instead, <code>fvwm-convert-2.4</code> prints a warning. For details about the conversion, please refer to the &quot;Window manager placement&quot; section of the fvwm man page.</dd>
+<dt><code>FvwmConfig and FvwmPipe</code></dt>
+<dd>These modules are no longer a part of the fvwm distribution. <code>fvwm-convert-2.4</code> prints a warning if these modules are found in the file.</dd>
+<dt><code>FvwmButtons panels</code></dt>
+<dd>The syntax of panels in FvwmButtons has changed. The conversion can not be done automatically. <code>fvwm-convert-2.4</code> prints a message when it encounters a potential panel definition. For details about the conversion, please refer to the &quot;CONVERTING OLD PANEL CONFIGURATIONS&quot; section of the FvwmButtons man page.</dd></dl>
 <h2>Bugs</h2>
 <p>You need Perl to be installed. </p>
 <p> <i>WindowFont</i> and <i>HilightColor</i> commands embedded in functions are not found. If you have either of these commands in functions, they are not detected. </p>

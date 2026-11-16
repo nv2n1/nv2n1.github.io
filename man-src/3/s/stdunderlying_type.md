@@ -11,10 +11,8 @@ std::underlying_type - std::underlying_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct underlying_type;</code></pre> 
 If T is a complete enumeration type, provides a member typedef type that names the underlying type of T. 
 Otherwise, the behavior is undefined. <i>(until C++20)</i> 
@@ -43,10 +41,8 @@ LWG_2396 C++11 incomplete enumeration types were allowed complete enumeration ty
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 enum e1 {};
-
 enum class e2 : int {};
 int main()
 {

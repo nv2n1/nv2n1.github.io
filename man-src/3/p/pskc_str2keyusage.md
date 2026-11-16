@@ -13,8 +13,8 @@ description: "pskc_str2keyusage – API function"
 <p> <code>pskc_keyusage pskc_str2keyusage(const char * </code><i>keyusage</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * keyusage</p>
-<dd>an string describing a key usage.</dl>
+<dt>const char * keyusage</dt>
+<dd>an string describing a key usage.</dd></dl>
 <h2>Description</h2>
 <p>Convert a string to a <code>pskc_keyusage</code> type. For example, pskc_str2keyusage(&quot;KeyWrap&quot;) will return <code>PSKC_KEYUSAGE_KEYWRAP</code>.</p>
 <h2>Returns</h2>

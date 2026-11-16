@@ -11,7 +11,6 @@ description: "ql/utilities/dataformatters.hpp – output manipulators"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/utilities/null.hpp&gt;
-
 #include &lt;ostream&gt;</code></pre>
 <h3>Functions</h3>
 <p>template&lt;typename T &gt; std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const null_checker&lt; T &gt; &amp;) </p>

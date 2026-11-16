@@ -35,7 +35,7 @@ description: "QuantLib::G2 – Two-additive-factor gaussian model class."
 <p> This class implements a two-additive-factor model defined by [ dr_t = nd $ y_t $ are defined by [ dx_t = -a x_t dt + igma dW^1_t, x_0 = 0 ] [ dy_t = -b y_t dt + igma dW^2_t, y_0 = 0 ] and $ dW^1_t dW^2_t = ho dt $. </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>This class was not tested enough to guarantee its functionality.</dl>
+<dd>This class was not tested enough to guarantee its functionality.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>. </p>
 <h2>Author</h2>

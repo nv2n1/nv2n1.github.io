@@ -12,7 +12,6 @@ description: "sctp_recvmsg – Receive a message from a SCTP socket."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_recvmsg(int sd, void *msg, size_t len,
                  struct sockaddr *from, socklen_t *fromlen,
                  struct sctp_sndrcvinfo *sinfo, int *msg_flags);</code></pre>

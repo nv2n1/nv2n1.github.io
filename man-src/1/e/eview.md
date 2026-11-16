@@ -23,8 +23,8 @@ description: "evim – easy Vim, edit a file with Vim and setup for modeless edi
 <p> See <a href="/docs/linux/man/1-vim/">vim</a>(1).</p>
 <h2>FILES</h2>
 <dl>
-<dt>/usr/share/vim/vim81/evim.vim</p>
-<dd> The script loaded to initialize eVim.</dl>
+<dt>/usr/share/vim/vim81/evim.vim</dt>
+<dd> The script loaded to initialize eVim.</dd></dl>
 <h2>AKA</h2>
 <p> Also Known As &quot;Vim for gumbies&quot;. When using evim you are expected to take a handkerchief, make a knot in each corner and wear it on your head.</p>
 <h2>SEE ALSO</h2>

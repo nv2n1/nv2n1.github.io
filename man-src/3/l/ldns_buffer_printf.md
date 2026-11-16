@@ -21,25 +21,25 @@ description: "ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns
 <p> void* ldns_buffer_export(ldns_buffer *buffer); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer_new</i>()</p>
-<dd>creates a new buffer with the specified capacity. </p>
+<dt> <i>ldns_buffer_new</i>()</dt>
+<dd>creates a new buffer with the specified capacity. </dd>
 <p> .br <code>capacity</code>: the size (in bytes) to allocate for the buffer .br Returns the created buffer</dl>
 <dl>
-<dt> <i>ldns_buffer_new_frm_data</i>()</p>
-<dd>creates a buffer with the specified data. The data IS copied and MEMORY allocations are done. The buffer is not fixed and can be resized using buffer_reserve(). </p>
+<dt> <i>ldns_buffer_new_frm_data</i>()</dt>
+<dd>creates a buffer with the specified data. The data IS copied and MEMORY allocations are done. The buffer is not fixed and can be resized using buffer_reserve(). </dd>
 <p> .br <code>buffer</code>: pointer to the buffer to put the data in .br <code>data</code>: the data to encapsulate in the buffer .br <code>size</code>: the size of the data</dl>
 <dl>
-<dt> <i>ldns_buffer_clear</i>()</p>
-<dd>clears the buffer and make it ready for writing. The buffer&#8217;s limit is set to the capacity and the position is set to 0. .br <code>buffer</code>: the buffer to clear</dl>
+<dt> <i>ldns_buffer_clear</i>()</dt>
+<dd>clears the buffer and make it ready for writing. The buffer&#8217;s limit is set to the capacity and the position is set to 0. .br <code>buffer</code>: the buffer to clear</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_printf</i>()</p>
-<dd>prints to the buffer, increasing the capacity if required using buffer_reserve(). The buffer&#8217;s position is set to the terminating &#8216;\0&#8217; Returns the number of characters written (not including the terminating &#8216;\0&#8217;) or -1 on failure.</dl>
+<dt> <i>ldns_buffer_printf</i>()</dt>
+<dd>prints to the buffer, increasing the capacity if required using buffer_reserve(). The buffer&#8217;s position is set to the terminating &#8216;\0&#8217; Returns the number of characters written (not including the terminating &#8216;\0&#8217;) or -1 on failure.</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_free</i>()</p>
-<dd>frees the buffer. .br <code>*buffer</code>: the buffer to be freed .br Returns void</dl>
+<dt> <i>ldns_buffer_free</i>()</dt>
+<dd>frees the buffer. .br <code>*buffer</code>: the buffer to be freed .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_buffer_export</i>()</p>
-<dd>Makes the buffer fixed and returns a pointer to the data. The caller is responsible for free&#8217;ing the result. .br <code>*buffer</code>: the buffer to be exported .br Returns void</dl>
+<dt> <i>ldns_buffer_export</i>()</dt>
+<dd>Makes the buffer fixed and returns a pointer to the data. The caller is responsible for free&#8217;ing the result. .br <code>*buffer</code>: the buffer to be exported .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

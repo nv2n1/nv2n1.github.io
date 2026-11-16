@@ -107,8 +107,8 @@ description: "dnssec_trigger_selinux – Security Enhanced Linux Policy for the 
 <p> <code>dnssec_trigger_exec_t</code> </p>
 <p> &#8211; Set files with the dnssec_trigger_exec_t type, if you want to transition an executable to the dnssec_trigger_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dnssec-triggerd, /usr/libexec/dnssec-trigger-script </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dnssec-triggerd, /usr/libexec/dnssec-trigger-script </dd>
 </dl>
 <p> <code>dnssec_trigger_tmp_t</code> </p>
 <p> &#8211; Set files with the dnssec_trigger_tmp_t type, if you want to store dnssec trigger temporary files in the /tmp directories. </p>

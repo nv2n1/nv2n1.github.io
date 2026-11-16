@@ -26,16 +26,16 @@ enum mcheck_status mprobe(void *ptr);
 <p> The <code>mprobe</code>() function performs a consistency check on the block of allocated memory pointed to by <i>ptr</i>. The <code>mcheck</code>() function should be called beforehand (otherwise <code>mprobe</code>() returns <code>MCHECK_DISABLED</code>). </p>
 <p> The following list describes the values returned by <code>mprobe</code>() or passed as the <i>mstatus</i> argument when <i>abortfunc</i> is invoked:</p>
 <dl>
-<dt><code>MCHECK_DISABLED</code> (<code>mprobe</code>() only)</p>
-<dd> <code>mcheck</code>() was not called before the first memory allocation function was called. Consistency checking is not possible.</p>
-<dt><code>MCHECK_OK</code> (<code>mprobe</code>() only)</p>
-<dd> No inconsistency detected.</p>
-<dt><code>MCHECK_HEAD</code></p>
-<dd> Memory preceding an allocated block was clobbered.</p>
-<dt><code>MCHECK_TAIL</code></p>
-<dd> Memory following an allocated block was clobbered.</p>
-<dt><code>MCHECK_FREE</code></p>
-<dd> A block of memory was freed twice.</dl>
+<dt><code>MCHECK_DISABLED</code> (<code>mprobe</code>() only)</dt>
+<dd> <code>mcheck</code>() was not called before the first memory allocation function was called. Consistency checking is not possible.</dd>
+<dt><code>MCHECK_OK</code> (<code>mprobe</code>() only)</dt>
+<dd> No inconsistency detected.</dd>
+<dt><code>MCHECK_HEAD</code></dt>
+<dd> Memory preceding an allocated block was clobbered.</dd>
+<dt><code>MCHECK_TAIL</code></dt>
+<dd> Memory following an allocated block was clobbered.</dd>
+<dt><code>MCHECK_FREE</code></dt>
+<dd> A block of memory was freed twice.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>mcheck</code>() and <code>mcheck_pedantic</code>() return 0 on success, or -1 on error.</p>
 <h2>VERSIONS</h2>

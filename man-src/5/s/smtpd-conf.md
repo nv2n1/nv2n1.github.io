@@ -19,19 +19,19 @@ description: "smtpd.conf – Simple Mail Transfer Protocol daemon configuration 
 <pre>lan_addr = &quot;192.168.0.1&quot;
 listen on $lan_addr
 listen on $lan_addr tls auth
-</dl>
+</dd></dl>
 Additional configuration files can be included with the
 <code> include</code>
 keyword, for example:
-<dl><dt><dd>include &quot;/etc/opensmtpd/smtpd.conf.local&quot;
-</dl>
+<dl><dt></dt><dd>include &quot;/etc/opensmtpd/smtpd.conf.local&quot;
+</dd></dl>
 The syntax of
 <code>smtpd.conf</code>
 is described below.
-<dl><dt><dd><dl><dt><code> accept | reject</code><dd><code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8)
+<dl><dl><dt><code> accept | reject</code></dt><dd><code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8)
 accepts and rejects messages
 based on information gathered during the SMTP session.
-</dl>
+</dd></dl>
 For each message processed by the daemon,
 the rules are evaluated in sequential order,
 from first to last.
@@ -41,27 +41,27 @@ the default action is to reject the message.
 An exclamation mark may be specified to perform a reverse match.
 Following the accept/reject
 decision comes the optional tag matching:
-<dl><dt><dd><dl><dt><code> tagged</code><dd>[<code> !</code>]
+<dl><dl><dt><code> tagged</code></dt><dd>[<code> !</code>]
 <i>tag</i>
 If specified, the rule will only be matched if the client session was tagged with
 <i>tag</i>.
-</dl></dl>
+</dd></dl></dl>
 After that the client's IP address rule is specified:
-<dl><dt><dd><dl><dt><code> from any</code><dd>Make the rule match regardless of the IP of connecting client.
-<dt><code> from</code><dd>[<code> !</code>]
+<dl><dl><dt><code> from any</code></dt><dd>Make the rule match regardless of the IP of connecting client.
+</dd><dt><code> from</code></dt><dd>[<code> !</code>]
 <code> local</code>
 The rule matches only locally originating connections.
 This is the default,
 and may be omitted.
-<dt><code> from</code><dd>[<code> !</code>]
+</dd><dt><code> from</code></dt><dd>[<code> !</code>]
 <code> source</code>
 Pf &lt; <i>table</i> &gt;
 The rule matches if the connection is made from a client whose address
 is declared in the table
 <i>table</i>.
-</dl></dl>
+</dd></dl></dl>
 In addition, finer access control may be achieved on the sender if desired:
-<dl><dt><dd><dl><dt><code> sender</code><dd>[<code> !</code>]
+<dl><dl><dt><code> sender</code></dt><dd>[<code> !</code>]
 Pf &lt; <i>senders</i> &gt;
 If specified, the rule will only be matched if the sender email address
 is found in the table
@@ -69,17 +69,17 @@ is found in the table
 The table may contain complete email addresses or apply to an entire
 domain if prefixed with
 Sq @.
-</dl></dl>
+</dd></dl></dl>
 Next comes the selection based on the domain the message is sent to:
-<dl><dt><dd><dl><dt><code> for any [ alias &lt; </code><i>aliases</i> &gt;]<dd>Make the rule match regardless of the domain it is sent to.
+<dl><dl><dt><code> for any [ alias &lt; </code><i>aliases</i> &gt;]</dt><dd>Make the rule match regardless of the domain it is sent to.
 If specified, the table
 <i>aliases</i>
 is used for looking up alternative destinations for all addresses.
-<dt><code> for any virtual &lt; </code><i>vmap</i> &gt;<dd>Make the rule match regardless of the domain it is sent to.
+</dd><dt><code> for any virtual &lt; </code><i>vmap</i> &gt;</dt><dd>Make the rule match regardless of the domain it is sent to.
 The
 <i>vmap</i>
 table will be used as the virtual domain mapping.
-<dt><code> for</code><dd>[<code> !</code>]
+</dd><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> domain</code>
 <i>domain</i>
 [<code> alias &lt; </code><i>aliases</i> &gt;]
@@ -89,24 +89,24 @@ This parameter supports the
 Sq *
 wildcard,
 so that a single rule for all sub-domains can be used, for example:
-<dl><dt><dd>accept for domain &quot;*.example.com&quot; deliver to mbox
-</dl></dl>
+</dd><dl><dt></dt><dd>accept for domain &quot;*.example.com&quot; deliver to mbox
+</dd></dl></dl>
 If specified, the table
 <i>aliases</i>
 is used for looking up alternative destinations for addresses in this
 <i>domain</i>.
-<dl><dt><code> for</code><dd>[<code> !</code>]
+<dl><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> domain</code>
 Pf &lt; <i>domains</i> &gt;
 [<code> alias &lt; </code><i>aliases</i> &gt;]
 This rule applies to mail destined to domains which are part of the table
 <i>domains</i>.
-</dl>
+</dd></dl>
 If specified, the table
 <i>aliases</i>
 is used for looking up alternative destinations for addresses in these
 <i>domains</i>.
-<dl><dt><code> for</code><dd>[<code> !</code>]
+<dl><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> domain</code>
 <i>domain</i>
 <code> virtual &lt; </code><i>users</i> &gt;
@@ -116,9 +116,9 @@ This parameter supports the
 Sq *
 wildcard,
 so that a single rule for all sub-domains can be used, for example:
-<dl><dt><dd>accept for domain &quot;*.example.com&quot; \
+</dd><dl><dt></dt><dd>accept for domain &quot;*.example.com&quot; \
  virtual &lt;users&gt; deliver to mbox
-</dl></dl>
+</dd></dl></dl>
 The table
 <i>users</i>
 holds a key-value mapping of virtual to system users.
@@ -126,13 +126,13 @@ For an example of how to configure the
 <i>users</i>
 table, see
 <code><a href="//www.systutorials.com/docs/linux/man/5-table/">table</a></code>(5).
-<dl><dt><code> for</code><dd>[<code> !</code>]
+<dl><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> domain</code>
 Pf &lt; <i>domains</i> &gt;<code> virtual &lt; </code><i>users</i> &gt;
 This rule applies to mail destined for the virtual domains specified
 in the table
 <i>domains</i>.
-</dl>
+</dd></dl>
 The table
 <i>users</i>
 holds a key-value mapping of virtual to system users.
@@ -140,7 +140,7 @@ For an example of how to configure the
 <i>users</i>
 table, see
 <code><a href="//www.systutorials.com/docs/linux/man/5-table/">table</a></code>(5).
-<dl><dt><code> for</code><dd>[<code> !</code>]
+<dl><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> local</code>
 [<code> alias &lt; </code><i>aliases</i> &gt;]
 This rule applies to mail destined to
@@ -151,7 +151,7 @@ See the
 entry for
 <i>/etc/opensmtpd/mailname</i>
 below for details of how the server name is determined.
-<dt><code> for</code><dd>[<code> !</code>]
+</dd><dt><code> for</code></dt><dd>[<code> !</code>]
 <code> local</code>
 <code> virtual &lt; </code><i>vmap</i> &gt;
 This rule applies to mail destined to
@@ -160,9 +160,9 @@ and to the default server name.
 The
 <i>vmap</i>
 table will be used as the virtual domain mapping.
-</dl></dl>
+</dd></dl></dl>
 Further access control may be achieved on specific recipients if desired:
-<dl><dt><dd><dl><dt><code> recipient</code><dd>[<code> !</code>]
+<dl><dl><dt><code> recipient</code></dt><dd>[<code> !</code>]
 Pf &lt; <i>recipients</i> &gt;
 If specified, the rule will only be matched if the recipient email address
 is found in the table
@@ -170,24 +170,24 @@ is found in the table
 The table may contain complete email addresses or apply to an entire
 domain if prefixed with
 Sq @.
-</dl></dl>
+</dd></dl></dl>
 If the method of delivery is local, a user database may be
 specified to override the system database:
-<dl><dt><dd><dl><dt>[<code> userbase &lt; </code><i>table</i> &gt;]<dd>Look up users in the table
+<dl><dl><dt>[<code> userbase &lt; </code><i>table</i> &gt;]</dt><dd>Look up users in the table
 <i>table</i>
 instead of performing system lookups using the
 <code><a href="//www.systutorials.com/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3)
 function.
-</dl></dl>
+</dd></dl></dl>
 You can also accept mail just to have it forwarded elsewhere:
-<dl><dt><dd><dl><dt><code> forward-only</code><dd>Mail is accepted for local recipients ONLY if it is redirected to an
+<dl><dl><dt><code> forward-only</code></dt><dd>Mail is accepted for local recipients ONLY if it is redirected to an
 external address via an alias or a ~/.forward file.
-</dl>
+</dd></dl>
 Example:
-<dl><dt><dd>accept for domain opensmtpd.org forward-only
-</dl></dl>
+<dl><dt></dt><dd>accept for domain opensmtpd.org forward-only
+</dd></dl></dl>
 Finally, the method of delivery is specified:
-<dl><dt><dd><dl><dt><code> deliver to lmtp</code><dd>[<i>host</i>: <i>port</i> | socket]
+<dl><dl><dt><code> deliver to lmtp</code></dt><dd>[<i>host</i>: <i>port</i> | socket]
 [<code> rcpt-to</code>]
 [<code> as </code><i>user</i>]
 Mail is delivered to
@@ -197,12 +197,12 @@ Ux
 <i>socket</i>
 over LMTP with the privileges of the specified
 <i>user</i>.
-</dl>
+</dd></dl>
 Optionally,
 <code> rcpt-to</code>
 might be specified to use the recipient email address (after expansion) instead
 of the local user in the LMTP session as RCPT TO.
-<dl><dt><code> deliver to maildir [</code><i>path</i>]<dd>Mail is added to a maildir.
+<dl><dt><code> deliver to maildir [</code><i>path</i>]</dt><dd>Mail is added to a maildir.
 Its location,
 <i>path</i>,
 may contain format specifiers that are expanded before use
@@ -212,16 +212,16 @@ If
 is not provided, then
 <i>~/Maildir</i>
 is assumed.
-<dt><code> deliver to mbox</code><dd>Mail is delivered to the local user's system mailbox in
+</dd><dt><code> deliver to mbox</code></dt><dd>Mail is delivered to the local user's system mailbox in
 <i>/var/mail</i>.
-<dt><code> deliver to mda </code><i>program</i> [<code> as </code><i>user</i>]<dd>Mail is piped to the specified
+</dd><dt><code> deliver to mda </code><i>program</i> [<code> as </code><i>user</i>]</dt><dd>Mail is piped to the specified
 <i>program</i>,
 which is run with the privileges of the specified
 <i>user</i>
 or the user the message is destined to.
 This parameter may use conversion specifiers that are expanded before use
 (see .B FORMAT SPECIFIERS .)
-<dt>Bk -words<dd><code> relay</code>
+</dd><dt>Bk -words</dt><dd><code> relay</code>
 [<code> backup [</code><i>mx</i>]]
 [<code> as </code><i>address</i>]
 [<code> source &lt; </code><i>source</i> &gt;]
@@ -230,7 +230,7 @@ This parameter may use conversion specifiers that are expanded before use
 [<code> pki </code><i>pkiname</i>]
 [<code> tls [ verify</code>]]
 Ek
-</dl>
+</dd></dl>
 Mail is relayed.
 The routing decision is based on the DNS system.
 If the
@@ -314,7 +314,7 @@ and
 <code> tls verify</code>
 options should only be used in private networks
 as they will prevent proper relaying on the Internet.
-<dl><dt><code> relay via</code><dd><i>host</i>
+<dl><dt><code> relay via</code></dt><dd><i>host</i>
 [<code> auth &lt; </code><i>auth</i> &gt;]
 [<code> as </code><i>address</i>]
 [<code> source &lt; </code><i>source</i> &gt;]
@@ -322,33 +322,33 @@ as they will prevent proper relaying on the Internet.
 [<code> hostnames &lt; </code><i>names</i> &gt;]
 [<code> pki </code><i>pkiname</i>]
 [<code> verify</code>]
-</dl>
+</dd></dl>
 Mail is relayed through the specified
 <i>host</i>
 expressed as a URL.
 For example:
-<dl><dt><dd><a href="smtp://mx1.example.org">smtp://mx1.example.org</a> # use SMTP
+<dl><dt></dt><dd><a href="smtp://mx1.example.org">smtp://mx1.example.org</a> # use SMTP
 <a href="smtp://mx1.example.org:4321">smtp://mx1.example.org:4321</a> # use SMTP \
  # with port 4321
 <a href="lmtp://localhost:2026">lmtp://localhost:2026</a> # use LMTP \
  # with port 2026
-</dl>
+</dd></dl>
 The communication channel may be secured using one of the secure
 schemas.
 For example:
-<dl><dt><dd><a href="tls://mx1.example.org">tls://mx1.example.org</a> # use TLS
+<dl><dt></dt><dd><a href="tls://mx1.example.org">tls://mx1.example.org</a> # use TLS
 <a href="smtps://mx1.example.org">smtps://mx1.example.org</a> # use SMTPS
 <a href="secure://mx1.example.org">secure://mx1.example.org</a> # try SMTPS and \
  # fallback to TLS
-</dl>
+</dd></dl>
 In addition, credentials for authenticated relaying may be provided
 when using a secure schema.
 For example:
-<dl><dt><dd>tls+<a href="auth://label@mx.example.org">auth://label@mx.example.org</a> # over TLS
+<dl><dt></dt><dd>tls+<a href="auth://label@mx.example.org">auth://label@mx.example.org</a> # over TLS
 smtps+<a href="auth://label@mx.example.org">auth://label@mx.example.org</a> # over SMTPS
 secure+<a href="auth://label@mx.example.org">auth://label@mx.example.org</a> # over either \
  # SMTPS or TLS
-</dl>
+</dd></dl>
 If a pki entry exists for the outgoing hostname, or one is provided
 with
 <i>pkiname</i>,
@@ -415,12 +415,12 @@ certificate it presented has been verified.
 The relay URL must specify TLS for this option to be valid.
 </dl>
 Additional per-rule adjustments are available:
-<dl><dt><dd><dl><dt><code> expire</code><dd>Sm off
+<dl><dl><dt><code> expire</code></dt><dd>Sm off
 <i>n</i>
 {<code>s</code> | m | h | d}
 Sm on
 Specify how long a message that matched this rule can stay in the queue.
-</dl></dl><dl><dt><code> bounce-warn</code><dd>Sm off
+</dd></dl></dl><dl><dt><code> bounce-warn</code></dt><dd>Sm off
 <i>n</i>
 {<code>s</code> | m | h | d}
 [,
@@ -430,30 +430,30 @@ Sm on
 Specify the delays for which temporary failure reports must be generated
 when messages are stuck in the queue.
 For example:
-<dl><dt><dd>bounce-warn 1h, 6h, 2d
-</dl></dl>
+</dd><dl><dt></dt><dd>bounce-warn 1h, 6h, 2d
+</dd></dl></dl>
 will generate a failure report when an envelope is in the queue for more
 than one hour, six hours and two days.
 The default is 4h.
-<dl><dt><code> ca </code><i>hostname</i> <code> certificate </code><i>cafile</i><dd>Associate a custom CA certificate located in
+<dl><dt><code> ca </code><i>hostname</i> <code> certificate </code><i>cafile</i></dt><dd>Associate a custom CA certificate located in
 <i>cafile</i>
 with
 <i>hostname</i>.
-<dt><code> ciphers </code><i>cipher-list</i><dd>Specify an alternate list of ciphers to use when establishing TLS sessions.
+</dd><dt><code> ciphers </code><i>cipher-list</i></dt><dd>Specify an alternate list of ciphers to use when establishing TLS sessions.
 It is highly recommended to avoid making use of this option unless there
 is a good understanding of the implications.
-</dl>
+</dd></dl>
 When not specified, only ciphers considered safe are chosen.
-<dl><dt><code> expire</code><dd>Sm off
+<dl><dt><code> expire</code></dt><dd>Sm off
 <i>n</i>
 {<code>s</code> | m | h | d}
 Sm on
 Specify how long a message can stay in the queue.
 The default value is 4d.
 For example:
-<dl><dt><dd>expire 4d # expire after 4 days
+</dd><dl><dt></dt><dd>expire 4d # expire after 4 days
 expire 10h # expire after 10 hours
-</dl><dt><code> filter </code><i>name</i> filter [<i>arguments</i>]<dd>Specify a filter with the given
+</dd></dl><dt><code> filter </code><i>name</i> filter [<i>arguments</i>]</dt><dd>Specify a filter with the given
 <i>name</i>
 and the program
 <i>filter</i>
@@ -462,10 +462,10 @@ using the given filter
 Filters are used to hook into the SMTP dialog and provide additional filtering
 options for
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8).
-<dt><code> filter </code><i>name</i> <code> chain </code><i>filter</i> <i>...</i><dd>Specify a filter chain with the given
+</dd><dt><code> filter </code><i>name</i> <code> chain </code><i>filter</i> <i>...</i></dt><dd>Specify a filter chain with the given
 <i>name</i>
 and filters.
-<dt><code> limit session</code><dd>{<code>max-rcpt</code> | max-mails}
+</dd><dt><code> limit session</code></dt><dd>{<code>max-rcpt</code> | max-mails}
 <i>num</i>
 Instruct
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8)
@@ -475,7 +475,7 @@ Defaults are 100 for
 <code> max-mails</code>
 and 1000 for
 <code> max-rcpt.</code>
-<dt><code> limit mta</code><dd>[<code> for domain </code><i>domain</i>]
+</dd><dt><code> limit mta</code></dt><dd>[<code> for domain </code><i>domain</i>]
 <i>family</i>
 Instruct
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8)
@@ -490,11 +490,11 @@ If a
 <i>domain</i>
 is specified, the restriction only applies when connecting
 to MXs for this domain.
-<dt><code> limit scheduler max-inflight </code><i>num</i><dd>Suspend the scheduling of envelopes for deliver/relay until the number
+</dd><dt><code> limit scheduler max-inflight </code><i>num</i></dt><dd>Suspend the scheduling of envelopes for deliver/relay until the number
 of inflight envelopes falls below
 <i>num</i>.
 Changing the default value might degrade performance.
-<dt><code> listen on socket</code><dd>[<code> filter </code><i>name</i>]
+</dd><dt><code> listen on socket</code></dt><dd>[<code> filter </code><i>name</i>]
 [<code> mask-source</code>]
 br
 Bk -words
@@ -514,7 +514,7 @@ Bk -words
 [<code> received-auth</code>]
 [<code> no-dsn</code>]
 Ek
-</dl>
+</dd></dl>
 Specify a
 <code> socket</code>
 or an
@@ -650,17 +650,17 @@ If the
 <code> no-dsn</code>
 parameter is used, DSN (Delivery Status Notification) extension will not
 be enabled.
-<dl><dt><code> max-message-size </code><i>n</i><dd>Specify a maximum message size of
+<dl><dt><code> max-message-size </code><i>n</i></dt><dd>Specify a maximum message size of
 <i>n</i>
 bytes.
 The argument may contain a multiplier, as documented in
 <code>scan_scaled</code>(3).
 The default maximum message size is 35MB if none is specified.
-<dt><code> pki </code><i>hostname</i> <code> certificate </code><i>certfile</i><dd>Associate the certificate located in
+</dd><dt><code> pki </code><i>hostname</i> <code> certificate </code><i>certfile</i></dt><dd>Associate the certificate located in
 <i>certfile</i>
 with
 <i>hostname</i>.
-</dl>
+</dd></dl>
 If a fallback certificate or SNI is wanted, the
 Sq *
 wildcard may be used as
@@ -671,31 +671,31 @@ to
 <i>certfile</i>.
 Creation of certificates is documented in
 <code>starttls</code>(8).
-<dl><dt><code> pki </code><i>hostname</i> <code> key </code><i>keyfile</i><dd>Associate the key located in
+<dl><dt><code> pki </code><i>hostname</i> <code> key </code><i>keyfile</i></dt><dd>Associate the key located in
 <i>keyfile</i>
 with
 <i>hostname</i>.
-<dt><code> pki </code><i>hostname</i> <code> dhe </code><i>params</i><dd>Specify the DHE parameters to use for DHE cipher suites with
+</dd><dt><code> pki </code><i>hostname</i> <code> dhe </code><i>params</i></dt><dd>Specify the DHE parameters to use for DHE cipher suites with
 <i>hostname</i>.
 Valid parameter values are none, legacy and auto.
 For legacy a fixed key length of 1024 bits is used, whereas for auto the key
 length is determined automatically.
 The default is none, which disables DHE cipher suites.
-<dt><code> queue compression</code><dd>Enable transparent compression of envelopes and messages.
+</dd><dt><code> queue compression</code></dt><dd>Enable transparent compression of envelopes and messages.
 The only supported algorithm at the moment is gzip.
 Envelopes and messages may be inspected using the
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8)
 or
 <code>gzcat</code>(1)
 utilities.
-<dt><code> queue encryption [key </code><i>key</i>]<dd>Enable transparent encryption of envelopes and messages.
+</dd><dt><code> queue encryption [key </code><i>key</i>]</dt><dd>Enable transparent encryption of envelopes and messages.
 <i>key</i>
 must be a 16-byte random key in hexadecimal representation.
 It can be obtained using the
 <code>openssl</code>(1)
 utility as follow:
-<dl><dt><dd>$ openssl rand -hex 16
-</dl></dl>
+</dd><dl><dt></dt><dd>$ openssl rand -hex 16
+</dd></dl></dl>
 If the
 <i>key</i>
 parameter is not specified, it is read with
@@ -712,28 +712,28 @@ Envelopes and messages may be inspected using the
 utility.
 Queue encryption can be used with queue compression and will always
 perform compression before encryption.
-<dl><dt><code> table </code><i>name</i> [<i>type</i>:] <i>config</i><dd>Tables are used to provide additional configuration information for
+<dl><dt><code> table </code><i>name</i> [<i>type</i>:] <i>config</i></dt><dd>Tables are used to provide additional configuration information for
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a></code>(8)
 in the form of lists or key-value mappings.
 The format of the entries depends on what the table is used for.
 Refer to
 <code><a href="//www.systutorials.com/docs/linux/man/5-table/">table</a></code>(5)
 for the exhaustive documentation.
-</dl>
+</dd></dl>
 The table is identified using table name
 <i>name</i>;
 the name itself is arbitrarily chosen.
 <i>type</i>
 specifies the table backend,
 and should be one of the following:
-<dl><dt><dd><dl><dt>db<dd>Information is stored in a file created using
+<dl><dl><dt>db</dt><dd>Information is stored in a file created using
 <code><a href="//www.systutorials.com/docs/linux/man/8-makemap/">makemap</a></code>(8).
-<dt>file<dd>Information is stored in a plain text file using the
+</dd><dt>file</dt><dd>Information is stored in a plain text file using the
 same format as used to generate
 <code><a href="//www.systutorials.com/docs/linux/man/8-makemap/">makemap</a></code>(8)
 mappings.
 This is the default.
-</dl></dl>
+</dd></dl></dl>
 <i>config</i>
 specifies a configuration file for the table data.
 It must be an absolute path to a file for the
@@ -741,17 +741,17 @@ It must be an absolute path to a file for the
 and
 ``db''
 table types.
-<dl><dt><code> table </code><i>name</i> {<i>value</i> [, <i>...</i>]}<dd>Tables containing list of static values may be declared
+<dl><dt><code> table </code><i>name</i> {<i>value</i> [, <i>...</i>]}</dt><dd>Tables containing list of static values may be declared
 using an inlined notation.
-</dl>
+</dd></dl>
 The table is identified using table name
 <i>name</i>;
 the name itself is arbitrarily chosen.
 The table must contain at least one value and may declare many values as a
 list of comma-separated strings.
-<dl><dt><code> table </code><i>name</i> {<i>key</i>=<i>value</i> [, <i>...</i>]}<dd>Tables containing static key-value mappings may be declared
+<dl><dt><code> table </code><i>name</i> {<i>key</i>=<i>value</i> [, <i>...</i>]}</dt><dd>Tables containing static key-value mappings may be declared
 using an inlined notation.
-</dl>
+</dd></dl>
 The table is identified using table name
 <i>name</i>;
 the name itself is arbitrarily chosen.
@@ -764,79 +764,79 @@ descriptions.
 <p>Some configuration directives support expansion of their parameters at runtime. Such directives (for example <code> deliver to maildir,</code> <code> deliver to mda)</code> may use format specifiers which will be expanded before delivery or relaying. The following formats are currently supported:</p>
 <dl>
 <dd>
-<dl>
-<dt>%{sender} Ta sender email address</p>
+</dd><dl>
+<dt>%{sender} Ta sender email address</dt>
 <dd>
-<dt>%{sender.user} Ta user part of the sender email address</p>
+</dd><dt>%{sender.user} Ta user part of the sender email address</dt>
 <dd>
-<dt>%{sender.domain} Ta domain part of the sender email address</p>
+</dd><dt>%{sender.domain} Ta domain part of the sender email address</dt>
 <dd>
-<dt>%{rcpt} Ta recipient email address</p>
+</dd><dt>%{rcpt} Ta recipient email address</dt>
 <dd>
-<dt>%{rcpt.user} Ta user part of the recipient email address</p>
+</dd><dt>%{rcpt.user} Ta user part of the recipient email address</dt>
 <dd>
-<dt>%{rcpt.domain} Ta domain part of the recipient email address</p>
+</dd><dt>%{rcpt.domain} Ta domain part of the recipient email address</dt>
 <dd>
-<dt>%{dest} Ta recipient email address after expansion</p>
+</dd><dt>%{dest} Ta recipient email address after expansion</dt>
 <dd>
-<dt>%{dest.user} Ta user part after expansion</p>
+</dd><dt>%{dest.user} Ta user part after expansion</dt>
 <dd>
-<dt>%{dest.domain} Ta domain part after expansion</p>
+</dd><dt>%{dest.domain} Ta domain part after expansion</dt>
 <dd>
-<dt>%{user.username} Ta local user</p>
+</dd><dt>%{user.username} Ta local user</dt>
 <dd>
-<dt>%{user.directory} Ta home directory of the local user</p>
-<dd></dl>
+</dd><dt>%{user.directory} Ta home directory of the local user</dt>
+<dd></dd></dl>
 </dl>
 <p> Expansion formats also support partial expansion using the optional bracket notations with substring offset. For example, with recipient domain &#8220;example.org :&#8221;</p>
 <dl>
 <dd>
-<dl>
-<dt>%{rcpt.domain[0]} Ta expands to &#8220;e&#8221;</p>
+</dd><dl>
+<dt>%{rcpt.domain[0]} Ta expands to &#8220;e&#8221;</dt>
 <dd>
-<dt>%{rcpt.domain[1]} Ta expands to &#8220;x&#8221;</p>
+</dd><dt>%{rcpt.domain[1]} Ta expands to &#8220;x&#8221;</dt>
 <dd>
-<dt>%{rcpt.domain[8:]} Ta expands to &#8220;org&#8221;</p>
+</dd><dt>%{rcpt.domain[8:]} Ta expands to &#8220;org&#8221;</dt>
 <dd>
-<dt>%{rcpt.domain[-3:]} Ta expands to &#8220;org&#8221;</p>
+</dd><dt>%{rcpt.domain[-3:]} Ta expands to &#8220;org&#8221;</dt>
 <dd>
-<dt>%{rcpt.domain[0:6]} Ta expands to &#8220;example&#8221;</p>
+</dd><dt>%{rcpt.domain[0:6]} Ta expands to &#8220;example&#8221;</dt>
 <dd>
-<dt>%{rcpt.domain[0:-4]} Ta expands to &#8220;example&#8221;</p>
-<dd></dl>
+</dd><dt>%{rcpt.domain[0:-4]} Ta expands to &#8220;example&#8221;</dt>
+<dd></dd></dl>
 </dl>
 <p> In addition, modifiers may be applied to the token. For example, with recipient &#8220;User+Tag [at] Example.org :&#8221;</p>
 <dl>
 <dd>
-<dl>
-<dt>%{rcpt:lowercase} Ta expands to &#8220;user+tag [at] example.org&#8221;</p>
+</dd><dl>
+<dt>%{rcpt:lowercase} Ta expands to &#8220;user+tag [at] example.org&#8221;</dt>
 <dd>
-<dt>%{rcpt:uppercase} Ta expands to &#8220;USER+TAG [at] EXAMPLE.ORG&#8221;</p>
+</dd><dt>%{rcpt:uppercase} Ta expands to &#8220;USER+TAG [at] EXAMPLE.ORG&#8221;</dt>
 <dd>
-<dt>%{rcpt:strip} Ta expands to &#8220;User [at] Example.org&#8221;</p>
+</dd><dt>%{rcpt:strip} Ta expands to &#8220;User [at] Example.org&#8221;</dt>
 <dd>
-<dt>%{rcpt:lowercase|strip} Ta expands to &#8220;user [at] example.org&#8221;</p>
-<dd></dl>
+</dd><dt>%{rcpt:lowercase|strip} Ta expands to &#8220;user [at] example.org&#8221;</dt>
+<dd></dd></dl>
 </dl>
 <p> For security concerns, expanded values are sanitized and potentially dangerous characters are replaced with Sq :. In situations where they are desirable, the &#8220;raw&#8221; modifier may be applied. For example, with recipient &#8220;user+t?g@example.org :&#8221;</p>
 <dl>
 <dd>
-<dl>
-<dt>%{rcpt} Ta expands to &#8220;user+t:g@example.org&#8221;</p>
+</dd><dl>
+<dt>%{rcpt} Ta expands to &#8220;user+t:g@example.org&#8221;</dt>
 <dd>
-<dt>%{rcpt:raw} Ta expands to &#8220;user+t?g@example.org&#8221;</p>
-<dd></dl>
+</dd><dt>%{rcpt:raw} Ta expands to &#8220;user+t?g@example.org&#8221;</dt>
+<dd></dd></dl>
 </dl>
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>/etc/opensmtpd/smtpd.conf</code></p>
-<dd>Default <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) configuration file.</p>
-<dt><code>/etc/opensmtpd/mailname</code></p>
-<dd>If this file exists, the first line is used as the server name. Otherwise, the server name is derived from the local hostname returned by <code>gethostname</code>(3), either directly if it is a fully qualified domain name, or by retrieving the associated canonical name through <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>
-<dt><code>/var/spool/smtpd/</code></p>
-<dd>Spool directories for mail during processing.</dl>
+</dd><dl>
+<dt><code>/etc/opensmtpd/smtpd.conf</code></dt>
+<dd>Default <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) configuration file.</dd>
+<dt><code>/etc/opensmtpd/mailname</code></dt>
+<dd>If this file exists, the first line is used as the server name. Otherwise, the server name is derived from the local hostname returned by <code>gethostname</code>(3), either directly if it is a fully qualified domain name, or by retrieving the associated canonical name through <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</dd>
+<dt><code>/var/spool/smtpd/</code></dt>
+<dd>Spool directories for mail during processing.</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>The default <code>smtpd.conf</code> file listens on the loopback network interface (lo0), and allows for mail from users and daemons on the local machine, as well as permitting email to remote servers. Some more complex configurations are given below. </p>
@@ -847,16 +847,16 @@ descriptions.
 # chmod 640 /etc/opensmtpd/secrets
 # chown root:_smtpd /etc/opensmtpd/secrets
 # echo &quot;label username:password&quot; &gt; /etc/opensmtpd/secrets
-</dl>
+</dd></dl>
 <code>smtpd.conf</code>
 would look like this:
-<dl><dt><dd>table aliases file:/etc/opensmtpd/aliases
+<dl><dt></dt><dd>table aliases file:/etc/opensmtpd/aliases
 table secrets file:/etc/opensmtpd/secrets
 listen on lo0
 accept for local alias &lt;aliases&gt; deliver to mbox
 accept for any relay via tls+<a href="auth://label@smtp.example.com">auth://label@smtp.example.com</a> \
  auth &lt;secrets&gt;
-</dl>
+</dd></dl>
 In this second example,
 the aim is to permit mail relaying for any user that can authenticate
 using their normal login credentials.
@@ -864,16 +864,16 @@ An RSA certificate must be provided to prove the server's identity.
 The mail server listens on all interfaces the default route(s) point to.
 Mail with a local destination should be sent to an external mda.
 First, the RSA certificate is created:
-<dl><dt><dd># openssl genrsa -out /etc/ssl/private/mail.example.com.key 4096
+<dl><dt></dt><dd># openssl genrsa -out /etc/ssl/private/mail.example.com.key 4096
 # openssl req -new -x509 -key /etc/ssl/private/mail.example.com.key \
  -out /etc/ssl/mail.example.com.crt -days 365
 # chmod 600 /etc/ssl/mail.example.com.crt
 # chmod 600 /etc/ssl/private/mail.example.com.key
-</dl>
+</dd></dl>
 In the example above,
 a certificate valid for one year was created.
 The configuration file would look like this:
-<dl><dt><dd>pki mail.example.com certificate &quot;/etc/ssl/mail.example.com.crt&quot;
+<dl><dt></dt><dd>pki mail.example.com certificate &quot;/etc/ssl/mail.example.com.crt&quot;
 pki mail.example.com key &quot;/etc/ssl/private/mail.example.com.key&quot;
 table aliases file:/etc/opensmtpd/aliases
 listen on lo0
@@ -882,7 +882,7 @@ accept for local alias &lt;aliases&gt; deliver to mda &quot;/path/to/mda -f -&qu
 accept from any for domain example.com \
  deliver to mda &quot;/path/to/mda -f -&quot;
 accept for any relay
-</dl>
+</dd></dl>
 For sites that wish to sign messages using DKIM, the
 <i>dkimproxy</i>
 package may be used as a filter.
@@ -890,13 +890,13 @@ The following example is the same as the default configuration,
 but all outgoing mail is passed to dkimproxy_out on port 10027
 for signing.
 The signed messages are received on port 10028 and tagged for relaying.
-<dl><dt><dd>table aliases file:/etc/opensmtpd/aliases
+<dl><dt></dt><dd>table aliases file:/etc/opensmtpd/aliases
 listen on lo0
 listen on lo0 port 10028 tag DKIM
 accept for local alias &lt;aliases&gt; deliver to mbox
 accept tagged DKIM for any relay
 accept from local for any relay via <a href="smtp://127.0.0.1:10027">smtp://127.0.0.1:10027</a>
-</dl>
+</dd></dl>
 Sites that accept non-local messages may be able to cut down on the
 volume of spam received by rejecting forged messages that claim
 to be from the local domain.
@@ -904,7 +904,7 @@ The table
 <i>other-relays</i>
 can be used to specify the IP addresses of relays that may legitimately
 originate mail with your domain as the sender.
-<dl><dt><dd>table aliases file:/etc/opensmtpd/aliases
+<dl><dt></dt><dd>table aliases file:/etc/opensmtpd/aliases
 table other-relays file:/etc/opensmtpd/other-relays
 listen on lo0
 listen on egress
@@ -913,7 +913,7 @@ accept from local for any relay
 reject from ! source &lt;other-relays&gt; sender &quot;@example.com&quot; for any
 accept from any for domain example.com \
  alias &lt;aliases&gt; deliver to mbox
-</dl></pre>
+</dd></dl></pre>
 <h2>See Also</h2>
 <p><code>mailer.conf</code>(5), <code><a href="/docs/linux/man/5-table/">table</a></code>(5), <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
 <h2>History</h2>

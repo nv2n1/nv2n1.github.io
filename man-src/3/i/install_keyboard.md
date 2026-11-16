@@ -22,7 +22,6 @@ install_keyboard();
 /* We are not 100% sure we can read the keyboard yet! */
 if (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) != 0)
     abort_on_error("Couldn't set graphic mode!");
-
 /* Now we are guaranteed to be able to read the keyboard. */
 readkey();
 </code></pre>

@@ -15,7 +15,7 @@ kfree_const - conditionally free memory
 <h2>Arguments</h2>
 
 <i>x</i>
-<dl><dd><dd>pointer to the memory</dl>
+<dl><dd></dd><dd>pointer to the memory</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,23 +16,23 @@ description: "runx – try to overcome problems of Xfree96 restoring textmode us
 <p> The <code>runx</code> script actually is: </p>
 <dl>
 <dt>
-<dd> <code>#!/bin/sh</code><br />
+</dt><dd> <code>#!/bin/sh</code><br />
  <code>echo Saving font in /tmp/fontdata</code><br />
  <code>restorefont -w /tmp/fontdata</code><br />
  <code>startx</code><br />
  <code>echo Restoring font from /tmp/fontdata</code><br />
- <code>restorefont -r /tmp/fontdata</code></dl>
+ <code>restorefont -r /tmp/fontdata</code></dd></dl>
 <p> Note that this doesn&#8217;t help with syncing problems. </p>
 <p> A more rigorous alternative is to run the <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1) script before running X, and <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1) after. This will restore the textmode registers and the VGA palette in addition to the VGA font. </p>
 <p> Assuming that <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1) and <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1) are in your <code>PATH</code> the <code>runx</code> script would then look like: </p>
 <dl>
 <dt>
-<dd> <code>#!/bin/sh</code><br />
+</dt><dd> <code>#!/bin/sh</code><br />
  <code>echo Saving SVGA state</code><br />
  <code>savetextmode</code><br />
  <code>startx</code><br />
  <code>echo restoring SVGA state</code><br />
- <code>textmode</code></dl>
+ <code>textmode</code></dd></dl>
 <p> This utility is part of svgalib and can be found in the <i>utils/</i> subdirectory of the original svgalib distribution. However, it is not installed by default, s.t. it is unclear where you can find it if your svgalib was install by a linux distribution. </p>
 <p> However, this is no big deal as it was printed out above already ;-). </p>
 <h2>SEE ALSO</h2>

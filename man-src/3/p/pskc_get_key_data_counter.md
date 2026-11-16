@@ -13,10 +13,10 @@ description: "pskc_get_key_data_counter – API function"
 <p> <code>uint64_t pskc_get_key_data_counter(pskc_key_t * </code><i>key</i><code>, int * </code><i>present</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int * present</p>
-<dd>output variable indicating whether data was provided or not.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Data Counter value. This element contains the event counter for event-based OTP algorithms. </p>
 <p> If <i>present</i> is non-NULL, it will be 0 if the Counter field is not present or 1 if it was present.</p>

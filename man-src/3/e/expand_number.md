@@ -18,31 +18,31 @@ description: "expand_number – format a number from human readable form"
 <p> The Fn expand_number function follows the SI power of two convention. </p>
 <p> The prefixes are:</p>
 <dl>
-<dt><code>Prefix Ta </code><code>Description Ta </code><code>Multiplier</code></p>
+<dt><code>Prefix Ta </code><code>Description Ta </code><code>Multiplier</code></dt>
 <dd>
-<dt><code>k Ta </code><code>kilo Ta </code>1024</p>
+</dd><dt><code>k Ta </code><code>kilo Ta </code>1024</dt>
 <dd>
-<dt><code>M Ta </code><code>mega Ta </code>1048576</p>
+</dd><dt><code>M Ta </code><code>mega Ta </code>1048576</dt>
 <dd>
-<dt><code>G Ta </code><code>giga Ta </code>1073741824</p>
+</dd><dt><code>G Ta </code><code>giga Ta </code>1073741824</dt>
 <dd>
-<dt><code>T Ta </code><code>tera Ta </code>1099511627776</p>
+</dd><dt><code>T Ta </code><code>tera Ta </code>1099511627776</dt>
 <dd>
-<dt><code>P Ta </code><code>peta Ta </code>1125899906842624</p>
+</dd><dt><code>P Ta </code><code>peta Ta </code>1125899906842624</dt>
 <dd>
-<dt><code>E Ta </code><code>exa Ta </code>1152921504606846976</p>
-<dd></dl>
+</dd><dt><code>E Ta </code><code>exa Ta </code>1152921504606846976</dt>
+<dd></dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Rv -std</p>
 <h2>ERRORS</h2>
 <p> The Fn expand_number function will fail if:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The given string contains no digits.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> An unrecognized prefix was given.</p>
-<dt><code>Bq </code>Er ERANGE</p>
-<dd> Result doesn&#8217;t fit into 64 bits.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The given string contains no digits.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> An unrecognized prefix was given.</dd>
+<dt><code>Bq </code>Er ERANGE</dt>
+<dd> Result doesn&#8217;t fit into 64 bits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> humanize_number3</p>
 <h2>HISTORY</h2>

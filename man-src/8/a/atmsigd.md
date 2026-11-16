@@ -19,36 +19,36 @@ description: "atmsigd – ATM signaling demon"
 <p> If <code>atmsigd</code> is killed, all system calls requiring interaction with it will return with an error and set <code>errno</code> to <code>EUNATCH</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd>Run in background (i.e. in a forked child process) after initializing.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config_file</i></p>
-<dd>Use the specified configuration file instead of <code>/etc/atmsigd.conf</code> If an option is specified in the configuration file and on the command line, the command line has priority.</p>
-<dt><code>-d</code></p>
-<dd>Enables (lots of) debugging output. By default, <code>atmsigd</code> is comparably quiet.</p>
-<dt><code>-D&nbsp;<wbr></code><i>dump_dir</i></p>
-<dd>Specifies the directory to which <code>atmsigd</code> will write status and trace dumps. If <code>-D</code> is not specified, dumps are written to /var/tmp.</p>
-<dt><code>-l&nbsp;<wbr></code><i>logfile</i></p>
-<dd>Write diagnostic messages to the specified file. The special name <code>syslog</code> is used to send diagnostics to the system logger, <code>stderr</code> is used to send diagnostics to standard error. If <code>-l</code> is absent, the setting in <code>atmsigd.conf</code> is used. If <code>atmsigd</code> doesn&#8217;t specify a destination either, messages are written to standard error.</p>
-<dt><code>-m&nbsp;<wbr></code><i>mode</i></p>
-<dd>Set the mode of operation. The following modes are available: <code>user</code> for the user side (the default), <code>network</code> for the network side (useful if you have two PCs but no switch), and <code>switch</code> for operation with a signaling relay in a switch.</p>
-<dt><code>-n</code></p>
-<dd>Prints addresses in numeric format only, i.e. no address to name translation is attempted.</p>
-<dt><code>-q&nbsp;<wbr></code><i>qos</i></p>
-<dd>Configures the signaling VC to use the specified quality of service (see <a href="/docs/linux/man/7-qos/">qos</a>(7) for the syntax). By default, UBR at link speed is used on the signaling VC.</p>
-<dt><code>-t&nbsp;<wbr></code><i>trace_length</i></p>
-<dd>Sets the number of entries that should be kept in the trace buffer. <code>-t 0</code> disables tracing. If <code>-t</code> is not specified, <code>atmsigd</code> uses a default of 20 trace entries.</p>
-<dt><code>-u&nbsp;<wbr></code><i>uni_version</i></p>
-<dd>Sets the signaling mode. The following modes are supported: <code>uni30</code> for UNI 3.0, <code>uni31</code> for UNI 3.1, <code>uni31+uni30</code> for UNI 3.1 with 3.0 compatibility, <code>uni40</code> for UNI 4.0, and <code>uni40+q.2963.1</code> for UNI 4.0 with Q.2963.1 peak cell rate renegotiation.</p>
-<dt><code>-V</code></p>
-<dd>Prints the version number of <code>atmsigd</code> on standard output and exits.</dl>
+<dt><code>-b</code></dt>
+<dd>Run in background (i.e. in a forked child process) after initializing.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config_file</i></dt>
+<dd>Use the specified configuration file instead of <code>/etc/atmsigd.conf</code> If an option is specified in the configuration file and on the command line, the command line has priority.</dd>
+<dt><code>-d</code></dt>
+<dd>Enables (lots of) debugging output. By default, <code>atmsigd</code> is comparably quiet.</dd>
+<dt><code>-D&nbsp;<wbr></code><i>dump_dir</i></dt>
+<dd>Specifies the directory to which <code>atmsigd</code> will write status and trace dumps. If <code>-D</code> is not specified, dumps are written to /var/tmp.</dd>
+<dt><code>-l&nbsp;<wbr></code><i>logfile</i></dt>
+<dd>Write diagnostic messages to the specified file. The special name <code>syslog</code> is used to send diagnostics to the system logger, <code>stderr</code> is used to send diagnostics to standard error. If <code>-l</code> is absent, the setting in <code>atmsigd.conf</code> is used. If <code>atmsigd</code> doesn&#8217;t specify a destination either, messages are written to standard error.</dd>
+<dt><code>-m&nbsp;<wbr></code><i>mode</i></dt>
+<dd>Set the mode of operation. The following modes are available: <code>user</code> for the user side (the default), <code>network</code> for the network side (useful if you have two PCs but no switch), and <code>switch</code> for operation with a signaling relay in a switch.</dd>
+<dt><code>-n</code></dt>
+<dd>Prints addresses in numeric format only, i.e. no address to name translation is attempted.</dd>
+<dt><code>-q&nbsp;<wbr></code><i>qos</i></dt>
+<dd>Configures the signaling VC to use the specified quality of service (see <a href="/docs/linux/man/7-qos/">qos</a>(7) for the syntax). By default, UBR at link speed is used on the signaling VC.</dd>
+<dt><code>-t&nbsp;<wbr></code><i>trace_length</i></dt>
+<dd>Sets the number of entries that should be kept in the trace buffer. <code>-t 0</code> disables tracing. If <code>-t</code> is not specified, <code>atmsigd</code> uses a default of 20 trace entries.</dd>
+<dt><code>-u&nbsp;<wbr></code><i>uni_version</i></dt>
+<dd>Sets the signaling mode. The following modes are supported: <code>uni30</code> for UNI 3.0, <code>uni31</code> for UNI 3.1, <code>uni31+uni30</code> for UNI 3.1 with 3.0 compatibility, <code>uni40</code> for UNI 4.0, and <code>uni40+q.2963.1</code> for UNI 4.0 with Q.2963.1 peak cell rate renegotiation.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints the version number of <code>atmsigd</code> on standard output and exits.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/atmsigd.conf</code></p>
-<dd>default configuration file</p>
-<dt><code>/var/tmp/atmsigd.</code><i>pid</i><code>.status.</code><i>version</i></p>
-<dd>default location of status dumps</p>
-<dt><code>/var/tmp/atmsigd.</code><i>pid</i><code>.trace.</code><i>version</i></p>
-<dd>default location of signaling trace dumps</dl>
+<dt><code>/etc/atmsigd.conf</code></dt>
+<dd>default configuration file</dd>
+<dt><code>/var/tmp/atmsigd.</code><i>pid</i><code>.status.</code><i>version</i></dt>
+<dd>default location of status dumps</dd>
+<dt><code>/var/tmp/atmsigd.</code><i>pid</i><code>.trace.</code><i>version</i></dt>
+<dd>default location of signaling trace dumps</dd></dl>
 <h2>Debugging</h2>
 <p>When receiving a <code>SIGUSR1</code> signal, <code>atmsigd</code> dumps the list of all internal socket descriptors. With <code>SIGUSR2</code>, it dumps the contents of the trace buffer. If a dump directory was set, dumps are written to files called <code>atmsigd.</code><i>pid</i><code>.status.</code><i>number</i> and <code>atmsigd.</code><i>pid</i><code>.trace.</code><i>number</i>, respectively, with <i>number</i> starting at zero and being incremented for every dump. If no dump directory is set, dumps are written to standard error. </p>
 <p> Dumps are also generated whenever <code>atmsigd</code> detects a fatal error and terminates. No attempt is made to catch signals like <code>SIGSEGV</code>.</p>

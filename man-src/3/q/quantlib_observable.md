@@ -23,7 +23,7 @@ description: "QuantLib::Observable – Object that notifies its changes to a set
 <h3><code>Observable</code> &amp; operator= (const <code>Observable</code> &amp; o)</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>notification is sent before the copy constructor has a chance of actually change the data members. Therefore, observers whose update() method tries to use their observables will not see the updated values. It is suggested that the update() method just raise a flag in order to trigger a later recalculation.</dl>
+<dd>notification is sent before the copy constructor has a chance of actually change the data members. Therefore, observers whose update() method tries to use their observables will not see the updated values. It is suggested that the update() method just raise a flag in order to trigger a later recalculation.</dd></dl>
 <h3>void notifyObservers ()</h3>
 <p>This method should be called at the end of non-const methods or when the programmer desires to notify any changes. </p>
 <h2>Author</h2>

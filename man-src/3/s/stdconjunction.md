@@ -11,10 +11,8 @@ std::conjunction - std::conjunction
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class... B&gt;
     (1)(since C++ 17)
-
         struct conjunction;</code></pre> 
 Forms the logical_conjunction of the type traits B..., effectively performing a logical AND on the sequence of traits. 
 The specialization std::conjunction&lt;B1, ..., BN&gt; has a public and unambiguous base that is 
@@ -54,24 +52,17 @@ The short-circuit instantiation differentiates conjunction from fold expressions
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 // func is enabled if all Ts... have the same type as T
-
 template &lt;typename T, typename... Ts&gt;
-
 std::enable_if_t&lt;std::conjunction_v&lt;std::is_same&lt;T, Ts&gt;...&gt;&gt;
-
 func(T, Ts...)
 {
     std::cout &lt;&lt; &quot;all types in pack are T\n&quot;;
 }
 // otherwise
-
 template &lt;typename T, typename... Ts&gt;
-
 std::enable_if_t&lt;!std::conjunction_v&lt;std::is_same&lt;T, Ts&gt;...&gt;&gt;
-
 func(T, Ts...)
 {
     std::cout &lt;&lt; &quot;not all types in pack are T\n&quot;;

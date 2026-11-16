@@ -13,16 +13,16 @@ description: "vpSetMatrix – load a matrix into the current transformation matr
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpSetMatrix(</code><i>vpc, m</i><code>)</code></p>
+<dt> <code>vpSetMatrix(</code><i>vpc, m</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>vpMatrix4 <i>m;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>vpMatrix4 <i>m;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>m</i></p>
-<dd>Input matrix.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>m</i></dt>
+<dd>Input matrix.</dd></dl>
 <h2>Description</h2>
 <p><code>vpSetMatrix</code> is used to load a 4-by-4 transformation matrix into the current transformation matrix. Use <code>vpCurrentMatrix</code> to set the current transformation matrix.</p>
 <h2>State Variables</h2>

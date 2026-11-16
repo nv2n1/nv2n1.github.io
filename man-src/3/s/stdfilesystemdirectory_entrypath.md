@@ -12,7 +12,6 @@ std::filesystem::directory_entry::path - std::filesystem::directory_entry::path
 
 <pre><code>const std::filesystem::path &amp;path() const noexcept;
 (since C++ 17)
-
 operator const std::filesystem::path &amp;() const noexcept;
 (since C++ 17)</code></pre> 
 Returns the full path the directory entry refers to. 

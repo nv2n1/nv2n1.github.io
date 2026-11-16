@@ -13,10 +13,10 @@ description: "pskc_set_key_data_time – API function"
 void pskc_set_key_data_time(pskc_key_t *key, uint32_t datatime);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint32_t datatime</p>
-<dd>the data time value to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint32_t datatime</dt>
+<dd>the data time value to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Data Time value. This element contains the time for time-based OTP algorithms. (If time intervals are used, this element carries the number of time intervals passed from a specific start point, normally it is algorithm dependent).</p>
 <h2>Since</h2>

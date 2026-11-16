@@ -11,100 +11,38 @@ description: "sc::SimpleCo –"
 <p> The <code>SimpleCo</code> abstract class describes a simple internal coordinate of a molecule.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;simple.h&gt;</code></pre>
 <p> Inherits <code>sc::IntCoor</code>. Inherited by <code>sc::BendSimpleCo</code>, <code>sc::LinIPSimpleCo</code>, <code>sc::LinOPSimpleCo</code>, <code>sc::OutSimpleCo</code>, <code>sc::ScaledTorsSimpleCo</code>, <code>sc::StreSimpleCo</code>, and <code>sc::TorsSimpleCo</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SimpleCo (int, const char *=0)
-
-
 This constructor takes an integer argument which is the number of atoms needed to describe the coordinate.
-
-
 SimpleCo (const Ref&lt; KeyVal &gt; &amp;, int natom)
-
-
 The KeyVal constructor requires the number of atoms.
-
-
 int natoms () const
-
-
 Returns the number of atoms in the coordinate.
-
-
 int operator[] (int i) const
-
-
 Returns the index of the i'th atom in the coordinate.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 SimpleCo (StateIn &amp;)
-
-
-
 virtual int operator== (SimpleCo &amp;)
-
-
-
 int operator!= (SimpleCo &amp;u)
-
-
-
 double force_constant (Ref&lt; Molecule &gt; &amp;)
-
-
 Returns an approximate force constant (a la Almlof).
-
-
 void update_value (const Ref&lt; Molecule &gt; &amp;)
-
-
 Recalculates the value of the coordinate based on the geometry in the Molecule.
-
-
 void bmat (const Ref&lt; Molecule &gt; &amp;, RefSCVector &amp;bmat, double coef=1.0)
-
-
 Fill in a row of the B matrix.
-
-
 virtual double calc_force_con (Molecule &amp;)=0
-
-
 Calculates an approximate force constant and returns it's value.
-
-
 virtual double calc_intco (Molecule &amp;, double *=0, double=1)=0
-
-
 Calculate the value of the coordinate based on what's in Molecule.
-
-
 void print_details (const Ref&lt; Molecule &gt; &amp;, std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the coordinate.
-
-
 int equivalent (Ref&lt; IntCoor &gt; &amp;)
-
-
 Tests to see if two coordinates are equivalent to each other.
-
-
-
 Protected Attributes
 int natoms_
-
-
-
 int * atoms</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SimpleCo</code> abstract class describes a simple internal coordinate of a molecule. </p>

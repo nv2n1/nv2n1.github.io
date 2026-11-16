@@ -512,12 +512,12 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
 
 <dt><a HREF="#lbAZ">nss_delete core dump from op/pwent or op/grent</a>
-<dd>
-<dt><a HREF="#lbBA">error: pasting ) and l does not give a valid preprocessing token</a>
-<dd>
-<dt><a HREF="#lbBB">Redeclaration of sendpath with a different storage class specifier</a>
-<dd>
-<dt><a HREF="#lbBC">Miscellaneous</a>
-<dd>
-<dt><a HREF="#lbBD">AUTHOR</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbBA">error: pasting ) and l does not give a valid preprocessing token</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBB">Redeclaration of sendpath with a different storage class specifier</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBC">Miscellaneous</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBD">AUTHOR</a>
+</dt><dd></dd></dl>

@@ -17,20 +17,20 @@ description: "tcmodchain – Query compatibily of transcode modules chains."
 <p> <code>tcmodchain</code> allow to inspect <a href="/docs/linux/man/1-transcode/">transcode</a>(1) modules, as well as it&#8217;s companion, <a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a>(1). While <a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a>(1) focus on single modules, tcmodchain is intended to help in exploring/experimenting module interactions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code> <i>path</i></p>
-<dd> Look in <i>Path</i> instead of the compiled-in module path while trying to load a module.</p>
-<dt><code>-C</code></p>
+<dt><code>-m</code> <i>path</i></dt>
+<dd> Look in <i>Path</i> instead of the compiled-in module path while trying to load a module.</dd>
+<dt><code>-C</code></dt>
 <dd> Enable <i>check</i> mode.<br />
  In check mode tcmodchain expects exactly two module identifiers. tcmodchain will check compatibilty between two given modules. Result will be logged out or not depending of verbosity level. Anyway, if two modules are compatible, tcmodchain will exit succesfully; otherwise, tcmodchain will exit with error.<br />
- see RETURN VALUES below.</p>
-<dt><code>-L</code></p>
+ see RETURN VALUES below.</dd>
+<dt><code>-L</code></dt>
 <dd> Enable <i>list</i> mode.<br />
  In list mode tcmodchain expects exactly two module identifiers, exactly one of which containing a wildcard. tcmodchain will inspect all avalaible installed modules matching the wildcard and will print out module names that are compatible with the other given one. if at least one compatible module is found, tcmodchain will exit succesfully; otherwise, tcmodchain will exit with error.<br />
- see RETURN VALUES below. </p>
-<dt><code>-d</code> <i>verbosity</i></p>
-<dd> Specify the verbosiness level to use, like transcode does. Default value is 1 (TC_INFO verbosiness).</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+ see RETURN VALUES below. </dd>
+<dt><code>-d</code> <i>verbosity</i></dt>
+<dd> Specify the verbosiness level to use, like transcode does. Default value is 1 (TC_INFO verbosiness).</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>MODULE IDENTIFIERS</h2>
 <p> <code>tcmodchain</code> identifies modules using a <i>type:name</i> naming scheme. Currently, as in transcode 1.1.0, only <i>encode</i> and <i>multiplex</i> module <i>type</i>s are supported. <i>name</i> can refer to the name of any avalaible transcode modules, using the same rules of <a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a>(1) <i>-i</i> option. The wildcard character <i>*</i> is supported in the <i>name</i> section of module identifier. Wildcard meaning is `any of avalaible modules&#8217; and is honoured only when <i>list</i> mode (-L option) is used. Using wildcard character for <i>both</i> module identifiers will lead to an error. </p>
 <h2>EXAMPLES</h2>

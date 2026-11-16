@@ -21,12 +21,12 @@ description: "vm86old, vm86 – enter virtual 8086 mode"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> This return value is specific to i386 and indicates a problem with getting user-space data.</p>
-<dt><code>ENOSYS</code></p>
-<dd> This return value indicates the call is not implemented on the present architecture.</p>
-<dt><code>EPERM</code></p>
-<dd> Saved kernel stack exists. (This is a kernel sanity check; the saved stack should exist only within vm86 mode itself.)</dl>
+<dt><code>EFAULT</code></dt>
+<dd> This return value is specific to i386 and indicates a problem with getting user-space data.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> This return value indicates the call is not implemented on the present architecture.</dd>
+<dt><code>EPERM</code></dt>
+<dd> Saved kernel stack exists. (This is a kernel sanity check; the saved stack should exist only within vm86 mode itself.)</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> This call is specific to Linux on 32-bit Intel processors, and should not be used in programs intended to be portable.</p>
 <h2>COLOPHON</h2>

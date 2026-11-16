@@ -14,16 +14,16 @@ description: "bitmap_fold – fold larger bitmap into smaller, modulo specified 
 <p><i>dst</i></p>
 <dl>
 <dd>
-<dd>resulting smaller bitmap</dl>
+</dd><dd>resulting smaller bitmap</dd></dl>
 <p> <i>orig</i></p>
 <dl>
-<dd>original larger bitmap</dl>
+<dd>original larger bitmap</dd></dl>
 <p> <i>sz</i></p>
 <dl>
-<dd>specified size</dl>
+<dd>specified size</dd></dl>
 <p> <i>nbits</i></p>
 <dl>
-<dd>number of bits in each of these bitmaps</dl>
+<dd>number of bits in each of these bitmaps</dd></dl>
 <h2>Description</h2>
 <p>For each bit oldbit in <i>orig</i>, set bit oldbit mod <i>sz</i> in <i>dst</i>. Clear all other bits in <i>dst</i>. See further the comment and Example [2] for <code>bitmap_onto</code> for why and how to use this.</p>
 <h2>Copyright</h2>

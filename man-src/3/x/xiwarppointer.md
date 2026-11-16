@@ -31,19 +31,19 @@ the pointer. If dest_w is a window, XIWarpPointer moves the
 pointer to the offsets (dest_x, dest_y) relative to the origin
 of dest_w. However, if src_w is a window, the move only takes
 place if the window src_w contains the pointer and if the
-specified rectangle of src_w contains the pointer.</pre></dl><dl COMPACT><dd><pre>The src_x and src_y coordinates are relative to the origin of
+specified rectangle of src_w contains the pointer.</pre></dd></dl><dl COMPACT><dd><pre>The src_x and src_y coordinates are relative to the origin of
 src_w. If src_height is zero, it is replaced with the current
 height of src_w minus src_y. If src_width is zero, it is
-replaced with the current width of src_w minus src_x.</pre></dl><dl COMPACT><dd><pre>There is seldom any reason for calling this function. The
+replaced with the current width of src_w minus src_x.</pre></dd></dl><dl COMPACT><dd><pre>There is seldom any reason for calling this function. The
 pointer should normally be left to the user. If you do use this
 function, however, it generates events just as if the user had
 instantaneously moved the pointer from one position to another.
 Note that you cannot use XIWarpPointer to move the pointer
 outside the confine_to window of an active pointer grab. An
 attempt to do so will only move the pointer as far as the
-closest edge of the confine_to window.</pre></dl><dl COMPACT><dd><pre>XIWarpPointer is identical to XWarpPointer but specifies the
-device explicitly.</pre></dl><dl COMPACT><dd><pre>XIWarpPointer can generate a BadDevice and a BadWindow error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+closest edge of the confine_to window.</pre></dd></dl><dl COMPACT><dd><pre>XIWarpPointer is identical to XWarpPointer but specifies the
+device explicitly.</pre></dd></dl><dl COMPACT><dd><pre>XIWarpPointer can generate a BadDevice and a BadWindow error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist or is not a pointer device.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ exist or is not a pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XWarpPointer(3)</pre></dl>
+ window.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XWarpPointer(3)</pre></dd></dl>

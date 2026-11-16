@@ -15,41 +15,41 @@ description: "euca-revoke – Remove a rule from a security group"
 <p> Remove a rule from a security group</p>
 <h3>positional arguments:</h3>
 <dl>
-<dt>GROUP</p>
-<dd> name or ID of the security group to modify (required)</dl>
+<dt>GROUP</dt>
+<dd> name or ID of the security group to modify (required)</dd></dl>
 <h3>optional arguments:</h3>
 <dl>
-<dt><code>&#8211;egress</code></p>
-<dd> [VPC only] manage an egress rule, which controls traffic leaving the group</p>
-<dt><code>-P</code> PROTOCOL, <code>&#8211;protocol</code> PROTOCOL</p>
-<dd> the protocol to affect (Non-VPC: tcp, udp, icmp) (VPC only: tcp, udp, icmp, <code>-1</code>/all, other protocol numbers) (default: tcp)</p>
-<dt><code>-p</code> RANGE, <code>&#8211;port-range</code> RANGE</p>
-<dd> range of ports (specified as &quot;from-to&quot;) or a single port number (required for tcp and udp)</p>
-<dt><code>-t</code> TYPE:CODE, <code>&#8211;icmp-type-code</code> TYPE:CODE</p>
-<dd> ICMP type and code (specified as &quot;type:code&quot;) (required for icmp)</p>
-<dt><code>-s</code> CIDR, <code>&#8211;cidr</code> CIDR</p>
-<dd> IP range (default: 0.0.0.0/0)</p>
-<dt><code>-o</code> GROUP</p>
-<dd> [Non-VPC only] name of a security group with which to affect network communication</p>
-<dt><code>-u</code> ACCOUNT</p>
-<dd> ID of the account that owns the security group specified with <code>-o</code></p>
-<dt><code>&#8211;show-empty-fields</code></p>
-<dd> show empty values as &quot;(nil)&quot;</p>
-<dt><code>-U</code> URL, <code>&#8211;url</code> URL</p>
-<dd> compute service endpoint URL</p>
-<dt><code>&#8211;region</code> USER [at] REGION</p>
-<dd> region and/or user names to search when looking up config file data</p>
-<dt> <code>-I</code> KEY_ID, <code>&#8211;access-key-id</code> KEY_ID</p>
-<dt> <code>-S</code> KEY, <code>&#8211;secret-key</code> KEY</p>
-<dt> <code>&#8211;security-token</code> TOKEN</p>
-<dt><code>&#8211;debug</code></p>
+<dt><code>&#8211;egress</code></dt>
+<dd> [VPC only] manage an egress rule, which controls traffic leaving the group</dd>
+<dt><code>-P</code> PROTOCOL, <code>&#8211;protocol</code> PROTOCOL</dt>
+<dd> the protocol to affect (Non-VPC: tcp, udp, icmp) (VPC only: tcp, udp, icmp, <code>-1</code>/all, other protocol numbers) (default: tcp)</dd>
+<dt><code>-p</code> RANGE, <code>&#8211;port-range</code> RANGE</dt>
+<dd> range of ports (specified as &quot;from-to&quot;) or a single port number (required for tcp and udp)</dd>
+<dt><code>-t</code> TYPE:CODE, <code>&#8211;icmp-type-code</code> TYPE:CODE</dt>
+<dd> ICMP type and code (specified as &quot;type:code&quot;) (required for icmp)</dd>
+<dt><code>-s</code> CIDR, <code>&#8211;cidr</code> CIDR</dt>
+<dd> IP range (default: 0.0.0.0/0)</dd>
+<dt><code>-o</code> GROUP</dt>
+<dd> [Non-VPC only] name of a security group with which to affect network communication</dd>
+<dt><code>-u</code> ACCOUNT</dt>
+<dd> ID of the account that owns the security group specified with <code>-o</code></dd>
+<dt><code>&#8211;show-empty-fields</code></dt>
+<dd> show empty values as &quot;(nil)&quot;</dd>
+<dt><code>-U</code> URL, <code>&#8211;url</code> URL</dt>
+<dd> compute service endpoint URL</dd>
+<dt><code>&#8211;region</code> USER [at] REGION</dt>
+<dd> region and/or user names to search when looking up config file data</dd>
+<dt> <code>-I</code> KEY_ID, <code>&#8211;access-key-id</code> KEY_ID</dt>
+<dt> <code>-S</code> KEY, <code>&#8211;secret-key</code> KEY</dt>
+<dt> <code>&#8211;security-token</code> TOKEN</dt>
+<dt><code>&#8211;debug</code></dt>
 <dd>
-<dd>show debugging output</p>
-<dt><code>&#8211;debugger</code></p>
-<dd> launch interactive debugger on error</p>
-<dt><code>&#8211;version</code></p>
-<dd> show the program&#8217;s version and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit </p>
+</dd><dd>show debugging output</dd>
+<dt><code>&#8211;debugger</code></dt>
+<dd> launch interactive debugger on error</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the program&#8217;s version and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit </dd>
 </dl>
 <h2>Index</h2>

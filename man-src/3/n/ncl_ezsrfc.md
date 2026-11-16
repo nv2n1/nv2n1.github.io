@@ -14,23 +14,23 @@ EZSRFC - Draws a perspective picture of a function of two variables with hidden 
  void c_ezsrfc (float *z, int m, int n, float angh, float angv, 
  float *work)
 <h2>Description</h2><dl COMPACT><dt>Z
-<dd>The M by N array to be drawn.
-<dt>M
-<dd>The first dimension of Z.
-<dt>N
-<dd>The second dimension of Z.
-<dt>ANGH
-<dd>Angle in degrees in the X-Y plane to the line of sight (counterclockwise from the plus-X axis).
-<dt>ANGV
-<dd>Angle in degrees from the X-Y plane to the line of sight (positive angles are above the middle Z, negative below).
-<dt>WORK
-<dd>A scratch storage dimensioned at least 2*M*N+M+N.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions, with the following exceptions:
+</dt><dd>The M by N array to be drawn.
+</dd><dt>M
+</dt><dd>The first dimension of Z.
+</dd><dt>N
+</dt><dd>The second dimension of Z.
+</dd><dt>ANGH
+</dt><dd>Angle in degrees in the X-Y plane to the line of sight (counterclockwise from the plus-X axis).
+</dd><dt>ANGV
+</dt><dd>Angle in degrees from the X-Y plane to the line of sight (positive angles are above the middle Z, negative below).
+</dd><dt>WORK
+</dt><dd>A scratch storage dimensioned at least 2*M*N+M+N.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions, with the following exceptions:
 <dl COMPACT><dt>z
-<dd>The n by m array to be drawn.
-<dt>m
-<dd>The second dimension of z.
-<dt>n
-<dd>The first dimension of z.</dl><h2>Examples</h2>Use the ncargex command to see the following relevant examples: fsrezsrf, tsrfac.
+</dt><dd>The n by m array to be drawn.
+</dd><dt>m
+</dt><dd>The second dimension of z.
+</dd><dt>n
+</dt><dd>The first dimension of z.</dd></dl><h2>Examples</h2>Use the ncargex command to see the following relevant examples: fsrezsrf, tsrfac.
 <h2>Access</h2>To use EZSRFC or c_ezsrfc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: surface, surface_params, pwrzs, setr, srface. ncarg_cbind. 
 

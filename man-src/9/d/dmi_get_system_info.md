@@ -15,7 +15,7 @@ dmi_get_system_info - return DMI data value
 <h2>Arguments</h2>
 
 <i>field</i>
-<dl><dd><dd>data index (see enum dmi_field)</dl>
+<dl><dd></dd><dd>data index (see enum dmi_field)</dd></dl>
 
 <h2>Description</h2>
 

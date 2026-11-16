@@ -10,12 +10,7 @@ description: "xcb_xkb_get_map –"
 <p>xcb_xkb_get_map &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_map_cookie_t xcb_xkb_get_map(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint16_t full, uint16_t partial, uint8_t firstType, uint8_t nTypes, xcb_keycode_t firstKeySym, uint8_t nKeySyms, xcb_keycode_t firstKeyAction, uint8_t nKeyActions, xcb_keycode_t firstKeyBehavior, uint8_t nKeyBehaviors, uint16_t virtualMods, xcb_keycode_t firstKeyExplicit, uint8_t nKeyExplicit, xcb_keycode_t firstModMapKey, uint8_t nModMapKeys, xcb_keycode_t firstVModMapKey, uint8_t nVModMapKeys);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_map_reply_t {
@@ -53,109 +48,109 @@ xcb_xkb_get_map_cookie_t xcb_xkb_get_map(xcb_connection_t *conn, xcb_xkb_device_
 } <code>xcb_xkb_get_map_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xkb_get_map_reply_t *<code>xcb_xkb_get_map_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_map_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xkb_get_map_reply_t *<code>xcb_xkb_get_map_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_map_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <p>xcb_xkb_get_map_map_t *xcb_xkb_get_map_map (const xcb_xkb_get_map_request_t *reply)</p>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>full</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>partial</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstType</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nTypes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeySym</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeySyms</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyAction</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyActions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyBehavior</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyBehaviors</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>virtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyExplicit</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyExplicit</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstModMapKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstVModMapKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nVModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>full</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>partial</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstType</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nTypes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeySym</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeySyms</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyAction</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyActions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyBehavior</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyBehaviors</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>virtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyExplicit</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyExplicit</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstModMapKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstVModMapKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nVModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_MAP</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>minKeyCode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>maxKeyCode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>present</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstType</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nTypes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalTypes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeySym</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalSyms</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeySyms</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyAction</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalActions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyActions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyBehavior</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyBehaviors</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalKeyBehaviors</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKeyExplicit</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyExplicit</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalKeyExplicit</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstModMapKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstVModMapKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nVModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalVModMapKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>virtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_MAP</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>minKeyCode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>maxKeyCode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>present</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstType</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nTypes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalTypes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeySym</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalSyms</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeySyms</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyAction</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalActions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyActions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyBehavior</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyBehaviors</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalKeyBehaviors</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKeyExplicit</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyExplicit</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalKeyExplicit</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstModMapKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstVModMapKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nVModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalVModMapKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>virtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_map_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_map_reply</i>. </p>

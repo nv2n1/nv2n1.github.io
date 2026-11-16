@@ -14,7 +14,7 @@ description: "crypto_skcipher_ivsize – obtain IV size"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <h2>Description</h2>
 <p>The size of the IV for the skcipher referenced by the cipher handle is returned. This IV size may be zero if the cipher does not need an IV.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_skcipher_ivsize – obtain IV size"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

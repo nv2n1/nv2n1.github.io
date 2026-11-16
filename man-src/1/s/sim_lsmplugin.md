@@ -22,20 +22,18 @@ description: "sim_lsmplugin — LibStorageMgmt simulator python plugin"
 </pre>
 <p> No password is required for this plugin. </p>
 <dl>
-<dt><code>URI parameters</code></p>
+<dt><code>URI parameters</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>statefile</code></p>
+<dt><code>statefile</code></dt>
 <dd>
 <p> Use specified file to store simulator state data. Example URI: </p>
 <pre>
     <code><a href="sim://?statefile=/tmp/other_lsm_sim_data">sim://?statefile=/tmp/other_lsm_sim_data</a></code>
 </pre>
 <p> The statefile is a sqlite3 data base file. </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>FIREWALL RULES</h2>

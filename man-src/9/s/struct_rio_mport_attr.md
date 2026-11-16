@@ -20,24 +20,24 @@ description: "struct_rio_mport_attr – RIO mport device attributes"
 <h2>Members</h2>
 <p>flags</p>
 <dl>
-<dd>mport device capability flags</dl>
+<dd>mport device capability flags</dd></dl>
 <p> link_speed</p>
 <dl>
-<dd>SRIO link speed value (as defined by RapidIO specification)</dl>
+<dd>SRIO link speed value (as defined by RapidIO specification)</dd></dl>
 <p> link_width</p>
 <dl>
-<dd>SRIO link width value (as defined by RapidIO specification)</dl>
+<dd>SRIO link width value (as defined by RapidIO specification)</dd></dl>
 <p> dma_max_sge</p>
 <dl>
-<dd>number of SG list entries that can be handled by DMA channel(s)</dl>
+<dd>number of SG list entries that can be handled by DMA channel(s)</dd></dl>
 <p> dma_max_size</p>
 <dl>
-<dd>max number of bytes in single DMA transfer (SG entry)</dl>
+<dd>max number of bytes in single DMA transfer (SG entry)</dd></dl>
 <p> dma_align</p>
 <dl>
-<dd>alignment shift for DMA operations (as for other DMA operations)</dl>
+<dd>alignment shift for DMA operations (as for other DMA operations)</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

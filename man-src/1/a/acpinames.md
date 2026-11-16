@@ -17,8 +17,8 @@ description: "acpinames – ACPI name space dump utility"
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-? [&lt;name-prefix&gt;]</code></p>
-<dd> Display this help message </p>
+<dt><code>-? [&lt;name-prefix&gt;]</code></dt>
+<dd> Display this help message </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpinames was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

@@ -14,46 +14,46 @@ description: "o2cb – Default cluster stack for the OCFS2 file system."
 <p>The cluster layout is specified in <code>/etc/ocfs2/cluster.conf</code>. While it is easier to populate and propagate this configuration file using <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code>, one can also do it by manually as long as care is taken to format the file correctly. </p>
 <p> While the console utility is intuitive to use, there are few points to keep in mind.</p>
 <dl>
-<dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1. The node name needs to match the hostname. It does not need to include the domain name. For example, appserver.oracle.com can be appserver.</p>
+<dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1. The node name needs to match the hostname. It does not need to include the domain name. For example, appserver.oracle.com can be appserver.</dt>
 <dd>
-<dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2. The IP address need not be the one associated with that hostname. As in, any valid IP address on that node can be used. O2CB will not attempt to match the node name (hostname) with the specified IP address.</p>
-<dd></dl>
+</dd><dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2. The IP address need not be the one associated with that hostname. As in, any valid IP address on that node can be used. O2CB will not attempt to match the node name (hostname) with the specified IP address.</dt>
+<dd></dd></dl>
 <p> For best performance, use of a private interconnect (lower latency) is recommended.</p>
 <p> The cluster.conf file is in a stanza format with two types of stanzas, namely, cluster and node. A typical cluster.conf will have one cluster stanza and multiple node stanzas. </p>
 <p> The <i>cluster stanza</i> has two parameters:</p>
 <dl>
-<dt><code>node_count</code></p>
-<dd>Total number of nodes in the cluster</p>
-<dt><code>name</code></p>
-<dd>Name of the cluster </p>
+<dt><code>node_count</code></dt>
+<dd>Total number of nodes in the cluster</dd>
+<dt><code>name</code></dt>
+<dd>Name of the cluster </dd>
 </dl>
 <p> The <i>node stanza</i> has five parameters:</p>
 <dl>
-<dt><code>ip_port</code></p>
-<dd>IP port</p>
-<dt><code>ip_address</code></p>
-<dd>IP address</p>
-<dt><code>number</code></p>
-<dd>Unique node number from 0-254</p>
-<dt><code>name</code></p>
-<dd>Hostname</p>
-<dt><code>cluster</code></p>
-<dd>Name of the cluster</dl>
+<dt><code>ip_port</code></dt>
+<dd>IP port</dd>
+<dt><code>ip_address</code></dt>
+<dd>IP address</dd>
+<dt><code>number</code></dt>
+<dd>Unique node number from 0-254</dd>
+<dt><code>name</code></dt>
+<dd>Hostname</dd>
+<dt><code>cluster</code></dt>
+<dd>Name of the cluster</dd></dl>
 <p> Users populating cluster.conf manually should follow the format strictly. As in, stanza header should start at the first column and end with a colon, stanza parameters should start after a tab, a blank line should demarcate each stanza and care taken to avoid stray whitespaces. </p>
 <p> The O2CB cluster timeouts are specified in <code>/etc/sysconfig/o2cb</code> and can be configured using the <i>o2cb</i> init script. </p>
 <p> These timeouts are used by the O2CB clusterstack to determine whether a node is dead or alive. While the use of default values is recommended, users can experiment with other values if the defaults are causing spurious fencing. </p>
 <p> The <i>cluster timeouts</i> are:</p>
 <dl>
-<dt><code>Heartbeat Dead Threshold</code></p>
-<dd>The Disk Heartbeat timeout is the number of two second iterations before a node is considered dead. The exact formula used to convert the timeout in seconds to the number of iterations is as follows: </p>
+<dt><code>Heartbeat Dead Threshold</code></dt>
+<dd>The Disk Heartbeat timeout is the number of two second iterations before a node is considered dead. The exact formula used to convert the timeout in seconds to the number of iterations is as follows: </dd>
 <p> O2CB_HEARTBEAT_THRESHOLD = (((timeout in seconds) / 2) + 1) </p>
 <p> For e.g., to specify a 60 sec timeout, set it to 31. For 120 secs, set it to 61. The default for this timeout is 60 secs (O2CB_HEARTBEAT_THRESHOLD = 31). </p>
-<dt><code>Network Idle Timeout</code></p>
-<dd>The Network Idle timeout specifies the time in milliseconds before a network connection is considered dead. It defaults to 30000 ms. </p>
-<dt><code>Network Keepalive Delay</code></p>
-<dd>The Network Keepalive specifies the maximum delay in milliseconds before a keepalive packet is sent to another node to check whether it is alive or not. If the node is alive, it will respond. Its defaults to 2000 ms. </p>
-<dt><code>Network Reconnect Delay</code></p>
-<dd>The Network Reconnect specifies the minimum delay in milliseconds between connection attempts. It defaults to 2000 ms.</dl>
+<dt><code>Network Idle Timeout</code></dt>
+<dd>The Network Idle timeout specifies the time in milliseconds before a network connection is considered dead. It defaults to 30000 ms. </dd>
+<dt><code>Network Keepalive Delay</code></dt>
+<dd>The Network Keepalive specifies the maximum delay in milliseconds before a keepalive packet is sent to another node to check whether it is alive or not. If the node is alive, it will respond. Its defaults to 2000 ms. </dd>
+<dt><code>Network Reconnect Delay</code></dt>
+<dd>The Network Reconnect specifies the minimum delay in milliseconds between connection attempts. It defaults to 2000 ms.</dd></dl>
 <h2>Examples</h2>
 <p>A sample /etc/ocfs2/cluster.conf. cluster:<br />
 &nbsp;<wbr>node_count&nbsp;<wbr>=&nbsp;<wbr>3<br />

@@ -19,8 +19,8 @@ description: "ptftopl, uptftopl – Convert Japanese pTeX font metric (JFM) file
 <h2>OPTIONS</h2>
 <p> Compared to tftopl, the following option is added to <code>(u)ptftopl</code>.</p>
 <dl>
-<dt><code>-kanji</code><i>&nbsp;string</i></p>
-<dd> Sets the output Japanese <i>Kanji</i> code. The <i>string</i> can be one of the followings: <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), <i>utf8</i>&nbsp;(UTF-8), <i>uptex</i>&nbsp;(UTF-8; <code>uptftopl</code> only).</dl>
+<dt><code>-kanji</code><i>&nbsp;string</i></dt>
+<dd> Sets the output Japanese <i>Kanji</i> code. The <i>string</i> can be one of the followings: <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), <i>utf8</i>&nbsp;(UTF-8), <i>uptex</i>&nbsp;(UTF-8; <code>uptftopl</code> only).</dd></dl>
 <p> When one of <i>euc</i>, <i>jis</i>, <i>sjis</i> or <i>utf8</i> is specified, both <code>ptftopl</code> and <code>uptftopl</code> treats the input JFM as JIS-encoded. When <i>uptex</i> is specified with <code>uptftopl</code>, it treats the input JFM as Unicode-encoded.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ptex/">ptex</a></code>(1).</p>

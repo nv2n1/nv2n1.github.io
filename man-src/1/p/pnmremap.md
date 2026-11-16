@@ -27,18 +27,18 @@ description: "pnmremap – replace colors in a PPM image with colors from anothe
 <p> There is one parameter, which is required: The file specifcation of the input PNM file. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
-<dt><code>-floyd</code></p>
-<dd> <code>-fs</code> <code>-nofloyd</code> <code>-nofs</code> These options determine whether Floyd-Steinberg dithering is done. Without Floyd-Steinberg, the selection of output color of a pixel is based on the color of only the corresponding input pixel. With Floyd-Steinberg, multiple input pixels are considered so that the average color of an area tends to stay more the same than without Floyd-Steinberg. For example, if you map an image with a black, gray, gray, and white pixel adjacent, through a map that contains only black and white, it might result in an output of black, black, white, white. Pixel-by-pixel mapping would instead map both the gray pixels to the same color. </p>
+<dt><code>-floyd</code></dt>
+<dd> <code>-fs</code> <code>-nofloyd</code> <code>-nofs</code> These options determine whether Floyd-Steinberg dithering is done. Without Floyd-Steinberg, the selection of output color of a pixel is based on the color of only the corresponding input pixel. With Floyd-Steinberg, multiple input pixels are considered so that the average color of an area tends to stay more the same than without Floyd-Steinberg. For example, if you map an image with a black, gray, gray, and white pixel adjacent, through a map that contains only black and white, it might result in an output of black, black, white, white. Pixel-by-pixel mapping would instead map both the gray pixels to the same color. </dd>
 <p> <code>-fs</code> is a synomym for <code>-floyd</code>. <code>-nofs</code> is a synonym for <code>-nofloyd</code>. </p>
 <p> The default is <code>-nofloyd</code>. </p>
-<dt><code>-firstisdefault</code></p>
-<dd> This affects what happens with a pixel in the input image whose color is not in the map file. If you specify neither <code>-firstisdefault</code> nor <code>-missingcolor</code>, <code>pnmremap</code> chooses for the output the color in the map which is closest to the color in the input. With <code>-firstisdefault</code>, <code>pnmremap</code> instead uses the first color in the colormap. </p>
+<dt><code>-firstisdefault</code></dt>
+<dd> This affects what happens with a pixel in the input image whose color is not in the map file. If you specify neither <code>-firstisdefault</code> nor <code>-missingcolor</code>, <code>pnmremap</code> chooses for the output the color in the map which is closest to the color in the input. With <code>-firstisdefault</code>, <code>pnmremap</code> instead uses the first color in the colormap. </dd>
 <p> If you specify <code>-firstisdefault</code>, the maxval of your input must match the maxval of your colormap. </p>
-<dt><code>-missingcolor=</code><i>color</i></p>
-<dd> This affects what happens with a pixel in the input image whose color is not in the map file. If you specify neither <code>-firstisdefault</code> nor <code>-missingcolor</code>, <code>pnmremap</code> chooses for the output the color in the map which is closest to the color in the input. With <code>-missingcolor</code>, <code>pnmremap </code> uses <i>color</i>. <i>color</i> need not be in the colormap. </p>
+<dt><code>-missingcolor=</code><i>color</i></dt>
+<dd> This affects what happens with a pixel in the input image whose color is not in the map file. If you specify neither <code>-firstisdefault</code> nor <code>-missingcolor</code>, <code>pnmremap</code> chooses for the output the color in the map which is closest to the color in the input. With <code>-missingcolor</code>, <code>pnmremap </code> uses <i>color</i>. <i>color</i> need not be in the colormap. </dd>
 <p> If you specify <code>-missingcolor</code>, the maxval of your input must match the maxval of your colormap. </p>
-<dt><code>-verbose</code></p>
-<dd> Display helpful messages about the mapping process. </p>
+<dt><code>-verbose</code></dt>
+<dd> Display helpful messages about the mapping process. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1), <code><a href="/docs/linux/man/1-ppmcolors/">ppmcolors</a></code>(1), <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1), <code><a href="/docs/linux/man/1-ppmquantall/">ppmquantall</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

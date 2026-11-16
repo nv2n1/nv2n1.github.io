@@ -16,8 +16,8 @@ description: "restart-ds-admin – restart script for Admin Server"
 <h2>Usage</h2>
 <p>Sample usage:</p>
 <dl>
-<dt><code>restart-ds-admin</code></p>
-<dd></dl>
+<dt><code>restart-ds-admin</code></dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>restart-ds-admin was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

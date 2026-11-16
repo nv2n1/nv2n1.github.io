@@ -10,7 +10,6 @@ description: "putgrent – write a group database entry to a file"
 <p>putgrent &#8211; write a group database entry to a file</p>
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
-
 #include &lt;grp.h&gt;
 int putgrent(const struct group *grp, FILE *stream);</code></pre>
 <h2>Description</h2>

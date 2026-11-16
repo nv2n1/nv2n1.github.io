@@ -49,12 +49,10 @@ exit_code - exit status of the program
 <h2>Example</h2>
 
 // Run this code <pre><code>void atexit_handler()
-
 {
     std::cout &lt;&lt; &quot;atexit handler\n&quot;;
 }
 int main()
-
 {
     Local local_variable;                           // dtor of this object will *not* be called
     const int result = std::atexit(atexit_handler); // handler will be called
@@ -83,12 +81,10 @@ class Local {
 
 }; 
 &nbsp;<wbr>&nbsp;Static static_variable; // dtor of this object *will* be called <pre><code>void atexit_handler()
-
 {
     std::cout &lt;&lt; &quot;atexit handler\n&quot;;
 }
 int main()
-
 {
     Local local_variable;                           // dtor of this object will *not* be called
     const int result = std::atexit(atexit_handler); // handler will be called

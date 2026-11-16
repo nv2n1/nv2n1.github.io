@@ -15,11 +15,11 @@ clk_notifier_unregister - change notifier callback
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock whose rate we are no longer interested in</dl>
+<dl><dd></dd><dd>clock whose rate we are no longer interested in</dd></dl>
  
 
  <i>nb</i>
-<dl><dd>notifier block which will be unregistered</dl>
+<dl><dd>notifier block which will be unregistered</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -20,19 +20,19 @@ pki[CLI options] pkcs12
 <p> <code>pki</code> [CLI options] <code>pkcs12-export</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to export all certificates and keys from an NSS database into a PKCS #12 file.</dl>
+</dt><dd> This command is to export all certificates and keys from an NSS database into a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-import</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to import all certificates and keys from a PKCS #12 file into an NSS database.</dl>
+</dt><dd> This command is to import all certificates and keys from a PKCS #12 file into an NSS database.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to manage individual certificates in a PKCS #12 file. See <code><a href="/docs/linux/man/1-pki-pkcs12-cert/">pki-pkcs12-cert</a></code>(1).</dl>
+</dt><dd> This command is to manage individual certificates in a PKCS #12 file. See <code><a href="/docs/linux/man/1-pki-pkcs12-cert/">pki-pkcs12-cert</a></code>(1).</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-key</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to import individual keys in a PKCS #12 file. See <code><a href="/docs/linux/man/1-pki-pkcs12-key/">pki-pkcs12-key</a></code>(1).</dl>
+</dt><dd> This command is to import individual keys in a PKCS #12 file. See <code><a href="/docs/linux/man/1-pki-pkcs12-key/">pki-pkcs12-key</a></code>(1).</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

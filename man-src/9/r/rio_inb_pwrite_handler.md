@@ -14,14 +14,14 @@ description: "rio_inb_pwrite_handler – inbound port-write message handler"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>mport device associated with port-write</dl>
+</dd><dd>mport device associated with port-write</dd></dl>
 <p> <i>pw_msg</i></p>
 <dl>
-<dd>pointer to inbound port-write message</dl>
+<dd>pointer to inbound port-write message</dd></dl>
 <h2>Description</h2>
 <p>Processes an inbound port-write message. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

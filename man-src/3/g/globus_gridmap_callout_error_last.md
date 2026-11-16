@@ -16,13 +16,13 @@ description: "Datatypes –"
 <p>Gridmap Callout Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GRIDMAP_CALLOUT_LOOKUP_FAILED </i></p>
-<dd>Gridmap lookup failed</p>
-<dt><i>GLOBUS_GRIDMAP_CALLOUT_GSSAPI_ERROR </i></p>
-<dd>GSSAPI error</p>
-<dt><i>GLOBUS_GRIDMAP_CALLOUT_BUFFER_TOO_SMALL </i></p>
-<dd>Buffer too small</p>
-<dt><i>GLOBUS_GRIDMAP_CALLOUT_ERROR_LAST </i></p>
-<dd>Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GRIDMAP_CALLOUT_LOOKUP_FAILED </i></dt>
+<dd>Gridmap lookup failed</dd>
+<dt><i>GLOBUS_GRIDMAP_CALLOUT_GSSAPI_ERROR </i></dt>
+<dd>GSSAPI error</dd>
+<dt><i>GLOBUS_GRIDMAP_CALLOUT_BUFFER_TOO_SMALL </i></dt>
+<dd>Buffer too small</dd>
+<dt><i>GLOBUS_GRIDMAP_CALLOUT_ERROR_LAST </i></dt>
+<dd>Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gridmap_callout_error from the source code.</p>

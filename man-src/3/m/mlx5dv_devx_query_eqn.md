@@ -17,11 +17,11 @@ url: "/docs/linux/man/3-mlx5dv_devx_query_eqn/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 int mlx5dv_devx_query_eqn(struct ibv_context *context, uint32_t vector,
                           uint32_t *eqn);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -35,11 +35,11 @@ int mlx5dv_devx_query_eqn(struct ibv_context *context, uint32_t vector,
 
 <dl>
 <dt>context
-<dd> RDMA device context to work on.
-<dt>vector
-<dd> Completion vector number.
-<dt>eqn
-<dd> The device EQ number which relates to the given input vector.</dl>
+</dt><dd> RDMA device context to work on.
+</dd><dt>vector
+</dt><dd> Completion vector number.
+</dd><dt>eqn
+</dt><dd> The device EQ number which relates to the given input vector.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

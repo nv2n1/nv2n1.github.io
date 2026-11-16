@@ -13,25 +13,25 @@ description: "gset_marker_type (Set marker type) – sets the type of polymarker
 <p> void gset_marker_type(Gint marker_type);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>marker_type</p>
-<dd>(Input) &#8211; Selects the type of marker to be drawn. Options are:</p>
+<dt>marker_type</dt>
+<dd>(Input) &#8211; Selects the type of marker to be drawn. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&lt; 0</p>
-<dd>implementation dependent (not used in NCAR GKS-0A)</p>
-<dt> 1</p>
-<dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)</p>
-<dt> 2</p>
-<dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)</p>
-<dt> 3</p>
-<dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default</p>
-<dt> 4</p>
-<dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)</p>
-<dt> 5</p>
-<dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)</p>
-<dt>&ge; 6</p>
-<dd>&nbsp;<wbr>reserved for registration or future standardization</dl>
+</dd><dl COMPACT>
+<dt>&lt; 0</dt>
+<dd>implementation dependent (not used in NCAR GKS-0A)</dd>
+<dt> 1</dt>
+<dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)</dd>
+<dt> 2</dt>
+<dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)</dd>
+<dt> 3</dt>
+<dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default</dd>
+<dt> 4</dt>
+<dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)</dd>
+<dt> 5</dt>
+<dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)</dd>
+<dt>&ge; 6</dt>
+<dd>&nbsp;<wbr>reserved for registration or future standardization</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

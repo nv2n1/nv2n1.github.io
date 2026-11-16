@@ -25,62 +25,62 @@ description: "git-remote-helpers – Helper programs to interact with remote rep
 <p> <i>option</i></p>
 <dl>
 <dt>
-<dd> For specifying settings like verbosity (how much output to write to stderr) and depth (how much history is wanted in the case of a shallow clone) that affect how other commands are carried out.</dl>
+</dt><dd> For specifying settings like verbosity (how much output to write to stderr) and depth (how much history is wanted in the case of a shallow clone) that affect how other commands are carried out.</dd></dl>
 <p> <i>connect</i></p>
 <dl>
 <dt>
-<dd> For fetching and pushing using git&#8217;s native packfile protocol that requires a bidirectional, full-duplex connection.</dl>
+</dt><dd> For fetching and pushing using git&#8217;s native packfile protocol that requires a bidirectional, full-duplex connection.</dd></dl>
 <p> <i>push</i></p>
 <dl>
 <dt>
-<dd> For listing remote refs and pushing specified objects from the local object store to remote refs.</dl>
+</dt><dd> For listing remote refs and pushing specified objects from the local object store to remote refs.</dd></dl>
 <p> <i>fetch</i></p>
 <dl>
 <dt>
-<dd> For listing remote refs and fetching the associated history to the local object store.</dl>
+</dt><dd> For listing remote refs and fetching the associated history to the local object store.</dd></dl>
 <p> <i>import</i></p>
 <dl>
 <dt>
-<dd> For listing remote refs and fetching the associated history as a fast-import stream.</dl>
+</dt><dd> For listing remote refs and fetching the associated history as a fast-import stream.</dd></dl>
 <p> <i>refspec</i> &lt;refspec&gt;</p>
 <dl>
 <dt>
-<dd> This modifies the <i>import</i> capability, allowing the produced fast-import stream to modify refs in a private namespace instead of writing to refs/heads or refs/remotes directly. It is recommended that all importers providing the <i>import</i> capability use this. </p>
+</dt><dd> This modifies the <i>import</i> capability, allowing the produced fast-import stream to modify refs in a private namespace instead of writing to refs/heads or refs/remotes directly. It is recommended that all importers providing the <i>import</i> capability use this. </dd>
 <p> A helper advertising the capability refspec refs/heads/*:refs/svn/origin/branches/* is saying that, when it is asked to import refs/heads/topic, the stream it outputs will update the refs/svn/origin/branches/topic ref. </p>
 <p> This capability can be advertised multiple times. The first applicable refspec takes precedence. The left-hand of refspecs advertised with this capability must cover all refs reported by the list command. If no <i>refspec</i> capability is advertised, there is an implied refspec *:*.</dl>
 <h3>Capabilities for Pushing</h3>
 <p> <i>connect</i></p>
 <dl>
 <dt>
-<dd> Can attempt to connect to <i>git receive-pack</i> (for pushing), <i>git upload-pack</i>, etc for communication using the packfile protocol. </p>
+</dt><dd> Can attempt to connect to <i>git receive-pack</i> (for pushing), <i>git upload-pack</i>, etc for communication using the packfile protocol. </dd>
 <p> Supported commands: <i>connect</i>.</dl>
 <p> <i>push</i></p>
 <dl>
 <dt>
-<dd> Can discover remote refs and push local commits and the history leading up to them to new or existing remote refs. </p>
+</dt><dd> Can discover remote refs and push local commits and the history leading up to them to new or existing remote refs. </dd>
 <p> Supported commands: <i>list for-push</i>, <i>push</i>.</dl>
 <p> If a helper advertises both <i>connect</i> and <i>push</i>, git will use <i>connect</i> if possible and fall back to <i>push</i> if the helper requests so when connecting (see the <i>connect</i> command under COMMANDS).</p>
 <h3>Capabilities for Fetching</h3>
 <p> <i>connect</i></p>
 <dl>
 <dt>
-<dd> Can try to connect to <i>git upload-pack</i> (for fetching), <i>git receive-pack</i>, etc for communication using the packfile protocol. </p>
+</dt><dd> Can try to connect to <i>git upload-pack</i> (for fetching), <i>git receive-pack</i>, etc for communication using the packfile protocol. </dd>
 <p> Supported commands: <i>connect</i>.</dl>
 <p> <i>fetch</i></p>
 <dl>
 <dt>
-<dd> Can discover remote refs and transfer objects reachable from them to the local object store. </p>
+</dt><dd> Can discover remote refs and transfer objects reachable from them to the local object store. </dd>
 <p> Supported commands: <i>list</i>, <i>fetch</i>.</dl>
 <p> <i>import</i></p>
 <dl>
 <dt>
-<dd> Can discover remote refs and output objects reachable from them as a stream in fast-import format. </p>
+</dt><dd> Can discover remote refs and output objects reachable from them as a stream in fast-import format. </dd>
 <p> Supported commands: <i>list</i>, <i>import</i>.</dl>
 <p> If a helper advertises <i>connect</i>, git will use it if possible and fall back to another capability if the helper requests so when connecting (see the <i>connect</i> command under COMMANDS). When choosing between <i>fetch</i> and <i>import</i>, git prefers <i>fetch</i>. Other frontends may have some other order of preference. </p>
 <p> <i>refspec</i> &lt;refspec&gt;</p>
 <dl>
 <dt>
-<dd> This modifies the <i>import</i> capability. </p>
+</dt><dd> This modifies the <i>import</i> capability. </dd>
 <p> A helper advertising refspec refs/heads/*:refs/svn/origin/branches/* in its capabilities is saying that, when it handles import refs/heads/topic, the stream it outputs will update the refs/svn/origin/branches/topic ref. </p>
 <p> This capability can be advertised multiple times. The first applicable refspec takes precedence. The left-hand of refspecs advertised with this capability must cover all refs reported by the list command. If no <i>refspec</i> capability is advertised, there is an implied refspec *:*.</dl>
 <h2>INVOCATION</h2>
@@ -93,54 +93,50 @@ description: "git-remote-helpers – Helper programs to interact with remote rep
 <p> <i>capabilities</i></p>
 <dl>
 <dt>
-<dd> Lists the capabilities of the helper, one per line, ending with a blank line. Each capability may be preceded with <i>*</i>, which marks them mandatory for git version using the remote helper to understand (unknown mandatory capability is fatal error).</dl>
+</dt><dd> Lists the capabilities of the helper, one per line, ending with a blank line. Each capability may be preceded with <i>*</i>, which marks them mandatory for git version using the remote helper to understand (unknown mandatory capability is fatal error).</dd></dl>
 <p> <i>list</i></p>
 <dl>
 <dt>
-<dd> Lists the refs, one per line, in the format &quot;&lt;value&gt; &lt;name&gt; [&lt;attr&gt; &#8230;]&quot;. The value may be a hex sha1 hash, &quot;@&lt;dest&gt;&quot; for a symref, or &quot;?&quot; to indicate that the helper could not get the value of the ref. A space-separated list of attributes follows the name; unrecognized attributes are ignored. The list ends with a blank line. </p>
+</dt><dd> Lists the refs, one per line, in the format &quot;&lt;value&gt; &lt;name&gt; [&lt;attr&gt; &#8230;]&quot;. The value may be a hex sha1 hash, &quot;@&lt;dest&gt;&quot; for a symref, or &quot;?&quot; to indicate that the helper could not get the value of the ref. A space-separated list of attributes follows the name; unrecognized attributes are ignored. The list ends with a blank line. </dd>
 <p> If <i>push</i> is supported this may be called as <i>list for-push</i> to obtain the current refs prior to sending one or more <i>push</i> commands to the helper.</dl>
 <p> <i>option</i> &lt;name&gt; &lt;value&gt;</p>
 <dl>
 <dt>
-<dd> Sets the transport helper option &lt;name&gt; to &lt;value&gt;. Outputs a single line containing one of <i>ok</i> (option successfully set), <i>unsupported</i> (option not recognized) or <i>error &lt;msg&gt;</i> (option &lt;name&gt; is supported but &lt;value&gt; is not valid for it). Options should be set before other commands, and may influence the behavior of those commands. </p>
+</dt><dd> Sets the transport helper option &lt;name&gt; to &lt;value&gt;. Outputs a single line containing one of <i>ok</i> (option successfully set), <i>unsupported</i> (option not recognized) or <i>error &lt;msg&gt;</i> (option &lt;name&gt; is supported but &lt;value&gt; is not valid for it). Options should be set before other commands, and may influence the behavior of those commands. </dd>
 <p> Supported if the helper has the &quot;option&quot; capability.</dl>
 <p> <i>fetch</i> &lt;sha1&gt; &lt;name&gt;</p>
 <dl>
 <dt>
-<dd> Fetches the given object, writing the necessary objects to the database. Fetch commands are sent in a batch, one per line, terminated with a blank line. Outputs a single blank line when all fetch commands in the same batch are complete. Only objects which were reported in the ref list with a sha1 may be fetched this way. </p>
+</dt><dd> Fetches the given object, writing the necessary objects to the database. Fetch commands are sent in a batch, one per line, terminated with a blank line. Outputs a single blank line when all fetch commands in the same batch are complete. Only objects which were reported in the ref list with a sha1 may be fetched this way. </dd>
 <p> Optionally may output a <i>lock &lt;file&gt;</i> line indicating a file under GIT_DIR/objects/pack which is keeping a pack until refs can be suitably updated. </p>
 <p> Supported if the helper has the &quot;fetch&quot; capability.</dl>
 <p> <i>push</i> +&lt;src&gt;:&lt;dst&gt;</p>
 <dl>
 <dt>
-<dd> Pushes the given local &lt;src&gt; commit or branch to the remote branch described by &lt;dst&gt;. A batch sequence of one or more <i>push</i> commands is terminated with a blank line (if there is only one reference to push, a single <i>push</i> command is followed by a blank line). For example, the following would be two batches of <i>push</i>, the first asking the remote-helper to push the local ref <i>master</i> to the remote ref <i>master</i> and the local <i>HEAD</i> to the remote <i>branch</i>, and the second asking to push ref <i>foo</i> to ref <i>bar</i> (forced update requested by the <i>+</i>). </p>
+</dt><dd> Pushes the given local &lt;src&gt; commit or branch to the remote branch described by &lt;dst&gt;. A batch sequence of one or more <i>push</i> commands is terminated with a blank line (if there is only one reference to push, a single <i>push</i> command is followed by a blank line). For example, the following would be two batches of <i>push</i>, the first asking the remote-helper to push the local ref <i>master</i> to the remote ref <i>master</i> and the local <i>HEAD</i> to the remote <i>branch</i>, and the second asking to push ref <i>foo</i> to ref <i>bar</i> (forced update requested by the <i>+</i>). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 push refs/heads/master:refs/heads/master
 push HEAD:refs/heads/branch
-
-
 push +refs/heads/foo:refs/heads/bar
-
-
 </pre>
-</dl>
+</dd></dl>
 <p> Zero or more protocol options may be entered after the last <i>push</i> command, before the batch&#8217;s terminating blank line. </p>
 <p> When the push is complete, outputs one or more <i>ok &lt;dst&gt;</i> or <i>error &lt;dst&gt; &lt;why&gt;?</i> lines to indicate success or failure of each pushed ref. The status report output is terminated by a blank line. The option field &lt;why&gt; may be quoted in a C style string if it contains an LF. </p>
 <p> Supported if the helper has the &quot;push&quot; capability.</dl>
 <p> <i>import</i> &lt;name&gt;</p>
 <dl>
 <dt>
-<dd> Produces a fast-import stream which imports the current value of the named ref. It may additionally import other refs as needed to construct the history efficiently. The script writes to a helper-specific private namespace. The value of the named ref should be written to a location in this namespace derived by applying the refspecs from the &quot;refspec&quot; capability to the name of the ref. </p>
+</dt><dd> Produces a fast-import stream which imports the current value of the named ref. It may additionally import other refs as needed to construct the history efficiently. The script writes to a helper-specific private namespace. The value of the named ref should be written to a location in this namespace derived by applying the refspecs from the &quot;refspec&quot; capability to the name of the ref. </dd>
 <p> Especially useful for interoperability with a foreign versioning system. </p>
 <p> Just like <i>push</i>, a batch sequence of one or more <i>import</i> is terminated with a blank line. For each batch of <i>import</i>, the remote helper should produce a fast-import stream terminated by a <i>done</i> command. </p>
 <p> Supported if the helper has the &quot;import&quot; capability.</dl>
 <p> <i>connect</i> &lt;service&gt;</p>
 <dl>
 <dt>
-<dd> Connects to given service. Standard input and standard output of helper are connected to specified service (git prefix is included in service name so e.g. fetching uses <i>git-upload-pack</i> as service) on remote side. Valid replies to this command are empty line (connection established), <i>fallback</i> (no smart transport support, fall back to dumb transports) and just exiting with error message printed (can&#8217;t connect, don&#8217;t bother trying to fall back). After line feed terminating the positive (empty) response, the output of service starts. After the connection ends, the remote helper exits. </p>
+</dt><dd> Connects to given service. Standard input and standard output of helper are connected to specified service (git prefix is included in service name so e.g. fetching uses <i>git-upload-pack</i> as service) on remote side. Valid replies to this command are empty line (connection established), <i>fallback</i> (no smart transport support, fall back to dumb transports) and just exiting with error message printed (can&#8217;t connect, don&#8217;t bother trying to fall back). After line feed terminating the positive (empty) response, the output of service starts. After the connection ends, the remote helper exits. </dd>
 <p> Supported if the helper has the &quot;connect&quot; capability.</dl>
 <p> If a fatal error occurs, the program writes the error message to stderr and exits. The caller should expect that a suitable error message has been printed if the child closes the connection without completing a valid response for the current command. </p>
 <p> Additional commands may be supported, as may be determined from capabilities reported by the helper.</p>
@@ -148,33 +144,33 @@ push +refs/heads/foo:refs/heads/bar
 <p> <i>for-push</i></p>
 <dl>
 <dt>
-<dd> The caller wants to use the ref list to prepare push commands. A helper might chose to acquire the ref list by opening a different type of connection to the destination.</dl>
+</dt><dd> The caller wants to use the ref list to prepare push commands. A helper might chose to acquire the ref list by opening a different type of connection to the destination.</dd></dl>
 <p> <i>unchanged</i></p>
 <dl>
 <dt>
-<dd> This ref is unchanged since the last import or fetch, although the helper cannot necessarily determine what value that produced.</dl>
+</dt><dd> This ref is unchanged since the last import or fetch, although the helper cannot necessarily determine what value that produced.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <i>option verbosity</i> &lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Changes the verbosity of messages displayed by the helper. A value of 0 for &lt;n&gt; means that processes operate quietly, and the helper produces only error output. 1 is the default level of verbosity, and higher values of &lt;n&gt; correspond to the number of -v flags passed on the command line.</dl>
+</dt><dd> Changes the verbosity of messages displayed by the helper. A value of 0 for &lt;n&gt; means that processes operate quietly, and the helper produces only error output. 1 is the default level of verbosity, and higher values of &lt;n&gt; correspond to the number of -v flags passed on the command line.</dd></dl>
 <p> <i>option progress</i> {<i>true</i>|<i>false</i>}</p>
 <dl>
 <dt>
-<dd> Enables (or disables) progress messages displayed by the transport helper during a command.</dl>
+</dt><dd> Enables (or disables) progress messages displayed by the transport helper during a command.</dd></dl>
 <p> <i>option depth</i> &lt;depth&gt;</p>
 <dl>
 <dt>
-<dd> Deepens the history of a shallow repository.</dl>
+</dt><dd> Deepens the history of a shallow repository.</dd></dl>
 <p> <i>option followtags</i> {<i>true</i>|<i>false</i>}</p>
 <dl>
 <dt>
-<dd> If enabled the helper should automatically fetch annotated tag objects if the object the tag points at was transferred during the fetch command. If the tag is not fetched by the helper a second fetch command will usually be sent to ask for the tag specifically. Some helpers may be able to use this option to avoid a second network connection.</dl>
+</dt><dd> If enabled the helper should automatically fetch annotated tag objects if the object the tag points at was transferred during the fetch command. If the tag is not fetched by the helper a second fetch command will usually be sent to ask for the tag specifically. Some helpers may be able to use this option to avoid a second network connection.</dd></dl>
 <p> <i>option dry-run</i> {<i>true</i>|<i>false</i>}: If true, pretend the operation completed successfully, but don&#8217;t actually change any repository data. For most helpers this only applies to the <i>push</i>, if supported. </p>
 <p> <i>option servpath &lt;c-style-quoted-path&gt;</i></p>
 <dl>
 <dt>
-<dd> Sets service path (&#8211;upload-pack, &#8211;receive-pack etc.) for next connect. Remote helper may support this option, but must not rely on this option being set before connect request occurs.</dl>
+</dt><dd> Sets service path (&#8211;upload-pack, &#8211;receive-pack etc.) for next connect. Remote helper may support this option, but must not rely on this option being set before connect request occurs.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-remote/">git-remote</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-git-remote-testgit/">git-remote-testgit</a></code>(1)</p>

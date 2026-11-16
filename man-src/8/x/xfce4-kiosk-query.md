@@ -16,10 +16,10 @@ description: "xfce4-kiosk-query – Queries Xfce4 kiosk capabilities"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v</code></p>
-<dd>Show version of program.</dl>
+<dt><code>-h</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v</code></dt>
+<dd>Show version of program.</dd></dl>
 <h2>Author</h2>
 <p>xfce4-kiosk-query was written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
 <p> This manual page was written by Benedikt Meurer &lt;bm [at] os-cillation.de&gt;, for the Debian project (but may be used by others).</p>

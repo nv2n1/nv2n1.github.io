@@ -22,10 +22,8 @@ Although std::unique_ptr&lt;T&gt; with the default deleter may be constructed wi
 
 The following program demonstrates usage of a custom deleter. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 int main()
-
 {
     auto deleter = [](int *ptr) {
         std::cout &lt;&lt; &quot;[deleter called]\n&quot;;

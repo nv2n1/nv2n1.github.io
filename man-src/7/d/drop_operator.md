@@ -14,18 +14,18 @@ description: "DROP OPERATOR – remove an operator"
 <p><code>DROP OPERATOR</code> drops an existing operator from the database system. To execute this command you must be the owner of the operator.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the operator does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing operator.</p>
-<dt><i>lefttype</i></p>
-<dd>The data type of the operator&#8217;s left operand; write NONE if the operator has no left operand.</p>
-<dt><i>righttype</i></p>
-<dd>The data type of the operator&#8217;s right operand; write NONE if the operator has no right operand.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the operator.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the operator if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the operator does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator.</dd>
+<dt><i>lefttype</i></dt>
+<dd>The data type of the operator&#8217;s left operand; write NONE if the operator has no left operand.</dd>
+<dt><i>righttype</i></dt>
+<dd>The data type of the operator&#8217;s right operand; write NONE if the operator has no right operand.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the operator.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the operator if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Remove the power operator a^b for type <code>integer</code>: </p>
 <pre>DROP OPERATOR ^ (integer, integer);</pre>

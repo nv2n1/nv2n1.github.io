@@ -28,25 +28,25 @@ url: "/docs/linux/man/1-opagetvf/"
 
 <dl>
 <dt>--help
-<dd> Produces full help text.
-<dt>-h <i>hfi</i>
-<dd> HFI to send by. Default is first HFI.
-<dt>-p <i>port</i>
-<dd> Port to send by, default is first active port.
-<dt>-e
-<dd> Output MTU and rate as enum values.
-<dt>-d <i>vfname</i>
-<dd> Queries by VirtualFabric Name.
-<dt>-S <i>serviceId</i>
-<dd> Queries by Application ServiceId.
-<dt>-m <i>gid</i>
-<dd> Queries by Application Multicast GID.
-<dt>-i <i>vfindex</i>
-<dd> Queries by VirtualFabric Index.
-<dt>-k <i>pkey</i>
-<dd> Queries by VirtualFabric PKey.
-<dt>-L <i>SL</i>
-<dd> Queries by VirtualFabric SL.</dl>
+</dt><dd> Produces full help text.
+</dd><dt>-h <i>hfi</i>
+</dt><dd> HFI to send by. Default is first HFI.
+</dd><dt>-p <i>port</i>
+</dt><dd> Port to send by, default is first active port.
+</dd><dt>-e
+</dt><dd> Output MTU and rate as enum values.
+</dd><dt>-d <i>vfname</i>
+</dt><dd> Queries by VirtualFabric Name.
+</dd><dt>-S <i>serviceId</i>
+</dt><dd> Queries by Application ServiceId.
+</dd><dt>-m <i>gid</i>
+</dt><dd> Queries by Application Multicast GID.
+</dd><dt>-i <i>vfindex</i>
+</dt><dd> Queries by VirtualFabric Index.
+</dd><dt>-k <i>pkey</i>
+</dt><dd> Queries by VirtualFabric PKey.
+</dd><dt>-L <i>SL</i>
+</dt><dd> Queries by VirtualFabric SL.</dd></dl>
 
 <h2>Examples</h2>
 
@@ -64,13 +64,13 @@ url: "/docs/linux/man/1-opagetvf/"
  Option flag (bitmask) values include:
 <dl>
 <dt>&bull;
-<dd> 0x00 Indicates no bits are set. Specifically, no QOS, no Security, and no flow control disabled (which means flow control is enabled).
-<dt>&bull;
-<dd> 0x01 Security
-<dt>&bull;
-<dd> 0x02 QOS
-<dt>&bull;
-<dd> 0x04 Flow Control Disable</dl>
+</dt><dd> 0x00 Indicates no bits are set. Specifically, no QOS, no Security, and no flow control disabled (which means flow control is enabled).
+</dd><dt>&bull;
+</dt><dd> 0x01 Security
+</dd><dt>&bull;
+</dt><dd> 0x02 QOS
+</dd><dt>&bull;
+</dt><dd> 0x04 Flow Control Disable</dd></dl>
  
 
  

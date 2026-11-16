@@ -54,7 +54,7 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p> It can accumulate a set of data and return statistics (e.g: mean, variance, skewness, kurtosis, error estimation, etc.) </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>high moments are numerically unstable for high average/standardDeviation ratios.</dl>
+<dd>high moments are numerically unstable for high average/standardDeviation ratios.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Real</code> mean () const</h3>
 <p>returns the mean, defined as [ </p>
@@ -88,11 +88,11 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p>adds a datum to the set, possibly with a weight </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>weight must be positive or null</dl>
+<dd>weight must be positive or null</dd></dl>
 <h3>void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)</h3>
 <p>adds a sequence of data to the set, each with its weight </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>weights must be positive or null</dl>
+<dd>weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -15,8 +15,8 @@ description: "rzxdump – List contents of Sinclair ZX Spectrum input recording 
 <p> rzxdump outputs a description of the contents of RZX input recording files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>rzxfile</i></p>
-<dd> specifies an input recording file whose contents are to be listed.</dl>
+<dt><i>rzxfile</i></dt>
+<dd> specifies an input recording file whose contents are to be listed.</dd></dl>
 <h2>BUGS</h2>
 <p> The contents of compressed blocks are not displayed with in a useful fashion.</p>
 <h2>SEE ALSO</h2>

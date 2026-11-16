@@ -16,16 +16,16 @@ description: "mkdssp – Calculate secondary structure for proteins in a PDB fil
 <h2>OPTIONS</h2>
 <p> If you invoke <i>mkdssp</i> with only one parameter, it will be interpreted as the PDB file to process and output will be sent to stdout. If a second parameter is specified this is interpreted as the name of the DSSP file to create. Both the input and the output file names may have either .gz or .bz2 as extension resulting in the proper compression.</p>
 <dl>
-<dt><code>-i</code>, <code>&#8211;input</code> filename</p>
-<dd> The file name of a <i>PDB</i> formatted file containing the protein structure data. This file may be a file compressed by gzip or bzip2.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> filename</p>
-<dd> The file name of a <i>DSSP</i> file to create. If the filename ends in .gz or .bz2 a compressed file is created.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Write out diagnositic information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print the help message and exit. The directory containing the parser scripts for mrs.</dl>
+<dt><code>-i</code>, <code>&#8211;input</code> filename</dt>
+<dd> The file name of a <i>PDB</i> formatted file containing the protein structure data. This file may be a file compressed by gzip or bzip2.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> filename</dt>
+<dd> The file name of a <i>DSSP</i> file to create. If the filename ends in .gz or .bz2 a compressed file is created.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Write out diagnositic information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print the help message and exit. The directory containing the parser scripts for mrs.</dd></dl>
 <h2>THEORY</h2>
 <p> The DSSP program works by calculating the most likely secondary structure assignment given the 3D structure of a protein. It does this by reading the position of the atoms in a protein (the ATOM records in a PDB file) followed by calculation of the H-bond energy between all atoms. The best two H-bonds for each atom are then used to determine the most likely class of secondary structure for each residue in the protein. </p>
 <p> This means you do need to have a full and valid 3D structure for a protein to be able to calculate the secondary structure. There&#8217;s no magic in DSSP, so e.g. it cannot guess the secondary structure for a mutated protein for which you don&#8217;t have the 3D structure.</p>

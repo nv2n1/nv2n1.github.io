@@ -17,22 +17,22 @@ description: "CURLOPT_WILDCARDMATCH – enable directory wildcard transfers"
 <p> A brief introduction of its syntax follows:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>* &#8211; ASTERISK</p>
-<dd><a href="ftp://example.com/some/path/">ftp://example.com/some/path/</a><code>*.txt</code> (for all txt&#8217;s from the root directory)</dl>
+</dd><dl COMPACT>
+<dt>* &#8211; ASTERISK</dt>
+<dd><a href="ftp://example.com/some/path/">ftp://example.com/some/path/</a><code>*.txt</code> (for all txt&#8217;s from the root directory)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>? &#8211; QUESTION MARK</p>
-<dd>Question mark matches any (exactly one) character. </p>
+</dd><dl COMPACT>
+<dt>? &#8211; QUESTION MARK</dt>
+<dd>Question mark matches any (exactly one) character. </dd>
 <p> <a href="ftp://example.com/some/path/">ftp://example.com/some/path/</a><code>photo?.jpeg</code></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>[ &#8211; BRACKET EXPRESSION</p>
-<dd>The left bracket opens a bracket expression. The question mark and asterisk have no special meaning in a bracket expression. Each bracket expression ends by the right bracket and matches exactly one character. Some examples follow: </p>
+</dd><dl COMPACT>
+<dt>[ &#8211; BRACKET EXPRESSION</dt>
+<dd>The left bracket opens a bracket expression. The question mark and asterisk have no special meaning in a bracket expression. Each bracket expression ends by the right bracket and matches exactly one character. Some examples follow: </dd>
 <p> <code>[a-zA-Z0-9]</code> or <code>[f-gF-G]</code> &#8211; character interval </p>
 <p> <code>[abc]</code> &#8211; character enumeration </p>
 <p> <code>[^abc]</code> or <code>[!abc]</code> &#8211; negation </p>
@@ -52,3 +52,4 @@ description: "CURLOPT_WILDCARDMATCH – enable directory wildcard transfers"
 <p>Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-curlopt_fnmatch_function/">CURLOPT_FNMATCH_FUNCTION</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_url/">CURLOPT_URL</a></code>(3),</p>
+</p>

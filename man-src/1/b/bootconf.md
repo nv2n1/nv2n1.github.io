@@ -11,43 +11,43 @@ description: "bootconf – bootconf"
 <p> bootconf &#8211; bootconf </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bootconf</code> [options&#8230;]</dl>
+<dt> <code>bootconf</code> [options&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>bootconf</code></p>
-<dd>is a small utility that provides a convenient way to set or inspect some common Linux kernel boot options. <code>bootconf</code> updates the <code>GRUB</code> configuration file (<i>/boot/grub/grub.conf</i> in most cases). The changes will take effect, naturally, at the next reboot. </p>
+<dd>is a small utility that provides a convenient way to set or inspect some common Linux kernel boot options. <code>bootconf</code> updates the <code>GRUB</code> configuration file (<i>/boot/grub/grub.conf</i> in most cases). The changes will take effect, naturally, at the next reboot. </dd>
 <p> The following parameters may be specified: </p>
 <p> -titles</p>
 <dl>
 <dt>
-<dd> This parameter must be specified by itself, alone. <code>bootconf</code> displays a formatted list of available boot partitions and kernels.</dl>
+</dt><dd> This parameter must be specified by itself, alone. <code>bootconf</code> displays a formatted list of available boot partitions and kernels.</dd></dl>
 <p> default=<i>n</i></p>
 <dl>
 <dt>
-<dd> The default boot kernel or partition is lqnrq, where lqnrq is the boot partition number from the list produced by the <i>-titles</i> parameter.</dl>
+</dt><dd> The default boot kernel or partition is lqnrq, where lqnrq is the boot partition number from the list produced by the <i>-titles</i> parameter.</dd></dl>
 <p> quiet or quiet=1</p>
 <dl>
 <dt>
-<dd> Suppress most diagnostic messages when the Linux kernel initializes.</dl>
+</dt><dd> Suppress most diagnostic messages when the Linux kernel initializes.</dd></dl>
 <p> noquiet or quiet=0</p>
 <dl>
 <dt>
-<dd> Display diagnostic messages when the Linux kernel initializes.</dl>
+</dt><dd> Display diagnostic messages when the Linux kernel initializes.</dd></dl>
 <p> gui or gui=1</p>
 <dl>
 <dt>
-<dd> Show the status of the system boot process graphically (the lqrhgbrq boot option).</dl>
+</dt><dd> Show the status of the system boot process graphically (the lqrhgbrq boot option).</dd></dl>
 <p> nogui or gui=0</p>
 <dl>
 <dt>
-<dd> Show the status of the system boot process as text.</dl>
+</dt><dd> Show the status of the system boot process as text.</dd></dl>
 <p> vesa=<i>mode</i></p>
 <dl>
 <dt>
-<dd> Use a VESA framebuffer for the system display (see below).</dl>
+</dt><dd> Use a VESA framebuffer for the system display (see below).</dd></dl>
 <p> novesa</p>
 <dl>
 <dt>
-<dd> Do not use the VESA framebuffer for the system display.</dl>
+</dt><dd> Do not use the VESA framebuffer for the system display.</dd></dl>
 <p> Running <code>bootconf</code> without specifying any parameters displays the current settings. Run <code>bootconf</code> from X to show a small window where the individual settings can be adjusted graphically. </p>
 <p> The current settings are parsed from the first kernel listed in GRUB&#8217;s configuration file, but new settings are saved for every configured kernel.</p>
 <h3>VESA framebuffer</h3>
@@ -61,15 +61,15 @@ description: "bootconf – bootconf"
 <p> <i>Latest release of bootconf</i>[2]</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Framebuffer HOWTO</p>
+<dt> 1.</dt>
+<dd> Framebuffer HOWTO</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://tldp.org/HOWTO/Framebuffer-HOWTO.html">http://tldp.org/HOWTO/Framebuffer-HOWTO.html</a></dl>
-<dt> 2.</p>
-<dd> Latest release of bootconf</p>
+</dt><dd> <a rel="nofollow" href="http://tldp.org/HOWTO/Framebuffer-HOWTO.html">http://tldp.org/HOWTO/Framebuffer-HOWTO.html</a></dd></dl>
+<dt> 2.</dt>
+<dd> Latest release of bootconf</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.courier-mta.org/bootconf/download/">http://www.courier-mta.org/bootconf/download/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/bootconf/download/">http://www.courier-mta.org/bootconf/download/</a></dd></dl>
 </dl>
 <h2>Index</h2>

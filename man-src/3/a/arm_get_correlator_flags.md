@@ -22,9 +22,9 @@ description: "arm_get_correlator_flags – get value of flag"
 <p> <i>corr_flag_num</i> is an enumerated value that indicates which flag&#8217;s value is requested. The enumerated values are:</p>
 <dl>
 <dt>
-<dd> 1 (<code>ARM_CORR_FLAGNUM_APP_TRACE</code>) = Application trace flag</p>
+</dt><dd> 1 (<code>ARM_CORR_FLAGNUM_APP_TRACE</code>) = Application trace flag</dd>
 <dt>
-<dd> 2 (<code>ARM_CORR_FLAGNUM_AGENT_TRACE</code>) = Agent trace flag <i>correlator</i> is a pointer to a buffer containing a correlator. It serves no purpose to make the call if the pointer is null. </p>
+</dt><dd> 2 (<code>ARM_CORR_FLAGNUM_AGENT_TRACE</code>) = Agent trace flag <i>correlator</i> is a pointer to a buffer containing a correlator. It serves no purpose to make the call if the pointer is null. </dd>
 <p> <i>flag</i> is a pointer to a boolean that is output indicating whether the flag is set.</dl>
 <h2>RETURN VALUE</h2>
 <p> On success, the function returns <code>ARM_SUCCESS</code>. A non-zero value indicates an error.</p>
@@ -32,10 +32,10 @@ description: "arm_get_correlator_flags – get value of flag"
 <p> If the return code is negative, an error occurred. If the return code is not negative, an error may or may not have occurred &#8211; the determination of what is an error and whether an error code is returned is at the discretion of the ARM implementation. The application can test the return code if it wants to provide its own error logging. </p>
 <p> The following errors are recognized by this implementation, but may not be portable to other implementations: </p>
 <dl>
-<dt><code>ARM_FAILURE_NULL_ARGUMENT</code></p>
-<dd> The <i>correlator</i> and <i>flag</i> arguments must not be null.</p>
-<dt><code>ARM_FAILURE_INVALID_ARGUMENT</code></p>
-<dd> An unknown flag value has been specified.</dl>
+<dt><code>ARM_FAILURE_NULL_ARGUMENT</code></dt>
+<dd> The <i>correlator</i> and <i>flag</i> arguments must not be null.</dd>
+<dt><code>ARM_FAILURE_INVALID_ARGUMENT</code></dt>
+<dd> An unknown flag value has been specified.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> ARM Issue 4.0 C Language Bindings, Version 2</p>
 <h2>EXAMPLE</h2>

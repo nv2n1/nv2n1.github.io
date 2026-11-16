@@ -20,29 +20,29 @@ description: "i2cdetect – detect I2C chips"
 <h2>Interpreting The Output</h2>
 <p>Each cell in the output table will contain one of the following symbols:</p>
 <dl>
-<dt>*</p>
-<dd>&quot;&#8211;&quot;. The address was probed but no chip answered.</p>
-<dt>*</p>
-<dd>&quot;UU&quot;. Probing was skipped, because this address is currently in use by a driver. This strongly suggests that there is a chip at this address.</p>
-<dt>*</p>
-<dd>An address number in hexadecimal, e.g. &quot;2d&quot; or &quot;4e&quot;. A chip was found at this address. </p>
+<dt>*</dt>
+<dd>&quot;&#8211;&quot;. The address was probed but no chip answered.</dd>
+<dt>*</dt>
+<dd>&quot;UU&quot;. Probing was skipped, because this address is currently in use by a driver. This strongly suggests that there is a chip at this address.</dd>
+<dt>*</dt>
+<dd>An address number in hexadecimal, e.g. &quot;2d&quot; or &quot;4e&quot;. A chip was found at this address. </dd>
 </dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-y</code></p>
-<dd>Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</p>
-<dt><code>-a</code></p>
-<dd>Force scanning of non-regular addresses. Not recommended.</p>
-<dt><code>-q</code></p>
-<dd>Use SMBus &quot;quick write&quot; commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.</p>
-<dt><code>-r</code></p>
-<dd>Use SMBus &quot;read byte&quot; commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to lock SMBus on various write-only chips (most notably clock chips at address 0x69).</p>
-<dt><code>-F</code></p>
-<dd>Display the list of functionalities implemented by the adapter and exit.</p>
-<dt><code>-V</code></p>
-<dd>Display the version and exit.</p>
-<dt><code>-l</code></p>
-<dd>Output a list of installed busses. </p>
+<dt><code>-y</code></dt>
+<dd>Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</dd>
+<dt><code>-a</code></dt>
+<dd>Force scanning of non-regular addresses. Not recommended.</dd>
+<dt><code>-q</code></dt>
+<dd>Use SMBus &quot;quick write&quot; commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.</dd>
+<dt><code>-r</code></dt>
+<dd>Use SMBus &quot;read byte&quot; commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to lock SMBus on various write-only chips (most notably clock chips at address 0x69).</dd>
+<dt><code>-F</code></dt>
+<dd>Display the list of functionalities implemented by the adapter and exit.</dd>
+<dt><code>-V</code></dt>
+<dd>Display the version and exit.</dd>
+<dt><code>-l</code></dt>
+<dd>Output a list of installed busses. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-i2cdump/">i2cdump</a>(8), <a href="/docs/linux/man/8-sensors-detect/">sensors-detect</a>(8) </p>

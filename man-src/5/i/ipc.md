@@ -32,20 +32,20 @@ description: "svipc – System V interprocess communication mechanisms"
  0002 Write by others.</pre>
 <p>Bits 0100, 0010, and 0001 (the execute bits) are unused by the system. Furthermore, &quot;write&quot; effectively means &quot;alter&quot; for a semaphore set. The same system header file also defines the following symbolic constants:</p>
 <dl>
-<dt><code>IPC_CREAT</code></p>
-<dd>Create entry if key doesn&#8217;t exist.</p>
-<dt><code>IPC_EXCL</code></p>
-<dd>Fail if key exists.</p>
-<dt><code>IPC_NOWAIT</code></p>
-<dd>Error if request must wait.</p>
-<dt><code>IPC_PRIVATE</code></p>
-<dd>Private key.</p>
-<dt><code>IPC_RMID</code></p>
-<dd>Remove resource.</p>
-<dt><code>IPC_SET</code></p>
-<dd>Set resource options.</p>
-<dt><code>IPC_STAT</code></p>
-<dd>Get resource options.</dl>
+<dt><code>IPC_CREAT</code></dt>
+<dd>Create entry if key doesn&#8217;t exist.</dd>
+<dt><code>IPC_EXCL</code></dt>
+<dd>Fail if key exists.</dd>
+<dt><code>IPC_NOWAIT</code></dt>
+<dd>Error if request must wait.</dd>
+<dt><code>IPC_PRIVATE</code></dt>
+<dd>Private key.</dd>
+<dt><code>IPC_RMID</code></dt>
+<dd>Remove resource.</dd>
+<dt><code>IPC_SET</code></dt>
+<dd>Set resource options.</dd>
+<dt><code>IPC_STAT</code></dt>
+<dd>Get resource options.</dd></dl>
 <p> Note that <code>IPC_PRIVATE</code> is a <i>key_t</i> type, while all the other symbolic constants are flag fields and can be OR&#8217;ed into an <i>int</i> type variable.</p>
 <h3>Message queues</h3>
 <p>A message queue is uniquely identified by a positive integer (its <i>msqid</i>) and has an associated data structure of type <i>struct msqid_ds</i>, defined in <i>&lt;sys/msg.h&gt;</i>, containing the following members: struct msqid_ds {<br />
@@ -58,22 +58,22 @@ description: "svipc – System V interprocess communication mechanisms"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_rtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last&nbsp;<a href="/docs/linux/man/2-msgrcv/">msgrcv</a>(2)&nbsp;time&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last change time&nbsp;*/ };</p>
 <dl>
-<dt><i>msg_perm</i></p>
-<dd><i>ipc_perm</i> structure that specifies the access permissions on the message queue.</p>
-<dt><i>msg_qnum</i></p>
-<dd>Number of messages currently on the message queue.</p>
-<dt><i>msg_qbytes</i></p>
-<dd>Maximum number of bytes of message text allowed on the message queue.</p>
-<dt><i>msg_lspid</i></p>
-<dd>ID of the process that performed the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) system call.</p>
-<dt><i>msg_lrpid</i></p>
-<dd>ID of the process that performed the last <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) system call.</p>
-<dt><i>msg_stime</i></p>
-<dd>Time of the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) system call.</p>
-<dt><i>msg_rtime</i></p>
-<dd>Time of the last <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) system call.</p>
-<dt><i>msg_ctime</i></p>
-<dd>Time of the last system call that changed a member of the <i>msqid_ds</i> structure.</dl>
+<dt><i>msg_perm</i></dt>
+<dd><i>ipc_perm</i> structure that specifies the access permissions on the message queue.</dd>
+<dt><i>msg_qnum</i></dt>
+<dd>Number of messages currently on the message queue.</dd>
+<dt><i>msg_qbytes</i></dt>
+<dd>Maximum number of bytes of message text allowed on the message queue.</dd>
+<dt><i>msg_lspid</i></dt>
+<dd>ID of the process that performed the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) system call.</dd>
+<dt><i>msg_lrpid</i></dt>
+<dd>ID of the process that performed the last <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) system call.</dd>
+<dt><i>msg_stime</i></dt>
+<dd>Time of the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) system call.</dd>
+<dt><i>msg_rtime</i></dt>
+<dd>Time of the last <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) system call.</dd>
+<dt><i>msg_ctime</i></dt>
+<dd>Time of the last system call that changed a member of the <i>msqid_ds</i> structure.</dd></dl>
 <h3>Semaphore sets</h3>
 <p>A semaphore set is uniquely identified by a positive integer (its <i>semid</i>) and has an associated data structure of type <i>struct semid_ds</i>, defined in <i>&lt;sys/sem.h&gt;</i>, containing the following members:</p>
 <dl>
@@ -81,23 +81,23 @@ description: "svipc – System V interprocess communication mechanisms"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm sem_perm;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_otime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last operation time&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last change time&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_nsems;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;count of sems in set&nbsp;*/ };</p>
-<dt><i>sem_perm</i></p>
-<dd><i>ipc_perm</i> structure that specifies the access permissions on the semaphore set.</p>
-<dt><i>sem_otime</i></p>
-<dd>Time of last <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2) system call.</p>
-<dt><i>sem_ctime</i></p>
-<dd>Time of last <code><a href="/docs/linux/man/2-semctl/">semctl</a></code>(2) system call that changed a member of the above structure or of one semaphore belonging to the set.</p>
-<dt><i>sem_nsems</i></p>
-<dd>Number of semaphores in the set. Each semaphore of the set is referenced by a nonnegative integer ranging from <code>0</code> to <i>sem_nsems-1</i>.</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_nsems;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;count of sems in set&nbsp;*/ };</dd>
+<dt><i>sem_perm</i></dt>
+<dd><i>ipc_perm</i> structure that specifies the access permissions on the semaphore set.</dd>
+<dt><i>sem_otime</i></dt>
+<dd>Time of last <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2) system call.</dd>
+<dt><i>sem_ctime</i></dt>
+<dd>Time of last <code><a href="/docs/linux/man/2-semctl/">semctl</a></code>(2) system call that changed a member of the above structure or of one semaphore belonging to the set.</dd>
+<dt><i>sem_nsems</i></dt>
+<dd>Number of semaphores in the set. Each semaphore of the set is referenced by a nonnegative integer ranging from <code>0</code> to <i>sem_nsems-1</i>.</dd></dl>
 <p> A semaphore is a data structure of type <i>struct sem</i> containing the following members: struct sem {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int semval;&nbsp;<wbr>&nbsp;/*&nbsp;semaphore value&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sempid;&nbsp;<wbr>&nbsp;/*&nbsp;PID of process that last modified&nbsp;*/ };</p>
 <dl>
-<dt><i>semval</i></p>
-<dd>Semaphore value: a nonnegative integer.</p>
-<dt><i>sempid</i></p>
-<dd>PID of the last process that modified the value of this semaphore.</dl>
+<dt><i>semval</i></dt>
+<dd>Semaphore value: a nonnegative integer.</dd>
+<dt><i>sempid</i></dt>
+<dd>PID of the last process that modified the value of this semaphore.</dd></dl>
 <h3>Shared memory segments</h3>
 <p>A shared memory segment is uniquely identified by a positive integer (its <i>shmid</i>) and has an associated data structure of type <i>struct shmid_ds</i>, defined in <i>&lt;sys/shm.h&gt;</i>, containing the following members: struct shmid_ds {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm shm_perm;<br />
@@ -109,22 +109,22 @@ description: "svipc – System V interprocess communication mechanisms"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_dtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last detach&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last change&nbsp;*/ };</p>
 <dl>
-<dt><i>shm_perm</i></p>
-<dd><i>ipc_perm</i> structure that specifies the access permissions on the shared memory segment.</p>
-<dt><i>shm_segsz</i></p>
-<dd>Size in bytes of the shared memory segment.</p>
-<dt><i>shm_cpid</i></p>
-<dd>ID of the process that created the shared memory segment.</p>
-<dt><i>shm_lpid</i></p>
-<dd>ID of the last process that executed a <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) or <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) system call.</p>
-<dt><i>shm_nattch</i></p>
-<dd>Number of current alive attaches for this shared memory segment.</p>
-<dt><i>shm_atime</i></p>
-<dd>Time of the last <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) system call.</p>
-<dt><i>shm_dtime</i></p>
-<dd>Time of the last <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) system call.</p>
-<dt><i>shm_ctime</i></p>
-<dd>Time of the last <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) system call that changed <i>shmid_ds</i>.</dl>
+<dt><i>shm_perm</i></dt>
+<dd><i>ipc_perm</i> structure that specifies the access permissions on the shared memory segment.</dd>
+<dt><i>shm_segsz</i></dt>
+<dd>Size in bytes of the shared memory segment.</dd>
+<dt><i>shm_cpid</i></dt>
+<dd>ID of the process that created the shared memory segment.</dd>
+<dt><i>shm_lpid</i></dt>
+<dd>ID of the last process that executed a <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) or <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) system call.</dd>
+<dt><i>shm_nattch</i></dt>
+<dd>Number of current alive attaches for this shared memory segment.</dd>
+<dt><i>shm_atime</i></dt>
+<dd>Time of the last <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) system call.</dd>
+<dt><i>shm_dtime</i></dt>
+<dd>Time of the last <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) system call.</dd>
+<dt><i>shm_ctime</i></dt>
+<dd>Time of the last <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2) system call that changed <i>shmid_ds</i>.</dd></dl>
 <h3>IPC namespaces</h3>
 <p>For a discussion of the interaction of System V IPC objects and IPC namespaces, see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7).</p>
 <h2>See Also</h2>

@@ -25,10 +25,10 @@ description: "stime – set time"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Error in getting information from user space.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process has insufficient privilege. Under Linux, the <code>CAP_SYS_TIME</code> privilege is required.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Error in getting information from user space.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process has insufficient privilege. Under Linux, the <code>CAP_SYS_TIME</code> privilege is required.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4.</p>
 <h2>NOTES</h2>

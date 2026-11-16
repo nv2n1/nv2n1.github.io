@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_list_destroy() – Frees a mongoc_gridfs_file_l
 mongoc_gridfs_file_list_destroy (mongoc_gridfs_file_list_t *list);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>list</code></p>
-<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dl>
+<dt><code>list</code></dt>
+<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Frees a <code>mongoc_gridfs_file_list_t</code> and releases any associated resources. </p>
 <h2>Colophon</h2>

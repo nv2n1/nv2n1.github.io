@@ -10,10 +10,8 @@ description: "std::is_integral – std::is_integral"
 <p>std::is_integral &#8211; std::is_integral</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_integral;</code></pre>
 <p>Checks whether T is an integral type. Provides the member constant value which is equal to true, if T is the type bool, char, char8_t, char16_t, char32_t, wchar_t, short, int, long, long long, or any implementation-defined extended integer types, including any signed, unsigned, and cv-qualified variants. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -39,22 +37,18 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 enum E : int {};
 template &lt;class T&gt;
-
 T f(T i)
-
 {
     static_assert(std::is_integral&lt;T&gt;::value, &quot;Integral required.&quot;);
     return i;
 }
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_integral&lt;A&gt;::value &lt;&lt; '

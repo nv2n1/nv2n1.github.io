@@ -11,8 +11,6 @@ description: "zhesvxx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zhesvxx (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)
-
-
 ZHESVXX computes the solution to system of linear equations A * X = B for HE matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhesvxx (characterFACT, characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, double precision, dimension( * )S, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precisionRPVGRW, double precision, dimension( * )BERR, integerN_ERR_BNDS, double precision, dimension( nrhs, * )ERR_BNDS_NORM, double precision, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, double precision, dimension( * )PARAMS, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>
@@ -37,7 +35,7 @@ ZHESVXX computes the solution to system of linear equations A * X = B for HE mat
  errors or warnings, but we cannot make that claim for general
  user-provided factorizations and equilibration factors if they
  differ from what ZHESVXX would itself produce.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -76,10 +74,10 @@ ZHESVXX computes the solution to system of linear equations A * X = B for HE mat
  defaults are acceptable. If the defaults are acceptable, users
  can pass NPARAMS = 0 which prevents the source code from accessing
  the PARAMS argument.</pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of the matrix A is
  supplied on entry, and if not, whether the matrix A should be
@@ -350,13 +348,13 @@ ZHESVXX computes the solution to system of linear equations A * X = B for HE mat
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 504 of file zhesvxx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

@@ -13,24 +13,24 @@ description: "vpTranslate – multiply the current transformation matrix by a tr
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpTranslate(</code><i>vpc, tx, ty, tz</i><code>)</code></p>
+<dt> <code>vpTranslate(</code><i>vpc, tx, ty, tz</i><code>)</code></dt>
 <dd>
-<dd>vpContext <i>*vpc;</i></p>
-<dd>double *<i>tx,</i> *<i>ty,</i> *<i>tz;</i></dl>
+</dd><dd>vpContext <i>*vpc;</i></dd>
+<dd>double *<i>tx,</i> *<i>ty,</i> *<i>tz;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>tx</i></p>
-<dd>X component of translation vector.</p>
-<dt><i>ty</i></p>
-<dd>Y component of translation vector.</p>
-<dt><i>tz</i></p>
-<dd>Z component of translation vector.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>tx</i></dt>
+<dd>X component of translation vector.</dd>
+<dt><i>ty</i></dt>
+<dd>Y component of translation vector.</dd>
+<dt><i>tz</i></dt>
+<dd>Z component of translation vector.</dd></dl>
 <h2>Description</h2>
 <p><code>vpTranslate</code> is used to multiply the current transformation matrix by a 4-by-4 translation matrix. The translation matrix is:</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>tx</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>tx</dd>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ty</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>tz</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1
@@ -42,3 +42,4 @@ description: "vpTranslate – multiply the current transformation matrix by a tr
 <p>The return value is always VP_OK.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3) </p>
+</p>

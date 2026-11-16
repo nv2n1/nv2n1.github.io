@@ -15,11 +15,11 @@ frame_aligned - Check whether the byte size is aligned to frames
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>bytes</i>
-<dl><dd>size in bytes</dl>
+<dl><dd>size in bytes</dd></dl>
 
 <h2>Copyright</h2>
 

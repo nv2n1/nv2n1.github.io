@@ -14,26 +14,26 @@ description: "intltoolize – copy intltool related files to software package"
 <p>This prepares a package to use intltool by linking or copying various files needed by intltool into place for use when building. Note that you must change your working directory to the top level directory of the package before running <code>intltoolize.</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;automake</code></p>
-<dd>Work silently and assume that <i>automake</i> is being used in software.</p>
-<dt><code>-c</code></p>
+<dt><code>&#8211;automake</code></dt>
+<dd>Work silently and assume that <i>automake</i> is being used in software.</dd>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8211;copy</code></p>
-<dd>Copy files rather than creating symbolic links to them.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Enable verbose shell tracing.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;copy</code></dt>
+<dd>Copy files rather than creating symbolic links to them.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Enable verbose shell tracing.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;dry-run</code></p>
-<dd>Print commands only, instead of executing them.</p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8211;dry-run</code></dt>
+<dd>Print commands only, instead of executing them.</dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;force</code></p>
-<dd>Replace existing files if they exist.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Show usage and basic help information.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Show version information. </p>
+</dd><dt><code>&#8211;force</code></dt>
+<dd>Replace existing files if they exist.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Show usage and basic help information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Show version information. </dd>
 </dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>

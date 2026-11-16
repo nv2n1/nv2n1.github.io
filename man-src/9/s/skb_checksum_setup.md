@@ -15,11 +15,11 @@ skb_checksum_setup - set up partial checksum offset
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the skb to set up</dl>
+<dl><dd></dd><dd>the skb to set up</dd></dl>
  
 
  <i>recalculate</i>
-<dl><dd>if true the pseudo-header checksum will be recalculated</dl>
+<dl><dd>if true the pseudo-header checksum will be recalculated</dd></dl>
 
 <h2>Copyright</h2>
 

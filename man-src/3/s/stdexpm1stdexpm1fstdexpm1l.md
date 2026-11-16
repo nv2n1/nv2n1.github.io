@@ -39,19 +39,12 @@ For IEEE-compatible type double, overflow is guaranteed if 709.8 &lt; arg </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;expm1(1) = &quot; &lt;&lt; std::expm1(1) &lt;&lt; '
 '

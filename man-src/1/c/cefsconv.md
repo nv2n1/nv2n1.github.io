@@ -16,7 +16,7 @@ description: "cefsconv – convert a TeX document in SJIS encoding containing CE
 <p> <code>cefsconv</code> converts the CEF macros of a SJIS encoded document together with the SJIS encoding itself into a form which can directly processed with LaTeX 2e. It is identical to</p>
 <dl>
 <dt>
-<dd> <code>sjisconv</code> &lt; <i>infile</i> | <code>cefconv</code> &gt; <i>outfile</i></dl>
+</dt><dd> <code>sjisconv</code> &lt; <i>infile</i> | <code>cefconv</code> &gt; <i>outfile</i></dd></dl>
 <p> This filter is part of the <code>CJK</code> macro package for LaTeX 2e.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sjisconv/">sjisconv</a></code>(1), <code><a href="/docs/linux/man/1-bg5conv/">bg5conv</a></code>(1), <code><a href="/docs/linux/man/1-cefconv/">cefconv</a></code>(1), <code><a href="/docs/linux/man/1-cef5conv/">cef5conv</a></code>(1), <code><a href="/docs/linux/man/1-extconv/">extconv</a></code>(1),<br />

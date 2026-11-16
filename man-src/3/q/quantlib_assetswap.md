@@ -33,7 +33,7 @@ description: "QuantLib::AssetSwap – Bullet bond vs Libor swap."
 <p> for mechanics of par asset swap and market asset swap, refer to &#8216;Introduction to Asset Swap&#8217;, Lehman Brothers European Fixed Income Research &#8211; January 2000, D. O&#8217;Kane </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>fair prices are not calculated correctly when using indexed coupons.</dl>
+<dd>fair prices are not calculated correctly when using indexed coupons.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing engine is used. </p>

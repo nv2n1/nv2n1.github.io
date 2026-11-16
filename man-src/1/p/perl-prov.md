@@ -16,8 +16,8 @@ description: "perl.prov – list what Perl source files provide"
 <p> perl.prov is a counterpart of perl.req.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Increase verbosity.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase verbosity.</dd></dl>
 <p> The <font SIZE="-1">RPM_PERL_LIB_PATH</font> environment variable, if set, must contain the list of paths, separated by colons. These paths are considered as library paths used to determine relative names of provided perl files (in addition to paths from <tt>@INC</tt> variable).</p>
 <h2>Author</h2>
 <p>Written by Alexey Tourbin &lt;at [at] altlinux.org&gt;, based on an earlier version by Ken Estes &lt;kestes [at] staff.mail.com&gt;, with contributions from Mikhail Zabaluev &lt;mhz [at] altlinux.org&gt;.</p>

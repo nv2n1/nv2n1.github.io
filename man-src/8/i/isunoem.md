@@ -14,67 +14,67 @@ description: "ipmiutil_sunoem – OEM commands for Sun servers"
 <p><i>ipmiutil sunoem commands</i> is a program that uses Sun OEM IPMI commands to perform platform-specific functions. </p>
 <h2>Options</h2>
 <dl>
-<dt>-m 002000</p>
-<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-m 002000</dt>
+<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Commands</h2>
 <dl>
-<dt><i>led</i></p>
+<dt><i>led</i></dt>
 <dd>
+</dd><dl>
+<dd>These commands provide a way to get and set the status of LEDs on a Sun Microsystems server. Use &#8216;sdr list generic&#8217; to get a list of devices that are controllable LEDs. The <i>ledtype</i> parameter is optional and not necessary to provide on the command line unless it is required by hardware.</dd>
 <dl>
-<dd>These commands provide a way to get and set the status of LEDs on a Sun Microsystems server. Use &#8216;sdr list generic&#8217; to get a list of devices that are controllable LEDs. The <i>ledtype</i> parameter is optional and not necessary to provide on the command line unless it is required by hardware.</p>
-<dl>
-<dt><i>get</i> <code>sensorid</code> [<code>ledtype</code>]</p>
-<dd>Get status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will get the status of all available LEDS.</p>
-<dt><i>set</i> <code>sensorid</code> <code>ledmode</code> [<code>ledtype</code>]</p>
-<dd>Set status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will set the status of all available LEDS to the specified <i>ledmode</i> and <i>ledtype</i>.</p>
-<dt>LED Mode is required for set operations:</p>
+<dt><i>get</i> <code>sensorid</code> [<code>ledtype</code>]</dt>
+<dd>Get status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will get the status of all available LEDS.</dd>
+<dt><i>set</i> <code>sensorid</code> <code>ledmode</code> [<code>ledtype</code>]</dt>
+<dd>Set status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will set the status of all available LEDS to the specified <i>ledmode</i> and <i>ledtype</i>.</dd>
+<dt>LED Mode is required for set operations:</dt>
 <dd><i>OFF</i> Off<br />
  <i>ON</i> Steady On<br />
  <i>STANDBY</i> 100ms on 2900ms off blink rate<br />
  <i>SLOW</i> 1HZ blink rate<br />
- <i>FAST</i> 4HZ blink rate</p>
-<dt>LED Type is optional:</p>
+ <i>FAST</i> 4HZ blink rate</dd>
+<dt>LED Type is optional:</dt>
 <dd><i>OK2RM</i> Ok to Remove<br />
  <i>SERVICE</i> Service Required<br />
  <i>ACT</i> Activity<br />
- <i>LOCATE</i> Locate </p>
+ <i>LOCATE</i> Locate </dd>
 </dl>
 </dl>
-<dt><i>fan</i> <i>speed</i> 0-100</p>
-<dd>Set system fan speed (PWM duty cycle).</p>
+<dt><i>fan</i> <i>speed</i> 0-100</dt>
+<dd>Set system fan speed (PWM duty cycle).</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>sshkey</i></p>
+</dd><dl>
+<dt><i>sshkey</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>set</i> <code>userid</code> <code>keyfile</code></p>
-<dd>This command will allow you to specify an SSH key to use for a particular user on the Service Processor. This key will be used for CLI logins to the SP and not for IPMI sessions. View available users and their userids with the &#8216;user list&#8217; command.</p>
-<dt><i>del</i> <code>userid</code></p>
-<dd>This command will delete the SSH key for a specified userid.</dl>
+</dd><dl>
+<dt><i>set</i> <code>userid</code> <code>keyfile</code></dt>
+<dd>This command will allow you to specify an SSH key to use for a particular user on the Service Processor. This key will be used for CLI logins to the SP and not for IPMI sessions. View available users and their userids with the &#8216;user list&#8217; command.</dd>
+<dt><i>del</i> <code>userid</code></dt>
+<dd>This command will delete the SSH key for a specified userid.</dd></dl>
 </dl>
 </dl>
 </dl>

@@ -14,14 +14,14 @@ description: "scsi_nl_rcv_msg – Receive message handler."
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>socket receive buffer</dl>
+</dd><dd>socket receive buffer</dd></dl>
 <h2>Description</h2>
 <p>Extracts message from a receive buffer. Validates message header and calls appropriate transport message handler</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

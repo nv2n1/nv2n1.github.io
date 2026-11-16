@@ -12,25 +12,21 @@ rdma_create_id - Allocate a communication identifier.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_create_id
-
     (struct rdma_event_channel *channel,
-
      struct rdma_cm_id **id,
-
      void *context,
-
      enum rdma_port_space ps);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>channel
-<dd>The communication channel that events associated with the allocated rdma_cm_id will be reported on. This may be NULL.
-<dt>id
-<dd>A reference where the allocated communication identifier will be returned.
-<dt>context
-<dd>User specified context associated with the rdma_cm_id.
-<dt>ps
-<dd>RDMA port space.</dl>
+</dt><dd>The communication channel that events associated with the allocated rdma_cm_id will be reported on. This may be NULL.
+</dd><dt>id
+</dt><dd>A reference where the allocated communication identifier will be returned.
+</dd><dt>context
+</dt><dd>User specified context associated with the rdma_cm_id.
+</dd><dt>ps
+</dt><dd>RDMA port space.</dd></dl>
 
 <h2>Description</h2>
 
@@ -50,11 +46,11 @@ Rdma_cm_id's are conceptually equivalent to a socket for RDMA communication. The
 
 Details of the services provided by the different port spaces are outlined below.
 <dl><dt>RDMA_PS_TCP
-<dd>Provides reliable, connection-oriented QP communication. Unlike TCP, the RDMA port space provides message, not stream, based communication.
-<dt>RDMA_PS_UDP
-<dd>Provides unreliable, connectionless QP communication. Supports both datagram and multicast communication.
-<dt>RDMA_PS_IB
-<dd>Provides for any IB services (UD, UC, RC, XRC, etc.).</dl>
+</dt><dd>Provides reliable, connection-oriented QP communication. Unlike TCP, the RDMA port space provides message, not stream, based communication.
+</dd><dt>RDMA_PS_UDP
+</dt><dd>Provides unreliable, connectionless QP communication. Supports both datagram and multicast communication.
+</dd><dt>RDMA_PS_IB
+</dt><dd>Provides for any IB services (UD, UC, RC, XRC, etc.).</dd></dl>
 
 <h2>See Also</h2>
 

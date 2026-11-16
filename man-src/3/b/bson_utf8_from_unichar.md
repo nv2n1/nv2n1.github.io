@@ -17,14 +17,14 @@ void bson_utf8_from_unichar(bson_unichar_t unichar,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>unichar</code></p>
-<dd> A <code>bson_unichar_t</code> \&amp;.</dl>
+<dt><code>unichar</code></dt>
+<dd> A <code>bson_unichar_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>utf8</code></p>
-<dd> A location for the utf8 sequence.</dl>
+<dt><code>utf8</code></dt>
+<dd> A location for the utf8 sequence.</dd></dl>
 <dl>
-<dt><code>len</code></p>
-<dd> A location for the number of bytes in the resulting utf8 sequence.</dl>
+<dt><code>len</code></dt>
+<dd> A location for the number of bytes in the resulting utf8 sequence.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Converts a single unicode character to a multi-byte UTF-8 sequence. The result is stored in <code>utf8</code> and the number of bytes used in <code>len</code> \&amp;. </p>
 <h2>COLOPHON</h2>

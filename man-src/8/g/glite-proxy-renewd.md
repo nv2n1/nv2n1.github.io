@@ -14,51 +14,51 @@ description: "glite-proxy-renewd – proxy renewal daemon"
 <p><code>glite-proxy-renewd</code> registers X.509 proxy certificates and periodicaly renews them using a MyProxy repository. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-A</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></p>
-<dd>Renew also VOMS attributes if they are embeded in the renewed proxy. If the option is given, the renewal daemon will retrieve a fresh copy of the VOMS attributes and place it inside the new proxy. </p>
-<dt><code>-C</code><i> DIR</i>, &#8211;CAdir <i>DIR</i></p>
-<dd>An alternative directory with trusted root anchors. This option overrides the $X509_USER_DIR environment variable. </p>
-<dt><code>-c</code><i> NUM</i>, &#8211;condor-limit <i>NUM</i></p>
-<dd>Specifies how many <i>NUM</i> seconds before expiration of a proxy should the renewal process be started. It defaults to 1800 seconds. </p>
-<dt><code>-d</code><i></i>, &#8211;debug</p>
-<dd>Don&#8217;t daemonize and start logging to stdout. Increased level of debugging is enabled, too. </p>
-<dt><code>-G</code><i> FILE</i>, &#8211;voms-config <i>FILE</i></p>
-<dd>An alternative location of the VOMS configuration. </p>
-<dt><code>-h</code><i></i>, &#8211;help</p>
-<dd>Display a list of valid options. </p>
-<dt><code>-k</code><i> FILE</i>, &#8211;key <i>FILE</i></p>
-<dd>Get certificate from <i>FILE</i>. This option overrides the $X509_USER_CERT environment variable. </p>
-<dt><code>-O</code><i></i>, &#8211;order-attributes</p>
-<dd>Make sure that the order of renewed VOMS attributes is retained. Enabling this option may cause crashes of old VOMS servers (older than 1.8.12). </p>
-<dt><code>-r</code><i> DIR</i>, &#8211;repository <i>DIR</i></p>
-<dd>All registered proxies and corresponding metadata will be stored in <i>repository</i>. The directory must exist and be writeable by the proxy renewal daemon. </p>
-<dt><code>-t</code><i> FILE</i>, &#8211;cert <i>FILE</i></p>
-<dd>Get private key from <i>FILE</i>. This option overrides the $X509_USER_KEY environment variable. </p>
-<dt><code>-V</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></p>
-<dd>An alternative directory with trusted VOMS certificates </p>
-<dt><code>-v</code><i></i>, &#8211;version</p>
-<dd>Display the version of the proxy renewal daemon. </p>
+<dt><code>-A</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></dt>
+<dd>Renew also VOMS attributes if they are embeded in the renewed proxy. If the option is given, the renewal daemon will retrieve a fresh copy of the VOMS attributes and place it inside the new proxy. </dd>
+<dt><code>-C</code><i> DIR</i>, &#8211;CAdir <i>DIR</i></dt>
+<dd>An alternative directory with trusted root anchors. This option overrides the $X509_USER_DIR environment variable. </dd>
+<dt><code>-c</code><i> NUM</i>, &#8211;condor-limit <i>NUM</i></dt>
+<dd>Specifies how many <i>NUM</i> seconds before expiration of a proxy should the renewal process be started. It defaults to 1800 seconds. </dd>
+<dt><code>-d</code><i></i>, &#8211;debug</dt>
+<dd>Don&#8217;t daemonize and start logging to stdout. Increased level of debugging is enabled, too. </dd>
+<dt><code>-G</code><i> FILE</i>, &#8211;voms-config <i>FILE</i></dt>
+<dd>An alternative location of the VOMS configuration. </dd>
+<dt><code>-h</code><i></i>, &#8211;help</dt>
+<dd>Display a list of valid options. </dd>
+<dt><code>-k</code><i> FILE</i>, &#8211;key <i>FILE</i></dt>
+<dd>Get certificate from <i>FILE</i>. This option overrides the $X509_USER_CERT environment variable. </dd>
+<dt><code>-O</code><i></i>, &#8211;order-attributes</dt>
+<dd>Make sure that the order of renewed VOMS attributes is retained. Enabling this option may cause crashes of old VOMS servers (older than 1.8.12). </dd>
+<dt><code>-r</code><i> DIR</i>, &#8211;repository <i>DIR</i></dt>
+<dd>All registered proxies and corresponding metadata will be stored in <i>repository</i>. The directory must exist and be writeable by the proxy renewal daemon. </dd>
+<dt><code>-t</code><i> FILE</i>, &#8211;cert <i>FILE</i></dt>
+<dd>Get private key from <i>FILE</i>. This option overrides the $X509_USER_KEY environment variable. </dd>
+<dt><code>-V</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></dt>
+<dd>An alternative directory with trusted VOMS certificates </dd>
+<dt><code>-v</code><i></i>, &#8211;version</dt>
+<dd>Display the version of the proxy renewal daemon. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/tmp/dgpr_renew_&lt;uid&gt;</i></p>
-<dd>A unix socket used to talk to the daemon. It is created the daemon upon its start </p>
-<dt><i>proxy repository</i></p>
-<dd>A directory containing all the registered proxy certificates and additional meta-data. </p>
-<dt>There is no configuration file used the proxy renewal daemon.</p>
-<dd></dl>
+<dt><i>/tmp/dgpr_renew_&lt;uid&gt;</i></dt>
+<dd>A unix socket used to talk to the daemon. It is created the daemon upon its start </dd>
+<dt><i>proxy repository</i></dt>
+<dd>A directory containing all the registered proxy certificates and additional meta-data. </dd>
+<dt>There is no configuration file used the proxy renewal daemon.</dt>
+<dd></dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>GLITE_PR_TIMEOUT</code></p>
-<dd>Sets the maximum number of seconds that the daemon can spend on serving the client over the unix socket. The default value is 120 seconds. </p>
-<dt>Also, standard globus variables are honoured:</p>
+<dt><code>GLITE_PR_TIMEOUT</code></dt>
+<dd>Sets the maximum number of seconds that the daemon can spend on serving the client over the unix socket. The default value is 120 seconds. </dd>
+<dt>Also, standard globus variables are honoured:</dt>
 <dd>
-<dt><code>X509_USER_KEY</code></p>
-<dd>If $X509_USER_KEY is set, it is used to locate the private key file. </p>
-<dt><code>X509_USER_CERT</code></p>
-<dd>If $X509_USER_CERT is set, it is used to locate the certificate file. </p>
-<dt><code>X509_CERT_DIR</code></p>
-<dd>If $X509_CERT_DIR is set, it is used to locate trusted CA&#8217;s certificates and ca-signing-policy files. </p>
+</dd><dt><code>X509_USER_KEY</code></dt>
+<dd>If $X509_USER_KEY is set, it is used to locate the private key file. </dd>
+<dt><code>X509_USER_CERT</code></dt>
+<dd>If $X509_USER_CERT is set, it is used to locate the certificate file. </dd>
+<dt><code>X509_CERT_DIR</code></dt>
+<dd>If $X509_CERT_DIR is set, it is used to locate trusted CA&#8217;s certificates and ca-signing-policy files. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Please report all bugs to CESNET gLite Proxyrenewal issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/proxyrenewal/issues">https://github.com/CESNET/proxyrenewal/issues</a></i> </p>

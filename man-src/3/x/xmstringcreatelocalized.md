@@ -16,8 +16,8 @@ description: "XmStringCreateLocalized — A compound string function that create
 <p><code>XmStringCreateLocalized</code> creates a compound string containing the specified text in the current language environment. An identical compound string would result from the function <code>XmStringCreate</code> called with <code>XmFONTLIST_DEFAULT_TAG</code> explicitly as the tag component. </p>
 <p> The function will allocate space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a NULL-terminated string of text encoded in the current language environment to be used as the text component of the compound string</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a NULL-terminated string of text encoded in the current language environment to be used as the text component of the compound string</dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

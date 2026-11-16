@@ -22,13 +22,13 @@ CALL TDLBLS (UMIN, VMIN, WMIN, UMAX, VMAX, WMAX, UNLB, VNLB, WNLB, UILB, VILB, W
 
 The arguments of TDLBLS are as follows:
 <dl><dt>UMIN, VMIN, WMIN, UMAX, VMAX, WMAX
-<dd>(input expressions of type REAL) - coordinate values defining the box in 3-space. The names of these should make it clear what they are.
-<dt>UNLB, VNLB, and WNLB
-<dd>(input, of type CHARACTER) - these strings contain numeric labels to be placed on a U axis, a V axis, and a W axis, respectively. The labels need not be in any particular order, but they have to be separated by blanks and each has to be readable using a FORTRAN format of the form &quot;En.0&quot;, where &quot;n&quot; is the length of the label.
-<dt>UILB, VILB, and WILB
-<dd>(input, of type CHARACTER) - these strings contain informational labels for a U axis, a V axis, and a W axis, respectively.
-<dt>IPCK
-<dd>(an input expression of type INTEGER) - determines which edges of the box are labelled. If IPCK is zero, all six outer edges are labelled, but if IPCK is non-zero, only three edges are labelled, one set of three if IPCK is negative, a different set if IPCK is positive.</dl>
+</dt><dd>(input expressions of type REAL) - coordinate values defining the box in 3-space. The names of these should make it clear what they are.
+</dd><dt>UNLB, VNLB, and WNLB
+</dt><dd>(input, of type CHARACTER) - these strings contain numeric labels to be placed on a U axis, a V axis, and a W axis, respectively. The labels need not be in any particular order, but they have to be separated by blanks and each has to be readable using a FORTRAN format of the form &quot;En.0&quot;, where &quot;n&quot; is the length of the label.
+</dd><dt>UILB, VILB, and WILB
+</dt><dd>(input, of type CHARACTER) - these strings contain informational labels for a U axis, a V axis, and a W axis, respectively.
+</dd><dt>IPCK
+</dt><dd>(an input expression of type INTEGER) - determines which edges of the box are labelled. If IPCK is zero, all six outer edges are labelled, but if IPCK is non-zero, only three edges are labelled, one set of three if IPCK is negative, a different set if IPCK is positive.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

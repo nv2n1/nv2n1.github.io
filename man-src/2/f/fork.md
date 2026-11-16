@@ -18,81 +18,79 @@ description: "fork – create a child process"
 <p> The child process and the parent process run in separate memory spaces. At the time of <code>fork</code>() both memory spaces have the same content. Memory writes, file mappings (<code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)), and unmappings (<code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2)) performed by one of the processes do not affect the other. </p>
 <p> The child process is an exact duplicate of the parent process except for the following points:</p>
 <dl>
-<dt>*</p>
-<dd> The child has its own unique process ID, and this PID does not match the ID of any existing process group (<code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2)) or session.</p>
-<dt>*</p>
-<dd> The child&#8217;s parent process ID is the same as the parent&#8217;s process ID.</p>
-<dt>*</p>
-<dd> The child does not inherit its parent&#8217;s memory locks (<code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2)).</p>
-<dt>*</p>
-<dd> Process resource utilizations (<code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2)) and CPU time counters (<code><a href="/docs/linux/man/2-times/">times</a></code>(2)) are reset to zero in the child.</p>
-<dt>*</p>
-<dd> The child&#8217;s set of pending signals is initially empty (<code><a href="/docs/linux/man/2-sigpending/">sigpending</a></code>(2)).</p>
-<dt>*</p>
-<dd> The child does not inherit semaphore adjustments from its parent (<code><a href="/docs/linux/man/2-semop/">semop</a></code>(2)).</p>
-<dt>*</p>
-<dd> The child does not inherit process-associated record locks from its parent (<code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)). (On the other hand, it does inherit <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) open file description locks and <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) locks from its parent.)</p>
-<dt>*</p>
-<dd> The child does not inherit timers from its parent (<code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2), <code><a href="/docs/linux/man/2-alarm/">alarm</a></code>(2), <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2)).</p>
-<dt>*</p>
-<dd> The child does not inherit outstanding asynchronous I/O operations from its parent (<code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3)), nor does it inherit any asynchronous I/O contexts from its parent (see <code><a href="/docs/linux/man/2-io_setup/">io_setup</a></code>(2)).</dl>
+<dt>*</dt>
+<dd> The child has its own unique process ID, and this PID does not match the ID of any existing process group (<code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2)) or session.</dd>
+<dt>*</dt>
+<dd> The child&#8217;s parent process ID is the same as the parent&#8217;s process ID.</dd>
+<dt>*</dt>
+<dd> The child does not inherit its parent&#8217;s memory locks (<code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> Process resource utilizations (<code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2)) and CPU time counters (<code><a href="/docs/linux/man/2-times/">times</a></code>(2)) are reset to zero in the child.</dd>
+<dt>*</dt>
+<dd> The child&#8217;s set of pending signals is initially empty (<code><a href="/docs/linux/man/2-sigpending/">sigpending</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The child does not inherit semaphore adjustments from its parent (<code><a href="/docs/linux/man/2-semop/">semop</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The child does not inherit process-associated record locks from its parent (<code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)). (On the other hand, it does inherit <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) open file description locks and <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) locks from its parent.)</dd>
+<dt>*</dt>
+<dd> The child does not inherit timers from its parent (<code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2), <code><a href="/docs/linux/man/2-alarm/">alarm</a></code>(2), <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The child does not inherit outstanding asynchronous I/O operations from its parent (<code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3)), nor does it inherit any asynchronous I/O contexts from its parent (see <code><a href="/docs/linux/man/2-io_setup/">io_setup</a></code>(2)).</dd></dl>
 <p> The process attributes in the preceding list are all specified in POSIX.1. The parent and child also differ with respect to the following Linux-specific process attributes:</p>
 <dl>
-<dt>*</p>
-<dd> The child does not inherit directory change notifications (dnotify) from its parent (see the description of <code>F_NOTIFY</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</p>
-<dt>*</p>
-<dd> The <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PDEATHSIG</code> setting is reset so that the child does not receive a signal when its parent terminates.</p>
-<dt>*</p>
-<dd> The default timer slack value is set to the parent&#8217;s current timer slack value. See the description of <code>PR_SET_TIMERSLACK</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2).</p>
-<dt>*</p>
-<dd> Memory mappings that have been marked with the <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) <code>MADV_DONTFORK</code> flag are not inherited across a <code>fork</code>().</p>
-<dt>*</p>
-<dd> Memory in address ranges that have been marked with the <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) <code>MADV_WIPEONFORK</code> flag is zeroed in the child after a <code>fork</code>(). (The <code>MADV_WIPEONFORK</code> setting remains in place for those address ranges in the child.)</p>
-<dt>*</p>
-<dd> The termination signal of the child is always <code>SIGCHLD</code> (see <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2)).</p>
-<dt>*</p>
-<dd> The port access permission bits set by <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2) are not inherited by the child; the child must turn on any bits that it requires using <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2).</dl>
+<dt>*</dt>
+<dd> The child does not inherit directory change notifications (dnotify) from its parent (see the description of <code>F_NOTIFY</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PDEATHSIG</code> setting is reset so that the child does not receive a signal when its parent terminates.</dd>
+<dt>*</dt>
+<dd> The default timer slack value is set to the parent&#8217;s current timer slack value. See the description of <code>PR_SET_TIMERSLACK</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2).</dd>
+<dt>*</dt>
+<dd> Memory mappings that have been marked with the <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) <code>MADV_DONTFORK</code> flag are not inherited across a <code>fork</code>().</dd>
+<dt>*</dt>
+<dd> Memory in address ranges that have been marked with the <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) <code>MADV_WIPEONFORK</code> flag is zeroed in the child after a <code>fork</code>(). (The <code>MADV_WIPEONFORK</code> setting remains in place for those address ranges in the child.)</dd>
+<dt>*</dt>
+<dd> The termination signal of the child is always <code>SIGCHLD</code> (see <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The port access permission bits set by <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2) are not inherited by the child; the child must turn on any bits that it requires using <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2).</dd></dl>
 <p> Note the following further points:</p>
 <dl>
-<dt>*</p>
-<dd> The child process is created with a single thread&#8212;the one that called <code>fork</code>(). The entire virtual address space of the parent is replicated in the child, including the states of mutexes, condition variables, and other pthreads objects; the use of <code>pthread_atfork</code>(3) may be helpful for dealing with problems that this can cause.</p>
-<dt>*</p>
-<dd> After a <code>fork</code>() in a multithreaded program, the child can safely call only async-signal-safe functions (see <code><a href="/docs/linux/man/7-signal-safety/">signal-safety</a></code>(7)) until such time as it calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt>*</p>
-<dd> The child inherits copies of the parent&#8217;s set of open file descriptors. Each file descriptor in the child refers to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) as the corresponding file descriptor in the parent. This means that the two file descriptors share open file status flags, file offset, and signal-driven I/O attributes (see the description of <code>F_SETOWN</code> and <code>F_SETSIG</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</p>
-<dt>*</p>
-<dd> The child inherits copies of the parent&#8217;s set of open message queue descriptors (see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7)). Each file descriptor in the child refers to the same open message queue description as the corresponding file descriptor in the parent. This means that the two file descriptors share the same flags (<i>mq_flags</i>).</p>
-<dt>*</p>
-<dd> The child inherits copies of the parent&#8217;s set of open directory streams (see <code>opendir</code>(3)). POSIX.1 says that the corresponding directory streams in the parent and child <i>may</i> share the directory stream positioning; on Linux/glibc they do not.</dl>
+<dt>*</dt>
+<dd> The child process is created with a single thread&#8212;the one that called <code>fork</code>(). The entire virtual address space of the parent is replicated in the child, including the states of mutexes, condition variables, and other pthreads objects; the use of <code>pthread_atfork</code>(3) may be helpful for dealing with problems that this can cause.</dd>
+<dt>*</dt>
+<dd> After a <code>fork</code>() in a multithreaded program, the child can safely call only async-signal-safe functions (see <code><a href="/docs/linux/man/7-signal-safety/">signal-safety</a></code>(7)) until such time as it calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt>*</dt>
+<dd> The child inherits copies of the parent&#8217;s set of open file descriptors. Each file descriptor in the child refers to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) as the corresponding file descriptor in the parent. This means that the two file descriptors share open file status flags, file offset, and signal-driven I/O attributes (see the description of <code>F_SETOWN</code> and <code>F_SETSIG</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)).</dd>
+<dt>*</dt>
+<dd> The child inherits copies of the parent&#8217;s set of open message queue descriptors (see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7)). Each file descriptor in the child refers to the same open message queue description as the corresponding file descriptor in the parent. This means that the two file descriptors share the same flags (<i>mq_flags</i>).</dd>
+<dt>*</dt>
+<dd> The child inherits copies of the parent&#8217;s set of open directory streams (see <code>opendir</code>(3)). POSIX.1 says that the corresponding directory streams in the parent and child <i>may</i> share the directory stream positioning; on Linux/glibc they do not.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, the PID of the child process is returned in the parent, and 0 is returned in the child. On failure, -1 is returned in the parent, no child process is created, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> A system-imposed limit on the number of threads was encountered. There are a number of limits that may trigger this error:</p>
+<dt><code>EAGAIN</code></dt>
+<dd> A system-imposed limit on the number of threads was encountered. There are a number of limits that may trigger this error:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> the <code>RLIMIT_NPROC</code> soft resource limit (set via <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)), which limits the number of processes and threads for a real user ID, was reached;</p>
-<dt>*</p>
-<dd> the kernel&#8217;s system-wide limit on the number of processes and threads, <i>/proc/sys/kernel/threads-max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5));</p>
-<dt>*</p>
-<dd> the maximum number of PIDs, <i>/proc/sys/kernel/pid_max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)); or</p>
-<dt>*</p>
-<dd> the PID limit (<i>pids.max</i>) imposed by the cgroup &quot;process number&quot; (PIDs) controller was reached.</dl>
+<dt>*</dt>
+<dd> the <code>RLIMIT_NPROC</code> soft resource limit (set via <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)), which limits the number of processes and threads for a real user ID, was reached;</dd>
+<dt>*</dt>
+<dd> the kernel&#8217;s system-wide limit on the number of processes and threads, <i>/proc/sys/kernel/threads-max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5));</dd>
+<dt>*</dt>
+<dd> the maximum number of PIDs, <i>/proc/sys/kernel/pid_max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)); or</dd>
+<dt>*</dt>
+<dd> the PID limit (<i>pids.max</i>) imposed by the cgroup &quot;process number&quot; (PIDs) controller was reached.</dd></dl>
 </dl>
-<dt><code>EAGAIN</code></p>
-<dd> The caller is operating under the <code>SCHED_DEADLINE</code> scheduling policy and does not have the reset-on-fork flag set. See <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7).</p>
-<dt><code>ENOMEM</code></p>
-<dd> <code>fork</code>() failed to allocate the necessary kernel structures because memory is tight.</p>
-<dt><code>ENOMEM</code></p>
-<dd> An attempt was made to create a child process in a PID namespace whose &quot;init&quot; process has terminated. See <code><a href="/docs/linux/man/7-pid_namespaces/">pid_namespaces</a></code>(7).</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>fork</code>() is not supported on this platform (for example, hardware without a Memory-Management Unit).</p>
-<dt><code>ERESTARTNOINTR</code> (since Linux 2.6.17)</p>
-<dd> System call was interrupted by a signal and will be restarted. (This can be seen only during a trace.)</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The caller is operating under the <code>SCHED_DEADLINE</code> scheduling policy and does not have the reset-on-fork flag set. See <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> <code>fork</code>() failed to allocate the necessary kernel structures because memory is tight.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> An attempt was made to create a child process in a PID namespace whose &quot;init&quot; process has terminated. See <code><a href="/docs/linux/man/7-pid_namespaces/">pid_namespaces</a></code>(7).</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>fork</code>() is not supported on this platform (for example, hardware without a Memory-Management Unit).</dd>
+<dt><code>ERESTARTNOINTR</code> (since Linux 2.6.17)</dt>
+<dd> System call was interrupted by a signal and will be restarted. (This can be seen only during a trace.)</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
 <h2>NOTES</h2>

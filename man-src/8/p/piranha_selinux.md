@@ -46,8 +46,8 @@ description: "piranha_selinux – Security Enhanced Linux Policy for the piranha
 <p> <code>piranha_web_conf_t </code> </p>
 <p> &#8211; Set files with the piranha_web_conf_t type, if you want to treat the files as piranha web configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/luci/etc(/.*)?, /var/lib/luci/cert(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/luci/etc(/.*)?, /var/lib/luci/cert(/.*)? </dd>
 </dl>
 <p> <code>piranha_web_data_t </code> </p>
 <p> &#8211; Set files with the piranha_web_data_t type, if you want to treat the files as piranha web content. </p>
@@ -67,9 +67,9 @@ description: "piranha_selinux – Security Enhanced Linux Policy for the piranha
 <p> Policy governs the access confined processes have to these ports. SELinux piranha policy is very flexible allowing users to setup their piranha processes in as secure a method as possible. </p>
 <p> The following port types are defined for piranha: </p>
 <dl>
-<dt><code>piranha_port_t </code></p>
+<dt><code>piranha_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 3636</dl>
+</dd><dd>Default Defined Ports: tcp 3636</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux piranha policy is very flexible allowing users to setup their piranha processes in as secure a method as possible. </p>

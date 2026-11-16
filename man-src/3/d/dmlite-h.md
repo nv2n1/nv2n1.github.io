@@ -82,7 +82,7 @@ description: "dmlite.h –"
 <p>C wrapper for DMLite. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dl>
+<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dd></dl>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>dmlite_context</code> <code>dmlite_context</code></h3>
 <p>Handle for a initialized context.</p>
@@ -101,82 +101,82 @@ description: "dmlite.h –"
 <p>Destroys the context. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The context to free.</dl>
+<dd><i>context</i> The context to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_context</code>* dmlite_context_new (<code>dmlite_manager</code> *manager)</h3>
 <p>Returns a usable context from the loaded libraries. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> The plugin manager.</dl>
+<dd><i>manager</i> The plugin manager.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on failure. The error code can be checked with dmlite_manager_error.</dl>
+<dd>NULL on failure. The error code can be checked with dmlite_manager_error.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>A context is NOT thread safe.</dl>
+<dd>A context is NOT thread safe.</dd></dl>
 <h3>int dmlite_errno (<code>dmlite_context</code> *context)</h3>
 <p>Returns the error code from the last failure. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The context that was used in the failed function.</dl>
+<dd><i>context</i> The context that was used in the failed function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The error code.</dl>
+<dd>The error code.</dd></dl>
 <h3>const char* dmlite_error (<code>dmlite_context</code> *context)</h3>
 <p>Error string from the last failed function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The context that was used in the failed function.</dl>
+<dd><i>context</i> The context that was used in the failed function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A string with the error description. Do NOT free it.</dl>
+<dd>A string with the error description. Do NOT free it.</dd></dl>
 <h3>int dmlite_errtype (<code>dmlite_context</code> *context)</h3>
 <p>Returns the type of the last error. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The context that was used in the failed function.</dl>
+<dd><i>context</i> The context that was used in the failed function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The error type.</dl>
+<dd>The error type.</dd></dl>
 <h3>const <code>dmlite_security_context</code>* dmlite_get_security_context (<code>dmlite_context</code> *context)</h3>
 <p>Returns the security context. There is no need to free. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.</dl>
+<dd><i>context</i> The DM context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The security context.</dl>
+<dd>The security context.</dd></dl>
 <h3>int dmlite_manager_errno (<code>dmlite_manager</code> *manager)</h3>
 <p>Returns the last error code. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> The plugin manager used in the failing function.</dl>
+<dd><i>manager</i> The plugin manager used in the failing function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The last error code, WITHOUT the error type byte.</dl>
+<dd>The last error code, WITHOUT the error type byte.</dd></dl>
 <h3>const char* dmlite_manager_error (<code>dmlite_manager</code> *manager)</h3>
 <p>Returns the string that describes the last error. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> The plugin manager used in the failing function.</dl>
+<dd><i>manager</i> The plugin manager used in the failing function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the error string. Do NOT free it.</dl>
+<dd>A pointer to the error string. Do NOT free it.</dd></dl>
 <h3>int dmlite_manager_errtype (<code>dmlite_manager</code> *manager)</h3>
 <p>Returns the type of the last error. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> The plugin manager used in the failing function.</dl>
+<dd><i>manager</i> The plugin manager used in the failing function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The last error type byte.</dl>
+<dd>The last error type byte.</dd></dl>
 <h3>int dmlite_manager_free (<code>dmlite_manager</code> *manager)</h3>
 <p>Destroys the manager. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> The manager to be destroyed.</dl>
+<dd><i>manager</i> The manager to be destroyed.</dd></dl>
 <h3>int dmlite_manager_get (<code>dmlite_manager</code> *handle, const char *key, char *buffer, size_tbufsize)</h3>
 <p>Returns the associated value with the given key. </p>
 <p> <code>Parameters:</code></p>
@@ -184,51 +184,51 @@ description: "dmlite.h –"
 <dd><i>manager</i> The plugin manager.<br />
  <i>key</i> The configuration parameter.<br />
  <i>buffer</i> Where to leave the string.<br />
- <i>bufsize</i> The buffer size.</dl>
+ <i>bufsize</i> The buffer size.</dd></dl>
 <h3>int dmlite_manager_load_configuration (<code>dmlite_manager</code> *manager, const char *file)</h3>
 <p>Loads a configuration file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>manager</i> The plugin manager.<br />
- <i>file</i> The configuration file</dl>
+ <i>file</i> The configuration file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_manager_load_plugin (<code>dmlite_manager</code> *manager, const char *lib, const char *id)</h3>
 <p>Loads a library. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>manager</i> The plugin manager.<br />
  <i>lib</i> The .so file. Usually, (path)/plugin_name.so.<br />
- <i>id</i> The plugin ID. Usually, plugin_name.</dl>
+ <i>id</i> The plugin ID. Usually, plugin_name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_manager</code>* dmlite_manager_new (void)</h3>
 <p>Initializes a dmlite_manager. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on failure.</dl>
+<dd>NULL on failure.</dd></dl>
 <h3>int dmlite_manager_set (<code>dmlite_manager</code> *manager, const char *key, const char *value)</h3>
 <p>Sets a configuration parameter. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>manager</i> The plugin manager.<br />
  <i>key</i> The parameter to set.<br />
- <i>value</i> The value.</dl>
+ <i>value</i> The value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_set (<code>dmlite_context</code> *context, const char *k, const <code>dmlite_any</code> *v)</h3>
 <p>Sets a configuration parameter tied to a context. This can be used to pass advanced parameters to a plugin. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
  <i>k</i> The configuration key.<br />
- <i>v</i> Value.</dl>
+ <i>v</i> Value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_set_array (<code>dmlite_context</code> *context, const char *k, unsignedn, <code>dmlite_any</code> *const *v)</h3>
 <p>Sets a configuration parameter tied to a context (array version). </p>
 <p> <code>Parameters:</code></p>
@@ -236,35 +236,35 @@ description: "dmlite.h –"
 <dd><i>context</i> The DM context.<br />
  <i>k</i> The configuration key.<br />
  <i>n</i> The configuration key.<br />
- <i>v</i> Array of values.</dl>
+ <i>v</i> Array of values.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_setcredentials (<code>dmlite_context</code> *context, const <code>dmlite_credentials</code> *cred)</h3>
 <p>Sets the user security credentials. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>cred</i> The security credentials.</dl>
+ <i>cred</i> The security credentials.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_unset (<code>dmlite_context</code> *context, const char *k)</h3>
 <p>Removes a configuration parameter. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>context</i> The DM context.<br />
- <i>k</i> The configuration key.</dl>
+ <i>k</i> The configuration key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_unset_all (<code>dmlite_context</code> *context)</h3>
 <p>Removes all configuration parameters previously set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.</dl>
+<dd><i>context</i> The DM context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for dmlite from the source code.</p>

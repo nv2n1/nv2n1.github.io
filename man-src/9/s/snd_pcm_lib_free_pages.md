@@ -14,7 +14,7 @@ description: "snd_pcm_lib_free_pages – release the allocated DMA buffer."
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream to release the DMA buffer</dl>
+</dd><dd>the substream to release the DMA buffer</dd></dl>
 <h2>Description</h2>
 <p>Releases the DMA buffer allocated via <code>snd_pcm_lib_malloc_pages</code>.</p>
 <h2>Return</h2>

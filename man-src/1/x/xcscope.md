@@ -69,56 +69,56 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <p> All keybindings use the &quot;C-c s&quot; prefix, but are usable only while editing a source file, or in the cscope results buffer: </p>
 <p> <code>C-c s s Find symbol.</code></p>
 <dl>
-<dt><code>C-c s d Find global definition.</code></p>
+<dt><code>C-c s d Find global definition.</code></dt>
 <dd>
-<dt><code>C-c s g Find global definition (alternate binding).</code></p>
+</dd><dt><code>C-c s g Find global definition (alternate binding).</code></dt>
 <dd>
-<dt><code>C-c s G Find global definition without prompting.</code></p>
+</dd><dt><code>C-c s G Find global definition without prompting.</code></dt>
 <dd>
-<dt><code>C-c s c Find functions calling a function.</code></p>
+</dd><dt><code>C-c s c Find functions calling a function.</code></dt>
 <dd>
-<dt><code>C-c s C Find called functions (list functions called</code></p>
-<dd> <code> from a function).</code></p>
-<dt><code>C-c s t Find text string.</code></p>
+</dd><dt><code>C-c s C Find called functions (list functions called</code></dt>
+<dd> <code> from a function).</code></dd>
+<dt><code>C-c s t Find text string.</code></dt>
 <dd>
-<dt><code>C-c s e Find egrep pattern.</code></p>
+</dd><dt><code>C-c s e Find egrep pattern.</code></dt>
 <dd>
-<dt><code>C-c s f Find a file.</code></p>
+</dd><dt><code>C-c s f Find a file.</code></dt>
 <dd>
-<dt><code>C-c s i Find files #including a file.</code></p>
+</dd><dt><code>C-c s i Find files #including a file.</code></dt>
 <dd>
 <p> These pertain to navigation through the search results: </p>
 <p> <code>C-c s b Display *cscope* buffer.</code></p>
-<dt><code>C-c s B Auto display *cscope* buffer toggle.</code></p>
+</dd><dt><code>C-c s B Auto display *cscope* buffer toggle.</code></dt>
 <dd>
-<dt><code>C-c s n Next symbol.</code></p>
+</dd><dt><code>C-c s n Next symbol.</code></dt>
 <dd>
-<dt><code>C-c s N Next file.</code></p>
+</dd><dt><code>C-c s N Next file.</code></dt>
 <dd>
-<dt><code>C-c s p Previous symbol.</code></p>
+</dd><dt><code>C-c s p Previous symbol.</code></dt>
 <dd>
-<dt><code>C-c s P Previous file.</code></p>
+</dd><dt><code>C-c s P Previous file.</code></dt>
 <dd>
-<dt><code>C-c s u Pop mark.</code></p>
+</dd><dt><code>C-c s u Pop mark.</code></dt>
 <dd>
 <p> These pertain to setting and unsetting the variable, `cscope-initial-directory&#8217;, (location searched for the cscope database directory): </p>
 <p> <code>C-c s a Set initial directory.</code></p>
-<dt><code>C-c s A Unset initial directory.</code></p>
+</dd><dt><code>C-c s A Unset initial directory.</code></dt>
 <dd>
 <p> These pertain to cscope database maintenance: <code>C-c s L Create list of files to index.</code></p>
-<dt><code>C-c s I Create list and index.</code></p>
+</dd><dt><code>C-c s I Create list and index.</code></dt>
 <dd>
-<dt><code>C-c s E Edit list of files to index.</code></p>
+</dd><dt><code>C-c s E Edit list of files to index.</code></dt>
 <dd>
-<dt><code>C-c s W Locate this buffer&#8217;s cscope directory</code></p>
-<dd> <code> (</code> &quot;W&quot; &#8211;&gt; &quot;where&quot; <code>).</code></p>
-<dt><code>C-c s S Locate this buffer&#8217;s cscope directory.</code></p>
-<dd> <code> (alternate binding: </code> &quot;S&quot; &#8211;&gt; &quot;show&quot; <code>).</code></p>
-<dt><code>C-c s T Locate this buffer&#8217;s cscope directory.</code></p>
-<dd> <code> (alternate binding: </code> &quot;T&quot; &#8211;&gt; &quot;tell&quot; <code>).</code></p>
-<dt><code>C-c s D Dired this buffer&#8217;s directory.</code></p>
+</dd><dt><code>C-c s W Locate this buffer&#8217;s cscope directory</code></dt>
+<dd> <code> (</code> &quot;W&quot; &#8211;&gt; &quot;where&quot; <code>).</code></dd>
+<dt><code>C-c s S Locate this buffer&#8217;s cscope directory.</code></dt>
+<dd> <code> (alternate binding: </code> &quot;S&quot; &#8211;&gt; &quot;show&quot; <code>).</code></dd>
+<dt><code>C-c s T Locate this buffer&#8217;s cscope directory.</code></dt>
+<dd> <code> (alternate binding: </code> &quot;T&quot; &#8211;&gt; &quot;tell&quot; <code>).</code></dd>
+<dt><code>C-c s D Dired this buffer&#8217;s directory.</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>* Advanced usage:</h3>
 <p> If the source files are spread out over multiple directories, you&#8217;ve got a few choices: </p>
 <p> [ NOTE: you will need to have the script, &quot;cscope-indexer&quot;, properly installed in order for the following to work. ] </p>
@@ -127,13 +127,13 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <p> It&#8217;s pretty easy to tell this module to use a top-level, common directory: </p>
 <dl>
 <dt>
-<dd>a. Make sure that the menu pick, &quot;Cscope/Index recursively&quot;, is checked (the default value). </p>
+</dt><dd>a. Make sure that the menu pick, &quot;Cscope/Index recursively&quot;, is checked (the default value). </dd>
 <dt>
-<dd>b. Select the menu pick, &quot;Cscope/Create list and index&quot;, and specify the top-level directory. This will run the script, &quot;cscope-indexer&quot;, in the background, so you can do other things if indexing takes a long time. A list of files to index will be created in &quot;cscope.files&quot;, and the cscope database will be created in &quot;cscope.out&quot;. </p>
+</dt><dd>b. Select the menu pick, &quot;Cscope/Create list and index&quot;, and specify the top-level directory. This will run the script, &quot;cscope-indexer&quot;, in the background, so you can do other things if indexing takes a long time. A list of files to index will be created in &quot;cscope.files&quot;, and the cscope database will be created in &quot;cscope.out&quot;. </dd>
 <dt>
-<dd>Once this has been done, you can then use the menu picks (described in &quot;Basic usage&quot;, above) to search for symbols. </p>
+</dt><dd>Once this has been done, you can then use the menu picks (described in &quot;Basic usage&quot;, above) to search for symbols. </dd>
 <dt>
-<dd>Note, however, that, if you add or delete source files, you&#8217;ll have to either rebuild the database using the above procedure, or edit the file, &quot;cscope.files&quot; to add/delete the names of the source files. To edit this file, you can use the menu pick, &quot;Cscope/Edit list of files to index&quot;. </p>
+</dt><dd>Note, however, that, if you add or delete source files, you&#8217;ll have to either rebuild the database using the above procedure, or edit the file, &quot;cscope.files&quot; to add/delete the names of the source files. To edit this file, you can use the menu pick, &quot;Cscope/Edit list of files to index&quot;. </dd>
 <p> 2. If most of the files exist below a common directory, but a few are outside, you can use the menu pick, &quot;Cscope/Create list of files to index&quot;, and specify the top-level directory. Make sure that &quot;Cscope/Index recursively&quot;, is checked before you do so, though. You can then edit the list of files to index using the menu pick, &quot;Cscope/Edit list of files to index&quot;. Just edit the list to include any additional source files not already listed. </p>
 <p> Once you&#8217;ve created, edited, and saved the list, you can then use the menu picks described under &quot;Basic usage&quot;, above, to search for symbols. The first time you search, you will have to wait a while for cscope to fully index the source files, though. If you have a lot of source files, you may want to manually run cscope to build the database: </p>
 <pre>
@@ -214,20 +214,20 @@ description: "xcscope.el – xemacs cscope lisp support package"
 </pre>
 <p> If the current buffer&#8217;s directory matches the regexp, &quot;^/users/jdoe/sources/proj1&quot;, then the following search will be done: </p>
 <dl>
-<dt>1. First, the normal hierarchical database search will be used to</p>
-<dd> locate a cscope database. </p>
-<dt>2. Next, searches will be done using the cscope database</p>
-<dd> directories, &quot;/users/jdoe/sources/proj2&quot;, &quot;/users/jdoe/sources/proj3/mycscope.out&quot;, and &quot;/users/jdoe/sources/proj4&quot;. Note that, instead of the file, &quot;cscope.out&quot;, the file, &quot;mycscope.out&quot;, will be used in the directory &quot;/users/jdoe/sources/proj3&quot;. </p>
-<dt>3. If a match was found, searching will stop.</p>
+<dt>1. First, the normal hierarchical database search will be used to</dt>
+<dd> locate a cscope database. </dd>
+<dt>2. Next, searches will be done using the cscope database</dt>
+<dd> directories, &quot;/users/jdoe/sources/proj2&quot;, &quot;/users/jdoe/sources/proj3/mycscope.out&quot;, and &quot;/users/jdoe/sources/proj4&quot;. Note that, instead of the file, &quot;cscope.out&quot;, the file, &quot;mycscope.out&quot;, will be used in the directory &quot;/users/jdoe/sources/proj3&quot;. </dd>
+<dt>3. If a match was found, searching will stop.</dt>
 <dd>
-<dt>4. If a match was not found, searching will be done using</p>
-<dd> &quot;/some/master/directory&quot;, and the command-line options &quot;-d&quot; and &quot;-I/usr/local/include&quot; will be passed to cscope. </p>
-<dt>If the current buffer&#8217;s directory matches the regexp,</p>
-<dd> &quot;^/users/jdoe/sources/gnome&quot;, then the following search will be done: </p>
-<dt>The search will be done only using the directory,</p>
-<dd> &quot;/master/gnome/database&quot;. The &quot;-d&quot; option will be passed to cscope. </p>
-<dt>If the current buffer&#8217;s directory does not match any of the above</p>
-<dd> regexps, then only the normal hierarchical database search will be done. </p>
+</dd><dt>4. If a match was not found, searching will be done using</dt>
+<dd> &quot;/some/master/directory&quot;, and the command-line options &quot;-d&quot; and &quot;-I/usr/local/include&quot; will be passed to cscope. </dd>
+<dt>If the current buffer&#8217;s directory matches the regexp,</dt>
+<dd> &quot;^/users/jdoe/sources/gnome&quot;, then the following search will be done: </dd>
+<dt>The search will be done only using the directory,</dt>
+<dd> &quot;/master/gnome/database&quot;. The &quot;-d&quot; option will be passed to cscope. </dd>
+<dt>If the current buffer&#8217;s directory does not match any of the above</dt>
+<dd> regexps, then only the normal hierarchical database search will be done. </dd>
 </dl>
 <h3>* Other notes:</h3>
 <p> 1. The script, &quot;cscope-indexer&quot;, uses a sed command to determine what is and is not a C/C++/lex/yacc source file. It&#8217;s idea of a source file may not correspond to yours. </p>
@@ -236,11 +236,11 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <p> 1. Cannot handle whitespace in directory or file names. </p>
 <p> 2. By default, colored faces are used to display results. If you happen to use a black background, part of the results may be invisible (because the foreground color may be black, too). There are at least two solutions for this: </p>
 <dl>
-<dt><code>2a. Turn off colored faces, by setting `cscope-use-face&#8217; to `nil&#8217;, eg:</code></p>
+<dt><code>2a. Turn off colored faces, by setting `cscope-use-face&#8217; to `nil&#8217;, eg:</code></dt>
 <dd>
-<dt><code>(setq cscope-use-face nil)</code></p>
+</dd><dt><code>(setq cscope-use-face nil)</code></dt>
 <dd>
-<dt><code> 2b. Explicitly set colors for the faces used by cscope. The faces are</code></p>
+</dd><dt><code> 2b. Explicitly set colors for the faces used by cscope. The faces are</code></dt>
 <dd>
 <pre>
         cscope-file-face
@@ -249,8 +249,8 @@ description: "xcscope.el – xemacs cscope lisp support package"
         cscope-line-face
         cscope-mouse-face
 </pre>
-<dt>The face most likely to cause problems (e.g., black-on-black</p>
-<dd> color) is `cscope-line-face&#8217;. </p>
+</dd><dt>The face most likely to cause problems (e.g., black-on-black</dt>
+<dd> color) is `cscope-line-face&#8217;. </dd>
 <p> 3. The support for cscope databases different from that specified by `cscope-database-file&#8217; is quirky. If the file does not exist, it will not be auto-created (unlike files names by `cscope-database-file&#8217;). You can manually force the file to be created by using <a href="/docs/linux/man/1-touch/">touch</a>(1) to create a zero-length file; the database will be created the next time a search is done. </p>
 </dl>
 <h2>Index</h2>

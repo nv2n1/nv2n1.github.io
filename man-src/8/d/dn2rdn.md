@@ -15,16 +15,16 @@ description: "dn2rdn – Directory Server script to check for outdated index ver
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-d</code> <i>Debug Level</i></p>
-<dd>Sets the debugging level.</p>
-<dt><code>-f</code></p>
-<dd>Force the upgrade.</p>
-<dt><code>-v</code></p>
-<dd>Display the version of the Directory Server.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-d</code> <i>Debug Level</i></dt>
+<dd>Sets the debugging level.</dd>
+<dt><code>-f</code></dt>
+<dd>Force the upgrade.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version of the Directory Server.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <p>dn2rdn </p>
 <p> dn2rdn -Z instance3 -f</p>

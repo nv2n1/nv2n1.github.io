@@ -14,39 +14,39 @@ description: "ipetoipe – Convert between Ipe file formats"
 <h2>DESCRIPTION</h2>
 <p> <code>ipetoipe</code> converts between the various Ipe file formats. </p>
 <dl>
-<dt><code>-pdf</code></p>
-<dd> convert to PDF format</p>
-<dt><code>-eps</code></p>
-<dd> convert to EPS (encapsulated Postscript) format</p>
-<dt><code>-ps</code></p>
-<dd> convert to Postscript format</p>
-<dt><code>-xml</code></p>
-<dd> convert to XML format</p>
-<dt><code>-export</code></p>
+<dt><code>-pdf</code></dt>
+<dd> convert to PDF format</dd>
+<dt><code>-eps</code></dt>
+<dd> convert to EPS (encapsulated Postscript) format</dd>
+<dt><code>-ps</code></dt>
+<dd> convert to Postscript format</dd>
+<dt><code>-xml</code></dt>
+<dd> convert to XML format</dd>
+<dt><code>-export</code></dt>
 <dd> do not include Ipe markup in the output file.<br />
- <i>Warning:</i> this means that Ipe will not be able to read the resulting output file.</p>
-<dt><code>-from</code> and <code>-to</code></p>
-<dd> restrict exporting to PDF to this page range. This only works in conjunction with the <code>-export</code> option.</p>
-<dt><code>-noshading</code></p>
-<dd> do not shade the background of PDF output (if a shading has been defined in the document&#8217;s style sheet).</p>
-<dt><code>-lastview</code></p>
-<dd> create a Postscript/PDF page only for the last view of each Ipe page. This is often convenient for making handouts for slides used in a presentation.</p>
-<dt><code>-runlatex</code></p>
-<dd> run Latex even for XML output. This has the effect of including the dimensions of each text object in the XML file.</p>
-<dt><code>-nocolor</code></p>
-<dd> do not use any color commands in Postscript output. This is useful if you are preparing a manuscript for publication where the publisher checks that the figures are grayscale only. Note that this option doesn&#8217;t actually verify that the figure contains no color (a figure using color processed with this option will cause a Postscript error when displayed).</p>
-<dt><code>-styleupdate</code></p>
-<dd> update all style sheets in the document from external style sheet files in the current directory. The external file&#8217;s name must match the name of the style sheet and have the extension &#8216;isy&#8217;. </p>
+ <i>Warning:</i> this means that Ipe will not be able to read the resulting output file.</dd>
+<dt><code>-from</code> and <code>-to</code></dt>
+<dd> restrict exporting to PDF to this page range. This only works in conjunction with the <code>-export</code> option.</dd>
+<dt><code>-noshading</code></dt>
+<dd> do not shade the background of PDF output (if a shading has been defined in the document&#8217;s style sheet).</dd>
+<dt><code>-lastview</code></dt>
+<dd> create a Postscript/PDF page only for the last view of each Ipe page. This is often convenient for making handouts for slides used in a presentation.</dd>
+<dt><code>-runlatex</code></dt>
+<dd> run Latex even for XML output. This has the effect of including the dimensions of each text object in the XML file.</dd>
+<dt><code>-nocolor</code></dt>
+<dd> do not use any color commands in Postscript output. This is useful if you are preparing a manuscript for publication where the publisher checks that the figures are grayscale only. Note that this option doesn&#8217;t actually verify that the figure contains no color (a figure using color processed with this option will cause a Postscript error when displayed).</dd>
+<dt><code>-styleupdate</code></dt>
+<dd> update all style sheets in the document from external style sheet files in the current directory. The external file&#8217;s name must match the name of the style sheet and have the extension &#8216;isy&#8217;. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>ipetoipe</code> respects the following environment variables: </p>
 <dl>
-<dt><code>IPELATEXDIR</code></p>
-<dd> the directory where <code>ipetoipe</code> runs Pdflatex. </p>
-<dt><code>IPEPDFLATEX</code></p>
-<dd> the name of the Pdflatex executable. If Pdflatex is on your path, the value <i>pdflatex</i> is sufficient. </p>
-<dt><code>TEXINPUTS</code></p>
-<dd> when running Pdflatex, Ipe prepends both the current directory (where Ipe was started) as the directory containing the current document to the <code>TEXINPUTS</code> environment variable. </p>
+<dt><code>IPELATEXDIR</code></dt>
+<dd> the directory where <code>ipetoipe</code> runs Pdflatex. </dd>
+<dt><code>IPEPDFLATEX</code></dt>
+<dd> the name of the Pdflatex executable. If Pdflatex is on your path, the value <i>pdflatex</i> is sufficient. </dd>
+<dt><code>TEXINPUTS</code></dt>
+<dd> when running Pdflatex, Ipe prepends both the current directory (where Ipe was started) as the directory containing the current document to the <code>TEXINPUTS</code> environment variable. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Otfried Cheong </p>

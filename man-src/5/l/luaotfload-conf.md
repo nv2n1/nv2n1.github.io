@@ -10,12 +10,12 @@ description: "luaotfload.conf – Luaotfload configuration file"
 <p>luaotfload.conf &#8211; Luaotfload configuration file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt>&bull;</p>
-<dd><code>./luaotfload{.conf,rc}</code></p>
-<dt>&bull;</p>
-<dd><code>XDG_CONFIG_HOME/luaotfload/luaotfload{.conf,rc}</code></p>
-<dt>&bull;</p>
-<dd><code>~/.luaotfloadrc</code></dl>
+<dt>&bull;</dt>
+<dd><code>./luaotfload{.conf,rc}</code></dd>
+<dt>&bull;</dt>
+<dd><code>XDG_CONFIG_HOME/luaotfload/luaotfload{.conf,rc}</code></dd>
+<dt>&bull;</dt>
+<dd><code>~/.luaotfloadrc</code></dd></dl>
 <h2>Description</h2>
 <p>The file <code>luaotfload.conf</code> contains configuration options for <i>Luaotfload</i>, a font loading and font management component for LuaTeX.</p>
 <h2>Example</h2>
@@ -36,32 +36,32 @@ description: "luaotfload.conf – Luaotfload configuration file"
 <h2>Syntax</h2>
 <p>The configuration file syntax follows the common INI format. For a more detailed description please refer to the section “CONFIGURATION FILE” of <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1). A brief list of rules is given below:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Blank lines and lines starting with a semicolon (<code>;</code>) are ignored.</p>
-<dt>&bull;</p>
-<dd>A configuration file is partitioned into sections that are declared by specifying the section title in brackets on a separate line: </p>
+<dt>&bull;</dt>
+<dd>Blank lines and lines starting with a semicolon (<code>;</code>) are ignored.</dd>
+<dt>&bull;</dt>
+<dd>A configuration file is partitioned into sections that are declared by specifying the section title in brackets on a separate line: </dd>
 <pre>[some-section]
 ... section content ...</pre>
-<dt>&bull;</p>
-<dd>Sections consist of one or more variable assignments of the form <code>variable-name = value</code> E. g.: </p>
+<dt>&bull;</dt>
+<dd>Sections consist of one or more variable assignments of the form <code>variable-name = value</code> E. g.: </dd>
 <pre>[foo]
  bar = baz
  quux = xyzzy
  ...</pre>
-<dt>&bull;</p>
-<dd>Section and variable names may contain only uppercase and lowercase letters as well as dashes (<code>&#8211;</code>).</dl>
+<dt>&bull;</dt>
+<dd>Section and variable names may contain only uppercase and lowercase letters as well as dashes (<code>&#8211;</code>).</dd></dl>
 <h2>Variables</h2>
 <p>Variables in belong into a configuration section and their values must be of a certain type. Some of them have further constraints. For example, the “color callback” must be a string of one of the values <code>post_linebreak_filter</code>, <code>pre_linebreak_filter</code>, or <code>pre_output_filter</code>, defined in the section <i>run</i> of the configuration file. </p>
 <p> Currently, the configuration is organized into four sections:</p>
 <dl>
-<dt><code>db</code></p>
-<dd>Options relating to the font index.</p>
-<dt><code>misc</code></p>
-<dd>Options without a clearly defined category.</p>
-<dt><code>paths</code></p>
-<dd>Path and file name settings.</p>
-<dt><code>run</code></p>
-<dd>Options controlling runtime behavior of Luaotfload. </p>
+<dt><code>db</code></dt>
+<dd>Options relating to the font index.</dd>
+<dt><code>misc</code></dt>
+<dd>Options without a clearly defined category.</dd>
+<dt><code>paths</code></dt>
+<dd>Path and file name settings.</dd>
+<dt><code>run</code></dt>
+<dd>Options controlling runtime behavior of Luaotfload. </dd>
 <p> The list of valid variables, the sections they are part of and their type is given below. Types represent Lua types that the values must be convertible to; they are abbreviated as follows: <code>s</code> for the <i>string</i> type, <code>n</code> for <i>number</i>, <code>b</code> for <i>boolean</i>. A value of <code>nil</code> means the variable is unset.</dl>
 <h3>Section <code>db</code></h3>
 <p><center></p>
@@ -176,12 +176,12 @@ description: "luaotfload.conf – Luaotfload configuration file"
 <p> The setting <code>designsize-dimen</code> applies when looking up fonts from families with design sizes. In Opentype, these are specified as “decipoints” where one decipoint equals ten DTP style “big points”. When indexing fonts these values are converted to <code>sp</code>. In order to treat the values as though they were specified in TeX points or Didot points, set <code>designsize-dimen</code> to <code>pt</code> or <code>dd</code>. </p>
 <p> The list of <code>formats</code> must be a comma separated sequence of strings containing one or more of these elements:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>otf</code> (OpenType format),</p>
-<dt>&bull;</p>
-<dd><code>ttf</code> and <code>ttc</code> (TrueType format),</p>
-<dt>&bull;</p>
-<dd><code>afm</code> (Adobe Font Metrics), </p>
+<dt>&bull;</dt>
+<dd><code>otf</code> (OpenType format),</dd>
+<dt>&bull;</dt>
+<dd><code>ttf</code> and <code>ttc</code> (TrueType format),</dd>
+<dt>&bull;</dt>
+<dd><code>afm</code> (Adobe Font Metrics), </dd>
 <p> It corresponds loosely to the <code>&#8211;formats</code> option to <code>luaotfload-tool</code>. Invalid or duplicate members are ignored; if the list does not contain any useful identifiers, the default list <code>&quot;otf,ttf,ttc&quot;</code> will be used. </p>
 <p> The variable <code>max-fonts</code> determines after processing how many font files the font scanner will terminate the search. This is useful for debugging issues with the font index and has the same effect as the option <code>&#8211;max-fonts</code> to <code>luaotfload-tools</code>. </p>
 <p> The <code>scan-local</code> flag, if set, will incorporate the current working directory as a font search location. NB: This will potentially slow down document processing because a font index with local fonts will not be saved to disk, so these fonts will have to be re-indexed whenever the document is built. </p>
@@ -416,31 +416,31 @@ description: "luaotfload.conf – Luaotfload configuration file"
 <p>Luaotfload only processes the first configuration file it encounters at one of the search locations. The file name may be either <code>luaotfload.conf</code> or <code>luaotfloadrc</code>, except for the dotfile in the user’s home directory which is expected at <code>~/.luaotfloadrc</code>. </p>
 <p> Configuration files are located following a series of steps. The search terminates as soon as a suitable file is encountered. The sequence of locations that Luaotfload looks at is</p>
 <dl>
-<dt>i.</p>
-<dd>The current working directory of the LuaTeX process.</p>
-<dt>ii.</p>
-<dd>The subdirectory <code>luaotfload/</code> inside the XDG configuration tree, e. g. <code>/home/oenothea/config/luaotfload/</code>.</p>
-<dt>iii.</p>
-<dd>The dotfile.</p>
-<dt>iv.</p>
-<dd>The <i>TEXMF</i> (using kpathsea).</dl>
+<dt>i.</dt>
+<dd>The current working directory of the LuaTeX process.</dd>
+<dt>ii.</dt>
+<dd>The subdirectory <code>luaotfload/</code> inside the XDG configuration tree, e. g. <code>/home/oenothea/config/luaotfload/</code>.</dd>
+<dt>iii.</dt>
+<dd>The dotfile.</dd>
+<dt>iv.</dt>
+<dd>The <i>TEXMF</i> (using kpathsea).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-luaotfload-tool/">luaotfload-tool</a></code>(1), <code><a href="/docs/linux/man/1-luatex/">luatex</a></code>(1), <code><a href="/docs/linux/man/1-lua/">lua</a></code>(1)</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>texdoc luaotfload</code> to display the PDF manual for the <i>Luaotfload</i> package</p>
-<dt>&bull;</p>
-<dd>Luaotfload development <i><a rel="nofollow" href="https://github.com/latex3/luaotfload">https://github.com/latex3/luaotfload</a></i></p>
-<dt>&bull;</p>
-<dd>LuaLaTeX mailing list <i><a rel="nofollow" href="http://tug.org/pipermail/lualatex-dev/">http://tug.org/pipermail/lualatex-dev/</a></i></p>
-<dt>&bull;</p>
-<dd>LuaTeX <i><a rel="nofollow" href="http://luatex.org/">http://luatex.org/</a></i></p>
-<dt>&bull;</p>
-<dd>Luaotfload on CTAN <i><a rel="nofollow" href="http://ctan.org/pkg/luaotfload">http://ctan.org/pkg/luaotfload</a></i></dl>
+<dt>&bull;</dt>
+<dd><code>texdoc luaotfload</code> to display the PDF manual for the <i>Luaotfload</i> package</dd>
+<dt>&bull;</dt>
+<dd>Luaotfload development <i><a rel="nofollow" href="https://github.com/latex3/luaotfload">https://github.com/latex3/luaotfload</a></i></dd>
+<dt>&bull;</dt>
+<dd>LuaLaTeX mailing list <i><a rel="nofollow" href="http://tug.org/pipermail/lualatex-dev/">http://tug.org/pipermail/lualatex-dev/</a></i></dd>
+<dt>&bull;</dt>
+<dd>LuaTeX <i><a rel="nofollow" href="http://luatex.org/">http://luatex.org/</a></i></dd>
+<dt>&bull;</dt>
+<dd>Luaotfload on CTAN <i><a rel="nofollow" href="http://ctan.org/pkg/luaotfload">http://ctan.org/pkg/luaotfload</a></i></dd></dl>
 <h2>References</h2>
 <dl>
-<dt>&bull;</p>
-<dd>The XDG base specification <i><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></i>.</dl>
+<dt>&bull;</dt>
+<dd>The XDG base specification <i><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></i>.</dd></dl>
 <h2>Authors</h2>
 <p><i>Luaotfload</i> was developed by the LuaLaTeX dev team (<i><a rel="nofollow" href="https://github.com/lualatex/">https://github.com/lualatex/</a></i>). It is currently maintained by the LaTeX Project Team at <i><a rel="nofollow" href="https://github.com/latex3/luaotfload">https://github.com/latex3/luaotfload</a></i> </p>
 <p> This manual page was written by Philipp Gesang &lt;<i>phg [at] phi-gamma.net</i>&gt;.</p>

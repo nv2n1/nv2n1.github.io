@@ -32,20 +32,20 @@ void endservent(void);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*s_proto;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;protocol to use&nbsp;*/ } </p>
 <p> The members of the <i>servent</i> structure are:</p>
 <dl>
-<dt><i>s_name</i></p>
-<dd> The official name of the service.</p>
-<dt><i>s_aliases</i></p>
-<dd> A NULL-terminated list of alternative names for the service.</p>
-<dt><i>s_port</i></p>
-<dd> The port number for the service given in network byte order.</p>
-<dt><i>s_proto</i></p>
-<dd> The name of the protocol to use with this service.</dl>
+<dt><i>s_name</i></dt>
+<dd> The official name of the service.</dd>
+<dt><i>s_aliases</i></dt>
+<dd> A NULL-terminated list of alternative names for the service.</dd>
+<dt><i>s_port</i></dt>
+<dd> The port number for the service given in network byte order.</dd>
+<dt><i>s_proto</i></dt>
+<dd> The name of the protocol to use with this service.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The <code>getservent</code>(), <code>getservbyname</code>(), and <code>getservbyport</code>() functions return a pointer to a statically allocated <i>servent</i> structure, or NULL if an error occurs or the end of the file is reached.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/services</i></p>
-<dd> services database file</dl>
+<dt><i>/etc/services</i></dt>
+<dd> services database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

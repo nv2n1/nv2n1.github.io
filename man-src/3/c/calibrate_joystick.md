@@ -16,7 +16,6 @@ description: "calibrate_joystick – Calibrates the specified joystick. Allegro 
 <p> Most joysticks need to be calibrated before they can provide full analogue input. This function performs the next operation in the calibration series for the specified stick, assuming that the joystick has been positioned in the manner described by a previous call to calibrate_joystick_name(), returning zero on success. For example, a simple routine to fully calibrate all the joysticks might look like: </p>
 <pre><code>
 int i;
-
 for (i = 0; i &lt; ; num_joysticks; i++) {
     while (joy[i].flags &amp; JOYFLAG_CALIBRATE) {
         char *msg = calibrate_joystick_name(i);

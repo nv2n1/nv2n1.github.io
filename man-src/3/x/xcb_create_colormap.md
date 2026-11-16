@@ -10,35 +10,30 @@ description: "xcb_create_colormap –"
 <p>xcb_create_colormap &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_create_colormap(xcb_connection_t *conn, uint8_t alloc, xcb_colormap_t mid, xcb_window_t window, xcb_visualid_t visual);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>alloc</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>alloc</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_COLORMAP_ALLOC_NONE</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_COLORMAP_ALLOC_ALL</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_COLORMAP_ALLOC_NONE</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_COLORMAP_ALLOC_ALL</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>mid</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>window</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>visual</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>mid</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>window</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>visual</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

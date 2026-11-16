@@ -52,19 +52,19 @@ and reset network.
 <code>__init__(self, **kwargs)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>sid:</code>
-<dd>Test script ID [default: '']
+<dl><dl><dt><code>sid:</code>
+</dt><dd>Test script ID [default: '']
 This is used to have options targeted for a given ID without
 including these options in any other test script.
-<dt><code>usage:</code>
-<dd>Usage string [default: '']
-<dt><code>testnames:</code>
-<dd>List of test names [default: []]
+</dd><dt><code>usage:</code>
+</dt><dd>Usage string [default: '']
+</dd><dt><code>testnames:</code>
+</dt><dd>List of test names [default: []]
 When this list is not empty, the --runtest option is enabled and
 test scripts should use the run_tests() method to run all the
 tests. Test script should have methods named as &lt;testname&gt;_test.
-<dt><code>testgroups:</code>
-<dd>Dictionary of test groups where the key is the name of the test
+</dd><dt><code>testgroups:</code>
+</dt><dd>Dictionary of test groups where the key is the name of the test
 group and its value is a dictionary having the following keys:
 tests:
 A list of tests belonging to this test group
@@ -79,12 +79,12 @@ wrap:
 Reformat the description so it fits in lines no
 more than the width given. The description is not
 formatted for a value of zero [default: 72]
-</dl></dl><dl><dt><dd>Example:
+</dd></dl></dl><dl><dt></dt><dd>Example:
  x = TestUtil(testnames=['basic', 'lock'])
  # The following methods should exist:
  x.basic_test()
  x.lock_test()
-</dl>
+</dd></dl>
 <code>abspath(self, filename, dir=None)</code>
 Return the absolute path for the given file name.
 <code>cleanup(self)</code>
@@ -99,36 +99,36 @@ Create a directory under the given directory with the given mode.
 <code>create_file(self, offset=0, size=None, dir=None, mode=None, **kwds)</code>
 Create a file starting to write at given offset with total size
 of written data given by the size option.
-<dl><dt><dd><dl><dt><code>offset:</code>
-<dd>File offset where data will be written to [default: 0]
-<dt><code>size:</code>
-<dd>Total number of bytes to write [default: --filesize option]
-<dt><code>dir:</code>
-<dd>Create file under this directory
-<dt><code>mode:</code>
-<dd>File permissions [default: use default OS permissions]
-<dt><code>pattern:</code>
-<dd>Data pattern to write to the file [default: data_pattern default]
-<dt><code>ftype:</code>
-<dd>File type to create [default: FTYPE_FILE]
-<dt><code>hole_list:</code>
-<dd>List of offsets where each hole is located [default: None]
-<dt><code>hole_size:</code>
-<dd>Size of each hole [default: --wsize option]
-</dl></dl><dl><dt><dd>Returns the file name created, the file name is also stored
+<dl><dl><dt><code>offset:</code>
+</dt><dd>File offset where data will be written to [default: 0]
+</dd><dt><code>size:</code>
+</dt><dd>Total number of bytes to write [default: --filesize option]
+</dd><dt><code>dir:</code>
+</dt><dd>Create file under this directory
+</dd><dt><code>mode:</code>
+</dt><dd>File permissions [default: use default OS permissions]
+</dd><dt><code>pattern:</code>
+</dt><dd>Data pattern to write to the file [default: data_pattern default]
+</dd><dt><code>ftype:</code>
+</dt><dd>File type to create [default: FTYPE_FILE]
+</dd><dt><code>hole_list:</code>
+</dt><dd>List of offsets where each hole is located [default: None]
+</dd><dt><code>hole_size:</code>
+</dt><dd>Size of each hole [default: --wsize option]
+</dd></dl></dl><dl><dt></dt><dd>Returns the file name created, the file name is also stored
 in the object attribute filename -- attribute absfile is also
 available as the absolute path of the file just created.
 File created is removed at cleanup.
-</dl>
+</dd></dl>
 <code>data_pattern(self, offset, size, pattern=None)</code>
 Return data pattern.
-<dl><dt><dd><dl><dt><code>offset:</code>
-<dd>Starting offset of pattern
-<dt><code>size:</code>
-<dd>Size of data to return
-<dt><code>pattern:</code>
-<dd>Data pattern to return, default is of the form:
-hex_offset(0x%08X) abcdefghijklmnopqrst</dl></dl>
+<dl><dl><dt><code>offset:</code>
+</dt><dd>Starting offset of pattern
+</dd><dt><code>size:</code>
+</dt><dd>Size of data to return
+</dd><dt><code>pattern:</code>
+</dt><dd>Data pattern to return, default is of the form:
+hex_offset(0x%08X) abcdefghijklmnopqrst</dd></dl></dl>
 <code>delay_io(self, delay=None)</code>
 Delay I/O by value given or the value given in --iodelay option.
 <code>exit(self)</code>
@@ -158,10 +158,10 @@ Read a block of data (size given by --rsize) from all files opened
 by open_files() for reading.
 <code>run_tests(self, **kwargs)</code>
 Run all test specified by the --runtest option.
-<dl><dt><dd><dl><dt><code>testnames:</code>
-<dd>List of testnames to run [default: all tests given by --testnames]
-</dl></dl><dl><dt><dd>All other arguments given are passed to the test methods.
-</dl>
+<dl><dl><dt><code>testnames:</code>
+</dt><dd>List of testnames to run [default: all tests given by --testnames]
+</dd></dl></dl><dl><dt></dt><dd>All other arguments given are passed to the test methods.
+</dd></dl>
 <code>scan_options(self)</code>
 Process command line options.
 Process all the options in the file given by '--file', then the
@@ -189,25 +189,25 @@ Create nfiles number of files [default: --nfiles option]
 <code>test(self, expr, msg, subtest=None, failmsg=None, terminate=False)</code>
 Test expr and display message as PASS/FAIL, terminate execution
 if terminate option is True.
-<dl><dt><dd><dl><dt><code>expr:</code>
-<dd>If expr is true, display as a PASS message,
+<dl><dl><dt><code>expr:</code>
+</dt><dd>If expr is true, display as a PASS message,
 otherwise as a FAIL message
-<dt><code>msg:</code>
-<dd>Message to display
-<dt><code>subtest:</code>
-<dd>If given, append this string to the displayed message and
+</dd><dt><code>msg:</code>
+</dt><dd>Message to display
+</dd><dt><code>subtest:</code>
+</dt><dd>If given, append this string to the displayed message and
 mark this test as a member of the sub-group given by msg
-<dt><code>failmsg:</code>
-<dd>If given, append this string to the displayed message when
+</dd><dt><code>failmsg:</code>
+</dt><dd>If given, append this string to the displayed message when
 expr is false [default: None]
-<dt><code>terminate:</code>
-<dd>Terminate execution if true and expr is false [default: False]
-</dl></dl><dl><dt><dd>If tverbose=normal or level 1:
+</dd><dt><code>terminate:</code>
+</dt><dd>Terminate execution if true and expr is false [default: False]
+</dd></dl></dl><dl><dt></dt><dd>If tverbose=normal or level 1:
  Sub-group message is displayed as a PASS/FAIL message including
  the number of tests that passed and failed within the sub-group
 If tverbose=verbose or level 2:
  All tests messages are displayed
-</dl>
+</dd></dl>
 <code>test_group(self, msg)</code>
 Display heading message and start a test group.
 If tverbose=group or level 0:
@@ -228,15 +228,15 @@ Return the number of instances the testid has occurred.
 Display warning message.
 <code>write_data(self, fd, offset=0, size=None, pattern=None)</code>
 Write data to the file given by the file descriptor
-<dl><dt><dd><dl><dt><code>fd:</code>
-<dd>File descriptor
-<dt><code>offset:</code>
-<dd>File offset where data will be written to [default: 0]
-<dt><code>size:</code>
-<dd>Total number of bytes to write [default: --filesize option]
-<dt><code>pattern:</code>
-<dd>Data pattern to write to the file [default: data_pattern default]
-</dl></dl>
+<dl><dl><dt><code>fd:</code>
+</dt><dd>File descriptor
+</dd><dt><code>offset:</code>
+</dt><dd>File offset where data will be written to [default: 0]
+</dd><dt><code>size:</code>
+</dt><dd>Total number of bytes to write [default: --filesize option]
+</dd><dt><code>pattern:</code>
+</dt><dd>Data pattern to write to the file [default: data_pattern default]
+</dd></dl></dl>
 <code>write_files(self)</code>
 Write a block of data (size given by --wsize) to all files opened
 by open_files() for writing.

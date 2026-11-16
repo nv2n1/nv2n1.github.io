@@ -31,36 +31,36 @@ description: "QwtLogTransform –"
 <p> <code>QwtLogTransform</code> modifies the values using log() and exp(). </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>In the calculations of <code>QwtScaleMap</code> the base of the log function has no effect on the mapping. So <code>QwtLogTransform</code> can be used for log2(), log10() or any other logarithmic scale.</dl>
+<dd>In the calculations of <code>QwtScaleMap</code> the base of the log function has no effect on the mapping. So <code>QwtLogTransform</code> can be used for log2(), log10() or any other logarithmic scale.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtLogTransform::bounded (doublevalue) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be bounded</dl>
+<dd><i>value</i> Value to be bounded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>qBound( LogMin, value, LogMax )</dl>
+<dd>qBound( LogMin, value, LogMax )</dd></dl>
 <p> Reimplemented from <code>QwtTransform</code>.</p>
 <h3><code>QwtTransform</code> * QwtLogTransform::copy () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clone of the transformation</dl>
+<dd>Clone of the transformation</dd></dl>
 <p> Implements <code>QwtTransform</code>.</p>
 <h3>double QwtLogTransform::invTransform (doublevalue) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be transformed</dl>
+<dd><i>value</i> Value to be transformed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>exp( value )</dl>
+<dd>exp( value )</dd></dl>
 <p> Implements <code>QwtTransform</code>.</p>
 <h3>double QwtLogTransform::transform (doublevalue) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be transformed</dl>
+<dd><i>value</i> Value to be transformed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>log( value )</dl>
+<dd>log( value )</dd></dl>
 <p> Implements <code>QwtTransform</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

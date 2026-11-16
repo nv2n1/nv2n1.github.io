@@ -15,7 +15,7 @@ xprt_set_retrans_timeout_rtt - set a request's retransmit timeout
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>task whose timeout is to be set</dl>
+<dl><dd></dd><dd>task whose timeout is to be set</dd></dl>
 
 <h2>Description</h2>
 

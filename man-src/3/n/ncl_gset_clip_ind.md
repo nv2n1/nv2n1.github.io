@@ -13,15 +13,15 @@ description: "gset_clip_ind (Set clipping indicator) – controls whether data a
 <p> void gset_clip_ind(Gclip_ind clip_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>clip_ind</p>
-<dd>(Input) &#8211; A flag to turn clipping on or off.</p>
+<dt>clip_ind</dt>
+<dd>(Input) &#8211; A flag to turn clipping on or off.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GIND_NO_CLIP</p>
-<dd>Clipping is off. Data outside of the window will be plotted.</p>
-<dt>GIND_CLIP</p>
-<dd>Clipping is on. Data outside of the window will not be plotted. This is the default.</dl>
+</dd><dl COMPACT>
+<dt>GIND_NO_CLIP</dt>
+<dd>Clipping is off. Data outside of the window will be plotted.</dd>
+<dt>GIND_CLIP</dt>
+<dd>Clipping is on. Data outside of the window will not be plotted. This is the default.</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

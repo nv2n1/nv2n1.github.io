@@ -19,17 +19,17 @@ description: "dsytri.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DSYTRI computes the inverse of a real symmetric indefinite matrix
  A using the factorization A = U*D*U**T or A = L*D*L**T computed by
  DSYTRF.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the details of the factorization are stored
@@ -79,14 +79,14 @@ the matrix is singular and its
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 115 of file dsytri.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

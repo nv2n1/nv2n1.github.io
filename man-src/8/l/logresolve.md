@@ -21,9 +21,9 @@ description: "logresolve – Resolve IP-addresses to hostnames in Apache log fil
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-s <i>filename</i></p>
-<dd>Specifies a filename to record statistics.</p>
-<dt>-c</p>
+<dt>-s <i>filename</i></dt>
+<dd>Specifies a filename to record statistics.</dd>
+<dt>-c</dt>
 <dd>This causes logresolve to apply some DNS checks: after finding the hostname from the IP address, it looks up the IP addresses for the hostname and checks that one of these matches the original address.<br />
-&nbsp;<wbr> </p>
+&nbsp;<wbr> </dd>
 </dl>

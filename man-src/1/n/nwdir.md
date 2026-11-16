@@ -17,35 +17,35 @@ description: "nwdir – Lists files in directory"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> <code>-h</code> is used to print out a short help text.</dl>
+</dt><dd> <code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> List directories like other files, rather than listing their contents.</dl>
+</dt><dd> List directories like other files, rather than listing their contents.</dd></dl>
 <p> <code>-l</code></p>
 <dl>
 <dt>
-<dd> Show filename in all available namespaces.</dl>
+</dt><dd> Show filename in all available namespaces.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Verbose listing, display everything possible.</dl>
+</dt><dd> Verbose listing, display everything possible.</dd></dl>
 <p> <code>-e</code></p>
 <dl>
 <dt>
-<dd> Display <i>OS/2</i> Extended Attributes.</dl>
+</dt><dd> Display <i>OS/2</i> Extended Attributes.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> List connections using each file.</dl>
+</dt><dd> List connections using each file.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> Show all informations (rights, attributes, file inodes) also as hexadecimal numbers.</dl>
+</dt><dd> Show all informations (rights, attributes, file inodes) also as hexadecimal numbers.</dd></dl>
 <p> <code>directory</code></p>
 <dl>
 <dt>
-<dd> You can specify the directory to list. Current working directory is used by default. You have to specify path in Linux format, not in NetWare format. </p>
+</dt><dd> You can specify the directory to list. Current working directory is used by default. You have to specify path in Linux format, not in NetWare format. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> nwdir -t -v /NetWare/server/sys </p>

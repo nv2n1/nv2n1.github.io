@@ -15,7 +15,7 @@ pci_store_saved_state - Allocate and return an opaque struct containing the devi
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device that we're dealing with</dl>
+<dl><dd></dd><dd>PCI device that we're dealing with</dd></dl>
 
 <h2>Description</h2>
 

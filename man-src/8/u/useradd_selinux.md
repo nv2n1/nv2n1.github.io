@@ -180,8 +180,8 @@ description: "useradd_selinux – Security Enhanced Linux Policy for the useradd
 <p> <code>useradd_exec_t</code> </p>
 <p> &#8211; Set files with the useradd_exec_t type, if you want to transition an executable to the useradd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/useradd, /usr/sbin/userdel, /usr/sbin/usermod, /usr/sbin/newusers </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/useradd, /usr/sbin/userdel, /usr/sbin/usermod, /usr/sbin/newusers </dd>
 </dl>
 <p> <code>useradd_var_run_t</code> </p>
 <p> &#8211; Set files with the useradd_var_run_t type, if you want to store the useradd files under the /run or /var/run directory. </p>

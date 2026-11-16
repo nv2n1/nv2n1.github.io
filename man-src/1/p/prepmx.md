@@ -21,32 +21,32 @@ description: "prepmx – preprocessor for PMX, easy music typesetting program"
 <h2>OPTIONS</h2>
 <p> Options can also be specified in a `Options:&#8217; line in the preamble, which takes precedence over the command line.</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> disable unbeamVocal</p>
-<dt><code>-c</code></p>
-<dd> disable doChords</p>
-<dt><code>-D</code></p>
-<dd> enable debugMode</p>
-<dt><code>-f</code></p>
-<dd> enable solfaNoteNames</p>
-<dt><code>-i</code></p>
-<dd> enable ignoreErrors</p>
-<dt><code>-m</code></p>
-<dd> disable doLyrics</p>
-<dt><code>-n</code></p>
-<dd> enable instrumentNames</p>
-<dt><code>-t</code></p>
-<dd> disable doUptext</p>
-<dt><code>-u</code></p>
-<dd> disable uptextOnRests</p>
-<dt><code>-v</code></p>
-<dd> enable beVerbose</p>
-<dt><code>-w</code></p>
-<dd> enable pedanticWarnings</p>
-<dt><code>&#8211;</code><i>n</i></p>
-<dd> select Special Case <i>n</i></p>
-<dt><code>-H</code></p>
-<dd> print enabled status of all options</dl>
+<dt><code>-b</code></dt>
+<dd> disable unbeamVocal</dd>
+<dt><code>-c</code></dt>
+<dd> disable doChords</dd>
+<dt><code>-D</code></dt>
+<dd> enable debugMode</dd>
+<dt><code>-f</code></dt>
+<dd> enable solfaNoteNames</dd>
+<dt><code>-i</code></dt>
+<dd> enable ignoreErrors</dd>
+<dt><code>-m</code></dt>
+<dd> disable doLyrics</dd>
+<dt><code>-n</code></dt>
+<dd> enable instrumentNames</dd>
+<dt><code>-t</code></dt>
+<dd> disable doUptext</dd>
+<dt><code>-u</code></dt>
+<dd> disable uptextOnRests</dd>
+<dt><code>-v</code></dt>
+<dd> enable beVerbose</dd>
+<dt><code>-w</code></dt>
+<dd> enable pedanticWarnings</dd>
+<dt><code>&#8211;</code><i>n</i></dt>
+<dd> select Special Case <i>n</i></dd>
+<dt><code>-H</code></dt>
+<dd> print enabled status of all options</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If no error was found, <code>prepmx</code> exits with return code 0. In case of an error, the line number of the processed line is returned. This may not always be the line containing the actual error. A return status of 10000 means that the input file was empty or could not be opened.</p>
 <h2>SEE ALSO</h2>

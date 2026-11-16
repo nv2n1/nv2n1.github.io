@@ -13,10 +13,10 @@ description: "pskc_get_key_data_timedrift – API function"
 <p> <code>uint32_t pskc_get_key_data_timedrift(pskc_key_t * </code><i>key</i><code>, int * </code><i>present</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int * present</p>
-<dd>output variable indicating whether data was provided or not.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Data TimeDrift value. This element contains the device clock drift value for time-based OTP algorithms. The integer value (positive or negative drift) that indicates the number of time intervals that a validation server has established the device clock drifted after the last successful authentication. So, for example, if the last successful authentication established a device time value of 8 intervals from a specific start date but the validation server determines the time value at 9 intervals, the server SHOULD record the drift as -1. </p>
 <p> If <i>present</i> is non-NULL, it will be 0 if the field is not present or 1 if it was present.</p>

@@ -15,12 +15,12 @@ description: "CURLOPT_FTP_SSL_CCC – switch off SSL again with FTP after auth"
 <h2>Description</h2>
 <p>If enabled, this option makes libcurl use CCC (Clear Command Channel). It shuts down the SSL/TLS layer after authenticating. The rest of the control channel communication will be unencrypted. This allows NAT routers to follow the FTP transaction. Pass a long using one of the values below</p>
 <dl COMPACT>
-<dt>CURLFTPSSL_CCC_NONE</p>
-<dd>Don&#8217;t attempt to use CCC.</p>
-<dt>CURLFTPSSL_CCC_PASSIVE</p>
-<dd>Do not initiate the shutdown, but wait for the server to do it. Do not send a reply.</p>
-<dt>CURLFTPSSL_CCC_ACTIVE</p>
-<dd>Initiate the shutdown and wait for a reply.</dl>
+<dt>CURLFTPSSL_CCC_NONE</dt>
+<dd>Don&#8217;t attempt to use CCC.</dd>
+<dt>CURLFTPSSL_CCC_PASSIVE</dt>
+<dd>Do not initiate the shutdown, but wait for the server to do it. Do not send a reply.</dd>
+<dt>CURLFTPSSL_CCC_ACTIVE</dt>
+<dd>Initiate the shutdown and wait for a reply.</dd></dl>
 <h2>Default</h2>
 <p>CURLFTPSSL_CCC_NONE</p>
 <h2>Protocols</h2>

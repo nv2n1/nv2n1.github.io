@@ -25,78 +25,78 @@ description: "perl587delta – what is new for perl v5.8.7"
 <p> <tt>&quot;Config.pm&quot;</tt> is now about 3K rather than 32K, with the infrequently used code and <tt>%Config</tt> values loaded on demand. This is transparent to the programmer, but means that most code will save parsing and loading 29K of script (for example, code that uses <tt>&quot;File::Find&quot;</tt>).</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt>&bull;</p>
-<dd> B upgraded to version 1.09</p>
-<dt>&bull;</p>
-<dd> base upgraded to version 2.07</p>
-<dt>&bull;</p>
-<dd> bignum upgraded to version 0.17</p>
-<dt>&bull;</p>
-<dd> bytes upgraded to version 1.02</p>
-<dt>&bull;</p>
-<dd> Carp upgraded to version 1.04</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">CGI</font> upgraded to version 3.10</p>
-<dt>&bull;</p>
-<dd> Class::ISA upgraded to version 0.33</p>
-<dt>&bull;</p>
-<dd> Data::Dumper upgraded to version 2.121_02</p>
-<dt>&bull;</p>
-<dd> DB_File upgraded to version 1.811</p>
-<dt>&bull;</p>
-<dd> Devel::PPPort upgraded to version 3.06</p>
-<dt>&bull;</p>
-<dd> Digest upgraded to version 1.10</p>
-<dt>&bull;</p>
-<dd> Encode upgraded to version 2.10</p>
-<dt>&bull;</p>
-<dd> FileCache upgraded to version 1.05</p>
-<dt>&bull;</p>
-<dd> File::Path upgraded to version 1.07</p>
-<dt>&bull;</p>
-<dd> File::Temp upgraded to version 0.16</p>
-<dt>&bull;</p>
-<dd> IO::File upgraded to version 1.11</p>
-<dt>&bull;</p>
-<dd> IO::Socket upgraded to version 1.28</p>
-<dt>&bull;</p>
-<dd> Math::BigInt upgraded to version 1.77</p>
-<dt>&bull;</p>
-<dd> Math::BigRat upgraded to version 0.15</p>
-<dt>&bull;</p>
-<dd> overload upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> PathTools upgraded to version 3.05</p>
-<dt>&bull;</p>
-<dd> Pod::HTML upgraded to version 1.0503</p>
-<dt>&bull;</p>
-<dd> Pod::Perldoc upgraded to version 3.14</p>
-<dt>&bull;</p>
-<dd> Pod::LaTeX upgraded to version 0.58</p>
-<dt>&bull;</p>
-<dd> Pod::Parser upgraded to version 1.30</p>
-<dt>&bull;</p>
-<dd> Symbol upgraded to version 1.06</p>
-<dt>&bull;</p>
-<dd> Term::ANSIColor upgraded to version 1.09</p>
-<dt>&bull;</p>
-<dd> Test::Harness upgraded to version 2.48</p>
-<dt>&bull;</p>
-<dd> Test::Simple upgraded to version 0.54</p>
-<dt>&bull;</p>
-<dd> Text::Wrap upgraded to version 2001.09293, to fix a bug when <code>wrap()</code> was called with a non-space separator.</p>
-<dt>&bull;</p>
-<dd> threads::shared upgraded to version 0.93</p>
-<dt>&bull;</p>
-<dd> Time::HiRes upgraded to version 1.66</p>
-<dt>&bull;</p>
-<dd> Time::Local upgraded to version 1.11</p>
-<dt>&bull;</p>
-<dd> Unicode::Normalize upgraded to version 0.32</p>
-<dt>&bull;</p>
-<dd> utf8 upgraded to version 1.05</p>
-<dt>&bull;</p>
-<dd> Win32 upgraded to version 0.24, which provides Win32::GetFileVersion</dl>
+<dt>&bull;</dt>
+<dd> B upgraded to version 1.09</dd>
+<dt>&bull;</dt>
+<dd> base upgraded to version 2.07</dd>
+<dt>&bull;</dt>
+<dd> bignum upgraded to version 0.17</dd>
+<dt>&bull;</dt>
+<dd> bytes upgraded to version 1.02</dd>
+<dt>&bull;</dt>
+<dd> Carp upgraded to version 1.04</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">CGI</font> upgraded to version 3.10</dd>
+<dt>&bull;</dt>
+<dd> Class::ISA upgraded to version 0.33</dd>
+<dt>&bull;</dt>
+<dd> Data::Dumper upgraded to version 2.121_02</dd>
+<dt>&bull;</dt>
+<dd> DB_File upgraded to version 1.811</dd>
+<dt>&bull;</dt>
+<dd> Devel::PPPort upgraded to version 3.06</dd>
+<dt>&bull;</dt>
+<dd> Digest upgraded to version 1.10</dd>
+<dt>&bull;</dt>
+<dd> Encode upgraded to version 2.10</dd>
+<dt>&bull;</dt>
+<dd> FileCache upgraded to version 1.05</dd>
+<dt>&bull;</dt>
+<dd> File::Path upgraded to version 1.07</dd>
+<dt>&bull;</dt>
+<dd> File::Temp upgraded to version 0.16</dd>
+<dt>&bull;</dt>
+<dd> IO::File upgraded to version 1.11</dd>
+<dt>&bull;</dt>
+<dd> IO::Socket upgraded to version 1.28</dd>
+<dt>&bull;</dt>
+<dd> Math::BigInt upgraded to version 1.77</dd>
+<dt>&bull;</dt>
+<dd> Math::BigRat upgraded to version 0.15</dd>
+<dt>&bull;</dt>
+<dd> overload upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> PathTools upgraded to version 3.05</dd>
+<dt>&bull;</dt>
+<dd> Pod::HTML upgraded to version 1.0503</dd>
+<dt>&bull;</dt>
+<dd> Pod::Perldoc upgraded to version 3.14</dd>
+<dt>&bull;</dt>
+<dd> Pod::LaTeX upgraded to version 0.58</dd>
+<dt>&bull;</dt>
+<dd> Pod::Parser upgraded to version 1.30</dd>
+<dt>&bull;</dt>
+<dd> Symbol upgraded to version 1.06</dd>
+<dt>&bull;</dt>
+<dd> Term::ANSIColor upgraded to version 1.09</dd>
+<dt>&bull;</dt>
+<dd> Test::Harness upgraded to version 2.48</dd>
+<dt>&bull;</dt>
+<dd> Test::Simple upgraded to version 0.54</dd>
+<dt>&bull;</dt>
+<dd> Text::Wrap upgraded to version 2001.09293, to fix a bug when <code>wrap()</code> was called with a non-space separator.</dd>
+<dt>&bull;</dt>
+<dd> threads::shared upgraded to version 0.93</dd>
+<dt>&bull;</dt>
+<dd> Time::HiRes upgraded to version 1.66</dd>
+<dt>&bull;</dt>
+<dd> Time::Local upgraded to version 1.11</dd>
+<dt>&bull;</dt>
+<dd> Unicode::Normalize upgraded to version 0.32</dd>
+<dt>&bull;</dt>
+<dd> utf8 upgraded to version 1.05</dd>
+<dt>&bull;</dt>
+<dd> Win32 upgraded to version 0.24, which provides Win32::GetFileVersion</dd></dl>
 <h2>Utility Changes</h2>
 <h3>find2perl enhancements</h3>
 <p> <tt>&quot;find2perl&quot;</tt> has new options <tt>&quot;-iname&quot;</tt>, <tt>&quot;-path&quot;</tt> and <tt>&quot;-ipath&quot;</tt>.</p>
@@ -104,15 +104,16 @@ description: "perl587delta – what is new for perl v5.8.7"
 <p> The internal pointer mapping hash used during ithreads cloning now uses an arena for memory allocation. In tests this reduced ithreads cloning time by about 10%.</p>
 <h2>Installation and Configuration Improvements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The Win32 &#8220;dmake&#8221; makefile.mk has been updated to make it compatible with the latest versions of dmake.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PERL_MALLOC&quot;</tt>, <tt>&quot;DEBUG_MSTATS&quot;</tt>, <tt>&quot;PERL_HASH_SEED_EXPLICIT&quot;</tt> and <tt>&quot;NO_HASH_SEED&quot;</tt> should now work in Win32 makefiles.</dl>
+<dt>&bull;</dt>
+<dd> The Win32 &#8220;dmake&#8221; makefile.mk has been updated to make it compatible with the latest versions of dmake.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PERL_MALLOC&quot;</tt>, <tt>&quot;DEBUG_MSTATS&quot;</tt>, <tt>&quot;PERL_HASH_SEED_EXPLICIT&quot;</tt> and <tt>&quot;NO_HASH_SEED&quot;</tt> should now work in Win32 makefiles.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The <code>socket()</code> function on Win32 has been fixed so that it is able to use transport providers which specify a protocol of 0 (meaning any protocol is allowed) once more. (This was broken in 5.8.6, and typically caused the use of <font SIZE="-1">ICMP</font> sockets to fail.)</p>
-<dt>&bull;</p>
-<dd> Another obscure bug involving <tt>&quot;substr&quot;</tt> and <font SIZE="-1">UTF-8</font> caused by bad internal offset caching has been identified and fixed.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd> The <code>socket()</code> function on Win32 has been fixed so that it is able to use transport providers which specify a protocol of 0 (meaning any protocol is allowed) once more. (This was broken in 5.8.6, and typically caused the use of <font SIZE="-1">ICMP</font> sockets to fail.)</dd>
+<dt>&bull;</dt>
+<dd> Another obscure bug involving <tt>&quot;substr&quot;</tt> and <font SIZE="-1">UTF-8</font> caused by bad internal offset caching has been identified and fixed.</dd>
+<dt>&bull;</dt>
 <dd> A bug involving the loading of <font SIZE="-1">UTF-8</font> tables by the regexp engine has been fixed &#8211; code such as <tt>&quot;&quot;
+</dd></dl>

@@ -16,19 +16,19 @@ description: "unflatten – adjust directed graphs to improve layout aspect rati
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-l</code><i> len</i></p>
-<dd> The minimum length of leaf edges is staggered between 1 and <i>len</i> (a small integer).</p>
-<dt><code>-f</code></p>
-<dd> Enables the staggering of the <code>-l</code> option to fanout nodes whose indegree and outdegree are both 1. This helps with structures such as <i>a -&gt; {w x y z} -&gt; b</i>. This option only works if the <code>-l</code> flag is set.</p>
-<dt><code>-c</code><i> len</i></p>
-<dd> Form disconnected nodes into chains of up to <i>len</i> nodes.</p>
-<dt><code>-o</code><i> outfile</i></p>
-<dd> causes the output to be written to the specified file; by default, output is written to <code>stdout</code>.</dl>
+<dt><code>-l</code><i> len</i></dt>
+<dd> The minimum length of leaf edges is staggered between 1 and <i>len</i> (a small integer).</dd>
+<dt><code>-f</code></dt>
+<dd> Enables the staggering of the <code>-l</code> option to fanout nodes whose indegree and outdegree are both 1. This helps with structures such as <i>a -&gt; {w x y z} -&gt; b</i>. This option only works if the <code>-l</code> flag is set.</dd>
+<dt><code>-c</code><i> len</i></dt>
+<dd> Form disconnected nodes into chains of up to <i>len</i> nodes.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> causes the output to be written to the specified file; by default, output is written to <code>stdout</code>.</dd></dl>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
  Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>

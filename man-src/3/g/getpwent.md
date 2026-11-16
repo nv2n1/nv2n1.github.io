@@ -21,9 +21,9 @@ void endpwent(void);
 <p> <code>getpwent</code>(), <code>setpwent</code>(), <code>endpwent</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>getpwent</code>() function returns a pointer to a structure containing the broken-out fields of a record from the password database (e.g., the local password file <i>/etc/passwd</i>, NIS, and LDAP). The first time <code>getpwent</code>() is called, it returns the first entry; thereafter, it returns successive entries. </p>
 <p> The <code>setpwent</code>() function rewinds to the beginning of the password database. </p>
@@ -45,22 +45,22 @@ void endpwent(void);
 <p> The return value may point to a static area, and may be overwritten by subsequent calls to <code>getpwent</code>(), <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3), or <code><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></code>(3). (Do not pass the returned pointer to <code><a href="/docs/linux/man/3-free/">free</a></code>(3).)</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINTR</code></p>
-<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EIO</code></p>
-<dd> I/O error.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>passwd</i> structure.</p>
-<dt><code>ERANGE</code></p>
-<dd> Insufficient buffer space supplied.</dl>
+<dt><code>EINTR</code></dt>
+<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EIO</code></dt>
+<dd> I/O error.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>passwd</i> structure.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Insufficient buffer space supplied.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/passwd</i></p>
-<dd> local password database file</dl>
+<dt><i>/etc/passwd</i></dt>
+<dd> local password database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -17,8 +17,8 @@ description: "shtool platform – GNU shtool Unix platform identification"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-F</code>, <code>&#8211;format</code> <i>format</i></p>
-<dd> This option controls the output formatting of this program. It is a plain-text string with the &quot;<tt>&quot;%&quot;</tt><i>xx</i>&#8220; constructs which expand to the various platform information strings. &#8221;<tt>&quot;%{&quot;</tt><i>xx</i><tt>&quot;}&quot;</tt>&#8220; is the canonical regular version of the information. &#8221;<tt>&quot;%[&quot;</tt><i>xx</i><tt>&quot;]&quot;</tt>&#8220; is the verbose version of the information. &#8221;<tt>&quot;%&lt;&quot;</tt><i>xx</i><tt>&quot;&gt;&quot;</tt>&quot; is the concise version of the information. In total, the following constructs are available for expansion: </p>
+<dt><code>-F</code>, <code>&#8211;format</code> <i>format</i></dt>
+<dd> This option controls the output formatting of this program. It is a plain-text string with the &quot;<tt>&quot;%&quot;</tt><i>xx</i>&#8220; constructs which expand to the various platform information strings. &#8221;<tt>&quot;%{&quot;</tt><i>xx</i><tt>&quot;}&quot;</tt>&#8220; is the canonical regular version of the information. &#8221;<tt>&quot;%[&quot;</tt><i>xx</i><tt>&quot;]&quot;</tt>&#8220; is the verbose version of the information. &#8221;<tt>&quot;%&lt;&quot;</tt><i>xx</i><tt>&quot;&gt;&quot;</tt>&quot; is the concise version of the information. In total, the following constructs are available for expansion: </dd>
 <pre><code>
 % [ac] verbose hardware architecture class
     % {ac} regular hardware architecture class
@@ -29,38 +29,36 @@ description: "shtool platform – GNU shtool Unix platform identification"
     % [sp] verbose operating system product % {sp} regular operating system product % &lt;sp&gt; concise operating system product % [st] verbose operating system technology % {st} regular operating system technology % &lt;st&gt; concise operating system technology
 </code></pre>
 <p> The default <i>format</i> string is &quot;<tt>&quot;%{sp} (%{ap})&quot;</tt>&quot;, providing the regular operating system and hardware architecture product information.</p>
-<dt><code>-S</code>, <code>&#8211;sep</code> <i>string</i></p>
-<dd> This option sets the word <i>separation</i> string for the platform information strings. By default it is &quot;<tt>&quot; &quot;</tt>&quot; (whitespace). It is especially used for separating the operating system name and the operating system version.</p>
-<dt><code>-C</code>, <code>&#8211;conc</code> <i>string</i></p>
-<dd> This option sets the word <i>concatenation</i> string for the platform information strings. By default it is &quot;<tt>&quot;/&quot;</tt>&quot;. It is especially used to concatenate multiple parts in operating system name and version parts.</p>
-<dt><code>-L</code>, <code>&#8211;lower</code></p>
-<dd> This options enforces conversion of the output to all <i>lower</i> case.</p>
-<dt><code>-U</code>, <code>&#8211;upper</code></p>
-<dd> This options enforces conversion of the output to all <i>upper</i> case.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> This option enforces verbose versions of all expansion constructs in <i>format</i> string of option <code>-F</code>. It is equal to specifying all expansion constructs as &quot;<tt>&quot;%[&quot;</tt><i>xx</i><tt>&quot;]&quot;</tt>&quot;.</p>
-<dt><code>-c</code>, <code>&#8211;concise</code></p>
-<dd> This option enforces concise versions of all expansion constructs in <i>format</i> string of option <code>-F</code>. It is equal to specifying all expansion constructs as &quot;<tt>&quot;%&lt;&quot;</tt><i>xx</i><tt>&quot;&gt;&quot;</tt>&quot;.</p>
-<dt><code>-n</code>, <code>&#8211;no-newline</code></p>
-<dd> This option omits the usual trailing newline character in the output.</p>
-<dt><code>-t</code>, <code>&#8211;type</code> <i>type</i></p>
-<dd> This option is a meta option which internally sets options <code>-F</code>, <code>-S</code>, <code>-C</code>, <code>-L</code>, <code>-U</code>, <code>-v</code> or <code>-c</code> according to <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>. It can be used to easily specify various commonly known outputs. The following <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>s are available:</p>
+<dt><code>-S</code>, <code>&#8211;sep</code> <i>string</i></dt>
+<dd> This option sets the word <i>separation</i> string for the platform information strings. By default it is &quot;<tt>&quot; &quot;</tt>&quot; (whitespace). It is especially used for separating the operating system name and the operating system version.</dd>
+<dt><code>-C</code>, <code>&#8211;conc</code> <i>string</i></dt>
+<dd> This option sets the word <i>concatenation</i> string for the platform information strings. By default it is &quot;<tt>&quot;/&quot;</tt>&quot;. It is especially used to concatenate multiple parts in operating system name and version parts.</dd>
+<dt><code>-L</code>, <code>&#8211;lower</code></dt>
+<dd> This options enforces conversion of the output to all <i>lower</i> case.</dd>
+<dt><code>-U</code>, <code>&#8211;upper</code></dt>
+<dd> This options enforces conversion of the output to all <i>upper</i> case.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> This option enforces verbose versions of all expansion constructs in <i>format</i> string of option <code>-F</code>. It is equal to specifying all expansion constructs as &quot;<tt>&quot;%[&quot;</tt><i>xx</i><tt>&quot;]&quot;</tt>&quot;.</dd>
+<dt><code>-c</code>, <code>&#8211;concise</code></dt>
+<dd> This option enforces concise versions of all expansion constructs in <i>format</i> string of option <code>-F</code>. It is equal to specifying all expansion constructs as &quot;<tt>&quot;%&lt;&quot;</tt><i>xx</i><tt>&quot;&gt;&quot;</tt>&quot;.</dd>
+<dt><code>-n</code>, <code>&#8211;no-newline</code></dt>
+<dd> This option omits the usual trailing newline character in the output.</dd>
+<dt><code>-t</code>, <code>&#8211;type</code> <i>type</i></dt>
+<dd> This option is a meta option which internally sets options <code>-F</code>, <code>-S</code>, <code>-C</code>, <code>-L</code>, <code>-U</code>, <code>-v</code> or <code>-c</code> according to <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>. It can be used to easily specify various commonly known outputs. The following <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>s are available:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>binary</code></p>
-<dd> Binary Package Id (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;ap&quot;</tt>-%&lt;sp&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;ix86-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;ix86-debian3.0&quot;</tt>&quot;.</p>
-<dt><code>build</code></p>
-<dd> Build-Time Checking (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;at&quot;</tt>-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-linux2.4&quot;</tt>&quot;.</p>
-<dt><code>gnu</code></p>
-<dd> <font SIZE="-1">GNU </font><i>config.guess</i> Style Id. This is similar to <code>build</code> and is equal to &quot;<tt>&quot;-F '&quot;%&lt;at&quot;</tt>-unknown-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-unknown-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-unknown-linux2.4&quot;</tt>&quot;.</p>
-<dt><code>web</code></p>
-<dd> <font SIZE="-1">HTTP</font> Server Header Id. This is equal to &quot;<tt>&quot;-F '&quot;%&lt;sp&quot;</tt>-%&lt;ac&gt;&#8217; -S &#8216;/&#8217; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;FreeBSD/4.9-iX86&quot;</tt>&#8220; and &#8221;<tt>&quot;Debian/3.0-iX86&quot;</tt>&quot;.</p>
-<dt><code>summary</code></p>
+<dt><code>binary</code></dt>
+<dd> Binary Package Id (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;ap&quot;</tt>-%&lt;sp&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;ix86-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;ix86-debian3.0&quot;</tt>&quot;.</dd>
+<dt><code>build</code></dt>
+<dd> Build-Time Checking (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;at&quot;</tt>-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-linux2.4&quot;</tt>&quot;.</dd>
+<dt><code>gnu</code></dt>
+<dd> <font SIZE="-1">GNU </font><i>config.guess</i> Style Id. This is similar to <code>build</code> and is equal to &quot;<tt>&quot;-F '&quot;%&lt;at&quot;</tt>-unknown-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-unknown-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-unknown-linux2.4&quot;</tt>&quot;.</dd>
+<dt><code>web</code></dt>
+<dd> <font SIZE="-1">HTTP</font> Server Header Id. This is equal to &quot;<tt>&quot;-F '&quot;%&lt;sp&quot;</tt>-%&lt;ac&gt;&#8217; -S &#8216;/&#8217; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;FreeBSD/4.9-iX86&quot;</tt>&#8220; and &#8221;<tt>&quot;Debian/3.0-iX86&quot;</tt>&quot;.</dd>
+<dt><code>summary</code></dt>
 <dd> Human Readable Verbose Summary Information. This is equal to &quot;<tt>&quot;-F 'Class: %[sc] (%[ac])
 Product: %[sp] (%[ap])
-Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs like: </p>
+Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs like: </dd>
 <pre>
  Class:      4.4BSD (iX86)
  Product:    FreeBSD 4.9-RC (iX86)
@@ -72,44 +70,43 @@ Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs
  Product:    Debian GNU/Linux 3.0 (iX86)
  Technology: GNU/Linux 2.2/2.4 (i686)
 </pre>
-<dt><code>all-in-one</code></p>
-<dd> All-In-One Full-Table Information. This just outputs really all 2x2x3 identification strings as a table.</dl>
+<dt><code>all-in-one</code></dt>
+<dd> All-In-One Full-Table Information. This just outputs really all 2x2x3 identification strings as a table.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> This option enables some internal debugging messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> This option outputs the version information of <code>shtool platform</code> only.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> This option outputs the usage information of <code>shtool platform</code> only.</dl>
+</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> This option enables some internal debugging messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> This option outputs the version information of <code>shtool platform</code> only.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> This option outputs the usage information of <code>shtool platform</code> only.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following real-life use cases are known:</p>
 <dl>
-<dt><code>OpenPKG</code> build-time decisions</p>
+<dt><code>OpenPKG</code> build-time decisions</dt>
 <dd>
 <pre>
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%at-%st&quot;
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%ac-%sc&quot;
 </pre>
-<dt><code>OpenPKG</code> binary <font SIZE="-1">RPM</font> packages</p>
+</dd><dt><code>OpenPKG</code> binary <font SIZE="-1">RPM</font> packages</dt>
 <dd>
 <pre>
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%ap-%sp&quot;
 </pre>
-<dt><i></i><font SIZE="-1"><i>README</i></font><i></i> files</p>
+</dd><dt><i></i><font SIZE="-1"><i>README</i></font><i></i> files</dt>
 <dd>
 <pre>
  $ platform -v -F &quot;%sp (%ap)&quot;
  $ platform -v -F &quot;%sc (%ac)&quot;
 </pre>
-<dt>Debugging</p>
+</dd><dt>Debugging</dt>
 <dd>
 <pre>
  $ platform --type=all-in-one
 </pre>
-</dl>
+</dd></dl>
 <h2>SUPPORT</h2>
 <p> <code>shtool platform</code> currently knows the following particular Unix platforms in detail: FreeBSD, NetBSD, OpenBSD, Linux, Sun Solaris, <font SIZE="-1">SCO</font> UnixWare, <font SIZE="-1">QNX</font> Neutrino, <font SIZE="-1">SGI IRIX, HP</font> HP-UX, <font SIZE="-1">HP</font> Tru64, <font SIZE="-1">IBM AIX</font> and Apple Mac <font SIZE="-1">OS X</font> Darwin. </p>
 <p> All other Unix platforms are recognized through generic <i><a href="/docs/linux/man/1-uname/">uname</a></i>(1) information and so usually can be identified sufficiently, although the identification might be not as precise as possible.</p>

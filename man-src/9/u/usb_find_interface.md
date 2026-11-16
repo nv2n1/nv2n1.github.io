@@ -15,11 +15,11 @@ usb_find_interface - find usb_interface pointer for driver and device
 <h2>Arguments</h2>
 
 <i>drv</i>
-<dl><dd><dd>the driver whose current configuration is considered</dl>
+<dl><dd></dd><dd>the driver whose current configuration is considered</dd></dl>
  
 
  <i>minor</i>
-<dl><dd>the minor number of the desired device</dl>
+<dl><dd>the minor number of the desired device</dd></dl>
 
 <h2>Description</h2>
 

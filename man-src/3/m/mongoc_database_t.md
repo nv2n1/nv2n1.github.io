@@ -15,7 +15,7 @@ description: "mongoc_database_t – MongoDB Database Abstraction"
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dd>It is an error to call <code><a href="/docs/linux/man/3-mongoc_database_destroy/">mongoc_database_destroy</a>(3)</code> on a<br />
-&nbsp;<wbr>database that has operations pending. It is required that you release <code>mongoc_cursor_t</code> structures before calling <code>mongoc_database_destroy</code> \&amp;.</dl>
+&nbsp;<wbr>database that has operations pending. It is required that you release <code>mongoc_cursor_t</code> structures before calling <code>mongoc_database_destroy</code> \&amp;.</dd></dl>
 <h2>Examples</h2>
 <pre>#include &lt;mongoc.h&gt;
 int

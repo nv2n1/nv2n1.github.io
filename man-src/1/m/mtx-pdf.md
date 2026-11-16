@@ -15,14 +15,14 @@ description: "mtx-pdf – ConTeXt PDF Helpers"
 <p> <code>ConTeXt PDF Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;info</code></p>
-<dd> show some info about the given file</p>
-<dt><code>&#8211;metadata</code></p>
-<dd> show metadata xml blob</p>
-<dt><code>&#8211;pretty</code></p>
-<dd> replace newlines in metadata</p>
-<dt><code>&#8211;fonts</code></p>
-<dd> show used fonts (&#8211;detail)</dl>
+<dt><code>&#8211;info</code></dt>
+<dd> show some info about the given file</dd>
+<dt><code>&#8211;metadata</code></dt>
+<dd> show metadata xml blob</dd>
+<dt><code>&#8211;pretty</code></dt>
+<dd> replace newlines in metadata</dd>
+<dt><code>&#8211;fonts</code></dt>
+<dd> show used fonts (&#8211;detail)</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

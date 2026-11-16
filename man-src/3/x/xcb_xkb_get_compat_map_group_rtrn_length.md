@@ -10,12 +10,7 @@ description: "xcb_xkb_get_compat_map –"
 <p>xcb_xkb_get_compat_map &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_compat_map_cookie_t xcb_xkb_get_compat_map(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint8_t groups, uint8_t getAllSI, uint16_t firstSI, uint16_t nSI);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_compat_map_reply_t {
@@ -32,48 +27,48 @@ xcb_xkb_get_compat_map_cookie_t xcb_xkb_get_compat_map(xcb_connection_t *conn, x
 } <code>xcb_xkb_get_compat_map_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xkb_get_compat_map_reply_t *<code>xcb_xkb_get_compat_map_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_compat_map_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xkb_get_compat_map_reply_t *<code>xcb_xkb_get_compat_map_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_compat_map_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_xkb_sym_interpret_t *<code>xcb_xkb_get_compat_map_si_rtrn</code>(const xcb_xkb_get_compat_map_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_compat_map_si_rtrn_length</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_sym_interpret_iterator_t <code>xcb_xkb_get_compat_map_si_rtrn_iterator</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_mod_def_t *<code>xcb_xkb_get_compat_map_group_rtrn</code>(const xcb_xkb_get_compat_map_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_compat_map_group_rtrn_length</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</p>
+<dd>xcb_xkb_sym_interpret_t *<code>xcb_xkb_get_compat_map_si_rtrn</code>(const xcb_xkb_get_compat_map_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_compat_map_si_rtrn_length</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_sym_interpret_iterator_t <code>xcb_xkb_get_compat_map_si_rtrn_iterator</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_mod_def_t *<code>xcb_xkb_get_compat_map_group_rtrn</code>(const xcb_xkb_get_compat_map_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_compat_map_group_rtrn_length</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);</dd>
 <dd>xcb_xkb_mod_def_iterator_t <code>xcb_xkb_get_compat_map_group_rtrn_iterator</code>(const xcb_xkb_get_compat_map_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groups</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>getAllSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groups</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>getAllSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_COMPAT_MAP</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupsRtrn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstSIRtrn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nSIRtrn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nTotalSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_COMPAT_MAP</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupsRtrn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstSIRtrn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nSIRtrn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nTotalSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_compat_map_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_compat_map_reply</i>. </p>

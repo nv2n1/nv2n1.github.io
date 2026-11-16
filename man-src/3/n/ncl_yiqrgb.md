@@ -22,17 +22,17 @@ CALL YIQRGB (Y, I, Q, R, G, B)
 <h2>Description</h2>
 
 <dl><dt>Y
-<dd>(REAL, input, range [0.,1.]) specifies the color component of a television signal that is shown on black-and-white televisions; Y minimizes the effect of two colors appearing different to the human eye but mapping to similar monochrome intensities.
-<dt>I
-<dd>(REAL, input, range [-.6,.6])
-<dt>Q
-<dd>(REAL, input, range [-.52,.52])
-<dt>R
-<dd>(REAL, output, range [0.,1.]) represents the red intensity component of the output color in RGB color space.
-<dt>G
-<dd>(REAL, output, range [0.,1.]) represents the green intensity component of the output color in RGB color space.
-<dt>B
-<dd>(REAL, output, range [0.,1.]) represents the blue intensity component of the output color in RGB color space.</dl>
+</dt><dd>(REAL, input, range [0.,1.]) specifies the color component of a television signal that is shown on black-and-white televisions; Y minimizes the effect of two colors appearing different to the human eye but mapping to similar monochrome intensities.
+</dd><dt>I
+</dt><dd>(REAL, input, range [-.6,.6])
+</dd><dt>Q
+</dt><dd>(REAL, input, range [-.52,.52])
+</dd><dt>R
+</dt><dd>(REAL, output, range [0.,1.]) represents the red intensity component of the output color in RGB color space.
+</dd><dt>G
+</dt><dd>(REAL, output, range [0.,1.]) represents the green intensity component of the output color in RGB color space.
+</dd><dt>B
+</dt><dd>(REAL, output, range [0.,1.]) represents the blue intensity component of the output color in RGB color space.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

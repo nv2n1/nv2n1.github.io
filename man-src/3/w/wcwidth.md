@@ -11,7 +11,7 @@ description: "wcwidth – determine columns needed for a wide character"
 <h2>Synopsis</h2>
 <pre><code>#define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;wchar.h&gt;
-
 int wcwidth(wchar_t c);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcwidth</code>() function returns the number of columns needed to represent the wide character <i>c</i>. If <i>c</i> is a printable wide character, the value is at least 0. If <i>c</i> is null wide character (L&#8217;
+</p>

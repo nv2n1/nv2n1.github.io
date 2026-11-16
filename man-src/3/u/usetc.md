@@ -10,7 +10,6 @@ description: "usetc – Low level helper function for writing Unicode text data.
 <p>usetc &#8211; Low level helper function for writing Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int usetc(char *s, int c);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for writing Unicode text data. Writes the character `c&#8217; to the address pointed to by `s&#8217;.</p>

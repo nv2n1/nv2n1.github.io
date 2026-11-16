@@ -15,9 +15,9 @@ description: "softhsm2-dump-file – SoftHSM object file dump"
 <p> <code>softhsm2-dump-file</code> is a tool that can dump SoftHSM v2 object file for debugging purposes. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>path</i></p>
-<dd> The SoftHSM v2 object file that is going to be dumped.</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Show the help information. </p>
+<dt><i>path</i></dt>
+<dd> The SoftHSM v2 object file that is going to be dumped.</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Show the help information. </dd>
 </dl>
 <h2>Index</h2>

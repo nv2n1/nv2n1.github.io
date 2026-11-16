@@ -16,12 +16,12 @@ description: "zvbi-chains – VBI proxy wrapper"
 <p> LD_PRELOAD is used to intercept C library calls and call functions in the libzvbi-chain shared library instead. Parameters given on the command line (e.g. device path) are passed to the library by means of environment variables.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-dev</code> path</p>
-<dd> Path of a VBI device from which to read data.</p>
-<dt><code>-debug</code> level</p>
-<dd> Enables debug output: 0 = off (default); 1 = warnings, 2 = all messages.</p>
-<dt><code>-help</code></p>
-<dd> Print a short description of all command line options. </p>
+<dt><code>-dev</code> path</dt>
+<dd> Path of a VBI device from which to read data.</dd>
+<dt><code>-debug</code> level</dt>
+<dd> Enables debug output: 0 = off (default); 1 = warnings, 2 = all messages.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a short description of all command line options. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-zvbid/">zvbid</a>(1), <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8)<br />

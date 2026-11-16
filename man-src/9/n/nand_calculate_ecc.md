@@ -14,15 +14,15 @@ description: "nand_calculate_ecc – [NAND Interface] Calculate 3-byte ECC for 2
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD block structure</dl>
+</dd><dd>MTD block structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>input buffer with raw data</dl>
+<dd>input buffer with raw data</dd></dl>
 <p> <i>code</i></p>
 <dl>
-<dd>output buffer with ECC</dl>
+<dd>output buffer with ECC</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

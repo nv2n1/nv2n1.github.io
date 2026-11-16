@@ -11,7 +11,6 @@ std::towupper - std::towupper
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwctype&gt;
-
 std::wint_t towupper( std::wint_t ch );</code></pre> 
 Converts the given wide character to uppercase, if possible. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -33,12 +32,9 @@ ISO_30112 specifies which pairs of Unicode characters are included in this mappi
 
 The latin letter_'ſ'_(U+017F) is the alternative lowercase form of 'S' (U+0053) 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     wchar_t c = L'\u017f'; // Latin small letter Long S ('ſ')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase;

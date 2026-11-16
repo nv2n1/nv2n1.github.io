@@ -11,13 +11,9 @@ std::mem_fn - std::mem_fn
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class M, class T &gt;                 (since C++11)
-
 /*unspecified*/ mem_fn(M T::* pm);           (until C++17)
-
 template&lt; class M, class T &gt;                 (since C++17)
-
 /*unspecified*/ mem_fn(M T::* pm) noexcept;</code></pre> 
 Function template std::mem_fn generates wrapper objects for pointers to members, which can store, copy, and invoke a pointer to member. Both references and pointers (including smart pointers) to an object can be used when invoking a std::mem_fn. 
 
@@ -51,7 +47,6 @@ Each argument in args is perfectly forwarded, as if by std::forward&lt;Args&gt;(
 
 Use mem_fn to store and execute a member function and a member object: 
  // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 struct Foo {
     void display_greeting()

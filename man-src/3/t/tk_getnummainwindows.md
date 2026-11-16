@@ -16,7 +16,7 @@ int
 <code>Tk_GetNumMainWindows</code>()</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter associated with the application. </p>
+<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter associated with the application. </dd>
 </dl>
 <h2>Description</h2>
 <p>A main window is a special kind of toplevel window used as the outermost window in an application. </p>

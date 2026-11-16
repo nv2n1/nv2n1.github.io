@@ -12,10 +12,10 @@ description: "mapiconcepts – MAPI Concepts"
 <h3>MAPI objects</h3>
 <p> Almost any MAPI data you access, read or edit is associated with an object. No matter whether you intend to browse mailbox hierarchy, open folders, create tables or access items (messages, appointments, contacts, tasks, notes), you will have to initialize and use MAPI objects: <i>object understanding and manipulation is fundamental</i>. </p>
 <dl>
-<dt>*</p>
-<dd> When developing MAPI clients with Microsoft framework, instantiated objects inherit from parent classes. As a matter of fact, developers know which methods they can apply to objects and we suppose it makes their life easier.</p>
-<dt>*</p>
-<dd> In OpenChange, objects are opaque. They are generic data structures which content is set and accessed through MAPI public functions. Therefore, Linux MAPI developers must know what they are doing.</dl>
+<dt>*</dt>
+<dd> When developing MAPI clients with Microsoft framework, instantiated objects inherit from parent classes. As a matter of fact, developers know which methods they can apply to objects and we suppose it makes their life easier.</dd>
+<dt>*</dt>
+<dd> In OpenChange, objects are opaque. They are generic data structures which content is set and accessed through MAPI public functions. Therefore, Linux MAPI developers must know what they are doing.</dd></dl>
 <p> An example of MAPI object manipulation is shown below: </p>
 <pre><code>
 mapi_object obj_store;

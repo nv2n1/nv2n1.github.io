@@ -23,12 +23,12 @@ key_serial_t keyctl_join_session_keyring(const char *name);
 <p> On success <code>keyctl_join_session_keyring</code>() returns the serial number of the key it found or created. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to create a key.</p>
-<dt><code>EDQUOT</code></p>
-<dd> The key quota for this user would be exceeded by creating this key or linking it to the keyring.</p>
-<dt><code>EACCES</code></p>
-<dd> The named keyring exists, but is not <code>searchable</code> by the calling process.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to create a key.</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The key quota for this user would be exceeded by creating this key or linking it to the keyring.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The named keyring exists, but is not <code>searchable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

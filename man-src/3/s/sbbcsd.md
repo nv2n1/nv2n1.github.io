@@ -19,7 +19,7 @@ description: "sbbcsd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SBBCSD computes the CS decomposition of an orthogonal matrix in
  bidiagonal-block form,
@@ -43,11 +43,11 @@ description: "sbbcsd.f –"
  The input matrices are pre- or post-multiplied by the appropriate
  singular vector matrices.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU1</i> </p>
+</dt><dd> <i>JOBU1</i> </dd>
 <pre>
           JOBU1 is CHARACTER
           = 'Y':      U1 is updated;
@@ -227,29 +227,29 @@ V2T is REAL array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - (M - Q) matr
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   TOLMUL  REAL, default = MAX(10,MIN(100,EPS**(-1/8)))
           TOLMUL controls the convergence criterion of the QR loop.
           Angles THETA(i), PHI(i) are rounded to 0 or PI/2 when they
           are within TOLMUL*EPS of either bound.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+</dt><dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> Definition at line 330 of file sbbcsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

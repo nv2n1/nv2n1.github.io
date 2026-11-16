@@ -16,8 +16,8 @@ description: "skbprio – SKB Priority Queue"
 <p>Skbprio maintains 64 lists (priorities go from 0 to 63). When a packet is enqueued, it gets inserted at the <code>tail</code> of its priority list. When a packet needs to be sent out to the network, it is taken from the head of the highest priority list. When the queue is full, the packet at the tail of the lowest priority list is dropped to serve the ingress packet &#8211; if it is of higher priority, otherwise the ingress packet is dropped. This algorithm allocates as much bandwidth as possible to high priority packets, while only servicing low priority packets when there is enough bandwidth.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>limit</p>
-<dd>Maximum queue size specified in packets. It defaults to 64. The range for this parameter is [0, UINT32_MAX]. </p>
+<dt>limit</dt>
+<dd>Maximum queue size specified in packets. It defaults to 64. The range for this parameter is [0, UINT32_MAX]. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc-prio/">tc-prio</a></code>(8), <code><a href="/docs/linux/man/8-tc-skbedit/">tc-skbedit</a></code>(8) </p>

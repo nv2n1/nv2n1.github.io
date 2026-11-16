@@ -24,10 +24,8 @@ If either function is declared despite being unspecified, it is unspecified what
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Foo
-
 {
     Foo(int in)
         : a(in)
@@ -41,7 +39,6 @@ struct Foo
     int a;
 };
 int main()
-
 {
     auto ptr = std::make_shared&lt;Foo&gt;(10);
     ptr-&gt;print();

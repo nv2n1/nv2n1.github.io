@@ -14,16 +14,16 @@ description: "convcal – convert dates to different formats"
 <h2>DESCRIPTION</h2>
 <p> <code>convcal</code> is part of the <i>grace</i> software package, an application for two-dimensional data visualization. <code>convcal</code> converts dates from and to various formats. The following date formats are supported (hour, minutes and seconds are always optional): </p>
 <dl>
-<dt><i>iso</i></p>
-<dd> 1999-12-31T23:59:59.999</p>
-<dt><i>european</i></p>
-<dd> 31/12/1999 23:59:59.999 or 31/12/99 23:59:59.999</p>
-<dt><i>us</i></p>
-<dd> 12/31/1999 23:59:59.999 or 12/31/99 23:59:59.999</p>
-<dt><i>days</i></p>
-<dd> 123456.789</p>
-<dt><i>seconds</i></p>
-<dd> 123456.789 </p>
+<dt><i>iso</i></dt>
+<dd> 1999-12-31T23:59:59.999</dd>
+<dt><i>european</i></dt>
+<dd> 31/12/1999 23:59:59.999 or 31/12/99 23:59:59.999</dd>
+<dt><i>us</i></dt>
+<dd> 12/31/1999 23:59:59.999 or 12/31/99 23:59:59.999</dd>
+<dt><i>days</i></dt>
+<dd> 123456.789</dd>
+<dt><i>seconds</i></dt>
+<dd> 123456.789 </dd>
 </dl>
 <h2></h2>
 <p> The formats are tried in the following order : users&#8217;s choice, iso, european and us (there is no ambiguity between calendar formats and numerical formats and therefore no order is specified for them). </p>
@@ -42,16 +42,16 @@ description: "convcal – convert dates to different formats"
 <h2>OPTIONS</h2>
 <p> A summary of the options supported by <code>convcal</code> is included below. </p>
 <dl>
-<dt><code>-h</code></p>
-<dd> prints the help message on stderr and exits successfully</p>
-<dt><code>-i</code> <i>format</i></p>
-<dd> set user&#8217;s choice for input format, supported formats are iso, european, us, days, seconds and nohint. At the beginning the input format is nohint, which means the program try to guess the format by itself, if the user&#8217;s choice does not allow to parse the date, other formats are tried</p>
-<dt><code>-o</code> <i>format</i></p>
-<dd> force output format, supported formats are iso, european, us, days, seconds and nohint. At the beginning, the output format is nohint, which means the program uses days format for dates read in any calendar format and uses iso8601 for dates read in numerical format</p>
-<dt><code>-r</code> <i>date</i></p>
-<dd> set reference date (the date is read using the current input format) at the beginning the reference is set according to the REFDATE constant in the code, which is -4713-01-01T12:00:00 in the distributed file.</p>
-<dt><code>-w</code> <i>year</i></p>
-<dd> set the wrap year to year </p>
+<dt><code>-h</code></dt>
+<dd> prints the help message on stderr and exits successfully</dd>
+<dt><code>-i</code> <i>format</i></dt>
+<dd> set user&#8217;s choice for input format, supported formats are iso, european, us, days, seconds and nohint. At the beginning the input format is nohint, which means the program try to guess the format by itself, if the user&#8217;s choice does not allow to parse the date, other formats are tried</dd>
+<dt><code>-o</code> <i>format</i></dt>
+<dd> force output format, supported formats are iso, european, us, days, seconds and nohint. At the beginning, the output format is nohint, which means the program uses days format for dates read in any calendar format and uses iso8601 for dates read in numerical format</dd>
+<dt><code>-r</code> <i>date</i></dt>
+<dd> set reference date (the date is read using the current input format) at the beginning the reference is set according to the REFDATE constant in the code, which is -4713-01-01T12:00:00 in the distributed file.</dd>
+<dt><code>-w</code> <i>year</i></dt>
+<dd> set the wrap year to year </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-grace/">grace</a>(1)</code> </p>

@@ -166,28 +166,28 @@ description: "NetworkManager_selinux – Security Enhanced Linux Policy for the 
 <p> <code>NetworkManager_etc_rw_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_etc_rw_t type, if you want to treat the files as NetworkManager etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/NetworkManager/system-connections(/.*)?, /etc/NetworkManager/NetworkManager.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/NetworkManager/system-connections(/.*)?, /etc/NetworkManager/NetworkManager.conf </dd>
 </dl>
 <p> <code>NetworkManager_etc_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_etc_t type, if you want to store NetworkManager files in the /etc directories. </p>
 <p> <code>NetworkManager_exec_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_exec_t type, if you want to transition an executable to the NetworkManager_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/nm-dispatcher.*, /usr/bin/teamd, /usr/sbin/wicd, /usr/bin/NetworkManager, /usr/bin/wpa_supplicant, /usr/sbin/NetworkManager, /usr/sbin/wpa_supplicant, /usr/sbin/nm-system-settings, /usr/sbin/NetworkManagerDispatcher </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/nm-dispatcher.*, /usr/bin/teamd, /usr/sbin/wicd, /usr/bin/NetworkManager, /usr/bin/wpa_supplicant, /usr/sbin/NetworkManager, /usr/sbin/wpa_supplicant, /usr/sbin/nm-system-settings, /usr/sbin/NetworkManagerDispatcher </dd>
 </dl>
 <p> <code>NetworkManager_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_initrc_exec_t type, if you want to transition an executable to the NetworkManager_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/NetworkManager/dispatcher.d(/.*)?, /etc/rc.d/init.d/wicd </p>
+<dt>Paths:</dt>
+<dd>/etc/NetworkManager/dispatcher.d(/.*)?, /etc/rc.d/init.d/wicd </dd>
 </dl>
 <p> <code>NetworkManager_log_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_log_t type, if you want to treat the data as NetworkManager log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/wicd.*, /var/log/wpa_supplicant.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/wicd.*, /var/log/wpa_supplicant.* </dd>
 </dl>
 <p> <code>NetworkManager_tmp_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_tmp_t type, if you want to store NetworkManager temporary files in the /tmp directories. </p>
@@ -196,14 +196,14 @@ description: "NetworkManager_selinux – Security Enhanced Linux Policy for the 
 <p> <code>NetworkManager_var_lib_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_var_lib_t type, if you want to store the NetworkManager files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/wicd(/.*)?, /var/lib/NetworkManager(/.*)?, /etc/dhcp/wired-settings.conf, /etc/wicd/wired-settings.conf, /etc/dhcp/manager-settings.conf, /etc/wicd/manager-settings.conf, /etc/dhcp/wireless-settings.conf, /etc/wicd/wireless-settings.conf </p>
+<dt>Paths:</dt>
+<dd>/var/lib/wicd(/.*)?, /var/lib/NetworkManager(/.*)?, /etc/dhcp/wired-settings.conf, /etc/wicd/wired-settings.conf, /etc/dhcp/manager-settings.conf, /etc/wicd/manager-settings.conf, /etc/dhcp/wireless-settings.conf, /etc/wicd/wireless-settings.conf </dd>
 </dl>
 <p> <code>NetworkManager_var_run_t</code> </p>
 <p> &#8211; Set files with the NetworkManager_var_run_t type, if you want to store the NetworkManager files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/teamd(/.*)?, /var/run/nm-xl2tpd.conf.*, /var/run/nm-dhclient.*, /var/run/NetworkManager(/.*)?, /var/run/wpa_supplicant(/.*)?, /var/run/wicd.pid, /var/run/NetworkManager.pid, /var/run/nm-dns-dnsmasq.conf, /var/run/wpa_supplicant-global </p>
+<dt>Paths:</dt>
+<dd>/var/run/teamd(/.*)?, /var/run/nm-xl2tpd.conf.*, /var/run/nm-dhclient.*, /var/run/NetworkManager(/.*)?, /var/run/wpa_supplicant(/.*)?, /var/run/wicd.pid, /var/run/NetworkManager.pid, /var/run/nm-dns-dnsmasq.conf, /var/run/wpa_supplicant-global </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

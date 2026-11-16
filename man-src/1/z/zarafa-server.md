@@ -11,49 +11,49 @@ description: "zarafa-server – Start the Zarafa storage server."
 <p> zarafa-server &#8211; Start the Zarafa storage server. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>zarafa-server</code> [<i>OPTION</i>]</dl>
+<dt> <code>zarafa-server</code> [<i>OPTION</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The zarafa-server is the Zafara storage server. It contacts a database server and provides services to Zarafa clients. The user base can be retreived from an external source, like LDAP, or can be setup with a separate list of users. </p>
+<dd>The zarafa-server is the Zafara storage server. It contacts a database server and provides services to Zarafa clients. The user base can be retreived from an external source, like LDAP, or can be setup with a separate list of users. </dd>
 <p> After starting, the server keeps listening for connections on the configured TCP port and/or Unix socket.</p>
 <h2>OPTIONS</h2>
 <p> The Zarafa server program takes the following configuration options: </p>
 <p> <code>&#8211;config</code>, <code>-c</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Specify the location of the configuration file. </p>
+</dt><dd> Specify the location of the configuration file. </dd>
 <p> Default: <i>/etc/zarafa/server.cfg</i></dl>
 <p> <code>&#8211;foreground</code>, <code>-F</code></p>
 <dl>
 <dt>
-<dd> Run in the foreground. Normally the server will daemonize and run in the background.</dl>
+</dt><dd> Run in the foreground. Normally the server will daemonize and run in the background.</dd></dl>
 <p> <code>&#8211;restart-searches</code>, <code>-R</code></p>
 <dl>
 <dt>
-<dd> Rebuild all search folders. This may take some time and is only needed when your search folders have become out-of-sync with the actual data in the database. The sync will start synchronously at the start of the server, and you will have to wait for all searches to complete before connecting to the server.</dl>
+</dt><dd> Rebuild all search folders. This may take some time and is only needed when your search folders have become out-of-sync with the actual data in the database. The sync will start synchronously at the start of the server, and you will have to wait for all searches to complete before connecting to the server.</dd></dl>
 <p> <code>&#8211;ignore-database-version-conflict</code></p>
 <dl>
 <dt>
-<dd> Ignore version information from the database. Zarafa will normally not start the server if the database has a newer version than the zarafa-server binary. This makes sure you cannot downgrade your server binary while keeping the same database. If you know what you&#8217;re doing, you can use this option to bypass the start-up version check of the database.</dl>
+</dt><dd> Ignore version information from the database. Zarafa will normally not start the server if the database has a newer version than the zarafa-server binary. This makes sure you cannot downgrade your server binary while keeping the same database. If you know what you&#8217;re doing, you can use this option to bypass the start-up version check of the database.</dd></dl>
 <p> <code>&#8211;ignore-attachment-storage-conflict</code></p>
 <dl>
 <dt>
-<dd> Override the attachment storage option from the configuration file. When you change the option of the location where to store attachments after you&#8217;ve already started the zarafa-server once, this location will conflict. Attachments will not be found when they are stored in a different location.</dl>
+</dt><dd> Override the attachment storage option from the configuration file. When you change the option of the location where to store attachments after you&#8217;ve already started the zarafa-server once, this location will conflict. Attachments will not be found when they are stored in a different location.</dd></dl>
 <p> <code>&#8211;override-multiserver-lock</code></p>
 <dl>
 <dt>
-<dd> When you upgrade/downgrade from/to multiserver setups, the server will not start, because of database differences. If you know what you&#8217;re doing, and want to circumvent this and start the server anyway, you can use this option.</dl>
+</dt><dd> When you upgrade/downgrade from/to multiserver setups, the server will not start, because of database differences. If you know what you&#8217;re doing, and want to circumvent this and start the server anyway, you can use this option.</dd></dl>
 <p> <code>&#8211;force-database-upgrade</code></p>
 <dl>
 <dt>
-<dd> The upgrade from 6.x to 7.0 is blocked, since it will take a long time. We provide 2 methods to upgrade the database. One is using the preferred zarafa7-upgrade python script. This is preferred since it shows the upgrade progress, and you can estimate the time it will take for the upgrade to complete. The second option is letting the zarafa-server do the normal upgrade as usual. Pass this option to use this method. The server will only daemonize when the upgrade is complete. Simple progress can be followed in the log output of the server.</dl>
+</dt><dd> The upgrade from 6.x to 7.0 is blocked, since it will take a long time. We provide 2 methods to upgrade the database. One is using the preferred zarafa7-upgrade python script. This is preferred since it shows the upgrade progress, and you can estimate the time it will take for the upgrade to complete. The second option is letting the zarafa-server do the normal upgrade as usual. Pass this option to use this method. The server will only daemonize when the upgrade is complete. Simple progress can be followed in the log output of the server.</dd></dl>
 <p> <code>&#8211;ignore-unknown-config-options</code></p>
 <dl>
 <dt>
-<dd> When unknown options exists in the configuration file the server will report an error and shutdown. Pass this option to ignore unknown options so the server will start.</dl>
+</dt><dd> When unknown options exists in the configuration file the server will report an error and shutdown. Pass this option to ignore unknown options so the server will start.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> Print the version and exit.</dl>
+</dt><dd> Print the version and exit.</dd></dl>
 <p> When invoked with no options, the server will search for a configuration file in /etc/zarafa/server.cfg. If no configuration file is found, default values are used. See <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5) for all configuration options and their default values.</p>
 <h2>USAGE</h2>
 <p> Starting the server with an alternative configuration: </p>
@@ -64,11 +64,11 @@ description: "zarafa-server – Start the Zarafa storage server."
 <p> /etc/zarafa/server.cfg</p>
 <dl>
 <dt>
-<dd> The server configuration file.</dl>
+</dt><dd> The server configuration file.</dd></dl>
 <p> /etc/zarafa/license/base, /etc/zarafa/license/*</p>
 <dl>
 <dt>
-<dd> The base file contains your license key. When you have extra CAL license keys, these are found in the other files available in the license/ directory, one key per file. This directory is configurable.</dl>
+</dt><dd> The base file contains your license key. When you have extra CAL license keys, these are found in the other files available in the license/ directory, one key per file. This directory is configurable.</dd></dl>
 <p> Configuration options for user plugins are in their respective configuration file. The name of these files is set in the server.cfg file. See <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5) for information on the server.cfg settings.</p>
 <h2>DIAGNOSTICS</h2>
 <p> If you run into problems, check the log for any errors. If you made a mistake in the configuration of the log method, this will be reported on standard error. You can also restart the server with a higher log level. Also, before starting the server, always make sure the database server is running at the right location and no other server is listening on the configured TCP port. </p>
@@ -105,12 +105,12 @@ description: "zarafa-server – Start the Zarafa storage server."
 <p> <code>HUP</code></p>
 <dl>
 <dt>
-<dd> When the HUP signal is received, some options from the configuration file are reloaded. The reloadable options are listed in the <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5) manual page. </p>
+</dt><dd> When the HUP signal is received, some options from the configuration file are reloaded. The reloadable options are listed in the <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5) manual page. </dd>
 <p> Also, when using <i>log_method = file</i>, the logfile will be closed and a new logfile will be opened. You can use this signal in your logrotate system.</dl>
 <p> <code>TERM</code></p>
 <dl>
 <dt>
-<dd> To gracefully let the server exit, the normal TERM signal is used. Because of open sessions by clients it may take up to 60 seconds for the server to completely shutdown.</dl>
+</dt><dd> To gracefully let the server exit, the normal TERM signal is used. Because of open sessions by clients it may take up to 60 seconds for the server to completely shutdown.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>

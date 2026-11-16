@@ -106,17 +106,17 @@ int sgetspent_r(const char *s, struct spwd *spbuf,
 
 <dl>
 <dt><b>EACCES</b>
-<dd> The caller does not have permission to access the shadow password file.
-<dt><b>ERANGE</b>
-<dd> Supplied buffer is too small.</dl>
+</dt><dd> The caller does not have permission to access the shadow password file.
+</dd><dt><b>ERANGE</b>
+</dt><dd> Supplied buffer is too small.</dd></dl>
 
 <h2>FILES</h2>
 
 <dl>
 <dt><i>/etc/shadow</i>
-<dd> local shadow password database file
-<dt><i>/etc/.pwd.lock</i>
-<dd> lock file</dl>
+</dt><dd> local shadow password database file
+</dd><dt><i>/etc/.pwd.lock</i>
+</dt><dd> lock file</dd></dl>
  
 
  The include file <i>&lt;paths.h&gt;</i> defines the constant <b>_PATH_SHADOW</b> to the pathname of the shadow password file.

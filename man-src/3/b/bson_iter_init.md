@@ -17,11 +17,11 @@ bson_iter_init (bson_iter_t  *iter,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_init/">bson_iter_init</a>(3)</code> function shall initialize <code>iter</code> to iterate upon the BSON document <code>bson</code> \&amp;. Upon initialization, <code>iter</code> is placed before the first element. Callers must call <code><a href="/docs/linux/man/3-bson_iter_next/">bson_iter_next</a>(3)</code> , <code><a href="/docs/linux/man/3-bson_iter_find/">bson_iter_find</a>(3)</code> , or <code><a href="/docs/linux/man/3-bson_iter_find_case/">bson_iter_find_case</a>(3)</code> to advance to an element. </p>
 <h2>RETURNS</h2>

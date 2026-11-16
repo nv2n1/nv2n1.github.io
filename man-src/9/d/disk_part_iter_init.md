@@ -15,15 +15,15 @@ disk_part_iter_init - initialize partition iterator
 <h2>Arguments</h2>
 
 <i>piter</i>
-<dl><dd><dd>iterator to initialize</dl>
+<dl><dd></dd><dd>iterator to initialize</dd></dl>
  
 
  <i>disk</i>
-<dl><dd>disk to iterate over</dl>
+<dl><dd>disk to iterate over</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>DISK_PITER_* flags</dl>
+<dl><dd>DISK_PITER_* flags</dd></dl>
 
 <h2>Description</h2>
 

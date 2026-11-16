@@ -30,7 +30,7 @@ public class DocFooter extends Applet {
  g.drawString(email,290,15);
  }
 }</code></pre>
-</dl>
+</dd></dl>
 <p> The output from <code>javap DocFooter</code> yields: </p>
 <dl>
 <dd>
@@ -42,7 +42,7 @@ public class DocFooter extends java.applet.Applet {
  public void init();
  public void paint(java.awt.Graphics);
 }</code></pre>
-</dl>
+</dd></dl>
 <p> The output from <code>javap -c DocFooter</code> yields: </p>
 <dl>
 <dd>
@@ -95,50 +95,50 @@ Method void paint(java.awt.Graphics)
  38 bipush 15
  40 invokevirtual #13 &lt;Method void drawString(java.lang.String, int, int)&gt;
  43 return</code></pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt>-help</p>
-<dd>Prints out help message for <code>javap</code>.</p>
-<dt>-l</p>
-<dd>Prints out line and local variable tables.</p>
-<dt>-b</p>
-<dd>Ensures backward compatibility with <code>javap</code> in JDK 1.1.</p>
-<dt>-public</p>
-<dd>Shows only public classes and members.</p>
-<dt>-protected</p>
-<dd>Shows only protected and public classes and members.</p>
-<dt>-package</p>
-<dd>Shows only package, protected, and public classes and members. This is the default.</p>
-<dt>-private</p>
-<dd>Shows all classes and members.</p>
-<dt>-Jflag</p>
-<dd>Pass <i>flag</i> directly to the runtime system. Some examples:</p>
+<dt>-help</dt>
+<dd>Prints out help message for <code>javap</code>.</dd>
+<dt>-l</dt>
+<dd>Prints out line and local variable tables.</dd>
+<dt>-b</dt>
+<dd>Ensures backward compatibility with <code>javap</code> in JDK 1.1.</dd>
+<dt>-public</dt>
+<dd>Shows only public classes and members.</dd>
+<dt>-protected</dt>
+<dd>Shows only protected and public classes and members.</dd>
+<dt>-package</dt>
+<dd>Shows only package, protected, and public classes and members. This is the default.</dd>
+<dt>-private</dt>
+<dd>Shows all classes and members.</dd>
+<dt>-Jflag</dt>
+<dd>Pass <i>flag</i> directly to the runtime system. Some examples:</dd>
 <dl>
 <dd>
 <pre><code>javap -J-version
 javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName</code></pre>
-</dl>
-<dt>-s</p>
-<dd>Prints internal type signatures.</p>
-<dt>-c</p>
-<dd>Prints out disassembled code, i.e., the instructions that comprise the Java bytecodes, for each of the methods in the class. These are documented in the <i>Java Virtual Machine Specification</i> @ <a rel="nofollow" href="http://java.sun.com/docs/books/vmspec/.">http://java.sun.com/docs/books/vmspec/.</a></p>
-<dt>-verbose</p>
-<dd>Prints stack size, number of <i>locals</i> and <i>args</i> for methods.</p>
-<dt>-classpath path</p>
-<dd>Specifies the path <code>javap</code> uses to look up classes. Overrides the default or the CLASSPATH environment variable if it is set. Directories are separated by colons. Thus the general format for <i>path</i> is: </p>
+</dd></dl>
+<dt>-s</dt>
+<dd>Prints internal type signatures.</dd>
+<dt>-c</dt>
+<dd>Prints out disassembled code, i.e., the instructions that comprise the Java bytecodes, for each of the methods in the class. These are documented in the <i>Java Virtual Machine Specification</i> @ <a rel="nofollow" href="http://java.sun.com/docs/books/vmspec/.">http://java.sun.com/docs/books/vmspec/.</a></dd>
+<dt>-verbose</dt>
+<dd>Prints stack size, number of <i>locals</i> and <i>args</i> for methods.</dd>
+<dt>-classpath path</dt>
+<dd>Specifies the path <code>javap</code> uses to look up classes. Overrides the default or the CLASSPATH environment variable if it is set. Directories are separated by colons. Thus the general format for <i>path</i> is: </dd>
 <pre><code> .:&lt;your_path&gt;</code></pre>
 <p>For example:</p>
-<dt>-bootclasspath path</p>
-<dd>Specifies path from which to load bootstrap classes. By default, the bootstrap classes are the classes implementing the core Java platform located in <i>jre/lib/rt.jar</i> and several other jar files.</p>
-<dt>-extdirs dirs</p>
-<dd>Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dl>
+<dt>-bootclasspath path</dt>
+<dd>Specifies path from which to load bootstrap classes. By default, the bootstrap classes are the classes implementing the core Java platform located in <i>jre/lib/rt.jar</i> and several other jar files.</dd>
+<dt>-extdirs dirs</dt>
+<dd>Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt>CLASSPATH</p>
-<dd>Used to provide the system a path to user-defined classes. Directories are separated by colons, for example, For example:</p>
+<dt>CLASSPATH</dt>
+<dd>Used to provide the system a path to user-defined classes. Directories are separated by colons, for example, For example:</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p>javac, java, jdb, javah, javadoc </p>

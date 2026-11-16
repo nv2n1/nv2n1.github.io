@@ -17,20 +17,20 @@ description: "ccrewrite – Rewrite CLR assemblies for runtime code contract ver
 <p> Currently only pre-conditions are supported, using the Contract.Requires() method. Contract inheritance for virtual methods is supported. Only a limited range of operations and types can be used within a pre-condition, an error message will be shown if ccrewrite is unable to process the specified assembly.</p>
 <h2>CONFIGURATION OPTIONS</h2>
 <dl>
-<dt><i>&#8211;assembly &lt;assembly-name&gt;</i></p>
-<dd> The assembly to rewrite. If no &#8211;output option is specified, then this file overwritten with the rewritten version.</p>
-<dt><i>&#8211;debug</i></p>
-<dd> Use debug information if available to improve the usefulness of contract failure messages.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Show help for ccrewrite, listing configuration options.</p>
-<dt><i>&#8211;level &lt;level&gt; (default=4)</i></p>
-<dd> Set the which contract types are present in rewritten assembly: 0 = No contracts; 1 = Release requires; 2 = Requires; 3 = Ensures; 4 = Invariants; (Each level includes all previous levels)</p>
-<dt><i>&#8211;output &lt;file-name&gt;</i></p>
-<dd> Write the rewritten assembly to the specified file. If this is not present then the input assembly file is overwritten with the rewritten version.</p>
-<dt><i>&#8211;rewrite (default=true)</i></p>
-<dd> Rewrite the assembly. If false, then nothing is done.</p>
-<dt><i>&#8211;throwOnFailure (default=false)</i></p>
-<dd> Throw a ContractException on unhandled contract failure. The default behaviour is to Assert. </p>
+<dt><i>&#8211;assembly &lt;assembly-name&gt;</i></dt>
+<dd> The assembly to rewrite. If no &#8211;output option is specified, then this file overwritten with the rewritten version.</dd>
+<dt><i>&#8211;debug</i></dt>
+<dd> Use debug information if available to improve the usefulness of contract failure messages.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Show help for ccrewrite, listing configuration options.</dd>
+<dt><i>&#8211;level &lt;level&gt; (default=4)</i></dt>
+<dd> Set the which contract types are present in rewritten assembly: 0 = No contracts; 1 = Release requires; 2 = Requires; 3 = Ensures; 4 = Invariants; (Each level includes all previous levels)</dd>
+<dt><i>&#8211;output &lt;file-name&gt;</i></dt>
+<dd> Write the rewritten assembly to the specified file. If this is not present then the input assembly file is overwritten with the rewritten version.</dd>
+<dt><i>&#8211;rewrite (default=true)</i></dt>
+<dd> Rewrite the assembly. If false, then nothing is done.</dd>
+<dt><i>&#8211;throwOnFailure (default=false)</i></dt>
+<dd> Throw a ContractException on unhandled contract failure. The default behaviour is to Assert. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by Chris Bacon</p>

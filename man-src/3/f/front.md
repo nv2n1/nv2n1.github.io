@@ -72,7 +72,7 @@ url: "/docs/linux/man/3-front/"
  <b>Precondition:</b>
 <dl>
 <dt>
-<dd> all arrays involved in an algebraic expression must have the same size.</dl>
+</dt><dd> all arrays involved in an algebraic expression must have the same size.</dd></dl>
  
 
  
@@ -210,7 +210,7 @@ url: "/docs/linux/man/3-front/"
  <b>Tests</b>
 <dl>
 <dt>
-<dd> construction of arrays is checked in a number of cases</dl>
+</dt><dd> construction of arrays is checked in a number of cases</dd></dl>
  
 
  
@@ -362,4 +362,4 @@ url: "/docs/linux/man/3-front/"
 
 
 <dt><a HREF="#lbBD">Author</a>
-<dd></dl>
+</dt><dd></dd></dl>

@@ -14,7 +14,7 @@ description: "list_empty_careful – tests whether a list is empty and not being
 <p><i>head</i></p>
 <dl>
 <dd>
-<dd>the list to test</dl>
+</dd><dd>the list to test</dd></dl>
 <h2>Description</h2>
 <p>tests whether a list is empty _and_ checks that no other CPU might be in the process of modifying either member (next or prev)</p>
 <h2>Note</h2>

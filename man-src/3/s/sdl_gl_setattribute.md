@@ -28,7 +28,8 @@ if ( (screen=SDL_SetVideoMode( 640, 480, 16, SDL_OPENGL )) == NULL ) {
  return;
 }</tt></pre>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> The SDL_DOUBLEBUF</code> flag is not required to enable double buffering when setting an OpenGL video mode. Double buffering is enabled or disabled using the SDL_GL_DOUBLEBUFFER attribute.</dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_GL_GetAttribute</code>, <i>GL Attributes</i></p>
+</p>

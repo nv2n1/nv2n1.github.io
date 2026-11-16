@@ -15,63 +15,63 @@ description: "clamdscan – scan files and directories for viruses using Clam An
 <p> clamdscan is a clamd client which may be used as a clamscan replacement. It accepts all the options implemented in clamscan but most of them will be ignored because its scanning abilities only depend on clamd.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help information and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print version number and exit.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Be verbose.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Be quiet &#8211; only output error messages.</p>
-<dt><code>&#8211;stdout</code></p>
-<dd> Write all messages (except for libclamav output) to the standard output (stdout).</p>
-<dt><code>&#8211;config-file=FILE</code></p>
-<dd> Read clamd settings from FILE.</p>
-<dt><code>-l FILE, &#8211;log=FILE</code></p>
-<dd> Save the scan report to FILE.</p>
-<dt><code>-f FILE, &#8211;file-list=FILE</code></p>
-<dd> Scan files listed line by line in FILE.</p>
-<dt><code>-m, &#8211;multiscan</code></p>
-<dd> In the multiscan mode clamd will attempt to scan the directory contents in parallel using available threads. This option is especially useful on multiprocessor and multi-core systems. If you pass more than one file or directory in the command line, they are put in a queue and sent to clamd individually. This means, that single files are always scanned by a single thread. Similarly, clamdscan will wait for clamd to finish a directory scan (performed in multiscan mode) before sending request to scan another directory. This option can be combined with &#8211;fdpass (see below).</p>
-<dt><code>-z, &#8211;allmatch</code></p>
-<dd> After a match, continue scanning within the file for additional matches.</p>
-<dt><code>&#8211;remove</code></p>
-<dd> Remove infected files. <code>Be careful.</code></p>
-<dt><code>&#8211;move=DIRECTORY</code></p>
-<dd> Move infected files into DIRECTORY.</p>
-<dt><code>&#8211;no-summary</code></p>
-<dd> Do not display summary at the end of scanning.</p>
-<dt><code>&#8211;reload</code></p>
-<dd> Request clamd to reload virus database.</p>
-<dt><code>&#8211;fdpass</code></p>
-<dd> Pass the file descriptor permissions to clamd. This is useful if clamd is running as a different user as it is faster than streaming the file to clamd. Only available if connected to clamd via local(unix) socket.</p>
-<dt><code>&#8211;stream</code></p>
-<dd> Forces file streaming to clamd. This is generally not needed as clamdscan detects automatically if streaming is required. This option only exists for debugging and testing purposes, in all other cases &#8211;fdpass is preferred.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help information and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print version number and exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Be quiet &#8211; only output error messages.</dd>
+<dt><code>&#8211;stdout</code></dt>
+<dd> Write all messages (except for libclamav output) to the standard output (stdout).</dd>
+<dt><code>&#8211;config-file=FILE</code></dt>
+<dd> Read clamd settings from FILE.</dd>
+<dt><code>-l FILE, &#8211;log=FILE</code></dt>
+<dd> Save the scan report to FILE.</dd>
+<dt><code>-f FILE, &#8211;file-list=FILE</code></dt>
+<dd> Scan files listed line by line in FILE.</dd>
+<dt><code>-m, &#8211;multiscan</code></dt>
+<dd> In the multiscan mode clamd will attempt to scan the directory contents in parallel using available threads. This option is especially useful on multiprocessor and multi-core systems. If you pass more than one file or directory in the command line, they are put in a queue and sent to clamd individually. This means, that single files are always scanned by a single thread. Similarly, clamdscan will wait for clamd to finish a directory scan (performed in multiscan mode) before sending request to scan another directory. This option can be combined with &#8211;fdpass (see below).</dd>
+<dt><code>-z, &#8211;allmatch</code></dt>
+<dd> After a match, continue scanning within the file for additional matches.</dd>
+<dt><code>&#8211;remove</code></dt>
+<dd> Remove infected files. <code>Be careful.</code></dd>
+<dt><code>&#8211;move=DIRECTORY</code></dt>
+<dd> Move infected files into DIRECTORY.</dd>
+<dt><code>&#8211;no-summary</code></dt>
+<dd> Do not display summary at the end of scanning.</dd>
+<dt><code>&#8211;reload</code></dt>
+<dd> Request clamd to reload virus database.</dd>
+<dt><code>&#8211;fdpass</code></dt>
+<dd> Pass the file descriptor permissions to clamd. This is useful if clamd is running as a different user as it is faster than streaming the file to clamd. Only available if connected to clamd via local(unix) socket.</dd>
+<dt><code>&#8211;stream</code></dt>
+<dd> Forces file streaming to clamd. This is generally not needed as clamdscan detects automatically if streaming is required. This option only exists for debugging and testing purposes, in all other cases &#8211;fdpass is preferred.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>(0) To scan a one file:</p>
+<dt>(0) To scan a one file:</dt>
 <dd>
 <p> <code>clamdscan file</code></p>
-<dt>(1) To scan a current working directory:</p>
+</dd><dt>(1) To scan a current working directory:</dt>
 <dd>
 <p> <code>clamdscan</code></p>
-<dt>(2) To scan all files in /home:</p>
+</dd><dt>(2) To scan all files in /home:</dt>
 <dd>
 <p> <code>clamdscan /home</code></p>
-<dt>(3) To scan a file when clamd is running as a different user:</p>
+</dd><dt>(3) To scan a file when clamd is running as a different user:</dt>
 <dd>
 <p> <code>clamdscan &#8211;fdpass ~/downloads</code></p>
-<dt>(4) To scan from standard input:</p>
+</dd><dt>(4) To scan from standard input:</dt>
 <dd>
 <p> <code>clamdscan &#8211; &lt; file_to_scan</code> </p>
-<p> <code>cat file_to_scan | clamdscan &#8211;</code></dl>
+<p> <code>cat file_to_scan | clamdscan &#8211;</code></dd></dl>
 <h2>RETURN CODES</h2>
 <p> 0 : No virus found.</p>
 <dl>
-<dt>1 : Virus(es) found.</p>
+<dt>1 : Virus(es) found.</dt>
 <dd>
-<dt>2 : An error occured.</p>
-<dd></dl>
+</dd><dt>2 : An error occured.</dt>
+<dd></dd></dl>
 <h2>CREDITS</h2>
 <p> Please check the full documentation for credits.</p>
 <h2>AUTHOR</h2>

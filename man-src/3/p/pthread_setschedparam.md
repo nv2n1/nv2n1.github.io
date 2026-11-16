@@ -10,12 +10,10 @@ description: "pthread_setschedparam, pthread_getschedparam – set/get schedulin
 <p>pthread_setschedparam, pthread_getschedparam &#8211; set/get scheduling policy and parameters of a thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_setschedparam(pthread_t thread, int policy,
                           const struct sched_param *param);
 int pthread_getschedparam(pthread_t thread, int *policy,
                           struct sched_param *param);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setschedparam</code>() function sets the scheduling policy and parameters of the thread <i>thread</i>. <i>policy</i> specifies the new scheduling policy for <i>thread</i>. The supported values for <i>policy</i>, and their semantics, are described in <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7). The structure pointed to by <i>param</i> specifies the new scheduling parameters for <i>thread</i>. Scheduling parameters are maintained in the following structure: struct sched_param {<br />
@@ -26,14 +24,14 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p>Both of these functions can fail with the following error:</p>
 <dl>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <p> <code>pthread_setschedparam</code>() may additionally fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>policy</i> is not a recognized policy, or <i>param</i> does not make sense for the <i>policy</i>.</p>
-<dt><code>EPERM</code></p>
-<dd>The caller does not have appropriate privileges to set the specified scheduling policy and parameters.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>policy</i> is not a recognized policy, or <i>param</i> does not make sense for the <i>policy</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The caller does not have appropriate privileges to set the specified scheduling policy and parameters.</dd></dl>
 <p> POSIX.1 also documents an <code>ENOTSUP</code> (&quot;attempt was made to set the policy or scheduling parameters to an unsupported value&quot;) error for <code>pthread_setschedparam</code>().</p>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

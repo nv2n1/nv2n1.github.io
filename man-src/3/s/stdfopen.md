@@ -11,7 +11,6 @@ std::fopen - std::fopen
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     std::FILE *fopen(const char *filename, const char *mode);</code></pre> 
 Opens a file indicated by filename and returns a file stream associated with that file. mode is used to determine the file access mode. 
 
@@ -48,10 +47,8 @@ For portable directory and file naming, see C++_filesystem_library or boost.file
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
     if (!fp) {

@@ -18,20 +18,20 @@ description: "fedfs-delete-replication – send a FEDFS_DELETE_REPLICATION ADMIN
 <p> The FEDFS_DELETE_REPLICATION request deletes a replication marker in a local file system on a remote file server. The <code><a href="/docs/linux/man/8-fedfs-delete-replication/">fedfs-delete-replication</a></code>(8) command taks a single positional parameter which is the pathname on the remote server of the replication marker to be deleted. This pathname is relative to the root of the local file system on the remote server.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;debug</p>
-<dd>Enables debugging messages during operation.</p>
-<dt>-?, &#8211;help</p>
-<dd>Displays <a href="/docs/linux/man/8-fedfs-delete-replication/">fedfs-delete-replication</a></code>(8) version information and a usage message on <i>stderr</i>.</p>
-<dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
-<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
-<dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
-<dt><code>-s, &#8211;security=</code><i>flavor</i></p>
-<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dl>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Enables debugging messages during operation.</dd>
+<dt>-?, &#8211;help</dt>
+<dd>Displays <a href="/docs/linux/man/8-fedfs-delete-replication/">fedfs-delete-replication</a></code>(8) version information and a usage message on <i>stderr</i>.</dd>
+<dt><code>-h, &#8211;hostname=</code><i>hostname</i></dt>
+<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</dd>
+<dt><code>-n, &#8211;nettype=</code><i>nettype</i></dt>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</dd>
+<dt><code>-s, &#8211;security=</code><i>flavor</i></dt>
+<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. To delete an existing FedFS replication on the remote server <i>fs.example.net</i>, use:</p>
 <dl>
-<dd>$ fedfs-delete-replication -h fs.example.net /export/replication1</dl>
+<dd>$ fedfs-delete-replication -h fs.example.net /export/replication1</dd></dl>
 <h2>Security</h2>
 <p>By default, or if the <code>sys</code> and <code>unix</code> flavors are specified with the <code>&#8211;security=</code><i>flavor</i> option, the <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8) command uses AUTH_SYS security for the Remote Procedure Call. AUTH_SYS has known weaknesses and should be avoided on untrusted networks. </p>
 <p> The RPC client uses the Kerberos v5 GSS mechanism if a Kerberos security flavor is specified. When specifying a Kerberos security flavor, the user must first obtain a valid Kerberos ticket using <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1) before running <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8). </p>

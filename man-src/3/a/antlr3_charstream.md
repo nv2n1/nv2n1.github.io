@@ -37,22 +37,22 @@ description: "include/antlr3intstream.h –"
 <h3>#define ANTLR3_CHARSTREAM 0x0001</h3>
 <p>Type indicator for a character stream. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>if a custom stream is created but it can be treated as a char stream, then you may OR in this value to your type indicator</dl>
+<dd>if a custom stream is created but it can be treated as a char stream, then you may OR in this value to your type indicator</dd></dl>
 <p> Referenced by antlr3AsciiFileStreamNew(), antlr3GenericSetupStream(), antlr3NewAsciiStringCopyStream(), antlr3NewAsciiStringInPlaceStream(), antlr3NewUCS2StringInPlaceStream(), and antlr3RecognitionExceptionNew().</p>
 <h3>#define ANTLR3_COMMONTREENODE 0x0004</h3>
 <p>Type indicator for a common tree node stream. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>if a custom stream is created but it can be treated as a common tree node stream, then you may OR in this value to your type indicator</dl>
+<dd>if a custom stream is created but it can be treated as a common tree node stream, then you may OR in this value to your type indicator</dd></dl>
 <p> Referenced by antlr3CommonTreeNodeStreamNew(), antlr3CommonTreeNodeStreamNewStream(), and antlr3RecognitionExceptionNew().</p>
 <h3>#define ANTLR3_INPUT_MASK 0x0007</h3>
 <p>Type mask for input stream so we can switch in the above types. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>DO NOT USE 0x0000 as a stream type!</dl>
+<dd>DO NOT USE 0x0000 as a stream type!</dd></dl>
 <p> Referenced by antlr3RecognitionExceptionNew().</p>
 <h3>#define ANTLR3_TOKENSTREAM 0x0002</h3>
 <p>Type indicator for a Token stream. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>if a custom stream is created but it can be treated as a token stream, then you may OR in this value to your type indicator</dl>
+<dd>if a custom stream is created but it can be treated as a token stream, then you may OR in this value to your type indicator</dd></dl>
 <p> Referenced by antlr3CommonTokenStreamNew(), and antlr3RecognitionExceptionNew().</p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_INT_STREAM_struct</code></h3>

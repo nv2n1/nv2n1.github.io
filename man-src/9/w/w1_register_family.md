@@ -14,9 +14,9 @@ description: "w1_register_family – register a device family driver"
 <p><i>newf</i></p>
 <dl>
 <dd>
-<dd>family to register</dl>
+</dd><dd>family to register</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

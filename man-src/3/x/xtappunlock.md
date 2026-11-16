@@ -11,12 +11,12 @@ description: "XtAppLock, XtAppUnlock – lock and unlock application context"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtAppLock(XtAppContext <i>app_context</i>);</p>
-<dd>void XtAppUnlock(XtAppContext <i>app_context</i>);</dl>
+<dd>void XtAppLock(XtAppContext <i>app_context</i>);</dd>
+<dd>void XtAppUnlock(XtAppContext <i>app_context</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd></dl>
 <h2>Description</h2>
 <p><code>XtAppLock</code> locks the application context including all its related displays and widgets. </p>
 <p> <code>XtAppUnlock</code> unlocks the application context.</p>

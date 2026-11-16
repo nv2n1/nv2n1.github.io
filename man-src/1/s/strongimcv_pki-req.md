@@ -14,26 +14,26 @@ description: "pki –req – Create a PKCS#10 certificate request"
 <p>This sub-command of <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1) is used to create a PKCS#10 certificate request.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print usage information with a summary of the available options.</p>
-<dt><code>-v, &#8211;debug </code><i>level</i></p>
-<dd>Set debug level, default: 1.</p>
-<dt><code>-+, &#8211;options </code><i>file</i></p>
-<dd>Read command line options from <i>file</i>.</p>
-<dt><code>-i, &#8211;in </code><i>file</i></p>
-<dd>Private key input file. If not given the key is read from <i>STDIN</i>.</p>
-<dt><code>-t, &#8211;type </code><i>type</i></p>
-<dd>Type of the input key. Either <i>rsa</i> or <i>ecdsa</i>, defaults to <i>rsa</i>.</p>
-<dt><code>-d, &#8211;dn </code><i>distinguished-name</i></p>
-<dd>Subject distinguished name (DN). Required.</p>
-<dt><code>-a, &#8211;san </code><i>subjectAltName</i></p>
-<dd>subjectAltName extension to include in request. Can be used multiple times.</p>
-<dt><code>-p, &#8211;password </code><i>password</i></p>
-<dd>The challengePassword to include in the certificate request.</p>
-<dt><code>-g, &#8211;digest </code><i>digest</i></p>
-<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. Defaults to <i>sha1</i>.</p>
-<dt><code>-f, &#8211;outform </code><i>encoding</i></p>
-<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print usage information with a summary of the available options.</dd>
+<dt><code>-v, &#8211;debug </code><i>level</i></dt>
+<dd>Set debug level, default: 1.</dd>
+<dt><code>-+, &#8211;options </code><i>file</i></dt>
+<dd>Read command line options from <i>file</i>.</dd>
+<dt><code>-i, &#8211;in </code><i>file</i></dt>
+<dd>Private key input file. If not given the key is read from <i>STDIN</i>.</dd>
+<dt><code>-t, &#8211;type </code><i>type</i></dt>
+<dd>Type of the input key. Either <i>rsa</i> or <i>ecdsa</i>, defaults to <i>rsa</i>.</dd>
+<dt><code>-d, &#8211;dn </code><i>distinguished-name</i></dt>
+<dd>Subject distinguished name (DN). Required.</dd>
+<dt><code>-a, &#8211;san </code><i>subjectAltName</i></dt>
+<dd>subjectAltName extension to include in request. Can be used multiple times.</dd>
+<dt><code>-p, &#8211;password </code><i>password</i></dt>
+<dd>The challengePassword to include in the certificate request.</dd>
+<dt><code>-g, &#8211;digest </code><i>digest</i></dt>
+<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. Defaults to <i>sha1</i>.</dd>
+<dt><code>-f, &#8211;outform </code><i>encoding</i></dt>
+<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dd></dl>
 <h2>Examples</h2>
 <p>Generate a certificate request for an RSA key, with a subjectAltName extension: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;req &#8211;in key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=moon&quot;&nbsp;<wbr>\<br />

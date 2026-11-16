@@ -16,40 +16,40 @@ description: "Totem – GNOME desktop movie player based on GStreamer"
 <p> For additional documentation on interactive use of <code>Totem</code> select the <i>Help</i> menu option. The menus allow access to some features not available through keybindings or command-line options.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Output a longer help message then quit. (Any discrepancies between this man page and the output of <code>totem &#8211;help</code> should be reported as a documentation bug.)</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information then quit.</dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Output a longer help message then quit. (Any discrepancies between this man page and the output of <code>totem &#8211;help</code> should be reported as a documentation bug.)</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information then quit.</dd></dl>
 <p> The following options command an already-running instance of <code>Totem</code> to do something; they are useful for remote-control scripting. If <code>Totem</code> is not already running, these commands will launch a new instance of <code>Totem</code> but will not do anything further.</p>
 <dl>
-<dt><code>&#8211;play-pause</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to toggle between play and pause.</p>
-<dt><code>&#8211;play</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to play (has no effect if already playing)</p>
-<dt><code>&#8211;pause</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to pause (has no effect if already paused)</p>
-<dt><code>&#8211;next</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to skip to the next movie or chapter in the playlist.</p>
-<dt><code>&#8211;previous</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to return to the previous movie or chapter in the playlist.</p>
-<dt><code>&#8211;seek-fwd</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to seek forwards 15 seconds in the current movie.</p>
-<dt><code>&#8211;seek-bwd</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to seek backwards 15 seconds in the current movie.</p>
-<dt><code>&#8211;volume-up</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to raise the volume by 8%.</p>
-<dt><code>&#8211;volume-down</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to lower the volume by 8%.</p>
-<dt><code>&#8211;mute</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to toggle between muted and unmuted audio.</p>
-<dt><code>&#8211;fullscreen</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to toggle fullscreen mode.</p>
-<dt><code>&#8211;quit</code></p>
-<dd> Tell an already-running instance of <code>Totem</code> to quit.</p>
-<dt><code>&#8211;enqueue </code><i>filename|URI</i></p>
-<dd> Tell an already-running instance of Totem to add a new stream to the playlist.</p>
-<dt><code>&#8211;replace </code><i>filename|URI</i></p>
-<dd> Tell an already-running instance of Totem to play from the playlist.</dl>
+<dt><code>&#8211;play-pause</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to toggle between play and pause.</dd>
+<dt><code>&#8211;play</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to play (has no effect if already playing)</dd>
+<dt><code>&#8211;pause</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to pause (has no effect if already paused)</dd>
+<dt><code>&#8211;next</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to skip to the next movie or chapter in the playlist.</dd>
+<dt><code>&#8211;previous</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to return to the previous movie or chapter in the playlist.</dd>
+<dt><code>&#8211;seek-fwd</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to seek forwards 15 seconds in the current movie.</dd>
+<dt><code>&#8211;seek-bwd</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to seek backwards 15 seconds in the current movie.</dd>
+<dt><code>&#8211;volume-up</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to raise the volume by 8%.</dd>
+<dt><code>&#8211;volume-down</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to lower the volume by 8%.</dd>
+<dt><code>&#8211;mute</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to toggle between muted and unmuted audio.</dd>
+<dt><code>&#8211;fullscreen</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to toggle fullscreen mode.</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> Tell an already-running instance of <code>Totem</code> to quit.</dd>
+<dt><code>&#8211;enqueue </code><i>filename|URI</i></dt>
+<dd> Tell an already-running instance of Totem to add a new stream to the playlist.</dd>
+<dt><code>&#8211;replace </code><i>filename|URI</i></dt>
+<dd> Tell an already-running instance of Totem to play from the playlist.</dd></dl>
 <h2>KEYBINDINGS</h2>
 <p> Global keybindings for <code>Totem</code>: </p>
 <p> a<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>cycle between aspect ratios</p>
@@ -85,15 +85,15 @@ description: "Totem – GNOME desktop movie player based on GStreamer"
 <p> <i>/usr/lib/totem/plugins/</i></p>
 <dl>
 <dt>
-<dd> The global plugins directory, which contains all the system-installed plugins.</dl>
+</dt><dd> The global plugins directory, which contains all the system-installed plugins.</dd></dl>
 <p> <i>~/.local/share/totem/plugins/</i></p>
 <dl>
 <dt>
-<dd> The user plugins directory, containing plugins available only to that user. It is always in the &quot;totem/plugins&quot; subdirectory of your <code>XDG_DATA_HOME</code> directory.</dl>
+</dt><dd> The user plugins directory, containing plugins available only to that user. It is always in the &quot;totem/plugins&quot; subdirectory of your <code>XDG_DATA_HOME</code> directory.</dd></dl>
 <p> <i>~/.config/totem/state.ini</i></p>
 <dl>
 <dt>
-<dd> The configuration file for the main window&#8217;s appearance, stored in a simple INI format.</dl>
+</dt><dd> The configuration file for the main window&#8217;s appearance, stored in a simple INI format.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>Totem</code> cannot play files using some proprietary codecs.</p>
 <h2>AUTHOR</h2>

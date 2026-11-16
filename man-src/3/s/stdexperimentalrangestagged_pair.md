@@ -11,9 +11,7 @@ std::experimental::ranges::tagged_pair - std::experimental::ranges::tagged_pair
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/utility&gt;
-
 template&lt; TaggedType T1, TaggedType T2 &gt;         (ranges TS)
-
 using tagged_pair = /* see below */;</code></pre> 
 Convenience alias template for naming a ranges::tagged wrapping a std::pair. 
 A TaggedType is a function type S(T), where S is a TagSpecifier and T is the type of the element. 

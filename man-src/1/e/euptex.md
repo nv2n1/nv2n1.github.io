@@ -21,16 +21,16 @@ description: "ptex, uptex, eptex, euptex – Japanese \"Publishing TeX\""
 <h2>OPTIONS</h2>
 <p> Here we list only additions/deletions of command line options which are specific to (e-)(u)pTeX. For (u)pTeX, other options are similar to TeX. For e-(u)pTeX, other options are similar to e-TeX.</p>
 <dl>
-<dt>Additions (supported by ptexenc library):</p>
+<dt>Additions (supported by ptexenc library):</dt>
 <dd>
-<dt><code>-kanji</code><i>&nbsp;string</i></p>
-<dd> Sets the input Japanese <i>Kanji</i> code. The <i>string</i> can be either <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), and <i>utf8</i>&nbsp;(UTF-8). For (e-)upTeX, <i>uptex</i> is also allowed.</p>
-<dt><code>-kanji-internal</code><i>&nbsp;string</i></p>
-<dd> Sets the internal <i>Kanji</i> code. The string can be either <i>euc</i>, and <i>sjis</i>. For (e-)upTeX, <i>uptex</i> is also allowed.</p>
-<dt>Deletions:</p>
+</dd><dt><code>-kanji</code><i>&nbsp;string</i></dt>
+<dd> Sets the input Japanese <i>Kanji</i> code. The <i>string</i> can be either <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), and <i>utf8</i>&nbsp;(UTF-8). For (e-)upTeX, <i>uptex</i> is also allowed.</dd>
+<dt><code>-kanji-internal</code><i>&nbsp;string</i></dt>
+<dd> Sets the internal <i>Kanji</i> code. The string can be either <i>euc</i>, and <i>sjis</i>. For (e-)upTeX, <i>uptex</i> is also allowed.</dd>
+<dt>Deletions:</dt>
 <dd>
-<dt><code>-enc</code></p>
-<dd> In this version of (e-)(u)pTeX, encTeX extensions are <i>not</i> available.</dl>
+</dd><dt><code>-enc</code></dt>
+<dd> In this version of (e-)(u)pTeX, encTeX extensions are <i>not</i> available.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1).</p>
 <h2>AUTHORS</h2>

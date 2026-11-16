@@ -17,34 +17,34 @@ description: "retrace-server-interact – use Retrace server’s chroot for inte
 <p> shell</p>
 <dl>
 <dt>
-<dd> Jump to a shell. Not available if mock chroot is not used. This is the case of vmcores from the same architecture as host system.</dl>
+</dt><dd> Jump to a shell. Not available if mock chroot is not used. This is the case of vmcores from the same architecture as host system.</dd></dl>
 <p> gdb</p>
 <dl>
 <dt>
-<dd> Run GDB, load executable and coredump and jump to prompt. Only available for binary crashes (coredumps).</dl>
+</dt><dd> Run GDB, load executable and coredump and jump to prompt. Only available for binary crashes (coredumps).</dd></dl>
 <p> crash</p>
 <dl>
 <dt>
-<dd> Run Crash, load vmcore and vmlinux and jump to prompt. Only available for kernel crashes (vmcores).</dl>
+</dt><dd> Run Crash, load vmcore and vmlinux and jump to prompt. Only available for kernel crashes (vmcores).</dd></dl>
 <h2>OPTIONS</h2>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Display help and exit.</dl>
+</dt><dd> Display help and exit.</dd></dl>
 <p> &#8211;priv</p>
 <dl>
 <dt>
-<dd> Use the chroot as privileged user.</dl>
+</dt><dd> Use the chroot as privileged user.</dd></dl>
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dl>
+</dt><dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> _mtoman [at] redhat.com_</p>
+<dt> 1.</dt>
+<dd> _mtoman [at] redhat.com_</dd>
 <dl>
 <dt>
-<dd> mailto:_mtoman [at] redhat.com_</dl>
+</dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
 <h2>Index</h2>

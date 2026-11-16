@@ -11,7 +11,6 @@ description: "sc::ScaledTorsSimpleCo –"
 <p> The <code>ScaledTorsSimpleCo</code> class describes an scaled torsion internal coordinate of a molecule.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;simple.h&gt;</code></pre>
 <p> Inherits <code>sc::SimpleCo</code>.</p>
 <h3>Public Member Functions</h3>

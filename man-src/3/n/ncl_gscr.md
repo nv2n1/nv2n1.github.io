@@ -12,15 +12,15 @@ GSCR (Set color representation) - associates a color value with a color index.
 
  void gset_colr_rep(Gint ws_id, Gint colr_ind, const Gcolr_rep *colr_rep);
 <h2>Description</h2><dl COMPACT><dt>WKID
-<dd>(Integer, Input) - A workstation identifier. WKID must be the same as that used in some previous GOPWK call.
-<dt>CI
-<dd>(Integer, Input) - A color index.
-<dt>CR
-<dd>(Real, Input) - An intensity value for red between 0. and 1. inclusive.
-<dt>CG
-<dd>(Real, Input) - An intensity value for green between 0. and 1. inclusive.
-<dt>CB
-<dd>(Real, Input) - An intensity value for blue between 0. and 1. inclusive.</dl><h2>Usage</h2>Color in GKS is &quot;indexed&quot;, i.e. color attributes are assigned to primitives by using a color index. The GKS function GSCR is used to associate a color value with color indices. 
+</dt><dd>(Integer, Input) - A workstation identifier. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>CI
+</dt><dd>(Integer, Input) - A color index.
+</dd><dt>CR
+</dt><dd>(Real, Input) - An intensity value for red between 0. and 1. inclusive.
+</dd><dt>CG
+</dt><dd>(Real, Input) - An intensity value for green between 0. and 1. inclusive.
+</dd><dt>CB
+</dt><dd>(Real, Input) - An intensity value for blue between 0. and 1. inclusive.</dd></dl><h2>Usage</h2>Color in GKS is &quot;indexed&quot;, i.e. color attributes are assigned to primitives by using a color index. The GKS function GSCR is used to associate a color value with color indices. 
 
  It is recommended that all color indices used in a given job be defined prior to calling any output primitive. Since the result of a dynamic color change can be ambiguous, it is also recommended that GSCR not be called to change a color value after the original definitions. 
 

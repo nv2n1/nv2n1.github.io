@@ -15,11 +15,11 @@ find_next_best_node - find the next node that should appear in a given node's fa
 <h2>Arguments</h2>
 
 <i>node</i>
-<dl><dd><dd>node whose fallback list we're appending</dl>
+<dl><dd></dd><dd>node whose fallback list we're appending</dd></dl>
  
 
  <i>used_node_mask</i>
-<dl><dd>nodemask_t of already used nodes</dl>
+<dl><dd>nodemask_t of already used nodes</dd></dl>
 
 <h2>Description</h2>
 

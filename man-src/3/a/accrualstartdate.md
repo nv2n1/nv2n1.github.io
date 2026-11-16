@@ -54,12 +54,12 @@ description: "QuantLib::Coupon – coupon accruing over a fixed period"
 <h3><code>Coupon</code> (<code>Real</code> nominal, const <code>Date</code> &amp; paymentDate, const <code>Date</code> &amp; accrualStartDate, const <code>Date</code> &amp; accrualEndDate, const <code>Date</code> &amp; refPeriodStart = <code>Date</code>(), const <code>Date</code> &amp; refPeriodEnd = <code>Date</code>())</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>the coupon does not adjust the payment date which must already be a business day.</dl>
+<dd>the coupon does not adjust the payment date which must already be a business day.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Date</code> date () const [virtual]</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>This is inheriited from the event class</dl>
+<dd>This is inheriited from the event class</dd></dl>
 <p> Implements <code>CashFlow</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

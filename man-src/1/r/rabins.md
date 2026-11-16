@@ -34,129 +34,116 @@ description: "rabins – process argus(8) data within specified bins."
 <h2>RABINS SPECIFIC OPTIONS</h2>
 <p> <code>rabins</code>, like all ra based clients, supports a number of <code>ra options</code> including remote data access, reading from multiple files and filtering of input argus records through a terminating filter expression. Rabins also provides all the functions of <code>racluster.1</code> and <code>rasplit.1</code>, for processing and outputing data. <code>rabins</code> specific options are: </p>
 <dl>
-<dt><code>-B</code><i> secs</i></p>
-<dd> Holding time in seconds before closing a bin and outputing its contents.</dl>
+<dt><code>-B</code><i> secs</i></dt>
+<dd> Holding time in seconds before closing a bin and outputing its contents.</dd></dl>
 <dl>
-<dt><code>-M</code><i> splitmode</i></p>
-<dd> Supported spliting modes are:</dl>
+<dt><code>-M</code><i> splitmode</i></dt>
+<dd> Supported spliting modes are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>time &lt;n[smhdwMy]&gt;</code></p>
-<dd> bin records into time slots of n size. This is used for time series analytics, especially graphing. Records, by default are split, so that their timestamps do not span the time range specified. Metrics are uniformly distributed among the resulting records.</p>
-<dt><code>count &lt;n[kmb]&gt;</code></p>
-<dd> bin records into chunks based on the number of records. This is used for archive management and parallel processing analytics, to limit the size of data processing to fixed numbers of records.</p>
-<dt><code>size &lt;n[kmb]&gt;</code></p>
-<dd> bin records into chunks based on the number of total bytes. This is used for archive management and parallel processing analytics, to limit the size of data processing to fixed byte limitations.</dl>
+<dt><code>time &lt;n[smhdwMy]&gt;</code></dt>
+<dd> bin records into time slots of n size. This is used for time series analytics, especially graphing. Records, by default are split, so that their timestamps do not span the time range specified. Metrics are uniformly distributed among the resulting records.</dd>
+<dt><code>count &lt;n[kmb]&gt;</code></dt>
+<dd> bin records into chunks based on the number of records. This is used for archive management and parallel processing analytics, to limit the size of data processing to fixed numbers of records.</dd>
+<dt><code>size &lt;n[kmb]&gt;</code></dt>
+<dd> bin records into chunks based on the number of total bytes. This is used for archive management and parallel processing analytics, to limit the size of data processing to fixed byte limitations.</dd></dl>
 </dl>
 <dl>
-<dt><code>-M</code><i> modes</i></p>
-<dd> Supported processing modes are:</dl>
+<dt><code>-M</code><i> modes</i></dt>
+<dd> Supported processing modes are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>hard</code></p>
-<dd> split on hard time boundaries. Each flow records start and stop times will be the time boundary times. The default is to use the original start and stop timestamps from the records that make up the resulting aggregation.</p>
-<dt><code>nomodify</code></p>
-<dd> Do not split the record when including it into a time bin. This allows a time bin to represent times outside of its defintion. This option should not be used with the &#8216;hard&#8217; option, as you will modify metrics and semantics.</dl>
+<dt><code>hard</code></dt>
+<dd> split on hard time boundaries. Each flow records start and stop times will be the time boundary times. The default is to use the original start and stop timestamps from the records that make up the resulting aggregation.</dd>
+<dt><code>nomodify</code></dt>
+<dd> Do not split the record when including it into a time bin. This allows a time bin to represent times outside of its defintion. This option should not be used with the &#8216;hard&#8217; option, as you will modify metrics and semantics.</dd></dl>
 </dl>
 <dl>
-<dt><code>-m</code><i> aggregation object</i></p>
-<dd> Supported aggregation objects are:</dl>
+<dt><code>-m</code><i> aggregation object</i></dt>
+<dd> Supported aggregation objects are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>none</code></p>
-<dd> use a null flow key.</p>
-<dt><code>srcid</code></p>
-<dd> argus source identifier.</p>
-<dt><code>smac</code></p>
-<dd> source mac(ether) addr.</p>
-<dt><code>dmac</code></p>
-<dd> destination mac(ether) addr.</p>
-<dt><code>soui</code></p>
-<dd> oui portion of the source mac(ether) addr.</p>
-<dt><code>doui</code></p>
-<dd> oui portion of the destination mac(ether) addr.</p>
-<dt><code>smpls</code></p>
-<dd> source mpls label.</p>
-<dt><code>dmpls</code></p>
-<dd> destination label addr.</p>
-<dt><code>svlan</code></p>
-<dd> source vlan label.</p>
-<dt><code>dvlan</code></p>
-<dd> destination vlan addr.</p>
-<dt><code>saddr/[l|m]</code></p>
-<dd> source IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>daddr/[l|m]</code></p>
-<dd> destination IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>matrix/l</code></p>
-<dd> sorted src and dst IP addr/cidr len.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>dport</code></p>
-<dd> destination port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>stcpb</code></p>
-<dd> src -&gt; dst TCP base sequence number.</p>
-<dt><code>dtcpb</code></p>
-<dd> dst -&gt; src TCP base sequence number.</p>
-<dt><code>inode[/l|m]]</code></p>
-<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</p>
-<dt><code>sco</code></p>
-<dd> source ARIN country code, if present.</p>
-<dt><code>dco</code></p>
-<dd> destination ARIN country code, if present.</p>
-<dt><code>sas</code></p>
-<dd> source node origin AS number, if available.</p>
-<dt><code>das</code></p>
-<dd> destination node origin AS number, if available.</p>
-<dt><code>ias</code></p>
-<dd> intermediate node origin AS number, if available.</dl>
+<dt><code>none</code></dt>
+<dd> use a null flow key.</dd>
+<dt><code>srcid</code></dt>
+<dd> argus source identifier.</dd>
+<dt><code>smac</code></dt>
+<dd> source mac(ether) addr.</dd>
+<dt><code>dmac</code></dt>
+<dd> destination mac(ether) addr.</dd>
+<dt><code>soui</code></dt>
+<dd> oui portion of the source mac(ether) addr.</dd>
+<dt><code>doui</code></dt>
+<dd> oui portion of the destination mac(ether) addr.</dd>
+<dt><code>smpls</code></dt>
+<dd> source mpls label.</dd>
+<dt><code>dmpls</code></dt>
+<dd> destination label addr.</dd>
+<dt><code>svlan</code></dt>
+<dd> source vlan label.</dd>
+<dt><code>dvlan</code></dt>
+<dd> destination vlan addr.</dd>
+<dt><code>saddr/[l|m]</code></dt>
+<dd> source IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>daddr/[l|m]</code></dt>
+<dd> destination IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>matrix/l</code></dt>
+<dd> sorted src and dst IP addr/cidr len.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>stcpb</code></dt>
+<dd> src -&gt; dst TCP base sequence number.</dd>
+<dt><code>dtcpb</code></dt>
+<dd> dst -&gt; src TCP base sequence number.</dd>
+<dt><code>inode[/l|m]]</code></dt>
+<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</dd>
+<dt><code>sco</code></dt>
+<dd> source ARIN country code, if present.</dd>
+<dt><code>dco</code></dt>
+<dd> destination ARIN country code, if present.</dd>
+<dt><code>sas</code></dt>
+<dd> source node origin AS number, if available.</dd>
+<dt><code>das</code></dt>
+<dd> destination node origin AS number, if available.</dd>
+<dt><code>ias</code></dt>
+<dd> intermediate node origin AS number, if available.</dd></dl>
 </dl>
 <dl>
-<dt><code>-P</code><i> sort field</i></p>
-<dd> <code>Rabins</code> can sort its output based on a sort field specification. Because the <code>-m</code> option is used for aggregation fields, <code>-P</code> is used to specify the print priority order. See <code><a href="/docs/linux/man/1-rasort/">rasort</a>(1)</code> for the list of sortable fields. </p>
-<dt><code>-w</code><i> filename</i></p>
-<dd> <code>Rabins</code> supports an extended <i>-w</i> option that allows for output record contents to be inserted into the output filename. Specified using &#8216;$&#8217; (dollar) notation, any printable field can be used. Care should be taken to honor any shell escape requirements when specifying on the command line. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for the list of printable fields. </p>
+<dt><code>-P</code><i> sort field</i></dt>
+<dd> <code>Rabins</code> can sort its output based on a sort field specification. Because the <code>-m</code> option is used for aggregation fields, <code>-P</code> is used to specify the print priority order. See <code><a href="/docs/linux/man/1-rasort/">rasort</a>(1)</code> for the list of sortable fields. </dd>
+<dt><code>-w</code><i> filename</i></dt>
+<dd> <code>Rabins</code> supports an extended <i>-w</i> option that allows for output record contents to be inserted into the output filename. Specified using &#8216;$&#8217; (dollar) notation, any printable field can be used. Care should be taken to honor any shell escape requirements when specifying on the command line. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for the list of printable fields. </dd>
 <p> Another extended feature, when using <code>time</code> mode, <code>rabins</code> will process the supplied filename using <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code>, so that time fields can be inserted into the resulting output filename. </p>
 </dl>
 <h2>INVOCATION</h2>
 <p> This invocation aggregates <code>inputfile</code> based on 10 minute time boundaries. Input is split to fit within a 10 minute time boundary, and within those boundaries, argus records are aggregated. The resulting output its streamed to a single file. </p>
 <pre>
-   
    <code>rabins</code> -r * -M time 10m -w outputfile
-  
 </pre>
 <p> This next invocation aggregates <code>inputfiles</code> based on 5 minute time boundaries, and the output is written to 5 minute files. Input is split such that all records conform to hard 10 minute time boundaries, and within those boundaries, argus records are aggregated, in this case, based on IP address matrix. </p>
 <p> The resulting output its streamed to files that are named relative to the records output content, a prefix of <i>/matrix/%Y/%m/%d/argus.</i> and the suffixes <i>%H.%M.%S</i>. </p>
 <pre>
-   
    <code>rabins</code> -r * -M hard time 5m -m matrix -w &quot;/matrix/%Y/%m/%d/argus.%H.%M.%S&quot;
-  
 </pre>
 <p> This next invocation aggregates <code>input.stream</code> based on matrix/24 into 10 second time boundaries, holds the data for an additional 5 seconds after the time boundary has passed, and then prints the complete sorted contents of each bin to standard output. The output is printed at 10 second intervals, and the output is the content of the previous 10 sec time bin. This example is meant to provide, every 10 seconds, the summary of all Class C subnet activity seen. It is intended to run indefinately printing out aggregated summary records. By modifying the aggregation model, using the &quot;-f racluster.conf&quot; option, you can achieve a great deal of data reduction with a lot of semantic reporting. </p>
 <pre><code>
-
 % rabins - S localhost - m matrix / 24 - B 5s - M hard time 10s - p0 - s + 1trans - ipv4 StartTime Trans Proto SrcAddr Dir DstAddr SrcPkts DstPkts SrcBytes DstBytes State 2012 / 02 / 15.13 : 37 : 00 5 ip 192.168.0.0 / 24 &lt;-&gt;192.168.0.0 / 24 41 40 2860 12122 CON 2012 / 02 / 15.13 : 37 : 00 2 ip 192.168.0.0 / 24-&gt;224.0.0.0 / 24 2 0 319 0 INT[10 seconds pass] 2012 / 02 / 15.13 : 37 : 10 13 ip 192.168.0.0 / 24 &lt;-&gt;208.59.201.0 / 24 269 351 97886 398700 CON 2012 / 02 / 15.13 : 37 : 10 14 ip 192.168.0.0 / 24 &lt;-&gt;192.168.0.0 / 24 86 92 7814 46800 CON 2012 / 02 / 15.13 : 37 : 10 1 ip 17.172.224.0 / 24 &lt;-&gt;192.168.0.0 / 24 52 37 68125 4372 CON 2012 / 02 / 15.13 : 37 : 10 1 ip 192.168.0.0 / 24 &lt;-&gt;199.7.55.0 / 24 7 7 784 2566 CON 2012 / 02 / 15.13 : 37 : 10 1 ip 184.85.13.0 / 24 &lt;-&gt;192.168.0.0 / 24 6 5 3952 2204 CON 2012 / 02 / 15.13 : 37 : 10 2 ip 66.235.132.0 / 24 &lt;-&gt;192.168.0.0 / 24 5 6 915 3732 CON 2012 / 02 / 15.13 : 37 : 10 1 ip 74.125.226.0 / 24 &lt;-&gt;192.168.0.0 / 24 3 4 709 888 CON 2012 / 02 / 15.13 : 37 : 10 3 ip 66.39.3.0 / 24 &lt;-&gt;192.168.0.0 / 24 3 3 369 198 CON 2012 / 02 / 15.13 : 37 : 10 1 ip 192.168.0.0 / 24 &lt;-&gt;205.188.1.0 / 24 1 1 54 356 CON[10 seconds pass] 2012 / 02 / 15.13 : 37 : 20 6 ip 192.168.0.0 / 24 &lt;-&gt;208.59.201.0 / 24 392 461 60531 623894 CON 2012 / 02 / 15.13 : 37 : 20 8 ip 192.168.0.0 / 24 &lt;-&gt;192.168.0.0 / 24 95 111 6948 93536 CON 2012 / 02 / 15.13 : 37 : 20 3 ip 72.14.204.0 / 24 &lt;-&gt;192.168.0.0 / 24 38 32 38568 4414 CON 2012 / 02 / 15.13 : 37 : 20 1 ip 17.112.156.0 / 24 &lt;-&gt;192.168.0.0 / 24 26 13 21798 7116 CON 2012 / 02 / 15.13 : 37 : 20 2 ip 66.235.132.0 / 24 &lt;-&gt;192.168.0.0 / 24 6 3 1232 4450 CON 2012 / 02 / 15.13 : 37 : 20 1 ip 66.235.133.0 / 24 &lt;-&gt;192.168.0.0 / 24 1 2 82 132 CON[10 seconds pass] 2012 / 02 / 15.13 : 37 : 30 117 ip 192.168.0.0 / 24 &lt;-&gt;208.59.201.0 / 24 697 663 369769 134382 CON 2012 / 02 / 15.13 : 37 : 30 11 ip 192.168.0.0 / 24 &lt;-&gt;192.168.0.0 / 24 147 187 11210 193253 CON 2012 / 02 / 15.13 : 37 : 30 1 ip 184.85.13.0 / 24 &lt;-&gt;192.168.0.0 / 24 13 9 13408 9031 CON 2012 / 02 / 15.13 : 37 : 30 2 ip 66.235.132.0 / 24 &lt;-&gt;192.168.0.0 / 24 8 7 1920 11563 CON 2012 / 02 / 15.13 : 37 : 30 1 ip 192.168.0.0 / 24 &lt;-&gt;207.46.193.0 / 24 5 3 802 562 CON 2012 / 02 / 15.13 : 37 : 30 1 ip 17.112.156.0 / 24 &lt;-&gt;192.168.0.0 / 24 5 2 646 3684 CON 2012 / 02 / 15.13 : 37 : 30 2 ip 192.168.0.0 / 24-&gt;224.0.0.0 / 24 2 0 382 0 REQ[10 seconds pass]
 </code></pre>
 <p> This next invocation reads IP <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and processes, the <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data stream based on input byte size of no greater than 1 Megabyte. The resulting output stream is written to a single <i>argus.out</i> data file. </p>
 <pre>
- 
    <code>rabins</code> -r argusfile -M size 1m -s +1dur -m proto -w argus.out - ip
- 
 </pre>
 <p> This invocation reads IP <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and aggregates the <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data stream based on input file size of no greater than 1K flows. The resulting output stream is printed to the screen as standard argus records. </p>
 <pre>

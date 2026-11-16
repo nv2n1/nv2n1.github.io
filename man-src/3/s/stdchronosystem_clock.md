@@ -20,15 +20,10 @@ The epoch of system_clock is unspecified, but most implementations use Unix Time
 system_clock measures Unix Time (i.e., time since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970, not counting leap seconds). <i>(since C++20)</i><br />
 Time point family </p>
 <pre><code>Defined in namespace std::chrono
-
 template&lt;class Duration&gt;                                                        (since C++20)
-
 using sys_time = std::chrono::time_point&lt;std::chrono::system_clock, Duration&gt;;
-
 using sys_seconds = sys_time&lt;std::chrono::seconds&gt;;                             (since C++20)
-
 using sys_days = sys_time&lt;std::chrono::days&gt;;                                   (since C++20)
-
 </code></pre>
 <p>operator&lt;&lt;_(std::chrono::sys_time) performs stream output on a sys_time<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />

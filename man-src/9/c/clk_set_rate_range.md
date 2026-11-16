@@ -15,15 +15,15 @@ clk_set_rate_range - set a rate range for a clock source
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock source</dl>
+<dl><dd></dd><dd>clock source</dd></dl>
  
 
  <i>min</i>
-<dl><dd>desired minimum clock rate in Hz, inclusive</dl>
+<dl><dd>desired minimum clock rate in Hz, inclusive</dd></dl>
  
 
  <i>max</i>
-<dl><dd>desired maximum clock rate in Hz, inclusive</dl>
+<dl><dd>desired maximum clock rate in Hz, inclusive</dd></dl>
 
 <h2>Description</h2>
 

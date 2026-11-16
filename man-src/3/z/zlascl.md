@@ -23,10 +23,10 @@ description: "zlascl.f –"
  result CTO*A(I,J)/CFROM does not over/underflow. TYPE specifies that
  A may be full, upper triangular, lower triangular, upper Hessenberg,
  or banded.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TYPE</i> </p>
+<dd><i>TYPE</i> </dd>
 <pre> TYPE is CHARACTER*1
  TYPE indices the storage type of the input matrix.
  = 'G': A is a full matrix.
@@ -77,13 +77,13 @@ description: "zlascl.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 140 of file zlascl.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

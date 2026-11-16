@@ -15,7 +15,7 @@ shrink_dcache_sb - shrink dcache for a superblock
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>superblock</dl>
+<dl><dd></dd><dd>superblock</dd></dl>
 
 <h2>Description</h2>
 

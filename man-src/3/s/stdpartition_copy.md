@@ -10,41 +10,23 @@ description: "std::partition_copy – std::partition_copy"
 <p>std::partition_copy &#8211; std::partition_copy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class OutputIt1,
-
 class OutputIt2, class UnaryPredicate &gt;
-
 std::pair&lt;OutputIt1, OutputIt2&gt;                                                      (since C++11)
-
 partition_copy( InputIt first, InputIt last,                                         (until C++20)
-
 OutputIt1 d_first_true, OutputIt2 d_first_false,
-
 UnaryPredicate p );
-
 template&lt; class InputIt, class OutputIt1,
-
 class OutputIt2, class UnaryPredicate &gt;
-
 constexpr std::pair&lt;OutputIt1, OutputIt2&gt;                                    (1)     (since C++20)
-
 partition_copy( InputIt first, InputIt last,
-
 OutputIt1 d_first_true, OutputIt2 d_first_false,
-
 UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class ForwardIt3, class UnaryPredicate &gt;
-
 std::pair&lt;ForwardIt2, ForwardIt3&gt;                                                (2) (since C++17)
-
 partition_copy( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,
-
 ForwardIt2 d_first_true, ForwardIt3 d_first_false,
-
 UnaryPredicate p );</code></pre>
 <p>1) Copies the elements from the range [first, last) to two different ranges depending on the value returned by the predicate p. The elements that satisfy the predicate p are copied to the range beginning at d_first_true. The rest of the elements are copied to the range beginning at d_first_false.<br />
 The behavior is undefined if the input range overlaps either of the output ranges.<br />
@@ -101,12 +83,9 @@ For the overload with an ExecutionPolicy, there may be a performance cost if For
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;utility&gt;
 int main()
-
 {
     int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int true_arr[5] = {0};

@@ -28,7 +28,7 @@ description: "globus_gass_transfer_request_proto_s –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_request_ready()</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_request_ready()</code></dd></dl>
 <h2>Field Documentation</h2>
 <h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::authorize</h3>
 <p> Authorize a request.</p>
@@ -44,7 +44,7 @@ description: "globus_gass_transfer_request_proto_s –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_gass_transfer_proto_recv_t</dl>
+</dt><dd> globus_gass_transfer_proto_recv_t</dd></dl>
 <h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::refer</h3>
 <p> Refer a request.</p>
 <h3><code>globus_gass_transfer_proto_send_t</code> globus_gass_transfer_request_proto_s::send_buffer</h3>
@@ -52,9 +52,9 @@ description: "globus_gass_transfer_request_proto_s –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_proto_send_t</code></dl>
+</dt><dd> <code>globus_gass_transfer_proto_send_t</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

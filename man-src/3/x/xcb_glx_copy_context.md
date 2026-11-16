@@ -10,25 +10,20 @@ description: "xcb_glx_copy_context –"
 <p>xcb_glx_copy_context &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/glx.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_glx_copy_context(xcb_connection_t *conn, xcb_glx_context_t src, xcb_glx_context_t dest, uint32_t mask, xcb_glx_context_tag_t src_context_tag);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>src</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>dest</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>src_context_tag</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>src</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>dest</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>src_context_tag</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

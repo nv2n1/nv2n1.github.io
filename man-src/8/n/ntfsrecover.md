@@ -16,40 +16,40 @@ description: "ntfsrecover – Recover updates committed by Windows on an NTFS vo
 <p>Below is a summary of all the options that <code>ntfsrecover</code> accepts. The normal usage is to use no option at all, as most of these options are oriented towards developers needs. </p>
 <p> Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-bv</code> is equivalent to <code>-b -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;backward</code></p>
-<dd>Examine the actions described in the logfile backward from the latest one to the earliest one without applying any update. This may encompass records generated during several sessions, and when Windows is restarted, it often does not restart writing where it ended the previous session, so this leads to errors and bad sequencing when examining the full log file.</p>
-<dt><code>-c</code>, <code>&#8211;clusters</code> <code>CLUSTER-RANGE</code></p>
-<dd>Restrict the output generated when using options -b -f -u -p to the actions operating on a cluster within the given cluster range. CLUSTER-RANGE is defined by the first and last cluster numbers separated by a hyphen, for instance 100-109 or 0x3e8-0x3ff. A single number means restricting to a single cluster. The first four log blocks have a special role and they are always shown.</p>
-<dt><code>-f</code>, <code>&#8211;forward</code> <code>NUM</code></p>
-<dd>Examine the actions described in the logfile forward from the first one to the last one without applying any update. As the log file is reused circularly, the first one is generally not the earliest. Moreover when Windows is restarted, it often does not restart writing where it ended the previous sessions, and this leads to errors when examining a log file generated during several sessions.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show some help information.</p>
-<dt><code>-k</code>, <code>&#8211;kill-fast-restart</code></p>
-<dd>When Windows has been interrupted with fast restart mode activated, part of pending changes are kept in the Windows cache and only the same Windows version can recover them. This option can be used to apply the changes recorded in the log file and drop the ones in the Windows cache. This is dangerous and may cause loss of data.</p>
-<dt><code>-n</code>, <code>&#8211;no-action</code></p>
-<dd>Do not apply any modification, useful when using the options -p, -s or -u.</p>
-<dt><code>-p</code>, <code>&#8211;play</code> <code>COUNT</code></p>
-<dd>Undo COUNT transaction sets and redo a single one, a transaction set being all transactions between two consecutive checkpoints. This is useful for replaying some transaction in the past. As a few actions are not undoable, this is not always possible.</p>
-<dt><code>-r</code>, <code>&#8211;range</code> <code>BLOCK-RANGE</code></p>
-<dd>Examine the actions described in the logfile forward restricted to the requested log file block range without applying any update. The first four log blocks have a special role and they are always examined.</p>
-<dt><code>-s</code>, <code>&#8211;sync</code></p>
-<dd>Sync the file system by applying the committed actions which have not been synced previously. This is the default option, used when none of the options -n, -f, -r, -p and -u are present. </p>
+<dt><code>-b</code>, <code>&#8211;backward</code></dt>
+<dd>Examine the actions described in the logfile backward from the latest one to the earliest one without applying any update. This may encompass records generated during several sessions, and when Windows is restarted, it often does not restart writing where it ended the previous session, so this leads to errors and bad sequencing when examining the full log file.</dd>
+<dt><code>-c</code>, <code>&#8211;clusters</code> <code>CLUSTER-RANGE</code></dt>
+<dd>Restrict the output generated when using options -b -f -u -p to the actions operating on a cluster within the given cluster range. CLUSTER-RANGE is defined by the first and last cluster numbers separated by a hyphen, for instance 100-109 or 0x3e8-0x3ff. A single number means restricting to a single cluster. The first four log blocks have a special role and they are always shown.</dd>
+<dt><code>-f</code>, <code>&#8211;forward</code> <code>NUM</code></dt>
+<dd>Examine the actions described in the logfile forward from the first one to the last one without applying any update. As the log file is reused circularly, the first one is generally not the earliest. Moreover when Windows is restarted, it often does not restart writing where it ended the previous sessions, and this leads to errors when examining a log file generated during several sessions.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show some help information.</dd>
+<dt><code>-k</code>, <code>&#8211;kill-fast-restart</code></dt>
+<dd>When Windows has been interrupted with fast restart mode activated, part of pending changes are kept in the Windows cache and only the same Windows version can recover them. This option can be used to apply the changes recorded in the log file and drop the ones in the Windows cache. This is dangerous and may cause loss of data.</dd>
+<dt><code>-n</code>, <code>&#8211;no-action</code></dt>
+<dd>Do not apply any modification, useful when using the options -p, -s or -u.</dd>
+<dt><code>-p</code>, <code>&#8211;play</code> <code>COUNT</code></dt>
+<dd>Undo COUNT transaction sets and redo a single one, a transaction set being all transactions between two consecutive checkpoints. This is useful for replaying some transaction in the past. As a few actions are not undoable, this is not always possible.</dd>
+<dt><code>-r</code>, <code>&#8211;range</code> <code>BLOCK-RANGE</code></dt>
+<dd>Examine the actions described in the logfile forward restricted to the requested log file block range without applying any update. The first four log blocks have a special role and they are always examined.</dd>
+<dt><code>-s</code>, <code>&#8211;sync</code></dt>
+<dd>Sync the file system by applying the committed actions which have not been synced previously. This is the default option, used when none of the options -n, -f, -r, -p and -u are present. </dd>
 <p> The option -s can be repeated to request applying the committed actions mentioned in the obsolete restart page. This is useful for testing the situations where the latest restart page cannot be read though it can actually be read.</p>
-<dt><code>-t</code>, <code>&#8211;transactions</code> <code>COUNT</code></p>
-<dd>Display the transaction parameters when examining the log file with one of the options &#8211;forward, &#8211;backward or &#8211;range.</p>
-<dt><code>-u</code>, <code>&#8211;undo</code> <code>COUNT</code></p>
-<dd>Undo COUNT transaction sets, thus resetting the file system to some checkpoint in the past, a transaction set being all transactions between two consecutive checkpoints. As a few actions are not undoable, this is not always possible.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages. This option may be used twice to display even more information.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license of <code>ntfsrecover</code>.</dl>
+<dt><code>-t</code>, <code>&#8211;transactions</code> <code>COUNT</code></dt>
+<dd>Display the transaction parameters when examining the log file with one of the options &#8211;forward, &#8211;backward or &#8211;range.</dd>
+<dt><code>-u</code>, <code>&#8211;undo</code> <code>COUNT</code></dt>
+<dd>Undo COUNT transaction sets, thus resetting the file system to some checkpoint in the past, a transaction set being all transactions between two consecutive checkpoints. As a few actions are not undoable, this is not always possible.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages. This option may be used twice to display even more information.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license of <code>ntfsrecover</code>.</dd></dl>
 <h2>Examples</h2>
 <p>Sync an NTFS volume on /dev/sda1.</p>
 <dl>
-<dd><code>ntfsrecover -s /dev/sda1</code></dl>
+<dd><code>ntfsrecover -s /dev/sda1</code></dd></dl>
 <p> Display all actions which updated a cluster in range 100 to 119 :</p>
 <dl>
-<dd><code>ntfsrecover &#8211;verbose &#8211;backward &#8211;clusters=100-119 /dev/sda1</code> </p>
+<dd><code>ntfsrecover &#8211;verbose &#8211;backward &#8211;clusters=100-119 /dev/sda1</code> </dd>
 <h2>Bugs</h2>
 <p>If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -60,3 +60,4 @@ description: "ntfsrecover – Recover updates committed by Windows on an NTFS vo
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfsfix/">ntfsfix</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+</dl>

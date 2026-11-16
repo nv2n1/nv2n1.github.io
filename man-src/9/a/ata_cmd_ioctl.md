@@ -14,10 +14,10 @@ description: "ata_cmd_ioctl – Handler for HDIO_DRIVE_CMD ioctl"
 <p><i>scsidev</i></p>
 <dl>
 <dd>
-<dd>Device to which we are issuing command</dl>
+</dd><dd>Device to which we are issuing command</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>User provided data for issuing command</dl>
+<dd>User provided data for issuing command</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: Defined by the SCSI layer. We don&#8217;t really care.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "ata_cmd_ioctl – Handler for HDIO_DRIVE_CMD ioctl"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

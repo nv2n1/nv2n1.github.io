@@ -48,7 +48,7 @@ url: "/docs/linux/man/1-beakerlib-journal/"
 </pre>
 <dl>
 <dt>type
-<dd> Can be either 'raw' or 'pretty', with the latter as a default. Raw: xml is in raw form, no indentation etc Pretty: xml is pretty printed, indented, with one record per line</dl>
+</dt><dd> Can be either 'raw' or 'pretty', with the latter as a default. Raw: xml is in raw form, no indentation etc Pretty: xml is pretty printed, indented, with one record per line</dd></dl>
  
 
  Example: 
@@ -92,7 +92,7 @@ url: "/docs/linux/man/1-beakerlib-journal/"
 </pre>
 <dl>
 <dt>--full-journal
-<dd> With this option, additional items like some <font SIZE="-1">HW</font> information will be printed in the journal.</dl>
+</dt><dd> With this option, additional items like some <font SIZE="-1">HW</font> information will be printed in the journal.</dd></dl>
  
 
  Example: 
@@ -149,15 +149,14 @@ url: "/docs/linux/man/1-beakerlib-journal/"
 
 <dl>
 <dt>&bull;
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
-<dt>&bull;
-<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
-<dt>&bull;
-<dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
-<dt>&bull;
-<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

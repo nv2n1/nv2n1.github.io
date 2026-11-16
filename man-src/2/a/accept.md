@@ -29,46 +29,46 @@ int accept4(int sockfd, struct sockaddr *addr,
 <p> In order to be notified of incoming connections on a socket, you can use <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), or <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). A readable event will be delivered when a new connection is attempted and you may then call <code>accept</code>() to get a socket for that connection. Alternatively, you can set the socket to deliver <code>SIGIO</code> when activity occurs on a socket; see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) for details. </p>
 <p> If <i>flags</i> is 0, then <code>accept4</code>() is the same as <code>accept</code>(). The following values can be bitwise ORed in <i>flags</i> to obtain different behavior:</p>
 <dl>
-<dt><code>SOCK_NONBLOCK</code></p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</p>
-<dt><code>SOCK_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dl>
+<dt><code>SOCK_NONBLOCK</code></dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd>
+<dt><code>SOCK_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, these system calls return a file descriptor for the accepted socket (a nonnegative integer). On error, -1 is returned, <i>errno</i> is set appropriately, and <i>addrlen</i> is left unchanged.</p>
 <h3>Error handling</h3>
 <p> Linux <code>accept</code>() (and <code>accept4</code>()) passes already-pending network errors on the new socket as an error code from <code>accept</code>(). This behavior differs from other BSD socket implementations. For reliable operation the application should detect the network errors defined for the protocol after <code>accept</code>() and treat them like <code>EAGAIN</code> by retrying. In the case of TCP/IP, these are <code>ENETDOWN</code>, <code>EPROTO</code>, <code>ENOPROTOOPT</code>, <code>EHOSTDOWN</code>, <code>ENONET</code>, <code>EHOSTUNREACH</code>, <code>EOPNOTSUPP</code>, and <code>ENETUNREACH</code>.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></p>
-<dd> The socket is marked nonblocking and no connections are present to be accepted. POSIX.1-2001 and POSIX.1-2008 allow either error to be returned for this case, and do not require these constants to have the same value, so a portable application should check for both possibilities.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>sockfd</i> is not an open file descriptor.</p>
-<dt><code>ECONNABORTED</code></p>
-<dd> A connection has been aborted.</p>
-<dt><code>EFAULT</code></p>
-<dd> The <i>addr</i> argument is not in a writable part of the user address space.</p>
-<dt><code>EINTR</code></p>
-<dd> The system call was interrupted by a signal that was caught before a valid connection arrived; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> Socket is not listening for connections, or <i>addrlen</i> is invalid (e.g., is negative).</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>accept4</code>()) invalid value in <i>flags</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOBUFS</code>, <code>ENOMEM</code></p>
-<dd> Not enough free memory. This often means that the memory allocation is limited by the socket buffer limits, not by the system memory.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The referenced socket is not of type <code>SOCK_STREAM</code>.</p>
-<dt><code>EPROTO</code></p>
-<dd> Protocol error.</dl>
+<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></dt>
+<dd> The socket is marked nonblocking and no connections are present to be accepted. POSIX.1-2001 and POSIX.1-2008 allow either error to be returned for this case, and do not require these constants to have the same value, so a portable application should check for both possibilities.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>sockfd</i> is not an open file descriptor.</dd>
+<dt><code>ECONNABORTED</code></dt>
+<dd> A connection has been aborted.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The <i>addr</i> argument is not in a writable part of the user address space.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The system call was interrupted by a signal that was caught before a valid connection arrived; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Socket is not listening for connections, or <i>addrlen</i> is invalid (e.g., is negative).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>accept4</code>()) invalid value in <i>flags</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOBUFS</code>, <code>ENOMEM</code></dt>
+<dd> Not enough free memory. This often means that the memory allocation is limited by the socket buffer limits, not by the system memory.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The referenced socket is not of type <code>SOCK_STREAM</code>.</dd>
+<dt><code>EPROTO</code></dt>
+<dd> Protocol error.</dd></dl>
 <p> In addition, Linux <code>accept</code>() may fail if:</p>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> Firewall rules forbid connection.</dl>
+<dt><code>EPERM</code></dt>
+<dd> Firewall rules forbid connection.</dd></dl>
 <p> In addition, network errors for the new socket and as defined for the protocol may be returned. Various Linux kernels can return other errors such as <code>ENOSR</code>, <code>ESOCKTNOSUPPORT</code>, <code>EPROTONOSUPPORT</code>, <code>ETIMEDOUT</code>. The value <code>ERESTARTSYS</code> may be seen during a trace.</p>
 <h2>VERSIONS</h2>
 <p> The <code>accept4</code>() system call is available starting with Linux 2.6.28; support in glibc is available starting with version 2.10.</p>

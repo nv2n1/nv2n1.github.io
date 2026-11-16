@@ -14,15 +14,15 @@ description: "ata_tf_from_fis – Convert SATA FIS to ATA taskfile"
 <p><i>fis</i></p>
 <dl>
 <dd>
-<dd>Buffer from which data will be input</dl>
+</dd><dd>Buffer from which data will be input</dd></dl>
 <p> <i>tf</i></p>
 <dl>
-<dd>Taskfile to output</dl>
+<dd>Taskfile to output</dd></dl>
 <h2>Description</h2>
 <p>Converts a serial ATA FIS structure to a standard ATA taskfile. </p>
 <p> LOCKING: Inherited from caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

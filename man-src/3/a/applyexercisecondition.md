@@ -27,7 +27,7 @@ description: "QuantLib::DiscretizedOption – Discretized option on a given asse
 <p>Discretized option on a given asset. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>it is advised that derived classes take care of creating and initializing themselves an instance of the underlying.</dl>
+<dd>it is advised that derived classes take care of creating and initializing themselves an instance of the underlying.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void reset (Size size) [virtual]</h3>
 <p>This method should initialize the asset values to an <code>Array</code> of the given size and with values depending on the particular asset. </p>
@@ -36,7 +36,7 @@ description: "QuantLib::DiscretizedOption – Discretized option on a given asse
 <p>This method returns the times at which the numerical method should stop while rolling back the asset. Typical examples include payment times, exercise times and such. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The returned values are not guaranteed to be sorted.</dl>
+<dd>The returned values are not guaranteed to be sorted.</dd></dl>
 <p> Implements <code>DiscretizedAsset</code>.</p>
 <h3>void postAdjustValuesImpl () [protected, virtual]</h3>
 <p>This method performs the actual post-adjustment </p>

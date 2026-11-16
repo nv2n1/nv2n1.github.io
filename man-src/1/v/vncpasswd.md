@@ -17,13 +17,13 @@ description: "vncpasswd – change the VNC password"
 <p> The password must be at least six characters long (unless the <code>-f</code> command-line option is used&#8211; see below), and only the first eight characters are significant. Note that the stored password is <code>not</code> encrypted securely &#8211; anyone who has access to this file can trivially find out the plain-text password, so <code>vncpasswd</code> always sets appropriate permissions (read and write only by the owner.) However, when accessing a VNC desktop, a challenge-response mechanism is used over the wire making it hard for anyone to crack the password simply by snooping on the network. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Filter mode. Read a plain-text password from stdin and write an encrypted version to stdout. Note that in filter mode, short or even empty passwords will be silently accepted. </p>
+<dt><code>-f</code></dt>
+<dd> Filter mode. Read a plain-text password from stdin and write an encrypted version to stdout. Note that in filter mode, short or even empty passwords will be silently accepted. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.vnc/passwd</p>
-<dd> Default location of the VNC password file. </p>
+<dt>$HOME/.vnc/passwd</dt>
+<dd> Default location of the VNC password file. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1) <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1),<br />

@@ -17,16 +17,16 @@ ALTER AGGREGATE <i>name</i> ( <i>type</i> [ , ... ] ) SET SCHEMA <i>new_schema</
 <p> You must own the aggregate function to use <code>ALTER AGGREGATE</code>. To change the schema of an aggregate function, you must also have CREATE privilege on the new schema. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have CREATE privilege on the aggregate function&#8217;s schema. (These restrictions enforce that altering the owner doesn&#8217;t do anything you couldn&#8217;t do by dropping and recreating the aggregate function. However, a superuser can alter ownership of any aggregate function anyway.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing aggregate function.</p>
-<dt><i>type</i></p>
-<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</p>
-<dt><i>new_name</i></p>
-<dd>The new name of the aggregate function.</p>
-<dt><i>new_owner</i></p>
-<dd>The new owner of the aggregate function.</p>
-<dt><i>new_schema</i></p>
-<dd>The new schema for the aggregate function.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing aggregate function.</dd>
+<dt><i>type</i></dt>
+<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</dd>
+<dt><i>new_name</i></dt>
+<dd>The new name of the aggregate function.</dd>
+<dt><i>new_owner</i></dt>
+<dd>The new owner of the aggregate function.</dd>
+<dt><i>new_schema</i></dt>
+<dd>The new schema for the aggregate function.</dd></dl>
 <h2>Examples</h2>
 <p>To rename the aggregate function myavg for type <code>integer</code> to my_average: </p>
 <pre>ALTER AGGREGATE myavg(integer) RENAME TO my_average;</pre>

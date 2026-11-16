@@ -23,17 +23,17 @@ url: "/docs/linux/man/1-molrender/"
 
 <dl>
 <dt>-model
-<dd> Must be followed by one of ball, stick, or connolly
-<dt>-render
-<dd> Must be followed by the argument oogl
-<dt>-pdb
-<dd> Indicates that the input is a PDB file
-<dt>-keyval
-<dd> Indicates that the input is a KeyVal input
-<dt>-keyword
-<dd> Must be followed by keyword to read in a KeyVal input
-<dt>-level
-<dd> Must be Followed by an integer which is the sphere subdivision level</dl>
+</dt><dd> Must be followed by one of ball, stick, or connolly
+</dd><dt>-render
+</dt><dd> Must be followed by the argument oogl
+</dd><dt>-pdb
+</dt><dd> Indicates that the input is a PDB file
+</dd><dt>-keyval
+</dt><dd> Indicates that the input is a KeyVal input
+</dd><dt>-keyword
+</dt><dd> Must be followed by keyword to read in a KeyVal input
+</dd><dt>-level
+</dt><dd> Must be Followed by an integer which is the sphere subdivision level</dd></dl>
  
 
  

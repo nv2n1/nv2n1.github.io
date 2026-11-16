@@ -16,17 +16,17 @@ description: "icestormadmin – The IceStorm administration tool."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/IceStorm+Administration">http://doc.zeroc.com/display/Ice/IceStorm+Administration</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Displays a help message. </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays the Ice version. </p>
-<dt><code>-e</code> <code>COMMANDS</code></p>
+ Displays a help message. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the Ice version. </dd>
+<dt><code>-e</code> <code>COMMANDS</code></dt>
 <dd>
- Execute COMMANDS. </p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
+ Execute COMMANDS. </dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
 <dd>
- Print debug messages. </p>
+ Print debug messages. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icestormmigrate/">icestormmigrate</a></code>(1) </p>

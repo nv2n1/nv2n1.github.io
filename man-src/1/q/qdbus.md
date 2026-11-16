@@ -15,21 +15,21 @@ description: "qdbus – a communication-interface for qt-based applications"
 <p> <code>qdbus</code> provides an interface to Qt-based applications communicating over D-Bus. See <a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a> for more information about the big picture. </p>
 <p> By default <code>qdbus</code> will list all service names of services that are running and you can manipulate at the moment. You can also manipulate and run several types of methods for each dbus-enabled application. </p>
 <dl>
-<dt><code>servicename</code></p>
-<dd> the service to connect to (e.g., org.freedesktop.DBus)</p>
-<dt><code>path</code></p>
-<dd> the path to the object (e.g., /)</p>
-<dt><code>method</code></p>
-<dd> the method to call, with or without the interface</p>
-<dt><code>args</code></p>
-<dd> arguments to pass to the call </p>
+<dt><code>servicename</code></dt>
+<dd> the service to connect to (e.g., org.freedesktop.DBus)</dd>
+<dt><code>path</code></dt>
+<dd> the path to the object (e.g., /)</dd>
+<dt><code>method</code></dt>
+<dd> the method to call, with or without the interface</dd>
+<dt><code>args</code></dt>
+<dd> arguments to pass to the call </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;system</code></p>
-<dd> connect to the system bus</p>
-<dt><code>&#8211;literal</code></p>
-<dd> print replies literally </p>
+<dt><code>&#8211;system</code></dt>
+<dd> connect to the system bus</dd>
+<dt><code>&#8211;literal</code></dt>
+<dd> print replies literally </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Here is an example of using <code>qdbus</code> to list all status information about a service:<br />

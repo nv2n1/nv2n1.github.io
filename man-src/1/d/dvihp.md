@@ -17,36 +17,36 @@ description: "dvihp – convert a TeX DVI file to Hewlett-Packard PCL"
 <h2>OPTIONS</h2>
 <p> Options are recognized from dvips where possible:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> print odd pages</p>
-<dt><code>-B</code></p>
-<dd> print even pages</p>
-<dt><code>-d</code> <i>n</i></p>
-<dd> set debug bits to <i>n</i> (see documentation)</p>
-<dt><code>-D</code> <i>n</i></p>
-<dd> set resolution to <i>n</i></p>
-<dt><code>-f</code></p>
-<dd> run as filter</p>
-<dt><code>-l</code> <i>n</i></p>
-<dd> don&#8217;t print pages after <i>n</i></p>
-<dt><code>-m</code></p>
-<dd> manual feed</p>
-<dt><code>-n</code> <i>n</i></p>
-<dd> print <i>n</i> pages</p>
-<dt><code>-O</code> <i>a</i>,<i>b</i></p>
-<dd> set/change paper offset to <i>a</i>,<i>b</i> mm.</p>
-<dt><code>-o</code> <i>s</i></p>
-<dd> output to <i>s</i> instead of spooling</p>
-<dt><code>-p</code> <i>n</i></p>
-<dd> don&#8217;t print pages before <i>n</i>.</p>
-<dt><code>-Ps</code></p>
-<dd> pass directly to lpr.</p>
-<dt><code>-v</code></p>
-<dd> verbose operation.</p>
-<dt><code>-x</code> <i>n</i></p>
-<dd> set magnification to <i>n</i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd> write usage summary.</dl>
+<dt><code>-A</code></dt>
+<dd> print odd pages</dd>
+<dt><code>-B</code></dt>
+<dd> print even pages</dd>
+<dt><code>-d</code> <i>n</i></dt>
+<dd> set debug bits to <i>n</i> (see documentation)</dd>
+<dt><code>-D</code> <i>n</i></dt>
+<dd> set resolution to <i>n</i></dd>
+<dt><code>-f</code></dt>
+<dd> run as filter</dd>
+<dt><code>-l</code> <i>n</i></dt>
+<dd> don&#8217;t print pages after <i>n</i></dd>
+<dt><code>-m</code></dt>
+<dd> manual feed</dd>
+<dt><code>-n</code> <i>n</i></dt>
+<dd> print <i>n</i> pages</dd>
+<dt><code>-O</code> <i>a</i>,<i>b</i></dt>
+<dd> set/change paper offset to <i>a</i>,<i>b</i> mm.</dd>
+<dt><code>-o</code> <i>s</i></dt>
+<dd> output to <i>s</i> instead of spooling</dd>
+<dt><code>-p</code> <i>n</i></dt>
+<dd> don&#8217;t print pages before <i>n</i>.</dd>
+<dt><code>-Ps</code></dt>
+<dd> pass directly to lpr.</dd>
+<dt><code>-v</code></dt>
+<dd> verbose operation.</dd>
+<dt><code>-x</code> <i>n</i></dt>
+<dd> set magnification to <i>n</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> write usage summary.</dd></dl>
 <p> Other options are passed to the dvilj program.</p>
 <h2>BUGS</h2>
 <p> Email bug reports to tex-k [at] tug.org.</p>

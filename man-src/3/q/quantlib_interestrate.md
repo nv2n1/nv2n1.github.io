@@ -51,7 +51,7 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p> This class encapsulate the interest rate compounding algebra. It manages day-counting conventions, compounding conventions, conversion between different conventions, discount/compound factor calculations, and implied/equivalent rate calculations. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>Converted rates are checked against known good results</dl>
+<dd>Converted rates are checked against known good results</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CallableBonds.cpp</code>, and <code>FittedBondCurve.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -59,13 +59,13 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p>discount factor implied by the rate compounded at time t. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Time must be measured using InterestRate&#8217;s own day counter.</dl>
+<dd>Time must be measured using InterestRate&#8217;s own day counter.</dd></dl>
 <h3>Real compoundFactor (<code>Time</code> t) const</h3>
 <p>compound factor implied by the rate compounded at time t. </p>
 <p> returns the compound (a.k.a capitalization) factor implied by the rate compounded at time t. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Time must be measured using InterestRate&#8217;s own day counter.</dl>
+<dd>Time must be measured using InterestRate&#8217;s own day counter.</dd></dl>
 <h3>Real compoundFactor (const <code>Date</code> &amp; d1, const <code>Date</code> &amp; d2, const <code>Date</code> &amp; refStart = <code>Date</code>(), const <code>Date</code> &amp; refEnd = <code>Date</code>()) const</h3>
 <p>compound factor implied by the rate compounded between two dates </p>
 <p> returns the compound (a.k.a capitalization) factor implied by the rate compounded between two dates.</p>
@@ -74,7 +74,7 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p> The resulting <code>InterestRate</code> has the day-counter provided as input. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Time must be measured using the day-counter provided as input.</dl>
+<dd>Time must be measured using the day-counter provided as input.</dd></dl>
 <h3>static <code>InterestRate</code> impliedRate (Real compound, const <code>Date</code> &amp; d1, const <code>Date</code> &amp; d2, const <code>DayCounter</code> &amp; resultDC, Compounding comp, <code>Frequency</code> freq = Annual) [static]</h3>
 <p>implied rate for a given compound factor between two dates. </p>
 <p> The resulting rate is calculated taking the required day-counting rule into account.</p>
@@ -83,7 +83,7 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p> The resulting <code>InterestRate</code> shares the same implicit day-counting rule of the original <code>InterestRate</code> instance. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Time must be measured using the InterestRate&#8217;s own day counter.</dl>
+<dd>Time must be measured using the InterestRate&#8217;s own day counter.</dd></dl>
 <h3><code>InterestRate</code> equivalentRate (<code>Date</code> d1, <code>Date</code> d2, const <code>DayCounter</code> &amp; resultDC, Compounding comp, <code>Frequency</code> freq = Annual) const</h3>
 <p>equivalent rate for a compounding period between two dates </p>
 <p> The resulting rate is calculated taking the required day-counting rule into account.</p>

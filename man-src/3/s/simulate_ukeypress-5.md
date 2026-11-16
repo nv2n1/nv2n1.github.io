@@ -10,7 +10,6 @@ description: "simulate_ukeypress – Stuffs an unicode key into the keyboard buf
 <p>simulate_ukeypress &#8211; Stuffs an unicode key into the keyboard buffer. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void simulate_ukeypress(int key, int scancode);</code></pre>
 <h2>Description</h2>
 <p>Stuffs a key into the keyboard buffer, just as if the user had pressed it. The parameter is in the same format returned by ureadkey(). Example: </p>

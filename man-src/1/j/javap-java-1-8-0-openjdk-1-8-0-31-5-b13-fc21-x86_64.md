@@ -11,19 +11,19 @@ description: "javap – Disassembles one or more class files."
 <h2>Synopsis</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>javap</code> [<i>options</i>] <i>classfile</i>...
 </pre>
-</dl>
+</dd></dl>
 <p> <i>options</i></p>
 <dl>
 <dt>
-<dd> The command-line options. See Options.</dl>
+</dt><dd> The command-line options. See Options.</dd></dl>
 <p> <i>classfile</i></p>
 <dl>
 <dt>
-<dd> One or more classes separated by spaces to be processed for annotations such as DocFooter.class. You can specify a class that can be found in the class path, by its file name or with a URL such as <code>file:///home/user/myproject/src/DocFooter.class</code>.</dl>
+</dt><dd> One or more classes separated by spaces to be processed for annotations such as DocFooter.class. You can specify a class that can be found in the class path, by its file name or with a URL such as <code>file:///home/user/myproject/src/DocFooter.class</code>.</dd></dl>
 <h2>Description</h2>
 <p> The <code>javap</code> command disassembles one or more class files. The output depends on the options used. When no options are used, then the <code>javap</code> command prints the package, protected and public fields, and methods of the classes passed to it. The <code>javap</code> command prints its output to <code>stdout</code>.</p>
 <h2>Options</h2>
@@ -32,79 +32,78 @@ description: "javap – Disassembles one or more class files."
  -?</p>
 <dl>
 <dt>
-<dd> Prints a help message for the <code>javap</code> command.</dl>
+</dt><dd> Prints a help message for the <code>javap</code> command.</dd></dl>
 <p> -version</p>
 <dl>
 <dt>
-<dd> Prints release information.</dl>
+</dt><dd> Prints release information.</dd></dl>
 <p> -l</p>
 <dl>
 <dt>
-<dd> Prints line and local variable tables.</dl>
+</dt><dd> Prints line and local variable tables.</dd></dl>
 <p> -public</p>
 <dl>
 <dt>
-<dd> Shows only public classes and members.</dl>
+</dt><dd> Shows only public classes and members.</dd></dl>
 <p> -protected</p>
 <dl>
 <dt>
-<dd> Shows only protected and public classes and members.</dl>
+</dt><dd> Shows only protected and public classes and members.</dd></dl>
 <p> -private<br />
  -p</p>
 <dl>
 <dt>
-<dd> Shows all classes and members.</dl>
+</dt><dd> Shows all classes and members.</dd></dl>
 <p> -J<i>option</i></p>
 <dl>
 <dt>
-<dd> Passes the specified option to the JVM. For example: </p>
+</dt><dd> Passes the specified option to the JVM. For example: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>javap -J-version</code>
 <code>javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName</code>
- 
 </pre>
-</dl>
+</dd></dl>
 <p> For more information about JVM options, see the command documentation.</dl>
 <p> -s</p>
 <dl>
 <dt>
-<dd> Prints internal type signatures.</dl>
+</dt><dd> Prints internal type signatures.</dd></dl>
 <p> -sysinfo</p>
 <dl>
 <dt>
-<dd> Shows system information (path, size, date, MD5 hash) of the class being processed.</dl>
+</dt><dd> Shows system information (path, size, date, MD5 hash) of the class being processed.</dd></dl>
 <p> -constants</p>
 <dl>
 <dt>
-<dd> Shows <code>static final</code> constants.</dl>
+</dt><dd> Shows <code>static final</code> constants.</dd></dl>
 <p> -c</p>
 <dl>
 <dt>
-<dd> Prints disassembled code, for example, the instructions that comprise the Java bytecodes, for each of the methods in the class.</dl>
+</dt><dd> Prints disassembled code, for example, the instructions that comprise the Java bytecodes, for each of the methods in the class.</dd></dl>
 <p> -verbose</p>
 <dl>
 <dt>
-<dd> Prints stack size, number of locals and arguments for methods.</dl>
+</dt><dd> Prints stack size, number of locals and arguments for methods.</dd></dl>
 <p> -classpath <i>path</i></p>
 <dl>
 <dt>
-<dd> Specifies the path the <code>javap</code> command uses to look up classes. Overrides the default or the <code>CLASSPATH</code> environment variable when it is set.</dl>
+</dt><dd> Specifies the path the <code>javap</code> command uses to look up classes. Overrides the default or the <code>CLASSPATH</code> environment variable when it is set.</dd></dl>
 <p> -bootclasspath <i>path</i></p>
 <dl>
 <dt>
-<dd> Specifies the path from which to load bootstrap classes. By default, the bootstrap classes are the classes that implement the core Java platform located in <code>jre/lib/rt.jar</code> and several other JAR files.</dl>
+</dt><dd> Specifies the path from which to load bootstrap classes. By default, the bootstrap classes are the classes that implement the core Java platform located in <code>jre/lib/rt.jar</code> and several other JAR files.</dd></dl>
 <p> -extdir <i>dirs</i></p>
 <dl>
 <dt>
-<dd> Overrides the location at which installed extensions are searched for. The default location for extensions is the value of <code>java.ext.dirs</code>.</dl>
+</dt><dd> Overrides the location at which installed extensions are searched for. The default location for extensions is the value of <code>java.ext.dirs</code>.</dd></dl>
 <h2>Example</h2>
 <p> Compile the following <code>DocFooter</code> class: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>import java.awt.*;</code>
 <code>import java.applet.*;</code>
@@ -121,13 +120,12 @@ description: "javap – Disassembles one or more class files."
 <code>                g.drawString(email,290,15);</code>
 <code>        }</code>
 <code>}</code>
- 
 </pre>
-</dl>
+</dd></dl>
 <p> The output from the <code>javap DocFooter.class</code> command yields the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>Compiled from &quot;DocFooter.java&quot;</code>
 <code>public class DocFooter extends java.applet.Applet {</code>
@@ -137,26 +135,23 @@ description: "javap – Disassembles one or more class files."
 <code>  public void init();</code>
 <code>  public void paint(java.awt.Graphics);</code>
 <code>}</code>
- 
 </pre>
-</dl>
+</dd></dl>
 <p> The output from <code>javap -c DocFooter.class</code> command yields the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>Compiled from &quot;DocFooter.java&quot;</code>
 <code>public class DocFooter extends java.applet.Applet {</code>
 <code>  java.lang.String date;</code>
 <code>  java.lang.String email;</code>
- 
 <code>  public DocFooter();</code>
 <code>    Code:</code>
 <code>       0: aload_0       </code>
 <code>       1: invokespecial #1                  // Method</code>
 <code>java/applet/Applet.&quot;&lt;init&gt;&quot;:()V</code>
 <code>       4: return        </code>
- 
 <code>  public void init();</code>
 <code>    Code:</code>
 <code>       0: aload_0       </code>
@@ -176,7 +171,6 @@ description: "javap – Disassembles one or more class files."
 <code> getParameter:(Ljava/lang/String;)Ljava/lang/String;</code>
 <code>      26: putfield      #7                  // Field email:Ljava/lang/String;</code>
 <code>      29: return        </code>
- 
 <code>  public void paint(java.awt.Graphics);</code>
 <code>    Code:</code>
 <code>       0: aload_1       </code>
@@ -206,25 +200,24 @@ description: "javap – Disassembles one or more class files."
 <code>java/awt/Graphics.drawString:(Ljava/lang/String;II)V</code>
 <code>      43: return        </code>
 <code>}</code>
- 
 </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-java/">java</a>(1)</dl>
+</dt><dd> &bull; <a href="/docs/linux/man/1-java/">java</a>(1)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-javac/">javac</a>(1)</dl>
+</dt><dd> &bull; <a href="/docs/linux/man/1-javac/">javac</a>(1)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1)</dl>
+</dt><dd> &bull; <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; javah(1)</dl>
+</dt><dd> &bull; javah(1)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-jdb/">jdb</a>(1)</dl>
+</dt><dd> &bull; <a href="/docs/linux/man/1-jdb/">jdb</a>(1)</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-jdeps/">jdeps</a>(1)</dl>
+</dt><dd> &bull; <a href="/docs/linux/man/1-jdeps/">jdeps</a>(1)</dd></dl>

@@ -14,10 +14,10 @@ description: "z8530_dma_status – Handle a DMA status exception"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>Z8530 channel to process </p>
+</dd><dd>Z8530 channel to process </dd>
 <p> A status event occurred on the Z8530. We receive these for two reasons when in DMA mode. Firstly if we finished a packet transfer we get one and kick the next packet out. Secondly we may see a DCD change.</dl>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

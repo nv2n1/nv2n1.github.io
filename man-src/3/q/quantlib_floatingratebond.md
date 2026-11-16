@@ -18,7 +18,7 @@ description: "QuantLib::FloatingRateBond – floating-rate bond (possibly capped
 <p>floating-rate bond (possibly capped and/or floored) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calculations are tested by checking results against cached values.</dl>
+<dd>calculations are tested by checking results against cached values.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Bonds.cpp</code>. </p>
 <h2>Author</h2>

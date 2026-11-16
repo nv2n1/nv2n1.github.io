@@ -16,24 +16,24 @@ description: "microcode_ctl – microcode utility for Intel IA32 processors"
 <p> <code>b)</code> it signals the kernel driver to release the buffers containing the copy of microcode data actually applied to given CPU, linear array of 2048 bytes per CPU, see struct microcode in include/asm/processor.h for information on the layout of chunks buffers may hold </p>
 <p> The microcode update is volatile and needs to be uploaded on each system boot i.e. it doesn&#8217;t reflash your cpu permanently, reboot and it reverts back to the old microcode. </p>
 <dl>
-<dt><code>-h</code></p>
-<dd>display usage and exit</p>
-<dt><code>-u</code></p>
-<dd>upload microcode (from default filename)</p>
-<dt><code>-f</code></p>
-<dd>upload microcode from named Intel formatted file</p>
-<dt><code>-q</code></p>
-<dd>run silently when successful</p>
-<dt><code>-Q</code></p>
-<dd>run silently even on failure</dl>
+<dt><code>-h</code></dt>
+<dd>display usage and exit</dd>
+<dt><code>-u</code></dt>
+<dd>upload microcode (from default filename)</dd>
+<dt><code>-f</code></dt>
+<dd>upload microcode from named Intel formatted file</dd>
+<dt><code>-q</code></dt>
+<dd>run silently when successful</dd>
+<dt><code>-Q</code></dt>
+<dd>run silently even on failure</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>microcode_ctl -u</p>
-<dd>Upload microcode using defaults</dl>
+<dt>microcode_ctl -u</dt>
+<dd>Upload microcode using defaults</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/microcode.dat</p>
-<dd>The default microcode location</dl>
+<dt>/etc/microcode.dat</dt>
+<dd>The default microcode location</dd></dl>
 <h2>Author</h2>
 <p>Microcode utility written by Simon Trimmer<br />
  Linux Kernel driver written by Tigran Aivazian.</p>

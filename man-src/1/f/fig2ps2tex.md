@@ -19,11 +19,11 @@ description: "fig2ps2tex – generate a TeX file for including a PostScript file
 <p> Assume the Postscript file is called <i>foo.ps .</i> The command </p>
 <dl>
 <dt>
-<dd> % fig2ps2tex foo.ps &gt;foo.tex</dl>
+</dt><dd> % fig2ps2tex foo.ps &gt;foo.tex</dd></dl>
 <p> will create the inclusion file with bounding information. Then include this file in your TeX document with the command </p>
 <dl>
 <dt>
-<dd> \input{foo}</dl>
+</dt><dd> \input{foo}</dd></dl>
 <h2>SEE ALSO</h2>
 <p> psfig(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-fig2dev/">fig2dev</a>(1), <a href="/docs/linux/man/1-transfig/">transfig</a>(1). </p>
 <h2>AUTHOR</h2>

@@ -14,10 +14,10 @@ description: "ccw_device_get_ciw – Search for CIW command in extended sense da
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device to inspect</dl>
+</dd><dd>ccw device to inspect</dd></dl>
 <p> <i>ct</i></p>
 <dl>
-<dd>command type to look for</dl>
+<dd>command type to look for</dd></dl>
 <h2>Description</h2>
 <p>During SenseID, command information words (CIWs) describing special commands available to the device may have been stored in the extended sense data. This function searches for CIWs of a specified command type in the extended sense data.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "ccw_device_get_ciw – Search for CIW command in extended sense da
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

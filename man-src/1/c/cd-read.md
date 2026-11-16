@@ -13,48 +13,48 @@ description: "cd-read – reads Information from a CD or CD-image"
 <p> <code>cd-read</code> [<i>OPTION</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;access-mode</code>=<i>STRING</i></p>
-<dd> Set CD control access mode</p>
-<dt><code>-m</code>, <code>&#8211;mode</code>=<i>MODE-TYPE</i></p>
-<dd> set CD-ROM read mode (audio, auto, m1f1, m1f2, m2mf1, m2f2)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></p>
-<dd> Set debugging to LEVEL</p>
-<dt><code>-x</code>, <code>&#8211;hexdump</code></p>
-<dd> Show output as a hex dump. The default is a hex dump when output goes to stdout and no hex dump when output is to a file.</p>
-<dt><code>-j</code>, <code>&#8211;just-hex</code></p>
-<dd> Don&#8217;t display printable chars on hex dump. The default is print chars too.</p>
-<dt><code>&#8211;no-header</code></p>
-<dd> Don&#8217;t display header and copyright (for regression testing)</p>
-<dt><code>&#8211;no-hexdump</code></p>
-<dd> Don&#8217;t show output as a hex dump.</p>
-<dt><code>-s</code>, <code>&#8211;start</code>=<i>INT</i></p>
-<dd> Set LBA to start reading from</p>
-<dt><code>-e</code>, <code>&#8211;end</code>=<i>INT</i></p>
-<dd> Set LBA to end reading from</p>
-<dt><code>-n</code>, <code>&#8211;number</code>=<i>INT</i></p>
-<dd> Set number of sectors to read</p>
-<dt><code>-b</code>, <code>&#8211;bin-file</code>[=<i>FILE</i>]</p>
-<dd> set &quot;bin&quot; CD-ROM disk image file as source</p>
-<dt><code>-c</code>, <code>&#8211;cue-file</code>[=<i>FILE</i>]</p>
-<dd> set &quot;cue&quot; CD-ROM disk image file as source</p>
-<dt><code>-i</code>, <code>&#8211;input</code>[=<i>FILE</i>]</p>
-<dd> set source and determine if &quot;bin&quot; image or device</p>
-<dt><code>-C</code>, <code>&#8211;cdrom-device</code>[=<i>DEVICE</i>]</p>
-<dd> set CD-ROM device as source</p>
-<dt><code>-N</code>, <code>&#8211;nrg-file</code>[=<i>FILE</i>]</p>
-<dd> set Nero CD-ROM disk image file as source</p>
-<dt><code>-t</code>, <code>&#8211;toc-file</code>[=<i>FILE</i>]</p>
-<dd> set &quot;TOC&quot; CD-ROM disk image file as source</p>
-<dt><code>-o</code>, <code>&#8211;output-file</code>=<i>FILE</i></p>
-<dd> Output blocks to file rather than give a hexdump.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> display version and copyright information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;access-mode</code>=<i>STRING</i></dt>
+<dd> Set CD control access mode</dd>
+<dt><code>-m</code>, <code>&#8211;mode</code>=<i>MODE-TYPE</i></dt>
+<dd> set CD-ROM read mode (audio, auto, m1f1, m1f2, m2mf1, m2f2)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
+<dd> Set debugging to LEVEL</dd>
+<dt><code>-x</code>, <code>&#8211;hexdump</code></dt>
+<dd> Show output as a hex dump. The default is a hex dump when output goes to stdout and no hex dump when output is to a file.</dd>
+<dt><code>-j</code>, <code>&#8211;just-hex</code></dt>
+<dd> Don&#8217;t display printable chars on hex dump. The default is print chars too.</dd>
+<dt><code>&#8211;no-header</code></dt>
+<dd> Don&#8217;t display header and copyright (for regression testing)</dd>
+<dt><code>&#8211;no-hexdump</code></dt>
+<dd> Don&#8217;t show output as a hex dump.</dd>
+<dt><code>-s</code>, <code>&#8211;start</code>=<i>INT</i></dt>
+<dd> Set LBA to start reading from</dd>
+<dt><code>-e</code>, <code>&#8211;end</code>=<i>INT</i></dt>
+<dd> Set LBA to end reading from</dd>
+<dt><code>-n</code>, <code>&#8211;number</code>=<i>INT</i></dt>
+<dd> Set number of sectors to read</dd>
+<dt><code>-b</code>, <code>&#8211;bin-file</code>[=<i>FILE</i>]</dt>
+<dd> set &quot;bin&quot; CD-ROM disk image file as source</dd>
+<dt><code>-c</code>, <code>&#8211;cue-file</code>[=<i>FILE</i>]</dt>
+<dd> set &quot;cue&quot; CD-ROM disk image file as source</dd>
+<dt><code>-i</code>, <code>&#8211;input</code>[=<i>FILE</i>]</dt>
+<dd> set source and determine if &quot;bin&quot; image or device</dd>
+<dt><code>-C</code>, <code>&#8211;cdrom-device</code>[=<i>DEVICE</i>]</dt>
+<dd> set CD-ROM device as source</dd>
+<dt><code>-N</code>, <code>&#8211;nrg-file</code>[=<i>FILE</i>]</dt>
+<dd> set Nero CD-ROM disk image file as source</dd>
+<dt><code>-t</code>, <code>&#8211;toc-file</code>[=<i>FILE</i>]</dt>
+<dd> set &quot;TOC&quot; CD-ROM disk image file as source</dd>
+<dt><code>-o</code>, <code>&#8211;output-file</code>=<i>FILE</i></dt>
+<dd> Output blocks to file rather than give a hexdump.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> display version and copyright information and exit</dd></dl>
 <h3>Help options:</h3>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Show this help message</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Show this help message</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message</dd></dl>
 <h2>AUTHOR</h2>
 <p> Rocky Bernstein &lt;rocky [at] gnu.org&gt;</p>
 <h2>COPYRIGHT</h2>

@@ -24,85 +24,25 @@ description: "std::__profile::unordered_multiset< _Value, _Hash, _Pred, _Alloc >
 <p> typedef _Base::value_type <code>value_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>unordered_multiset (size_type __n=10, const hasher &amp;__hf=hasher(), const key_equal &amp;__eql=key_equal(), const allocator_type &amp;__a=allocator_type())
-
-
-
 template&lt;typename _InputIterator &gt; unordered_multiset (_InputIterator __f, _InputIterator __l, size_type __n=0, const hasher &amp;__hf=hasher(), const key_equal &amp;__eql=key_equal(), const allocator_type &amp;__a=allocator_type())
-
-
-
 unordered_multiset (const unordered_multiset &amp;)=default
-
-
-
 unordered_multiset (const _Base &amp;__x)
-
-
-
 unordered_multiset (unordered_multiset &amp;&amp;)=default
-
-
-
 unordered_multiset (initializer_list&lt; value_type &gt; __l, size_type __n=0, const hasher &amp;__hf=hasher(), const key_equal &amp;__eql=key_equal(), const allocator_type &amp;__a=allocator_type())
-
-
-
 void clear () noexcept
-
-
-
 template&lt;typename... _Args&gt; iterator emplace (_Args &amp;&amp;...__args)
-
-
-
 template&lt;typename... _Args&gt; iterator emplace_hint (const_iterator __it, _Args &amp;&amp;...__args)
-
-
-
 void insert (std::initializer_list&lt; value_type &gt; __l)
-
-
-
 iterator insert (const value_type &amp;__obj)
-
-
-
 iterator insert (const_iterator __iter, const value_type &amp;__v)
-
-
-
 iterator insert (value_type &amp;&amp;__obj)
-
-
-
 iterator insert (const_iterator __iter, value_type &amp;&amp;__v)
-
-
-
 template&lt;typename _InputIter &gt; void insert (_InputIter __first, _InputIter __last)
-
-
-
 unordered_multiset &amp; operator= (const unordered_multiset &amp;)=default
-
-
-
 unordered_multiset &amp; operator= (unordered_multiset &amp;&amp;)=default
-
-
-
 unordered_multiset &amp; operator= (initializer_list&lt; value_type &gt; __l)
-
-
-
 void rehash (size_type __n)
-
-
-
 void swap (unordered_multiset &amp;__x)
-
-
-
 Protected Member Functions
 void _M_profile_destruct ()</code></pre>
 <h2>Detailed Description</h2>

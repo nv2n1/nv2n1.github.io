@@ -433,84 +433,84 @@ description: "posixoptions – optional parts of the POSIX standard"
 <h3>Xsi &#8211; _Xopen_Realtime &#8211; _Sc_Xopen_Realtime</h3>
 <p>This option implies the following options: </p>
 <dl>
-<dt><code>_POSIX_ASYNCHRONOUS_IO</code>==<code>200112L</code></p>
+<dt><code>_POSIX_ASYNCHRONOUS_IO</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_FSYNC</code></p>
+</dd><dt><code>_POSIX_FSYNC</code></dt>
 <dd>
-<dt><code>_POSIX_MAPPED_FILES</code></p>
+</dd><dt><code>_POSIX_MAPPED_FILES</code></dt>
 <dd>
-<dt><code>_POSIX_MEMLOCK</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_MEMLOCK</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_MEMLOCK_RANGE</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_MEMLOCK_RANGE</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_MEMORY_PROTECTION</code></p>
+</dd><dt><code>_POSIX_MEMORY_PROTECTION</code></dt>
 <dd>
-<dt><code>_POSIX_MESSAGE_PASSING</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_MESSAGE_PASSING</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_PRIORITIZED_IO</code></p>
+</dd><dt><code>_POSIX_PRIORITIZED_IO</code></dt>
 <dd>
-<dt><code>_POSIX_PRIORITY_SCHEDULING</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_PRIORITY_SCHEDULING</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_REALTIME_SIGNALS</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_REALTIME_SIGNALS</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_SEMAPHORES</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_SEMAPHORES</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_SHARED_MEMORY_OBJECTS</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_SHARED_MEMORY_OBJECTS</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_SYNCHRONIZED_IO</code>==<code>200112L</code></p>
+</dd><dt><code>_POSIX_SYNCHRONIZED_IO</code>==<code>200112L</code></dt>
 <dd>
-<dt><code>_POSIX_TIMERS</code>==<code>200112L</code></p>
-<dd></dl>
+</dd><dt><code>_POSIX_TIMERS</code>==<code>200112L</code></dt>
+<dd></dd></dl>
 <h3>Adv &#8211; &#8212; &#8211; &#8212;</h3>
 <p>The Advanced Realtime option group implies that the following options are all defined to 200112L: </p>
 <dl>
-<dt><code>_POSIX_ADVISORY_INFO</code></p>
+<dt><code>_POSIX_ADVISORY_INFO</code></dt>
 <dd>
-<dt><code>_POSIX_CLOCK_SELECTION</code></p>
-<dd>(implies <code>_POSIX_TIMERS</code>)</p>
-<dt><code>_POSIX_CPUTIME</code></p>
-<dd>(implies <code>_POSIX_TIMERS</code>)</p>
-<dt><code>_POSIX_MONOTONIC_CLOCK</code></p>
-<dd>(implies <code>_POSIX_TIMERS</code>)</p>
-<dt><code>_POSIX_SPAWN</code></p>
+</dd><dt><code>_POSIX_CLOCK_SELECTION</code></dt>
+<dd>(implies <code>_POSIX_TIMERS</code>)</dd>
+<dt><code>_POSIX_CPUTIME</code></dt>
+<dd>(implies <code>_POSIX_TIMERS</code>)</dd>
+<dt><code>_POSIX_MONOTONIC_CLOCK</code></dt>
+<dd>(implies <code>_POSIX_TIMERS</code>)</dd>
+<dt><code>_POSIX_SPAWN</code></dt>
 <dd>
-<dt><code>_POSIX_SPORADIC_SERVER</code></p>
-<dd>(implies <code>_POSIX_PRIORITY_SCHEDULING</code>)</p>
-<dt><code>_POSIX_TIMEOUTS</code></p>
+</dd><dt><code>_POSIX_SPORADIC_SERVER</code></dt>
+<dd>(implies <code>_POSIX_PRIORITY_SCHEDULING</code>)</dd>
+<dt><code>_POSIX_TIMEOUTS</code></dt>
 <dd>
-<dt><code>_POSIX_TYPED_MEMORY_OBJECTS</code></p>
-<dd></dl>
+</dd><dt><code>_POSIX_TYPED_MEMORY_OBJECTS</code></dt>
+<dd></dd></dl>
 <h3>Xsi &#8211; _Xopen_Realtime_Threads &#8211; _Sc_Xopen_Realtime_Threads</h3>
 <p>This option implies that the following options are all defined to 200112L: </p>
 <dl>
-<dt><code>_POSIX_THREAD_PRIO_INHERIT</code></p>
+<dt><code>_POSIX_THREAD_PRIO_INHERIT</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_PRIO_PROTECT</code></p>
+</dd><dt><code>_POSIX_THREAD_PRIO_PROTECT</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_PRIORITY_SCHEDULING</code></p>
-<dd></dl>
+</dd><dt><code>_POSIX_THREAD_PRIORITY_SCHEDULING</code></dt>
+<dd></dd></dl>
 <h3>Advanced Realtime Threads &#8211; &#8212; &#8211; &#8212;</h3>
 <p>This option implies that the following options are all defined to 200112L: </p>
 <dl>
-<dt><code>_POSIX_BARRIERS</code></p>
-<dd>(implies <code>_POSIX_THREADS</code>, <code>_POSIX_THREAD_SAFE_FUNCTIONS</code>)</p>
-<dt><code>_POSIX_SPIN_LOCKS</code></p>
-<dd>(implies <code>_POSIX_THREADS</code>, <code>_POSIX_THREAD_SAFE_FUNCTIONS</code>)</p>
-<dt><code>_POSIX_THREAD_CPUTIME</code></p>
-<dd>(implies <code>_POSIX_TIMERS</code>)</p>
-<dt><code>_POSIX_THREAD_SPORADIC_SERVER</code></p>
-<dd>(implies <code>_POSIX_THREAD_PRIORITY_SCHEDULING</code>)</dl>
+<dt><code>_POSIX_BARRIERS</code></dt>
+<dd>(implies <code>_POSIX_THREADS</code>, <code>_POSIX_THREAD_SAFE_FUNCTIONS</code>)</dd>
+<dt><code>_POSIX_SPIN_LOCKS</code></dt>
+<dd>(implies <code>_POSIX_THREADS</code>, <code>_POSIX_THREAD_SAFE_FUNCTIONS</code>)</dd>
+<dt><code>_POSIX_THREAD_CPUTIME</code></dt>
+<dd>(implies <code>_POSIX_TIMERS</code>)</dd>
+<dt><code>_POSIX_THREAD_SPORADIC_SERVER</code></dt>
+<dd>(implies <code>_POSIX_THREAD_PRIORITY_SCHEDULING</code>)</dd></dl>
 <h3>Tracing &#8211; &#8212; &#8211; &#8212;</h3>
 <p>This option implies that the following options are all defined to 200112L: </p>
 <dl>
-<dt><code>_POSIX_TRACE</code></p>
+<dt><code>_POSIX_TRACE</code></dt>
 <dd>
-<dt><code>_POSIX_TRACE_EVENT_FILTER</code></p>
+</dd><dt><code>_POSIX_TRACE_EVENT_FILTER</code></dt>
 <dd>
-<dt><code>_POSIX_TRACE_LOG</code></p>
+</dd><dt><code>_POSIX_TRACE_LOG</code></dt>
 <dd>
-<dt><code>_POSIX_TRACE_INHERIT</code></p>
-<dd></dl>
+</dd><dt><code>_POSIX_TRACE_INHERIT</code></dt>
+<dd></dd></dl>
 <h3>Streams &#8211; _Xopen_Streams &#8211; _Sc_Xopen_Streams</h3>
 <p>The following functions are present: </p>
 <pre><i>fattach</i>()
@@ -543,40 +543,40 @@ description: "posixoptions – optional parts of the POSIX standard"
 <i>msync</i>()</pre>
 <p>This option implies the following options: </p>
 <dl>
-<dt><code>_POSIX_FSYNC</code></p>
+<dt><code>_POSIX_FSYNC</code></dt>
 <dd>
-<dt><code>_POSIX_MAPPED_FILES</code></p>
+</dd><dt><code>_POSIX_MAPPED_FILES</code></dt>
 <dd>
-<dt><code>_POSIX_MEMORY_PROTECTION</code></p>
+</dd><dt><code>_POSIX_MEMORY_PROTECTION</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_ATTR_STACKADDR</code></p>
+</dd><dt><code>_POSIX_THREAD_ATTR_STACKADDR</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_ATTR_STACKSIZE</code></p>
+</dd><dt><code>_POSIX_THREAD_ATTR_STACKSIZE</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_PROCESS_SHARED</code></p>
+</dd><dt><code>_POSIX_THREAD_PROCESS_SHARED</code></dt>
 <dd>
-<dt><code>_POSIX_THREAD_SAFE_FUNCTIONS</code></p>
+</dd><dt><code>_POSIX_THREAD_SAFE_FUNCTIONS</code></dt>
 <dd>
-<dt><code>_POSIX_THREADS</code></p>
-<dd></dl>
+</dd><dt><code>_POSIX_THREADS</code></dt>
+<dd></dd></dl>
 <p> This option may imply the following options from the XSI option groups: </p>
 <dl>
-<dt>Encryption (<code>_XOPEN_CRYPT</code>)</p>
+<dt>Encryption (<code>_XOPEN_CRYPT</code>)</dt>
 <dd>
-<dt>Realtime (<code>_XOPEN_REALTIME</code>)</p>
+</dd><dt>Realtime (<code>_XOPEN_REALTIME</code>)</dt>
 <dd>
-<dt>Advanced Realtime (<code>ADB</code>)</p>
+</dd><dt>Advanced Realtime (<code>ADB</code>)</dt>
 <dd>
-<dt>Realtime Threads (<code>_XOPEN_REALTIME_THREADS</code>)</p>
+</dd><dt>Realtime Threads (<code>_XOPEN_REALTIME_THREADS</code>)</dt>
 <dd>
-<dt>Advanced Realtime Threads (<code>ADVANCED REALTIME THREADS</code>)</p>
+</dd><dt>Advanced Realtime Threads (<code>ADVANCED REALTIME THREADS</code>)</dt>
 <dd>
-<dt>Tracing (<code>TRACING</code>)</p>
+</dd><dt>Tracing (<code>TRACING</code>)</dt>
 <dd>
-<dt>XSI Streams (<code>STREAMS</code>)</p>
+</dd><dt>XSI Streams (<code>STREAMS</code>)</dt>
 <dd>
-<dt>Legacy (<code>_XOPEN_LEGACY</code>)</p>
-<dd></dl>
+</dd><dt>Legacy (<code>_XOPEN_LEGACY</code>)</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7)</p>
 <h2>Colophon</h2>

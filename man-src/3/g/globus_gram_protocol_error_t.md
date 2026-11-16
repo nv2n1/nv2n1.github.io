@@ -20,5 +20,5 @@ description: "GRAM Error codes –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

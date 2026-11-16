@@ -12,39 +12,14 @@ description: "sc::AccumH –"
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::AccumHNull</code>, <code>sc::BEMSolventH</code>, and <code>sc::SumAccumH</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>AccumH (StateIn &amp;)
-
-
-
 AccumH (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual void init (const Ref&lt; Wavefunction &gt; &amp;)
-
-
-
 virtual void accum (const RefSymmSCMatrix &amp;h)=0
-
-
-
 virtual void print_summary ()
-
-
-
 virtual void done ()
-
-
-
 virtual double e ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>Wavefunction</code> &gt; <code>wfn_</code></p>
 <h2>Member Function Documentation</h2>

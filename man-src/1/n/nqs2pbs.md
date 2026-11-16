@@ -27,9 +27,9 @@ url: "/docs/linux/man/1-nqs2pbs/"
 
 <dl>
 <dt>nqs_script
-<dd> Specifies the file name of the NQS script to convert. This file is not changed.
-<dt>pbs_script
-<dd> If specified, it is the name of the new PBS script. If not specified, the new file name is <i>nqs_script.new .</i></dl>
+</dt><dd> Specifies the file name of the NQS script to convert. This file is not changed.
+</dd><dt>pbs_script
+</dt><dd> If specified, it is the name of the new PBS script. If not specified, the new file name is <i>nqs_script.new .</i></dd></dl>
  
 
 <h2>NOTES</h2>
@@ -39,9 +39,9 @@ url: "/docs/linux/man/1-nqs2pbs/"
  Note that PBS will interpret a time specification without a date in the following way:
 <dl>
 <dt>-
-<dd> If the time specified has not yet been reached, the job will become eligible to run at that time today.
-<dt>-
-<dd> If the specified time has already passed when the job is submitted, the job will become eligible to run at that time tomorrow.</dl>
+</dt><dd> If the time specified has not yet been reached, the job will become eligible to run at that time today.
+</dd><dt>-
+</dt><dd> If the specified time has already passed when the job is submitted, the job will become eligible to run at that time tomorrow.</dd></dl>
  
 
  PBS does not support time zone identifiers. All times are taken as local time.

@@ -20,10 +20,10 @@ description: "mate-wm – Start the window manager configured by the user"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>&#8211;default-wm=WINDOWMANAGER</code></p>
-<dd> Define the default window manager to start if no window manager is configured, or if the configured window manager cannot be found.</p>
-<dt><code>&#8211;sm-client-id=ID</code></p>
-<dd> Specify the session management <i>ID</i> when connecting to the session manager.</dl>
+<dt><code>&#8211;default-wm=WINDOWMANAGER</code></dt>
+<dd> Define the default window manager to start if no window manager is configured, or if the configured window manager cannot be found.</dd>
+<dt><code>&#8211;sm-client-id=ID</code></dt>
+<dd> Specify the session management <i>ID</i> when connecting to the session manager.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <i>mate-wm</i> uses the value of the <code>WINDOW_MANAGER</code> environment variable to let the user override the configured window manager.</p>
 <h2>BUGS</h2>

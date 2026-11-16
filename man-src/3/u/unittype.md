@@ -10,20 +10,10 @@ description: "QuantLib::UnitOfMeasure – Unit of measure specification"
 <p>QuantLib::UnitOfMeasure &#8211; Unit of measure specification </p>
 <h2>Synopsis</h2>
 <pre><code>const std::string &amp; name () const
-
-
 name, e.g, 'Barrels'
-
-
 const std::string &amp; code () const
-
-
 code, e.g, 'BBL', 'MT'
-
-
 Type unitType () const
-
-
 unit type (mass, volume...)</code></pre>
 <p> Inherited by BarrelUnitOfMeasure, GallonUnitOfMeasure, KilolitreUnitOfMeasure, LitreUnitOfMeasure, LotUnitOfMeasure, MBUnitOfMeasure, MTUnitOfMeasure, and TokyoKilolitreUnitOfMeasure.</p>
 <h3>Public Types</h3>
@@ -34,20 +24,10 @@ unit type (mass, volume...)</code></pre>
  <code>UnitOfMeasure</code> (const std::string &amp;name, const std::string &amp;code, Type unitType)<br />
  <code>Inspectors</code> </p>
 <pre><code>const std::string &amp; name () const
-
-
 name, e.g, 'Barrels'
-
-
 const std::string &amp; code () const
-
-
 code, e.g, 'BBL', 'MT'
-
-
 Type unitType () const
-
-
 unit type (mass, volume...)</code></pre>
 <p> <code>Other information</code> </p>
 <p> bool <code>empty</code> () const<br />

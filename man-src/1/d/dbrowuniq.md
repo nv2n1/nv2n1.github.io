@@ -19,35 +19,35 @@ description: "dbrowuniq – eliminate adjacent rows with duplicate fields, maybe
 <p> dbrowuniq can also count how many unique, adjacent lines it finds with <tt>&quot;-c&quot;</tt>, with the count going to a new column (defaulting to <tt>&quot;count&quot;</tt>). Incremental counting, when the <tt>&quot;count&quot;</tt> column already exists, is possible with <tt>&quot;-I&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> or <code>&#8211;count</code></p>
-<dd> Create a new column (count) which counts the number of times each line occurred. </p>
+<dt><code>-c</code> or <code>&#8211;count</code></dt>
+<dd> Create a new column (count) which counts the number of times each line occurred. </dd>
 <p> The new column is named by the <tt>&quot;-N&quot;</tt> argument, defaulting to <tt>&quot;count&quot;</tt>.</p>
-<dt><code>-N</code> on <code>&#8211;new-name</code></p>
-<dd> Specify the name of the count column, if any. (Default is <tt>&quot;count&quot;</tt>.)</p>
-<dt><code>-I</code> on <code>&#8211;incremental</code></p>
-<dd> Incremental counting. If the count column exists, it is assumed to have a partial count and the count accumulates. If the count column doesn&#8217;t exist, it is created.</p>
-<dt><code>-L</code> or <code>&#8211;last</code></p>
-<dd> Output the last unique row. By default, it outputs the first unique row.</p>
-<dt><code>-F</code> or <code>&#8211;first</code></p>
-<dd> Output the first unique row. (This is the default.)</p>
-<dt><code>-B</code> or <code>&#8211;both</code></p>
-<dd> Output both the first and last unique rows.</dl>
+<dt><code>-N</code> on <code>&#8211;new-name</code></dt>
+<dd> Specify the name of the count column, if any. (Default is <tt>&quot;count&quot;</tt>.)</dd>
+<dt><code>-I</code> on <code>&#8211;incremental</code></dt>
+<dd> Incremental counting. If the count column exists, it is assumed to have a partial count and the count accumulates. If the count column doesn&#8217;t exist, it is created.</dd>
+<dt><code>-L</code> or <code>&#8211;last</code></dt>
+<dd> Output the last unique row. By default, it outputs the first unique row.</dd>
+<dt><code>-F</code> or <code>&#8211;first</code></dt>
+<dd> Output the first unique row. (This is the default.)</dd>
+<dt><code>-B</code> or <code>&#8211;both</code></dt>
+<dd> Output both the first and last unique rows.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;header</code> H</p>
-<dd> Use H as the full Fsdb header, rather than reading a header from then input.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;header</code> H</dt>
+<dd> Use H as the full Fsdb header, rather than reading a header from then input.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

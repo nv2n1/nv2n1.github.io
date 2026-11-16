@@ -22,21 +22,21 @@ description: "perl5130delta – what is new for perl v5.13.0"
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules</h3>
 <dl>
-<dt><font SIZE="-1">CGI</font></p>
-<dd> Updated to version 3.49.</p>
-<dt>Data::Dumper</p>
-<dd> Updated to version 2.126.</p>
-<dt>MIME::Base64</p>
-<dd> Updated to 3.09.</p>
-<dt>threads</p>
-<dd> Updated to version 1.77</p>
-<dt>threads-shared</p>
-<dd> Updated to version 1.33</dl>
+<dt><font SIZE="-1">CGI</font></dt>
+<dd> Updated to version 3.49.</dd>
+<dt>Data::Dumper</dt>
+<dd> Updated to version 2.126.</dd>
+<dt>MIME::Base64</dt>
+<dd> Updated to 3.09.</dd>
+<dt>threads</dt>
+<dd> Updated to version 1.77</dd>
+<dt>threads-shared</dt>
+<dd> Updated to version 1.33</dd></dl>
 <h2>Installation and Configuration Improvements</h2>
 <h3>Platform Specific Changes</h3>
 <dl>
-<dt><font SIZE="-1">AIX</font></p>
-<dd> Allow building on <font SIZE="-1">AIX</font> 4.2.</dl>
+<dt><font SIZE="-1">AIX</font></dt>
+<dd> Allow building on <font SIZE="-1">AIX</font> 4.2.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.13.0 represents eight days of development since Perl 5.12.0 and contains 3,766 lines of changes across 151 files from 29 authors and committers. </p>
 <p> Thank you to the following for contributing to this release: </p>

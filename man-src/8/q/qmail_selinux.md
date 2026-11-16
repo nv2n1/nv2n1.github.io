@@ -24,16 +24,16 @@ description: "qmail_selinux – Security Enhanced Linux Policy for the qmail pro
 <p> qmail_alias_home_t </code> </p>
 <p> &#8211; Set files with the qmail_alias_home_t type, if you want to store qmail alias files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/qmail/alias, /var/qmail/alias(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/qmail/alias, /var/qmail/alias(/.*)? </dd>
 </dl>
 <p> <code>qmail_clean_exec_t </code> </p>
 <p> &#8211; Set files with the qmail_clean_exec_t type, if you want to transition an executable to the qmail_clean_t domain. </p>
 <p> <code>qmail_etc_t </code> </p>
 <p> &#8211; Set files with the qmail_etc_t type, if you want to store qmail files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/qmail/owners(/.*)?, /var/qmail/control(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/qmail/owners(/.*)?, /var/qmail/control(/.*)? </dd>
 </dl>
 <p> <code>qmail_exec_t </code> </p>
 <p> &#8211; Set files with the qmail_exec_t type, if you want to transition an executable to the qmail_t domain. </p>

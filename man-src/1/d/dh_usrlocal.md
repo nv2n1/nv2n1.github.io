@@ -18,8 +18,8 @@ description: "dh_usrlocal – migrate usr/local directories to maintainer script
 <p> When <i>Rules-Requires-Root</i> has an effective value of <i>binary-targets</i>, the owners, groups and permissions will be preserved with one exception. If the directory is owned by root:root, then ownership will be reset to root:staff and mode will be reset to 02775. This is useful, since that is the group and mode policy recommends for directories in <i>/usr/local</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;no-scripts</code></p>
-<dd> Do not modify <i>postinst</i>/<i>prerm</i> scripts.</dl>
+<dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
+<dd> Do not modify <i>postinst</i>/<i>prerm</i> scripts.</dd></dl>
 <h2>NOTES</h2>
 <p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
 <h2>CONFORMS TO</h2>

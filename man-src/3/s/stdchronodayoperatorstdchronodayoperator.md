@@ -14,9 +14,7 @@ constexpr std::chrono::day operator++(int) noexcept; <code>(2)</code> <i>(since 
 constexpr std::chrono::day&amp; operator&#8211;() noexcept; <code>(3)</code> <i>(since C++20)</i><br />
 constexpr std::chrono::day operator&#8211;(int) noexcept; <code>(4)</code> <i>(since C++20)</i> </p>
 <pre><code>Adds or subtracts 1 from the day value.
-
 1-2) Performs *this += std::chrono::days{1};
-
 3-4) Performs *this -= std::chrono::days{1};
 </code></pre>
 <h2>Parameters</h2>
@@ -31,17 +29,9 @@ constexpr std::chrono::day operator&#8211;(int) noexcept; <code>(4)</code> <i>(s
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
 <pre><code>adds or subtracts a number of days
-
 operator+= (public member function)
-
 operator-=
 adds or subtracts a number of days and a day, or find the difference between two days
-
 operator+  (function)
-
 operator-
-
-
-
-
 </code></pre>

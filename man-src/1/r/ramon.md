@@ -21,20 +21,20 @@ description: "ramon – provide RMON2 style reports from argus(8) data."
 <p> See the <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> man page for details on <i>ra-options</i> and <i>expression</i> syntax. </p>
 <h2>RAMON SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>-M TopN</code></p>
-<dd> Generate the top N list of network addresses and supply the incoming and outgoing packet and bytes counts. The addresses can be modified using the -M Net mode in addition to this mode.</p>
-<dt><code>-M Matrix</code></p>
-<dd> Generate the list of talkers ( A &lt;-&gt; B) and supply the incoming and outgoing packet and byte counts. The talker addresses can be modified using the -M Net mode.</p>
-<dt><code>-M HostProto</code></p>
-<dd> Generate the list of protocols that are being used by each address and supply the incoming and outgoing packet and byte counts seen.</p>
-<dt><code>-M HostSvc</code></p>
-<dd> Generate the list of services that are being used by each address and supply the incoming and outgoing packet and byte counts seen.</p>
-<dt><code>-M Svc</code></p>
-<dd> Generate the list of services (dst port number) and supply the incoming and outgoing packet and byte counts seen.</p>
-<dt><code>-M Net[/masklen]</code></p>
-<dd> Track addresses as networks rather than host addresses. If the option masklen is not provided, the addresses are traced as subnets based on their Class network address.</p>
-<dt><code>-a</code></p>
-<dd> Don&#8217;t filter output to match expression filter. This generates the complete set of addresses/nets that contributed to the inbound and outbound metrics. </p>
+<dt><code>-M TopN</code></dt>
+<dd> Generate the top N list of network addresses and supply the incoming and outgoing packet and bytes counts. The addresses can be modified using the -M Net mode in addition to this mode.</dd>
+<dt><code>-M Matrix</code></dt>
+<dd> Generate the list of talkers ( A &lt;-&gt; B) and supply the incoming and outgoing packet and byte counts. The talker addresses can be modified using the -M Net mode.</dd>
+<dt><code>-M HostProto</code></dt>
+<dd> Generate the list of protocols that are being used by each address and supply the incoming and outgoing packet and byte counts seen.</dd>
+<dt><code>-M HostSvc</code></dt>
+<dd> Generate the list of services that are being used by each address and supply the incoming and outgoing packet and byte counts seen.</dd>
+<dt><code>-M Svc</code></dt>
+<dd> Generate the list of services (dst port number) and supply the incoming and outgoing packet and byte counts seen.</dd>
+<dt><code>-M Net[/masklen]</code></dt>
+<dd> Track addresses as networks rather than host addresses. If the option masklen is not provided, the addresses are traced as subnets based on their Class network address.</dd>
+<dt><code>-a</code></dt>
+<dd> Don&#8217;t filter output to match expression filter. This generates the complete set of addresses/nets that contributed to the inbound and outbound metrics. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <pre>

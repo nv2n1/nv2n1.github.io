@@ -14,14 +14,14 @@ description: "gnutls_x509_trust_list_get_issuer – API function"
 <p> <code>int gnutls_x509_trust_list_get_issuer(gnutls_x509_trust_list_t </code><i>list</i><code>, gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_crt_t * </code><i>issuer</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> is the certificate to find issuer for</p>
-<dt>gnutls_x509_crt_t * issuer</p>
-<dd> Will hold the issuer if any. Should be treated as constant.</p>
-<dt>unsigned int flags</p>
-<dd> Use zero or <code>GNUTLS_TL_GET_COPY</code></dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> is the certificate to find issuer for</dd>
+<dt>gnutls_x509_crt_t * issuer</dt>
+<dd> Will hold the issuer if any. Should be treated as constant.</dd>
+<dt>unsigned int flags</dt>
+<dd> Use zero or <code>GNUTLS_TL_GET_COPY</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will find the issuer of the given certificate. If the flag <code>GNUTLS_TL_GET_COPY</code> is specified a copy of the issuer will be returned which must be freed using <code>gnutls_x509_crt_deinit()</code>. Note that the flag <code>GNUTLS_TL_GET_COPY</code> is required for this function to work with PKCS <code>11</code> trust lists in a thread-safe way.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_trust_list_get_issuer – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

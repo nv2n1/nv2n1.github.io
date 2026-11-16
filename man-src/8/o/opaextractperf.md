@@ -21,11 +21,10 @@ opaextractperf [ <i>opareport options</i>]
 <h2>Options</h2>
 
 <dl><dt>--help
-<dd>Produces full help text. 
-
-<dt>
+</dt><dd>Produces full help text. 
+</dd><dt>
 &nbsp;<wbr><i>opareport options</i>&nbsp;<wbr>
-<dd>&nbsp;<wbr><i>Options</i>&nbsp;<wbr>are passed to opareport. See <i>opareport</i> for the full set of options.</dl>
+</dt><dd>&nbsp;<wbr><i>Options</i>&nbsp;<wbr>are passed to opareport. See <i>opareport</i> for the full set of options.</dd></dl>
  
 
  The portion of the script that calls opareport and opaxmlextract follows: 

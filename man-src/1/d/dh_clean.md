@@ -18,20 +18,20 @@ description: "dh_clean – clean up package build directories"
 <p> <code>dh_clean</code> should be the last debhelper command run in the <code>clean</code> target in <i>debian/rules</i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>debian/clean</i></p>
-<dd> Can list other paths to be removed. </p>
+<dt><i>debian/clean</i></dt>
+<dd> Can list other paths to be removed. </dd>
 <p> Note that directories listed in this file <code>must</code> end with a trailing slash. Any content in these directories will be removed as well.</dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> This is deprecated, use <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) instead. </p>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> This is deprecated, use <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) instead. </dd>
 <p> The option is removed in compat 12.</p>
-<dt><code>-d</code>, <code>&#8211;dirs-only</code></p>
-<dd> Only clean the package build directories, do not clean up any other files at all.</p>
-<dt><code>-X</code><i>item</i> <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain <i>item</i> anywhere in their filename from being deleted, even if they would normally be deleted. You may use this option multiple times to build up a list of things to exclude.</p>
-<dt><i>path</i> &#8230;</p>
-<dd> Delete these <i>path</i>s too. </p>
+<dt><code>-d</code>, <code>&#8211;dirs-only</code></dt>
+<dd> Only clean the package build directories, do not clean up any other files at all.</dd>
+<dt><code>-X</code><i>item</i> <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from being deleted, even if they would normally be deleted. You may use this option multiple times to build up a list of things to exclude.</dd>
+<dt><i>path</i> &#8230;</dt>
+<dd> Delete these <i>path</i>s too. </dd>
 <p> Note that directories passed as arguments <code>must</code> end with a trailing slash. Any content in these directories will be removed as well.</dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
@@ -39,3 +39,4 @@ description: "dh_clean – clean up package build directories"
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
 <h2>Index</h2>
+</p>

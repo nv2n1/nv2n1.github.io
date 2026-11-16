@@ -26,7 +26,7 @@ description: "QuantLib::PathGenerator – Generates random paths using a sequenc
 <p> Generates random paths with drift(S,t) and variance(S,t) using a gaussian sequence generator </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the generated paths are checked against cached results</dl>
+<dd>the generated paths are checked against cached results</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>. </p>
 <h2>Author</h2>

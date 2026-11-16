@@ -21,9 +21,9 @@ int mkostemps(char *template, int suffixlen, int flags);
 <p> <code>mkstemp</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>mkostemp</code>(): _GNU_SOURCE<br />
  <code>mkstemps</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
@@ -40,12 +40,12 @@ int mkostemps(char *template, int suffixlen, int flags);
 <p> On success, these functions return the file descriptor of the temporary file. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EEXIST</code></p>
-<dd> Could not create a unique temporary filename. Now the contents of <i>template</i> are undefined.</p>
-<dt><code>EINVAL</code></p>
-<dd> For <code>mkstemp</code>() and <code>mkostemp</code>(): The last six characters of <i>template</i> were not XXXXXX; now <i>template</i> is unchanged.</p>
+<dt><code>EEXIST</code></dt>
+<dd> Could not create a unique temporary filename. Now the contents of <i>template</i> are undefined.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> For <code>mkstemp</code>() and <code>mkostemp</code>(): The last six characters of <i>template</i> were not XXXXXX; now <i>template</i> is unchanged.</dd>
 <dt>
-<dd> For <code>mkstemps</code>() and <code>mkostemps</code>(): <i>template</i> is less than <i>(6 + suffixlen)</i> characters long, or the last 6 characters before the suffix in <i>template</i> were not XXXXXX.</dl>
+</dt><dd> For <code>mkstemps</code>() and <code>mkostemps</code>(): <i>template</i> is less than <i>(6 + suffixlen)</i> characters long, or the last 6 characters before the suffix in <i>template</i> were not XXXXXX.</dd></dl>
 <p> These functions may also fail with any of the errors described for <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
 <h2>VERSIONS</h2>
 <p> <code>mkostemp</code>() is available since glibc 2.7. <code>mkstemps</code>() and <code>mkostemps</code>() are available since glibc 2.11.</p>

@@ -11,216 +11,69 @@ description: "sc::UnrestrictedSCF –"
 <p> A base class for unrestricted self-consistent-field methods.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;uscf.h&gt;</code></pre>
 <p> Inherits <code>sc::SCF</code>. Inherited by <code>sc::UHF</code>, and <code>sc::UKS</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>UnrestrictedSCF (StateIn &amp;)
-
-
-
 UnrestrictedSCF (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 RefSCMatrix eigenvectors ()
-
-
 Deprecated.
-
-
 RefDiagSCMatrix eigenvalues ()
-
-
 Returns the MO basis eigenvalues.
-
-
 RefSCMatrix oso_alpha_eigenvectors ()
-
-
-
 RefSCMatrix alpha_eigenvectors ()
-
-
-
 RefDiagSCMatrix alpha_eigenvalues ()
-
-
-
 RefSCMatrix oso_beta_eigenvectors ()
-
-
-
 RefSCMatrix beta_eigenvectors ()
-
-
-
 RefDiagSCMatrix beta_eigenvalues ()
-
-
-
 RefSymmSCMatrix alpha_density ()
-
-
 Return alpha electron densities in the SO basis.
-
-
 RefSymmSCMatrix beta_density ()
-
-
 Return beta electron densities in the SO basis.
-
-
 RefSymmSCMatrix density ()
-
-
 Returns the SO density.
-
-
 void symmetry_changed ()
-
-
 Call this if you have changed the molecular symmetry of the molecule contained by this MolecularEnergy.
-
-
 double occupation (int, int)
-
-
 Returns the occupation.
-
-
 double alpha_occupation (int, int)
-
-
 Returns the alpha occupation.
-
-
 double beta_occupation (int, int)
-
-
 Returns the beta occupation.
-
-
 int spin_polarized ()
-
-
 Return 1 if the alpha density is not equal to the beta density.
-
-
 int spin_unrestricted ()
-
-
 Return 1 if the alpha orbitals are not equal to the beta orbitals.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 int n_fock_matrices () const
-
-
-
 RefSymmSCMatrix fock (int i)
-
-
 Returns alpha (i==0) or beta (i==1) Fock matrix in AO basis (including XC contribution in KS DFT -- compare this to CLSCF and HSOSSCF!).
-
-
 RefSymmSCMatrix effective_fock ()
-
-
 Spin-unrestricted SCF methods do not define effective Fock matrix, thus this function should never be called.
-
-
 void set_desired_value_accuracy (double eps)
-
-
 Overload of Function::set_desired_value_accuracy().
-
-
-
 Protected Member Functions
 Ref&lt; SCExtrapError &gt; extrap_error ()
-
-
-
 double compute_vector (double &amp;, double enuclear)
-
-
-
 void initial_vector (int needv=1)
-
-
-
 void set_occupations (const RefDiagSCMatrix &amp;)
-
-
-
 void set_occupations (const RefDiagSCMatrix &amp;, const RefDiagSCMatrix &amp;)
-
-
-
 void init_vector ()
-
-
-
 void done_vector ()
-
-
-
 double new_density ()
-
-
-
 void reset_density ()
-
-
-
 double scf_energy ()
-
-
-
 Ref&lt; SCExtrapData &gt; extrap_data ()
-
-
-
 void init_gradient ()
-
-
-
 void done_gradient ()
-
-
-
 RefSymmSCMatrix lagrangian ()
-
-
-
 RefSymmSCMatrix gradient_density ()
-
-
-
 void init_hessian ()
-
-
-
 void done_hessian ()
-
-
-
 void two_body_deriv_hf (double *grad, double exchange_fraction)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>PointGroup</code> &gt; <code>most_recent_pg_</code> </p>
 <p> int <code>user_occupations_</code> </p>

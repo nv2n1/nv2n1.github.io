@@ -59,9 +59,9 @@ description: "telnetd_selinux – Security Enhanced Linux Policy for the telnetd
 <p> Policy governs the access confined processes have to these ports. SELinux telnetd policy is very flexible allowing users to setup their telnetd processes in as secure a method as possible. </p>
 <p> The following port types are defined for telnetd: </p>
 <dl>
-<dt><code>telnetd_port_t</code></p>
+<dt><code>telnetd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 23</dl>
+</dd><dd>Default Defined Ports: tcp 23</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type telnetd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -136,8 +136,8 @@ description: "telnetd_selinux – Security Enhanced Linux Policy for the telnetd
 <p> <code>telnetd_exec_t</code> </p>
 <p> &#8211; Set files with the telnetd_exec_t type, if you want to transition an executable to the telnetd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/in.telnetd, /usr/kerberos/sbin/telnetd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/in.telnetd, /usr/kerberos/sbin/telnetd </dd>
 </dl>
 <p> <code>telnetd_keytab_t</code> </p>
 <p> &#8211; Set files with the telnetd_keytab_t type, if you want to treat the files as kerberos keytab files. </p>

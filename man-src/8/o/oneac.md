@@ -13,74 +13,74 @@ description: "oneac – Driver for Oneac UPS equipment"
 <h2>Supported Hardware</h2>
 <p>This driver supports various Oneac UPS families: </p>
 <dl>
-<dd>&bull; EG (late 80s, early 90s, plug-in serial interface card)</dl>
+<dd>&bull; EG (late 80s, early 90s, plug-in serial interface card)</dd></dl>
 <dl>
-<dd>&bull; ON (early and mid-90s, plug-in serial interface card)</dl>
+<dd>&bull; ON (early and mid-90s, plug-in serial interface card)</dd></dl>
 <dl>
-<dd>&bull; OZ (mid-90s on, DB-25 std., interface slot)</dl>
+<dd>&bull; OZ (mid-90s on, DB-25 std., interface slot)</dd></dl>
 <dl>
-<dd>&bull; OB (early 2000&#8217;s on, big cabinet, DB-25 std., interface slot)</dl>
+<dd>&bull; OB (early 2000&#8217;s on, big cabinet, DB-25 std., interface slot)</dd></dl>
 <p> If your UPS is equipped with the Basic Interface card, use the <code><a href="/docs/linux/man/8-genericups/">genericups</a></code>(8) driver.</p>
 <h2>Extra Arguments</h2>
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5) file: </p>
 <p> <code>testtime</code>=<i>num</i></p>
 <dl>
-<dd>Change battery test time from the 2 minute default.</dl>
+<dd>Change battery test time from the 2 minute default.</dd></dl>
 <p> <code>offdelay</code>=<i>num</i></p>
 <dl>
-<dd>Change shutdown delay time from 0 second default.</dl>
+<dd>Change shutdown delay time from 0 second default.</dd></dl>
 <h2>Instant Commands</h2>
 <p>This driver supports the following Instant Commands. (See <code><a href="/docs/linux/man/8-upscmd/">upscmd</a></code>(8))</p>
 <h3>All UPS units</h3>
 <p><code>shutdown.return</code></p>
 <dl>
-<dd>Turn off the load possibly after a delay and return when power is back.</dl>
+<dd>Turn off the load possibly after a delay and return when power is back.</dd></dl>
 <p> <code>shutdown.stop</code></p>
 <dl>
-<dd>Stop a shutdown in progress.</dl>
+<dd>Stop a shutdown in progress.</dd></dl>
 <p> <code>shutdown.reboot</code></p>
 <dl>
-<dd>Shut down the load briefly while rebooting the UPS.</dl>
+<dd>Shut down the load briefly while rebooting the UPS.</dd></dl>
 <p> <code>test.failure.start</code></p>
 <dl>
-<dd>Starts a 15 second long simulation of an input power failure.</dl>
+<dd>Starts a 15 second long simulation of an input power failure.</dd></dl>
 <p> <code>test.battery.start.quick</code></p>
 <dl>
-<dd>Start a &quot;quick&quot; battery test. The default time is 2 minutes. This time can be set in the <code>ups.conf</code> file. See <code>testime</code> above.</dl>
+<dd>Start a &quot;quick&quot; battery test. The default time is 2 minutes. This time can be set in the <code>ups.conf</code> file. See <code>testime</code> above.</dd></dl>
 <p> <code>test.battery.stop</code></p>
 <dl>
-<dd>Stops a battery test that is in progress.</dl>
+<dd>Stops a battery test that is in progress.</dd></dl>
 <h3>All ON UPS units</h3>
 <p><code>reset.input.minmax</code></p>
 <dl>
-<dd>Reset the minimum and maximum input line voltage values seen since the last reset or power on.</dl>
+<dd>Reset the minimum and maximum input line voltage values seen since the last reset or power on.</dd></dl>
 <h3>Newer ON UPS units</h3>
 <p><code>test.panel.start</code></p>
 <dl>
-<dd>Start testing the UPS panel.</dl>
+<dd>Start testing the UPS panel.</dd></dl>
 <p> <code>test.battery.start.deep</code></p>
 <dl>
-<dd>Start a &quot;deep&quot; battery test. This test runs the UPS until the low battery point and then returns to the AC line.</dl>
+<dd>Start a &quot;deep&quot; battery test. This test runs the UPS until the low battery point and then returns to the AC line.</dd></dl>
 <p> <code>reset.input.minmax</code></p>
 <dl>
-<dd>Reset the minimum and maximum input line voltage values seen since the last reset or power on.</dl>
+<dd>Reset the minimum and maximum input line voltage values seen since the last reset or power on.</dd></dl>
 <p> <code>beeper.enable</code></p>
 <dl>
-<dd>Enable UPS beeper/buzzer.</dl>
+<dd>Enable UPS beeper/buzzer.</dd></dl>
 <p> <code>beeper.disable</code></p>
 <dl>
-<dd>Disable UPS beeper/buzzer.</dl>
+<dd>Disable UPS beeper/buzzer.</dd></dl>
 <p> <code>beeper.mute</code></p>
 <dl>
-<dd>Mutes the UPS beeper/buzzer for the current alarm condition(s).</dl>
+<dd>Mutes the UPS beeper/buzzer for the current alarm condition(s).</dd></dl>
 <h2>Writable Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-upsrw/">upsrw</a></code>(8) to see what variables are writable for the UPS. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If your UPS supports writing battery.runtime.low, the new set value is to be entered in minutes (up to 99) but the reported value is reported in seconds (set value * 60). </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If your UPS supports input.transfer.low and input.transfer.high, those values are used to create an allowable output range. The UPS will do what it can to keep the output voltage value within the defined range (for example: tap change or switch to inverter). </p>
 </dl>
 <h2>Author</h2>

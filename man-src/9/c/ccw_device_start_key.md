@@ -14,22 +14,22 @@ description: "ccw_device_start_key – start a s390 channel program with key"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>target ccw device</dl>
+</dd><dd>target ccw device</dd></dl>
 <p> <i>cpa</i></p>
 <dl>
-<dd>logical start address of channel program</dl>
+<dd>logical start address of channel program</dd></dl>
 <p> <i>intparm</i></p>
 <dl>
-<dd>user specific interruption parameter; will be presented back to <i>cdev</i>&#8216;s interrupt handler. Allows a device driver to associate the interrupt with a particular I/O request.</dl>
+<dd>user specific interruption parameter; will be presented back to <i>cdev</i>&#8216;s interrupt handler. Allows a device driver to associate the interrupt with a particular I/O request.</dd></dl>
 <p> <i>lpm</i></p>
 <dl>
-<dd>defines the channel path to be used for a specific I/O request. A value of 0 will make cio use the opm.</dl>
+<dd>defines the channel path to be used for a specific I/O request. A value of 0 will make cio use the opm.</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>storage key to be used for the I/O</dl>
+<dd>storage key to be used for the I/O</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>additional flags; defines the action to be performed for I/O processing.</dl>
+<dd>additional flags; defines the action to be performed for I/O processing.</dd></dl>
 <h2>Description</h2>
 <p>Start a S/390 channel program. When the interrupt arrives, the IRQ handler is called, either immediately, delayed (dev-end missing, or sense required) or never (no IRQ handler registered).</p>
 <h2>Return</h2>
@@ -39,5 +39,5 @@ description: "ccw_device_start_key – start a s390 channel program with key"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

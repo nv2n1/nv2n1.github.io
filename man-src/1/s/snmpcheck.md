@@ -16,31 +16,31 @@ description: "snmpcheck – enumerate information via SNMP protocol"
 <p> Snmpcheck supports the following enumerations (in alfabetic order):</p>
 <dl>
 <dt>
-<dd> contact, description, devices, domain, hardware and storage informations, hostname, IIS statistics, IP forwarding, listening UDP ports, location, motd, mountpoints, network interfaces, network services, processes, routing information, software components, system uptime, TCP connections, total memory, uptime, user accounts, detect write access (separate action by enumeration) </p>
+</dt><dd> contact, description, devices, domain, hardware and storage informations, hostname, IIS statistics, IP forwarding, listening UDP ports, location, motd, mountpoints, network interfaces, network services, processes, routing information, software components, system uptime, TCP connections, total memory, uptime, user accounts, detect write access (separate action by enumeration) </dd>
 </dl>
 <p> Tested on GNU/Linux, *BSD and Windows (Cygwin and ActivePerl) systems. </p>
 <p> Distributed under GPL license and based on &quot;Athena-2k&quot; script by jshaw. </p>
 <h2>OPTIONS</h2>
 <p> <code>-t </code><i>&lt;host&gt;</i> target host</p>
 <dl>
-<dt><code>-p </code><i>&lt;port&gt;</i></p>
-<dd> SNMP port; default port is 161</p>
-<dt><code>-c </code><i>&lt;community_string&gt;</i></p>
-<dd> SNMP community; default is public</p>
-<dt><code>-v </code><i>&lt;version&gt;</i></p>
-<dd> SNMP version (1,2); default is 1</p>
-<dt><code>-r </code><i>&lt;retries&gt;</i></p>
-<dd> request retries; default is 0</p>
-<dt><code>-T </code><i>&lt;timeout&gt;</i></p>
-<dd> force timeout in seconds; default is 20. Max is 60</p>
-<dt><code>-w</code></p>
-<dd> detect write access (separate action by enumeration)</p>
-<dt><code>-d</code></p>
-<dd> disable &#8216;TCP connections&#8217; enumeration! &quot;TCP connections enumeration&quot; can be very long. Use -d flag to disable it.</p>
-<dt><code>-D</code></p>
-<dd> enable debug</p>
-<dt><code>-h</code></p>
-<dd> show help menu </p>
+<dt><code>-p </code><i>&lt;port&gt;</i></dt>
+<dd> SNMP port; default port is 161</dd>
+<dt><code>-c </code><i>&lt;community_string&gt;</i></dt>
+<dd> SNMP community; default is public</dd>
+<dt><code>-v </code><i>&lt;version&gt;</i></dt>
+<dd> SNMP version (1,2); default is 1</dd>
+<dt><code>-r </code><i>&lt;retries&gt;</i></dt>
+<dd> request retries; default is 0</dd>
+<dt><code>-T </code><i>&lt;timeout&gt;</i></dt>
+<dd> force timeout in seconds; default is 20. Max is 60</dd>
+<dt><code>-w</code></dt>
+<dd> detect write access (separate action by enumeration)</dd>
+<dt><code>-d</code></dt>
+<dd> disable &#8216;TCP connections&#8217; enumeration! &quot;TCP connections enumeration&quot; can be very long. Use -d flag to disable it.</dd>
+<dt><code>-D</code></dt>
+<dd> enable debug</dd>
+<dt><code>-h</code></dt>
+<dd> show help menu </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-snmpwalk/">snmpwalk</a></code>(1), <code><a href="/docs/linux/man/1-snmpget/">snmpget</a></code>(1), <code>onesixtyone</code>(1) </p>

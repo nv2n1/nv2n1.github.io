@@ -21,23 +21,23 @@ struct_gnet_stats_queue - queuing statistics
 <h2>Members</h2>
 
 qlen
-<dl><dd>queue length</dl>
+<dl><dd>queue length</dd></dl>
  
 
  backlog
-<dl><dd>backlog size of queue</dl>
+<dl><dd>backlog size of queue</dd></dl>
  
 
  drops
-<dl><dd>number of dropped packets</dl>
+<dl><dd>number of dropped packets</dd></dl>
  
 
  requeues
-<dl><dd>number of requeues</dl>
+<dl><dd>number of requeues</dd></dl>
  
 
  overlimits
-<dl><dd>number of enqueues over the limit</dl>
+<dl><dd>number of enqueues over the limit</dd></dl>
 
 <h2>Copyright</h2>
 

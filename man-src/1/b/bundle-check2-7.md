@@ -15,10 +15,10 @@ description: "bundle-check – Verifies if dependencies are satisfied by install
 <p> If not, the first missing gem is listed and Bundler exits status 1.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;dry-run</code></p>
-<dd>Locks the [<code>Gemfile(5)</code>][Gemfile(5)] before running the command.</p>
-<dt><code>&#8211;gemfile</code></p>
-<dd>Use the specified gemfile instead of the [<code>Gemfile(5)</code>][Gemfile(5)].</p>
-<dt><code>&#8211;path</code></p>
-<dd>Specify a different path than the system default (<code>$BUNDLE_PATH</code> or <code>$GEM_HOME</code>). Bundler will remember this value for future installs on this machine. </p>
+<dt><code>&#8211;dry-run</code></dt>
+<dd>Locks the [<code>Gemfile(5)</code>][Gemfile(5)] before running the command.</dd>
+<dt><code>&#8211;gemfile</code></dt>
+<dd>Use the specified gemfile instead of the [<code>Gemfile(5)</code>][Gemfile(5)].</dd>
+<dt><code>&#8211;path</code></dt>
+<dd>Specify a different path than the system default (<code>$BUNDLE_PATH</code> or <code>$GEM_HOME</code>). Bundler will remember this value for future installs on this machine. </dd>
 </dl>

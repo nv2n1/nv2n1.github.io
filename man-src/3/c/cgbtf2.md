@@ -19,17 +19,17 @@ description: "cgbtf2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGBTF2 computes an LU factorization of a complex m-by-n band matrix
  A using partial pivoting with row interchanges.
  This is the unblocked version of the algorithm, calling Level 2 BLAS.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -88,18 +88,18 @@ IPIV is INTEGER array, dimension(min(M, N))
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The band storage scheme is illustrated by the following example, when
   M = N = 6, KL = 2, KU = 1:
@@ -115,8 +115,9 @@ IPIV is INTEGER array, dimension(min(M, N))
   elements of U, because of fill-in resulting from the row
   interchanges.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 146 of file cgbtf2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

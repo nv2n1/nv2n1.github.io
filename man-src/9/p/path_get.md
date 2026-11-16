@@ -15,7 +15,7 @@ path_get - get a reference to a path
 <h2>Arguments</h2>
 
 <i>path</i>
-<dl><dd><dd>path to get the reference to</dl>
+<dl><dd></dd><dd>path to get the reference to</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,42 +16,42 @@ description: "lxc-monitor – monitor the container state"
 <p> The <code>-P, &#8211;lxcpath</code>=PATH option may be specified multiple times to monitor more than one container path. Note however that containers with the same name in multiple paths will be indistinguishable in the output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Q, &#8211;quit</code></p>
-<dd> Ask the lxc-monitord daemon on each given <code>lxcpath</code> to quit. After receiving this command, lxc-monitord will exit immediately as soon as it has no clients instead of waiting the normal 30 seconds for new clients. This is useful if you need to unmount the filesystem <code>lxcpath</code> is on.</dl>
+<dt><code>-Q, &#8211;quit</code></dt>
+<dd> Ask the lxc-monitord daemon on each given <code>lxcpath</code> to quit. After receiving this command, lxc-monitord will exit immediately as soon as it has no clients instead of waiting the normal 30 seconds for new clients. This is useful if you need to unmount the filesystem <code>lxcpath</code> is on.</dd></dl>
 <h2>COMMON OPTIONS</h2>
 <p> These options are common to most of lxc commands.</p>
 <dl>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print a longer usage message than normal.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Give the usage message</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> mute on</p>
-<dt><code>-P, &#8211;lxcpath=</code><i>PATH</i></p>
-<dd> Use an alternate container path. The default is /var/lib/lxc.</p>
-<dt><code>-o, &#8211;logfile=</code><i>FILE</i></p>
-<dd> Output to an alternate log <i>FILE</i>. The default is no log.</p>
-<dt><code>-l, &#8211;logpriority=</code><i>LEVEL</i></p>
-<dd> Set log priority to <i>LEVEL</i>. The default log priority is ERROR. Possible values are : FATAL, CRIT, WARN, ERROR, NOTICE, INFO, DEBUG. </p>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print a longer usage message than normal.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Give the usage message</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> mute on</dd>
+<dt><code>-P, &#8211;lxcpath=</code><i>PATH</i></dt>
+<dd> Use an alternate container path. The default is /var/lib/lxc.</dd>
+<dt><code>-o, &#8211;logfile=</code><i>FILE</i></dt>
+<dd> Output to an alternate log <i>FILE</i>. The default is no log.</dd>
+<dt><code>-l, &#8211;logpriority=</code><i>LEVEL</i></dt>
+<dd> Set log priority to <i>LEVEL</i>. The default log priority is ERROR. Possible values are : FATAL, CRIT, WARN, ERROR, NOTICE, INFO, DEBUG. </dd>
 <p> Note that this option is setting the priority of the events log in the alternate log file. It do not have effect on the ERROR events log on stderr.</p>
-<dt><code>-n, &#8211;name=</code><i>NAME</i></p>
-<dd> Use container identifier <i>NAME</i>. The container identifier format is an alphanumeric string.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version number.</dl>
+<dt><code>-n, &#8211;name=</code><i>NAME</i></dt>
+<dd> Use container identifier <i>NAME</i>. The container identifier format is an alphanumeric string.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version number.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>lxc-monitor -n foo</p>
-<dd> will monitor the different states for container foo.</p>
-<dt>lxc-monitor -n &#8216;foo|bar&#8217;</p>
-<dd> will monitor the different states for container foo and bar.</p>
-<dt>lxc-monitor -n &#8216;[f|b].*&#8217;</p>
-<dd> will monitor the different states for container with the name beginning with letter &#8216;f&#8217; or &#8216;b&#8217;.</p>
-<dt>lxc-monitor -n &#8216;.*&#8217;</p>
-<dd> will monitor the different states for all containers.</dl>
+<dt>lxc-monitor -n foo</dt>
+<dd> will monitor the different states for container foo.</dd>
+<dt>lxc-monitor -n &#8216;foo|bar&#8217;</dt>
+<dd> will monitor the different states for container foo and bar.</dd>
+<dt>lxc-monitor -n &#8216;[f|b].*&#8217;</dt>
+<dd> will monitor the different states for container with the name beginning with letter &#8216;f&#8217; or &#8216;b&#8217;.</dd>
+<dt>lxc-monitor -n &#8216;.*&#8217;</dt>
+<dd> will monitor the different states for all containers.</dd></dl>
 <h2>DIAGNOSTIC</h2>
 <dl>
-<dt>The container was not found</p>
-<dd> The specified container was not created before with the <code>lxc-create</code> command.</dl>
+<dt>The container was not found</dt>
+<dd> The specified container was not created before with the <code>lxc-create</code> command.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7),</p>
 <h2>SEE ALSO</h2>

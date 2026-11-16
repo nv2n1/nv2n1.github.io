@@ -16,12 +16,12 @@ description: "XmMainWindow — The MainWindow widget class"
 <p> MainWindow can also create three Separator widgets that provide a visual separation of MainWindow&#8217;s four components. The user can specify resources in a resource file for the automatically created gadgets that contain the MainWindow separators. The name of the first separator gadget is <code>Separator1</code>; the second is <code>Separator2</code>; and the third is <code>Separator3</code>. </p>
 <p> MainWindow also provides the following three child types for layout at creation time:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmMENU_BAR</code></p>
-<dt> &bull;</p>
-<dd><code>XmCOMMAND_WINDOW</code></p>
-<dt> &bull;</p>
-<dd><code>XmMESSAGE_WINDOW</code></dl>
+<dt> &bull;</dt>
+<dd><code>XmMENU_BAR</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmCOMMAND_WINDOW</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmMESSAGE_WINDOW</code></dd></dl>
 <p> MainWindow can use these child types at creation time instead of their associated resource values. MainWindow uses the <code>XmQTmenuSystem</code> trait.</p>
 <h3>Descendants</h3>
 <p>MainWindow automatically creates the descendants shown in the following table. An application can use <code>XtNameToWidget</code> to gain access to the named descendant. In addition, a user or an application can use the named descendant when specifying resource values. </p>
@@ -367,20 +367,20 @@ description: "XmMainWindow — The MainWindow widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcommandWindow</code></p>
-<dd>Specifies the widget to be laid out as the CommandWindow. This widget must have been previously created and managed as a child of MainWindow.</p>
-<dt><code>XmNcommandWindowLocation</code></p>
-<dd>Controls the position of the command window. <code>XmCOMMAND_ABOVE_WORKSPACE</code> locates the command window between the menu bar and the work window. <code>XmCOMMAND_BELOW_WORKSPACE</code> locates the command window between the work window and the message window.</p>
-<dt><code>XmNmainWindowMarginHeight</code></p>
-<dd>Specifies the margin height on the top and bottom of MainWindow. This resource overrides any setting of the ScrolledWindow resource <code>XmNscrolledWindowMarginHeight</code>.</p>
-<dt><code>XmNmainWindowMarginWidth</code></p>
-<dd>Specifies the margin width on the right and left sides of MainWindow. This resource overrides any setting of the ScrolledWindow resource <code>XmNscrolledWindowMarginWidth</code>.</p>
-<dt><code>XmNmenuBar</code></p>
-<dd>Specifies the widget to be laid out as the MenuBar. This widget must have been previously created and managed as a child of MainWindow.</p>
-<dt><code>XmNmessageWindow</code></p>
-<dd>Specifies the widget to be laid out as the MessageWindow. This widget must have been previously created and managed as a child of MainWindow. The MessageWindow is positioned at the bottom of the MainWindow. If this value is NULL, no message window is included in the MainWindow.</p>
-<dt><code>XmNshowSeparator</code></p>
-<dd>Displays separators between the components of the MainWindow when set to True. If set to False, no separators are displayed.</dl>
+<dt><code>XmNcommandWindow</code></dt>
+<dd>Specifies the widget to be laid out as the CommandWindow. This widget must have been previously created and managed as a child of MainWindow.</dd>
+<dt><code>XmNcommandWindowLocation</code></dt>
+<dd>Controls the position of the command window. <code>XmCOMMAND_ABOVE_WORKSPACE</code> locates the command window between the menu bar and the work window. <code>XmCOMMAND_BELOW_WORKSPACE</code> locates the command window between the work window and the message window.</dd>
+<dt><code>XmNmainWindowMarginHeight</code></dt>
+<dd>Specifies the margin height on the top and bottom of MainWindow. This resource overrides any setting of the ScrolledWindow resource <code>XmNscrolledWindowMarginHeight</code>.</dd>
+<dt><code>XmNmainWindowMarginWidth</code></dt>
+<dd>Specifies the margin width on the right and left sides of MainWindow. This resource overrides any setting of the ScrolledWindow resource <code>XmNscrolledWindowMarginWidth</code>.</dd>
+<dt><code>XmNmenuBar</code></dt>
+<dd>Specifies the widget to be laid out as the MenuBar. This widget must have been previously created and managed as a child of MainWindow.</dd>
+<dt><code>XmNmessageWindow</code></dt>
+<dd>Specifies the widget to be laid out as the MessageWindow. This widget must have been previously created and managed as a child of MainWindow. The MessageWindow is positioned at the bottom of the MainWindow. If this value is NULL, no message window is included in the MainWindow.</dd>
+<dt><code>XmNshowSeparator</code></dt>
+<dd>Displays separators between the components of the MainWindow when set to True. If set to False, no separators are displayed.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>MainWindow inherits behavior and resources from the superclasses described in the following table. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

@@ -17,63 +17,63 @@ description: "Credential Constants –"
 <p>Credential Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GSI_CRED_ERROR_SUCCESS </i></p>
-<dd>Success &#8211; never used</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_READING_PROXY_CRED </i></p>
-<dd>Failed to read proxy credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_READING_HOST_CRED </i></p>
-<dd>Failed to read host credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_READING_SERVICE_CRED </i></p>
-<dd>Failed to read service credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_READING_CRED </i></p>
-<dd>Failed to read user credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WRITING_CRED </i></p>
-<dd>Failed to write credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WRITING_PROXY_CRED </i></p>
-<dd>Failed to write proxy credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_CHECKING_PROXY </i></p>
-<dd>Error checking for proxy credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_VERIFYING_CRED </i></p>
-<dd>Failed to verify credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED </i></p>
-<dd>Invalid credential</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT </i></p>
-<dd>Invalid certificate</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_PRIVATE_KEY </i></p>
-<dd>Invalid private key</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT_CHAIN </i></p>
-<dd>Invalid certificate chain</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_ERRNO </i></p>
-<dd>System error</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_SYSTEM_CONFIG </i></p>
-<dd>A Globus GSI System Configuration call failed</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_HANDLE_ATTRS </i></p>
-<dd>Invalid credential handle attributes</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_SSL_CTX </i></p>
-<dd>Faulty SSL context</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CALLBACK_DATA </i></p>
-<dd>Faulty callback data</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_CREATING_ERROR_OBJ </i></p>
-<dd>Failed to aggregate errors</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_KEY_IS_PASS_PROTECTED </i></p>
-<dd>Error reading private key &#8211; the key is password protected</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_NO_CRED_FOUND </i></p>
-<dd>Couldn&#8217;t find credential to read</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_SUBJECT_CMP </i></p>
-<dd>Credential subjects do not compare</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_GETTING_SERVICE_NAME </i></p>
-<dd>Unable to obtain service name from CN entry</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_BAD_PARAMETER </i></p>
-<dd>Invalid function parameter</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT_NAME </i></p>
-<dd>Failed to process certificate subject</p>
-<dt><i>GLOBUS_GSI_CRED_ERROR_LAST </i></p>
-<dd>End marker &#8211; never used</dl>
+<dt><i>GLOBUS_GSI_CRED_ERROR_SUCCESS </i></dt>
+<dd>Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_READING_PROXY_CRED </i></dt>
+<dd>Failed to read proxy credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_READING_HOST_CRED </i></dt>
+<dd>Failed to read host credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_READING_SERVICE_CRED </i></dt>
+<dd>Failed to read service credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_READING_CRED </i></dt>
+<dd>Failed to read user credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WRITING_CRED </i></dt>
+<dd>Failed to write credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WRITING_PROXY_CRED </i></dt>
+<dd>Failed to write proxy credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_CHECKING_PROXY </i></dt>
+<dd>Error checking for proxy credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_VERIFYING_CRED </i></dt>
+<dd>Failed to verify credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED </i></dt>
+<dd>Invalid credential</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT </i></dt>
+<dd>Invalid certificate</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_PRIVATE_KEY </i></dt>
+<dd>Invalid private key</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT_CHAIN </i></dt>
+<dd>Invalid certificate chain</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_ERRNO </i></dt>
+<dd>System error</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_SYSTEM_CONFIG </i></dt>
+<dd>A Globus GSI System Configuration call failed</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_HANDLE_ATTRS </i></dt>
+<dd>Invalid credential handle attributes</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_SSL_CTX </i></dt>
+<dd>Faulty SSL context</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CALLBACK_DATA </i></dt>
+<dd>Faulty callback data</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_CREATING_ERROR_OBJ </i></dt>
+<dd>Failed to aggregate errors</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_KEY_IS_PASS_PROTECTED </i></dt>
+<dd>Error reading private key &#8211; the key is password protected</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_NO_CRED_FOUND </i></dt>
+<dd>Couldn&#8217;t find credential to read</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_SUBJECT_CMP </i></dt>
+<dd>Credential subjects do not compare</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_GETTING_SERVICE_NAME </i></dt>
+<dd>Unable to obtain service name from CN entry</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_BAD_PARAMETER </i></dt>
+<dd>Invalid function parameter</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_WITH_CRED_CERT_NAME </i></dt>
+<dd>Failed to process certificate subject</dd>
+<dt><i>GLOBUS_GSI_CRED_ERROR_LAST </i></dt>
+<dd>End marker &#8211; never used</dd></dl>
 <h3>enum <code>globus_gsi_cred_type_t</code></h3>
 <p>Credential Type </p>
 <p> An enum representing a GSI Credential Type which holds info about the type of a particular credential. The three types of credential can be: GLOBUS_PROXY, GLOBUS_USER, or GLOBUS_HOST. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Credential Handle Management</code></dl>
+<dd><code>Credential Handle Management</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_credential from the source code.</p>

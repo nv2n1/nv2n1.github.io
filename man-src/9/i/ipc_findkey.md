@@ -15,11 +15,11 @@ ipc_findkey - find a key in an ipc identifier set
 <h2>Arguments</h2>
 
 <i>ids</i>
-<dl><dd><dd>ipc identifier set</dl>
+<dl><dd></dd><dd>ipc identifier set</dd></dl>
  
 
  <i>key</i>
-<dl><dd>key to find</dl>
+<dl><dd>key to find</dd></dl>
 
 <h2>Description</h2>
 

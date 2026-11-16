@@ -16,19 +16,19 @@ description: "struct_regulator_consumer_supply – supply -> device mapping"
 <h2>Members</h2>
 <p>dev_name</p>
 <dl>
-<dd>Result of <code>dev_name</code> for the consumer.</dl>
+<dd>Result of <code>dev_name</code> for the consumer.</dd></dl>
 <p> supply</p>
 <dl>
-<dd>Name for the supply.</dl>
+<dd>Name for the supply.</dd></dl>
 <h2>Description</h2>
 <p>This maps a supply name to a device. Use of dev_name allows support for buses which make struct device available late such as I2C.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

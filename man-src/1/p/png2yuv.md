@@ -17,33 +17,33 @@ description: "png2yuv – Convert PNG images to the YUV4MPEG stream format."
 <h2>OPTIONS</h2>
 <p> <code>png2yuv</code> accepts the following options: </p>
 <dl>
-<dt><code>-b</code><i> num</i></p>
-<dd> Frame offset: skip output of the first &#8216;num&#8217; frames. (default: 0)</p>
-<dt><code>-f</code><i> num</i></p>
-<dd> Set the frame rate of stream accepts the same numbers. Not default, this option has to be specified.</p>
-<dt><code>-I</code><i> num</i></p>
+<dt><code>-b</code><i> num</i></dt>
+<dd> Frame offset: skip output of the first &#8216;num&#8217; frames. (default: 0)</dd>
+<dt><code>-f</code><i> num</i></dt>
+<dd> Set the frame rate of stream accepts the same numbers. Not default, this option has to be specified.</dd>
+<dt><code>-I</code><i> num</i></dt>
 <dd> interlacing mode: p = none / progressive<br />
  t = top field first<br />
  b = bottom field first<br />
- No default, this option has to be specified.</p>
-<dt><code>-L</code><i> num</i></p>
+ No default, this option has to be specified.</dd>
+<dt><code>-L</code><i> num</i></dt>
 <dd> 0 = non-interleaved (two successive fields per PNG file)<br />
- 1 = interleaved fields</p>
-<dt><code>-l</code><i> num</i></p>
-<dd> Specifies the number of loops (default: 0 loops )</p>
-<dt><code>-S</code><i> samp_mode</i></p>
+ 1 = interleaved fields</dd>
+<dt><code>-l</code><i> num</i></dt>
+<dd> Specifies the number of loops (default: 0 loops )</dd>
+<dt><code>-S</code><i> samp_mode</i></dt>
 <dd> chroma subsampling mode, only for professionals, for more info see ppmtoy4m and the YUV guide on <a rel="nofollow" href="http://www.mir.com/DMG/.">http://www.mir.com/DMG/.</a><br />
  default: 420_jpeg<br />
- When this option is not used the given range of images is only processed once. If you use this option and as number 1, jpeg2yv will loop forever writing the image to stdout. When you use n &gt; 1 it will loop. n-time till it finishes.</p>
-<dt><code>-n</code><i> num</i></p>
-<dd> Specifies the nummber of frames to process. (default: all = -1)</p>
-<dt><code>-j</code><i> {1}%{2}d{3}</i></p>
+ When this option is not used the given range of images is only processed once. If you use this option and as number 1, jpeg2yv will loop forever writing the image to stdout. When you use n &gt; 1 it will loop. n-time till it finishes.</dd>
+<dt><code>-n</code><i> num</i></dt>
+<dd> Specifies the nummber of frames to process. (default: all = -1)</dd>
+<dt><code>-j</code><i> {1}%{2}d{3}</i></dt>
 <dd> Read PNG frames with the name components as follows:<br />
 &nbsp;<wbr>{1}&nbsp;<wbr>PNG filename prefix&nbsp;<wbr>(e g: picture_&nbsp;<wbr>)<br />
 &nbsp;<wbr>{2}&nbsp;<wbr>Counting placeholder&nbsp;<wbr>(like in C, printf, eg 06&nbsp;<wbr>))<br />
-&nbsp;<wbr>{3}&nbsp;<wbr>File extension. Something like this: .png A correct description of the files could look like this: picture_%06d.png</p>
-<dt><code>-v</code><i> num</i></p>
-<dd> Verbosity level (0, 1 or 2) </p>
+&nbsp;<wbr>{3}&nbsp;<wbr>File extension. Something like this: .png A correct description of the files could look like this: picture_%06d.png</dd>
+<dt><code>-v</code><i> num</i></dt>
+<dd> Verbosity level (0, 1 or 2) </dd>
 </dl>
 <h2>BUGS</h2>
 <p> The frame rate description does not seem to be up to date. The NTSC integer ratios are not supported (use floating point instead). As workaround specify a PAL (25) or native FILM (24) and set the right frame rate in mpeg2enc with the -F option. Interlaced handling is not implemented yet. </p>
@@ -52,8 +52,8 @@ description: "png2yuv – Convert PNG images to the YUV4MPEG stream format."
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1), <code><a href="/docs/linux/man/1-yuvdenoise/">yuvdenoise</a></code>(1), <code><a href="/docs/linux/man/1-yuvmedianfilter/">yuvmedianfilter</a></code>(1), <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1) </p>

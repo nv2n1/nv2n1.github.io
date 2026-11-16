@@ -13,9 +13,9 @@ GASETC - Gives a new value to a specified internal parameter of type CHARACTER.
 
  void c_gasetc (char *pnam, char *cval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) is a string three or more characters in length, the first three characters of which constitute the name of the internal parameter whose value is to be set.
-<dt>CVAL
-<dd>(an input expression of type CHARACTER) is the new value to be given to the internal parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) is a string three or more characters in length, the first three characters of which constitute the name of the internal parameter whose value is to be set.
+</dd><dt>CVAL
+</dt><dd>(an input expression of type CHARACTER) is the new value to be given to the internal parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Gridall parameters. For a complete list of parameters available in this utility, see the gridall_params man page.
 <h2>Access</h2>To use GASETC or c_gasetc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the gridall man page for a description of all Gridall error messages and/or informational messages.

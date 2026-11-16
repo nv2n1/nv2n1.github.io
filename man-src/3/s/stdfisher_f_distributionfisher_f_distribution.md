@@ -11,10 +11,8 @@ description: "std::fisher_f_distribution<RealType>::fisher_f_distribution – st
 <h2>Synopsis</h2>
 <pre><code>fisher_f_distribution()
     : fisher_f_distribution(1.0){}(1)(since C++ 11)
-
           explicit fisher_f_distribution(RealType m, RealType n = 1.0);
 (2)(since C++ 11)
-
     explicit fisher_f_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses m and n as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>

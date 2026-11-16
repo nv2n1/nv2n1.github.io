@@ -30,32 +30,32 @@ description: "Cervisia – Graphical CVS frontend"
 <h2>OPTIONS</h2>
 <p> Cervisia accepts the following options:</p>
 <dl>
-<dt><i>directory</i></p>
-<dd> Tells Cervisia to open the sandbox in <i>directory</i> at startup</p>
-<dt><code>&#8211;resolve</code> <i>filename</i></p>
-<dd> Shows a resolve dialog for the given file</p>
-<dt><code>&#8211;log</code> <i>filename</i></p>
-<dd> Shows a log dialog for the given file</p>
-<dt><code>&#8211;annotate</code> <i>filename</i></p>
-<dd> Shows a annotation dialog for the given file</p>
-<dt><code>&#8211;caption</code> <i>caption</i></p>
-<dd> Sets the caption, i. e. what is shown in the title bar</p>
-<dt><code>&#8211;icon</code> <i>icon</i></p>
-<dd> Sets the program&#8217;s icon (used by window managers and panels)</p>
-<dt><code>&#8211;miniicon</code> <i>miniicon</i></p>
-<dd> Sets the program&#8217;s mini icon (used by window managers and panels)</p>
-<dt><code>&#8211;config</code> <i>filename</i></p>
-<dd> Uses the given file for the configuration</p>
-<dt><code>&#8211;dcopserver</code> <i>server</i></p>
-<dd> Sets the dcopserver the program should use</p>
-<dt><code>&#8211;nocrashhandler</code></p>
-<dd> Disables the crash handler. Use this to get core dumps</p>
-<dt><code>&#8211;waitforwm</code></p>
-<dd> Waits for a <font SIZE="-1">WM_NET</font> compatible windowmanager</p>
-<dt><code>&#8211;style</code> <i>style</i></p>
-<dd> Sets the application <font SIZE="-1">GUI</font> style</p>
-<dt><code>&#8211;geometry</code> <i>geometry</i></p>
-<dd> Sets the geometry of the main window</dl>
+<dt><i>directory</i></dt>
+<dd> Tells Cervisia to open the sandbox in <i>directory</i> at startup</dd>
+<dt><code>&#8211;resolve</code> <i>filename</i></dt>
+<dd> Shows a resolve dialog for the given file</dd>
+<dt><code>&#8211;log</code> <i>filename</i></dt>
+<dd> Shows a log dialog for the given file</dd>
+<dt><code>&#8211;annotate</code> <i>filename</i></dt>
+<dd> Shows a annotation dialog for the given file</dd>
+<dt><code>&#8211;caption</code> <i>caption</i></dt>
+<dd> Sets the caption, i. e. what is shown in the title bar</dd>
+<dt><code>&#8211;icon</code> <i>icon</i></dt>
+<dd> Sets the program&#8217;s icon (used by window managers and panels)</dd>
+<dt><code>&#8211;miniicon</code> <i>miniicon</i></dt>
+<dd> Sets the program&#8217;s mini icon (used by window managers and panels)</dd>
+<dt><code>&#8211;config</code> <i>filename</i></dt>
+<dd> Uses the given file for the configuration</dd>
+<dt><code>&#8211;dcopserver</code> <i>server</i></dt>
+<dd> Sets the dcopserver the program should use</dd>
+<dt><code>&#8211;nocrashhandler</code></dt>
+<dd> Disables the crash handler. Use this to get core dumps</dd>
+<dt><code>&#8211;waitforwm</code></dt>
+<dd> Waits for a <font SIZE="-1">WM_NET</font> compatible windowmanager</dd>
+<dt><code>&#8211;style</code> <i>style</i></dt>
+<dd> Sets the application <font SIZE="-1">GUI</font> style</dd>
+<dt><code>&#8211;geometry</code> <i>geometry</i></dt>
+<dd> Sets the geometry of the main window</dd></dl>
 <h2>FILES</h2>
 <p> <i>_KDECONFDIR_/cervisiarc</i> &#8211; global configuration file </p>
 <p> <i>$HOME/.kde/share/config/cervisiarc</i> &#8211; user-specific configuration file</p>

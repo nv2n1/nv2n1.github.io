@@ -11,7 +11,6 @@ std::iswxdigit - std::iswxdigit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswxdigit(wint_t ch);</code></pre> 
 Checks if the given wide character corresponds (if narrowed) to a hexadecimal numeric character, i.e. one of 0123456789abcdefABCDEF. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 

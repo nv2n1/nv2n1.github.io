@@ -22,25 +22,25 @@ CALL TDSTRI (U, NU, V, NV, W, LW1D, RTRI, MTRI, NTRI, IRST)
 
 The arguments of TDSTRI are as follows:
 <dl><dt>U
-<dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that U(1) &lt; U(2) &lt; ... U(NU-1) &lt; U(NU).
-<dt>NU
-<dd>(an input expression of type INTEGER) - the dimension of U.
-<dt>V
-<dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; V(2) &lt; ... V(NV-1) &lt; V(NV).
-<dt>NV
-<dd>(an input expression of type INTEGER) - the dimension of V.
-<dt>W
-<dd>(an input array, of type REAL, dimensioned NU x NV and having FORTRAN first dimension LW1D) - values of a dependent variable &quot;w(u,v)&quot;. The points (((U(I),V(J),W(I,J)),I=1,NU),J=1,NV) define a surface that one wishes to draw.
-<dt>LW1D
-<dd>(an input expression of type INTEGER) - the FORTRAN first dimension of the array W. It must be the case that LW1D is greater than or equal to NU.
-<dt>RTRI
-<dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
-<dt>MTRI
-<dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
-<dt>NTRI
-<dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDSTRI. If NTRI becomes equal to MTRI, TDSTRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDSTRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
-<dt>IRST
-<dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.</dl>
+</dt><dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that U(1) &lt; U(2) &lt; ... U(NU-1) &lt; U(NU).
+</dd><dt>NU
+</dt><dd>(an input expression of type INTEGER) - the dimension of U.
+</dd><dt>V
+</dt><dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; V(2) &lt; ... V(NV-1) &lt; V(NV).
+</dd><dt>NV
+</dt><dd>(an input expression of type INTEGER) - the dimension of V.
+</dd><dt>W
+</dt><dd>(an input array, of type REAL, dimensioned NU x NV and having FORTRAN first dimension LW1D) - values of a dependent variable &quot;w(u,v)&quot;. The points (((U(I),V(J),W(I,J)),I=1,NU),J=1,NV) define a surface that one wishes to draw.
+</dd><dt>LW1D
+</dt><dd>(an input expression of type INTEGER) - the FORTRAN first dimension of the array W. It must be the case that LW1D is greater than or equal to NU.
+</dd><dt>RTRI
+</dt><dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
+</dd><dt>MTRI
+</dt><dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
+</dd><dt>NTRI
+</dt><dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDSTRI. If NTRI becomes equal to MTRI, TDSTRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDSTRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
+</dd><dt>IRST
+</dt><dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

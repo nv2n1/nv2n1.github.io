@@ -21,13 +21,13 @@ CALL WMLABC (X, Y, CITY, TEMPS)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the center of the composite label that consists of the city name in the character variable CITY and the temperature ranges in the character variable TEMPS. The city name is plotted above the temperatures.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the center of the composite label that consists of the city name in the character variable CITY and the temperature ranges in the character variable TEMPS. The city name is plotted above the temperatures.
-<dt>CITY
-<dd>(Character, Input) - A character variable that contains the name of the city being plotted.
-<dt>TEMPS
-<dd>(Character, Input) - A character variable that contains the daily hi/low label for the city named in the third argument.</dl>
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the center of the composite label that consists of the city name in the character variable CITY and the temperature ranges in the character variable TEMPS. The city name is plotted above the temperatures.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the center of the composite label that consists of the city name in the character variable CITY and the temperature ranges in the character variable TEMPS. The city name is plotted above the temperatures.
+</dd><dt>CITY
+</dt><dd>(Character, Input) - A character variable that contains the name of the city being plotted.
+</dd><dt>TEMPS
+</dt><dd>(Character, Input) - A character variable that contains the daily hi/low label for the city named in the third argument.</dd></dl>
 
 <h2>Usage</h2>
 

@@ -11,30 +11,22 @@ description: "std::optional<T>::operator= – std::optional<T>::operator="
 <h2>Synopsis</h2>
 <pre><code>optional &amp;operator=(std::nullopt_t) noexcept;
 (1)(since C++ 17)
-
     constexpr optional &amp;
     operator=(const optional &amp;other);
 (2)(since C++ 17)
-
     constexpr optional &amp;
     operator=(optional &amp;&amp;other) noexcept(/* see below */);
 (3)(since C++ 17)
-
     template &lt;class U = T&gt;
     (4)(since C++ 17)
-
         optional &amp;
         operator=(U &amp;&amp;value);
-
 template &lt;class U&gt;
 (5)(since C++ 17)
-
     optional &amp;
     operator=(const optional&lt;U&gt; &amp;other);
-
 template &lt;class U&gt;
 (6)(since C++ 17)
-
     optional &amp;
     operator=(optional&lt;U&gt; &amp;&amp;other);</code></pre>
 <p>Replaces contents of *this with the contents of other<br />
@@ -87,11 +79,8 @@ noexcept(std::is_nothrow_move_assignable&lt;T&gt;::value &amp;&amp; std::is_noth
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;optional&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::optional&lt;const char *&gt; s1 = &quot;abc&quot;, s2; // constructor
     s2 = s1;                                    // assignment

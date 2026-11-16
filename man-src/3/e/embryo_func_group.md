@@ -21,10 +21,10 @@ description: "Function Functions – Functions that deal with Embryo program fun
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The given program.<br />
- <i>name</i> The given function name.</dl>
+ <i>name</i> The given function name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The function if successful. Otherwise, EMBRYO_FUNCTION_NONE.</dl>
+<dd>The function if successful. Otherwise, EMBRYO_FUNCTION_NONE.</dd></dl>
 <p> References EMBRYO_FUNCTION_NONE.</p>
 <h3>EAPI void embryo_program_native_call_add (Embryo_Program * ep, const char * name, Embryo_Cell(*)(Embryo_Program *ep, Embryo_Cell *params) func)</h3>
 <p>Adds a native program call to the given Embryo program. </p>
@@ -32,6 +32,6 @@ description: "Function Functions – Functions that deal with Embryo program fun
 <dl COMPACT>
 <dd><i>ep</i> The given Embryo program.<br />
  <i>name</i> The name for the call used in the script.<br />
- <i>func</i> The function to use when the call is made.</dl>
+ <i>func</i> The function to use when the call is made.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

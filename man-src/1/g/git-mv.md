@@ -17,31 +17,31 @@ description: "git-mv – Move or rename a file, a directory, or a symlink"
 <p> Move or rename a file, directory or symlink. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 git mv[-v][-f][-n][-k]&lt;source&gt;&lt;destination&gt;
     git mv[-v][-f][-n][-k]&lt;source&gt;...&lt;destination directory&gt;
 </code></pre>
-</dl>
+</dd></dl>
 <p> In the first form, it renames &lt;source&gt;, which must exist and be either a file, symlink or directory, to &lt;destination&gt;. In the second form, the last argument has to be an existing directory; the given sources will be moved into this directory. </p>
 <p> The index is updated after successful completion, but the change must still be committed.</p>
 <h2>OPTIONS</h2>
 <p> -f, &#8211;force</p>
 <dl>
 <dt>
-<dd> Force renaming or moving of a file even if the target exists</dl>
+</dt><dd> Force renaming or moving of a file even if the target exists</dd></dl>
 <p> -k</p>
 <dl>
 <dt>
-<dd> Skip move or rename actions which would lead to an error condition. An error happens when a source is neither existing nor controlled by Git, or when it would overwrite an existing file unless <code>-f</code> is given.</dl>
+</dt><dd> Skip move or rename actions which would lead to an error condition. An error happens when a source is neither existing nor controlled by Git, or when it would overwrite an existing file unless <code>-f</code> is given.</dd></dl>
 <p> -n, &#8211;dry-run</p>
 <dl>
 <dt>
-<dd> Do nothing; only show what would happen</dl>
+</dt><dd> Do nothing; only show what would happen</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Report the names of files as they are moved.</dl>
+</dt><dd> Report the names of files as they are moved.</dd></dl>
 <h2>SUBMODULES</h2>
 <p> Moving a submodule using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will update the gitfile and core.worktree setting to make the submodule work in the new location. It also will attempt to update the submodule.&lt;name&gt;.path setting in the <code><a href="/docs/linux/man/5-gitmodules/">gitmodules</a></code>(5) file and stage that file (unless -n is used).</p>
 <h2>BUGS</h2>

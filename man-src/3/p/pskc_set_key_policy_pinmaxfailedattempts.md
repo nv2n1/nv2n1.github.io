@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_pinmaxfailedattempts – API function"
 void pskc_set_key_policy_pinmaxfailedattempts(pskc_key_t *key, uint32_t attempts);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint32_t attempts</p>
-<dd>number of attempts to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint32_t attempts</dt>
+<dd>number of attempts to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy PINPolicy MaxFailedAttempts value. This attribute indicates the maximum number of times the PIN may be entered wrongly before it MUST NOT be possible to use the key anymore (typical reasonable values are in the positive integer range of at least 2 and no more than 10).</p>
 <h2>Since</h2>

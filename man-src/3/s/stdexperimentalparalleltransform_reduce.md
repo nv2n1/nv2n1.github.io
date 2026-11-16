@@ -11,21 +11,13 @@ std::experimental::parallel::transform_reduce - std::experimental::parallel::tra
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/numeric&gt;
-
 template&lt;class InputIt, class UnaryOp, class T, class BinaryOp&gt;
-
 T transform_reduce(InputIt first, InputIt last,                 (1) (parallelism TS)
-
 UnaryOp unary_op, T init, BinaryOp binary_op);
-
 template&lt;class ExecutionPolicy,
-
 class InputIt, class UnaryOp, class T, class BinaryOp&gt;
-
 T transform_reduce(ExecutionPolicy&amp;&amp; policy,                    (2) (parallelism TS)
-
 InputIt first, InputIt last,
-
 UnaryOp unary_op, T init, BinaryOp binary_op);</code></pre> 
 Applies unary_op to each element in the range [first; last) and reduces the results (possibly permuted and aggregated in unspecified manner) along with the initial value init over binary_op. 
 The behavior is non-deterministic if binary_op is not associative or not commutative. 
@@ -107,22 +99,14 @@ If the range is empty, init is returned, unmodified
 
 transform_reduce can be used to parallelize std::inner_product: 
  // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/numeric&gt;
-
 #include &lt;experimental/execution_policy&gt;
-
 #include &lt;boost/iterator/zip_iterator.hpp&gt;
-
 #include &lt;boost/tuple.hpp&gt;
 int main()
-
 {
     std::vector&lt;double&gt; xvalues(10007, 1.0), yvalues(10007, 1.0);
     double result = std::experimental::parallel::transform_reduce(

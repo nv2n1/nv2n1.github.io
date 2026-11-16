@@ -13,14 +13,14 @@ description: "oath_base32_encode – API function"
 int oath_base32_encode(const char *in, size_t inlen, char **out, size_t *outlen);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * in</p>
-<dd>input string with binary data of length <i>inlen</i></p>
-<dt>size_t inlen</p>
-<dd>length of input data <i>in</i></p>
-<dt>char ** out</p>
-<dd>pointer to newly allocated output string of length <i>outlen</i>, or NULL</p>
-<dt>size_t * outlen</p>
-<dd>pointer to output variable holding length of <i>out</i>, or NULL</dl>
+<dt>const char * in</dt>
+<dd>input string with binary data of length <i>inlen</i></dd>
+<dt>size_t inlen</dt>
+<dd>length of input data <i>in</i></dd>
+<dt>char ** out</dt>
+<dd>pointer to newly allocated output string of length <i>outlen</i>, or NULL</dd>
+<dt>size_t * outlen</dt>
+<dd>pointer to output variable holding length of <i>out</i>, or NULL</dd></dl>
 <h2>Description</h2>
 <p>Encode binary data into a string with base32 data. </p>
 <p> The <i>in</i> parameter should contain <i>inlen</i> bytes of data to encode. The function allocates a new string in *<i>out</i> to hold the encoded data, and sets *<i>outlen</i> to the length of the data. The output string *<i>out</i> is zero-terminated (ASCII NUL), but the NUL is not counted in *<i>outlen</i>. </p>

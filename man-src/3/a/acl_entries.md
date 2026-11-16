@@ -20,8 +20,8 @@ description: "acl_entries – return the number of entries in an ACL"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_entries function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dd></dl>
 <h2>STANDARDS</h2>
 <p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
 <h2>SEE ALSO</h2>

@@ -10,9 +10,7 @@ description: "textout_ex – Writes a string on a bitmap. Allegro game programmi
 <p>textout_ex &#8211; Writes a string on a bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void textout_ex(BITMAP *bmp, const FONT *f, const char *s,
-
                 int x, int y, int color, int bg);</code></pre>
 <h2>Description</h2>
 <p>Writes the string `s&#8217; onto the bitmap at position x, y, using the specified font, foreground color and background color. If the background color is -1, then the text is written transparently. If the foreground color is -1 and a color font is in use, it will be drawn using the colors from the original font bitmap (the one you imported into the grabber program), which allows multicolored text output. For high and true color fonts, the foreground color is ignored and always treated as -1. Example: </p>

@@ -15,24 +15,24 @@ description: "ocf_pacemaker_SysInfo – SysInfo resource agent"
 <h2>Supported Parameters</h2>
 <p><code>OCF_RESKEY_pidfile</code> = string [/SysInfo-]</p>
 <dl>
-<dd>PID file</dl>
+<dd>PID file</dd></dl>
 <p> <code>OCF_RESKEY_delay</code> = string [0s]</p>
 <dl>
-<dd>Dampening Delay </p>
+<dd>Dampening Delay </dd>
 <p> Interval to allow values to stabilize</dl>
 <p> <code>OCF_RESKEY_disks</code> = string</p>
 <dl>
-<dd>List of Filesytems/Paths to query for free disk space </p>
+<dd>List of Filesytems/Paths to query for free disk space </dd>
 <p> Filesystems or Paths to be queried for free disk space as a SPACE separated list &#8211; e.g &quot;/dev/sda1 /tmp&quot;. Results will be written to an attribute with leading slashes removed, and other slashes replaced with underscore, and the word &#8216;free&#8217; appended &#8211; e.g for /dev/sda1 it would be &#8216;dev_sda1_free&#8217;. Note: The root filesystem &#8216;/&#8217; is always queried to an attribute named &#8216;root_free&#8217;</dl>
 <p> <code>OCF_RESKEY_disk_unit</code> = string [G]</p>
 <dl>
-<dd>Unit to report disk free space in </p>
+<dd>Unit to report disk free space in </dd>
 <p> Unit to report disk free space in. Can be one of: B, K, M, G, T, P (case-insensitive)</dl>
 <p> <code>OCF_RESKEY_min_disk_free</code> = string []</p>
 <dl>
-<dd>minimum disk free space required </p>
+<dd>minimum disk free space required </dd>
 <p> The amount of free space required in monitored disks. If any of the monitored disks has less than this amount of free space, , with the node attribute &quot;#health_disk&quot; changing to &quot;red&quot;, all resources will move away from the node. Set the node-health-strategy property appropriately for this to take effect. If the unit is not specified, it defaults to disk_unit.</dl>
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

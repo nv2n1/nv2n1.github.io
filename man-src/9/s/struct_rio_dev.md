@@ -43,93 +43,93 @@ description: "struct_rio_dev – RIO device info"
 <h2>Members</h2>
 <p>global_list</p>
 <dl>
-<dd>Node in list of all RIO devices</dl>
+<dd>Node in list of all RIO devices</dd></dl>
 <p> net_list</p>
 <dl>
-<dd>Node in list of RIO devices in a network</dl>
+<dd>Node in list of RIO devices in a network</dd></dl>
 <p> net</p>
 <dl>
-<dd>Network this device is a part of</dl>
+<dd>Network this device is a part of</dd></dl>
 <p> do_enum</p>
 <dl>
-<dd>Enumeration flag</dl>
+<dd>Enumeration flag</dd></dl>
 <p> did</p>
 <dl>
-<dd>Device ID</dl>
+<dd>Device ID</dd></dl>
 <p> vid</p>
 <dl>
-<dd>Vendor ID</dl>
+<dd>Vendor ID</dd></dl>
 <p> device_rev</p>
 <dl>
-<dd>Device revision</dl>
+<dd>Device revision</dd></dl>
 <p> asm_did</p>
 <dl>
-<dd>Assembly device ID</dl>
+<dd>Assembly device ID</dd></dl>
 <p> asm_vid</p>
 <dl>
-<dd>Assembly vendor ID</dl>
+<dd>Assembly vendor ID</dd></dl>
 <p> asm_rev</p>
 <dl>
-<dd>Assembly revision</dl>
+<dd>Assembly revision</dd></dl>
 <p> efptr</p>
 <dl>
-<dd>Extended feature pointer</dl>
+<dd>Extended feature pointer</dd></dl>
 <p> pef</p>
 <dl>
-<dd>Processing element features</dl>
+<dd>Processing element features</dd></dl>
 <p> swpinfo</p>
 <dl>
-<dd>Switch port info</dl>
+<dd>Switch port info</dd></dl>
 <p> src_ops</p>
 <dl>
-<dd>Source operation capabilities</dl>
+<dd>Source operation capabilities</dd></dl>
 <p> dst_ops</p>
 <dl>
-<dd>Destination operation capabilities</dl>
+<dd>Destination operation capabilities</dd></dl>
 <p> comp_tag</p>
 <dl>
-<dd>RIO component tag</dl>
+<dd>RIO component tag</dd></dl>
 <p> phys_efptr</p>
 <dl>
-<dd>RIO device extended features pointer</dl>
+<dd>RIO device extended features pointer</dd></dl>
 <p> phys_rmap</p>
 <dl>
-<dd>LP-Serial Register Map Type (1 or 2)</dl>
+<dd>LP-Serial Register Map Type (1 or 2)</dd></dl>
 <p> em_efptr</p>
 <dl>
-<dd>RIO Error Management features pointer</dl>
+<dd>RIO Error Management features pointer</dd></dl>
 <p> dma_mask</p>
 <dl>
-<dd>Mask of bits of RIO address this device implements</dl>
+<dd>Mask of bits of RIO address this device implements</dd></dl>
 <p> driver</p>
 <dl>
-<dd>Driver claiming this device</dl>
+<dd>Driver claiming this device</dd></dl>
 <p> dev</p>
 <dl>
-<dd>Device model device</dl>
+<dd>Device model device</dd></dl>
 <p> riores[RIO_MAX_DEV_RESOURCES]</p>
 <dl>
-<dd>RIO resources this device owns</dl>
+<dd>RIO resources this device owns</dd></dl>
 <p> pwcback</p>
 <dl>
-<dd>port-write callback function for this device</dl>
+<dd>port-write callback function for this device</dd></dl>
 <p> destid</p>
 <dl>
-<dd>Network destination ID (or associated destid for switch)</dl>
+<dd>Network destination ID (or associated destid for switch)</dd></dl>
 <p> hopcount</p>
 <dl>
-<dd>Hopcount to this device</dl>
+<dd>Hopcount to this device</dd></dl>
 <p> prev</p>
 <dl>
-<dd>Previous RIO device connected to the current one</dl>
+<dd>Previous RIO device connected to the current one</dd></dl>
 <p> state</p>
 <dl>
-<dd>device state</dl>
+<dd>device state</dd></dl>
 <p> rswitch[0]</p>
 <dl>
-<dd>struct rio_switch (if valid for this device)</dl>
+<dd>struct rio_switch (if valid for this device)</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

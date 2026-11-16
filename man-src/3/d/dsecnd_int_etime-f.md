@@ -19,16 +19,16 @@ description: "dsecnd_INT_ETIME.f –"
 <dd>
 <pre> DSECND returns the user time for a process in seconds.
  This version gets the time from the INTERNAL function ETIME.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 36 of file dsecnd_INT_ETIME.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

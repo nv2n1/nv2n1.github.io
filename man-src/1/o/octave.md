@@ -30,14 +30,14 @@ description: "octave – A high-level interactive language for numerical computa
 <h2>FILES</h2>
 <p> Upon startup Octave looks for four initialization files. Each file may contain any number of valid Octave commands.</p>
 <dl>
-<dt><i>octave-home</i>/share/octave/site/m/startup/octaverc</p>
-<dd> Site-wide initialization file which changes options for all users. <i>octave-home</i> is the directory where Octave was installed such as <code>/usr/local</code>.</p>
-<dt><i>octave-home</i>/share/octave/<i>version</i>/m/startup/octaverc</p>
-<dd> Site-wide initialization file for Octave version <i>version</i>.</p>
-<dt>~/.octaverc</p>
-<dd> User&#8217;s personal initialization file.</p>
-<dt>.octaverc</p>
-<dd> Project-specific initialization file located in the current directory.</dl>
+<dt><i>octave-home</i>/share/octave/site/m/startup/octaverc</dt>
+<dd> Site-wide initialization file which changes options for all users. <i>octave-home</i> is the directory where Octave was installed such as <code>/usr/local</code>.</dd>
+<dt><i>octave-home</i>/share/octave/<i>version</i>/m/startup/octaverc</dt>
+<dd> Site-wide initialization file for Octave version <i>version</i>.</dd>
+<dt>~/.octaverc</dt>
+<dd> User&#8217;s personal initialization file.</dd>
+<dt>.octaverc</dt>
+<dd> Project-specific initialization file located in the current directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> John W. Eaton &lt;jwe [at] octave.org&gt; </p>
 <h2>Index</h2>

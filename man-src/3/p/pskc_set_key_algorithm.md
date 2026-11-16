@@ -13,10 +13,10 @@ description: "pskc_set_key_algorithm – API function"
 void pskc_set_key_algorithm(pskc_key_t *key, const char *keyalg);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const char * keyalg</p>
-<dd>the key algorithm string to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const char * keyalg</dt>
+<dd>the key algorithm string to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Algorithm attribute value. This may be an URN, for example &quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;. </p>
 <p> The pointer is stored in <i>container</i>, not a copy of the data, so you must not deallocate the data before another call to this function or the last call to any function using <i>container</i>.</p>

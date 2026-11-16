@@ -10,49 +10,49 @@ description: "XInitImage, XCreateImage, XGetPixel, XPutPixel, XSubImage, XAddPix
 <p>XInitImage, XCreateImage, XGetPixel, XPutPixel, XSubImage, XAddPixel, XDestroyImage &#8211; image utilities </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XInitImage(XImage *<i>image</i>);</p>
-<dd>XImage *XCreateImage(Display *<i>display</i>, Visual *<i>visual</i>, unsigned int <i>depth</i>, int <i>format</i>, int <i>offset</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>bitmap_pad</i>, int <i>bytes_per_line</i>);</p>
-<dd>unsigned long XGetPixel(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>);</p>
-<dd>int XPutPixel(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>, unsigned long <i>pixel</i>);</p>
-<dd>XImage *XSubImage(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>subimage_width</i>, unsigned int <i>subimage_height</i>);</p>
-<dd>int XAddPixel(XImage *<i>ximage</i>, long <i>value</i>);</p>
-<dd>int XDestroyImage(XImage *<i>ximage</i>);</dl>
+<dd>Status XInitImage(XImage *<i>image</i>);</dd>
+<dd>XImage *XCreateImage(Display *<i>display</i>, Visual *<i>visual</i>, unsigned int <i>depth</i>, int <i>format</i>, int <i>offset</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>bitmap_pad</i>, int <i>bytes_per_line</i>);</dd>
+<dd>unsigned long XGetPixel(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>);</dd>
+<dd>int XPutPixel(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>, unsigned long <i>pixel</i>);</dd>
+<dd>XImage *XSubImage(XImage *<i>ximage</i>, int <i>x</i>, int <i>y</i>, unsigned int <i>subimage_width</i>, unsigned int <i>subimage_height</i>);</dd>
+<dd>int XAddPixel(XImage *<i>ximage</i>, long <i>value</i>);</dd>
+<dd>int XDestroyImage(XImage *<i>ximage</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>bitmap_pad</i></p>
-<dd>Specifies the quantum of a scanline (8, 16, or 32). In other words, the start of one scanline is separated in client memory from the start of the next scanline by an integer multiple of this many bits.</p>
-<dt><i>bytes_per_line</i></p>
-<dd>Specifies the number of bytes in the client image between the start of one scanline and the start of the next.</p>
-<dt><i>data</i></p>
-<dd>Specifies the image data.</p>
-<dt><i>depth</i></p>
-<dd>Specifies the depth of the image.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>format</i></p>
-<dd>Specifies the format for the image. You can pass <code>XYBitmap</code>, <code>XYPixmap</code>, or <code>ZPixmap</code>.</p>
-<dt><i>height</i></p>
-<dd>Specifies the height of the image, in pixels.</p>
-<dt><i>offset</i></p>
-<dd>Specifies the number of pixels to ignore at the beginning of the scanline.</p>
-<dt><i>pixel</i></p>
-<dd>Specifies the new pixel value.</p>
-<dt><i>subimage_height</i></p>
-<dd>Specifies the height of the new subimage, in pixels.</p>
-<dt><i>subimage_width</i></p>
-<dd>Specifies the width of the new subimage, in pixels.</p>
-<dt><i>value</i></p>
-<dd>Specifies the constant value that is to be added.</p>
-<dt><i>visual</i></p>
-<dd>Specifies the <code>Visual</code> structure.</p>
-<dt><i>width</i></p>
-<dd>Specifies the width of the image, in pixels.</p>
-<dt><i>ximage</i></p>
-<dd>Specifies the image.</p>
-<dt><i>x</i></p>
+<dt><i>bitmap_pad</i></dt>
+<dd>Specifies the quantum of a scanline (8, 16, or 32). In other words, the start of one scanline is separated in client memory from the start of the next scanline by an integer multiple of this many bits.</dd>
+<dt><i>bytes_per_line</i></dt>
+<dd>Specifies the number of bytes in the client image between the start of one scanline and the start of the next.</dd>
+<dt><i>data</i></dt>
+<dd>Specifies the image data.</dd>
+<dt><i>depth</i></dt>
+<dd>Specifies the depth of the image.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>format</i></dt>
+<dd>Specifies the format for the image. You can pass <code>XYBitmap</code>, <code>XYPixmap</code>, or <code>ZPixmap</code>.</dd>
+<dt><i>height</i></dt>
+<dd>Specifies the height of the image, in pixels.</dd>
+<dt><i>offset</i></dt>
+<dd>Specifies the number of pixels to ignore at the beginning of the scanline.</dd>
+<dt><i>pixel</i></dt>
+<dd>Specifies the new pixel value.</dd>
+<dt><i>subimage_height</i></dt>
+<dd>Specifies the height of the new subimage, in pixels.</dd>
+<dt><i>subimage_width</i></dt>
+<dd>Specifies the width of the new subimage, in pixels.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the constant value that is to be added.</dd>
+<dt><i>visual</i></dt>
+<dd>Specifies the <code>Visual</code> structure.</dd>
+<dt><i>width</i></dt>
+<dd>Specifies the width of the image, in pixels.</dd>
+<dt><i>ximage</i></dt>
+<dd>Specifies the image.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XInitImage</code> function initializes the internal image manipulation routines of an image structure, based on the values of the various structure members. All fields other than the manipulation routines must already be initialized. If the bytes_per_line member is zero, <code>XInitImage</code> will assume the image data is contiguous in memory and set the bytes_per_line member to an appropriate value based on the other members; otherwise, the value of bytes_per_line is not changed. All of the manipulation routines are initialized to functions that other Xlib image manipulation functions need to operate on the type of image specified by the rest of the structure. </p>
 <p> This function must be called for any image constructed by the client before passing it to any other Xlib function. Image structures created or returned by Xlib do not need to be initialized in this fashion. </p>

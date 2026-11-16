@@ -15,22 +15,22 @@ description: "autoupdate – Update a configure.ac to a newer Autoconf"
 <p> Update each TEMPLATE-FILE if given, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;, to the syntax of the current version of Autoconf. The original files are backed up.</p>
 <h3>Operation modes:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> consider all files obsolete</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> consider all files obsolete</dd></dl>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David J. MacKenzie and Akim Demaille.</p>
 <h2>REPORTING BUGS</h2>
@@ -45,6 +45,6 @@ description: "autoupdate – Update a configure.ac to a newer Autoconf"
 <p> The full documentation for <code>autoupdate</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autoupdate</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autoupdate</code></dl>
+</dt><dd> <code>info autoupdate</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

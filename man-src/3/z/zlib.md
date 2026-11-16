@@ -29,27 +29,27 @@ The <i>zlib</i> library is a general purpose data compression library. The code 
  <i>zlib</i> is built in to many languages and operating systems, including but not limited to Java, Python, .NET, PHP, Perl, Ruby, Swift, and Go. 
 
  An experimental package to read and write files in the .zip format, written on top of <i>zlib</i> by Gilles Vollant (info [at] winimage.com), is available at:
-<dl><dd><a rel="nofollow" HREF="http://www.winimage.com/zLibDll/minizip.html">http://www.winimage.com/zLibDll/minizip.html</a> and also in the <i>contrib/minizip</i> directory of the main <i>zlib</i> source distribution.</dl>
+<dl><dd><a rel="nofollow" HREF="http://www.winimage.com/zLibDll/minizip.html">http://www.winimage.com/zLibDll/minizip.html</a> and also in the <i>contrib/minizip</i> directory of the main <i>zlib</i> source distribution.</dd></dl>
 
 <h2>See Also</h2>
 
 The <i>zlib</i> web site can be found at:
-<dl><dd><a rel="nofollow" HREF="http://zlib.net/">http://zlib.net/</a></dl>
+<dl><dd><a rel="nofollow" HREF="http://zlib.net/">http://zlib.net/</a></dd></dl>
  
 
  The data format used by the <i>zlib</i> library is described by RFC (Request for Comments) 1950 to 1952 in the files:
 <dl><dd><a rel="nofollow" HREF="http://tools.ietf.org/html/rfc1950">http://tools.ietf.org/html/rfc1950</a> (for the zlib header and trailer format) 
  <a rel="nofollow" HREF="http://tools.ietf.org/html/rfc1951">http://tools.ietf.org/html/rfc1951</a> (for the deflate compressed data format) 
- <a rel="nofollow" HREF="http://tools.ietf.org/html/rfc1952">http://tools.ietf.org/html/rfc1952</a> (for the gzip header and trailer format)</dl>
+ <a rel="nofollow" HREF="http://tools.ietf.org/html/rfc1952">http://tools.ietf.org/html/rfc1952</a> (for the gzip header and trailer format)</dd></dl>
  
 
  Mark Nelson wrote an article about <i>zlib</i> for the Jan. 1997 issue of Dr. Dobb's Journal; a copy of the article is available at:
-<dl><dd><a rel="nofollow" HREF="http://marknelson.us/1997/01/01/zlib-engine/">http://marknelson.us/1997/01/01/zlib-engine/</a></dl>
+<dl><dd><a rel="nofollow" HREF="http://marknelson.us/1997/01/01/zlib-engine/">http://marknelson.us/1997/01/01/zlib-engine/</a></dd></dl>
 
 <h2>Reporting Problems</h2>
 
 Before reporting a problem, please check the <i>zlib</i> web site to verify that you have the latest version of <i>zlib</i>; otherwise, obtain the latest version and see if the problem still exists. Please read the <i>zlib</i> FAQ at:
-<dl><dd><a rel="nofollow" HREF="http://zlib.net/zlib_faq.html">http://zlib.net/zlib_faq.html</a></dl>
+<dl><dd><a rel="nofollow" HREF="http://zlib.net/zlib_faq.html">http://zlib.net/zlib_faq.html</a></dd></dl>
  
 
  before asking for help. Send questions and/or comments to zlib [at] gzip.org, or (for the Windows DLL version) to Gilles Vollant (info [at] winimage.com).
@@ -65,11 +65,11 @@ Version 1.2.11
  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions: 
 
 <dl><dt>step].
-<dd>The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
-<dt>step].
-<dd>Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
-<dt>step].
-<dd>This notice may not be removed or altered from any source distribution.</dl>
+</dt><dd>The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+</dd><dt>step].
+</dt><dd>Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+</dd><dt>step].
+</dt><dd>This notice may not be removed or altered from any source distribution.</dd></dl>
  
 
  Jean-loup Gailly Mark Adler 

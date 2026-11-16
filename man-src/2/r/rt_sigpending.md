@@ -20,8 +20,8 @@ description: "sigpending, rt_sigpending – examine pending signals"
 <p> <code>sigpending</code>() returns 0 on success and -1 on error. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>set</i> points to memory which is not a valid part of the process address space.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>set</i> points to memory which is not a valid part of the process address space.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>

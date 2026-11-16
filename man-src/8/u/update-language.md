@@ -15,30 +15,30 @@ description: "update-language – generate hyphenation configuration for TeX eng
 <p> When called as update-language, all three configurations files are generated. Otherwise only the selected one.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;conf-file</code>=<i>,FILE/</i></p>
-<dd>file giving additional hyphen specifications</p>
-<dt> <code>-o</code>, <code>&#8211;output-file</code>=<i>,FILE/</i> file to write the output to</p>
-<dt><code>-d</code>, <code>&#8211;output-dir</code>=<i>,DIR/</i></p>
+<dt><code>-c</code>, <code>&#8211;conf-file</code>=<i>,FILE/</i></dt>
+<dd>file giving additional hyphen specifications</dd>
+<dt> <code>-o</code>, <code>&#8211;output-file</code>=<i>,FILE/</i> file to write the output to</dt>
+<dt><code>-d</code>, <code>&#8211;output-dir</code>=<i>,DIR/</i></dt>
 <dd>
-<dd>directory where files are written</p>
-<dt><code>&#8211;checks</code></p>
-<dd>perform sanity checks on the generated config file</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>don&#8217;t write anything to the standard output during normal operation</p>
-<dt><code>-h</code>, -?, <code>&#8211;help</code></p>
-<dd>display this help message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+</dd><dd>directory where files are written</dd>
+<dt><code>&#8211;checks</code></dt>
+<dd>perform sanity checks on the generated config file</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>don&#8217;t write anything to the standard output during normal operation</dd>
+<dt><code>-h</code>, -?, <code>&#8211;help</code></dt>
+<dd>display this help message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <h2>Files</h2>
 <p>The default output directory is</p>
 <dl>
-<dd><i>,/var/lib/texmf/tex/generic/config/</i></dl>
+<dd><i>,/var/lib/texmf/tex/generic/config/</i></dd></dl>
 <p> The default output files are</p>
 <dl>
-<dt>for update-language-dat</p>
-<dd>language.dat</p>
-<dt>for update-language-def</p>
-<dd>language.def</p>
-<dt>for update-language-lua</p>
-<dd>language.dat.lua</dl>
+<dt>for update-language-dat</dt>
+<dd>language.dat</dd>
+<dt>for update-language-def</dt>
+<dd>language.def</dd>
+<dt>for update-language-lua</dt>
+<dd>language.dat.lua</dd></dl>
 <p> If <code>-o</code>/&#8211;output-file is given, it overrides all defaults.</p>

@@ -15,7 +15,7 @@ clk_get_rate - obtain the current clock rate (in Hz) for a clock source. This is
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock source</dl>
+<dl><dd></dd><dd>clock source</dd></dl>
 
 <h2>Copyright</h2>
 

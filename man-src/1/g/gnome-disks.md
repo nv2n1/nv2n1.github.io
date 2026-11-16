@@ -11,29 +11,29 @@ description: "gnome-disks – the GNOME Disks application"
 <p> gnome-disks &#8211; the GNOME Disks application </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gnome-disks</code> [OPTIONS]</dl>
+<dt> <code>gnome-disks</code> [OPTIONS]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>gnome-disks</code></p>
-<dd>is the command to launch the GNOME Disks application. Disks provides a way to inspect, format, partition and configure disks and block devices. </p>
+<dd>is the command to launch the GNOME Disks application. Disks provides a way to inspect, format, partition and configure disks and block devices. </dd>
 <p> The Disks application is <i>single-instance</i>. What this means is that if the application is not already running when the <code>gnome-disks</code> command is invoked, it will get launched and the command invocation will block until the application exits. Otherwise the existing application instance will be used and the <code>gnome-disks</code> command will exit immediately.</p>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>
 <p> <code>&#8211;block-device </code><i>DEVICE</i></p>
 <dl>
 <dt>
-<dd> Switches to the Disks application and selects the block device given by <i>DEVICE</i> (for example, /dev/sda).</dl>
+</dt><dd> Switches to the Disks application and selects the block device given by <i>DEVICE</i> (for example, /dev/sda).</dd></dl>
 <p> <code>&#8211;block-device </code><i>DEVICE</i> <code>&#8211;format-device</code> [<code>&#8211;xid </code><i>WINDOW-ID</i>]</p>
 <dl>
 <dt>
-<dd> Shows the &#8220;Format Volume&#8221; dialog for the block device given by <i>DEVICE</i> (for example, /dev/sdb1). If <i>WINDOW-ID</i> is given, makes the dialog transient to the given XID.</dl>
+</dt><dd> Shows the &#8220;Format Volume&#8221; dialog for the block device given by <i>DEVICE</i> (for example, /dev/sdb1). If <i>WINDOW-ID</i> is given, makes the dialog transient to the given XID.</dd></dl>
 <p> <code>&#8211;restore-disk-image </code><i>FILE</i></p>
 <dl>
 <dt>
-<dd> Shows the &#8220;Restore Disk Image&#8221; dialog for the file given by <i>FILE</i> (for example, /home/user/Downloads/SuperOS.iso) and prompts the user to choose a disk to restore the image unto.</dl>
+</dt><dd> Shows the &#8220;Restore Disk Image&#8221; dialog for the file given by <i>FILE</i> (for example, /home/user/Downloads/SuperOS.iso) and prompts the user to choose a disk to restore the image unto.</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints a short help text and exits.</dl>
+</dt><dd> Prints a short help text and exits.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David Zeuthen &lt;zeuthen [at] gmail.com&gt; with a lot of help from many others.</p>
 <h2>BUGS</h2>

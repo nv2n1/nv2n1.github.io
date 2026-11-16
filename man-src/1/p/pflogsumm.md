@@ -26,7 +26,6 @@ pflogsumm.pl - [eq][-d&lt;today | yesterday&gt;][--detail&lt;cnt&gt;][--bounce_d
     designed to provide an over-view of Postfix activity, with just enough
     detail to give the administrator a &quot;heads up&quot; for potential trouble
     spots.
-    
     Pflogsumm generates summaries and, in some cases, detailed reports of
     mail server traffic volumes, rejected and bounced email, and server
     warnings, errors and panics.
@@ -265,7 +264,6 @@ pflogsumm.pl - [eq][-d&lt;today | yesterday&gt;][--detail&lt;cnt&gt;][--bounce_d
     approximations.  They are calculated as follows (example is for
     "percent rejected"):
         percent rejected =
-        
             (rejected / (delivered + rejected + discarded)) * 100
     There are some issues with the use of --syslog_name.  The problem is
     that, even with $syslog_name set, Postfix will sometimes still log
@@ -308,17 +306,14 @@ pflogsumm.pl - [eq][-d&lt;today | yesterday&gt;][--detail&lt;cnt&gt;][--bounce_d
     modify it under the terms of the GNU General Public License
     as published by the Free Software Foundation; either version 2
     of the License, or (at your option) any later version.
-    
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-    
     You may have received a copy of the GNU General Public License
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
     USA.
-    
     An on-line copy of the GNU General Public License can be found
     <a rel="nofollow" HREF="http://www.fsf.org/copyleft/gpl.html.">http://www.fsf.org/copyleft/gpl.html.</a>
 </pre> 

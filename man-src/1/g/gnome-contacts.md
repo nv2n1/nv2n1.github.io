@@ -11,26 +11,26 @@ description: "gnome-contacts – Access and store information about contacts"
 <p> gnome-contacts &#8211; Access and store information about contacts </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gnome-contacts </code><code>[OPTION&#8230;]</code></dl>
+<dt> <code>gnome-contacts </code><code>[OPTION&#8230;]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>gnome-contacts</code></p>
-<dd>is a graphical user interface to access and store information about your contacts. </p>
+<dd>is a graphical user interface to access and store information about your contacts. </dd>
 <p> gnome-contacts uses the folks library to pull together contact information from various sources, including telepathy, evolution-data-server, your configured GNOME online accounts, etc.</p>
 <h2>OPTIONS</h2>
 <p> <code>-?</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints a short help text and exits.</dl>
+</dt><dd> Prints a short help text and exits.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;email</code></p>
 <dl>
 <dt>
-<dd> Show contact with this email address.</dl>
+</dt><dd> Show contact with this email address.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;individual</code></p>
 <dl>
 <dt>
-<dd> Show contact with this individual id.</dl>
+</dt><dd> Show contact with this individual id.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show the current version of Contacts.</dl>
+</dt><dd> Show the current version of Contacts.</dd></dl>
 <h2>Index</h2>

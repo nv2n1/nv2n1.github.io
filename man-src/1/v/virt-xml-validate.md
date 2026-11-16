@@ -16,32 +16,32 @@ description: "virt-xml-validate – validate libvirt XML files against a schema"
 <p> Validates a libvirt <font SIZE="-1">XML</font> for compliance with the published schema. The first compulsory argument is the path to the <font SIZE="-1">XML</font> file to be validated. The optional second argument is the name of the schema to validate against. If omitted, the schema name will be inferred from the name of the root element in the <font SIZE="-1">XML</font> document. </p>
 <p> Valid schema names currently include</p>
 <dl>
-<dt>&quot;domainsnapshot&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by domain snapshot configuration</p>
-<dt>&quot;domain&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by guest domains configuration</p>
-<dt>&quot;network&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by virtual network configuration</p>
-<dt>&quot;storagepool&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by storage pool configuration</p>
-<dt>&quot;storagevol&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by storage volume descriptions</p>
-<dt>&quot;nodedev&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by node device descriptions</p>
-<dt>&quot;capability&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used to declare driver capabilities</p>
-<dt>&quot;nwfilter&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by network traffic filters</p>
-<dt>&quot;secret&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by secrets descriptions</p>
-<dt>&quot;interface&quot;</p>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by physical host interfaces</dl>
+<dt>&quot;domainsnapshot&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by domain snapshot configuration</dd>
+<dt>&quot;domain&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by guest domains configuration</dd>
+<dt>&quot;network&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by virtual network configuration</dd>
+<dt>&quot;storagepool&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by storage pool configuration</dd>
+<dt>&quot;storagevol&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by storage volume descriptions</dd>
+<dt>&quot;nodedev&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by node device descriptions</dd>
+<dt>&quot;capability&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used to declare driver capabilities</dd>
+<dt>&quot;nwfilter&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by network traffic filters</dd>
+<dt>&quot;secret&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by secrets descriptions</dd>
+<dt>&quot;interface&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by physical host interfaces</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display command line help usage then exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information then exit.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display command line help usage then exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information then exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Upon successful validation, an exit status of 0 will be set. Upon failure a non-zero status will be set.</p>
 <h2>AUTHOR</h2>

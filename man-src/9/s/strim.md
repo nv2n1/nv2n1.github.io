@@ -14,7 +14,7 @@ description: "strim – Removes leading and trailing whitespace from s."
 <p><i>s</i></p>
 <dl>
 <dd>
-<dd>The string to be stripped.</dl>
+</dd><dd>The string to be stripped.</dd></dl>
 <h2>Description</h2>
 <p>Note that the first trailing whitespace is replaced with a <code>NUL-terminator</code> in the given string <i>s</i>. Returns a pointer to the first non-whitespace character in <i>s</i>.</p>
 <h2>Copyright</h2>

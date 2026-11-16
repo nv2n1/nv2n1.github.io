@@ -146,13 +146,13 @@ struct raw_eth_flow_attr flow_attr = {
 </code></pre>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Hadar Hen Zion &lt;hadarh [at] mellanox.com&gt;</p>
+<dt>Hadar Hen Zion &lt;hadarh [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</p>
+</dd><dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</p>
+</dd><dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

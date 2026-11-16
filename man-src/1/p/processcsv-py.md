@@ -19,10 +19,10 @@ description: "processcsv.py – process virt-top CSV files"
  processcsv.py &lt; data.csv</pre>
 <p>The second command will <code>overwrite</code> the following files in the current directory:</p>
 <dl COMPACT>
-<dt>&quot;global.csv&quot;</p>
-<dd>This contains the global (host) statistics columns from the <font SIZE="-1">CSV</font> file.</p>
-<dt>&quot;domainNN<tt>.csv&quot; (multiple files)</p>
-<dd>For each libvirt domain </tt><font SIZE="-1"><tt>ID </tt></font><tt></tt><i></i><font SIZE="-1"><i>NN</i></font><i></i>, a file is created containing the per-domain statistics from the <font SIZE="-1">CSV</font> file.</dl>
+<dt>&quot;global.csv&quot;</dt>
+<dd>This contains the global (host) statistics columns from the <font SIZE="-1">CSV</font> file.</dd>
+<dt>&quot;domainNN<tt>.csv&quot; (multiple files)</dt>
+<dd>For each libvirt domain </tt><font SIZE="-1"><tt>ID </tt></font><tt></tt><i></i><font SIZE="-1"><i>NN</i></font><i></i>, a file is created containing the per-domain statistics from the <font SIZE="-1">CSV</font> file.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-virt-top/">virt-top</a></i>(1)</p>
 <h2>Authors</h2>

@@ -21,14 +21,14 @@ size_t iconv(iconv_t cd,
 <p> The main case is when <i>inbuf</i> is not NULL and <i>*inbuf</i> is not NULL. In this case, the <code>iconv</code>() function converts the multibyte sequence starting at <i>*inbuf</i> to a multibyte sequence starting at <i>*outbuf</i>. At most <i>*inbytesleft</i> bytes, starting at <i>*inbuf</i>, will be read. At most <i>*outbytesleft</i> bytes, starting at <i>*outbuf</i>, will be written. </p>
 <p> The <code>iconv</code>() function converts one multibyte character at a time, and for each character conversion it increments <i>*inbuf</i> and decrements <i>*inbytesleft</i> by the number of converted input bytes, it increments <i>*outbuf</i> and decrements <i>*outbytesleft</i> by the number of converted output bytes, and it updates the conversion state contained in <i>cd</i>. If the character encoding of the input is stateful, the <code>iconv</code>() function can also convert a sequence of input bytes to an update to the conversion state without producing any output bytes; such input is called a <i>shift sequence</i>. The conversion can stop for four reasons:</p>
 <dl>
-<dt>1.</p>
-<dd> An invalid multibyte sequence is encountered in the input. In this case, it sets <i>errno</i> to <code>EILSEQ</code> and returns <i>(size_t)&nbsp;-1</i>. <i>*inbuf</i> is left pointing to the beginning of the invalid multibyte sequence.</p>
-<dt>2.</p>
-<dd> The input byte sequence has been entirely converted, that is, <i>*inbytesleft</i> has gone down to 0. In this case, <code>iconv</code>() returns the number of nonreversible conversions performed during this call.</p>
-<dt>3.</p>
-<dd> An incomplete multibyte sequence is encountered in the input, and the input byte sequence terminates after it. In this case, it sets <i>errno</i> to <code>EINVAL</code> and returns <i>(size_t)&nbsp;-1</i>. <i>*inbuf</i> is left pointing to the beginning of the incomplete multibyte sequence.</p>
-<dt>4.</p>
-<dd> The output buffer has no more room for the next converted character. In this case, it sets <i>errno</i> to <code>E2BIG</code> and returns <i>(size_t)&nbsp;-1</i>.</dl>
+<dt>1.</dt>
+<dd> An invalid multibyte sequence is encountered in the input. In this case, it sets <i>errno</i> to <code>EILSEQ</code> and returns <i>(size_t)&nbsp;-1</i>. <i>*inbuf</i> is left pointing to the beginning of the invalid multibyte sequence.</dd>
+<dt>2.</dt>
+<dd> The input byte sequence has been entirely converted, that is, <i>*inbytesleft</i> has gone down to 0. In this case, <code>iconv</code>() returns the number of nonreversible conversions performed during this call.</dd>
+<dt>3.</dt>
+<dd> An incomplete multibyte sequence is encountered in the input, and the input byte sequence terminates after it. In this case, it sets <i>errno</i> to <code>EINVAL</code> and returns <i>(size_t)&nbsp;-1</i>. <i>*inbuf</i> is left pointing to the beginning of the incomplete multibyte sequence.</dd>
+<dt>4.</dt>
+<dd> The output buffer has no more room for the next converted character. In this case, it sets <i>errno</i> to <code>E2BIG</code> and returns <i>(size_t)&nbsp;-1</i>.</dd></dl>
 <p> A different case is when <i>inbuf</i> is NULL or <i>*inbuf</i> is NULL, but <i>outbuf</i> is not NULL and <i>*outbuf</i> is not NULL. In this case, the <code>iconv</code>() function attempts to set <i>cd</i>&#8216;s conversion state to the initial state and store a corresponding shift sequence at <i>*outbuf</i>. At most <i>*outbytesleft</i> bytes, starting at <i>*outbuf</i>, will be written. If the output buffer has no more room for this reset sequence, it sets <i>errno</i> to <code>E2BIG</code> and returns <i>(size_t)&nbsp;-1</i>. Otherwise, it increments <i>*outbuf</i> and decrements <i>*outbytesleft</i> by the number of bytes written. </p>
 <p> A third case is when <i>inbuf</i> is NULL or <i>*inbuf</i> is NULL, and <i>outbuf</i> is NULL or <i>*outbuf</i> is NULL. In this case, the <code>iconv</code>() function sets <i>cd</i>&#8216;s conversion state to the initial state.</p>
 <h2>RETURN VALUE</h2>
@@ -36,12 +36,12 @@ size_t iconv(iconv_t cd,
 <h2>ERRORS</h2>
 <p> The following errors can occur, among others:</p>
 <dl>
-<dt><code>E2BIG</code></p>
-<dd> There is not sufficient room at <i>*outbuf</i>.</p>
-<dt><code>EILSEQ</code></p>
-<dd> An invalid multibyte sequence has been encountered in the input.</p>
-<dt><code>EINVAL</code></p>
-<dd> An incomplete multibyte sequence has been encountered in the input.</dl>
+<dt><code>E2BIG</code></dt>
+<dd> There is not sufficient room at <i>*outbuf</i>.</dd>
+<dt><code>EILSEQ</code></dt>
+<dd> An invalid multibyte sequence has been encountered in the input.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An incomplete multibyte sequence has been encountered in the input.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This function is available in glibc since version 2.1.</p>
 <h2>ATTRIBUTES</h2>

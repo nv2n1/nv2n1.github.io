@@ -11,7 +11,6 @@ std::wcscat - std::wcscat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wcscat(wchar_t *dest, const wchar_t *src);</code></pre> 
 Appends a copy of the wide string pointed to by src to the end of the wide string pointed to by dest. The wide character src[0] replaces the null terminator at the end of dest. The resulting wide string is null-terminated. 
 The behavior is undefined if the destination array is not large enough for the contents of both str and dest and the terminating null wide character. 
@@ -29,12 +28,9 @@ Returns a copy of dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
 int main(void)
-
 {
     wchar_t str[50] = L&quot;Земля, прощай.&quot;;
     std::wcscat(str, L&quot; &quot;);

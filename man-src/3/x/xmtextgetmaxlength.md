@@ -15,8 +15,8 @@ description: "XmTextGetMaxLength — A Text function that accesses the value of 
 <h2>Description</h2>
 <p><code>XmTextGetMaxLength</code> accesses the value of the current maximum allowable length of the text string in the Text widget entered from the keyboard. The maximum allowable length prevents the user from entering a text string larger than this limit. Note that the maximum allowable length is the same as the value of the widget&#8217;s <code>XmNmaxLength</code> resource.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the integer value that indicates the string&#8217;s maximum allowable length that can be entered from the keyboard.</p>

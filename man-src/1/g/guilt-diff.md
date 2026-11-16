@@ -17,11 +17,11 @@ description: "guilt-diff – Outputs various diffs"
 <p> -z</p>
 <dl>
 <dt>
-<dd> Output a interdiff against the top-most applied patch. This should produce the same diff as &quot;guilt-new -f foo&quot;.</dl>
+</dt><dd> Output a interdiff against the top-most applied patch. This should produce the same diff as &quot;guilt-new -f foo&quot;.</dd></dl>
 <p> &lt;path&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> Restrict diff output to a given set of files.</dl>
+</dt><dd> Restrict diff output to a given set of files.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -30,10 +30,10 @@ description: "guilt-diff – Outputs various diffs"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

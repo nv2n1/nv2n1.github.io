@@ -15,24 +15,24 @@ description: "axctl – Configure/Kill running AX.25 connections."
 <p> Many of the options are similar to those found in <code>axparms</code> and perform the same function. Only one parameter may be changed on each invokation of <code>axctl.</code></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd>Displays the version number.</p>
-<dt><code>window window</code></p>
-<dd>Sets the window size for the AX.25 connection.</p>
-<dt><code>t1 t1-timeout</code></p>
-<dd>Sets the initial T1 timeout value for the AX.25 connection, the value is given in seconds.</p>
-<dt><code>t2 t2-timeout</code></p>
-<dd>Sets the T2 timeout value for the AX.25 connection, the value is given in seconds.</p>
-<dt><code>t3 t3-timeout</code></p>
-<dd>Sets the T3 timeout value for the AX.25 connected, the value is given in seconds.</p>
-<dt><code>n2 n2-count</code></p>
-<dd>Sets the maximum number of tries for the AX.25 connection.</p>
-<dt><code>idle idle-timeout</code></p>
-<dd>Sets the value for the idle timer for the AX.25 connection, the value is in minutes.</p>
-<dt><code>paclen paclength</code></p>
-<dd>Sets the maximum packet length that may be transmitted on the AX.25 connection.</p>
-<dt><code>kill</code></p>
-<dd>Will abort an existing AX.25 connection.</dl>
+<dt><code>-v</code></dt>
+<dd>Displays the version number.</dd>
+<dt><code>window window</code></dt>
+<dd>Sets the window size for the AX.25 connection.</dd>
+<dt><code>t1 t1-timeout</code></dt>
+<dd>Sets the initial T1 timeout value for the AX.25 connection, the value is given in seconds.</dd>
+<dt><code>t2 t2-timeout</code></dt>
+<dd>Sets the T2 timeout value for the AX.25 connection, the value is given in seconds.</dd>
+<dt><code>t3 t3-timeout</code></dt>
+<dd>Sets the T3 timeout value for the AX.25 connected, the value is given in seconds.</dd>
+<dt><code>n2 n2-count</code></dt>
+<dd>Sets the maximum number of tries for the AX.25 connection.</dd>
+<dt><code>idle idle-timeout</code></dt>
+<dd>Sets the value for the idle timer for the AX.25 connection, the value is in minutes.</dd>
+<dt><code>paclen paclength</code></dt>
+<dd>Sets the maximum packet length that may be transmitted on the AX.25 connection.</dd>
+<dt><code>kill</code></dt>
+<dd>Will abort an existing AX.25 connection.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/axports</p>
 <h2>See Also</h2>

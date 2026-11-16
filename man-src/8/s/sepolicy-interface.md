@@ -14,20 +14,20 @@ description: "sepolicy-interface – Print interface information based on the in
 <p>Use sepolicy interface to print interfaces information based on SELinux Policy. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-a, &#8211;list_admin</i></p>
-<dd>List all domains with admin interface</p>
-<dt><i>-c, &#8211;compile</i></p>
-<dd>Test compile of interfaces</p>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message</p>
-<dt><i>-i, &#8211;interface</i></p>
-<dd>Interface(s) to be displayed</p>
-<dt><i>-l, &#8211;list</i></p>
-<dd>List all interfaces</p>
-<dt><i>-u, &#8211;list_user</i></p>
-<dd>List all domains with SELinux user role interface</p>
-<dt><i>-v, &#8211;verbose</i></p>
-<dd>Display extended information about the interface including parameters and desctiprion if available. </p>
+<dt><i>-a, &#8211;list_admin</i></dt>
+<dd>List all domains with admin interface</dd>
+<dt><i>-c, &#8211;compile</i></dt>
+<dd>Test compile of interfaces</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-i, &#8211;interface</i></dt>
+<dd>Interface(s) to be displayed</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List all interfaces</dd>
+<dt><i>-u, &#8211;list_user</i></dt>
+<dd>List all domains with SELinux user role interface</dd>
+<dt><i>-v, &#8211;verbose</i></dt>
+<dd>Display extended information about the interface including parameters and desctiprion if available. </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

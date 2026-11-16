@@ -13,15 +13,15 @@ description: "PAPI_strerror –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>char&nbsp;<wbr>*&nbsp;<wbr><code>PAPI_strerror(&nbsp;<wbr>int errorCode&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>code</i> &#8212; the error code to interpret</dl>
+<dd><i>code</i> &#8212; the error code to interpret</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>*error</i> &#8212; a pointer to the error string.<br />
- <i>NULL</i> &#8212; the input error code to <code>PAPI_strerror()</code> is invalid.</dl>
+ <i>NULL</i> &#8212; the input error code to <code>PAPI_strerror()</code> is invalid.</dd></dl>
 <p> <code>PAPI_strerror()</code> returns a pointer to the error message corresponding to the error code code. If the call fails the function returns the NULL pointer. This function is not implemented in Fortran. </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -49,9 +49,9 @@ description: "PAPI_strerror –"
 * ret = PAPI_start(EventSet);
 * if (ret != PAPI_OK) handle_error(ret);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_perror</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code> <code>PAPI_shutdown</code> <code>PAPI_set_debug</code></dl>
+<dd><code>PAPI_perror</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code> <code>PAPI_shutdown</code> <code>PAPI_set_debug</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

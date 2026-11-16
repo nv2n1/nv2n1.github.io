@@ -10,14 +10,14 @@ description: "upowerd – UPower Daemon"
 <p>upowerd &#8211; UPower Daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>upowerd</code> [<code>&#8211;help</code>]</dl>
+<dt> <code>upowerd</code> [<code>&#8211;help</code>]</dt></dl>
 <h2>Description</h2>
 <p><i>upowerd</i></p>
-<dd>provides the <i>org.freedesktop.UPower</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.UPower</i> service.</p>
+<dd>provides the <i>org.freedesktop.UPower</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.UPower</i> service.</dd>
 <h2>Options</h2>
 <p><code>&#8211;help</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <h2>Author</h2>
 <p>Written by David Zeuthen &lt;davidz [at] redhat.com&gt; with a lot of help from many others.</p>
 <h2>Bugs</h2>

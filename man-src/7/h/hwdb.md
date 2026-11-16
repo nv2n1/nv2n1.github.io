@@ -15,11 +15,11 @@ description: "hwdb – Hardware Database"
 <p> Each hwdb file contains data records consisting of matches and associated key-value pairs. Every record in the hwdb starts with one or more match strings, specifying a shell glob to compare the lookup string against. Multiple match lines are specified in consecutive lines. Every match line is compared individually, and they are combined by OR. Every match line must start at the first character of the line. </p>
 <p> Match patterns consist of literal characters, and shell-style wildcards: </p>
 <dl>
-<dd>&bull; Asterisk &quot;*&quot; matches any number of characters</dl>
+<dd>&bull; Asterisk &quot;*&quot; matches any number of characters</dd></dl>
 <dl>
-<dd>&bull; Question mark &quot;?&quot; matches a single character</dl>
+<dd>&bull; Question mark &quot;?&quot; matches a single character</dd></dl>
 <dl>
-<dd>&bull; Character list &quot;[<i>chars</i>]&quot; matches one of the characters <i>chars</i> listed between &quot;[&quot; and &quot;]&quot;. A range may be specified as with a dash as &quot;[<i>first</i>&#8211;<i>last</i>]&quot;. The match may be inverted with a caret &quot;[^&#8230;]&quot;.</dl>
+<dd>&bull; Character list &quot;[<i>chars</i>]&quot; matches one of the characters <i>chars</i> listed between &quot;[&quot; and &quot;]&quot;. A range may be specified as with a dash as &quot;[<i>first</i>&#8211;<i>last</i>]&quot;. The match may be inverted with a caret &quot;[^&#8230;]&quot;.</dd></dl>
 <p> The match lines are followed by one or more key-value pair lines, which are recognized by a leading space character. The key name and value are separated by &quot;=&quot;. An empty line signifies the end of a record. Lines beginning with &quot;#&quot; are ignored. </p>
 <p> In case multiple records match a given lookup string, the key-value pairs from all records are combined. If a key is specified multiple times, the value from the record with the highest priority is used (each key can have only a single value). The priority is higher when the record is in a file that sorts later lexicographically, and in case of records in the same file, later records have higher priority. </p>
 <p> The content of all hwdb files is read by <code><a href="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></code>(8) and compiled to a binary database located at /etc/udev/hwdb.bin, or alternatively /lib/udev/hwdb.bin if you want ship the compiled database in an immutable image. During runtime, only the binary database is used.</p>
@@ -47,7 +47,7 @@ mouse:usb:v046dp4041:name:Logitech MX Master:*
  MOUSE_WHEEL_CLICK_ANGLE_HORIZONTAL=26
  MOUSE_WHEEL_CLICK_COUNT=24
  MOUSE_WHEEL_CLICK_COUNT_HORIZONTAL=14</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Overriding of properties</code> </p>
 <dl>
 <dd>
@@ -64,7 +64,7 @@ evdev:atkbd:dmi:bvn*:bvr*:bd*:svnAcer:pnX123*:*
 evdev:atkbd:*
  KEYBOARD_KEY_a2=reserved
  PROPERTY_WITH_SPACES=some string</pre>
-</dl>
+</dd></dl>
 <p> If the hwdb consists of those two files, a keyboard with the lookup string &quot;evdev:atkbd:dmi:bvnAcer:bdXXXXX:bd08/05/2010:svnAcer:pnX123&quot; will match all three records, and end up with the following properties: </p>
 <dl>
 <dd>
@@ -72,6 +72,6 @@ evdev:atkbd:*
 KEYBOARD_KEY_a2=reserved
 KEYBOARD_KEY_a3=battery
 PROPERTY_WITH_SPACES=some string</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></code>(8) </p>

@@ -14,12 +14,12 @@ description: "gnutls_x509_name_constraints_check – API function"
 <p> <code>unsigned gnutls_x509_name_constraints_check(gnutls_x509_name_constraints_t </code><i>nc</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_name_constraints_t nc</p>
-<dd> the extracted name constraints structure</p>
-<dt>gnutls_x509_subject_alt_name_t type</p>
-<dd> the type of the constraint to check (of type gnutls_x509_subject_alt_name_t)</p>
-<dt>const gnutls_datum_t * name</p>
-<dd> the name to be checked</dl>
+<dt>gnutls_x509_name_constraints_t nc</dt>
+<dd> the extracted name constraints structure</dd>
+<dt>gnutls_x509_subject_alt_name_t type</dt>
+<dd> the type of the constraint to check (of type gnutls_x509_subject_alt_name_t)</dd>
+<dt>const gnutls_datum_t * name</dt>
+<dd> the name to be checked</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will check the provided name against the constraints in<br />
 &nbsp;<wbr><i>nc</i>&nbsp;<wbr>using the RFC5280 rules. Currently this function is limited to DNS names and emails (of type <code>GNUTLS_SAN_DNSNAME</code> and <code>GNUTLS_SAN_RFC822NAME</code>).</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_name_constraints_check – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

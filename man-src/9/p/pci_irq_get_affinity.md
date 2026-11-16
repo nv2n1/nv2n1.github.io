@@ -15,11 +15,11 @@ pci_irq_get_affinity - return the affinity of a particular msi vector
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to operate on</dl>
+<dl><dd></dd><dd>PCI device to operate on</dd></dl>
  
 
  <i>nr</i>
-<dl><dd>device-relative interrupt vector index (0-based).</dl>
+<dl><dd>device-relative interrupt vector index (0-based).</dd></dl>
 
 <h2>Copyright</h2>
 

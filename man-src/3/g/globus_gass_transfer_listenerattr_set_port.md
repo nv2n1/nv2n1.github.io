@@ -25,40 +25,40 @@ description: "Listener attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attr</i> The attribute set to be initialized.<br />
- <i>url_scheme</i> The scheme which which the attribute will be used for.</dl>
+</dt><dd> <i>attr</i> The attribute set to be initialized.<br />
+ <i>url_scheme</i> The scheme which which the attribute will be used for.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully initialized.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully initialized.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> Either <i>attr</i> or <i>url_scheme</i> was GLOBUS_NULL.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol module currently registered with GASS Transfer Library handles URLs with the specified <i>url_scheme</i>.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol module currently registered with GASS Transfer Library handles URLs with the specified <i>url_scheme</i>.</dd></dl>
 <h3>int globus_gass_transfer_listenerattr_set_backlog (globus_gass_transfer_listenerattr_t *attr, intbacklog)</h3>
 <p> Set/Get the backlog attribute for a GASS transfer attribute set. </p>
 <p> This attribute allows the user to control then number of pending connections which may exist for this listener. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>backlog</i> The number of outstanding connections to allow.</dl>
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+ <i>backlog</i> The number of outstanding connections to allow.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_listenerattr_set_port (globus_gass_transfer_listenerattr_t *attr, unsigned shortport)</h3>
 <p> Set/Get the port attribute for a GASS transfer attribute set. </p>
 <p> This attribute allows the user to set the port to be used by a GASS Transfer listener. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>port</i> The TCP or UDP port number to use.</dl>
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+ <i>port</i> The TCP or UDP port number to use.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>

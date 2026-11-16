@@ -16,10 +16,10 @@ description: "intel_reg_dumper – Decode a bunch of Intel GPU registers for deb
 <p> When the <code>file</code> argument is present and the <code>-d</code> argument is not present, <code>intel_reg_dumper</code> will assume the file was generated on an Ironlake machine.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d id</code></p>
-<dd> when a dump file is used, use &#8216;id&#8217; as device id (in hex)</p>
-<dt><code>-h</code></p>
-<dd> prints a help message</dl>
+<dt><code>-d id</code></dt>
+<dd> when a dump file is used, use &#8216;id&#8217; as device id (in hex)</dd>
+<dt><code>-h</code></dt>
+<dd> prints a help message</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>intel_reg_snapshot(1)</code> </p>
 <h2>Index</h2>

@@ -28,26 +28,26 @@ description: "xfontsel – point and click selection of X11 font names"
 <p> Most of the significant parts of the widget hierarchy are documented in <i>/etc/X11/app-defaults/XFontSel</i>, </p>
 <p> Application specific resources: </p>
 <dl>
-<dt><code>cursor (</code>class<code> Cursor)</code></p>
-<dd> Specifies the cursor for the application window.</p>
-<dt><code>pattern (</code>class<code> Pattern)</code></p>
-<dd> Specifies the font name pattern for selecting a subset of available fonts. Equivalent to the <code>-pattern</code> option. Most useful patterns will contain at least one field delimiter; e.g. &#8220;*-m-*&#8221; for monospaced fonts.</p>
-<dt><code>pixelSizeList (</code>class<code> PixelSizeList)</code></p>
-<dd> Specifies a list of pixel sizes to add to the pixel size menu, so that scalable fonts can be selected at those pixel sizes. The default pixelSizeList contains 7, 30, 40, 50, and 60.</p>
-<dt><code>pointSizeList (</code>class<code> PointSizeList)</code></p>
-<dd> Specifies a list of point sizes (in units of tenths of points) to add to the point size menu, so that scalable fonts can be selected at those point sizes. The default pointSizeList contains 250, 300, 350, and 400.</p>
-<dt><code>printOnQuit (</code>class<code> PrintOnQuit)</code></p>
-<dd> If <i>True</i> the currently selected font name is printed to standard output when the quit button is activated. Equivalent to the <code>-print</code> option.</p>
-<dt><code>sampleText (</code>class<code> Text)</code></p>
-<dd> The sample 1-byte text to use for linearly indexed fonts. Each glyph index is a single byte, with newline separating lines.</p>
-<dt><code>sampleText16 (</code>class<code> Text16)</code></p>
-<dd> The sample 2-byte text to use for matrix-encoded fonts. Each glyph index is two bytes, with a 1-byte newline separating lines.</p>
-<dt><code>scaledFonts (</code>class<code> ScaledFonts)</code></p>
-<dd> If <i>True</i> then selection of arbitrary pixel and point sizes for scalable fonts is enabled.</dl>
+<dt><code>cursor (</code>class<code> Cursor)</code></dt>
+<dd> Specifies the cursor for the application window.</dd>
+<dt><code>pattern (</code>class<code> Pattern)</code></dt>
+<dd> Specifies the font name pattern for selecting a subset of available fonts. Equivalent to the <code>-pattern</code> option. Most useful patterns will contain at least one field delimiter; e.g. &#8220;*-m-*&#8221; for monospaced fonts.</dd>
+<dt><code>pixelSizeList (</code>class<code> PixelSizeList)</code></dt>
+<dd> Specifies a list of pixel sizes to add to the pixel size menu, so that scalable fonts can be selected at those pixel sizes. The default pixelSizeList contains 7, 30, 40, 50, and 60.</dd>
+<dt><code>pointSizeList (</code>class<code> PointSizeList)</code></dt>
+<dd> Specifies a list of point sizes (in units of tenths of points) to add to the point size menu, so that scalable fonts can be selected at those point sizes. The default pointSizeList contains 250, 300, 350, and 400.</dd>
+<dt><code>printOnQuit (</code>class<code> PrintOnQuit)</code></dt>
+<dd> If <i>True</i> the currently selected font name is printed to standard output when the quit button is activated. Equivalent to the <code>-print</code> option.</dd>
+<dt><code>sampleText (</code>class<code> Text)</code></dt>
+<dd> The sample 1-byte text to use for linearly indexed fonts. Each glyph index is a single byte, with newline separating lines.</dd>
+<dt><code>sampleText16 (</code>class<code> Text16)</code></dt>
+<dd> The sample 2-byte text to use for matrix-encoded fonts. Each glyph index is two bytes, with a 1-byte newline separating lines.</dd>
+<dt><code>scaledFonts (</code>class<code> ScaledFonts)</code></dt>
+<dd> If <i>True</i> then selection of arbitrary pixel and point sizes for scalable fonts is enabled.</dd></dl>
 <p> Widget specific resources: </p>
 <dl>
-<dt><code>showUnselectable (</code>class<code> ShowUnselectable)</code></p>
-<dd> Specifies, for each field menu, whether or not to show values that are not currently selectable, based upon previous field selections. If shown, the unselectable values are clearly identified as such and do not highlight when the pointer is moved down the menu. The full name of this resource is <code>fieldN.menu.options.showUnselectable</code>, class <code>MenuButton.SimpleMenu.Options.ShowUnselectable</code>; where N is replaced with the field number (starting with the left-most field numbered 0). The default is True for all but field 11 (average width of characters in font) and False for field 11. If you never want to see unselectable entries, &#8216;*menu.options.showUnselectable:False&#8217; is a reasonable thing to specify in a resource file.</dl>
+<dt><code>showUnselectable (</code>class<code> ShowUnselectable)</code></dt>
+<dd> Specifies, for each field menu, whether or not to show values that are not currently selectable, based upon previous field selections. If shown, the unselectable values are clearly identified as such and do not highlight when the pointer is moved down the menu. The full name of this resource is <code>fieldN.menu.options.showUnselectable</code>, class <code>MenuButton.SimpleMenu.Options.ShowUnselectable</code>; where N is replaced with the field number (starting with the left-most field numbered 0). The default is True for all but field 11 (average width of characters in font) and False for field 11. If you never want to see unselectable entries, &#8216;*menu.options.showUnselectable:False&#8217; is a reasonable thing to specify in a resource file.</dd></dl>
 <h2>FILES</h2>
 <p>&nbsp;$XFILESEARCHPATH/XFontSel </p>
 <h2>SEE ALSO</h2>

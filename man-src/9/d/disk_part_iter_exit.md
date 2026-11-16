@@ -15,7 +15,7 @@ disk_part_iter_exit - finish up partition iteration
 <h2>Arguments</h2>
 
 <i>piter</i>
-<dl><dd><dd>iter of interest</dl>
+<dl><dd></dd><dd>iter of interest</dd></dl>
 
 <h2>Description</h2>
 

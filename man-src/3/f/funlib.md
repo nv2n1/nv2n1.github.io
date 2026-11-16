@@ -19,32 +19,32 @@ description: "FunLib: the Funtools Programming Interface"
 </code></pre>
 <p> You then call Funtools subroutines and functions to access Funtools data. The most important routines are:</p>
 <dl>
-<dt>*</p>
-<dd> FunOpen: open a Funtools file</p>
-<dt>*</p>
-<dd> FunInfoGet: get info about an image or table</p>
-<dt>*</p>
-<dd> FunImageGet: retrieve image data</p>
-<dt>*</p>
-<dd> FunImageRowGet: retrieve image data by row</p>
-<dt>*</p>
-<dd> FunImagePut: output image data</p>
-<dt>*</p>
-<dd> FunImageRowPut: output image data by row</p>
-<dt>*</p>
-<dd> FunColumnSelect: select columns in a table for access</p>
-<dt>*</p>
-<dd> FunTableRowGet: retrieve rows from a table</p>
-<dt>*</p>
-<dd> FunTableRowPut: output rows to a table</p>
-<dt>*</p>
-<dd> FunClose: close a Funtools file</dl>
+<dt>*</dt>
+<dd> FunOpen: open a Funtools file</dd>
+<dt>*</dt>
+<dd> FunInfoGet: get info about an image or table</dd>
+<dt>*</dt>
+<dd> FunImageGet: retrieve image data</dd>
+<dt>*</dt>
+<dd> FunImageRowGet: retrieve image data by row</dd>
+<dt>*</dt>
+<dd> FunImagePut: output image data</dd>
+<dt>*</dt>
+<dd> FunImageRowPut: output image data by row</dd>
+<dt>*</dt>
+<dd> FunColumnSelect: select columns in a table for access</dd>
+<dt>*</dt>
+<dd> FunTableRowGet: retrieve rows from a table</dd>
+<dt>*</dt>
+<dd> FunTableRowPut: output rows to a table</dd>
+<dt>*</dt>
+<dd> FunClose: close a Funtools file</dd></dl>
 <p> Your program must be linked against the libfuntools.a library, along with the math library. The following libraries also might be required on your system:</p>
 <dl>
-<dt>*</p>
-<dd> -lsocket -lnsl for socket support</p>
-<dt>*</p>
-<dd> -ldl for dynamic loading</dl>
+<dt>*</dt>
+<dd> -lsocket -lnsl for socket support</dd>
+<dt>*</dt>
+<dd> -ldl for dynamic loading</dd></dl>
 <p> For example, on a Solaris system using gcc, use the following link line: </p>
 <pre>
   gcc -o foo foo.c -lfuntools -lsocket -lnsl -ldl -lm
@@ -139,45 +139,45 @@ FunClose(fun);</p>
 <p> If gcc is used, Funtools filtering can be performed using dynamically loaded shared objects that are built at run-time. Otherwise, filtering is performed using a slave process. </p>
 <p> Funtools has been built on the following systems:</p>
 <dl>
-<dt>*</p>
-<dd> Sun/Solaris 5.X</p>
-<dt>*</p>
-<dd> Linux/RedHat Linux 5.X,6.X,7.X</p>
-<dt>*</p>
-<dd> Dec Alpha/OSF1 V4.X</p>
-<dt>*</p>
-<dd> WindowsNT/Cygwin 1.0</p>
-<dt>*</p>
-<dd> <font SIZE="-1">SGI/IRIX64</font> 6.5</dl>
+<dt>*</dt>
+<dd> Sun/Solaris 5.X</dd>
+<dt>*</dt>
+<dd> Linux/RedHat Linux 5.X,6.X,7.X</dd>
+<dt>*</dt>
+<dd> Dec Alpha/OSF1 V4.X</dd>
+<dt>*</dt>
+<dd> WindowsNT/Cygwin 1.0</dd>
+<dt>*</dt>
+<dd> <font SIZE="-1">SGI/IRIX64</font> 6.5</dd></dl>
 <p> <code>A Short Digression on Subroutine Order</code> </p>
 <p> There is a natural order for all I/O access libraries. You would not think of reading a file without first opening it, or writing a file after closing it. A large part of the experiment in funtools is to use the idea of &#8220;natural order&#8221; as a means of making programming easier. We do this by maintaining the state of processing for a given funtools file, so that we can do things like write headers and flush extension padding at the right time, without you having to do it. </p>
 <p> For example, if you open a new funtools file for writing using <i>FunOpen()</i>, then generate an array of image data and call <i>FunImagePut()</i>, funtools knows to write the image header automatically. There is no need to think about writing a standard header. Of course, you can add parameters to the file first by calling one of the <i>FunParamPut()</i> routines, and these parameters will automatically be added to the header when it is written out. There still is no need to write the header explicitly. </p>
 <p> Maintaining state in this way means that there are certain rules of order which should be maintained in any funtools program. In particular, we strongly recommend the following ordering rules be adhered to:</p>
 <dl>
-<dt>*</p>
-<dd> When specifying that input extensions be copied to an output file via a reference handle, open the output file <code>before</code> reading the input file. (Otherwise the initial copy will not occur).</p>
-<dt>*</p>
-<dd> Always write parameters to an output file using one of the <i>FunParamPut()</i> calls <code>before</code> writing any data. (This is a good idea for all <font SIZE="-1">FITS</font> libraries, to avoid having to recopy data is the <font SIZE="-1">FITS</font> header needs to be extended by adding a single parameter.)</p>
-<dt>*</p>
-<dd> If you retrieve an image, and need to know the data type, use the <font SIZE="-1">FUN_SECT_BITPIX</font> option of <i>FunInfoGet()</i>, <code>after</code> calling <i>FunImageGet()</i>, since it is possible to change the value of <font SIZE="-1">BITPIX</font> from the latter.</p>
-<dt>*</p>
-<dd> When specifying that input extensions be copied to an output file via a reference handle, close the output file <code>before</code> closing input file, or else use <i>FunFlush()</i> explicitly on the output file <code>before</code> closing the input file. (Otherwise the final copy will not occur).</dl>
+<dt>*</dt>
+<dd> When specifying that input extensions be copied to an output file via a reference handle, open the output file <code>before</code> reading the input file. (Otherwise the initial copy will not occur).</dd>
+<dt>*</dt>
+<dd> Always write parameters to an output file using one of the <i>FunParamPut()</i> calls <code>before</code> writing any data. (This is a good idea for all <font SIZE="-1">FITS</font> libraries, to avoid having to recopy data is the <font SIZE="-1">FITS</font> header needs to be extended by adding a single parameter.)</dd>
+<dt>*</dt>
+<dd> If you retrieve an image, and need to know the data type, use the <font SIZE="-1">FUN_SECT_BITPIX</font> option of <i>FunInfoGet()</i>, <code>after</code> calling <i>FunImageGet()</i>, since it is possible to change the value of <font SIZE="-1">BITPIX</font> from the latter.</dd>
+<dt>*</dt>
+<dd> When specifying that input extensions be copied to an output file via a reference handle, close the output file <code>before</code> closing input file, or else use <i>FunFlush()</i> explicitly on the output file <code>before</code> closing the input file. (Otherwise the final copy will not occur).</dd></dl>
 <p> We believe that these are the natural rules that are implied in most <font SIZE="-1">FITS</font> programming tasks. However, we recognize that making explicit use of &#8220;natural order&#8221; to decide what automatic action to take on behalf of the programmer is experimental. Therefore, if you find that your needs are not compatible with our preferred order, please let us know &#8212; it will be most illuminating for us as we evaluate this experiment. </p>
 <p> <code>Funtools Programming Examples</code> </p>
 <p> The following complete coding examples are provided to illustrate the simplicity of Funtools applications. They can be found in the funtest subdirectory of the Funtools distribution. In many cases, you should be able to modify one of these programs to generate your own Funtools program:</p>
 <dl>
-<dt>*</p>
-<dd> evread.c: read and write binary tables</p>
-<dt>*</p>
-<dd> evcols.c: add column and rows to binary tables</p>
-<dt>*</p>
-<dd> evmerge.c: merge new columns with existing columns</p>
-<dt>*</p>
-<dd> evnext.c: manipulate raw data pointers</p>
-<dt>*</p>
-<dd> imblank.c: blank out image values below a threshold</p>
-<dt>*</p>
-<dd> asc2fits.c: convert a specific <font SIZE="-1">ASCII</font> table to <font SIZE="-1">FITS</font> binary table</dl>
+<dt>*</dt>
+<dd> evread.c: read and write binary tables</dd>
+<dt>*</dt>
+<dd> evcols.c: add column and rows to binary tables</dd>
+<dt>*</dt>
+<dd> evmerge.c: merge new columns with existing columns</dd>
+<dt>*</dt>
+<dd> evnext.c: manipulate raw data pointers</dd>
+<dt>*</dt>
+<dd> imblank.c: blank out image values below a threshold</dd>
+<dt>*</dt>
+<dd> asc2fits.c: convert a specific <font SIZE="-1">ASCII</font> table to <font SIZE="-1">FITS</font> binary table</dd></dl>
 <p> <code>The Funtools Programming Reference Manual</code> </p>
 <p> #include &lt;<a href="file:/usr/include/funtools.h">funtools.h</a>&gt; </p>
 <p> Fun FunOpen(char *name, char *mode, Fun ref) </p>

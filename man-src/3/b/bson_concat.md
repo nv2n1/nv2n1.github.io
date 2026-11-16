@@ -17,11 +17,11 @@ bson_concat (bson_t       *dst,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>dst</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>dst</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>src</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>src</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_concat/">bson_concat</a>(3)</code> function shall append the contents of <code>src</code> to <code>dst</code> \&amp;. </p>
 <h2>RETURNS</h2>

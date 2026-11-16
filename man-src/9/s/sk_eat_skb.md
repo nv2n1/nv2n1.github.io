@@ -15,11 +15,11 @@ sk_eat_skb - Release a skb if it is no longer needed
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket to eat this skb from</dl>
+<dl><dd></dd><dd>socket to eat this skb from</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>socket buffer to eat</dl>
+<dl><dd>socket buffer to eat</dd></dl>
 
 <h2>Description</h2>
 

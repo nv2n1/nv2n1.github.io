@@ -17,15 +17,13 @@ description: "ralabel – inserts fixed form or free form metadata labels into a
 <p> Ralabel, reads a number of standard IANA IP address file formats that specific IPv4 addresses, CIDR addresses and IPV4 prefix address specification. Examples of these file types are provided in ./support/Config. </p>
 <p> <code><a href="/docs/linux/man/1-ralabel/">ralabel</a>(1)</code> specific options are:</p>
 <dl>
-<dt><code>-f</code><i> label.strategy.specification.file</i></p>
+<dt><code>-f</code><i> label.strategy.specification.file</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>INVOCATION</h2>
 <p> This invocation reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>argusfile</code> and labels records that match any options in the <code>ralabel.conf</code> file. </p>
 <pre>
- 
    <code>ralabel</code> -r argusfile -f ralabel.conf - ip
- 
 </pre>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved. </p>

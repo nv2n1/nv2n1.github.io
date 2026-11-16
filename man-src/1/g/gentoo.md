@@ -21,36 +21,36 @@ description: "gentoo – A highly configurable file manager for X"
 <h2>OPTIONS</h2>
 <p> gentoo is not primarily driven by command line arguments, but the following are available:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Causes gentoo to print its version number (a string on the form MAJOR.MINOR.MICRO, like 0.15.6) to the standard output, and then exit successfully. Numbers having an odd MINOR component indicate development versions of the program.</p>
-<dt><code>&#8211;locale-info</code></p>
-<dd> Makes gentoo print a couple of localization settings, and then exit. This is mostly useful during development and debugging, and not of a lot of interest when just using the application.</p>
-<dt><code>&#8211;root-ok</code></p>
-<dd> Makes gentoo accept being run by the root user. Normally, this is not allowed since it is considered a big threat to system security. Note that gentoo has the ability to execute user-defined strings using the <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3) function. This is generally considered harmful. However, if you <code>really</code> want to run gentoo while logged on as root, supplying this option allows you to. It is <code>not</code> recommended, though.</p>
-<dt><code>&#8211;no-rc</code></p>
-<dd> Starts up gentoo without loading any configuration file. This makes it run using the built-in defaults, which are <code>very</code> Spartan indeed. Seldom comfortable, but occasionally handy when trying to determine if a problem is with the configuration or with the core code.</p>
-<dt><code>&#8211;no-gtkrc</code></p>
-<dd> Avoids loading the GTK+ RC file, thus disabling any widget customizations, and forces all widgets to use the default GTK+ look.</p>
-<dt><code>&#8211;no-fam</code></p>
-<dd> Disables use of FAM (File Alteration Monitor) to detect when contents of a displayed pane change. Option only available if gentoo was built with FAM support to begin with.</p>
-<dt><code>&#8211;left, &#8211;right (or -1, -2)</code></p>
-<dd> Sets the initial path for the left and right pane, respectively. If present, the path specified with one of these options overrides any other path for the pane in question. See below (Initial Directory Paths) for details.</p>
-<dt><code>&#8211;run ARG (or -rARG)</code></p>
-<dd> Runs ARG, a gentoo command. Commands specified this way are executed before gentoo accepts any user input through the graphical interface, but after the configuration file has been read in. You can use it many times in order to make gentoo run a whole series of commands. Remember that gentoo&#8217;s command names are case-sensitive, and that built-in commands (like &quot;About&quot;) always begin with a capital letter.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Causes gentoo to print its version number (a string on the form MAJOR.MINOR.MICRO, like 0.15.6) to the standard output, and then exit successfully. Numbers having an odd MINOR component indicate development versions of the program.</dd>
+<dt><code>&#8211;locale-info</code></dt>
+<dd> Makes gentoo print a couple of localization settings, and then exit. This is mostly useful during development and debugging, and not of a lot of interest when just using the application.</dd>
+<dt><code>&#8211;root-ok</code></dt>
+<dd> Makes gentoo accept being run by the root user. Normally, this is not allowed since it is considered a big threat to system security. Note that gentoo has the ability to execute user-defined strings using the <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3) function. This is generally considered harmful. However, if you <code>really</code> want to run gentoo while logged on as root, supplying this option allows you to. It is <code>not</code> recommended, though.</dd>
+<dt><code>&#8211;no-rc</code></dt>
+<dd> Starts up gentoo without loading any configuration file. This makes it run using the built-in defaults, which are <code>very</code> Spartan indeed. Seldom comfortable, but occasionally handy when trying to determine if a problem is with the configuration or with the core code.</dd>
+<dt><code>&#8211;no-gtkrc</code></dt>
+<dd> Avoids loading the GTK+ RC file, thus disabling any widget customizations, and forces all widgets to use the default GTK+ look.</dd>
+<dt><code>&#8211;no-fam</code></dt>
+<dd> Disables use of FAM (File Alteration Monitor) to detect when contents of a displayed pane change. Option only available if gentoo was built with FAM support to begin with.</dd>
+<dt><code>&#8211;left, &#8211;right (or -1, -2)</code></dt>
+<dd> Sets the initial path for the left and right pane, respectively. If present, the path specified with one of these options overrides any other path for the pane in question. See below (Initial Directory Paths) for details.</dd>
+<dt><code>&#8211;run ARG (or -rARG)</code></dt>
+<dd> Runs ARG, a gentoo command. Commands specified this way are executed before gentoo accepts any user input through the graphical interface, but after the configuration file has been read in. You can use it many times in order to make gentoo run a whole series of commands. Remember that gentoo&#8217;s command names are case-sensitive, and that built-in commands (like &quot;About&quot;) always begin with a capital letter.</dd></dl>
 <p> Any non-option command arguments will be silently ignored. If an argument &quot;-h&quot; or &quot;&#8211;help&quot; is given, gentoo will give a summary of its supported command line options and exit successfully. If an unknown option is given, or a option is missing a required argument, gentoo will whine and exit with a failure.</p>
 <h2>BASIC USAGE</h2>
 <p> When gentoo starts up, it will open up its single main window, which is split vertically (or horizontally; it&#8217;s configurable) down the middle, forming the two panes mentioned above. It also contains a bank of buttons along the bottom.</p>
 <h3>Initial Directory Paths</h3>
 <p> The actual paths shown in the two panes upon start-up can be controlled in various ways. There are four ways of getting a path to show up in pane. In order of decreasing priority, they are:</p>
 <dl>
-<dt>1. Command-line Argument</p>
-<dd> Using the &#8211;left and &#8211;right (or their short forms, -1 and -2) command-line arguments overrides any other setting.</p>
-<dt>2. Configured Default Directory</p>
-<dd> If no command-line argument is present, and the &quot;Default Directory&quot; configuration option is set, that directory is used.</p>
-<dt>3. Most Recently Visited Directory</p>
-<dd> If no default directory exists, the most recently visited directory is taken from the directory history for each pane. This only works if a directory history file has been found and loaded.</p>
-<dt>4. Current Directory</p>
-<dd> If all else fails, gentoo uses the current directory (&quot;.&quot;).</dl>
+<dt>1. Command-line Argument</dt>
+<dd> Using the &#8211;left and &#8211;right (or their short forms, -1 and -2) command-line arguments overrides any other setting.</dd>
+<dt>2. Configured Default Directory</dt>
+<dd> If no command-line argument is present, and the &quot;Default Directory&quot; configuration option is set, that directory is used.</dd>
+<dt>3. Most Recently Visited Directory</dt>
+<dd> If no default directory exists, the most recently visited directory is taken from the directory history for each pane. This only works if a directory history file has been found and loaded.</dd>
+<dt>4. Current Directory</dt>
+<dd> If all else fails, gentoo uses the current directory (&quot;.&quot;).</dd></dl>
 <h3>Navigating</h3>
 <p> Navigating around the file system using gentoo is very simple. The two panes act as independent views of the file system, and both are navigated in exactly the same way. </p>
 <p> You can always see which directory a pane is showing by reading its path, shown in the entry box below (by default&#8211;you can change the position to above) the pane. </p>
@@ -78,18 +78,18 @@ description: "gentoo – A highly configurable file manager for X"
 <p> Describing how to go about configuring gentoo is too big a topic for a manual page to cover. I&#8217;ll just say that the command to open up the configuration window is called &quot;Configure&quot;. It is by default available on a button (typically the top-right one), in the pane pop-up menu, and also by pressing the <code>C</code> key on your keyboard. </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.gentoorc</i></p>
-<dd> A user&#8217;s personal configuration file. When gentoo starts up, it will try to load this file. If the file isn&#8217;t found, the site-wide configuration will be tried instead.</p>
-<dt><i>/usr/local/etc/gentoorc</i></p>
-<dd> This is the site-wide configuration file. If a user doesn&#8217;t have a configuration in his/her home directory, gentoo loads this file instead. The actual location of this file is slightly system-dependent, the above is the default. As an end user, you typically won&#8217;t need to access this file manually.</p>
-<dt><i>~/.gentoo-history</i></p>
-<dd> This file contains lists of the most recently visited directories, for both panes. These are the lists that appear in the drop-down menu when the arrow next to the path entry box is clicked. Can be disabled in the Dir Pane configuration.</p>
-<dt><i>~/.gentoogtkrc</i></p>
-<dd> This file allows you to control the look of the widgets used by gentoo, through the GTK+ style system. This file must be present in the user&#8217;s home directory &#8211; there is no site-wide GTK+ configuration file.</p>
-<dt><i>/etc/passwd, /etc/group</i></p>
-<dd> These two files normally hold the system&#8217;s password and group information. These are (probably) the ones gentoo uses to map user IDs to login names, to do tilde-expansion (mapping of user name to directory path), and to map group IDs to group names. That is <i>probably,</i> because gentoo doesn&#8217;t actually refer to these files by name. Instead, it uses the (BSD-style) API function calls <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3) and <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3) to access this information.</p>
-<dt><i>/etc/fstab, /proc/mounts, (or /etc/mtab)</i></p>
-<dd> These files contain data on available and mounted file systems. They are read by gentoo&#8217;s auto-mounting code. You can configure the exact file names used, on the &quot;Mounting&quot; tab in the main configuration window. Note that using <i>/proc/mounts</i> rather than <i>/etc/mtab</i> is recommended on Linux systems; they contain roughly the same data, but the one in /proc is always up to date, and faster to read!</dl>
+<dt><i>~/.gentoorc</i></dt>
+<dd> A user&#8217;s personal configuration file. When gentoo starts up, it will try to load this file. If the file isn&#8217;t found, the site-wide configuration will be tried instead.</dd>
+<dt><i>/usr/local/etc/gentoorc</i></dt>
+<dd> This is the site-wide configuration file. If a user doesn&#8217;t have a configuration in his/her home directory, gentoo loads this file instead. The actual location of this file is slightly system-dependent, the above is the default. As an end user, you typically won&#8217;t need to access this file manually.</dd>
+<dt><i>~/.gentoo-history</i></dt>
+<dd> This file contains lists of the most recently visited directories, for both panes. These are the lists that appear in the drop-down menu when the arrow next to the path entry box is clicked. Can be disabled in the Dir Pane configuration.</dd>
+<dt><i>~/.gentoogtkrc</i></dt>
+<dd> This file allows you to control the look of the widgets used by gentoo, through the GTK+ style system. This file must be present in the user&#8217;s home directory &#8211; there is no site-wide GTK+ configuration file.</dd>
+<dt><i>/etc/passwd, /etc/group</i></dt>
+<dd> These two files normally hold the system&#8217;s password and group information. These are (probably) the ones gentoo uses to map user IDs to login names, to do tilde-expansion (mapping of user name to directory path), and to map group IDs to group names. That is <i>probably,</i> because gentoo doesn&#8217;t actually refer to these files by name. Instead, it uses the (BSD-style) API function calls <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3) and <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3) to access this information.</dd>
+<dt><i>/etc/fstab, /proc/mounts, (or /etc/mtab)</i></dt>
+<dd> These files contain data on available and mounted file systems. They are read by gentoo&#8217;s auto-mounting code. You can configure the exact file names used, on the &quot;Mounting&quot; tab in the main configuration window. Note that using <i>/proc/mounts</i> rather than <i>/etc/mtab</i> is recommended on Linux systems; they contain roughly the same data, but the one in /proc is always up to date, and faster to read!</dd></dl>
 <h2>BUGS</h2>
 <p> All releases of gentoo numbered 0.x.y, where x (the so called <code>minor</code> version number) is odd, are to be considered <code>development</code> releases, as opposed to <code>stable</code> ones. This means that the software will probably suffer from bugs. If you find something that you suspect is indeed a bug, please don&#8217;t hesitate to contact the author! For details on how to do this, see below. </p>
 <p> If you&#8217;re concerned about using potentially buggy and completely unwarranted software to manage your precious files, please feel free <code>not</code> to use gentoo. The world is full of alternatives. </p>
@@ -101,18 +101,18 @@ description: "gentoo – A highly configurable file manager for X"
 <h2>ACKNOWLEDGMENTS</h2>
 <p> The author wishes to thank the following people for their various contributions to gentoo:</p>
 <dl>
-<dt>Johan Hanson (&lt;johan [at] tiq.com&gt;)</p>
-<dd> Johan is the man behind all icon graphics in gentoo, and also the author of the custom widgets used in it. He also comes up with plenty of ideas for new features and changes to old ones, some of which are even implemented. Johan has stuff at &lt;<a rel="nofollow" href="http://www.bahnhof.se/~misagon/">http://www.bahnhof.se/~misagon/</a>&gt;.</p>
-<dt>Jonas Minnberg (&lt;sasq [at] nightmode.org&gt;)</p>
-<dd> Jonas did intensive testing of early versions of gentoo, and eventually persuaded me into releasing it (back around version 0.9.7 or so).</p>
-<dt>Ulf Petterson (&lt;ulf [at] obsession.se&gt;)</p>
-<dd> Ulf drew the main gentoo logo (the one shown in the About window), and also designed the main HTML documentation&#8217;s layout.</p>
-<dt>Josip Rodin (&lt;jrodin [at] jagor.srce.hr&gt;)</p>
-<dd> Maintainer of the gentoo package for Debian Linux, and also a source of suggestions for improvements, as well as a relay for bug reports from Debian Linux users.</p>
-<dt>Ryan Weaver (&lt;ryanw [at] infohwy.com&gt;)</p>
-<dd> Maintainer of the gentoo packages for Red Hat Linux, and probably one of the fastest package creators out there. :)</p>
-<dt>Oliver Braun, Jim Geovedi and Pehr Johansson</p>
-<dd> Maintainers of gentoo ports to FreeBSD, OpenBSD, and NetBSD, respectively.</dl>
+<dt>Johan Hanson (&lt;johan [at] tiq.com&gt;)</dt>
+<dd> Johan is the man behind all icon graphics in gentoo, and also the author of the custom widgets used in it. He also comes up with plenty of ideas for new features and changes to old ones, some of which are even implemented. Johan has stuff at &lt;<a rel="nofollow" href="http://www.bahnhof.se/~misagon/">http://www.bahnhof.se/~misagon/</a>&gt;.</dd>
+<dt>Jonas Minnberg (&lt;sasq [at] nightmode.org&gt;)</dt>
+<dd> Jonas did intensive testing of early versions of gentoo, and eventually persuaded me into releasing it (back around version 0.9.7 or so).</dd>
+<dt>Ulf Petterson (&lt;ulf [at] obsession.se&gt;)</dt>
+<dd> Ulf drew the main gentoo logo (the one shown in the About window), and also designed the main HTML documentation&#8217;s layout.</dd>
+<dt>Josip Rodin (&lt;jrodin [at] jagor.srce.hr&gt;)</dt>
+<dd> Maintainer of the gentoo package for Debian Linux, and also a source of suggestions for improvements, as well as a relay for bug reports from Debian Linux users.</dd>
+<dt>Ryan Weaver (&lt;ryanw [at] infohwy.com&gt;)</dt>
+<dd> Maintainer of the gentoo packages for Red Hat Linux, and probably one of the fastest package creators out there. :)</dd>
+<dt>Oliver Braun, Jim Geovedi and Pehr Johansson</dt>
+<dd> Maintainers of gentoo ports to FreeBSD, OpenBSD, and NetBSD, respectively.</dd></dl>
 <p> Thanks also to all people who have mailed me about gentoo, providing bug reports, feature requests, and the occasional kind word. :^) It&#8217;s because of people like yourselves that we have this wonderful computer platform to play with.</p>
 <h2>COPYRIGHT</h2>
 <p> gentoo is released as free, open-source software, under the terms of the GNU General Public License (GNU GPL), version 2. This license is included in the distribution under the traditional name of <code>COPYING,</code> and I suggest that you read it if you&#8217;re not familiar with it. If you can&#8217;t find the file, but have Internet access, you could take a look at <code>&lt;<a rel="nofollow" href="http://www.gnu.org/">http://www.gnu.org/</a>&gt;.</code> It is important to realize that the mentioned license means that there is <code>ABSOLUTELY NO WARRANTY</code> for this software.</p>

@@ -15,7 +15,7 @@ snd_soc_unregister_card - Unregister a card with the ASoC core
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>Card to unregister</dl>
+<dl><dd></dd><dd>Card to unregister</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -21,14 +21,14 @@ description: "pmvarrun – updates /var/run/pam_mount/user"
 <p>Some programs or login helpers incorrectly call the PAM stack in a way that the login phase is done as root and the logout phase as a normal user. Nevertheless, pmvarrun supports this, and the same permissions as in root-root can be used. While the user may not be able to unlink his file from /var/run/pam_mount, it will be truncated to indicate the same state.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd>Display help.</p>
-<dt><code>&#8211;user</code> <i>user</i>, <code>-u</code> <i>user</i></p>
-<dd>User to handle, must be a valid username.</p>
-<dt><code>&#8211;operation</code> <i>number</i>, <code>-o</code> <i>number</i></p>
-<dd>Increase volume count by <i>number</i>.</p>
-<dt><code>-d</code></p>
-<dd>Turn on debugging.</dl>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd>Display help.</dd>
+<dt><code>&#8211;user</code> <i>user</i>, <code>-u</code> <i>user</i></dt>
+<dd>User to handle, must be a valid username.</dd>
+<dt><code>&#8211;operation</code> <i>number</i>, <code>-o</code> <i>number</i></dt>
+<dd>Increase volume count by <i>number</i>.</dd>
+<dt><code>-d</code></dt>
+<dd>Turn on debugging.</dd></dl>
 <h2>Files</h2>
 <p><code>/var/run/pam_mount/</code><i>user</i></p>
 <h2>Author</h2>

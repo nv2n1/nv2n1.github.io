@@ -13,14 +13,14 @@ description: "pskc_output – API function"
 int pskc_output(pskc_t *container, pskc_output_formats_t format, char **out, size_t *len);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>pskc_output_formats_t format</p>
-<dd>an <code>pskc_output_formats_t</code> enumeration type indicating format.</p>
-<dt>char ** out</p>
-<dd>pointer to output variable holding newly allocated string.</p>
-<dt>size_t * len</p>
-<dd>pointer to output variable hold length of *<i>out</i>.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>pskc_output_formats_t format</dt>
+<dd>an <code>pskc_output_formats_t</code> enumeration type indicating format.</dd>
+<dt>char ** out</dt>
+<dd>pointer to output variable holding newly allocated string.</dd>
+<dt>size_t * len</dt>
+<dd>pointer to output variable hold length of *<i>out</i>.</dd></dl>
 <h2>Description</h2>
 <p>Convert PSKC data to a serialized string of the indicated type. This is usually used to convert the PSKC data to some human readable form.</p>
 <h2>Returns</h2>

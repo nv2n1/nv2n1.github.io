@@ -20,8 +20,8 @@ description: "pgmdeshadow – Deshadow a PGM image"
 <p> None. </p>
 <h2>REFERENCES</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Luc Vincent, &#8216;Morphological Grayscale Reruction in Image Analysis: Applications and Efficient Algorithms,&#8217; IEEE Transactions on Image Processing, vol. 2, no. 2, April 1993, pp. 176-201. </p>
+<dt>&bull;</dt>
+<dd> Luc Vincent, &#8216;Morphological Grayscale Reruction in Image Analysis: Applications and Efficient Algorithms,&#8217; IEEE Transactions on Image Processing, vol. 2, no. 2, April 1993, pp. 176-201. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmshadow/">ppmshadow</a></code>(1) , <code>pgm</code>(1) </p>

@@ -17,28 +17,28 @@ description: "nutop – display top NUFW Users"
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-help </code></p>
-<dd>Issues usage details and exits.</p>
-<dt><code>-c </code><i>config file</i></p>
-<dd>Specifies config file to read SQL parameters from. Default is /etc/nufw/nutop.conf</p>
-<dt><code>-delay </code><i>number</i></p>
-<dd>Specifies a rate to refresh display. This parameter is interpeted as a number of seconds. Default is 2s.</p>
-<dt><code>-line </code><i>number</i></p>
-<dd>Number of lines to display. Default : 20</p>
-<dt><code>-databasetype </code><i>mysql/pgsql</i></p>
-<dd>Type of database to connect to. Default is mysql. This setting also sets the default port setting.</p>
-<dt><code>-host </code><i>hostname/IP</i></p>
-<dd>IP address or FQDN of database we connect to. Default value : 127.0.0.1</p>
-<dt><code>-user </code><i>username</i></p>
-<dd>Database username to connect as. Default is &quot;nutop&quot;</p>
-<dt><code>-pass </code><i>password</i></p>
-<dd>Password to use to connect to database.</p>
-<dt><code>-databasename </code><i>name of database</i></p>
-<dd>Name of database we connect to. Default is &quot;nulog&quot;</p>
-<dt><code>-tablename </code><i>name of table</i></p>
-<dd>Name of SQL table to use for queries. Default is &quot;ulog&quot;</p>
-<dt><code>-port </code><i>TCP port</i></p>
-<dd>TCP numeric port to use for database connection. Default is 3306 if databasetype is mysql, 5432 if pgsql.</dl>
+<dt><code>-help </code></dt>
+<dd>Issues usage details and exits.</dd>
+<dt><code>-c </code><i>config file</i></dt>
+<dd>Specifies config file to read SQL parameters from. Default is /etc/nufw/nutop.conf</dd>
+<dt><code>-delay </code><i>number</i></dt>
+<dd>Specifies a rate to refresh display. This parameter is interpeted as a number of seconds. Default is 2s.</dd>
+<dt><code>-line </code><i>number</i></dt>
+<dd>Number of lines to display. Default : 20</dd>
+<dt><code>-databasetype </code><i>mysql/pgsql</i></dt>
+<dd>Type of database to connect to. Default is mysql. This setting also sets the default port setting.</dd>
+<dt><code>-host </code><i>hostname/IP</i></dt>
+<dd>IP address or FQDN of database we connect to. Default value : 127.0.0.1</dd>
+<dt><code>-user </code><i>username</i></dt>
+<dd>Database username to connect as. Default is &quot;nutop&quot;</dd>
+<dt><code>-pass </code><i>password</i></dt>
+<dd>Password to use to connect to database.</dd>
+<dt><code>-databasename </code><i>name of database</i></dt>
+<dd>Name of database we connect to. Default is &quot;nulog&quot;</dd>
+<dt><code>-tablename </code><i>name of table</i></dt>
+<dd>Name of SQL table to use for queries. Default is &quot;ulog&quot;</dd>
+<dt><code>-port </code><i>TCP port</i></dt>
+<dd>TCP numeric port to use for database connection. Default is 3306 if databasetype is mysql, 5432 if pgsql.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-nuauth/">nuauth</a>(8), <a href="/docs/linux/man/8-nufw/">nufw</a>(8)</p>
 <h2>Author</h2>

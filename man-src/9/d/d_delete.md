@@ -15,7 +15,7 @@ d_delete - delete a dentry
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>The dentry to delete</dl>
+<dl><dd></dd><dd>The dentry to delete</dd></dl>
 
 <h2>Description</h2>
 

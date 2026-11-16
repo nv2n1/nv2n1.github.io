@@ -18,35 +18,35 @@ description: "rigd – Hamlib rig service daemon"
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
 <p> Here is a summary of the supported options:</p>
 <dl>
-<dt><code>-m, &#8211;model=id</code></p>
+<dt><code>-m, &#8211;model=id</code></dt>
 <dd>Select radio model number. See rig model list (use &#8216;rigctl -l&#8217;).<br />
- NB: <code>rigctl</code> (or third party software) will use rig model 1901 when using <code>rigd</code>.</p>
-<dt><code>-r, &#8211;rig-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</p>
-<dt><code>-p, &#8211;ptt-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the Push-To-Talk device using a device file as described above.</p>
-<dt><code>-d, &#8211;dcd-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the Data Carrier Detect device using a device file as described above.</p>
-<dt><code>-p, &#8211;ptt-type=type</code></p>
-<dd>Use <i>type</i> of Push-To-Talk device. Supported types are RIG, DTR, RTS, PARALLEL, NONE.</p>
-<dt><code>-d, &#8211;dcd-type=type</code></p>
-<dd>Use <i>type</i> of Data Carrier Detect device. Supported types are RIG, DSR, CTS, CD, PARALLEL, NONE.</p>
-<dt><code>-s, &#8211;serial-speed=baud</code></p>
-<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</p>
-<dt><code>-c, &#8211;civaddr=id</code></p>
+ NB: <code>rigctl</code> (or third party software) will use rig model 1901 when using <code>rigd</code>.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
+<dt><code>-p, &#8211;ptt-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the Push-To-Talk device using a device file as described above.</dd>
+<dt><code>-d, &#8211;dcd-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the Data Carrier Detect device using a device file as described above.</dd>
+<dt><code>-p, &#8211;ptt-type=type</code></dt>
+<dd>Use <i>type</i> of Push-To-Talk device. Supported types are RIG, DTR, RTS, PARALLEL, NONE.</dd>
+<dt><code>-d, &#8211;dcd-type=type</code></dt>
+<dd>Use <i>type</i> of Data Carrier Detect device. Supported types are RIG, DSR, CTS, CD, PARALLEL, NONE.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
 <dd>Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs.<br />
- NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</p>
-<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></p>
+ NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
 <dd>Set config parameter. e.g. stop_bits=2<br />
- Use -L option of <code>rigctl</code> for a list.</p>
-<dt><code>-t, &#8211;prog=number</code></p>
-<dd>Use <i>number</i> as the RPC program number. The default is 536871065.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Set verbose mode, cumulative (see DIAGNOSTICS below).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show a summary of these options and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Show the version of <code>rigd</code> and exit.</dl>
+ Use -L option of <code>rigctl</code> for a list.</dd>
+<dt><code>-t, &#8211;prog=number</code></dt>
+<dd>Use <i>number</i> as the RPC program number. The default is 536871065.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Set verbose mode, cumulative (see DIAGNOSTICS below).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show a summary of these options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show the version of <code>rigd</code> and exit.</dd></dl>
 <p> Please note that the backend for the radio to be controlled, or the radio itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error code.</p>
 <h2>Examples</h2>
 <p>Start <code>rigd</code> as root for a Yaesu FT-920 using a USB to serial adapter and backgrounding: </p>

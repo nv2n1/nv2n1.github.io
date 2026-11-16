@@ -16,8 +16,8 @@ description: "slapd-relay – relay backend to slapd"
 <h2>Configuration</h2>
 <p>The following <code>slapd.conf</code> directives apply to the relay backend database. That is, they must follow a &quot;database relay&quot; line and come before any subsequent &quot;backend&quot; or &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page; only the <code>suffix</code> directive is allowed by the <i>relay</i> backend.</p>
 <dl>
-<dt><code>relay &lt;real naming context&gt;</code></p>
-<dd>The naming context of the database that is presented under a virtual naming context. The presence of this directive implies that one specific database, i.e. the one serving the <code>real naming context</code>, will be presented under a virtual naming context. </p>
+<dt><code>relay &lt;real naming context&gt;</code></dt>
+<dd>The naming context of the database that is presented under a virtual naming context. The presence of this directive implies that one specific database, i.e. the one serving the <code>real naming context</code>, will be presented under a virtual naming context. </dd>
 </dl>
 <h2>Massaging</h2>
 <p>The <code>relay</code> database does not automatically rewrite the naming context of requests and responses. For this purpose, the <code><a href="/docs/linux/man/5-slapo-rwm/">slapo-rwm</a></code>(5) overlay must be explicitly instantiated, and configured as appropriate. Usually, the <code>rwm-suffixmassage</code> directive suffices if only naming context rewriting is required.</p>
@@ -74,7 +74,7 @@ rwm-suffixmassage       &quot;dc=real,dc=naming,dc=context&quot;</code></pre>
 <p>The <code>relay</code> backend does not honor any of the access control semantics described in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5); all access control is delegated to the relayed database(s). Only <code>read (=r)</code> access to the <code>entry</code> pseudo-attribute and to the other attribute values of the entries returned by the <code>search</code> operation is honored, which is performed by the frontend.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), <code><a href="/docs/linux/man/5-slapo-rwm/">slapo-rwm</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8). </p>

@@ -17,14 +17,14 @@ description: "user_u – Generic unprivileged user – Security Enhanced Linux P
 <p>The SELinux user user_u is able to X Windows login.</p>
 <h2>Network</h2>
 <dl>
-<dt>The SELinux user user_u is able to listen on the following tcp ports.</p>
-<dd><code>6000-6020</code> </p>
+<dt>The SELinux user user_u is able to listen on the following tcp ports.</dt>
+<dd><code>6000-6020</code> </dd>
 <p> <code>all ports with out defined types</code> </p>
 <p> <code>all ports &gt; 1024</code> </p>
 <p> <code>3689</code> </p>
 <p> <code>32768-61000</code> </p>
-<dt>The SELinux user user_u is able to connect to the following tcp ports.</p>
-<dd><code>53</code> </p>
+<dt>The SELinux user user_u is able to connect to the following tcp ports.</dt>
+<dd><code>53</code> </dd>
 <p> <code>8955</code> </p>
 <p> <code>all ports</code> </p>
 <p> <code>9080</code> </p>
@@ -35,12 +35,12 @@ description: "user_u – Generic unprivileged user – Security Enhanced Linux P
 <p> <code>111</code> </p>
 <p> <code>32768-61000</code> </p>
 <p> <code>all ports &lt; 1024</code> </p>
-<dt>The SELinux user user_u is able to listen on the following udp ports.</p>
-<dd><code>32768-61000</code> </p>
+<dt>The SELinux user user_u is able to listen on the following udp ports.</dt>
+<dd><code>32768-61000</code> </dd>
 <p> <code>all ports with out defined types</code> </p>
 <p> <code>all ports &gt; 1024</code> </p>
-<dt>The SELinux user user_u is able to connect to the following tcp ports.</p>
-<dd><code>53</code> </p>
+<dt>The SELinux user user_u is able to connect to the following tcp ports.</dt>
+<dd><code>53</code> </dd>
 <p> <code>8955</code> </p>
 <p> <code>all ports</code> </p>
 <p> <code>9080</code> </p>
@@ -132,10 +132,10 @@ description: "user_u – Generic unprivileged user – Security Enhanced Linux P
 <p>Three things can happen when user_t attempts to execute a program. </p>
 <p> <code>1.</code> SELinux Policy can deny user_t from executing the program. </p>
 <dl>
-<dd><code>2.</code> SELinux Policy can allow user_t to execute the program in the current user type. </p>
+<dd><code>2.</code> SELinux Policy can allow user_t to execute the program in the current user type. </dd>
 <p> Execute the following to see the types that the SELinux user user_t can execute without transitioning: </p>
 <p> <code>sesearch -A -s user_t -c file -p execute_no_trans</code> </p>
-<dd><code>3.</code> SELinux can allow user_t to execute the program and transition to a new type. </p>
+<dd><code>3.</code> SELinux can allow user_t to execute the program and transition to a new type. </dd>
 <p> Execute the following to see the types that the SELinux user user_t can execute and transition: </p>
 <p> <code>$ sesearch -A -s user_t -c process -p transition</code> </p>
 </dl>

@@ -18,94 +18,90 @@ description: "racluster – aggregate argus(8) data files."
 <h2>OPTIONS</h2>
 <p> Racluster, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression, and the ability to specify the output style, format and contents for printing data. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-racluster/">racluster</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-m</code><i> aggregation object</i></p>
-<dd> Supported aggregation objects are:</dl>
+<dt><code>-m</code><i> aggregation object</i></dt>
+<dd> Supported aggregation objects are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>none</code></p>
-<dd> use a null flow key.</p>
-<dt><code>srcid</code></p>
-<dd> argus source identifier.</p>
-<dt><code>smac</code></p>
-<dd> source mac(ether) addr.</p>
-<dt><code>dmac</code></p>
-<dd> destination mac(ether) addr.</p>
-<dt><code>soui</code></p>
-<dd> oui portion of the source mac(ether) addr.</p>
-<dt><code>doui</code></p>
-<dd> oui portion of the destination mac(ether) addr.</p>
-<dt><code>smpls</code></p>
-<dd> source mpls label.</p>
-<dt><code>dmpls</code></p>
-<dd> destination label addr.</p>
-<dt><code>svlan</code></p>
-<dd> source vlan label.</p>
-<dt><code>dvlan</code></p>
-<dd> destination vlan addr.</p>
-<dt><code>saddr/[l|m]</code></p>
-<dd> source IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>daddr/[l|m]</code></p>
-<dd> destination IP addr/[cidr len | m.a.s.k].</p>
-<dt><code>matrix/l</code></p>
-<dd> sorted src and dst IP addr/cidr len.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>dport</code></p>
-<dd> destination port number. Implies use of &#8216;proto&#8217;.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>stcpb</code></p>
-<dd> src -&gt; dst TCP base sequence number.</p>
-<dt><code>dtcpb</code></p>
-<dd> dst -&gt; src TCP base sequence number.</p>
-<dt><code>inode[/l|m]]</code></p>
-<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</p>
-<dt><code>sco</code></p>
-<dd> source ARIN country code, if present.</p>
-<dt><code>dco</code></p>
-<dd> destination ARIN country code, if present.</p>
-<dt><code>sas</code></p>
-<dd> source node origin AS number, if available.</p>
-<dt><code>das</code></p>
-<dd> destination node origin AS number, if available.</p>
-<dt><code>ias</code></p>
-<dd> intermediate node origin AS number, if available. </p>
-<dt></dl>
+<dt><code>none</code></dt>
+<dd> use a null flow key.</dd>
+<dt><code>srcid</code></dt>
+<dd> argus source identifier.</dd>
+<dt><code>smac</code></dt>
+<dd> source mac(ether) addr.</dd>
+<dt><code>dmac</code></dt>
+<dd> destination mac(ether) addr.</dd>
+<dt><code>soui</code></dt>
+<dd> oui portion of the source mac(ether) addr.</dd>
+<dt><code>doui</code></dt>
+<dd> oui portion of the destination mac(ether) addr.</dd>
+<dt><code>smpls</code></dt>
+<dd> source mpls label.</dd>
+<dt><code>dmpls</code></dt>
+<dd> destination label addr.</dd>
+<dt><code>svlan</code></dt>
+<dd> source vlan label.</dd>
+<dt><code>dvlan</code></dt>
+<dd> destination vlan addr.</dd>
+<dt><code>saddr/[l|m]</code></dt>
+<dd> source IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>daddr/[l|m]</code></dt>
+<dd> destination IP addr/[cidr len | m.a.s.k].</dd>
+<dt><code>matrix/l</code></dt>
+<dd> sorted src and dst IP addr/cidr len.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number. Implies use of &#8216;proto&#8217;.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>stcpb</code></dt>
+<dd> src -&gt; dst TCP base sequence number.</dd>
+<dt><code>dtcpb</code></dt>
+<dd> dst -&gt; src TCP base sequence number.</dd>
+<dt><code>inode[/l|m]]</code></dt>
+<dd> intermediate node IP addr/[cidr len | m.a.s.k], source of ICMP mapped events.</dd>
+<dt><code>sco</code></dt>
+<dd> source ARIN country code, if present.</dd>
+<dt><code>dco</code></dt>
+<dd> destination ARIN country code, if present.</dd>
+<dt><code>sas</code></dt>
+<dd> source node origin AS number, if available.</dd>
+<dt><code>das</code></dt>
+<dd> destination node origin AS number, if available.</dd>
+<dt><code>ias</code></dt>
+<dd> intermediate node origin AS number, if available. </dd>
+<dt></dt></dl>
 </dl>
 <dd>
+</dd><dl>
+<dt><code>-M</code><i> modes</i></dt>
+<dd> Supported modes are:</dd></dl>
 <dl>
-<dt><code>-M</code><i> modes</i></p>
-<dd> Supported modes are:</dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>correct</code></p>
-<dd> Attempt to correct the direction of flows by also searching the reverse flow key, if a match isn&#8217;t found in the cache. This mode is on by default when using the default full 5-tuple flow key definitions.</p>
-<dt><code>nocorrect</code></p>
-<dd> Turn off flow correction for direction. This mode is used by default if the flow key has been changed.</p>
-<dt><code>norep</code></p>
-<dd> Do not generate an aggregate statistic for each flow. This is used primarily when the output represents a single object. Primarily used when merging status records to generate single flows that represent single transactions.</p>
-<dt><code>rmon</code></p>
-<dd> Generate data suitable for producing RMON types of metrics.</p>
-<dt><code>ind</code></p>
-<dd> Process each input file independantly, so that after the end of each inputfile, racluster flushes its output.</p>
-<dt><code>replace</code></p>
-<dd> Replace each inputfile contents, with the aggregated output. The initial file compression status is maintained</dl>
+<dt><code>correct</code></dt>
+<dd> Attempt to correct the direction of flows by also searching the reverse flow key, if a match isn&#8217;t found in the cache. This mode is on by default when using the default full 5-tuple flow key definitions.</dd>
+<dt><code>nocorrect</code></dt>
+<dd> Turn off flow correction for direction. This mode is used by default if the flow key has been changed.</dd>
+<dt><code>norep</code></dt>
+<dd> Do not generate an aggregate statistic for each flow. This is used primarily when the output represents a single object. Primarily used when merging status records to generate single flows that represent single transactions.</dd>
+<dt><code>rmon</code></dt>
+<dd> Generate data suitable for producing RMON types of metrics.</dd>
+<dt><code>ind</code></dt>
+<dd> Process each input file independantly, so that after the end of each inputfile, racluster flushes its output.</dd>
+<dt><code>replace</code></dt>
+<dd> Replace each inputfile contents, with the aggregated output. The initial file compression status is maintained</dd></dl>
 </dl>
 <dl>
-<dt><code>-V</code></p>
-<dd> Verbose operation, printing a line of output for each input file processed. Very useful when using the ra() -R option. </p>
+<dt><code>-V</code></dt>
+<dd> Verbose operation, printing a line of output for each input file processed. Very useful when using the ra() -R option. </dd>
 </dl>
 <h2>INVOCATION</h2>
 <p> A sample invocation of <code><a href="/docs/linux/man/1-racluster/">racluster</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and aggregates the TCP protocol based <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data. By default, <code><a href="/docs/linux/man/1-racluster/">racluster</a>(1)</code> merges using the standard 5-tuple flow key. This method is used to merge multiple status records into a single flow record per transaction. </p>
@@ -114,7 +110,6 @@ description: "racluster – aggregate argus(8) data files."
 </code></pre>
 <p> A sample invocation of <code><a href="/docs/linux/man/1-racluster/">racluster</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and aggregates the TCP protocol based <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data, based on the source and destination address matrix and the protocol. It reports the metrics as a percent of the total. </p>
 <pre><code>
-
 % racluster - r argus .2012.02.13.17.20.00 - m saddr / 16 daddr proto - %
                                                                             -s stime dur trans proto saddr dir daddr pkts state -
     tcp and port https

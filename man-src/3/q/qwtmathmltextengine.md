@@ -30,10 +30,10 @@ description: "QwtMathMLTextEngine –"
 QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine());</pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtTextEngine</code>, <code>QwtText::setTextEngine</code></dl>
+<dd><code>QwtTextEngine</code>, <code>QwtText::setTextEngine</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>Unfortunately the MathML renderer doesn&#8217;t support rotating of texts.</dl>
+<dd>Unfortunately the MathML renderer doesn&#8217;t support rotating of texts.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtMathMLTextEngine::draw (QPainter *painter, const QRectF &amp;rect, intflags, const QString &amp;text) const [virtual]</h3>
 <p>Draw the text in a clipping rectangle </p>
@@ -42,7 +42,7 @@ QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine());</pre>
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Clipping rectangle<br />
  <i>flags</i> Bitwise OR of the flags like in for QPainter::drawText<br />
- <i>text</i> Text to be rendered</dl>
+ <i>text</i> Text to be rendered</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>double QwtMathMLTextEngine::heightForWidth (const QFont &amp;font, intflags, const QString &amp;text, doublewidth) const [virtual]</h3>
 <p>Find the height for a given width </p>
@@ -51,19 +51,19 @@ QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine());</pre>
 <dd><i>font</i> Font of the text<br />
  <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
  <i>text</i> Text to be rendered<br />
- <i>width</i> Width</dl>
+ <i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated height</dl>
+<dd>Calculated height</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>bool QwtMathMLTextEngine::mightRender (const QString &amp;text) const [virtual]</h3>
 <p>Test if a string can be rendered by <code>QwtMathMLTextEngine</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text to be tested</dl>
+<dd><i>text</i> Text to be tested</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, if text begins with &#8216;&lt;math&gt;&#8217;.</dl>
+<dd>true, if text begins with &#8216;&lt;math&gt;&#8217;.</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>void QwtMathMLTextEngine::textMargins (const QFont &amp;, const QString &amp;, double &amp;left, double &amp;right, double &amp;top, double &amp;bottom) const [virtual]</h3>
 <p>Return margins around the texts </p>
@@ -72,7 +72,7 @@ QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine());</pre>
 <dd><i>left</i> Return 0<br />
  <i>right</i> Return 0<br />
  <i>top</i> Return 0<br />
- <i>bottom</i> Return 0</dl>
+ <i>bottom</i> Return 0</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>QSizeF QwtMathMLTextEngine::textSize (const QFont &amp;font, intflags, const QString &amp;text) const [virtual]</h3>
 <p>Returns the size, that is needed to render text </p>
@@ -80,10 +80,10 @@ QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine());</pre>
 <dl COMPACT>
 <dd><i>font</i> Font of the text<br />
  <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
- <i>text</i> Text to be rendered</dl>
+ <i>text</i> Text to be rendered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Caluclated size</dl>
+<dd>Caluclated size</dd></dl>
 <p> Implements <code>QwtTextEngine</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

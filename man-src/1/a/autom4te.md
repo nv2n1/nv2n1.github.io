@@ -17,105 +17,105 @@ description: "autom4te – Generate files and scripts thanks to M4"
 <p> Some files may be optional, i.e., will only be processed if found in the include path, but then must end in &#8216;.m4?&#8217;; the question mark is not part of the actual file name.</p>
 <h3>Operation modes:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd> save output in FILE (defaults to &#8216;-&#8216;, stdout)</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> don&#8217;t rely on cached values</p>
-<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></p>
-<dd> report the warnings falling in CATEGORY</p>
-<dt><code>-l</code>, <code>&#8211;language</code>=<i>,LANG/</i></p>
-<dd> specify the set of M4 macros to use</p>
-<dt><code>-C</code>, <code>&#8211;cache</code>=<i>,DIRECTORY/</i></p>
-<dd> preserve results for future runs in DIRECTORY</p>
-<dt><code>&#8211;no-cache</code></p>
-<dd> disable the cache</p>
-<dt><code>-m</code>, <code>&#8211;mode</code>=<i>,OCTAL/</i></p>
-<dd> change the non trace output file mode (0666)</p>
-<dt><code>-M</code>, <code>&#8211;melt</code></p>
-<dd> don&#8217;t use M4 frozen files</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd> save output in FILE (defaults to &#8216;-&#8216;, stdout)</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> don&#8217;t rely on cached values</dd>
+<dt><code>-W</code>, <code>&#8211;warnings</code>=<i>,CATEGORY/</i></dt>
+<dd> report the warnings falling in CATEGORY</dd>
+<dt><code>-l</code>, <code>&#8211;language</code>=<i>,LANG/</i></dt>
+<dd> specify the set of M4 macros to use</dd>
+<dt><code>-C</code>, <code>&#8211;cache</code>=<i>,DIRECTORY/</i></dt>
+<dd> preserve results for future runs in DIRECTORY</dd>
+<dt><code>&#8211;no-cache</code></dt>
+<dd> disable the cache</dd>
+<dt><code>-m</code>, <code>&#8211;mode</code>=<i>,OCTAL/</i></dt>
+<dd> change the non trace output file mode (0666)</dd>
+<dt><code>-M</code>, <code>&#8211;melt</code></dt>
+<dd> don&#8217;t use M4 frozen files</dd></dl>
 <h3>Languages include:</h3>
 <dl>
-<dt>&#8216;Autoconf&#8217;</p>
-<dd> create Autoconf configure scripts</p>
-<dt>&#8216;Autotest&#8217;</p>
-<dd> create Autotest test suites</p>
-<dt>&#8216;M4sh&#8217;</p>
-<dd> create M4sh shell scripts</p>
-<dt>&#8216;M4sugar&#8217;</p>
-<dd> create M4sugar output</dl>
+<dt>&#8216;Autoconf&#8217;</dt>
+<dd> create Autoconf configure scripts</dd>
+<dt>&#8216;Autotest&#8217;</dt>
+<dd> create Autotest test suites</dd>
+<dt>&#8216;M4sh&#8217;</dt>
+<dd> create M4sh shell scripts</dd>
+<dt>&#8216;M4sugar&#8217;</dt>
+<dd> create M4sugar output</dd></dl>
 <h3>Warning categories include:</h3>
 <dl>
-<dt>cross</p>
-<dd> cross compilation issues</p>
-<dt>gnu</p>
-<dd> GNU coding standards (default in gnu and gnits modes)</p>
-<dt>obsolete</p>
-<dd> obsolete features or constructions (default)</p>
-<dt>override</p>
-<dd> user redefinitions of Automake rules or variables</p>
-<dt>portability</p>
-<dd> portability issues (default in gnu and gnits modes)</p>
-<dt>portability-recursive</p>
-<dd> nested Make variables (default with <code>-Wportability</code>)</p>
-<dt>extra-portability</p>
-<dd> extra portability issues related to obscure tools</p>
-<dt>syntax</p>
-<dd> dubious syntactic constructs (default)</p>
-<dt>unsupported</p>
-<dd> unsupported or incomplete features (default)</p>
-<dt>all</p>
-<dd> all the warnings</p>
-<dt>no-CATEGORY</p>
-<dd> turn off warnings in CATEGORY</p>
-<dt>none</p>
-<dd> turn off all the warnings</p>
-<dt>error</p>
-<dd> treat warnings as errors</dl>
+<dt>cross</dt>
+<dd> cross compilation issues</dd>
+<dt>gnu</dt>
+<dd> GNU coding standards (default in gnu and gnits modes)</dd>
+<dt>obsolete</dt>
+<dd> obsolete features or constructions (default)</dd>
+<dt>override</dt>
+<dd> user redefinitions of Automake rules or variables</dd>
+<dt>portability</dt>
+<dd> portability issues (default in gnu and gnits modes)</dd>
+<dt>portability-recursive</dt>
+<dd> nested Make variables (default with <code>-Wportability</code>)</dd>
+<dt>extra-portability</dt>
+<dd> extra portability issues related to obscure tools</dd>
+<dt>syntax</dt>
+<dd> dubious syntactic constructs (default)</dd>
+<dt>unsupported</dt>
+<dd> unsupported or incomplete features (default)</dd>
+<dt>all</dt>
+<dd> all the warnings</dd>
+<dt>no-CATEGORY</dt>
+<dd> turn off warnings in CATEGORY</dd>
+<dt>none</dt>
+<dd> turn off all the warnings</dd>
+<dt>error</dt>
+<dd> treat warnings as errors</dd></dl>
 <p> The environment variables &#8216;M4&#8217; and &#8216;WARNINGS&#8217; are honored.</p>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <h3>Tracing:</h3>
 <dl>
-<dt><code>-t</code>, <code>&#8211;trace</code>=<i>,MACRO[/</i>:FORMAT]</p>
-<dd> report the MACRO invocations</p>
-<dt><code>-p</code>, <code>&#8211;preselect</code>=<i>,MACRO/</i></p>
-<dd> prepare to trace MACRO in a future run</dl>
+<dt><code>-t</code>, <code>&#8211;trace</code>=<i>,MACRO[/</i>:FORMAT]</dt>
+<dd> report the MACRO invocations</dd>
+<dt><code>-p</code>, <code>&#8211;preselect</code>=<i>,MACRO/</i></dt>
+<dd> prepare to trace MACRO in a future run</dd></dl>
 <h3>Freezing:</h3>
 <dl>
-<dt><code>-F</code>, <code>&#8211;freeze</code></p>
-<dd> produce an M4 frozen state file for FILES</dl>
+<dt><code>-F</code>, <code>&#8211;freeze</code></dt>
+<dd> produce an M4 frozen state file for FILES</dd></dl>
 <h3>FORMAT defaults to &#8216;$f:$l:$n:$%&#8217;, and can use the following escapes:</h3>
 <dl>
-<dt>$$</p>
-<dd> literal $</p>
-<dt>$f</p>
-<dd> file where macro was called</p>
-<dt>$l</p>
-<dd> line where macro was called</p>
-<dt>$d</p>
-<dd> nesting depth of macro call</p>
-<dt>$n</p>
-<dd> name of the macro</p>
-<dt>$NUM</p>
-<dd> argument NUM, unquoted and with newlines</p>
-<dt>$SEP@</p>
-<dd> all arguments, with newlines, quoted, and separated by SEP</p>
-<dt>$SEP*</p>
-<dd> all arguments, with newlines, unquoted, and separated by SEP</p>
-<dt>$SEP%</p>
-<dd> all arguments, without newlines, unquoted, and separated by SEP</dl>
+<dt>$$</dt>
+<dd> literal $</dd>
+<dt>$f</dt>
+<dd> file where macro was called</dd>
+<dt>$l</dt>
+<dd> line where macro was called</dd>
+<dt>$d</dt>
+<dd> nesting depth of macro call</dd>
+<dt>$n</dt>
+<dd> name of the macro</dd>
+<dt>$NUM</dt>
+<dd> argument NUM, unquoted and with newlines</dd>
+<dt>$SEP@</dt>
+<dd> all arguments, with newlines, quoted, and separated by SEP</dd>
+<dt>$SEP*</dt>
+<dd> all arguments, with newlines, unquoted, and separated by SEP</dd>
+<dt>$SEP%</dt>
+<dd> all arguments, without newlines, unquoted, and separated by SEP</dd></dl>
 <p> SEP can be empty for the default (comma for @ and *, colon for %), a single character for that character, or {STRING} to use a string.</p>
 <h2>AUTHOR</h2>
 <p> Written by Akim Demaille.</p>
@@ -131,6 +131,6 @@ description: "autom4te – Generate files and scripts thanks to M4"
 <p> The full documentation for <code>autom4te</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autom4te</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autom4te</code></dl>
+</dt><dd> <code>info autom4te</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

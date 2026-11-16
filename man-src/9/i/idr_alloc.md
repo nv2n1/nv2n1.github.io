@@ -14,19 +14,19 @@ description: "idr_alloc – allocate new idr entry"
 <p><i>idr</i></p>
 <dl>
 <dd>
-<dd>the (initialized) idr</dl>
+</dd><dd>the (initialized) idr</dd></dl>
 <p> <i>ptr</i></p>
 <dl>
-<dd>pointer to be associated with the new id</dl>
+<dd>pointer to be associated with the new id</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>the minimum id (inclusive)</dl>
+<dd>the minimum id (inclusive)</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>the maximum id (exclusive, &lt;= 0 for max)</dl>
+<dd>the maximum id (exclusive, &lt;= 0 for max)</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>memory allocation flags</dl>
+<dd>memory allocation flags</dd></dl>
 <h2>Description</h2>
 <p>Allocate an id in [start, end) and associate it with <i>ptr</i>. If no ID is available in the specified range, returns -ENOSPC. On memory allocation failure, returns -ENOMEM. </p>
 <p> Note that <i>end</i> is treated as max when &lt;= 0. This is to always allow using <i>start</i> + N as <i>end</i> as long as N is inside integer range. </p>

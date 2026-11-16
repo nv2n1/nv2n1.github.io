@@ -11,7 +11,6 @@ description: "sc::Int1eCCA –"
 <p> <code>Int1eCCA</code> adapts CCA integrals components for use within SC.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;int1e.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

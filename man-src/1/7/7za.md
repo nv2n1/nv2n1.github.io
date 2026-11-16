@@ -16,136 +16,134 @@ description: "7za – A file archiver with high compression ratio format"
 <p> <code>7za</code> is a stand-alone executable. <code>7za</code> handles fewer archive formats than <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1).</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>a</code></p>
-<dd> Add files to archive</p>
-<dt><code>b</code></p>
-<dd> Benchmark</p>
-<dt><code>d</code></p>
-<dd> Delete files from archive</p>
-<dt><code>e</code></p>
-<dd> Extract files from archive (without using directory names)</p>
-<dt><code>h</code></p>
-<dd> Calculate hash values for files</p>
-<dt><code>i</code></p>
-<dd> Show information about supported formats</p>
-<dt><code>l</code></p>
-<dd> List contents of archive</p>
-<dt><code>rn</code></p>
-<dd> Rename files in archive</p>
-<dt><code>t</code></p>
-<dd> Test integrity of archive</p>
-<dt><code>u</code></p>
-<dd> Update files to archive</p>
-<dt><code>x</code></p>
-<dd> eXtract files with full paths</dl>
+<dt><code>a</code></dt>
+<dd> Add files to archive</dd>
+<dt><code>b</code></dt>
+<dd> Benchmark</dd>
+<dt><code>d</code></dt>
+<dd> Delete files from archive</dd>
+<dt><code>e</code></dt>
+<dd> Extract files from archive (without using directory names)</dd>
+<dt><code>h</code></dt>
+<dd> Calculate hash values for files</dd>
+<dt><code>i</code></dt>
+<dd> Show information about supported formats</dd>
+<dt><code>l</code></dt>
+<dd> List contents of archive</dd>
+<dt><code>rn</code></dt>
+<dd> Rename files in archive</dd>
+<dt><code>t</code></dt>
+<dd> Test integrity of archive</dd>
+<dt><code>u</code></dt>
+<dd> Update files to archive</dd>
+<dt><code>x</code></dt>
+<dd> eXtract files with full paths</dd></dl>
 <h2>SWITCHES</h2>
 <dl>
-<dt><code>&#8212;</code></p>
-<dd> Stop switches parsing</p>
-<dt><code>-ai[r[-|0]]{@listfile|!wildcard}</code></p>
-<dd> Include archives</p>
-<dt><code>-ax[r[-|0]]{@listfile|!wildcard}</code></p>
-<dd> Exclude archives</p>
-<dt><code>-ao{a|s|t|u}</code></p>
-<dd> Set Overwrite mode</p>
-<dt><code>-an</code></p>
-<dd> Disable archive_name field</p>
-<dt><code>-bb[0-3]</code></p>
-<dd> Set output log level</p>
-<dt><code>-bd</code></p>
-<dd> Disable progress indicator</p>
-<dt><code>-bs{o|e|p}{0|1|2}</code></p>
-<dd> Set output stream for output/error/progress line</p>
-<dt><code>-bt</code></p>
-<dd> Show execution time statistics</p>
-<dt><code>-i[r[-|0]]{@listfile|!wildcard}</code></p>
-<dd> Include filenames</p>
-<dt><code>-m{Parameters}</code></p>
-<dd> Set Compression Method (see /usr/share/doc/p7zip/DOC/MANUAL/cmdline/switches/method.htm from the p7zip-full package for a list of methods)</p>
-<dt><code>-o{Directory}</code></p>
-<dd> Set Output directory</p>
-<dt><code>-p{Password}</code></p>
-<dd> Set Password (NOTE: this flag does not work with 7zr)</p>
-<dt><code>-r[-|0]</code></p>
-<dd> Recurse subdirectories (CAUTION: this flag does not do what you think, avoid using it)</p>
-<dt><code>-sa{a|e|s}</code></p>
-<dd> Set archive name mode</p>
-<dt><code>-scc{UTF-8|WIN|DOS}</code></p>
-<dd> Set charset for for console input/output</p>
-<dt><code>-scs{UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|{id}}</code></p>
-<dd> Set charset for list files</p>
-<dt><code>-scrc[CRC32|CRC64|SHA1|SHA256|*]</code></p>
-<dd> Set hash function for x, e, h commands</p>
-<dt><code>-sdel</code></p>
-<dd> Delete files after compression</p>
-<dt><code>-seml[.]</code></p>
-<dd> Send archive by email</p>
-<dt><code>-sfx[{name}]</code></p>
-<dd> Create SFX archive</p>
-<dt><code>-si[{name}]</code></p>
-<dd> Read data from stdin (e.g. tar cf &#8211; directory | 7za a -si directory.tar.7z)</p>
-<dt><code>-slp</code></p>
-<dd> Set Large Pages mode</p>
-<dt><code>-slt</code></p>
-<dd> Show technical information for l (List) command</p>
-<dt><code>-snh</code></p>
-<dd> Store hard links as links</p>
-<dt><code>-snl</code></p>
-<dd> Store symbolic links as links</p>
-<dt><code>-sni</code></p>
-<dd> Store NT security information</p>
-<dt><code>-sns[-]</code></p>
-<dd> Store NTFS alternate streams</p>
-<dt><code>-sfx[{name}]</code></p>
-<dd> Create SFX archive</p>
-<dt><code>-so</code></p>
-<dd> Write data to stdout (e.g. 7za x -so directory.tar.7z | tar xf -)</p>
-<dt><code>-spd</code></p>
-<dd> Disable wildcard matching for file names</p>
-<dt><code>-spe</code></p>
-<dd> Eliminate duplication of root folder for extract command</p>
-<dt><code>-spf</code></p>
-<dd> Use fully qualified file paths</p>
-<dt><code>-ssc[-]</code></p>
-<dd> Set sensitive case mode</p>
-<dt><code>-ssw</code></p>
-<dd> Compress shared files</p>
-<dt><code>-stl</code></p>
-<dd> Set archive timestamp from the most recently modified file</p>
-<dt><code>-stm{HexMask}</code></p>
-<dd> Set CPU thread affinity mask (hexadecimal number)</p>
-<dt><code>-stx{Type}</code></p>
-<dd> Exclude archive type</p>
-<dt><code>-t{Type}</code></p>
-<dd> Set type of archive</p>
-<dt><code>-u[-][p#][q#][r#][x#][y#][z#][!newArchiveName]</code></p>
-<dd> Update options</p>
-<dt><code>-v{Size}[b|k|m|g]</code></p>
-<dd> Create volumes</p>
-<dt><code>-w[path]</code></p>
-<dd> Set working directory. Empty path means a temporary directory</p>
-<dt><code>-x[r[-|0]]]{@listfile|!wildcard}</code></p>
-<dd> Exclude filenames</p>
-<dt><code>-y</code></p>
-<dd> Assume Yes on all queries</dl>
+<dt><code>&#8212;</code></dt>
+<dd> Stop switches parsing</dd>
+<dt><code>-ai[r[-|0]]{@listfile|!wildcard}</code></dt>
+<dd> Include archives</dd>
+<dt><code>-ax[r[-|0]]{@listfile|!wildcard}</code></dt>
+<dd> Exclude archives</dd>
+<dt><code>-ao{a|s|t|u}</code></dt>
+<dd> Set Overwrite mode</dd>
+<dt><code>-an</code></dt>
+<dd> Disable archive_name field</dd>
+<dt><code>-bb[0-3]</code></dt>
+<dd> Set output log level</dd>
+<dt><code>-bd</code></dt>
+<dd> Disable progress indicator</dd>
+<dt><code>-bs{o|e|p}{0|1|2}</code></dt>
+<dd> Set output stream for output/error/progress line</dd>
+<dt><code>-bt</code></dt>
+<dd> Show execution time statistics</dd>
+<dt><code>-i[r[-|0]]{@listfile|!wildcard}</code></dt>
+<dd> Include filenames</dd>
+<dt><code>-m{Parameters}</code></dt>
+<dd> Set Compression Method (see /usr/share/doc/p7zip/DOC/MANUAL/cmdline/switches/method.htm from the p7zip-full package for a list of methods)</dd>
+<dt><code>-o{Directory}</code></dt>
+<dd> Set Output directory</dd>
+<dt><code>-p{Password}</code></dt>
+<dd> Set Password (NOTE: this flag does not work with 7zr)</dd>
+<dt><code>-r[-|0]</code></dt>
+<dd> Recurse subdirectories (CAUTION: this flag does not do what you think, avoid using it)</dd>
+<dt><code>-sa{a|e|s}</code></dt>
+<dd> Set archive name mode</dd>
+<dt><code>-scc{UTF-8|WIN|DOS}</code></dt>
+<dd> Set charset for for console input/output</dd>
+<dt><code>-scs{UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|{id}}</code></dt>
+<dd> Set charset for list files</dd>
+<dt><code>-scrc[CRC32|CRC64|SHA1|SHA256|*]</code></dt>
+<dd> Set hash function for x, e, h commands</dd>
+<dt><code>-sdel</code></dt>
+<dd> Delete files after compression</dd>
+<dt><code>-seml[.]</code></dt>
+<dd> Send archive by email</dd>
+<dt><code>-sfx[{name}]</code></dt>
+<dd> Create SFX archive</dd>
+<dt><code>-si[{name}]</code></dt>
+<dd> Read data from stdin (e.g. tar cf &#8211; directory | 7za a -si directory.tar.7z)</dd>
+<dt><code>-slp</code></dt>
+<dd> Set Large Pages mode</dd>
+<dt><code>-slt</code></dt>
+<dd> Show technical information for l (List) command</dd>
+<dt><code>-snh</code></dt>
+<dd> Store hard links as links</dd>
+<dt><code>-snl</code></dt>
+<dd> Store symbolic links as links</dd>
+<dt><code>-sni</code></dt>
+<dd> Store NT security information</dd>
+<dt><code>-sns[-]</code></dt>
+<dd> Store NTFS alternate streams</dd>
+<dt><code>-sfx[{name}]</code></dt>
+<dd> Create SFX archive</dd>
+<dt><code>-so</code></dt>
+<dd> Write data to stdout (e.g. 7za x -so directory.tar.7z | tar xf -)</dd>
+<dt><code>-spd</code></dt>
+<dd> Disable wildcard matching for file names</dd>
+<dt><code>-spe</code></dt>
+<dd> Eliminate duplication of root folder for extract command</dd>
+<dt><code>-spf</code></dt>
+<dd> Use fully qualified file paths</dd>
+<dt><code>-ssc[-]</code></dt>
+<dd> Set sensitive case mode</dd>
+<dt><code>-ssw</code></dt>
+<dd> Compress shared files</dd>
+<dt><code>-stl</code></dt>
+<dd> Set archive timestamp from the most recently modified file</dd>
+<dt><code>-stm{HexMask}</code></dt>
+<dd> Set CPU thread affinity mask (hexadecimal number)</dd>
+<dt><code>-stx{Type}</code></dt>
+<dd> Exclude archive type</dd>
+<dt><code>-t{Type}</code></dt>
+<dd> Set type of archive</dd>
+<dt><code>-u[-][p#][q#][r#][x#][y#][z#][!newArchiveName]</code></dt>
+<dd> Update options</dd>
+<dt><code>-v{Size}[b|k|m|g]</code></dt>
+<dd> Create volumes</dd>
+<dt><code>-w[path]</code></dt>
+<dd> Set working directory. Empty path means a temporary directory</dd>
+<dt><code>-x[r[-|0]]]{@listfile|!wildcard}</code></dt>
+<dd> Exclude filenames</dd>
+<dt><code>-y</code></dt>
+<dd> Assume Yes on all queries</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> 7-Zip returns the following exit codes:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0</p>
-<dd> Normal (no errors or warnings detected)</p>
-<dt>1</p>
-<dd> Warning (Non fatal error(s)). For example, some files cannot be read during compressing, so they were not compressed</p>
-<dt>2</p>
-<dd> Fatal error</p>
-<dt>7</p>
-<dd> Bad command line parameters</p>
-<dt>8</p>
-<dd> Not enough memory for operation</p>
-<dt>255</p>
-<dd> User stopped the process with control-C (or similar)</dl>
+<dt>0</dt>
+<dd> Normal (no errors or warnings detected)</dd>
+<dt>1</dt>
+<dd> Warning (Non fatal error(s)). For example, some files cannot be read during compressing, so they were not compressed</dd>
+<dt>2</dt>
+<dd> Fatal error</dd>
+<dt>7</dt>
+<dd> Bad command line parameters</dd>
+<dt>8</dt>
+<dd> Not enough memory for operation</dd>
+<dt>255</dt>
+<dd> User stopped the process with control-C (or similar)</dd></dl>
 </dl>
 <h2>Backup and limitations</h2>
 <p> DO NOT USE the 7-zip format for backup purpose on Linux/Unix because :<br />
@@ -159,35 +157,35 @@ description: "7za – A file archiver with high compression ratio format"
 <p> Do not use directory/* because of &quot;.*&quot; files (example : &quot;directory/*&quot; does not match &quot;directory/.profile&quot;)</p>
 <h2>EXAMPLE 1</h2>
 <dl>
-<dt><code>7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1</code></p>
-<dd> adds all files from directory &quot;dir1&quot; to archive archive.7z using &quot;ultra settings&quot;</p>
-<dt><code>-t7z</code></p>
-<dd> 7z archive</p>
-<dt><code>-m0=lzma</code></p>
-<dd> lzma method</p>
-<dt><code>-mx=9</code></p>
-<dd> level of compression = 9 (Ultra)</p>
-<dt><code>-mfb=64</code></p>
-<dd> number of fast bytes for LZMA = 64</p>
-<dt><code>-md=32m</code></p>
-<dd> dictionary size = 32 megabytes</p>
-<dt><code>-ms=on</code></p>
-<dd> solid archive = on</dl>
+<dt><code>7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1</code></dt>
+<dd> adds all files from directory &quot;dir1&quot; to archive archive.7z using &quot;ultra settings&quot;</dd>
+<dt><code>-t7z</code></dt>
+<dd> 7z archive</dd>
+<dt><code>-m0=lzma</code></dt>
+<dd> lzma method</dd>
+<dt><code>-mx=9</code></dt>
+<dd> level of compression = 9 (Ultra)</dd>
+<dt><code>-mfb=64</code></dt>
+<dd> number of fast bytes for LZMA = 64</dd>
+<dt><code>-md=32m</code></dt>
+<dd> dictionary size = 32 megabytes</dd>
+<dt><code>-ms=on</code></dt>
+<dd> solid archive = on</dd></dl>
 <h2>EXAMPLE 2</h2>
 <dl>
-<dt><code>7za a -sfx archive.exe dir1</code></p>
-<dd> add all files from directory &quot;dir1&quot; to SFX archive archive.exe (Remark : SFX archive MUST end with &quot;.exe&quot;)</dl>
+<dt><code>7za a -sfx archive.exe dir1</code></dt>
+<dd> add all files from directory &quot;dir1&quot; to SFX archive archive.exe (Remark : SFX archive MUST end with &quot;.exe&quot;)</dd></dl>
 <h2>EXAMPLE 3</h2>
 <dl>
-<dt><code>7za a -mhe=on -pmy_password archive.7z a_directory</code></p>
-<dd> add all files from directory &quot;a_directory&quot; to the archive &quot;archive.7z&quot; (with data and header archive encryption on)</dl>
+<dt><code>7za a -mhe=on -pmy_password archive.7z a_directory</code></dt>
+<dd> add all files from directory &quot;a_directory&quot; to the archive &quot;archive.7z&quot; (with data and header archive encryption on)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-7zr/">7zr</a></code>(1), <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1), <code><a href="/docs/linux/man/1-p7zip/">p7zip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-zip/">zip</a>(1),</code> </p>
 <h2>HTML Documentation</h2>
 <p> /usr/share/doc/p7zip-full/DOC/MANUAL/start.htm</p>
 <h2>AUTHOR</h2>
 <dl>
-<dt>Written for Debian by Mohammed Adnene Trojette. Updated by Robert Luberda.</p>
+<dt>Written for Debian by Mohammed Adnene Trojette. Updated by Robert Luberda.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

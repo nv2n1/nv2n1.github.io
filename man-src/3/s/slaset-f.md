@@ -20,10 +20,10 @@ description: "slaset.f –"
 <dd>
 <pre> SLASET initializes an m-by-n matrix A to BETA on the diagonal and
  ALPHA on the offdiagonals.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies the part of the matrix A to be set.
  = 'U': Upper triangular part is set; the strictly lower
@@ -56,13 +56,13 @@ description: "slaset.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 111 of file slaset.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

@@ -31,10 +31,10 @@ description: "zla_gbamv.f –"
  &quot;symbolically&quot; zero components are not perturbed. A zero
  entry is considered &quot;symbolic&quot; if all multiplications involved
  in computing that entry have at least one zero multiplicand.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is INTEGER
  On entry, TRANS specifies the operation to be performed as
  follows:
@@ -108,13 +108,13 @@ description: "zla_gbamv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 186 of file zla_gbamv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

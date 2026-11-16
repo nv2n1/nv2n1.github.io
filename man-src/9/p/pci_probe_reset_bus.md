@@ -15,7 +15,7 @@ pci_probe_reset_bus - probe whether a PCI bus can be reset
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>PCI bus to probe</dl>
+<dl><dd></dd><dd>PCI bus to probe</dd></dl>
 
 <h2>Description</h2>
 

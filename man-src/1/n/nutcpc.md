@@ -17,56 +17,56 @@ description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d </code></p>
-<dd> Debug mode, don&#8217;t go into background.</p>
-<dt><code>-l </code></p>
-<dd> Do not verify whether lock file exists before starting. And do not create lock file.</p>
-<dt><code>-k </code></p>
-<dd> Kill existing instances of the program running on our local userID.</p>
-<dt><code>-c </code></p>
-<dd> Check if a client is already running. Return error if no client are running.</p>
-<dt><code>-V </code></p>
-<dd> Issues program version and exits.</p>
-<dt><code>-h </code></p>
-<dd> Issues usage details and exits.</p>
-<dt><code>-q </code></p>
-<dd> Do not display running nutcpc options on &quot;ps&quot;. Useful when using &quot;-W&quot;</p>
-<dt><code>-H </code><i>Nuauth IP</i></p>
-<dd> Send authentication packet to <i>Nuauth IP</i>.</p>
-<dt><code>-p </code><i>Nuauth port</i></p>
-<dd> Send authentication packet to <i>Nuauth port</i>.</p>
-<dt><code>-U </code><i>User ID</i></p>
-<dd> Set nufw userid to <i>User ID</i>.</p>
-<dt><code>-P </code><i>User Password</i></p>
-<dd> Set nufw password to <i>User Password</i>.</p>
-<dt><code>-I </code><i>Interval</i></p>
-<dd> Set connection list refresh interval to <i>Interval</i>. This option is only useful if nuauth server is in POLL mode.</p>
-<dt><code>-Z </code><i>Service</i></p>
-<dd> Set kerberos service name to <i>Service</i>.</p>
-<dt><code>-C </code><i>CertFile</i></p>
-<dd> Use certificate file stored in the file <i>CertFile</i> to negotiate the TLS connection to nuauth.</p>
-<dt><code>-A </code><i>AuthorityFile</i></p>
-<dd> Use authority file stored in <i>AuthorityFile</i> and check the validity of nuauth certificate against this authority. Nutcpc will leave if this is not the case.</p>
-<dt><code>-K </code><i>KeyFile</i></p>
-<dd> Use key file stored in the file <i>KeyFile</i> to negotiate the TLS connection to nuauth.</p>
-<dt><code>-W </code><i>CertPass</i></p>
-<dd> Use the passphrase <i>CertPass</i> to decrypt the certificate. Check the <i>-q</i> option if you use this.</p>
-<dt><code>-R </code><i>CrlFile</i></p>
-<dd> Use certificate revocation list file stored in the file <i>CrlFile</i> to negotiate the TLS connection to nuauth. nutcpc reloads this file if it gets disconnected from nuauth and needs to reconnect. Since version 2.2.19, nutcpc reloads the CRL file when receiving a HUP signal.</p>
-<dt><code>-a </code><i>NuauthDN</i></p>
-<dd> Verify that the certificate given by nuauth has a DN equal to <i>NuauthDN</i>. Nutcpc will leave if this is not the case.</p>
-<dt><code>-Q </code></p>
-<dd> Suppress warning if no certificate authority is configured.</p>
-<dt><code>-N </code></p>
-<dd> Suppress error if server FQDN does not match certificate CN.</dl>
+<dt><code>-d </code></dt>
+<dd> Debug mode, don&#8217;t go into background.</dd>
+<dt><code>-l </code></dt>
+<dd> Do not verify whether lock file exists before starting. And do not create lock file.</dd>
+<dt><code>-k </code></dt>
+<dd> Kill existing instances of the program running on our local userID.</dd>
+<dt><code>-c </code></dt>
+<dd> Check if a client is already running. Return error if no client are running.</dd>
+<dt><code>-V </code></dt>
+<dd> Issues program version and exits.</dd>
+<dt><code>-h </code></dt>
+<dd> Issues usage details and exits.</dd>
+<dt><code>-q </code></dt>
+<dd> Do not display running nutcpc options on &quot;ps&quot;. Useful when using &quot;-W&quot;</dd>
+<dt><code>-H </code><i>Nuauth IP</i></dt>
+<dd> Send authentication packet to <i>Nuauth IP</i>.</dd>
+<dt><code>-p </code><i>Nuauth port</i></dt>
+<dd> Send authentication packet to <i>Nuauth port</i>.</dd>
+<dt><code>-U </code><i>User ID</i></dt>
+<dd> Set nufw userid to <i>User ID</i>.</dd>
+<dt><code>-P </code><i>User Password</i></dt>
+<dd> Set nufw password to <i>User Password</i>.</dd>
+<dt><code>-I </code><i>Interval</i></dt>
+<dd> Set connection list refresh interval to <i>Interval</i>. This option is only useful if nuauth server is in POLL mode.</dd>
+<dt><code>-Z </code><i>Service</i></dt>
+<dd> Set kerberos service name to <i>Service</i>.</dd>
+<dt><code>-C </code><i>CertFile</i></dt>
+<dd> Use certificate file stored in the file <i>CertFile</i> to negotiate the TLS connection to nuauth.</dd>
+<dt><code>-A </code><i>AuthorityFile</i></dt>
+<dd> Use authority file stored in <i>AuthorityFile</i> and check the validity of nuauth certificate against this authority. Nutcpc will leave if this is not the case.</dd>
+<dt><code>-K </code><i>KeyFile</i></dt>
+<dd> Use key file stored in the file <i>KeyFile</i> to negotiate the TLS connection to nuauth.</dd>
+<dt><code>-W </code><i>CertPass</i></dt>
+<dd> Use the passphrase <i>CertPass</i> to decrypt the certificate. Check the <i>-q</i> option if you use this.</dd>
+<dt><code>-R </code><i>CrlFile</i></dt>
+<dd> Use certificate revocation list file stored in the file <i>CrlFile</i> to negotiate the TLS connection to nuauth. nutcpc reloads this file if it gets disconnected from nuauth and needs to reconnect. Since version 2.2.19, nutcpc reloads the CRL file when receiving a HUP signal.</dd>
+<dt><code>-a </code><i>NuauthDN</i></dt>
+<dd> Verify that the certificate given by nuauth has a DN equal to <i>NuauthDN</i>. Nutcpc will leave if this is not the case.</dd>
+<dt><code>-Q </code></dt>
+<dd> Suppress warning if no certificate authority is configured.</dd>
+<dt><code>-N </code></dt>
+<dd> Suppress error if server FQDN does not match certificate CN.</dd></dl>
 <h2>LOCK FILE</h2>
 <p> By default, the lock file set by nutcpc is at ~/.nufw/nutcpc.</p>
 <h2>CERTIFICATE AUTHENTICATION</h2>
 <p> User authentication can be done using a certificate and a private key. Such a method will be used, if nutcpc can find a certificate at ~/.nufw/cert.pem and the corresponding private key at ~/.nufw/key.pem. The server identity will be checked if a CA certificate is provided in ~/.nufw/cacert.pem. Certificates and key can also be provided on command line or via nuclient.conf(5).</p>
 <h2>SIGNALS</h2>
 <dl>
-<dt><code>HUP </code></p>
-<dd> When receiving this signal, nutcpc attempts to immediately reconnect to the server, if disconnected. The signal is ignored in other cases.</dl>
+<dt><code>HUP </code></dt>
+<dd> When receiving this signal, nutcpc attempts to immediately reconnect to the server, if disconnected. The signal is ignored in other cases.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-nufw/">nufw</a>(8) </p>
 <p> <a href="/docs/linux/man/8-nuauth/">nuauth</a>(8) </p>

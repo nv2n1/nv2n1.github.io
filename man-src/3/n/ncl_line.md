@@ -13,13 +13,13 @@ LINE - draws a line from the point (X1,Y1) to the point (X2,Y2). The &quot;pen&q
 
  void c_line (float x1, float y1, float x2, float y2)
 <h2>Description</h2><dl COMPACT><dt>X1
-<dd>(an input expression of type REAL) defines the X user coordinate of the starting point of a line segment.
-<dt>Y1
-<dd>(an input expression of type REAL) defines the Y user coordinate of the starting point of a line segment.
-<dt>X2
-<dd>(an input expression of type REAL) defines the X user coordinate of the ending point of a line segment.
-<dt>Y2
-<dd>(an input expression of type REAL) defines the Y user coordinate of the ending point of a line segment.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) defines the X user coordinate of the starting point of a line segment.
+</dd><dt>Y1
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate of the starting point of a line segment.
+</dd><dt>X2
+</dt><dd>(an input expression of type REAL) defines the X user coordinate of the ending point of a line segment.
+</dd><dt>Y2
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate of the ending point of a line segment.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Polyline type, line width, and color can be set by calling the GKS routines GSLN, GSLWSC, GSCR, and GSPLCI before calling LINE. 
 
  This routine flushes the SPPS polyline buffer at each line draw. Thus, polyline attributes can be safely changed between successive calls.

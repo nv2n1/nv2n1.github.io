@@ -14,20 +14,20 @@ description: "gnutls_srtp_get_keys – API function"
 <p> <code>int gnutls_srtp_get_keys(gnutls_session_t </code><i>session</i><code>, void * </code><i>key_material</i><code>, unsigned int </code><i>key_material_size</i><code>, gnutls_datum_t * </code><i>client_key</i><code>, gnutls_datum_t * </code><i>client_salt</i><code>, gnutls_datum_t * </code><i>server_key</i><code>, gnutls_datum_t * </code><i>server_salt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>void * key_material</p>
-<dd> Space to hold the generated key material</p>
-<dt>unsigned int key_material_size</p>
-<dd> The maximum size of the key material</p>
-<dt>gnutls_datum_t * client_key</p>
-<dd> The master client write key, pointing inside the key material</p>
-<dt>gnutls_datum_t * client_salt</p>
-<dd> The master client write salt, pointing inside the key material</p>
-<dt>gnutls_datum_t * server_key</p>
-<dd> The master server write key, pointing inside the key material</p>
-<dt>gnutls_datum_t * server_salt</p>
-<dd> The master server write salt, pointing inside the key material</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>void * key_material</dt>
+<dd> Space to hold the generated key material</dd>
+<dt>unsigned int key_material_size</dt>
+<dd> The maximum size of the key material</dd>
+<dt>gnutls_datum_t * client_key</dt>
+<dd> The master client write key, pointing inside the key material</dd>
+<dt>gnutls_datum_t * client_salt</dt>
+<dd> The master client write salt, pointing inside the key material</dd>
+<dt>gnutls_datum_t * server_key</dt>
+<dd> The master server write key, pointing inside the key material</dd>
+<dt>gnutls_datum_t * server_salt</dt>
+<dd> The master server write salt, pointing inside the key material</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a helper function to generate the keying material for SRTP. It requires the space of the key material to be pre-allocated (should be at least 2x the maximum key size and salt size). The <i>client_key</i> , <i>client_salt</i> , <i>server_key</i> and <i>server_salt</i> are convenience datums that point inside the key material. They may be <code>NULL</code>.</p>
 <h2>RETURNS</h2>
@@ -42,6 +42,6 @@ description: "gnutls_srtp_get_keys – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

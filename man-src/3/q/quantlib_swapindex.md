@@ -35,6 +35,6 @@ description: "QuantLib::SwapIndex – base class for swap-rate indexes"
 <h3>boost::shared_ptr&lt;<code>VanillaSwap</code>&gt; underlyingSwap (const <code>Date</code> &amp; fixingDate) const</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>Relinking the term structure underlying the index will not have effect on the returned swap.</dl>
+<dd>Relinking the term structure underlying the index will not have effect on the returned swap.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

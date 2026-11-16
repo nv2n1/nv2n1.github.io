@@ -101,17 +101,17 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <h3><code>pANTLR3_BITSET</code>(* <code>ANTLR3_BASE_RECOGNIZER_struct::combineFollows</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_BOOLEAN</code> exact)</h3>
 <p>Pointer to a function to combine follow bitsets. <code>See also:</code></p>
 <dl COMPACT>
-<dd>antlr3CombineFollows() for details.</dl>
+<dd>antlr3CombineFollows() for details.</dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew(), computeCSRuleFollow(), and computeErrorRecoverySet().</p>
 <h3><code>pANTLR3_BITSET</code>(* <code>ANTLR3_BASE_RECOGNIZER_struct::computeCSRuleFollow</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)</h3>
 <p>Pointer to a function that computes the context-sensitive FOLLOW set for the current rule. <code>See also:</code></p>
 <dl COMPACT>
-<dd>antlr3ComputeCSRuleFollow() for details.</dl>
+<dd>antlr3ComputeCSRuleFollow() for details.</dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew(), mismatchIsMissingToken(), and recoverFromMismatchedElement().</p>
 <h3><code>pANTLR3_BITSET</code>(* <code>ANTLR3_BASE_RECOGNIZER_struct::computeErrorRecoverySet</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)</h3>
 <p>Pointer to a function to computer the error recovery set for the current rule. <code>See also:</code></p>
 <dl COMPACT>
-<dd>antlr3ComputeErrorRecoverySet() for details.</dl>
+<dd>antlr3ComputeErrorRecoverySet() for details.</dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew(), and recover().</p>
 <h3>void(* <code>ANTLR3_BASE_RECOGNIZER_struct::consumeUntil</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> tokenType)</h3>
 <p>Pointer to function that consumes input until the next token matches the given token. </p>
@@ -149,13 +149,13 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <p>Get number of recognition errors (lexer, parser, tree parser). Each recognizer tracks its own number. So parser and lexer each have separate count. Does not count the spurious errors found between an error and next valid token match </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>reportError()</code></dl>
+<dd><code>reportError()</code></dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew().</p>
 <h3><code>pANTLR3_STACK</code>(* <code>ANTLR3_BASE_RECOGNIZER_struct::getRuleInvocationStack</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)</h3>
 <p>Pointer to function that returns an ANTLR3_LIST of the strings that identify the rules in the parser that got you to this point. Can be overridden by installing your own function set. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Document how to override invocation stack functions.</dl>
+<dd>Document how to override invocation stack functions.</dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew().</p>
 <h3><code>pANTLR3_STACK</code>(* <code>ANTLR3_BASE_RECOGNIZER_struct::getRuleInvocationStackNamed</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_UINT8</code> name)</h3>
 <p>Referenced by antlr3BaseRecognizerNew().</p>
@@ -192,7 +192,7 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <h3>void*(* <code>ANTLR3_BASE_RECOGNIZER_struct::recoverFromMismatchedToken</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)</h3>
 <p>Pointer to a function that recovers from a mismatched token in the input stream. <code>See also:</code></p>
 <dl COMPACT>
-<dd>antlr3RecoverMismatch() for details.</dl>
+<dd>antlr3RecoverMismatch() for details.</dd></dl>
 <p> Referenced by antlr3BaseRecognizerNew(), match(), and mismatch().</p>
 <h3>void(* <code>ANTLR3_BASE_RECOGNIZER_struct::reportError</code>)(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)</h3>
 <p>Pointer to a function to call to report a recognition problem. You may override this function with your own function, but refer to the standard implementation in <code>antlr3baserecognizer.c</code> for guidance. The function should recognize whether error recovery is in force, so that it does not print out more than one error messages for the same error. From the java comments in BaseRecognizer.java: </p>
@@ -218,12 +218,12 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <p>Indicates the type of recognizer that we are an instance of. The programmer may set this to anything of course, but the default implementations of the interface only really understand the built in types, so new error handlers etc would probably be required to as well. </p>
 <p> Valid types are: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd><code>ANTLR3_TYPE_LEXER</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_TYPE_PARSER</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_TYPE_TREE_PARSER</code></dl>
+<dt>*</dt>
+<dd><code>ANTLR3_TYPE_LEXER</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_TYPE_PARSER</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_TYPE_TREE_PARSER</code></dd></dl>
 <p> Referenced by alreadyParsedRule(), antlr3BaseRecognizerNew(), antlr3RecognitionExceptionNew(), antlr3TreeParserNewStream(), consumeUntil(), consumeUntilSet(), displayRecognitionError(), match(), matchAny(), memoize(), mismatch(), recover(), recoverFromMismatchedElement(), recoverFromMismatchedSet(), recoverFromMismatchedToken(), and synpred(). </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>

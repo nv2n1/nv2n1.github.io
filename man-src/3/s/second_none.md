@@ -21,16 +21,16 @@ description: "second_NONE.f –"
  If you are using that routine, it means that neither EXTERNAL ETIME,
  EXTERNAL ETIME_, INTERNAL ETIME, INTERNAL CPU_TIME is available on
  your machine.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 38 of file second_NONE.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

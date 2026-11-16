@@ -44,13 +44,7 @@ description: "fread, fwrite – binary stream input/output"
 <pre><code>$ ./a.out
 ELF magic: 0x7f454c46
 Class: 0x02
-
-
-
 Program source
-
-
-
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))

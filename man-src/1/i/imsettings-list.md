@@ -14,10 +14,10 @@ description: "imsettings-list – Display Input Methods list"
 <h2>DESCRIPTION</h2>
 <p> <code>imsettings-list</code> displays Input Method list which is currently managed under imsettings. the following symbols may appears at the beginning of name to indicate the status</p>
 <dl>
-<dt>*</p>
-<dd> Input Method is running.</p>
-<dt>&#8211;</p>
-<dd> Input Method is supposed to be active but not running.</dl>
+<dt>*</dt>
+<dd> Input Method is running.</dd>
+<dt>&#8211;</dt>
+<dd> Input Method is supposed to be active but not running.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-imsettings-switch/">imsettings-switch</a></code>(1) <code><a href="/docs/linux/man/1-imsettings-reload/">imsettings-reload</a></code>(1)</p>
 <h2>AUTHOR</h2>

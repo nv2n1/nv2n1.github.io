@@ -24,34 +24,34 @@ long keyctl_search(key_serial_t keyring, const char *type,
 <p> If the search is successful, and if the destination keyring already contains a link to a key that matches the specified <i>type</i> and <i>description</i>, then that link will be replaced by a link to the found key. </p>
 <p> The source keyring and destination keyring serial numbers may be those of valid keyrings to which the caller has appropriate permission, or they may be special keyring IDs:</p>
 <dl>
-<dt><code>KEY_SPEC_THREAD_KEYRING</code></p>
-<dd> This specifies the caller&#8217;s thread-specific keyring.</p>
-<dt><code>KEY_SPEC_PROCESS_KEYRING</code></p>
-<dd> This specifies the caller&#8217;s process-specific keyring.</p>
-<dt><code>KEY_SPEC_SESSION_KEYRING</code></p>
-<dd> This specifies the caller&#8217;s session-specific keyring.</p>
-<dt><code>KEY_SPEC_USER_KEYRING</code></p>
-<dd> This specifies the caller&#8217;s UID-specific keyring.</p>
-<dt><code>KEY_SPEC_USER_SESSION_KEYRING</code></p>
-<dd> This specifies the caller&#8217;s UID-session keyring.</dl>
+<dt><code>KEY_SPEC_THREAD_KEYRING</code></dt>
+<dd> This specifies the caller&#8217;s thread-specific keyring.</dd>
+<dt><code>KEY_SPEC_PROCESS_KEYRING</code></dt>
+<dd> This specifies the caller&#8217;s process-specific keyring.</dd>
+<dt><code>KEY_SPEC_SESSION_KEYRING</code></dt>
+<dd> This specifies the caller&#8217;s session-specific keyring.</dd>
+<dt><code>KEY_SPEC_USER_KEYRING</code></dt>
+<dd> This specifies the caller&#8217;s UID-specific keyring.</dd>
+<dt><code>KEY_SPEC_USER_SESSION_KEYRING</code></dt>
+<dd> This specifies the caller&#8217;s UID-session keyring.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success <code>keyctl_search</code>() returns the serial number of the key it found. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> One of the keyrings doesn&#8217;t exist, no key was found by the search, or the only key found by the search was a negative key.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> One of the keyrings is a valid key that isn&#8217;t a keyring.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> One of the keyrings has expired, or the only key found was expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> One of the keyrings has been revoked, or the only key found was revoked.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to expand the destination keyring.</p>
-<dt><code>EDQUOT</code></p>
-<dd> The key quota for this user would be exceeded by creating a link to the found key in the destination keyring.</p>
-<dt><code>EACCES</code></p>
-<dd> The source keyring didn&#8217;t grant <code>search</code> permission, the destination keyring didn&#8217;t grant <code>write</code> permission or the found key didn&#8217;t grant <code>link</code> permission to the caller.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> One of the keyrings doesn&#8217;t exist, no key was found by the search, or the only key found by the search was a negative key.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> One of the keyrings is a valid key that isn&#8217;t a keyring.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> One of the keyrings has expired, or the only key found was expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> One of the keyrings has been revoked, or the only key found was revoked.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to expand the destination keyring.</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The key quota for this user would be exceeded by creating a link to the found key in the destination keyring.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The source keyring didn&#8217;t grant <code>search</code> permission, the destination keyring didn&#8217;t grant <code>write</code> permission or the found key didn&#8217;t grant <code>link</code> permission to the caller.</dd></dl>
 <h2>LINKING</h2>
 <p> Although this is a Linux system call, it is not present in <i>libc</i> but can be found rather in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

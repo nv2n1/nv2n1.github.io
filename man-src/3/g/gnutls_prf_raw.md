@@ -14,20 +14,20 @@ description: "gnutls_prf_raw – API function"
 <p> <code>int gnutls_prf_raw(gnutls_session_t </code><i>session</i><code>, size_t </code><i>label_size</i><code>, const char * </code><i>label</i><code>, size_t </code><i>seed_size</i><code>, const char * </code><i>seed</i><code>, size_t </code><i>outsize</i><code>, char * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t label_size</p>
-<dd> length of the <i>label</i> variable.</p>
-<dt>const char * label</p>
-<dd> label used in PRF computation, typically a short string.</p>
-<dt>size_t seed_size</p>
-<dd> length of the <i>seed</i> variable.</p>
-<dt>const char * seed</p>
-<dd> optional extra data to seed the PRF with.</p>
-<dt>size_t outsize</p>
-<dd> size of pre-allocated output buffer to hold the output.</p>
-<dt>char * out</p>
-<dd> pre-allocated buffer to hold the generated data.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t label_size</dt>
+<dd> length of the <i>label</i> variable.</dd>
+<dt>const char * label</dt>
+<dd> label used in PRF computation, typically a short string.</dd>
+<dt>size_t seed_size</dt>
+<dd> length of the <i>seed</i> variable.</dd>
+<dt>const char * seed</dt>
+<dd> optional extra data to seed the PRF with.</dd>
+<dt>size_t outsize</dt>
+<dd> size of pre-allocated output buffer to hold the output.</dd>
+<dt>char * out</dt>
+<dd> pre-allocated buffer to hold the generated data.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Apply the TLS Pseudo-Random-Function (PRF) on the master secret and the provided data. </p>
 <p> The <i>label</i> variable usually contains a string denoting the purpose for the generated data. The <i>seed</i> usually contains data such as the client and server random, perhaps together with some additional data that is added to guarantee uniqueness of the output for a particular purpose. </p>
@@ -43,6 +43,6 @@ description: "gnutls_prf_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

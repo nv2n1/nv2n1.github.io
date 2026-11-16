@@ -32,53 +32,50 @@ url: "/docs/linux/man/1-nvme-resv-register/"
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Override the nsid field. If using the admin character device, this parameter is required.</dl>
+</dt><dd> Override the nsid field. If using the admin character device, this parameter is required.</dd></dl>
  
 
  -c &lt;crkey&gt;, --crkey=&lt;crkey&gt;
 <dl>
 <dt>
-<dd> Current Reservation Key: If the Reservation Register Action is 001b (i.e., Unregister Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the current reservation key associated with the host. For all other Reservation Register Action values, this field is reserved. The controller ignores the value of this field when the Ignore Existing Key (IEKEY) bit is set to '1'.</dl>
+</dt><dd> Current Reservation Key: If the Reservation Register Action is 001b (i.e., Unregister Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the current reservation key associated with the host. For all other Reservation Register Action values, this field is reserved. The controller ignores the value of this field when the Ignore Existing Key (IEKEY) bit is set to '1'.</dd></dl>
  
 
  -k &lt;nrkey&gt;, --nrkey=&lt;nrkey&gt;
 <dl>
 <dt>
-<dd> New Reservation Key: If the Reservation Register Action is 000b (i.e., Register Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the new reservation key associated with the host. For all other Reservation Register Action values, this field is reserved.</dl>
+</dt><dd> New Reservation Key: If the Reservation Register Action is 000b (i.e., Register Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the new reservation key associated with the host. For all other Reservation Register Action values, this field is reserved.</dd></dl>
  
 
  -p &lt;cptpl&gt;, --cptpl=&lt;cptpl&gt;
 <dl>
 <dt>
-<dd> Change Persist Through Power Loss State: This field allows the Persist Through Power Loss state associated with the namespace to be modified as a side effect of processing this command. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
+</dt><dd> Change Persist Through Power Loss State: This field allows the Persist Through Power Loss state associated with the namespace to be modified as a side effect of processing this command. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> No change to PTPL state 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> Reserved 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> Set PTPL state to '0'. Reservations are released and registrants are cleared on a power on. 
 </td></tr> <tr VALIGN=top><td> 3 </td><td> Set PTPL state to '1'. Reservations and registrants persist across a power loss. 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -a &lt;rrega&gt;, --rrega=&lt;rrega&gt;
 <dl>
 <dt>
-<dd> Reservation Register Action: This field specifies the registration action that is performed by the command. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
+</dt><dd> Reservation Register Action: This field specifies the registration action that is performed by the command. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> Register Reservation Key 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> Unregister Reservation Key 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> Replace Reservation Key 
 </td></tr> <tr VALIGN=top><td> 3-7 </td><td> Reserved 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -i, --iekey
 <dl>
 <dt>
-<dd> Ignore Existing Key: If this bit is set to a <i>1</i>, then the Current Reservation Key (CRKEY) check is disabled and the command shall succeed regardless of the CRKEY field value. 
-
- Indicator option, defaults to <i>0</i>.</dl>
+</dt><dd> Ignore Existing Key: If this bit is set to a <i>1</i>, then the Current Reservation Key (CRKEY) check is disabled and the command shall succeed regardless of the CRKEY field value. 
+ Indicator option, defaults to <i>0</i>.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

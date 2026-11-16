@@ -55,11 +55,11 @@ url: "/docs/linux/man/1-perl5163delta/"
 
 <dl>
 <dt>&bull;
-<dd> Encode has been upgraded from version 2.44 to version 2.44_01.
-<dt>&bull;
-<dd> Module::CoreList has been upgraded from version 2.76 to version 2.76_02.
-<dt>&bull;
-<dd> XS::APItest has been upgraded from version 0.38 to version 0.39.</dl>
+</dt><dd> Encode has been upgraded from version 2.44 to version 2.44_01.
+</dd><dt>&bull;
+</dt><dd> Module::CoreList has been upgraded from version 2.76 to version 2.76_02.
+</dd><dt>&bull;
+</dt><dd> XS::APItest has been upgraded from version 0.38 to version 0.39.</dd></dl>
 
 <h2>Known Problems</h2>
 
@@ -100,18 +100,18 @@ url: "/docs/linux/man/1-perl5163delta/"
 
 
 <dt><a HREF="#lbAI">Incompatible Changes</a>
-<dd>
-<dt><a HREF="#lbAJ">Deprecations</a>
-<dd>
-<dt><a HREF="#lbAK">Modules and Pragmata</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">Deprecations</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">Modules and Pragmata</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAM">Known Problems</a>
-<dd>
-<dt><a HREF="#lbAN">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAO">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAP">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAM">Known Problems</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAP">SEE ALSO</a>
+</dt><dd></dd></dl>

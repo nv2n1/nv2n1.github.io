@@ -17,57 +17,57 @@ description: "acpidump – ACPI table dump utility"
 <p> Invocation of <code>acpidump</code> without parameters will dump all available ACPI tables. Multiple mixed instances of the <code>-a</code> , <code>-f</code> , and <code>-n</code> parameters can be used. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Dump tables in binary format (versus the default human-readable form). </p>
+<dt><code>-b</code></dt>
+<dd> Dump tables in binary format (versus the default human-readable form). </dd>
 </dl>
 <dl>
-<dt><code>-h | -?</code></p>
-<dd> Display this help message. </p>
+<dt><code>-h | -?</code></dt>
+<dd> Display this help message. </dd>
 </dl>
 <dl>
-<dt><code>-o &lt;file&gt;</code></p>
-<dd> Redirect output to a file. This file can be used later by <code>acpixtract</code> to examine the contents of the ACPI tables. </p>
+<dt><code>-o &lt;file&gt;</code></dt>
+<dd> Redirect output to a file. This file can be used later by <code>acpixtract</code> to examine the contents of the ACPI tables. </dd>
 </dl>
 <dl>
-<dt><code>-r &lt;address&gt;</code></p>
-<dd> Dump tables from specified RSDP. </p>
+<dt><code>-r &lt;address&gt;</code></dt>
+<dd> Dump tables from specified RSDP. </dd>
 </dl>
 <dl>
-<dt><code>-s</code></p>
-<dd> Print table summaries only. </p>
+<dt><code>-s</code></dt>
+<dd> Print table summaries only. </dd>
 </dl>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print the version of this utility. </p>
+<dt><code>-v</code></dt>
+<dd> Print the version of this utility. </dd>
 </dl>
 <dl>
-<dt><code>-z</code></p>
-<dd> Verbose mode. </p>
+<dt><code>-z</code></dt>
+<dd> Verbose mode. </dd>
 </dl>
 <h2>TABLE OPTIONS</h2>
 <dl>
-<dt><code>-a &lt;address&gt;</code></p>
-<dd> Get a table from a physical address (must be superuser and you must be careful which address you use &#8212; dmesg will typically report the addresses for the various tables). </p>
+<dt><code>-a &lt;address&gt;</code></dt>
+<dd> Get a table from a physical address (must be superuser and you must be careful which address you use &#8212; dmesg will typically report the addresses for the various tables). </dd>
 </dl>
 <dl>
-<dt><code>-c &lt;on|off&gt;</code></p>
-<dd> Turn on/off customized table dumping. If turned on, tables are dumped from /sys/firmware/acpi/tables. If turned off, tables are dumped from /dev/mem. The default is on. </p>
+<dt><code>-c &lt;on|off&gt;</code></dt>
+<dd> Turn on/off customized table dumping. If turned on, tables are dumped from /sys/firmware/acpi/tables. If turned off, tables are dumped from /dev/mem. The default is on. </dd>
 </dl>
 <dl>
-<dt><code>-f &lt;binary-file&gt;</code></p>
-<dd> Get a table from a binary file (see the <code>-b</code> option). </p>
+<dt><code>-f &lt;binary-file&gt;</code></dt>
+<dd> Get a table from a binary file (see the <code>-b</code> option). </dd>
 </dl>
 <dl>
-<dt><code>-n &lt;signature&gt;</code></p>
-<dd> Get a table via it&#8217;s name or signature (e.g., MADT or SSDT). </p>
+<dt><code>-n &lt;signature&gt;</code></dt>
+<dd> Get a table via it&#8217;s name or signature (e.g., MADT or SSDT). </dd>
 </dl>
 <dl>
-<dt><code>-x</code></p>
-<dd> Do not use but dump XSDT. </p>
+<dt><code>-x</code></dt>
+<dd> Do not use but dump XSDT. </dd>
 </dl>
 <dl>
-<dt><code>-x -x</code></p>
-<dd> Do not use or dump XSDT. </p>
+<dt><code>-x -x</code></dt>
+<dd> Do not use or dump XSDT. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>acpixtract(1)</code> </p>

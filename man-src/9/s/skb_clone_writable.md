@@ -15,11 +15,11 @@ skb_clone_writable - is the header of a clone writable
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to check</dl>
+<dl><dd></dd><dd>buffer to check</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length up to which to write</dl>
+<dl><dd>length up to which to write</dd></dl>
 
 <h2>Description</h2>
 

@@ -43,32 +43,32 @@ description: "yuvkineco – revert 2-3 pulldown movie"
 <h2>OPTIONS</h2>
 <p> <code>yuvkineco</code> accepts the following options:</p>
 <dl>
-<dt><code>-F</code><i>&nbsp;<wbr>FPSCODE</i></p>
-<dd> Set output fps code (default: same as input).</p>
-<dt><code>-C</code><i>&nbsp;<wbr>PATH</i></p>
-<dd> Specify 2-3 pull down cycle list file name to write.</p>
-<dt><code>-O</code><i>&nbsp;<wbr>PATH</i></p>
-<dd> Specify cycle list name to read with old yuv stream to retry.</p>
-<dt><code>-N</code><i>&nbsp;<wbr>PATH</i></p>
-<dd> Specify cycle list name to read with new yuv stream to repair.</p>
-<dt><code>-S</code><i>&nbsp;<wbr>MIN</i></p>
-<dd> Use <code><a href="/docs/linux/man/1-yuvycsnoise/">yuvycsnoise</a></code>(1) as preprocessor and specify minimum threshold.</p>
-<dt><code>-n</code><i>&nbsp;<wbr>LEVEL</i></p>
-<dd> Specify noise level of input (default: 10). This affects both pulldown cycle detection and deinterlacing.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>THRESHOLD</i></p>
-<dd> Specify threshold to decide pictures in 2 frames are same (default: 4). <code>yuvkineco</code> compares several frames, searches pair of frame they contain same pictures, to decide which frame should be dropped. If <i>THRESHOLD</i> is 0, pair which has smallest difference will be selected. If 16, selected from pairs those have differences smaller than average.</p>
-<dt><code>-i</code><i>&nbsp;<wbr>PERMIL</i></p>
-<dd> <code>yuvkineco</code> deinterlaces each frame after 2-3 pulldown reverting process, specify how much pixels deinterlaced to decide to use or not use deinterlacing result (default: 10). If <i>PERMIL</i> is 10 and 1% or more of pixels deinterlaced, deinterlacing result will be used. If 0, always deinterlacing result will be used. If 1000, deinterlacing result will not be used, but deinterlacing process will run on all of frames. To disable deinterlacing process, specify negative value.</p>
-<dt><code>-u</code></p>
-<dd> Set interlace information in header of output to unknown (default: non-interlaced). </p>
+<dt><code>-F</code><i>&nbsp;<wbr>FPSCODE</i></dt>
+<dd> Set output fps code (default: same as input).</dd>
+<dt><code>-C</code><i>&nbsp;<wbr>PATH</i></dt>
+<dd> Specify 2-3 pull down cycle list file name to write.</dd>
+<dt><code>-O</code><i>&nbsp;<wbr>PATH</i></dt>
+<dd> Specify cycle list name to read with old yuv stream to retry.</dd>
+<dt><code>-N</code><i>&nbsp;<wbr>PATH</i></dt>
+<dd> Specify cycle list name to read with new yuv stream to repair.</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>MIN</i></dt>
+<dd> Use <code><a href="/docs/linux/man/1-yuvycsnoise/">yuvycsnoise</a></code>(1) as preprocessor and specify minimum threshold.</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>LEVEL</i></dt>
+<dd> Specify noise level of input (default: 10). This affects both pulldown cycle detection and deinterlacing.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>THRESHOLD</i></dt>
+<dd> Specify threshold to decide pictures in 2 frames are same (default: 4). <code>yuvkineco</code> compares several frames, searches pair of frame they contain same pictures, to decide which frame should be dropped. If <i>THRESHOLD</i> is 0, pair which has smallest difference will be selected. If 16, selected from pairs those have differences smaller than average.</dd>
+<dt><code>-i</code><i>&nbsp;<wbr>PERMIL</i></dt>
+<dd> <code>yuvkineco</code> deinterlaces each frame after 2-3 pulldown reverting process, specify how much pixels deinterlaced to decide to use or not use deinterlacing result (default: 10). If <i>PERMIL</i> is 10 and 1% or more of pixels deinterlaced, deinterlacing result will be used. If 0, always deinterlacing result will be used. If 1000, deinterlacing result will not be used, but deinterlacing process will run on all of frames. To disable deinterlacing process, specify negative value.</dd>
+<dt><code>-u</code></dt>
+<dd> Set interlace information in header of output to unknown (default: non-interlaced). </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>yuvkineco</code> was written by Kawamata/Hitoshi.<br />
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-yuvycsnoise/">yuvycsnoise</a></code>(1). </p>

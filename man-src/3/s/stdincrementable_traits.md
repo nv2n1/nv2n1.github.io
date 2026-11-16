@@ -11,47 +11,33 @@ std::incrementable_traits - std::incrementable_traits
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class I&gt;
     (1)(since C++ 20)
-
         struct incrementable_traits {
 };
-
 template &lt;class T&gt;
-
 requires std::is_object_v&lt;T&gt;(2)
 (since C++ 20)
-
     struct incrementable_traits&lt;T *&gt;;
-
 template &lt;class T&gt;
 (3)(since C++ 20)
-
     struct incrementable_traits&lt;const T&gt; : incrementable_traits&lt;T&gt; {
 };
-
 template &lt;class T&gt;
-
 requires requires
 {
     typename T::difference_type;
 }
 (4)(since C++ 20)
-
     struct incrementable_traits&lt;T&gt;;
-
 template &lt;class T&gt;
-
 requires(!requires { typename T::difference_type; }) &amp;&amp; (5)(since C++ 20)
-
                                                             requires(const T &amp;a, const T &amp;b)
 {
     {
         a - b
         } -&gt; Integral;
 }
-
 struct incrementable_traits&lt;T&gt;;</code></pre> 
 Computes the associated difference type of the type I, if any. Users may specialize incrementable_traits for a program-defined type. 
 1) Primary template is an empty struct. 

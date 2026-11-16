@@ -15,11 +15,11 @@ idr_remove - remove the given id and free its slot
 <h2>Arguments</h2>
 
 <i>idp</i>
-<dl><dd><dd>idr handle</dl>
+<dl><dd></dd><dd>idr handle</dd></dl>
  
 
  <i>id</i>
-<dl><dd>unique key</dl>
+<dl><dd>unique key</dd></dl>
 
 <h2>Copyright</h2>
 

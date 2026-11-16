@@ -19,18 +19,18 @@ description: "SDL_CD – CDROM Drive Information"
 } SDL_CD;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>id</code></p>
-<dd>Private drive identifier</p>
-<dt><code>status</code></p>
-<dd>Drive <i>status</i></p>
-<dt><code>numtracks</code></p>
-<dd>Number of tracks on the CD</p>
-<dt><code>cur_track</code></p>
-<dd>Current track</p>
-<dt><code>cur_frame</code></p>
-<dd>Current frame offset within the track</p>
-<dt><code>track</code>[SDL_MAX_TRACKS+1]</p>
-<dd>Array of track descriptions. (see <i></i><code>SDL_CDtrack</code>)</dl>
+<dt><code>id</code></dt>
+<dd>Private drive identifier</dd>
+<dt><code>status</code></dt>
+<dd>Drive <i>status</i></dd>
+<dt><code>numtracks</code></dt>
+<dd>Number of tracks on the CD</dd>
+<dt><code>cur_track</code></dt>
+<dd>Current track</dd>
+<dt><code>cur_frame</code></dt>
+<dd>Current frame offset within the track</dd>
+<dt><code>track</code>[SDL_MAX_TRACKS+1]</dt>
+<dd>Array of track descriptions. (see <i></i><code>SDL_CDtrack</code>)</dd></dl>
 <h2>Description</h2>
 <p>An <code>SDL_CD</code> structure is returned by <i></i><code>SDL_CDOpen</code>. It represents an opened CDROM device and stores information on the layout of the tracks on the disc. </p>
 <p> A frame is the base data unit of a CD. <code>CD_FPS</code> frames is equal to 1 second of music. SDL provides two macros for converting between time and frames: <code>FRAMES_TO_MSF(f, M,S,F)</code> and <code>MSF_TO_FRAMES</code>.</p>

@@ -22,14 +22,14 @@ description: "aio_fsync – asynchronous file synchronization"
 <p> On success (the sync request was successfully queued) this function returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Out of resources.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>aio_fildes</i> is not a valid file descriptor open for writing.</p>
-<dt><code>EINVAL</code></p>
-<dd> Synchronized I/O is not supported for this file, or <i>op</i> is not <code>O_SYNC</code> or <code>O_DSYNC</code>.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_fsync</code>() is not implemented.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Out of resources.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>aio_fildes</i> is not a valid file descriptor open for writing.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Synchronized I/O is not supported for this file, or <i>op</i> is not <code>O_SYNC</code> or <code>O_DSYNC</code>.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_fsync</code>() is not implemented.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_fsync</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

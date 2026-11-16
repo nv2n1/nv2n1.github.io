@@ -10,33 +10,33 @@ description: "ocf_heartbeat_ManageVE – Manages an OpenVZ Virtual Environment (
 <p>ocf_heartbeat_ManageVE &#8211; Manages an OpenVZ Virtual Environment (VE)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ManageVE</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>ManageVE</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This OCF complaint resource agent manages OpenVZ VEs and thus requires a proper OpenVZ installation including a recent vzctl util.</p>
+<dd>This OCF complaint resource agent manages OpenVZ VEs and thus requires a proper OpenVZ installation including a recent vzctl util.</dd>
 <h2>Supported Parameters</h2>
 <p><code>veid</code></p>
 <dl>
-<dd>OpenVZ ID of virtual environment (see output of vzlist -a for all assigned IDs) (required, integer, no default)</dl>
+<dd>OpenVZ ID of virtual environment (see output of vzlist -a for all assigned IDs) (required, integer, no default)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 75.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 75.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 75.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 75.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 10. Suggested interval: 10.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 10. Suggested interval: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 10. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 10. Suggested interval: 10.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a ManageVE resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_ManageVE ocf:heartbeat:ManageVE \

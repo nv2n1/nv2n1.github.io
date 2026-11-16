@@ -15,23 +15,23 @@ snd_ac97_bus - create an AC97 bus component
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>num</i>
-<dl><dd>the bus number</dl>
+<dl><dd>the bus number</dd></dl>
  
 
  <i>ops</i>
-<dl><dd>the bus callbacks table</dl>
+<dl><dd>the bus callbacks table</dd></dl>
  
 
  <i>private_data</i>
-<dl><dd>private data pointer for the new instance</dl>
+<dl><dd>private data pointer for the new instance</dd></dl>
  
 
  <i>rbus</i>
-<dl><dd>the pointer to store the new AC97 bus instance.</dl>
+<dl><dd>the pointer to store the new AC97 bus instance.</dd></dl>
 
 <h2>Description</h2>
 

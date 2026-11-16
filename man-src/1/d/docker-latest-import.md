@@ -25,62 +25,62 @@ Set commit message for imported image </p>
 <h2>Import from a remote location</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker import <a rel="nofollow" href="http://example.com/exampleimage.tgz">http://example.com/exampleimage.tgz</a> example/imagerepo
 </pre>
-</dl>
+</dd></dl>
 <h2>Import from a local file</h2>
 <p> Import to docker via pipe and stdin: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # cat exampleimage.tgz | docker import - example/imagelocal
 </pre>
-</dl>
+</dd></dl>
 <p> Import with a commit message. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # cat exampleimage.tgz | docker import --message &quot;New image imported from tarball&quot; - exampleimagelocal:new
 </pre>
-</dl>
+</dd></dl>
 <p> Import to a Docker image from a local file. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker import /path/to/exampleimage.tgz 
 </pre>
-</dl>
+</dd></dl>
 <h2>Import from a local file and tag</h2>
 <p> Import to docker via pipe and stdin: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # cat exampleimageV2.tgz | docker import - example/imagelocal:V-2.0
 </pre>
-</dl>
+</dd></dl>
 <h2>Import from a local directory</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # tar -c . | docker import - exampleimagedir
 </pre>
-</dl>
+</dd></dl>
 <h2>Apply specified Dockerfile instructions while importing the image</h2>
 <p> This example sets the docker image ENV variable DEBUG to true by default. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # tar -c . | docker import -c=&quot;ENV DEBUG true&quot; - exampleimagedir
 </pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-export/">docker-export</a>(1)</code> to export the contents of a filesystem as a tar archive to STDOUT. </p>
 <h2>HISTORY</h2>

@@ -31,38 +31,38 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
 <p> <code>. gmt_shell_functions.sh</code> </p>
 <p> Once included in a shell script, <code>gmt_shell_functions.sh</code> allows GMT users to do some scripting more easily than otherwise. The functions made available are:</p>
 <dl>
-<dt><code>gmt_init_tmpdir</code></p>
-<dd>Creates a temporary directory in <code>/tmp</code> or (when defined) in the directory specified by the environment variable <code>TMPDIR</code>. The name of the temporary directory is returned as environment variable <code>GMT_TMPDIR</code>. This function also causes GMT to run in &#8216;isolation mode&#8217;, i.e., all temporary files will be created in <code>GMT_TMPDIR</code> and the <code>gmt.conf</code> file will not be adjusted.</p>
-<dt><code>gmt_remove_tmpdir</code></p>
-<dd>Removes the temporary directory and unsets the <code>GMT_TMPDIR</code> environment variable.</p>
-<dt><code>gmt_cleanup</code></p>
-<dd>Remove all files and directories in which the current process number is part of the file name. If the optional <i>prefix</i> is given then we also delete all files and directories that begins with the given prefix.</p>
-<dt><code>gmt_message</code></p>
-<dd>Send a message to standard error.</p>
-<dt><code>gmt_abort</code></p>
-<dd>Send a message to standard error and exit the shell.</p>
-<dt><code>gmt_get_nrecords</code></p>
-<dd>Returns the total number of lines in <i>file(s)</i></p>
-<dt><code>gmt_get_ndatarecords</code></p>
-<dd>Returns the total number of data records in <i>file(s)</i>, i.e., not counting headers.</p>
-<dt><code>gmt_get_nfields</code></p>
-<dd>Returns the number of fields or words in <i>string</i></p>
-<dt><code>gmt_get_field</code></p>
-<dd>Returns the given <i>field</i> in a <i>string</i>. Must pass <i>string</i> between double quotes to preserve it as one item.</p>
-<dt><code>gmt_get_region</code></p>
-<dd>Returns the region in the form w/e/s/n based on the data in table <i>file(s)</i>. Optionally add -I*dx*/<i>dy</i> to round off the answer.</p>
-<dt><code>gmt_get_gridregion</code></p>
-<dd>Returns the region in the form w/e/s/n based on the header of a grid <i>file</i>. Optionally add -I*dx*/<i>dy</i> to round off the answer.</p>
-<dt><code>gmt_get_map_width</code></p>
-<dd>Expects the user to give the desired <code>-R</code> <code>-J</code> settings and returns the map width in the current measurement unit.</p>
-<dt><code>gmt_get_map_height</code></p>
-<dd>Expects the user to give the desired <code>-R</code> <code>-J</code> settings and returns the map height in the current measurement unit.</p>
-<dt><code>gmt_set_psfile</code></p>
-<dd>Create the output PostScript file name based on the base name of a given file (usually the script name <code>$0</code>).</p>
-<dt><code>gmt_set_framename</code></p>
-<dd>Returns a lexically ordered filename stem (i.e., no extension) given the file prefix and the current frame number, using a width of 6 for the integer including leading zeros. Useful when creating animations and lexically sorted filenames are required.</p>
-<dt><code>gmt_set_framenext</code></p>
-<dd>Accepts the current frame integer counter and returns the next integer counter.</dl>
+<dt><code>gmt_init_tmpdir</code></dt>
+<dd>Creates a temporary directory in <code>/tmp</code> or (when defined) in the directory specified by the environment variable <code>TMPDIR</code>. The name of the temporary directory is returned as environment variable <code>GMT_TMPDIR</code>. This function also causes GMT to run in &#8216;isolation mode&#8217;, i.e., all temporary files will be created in <code>GMT_TMPDIR</code> and the <code>gmt.conf</code> file will not be adjusted.</dd>
+<dt><code>gmt_remove_tmpdir</code></dt>
+<dd>Removes the temporary directory and unsets the <code>GMT_TMPDIR</code> environment variable.</dd>
+<dt><code>gmt_cleanup</code></dt>
+<dd>Remove all files and directories in which the current process number is part of the file name. If the optional <i>prefix</i> is given then we also delete all files and directories that begins with the given prefix.</dd>
+<dt><code>gmt_message</code></dt>
+<dd>Send a message to standard error.</dd>
+<dt><code>gmt_abort</code></dt>
+<dd>Send a message to standard error and exit the shell.</dd>
+<dt><code>gmt_get_nrecords</code></dt>
+<dd>Returns the total number of lines in <i>file(s)</i></dd>
+<dt><code>gmt_get_ndatarecords</code></dt>
+<dd>Returns the total number of data records in <i>file(s)</i>, i.e., not counting headers.</dd>
+<dt><code>gmt_get_nfields</code></dt>
+<dd>Returns the number of fields or words in <i>string</i></dd>
+<dt><code>gmt_get_field</code></dt>
+<dd>Returns the given <i>field</i> in a <i>string</i>. Must pass <i>string</i> between double quotes to preserve it as one item.</dd>
+<dt><code>gmt_get_region</code></dt>
+<dd>Returns the region in the form w/e/s/n based on the data in table <i>file(s)</i>. Optionally add -I*dx*/<i>dy</i> to round off the answer.</dd>
+<dt><code>gmt_get_gridregion</code></dt>
+<dd>Returns the region in the form w/e/s/n based on the header of a grid <i>file</i>. Optionally add -I*dx*/<i>dy</i> to round off the answer.</dd>
+<dt><code>gmt_get_map_width</code></dt>
+<dd>Expects the user to give the desired <code>-R</code> <code>-J</code> settings and returns the map width in the current measurement unit.</dd>
+<dt><code>gmt_get_map_height</code></dt>
+<dd>Expects the user to give the desired <code>-R</code> <code>-J</code> settings and returns the map height in the current measurement unit.</dd>
+<dt><code>gmt_set_psfile</code></dt>
+<dd>Create the output PostScript file name based on the base name of a given file (usually the script name <code>$0</code>).</dd>
+<dt><code>gmt_set_framename</code></dt>
+<dd>Returns a lexically ordered filename stem (i.e., no extension) given the file prefix and the current frame number, using a width of 6 for the integer including leading zeros. Useful when creating animations and lexically sorted filenames are required.</dd>
+<dt><code>gmt_set_framenext</code></dt>
+<dd>Accepts the current frame integer counter and returns the next integer counter.</dd></dl>
 <h2>Notes</h2>
 <p>1. These functions only work in the Bourne shell (<code>sh</code>) and their derivatives (like <code>ash</code>, <code>bash</code>, <code>ksh</code> and <code>zsh</code>). These functions do not work in the C shell (<code>csh</code>) or their derivatives (like <code>tcsh</code>), and cannot be used in DOS batch scripts either. </p>
 <p> 2. <code>gmt_shell_functions.sh</code> were first introduced in GMT version 4.2.2 and have since been regularly expanded with other practical scripting short-cuts. If you want to suggest other functions, please do so by adding a New Issue request on gmt.soest.hawaii.edu.</p>

@@ -19,14 +19,14 @@ description: "transfig – creates a makefile for portable LaTeX figures"
  If the -V option is specified, the program version number is printed only. </p>
 <p> Control specifiers are</p>
 <dl>
-<dt><code>-m</code><i> mag</i></p>
-<dd> set the magnification at which the figure is rendered (default 1.0).</p>
-<dt><code>-f</code><i> font</i></p>
-<dd> set the default font family used for text objects (default &quot;<code>rm</code>&quot;).</p>
-<dt><code>-s </code><i>fontsize</i></p>
-<dd> set the default font size (in points) for text objects (default 11*<i>mag</i>).</p>
-<dt><code>-o </code><i>option</i></p>
-<dd> pass the specified option string through to fig2dev.</dl>
+<dt><code>-m</code><i> mag</i></dt>
+<dd> set the magnification at which the figure is rendered (default 1.0).</dd>
+<dt><code>-f</code><i> font</i></dt>
+<dd> set the default font family used for text objects (default &quot;<code>rm</code>&quot;).</dd>
+<dt><code>-s </code><i>fontsize</i></dt>
+<dd> set the default font size (in points) for text objects (default 11*<i>mag</i>).</dd>
+<dt><code>-o </code><i>option</i></dt>
+<dd> pass the specified option string through to fig2dev.</dd></dl>
 <p> If there is no scaling, the default font is an eleven point roman font. Language and control specifiers may occur more than once; they affect the translation of files which appear to their right in the argument list. If no files are specified, then &quot;*.fig&quot; is assumed.</p>
 <h2>SEE ALSO</h2>
 <p> fig(l), fig2dev(l), pic(l), pic2fig(l), xfig(l)</p>

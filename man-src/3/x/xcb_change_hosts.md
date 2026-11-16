@@ -10,49 +10,47 @@ description: "xcb_change_hosts –"
 <p>xcb_change_hosts &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_change_hosts(xcb_connection_t *conn, uint8_t mode, uint8_t family, uint16_t address_len, const uint8_t *address);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>mode</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>mode</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_HOST_MODE_INSERT</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_HOST_MODE_DELETE</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_HOST_MODE_INSERT</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_HOST_MODE_DELETE</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>family</i></p>
-<dd>One of the following values:</p>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>family</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_FAMILY_INTERNET</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_FAMILY_DECNET</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_FAMILY_CHAOS</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_FAMILY_SERVER_INTERPRETED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_FAMILY_INTERNET_6</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_FAMILY_INTERNET</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_FAMILY_DECNET</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_FAMILY_CHAOS</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_FAMILY_SERVER_INTERPRETED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_FAMILY_INTERNET_6</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>address_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>address</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>address_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>address</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

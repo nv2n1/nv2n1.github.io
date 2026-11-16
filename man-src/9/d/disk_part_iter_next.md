@@ -15,7 +15,7 @@ disk_part_iter_next - proceed iterator to the next partition and return it
 <h2>Arguments</h2>
 
 <i>piter</i>
-<dl><dd><dd>iterator of interest</dl>
+<dl><dd></dd><dd>iterator of interest</dd></dl>
 
 <h2>Description</h2>
 

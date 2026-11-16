@@ -10,10 +10,8 @@ description: "profil – execution time profile"
 <p>profil &#8211; execution time profile</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
-
 int profil(unsigned short *buf, size_t bufsiz,
            size_t offset, unsigned int scale);
-
 Feature Test Macro Requirements for glibc (see
 feature_test_macros(7)):</code></pre>
 <p> <code>profil</code>(): </p>

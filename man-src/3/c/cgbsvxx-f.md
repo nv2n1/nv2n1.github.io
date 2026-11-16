@@ -34,7 +34,7 @@ description: "cgbsvxx.f –"
  errors or warnings, but we cannot make that claim for general
  user-provided factorizations and equilibration factors if they
  differ from what CGBSVXX would itself produce.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl COMPACT>
 <dd>
@@ -74,10 +74,10 @@ description: "cgbsvxx.f –"
  defaults are acceptable. If the defaults are acceptable, users
  can pass NPARAMS = 0 which prevents the source code from accessing
  the PARAMS argument.</pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of the matrix A is
  supplied on entry, and if not, whether the matrix A should be
@@ -391,13 +391,13 @@ description: "cgbsvxx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 560 of file cgbsvxx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

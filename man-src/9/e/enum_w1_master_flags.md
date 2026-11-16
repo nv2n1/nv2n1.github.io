@@ -16,12 +16,12 @@ description: "enum_w1_master_flags – bitfields used in w1_master.flags"
 <h2>Constants</h2>
 <p>W1_ABORT_SEARCH</p>
 <dl>
-<dd>abort searching early on shutdown</dl>
+<dd>abort searching early on shutdown</dd></dl>
 <p> W1_WARN_MAX_COUNT</p>
 <dl>
-<dd>limit warning when the maximum count is reached</dl>
+<dd>limit warning when the maximum count is reached</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,13 +11,9 @@ std::experimental::simd_abi::native - std::experimental::simd_abi::native
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/simd&gt;
-
 namespace simd_abi {
-
     template &lt; class T &gt;
-
     using native = /*implementation-defined*/;
-
 }</code></pre> 
 native&lt;T&gt; is an implementation-defined alias for an ABI tag. 
 

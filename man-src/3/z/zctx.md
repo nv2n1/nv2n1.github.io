@@ -58,16 +58,16 @@ CZMQ_EXPORT void
 <h2>Description</h2>
 <p>The zctx class wraps 0MQ contexts. It manages open sockets in the context and automatically closes these before terminating the context. It provides a simple way to set the linger timeout on sockets, and configure contexts for number of I/O threads. Sets-up signal (interrupt) handling for the process. The zctx class has these main features:</p>
 <dl>
-<dd>&bull; Tracks all open sockets and automatically closes them before calling zmq_term(). This avoids an infinite wait on open sockets.</dl>
+<dd>&bull; Tracks all open sockets and automatically closes them before calling zmq_term(). This avoids an infinite wait on open sockets.</dd></dl>
 <dl>
-<dd>&bull; Automatically configures sockets with a ZMQ_LINGER timeout you can define, and which defaults to zero. The default behavior of zctx is therefore like 0MQ/2.0, immediate termination with loss of any pending messages. You can set any linger timeout you like by calling the zctx_set_linger() method.</dl>
+<dd>&bull; Automatically configures sockets with a ZMQ_LINGER timeout you can define, and which defaults to zero. The default behavior of zctx is therefore like 0MQ/2.0, immediate termination with loss of any pending messages. You can set any linger timeout you like by calling the zctx_set_linger() method.</dd></dl>
 <dl>
-<dd>&bull; Moves the iothreads configuration to a separate method, so that default usage is 1 I/O thread. Lets you configure this value.</dl>
+<dd>&bull; Moves the iothreads configuration to a separate method, so that default usage is 1 I/O thread. Lets you configure this value.</dd></dl>
 <dl>
-<dd>&bull; Sets up signal (SIGINT and SIGTERM) handling so that blocking calls such as zmq_recv() and zmq_poll() will return when the user presses Ctrl-C.</dl>
+<dd>&bull; Sets up signal (SIGINT and SIGTERM) handling so that blocking calls such as zmq_recv() and zmq_poll() will return when the user presses Ctrl-C.</dd></dl>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- this class is deprecated in favor of zsock, which does not expose contexts in the API at all. All zsock instances use the same global context. </p>
+ this class is deprecated in favor of zsock, which does not expose contexts in the API at all. All zsock instances use the same global context. </dd>
 <h2>Example</h2>
 <p><code>From zctx_test method</code>. </p>
 <pre><code>//  Create and destroy a context without using it
@@ -75,7 +75,6 @@ zctx_t *ctx = zctx_new();
 assert(ctx);
 zctx_destroy(&amp;ctx);
 assert(ctx == NULL);
-
 //  Create a context with many busy sockets, destroy it
 ctx = zctx_new();
 assert(ctx);
@@ -117,7 +116,8 @@ zctx_destroy(&amp;ctx);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl></dl>

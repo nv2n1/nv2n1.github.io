@@ -61,12 +61,12 @@ description: "syslogd_selinux – Security Enhanced Linux Policy for the syslogd
 <p> Policy governs the access confined processes have to these ports. SELinux syslogd policy is very flexible allowing users to setup their syslogd processes in as secure a method as possible. </p>
 <p> The following port types are defined for syslogd: </p>
 <dl>
-<dt><code>syslog_tls_port_t</code></p>
+<dt><code>syslog_tls_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6514 udp 6514 </p>
-<dt><code>syslogd_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 6514 udp 6514 </dd>
+<dt><code>syslogd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 601 udp 514,601</dl>
+</dd><dd>Default Defined Ports: tcp 601 udp 514,601</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type syslogd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -143,8 +143,8 @@ description: "syslogd_selinux – Security Enhanced Linux Policy for the syslogd
 <p> <code>syslogd_exec_t</code> </p>
 <p> &#8211; Set files with the syslogd_exec_t type, if you want to transition an executable to the syslogd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/syslogd, /sbin/minilogd, /sbin/rsyslogd, /sbin/syslog-ng, /usr/sbin/metalog, /usr/sbin/syslogd, /usr/sbin/minilogd, /usr/sbin/rsyslogd, /usr/sbin/syslog-ng, /usr/lib/systemd/systemd-journald, /usr/lib/systemd/systemd-kmsg-syslogd </p>
+<dt>Paths:</dt>
+<dd>/sbin/syslogd, /sbin/minilogd, /sbin/rsyslogd, /sbin/syslog-ng, /usr/sbin/metalog, /usr/sbin/syslogd, /usr/sbin/minilogd, /usr/sbin/rsyslogd, /usr/sbin/syslog-ng, /usr/lib/systemd/systemd-journald, /usr/lib/systemd/systemd-kmsg-syslogd </dd>
 </dl>
 <p> <code>syslogd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the syslogd_initrc_exec_t type, if you want to transition an executable to the syslogd_initrc_t domain. </p>
@@ -155,14 +155,14 @@ description: "syslogd_selinux – Security Enhanced Linux Policy for the syslogd
 <p> <code>syslogd_var_lib_t</code> </p>
 <p> &#8211; Set files with the syslogd_var_lib_t type, if you want to store the syslogd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/r?syslog(/.*)?, /var/lib/syslog-ng(/.*)?, /var/lib/syslog-ng.persist, /var/lib/misc/syslog-ng.persist-? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/r?syslog(/.*)?, /var/lib/syslog-ng(/.*)?, /var/lib/syslog-ng.persist, /var/lib/misc/syslog-ng.persist-? </dd>
 </dl>
 <p> <code>syslogd_var_run_t</code> </p>
 <p> &#8211; Set files with the syslogd_var_run_t type, if you want to store the syslogd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/log(/.*)?, /var/run/syslog-ng.ctl, /var/run/syslog-ng(/.*)?, /var/run/systemd/journal(/.*)?, /var/run/metalog.pid, /var/run/syslogd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/log(/.*)?, /var/run/syslog-ng.ctl, /var/run/syslog-ng(/.*)?, /var/run/systemd/journal(/.*)?, /var/run/metalog.pid, /var/run/syslogd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

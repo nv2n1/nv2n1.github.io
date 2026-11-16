@@ -12,25 +12,15 @@ description: "libraptor2 – Raptor RDF syntax library 2.0"
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;raptor2.h&gt;
-
 world = raptor_new_world();
-
 raptor_parser *p = raptor_new_parser(world, rdfxml);
-
 raptor_set_statement_handler(p, NULL, print_triples);
-
 raptor_uri *file_uri=raptor_new_uri(world,http://example.org/);
-
 raptor_parser_parse_file(p,file_uri,base_uri);
-
 raptor_parser_parse_uri(p,uri,NULL);
-
 raptor_free_parser(p);
-
 raptor_free_uri(file_uri);
-
 raptor_free_world(world);
-
 cc prog.c -o prog `pkg-config raptor2 --cflags` `pkg-config raptor2 --libs`
 </code></pre>
 <h2>DESCRIPTION</h2>

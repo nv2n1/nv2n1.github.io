@@ -24,12 +24,12 @@ description: "gcov – coverage testing tool"
 <p> <code>gcov</code> is a test coverage program. Use it in concert with <font SIZE="-1">GCC</font> to analyze your programs to help create more efficient, faster running code and to discover untested parts of your program. You can use <code>gcov</code> as a profiling tool to help discover where your optimization efforts will best affect your code. You can also use <code>gcov</code> along with the other profiling tool, <code>gprof</code>, to assess which parts of your code use the greatest amount of computing time. </p>
 <p> Profiling tools help you analyze your code&#8217;s performance. Using a profiler such as <code>gcov</code> or <code>gprof</code>, you can find out some basic performance statistics, such as:</p>
 <dl>
-<dt>&bull;</p>
-<dd> how often each line of code executes</p>
-<dt>&bull;</p>
-<dd> what lines of code are actually executed</p>
-<dt>&bull;</p>
-<dd> how much computing time each section of code uses</dl>
+<dt>&bull;</dt>
+<dd> how often each line of code executes</dd>
+<dt>&bull;</dt>
+<dd> what lines of code are actually executed</dd>
+<dt>&bull;</dt>
+<dd> how much computing time each section of code uses</dd></dl>
 <p> Once you know these things about how your code works when compiled, you can look at each module to see which modules should be optimized. <code>gcov</code> helps you determine where to work on optimization. </p>
 <p> Software developers also use coverage testing in concert with testsuites, to make sure software is actually good enough for a release. Testsuites can verify that a program works as expected; a coverage program tests to see how much of the program is exercised by the testsuite. Developers can then determine what kinds of test cases need to be added to the testsuites to create both better testing and a better final product. </p>
 <p> You should compile your code without optimization if you plan to use <code>gcov</code> because the optimization, by combining some lines of code into one function, may not give you as much information as you need to look for `hot spots&#8217; where the code is using a great deal of computer time. Likewise, because <code>gcov</code> accumulates statistics by line (at the lowest resolution), it works best with a programming style that places only one statement on each line. If you use complicated macros that expand to loops or to other control structures, the statistics are less helpful&#8212;they only report on the line where the macro call appears. If your complex macros behave like functions, you can replace them with inline functions to solve this problem. </p>
@@ -37,52 +37,52 @@ description: "gcov – coverage testing tool"
 <p> <code>gcov</code> works only on code compiled with <font SIZE="-1">GCC. </font> It is not compatible with any other profiling or test coverage mechanism.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Display help about using <code>gcov</code> (on the standard output), and exit without doing any further processing.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Display help about using <code>gcov</code> (on the standard output), and exit without doing any further processing.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the <code>gcov</code> version number (on the standard output), and exit without doing any further processing.</p>
-<dt><code>-a</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the <code>gcov</code> version number (on the standard output), and exit without doing any further processing.</dd>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;all-blocks</code></p>
-<dd> Write individual execution counts for every basic block. Normally gcov outputs execution counts only for the main blocks of a line. With this option you can determine if blocks within a single line are not being executed.</p>
-<dt><code>-b</code></p>
+</dd><dt><code>&#8211;all-blocks</code></dt>
+<dd> Write individual execution counts for every basic block. Normally gcov outputs execution counts only for the main blocks of a line. With this option you can determine if blocks within a single line are not being executed.</dd>
+<dt><code>-b</code></dt>
 <dd>
-<dt><code>&#8211;branch-probabilities</code></p>
-<dd> Write branch frequencies to the output file, and write branch summary info to the standard output. This option allows you to see how often each branch in your program was taken. Unconditional branches will not be shown, unless the <code>-u</code> option is given.</p>
-<dt><code>-c</code></p>
+</dd><dt><code>&#8211;branch-probabilities</code></dt>
+<dd> Write branch frequencies to the output file, and write branch summary info to the standard output. This option allows you to see how often each branch in your program was taken. Unconditional branches will not be shown, unless the <code>-u</code> option is given.</dd>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8211;branch-counts</code></p>
-<dd> Write branch frequencies as the number of branches taken, rather than the percentage of branches taken.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;branch-counts</code></dt>
+<dd> Write branch frequencies as the number of branches taken, rather than the percentage of branches taken.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-output</code></p>
-<dd> Do not create the <code>gcov</code> output file.</p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8211;no-output</code></dt>
+<dd> Do not create the <code>gcov</code> output file.</dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;long-file-names</code></p>
-<dd> Create long file names for included source files. For example, if the header file <i>x.h</i> contains code, and was included in the file <i>a.c</i>, then running <code>gcov</code> on the file <i>a.c</i> will produce an output file called <i>a.c##x.h.gcov</i> instead of <i>x.h.gcov</i>. This can be useful if <i>x.h</i> is included in multiple source files. If you use the <code>-p</code> option, both the including and included file names will be complete path names.</p>
-<dt><code>-p</code></p>
+</dd><dt><code>&#8211;long-file-names</code></dt>
+<dd> Create long file names for included source files. For example, if the header file <i>x.h</i> contains code, and was included in the file <i>a.c</i>, then running <code>gcov</code> on the file <i>a.c</i> will produce an output file called <i>a.c##x.h.gcov</i> instead of <i>x.h.gcov</i>. This can be useful if <i>x.h</i> is included in multiple source files. If you use the <code>-p</code> option, both the including and included file names will be complete path names.</dd>
+<dt><code>-p</code></dt>
 <dd>
-<dt><code>&#8211;preserve-paths</code></p>
-<dd> Preserve complete path information in the names of generated <i>.gcov</i> files. Without this option, just the filename component is used. With this option, all directories are used, with <code>/</code> characters translated to <code>#</code> characters, <i>.</i> directory components removed and <i>..</i> components renamed to <code>^</code>. This is useful if sourcefiles are in several different directories. It also affects the <code>-l</code> option.</p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8211;preserve-paths</code></dt>
+<dd> Preserve complete path information in the names of generated <i>.gcov</i> files. Without this option, just the filename component is used. With this option, all directories are used, with <code>/</code> characters translated to <code>#</code> characters, <i>.</i> directory components removed and <i>..</i> components renamed to <code>^</code>. This is useful if sourcefiles are in several different directories. It also affects the <code>-l</code> option.</dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;function-summaries</code></p>
-<dd> Output summaries for each function in addition to the file level summary.</p>
-<dt><code>-o</code> <i>directory|file</i></p>
+</dd><dt><code>&#8211;function-summaries</code></dt>
+<dd> Output summaries for each function in addition to the file level summary.</dd>
+<dt><code>-o</code> <i>directory|file</i></dt>
 <dd>
-<dt><code>&#8211;object-directory</code> <i>directory</i></p>
+</dd><dt><code>&#8211;object-directory</code> <i>directory</i></dt>
 <dd>
-<dt><code>&#8211;object-file</code> <i>file</i></p>
-<dd> Specify either the directory containing the gcov data files, or the object path name. The <i>.gcno</i>, and <i>.gcda</i> data files are searched for using this option. If a directory is specified, the data files are in that directory and named after the source file name, without its extension. If a file is specified here, the data files are named after that file, without its extension. If this option is not supplied, it defaults to the current directory.</p>
-<dt><code>-u</code></p>
+</dd><dt><code>&#8211;object-file</code> <i>file</i></dt>
+<dd> Specify either the directory containing the gcov data files, or the object path name. The <i>.gcno</i>, and <i>.gcda</i> data files are searched for using this option. If a directory is specified, the data files are in that directory and named after the source file name, without its extension. If a file is specified here, the data files are named after that file, without its extension. If this option is not supplied, it defaults to the current directory.</dd>
+<dt><code>-u</code></dt>
 <dd>
-<dt><code>&#8211;unconditional-branches</code></p>
-<dd> When branch probabilities are given, include those of unconditional branches. Unconditional branches are normally not interesting.</dl>
+</dd><dt><code>&#8211;unconditional-branches</code></dt>
+<dd> When branch probabilities are given, include those of unconditional branches. Unconditional branches are normally not interesting.</dd></dl>
 <p> <code>gcov</code> should be run with the current directory the same as that when you invoked the compiler. Otherwise it will not be able to locate the source files. <code>gcov</code> produces files called <i>mangledname.gcov</i> in the current directory. These contain the coverage information of the source file they correspond to. One <i>.gcov</i> file is produced for each source file containing code, which was compiled to produce the data files. The <i>mangledname</i> part of the output file name is usually simply the source file name, but can be something more complicated if the <code>-l</code> or <code>-p</code> options are given. Refer to those options for details. </p>
 <p> The <i>.gcov</i> files contain the <code>:</code> separated fields along with program source code. The format is </p>
 <pre>
@@ -209,7 +209,7 @@ else<br />
      funds for GNU development.
 </pre>
 <h2>Index</h2>
-<dt><a href="#lbAG">SEE ALSO</a></p>
+<dt><a href="#lbAG">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAH">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAH">COPYRIGHT</a></dt>
+<dd></dd></dl>

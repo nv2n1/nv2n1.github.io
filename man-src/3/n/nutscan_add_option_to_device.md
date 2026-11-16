@@ -21,7 +21,7 @@ char * port;
 nutscan_options_t opt;
 struct nutscan_device * prev;
 struct nutscan_device * next;</pre>
-</dl>
+</dd></dl>
 <p> This is a double linked list of device. Each device is described by its type, its driver name, its port and any number of optional data. </p>
 <p> The <code>nutscan_add_option_to_device()</code> adds an optional data in the given devcie. Optional data are made of an <i>option_name</i> and an associated <i>value</i>. Copies of <i>option_name</i> and <i>value</i> are stored in the device, so the caller can safely free both of them.</p>
 <h2>See Also</h2>

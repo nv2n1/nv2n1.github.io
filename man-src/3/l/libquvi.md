@@ -68,14 +68,14 @@ url: "/docs/linux/man/3-libquvi/"
 
 
 <dt><a HREF="#lbAF">ENVIRONMENT</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAJ">WWW</a>
-<dd>
-<dt><a HREF="#lbAK">LICENSE</a>
-<dd>
-<dt><a HREF="#lbAL">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbAM">AUTHOR</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAJ">WWW</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">LICENSE</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">AUTHOR</a>
+</dt><dd></dd></dl>

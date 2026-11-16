@@ -26,8 +26,8 @@ description: "rsparms – Configure the Rose interface."
 <p> would set the callsign used by Rose internode traffic to VK2KTJ-10.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-version</code></p>
-<dd>Display the version information.</dl>
+<dt><code>-version</code></dt>
+<dd>Display the version information.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/axports<br />
  /etc/ax25/rsports</p>

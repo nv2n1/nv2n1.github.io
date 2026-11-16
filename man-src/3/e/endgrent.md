@@ -21,19 +21,19 @@ void endgrent(void);
 <p> <code>setgrent</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>getgrent</code>(), <code>endgrent</code>():</p>
 <dl>
 <dt>
-<dd> Since glibc 2.22:<br />
+</dt><dd> Since glibc 2.22:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
  Glibc 2.21 and earlier<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>getgrent</code>() function returns a pointer to a structure containing the broken-out fields of a record in the group database (e.g., the local group file <i>/etc/group</i>, NIS, and LDAP). The first time <code>getgrent</code>() is called, it returns the first entry; thereafter, it returns successive entries. </p>
 <p> The <code>setgrent</code>() function rewinds to the beginning of the group database, to allow repeated scans. </p>
@@ -52,26 +52,26 @@ void endgrent(void);
 <p> The return value may point to a static area, and may be overwritten by subsequent calls to <code>getgrent</code>(), <code><a href="/docs/linux/man/3-getgrgid/">getgrgid</a></code>(3), or <code><a href="/docs/linux/man/3-getgrnam/">getgrnam</a></code>(3). (Do not pass the returned pointer to <code><a href="/docs/linux/man/3-free/">free</a></code>(3).)</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The service was temporarily unavailable; try again later. For NSS backends in glibc this indicates a temporary error talking to the backend. The error may correct itself, retrying later is suggested.</p>
-<dt><code>EINTR</code></p>
-<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EIO</code></p>
-<dd> I/O error.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
+<dt><code>EAGAIN</code></dt>
+<dd> The service was temporarily unavailable; try again later. For NSS backends in glibc this indicates a temporary error talking to the backend. The error may correct itself, retrying later is suggested.</dd>
+<dt><code>EINTR</code></dt>
+<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EIO</code></dt>
+<dd> I/O error.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
 <dt>
-<dd> <code>ENOENT</code> A necessary input file cannot be found. For NSS backends in glibc this indicates the backend is not correctly configured.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>group</i> structure.</p>
-<dt><code>ERANGE</code></p>
-<dd> Insufficient buffer space supplied.</dl>
+</dt><dd> <code>ENOENT</code> A necessary input file cannot be found. For NSS backends in glibc this indicates the backend is not correctly configured.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>group</i> structure.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Insufficient buffer space supplied.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/group</i></p>
-<dd> local group database file</dl>
+<dt><i>/etc/group</i></dt>
+<dd> local group database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -10,13 +10,9 @@ description: "std::uninitialized_copy_n – std::uninitialized_copy_n"
 <p>std::uninitialized_copy_n &#8211; std::uninitialized_copy_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;memory&gt;
-
 template&lt; class InputIt, class Size, class ForwardIt &gt;                                                   (1) (since C++11)
-
 ForwardIt uninitialized_copy_n( InputIt first, Size count, ForwardIt d_first);
-
 template&lt; class ExecutionPolicy, class InputIt, class Size, class ForwardIt &gt;                            (2) (since C++17)
-
 ForwardIt uninitialized_copy_n( ExecutionPolicy&amp;&amp; policy, InputIt first, Size count, ForwardIt d_first);</code></pre>
 <p>1) Copies count elements from a range beginning at first to an uninitialized memory area beginning at d_first as if by for (; n &gt; 0; ++d_first, (void)++first, &#8211;n)<br />
     ::new (static_cast&lt;void *&gt;(std::addressof(*d_first)))<br />
@@ -63,18 +59,12 @@ No increment, assignment, comparison, or indirection through valid instances of 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;string&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;std::string&gt; v = {&quot;This&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;};
     std::string *p;

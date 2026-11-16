@@ -25,7 +25,7 @@ description: "Gradient Object Fill Rectangle Functions – Functions that deal w
  <i>x</i> Pointer to an Evas_Coord to store the X coordinate in.<br />
  <i>y</i> Pointer to an Evas_Coord to store the Y coordinate in.<br />
  <i>w</i> Pointer to an Evas_Coord to store the width in.<br />
- <i>h</i> Pointer to an Evas_Coord to store the height in.</dl>
+ <i>h</i> Pointer to an Evas_Coord to store the height in.</dd></dl>
 <h3>EAPI void evas_object_gradient_fill_set (<code>Evas_Object</code> * obj, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the rectangle on the gradient object that the gradient will be drawn to. </p>
 <p> Note that the gradient may be tiled around this one rectangle, according to its spread value &#8211; restrict, repeat, or reflect. To have only one &#8216;cycle&#8217; of the gradient drawn, the spread value must be set to restrict, or x and y must be 0 and w and h need to be the width and height of the gradient object respectively. </p>
@@ -36,6 +36,6 @@ description: "Gradient Object Fill Rectangle Functions – Functions that deal w
  <i>x</i> The X coordinate for the top left corner of the rect.<br />
  <i>y</i> The Y coordinate for the top left corner of the rect.<br />
  <i>w</i> The width of the rect.<br />
- <i>h</i> The height of the rect.</dl>
+ <i>h</i> The height of the rect.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

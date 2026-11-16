@@ -13,11 +13,9 @@ description: "PCRE – Perl-compatible regular expressions"
 int pcre_copy_substring(const char *subject, int *ovector,
                         int stringcount, int stringnumber, char *buffer,
                         int buffersize);
-
 int pcre16_copy_substring(PCRE_SPTR16 subject, int *ovector,
                           int stringcount, int stringnumber, PCRE_UCHAR16 *buffer,
                           int buffersize);
-
 int pcre32_copy_substring(PCRE_SPTR32 subject, int *ovector,
                           int stringcount, int stringnumber, PCRE_UCHAR32 *buffer,
                           int buffersize);</code></pre>

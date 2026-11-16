@@ -11,31 +11,31 @@ description: "XtRealizeWidget, XtIsRealized, XtUnrealizeWidget – realize and u
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtRealizeWidget(Widget <i>w</i>);</p>
-<dd>Boolean XtIsRealized(Widget <i>w</i>);</p>
-<dd>void XtUnrealizeWidget(Widget <i>w</i>);</dl>
+<dd>void XtRealizeWidget(Widget <i>w</i>);</dd>
+<dd>Boolean XtIsRealized(Widget <i>w</i>);</dd>
+<dd>void XtUnrealizeWidget(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p>If the widget is already realized, <code>XtRealizeWidget</code> simply returns. Otherwise, it performs the following:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Binds all action names in the widget&#8217;s translation table to procedures (see Section 10.1.2).</p>
-<dt>&bull;</p>
-<dd>Makes a post-order traversal of the widget tree rooted at the specified widget and calls the change_managed procedure of each composite widget that has one or more managed children.</p>
-<dt>&bull;</p>
-<dd>Constructs an <code>XSetWindowAttributes</code> structure filled in with information derived from the <code>Core</code> widget fields and calls the realize procedure for the widget, which adds any widget-specific attributes and creates the X window.</p>
-<dt>&bull;</p>
-<dd>If the widget is not a subclass of <code>compositeWidgetClass</code>, <code>XtRealizeWidget</code> returns; otherwise, it continues and performs the following:</p>
+<dt>&bull;</dt>
+<dd>Binds all action names in the widget&#8217;s translation table to procedures (see Section 10.1.2).</dd>
+<dt>&bull;</dt>
+<dd>Makes a post-order traversal of the widget tree rooted at the specified widget and calls the change_managed procedure of each composite widget that has one or more managed children.</dd>
+<dt>&bull;</dt>
+<dd>Constructs an <code>XSetWindowAttributes</code> structure filled in with information derived from the <code>Core</code> widget fields and calls the realize procedure for the widget, which adds any widget-specific attributes and creates the X window.</dd>
+<dt>&bull;</dt>
+<dd>If the widget is not a subclass of <code>compositeWidgetClass</code>, <code>XtRealizeWidget</code> returns; otherwise, it continues and performs the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&#8211;</p>
-<dd>Descends recursively to each of the widget&#8217;s managed children and calls the realize procedures. Primitive widgets that instantiate children are responsible for realizing those children themselves.</p>
-<dt>&#8211;</p>
-<dd>Maps all of the managed children windows that have mapped_when_managed <code>True</code>. (If a widget is managed but mapped_when_managed is <code>False</code>, the widget is allocated visual space but is not displayed. Some people seem to like this to indicate certain states.)</dl>
+</dd><dl COMPACT>
+<dt>&#8211;</dt>
+<dd>Descends recursively to each of the widget&#8217;s managed children and calls the realize procedures. Primitive widgets that instantiate children are responsible for realizing those children themselves.</dd>
+<dt>&#8211;</dt>
+<dd>Maps all of the managed children windows that have mapped_when_managed <code>True</code>. (If a widget is managed but mapped_when_managed is <code>False</code>, the widget is allocated visual space but is not displayed. Some people seem to like this to indicate certain states.)</dd></dl>
 </dl>
 </dl>
 <p> If the widget is a top-level shell widget (that is, it has no parent), and mapped_when_managed is <code>True</code>, <code>XtRealizeWidget</code> maps the widget window. </p>

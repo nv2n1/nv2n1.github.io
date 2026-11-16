@@ -20,59 +20,48 @@ description: "condor_wait Wait for jobs to finish"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Show extra debugging information.</p>
-<dt>
-<dd></dl>
+</dt><dd> Show extra debugging information.</dd>
+</dl>
 <p> <code>-status</code></p>
 <dl>
 <dt>
-<dd> Show job start and terminate information.</p>
-<dt>
-<dd></dl>
+</dt><dd> Show job start and terminate information.</dd>
+</dl>
 <p> <code>-echo</code></p>
 <dl>
 <dt>
-<dd> Print the events out to stdout .</p>
-<dt>
-<dd></dl>
+</dt><dd> Print the events out to stdout .</dd>
+</dl>
 <p> <code>-wait </code> <i>seconds</i></p>
 <dl>
 <dt>
-<dd> Wait no more than the integer number of <i>seconds</i> . The default is unlimited time.</p>
-<dt>
-<dd></dl>
+</dt><dd> Wait no more than the integer number of <i>seconds</i> . The default is unlimited time.</dd>
+</dl>
 <p> <code>-num </code> <i>number-of-jobs</i></p>
 <dl>
 <dt>
-<dd> Wait for the integer <i>number-of-jobs</i> jobs to end. The default is all jobs in the log file.</p>
-<dt>
-<dd></dl>
+</dt><dd> Wait for the integer <i>number-of-jobs</i> jobs to end. The default is all jobs in the log file.</dd>
+</dl>
 <p> <code>log file</code></p>
 <dl>
 <dt>
-<dd> The name of the log file to watch for information about the job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The name of the log file to watch for information about the job.</dd>
+</dl>
 <p> <code>job ID</code></p>
 <dl>
 <dt>
-<dd> A specific job or set of jobs to watch. If the <code>job ID</code> is only the job ClassAd attribute ClusterId , then <i>condor_wait</i> waits for all jobs with the given ClusterId . If the <code>job ID</code> is a pair of the job ClassAd attributes, given by ClusterId . ProcId , then <i>condor_wait</i> waits for the specific job with this <code>job ID</code> . If this option is not specified, all jobs that exist in the log file when <i>condor_wait</i> is invoked will be watched.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> A specific job or set of jobs to watch. If the <code>job ID</code> is only the job ClassAd attribute ClusterId , then <i>condor_wait</i> waits for all jobs with the given ClusterId . If the <code>job ID</code> is a pair of the job ClassAd attributes, given by ClusterId . ProcId , then <i>condor_wait</i> waits for the specific job with this <code>job ID</code> . If this option is not specified, all jobs that exist in the log file when <i>condor_wait</i> is invoked will be watched.</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> <i>condor_wait</i> is an inexpensive way to test or wait for the completion of a job or a whole cluster, if you are trying to get a process outside of HTCondor to synchronize with a job or set of jobs. </p>
 <p> It can also be used to wait for the completion of a limited subset of jobs, via the <code>-num</code> option. </p>

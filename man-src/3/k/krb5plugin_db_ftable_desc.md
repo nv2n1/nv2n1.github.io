@@ -19,9 +19,9 @@ description: "krb5plugin_db_ftable_desc –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
+</dt><dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
  <i>minor_version</i> The plugin minor version number (0)<br />
- <i>fini</i> Plugin finalization function</dl>
+ <i>fini</i> Plugin finalization function</dd></dl>
 <p> The init entry point is expected to call heim_db_register(). The fini entry point is expected to do nothing. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>

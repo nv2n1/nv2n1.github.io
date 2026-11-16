@@ -13,8 +13,8 @@ description: "arptables-restore — Restore ARP Tables"
 <h2>Description</h2>
 <p><code>arptables-restore</code> is used to restore ARP Tables from data specified on STDIN or via a file as first argument. Use I/O redirection provided by your shell to read from a file</p>
 <dl>
-<dt><code>arptables-restore</code></p>
-<dd>flushes (deletes) all previous contents of the respective ARP Table.</dl>
+<dt><code>arptables-restore</code></dt>
+<dd>flushes (deletes) all previous contents of the respective ARP Table.</dd></dl>
 <h2>Bugs</h2>
 <p>None known as of arptables-0.0.4 release</p>
 <h2>Author</h2>

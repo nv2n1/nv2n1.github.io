@@ -14,16 +14,16 @@ description: "usb_free_coherent – free memory allocated with usb_alloc_coheren
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device the buffer was used with</dl>
+</dd><dd>device the buffer was used with</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>requested buffer size</dl>
+<dd>requested buffer size</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>CPU address of buffer</dl>
+<dd>CPU address of buffer</dd></dl>
 <p> <i>dma</i></p>
 <dl>
-<dd>DMA address of buffer</dl>
+<dd>DMA address of buffer</dd></dl>
 <h2>Description</h2>
 <p>This reclaims an I/O buffer, letting it be reused. The memory must have been allocated using <code>usb_alloc_coherent</code>, and the parameters must match those provided in that allocation request.</p>
 <h2>Copyright</h2>

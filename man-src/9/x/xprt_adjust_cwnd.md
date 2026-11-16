@@ -15,15 +15,15 @@ xprt_adjust_cwnd - adjust transport congestion window
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>pointer to xprt</dl>
+<dl><dd></dd><dd>pointer to xprt</dd></dl>
  
 
  <i>task</i>
-<dl><dd>recently completed RPC request used to adjust window</dl>
+<dl><dd>recently completed RPC request used to adjust window</dd></dl>
  
 
  <i>result</i>
-<dl><dd>result code of completed RPC request</dl>
+<dl><dd>result code of completed RPC request</dd></dl>
 
 <h2>Description</h2>
 

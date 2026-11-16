@@ -10,17 +10,8 @@ description: "QuantLib::SwaptionVolatilityCube – swaption-volatility cube"
 <p>QuantLib::SwaptionVolatilityCube &#8211; swaption-volatility cube </p>
 <h2>Synopsis</h2>
 <pre><code>void registerWithVolatilitySpread ()
-
-
-
 Volatility volatilityImpl (Time optionTime, Time swapLength, Rate strike) const
-
-
-
 Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;swapTenor, Rate strike) const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits QuantLib::SwaptionVolatilityDiscrete. Inherited by SwaptionVolCube1, and SwaptionVolCube2.</p>
 <h3>Public Member Functions</h3>
@@ -42,17 +33,8 @@ Protected Attributes</code></pre>
 <p> Rate <code>atmStrike</code> (const <code>Period</code> &amp;optionTenor, const <code>Period</code> &amp;swapTenor) const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void registerWithVolatilitySpread ()
-
-
-
 Volatility volatilityImpl (Time optionTime, Time swapLength, Rate strike) const
-
-
-
 Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;swapTenor, Rate strike) const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Handle</code>&lt; <code>SwaptionVolatilityStructure</code> &gt; <code>atmVol_</code> </p>
 <p> Size <code>nStrikes_</code> </p>
@@ -67,6 +49,6 @@ Protected Attributes</code></pre>
 <p>swaption-volatility cube </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>this class is not finalized and its interface might change in subsequent releases.</dl>
+<dd>this class is not finalized and its interface might change in subsequent releases.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

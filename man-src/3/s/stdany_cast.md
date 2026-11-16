@@ -12,27 +12,18 @@ std::any_cast - std::any_cast
 
 <pre><code>template &lt;class T&gt;
 (1)(since C++ 17)
-
     T any_cast(const any &amp;operand);
-
 template &lt;class T&gt;
 (2)(since C++ 17)
-
     T any_cast(any &amp;operand);
-
 template &lt;class T&gt;
 (3)(since C++ 17)
-
     T any_cast(any &amp;&amp;operand);
-
 template &lt;class T&gt;
 (4)(since C++ 17)
-
     const T *any_cast(const any *operand) noexcept;
-
 template &lt;class T&gt;
 (5)(since C++ 17)
-
     T *any_cast(any *operand) noexcept;</code></pre> 
 Performs type-safe access to the contained object. 
 Let U be std::remove_cv_t&lt;std::remove_reference_t&lt;T&gt;&gt;. 
@@ -57,14 +48,10 @@ operand - target any object
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;any&gt;
-
 #include &lt;utility&gt;
 int main()
-
 {
     // simple example
     auto a = std::any(12);

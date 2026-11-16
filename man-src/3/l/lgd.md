@@ -86,5 +86,5 @@ description: "QuantLib::Basket –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAZ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAZ">Author</a></dt>
+<dd></dd></dl>

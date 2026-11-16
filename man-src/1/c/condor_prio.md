@@ -21,15 +21,13 @@ description: "condor_prio change priority of jobs in the HTCondor queue"
 <p> <code>-n </code> <i>schedd_name</i></p>
 <dl>
 <dt>
-<dd> Change priority of jobs queued at the specified <i>condor_schedd</i> in the local pool.</p>
-<dt>
-<dd></dl>
+</dt><dd> Change priority of jobs queued at the specified <i>condor_schedd</i> in the local pool.</dd>
+</dl>
 <p> <code>-pool </code> <i>pool_name</i> <code>-n </code> <i>schedd_name</i></p>
 <dl>
 <dt>
-<dd> Change priority of jobs queued at the specified <i>condor_schedd</i> in the specified pool.</p>
-<dt>
-<dd></dl>
+</dt><dd> Change priority of jobs queued at the specified <i>condor_schedd</i> in the specified pool.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_prio</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

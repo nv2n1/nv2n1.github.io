@@ -24,25 +24,25 @@ description: "resolved.conf, resolved.conf.d – Network Name Resolution configu
 <p>The following options are available in the [Resolve] section: </p>
 <p> <i>DNS=</i></p>
 <dl>
-<dd>A space-separated list of IPv4 and IPv6 addresses to use as system DNS servers. Each address can optionally take a port number separated with &quot;:&quot;, a network interface name or index separated with &quot;%&quot;, and a Server Name Indication (SNI) separated with &quot;#&quot;. When IPv6 address is specified with a port number, then the address must be in the square brackets. That is, the acceptable full formats are &quot;111.222.333.444:9953%ifname#example.com&quot; for IPv4 and &quot;[1111:2222::3333]:9953%ifname#example.com&quot; for IPv6. DNS requests are sent to one of the listed DNS servers in parallel to suitable per-link DNS servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) or set at runtime by external applications. For compatibility reasons, if this setting is not specified, the DNS servers listed in /etc/resolv.conf are used instead, if that file exists and any servers are configured in it. This setting defaults to the empty list.</dl>
+<dd>A space-separated list of IPv4 and IPv6 addresses to use as system DNS servers. Each address can optionally take a port number separated with &quot;:&quot;, a network interface name or index separated with &quot;%&quot;, and a Server Name Indication (SNI) separated with &quot;#&quot;. When IPv6 address is specified with a port number, then the address must be in the square brackets. That is, the acceptable full formats are &quot;111.222.333.444:9953%ifname#example.com&quot; for IPv4 and &quot;[1111:2222::3333]:9953%ifname#example.com&quot; for IPv6. DNS requests are sent to one of the listed DNS servers in parallel to suitable per-link DNS servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) or set at runtime by external applications. For compatibility reasons, if this setting is not specified, the DNS servers listed in /etc/resolv.conf are used instead, if that file exists and any servers are configured in it. This setting defaults to the empty list.</dd></dl>
 <p> <i>FallbackDNS=</i></p>
 <dl>
-<dd>A space-separated list of IPv4 and IPv6 addresses to use as the fallback DNS servers. Please see <i>DNS=</i> for acceptable format of addresses. Any per-link DNS servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>DNS=</i> above or /etc/resolv.conf. This setting is hence only used if no other DNS server information is known. If this option is not given, a compiled-in list of DNS servers is used instead.</dl>
+<dd>A space-separated list of IPv4 and IPv6 addresses to use as the fallback DNS servers. Please see <i>DNS=</i> for acceptable format of addresses. Any per-link DNS servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>DNS=</i> above or /etc/resolv.conf. This setting is hence only used if no other DNS server information is known. If this option is not given, a compiled-in list of DNS servers is used instead.</dd></dl>
 <p> <i>Domains=</i></p>
 <dl>
-<dd>A space-separated list of domains optionally prefixed with &quot;~&quot;, used for two distinct purposes described below. Defaults to the empty list. </p>
+<dd>A space-separated list of domains optionally prefixed with &quot;~&quot;, used for two distinct purposes described below. Defaults to the empty list. </dd>
 <p> Any domains <i>not</i> prefixed with &quot;~&quot; are used as search suffixes when resolving single-label hostnames (domain names which contain no dot), in order to qualify them into fully-qualified domain names (FQDNs). These &quot;search domains&quot; are strictly processed in the order they are specified in, until the name with the suffix appended is found. For compatibility reasons, if this setting is not specified, the search domains listed in /etc/resolv.conf with the <i>search</i> keyword are used instead, if that file exists and any domains are configured in it. </p>
 <p> The domains prefixed with &quot;~&quot; are called &quot;routing domains&quot;. All domains listed here (both search domains and routing domains after removing the &quot;~&quot; prefix) define a search path that preferably directs DNS queries to this interface. This search path has an effect only when suitable per-link DNS servers are known. Such servers may be defined through the <i>DNS=</i> setting (see above) and dynamically at run time, for example from DHCP leases. If no per-link DNS servers are known, routing domains have no effect. </p>
 <p> Use the construct &quot;~.&quot; (which is composed from &quot;~&quot; to indicate a routing domain and &quot;.&quot; to indicate the DNS root domain that is the implied suffix of all DNS domains) to use the DNS servers defined for this link preferably for all domains.</dl>
 <p> <i>LLMNR=</i></p>
 <dl>
-<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Link-Local Multicast Name Resolution support (m[blue]<code>RFC 4795</code>m[]<font SIZE="-2">[1]</font>) on the local host. If true, enables full LLMNR responder and resolver support. If false, disables both. If set to &quot;resolve&quot;, only resolution support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-link LLMNR settings. LLMNR will be enabled on a link only if the per-link and the global setting is on.</dl>
+<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Link-Local Multicast Name Resolution support (m[blue]<code>RFC 4795</code>m[]<font SIZE="-2">[1]</font>) on the local host. If true, enables full LLMNR responder and resolver support. If false, disables both. If set to &quot;resolve&quot;, only resolution support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-link LLMNR settings. LLMNR will be enabled on a link only if the per-link and the global setting is on.</dd></dl>
 <p> <i>MulticastDNS=</i></p>
 <dl>
-<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Multicast DNS support (m[blue]<code>RFC 6762</code>m[]<font SIZE="-2">[2]</font>) on the local host. If true, enables full Multicast DNS responder and resolver support. If false, disables both. If set to &quot;resolve&quot;, only resolution support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-link Multicast DNS settings. Multicast DNS will be enabled on a link only if the per-link and the global setting is on.</dl>
+<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Multicast DNS support (m[blue]<code>RFC 6762</code>m[]<font SIZE="-2">[2]</font>) on the local host. If true, enables full Multicast DNS responder and resolver support. If false, disables both. If set to &quot;resolve&quot;, only resolution support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-link Multicast DNS settings. Multicast DNS will be enabled on a link only if the per-link and the global setting is on.</dd></dl>
 <p> <i>DNSSEC=</i></p>
 <dl>
-<dd>Takes a boolean argument or &quot;allow-downgrade&quot;. If true all DNS lookups are DNSSEC-validated locally (excluding LLMNR and Multicast DNS). If the response to a lookup request is detected to be invalid a lookup failure is returned to applications. Note that this mode requires a DNS server that supports DNSSEC. If the DNS server does not properly support DNSSEC all validations will fail. If set to &quot;allow-downgrade&quot; DNSSEC validation is attempted, but if the server does not support DNSSEC properly, DNSSEC mode is automatically disabled. Note that this mode makes DNSSEC validation vulnerable to &quot;downgrade&quot; attacks, where an attacker might be able to trigger a downgrade to non-DNSSEC mode by synthesizing a DNS response that suggests DNSSEC was not supported. If set to false, DNS lookups are not DNSSEC validated. </p>
+<dd>Takes a boolean argument or &quot;allow-downgrade&quot;. If true all DNS lookups are DNSSEC-validated locally (excluding LLMNR and Multicast DNS). If the response to a lookup request is detected to be invalid a lookup failure is returned to applications. Note that this mode requires a DNS server that supports DNSSEC. If the DNS server does not properly support DNSSEC all validations will fail. If set to &quot;allow-downgrade&quot; DNSSEC validation is attempted, but if the server does not support DNSSEC properly, DNSSEC mode is automatically disabled. Note that this mode makes DNSSEC validation vulnerable to &quot;downgrade&quot; attacks, where an attacker might be able to trigger a downgrade to non-DNSSEC mode by synthesizing a DNS response that suggests DNSSEC was not supported. If set to false, DNS lookups are not DNSSEC validated. </dd>
 <p> Note that DNSSEC validation requires retrieval of additional DNS data, and thus results in a small DNS look-up time penalty. </p>
 <p> DNSSEC requires knowledge of &quot;trust anchors&quot; to prove data integrity. The trust anchor for the Internet root domain is built into the resolver, additional trust anchors may be defined with <code><a href="/docs/linux/man/5-dnssec-trust-anchors-d/">dnssec-trust-anchors.d</a></code>(5). Trust anchors may change at regular intervals, and old trust anchors may be revoked. In such a case DNSSEC validation is not possible until new trust anchors are configured locally or the resolver software package is updated with the new root trust anchor. In effect, when the built-in trust anchor is revoked and <i>DNSSEC=</i> is true, all further lookups will fail, as it cannot be proved anymore whether lookups are correctly signed, or validly unsigned. If <i>DNSSEC=</i> is set to &quot;allow-downgrade&quot; the resolver will automatically turn off DNSSEC validation in such a case. </p>
 <p> Client programs looking up DNS data will be informed whether lookups could be verified using DNSSEC, or whether the returned data could not be verified (either because the data was found unsigned in the DNS, or the DNS server did not support DNSSEC or no appropriate trust anchors were known). In the latter case it is assumed that client programs employ a secondary scheme to validate the returned DNS data, should this be required. </p>
@@ -52,7 +52,7 @@ description: "resolved.conf, resolved.conf.d – Network Name Resolution configu
 <p> Defaults to &quot;no&quot;.</dl>
 <p> <i>DNSOverTLS=</i></p>
 <dl>
-<dd>Takes a boolean argument or &quot;opportunistic&quot;. If true all connections to the server will be encrypted. Note that this mode requires a DNS server that supports DNS-over-TLS and has a valid certificate. If the hostname was specified in <i>DNS=</i> by using the format format &quot;address#server_name&quot; it is used to validate its certificate and also to enable Server Name Indication (SNI) when opening a TLS connection. Otherwise the certificate is checked against the server&#8217;s IP. If the DNS server does not support DNS-over-TLS all DNS requests will fail. </p>
+<dd>Takes a boolean argument or &quot;opportunistic&quot;. If true all connections to the server will be encrypted. Note that this mode requires a DNS server that supports DNS-over-TLS and has a valid certificate. If the hostname was specified in <i>DNS=</i> by using the format format &quot;address#server_name&quot; it is used to validate its certificate and also to enable Server Name Indication (SNI) when opening a TLS connection. Otherwise the certificate is checked against the server&#8217;s IP. If the DNS server does not support DNS-over-TLS all DNS requests will fail. </dd>
 <p> When set to &quot;opportunistic&quot; DNS request are attempted to send encrypted with DNS-over-TLS. If the DNS server does not support TLS, DNS-over-TLS is disabled. Note that this mode makes DNS-over-TLS vulnerable to &quot;downgrade&quot; attacks, where an attacker might be able to trigger a downgrade to non-encrypted mode by synthesizing a response that suggests DNS-over-TLS was not supported. If set to false, DNS lookups are send over UDP. </p>
 <p> Note that DNS-over-TLS requires additional data to be send for setting up an encrypted connection, and thus results in a small DNS look-up time penalty. </p>
 <p> Note that in &quot;opportunistic&quot; mode the resolver is not capable of authenticating the server, so it is vulnerable to &quot;man-in-the-middle&quot; attacks. </p>
@@ -60,18 +60,18 @@ description: "resolved.conf, resolved.conf.d – Network Name Resolution configu
 <p> Defaults to &quot;no&quot;.</dl>
 <p> <i>Cache=</i></p>
 <dl>
-<dd>Takes a boolean or &quot;no-negative&quot; as argument. If &quot;yes&quot;, resolving a domain name which already got queried earlier will return the previous result as long as it is still valid, and thus does not result in a new network request. Be aware that turning off caching comes at a performance penalty, which is particularly high when DNSSEC is used. If &quot;no-negative&quot; (the default), only positive answers are cached. </p>
+<dd>Takes a boolean or &quot;no-negative&quot; as argument. If &quot;yes&quot;, resolving a domain name which already got queried earlier will return the previous result as long as it is still valid, and thus does not result in a new network request. Be aware that turning off caching comes at a performance penalty, which is particularly high when DNSSEC is used. If &quot;no-negative&quot; (the default), only positive answers are cached. </dd>
 <p> Note that caching is turned off by default for host-local DNS servers. See <i>CacheFromLocalhost=</i> for details.</dl>
 <p> <i>CacheFromLocalhost=</i></p>
 <dl>
-<dd>Takes a boolean as argument. If &quot;no&quot; (the default), and response cames from host-local IP address (such as 127.0.0.1 or ::1), the result wouldn&#8217;t be cached in order to avoid potential duplicate local caching.</dl>
+<dd>Takes a boolean as argument. If &quot;no&quot; (the default), and response cames from host-local IP address (such as 127.0.0.1 or ::1), the result wouldn&#8217;t be cached in order to avoid potential duplicate local caching.</dd></dl>
 <p> <i>DNSStubListener=</i></p>
 <dl>
-<dd>Takes a boolean argument or one of &quot;udp&quot; and &quot;tcp&quot;. If &quot;udp&quot;, a DNS stub resolver will listen for UDP requests on address 127.0.0.53 port 53. If &quot;tcp&quot;, the stub will listen for TCP requests on the same address and port. If &quot;yes&quot; (the default), the stub listens for both UDP and TCP requests. If &quot;no&quot;, the stub listener is disabled. </p>
+<dd>Takes a boolean argument or one of &quot;udp&quot; and &quot;tcp&quot;. If &quot;udp&quot;, a DNS stub resolver will listen for UDP requests on address 127.0.0.53 port 53. If &quot;tcp&quot;, the stub will listen for TCP requests on the same address and port. If &quot;yes&quot; (the default), the stub listens for both UDP and TCP requests. If &quot;no&quot;, the stub listener is disabled. </dd>
 <p> Note that the DNS stub listener is turned off implicitly when its listening address and port are already in use.</dl>
 <p> <i>DNSStubListenerExtra=</i></p>
 <dl>
-<dd>Takes an IPv4 or IPv6 address to listen on. The address may be optionally prefixed with a protocol name (&quot;udp&quot; or &quot;tcp&quot;) separated with &quot;:&quot;. If the protocol is not specified, the service will listen on both UDP and TCP. It may be also optionally suffixed by a numeric port number with separator &quot;:&quot;. When an IPv6 address is specified with a port number, then the address must be in the square brackets. If the port is not specified, then the service uses port 53. Note that this is independent of the primary DNS stub configured with <i>DNSStubListener=</i>, and only configures <i>additional</i> sockets to listen on. This option can be specified multiple times. If an empty string is assigned, then the all previous assignments are cleared. Defaults to unset. </p>
+<dd>Takes an IPv4 or IPv6 address to listen on. The address may be optionally prefixed with a protocol name (&quot;udp&quot; or &quot;tcp&quot;) separated with &quot;:&quot;. If the protocol is not specified, the service will listen on both UDP and TCP. It may be also optionally suffixed by a numeric port number with separator &quot;:&quot;. When an IPv6 address is specified with a port number, then the address must be in the square brackets. If the port is not specified, then the service uses port 53. Note that this is independent of the primary DNS stub configured with <i>DNSStubListener=</i>, and only configures <i>additional</i> sockets to listen on. This option can be specified multiple times. If an empty string is assigned, then the all previous assignments are cleared. Defaults to unset. </dd>
 <p> Examples: </p>
 <dl>
 <dd>
@@ -83,28 +83,29 @@ DNSStubListenerExtra=tcp:192.168.10.12
 DNSStubListenerExtra=udp:2001:db8:0:f102::12
 DNSStubListenerExtra=tcp:192.168.10.13:9953
 DNSStubListenerExtra=udp:[2001:db8:0:f102::13]:9953</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <i>ReadEtcHosts=</i></p>
 <dl>
-<dd>Takes a boolean argument. If &quot;yes&quot; (the default), <code>systemd-resolved</code> will read /etc/hosts, and try to resolve hosts or address by using the entries in the file before sending query to DNS servers.</dl>
+<dd>Takes a boolean argument. If &quot;yes&quot; (the default), <code>systemd-resolved</code> will read /etc/hosts, and try to resolve hosts or address by using the entries in the file before sending query to DNS servers.</dd></dl>
 <p> <i>ResolveUnicastSingleLabel=</i></p>
 <dl>
-<dd>Takes a boolean argument. When false (the default), <code>systemd-resolved</code> will not resolve A and AAAA queries for single-label names over classic DNS. Note that such names may still be resolved if search domains are specified (see <i>Domains=</i> above), or using other mechanisms, in particular via LLMNR or from /etc/hosts. When true, queries for single-label names will be forwarded to global DNS servers even if no search domains are defined. </p>
+<dd>Takes a boolean argument. When false (the default), <code>systemd-resolved</code> will not resolve A and AAAA queries for single-label names over classic DNS. Note that such names may still be resolved if search domains are specified (see <i>Domains=</i> above), or using other mechanisms, in particular via LLMNR or from /etc/hosts. When true, queries for single-label names will be forwarded to global DNS servers even if no search domains are defined. </dd>
 <p> This option is provided for compatibility with configurations where <i>public DNS servers are not used</i>. Forwarding single-label names to servers not under your control is not standard-conformant, see m[blue]<code>IAB Statement</code>m[]<font SIZE="-2">[3]</font>, and may create a privacy and security risk.</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/5-dnssec-trust-anchors-d/">dnssec-trust-anchors.d</a></code>(5), <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>RFC 4795</p>
+<dt> 1.</dt>
+<dd>RFC 4795</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4795">https://tools.ietf.org/html/rfc4795</a></dl>
-<dt> 2.</p>
-<dd>RFC 6762</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4795">https://tools.ietf.org/html/rfc4795</a></dd></dl>
+<dt> 2.</dt>
+<dd>RFC 6762</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc6762">https://tools.ietf.org/html/rfc6762</a></dl>
-<dt> 3.</p>
-<dd>IAB Statement</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc6762">https://tools.ietf.org/html/rfc6762</a></dd></dl>
+<dt> 3.</dt>
+<dd>IAB Statement</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.iab.org/documents/correspondence-reports-documents/2013-2/iab-statement-dotless-domains-considered-harmful/">https://www.iab.org/documents/correspondence-reports-documents/2013-2/iab-statement-dotless-domains-considered-harmful/</a></dl>
+<dd><a rel="nofollow" href="https://www.iab.org/documents/correspondence-reports-documents/2013-2/iab-statement-dotless-domains-considered-harmful/">https://www.iab.org/documents/correspondence-reports-documents/2013-2/iab-statement-dotless-domains-considered-harmful/</a></dd></dl>
+</dl>

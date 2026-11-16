@@ -10,11 +10,11 @@ description: "ipsec_spi – list IPSEC Security Associations"
 <p>ipsec_spi &#8211; list IPSEC Security Associations</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>spi</i></p>
-<dd><i>cat/proc/net/ipsec_spi</i></p>
+<dt> <code>ipsec</code> <i>spi</i></dt>
+<dd><i>cat/proc/net/ipsec_spi</i></dd>
 <dd>
 <h2>Obsolete</h2>
-<dd>Note that eroute is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</p>
+</dd><dd>Note that eroute is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec_spi is a read-only file that lists the current IPSEC Security Associations. A Security Association (SA) is a transform through which packet contents are to be processed before being forwarded. A transform can be an IPv4-in-IPv4 or IPv6-in-IPv6 encapsulation, an IPSEC Authentication Header (authentication with no encryption), or an IPSEC Encapsulation Security Payload (encryption, possibly including authentication). </p>
 <p> When a packet is passed from a higher networking layer through an IPSEC virtual interface, a search in the extended routing table (see <code><a href="/docs/linux/man/5-ipsec_eroute/">ipsec_eroute</a></code>(5)) yields a IP protocol number , a Security Parameters Index (SPI) and an effective destination address When an IPSEC packet arrives from the network, its ostensible destination, an SPI and an IP protocol specified by its outermost IPSEC header are used. The destination/SPI/protocol combination is used to select a relevant SA. (See <code><a href="/docs/linux/man/5-ipsec_spigrp/">ipsec_spigrp</a></code>(5) for discussion of how multiple transforms are combined.) </p>
@@ -23,67 +23,67 @@ description: "ipsec_spi – list IPSEC Security Associations"
 <p> A table entry consists of: </p>
 <p> +</p>
 <dl>
-<dd><code>SAID</code></dl>
+<dd><code>SAID</code></dd></dl>
 <p> +</p>
 <dl>
-<dd>&lt;transform name (proto,encalg,authalg)&gt;:</dl>
+<dd>&lt;transform name (proto,encalg,authalg)&gt;:</dd></dl>
 <p> +</p>
 <dl>
-<dd>direction (dir=)</dl>
+<dd>direction (dir=)</dd></dl>
 <p> +</p>
 <dl>
-<dd>source address (src=)</dl>
+<dd>source address (src=)</dd></dl>
 <p> +</p>
 <dl>
-<dd>source and destination addresses and masks for inner header policy check addresses (policy=), as dotted-quads or coloned hex, separated by &#8216;-&gt;&#8217;, for IPv4-in-IPv4 or IPv6-in-IPv6 SAs only</dl>
+<dd>source and destination addresses and masks for inner header policy check addresses (policy=), as dotted-quads or coloned hex, separated by &#8216;-&gt;&#8217;, for IPv4-in-IPv4 or IPv6-in-IPv6 SAs only</dd></dl>
 <p> +</p>
 <dl>
-<dd>initialisation vector length and value (iv_bits=, iv=) if non-zero</dl>
+<dd>initialisation vector length and value (iv_bits=, iv=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>out-of-order window size, number of out-of-order errors, sequence number, recently received packet bitmask, maximum difference between sequence numbers (ooowin=, ooo_errs=, seq=, bit=, max_seq_diff=) if SA is AH or ESP and if individual items are non-zero</dl>
+<dd>out-of-order window size, number of out-of-order errors, sequence number, recently received packet bitmask, maximum difference between sequence numbers (ooowin=, ooo_errs=, seq=, bit=, max_seq_diff=) if SA is AH or ESP and if individual items are non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>extra flags (flags=) if any are set</dl>
+<dd>extra flags (flags=) if any are set</dd></dl>
 <p> +</p>
 <dl>
-<dd>authenticator length in bits (alen=) if non-zero</dl>
+<dd>authenticator length in bits (alen=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>authentication key length in bits (aklen=) if non-zero</dl>
+<dd>authentication key length in bits (aklen=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>authentication errors (auth_errs=) if non-zero</dl>
+<dd>authentication errors (auth_errs=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>encryption key length in bits (eklen=) if non-zero</dl>
+<dd>encryption key length in bits (eklen=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>encryption size errors (encr_size_errs=) if non-zero</dl>
+<dd>encryption size errors (encr_size_errs=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>encryption padding error warnings (encr_pad_errs=) if non-zero</dl>
+<dd>encryption padding error warnings (encr_pad_errs=) if non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>lifetimes legend, c=Current status, s=Soft limit when exceeded will initiate rekeying, h=Hard limit will cause termination of SA (life(c,s,h)=)</dl>
+<dd>lifetimes legend, c=Current status, s=Soft limit when exceeded will initiate rekeying, h=Hard limit will cause termination of SA (life(c,s,h)=)</dd></dl>
 <p> +</p>
 <dl>
-<dd>number of connections to which the SA is allocated (c), that will cause a rekey (s), that will cause an expiry (h) (alloc=), if any value is non-zero</dl>
+<dd>number of connections to which the SA is allocated (c), that will cause a rekey (s), that will cause an expiry (h) (alloc=), if any value is non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>number of bytes processesd by this SA (c), that will cause a rekey (s), that will cause an expiry (h) (bytes=), if any value is non-zero</dl>
+<dd>number of bytes processesd by this SA (c), that will cause a rekey (s), that will cause an expiry (h) (bytes=), if any value is non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>time since the SA was added (c), until rekey (s), until expiry (h), in seconds (add=)</dl>
+<dd>time since the SA was added (c), until rekey (s), until expiry (h), in seconds (add=)</dd></dl>
 <p> +</p>
 <dl>
-<dd>time since the SA was first used (c), until rekey (s), until expiry (h), in seconds (used=), if any value is non-zero</dl>
+<dd>time since the SA was first used (c), until rekey (s), until expiry (h), in seconds (used=), if any value is non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>number of packets processesd by this SA (c), that will cause a rekey (s), that will cause an expiry (h) (packets=), if any value is non-zero</dl>
+<dd>number of packets processesd by this SA (c), that will cause a rekey (s), that will cause an expiry (h) (packets=), if any value is non-zero</dd></dl>
 <p> +</p>
 <dl>
-<dd>time since the last packet was processed, in seconds (idle=), if SA has been used </p>
+<dd>time since the last packet was processed, in seconds (idle=), if SA has been used </dd>
 <p> average compression ratio (ratio=)</dl>
 <h2>Examples</h2>
 <p><code>tun.12a [at] 192.168.43.1 IPIP: dir=out src=192.168.43.2</code><code> life(c,s,h)=bytes(14073,0,0)add(269,0,0)</code><code> use(149,0,0)packets(14,0,0)</code><code> idle=23</code> </p>
@@ -101,4 +101,5 @@ description: "ipsec_spi – list IPSEC Security Associations"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>
+</dl>

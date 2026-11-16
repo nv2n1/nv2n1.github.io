@@ -20,118 +20,118 @@ description: "most – browse or page through a text file"
 <p> Commands are listed below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-1</code></p>
-<dd> VT100 mode. This is meaningful only on VMS systems. This option should be used if the terminal is strictly a VT100. This implies that the terminal does not have the ability to delete and insert multiple lines. VT102s and above have this ability.</p>
-<dt><code>-b</code></p>
-<dd> Binary mode. Use this switch when you want to view files containing 8 bit characters. <i>most</i> will display the file 16 bytes per line in hexadecimal notation. A typical line looks like:</p>
+<dt><code>-1</code></dt>
+<dd> VT100 mode. This is meaningful only on VMS systems. This option should be used if the terminal is strictly a VT100. This implies that the terminal does not have the ability to delete and insert multiple lines. VT102s and above have this ability.</dd>
+<dt><code>-b</code></dt>
+<dd> Binary mode. Use this switch when you want to view files containing 8 bit characters. <i>most</i> will display the file 16 bytes per line in hexadecimal notation. A typical line looks like:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 01000000 40001575 9C23A020 4000168D     ....@..u.#. @...
 </pre>
+</dd><dt>
+</dt><dd> When used with the <code>-v</code> option, the same line looks like:</dd>
 <dt>
-<dd> When used with the <code>-v</code> option, the same line looks like:</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
 ^A^@^@^@  @^@^U u 9C #A0    @^@^V8D     ....@..u.#. @...
 </pre>
-<dt><code>-C</code></p>
-<dd> Disable color support.</p>
-<dt><code>-d</code></p>
-<dd> Omit the backslash mark used to denote a wrapped line.</p>
-<dt><code>-M</code></p>
-<dd> Disable the use of mmap.</p>
-<dt><code>-s</code></p>
-<dd> Squeeze. Replace multiple blank lines with a single blank line.</p>
-<dt><code>-z</code></p>
-<dd> option turns off gunzip-on-the-fly.</p>
-<dt><code>-v</code></p>
-<dd> Display control characters as in `^A&#8217; for control A. Normally <i>most</i> does not interpret control characters.</p>
-<dt><code>-t</code></p>
-<dd> Display tabs as `^I&#8217;. This option is meaningful only when used with the <code>-v</code> option.</p>
-<dt><code>+</code><i>lineno</i></p>
-<dd> Start up at <i>lineno</i>.</p>
-<dt><code>-c</code></p>
-<dd> Make searches case sensitive. By default, they are not.</p>
-<dt><code>-u</code></p>
-<dd> Disable UTF-8 mode even if the locale dictates it.</p>
-<dt><code>+u</code></p>
-<dd> Force UTF-8 mode. By default most will use the current locale to determine if UTF-8 mode shoul be used. The <code>+u</code> and <code>-u</code> switches allow the behavior to be overridden.</p>
-<dt><code>+d</code></p>
-<dd> This switch should only be used if you want the option to delete a file while viewing it. This makes it easier to clean unwanted files out of a directory. The file is deleted with the interactive key sequence `<code>:D</code>&#8216; and then confirming with `<code>y</code>&#8216;.</p>
-<dt><code>+/</code><i>string</i></p>
-<dd> Start up at the line containing the first occurrence of <i>string</i>.</dl>
+</dd><dt><code>-C</code></dt>
+<dd> Disable color support.</dd>
+<dt><code>-d</code></dt>
+<dd> Omit the backslash mark used to denote a wrapped line.</dd>
+<dt><code>-M</code></dt>
+<dd> Disable the use of mmap.</dd>
+<dt><code>-s</code></dt>
+<dd> Squeeze. Replace multiple blank lines with a single blank line.</dd>
+<dt><code>-z</code></dt>
+<dd> option turns off gunzip-on-the-fly.</dd>
+<dt><code>-v</code></dt>
+<dd> Display control characters as in `^A&#8217; for control A. Normally <i>most</i> does not interpret control characters.</dd>
+<dt><code>-t</code></dt>
+<dd> Display tabs as `^I&#8217;. This option is meaningful only when used with the <code>-v</code> option.</dd>
+<dt><code>+</code><i>lineno</i></dt>
+<dd> Start up at <i>lineno</i>.</dd>
+<dt><code>-c</code></dt>
+<dd> Make searches case sensitive. By default, they are not.</dd>
+<dt><code>-u</code></dt>
+<dd> Disable UTF-8 mode even if the locale dictates it.</dd>
+<dt><code>+u</code></dt>
+<dd> Force UTF-8 mode. By default most will use the current locale to determine if UTF-8 mode shoul be used. The <code>+u</code> and <code>-u</code> switches allow the behavior to be overridden.</dd>
+<dt><code>+d</code></dt>
+<dd> This switch should only be used if you want the option to delete a file while viewing it. This makes it easier to clean unwanted files out of a directory. The file is deleted with the interactive key sequence `<code>:D</code>&#8216; and then confirming with `<code>y</code>&#8216;.</dd>
+<dt><code>+/</code><i>string</i></dt>
+<dd> Start up at the line containing the first occurrence of <i>string</i>.</dd></dl>
 <h2>COMMAND USAGE</h2>
 <p> The commands take effect immediately; it is not necessary to type a carriage return. </p>
 <p> In the following commands, <i>i</i> is a numerical argument (1 by default).</p>
 <dl>
-<dt><code>SPACE</code>, <code>CTRL-D</code>, <code>NEXT_SCREEN</code></p>
-<dd> Display another windowful, or jump <i>i</i> windowfuls if <i>i</i> is specified.</p>
-<dt><code>RETURN</code>, <code>DOWN_ARROW</code>, <code>V</code>, <code>CTRL-N</code></p>
-<dd> Display another line, or <i>i</i> more lines, if specified.</p>
-<dt><code>UP_ARROW</code>, <code>^</code>, <code>CTRL-P</code></p>
-<dd> Display previous line, or <i>i</i> previous lines, if specified.</p>
-<dt><code>T</code>, <code>ESCAPE</code>&lt;</p>
-<dd> Move to top of buffer.</p>
-<dt><code>B</code>, <code>ESCAPE</code>&gt;</p>
-<dd> Move to bottom of buffer.</p>
-<dt><code>RIGHT_ARROW</code>, <code>TAB</code>, <code>&gt;</code></p>
-<dd> Scroll window left 60<i>i</i> columns to view lines that are beyond the right margin of the window.</p>
-<dt><code>LEFT_ARROW</code>, <code>CTRL-B</code>, <code>&lt;</code></p>
-<dd> Scroll window right 60<i>i</i> columns to view lines that are beyond the left margin of the window.</p>
-<dt><code>U</code>, <code>CTRL-U</code>, <code>DELETE</code>, <code>PREV_SCREEN</code></p>
-<dd> Skip back <i>i</i> windowfuls and then print a windowful.</p>
-<dt><code>R</code>, <code>CTRL-R</code></p>
-<dd> Redraw the window.</p>
-<dt><code>J</code>, <code>G</code></p>
-<dd> If <i>i</i> is not specified, then prompt for a line number then jump to that line otherwise just jump to line <i>i</i>.</p>
-<dt><code>%</code></p>
-<dd> If <i>i</i> is not specified, then prompt for a percent number then jump to that percent of the file otherwise just jump to <i>i</i> percent of the file.</p>
-<dt><code>W</code>, <code>w</code></p>
-<dd> If the current screen width is 80, make it 132 and vice-versa. For other values, this command is ignored.</p>
-<dt><code>Q</code>, <code>CTRL-X CTRL-C</code>, <code>CTRL-K E</code></p>
-<dd> Exit from <i>most</i>. On VMS, ^Z also exits.</p>
-<dt><code>h</code>, <code>CTRL-H</code>, <code>HELP</code>, <code>PF2</code></p>
-<dd> Help. Give a description of all the <i>most</i> commands. The <i>most</i> environment variable <code>MOST_HELP</code> must be set for this to be meaningful.</p>
-<dt><code>f</code>, <code>/</code>, <code>CTRL-F</code>, <code>FIND</code>, <code>GOLD PF3</code></p>
-<dd> Prompt for a string and search forward from the current line for <i>i</i>th distinct line containing the string. <code>CTRL-G</code> aborts.</p>
-<dt><code>?</code></p>
-<dd> Prompt for a string and search backward for the <i>i</i>th distinct line containing the string. <code>CTRL-G</code> aborts.</p>
-<dt><code>n</code></p>
-<dd> Search for the next <i>i</i> lines containing an occurrence of the last search string in the direction of the previous search.</dl>
+<dt><code>SPACE</code>, <code>CTRL-D</code>, <code>NEXT_SCREEN</code></dt>
+<dd> Display another windowful, or jump <i>i</i> windowfuls if <i>i</i> is specified.</dd>
+<dt><code>RETURN</code>, <code>DOWN_ARROW</code>, <code>V</code>, <code>CTRL-N</code></dt>
+<dd> Display another line, or <i>i</i> more lines, if specified.</dd>
+<dt><code>UP_ARROW</code>, <code>^</code>, <code>CTRL-P</code></dt>
+<dd> Display previous line, or <i>i</i> previous lines, if specified.</dd>
+<dt><code>T</code>, <code>ESCAPE</code>&lt;</dt>
+<dd> Move to top of buffer.</dd>
+<dt><code>B</code>, <code>ESCAPE</code>&gt;</dt>
+<dd> Move to bottom of buffer.</dd>
+<dt><code>RIGHT_ARROW</code>, <code>TAB</code>, <code>&gt;</code></dt>
+<dd> Scroll window left 60<i>i</i> columns to view lines that are beyond the right margin of the window.</dd>
+<dt><code>LEFT_ARROW</code>, <code>CTRL-B</code>, <code>&lt;</code></dt>
+<dd> Scroll window right 60<i>i</i> columns to view lines that are beyond the left margin of the window.</dd>
+<dt><code>U</code>, <code>CTRL-U</code>, <code>DELETE</code>, <code>PREV_SCREEN</code></dt>
+<dd> Skip back <i>i</i> windowfuls and then print a windowful.</dd>
+<dt><code>R</code>, <code>CTRL-R</code></dt>
+<dd> Redraw the window.</dd>
+<dt><code>J</code>, <code>G</code></dt>
+<dd> If <i>i</i> is not specified, then prompt for a line number then jump to that line otherwise just jump to line <i>i</i>.</dd>
+<dt><code>%</code></dt>
+<dd> If <i>i</i> is not specified, then prompt for a percent number then jump to that percent of the file otherwise just jump to <i>i</i> percent of the file.</dd>
+<dt><code>W</code>, <code>w</code></dt>
+<dd> If the current screen width is 80, make it 132 and vice-versa. For other values, this command is ignored.</dd>
+<dt><code>Q</code>, <code>CTRL-X CTRL-C</code>, <code>CTRL-K E</code></dt>
+<dd> Exit from <i>most</i>. On VMS, ^Z also exits.</dd>
+<dt><code>h</code>, <code>CTRL-H</code>, <code>HELP</code>, <code>PF2</code></dt>
+<dd> Help. Give a description of all the <i>most</i> commands. The <i>most</i> environment variable <code>MOST_HELP</code> must be set for this to be meaningful.</dd>
+<dt><code>f</code>, <code>/</code>, <code>CTRL-F</code>, <code>FIND</code>, <code>GOLD PF3</code></dt>
+<dd> Prompt for a string and search forward from the current line for <i>i</i>th distinct line containing the string. <code>CTRL-G</code> aborts.</dd>
+<dt><code>?</code></dt>
+<dd> Prompt for a string and search backward for the <i>i</i>th distinct line containing the string. <code>CTRL-G</code> aborts.</dd>
+<dt><code>n</code></dt>
+<dd> Search for the next <i>i</i> lines containing an occurrence of the last search string in the direction of the previous search.</dd></dl>
 <p> <code>m</code>, <code>SELECT</code>, <code>CTRL-@</code>, <code>CTRL-K M</code>, <code>PERIOD</code></p>
 <dl>
 <dt>
-<dd> Set a mark on the current line for later reference.</p>
-<dt><code>INSERT_HERE, CTRL-X CTRL-X, COMMA, CTRL-K RETURN, GOLD PERIOD</code></p>
-<dd> Set a mark on the current line but return to previous mark. This allows the user to toggle back and forth between two positions in the file.</p>
-<dt><code>l</code>, <code>L</code></p>
-<dd> Toggle locking for this window. The window is locked if there is a `*&#8217; at the left edge of the status line. Windows locked together, scroll together.</p>
-<dt><code>CTRL-X 2</code>, <code>CTRL-W 2</code>, <code>GOLD X</code></p>
-<dd> Split this window in half.</p>
-<dt><code>CTRL-X o</code>, <code>CTRL-W o</code>, <code>o</code>, <code>GOLD</code>UP<code>, </code>GOLD<code>DOWN</code></p>
-<dd> Move to other window.</p>
-<dt><code>CTRL-X 0</code>, <code>CTRL-W 0</code>, <code>GOLD V</code></p>
-<dd> Delete this window.</p>
-<dt><code>CTRL-X 1</code>, <code>CTRL-W 1</code>, <code>GOLD O</code></p>
-<dd> Delete all other windows, leaving only one window.</p>
-<dt><code>E</code>, <code>e</code></p>
-<dd> Edit this file.</p>
-<dt><code>$</code>, <code>ESC $</code></p>
-<dd> This is system dependent. On VMS, this causes <i>most</i> to spawn a subprocess. When the user exits the process, <i>most</i> is resumed. On <font SIZE="-1">UNIX</font> systems, <i>most</i> simply suspends itself.</p>
-<dt><code>:n</code></p>
-<dd> Skip to the next filename given in the command line. Use the arrow keys to scroll forward or backward through the file list. `<code>Q</code>&#8216; quits <i>most</i> and any other key selects the given file.</p>
-<dt><code>:c</code></p>
-<dd> Toggle case sensitive search.</p>
-<dt><code>:D</code></p>
-<dd> Delete current file. This command is only meaningful with the <code>+d</code> switch.</p>
-<dt><code>:o</code>, <code>:O</code></p>
-<dd> Toggle various options. With this key sequence, <i>most</i> displays a prompt asking the user to hit one of: <code>bdtvw</code>. The `<code>b</code>&#8216;, `<code>t</code>&#8216;, `<code>v</code>&#8216;, and `<code>w</code>&#8216; options have the same meaning as the command line switches. For example, the `<code>w</code>&#8216; option will toggle wrapping on and off for the current window.</p>
+</dt><dd> Set a mark on the current line for later reference.</dd>
+<dt><code>INSERT_HERE, CTRL-X CTRL-X, COMMA, CTRL-K RETURN, GOLD PERIOD</code></dt>
+<dd> Set a mark on the current line but return to previous mark. This allows the user to toggle back and forth between two positions in the file.</dd>
+<dt><code>l</code>, <code>L</code></dt>
+<dd> Toggle locking for this window. The window is locked if there is a `*&#8217; at the left edge of the status line. Windows locked together, scroll together.</dd>
+<dt><code>CTRL-X 2</code>, <code>CTRL-W 2</code>, <code>GOLD X</code></dt>
+<dd> Split this window in half.</dd>
+<dt><code>CTRL-X o</code>, <code>CTRL-W o</code>, <code>o</code>, <code>GOLD</code>UP<code>, </code>GOLD<code>DOWN</code></dt>
+<dd> Move to other window.</dd>
+<dt><code>CTRL-X 0</code>, <code>CTRL-W 0</code>, <code>GOLD V</code></dt>
+<dd> Delete this window.</dd>
+<dt><code>CTRL-X 1</code>, <code>CTRL-W 1</code>, <code>GOLD O</code></dt>
+<dd> Delete all other windows, leaving only one window.</dd>
+<dt><code>E</code>, <code>e</code></dt>
+<dd> Edit this file.</dd>
+<dt><code>$</code>, <code>ESC $</code></dt>
+<dd> This is system dependent. On VMS, this causes <i>most</i> to spawn a subprocess. When the user exits the process, <i>most</i> is resumed. On <font SIZE="-1">UNIX</font> systems, <i>most</i> simply suspends itself.</dd>
+<dt><code>:n</code></dt>
+<dd> Skip to the next filename given in the command line. Use the arrow keys to scroll forward or backward through the file list. `<code>Q</code>&#8216; quits <i>most</i> and any other key selects the given file.</dd>
+<dt><code>:c</code></dt>
+<dd> Toggle case sensitive search.</dd>
+<dt><code>:D</code></dt>
+<dd> Delete current file. This command is only meaningful with the <code>+d</code> switch.</dd>
+<dt><code>:o</code>, <code>:O</code></dt>
+<dd> Toggle various options. With this key sequence, <i>most</i> displays a prompt asking the user to hit one of: <code>bdtvw</code>. The `<code>b</code>&#8216;, `<code>t</code>&#8216;, `<code>v</code>&#8216;, and `<code>w</code>&#8216; options have the same meaning as the command line switches. For example, the `<code>w</code>&#8216; option will toggle wrapping on and off for the current window.</dd>
 <dt>
-<dd> The `<code>d</code>&#8216; option must be used with a prefix integer <i>i</i>. All lines indented beyond <i>i</i> columns will not be displayed. For example, consider the fragment:</p>
+</dt><dd> The `<code>d</code>&#8216; option must be used with a prefix integer <i>i</i>. All lines indented beyond <i>i</i> columns will not be displayed. For example, consider the fragment:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 int main(int argc, char **argv)
 {
@@ -143,32 +143,32 @@ int main(int argc, char **argv)
     return 0;
 }
 </code></pre>
+</dd><dt>
+</dt><dd> The key sequence `<code>1:od</code>&#8216; will cause <i>most</i> to display the file ignoring all lines indented beyond the first column. So for the example above, <i>most</i> would display:</dd>
 <dt>
-<dd> The key sequence `<code>1:od</code>&#8216; will cause <i>most</i> to display the file ignoring all lines indented beyond the first column. So for the example above, <i>most</i> would display:</p>
-<dt>
-<dd>
+</dt><dd>
 int main(int argc, char **argv)&#8230;<br />
-}</p>
+}</dd>
 <dt>
-<dd> where the `&#8230;&#8217; indicates lines follow are not displayed.</dl>
+</dt><dd> where the `&#8230;&#8217; indicates lines follow are not displayed.</dd></dl>
 <h2>HINTS</h2>
 <p> <code>CTRL-G</code> aborts the commands requiring the user to type something in at a prompt. The backquote key has a special meaning here. It is used to quote certain characters. This is useful when search for the occurrence of a string with a control character or a string at the beginning of a line. In the latter case, to find the occurrence of `The&#8217; at the beginning of a line, enter <code>`^JThe</code> where <code>`</code> quotes the <code>CTRL-J</code>.</p>
 <h2>ENVIRONMENT</h2>
 <p> <i>most</i> uses the following environment variables:</p>
 <dl>
-<dt><code>MOST_SWITCHES</code></p>
-<dd> This variable sets commonly used switches. For example, some people prefer to use <i>most</i> with the <code>-s</code> option so that excess blank lines are not displayed. On VMS this is normally done done in the login.com through the line:</p>
+<dt><code>MOST_SWITCHES</code></dt>
+<dd> This variable sets commonly used switches. For example, some people prefer to use <i>most</i> with the <code>-s</code> option so that excess blank lines are not displayed. On VMS this is normally done done in the login.com through the line:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ define MOST_SWITCHES &quot;-s&quot;
 </pre>
-<dt><code>MOST_EDITOR</code>, <code>SLANG_EDITOR</code></p>
-<dd> Either of these environment variables specify an editor for <i>most</i> to invoke to edit a file. The value can contain %s and %d formatting descriptors that represent the file name and line number, respectively. For example, if JED is your editor, then set <code>MOST_EDITOR </code> to &#8216;jed %s -g %d&#8217;.</p>
-<dt><code>MOST_HELP</code></p>
-<dd> This variable may be used to specify an alternate help file.</p>
-<dt><code>MOST_INITFILE</code></p>
-<dd> Set this variable to specify the initialization file to load during startup. The default action is to load the system configuration file and then a personal configuration file called <i>.mostrc</i> on Unix, and <i>most.rc</i> on other systems.</dl>
+</dd><dt><code>MOST_EDITOR</code>, <code>SLANG_EDITOR</code></dt>
+<dd> Either of these environment variables specify an editor for <i>most</i> to invoke to edit a file. The value can contain %s and %d formatting descriptors that represent the file name and line number, respectively. For example, if JED is your editor, then set <code>MOST_EDITOR </code> to &#8216;jed %s -g %d&#8217;.</dd>
+<dt><code>MOST_HELP</code></dt>
+<dd> This variable may be used to specify an alternate help file.</dd>
+<dt><code>MOST_INITFILE</code></dt>
+<dd> Set this variable to specify the initialization file to load during startup. The default action is to load the system configuration file and then a personal configuration file called <i>.mostrc</i> on Unix, and <i>most.rc</i> on other systems.</dd></dl>
 <h2>CONFIGURATION FILE SYNTAX</h2>
 <p> When most starts up, it tries to read a system configuration file and then a personal configuration file. These files may be used to specify keybindings and colors. </p>
 <p> To bind a key to a particular function use the syntax: </p>

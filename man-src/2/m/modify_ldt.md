@@ -39,12 +39,12 @@ int modify_ldt(int func, void *ptr, unsigned long bytecount);
 <p> On success, <code>modify_ldt</code>() returns either the actual number of bytes read (for reading) or 0 (for writing). On failure, <code>modify_ldt</code>() returns -1 and sets <i>errno</i> to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>ptr</i> points outside the address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>ptr</i> is 0, or <i>func</i> is 1 and <i>bytecount</i> is not equal to the size of the structure <i>user_desc</i>, or <i>func</i> is 1 or 0x11 and the new LDT entry has invalid values.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <i>func</i> is neither 0, 1, 2, nor 0x11.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>ptr</i> points outside the address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>ptr</i> is 0, or <i>func</i> is 1 and <i>bytecount</i> is not equal to the size of the structure <i>user_desc</i>, or <i>func</i> is 1 or 0x11 and the new LDT entry has invalid values.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <i>func</i> is neither 0, 1, 2, nor 0x11.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> This call is Linux-specific and should not be used in programs intended to be portable.</p>
 <h2>NOTES</h2>

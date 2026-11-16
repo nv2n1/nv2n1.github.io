@@ -19,15 +19,15 @@ git peek - remote[--upload - pack = &lt;git - upload - pack&gt;] [&lt;host&gt;:]
 <p> &#8211;upload-pack=&lt;git-upload-pack&gt;</p>
 <dl>
 <dt>
-<dd> Use this to specify the path to <i>git-upload-pack</i> on the remote side, if it is not found on your $PATH. Some installations of sshd ignores the user&#8217;s environment setup scripts for login shells (e.g. .bash_profile) and your privately installed git may not be found on the system default $PATH. Another workaround suggested is to set up your $PATH in &quot;.bashrc&quot;, but this flag is for people who do not want to pay the overhead for non-interactive shells, but prefer having a lean .bashrc file (they set most of the things up in .bash_profile).</dl>
+</dt><dd> Use this to specify the path to <i>git-upload-pack</i> on the remote side, if it is not found on your $PATH. Some installations of sshd ignores the user&#8217;s environment setup scripts for login shells (e.g. .bash_profile) and your privately installed git may not be found on the system default $PATH. Another workaround suggested is to set up your $PATH in &quot;.bashrc&quot;, but this flag is for people who do not want to pay the overhead for non-interactive shells, but prefer having a lean .bashrc file (they set most of the things up in .bash_profile).</dd></dl>
 <p> &lt;host&gt;</p>
 <dl>
 <dt>
-<dd> A remote host that houses the repository. When this part is specified, <i>git-upload-pack</i> is invoked via ssh.</dl>
+</dt><dd> A remote host that houses the repository. When this part is specified, <i>git-upload-pack</i> is invoked via ssh.</dd></dl>
 <p> &lt;directory&gt;</p>
 <dl>
 <dt>
-<dd> The repository to sync from.</dl>
+</dt><dd> The repository to sync from.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

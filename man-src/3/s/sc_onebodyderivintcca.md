@@ -11,7 +11,6 @@ description: "sc::OneBodyDerivIntCCA –"
 <p> This implements one body derivative integrals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obintcca.h&gt;</code></pre>
 <p> Inherits <code>sc::OneBodyDerivInt</code>.</p>
 <h3>Public Member Functions</h3>

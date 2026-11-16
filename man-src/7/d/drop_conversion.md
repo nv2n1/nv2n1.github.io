@@ -14,14 +14,14 @@ description: "DROP CONVERSION – remove a conversion"
 <p><code>DROP CONVERSION</code> removes a previously defined conversion. To be able to drop a conversion, you must own the conversion.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the conversion does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of the conversion. The conversion name can be schema-qualified.</p>
-<dt><code>CASCADE</code></p>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the conversion does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the conversion. The conversion name can be schema-qualified.</dd>
+<dt><code>CASCADE</code></dt>
 <dd>
-<dt><code>RESTRICT</code></p>
-<dd>These key words do not have any effect, since there are no dependencies on conversions.</dl>
+</dd><dt><code>RESTRICT</code></dt>
+<dd>These key words do not have any effect, since there are no dependencies on conversions.</dd></dl>
 <h2>Examples</h2>
 <p>To drop the conversion named myname: </p>
 <pre>DROP CONVERSION myname;</pre>

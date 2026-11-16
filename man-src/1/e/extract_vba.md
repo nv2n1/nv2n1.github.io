@@ -27,8 +27,8 @@ description: "extract_vba – A utility to extract a VBA project from an Excel 2
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help or -h</code></p>
-<dd> Print the help documentation.</dl>
+<dt><code>&#8211;help or -h</code></dt>
+<dd> Print the help documentation.</dd></dl>
 <h2>AUTHOR</h2>
 <p> John McNamara jmcnamara [at] cpan.org</p>
 <h2>VERSION</h2>

@@ -27,48 +27,37 @@ url: "/docs/linux/man/1-opa_osd_perf/"
 <dl>
 <dt>
 &nbsp;<wbr><i>opts</i>&nbsp;<wbr>
-<dd> Options. Values include: 
-
+</dt><dd> Options. Values include: 
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> 
-
+</dt><dd> 
  -q <i>queries</i> Runs at least <i>queries</i> queries. 
-
-</dl>
-</dl>
- 
-
-<dl>
-<dt>
-<dd>
-<dl>
-<dt>
-<dd> 
-
- -p <i>pkey</i> Specifies to include <i>pkey</i> in the searches. Can be specified up to 8 times.</dl>
+</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
+ -p <i>pkey</i> Specifies to include <i>pkey</i> in the searches. Can be specified up to 8 times.</dd></dl>
+</dl>
+ 
 
- -S <i>sid</i> Specifies to include SID in the searches. Can be specified up to 8 times. Note that providing both SIDs and pkeys may cause problems.</dl>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+ -S <i>sid</i> Specifies to include SID in the searches. Can be specified up to 8 times. Note that providing both SIDs and pkeys may cause problems.</dd></dl>
 </dl>
  
 
 <dt>
 &nbsp;<wbr><i>guidtable</i>&nbsp;<wbr>
-<dd> Text file that lists the destination GUIDs and LIDs. For example, from a build_table.pl file. 
+</dt><dd> Text file that lists the destination GUIDs and LIDs. For example, from a build_table.pl file. 
 
-</dl>
+</dd></dl>
 
 <h2>Example</h2>
 

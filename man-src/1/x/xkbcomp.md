@@ -18,47 +18,47 @@ description: "xkbcomp – compile XKB keyboard description"
 <p> The name of the <i>destination</i> is usually computed from the name of the source, with the extension replaced as appropriate. When compiling a single map from a file which contains several maps, <i>xkbcomp</i> constructs the destination file name by appending an appropriate extension to the name of the map to be used.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Show all keyboard information, reporting implicit or derived information as a comment. Only affects <i>.xkb</i> format output.</p>
-<dt><code>-C</code></p>
-<dd> Produce a C header file as output (.h extension).</p>
-<dt><code>-dflts</code></p>
-<dd> Compute defaults for any missing components, such as key names.</p>
-<dt><code>-em1 </code><i>msg</i></p>
-<dd> Print <i>msg</i> before printing first error message.</p>
-<dt><code>-emp </code><i>msg</i></p>
-<dd> Print <i>msg</i> at the start of each message line.</p>
-<dt><code>-eml </code><i>msg</i></p>
-<dd> If there were any errors, print <i>msg</i> before exiting.</p>
-<dt><code>-help, -?</code></p>
-<dd> Show available options.</p>
-<dt><code>-I</code><i>dir</i></p>
-<dd> Specifies top-level directories to be searched for files included by the keymap description. After all directories specified by -I options have been searched, the current directory and finally, the default xkb directory /usr/share/X11/xkb will be searched. </p>
+<dt><code>-a</code></dt>
+<dd> Show all keyboard information, reporting implicit or derived information as a comment. Only affects <i>.xkb</i> format output.</dd>
+<dt><code>-C</code></dt>
+<dd> Produce a C header file as output (.h extension).</dd>
+<dt><code>-dflts</code></dt>
+<dd> Compute defaults for any missing components, such as key names.</dd>
+<dt><code>-em1 </code><i>msg</i></dt>
+<dd> Print <i>msg</i> before printing first error message.</dd>
+<dt><code>-emp </code><i>msg</i></dt>
+<dd> Print <i>msg</i> at the start of each message line.</dd>
+<dt><code>-eml </code><i>msg</i></dt>
+<dd> If there were any errors, print <i>msg</i> before exiting.</dd>
+<dt><code>-help, -?</code></dt>
+<dd> Show available options.</dd>
+<dt><code>-I</code><i>dir</i></dt>
+<dd> Specifies top-level directories to be searched for files included by the keymap description. After all directories specified by -I options have been searched, the current directory and finally, the default xkb directory /usr/share/X11/xkb will be searched. </dd>
 <p> To prevent the current and default directories from being searched, use the -I option alone (i.e. without a directory), before any -I options that specify the directories you do want searched.</p>
-<dt><code>-i&nbsp;</code><i>deviceid</i></p>
-<dd> If <i>source</i> or <i>destination</i> is a valid X display, load the keymap from/into the device with the specified ID (not name).</p>
-<dt><code>-l</code></p>
-<dd> List maps that specify the <i>map</i> pattern in any files listed on the command line (not implemented yet).</p>
-<dt><code>-m&nbsp;</code><i>name</i></p>
-<dd> Specifies a map to be compiled from an file with multiple entries.</p>
-<dt><code>-merge</code></p>
-<dd> Merge the compiled information with the map from the server (not implemented yet).</p>
-<dt><code>-o&nbsp;</code><i>name</i></p>
-<dd> Specifies a name for the generated output file. The default is the name of the source file with an appropriate extension for the output format.</p>
-<dt><code>-opt&nbsp;</code><i>parts</i></p>
-<dd> Specifies a list of optional parts. Compilation errors in any optional parts are not fatal. Parts may consist of any combination of the letters <i>c</i>, <i>g</i>,<i>k</i>,<i>s</i>,<i>t</i> which specify the compatibility map, geometry, keycodes, symbols and types, respectively.</p>
-<dt><code>-R</code><i>dir</i></p>
-<dd> Specifies the root directory for relative path names.</p>
-<dt><code>-synch</code></p>
-<dd> Force synchronization for X requests.</p>
-<dt><code>-version</code></p>
-<dd> Print version number.</p>
-<dt><code>-w&nbsp;</code><i>lvl</i></p>
-<dd> Controls the reporting of warnings during compilation. A warning level of 0 disables all warnings; a warning level of 10 enables them all.</p>
-<dt><code>-xkb</code></p>
-<dd> Generate a source description of the keyboard as output (.xkb extension).</p>
-<dt><code>-xkm</code></p>
-<dd> Generate a compiled keymap file as output (.xkm extension).</dl>
+<dt><code>-i&nbsp;</code><i>deviceid</i></dt>
+<dd> If <i>source</i> or <i>destination</i> is a valid X display, load the keymap from/into the device with the specified ID (not name).</dd>
+<dt><code>-l</code></dt>
+<dd> List maps that specify the <i>map</i> pattern in any files listed on the command line (not implemented yet).</dd>
+<dt><code>-m&nbsp;</code><i>name</i></dt>
+<dd> Specifies a map to be compiled from an file with multiple entries.</dd>
+<dt><code>-merge</code></dt>
+<dd> Merge the compiled information with the map from the server (not implemented yet).</dd>
+<dt><code>-o&nbsp;</code><i>name</i></dt>
+<dd> Specifies a name for the generated output file. The default is the name of the source file with an appropriate extension for the output format.</dd>
+<dt><code>-opt&nbsp;</code><i>parts</i></dt>
+<dd> Specifies a list of optional parts. Compilation errors in any optional parts are not fatal. Parts may consist of any combination of the letters <i>c</i>, <i>g</i>,<i>k</i>,<i>s</i>,<i>t</i> which specify the compatibility map, geometry, keycodes, symbols and types, respectively.</dd>
+<dt><code>-R</code><i>dir</i></dt>
+<dd> Specifies the root directory for relative path names.</dd>
+<dt><code>-synch</code></dt>
+<dd> Force synchronization for X requests.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version number.</dd>
+<dt><code>-w&nbsp;</code><i>lvl</i></dt>
+<dd> Controls the reporting of warnings during compilation. A warning level of 0 disables all warnings; a warning level of 10 enables them all.</dd>
+<dt><code>-xkb</code></dt>
+<dd> Generate a source description of the keyboard as output (.xkb extension).</dd>
+<dt><code>-xkm</code></dt>
+<dd> Generate a compiled keymap file as output (.xkm extension).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>COPYRIGHT</h2>

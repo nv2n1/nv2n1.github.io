@@ -11,38 +11,24 @@ std::experimental::ranges::Swappable,std::experimental::ranges::SwappableWith - 
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T&gt;
-
     concept bool Swappable =
-
         requires(T &amp; a, T &amp;b)
 {
     (1)(ranges TS)
-
         ranges::swap(a, b);
 };
-
 template &lt;class T, class U&gt;
-
 concept bool SwappableWith =
-
     CommonReference&lt;
-
         const std::remove_reference_t&lt;T&gt; &amp;,
-
         const std::remove_reference_t&lt;U&gt; &amp;&gt; &amp;&amp;
-
     requires(T &amp;&amp;t, U &amp;&amp;u)
 {
     (2)(ranges TS)
-
         ranges::swap(std::forward&lt;T&gt;(t), std::forward&lt;T&gt;(t));
-
     ranges::swap(std::forward&lt;U&gt;(u), std::forward&lt;U&gt;(u));
-
     ranges::swap(std::forward&lt;T&gt;(t), std::forward&lt;U&gt;(u));
-
     ranges::swap(std::forward&lt;U&gt;(u), std::forward&lt;T&gt;(t));
 };</code></pre> 
 The concept Swappable&lt;T&gt; specifies that lvalues of type T are swappable. 

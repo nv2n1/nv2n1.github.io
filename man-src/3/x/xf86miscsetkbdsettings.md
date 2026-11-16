@@ -32,22 +32,22 @@ Status XF86MiscSetKbdSettings(
  XF86MiscKbdSettings *<i>kbdinfo</i>);</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>screen</i></p>
-<dd>Specifies which screen number the setting apply to.</p>
-<dt><i>event_base_return</i></p>
-<dd>Returns the base event number for the extension.</p>
-<dt><i>error_base_return</i></p>
-<dd>Returns the base error number for the extension.</p>
-<dt><i>major_version_return</i></p>
-<dd>Returns the major version number of the extension.</p>
-<dt><i>minor_version_return</i></p>
-<dd>Returns the minor version number of the extension.</p>
-<dt><i>mseinfo</i></p>
-<dd>Specifies a structure which contains the mouse parameters.</p>
-<dt><i>kbdinfo</i></p>
-<dd>Specifies a structure which contains the keyboard parameters.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies which screen number the setting apply to.</dd>
+<dt><i>event_base_return</i></dt>
+<dd>Returns the base event number for the extension.</dd>
+<dt><i>error_base_return</i></dt>
+<dd>Returns the base error number for the extension.</dd>
+<dt><i>major_version_return</i></dt>
+<dd>Returns the major version number of the extension.</dd>
+<dt><i>minor_version_return</i></dt>
+<dd>Returns the minor version number of the extension.</dd>
+<dt><i>mseinfo</i></dt>
+<dd>Specifies a structure which contains the mouse parameters.</dd>
+<dt><i>kbdinfo</i></dt>
+<dd>Specifies a structure which contains the keyboard parameters.</dd></dl>
 <h2>Structures</h2>
 <pre><i>Mouse:</i>
 typedef struct {
@@ -81,15 +81,15 @@ typedef struct {
 <p> Any of the fields of the structure can be altered and then passed to the <i>XF86MiscSetMouseSettings</i> function to change their value in the server, with the following restrictions:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>1)</p>
-<dd>The device can not be changed</p>
-<dt>2)</p>
-<dd>The protocol can not be changed to or from Xqueue or OsMouse</p>
-<dt>3)</p>
-<dd>The buttons field can not be changed</p>
-<dt>4)</p>
-<dd>Invalid combinations of parameters are not allowed</dl>
+</dd><dl COMPACT>
+<dt>1)</dt>
+<dd>The device can not be changed</dd>
+<dt>2)</dt>
+<dd>The protocol can not be changed to or from Xqueue or OsMouse</dd>
+<dt>3)</dt>
+<dd>The buttons field can not be changed</dd>
+<dt>4)</dt>
+<dd>Invalid combinations of parameters are not allowed</dd></dl>
 </dl>
 <p> The server will generate an error if any of the above is attempted, except the first &#8211; the contents of the device field are simply ignored. </p>
 <p> A change of the protocol causes the device to be closed and reopened. Changes to the baud rate, sample rate, resolution or flags, when applicable to the selected protocol, also cause a reopen of the device. A reopen can be forced by using the MF_REOPEN flag, except in the case of the OsMouse and Xqueue protocols which ignore all attempts to reopen the device.</p>
@@ -101,12 +101,12 @@ typedef struct {
 <h2>Predefined Values</h2>
 <p>The header file <i>X11/extensions/xf86misc.h</i> contains definitions for</p>
 <dl COMPACT>
-<dt><code>MTYPE_</code>*</p>
-<dd>Mouse protocols</p>
-<dt><code>KTYPE_</code>*</p>
-<dd>Keyboard types</p>
-<dt><code>MF_</code>*</p>
-<dd>Mouse flags</dl>
+<dt><code>MTYPE_</code>*</dt>
+<dd>Mouse protocols</dd>
+<dt><code>KTYPE_</code>*</dt>
+<dd>Keyboard types</dd>
+<dt><code>MF_</code>*</dt>
+<dd>Mouse flags</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-xset/">xset</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5)</p>
 <h2>Authors</h2>

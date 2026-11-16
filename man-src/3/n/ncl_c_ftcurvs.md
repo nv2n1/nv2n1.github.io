@@ -10,21 +10,21 @@ c_ftcurvs - compute a smoothing spline
 <h2>Function Prototype</h2>int c_ftcurvs (int, float [], float [], int, float [], int, float [], float []);
 <h2>Synopsis</h2>int c_ftcurvs (n, xi, yi, dflg, d, m, xo, yo);
 <h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data points. (n &gt; 1)
-<dt>xi
-<dd>An array containing the abscissae for the input function.
-<dt>yi
-<dd>An array containing the functional values of the input function (yi[k] is the functional value at x[k] for k=0,n-1).
-<dt>dflg
-<dd>A switch for interpreting the value of d (as described below). If dflg=0, then d is an array of length n (an error estimate for each input data value); if dflg=1, then d is a scalar that serves as an error estimate for every single data item.
-<dt>d
-<dd>A user-specified value containing the observed weights. d may either be an array or a scalar, depending on the value of dflg.
-<dt>m
-<dd>The number of output values.
-<dt>xo
-<dd>Contains the abscissae for the output values.
-<dt>yo
-<dd>Contains the functional values for the smoothing spline ((yo[k] is the functional value at xo[k] for k=0,n-1).</dl><h2>Return Value</h2>c_ftcurvs returns an error value as per: 
+</dt><dd>The number of input data points. (n &gt; 1)
+</dd><dt>xi
+</dt><dd>An array containing the abscissae for the input function.
+</dd><dt>yi
+</dt><dd>An array containing the functional values of the input function (yi[k] is the functional value at x[k] for k=0,n-1).
+</dd><dt>dflg
+</dt><dd>A switch for interpreting the value of d (as described below). If dflg=0, then d is an array of length n (an error estimate for each input data value); if dflg=1, then d is a scalar that serves as an error estimate for every single data item.
+</dd><dt>d
+</dt><dd>A user-specified value containing the observed weights. d may either be an array or a scalar, depending on the value of dflg.
+</dd><dt>m
+</dt><dd>The number of output values.
+</dd><dt>xo
+</dt><dd>Contains the abscissae for the output values.
+</dd><dt>yo
+</dt><dd>Contains the functional values for the smoothing spline ((yo[k] is the functional value at xo[k] for k=0,n-1).</dd></dl><h2>Return Value</h2>c_ftcurvs returns an error value as per: 
  
 
  = 1 if n is less than 2. 

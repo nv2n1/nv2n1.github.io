@@ -18,32 +18,32 @@ description: "pod2texi – convert Pod to Texinfo"
 <p> Second, if <tt>&quot;--base-level&quot;</tt> is set higher than 0, each pod is translated to a file suitable for <tt>@include</tt>, and one more file with all the <tt>@include</tt>s is generated, intended to be <tt>@include</tt>d in turn within a hand-written top-level file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;appendix-sections</code></p>
-<dd> Use appendix sectioning commands (<tt>@appendix</tt>, &#8230;) instead of the default numbered sectioning Texinfo @-commands (<tt>@chapter</tt>, <tt>@section</tt>, &#8230;).</p>
-<dt><code>&#8211;base-level</code>=<i>NUM|NAME</i></p>
-<dd> Sets the level of the <tt>&quot;head1&quot;</tt> commands. It may be an integer or a Texinfo sectioning command (without the <tt>&quot;@&quot;</tt>): 1 corresponds to the <tt>@chapter</tt>/<tt>@unnumbered</tt> level, 2 to the <tt>@section</tt> level, and so on. The default is 0, meaning that <tt>&quot;head1&quot;</tt> commands are still output as chapters, but the output is arranged as a standalone manual. </p>
+<dt><code>&#8211;appendix-sections</code></dt>
+<dd> Use appendix sectioning commands (<tt>@appendix</tt>, &#8230;) instead of the default numbered sectioning Texinfo @-commands (<tt>@chapter</tt>, <tt>@section</tt>, &#8230;).</dd>
+<dt><code>&#8211;base-level</code>=<i>NUM|NAME</i></dt>
+<dd> Sets the level of the <tt>&quot;head1&quot;</tt> commands. It may be an integer or a Texinfo sectioning command (without the <tt>&quot;@&quot;</tt>): 1 corresponds to the <tt>@chapter</tt>/<tt>@unnumbered</tt> level, 2 to the <tt>@section</tt> level, and so on. The default is 0, meaning that <tt>&quot;head1&quot;</tt> commands are still output as chapters, but the output is arranged as a standalone manual. </dd>
 <p> If the level is not 0, the pod file is rendered as a fragment of a Texinfo manual suitable for <tt>@include</tt>. In this case, each pod file has an additional sectioning command covering the entire file, one level above the <tt>&quot;--base-level&quot;</tt> value. Therefore, to make each pod file a chapter in a large manual, you should use <tt>&quot;section&quot;</tt> as the base level. </p>
 <p> For an example of making Texinfo out of the Perl documentation itself, see <tt>&quot;contrib/perldoc-all&quot;</tt> in the Texinfo source distribution, with output available at &lt;<a rel="nofollow" href="http://www.gnu.org/software/perl/manual">http://www.gnu.org/software/perl/manual</a>&gt;.</p>
-<dt><code>&#8211;debug</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i></p>
-<dd> Set debugging level to <i></i><font SIZE="-1"><i>NUM</i></font><i></i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help and exit.</p>
-<dt><code>&#8211;output</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></p>
-<dd> Name for the first manual, or the main manual if there is a main manual. Default is to write to standard output.</p>
-<dt><code>&#8211;no-section-nodes</code></p>
-<dd> Use anchors for sections instead of nodes.</p>
-<dt><code>&#8211;no-fill-section-gaps</code></p>
-<dd> Do not fill sectioning gaps with empty <tt>@unnumbered</tt> files. Ordinarily, it&#8217;s good to keep the sectioning hierarchy intact.</p>
-<dt><code>&#8211;preamble</code>=<i></i><font SIZE="-1"><i>STR</i></font><i></i></p>
-<dd> Insert <i></i><font SIZE="-1"><i>STR</i></font><i></i> as top boilerplate before includes. The default is a minimal beginning for a Texinfo document, and sets <tt>@documentencoding</tt> to <tt>&quot;utf-8&quot;</tt> (because the output is written that way).</p>
-<dt><code>&#8211;subdir</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></p>
-<dd> If there is a main manual with include files (each corresponding to an input pod file), then those include files are put in directory <i></i><font SIZE="-1"><i>NAME</i></font><i></i>.</p>
-<dt><code>&#8211;unnumbered-sections</code></p>
-<dd> Use unnumbered sectioning commands (<tt>@unnumbered</tt>, &#8230;) instead of the default numbered sectioning Texinfo @-commands (<tt>@chapter</tt>, <tt>@section</tt>, &#8230;).</p>
-<dt><code>&#8211;top</code>=<i></i><font SIZE="-1"><i>TOP</i></font><i></i></p>
-<dd> Name of the <tt>@top</tt> element for the main manual. May contain Texinfo code.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>&#8211;debug</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i></dt>
+<dd> Set debugging level to <i></i><font SIZE="-1"><i>NUM</i></font><i></i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help and exit.</dd>
+<dt><code>&#8211;output</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></dt>
+<dd> Name for the first manual, or the main manual if there is a main manual. Default is to write to standard output.</dd>
+<dt><code>&#8211;no-section-nodes</code></dt>
+<dd> Use anchors for sections instead of nodes.</dd>
+<dt><code>&#8211;no-fill-section-gaps</code></dt>
+<dd> Do not fill sectioning gaps with empty <tt>@unnumbered</tt> files. Ordinarily, it&#8217;s good to keep the sectioning hierarchy intact.</dd>
+<dt><code>&#8211;preamble</code>=<i></i><font SIZE="-1"><i>STR</i></font><i></i></dt>
+<dd> Insert <i></i><font SIZE="-1"><i>STR</i></font><i></i> as top boilerplate before includes. The default is a minimal beginning for a Texinfo document, and sets <tt>@documentencoding</tt> to <tt>&quot;utf-8&quot;</tt> (because the output is written that way).</dd>
+<dt><code>&#8211;subdir</code>=<i></i><font SIZE="-1"><i>NAME</i></font><i></i></dt>
+<dd> If there is a main manual with include files (each corresponding to an input pod file), then those include files are put in directory <i></i><font SIZE="-1"><i>NAME</i></font><i></i>.</dd>
+<dt><code>&#8211;unnumbered-sections</code></dt>
+<dd> Use unnumbered sectioning commands (<tt>@unnumbered</tt>, &#8230;) instead of the default numbered sectioning Texinfo @-commands (<tt>@chapter</tt>, <tt>@section</tt>, &#8230;).</dd>
+<dt><code>&#8211;top</code>=<i></i><font SIZE="-1"><i>TOP</i></font><i></i></dt>
+<dd> Name of the <tt>@top</tt> element for the main manual. May contain Texinfo code.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Pod::Simple::Texinfo. perlpod. The Texinfo manual. Texinfo home page: &lt;<a rel="nofollow" href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a>&gt;</p>
 <h2>COPYRIGHT</h2>

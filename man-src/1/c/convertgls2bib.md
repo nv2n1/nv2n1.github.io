@@ -14,65 +14,65 @@ ewglossaryentry&quot;</tt> and <tt>&quot;
 ewacronym&quot;</tt> to a <code>.bib</code> file in the format required for <code>bib2gls</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code> or <code>-h</code></p>
-<dd> Display help message and exit.</p>
-<dt><code>&#8211;version</code> or <code>-v</code></p>
-<dd> Display version information and exit.</p>
-<dt><code>&#8211;silent</code></p>
-<dd> Suppress all messages except for errors.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Display messages.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Display debugging messages.</p>
-<dt><code>&#8211;texenc</code> <i>name</i></p>
-<dd> Set the character encoding to <i>name</i> for the input <code>.tex</code> files.</p>
-<dt><code>&#8211;bibenc</code> <i>name</i></p>
-<dd> Set the character encoding to <i>name</i> for the output <code>.bib</code> files.</p>
-<dt><code>&#8211;ignore-sort</code></p>
-<dd> Ignore the <code>sort</code> field (default).</p>
-<dt><code>&#8211;no-ignore-sort</code></p>
-<dd> Don&#8217;t ignore the <code>sort</code> field.</p>
-<dt><code>&#8211;ignore-type</code></p>
-<dd> Omit the <code>type</code> field. Default if <code>&#8211;split-on-type</code>.</p>
-<dt><code>&#8211;no-ignore-type</code></p>
-<dd> Don&#8217;t omit the <code>type</code> field. Default unless <code>&#8211;split-on-type</code>.</p>
-<dt><code>&#8211;split-on-type</code> or <code>-t</code></p>
-<dd> Split the entries into separate files according to the <code>type</code> field. This option automatically implements <code>&#8211;ignore-type</code> and <code>&#8211;no-overwrite</code>.</p>
-<dt><code>&#8211;no-split-on-type</code></p>
-<dd> Don&#8217;t split the entries into separate files according to the <code>type</code> field (default).</p>
-<dt><code>&#8211;ignore-category</code></p>
-<dd> Omit the <code>category</code> field. Default if <code>&#8211;split-on-category</code>.</p>
-<dt><code>&#8211;no-ignore-category</code></p>
-<dd> Don&#8217;t omit the <code>category</code> field. Default unless <code>&#8211;split-on-category</code>.</p>
-<dt><code>&#8211;split-on-category</code> or <code>-t</code></p>
-<dd> Split the entries into separate files according to the <code>category</code> field. This option automatically implements <code>&#8211;ignore-category</code> and <code>&#8211;no-overwrite</code>.</p>
-<dt><code>&#8211;no-split-on-category</code></p>
-<dd> Don&#8217;t split the entries into separate files according to the <code>category</code> field (default).</p>
-<dt><code>&#8211;ignore-fields</code> <i>list</i> or <code>-f</code> <i>list</i></p>
-<dd> Ignore all the fields in the comma-separated <i>list</i>. If the list includes <code>sort</code>, <code>type</code> or <code>category</code> it will automatically implement the corresponding <code>&#8211;ignore-sort</code>, <code>&#8211;ignore-type</code> or <code>&#8211;ignore&#8212;category</code> option. </p>
+<dt><code>&#8211;help</code> or <code>-h</code></dt>
+<dd> Display help message and exit.</dd>
+<dt><code>&#8211;version</code> or <code>-v</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>&#8211;silent</code></dt>
+<dd> Suppress all messages except for errors.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Display messages.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Display debugging messages.</dd>
+<dt><code>&#8211;texenc</code> <i>name</i></dt>
+<dd> Set the character encoding to <i>name</i> for the input <code>.tex</code> files.</dd>
+<dt><code>&#8211;bibenc</code> <i>name</i></dt>
+<dd> Set the character encoding to <i>name</i> for the output <code>.bib</code> files.</dd>
+<dt><code>&#8211;ignore-sort</code></dt>
+<dd> Ignore the <code>sort</code> field (default).</dd>
+<dt><code>&#8211;no-ignore-sort</code></dt>
+<dd> Don&#8217;t ignore the <code>sort</code> field.</dd>
+<dt><code>&#8211;ignore-type</code></dt>
+<dd> Omit the <code>type</code> field. Default if <code>&#8211;split-on-type</code>.</dd>
+<dt><code>&#8211;no-ignore-type</code></dt>
+<dd> Don&#8217;t omit the <code>type</code> field. Default unless <code>&#8211;split-on-type</code>.</dd>
+<dt><code>&#8211;split-on-type</code> or <code>-t</code></dt>
+<dd> Split the entries into separate files according to the <code>type</code> field. This option automatically implements <code>&#8211;ignore-type</code> and <code>&#8211;no-overwrite</code>.</dd>
+<dt><code>&#8211;no-split-on-type</code></dt>
+<dd> Don&#8217;t split the entries into separate files according to the <code>type</code> field (default).</dd>
+<dt><code>&#8211;ignore-category</code></dt>
+<dd> Omit the <code>category</code> field. Default if <code>&#8211;split-on-category</code>.</dd>
+<dt><code>&#8211;no-ignore-category</code></dt>
+<dd> Don&#8217;t omit the <code>category</code> field. Default unless <code>&#8211;split-on-category</code>.</dd>
+<dt><code>&#8211;split-on-category</code> or <code>-t</code></dt>
+<dd> Split the entries into separate files according to the <code>category</code> field. This option automatically implements <code>&#8211;ignore-category</code> and <code>&#8211;no-overwrite</code>.</dd>
+<dt><code>&#8211;no-split-on-category</code></dt>
+<dd> Don&#8217;t split the entries into separate files according to the <code>category</code> field (default).</dd>
+<dt><code>&#8211;ignore-fields</code> <i>list</i> or <code>-f</code> <i>list</i></dt>
+<dd> Ignore all the fields in the comma-separated <i>list</i>. If the list includes <code>sort</code>, <code>type</code> or <code>category</code> it will automatically implement the corresponding <code>&#8211;ignore-sort</code>, <code>&#8211;ignore-type</code> or <code>&#8211;ignore&#8212;category</code> option. </dd>
 <p> This option isn&#8217;t cumulative. An empty list will clear a previously set list but won&#8217;t undo the sort, type or category ignore options.</p>
-<dt><code>&#8211;overwrite</code></p>
-<dd> Overwrite existing .bib files. Default unless <code>&#8211;split-on-type</code> used.</p>
-<dt><code>&#8211;no-overwrite</code></p>
-<dd> Don&#8217;t overwrite existing .bib files. Default if <code>&#8211;split-on-type</code> used.</p>
-<dt><code>&#8211;index-conversion</code> or <code>-i</code></p>
+<dt><code>&#8211;overwrite</code></dt>
+<dd> Overwrite existing .bib files. Default unless <code>&#8211;split-on-type</code> used.</dd>
+<dt><code>&#8211;no-overwrite</code></dt>
+<dd> Don&#8217;t overwrite existing .bib files. Default if <code>&#8211;split-on-type</code> used.</dd>
+<dt><code>&#8211;index-conversion</code> or <code>-i</code></dt>
 <dd> Any entries that would normally be converted to <tt>@entry</tt> that don&#8217;t have a description or just have the description set to <tt>&quot;
-opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> will be converted to <tt>@index</tt> and the <code>description</code> field will be omitted.</p>
-<dt><code>&#8211;no-index-conversion</code></p>
+opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> will be converted to <tt>@index</tt> and the <code>description</code> field will be omitted.</dd>
+<dt><code>&#8211;no-index-conversion</code></dt>
 <dd> Don&#8217;t use <tt>@index</tt> instead of <tt>@entry</tt> if the description is empty or just <tt>&quot;
-opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> (default).</p>
-<dt><code>&#8211;absorb-see</code></p>
-<dd> Absorb <tt>&quot;\glssee&quot;</tt> and <tt>&quot;\glsxtrindexseealso&quot;</tt> into the data (default).</p>
-<dt><code>&#8211;no-absorb-see</code></p>
-<dd> Don&#8217;t absorb <tt>&quot;\glssee&quot;</tt> and <tt>&quot;\glsxtrindexseealso&quot;</tt> into the data.</p>
-<dt><code>&#8211;preamble-only</code> or <code>-p</code></p>
-<dd> Only parse the document preamble.</p>
-<dt><code>&#8211;no-preamble-only</code></p>
-<dd> Parse the entire document (default).</p>
-<dt><code>&#8211;space-sub</code> <i>value</i> or <code>-s</code> <i>value</i></p>
-<dd> Substitute spaces in labels with <i>value</i>.</p>
-<dt><code>&#8211;locale</code> <i>lang tag</i></p>
-<dd> Use the language resource files associated with the given language tag <i>lang tag</i>. If there isn&#8217;t an appropriate file, the <code>en</code> (English) file will be used.</dl>
+opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> (default).</dd>
+<dt><code>&#8211;absorb-see</code></dt>
+<dd> Absorb <tt>&quot;\glssee&quot;</tt> and <tt>&quot;\glsxtrindexseealso&quot;</tt> into the data (default).</dd>
+<dt><code>&#8211;no-absorb-see</code></dt>
+<dd> Don&#8217;t absorb <tt>&quot;\glssee&quot;</tt> and <tt>&quot;\glsxtrindexseealso&quot;</tt> into the data.</dd>
+<dt><code>&#8211;preamble-only</code> or <code>-p</code></dt>
+<dd> Only parse the document preamble.</dd>
+<dt><code>&#8211;no-preamble-only</code></dt>
+<dd> Parse the entire document (default).</dd>
+<dt><code>&#8211;space-sub</code> <i>value</i> or <code>-s</code> <i>value</i></dt>
+<dd> Substitute spaces in labels with <i>value</i>.</dd>
+<dt><code>&#8211;locale</code> <i>lang tag</i></dt>
+<dd> Use the language resource files associated with the given language tag <i>lang tag</i>. If there isn&#8217;t an appropriate file, the <code>en</code> (English) file will be used.</dd></dl>
 <h2>REQUIRES</h2>
 <p> Java 8 and a TeX distribution.</p>
 <h2>LICENSE</h2>

@@ -11,7 +11,6 @@ std::setiosflags - std::setiosflags
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iomanip&gt;
-
 /*unspecified*/ setiosflags( std::ios_base::fmtflags mask );</code></pre> 
 When used in an expression out &lt;&lt; setiosflags(mask) or in &gt;&gt; setiosflags(mask), sets all format flags of the stream out or in as specified by the mask. 
 
@@ -29,10 +28,8 @@ Returns an object of unspecified type such that if str is the name of a stream o
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::resetiosflags(std::ios_base::dec)
               &lt;&lt; std::setiosflags(std::ios_base::hex | std::ios_base::uppercase | std::ios_base::showbase) &lt;&lt; 42 &lt;&lt; '\n';

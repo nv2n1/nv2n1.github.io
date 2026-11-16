@@ -10,9 +10,6 @@ description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rat
 <p>QuantLib::FixedRateBondForward &#8211; Forward contract on a fixed-rate bond </p>
 <h2>Synopsis</h2>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Forward</code>.</p>
 <h3>Public Member Functions</h3>
@@ -29,9 +26,6 @@ Protected Attributes</code></pre>
  <i>NPV of underlying bond. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>fixedCouponBond_</code></p>
 <h2>Detailed Description</h2>
@@ -46,16 +40,16 @@ Protected Attributes</code></pre>
 <p> <code>Example: </code> <code>valuation of a repo on a fixed-rate bond </code> </p>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>Add preconditions and tests</dl>
+<dd>Add preconditions and tests</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>Create switch- if coupon goes to seller is toggled on, don&#8217;t consider income in the $ P_{DirtyFwd}(t) $ calculation.</dl>
+<dd>Create switch- if coupon goes to seller is toggled on, don&#8217;t consider income in the $ P_{DirtyFwd}(t) $ calculation.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>Verify this works when the underlying is paper (in which case ignore all AI.)</dl>
+<dd>Verify this works when the underlying is paper (in which case ignore all AI.)</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
-<dd>This class still needs to be rigorously tested</dl>
+<dd>This class still needs to be rigorously tested</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Repo.cpp</code>.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>

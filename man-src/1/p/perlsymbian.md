@@ -30,3 +30,4 @@ description: "perlsymbian – Perl version 5 on Symbian OS"
 <p> (3) Run the following script using the perl coming with the <font SIZE="-1">SDK</font> </p>
 <pre>
     perl symbian
+</pre>

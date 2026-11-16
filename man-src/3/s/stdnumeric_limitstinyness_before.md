@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::tinyness_before – std::numeric_limits<T>
 <h2>Synopsis</h2>
 <pre><code>static const bool tinyness_before;
 (until C++ 11)
-
     static constexpr bool tinyness_before;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::tinyness_before is true for all floating-point types T that test results of floating-point expressions for underflow before rounding. </p>
@@ -45,15 +44,10 @@ long double implementation-defined</p>
 <p>Multiplication of the largest subnormal number by the number one machine epsilon greater than 1.0 gives the tiny value 0x0.fffffffffffff8p-1022 before rounding, but normal value 1p-1022 after rounding. The implementation used to execute this test (IBM Power7) detects tinyness before rounding.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;Tinyness before: &quot; &lt;&lt; std::boolalpha
               &lt;&lt; std::numeric_limits&lt;double&gt;::tinyness_before &lt;&lt; '

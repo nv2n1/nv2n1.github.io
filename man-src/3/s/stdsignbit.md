@@ -25,10 +25,8 @@ bool signbit( IntegralType arg ); <code>(4)</code> <i>(since C++11)</i><br />
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;signbit(+0.0) = &quot; &lt;&lt; std::signbit(+0.0) &lt;&lt; '

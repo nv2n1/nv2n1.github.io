@@ -19,10 +19,10 @@ description: "update-desktop-database – Build cache database of MIME types han
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>-q, &#8211;quiet</i></p>
-<dd> Do not display any information about processing and updating progress.</p>
-<dt><i>-v, &#8211;verbose</i></p>
-<dd> Display more information about processing and updating progress.</dl>
+<dt><i>-q, &#8211;quiet</i></dt>
+<dd> Do not display any information about processing and updating progress.</dd>
+<dt><i>-v, &#8211;verbose</i></dt>
+<dd> Display more information about processing and updating progress.</dd></dl>
 <h2>NOTES</h2>
 <p> If an invalid MIME type is met, it will be ignored and the creation of the cache database will continue. </p>
 <p> The format of the cache database is a simple desktop entry format, with a <code>MIME Cache</code> group, containing one key per MIME type. The key name is the MIME type, and the key value is the list of desktop file that can handle this MIME type. </p>
@@ -31,23 +31,23 @@ description: "update-desktop-database – Build cache database of MIME types han
 <p> Here is a simple example of a cache database:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;[MIME Cache]<br />
 &nbsp;application/x-shellscript=gedit.desktop;<br />
 &nbsp;text/plain=gedit.desktop;gvim.desktop;<br />
-&nbsp;video/webm=totem.desktop;</dl>
+&nbsp;video/webm=totem.desktop;</dd></dl>
 <p> This cache database is created with three desktop files, each containing a <code>MimeType</code> key:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<code>gedit.desktop</code>: MimeType=text/plain;application/x-shellscript;<br />
 &nbsp;<code>gvim.desktop</code>: MimeType=text/plain;<br />
-&nbsp;<code>totem.desktop</code>: MimeType=video/webm;</dl>
+&nbsp;<code>totem.desktop</code>: MimeType=video/webm;</dd></dl>
 <h2>FILES</h2>
 <p> <code>$XDG_DATA_DIRS/applications/mimeinfo.cache</code></p>
 <dl>
 <dt>
-<dd> This file is the cache database created by <i>update-desktop-database</i>.</dl>
+</dt><dd> This file is the cache database created by <i>update-desktop-database</i>.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>update-desktop-database</i> program, please report these on <a rel="nofollow" href="https://bugs.freedesktop.org.">https://bugs.freedesktop.org.</a> </p>
 <h2>Index</h2>

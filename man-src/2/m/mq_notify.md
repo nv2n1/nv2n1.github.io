@@ -20,12 +20,12 @@ int mq_notify(mqd_t mqdes, const struct sigevent *sevp);
 <p> The <i>sevp</i> argument is a pointer to a <i>sigevent</i> structure. For the definition and general details of this structure, see <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7). </p>
 <p> If <i>sevp</i> is a non-null pointer, then <code>mq_notify</code>() registers the calling process to receive message notification. The <i>sigev_notify</i> field of the <i>sigevent</i> structure to which <i>sevp</i> points specifies how notification is to be performed. This field has one of the following values:</p>
 <dl>
-<dt><code>SIGEV_NONE</code></p>
-<dd> A &quot;null&quot; notification: the calling process is registered as the target for notification, but when a message arrives, no notification is sent.</p>
-<dt><code>SIGEV_SIGNAL</code></p>
-<dd> Notify the process by sending the signal specified in <i>sigev_signo</i>. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_MESGQ</code>. In addition, <i>si_pid</i> will be set to the PID of the process that sent the message, and <i>si_uid</i> will be set to the real user ID of the sending process.</p>
-<dt><code>SIGEV_THREAD</code></p>
-<dd> Upon message delivery, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</dl>
+<dt><code>SIGEV_NONE</code></dt>
+<dd> A &quot;null&quot; notification: the calling process is registered as the target for notification, but when a message arrives, no notification is sent.</dd>
+<dt><code>SIGEV_SIGNAL</code></dt>
+<dd> Notify the process by sending the signal specified in <i>sigev_signo</i>. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_MESGQ</code>. In addition, <i>si_pid</i> will be set to the PID of the process that sent the message, and <i>si_uid</i> will be set to the real user ID of the sending process.</dd>
+<dt><code>SIGEV_THREAD</code></dt>
+<dd> Upon message delivery, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</dd></dl>
 <p> Only one process can be registered to receive notification from a message queue. </p>
 <p> If <i>sevp</i> is NULL, and the calling process is currently registered to receive notifications for this message queue, then the registration is removed; another process can then register to receive a message notification for this queue. </p>
 <p> Message notification occurs only when a new message arrives and the queue was previously empty. If the queue was not empty at the time <code>mq_notify</code>() was called, then a notification will occur only after the queue is emptied and a new message arrives. </p>
@@ -35,14 +35,14 @@ int mq_notify(mqd_t mqdes, const struct sigevent *sevp);
 <p> On success <code>mq_notify</code>() returns 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The message queue descriptor specified in <i>mqdes</i> is invalid.</p>
-<dt><code>EBUSY</code></p>
-<dd> Another process has already registered to receive notification for this message queue.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>sevp-&gt;sigev_notify</i> is not one of the permitted values; or <i>sevp-&gt;sigev_notify</i> is <code>SIGEV_SIGNAL</code> and <i>sevp-&gt;sigev_signo</i> is not a valid signal number.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The message queue descriptor specified in <i>mqdes</i> is invalid.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> Another process has already registered to receive notification for this message queue.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>sevp-&gt;sigev_notify</i> is not one of the permitted values; or <i>sevp-&gt;sigev_notify</i> is <code>SIGEV_SIGNAL</code> and <i>sevp-&gt;sigev_signo</i> is not a valid signal number.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory.</dd></dl>
 <p> POSIX.1-2008 says that an implementation <i>may</i> generate an <code>EINVAL</code> error if <i>sevp</i> is NULL, and the caller is not currently registered to receive notifications for the queue <i>mqdes</i>.</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

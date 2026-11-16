@@ -14,13 +14,13 @@ description: "pci_bus_find_capability – query for devices’ capabilities"
 <p><i>bus</i></p>
 <dl>
 <dd>
-<dd>the PCI bus to query</dl>
+</dd><dd>the PCI bus to query</dd></dl>
 <p> <i>devfn</i></p>
 <dl>
-<dd>PCI device to query</dl>
+<dd>PCI device to query</dd></dl>
 <p> <i>cap</i></p>
 <dl>
-<dd>capability code</dl>
+<dd>capability code</dd></dl>
 <h2>Description</h2>
 <p>Like <code>pci_find_capability</code> but works for pci devices that do not have a pci_dev structure set up yet. </p>
 <p> Returns the address of the requested capability structure within the device&#8217;s PCI configuration space or 0 in case the device does not support it.</p>

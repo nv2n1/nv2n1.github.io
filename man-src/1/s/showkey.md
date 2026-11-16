@@ -18,16 +18,16 @@ description: "showkey – examine the codes sent by the keyboard"
 <p> When in `ascii&#8217; dump mode, <code>showkey</code> prints to the standard output the decimal, octal, and hexadecimal value(s) of the key pressed, according to he present keymap.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h &#8211;help</p>
-<dd> <code>showkey</code> prints to the standard error output its version number, a compile option and a short usage message, then exits.</p>
-<dt>-s &#8211;scancodes</p>
-<dd> Starts <code>showkey</code> in scan code dump mode.</p>
-<dt>-k &#8211;keycodes</p>
-<dd> Starts <code>showkey</code> in keycode dump mode. This is the default, when no command line options are present.</p>
-<dt>-a &#8211;ascii</p>
-<dd> Starts <code>showkey</code> in `ascii&#8217; dump mode.</p>
-<dt>-V &#8211;version</p>
-<dd> <code>showkey</code> prints version number and exits.</dl>
+<dt>-h &#8211;help</dt>
+<dd> <code>showkey</code> prints to the standard error output its version number, a compile option and a short usage message, then exits.</dd>
+<dt>-s &#8211;scancodes</dt>
+<dd> Starts <code>showkey</code> in scan code dump mode.</dd>
+<dt>-k &#8211;keycodes</dt>
+<dd> Starts <code>showkey</code> in keycode dump mode. This is the default, when no command line options are present.</dd>
+<dt>-a &#8211;ascii</dt>
+<dd> Starts <code>showkey</code> in `ascii&#8217; dump mode.</dd>
+<dt>-V &#8211;version</dt>
+<dd> <code>showkey</code> prints version number and exits.</dd></dl>
 <h2>2.6 KERNELS</h2>
 <p> In 2.6 kernels key codes lie in the range 1-255, instead of 1-127. Key codes larger than 127 are returned as three bytes of which the low order 7 bits are: zero, bits 13-7, and bits 6-0 of the key code. The high order bits are: 0/1 for make/break, 1, 1. </p>
 <p> In 2.6 kernels raw mode, or scancode mode, is not very raw at all. Scan codes are first translated to key codes, and when scancodes are desired, the key codes are translated back. Various transformations are involved, and there is no guarantee at all that the final result corresponds to what the keyboard hardware did send. So, if you want to know the scan codes sent by various keys it is better to boot a 2.4 kernel. Since 2.6.9 there also is the boot option atkbd.softraw=0 that tells the 2.6 kernel to return the actual scan codes.</p>

@@ -46,7 +46,7 @@ description: "builtins/http/globus_xio_http.h –"
 <dd><i>method</i> Pointer to be set to the HTTP request method (typically GET, PUT, or POST). The caller must not access this value outside of the lifetime of the data descriptor nor free it.<br />
  <i>uri</i> Pointer to be set to the requested HTTP path. The caller must not access this value outside of the lifetime of the data descriptor nor free it.<br />
  <i>http_version</i> Pointer to be set to the HTTP version used for this request.<br />
- <i>headers</i> Pointer to be set to point to a hashtable of <code>globus_xio_http_header_t</code> values, keyed by the HTTP header names. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.</dl>
+ <i>headers</i> Pointer to be set to point to a hashtable of <code>globus_xio_http_header_t</code> values, keyed by the HTTP header names. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.</dd></dl>
 <h3>globus_result_t globus_xio_data_descriptor_cntl (dd, driver, <code>GLOBUS_XIO_HTTP_GET_RESPONSE</code>, int *status_code, char **reason_phrase, <code>globus_xio_http_version_t</code> *http_version, globus_hashtable_t *headers)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get HTTP Response Information </p>
 <p> Returns in the passed parameters values concerning the HTTP response. Any of the parameters may be NULL if the application is not interested in that part of the information. </p>
@@ -55,6 +55,6 @@ description: "builtins/http/globus_xio_http.h –"
 <dd><i>status_code</i> Pointer to be set to the HTTP response status code (such as 404), as per RFC 2616. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.<br />
  <i>reason_phrase</i> Pointer to be set to the HTTP response reason phrase (such as Not Found). The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.<br />
  <i>http_version</i> Pointer to be set to the HTTP version used for this request.<br />
- <i>headers</i> Pointer to be set to point to a hashtable of <code>globus_xio_http_header_t</code> values, keyed by the HTTP header names. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.</dl>
+ <i>headers</i> Pointer to be set to point to a hashtable of <code>globus_xio_http_header_t</code> values, keyed by the HTTP header names. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_xio from the source code.</p>

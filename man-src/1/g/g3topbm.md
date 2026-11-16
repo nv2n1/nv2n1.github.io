@@ -15,12 +15,12 @@ description: "g3topbm – convert a Group 3 fax file into a portable bitmap"
 <p> Reads a Group 3 fax file as input. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-kludge</code></p>
-<dd> Tells <i>g3topbm</i> to ignore the first few lines of the file; sometimes fax files have some junk at the beginning.</p>
-<dt><code>-reversebits</code></p>
-<dd> Tells <i>g3topbm</i> to interpret bits least-significant first, instead of the default most-significant first. Apparently some fax modems do it one way and others do it the other way. If you get a whole bunch of &quot;bad code word&quot; messages, try using this flag.</p>
-<dt><code>-stretch</code></p>
-<dd> Tells <i>g3topbm</i> to stretch the image vertically by duplicating each row. This is for the low-quality transmission mode.</dl>
+<dt><code>-kludge</code></dt>
+<dd> Tells <i>g3topbm</i> to ignore the first few lines of the file; sometimes fax files have some junk at the beginning.</dd>
+<dt><code>-reversebits</code></dt>
+<dd> Tells <i>g3topbm</i> to interpret bits least-significant first, instead of the default most-significant first. Apparently some fax modems do it one way and others do it the other way. If you get a whole bunch of &quot;bad code word&quot; messages, try using this flag.</dd>
+<dt><code>-stretch</code></dt>
+<dd> Tells <i>g3topbm</i> to stretch the image vertically by duplicating each row. This is for the low-quality transmission mode.</dd></dl>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <h2>REFERENCES</h2>
 <p> The standard for Group 3 fax is defined in CCITT Recommendation T.4.</p>

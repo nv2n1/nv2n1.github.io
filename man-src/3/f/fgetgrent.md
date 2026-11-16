@@ -35,8 +35,8 @@ struct group *fgetgrent(FILE *stream);
 <p> The <code>fgetgrent</code>() function returns a pointer to a <i>group</i> structure, or NULL if there are no more entries or an error occurs. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>group</i> structure.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>group</i> structure.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

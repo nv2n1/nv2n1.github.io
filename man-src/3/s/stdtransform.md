@@ -11,41 +11,23 @@ std::transform - std::transform
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class OutputIt, class UnaryOperation &gt;
-
 OutputIt transform( InputIt first1, InputIt last1, OutputIt d_first,                                                   (until C++20)
-
 UnaryOperation unary_op );
-
 template&lt; class InputIt, class OutputIt, class UnaryOperation &gt;
-
 constexpr OutputIt transform( InputIt first1, InputIt last1, OutputIt d_first,                                         (since C++20)
-
 UnaryOperation unary_op );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class UnaryOperation &gt;
-
 ForwardIt2 transform( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                               (2) (since C++17)
-
 ForwardIt2 d_first, UnaryOperation unary_op );                                                                 (1)
-
 template&lt; class InputIt1, class InputIt2, class OutputIt, class BinaryOperation &gt;
-
 OutputIt transform( InputIt1 first1, InputIt1 last1, InputIt2 first2,                                                                (until C++20)
-
 OutputIt d_first, BinaryOperation binary_op );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt, class BinaryOperation &gt;
-
 constexpr OutputIt transform( InputIt1 first1, InputIt1 last1, InputIt2 first2,                                    (3)               (since C++20)
-
 OutputIt d_first, BinaryOperation binary_op );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3, class BinaryOperation &gt;
-
 ForwardIt3 transform( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                                   (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt3 d_first, BinaryOperation binary_op );</code></pre> 
 std::transform applies the given function to a range and stores the result in another range, beginning at d_first. 
 1) The unary operation unary_op is applied to the range defined by [first1, last1). 
@@ -132,16 +114,11 @@ std::transform does not guarantee in-order application of unary_op or binary_op.
 
 The following code uses transform to convert a string in place to uppercase using the toupper function and then transforms each char to its ordinal value: 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::string s(&quot;hello&quot;);
     std::transform(s.begin(), s.end(), s.begin(),

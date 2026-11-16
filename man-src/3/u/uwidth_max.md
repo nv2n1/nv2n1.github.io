@@ -10,7 +10,6 @@ description: "uwidth_max – Number of bytes a character can occupy. Allegro gam
 <p>uwidth_max &#8211; Number of bytes a character can occupy. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uwidth_max(int type);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for working with Unicode text data. Returns the largest number of bytes that one character can occupy in the given encoding format. Pass U_CURRENT to represent the current format. Example: </p>

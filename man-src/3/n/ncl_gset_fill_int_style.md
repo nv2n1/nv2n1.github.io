@@ -13,19 +13,19 @@ description: "gset_fill_int_style (Set fill area interior style) – sets the fi
 <p> void gset_fill_int_style(Gfill_int_style fill_int_style);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>fill_int_style</p>
-<dd>(Input) &#8211; Gives the style of fill to be used in subsequent calls to the gfill_area output primitive. Options are:</p>
+<dt>fill_int_style</dt>
+<dd>(Input) &#8211; Gives the style of fill to be used in subsequent calls to the gfill_area output primitive. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GSTYLE_HOLLOW</p>
-<dd>Hollow fill (the default)</p>
-<dt>GSTYLE_SOLID</p>
-<dd>Solid fill</p>
-<dt>GSTYLE_PAT</p>
-<dd>Pattern fill (not implemented in NCAR GKS).</p>
-<dt>GSTYLE_HATCH</p>
-<dd>Hatch fill</dl>
+</dd><dl COMPACT>
+<dt>GSTYLE_HOLLOW</dt>
+<dd>Hollow fill (the default)</dd>
+<dt>GSTYLE_SOLID</dt>
+<dd>Solid fill</dd>
+<dt>GSTYLE_PAT</dt>
+<dd>Pattern fill (not implemented in NCAR GKS).</dd>
+<dt>GSTYLE_HATCH</dt>
+<dd>Hatch fill</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

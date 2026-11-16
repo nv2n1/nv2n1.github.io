@@ -31,16 +31,16 @@ description: "QuantLib::RandomizedLDS – Randomized (random shift) low-discrepa
  Size LDS::dimension() const;</pre>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>LDS and PRS must have the same dimension $ N $</dl>
+<dd>LDS and PRS must have the same dimension $ N $</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Inverting LDS and PRS is possible, but it doesn&#8217;t make sense.</dl>
+<dd>Inverting LDS and PRS is possible, but it doesn&#8217;t make sense.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>implement the other randomization algorithms</dl>
+<dd>implement the other randomization algorithms</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>correct initialization is tested.</dl>
+<dd>correct initialization is tested.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void nextRandomizer ()</h3>
 <p>update the randomizing vector and re-initialize the low discrepancy generator </p>

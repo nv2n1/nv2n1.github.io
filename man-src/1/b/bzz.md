@@ -18,10 +18,10 @@ description: "bzz – DjVu general purpose compression utility."
 <p> The first form of the command line (option <code>-e</code>) compresses the data from file <i>inputfile </i> and writes the compressed data into <i>outputfile</i>. The second form of the command line (option <code>-d</code>) decompressed file <i>inputfile</i> and writes the output to <i>outputfile</i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Decoding mode.</p>
-<dt><code>-e</code><i>[blocksize]</i></p>
-<dd> Encoding mode. The optional argument <i>blocksize</i> specifies the size of the input file blocks processed by the Burrows-Wheeler transform expressed in kilobytes. The default block sizes is 2048 <font SIZE="-1">KB.</font> The maximal block size is 4096 <font SIZE="-1">KB.</font> Specifying a larger block size usually produces higher compression ratios and increases the memory requirements of both the encoder and decoder. It is useless to specify a block size that is larger than the input file. </p>
+<dt><code>-d</code></dt>
+<dd> Decoding mode.</dd>
+<dt><code>-e</code><i>[blocksize]</i></dt>
+<dd> Encoding mode. The optional argument <i>blocksize</i> specifies the size of the input file blocks processed by the Burrows-Wheeler transform expressed in kilobytes. The default block sizes is 2048 <font SIZE="-1">KB.</font> The maximal block size is 4096 <font SIZE="-1">KB.</font> Specifying a larger block size usually produces higher compression ratios and increases the memory requirements of both the encoder and decoder. It is useless to specify a block size that is larger than the input file. </dd>
 </dl>
 <h2>ALGORITHMS</h2>
 <p> The Burrows-Wheeler transform is performed using a combination of the Karp-Miller-Rosenberg and the Bentley-Sedgewick algorithms. This is comparable to (Sadakane, DCC 98) with a slightly more flexible ranking scheme. Symbols are then ordered according to a running estimate of their occurrence frequencies. The symbol ranks are then coded using a simple fixed tree and the ZP binary adaptive coder (Bottou, DCC 98). </p>

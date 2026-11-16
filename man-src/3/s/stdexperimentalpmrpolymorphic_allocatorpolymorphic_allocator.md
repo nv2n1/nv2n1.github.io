@@ -12,22 +12,15 @@ std::experimental::pmr::polymorphic_allocator&lt;T&gt;::polymorphic_allocator - 
 
 <pre><code>polymorphic_allocator() noexcept;
 (1)
-
     polymorphic_allocator(const polymorphic_allocator &amp;other) noexcept = default;
 (2)
-
     template &lt;class U&gt;
     (3)
-
         polymorphic_allocator(const polymorphic_allocator&lt;U&gt; &amp;other) noexcept;
-
 polymorphic_allocator(memory_resource *r);                                     (4)
 Constructs a new polymorphic_allocator.
-
 1) Constructs a polymorphic_allocator using the return value of std::experimental::pmr::get_default_resource() as the underlying memory resource.
-
 2-3) Constructs a polymorphic_allocator using other.resource() as the underlying memory resource.
-
 4) Constructs a polymorphic_allocator using r as the underlying memory resource. This constructor provides an implicit conversion from memory_resource*.
 </code></pre>
 

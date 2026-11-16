@@ -17,12 +17,11 @@ description: "git-clear – Rigorously clean up a repository"
 <p> Clears the repo.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git clear
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Daniel &#8216;grindhold&#8217; Brendle &lt;<i>grindhold [at] gmx.net</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

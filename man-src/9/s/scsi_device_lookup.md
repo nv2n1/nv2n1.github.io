@@ -14,23 +14,23 @@ description: "scsi_device_lookup – find a device given the host"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>SCSI host pointer</dl>
+</dd><dd>SCSI host pointer</dd></dl>
 <p> <i>channel</i></p>
 <dl>
-<dd>SCSI channel (zero if only one channel)</dl>
+<dd>SCSI channel (zero if only one channel)</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>SCSI target number (physical unit number)</dl>
+<dd>SCSI target number (physical unit number)</dd></dl>
 <p> <i>lun</i></p>
 <dl>
-<dd>SCSI Logical Unit Number</dl>
+<dd>SCSI Logical Unit Number</dd></dl>
 <h2>Description</h2>
 <p>Looks up the scsi_device with the specified <i>channel</i>, <i>id</i>, <i>lun</i> for a given host. The returned scsi_device has an additional reference that needs to be released with scsi_device_put once you&#8217;re done with it.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

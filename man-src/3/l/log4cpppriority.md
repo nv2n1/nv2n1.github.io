@@ -33,46 +33,46 @@ description: "log4cpp::Priority –"
 <p>Predefined Levels of Priorities. These correspond to the priority levels used by <a href="/docs/linux/man/3-syslog/">syslog</a>(3). </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>EMERG </i></p>
+<dt><i>EMERG </i></dt>
 <dd>
-<dt><i>FATAL </i></p>
+</dd><dt><i>FATAL </i></dt>
 <dd>
-<dt><i>ALERT </i></p>
+</dd><dt><i>ALERT </i></dt>
 <dd>
-<dt><i>CRIT </i></p>
+</dd><dt><i>CRIT </i></dt>
 <dd>
-<dt><i>ERROR </i></p>
+</dd><dt><i>ERROR </i></dt>
 <dd>
-<dt><i>WARN </i></p>
+</dd><dt><i>WARN </i></dt>
 <dd>
-<dt><i>NOTICE </i></p>
+</dd><dt><i>NOTICE </i></dt>
 <dd>
-<dt><i>INFO </i></p>
+</dd><dt><i>INFO </i></dt>
 <dd>
-<dt><i>DEBUG </i></p>
+</dd><dt><i>DEBUG </i></dt>
 <dd>
-<dt><i>NOTSET </i></p>
-<dd></dl>
+</dd><dt><i>NOTSET </i></dt>
+<dd></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const std::string &amp; log4cpp::Priority::getPriorityName (intpriority) [static]</h3>
 <p>Returns the name of the given priority value. Currently, if the value is not one of the PriorityLevel values, the method returns the name of the largest priority smaller the given value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> the numeric value of the priority.</dl>
+<dd><i>priority</i> the numeric value of the priority.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a string representing the name of the priority.</dl>
+<dd>a string representing the name of the priority.</dd></dl>
 <h3><code>Priority::Value</code> log4cpp::Priority::getPriorityValue (const std::string &amp;priorityName)std::invalid_argument [static]</h3>
 <p>Returns the value of the given priority name. This can be either one of EMERG &#8230; NOTSET or a decimal string representation of the value, e.g. &#8216;700&#8217; for DEBUG. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priorityName</i> the string containing the the of the priority</dl>
+<dd><i>priorityName</i> the string containing the the of the priority</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the value corresponding with the priority name</dl>
+<dd>the value corresponding with the priority name</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i>std::invalid_argument</i> if the priorityName does not correspond with a known <code>Priority</code> name or a number</dl>
+<dd><i>std::invalid_argument</i> if the priorityName does not correspond with a known <code>Priority</code> name or a number</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>const int log4cpp::Priority::MESSAGE_SIZE = 8 [static]</h3>
 <h2>Author</h2>

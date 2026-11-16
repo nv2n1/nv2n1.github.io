@@ -14,15 +14,15 @@ description: "nand_read_oob_std – [REPLACEABLE] the most common OOB data read 
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>mtd info structure</dl>
+</dd><dd>mtd info structure</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>nand chip info structure</dl>
+<dd>nand chip info structure</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page number to read</dl>
+<dd>page number to read</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

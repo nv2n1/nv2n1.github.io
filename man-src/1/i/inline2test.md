@@ -15,7 +15,6 @@ url: "/docs/linux/man/1-inline2test/"
 
  <pre>
   &gt; inline2test ./inline2test.conf
-  
   # In your inline2test.conf
   input=lib
   output=t

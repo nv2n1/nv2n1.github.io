@@ -16,62 +16,58 @@ description: "solterm – An IPMI Serial over LAN program"
 <p> The <code>solterm</code> program allows a user to make a remote serial connection over IPMI. The requires that the remote system support IPMI 2.0 Serial Over LAN. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&lt;connection parms&gt;</code></p>
-<dd> The parameters for the connection depend on the connection type. These are all described in openipmi_conparms (7) </p>
-<dt><code>-e&nbsp;<wbr></code><i>escape_char</i></p>
-<dd> The character to use to escape, or exit, the program. Entering this character right after a newline is entered causes the program to go into command mode. A single character after this performs a command. The default escape character is &quot;~&quot; as shown below. Supported commands are:</p>
+<dt><code>&lt;connection parms&gt;</code></dt>
+<dd> The parameters for the connection depend on the connection type. These are all described in openipmi_conparms (7) </dd>
+<dt><code>-e&nbsp;<wbr></code><i>escape_char</i></dt>
+<dd> The character to use to escape, or exit, the program. Entering this character right after a newline is entered causes the program to go into command mode. A single character after this performs a command. The default escape character is &quot;~&quot; as shown below. Supported commands are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>~.</p>
-<dd> Terminate the program</p>
-<dt>~B</p>
-<dd> Send a serial BREAK over the connection</p>
-<dt>~F</p>
-<dd> Flush all buffers</p>
-<dt>~R</p>
-<dd> Assert the Ring Indicator (RI) line</p>
-<dt>~r</p>
-<dd> Deassert the Ring Indicator (RI) line</p>
-<dt>~D</p>
-<dd> Assert DCD and DSR lines</p>
-<dt>~d</p>
-<dd> Deassert DCD and DSR lines</p>
-<dt>~C</p>
-<dd> Pause the output using CTS</p>
-<dt>~c</p>
-<dd> Put CTS under BMC control</p>
-<dt>~?</p>
-<dd> Help on escape commands</p>
-<dt>~~</p>
-<dd> Enter the escape character twice to send it.</dl>
+<dt>~.</dt>
+<dd> Terminate the program</dd>
+<dt>~B</dt>
+<dd> Send a serial BREAK over the connection</dd>
+<dt>~F</dt>
+<dd> Flush all buffers</dd>
+<dt>~R</dt>
+<dd> Assert the Ring Indicator (RI) line</dd>
+<dt>~r</dt>
+<dd> Deassert the Ring Indicator (RI) line</dd>
+<dt>~D</dt>
+<dd> Assert DCD and DSR lines</dd>
+<dt>~d</dt>
+<dd> Deassert DCD and DSR lines</dd>
+<dt>~C</dt>
+<dd> Pause the output using CTS</dd>
+<dt>~c</dt>
+<dd> Put CTS under BMC control</dd>
+<dt>~?</dt>
+<dd> Help on escape commands</dd>
+<dt>~~</dt>
+<dd> Enter the escape character twice to send it.</dd></dl>
 </dl>
-<dt><code>-notencrypted</code></p>
-<dd> Do not encrypt the SOL data going over the connection. </p>
-<dt><code>-notauthenticated</code></p>
-<dd> Do not do integrity checks on the SOL data going over the connection. </p>
-<dt><code>-bitrate</code></p>
-<dd> Set the bitrate to the given value. The default is whatever the BMC has set it to. </p>
-<dt><code>-alerts</code></p>
-<dd> This specifies what to do if a alert that requires a callout occurs on the line.</p>
+<dt><code>-notencrypted</code></dt>
+<dd> Do not encrypt the SOL data going over the connection. </dd>
+<dt><code>-notauthenticated</code></dt>
+<dd> Do not do integrity checks on the SOL data going over the connection. </dd>
+<dt><code>-bitrate</code></dt>
+<dd> Set the bitrate to the given value. The default is whatever the BMC has set it to. </dd>
+<dt><code>-alerts</code></dt>
+<dd> This specifies what to do if a alert that requires a callout occurs on the line.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>succeed</p>
-<dd> specifies that serial/modem alerts are to succeed while SoL is active.</p>
-<dt>deferred</p>
-<dd> specifies that serial/modem alerts are to be deferred for the duration of the SoL session.</p>
-<dt>fail</p>
-<dd> specifies that serial/modem alerts automatically fail during the SoL session. This is the default.</dl>
+<dt>succeed</dt>
+<dd> specifies that serial/modem alerts are to succeed while SoL is active.</dd>
+<dt>deferred</dt>
+<dd> specifies that serial/modem alerts are to be deferred for the duration of the SoL session.</dd>
+<dt>fail</dt>
+<dd> specifies that serial/modem alerts automatically fail during the SoL session. This is the default.</dd></dl>
 </dl>
-<dt><code>-holdoff</code></p>
-<dd> Specifies that CTS, DTR, and DSR are to be deasserted at the start of the SoL session so that the configuration may be modified before the handshake is released. </p>
-<dt><code>-v</code></p>
-<dd> Be more verbose. Maybe specified multiple time for more output. </p>
-<dt><code>-q</code></p>
-<dd> Be less verbose. Maybe specified multiple time for less output. </p>
+<dt><code>-holdoff</code></dt>
+<dd> Specifies that CTS, DTR, and DSR are to be deasserted at the start of the SoL session so that the configuration may be modified before the handshake is released. </dd>
+<dt><code>-v</code></dt>
+<dd> Be more verbose. Maybe specified multiple time for more output. </dd>
+<dt><code>-q</code></dt>
+<dd> Be less verbose. Maybe specified multiple time for less output. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-openipmi_conparms/">openipmi_conparms</a></code>(7) </p>

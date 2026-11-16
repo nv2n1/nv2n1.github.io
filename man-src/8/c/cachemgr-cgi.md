@@ -17,7 +17,7 @@ description: "cachemgr.cgi – Squid HTTP proxy manager CGI web interface"
 <p> <i>./cachemgr.conf</i><br />
  <i>/etc/squid/cachemgr.conf</i></p>
 <dl>
-<dd>The access configuration file defining which Squid servers may be managed via this <code>cachemgr.cgi</code> program. Each line specifies a <code>server</code>:<code>port</code> followed by an optional description </p>
+<dd>The access configuration file defining which Squid servers may be managed via this <code>cachemgr.cgi</code> program. Each line specifies a <code>server</code>:<code>port</code> followed by an optional description </dd>
 <p> The server name may contain shell wildcard characters such as *, [] etc. A quick selection dropdown menu is automatically constructed from the simple server names. </p>
 <p> Specifying :port is optional. If not specified then the default proxy port is assumed. :* or :any matches any port on the target server.</dl>
 <h2>Security</h2>
@@ -39,3 +39,4 @@ description: "cachemgr.cgi – Squid HTTP proxy manager CGI web interface"
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/1-squidclient/">squidclient</a></code>(1) </p>
+</p>

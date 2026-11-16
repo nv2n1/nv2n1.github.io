@@ -15,11 +15,11 @@ dev_get_by_index - find a device by its ifindex
 <h2>Arguments</h2>
 
 <i>net</i>
-<dl><dd><dd>the applicable net namespace</dl>
+<dl><dd></dd><dd>the applicable net namespace</dd></dl>
  
 
  <i>ifindex</i>
-<dl><dd>index of device</dl>
+<dl><dd>index of device</dd></dl>
 
 <h2>Description</h2>
 

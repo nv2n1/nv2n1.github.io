@@ -22,81 +22,81 @@ description: "lit – LLVM Integrated Tester"
 <p> Users interested in the <code>lit</code> architecture or designing a <code>lit</code> testing implementation should see <i>LIT INFRASTRUCTURE</i>.</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show the <code>lit</code> help message.</p>
-<dt><code>-j N, &#8211;workers=N</code></p>
-<dd> Run <code>N</code> tests in parallel. By default, this is automatically chosen to match the number of detected available CPUs.</p>
-<dt><code>&#8211;config-prefix=NAME</code></p>
-<dd> Search for <i>NAME</i><code>.cfg</code> and <i>NAME</i><code>.site.cfg</code> when searching for test suites, instead of <code>lit.cfg</code> and <code>lit.site.cfg</code>.</p>
-<dt><code>-D NAME[=VALUE], &#8211;param NAME[=VALUE]</code></p>
-<dd> Add a user defined parameter <code>NAME</code> with the given <code>VALUE</code> (or the empty string if not given). The meaning and use of these parameters is test suite dependent.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the <code>lit</code> help message.</dd>
+<dt><code>-j N, &#8211;workers=N</code></dt>
+<dd> Run <code>N</code> tests in parallel. By default, this is automatically chosen to match the number of detected available CPUs.</dd>
+<dt><code>&#8211;config-prefix=NAME</code></dt>
+<dd> Search for <i>NAME</i><code>.cfg</code> and <i>NAME</i><code>.site.cfg</code> when searching for test suites, instead of <code>lit.cfg</code> and <code>lit.site.cfg</code>.</dd>
+<dt><code>-D NAME[=VALUE], &#8211;param NAME[=VALUE]</code></dt>
+<dd> Add a user defined parameter <code>NAME</code> with the given <code>VALUE</code> (or the empty string if not given). The meaning and use of these parameters is test suite dependent.</dd></dl>
 <h2>OUTPUT OPTIONS</h2>
 <dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress any output except for test failures.</p>
-<dt><code>-s, &#8211;succinct</code></p>
-<dd> Show less output, for example don’t show information on tests that pass. Also show a progress bar, unless <code>&#8211;no-progress-bar</code> is specified.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Show more information on test failures, for example the entire test output instead of just the test result.</p>
-<dt><code>-vv, &#8211;echo-all-commands</code></p>
-<dd> Echo all commands to stdout, as they are being executed. This can be valuable for debugging test failures, as the last echoed command will be the one which has failed. <code>lit</code> normally inserts a no-op command (<code>:</code> in the case of bash) with argument <code>&#8216;RUN: at line N&#8217;</code> before each command pipeline, and this option also causes those no-op commands to be echoed to stdout to help you locate the source line of the failed command. This option implies <code>&#8211;verbose</code>.</p>
-<dt><code>-a, &#8211;show-all</code></p>
-<dd> Show more information about all tests, for example the entire test commandline and output.</p>
-<dt><code>&#8211;no-progress-bar</code></p>
-<dd> Do not use curses based progress bar.</p>
-<dt><code>&#8211;show-unsupported</code></p>
-<dd> Show the names of unsupported tests.</p>
-<dt><code>&#8211;show-xfail</code></p>
-<dd> Show the names of tests that were expected to fail.</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress any output except for test failures.</dd>
+<dt><code>-s, &#8211;succinct</code></dt>
+<dd> Show less output, for example don’t show information on tests that pass. Also show a progress bar, unless <code>&#8211;no-progress-bar</code> is specified.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Show more information on test failures, for example the entire test output instead of just the test result.</dd>
+<dt><code>-vv, &#8211;echo-all-commands</code></dt>
+<dd> Echo all commands to stdout, as they are being executed. This can be valuable for debugging test failures, as the last echoed command will be the one which has failed. <code>lit</code> normally inserts a no-op command (<code>:</code> in the case of bash) with argument <code>&#8216;RUN: at line N&#8217;</code> before each command pipeline, and this option also causes those no-op commands to be echoed to stdout to help you locate the source line of the failed command. This option implies <code>&#8211;verbose</code>.</dd>
+<dt><code>-a, &#8211;show-all</code></dt>
+<dd> Show more information about all tests, for example the entire test commandline and output.</dd>
+<dt><code>&#8211;no-progress-bar</code></dt>
+<dd> Do not use curses based progress bar.</dd>
+<dt><code>&#8211;show-unsupported</code></dt>
+<dd> Show the names of unsupported tests.</dd>
+<dt><code>&#8211;show-xfail</code></dt>
+<dd> Show the names of tests that were expected to fail.</dd></dl>
 <h2>EXECUTION OPTIONS</h2>
 <dl>
-<dt><code>&#8211;path=PATH</code></p>
-<dd> Specify an additional <code>PATH</code> to use when searching for executables in tests.</p>
-<dt><code>&#8211;vg</code></p>
-<dd> Run individual tests under valgrind (using the memcheck tool). The <code>&#8211;error-exitcode</code> argument for valgrind is used so that valgrind failures will cause the program to exit with a non-zero status. </p>
+<dt><code>&#8211;path=PATH</code></dt>
+<dd> Specify an additional <code>PATH</code> to use when searching for executables in tests.</dd>
+<dt><code>&#8211;vg</code></dt>
+<dd> Run individual tests under valgrind (using the memcheck tool). The <code>&#8211;error-exitcode</code> argument for valgrind is used so that valgrind failures will cause the program to exit with a non-zero status. </dd>
 <p> When this option is enabled, <code>lit</code> will also automatically provide a “<code>valgrind</code>” feature that can be used to conditionally disable (or expect failure in) certain tests.</p>
-<dt><code>&#8211;vg-arg=ARG</code></p>
-<dd> When <i>&#8211;vg</i> is used, specify an additional argument to pass to <code>valgrind</code> itself.</p>
-<dt><code>&#8211;vg-leak</code></p>
-<dd> When <i>&#8211;vg</i> is used, enable memory leak checks. When this option is enabled, <code>lit</code> will also automatically provide a “<code>vg_leak</code>” feature that can be used to conditionally disable (or expect failure in) certain tests.</p>
-<dt><code>&#8211;time-tests</code></p>
-<dd> Track the wall time individual tests take to execute and includes the results in the summary output. This is useful for determining which tests in a test suite take the most time to execute.</p>
-<dt><code>&#8211;ignore-fail</code></p>
-<dd> Exit with status zero even if some tests fail.</p>
-<dt><code>&#8211;no-indirectly-run-check</code></p>
-<dd> Do not error if a test would not be run if the user had specified the containing directory instead of naming the test directly.</dl>
+<dt><code>&#8211;vg-arg=ARG</code></dt>
+<dd> When <i>&#8211;vg</i> is used, specify an additional argument to pass to <code>valgrind</code> itself.</dd>
+<dt><code>&#8211;vg-leak</code></dt>
+<dd> When <i>&#8211;vg</i> is used, enable memory leak checks. When this option is enabled, <code>lit</code> will also automatically provide a “<code>vg_leak</code>” feature that can be used to conditionally disable (or expect failure in) certain tests.</dd>
+<dt><code>&#8211;time-tests</code></dt>
+<dd> Track the wall time individual tests take to execute and includes the results in the summary output. This is useful for determining which tests in a test suite take the most time to execute.</dd>
+<dt><code>&#8211;ignore-fail</code></dt>
+<dd> Exit with status zero even if some tests fail.</dd>
+<dt><code>&#8211;no-indirectly-run-check</code></dt>
+<dd> Do not error if a test would not be run if the user had specified the containing directory instead of naming the test directly.</dd></dl>
 <h2>SELECTION OPTIONS</h2>
 <p> By default, <i>lit</i> will run failing tests first, then run tests in descending execution time order to optimize concurrency. The execution order can be changed using the <i>&#8211;order</i> option. </p>
 <p> The timing data is stored in the <i>test_exec_root</i> in a file named <i>.lit_test_times.txt</i>. If this file does not exist, then <i>lit</i> checks the <i>test_source_root</i> for the file to optionally accelerate clean builds.</p>
 <dl>
-<dt><code>&#8211;shuffle</code></p>
-<dd> Run the tests in a random order, not failing/slowest first. Deprecated, use <i>&#8211;order</i> instead.</p>
-<dt><code>&#8211;max-failures N</code></p>
-<dd> Stop execution after the given number <code>N</code> of failures. An integer argument should be passed on the command line prior to execution.</p>
-<dt><code>&#8211;max-tests=N</code></p>
-<dd> Run at most <code>N</code> tests and then terminate.</p>
-<dt><code>&#8211;max-time=N</code></p>
-<dd> Spend at most <code>N</code> seconds (approximately) running tests and then terminate. Note that this is not an alias for <i>&#8211;timeout</i>; the two are different kinds of maximums.</p>
-<dt><code>&#8211;num-shards=M</code></p>
-<dd> Divide the set of selected tests into <code>M</code> equal-sized subsets or “shards”, and run only one of them. Must be used with the <code>&#8211;run-shard=N</code> option, which selects the shard to run. The environment variable <code>LIT_NUM_SHARDS</code> can also be used in place of this option. These two options provide a coarse mechanism for partitioning large testsuites, for parallel execution on separate machines (say in a large testing farm).</p>
-<dt><code>&#8211;order={lexical,random,smart}</code></p>
-<dd> Define the order in which tests are run. The supported values are:</p>
-<dt>&bull;</p>
-<dd> lexical &#8211; tests will be run in lexical order according to the test file path. This option is useful when predictable test order is desired.</p>
-<dt>&bull;</p>
-<dd> random &#8211; tests will be run in random order.</p>
-<dt>&bull;</p>
-<dd> smart &#8211; tests that failed previously will be run first, then the remaining tests, all in descending execution time order. This is the default as it optimizes concurrency.</p>
-<dt><code>&#8211;run-shard=N</code></p>
-<dd> Select which shard to run, assuming the <code>&#8211;num-shards=M</code> option was provided. The two options must be used together, and the value of <code>N</code> must be in the range <code>1..M</code>. The environment variable <code>LIT_RUN_SHARD</code> can also be used in place of this option.</p>
-<dt><code>&#8211;timeout=N</code></p>
-<dd> Spend at most <code>N</code> seconds (approximately) running each individual test. <code>0</code> means no time limit, and <code>0</code> is the default. Note that this is not an alias for <i>&#8211;max-time</i>; the two are different kinds of maximums.</p>
-<dt><code>&#8211;filter=REGEXP</code></p>
-<dd> Run only those tests whose name matches the regular expression specified in <code>REGEXP</code>. The environment variable <code>LIT_FILTER</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly.</p>
-<dt><code>&#8211;filter-out=REGEXP</code></p>
-<dd> Filter out those tests whose name matches the regular expression specified in <code>REGEXP</code>. The environment variable <code>LIT_FILTER_OUT</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly.</p>
-<dt><code>&#8211;xfail=LIST</code></p>
-<dd> Treat those tests whose name is in the semicolon separated list <code>LIST</code> as <code>XFAIL</code>. This can be helpful when one does not want to modify the test suite. The environment variable <code>LIT_XFAIL</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly. </p>
+<dt><code>&#8211;shuffle</code></dt>
+<dd> Run the tests in a random order, not failing/slowest first. Deprecated, use <i>&#8211;order</i> instead.</dd>
+<dt><code>&#8211;max-failures N</code></dt>
+<dd> Stop execution after the given number <code>N</code> of failures. An integer argument should be passed on the command line prior to execution.</dd>
+<dt><code>&#8211;max-tests=N</code></dt>
+<dd> Run at most <code>N</code> tests and then terminate.</dd>
+<dt><code>&#8211;max-time=N</code></dt>
+<dd> Spend at most <code>N</code> seconds (approximately) running tests and then terminate. Note that this is not an alias for <i>&#8211;timeout</i>; the two are different kinds of maximums.</dd>
+<dt><code>&#8211;num-shards=M</code></dt>
+<dd> Divide the set of selected tests into <code>M</code> equal-sized subsets or “shards”, and run only one of them. Must be used with the <code>&#8211;run-shard=N</code> option, which selects the shard to run. The environment variable <code>LIT_NUM_SHARDS</code> can also be used in place of this option. These two options provide a coarse mechanism for partitioning large testsuites, for parallel execution on separate machines (say in a large testing farm).</dd>
+<dt><code>&#8211;order={lexical,random,smart}</code></dt>
+<dd> Define the order in which tests are run. The supported values are:</dd>
+<dt>&bull;</dt>
+<dd> lexical &#8211; tests will be run in lexical order according to the test file path. This option is useful when predictable test order is desired.</dd>
+<dt>&bull;</dt>
+<dd> random &#8211; tests will be run in random order.</dd>
+<dt>&bull;</dt>
+<dd> smart &#8211; tests that failed previously will be run first, then the remaining tests, all in descending execution time order. This is the default as it optimizes concurrency.</dd>
+<dt><code>&#8211;run-shard=N</code></dt>
+<dd> Select which shard to run, assuming the <code>&#8211;num-shards=M</code> option was provided. The two options must be used together, and the value of <code>N</code> must be in the range <code>1..M</code>. The environment variable <code>LIT_RUN_SHARD</code> can also be used in place of this option.</dd>
+<dt><code>&#8211;timeout=N</code></dt>
+<dd> Spend at most <code>N</code> seconds (approximately) running each individual test. <code>0</code> means no time limit, and <code>0</code> is the default. Note that this is not an alias for <i>&#8211;max-time</i>; the two are different kinds of maximums.</dd>
+<dt><code>&#8211;filter=REGEXP</code></dt>
+<dd> Run only those tests whose name matches the regular expression specified in <code>REGEXP</code>. The environment variable <code>LIT_FILTER</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly.</dd>
+<dt><code>&#8211;filter-out=REGEXP</code></dt>
+<dd> Filter out those tests whose name matches the regular expression specified in <code>REGEXP</code>. The environment variable <code>LIT_FILTER_OUT</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly.</dd>
+<dt><code>&#8211;xfail=LIST</code></dt>
+<dd> Treat those tests whose name is in the semicolon separated list <code>LIST</code> as <code>XFAIL</code>. This can be helpful when one does not want to modify the test suite. The environment variable <code>LIT_XFAIL</code> can be also used in place of this option, which is especially useful in environments where the call to <code>lit</code> is issued indirectly. </dd>
 <p> A test name can specified as a file name relative to the test suite directory. For example: </p>
 <pre>
 LIT_XFAIL=&quot;affinity/kmp-hw-subset.c;offloading/memory_manager.cpp&quot;
@@ -111,16 +111,16 @@ libomptarget :: x86_64-pc-linux-gnu :: offloading/memory_manager.cpp
 <pre>
 LIT_XFAIL=&quot;affinity/kmp-hw-subset.c;libomptarget :: x86_64-pc-linux-gnu :: offloading/memory_manager.cpp&quot;
 </pre>
-<dt><code>&#8211;xfail-not=LIST</code></p>
-<dd> Do not treat the specified tests as <code>XFAIL</code>. The environment variable <code>LIT_XFAIL_NOT</code> can also be used in place of this option. The syntax is the same as for <i>&#8211;xfail</i> and <code>LIT_XFAIL</code>. <i>&#8211;xfail-not</i> and <code>LIT_XFAIL_NOT</code> always override all other <code>XFAIL</code> specifications, including an <i>&#8211;xfail</i> appearing later on the command line. The primary purpose is to suppress an <code>XPASS</code> result without modifying a test case that uses the <code>XFAIL</code> directive.</dl>
+<dt><code>&#8211;xfail-not=LIST</code></dt>
+<dd> Do not treat the specified tests as <code>XFAIL</code>. The environment variable <code>LIT_XFAIL_NOT</code> can also be used in place of this option. The syntax is the same as for <i>&#8211;xfail</i> and <code>LIT_XFAIL</code>. <i>&#8211;xfail-not</i> and <code>LIT_XFAIL_NOT</code> always override all other <code>XFAIL</code> specifications, including an <i>&#8211;xfail</i> appearing later on the command line. The primary purpose is to suppress an <code>XPASS</code> result without modifying a test case that uses the <code>XFAIL</code> directive.</dd></dl>
 <h2>ADDITIONAL OPTIONS</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Run <code>lit</code> in debug mode, for debugging configuration issues and <code>lit</code> itself.</p>
-<dt><code>&#8211;show-suites</code></p>
-<dd> List the discovered test suites and exit.</p>
-<dt><code>&#8211;show-tests</code></p>
-<dd> List all of the discovered tests and exit.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Run <code>lit</code> in debug mode, for debugging configuration issues and <code>lit</code> itself.</dd>
+<dt><code>&#8211;show-suites</code></dt>
+<dd> List the discovered test suites and exit.</dd>
+<dt><code>&#8211;show-tests</code></dt>
+<dd> List all of the discovered tests and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>lit</code> will exit with an exit code of 1 if there are any FAIL or XPASS results. Otherwise, it will exit with the status 0. Other exit codes are used for non-test related failures (for example a user error or an internal program error).</p>
 <h2>TEST DISCOVERY</h2>

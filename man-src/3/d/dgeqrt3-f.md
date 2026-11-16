@@ -22,10 +22,10 @@ description: "dgeqrt3.f –"
  matrix A, using the compact WY representation of Q. 
  Based on the algorithm of Elmroth and Gustavson, 
  IBM J. Res. Develop. Vol 44 No. 4 July 2000.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= N.</pre>
 <p><i>N</i> </p>
@@ -56,13 +56,13 @@ description: "dgeqrt3.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -79,7 +79,8 @@ description: "dgeqrt3.f –"
  H = I - V * T * V**T
  where V**T is the transpose of V.
  For details of the algorithm, see Elmroth and Gustavson (cited above).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 133 of file dgeqrt3.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

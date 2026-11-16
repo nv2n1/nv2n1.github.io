@@ -42,56 +42,56 @@ description: "xcb_present_redirect_notify_event_t –"
 } <code>xcb_present_redirect_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_PRESENT_REDIRECT_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>extension</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>length</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>event_type</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>update_window</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>event</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>event_window</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>window</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>pixmap</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>serial</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>full_sequence</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>valid_region</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>update_region</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>valid_rect</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>update_rect</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>x_off</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>y_off</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>target_crtc</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>wait_fence</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>idle_fence</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>options</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>target_msc</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>divisor</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>remainder</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_PRESENT_REDIRECT_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>extension</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>length</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>event_type</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>update_window</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>event</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>event_window</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>window</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>pixmap</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>serial</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>full_sequence</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>valid_region</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>update_region</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>valid_rect</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>update_rect</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>x_off</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>y_off</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>target_crtc</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>wait_fence</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>idle_fence</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>options</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>target_msc</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>divisor</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>remainder</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

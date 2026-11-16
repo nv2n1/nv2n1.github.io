@@ -10,27 +10,16 @@ description: "std::atomic_ref<T>::compare_exchange_weak,std::atomic_ref<T>::comp
 <p>std::atomic_ref&lt;T&gt;::compare_exchange_weak,std::atomic_ref&lt;T&gt;::compare_exchange_strong &#8211; std::atomic_ref&lt;T&gt;::compare_exchange_weak,std::atomic_ref&lt;T&gt;::compare_exchange_strong</p>
 <h2>Synopsis</h2>
 <pre><code>bool compare_exchange_weak(T &amp;expected, T desired,
-
                            std::memory_order success, (1)(since C++ 20)
-
                                                           std::memory_order failure) const noexcept;
-
 bool compare_exchange_weak(T &amp;expected, T desired,
-
                            std::memory_order order = (2)(since C++ 20)
-
                                std::memory_order_seq_cst) const noexcept;
-
 bool compare_exchange_strong(T &amp;expected, T desired,
-
                              std::memory_order success, (3)(since C++ 20)
-
                                                             std::memory_order failure) const noexcept;
-
 bool compare_exchange_strong(T &amp;expected, T desired,
-
                              std::memory_order order = (4)(since C++ 20)
-
                                  std::memory_order_seq_cst) const noexcept;</code></pre>
 <p>Atomically compares the value_representation of the referenced object with that of expected, and if those are bitwise-equal, replaces the former with desired (performs a read-modify-write operation). Otherwise, loads the actual value stored in the referenced object into expected (performs a load operation).<br />
 The memory models for the read-modify-write and load operations are success and failure respectively. In the <code>(2)</code> and <code>(4)</code> versions order is used for both read-modify-write and load operations, except that std::memory_order_acquire and std::memory_order_relaxed are used for the load operation if order == std::memory_order_acq_rel, or order == std::memory_order_release respectively. </p>

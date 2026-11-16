@@ -19,6 +19,6 @@ description: "QuantLib::BilinearInterpolation – bilinear interpolation between
 <h3><code>BilinearInterpolation</code> (const I1 &amp; xBegin, const I1 &amp; xEnd, const I2 &amp; yBegin, const I2 &amp; yEnd, const M &amp; zData)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the $ x $ and $ y $ values must be sorted.</dl>
+<dd>the $ x $ and $ y $ values must be sorted.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

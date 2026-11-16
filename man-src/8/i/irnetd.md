@@ -14,8 +14,8 @@ description: "irnetd – Handle automatically incoming IrNET connections"
 <p><code>Irnetd</code> is a very simple daemon automatically handling <i>incoming IrNET connections</i>. Every time a peer attempt to connect to the local computer, <code>irnetd</code> generates the relevant <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) command to starts an IrNET server handling this peer.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>ppp-options</i></p>
-<dd>Override the default <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) options. These options will just be passed on the command line of <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8). The default options are <i>noauth nolock connect-delay 0 idle 10</i> which should fit most usages.</dl>
+<dt><i>ppp-options</i></dt>
+<dd>Override the default <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) options. These options will just be passed on the command line of <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8). The default options are <i>noauth nolock connect-delay 0 idle 10</i> which should fit most usages.</dd></dl>
 <h2>Author</h2>
 <p>Jean Tourrilhes &#8211; jt [at] hpl.hp.com</p>
 <h2>Files</h2>

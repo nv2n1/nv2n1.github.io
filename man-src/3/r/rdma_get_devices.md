@@ -12,13 +12,12 @@ rdma_get_devices - Get a list of RDMA devices currently available.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 struct ibv_context **rdma_get_devices
-
     (int *num_devices);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>num_devices
-<dd>If non-NULL, set to the number of devices returned.</dl>
+</dt><dd>If non-NULL, set to the number of devices returned.</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,18 +10,18 @@ description: "gpsd – interface daemon for GPS receivers"
 <p>gpsd &#8211; interface daemon for GPS receivers</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>gpsd</code> [-F&nbsp;<wbr><i>control-socket</i>] [-S&nbsp;<wbr><i>listener-port</i>] [-b] [-l] [-G] [-n] [-N] [-h] [-P&nbsp;<wbr><i>pidfile</i>] [-D&nbsp;<wbr><i>debuglevel</i>] [-V] [[<i>source-name</i>]&#8230;]</dl>
+<dt> <code>gpsd</code> [-F&nbsp;<wbr><i>control-socket</i>] [-S&nbsp;<wbr><i>listener-port</i>] [-b] [-l] [-G] [-n] [-N] [-h] [-P&nbsp;<wbr><i>pidfile</i>] [-D&nbsp;<wbr><i>debuglevel</i>] [-V] [[<i>source-name</i>]&#8230;]</dt></dl>
 <h2>Quick Start</h2>
-<dd>If you have a GPS attached on the lowest-numbered USB port of a Linux system, and want to read reports from it on TCP/IP port 2947, it will normally suffice to do this: </p>
+<dd>If you have a GPS attached on the lowest-numbered USB port of a Linux system, and want to read reports from it on TCP/IP port 2947, it will normally suffice to do this: </dd>
 <dl>
 <dd>
 <pre>gpsd /dev/ttyUSB0</pre>
-</dl>
+</dd></dl>
 <p> For the lowest-numbered serial port: </p>
 <dl>
 <dd>
 <pre>gpsd /dev/ttyS0</pre>
-</dl>
+</dd></dl>
 <p> Change the device number as appropriate if you need to use a different port. Command-line flags enable verbose logging, a control port, and other optional extras but should not be needed for basic operation; the one exception, on very badly designed hardware, might be <code>-b</code> (which see). </p>
 <p> On Linux systems supporting udev, gpsd is normally started automatically when a USB plugin event fires (if it is not already running) and is handed the name of the newly active device. In that case no invocation is required at all. </p>
 <p> For your initial tests set your GPS hardware to speak NMEA, as gpsd is guaranteed to be able to process that. If your GPS has a native or binary mode with better performance that gpsd knows how to speak, gpsd will autoconfigure that mode. </p>
@@ -37,59 +37,59 @@ description: "gpsd – interface daemon for GPS receivers"
 <p> The program accepts the following options: </p>
 <p> -F</p>
 <dl>
-<dd>Create a control socket for device addition and removal commands. You must specify a valid pathname on your local filesystem; this will be created as a Unix-domain socket to which you can write commands that edit the daemon&#8217;s internal device list.</dl>
+<dd>Create a control socket for device addition and removal commands. You must specify a valid pathname on your local filesystem; this will be created as a Unix-domain socket to which you can write commands that edit the daemon&#8217;s internal device list.</dd></dl>
 <p> -S</p>
 <dl>
-<dd>Set TCP/IP port on which to listen for GPSD clients (default is 2947).</dl>
+<dd>Set TCP/IP port on which to listen for GPSD clients (default is 2947).</dd></dl>
 <p> -b</p>
 <dl>
-<dd>Broken-device-safety mode, otherwise known as read-only mode. A few bluetooth and USB receivers lock up or become totally inaccessible when probed or reconfigured; see the hardware compatibility list on the GPSD project website for details. This switch prevents gpsd from writing to a receiver. This means that gpsd cannot configure the receiver for optimal performance, but it also means that gpsd cannot break the receiver. A better solution would be for Bluetooth to not be so fragile. A platform independent method to identify serial-over-Bluetooth devices would also be nice.</dl>
+<dd>Broken-device-safety mode, otherwise known as read-only mode. A few bluetooth and USB receivers lock up or become totally inaccessible when probed or reconfigured; see the hardware compatibility list on the GPSD project website for details. This switch prevents gpsd from writing to a receiver. This means that gpsd cannot configure the receiver for optimal performance, but it also means that gpsd cannot break the receiver. A better solution would be for Bluetooth to not be so fragile. A platform independent method to identify serial-over-Bluetooth devices would also be nice.</dd></dl>
 <p> -G</p>
 <dl>
-<dd>This flag causes gpsd to listen on all addresses (INADDR_ANY) rather than just the loop back (INADDR_LOOPBACK) address. For the sake of privacy and security, TPV information is now private to the local machine until the user makes an effort to expose this to the world.</dl>
+<dd>This flag causes gpsd to listen on all addresses (INADDR_ANY) rather than just the loop back (INADDR_LOOPBACK) address. For the sake of privacy and security, TPV information is now private to the local machine until the user makes an effort to expose this to the world.</dd></dl>
 <p> -l</p>
 <dl>
-<dd>List all drivers compiled into this gpsd instance. The letters to the left of each driver name are the gpsd control commands supported by that driver.</dl>
+<dd>List all drivers compiled into this gpsd instance. The letters to the left of each driver name are the gpsd control commands supported by that driver.</dd></dl>
 <p> -n</p>
 <dl>
-<dd>Don&#8217;t wait for a client to connect before polling whatever GPS is associated with it. Some RS232 GPSes wait in a standby mode (drawing less power) when the host machine is not asserting DTR, and some cellphone and handheld embedded GPSes have similar behaviors. Accordingly, waiting for a watch request to open the device may save battery power. (This capability is rare in consumer-grade devices).</dl>
+<dd>Don&#8217;t wait for a client to connect before polling whatever GPS is associated with it. Some RS232 GPSes wait in a standby mode (drawing less power) when the host machine is not asserting DTR, and some cellphone and handheld embedded GPSes have similar behaviors. Accordingly, waiting for a watch request to open the device may save battery power. (This capability is rare in consumer-grade devices).</dd></dl>
 <p> -N</p>
 <dl>
-<dd>Don&#8217;t daemonize; run in foreground. This switch is mainly useful for debugging.</dl>
+<dd>Don&#8217;t daemonize; run in foreground. This switch is mainly useful for debugging.</dd></dl>
 <p> -h</p>
 <dl>
-<dd>Display help message and terminate.</dl>
+<dd>Display help message and terminate.</dd></dl>
 <p> -P</p>
 <dl>
-<dd>Specify the name and path to record the daemon&#8217;s process ID.</dl>
+<dd>Specify the name and path to record the daemon&#8217;s process ID.</dd></dl>
 <p> -D</p>
 <dl>
-<dd>Set debug level. At debug levels 2 and above, gpsd reports incoming sentence and actions to standard error if gpsd is in the foreground (-N) or to syslog if in the background.</dl>
+<dd>Set debug level. At debug levels 2 and above, gpsd reports incoming sentence and actions to standard error if gpsd is in the foreground (-N) or to syslog if in the background.</dd></dl>
 <p> -V</p>
 <dl>
-<dd>Dump version and exit.</dl>
+<dd>Dump version and exit.</dd></dl>
 <p> Arguments are interpreted as the names of data sources. Normally, a data source is the device pathname of a local device from which the daemon may expect GPS data. But there are three other special source types recognized, for a total of four: </p>
 <p> Local serial or USB device</p>
 <dl>
-<dd>A normal Unix device name of a serial or USB device to which a sensor is attached. Example: /dev/ttyUSB0.</dl>
+<dd>A normal Unix device name of a serial or USB device to which a sensor is attached. Example: /dev/ttyUSB0.</dd></dl>
 <p> TCP feed</p>
 <dl>
-<dd>A URI with the prefix &quot;tcp://&quot;, followed by a hostname, a colon, and a port number. The daemon will open a socket to the indicated address and port and read data packets from it, which will be interpreted as though they had been issued by a serial device. Example: <a href="tcp://data.aishub.net:4006.">tcp://data.aishub.net:4006.</a></dl>
+<dd>A URI with the prefix &quot;tcp://&quot;, followed by a hostname, a colon, and a port number. The daemon will open a socket to the indicated address and port and read data packets from it, which will be interpreted as though they had been issued by a serial device. Example: <a href="tcp://data.aishub.net:4006.">tcp://data.aishub.net:4006.</a></dd></dl>
 <p> UDP feed</p>
 <dl>
-<dd>A URI with the prefix &quot;udp://&quot;, followed by a hostname, a colon, and a port number. The daemon will open a socket listening for UDP datagrams arriving on the indicated address and port, which will be interpreted as though they had been issued by a serial device. Example: <a href="udp://127.0.0.1:5000.">udp://127.0.0.1:5000.</a></dl>
+<dd>A URI with the prefix &quot;udp://&quot;, followed by a hostname, a colon, and a port number. The daemon will open a socket listening for UDP datagrams arriving on the indicated address and port, which will be interpreted as though they had been issued by a serial device. Example: <a href="udp://127.0.0.1:5000.">udp://127.0.0.1:5000.</a></dd></dl>
 <p> Ntrip caster</p>
 <dl>
-<dd>A URI with the prefix &quot;ntrip://&quot; followed by the name of an Ntrip caster (Ntrip is a protocol for broadcasting differential-GPS fixes over the net). For Ntrip services that require authentication, a prefix of the form &quot;username:password@&quot; can be added before the name of the Ntrip broadcaster. For Ntrip service, you must specify which stream to use; the stream is given in the form &quot;/streamname&quot;. An example DGPSIP URI could be &quot;<a href="dgpsip://dgpsip.example.com">dgpsip://dgpsip.example.com</a>&quot; and a Ntrip URI could be &quot;<a href="ntrip://foo:bar@ntrip.example.com:80/example-stream">ntrip://foo:bar@ntrip.example.com:80/example-stream</a>&quot;. Corrections from the caster will be send to each attached GPS with the capability to accept them.</dl>
+<dd>A URI with the prefix &quot;ntrip://&quot; followed by the name of an Ntrip caster (Ntrip is a protocol for broadcasting differential-GPS fixes over the net). For Ntrip services that require authentication, a prefix of the form &quot;username:password@&quot; can be added before the name of the Ntrip broadcaster. For Ntrip service, you must specify which stream to use; the stream is given in the form &quot;/streamname&quot;. An example DGPSIP URI could be &quot;<a href="dgpsip://dgpsip.example.com">dgpsip://dgpsip.example.com</a>&quot; and a Ntrip URI could be &quot;<a href="ntrip://foo:bar@ntrip.example.com:80/example-stream">ntrip://foo:bar@ntrip.example.com:80/example-stream</a>&quot;. Corrections from the caster will be send to each attached GPS with the capability to accept them.</dd></dl>
 <p> DGPSIP server</p>
 <dl>
-<dd>A URI with the prefix &quot;dgpsip://&quot; followed by a hostname, a colon, and an optional colon-separated port number (defaulting to 2101). The daemon will handshake with the DGPSIP server and read RTCM2 correction data from it. Corrections from the server will be set to each attached GPS with the capability to accept them. Example: <a href="dgpsip://dgps.wsrcc.com:2101.">dgpsip://dgps.wsrcc.com:2101.</a></dl>
+<dd>A URI with the prefix &quot;dgpsip://&quot; followed by a hostname, a colon, and an optional colon-separated port number (defaulting to 2101). The daemon will handshake with the DGPSIP server and read RTCM2 correction data from it. Corrections from the server will be set to each attached GPS with the capability to accept them. Example: <a href="dgpsip://dgps.wsrcc.com:2101.">dgpsip://dgps.wsrcc.com:2101.</a></dd></dl>
 <p> Remote gpsd feed</p>
 <dl>
-<dd>A URI with the prefix &quot;gpsd://&quot;, followed by a hostname and optionally a colony and a port number (if the port is absent the default gpsd port will be used). The daemon will open a socket to the indicated address and port and emulate a gpsd client, collecting JSON reports from the remote gpsd instance that will be passed to local clients.</dl>
+<dd>A URI with the prefix &quot;gpsd://&quot;, followed by a hostname and optionally a colony and a port number (if the port is absent the default gpsd port will be used). The daemon will open a socket to the indicated address and port and emulate a gpsd client, collecting JSON reports from the remote gpsd instance that will be passed to local clients.</dd></dl>
 <p> NMEA2000 CAN data</p>
 <dl>
-<dd>A URI with the prefix &quot;nmea2000://&quot;, followed by a CAN devicename. Only Linux socket CAN interfaces are supported. The interface must be configured to receive CAN messages before gpsd can be started. If there is more then one unit on the CAN bus that provides GPS data, gpsd chooses the unit from which a GPS message is first seen. Example: nmea2000://can0.</dl>
+<dd>A URI with the prefix &quot;nmea2000://&quot;, followed by a CAN devicename. Only Linux socket CAN interfaces are supported. The interface must be configured to receive CAN messages before gpsd can be started. If there is more then one unit on the CAN bus that provides GPS data, gpsd chooses the unit from which a GPS message is first seen. Example: nmea2000://can0.</dd></dl>
 <p> (The &quot;ais:://&quot; source type supported in some older versions of the daemon has been retired in favor of the more general &quot;tcp://&quot;.) </p>
 <p> Internally, the daemon maintains a device pool holding the pathnames of devices and remote servers known to the daemon. Initially, this list is the list of device-name arguments specified on the command line. That list may be empty, in which case the daemon will have no devices on its search list until they are added by a control-socket command (see the section called &#8220;GPS DEVICE MANAGEMENT&#8221; for details on this). Daemon startup will abort with an error if neither any devices nor a control socket are specified. </p>
 <p> When a device is activated (i.e. a client requests data from it), gpsd attempts to execute a hook from /etc/gpsd/device-hook with first command line argument set to the pathname of the device and the second to <code>ACTIVATE</code>. On deactivation it does the same passing <code>DEACTIVATE</code> for the second argument. </p>
@@ -105,7 +105,7 @@ description: "gpsd – interface daemon for GPS receivers"
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Type </code></td>
-<td><code> </p>
+<td><code> 
 <p> Description </code>
 </td>
 </tr>
@@ -248,10 +248,10 @@ description: "gpsd – interface daemon for GPS receivers"
 <h2>Files</h2>
 <p>/dev/ttyS0</p>
 <dl>
-<dd>Prototype TTY device. After startup, gpsd sets its group ID to the owning group of this device if no GPS device was specified on the command line does not exist.</dl>
+<dd>Prototype TTY device. After startup, gpsd sets its group ID to the owning group of this device if no GPS device was specified on the command line does not exist.</dd></dl>
 <p> /etc/gpsd/device-hook</p>
 <dl>
-<dd>Optional file containing the device activation/deactivation script. Note that while /etc/gpsd is the default system configuration directory, it is possible to build the GPSD source code with different assumptions.</dl>
+<dd>Optional file containing the device activation/deactivation script. Note that while /etc/gpsd is the default system configuration directory, it is possible to build the GPSD source code with different assumptions.</dd></dl>
 <h2>Applicable Standards</h2>
 <p>The official NMEA protocol standards for NMEA0183 and NMEA2000 are available from the National Marine Electronics Association, but are proprietary and expensive; the maintainers of gpsd have made a point of not looking at them. The GPSD project website links to several documents that collect publicly disclosed information about the protocol. </p>
 <p> gpsd parses the following NMEA sentences: RMC, GGA, GLL, GSA, GSV, VTG, ZDA, GBS, HDT, DBT. It recognizes these with either the normal GP talker-ID prefix, or with the GN prefix used by GLONASS, or with the II prefix emitted by Seahawk Autohelm marine navigation systems, or with the IN prefix emitted by some Garmin units, or with the EC prefix emitted by ECDIS units, or with the SD prefix emitted by depth sounders. It recognizes some vendor extensions: the PGRME emitted by some Garmin GPS models, the OHPR emitted by Oceanserver digital compasses, the PTNTHTM emitted by True North digital compasses, and the PASHR sentences emitted by some Ashtech GPSes. </p>

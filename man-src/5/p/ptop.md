@@ -78,9 +78,10 @@ description: "ptop.cfg – The ptop source-beautifier configuration file. ptop i
 <p> Also thanks to the rest of the FPC development team.</p>
 <h2>See Also</h2>
 <dl>
-<dt>ptop binary</p>
-<dd><code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1)</p>
-<dt>Compiler</p>
-<dd><code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1)</p>
-<dt>Other FPC utils</p>
-<dd><code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) </p>
+<dt>ptop binary</dt>
+<dd><code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1)</dd>
+<dt>Compiler</dt>
+<dd><code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1)</dd>
+<dt>Other FPC utils</dt>
+<dd><code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) </dd>
+</dl>

@@ -23,31 +23,31 @@ struct_snd_dmaengine_pcm_config - Configuration data for dmaengine based PCM
 <h2>Members</h2>
 
 prepare_slave_config
-<dl><dd>Callback used to fill in the DMA slave_config for a PCM substream. Will be called from the PCM drivers hwparams callback.</dl>
+<dl><dd>Callback used to fill in the DMA slave_config for a PCM substream. Will be called from the PCM drivers hwparams callback.</dd></dl>
  
 
  compat_request_channel
-<dl><dd>Callback to request a DMA channel for platforms which do not use devicetree.</dl>
+<dl><dd>Callback to request a DMA channel for platforms which do not use devicetree.</dd></dl>
  
 
  compat_filter_fn
-<dl><dd>Will be used as the filter function when requesting a channel for platforms which do not use devicetree. The filter parameter will be the DAI's DMA data.</dl>
+<dl><dd>Will be used as the filter function when requesting a channel for platforms which do not use devicetree. The filter parameter will be the DAI's DMA data.</dd></dl>
  
 
  dma_dev
-<dl><dd>If set, request DMA channel on this device rather than the DAI device.</dl>
+<dl><dd>If set, request DMA channel on this device rather than the DAI device.</dd></dl>
  
 
  chan_names[SNDRV_PCM_STREAM_LAST + 1]
-<dl><dd>If set, these custom DMA channel names will be requested at registration time.</dl>
+<dl><dd>If set, these custom DMA channel names will be requested at registration time.</dd></dl>
  
 
  pcm_hardware
-<dl><dd>snd_pcm_hardware struct to be used for the PCM.</dl>
+<dl><dd>snd_pcm_hardware struct to be used for the PCM.</dd></dl>
  
 
  prealloc_buffer_size
-<dl><dd>Size of the preallocated audio buffer.</dl>
+<dl><dd>Size of the preallocated audio buffer.</dd></dl>
 
 <h2>Note</h2>
 

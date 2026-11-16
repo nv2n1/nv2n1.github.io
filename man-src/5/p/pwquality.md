@@ -15,45 +15,45 @@ description: "pwquality.conf – configuration for the libpwquality library"
 <h2>Options</h2>
 <p>The possible options in the file are:</p>
 <dl>
-<dd><code>difok</code></p>
+<dd><code>difok</code></dd>
 <dl>
-<dd>Number of characters in the new password that must not be present in the old password. (default 5)</dl>
+<dd>Number of characters in the new password that must not be present in the old password. (default 5)</dd></dl>
 <p> <code>minlen</code></p>
 <dl>
-<dd>Minimum acceptable size for the new password (plus one if credits are not disabled which is the default). (See <i><a href="/docs/linux/man/8-pam_pwquality/">pam_pwquality</a>(8)</i>.) Cannot be set to lower value than 6. (default 9)</dl>
+<dd>Minimum acceptable size for the new password (plus one if credits are not disabled which is the default). (See <i><a href="/docs/linux/man/8-pam_pwquality/">pam_pwquality</a>(8)</i>.) Cannot be set to lower value than 6. (default 9)</dd></dl>
 <p> <code>dcredit</code></p>
 <dl>
-<dd>The maximum credit for having digits in the new password. If less than 0 it is the minimum number of digits in the new password. (default 1)</dl>
+<dd>The maximum credit for having digits in the new password. If less than 0 it is the minimum number of digits in the new password. (default 1)</dd></dl>
 <p> <code>ucredit</code></p>
 <dl>
-<dd>The maximum credit for having uppercase characters in the new password. If less than 0 it is the minimum number of uppercase characters in the new password. (default 1)</dl>
+<dd>The maximum credit for having uppercase characters in the new password. If less than 0 it is the minimum number of uppercase characters in the new password. (default 1)</dd></dl>
 <p> <code>lcredit</code></p>
 <dl>
-<dd>The maximum credit for having lowercase characters in the new password. If less than 0 it is the minimum number of lowercase characters in the new password. (default 1)</dl>
+<dd>The maximum credit for having lowercase characters in the new password. If less than 0 it is the minimum number of lowercase characters in the new password. (default 1)</dd></dl>
 <p> <code>ocredit</code></p>
 <dl>
-<dd>The maximum credit for having other characters in the new password. If less than 0 it is the minimum number of other characters in the new password. (default 1)</dl>
+<dd>The maximum credit for having other characters in the new password. If less than 0 it is the minimum number of other characters in the new password. (default 1)</dd></dl>
 <p> <code>minclass</code></p>
 <dl>
-<dd>The minimum number of required classes of characters for the new password (digits, uppercase, lowercase, others). (default 0)</dl>
+<dd>The minimum number of required classes of characters for the new password (digits, uppercase, lowercase, others). (default 0)</dd></dl>
 <p> <code>maxrepeat</code></p>
 <dl>
-<dd>The maximum number of allowed same consecutive characters in the new password. The check is disabled if the value is 0. (default 0)</dl>
+<dd>The maximum number of allowed same consecutive characters in the new password. The check is disabled if the value is 0. (default 0)</dd></dl>
 <p> <code>maxsequence</code></p>
 <dl>
-<dd>The maximum length of monotonic character sequences in the new password. Examples of such sequence are &#8216;12345&#8217; or &#8216;fedcb&#8217;. Note that most such passwords will not pass the simplicity check unless the sequence is only a minor part of the password. The check is disabled if the value is 0. (default 0)</dl>
+<dd>The maximum length of monotonic character sequences in the new password. Examples of such sequence are &#8216;12345&#8217; or &#8216;fedcb&#8217;. Note that most such passwords will not pass the simplicity check unless the sequence is only a minor part of the password. The check is disabled if the value is 0. (default 0)</dd></dl>
 <p> <code>maxclassrepeat</code></p>
 <dl>
-<dd>The maximum number of allowed consecutive characters of the same class in the new password. The check is disabled if the value is 0. (default 0)</dl>
+<dd>The maximum number of allowed consecutive characters of the same class in the new password. The check is disabled if the value is 0. (default 0)</dd></dl>
 <p> <code>gecoscheck</code></p>
 <dl>
-<dd>If nonzero, check whether the words longer than 3 characters from the GECOS field of the user&#8217;s passwd entry are contained in the new password. The check is disabled if the value is 0. (default 0)</dl>
+<dd>If nonzero, check whether the words longer than 3 characters from the GECOS field of the user&#8217;s passwd entry are contained in the new password. The check is disabled if the value is 0. (default 0)</dd></dl>
 <p> <code>badwords</code></p>
 <dl>
-<dd>Space separated list of words that must not be contained in the password. These are additional words to the cracklib dictionary check. This setting can be also used by applications to emulate the gecos check for user accounts that are not created yet.</dl>
+<dd>Space separated list of words that must not be contained in the password. These are additional words to the cracklib dictionary check. This setting can be also used by applications to emulate the gecos check for user accounts that are not created yet.</dd></dl>
 <p> <code>dictpath</code></p>
 <dl>
-<dd>Path to the cracklib dictionaries. Default is to use the cracklib default.</dl>
+<dd>Path to the cracklib dictionaries. Default is to use the cracklib default.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-pwscore/">pwscore</a>(1), <a href="/docs/linux/man/1-pwmake/">pwmake</a>(1), <a href="/docs/linux/man/8-pam_pwquality/">pam_pwquality</a>(8) </p>

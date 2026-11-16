@@ -16,8 +16,8 @@ description: "kpasswd – change a user’s Kerberos password"
 <p> If the principal is governed by a policy that specifies the length and/or number of character classes required in the new password, the new password must conform to the policy. (The five character classes are lower case, upper case, numbers, punctuation, and all other characters.)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>principal</i></p>
-<dd> Change the password for the Kerberos principal principal. Otherwise, kpasswd uses the principal name from an existing ccache if there is one; if not, the principal is derived from the identity of the user invoking the kpasswd command.</dl>
+<dt><i>principal</i></dt>
+<dd> Change the password for the Kerberos principal principal. Otherwise, kpasswd uses the principal name from an existing ccache if there is one; if not, the principal is derived from the identity of the user invoking the kpasswd command.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i>, <i><a href="/docs/linux/man/8-kadmind/">kadmind</a>(8)</i></p>
 <h2>AUTHOR</h2>

@@ -24,22 +24,22 @@ description: "CREATE DATABASE – create a new database"
 <p> By default, the new database will be created by cloning the standard system database template1. A different template can be specified by writing TEMPLATE <i>name</i>. In particular, by writing TEMPLATE template0, you can create a virgin database containing only the standard objects predefined by your version of PostgreSQL. This is useful if you wish to avoid copying any installation-local objects that might have been added to template1.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of a database to create.</p>
-<dt><i>dbowner</i></p>
-<dd>The name of the database user who will own the new database, or DEFAULT to use the default (namely, the user executing the command).</p>
-<dt><i>template</i></p>
-<dd>The name of the template from which to create the new database, or DEFAULT to use the default template (template1).</p>
-<dt><i>encoding</i></p>
-<dd>Character set encoding to use in the new database. Specify a string constant (e.g., &#8216;SQL_ASCII&#8217;), or an integer encoding number, or DEFAULT to use the default encoding (namely, the encoding of the template database). The character sets supported by the PostgreSQL server are described in in the documentation. See below for additional restrictions.</p>
-<dt><i>lc_collate</i></p>
-<dd>Collation order (LC_COLLATE) to use in the new database. This affects the sort order applied to strings, e.g. in queries with ORDER BY, as well as the order used in indexes on text columns. The default is to use the collation order of the template database. See below for additional restrictions.</p>
-<dt><i>lc_ctype</i></p>
-<dd>Character classification (LC_CTYPE) to use in the new database. This affects the categorization of characters, e.g. lower, upper and digit. The default is to use the character classification of the template database. See below for additional restrictions.</p>
-<dt><i>tablespace</i></p>
-<dd>The name of the tablespace that will be associated with the new database, or DEFAULT to use the template database&#8217;s tablespace. This tablespace will be the default tablespace used for objects created in this database. See CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)] for more information.</p>
-<dt><i>connlimit</i></p>
-<dd>How many concurrent connections can be made to this database. -1 (the default) means no limit.</dl>
+<dt><i>name</i></dt>
+<dd>The name of a database to create.</dd>
+<dt><i>dbowner</i></dt>
+<dd>The name of the database user who will own the new database, or DEFAULT to use the default (namely, the user executing the command).</dd>
+<dt><i>template</i></dt>
+<dd>The name of the template from which to create the new database, or DEFAULT to use the default template (template1).</dd>
+<dt><i>encoding</i></dt>
+<dd>Character set encoding to use in the new database. Specify a string constant (e.g., &#8216;SQL_ASCII&#8217;), or an integer encoding number, or DEFAULT to use the default encoding (namely, the encoding of the template database). The character sets supported by the PostgreSQL server are described in in the documentation. See below for additional restrictions.</dd>
+<dt><i>lc_collate</i></dt>
+<dd>Collation order (LC_COLLATE) to use in the new database. This affects the sort order applied to strings, e.g. in queries with ORDER BY, as well as the order used in indexes on text columns. The default is to use the collation order of the template database. See below for additional restrictions.</dd>
+<dt><i>lc_ctype</i></dt>
+<dd>Character classification (LC_CTYPE) to use in the new database. This affects the categorization of characters, e.g. lower, upper and digit. The default is to use the character classification of the template database. See below for additional restrictions.</dd>
+<dt><i>tablespace</i></dt>
+<dd>The name of the tablespace that will be associated with the new database, or DEFAULT to use the template database&#8217;s tablespace. This tablespace will be the default tablespace used for objects created in this database. See CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)] for more information.</dd>
+<dt><i>connlimit</i></dt>
+<dd>How many concurrent connections can be made to this database. -1 (the default) means no limit.</dd></dl>
 <p> Optional parameters can be written in any order, not only the order illustrated above.</p>
 <h2>Notes</h2>
 <p><code>CREATE DATABASE</code> cannot be executed inside a transaction block. </p>

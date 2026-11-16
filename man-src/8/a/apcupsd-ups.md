@@ -17,7 +17,7 @@ description: "apcupsd-ups – Driver for apcupsd client access"
 <p>This driver supports the following optional settings in <code><a href="/docs/linux/man/5-nut-conf/">nut.conf</a></code>(5): </p>
 <p> <code>port</code>=&lt;hostname&gt;[:&lt;port&gt;]</p>
 <dl>
-<dd>This is the name of a remote host running apcupsd (plus an optional port).</dl>
+<dd>This is the name of a remote host running apcupsd (plus an optional port).</dd></dl>
 <p> For instance: </p>
 <dl>
 <dd>
@@ -25,7 +25,7 @@ description: "apcupsd-ups – Driver for apcupsd client access"
  driver = apcupsd-ups
  port = localhost
  desc = &quot;apcupsd client&quot;</pre>
-</dl>
+</dd></dl>
 <h2>Background</h2>
 <p>This driver was originally written in one evening to allow interworking with <code>apcupsd</code>.</p>
 <h2>Supported Variables</h2>
@@ -276,3 +276,4 @@ description: "apcupsd-ups – Driver for apcupsd client access"
 <p><code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet Resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> The apcupsd home page: <a rel="nofollow" href="http://www.apcupsd.org/">http://www.apcupsd.org/</a> </p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>

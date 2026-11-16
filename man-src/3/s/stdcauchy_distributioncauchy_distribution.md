@@ -11,10 +11,8 @@ description: "std::cauchy_distribution<RealType>::cauchy_distribution – std::c
 <h2>Synopsis</h2>
 <pre><code>cauchy_distribution()
     : cauchy_distribution(0.0){}(1)(since C++ 11)
-
           explicit cauchy_distribution(RealType a, RealType b = 1.0);
 (2)(since C++ 11)
-
     explicit cauchy_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses a and b as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>

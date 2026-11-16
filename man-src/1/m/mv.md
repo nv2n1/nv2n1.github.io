@@ -17,46 +17,46 @@ description: "mv – move (rename) files"
 <p> Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>&#8211;backup</code>[=<i>,CONTROL/</i>]</p>
-<dd> make a backup of each existing destination file</p>
-<dt><code>-b</code></p>
-<dd> like <code>&#8211;backup</code> but does not accept an argument</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> do not prompt before overwriting</p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> prompt before overwrite</p>
-<dt><code>-n</code>, <code>&#8211;no-clobber</code></p>
-<dd> do not overwrite an existing file</dl>
+<dt><code>&#8211;backup</code>[=<i>,CONTROL/</i>]</dt>
+<dd> make a backup of each existing destination file</dd>
+<dt><code>-b</code></dt>
+<dd> like <code>&#8211;backup</code> but does not accept an argument</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> do not prompt before overwriting</dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> prompt before overwrite</dd>
+<dt><code>-n</code>, <code>&#8211;no-clobber</code></dt>
+<dd> do not overwrite an existing file</dd></dl>
 <p> If you specify more than one of <code>-i</code>, <code>-f</code>, <code>-n</code>, only the final one takes effect.</p>
 <dl>
-<dt><code>&#8211;strip-trailing-slashes</code></p>
-<dd> remove any trailing slashes from each SOURCE argument</p>
-<dt><code>-S</code>, <code>&#8211;suffix</code>=<i>,SUFFIX/</i></p>
-<dd> override the usual backup suffix</p>
-<dt><code>-t</code>, <code>&#8211;target-directory</code>=<i>,DIRECTORY/</i></p>
-<dd> move all SOURCE arguments into DIRECTORY</p>
-<dt><code>-T</code>, <code>&#8211;no-target-directory</code></p>
-<dd> treat DEST as a normal file</p>
-<dt><code>-u</code>, <code>&#8211;update</code></p>
-<dd> move only when the SOURCE file is newer than the destination file or when the destination file is missing</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> explain what is being done</p>
-<dt><code>-Z</code>, <code>&#8211;context</code></p>
-<dd> set SELinux security context of destination file to default type</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;strip-trailing-slashes</code></dt>
+<dd> remove any trailing slashes from each SOURCE argument</dd>
+<dt><code>-S</code>, <code>&#8211;suffix</code>=<i>,SUFFIX/</i></dt>
+<dd> override the usual backup suffix</dd>
+<dt><code>-t</code>, <code>&#8211;target-directory</code>=<i>,DIRECTORY/</i></dt>
+<dd> move all SOURCE arguments into DIRECTORY</dd>
+<dt><code>-T</code>, <code>&#8211;no-target-directory</code></dt>
+<dd> treat DEST as a normal file</dd>
+<dt><code>-u</code>, <code>&#8211;update</code></dt>
+<dd> move only when the SOURCE file is newer than the destination file or when the destination file is missing</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> explain what is being done</dd>
+<dt><code>-Z</code>, <code>&#8211;context</code></dt>
+<dd> set SELinux security context of destination file to default type</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> The backup suffix is &#8216;~&#8217;, unless set with <code>&#8211;suffix</code> or SIMPLE_BACKUP_SUFFIX. The version control method may be selected via the <code>&#8211;backup</code> option or through the VERSION_CONTROL environment variable. Here are the values:</p>
 <dl>
-<dt>none, off</p>
-<dd> never make backups (even if <code>&#8211;backup</code> is given)</p>
-<dt>numbered, t</p>
-<dd> make numbered backups</p>
-<dt>existing, nil</p>
-<dd> numbered if numbered backups exist, simple otherwise</p>
-<dt>simple, never</p>
-<dd> always make simple backups</dl>
+<dt>none, off</dt>
+<dd> never make backups (even if <code>&#8211;backup</code> is given)</dd>
+<dt>numbered, t</dt>
+<dd> make numbered backups</dd>
+<dt>existing, nil</dt>
+<dd> numbered if numbered backups exist, simple otherwise</dd>
+<dt>simple, never</dt>
+<dd> always make simple backups</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Mike Parker, David MacKenzie, and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>

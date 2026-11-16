@@ -48,9 +48,10 @@ that PAPI_accum resets the values array to zero.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPIF_accum</code> </p>
+<dd><code>PAPIF_accum</code> </dd>
 <p> <code>PAPI_start</code> </p>
 <p> <code>PAPI_set_opt</code> </p>
 <p> <code>PAPI_reset</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

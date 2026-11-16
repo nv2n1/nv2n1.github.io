@@ -16,7 +16,8 @@ description: "globus_gsi_cert_utils.h – Globus GSI Cert Utils Library."
 <p>Globus GSI Cert Utils Library. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Lang </p>
+<dd>Sam Lang </dd>
 <p> Sam Meder</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_cert_utils from the source code.</p>
+</p>

@@ -12,13 +12,10 @@ std::poisson_distribution&lt;IntType&gt;::operator() - std::poisson_distribution
 
 <pre><code>template &lt;class Generator&gt;
 (1)(since C++ 11)
-
     result_type
     operator()(Generator &amp;g);
-
 template &lt;class Generator&gt;
 (2)(since C++ 11)
-
     result_type
     operator()(Generator &amp;g, const param_type &amp;params);</code></pre> 
 Generates random numbers that are distributed according to the associated probability function. The entropy is acquired by calling g.operator(). 

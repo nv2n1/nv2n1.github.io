@@ -14,8 +14,8 @@ description: "gnutls_sign_algorithm_get_name – Returns a string with the name 
 <p> <code>const char * gnutls_sign_algorithm_get_name(gnutls_sign_algorithm_t </code><i>sign</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_sign_algorithm_t sign</p>
-<dd> is a sign algorithm</dl>
+<dt>gnutls_sign_algorithm_t sign</dt>
+<dd> is a sign algorithm</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert a <code>gnutls_sign_algorithm_t</code> value to a string.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_sign_algorithm_get_name – Returns a string with the name 
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

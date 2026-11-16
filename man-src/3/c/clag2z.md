@@ -19,7 +19,7 @@ description: "clag2z.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLAG2Z converts a COMPLEX matrix, SA, to a COMPLEX*16 matrix, A.
  Note that while it is possible to overflow while converting
@@ -27,11 +27,11 @@ description: "clag2z.f –"
  converting from single to double.
  This is an auxiliary routine so there is no argument checking.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of lines of the matrix A.  M &gt;= 0.
@@ -70,14 +70,14 @@ description: "clag2z.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 104 of file clag2z.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

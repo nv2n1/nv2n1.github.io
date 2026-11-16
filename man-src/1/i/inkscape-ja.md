@@ -59,91 +59,91 @@ url: "/docs/linux/man/1-inkscape-ja/"
 <p> <code>Inkscape</code> は <font SIZE="-1">SVG</font> をその内部フォーマットとして採用しており、オープンソースコミュニティにおいてもっとも <font SIZE="-1">SVG</font> に準拠したドローイングプログラムになることを目標としています。</p>
 <h2>オプション</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>ヘルプメッセージを表示します。</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Inkscape のバージョンとビルド日時を表示します。</p>
-<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></p>
-<dd><font SIZE="-1">PNG</font> エクスポートにおいて、エクスポートする領域を <font SIZE="-1">SVG</font> ユーザー単位 (通常 Inkscape <font SIZE="-1">SVG</font> 内で使用されている長さの単位) で指定します。デフォルトではドキュメント全体をエクスポートします。座標 (0,0) は左下の角になります。</p>
-<dt><code>-C</code>, <code>&#8211;export-area-page</code></p>
-<dd>PNG、PDF、PS、および <font SIZE="-1">EPS</font> エクスポートにおいて、エクスポート領域はそのページになります。これは PNG、PDF、および <font SIZE="-1">PS</font> ではデフォルトになるため、&#8211;export-id を使用して指定オブジェクトをエクスポートする場合を除き指定する必要はありません。対して <font SIZE="-1">EPS</font> ではこれはデフォルトになりません。さらに <font SIZE="-1">EPS</font> では、形式の指定において境界枠を内容より拡大することができません。これは、EPS エクスポート時に &#8211;export-area-page を使用した場合、ページの内容が境界枠より小さいと境界枠もそれに合わせて小さくなることを意味します。</p>
-<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></p>
-<dd>PNG、PDF、PS、および <font SIZE="-1">EPS</font> エクスポートにおいて、エクスポートされる領域はページではなく、その描画部分、すなわち、ドキュメント内のすべてのオブジェクト (&#8211;export-id を使用した場合はエクスポートされるオブジェクト) 全体の境界枠となります。このオプションを指定すると、エクスポートされたイメージにはマージンやクロッピングがなく、ドキュメントのすべての可視オブジェクトが含まれます。EPS ではこれがデフォルトのエクスポート領域となり、&#8211;export-use-hints とともに使用することができます。</p>
-<dt><code>&#8211;export-area-snap</code></p>
-<dd><font SIZE="-1">PNG</font> エクスポートにおいて、エクスポート領域を拡大方向に最も近い <font SIZE="-1">SVG</font> ユーザー単位 (px) 値にスナップします。エクスポート解像度がデフォルトの 90dpi でグラフィックが最小のアンチエイリアスにピクセルスナップされた場合、エクスポートするいくつかのオブジェクトの境界枠 (&#8211;export-id または &#8211;export-area-drawing 指定) がピクセルに揃えていない場合であっても、このスイッチで配置を維持できます。</p>
-<dt><code>-b</code> <i></i><font SIZE="-1"><i>COLOR</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>COLOR</i></font><i></i></p>
-<dd>エクスポートした <font SIZE="-1">PNG</font> の背景色になります。SVG がサポートする色指定文字列 (&#8220;#ff007f&#8221; や &#8220;rgb(255,0,128)&#8221; など) が使用できます。これを指定しない場合、Inkscape のドキュメントの設定で指定された色 (sodipodi:namedview の pagecolor= 属性) が使用されます。</p>
-<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></p>
-<dd><font SIZE="-1">PNG</font> エクスポートで使用される解像度になります。PS、EPS、あるいは <font SIZE="-1">PDF</font> へのエクスポート時のフィルター処理されたオブジェクトにおけるフォールバックラスタライズでも使用されます (&#8211;export-ignore-filters でラスタライズを抑止している場合を除く)。</p>
-<dt><code>-e</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-png</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd><font SIZE="-1">PNG</font> エクスポート時のファイル名を指定します。同名のファイルが存在する場合、問い合わせなしに上書きされます。</p>
-<dt><code>-f</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;file</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd>指定されたドキュメントを開きます。オプション文字 (-f) は省略できます。すなわち、オプション文字が与えられていない場合は -f が指定され、パラメーターはすべてファイル名とみなされます。</p>
-<dt><code>-g</code>, <code>&#8211;with-gui</code></p>
-<dd><font SIZE="-1">GUI</font> の使用を試みます (Unix の場合、$DISPLAY が設定されていない場合でも X server を使用します)。</p>
-<dt><code>-h</code> <i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i>, <code>&#8211;export-height</code>=<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i></p>
-<dd>生成するビットマップの高さ (ピクセル) になります。この値は &#8211;export-dpi 設定 (または &#8211;export-use-hints を指定した場合の <font SIZE="-1">DPI</font> ヒント) より優先されます。</p>
-<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></p>
-<dd>For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page.</p>
-<dt><code>-j</code>, <code>&#8211;export-id-only</code></p>
-<dd>For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</p>
-<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd>ドキュメントをプレーン <font SIZE="-1">SVG</font> 形式にエクスポートします。sodipodi: あるいは inkscape: 名前空間や <font SIZE="-1">RDF</font> メタデータは破棄されます。</p>
-<dt><code>-x</code>, <code>&#8211;extension-directory</code></p>
-<dd>Inkscape が使用するよう設定されている現在のエクステンションディレクトリの一覧を表示して終了します。これは外部のエクステンションがオリジナルの Inkscape インストール場所を取得するために使用されます。</p>
-<dt><code>&#8211;verb-list</code></p>
-<dd>Inkscape で利用できる全 <font SIZE="-1">VERB </font>(内部コマンド) の一覧を <font SIZE="-1">ID</font> 順で表示します。この <font SIZE="-1">ID</font> はキーマップやメニューの定義で使用することができる他、&#8211;verb コマンドラインオプションでも使用できます。</p>
-<dt><code>&#8211;verb</code>=<i>VERB-ID</i>, <code>&#8211;select</code>=<i>OBJECT-ID</i></p>
-<dd>これら 2 つのオプションは同時に使用し、コマンドラインから Inkscape を操作できる基本的なスクリプト機能を提供します。これらはコマンドライン上で、必要であれば何度でも使用でき、指定された各ドキュメント上で順番に実行されます。 </p>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>ヘルプメッセージを表示します。</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Inkscape のバージョンとビルド日時を表示します。</dd>
+<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></dt>
+<dd><font SIZE="-1">PNG</font> エクスポートにおいて、エクスポートする領域を <font SIZE="-1">SVG</font> ユーザー単位 (通常 Inkscape <font SIZE="-1">SVG</font> 内で使用されている長さの単位) で指定します。デフォルトではドキュメント全体をエクスポートします。座標 (0,0) は左下の角になります。</dd>
+<dt><code>-C</code>, <code>&#8211;export-area-page</code></dt>
+<dd>PNG、PDF、PS、および <font SIZE="-1">EPS</font> エクスポートにおいて、エクスポート領域はそのページになります。これは PNG、PDF、および <font SIZE="-1">PS</font> ではデフォルトになるため、&#8211;export-id を使用して指定オブジェクトをエクスポートする場合を除き指定する必要はありません。対して <font SIZE="-1">EPS</font> ではこれはデフォルトになりません。さらに <font SIZE="-1">EPS</font> では、形式の指定において境界枠を内容より拡大することができません。これは、EPS エクスポート時に &#8211;export-area-page を使用した場合、ページの内容が境界枠より小さいと境界枠もそれに合わせて小さくなることを意味します。</dd>
+<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></dt>
+<dd>PNG、PDF、PS、および <font SIZE="-1">EPS</font> エクスポートにおいて、エクスポートされる領域はページではなく、その描画部分、すなわち、ドキュメント内のすべてのオブジェクト (&#8211;export-id を使用した場合はエクスポートされるオブジェクト) 全体の境界枠となります。このオプションを指定すると、エクスポートされたイメージにはマージンやクロッピングがなく、ドキュメントのすべての可視オブジェクトが含まれます。EPS ではこれがデフォルトのエクスポート領域となり、&#8211;export-use-hints とともに使用することができます。</dd>
+<dt><code>&#8211;export-area-snap</code></dt>
+<dd><font SIZE="-1">PNG</font> エクスポートにおいて、エクスポート領域を拡大方向に最も近い <font SIZE="-1">SVG</font> ユーザー単位 (px) 値にスナップします。エクスポート解像度がデフォルトの 90dpi でグラフィックが最小のアンチエイリアスにピクセルスナップされた場合、エクスポートするいくつかのオブジェクトの境界枠 (&#8211;export-id または &#8211;export-area-drawing 指定) がピクセルに揃えていない場合であっても、このスイッチで配置を維持できます。</dd>
+<dt><code>-b</code> <i></i><font SIZE="-1"><i>COLOR</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>COLOR</i></font><i></i></dt>
+<dd>エクスポートした <font SIZE="-1">PNG</font> の背景色になります。SVG がサポートする色指定文字列 (&#8220;#ff007f&#8221; や &#8220;rgb(255,0,128)&#8221; など) が使用できます。これを指定しない場合、Inkscape のドキュメントの設定で指定された色 (sodipodi:namedview の pagecolor= 属性) が使用されます。</dd>
+<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></dt>
+<dd><font SIZE="-1">PNG</font> エクスポートで使用される解像度になります。PS、EPS、あるいは <font SIZE="-1">PDF</font> へのエクスポート時のフィルター処理されたオブジェクトにおけるフォールバックラスタライズでも使用されます (&#8211;export-ignore-filters でラスタライズを抑止している場合を除く)。</dd>
+<dt><code>-e</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-png</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd><font SIZE="-1">PNG</font> エクスポート時のファイル名を指定します。同名のファイルが存在する場合、問い合わせなしに上書きされます。</dd>
+<dt><code>-f</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;file</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd>指定されたドキュメントを開きます。オプション文字 (-f) は省略できます。すなわち、オプション文字が与えられていない場合は -f が指定され、パラメーターはすべてファイル名とみなされます。</dd>
+<dt><code>-g</code>, <code>&#8211;with-gui</code></dt>
+<dd><font SIZE="-1">GUI</font> の使用を試みます (Unix の場合、$DISPLAY が設定されていない場合でも X server を使用します)。</dd>
+<dt><code>-h</code> <i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i>, <code>&#8211;export-height</code>=<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i></dt>
+<dd>生成するビットマップの高さ (ピクセル) になります。この値は &#8211;export-dpi 設定 (または &#8211;export-use-hints を指定した場合の <font SIZE="-1">DPI</font> ヒント) より優先されます。</dd>
+<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></dt>
+<dd>For <font SIZE="-1">PNG, PS, EPS, PDF</font> and plain <font SIZE="-1">SVG</font> export, the id attribute value of the object that you want to export from the document; all other objects are not exported. By default the exported area is the bounding box of the object; you can override this using &#8211;export-area (<font SIZE="-1">PNG</font> only) or &#8211;export-area-page.</dd>
+<dt><code>-j</code>, <code>&#8211;export-id-only</code></dt>
+<dd>For <font SIZE="-1">PNG</font> and plain <font SIZE="-1">SVG,</font> only export the object whose id is given in &#8211;export-id. All other objects are hidden and won&#8217;t show in export even if they overlay the exported object. Without &#8211;export-id, this option is ignored. For <font SIZE="-1">PDF</font> export, this is the default, so this option has no effect.</dd>
+<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd>ドキュメントをプレーン <font SIZE="-1">SVG</font> 形式にエクスポートします。sodipodi: あるいは inkscape: 名前空間や <font SIZE="-1">RDF</font> メタデータは破棄されます。</dd>
+<dt><code>-x</code>, <code>&#8211;extension-directory</code></dt>
+<dd>Inkscape が使用するよう設定されている現在のエクステンションディレクトリの一覧を表示して終了します。これは外部のエクステンションがオリジナルの Inkscape インストール場所を取得するために使用されます。</dd>
+<dt><code>&#8211;verb-list</code></dt>
+<dd>Inkscape で利用できる全 <font SIZE="-1">VERB </font>(内部コマンド) の一覧を <font SIZE="-1">ID</font> 順で表示します。この <font SIZE="-1">ID</font> はキーマップやメニューの定義で使用することができる他、&#8211;verb コマンドラインオプションでも使用できます。</dd>
+<dt><code>&#8211;verb</code>=<i>VERB-ID</i>, <code>&#8211;select</code>=<i>OBJECT-ID</i></dt>
+<dd>これら 2 つのオプションは同時に使用し、コマンドラインから Inkscape を操作できる基本的なスクリプト機能を提供します。これらはコマンドライン上で、必要であれば何度でも使用でき、指定された各ドキュメント上で順番に実行されます。 </dd>
 <p> &#8211;verb コマンドは指定された <font SIZE="-1">VERB</font> をメニューやボタンから呼び出した場合と同様に実行します。VERB にダイアログがある場合はそれが表示されます。使用できる <font SIZE="-1">VERB ID</font> の一覧は &#8211;verb-list コマンドで確認できます。 </p>
 <p> &#8211;select コマンドは指定された <font SIZE="-1">ID</font> のオブジェクトを選択状態にします。様々な <font SIZE="-1">VERB</font> はここで指定されたオブジェクトに対して実行されます。すべての選択を解除するには &#8211;verb=EditDeselect を使用します。使用できるオブジェクト <font SIZE="-1">ID</font> は読み込まれるドキュメントに依存します。</p>
-<dt><code>-p</code> <i></i><font SIZE="-1"><i>PRINTER</i></font><i></i>, <code>&#8211;print</code>=<i></i><font SIZE="-1"><i>PRINTER</i></font><i></i></p>
-<dd>ドキュメントを `lpr -P <font SIZE="-1">PRINTER</font>&#8216; で指定されたプリンターで印刷します。他に、`| <font SIZE="-1">COMMAND</font>&#8216; でさまざまなコマンドへリダイレクトし、`&gt; <font SIZE="-1">FILENAME</font>&#8216; で PostScript 出力でファイルに書き出します。使用するシェルに応じた引用符で括ることを忘れないでください。 </p>
+<dt><code>-p</code> <i></i><font SIZE="-1"><i>PRINTER</i></font><i></i>, <code>&#8211;print</code>=<i></i><font SIZE="-1"><i>PRINTER</i></font><i></i></dt>
+<dd>ドキュメントを `lpr -P <font SIZE="-1">PRINTER</font>&#8216; で指定されたプリンターで印刷します。他に、`| <font SIZE="-1">COMMAND</font>&#8216; でさまざまなコマンドへリダイレクトし、`&gt; <font SIZE="-1">FILENAME</font>&#8216; で PostScript 出力でファイルに書き出します。使用するシェルに応じた引用符で括ることを忘れないでください。 </dd>
 <p> 例: inkscape &#8211;print=&#8217;| ps2pdf &#8211; mydoc.pdf&#8217; mydoc.svg</p>
-<dt><code>-t</code>, <code>&#8211;export-use-hints</code></p>
-<dd>エクスポートしたオブジェクトに保存されているファイル名および <font SIZE="-1">DPI</font> ヒントを使用します (&#8211;export-id 使用時のみ)。これらヒントは Inkscape 内から選択範囲をエクスポートするときに自動的に設定されます。すなわち、例えば Inkscape を使用してドキュメント document.svg からオブジェクト <font SIZE="-1">ID </font>&#8220;path231&#8221; を /home/me/shape.png に解像度 300dpi でエクスポートし、ドキュメントを保存すれば、そのシェイプを同じファイル名で同じ解像度で再度エクスポートする場合は、以下の指定だけで行えます。 </p>
+<dt><code>-t</code>, <code>&#8211;export-use-hints</code></dt>
+<dd>エクスポートしたオブジェクトに保存されているファイル名および <font SIZE="-1">DPI</font> ヒントを使用します (&#8211;export-id 使用時のみ)。これらヒントは Inkscape 内から選択範囲をエクスポートするときに自動的に設定されます。すなわち、例えば Inkscape を使用してドキュメント document.svg からオブジェクト <font SIZE="-1">ID </font>&#8220;path231&#8221; を /home/me/shape.png に解像度 300dpi でエクスポートし、ドキュメントを保存すれば、そのシェイプを同じファイル名で同じ解像度で再度エクスポートする場合は、以下の指定だけで行えます。 </dd>
 <p> inkscape -i path231 -t document.svg </p>
 <p> &#8211;export-dpi、&#8211;export-width、あるいは &#8211;export-height をこのオプションと共に指定した場合は、DPI ヒントは無視され、コマンドラインで指定された値が使用されます。&#8211;export-png をこのオプションと共に使用した場合は、ファイル名ヒントは無視され、コマンドラインで指定されたファイル名が使用されます。</p>
-<dt><code>-w</code> <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>, <code>&#8211;export-width</code>=<i></i><font SIZE="-1"><i>WIDTH</i></font><i></i></p>
-<dd>生成されるビットマップの幅のピクセル数になります。この値は &#8211;export-dpi 指定 (&#8211;export-use-hints を使用した場合は <font SIZE="-1">DPI</font> ヒント) より優先されます。</p>
-<dt><code>-y</code> <i></i><font SIZE="-1"><i>VALUE</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></p>
-<dd>エクスポートした <font SIZE="-1">PNG</font> の背景の透明度になります。指定できる値の範囲は 0.0 から 1.0 (0.0 が完全な透明、1.0 が完全な不透明)、あるいは 1 から 255 (255 が完全な不透明) のどちらかです。このオプションを指定せず -b オプションも指定されなかった場合、 Inkscape 内のドキュメントの設定で指定された値 (sodipodi:namedview の inkscape:pageopacity= 属性)が使用されます。このオプションを指定せずに -b オプションが指定された場合、255 (完全な不透明) とみなされます。</p>
-<dt><code>-P</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-ps</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd>ドキュメントを PostScript (<font SIZE="-1">PS</font>) 形式にエクスポートします。PostScript は透明度をサポートしていない点に留意してください。オリジナルの <font SIZE="-1">SVG</font> にあるいかなる透明なオブジェクトも自動的にラスタライズされます。使用しているフォントはサブセット化されて埋め込まれます。デフォルトのエクスポート領域はページになり、&#8211;export-area-drawing で描画全体に指定できます。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定でき (その他はすべてエクスポートされません)、その場合はエクスポート領域はそのオブジェクトの境界枠になりますが、&#8211;export-area-page でそのページに指定できます。</p>
-<dt><code>-E</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-eps</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd>ドキュメントを Encapsulated PostScript (<font SIZE="-1">EPS</font>) 形式にエクスポートします。PostScript は透明度をサポートしていない点に留意してください。オリジナルの <font SIZE="-1">SVG</font> にあるいかなる透明オブジェクトも自動的にラスタライズされます。使用しているフォントはサブセット化されて埋め込まれます。デフォルトのエクスポート領域は描画全体になり、ページに指定することも出来ますが、その場合の制限事項については &#8211;export-area-page を参照してください。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定できます (その他はすべてエクスポートされません)。</p>
-<dt><code>-A</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-pdf</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></p>
-<dd>ドキュメントを <font SIZE="-1">PDF</font> 形式にエクスポートします。この形式ではオリジナル <font SIZE="-1">SVG</font> の透明度は保持されます。使用しているフォントはサブセット化され埋め込まれます。デフォルトのエクスポート領域はページになり、&#8211;export-area-drawing で描画全体に指定できます。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定でき (その他はすべてエクスポートされません)、その場合はエクスポート領域はそのオブジェクトの境界枠になりますが、&#8211;export-area-page でそのページに指定できます。&quot;</p>
-<dt><code>&#8211;export-pdf-version</code>=<i>PDF-VERSION</i></p>
-<dd>Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</p>
-<dt><code>&#8211;export-latex</code></p>
-<dd>(PS、EPS、および <font SIZE="-1">PDF</font> エクスポート用) LaTeX ドキュメント用のイメージを作成し、イメージ内のテキストは LaTeX によるタイプセットになります。PDF/PS/EPS 形式へのエクスポート時、このオプションはオリジナルの <font SIZE="-1">SVG</font> を <font SIZE="-1">PDF/PS/EPS</font> ファイル (形式は &#8211;export-pdf などで指定) と LaTeX ファイルに分割します。テキストは <font SIZE="-1">PDF/PS/EPS</font> ファイルには出力されず、LaTeX ファイルに出力されます。この LaTeX ファイルには <font SIZE="-1">PDF/PS/EPS</font> も含まれます。LaTex でこの LaTeX ファイルを入力 (\input{image.tex}) すると、イメージと共に LaTeX によってタイプセットされたテキストが表示されます。より詳しい情報は出力された実際の LaTeX ファイルを参照してください。また、GNUPlot の `epslatex&#8217; 出力ターミナルも参照してください。</p>
-<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></p>
-<dd>該当する場合は、テキストオブジェクトをパスに変換します (PS、EPS、PDF、および <font SIZE="-1">SVG</font> エクスポート用)。</p>
-<dt><code>&#8211;export-ignore-filters</code></p>
-<dd>ぼかしなどのフィルターが適用されたベクターオブジェクトをエクスポートするとき、フィルターを無視します (PS、EPS、および <font SIZE="-1">PDF</font> 用)。デフォルトでは、フィルターが適用されているオブジェクトは &#8211;export-dpi で指定された解像度 (デフォルトは 90 dpi) でラスタライズされ、その外見を維持します。</p>
-<dt><code>-I</code>, <code>&#8211;query-id</code></p>
-<dd>サイズや座標を問い合わせたいオブジェクトの <font SIZE="-1">ID</font> を指定します。指定がない場合、ページや viewBox ではなく、描画全体 (ドキュメント内のすべてのオブジェクト) の情報を返します。</p>
-<dt><code>-X</code>, <code>&#8211;query-x</code></p>
-<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの X 座標を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</p>
-<dt><code>-Y</code>, <code>&#8211;query-y</code></p>
-<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの Y 座標を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</p>
-<dt><code>-W</code>, <code>&#8211;query-width</code></p>
-<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの幅を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</p>
-<dt><code>-H</code>, <code>&#8211;query-height</code></p>
-<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの高さを問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</p>
-<dt><code>-S</code>, <code>&#8211;query-all</code></p>
-<dd><font SIZE="-1">SVG</font> ドキュメント内のすべてのオブジェクトの定義されている ID、X 座標、Y 座標、幅、および高さをコンマで区切った一覧を出力します。</p>
-<dt><code>&#8211;shell</code></p>
-<dd>このオプションを指定すると、Inkscape は対話式のコマンドラインシェルモードで起動します。このモードでは、プロンプトでコマンドを入力すると Inkscape はそれらを実行し、コマンドごとに新しく Inkscape を起動する必要がありません。このモードは主にスクリプト作成やサーバー用途で役立ちます。ここでなにか新しい機能が追加されるわけではありませんが、くり返し Inkscape を呼び出すコマンドラインでの作業 (エクスポートや変換など) は直ちに実行されることでその結果が素早く得られ、メモリ消費も抑えられます。シェルモードでも各コマンドは正しく記述されなければなりませんが、プログラム名の Inkscape の入力の必要ありません (例: &#8220;file.svg &#8211;export-pdf=file.pdf&#8221;)。</p>
-<dt><code>&#8211;vacuum-defs</code></p>
-<dd><font SIZE="-1">SVG</font> ファイル内の &lt;lt&gt;defs&lt;gt&gt; セクションから未使用のアイテムをすべて除去します。このオプションが &#8211;export-plain-svg とともに指定された場合、エクスポートされるファイルに対してのみ作用します。このオプションだけ指定された場合は、指定されたファイルが修正されます。</p>
-<dt><code>-z</code>, <code>&#8211;without-gui</code></p>
-<dd><font SIZE="-1">GUI</font> を使用せず (Unix では X server を使用しません)、コンソールからのみファイルを処理します。これは -p、-e、-l、および &#8211;vacuum-defs オプションでの使用を想定しています。</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd>この標準 <font SIZE="-1">GTK</font> オプションは、通常問題のないあらゆる警告でも Inkscape を中断します (デバッグ用)。</p>
-<dt><code>&#8211;usage</code></p>
-<dd>簡単なオプションの一覧を表示します。</dl>
+<dt><code>-w</code> <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>, <code>&#8211;export-width</code>=<i></i><font SIZE="-1"><i>WIDTH</i></font><i></i></dt>
+<dd>生成されるビットマップの幅のピクセル数になります。この値は &#8211;export-dpi 指定 (&#8211;export-use-hints を使用した場合は <font SIZE="-1">DPI</font> ヒント) より優先されます。</dd>
+<dt><code>-y</code> <i></i><font SIZE="-1"><i>VALUE</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></dt>
+<dd>エクスポートした <font SIZE="-1">PNG</font> の背景の透明度になります。指定できる値の範囲は 0.0 から 1.0 (0.0 が完全な透明、1.0 が完全な不透明)、あるいは 1 から 255 (255 が完全な不透明) のどちらかです。このオプションを指定せず -b オプションも指定されなかった場合、 Inkscape 内のドキュメントの設定で指定された値 (sodipodi:namedview の inkscape:pageopacity= 属性)が使用されます。このオプションを指定せずに -b オプションが指定された場合、255 (完全な不透明) とみなされます。</dd>
+<dt><code>-P</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-ps</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd>ドキュメントを PostScript (<font SIZE="-1">PS</font>) 形式にエクスポートします。PostScript は透明度をサポートしていない点に留意してください。オリジナルの <font SIZE="-1">SVG</font> にあるいかなる透明なオブジェクトも自動的にラスタライズされます。使用しているフォントはサブセット化されて埋め込まれます。デフォルトのエクスポート領域はページになり、&#8211;export-area-drawing で描画全体に指定できます。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定でき (その他はすべてエクスポートされません)、その場合はエクスポート領域はそのオブジェクトの境界枠になりますが、&#8211;export-area-page でそのページに指定できます。</dd>
+<dt><code>-E</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-eps</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd>ドキュメントを Encapsulated PostScript (<font SIZE="-1">EPS</font>) 形式にエクスポートします。PostScript は透明度をサポートしていない点に留意してください。オリジナルの <font SIZE="-1">SVG</font> にあるいかなる透明オブジェクトも自動的にラスタライズされます。使用しているフォントはサブセット化されて埋め込まれます。デフォルトのエクスポート領域は描画全体になり、ページに指定することも出来ますが、その場合の制限事項については &#8211;export-area-page を参照してください。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定できます (その他はすべてエクスポートされません)。</dd>
+<dt><code>-A</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i>, <code>&#8211;export-pdf</code>=<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dd>ドキュメントを <font SIZE="-1">PDF</font> 形式にエクスポートします。この形式ではオリジナル <font SIZE="-1">SVG</font> の透明度は保持されます。使用しているフォントはサブセット化され埋め込まれます。デフォルトのエクスポート領域はページになり、&#8211;export-area-drawing で描画全体に指定できます。&#8211;export-id でエクスポートするオブジェクトを 1 つ指定でき (その他はすべてエクスポートされません)、その場合はエクスポート領域はそのオブジェクトの境界枠になりますが、&#8211;export-area-page でそのページに指定できます。&quot;</dd>
+<dt><code>&#8211;export-pdf-version</code>=<i>PDF-VERSION</i></dt>
+<dd>Select the <font SIZE="-1">PDF</font> version of the exported <font SIZE="-1">PDF</font> file. This option basically exposes the <font SIZE="-1">PDF</font> version selector found in the PDF-export dialog of the <font SIZE="-1">GUI.</font> You must provide one of the versions from that combo-box, e.g. &#8220;1.4&#8221;. The default pdf export version is &#8220;1.4&#8221;.</dd>
+<dt><code>&#8211;export-latex</code></dt>
+<dd>(PS、EPS、および <font SIZE="-1">PDF</font> エクスポート用) LaTeX ドキュメント用のイメージを作成し、イメージ内のテキストは LaTeX によるタイプセットになります。PDF/PS/EPS 形式へのエクスポート時、このオプションはオリジナルの <font SIZE="-1">SVG</font> を <font SIZE="-1">PDF/PS/EPS</font> ファイル (形式は &#8211;export-pdf などで指定) と LaTeX ファイルに分割します。テキストは <font SIZE="-1">PDF/PS/EPS</font> ファイルには出力されず、LaTeX ファイルに出力されます。この LaTeX ファイルには <font SIZE="-1">PDF/PS/EPS</font> も含まれます。LaTex でこの LaTeX ファイルを入力 (\input{image.tex}) すると、イメージと共に LaTeX によってタイプセットされたテキストが表示されます。より詳しい情報は出力された実際の LaTeX ファイルを参照してください。また、GNUPlot の `epslatex&#8217; 出力ターミナルも参照してください。</dd>
+<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></dt>
+<dd>該当する場合は、テキストオブジェクトをパスに変換します (PS、EPS、PDF、および <font SIZE="-1">SVG</font> エクスポート用)。</dd>
+<dt><code>&#8211;export-ignore-filters</code></dt>
+<dd>ぼかしなどのフィルターが適用されたベクターオブジェクトをエクスポートするとき、フィルターを無視します (PS、EPS、および <font SIZE="-1">PDF</font> 用)。デフォルトでは、フィルターが適用されているオブジェクトは &#8211;export-dpi で指定された解像度 (デフォルトは 90 dpi) でラスタライズされ、その外見を維持します。</dd>
+<dt><code>-I</code>, <code>&#8211;query-id</code></dt>
+<dd>サイズや座標を問い合わせたいオブジェクトの <font SIZE="-1">ID</font> を指定します。指定がない場合、ページや viewBox ではなく、描画全体 (ドキュメント内のすべてのオブジェクト) の情報を返します。</dd>
+<dt><code>-X</code>, <code>&#8211;query-x</code></dt>
+<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの X 座標を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</dd>
+<dt><code>-Y</code>, <code>&#8211;query-y</code></dt>
+<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの Y 座標を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</dd>
+<dt><code>-W</code>, <code>&#8211;query-width</code></dt>
+<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの幅を問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</dd>
+<dt><code>-H</code>, <code>&#8211;query-height</code></dt>
+<dd>描画全体、あるいは &#8211;query-id が指定されている場合はそのオブジェクトの高さを問い合せます。返される値の単位は px (<font SIZE="-1">SVG</font> ユーザー単位) です。</dd>
+<dt><code>-S</code>, <code>&#8211;query-all</code></dt>
+<dd><font SIZE="-1">SVG</font> ドキュメント内のすべてのオブジェクトの定義されている ID、X 座標、Y 座標、幅、および高さをコンマで区切った一覧を出力します。</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd>このオプションを指定すると、Inkscape は対話式のコマンドラインシェルモードで起動します。このモードでは、プロンプトでコマンドを入力すると Inkscape はそれらを実行し、コマンドごとに新しく Inkscape を起動する必要がありません。このモードは主にスクリプト作成やサーバー用途で役立ちます。ここでなにか新しい機能が追加されるわけではありませんが、くり返し Inkscape を呼び出すコマンドラインでの作業 (エクスポートや変換など) は直ちに実行されることでその結果が素早く得られ、メモリ消費も抑えられます。シェルモードでも各コマンドは正しく記述されなければなりませんが、プログラム名の Inkscape の入力の必要ありません (例: &#8220;file.svg &#8211;export-pdf=file.pdf&#8221;)。</dd>
+<dt><code>&#8211;vacuum-defs</code></dt>
+<dd><font SIZE="-1">SVG</font> ファイル内の &lt;lt&gt;defs&lt;gt&gt; セクションから未使用のアイテムをすべて除去します。このオプションが &#8211;export-plain-svg とともに指定された場合、エクスポートされるファイルに対してのみ作用します。このオプションだけ指定された場合は、指定されたファイルが修正されます。</dd>
+<dt><code>-z</code>, <code>&#8211;without-gui</code></dt>
+<dd><font SIZE="-1">GUI</font> を使用せず (Unix では X server を使用しません)、コンソールからのみファイルを処理します。これは -p、-e、-l、および &#8211;vacuum-defs オプションでの使用を想定しています。</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd>この標準 <font SIZE="-1">GTK</font> オプションは、通常問題のないあらゆる警告でも Inkscape を中断します (デバッグ用)。</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>簡単なオプションの一覧を表示します。</dd></dl>
 <h2>設定</h2>
 <p>主たる構成設定ファイルは ~/.config/inkscape/preferences.xml にあります。この中には Inkscape をカスタマイズする様々な設定情報 (そのほとんどは Inkscape の設定ダイアログにあります) があり、そのサブディレクトリには以下のようなカスタム情報を格納できます: </p>
 <p> $HOME/.config/inkscape/extensions/ &#8211; エクステンション エフェクト </p>

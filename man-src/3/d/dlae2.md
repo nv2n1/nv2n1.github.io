@@ -19,15 +19,15 @@ description: "dlae2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DLAE2 computes the eigenvalues of a 2 - by - 2 symmetric matrix[A B][B C].On return, RT1 is the eigenvalue of larger absolute value, and RT2 is the eigenvalue of smaller absolute value.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is DOUBLE PRECISION
           The (1,1) element of the 2-by-2 matrix.
@@ -56,18 +56,18 @@ DLAE2 computes the eigenvalues of a 2 - by - 2 symmetric matrix[A B][B C].On ret
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   RT1 is accurate to a few ulps barring over/underflow.
   RT2 may be inaccurate if there is massive cancellation in the
@@ -78,8 +78,9 @@ DLAE2 computes the eigenvalues of a 2 - by - 2 symmetric matrix[A B][B C].On ret
   Underflow is harmless if the input data is 0 or exceeds
      underflow_threshold / macheps.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 103 of file dlae2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

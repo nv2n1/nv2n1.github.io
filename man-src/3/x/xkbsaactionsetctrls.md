@@ -11,14 +11,14 @@ description: "XkbSAActionSetCtrls – Sets the ctrls0 through ctrls3 fields of a
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbSAActionSetCtrls</code> <code>(XkbCtrlsAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>ctrls</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action in which to set ctrls0-ctrls3</p>
-<dt><i>&#8211; ctrls</i></p>
-<dd>value to set in ctrls0-ctrls3</dl>
+</dd><dd>action in which to set ctrls0-ctrls3</dd>
+<dt><i>&#8211; ctrls</i></dt>
+<dd>value to set in ctrls0-ctrls3</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbCtrlsAction structure change the state of the boolean controls. </p>
 <p> The <i>type </i> field can have any one of the values shown in Table 1. </p>

@@ -18,56 +18,56 @@ description: "atomic-openshift-installer – Interactive OpenShift Container Pla
 <p> <code>-u</code>, <code>&#8211;unattended</code></p>
 <dl>
 <dt>
-<dd> Run installer in <code>unattended</code> mode. You will not be prompted to answer any questions.</dl>
+</dt><dd> Run installer in <code>unattended</code> mode. You will not be prompted to answer any questions.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;configuration</code> <i>PATH</i></p>
 <dl>
 <dt>
-<dd> Provide an alternate <i>PATH</i> to an <i>installer.cfg.yml</i> file.</dl>
+</dt><dd> Provide an alternate <i>PATH</i> to an <i>installer.cfg.yml</i> file.</dd></dl>
 <p> <code>-a</code> <i>DIRECTORY</i>, <code>&#8211;ansible-playbook-directory</code> <i>DIRECTORY</i></p>
 <dl>
 <dt>
-<dd> Manually set the <i>DIRECTORY</i> in which to look for Ansible playbooks.</dl>
+</dt><dd> Manually set the <i>DIRECTORY</i> in which to look for Ansible playbooks.</dd></dl>
 <p> <code>&#8211;ansible-log-path</code> <i>PATH</i></p>
 <dl>
 <dt>
-<dd> Specify the <i>PATH</i> of the directory in which to save Ansible logs.</dl>
+</dt><dd> Specify the <i>PATH</i> of the directory in which to save Ansible logs.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Run the installer with more verbosity.</dl>
+</dt><dd> Run the installer with more verbosity.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;debug</code></p>
 <dl>
 <dt>
-<dd> Enable installer debugging. Logs are saved in <i>/tmp/installer.txt</i>.</dl>
+</dt><dd> Enable installer debugging. Logs are saved in <i>/tmp/installer.txt</i>.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show the usage help and exit.</dl>
+</dt><dd> Show the usage help and exit.</dd></dl>
 <h2>COMMANDS</h2>
 <p> <code>atomic-openshift-installer</code> has three modes of operation: </p>
 <dl>
 <dt>
-<dd> &bull; <code>install</code></dl>
+</dt><dd> &bull; <code>install</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>uninstall</code></dl>
+</dt><dd> &bull; <code>uninstall</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>upgrade</code></dl>
+</dt><dd> &bull; <code>upgrade</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>scaleup</code></dl>
+</dt><dd> &bull; <code>scaleup</code></dd></dl>
 <p> The options specific to each command are described in the following sections.</p>
 <h2>INSTALL</h2>
 <p> The <code>install</code> command will guide you through steps required to install an OCP cluster. After all of the required information has been collected (target hosts, storage options, high-availability), the installation will begin. </p>
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
 <dt>
-<dd> Forces an installation. This means that hosts with existing installations will be reinstalled if required.</dl>
+</dt><dd> Forces an installation. This means that hosts with existing installations will be reinstalled if required.</dd></dl>
 <p> <code>&#8211;gen-inventory</code></p>
 <dl>
 <dt>
-<dd> Generate an Ansible inventory file and exit. The default location for the inventory file is <i>~/.config/openshift/hosts</i>.</dl>
+</dt><dd> Generate an Ansible inventory file and exit. The default location for the inventory file is <i>~/.config/openshift/hosts</i>.</dd></dl>
 <h2>UNINSTALL</h2>
 <p> The <code>uninstall</code> command will uninstall OCP from your target hosts. This command has no additional options.</p>
 <h2>UPGRADE</h2>
@@ -75,11 +75,11 @@ description: "atomic-openshift-installer – Interactive OpenShift Container Pla
 <p> <code>-l</code>, <code>&#8211;latest-minor</code></p>
 <dl>
 <dt>
-<dd> Upgrade to the latest minor version. For example, if you are running version <code>3.2.1</code> then this could upgrade you to <code>3.2.2</code>.</dl>
+</dt><dd> Upgrade to the latest minor version. For example, if you are running version <code>3.2.1</code> then this could upgrade you to <code>3.2.2</code>.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;next-major</code></p>
 <dl>
 <dt>
-<dd> Upgrade to the latest major version. For example, if you are running version <code>3.2</code> then this could upgrade you to <code>3.3</code>.</dl>
+</dt><dd> Upgrade to the latest major version. For example, if you are running version <code>3.2</code> then this could upgrade you to <code>3.3</code>.</dd></dl>
 <h2>SCALEUP</h2>
 <p> The <code>scaleup</code> command is used to add new nodes to an existing cluster. This command has no additional options.</p>
 <h2>FILES</h2>

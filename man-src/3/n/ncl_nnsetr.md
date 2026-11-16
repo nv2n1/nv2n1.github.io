@@ -15,9 +15,9 @@ CALL NNSETR (PNAM, RVAL);
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set.
-<dt>RVAL
-<dd>A REAL value that is the value to be assigned to the internal parameter specified by pnam.</dl>
+</dt><dd>A character string that specifies the name of the parameter to be set.
+</dd><dt>RVAL
+</dt><dd>A REAL value that is the value to be assigned to the internal parameter specified by pnam.</dd></dl>
 
 <h2>Usage</h2>
 

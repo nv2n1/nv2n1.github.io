@@ -56,62 +56,64 @@ description: "Functions for Win32 platforms –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>filename</i> the file to check</dl>
+</dt><dd> <i>filename</i> the file to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the directory exists, otherwise an error object identifier.</dl>
+</dt><dd> GLOBUS_SUCCESS if the directory exists, otherwise an error object identifier.</dd></dl>
 <h3>globus_result_t globus_gsi_sysconfig_file_exists_win32 (const char *filename)</h3>
 <p> Win32 &#8211; File Exists. Check that the file exists </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>filename</i> the file to check</dl>
+</dt><dd> <i>filename</i> the file to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS (even if the file doesn&#8217;t exist) &#8211; in some abortive cases an error object identifier is returned</dl>
+</dt><dd> GLOBUS_SUCCESS (even if the file doesn&#8217;t exist) &#8211; in some abortive cases an error object identifier is returned</dd></dl>
 <h3>globus_result_t globus_gsi_sysconfig_get_authz_conf_filename_win32 (char **filename)</h3>
 <p> Win32 &#8211; Get the path and file name of the grid map file. Get the path and file name of the authorization callback configuration file </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>filename</i> Contains the location of the authorization callback configuration file upon successful return</dl>
+</dt><dd> <i>filename</i> Contains the location of the authorization callback configuration file upon successful return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_sysconfig_get_authz_lib_conf_filename_win32 (char **filename)</h3>
 <p> Win32 &#8211; Get authorization configuration filename. Get the path and file name of the authorization callback library configuration file </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>filename</i> Contains the location of the authorization callback library configuration file upon successful return</dl>
+</dt><dd> <i>filename</i> Contains the location of the authorization callback library configuration file upon successful return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_sysconfig_get_ca_cert_files_win32 (char *ca_cert_dir, globus_fifo_t *ca_cert_list)</h3>
 <p> Win32 &#8211; Get CA Cert Filenames. Gets a list of trusted CA certificate filenames in a trusted CA certificate directory. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ca_cert_dir</i> The trusted CA certificate directory to get the filenames from<br />
- <i>ca_cert_list</i> The resulting list of CA certificate filenames. This is a globus list structure.</dl>
+</dt><dd> <i>ca_cert_dir</i> The trusted CA certificate directory to get the filenames from<br />
+ <i>ca_cert_list</i> The resulting list of CA certificate filenames. This is a globus list structure.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_fifo_t</dl>
+</dt><dd> globus_fifo_t</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if no error occurred, otherwise an error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_sysconfig_get_cert_dir_win32 (char **cert_dir)</h3>
 <p> Win32 &#8211; Get Trusted CA Cert Dir. Get the Trusted Certificate Directory containing the trusted Certificate Authority certificates. This directory is determined in the order shown below. Failure in one method results in attempting the next. </p>
 <dl>
-<dt>1.</p>
-<dd> <code>X509_CERT_DIR environment variable</code> &#8211; if this is set, the trusted certificates will be searched for in that directory. This variable allows the end user to specify the location of trusted certificates.</p>
-<dt>2.</p>
-<dd> <code>x509_cert_dir registry key</code> &#8211; If this registry key is set on windows, the directory it points to should contain the trusted certificates. The path to the registry key is software\Globus\GSI</p>
-<dt>3.</p>
+<dt>1.</dt>
+<dd> <code>X509_CERT_DIR environment variable</code> &#8211; if this is set, the trusted certificates will be searched for in that directory. This variable allows the end user to specify the location of trusted certificates.</dd>
+<dt>2.</dt>
+<dd> <code>x509_cert_dir registry key</code> &#8211; If this registry key is set on windows, the directory it points to should contain the trusted certificates. The path to the registry key is software\Globus\GSI</dd>
+<dt>3.</dt>
 <dd> <code>\&lt;user home directory&gt;\</code><code>.globus
+</dd></dl>
+</code>

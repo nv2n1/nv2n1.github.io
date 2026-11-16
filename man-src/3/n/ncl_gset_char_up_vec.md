@@ -13,10 +13,10 @@ description: "gset_char_up_vec (Set character up vector) – specifies the angle
 <p> void gset_char_up_vec(const Gvec *char_up_vec);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>char_up_vec.delta_x</p>
-<dd>(Gfloat, Input) &#8211; Gives the X (horizontal) world coordinate of a vector.</p>
-<dt>char_up_vec.delta_y</p>
-<dd>(Gfloat, Input) &#8211; Gives the Y (vertical) world coordinate of a vector.</dl>
+<dt>char_up_vec.delta_x</dt>
+<dd>(Gfloat, Input) &#8211; Gives the X (horizontal) world coordinate of a vector.</dd>
+<dt>char_up_vec.delta_y</dt>
+<dd>(Gfloat, Input) &#8211; Gives the Y (vertical) world coordinate of a vector.</dd></dl>
 <h2>Usage</h2>
 <p>The coordinates (char_up_vec.delta_x, char_up_vec.delta_y) relative to the point (0.,0.) establish a vector direction. This direction specifies the up direction of individual characters. This direction also specifies the orientation of a text string in that the characters in a string are placed along a line perpendicular to the character up vector. By default the character up vector is (0.,1.) so that characters are drawn in their normal horizontal orientation. The magnitude of the up vector is not used so that (0.,23.) is the same as (0.,1.).</p>
 <h2>Examples</h2>

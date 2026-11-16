@@ -23,20 +23,20 @@ description: "FunColumnActivate – activate Funtools columns"
 <p> then &#8220;$x&#8221; and &#8220;$y&#8221; will refer to these columns in a call to <i>FunColumnActivate()</i>. </p>
 <p> In addition, if the activation string contains only columns to be activated, then the routine will de-activate all other columns. Similarly, if the activation string contains only columns to de-activate, then the routine will activate all other columns before activating the list. This makes it simple to change the activation state of all columns without having to know all of the column names. For example:</p>
 <dl>
-<dt>*</p>
-<dd> <code>&#8220;pi pha time&#8221;</code> # only these three columns will be active</p>
-<dt>*</p>
-<dd> <code>&#8220;-pi -pha -time&#8221;</code> # all but these columns will be active</p>
-<dt>*</p>
-<dd> <code>&#8220;pi -pha&#8221;</code> # only pi is active, pha is not, others are not</p>
-<dt>*</p>
-<dd> <code>&#8220;+pi -pha&#8221;</code> # same as above</p>
-<dt>*</p>
-<dd> <code>&#8220;pi -pha -time&#8221;</code> # only pi is active, all others are not</p>
-<dt>*</p>
-<dd> <code>&#8220;pi pha&#8221;</code> # pha and pi are active, all others are not</p>
-<dt>*</p>
-<dd> <code>&#8220;pi pha -x -y&#8221;</code> # pha and pi are active, all others are not</dl>
+<dt>*</dt>
+<dd> <code>&#8220;pi pha time&#8221;</code> # only these three columns will be active</dd>
+<dt>*</dt>
+<dd> <code>&#8220;-pi -pha -time&#8221;</code> # all but these columns will be active</dd>
+<dt>*</dt>
+<dd> <code>&#8220;pi -pha&#8221;</code> # only pi is active, pha is not, others are not</dd>
+<dt>*</dt>
+<dd> <code>&#8220;+pi -pha&#8221;</code> # same as above</dd>
+<dt>*</dt>
+<dd> <code>&#8220;pi -pha -time&#8221;</code> # only pi is active, all others are not</dd>
+<dt>*</dt>
+<dd> <code>&#8220;pi pha&#8221;</code> # pha and pi are active, all others are not</dd>
+<dt>*</dt>
+<dd> <code>&#8220;pi pha -x -y&#8221;</code> # pha and pi are active, all others are not</dd></dl>
 <p> You can use the column activation list to reorder columns, since columns are output in the order specified. For example: </p>
 <p>#default output order<br />
 fundisp snr.ev &#8216;[cir 512 512 .1]&#8217; X Y PHA PI TIME DX DY&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;512 512 6 7 79493997.45854475 578 574 512 512 8 9 79494575.58943175 579 573 512 512 5 6 79493631.03866175 578 575 512 512 5 5 79493290.86521725 578 575 512 512 8 9 79493432.00990875 579 573</p>

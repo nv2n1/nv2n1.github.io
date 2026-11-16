@@ -15,38 +15,38 @@ description: "rc – shell"
 <p> <i>rc</i> is a command interpreter and programming language similar to <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1). It is based on the AT&amp;T Plan 9 shell of the same name. The shell offers a C-like syntax (much more so than the C shell), and a powerful mechanism for manipulating variables. It is reasonably small and reasonably fast, especially when compared to contemporary shells. Its use is intended to be interactive, but the language lends itself well to scripts.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt> R-c</p>
-<dd> If R-c is present, commands are executed from the immediately following argument. Any further arguments to <i>rc</i> are placed in R$*R. R$* Thus: </p>
+<dt> R-c</dt>
+<dd> If R-c is present, commands are executed from the immediately following argument. Any further arguments to <i>rc</i> are placed in R$*R. R$* Thus: </dd>
 <pre>
 Rrc -c 'echo $*' 1 2 3
 </pre>
 <dt>
-<dd> prints out </p>
+</dt><dd> prints out </dd>
 <pre>
 R1 2 3
 </pre>
-<dt> R-d</p>
-<dd> This flag causes <i>rc</i> not to ignore RSIGQUIT or RSIGTERMR. RSIGTERM Thus <i>rc</i> can be made to dump core if sent RSIGQUITR. RSIGQUIT This flag is only useful for debugging <i>rc</i>.</p>
-<dt> R-e</p>
-<dd> If the R-e flag is present, then <i>rc</i> will exit if the exit status of a command is false (nonzero). <i>rc</i> will not exit, however, if a conditional fails, e.g., an Rif() command.</p>
-<dt> R-i</p>
-<dd> If the R-i flag is present or if the input to <i>rc</i> is from a terminal (as determined by <i>isatty</i>(3)) then <i>rc</i> will be in <i>interactive</i> mode. That is, a prompt (from R$prompt(1)R) R$prompt(1) will be printed before an input line is taken, and <i>rc</i> will ignore RSIGINTR. RSIGINT</p>
-<dt> R-I</p>
-<dd> If the R-I flag is present, or if the input to <i>rc</i> is not from a terminal, then <i>rc</i> will not be in interactive mode. No prompts will be printed, and RSIGINT will cause <i>rc</i> to exit.</p>
-<dt> R-l</p>
-<dd> If the R-l flag is present, or if <i>rc</i>&#8216;s Rargv[0][0] is a dash R(R-R), R(R- R( then <i>rc</i> will behave as a login shell. That is, it will run commands from R$home/.rcrcR, R$home/.rcrc if this file exists, before reading any other input.</p>
-<dt> R-n</p>
-<dd> This flag causes <i>rc</i> to read its input and parse it, but not to execute any commands. This is useful for syntax checking on scripts. If used in combination with the R-x flag, <i>rc</i> will print each command as it is parsed in a form similar to the one used for exporting functions into the environment.</p>
-<dt> R-o</p>
-<dd> This flag prevents the usual practice of trying to open R/dev/null on file descriptors 0, 1, and 2, if any of those descriptors are inherited closed.</p>
-<dt> R-p</p>
-<dd> This flag prevents <i>rc</i> from initializing shell functions from the environment. This allows <i>rc</i> to run in a protected mode, whereby it becomes more difficult for an <i>rc</i> script to be subverted by placing false commands in the environment. (Note that the presence of this flag does <i>not</i> mean that it is safe to run setuid <i>rc</i> scripts; the usual caveats about the setuid bit still apply.)</p>
-<dt> R-s</p>
-<dd> This flag causes <i>rc</i> to read from standard input. Any arguments are placed in R$*R. R$*</p>
-<dt> R-v</p>
-<dd> This flag causes <i>rc</i> to echo its input to standard error as it is read.</p>
-<dt> R-x</p>
-<dd> This flag causes <i>rc</i> to print every command on standard error before it is executed. It can be useful for debugging <i>rc</i> scripts.</dl>
+<dt> R-d</dt>
+<dd> This flag causes <i>rc</i> not to ignore RSIGQUIT or RSIGTERMR. RSIGTERM Thus <i>rc</i> can be made to dump core if sent RSIGQUITR. RSIGQUIT This flag is only useful for debugging <i>rc</i>.</dd>
+<dt> R-e</dt>
+<dd> If the R-e flag is present, then <i>rc</i> will exit if the exit status of a command is false (nonzero). <i>rc</i> will not exit, however, if a conditional fails, e.g., an Rif() command.</dd>
+<dt> R-i</dt>
+<dd> If the R-i flag is present or if the input to <i>rc</i> is from a terminal (as determined by <i>isatty</i>(3)) then <i>rc</i> will be in <i>interactive</i> mode. That is, a prompt (from R$prompt(1)R) R$prompt(1) will be printed before an input line is taken, and <i>rc</i> will ignore RSIGINTR. RSIGINT</dd>
+<dt> R-I</dt>
+<dd> If the R-I flag is present, or if the input to <i>rc</i> is not from a terminal, then <i>rc</i> will not be in interactive mode. No prompts will be printed, and RSIGINT will cause <i>rc</i> to exit.</dd>
+<dt> R-l</dt>
+<dd> If the R-l flag is present, or if <i>rc</i>&#8216;s Rargv[0][0] is a dash R(R-R), R(R- R( then <i>rc</i> will behave as a login shell. That is, it will run commands from R$home/.rcrcR, R$home/.rcrc if this file exists, before reading any other input.</dd>
+<dt> R-n</dt>
+<dd> This flag causes <i>rc</i> to read its input and parse it, but not to execute any commands. This is useful for syntax checking on scripts. If used in combination with the R-x flag, <i>rc</i> will print each command as it is parsed in a form similar to the one used for exporting functions into the environment.</dd>
+<dt> R-o</dt>
+<dd> This flag prevents the usual practice of trying to open R/dev/null on file descriptors 0, 1, and 2, if any of those descriptors are inherited closed.</dd>
+<dt> R-p</dt>
+<dd> This flag prevents <i>rc</i> from initializing shell functions from the environment. This allows <i>rc</i> to run in a protected mode, whereby it becomes more difficult for an <i>rc</i> script to be subverted by placing false commands in the environment. (Note that the presence of this flag does <i>not</i> mean that it is safe to run setuid <i>rc</i> scripts; the usual caveats about the setuid bit still apply.)</dd>
+<dt> R-s</dt>
+<dd> This flag causes <i>rc</i> to read from standard input. Any arguments are placed in R$*R. R$*</dd>
+<dt> R-v</dt>
+<dd> This flag causes <i>rc</i> to echo its input to standard error as it is read.</dd>
+<dt> R-x</dt>
+<dd> This flag causes <i>rc</i> to print every command on standard error before it is executed. It can be useful for debugging <i>rc</i> scripts.</dd></dl>
 <h2>COMMANDS</h2>
 <p> A simple command is a sequence of words, separated by white space (space and tab) characters that ends with a newline, semicolon R(R;R), R(R; R( or ampersand R(R&amp;R). R(R&amp; R( The first word of a command is the name of that command. If the name begins with R/R, R/ R./R, R./ or R../R, R../ then the name is used as an absolute path name referring to an executable file. Otherwise, the name of the command is looked up in a table of shell functions, builtin commands, or as a file in the directories named by R$pathR. R$path</p>
 <h3>Background Tasks</h3>
@@ -169,8 +169,8 @@ Rcmp &lt; {command} &lt;
 <p> Rif (ItestR) { Rif (Itest Rif (<br />
  <i> cmd</i> </p>
 <dl>
-<dt> R} else Icmd R} else</p>
-<dd> The <i>test</i> is executed, and if its return status is zero, the first command is executed, otherwise the second is. Braces are not mandatory around the commands. However, an Relse statement is valid only if it follows a close-brace on the same line. Otherwise, the Rif is taken to be a simple-if: </p>
+<dt> R} else Icmd R} else</dt>
+<dd> The <i>test</i> is executed, and if its return status is zero, the first command is executed, otherwise the second is. Braces are not mandatory around the commands. However, an Relse statement is valid only if it follows a close-brace on the same line. Otherwise, the Rif is taken to be a simple-if: </dd>
 <pre>
 Rif (test)
 R    command
@@ -178,20 +178,20 @@ R    command
 </dl>
 <h3>While and For Loops</h3>
 <dl>
-<dt> Rwhile (ItestR)I cmd Rwhile (ItestR) Rwhile (Itest Rwhile (</p>
-<dd> <i>rc</i> executes the <i>test</i> and performs the command as long as the <i>test</i> is true.</p>
-<dt> Rfor (IvarR in IlistR)I cmd Rfor (IvarR in IlistR) Rfor (IvarR in Ilist Rfor (IvarR in Rfor (Ivar Rfor (</p>
-<dd> <i>rc</i> sets <i>var</i> to each element of <i>list</i> (which may contain variables and backquote substitutions) and runs <i>cmd</i>. If R&#8220;Rin R&#8220; <i>list</i>&#8221; is omitted, then <i>rc</i> will set <i>var</i> to each element of R$*R. R$* For example: </p>
+<dt> Rwhile (ItestR)I cmd Rwhile (ItestR) Rwhile (Itest Rwhile (</dt>
+<dd> <i>rc</i> executes the <i>test</i> and performs the command as long as the <i>test</i> is true.</dd>
+<dt> Rfor (IvarR in IlistR)I cmd Rfor (IvarR in IlistR) Rfor (IvarR in Ilist Rfor (IvarR in Rfor (Ivar Rfor (</dt>
+<dd> <i>rc</i> sets <i>var</i> to each element of <i>list</i> (which may contain variables and backquote substitutions) and runs <i>cmd</i>. If R&#8220;Rin R&#8220; <i>list</i>&#8221; is omitted, then <i>rc</i> will set <i>var</i> to each element of R$*R. R$* For example: </dd>
 <p>Rfor(i in `{ls &#8211; F | grep &#8216;\*$&#8217; | sed &#8216;s/\*$//&#8217;})<br />
 {<br />
     commands<br />
 }</p>
 <dt>
-<dd> will set R$i to the name of each file in the current directory that is executable.</dl>
+</dt><dd> will set R$i to the name of each file in the current directory that is executable.</dd></dl>
 <h3>Switch</h3>
 <dl>
-<dt> Rswitch (IlistR) { caseI &#8230;R } Rswitch (IlistR) { caseI &#8230; Rswitch (IlistR) { case Rswitch (Ilist Rswitch (</p>
-<dd> <i>rc</i> looks inside the braces after a Rswitch for statements beginning with the word RcaseR. Rcase If any of the patterns following Rcase match the list supplied to RswitchR, Rswitch then the commands up until the next Rcase statement are executed. The metacharacters R*R, R* R[ or R? should not be quoted; matching is performed only against the strings in <i>list</i>, not against file names. (Matching for case statements is the same as for the R~ command.)</dl>
+<dt> Rswitch (IlistR) { caseI &#8230;R } Rswitch (IlistR) { caseI &#8230; Rswitch (IlistR) { case Rswitch (Ilist Rswitch (</dt>
+<dd> <i>rc</i> looks inside the braces after a Rswitch for statements beginning with the word RcaseR. Rcase If any of the patterns following Rcase match the list supplied to RswitchR, Rswitch then the commands up until the next Rcase statement are executed. The metacharacters R*R, R* R[ or R? should not be quoted; matching is performed only against the strings in <i>list</i>, not against file names. (Matching for case statements is the same as for the R~ command.)</dd></dl>
 <h3>Logical Operators</h3>
 <p> There are a number of operators in <i>rc</i> which depend on the exit status of a command. </p>
 <pre>
@@ -400,59 +400,59 @@ R`` ($nl :) {cat /etc/passwd}
 <p> Several variables are known to <i>rc</i> and are treated specially. In the following list, &#8220;default&#8221; indicates that <i>rc</i> gives the variable a default value on startup; &#8220;no-export&#8221; indicates that the variable is never exported; and &#8220;read-only&#8221; indicates that an attempt to set the variable will silently have no effect. </p>
 <p> Also, &#8220;alias&#8221; means that the variable is aliased to the same name in capitals. For example, an assignment to R$cdpath causes an automatic assignment to R$CDPATHR, R$CDPATH and vice-versa. If R$CDPATH is set when <i>rc</i> is started, its value is imported into R$cdpathR. R$cdpath R$cdpath and R$path are <i>rc</i> lists; R$CDPATH and R$PATH are colon-separated lists. Only the names spelt in capitals are exported into the environment.</p>
 <dl>
-<dt> R*R (no-export) R*</p>
-<dd> The argument list of <i>rc</i>. R$1, $2, etc. are the same as R$*(1)R, R$*(1) R$*(2)R, R$*(2) etc.</p>
-<dt> R0R (default no-export) R0</p>
-<dd> The variable R$0 holds the value of Rargv[0] with which <i>rc</i> was invoked. Additionally, R$0 is set to the name of a function for the duration of the execution of that function, and R$0 is also set to the name of the file being interpreted for the duration of a R. command. R$0 is not an element of R$*R, R$* and is never treated as one.</p>
-<dt> RapidR (no-export) Rapid</p>
-<dd> The process ID of the last process started in the background.</p>
-<dt> RapidsR (no-export read-only) Rapids</p>
-<dd> A list whose elements are the process IDs of all background processes which are still alive, or which have died and have not been waited for yet.</p>
-<dt> RbqstatusR (no-export) Rbqstatus</p>
-<dd> The exit status of the <i>rc</i> forked to execute the most recent backquote substitution. Note that, unlike R$statusR, R$status R$bqstatus is always a single element list (see <code>EXIT STATUS</code> below). For example: </p>
+<dt> R*R (no-export) R*</dt>
+<dd> The argument list of <i>rc</i>. R$1, $2, etc. are the same as R$*(1)R, R$*(1) R$*(2)R, R$*(2) etc.</dd>
+<dt> R0R (default no-export) R0</dt>
+<dd> The variable R$0 holds the value of Rargv[0] with which <i>rc</i> was invoked. Additionally, R$0 is set to the name of a function for the duration of the execution of that function, and R$0 is also set to the name of the file being interpreted for the duration of a R. command. R$0 is not an element of R$*R, R$* and is never treated as one.</dd>
+<dt> RapidR (no-export) Rapid</dt>
+<dd> The process ID of the last process started in the background.</dd>
+<dt> RapidsR (no-export read-only) Rapids</dt>
+<dd> A list whose elements are the process IDs of all background processes which are still alive, or which have died and have not been waited for yet.</dd>
+<dt> RbqstatusR (no-export) Rbqstatus</dt>
+<dd> The exit status of the <i>rc</i> forked to execute the most recent backquote substitution. Note that, unlike R$statusR, R$status R$bqstatus is always a single element list (see <code>EXIT STATUS</code> below). For example: </dd>
 <pre>
 Recho foo |grep bar; whatis status
 </pre>
 <dt>
-<dd> prints </p>
+</dt><dd> prints </dd>
 <pre>
 Rstatus=(0 1)
 </pre>
 <dt>
-<dd> whereas </p>
+</dt><dd> whereas </dd>
 <pre>
 Rx=`{echo foo |grep bar}; whatis bqstatus
 </pre>
 <dt>
-<dd> prints </p>
+</dt><dd> prints </dd>
 <pre>
 Rbqstatus=1
 </pre>
-<dt> RcdpathR (alias) Rcdpath</p>
-<dd> A list of directories to search for the target of a <code>cd</code> command. The empty string stands for the current directory. Note that if the R$cdpath variable does not contain the current directory, then the current directory will not be searched; this allows directory searching to begin in a directory other than the current directory.</p>
-<dt> Rhistory</p>
-<dd> R$history contains the name of a file to which commands are appended as <i>rc</i> reads them. This facilitates the use of a stand-alone history program (such as <i><a href="/docs/linux/man/1-history/">history</a></i>(1)) which parses the contents of the history file and presents them to <i>rc</i> for reinterpretation. If R$history is not set, then <i>rc</i> does not append commands to any file.</p>
-<dt> RhomeR (alias) Rhome</p>
-<dd> The default directory for the builtin <code>cd</code> command, and the directory in which <i>rc</i> looks to find its initialization file, R.rcrcR, R.rcrc if <i>rc</i> has been started up as a login shell.</p>
-<dt> RifsR (default) Rifs</p>
-<dd> The internal field separator, used for splitting up the output of backquote commands for digestion as a list. On startup, <i>rc</i> assigns the list containing the characters space, tab, and newline to R$ifsR. R$ifs</p>
-<dt> RpathR (alias) Rpath</p>
-<dd> This is a list of directories to search in for commands. The empty string stands for the current directory. If neither R$PATH nor R$path is set at startup time, R$path assumes a default value suitable for your system. This is typically R(/usr/local/bin /usr/bin /usr/ucb /bin .)</p>
-<dt> RpidR (default no-export) Rpid</p>
-<dd> On startup, R$pid is initialized to the numeric process ID of the currently running <i>rc</i>.</p>
-<dt> RpromptR (default) Rprompt</p>
-<dd> This variable holds the two prompts (in list form, of course) that <i>rc</i> prints. R$prompt(1) is printed before each command is read, and R$prompt(2) is printed when input is expected to continue on the next line. <i>rc</i> sets R$prompt to R(&#8216;; &#8216; &#8221;) by default. The reason for this is that it enables an <i>rc</i> user to grab commands from previous lines using a mouse, and to present them to <i>rc</i> for re-interpretation; the semicolon prompt is simply ignored by <i>rc</i>. The null R$prompt(2) also has its justification: an <i>rc</i> script, when typed interactively, will not leave R$prompt(2)R&#8217;s R$prompt(2) on the screen, and can therefore be grabbed by a mouse and placed directly into a file for use as a shell script, without further editing being necessary.</p>
-<dt> RpromptR (function) Rprompt</p>
-<dd> If this function is defined, then it gets executed every time <i>rc</i> is about to print R$prompt(1)R. R$prompt(1)</p>
-<dt> RstatusR (no-export read-only) Rstatus</p>
-<dd> The exit status of the last command. If the command exited with a numeric value, that number is the status. If the command died with a signal, the status is the name of that signal; if a core file was created, the string R&#8220;R+coreR&#8221; R&#8220;R+core R&#8220; is appended. The value of R$status for a pipeline is a list, with one entry, as above, for each process in the pipeline. For example, the command </p>
+<dt> RcdpathR (alias) Rcdpath</dt>
+<dd> A list of directories to search for the target of a <code>cd</code> command. The empty string stands for the current directory. Note that if the R$cdpath variable does not contain the current directory, then the current directory will not be searched; this allows directory searching to begin in a directory other than the current directory.</dd>
+<dt> Rhistory</dt>
+<dd> R$history contains the name of a file to which commands are appended as <i>rc</i> reads them. This facilitates the use of a stand-alone history program (such as <i><a href="/docs/linux/man/1-history/">history</a></i>(1)) which parses the contents of the history file and presents them to <i>rc</i> for reinterpretation. If R$history is not set, then <i>rc</i> does not append commands to any file.</dd>
+<dt> RhomeR (alias) Rhome</dt>
+<dd> The default directory for the builtin <code>cd</code> command, and the directory in which <i>rc</i> looks to find its initialization file, R.rcrcR, R.rcrc if <i>rc</i> has been started up as a login shell.</dd>
+<dt> RifsR (default) Rifs</dt>
+<dd> The internal field separator, used for splitting up the output of backquote commands for digestion as a list. On startup, <i>rc</i> assigns the list containing the characters space, tab, and newline to R$ifsR. R$ifs</dd>
+<dt> RpathR (alias) Rpath</dt>
+<dd> This is a list of directories to search in for commands. The empty string stands for the current directory. If neither R$PATH nor R$path is set at startup time, R$path assumes a default value suitable for your system. This is typically R(/usr/local/bin /usr/bin /usr/ucb /bin .)</dd>
+<dt> RpidR (default no-export) Rpid</dt>
+<dd> On startup, R$pid is initialized to the numeric process ID of the currently running <i>rc</i>.</dd>
+<dt> RpromptR (default) Rprompt</dt>
+<dd> This variable holds the two prompts (in list form, of course) that <i>rc</i> prints. R$prompt(1) is printed before each command is read, and R$prompt(2) is printed when input is expected to continue on the next line. <i>rc</i> sets R$prompt to R(&#8216;; &#8216; &#8221;) by default. The reason for this is that it enables an <i>rc</i> user to grab commands from previous lines using a mouse, and to present them to <i>rc</i> for re-interpretation; the semicolon prompt is simply ignored by <i>rc</i>. The null R$prompt(2) also has its justification: an <i>rc</i> script, when typed interactively, will not leave R$prompt(2)R&#8217;s R$prompt(2) on the screen, and can therefore be grabbed by a mouse and placed directly into a file for use as a shell script, without further editing being necessary.</dd>
+<dt> RpromptR (function) Rprompt</dt>
+<dd> If this function is defined, then it gets executed every time <i>rc</i> is about to print R$prompt(1)R. R$prompt(1)</dd>
+<dt> RstatusR (no-export read-only) Rstatus</dt>
+<dd> The exit status of the last command. If the command exited with a numeric value, that number is the status. If the command died with a signal, the status is the name of that signal; if a core file was created, the string R&#8220;R+coreR&#8221; R&#8220;R+core R&#8220; is appended. The value of R$status for a pipeline is a list, with one entry, as above, for each process in the pipeline. For example, the command </dd>
 <pre>
 Rls | wc
 </pre>
 <dt>
-<dd> usually sets R$status to R(0 0)R. R(0 0)</p>
-<dt> RversionR (default) Rversion</p>
-<dd> On startup, the first element of this list variable is initialized to a string which identifies this version of <i>rc</i>. The second element is initialized to a string which can be found by <i><a href="/docs/linux/man/1-ident/">ident</a></i>(1) and the <i>what</i> command of <i>sccs</i>(1).</dl>
+</dt><dd> usually sets R$status to R(0 0)R. R(0 0)</dd>
+<dt> RversionR (default) Rversion</dt>
+<dd> On startup, the first element of this list variable is initialized to a string which identifies this version of <i>rc</i>. The second element is initialized to a string which can be found by <i><a href="/docs/linux/man/1-ident/">ident</a></i>(1) and the <i>what</i> command of <i>sccs</i>(1).</dd></dl>
 <h2>FUNCTIONS</h2>
 <p> <i>rc</i> functions are identical to <i>rc</i> scripts, except that they are stored in memory and are automatically exported into the environment. A shell function is declared as: </p>
 <pre>
@@ -492,73 +492,73 @@ Rfn sigint {}
 <h2>BUILTIN COMMANDS</h2>
 <p> Builtin commands execute in the context of the shell, but otherwise behave exactly like other commands. Although <code>!</code>, <code>~</code> and <code>@</code> are not strictly speaking builtin commands, they can usually be used as such.</p>
 <dl>
-<dt><code>.</code> [<code>-i</code>] <i>file </i>[<i>arg &#8230;</i>]</p>
-<dd> Reads <i>file</i> as input to <i>rc</i> and executes its contents. With a R-i flag, input is interactive. Thus from within a shell script, </p>
+<dt><code>.</code> [<code>-i</code>] <i>file </i>[<i>arg &#8230;</i>]</dt>
+<dd> Reads <i>file</i> as input to <i>rc</i> and executes its contents. With a R-i flag, input is interactive. Thus from within a shell script, </dd>
 <pre>
 R. -i /dev/tty
 </pre>
 <dt>
-<dd> does the &#8220;right thing&#8221;.</p>
-<dt><code>break</code></p>
-<dd> Breaks from the innermost Rfor or RwhileR, Rwhile as in C. It is an error to invoke <code>break</code> outside of a loop. (Note that there is no <code>break</code> keyword between commands in Rswitch statements, unlike C.)</p>
-<dt><code>builtin </code><i>command </i>[<i>arg &#8230;</i>]</p>
-<dd> Executes the command ignoring any function definition of the same name. This command is present to allow functions with the same names as builtins to use the underlying builtin or binary. For example: </p>
+</dt><dd> does the &#8220;right thing&#8221;.</dd>
+<dt><code>break</code></dt>
+<dd> Breaks from the innermost Rfor or RwhileR, Rwhile as in C. It is an error to invoke <code>break</code> outside of a loop. (Note that there is no <code>break</code> keyword between commands in Rswitch statements, unlike C.)</dd>
+<dt><code>builtin </code><i>command </i>[<i>arg &#8230;</i>]</dt>
+<dd> Executes the command ignoring any function definition of the same name. This command is present to allow functions with the same names as builtins to use the underlying builtin or binary. For example: </dd>
 <pre>
 Rfn ls { builtin ls -FC $* }
 </pre>
 <dt>
-<dd> is a reasonable way to pass a default set of arguments to RlsR(1), Rls whereas </p>
+</dt><dd> is a reasonable way to pass a default set of arguments to RlsR(1), Rls whereas </dd>
 <pre>
 Rfn ls { ls -FC $* } # WRONG
 </pre>
 <dt>
-<dd> is a non-terminating recursion, which will cause Rrc to exhaust its stack space and (eventually) terminate if it is executed.</p>
-<dt><code>cd </code>[<i>directory</i>]</p>
-<dd> Changes the current directory to <i>directory</i>. The variable R$cdpath is searched for possible locations of <i>directory</i>, analogous to the searching of R$path for executable files. With no argument, <code>cd</code> changes the current directory to R$homeR. R$home</p>
-<dt><code>echo </code>[<code>-n</code>] [<code>&#8212;</code>] [<i>arg &#8230;</i>]</p>
-<dd> Prints its arguments to standard output, terminated by a newline. Arguments are separated by spaces. If the first argument is R-n no final newline is printed. If the first argument is R&#8211;R, R&#8211; then all other arguments are echoed literally. This is used for echoing a literal R-nR. R-n</p>
-<dt><code>eval </code>[<i>list</i>]</p>
-<dd> Concatenates the elements of <i>list</i> with spaces and feeds the resulting string to <i>rc</i> for re-scanning. This is the only time input is rescanned in <i>rc</i>.</p>
-<dt><code>exec </code>[<i>arg &#8230;</i>]</p>
-<dd> Replaces <i>rc</i> with the given command. If the exec contains only redirections, then these redirections apply to the current shell and the shell does not exit. For example, </p>
+</dt><dd> is a non-terminating recursion, which will cause Rrc to exhaust its stack space and (eventually) terminate if it is executed.</dd>
+<dt><code>cd </code>[<i>directory</i>]</dt>
+<dd> Changes the current directory to <i>directory</i>. The variable R$cdpath is searched for possible locations of <i>directory</i>, analogous to the searching of R$path for executable files. With no argument, <code>cd</code> changes the current directory to R$homeR. R$home</dd>
+<dt><code>echo </code>[<code>-n</code>] [<code>&#8212;</code>] [<i>arg &#8230;</i>]</dt>
+<dd> Prints its arguments to standard output, terminated by a newline. Arguments are separated by spaces. If the first argument is R-n no final newline is printed. If the first argument is R&#8211;R, R&#8211; then all other arguments are echoed literally. This is used for echoing a literal R-nR. R-n</dd>
+<dt><code>eval </code>[<i>list</i>]</dt>
+<dd> Concatenates the elements of <i>list</i> with spaces and feeds the resulting string to <i>rc</i> for re-scanning. This is the only time input is rescanned in <i>rc</i>.</dd>
+<dt><code>exec </code>[<i>arg &#8230;</i>]</dt>
+<dd> Replaces <i>rc</i> with the given command. If the exec contains only redirections, then these redirections apply to the current shell and the shell does not exit. For example, </dd>
 <pre>
 Rexec &gt;[2] err.out
 </pre>
 <dt>
-<dd> places further output to standard error in the file <i>err.out</i>.</p>
-<dt><code>exit </code>[<i>status</i>]</p>
-<dd> Cause the current shell to exit with the given exit <i>status</i>. If no argument is given, the current value of R$status is used.</p>
-<dt><code>limit </code>[<code>-h</code>] [<i>resource </i>[<i>value</i>]]</p>
-<dd> Similar to the <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) <code>limit</code> builtin, this command operates upon the BSD-style resource limits of a process. The R-h flag displays/alters the hard limits. The resources which can be shown or altered are <code>cputime</code>, <code>filesize</code>, <code>datasize</code>, <code>stacksize</code>, <code>coredumpsize</code>, <code>memoryuse</code>, and, where supported, <code>descriptors</code>, <code>memoryuse</code>, <code>memoryrss</code>, <code>maxproc</code>, <code>memorylocked</code>, and <code>filelocks</code>. For example: </p>
+</dt><dd> places further output to standard error in the file <i>err.out</i>.</dd>
+<dt><code>exit </code>[<i>status</i>]</dt>
+<dd> Cause the current shell to exit with the given exit <i>status</i>. If no argument is given, the current value of R$status is used.</dd>
+<dt><code>limit </code>[<code>-h</code>] [<i>resource </i>[<i>value</i>]]</dt>
+<dd> Similar to the <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) <code>limit</code> builtin, this command operates upon the BSD-style resource limits of a process. The R-h flag displays/alters the hard limits. The resources which can be shown or altered are <code>cputime</code>, <code>filesize</code>, <code>datasize</code>, <code>stacksize</code>, <code>coredumpsize</code>, <code>memoryuse</code>, and, where supported, <code>descriptors</code>, <code>memoryuse</code>, <code>memoryrss</code>, <code>maxproc</code>, <code>memorylocked</code>, and <code>filelocks</code>. For example: </dd>
 <pre>
 Rlimit coredumpsize 0
 </pre>
 <dt>
-<dd> disables core dumps. To set a soft limit equal to the hard limit: </p>
+</dt><dd> disables core dumps. To set a soft limit equal to the hard limit: </dd>
 <pre>
 Rlimit `{limit -h datasize}
 </pre>
-<dt><code>newpgrp</code></p>
-<dd> Puts <i>rc</i> into a new process group. This builtin is useful for making <i>rc</i> behave like a job-control shell in a hostile environment. One example is the NeXT Terminal program, which implicitly assumes that each shell it forks will put itself into a new process group.</p>
-<dt><code>return </code>[<i>n</i>]</p>
-<dd> Returns from the current function, with status <i>n</i>, where <i>n</i> is a valid exit status, or a list of them. Thus it is legal to have </p>
+<dt><code>newpgrp</code></dt>
+<dd> Puts <i>rc</i> into a new process group. This builtin is useful for making <i>rc</i> behave like a job-control shell in a hostile environment. One example is the NeXT Terminal program, which implicitly assumes that each shell it forks will put itself into a new process group.</dd>
+<dt><code>return </code>[<i>n</i>]</dt>
+<dd> Returns from the current function, with status <i>n</i>, where <i>n</i> is a valid exit status, or a list of them. Thus it is legal to have </dd>
 <pre>
 Rreturn (sigpipe 1 2 3)
 </pre>
 <dt>
-<dd> (This is commonly used to allow a function to return with the exit status of a previously executed pipeline of commands.) If <i>n</i> is omitted, then R$status is left unchanged. It is an error to invoke <code>return</code> when not inside a function.</p>
-<dt><code>shift </code>[<i>n</i>]</p>
-<dd> Deletes <i>n</i> elements from the beginning of R$* and shifts the other elements down by <i>n</i>. <i>n</i> defaults to 1.</p>
-<dt><code>umask </code>[<i>mask</i>]</p>
-<dd> Sets the current umask (see <i><a href="/docs/linux/man/2-umask/">umask</a></i>(2)) to the octal <i>mask</i>. If no argument is present, the current mask value is printed.</p>
-<dt><code>wait </code>[<i>pid</i>]</p>
-<dd> Waits for process with the specified <i>pid</i>, which must have been started by <i>rc</i>, to exit. If no <i>pid</i> is specified, <i>rc</i> waits for all its child processes to exit.</p>
-<dt><code>whatis </code>[<code>-b</code>] [<code>-f</code>] [<code>-p</code>] [<code>-s</code>] [<code>-v</code>] [<code>&#8212;</code>] [<i>name &#8230;</i>]</p>
-<dd> Prints a definition of the named objects. For builtins, Rbuiltin <i>foo</i> is printed; for functions, including signal handlers, their definitions are printed; for executable files, path names are printed; and for variables, their values are printed. The flags restrict output to builtins, functions, executable programs, signal handlers, and variables, respectively. If no <i>name</i>s are specified, <i>rc</i> lists all objects of that type. (This is not permitted for R-pR.) R-p Without arguments, Rwhatis is equivalent to Rwhatis -fvR, Rwhatis -fv and prints the values of all shell variables and functions.</p>
+</dt><dd> (This is commonly used to allow a function to return with the exit status of a previously executed pipeline of commands.) If <i>n</i> is omitted, then R$status is left unchanged. It is an error to invoke <code>return</code> when not inside a function.</dd>
+<dt><code>shift </code>[<i>n</i>]</dt>
+<dd> Deletes <i>n</i> elements from the beginning of R$* and shifts the other elements down by <i>n</i>. <i>n</i> defaults to 1.</dd>
+<dt><code>umask </code>[<i>mask</i>]</dt>
+<dd> Sets the current umask (see <i><a href="/docs/linux/man/2-umask/">umask</a></i>(2)) to the octal <i>mask</i>. If no argument is present, the current mask value is printed.</dd>
+<dt><code>wait </code>[<i>pid</i>]</dt>
+<dd> Waits for process with the specified <i>pid</i>, which must have been started by <i>rc</i>, to exit. If no <i>pid</i> is specified, <i>rc</i> waits for all its child processes to exit.</dd>
+<dt><code>whatis </code>[<code>-b</code>] [<code>-f</code>] [<code>-p</code>] [<code>-s</code>] [<code>-v</code>] [<code>&#8212;</code>] [<i>name &#8230;</i>]</dt>
+<dd> Prints a definition of the named objects. For builtins, Rbuiltin <i>foo</i> is printed; for functions, including signal handlers, their definitions are printed; for executable files, path names are printed; and for variables, their values are printed. The flags restrict output to builtins, functions, executable programs, signal handlers, and variables, respectively. If no <i>name</i>s are specified, <i>rc</i> lists all objects of that type. (This is not permitted for R-pR.) R-p Without arguments, Rwhatis is equivalent to Rwhatis -fvR, Rwhatis -fv and prints the values of all shell variables and functions.</dd>
 <dt>
-<dd> Note that <code>whatis</code> output is suitable for input to <i>rc</i>; by saving the output of <code>whatis</code> in a file, it should be possible to recreate the state of <i>rc</i> by sourcing this file with a R. command. Another note: Rwhatis -s &gt; file cannot be used to store the state of <i>rc</i>&#8216;s signal handlers in a file, because builtins with redirections are run in a subshell, and <i>rc</i> always restores signal handlers to their default value after a Rfork()R. Rfork()</p>
+</dt><dd> Note that <code>whatis</code> output is suitable for input to <i>rc</i>; by saving the output of <code>whatis</code> in a file, it should be possible to recreate the state of <i>rc</i> by sourcing this file with a R. command. Another note: Rwhatis -s &gt; file cannot be used to store the state of <i>rc</i>&#8216;s signal handlers in a file, because builtins with redirections are run in a subshell, and <i>rc</i> always restores signal handlers to their default value after a Rfork()R. Rfork()</dd>
 <dt>
-<dd> Since <code>whatis</code> uses <i><a href="/docs/linux/man/3-getopt/">getopt</a></i>(3) to parse its arguments, you can use the special argument R&#8211; to terminate its flags. This allows you to use names beginning with a dash, such as the <i><a href="/docs/linux/man/1-history/">history</a></i>(1) commands. For example, </p>
+</dt><dd> Since <code>whatis</code> uses <i><a href="/docs/linux/man/3-getopt/">getopt</a></i>(3) to parse its arguments, you can use the special argument R&#8211; to terminate its flags. This allows you to use names beginning with a dash, such as the <i><a href="/docs/linux/man/1-history/">history</a></i>(1) commands. For example, </dd>
 <pre>
 Rwhatis -- -p
 </pre>
@@ -635,8 +635,8 @@ Ruunet!mcvax!ukc!tlg
 Rwhile ((~ $1 -*) &amp;&amp; (! ~ $1 --)) { ...
 </pre>
 <dl>
-<dt>The redundant inner parentheses must be omitted.</p>
-<dd></dl>
+<dt>The redundant inner parentheses must be omitted.</dt>
+<dd></dd></dl>
 <p> Variable subscripting cannot be used in here documents. </p>
 <p> The Rlimit builtin silently ignores extra arguments. </p>
 <p> Backquote substitution never produces empty strings &#8211; multiple consecutive occurrences of the separator are treated the same as a single occurrence. </p>

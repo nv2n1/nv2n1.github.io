@@ -10,7 +10,6 @@ description: "sasl_getopt_t – The SASL get option callback"
 <p>sasl_getopt_t &#8211; The SASL get option callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_getopt_t(void *context,
                   const char *plugin_name,
                   const char *option,

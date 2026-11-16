@@ -16,16 +16,15 @@ description: "cjdnslog — display cjdroute log messages"
 <h2>OPTIONS</h2>
 <p> With no options, cjdnslog logs everything.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>&#8211;help</code> Print usage summary.</p>
-<dt>&bull;</p>
-<dd> <code>-f source_file.c</code> Restrict output to log messages generated in source_file.c.</p>
-<dt>&bull;</p>
-<dd> <code>-v log_level</code> Restrict output to messages at log_level or higher. Log levels include DEBUG, INFO, WARN, ERROR.</p>
-<dt>&bull;</p>
-<dd> <code>-l lineno</code> Restrict output to message generated on source line lineno. Normally used in conjunction with <code>-f</code>.</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> <code>&#8211;help</code> Print usage summary.</dd>
+<dt>&bull;</dt>
+<dd> <code>-f source_file.c</code> Restrict output to log messages generated in source_file.c.</dd>
+<dt>&bull;</dt>
+<dd> <code>-v log_level</code> Restrict output to messages at log_level or higher. Log levels include DEBUG, INFO, WARN, ERROR.</dd>
+<dt>&bull;</dt>
+<dd> <code>-l lineno</code> Restrict output to message generated on source line lineno. Normally used in conjunction with <code>-f</code>.</dd>
+</dl>
 <h2>USAGE</h2>
 <p> Running cjdnslog requires admin privilege. The cjdnsadmin lib will try to read <code>/etc/cjdroute.conf</code> for the admin password. This will normally succeed only for root. Otherwise, it tries <code>~/.cjdnsadmin</code></p>
 <h2>FILES</h2>
@@ -39,16 +38,15 @@ description: "cjdnslog — display cjdroute log messages"
 <h2>OPTIONS</h2>
 <p> With no options, cjdnslog logs everything.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>&#8211;help</code> Print usage summary.</p>
-<dt>&bull;</p>
-<dd> <code>-f source_file.c</code> Restrict output to log messages generated in source_file.c.</p>
-<dt>&bull;</p>
-<dd> <code>-v log_level</code> Restrict output to messages at log_level or higher. Log levels include DEBUG, INFO, WARN, ERROR.</p>
-<dt>&bull;</p>
-<dd> <code>-l lineno</code> Restrict output to message generated on source line lineno. Normally used in conjunction with <code>-f</code>.</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> <code>&#8211;help</code> Print usage summary.</dd>
+<dt>&bull;</dt>
+<dd> <code>-f source_file.c</code> Restrict output to log messages generated in source_file.c.</dd>
+<dt>&bull;</dt>
+<dd> <code>-v log_level</code> Restrict output to messages at log_level or higher. Log levels include DEBUG, INFO, WARN, ERROR.</dd>
+<dt>&bull;</dt>
+<dd> <code>-l lineno</code> Restrict output to message generated on source line lineno. Normally used in conjunction with <code>-f</code>.</dd>
+</dl>
 <h2>USAGE</h2>
 <p> Running cjdnslog requires admin privilege. The cjdnsadmin lib will try to read <code>/etc/cjdroute.conf</code> for the admin password. This will normally succeed only for root. Otherwise, it tries <code>~/.cjdnsadmin</code></p>
 <h2>FILES</h2>

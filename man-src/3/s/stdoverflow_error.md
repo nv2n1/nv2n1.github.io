@@ -10,7 +10,6 @@ description: "std::overflow_error – std::overflow_error"
 <p>std::overflow_error &#8211; std::overflow_error</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class overflow_error;</code></pre>
 <p>Defines a type of object to be thrown as exception. It can be used to report arithmetic overflow errors (that is, situations where a result of a computation is too large for the destination type)<br />
 The only standard library components that throw this exception are std::bitset::to_ulong and std::bitset::to_ullong.<br />

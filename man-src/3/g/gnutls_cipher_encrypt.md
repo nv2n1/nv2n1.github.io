@@ -14,12 +14,12 @@ description: "gnutls_cipher_encrypt – API function"
 <p> <code>int gnutls_cipher_encrypt(gnutls_cipher_hd_t </code><i>handle</i><code>, void * </code><i>text</i><code>, size_t </code><i>textlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_cipher_hd_t handle</p>
-<dd> is a <code>gnutls_cipher_hd_t</code> structure.</p>
-<dt>void * text</p>
-<dd> the data to encrypt</p>
-<dt>size_t textlen</p>
-<dd> The length of data to encrypt</dl>
+<dt>gnutls_cipher_hd_t handle</dt>
+<dd> is a <code>gnutls_cipher_hd_t</code> structure.</dd>
+<dt>void * text</dt>
+<dd> the data to encrypt</dd>
+<dt>size_t textlen</dt>
+<dd> The length of data to encrypt</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will encrypt the given data using the algorithm specified by the context.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_cipher_encrypt – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

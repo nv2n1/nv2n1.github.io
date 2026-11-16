@@ -24,14 +24,14 @@ description: "rpmduplicates – find program with several version installed"
 <p> nothing</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd> Print the full manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd> Print the program release and exit.</p>
-<dt><code>-verbose</code></p>
-<dd> The program works and print debugging messages.</dl>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the full manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the program release and exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd> The program works and print debugging messages.</dd></dl>
 <h2>USAGE</h2>
 <p> rpmduplicates.pl</p>
 <h2>FILES</h2>

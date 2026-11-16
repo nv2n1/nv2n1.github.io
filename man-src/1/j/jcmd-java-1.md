@@ -16,21 +16,19 @@ jcmd[options] jcmd[pid | main - class] PerfCounter.print
     f file
 </code></pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>options</p>
-<dd> The command-line options. See Options.</p>
-<dt>pid</p>
-<dd> Identifies the process that receives the diagnostic command requests. The process must be a Java process. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</p>
-<dt>main-class</p>
-<dd> The main class of the process that receives the diagnostic command requests. When matching processes, any process whose main class name contains the specified string as a substring is matched. If several running Java processes share the same main class, then the diagnostic command request is sent to all these processes. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</p>
-<dt>command [arguments]</p>
-<dd> The main class of the process that receives the diagnostic command requests. When matching processes, any process whose main class name contains the specified string as a substring is matched. If several running Java processes share the same main class, then the diagnostic command request is sent to all these processes. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</p>
-<dt>Perfcounter.print</p>
-<dd> Print the performance counters available on the targeted Java processes. The list of performance counters might vary with the Java process.</p>
-<dt>-f file</p>
-<dd> Read commands from <i>file</i> and call them on the targeted Java processes. In <i>file</i>, each command must be written on a single line. Lines starting with # are ignored. Processing of <i>file</i> ends when all lines have been called or when a line containing the <code>stop</code> keyword is read.</dl>
+<dt>options</dt>
+<dd> The command-line options. See Options.</dd>
+<dt>pid</dt>
+<dd> Identifies the process that receives the diagnostic command requests. The process must be a Java process. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</dd>
+<dt>main-class</dt>
+<dd> The main class of the process that receives the diagnostic command requests. When matching processes, any process whose main class name contains the specified string as a substring is matched. If several running Java processes share the same main class, then the diagnostic command request is sent to all these processes. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</dd>
+<dt>command [arguments]</dt>
+<dd> The main class of the process that receives the diagnostic command requests. When matching processes, any process whose main class name contains the specified string as a substring is matched. If several running Java processes share the same main class, then the diagnostic command request is sent to all these processes. To get a list of Java processes running on a machine, use <a href="/docs/linux/man/1-jps/">jps</a>(1) or <a href="/docs/linux/man/1-jcmd/">jcmd</a>(1).</dd>
+<dt>Perfcounter.print</dt>
+<dd> Print the performance counters available on the targeted Java processes. The list of performance counters might vary with the Java process.</dd>
+<dt>-f file</dt>
+<dd> Read commands from <i>file</i> and call them on the targeted Java processes. In <i>file</i>, each command must be written on a single line. Lines starting with # are ignored. Processing of <i>file</i> ends when all lines have been called or when a line containing the <code>stop</code> keyword is read.</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>jcmd</code> is a utility to send diagnostic command requests to a Java Virtual Machine supporting this feature. </p>
@@ -42,23 +40,19 @@ jcmd[options] jcmd[pid | main - class] PerfCounter.print
 <h2>OPTIONS</h2>
 <p> Options are mutually exclusive. Options, when used, must immediately follow the command name. </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-l</p>
-<dd> Prints the list of running Java processes with their process IDs, their main classes, and their command-line arguments.</p>
-<dt>-h</p>
-<dd> Prints a help message.</p>
-<dt>-help</p>
-<dd> Prints a help message.</dl>
+<dt>-l</dt>
+<dd> Prints the list of running Java processes with their process IDs, their main classes, and their command-line arguments.</dd>
+<dt>-h</dt>
+<dd> Prints a help message.</dd>
+<dt>-help</dt>
+<dd> Prints a help message.</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> jps</dl>
+<dt>o</dt>
+<dd> jps</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
 <h2>Index</h2>

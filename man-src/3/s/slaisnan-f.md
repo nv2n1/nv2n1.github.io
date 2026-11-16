@@ -29,10 +29,10 @@ description: "slaisnan.f –"
  Interprocedural or whole-program optimization may delete this
  test. The ISNAN functions will be replaced by the correct
  Fortran 03 intrinsic once the intrinsic is widely available.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIN1</i> </p>
+<dd><i>SIN1</i> </dd>
 <pre> SIN1 is REAL</pre>
 <p><i>SIN2</i> </p>
 <pre> SIN2 is REAL
@@ -40,13 +40,13 @@ description: "slaisnan.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 75 of file slaisnan.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

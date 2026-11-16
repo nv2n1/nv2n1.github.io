@@ -16,8 +16,8 @@ description: "ldns_create_nsec"
 <p> ldns_rr * ldns_create_nsec(ldns_rdf *cur_owner, ldns_rdf *next_owner, ldns_rr_list *rrs); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_create_nsec</i>()</p>
-<dd>Create a NSEC record .br <code>cur_owner</code>: the current owner which should be taken as the starting point .br <code>next_owner</code>: the rrlist which the nsec rr should point to .br <code>rrs</code>: all rrs from the zone, to find all RR types of cur_owner in .br Returns a ldns_rr with the nsec record in it</dl>
+<dt> <i>ldns_create_nsec</i>()</dt>
+<dd>Create a NSEC record .br <code>cur_owner</code>: the current owner which should be taken as the starting point .br <code>next_owner</code>: the rrlist which the nsec rr should point to .br <code>rrs</code>: all rrs from the zone, to find all RR types of cur_owner in .br Returns a ldns_rr with the nsec record in it</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

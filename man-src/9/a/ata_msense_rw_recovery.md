@@ -14,15 +14,15 @@ description: "ata_msense_rw_recovery – Simulate MODE SENSE r/w error recovery 
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>output buffer</dl>
+</dd><dd>output buffer</dd></dl>
 <p> <i>changeable</i></p>
 <dl>
-<dd>whether changeable parameters are requested</dl>
+<dd>whether changeable parameters are requested</dd></dl>
 <h2>Description</h2>
 <p>Generate a generic MODE SENSE r/w error recovery page. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

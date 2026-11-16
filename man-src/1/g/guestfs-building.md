@@ -13,14 +13,14 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> This manual page describes how to build libguestfs from source. </p>
 <p> The main steps are:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Install the requirements.</p>
-<dt>&bull;</p>
-<dd> Build, either from the git repository or from a tarball.</p>
-<dt>&bull;</p>
-<dd> Run the tests.</p>
-<dt>&bull;</p>
-<dd> Run the tools from the source directory, or install.</dl>
+<dt>&bull;</dt>
+<dd> Install the requirements.</dd>
+<dt>&bull;</dt>
+<dd> Build, either from the git repository or from a tarball.</dd>
+<dt>&bull;</dt>
+<dd> Run the tests.</dd>
+<dt>&bull;</dt>
+<dd> Run the tools from the source directory, or install.</dd></dl>
 <h2>REQUIREMENTS</h2>
 <h3>Short cut for Fedora or Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) users</h3>
 <p> On Fedora, use <code><a href="/docs/linux/man/8-dnf/">dnf</a></code>(8) to install all the requirements: </p>
@@ -42,196 +42,196 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> If that command doesn&#8217;t work, take a look at the Debian source package <a rel="nofollow" href="http://packages.debian.org/source/libguestfs,">http://packages.debian.org/source/libguestfs,</a> at the list of <tt>&quot;build-depends&quot;</tt> and <tt>&quot;build-depends-indep&quot;</tt>, and install everything listed there.</p>
 <h3>Full list of requirements</h3>
 <dl>
-<dt><i>appliance/packagelist.in</i></p>
-<dd> Install as many package names found in this file as possible. (It is not strictly required to install all of them). </p>
+<dt><i>appliance/packagelist.in</i></dt>
+<dd> Install as many package names found in this file as possible. (It is not strictly required to install all of them). </dd>
 <p> <i>Note</i>: If you build libguestfs followed by installing appliance packages, the build will not pick them up automatically, even if you do <tt>&quot;make clean&quot;</tt>. You have to do this command to clean the old supermin appliance and force a new one to be prepared: </p>
 <pre>
  make -C appliance clean-supermin-appliance
 </pre>
-<dt>qemu ≥ 1.3.0</p>
-<dd> <i>Required</i>.</p>
-<dt>qemu-img ≥ 1.3.0</p>
-<dd> <i>Required</i>. Virt-p2v and virt-v2v requires qemu-img ≥ 2.2.0.</p>
-<dt>kernel ≥ 2.6.34</p>
-<dd> <i>Required</i>. The following features must be enabled: <tt>&quot;virtio-pci&quot;</tt>, <tt>&quot;virtio-serial&quot;</tt>, <tt>&quot;virtio-block&quot;</tt>, <tt>&quot;virtio-net&quot;</tt>.</p>
-<dt>supermin ≥ 5.1.0</p>
-<dd> <i>Required</i>. For alternatives, see &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</p>
-<dt>glibc</p>
-<dd> <i>Required</i>. We use the custom printf formatters extension of glibc (see &#8220;<font SIZE="-1">DAEMON CUSTOM PRINTF FORMATTERS&#8221;</font> in <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1)).</p>
-<dt><font SIZE="-1">XDR</font> (tirpc, glibc or other)</p>
-<dd> <i>Required</i>. We use the <font SIZE="-1">XDR</font> implementation from <tt>&quot;&lt;rpc/xdr.h&gt;&quot;</tt>, which may come from glibc, tirpc or another library. </p>
+<dt>qemu ≥ 1.3.0</dt>
+<dd> <i>Required</i>.</dd>
+<dt>qemu-img ≥ 1.3.0</dt>
+<dd> <i>Required</i>. Virt-p2v and virt-v2v requires qemu-img ≥ 2.2.0.</dd>
+<dt>kernel ≥ 2.6.34</dt>
+<dd> <i>Required</i>. The following features must be enabled: <tt>&quot;virtio-pci&quot;</tt>, <tt>&quot;virtio-serial&quot;</tt>, <tt>&quot;virtio-block&quot;</tt>, <tt>&quot;virtio-net&quot;</tt>.</dd>
+<dt>supermin ≥ 5.1.0</dt>
+<dd> <i>Required</i>. For alternatives, see &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</dd>
+<dt>glibc</dt>
+<dd> <i>Required</i>. We use the custom printf formatters extension of glibc (see &#8220;<font SIZE="-1">DAEMON CUSTOM PRINTF FORMATTERS&#8221;</font> in <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1)).</dd>
+<dt><font SIZE="-1">XDR</font> (tirpc, glibc or other)</dt>
+<dd> <i>Required</i>. We use the <font SIZE="-1">XDR</font> implementation from <tt>&quot;&lt;rpc/xdr.h&gt;&quot;</tt>, which may come from glibc, tirpc or another library. </dd>
 <p> The <tt>&quot;rpcgen&quot;</tt> tool is optional, except if you want to compile from git and/or patch libguestfs with new APIs.</p>
-<dt>Gcc or Clang</p>
-<dd> <i>Required</i>. We use <tt>&quot;__attribute__((cleanup))&quot;</tt> which is a <font SIZE="-1">GCC</font> extension also supported by Clang.</p>
-<dt>Perl</p>
-<dd> <i>Required</i>. Various build steps and tests are written in Perl. Perl is not needed at runtime except if you need to run a small number of virt tools which are still written in Perl.</p>
-<dt>Perl &quot;Pod::Man&quot;</p>
+<dt>Gcc or Clang</dt>
+<dd> <i>Required</i>. We use <tt>&quot;__attribute__((cleanup))&quot;</tt> which is a <font SIZE="-1">GCC</font> extension also supported by Clang.</dd>
+<dt>Perl</dt>
+<dd> <i>Required</i>. Various build steps and tests are written in Perl. Perl is not needed at runtime except if you need to run a small number of virt tools which are still written in Perl.</dd>
+<dt>Perl &quot;Pod::Man&quot;</dt>
 <dd>
-<dt>Perl &quot;Pod::Simple&quot;</p>
-<dd> <i>Required</i>. Part of Perl core.</p>
-<dt>OCaml ≥ 4.01</p>
+</dd><dt>Perl &quot;Pod::Simple&quot;</dt>
+<dd> <i>Required</i>. Part of Perl core.</dd>
+<dt>OCaml ≥ 4.01</dt>
 <dd>
-<dt>OCaml findlib</p>
-<dd> <i>Required</i>.</p>
-<dt>autoconf</p>
+</dd><dt>OCaml findlib</dt>
+<dd> <i>Required</i>.</dd>
+<dt>autoconf</dt>
 <dd>
-<dt>automake</p>
+</dd><dt>automake</dt>
 <dd>
-<dt>gettext</p>
-<dd> <i>Required</i> if compiling from git. Optional if compiling from tarball.</p>
-<dt>cpio</p>
-<dd> <i>Required</i>.</p>
-<dt>gperf</p>
-<dd> <i>Required</i>.</p>
-<dt>flex</p>
+</dd><dt>gettext</dt>
+<dd> <i>Required</i> if compiling from git. Optional if compiling from tarball.</dd>
+<dt>cpio</dt>
+<dd> <i>Required</i>.</dd>
+<dt>gperf</dt>
+<dd> <i>Required</i>.</dd>
+<dt>flex</dt>
 <dd>
-<dt>bison</p>
-<dd> <i>Required</i>.</p>
-<dt>Perl-compatible Regular Expressions (<font SIZE="-1">PCRE</font>) library</p>
-<dd> <i>Required</i>.</p>
-<dt>genisoimage</p>
-<dd> <i>Required</i>.</p>
-<dt>libxml2</p>
-<dd> <i>Required</i>.</p>
-<dt>ncurses</p>
-<dd> <i>Required</i>.</p>
-<dt>augeas ≥ 1.0.0</p>
-<dd> <i>Required</i>.</p>
-<dt>xz</p>
-<dd> <i>Required</i>.</p>
-<dt>Jansson ≥ 2.7</p>
-<dd> <i>Required</i>.</p>
-<dt>po4a</p>
-<dd> <i>Required</i> if compiling from git. Optional if compiling from tarball.</p>
-<dt>hivex ≥ 1.2.7</p>
+</dd><dt>bison</dt>
+<dd> <i>Required</i>.</dd>
+<dt>Perl-compatible Regular Expressions (<font SIZE="-1">PCRE</font>) library</dt>
+<dd> <i>Required</i>.</dd>
+<dt>genisoimage</dt>
+<dd> <i>Required</i>.</dd>
+<dt>libxml2</dt>
+<dd> <i>Required</i>.</dd>
+<dt>ncurses</dt>
+<dd> <i>Required</i>.</dd>
+<dt>augeas ≥ 1.0.0</dt>
+<dd> <i>Required</i>.</dd>
+<dt>xz</dt>
+<dd> <i>Required</i>.</dd>
+<dt>Jansson ≥ 2.7</dt>
+<dd> <i>Required</i>.</dd>
+<dt>po4a</dt>
+<dd> <i>Required</i> if compiling from git. Optional if compiling from tarball.</dd>
+<dt>hivex ≥ 1.2.7</dt>
 <dd>
-<dt>ocaml-hivex</p>
-<dd> <i>Required</i>. ocaml-hivex is the OCaml binding for hivex, which is required when building the daemon.</p>
-<dt>libmagic</p>
-<dd> <i>Required</i>. This is the library used by the <code><a href="/docs/linux/man/1-file/">file</a></code>(1) command.</p>
-<dt>libvirt ≥ 0.10.2</p>
-<dd> Optional. Always use the latest possible version of libvirt.</p>
-<dt>xmllint</p>
-<dd> Optional. Used only for tests.</p>
-<dt>libconfig</p>
-<dd> Optional. Used to parse libguestfs’s own config files, eg. <i>/etc/libguestfs-tools.conf</i>.</p>
-<dt>libselinux</p>
-<dd> Optional. Used by the libvirt backend to securely confine the appliance (sVirt).</p>
-<dt>Berkeley <font SIZE="-1">DB</font> utils (db_dump, db_load, etc)</p>
-<dd> Optional. Usually found in a package called <tt>&quot;db-utils&quot;</tt>, <tt>&quot;db4-utils&quot;</tt>, <tt>&quot;db4.X-utils&quot;</tt> etc.</p>
-<dt>systemtap</p>
-<dd> Optional. For userspace probes.</p>
-<dt>readline</p>
-<dd> Optional. For nicer command line editing in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1).</p>
-<dt>acl</p>
-<dd> Optional. Library and programs for handling <font SIZE="-1">POSIX</font> ACLs.</p>
-<dt>libcap</p>
-<dd> Optional. Library and programs for handling Linux capabilities.</p>
-<dt>libldm</p>
-<dd> Optional. Library and <code><a href="/docs/linux/man/1-ldmtool/">ldmtool</a></code>(1) for handling Windows Dynamic Disks.</p>
-<dt>sd-journal</p>
-<dd> Optional. Library for accessing systemd journals.</p>
-<dt>gdisk</p>
-<dd> Optional. <font SIZE="-1">GPT</font> disk support.</p>
-<dt>netpbm</p>
-<dd> Optional. Render icons from guests.</p>
-<dt>icoutils</p>
-<dd> Optional. Render icons from Windows guests.</p>
-<dt>Perl &quot;Expect&quot;</p>
-<dd> Optional. Perl module used to test <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1).</p>
-<dt><font SIZE="-1">FUSE</font></p>
-<dd> Optional. <code><a href="/docs/linux/man/1-fusermount/">fusermount</a></code>(1), libfuse and kernel module are all needed if you want <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) and/or mount-local support.</p>
-<dt>static glibc</p>
-<dd> Optional. Used only for testing.</p>
-<dt>qemu-nbd</p>
+</dd><dt>ocaml-hivex</dt>
+<dd> <i>Required</i>. ocaml-hivex is the OCaml binding for hivex, which is required when building the daemon.</dd>
+<dt>libmagic</dt>
+<dd> <i>Required</i>. This is the library used by the <code><a href="/docs/linux/man/1-file/">file</a></code>(1) command.</dd>
+<dt>libvirt ≥ 0.10.2</dt>
+<dd> Optional. Always use the latest possible version of libvirt.</dd>
+<dt>xmllint</dt>
+<dd> Optional. Used only for tests.</dd>
+<dt>libconfig</dt>
+<dd> Optional. Used to parse libguestfs’s own config files, eg. <i>/etc/libguestfs-tools.conf</i>.</dd>
+<dt>libselinux</dt>
+<dd> Optional. Used by the libvirt backend to securely confine the appliance (sVirt).</dd>
+<dt>Berkeley <font SIZE="-1">DB</font> utils (db_dump, db_load, etc)</dt>
+<dd> Optional. Usually found in a package called <tt>&quot;db-utils&quot;</tt>, <tt>&quot;db4-utils&quot;</tt>, <tt>&quot;db4.X-utils&quot;</tt> etc.</dd>
+<dt>systemtap</dt>
+<dd> Optional. For userspace probes.</dd>
+<dt>readline</dt>
+<dd> Optional. For nicer command line editing in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1).</dd>
+<dt>acl</dt>
+<dd> Optional. Library and programs for handling <font SIZE="-1">POSIX</font> ACLs.</dd>
+<dt>libcap</dt>
+<dd> Optional. Library and programs for handling Linux capabilities.</dd>
+<dt>libldm</dt>
+<dd> Optional. Library and <code><a href="/docs/linux/man/1-ldmtool/">ldmtool</a></code>(1) for handling Windows Dynamic Disks.</dd>
+<dt>sd-journal</dt>
+<dd> Optional. Library for accessing systemd journals.</dd>
+<dt>gdisk</dt>
+<dd> Optional. <font SIZE="-1">GPT</font> disk support.</dd>
+<dt>netpbm</dt>
+<dd> Optional. Render icons from guests.</dd>
+<dt>icoutils</dt>
+<dd> Optional. Render icons from Windows guests.</dd>
+<dt>Perl &quot;Expect&quot;</dt>
+<dd> Optional. Perl module used to test <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1).</dd>
+<dt><font SIZE="-1">FUSE</font></dt>
+<dd> Optional. <code><a href="/docs/linux/man/1-fusermount/">fusermount</a></code>(1), libfuse and kernel module are all needed if you want <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) and/or mount-local support.</dd>
+<dt>static glibc</dt>
+<dd> Optional. Used only for testing.</dd>
+<dt>qemu-nbd</dt>
 <dd>
-<dt>nbdkit</p>
-<dd> Optional. qemu-nbd is used for testing. </p>
+</dd><dt>nbdkit</dt>
+<dd> Optional. qemu-nbd is used for testing. </dd>
 <p> <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) requires either qemu-nbd or nbdkit, but these only need to be present on the virt-p2v <font SIZE="-1">ISO,</font> they do not need to be installed at compile time.</p>
-<dt>uml_mkcow</p>
-<dd> Optional. For the <font SIZE="-1">UML</font> backend.</p>
-<dt>curl</p>
-<dd> Optional. Used by virt-builder for downloads.</p>
-<dt><font SIZE="-1">GNU</font> Privacy Guard (GnuPG, gpg) v1 or v2</p>
-<dd> Optional. Used by virt-builder for checking digital signatures.</p>
-<dt>liblzma</p>
-<dd> Optional. If available, virt-builder will use this library for fast, parallel uncompression of templates.</p>
-<dt>Gtk ≥ 2.24, or 3</p>
-<dd> Optional. </p>
+<dt>uml_mkcow</dt>
+<dd> Optional. For the <font SIZE="-1">UML</font> backend.</dd>
+<dt>curl</dt>
+<dd> Optional. Used by virt-builder for downloads.</dd>
+<dt><font SIZE="-1">GNU</font> Privacy Guard (GnuPG, gpg) v1 or v2</dt>
+<dd> Optional. Used by virt-builder for checking digital signatures.</dd>
+<dt>liblzma</dt>
+<dd> Optional. If available, virt-builder will use this library for fast, parallel uncompression of templates.</dd>
+<dt>Gtk ≥ 2.24, or 3</dt>
+<dd> Optional. </dd>
 <p> Used by the virt-p2v graphical user interface. </p>
 <p> Either Gtk 2 or Gtk 3 can be used. If you want to select a specific version of Gtk, use <tt>&quot;./configure --with-gtk=2&quot;</tt> or <tt>&quot;./configure --with-gtk=3&quot;</tt>.</p>
-<dt>D-Bus</p>
-<dd> Optional. </p>
+<dt>D-Bus</dt>
+<dd> Optional. </dd>
 <p> If the D-Bus low level C <font SIZE="-1">API</font> is available, virt-p2v can send a D-Bus message to logind to inhibit power saving (sleep, suspend, etc) during P2V conversions. </p>
 <p> If this <font SIZE="-1">API</font> is not available at build time, then very long conversions might be interrupted if the physical machine goes to sleep.</p>
-<dt>zip</p>
+<dt>zip</dt>
 <dd>
-<dt>unzip</p>
-<dd> Optional. Used by virt-v2v to handle <font SIZE="-1">OVA</font> files.</p>
-<dt>python-evtx</p>
-<dd> Optional. Used by <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1) to parse Windows Event Log files.</p>
-<dt>OCaml gettext</p>
-<dd> Optional. For localizing OCaml virt tools.</p>
-<dt>ocaml-ounit ≥ 2.0.0</p>
-<dd> Optional. For testing the common OCaml modules.</p>
-<dt>ocaml-libvirt ≥ 0.6.1.5</p>
-<dd> Optional. For building the optional virt-v2v test harness.</p>
-<dt>Perl &quot;Module::Build&quot; ≥ 0.19</p>
+</dd><dt>unzip</dt>
+<dd> Optional. Used by virt-v2v to handle <font SIZE="-1">OVA</font> files.</dd>
+<dt>python-evtx</dt>
+<dd> Optional. Used by <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1) to parse Windows Event Log files.</dd>
+<dt>OCaml gettext</dt>
+<dd> Optional. For localizing OCaml virt tools.</dd>
+<dt>ocaml-ounit ≥ 2.0.0</dt>
+<dd> Optional. For testing the common OCaml modules.</dd>
+<dt>ocaml-libvirt ≥ 0.6.1.5</dt>
+<dd> Optional. For building the optional virt-v2v test harness.</dd>
+<dt>Perl &quot;Module::Build&quot; ≥ 0.19</dt>
 <dd>
-<dt>Perl &quot;Test::More&quot;</p>
-<dd> Optional. Used to build and test the Perl bindings.</p>
-<dt>Python ≥ 2.2</p>
-<dd> Optional. Used to build the Python bindings. For building Python 2 or Python 3 bindings, see &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</p>
-<dt>Python &quot;unittest&quot;</p>
-<dd> Optional. Used to run the Python testsuite.</p>
-<dt>Ruby</p>
+</dd><dt>Perl &quot;Test::More&quot;</dt>
+<dd> Optional. Used to build and test the Perl bindings.</dd>
+<dt>Python ≥ 2.2</dt>
+<dd> Optional. Used to build the Python bindings. For building Python 2 or Python 3 bindings, see &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</dd>
+<dt>Python &quot;unittest&quot;</dt>
+<dd> Optional. Used to run the Python testsuite.</dd>
+<dt>Ruby</dt>
 <dd>
-<dt>rake</p>
+</dd><dt>rake</dt>
 <dd>
-<dt>rubygem-minitest</p>
+</dd><dt>rubygem-minitest</dt>
 <dd>
-<dt>rubygem-rdoc</p>
-<dd> Optional. Used to build the Ruby bindings.</p>
-<dt>Java ≥ 1.6</p>
-<dd> Optional. Java, <font SIZE="-1">JNI</font> and jpackage-utils are needed for building Java bindings.</p>
-<dt><font SIZE="-1">GHC</font></p>
-<dd> Optional. Used to build the Haskell bindings.</p>
-<dt><font SIZE="-1">PHP</font></p>
+</dd><dt>rubygem-rdoc</dt>
+<dd> Optional. Used to build the Ruby bindings.</dd>
+<dt>Java ≥ 1.6</dt>
+<dd> Optional. Java, <font SIZE="-1">JNI</font> and jpackage-utils are needed for building Java bindings.</dd>
+<dt><font SIZE="-1">GHC</font></dt>
+<dd> Optional. Used to build the Haskell bindings.</dd>
+<dt><font SIZE="-1">PHP</font></dt>
 <dd>
-<dt>phpize</p>
-<dd> Optional. Used to build the <font SIZE="-1">PHP</font> bindings.</p>
-<dt>glib2</p>
+</dd><dt>phpize</dt>
+<dd> Optional. Used to build the <font SIZE="-1">PHP</font> bindings.</dd>
+<dt>glib2</dt>
 <dd>
-<dt>gobject-introspection</p>
+</dd><dt>gobject-introspection</dt>
 <dd>
-<dt>gjs</p>
-<dd> Optional. Used to build and test the GObject bindings.</p>
-<dt><font SIZE="-1">LUA</font></p>
-<dd> Optional. Used to build the <font SIZE="-1">LUA</font> bindings.</p>
-<dt>Erlang</p>
+</dd><dt>gjs</dt>
+<dd> Optional. Used to build and test the GObject bindings.</dd>
+<dt><font SIZE="-1">LUA</font></dt>
+<dd> Optional. Used to build the <font SIZE="-1">LUA</font> bindings.</dd>
+<dt>Erlang</dt>
 <dd>
-<dt>erl_interface</p>
-<dd> Optional. Used to build the Erlang bindings.</p>
-<dt>golang ≥ 1.1.1</p>
-<dd> Optional. Used to build the Go bindings.</p>
-<dt>valgrind</p>
-<dd> Optional. For testing memory problems.</p>
-<dt>Perl &quot;Sys::Virt&quot;</p>
-<dd> Optional.</p>
-<dt>libvirt-python</p>
-<dd> Optional. For testing Python libvirt/libguestfs interactions.</p>
-<dt>Perl &quot;Win::Hivex&quot;</p>
-<dd> Optional. Used by the <code><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></code>(1) tool.</p>
-<dt>Perl &quot;Pod::Usage&quot;</p>
-<dd> Optional. Used by some Perl virt tools.</p>
-<dt>Perl &quot;libintl&quot;</p>
-<dd> Optional.</p>
-<dt>bash-completion</p>
-<dd> Optional. For tab-completion of commands in bash.</p>
-<dt>libtsk</p>
-<dd> Optional. Library for filesystem forensics analysis.</p>
-<dt>yara</p>
-<dd> Optional. Tool for categorizing files based on their content.</dl>
+</dd><dt>erl_interface</dt>
+<dd> Optional. Used to build the Erlang bindings.</dd>
+<dt>golang ≥ 1.1.1</dt>
+<dd> Optional. Used to build the Go bindings.</dd>
+<dt>valgrind</dt>
+<dd> Optional. For testing memory problems.</dd>
+<dt>Perl &quot;Sys::Virt&quot;</dt>
+<dd> Optional.</dd>
+<dt>libvirt-python</dt>
+<dd> Optional. For testing Python libvirt/libguestfs interactions.</dd>
+<dt>Perl &quot;Win::Hivex&quot;</dt>
+<dd> Optional. Used by the <code><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></code>(1) tool.</dd>
+<dt>Perl &quot;Pod::Usage&quot;</dt>
+<dd> Optional. Used by some Perl virt tools.</dd>
+<dt>Perl &quot;libintl&quot;</dt>
+<dd> Optional.</dd>
+<dt>bash-completion</dt>
+<dd> Optional. For tab-completion of commands in bash.</dd>
+<dt>libtsk</dt>
+<dd> Optional. Library for filesystem forensics analysis.</dd>
+<dt>yara</dt>
+<dd> Optional. Tool for categorizing files based on their content.</dd></dl>
 <h2>BUILDING FROM GIT</h2>
 <p> You will need to install additional dependencies <tt>&quot;autoconf&quot;</tt>, <tt>&quot;automake&quot;</tt>, <tt>&quot;gettext&quot;</tt>, OCaml findlib and po4a when building from git. </p>
 <pre>
@@ -325,68 +325,68 @@ description: "guestfs-building – How to build libguestfs from source"
 </pre>
 <p> to list them all. This section covers some of the more important ones.</p>
 <dl>
-<dt><code>&#8211;disable-appliance &#8211;disable-daemon</code></p>
-<dd> See &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</p>
-<dt><code>&#8211;disable-erlang</code></p>
+<dt><code>&#8211;disable-appliance &#8211;disable-daemon</code></dt>
+<dd> See &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</dd>
+<dt><code>&#8211;disable-erlang</code></dt>
 <dd>
-<dt><code>&#8211;disable-gobject</code></p>
+</dd><dt><code>&#8211;disable-gobject</code></dt>
 <dd>
-<dt><code>&#8211;disable-golang</code></p>
+</dd><dt><code>&#8211;disable-golang</code></dt>
 <dd>
-<dt><code>&#8211;disable-haskell</code></p>
+</dd><dt><code>&#8211;disable-haskell</code></dt>
 <dd>
-<dt><code>&#8211;disable-lua</code></p>
+</dd><dt><code>&#8211;disable-lua</code></dt>
 <dd>
-<dt><code>&#8211;disable-ocaml</code></p>
+</dd><dt><code>&#8211;disable-ocaml</code></dt>
 <dd>
-<dt><code>&#8211;disable-perl</code></p>
+</dd><dt><code>&#8211;disable-perl</code></dt>
 <dd>
-<dt><code>&#8211;disable-php</code></p>
+</dd><dt><code>&#8211;disable-php</code></dt>
 <dd>
-<dt><code>&#8211;disable-python</code></p>
+</dd><dt><code>&#8211;disable-python</code></dt>
 <dd>
-<dt><code>&#8211;disable-ruby</code></p>
-<dd> Disable specific language bindings, even if <tt>&quot;./configure&quot;</tt> finds all the necessary libraries are installed so that they could be compiled. </p>
+</dd><dt><code>&#8211;disable-ruby</code></dt>
+<dd> Disable specific language bindings, even if <tt>&quot;./configure&quot;</tt> finds all the necessary libraries are installed so that they could be compiled. </dd>
 <p> Note that disabling OCaml (bindings) or Perl will have the knock-on effect of disabling parts of the test suite and some tools. </p>
 <p> OCaml is required to build libguestfs and this requirement cannot be removed. Using <i>&#8211;disable-ocaml</i> only disables the bindings and OCaml tools.</p>
-<dt><code>&#8211;disable-fuse</code></p>
-<dd> Disable <font SIZE="-1">FUSE</font> support in the <font SIZE="-1">API</font> and the <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) tool.</p>
-<dt><code>&#8211;disable-gnulib-tests</code></p>
-<dd> On some platforms the GNUlib test suite can be flaky. This disables it, since errors in the GNUlib test suite are often not important.</p>
-<dt><code>&#8211;disable-static</code></p>
-<dd> Don’t build a static linked version of the libguestfs library.</p>
-<dt><code>&#8211;enable-install-daemon</code></p>
-<dd> Normally <code>guestfsd</code>(8) is not installed by <tt>&quot;make install&quot;</tt>, since that wouldn&#8217;t be useful (instead it is &#8220;installed&#8221; inside the supermin appliance). However if packagers are building &#8220;libguestfs live&#8221; then they should use this option.</p>
-<dt><code>&#8211;enable-werror</code></p>
-<dd> This turns compiler warnings into errors (ie. <tt>&quot;-Werror&quot;</tt>). Use this for development, especially when submitting patches. It should generally <i>not</i> be used for production or distro builds.</p>
-<dt><code>&#8211;with-default-backend=libvirt</code></p>
-<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </p>
+<dt><code>&#8211;disable-fuse</code></dt>
+<dd> Disable <font SIZE="-1">FUSE</font> support in the <font SIZE="-1">API</font> and the <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) tool.</dd>
+<dt><code>&#8211;disable-gnulib-tests</code></dt>
+<dd> On some platforms the GNUlib test suite can be flaky. This disables it, since errors in the GNUlib test suite are often not important.</dd>
+<dt><code>&#8211;disable-static</code></dt>
+<dd> Don’t build a static linked version of the libguestfs library.</dd>
+<dt><code>&#8211;enable-install-daemon</code></dt>
+<dd> Normally <code>guestfsd</code>(8) is not installed by <tt>&quot;make install&quot;</tt>, since that wouldn&#8217;t be useful (instead it is &#8220;installed&#8221; inside the supermin appliance). However if packagers are building &#8220;libguestfs live&#8221; then they should use this option.</dd>
+<dt><code>&#8211;enable-werror</code></dt>
+<dd> This turns compiler warnings into errors (ie. <tt>&quot;-Werror&quot;</tt>). Use this for development, especially when submitting patches. It should generally <i>not</i> be used for production or distro builds.</dd>
+<dt><code>&#8211;with-default-backend=libvirt</code></dt>
+<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </dd>
 <p> Fedora and Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) ≥ 7 use this flag to change the default backend to <tt>&quot;libvirt&quot;</tt>, because (especially in <font SIZE="-1">RHEL</font>) the policy is not to allow any program to run qemu except via libvirt. </p>
 <p> Note that despite this setting, all backends are built into libguestfs, and you can override the backend at runtime by setting the <tt>$LIBGUESTFS_BACKEND</tt> environment variable (or using <font SIZE="-1">API</font> methods).</p>
-<dt><code>&#8211;with-distro=REDHAT|DEBIAN|&#8230;</code></p>
-<dd> Libguestfs needs to know which Linux distro is in use so it can choose package names for the appliance correctly (see for example <i>appliance/packagelist.in</i>). It normally does this automatically. </p>
+<dt><code>&#8211;with-distro=REDHAT|DEBIAN|&#8230;</code></dt>
+<dd> Libguestfs needs to know which Linux distro is in use so it can choose package names for the appliance correctly (see for example <i>appliance/packagelist.in</i>). It normally does this automatically. </dd>
 <p> However if you can building or packaging libguestfs on a new distro then you can use <i>&#8211;with-distro</i> to specify that the distro is similar to an existing one (eg. <i>&#8211;with-distro=REDHAT</i> if the distro is a new Red Hat or CentOS derivative). </p>
 <p> Note that if your distro is completely new then it may still require upstream modifications.</p>
-<dt><code>&#8211;with-extra=&quot;</code><i>distroname</i>=<i>version</i>,libvirt,&#8230;<code>&quot;</code></p>
+<dt><code>&#8211;with-extra=&quot;</code><i>distroname</i>=<i>version</i>,libvirt,&#8230;<code>&quot;</code></dt>
 <dd>
-<dt><code>&#8211;with-extra=&quot;local&quot;</code></p>
-<dd> This option controls the &#8220;extra&#8221; field returned by &#8220;guestfs_version&#8221; in <code>guestfs</code>(3) and also printed by virt tools&#8217; <i>&#8211;version</i> option. It is a free text field, but a good idea is to encode a comma-separated list of facts such as the distro name and version, whether libvirt is the default backend, and anything else that may help with debugging problems raised by users. </p>
+</dd><dt><code>&#8211;with-extra=&quot;local&quot;</code></dt>
+<dd> This option controls the &#8220;extra&#8221; field returned by &#8220;guestfs_version&#8221; in <code>guestfs</code>(3) and also printed by virt tools&#8217; <i>&#8211;version</i> option. It is a free text field, but a good idea is to encode a comma-separated list of facts such as the distro name and version, whether libvirt is the default backend, and anything else that may help with debugging problems raised by users. </dd>
 <p> For custom and/or local builds, this can be set to <tt>&quot;local&quot;</tt> to indicate this is <i>not</i> a distro build.</p>
-<dt><code>&#8211;without-libvirt</code></p>
-<dd> Compile libguestfs without libvirt support, even if libvirt development libraries are installed.</p>
-<dt><code>&#8211;with-gtk=2</code></p>
-<dd> This option forces virt-p2v to be built against Gtk 2, which is currently the most widely tested configuration.</p>
-<dt><code>&#8211;with-qemu=&quot;</code>bin1 bin2 &#8230;<code>&quot;</code></p>
-<dd> Provide an alternate qemu binary (or list of binaries). This can be overridden at runtime by setting the <tt>&quot;LIBGUESTFS_HV&quot;</tt> environment variable.</p>
-<dt><code>&#8211;with-supermin-packager-config=</code><i>yum.conf</i></p>
-<dd> This passes the <i>&#8211;packager-config</i> option to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). </p>
+<dt><code>&#8211;without-libvirt</code></dt>
+<dd> Compile libguestfs without libvirt support, even if libvirt development libraries are installed.</dd>
+<dt><code>&#8211;with-gtk=2</code></dt>
+<dd> This option forces virt-p2v to be built against Gtk 2, which is currently the most widely tested configuration.</dd>
+<dt><code>&#8211;with-qemu=&quot;</code>bin1 bin2 &#8230;<code>&quot;</code></dt>
+<dd> Provide an alternate qemu binary (or list of binaries). This can be overridden at runtime by setting the <tt>&quot;LIBGUESTFS_HV&quot;</tt> environment variable.</dd>
+<dt><code>&#8211;with-supermin-packager-config=</code><i>yum.conf</i></dt>
+<dd> This passes the <i>&#8211;packager-config</i> option to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). </dd>
 <p> The most common use for this is to build the appliance using an alternate repository (instead of using the installed yum/dnf/apt/etc configuration to find and download packages). You might need to use this if you want to build libguestfs without having a network connection. Examples of using this can be found in the Fedora <tt>&quot;libguestfs.spec&quot;</tt> file (see &#8220;<font SIZE="-1">BUILDING A PACKAGE FOR FEDORA&#8221;</font> below for resources).</p>
-<dt><code>&#8211;with-supermin-extra-options=&quot;</code>&#8211;opt1 &#8211;opt2 &#8230;<code>&quot;</code></p>
-<dd> Pass additional options to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). See <i>appliance/make.sh.in</i> to understand precisely what this does.</p>
-<dt><font SIZE="-1"><code>PYTHON</code></font></p>
-<dd> This environment variable may be set to point to a python binary (eg. <tt>&quot;python3&quot;</tt>). When <tt>&quot;./configure&quot;</tt> runs, it inspects this python binary to find the version of Python, the location of Python libraries and so on. See &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</p>
-<dt><font SIZE="-1"><code>SUPERMIN</code></font></p>
-<dd> This environment variable can be set to choose an alternative <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) binary. This might be used, for example, if you want to use a newer upstream version of supermin than is packaged for your distro, or if supermin is not packaged at all. On <font SIZE="-1">RHEL 7,</font> you must set <tt>&quot;SUPERMIN=/usr/bin/supermin5&quot;</tt> when compiling libguestfs.</dl>
+<dt><code>&#8211;with-supermin-extra-options=&quot;</code>&#8211;opt1 &#8211;opt2 &#8230;<code>&quot;</code></dt>
+<dd> Pass additional options to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). See <i>appliance/make.sh.in</i> to understand precisely what this does.</dd>
+<dt><font SIZE="-1"><code>PYTHON</code></font></dt>
+<dd> This environment variable may be set to point to a python binary (eg. <tt>&quot;python3&quot;</tt>). When <tt>&quot;./configure&quot;</tt> runs, it inspects this python binary to find the version of Python, the location of Python libraries and so on. See &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</dd>
+<dt><font SIZE="-1"><code>SUPERMIN</code></font></dt>
+<dd> This environment variable can be set to choose an alternative <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) binary. This might be used, for example, if you want to use a newer upstream version of supermin than is packaged for your distro, or if supermin is not packaged at all. On <font SIZE="-1">RHEL 7,</font> you must set <tt>&quot;SUPERMIN=/usr/bin/supermin5&quot;</tt> when compiling libguestfs.</dd></dl>
 <h2>NOTES ABOUT QEMU AND KVM</h2>
 <p> A common problem is with broken or incompatible qemu releases. </p>
 <p> Different versions of qemu have problems booting the appliance for different reasons. This varies between versions of qemu, and Linux distributions which add their own patches. </p>
@@ -430,10 +430,10 @@ description: "guestfs-building – How to build libguestfs from source"
 <h2>BUILDING A PACKAGE FOR RED HAT ENTERPRISE LINUX</h2>
 <p> Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) builds of libguestfs are heavily patched. There are broadly two types of patches we apply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> We disable many features that we do not wish to support for <font SIZE="-1">RHEL</font> customers. For example, the &#8220;libguestfs live&#8221; feature is disabled.</p>
-<dt>&bull;</p>
-<dd> We backport upstream features.</dl>
+<dt>&bull;</dt>
+<dd> We disable many features that we do not wish to support for <font SIZE="-1">RHEL</font> customers. For example, the &#8220;libguestfs live&#8221; feature is disabled.</dd>
+<dt>&bull;</dt>
+<dd> We backport upstream features.</dd></dl>
 <p> The patches we apply to <font SIZE="-1">RHEL</font> releases are available publically in the upstream git repository, in a branch called <tt>&quot;rhel-x.y&quot;</tt> </p>
 <p> For example, the <font SIZE="-1">RHEL 7.3</font> patches are available here: <a rel="nofollow" href="https://github.com/libguestfs/libguestfs/commits/rhel-7.3">https://github.com/libguestfs/libguestfs/commits/rhel-7.3</a> </p>
 <p> The sources and spec files for <font SIZE="-1">RHEL</font> versions of libguestfs are available on <a rel="nofollow" href="https://git.centos.org/project/rpms,">https://git.centos.org/project/rpms,</a> and see also <a rel="nofollow" href="https://wiki.centos.org/Sources.">https://wiki.centos.org/Sources.</a></p>
@@ -461,51 +461,51 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAH">BUILDING FROM GIT</a></p>
+<dt><a href="#lbAH">BUILDING FROM GIT</a></dt>
 <dd>
-<dt><a href="#lbAI">BUILDING FROM TARBALLS</a></p>
+</dd><dt><a href="#lbAI">BUILDING FROM TARBALLS</a></dt>
 <dd>
-<dt><a href="#lbAJ">RUNNING THE TESTS</a></p>
+</dd><dt><a href="#lbAJ">RUNNING THE TESTS</a></dt>
 <dd>
-<dt><a href="#lbAK">INSTALLING</a></p>
+</dd><dt><a href="#lbAK">INSTALLING</a></dt>
 <dd>
-<dt><a href="#lbAL">THE ./run SCRIPT</a></p>
+</dd><dt><a href="#lbAL">THE ./run SCRIPT</a></dt>
 <dd>
-<dt><a href="#lbAM"><i>local*</i> FILES</a></p>
+</dd><dt><a href="#lbAM"><i>local*</i> FILES</a></dt>
 <dd>
-<dt><a href="#lbAN">SELECTED ./configure SETTINGS</a></p>
+</dd><dt><a href="#lbAN">SELECTED ./configure SETTINGS</a></dt>
 <dd>
-<dt><a href="#lbAO">NOTES ABOUT QEMU AND KVM</a></p>
+</dd><dt><a href="#lbAO">NOTES ABOUT QEMU AND KVM</a></dt>
 <dd>
-<dt><a href="#lbAP">USING CLANG (LLVM) INSTEAD OF GCC</a></p>
+</dd><dt><a href="#lbAP">USING CLANG (LLVM) INSTEAD OF GCC</a></dt>
 <dd>
-<dt><a href="#lbAQ">USING A PREBUILT BINARY APPLIANCE</a></p>
+</dd><dt><a href="#lbAQ">USING A PREBUILT BINARY APPLIANCE</a></dt>
 <dd>
-<dt><a href="#lbAR">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS</a></p>
+</dd><dt><a href="#lbAR">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS</a></dt>
 <dd>
-<dt><a href="#lbAS">BUILDING A PACKAGE FOR FEDORA</a></p>
+</dd><dt><a href="#lbAS">BUILDING A PACKAGE FOR FEDORA</a></dt>
 <dd>
-<dt><a href="#lbAT">BUILDING A PACKAGE FOR RED HAT ENTERPRISE LINUX</a></p>
+</dd><dt><a href="#lbAT">BUILDING A PACKAGE FOR RED HAT ENTERPRISE LINUX</a></dt>
 <dd>
-<dt><a href="#lbAU">BUILDING i686 32 BIT VIRT-P2V</a></p>
+</dd><dt><a href="#lbAU">BUILDING i686 32 BIT VIRT-P2V</a></dt>
 <dd>
-<dt><a href="#lbAV">SEE ALSO</a></p>
+</dd><dt><a href="#lbAV">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAW">AUTHORS</a></p>
+</dd><dt><a href="#lbAW">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAX">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAX">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAY">LICENSE</a></p>
+</dd><dt><a href="#lbAY">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAZ">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAZ">BUGS</a></dt>
+<dd></dd></dl>

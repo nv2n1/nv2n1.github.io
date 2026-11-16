@@ -23,13 +23,12 @@ url: "/docs/linux/man/1-qsgrep/"
 
 <dl>
 <dt>-e &lt;pattern&gt;
-<dd> Specifes the search pattern.
-<dt>-o &lt;string&gt;
-<dd> Defines the output string where $0-$9 are substituted by the submatches of the regular expression.
-<dt>&lt;path&gt;
-<dd> Defines the input file to process. qsgrep reads from from standard input if this parameter is omitted. 
-
-</dl>
+</dt><dd> Specifes the search pattern.
+</dd><dt>-o &lt;string&gt;
+</dt><dd> Defines the output string where $0-$9 are substituted by the submatches of the regular expression.
+</dd><dt>&lt;path&gt;
+</dt><dd> Defines the input file to process. qsgrep reads from from standard input if this parameter is omitted. 
+</dd></dl>
 
 <h2>EXAMPLE</h2>
 

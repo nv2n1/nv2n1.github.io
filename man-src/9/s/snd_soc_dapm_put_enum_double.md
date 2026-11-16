@@ -15,11 +15,11 @@ snd_soc_dapm_put_enum_double - dapm enumerated double mixer set callback
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>mixer control</dl>
+<dl><dd></dd><dd>mixer control</dd></dl>
  
 
  <i>ucontrol</i>
-<dl><dd>control element information</dl>
+<dl><dd>control element information</dd></dl>
 
 <h2>Description</h2>
 

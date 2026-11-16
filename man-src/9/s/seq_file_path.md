@@ -15,15 +15,15 @@ seq_file_path - seq_file interface to print a pathname of a file
 <h2>Arguments</h2>
 
 <i>m</i>
-<dl><dd><dd>the seq_file handle</dl>
+<dl><dd></dd><dd>the seq_file handle</dd></dl>
  
 
  <i>file</i>
-<dl><dd>the struct file to print</dl>
+<dl><dd>the struct file to print</dd></dl>
  
 
  <i>esc</i>
-<dl><dd>set of characters to escape in the output</dl>
+<dl><dd>set of characters to escape in the output</dd></dl>
 
 <h2>Description</h2>
 

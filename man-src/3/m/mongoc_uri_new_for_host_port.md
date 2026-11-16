@@ -14,11 +14,11 @@ mongoc_uri_new_for_host_port (const char *hostname,
  uint16_t port);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>hostname</code></p>
-<dd>A string containing the hostname.</dl>
+<dt><code>hostname</code></dt>
+<dd>A string containing the hostname.</dd></dl>
 <dl COMPACT>
-<dt><code>port</code></p>
-<dd>A uint16_t.</dl>
+<dt><code>port</code></dt>
+<dd>A uint16_t.</dd></dl>
 <h2>Description</h2>
 <p>Creates a new <code>mongoc_uri_t</code> based on the hostname and port provided. </p>
 <h2>Returns</h2>

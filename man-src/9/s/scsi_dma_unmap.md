@@ -14,12 +14,12 @@ description: "scsi_dma_unmap – unmap command’s sg lists mapped by scsi_dma_m
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>scsi command</dl>
+</dd><dd>scsi command</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

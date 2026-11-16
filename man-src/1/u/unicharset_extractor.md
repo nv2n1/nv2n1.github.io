@@ -15,11 +15,11 @@ description: "unicharset_extractor – extract unicharset from Tesseract boxfile
 <p> Tesseract needs to know the set of possible characters it can output. To generate the unicharset data file, use the unicharset_extractor program on the same training pages bounding box files as used for clustering: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 unicharset_extractor fontfile_1.box fontfile_2.box ...
 </pre>
-</dl>
+</dd></dl>
 <p> The unicharset will be put into the file <i>dir/unicharset</i>, or simply <i>./unicharset</i> if no output directory is provided. </p>
 <p> Tesseract also needs to have access to character properties isalpha, isdigit, isupper, islower, ispunctuation. all of this auxilury data and more is encoded in this file. (See <a href="/docs/linux/man/5-unicharset/">unicharset</a>(5)) </p>
 <p> If your system supports the wctype functions, these values will be set automatically by unicharset_extractor and there is no need to edit the unicharset file. On some older systems (eg Windows 95), the unicharset file must be edited by hand to add these property description codes. </p>

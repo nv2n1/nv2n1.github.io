@@ -11,11 +11,11 @@ description: "dbus-launch – Utility to start a message bus from a shell script
 <p> dbus-launch &#8211; Utility to start a message bus from a shell script </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>dbus-launch</code> [&#8211;version] [&#8211;help] [&#8211;sh-syntax] [&#8211;csh-syntax] [&#8211;auto-syntax] [&#8211;binary-syntax] [&#8211;close-stderr] [&#8211;exit-with-session] [&#8211;exit-with-x11] [&#8211;autolaunch=<i>MACHINEID</i>] [&#8211;config-file=<i>FILENAME</i>] [<i>PROGRAM</i>] [<i>ARGS</i>&#8230;]</p>
+<dt> <code>dbus-launch</code> [&#8211;version] [&#8211;help] [&#8211;sh-syntax] [&#8211;csh-syntax] [&#8211;auto-syntax] [&#8211;binary-syntax] [&#8211;close-stderr] [&#8211;exit-with-session] [&#8211;exit-with-x11] [&#8211;autolaunch=<i>MACHINEID</i>] [&#8211;config-file=<i>FILENAME</i>] [<i>PROGRAM</i>] [<i>ARGS</i>&#8230;]</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>dbus-launch</code> command is used to start a session bus instance of <i>dbus-daemon</i> from a shell script. It would normally be called from a user&#8217;s login scripts. Unlike the daemon itself, <code>dbus-launch</code> exits, so backticks or the $() construct can be used to read information from <code>dbus-launch</code>. </p>
+<dd>The <code>dbus-launch</code> command is used to start a session bus instance of <i>dbus-daemon</i> from a shell script. It would normally be called from a user&#8217;s login scripts. Unlike the daemon itself, <code>dbus-launch</code> exits, so backticks or the $() construct can be used to read information from <code>dbus-launch</code>. </dd>
 <p> With no arguments, <code>dbus-launch</code> will launch a session bus instance and print the address and PID of that instance to standard output. </p>
 <p> You may specify a program to be run; in this case, <code>dbus-launch</code> will launch a session bus instance, set the appropriate environment variables so the specified program can find the bus, and then execute the specified program, with the specified arguments. See below for examples. </p>
 <p> If you launch a program, <code>dbus-launch</code> will not print the information about the new bus to standard output. </p>
@@ -31,7 +31,7 @@ description: "dbus-launch – Utility to start a message bus from a shell script
 <p> To start a D-Bus session within a text-mode session, do not use <code>dbus-launch</code>. Instead, see <code><a href="/docs/linux/man/1-dbus-run-session/">dbus-run-session</a></code>(1). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   ## test for an existing bus daemon, just to be safe
   if test -z "$DBUS_SESSION_BUS_ADDRESS" ;
@@ -39,7 +39,7 @@ description: "dbus-launch – Utility to start a message bus from a shell script
                               eval `dbus -
                           launch-- sh - syntax` echo "D-Bus per-session daemon address is: $DBUS_SESSION_BUS_ADDRESS" fi
 </code></pre>
-</dl>
+</dd></dl>
 <p> Note that in this case, dbus-launch will exit, and dbus-daemon will not be terminated automatically on logout.</p>
 <h2>AUTOMATIC LAUNCHING</h2>
 <p> If DBUS_SESSION_BUS_ADDRESS is not set for a process that tries to use D-Bus, by default the process will attempt to invoke dbus-launch with the &#8211;autolaunch option to start up a new session bus or find the existing bus address on the X display or in a file in ~/.dbus/session-bus/ </p>
@@ -53,47 +53,47 @@ description: "dbus-launch – Utility to start a message bus from a shell script
 <p> <code>&#8211;auto-syntax</code></p>
 <dl>
 <dt>
-<dd> Choose &#8211;csh-syntax or &#8211;sh-syntax based on the SHELL environment variable.</dl>
+</dt><dd> Choose &#8211;csh-syntax or &#8211;sh-syntax based on the SHELL environment variable.</dd></dl>
 <p> <code>&#8211;binary-syntax</code></p>
 <dl>
 <dt>
-<dd> Write to stdout a nul-terminated bus address, then the bus PID as a binary integer of size sizeof(pid_t), then the bus X window ID as a binary integer of size sizeof(long). Integers are in the machine&#8217;s byte order, not network byte order or any other canonical byte order.</dl>
+</dt><dd> Write to stdout a nul-terminated bus address, then the bus PID as a binary integer of size sizeof(pid_t), then the bus X window ID as a binary integer of size sizeof(long). Integers are in the machine&#8217;s byte order, not network byte order or any other canonical byte order.</dd></dl>
 <p> <code>&#8211;close-stderr</code></p>
 <dl>
 <dt>
-<dd> Close the standard error output stream before starting the D-Bus daemon. This is useful if you want to capture dbus-launch error messages but you don&#8217;t want dbus-daemon to keep the stream open to your application.</dl>
+</dt><dd> Close the standard error output stream before starting the D-Bus daemon. This is useful if you want to capture dbus-launch error messages but you don&#8217;t want dbus-daemon to keep the stream open to your application.</dd></dl>
 <p> <code>&#8211;config-file=FILENAME</code></p>
 <dl>
 <dt>
-<dd> Pass &#8211;config-file=FILENAME to the bus daemon, instead of passing it the &#8211;session argument. See the man page for dbus-daemon</dl>
+</dt><dd> Pass &#8211;config-file=FILENAME to the bus daemon, instead of passing it the &#8211;session argument. See the man page for dbus-daemon</dd></dl>
 <p> <code>&#8211;csh-syntax</code></p>
 <dl>
 <dt>
-<dd> Emit csh compatible code to set up environment variables.</dl>
+</dt><dd> Emit csh compatible code to set up environment variables.</dd></dl>
 <p> <code>&#8211;exit-with-x11</code></p>
 <dl>
 <dt>
-<dd> If this option is provided, a persistent &quot;babysitter&quot; process will be created, and will connect to the X server. If it cannot do so, launching fails. If the &quot;babysitter&quot; process loses its X connection, it kills the message bus daemon, disconnecting all of its clients (which should exit in response). This avoids having leftover daemon processes from a user X session, after the X session has ended.</dl>
+</dt><dd> If this option is provided, a persistent &quot;babysitter&quot; process will be created, and will connect to the X server. If it cannot do so, launching fails. If the &quot;babysitter&quot; process loses its X connection, it kills the message bus daemon, disconnecting all of its clients (which should exit in response). This avoids having leftover daemon processes from a user X session, after the X session has ended.</dd></dl>
 <p> <code>&#8211;exit-with-session</code></p>
 <dl>
 <dt>
-<dd> If this option is provided, a persistent &quot;babysitter&quot; process will be created, as if for &#8211;exit-with-x11. If it cannot connect to the X server, it will monitor the terminal from which dbus-launch was started instead, and if it gets a HUP on stdin, the message bus daemon will be killed. This option is not recommended, since it will consume input from the terminal where it was started; it is mainly provided for backwards compatibility.</dl>
+</dt><dd> If this option is provided, a persistent &quot;babysitter&quot; process will be created, as if for &#8211;exit-with-x11. If it cannot connect to the X server, it will monitor the terminal from which dbus-launch was started instead, and if it gets a HUP on stdin, the message bus daemon will be killed. This option is not recommended, since it will consume input from the terminal where it was started; it is mainly provided for backwards compatibility.</dd></dl>
 <p> <code>&#8211;autolaunch=MACHINEID</code></p>
 <dl>
 <dt>
-<dd> This option implies that <code>dbus-launch</code> should scan for a previously-started session and reuse the values found there. If no session is found, it will start a new session. The &#8211;exit-with-session option is implied if &#8211;autolaunch is given. This option is for the exclusive use of libdbus, you do not want to use it manually. It may change in the future.</dl>
+</dt><dd> This option implies that <code>dbus-launch</code> should scan for a previously-started session and reuse the values found there. If no session is found, it will start a new session. The &#8211;exit-with-session option is implied if &#8211;autolaunch is given. This option is for the exclusive use of libdbus, you do not want to use it manually. It may change in the future.</dd></dl>
 <p> <code>&#8211;sh-syntax</code></p>
 <dl>
 <dt>
-<dd> Emit Bourne-shell compatible code to set up environment variables.</dl>
+</dt><dd> Emit Bourne-shell compatible code to set up environment variables.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version of dbus-launch</dl>
+</dt><dd> Print the version of dbus-launch</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print the help info of dbus-launch</dl>
+</dt><dd> Print the help info of dbus-launch</dd></dl>
 <h2>NOTES</h2>
 <p> If you run <code>dbus-launch myapp</code> (with any other options), dbus-daemon will <i>not</i> exit when <code>myapp</code> terminates: this is because <code>myapp</code> is assumed to be part of a larger session, rather than a session in its own right.</p>
 <h2>AUTHOR</h2>

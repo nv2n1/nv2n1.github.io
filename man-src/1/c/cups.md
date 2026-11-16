@@ -27,40 +27,40 @@ description: "cups – a standards-based, open source printing system"
 <h2>ENVIRONMENT</h2>
 <p> <code>CUPS</code> commands use the following environment variables to override the default locations of files and so forth. For security reasons, these environment variables are ignored for setuid programs:</p>
 <dl>
-<dt><code>CUPS_ANYROOT</code></p>
-<dd> Whether to allow any X.509 certificate root (Y or N).</p>
-<dt><code>CUPS_CACHEDIR</code></p>
-<dd> The directory where semi-persistent cache files can be found.</p>
-<dt><code>CUPS_DATADIR</code></p>
-<dd> The directory where data files can be found.</p>
-<dt><code>CUPS_ENCRYPTION</code></p>
-<dd> The default level of encryption (Always, IfRequested, Never, Required).</p>
-<dt><code>CUPS_EXPIREDCERTS</code></p>
-<dd> Whether to allow expired X.509 certificates (Y or N).</p>
-<dt><code>CUPS_GSSSERVICENAME</code></p>
-<dd> The Kerberos service name used for authentication.</p>
-<dt><code>CUPS_SERVER</code></p>
-<dd> The hostname/IP address and port number of the CUPS scheduler (hostname:port or ipaddress:port).</p>
-<dt><code>CUPS_SERVERBIN</code></p>
-<dd> The directory where server helper programs, filters, backend, etc. can be found.</p>
-<dt><code>CUPS_SERVERROOT</code></p>
-<dd> The root directory of the server.</p>
-<dt><code>CUPS_STATEDIR</code></p>
-<dd> The directory where state files can be found.</p>
-<dt><code>CUPS_USER</code></p>
-<dd> Specifies the name of the user for print requests.</p>
-<dt><code>HOME</code></p>
-<dd> Specifies the home directory of the current user.</p>
-<dt><code>IPP_PORT</code></p>
-<dd> Specifies the default port number for IPP requests.</p>
-<dt><code>LOCALEDIR</code></p>
-<dd> Specifies the location of localization files.</p>
-<dt><code>LPDEST</code></p>
-<dd> Specifies the default print queue (System V standard).</p>
-<dt><code>PRINTER</code></p>
-<dd> Specifies the default print queue (Berkeley standard).</p>
-<dt><code>TMPDIR</code></p>
-<dd> Specifies the location of temporary files.</dl>
+<dt><code>CUPS_ANYROOT</code></dt>
+<dd> Whether to allow any X.509 certificate root (Y or N).</dd>
+<dt><code>CUPS_CACHEDIR</code></dt>
+<dd> The directory where semi-persistent cache files can be found.</dd>
+<dt><code>CUPS_DATADIR</code></dt>
+<dd> The directory where data files can be found.</dd>
+<dt><code>CUPS_ENCRYPTION</code></dt>
+<dd> The default level of encryption (Always, IfRequested, Never, Required).</dd>
+<dt><code>CUPS_EXPIREDCERTS</code></dt>
+<dd> Whether to allow expired X.509 certificates (Y or N).</dd>
+<dt><code>CUPS_GSSSERVICENAME</code></dt>
+<dd> The Kerberos service name used for authentication.</dd>
+<dt><code>CUPS_SERVER</code></dt>
+<dd> The hostname/IP address and port number of the CUPS scheduler (hostname:port or ipaddress:port).</dd>
+<dt><code>CUPS_SERVERBIN</code></dt>
+<dd> The directory where server helper programs, filters, backend, etc. can be found.</dd>
+<dt><code>CUPS_SERVERROOT</code></dt>
+<dd> The root directory of the server.</dd>
+<dt><code>CUPS_STATEDIR</code></dt>
+<dd> The directory where state files can be found.</dd>
+<dt><code>CUPS_USER</code></dt>
+<dd> Specifies the name of the user for print requests.</dd>
+<dt><code>HOME</code></dt>
+<dd> Specifies the home directory of the current user.</dd>
+<dt><code>IPP_PORT</code></dt>
+<dd> Specifies the default port number for IPP requests.</dd>
+<dt><code>LOCALEDIR</code></dt>
+<dd> Specifies the location of localization files.</dd>
+<dt><code>LPDEST</code></dt>
+<dd> Specifies the default print queue (System V standard).</dd>
+<dt><code>PRINTER</code></dt>
+<dd> Specifies the default print queue (Berkeley standard).</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> Specifies the location of temporary files.</dd></dl>
 <h2>FILES</h2>
 <pre>
 <i>~/.cups/client.conf</i>

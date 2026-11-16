@@ -52,69 +52,69 @@ description: "QwtTextLabel –"
 <p>Constructs an empty label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h3>QwtTextLabel::QwtTextLabel (const <code>QwtText</code> &amp;text, QWidget *parent = NULL) [explicit]</h3>
 <p>Constructs a label that displays the text, text </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>parent</i> Parent widget<br />
- <i>text</i> Text</dl>
+ <i>text</i> Text</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtTextLabel::heightForWidth (intwidth) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width</dl>
+<dd><i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Preferred height for this widget, given the width.</dl>
+<dd>Preferred height for this widget, given the width.</dd></dl>
 <h3>void QwtTextLabel::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Qt paint event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <p> Reimplemented in <code>QwtLegendLabel</code>.</p>
 <h3>QString QwtTextLabel::plainText () const</h3>
 <p>Interface for the designer plugin </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Text as plain text</dl>
+<dd>Text as plain text</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPlainText()</code>, <code>text()</code></dl>
+<dd><code>setPlainText()</code>, <code>text()</code></dd></dl>
 <h3>void QwtTextLabel::setIndent (intindent)</h3>
 <p>Set label&#8217;s text indent in pixels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>indent</i> Indentation in pixels</dl>
+<dd><i>indent</i> Indentation in pixels</dd></dl>
 <h3>void QwtTextLabel::setMargin (intmargin)</h3>
 <p>Set label&#8217;s margin in pixels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> Margin in pixels</dl>
+<dd><i>margin</i> Margin in pixels</dd></dl>
 <h3>void QwtTextLabel::setPlainText (const QString &amp;text)</h3>
 <p>Interface for the designer plugin &#8211; does the same as <code>setText()</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>plainText()</code></dl>
+<dd><code>plainText()</code></dd></dl>
 <h3>void QwtTextLabel::setText (const QString &amp;text, <code>QwtText::TextFormat</code>textFormat = <code>QwtText::AutoText</code>) [slot]</h3>
 <p>Change the label&#8217;s text, keeping all other <code>QwtText</code> attributes </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>text</i> New text<br />
- <i>textFormat</i> Format of text</dl>
+ <i>textFormat</i> Format of text</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtText</code></dl>
+<dd><code>QwtText</code></dd></dl>
 <h3>void QwtTextLabel::setText (const <code>QwtText</code> &amp;text) [virtual], [slot]</h3>
 <p>Change the label&#8217;s text </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> New text</dl>
+<dd><i>text</i> New text</dd></dl>
 <p> Reimplemented in <code>QwtLegendLabel</code>.</p>
 <h3>QRect QwtTextLabel::textRect () const</h3>
 <p>Calculate geometry for the text in widget coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the text</dl>
+<dd>Geometry for the text</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

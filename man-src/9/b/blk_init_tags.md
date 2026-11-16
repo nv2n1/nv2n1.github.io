@@ -15,11 +15,11 @@ blk_init_tags - initialize the tag info for an external tag map
 <h2>Arguments</h2>
 
 <i>depth</i>
-<dl><dd><dd>the maximum queue depth supported</dl>
+<dl><dd></dd><dd>the maximum queue depth supported</dd></dl>
  
 
  <i>alloc_policy</i>
-<dl><dd>tag allocation policy</dl>
+<dl><dd>tag allocation policy</dd></dl>
 
 <h2>Copyright</h2>
 

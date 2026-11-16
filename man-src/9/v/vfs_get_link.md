@@ -14,10 +14,10 @@ description: "vfs_get_link – get symlink body"
 <p><i>dentry</i></p>
 <dl>
 <dd>
-<dd>dentry on which to get symbolic link</dl>
+</dd><dd>dentry on which to get symbolic link</dd></dl>
 <p> <i>done</i></p>
 <dl>
-<dd>caller needs to free returned data with this</dl>
+<dd>caller needs to free returned data with this</dd></dl>
 <h2>Description</h2>
 <p>Calls security hook and i_op-&gt;<code>get_link</code> on the supplied inode. </p>
 <p> It does not touch atime. That&#8217;s up to the caller if necessary. </p>

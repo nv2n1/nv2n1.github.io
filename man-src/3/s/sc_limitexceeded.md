@@ -11,22 +11,12 @@ description: "sc::LimitExceeded –"
 <p> This is thrown when a limit is exceeded.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scexception.h&gt;</code></pre>
 <p> Inherits <code>sc::SCException</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LimitExceeded (const char *description, const char *file, int line, T lim, T val, const ClassDesc *class_desc=0, const char *exception_type='LimitExceeded')  throw ()
-
-
-
 LimitExceeded (const LimitExceeded &amp;ref)  throw ()
-
-
-
 T tolerance ()  throw ()
-
-
-
 T value ()  throw ()</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class sc::LimitExceeded&lt; T &gt;</h3>

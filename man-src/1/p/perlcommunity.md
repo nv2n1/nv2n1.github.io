@@ -40,25 +40,25 @@ url: "/docs/linux/man/1-perlcommunity/"
  <i>News sites</i>
 <dl>
 <dt>&lt;<a rel="nofollow" HREF="http://perl.com/">http://perl.com/</a>&gt;
-<dd> Originally run by O'Reilly Media (the publisher of the Camel Book, this site provides quality articles mostly about technical details of Perl.
-<dt>&lt;<a rel="nofollow" HREF="http://blogs.perl.org/">http://blogs.perl.org/</a>&gt;
-<dd> Many members of the community have a Perl-related blog on this site. If you'd like to join them, you can sign up for free.
-<dt>&lt;<a rel="nofollow" HREF="http://perlsphere.net/">http://perlsphere.net/</a>&gt;
-<dd> Perlsphere is one of several aggregators of Perl-related blog feeds.
-<dt>&lt;<a rel="nofollow" HREF="http://perlweekly.com/">http://perlweekly.com/</a>&gt;
-<dd> Perl Weekly is a weekly mailing list that keeps you up to date on conferences, releases and notable blog posts.
-<dt>&lt;<a rel="nofollow" HREF="http://use.perl.org/">http://use.perl.org/</a>&gt;
-<dd> use Perl; used to provide a slashdot-style news/blog website covering all things Perl, from minutes of the meetings of the Perl 6 Design team to conference announcements with (ir)relevant discussion. It no longer accepts updates, but you can still use the site to read old entries and comments.</dl>
+</dt><dd> Originally run by O'Reilly Media (the publisher of the Camel Book, this site provides quality articles mostly about technical details of Perl.
+</dd><dt>&lt;<a rel="nofollow" HREF="http://blogs.perl.org/">http://blogs.perl.org/</a>&gt;
+</dt><dd> Many members of the community have a Perl-related blog on this site. If you'd like to join them, you can sign up for free.
+</dd><dt>&lt;<a rel="nofollow" HREF="http://perlsphere.net/">http://perlsphere.net/</a>&gt;
+</dt><dd> Perlsphere is one of several aggregators of Perl-related blog feeds.
+</dd><dt>&lt;<a rel="nofollow" HREF="http://perlweekly.com/">http://perlweekly.com/</a>&gt;
+</dt><dd> Perl Weekly is a weekly mailing list that keeps you up to date on conferences, releases and notable blog posts.
+</dd><dt>&lt;<a rel="nofollow" HREF="http://use.perl.org/">http://use.perl.org/</a>&gt;
+</dt><dd> use Perl; used to provide a slashdot-style news/blog website covering all things Perl, from minutes of the meetings of the Perl 6 Design team to conference announcements with (ir)relevant discussion. It no longer accepts updates, but you can still use the site to read old entries and comments.</dd></dl>
  
 
  <i>Forums</i>
 <dl>
 <dt>&lt;<a rel="nofollow" HREF="http://www.perlmonks.org/">http://www.perlmonks.org/</a>&gt;
-<dd> PerlMonks is one of the largest Perl forums, and describes itself as ``A place for individuals to polish, improve, and showcase their Perl skills.'' and ``A community which allows everyone to grow and learn from each other.''
-<dt>&lt;<a rel="nofollow" HREF="http://stackoverflow.com/">http://stackoverflow.com/</a>&gt;
-<dd> Stack Overflow is a free question-and-answer site for programmers. It's not focussed solely on Perl, but it does have an active group of users who do their best to help people with their Perl programming questions.
-<dt>&lt;<a rel="nofollow" HREF="http://prepan.org/">http://prepan.org/</a>&gt;
-<dd> PrePAN is used as a place to discuss modules that you're considering uploading to the <font SIZE="-1">CPAN.</font> You can get feedback on their design before you upload.</dl>
+</dt><dd> PerlMonks is one of the largest Perl forums, and describes itself as ``A place for individuals to polish, improve, and showcase their Perl skills.'' and ``A community which allows everyone to grow and learn from each other.''
+</dd><dt>&lt;<a rel="nofollow" HREF="http://stackoverflow.com/">http://stackoverflow.com/</a>&gt;
+</dt><dd> Stack Overflow is a free question-and-answer site for programmers. It's not focussed solely on Perl, but it does have an active group of users who do their best to help people with their Perl programming questions.
+</dd><dt>&lt;<a rel="nofollow" HREF="http://prepan.org/">http://prepan.org/</a>&gt;
+</dt><dd> PrePAN is used as a place to discuss modules that you're considering uploading to the <font SIZE="-1">CPAN.</font> You can get feedback on their design before you upload.</dd></dl>
 
 <h3>User Groups</h3>
 
@@ -99,4 +99,4 @@ url: "/docs/linux/man/1-perlcommunity/"
 
 
 <dt><a HREF="#lbAM">AUTHOR</a>
-<dd></dl>
+</dt><dd></dd></dl>

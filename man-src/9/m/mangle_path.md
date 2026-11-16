@@ -15,15 +15,15 @@ mangle_path - mangle and copy path to buffer beginning
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>buffer start</dl>
+<dl><dd></dd><dd>buffer start</dd></dl>
  
 
  <i>p</i>
-<dl><dd>beginning of path in above buffer</dl>
+<dl><dd>beginning of path in above buffer</dd></dl>
  
 
  <i>esc</i>
-<dl><dd>set of characters that need escaping</dl>
+<dl><dd>set of characters that need escaping</dd></dl>
 
 <h2>Description</h2>
 

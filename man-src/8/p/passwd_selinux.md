@@ -104,14 +104,14 @@ description: "passwd_selinux – Security Enhanced Linux Policy for the passwd p
 <p> <code>passwd_exec_t</code> </p>
 <p> &#8211; Set files with the passwd_exec_t type, if you want to transition an executable to the passwd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/chage, /usr/bin/passwd, /usr/sbin/chpasswd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/chage, /usr/bin/passwd, /usr/sbin/chpasswd </dd>
 </dl>
 <p> <code>passwd_file_t</code> </p>
 <p> &#8211; Set files with the passwd_file_t type, if you want to treat the files as passwd content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/group[-+]?, /etc/passwd[-+]?, /etc/passwd.adjunct.*, /etc/ptmptmp, /etc/.pwd.lock, /etc/group.lock, /etc/passwd.OLD, /etc/passwd.lock </p>
+<dt>Paths:</dt>
+<dd>/etc/group[-+]?, /etc/passwd[-+]?, /etc/passwd.adjunct.*, /etc/ptmptmp, /etc/.pwd.lock, /etc/group.lock, /etc/passwd.OLD, /etc/passwd.lock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

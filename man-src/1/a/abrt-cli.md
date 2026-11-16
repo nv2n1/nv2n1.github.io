@@ -36,7 +36,7 @@ url: "/docs/linux/man/1-abrt-cli/"
  -a,--authenticate
 <dl>
 <dt>
-<dd> Enable PolicyKit authentication to be able to work with the system problems</dl>
+</dt><dd> Enable PolicyKit authentication to be able to work with the system problems</dd></dl>
 
 <h2>COMMAND OPTIONS</h2>
 
@@ -45,49 +45,49 @@ url: "/docs/linux/man/1-abrt-cli/"
  -v,--verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -b, --bare
 <dl>
 <dt>
-<dd> Print only the problem count without any message</dl>
+</dt><dd> Print only the problem count without any message</dd></dl>
  
 
  --detailed
 <dl>
 <dt>
-<dd> Show detailed report</dl>
+</dt><dd> Show detailed report</dd></dl>
  
 
  --delete
 <dl>
 <dt>
-<dd> Remove PROBLEM_DIR after reporting</dl>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
  
 
  -n,--not-reported
 <dl>
 <dt>
-<dd> List only not-reported problems</dl>
+</dt><dd> List only not-reported problems</dd></dl>
  
 
  --size SIZE
 <dl>
 <dt>
-<dd> Text larger than SIZE bytes will be shown abridged</dl>
+</dt><dd> Text larger than SIZE bytes will be shown abridged</dd></dl>
  
 
  --since NUM
 <dl>
 <dt>
-<dd> Selects only problems detected after timestamp</dl>
+</dt><dd> Selects only problems detected after timestamp</dd></dl>
  
 
  --until NUM
 <dl>
 <dt>
-<dd> Selects only the problems older than specified timestamp</dl>
+</dt><dd> Selects only the problems older than specified timestamp</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -95,7 +95,7 @@ url: "/docs/linux/man/1-abrt-cli/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

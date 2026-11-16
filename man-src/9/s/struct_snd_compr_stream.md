@@ -25,39 +25,39 @@ struct_snd_compr_stream -
 <h2>Members</h2>
 
 name
-<dl><dd>device name</dl>
+<dl><dd>device name</dd></dl>
  
 
  ops
-<dl><dd>pointer to DSP callbacks</dl>
+<dl><dd>pointer to DSP callbacks</dd></dl>
  
 
  runtime
-<dl><dd>pointer to runtime structure</dl>
+<dl><dd>pointer to runtime structure</dd></dl>
  
 
  device
-<dl><dd>device pointer</dl>
+<dl><dd>device pointer</dd></dl>
  
 
  error_work
-<dl><dd>delayed work used when closing the stream due to an error</dl>
+<dl><dd>delayed work used when closing the stream due to an error</dd></dl>
  
 
  direction
-<dl><dd>stream direction, playback/recording</dl>
+<dl><dd>stream direction, playback/recording</dd></dl>
  
 
  metadata_set
-<dl><dd>metadata set flag, true when set</dl>
+<dl><dd>metadata set flag, true when set</dd></dl>
  
 
  next_track
-<dl><dd>has userspace signal next track transition, true when set</dl>
+<dl><dd>has userspace signal next track transition, true when set</dd></dl>
  
 
  private_data
-<dl><dd>pointer to DSP private data</dl>
+<dl><dd>pointer to DSP private data</dd></dl>
 
 <h2>Copyright</h2>
 

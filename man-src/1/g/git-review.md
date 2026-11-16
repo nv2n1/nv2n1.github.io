@@ -23,57 +23,57 @@ description: "git-review – Submit changes to Gerrit for review"
 <p> <i>change</i> can be <i>changeNumber</i> as obtained using &#8211;<code>&#8211;list</code> option, or it can be <i>changeNumber,patchsetNumber</i> for fetching exact patchset from the change. In that case local branch name will have a -patch[patchsetNumber] suffix. </p>
 <p> The following options are available:</p>
 <dl>
-<dt><code>-d </code><i>change , &#8211;</i><code>-download= </code><i>change</i></p>
-<dd> Download <i>change</i> from Gerrit into a local branch. The branch will be named after the patch author and the name of a topic. If the local branch already exists, it will attempt to update with the latest patchset for this change.</p>
-<dt><code>-x </code><i>change , &#8211;</i><code>-cherrypick= </code><i>change</i></p>
-<dd> Apply <i>change</i> from Gerrit and commit into the current local branch (&quot;cherry pick&quot;). No additional branch is created. </p>
+<dt><code>-d </code><i>change , &#8211;</i><code>-download= </code><i>change</i></dt>
+<dd> Download <i>change</i> from Gerrit into a local branch. The branch will be named after the patch author and the name of a topic. If the local branch already exists, it will attempt to update with the latest patchset for this change.</dd>
+<dt><code>-x </code><i>change , &#8211;</i><code>-cherrypick= </code><i>change</i></dt>
+<dd> Apply <i>change</i> from Gerrit and commit into the current local branch (&quot;cherry pick&quot;). No additional branch is created. </dd>
 <p> This makes it possible to review a change without creating a local branch for it. On the other hand, be aware: if you are not careful, this can easily result in additional patch sets for dependent changes. Also, if the current branch is different enough, the change may not apply at all or produce merge conflicts that need to be resolved by hand.</p>
-<dt><code>-N </code><i>change , &#8211;</i><code>-cherrypickonly= </code><i>change</i></p>
-<dd> Apply <i>change</i> from Gerrit into the current working directory, add it to the staging area (&quot;git index&quot;), but do not commit it. </p>
+<dt><code>-N </code><i>change , &#8211;</i><code>-cherrypickonly= </code><i>change</i></dt>
+<dd> Apply <i>change</i> from Gerrit into the current working directory, add it to the staging area (&quot;git index&quot;), but do not commit it. </dd>
 <p> This makes it possible to review a change without creating a local commit for it. Useful if you want to merge several commits into one that will be submitted for review. </p>
 <p> If the current branch is different enough, the change may not apply at all or produce merge conflicts that need to be resolved by hand.</p>
-<dt><code>-X </code><i>change , &#8211;</i><code>-cherrypickindicate= </code><i>change</i></p>
-<dd> Apply <i>change</i> from Gerrit and commit into the current local branch (&quot;cherry pick&quot;), indicating which commit this change was cherry-picked from. </p>
+<dt><code>-X </code><i>change , &#8211;</i><code>-cherrypickindicate= </code><i>change</i></dt>
+<dd> Apply <i>change</i> from Gerrit and commit into the current local branch (&quot;cherry pick&quot;), indicating which commit this change was cherry-picked from. </dd>
 <p> This makes it possible to re-review a change for a different branch without creating a local branch for it. </p>
 <p> If the current branch is different enough, the change may not apply at all or produce merge conflicts that need to be resolved by hand.</p>
-<dt><code>-m </code><i>change-ps-range , &#8211;</i><code>-compare= </code><i>change-ps-range</i></p>
-<dd> Download the specified patchsets for <i>change</i> from Gerrit, rebase both on master and display differences (git-diff). </p>
+<dt><code>-m </code><i>change-ps-range , &#8211;</i><code>-compare= </code><i>change-ps-range</i></dt>
+<dd> Download the specified patchsets for <i>change</i> from Gerrit, rebase both on master and display differences (git-diff). </dd>
 <p> <i>change-ps-range</i> can be specified as <i>changeNumber, </i><i>oldPatchSetNumber </i>[<i>-newPatchSetNumber</i> ] </p>
 <p> <i>oldPatchSetNumber</i> is mandatory, and if <i>newPatchSetNumber</i> is not specified, the latest patchset will be used. </p>
 <p> This makes it possible to easily compare what has changed from last time you reviewed the proposed change. </p>
 <p> If the master branch is different enough, the rebase can produce merge conflicts. If that happens rebasing will be aborted and diff displayed for not-rebased branches. You can also use <i>&#8211;no-rebase ( -R</i> to always skip rebasing.</p>
-<dt><code>-f , &#8211;finish</code></p>
-<dd> Close down the local branch and switch back to the target branch on successful submission.</p>
-<dt><code>-n , &#8211;dry-run</code></p>
-<dd> Don&#8217;t actually perform any commands that have direct effects. Print them instead.</p>
-<dt><code>-r </code><i>remote , &#8211;</i><code>-remote= </code><i>remote</i></p>
-<dd> Git remote to use for Gerrit.</p>
-<dt><code>-s , &#8211;setup</code></p>
-<dd> Just run the repo setup commands but don&#8217;t submit anything.</p>
-<dt><code>-t </code><i>topic , &#8211;</i><code>-topic= </code><i>topic</i></p>
-<dd> Sets the target topic for this change on the gerrit server. If not specified, a bug number from the commit summary will be used. Alternatively, the local branch name will be used if different from remote branch.</p>
-<dt><code>-u , &#8211;update</code></p>
-<dd> Skip cached local copies and force updates from network resources.</p>
-<dt><code>-l , &#8211;list</code></p>
-<dd> List the available reviews on the gerrit server for this project.</p>
-<dt><code>-y , &#8211;yes</code></p>
-<dd> Indicate that you do, in fact, understand if you are submitting more than one patch.</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Turns on more verbose output.</p>
-<dt><code>-D , &#8211;draft</code></p>
-<dd> Submit review as a draft. Requires Gerrit 2.3 or newer.</p>
-<dt><code>-R , &#8211;no-rebase</code></p>
-<dd> Do not automatically perform a rebase before submitting the change to Gerrit. </p>
+<dt><code>-f , &#8211;finish</code></dt>
+<dd> Close down the local branch and switch back to the target branch on successful submission.</dd>
+<dt><code>-n , &#8211;dry-run</code></dt>
+<dd> Don&#8217;t actually perform any commands that have direct effects. Print them instead.</dd>
+<dt><code>-r </code><i>remote , &#8211;</i><code>-remote= </code><i>remote</i></dt>
+<dd> Git remote to use for Gerrit.</dd>
+<dt><code>-s , &#8211;setup</code></dt>
+<dd> Just run the repo setup commands but don&#8217;t submit anything.</dd>
+<dt><code>-t </code><i>topic , &#8211;</i><code>-topic= </code><i>topic</i></dt>
+<dd> Sets the target topic for this change on the gerrit server. If not specified, a bug number from the commit summary will be used. Alternatively, the local branch name will be used if different from remote branch.</dd>
+<dt><code>-u , &#8211;update</code></dt>
+<dd> Skip cached local copies and force updates from network resources.</dd>
+<dt><code>-l , &#8211;list</code></dt>
+<dd> List the available reviews on the gerrit server for this project.</dd>
+<dt><code>-y , &#8211;yes</code></dt>
+<dd> Indicate that you do, in fact, understand if you are submitting more than one patch.</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Turns on more verbose output.</dd>
+<dt><code>-D , &#8211;draft</code></dt>
+<dd> Submit review as a draft. Requires Gerrit 2.3 or newer.</dd>
+<dt><code>-R , &#8211;no-rebase</code></dt>
+<dd> Do not automatically perform a rebase before submitting the change to Gerrit. </dd>
 <p> When submitting a change for review, you will usually want it to be based on the tip of upstream branch in order to avoid possible conflicts. When amending a change and rebasing the new patchset, the Gerrit web interface will show a difference between the two patchsets which contains all commits in between. This may confuse many reviewers that would expect to see a much simpler difference. </p>
 <p> Also can be used for &#8211;<code>-compare</code> to skip automatic rebase of fetched reviews.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and exit.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and exit.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> This utility can be configured by adding entries to Git configuration. </p>
 <p> The following configuration keys are supported:</p>
 <dl>
-<dt><code>gitreview.username</code></p>
-<dd> Default username used to access the repository. If not specified in the Git configuration, Git remote or .gitreview file, the user will be prompted to specify the username. </p>
+<dt><code>gitreview.username</code></dt>
+<dd> Default username used to access the repository. If not specified in the Git configuration, Git remote or .gitreview file, the user will be prompted to specify the username. </dd>
 <p> Example entry in the .gitconfig file: </p>
 <blockquote>
 <pre>
@@ -81,14 +81,14 @@ description: "git-review – Submit changes to Gerrit for review"
 username=<i>mygerrituser</i>
 </pre>
 </blockquote>
-<dt><code>gitreview.rebase</code></p>
-<dd> This setting determines whether changes submitted will be rebased to the newest state of the branch. </p>
+<dt><code>gitreview.rebase</code></dt>
+<dd> This setting determines whether changes submitted will be rebased to the newest state of the branch. </dd>
 <p> A value of &#8216;true&#8217; or &#8216;false&#8217; should be specified.</p>
 <dl>
-<dt><code>false</code></p>
-<dd> Do not rebase changes on submit &#8211; equivalent to setting &#8211;<code>R</code> when submitting changes.</p>
-<dt><code>true</code></p>
-<dd> Do rebase changes on submit. This is the default value unless overridden by .gitreview file.</dl>
+<dt><code>false</code></dt>
+<dd> Do not rebase changes on submit &#8211; equivalent to setting &#8211;<code>R</code> when submitting changes.</dd>
+<dt><code>true</code></dt>
+<dd> Do rebase changes on submit. This is the default value unless overridden by .gitreview file.</dd></dl>
 <p> This setting takes precedence over repository-specific configuration in the .gitreview file.</dl>
 <h2>FILES</h2>
 <p> To use with your project, it is recommended that you create a file at the root of the repository named .gitreview and place information about your gerrit installation in it. The format is similar to the Windows .ini file format: </p>
@@ -117,38 +117,38 @@ defaultrebase=0
 <h2>DIAGNOSTICS</h2>
 <p> Normally, exit status is 0 if executed successfully. Exit status 1 indicates general error, sometimes more specific error codes are available:</p>
 <dl>
-<dt><code>2</code></p>
-<dd> Gerrit <i>commit-msg</i> hook could not be successfully installed.</p>
-<dt><code>32</code></p>
-<dd> Cannot fetch list of open changesets from Gerrit.</p>
-<dt><code>33</code></p>
-<dd> Cannot parse list of open changesets received from Gerrit.</p>
-<dt><code>34</code></p>
-<dd> Cannot query information about changesets.</p>
-<dt><code>35</code></p>
-<dd> Cannot fetch information about the changeset to be downloaded.</p>
-<dt><code>36</code></p>
-<dd> Changeset not found.</p>
-<dt><code>37</code></p>
-<dd> Particular patchset cannot be fetched from the remote git repository.</p>
-<dt><code>38</code></p>
-<dd> Specified patchset number not found in the changeset.</p>
-<dt><code>39</code></p>
-<dd> Invalid patchsets for comparison.</p>
-<dt><code>64</code></p>
-<dd> Cannot checkout downloaded patchset into the new branch.</p>
-<dt><code>65</code></p>
-<dd> Cannot checkout downloaded patchset into existing branch.</p>
-<dt><code>66</code></p>
-<dd> Cannot hard reset working directory and git index after download.</p>
-<dt><code>67</code></p>
-<dd> Cannot switch to some other branch when trying to finish the current branch.</p>
-<dt><code>68</code></p>
-<dd> Cannot delete current branch.</p>
-<dt><code>69</code></p>
-<dd> Requested patchset cannot be fully applied to the current branch. This exit status will be returned when there are merge conflicts with the current branch. Possible reasons include an attempt to apply patchset from the different branch or code. This exit status will also be returned if the patchset is already applied to the current branch.</p>
-<dt><code>70</code></p>
-<dd> Cannot determine top level Git directory or .git subdirectory path.</dl>
+<dt><code>2</code></dt>
+<dd> Gerrit <i>commit-msg</i> hook could not be successfully installed.</dd>
+<dt><code>32</code></dt>
+<dd> Cannot fetch list of open changesets from Gerrit.</dd>
+<dt><code>33</code></dt>
+<dd> Cannot parse list of open changesets received from Gerrit.</dd>
+<dt><code>34</code></dt>
+<dd> Cannot query information about changesets.</dd>
+<dt><code>35</code></dt>
+<dd> Cannot fetch information about the changeset to be downloaded.</dd>
+<dt><code>36</code></dt>
+<dd> Changeset not found.</dd>
+<dt><code>37</code></dt>
+<dd> Particular patchset cannot be fetched from the remote git repository.</dd>
+<dt><code>38</code></dt>
+<dd> Specified patchset number not found in the changeset.</dd>
+<dt><code>39</code></dt>
+<dd> Invalid patchsets for comparison.</dd>
+<dt><code>64</code></dt>
+<dd> Cannot checkout downloaded patchset into the new branch.</dd>
+<dt><code>65</code></dt>
+<dd> Cannot checkout downloaded patchset into existing branch.</dd>
+<dt><code>66</code></dt>
+<dd> Cannot hard reset working directory and git index after download.</dd>
+<dt><code>67</code></dt>
+<dd> Cannot switch to some other branch when trying to finish the current branch.</dd>
+<dt><code>68</code></dt>
+<dd> Cannot delete current branch.</dd>
+<dt><code>69</code></dt>
+<dd> Requested patchset cannot be fully applied to the current branch. This exit status will be returned when there are merge conflicts with the current branch. Possible reasons include an attempt to apply patchset from the different branch or code. This exit status will also be returned if the patchset is already applied to the current branch.</dd>
+<dt><code>70</code></dt>
+<dd> Cannot determine top level Git directory or .git subdirectory path.</dd></dl>
 <p> Exit status larger than 31 indicates problem with communication with Gerrit or remote Git repository, exit status larger than 63 means there was a problem with a local repository or a working copy. </p>
 <p> Exit status larger than or equal to 128 means internal error in running the &quot;git&quot; command. </p>
 <h2>EXAMPLES</h2>

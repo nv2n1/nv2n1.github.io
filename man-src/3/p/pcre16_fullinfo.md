@@ -12,10 +12,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <pre><code>#include &lt;pcre.h&gt;
 int pcre_fullinfo(const pcre *code, const pcre_extra *extra,
                   int what, void *where);
-
 int pcre16_fullinfo(const pcre16 *code, const pcre16_extra *extra,
                     int what, void *where);
-
 int pcre32_fullinfo(const pcre32 *code, const pcre32_extra *extra,
                     int what, void *where);</code></pre>
 <h2>Description</h2>

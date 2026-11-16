@@ -16,20 +16,20 @@ description: "nodm – X display manager for automatic logins"
 <p> However, there are cases where automatic login is needed: for example in an embedded system such as a mobile phone, or in a kiosk setup, or in a control panel for industrial machinery. For those cases, <code>nodm</code> is simple to setup, lightweight, and it should do exactly the right thing.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>print this help message</p>
-<dt><code>&#8211;version</code></p>
-<dd>print nodm&#8217;s version number</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>verbose outpout or logging</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>only log warnings and errors</p>
-<dt><code>&#8211;nested</code></p>
-<dd>run a nested X server, does not require root. The server defaults to &quot;/usr/bin/Xnest :1&quot;, override with NODM_X_OPTIONS</p>
-<dt><code>&#8211;[no-]syslog</code></p>
-<dd>enable/disable logging to syslog</p>
-<dt><code>&#8211;[no-]stderr</code></p>
-<dd>enable/disable logging to stderr</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>print this help message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print nodm&#8217;s version number</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>verbose outpout or logging</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>only log warnings and errors</dd>
+<dt><code>&#8211;nested</code></dt>
+<dd>run a nested X server, does not require root. The server defaults to &quot;/usr/bin/Xnest :1&quot;, override with NODM_X_OPTIONS</dd>
+<dt><code>&#8211;[no-]syslog</code></dt>
+<dd>enable/disable logging to syslog</dd>
+<dt><code>&#8211;[no-]stderr</code></dt>
+<dd>enable/disable logging to stderr</dd></dl>
 <h2>Author</h2>
 <p><code>nodm</code> is written and maintained by Enrico Zini &lt;enrico [at] enricozini.org&gt; and Joachim Breitner &lt;nomeata [at] debian.org&gt;.</p>
 <h2>See Also</h2>

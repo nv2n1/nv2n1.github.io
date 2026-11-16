@@ -12,7 +12,6 @@ std::char_traits&lt;CharT&gt;::length - std::char_traits&lt;CharT&gt;::length
 
 <pre><code>static std::size_t length(const char_type *s);
 (until C++ 17)
-
     static constexpr std::size_t length(const char_type *s);
 (since C++ 17)</code></pre> 
 Returns the length of the character sequence pointed to by s, that is, the position of the terminating null character (CharT()). 
@@ -37,13 +36,11 @@ Linear.
 
 // Run this code <pre><code>#include &lt;iostream&gt;
 void print(const char *str)
-
 {
     std::cout &lt;&lt; &quot;string '&quot; &lt;&lt; str &lt;&lt; &quot;' &quot;;
     std::cout &lt;&lt; &quot;length = &quot; &lt;&lt; std::char_traits&lt;char&gt;::length(str) &lt;&lt; '\n';
 }
 int main()
-
 {
     print(&quot;foo&quot;);
     std::string s(&quot;booo&quot;);

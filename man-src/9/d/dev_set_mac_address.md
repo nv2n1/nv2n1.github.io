@@ -15,11 +15,11 @@ dev_set_mac_address - Change Media Access Control Address
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>sa</i>
-<dl><dd>new address</dl>
+<dl><dd>new address</dd></dl>
 
 <h2>Description</h2>
 

@@ -22,10 +22,10 @@ description: "pam_set_items – A PAM test module to set module-specific PAM ite
 <dd>
 <pre>auth required pam_set_items.so
 auth required pam_unix.so</pre>
-</dl>
+</dd></dl>
 <p> Then the test would put the item to the test environment with:</p>
 <dl>
 <dd>
 <pre>setenv(&quot;PAM_AUTHTOK&quot;, &quot;secret&quot;);</pre>
-</dl>
+</dd></dl>
 <p> Then run the PAM conversation. </p>

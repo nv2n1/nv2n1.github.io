@@ -16,10 +16,10 @@ description: "obenergy – calculate the energy for a molecule"
 <h2>OPTIONS</h2>
 <p> If no filename is given, obenergy will give all options including the available forcefields.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose: print out all individual energy interactions</p>
-<dt><code>-ff </code><i>forcefield</i></p>
-<dd> Select the forcefield</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose: print out all individual energy interactions</dd>
+<dt><code>-ff </code><i>forcefield</i></dt>
+<dd> Select the forcefield</dd></dl>
 <h2>EXAMPLES</h2>
 <p> View the possible options, including available forcefields: </p>
 <blockquote><p><tt>&quot;obenergy&quot;</tt></p></blockquote>

@@ -15,26 +15,26 @@ description: "ipmiping – send IPMI Get Authentication Capabilitiy request to n
 <h2>Options</h2>
 <p>The following options are available</p>
 <dl>
-<dt><code>-h</code></p>
-<dd>Output help menu.</p>
-<dt><code>-V</code></p>
-<dd>Output version.</p>
-<dt><code>-c</code> <i>count</i></p>
-<dd>Stop after sending <i>count</i> packets.</p>
-<dt><code>-i</code> <i>interval</i></p>
-<dd>Wait <i>interval</i> seconds between sending each packet. The default is to wait for one second between each packet.</p>
-<dt><code>-I</code> <i>interface address</i></p>
-<dd>Set source address to specified interface address. Argument may be numeric IP address or name of device.</p>
-<dt><code>-t</code> <i>timeout</i></p>
-<dd>Time to wait for a response, in seconds. Default is five seconds.</p>
-<dt><code>-v</code></p>
-<dd>Verbose output.</p>
-<dt><code>-s</code> <i>num</i></p>
-<dd>Specify an initial starting sequence number. The default is to use a random initial sequence number.</p>
-<dt><code>-d</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-r</code> <i>version</i></p>
-<dd>Specify IPMI version. Available options are &quot;1.5&quot; and &quot;2.0&quot;. Default is to use &quot;1.5&quot;. Note that packets will always be sent with the IPMI 1.5 protocol, but IPMI 1.5 vs IPMI 2.0 relevant fields will be communicated in the Get Channel Authentication Capabilities datagram depending on user choice.</dl>
+<dt><code>-h</code></dt>
+<dd>Output help menu.</dd>
+<dt><code>-V</code></dt>
+<dd>Output version.</dd>
+<dt><code>-c</code> <i>count</i></dt>
+<dd>Stop after sending <i>count</i> packets.</dd>
+<dt><code>-i</code> <i>interval</i></dt>
+<dd>Wait <i>interval</i> seconds between sending each packet. The default is to wait for one second between each packet.</dd>
+<dt><code>-I</code> <i>interface address</i></dt>
+<dd>Set source address to specified interface address. Argument may be numeric IP address or name of device.</dd>
+<dt><code>-t</code> <i>timeout</i></dt>
+<dd>Time to wait for a response, in seconds. Default is five seconds.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output.</dd>
+<dt><code>-s</code> <i>num</i></dt>
+<dd>Specify an initial starting sequence number. The default is to use a random initial sequence number.</dd>
+<dt><code>-d</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-r</code> <i>version</i></dt>
+<dd>Specify IPMI version. Available options are &quot;1.5&quot; and &quot;2.0&quot;. Default is to use &quot;1.5&quot;. Note that packets will always be sent with the IPMI 1.5 protocol, but IPMI 1.5 vs IPMI 2.0 relevant fields will be communicated in the Get Channel Authentication Capabilities datagram depending on user choice.</dd></dl>
 <h2>Known Issues</h2>
 <p>It has been observed that some remote BMCs can get &quot;confused&quot; and delay packet responses if duplicate packets (with duplicate sequence numbers) are sent in succession very quickly. There is no known way to cleanly deal with a &quot;confused&quot; BMC other than the wait awhile. </p>
 <p> Unlike <code><a href="/docs/linux/man/8-ping/">ping</a>(8),</code> local network devicess (e.g. 127.0.0.1) cannot be &quot;pinged&quot;.</p>

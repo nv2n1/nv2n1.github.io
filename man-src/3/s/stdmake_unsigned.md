@@ -11,10 +11,8 @@ std::make_unsigned - std::make_unsigned
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct make_unsigned;</code></pre> 
 If T is an integral (except bool) or enumeration type, provides the member typedef type which is the unsigned integer type corresponding to T, with the same cv-qualifiers. The unsigned integer type corresponding to an enumeration type is the unsigned integer type with the smallest rank having the same sizeof as the enumeration. 
 Otherwise, the behavior is undefined. 
@@ -32,7 +30,6 @@ using make_unsigned_t = typename make_unsigned&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

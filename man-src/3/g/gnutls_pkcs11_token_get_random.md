@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_token_get_random – API function"
 <p> <code>int gnutls_pkcs11_token_get_random(const char * </code><i>token_url</i><code>, void * </code><i>rnddata</i><code>, size_t </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * token_url</p>
-<dd> A PKCS <code>11</code> URL specifying a token</p>
-<dt>void * rnddata</p>
-<dd> A pointer to the memory area to be filled with random data</p>
-<dt>size_t len</p>
-<dd> The number of bytes of randomness to request</dl>
+<dt>const char * token_url</dt>
+<dd> A PKCS <code>11</code> URL specifying a token</dd>
+<dt>void * rnddata</dt>
+<dd> A pointer to the memory area to be filled with random data</dd>
+<dt>size_t len</dt>
+<dd> The number of bytes of randomness to request</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will get random data from the given token. It will store rnddata and fill the memory pointed to by rnddata with len random bytes from the token.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_pkcs11_token_get_random – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

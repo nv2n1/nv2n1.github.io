@@ -19,17 +19,17 @@ description: "yadifad – an authoritative Internet domain name server."
 <p> yadifad<br />
  knows the main DNS protocols: </p>
 <dl>
-<dt><code>*</code></p>
-<dd>AXFR </p>
-<dt><code>*</code></p>
-<dd>IXFR </p>
-<dt><code>*</code></p>
-<dd>DNSSEC </p>
-<dt><code>*</code></p>
-<dd>DNS Update </p>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
+<dd>AXFR </dd>
+<dt><code>*</code></dt>
+<dd>IXFR </dd>
+<dt><code>*</code></dt>
+<dd>DNSSEC </dd>
+<dt><code>*</code></dt>
+<dd>DNS Update </dd>
+<dt><code>*</code></dt>
 <dd>NOTIFY
-</dl>
+</dd></dl>
 <p> yadifad<br />
  works only with 1 CLASS:</p>
 <pre><br>
@@ -71,44 +71,44 @@ OPT 41 6891<br>
 <br></pre>
 <h2>Options</h2>
 <dl>
-<dt>[<code>&#8211;config|-c</code><i> configfile</i>]</p>
+<dt>[<code>&#8211;config|-c</code><i> configfile</i>]</dt>
 <dd>
-<dt>[<code>&#8211;daemon|-d</code>]</p>
+</dd><dt>[<code>&#8211;daemon|-d</code>]</dt>
 <dd>
-<dt>[<code>&#8211;uid|-u</code><i> uid</i>]</p>
+</dd><dt>[<code>&#8211;uid|-u</code><i> uid</i>]</dt>
 <dd>
-<dt>[<code>&#8211;gid|-g</code><i> gid</i>]</p>
-<dd></dl>
+</dd><dt>[<code>&#8211;gid|-g</code><i> gid</i>]</dt>
+<dd></dd></dl>
 <dl>
-<dt>[<code>-V</code>]</p>
+<dt>[<code>-V</code>]</dt>
 <dd>
-<dt>[<code>&#8211;help|-h</code>]</p>
-<dd></dl>
+</dd><dt>[<code>&#8211;help|-h</code>]</dt>
+<dd></dd></dl>
 <h2>Signals</h2>
 <dl>
-<dt>SIGHUP</p>
-<dd>reloads the zone and key sections in the configuration file and reloads the zone file(s) with incremented serial number, and close all log files and reopens them. </p>
-<dt>SIGINT</p>
-<dd>shuts down the server </p>
-<dt>SIGTERM</p>
+<dt>SIGHUP</dt>
+<dd>reloads the zone and key sections in the configuration file and reloads the zone file(s) with incremented serial number, and close all log files and reopens them. </dd>
+<dt>SIGINT</dt>
+<dd>shuts down the server </dd>
+<dt>SIGTERM</dt>
 <dd>(see SIGINT)
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>yadifad.conf</p>
-<dd>configuration file. </p>
-<dt>yadifad</p>
+<dt>yadifad.conf</dt>
+<dd>configuration file. </dd>
+<dt>yadifad</dt>
 <dd>
-<dt>yadifad.8</p>
+</dd><dt>yadifad.8</dt>
 <dd>
-<dt>yadifad.conf.5</p>
-<dd></dl>
+</dd><dt>yadifad.conf.5</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p> <i><a href="/docs/linux/man/5-yadifad-conf/">yadifad.conf</a></i>(5)</p>
 <h2>Requirements</h2>
 <dl>
-<dt>OpenSSL</p>
-<dd></center> yadifad requires OpenSSL version 0.9.8 or later.</dl>
+<dt>OpenSSL</dt>
+<dd></center> yadifad requires OpenSSL version 0.9.8 or later.</dd></dl>
 <h2>Changes</h2>
 <p>Please check the README file from the source code.</p>
 <h2>Version</h2>
@@ -116,24 +116,24 @@ OPT 41 6891<br>
 <h2>Mailing Lists</h2>
 <p>There is a mailinglist for questions relating to any program in the yadifa package: </p>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br />
- for submitting questions/answers.</dl>
+ for submitting questions/answers.</dd></dl>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br />
- for subscription requests.</dl>
+ for subscription requests.</dd></dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to via:</p>
 <dl>
-<dt><code>*</code></p>
-<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-announcements">http://www.yadifa.eu/mailing-list-announcements</a></code></dl>
+<dt><code>*</code></dt>
+<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-announcements">http://www.yadifa.eu/mailing-list-announcements</a></code></dd></dl>
 <p> (this is a read-only list).</p>
 <h2>License And Copyright</h2>
 <dl>
-<dt>Copyright</p>
+<dt>Copyright</dt>
 <dd>(C) 2011-2016, EURid vzw/asbl<br />
  B-1831 Diegem, Belgium<br />
- <code>info [at] yadifa.eu</code></dl>
+ <code>info [at] yadifa.eu</code></dd></dl>
 <h2>Authors</h2>
 <p>Gery Van Emelen<br />
  Email: <code>Gery.VanEmelen [at] EURid.eu</code><br />

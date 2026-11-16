@@ -20,18 +20,18 @@ description: "setmetamode – define the keyboard meta key handling"
  done</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>esc</code>, <code>prefix</code>, <code>escprefix</code></p>
-<dd> The Meta key sends an Escape prefix.</p>
-<dt><code>meta</code>, <code>bit</code>, <code>metabit</code></p>
-<dd> The Meta key sets the high order bit of the character.</dl>
+<dt><code>esc</code>, <code>prefix</code>, <code>escprefix</code></dt>
+<dd> The Meta key sends an Escape prefix.</dd>
+<dt><code>meta</code>, <code>bit</code>, <code>metabit</code></dt>
+<dd> The Meta key sets the high order bit of the character.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code>, <code>&#8211;console</code>=<i>,DEV/</i></p>
-<dd> the console device to be used;</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number;</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this usage message.</dl>
+<dt><code>-C</code>, <code>&#8211;console</code>=<i>,DEV/</i></dt>
+<dd> the console device to be used;</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number;</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this usage message.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-kbdinfo/">kbdinfo</a></code>(1) </p>
 <h2>Index</h2>

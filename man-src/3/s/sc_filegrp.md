@@ -11,213 +11,75 @@ description: "sc::FileGrp –"
 <p> The <code>FileGrp</code> abstract class provides a way of accessing distributed file in a parallel machine.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;file.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::ProcFileGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>FileGrp (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void open ()
-
-
 Opens the files.
-
-
 void close ()
-
-
 Closes the files.
-
-
 void set_filename (char *name)
-
-
 Sets the filename for the FileGrp.
-
-
 const char * get_filename () const
-
-
 Returns the filename for the FileGrp.
-
-
 int me () const
-
-
 Returns who I am.
-
-
 int n () const
-
-
 Returns how many nodes there are.
-
-
 virtual void set_localsize (size_t)=0
-
-
 Set the size of locally held data.
-
-
 size_t localsize ()
-
-
 Returns the amount of data residing locally on me().
-
-
 distsize_t localoffset ()
-
-
 Returns the global offset to this node's data.
-
-
 int size (int node)
-
-
 Returns the amount of data residing on node.
-
-
 distsize_t offset (int node)
-
-
 Returns the global offset to node's data.
-
-
 distsize_t totalsize ()
-
-
 Returns the sum of all data allocated on all nodes.
-
-
 virtual void activate ()
-
-
 Activate is called before the data is to be used.
-
-
 virtual void deactivate ()
-
-
 Deactivate is called after the data has been used.
-
-
 virtual void * obtain_writeonly (distsize_t offset, int size)=0
-
-
 This gives write access to the data location. No locking is done.
-
-
 virtual void * obtain_readwrite (distsize_t offset, int size)=0
-
-
 Only one thread can have an unreleased obtain_readwrite at a time.
-
-
 virtual void * obtain_readonly (distsize_t offset, int size)=0
-
-
 This gives read access to the file location. No locking is done.
-
-
 virtual void release_readonly (void *data, distsize_t offset, int size)=0
-
-
 This is called when read access is no longer needed.
-
-
 virtual void release_writeonly (void *data, distsize_t offset, int size)=0
-
-
 This is called when write access is no longer needed.
-
-
 virtual void release_readwrite (void *data, distsize_t offset, int size)=0
-
-
 This is called when read/write access is no longer needed.
-
-
 virtual void sum_reduction (double *data, distsize_t doffset, int dsize)
-
-
-
 virtual void sum_reduction_on_node (double *data, size_t doffset, int dsize, int node=-1)
-
-
-
 virtual void sync ()=0
-
-
 Synchronizes all the nodes.
-
-
 virtual void catchup ()
-
-
 Processes outstanding requests.
-
-
 virtual void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Prints out information about the object.
-
-
 virtual FileGrp * clone ()=0
-
-
 Clones the given FileGrp. The new FileGrp may need to be initialized additionally.
-
-
-
 Static Public Member Functions
 static FileGrp * initial_filegrp (int &amp;argc, char **argv)
-
-
 Create a file group.
-
-
 static FileGrp * initial_filegrp ()
-
-
-
 static void set_default_filegrp (const Ref&lt; FileGrp &gt; &amp;)
-
-
 The default file group contains the primary file group to be used by an application.
-
-
 static FileGrp * get_default_filegrp ()
-
-
 Returns the default file group.
-
-
-
 Protected Member Functions
 void obtain_local_lock (size_t start, size_t fence)
-
-
-
 void release_local_lock (size_t start, size_t fence)
-
-
-
 Protected Attributes
 int me_
-
-
-
 int n_
-
-
-
 distsize_t * offsets_
-
-
-
 int debug_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>FileGrp</code> abstract class provides a way of accessing distributed file in a parallel machine. </p>

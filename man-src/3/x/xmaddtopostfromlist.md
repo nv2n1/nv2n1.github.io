@@ -19,10 +19,10 @@ description: "XmAddToPostFromList — a RowColumn function that makes a menu acc
 <p> If <i>menu</i> refers to a Pulldown menu, its ID is placed in the <code>XmNsubMenuId</code> resource of the specified <i>post_from_widget</i>. In this case, the <i>post_from_widget</i> widget must be either a CascadeButton or a CascadeButtonGadget. </p>
 <p> Note that this function manipulates the internal structures themselves, not a copy of them.</p>
 <dl COMPACT>
-<dt><i>menu</i></p>
-<dd>Specifies the ID of the RowColumn widget containing the menu (Popup or Pulldown) to be made accessible from the widget.</p>
-<dt><i>post_from_widget</i></p>
-<dd>Specifies the widget ID of the widget which will now be able to post the menu specified by <i>menu</i>.</dl>
+<dt><i>menu</i></dt>
+<dd>Specifies the ID of the RowColumn widget containing the menu (Popup or Pulldown) to be made accessible from the widget.</dd>
+<dt><i>post_from_widget</i></dt>
+<dd>Specifies the widget ID of the widget which will now be able to post the menu specified by <i>menu</i>.</dd></dl>
 <p> For a complete definition of RowColumn and its associated resources, see <code><a href="/docs/linux/man/3-xmrowcolumn/">XmRowColumn</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmgetpostedfromwidget/">XmGetPostedFromWidget</a></code>(3), <code><a href="/docs/linux/man/3-xmremovefrompostfromlist/">XmRemoveFromPostFromList</a></code>(3), and <code><a href="/docs/linux/man/3-xmrowcolumn/">XmRowColumn</a></code>(3).</p>

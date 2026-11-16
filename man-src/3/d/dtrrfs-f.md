@@ -24,10 +24,10 @@ description: "dtrrfs.f –"
  The solution matrix X must be computed by DTRTRS or some other
  means before entering this routine. DTRRFS does not do iterative
  refinement because doing so cannot improve the backward error.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': A is upper triangular;
  = 'L': A is lower triangular.</pre>
@@ -99,13 +99,13 @@ description: "dtrrfs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 182 of file dtrrfs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

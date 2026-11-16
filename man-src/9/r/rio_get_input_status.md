@@ -14,15 +14,15 @@ description: "rio_get_input_status – Sends a Link-Request/Input-Status control
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO devive to issue Input-status command</dl>
+</dd><dd>RIO devive to issue Input-status command</dd></dl>
 <p> <i>pnum</i></p>
 <dl>
-<dd>Device port number to issue the command</dl>
+<dd>Device port number to issue the command</dd></dl>
 <p> <i>lnkresp</i></p>
 <dl>
-<dd>Response from a link partner</dl>
+<dd>Response from a link partner</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

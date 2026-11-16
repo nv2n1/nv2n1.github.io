@@ -21,193 +21,53 @@ description: "std::tr2::dynamic_bitset< _WordT, _Alloc > –"
 <p> typedef size_t <code>size_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>dynamic_bitset (size_type __nbits, unsigned long long __val=0ULL, const allocator_type &amp;__alloc=allocator_type())
-
-
-
 dynamic_bitset (initializer_list&lt; block_type &gt; __il, const allocator_type &amp;__alloc=allocator_type())
-
-
-
 template&lt;typename _CharT , typename _Traits , typename _Alloc1 &gt; dynamic_bitset (const std::basic_string&lt; _CharT, _Traits, _Alloc1 &gt; &amp;__str, typename basic_string&lt; _CharT, _Traits, _Alloc1 &gt;::size_type __pos=0, typename basic_string&lt; _CharT, _Traits, _Alloc1 &gt;::size_type __n=std::basic_string&lt; _CharT, _Traits, _Alloc1 &gt;::npos, _CharT __zero=_CharT('0'), _CharT __one=_CharT('1'), const allocator_type &amp;__alloc=allocator_type())
-
-
-
 dynamic_bitset (const char *__str, const allocator_type &amp;__alloc=allocator_type())
-
-
-
 dynamic_bitset (const dynamic_bitset &amp;__b)
-
-
-
 dynamic_bitset (dynamic_bitset &amp;&amp;__b)
-
-
-
 template&lt;typename _CharT , typename _Traits &gt; void _M_copy_from_ptr (const _CharT *, size_t, size_t, size_t, _CharT, _CharT)
-
-
-
 template&lt;typename _CharT , typename _Traits , typename _Alloc1 &gt; void _M_copy_from_string (const std::basic_string&lt; _CharT, _Traits, _Alloc1 &gt; &amp;__str, size_t __pos, size_t __n, _CharT __zero=_CharT('0'), _CharT __one=_CharT('1'))
-
-
-
 template&lt;typename _CharT , typename _Traits , typename _Alloc1 &gt; void _M_copy_to_string (std::basic_string&lt; _CharT, _Traits, _Alloc1 &gt; &amp;__str, _CharT __zero=_CharT('0'), _CharT __one=_CharT('1')) const
-
-
-
 _M_Nb (0)
-
-
-
 bool all () const
-
-
-
 bool any () const
-
-
-
 void append (block_type __block)
-
-
-
 void append (initializer_list&lt; block_type &gt; __il)
-
-
-
 template&lt;typename _BlockInputIterator &gt; void append (_BlockInputIterator __first, _BlockInputIterator __last)
-
-
-
 void clear ()
-
-
-
 size_type count () const noexcept
-
-
-
 bool empty () const noexcept
-
-
-
 size_type find_first () const
-
-
-
 size_type find_next (size_t __prev) const
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; flip ()
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; flip (size_type __pos)
-
-
-
 allocator_type get_allocator () const
-
-
-
 bool is_proper_subset_of (const dynamic_bitset &amp;__b) const
-
-
-
 bool is_subset_of (const dynamic_bitset &amp;__b) const
-
-
-
 constexpr size_type max_size () noexcept
-
-
-
 bool none () const
-
-
-
 size_type num_blocks () const noexcept
-
-
-
 dynamic_bitset &amp; operator= (const dynamic_bitset &amp;__b)
-
-
-
 dynamic_bitset &amp; operator= (dynamic_bitset &amp;&amp;__b)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; operator~ () const
-
-
-
 void push_back (bool __bit)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; reset ()
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; reset (size_type __pos)
-
-
-
 void resize (size_type __nbits, bool __value=false)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; set ()
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; set (size_type __pos, bool __val=true)
-
-
-
 size_type size () const noexcept
-
-
-
 void swap (dynamic_bitset &amp;__b)
-
-
-
 bool test (size_type __pos) const
-
-
-
 template&lt;typename _CharT  = char, typename _Traits  = std::char_traits&lt;_CharT&gt;, typename _Alloc1  = std::allocator&lt;_CharT&gt;&gt; std::basic_string&lt; _CharT,
-
-
 _Traits, _Alloc1 &gt; to_string (_CharT __zero=_CharT('0'), _CharT __one=_CharT('1')) const &quot;
-
-
 unsigned long long to_ullong () const
-
-
-
 unsigned long to_ulong () const
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator&amp;= (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__rhs)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator&amp;= (dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;&amp;__rhs)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator|= (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__rhs)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator^= (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__rhs)
-
-
-
 dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator-= (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__rhs)
 </code></pre>
 <p> <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp; <code>operator&lt;&lt;=</code> (size_type __pos) </p>
@@ -263,9 +123,6 @@ static block_type _S_maskbit (size_type __pos) noexcept</p>
  allocator_type &gt; <code>_M_w</code>&quot;</p>
 <h3>Static Private Attributes</h3>
 <pre><code>static const size_type _S_bits_per_block
-
-
-
 Friends</code></pre>
 <p> class <code>reference</code></p>
 <h2>Detailed Description</h2>
@@ -310,21 +167,21 @@ Friends</code></pre>
 <dl>
 <dd><i>__str</i> A string of &#8216;0&#8217; and &#8216;1&#8217; characters.<br />
  <i>__pos</i> Index of the first character in __str to use.<br />
- <i>__n</i> The number of characters to copy.</dl>
+ <i>__n</i> The number of characters to copy.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
 <dd><i>std::out_of_range</i> If __pos is bigger the size of __str.<br />
- <i>std::invalid_argument</i> If a character appears in the string which is neither &#8216;0&#8217; nor &#8216;1&#8217;.</dl>
+ <i>std::invalid_argument</i> If a character appears in the string which is neither &#8216;0&#8217; nor &#8216;1&#8217;.</dd></dl>
 <p> Definition at line 749 of file dynamic_bitset. </p>
 <p> References std::tr2::dynamic_bitset&lt; _WordT, _Alloc &gt;::resize(), and std::basic_string&lt; _CharT, _Traits, _Alloc &gt;::size().</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::<code>dynamic_bitset</code> (const char *__str, const allocator_type &amp;__alloc = allocator_type()) [inline], [explicit]</h3>
 <p>Construct from a string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__str</i> A string of &#8216;0&#8217; and &#8216;1&#8217; characters.</dl>
+<dd><i>__str</i> A string of &#8216;0&#8217; and &#8216;1&#8217; characters.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::invalid_argument</i> If a character appears in the string which is neither &#8216;0&#8217; nor &#8216;1&#8217;.</dl>
+<dd><i>std::invalid_argument</i> If a character appears in the string which is neither &#8216;0&#8217; nor &#8216;1&#8217;.</dd></dl>
 <p> Definition at line 777 of file dynamic_bitset. </p>
 <p> References std::tr2::dynamic_bitset&lt; _WordT, _Alloc &gt;::resize().</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::<code>dynamic_bitset</code> (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__b) [inline]</h3>
@@ -338,13 +195,13 @@ Friends</code></pre>
 <p>Tests whether all the bits are on. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if all the bits are set.</dl>
+<dd>True if all the bits are set.</dd></dl>
 <p> Definition at line 1187 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; bool <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::any () const [inline]</h3>
 <p>Tests whether any of the bits are on. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if at least one bit is set.</dl>
+<dd>True if at least one bit is set.</dd></dl>
 <p> Definition at line 1195 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; void <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::append (block_type__block) [inline]</h3>
 <p>Append a block. </p>
@@ -367,22 +224,22 @@ Friends</code></pre>
 <p>Finds the index of the first &#8216;on&#8217; bit. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The index of the first bit set, or size() if not found.</dl>
+<dd>The index of the first bit set, or size() if not found.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>find_next</dl>
+<dd>find_next</dd></dl>
 <p> Definition at line 1223 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; size_type <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::find_next (size_t__prev) const [inline]</h3>
 <p>Finds the index of the next &#8216;on&#8217; bit after prev. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The index of the next bit set, or size() if not found.</dl>
+<dd>The index of the next bit set, or size() if not found.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__prev</i> Where to start searching.</dl>
+<dd><i>__prev</i> Where to start searching.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>find_first</dl>
+<dd>find_first</dd></dl>
 <p> Definition at line 1233 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt;&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::flip () [inline]</h3>
 <p>Toggles every bit to its opposite value. </p>
@@ -392,10 +249,10 @@ Friends</code></pre>
 <p>Toggles a given bit to its opposite value. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The index of the bit.</dl>
+<dd><i>__pos</i> The index of the bit.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dl>
+<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dd></dl>
 <p> Definition at line 1051 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; allocator_type <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::get_allocator () const [inline]</h3>
 <p>Return the allocator for the bitset. </p>
@@ -408,7 +265,7 @@ Friends</code></pre>
 <p>Tests whether any of the bits are on. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if none of the bits are set.</dl>
+<dd>True if none of the bits are set.</dd></dl>
 <p> Definition at line 1203 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; size_type <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::num_blocks () const [inline], [noexcept]</h3>
 <p>Returns the total number of blocks. </p>
@@ -417,21 +274,21 @@ Friends</code></pre>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__rhs</i> A same-sized dynamic_bitset.</dl>
+<dd><i>__rhs</i> A same-sized dynamic_bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 914 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt;&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator&amp;= (<code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;&amp;__rhs) [inline]</h3>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__rhs</i> A same-sized dynamic_bitset.</dl>
+<dd><i>__rhs</i> A same-sized dynamic_bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 921 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt;&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator-= (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__rhs) [inline]</h3>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__rhs</i> A same-sized dynamic_bitset.</dl>
+<dd><i>__rhs</i> A same-sized dynamic_bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 942 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator&lt;&lt; (size_type__pos) const [inline]</h3>
@@ -441,7 +298,7 @@ Friends</code></pre>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The number of places to shift.</dl>
+<dd><i>__pos</i> The number of places to shift.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 957 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator= (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__b) [inline]</h3>
@@ -458,45 +315,45 @@ Friends</code></pre>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The number of places to shift.</dl>
+<dd><i>__pos</i> The number of places to shift.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 970 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>reference</code> <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator[] (size_type__pos) [inline]</h3>
 <p>Array-indexing support. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> Index into the dynamic_bitset.</dl>
+<dd><i>__pos</i> Index into the dynamic_bitset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A bool for a &#8216;const dynamic_bitset&#8217;. For non-const bitsets, an instance of the reference proxy class.</dl>
+<dd>A bool for a &#8216;const dynamic_bitset&#8217;. For non-const bitsets, an instance of the reference proxy class.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>These operators do no range checking and throw no exceptions, as required by DR 11 to the standard.</dl>
+<dd>These operators do no range checking and throw no exceptions, as required by DR 11 to the standard.</dd></dl>
 <p> Definition at line 1073 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; const_reference <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator[] (size_type__pos) const [inline]</h3>
 <p>Array-indexing support. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> Index into the dynamic_bitset.</dl>
+<dd><i>__pos</i> Index into the dynamic_bitset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A bool for a &#8216;const dynamic_bitset&#8217;. For non-const bitsets, an instance of the reference proxy class.</dl>
+<dd>A bool for a &#8216;const dynamic_bitset&#8217;. For non-const bitsets, an instance of the reference proxy class.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>These operators do no range checking and throw no exceptions, as required by DR 11 to the standard.</dl>
+<dd>These operators do no range checking and throw no exceptions, as required by DR 11 to the standard.</dd></dl>
 <p> Definition at line 1077 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt;&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator^= (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__rhs) [inline]</h3>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__rhs</i> A same-sized dynamic_bitset.</dl>
+<dd><i>__rhs</i> A same-sized dynamic_bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 935 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt;&amp; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator|= (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__rhs) [inline]</h3>
 <p>Operations on dynamic_bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__rhs</i> A same-sized dynamic_bitset.</dl>
+<dd><i>__rhs</i> A same-sized dynamic_bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 928 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::operator~ () const [inline]</h3>
@@ -514,10 +371,10 @@ Friends</code></pre>
 <p>Sets a given bit to false. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The index of the bit.</dl>
+<dd><i>__pos</i> The index of the bit.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dl>
+<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dd></dl>
 <p> Same as writing set(__pos, false). </p>
 <p> Definition at line 1027 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; void <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::resize (size_type__nbits, bool__value = false) [inline]</h3>
@@ -532,10 +389,10 @@ Friends</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__pos</i> The index of the bit.<br />
- <i>__val</i> Either true or false, defaults to true.</dl>
+ <i>__val</i> Either true or false, defaults to true.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dl>
+<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dd></dl>
 <p> Definition at line 1002 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; size_type <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::size () const [inline], [noexcept]</h3>
 <p>Returns the total number of bits. </p>
@@ -550,38 +407,38 @@ Friends</code></pre>
 <p>Tests the value of a bit. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The index of a bit.</dl>
+<dd><i>__pos</i> The index of a bit.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The value at <i>__pos</i>.</dl>
+<dd>The value at <i>__pos</i>.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dl>
+<dd><i>std::out_of_range</i> If <i>__pos</i> is bigger the size of the set.</dd></dl>
 <p> Definition at line 1175 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; template&lt;typename _CharT = char, typename _Traits = std::char_traits&lt;_CharT&gt;, typename _Alloc1 = std::allocator&lt;_CharT&gt;&gt; <code>std::basic_string</code>&lt;_CharT, _Traits, _Alloc1&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::to_string (_CharT__zero = _CharT(&#8216;0&#8217;), _CharT__one = _CharT(&#8216;1&#8217;)) const [inline]</h3>
 <p>Returns a character interpretation of the dynamic_bitset. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The string equivalent of the bits.</dl>
+<dd>The string equivalent of the bits.</dd></dl>
 <p> Note the ordering of the bits: decreasing character positions correspond to increasing bit positions (see the main class notes for an example). </p>
 <p> Definition at line 1113 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; unsigned long long <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::to_ullong () const [inline]</h3>
 <p>Returns a numerical interpretation of the dynamic_bitset. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The integral equivalent of the bits.</dl>
+<dd>The integral equivalent of the bits.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::overflow_error</i> If there are too many bits to be represented in an unsigned long.</dl>
+<dd><i>std::overflow_error</i> If there are too many bits to be represented in an unsigned long.</dd></dl>
 <p> Definition at line 1098 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; unsigned long <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::to_ulong () const [inline]</h3>
 <p>Returns a numerical interpretation of the dynamic_bitset. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The integral equivalent of the bits.</dl>
+<dd>The integral equivalent of the bits.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::overflow_error</i> If there are too many bits to be represented in an unsigned long.</dl>
+<dd><i>std::overflow_error</i> If there are too many bits to be represented in an unsigned long.</dd></dl>
 <p> Definition at line 1088 of file dynamic_bitset.</p>
 <h2>Member Data Documentation</h2>
 <h3>template&lt;typename _WordT = unsigned long long, typename _Alloc = std::allocator&lt;_WordT&gt;&gt; <code>std::tr2::dynamic_bitset</code>&lt; _WordT, _Alloc &gt;::__pad0__ [explicit]</h3>

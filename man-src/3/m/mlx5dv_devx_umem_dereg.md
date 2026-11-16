@@ -19,7 +19,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_umem_dereg/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_devx_umem {
     uint32_t umem_id;
@@ -27,7 +27,7 @@ struct mlx5dv_devx_umem {
 struct mlx5dv_devx_umem *
 mlx5dv_devx_umem_reg(struct ibv_context *context, void *addr, size_t size,
                      uint32_t access) int mlx5dv_devx_umem_dereg(struct mlx5dv_devx_umem *dv_devx_umem)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -43,21 +43,21 @@ mlx5dv_devx_umem_reg(struct ibv_context *context, void *addr, size_t size,
 
 <dl>
 <dt>context
-<dd>
-<dt>
-<dd> <pre>
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
 RDMA device context to create the action on.
 </pre>
-<dt>addr
-<dd> The memory start address to register.
-<dt>size
-<dd>
-<dt>
-<dd> <pre>
+</dd><dt>addr
+</dt><dd> The memory start address to register.
+</dd><dt>size
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
 The size of *addr* buffer.
 </pre>
-<dt>access
-<dd> The desired memory protection attributes; it is either 0 or the bitwise OR of one or more of enum ibv_access_flags.</dl>
+</dd><dt>access
+</dt><dd> The desired memory protection attributes; it is either 0 or the bitwise OR of one or more of enum ibv_access_flags.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

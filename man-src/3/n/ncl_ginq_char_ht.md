@@ -13,10 +13,10 @@ description: "ginq_char_ht (Inquire character height) – retrieves the current 
 <p> void ginq_char_ht(Gint *err_ind, Gdouble *char_ht);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>char_ht</p>
-<dd>(Output) &#8211; Contains the current character height as set by default or by gset_char_ht.</dl>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>char_ht</dt>
+<dd>(Output) &#8211; Contains the current character height as set by default or by gset_char_ht.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

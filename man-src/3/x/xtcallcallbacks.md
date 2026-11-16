@@ -11,21 +11,21 @@ description: "XtCallCallbacks, XtCallCallbackList, XtHasCallbacks – process ca
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtCallCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>, XtPointer <i>call_data</i>);</p>
-<dd>void XtCallCallbackList(Widget <i>w</i>, XtCallbackList <i>callbacks</i>, XtPointer <i>call_data</i>);</dl>
+<dd>void XtCallCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>, XtPointer <i>call_data</i>);</dd>
+<dd>void XtCallCallbackList(Widget <i>w</i>, XtCallbackList <i>callbacks</i>, XtPointer <i>call_data</i>);</dd></dl>
 <p> typedef enum {XtCallbackNoList, XtCallbackHasNone, XtCallbackHasSome} XtCallbackStatus;</p>
 <dl COMPACT>
-<dd>XtCallbackStatus XtHasCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>);</dl>
+<dd>XtCallbackStatus XtHasCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>callback_name</i></p>
-<dd>Specifies the callback list to be executed or checked.</p>
-<dt><i>call_data</i></p>
-<dd>Specifies a callback-list specific data value to pass to each of the callback procedure in the list.</p>
-<dt><i>callbacks</i></p>
-<dd>Specifies the callback list to be executed.</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</dl>
+<dt><i>callback_name</i></dt>
+<dd>Specifies the callback list to be executed or checked.</dd>
+<dt><i>call_data</i></dt>
+<dd>Specifies a callback-list specific data value to pass to each of the callback procedure in the list.</dd>
+<dt><i>callbacks</i></dt>
+<dd>Specifies the callback list to be executed.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtCallCallbacks</code> function calls each procedure that is registered in the specified widget&#8217;s callback list. </p>
 <p> If <i>callbacks</i> is not NULL, <code>XtCallCallbackList</code> calls each of the callback procedures in the list, passing client data and <i>call_data</i>. The <i>callbacks</i> parameter must specify the contents of a widget or object resource declared with representation type <code>XtRCallback</code>. </p>

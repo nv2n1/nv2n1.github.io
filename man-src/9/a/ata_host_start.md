@@ -14,7 +14,7 @@ description: "ata_host_start – start and freeze ports of an ATA host"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>ATA host to start ports for</dl>
+</dd><dd>ATA host to start ports for</dd></dl>
 <h2>Description</h2>
 <p>Start and then freeze ports of <i>host</i>. Started status is recorded in host-&gt;flags, so this function can be called multiple times. Ports are guaranteed to get started only once. If host-&gt;ops isn&#8217;t initialized yet, its set to the first non-dummy port ops. </p>
 <p> LOCKING: Inherited from calling layer (may sleep).</p>
@@ -23,5 +23,5 @@ description: "ata_host_start – start and freeze ports of an ATA host"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

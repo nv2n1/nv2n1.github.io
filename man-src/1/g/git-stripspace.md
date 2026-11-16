@@ -18,33 +18,33 @@ git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]
 <p> With no arguments, this will: </p>
 <dl>
 <dt>
-<dd> &bull; remove trailing whitespace from all lines</dl>
+</dt><dd> &bull; remove trailing whitespace from all lines</dd></dl>
 <dl>
 <dt>
-<dd> &bull; collapse multiple consecutive empty lines into one empty line</dl>
+</dt><dd> &bull; collapse multiple consecutive empty lines into one empty line</dd></dl>
 <dl>
 <dt>
-<dd> &bull; remove empty lines from the beginning and end of the input</dl>
+</dt><dd> &bull; remove empty lines from the beginning and end of the input</dd></dl>
 <dl>
 <dt>
-<dd> &bull; add a missing <i>
-</i> to the last line if necessary.</dl>
+</dt><dd> &bull; add a missing <i>
+</i> to the last line if necessary.</dd></dl>
 <p> In the case where the input consists entirely of whitespace characters, no output will be produced. </p>
 <p> <code>NOTE</code>: This is intended for cleaning metadata, prefer the <code>&#8211;whitespace=fix</code> mode of <code><a href="/docs/linux/man/1-git-apply/">git-apply</a></code>(1) for correcting whitespace of patches or files in the repository.</p>
 <h2>OPTIONS</h2>
 <p> -s, &#8211;strip-comments</p>
 <dl>
 <dt>
-<dd> Skip and remove all lines starting with comment character (default <i>#</i>).</dl>
+</dt><dd> Skip and remove all lines starting with comment character (default <i>#</i>).</dd></dl>
 <p> -c, &#8211;comment-lines</p>
 <dl>
 <dt>
-<dd> Prepend comment character and blank to each line. Lines will automatically be terminated with a newline. On empty lines, only the comment character will be prepended.</dl>
+</dt><dd> Prepend comment character and blank to each line. Lines will automatically be terminated with a newline. On empty lines, only the comment character will be prepended.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Given the following noisy input with <i>$</i> indicating the end of a line: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 |A brief introduction   $
 |   $
@@ -58,11 +58,11 @@ git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]
 |The end.$
 |  $
 </pre>
-</dl>
+</dd></dl>
 <p> Use <i>git stripspace</i> with no arguments to obtain: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 |A brief introduction$
 |$
@@ -74,11 +74,11 @@ git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]
 |$
 |The end.$
 </pre>
-</dl>
+</dd></dl>
 <p> Use <i>git stripspace &#8211;strip-comments</i> to obtain: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 |A brief introduction$
 |$
@@ -87,7 +87,7 @@ git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]
 |$
 |The end.$
 </pre>
-</dl>
+</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

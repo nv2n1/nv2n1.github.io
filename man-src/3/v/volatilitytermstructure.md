@@ -40,6 +40,6 @@ description: "QuantLib::VolatilityTermStructure – Volatility term structure."
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

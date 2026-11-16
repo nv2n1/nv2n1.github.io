@@ -13,37 +13,37 @@ description: "gset_asfs – (Set aspect source flags) – Sets the aspect source
 <p> void gset_asfs(const Gasfs *list_asf);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>list_asf</p>
-<dd>(input) &#8211; A structure of settings for the thirteen attributes:</p>
+<dt>list_asf</dt>
+<dd>(input) &#8211; A structure of settings for the thirteen attributes:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>list_asfs.linetype</p>
-<dd>Linetype</p>
-<dt>list_asfs.linewidth</p>
-<dd>Linewidth scale factor</p>
-<dt>list_asfs.line_colr_ind</p>
-<dd>Polyline color index</p>
-<dt>list_asfs.marker_type</p>
-<dd>Marker type</p>
-<dt>list_asfs.marker_size</p>
-<dd>Marker size scale factor</p>
-<dt>list_asfs.marker_colr_ind</p>
-<dd>Polymarker color index</p>
-<dt>list_asfs.text_font_prec</p>
-<dd>Text font and precision</p>
-<dt>list_asfs.char_expan</p>
-<dd>Character expansion factor</p>
-<dt>list_asfs.char_space</p>
-<dd>Character spacing</p>
-<dt>list_asfs.text_colr_ind</p>
-<dd>Text color index</p>
-<dt>list_asfs.fill_int_style</p>
-<dd>Fill area interior style</p>
-<dt>list_asfs.fill_style_ind</p>
-<dd>Fill area style index</p>
-<dt>list_asfs.fill_colr_ind</p>
-<dd>Fill area color index</dl>
+</dd><dl COMPACT>
+<dt>list_asfs.linetype</dt>
+<dd>Linetype</dd>
+<dt>list_asfs.linewidth</dt>
+<dd>Linewidth scale factor</dd>
+<dt>list_asfs.line_colr_ind</dt>
+<dd>Polyline color index</dd>
+<dt>list_asfs.marker_type</dt>
+<dd>Marker type</dd>
+<dt>list_asfs.marker_size</dt>
+<dd>Marker size scale factor</dd>
+<dt>list_asfs.marker_colr_ind</dt>
+<dd>Polymarker color index</dd>
+<dt>list_asfs.text_font_prec</dt>
+<dd>Text font and precision</dd>
+<dt>list_asfs.char_expan</dt>
+<dd>Character expansion factor</dd>
+<dt>list_asfs.char_space</dt>
+<dd>Character spacing</dd>
+<dt>list_asfs.text_colr_ind</dt>
+<dd>Text color index</dd>
+<dt>list_asfs.fill_int_style</dt>
+<dd>Fill area interior style</dd>
+<dt>list_asfs.fill_style_ind</dt>
+<dd>Fill area style index</dd>
+<dt>list_asfs.fill_colr_ind</dt>
+<dd>Fill area color index</dd></dl>
 </dl>
 <p> Each value of list_asf is of either GASF_BUNDLED (for &quot;bundled&quot;) or GASF_INDIV (for &quot;individual&quot;).</dl>
 <h2>Usage</h2>
@@ -57,3 +57,4 @@ description: "gset_asfs – (Set aspect source flags) – Sets the aspect source
 <p>Copyright (C) 1987-2009<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement.</p>
+</p>

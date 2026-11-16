@@ -19,7 +19,7 @@ description: "ctgsen.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CTGSEN reorders the generalized Schur decomposition of a complex
  matrix pair (A, B) (in terms of an unitary equivalence trans-
@@ -40,11 +40,11 @@ description: "ctgsen.f –"
      resp.,
      and norms of "projections" onto left and right eigenspaces w.r.t.the selected cluster in the(1, 1) - block.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>IJOB</i> </p>
+</dt><dd> <i>IJOB</i> </dd>
 <pre>
           IJOB is integer
           Specifies whether condition numbers are required for the
@@ -216,18 +216,18 @@ the<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CTGSEN first collects the selected eigenvalues by computing unitary
     U and W that move them to the top left corner
@@ -299,18 +299,19 @@ may move and
   IDIFJB (see below) should be changed from 3 to 4 (routine CLATDF
   (IJOB = 2 will be used)). See CTGSYL for more details.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] B. Kagstrom; A Direct Method for Reordering Eigenvalues in the Generalized Real Schur Form of a Regular Matrix Pair (A, B), in M.S. Moonen et al (eds), Linear Algebra for Large Scale and Real-Time Applications, Kluwer Academic Publ. 1993, pp 195-218. </p>
+</dt><dd> [1] B. Kagstrom; A Direct Method for Reordering Eigenvalues in the Generalized Real Schur Form of a Regular Matrix Pair (A, B), in M.S. Moonen et al (eds), Linear Algebra for Large Scale and Real-Time Applications, Kluwer Academic Publ. 1993, pp 195-218. </dd>
 <p>&nbsp;<wbr>[2]&nbsp;<wbr>B. Kagstrom and P. Poromaa;&nbsp;<wbr>Computing Eigenspaces with Specified Eigenvalues of a Regular Matrix Pair&nbsp;<wbr>(A, B)&nbsp;<wbr>and Condition Estimation: Theory, Algorithms and Software, Report UMINF &#8211; 94.04, Department of Computing Science, Umea University, S-901 87 Umea, Sweden, 1994. Also as LAPACK Working Note 87. To appear in Numerical Algorithms, 1996.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>[3]&nbsp;<wbr>B. Kagstrom and P. Poromaa, LAPACK-Style Algorithms and Software for Solving the Generalized Sylvester Equation and Estimating the Separation between Regular Matrix Pairs, Report UMINF &#8211; 93.23, Department of Computing Science, Umea University, S-901 87 Umea, Sweden, December 1993, Revised April 1994, Also as LAPACK working Note 75. To appear in ACM Trans. on Math. Software, Vol 22, No 1, 1996.&nbsp;<wbr></dl>
 <p> Definition at line 432 of file ctgsen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

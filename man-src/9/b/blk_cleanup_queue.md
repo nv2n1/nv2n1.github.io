@@ -15,7 +15,7 @@ blk_cleanup_queue - shutdown a request queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>request queue to shutdown</dl>
+<dl><dd></dd><dd>request queue to shutdown</dd></dl>
 
 <h2>Description</h2>
 

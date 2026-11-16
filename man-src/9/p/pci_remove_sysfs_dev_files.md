@@ -15,7 +15,7 @@ pci_remove_sysfs_dev_files - cleanup PCI specific sysfs files
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>device whose entries we should free</dl>
+<dl><dd></dd><dd>device whose entries we should free</dd></dl>
 
 <h2>Description</h2>
 

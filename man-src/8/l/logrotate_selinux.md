@@ -103,8 +103,8 @@ description: "logrotate_selinux – Security Enhanced Linux Policy for the logro
 <p> <code>logrotate_exec_t</code> </p>
 <p> &#8211; Set files with the logrotate_exec_t type, if you want to transition an executable to the logrotate_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|weekly)/sysklogd, /usr/sbin/logrotate </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|weekly)/sysklogd, /usr/sbin/logrotate </dd>
 </dl>
 <p> <code>logrotate_lock_t</code> </p>
 <p> &#8211; Set files with the logrotate_lock_t type, if you want to treat the files as logrotate lock data, stored under the /var/lock directory </p>
@@ -115,8 +115,8 @@ description: "logrotate_selinux – Security Enhanced Linux Policy for the logro
 <p> <code>logrotate_var_lib_t</code> </p>
 <p> &#8211; Set files with the logrotate_var_lib_t type, if you want to store the logrotate files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/logrotate(/.*)?, /var/lib/logrotate.status.* </p>
+<dt>Paths:</dt>
+<dd>/var/lib/logrotate(/.*)?, /var/lib/logrotate.status.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

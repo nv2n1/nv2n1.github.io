@@ -19,13 +19,13 @@ url: "/docs/linux/man/3-gssapi_services_intro/"
 
 <dl>
 <dt>&bull;
-<dd> delegation
-<dt>&bull;
-<dd> mutual authentication
-<dt>&bull;
-<dd> anonymous
-<dt>&bull;
-<dd> use per message before context creation has completed</dl>
+</dt><dd> delegation
+</dd><dt>&bull;
+</dt><dd> mutual authentication
+</dd><dt>&bull;
+</dt><dd> anonymous
+</dd><dt>&bull;
+</dt><dd> use per message before context creation has completed</dd></dl>
  
 
  
@@ -33,55 +33,55 @@ url: "/docs/linux/man/3-gssapi_services_intro/"
  return status:
 <dl>
 <dt>&bull;
-<dd> support conf
-<dt>&bull;
-<dd> support int</dl>
+</dt><dd> support conf
+</dd><dt>&bull;
+</dt><dd> support int</dd></dl>
  
 
 <h3>Context creation flags</h3>
 
 <dl>
 <dt>&bull;
-<dd> GSS_C_DELEG_FLAG
-<dt>&bull;
-<dd> GSS_C_MUTUAL_FLAG
-<dt>&bull;
-<dd> GSS_C_REPLAY_FLAG
-<dt>&bull;
-<dd> GSS_C_SEQUENCE_FLAG
-<dt>&bull;
-<dd> GSS_C_CONF_FLAG
-<dt>&bull;
-<dd> GSS_C_INTEG_FLAG
-<dt>&bull;
-<dd> GSS_C_ANON_FLAG
-<dt>&bull;
-<dd> GSS_C_PROT_READY_FLAG
-<dt>&bull;
-<dd> GSS_C_TRANS_FLAG
-<dt>&bull;
-<dd> GSS_C_DCE_STYLE
-<dt>&bull;
-<dd> GSS_C_IDENTIFY_FLAG
-<dt>&bull;
-<dd> GSS_C_EXTENDED_ERROR_FLAG
-<dt>&bull;
-<dd> GSS_C_DELEG_POLICY_FLAG</dl>
+</dt><dd> GSS_C_DELEG_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_MUTUAL_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_REPLAY_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_SEQUENCE_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_CONF_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_INTEG_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_ANON_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_PROT_READY_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_TRANS_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_DCE_STYLE
+</dd><dt>&bull;
+</dt><dd> GSS_C_IDENTIFY_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_EXTENDED_ERROR_FLAG
+</dd><dt>&bull;
+</dt><dd> GSS_C_DELEG_POLICY_FLAG</dd></dl>
  
 
 <h3>Per-message services</h3>
 
 <dl>
 <dt>&bull;
-<dd> conf
-<dt>&bull;
-<dd> int
-<dt>&bull;
-<dd> message integrity
-<dt>&bull;
-<dd> replay detection
-<dt>&bull;
-<dd> out of sequence</dl>
+</dt><dd> conf
+</dd><dt>&bull;
+</dt><dd> int
+</dd><dt>&bull;
+</dt><dd> message integrity
+</dd><dt>&bull;
+</dt><dd> replay detection
+</dd><dt>&bull;
+</dt><dd> out of sequence</dd></dl>
  
 
  

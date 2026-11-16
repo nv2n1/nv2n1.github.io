@@ -33,501 +33,501 @@ description: "netpbm – package of graphics manipulation programs and libraries
 <h2>Common Options</h2>
 <p> There are a few options that are present on all programs that are based on the Netpbm libraries, including virtually all Netpbm programs. These are not mentioned in the individual man pages for the programs. </p>
 <dl>
-<dt><code>-quiet</code></p>
-<dd> Suppress all informational messages that would otherwise be issued to Standard Error. (To be precise, this only works to the extent that the program in question implements the Netpbm convention of issuing all informational messages via the <code>pm_message()</code> service of the Netpbm libraries).</p>
-<dt><code>-version</code></p>
-<dd> Instead of doing anything else, report the version of the <code>libpbm</code> library linked with the program (it may have been linked statically into the program, or dynamically linked at run time). Normally, the Netpbm programs and the libraries are installed at the same time, so this tells you the version of the program and all the other Netpbm libraries and files it uses as well. </p>
+<dt><code>-quiet</code></dt>
+<dd> Suppress all informational messages that would otherwise be issued to Standard Error. (To be precise, this only works to the extent that the program in question implements the Netpbm convention of issuing all informational messages via the <code>pm_message()</code> service of the Netpbm libraries).</dd>
+<dt><code>-version</code></dt>
+<dd> Instead of doing anything else, report the version of the <code>libpbm</code> library linked with the program (it may have been linked statically into the program, or dynamically linked at run time). Normally, the Netpbm programs and the libraries are installed at the same time, so this tells you the version of the program and all the other Netpbm libraries and files it uses as well. </dd>
 <p> Here is a directory of the Netpbm programs. You can also use <code>man -k</code> to search for a program that does what you want. </p>
 </dl>
 <h3>Converters</h3>
 <dl>
-<dt><code>ppmtompeg </code></p>
-<dd> convert series of PPM frames to an MPEG movie</p>
-<dt><code>jpegtopnm </code></p>
-<dd> convert JFIF/JPEG/EXIF file to Netpbm format</p>
-<dt><code>pnmtojpeg </code></p>
-<dd> convert PPM to JPEG/JFIF/EXIF format</p>
-<dt><code>anytopnm </code></p>
-<dd> convert any graphics format to Netpbm format</p>
-<dt><code>bmptoppm </code></p>
-<dd> convert Windows or OS/2 Bitmap file to PPM</p>
-<dt><code>ppmtobmp </code></p>
-<dd> convert PPM to Windows or OS/2 Bitmap file</p>
-<dt><code>winicontoppm</code></p>
-<dd> convert Windows icon file to PPM</p>
-<dt><code>ppmtowinicon</code></p>
-<dd> convert PPM to Windows icon file</p>
-<dt><code>giftopnm </code></p>
-<dd> convert GIF to portable anymap</p>
-<dt><code>ppmtogif </code></p>
-<dd> convert PPM to GIF</p>
-<dt><code>pnmtopng </code></p>
-<dd> convert Netpbm format to Portable Network Graphics</p>
-<dt><code>pngtopnm </code></p>
-<dd> convert PNG (Portable Network Graphics) to Netpbm formats</p>
-<dt><code>palmtopnm </code></p>
-<dd> convert Palm pixmap to Netpbm formats</p>
-<dt><code>pnmtopalm </code></p>
-<dd> convert Netpbm formats to Palm pixmap</p>
-<dt><code>jbigtopbm </code></p>
-<dd> convert JBIG BIE (compressed bitmap) to PBM</p>
-<dt><code>pamtopnm</code></p>
-<dd> convert a PAM image to PBM, PGM, or PPM</p>
-<dt><code>pbmtojbig </code></p>
-<dd> convert PBM to JBIG BIE (compressed bitmap)</p>
-<dt><code>pnmtofiasco </code></p>
-<dd> convert Netpbm image to Fiasco (wfa) highly compressed format</p>
-<dt><code>fiascotopnm </code></p>
-<dd> convert Fiasco (wfa) highly compressed format to Netpbm image</p>
-<dt><code>hpcdtoppm </code></p>
-<dd> convert photo CD to PPM</p>
-<dt><code>pbmtonokia</code></p>
-<dd> convert PBM to Nokia Smart Messaging Format (SMF)</p>
-<dt><code>pbmtowbmp </code></p>
-<dd> convert PBM to WAP (Wireless App Protocol) Wireless Bitmap</p>
-<dt><code>wbmptopbm </code></p>
-<dd> convert WAP (Wireless App Protocol) Wireless Bitmap to PBM</p>
-<dt><code>neotoppm</code></p>
-<dd> convert Atari Neochrome (.neo) image to PPM</p>
-<dt><code>ppmtoneo</code></p>
-<dd> convert PPM image to Atari Neochrome (.neo)</p>
-<dt><code>pbmtomda </code></p>
-<dd> convert from PBM to Microdesign (for Amstrad PCWs)</p>
-<dt><code>mdatopbm </code></p>
-<dd> convert from Microdesign (for Amstrad PCWs) to PBM</p>
-<dt><code>atktopbm </code></p>
-<dd> convert Andrew Toolkit raster object to PBM</p>
-<dt><code>pbmtoatk </code></p>
-<dd> convert PBM to Andrew Toolkit raster object</p>
-<dt><code>brushtopbm </code></p>
-<dd> convert Xerox doodle brushes to PBM</p>
-<dt><code>cmuwmtopbm </code></p>
-<dd> convert CMU window manager format to PBM</p>
-<dt><code>g3topbm </code></p>
-<dd> convert Group 3 FAX to PBM</p>
-<dt><code>pbmtog3 </code></p>
-<dd> convert PBM to Group 3 FAX</p>
-<dt><code>icontopbm </code></p>
-<dd> convert Sun icon to PBM</p>
-<dt><code>pbmtoicon </code></p>
-<dd> convert PBM to Sun icon</p>
-<dt><code>gemtopnm </code></p>
-<dd> convert GEM .img format to PBM or pixmap</p>
-<dt><code>macptopbm </code></p>
-<dd> convert MacPaint to PBM</p>
-<dt><code>pbmtomacp </code></p>
-<dd> convert PBM to MacPaint</p>
-<dt><code>mgrtopbm </code></p>
-<dd> convert MGR format to PBM</p>
-<dt><code>pbmtomgr </code></p>
-<dd> convert PBM to MGR format</p>
-<dt><code>pi3topbm </code></p>
-<dd> convert Atari Degas .pi3 to PBM</p>
-<dt><code>pbmtopi3 </code></p>
-<dd> convert PBM to Atari Degas .pi3</p>
-<dt><code>xbmtopbm </code></p>
-<dd> convert X10 or X11 bitmap to PBM</p>
-<dt><code>pbmtoxbm </code></p>
-<dd> convert PBM to X11 bitmap</p>
-<dt><code>pbmtox10bm </code></p>
-<dd> convert PBM to X10 bitmap</p>
-<dt><code>ybmtopbm </code></p>
-<dd> convert Bennet Yee &quot;face&quot; file into PBM</p>
-<dt><code>pbmtoybm </code></p>
-<dd> convert PBM into Bennet Yee &quot;face&quot; file</p>
-<dt><code>pbmto10x </code></p>
-<dd> convert PBM to Gemini 10x printer graphics</p>
-<dt><code>pbmtoascii </code></p>
-<dd> convert PBM to ASCII graphic form</p>
-<dt><code>asciitopgm </code></p>
-<dd> convert ASCII character graphics to PGM</p>
-<dt><code>pbmtobbnbg </code></p>
-<dd> convert PBM to BBN BitGraph graphics</p>
-<dt><code>pbmtocmuwm </code></p>
-<dd> convert PBM to CMU window manager format</p>
-<dt><code>pbmtoepson </code></p>
-<dd> convert PBM to Epson printer graphics</p>
-<dt><code>pbmtogem </code></p>
-<dd> convert PBM into GEM .img file</p>
-<dt><code>pbmtogo </code></p>
-<dd> convert PBM to GraphOn graphics</p>
-<dt><code>pbmtolj </code></p>
-<dd> convert PBM to HP LaserJet black and white graphics</p>
-<dt><code>ppmtolj </code></p>
-<dd> convert PPM to HP LaserJet color graphics (PCL)</p>
-<dt><code>pjtoppm </code></p>
-<dd> convert HP PaintJet file to PPM</p>
-<dt><code>ppmtopj </code></p>
-<dd> convert PPM to HP PaintJet file</p>
-<dt><code>thinkjettopbm</code></p>
-<dd> convert HP Thinkjet printer stream to PBM</p>
-<dt><code>pbmtoplot </code></p>
-<dd> convert PBM into Unix plot(5) file</p>
-<dt><code>pbmtoptx </code></p>
-<dd> convert PBM to Printronix graphics</p>
-<dt><code>pbmtozinc </code></p>
-<dd> convert PBM to Zinc Interface Library icon</p>
-<dt><code>fitstopnm </code></p>
-<dd> convert FITS format to portable anymap</p>
-<dt><code>pnmtofits </code></p>
-<dd> convert Netpbm formats to FITS format</p>
-<dt><code>fstopgm </code></p>
-<dd> convert Usenix FaceSaver(tm) format to PGM</p>
-<dt><code>pgmtofs </code></p>
-<dd> convert PGM to Usenix FaceSaver(tm) format</p>
-<dt><code>hipstopgm </code></p>
-<dd> convert HIPS format to PGM</p>
-<dt><code>lispmtopgm </code></p>
-<dd> convert a Lisp Machine bitmap file into PGM format</p>
-<dt><code>pgmtolispm </code></p>
-<dd> convert PGM into Lisp Machine format</p>
-<dt><code>pnmtops </code></p>
-<dd> convert Netpbm formats to Postscript</p>
-<dt><code>pstopnm </code></p>
-<dd> convert Postscript to Netpbm formats</p>
-<dt><code>psidtopgm </code></p>
-<dd> convert PostScript &quot;image&quot; data to PGM</p>
-<dt><code>pbmtolps </code></p>
-<dd> convert PBM image to Postscript using lines</p>
-<dt><code>pbmtoepsi </code></p>
-<dd> convert a PBM image to encapsulated Postscript preview bitmap</p>
-<dt><code>pbmtopsg3</code></p>
-<dd> convert PBM images to Postscript using G3 fax compression.</p>
-<dt><code>rawtopgm </code></p>
-<dd> convert raw grayscale bytes to PGM</p>
-<dt><code>pgmtopbm </code></p>
-<dd> convert PGM to PBM</p>
-<dt><code>gouldtoppm </code></p>
-<dd> convert Gould scanner file to PPM</p>
-<dt><code>ilbmtoppm </code></p>
-<dd> convert IFF ILBM to PPM</p>
-<dt><code>ppmtoilbm </code></p>
-<dd> convert PPM to IFF ILBM</p>
-<dt><code>imgtoppm </code></p>
-<dd> convert Img-whatnot to PPM</p>
-<dt><code>mtvtoppm </code></p>
-<dd> convert MTV ray-tracer output to PPM</p>
-<dt><code>pcxtoppm </code></p>
-<dd> convert PC Paintbrush format to PPM</p>
-<dt><code>pgmtoppm </code></p>
-<dd> colorize a portable graymap into a PPM</p>
-<dt><code>pi1toppm </code></p>
-<dd> convert Atari Degas .pi1 to PPM</p>
-<dt><code>ppmtopi1 </code></p>
-<dd> convert PPM to Atari Degas .pi1</p>
-<dt><code>picttoppm </code></p>
-<dd> convert Macintosh PICT to PPM</p>
-<dt><code>ppmtopict </code></p>
-<dd> convert PPM to Macintosh PICT</p>
-<dt><code>qrttoppm </code></p>
-<dd> convert QRT ray-tracer output to PPM</p>
-<dt><code>rawtoppm </code></p>
-<dd> convert raw RGB bytes to PPM</p>
-<dt><code>sldtoppm </code></p>
-<dd> convert an AutoCAD slide file into a PPM</p>
-<dt><code>spctoppm </code></p>
-<dd> convert Atari compressed Spectrum to PPM</p>
-<dt><code>sputoppm </code></p>
-<dd> convert Atari uncompressed Spectrum to PPM</p>
-<dt><code>tgatoppm </code></p>
-<dd> convert TrueVision Targa file to PPM</p>
-<dt><code>ppmtotga </code></p>
-<dd> convert PPM to TrueVision Targa file</p>
-<dt><code>ximtoppm </code></p>
-<dd> convert Xim to PPM</p>
-<dt><code>xpmtoppm </code></p>
-<dd> convert XPM format to PPM</p>
-<dt><code>ppmtoxpm </code></p>
-<dd> convert PPM to XPM format</p>
-<dt><code>yuvtoppm </code></p>
-<dd> convert Abekas YUV format to PPM</p>
-<dt><code>eyuvtoppm </code></p>
-<dd> convert Encoder/Berkeley YUV format to PPM</p>
-<dt><code>ppmtoeyuv </code></p>
-<dd> convert PPM to Encoder/Berkeley YUV format</p>
-<dt><code>ppmtoyuv </code></p>
-<dd> convert PPM to Abekas YUV format</p>
-<dt><code>ppmtoyuvsplit</code></p>
-<dd> convert PPM to 3 subsampled raw YUV files</p>
-<dt><code>yuvsplittoppm </code></p>
-<dd> merge 3 subsampled raw YUV files to one PPM</p>
-<dt><code>ppmtoacad </code></p>
-<dd> convert PPM to AutoCAD database or slide</p>
-<dt><code>ppmtoicr </code></p>
-<dd> convert PPM to NCSA ICR graphics</p>
-<dt><code>ppmtopcx </code></p>
-<dd> convert PPM to PC Paintbrush format</p>
-<dt><code>ppmtopgm </code></p>
-<dd> convert PPM to portable graymap</p>
-<dt><code>ppmtopuzz </code></p>
-<dd> convert PPM to X11 &quot;puzzle&quot; file</p>
-<dt><code>rasttopnm </code></p>
-<dd> convert Sun raster file to Netpbm formats</p>
-<dt><code>pnmtorast </code></p>
-<dd> convert Netpbm formats to Sun raster file</p>
-<dt><code>tifftopnm </code></p>
-<dd> convert TIFF file to portable anymap</p>
-<dt><code>pnmtotiff </code></p>
-<dd> convert Netpbm formats to TIFF RGB file</p>
-<dt><code>pnmtotiffcmyk</code></p>
-<dd> convert Netpbm formats to TIFF CMYK file</p>
-<dt><code>xwdtopnm </code></p>
-<dd> convert X10 or X11 window dump to Netpbm formats</p>
-<dt><code>pnmtoxwd </code></p>
-<dd> convert Netpbm formats to X11 window dump</p>
-<dt><code>pnmtoplainpnm</code></p>
-<dd> convert regular Netpbm format image into plain Netpbm format</p>
-<dt><code>pbmtopgm </code></p>
-<dd> convert PBM file to PGM by averaging areas</p>
-<dt><code>411toppm </code></p>
-<dd> convert 411 (Sony Mavica) to PPM</p>
-<dt><code>ppmtosixel </code></p>
-<dd> convert PPM to DEC sixel format</p>
-<dt><code>ppmtouil </code></p>
-<dd> convert PPM to Motif UIL icon file</p>
-<dt><code>sbigtopgm </code></p>
-<dd> convert Santa Barbara Instrument Group CCD file to PGM</p>
-<dt><code>vidtoppm </code></p>
-<dd> convert Parallax XVideo JPEG to sequence of PPM files</p>
-<dt><code>pnmtorle </code></p>
-<dd> convert PNM to Utah Raster Toolkit (urt/rle) file</p>
-<dt><code>rletopnm </code></p>
-<dd> convert Utah Raster Toolkit (urt/rle) file to PNM</p>
-<dt><code>ppmtoleaf </code></p>
-<dd> convert PPM to Interleaf</p>
-<dt><code>leaftoppm </code></p>
-<dd> convert Interleaf to PPM</p>
-<dt><code>bioradtopgm </code></p>
-<dd> convert Biorad confocal image to PGM</p>
-<dt><code>pbmtoln03 </code></p>
-<dd> convert PGM image to Dec LN03+ Sixel image</p>
-<dt><code>pbmtopk </code></p>
-<dd> convert PBM image to packed format (PK) font</p>
-<dt><code>pktopbm </code></p>
-<dd> convert packed format (PK) font to PBM image </p>
+<dt><code>ppmtompeg </code></dt>
+<dd> convert series of PPM frames to an MPEG movie</dd>
+<dt><code>jpegtopnm </code></dt>
+<dd> convert JFIF/JPEG/EXIF file to Netpbm format</dd>
+<dt><code>pnmtojpeg </code></dt>
+<dd> convert PPM to JPEG/JFIF/EXIF format</dd>
+<dt><code>anytopnm </code></dt>
+<dd> convert any graphics format to Netpbm format</dd>
+<dt><code>bmptoppm </code></dt>
+<dd> convert Windows or OS/2 Bitmap file to PPM</dd>
+<dt><code>ppmtobmp </code></dt>
+<dd> convert PPM to Windows or OS/2 Bitmap file</dd>
+<dt><code>winicontoppm</code></dt>
+<dd> convert Windows icon file to PPM</dd>
+<dt><code>ppmtowinicon</code></dt>
+<dd> convert PPM to Windows icon file</dd>
+<dt><code>giftopnm </code></dt>
+<dd> convert GIF to portable anymap</dd>
+<dt><code>ppmtogif </code></dt>
+<dd> convert PPM to GIF</dd>
+<dt><code>pnmtopng </code></dt>
+<dd> convert Netpbm format to Portable Network Graphics</dd>
+<dt><code>pngtopnm </code></dt>
+<dd> convert PNG (Portable Network Graphics) to Netpbm formats</dd>
+<dt><code>palmtopnm </code></dt>
+<dd> convert Palm pixmap to Netpbm formats</dd>
+<dt><code>pnmtopalm </code></dt>
+<dd> convert Netpbm formats to Palm pixmap</dd>
+<dt><code>jbigtopbm </code></dt>
+<dd> convert JBIG BIE (compressed bitmap) to PBM</dd>
+<dt><code>pamtopnm</code></dt>
+<dd> convert a PAM image to PBM, PGM, or PPM</dd>
+<dt><code>pbmtojbig </code></dt>
+<dd> convert PBM to JBIG BIE (compressed bitmap)</dd>
+<dt><code>pnmtofiasco </code></dt>
+<dd> convert Netpbm image to Fiasco (wfa) highly compressed format</dd>
+<dt><code>fiascotopnm </code></dt>
+<dd> convert Fiasco (wfa) highly compressed format to Netpbm image</dd>
+<dt><code>hpcdtoppm </code></dt>
+<dd> convert photo CD to PPM</dd>
+<dt><code>pbmtonokia</code></dt>
+<dd> convert PBM to Nokia Smart Messaging Format (SMF)</dd>
+<dt><code>pbmtowbmp </code></dt>
+<dd> convert PBM to WAP (Wireless App Protocol) Wireless Bitmap</dd>
+<dt><code>wbmptopbm </code></dt>
+<dd> convert WAP (Wireless App Protocol) Wireless Bitmap to PBM</dd>
+<dt><code>neotoppm</code></dt>
+<dd> convert Atari Neochrome (.neo) image to PPM</dd>
+<dt><code>ppmtoneo</code></dt>
+<dd> convert PPM image to Atari Neochrome (.neo)</dd>
+<dt><code>pbmtomda </code></dt>
+<dd> convert from PBM to Microdesign (for Amstrad PCWs)</dd>
+<dt><code>mdatopbm </code></dt>
+<dd> convert from Microdesign (for Amstrad PCWs) to PBM</dd>
+<dt><code>atktopbm </code></dt>
+<dd> convert Andrew Toolkit raster object to PBM</dd>
+<dt><code>pbmtoatk </code></dt>
+<dd> convert PBM to Andrew Toolkit raster object</dd>
+<dt><code>brushtopbm </code></dt>
+<dd> convert Xerox doodle brushes to PBM</dd>
+<dt><code>cmuwmtopbm </code></dt>
+<dd> convert CMU window manager format to PBM</dd>
+<dt><code>g3topbm </code></dt>
+<dd> convert Group 3 FAX to PBM</dd>
+<dt><code>pbmtog3 </code></dt>
+<dd> convert PBM to Group 3 FAX</dd>
+<dt><code>icontopbm </code></dt>
+<dd> convert Sun icon to PBM</dd>
+<dt><code>pbmtoicon </code></dt>
+<dd> convert PBM to Sun icon</dd>
+<dt><code>gemtopnm </code></dt>
+<dd> convert GEM .img format to PBM or pixmap</dd>
+<dt><code>macptopbm </code></dt>
+<dd> convert MacPaint to PBM</dd>
+<dt><code>pbmtomacp </code></dt>
+<dd> convert PBM to MacPaint</dd>
+<dt><code>mgrtopbm </code></dt>
+<dd> convert MGR format to PBM</dd>
+<dt><code>pbmtomgr </code></dt>
+<dd> convert PBM to MGR format</dd>
+<dt><code>pi3topbm </code></dt>
+<dd> convert Atari Degas .pi3 to PBM</dd>
+<dt><code>pbmtopi3 </code></dt>
+<dd> convert PBM to Atari Degas .pi3</dd>
+<dt><code>xbmtopbm </code></dt>
+<dd> convert X10 or X11 bitmap to PBM</dd>
+<dt><code>pbmtoxbm </code></dt>
+<dd> convert PBM to X11 bitmap</dd>
+<dt><code>pbmtox10bm </code></dt>
+<dd> convert PBM to X10 bitmap</dd>
+<dt><code>ybmtopbm </code></dt>
+<dd> convert Bennet Yee &quot;face&quot; file into PBM</dd>
+<dt><code>pbmtoybm </code></dt>
+<dd> convert PBM into Bennet Yee &quot;face&quot; file</dd>
+<dt><code>pbmto10x </code></dt>
+<dd> convert PBM to Gemini 10x printer graphics</dd>
+<dt><code>pbmtoascii </code></dt>
+<dd> convert PBM to ASCII graphic form</dd>
+<dt><code>asciitopgm </code></dt>
+<dd> convert ASCII character graphics to PGM</dd>
+<dt><code>pbmtobbnbg </code></dt>
+<dd> convert PBM to BBN BitGraph graphics</dd>
+<dt><code>pbmtocmuwm </code></dt>
+<dd> convert PBM to CMU window manager format</dd>
+<dt><code>pbmtoepson </code></dt>
+<dd> convert PBM to Epson printer graphics</dd>
+<dt><code>pbmtogem </code></dt>
+<dd> convert PBM into GEM .img file</dd>
+<dt><code>pbmtogo </code></dt>
+<dd> convert PBM to GraphOn graphics</dd>
+<dt><code>pbmtolj </code></dt>
+<dd> convert PBM to HP LaserJet black and white graphics</dd>
+<dt><code>ppmtolj </code></dt>
+<dd> convert PPM to HP LaserJet color graphics (PCL)</dd>
+<dt><code>pjtoppm </code></dt>
+<dd> convert HP PaintJet file to PPM</dd>
+<dt><code>ppmtopj </code></dt>
+<dd> convert PPM to HP PaintJet file</dd>
+<dt><code>thinkjettopbm</code></dt>
+<dd> convert HP Thinkjet printer stream to PBM</dd>
+<dt><code>pbmtoplot </code></dt>
+<dd> convert PBM into Unix plot(5) file</dd>
+<dt><code>pbmtoptx </code></dt>
+<dd> convert PBM to Printronix graphics</dd>
+<dt><code>pbmtozinc </code></dt>
+<dd> convert PBM to Zinc Interface Library icon</dd>
+<dt><code>fitstopnm </code></dt>
+<dd> convert FITS format to portable anymap</dd>
+<dt><code>pnmtofits </code></dt>
+<dd> convert Netpbm formats to FITS format</dd>
+<dt><code>fstopgm </code></dt>
+<dd> convert Usenix FaceSaver(tm) format to PGM</dd>
+<dt><code>pgmtofs </code></dt>
+<dd> convert PGM to Usenix FaceSaver(tm) format</dd>
+<dt><code>hipstopgm </code></dt>
+<dd> convert HIPS format to PGM</dd>
+<dt><code>lispmtopgm </code></dt>
+<dd> convert a Lisp Machine bitmap file into PGM format</dd>
+<dt><code>pgmtolispm </code></dt>
+<dd> convert PGM into Lisp Machine format</dd>
+<dt><code>pnmtops </code></dt>
+<dd> convert Netpbm formats to Postscript</dd>
+<dt><code>pstopnm </code></dt>
+<dd> convert Postscript to Netpbm formats</dd>
+<dt><code>psidtopgm </code></dt>
+<dd> convert PostScript &quot;image&quot; data to PGM</dd>
+<dt><code>pbmtolps </code></dt>
+<dd> convert PBM image to Postscript using lines</dd>
+<dt><code>pbmtoepsi </code></dt>
+<dd> convert a PBM image to encapsulated Postscript preview bitmap</dd>
+<dt><code>pbmtopsg3</code></dt>
+<dd> convert PBM images to Postscript using G3 fax compression.</dd>
+<dt><code>rawtopgm </code></dt>
+<dd> convert raw grayscale bytes to PGM</dd>
+<dt><code>pgmtopbm </code></dt>
+<dd> convert PGM to PBM</dd>
+<dt><code>gouldtoppm </code></dt>
+<dd> convert Gould scanner file to PPM</dd>
+<dt><code>ilbmtoppm </code></dt>
+<dd> convert IFF ILBM to PPM</dd>
+<dt><code>ppmtoilbm </code></dt>
+<dd> convert PPM to IFF ILBM</dd>
+<dt><code>imgtoppm </code></dt>
+<dd> convert Img-whatnot to PPM</dd>
+<dt><code>mtvtoppm </code></dt>
+<dd> convert MTV ray-tracer output to PPM</dd>
+<dt><code>pcxtoppm </code></dt>
+<dd> convert PC Paintbrush format to PPM</dd>
+<dt><code>pgmtoppm </code></dt>
+<dd> colorize a portable graymap into a PPM</dd>
+<dt><code>pi1toppm </code></dt>
+<dd> convert Atari Degas .pi1 to PPM</dd>
+<dt><code>ppmtopi1 </code></dt>
+<dd> convert PPM to Atari Degas .pi1</dd>
+<dt><code>picttoppm </code></dt>
+<dd> convert Macintosh PICT to PPM</dd>
+<dt><code>ppmtopict </code></dt>
+<dd> convert PPM to Macintosh PICT</dd>
+<dt><code>qrttoppm </code></dt>
+<dd> convert QRT ray-tracer output to PPM</dd>
+<dt><code>rawtoppm </code></dt>
+<dd> convert raw RGB bytes to PPM</dd>
+<dt><code>sldtoppm </code></dt>
+<dd> convert an AutoCAD slide file into a PPM</dd>
+<dt><code>spctoppm </code></dt>
+<dd> convert Atari compressed Spectrum to PPM</dd>
+<dt><code>sputoppm </code></dt>
+<dd> convert Atari uncompressed Spectrum to PPM</dd>
+<dt><code>tgatoppm </code></dt>
+<dd> convert TrueVision Targa file to PPM</dd>
+<dt><code>ppmtotga </code></dt>
+<dd> convert PPM to TrueVision Targa file</dd>
+<dt><code>ximtoppm </code></dt>
+<dd> convert Xim to PPM</dd>
+<dt><code>xpmtoppm </code></dt>
+<dd> convert XPM format to PPM</dd>
+<dt><code>ppmtoxpm </code></dt>
+<dd> convert PPM to XPM format</dd>
+<dt><code>yuvtoppm </code></dt>
+<dd> convert Abekas YUV format to PPM</dd>
+<dt><code>eyuvtoppm </code></dt>
+<dd> convert Encoder/Berkeley YUV format to PPM</dd>
+<dt><code>ppmtoeyuv </code></dt>
+<dd> convert PPM to Encoder/Berkeley YUV format</dd>
+<dt><code>ppmtoyuv </code></dt>
+<dd> convert PPM to Abekas YUV format</dd>
+<dt><code>ppmtoyuvsplit</code></dt>
+<dd> convert PPM to 3 subsampled raw YUV files</dd>
+<dt><code>yuvsplittoppm </code></dt>
+<dd> merge 3 subsampled raw YUV files to one PPM</dd>
+<dt><code>ppmtoacad </code></dt>
+<dd> convert PPM to AutoCAD database or slide</dd>
+<dt><code>ppmtoicr </code></dt>
+<dd> convert PPM to NCSA ICR graphics</dd>
+<dt><code>ppmtopcx </code></dt>
+<dd> convert PPM to PC Paintbrush format</dd>
+<dt><code>ppmtopgm </code></dt>
+<dd> convert PPM to portable graymap</dd>
+<dt><code>ppmtopuzz </code></dt>
+<dd> convert PPM to X11 &quot;puzzle&quot; file</dd>
+<dt><code>rasttopnm </code></dt>
+<dd> convert Sun raster file to Netpbm formats</dd>
+<dt><code>pnmtorast </code></dt>
+<dd> convert Netpbm formats to Sun raster file</dd>
+<dt><code>tifftopnm </code></dt>
+<dd> convert TIFF file to portable anymap</dd>
+<dt><code>pnmtotiff </code></dt>
+<dd> convert Netpbm formats to TIFF RGB file</dd>
+<dt><code>pnmtotiffcmyk</code></dt>
+<dd> convert Netpbm formats to TIFF CMYK file</dd>
+<dt><code>xwdtopnm </code></dt>
+<dd> convert X10 or X11 window dump to Netpbm formats</dd>
+<dt><code>pnmtoxwd </code></dt>
+<dd> convert Netpbm formats to X11 window dump</dd>
+<dt><code>pnmtoplainpnm</code></dt>
+<dd> convert regular Netpbm format image into plain Netpbm format</dd>
+<dt><code>pbmtopgm </code></dt>
+<dd> convert PBM file to PGM by averaging areas</dd>
+<dt><code>411toppm </code></dt>
+<dd> convert 411 (Sony Mavica) to PPM</dd>
+<dt><code>ppmtosixel </code></dt>
+<dd> convert PPM to DEC sixel format</dd>
+<dt><code>ppmtouil </code></dt>
+<dd> convert PPM to Motif UIL icon file</dd>
+<dt><code>sbigtopgm </code></dt>
+<dd> convert Santa Barbara Instrument Group CCD file to PGM</dd>
+<dt><code>vidtoppm </code></dt>
+<dd> convert Parallax XVideo JPEG to sequence of PPM files</dd>
+<dt><code>pnmtorle </code></dt>
+<dd> convert PNM to Utah Raster Toolkit (urt/rle) file</dd>
+<dt><code>rletopnm </code></dt>
+<dd> convert Utah Raster Toolkit (urt/rle) file to PNM</dd>
+<dt><code>ppmtoleaf </code></dt>
+<dd> convert PPM to Interleaf</dd>
+<dt><code>leaftoppm </code></dt>
+<dd> convert Interleaf to PPM</dd>
+<dt><code>bioradtopgm </code></dt>
+<dd> convert Biorad confocal image to PGM</dd>
+<dt><code>pbmtoln03 </code></dt>
+<dd> convert PGM image to Dec LN03+ Sixel image</dd>
+<dt><code>pbmtopk </code></dt>
+<dd> convert PBM image to packed format (PK) font</dd>
+<dt><code>pktopbm </code></dt>
+<dd> convert packed format (PK) font to PBM image </dd>
 </dl>
 <h3>Image Generators</h3>
 <p> All of these generate Netpbm format output. </p>
 <dl>
-<dt><code>pbmmake </code></p>
-<dd> create a blank PBM image of a specified size</p>
-<dt><code>ppmmake </code></p>
-<dd> create a PPM image of a specified size and color</p>
-<dt><code>pgmramp </code></p>
-<dd> generate a grayscale ramp</p>
-<dt><code>ppmpat </code></p>
-<dd> create a pretty PPM image</p>
-<dt><code>ppmrainbow</code></p>
-<dd> create a spectrum-like image with colors fading together.</p>
-<dt><code>pgmnoise </code></p>
-<dd> create a PGM image of white noise</p>
-<dt><code>pbmtext </code></p>
-<dd> render text into a PBM image</p>
-<dt><code>pbmupc </code></p>
-<dd> create a Universal Product Code PBM image</p>
-<dt><code>ppmcie </code></p>
-<dd> generate a CIE color map PPM image</p>
-<dt><code>pbmpage </code></p>
-<dd> create a printer test pattern page in PBM format</p>
-<dt><code>ppmcolors</code></p>
-<dd> create a color map (PPM image) containing all possible colors of given maxval </p>
+<dt><code>pbmmake </code></dt>
+<dd> create a blank PBM image of a specified size</dd>
+<dt><code>ppmmake </code></dt>
+<dd> create a PPM image of a specified size and color</dd>
+<dt><code>pgmramp </code></dt>
+<dd> generate a grayscale ramp</dd>
+<dt><code>ppmpat </code></dt>
+<dd> create a pretty PPM image</dd>
+<dt><code>ppmrainbow</code></dt>
+<dd> create a spectrum-like image with colors fading together.</dd>
+<dt><code>pgmnoise </code></dt>
+<dd> create a PGM image of white noise</dd>
+<dt><code>pbmtext </code></dt>
+<dd> render text into a PBM image</dd>
+<dt><code>pbmupc </code></dt>
+<dd> create a Universal Product Code PBM image</dd>
+<dt><code>ppmcie </code></dt>
+<dd> generate a CIE color map PPM image</dd>
+<dt><code>pbmpage </code></dt>
+<dd> create a printer test pattern page in PBM format</dd>
+<dt><code>ppmcolors</code></dt>
+<dd> create a color map (PPM image) containing all possible colors of given maxval </dd>
 </dl>
 <h3>Image Editors</h3>
 <p> All of these work on the Netpbm formats </p>
 <dl>
-<dt><code>ppmlabel </code></p>
-<dd> Add text to an image</p>
-<dt><code>pnmshadow </code></p>
-<dd> add a shadow to an image so it looks like it&#8217;s floating</p>
-<dt><code>ppmbrighten </code></p>
-<dd> brighten or dim an image &#8212; change saturation and value</p>
-<dt><code>ppmdim </code></p>
-<dd> dim an image &#8211; different way from ppmbrighten</p>
-<dt><code>pbmreduce </code></p>
-<dd> reduce a PBM N times, using Floyd-Steinberg</p>
-<dt><code>pgmnorm </code></p>
-<dd> normalize contrast in a PGM image</p>
-<dt><code>ppmnorm </code></p>
-<dd> normalize contrast in a PPM image</p>
-<dt><code>pbmpscale </code></p>
-<dd> enlarge a PBM image with edge smoothing</p>
-<dt><code>pnmscale </code></p>
-<dd> scale an image with high precision</p>
-<dt><code>pnmscalefixed </code></p>
-<dd> scale an image quickly with low precision</p>
-<dt><code>pnmenlarge </code></p>
-<dd> enlarge an image N times</p>
-<dt><code>ppmdither </code></p>
-<dd> ordered dither for color images</p>
-<dt><code>pnmcolormap</code></p>
-<dd> Choose the N best colors to represent an image; create a colormap</p>
-<dt><code>pnmremap</code></p>
-<dd> Replace colors in an image with those from a color map</p>
-<dt><code>ppmquant </code></p>
-<dd> quantize colors in a color image down to fewer colors</p>
-<dt><code>pnmquant </code></p>
-<dd> quantize colors/shades in a color or grayscale image down to fewer</p>
-<dt><code>ppmquantall </code></p>
-<dd> quantize colors on many files</p>
-<dt><code>ppmrelief </code></p>
-<dd> run a Laplacian Relief filter on a PPM</p>
-<dt><code>pnmarith </code></p>
-<dd> perform arithmetic on two images</p>
-<dt><code>pnmcat </code></p>
-<dd> concatenate images</p>
-<dt><code>pnmpad </code></p>
-<dd> add borders to an image</p>
-<dt><code>pnmcomp </code></p>
-<dd> create composite (overlay) of images</p>
-<dt><code>ppmmix </code></p>
-<dd> mix (overlay) two images.</p>
-<dt><code>pnmcrop </code></p>
-<dd> crop all like-colored borders off an image</p>
-<dt><code>pamcut</code></p>
-<dd> select a rectangular region from an image</p>
-<dt><code>pnmcut </code></p>
-<dd> obsolete version of <code>pamcut</code> (kept because it may have fewer bugs)</p>
-<dt><code>pamdice</code></p>
-<dd> slice an image into many horizontally and/or vertically</p>
-<dt><code>pamdeinterlace</code></p>
-<dd> remove every other row from an image</p>
-<dt><code>pamchannel</code></p>
-<dd> extract a single plane (channel, e.g. R, G, or B) from an image</p>
-<dt><code>pnmdepth </code></p>
-<dd> change the maxval in an image</p>
-<dt><code>pnmflip </code></p>
-<dd> perform one or more flip operations on an image</p>
-<dt><code>pamstretch</code></p>
-<dd> scale up an image by inserting interpolated pixels</p>
-<dt><code>pamstretch-gen </code></p>
-<dd> scale by non-integer values using pamstretch and pnmscale</p>
-<dt><code>pnminvert </code></p>
-<dd> invert an image</p>
-<dt><code>pnmgamma </code></p>
-<dd> perform gamma correction on an image</p>
-<dt><code>pnmhisteq</code></p>
-<dd> histogram equalize image to increase contrast</p>
-<dt><code>pnmmargin </code></p>
-<dd> add a margin to an image</p>
-<dt><code>pnmpaste </code></p>
-<dd> paste a rectangle into an image</p>
-<dt><code>pnmrotate </code></p>
-<dd> rotate an image</p>
-<dt><code>pnmshear </code></p>
-<dd> shear an image</p>
-<dt><code>pnmsmooth </code></p>
-<dd> smooth am image</p>
-<dt><code>pnmtile </code></p>
-<dd> replicate an image into a specified size</p>
-<dt><code>pbmclean </code></p>
-<dd> remove lone pixels (snow) from a PBM image</p>
-<dt><code>pnmalias </code></p>
-<dd> antialias an image</p>
-<dt><code>ppmchange </code></p>
-<dd> change all of one color to another in PPM image</p>
-<dt><code>pnmnlfilt</code></p>
-<dd> filter an image by replacing each pixel with a function of nearby pixels</p>
-<dt><code>ppmshift </code></p>
-<dd> shift lines of PPM image left or right a random amount</p>
-<dt><code>ppmspread </code></p>
-<dd> move pixels of PPM image a random amount</p>
-<dt><code>pnmconvol </code></p>
-<dd> general MxN convolution on an image</p>
-<dt><code>rgb3toppm </code></p>
-<dd> combine three portable graymaps into one PPM</p>
-<dt><code>ppmtorgb3 </code></p>
-<dd> separate a PPM into three portable graymaps</p>
-<dt><code>pbmlife </code></p>
-<dd> apply Conway&#8217;s rules of Life to a PBM image</p>
-<dt><code>ppmdist </code></p>
-<dd> map colors to high contrast grayscales arbitrarily</p>
-<dt><code>ppmntsc </code></p>
-<dd> adjust colors so they are legal for NTSC or PAL television </p>
+<dt><code>ppmlabel </code></dt>
+<dd> Add text to an image</dd>
+<dt><code>pnmshadow </code></dt>
+<dd> add a shadow to an image so it looks like it&#8217;s floating</dd>
+<dt><code>ppmbrighten </code></dt>
+<dd> brighten or dim an image &#8212; change saturation and value</dd>
+<dt><code>ppmdim </code></dt>
+<dd> dim an image &#8211; different way from ppmbrighten</dd>
+<dt><code>pbmreduce </code></dt>
+<dd> reduce a PBM N times, using Floyd-Steinberg</dd>
+<dt><code>pgmnorm </code></dt>
+<dd> normalize contrast in a PGM image</dd>
+<dt><code>ppmnorm </code></dt>
+<dd> normalize contrast in a PPM image</dd>
+<dt><code>pbmpscale </code></dt>
+<dd> enlarge a PBM image with edge smoothing</dd>
+<dt><code>pnmscale </code></dt>
+<dd> scale an image with high precision</dd>
+<dt><code>pnmscalefixed </code></dt>
+<dd> scale an image quickly with low precision</dd>
+<dt><code>pnmenlarge </code></dt>
+<dd> enlarge an image N times</dd>
+<dt><code>ppmdither </code></dt>
+<dd> ordered dither for color images</dd>
+<dt><code>pnmcolormap</code></dt>
+<dd> Choose the N best colors to represent an image; create a colormap</dd>
+<dt><code>pnmremap</code></dt>
+<dd> Replace colors in an image with those from a color map</dd>
+<dt><code>ppmquant </code></dt>
+<dd> quantize colors in a color image down to fewer colors</dd>
+<dt><code>pnmquant </code></dt>
+<dd> quantize colors/shades in a color or grayscale image down to fewer</dd>
+<dt><code>ppmquantall </code></dt>
+<dd> quantize colors on many files</dd>
+<dt><code>ppmrelief </code></dt>
+<dd> run a Laplacian Relief filter on a PPM</dd>
+<dt><code>pnmarith </code></dt>
+<dd> perform arithmetic on two images</dd>
+<dt><code>pnmcat </code></dt>
+<dd> concatenate images</dd>
+<dt><code>pnmpad </code></dt>
+<dd> add borders to an image</dd>
+<dt><code>pnmcomp </code></dt>
+<dd> create composite (overlay) of images</dd>
+<dt><code>ppmmix </code></dt>
+<dd> mix (overlay) two images.</dd>
+<dt><code>pnmcrop </code></dt>
+<dd> crop all like-colored borders off an image</dd>
+<dt><code>pamcut</code></dt>
+<dd> select a rectangular region from an image</dd>
+<dt><code>pnmcut </code></dt>
+<dd> obsolete version of <code>pamcut</code> (kept because it may have fewer bugs)</dd>
+<dt><code>pamdice</code></dt>
+<dd> slice an image into many horizontally and/or vertically</dd>
+<dt><code>pamdeinterlace</code></dt>
+<dd> remove every other row from an image</dd>
+<dt><code>pamchannel</code></dt>
+<dd> extract a single plane (channel, e.g. R, G, or B) from an image</dd>
+<dt><code>pnmdepth </code></dt>
+<dd> change the maxval in an image</dd>
+<dt><code>pnmflip </code></dt>
+<dd> perform one or more flip operations on an image</dd>
+<dt><code>pamstretch</code></dt>
+<dd> scale up an image by inserting interpolated pixels</dd>
+<dt><code>pamstretch-gen </code></dt>
+<dd> scale by non-integer values using pamstretch and pnmscale</dd>
+<dt><code>pnminvert </code></dt>
+<dd> invert an image</dd>
+<dt><code>pnmgamma </code></dt>
+<dd> perform gamma correction on an image</dd>
+<dt><code>pnmhisteq</code></dt>
+<dd> histogram equalize image to increase contrast</dd>
+<dt><code>pnmmargin </code></dt>
+<dd> add a margin to an image</dd>
+<dt><code>pnmpaste </code></dt>
+<dd> paste a rectangle into an image</dd>
+<dt><code>pnmrotate </code></dt>
+<dd> rotate an image</dd>
+<dt><code>pnmshear </code></dt>
+<dd> shear an image</dd>
+<dt><code>pnmsmooth </code></dt>
+<dd> smooth am image</dd>
+<dt><code>pnmtile </code></dt>
+<dd> replicate an image into a specified size</dd>
+<dt><code>pbmclean </code></dt>
+<dd> remove lone pixels (snow) from a PBM image</dd>
+<dt><code>pnmalias </code></dt>
+<dd> antialias an image</dd>
+<dt><code>ppmchange </code></dt>
+<dd> change all of one color to another in PPM image</dd>
+<dt><code>pnmnlfilt</code></dt>
+<dd> filter an image by replacing each pixel with a function of nearby pixels</dd>
+<dt><code>ppmshift </code></dt>
+<dd> shift lines of PPM image left or right a random amount</dd>
+<dt><code>ppmspread </code></dt>
+<dd> move pixels of PPM image a random amount</dd>
+<dt><code>pnmconvol </code></dt>
+<dd> general MxN convolution on an image</dd>
+<dt><code>rgb3toppm </code></dt>
+<dd> combine three portable graymaps into one PPM</dd>
+<dt><code>ppmtorgb3 </code></dt>
+<dd> separate a PPM into three portable graymaps</dd>
+<dt><code>pbmlife </code></dt>
+<dd> apply Conway&#8217;s rules of Life to a PBM image</dd>
+<dt><code>ppmdist </code></dt>
+<dd> map colors to high contrast grayscales arbitrarily</dd>
+<dt><code>ppmntsc </code></dt>
+<dd> adjust colors so they are legal for NTSC or PAL television </dd>
 </dl>
 <h3>Image Analyzers</h3>
 <p> These all work on the Netpbm formats as input. </p>
 <dl>
-<dt><code>pnmfile </code></p>
-<dd> describe an image&#8217;s vital characteristics</p>
-<dt><code>pnmpsnr </code></p>
-<dd> measure difference between two images</p>
-<dt><code>pgmedge </code></p>
-<dd> edge-detect a PGM image</p>
-<dt><code>pgmenhance </code></p>
-<dd> edge-enhance a PGM image</p>
-<dt><code>pgmslice </code></p>
-<dd> print grayscale values for a row or column of a PGM image</p>
-<dt><code>pgmtexture </code></p>
-<dd> calculate textural features on a PGM image</p>
-<dt><code>pgmhist </code></p>
-<dd> print a histogram of the values in a PGM image</p>
-<dt><code>ppmhist </code></p>
-<dd> print a histogram of a PPM</p>
-<dt><code>pnmhistmap</code></p>
-<dd> draw a histogram of a PGM or PPM</p>
-<dt><code>ppmtomap </code></p>
-<dd> generate a map of all colors in an image</p>
-<dt><code>ppm3d</code></p>
-<dd> generate a blue/green 3D glasses image from two images </p>
+<dt><code>pnmfile </code></dt>
+<dd> describe an image&#8217;s vital characteristics</dd>
+<dt><code>pnmpsnr </code></dt>
+<dd> measure difference between two images</dd>
+<dt><code>pgmedge </code></dt>
+<dd> edge-detect a PGM image</dd>
+<dt><code>pgmenhance </code></dt>
+<dd> edge-enhance a PGM image</dd>
+<dt><code>pgmslice </code></dt>
+<dd> print grayscale values for a row or column of a PGM image</dd>
+<dt><code>pgmtexture </code></dt>
+<dd> calculate textural features on a PGM image</dd>
+<dt><code>pgmhist </code></dt>
+<dd> print a histogram of the values in a PGM image</dd>
+<dt><code>ppmhist </code></dt>
+<dd> print a histogram of a PPM</dd>
+<dt><code>pnmhistmap</code></dt>
+<dd> draw a histogram of a PGM or PPM</dd>
+<dt><code>ppmtomap </code></dt>
+<dd> generate a map of all colors in an image</dd>
+<dt><code>ppm3d</code></dt>
+<dd> generate a blue/green 3D glasses image from two images </dd>
 </dl>
 <h3>Miscellaneous</h3>
 <dl>
-<dt><code>ppmsvgalib</code></p>
-<dd> display a PPM image on a Linux virtual console using Svgalib</p>
-<dt><code>pbmmask </code></p>
-<dd> create a mask bitmap from a regular bitmap</p>
-<dt><code>ppmcolormask </code></p>
-<dd> create mask of areas of a certain color in an image</p>
-<dt><code>pnmsplit </code></p>
-<dd> split a multi-image Netpbm file into multiple 1-image files</p>
-<dt><code>pnmindex </code></p>
-<dd> build a visual index of a bunch of Netpbm images</p>
-<dt><code>pcdindex </code></p>
-<dd> build a visual index of a photo CD from PCD overview file</p>
-<dt><code>pnmmontage </code></p>
-<dd> build multiple Netpbm images into a single montage image</p>
-<dt><code>pgmbentley </code></p>
-<dd> Bentleyize a PGM image</p>
-<dt><code>pgmcrater </code></p>
-<dd> create cratered terrain by fractal forgery</p>
-<dt><code>pamoil </code></p>
-<dd> turn a PNM or PAM image into an oil painting</p>
-<dt><code>ppmforge </code></p>
-<dd> fractal forgeries of clouds, planets, and starry skies</p>
-<dt><code>pgmkernel </code></p>
-<dd> generate a convolution kernel</p>
-<dt><code>ppmtv </code></p>
-<dd> Make an image lined so it looks like an old TV</p>
-<dt><code>pbmto4425 </code></p>
+<dt><code>ppmsvgalib</code></dt>
+<dd> display a PPM image on a Linux virtual console using Svgalib</dd>
+<dt><code>pbmmask </code></dt>
+<dd> create a mask bitmap from a regular bitmap</dd>
+<dt><code>ppmcolormask </code></dt>
+<dd> create mask of areas of a certain color in an image</dd>
+<dt><code>pnmsplit </code></dt>
+<dd> split a multi-image Netpbm file into multiple 1-image files</dd>
+<dt><code>pnmindex </code></dt>
+<dd> build a visual index of a bunch of Netpbm images</dd>
+<dt><code>pcdindex </code></dt>
+<dd> build a visual index of a photo CD from PCD overview file</dd>
+<dt><code>pnmmontage </code></dt>
+<dd> build multiple Netpbm images into a single montage image</dd>
+<dt><code>pgmbentley </code></dt>
+<dd> Bentleyize a PGM image</dd>
+<dt><code>pgmcrater </code></dt>
+<dd> create cratered terrain by fractal forgery</dd>
+<dt><code>pamoil </code></dt>
+<dd> turn a PNM or PAM image into an oil painting</dd>
+<dt><code>ppmforge </code></dt>
+<dd> fractal forgeries of clouds, planets, and starry skies</dd>
+<dt><code>pgmkernel </code></dt>
+<dd> generate a convolution kernel</dd>
+<dt><code>ppmtv </code></dt>
+<dd> Make an image lined so it looks like an old TV</dd>
+<dt><code>pbmto4425 </code></dt>
 <dd> Display PBM image on AT&amp;T 4425 ASCII terminal with gfx chars<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl>
 <h3>Uncatalogued As Yet</h3>
 <dl>
-<dt><code>pnmtoddif</code></p>
+<dt><code>pnmtoddif</code></dt>
 <dd>
-<dt><code>pnmtosgi</code></p>
+</dd><dt><code>pnmtosgi</code></dt>
 <dd>
-<dt><code>pnmtosir</code></p>
+</dd><dt><code>pnmtosir</code></dt>
 <dd>
-<dt><code>ppmflash</code></p>
+</dd><dt><code>ppmflash</code></dt>
 <dd>
-<dt><code>ppmqvga</code></p>
+</dd><dt><code>ppmqvga</code></dt>
 <dd>
-<dt><code>ppmtomitsu</code></p>
+</dd><dt><code>ppmtomitsu</code></dt>
 <dd>
-<dt><code>ppmtopjxl</code></p>
+</dd><dt><code>ppmtopjxl</code></dt>
 <dd>
-<dt><code>sgitopnm</code></p>
+</dd><dt><code>sgitopnm</code></dt>
 <dd>
-<dt><code>sirtopnm</code></p>
+</dd><dt><code>sirtopnm</code></dt>
 <dd>
-<dt><code>spottopgm</code></p>
+</dd><dt><code>spottopgm</code></dt>
 <dd>
-<dt><code>xvminitoppm</code></p>
+</dd><dt><code>xvminitoppm</code></dt>
 <dd>
-<dt><code>zeisstopnm</code></p>
+</dd><dt><code>zeisstopnm</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>The Netpbm Libraries</h2>
 <p> The Netpbm programming libraries, <code><a href="/docs/linux/man/3-libpbm/">libpbm</a></code>(3), <code><a href="/docs/linux/man/3-libpgm/">libpgm</a></code>(3), <code><a href="/docs/linux/man/3-libppm/">libppm</a></code>(3), and <code><a href="/docs/linux/man/3-libpnm/">libpnm</a></code>(3), make it easy to write programs that manipulate graphic images. Their main function is to read and write files in the Netpbm format, and because the Netpbm package contains converters for all the popular graphics formats, if your program reads and writes the Netpbm formats, you can use it with any formats. </p>
 <p> But the libraries also contain some utility functions, such as character drawing and RGB/YCrCb conversion. </p>

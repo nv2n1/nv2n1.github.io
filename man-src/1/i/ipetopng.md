@@ -16,14 +16,14 @@ description: "ipetopng – Save an Ipe document as a bitmap"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>ipetopng</code> respects the following environment variables: </p>
 <dl>
-<dt><code>IPELATEXDIR</code></p>
-<dd> the directory where <code>ipetopng</code> runs Pdflatex. </p>
-<dt><code>IPEPDFLATEX</code></p>
-<dd> the name of the Pdflatex executable. If Pdflatex is on your path, the value <i>pdflatex</i> is sufficient. </p>
-<dt><code>IPEFONTMAP</code></p>
-<dd> the complete path of the font map, describing where Ipe can find the 14 standard PDF fonts. </p>
-<dt><code>TEXINPUTS</code></p>
-<dd> when running Pdflatex, Ipe prepends both the current directory (where Ipe was started) as the directory containing the current document to the <code>TEXINPUTS</code> environment variable. </p>
+<dt><code>IPELATEXDIR</code></dt>
+<dd> the directory where <code>ipetopng</code> runs Pdflatex. </dd>
+<dt><code>IPEPDFLATEX</code></dt>
+<dd> the name of the Pdflatex executable. If Pdflatex is on your path, the value <i>pdflatex</i> is sufficient. </dd>
+<dt><code>IPEFONTMAP</code></dt>
+<dd> the complete path of the font map, describing where Ipe can find the 14 standard PDF fonts. </dd>
+<dt><code>TEXINPUTS</code></dt>
+<dd> when running Pdflatex, Ipe prepends both the current directory (where Ipe was started) as the directory containing the current document to the <code>TEXINPUTS</code> environment variable. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Otfried Cheong </p>

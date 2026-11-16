@@ -12,96 +12,96 @@ description: "SIMPLE-MTPFS – filesystem driver for MTP based devices"
 <h2>SYNOPSIS</h2>
 <h3>mounting</h3>
 <dl>
-<dt><code>simple-mtpfs &lt;device&gt;</code> <code>mountpoint</code> [<i>options</i>]</p>
-<dd></dl>
+<dt><code>simple-mtpfs &lt;device&gt;</code> <code>mountpoint</code> [<i>options</i>]</dt>
+<dd></dd></dl>
 <h3>unmounting</h3>
 <dl>
-<dt><code>fusermount -u mountpoint</code></p>
-<dd></dl>
+<dt><code>fusermount -u mountpoint</code></dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> SIMPLE-MTPFS (Simple Media Transfer Protocol FileSystem) is a file system for Linux (and other operating systems with a FUSE implementation, such as Mac OS X or FreeBSD) capable of operating on files on MTP devices attached via USB to local machine. On the local computer where the SIMPLE-MTPFS is mounted, the implementation makes use of the FUSE (Filesystem in Userspace) kernel module. The practical effect of this is that the end user can seamlessly interact with MTP device files.</p>
 <h2>OPTIONS</h2>
 <h3>general options:</h3>
 <dl>
-<dt><code>-o</code> opt,[opt&#8230;]</p>
-<dd> mount options</p>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> print help</p>
-<dt><code>-V</code> <code>&#8211;version</code></p>
-<dd> print version</dl>
+<dt><code>-o</code> opt,[opt&#8230;]</dt>
+<dd> mount options</dd>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> print help</dd>
+<dt><code>-V</code> <code>&#8211;version</code></dt>
+<dd> print version</dd></dl>
 <h3>SIMPLE-MTPFS options:</h3>
 <dl>
-<dt><code>-l</code> <code>&#8211;list-devices</code></p>
-<dd> list available MTP devices</p>
+<dt><code>-l</code> <code>&#8211;list-devices</code></dt>
+<dd> list available MTP devices</dd>
 <dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;device</code></p>
-<dd> select device no. to mount</p>
-<dt><code>-o</code> enable-move</p>
-<dd> enable move operation, which can be very slow (depends on the moved content)</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;device</code></dt>
+<dd> select device no. to mount</dd>
+<dt><code>-o</code> enable-move</dt>
+<dd> enable move operation, which can be very slow (depends on the moved content)</dd></dl>
 <h3>FUSE options:</h3>
 <dl>
-<dt><code>-d</code> <code>-o</code> debug</p>
-<dd> enable debug output (implies <code>-f</code>)</p>
-<dt><code>-f</code></p>
-<dd> foreground operation</p>
-<dt><code>-s</code></p>
-<dd> disable multi-threaded operation</p>
-<dt><code>-o</code> allow_other</p>
-<dd> allow access to other users</p>
-<dt><code>-o</code> allow_root</p>
-<dd> allow access to root</p>
-<dt><code>-o</code> nonempty</p>
-<dd> allow mounts over non-empty file/dir</p>
-<dt> <code>-o</code> default_permissions</p>
-<dd>enable permission checking by kernel</p>
-<dt><code>-o</code> fsname=NAME</p>
-<dd> set filesystem name</p>
-<dt><code>-o</code> subtype=NAME</p>
-<dd> set filesystem type</p>
-<dt><code>-o</code> large_read</p>
-<dd> issue large read requests (2.4 only)</p>
-<dt><code>-o</code> max_read=N</p>
-<dd> set maximum size of read requests</p>
-<dt><code>-o</code> hard_remove</p>
-<dd> immediate removal (don&#8217;t hide files)</p>
-<dt><code>-o</code> use_ino</p>
-<dd> let filesystem set inode numbers</p>
-<dt><code>-o</code> readdir_ino</p>
-<dd> try to fill in d_ino in readdir</p>
-<dt><code>-o</code> direct_io</p>
-<dd> use direct I/O</p>
-<dt><code>-o</code> kernel_cache</p>
-<dd> cache files in kernel</p>
-<dt><code>-o</code> [no]auto_cache</p>
-<dd> enable caching based on modification times</p>
-<dt><code>-o</code> umask=M</p>
-<dd> set file permissions (octal)</p>
-<dt><code>-o</code> uid=N</p>
-<dd> set file owner</p>
-<dt><code>-o</code> gid=N</p>
-<dd> set file group</p>
-<dt><code>-o</code> entry_timeout=T</p>
-<dd> cache timeout for names (1.0s)</p>
-<dt><code>-o</code> negative_timeout=T</p>
-<dd> cache timeout for deleted names (0.0s)</p>
-<dt><code>-o</code> attr_timeout=T</p>
-<dd> cache timeout for attributes (1.0s)</p>
-<dt><code>-o</code> ac_attr_timeout=T</p>
-<dd> auto cache timeout for attributes (attr_timeout)</p>
-<dt><code>-o</code> intr</p>
-<dd> allow requests to be interrupted</p>
-<dt><code>-o</code> intr_signal=NUM</p>
-<dd> signal to send on interrupt (10)</p>
-<dt><code>-o</code> modules=M1[:M2&#8230;]</p>
-<dd> names of modules to push onto filesystem stack</p>
-<dt><code>-o</code> max_write=N</p>
-<dd> set maximum size of write requests</p>
-<dt><code>-o</code> max_readahead=N</p>
-<dd> set maximum readahead</p>
-<dt><code>-o</code> async_read</p>
-<dd> perform reads asynchronously (default)</p>
-<dt><code>-o</code> sync_read</p>
-<dd> perform reads synchronously</dl>
+<dt><code>-d</code> <code>-o</code> debug</dt>
+<dd> enable debug output (implies <code>-f</code>)</dd>
+<dt><code>-f</code></dt>
+<dd> foreground operation</dd>
+<dt><code>-s</code></dt>
+<dd> disable multi-threaded operation</dd>
+<dt><code>-o</code> allow_other</dt>
+<dd> allow access to other users</dd>
+<dt><code>-o</code> allow_root</dt>
+<dd> allow access to root</dd>
+<dt><code>-o</code> nonempty</dt>
+<dd> allow mounts over non-empty file/dir</dd>
+<dt> <code>-o</code> default_permissions</dt>
+<dd>enable permission checking by kernel</dd>
+<dt><code>-o</code> fsname=NAME</dt>
+<dd> set filesystem name</dd>
+<dt><code>-o</code> subtype=NAME</dt>
+<dd> set filesystem type</dd>
+<dt><code>-o</code> large_read</dt>
+<dd> issue large read requests (2.4 only)</dd>
+<dt><code>-o</code> max_read=N</dt>
+<dd> set maximum size of read requests</dd>
+<dt><code>-o</code> hard_remove</dt>
+<dd> immediate removal (don&#8217;t hide files)</dd>
+<dt><code>-o</code> use_ino</dt>
+<dd> let filesystem set inode numbers</dd>
+<dt><code>-o</code> readdir_ino</dt>
+<dd> try to fill in d_ino in readdir</dd>
+<dt><code>-o</code> direct_io</dt>
+<dd> use direct I/O</dd>
+<dt><code>-o</code> kernel_cache</dt>
+<dd> cache files in kernel</dd>
+<dt><code>-o</code> [no]auto_cache</dt>
+<dd> enable caching based on modification times</dd>
+<dt><code>-o</code> umask=M</dt>
+<dd> set file permissions (octal)</dd>
+<dt><code>-o</code> uid=N</dt>
+<dd> set file owner</dd>
+<dt><code>-o</code> gid=N</dt>
+<dd> set file group</dd>
+<dt><code>-o</code> entry_timeout=T</dt>
+<dd> cache timeout for names (1.0s)</dd>
+<dt><code>-o</code> negative_timeout=T</dt>
+<dd> cache timeout for deleted names (0.0s)</dd>
+<dt><code>-o</code> attr_timeout=T</dt>
+<dd> cache timeout for attributes (1.0s)</dd>
+<dt><code>-o</code> ac_attr_timeout=T</dt>
+<dd> auto cache timeout for attributes (attr_timeout)</dd>
+<dt><code>-o</code> intr</dt>
+<dd> allow requests to be interrupted</dd>
+<dt><code>-o</code> intr_signal=NUM</dt>
+<dd> signal to send on interrupt (10)</dd>
+<dt><code>-o</code> modules=M1[:M2&#8230;]</dt>
+<dd> names of modules to push onto filesystem stack</dd>
+<dt><code>-o</code> max_write=N</dt>
+<dd> set maximum size of write requests</dd>
+<dt><code>-o</code> max_readahead=N</dt>
+<dd> set maximum readahead</dd>
+<dt><code>-o</code> async_read</dt>
+<dd> perform reads asynchronously (default)</dd>
+<dt><code>-o</code> sync_read</dt>
+<dd> perform reads synchronously</dd></dl>
 <h2>AUTHORS</h2>
 <p> SIMPLE-MTPFS has been written by Peter Hatina &lt;phatina [at] gmail.com&gt;. </p>
 <h2>Index</h2>

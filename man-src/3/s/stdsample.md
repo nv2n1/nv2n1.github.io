@@ -11,15 +11,10 @@ std::sample - std::sample
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class PopulationIterator, class SampleIterator,
-
 class Distance, class URBG &gt;
-
 SampleIterator sample( PopulationIterator first, PopulationIterator last,  (since C++17)
-
 SampleIterator out, Distance n,
-
 URBG&amp;&amp; g);</code></pre> 
 Selects n elements from the sequence [first; last) such that each possible sample has equal probability of appearance, and writes those selected elements into the output iterator out. Random numbers are generated using the random number generator g. 
 If n is greater than the number of elements in the sequence, selects last-first elements. 
@@ -59,16 +54,11 @@ This function may implement selection sampling or reservoir sampling.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::string in = &quot;abcdefgh&quot;, out;
     std::sample(in.begin(), in.end(), std::back_inserter(out),

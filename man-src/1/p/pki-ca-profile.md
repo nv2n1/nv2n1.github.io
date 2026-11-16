@@ -18,31 +18,31 @@ pki[CLI options] ca - profile pki[CLI options] ca - profile - find[command optio
 <p> <code>pki</code> [CLI options] <code>ca-profile-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list the profiles.</dl>
+</dt><dd> This command is to list the profiles.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-show &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view the details of a profile.</dl>
+</dt><dd> This command is to view the details of a profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-add &lt;input file path&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to create a new profile.</dl>
+</dt><dd> This command is to create a new profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-mod &lt;input file path&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify an existing profile.</dl>
+</dt><dd> This command is to modify an existing profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-del &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a profile.</dl>
+</dt><dd> This command is to delete a profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-enable &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to enable a profile.</dl>
+</dt><dd> This command is to enable a profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-profile-disable &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to disable a profile.</dl>
+</dt><dd> This command is to disable a profile.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

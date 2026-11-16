@@ -10,66 +10,66 @@ description: "qtoptions – Common commandline options for all applications base
 <p>qtoptions &#8211; Common commandline options for all applications based on the Qt toolkit</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <i>Qt application</i> [Qt Generic Options]</dl>
+<dt> <i>Qt application</i> [Qt Generic Options]</dt></dl>
 <h2>Options</h2>
-<dd>The following options apply to all Qt(TM) applications: </p>
+<dd>The following options apply to all Qt(TM) applications: </dd>
 <p> <code>&#8211;display</code> <i>displayname</i></p>
 <dl>
-<dd>Use the X-server display <i>displayname</i>.</dl>
+<dd>Use the X-server display <i>displayname</i>.</dd></dl>
 <p> <code>&#8211;session</code> <i>sessionId</i></p>
 <dl>
-<dd>Restore the application for the given <i>sessionId</i>.</dl>
+<dd>Restore the application for the given <i>sessionId</i>.</dd></dl>
 <p> <code>&#8211;cmap</code></p>
 <dl>
-<dd>Causes the application to install a private color map on an 8-bit display.</dl>
+<dd>Causes the application to install a private color map on an 8-bit display.</dd></dl>
 <p> <code>&#8211;ncols</code> <i>count</i></p>
 <dl>
-<dd>Limits the number of colors allocated in the color cube on an 8-bit display, if the application is using the QApplication::ManyColor color specification.</dl>
+<dd>Limits the number of colors allocated in the color cube on an 8-bit display, if the application is using the QApplication::ManyColor color specification.</dd></dl>
 <p> <code>&#8211;nograb</code></p>
 <dl>
-<dd>Tells Qt(TM) to never grab the mouse or the keyboard.</dl>
+<dd>Tells Qt(TM) to never grab the mouse or the keyboard.</dd></dl>
 <p> <code>&#8211;dograb</code></p>
 <dl>
-<dd>Running under a debugger can cause an implicit <code>&#8211;nograb</code>, use <code>&#8211;dograb</code> to override.</dl>
+<dd>Running under a debugger can cause an implicit <code>&#8211;nograb</code>, use <code>&#8211;dograb</code> to override.</dd></dl>
 <p> <code>&#8211;sync</code></p>
 <dl>
-<dd>Switches to synchronous mode for debugging.</dl>
+<dd>Switches to synchronous mode for debugging.</dd></dl>
 <p> <code>&#8211;fn</code>,<code>&#8211;font</code> <i>fontname</i></p>
 <dl>
-<dd>Defines the application font.</dl>
+<dd>Defines the application font.</dd></dl>
 <p> <code>&#8211;bg</code>,<code>&#8211;background</code> <i>color</i></p>
 <dl>
-<dd>Sets the default background color and an application palette (light and dark shades are calculated).</dl>
+<dd>Sets the default background color and an application palette (light and dark shades are calculated).</dd></dl>
 <p> <code>&#8211;fg</code>,<code>&#8211;foreground</code> <i>color</i></p>
 <dl>
-<dd>Sets the default foreground color</dl>
+<dd>Sets the default foreground color</dd></dl>
 <p> <code>&#8211;btn</code>,<code>&#8211;button</code> <i>color</i></p>
 <dl>
-<dd>Sets the default button color.</dl>
+<dd>Sets the default button color.</dd></dl>
 <p> <code>&#8211;name</code> <i>name</i></p>
 <dl>
-<dd>Sets the application name.</dl>
+<dd>Sets the application name.</dd></dl>
 <p> <code>&#8211;title</code> <i>title</i></p>
 <dl>
-<dd>Sets the application title (caption).</dl>
+<dd>Sets the application title (caption).</dd></dl>
 <p> <code>&#8211;visual</code> <i>TrueColor</i></p>
 <dl>
-<dd>Forces the application to use a <i>TrueColor</i> visual on an 8-bit display.</dl>
+<dd>Forces the application to use a <i>TrueColor</i> visual on an 8-bit display.</dd></dl>
 <p> <code>&#8211;inputstyle</code> <i>inputstyle</i></p>
 <dl>
-<dd>Sets XIM (X Input Method) input style. Possible values are <i>onthespot</i>, <i>overthespot</i>, <i>offthespot</i> and <i>root</i>.</dl>
+<dd>Sets XIM (X Input Method) input style. Possible values are <i>onthespot</i>, <i>overthespot</i>, <i>offthespot</i> and <i>root</i>.</dd></dl>
 <p> <code>&#8211;im</code> <i>XIM server</i></p>
 <dl>
-<dd>Set XIM server.</dl>
+<dd>Set XIM server.</dd></dl>
 <p> <code>&#8211;noxim</code></p>
 <dl>
-<dd>Disable XIM</dl>
+<dd>Disable XIM</dd></dl>
 <p> <code>&#8211;reverse</code></p>
 <dl>
-<dd>mirrors the whole layout of widgets</dl>
+<dd>mirrors the whole layout of widgets</dd></dl>
 <p> <code>&#8211;stylesheet</code> <i>file.qss</i></p>
 <dl>
-<dd>applies the Qt stylesheet to the application widgets</dl>
+<dd>applies the Qt stylesheet to the application widgets</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7)</p>
 <h2>Authors</h2>
@@ -77,4 +77,4 @@ description: "qtoptions – Common commandline options for all applications base
 <h2>Author</h2>
 <p><code>Lauri Watts</code> &lt;lauri [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

@@ -11,7 +11,6 @@ description: "ql/models/shortrate/twofactormodel.hpp – Abstract two-factor int
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/models/model.hpp&gt;
-
 #include &lt;ql/methods/lattices/lattice2d.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TwoFactorModel</code><br />

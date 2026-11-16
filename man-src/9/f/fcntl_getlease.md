@@ -14,7 +14,7 @@ description: "fcntl_getlease – Enquire what lease is currently active"
 <p><i>filp</i></p>
 <dl>
 <dd>
-<dd>the file</dl>
+</dd><dd>the file</dd></dl>
 <h2>Description</h2>
 <p>The value returned by this function will be one of (if no lease break is pending): </p>
 <p> <code>F_RDLCK</code> to indicate a shared lease is held. </p>

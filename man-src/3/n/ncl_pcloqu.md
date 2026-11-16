@@ -24,31 +24,31 @@ CALL PCLOQU (XPOS,YPOS,CHRS,SIZE,ANGD,CNTR)
 <h2>Description</h2>
 
 <dl><dt>XPOS,YPOS
-<dd>(input expressions of type REAL) specify positioning coordinates for the characters to be drawn. If the internal parameter 'MA' has the value 0, these are given in the current user coordinate system; otherwise, they are given in an arbitrary X/Y coordinate system, as implied by the value of 'MA' and the nature of the routine CPMPXY. (For example, if 'MA' has the value 1 and the default version of CPMPXY is being used, then XPOS is a longitude, in degrees, and YPOS is a latitude, in degrees.) The argument CNTR (described below) specifies how the characters are to be positioned relative to the point (XPOS,YPOS).
-<dt>CHRS
-<dd>(an input constant or variable of type CHARACTER) contains a character string to be drawn. The number of characters in CHRS is taken to be LEN(CHRS); to use characters &quot;m&quot; through &quot;n&quot; from a character variable CHRS, use the FORTRAN-77 substring notation &quot;CHRS(m:n)&quot;. The string may include any of the 95 characters space, exclamation point, double quote, pound sign, dollar sign, percent sign, ampersand, apostrophe, left parenthesis, right parenthesis, asterisk, plus sign, comma, minus sign, period, slash, 0-9, colon, semi-colon, less than sign, equals sign, greater than sign, question mark, at sign, A-Z, left square bracket, backslash, right square bracket, hat, underscore, backwards quote, a-z, left curly bracket, vertical bar, right curly bracket, and tilde. Function codes, like those in calls to PCHIQU, may not be used.
-<dt>SIZE
-<dd>(an input expression of type REAL) specifies the desired character size. If the internal parameter 'MA' is zero, then the following comments apply:
-<dl><dd><dl><dt>&bull;
-<dd>If SIZE is less than or equal to zero, its absolute value specifies the size as a multiple of a default digitized size on a 1024x1024 grid, on which blanks are 16 units wide.
-<dt>&bull;
-<dd>If SIZE is greater than zero, but less than one, it specifies the desired width of a blank as a fraction of the distance across the plotter frame. This is the recommended scheme.
-<dt>&bull;
-<dd>If SIZE is greater than or equal to one, it specifies the desired width of a blank in plotter coordinates, as defined by default or by a user's call to the SPPS routine SETI. Note that use of the routine SETI is now discouraged.</dl></dl><dd>If 'MA' is nonzero, then SIZE is the desired width of a blank as a value in the X/Y coordinate system in which XPOS and YPOS are given. 
+</dt><dd>(input expressions of type REAL) specify positioning coordinates for the characters to be drawn. If the internal parameter 'MA' has the value 0, these are given in the current user coordinate system; otherwise, they are given in an arbitrary X/Y coordinate system, as implied by the value of 'MA' and the nature of the routine CPMPXY. (For example, if 'MA' has the value 1 and the default version of CPMPXY is being used, then XPOS is a longitude, in degrees, and YPOS is a latitude, in degrees.) The argument CNTR (described below) specifies how the characters are to be positioned relative to the point (XPOS,YPOS).
+</dd><dt>CHRS
+</dt><dd>(an input constant or variable of type CHARACTER) contains a character string to be drawn. The number of characters in CHRS is taken to be LEN(CHRS); to use characters &quot;m&quot; through &quot;n&quot; from a character variable CHRS, use the FORTRAN-77 substring notation &quot;CHRS(m:n)&quot;. The string may include any of the 95 characters space, exclamation point, double quote, pound sign, dollar sign, percent sign, ampersand, apostrophe, left parenthesis, right parenthesis, asterisk, plus sign, comma, minus sign, period, slash, 0-9, colon, semi-colon, less than sign, equals sign, greater than sign, question mark, at sign, A-Z, left square bracket, backslash, right square bracket, hat, underscore, backwards quote, a-z, left curly bracket, vertical bar, right curly bracket, and tilde. Function codes, like those in calls to PCHIQU, may not be used.
+</dd><dt>SIZE
+</dt><dd>(an input expression of type REAL) specifies the desired character size. If the internal parameter 'MA' is zero, then the following comments apply:
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>If SIZE is less than or equal to zero, its absolute value specifies the size as a multiple of a default digitized size on a 1024x1024 grid, on which blanks are 16 units wide.
+</dd><dt>&bull;
+</dt><dd>If SIZE is greater than zero, but less than one, it specifies the desired width of a blank as a fraction of the distance across the plotter frame. This is the recommended scheme.
+</dd><dt>&bull;
+</dt><dd>If SIZE is greater than or equal to one, it specifies the desired width of a blank in plotter coordinates, as defined by default or by a user's call to the SPPS routine SETI. Note that use of the routine SETI is now discouraged.</dd></dl></dl><dd>If 'MA' is nonzero, then SIZE is the desired width of a blank as a value in the X/Y coordinate system in which XPOS and YPOS are given. 
 
  Note that SIZE is defined in such a way as to be consistent with PCHIQU.
-<dt>ANGD
-<dd>(an input expression of type REAL) is the angle, in degrees counterclockwise from the positive X axis, at which the character string is to be written.
-<dt>CNTR
-<dd>(an input expression of type REAL) is the centering option, as follows:
-<dl><dd><dl><dt>&bull;
-<dd>CNTR &lt; 0. means that (XPOS,YPOS) is the center of the left edge of the first character.
-<dt>&bull;
-<dd>CNTR &gt; 0. means that (XPOS,YPOS) is the center of the right edge of the last character.
-<dt>&bull;
-<dd>CNTR = 0. means that (XPOS,YPOS) is the midpoint of the string.</dl></dl><dd>Note that this argument is not quite the same as that for PCHIQU (though it does include the three most useful cases). 
+</dd><dt>ANGD
+</dt><dd>(an input expression of type REAL) is the angle, in degrees counterclockwise from the positive X axis, at which the character string is to be written.
+</dd><dt>CNTR
+</dt><dd>(an input expression of type REAL) is the centering option, as follows:
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>CNTR &lt; 0. means that (XPOS,YPOS) is the center of the left edge of the first character.
+</dd><dt>&bull;
+</dt><dd>CNTR &gt; 0. means that (XPOS,YPOS) is the center of the right edge of the last character.
+</dd><dt>&bull;
+</dt><dd>CNTR = 0. means that (XPOS,YPOS) is the midpoint of the string.</dd></dl></dl><dd>Note that this argument is not quite the same as that for PCHIQU (though it does include the three most useful cases). 
 
- Upon return from PCLOQU, all arguments are unchanged.</dl>
+ Upon return from PCLOQU, all arguments are unchanged.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

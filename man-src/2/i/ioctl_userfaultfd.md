@@ -32,36 +32,36 @@ int ioctl(int fd, int cmd, ...);
 <p> To enable userfaultfd features the application should set a bit corresponding to each feature it wants to enable in the <i>features</i> field. If the kernel supports all the requested features it will enable them. Otherwise it will zero out the returned <i>uffdio_api</i> structure and return <code>EINVAL</code>. </p>
 <p> The following feature bits may be set:</p>
 <dl>
-<dt><code>UFFD_FEATURE_EVENT_FORK</code> (since Linux 4.11)</p>
-<dd> When this feature is enabled, the userfaultfd objects associated with a parent process are duplicated into the child process during <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and a <code>UFFD_EVENT_FORK</code> event is delivered to the userfaultfd monitor</p>
-<dt><code>UFFD_FEATURE_EVENT_REMAP</code> (since Linux 4.11)</p>
-<dd> If this feature is enabled, when the faulting process invokes <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_REMAP</code>.</p>
-<dt><code>UFFD_FEATURE_EVENT_REMOVE</code> (since Linux 4.11)</p>
-<dd> If this feature is enabled, when the faulting process calls <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) with the <code>MADV_DONTNEED</code> or <code>MADV_REMOVE</code> advice value to free a virtual memory area the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_REMOVE</code>.</p>
-<dt><code>UFFD_FEATURE_EVENT_UNMAP</code> (since Linux 4.11)</p>
-<dd> If this feature is enabled, when the faulting process unmaps virtual memory either explicitly with <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2), or implicitly during either <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) or <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_UNMAP</code>.</p>
-<dt><code>UFFD_FEATURE_MISSING_HUGETLBFS</code> (since Linux 4.11)</p>
-<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on hugetlbfs virtual memory areas</p>
-<dt><code>UFFD_FEATURE_MISSING_SHMEM</code> (since Linux 4.11)</p>
-<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on shared memory areas. This includes all kernel shared memory APIs: System V shared memory, <code>tmpfs</code>(5), shared mappings of <i>/dev/zero</i>, <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with the <code>MAP_SHARED</code> flag set, <code><a href="/docs/linux/man/2-memfd_create/">memfd_create</a></code>(2), and so on.</p>
-<dt><code>UFFD_FEATURE_SIGBUS</code> (since Linux 4.14)</p>
-<dd> If this feature bit is set, no page-fault events (<code>UFFD_EVENT_PAGEFAULT</code>) will be delivered. Instead, a <code>SIGBUS</code> signal will be sent to the faulting process. Applications using this feature will not require the use of a userfaultfd monitor for processing memory accesses to the regions registered with userfaultfd.</dl>
+<dt><code>UFFD_FEATURE_EVENT_FORK</code> (since Linux 4.11)</dt>
+<dd> When this feature is enabled, the userfaultfd objects associated with a parent process are duplicated into the child process during <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and a <code>UFFD_EVENT_FORK</code> event is delivered to the userfaultfd monitor</dd>
+<dt><code>UFFD_FEATURE_EVENT_REMAP</code> (since Linux 4.11)</dt>
+<dd> If this feature is enabled, when the faulting process invokes <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_REMAP</code>.</dd>
+<dt><code>UFFD_FEATURE_EVENT_REMOVE</code> (since Linux 4.11)</dt>
+<dd> If this feature is enabled, when the faulting process calls <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) with the <code>MADV_DONTNEED</code> or <code>MADV_REMOVE</code> advice value to free a virtual memory area the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_REMOVE</code>.</dd>
+<dt><code>UFFD_FEATURE_EVENT_UNMAP</code> (since Linux 4.11)</dt>
+<dd> If this feature is enabled, when the faulting process unmaps virtual memory either explicitly with <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2), or implicitly during either <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) or <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2). the userfaultfd monitor will receive an event of type <code>UFFD_EVENT_UNMAP</code>.</dd>
+<dt><code>UFFD_FEATURE_MISSING_HUGETLBFS</code> (since Linux 4.11)</dt>
+<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on hugetlbfs virtual memory areas</dd>
+<dt><code>UFFD_FEATURE_MISSING_SHMEM</code> (since Linux 4.11)</dt>
+<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on shared memory areas. This includes all kernel shared memory APIs: System V shared memory, <code>tmpfs</code>(5), shared mappings of <i>/dev/zero</i>, <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with the <code>MAP_SHARED</code> flag set, <code><a href="/docs/linux/man/2-memfd_create/">memfd_create</a></code>(2), and so on.</dd>
+<dt><code>UFFD_FEATURE_SIGBUS</code> (since Linux 4.14)</dt>
+<dd> If this feature bit is set, no page-fault events (<code>UFFD_EVENT_PAGEFAULT</code>) will be delivered. Instead, a <code>SIGBUS</code> signal will be sent to the faulting process. Applications using this feature will not require the use of a userfaultfd monitor for processing memory accesses to the regions registered with userfaultfd.</dd></dl>
 <p> The returned <i>ioctls</i> field can contain the following bits:</p>
 <dl>
-<dt><code>1 &lt;&lt; _UFFDIO_API</code></p>
-<dd> The <code>UFFDIO_API</code> operation is supported.</p>
-<dt><code>1 &lt;&lt; _UFFDIO_REGISTER</code></p>
-<dd> The <code>UFFDIO_REGISTER</code> operation is supported.</p>
-<dt><code>1 &lt;&lt; _UFFDIO_UNREGISTER</code></p>
-<dd> The <code>UFFDIO_UNREGISTER</code> operation is supported.</dl>
+<dt><code>1 &lt;&lt; _UFFDIO_API</code></dt>
+<dd> The <code>UFFDIO_API</code> operation is supported.</dd>
+<dt><code>1 &lt;&lt; _UFFDIO_REGISTER</code></dt>
+<dd> The <code>UFFDIO_REGISTER</code> operation is supported.</dd>
+<dt><code>1 &lt;&lt; _UFFDIO_UNREGISTER</code></dt>
+<dd> The <code>UFFDIO_UNREGISTER</code> operation is supported.</dd></dl>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>argp</i> refers to an address that is outside the calling process&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The userfaultfd has already been enabled by a previous <code>UFFDIO_API</code> operation.</p>
-<dt><code>EINVAL</code></p>
-<dd> The API version requested in the <i>api</i> field is not supported by this kernel, or the <i>features</i> field passed to the kernel includes feature bits that are not supported by the current kernel version.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>argp</i> refers to an address that is outside the calling process&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The userfaultfd has already been enabled by a previous <code>UFFDIO_API</code> operation.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The API version requested in the <i>api</i> field is not supported by this kernel, or the <i>features</i> field passed to the kernel includes feature bits that are not supported by the current kernel version.</dd></dl>
 <h3>UFFDIO_REGISTER</h3>
 <p> (Since Linux 4.3.) Register a memory address range with the userfaultfd object. The pages in the range must be &quot;compatible&quot;. </p>
 <p> Up to Linux kernel 4.11, only private anonymous ranges are compatible for registering with <code>UFFDIO_REGISTER</code>. </p>
@@ -77,37 +77,37 @@ int ioctl(int fd, int cmd, ...);
 <p> The <i>range</i> field defines a memory range starting at <i>start</i> and continuing for <i>len</i> bytes that should be handled by the userfaultfd. </p>
 <p> The <i>mode</i> field defines the mode of operation desired for this memory region. The following values may be bitwise ORed to set the userfaultfd mode for the specified range:</p>
 <dl>
-<dt><code>UFFDIO_REGISTER_MODE_MISSING</code></p>
-<dd> Track page faults on missing pages.</p>
-<dt><code>UFFDIO_REGISTER_MODE_WP</code></p>
-<dd> Track page faults on write-protected pages.</dl>
+<dt><code>UFFDIO_REGISTER_MODE_MISSING</code></dt>
+<dd> Track page faults on missing pages.</dd>
+<dt><code>UFFDIO_REGISTER_MODE_WP</code></dt>
+<dd> Track page faults on write-protected pages.</dd></dl>
 <p> Currently, the only supported mode is <code>UFFDIO_REGISTER_MODE_MISSING</code>. </p>
 <p> If the operation is successful, the kernel modifies the <i>ioctls</i> bit-mask field to indicate which <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations are available for the specified range. This returned bit mask is as for <code>UFFDIO_API</code>. </p>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> A mapping in the specified range is registered with another userfaultfd object.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>argp</i> refers to an address that is outside the calling process&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid or unsupported bit was specified in the <i>mode</i> field; or the <i>mode</i> field was zero.</p>
-<dt><code>EINVAL</code></p>
-<dd> There is no mapping in the specified address range.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>range.start</i> or <i>range.len</i> is not a multiple of the system page size; or, <i>range.len</i> is zero; or these fields are otherwise invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> There as an incompatible mapping in the specified address range.</dl>
+<dt><code>EBUSY</code></dt>
+<dd> A mapping in the specified range is registered with another userfaultfd object.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>argp</i> refers to an address that is outside the calling process&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid or unsupported bit was specified in the <i>mode</i> field; or the <i>mode</i> field was zero.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> There is no mapping in the specified address range.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>range.start</i> or <i>range.len</i> is not a multiple of the system page size; or, <i>range.len</i> is zero; or these fields are otherwise invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> There as an incompatible mapping in the specified address range.</dd></dl>
 <h3>UFFDIO_UNREGISTER</h3>
 <p> (Since Linux 4.3.) Unregister a memory address range from userfaultfd. The pages in the range must be &quot;compatible&quot; (see the description of <code>UFFDIO_REGISTER</code>.) </p>
 <p> The address range to unregister is specified in the <i>uffdio_range</i> structure pointed to by <i>argp</i>. </p>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Either the <i>start</i> or the <i>len</i> field of the <i>ufdio_range</i> structure was not a multiple of the system page size; or the <i>len</i> field was zero; or these fields were otherwise invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> There as an incompatible mapping in the specified address range.</p>
-<dt><code>EINVAL</code></p>
-<dd> There was no mapping in the specified address range.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Either the <i>start</i> or the <i>len</i> field of the <i>ufdio_range</i> structure was not a multiple of the system page size; or the <i>len</i> field was zero; or these fields were otherwise invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> There as an incompatible mapping in the specified address range.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> There was no mapping in the specified address range.</dd></dl>
 <h3>UFFDIO_COPY</h3>
 <p> (Since Linux 4.3.) Atomically copy a continuous memory chunk into the userfault registered range and optionally wake up the blocked thread. The source and destination addresses and the number of bytes to copy are specified by the <i>src</i>, <i>dst</i>, and <i>len</i> fields of the <i>uffdio_copy</i> structure pointed to by <i>argp</i>: </p>
 <p> struct uffdio_copy {<br />
@@ -118,23 +118,23 @@ int ioctl(int fd, int cmd, ...);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s64 copy;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes copied, or negated error&nbsp;*/ }; </p>
 <p> The following value may be bitwise ORed in <i>mode</i> to change the behavior of the <code>UFFDIO_COPY</code> operation:</p>
 <dl>
-<dt><code>UFFDIO_COPY_MODE_DONTWAKE</code></p>
-<dd> Do not wake up the thread that waits for page-fault resolution</dl>
+<dt><code>UFFDIO_COPY_MODE_DONTWAKE</code></dt>
+<dd> Do not wake up the thread that waits for page-fault resolution</dd></dl>
 <p> The <i>copy</i> field is used by the kernel to return the number of bytes that was actually copied, or an error (a negated <i>errno</i>-style value). If the value returned in <i>copy</i> doesn&#8217;t match the value that was specified in <i>len</i>, the operation fails with the error <code>EAGAIN</code>. The <i>copy</i> field is output-only; it is not read by the <code>UFFDIO_COPY</code> operation. </p>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. In this case, the entire area was copied. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The number of bytes copied (i.e., the value returned in the <i>copy</i> field) does not equal the value that was specified in the <i>len</i> field.</p>
-<dt><code>EINVAL</code></p>
-<dd> Either <i>dst</i> or <i>len</i> was not a multiple of the system page size, or the range specified by <i>src</i> and <i>len</i> or <i>dst</i> and <i>len</i> was invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid bit was specified in the <i>mode</i> field.</p>
-<dt><code>ENOENT</code> (since Linux 4.11)</p>
-<dd> The faulting process has changed its virtual memory layout simultaneously with an outstanding <code>UFFDIO_COPY</code> operation.</p>
-<dt><code>ENOSPC</code> (from Linux 4.11 until Linux 4.13)</p>
-<dd> The faulting process has exited at the time of a <code>UFFDIO_COPY</code> operation.</p>
-<dt><code>ESRCH</code> (since Linux 4.13)</p>
-<dd> The faulting process has exited at the time of a <code>UFFDIO_COPY</code> operation.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The number of bytes copied (i.e., the value returned in the <i>copy</i> field) does not equal the value that was specified in the <i>len</i> field.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Either <i>dst</i> or <i>len</i> was not a multiple of the system page size, or the range specified by <i>src</i> and <i>len</i> or <i>dst</i> and <i>len</i> was invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid bit was specified in the <i>mode</i> field.</dd>
+<dt><code>ENOENT</code> (since Linux 4.11)</dt>
+<dd> The faulting process has changed its virtual memory layout simultaneously with an outstanding <code>UFFDIO_COPY</code> operation.</dd>
+<dt><code>ENOSPC</code> (from Linux 4.11 until Linux 4.13)</dt>
+<dd> The faulting process has exited at the time of a <code>UFFDIO_COPY</code> operation.</dd>
+<dt><code>ESRCH</code> (since Linux 4.13)</dt>
+<dd> The faulting process has exited at the time of a <code>UFFDIO_COPY</code> operation.</dd></dl>
 <h3>UFFDIO_ZEROPAGE</h3>
 <p> (Since Linux 4.3.) Zero out a memory range registered with userfaultfd. </p>
 <p> The requested range is specified by the <i>range</i> field of the <i>uffdio_zeropage</i> structure pointed to by <i>argp</i>: </p>
@@ -144,36 +144,36 @@ int ioctl(int fd, int cmd, ...);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s64 zeropage;&nbsp;/*&nbsp;Number of bytes zeroed, or negated error&nbsp;*/ }; </p>
 <p> The following value may be bitwise ORed in <i>mode</i> to change the behavior of the <code>UFFDIO_ZEROPAGE</code> operation:</p>
 <dl>
-<dt><code>UFFDIO_ZEROPAGE_MODE_DONTWAKE</code></p>
-<dd> Do not wake up the thread that waits for page-fault resolution.</dl>
+<dt><code>UFFDIO_ZEROPAGE_MODE_DONTWAKE</code></dt>
+<dd> Do not wake up the thread that waits for page-fault resolution.</dd></dl>
 <p> The <i>zeropage</i> field is used by the kernel to return the number of bytes that was actually zeroed, or an error in the same manner as <code>UFFDIO_COPY</code>. If the value returned in the <i>zeropage</i> field doesn&#8217;t match the value that was specified in <i>range.len</i>, the operation fails with the error <code>EAGAIN</code>. The <i>zeropage</i> field is output-only; it is not read by the <code>UFFDIO_ZEROPAGE</code> operation. </p>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. In this case, the entire area was zeroed. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The number of bytes zeroed (i.e., the value returned in the <i>zeropage</i> field) does not equal the value that was specified in the <i>range.len</i> field.</p>
-<dt><code>EINVAL</code></p>
-<dd> Either <i>range.start</i> or <i>range.len</i> was not a multiple of the system page size; or <i>range.len</i> was zero; or the range specified was invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid bit was specified in the <i>mode</i> field.</p>
-<dt><code>ESRCH</code> (since Linux 4.13)</p>
-<dd> The faulting process has exited at the time of a <code>UFFDIO_ZEROPAGE</code> operation.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The number of bytes zeroed (i.e., the value returned in the <i>zeropage</i> field) does not equal the value that was specified in the <i>range.len</i> field.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Either <i>range.start</i> or <i>range.len</i> was not a multiple of the system page size; or <i>range.len</i> was zero; or the range specified was invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid bit was specified in the <i>mode</i> field.</dd>
+<dt><code>ESRCH</code> (since Linux 4.13)</dt>
+<dd> The faulting process has exited at the time of a <code>UFFDIO_ZEROPAGE</code> operation.</dd></dl>
 <h3>UFFDIO_WAKE</h3>
 <p> (Since Linux 4.3.) Wake up the thread waiting for page-fault resolution on a specified memory address range. </p>
 <p> The <code>UFFDIO_WAKE</code> operation is used in conjunction with <code>UFFDIO_COPY</code> and <code>UFFDIO_ZEROPAGE</code> operations that have the <code>UFFDIO_COPY_MODE_DONTWAKE</code> or <code>UFFDIO_ZEROPAGE_MODE_DONTWAKE</code> bit set in the <i>mode</i> field. The userfault monitor can perform several <code>UFFDIO_COPY</code> and <code>UFFDIO_ZEROPAGE</code> operations in a batch and then explicitly wake up the faulting thread using <code>UFFDIO_WAKE</code>. </p>
 <p> The <i>argp</i> argument is a pointer to a <i>uffdio_range</i> structure (shown above) that specifies the address range. </p>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation returns 0 on success. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error. Possible errors include:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The <i>start</i> or the <i>len</i> field of the <i>ufdio_range</i> structure was not a multiple of the system page size; or <i>len</i> was zero; or the specified range was otherwise invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>start</i> or the <i>len</i> field of the <i>ufdio_range</i> structure was not a multiple of the system page size; or <i>len</i> was zero; or the specified range was otherwise invalid.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> See descriptions of the individual operations, above.</p>
 <h2>ERRORS</h2>
 <p> See descriptions of the individual operations, above. In addition, the following general errors can occur for all of the operations described above:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>argp</i> does not point to a valid memory address.</p>
-<dt><code>EINVAL</code></p>
-<dd> (For all operations except <code>UFFDIO_API</code>.) The userfaultfd object has not yet been enabled (via the <code>UFFDIO_API</code> operation).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>argp</i> does not point to a valid memory address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (For all operations except <code>UFFDIO_API</code>.) The userfaultfd object has not yet been enabled (via the <code>UFFDIO_API</code> operation).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> These <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations are Linux-specific.</p>
 <h2>BUGS</h2>

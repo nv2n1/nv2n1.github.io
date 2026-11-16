@@ -15,11 +15,11 @@ get_gendisk - get partitioning information for a given device
 <h2>Arguments</h2>
 
 <i>devt</i>
-<dl><dd><dd>device to get partitioning information for</dl>
+<dl><dd></dd><dd>device to get partitioning information for</dd></dl>
  
 
  <i>partno</i>
-<dl><dd>returned partition index</dl>
+<dl><dd>returned partition index</dd></dl>
 
 <h2>Description</h2>
 

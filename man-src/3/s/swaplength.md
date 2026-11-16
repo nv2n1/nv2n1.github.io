@@ -10,40 +10,15 @@ description: "QuantLib::SwaptionVolatilityStructure – Swaption-volatility stru
 <p>QuantLib::SwaptionVolatilityStructure &#8211; Swaption-volatility structure </p>
 <h2>Synopsis</h2>
 <pre><code>virtual const Period &amp; maxSwapTenor () const =0
-
-
 the largest length for which the term structure can return vols
-
-
 Time maxSwapLength () const
-
-
 the largest swapLength for which the term structure can return vols
-
-
-
-
 Protected Member Functions
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (const Date &amp;optionDate, const Period &amp;swapTenor) const
-
-
-
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time swapLength) const =0
-
-
-
 virtual Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;swapTenor, Rate strike) const
-
-
-
 virtual Volatility volatilityImpl (Time optionTime, Time swapLength, Rate strike) const =0
-
-
-
 void checkSwapTenor (const Period &amp;swapTenor, bool extrapolate) const
-
-
-
 void checkSwapTenor (Time swapLength, bool extrapolate) const</code></pre>
 <p> Inherits <code>QuantLib::VolatilityTermStructure</code>. Inherited by <code>ConstantSwaptionVolatility</code>, SpreadedSwaptionVolatility, and SwaptionVolatilityDiscrete.</p>
 <h3>Public Member Functions</h3>
@@ -74,40 +49,15 @@ virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (const Date &am
 <p>void checkSwapTenor (const Period &amp;swapTenor, bool extrapolate) const</p>
 <p>void checkSwapTenor (Time swapLength, bool extrapolate) const <code>Limits</code> </p>
 <pre><code>virtual const Period &amp; maxSwapTenor () const =0
-
-
 the largest length for which the term structure can return vols
-
-
 Time maxSwapLength () const
-
-
 the largest swapLength for which the term structure can return vols
-
-
-
-
 Protected Member Functions
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (const Date &amp;optionDate, const Period &amp;swapTenor) const
-
-
-
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time swapLength) const =0
-
-
-
 virtual Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;swapTenor, Rate strike) const
-
-
-
 virtual Volatility volatilityImpl (Time optionTime, Time swapLength, Rate strike) const =0
-
-
-
 void checkSwapTenor (const Period &amp;swapTenor, bool extrapolate) const
-
-
-
 void checkSwapTenor (Time swapLength, bool extrapolate) const</code></pre>
 <h2>Detailed Description</h2>
 <p>Swaption-volatility structure </p>
@@ -117,6 +67,6 @@ void checkSwapTenor (Time swapLength, bool extrapolate) const</code></pre>
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

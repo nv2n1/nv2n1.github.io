@@ -14,8 +14,8 @@ mongoc_client_get_read_concern (const mongoc_client_t *client);</pre>
 <p>Retrieve the default read concern configured for the client instance. The result should not be modified or freed. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A <code>mongoc_read_concern_t</code> \&amp;. </p>
 <h2>Colophon</h2>

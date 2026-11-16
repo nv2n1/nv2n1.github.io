@@ -13,39 +13,39 @@ description: "sane-abaton – SANE backend for Abaton flatbed scanners"
 <h2>Device Names</h2>
 <p>This backend expects device names of the form: </p>
 <dl>
-<dd><i>special</i></dl>
+<dd><i>special</i></dd></dl>
 <p> Where <i>special</i> is the path-name for the special device that corresponds to a SCSI scanner. For SCSI scanners, the special device name must be a generic SCSI device or a symlink to such a device. Under Linux, such a device name takes a format such as <i>/dev/sga</i> or <i>/dev/sg0</i>, for example. See <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5) for details.</p>
 <h2>Configuration</h2>
 <p>The contents of the <i>abaton.conf</i> file is a list of device names that correspond to Abaton scanners. Empty lines and lines starting with a hash mark (#) are ignored. See <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5) on details of what constitutes a valid device name.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/abaton.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-abaton.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-abaton.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/abaton.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-abaton.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-abaton.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_ABATON</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 255 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_ABATON</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 255 requests all debug output to be printed. Smaller levels reduce verbosity. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>There are a few known ones, and definitely some unknown ones.</p>
 <dl>
-<dt><code>Scan area miscalculations</code></p>
-<dd>For the sake of programmer efficiency, this backend handles all measurements in millimetres, and floors (rather than rounds) values to avoid possible damage to the scanner mechanism. Therefore, it may not be possible to scan to the extreme right or bottom edges of the page.</p>
-<dt><code>Cancelling the scan</code></p>
-<dd>This might not work correctly, or it might abort the frontend. The former is more likely than the latter.</dl>
+<dt><code>Scan area miscalculations</code></dt>
+<dd>For the sake of programmer efficiency, this backend handles all measurements in millimetres, and floors (rather than rounds) values to avoid possible damage to the scanner mechanism. Therefore, it may not be possible to scan to the extreme right or bottom edges of the page.</dd>
+<dt><code>Cancelling the scan</code></dt>
+<dd>This might not work correctly, or it might abort the frontend. The former is more likely than the latter.</dd></dl>
 <p> If you have found something that you think is a bug, please attempt to recreate it with the SANE_DEBUG_ABATON environment variable set to 255, and send a report detailing the conditions surrounding the bug to <i>sane-devel [at] alioth-lists.debian.net</i>. </p>
 <h2>Todo</h2>
 <dl>
-<dt><code>Implement non-blocking support</code></p>
+<dt><code>Implement non-blocking support</code></dt>
 <dd>
-<dt><code>Finish reverse-engineering the MacOS driver</code></p>
-<dd>This will allow me to add support for other models with reasonable confidence that it will work, as well as to fully exploit the information returned by the INQUIRY command. </p>
+</dd><dt><code>Finish reverse-engineering the MacOS driver</code></dt>
+<dd>This will allow me to add support for other models with reasonable confidence that it will work, as well as to fully exploit the information returned by the INQUIRY command. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>

@@ -12,11 +12,9 @@ std::variant&lt;Types...&gt;::operator= - std::variant&lt;Types...&gt;::operator
 
 <pre><code>constexpr variant &amp;operator=(const variant &amp;rhs);
 (1)(since C++ 17)
-
     constexpr variant &amp;
     operator=(variant &amp;&amp;rhs) noexcept(/* see below */);
 (2)(since C++ 17)
-
     template &lt;class T&gt;
     variant &amp;operator=(T &amp;&amp;t) noexcept(/* see below */);
 (3)(since C++ 17)</code></pre> 
@@ -54,21 +52,13 @@ std::decay_t&lt;T&gt;
 <i>(until C++20)</i> 
 std::remove_cvref_t&lt;T&gt; 
 <i>(since C++20)</i> is not the same type as variant and std::is_assignable_v&lt;T_j&amp;, T&gt; is true and std::is_constructible_v&lt;T_j, T&gt; is true and the expression F(std::forward&lt;T&gt;(t)) (with F being the above-mentioned set of imaginary functions) is well formed. <pre><code>std::variant&lt;string&gt; v1;
-
 v1 = &quot;abc&quot;; // OK
-
 std::variant&lt;std::string, std::string&gt; v2;
-
 v2 = &quot;abc&quot;; // Error
-
 std::variant &lt;std::string, bool&gt; v3;
-
 v3 = &quot;abc&quot;; // OK, chooses string; bool is not a candidate
-
 std::variant&lt;float, long, double&gt; v4; //holds float
-
 v4 = 0; // OK, holds long; float and double are not candidates
-
 </code></pre>
 
 <h2>Parameters</h2>

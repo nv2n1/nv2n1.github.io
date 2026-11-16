@@ -33,44 +33,44 @@ description: "pmsocks – shell wrapper for performance monitoring across firewa
 <h2>IRIX ENVIRONMENT VARIABLES</h2>
 <p> There are several environment variables used by <code>pmsocks</code> as follows:</p>
 <dl>
-<dt><code>SOCKS_SERVER</code></p>
-<dd> Specifies the host name or IP address of the host running the <code>sockd</code> daemon. Usually this is the name of the firewall host.</p>
-<dt><code>SOCKS_PORT</code></p>
-<dd> The TCP/IP port to use when contacting <code>sockd</code> on the <code>SOCKS_SERVER</code> host. The default is <code>1080</code>.</p>
-<dt><code>SOCKS_NS</code></p>
-<dd> The host name of the name server to use, usually to resolve the IP address of <code>SOCKS_SERVER</code>.</p>
-<dt><code>SOCKS_DEBUG</code></p>
-<dd> If present in the environment, <code>libpcp_socks</code> will print debugging information to the <i>stderr</i> stream. There are only two levels of debugging, on or off. This is only really useful for the developers because the debugging information assumes knowledge of the <code>libpcp_socks</code> source code.</p>
-<dt><code>SOCKS_BANNER</code></p>
-<dd> If this is set, whenever a client calls <code>libpcp_socks</code> it will echo a message to <i>stdout</i> containing version information. This can be useful to check <code>libpcp_socks</code> is working in the absence of verbose logging.</p>
-<dt><code>_RLD_LIST</code></p>
+<dt><code>SOCKS_SERVER</code></dt>
+<dd> Specifies the host name or IP address of the host running the <code>sockd</code> daemon. Usually this is the name of the firewall host.</dd>
+<dt><code>SOCKS_PORT</code></dt>
+<dd> The TCP/IP port to use when contacting <code>sockd</code> on the <code>SOCKS_SERVER</code> host. The default is <code>1080</code>.</dd>
+<dt><code>SOCKS_NS</code></dt>
+<dd> The host name of the name server to use, usually to resolve the IP address of <code>SOCKS_SERVER</code>.</dd>
+<dt><code>SOCKS_DEBUG</code></dt>
+<dd> If present in the environment, <code>libpcp_socks</code> will print debugging information to the <i>stderr</i> stream. There are only two levels of debugging, on or off. This is only really useful for the developers because the debugging information assumes knowledge of the <code>libpcp_socks</code> source code.</dd>
+<dt><code>SOCKS_BANNER</code></dt>
+<dd> If this is set, whenever a client calls <code>libpcp_socks</code> it will echo a message to <i>stdout</i> containing version information. This can be useful to check <code>libpcp_socks</code> is working in the absence of verbose logging.</dd>
+<dt><code>_RLD_LIST</code></dt>
 <dd> <code>pmsocks</code> sets this to exactly <code>/usr/pcp/lib/libpcp_socks.so:DEFAULT</code><br />
- It is strongly recommended this NOT be set in the environment of interactive shells.</p>
-<dt><code>PMCD_CONNECT_TIMEOUT</code></p>
-<dd> Specifies the time-out, in seconds, for connections to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). When using <code>pmsocks</code>, this may need to be increased from the default (5 seconds) due to the additional delays introduced as a result of using <code>sockd</code>. See <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) for further details about this variable.</dl>
+ It is strongly recommended this NOT be set in the environment of interactive shells.</dd>
+<dt><code>PMCD_CONNECT_TIMEOUT</code></dt>
+<dd> Specifies the time-out, in seconds, for connections to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). When using <code>pmsocks</code>, this may need to be increased from the default (5 seconds) due to the additional delays introduced as a result of using <code>sockd</code>. See <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) for further details about this variable.</dd></dl>
 <h2>CAVEAT</h2>
 <p> The following notes should be considered carefully:</p>
 <dl>
-<dt>0)</p>
-<dd> Because <code>sockd</code> can only handle TCP/IP sockets, <code>pmsocks</code> never attempts to use <code>sockd</code> for sockets of type <code>SOCK_DGRAM</code> or if the <code>domain</code> parameter in a call to <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2) is <code>PF_UNIX</code> (unix domain sockets should never need to use <code>sockd</code> anyway).</p>
-<dt>1)</p>
-<dd> Some firewall products do not support &#8220;socksified&#8221; applications, and in these cases, <code>pmsocks</code> cannot be used. In this case, it will be necessary to configure the firewall to allow connections through the firewall for the PMCD communications port, typically tcp/4321.</p>
-<dt>2)</p>
-<dd> The PCP protocol is TPC/IP-based and works with the socks protocol, but connections which use UDP/DATAGRAM sockets or remote X11 connections via <code>sockd</code> may not work. If the remote display host is on the same side of the firewall as the application, this may be circumvented by configuring the remote display host to use direct connections &#8211; see above. Also, using X11 display options which use shared memory may hang the X server when used with <code>pmsocks</code>.</p>
-<dt>3)</p>
-<dd> If the <code>pmsocks</code> configuration file is not present, then <code>pmsocks</code> will exit with an error message.</p>
-<dt>4)</p>
-<dd> <code>pmsocks</code> uses the locally configured name server or resolver (see <code><a href="/docs/linux/man/5-resolver/">resolver</a></code>(5)) to resolve host names to IP addresses. This may or may not be capable of resolving host names on the other side of the firewall.</p>
-<dt>5)</p>
-<dd> When used over a WAN, often the <code>sockd</code> daemon will be a long way from the application. This may result in PCP client connections timing out before connecting to the remote <code>pmcd</code>. If this is occurring, set the environment variable <code>PMCD_CONNECT_TIMEOUT</code> to a higher value than the default (5 seconds). Refer to <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) for further details about this variable.</p>
-<dt>6)</p>
-<dd> When using <code>pmsocks</code> to connect to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), but <i>&#8220;Connection Refused&#8221;</i> error messages are returned, it is not immediately obvious whether <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) is returning the error or <code>sockd</code>.</dl>
+<dt>0)</dt>
+<dd> Because <code>sockd</code> can only handle TCP/IP sockets, <code>pmsocks</code> never attempts to use <code>sockd</code> for sockets of type <code>SOCK_DGRAM</code> or if the <code>domain</code> parameter in a call to <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2) is <code>PF_UNIX</code> (unix domain sockets should never need to use <code>sockd</code> anyway).</dd>
+<dt>1)</dt>
+<dd> Some firewall products do not support &#8220;socksified&#8221; applications, and in these cases, <code>pmsocks</code> cannot be used. In this case, it will be necessary to configure the firewall to allow connections through the firewall for the PMCD communications port, typically tcp/4321.</dd>
+<dt>2)</dt>
+<dd> The PCP protocol is TPC/IP-based and works with the socks protocol, but connections which use UDP/DATAGRAM sockets or remote X11 connections via <code>sockd</code> may not work. If the remote display host is on the same side of the firewall as the application, this may be circumvented by configuring the remote display host to use direct connections &#8211; see above. Also, using X11 display options which use shared memory may hang the X server when used with <code>pmsocks</code>.</dd>
+<dt>3)</dt>
+<dd> If the <code>pmsocks</code> configuration file is not present, then <code>pmsocks</code> will exit with an error message.</dd>
+<dt>4)</dt>
+<dd> <code>pmsocks</code> uses the locally configured name server or resolver (see <code><a href="/docs/linux/man/5-resolver/">resolver</a></code>(5)) to resolve host names to IP addresses. This may or may not be capable of resolving host names on the other side of the firewall.</dd>
+<dt>5)</dt>
+<dd> When used over a WAN, often the <code>sockd</code> daemon will be a long way from the application. This may result in PCP client connections timing out before connecting to the remote <code>pmcd</code>. If this is occurring, set the environment variable <code>PMCD_CONNECT_TIMEOUT</code> to a higher value than the default (5 seconds). Refer to <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) for further details about this variable.</dd>
+<dt>6)</dt>
+<dd> When using <code>pmsocks</code> to connect to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), but <i>&#8220;Connection Refused&#8221;</i> error messages are returned, it is not immediately obvious whether <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) is returning the error or <code>sockd</code>.</dd></dl>
 <h2>COPYRIGHT NOTICE</h2>
 <p> <code>tsocks</code> is covered by the GPL license and is copyright Shaun Clowes (delius [at] progsoc.org).</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/tsocks.conf</code></p>
-<dd> configuration file</dl>
+<dt><code>/etc/tsocks.conf</code></dt>
+<dd> configuration file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmval</code>(1), <code>X</code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/5-resolver/">resolver</a></code>(5), and <code><a href="/docs/linux/man/5-tsocks/">tsocks</a></code>(5). </p>
 <h2>Index</h2>

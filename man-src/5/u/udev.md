@@ -14,7 +14,7 @@ description: "udev.conf – Configuration for device event managing daemon"
 <p><code><a href="/docs/linux/man/8-systemd-udevd/">systemd-udevd</a></code>(8) expects its main configuration file at /etc/udev/udev.conf. It consists of a set of variables allowing the user to override default udev values. All empty lines or lines beginning with &#8216;#&#8217; are ignored. The following variables can be set: </p>
 <p> <i>udev_log</i></p>
 <dl>
-<dd>The logging priority. Valid values are the numerical syslog priorities or their textual representations: <code>err</code>, <code>info</code> and <code>debug</code>.</dl>
+<dd>The logging priority. Valid values are the numerical syslog priorities or their textual representations: <code>err</code>, <code>info</code> and <code>debug</code>.</dd></dl>
 <p> In addition, systemd-udevd can be configured by command-line options and the kernel commandline (see <code><a href="/docs/linux/man/8-systemd-udevd/">systemd-udevd</a></code>(8)).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-systemd-udevd/">systemd-udevd</a></code>(8), <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8) </p>

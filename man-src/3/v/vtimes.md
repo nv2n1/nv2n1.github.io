@@ -10,18 +10,17 @@ description: "getrusage – get resource usage"
 <p>getrusage &#8211; get resource usage</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/time.h&gt;
-
 #include &lt;sys/resource.h&gt;
 int getrusage(int who, struct rusage *usage);</code></pre>
 <h2>Description</h2>
 <p><code>getrusage</code>() returns resource usage measures for <i>who</i>, which can be one of the following:</p>
 <dl>
-<dt><code>RUSAGE_SELF</code></p>
-<dd>Return resource usage statistics for the calling process, which is the sum of resources used by all threads in the process.</p>
-<dt><code>RUSAGE_CHILDREN</code></p>
-<dd>Return resource usage statistics for all children of the calling process that have terminated and been waited for. These statistics will include the resources used by grandchildren, and further removed descendants, if all of the intervening descendants waited on their terminated children.</p>
-<dt><code>RUSAGE_THREAD</code> (since Linux 2.6.26)</p>
-<dd>Return resource usage statistics for the calling thread. The <code>_GNU_SOURCE</code> feature test macro must be defined (before including <i>any</i> header file) in order to obtain the definition of this constant from <i>&lt;sys/resource.h&gt;</i>.</dl>
+<dt><code>RUSAGE_SELF</code></dt>
+<dd>Return resource usage statistics for the calling process, which is the sum of resources used by all threads in the process.</dd>
+<dt><code>RUSAGE_CHILDREN</code></dt>
+<dd>Return resource usage statistics for all children of the calling process that have terminated and been waited for. These statistics will include the resources used by grandchildren, and further removed descendants, if all of the intervening descendants waited on their terminated children.</dd>
+<dt><code>RUSAGE_THREAD</code> (since Linux 2.6.26)</dt>
+<dd>Return resource usage statistics for the calling thread. The <code>_GNU_SOURCE</code> feature test macro must be defined (before including <i>any</i> header file) in order to obtain the definition of this constant from <i>&lt;sys/resource.h&gt;</i>.</dd></dl>
 <p> The resource usages are returned in the structure pointed to by <i>usage</i>, which has the following form: </p>
 <pre><code>struct rusage {
     struct timeval ru_utime; /* user CPU time used */
@@ -43,46 +42,46 @@ int getrusage(int who, struct rusage *usage);</code></pre>
 };</code></pre>
 <p> Not all fields are completed; unmaintained fields are set to zero by the kernel. (The unmaintained fields are provided for compatibility with other systems, and because they may one day be supported on Linux.) The fields are interpreted as follows:</p>
 <dl>
-<dt><i>ru_utime</i></p>
-<dd>This is the total amount of time spent executing in user mode, expressed in a <i>timeval</i> structure (seconds plus microseconds).</p>
-<dt><i>ru_stime</i></p>
-<dd>This is the total amount of time spent executing in kernel mode, expressed in a <i>timeval</i> structure (seconds plus microseconds).</p>
-<dt><i>ru_maxrss</i> (since Linux 2.6.32)</p>
-<dd>This is the maximum resident set size used (in kilobytes). For <code>RUSAGE_CHILDREN</code>, this is the resident set size of the largest child, not the maximum resident set size of the process tree.</p>
-<dt><i>ru_ixrss</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_idrss</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_isrss</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_minflt</i></p>
-<dd>The number of page faults serviced without any I/O activity; here I/O activity is avoided by &#8220;reclaiming&#8221; a page frame from the list of pages awaiting reallocation.</p>
-<dt><i>ru_majflt</i></p>
-<dd>The number of page faults serviced that required I/O activity.</p>
-<dt><i>ru_nswap</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_inblock</i> (since Linux 2.6.22)</p>
-<dd>The number of times the filesystem had to perform input.</p>
-<dt><i>ru_oublock</i> (since Linux 2.6.22)</p>
-<dd>The number of times the filesystem had to perform output.</p>
-<dt><i>ru_msgsnd</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_msgrcv</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_nsignals</i> (unmaintained)</p>
-<dd>This field is currently unused on Linux.</p>
-<dt><i>ru_nvcsw</i> (since Linux 2.6)</p>
-<dd>The number of times a context switch resulted due to a process voluntarily giving up the processor before its time slice was completed (usually to await availability of a resource).</p>
-<dt><i>ru_nivcsw</i> (since Linux 2.6)</p>
-<dd>The number of times a context switch resulted due to a higher priority process becoming runnable or because the current process exceeded its time slice.</dl>
+<dt><i>ru_utime</i></dt>
+<dd>This is the total amount of time spent executing in user mode, expressed in a <i>timeval</i> structure (seconds plus microseconds).</dd>
+<dt><i>ru_stime</i></dt>
+<dd>This is the total amount of time spent executing in kernel mode, expressed in a <i>timeval</i> structure (seconds plus microseconds).</dd>
+<dt><i>ru_maxrss</i> (since Linux 2.6.32)</dt>
+<dd>This is the maximum resident set size used (in kilobytes). For <code>RUSAGE_CHILDREN</code>, this is the resident set size of the largest child, not the maximum resident set size of the process tree.</dd>
+<dt><i>ru_ixrss</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_idrss</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_isrss</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_minflt</i></dt>
+<dd>The number of page faults serviced without any I/O activity; here I/O activity is avoided by &#8220;reclaiming&#8221; a page frame from the list of pages awaiting reallocation.</dd>
+<dt><i>ru_majflt</i></dt>
+<dd>The number of page faults serviced that required I/O activity.</dd>
+<dt><i>ru_nswap</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_inblock</i> (since Linux 2.6.22)</dt>
+<dd>The number of times the filesystem had to perform input.</dd>
+<dt><i>ru_oublock</i> (since Linux 2.6.22)</dt>
+<dd>The number of times the filesystem had to perform output.</dd>
+<dt><i>ru_msgsnd</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_msgrcv</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_nsignals</i> (unmaintained)</dt>
+<dd>This field is currently unused on Linux.</dd>
+<dt><i>ru_nvcsw</i> (since Linux 2.6)</dt>
+<dd>The number of times a context switch resulted due to a process voluntarily giving up the processor before its time slice was completed (usually to await availability of a resource).</dd>
+<dt><i>ru_nivcsw</i> (since Linux 2.6)</dt>
+<dd>The number of times a context switch resulted due to a higher priority process becoming runnable or because the current process exceeded its time slice.</dd></dl>
 <h2>Return Value</h2>
 <p>On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd><i>usage</i> points outside the accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>who</i> is invalid.</dl>
+<dt><code>EFAULT</code></dt>
+<dd><i>usage</i> points outside the accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>who</i> is invalid.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

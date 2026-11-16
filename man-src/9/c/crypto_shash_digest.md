@@ -14,16 +14,16 @@ description: "crypto_shash_digest – calculate message digest for buffer"
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>see <code>crypto_shash_final</code></dl>
+</dd><dd>see <code>crypto_shash_final</code></dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>see <code>crypto_shash_update</code></dl>
+<dd>see <code>crypto_shash_update</code></dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>see <code>crypto_shash_update</code></dl>
+<dd>see <code>crypto_shash_update</code></dd></dl>
 <p> <i>out</i></p>
 <dl>
-<dd>see <code>crypto_shash_final</code></dl>
+<dd>see <code>crypto_shash_final</code></dd></dl>
 <h2>Description</h2>
 <p>This function is a &#8220;short-hand&#8221; for the function calls of crypto_shash_init, crypto_shash_update and crypto_shash_final. The parameters have the same meaning as discussed for those separate three functions.</p>
 <h2>Return</h2>
@@ -31,8 +31,8 @@ description: "crypto_shash_digest – calculate message digest for buffer"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

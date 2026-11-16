@@ -29,20 +29,20 @@ DAEMON=/usr/sbin/atd</pre>
 </blockquote>
 <p> The following variables affect behaviour of an init script:</p>
 <dl>
-<dt><code>DAEMON</code></p>
-<dd>Path to daemon being started. If the init script is not supposed to start any kind of daemon, it should be set to &#8220;<code>none</code> &#8221; and the functions Fn do_start_override , Fn do_stop_override and Fn do_status_override should be defined instead.</p>
-<dt><code>DAEMON_ARGS</code></p>
-<dd>Additional arguments, passed to daemon during start.</p>
-<dt><code>DESC</code></p>
-<dd>Full name or short description of the daemon, printed on screen. If unset, this variable defaults to the &#8220;<code>NAME</code> &#8221; value.</p>
-<dt><code>NAME</code></p>
-<dd>Additional environment variables are sourced from /etc/default/${NAME} If unset, this variable defaults to the basename of the &#8220;<code>DAEMON</code> &#8221; value.</p>
-<dt><code>COMMAND_NAME</code></p>
-<dd>If this variable is set, it is used as argument to the &#8211;<code>-name</code> option of start-stop-daemon8. It may be useful if the value of the &#8220;<code>NAME</code> &#8221; variable is longer than the command name length supported by the running kernel. If the value is verbatim &#8220;<code>none</code> &#8221; the command name will not be used to match the processes. If unset, this variable defaults to the &#8220;<code>NAME</code> &#8221; value.</p>
-<dt><code>PIDFILE</code></p>
-<dd>Path to file where the process identifier of the started daemon will be stored during start. If the value is verbatim &#8220;<code>none</code> &#8221; the process identifier will not be stored in any file. If this variable is not set, it gets a sensible default value, so it is rarely necessary to set this variable explicitly.</p>
-<dt><code>RELOAD_SIGNAL</code></p>
-<dd>Signal number or name (without the SIG prefix) that will be sent to the process on <code>reload</code> If the daemon performs reload action upon receiving a <code>SIGHUP</code> signal, this variable should be set to &#8220;<code>1</code> &#8221; or &#8220;<code>HUP</code> &#8221;</dl>
+<dt><code>DAEMON</code></dt>
+<dd>Path to daemon being started. If the init script is not supposed to start any kind of daemon, it should be set to &#8220;<code>none</code> &#8221; and the functions Fn do_start_override , Fn do_stop_override and Fn do_status_override should be defined instead.</dd>
+<dt><code>DAEMON_ARGS</code></dt>
+<dd>Additional arguments, passed to daemon during start.</dd>
+<dt><code>DESC</code></dt>
+<dd>Full name or short description of the daemon, printed on screen. If unset, this variable defaults to the &#8220;<code>NAME</code> &#8221; value.</dd>
+<dt><code>NAME</code></dt>
+<dd>Additional environment variables are sourced from /etc/default/${NAME} If unset, this variable defaults to the basename of the &#8220;<code>DAEMON</code> &#8221; value.</dd>
+<dt><code>COMMAND_NAME</code></dt>
+<dd>If this variable is set, it is used as argument to the &#8211;<code>-name</code> option of start-stop-daemon8. It may be useful if the value of the &#8220;<code>NAME</code> &#8221; variable is longer than the command name length supported by the running kernel. If the value is verbatim &#8220;<code>none</code> &#8221; the command name will not be used to match the processes. If unset, this variable defaults to the &#8220;<code>NAME</code> &#8221; value.</dd>
+<dt><code>PIDFILE</code></dt>
+<dd>Path to file where the process identifier of the started daemon will be stored during start. If the value is verbatim &#8220;<code>none</code> &#8221; the process identifier will not be stored in any file. If this variable is not set, it gets a sensible default value, so it is rarely necessary to set this variable explicitly.</dd>
+<dt><code>RELOAD_SIGNAL</code></dt>
+<dd>Signal number or name (without the SIG prefix) that will be sent to the process on <code>reload</code> If the daemon performs reload action upon receiving a <code>SIGHUP</code> signal, this variable should be set to &#8220;<code>1</code> &#8221; or &#8220;<code>HUP</code> &#8221;</dd></dl>
 <p> The variables <code>RELOAD_ARGS</code> <code>START_ARGS</code> and <code>STOP_ARGS</code> are additional arguments, passed to start-stop-daemon8 during reload, start and stop actions, to override the default options. </p>
 <p> Additionally, it is possible to change the behaviour of the resulting shell script by overriding some of the internal functions. To do so, define function with an <code>_override</code> suffix. So, for example, to override the Fn do_status function, one should define a Fn do_status_override function. The <i>exception</i> to this rule is the Fn do_reload function, whose override should be defined as-is, <i>without</i> the above-mentioned suffix. </p>
 <p> Here is a control flow chart that explains what functions are called and when: </p>

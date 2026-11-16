@@ -12,21 +12,10 @@ description: "sc::LocalTBGrad –"
 <p> Inherits <code>sc::TBGrad&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LocalTBGrad (T &amp;t, const Ref&lt; TwoBodyDerivInt &gt; &amp;tbdi, const Ref&lt; PetiteList &gt; &amp;pl, const Ref&lt; GaussianBasisSet &gt; &amp;bs, const Ref&lt; MessageGrp &gt; &amp;g, double *tbg, double pm, double a, int nt=1, int tn=0, double exchange_fraction=1.0)
-
-
-
 void run ()
-
-
 This is called with the Thread is run from a ThreadGrp.
-
-
-
 Public Attributes
 double * tbgrad
-
-
-
 Protected Attributes</code></pre>
 <p> <code>MessageGrp</code> * <code>grp_</code> </p>
 <p> <code>TwoBodyDerivInt</code> * <code>tbi_</code> </p>

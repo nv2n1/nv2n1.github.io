@@ -10,17 +10,12 @@ description: "timeradd, timersub, timercmp, timerclear, timerisset – timeval o
 <p>timeradd, timersub, timercmp, timerclear, timerisset &#8211; timeval operations</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/time.h&gt;
-
 void timeradd(struct timeval *a, struct timeval *b,
               struct timeval *res);
-
 void timersub(struct timeval *a, struct timeval *b,
               struct timeval *res);
-
 void timerclear(struct timeval *tvp);
-
 int timerisset(struct timeval *tvp);
-
 int timercmp(struct timeval *a, struct timeval *b, CMP);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />

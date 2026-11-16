@@ -14,7 +14,7 @@ description: "disk_unblock_events – unblock disk event checking"
 <p><i>disk</i></p>
 <dl>
 <dd>
-<dd>disk to unblock events for</dl>
+</dd><dd>disk to unblock events for</dd></dl>
 <h2>Description</h2>
 <p>Undo <code>disk_block_events</code>. When the block count reaches zero, it starts events polling if configured.</p>
 <h2>Context</h2>

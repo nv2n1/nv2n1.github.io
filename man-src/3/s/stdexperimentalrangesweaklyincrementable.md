@@ -11,23 +11,14 @@ std::experimental::ranges::WeaklyIncrementable - std::experimental::ranges::Weak
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt;class I&gt;
-
 concept bool WeaklyIncrementable =
-
 Semiregular&lt;I&gt; &amp;&amp;
-
 requires(I i) {
-
     typename ranges::difference_type_t&lt;I&gt;;                             (ranges TS)
-
     requires SignedIntegral&lt;ranges::difference_type_t&lt;I&gt;&gt;;
-
     { ++i } -&gt; Same&lt;I&gt;&amp;; /* not required to be equality preserving */
-
     i++; /* not required to be equality preserving */
-
 };</code></pre> 
 The concept WeaklyIncrementable&lt;I&gt; specifies the requirements on a type that can be incremented (with the pre- and post-increment operators). The increment operations need not be equality-preserving, and the type need not be EqualityComparable. 
 Let i be an object of type I. i is said to be incrementable if it is in the domain of both pre- and post-increment. WeaklyIncrementable&lt;I&gt; is satisfied only if: 

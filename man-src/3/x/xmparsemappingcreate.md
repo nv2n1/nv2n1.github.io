@@ -16,10 +16,10 @@ description: "XmParseMappingCreate — A compound string function to create a pa
 <h2>Description</h2>
 <p><code>XmParseMappingCreate</code> creates a parse mapping for use in a parse table. This function allows the application to specify values for components of the parse mapping using a resource-style argument list.</p>
 <dl COMPACT>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dl>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dd></dl>
 <p> For a complete definition of <code>XmParseMapping</code> and its associated resources, see <code><a href="/docs/linux/man/3-xmparsemapping/">XmParseMapping</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the <code>XmParseMapping</code> object. The function allocates space to hold the returned <code>XmParseMapping</code> object. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmParseMappingFree</code>.</p>

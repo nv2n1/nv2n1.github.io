@@ -29,25 +29,20 @@ This function is inherently racy if the managed object is shared among threads. 
 
 Demonstrates how expired is used to check validity of the pointer. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 std::weak_ptr&lt;int&gt; gw;
 void f()
-
 {
     if (!gw.expired()) {
-
         std::cout &lt;&lt; &quot;gw is valid\n&quot;;
     } else {
         std::cout &lt;&lt; &quot;gw is expired\n&quot;;
     }
 }
 int main()
-
 {
     {
         auto sp = std::make_shared&lt;int&gt;(42);
-
         gw = sp;
         f();
     }

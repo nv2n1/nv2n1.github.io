@@ -13,50 +13,50 @@ description: "omping – test IP multicast"
 <h2>Description</h2>
 <p>The is program which uses User Datagram Protocol to determine if computer is able to send and/or receive IP unicast and multicast or Broadcast packets from the network. It&#8217;s designed to be used in very similar way as <a href="/docs/linux/man/8-ping/">ping</a>(8) and also has some features of the <a href="/docs/linux/man/8-fping/">fping</a>(8) command. Where <a href="/docs/linux/man/8-ping/">ping</a>(8) and differ is in who replies. In <a href="/docs/linux/man/8-ping/">ping</a>(8) replies are sent by the operating system and with another instance of sends the reply. This mean that must be running on all computers to test sending/receiving IP multicast/broadcast. Its arguments are as follows:</p>
 <dl>
-<dt><code>-4</code></p>
-<dd>Force usage of IPv4.</p>
-<dt><code>-6</code></p>
-<dd>Force usage of IPv6.</p>
-<dt><code>-C</code></p>
-<dd>Display continuous statistics for every reply message.</p>
-<dt><code>-D</code></p>
-<dd>Disable packet duplicate detection. Option is default for interval 0.</p>
-<dt><code>-E</code></p>
-<dd>Default behaviour when every client is in stop state is to exit. This may happen if all server sends stop message or if <i>count</i> query messages was sent. This option changes default behaviour and doesn&#8217;t quit automatically.</p>
-<dt><code>-F</code></p>
-<dd>Allow entering of arguments which are not allowed or not recommended by the specification. This is typically the interval parameter. This option may be used multiple times.</p>
-<dt><code>-q</code></p>
-<dd>Quiet output. Nothing is displayed except state changes and summary. Option can be used twice and then only summary is displayed.</p>
-<dt><code>-V</code></p>
-<dd>Display version and quit. Option can be used twice and then remote version is displayed.</p>
-<dt><code>-v</code></p>
-<dd>Set level of verbosity. Parameter can be used multiple times to achieve higher verbosity.</p>
-<dt><code>-c </code><i>count</i></p>
-<dd>Number of request packets to send to each target. After sending <i>count</i> query messages, given client is put to stop state and it is no longer sending query messages.</p>
-<dt><code>-i </code><i>interval</i></p>
-<dd>Wait <i>interval</i> seconds between sending each request packet. Float values are supported in millisecond precision. It&#8217;s possible to set there 0 with meaning that packets are sent ether after previous unicast reply is received or after 1 millisecond, depending on which of these intervals is smaller. The default is to wait for one second between each packet.</p>
-<dt><code>-M </code><i>transport_method</i></p>
-<dd>Set transport method to use. This can be <code>asm</code> for Any-source Multicast, <code>ssm</code> for Source-specific Multicast and <code>ipbc</code> for IP Broadcast.</p>
-<dt><code>-m </code><i>mcast_addr</i></p>
-<dd>Multicast or broadcast address to listen on for multicast/broadcast answer messages. Default is 232.43.211.234 for IPv4 and ff3e::4321:1234 for IPv6 multicast, or broadcast address of local interface for Broadcast.</p>
-<dt><code>-O </code><i>op_mode</i></p>
-<dd>can be running in three different modes. Default and recommended mode for quick testing is <code>normal</code> mode, when behaves like client and server together. It sends queries and is able to respond them. Finally the <code>client</code> mode sends queries, but never respond to other nodes.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd>Port to bind and listen on for both unicast and multicast/broadcast messages. Default is 4321.</p>
-<dt><code>-R </code><i>rcvbuf</i></p>
-<dd>Set socket rcvbuf. Minimum value for this option is 2048. If not specified, rcvbuf is not changed and default OS provided value is used.</p>
-<dt><code>-r </code><i>rate_limit</i></p>
-<dd>Rate limit interval between two query messages to <i>rate_limit</i> seconds. Default value is same as <i>interval</i> given by &#8211;<code>i</code> option. Rate limiting can be disabled by specifying 0 as value. Rate limiting is by default disabled for &#8211;<code>i</code> with 0 seconds.</p>
-<dt><code>-S </code><i>sndbuf</i></p>
-<dd>Set socket sndbuf. Minimum value for this option is 2048. If not specified, sndbuf is not changed and default OS provided value is used.</p>
-<dt><code>-T </code><i>timeout</i></p>
-<dd>Specify a timeout, in seconds, before exits regardless of how many packets have been received.</p>
-<dt><code>-t </code><i>ttl</i></p>
-<dd>Time-To-Live of sent packets.</p>
-<dt><code>-w </code><i>wait_time</i></p>
-<dd>after is stopped (by sending SIGINT or timeout expire) it is moved to special state when no queries are made and server answer all queries by server response (stop message). This makes possible to give correct (unbiased) result of lost packets on other nodes. Default is 3 times interval or 1 second, depending which one is larger. Also special value 0 can be used to not wait at all or -1 which means wait forever (this can be still terminated by sending SIGINT).</p>
-<dt><i>remote_addr</i></p>
-<dd>List of addresses to test. One of them must be address of local internet interface. This local address is used for bind and listening on for unicast packets. It&#8217;s also used to determine which interface should be used for sending multicast/broadcast replies.</dl>
+<dt><code>-4</code></dt>
+<dd>Force usage of IPv4.</dd>
+<dt><code>-6</code></dt>
+<dd>Force usage of IPv6.</dd>
+<dt><code>-C</code></dt>
+<dd>Display continuous statistics for every reply message.</dd>
+<dt><code>-D</code></dt>
+<dd>Disable packet duplicate detection. Option is default for interval 0.</dd>
+<dt><code>-E</code></dt>
+<dd>Default behaviour when every client is in stop state is to exit. This may happen if all server sends stop message or if <i>count</i> query messages was sent. This option changes default behaviour and doesn&#8217;t quit automatically.</dd>
+<dt><code>-F</code></dt>
+<dd>Allow entering of arguments which are not allowed or not recommended by the specification. This is typically the interval parameter. This option may be used multiple times.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet output. Nothing is displayed except state changes and summary. Option can be used twice and then only summary is displayed.</dd>
+<dt><code>-V</code></dt>
+<dd>Display version and quit. Option can be used twice and then remote version is displayed.</dd>
+<dt><code>-v</code></dt>
+<dd>Set level of verbosity. Parameter can be used multiple times to achieve higher verbosity.</dd>
+<dt><code>-c </code><i>count</i></dt>
+<dd>Number of request packets to send to each target. After sending <i>count</i> query messages, given client is put to stop state and it is no longer sending query messages.</dd>
+<dt><code>-i </code><i>interval</i></dt>
+<dd>Wait <i>interval</i> seconds between sending each request packet. Float values are supported in millisecond precision. It&#8217;s possible to set there 0 with meaning that packets are sent ether after previous unicast reply is received or after 1 millisecond, depending on which of these intervals is smaller. The default is to wait for one second between each packet.</dd>
+<dt><code>-M </code><i>transport_method</i></dt>
+<dd>Set transport method to use. This can be <code>asm</code> for Any-source Multicast, <code>ssm</code> for Source-specific Multicast and <code>ipbc</code> for IP Broadcast.</dd>
+<dt><code>-m </code><i>mcast_addr</i></dt>
+<dd>Multicast or broadcast address to listen on for multicast/broadcast answer messages. Default is 232.43.211.234 for IPv4 and ff3e::4321:1234 for IPv6 multicast, or broadcast address of local interface for Broadcast.</dd>
+<dt><code>-O </code><i>op_mode</i></dt>
+<dd>can be running in three different modes. Default and recommended mode for quick testing is <code>normal</code> mode, when behaves like client and server together. It sends queries and is able to respond them. Finally the <code>client</code> mode sends queries, but never respond to other nodes.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd>Port to bind and listen on for both unicast and multicast/broadcast messages. Default is 4321.</dd>
+<dt><code>-R </code><i>rcvbuf</i></dt>
+<dd>Set socket rcvbuf. Minimum value for this option is 2048. If not specified, rcvbuf is not changed and default OS provided value is used.</dd>
+<dt><code>-r </code><i>rate_limit</i></dt>
+<dd>Rate limit interval between two query messages to <i>rate_limit</i> seconds. Default value is same as <i>interval</i> given by &#8211;<code>i</code> option. Rate limiting can be disabled by specifying 0 as value. Rate limiting is by default disabled for &#8211;<code>i</code> with 0 seconds.</dd>
+<dt><code>-S </code><i>sndbuf</i></dt>
+<dd>Set socket sndbuf. Minimum value for this option is 2048. If not specified, sndbuf is not changed and default OS provided value is used.</dd>
+<dt><code>-T </code><i>timeout</i></dt>
+<dd>Specify a timeout, in seconds, before exits regardless of how many packets have been received.</dd>
+<dt><code>-t </code><i>ttl</i></dt>
+<dd>Time-To-Live of sent packets.</dd>
+<dt><code>-w </code><i>wait_time</i></dt>
+<dd>after is stopped (by sending SIGINT or timeout expire) it is moved to special state when no queries are made and server answer all queries by server response (stop message). This makes possible to give correct (unbiased) result of lost packets on other nodes. Default is 3 times interval or 1 second, depending which one is larger. Also special value 0 can be used to not wait at all or -1 which means wait forever (this can be still terminated by sending SIGINT).</dd>
+<dt><i>remote_addr</i></dt>
+<dd>List of addresses to test. One of them must be address of local internet interface. This local address is used for bind and listening on for unicast packets. It&#8217;s also used to determine which interface should be used for sending multicast/broadcast replies.</dd></dl>
 <p> Program is normally terminated by SIGINT. After signal receive summary is displayed. You can also display summary during running by sending SIGINFO or SIGUSR1 signal. </p>
 <p> When using for fault isolation, it should first be run against local internet interface only, to verify that the local network interface is up and running, and firewall is correctly configured. This mode is available by entering only local IP address.</p>
 <h2>Exit Status</h2>
@@ -94,8 +94,8 @@ description: "omping – test IP multicast"
 <h2>Authors</h2>
 <p>The utility was written by An Jan Friesse Aq jfriesse [at] redhat.com .</p>
 <h2>Bugs</h2>
-<dt><code>Some OSes may not have support for receiving TTL from packet.</code></p>
-<dd>then cannot provide distance information.</p>
-<dt><code>Some OSes may not provide information about packet receive. Less precise actual time is then used.</code></p>
+<dt><code>Some OSes may not have support for receiving TTL from packet.</code></dt>
+<dd>then cannot provide distance information.</dd>
+<dt><code>Some OSes may not provide information about packet receive. Less precise actual time is then used.</code></dt>
 <dd>
-<dd>highly depends on precise <a href="/docs/linux/man/2-poll/">poll</a>(2) and gettimeofday(3) functions. If OS doesn&#8217;t provide at least milliseconds precision, results may be incorrect.</dl>
+</dd><dd>highly depends on precise <a href="/docs/linux/man/2-poll/">poll</a>(2) and gettimeofday(3) functions. If OS doesn&#8217;t provide at least milliseconds precision, results may be incorrect.</dd></dl>

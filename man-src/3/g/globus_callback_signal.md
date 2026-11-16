@@ -30,50 +30,46 @@ description: "Globus Callback Signal Handling –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>wakeup</i> function to call when callback library needs you to return asap from any blocked callbacks.<br />
- <i>user_arg</i> user data that will be passed along in the wakeup handler</dl>
+</dt><dd> <i>wakeup</i> function to call when callback library needs you to return asap from any blocked callbacks.<br />
+ <i>user_arg</i> user data that will be passed along in the wakeup handler</dd></dl>
 <h3><code>globus_result_t</code> globus_callback_space_register_signal_handler (intsignum, <code>globus_bool_t</code>persist, <code>globus_callback_func_t</code>callback_func, void *callback_user_arg, <code>globus_callback_space_t</code>space)</h3>
 <p> Fire a callback when the specified signal is received. Note that there is a tiny delay between the time this call returns and the signal is actually handled by this library. It is likely that, if the signal was received the instant the call returned, it will be lost (this is normally not an issue, since you would call this in your startup code anyway) </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>signum</i> The signal to receive. The following signals are not allowed: SIGKILL, SIGSEGV, SIGABRT, SIGBUS, SIGFPE, SIGILL, SIGIOT, SIGPIPE, SIGEMT, SIGSYS, SIGTRAP, SIGSTOP, SIGCONT, and SIGWAITING<br />
+</dt><dd> <i>signum</i> The signal to receive. The following signals are not allowed: SIGKILL, SIGSEGV, SIGABRT, SIGBUS, SIGFPE, SIGILL, SIGIOT, SIGPIPE, SIGEMT, SIGSYS, SIGTRAP, SIGSTOP, SIGCONT, and SIGWAITING<br />
  <i>persist</i> If GLOBUS_TRUE, keep this callback registered for multiple signals. If GLOBUS_FALSE, the signal handler will automatically be unregistered once the signal has been received.<br />
  <i>callback_func</i> the user func to call when a signal is received<br />
  <i>callback_user_arg</i> user arg that will be passed to callback<br />
- <i>space</i> the space to deliver callbacks to.</dl>
+ <i>space</i> the space to deliver callbacks to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> GLOBUS_CALLBACK_ERROR_INVALID_SPACE</p>
-<dt>&bull;</p>
-<dd> GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT</p>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS otherwise</dl>
+<dt>&bull;</dt>
+<dd> GLOBUS_CALLBACK_ERROR_INVALID_SPACE</dd>
+<dt>&bull;</dt>
+<dd> GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT</dd>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS otherwise</dd></dl>
 </dl>
 <h3><code>globus_result_t</code> globus_callback_unregister_signal_handler (intsignum, <code>globus_callback_func_t</code>unregister_callback, void *unreg_arg)</h3>
 <p> Unregister a signal handling callback. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>signum</i> The signal to unregister.<br />
+</dt><dd> <i>signum</i> The signal to unregister.<br />
  <i>unregister_callback</i> the function to call when the callback has been canceled and there are no running instances of it (may be NULL). This will be delivered to the same space used in the register call.<br />
- <i>unreg_arg</i> user arg that will be passed to callback</dl>
+ <i>unreg_arg</i> user arg that will be passed to callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT if this signal was registered with persist == false, then there is a race between a signal actually being caught and therefor automatically unregistered and the attempt to manually unregister it. If that race occurs, you will receive this error just as you would for any signal not registered.</p>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS otherwise</dl>
+<dt>&bull;</dt>
+<dd> GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT if this signal was registered with persist == false, then there is a race between a signal actually being caught and therefor automatically unregistered and the attempt to manually unregister it. If that race occurs, you will receive this error just as you would for any signal not registered.</dd>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS otherwise</dd></dl>
 </dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

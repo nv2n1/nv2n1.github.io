@@ -19,15 +19,15 @@ stg diff[options][--][ &lt; files or dirs &gt; ]
 <p> -r rev1[..[rev2]], &#8211;range rev1[..[rev2]]</p>
 <dl>
 <dt>
-<dd> Show the diff between revisions.</dl>
+</dt><dd> Show the diff between revisions.</dd></dl>
 <p> -s, &#8211;stat</p>
 <dl>
 <dt>
-<dd> Show the stat instead of the diff.</dl>
+</dt><dd> Show the stat instead of the diff.</dd></dl>
 <p> -O OPTIONS, &#8211;diff-opts OPTIONS</p>
 <dl>
 <dt>
-<dd> Extra options to pass to &quot;git diff&quot;.</dl>
+</dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

@@ -73,16 +73,14 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  Normal execution of ZSTEMR may create NaNs and infinities and
  hence may abort due to a floating point exception in environments
  which do not handle NaNs and infinities in the ieee standard default
- manner.</pre>&nbsp;<wbr></dl>
+ manner.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl><dd><i>JOBZ</i> 
-
  <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre><i>RANGE</i> 
-
  <pre> RANGE is CHARACTER*1
  = 'A': all eigenvalues will be found.
  = 'V': all eigenvalues in the half-open interval (VL,VU]
@@ -90,14 +88,11 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  = 'I': the IL-th through IU-th eigenvalues will be found.
  For RANGE = 'V' or 'I' and IU - IL &lt; N - 1, DSTEBZ and
  ZSTEIN are called</pre><i>UPLO</i> 
-
  <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre><i>N</i> 
-
  <pre> N is INTEGER
  The order of the matrix A. N &gt;= 0.</pre><i>A</i> 
-
  <pre> A is COMPLEX*16 array, dimension (LDA, N)
  On entry, the Hermitian matrix A. If UPLO = 'U', the
  leading N-by-N upper triangular part of A contains the
@@ -107,25 +102,19 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  On exit, the lower triangle (if UPLO='L') or the upper
  triangle (if UPLO='U') of A, including the diagonal, is
  destroyed.</pre><i>LDA</i> 
-
  <pre> LDA is INTEGER
  The leading dimension of the array A. LDA &gt;= max(1,N).</pre><i>VL</i> 
-
  <pre> VL is DOUBLE PRECISION</pre><i>VU</i> 
-
  <pre> VU is DOUBLE PRECISION
  If RANGE='V', the lower and upper bounds of the interval to
  be searched for eigenvalues. VL &lt; VU.
  Not referenced if RANGE = 'A' or 'I'.</pre><i>IL</i> 
-
  <pre> IL is INTEGER</pre><i>IU</i> 
-
  <pre> IU is INTEGER
  If RANGE='I', the indices (in ascending order) of the
  smallest and largest eigenvalues to be returned.
  1 &lt;= IL &lt;= IU &lt;= N, if N &gt; 0; IL = 1 and IU = 0 if N = 0.
  Not referenced if RANGE = 'A' or 'V'.</pre><i>ABSTOL</i> 
-
  <pre> ABSTOL is DOUBLE PRECISION
  The absolute error tolerance for the eigenvalues.
  An approximate eigenvalue is accepted as converged
@@ -149,15 +138,12 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  Dominant Matrices&quot;, LAPACK Working Note #7, for a discussion
  of which matrices define their eigenvalues to high relative
  accuracy.</pre><i>M</i> 
-
  <pre> M is INTEGER
  The total number of eigenvalues found. 0 &lt;= M &lt;= N.
  If RANGE = 'A', M = N, and if RANGE = 'I', M = IU-IL+1.</pre><i>W</i> 
-
  <pre> W is DOUBLE PRECISION array, dimension (N)
  The first M elements contain the selected eigenvalues in
  ascending order.</pre><i>Z</i> 
-
  <pre> Z is COMPLEX*16 array, dimension (LDZ, max(1,M))
  If JOBZ = 'V', then if INFO = 0, the first M columns of Z
  contain the orthonormal eigenvectors of the matrix A
@@ -167,21 +153,17 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  Note: the user must ensure that at least max(1,M) columns are
  supplied in the array Z; if RANGE = 'V', the exact value of M
  is not known in advance and an upper bound must be used.</pre><i>LDZ</i> 
-
  <pre> LDZ is INTEGER
  The leading dimension of the array Z. LDZ &gt;= 1, and if
  JOBZ = 'V', LDZ &gt;= max(1,N).</pre><i>ISUPPZ</i> 
-
  <pre> ISUPPZ is INTEGER array, dimension ( 2*max(1,M) )
  The support of the eigenvectors in Z, i.e., the indices
  indicating the nonzero elements in Z. The i-th eigenvector
  is nonzero only in elements ISUPPZ( 2*i-1 ) through
  ISUPPZ( 2*i ).
  Implemented only for RANGE = 'A' or 'I' and IU - IL = N - 1</pre><i>WORK</i> 
-
  <pre> WORK is COMPLEX*16 array, dimension (MAX(1,LWORK))
  On exit, if INFO = 0, WORK(1) returns the optimal LWORK.</pre><i>LWORK</i> 
-
  <pre> LWORK is INTEGER
  The length of the array WORK. LWORK &gt;= max(1,2*N).
  For optimal efficiency, LWORK &gt;= (NB+1)*N,
@@ -192,11 +174,9 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  IWORK arrays, returns these values as the first entries of
  the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>RWORK</i> 
-
  <pre> RWORK is DOUBLE PRECISION array, dimension (MAX(1,LRWORK))
  On exit, if INFO = 0, RWORK(1) returns the optimal
  (and minimal) LRWORK.</pre><i>LRWORK</i> 
-
  <pre> LRWORK is INTEGER
  The length of the array RWORK. LRWORK &gt;= max(1,24*N).
  If LRWORK = -1, then a workspace query is assumed; the
@@ -204,11 +184,9 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  and IWORK arrays, returns these values as the first entries
  of the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>IWORK</i> 
-
  <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
  On exit, if INFO = 0, IWORK(1) returns the optimal
  (and minimal) LIWORK.</pre><i>LIWORK</i> 
-
  <pre> LIWORK is INTEGER
  The dimension of the array IWORK. LIWORK &gt;= max(1,10*N).
  If LIWORK = -1, then a workspace query is assumed; the
@@ -216,37 +194,29 @@ subroutine <b>zheevr</b> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, 
  and IWORK arrays, returns these values as the first entries
  of the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>INFO</i> 
-
  <pre> INFO is INTEGER
  = 0: successful exit
  &lt; 0: if INFO = -i, the i-th argument had an illegal value
- &gt; 0: Internal error</pre>&nbsp;<wbr></dl>
+ &gt; 0: Internal error</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl><dd>September 2012</dl>
+<dl><dd>September 2012</dd></dl>
  
 
  <b>Contributors: </b>
 <dl><dd>Inderjit Dhillon, IBM Almaden, USA 
- 
 &nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> 
- 
 &nbsp;<wbr>Ken Stanley, Computer Science Division, University of California at Berkeley, USA&nbsp;<wbr> 
- 
 &nbsp;<wbr>Jason Riedy, Computer Science Division, University of California at Berkeley, USA&nbsp;<wbr> 
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  

@@ -32,7 +32,7 @@ url: "/docs/linux/man/1-abrt-harvest-vmcore/"
  /etc/abrt/plugins/vmcore.conf
 <dl>
 <dt>
-<dd> Configuration file where user can enable copying or moving VMcore to ABRT problem directory</dl>
+</dt><dd> Configuration file where user can enable copying or moving VMcore to ABRT problem directory</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -46,7 +46,7 @@ url: "/docs/linux/man/1-abrt-harvest-vmcore/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

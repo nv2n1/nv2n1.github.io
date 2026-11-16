@@ -12,10 +12,8 @@ std::mersenne_twister_engine&lt;UIntType,w,n,m,r,a,u,d,s,b,t,c,l,f&gt;::seed - s
 
 <pre><code>void seed(result_type value = default_seed);
 (1)(since C++ 11)
-
     template &lt;class Sseq&gt;
     (2)(since C++ 11)
-
         void seed(Sseq &amp;seq);</code></pre> 
 Reinitializes the internal state of the random-number engine using new seed value. 
 &nbsp;This section is incomplete 
@@ -36,10 +34,8 @@ seq - seed sequence to use in the initialization of the internal state
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::mt19937 gen;
     // Seed the engine with an unsigned int

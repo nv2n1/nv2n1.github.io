@@ -21,12 +21,12 @@ description: "Byte Swapping Functions – Functions that are used to ensure that
 <p>Ensures that the given unsigned short integer is in the small endian format. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>v</i> Pointer to the given integer.</dl>
+<dd><i>v</i> Pointer to the given integer.</dd></dl>
 <h3>EAPI void embryo_swap_32 (unsigned int * v)</h3>
 <p>Ensures that the given unsigned integer is in the small endian format. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>v</i> Pointer to the given integer.</dl>
+<dd><i>v</i> Pointer to the given integer.</dd></dl>
 <p> Referenced by embryo_program_load().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

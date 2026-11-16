@@ -15,27 +15,27 @@ sget_userns - find or create a superblock
 <h2>Arguments</h2>
 
 <i>type</i>
-<dl><dd><dd>filesystem type superblock should belong to</dl>
+<dl><dd></dd><dd>filesystem type superblock should belong to</dd></dl>
  
 
  <i>test</i>
-<dl><dd>comparison callback</dl>
+<dl><dd>comparison callback</dd></dl>
  
 
  <i>set</i>
-<dl><dd>setup callback</dl>
+<dl><dd>setup callback</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>mount flags</dl>
+<dl><dd>mount flags</dd></dl>
  
 
  <i>user_ns</i>
-<dl><dd>User namespace for the super_block</dl>
+<dl><dd>User namespace for the super_block</dd></dl>
  
 
  <i>data</i>
-<dl><dd>argument to each of them</dl>
+<dl><dd>argument to each of them</dd></dl>
 
 <h2>Copyright</h2>
 

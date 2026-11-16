@@ -10,7 +10,6 @@ description: "std::range_error – std::range_error"
 <p>std::range_error &#8211; std::range_error</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class range_error;</code></pre>
 <p>Defines a type of object to be thrown as exception. It can be used to report range errors (that is, situations where a result of a computation cannot be represented by the destination type)<br />
 The only standard library components that throw this exception are std::wstring_convert::from_bytes and std::wstring_convert::to_bytes.<br />

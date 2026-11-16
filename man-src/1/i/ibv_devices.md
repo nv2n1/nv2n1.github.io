@@ -17,7 +17,7 @@ description: "ibv_devices – list RDMA devices"
 <p> <code><a href="/docs/linux/man/1-ibv_devinfo/">ibv_devinfo</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Roland Dreier</p>
-<dd> &lt;<i>rolandd [at] cisco.com</i>&gt; </p>
+<dt>Roland Dreier</dt>
+<dd> &lt;<i>rolandd [at] cisco.com</i>&gt; </dd>
 </dl>
 <h2>Index</h2>

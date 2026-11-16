@@ -18,20 +18,20 @@ description: "qdel – delete pbs batch job"
 <p> See the PBS ERS section 3.1.3.3, &quot;Delete Job Request&quot;, for more information. </i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-W delay</p>
-<dd> Specify the delay between the sending of the SIGTERM and SIGKILL signals. The argument <i> specifies a unsigned integer number of seconds.</p>
-<dt>-a</p>
-<dd> Request the job(s) be deleted asynchronously, which for a Running job means that the reply will return before the MOM is requested to delete the job.</p>
-<dt>-c</p>
-<dd> Clean up unreported jobs from the server. This should only be used if the scheduler is unable to purge unreported jobs. This option is only available to a batch operator or the batch administrator.</p>
-<dt>-p</p>
-<dd> Forcibly purge the job from the server. This should only be used if a running job will not exit because its allocated nodes are unreachable. The admin should make every attempt at resolving the problem on the nodes. If a job&#8217;s mother superior recovers after purging the job, any epilogue scripts may still run. This option is only available to a batch operator or the batch administrator.</p>
-<dt>-m message</p>
-<dd> Specify a comment to be included in the email. The argument specifies the comment to send. This option is only available to a batch operator or the batch administrator.</p>
-<dt>-t array_range</p>
-<dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</p>
+<dt>-W delay</dt>
+<dd> Specify the delay between the sending of the SIGTERM and SIGKILL signals. The argument <i> specifies a unsigned integer number of seconds.</dd>
+<dt>-a</dt>
+<dd> Request the job(s) be deleted asynchronously, which for a Running job means that the reply will return before the MOM is requested to delete the job.</dd>
+<dt>-c</dt>
+<dd> Clean up unreported jobs from the server. This should only be used if the scheduler is unable to purge unreported jobs. This option is only available to a batch operator or the batch administrator.</dd>
+<dt>-p</dt>
+<dd> Forcibly purge the job from the server. This should only be used if a running job will not exit because its allocated nodes are unreachable. The admin should make every attempt at resolving the problem on the nodes. If a job&#8217;s mother superior recovers after purging the job, any epilogue scripts may still run. This option is only available to a batch operator or the batch administrator.</dd>
+<dt>-m message</dt>
+<dd> Specify a comment to be included in the email. The argument specifies the comment to send. This option is only available to a batch operator or the batch administrator.</dd>
+<dt>-t array_range</dt>
+<dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</dd>
 <dt>
-<dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dl>
+</dt><dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dd></dl>
 <p> </i></p>
 <h2>OPERANDS</h2>
 <p> The qdel command accepts one or more <i> operands of the form:<br />

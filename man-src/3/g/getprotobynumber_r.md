@@ -37,10 +37,10 @@ int getprotobynumber_r(int proto,
 <p> On error, record not found (<code>getprotobyname_r</code>(), <code>getprotobynumber_r</code>()), or end of input (<code>getprotoent_r</code>()) <i>result</i> is set to NULL.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd> (<code>getprotoent_r</code>()) No more records in database.</p>
-<dt><code>ERANGE</code></p>
-<dd> <i>buf</i> is too small. Try again with a larger buffer (and increased <i>buflen</i>).</dl>
+<dt><code>ENOENT</code></dt>
+<dd> (<code>getprotoent_r</code>()) No more records in database.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> <i>buf</i> is too small. Try again with a larger buffer (and increased <i>buflen</i>).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

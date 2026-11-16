@@ -10,32 +10,31 @@ description: "pthread_mutexattr_getrobust, pthread_mutexattr_setrobust – get a
 <p>pthread_mutexattr_getrobust, pthread_mutexattr_setrobust &#8211; get and set the robustness attribute of a mutex attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_mutexattr_getrobust(const pthread_mutexattr_t *attr,
                                 int *robustness);
 int pthread_mutexattr_setrobust(const pthread_mutexattr_t *attr,
                                 int robustness);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_mutexattr_getrobust</code>(), <code>pthread_mutexattr_setrobust</code>(): </p>
 <dl>
-<dd>_POSIX_C_SOURCE &gt;= 200809L</dl>
+<dd>_POSIX_C_SOURCE &gt;= 200809L</dd></dl>
 <h2>Description</h2>
 <p>The <code>pthread_mutexattr_getrobust</code>() function places the value of the robustness attribute of the mutex attributes object referred to by <i>attr</i> in <i>*robustness</i>. The <code>pthread_mutexattr_setrobust</code>() function sets the value of the robustness attribute of the mutex attributes object referred to by <i>attr</i> to the value specified in <i>*robustness</i>. </p>
 <p> The robustness attribute specifies the behavior of the mutex when the owning thread dies without unlocking the mutex. The following values are valid for <i>robustness</i>:</p>
 <dl>
-<dt><code>PTHREAD_MUTEX_STALLED</code></p>
-<dd>This is the default value for a mutex attributes object. If a mutex is initialized with the <code>PTHREAD_MUTEX_STALLED</code> attribute and its owner dies without unlocking it, the mutex remains locked afterwards and any future attempts to call <code>pthread_mutex_lock</code>(3) on the mutex will block indefinitely.</p>
-<dt><code>PTHREAD_MUTEX_ROBUST</code></p>
-<dd>If a mutex is initialized with the <code>PTHREAD_MUTEX_ROBUST</code> attribute and its owner dies without unlocking it, any future attempts to call <code>pthread_mutex_lock</code>(3) on this mutex will succeed and return <code>EOWNERDEAD</code> to indicate that the original owner no longer exists and the mutex is in an inconsistent state. Usually after <code>EOWNERDEAD</code> is returned, the next owner should call <code><a href="/docs/linux/man/3-pthread_mutex_consistent/">pthread_mutex_consistent</a></code>(3) on the acquired mutex to make it consistent again before using it any further.</p>
-<dd>If the next owner unlocks the mutex using <code>pthread_mutex_unlock</code>(3) before making it consistent, the mutex will be permanently unusable and any subsequent attempts to lock it using <code>pthread_mutex_lock</code>(3) will fail with the error <code>ENOTRECOVERABLE</code>. The only permitted operation on such a mutex is <code>pthread_mutex_destroy</code>(3).</p>
-<dd>If the next owner terminates before calling <code><a href="/docs/linux/man/3-pthread_mutex_consistent/">pthread_mutex_consistent</a></code>(3), further <code>pthread_mutex_lock</code>(3) operations on this mutex will still return <code>EOWNERDEAD</code>.</dl>
+<dt><code>PTHREAD_MUTEX_STALLED</code></dt>
+<dd>This is the default value for a mutex attributes object. If a mutex is initialized with the <code>PTHREAD_MUTEX_STALLED</code> attribute and its owner dies without unlocking it, the mutex remains locked afterwards and any future attempts to call <code>pthread_mutex_lock</code>(3) on the mutex will block indefinitely.</dd>
+<dt><code>PTHREAD_MUTEX_ROBUST</code></dt>
+<dd>If a mutex is initialized with the <code>PTHREAD_MUTEX_ROBUST</code> attribute and its owner dies without unlocking it, any future attempts to call <code>pthread_mutex_lock</code>(3) on this mutex will succeed and return <code>EOWNERDEAD</code> to indicate that the original owner no longer exists and the mutex is in an inconsistent state. Usually after <code>EOWNERDEAD</code> is returned, the next owner should call <code><a href="/docs/linux/man/3-pthread_mutex_consistent/">pthread_mutex_consistent</a></code>(3) on the acquired mutex to make it consistent again before using it any further.</dd>
+<dd>If the next owner unlocks the mutex using <code>pthread_mutex_unlock</code>(3) before making it consistent, the mutex will be permanently unusable and any subsequent attempts to lock it using <code>pthread_mutex_lock</code>(3) will fail with the error <code>ENOTRECOVERABLE</code>. The only permitted operation on such a mutex is <code>pthread_mutex_destroy</code>(3).</dd>
+<dd>If the next owner terminates before calling <code><a href="/docs/linux/man/3-pthread_mutex_consistent/">pthread_mutex_consistent</a></code>(3), further <code>pthread_mutex_lock</code>(3) operations on this mutex will still return <code>EOWNERDEAD</code>.</dd></dl>
 <p> Note that the <i>attr</i> argument of <code>pthread_mutexattr_getrobust</code>() and <code>pthread_mutexattr_setrobust</code>() should refer to a mutex attributes object that was initialized by <code>pthread_mutexattr_init</code>(3), otherwise the behavior is undefined.</p>
 <h2>Return Value</h2>
 <p>On success, these functions return 0. On error, they return a positive error number. </p>
 <p> In the glibc implementation, <code>pthread_mutexattr_getrobust</code>() always return zero.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>A value other than <code>PTHREAD_MUTEX_STALLED</code> or <code>PTHREAD_MUTEX_ROBUST</code> was passed to <code>pthread_mutexattr_setrobust</code>().</dl>
+<dt><code>EINVAL</code></dt>
+<dd>A value other than <code>PTHREAD_MUTEX_STALLED</code> or <code>PTHREAD_MUTEX_ROBUST</code> was passed to <code>pthread_mutexattr_setrobust</code>().</dd></dl>
 <h2>Versions</h2>
 <p><code>pthread_mutexattr_getrobust</code>() and <code>pthread_mutexattr_setrobust</code>() were added to glibc in version 2.12.</p>
 <h2>Conforming To</h2>
@@ -54,12 +53,7 @@ int pthread_mutexattr_setrobust_np(const pthread_mutexattr_t *attr,<br />
 [main] pthread_mutex_lock() returned EOWNERDEAD
 [main] Now make the mutex consistent
 [main] Mutex is now consistent; unlocking
-
-
-
 Program source
-
-
 #include &lt;stdlib.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;

@@ -35,7 +35,7 @@ as follows:
  * If w is InputFocusand if the focus window contains the
  pointer,the destination window is the window that contains
  the pointer; otherwise, the destination window is the focus
- window.</pre></dl><dl COMPACT><dd><pre>To determine which clients should receive the specified events,
+ window.</pre></dd></dl><dl COMPACT><dd><pre>To determine which clients should receive the specified events,
 XSendExtensionEventuses the propagate argument as follows:
  * If event_list is the empty set,the event is sent to the
  client that created the destination window. If that client
@@ -54,24 +54,24 @@ XSendExtensionEventuses the propagate argument as follows:
  InputFocuswas originally specifiedas the destination, the
  event is not sent to any clients. Otherwise, the event is
  reported to every client selecting on the finaldestination
- any of the events specified in the event_list array.</pre></dl><dl COMPACT><dd><pre>The event in the XEventstructure must be one of the events
+ any of the events specified in the event_list array.</pre></dd></dl><dl COMPACT><dd><pre>The event in the XEventstructure must be one of the events
 defined by the input extension (or a BadValueerror results) so
 that the X server can correctly byte-swapthe contents as
 necessary. The contents of the event areotherwise unaltered and
 unchecked by the X server except to force send_event to Truein
 the forwarded event and to set the serial number in the event
-correctly.</pre></dl><dl COMPACT><dd><pre>XSendExtensionEventreturns zero if the conversion to wire
+correctly.</pre></dd></dl><dl COMPACT><dd><pre>XSendExtensionEventreturns zero if the conversion to wire
 protocol format failedand returns nonzero
 otherwise.XSendExtensionEventcan generate BadClass, BadDevice,
-BadValue, and BadWindow errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+BadValue, and BadWindow errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadValue
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- window.</pre></dl>
+ window.</pre></dd></dl>

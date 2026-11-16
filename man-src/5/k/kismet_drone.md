@@ -22,9 +22,10 @@ description: "kismet_drone.conf – Wireless sniffing and monitoring drone confi
 <p> &quot;source&quot; (string) Comma-separated packet source (cardtype,interface,name). Multiple source lines can be defined, refer to the enablesources config line for more details. </p>
 <p> &quot;enablesources&quot; (string) Comma-separated list of source names (defined previously in the source lines) to enable. This is only needed if you wish to selectively enable multiple sources. For example:</p>
 <dl>
-<dd>enablesources=prism </p>
+<dd>enablesources=prism </dd>
 <p> enablesources=prism,cisco</dl>
 <h2>Card Types And Multiple Capture Sources</h2>
 <p>kismet_drone supports the same sources and options as the core Kismet server. For details on supported capture types and how to define multiple capture sources, see kismet.conf(5).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1), <code>kismet.conf</code>(5), <code>kismet_ui.conf</code>(5), <code>gpsmap</code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1) </p>
+</p>

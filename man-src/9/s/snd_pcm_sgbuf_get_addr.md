@@ -10,13 +10,13 @@ description: "snd_pcm_sgbuf_get_addr – Get the DMA address at the correspondin
 <p>snd_pcm_sgbuf_get_addr &#8211; Get the DMA address at the corresponding offset</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>dma_addr_t snd_pcm_sgbuf_get_addr(struct snd_pcm_substream&nbsp;<wbr>*&nbsp;<wbr></code><i>substream</i><code>, unsigned int&nbsp;<wbr></code><i>ofs</i><code>);</code></dl>
+<dt> <code>dma_addr_t snd_pcm_sgbuf_get_addr(struct snd_pcm_substream&nbsp;<wbr>*&nbsp;<wbr></code><i>substream</i><code>, unsigned int&nbsp;<wbr></code><i>ofs</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>PCM substream</dl>
+</dd><dd>PCM substream</dd></dl>
 <p> <i>ofs</i></p>
 <dl>
-<dd>byte offset</dl>
+<dd>byte offset</dd></dl>
 <h2>Copyright</h2>

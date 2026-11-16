@@ -21,93 +21,78 @@ description: "condor_off Shutdown HTCondor daemons"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-graceful</code></p>
 <dl>
 <dt>
-<dd> Gracefully shutdown daemons (the default)</p>
-<dt>
-<dd></dl>
+</dt><dd> Gracefully shutdown daemons (the default)</dd>
+</dl>
 <p> <code>-fast</code></p>
 <dl>
 <dt>
-<dd> Quickly shutdown daemons. A minimum of the first two characters of this option must be specified, to distinguish it from the <code>-force-graceful</code> command.</p>
-<dt>
-<dd></dl>
+</dt><dd> Quickly shutdown daemons. A minimum of the first two characters of this option must be specified, to distinguish it from the <code>-force-graceful</code> command.</dd>
+</dl>
 <p> <code>-peaceful</code></p>
 <dl>
 <dt>
-<dd> Wait indefinitely for jobs to finish</p>
-<dt>
-<dd></dl>
+</dt><dd> Wait indefinitely for jobs to finish</dd>
+</dl>
 <p> <code>-force-graceful</code></p>
 <dl>
 <dt>
-<dd> Force a graceful shutdown, even after issuing a <code>-peaceful</code> command. A minimum of the first two characters of this option must be specified, to distinguish it from the <code>-fast</code> command.</p>
-<dt>
-<dd></dl>
+</dt><dd> Force a graceful shutdown, even after issuing a <code>-peaceful</code> command. A minimum of the first two characters of this option must be specified, to distinguish it from the <code>-fast</code> command.</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</p>
-<dt>
-<dd></dl>
+</dt><dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>hostname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>hostname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>hostname</i></dd>
+</dl>
 <p> <i>hostname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>hostname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>hostname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine&#8217;s master located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine&#8217;s master located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <code>-constraint </code> <i>expression</i></p>
 <dl>
 <dt>
-<dd> Apply this command only to machines matching the given ClassAd <i>expression</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Apply this command only to machines matching the given ClassAd <i>expression</i></dd>
+</dl>
 <p> <code>-all</code></p>
 <dl>
 <dt>
-<dd> Send the command to all machines in the pool</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to all machines in the pool</dd>
+</dl>
 <p> <code>-daemon </code> <i>daemonname</i></p>
 <dl>
 <dt>
-<dd> Send the command to the named daemon. Without this option, the command is sent to the <i>condor_master</i> daemon.</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the named daemon. Without this option, the command is sent to the <i>condor_master</i> daemon.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_off</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Examples</h2>

@@ -23,12 +23,12 @@ description: "globus_error_string.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>base_source</i><br />
+</dt><dd> <i>base_source</i><br />
  <i>base_cause</i><br />
  <i>fmt</i><br />
- <i>&#8230;</i></dl>
+ <i>&#8230;</i></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

@@ -17,15 +17,15 @@ description: "galculator – a GTK 2 based scientific calculator"
 <h2>OPTIONS</h2>
 <p> <code>galculator</code> accepts the following options:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>~/.galculator</p>
-<dd> Automatically generated configuration file for <code>galculator</code> </p>
+<dt>~/.galculator</dt>
+<dd> Automatically generated configuration file for <code>galculator</code> </dd>
 </dl>
 <h2>ADDITIONAL INFORMATION</h2>
 <p> You find additional information about galculator at <a rel="nofollow" href="http://galculator.sourceforge.net">http://galculator.sourceforge.net</a></p>

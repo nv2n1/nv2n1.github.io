@@ -17,22 +17,22 @@ description: "logtail – print log file lines that have not been read"
 <p> If <i>offsetfile</i> is not empty, the inode of <i>logfile</i> is checked. If the inode is changed, <code>logtail</code> simply prints the entire file. If the inode is not changed but <i>logfile</i> is shorter than it was at the last run of <code>logtail</code>, it writes a warning message to the standard output.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd><i>logfile</i> to be read after offset</p>
-<dt><code>-o</code></p>
-<dd><i>offsetfile</i> stores offset of previous run</p>
-<dt><code>-t</code></p>
-<dd>test mode &#8211; do not change offset in <i>offsetfile</i></dl>
+<dt><code>-f</code></dt>
+<dd><i>logfile</i> to be read after offset</dd>
+<dt><code>-o</code></dt>
+<dd><i>offsetfile</i> stores offset of previous run</dd>
+<dt><code>-t</code></dt>
+<dd>test mode &#8211; do not change offset in <i>offsetfile</i></dd></dl>
 <h2>Return Values</h2>
 <dl>
-<dt>0</p>
-<dd>successful</p>
-<dt>65</p>
-<dd>cannot get the size of <i>logfile</i></p>
-<dt>66</p>
-<dd><i>logfile</i> does not exist, is not a plain file, or is not readable</p>
-<dt>73</p>
-<dd>cannot write <i>offsetfile</i></dl>
+<dt>0</dt>
+<dd>successful</dd>
+<dt>65</dt>
+<dd>cannot get the size of <i>logfile</i></dd>
+<dt>66</dt>
+<dd><i>logfile</i> does not exist, is not a plain file, or is not readable</dd>
+<dt>73</dt>
+<dd>cannot write <i>offsetfile</i></dd></dl>
 <h2>Author</h2>
 <p>The original <code>logtail</code> was written in C by Craig H. Rowland &lt;crowland [at] psionic.com&gt;. This version of <code>logtail</code> is a Perl reimplementation by Paul Slootman &lt;paul [at] debian.org&gt;. Enhanced by the Debian Logcheck Team &lt;logcheck-devel [at] lists.alioth.debian.org&gt;. </p>
 <p> This manual was written by Oohara Yuuma &lt;oohara [at] libra.interq.or.jp&gt;.</p>

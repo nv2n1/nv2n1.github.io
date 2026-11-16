@@ -15,11 +15,11 @@ snd_soc_set_runtime_hwparams - set the runtime hardware parameters
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the pcm substream</dl>
+<dl><dd></dd><dd>the pcm substream</dd></dl>
  
 
  <i>hw</i>
-<dl><dd>the hardware parameters</dl>
+<dl><dd>the hardware parameters</dd></dl>
 
 <h2>Description</h2>
 

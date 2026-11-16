@@ -25,195 +25,195 @@ description: "nmh – new MH message system"
 <p> Commands which take a message number as an argument (<code>scan</code>, <code>show</code>, <code>repl</code>, &#8230;) also take one of the words &#8220;first&#8221;, &#8220;prev&#8221;, &#8220;cur&#8221;, &#8220;next&#8221;, or &#8220;last&#8221; to indicate (respectively) the first, previous, current, next, or last message in the current folder (assuming they are defined). As a shorthand, &#8220;.&#8221; is equivalent to &#8220;cur&#8221;. </p>
 <p> Commands which take a range of message numbers (<code>rmm</code>, <code>scan</code>, <code>show</code>, &#8230;) also take any of the abbreviations:</p>
 <dl>
-<dt><i>&lt;num1&gt;</i>&#8211;<i>&lt;num2&gt;</i></p>
-<dd>Indicates all messages in the range &lt;num1&gt; to &lt;num2&gt;, inclusive. The range must be nonempty.</p>
-<dt>all</p>
-<dd>Indicates all messages, i.e., <i>first</i>&#8211;<i>last</i>.</p>
-<dt><i>&lt;num&gt;</i>:+<i>N</i></p>
+<dt><i>&lt;num1&gt;</i>&#8211;<i>&lt;num2&gt;</i></dt>
+<dd>Indicates all messages in the range &lt;num1&gt; to &lt;num2&gt;, inclusive. The range must be nonempty.</dd>
+<dt>all</dt>
+<dd>Indicates all messages, i.e., <i>first</i>&#8211;<i>last</i>.</dd>
+<dt><i>&lt;num&gt;</i>:+<i>N</i></dt>
 <dd>
-<dt><i>&lt;num&gt;</i>:-N</p>
-<dd>Up to <i>N</i> messages beginning with (or ending with) message <i>num</i>. <i>Num</i> may be any of the pre-defined symbols <code>first</code>, <code>prev</code>, <code>cur</code>, <code>next</code> or <code>last</code>.</p>
-<dt>first:<i>N</i></p>
+</dd><dt><i>&lt;num&gt;</i>:-N</dt>
+<dd>Up to <i>N</i> messages beginning with (or ending with) message <i>num</i>. <i>Num</i> may be any of the pre-defined symbols <code>first</code>, <code>prev</code>, <code>cur</code>, <code>next</code> or <code>last</code>.</dd>
+<dt>first:<i>N</i></dt>
 <dd>
-<dt>prev:<i>N</i></p>
+</dd><dt>prev:<i>N</i></dt>
 <dd>
-<dt>next:<i>N</i></p>
+</dd><dt>next:<i>N</i></dt>
 <dd>
-<dt>last:<i>N</i></p>
-<dd>The first, previous, next or last messages, if they exist.</dl>
+</dd><dt>last:<i>N</i></dt>
+<dd>The first, previous, next or last messages, if they exist.</dd></dl>
 <p> Commands that take a folder name (<code>inc</code>, <code>refile</code>, <code>scan,</code> &#8230;) accept the folder name in two formats: &#8220;+folder&#8221; or &#8220;@folder&#8221;. In both cases, &#8220;folder&#8221; can be a &#8220;/&#8221;-separated path, e.g. &#8220;foo/bar&#8221;. &#8220;+folder&#8221; specifies a directory path to a folder. If &#8220;folder&#8221; starts with &#8220;/&#8221; then it&#8217;s an absolute path from the root directory. If it is &#8220;.&#8221; or &#8220;..&#8221;, or starts with &#8220;./&#8221; or &#8220;../&#8221;, then it&#8217;s relative to the current working directory. Otherwise it&#8217;s relative to <a href="/docs/linux/man/5-mh-profile/">mh-profile</a>(5)&#8217;s &#8220;<i>Path</i>&#8221;, i.e. as given by `<code>mhpath +</code>`. &#8220;@folder&#8221; is a shorthand for &#8220;+curfolder/folder&#8221;; it&#8217;s a relative path from the current folder. &#8220;curfolder&#8221; is given by `<code>mhpath</code>`. For example, assuming a <code>Path</code> profile component of Mail,</p>
 <dl>
-<dd><code>scan </code><i>+inbox</i> scans $HOME/Mail/inbox</p>
-<dt><code>scan </code><i>+work/todo</i></p>
-<dd>scans $HOME/Mail/work/todo</p>
-<dt><code>scan </code><i>@todo</i></p>
-<dd>scans $HOME/Mail/work/todo, if current folder is +work</p>
-<dt><code>refile </code><i>@../done</i></p>
-<dd>refiles to $HOME/Mail/work/done, if the current folder is +work/todo</p>
-<dt><code>scan </code><i>+/tmp</i></p>
-<dd>scans /tmp</p>
-<dt><code>scan </code><i>+.</i></p>
-<dd>scans the current directory</p>
-<dt><code>refile </code><i>@.</i></p>
-<dd>refiles current message to end of current folder.</dl>
+<dd><code>scan </code><i>+inbox</i> scans $HOME/Mail/inbox</dd>
+<dt><code>scan </code><i>+work/todo</i></dt>
+<dd>scans $HOME/Mail/work/todo</dd>
+<dt><code>scan </code><i>@todo</i></dt>
+<dd>scans $HOME/Mail/work/todo, if current folder is +work</dd>
+<dt><code>refile </code><i>@../done</i></dt>
+<dd>refiles to $HOME/Mail/work/done, if the current folder is +work/todo</dd>
+<dt><code>scan </code><i>+/tmp</i></dt>
+<dd>scans /tmp</dd>
+<dt><code>scan </code><i>+.</i></dt>
+<dd>scans the current directory</dd>
+<dt><code>refile </code><i>@.</i></dt>
+<dd>refiles current message to end of current folder.</dd></dl>
 <p> There are many other possibilities such as creating multiple folders for different topics, and automatically refiling messages according to subject, source, destination, or content. These are beyond the scope of this manual entry.</p>
 <h2>Commands</h2>
 <p>Following is a list of all the <code>nmh</code> commands, grouped loosely according to their role.</p>
 <h3>Sending</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/1-comp/">comp</a></i>(1) compose a message</p>
-<dt><i><a href="/docs/linux/man/1-forw/">forw</a></i>(1)</p>
-<dd>forward messages</p>
-<dt><i><a href="/docs/linux/man/1-repl/">repl</a></i>(1)</p>
-<dd>reply to a message</p>
-<dt><i><a href="/docs/linux/man/1-whatnow/">whatnow</a></i>(1)</p>
-<dd>prompting front-end for send</dl>
+<dd><i><a href="/docs/linux/man/1-comp/">comp</a></i>(1) compose a message</dd>
+<dt><i><a href="/docs/linux/man/1-forw/">forw</a></i>(1)</dt>
+<dd>forward messages</dd>
+<dt><i><a href="/docs/linux/man/1-repl/">repl</a></i>(1)</dt>
+<dd>reply to a message</dd>
+<dt><i><a href="/docs/linux/man/1-whatnow/">whatnow</a></i>(1)</dt>
+<dd>prompting front-end for send</dd></dl>
 <p> Note that although <code>whatnow</code> provides much of the primary <code>nmh</code> user interface for sending mail, it is almost never invoked manually, but rather is invoked indirectly by one of the above commands, after you&#8217;ve composed a message in your editor, and before you&#8217;ve decided to send it. Here you can add attachments, check the recipient list, decide to quit and send it later, etc. </p>
 <p> Related utilities:</p>
 <dl>
-<dd><i><a href="/docs/linux/man/1-ali/">ali</a></i>(1) list mail aliases</p>
-<dt><i><a href="/docs/linux/man/1-anno/">anno</a></i>(1)</p>
-<dd>annotate messages</p>
-<dt><i><a href="/docs/linux/man/1-whom/">whom</a></i>(1)</p>
-<dd>report to whom a message would go</p>
-<dt><i><a href="/docs/linux/man/1-dist/">dist</a></i>(1)</p>
-<dd>redistribute a message to additional addresses</dl>
+<dd><i><a href="/docs/linux/man/1-ali/">ali</a></i>(1) list mail aliases</dd>
+<dt><i><a href="/docs/linux/man/1-anno/">anno</a></i>(1)</dt>
+<dd>annotate messages</dd>
+<dt><i><a href="/docs/linux/man/1-whom/">whom</a></i>(1)</dt>
+<dd>report to whom a message would go</dd>
+<dt><i><a href="/docs/linux/man/1-dist/">dist</a></i>(1)</dt>
+<dd>redistribute a message to additional addresses</dd></dl>
 <p> Advanced commands, only sometimes invoked directly:</p>
 <dl>
-<dd><i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1) translate MIME composition draft</p>
-<dt><i><a href="/docs/linux/man/1-send/">send</a></i>(1)</p>
-<dd>send a message</p>
-<dt><i><a href="/docs/linux/man/1-sendfiles/">sendfiles</a></i>(1)</p>
-<dd>send multiple files in a MIME message</dl>
+<dd><i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1) translate MIME composition draft</dd>
+<dt><i><a href="/docs/linux/man/1-send/">send</a></i>(1)</dt>
+<dd>send a message</dd>
+<dt><i><a href="/docs/linux/man/1-sendfiles/">sendfiles</a></i>(1)</dt>
+<dd>send multiple files in a MIME message</dd></dl>
 <h3>Incorporating</h3>
 <dl>
-<dt><i><a href="/docs/linux/man/1-inc/">inc</a></i>(1)</p>
-<dd>incorporate new mail</dl>
+<dt><i><a href="/docs/linux/man/1-inc/">inc</a></i>(1)</dt>
+<dd>incorporate new mail</dd></dl>
 <p> Related utilities:</p>
 <dl>
-<dd><i><a href="/docs/linux/man/1-burst/">burst</a></i>(1) explode digests into messages</p>
-<dt><i><a href="/docs/linux/man/1-msgchk/">msgchk</a></i>(1)</p>
-<dd>check for messages</p>
-<dt><i><a href="/docs/linux/man/1-rcvdist/">rcvdist</a></i>(1)</p>
-<dd>asynchronously redistribute new mail</p>
-<dt><i><a href="/docs/linux/man/1-rcvpack/">rcvpack</a></i>(1)</p>
-<dd>append message to file</p>
-<dt><i><a href="/docs/linux/man/1-rcvstore/">rcvstore</a></i>(1)</p>
-<dd>asynchronously incorporate new mail</p>
-<dt><i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1)</p>
-<dd>asynchronously filter and deliver new mail</dl>
+<dd><i><a href="/docs/linux/man/1-burst/">burst</a></i>(1) explode digests into messages</dd>
+<dt><i><a href="/docs/linux/man/1-msgchk/">msgchk</a></i>(1)</dt>
+<dd>check for messages</dd>
+<dt><i><a href="/docs/linux/man/1-rcvdist/">rcvdist</a></i>(1)</dt>
+<dd>asynchronously redistribute new mail</dd>
+<dt><i><a href="/docs/linux/man/1-rcvpack/">rcvpack</a></i>(1)</dt>
+<dd>append message to file</dd>
+<dt><i><a href="/docs/linux/man/1-rcvstore/">rcvstore</a></i>(1)</dt>
+<dd>asynchronously incorporate new mail</dd>
+<dt><i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1)</dt>
+<dd>asynchronously filter and deliver new mail</dd></dl>
 <h3>Viewing</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/1-next/">next</a></i>(1) show the next message</p>
-<dt><i><a href="/docs/linux/man/1-prev/">prev</a></i>(1)</p>
-<dd>show the previous message</p>
-<dt><i><a href="/docs/linux/man/1-show/">show</a></i>(1)</p>
-<dd>show(display) messages</p>
-<dt><i><a href="/docs/linux/man/1-scan/">scan</a></i>(1)</p>
-<dd>produce a one line per message scan listing</p>
-<dt><i><a href="/docs/linux/man/1-fnext/">fnext</a></i>(1)</p>
-<dd>select the next folder with new messages</p>
-<dt><i><a href="/docs/linux/man/1-fprev/">fprev</a></i>(1)</p>
-<dd>select the previous folder with new messages</dl>
+<dd><i><a href="/docs/linux/man/1-next/">next</a></i>(1) show the next message</dd>
+<dt><i><a href="/docs/linux/man/1-prev/">prev</a></i>(1)</dt>
+<dd>show the previous message</dd>
+<dt><i><a href="/docs/linux/man/1-show/">show</a></i>(1)</dt>
+<dd>show(display) messages</dd>
+<dt><i><a href="/docs/linux/man/1-scan/">scan</a></i>(1)</dt>
+<dd>produce a one line per message scan listing</dd>
+<dt><i><a href="/docs/linux/man/1-fnext/">fnext</a></i>(1)</dt>
+<dd>select the next folder with new messages</dd>
+<dt><i><a href="/docs/linux/man/1-fprev/">fprev</a></i>(1)</dt>
+<dd>select the previous folder with new messages</dd></dl>
 <p> Related utilities, only sometimes invoked directly:</p>
 <dl>
-<dd><i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1) produce formatted listings of nmh messages</p>
-<dt><i><a href="/docs/linux/man/1-mhlist/">mhlist</a></i>(1)</p>
-<dd>list information about content of MIME messages</p>
-<dt><i><a href="/docs/linux/man/1-mhn/">mhn</a></i>(1)</p>
-<dd>display/list/store/cache MIME messages</p>
-<dt><i><a href="/docs/linux/man/1-mhshow/">mhshow</a></i>(1)</p>
-<dd>display MIME messages</p>
-<dt><i><a href="/docs/linux/man/1-mhstore/">mhstore</a></i>(1)</p>
-<dd>store contents of MIME messages into files</dl>
+<dd><i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1) produce formatted listings of nmh messages</dd>
+<dt><i><a href="/docs/linux/man/1-mhlist/">mhlist</a></i>(1)</dt>
+<dd>list information about content of MIME messages</dd>
+<dt><i><a href="/docs/linux/man/1-mhn/">mhn</a></i>(1)</dt>
+<dd>display/list/store/cache MIME messages</dd>
+<dt><i><a href="/docs/linux/man/1-mhshow/">mhshow</a></i>(1)</dt>
+<dd>display MIME messages</dd>
+<dt><i><a href="/docs/linux/man/1-mhstore/">mhstore</a></i>(1)</dt>
+<dd>store contents of MIME messages into files</dd></dl>
 <h3>Searching</h3>
 <p>Within a folder:</p>
 <dl>
-<dt><i><a href="/docs/linux/man/1-pick/">pick</a></i>(1)</p>
-<dd>select messages by content</dl>
+<dt><i><a href="/docs/linux/man/1-pick/">pick</a></i>(1)</dt>
+<dd>select messages by content</dd></dl>
 <p> Across folders:</p>
 <dl>
-<dd><i><a href="/docs/linux/man/1-new/">new</a></i>(1) list folders with new messages</p>
-<dt><i><a href="/docs/linux/man/1-unseen/">unseen</a></i>(1)</p>
-<dd>list new messages in a give set of folders</p>
-<dt><i><a href="/docs/linux/man/1-flist/">flist</a></i>(1)</p>
-<dd>list folders with messages in given sequence(s)</p>
-<dt><i><a href="/docs/linux/man/1-flists/">flists</a></i>(1)</p>
-<dd>list all folders with messages in given sequence(s)</p>
-<dt><i><a href="/docs/linux/man/1-folder/">folder</a></i>(1)</p>
-<dd>set/list current folder/message</p>
-<dt><i><a href="/docs/linux/man/1-folders/">folders</a></i>(1)</p>
-<dd>list all folders</dl>
+<dd><i><a href="/docs/linux/man/1-new/">new</a></i>(1) list folders with new messages</dd>
+<dt><i><a href="/docs/linux/man/1-unseen/">unseen</a></i>(1)</dt>
+<dd>list new messages in a give set of folders</dd>
+<dt><i><a href="/docs/linux/man/1-flist/">flist</a></i>(1)</dt>
+<dd>list folders with messages in given sequence(s)</dd>
+<dt><i><a href="/docs/linux/man/1-flists/">flists</a></i>(1)</dt>
+<dd>list all folders with messages in given sequence(s)</dd>
+<dt><i><a href="/docs/linux/man/1-folder/">folder</a></i>(1)</dt>
+<dd>set/list current folder/message</dd>
+<dt><i><a href="/docs/linux/man/1-folders/">folders</a></i>(1)</dt>
+<dd>list all folders</dd></dl>
 <h3>Organizing</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/1-mark/">mark</a></i>(1) mark messages</p>
-<dt><i><a href="/docs/linux/man/1-refile/">refile</a></i>(1)</p>
-<dd>file messages in other folders</p>
-<dt><i><a href="/docs/linux/man/1-rmf/">rmf</a></i>(1)</p>
-<dd>remove folder</p>
-<dt><i><a href="/docs/linux/man/1-rmm/">rmm</a></i>(1)</p>
-<dd>remove messages</p>
-<dt><i><a href="/docs/linux/man/1-sortm/">sortm</a></i>(1)</p>
-<dd>sort messages</dl>
+<dd><i><a href="/docs/linux/man/1-mark/">mark</a></i>(1) mark messages</dd>
+<dt><i><a href="/docs/linux/man/1-refile/">refile</a></i>(1)</dt>
+<dd>file messages in other folders</dd>
+<dt><i><a href="/docs/linux/man/1-rmf/">rmf</a></i>(1)</dt>
+<dd>remove folder</dd>
+<dt><i><a href="/docs/linux/man/1-rmm/">rmm</a></i>(1)</dt>
+<dd>remove messages</dd>
+<dt><i><a href="/docs/linux/man/1-sortm/">sortm</a></i>(1)</dt>
+<dd>sort messages</dd></dl>
 <h3>Convenience Wrappers</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/1-mhmail/">mhmail</a></i>(1) send or read mail</p>
-<dt><i><a href="/docs/linux/man/1-msh/">msh</a></i>(1)</p>
-<dd>nmh shell</dl>
+<dd><i><a href="/docs/linux/man/1-mhmail/">mhmail</a></i>(1) send or read mail</dd>
+<dt><i><a href="/docs/linux/man/1-msh/">msh</a></i>(1)</dt>
+<dd>nmh shell</dd></dl>
 <h3>Utilities</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/1-mhfixmsg/">mhfixmsg</a></i>(1) rewrite MIME messages with various transformations</p>
-<dt><i><a href="/docs/linux/man/1-mhparam/">mhparam</a></i>(1)</p>
-<dd>print nmh profile components</p>
-<dt><i><a href="/docs/linux/man/1-mhpath/">mhpath</a></i>(1)</p>
-<dd>print full pathnames of nmh messages and folders</p>
-<dt><i><a href="/docs/linux/man/1-packf/">packf</a></i>(1)</p>
-<dd>compress a folder into a single file</p>
-<dt><i><a href="/docs/linux/man/1-prompter/">prompter</a></i>(1)</p>
-<dd>prompting editor front end</p>
-<dt><i><a href="/docs/linux/man/1-rcvtty/">rcvtty</a></i>(1)</p>
-<dd>report new mail</dl>
+<dd><i><a href="/docs/linux/man/1-mhfixmsg/">mhfixmsg</a></i>(1) rewrite MIME messages with various transformations</dd>
+<dt><i><a href="/docs/linux/man/1-mhparam/">mhparam</a></i>(1)</dt>
+<dd>print nmh profile components</dd>
+<dt><i><a href="/docs/linux/man/1-mhpath/">mhpath</a></i>(1)</dt>
+<dd>print full pathnames of nmh messages and folders</dd>
+<dt><i><a href="/docs/linux/man/1-packf/">packf</a></i>(1)</dt>
+<dd>compress a folder into a single file</dd>
+<dt><i><a href="/docs/linux/man/1-prompter/">prompter</a></i>(1)</dt>
+<dd>prompting editor front end</dd>
+<dt><i><a href="/docs/linux/man/1-rcvtty/">rcvtty</a></i>(1)</dt>
+<dd>report new mail</dd></dl>
 <h3>Indirectly Invoked Commands</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/8-ap/">ap</a></i>(8) parse addresses RFC 822-style</p>
-<dt><i><a href="/docs/linux/man/8-conflict/">conflict</a></i>(8)</p>
-<dd>search for alias/password conflicts</p>
-<dt><i><a href="/docs/linux/man/8-dp/">dp</a></i>(8)</p>
-<dd>parse dates RFC 822-style</p>
-<dt><i><a href="/docs/linux/man/8-fmtdump/">fmtdump</a></i>(8)</p>
-<dd>decode <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) files</p>
-<dt><i>install-mh</i>(8)</p>
-<dd>initialize the nmh environment</p>
-<dt><i><a href="/docs/linux/man/8-post/">post</a></i>(8)</p>
-<dd>deliver a message</dl>
+<dd><i><a href="/docs/linux/man/8-ap/">ap</a></i>(8) parse addresses RFC 822-style</dd>
+<dt><i><a href="/docs/linux/man/8-conflict/">conflict</a></i>(8)</dt>
+<dd>search for alias/password conflicts</dd>
+<dt><i><a href="/docs/linux/man/8-dp/">dp</a></i>(8)</dt>
+<dd>parse dates RFC 822-style</dd>
+<dt><i><a href="/docs/linux/man/8-fmtdump/">fmtdump</a></i>(8)</dt>
+<dd>decode <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) files</dd>
+<dt><i>install-mh</i>(8)</dt>
+<dd>initialize the nmh environment</dd>
+<dt><i><a href="/docs/linux/man/8-post/">post</a></i>(8)</dt>
+<dd>deliver a message</dd></dl>
 <h3>Files Used by nmh Commands</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/5-mh-alias/">mh-alias</a></i>(5) alias file for nmh message system</p>
-<dt><i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5)</p>
-<dd>format file for nmh message system</p>
-<dt><i><a href="/docs/linux/man/5-mh-profile/">mh-profile</a></i>(5)</p>
-<dd>user customization for nmh message system</p>
-<dt><i><a href="/docs/linux/man/5-mh-tailor/">mh-tailor</a></i>(5)</p>
-<dd>mail transport customization for nmh message system</dl>
+<dd><i><a href="/docs/linux/man/5-mh-alias/">mh-alias</a></i>(5) alias file for nmh message system</dd>
+<dt><i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5)</dt>
+<dd>format file for nmh message system</dd>
+<dt><i><a href="/docs/linux/man/5-mh-profile/">mh-profile</a></i>(5)</dt>
+<dd>user customization for nmh message system</dd>
+<dt><i><a href="/docs/linux/man/5-mh-tailor/">mh-tailor</a></i>(5)</dt>
+<dd>mail transport customization for nmh message system</dd></dl>
 <h3>Formats</h3>
 <dl>
-<dd><i><a href="/docs/linux/man/5-mh-draft/">mh-draft</a></i>(5) draft folder facility</p>
-<dt><i><a href="/docs/linux/man/5-mh-folders/">mh-folders</a></i>(5)</p>
-<dd>nmh message storage format specification</p>
-<dt><i><a href="/docs/linux/man/5-mh-mail/">mh-mail</a></i>(5)</p>
-<dd>message format for nmh message system</p>
-<dt><i><a href="/docs/linux/man/5-mh-sequence/">mh-sequence</a></i>(5)</p>
-<dd>sequence specification for nmh message system</dl>
+<dd><i><a href="/docs/linux/man/5-mh-draft/">mh-draft</a></i>(5) draft folder facility</dd>
+<dt><i><a href="/docs/linux/man/5-mh-folders/">mh-folders</a></i>(5)</dt>
+<dd>nmh message storage format specification</dd>
+<dt><i><a href="/docs/linux/man/5-mh-mail/">mh-mail</a></i>(5)</dt>
+<dd>message format for nmh message system</dd>
+<dt><i><a href="/docs/linux/man/5-mh-sequence/">mh-sequence</a></i>(5)</dt>
+<dd>sequence specification for nmh message system</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/usr/bin</p>
-<dd>contains <code>nmh</code> commands</p>
-<dt>/etc/nmh</p>
-<dd>contains <code>nmh</code> format files</p>
-<dt>/usr/libexec/nmh</p>
-<dd>contains <code>nmh</code> library commands</p>
-<dt>$HOME/.mh-profile</p>
-<dd>The user&#8217;s nmh profile</dl>
+<dt>/usr/bin</dt>
+<dd>contains <code>nmh</code> commands</dd>
+<dt>/etc/nmh</dt>
+<dd>contains <code>nmh</code> format files</dd>
+<dt>/usr/libexec/nmh</dt>
+<dd>contains <code>nmh</code> library commands</dd>
+<dt>$HOME/.mh-profile</dt>
+<dd>The user&#8217;s nmh profile</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-install-mh/">install-mh</a></i>(1), <i><a href="/docs/linux/man/5-mh-profile/">mh-profile</a></i>(5), <i><a href="/docs/linux/man/7-mh-chart/">mh-chart</a></i>(7), <i><a href="/docs/linux/man/7-mh-mime/">mh-mime</a></i>(7)</p>
 <h2>Bugs</h2>

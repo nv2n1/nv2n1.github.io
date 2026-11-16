@@ -51,14 +51,14 @@ int set_thread_area(unsigned long addr);
 <p> On MIPS and m68k, <code>set_thread_area</code>() always returns 0. On m68k, <code>get_thread_area</code>() returns the thread area pointer value (previously set via <code>set_thread_area</code>()).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>u_info</i> is an invalid pointer.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>u_info-&gt;entry_number</i> is out of bounds.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>get_thread_area</code>() or <code>set_thread_area</code>() was invoked as a 64-bit system call.</p>
-<dt><code>ESRCH</code></p>
-<dd> (<code>set_thread_area</code>()) A free TLS entry could not be located.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>u_info</i> is an invalid pointer.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>u_info-&gt;entry_number</i> is out of bounds.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>get_thread_area</code>() or <code>set_thread_area</code>() was invoked as a 64-bit system call.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> (<code>set_thread_area</code>()) A free TLS entry could not be located.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>set_thread_area</code>() first appeared in Linux 2.5.29. <code>get_thread_area</code>() first appeared in Linux 2.5.32.</p>
 <h2>CONFORMING TO</h2>

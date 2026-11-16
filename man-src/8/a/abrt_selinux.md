@@ -137,16 +137,16 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <p> <code>abrt_dump_oops_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_dump_oops_exec_t type, if you want to transition an executable to the abrt_dump_oops_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/abrt-dump-.*, /usr/bin/abrt-uefioops-oops, /usr/libexec/abrt-hook-ccpp </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/abrt-dump-.*, /usr/bin/abrt-uefioops-oops, /usr/libexec/abrt-hook-ccpp </dd>
 </dl>
 <p> <code>abrt_etc_t</code> </p>
 <p> &#8211; Set files with the abrt_etc_t type, if you want to store abrt files in the /etc directories. </p>
 <p> <code>abrt_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_exec_t type, if you want to transition an executable to the abrt_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/abrt-harvest.*, /usr/sbin/abrtd, /usr/sbin/abrt-dbus, /usr/sbin/abrt-install-ccpp-hook </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/abrt-harvest.*, /usr/sbin/abrtd, /usr/sbin/abrt-dbus, /usr/sbin/abrt-install-ccpp-hook </dd>
 </dl>
 <p> <code>abrt_handle_event_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_handle_event_exec_t type, if you want to transition an executable to the abrt_handle_event_t domain. </p>
@@ -157,22 +157,22 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <p> <code>abrt_retrace_cache_t</code> </p>
 <p> &#8211; Set files with the abrt_retrace_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/cache/abrt-retrace(/.*)?, /var/cache/retrace-server(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/cache/abrt-retrace(/.*)?, /var/cache/retrace-server(/.*)? </dd>
 </dl>
 <p> <code>abrt_retrace_coredump_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_retrace_coredump_exec_t type, if you want to transition an executable to the abrt_retrace_coredump_t domain. </p>
 <p> <code>abrt_retrace_spool_t</code> </p>
 <p> &#8211; Set files with the abrt_retrace_spool_t type, if you want to store the abrt retrace files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/faf(/.*)?, /var/spool/abrt-retrace(/.*)?, /var/spool/retrace-server(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/faf(/.*)?, /var/spool/abrt-retrace(/.*)?, /var/spool/retrace-server(/.*)? </dd>
 </dl>
 <p> <code>abrt_retrace_worker_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_retrace_worker_exec_t type, if you want to transition an executable to the abrt_retrace_worker_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/abrt-retrace-worker, /usr/bin/retrace-server-worker </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/abrt-retrace-worker, /usr/bin/retrace-server-worker </dd>
 </dl>
 <p> <code>abrt_tmp_t</code> </p>
 <p> &#8211; Set files with the abrt_tmp_t type, if you want to store abrt temporary files in the /tmp directories. </p>
@@ -185,8 +185,8 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <p> <code>abrt_var_cache_t</code> </p>
 <p> &#8211; Set files with the abrt_var_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/tmp/abrt(/.*)?, /var/cache/abrt(/.*)?, /var/spool/abrt(/.*)?, /var/spool/debug(/.*)?, /var/cache/abrt-di(/.*)?, /var/spool/rhsm/debug(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/tmp/abrt(/.*)?, /var/cache/abrt(/.*)?, /var/spool/abrt(/.*)?, /var/spool/debug(/.*)?, /var/cache/abrt-di(/.*)?, /var/spool/rhsm/debug(/.*)? </dd>
 </dl>
 <p> <code>abrt_var_lib_t</code> </p>
 <p> &#8211; Set files with the abrt_var_lib_t type, if you want to store the abrt files under the /var/lib directory. </p>
@@ -195,8 +195,8 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <p> <code>abrt_var_run_t</code> </p>
 <p> &#8211; Set files with the abrt_var_run_t type, if you want to store the abrt files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/abrt(/.*)?, /var/run/abrtd?.lock, /var/run/abrtd?.socket, /var/run/abrt.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/abrt(/.*)?, /var/run/abrtd?.lock, /var/run/abrtd?.socket, /var/run/abrt.pid </dd>
 </dl>
 <p> <code>abrt_watch_log_exec_t</code> </p>
 <p> &#8211; Set files with the abrt_watch_log_exec_t type, if you want to transition an executable to the abrt_watch_log_t domain. </p>
@@ -204,13 +204,13 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow abrt servers to read the /var/abrt directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow abrt servers to read the /var/abrt directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/abrt(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/abrt</code></p>
 <dl>
-<dt>Allow abrt servers to read and write /var/abrt/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the abrt_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow abrt servers to read and write /var/abrt/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the abrt_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/abrt/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/abrt/incoming</code><br />
  <code>setsebool -P abrt_anon_write 1</code> </p>

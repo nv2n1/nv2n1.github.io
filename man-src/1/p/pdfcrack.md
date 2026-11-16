@@ -18,37 +18,37 @@ description: "pdfcrack – Password recovery tool for PDF-files"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-&nbsp;<wbr><code>-b</code>,&nbsp;<wbr><code>&#8211;bench</code></p>
-<dd> perform benchmark and exit</p>
+&nbsp;<wbr><code>-b</code>,&nbsp;<wbr><code>&#8211;bench</code></dt>
+<dd> perform benchmark and exit</dd>
 <dt>
-&nbsp;<wbr><code>-c</code>,&nbsp;<wbr><code>&#8211;charset=</code><i>STRING</i></p>
-<dd> Use the characters in <i>STRING</i> as charset</p>
-<dt><code>-w</code>, <code>&#8211;wordlist=</code><i>FILE</i></p>
-<dd> Use <i>FILE</i> as source of passwords to try</p>
-<dt><code>-n</code>, <code>&#8211;minpw=</code><i>INTEGER</i></p>
-<dd> Skip trying passwords shorter than <i>INTEGER</p>
-<dt></i><code>-m</code>, <code>&#8211;maxpw=</code><i>INTEGER</i></p>
-<dd> Stop when reaching this <i>INTEGER</i> passwordlength</p>
-<dt><code>-l</code>, <code>&#8211;loadstate=</code><i>FILE</i></p>
+&nbsp;<wbr><code>-c</code>,&nbsp;<wbr><code>&#8211;charset=</code><i>STRING</i></dt>
+<dd> Use the characters in <i>STRING</i> as charset</dd>
+<dt><code>-w</code>, <code>&#8211;wordlist=</code><i>FILE</i></dt>
+<dd> Use <i>FILE</i> as source of passwords to try</dd>
+<dt><code>-n</code>, <code>&#8211;minpw=</code><i>INTEGER</i></dt>
+<dd> Skip trying passwords shorter than <i>INTEGER</dd>
+<dt></i><code>-m</code>, <code>&#8211;maxpw=</code><i>INTEGER</i></dt>
+<dd> Stop when reaching this <i>INTEGER</i> passwordlength</dd>
+<dt><code>-l</code>, <code>&#8211;loadstate=</code><i>FILE</i></dt>
 <dd>
-&nbsp;<wbr>Continue from the state saved in&nbsp;<wbr><i>FILE</p>
+&nbsp;<wbr>Continue from the state saved in&nbsp;<wbr><i>FILE</dd>
 <dt>
-&nbsp;<wbr></i><code>-o</code>,&nbsp;<wbr><code>&#8211;owner</code></p>
-<dd> Work with the ownerpassword</p>
+&nbsp;<wbr></i><code>-o</code>,&nbsp;<wbr><code>&#8211;owner</code></dt>
+<dd> Work with the ownerpassword</dd>
 <dt>
-&nbsp;<wbr><code>-u</code>,&nbsp;<wbr><code>&#8211;user</code></p>
-<dd> Work with the userpassword (default)</p>
+&nbsp;<wbr><code>-u</code>,&nbsp;<wbr><code>&#8211;user</code></dt>
+<dd> Work with the userpassword (default)</dd>
 <dt>
-&nbsp;<wbr><code>-p</code>,&nbsp;<wbr><code>&#8211;password=</code><i>STRING</i></p>
-<dd> Give userpassword to speed up breaking ownerpassword (implies <code>-o</code>)</p>
+&nbsp;<wbr><code>-p</code>,&nbsp;<wbr><code>&#8211;password=</code><i>STRING</i></dt>
+<dd> Give userpassword to speed up breaking ownerpassword (implies <code>-o</code>)</dd>
 <dt>
-&nbsp;<wbr><code>-q</code>,&nbsp;<wbr><code>&#8211;quiet</code></p>
-<dd> Run quietly</p>
-<dt><code>-s</code>, <code>&#8211;permutate</code></p>
-<dd> Try permutating the passwords (currently only supports switching first character to uppercase)</p>
+&nbsp;<wbr><code>-q</code>,&nbsp;<wbr><code>&#8211;quiet</code></dt>
+<dd> Run quietly</dd>
+<dt><code>-s</code>, <code>&#8211;permutate</code></dt>
+<dd> Try permutating the passwords (currently only supports switching first character to uppercase)</dd>
 <dt>
-&nbsp;<wbr><code>-v</code>,&nbsp;<wbr><code>&#8211;version</code></p>
-<dd> Print version and exit</dl>
+&nbsp;<wbr><code>-v</code>,&nbsp;<wbr><code>&#8211;version</code></dt>
+<dd> Print version and exit</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Via e-mail to Henning Noren &lt;confusion42 [at] users.sourceforge.net&gt; or report on project page at <a rel="nofollow" href="http://pdfcrack.sourceforge.net/">http://pdfcrack.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>

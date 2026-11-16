@@ -14,19 +14,19 @@ description: "regulator_unregister_supply_alias – Remove device alias"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device that will be given as the regulator &#8220;consumer&#8221;</dl>
+</dd><dd>device that will be given as the regulator &#8220;consumer&#8221;</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>Supply name or regulator ID</dl>
+<dd>Supply name or regulator ID</dd></dl>
 <h2>Description</h2>
 <p>Remove a lookup alias if one exists for id on dev.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

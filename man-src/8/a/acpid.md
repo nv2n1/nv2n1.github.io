@@ -23,54 +23,50 @@ description: "acpid – Advanced Configuration and Power Interface event daemon"
 <p> All the default files and directories can be changed with commandline options.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i></i>, <code>&#8211;confdir</code><i> directory</i></p>
-<dd>This option changes the directory in which <code>acpid</code> looks for rule configuration files. Default is <i>/etc/acpi/events</i>.</p>
-<dt><code>-C</code><i></i>, <code>&#8211;clientmax</code><i> number</i></p>
-<dd>This option changes the maximum number of non-root socket connections which can be made to the <code>acpid</code> socket. Default is <i>256</i>.</p>
-<dt><code>-d</code><i></i>, <code>&#8211;debug</code></p>
-<dd>This option increases the <code>acpid</code> debug level by one.</p>
-<dt><code>-e</code><i></i>, <code>&#8211;eventfile</code><i> filename</i></p>
-<dd>This option changes the event file from which <code>acpid</code> reads events. Default is <i>/proc/acpi/event</i>.</p>
-<dt><code>-n</code><i></i>, <code>&#8211;netlink</code></p>
-<dd>This option forces <code>acpid</code> to use the Linux kernel input layer and netlink interface for ACPI events.</p>
-<dt><code>-f</code><i></i>, <code>&#8211;foreground</code></p>
-<dd>This option keeps <code>acpid</code> in the foreground by not forking at startup, and makes it log to stderr instead of syslog.</p>
-<dt><code>-l</code><i></i>, <code>&#8211;logevents</code></p>
-<dd>This option tells <code>acpid</code> to log information about all events and actions.</p>
-<dt><code>-L</code><i></i>, <code>&#8211;lockfile</code><i> filename</i></p>
-<dd>This option changes the lock file used to stop event processing. Default is <i>/var/lock/acpid</i>.</p>
-<dt><code>-g</code><i></i>, <code>&#8211;socketgroup</code><i> groupname</i></p>
-<dd>This option changes the group ownership of the UNIX domain socket to which <code>acpid</code> publishes events.</p>
-<dt><code>-m</code><i></i>, <code>&#8211;socketmode</code><i> mode</i></p>
-<dd>This option changes the permissions of the UNIX domain socket to which <code>acpid</code> publishes events. Default is <i>0666</i>.</p>
-<dt><code>-s</code><i></i>, <code>&#8211;socketfile</code><i> filename</i></p>
-<dd>This option changes the name of the UNIX domain socket which <code>acpid</code> opens. Default is <i>/var/run/acpid.socket</i>.</p>
-<dt><code>-S</code><i></i>, <code>&#8211;nosocket</code></p>
-<dd>This option tells <code>acpid</code> not to open a UNIX domain socket. This overrides the <i>-s</i> option, and negates all other socket options.</p>
-<dt><code>-p</code><i></i>, <code>&#8211;pidfile</code><i> filename</i></p>
-<dd>This option tells <code>acpid</code> to use the specified file as its pidfile. If the file exists, it will be removed and over-written. Default is <i>/var/run/acpid.pid</i>.</p>
-<dt><code>-r</code><i></i>, <code>&#8211;dropaction</code><i> action</i></p>
-<dd>This option defines the pseudo-action which tells <code>acpid</code> to abort all processing of an event, including client notifications. Default is <i>&lt;drop&gt;</i>.</p>
-<dt><code>-t</code><i></i>, <code>&#8211;tpmutefix</code></p>
-<dd>This option enables special handling of the mute button for certain ThinkPad models with mute LEDs that get out of sync with the mute state when the mute button is held down. With this option, the mute button will generate the following events in sync with the number of presses (and, by extension, the state of the LED):</p>
+<dt><code>-c</code><i></i>, <code>&#8211;confdir</code><i> directory</i></dt>
+<dd>This option changes the directory in which <code>acpid</code> looks for rule configuration files. Default is <i>/etc/acpi/events</i>.</dd>
+<dt><code>-C</code><i></i>, <code>&#8211;clientmax</code><i> number</i></dt>
+<dd>This option changes the maximum number of non-root socket connections which can be made to the <code>acpid</code> socket. Default is <i>256</i>.</dd>
+<dt><code>-d</code><i></i>, <code>&#8211;debug</code></dt>
+<dd>This option increases the <code>acpid</code> debug level by one.</dd>
+<dt><code>-e</code><i></i>, <code>&#8211;eventfile</code><i> filename</i></dt>
+<dd>This option changes the event file from which <code>acpid</code> reads events. Default is <i>/proc/acpi/event</i>.</dd>
+<dt><code>-n</code><i></i>, <code>&#8211;netlink</code></dt>
+<dd>This option forces <code>acpid</code> to use the Linux kernel input layer and netlink interface for ACPI events.</dd>
+<dt><code>-f</code><i></i>, <code>&#8211;foreground</code></dt>
+<dd>This option keeps <code>acpid</code> in the foreground by not forking at startup, and makes it log to stderr instead of syslog.</dd>
+<dt><code>-l</code><i></i>, <code>&#8211;logevents</code></dt>
+<dd>This option tells <code>acpid</code> to log information about all events and actions.</dd>
+<dt><code>-L</code><i></i>, <code>&#8211;lockfile</code><i> filename</i></dt>
+<dd>This option changes the lock file used to stop event processing. Default is <i>/var/lock/acpid</i>.</dd>
+<dt><code>-g</code><i></i>, <code>&#8211;socketgroup</code><i> groupname</i></dt>
+<dd>This option changes the group ownership of the UNIX domain socket to which <code>acpid</code> publishes events.</dd>
+<dt><code>-m</code><i></i>, <code>&#8211;socketmode</code><i> mode</i></dt>
+<dd>This option changes the permissions of the UNIX domain socket to which <code>acpid</code> publishes events. Default is <i>0666</i>.</dd>
+<dt><code>-s</code><i></i>, <code>&#8211;socketfile</code><i> filename</i></dt>
+<dd>This option changes the name of the UNIX domain socket which <code>acpid</code> opens. Default is <i>/var/run/acpid.socket</i>.</dd>
+<dt><code>-S</code><i></i>, <code>&#8211;nosocket</code></dt>
+<dd>This option tells <code>acpid</code> not to open a UNIX domain socket. This overrides the <i>-s</i> option, and negates all other socket options.</dd>
+<dt><code>-p</code><i></i>, <code>&#8211;pidfile</code><i> filename</i></dt>
+<dd>This option tells <code>acpid</code> to use the specified file as its pidfile. If the file exists, it will be removed and over-written. Default is <i>/var/run/acpid.pid</i>.</dd>
+<dt><code>-r</code><i></i>, <code>&#8211;dropaction</code><i> action</i></dt>
+<dd>This option defines the pseudo-action which tells <code>acpid</code> to abort all processing of an event, including client notifications. Default is <i>&lt;drop&gt;</i>.</dd>
+<dt><code>-t</code><i></i>, <code>&#8211;tpmutefix</code></dt>
+<dd>This option enables special handling of the mute button for certain ThinkPad models with mute LEDs that get out of sync with the mute state when the mute button is held down. With this option, the mute button will generate the following events in sync with the number of presses (and, by extension, the state of the LED):</dd>
 <dd>button/mute MUTE (key pressed) K<br />
- button/mute MUTE (key released) K</p>
-<dt><code>-v</code><i></i>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-h</code><i></i>, <code>&#8211;help</code></p>
-<dd>Show help and exit.</dl>
+ button/mute MUTE (key released) K</dd>
+<dt><code>-v</code><i></i>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-h</code><i></i>, <code>&#8211;help</code></dt>
+<dd>Show help and exit.</dd></dl>
 <h2>Example</h2>
 <p>This example will shut down your system if you press the power button. </p>
 <pre><code>Create a file named /etc/acpi/events/power that contains the following:
-
-
-
 event=button/power
-
 action=/etc/acpi/power.sh &quot;%e&quot;</code></pre>
 <p> Then create a file named /etc/acpi/power.sh that contains the following:</p>
 <dl>
-<dd>/sbin/shutdown -h now &quot;Power button pressed&quot;</dl>
+<dd>/sbin/shutdown -h now &quot;Power button pressed&quot;</dd></dl>
 <p> Now, when <code>acpid</code> is running, a press of the power button will cause the rule in /etc/acpi/events/power to trigger the script in /etc/acpi/power.sh. The script will then shut down the system.</p>
 <h2>Troubleshooting</h2>
 <p><code>acpid</code> is a simple program that runs scripts in response to ACPI events from the kernel. When there&#8217;s trouble, the problem is rarely with <code>acpid</code> itself. The following are some suggestions for finding the most common sources of ACPI-related problems. </p>

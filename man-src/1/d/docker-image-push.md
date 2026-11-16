@@ -21,46 +21,46 @@ description: "docker-image-push – Push an image or a repository to a registry"
 <p> First save the new image by finding the container ID (using <code>docker container ls</code>) and then committing it to a new image name. Note that only a-z0-9-_. are allowed when naming images: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker container commit c16378f943fe rhel-httpd
 </pre>
-</dl>
+</dd></dl>
 <p> Now, push the image to the registry using the image ID. In this example the registry is on host named registry-host and listening on port 5000. To do this, tag the image with the host name or IP address, and the port of the registry: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker image tag rhel-httpd registry-host:5000/myadmin/rhel-httpd:latest
 # docker image push registry-host:5000/myadmin/rhel-httpd:latest
 </pre>
-</dl>
+</dd></dl>
 <p> Check that this worked by running: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker image ls
 </pre>
-</dl>
+</dd></dl>
 <p> You should see both rhel-httpd and registry-host:5000/myadmin/rhel-httpd listed. </p>
 <h3>Push all tags of an image</h3>
 <p> Use the -a (or &#8211;all-tags) option to push To push all tags of a local image. </p>
 <p> The following example creates multiple tags for an image, and pushes all those tags to Docker Hub. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker image tag myimage registry-host:5000/myname/myimage:latest
 $ docker image tag myimage registry-host:5000/myname/myimage:v1.0.1
 $ docker image tag myimage registry-host:5000/myname/myimage:v1.0
 $ docker image tag myimage registry-host:5000/myname/myimage:v1
 </pre>
-</dl>
+</dd></dl>
 <p> The image is now tagged under multiple names: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker image ls
 REPOSITORY                          TAG        IMAGE ID       CREATED      SIZE
@@ -70,11 +70,11 @@ registry-host:5000/myname/myimage   v1         6d5fcfe5ff17   2 hours ago  1.22M
 registry-host:5000/myname/myimage   v1.0       6d5fcfe5ff17   2 hours ago  1.22MB
 registry-host:5000/myname/myimage   v1.0.1     6d5fcfe5ff17   2 hours ago  1.22MB
 </pre>
-</dl>
+</dd></dl>
 <p> When pushing with the &#8211;all-tags option, all tags of the registry-host:5000/myname/myimage image are pushed: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker image push --all-tags registry-host:5000/myname/myimage
 The push refers to repository [registry-host:5000/myname/myimage]
@@ -87,7 +87,7 @@ v1.0: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686
 195be5f8be1d: Layer already exists
 v1.0.1: digest: sha256:edafc0a0fb057813850d1ba44014914ca02d671ae247107ca70c94db686e7de6 size: 4527
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all-tags</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Push all tagged images in the repository</p>
 <p> <code>&#8211;disable-content-trust</code>[=true] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Skip image signing</p>

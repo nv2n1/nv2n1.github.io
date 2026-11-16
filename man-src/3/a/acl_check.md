@@ -19,14 +19,14 @@ description: "acl_check – check an ACL for validity"
 <p> The user identifiers must be unique among all entries of type ACL_USER. The group identifiers must be unique among all entries of type ACL_GROUP. </p>
 <p> If the ACL referred to by <i>acl</i> is invalid, Fn acl_check returns a positive error code that indicates which type of error was detected. The following symbolic error codes are defined:</p>
 <dl>
-<dt><code>ACL_MULTI_ERROR</code></p>
-<dd> The ACL contains multiple entries that have a tag type that may occur at most once.</p>
-<dt><code>ACL_DUPLICATE_ERROR</code></p>
-<dd> The ACL contains multiple ACL_USER entries with the same user ID, or multiple ACL_GROUP entries with the same group ID.</p>
-<dt><code>ACL_MISS_ERROR</code></p>
-<dd> A required entry is missing.</p>
-<dt><code>ACL_ENTRY_ERROR</code></p>
-<dd> The ACL contains an invalid entry tag type.</dl>
+<dt><code>ACL_MULTI_ERROR</code></dt>
+<dd> The ACL contains multiple entries that have a tag type that may occur at most once.</dd>
+<dt><code>ACL_DUPLICATE_ERROR</code></dt>
+<dd> The ACL contains multiple ACL_USER entries with the same user ID, or multiple ACL_GROUP entries with the same group ID.</dd>
+<dt><code>ACL_MISS_ERROR</code></dt>
+<dd> A required entry is missing.</dd>
+<dt><code>ACL_ENTRY_ERROR</code></dt>
+<dd> The ACL contains an invalid entry tag type.</dd></dl>
 <p> The Fn acl_error function can be used to translate error codes to text messages. </p>
 <p> In addition, if the pointer <i>last</i> is not <code>NULL</code> Fn acl_check assigns the number of the ACL entry at which the error was detected to the value pointed to by <i>last</i> Entries are numbered starting with zero, in the order in which they would be returned by the Fn acl_get_entry function.</p>
 <h2>RETURN VALUE</h2>
@@ -34,8 +34,8 @@ description: "acl_check – check an ACL for validity"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_check function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dd></dl>
 <h2>STANDARDS</h2>
 <p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
 <h2>SEE ALSO</h2>

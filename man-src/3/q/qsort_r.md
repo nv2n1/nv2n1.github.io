@@ -10,10 +10,8 @@ description: "qsort, qsort_r – sort an array"
 <p>qsort, qsort_r &#8211; sort an array</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 void qsort(void *base, size_t nmemb, size_t size,
            int (*compar)(const void *, const void *));
-
 void qsort_r(void *base, size_t nmemb, size_t size,
              int (*compar)(const void *, const void *, void *),
              void *arg);</code></pre>

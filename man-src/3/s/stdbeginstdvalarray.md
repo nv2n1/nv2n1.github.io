@@ -12,12 +12,9 @@ std::begin(std::valarray) - std::begin(std::valarray)
 
 <pre><code>template &lt;class T&gt;
 (1)(since C++ 11)
-
     /*unspecified1*/ begin(valarray&lt;T&gt; &amp;v);
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     /*unspecified2*/ begin(const valarray&lt;T&gt; &amp;v);</code></pre> 
 The overload of std::begin for valarray returns an iterator of unspecified type referring to the first element in the numeric array. 
 1) The return type meets the requirements of mutable LegacyRandomAccessIterator. 

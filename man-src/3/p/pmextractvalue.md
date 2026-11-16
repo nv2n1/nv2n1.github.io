@@ -52,11 +52,11 @@ EVENT | N | N | N | N | N | N | N | N | N</pre>
 <h2>Diagnostics</h2>
 <p><code>PM_ERR_CONV</code></p>
 <dl>
-<dd>Impossible conversion, marked by N in above table</dl>
+<dd>Impossible conversion, marked by N in above table</dd></dl>
 <p> <code>PM_ERR_TRUNC</code></p>
 <dl>
-<dd>High-order truncation occurred</dl>
+<dd>High-order truncation occurred</dd></dl>
 <p> <code>PM_ERR_SIGN</code></p>
 <dl>
-<dd>Conversion of negative value to unsigned type attempted </p>
+<dd>Conversion of negative value to unsigned type attempted </dd>
 </dl>

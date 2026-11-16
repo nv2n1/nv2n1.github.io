@@ -18,7 +18,7 @@ description: "sgemm.f –"
 <p> <code>SGEMM</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SGEMM  performs one of the matrix-matrix operations
     C := alpha*op( A )*op( B ) + beta*C,
@@ -27,11 +27,11 @@ description: "sgemm.f –"
  alpha and beta are scalars, and A, B and C are matrices, with op( A )
  an m by k matrix,  op( B )  a  k by n matrix and  C an m by n matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSA</i> </p>
+</dt><dd> <i>TRANSA</i> </dd>
 <pre>
           TRANSA is CHARACTER*1
            On entry, TRANSA specifies the form of op( A ) to be used in
@@ -134,18 +134,18 @@ description: "sgemm.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 3 Blas routine.
   -- Written on 8-February-1989.
@@ -154,8 +154,9 @@ description: "sgemm.f –"
      Jeremy Du Croz, Numerical Algorithms Group Ltd.
      Sven Hammarling, Numerical Algorithms Group Ltd.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 188 of file sgemm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -17,12 +17,12 @@ description: "malmake – compile a Malaga project"
 <p> See <code>info Malaga</code> for details. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>[<code>elp</code>]</p>
-<dd> Print a help text about <code>malmake</code>&#8216;s command line arguments and exit.</p>
-<dt><code>-n</code>[<code>ew</code>]</p>
-<dd> (Re)compile all files, even if their sources have not changed meanwhile.</p>
-<dt><code>-v</code>[<code>ersion</code>]</p>
-<dd> Print <code>malmake</code>&#8216;s version number and exit. </p>
+<dt><code>-h</code>[<code>elp</code>]</dt>
+<dd> Print a help text about <code>malmake</code>&#8216;s command line arguments and exit.</dd>
+<dt><code>-n</code>[<code>ew</code>]</dt>
+<dd> (Re)compile all files, even if their sources have not changed meanwhile.</dd>
+<dt><code>-v</code>[<code>ersion</code>]</dt>
+<dd> Print <code>malmake</code>&#8216;s version number and exit. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Malaga has been developed by Bjoern Beutel. Numerous other people distributed to it. This manpage was originally written for the Debian distribution by Antti-Juhani Kaijanaho. </p>

@@ -11,8 +11,6 @@ description: "zcgesv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zcgesv (N, NRHS, A, LDA, IPIV, B, LDB, X, LDX, WORK, SWORK, RWORK, ITER, INFO)
-
-
 ZCGESV computes the solution to system of linear equations A * X = B for GE matrices (mixed precision with iterative refinement)</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zcgesv (integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, complex*16, dimension( n, * )WORK, complex, dimension( * )SWORK, double precision, dimension( * )RWORK, integerITER, integerINFO)</h3>
@@ -47,10 +45,10 @@ ZCGESV computes the solution to system of linear equations A * X = B for GE matr
  o EPS is the machine epsilon returned by DLAMCH('Epsilon')
  The value ITERMAX and BWDMAX are fixed to 30 and 1.0D+00
  respectively.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of linear equations, i.e., the order of the
  matrix A. N &gt;= 0.</pre>
@@ -123,13 +121,13 @@ ZCGESV computes the solution to system of linear equations A * X = B for GE matr
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 201 of file zcgesv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

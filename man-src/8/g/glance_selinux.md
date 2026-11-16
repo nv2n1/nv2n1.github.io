@@ -41,12 +41,12 @@ description: "glance_selinux – Security Enhanced Linux Policy for the glance p
 <p> Policy governs the access confined processes have to these ports. SELinux glance policy is very flexible allowing users to setup their glance processes in as secure a method as possible. </p>
 <p> The following port types are defined for glance: </p>
 <dl>
-<dt><code>glance_port_t </code></p>
+<dt><code>glance_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9292 udp 9292 </p>
-<dt><code>glance_registry_port_t </code></p>
+</dd><dd>Default Defined Ports: tcp 9292 udp 9292 </dd>
+<dt><code>glance_registry_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9191 udp 9191</dl>
+</dd><dd>Default Defined Ports: tcp 9191 udp 9191</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux glance policy is very flexible allowing users to setup their glance processes in as secure a method as possible. </p>

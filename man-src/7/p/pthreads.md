@@ -12,52 +12,52 @@ description: "pthreads – POSIX threads"
 <p>POSIX.1 specifies a set of interfaces (functions, header files) for threaded programming commonly known as POSIX threads, or Pthreads. A single process can contain multiple threads, all of which are executing the same program. These threads share the same global memory (data and heap segments), but each thread has its own stack (automatic variables). </p>
 <p> POSIX.1 also requires that threads share a range of other attributes (i.e., these attributes are process-wide rather than per-thread):</p>
 <dl>
-<dt>&#8211;</p>
-<dd>process ID</p>
-<dt>&#8211;</p>
-<dd>parent process ID</p>
-<dt>&#8211;</p>
-<dd>process group ID and session ID</p>
-<dt>&#8211;</p>
-<dd>controlling terminal</p>
-<dt>&#8211;</p>
-<dd>user and group IDs</p>
-<dt>&#8211;</p>
-<dd>open file descriptors</p>
-<dt>&#8211;</p>
-<dd>record locks (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>signal dispositions</p>
-<dt>&#8211;</p>
-<dd>file mode creation mask (<code><a href="/docs/linux/man/2-umask/">umask</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>current directory (<code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2)) and root directory (<code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>interval timers (<code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2)) and POSIX timers (<code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>nice value (<code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>resource limits (<code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>measurements of the consumption of CPU time (<code><a href="/docs/linux/man/2-times/">times</a></code>(2)) and resources (<code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2))</dl>
+<dt>&#8211;</dt>
+<dd>process ID</dd>
+<dt>&#8211;</dt>
+<dd>parent process ID</dd>
+<dt>&#8211;</dt>
+<dd>process group ID and session ID</dd>
+<dt>&#8211;</dt>
+<dd>controlling terminal</dd>
+<dt>&#8211;</dt>
+<dd>user and group IDs</dd>
+<dt>&#8211;</dt>
+<dd>open file descriptors</dd>
+<dt>&#8211;</dt>
+<dd>record locks (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>signal dispositions</dd>
+<dt>&#8211;</dt>
+<dd>file mode creation mask (<code><a href="/docs/linux/man/2-umask/">umask</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>current directory (<code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2)) and root directory (<code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>interval timers (<code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2)) and POSIX timers (<code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>nice value (<code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>resource limits (<code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>measurements of the consumption of CPU time (<code><a href="/docs/linux/man/2-times/">times</a></code>(2)) and resources (<code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2))</dd></dl>
 <p> As well as the stack, POSIX.1 specifies that various other attributes are distinct for each thread, including:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>thread ID (the <i>pthread_t</i> data type)</p>
-<dt>&#8211;</p>
-<dd>signal mask (<code><a href="/docs/linux/man/3-pthread_sigmask/">pthread_sigmask</a></code>(3))</p>
-<dt>&#8211;</p>
-<dd>the <i>errno</i> variable</p>
-<dt>&#8211;</p>
-<dd>alternate signal stack (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2))</p>
-<dt>&#8211;</p>
-<dd>real-time scheduling policy and priority (<code><a href="/docs/linux/man/7-sched/">sched</a></code>(7))</dl>
+<dt>&#8211;</dt>
+<dd>thread ID (the <i>pthread_t</i> data type)</dd>
+<dt>&#8211;</dt>
+<dd>signal mask (<code><a href="/docs/linux/man/3-pthread_sigmask/">pthread_sigmask</a></code>(3))</dd>
+<dt>&#8211;</dt>
+<dd>the <i>errno</i> variable</dd>
+<dt>&#8211;</dt>
+<dd>alternate signal stack (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2))</dd>
+<dt>&#8211;</dt>
+<dd>real-time scheduling policy and priority (<code><a href="/docs/linux/man/7-sched/">sched</a></code>(7))</dd></dl>
 <p> The following Linux-specific features are also per-thread:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>capabilities (see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7))</p>
-<dt>&#8211;</p>
-<dd>CPU affinity (<code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2))</dl>
+<dt>&#8211;</dt>
+<dd>capabilities (see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7))</dd>
+<dt>&#8211;</dt>
+<dd>CPU affinity (<code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2))</dd></dl>
 <h3>Pthreads function return values</h3>
 <p>Most pthreads functions return 0 on success, and an error number on failure. The error numbers that can be returned have the same meaning as the error numbers returned in <i>errno</i> by conventional system calls and C library functions. Note that the pthreads functions do not set <i>errno</i>. For each of the pthreads functions that can return an error, POSIX.1-2001 specifies that the function can never fail with the error <code>EINTR</code>.</p>
 <h3>Thread IDs</h3>
@@ -89,73 +89,73 @@ description: "pthreads – POSIX threads"
 <h3>Linux implementations of POSIX threads</h3>
 <p>Over time, two threading implementations have been provided by the GNU C library on Linux:</p>
 <dl>
-<dt><code>LinuxThreads</code></p>
-<dd>This is the original Pthreads implementation. Since glibc 2.4, this implementation is no longer supported.</p>
-<dt><code>NPTL</code> (Native POSIX Threads Library)</p>
-<dd>This is the modern Pthreads implementation. By comparison with LinuxThreads, NPTL provides closer conformance to the requirements of the POSIX.1 specification and better performance when creating large numbers of threads. NPTL is available since glibc 2.3.2, and requires features that are present in the Linux 2.6 kernel.</dl>
+<dt><code>LinuxThreads</code></dt>
+<dd>This is the original Pthreads implementation. Since glibc 2.4, this implementation is no longer supported.</dd>
+<dt><code>NPTL</code> (Native POSIX Threads Library)</dt>
+<dd>This is the modern Pthreads implementation. By comparison with LinuxThreads, NPTL provides closer conformance to the requirements of the POSIX.1 specification and better performance when creating large numbers of threads. NPTL is available since glibc 2.3.2, and requires features that are present in the Linux 2.6 kernel.</dd></dl>
 <p> Both of these are so-called 1:1 implementations, meaning that each thread maps to a kernel scheduling entity. Both threading implementations employ the Linux <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) system call. In NPTL, thread synchronization primitives (mutexes, thread joining, and so on) are implemented using the Linux <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) system call.</p>
 <h3>LinuxThreads</h3>
 <p>The notable features of this implementation are the following:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>In addition to the main (initial) thread, and the threads that the program creates using <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), the implementation creates a &quot;manager&quot; thread. This thread handles thread creation and termination. (Problems can result if this thread is inadvertently killed.)</p>
-<dt>&#8211;</p>
-<dd>Signals are used internally by the implementation. On Linux 2.2 and later, the first three real-time signals are used (see also <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). On older Linux kernels, <code>SIGUSR1</code> and <code>SIGUSR2</code> are used. Applications must avoid the use of whichever set of signals is employed by the implementation.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share process IDs. (In effect, LinuxThreads threads are implemented as processes which share more information than usual, but which do not share a common process ID.) LinuxThreads threads (including the manager thread) are visible as separate processes using <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1).</dl>
+<dt>&#8211;</dt>
+<dd>In addition to the main (initial) thread, and the threads that the program creates using <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), the implementation creates a &quot;manager&quot; thread. This thread handles thread creation and termination. (Problems can result if this thread is inadvertently killed.)</dd>
+<dt>&#8211;</dt>
+<dd>Signals are used internally by the implementation. On Linux 2.2 and later, the first three real-time signals are used (see also <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). On older Linux kernels, <code>SIGUSR1</code> and <code>SIGUSR2</code> are used. Applications must avoid the use of whichever set of signals is employed by the implementation.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share process IDs. (In effect, LinuxThreads threads are implemented as processes which share more information than usual, but which do not share a common process ID.) LinuxThreads threads (including the manager thread) are visible as separate processes using <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1).</dd></dl>
 <p> The LinuxThreads implementation deviates from the POSIX.1 specification in a number of ways, including the following:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>Calls to <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) return a different value in each thread.</p>
-<dt>&#8211;</p>
-<dd>Calls to <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in threads other than the main thread return the process ID of the manager thread; instead <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in these threads should return the same value as <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in the main thread.</p>
-<dt>&#8211;</p>
-<dd>When one thread creates a new child process using <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), any thread should be able to <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) on the child. However, the implementation allows only the thread that created the child to <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) on it.</p>
-<dt>&#8211;</p>
-<dd>When a thread calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), all other threads are terminated (as required by POSIX.1). However, the resulting process has the same PID as the thread that called <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2): it should have the same PID as the main thread.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share user and group IDs. This can cause complications with set-user-ID programs and can cause failures in Pthreads functions if an application changes its credentials using <code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2) or similar.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share a common session ID and process group ID.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share record locks created using <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</p>
-<dt>&#8211;</p>
-<dd>The information returned by <code><a href="/docs/linux/man/2-times/">times</a></code>(2) and <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) is per-thread rather than process-wide.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share semaphore undo values (see <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2)).</p>
-<dt>&#8211;</p>
-<dd>Threads do not share interval timers.</p>
-<dt>&#8211;</p>
-<dd>Threads do not share a common nice value.</p>
-<dt>&#8211;</p>
-<dd>POSIX.1 distinguishes the notions of signals that are directed to the process as a whole and signals that are directed to individual threads. According to POSIX.1, a process-directed signal (sent using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), for example) should be handled by a single, arbitrarily selected thread within the process. LinuxThreads does not support the notion of process-directed signals: signals may be sent only to specific threads.</p>
-<dt>&#8211;</p>
-<dd>Threads have distinct alternate signal stack settings. However, a new thread&#8217;s alternate signal stack settings are copied from the thread that created it, so that the threads initially share an alternate signal stack. (A new thread should start with no alternate signal stack defined. If two threads handle signals on their shared alternate signal stack at the same time, unpredictable program failures are likely to occur.)</dl>
+<dt>&#8211;</dt>
+<dd>Calls to <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) return a different value in each thread.</dd>
+<dt>&#8211;</dt>
+<dd>Calls to <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in threads other than the main thread return the process ID of the manager thread; instead <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in these threads should return the same value as <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2) in the main thread.</dd>
+<dt>&#8211;</dt>
+<dd>When one thread creates a new child process using <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), any thread should be able to <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) on the child. However, the implementation allows only the thread that created the child to <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) on it.</dd>
+<dt>&#8211;</dt>
+<dd>When a thread calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), all other threads are terminated (as required by POSIX.1). However, the resulting process has the same PID as the thread that called <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2): it should have the same PID as the main thread.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share user and group IDs. This can cause complications with set-user-ID programs and can cause failures in Pthreads functions if an application changes its credentials using <code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2) or similar.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share a common session ID and process group ID.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share record locks created using <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</dd>
+<dt>&#8211;</dt>
+<dd>The information returned by <code><a href="/docs/linux/man/2-times/">times</a></code>(2) and <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) is per-thread rather than process-wide.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share semaphore undo values (see <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2)).</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share interval timers.</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share a common nice value.</dd>
+<dt>&#8211;</dt>
+<dd>POSIX.1 distinguishes the notions of signals that are directed to the process as a whole and signals that are directed to individual threads. According to POSIX.1, a process-directed signal (sent using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), for example) should be handled by a single, arbitrarily selected thread within the process. LinuxThreads does not support the notion of process-directed signals: signals may be sent only to specific threads.</dd>
+<dt>&#8211;</dt>
+<dd>Threads have distinct alternate signal stack settings. However, a new thread&#8217;s alternate signal stack settings are copied from the thread that created it, so that the threads initially share an alternate signal stack. (A new thread should start with no alternate signal stack defined. If two threads handle signals on their shared alternate signal stack at the same time, unpredictable program failures are likely to occur.)</dd></dl>
 <h3>Nptl</h3>
 <p>With NPTL, all of the threads in a process are placed in the same thread group; all members of a thread group share the same PID. NPTL does not employ a manager thread. </p>
 <p> NPTL makes internal use of the first two real-time signals; these signals cannot be used in applications. See <code><a href="/docs/linux/man/7-nptl/">nptl</a></code>(7) for further details. </p>
 <p> NPTL still has at least one nonconformance with POSIX.1:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>Threads do not share a common nice value.</dl>
+<dt>&#8211;</dt>
+<dd>Threads do not share a common nice value.</dd></dl>
 <p> Some NPTL nonconformances occur only with older kernels:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>The information returned by <code><a href="/docs/linux/man/2-times/">times</a></code>(2) and <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) is per-thread rather than process-wide (fixed in kernel 2.6.9).</p>
-<dt>&#8211;</p>
-<dd>Threads do not share resource limits (fixed in kernel 2.6.10).</p>
-<dt>&#8211;</p>
-<dd>Threads do not share interval timers (fixed in kernel 2.6.12).</p>
-<dt>&#8211;</p>
-<dd>Only the main thread is permitted to start a new session using <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2) (fixed in kernel 2.6.16).</p>
-<dt>&#8211;</p>
-<dd>Only the main thread is permitted to make the process into a process group leader using <code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2) (fixed in kernel 2.6.16).</p>
-<dt>&#8211;</p>
-<dd>Threads have distinct alternate signal stack settings. However, a new thread&#8217;s alternate signal stack settings are copied from the thread that created it, so that the threads initially share an alternate signal stack (fixed in kernel 2.6.16).</dl>
+<dt>&#8211;</dt>
+<dd>The information returned by <code><a href="/docs/linux/man/2-times/">times</a></code>(2) and <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) is per-thread rather than process-wide (fixed in kernel 2.6.9).</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share resource limits (fixed in kernel 2.6.10).</dd>
+<dt>&#8211;</dt>
+<dd>Threads do not share interval timers (fixed in kernel 2.6.12).</dd>
+<dt>&#8211;</dt>
+<dd>Only the main thread is permitted to start a new session using <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2) (fixed in kernel 2.6.16).</dd>
+<dt>&#8211;</dt>
+<dd>Only the main thread is permitted to make the process into a process group leader using <code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2) (fixed in kernel 2.6.16).</dd>
+<dt>&#8211;</dt>
+<dd>Threads have distinct alternate signal stack settings. However, a new thread&#8217;s alternate signal stack settings are copied from the thread that created it, so that the threads initially share an alternate signal stack (fixed in kernel 2.6.16).</dd></dl>
 <p> Note the following further points about the NPTL implementation:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>If the stack size soft resource limit (see the description of <code>RLIMIT_STACK</code> in <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)) is set to a value other than <i>unlimited</i>, then this value defines the default stack size for new threads. To be effective, this limit must be set before the program is executed, perhaps using the <i>ulimit -s</i> shell built-in command (<i>limit stacksize</i> in the C shell).</dl>
+<dt>&#8211;</dt>
+<dd>If the stack size soft resource limit (see the description of <code>RLIMIT_STACK</code> in <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)) is set to a value other than <i>unlimited</i>, then this value defines the default stack size for new threads. To be effective, this limit must be set before the program is executed, perhaps using the <i>ulimit -s</i> shell built-in command (<i>limit stacksize</i> in the C shell).</dd></dl>
 <h3>Determining the threading implementation</h3>
 <p>Since glibc 2.3.2, the <code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1) command can be used to determine the system&#8217;s threading implementation, for example: </p>
 <p> bash$ getconf GNU_LIBPTHREAD_VERSION NPTL 2.3.4 </p>

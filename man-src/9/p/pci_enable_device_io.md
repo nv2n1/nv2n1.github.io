@@ -15,7 +15,7 @@ pci_enable_device_io - Initialize a device for use with IO space
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to be initialized</dl>
+<dl><dd></dd><dd>PCI device to be initialized</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,9 +11,7 @@ std::abs(std::valarray) - std::abs(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; abs(const valarray&lt;T&gt; &amp;va);</code></pre> 
 Computes absolute value of each element in the value array. 
 
@@ -54,10 +52,8 @@ The function can be implemented with the return type different from std::valarra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;valarray&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; v{1, -2, 3, -4, 5, -6, 7, -8};
     std::valarray&lt;int&gt; v2 = std::abs(v);

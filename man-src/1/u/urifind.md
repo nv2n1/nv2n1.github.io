@@ -103,27 +103,27 @@ $ urifind - S mailto file1 mailto : webmaster[at] boston.com $ urifind - S mailt
 
 <dl>
 <dt>-s
-<dd> Sort results.
-<dt>-r
-<dd> Reverse sort results (implies -s).
-<dt>-u
-<dd> Return unique results only.
-<dt>-n
-<dd> Don't include filename in output.
-<dt>-p
-<dd> Include filename in output (0 by default, but 1 if multiple files are included on the command line).
-<dt>-P $re
-<dd> Print only lines matching regex '$re' (may be specified multiple times).
-<dt>-S $scheme
-<dd> Only this scheme (may be specified multiple times).
-<dt>-h
-<dd> Help summary.
-<dt>-v
-<dd> Display version and exit.
-<dt>-d
-<dd> Dump compiled regexes for <tt>&quot;-S&quot;</tt> and <tt>&quot;-P&quot;</tt> to <tt>&quot;STDERR&quot;</tt>.
-<dt>-D
-<dd> Same as <tt>&quot;-d&quot;</tt>, but exit after dumping.</dl>
+</dt><dd> Sort results.
+</dd><dt>-r
+</dt><dd> Reverse sort results (implies -s).
+</dd><dt>-u
+</dt><dd> Return unique results only.
+</dd><dt>-n
+</dt><dd> Don't include filename in output.
+</dd><dt>-p
+</dt><dd> Include filename in output (0 by default, but 1 if multiple files are included on the command line).
+</dd><dt>-P $re
+</dt><dd> Print only lines matching regex '$re' (may be specified multiple times).
+</dd><dt>-S $scheme
+</dt><dd> Only this scheme (may be specified multiple times).
+</dd><dt>-h
+</dt><dd> Help summary.
+</dd><dt>-v
+</dt><dd> Display version and exit.
+</dd><dt>-d
+</dt><dd> Dump compiled regexes for <tt>&quot;-S&quot;</tt> and <tt>&quot;-P&quot;</tt> to <tt>&quot;STDERR&quot;</tt>.
+</dd><dt>-D
+</dt><dd> Same as <tt>&quot;-d&quot;</tt>, but exit after dumping.</dd></dl>
 
 <h2>AUTHOR</h2>
 

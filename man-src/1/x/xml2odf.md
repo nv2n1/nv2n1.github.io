@@ -10,9 +10,9 @@ description: "xml2odf – Create ODF package from OpenDocument in XML form"
 <p>xml2odf &#8211; Create ODF package from OpenDocument in XML form</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>xml2odf</code> [-o&nbsp;<wbr><i>outputfile</i>] [-s] [<i>inputfile</i>]</dl>
+<dt> <code>xml2odf</code> [-o&nbsp;<wbr><i>outputfile</i>] [-s] [<i>inputfile</i>]</dt></dl>
 <h2>Description</h2>
-<dd>OpenDocument can be a complete office document in a single XML file. The script will take such a document and create a package. This is mainly useful as a postprocesser of a program producing XML, such as a stylesheet. </p>
+<dd>OpenDocument can be a complete office document in a single XML file. The script will take such a document and create a package. This is mainly useful as a postprocesser of a program producing XML, such as a stylesheet. </dd>
 <p> &#8220;Inputfile&#8221; is assumed to be an OpenDocument file in XML form. If there is no inputfile, the program will read from standard input. The flag -s adds correct suffix to the filename according to what mime type is found in the XML file, in cause you don&#8217;t know already what document type you are packaging. </p>
 <p> If output file is not specified output will be to standard out. </p>
 <p> Section 2.1.1 of Open Document Format for Office Applications says that the [content.xml] file contains the document content, along with the <i>automatic styles</i> needed for the document content. The [styles.xml] file contains all the named styles of a document, along with the <i>automatic styles</i> needed for the named styles. The application doesn&#8217;t know which automatic style is needed for what, so it puts the same set of automatic styles into both files. </p>
@@ -20,7 +20,7 @@ description: "xml2odf – Create ODF package from OpenDocument in XML form"
 <h2>Example</h2>
 <dl>
 <dt>
-<dd> <font SIZE="-1"> </font></p>
+</dt><dd> <font SIZE="-1"> </font></dd>
 <pre>
 xml2odf -o testdocument -s xml-file
 </pre>
@@ -35,5 +35,5 @@ xml2odf -o testdocument -s xml-file
 <p> <code>S&oslash;ren Roug</code></p>
 <dl>
 <dt>
-<dd> Original author</dl>
+</dt><dd> Original author</dd></dl>
 <h2>Index</h2>

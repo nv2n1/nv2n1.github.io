@@ -12,7 +12,6 @@ std::atomic&lt;T&gt;::operatorT - std::atomic&lt;T&gt;::operatorT
 
 <pre><code>operator T() const noexcept;
 (since C++ 11)
-
 operator T() const volatile noexcept;</code></pre> 
 Atomically loads and returns the current value of the atomic variable. Equivalent to load(). 
 

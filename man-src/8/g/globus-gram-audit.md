@@ -15,29 +15,29 @@ description: "globus-gram-audit – Load GRAM5 audit records into a database"
 <p> The full set of command-line options to <code>globus-gram-audit</code> consist of: </p>
 <p> <code>&#8211;conf </code><i>CONFIG-FILE</i></p>
 <dl>
-<dd>Use <i>CONFIG-FILE</i> instead of the default from the configuration file for audit database configuration.</dl>
+<dd>Use <i>CONFIG-FILE</i> instead of the default from the configuration file for audit database configuration.</dd></dl>
 <p> <code>&#8211;check</code></p>
 <dl>
-<dd>Check whether the insertion of a record was successful by querying the database after inserting the records. This is used in tests.</dl>
+<dd>Check whether the insertion of a record was successful by querying the database after inserting the records. This is used in tests.</dd></dl>
 <p> <code>&#8211;delete</code></p>
 <dl>
-<dd>Delete audit records from the database right after inserting them. This is used in tests to avoid filling the databse with test records.</dl>
+<dd>Delete audit records from the database right after inserting them. This is used in tests to avoid filling the databse with test records.</dd></dl>
 <p> <code>&#8211;audit-directory </code><i>AUDITDIR</i></p>
 <dl>
-<dd>Look for audit records in <i>AUDITDIR</i>, instead of looking in the directory specified in the job manager configuration. This is used in tests to control which records are loaded to the database and then deleted.</dl>
+<dd>Look for audit records in <i>AUDITDIR</i>, instead of looking in the directory specified in the job manager configuration. This is used in tests to control which records are loaded to the database and then deleted.</dd></dl>
 <p> <code>&#8211;query </code><i>SQL</i></p>
 <dl>
-<dd>Perform the given SQL query on the audit database. This uses the database information from the configuration file to determine how to contact the database.</dl>
+<dd>Perform the given SQL query on the audit database. This uses the database information from the configuration file to determine how to contact the database.</dd></dl>
 <p> <code>&#8211;quiet</code></p>
 <dl>
-<dd>Reduce the amount of output for common operations.</dl>
+<dd>Reduce the amount of output for common operations.</dd></dl>
 <h2>Files</h2>
 <p>The <code>globus-gram-audit</code> uses the following files: </p>
 <p> <code>/etc/globus-gram-job-manager.conf</code></p>
 <dl>
-<dd>GRAM5 job manager configuration. It includes the default path to the audit directory</dl>
+<dd>GRAM5 job manager configuration. It includes the default path to the audit directory</dd></dl>
 <p> <code>/etc/globus-gram-audit.conf</code></p>
 <dl>
-<dd>Audit configuration. It includes the information needed to contact the audit database.</dl>
+<dd>Audit configuration. It includes the information needed to contact the audit database.</dd></dl>
 <h2>Author</h2>
 <p>Copyright &#169; 1999-2016 University of Chicago</p>

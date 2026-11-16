@@ -16,18 +16,18 @@ description: "/etc/isdn/isdnlog.users – user base isdnlog config file"
 <p> The file consists of lines; each line begins with the name of a user. After the user&#8217;s name the privileges given to this user are specified (on the same line). The following privileges are possible, separated by semicolons &quot;;&quot; : </p>
 <dl>
 <dd>
-<dl>
-<dt><code>ALL</code></p>
-<dd>All of the privileges below are given. Should only be given to root. </p>
-<dt><code>MSN=msn[,msn&#8230;]</code></p>
+</dd><dl>
+<dt><code>ALL</code></dt>
+<dd>All of the privileges below are given. Should only be given to root. </dd>
+<dt><code>MSN=msn[,msn&#8230;]</code></dt>
 <dd>Only information about events concerning the specified msns is given. This includes incoming and outgoing calls, and protocol information. Any number of msns may be given. Wildcards (such as used in isdn.conf) are permitted. With &quot;MSN=*&quot; all msns are allowed.<br />
- Unknown numbers (e.g. from outgoing calls from other isdn devices or incoming calls from analog connections) cannot be specified with MSN=. The only way to allow these calls to be seen is by giving &quot;MSN=*&quot;. </p>
-<dt><code>PROTOCOL</code></p>
-<dd>The information specified to isdnlog by the -xX flag (see <a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8)) is allowed. </p>
-<dt><code>I4LCONF</code> (planned)</p>
-<dd>This gives permission to change isdn4linux properties. This should only be allowed to root. </p>
-<dt><code>ADDRESSBOOK</code> (planned)</p>
-<dd>This makes it possible to retrieve / store information about a caller or called number.</dl>
+ Unknown numbers (e.g. from outgoing calls from other isdn devices or incoming calls from analog connections) cannot be specified with MSN=. The only way to allow these calls to be seen is by giving &quot;MSN=*&quot;. </dd>
+<dt><code>PROTOCOL</code></dt>
+<dd>The information specified to isdnlog by the -xX flag (see <a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8)) is allowed. </dd>
+<dt><code>I4LCONF</code> (planned)</dt>
+<dd>This gives permission to change isdn4linux properties. This should only be allowed to root. </dd>
+<dt><code>ADDRESSBOOK</code> (planned)</dt>
+<dd>This makes it possible to retrieve / store information about a caller or called number.</dd></dl>
 </dl>
 <p> <code>Users</code><br />
  At the beginning of the file it is possible to specify users with hostnames: </p>
@@ -49,8 +49,8 @@ otto MSN=47111,47112
 <p> [world]</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/isdn/isdnlog.users</code></p>
-<dd>This file. </p>
+<dt><code>/etc/isdn/isdnlog.users</code></dt>
+<dd>This file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>isdnlog(1) </code></p>

@@ -12,17 +12,12 @@ std::experimental::optional&lt;T&gt;::value - std::experimental::optional&lt;T&g
 
 <pre><code>constexpr T &amp;value() &amp;;
 (1)(library fundamentals TS)
-
     constexpr const T &amp;value() const &amp;;
-
 constexpr T &amp;&amp;value() &amp;&amp;;
 (2)(library fundamentals TS)
-
     constexpr const T &amp;&amp;value() const &amp;&amp;;
 Returns the contained value.
-
 1) Equivalent to return bool(*this) ? *val : throw bad_optional_access();
-
 2) Equivalent to return bool(*this) ? std::move(*val) : throw bad_optional_access();
 </code></pre>
 
@@ -45,11 +40,8 @@ The dereference operator operator*() does not check if this optional contains a 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;experimental/optional&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::experimental::optional&lt;int&gt; opt = {};
     try {

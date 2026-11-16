@@ -35,39 +35,39 @@ description: "QwtPlotMagnifier –"
 <p> Together with <code>QwtPlotZoomer</code> and <code>QwtPlotPanner</code> it is possible to implement individual and powerful navigation of the plot canvas. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotZoomer</code>, <code>QwtPlotPanner</code>, <code>QwtPlot</code></dl>
+<dd><code>QwtPlotZoomer</code>, <code>QwtPlotPanner</code>, <code>QwtPlot</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotMagnifier::QwtPlotMagnifier (QWidget *canvas) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvas</i> Plot canvas to be magnified</dl>
+<dd><i>canvas</i> Plot canvas to be magnified</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>bool QwtPlotMagnifier::isAxisEnabled (intaxis) const</h3>
 <p>Test if an axis is enabled </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code></dl>
+<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, if the axis is enabled</dl>
+<dd>True, if the axis is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAxisEnabled()</code></dl>
+<dd><code>setAxisEnabled()</code></dd></dl>
 <h3>void QwtPlotMagnifier::rescale (doublefactor) [protected], [virtual]</h3>
 <p>Zoom in/out the axes scales </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> A value &lt; 1.0 zooms in, a value &gt; 1.0 zooms out.</dl>
+<dd><i>factor</i> A value &lt; 1.0 zooms in, a value &gt; 1.0 zooms out.</dd></dl>
 <p> Implements <code>QwtMagnifier</code>.</p>
 <h3>void QwtPlotMagnifier::setAxisEnabled (intaxis, boolon)</h3>
 <p>En/Disable an axis. Only Axes that are enabled will be zoomed. All other axes will remain unchanged. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isAxisEnabled()</code></dl>
+<dd><code>isAxisEnabled()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

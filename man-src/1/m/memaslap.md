@@ -12,10 +12,10 @@ description: "memaslap – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> memaslap [options]</p>
 <dl>
-<dt><code>&#8211;help</code></p>
+<dt><code>&#8211;help</code></dt>
 <dd>
-<dt><code>MEMCACHED_SERVERS</code></p>
-<dd></dl>
+</dd><dt><code>MEMCACHED_SERVERS</code></dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>memaslap</code> is a load generation and benchmark tool for memcached servers. It generates configurable workload such as threads, concurrencies, connections, run time, overwrite, miss rate, key size, value size, get/set proportion, expected throughput, and so on. Furthermore, it also testss data verification, expire-time verification, UDP, binary protocol, facebook test, replication test, multi-get and reconnection, etc. </p>
 <p> Memaslap manages network connections like memcached with libevent. Each thread of memaslap is bound with a CPU core, all the threads don&#8217;t communicate with each other, and there are several socket connections in each thread. Each connection keeps key size distribution, value size distribution, and command distribution by itself. </p>
@@ -85,15 +85,15 @@ description: "memaslap – libmemcached Documentation"
 <p> The high performance of memaslap benefits from the special schedule of thread and concurrency. It’s important to specify the proper number of them. The default number of threads is 1; the default number of concurrency is 16. The user can use “—threads” and “&#8211;concurrency” to specify these variables. </p>
 <p> If the system tests setting CPU affinity and the number of threads specified by the user is greater than 1, memaslap will try to bind each thread to a different CPU core. So if you want to get the best performance memaslap, it is better to specify the number of thread equal to the number of CPU cores. The number of threads specified by the user can also be less or greater than the number of CPU cores. Because of the limitation of implementation, the number of concurrencies could be the multiple of the number of threads.</p>
 <dl>
-<dt>1.</p>
-<dd> For 8 CPU cores system </p>
+<dt>1.</dt>
+<dd> For 8 CPU cores system </dd>
 <p> For example: </p>
 <p> &#8211;threads=2 &#8211;concurrency=128 </p>
 <p> &#8211;threads=8 &#8211;concurrency=128 </p>
 <p> &#8211;threads=8 &#8211;concurrency=256 </p>
 <p> &#8211;threads=12 &#8211;concurrency=144</p>
-<dt>2.</p>
-<dd> For 16 CPU cores system </p>
+<dt>2.</dt>
+<dd> For 16 CPU cores system </dd>
 <p> For example: </p>
 <p> &#8211;threads=8 &#8211;concurrency=128 </p>
 <p> &#8211;threads=16 &#8211;concurrency=256 </p>
@@ -106,14 +106,14 @@ description: "memaslap – libmemcached Documentation"
 <p> Assume that the key size is 128 bytes, and the value size is 2048 bytes, and concurrency=128. </p>
 <p> 1. Small cache cache_size=1M, 100% cache miss (all data get from SSD). win_size=10k</p>
 <dl>
-<dt>2.</p>
-<dd> cache_size=4G </p>
+<dt>2.</dt>
+<dd> cache_size=4G </dd>
 <p> (1). cache miss rate 0% </p>
 <p> win_size=8k </p>
 <p> (2). cache miss rate 5% </p>
 <p> win_size=11k</p>
-<dt>3.</p>
-<dd> cache_size=16G </p>
+<dt>3.</dt>
+<dd> cache_size=16G </dd>
 <p> (1). cache miss rate 0% </p>
 <p> win_size=32k </p>
 <p> (2). cache miss </p>
@@ -333,52 +333,52 @@ Ops TPS(ops / s) Net(M / s) Get_miss Min(us) Max(us)<br />
 <p> Net_rate The average rate of network</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s, &#8211;servers=</code></p>
-<dd> List one or more servers to connect. Servers count must be less than threads count. e.g.: &#8211;servers=localhost:1234,localhost:11211</p>
-<dt><code>-T, &#8211;threads=</code></p>
-<dd> Number of threads to startup, better equal to CPU numbers. Default 8.</p>
-<dt><code>-c, &#8211;concurrency=</code></p>
-<dd> Number of concurrency to simulate with load. Default 128.</p>
-<dt><code>-n, &#8211;conn_sock=</code></p>
-<dd> Number of TCP socks per concurrency. Default 1.</p>
-<dt><code>-x, &#8211;execute_number=</code></p>
-<dd> Number of operations(get and set) to execute for the given test. Default 1000000.</p>
-<dt><code>-t, &#8211;time=</code></p>
-<dd> How long the test to run, suffix: s-seconds, m-minutes, h-hours, d-days e.g.: &#8211;time=2h.</p>
-<dt><code>-F, &#8211;cfg_cmd=</code></p>
-<dd> Load the configure file to get command,key and value distribution list.</p>
-<dt><code>-w, &#8211;win_size=</code></p>
-<dd> Task window size of each concurrency, suffix: K, M e.g.: &#8211;win_size=10k. Default 10k.</p>
-<dt><code>-X, &#8211;fixed_size=</code></p>
-<dd> Fixed length of value.</p>
-<dt><code>-v, &#8211;verify=</code></p>
-<dd> The proportion of date verification, e.g.: &#8211;verify=0.01</p>
-<dt><code>-d, &#8211;division=</code></p>
-<dd> Number of keys to multi-get once. Default 1, means single get.</p>
-<dt><code>-S, &#8211;stat_freq=</code></p>
-<dd> Frequency of dumping statistic information. suffix: s-seconds, m-minutes, e.g.: &#8211;resp_freq=10s.</p>
-<dt><code>-e, &#8211;exp_verify=</code></p>
-<dd> The proportion of objects with expire time, e.g.: &#8211;exp_verify=0.01. Default no object with expire time</p>
-<dt><code>-o, &#8211;overwrite=</code></p>
-<dd> The proportion of objects need overwrite, e.g.: &#8211;overwrite=0.01. Default never overwrite object.</p>
-<dt><code>-R, &#8211;reconnect</code></p>
-<dd> Reconnect tests, when connection is closed it will be reconnected.</p>
-<dt><code>-U, &#8211;udp</code></p>
-<dd> UDP tests, default memaslap uses TCP, TCP port and UDP port of server must be same.</p>
-<dt><code>-a, &#8211;facebook</code></p>
-<dd> Whether it enables facebook test feature, set with TCP and multi-get with UDP.</p>
-<dt><code>-B, &#8211;binary</code></p>
-<dd> Whether it enables binary protocol. Default with ASCII protocol.</p>
-<dt><code>-P, &#8211;tps=</code></p>
-<dd> Expected throughput, suffix: K, e.g.: &#8211;tps=10k.</p>
-<dt><code>-p, &#8211;rep_write=</code></p>
-<dd> The first nth servers can write data, e.g.: &#8211;rep_write=2.</p>
-<dt><code>-b, &#8211;verbose</code></p>
-<dd> Whether it outputs detailed information when verification fails.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display this message and then exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display the version of the application and then exit.</dl>
+<dt><code>-s, &#8211;servers=</code></dt>
+<dd> List one or more servers to connect. Servers count must be less than threads count. e.g.: &#8211;servers=localhost:1234,localhost:11211</dd>
+<dt><code>-T, &#8211;threads=</code></dt>
+<dd> Number of threads to startup, better equal to CPU numbers. Default 8.</dd>
+<dt><code>-c, &#8211;concurrency=</code></dt>
+<dd> Number of concurrency to simulate with load. Default 128.</dd>
+<dt><code>-n, &#8211;conn_sock=</code></dt>
+<dd> Number of TCP socks per concurrency. Default 1.</dd>
+<dt><code>-x, &#8211;execute_number=</code></dt>
+<dd> Number of operations(get and set) to execute for the given test. Default 1000000.</dd>
+<dt><code>-t, &#8211;time=</code></dt>
+<dd> How long the test to run, suffix: s-seconds, m-minutes, h-hours, d-days e.g.: &#8211;time=2h.</dd>
+<dt><code>-F, &#8211;cfg_cmd=</code></dt>
+<dd> Load the configure file to get command,key and value distribution list.</dd>
+<dt><code>-w, &#8211;win_size=</code></dt>
+<dd> Task window size of each concurrency, suffix: K, M e.g.: &#8211;win_size=10k. Default 10k.</dd>
+<dt><code>-X, &#8211;fixed_size=</code></dt>
+<dd> Fixed length of value.</dd>
+<dt><code>-v, &#8211;verify=</code></dt>
+<dd> The proportion of date verification, e.g.: &#8211;verify=0.01</dd>
+<dt><code>-d, &#8211;division=</code></dt>
+<dd> Number of keys to multi-get once. Default 1, means single get.</dd>
+<dt><code>-S, &#8211;stat_freq=</code></dt>
+<dd> Frequency of dumping statistic information. suffix: s-seconds, m-minutes, e.g.: &#8211;resp_freq=10s.</dd>
+<dt><code>-e, &#8211;exp_verify=</code></dt>
+<dd> The proportion of objects with expire time, e.g.: &#8211;exp_verify=0.01. Default no object with expire time</dd>
+<dt><code>-o, &#8211;overwrite=</code></dt>
+<dd> The proportion of objects need overwrite, e.g.: &#8211;overwrite=0.01. Default never overwrite object.</dd>
+<dt><code>-R, &#8211;reconnect</code></dt>
+<dd> Reconnect tests, when connection is closed it will be reconnected.</dd>
+<dt><code>-U, &#8211;udp</code></dt>
+<dd> UDP tests, default memaslap uses TCP, TCP port and UDP port of server must be same.</dd>
+<dt><code>-a, &#8211;facebook</code></dt>
+<dd> Whether it enables facebook test feature, set with TCP and multi-get with UDP.</dd>
+<dt><code>-B, &#8211;binary</code></dt>
+<dd> Whether it enables binary protocol. Default with ASCII protocol.</dd>
+<dt><code>-P, &#8211;tps=</code></dt>
+<dd> Expected throughput, suffix: K, e.g.: &#8211;tps=10k.</dd>
+<dt><code>-p, &#8211;rep_write=</code></dt>
+<dd> The first nth servers can write data, e.g.: &#8211;rep_write=2.</dd>
+<dt><code>-b, &#8211;verbose</code></dt>
+<dd> Whether it outputs detailed information when verification fails.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display this message and then exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display the version of the application and then exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> memaslap -s 127.0.0.1:11211 -S 5s </p>
 <p> memaslap -s 127.0.0.1:11211 -t 2m -v 0.2 -e 0.05 -b </p>

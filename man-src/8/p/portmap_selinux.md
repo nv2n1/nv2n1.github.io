@@ -55,9 +55,9 @@ description: "portmap_selinux – Security Enhanced Linux Policy for the portmap
 <p> Policy governs the access confined processes have to these ports. SELinux portmap policy is very flexible allowing users to setup their portmap processes in as secure a method as possible. </p>
 <p> The following port types are defined for portmap: </p>
 <dl>
-<dt><code>portmap_port_t</code></p>
+<dt><code>portmap_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 111 udp 111</dl>
+</dd><dd>Default Defined Ports: tcp 111 udp 111</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type portmap_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -102,14 +102,14 @@ description: "portmap_selinux – Security Enhanced Linux Policy for the portmap
 <p> <code>portmap_exec_t</code> </p>
 <p> &#8211; Set files with the portmap_exec_t type, if you want to transition an executable to the portmap_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/portmap, /usr/sbin/portmap </p>
+<dt>Paths:</dt>
+<dd>/sbin/portmap, /usr/sbin/portmap </dd>
 </dl>
 <p> <code>portmap_helper_exec_t</code> </p>
 <p> &#8211; Set files with the portmap_helper_exec_t type, if you want to transition an executable to the portmap_helper_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/pmap_set, /sbin/pmap_dump, /usr/sbin/pmap_set, /usr/sbin/pmap_dump </p>
+<dt>Paths:</dt>
+<dd>/sbin/pmap_set, /sbin/pmap_dump, /usr/sbin/pmap_set, /usr/sbin/pmap_dump </dd>
 </dl>
 <p> <code>portmap_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the portmap_initrc_exec_t type, if you want to transition an executable to the portmap_initrc_t domain. </p>
@@ -118,8 +118,8 @@ description: "portmap_selinux – Security Enhanced Linux Policy for the portmap
 <p> <code>portmap_var_run_t</code> </p>
 <p> &#8211; Set files with the portmap_var_run_t type, if you want to store the portmap files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/portmap_mapping, /var/run/portmap.upgrade-state </p>
+<dt>Paths:</dt>
+<dd>/var/run/portmap_mapping, /var/run/portmap.upgrade-state </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

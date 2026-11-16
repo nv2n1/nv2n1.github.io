@@ -28,23 +28,17 @@ url: "/docs/linux/man/1-perlmpeix/"
  January 12, 2006
 <dl>
 <dt>&bull;
-<dd> Updated for perl-5.8.8 and perl-5.9.3 by Ken Hirsch. 
-
+</dt><dd> Updated for perl-5.8.8 and perl-5.9.3 by Ken Hirsch. 
  Simplified the build process by using the <font SIZE="-1">MPEAUTOCONF</font> functionality in Mark Klein's ld. 
-
  If you build this from scratch, make sure you have a version of ld which supports it. In the shell, type 
-
  <pre>
   ld --help
     and look for AUTOCONF or MPEAUTOCONF near the bottom
   or do this:
   ld --help 2&gt;&amp;1 | grep AUTOCONF
 </pre> 
-
  If you see don't see <font SIZE="-1">AUTOCONF</font> or <font SIZE="-1">MPEAUTOCONF</font>, make sure you get a new version. 
-
  You also do not have to use mpeix/relink after building, so the recommend sequence is: 
-
  <pre><code>
 ./ Configure - de
 # or./ Configure - de - Dusedevel
@@ -54,70 +48,60 @@ url: "/docs/linux/man/1-perlmpeix/"
 #if you run this in a job, do "make test_notty"
                            make install
 </code></pre> 
-
  Be prepared for a wait. These take much longer on MPE/iX than on a Unix system, because of a slow forking, mostly. On a lightly-loaded <font SIZE="-1">HP3000</font> Series 979 running MPE/iX 7.5: 
-
  <pre>
     Configure: 1 hour
     make:      1 hour 15 minutes
     make test  1 hour 45 minutes
 </pre> 
-
  Various socket problems were fixed in mpeix.c. 
-
- Mark Klein provided a fixed sigsetjmp (that works with dynamic libraries) in mpeix_setjmp.c</dl>
+ Mark Klein provided a fixed sigsetjmp (that works with dynamic libraries) in mpeix_setjmp.c</dd></dl>
  
 
  June 1, 2000
 <dl>
 <dt>&bull;
-<dd> Rebuilt to be compatible with mod_perl. If you plan on using mod_perl, you <font SIZE="-1">MUST</font> download and install this version of Perl/iX!
-<dt>&bull;
-<dd> uselargefiles=``undef'': not available in <font SIZE="-1">MPE</font> for <font SIZE="-1">POSIX</font> files yet.
-<dt>&bull;
-<dd> Now bundled with various add-on packages:
-<dl>
-<dt>
-<dd>
+</dt><dd> Rebuilt to be compatible with mod_perl. If you plan on using mod_perl, you <font SIZE="-1">MUST</font> download and install this version of Perl/iX!
+</dd><dt>&bull;
+</dt><dd> uselargefiles=``undef'': not available in <font SIZE="-1">MPE</font> for <font SIZE="-1">POSIX</font> files yet.
+</dd><dt>&bull;
+</dt><dd> Now bundled with various add-on packages:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> libnet (as seen on <font SIZE="-1">CPAN</font>)
-<dt>&bull;
-<dd> libwww-perl (<font SIZE="-1">LWP</font>) which lets Perl programs behave like web browsers:
-<dt>&bull;
-<dd> mod_perl (just the perl portion; the actual <font SIZE="-1">DSO</font> will be released soon with Apache/iX 1.3.12 from bixby.org). This module allows you to write high performance persistent Perl <font SIZE="-1">CGI</font> scripts and all sorts of cool things. (&lt;<a rel="nofollow" HREF="http://perl.apache.org/">http://perl.apache.org/</a>&gt;) 
-
+</dt><dd> libnet (as seen on <font SIZE="-1">CPAN</font>)
+</dd><dt>&bull;
+</dt><dd> libwww-perl (<font SIZE="-1">LWP</font>) which lets Perl programs behave like web browsers:
+</dd><dt>&bull;
+</dt><dd> mod_perl (just the perl portion; the actual <font SIZE="-1">DSO</font> will be released soon with Apache/iX 1.3.12 from bixby.org). This module allows you to write high performance persistent Perl <font SIZE="-1">CGI</font> scripts and all sorts of cool things. (&lt;<a rel="nofollow" HREF="http://perl.apache.org/">http://perl.apache.org/</a>&gt;) 
  and much much more hiding under /PERL/PUB/.cpan/
-<dt>&bull;
-<dd> The <font SIZE="-1">CPAN</font> module now works for automatic downloading and installing of add-on packages: 
-
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">CPAN</font> module now works for automatic downloading and installing of add-on packages: 
  <pre>
     1. export FTP_PASSIVE=1
     2. perl -MCPAN -e shell
     3. Ignore any terminal I/O related complaints!
 </pre> 
-
- (&lt;<a rel="nofollow" HREF="http://search.cpan.org/dist/CPAN/">http://search.cpan.org/dist/CPAN/</a>&gt;)</dl>
+ (&lt;<a rel="nofollow" HREF="http://search.cpan.org/dist/CPAN/">http://search.cpan.org/dist/CPAN/</a>&gt;)</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
  
 
  May 20, 2000
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.6.0. Builds straight out of the box on MPE/iX.
-<dt>&bull;
-<dd> Perl's <i>getpwnam()</i> function which had regressed to being unimplemented on <font SIZE="-1">MPE</font> is now implemented once again.</dl>
+</dt><dd> Updated to version 5.6.0. Builds straight out of the box on MPE/iX.
+</dd><dt>&bull;
+</dt><dd> Perl's <i>getpwnam()</i> function which had regressed to being unimplemented on <font SIZE="-1">MPE</font> is now implemented once again.</dd></dl>
  
 
  September 17, 1999
 <dl>
 <dt>&bull;
-<dd> Migrated from cccd.edu to bixby.org.</dl>
+</dt><dd> Migrated from cccd.edu to bixby.org.</dd></dl>
 
 <h2>Welcome to Perl/iX</h2>
 
@@ -137,29 +121,29 @@ url: "/docs/linux/man/1-perlmpeix/"
 
 <dl>
 <dt>&bull;
-<dd> MPE/iX 5.5 or later. This version of Perl/iX does <font SIZE="-1">NOT</font> run on MPE/iX 5.0 or earlier, nor does it run on ``classic'' <font SIZE="-1">MPE/V</font> machines.
-<dt>&bull;
-<dd> If you wish to recompile Perl, you must install both <font SIZE="-1">GNUCORE</font> and <font SIZE="-1">GNUGCC</font> from jazz (&lt;<a rel="nofollow" HREF="http://jazz.external.hp.com/src/gnu/gnuframe.html">http://jazz.external.hp.com/src/gnu/gnuframe.html</a>&gt;).
-<dt>&bull;
-<dd> Perl/iX will be happier on MPE/iX 5.5 if you install the <font SIZE="-1">MPEKX40B</font> extended <font SIZE="-1">POSIX</font> filename characters patch, but this is optional.
-<dt>&bull;
-<dd> Patch <font SIZE="-1">LBCJXT6A</font> is required on MPE/iX 5.5 machines in order to prevent Perl/iX from dying with an unresolved external reference to _getenv_libc.
-<dt>&bull;
-<dd> If you will be compiling Perl/iX yourself, you will also need Syslog/iX ( &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/syslogix.html">http://www.bixby.org/mark/syslogix.html</a>&gt; ) and the /BIND/PUB/include and /BIND/PUB/lib portions of BIND/iX ( &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/bindix.html">http://www.bixby.org/mark/bindix.html</a>&gt; ).</dl>
+</dt><dd> MPE/iX 5.5 or later. This version of Perl/iX does <font SIZE="-1">NOT</font> run on MPE/iX 5.0 or earlier, nor does it run on ``classic'' <font SIZE="-1">MPE/V</font> machines.
+</dd><dt>&bull;
+</dt><dd> If you wish to recompile Perl, you must install both <font SIZE="-1">GNUCORE</font> and <font SIZE="-1">GNUGCC</font> from jazz (&lt;<a rel="nofollow" HREF="http://jazz.external.hp.com/src/gnu/gnuframe.html">http://jazz.external.hp.com/src/gnu/gnuframe.html</a>&gt;).
+</dd><dt>&bull;
+</dt><dd> Perl/iX will be happier on MPE/iX 5.5 if you install the <font SIZE="-1">MPEKX40B</font> extended <font SIZE="-1">POSIX</font> filename characters patch, but this is optional.
+</dd><dt>&bull;
+</dt><dd> Patch <font SIZE="-1">LBCJXT6A</font> is required on MPE/iX 5.5 machines in order to prevent Perl/iX from dying with an unresolved external reference to _getenv_libc.
+</dd><dt>&bull;
+</dt><dd> If you will be compiling Perl/iX yourself, you will also need Syslog/iX ( &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/syslogix.html">http://www.bixby.org/mark/syslogix.html</a>&gt; ) and the /BIND/PUB/include and /BIND/PUB/lib portions of BIND/iX ( &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/bindix.html">http://www.bixby.org/mark/bindix.html</a>&gt; ).</dd></dl>
 
 <h2>How to Obtain Perl/iX</h2>
 
 <dl>
 <dt>1.
-<dd> Download Perl using either <font SIZE="-1">FTP</font>.ARPA.SYS or some other client
-<dt>2.
-<dd> Extract the installation script
-<dt>3.
-<dd> Edit the installation script
-<dt>4.
-<dd> Run the installation script
-<dt>5.
-<dd> Convert your *.a system archive libraries to *.sl shared libraries</dl>
+</dt><dd> Download Perl using either <font SIZE="-1">FTP</font>.ARPA.SYS or some other client
+</dd><dt>2.
+</dt><dd> Extract the installation script
+</dd><dt>3.
+</dt><dd> Edit the installation script
+</dd><dt>4.
+</dt><dd> Run the installation script
+</dd><dt>5.
+</dt><dd> Convert your *.a system archive libraries to *.sl shared libraries</dd></dl>
  
 
  Download Perl using <font SIZE="-1">FTP</font>.ARPA.SYS from your <font SIZE="-1">HP</font> 3000 (the preferred method)..... 
@@ -181,96 +165,85 @@ url: "/docs/linux/man/1-perlmpeix/"
  Download the following files (make sure that you use ``binary mode'' or whatever client feature that is 8-bit clean):
 <dl>
 <dt>&bull;
-<dd> Perl from 
-
+</dt><dd> Perl from 
  <pre>
     <a rel="nofollow" HREF="http://www.bixby.org/ftp/pub/mpe/perl-5.6.0-mpe.tar.Z">http://www.bixby.org/ftp/pub/mpe/perl-5.6.0-mpe.tar.Z</a>
 </pre> 
-
  or 
-
  <pre>
     <a HREF="ftp://ftp.bixby.org/pub/mpe/perl-5.6.0-mpe.tar.Z">ftp://ftp.bixby.org/pub/mpe/perl-5.6.0-mpe.tar.Z</a>
 </pre>
-<dt>&bull;
-<dd> Upload those files to your <font SIZE="-1">HP</font> 3000 in an 8-bit clean bytestream manner to: 
-
+</dd><dt>&bull;
+</dt><dd> Upload those files to your <font SIZE="-1">HP</font> 3000 in an 8-bit clean bytestream manner to: 
  <pre>
     /tmp/perl.tar.Z
 </pre>
-<dt>&bull;
-<dd> Then extract the installation script (after both download methods) 
-
+</dd><dt>&bull;
+</dt><dd> Then extract the installation script (after both download methods) 
  <pre>
     :CHDIR /tmp
     :XEQ TAR.HPBIN.SYS 'xvfopz /tmp/perl.tar.Z INSTALL'
 </pre>
-<dt>&bull;
-<dd> Edit the installation script 
-
+</dd><dt>&bull;
+</dt><dd> Edit the installation script 
  Examine the accounting structure creation commands and modify if necessary (adding additional capabilities, choosing a non-system volume set, etc). 
-
  <pre>
     :XEQ VI.HPBIN.SYS /tmp/INSTALL
 </pre>
-<dt>&bull;
-<dd> Run the installation script. 
-
+</dd><dt>&bull;
+</dt><dd> Run the installation script. 
  The accounting structure will be created and then all files will be extracted from the archive. 
-
  <pre>
     :XEQ SH.HPBIN.SYS /tmp/INSTALL
 </pre>
-<dt>&bull;
-<dd> Convert your *.a system archive libraries to *.sl shared libraries 
-
+</dd><dt>&bull;
+</dt><dd> Convert your *.a system archive libraries to *.sl shared libraries 
  You only have to do this <font SIZE="-1">ONCE</font> on your MPE/iX 5.5 machine in order to convert /lib/lib*.a and /usr/lib/lib*.a libraries to their *.sl equivalents. This step should not be necessary on MPE/iX 6.0 or later machines because the 6.0 or later update process does it for you. 
-
  <pre>
     :XEQ SH.HPBIN.SYS /PERL/PUB/LIBSHP3K
-</pre></dl>
+</pre></dd></dl>
 
 <h2>Perl/iX Distribution Contents Highlights</h2>
 
 <dl>
 <dt><font SIZE="-1">README</font>
-<dd> The file you're reading now.
-<dt><font SIZE="-1">INSTALL</font>
-<dd> Perl/iX Installation script.
-<dt><font SIZE="-1">LIBSHP3K</font>
-<dd> Script to convert *.a system archive libraries to *.sl shared libraries.
-<dt><font SIZE="-1">PERL</font>
-<dd> Perl <font SIZE="-1">NMPRG</font> executable. A version-numbered backup copy also exists. You might wish to ``ln -s /PERL/PUB/PERL /usr/local/bin/perl''.
-<dt>.cpan/
-<dd> Much add-on source code downloaded with the <font SIZE="-1">CPAN</font> module.
-<dt>lib/
-<dd> Perl libraries, both core and add-on.
-<dt>man/
-<dd> Perl man page documentation.
-<dt>public_html/feedback.cgi
-<dd> Sample feedback <font SIZE="-1">CGI</font> form written in Perl.
-<dt>src/perl-5.6.0-mpe
-<dd> Source code.</dl>
+</dt><dd> The file you're reading now.
+</dd><dt><font SIZE="-1">INSTALL</font>
+</dt><dd> Perl/iX Installation script.
+</dd><dt><font SIZE="-1">LIBSHP3K</font>
+</dt><dd> Script to convert *.a system archive libraries to *.sl shared libraries.
+</dd><dt><font SIZE="-1">PERL</font>
+</dt><dd> Perl <font SIZE="-1">NMPRG</font> executable. A version-numbered backup copy also exists. You might wish to ``ln -s /PERL/PUB/PERL /usr/local/bin/perl''.
+</dd><dt>.cpan/
+</dt><dd> Much add-on source code downloaded with the <font SIZE="-1">CPAN</font> module.
+</dd><dt>lib/
+</dt><dd> Perl libraries, both core and add-on.
+</dd><dt>man/
+</dt><dd> Perl man page documentation.
+</dd><dt>public_html/feedback.cgi
+</dt><dd> Sample feedback <font SIZE="-1">CGI</font> form written in Perl.
+</dd><dt>src/perl-5.6.0-mpe
+</dt><dd> Source code.</dd></dl>
 
 <h2>How to Compile Perl/iX</h2>
 
 <dl>
 <dt>1.
-<dd> cd src/perl-5.6.0-mpe
-<dt>2.
-<dd> Read the <font SIZE="-1">INSTALL</font> file for the official instructions
-<dt>3.
-<dd> ./Configure -d
-<dt>4.
-<dd> make
-<dt>5.
-<dd> ./mpeix/relink
-<dt>6.
-<dd> make test (expect approximately 15 out of 11306 subtests to fail, mostly due to <font SIZE="-1">MPE</font> not supporting hard links, <font SIZE="-1">UDP</font> socket problems, and handling <i>exit()</i> return codes improperly)
-<dt>7.
-<dd> make install
-<dt>8.
-<dd> Optionally create symbolic links that point to the Perl executable, i.e. ln -s /PERL/PUB/PERL /usr/local/bin/perl</dl>
+</dt><dd> cd src/perl-5.6.0-mpe
+</dd><dt>2.
+</dt><dd> Read the <font SIZE="-1">INSTALL</font> file for the official instructions
+</dd><dt>3.
+</dt><dd> ./Configure -d
+</dd><dt>4.
+</dt><dd> make
+</dd><dt>5.
+</dt><dd> ./mpeix/relink
+</dd><dt>6.
+</dt><dd> make test (expect approximately 15 out of 11306 subtests to fail, mostly due to <font SIZE="-1">MPE</font> not supporting hard links, <font SIZE="-1">UDP</font> socket problems, and handling <i>exit()</i> return codes improperly)
+</dd><dt>7.
+</dt><dd> make install
+</dd><dt>8.
+</dt><dd> Optionally create symbolic links that point to the Perl executable, i.e. ln -s /PERL/PUB/PERL /usr/local/bin/perl</dd></dl>
  
 
  The summary test results from ``cd t; ./perl -I../lib harness'': 
@@ -290,19 +263,19 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
  There some minor functionality issues to be aware of when comparing Perl for Unix (Perl/UX) to Perl/iX:
 <dl>
 <dt>&bull;
-<dd> <font SIZE="-1">MPE</font> gcc/ld doesn't properly support linking <font SIZE="-1">NMPRG</font> executables against <font SIZE="-1">NMXL</font> dynamic libraries, so you must manually run mpeix/relink after each re-build of Perl.
-<dt>&bull;
-<dd> Perl/iX File::Copy will use <font SIZE="-1">MPE</font>'s /bin/cp command to copy files by name in order to preserve file attributes like file code.
-<dt>&bull;
-<dd> <font SIZE="-1">MPE</font> (and thus Perl/iX) lacks support for <i>setgrent()</i>, <i>endgrent()</i>, <i>setpwent()</i>, <i>endpwent()</i>.
-<dt>&bull;
-<dd> <font SIZE="-1">MPE</font> (and thus Perl/iX) lacks support for hard links.
-<dt>&bull;
-<dd> <font SIZE="-1">MPE</font> requires <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> in order to <i>bind()</i> to ports less than 1024. Perl/iX will call <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> automatically on your behalf if you attempt to <i>bind()</i> to these low-numbered ports. Note that the Perl/iX executable and the <font SIZE="-1">PERL</font> account do not normally have CAP=PM, so if you will be <i>bind()</i>-ing to these privileged ports, you will manually need to add <font SIZE="-1">PM</font> capability as appropriate.
-<dt>&bull;
-<dd> <font SIZE="-1">MPE</font> requires that you <i>bind()</i> to an <font SIZE="-1">IP</font> address of zero. Perl/iX automatically replaces the <font SIZE="-1">IP</font> address that you pass to <i>bind()</i> with a zero.
-<dt>&bull;
-<dd> <font SIZE="-1">MPE</font> requires <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> in order to <i>setuid()</i>. There are too many calls to <i>setuid()</i> within Perl/iX, so I have not attempted an automatic <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> solution similar to <i>bind()</i>.</dl>
+</dt><dd> <font SIZE="-1">MPE</font> gcc/ld doesn't properly support linking <font SIZE="-1">NMPRG</font> executables against <font SIZE="-1">NMXL</font> dynamic libraries, so you must manually run mpeix/relink after each re-build of Perl.
+</dd><dt>&bull;
+</dt><dd> Perl/iX File::Copy will use <font SIZE="-1">MPE</font>'s /bin/cp command to copy files by name in order to preserve file attributes like file code.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">MPE</font> (and thus Perl/iX) lacks support for <i>setgrent()</i>, <i>endgrent()</i>, <i>setpwent()</i>, <i>endpwent()</i>.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">MPE</font> (and thus Perl/iX) lacks support for hard links.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">MPE</font> requires <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> in order to <i>bind()</i> to ports less than 1024. Perl/iX will call <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> automatically on your behalf if you attempt to <i>bind()</i> to these low-numbered ports. Note that the Perl/iX executable and the <font SIZE="-1">PERL</font> account do not normally have CAP=PM, so if you will be <i>bind()</i>-ing to these privileged ports, you will manually need to add <font SIZE="-1">PM</font> capability as appropriate.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">MPE</font> requires that you <i>bind()</i> to an <font SIZE="-1">IP</font> address of zero. Perl/iX automatically replaces the <font SIZE="-1">IP</font> address that you pass to <i>bind()</i> with a zero.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">MPE</font> requires <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> in order to <i>setuid()</i>. There are too many calls to <i>setuid()</i> within Perl/iX, so I have not attempted an automatic <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i> solution similar to <i>bind()</i>.</dd></dl>
 
 <h2>Known Perl/iX Bugs Under Investigation</h2>
 
@@ -312,120 +285,120 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
 
 <dl>
 <dt>&bull;
-<dd> Make <i>setuid()</i>/<i>setgid()</i> support work.
-<dt>&bull;
-<dd> Make sure that <i>fcntl()</i> against a socket descriptor is redirected to <i>sfcntl()</i>.
-<dt>&bull;
-<dd> Add support for Berkeley <font SIZE="-1">DB</font> once I've finished porting Berkeley <font SIZE="-1">DB</font>.
-<dt>&bull;
-<dd> Write an <font SIZE="-1">MPE</font> <font SIZE="-1">XS</font> extension library containing miscellaneous important <font SIZE="-1">MPE</font> functions like <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i>, <font SIZE="-1"><i>GETUSERMODE</i></font><i>()</i>, and <i>sfcntl()</i>.</dl>
+</dt><dd> Make <i>setuid()</i>/<i>setgid()</i> support work.
+</dd><dt>&bull;
+</dt><dd> Make sure that <i>fcntl()</i> against a socket descriptor is redirected to <i>sfcntl()</i>.
+</dd><dt>&bull;
+</dt><dd> Add support for Berkeley <font SIZE="-1">DB</font> once I've finished porting Berkeley <font SIZE="-1">DB</font>.
+</dd><dt>&bull;
+</dt><dd> Write an <font SIZE="-1">MPE</font> <font SIZE="-1">XS</font> extension library containing miscellaneous important <font SIZE="-1">MPE</font> functions like <font SIZE="-1"><i>GETPRIVMODE</i></font><i>()</i>, <font SIZE="-1"><i>GETUSERMODE</i></font><i>()</i>, and <i>sfcntl()</i>.</dd></dl>
 
 <h2>Perl/iX Change History</h2>
 
  May 6, 1999
 <dl>
 <dt>&bull;
-<dd> Patch <font SIZE="-1">LBCJXT6A</font> is required on MPE/iX 5.5 machines in order to prevent Perl/iX from dying with an unresolved external reference to _getenv_libc.</dl>
+</dt><dd> Patch <font SIZE="-1">LBCJXT6A</font> is required on MPE/iX 5.5 machines in order to prevent Perl/iX from dying with an unresolved external reference to _getenv_libc.</dd></dl>
  
 
  April 7, 1999
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.005_03.
-<dt>&bull;
-<dd> The official source distribution once again compiles ``straight out of the box'' for <font SIZE="-1">MPE</font>.
-<dt>&bull;
-<dd> The current incarnation of the 5.5 <font SIZE="-1">POSIX</font> filename extended characters patch is now <font SIZE="-1">MPEKX40B</font>.
-<dt>&bull;
-<dd> The <font SIZE="-1">LIBSHP3K</font> *.a -&gt; *.sl library conversion script is now included as /PERL/PUB/LIBSHP3K.</dl>
+</dt><dd> Updated to version 5.005_03.
+</dd><dt>&bull;
+</dt><dd> The official source distribution once again compiles ``straight out of the box'' for <font SIZE="-1">MPE</font>.
+</dd><dt>&bull;
+</dt><dd> The current incarnation of the 5.5 <font SIZE="-1">POSIX</font> filename extended characters patch is now <font SIZE="-1">MPEKX40B</font>.
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">LIBSHP3K</font> *.a -&gt; *.sl library conversion script is now included as /PERL/PUB/LIBSHP3K.</dd></dl>
  
 
  November 20, 1998
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.005_02.
-<dt>&bull;
-<dd> Fixed a DynaLoader bug that was unable to load symbols from relative path name libraries.
-<dt>&bull;
-<dd> Fixed a .xs compilation bug where the mpeixish.sh include file wasn't being installed into the proper directory.
-<dt>&bull;
-<dd> All bugfixes will be submitted back to the official Perl developers.
-<dt>&bull;
-<dd> The current incarnation of the <font SIZE="-1">POSIX</font> filename extended characters patch is now <font SIZE="-1">MPEKXJ3A</font>.</dl>
+</dt><dd> Updated to version 5.005_02.
+</dd><dt>&bull;
+</dt><dd> Fixed a DynaLoader bug that was unable to load symbols from relative path name libraries.
+</dd><dt>&bull;
+</dt><dd> Fixed a .xs compilation bug where the mpeixish.sh include file wasn't being installed into the proper directory.
+</dd><dt>&bull;
+</dt><dd> All bugfixes will be submitted back to the official Perl developers.
+</dd><dt>&bull;
+</dt><dd> The current incarnation of the <font SIZE="-1">POSIX</font> filename extended characters patch is now <font SIZE="-1">MPEKXJ3A</font>.</dd></dl>
  
 
  August 14, 1998
 <dl>
 <dt>&bull;
-<dd> The previous <font SIZE="-1">POSIX</font> filename extended characters patch <font SIZE="-1">MPEKX44C</font> has been superseded by <font SIZE="-1">MPEKXB5A</font>.</dl>
+</dt><dd> The previous <font SIZE="-1">POSIX</font> filename extended characters patch <font SIZE="-1">MPEKX44C</font> has been superseded by <font SIZE="-1">MPEKXB5A</font>.</dd></dl>
  
 
  August 7, 1998
 <dl>
 <dt>&bull;
-<dd> The previous <font SIZE="-1">POSIX</font> filename extended characters patch <font SIZE="-1">MPEKX76A</font> has been superseded by <font SIZE="-1">MPEKX44C</font>.</dl>
+</dt><dd> The previous <font SIZE="-1">POSIX</font> filename extended characters patch <font SIZE="-1">MPEKX76A</font> has been superseded by <font SIZE="-1">MPEKX44C</font>.</dd></dl>
  
 
  July 28, 1998
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.005_01.</dl>
+</dt><dd> Updated to version 5.005_01.</dd></dl>
  
 
  July 23, 1998
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.005 (production release). The public freeware sources are now 100% MPE-ready ``straight out of the box''.</dl>
+</dt><dd> Updated to version 5.005 (production release). The public freeware sources are now 100% MPE-ready ``straight out of the box''.</dd></dl>
  
 
  July 17, 1998
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.005b1 (public beta release). The public freeware sources are now 99.9% MPE-ready. By installing and testing this beta on your own <font SIZE="-1">HP3000</font>, you will be helping to insure that the final release of 5.005 will be 100% MPE-ready and 100% bug free.
-<dt>&bull;
-<dd> My <font SIZE="-1">MPE</font> binary release is now extracted using my standard <font SIZE="-1">INSTALL</font> script.</dl>
+</dt><dd> Updated to version 5.005b1 (public beta release). The public freeware sources are now 99.9% MPE-ready. By installing and testing this beta on your own <font SIZE="-1">HP3000</font>, you will be helping to insure that the final release of 5.005 will be 100% MPE-ready and 100% bug free.
+</dd><dt>&bull;
+</dt><dd> My <font SIZE="-1">MPE</font> binary release is now extracted using my standard <font SIZE="-1">INSTALL</font> script.</dd></dl>
  
 
  July 15, 1998
 <dl>
 <dt>&bull;
-<dd> Changed startperl to #!/PERL/PUB/perl so that Perl will recognize scripts more easily and efficiently.</dl>
+</dt><dd> Changed startperl to #!/PERL/PUB/perl so that Perl will recognize scripts more easily and efficiently.</dd></dl>
  
 
  July 8, 1998
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.004_70 (internal developer release) which is now MPE-ready. The next public freeware release of Perl should compile ``straight out of the box'' on <font SIZE="-1">MPE</font>. Note that this version of Perl/iX was strictly internal to me and never publicly released. Note that [21]BIND/iX is now required (well, the include files and libbind.a) if you wish to compile Perl/iX.</dl>
+</dt><dd> Updated to version 5.004_70 (internal developer release) which is now MPE-ready. The next public freeware release of Perl should compile ``straight out of the box'' on <font SIZE="-1">MPE</font>. Note that this version of Perl/iX was strictly internal to me and never publicly released. Note that [21]BIND/iX is now required (well, the include files and libbind.a) if you wish to compile Perl/iX.</dd></dl>
  
 
  November 6, 1997
 <dl>
 <dt>&bull;
-<dd> Updated to version 5.004_04. No changes in MPE-specific functionality.</dl>
+</dt><dd> Updated to version 5.004_04. No changes in MPE-specific functionality.</dd></dl>
  
 
  October 16, 1997
 <dl>
 <dt>&bull;
-<dd> Added Demos section to the Perl/iX home page so you can see some sample Perl applications running on my 3000.</dl>
+</dt><dd> Added Demos section to the Perl/iX home page so you can see some sample Perl applications running on my 3000.</dd></dl>
  
 
  October 3, 1997
 <dl>
 <dt>&bull;
-<dd> Added System Requirements section to the Perl/iX home page just so the prerequisites stand out more. Various other home page tweaks.</dl>
+</dt><dd> Added System Requirements section to the Perl/iX home page just so the prerequisites stand out more. Various other home page tweaks.</dd></dl>
  
 
  October 2, 1997
 <dl>
 <dt>&bull;
-<dd> Initial public release.</dl>
+</dt><dd> Initial public release.</dd></dl>
  
 
  September 1997
 <dl>
 <dt>&bull;
-<dd> Porting begins.</dl>
+</dt><dd> Porting begins.</dd></dl>
 
 <h2>AUTHOR</h2>
 

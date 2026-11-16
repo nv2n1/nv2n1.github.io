@@ -59,12 +59,12 @@ conditions are true:
  window, OR the grab window is a descendent of the focus
  window and contains the device.
  * A passive grab on the same button/modifier combination does
- not exist on any ancestor of grab_window.</pre></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
+ not exist on any ancestor of grab_window.</pre></dd></dl><dl COMPACT><dd><pre>The interpretation of the remaining arguments is as for
 XGrabDevice. The active grab is terminated automatically when
 the logical state of the device has all buttons released
-(independent of the logical state of the modifier keys).</pre></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by client
+(independent of the logical state of the modifier keys).</pre></dd></dl><dl COMPACT><dd><pre>Note that the logical state of a device (as seen by client
 applications) may lag the physical state if device event
-processing is frozen.</pre></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
+processing is frozen.</pre></dd></dl><dl COMPACT><dd><pre>This request overrides all previous grabs by the same client on
 the same button/modifier combinations on the same window. A
 modifiers of AnyModifier is equivalent to issuing the grab
 request for all possible modifier combinations (including the
@@ -72,13 +72,13 @@ combination of no modifiers). It is not required that all
 modifiers specified have currently assigned KeyCodes. A button
 of AnyButton is equivalent to issuing the request for all
 possible buttons. Otherwise, it is not required that the
-specified button currently be assigned to a physical button.</pre></dl><dl COMPACT><dd><pre>A modifier_device of NULL indicates that the X keyboard is to
-be used as the modifier_device.</pre></dl><dl COMPACT><dd><pre>If some other client has already issued a XGrabDeviceButton
+specified button currently be assigned to a physical button.</pre></dd></dl><dl COMPACT><dd><pre>A modifier_device of NULL indicates that the X keyboard is to
+be used as the modifier_device.</pre></dd></dl><dl COMPACT><dd><pre>If some other client has already issued a XGrabDeviceButton
 with the same button/modifier combination on the same window, a
 BadAccess error results. When using AnyModifier or AnyButton ,
 the request fails completely, and a BadAccess error results (no
 grabs are established) if there is a conflicting grab for any
-combination. XGrabDeviceButton has no effect on an active grab.</pre></dl><dl COMPACT><dd><pre>XGrabDeviceButton can generate BadClass, BadDevice, BadMatch,
+combination. XGrabDeviceButton has no effect on an active grab.</pre></dd></dl><dl COMPACT><dd><pre>XGrabDeviceButton can generate BadClass, BadDevice, BadMatch,
 BadValue, and BadWindow errors..P The XUngrabDeviceButton
 request releases the passive grab for a button/modifier
 combination on the specified window if it was grabbed by this
@@ -86,20 +86,20 @@ client. A modifier of AnyModifier is equivalent to issuing the
 ungrab request for all possible modifier combinations,
 including the combination of no modifiers. A button of
 AnyButton is equivalent to issuing the request for all possible
-buttons. XUngrabDeviceButton has no effect on an active grab.</pre></dl><dl COMPACT><dd><pre>A modifier_device of NULL indicates that the X keyboard should
-be used as the modifier_device.</pre></dl><dl COMPACT><dd><pre>XUngrabDeviceButton can generate BadDevice, BadMatch, BadValue
-and BadWindow errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+buttons. XUngrabDeviceButton has no effect on an active grab.</pre></dd></dl><dl COMPACT><dd><pre>A modifier_device of NULL indicates that the X keyboard should
+be used as the modifier_device.</pre></dd></dl><dl COMPACT><dd><pre>XUngrabDeviceButton can generate BadDevice, BadMatch, BadValue
+and BadWindow errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGrabDeviceButton request was
  made specifying a device that has no buttons, or
- specifying a modifier device that has no keys.</pre></dl><dl COMPACT><dd><pre>BadValue
+ specifying a modifier device that has no keys.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDevice(3), XGrabDeviceKey(3)</pre></dl>
+ Window.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDevice(3), XGrabDeviceKey(3)</pre></dd></dl>

@@ -17,42 +17,39 @@ description: "shtool echo – GNU shtool"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-n</code>, <code>&#8211;newline</code></p>
-<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (<font SIZE="-1">ASCII</font> character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</p>
-<dt><code>-e</code>, <code>&#8211;expand</code></p>
-<dd> If option <code>-e</code> is used, <i>string</i> can contain special &quot;<code>%</code><i>x</i>&quot; constructs which are expanded before the output is written. Currently the following constructs are recognized:</p>
+<dt><code>-n</code>, <code>&#8211;newline</code></dt>
+<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (<font SIZE="-1">ASCII</font> character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</dd>
+<dt><code>-e</code>, <code>&#8211;expand</code></dt>
+<dd> If option <code>-e</code> is used, <i>string</i> can contain special &quot;<code>%</code><i>x</i>&quot; constructs which are expanded before the output is written. Currently the following constructs are recognized:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>%B</code></p>
-<dd> switch terminal mode to bold display mode.</p>
-<dt><code>%b</code></p>
-<dd> switch terminal mode back to normal display mode.</p>
-<dt><code>%u</code></p>
-<dd> the current user name.</p>
-<dt><code>%U</code></p>
-<dd> the current user id (numerical).</p>
-<dt><code>%g</code></p>
-<dd> the current group name.</p>
-<dt><code>%G</code></p>
-<dd> the current group id (numerical).</p>
-<dt><code>%h</code></p>
-<dd> the current hostname (without any domain extension).</p>
-<dt><code>%d</code></p>
-<dd> the current domain name.</p>
-<dt><code>%D</code></p>
-<dd> the current day of the month.</p>
-<dt><code>%M</code></p>
-<dd> the current month (numerical).</p>
-<dt><code>%m</code></p>
-<dd> the current month name.</p>
-<dt><code>%Y</code></p>
-<dd> the current year.</dl>
+<dt><code>%B</code></dt>
+<dd> switch terminal mode to bold display mode.</dd>
+<dt><code>%b</code></dt>
+<dd> switch terminal mode back to normal display mode.</dd>
+<dt><code>%u</code></dt>
+<dd> the current user name.</dd>
+<dt><code>%U</code></dt>
+<dd> the current user id (numerical).</dd>
+<dt><code>%g</code></dt>
+<dd> the current group name.</dd>
+<dt><code>%G</code></dt>
+<dd> the current group id (numerical).</dd>
+<dt><code>%h</code></dt>
+<dd> the current hostname (without any domain extension).</dd>
+<dt><code>%d</code></dt>
+<dd> the current domain name.</dd>
+<dt><code>%D</code></dt>
+<dd> the current day of the month.</dd>
+<dt><code>%M</code></dt>
+<dd> the current month (numerical).</dd>
+<dt><code>%m</code></dt>
+<dd> the current month name.</dd>
+<dt><code>%Y</code></dt>
+<dd> the current year.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>EXAMPLE</h2>
 <pre>

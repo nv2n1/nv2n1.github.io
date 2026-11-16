@@ -17,7 +17,7 @@ perf[--version][--help][OPTIONS] COMMAND[ARGS]
 <p> &#8211;debug</p>
 <dl>
 <dt>
-<dd> Setup debug variable (just verbose for now) in value range (0, 10). Use like: &#8211;debug verbose # sets verbose = 1 &#8211;debug verbose=2 # sets verbose = 2</dl>
+</dt><dd> Setup debug variable (just verbose for now) in value range (0, 10). Use like: &#8211;debug verbose # sets verbose = 1 &#8211;debug verbose=2 # sets verbose = 2</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Performance counters for Linux are a new kernel-based subsystem that provide a framework for all things performance analysis. It covers hardware level (CPU/PMU, Performance Monitoring Unit) features and software features (software counters, tracepoints) as well.</p>
 <h2>SEE ALSO</h2>

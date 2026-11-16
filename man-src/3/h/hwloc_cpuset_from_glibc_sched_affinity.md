@@ -17,7 +17,7 @@ description: "hwlocality_glibc_sched – Interoperability with glibc sched affin
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Topology topology must match the current machine.</dl>
+</dt><dd> Topology topology must match the current machine.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>static int hwloc_cpuset_from_glibc_sched_affinity (<code>hwloc_topology_t</code> topology, <code>hwloc_cpuset_t</code> hwlocset, const cpu_set_t * schedset, size_t schedsetsize) [inline], [static]</h3>
 <p> Convert glibc sched affinity CPU set schedset into hwloc CPU set. This function may be used before calling sched_setaffinity or any other function that takes a cpu_set_t as input parameter. </p>
@@ -28,5 +28,5 @@ description: "hwlocality_glibc_sched – Interoperability with glibc sched affin
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

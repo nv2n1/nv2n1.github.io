@@ -15,7 +15,7 @@ bio_put - release a reference to a bio
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>bio to release reference to</dl>
+<dl><dd></dd><dd>bio to release reference to</dd></dl>
 
 <h2>Description</h2>
 

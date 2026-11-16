@@ -14,7 +14,7 @@ description: "sk_set_memalloc – sets SOCK_MEMALLOC"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>socket to set it on</dl>
+</dd><dd>socket to set it on</dd></dl>
 <h2>Description</h2>
 <p>Set <code>SOCK_MEMALLOC</code> on a socket for access to emergency reserves. It&#8217;s the responsibility of the admin to adjust min_free_kbytes to meet the requirements</p>
 <h2>Copyright</h2>

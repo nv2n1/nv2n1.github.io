@@ -16,26 +16,26 @@ description: "BitlBee – IRC gateway to IM chat networks"
 <p>BitlBee is an IRC daemon that can talk to instant messaging networks and acts as a gateway. Users can connect to the server with any normal IRC client and see their &#8216;buddy list&#8217; in &amp;bitlbee. <code>bitlbee</code> should be called by <code>inetd</code>(8), or you can run it as a stand-alone daemon. </p>
 <h2>Options</h2>
 <dl>
-<dt>-I</p>
-<dd>Run in <code>inetd</code>(8) mode. This is the default setting, you usually don&#8217;t have to specify this option.</p>
-<dt>-D</p>
-<dd>Run in daemon mode. In this mode, BitlBee forks to the background and waits for new connections. All clients will be served from one process.</p>
-<dt>-F</p>
-<dd>Run in ForkDaemon mode. This is similar to ordinary daemon mode, but every client gets its own process. Easier to set up than inetd mode, and without the possible stability issues.</p>
-<dt>-i <i>address</i></p>
-<dd>Only useful when running in daemon mode, to specify the network interface (identified by IP address) to which the daemon should attach. Use this if you don&#8217;t want BitlBee to listen on every interface (which is the default behaviour).</p>
-<dt>-p <i>port number</i></p>
-<dd>Only useful when running in daemon mode, to specify the port number on which BitlBee should listen for connections. 6667 is the default value.</p>
-<dt>-n</p>
-<dd>Only useful when running in daemon mode. This option prevents BitlBee from forking into the background.</p>
-<dt>-v</p>
-<dd>Be more verbose. This only works together with the <code>-n</code> flag.</p>
-<dt>-c <i>path to other configuration file</i></p>
-<dd>Use a different configuration file.</p>
-<dt>-d <i>path to user settings directory</i></p>
-<dd>BitlBee normally saves every user&#8217;s settings in <code>/var/lib/bitlbee/</code>. If you want the settings to be stored somewhere else (for example, if you don&#8217;t have write permissions in the default location), use this option.</p>
-<dt>-h</p>
-<dd>Show help information.</dl>
+<dt>-I</dt>
+<dd>Run in <code>inetd</code>(8) mode. This is the default setting, you usually don&#8217;t have to specify this option.</dd>
+<dt>-D</dt>
+<dd>Run in daemon mode. In this mode, BitlBee forks to the background and waits for new connections. All clients will be served from one process.</dd>
+<dt>-F</dt>
+<dd>Run in ForkDaemon mode. This is similar to ordinary daemon mode, but every client gets its own process. Easier to set up than inetd mode, and without the possible stability issues.</dd>
+<dt>-i <i>address</i></dt>
+<dd>Only useful when running in daemon mode, to specify the network interface (identified by IP address) to which the daemon should attach. Use this if you don&#8217;t want BitlBee to listen on every interface (which is the default behaviour).</dd>
+<dt>-p <i>port number</i></dt>
+<dd>Only useful when running in daemon mode, to specify the port number on which BitlBee should listen for connections. 6667 is the default value.</dd>
+<dt>-n</dt>
+<dd>Only useful when running in daemon mode. This option prevents BitlBee from forking into the background.</dd>
+<dt>-v</dt>
+<dd>Be more verbose. This only works together with the <code>-n</code> flag.</dd>
+<dt>-c <i>path to other configuration file</i></dt>
+<dd>Use a different configuration file.</dd>
+<dt>-d <i>path to user settings directory</i></dt>
+<dd>BitlBee normally saves every user&#8217;s settings in <code>/var/lib/bitlbee/</code>. If you want the settings to be stored somewhere else (for example, if you don&#8217;t have write permissions in the default location), use this option.</dd>
+<dt>-h</dt>
+<dd>Show help information.</dd></dl>
 <h2>Commands</h2>
 <p>To get a complete list of commands, please use the <code>help commands</code> command in the &amp;bitlbee channel.</p>
 <h2>See Also</h2>

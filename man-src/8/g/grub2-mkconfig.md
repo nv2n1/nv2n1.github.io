@@ -14,8 +14,8 @@ description: "grub-mkconfig — Generate a GRUB configuration file."
 <p><code>grub-mkconfig</code> generates a configuration file for GRUB. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;output</code>=<i>FILE</i></p>
-<dd>Write generated output to <i>FILE</i>. </p>
+<dt><code>&#8211;output</code>=<i>FILE</i></dt>
+<dd>Write generated output to <i>FILE</i>. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>info grub</code> </p>

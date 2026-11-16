@@ -18,20 +18,20 @@ description: "sane-find-scanner – find SCSI and USB scanners and their device 
 <p> <code>sane-find-scanner</code> won&#8217;t find most parallel port scanners, or scanners connected to proprietary ports. Some <code>parallel port</code> scanners may be detected by <i>sane-find-scanner -p .</i> At the time of writing this will only detect Mustek parallel port scanners. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Prints a short usage message.</p>
-<dt><code>-v</code></p>
-<dd> Verbose output. If used once, <code>sane-find-scanner</code> shows every device name and the test result. If used twice, SCSI inquiry information and the USB device descriptors are also printed.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet. Print only the devices, no comments.</p>
-<dt><code>-p</code></p>
-<dd> Probe parallel port scanners.</p>
-<dt><code>-f</code></p>
-<dd> Force opening all explicitly given devices as SCSI and USB devices. That&#8217;s useful if <code>sane-find-scanner</code> is wrong in determining the device type.</p>
-<dt><code>-F filename</code></p>
-<dd> filename is a file that contains USB descriptors in the format of /proc/bus/usb/devices as used by Linux. <code>sane-find-scanner</code> tries to identify the chipset(s) of all USB scanners found in such a file. This option is useful for developers when the output of <i>cat /proc/bus/usb/devices</i> is available but the scanner itself isn&#8217;t.</p>
-<dt><code>devname</code></p>
-<dd> Test device file &quot;devname&quot;. No other devices are checked if devname is given.</dl>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Prints a short usage message.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose output. If used once, <code>sane-find-scanner</code> shows every device name and the test result. If used twice, SCSI inquiry information and the USB device descriptors are also printed.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet. Print only the devices, no comments.</dd>
+<dt><code>-p</code></dt>
+<dd> Probe parallel port scanners.</dd>
+<dt><code>-f</code></dt>
+<dd> Force opening all explicitly given devices as SCSI and USB devices. That&#8217;s useful if <code>sane-find-scanner</code> is wrong in determining the device type.</dd>
+<dt><code>-F filename</code></dt>
+<dd> filename is a file that contains USB descriptors in the format of /proc/bus/usb/devices as used by Linux. <code>sane-find-scanner</code> tries to identify the chipset(s) of all USB scanners found in such a file. This option is useful for developers when the output of <i>cat /proc/bus/usb/devices</i> is available but the scanner itself isn&#8217;t.</dd>
+<dt><code>devname</code></dt>
+<dd> Test device file &quot;devname&quot;. No other devices are checked if devname is given.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <i>sane-find-scanner -v</i><br />
  Check all SCSI and USB devices for available scanners and print a line for every device file. </p>

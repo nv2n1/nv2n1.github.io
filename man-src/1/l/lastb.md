@@ -21,55 +21,55 @@ description: "last, lastb – show a listing of last logged in users"
 <p> <code>-a</code>, <code>&#8211;hostlast</code></p>
 <dl>
 <dt>
-<dd> Display the hostname in the last column. Useful in combination with the <code>&#8211;dns</code> option.</dl>
+</dt><dd> Display the hostname in the last column. Useful in combination with the <code>&#8211;dns</code> option.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;dns</code></p>
 <dl>
 <dt>
-<dd> For non-local logins, Linux stores not only the host name of the remote host, but its IP number as well. This option translates the IP number back into a hostname.</dl>
+</dt><dd> For non-local logins, Linux stores not only the host name of the remote host, but its IP number as well. This option translates the IP number back into a hostname.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;file</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Tell <code>last</code> to use a specific <i>file</i> instead of <i>/var/log/wtmp</i>. The <code>&#8211;file</code> option can be given multiple times, and all of the specified files will be processed.</dl>
+</dt><dd> Tell <code>last</code> to use a specific <i>file</i> instead of <i>/var/log/wtmp</i>. The <code>&#8211;file</code> option can be given multiple times, and all of the specified files will be processed.</dd></dl>
 <p> <code>-F</code>, <code>&#8211;fulltimes</code></p>
 <dl>
 <dt>
-<dd> Print full login and logout times and dates.</dl>
+</dt><dd> Print full login and logout times and dates.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;ip</code></p>
 <dl>
 <dt>
-<dd> Like <code>&#8211;dns ,</code> but displays the host&#8217;s IP number instead of the name.</dl>
+</dt><dd> Like <code>&#8211;dns ,</code> but displays the host&#8217;s IP number instead of the name.</dd></dl>
 <p> <code>&#8211;</code><i>number</i>; <code>-n</code>, <code>&#8211;limit</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Tell <code>last</code> how many lines to show.</dl>
+</dt><dd> Tell <code>last</code> how many lines to show.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;present</code> <i>time</i></p>
 <dl>
 <dt>
-<dd> Display the users who were present at the specified time. This is like using the options <code>&#8211;since</code> and <code>&#8211;until</code> together with the same <i>time</i>.</dl>
+</dt><dd> Display the users who were present at the specified time. This is like using the options <code>&#8211;since</code> and <code>&#8211;until</code> together with the same <i>time</i>.</dd></dl>
 <p> <code>-R</code>, <code>&#8211;nohostname</code></p>
 <dl>
 <dt>
-<dd> Suppresses the display of the hostname field.</dl>
+</dt><dd> Suppresses the display of the hostname field.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;since</code> <i>time</i></p>
 <dl>
 <dt>
-<dd> Display the state of logins since the specified <i>time</i>. This is useful, e.g., to easily determine who was logged in at a particular time. The option is often combined with <code>&#8211;until</code>.</dl>
+</dt><dd> Display the state of logins since the specified <i>time</i>. This is useful, e.g., to easily determine who was logged in at a particular time. The option is often combined with <code>&#8211;until</code>.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;until</code> <i>time</i></p>
 <dl>
 <dt>
-<dd> Display the state of logins until the specified <i>time</i>.</dl>
+</dt><dd> Display the state of logins until the specified <i>time</i>.</dd></dl>
 <p> <code>&#8211;time-format</code> <i>format</i></p>
 <dl>
 <dt>
-<dd> Define the output timestamp <i>format</i> to be one of <i>notime</i>, <i>short</i>, <i>full</i>, or <i>iso</i>. The <i>notime</i> variant will not print any timestamps at all, <i>short</i> is the default, and <i>full</i> is the same as the <code>&#8211;fulltimes</code> option. The <i>iso</i> variant will display the timestamp in ISO-8601 format. The ISO format contains timezone information, making it preferable when printouts are investigated outside of the system.</dl>
+</dt><dd> Define the output timestamp <i>format</i> to be one of <i>notime</i>, <i>short</i>, <i>full</i>, or <i>iso</i>. The <i>notime</i> variant will not print any timestamps at all, <i>short</i> is the default, and <i>full</i> is the same as the <code>&#8211;fulltimes</code> option. The <i>iso</i> variant will display the timestamp in ISO-8601 format. The ISO format contains timezone information, making it preferable when printouts are investigated outside of the system.</dd></dl>
 <p> <code>-w</code>, <code>&#8211;fullnames</code></p>
 <dl>
 <dt>
-<dd> Display full user names and domain names in the output.</dl>
+</dt><dd> Display full user names and domain names in the output.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;system</code></p>
 <dl>
 <dt>
-<dd> Display the system shutdown entries and run level changes.</dl>
+</dt><dd> Display the system shutdown entries and run level changes.</dd></dl>
 <h2>TIME FORMATS</h2>
 <p> The options that take the <i>time</i> argument understand the following formats: </p>
 <table BORDER>
@@ -165,3 +165,4 @@ description: "last, lastb – show a listing of last logged in users"
 <h2>AVAILABILITY</h2>
 <p> The <code>last</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
 <h2>Index</h2>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>

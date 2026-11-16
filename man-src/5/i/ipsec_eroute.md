@@ -10,69 +10,69 @@ description: "ipsec_eroute – list of existing eroutes"
 <p>ipsec_eroute &#8211; list of existing eroutes</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>eroute</i></p>
-<dd><i>cat/proc/net/ipsec_eroute</i></dl>
+<dt> <code>ipsec</code> <i>eroute</i></dt>
+<dd><i>cat/proc/net/ipsec_eroute</i></dd></dl>
 <h2>Obsolete</h2>
-<dd>Note that eroute is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. On the <code>mast</code> stack, use <i>ipsec policy</i>, on the <code>netkey</code> stack, use <i>ip xfrm</i></p>
+<dd>Note that eroute is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. On the <code>mast</code> stack, use <i>ipsec policy</i>, on the <code>netkey</code> stack, use <i>ip xfrm</i></dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec_eroute lists the IPSEC extended routing tables, which control what (if any) processing is applied to non-encrypted packets arriving for IPSEC processing and forwarding. At this point it is a read-only file. </p>
 <p> A table entry consists of: </p>
 <p> +</p>
 <dl>
-<dd>packet count,</dl>
+<dd>packet count,</dd></dl>
 <p> +</p>
 <dl>
-<dd>source address with mask and source port (0 if all ports or not applicable)</dl>
+<dd>source address with mask and source port (0 if all ports or not applicable)</dd></dl>
 <p> +</p>
 <dl>
-<dd>a &#8216;-&gt;&#8217; separator for visual and automated parsing between src and dst</dl>
+<dd>a &#8216;-&gt;&#8217; separator for visual and automated parsing between src and dst</dd></dl>
 <p> +</p>
 <dl>
-<dd>destination address with mask and destination port (0 if all ports or not applicable)</dl>
+<dd>destination address with mask and destination port (0 if all ports or not applicable)</dd></dl>
 <p> +</p>
 <dl>
-<dd>a &#8216;=&gt;&#8217; separator for visual and automated parsing between selection criteria and SAID to use</dl>
+<dd>a &#8216;=&gt;&#8217; separator for visual and automated parsing between selection criteria and SAID to use</dd></dl>
 <p> +</p>
 <dl>
-<dd>SAID (Security Association IDentifier), comprised of:</dl>
+<dd>SAID (Security Association IDentifier), comprised of:</dd></dl>
 <p> +</p>
 <dl>
-<dd>protocol (<i>proto</i>),</dl>
+<dd>protocol (<i>proto</i>),</dd></dl>
 <p> +</p>
 <dl>
-<dd>address family (<i>af</i>), where &#8216;.&#8217; stands for IPv4 and &#8216;:&#8217; for IPv6</dl>
+<dd>address family (<i>af</i>), where &#8216;.&#8217; stands for IPv4 and &#8216;:&#8217; for IPv6</dd></dl>
 <p> +</p>
 <dl>
-<dd>Security Parameters Index (<i>SPI</i>),</dl>
+<dd>Security Parameters Index (<i>SPI</i>),</dd></dl>
 <p> +</p>
 <dl>
-<dd>effective destination (<i>edst</i>), where the packet should be forwarded after processing (normally the other security gateway) together indicate which Security Association should be used to process the packet,</dl>
+<dd>effective destination (<i>edst</i>), where the packet should be forwarded after processing (normally the other security gateway) together indicate which Security Association should be used to process the packet,</dd></dl>
 <p> +</p>
 <dl>
-<dd>a &#8216;:&#8217; separating the SAID from the transport protocol (0 if all protocols)</dl>
+<dd>a &#8216;:&#8217; separating the SAID from the transport protocol (0 if all protocols)</dd></dl>
 <p> +</p>
 <dl>
-<dd>source identity text string with no whitespace, in parens,</dl>
+<dd>source identity text string with no whitespace, in parens,</dd></dl>
 <p> +</p>
 <dl>
-<dd>destination identity text string with no whitespace, in parens</dl>
+<dd>destination identity text string with no whitespace, in parens</dd></dl>
 <p> Addresses are written as IPv4 dotted quads or IPv6 coloned hex, protocol is one of &quot;ah&quot;, &quot;esp&quot;, &quot;comp&quot; or &quot;tun&quot; and SPIs are prefixed hexadecimal numbers where the prefix &#8216;.&#8217; is for IPv4 and the prefix &#8216;:&#8217; is for IPv6 </p>
 <p> SAIDs are written as &quot;protoafSPI [at] edst&quot;. There are also 5 &quot;magic&quot; SAIDs which have special meaning: </p>
 <p> +</p>
 <dl>
-<dd><code>%drop</code> means that matches are to be dropped</dl>
+<dd><code>%drop</code> means that matches are to be dropped</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%reject</code> means that matches are to be dropped and an ICMP returned, if possible to inform</dl>
+<dd><code>%reject</code> means that matches are to be dropped and an ICMP returned, if possible to inform</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%trap</code> means that matches are to trigger an ACQUIRE message to the Key Management daemon(s) and a hold eroute will be put in place to prevent subsequent packets also triggering ACQUIRE messages.</dl>
+<dd><code>%trap</code> means that matches are to trigger an ACQUIRE message to the Key Management daemon(s) and a hold eroute will be put in place to prevent subsequent packets also triggering ACQUIRE messages.</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%hold</code> means that matches are to stored until the eroute is replaced or until that eroute gets reaped</dl>
+<dd><code>%hold</code> means that matches are to stored until the eroute is replaced or until that eroute gets reaped</dd></dl>
 <p> +</p>
 <dl>
-<dd><code>%pass</code> means that matches are to allowed to pass without IPSEC processing</dl>
+<dd><code>%pass</code> means that matches are to allowed to pass without IPSEC processing</dd></dl>
 <h2>Examples</h2>
 <p><code>1867 172.31.252.0/24:0 -&gt; 0.0.0.0/0:0 =&gt; tun0x130 [at] 192.168.43.1:0 </code><code> () ()</code> </p>
 <p> means that 1,867 packets have been sent to an <code>eroute</code> that has been set up to protect traffic between the subnet 172.31.252.0 with a subnet mask of 24 bits and the default address/mask represented by an address of 0.0.0.0 with a subnet mask of 0 bits using the local machine as a security gateway on this end of the tunnel and the machine 192.168.43.1 on the other end of the tunnel with a Security Association IDentifier of <code>tun0x130 [at] 192.168.43.1</code> which means that it is a tunnel mode connection (4, IPPROTO_IPIP) with a Security Parameters Index of 130 in hexadecimal with no identies defined for either end. </p>
@@ -97,4 +97,4 @@ description: "ipsec_eroute – list of existing eroutes"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

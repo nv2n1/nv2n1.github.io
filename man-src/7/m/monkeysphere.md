@@ -17,20 +17,20 @@ description: "monkeysphere – ssh and TLS authentication framework using OpenPG
 <h2>Key Acceptability</h2>
 <p>The monkeysphere commands work from a set of user IDs to determine acceptable keys for ssh and TLS authentication. OpenPGP keys are considered acceptable if the following criteria are met:</p>
 <dl>
-<dt><code>capability</code></p>
-<dd>The key must have the `authentication&#8217; (`a&#8217;) usage flag set.</p>
-<dt><code>validity</code></p>
-<dd>The key itself must be valid, i.e. it must be well-formed, not expired, and not revoked.</p>
-<dt><code>certification</code></p>
-<dd>The relevant user ID must be signed by a trusted identity certifier. </p>
+<dt><code>capability</code></dt>
+<dd>The key must have the `authentication&#8217; (`a&#8217;) usage flag set.</dd>
+<dt><code>validity</code></dt>
+<dd>The key itself must be valid, i.e. it must be well-formed, not expired, and not revoked.</dd>
+<dt><code>certification</code></dt>
+<dd>The relevant user ID must be signed by a trusted identity certifier. </dd>
 </dl>
 <h2>Host Identification</h2>
 <p>The OpenPGP keys for hosts have associated `service names` (OpenPGP user IDs) that are based on URI specifications for the service. Some examples:</p>
 <dl>
-<dt><code>ssh:</code></p>
-<dd><a href="ssh://host.example.com[:port]">ssh://host.example.com[:port]</a></p>
-<dt><code>https:</code></p>
-<dd><a rel="nofollow" href="https://host.example.com[:port]">https://host.example.com[:port]</a> </p>
+<dt><code>ssh:</code></dt>
+<dd><a href="ssh://host.example.com[:port]">ssh://host.example.com[:port]</a></dd>
+<dt><code>https:</code></dt>
+<dd><a rel="nofollow" href="https://host.example.com[:port]">https://host.example.com[:port]</a> </dd>
 </dl>
 <h2>Author</h2>
 <p>Written by: Jameson Rollins &lt;jrollins [at] finestructure.net&gt;, Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt;</p>

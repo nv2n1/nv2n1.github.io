@@ -10,17 +10,17 @@ description: "sss_debuglevel – change debug level while SSSD is running"
 <p>sss_debuglevel &#8211; change debug level while SSSD is running</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sss_debuglevel</code> [<i>options</i>] <i>NEW_DEBUG_LEVEL</i></dl>
+<dt> <code>sss_debuglevel</code> [<i>options</i>] <i>NEW_DEBUG_LEVEL</i></dt></dl>
 <h2>Description</h2>
 <p><code>sss_debuglevel</code></p>
-<dd>changes debug level of SSSD monitor and providers to <i>NEW_DEBUG_LEVEL</i> while SSSD is running.</p>
+<dd>changes debug level of SSSD monitor and providers to <i>NEW_DEBUG_LEVEL</i> while SSSD is running.</dd>
 <h2>Options</h2>
 <p><code>-c</code>,<code>&#8211;config</code></p>
 <dl>
-<dd>Specify a non-default config file. The default is /etc/sssd/sssd.conf. For reference on the config file syntax and options, consult the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page.</dl>
+<dd>Specify a non-default config file. The default is /etc/sssd/sssd.conf. For reference on the config file syntax and options, consult the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page.</dd></dl>
 <p> <i>NEW_DEBUG_LEVEL</i></p>
 <dl>
-<dd>SSSD supports two representations for specifying the debug level. The simplest is to specify a decimal value from 0-9, which represents enabling that level and all lower-level debug messages. The more comprehensive option is to specify a hexadecimal bitmask to enable or disable specific levels (such as if you wish to suppress a level). </p>
+<dd>SSSD supports two representations for specifying the debug level. The simplest is to specify a decimal value from 0-9, which represents enabling that level and all lower-level debug messages. The more comprehensive option is to specify a hexadecimal bitmask to enable or disable specific levels (such as if you wish to suppress a level). </dd>
 <p> Please note that each SSSD service logs into its own log file. Also please note that enabling &#8220;debug_level&#8221; in the &#8220;[sssd]&#8221; section only enables debugging just for the sssd process itself, not for the responder or provider processes. The &#8220;debug_level&#8221; parameter should be added to all sections that you wish to produce debug logs from. </p>
 <p> In addition to changing the log level in the config file using the &#8220;debug_level&#8221; parameter, which is persistent, but requires SSSD restart, it is also possible to change the debug level on the fly using the <code><a href="/docs/linux/man/8-sss_debuglevel/">sss_debuglevel</a></code>(8) tool. </p>
 <p> Currently supported debug levels: </p>
@@ -43,3 +43,4 @@ description: "sss_debuglevel – change debug level while SSSD is running"
 <p><code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8), <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ldap/">sssd-ldap</a></code>(5), <code><a href="/docs/linux/man/5-sssd-krb5/">sssd-krb5</a></code>(5), <code><a href="/docs/linux/man/5-sssd-simple/">sssd-simple</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ipa/">sssd-ipa</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ad/">sssd-ad</a></code>(5), <code><a href="/docs/linux/man/5-sssd-sudo/">sssd-sudo</a></code>(5),<code><a href="/docs/linux/man/8-sss_cache/">sss_cache</a></code>(8), <code><a href="/docs/linux/man/8-sss_debuglevel/">sss_debuglevel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupdel/">sss_groupdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupshow/">sss_groupshow</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupmod/">sss_groupmod</a></code>(8), <code><a href="/docs/linux/man/8-sss_useradd/">sss_useradd</a></code>(8), <code><a href="/docs/linux/man/8-sss_userdel/">sss_userdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_usermod/">sss_usermod</a></code>(8), <code><a href="/docs/linux/man/8-sss_obfuscate/">sss_obfuscate</a></code>(8), <code><a href="/docs/linux/man/8-sss_seed/">sss_seed</a></code>(8), <code><a href="/docs/linux/man/8-sssd_krb5_locator_plugin/">sssd_krb5_locator_plugin</a></code>(8), <code>sss_ssh_authorizedkeys</code>(8), <code>sss_ssh_knownhostsproxy</code>(8),<code><a href="/docs/linux/man/5-sssd-ifp/">sssd-ifp</a></code>(5),<code><a href="/docs/linux/man/8-pam_sss/">pam_sss</a></code>(8). <code><a href="/docs/linux/man/5-sss_rpcidmapd/">sss_rpcidmapd</a></code>(5)</p>
 <h2>Authors</h2>
 <p><code>The SSSD upstream &#8211; <a rel="nofollow" href="http://fedorahosted.org/sssd">http://fedorahosted.org/sssd</a></code></p>
+</p>

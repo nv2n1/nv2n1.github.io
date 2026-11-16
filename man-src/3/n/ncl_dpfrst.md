@@ -13,9 +13,9 @@ DPFRST - Specifies the first point in a sequence of points, in the user coordina
 
  void c_dpfrst (float xcpu, float ycpu);
 <h2>Description</h2><dl COMPACT><dt>XCPU
-<dd>(an input expression of type REAL) specifies the X coordinate of a point, in the user coordinate system.
-<dt>YCPU
-<dd>(an input expression of type REAL) specifies the Y coordinate of a point, in the user coordinate system.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) specifies the X coordinate of a point, in the user coordinate system.
+</dd><dt>YCPU
+</dt><dd>(an input expression of type REAL) specifies the Y coordinate of a point, in the user coordinate system.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Call DPFRST to do a &quot;pen-up&quot; move to the first of a sequence of points defining a curve. Call DPVECT to do &quot;pen-down&quot; moves to each of the other points in the sequence and then call DPLAST to finish drawing the curve and flush the buffers. 
 
  DPFRST maps the input coordinates to the fractional coordinate system and then does a &quot;pen-up&quot; call to either DPDRAW (if smoothing is turned off) or to DPSMTH (if smoothing is turned on) with those coordinates.

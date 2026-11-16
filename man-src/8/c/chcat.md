@@ -21,16 +21,16 @@ description: "chcat – change file SELinux security category"
 <p> Use +/- to add/remove categories from a <i>file</i> or <i>user</i>. </p>
 <p> <code>Note:</code> When removing a category you must specify &#8216;&#8211;&#8216; on the command line before using the -Category syntax. This tells the command that you have finished entering options and are now specifying a category name instead. </p>
 <dl>
-<dt><code>-d</code></p>
-<dd>delete the category from each FILE/USER.</p>
-<dt><code>-L</code></p>
-<dd>list available categories.</p>
-<dt><code>-l</code></p>
-<dd>Tells chcat to operate on users instead of files.</dl>
+<dt><code>-d</code></dt>
+<dd>delete the category from each FILE/USER.</dd>
+<dt><code>-L</code></dt>
+<dd>list available categories.</dd>
+<dt><code>-l</code></dt>
+<dd>Tells chcat to operate on users instead of files.</dd></dl>
 <h2>See Also</h2>
 <dl>
-<dt><a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8)</p>
-<dd></dl>
+<dt><a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8)</dt>
+<dd></dd></dl>
 <p> When operating on files this script wraps the chcon command.</p>
 <h2>Files</h2>
 <p>/etc/selinux/{SELINUXTYPE}/setrans.conf<br />

@@ -18,42 +18,42 @@ postcat[-bdehnoqv][-c config_dir][files...]
 <p> By default, <code><a href="/docs/linux/man/1-postcat/">postcat</a></code>(1) shows the envelope and message content, as if the options <code>-beh</code> were specified. To view message content only, specify <code>-bh</code> (Postfix 2.7 and later). </p>
 <p> Options:</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Show body content. The <code>-b</code> option starts producing output at the first non-header line, and stops when the end of the message is reached. </p>
+<dt><code>-b</code></dt>
+<dd> Show body content. The <code>-b</code> option starts producing output at the first non-header line, and stops when the end of the message is reached. </dd>
 <p> This feature is available in Postfix 2.7 and later.</p>
-<dt><code>-c </code><i>config_dir</i></p>
-<dd> The <code>main.cf</code> configuration file is in the named directory instead of the default configuration directory.</p>
-<dt><code>-d</code></p>
-<dd> Print the decimal type of each record.</p>
-<dt><code>-e</code></p>
-<dd> Show message envelope content. </p>
+<dt><code>-c </code><i>config_dir</i></dt>
+<dd> The <code>main.cf</code> configuration file is in the named directory instead of the default configuration directory.</dd>
+<dt><code>-d</code></dt>
+<dd> Print the decimal type of each record.</dd>
+<dt><code>-e</code></dt>
+<dd> Show message envelope content. </dd>
 <p> This feature is available in Postfix 2.7 and later.</p>
-<dt><code>-h</code></p>
-<dd> Show message header content. The <code>-h</code> option produces output from the beginning of the message up to, but not including, the first non-header line. </p>
+<dt><code>-h</code></dt>
+<dd> Show message header content. The <code>-h</code> option produces output from the beginning of the message up to, but not including, the first non-header line. </dd>
 <p> This feature is available in Postfix 2.7 and later.</p>
-<dt><code>-o</code></p>
-<dd> Print the queue file offset of each record.</p>
-<dt><code>-q</code></p>
-<dd> Search the Postfix queue for the named <i>files</i> instead of taking the names literally. </p>
+<dt><code>-o</code></dt>
+<dd> Print the queue file offset of each record.</dd>
+<dt><code>-q</code></dt>
+<dd> Search the Postfix queue for the named <i>files</i> instead of taking the names literally. </dd>
 <p> This feature is available in Postfix 2.0 and later.</p>
-<dt><code>-v</code></p>
-<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dl>
+<dt><code>-v</code></dt>
+<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Problems are reported to the standard error stream.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MAIL_CONFIG</code></p>
-<dd> Directory with Postfix configuration files.</dl>
+<dt><code>MAIL_CONFIG</code></dt>
+<dd> Directory with Postfix configuration files.</dd></dl>
 <h2>CONFIGURATION PARAMETERS</h2>
 <p> The following <code>main.cf</code> parameters are especially relevant to this program. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The location of the Postfix top-level queue directory.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The location of the Postfix top-level queue directory.</dd></dl>
 <h2>FILES</h2>
 <pre>
 /var/spool/postfix, Postfix queue directory

@@ -14,7 +14,7 @@ description: "regulator_enable – enable regulator output"
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>regulator source</dl>
+</dd><dd>regulator source</dd></dl>
 <h2>Description</h2>
 <p>Request that the regulator be enabled with the regulator output at the predefined voltage or current value. Calls to <code>regulator_enable</code> must be balanced with calls to <code>regulator_disable</code>.</p>
 <h2>Note</h2>
@@ -22,10 +22,10 @@ description: "regulator_enable – enable regulator output"
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -19,13 +19,11 @@ url: "/docs/linux/man/1-databaseintro/"
 <p> Attribute data can be imported with db.in.ogr from various formats and exported with db.out.ogr. To internally copy a a full table or selectively parts of it, use db.copy. </p>
 <p> Further conversion tools:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> MDB Tools: Convert MS-Access data to SQL, DBF, etc.</p>
+</dt><dd> MDB Tools: Convert MS-Access data to SQL, DBF, etc.</dd>
 <dt>
-<dd> Openoffice.org with SQL Databases</dl>
+</dt><dd> Openoffice.org with SQL Databases</dd></dl>
 </dl>
 <h3>SQL commands</h3>
 <p> GRASS supports to main SQL operations, execution of an SQL statement (db.execute) and selection of data from a table (db.select). See the SQL help page for examples.</p>
@@ -34,19 +32,17 @@ url: "/docs/linux/man/1-databaseintro/"
 <h3>Creating a database</h3>
 <p> Specific commands are explained on the individual driver pages (these pages are only available if driver was compiled in this installation):</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> DBF: see DBF page</p>
+</dt><dd> DBF: see DBF page</dd>
 <dt>
-<dd> SQLite: SQLite page</p>
+</dt><dd> SQLite: SQLite page</dd>
 <dt>
-<dd> mySQL: meSQL pages</p>
+</dt><dd> mySQL: meSQL pages</dd>
 <dt>
-<dd> ODBC: ODBC page (connect to Oracle, etc.)</p>
+</dt><dd> ODBC: ODBC page (connect to Oracle, etc.)</dd>
 <dt>
-<dd> PostgreSQL: PostgreSQL and PostGIS page</dl>
+</dt><dd> PostgreSQL: PostgreSQL and PostGIS page</dd></dl>
 </dl>
 <h3>Metadata</h3>
 <p> All columns for a given table are listed with db.columns. The command db.describe describes a table in detail. To list all available tables for a given database, run db.tables.</p>
@@ -57,13 +53,11 @@ url: "/docs/linux/man/1-databaseintro/"
 <p> db.tables returns &#8216;schema.table&#8217; if schemas are available in the database.</p>
 <h3>See also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Introduction to GRASS vector map processing</p>
+</dt><dd> Introduction to GRASS vector map processing</dd>
 <dt>
-<dd> Introduction to GRASS raster map processing</dl>
+</dt><dd> Introduction to GRASS raster map processing</dd></dl>
 </dl>
 <p> Main index &#8211; database index &#8211; full index </p>
 <p> <i>Last changed: $Date: 2008-02-10 18:09:01 +0100 (Sun, 10 Feb 2008) $</i> </p>

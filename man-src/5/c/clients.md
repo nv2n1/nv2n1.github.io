@@ -18,18 +18,18 @@ description: "clients.conf – FreeRADIUS client configuration"
 <pre>client &lt;short-name&gt; {
  &lt;attribute&gt; = &lt;value&gt;
  }</pre>
-</dl>
+</dd></dl>
 <h2>Attributes</h2>
 <p>The attributes that can appear in a <code>client</code> section are listed below. Required attributes are labelled as such. All other attributes are optional.</p>
 <dl>
-<dt><code>ipaddr [Required]</code></p>
-<dd>The IP address of the client. For IPv6, use &quot;ipv6addr&quot;</p>
-<dt><code>secret [Required]</code></p>
-<dd>The RADIUS shared secret used for communication between the client/NAS and the RADIUS server.</p>
-<dt><code>shortname [optional]</code></p>
-<dd>A short alias that can be used in place of the IP address or fully qualified hostname provided in the first line of the section.</p>
-<dt><code>nastype</code></p>
-<dd>The nastype attribute is used to tell the <code>checkrad.pl</code> script which NAS-specific method it should use when checking simultaneous use. </p>
+<dt><code>ipaddr [Required]</code></dt>
+<dd>The IP address of the client. For IPv6, use &quot;ipv6addr&quot;</dd>
+<dt><code>secret [Required]</code></dt>
+<dd>The RADIUS shared secret used for communication between the client/NAS and the RADIUS server.</dd>
+<dt><code>shortname [optional]</code></dt>
+<dd>A short alias that can be used in place of the IP address or fully qualified hostname provided in the first line of the section.</dd>
+<dt><code>nastype</code></dt>
+<dd>The nastype attribute is used to tell the <code>checkrad.pl</code> script which NAS-specific method it should use when checking simultaneous use. </dd>
 <p> The following values are currently recognized: </p>
 <pre>cisco
 computone
@@ -43,10 +43,10 @@ portslave
 tc
 usrhiper
 other</pre>
-<dt><code>login</code></p>
-<dd>Reserved for future use.</p>
-<dt><code>password</code></p>
-<dd>Reserved for future use.</dl>
+<dt><code>login</code></dt>
+<dd>Reserved for future use.</dd>
+<dt><code>password</code></dt>
+<dd>Reserved for future use.</dd></dl>
 <h2>Examples</h2>
 <pre><code>client localhost {
     ipaddr          = 127.0.0.1
@@ -63,7 +63,7 @@ other</pre>
  secret = testing123-1
  shortname = private-network-1
 }</pre>
-</dl>
+</dd></dl>
 <p> This entry represents any client from the 192.168.0.0/24 network. The old-style format from 1.x is still accepted by the server, but that form is deprecated.</p>
 <h2>Files</h2>
 <p><i>/etc/raddb/clients.conf</i> </p>

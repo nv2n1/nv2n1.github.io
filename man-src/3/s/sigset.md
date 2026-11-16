@@ -16,17 +16,17 @@ int sigrelse(int sig);
 int sigignore(int sig);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sigset</code>(), <code>sighold</code>(), <code>sigrelse</code>(), <code>sigignore</code>(): </p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <h2>Description</h2>
 <p>These functions are provided in glibc as a compatibility interface for programs that make use of the historical System V signal API. This API is obsolete: new applications should use the POSIX signal API (<code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), etc.) </p>
 <p> The <code>sigset</code>() function modifies the disposition of the signal <i>sig</i>. The <i>disp</i> argument can be the address of a signal handler function, or one of the following constants:</p>
 <dl>
-<dt><code>SIG_DFL</code></p>
-<dd>Reset the disposition of <i>sig</i> to the default.</p>
-<dt><code>SIG_IGN</code></p>
-<dd>Ignore <i>sig</i>.</p>
-<dt><code>SIG_HOLD</code></p>
-<dd>Add <i>sig</i> to the process&#8217;s signal mask, but leave the disposition of <i>sig</i> unchanged.</dl>
+<dt><code>SIG_DFL</code></dt>
+<dd>Reset the disposition of <i>sig</i> to the default.</dd>
+<dt><code>SIG_IGN</code></dt>
+<dd>Ignore <i>sig</i>.</dd>
+<dt><code>SIG_HOLD</code></dt>
+<dd>Add <i>sig</i> to the process&#8217;s signal mask, but leave the disposition of <i>sig</i> unchanged.</dd></dl>
 <p> If <i>disp</i> specifies the address of a signal handler, then <i>sig</i> is added to the process&#8217;s signal mask during execution of the handler. </p>
 <p> If <i>disp</i> was specified as a value other than <code>SIG_HOLD</code>, then <i>sig</i> is removed from the process&#8217;s signal mask. </p>
 <p> The dispositions for <code>SIGKILL</code> and <code>SIGSTOP</code> cannot be changed. </p>

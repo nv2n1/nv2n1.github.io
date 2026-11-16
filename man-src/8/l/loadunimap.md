@@ -18,10 +18,10 @@ description: "loadunimap – load the kernel unicode-to-font mapping table"
 <p> Usually one does not call <code>loadunimap</code> directly &#8211; its function is also built into <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8).</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/unimaps</i></p>
-<dd>The default directory for unicode mappings.</dl>
+<dt><i>/usr/share/unimaps</i></dt>
+<dd>The default directory for unicode mappings.</dd></dl>
 <dl>
-<dt><i>/usr/share/unimaps/def.uni</i></p>
-<dd>The default mapping file.</dl>
+<dt><i>/usr/share/unimaps/def.uni</i></dt>
+<dd>The default mapping file.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mapscrn/">mapscrn</a></code>(8), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8) </p>

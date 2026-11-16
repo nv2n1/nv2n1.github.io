@@ -11,9 +11,7 @@ std::experimental::ranges::StrictWeakOrder - std::experimental::ranges::StrictWe
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class R, class T, class U &gt;            (1) (ranges TS)
-
 concept bool StrictWeakOrder = Relation&lt;R, T, U&gt;;</code></pre> 
 The concept StrictWeakOrder&lt;R, T, U&gt; specifies that the Relation R imposes a strict weak ordering on its arguments. A relation r is a strict weak ordering if 
 * it is irreflexive: for all x, r(x, x) is false; 

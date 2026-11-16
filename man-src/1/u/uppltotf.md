@@ -19,8 +19,8 @@ description: "ppltotf, uppltotf – Create Japanese pTeX font metric (JFM)"
 <h2>OPTIONS</h2>
 <p> Compared to pltotf, the following option is added to <code>(u)ppltotf</code>.</p>
 <dl>
-<dt><code>-kanji</code><i>&nbsp;string</i></p>
-<dd> Sets the input Japanese <i>Kanji</i> code. The <i>string</i> can be one of the followings: <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), <i>utf8</i>&nbsp;(UTF-8), <i>uptex</i>&nbsp;(UTF-8; <code>uppltotf</code> only).</dl>
+<dt><code>-kanji</code><i>&nbsp;string</i></dt>
+<dd> Sets the input Japanese <i>Kanji</i> code. The <i>string</i> can be one of the followings: <i>euc</i>&nbsp;(EUC-JP), <i>jis</i>&nbsp;(ISO-2022-JP), <i>sjis</i>&nbsp;(Shift_JIS), <i>utf8</i>&nbsp;(UTF-8), <i>uptex</i>&nbsp;(UTF-8; <code>uppltotf</code> only).</dd></dl>
 <p> When one of <i>euc</i>, <i>jis</i>, <i>sjis</i> or <i>utf8</i> is specified, both <code>ppltotf</code> and <code>uppltotf</code> output a JIS-encoded JFM. When <i>uptex</i> is specified with <code>uppltotf</code>, it outputs a Unicode-encoded JFM.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ptex/">ptex</a></code>(1).</p>

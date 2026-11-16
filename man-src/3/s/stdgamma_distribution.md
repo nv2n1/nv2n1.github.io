@@ -11,9 +11,7 @@ std::gamma_distribution - std::gamma_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class gamma_distribution;</code></pre> 
 Produces random positive floating-point values x, distributed according to probability density function: <pre><code>\(\mathsf{p}(x\mid\alpha,\beta) = \frac{e^{-x/\beta} }{\beta^\alpha\cdot\Gamma(\alpha)}\cdot x^{\alpha-1} \)P(x|α,β) =</code></pre> 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e-x/β 

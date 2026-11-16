@@ -10,10 +10,8 @@ description: "std::is_error_code_enum<std::io_errc> – std::is_error_code_enum<
 <p>std::is_error_code_enum&lt;std::io_errc&gt; &#8211; std::is_error_code_enum&lt;std::io_errc&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;ios&gt;
-
     template &lt;&gt;
     (since C++ 11)
-
         struct is_error_code_enum&lt;std::io_errc&gt; : public std::true_type {
 };</code></pre>
 <p>This specialization of std::is_error_code_enum informs other library components that values of type std::io_errc are enumerations that hold error codes, which makes them implicitly convertible and assignable to objects of type std::error_code.<br />
@@ -36,11 +34,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <p>The comparison between e.code() and std::io_errc::stream compiles because std::is_error_code_enum&lt;std::io_errc&gt;::value == true<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 int main()
-
 {
     std::ifstream f(&quot;doesn't exist&quot;);
     try {

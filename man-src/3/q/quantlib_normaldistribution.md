@@ -20,6 +20,6 @@ description: "QuantLib::NormalDistribution – Normal distribution function."
 <p> Given x, it returns its probability in a Gaussian normal distribution. It provides the first derivative too. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against numerical calculations. Cross-checks are also performed against the <code>CumulativeNormalDistribution</code> and <code>InverseCumulativeNormal</code> classes.</dl>
+<dd>the correctness of the returned value is tested by checking it against numerical calculations. Cross-checks are also performed against the <code>CumulativeNormalDistribution</code> and <code>InverseCumulativeNormal</code> classes.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

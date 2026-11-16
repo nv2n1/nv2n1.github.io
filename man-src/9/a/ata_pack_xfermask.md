@@ -14,13 +14,13 @@ description: "ata_pack_xfermask – Pack pio, mwdma and udma masks into xfer_mas
 <p><i>pio_mask</i></p>
 <dl>
 <dd>
-<dd>pio_mask</dl>
+</dd><dd>pio_mask</dd></dl>
 <p> <i>mwdma_mask</i></p>
 <dl>
-<dd>mwdma_mask</dl>
+<dd>mwdma_mask</dd></dl>
 <p> <i>udma_mask</i></p>
 <dl>
-<dd>udma_mask</dl>
+<dd>udma_mask</dd></dl>
 <h2>Description</h2>
 <p>Pack <i>pio_mask</i>, <i>mwdma_mask</i> and <i>udma_mask</i> into a single unsigned int xfer_mask. </p>
 <p> LOCKING: None.</p>
@@ -29,5 +29,5 @@ description: "ata_pack_xfermask – Pack pio, mwdma and udma masks into xfer_mas
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -20,12 +20,12 @@ description: "mktextfm – create a TFM file for a font"
 <h2>OPTIONS</h2>
 <p> <code>mktextfm</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;destdir</code><i>&nbsp;dir</i></p>
-<dd> A directory name. If the directory is absolute, it is used as-is. Otherwise, it is appended to the root destination directory set in the script.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit successfully.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit successfully.</dl>
+<dt><code>&#8211;destdir</code><i>&nbsp;dir</i></dt>
+<dd> A directory name. If the directory is absolute, it is used as-is. Otherwise, it is appended to the root destination directory set in the script.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit successfully.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit successfully.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> One environment variable is specific to <code>mktextfm</code>: <code>MF_MODE_EXTRA_INFO</code>. If this is set to a non-empty value, a Metafont macro <code>mode_include_extra_info</code> will be invoked when the font is made. The standard <code>modes.mf</code> file defines this, as of modes.mf version 4.0, released in 2020. This causes the so-called Xerox-world information, notably including the <code>CODINGSCHEME</code> for the font, to be included in the tfm file. (This is not done by default since it is too intrusive to redefine the necessary primitives, per Don Knuth.) The <code><a href="/docs/linux/man/1-mftrace/">mftrace</a></code>(1) program, for example, can use this to get a clue about the font encoding, although the information is not always perfectly definitive or unambiguous. </p>
 <p> For more about the encodings of Metafont fonts, see the section &#8220;Bitmap font encodings&#8221; in the Dvips manual (e.g., <a rel="nofollow" href="https://tug.org/texinfohtml/dvips.html">https://tug.org/texinfohtml/dvips.html</a>). </p>

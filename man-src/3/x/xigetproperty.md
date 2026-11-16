@@ -59,13 +59,12 @@ XIChangeProperty, XIGetProperty, XIDeleteProperty - change, retrieve or delete a
  Returns the atom identifier that defines the actual type of
  the property.</pre><h2>Description</h2>The XIGetProperty function returns the actual type of the property; the actual format of the property; the number of 8-bit, 16-bit, or 32-bit items transferred; the number of bytes remaining to be read in the property; and a pointer to the data actually returned. XIGetProperty sets the return arguments as follows: 
 
-<dl COMPACT><dd>&bull; If the specified property does not exist for the specified device, XIGetProperty returns None to actual_type_return and the value zero to actual_format_return and bytes_after_return. The nitems_return argument is empty. In this case, the delete argument is ignored.</dl><dl COMPACT><dd>&bull; If the specified property exists but its type does not match the specified type, XIGetProperty returns the actual property type to actual_type_return, the actual property format (never zero) to actual_format_return, and the property length in bytes (even if the actual_format_return is 16 or 32) to bytes_after_return. It also ignores the delete argument. The nitems_return argument is empty.</dl><dl COMPACT><dd>&bull; If the specified property exists and either you assign XIAnyPropertyType to the req_type argument or the specified type matches the actual property type, XIGetProperty returns the actual property type to actual_type_return and the actual property format (never zero) to actual_format_return. It also returns a value to bytes_after_return and nitems_return, by defining the following values: 
-
-<dl COMPACT><dd><pre>N = length of the stored property in bytes
+<dl COMPACT><dd>&bull; If the specified property does not exist for the specified device, XIGetProperty returns None to actual_type_return and the value zero to actual_format_return and bytes_after_return. The nitems_return argument is empty. In this case, the delete argument is ignored.</dd></dl><dl COMPACT><dd>&bull; If the specified property exists but its type does not match the specified type, XIGetProperty returns the actual property type to actual_type_return, the actual property format (never zero) to actual_format_return, and the property length in bytes (even if the actual_format_return is 16 or 32) to bytes_after_return. It also ignores the delete argument. The nitems_return argument is empty.</dd></dl><dl COMPACT><dd>&bull; If the specified property exists and either you assign XIAnyPropertyType to the req_type argument or the specified type matches the actual property type, XIGetProperty returns the actual property type to actual_type_return and the actual property format (never zero) to actual_format_return. It also returns a value to bytes_after_return and nitems_return, by defining the following values: 
+</dd><dl COMPACT><dd><pre>N = length of the stored property in bytes
 I = 4 * offset
 T = N - I
 L = MINIMUM(T, 4 * length)
-A = N - (I + L)</pre></dl></dl>
+A = N - (I + L)</pre></dd></dl></dl>
  
 
  The returned value starts at byte index I in the property (indexing from zero), and its length in bytes is L. If the value for long_offset causes L to be negative, a BadValue error results. The value of bytes_after_return is A, giving the number of trailing unread bytes in the stored property. 
@@ -82,7 +81,7 @@ A = N - (I + L)</pre></dl></dl>
 
  The XIChangeProperty function alters the property for the specified device and causes the X server to generate a XIPropertyNotify event for that device. XIChangeProperty performs the following: 
 
-<dl COMPACT><dd>&bull; If mode is XIPropModeReplace, XIChangeProperty discards the previous property value and stores the new data.</dl><dl COMPACT><dd>&bull; If mode is XIPropModePrepend or XIPropModeAppend, XIChangeProperty inserts the specified data before the beginning of the existing data or onto the end of the existing data, respectively. The type and format must match the existing property value, or a BadMatch error results. If the property is undefined, it is treated as defined with the correct type and format with zero-length data.</dl>
+<dl COMPACT><dd>&bull; If mode is XIPropModeReplace, XIChangeProperty discards the previous property value and stores the new data.</dd></dl><dl COMPACT><dd>&bull; If mode is XIPropModePrepend or XIPropModeAppend, XIChangeProperty inserts the specified data before the beginning of the existing data or onto the end of the existing data, respectively. The type and format must match the existing property value, or a BadMatch error results. If the property is undefined, it is treated as defined with the correct type and format with zero-length data.</dd></dl>
  
 
  If the specified format is 8, the property data must be a char array. If the specified format is 16, the property data must be a uint16_t array. If the specified format is 32, the property data must be a uint32_t array. 
@@ -106,4 +105,4 @@ A = N - (I + L)</pre></dl></dl>
 <h2>Bugs</h2><dl COMPACT><dd><pre>The protocol headers for XI 2.0 did not provide
 XIAnyPropertyType, XIPropModeReplace, XIPropModePrepend or
 XIPropModeAppend. Use AnyPropertyType, PropModeReplace,
-PropModePrepend and PropModeAppend instead, respectively.</pre></dl><h2>See Also</h2><a HREF="/docs/linux/man/3-xilistproperties/">XIListProperties</a>(3)
+PropModePrepend and PropModeAppend instead, respectively.</pre></dd></dl><h2>See Also</h2><a HREF="/docs/linux/man/3-xilistproperties/">XIListProperties</a>(3)

@@ -64,8 +64,8 @@ description: "dirsrvadmin_script_selinux – Security Enhanced Linux Policy for 
 <p> <code>dirsrvadmin_script_exec_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_script_exec_t type, if you want to transition an executable to the dirsrvadmin_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/dirsrv/cgi-bin(/.*)?, /usr/lib/dirsrv/dsgw-cgi-bin(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/dirsrv/cgi-bin(/.*)?, /usr/lib/dirsrv/dsgw-cgi-bin(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

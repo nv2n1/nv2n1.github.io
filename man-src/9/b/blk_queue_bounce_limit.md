@@ -15,11 +15,11 @@ blk_queue_bounce_limit - set bounce buffer limit for queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>max_addr</i>
-<dl><dd>the maximum address the device can handle</dl>
+<dl><dd>the maximum address the device can handle</dd></dl>
 
 <h2>Description</h2>
 

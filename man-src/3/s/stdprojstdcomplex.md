@@ -28,10 +28,8 @@ Additional overloads are provided for float, double, long double, and all intege
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::complex&lt;double&gt; c1(1, 2);
     std::cout &lt;&lt; &quot;proj&quot; &lt;&lt; c1 &lt;&lt; &quot; = &quot; &lt;&lt; std::proj(c1) &lt;&lt; '

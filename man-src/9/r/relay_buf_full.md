@@ -15,7 +15,7 @@ relay_buf_full - boolean, is the channel buffer full?
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>channel buffer</dl>
+<dl><dd></dd><dd>channel buffer</dd></dl>
 
 <h2>Description</h2>
 

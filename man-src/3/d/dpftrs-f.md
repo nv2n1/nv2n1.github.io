@@ -21,10 +21,10 @@ description: "dpftrs.f –"
 <pre> DPFTRS solves a system of linear equations A*X = B with a symmetric
  positive definite matrix A using the Cholesky factorization
  A = U**T*U or A = L*L**T computed by DPFTRF.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANSR</i> </p>
+<dd><i>TRANSR</i> </dd>
 <pre> TRANSR is CHARACTER*1
  = 'N': The Normal TRANSR of RFP A is stored;
  = 'T': The Transpose TRANSR of RFP A is stored.</pre>
@@ -58,13 +58,13 @@ description: "dpftrs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -127,7 +127,8 @@ description: "dpftrs.f –"
  02 12 22 00 01 00 10 20 30 40 50
  03 13 23 33 11 33 11 21 31 41 51
  04 14 24 34 44 43 44 22 32 42 52</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 200 of file dpftrs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

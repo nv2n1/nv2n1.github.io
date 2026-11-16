@@ -44,17 +44,17 @@ description: "QuantLib::CapFloor – Base class for cap-like instruments."
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a cap (resp. floor) decreases (resp. increases) with the strike rate.</p>
-<dt>*</p>
-<dd>the relationship between the values of caps, floors and the resulting collars is checked.</p>
-<dt>*</p>
-<dd>the put-call parity between the values of caps, floors and swaps is checked.</p>
-<dt>*</p>
-<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking it against a known good value.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a cap (resp. floor) decreases (resp. increases) with the strike rate.</dd>
+<dt>*</dt>
+<dd>the relationship between the values of caps, floors and the resulting collars is checked.</dd>
+<dt>*</dt>
+<dd>the put-call parity between the values of caps, floors and swaps is checked.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking it against a known good value.</dd></dl>
 </dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>

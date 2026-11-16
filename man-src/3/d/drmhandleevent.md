@@ -11,10 +11,10 @@ description: "drmHandleEvent – read and process pending DRM events"
 <h2>Synopsis</h2>
 <pre>#include &lt;xf86drm.h&gt;</pre>
 <dl COMPACT>
-<dt> <code>int drmHandleEvent(int&nbsp;<wbr></code><i>fd</i><code>, drmEventContextPtr&nbsp;<wbr></code><i>evctx</i><code>);</code></dl>
+<dt> <code>int drmHandleEvent(int&nbsp;<wbr></code><i>fd</i><code>, drmEventContextPtr&nbsp;<wbr></code><i>evctx</i><code>);</code></dt></dl>
 <h2>Description</h2>
 <p><code>drmHandleEvent</code></p>
-<dd>processes outstanding DRM events on the DRM file-descriptor passed as <i>fd</i>. This function should be called after the DRM file-descriptor has polled readable; it will read the events and use the passed-in <i>evctx</i> structure to call function pointers with the parameters noted below: </p>
+<dd>processes outstanding DRM events on the DRM file-descriptor passed as <i>fd</i>. This function should be called after the DRM file-descriptor has polled readable; it will read the events and use the passed-in <i>evctx</i> structure to call function pointers with the parameters noted below: </dd>
 <dl COMPACT>
 <dd>
 <pre>typedef struct _drmEventContext {
@@ -30,7 +30,7 @@ description: "drmHandleEvent – read and process pending DRM events"
  unsigned int tv_usec,
  void *user_data)
 } drmEventContext, *drmEventContextPtr;</pre>
-</dl>
+</dd></dl>
 <h2>Return Value</h2>
 <p><code>drmHandleEvent</code> returns 0 on success, or if there is no data to read from the file-descriptor. Returns -1 if the read on the file-descriptor fails or returns less than a full event record.</p>
 <h2>Reporting Bugs</h2>

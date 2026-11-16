@@ -28,10 +28,10 @@ description: "Globus XIO Net Manager Driver –"
 <p>doxygen varargs filter stuff Network driver specific cntls </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID </i></p>
-<dd>See usage for: <code>globus_xio_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID </i></p>
-<dd>See usage for: <code>globus_xio_attr_cntl </code></dl>
+<dt><i>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID </i></dt>
+<dd>See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID </i></dt>
+<dd>See usage for: <code>globus_xio_attr_cntl </code></dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID</code>, const char *task_id)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the task id associated with this XIO handle.</p>

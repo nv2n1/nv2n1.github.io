@@ -15,15 +15,15 @@ description: "remove-ds.pl – Remove an instance of Directory Server"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd>Removes all files and directories belonging to the instance</p>
-<dt><code>-f</code></p>
-<dd>Force removal</p>
-<dt><code>-d</code></p>
-<dd>Enable debugging: adding more -d will make output more verbose</p>
-<dt><code>-i</code> <i>instance</i></p>
+<dt><code>-a</code></dt>
+<dd>Removes all files and directories belonging to the instance</dd>
+<dt><code>-f</code></dt>
+<dd>Force removal</dd>
+<dt><code>-d</code></dt>
+<dd>Enable debugging: adding more -d will make output more verbose</dd>
+<dt><code>-i</code> <i>instance</i></dt>
 <dd>The full name of the instance to remove (e.g. slapd-example)
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>remove-ds.pl was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

@@ -28,75 +28,75 @@ The mib2c.conf script language is a MIB-particular language designed to easily p
 
 All commands within mib2c.conf files are embraced by @ signs. Anything with an @ sign at the front and back of the line is generally supposed to be a mib2c specific command. These are detailed here:
 <dl><dt>@open FILE@
-<dd>writes generated output to FILE note that for file specifications, opening '-' will print to stdout.
-<dt>@append FILE@
-<dd>appends the given FILE
-<dt>@close FILE@
-<dd>closes the given FILE
-<dt>@push@
-<dd>save the current outputs, then clear outputs. Use with @open@ and @pop@ to write to a new file without interfering with current outputs.
-<dt>@pop@
-<dd>pop up the process() stack one level. Use after a @push@ to return to the previous set of open files.
-<dt>@foreach $VAR scalar@
-<dd>repeat iterate over code until @end@ setting $VAR to all known scalars
-<dt>@foreach $VAR table@
-<dd>repeat iterate over code until @end@ setting $VAR to all known tables
-<dt>@foreach $VAR column@
-<dd>repeat iterate over code until @end@ setting $VAR to all known columns within a given table. Obviously this must be called within a foreach-table clause.
-<dt>@foreach $VAR nonindex@
-<dd>repeat iterate over code until @end@ setting $VAR to all known non-index columns within a given table. Obviously this must be called within a foreach-table clause.
-<dt>@foreach $VAR internalindex@
-<dd>repeat iterate over code until @end@ setting $VAR to all known internal index columns within a given table. Obviously this must be called within a foreach-table clause.
-<dt>@foreach $VAR externalindex@
-<dd>repeat iterate over code until @end@ setting $VAR to all known external index columns within a given table. Obviously this must be called within a foreach-table clause.
-<dt>@foreach $VAR index@
-<dd>repeat iterate over code until @end@ setting $VAR to all known indexes within a given table. Obviously this must be called within a foreach-table clause.
-<dt>@foreach $VAR notifications@
-<dd>repeat iterate over code until @end@ setting $VAR to all known notifications
-<dt>@foreach $VAR varbinds@
-<dd>repeat iterate over code until @end@ setting $VAR to all known varbinds Obviously this must be called within a foreach-notifications clause.
-<dt>@foreach $LABEL, $VALUE enum@
-<dd>repeat iterate over code until @end@ setting $LABEL and $VALUE to the label and values from the enum list.
-<dt>@foreach $RANGE_START, $RANGE_END range NODE@
-<dd>repeat iterate over code until @end@ setting $RANGE_START and $RANGE_END to the legal accepted range set for a given mib NODE.
-<dt>@foreach $var stuff a b c d@
-<dd>repeat iterate over values a, b, c, d as assigned generically (ie, the values are taken straight from the list with no mib-expansion, etc).
-<dt>@while expression@
-<dd>repeat iterate over code until the expression is false
-<dt>@eval $VAR = expression@
-<dd>evaluates expression and assigns the results to $VAR. This is not a full perl eval, but sort of a &quot;&quot;psuedo&quot;&quot; eval useful for simple expressions while keeping the same variable name space. See below for a full-blown export to perl.
-<dt>@perleval STUFF@
-<dd>evaluates STUFF directly in perl. Note that all mib2c variables interpereted within .conf files are in $vars{NAME} and that a warning will be printed if STUFF does not return 0. (adding a 'return 0;' at the end of STUFF is a workaround.
-<dt>@startperl@
-<dd><dt>@endperl@
-<dd>treats everything between these tags as perl code, and evaluates it.
-<dt>@next@
-<dd>restart foreach; should only be used inside a conditional. skips out of current conditional, then continues to skip to end for the current foreach clause.
-<dt>@if expression@
-<dd>evaluates expression, and if expression is true processes contained part until appropriate @end@ is reached. If the expression is false, the next @elsif expression@ expression (if it exists) will be evaluated, until an expression is true. If no such expression exists and an @else@ clause is found, it will be evaluated.
-<dt>@ifconf file@
-<dd>If the specified file can be found in the conf file search path, and if found processes contained part until an appropriate @end@ is found. As with a regular @if expression@, @elsif expression@ and @else@ can be used.
-<dt>@ifdir dir@
-<dd>If the specified directory exists, process contained part until an appropriate @end@ is found. As with a regular @if expression@, @elsif expression@ and @else@ can be used.
-<dt>@define NAME@
-<dd><dt>@enddefine@
-<dd>Memorizes &quot;&quot;stuff&quot;&quot; between the define and enddefine tags for later calling as NAME by @calldefine NAME@.
-<dt>@calldefine NAME@
-<dd>Executes stuff previously memorized as NAME.
-<dt>@printf &quot;expression&quot; stuff1, stuff2, ...@
-<dd>Like all the other printf's you know and love.
-<dt>@run FILE@
-<dd>Sources the contents of FILE as a mib2c file, but does not affect current files opened.
-<dt>@include FILE@
-<dd>Sources the contents of FILE as a mib2c file and appends its output to the current output.
-<dt>@prompt $var QUESTION@
-<dd>Presents the user with QUESTION, expects a response and puts it in $var
-<dt>@print STUFF@
-<dd>Prints stuff directly to the users screen (ie, not to where normal mib2c output goes)
-<dt>@quit@
-<dd>Bail out (silently)
-<dt>@exit@
-<dd>Bail out!</dl>
+</dt><dd>writes generated output to FILE note that for file specifications, opening '-' will print to stdout.
+</dd><dt>@append FILE@
+</dt><dd>appends the given FILE
+</dd><dt>@close FILE@
+</dt><dd>closes the given FILE
+</dd><dt>@push@
+</dt><dd>save the current outputs, then clear outputs. Use with @open@ and @pop@ to write to a new file without interfering with current outputs.
+</dd><dt>@pop@
+</dt><dd>pop up the process() stack one level. Use after a @push@ to return to the previous set of open files.
+</dd><dt>@foreach $VAR scalar@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known scalars
+</dd><dt>@foreach $VAR table@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known tables
+</dd><dt>@foreach $VAR column@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known columns within a given table. Obviously this must be called within a foreach-table clause.
+</dd><dt>@foreach $VAR nonindex@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known non-index columns within a given table. Obviously this must be called within a foreach-table clause.
+</dd><dt>@foreach $VAR internalindex@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known internal index columns within a given table. Obviously this must be called within a foreach-table clause.
+</dd><dt>@foreach $VAR externalindex@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known external index columns within a given table. Obviously this must be called within a foreach-table clause.
+</dd><dt>@foreach $VAR index@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known indexes within a given table. Obviously this must be called within a foreach-table clause.
+</dd><dt>@foreach $VAR notifications@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known notifications
+</dd><dt>@foreach $VAR varbinds@
+</dt><dd>repeat iterate over code until @end@ setting $VAR to all known varbinds Obviously this must be called within a foreach-notifications clause.
+</dd><dt>@foreach $LABEL, $VALUE enum@
+</dt><dd>repeat iterate over code until @end@ setting $LABEL and $VALUE to the label and values from the enum list.
+</dd><dt>@foreach $RANGE_START, $RANGE_END range NODE@
+</dt><dd>repeat iterate over code until @end@ setting $RANGE_START and $RANGE_END to the legal accepted range set for a given mib NODE.
+</dd><dt>@foreach $var stuff a b c d@
+</dt><dd>repeat iterate over values a, b, c, d as assigned generically (ie, the values are taken straight from the list with no mib-expansion, etc).
+</dd><dt>@while expression@
+</dt><dd>repeat iterate over code until the expression is false
+</dd><dt>@eval $VAR = expression@
+</dt><dd>evaluates expression and assigns the results to $VAR. This is not a full perl eval, but sort of a &quot;&quot;psuedo&quot;&quot; eval useful for simple expressions while keeping the same variable name space. See below for a full-blown export to perl.
+</dd><dt>@perleval STUFF@
+</dt><dd>evaluates STUFF directly in perl. Note that all mib2c variables interpereted within .conf files are in $vars{NAME} and that a warning will be printed if STUFF does not return 0. (adding a 'return 0;' at the end of STUFF is a workaround.
+</dd><dt>@startperl@
+</dt><dd></dd><dt>@endperl@
+</dt><dd>treats everything between these tags as perl code, and evaluates it.
+</dd><dt>@next@
+</dt><dd>restart foreach; should only be used inside a conditional. skips out of current conditional, then continues to skip to end for the current foreach clause.
+</dd><dt>@if expression@
+</dt><dd>evaluates expression, and if expression is true processes contained part until appropriate @end@ is reached. If the expression is false, the next @elsif expression@ expression (if it exists) will be evaluated, until an expression is true. If no such expression exists and an @else@ clause is found, it will be evaluated.
+</dd><dt>@ifconf file@
+</dt><dd>If the specified file can be found in the conf file search path, and if found processes contained part until an appropriate @end@ is found. As with a regular @if expression@, @elsif expression@ and @else@ can be used.
+</dd><dt>@ifdir dir@
+</dt><dd>If the specified directory exists, process contained part until an appropriate @end@ is found. As with a regular @if expression@, @elsif expression@ and @else@ can be used.
+</dd><dt>@define NAME@
+</dt><dd></dd><dt>@enddefine@
+</dt><dd>Memorizes &quot;&quot;stuff&quot;&quot; between the define and enddefine tags for later calling as NAME by @calldefine NAME@.
+</dd><dt>@calldefine NAME@
+</dt><dd>Executes stuff previously memorized as NAME.
+</dd><dt>@printf &quot;expression&quot; stuff1, stuff2, ...@
+</dt><dd>Like all the other printf's you know and love.
+</dd><dt>@run FILE@
+</dt><dd>Sources the contents of FILE as a mib2c file, but does not affect current files opened.
+</dd><dt>@include FILE@
+</dt><dd>Sources the contents of FILE as a mib2c file and appends its output to the current output.
+</dd><dt>@prompt $var QUESTION@
+</dt><dd>Presents the user with QUESTION, expects a response and puts it in $var
+</dd><dt>@print STUFF@
+</dt><dd>Prints stuff directly to the users screen (ie, not to where normal mib2c output goes)
+</dd><dt>@quit@
+</dt><dd>Bail out (silently)
+</dd><dt>@exit@
+</dt><dd>Bail out!</dd></dl>
 
 <h2>Variables</h2>
 
@@ -106,67 +106,67 @@ Variables in the mib2c language look very similar to perl variables, in that the
 
  One last thing: you can use things like $vartext immediately ending in some other text, you can use {}s to get proper expansion of only part of the mib2c input. IE, $xtext will produce &quot;$xtext&quot;, but ${x}text will produce &quot;ifTypetext&quot; instead.
 <dl><dt>$var.uc
-<dd>all upper case version of $var
-<dt>$var.objectID
-<dd>dotted, fully-qualified, and numeric OID
-<dt>$var.commaoid
-<dd>comma separated numeric OID for array initialization
-<dt>$var.oidlength
-<dd>length of the oid
-<dt>$var.subid
-<dd>last number component of oid
-<dt>$var.module
-<dd>MIB name that the object comes from
-<dt>$var.parent
-<dd>contains the label of the parent node of $var.
-<dt>$var.isscalar
-<dd>returns 1 if var contains the name of a scalar
-<dt>$var.iscolumn
-<dd>returns 1 if var contains the name of a column
-<dt>$var.children
-<dd>returns 1 if var has children
-<dt>$var.perltype
-<dd>node's perl SYNTAX ($SNMP::MIB{node}{'syntax'})
-<dt>$var.type
-<dd>node's ASN_XXX type (Net-SNMP specific #define)
-<dt>$var.decl
-<dd>C data type (char, u_long, ...)
-<dt>$var.readable
-<dd>1 if an object is readable, 0 if not
-<dt>$var.settable
-<dd>1 if an object is writable, 0 if not
-<dt>$var.creatable
-<dd>1 if a column object can be created as part of a new row, 0 if not
-<dt>$var.noaccess
-<dd>1 if not-accessible, 0 if not
-<dt>$var.accessible
-<dd>1 if accessible, 0 if not
-<dt>$var.storagetype
-<dd>1 if an object is a StorageType object, 0 if not
-<dt>$var.rowstatus
-<dd>1 if an object is a RowStatus object, 0 if not 'settable', 'creatable', 'lastchange', 'storagetype' and 'rowstatus' can also be used with table variables to indicate whether it contains writable, creatable, LastChange, StorageType or RowStatus column objects
-<dt>$var.hasdefval
-<dd>returns 1 if var has a DEFVAL clause
-<dt>$var.defval
-<dd>node's DEFVAL
-<dt>$var.hashint
-<dd>returns 1 if var has a HINT clause
-<dt>$var.hint
-<dd>node's HINT
-<dt>$var.ranges
-<dd>returns 1 if var has a value range defined
-<dt>$var.enums
-<dd>returns 1 if var has enums defined for it.
-<dt>$var.access
-<dd>node's access type
-<dt>$var.status
-<dd>node's status
-<dt>$var.syntax
-<dd>node's syntax
-<dt>$var.reference
-<dd>node's reference
-<dt>$var.description
-<dd>node's description</dl>
+</dt><dd>all upper case version of $var
+</dd><dt>$var.objectID
+</dt><dd>dotted, fully-qualified, and numeric OID
+</dd><dt>$var.commaoid
+</dt><dd>comma separated numeric OID for array initialization
+</dd><dt>$var.oidlength
+</dt><dd>length of the oid
+</dd><dt>$var.subid
+</dt><dd>last number component of oid
+</dd><dt>$var.module
+</dt><dd>MIB name that the object comes from
+</dd><dt>$var.parent
+</dt><dd>contains the label of the parent node of $var.
+</dd><dt>$var.isscalar
+</dt><dd>returns 1 if var contains the name of a scalar
+</dd><dt>$var.iscolumn
+</dt><dd>returns 1 if var contains the name of a column
+</dd><dt>$var.children
+</dt><dd>returns 1 if var has children
+</dd><dt>$var.perltype
+</dt><dd>node's perl SYNTAX ($SNMP::MIB{node}{'syntax'})
+</dd><dt>$var.type
+</dt><dd>node's ASN_XXX type (Net-SNMP specific #define)
+</dd><dt>$var.decl
+</dt><dd>C data type (char, u_long, ...)
+</dd><dt>$var.readable
+</dt><dd>1 if an object is readable, 0 if not
+</dd><dt>$var.settable
+</dt><dd>1 if an object is writable, 0 if not
+</dd><dt>$var.creatable
+</dt><dd>1 if a column object can be created as part of a new row, 0 if not
+</dd><dt>$var.noaccess
+</dt><dd>1 if not-accessible, 0 if not
+</dd><dt>$var.accessible
+</dt><dd>1 if accessible, 0 if not
+</dd><dt>$var.storagetype
+</dt><dd>1 if an object is a StorageType object, 0 if not
+</dd><dt>$var.rowstatus
+</dt><dd>1 if an object is a RowStatus object, 0 if not 'settable', 'creatable', 'lastchange', 'storagetype' and 'rowstatus' can also be used with table variables to indicate whether it contains writable, creatable, LastChange, StorageType or RowStatus column objects
+</dd><dt>$var.hasdefval
+</dt><dd>returns 1 if var has a DEFVAL clause
+</dd><dt>$var.defval
+</dt><dd>node's DEFVAL
+</dd><dt>$var.hashint
+</dt><dd>returns 1 if var has a HINT clause
+</dd><dt>$var.hint
+</dt><dd>node's HINT
+</dd><dt>$var.ranges
+</dt><dd>returns 1 if var has a value range defined
+</dd><dt>$var.enums
+</dt><dd>returns 1 if var has enums defined for it.
+</dd><dt>$var.access
+</dt><dd>node's access type
+</dd><dt>$var.status
+</dt><dd>node's status
+</dd><dt>$var.syntax
+</dt><dd>node's syntax
+</dd><dt>$var.reference
+</dt><dd>node's reference
+</dd><dt>$var.description
+</dt><dd>node's description</dd></dl>
 
 <h2>See Also</h2>
 

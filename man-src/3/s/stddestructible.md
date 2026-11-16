@@ -11,9 +11,7 @@ std::Destructible - std::Destructible
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class T &gt;                                       (since C++20)
-
 concept Destructible = std::is_nothrow_destructible_v&lt;T&gt;;</code></pre> 
 The concept Destructible specifies the concept of all types whose instances can safely be destroyed at the end of their lifetime (including reference types). 
 

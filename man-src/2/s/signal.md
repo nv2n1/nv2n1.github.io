@@ -19,19 +19,19 @@ description: "signal – ANSI C signal handling"
 <p> <code>signal</code>() sets the disposition of the signal <i>signum</i> to <i>handler</i>, which is either <code>SIG_IGN</code>, <code>SIG_DFL</code>, or the address of a programmer-defined function (a &quot;signal handler&quot;). </p>
 <p> If the signal <i>signum</i> is delivered to the process, then one of the following happens:</p>
 <dl>
-<dt>*</p>
-<dd> If the disposition is set to <code>SIG_IGN</code>, then the signal is ignored.</p>
-<dt>*</p>
-<dd> If the disposition is set to <code>SIG_DFL</code>, then the default action associated with the signal (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)) occurs.</p>
-<dt>*</p>
-<dd> If the disposition is set to a function, then first either the disposition is reset to <code>SIG_DFL</code>, or the signal is blocked (see <i>Portability</i> below), and then <i>handler</i> is called with argument <i>signum</i>. If invocation of the handler caused the signal to be blocked, then the signal is unblocked upon return from the handler.</dl>
+<dt>*</dt>
+<dd> If the disposition is set to <code>SIG_IGN</code>, then the signal is ignored.</dd>
+<dt>*</dt>
+<dd> If the disposition is set to <code>SIG_DFL</code>, then the default action associated with the signal (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)) occurs.</dd>
+<dt>*</dt>
+<dd> If the disposition is set to a function, then first either the disposition is reset to <code>SIG_DFL</code>, or the signal is blocked (see <i>Portability</i> below), and then <i>handler</i> is called with argument <i>signum</i>. If invocation of the handler caused the signal to be blocked, then the signal is unblocked upon return from the handler.</dd></dl>
 <p> The signals <code>SIGKILL</code> and <code>SIGSTOP</code> cannot be caught or ignored.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>signal</code>() returns the previous value of the signal handler, or <code>SIG_ERR</code> on error. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>signum</i> is invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>signum</i> is invalid.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, C89, C99.</p>
 <h2>NOTES</h2>
@@ -51,10 +51,10 @@ description: "signal – ANSI C signal handling"
 <p> sa.sa_flags = SA_RESTART; </p>
 <p> The situation on Linux is as follows:</p>
 <dl>
-<dt>*</p>
-<dd> The kernel&#8217;s <code>signal</code>() system call provides System V semantics.</p>
-<dt>*</p>
-<dd> By default, in glibc 2 and later, the <code>signal</code>() wrapper function does not invoke the kernel system call. Instead, it calls <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) using flags that supply BSD semantics. This default behavior is provided as long as a suitable feature test macro is defined: <code>_BSD_SOURCE</code> on glibc 2.19 and earlier or <code>_DEFAULT_SOURCE</code> in glibc 2.19 and later. (By default, these macros are defined; see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7) for details.) If such a feature test macro is not defined, then <code>signal</code>() provides System V semantics.</dl>
+<dt>*</dt>
+<dd> The kernel&#8217;s <code>signal</code>() system call provides System V semantics.</dd>
+<dt>*</dt>
+<dd> By default, in glibc 2 and later, the <code>signal</code>() wrapper function does not invoke the kernel system call. Instead, it calls <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) using flags that supply BSD semantics. This default behavior is provided as long as a suitable feature test macro is defined: <code>_BSD_SOURCE</code> on glibc 2.19 and earlier or <code>_DEFAULT_SOURCE</code> in glibc 2.19 and later. (By default, these macros are defined; see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7) for details.) If such a feature test macro is not defined, then <code>signal</code>() provides System V semantics.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/2-alarm/">alarm</a></code>(2), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/2-pause/">pause</a></code>(2), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2), <code><a href="/docs/linux/man/2-sigpending/">sigpending</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2), <code><a href="/docs/linux/man/3-bsd_signal/">bsd_signal</a></code>(3), <code><a href="/docs/linux/man/3-killpg/">killpg</a></code>(3), <code><a href="/docs/linux/man/3-raise/">raise</a></code>(3), <code><a href="/docs/linux/man/3-siginterrupt/">siginterrupt</a></code>(3), <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), <code><a href="/docs/linux/man/3-sigsetops/">sigsetops</a></code>(3), <code><a href="/docs/linux/man/3-sigvec/">sigvec</a></code>(3), <code><a href="/docs/linux/man/3-sysv_signal/">sysv_signal</a></code>(3), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)</p>
 <h2>COLOPHON</h2>

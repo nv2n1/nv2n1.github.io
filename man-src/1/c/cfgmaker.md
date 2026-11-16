@@ -105,40 +105,40 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <p> See <code>&#8211;output</code> and <code>&#8211;global</code> for how their behaviour is affected by where or how many times they appear on the command line. </p>
 <p> See the <code>Examples</code> below on how to set an option differently for multiple routers.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print a brief help message and exit.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Prints the manual page and exits.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version of cfgmaker. This should match the version of <font SIZE="-1">MRTG</font> for which config files are being created.</p>
-<dt><code>&#8211;ifref</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code></p>
-<dd> Select the interface identification method. Default is <code>nr</code> which identifies the router interfaces by their number. Unfortunately the interface numbering scheme in an <font SIZE="-1">SNMP</font> tree can change. Some routers change their numbering when new interfaces are added, others change thier numbering every full moon just for fun. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a brief help message and exit.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Prints the manual page and exits.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version of cfgmaker. This should match the version of <font SIZE="-1">MRTG</font> for which config files are being created.</dd>
+<dt><code>&#8211;ifref</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code></dt>
+<dd> Select the interface identification method. Default is <code>nr</code> which identifies the router interfaces by their number. Unfortunately the interface numbering scheme in an <font SIZE="-1">SNMP</font> tree can change. Some routers change their numbering when new interfaces are added, others change thier numbering every full moon just for fun. </dd>
 <p> To work around this sad problem <font SIZE="-1">MRTG</font> can identify interfaces by 4 other properties. None of these works for all interfaces, but you should be able to find one which does fine for you. Note that especially ethernet addrsses can be problematic as some routers have the same ethernet address on most of their interface cards. </p>
 <p> Select <code>ip</code> to identify the interface by its <font SIZE="-1">IP</font> number. Use <code>eth</code> to use the ethernet address for identification. Use <code>descr</code> to use the Interface description. Or use <code>name</code> to use the Interface name. </p>
 <p> You can specify multiple properties if you wish, separated by commas. In this case, cfgmaker will use the first item in the list which can provide unique identification. This allows you to specify, for example, to use <font SIZE="-1">IP</font> address and to use ifName if this is not defined:<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211;ifref ip,name </p>
 <p> If your chosen method does not allow unique interface identification on the device you are querying, <code>cfgmaker</code> will tell you about it.</p>
-<dt><code>&#8211;ifdesc</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code>|<code>type</code>|<code>alias</code></p>
-<dd> Select what to use as the description of the interface. The description appears in the <tt>&quot;Title[]&quot;</tt> property for the target as well as the text header in the <font SIZE="-1">HTML</font> code defined in the target&#8217;s <tt>&quot;PageTop[]&quot;</tt>. Default is to use <code>nr</code> which is just the interface number which isn&#8217;t always useful to the viewer of the graphs. </p>
+<dt><code>&#8211;ifdesc</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code>|<code>type</code>|<code>alias</code></dt>
+<dd> Select what to use as the description of the interface. The description appears in the <tt>&quot;Title[]&quot;</tt> property for the target as well as the text header in the <font SIZE="-1">HTML</font> code defined in the target&#8217;s <tt>&quot;PageTop[]&quot;</tt>. Default is to use <code>nr</code> which is just the interface number which isn&#8217;t always useful to the viewer of the graphs. </dd>
 <p> There are 6 other properties which could be used. Use <code>ip</code> if you want to use the interface&#8217;s IP-address. Use <code>eth</code> if you want to use the interface&#8217;s ethernet address. If you want a better description, you can use either <code>descr</code>, <code>name</code> or <code>alias</code>. Exactly what each of these do varies between different equipment so you might need to experiment. For instance, for a serial interface on a Cisco router running <font SIZE="-1">IOS</font> using <code>name</code> might result in <tt>&quot;S0&quot;</tt> being the interface description , <code>descr</code> might result in <tt>&quot;Serial0&quot;</tt> and <code>alias</code> might result in <tt>&quot;Link to HQ&quot;</tt> (provided that is what is used as the interface&#8217;s <tt>&quot;description&quot;</tt> in the router&#8217;s configuration). </p>
 <p> Finally, if you want to describe the interface by it&#8217;s Btype (i.e <tt>&quot;ethernetCSMA&quot;</tt>, <tt>&quot;propPointtoPoint&quot;</tt> etc) you can use <code>type</code>. </p>
 <p> You can specify multiple properties if you wish, separated by commas. In this case, cfgmaker will use the first item in the list which is available for this interface. This allows you to specify, for example, to use any of the different aliases in order of preference.</p>
-<dt><code>&#8211;if-filter</code> &#8216;<code>filter-expression</code>&#8216;</p>
-<dd> First of all, this is under some development and is experimental. </p>
+<dt><code>&#8211;if-filter</code> &#8216;<code>filter-expression</code>&#8216;</dt>
+<dd> First of all, this is under some development and is experimental. </dd>
 <p> Use this if you want to have better control over what interfaces gets included into the configuration. The <code>filter-expression</code> is evaluated as a piece of Perl code and is expected to return a truth value. If true, include the interface and if false, exclude the interface. </p>
 <p> For a further discussion on how these filters work, see the section &#8220;Details on Filters&#8221; below.</p>
-<dt><code>&#8211;if-template</code> <code>template-file</code></p>
-<dd> First of all, this is under some development and is experimental. </p>
+<dt><code>&#8211;if-template</code> <code>template-file</code></dt>
+<dd> First of all, this is under some development and is experimental. </dd>
 <p> Use this if you want to control what the line for each target should look like in the configuration file. The contents of the file <code>template-file</code> will be evaluated as a Perl program which generates the lines using certain variables for input and output. </p>
 <p> For a further discussion on how these templates work, see the section &#8220;Details on Temaplates&#8221; below.</p>
-<dt><code>&#8211;host-template</code> <code>template-file</code></p>
-<dd> First of all, this is under some development and is experimental. </p>
+<dt><code>&#8211;host-template</code> <code>template-file</code></dt>
+<dd> First of all, this is under some development and is experimental. </dd>
 <p> Use this if you want to have some extra targets related to the host itself such as <font SIZE="-1">CPU</font> utilization, ping response time to the host, number of busy modems etc. The contents of the file <code>template-file</code> will be evaluated once per host as a Perl program which generates the lines using certain variables for input and output. </p>
 <p> For a further discussion on how these templates work, see the section &#8220;Details on Templates&#8221; below.</p>
-<dt><code>&#8211;community</code> <code>community-string</code></p>
-<dd> Use this to set the community for the routers following on the command line to <code>community-string</code>. Individual routers might overrride this community string by using the syntax <code>community</code><code>@</code><code>router</code>.</p>
-<dt><code>&#8211;enable-ipv6</code></p>
-<dd> This option enables IPv6 support. It requires the appropriate perl modules; if they are not found then IPv6 is disabled (see the ipv6 documentation). </p>
+<dt><code>&#8211;community</code> <code>community-string</code></dt>
+<dd> Use this to set the community for the routers following on the command line to <code>community-string</code>. Individual routers might overrride this community string by using the syntax <code>community</code><code>@</code><code>router</code>.</dd>
+<dt><code>&#8211;enable-ipv6</code></dt>
+<dd> This option enables IPv6 support. It requires the appropriate perl modules; if they are not found then IPv6 is disabled (see the ipv6 documentation). </dd>
 <p> cfgmaker will use IPv6 or IPv4 depending on the target. If the target is a numeric address, the protocol depends on the type of address. If the target is a hostname, cfgmaker will try to resolve the name first to an IPv6 address then to an IPv4 address. </p>
 <p> IPv6 numeric addresses must be specified between square braces. </p>
 <p> For example: </p>
@@ -146,13 +146,13 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  cfgmaker --enable-ipv6 [2001:760:4::1]:165:::2
 </pre>
 <p> If the target has both an IPv6 address and an IPv4 address with the same hostname, cfgmaker first queries the target using IPv6 and falls back to IPv4 if it fails. This is useful for targets which don&#8217;t support <font SIZE="-1">SNMP</font> over IPv6.</p>
-<dt><code>&#8211;use-16bit</code></p>
-<dd> This option forces the use of 16bit <font SIZE="-1">SNMP</font> request IDs. Some broken <font SIZE="-1">SNMP</font> agents do not accept 32bit request IDs. Try to avoid this option as much as possible, complain to your agent vendor instead.</p>
-<dt><code>&#8211;snmp-options</code> :[<code>port</code>][:[<code>timeout</code>][:[<code>retries</code>][:[<code>backoff</code>][:<code>version</code>]]]]</p>
-<dd> Use this to set the default <font SIZE="-1">SNMP</font> options for all routers following on the command line. Individual values might be omitted as well as trailing colons. Note that routers might override individual (or all) values specified by <code>&#8211;snmp-options</code> by using the syntax </p>
+<dt><code>&#8211;use-16bit</code></dt>
+<dd> This option forces the use of 16bit <font SIZE="-1">SNMP</font> request IDs. Some broken <font SIZE="-1">SNMP</font> agents do not accept 32bit request IDs. Try to avoid this option as much as possible, complain to your agent vendor instead.</dd>
+<dt><code>&#8211;snmp-options</code> :[<code>port</code>][:[<code>timeout</code>][:[<code>retries</code>][:[<code>backoff</code>][:<code>version</code>]]]]</dt>
+<dd> Use this to set the default <font SIZE="-1">SNMP</font> options for all routers following on the command line. Individual values might be omitted as well as trailing colons. Note that routers might override individual (or all) values specified by <code>&#8211;snmp-options</code> by using the syntax </dd>
 <p> <code>router</code>[:[<code>port</code>][:[<code>timeout</code>][:[<code>retries</code>][:[<code>backoff</code>][:<code>version</code>]]]]]</p>
-<dt><code>&#8211;global</code> <code>&quot;</code><i>bla: abc</i><code>&quot;</code></p>
-<dd> Use this to add global options to the generated config file. You can call <code>&#8211;global</code> several times to add multiple options. The line will appear in the configuration just before the config for the next router appearing on the command line. </p>
+<dt><code>&#8211;global</code> <code>&quot;</code><i>bla: abc</i><code>&quot;</code></dt>
+<dd> Use this to add global options to the generated config file. You can call <code>&#8211;global</code> several times to add multiple options. The line will appear in the configuration just before the config for the next router appearing on the command line. </dd>
 <pre>
  --global &quot;workdir: /home/mrtg&quot;
 </pre>
@@ -161,16 +161,16 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  --global &quot;options[_]: growright,bits&quot;
 </pre>
 <p> Specifying <code>&#8211;global</code> after the last router on the command line will create a line in the configuration file which will appear after all the routers.</p>
-<dt><code>&#8211;noreversedns</code></p>
-<dd> Do not try to reverse lookup <font SIZE="-1">IP</font> numbers &#8230; a must for <font SIZE="-1">DNS</font> free environments.</p>
-<dt><code>&#8211;no-down</code></p>
-<dd> Normally cfgmaker will not include interfaces which are marked anything but administratively and operationally <font SIZE="-1">UP</font>. With this switch you get them all.</p>
-<dt><code>&#8211;show-op-down</code></p>
-<dd> Include interfaces which are operatively down.</p>
-<dt><code>&#8211;zero-speed</code> <i>speed</i></p>
-<dd> Assign this speed in bits-per-second to all interfaces which return 0 for ifSpeed and ifHighSpeed. Some switches, notably Foundry equipment, return a speed of zero for some interfaces. For example, to have all interfaces reporting zero set to 100Mbps, use &#8211;zero-speed=100000000.</p>
-<dt><code>&#8211;subdirs</code> <i>format</i></p>
-<dd> Give each router its own subdirectory for the <font SIZE="-1">HTML</font> and graphics (or .rrd) files. The directory name is the given <i>format</i> string with a couple of pattern replacements. The string &#8220;<font SIZE="-1">HOSTNAME</font>&#8221; will be replaced by the hostname of the router (however you specified it on the <code>cfgmaker</code> commandline &#8212; it may be an actual hostname or just an <font SIZE="-1">IP</font> address), and &#8220;<font SIZE="-1">SNMPNAME</font>&#8221; will be replaced with the device&#8217;s idea of its own name (the same name that appears on the right side of the &#8220;Title&#8221; lines). For instance, a call like: </p>
+<dt><code>&#8211;noreversedns</code></dt>
+<dd> Do not try to reverse lookup <font SIZE="-1">IP</font> numbers &#8230; a must for <font SIZE="-1">DNS</font> free environments.</dd>
+<dt><code>&#8211;no-down</code></dt>
+<dd> Normally cfgmaker will not include interfaces which are marked anything but administratively and operationally <font SIZE="-1">UP</font>. With this switch you get them all.</dd>
+<dt><code>&#8211;show-op-down</code></dt>
+<dd> Include interfaces which are operatively down.</dd>
+<dt><code>&#8211;zero-speed</code> <i>speed</i></dt>
+<dd> Assign this speed in bits-per-second to all interfaces which return 0 for ifSpeed and ifHighSpeed. Some switches, notably Foundry equipment, return a speed of zero for some interfaces. For example, to have all interfaces reporting zero set to 100Mbps, use &#8211;zero-speed=100000000.</dd>
+<dt><code>&#8211;subdirs</code> <i>format</i></dt>
+<dd> Give each router its own subdirectory for the <font SIZE="-1">HTML</font> and graphics (or .rrd) files. The directory name is the given <i>format</i> string with a couple of pattern replacements. The string &#8220;<font SIZE="-1">HOSTNAME</font>&#8221; will be replaced by the hostname of the router (however you specified it on the <code>cfgmaker</code> commandline &#8212; it may be an actual hostname or just an <font SIZE="-1">IP</font> address), and &#8220;<font SIZE="-1">SNMPNAME</font>&#8221; will be replaced with the device&#8217;s idea of its own name (the same name that appears on the right side of the &#8220;Title&#8221; lines). For instance, a call like: </dd>
 <pre>
  cfgmaker --subdirs=HOSTNAME__SNMPNAME public [at] 10.10.0.18
 </pre>
@@ -178,26 +178,26 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <pre>
  Directory[10.10.0.18_1]: 10.10.0.18__fp2200-bothrip-1.3
 </pre>
-<dt><code>&#8211;output</code> <i>file</i></p>
-<dd> Write the output from <code>cfgmaker</code> into the file <i>file</i>. The default is to use <tt>&quot;STDOUT&quot;</tt>. <code>&#8211;output</code> is expected to appear only once on the command line. If used multiple times, the file specified by the last <code>&#8211;output</code> will be used.</p>
-<dt><code>&#8211;nointerfaces</code></p>
-<dd> Don&#8217;t generate configuration lines for interfaces. </p>
+<dt><code>&#8211;output</code> <i>file</i></dt>
+<dd> Write the output from <code>cfgmaker</code> into the file <i>file</i>. The default is to use <tt>&quot;STDOUT&quot;</tt>. <code>&#8211;output</code> is expected to appear only once on the command line. If used multiple times, the file specified by the last <code>&#8211;output</code> will be used.</dd>
+<dt><code>&#8211;nointerfaces</code></dt>
+<dd> Don&#8217;t generate configuration lines for interfaces. </dd>
 <p> This makes cfgmaker skip all steps related to interfaces which means it will not do any polling of the router to retrieve interface information which speeds up the execution of cfgmaker and it will neither run any interface templates.</p>
-<dt><code>&#8211;interfaces</code></p>
-<dd> This makes cfgmaker generate configuration lines for interfaces (the default behaviour). </p>
+<dt><code>&#8211;interfaces</code></dt>
+<dd> This makes cfgmaker generate configuration lines for interfaces (the default behaviour). </dd>
 <p> The main usage of this option is to negate an &#8211;nointerfaces appearing earlier on the command line.</dl>
 <h3><font SIZE="-1">SNMP</font> V3 Options</h3>
 <p> <code>Cfgmaker</code> supports <font SIZE="-1">SNMP</font> V3 using the <code>Net:SNMP</code> perl module. There are optional parameters affecting <font SIZE="-1">SNMP</font> operation.</p>
 <dl>
-<dt>&#8211;enablesnmpv3 {yes|no}</p>
-<dd> The <code>&#8211;enablesnmpv3</code> option is an optional flag to check for the presence of the <code>Net::SNMP</code> libraries. <code>Cfgmaker</code> will try to determine whether this flag is required and will set the values automatically.</dl>
+<dt>&#8211;enablesnmpv3 {yes|no}</dt>
+<dd> The <code>&#8211;enablesnmpv3</code> option is an optional flag to check for the presence of the <code>Net::SNMP</code> libraries. <code>Cfgmaker</code> will try to determine whether this flag is required and will set the values automatically.</dd></dl>
 <p> <i>SNMPv3 Arguments</i> </p>
 <p> A <font SIZE="-1">SNMP</font> context is a collection of management information accessible by a <font SIZE="-1">SNMP</font> entity. An item of management information may exist in more than one context and a <font SIZE="-1">SNMP</font> entity potentially has access to many contexts. The combination of a contextEngineID and a contextName unambiguously identifies a context within an administrative domain. In a SNMPv3 message, the contextEngineID and contextName are included as part of the scopedPDU. All methods that generate a <font SIZE="-1">SNMP</font> message optionally take a <code>&#8211;contextengineid</code> and <code>&#8211;contextname</code> argument to configure these fields.</p>
 <dl>
-<dt>Context Engine <font SIZE="-1">ID</font></p>
-<dd> The <code>&#8211;contextengineid</code> argument expects a hexadecimal string representing the desired contextEngineID. The string must be 10 to 64 characters (5 to 32 octets) long and can be prefixed with an optional &#8220;0x&#8221;. Once the <code>&#8211;contextengineid</code> is specified it stays with the object until it is changed again or reset to default by passing in the undefined value. By default, the contextEngineID is set to match the authoritativeEngineID of the authoritative <font SIZE="-1">SNMP</font> engine.</p>
-<dt>Context Name</p>
-<dd> The contextName is passed as a string which must be 0 to 32 octets in length using the <code>&#8211;contextname</code> argument. The contextName stays with the object until it is changed. The contextName defaults to an empty string which represents the &#8220;default&#8221; context.</dl>
+<dt>Context Engine <font SIZE="-1">ID</font></dt>
+<dd> The <code>&#8211;contextengineid</code> argument expects a hexadecimal string representing the desired contextEngineID. The string must be 10 to 64 characters (5 to 32 octets) long and can be prefixed with an optional &#8220;0x&#8221;. Once the <code>&#8211;contextengineid</code> is specified it stays with the object until it is changed again or reset to default by passing in the undefined value. By default, the contextEngineID is set to match the authoritativeEngineID of the authoritative <font SIZE="-1">SNMP</font> engine.</dd>
+<dt>Context Name</dt>
+<dd> The contextName is passed as a string which must be 0 to 32 octets in length using the <code>&#8211;contextname</code> argument. The contextName stays with the object until it is changed. The contextName defaults to an empty string which represents the &#8220;default&#8221; context.</dd></dl>
 <p> <i>User-based Security Model Arguments</i> </p>
 <p> The User-based Security Model (<font SIZE="-1">USM</font>) used by SNMPv3 requires that a securityName be specified using the <code>&#8211;username</code> argument. The creation of a Net::SNMP object with the version set to SNMPv3 will fail if the <code>&#8211;username</code> argument is not present. The <code>&#8211;username</code> argument expects a string 1 to 32 octets in length. </p>
 <p> Different levels of security are allowed by the User-based Security Model which address authentication and privacy concerns. A SNMPv3 target will derive the security level (securityLevel) based on which of the following arguments are specified. </p>
@@ -211,12 +211,12 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <p> As the filter is evaluated as a Perl expression, several useful constructs in Perl are worth mentioning: </p>
 <p> Expressions might be grouped by using parentheses &#8220;()&#8221;. Expressions might be combined using boolean operators such as the following:</p>
 <dl>
-<dt>&quot;<code>and</code>&quot; (equivalent with &quot;<code>&amp;&amp;</code>&quot;)</p>
-<dd> Boolean &#8220;and&#8221; of the two expressions, is only true if both expressions are true. Example: <i>expression1</i> <code>and</code> <i>expression2</i></p>
-<dt>&quot;<code>or</code>&quot; (equivalent with &quot;<code>||</code>&quot;)</p>
-<dd> Boolean &#8220;or&#8221; of the two expressions, is true if either or both expressions are true. Example: <i>expression1</i> <code>or</code> <i>expression2</i></p>
-<dt>&quot;<code>not</code>&quot; (equivalent with &quot;<code>!</code>&quot;)</p>
-<dd> Boolean negation of a single expression. Example: <code>not</code> <i>expression</i> . Yet another example: <code>!</code><i>expression</i></dl>
+<dt>&quot;<code>and</code>&quot; (equivalent with &quot;<code>&amp;&amp;</code>&quot;)</dt>
+<dd> Boolean &#8220;and&#8221; of the two expressions, is only true if both expressions are true. Example: <i>expression1</i> <code>and</code> <i>expression2</i></dd>
+<dt>&quot;<code>or</code>&quot; (equivalent with &quot;<code>||</code>&quot;)</dt>
+<dd> Boolean &#8220;or&#8221; of the two expressions, is true if either or both expressions are true. Example: <i>expression1</i> <code>or</code> <i>expression2</i></dd>
+<dt>&quot;<code>not</code>&quot; (equivalent with &quot;<code>!</code>&quot;)</dt>
+<dd> Boolean negation of a single expression. Example: <code>not</code> <i>expression</i> . Yet another example: <code>!</code><i>expression</i></dd></dl>
 <p> (For more details on this I recommend a book on Perl) </p>
 <p> <i>Predefined Filter Variables</i> </p>
 <p> To facilitate, there are a number of predefined values available to use in the filter. Note that these variables are also available when templates interfaces are evaluated (but not host templates). </p>
@@ -225,8 +225,8 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  '--if-filter=($default_iftype &amp;&amp; $if_admin)'
 </pre>
 <dl>
-<dt><code>$if_type</code></p>
-<dd> This is an integer specifying the interface type as per the <font SIZE="-1">SNMP</font> standards and as reported by the polled device. A complete list of interface types would be impractical for this document , but there are a number predefined varables below. Normally, cfgmaker puts in the target&#8217;s PageTop this iftype value within paranthesis after the name of the interface type. (e.g &#8220;propPointToPointSerial (22)&#8221;). </p>
+<dt><code>$if_type</code></dt>
+<dd> This is an integer specifying the interface type as per the <font SIZE="-1">SNMP</font> standards and as reported by the polled device. A complete list of interface types would be impractical for this document , but there are a number predefined varables below. Normally, cfgmaker puts in the target&#8217;s PageTop this iftype value within paranthesis after the name of the interface type. (e.g &#8220;propPointToPointSerial (22)&#8221;). </dd>
 <p> Here&#8217;s a list of some of the most common interface types by number: </p>
 <pre>
    6 ethernetCsmacd
@@ -255,42 +255,42 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  117 Gigabit Ethernet
  134 ATM Sub Interface
 </pre>
-<dt><code>$default</code></p>
-<dd> True if and only if cfgmaker normally should accepted the interface based on the interfaces administrative and operational state (taking the flags <code>&#8211;no-down</code> and <code>&#8211;show-op-down</code> into account) and it&#8217;s type (and a few other things).</p>
-<dt><code>$default_ifstate</code></p>
-<dd> True if and only if cfgmaker would have accepted the interface based on it&#8217;s operational and administrative states (also taking into account the presence of the flags <code>&#8211;no-down</code> and <code>&#8211;show-op-down</code>).</p>
-<dt><code>$default_iftype</code></p>
-<dd> True if and only if cfgmaker would have accepted the interface based on it&#8217;s type (and a few type specific details in addition).</p>
-<dt><code>$if_admin</code></p>
-<dd> True if and only if the interface is in an adminstrative up state.</p>
-<dt><code>$if_oper</code></p>
-<dd> True if and only if the interface is in an operational up state.</dl>
+<dt><code>$default</code></dt>
+<dd> True if and only if cfgmaker normally should accepted the interface based on the interfaces administrative and operational state (taking the flags <code>&#8211;no-down</code> and <code>&#8211;show-op-down</code> into account) and it&#8217;s type (and a few other things).</dd>
+<dt><code>$default_ifstate</code></dt>
+<dd> True if and only if cfgmaker would have accepted the interface based on it&#8217;s operational and administrative states (also taking into account the presence of the flags <code>&#8211;no-down</code> and <code>&#8211;show-op-down</code>).</dd>
+<dt><code>$default_iftype</code></dt>
+<dd> True if and only if cfgmaker would have accepted the interface based on it&#8217;s type (and a few type specific details in addition).</dd>
+<dt><code>$if_admin</code></dt>
+<dd> True if and only if the interface is in an adminstrative up state.</dd>
+<dt><code>$if_oper</code></dt>
+<dd> True if and only if the interface is in an operational up state.</dd></dl>
 <p> A number of variables are also predefined to easily decide if an interface belong to a certain cathegory or not. Below is all those variables listed together with which if_type numbers each variable will be true for. Note that some variables refer to other variables as well.</p>
 <dl>
-<dt><code>$if_is_ethernet</code></p>
-<dd> True for ethernet interfaces (nr 6, 7, 26, 62, 69 and 117).</p>
-<dt><code>$if_is_isdn</code></p>
-<dd> True for various <font SIZE="-1">ISDN</font> interface types (nr 20, 21, 63, 75, 76 and 77)</p>
-<dt><code>$if_is_dialup</code></p>
-<dd> True for dial-up interfaces such as <font SIZE="-1">PPP</font> as well as <font SIZE="-1">ISDN</font>. (nr 23, 81, 82 and 108 in addition to the numbers of $if_is_isdn).</p>
-<dt><code>$if_is_atm</code></p>
-<dd> True for miscellaneous <font SIZE="-1">ATM</font> related interface types (nr 37, 49, 107, 105, 106, 114 and 134).</p>
-<dt><code>$if_is_wan</code></p>
-<dd> True for <font SIZE="-1">WAN</font> interfaces point to point, Frame Relay and High Speed Serial ( 22,32,44,46)</p>
-<dt><code>$if_is_lan</code></p>
-<dd> True for <font SIZE="-1">LAN</font> interfaces (8, 9, 11, 15, 26, 55, 59, 60 and 115 in addition to the numbers of $if_is_ethernet).</p>
-<dt><code>$if_is_dsl</code></p>
-<dd> True for <font SIZE="-1">ADSL</font>, <font SIZE="-1">RDSL</font>, <font SIZE="-1">HDSL</font> and <font SIZE="-1">SDSL</font> (nr 94, 95, 96, 97)</p>
-<dt><code>$if_is_loopback</code></p>
-<dd> True for software loopback interfaces (nr 24)</p>
-<dt><code>$if_is_ciscovlan</code></p>
-<dd> True for Cisco <font SIZE="-1">VLAN</font> interfaces (interfaces with the word Vlan or <font SIZE="-1">VLAN</font> in their ifdescs)</p>
-<dt><code>$if_vlan_id</code></p>
-<dd> Returns the vlan id associated with a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>, and 3Com switches. If it is not a vlan interface, will return undef.</p>
-<dt><code>$if_cisco_trunk</code></p>
-<dd> Returns the trunking state of a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>. Returns &#8220;1&#8221; if the interface is a trunk, undef otherwise.</p>
-<dt><code>$if_MTU</code></p>
-<dd> Returns the Maximum Transfer Unit associated with a specific port.</dl>
+<dt><code>$if_is_ethernet</code></dt>
+<dd> True for ethernet interfaces (nr 6, 7, 26, 62, 69 and 117).</dd>
+<dt><code>$if_is_isdn</code></dt>
+<dd> True for various <font SIZE="-1">ISDN</font> interface types (nr 20, 21, 63, 75, 76 and 77)</dd>
+<dt><code>$if_is_dialup</code></dt>
+<dd> True for dial-up interfaces such as <font SIZE="-1">PPP</font> as well as <font SIZE="-1">ISDN</font>. (nr 23, 81, 82 and 108 in addition to the numbers of $if_is_isdn).</dd>
+<dt><code>$if_is_atm</code></dt>
+<dd> True for miscellaneous <font SIZE="-1">ATM</font> related interface types (nr 37, 49, 107, 105, 106, 114 and 134).</dd>
+<dt><code>$if_is_wan</code></dt>
+<dd> True for <font SIZE="-1">WAN</font> interfaces point to point, Frame Relay and High Speed Serial ( 22,32,44,46)</dd>
+<dt><code>$if_is_lan</code></dt>
+<dd> True for <font SIZE="-1">LAN</font> interfaces (8, 9, 11, 15, 26, 55, 59, 60 and 115 in addition to the numbers of $if_is_ethernet).</dd>
+<dt><code>$if_is_dsl</code></dt>
+<dd> True for <font SIZE="-1">ADSL</font>, <font SIZE="-1">RDSL</font>, <font SIZE="-1">HDSL</font> and <font SIZE="-1">SDSL</font> (nr 94, 95, 96, 97)</dd>
+<dt><code>$if_is_loopback</code></dt>
+<dd> True for software loopback interfaces (nr 24)</dd>
+<dt><code>$if_is_ciscovlan</code></dt>
+<dd> True for Cisco <font SIZE="-1">VLAN</font> interfaces (interfaces with the word Vlan or <font SIZE="-1">VLAN</font> in their ifdescs)</dd>
+<dt><code>$if_vlan_id</code></dt>
+<dd> Returns the vlan id associated with a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>, and 3Com switches. If it is not a vlan interface, will return undef.</dd>
+<dt><code>$if_cisco_trunk</code></dt>
+<dd> Returns the trunking state of a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>. Returns &#8220;1&#8221; if the interface is a trunk, undef otherwise.</dd>
+<dt><code>$if_MTU</code></dt>
+<dd> Returns the Maximum Transfer Unit associated with a specific port.</dd></dl>
 <p> Besides that, you can also use the variables defined for templates below. Further, all the variables available in cfgmaker is at the scripts disposal even if the use of such features is discouraged. More &#8220;shortcuts&#8221; in the form of variables and functions will be made available in the future instead. </p>
 <p> <i>Examples on Filters</i> </p>
 <p> The following filter will not affect which interfaces get&#8217;s included or excluded, it will make cfgmaker behave as normally. </p>
@@ -310,115 +310,115 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <p> These are the variables available to store the configuration lines in. Some of them are initialized prior to the evaluation of the template but such content normally is comments for inclusion in the final configuration file so those variables might be reset to the empty string in the template code to eliminate the comments. The other way around is also possible, the contents of these variables might be extended with further information for various reasons such as debugging etc. </p>
 <p> Once the template has been evaluated, the following happens: if the template is a interface template and the actual interface for some reason is rejected and thus needs to be commented out, all the lines in the variable $target_lines are turned into comments by adding a hash mark (&#8220;#&#8221;) at their beginning. Then all the variables $head_lines, $problem_lines , $target_lines and $separator_lines are concatenated together to form the lines to add to the configuration file.</p>
 <dl>
-<dt><code>$target_lines</code></p>
-<dd> This variable is the placeholder for the configuration lines created by the template. $target_lines is predefined to be empty when the template code is evaluated.</p>
-<dt><code>$head_lines</code></p>
-<dd> This variable is intended to be the placeholder for the comment line appearing just before the target in the configuration file. It is initialized with that comment line before the evaluation of the template code and if the template doesn&#8217;t modify $head_lines during evaluation, the comment will look like usual in the config file.</p>
-<dt><code>$problem_lines</code></p>
-<dd> This variable is intended to be the placholder for the comment lines describing any problems which might have been encountered when trying to add the target into the configuration. For host templates it&#8217;s normally not used and for those it&#8217;s predefined as the empty string. For interface templates $problem_lines is predefined with the error description comments which cfgmaker normally would use for rejected interfaces or as the empty string for accepted interfaces. </p>
+<dt><code>$target_lines</code></dt>
+<dd> This variable is the placeholder for the configuration lines created by the template. $target_lines is predefined to be empty when the template code is evaluated.</dd>
+<dt><code>$head_lines</code></dt>
+<dd> This variable is intended to be the placeholder for the comment line appearing just before the target in the configuration file. It is initialized with that comment line before the evaluation of the template code and if the template doesn&#8217;t modify $head_lines during evaluation, the comment will look like usual in the config file.</dd>
+<dt><code>$problem_lines</code></dt>
+<dd> This variable is intended to be the placholder for the comment lines describing any problems which might have been encountered when trying to add the target into the configuration. For host templates it&#8217;s normally not used and for those it&#8217;s predefined as the empty string. For interface templates $problem_lines is predefined with the error description comments which cfgmaker normally would use for rejected interfaces or as the empty string for accepted interfaces. </dd>
 <p> It is possible to test against $problem_lines to find out if an interface will be included or rejected but this is not recommended. Test against $if_ok instead.</p>
-<dt><code>$separator_lines</code></p>
-<dd> This variable is the placeholder for the string to use as the separator between the code for individual targets. The contents of this variable is put after each target (so the lines will appear after the end of the last target in the config as well).</dl>
+<dt><code>$separator_lines</code></dt>
+<dd> This variable is the placeholder for the string to use as the separator between the code for individual targets. The contents of this variable is put after each target (so the lines will appear after the end of the last target in the config as well).</dd></dl>
 <p> <i>Predefined Template Variables</i> </p>
 <p> All the variables below are available for interface templates to use. For host templates, only those listed under &#8220;Host and System Variables&#8221; are available. </p>
 <p> For interface templates the variables listed under &#8220;Predefined Filter Variables&#8221; are also available. </p>
 <p> <i>Host and System Variables</i></p>
 <dl>
-<dt><code>$router_name</code></p>
-<dd> This is the fully qualified name for the router. It is affected by the following items on the command line: the router name itself and <code>&#8211;dns-domain</code>.</p>
-<dt><code>$router_connect</code></p>
-<dd> This is the reference string for the router being polled. It is on the form community [at] router possibly followed by some snmp options. It is affected by the following items on the command line: the router name itself, <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code>. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$directory_name</code></p>
-<dd> This variable should contain the directory name as cfgmaker normally would use as the value for the &#8220;Directory[]&#8221; directive. The value is determined by the <code>&#8211;subdirs</code> command line option. If <code>&#8211;subdirs</code> isn&#8217;t specified $directory_name will be the empty string. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$syscontact</code></p>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysContact value. (<font SIZE="-1">HTML</font> escaped variant: $html_syscontact)</p>
-<dt><code>$sysname</code></p>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysName value. (No <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$syslocation</code></p>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysLocation value. (<font SIZE="-1">HTML</font> escaped variant: $html_syslocation)</p>
-<dt><code>$sysdescr</code></p>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysDescr value. It is normally not used by cfgmaker but might be useful in a template. (<font SIZE="-1">HTML</font> escaped variant: $html_sysdescr)</dl>
+<dt><code>$router_name</code></dt>
+<dd> This is the fully qualified name for the router. It is affected by the following items on the command line: the router name itself and <code>&#8211;dns-domain</code>.</dd>
+<dt><code>$router_connect</code></dt>
+<dd> This is the reference string for the router being polled. It is on the form community [at] router possibly followed by some snmp options. It is affected by the following items on the command line: the router name itself, <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code>. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$directory_name</code></dt>
+<dd> This variable should contain the directory name as cfgmaker normally would use as the value for the &#8220;Directory[]&#8221; directive. The value is determined by the <code>&#8211;subdirs</code> command line option. If <code>&#8211;subdirs</code> isn&#8217;t specified $directory_name will be the empty string. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$syscontact</code></dt>
+<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysContact value. (<font SIZE="-1">HTML</font> escaped variant: $html_syscontact)</dd>
+<dt><code>$sysname</code></dt>
+<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysName value. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$syslocation</code></dt>
+<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysLocation value. (<font SIZE="-1">HTML</font> escaped variant: $html_syslocation)</dd>
+<dt><code>$sysdescr</code></dt>
+<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysDescr value. It is normally not used by cfgmaker but might be useful in a template. (<font SIZE="-1">HTML</font> escaped variant: $html_sysdescr)</dd></dl>
 <p> <i>Interface Target Related Variables</i></p>
 <dl>
-<dt><code>$target_name</code></p>
-<dd> This is what cfgmaker normally would use as the the name of the target. The target name is what is found within the square brackets, &#8220;[]&#8221;, for target directives. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_ref</code></p>
-<dd> This the reference string for the interface. It is expected to be used in the &#8220;Target[xyz]&#8221; directive to distinguish what interface to use. The value of this variable is affected by the <code>&#8211;ifref</code> command line option. It is normally used together with $router_connect. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_ok</code></p>
-<dd> This variable is true if the interface is going to be included into the configuration file, otherwise false. Don&#8217;t test against other variables such as $problem_lines to find out if an interface will be rejected or not, use this $if_ok instead.</p>
-<dt><code>$default_target_lines</code></p>
-<dd> This variable contains all the target lines which cfgmaker by default outputs for this interface. It&#8217;s useful if you want to have the &#8220;standard target&#8221; but want to add some extra lines to it by using a template.</dl>
+<dt><code>$target_name</code></dt>
+<dd> This is what cfgmaker normally would use as the the name of the target. The target name is what is found within the square brackets, &#8220;[]&#8221;, for target directives. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_ref</code></dt>
+<dd> This the reference string for the interface. It is expected to be used in the &#8220;Target[xyz]&#8221; directive to distinguish what interface to use. The value of this variable is affected by the <code>&#8211;ifref</code> command line option. It is normally used together with $router_connect. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_ok</code></dt>
+<dd> This variable is true if the interface is going to be included into the configuration file, otherwise false. Don&#8217;t test against other variables such as $problem_lines to find out if an interface will be rejected or not, use this $if_ok instead.</dd>
+<dt><code>$default_target_lines</code></dt>
+<dd> This variable contains all the target lines which cfgmaker by default outputs for this interface. It&#8217;s useful if you want to have the &#8220;standard target&#8221; but want to add some extra lines to it by using a template.</dd></dl>
 <p> By default cfgmaker uses the following directives for each target it generates: Target[], SetEnv[], MaxBytes[], Title[], PageTop[] and if there is any directory specified also the Directory[] directive. </p>
 <p> To facilitate the creation of templates which generates target configs which are similar to the default one, each of the above mentioned directive lines have a corresponding variable containing the line as cfgmaker would have output it by default. </p>
 <p> Note that none of these have a <font SIZE="-1">HTML</font> escaped variant, text in them is <font SIZE="-1">HTML</font> escaped where needed. Also note that they do not have any newline at the end.</p>
 <dl>
-<dt><code>$default_target_directive</code></p>
-<dd> This variable contains the default string for the Target[] directive line.</p>
-<dt><code>$default_setenv_directive</code></p>
-<dd> This variable contains the default string for the SetEnv[] directive line.</p>
-<dt><code>$default_directory_directive</code></p>
-<dd> This variable contains the default string for the Directory[] directive line which means it is an empty string (with no newline) if there&#8217;s no directory.</p>
-<dt><code>$default_maxbytes_directive</code></p>
-<dd> This variable contains the default string for the MaxBytes[] directive line.</p>
-<dt><code>$default_title_directive</code></p>
-<dd> This variable contains the default string for the Title[] directive line.</p>
-<dt><code>$default_pagetop_directive</code></p>
-<dd> This variable contains the default string for the PageTop[] directive lines.</dl>
+<dt><code>$default_target_directive</code></dt>
+<dd> This variable contains the default string for the Target[] directive line.</dd>
+<dt><code>$default_setenv_directive</code></dt>
+<dd> This variable contains the default string for the SetEnv[] directive line.</dd>
+<dt><code>$default_directory_directive</code></dt>
+<dd> This variable contains the default string for the Directory[] directive line which means it is an empty string (with no newline) if there&#8217;s no directory.</dd>
+<dt><code>$default_maxbytes_directive</code></dt>
+<dd> This variable contains the default string for the MaxBytes[] directive line.</dd>
+<dt><code>$default_title_directive</code></dt>
+<dd> This variable contains the default string for the Title[] directive line.</dd>
+<dt><code>$default_pagetop_directive</code></dt>
+<dd> This variable contains the default string for the PageTop[] directive lines.</dd></dl>
 <p> <i>Interface Network Configuration Variables</i></p>
 <dl>
-<dt><code>$if_ip</code></p>
-<dd> This variable should contain the IP-address of the interface, if any has been assigned to it. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$ifindex</code></p>
-<dd> This variable is the <font SIZE="-1">SNMP</font> ifIndex for the interface which per definition always is an integer. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_index</code></p>
-<dd> Equivalent with $ifindex.</p>
-<dt><code>$if_eth</code></p>
-<dd> Contains the ethernet address of the interface, if any. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_speed</code></p>
-<dd> This variable is the speed in bytes/second (with prefixes). (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_speed_str</code></p>
-<dd> This variable is a cooked speed description which is either in bits or bytes depending on wether or not the bits option is active and also with the proper prefix for the speed (k, M, G etc). (No <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_type_desc</code></p>
-<dd> This variable is a textual description of the interface type. (<font SIZE="-1">HTML</font> escaped variant: $html_if_type_desc)</p>
-<dt><code>$if_type_num</code></p>
-<dd> This variable the integer value corresponding to the interface type (for a listing for the value for the more common interface types, see the section <font SIZE="-1">DETAILS</font> <font SIZE="-1">ON</font> <font SIZE="-1">FILTERS</font> above). (No <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_dns_name</code></p>
-<dd> This is the <font SIZE="-1">DNS</font> name for the interface. (No <font SIZE="-1">HTML</font> escaped variant available)</dl>
+<dt><code>$if_ip</code></dt>
+<dd> This variable should contain the IP-address of the interface, if any has been assigned to it. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$ifindex</code></dt>
+<dd> This variable is the <font SIZE="-1">SNMP</font> ifIndex for the interface which per definition always is an integer. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_index</code></dt>
+<dd> Equivalent with $ifindex.</dd>
+<dt><code>$if_eth</code></dt>
+<dd> Contains the ethernet address of the interface, if any. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_speed</code></dt>
+<dd> This variable is the speed in bytes/second (with prefixes). (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_speed_str</code></dt>
+<dd> This variable is a cooked speed description which is either in bits or bytes depending on wether or not the bits option is active and also with the proper prefix for the speed (k, M, G etc). (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_type_desc</code></dt>
+<dd> This variable is a textual description of the interface type. (<font SIZE="-1">HTML</font> escaped variant: $html_if_type_desc)</dd>
+<dt><code>$if_type_num</code></dt>
+<dd> This variable the integer value corresponding to the interface type (for a listing for the value for the more common interface types, see the section <font SIZE="-1">DETAILS</font> <font SIZE="-1">ON</font> <font SIZE="-1">FILTERS</font> above). (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_dns_name</code></dt>
+<dd> This is the <font SIZE="-1">DNS</font> name for the interface. (No <font SIZE="-1">HTML</font> escaped variant available)</dd></dl>
 <p> <i>Interface Name, Description and Alias Variables</i> </p>
 <p> It might seem confusing with both <i>Name</i>, <i>Description</i> and <i>Alias</i> in this context and to some extent it is. <i>Name</i> and <i>Description</i> are usually supported on most equipment but how they are used varies, both between manufacturers as well as between different cathegories of equipment from the same manufacturer. The <i>Alias</i> is at least supported by Cisco <font SIZE="-1">IOS</font>, and that variable contains whatever is used in the <font SIZE="-1">IOS</font> statement called &#8220;description&#8221; for the interface (not to be confused with the <font SIZE="-1">SNMP</font> variables for <i>Description</i>). </p>
 <p> For better control from the command line consider $if_title_desc which contents are controlled by the <code>&#8211;if-descr</code> command line option.</p>
 <dl>
-<dt><code>$if_snmp_descr</code></p>
-<dd> This variable should contain the &#8220;raw&#8221; description of the interface as determined by the <font SIZE="-1">SNMP</font> polling of the router. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_descr)</p>
-<dt><code>$if_snmp_name</code></p>
-<dd> The &#8220;raw&#8221; name for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_name)</p>
-<dt><code>$if_snmp_alias</code></p>
-<dd> The &#8220;raw&#8221; ifAlias for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_alias)</p>
-<dt><code>$if_cisco_descr</code></p>
-<dd> The &#8220;raw&#8221; CiscolocIfDescr for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_cisco_descr)</p>
-<dt><code>$if_description</code></p>
-<dd> This is the &#8220;cooked&#8221; description string for the interface, taking into account the <font SIZE="-1">SNMP</font> values found for the interface&#8217;s RDescr, ifAlias and CiscolocIfDescr. (<font SIZE="-1">HTML</font> escaped variant: $html_if_description)</p>
-<dt><code>$if_title</code></p>
-<dd> The full string cfgmaker by default would have used for the Title[] directive in the configuration as well as the content of the topmost H1 tag in the PageTop[]. Is composed by the contents of $desc_prefix, $if_title_desc and $sysname. </p>
+<dt><code>$if_snmp_descr</code></dt>
+<dd> This variable should contain the &#8220;raw&#8221; description of the interface as determined by the <font SIZE="-1">SNMP</font> polling of the router. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_descr)</dd>
+<dt><code>$if_snmp_name</code></dt>
+<dd> The &#8220;raw&#8221; name for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_name)</dd>
+<dt><code>$if_snmp_alias</code></dt>
+<dd> The &#8220;raw&#8221; ifAlias for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_alias)</dd>
+<dt><code>$if_cisco_descr</code></dt>
+<dd> The &#8220;raw&#8221; CiscolocIfDescr for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_cisco_descr)</dd>
+<dt><code>$if_description</code></dt>
+<dd> This is the &#8220;cooked&#8221; description string for the interface, taking into account the <font SIZE="-1">SNMP</font> values found for the interface&#8217;s RDescr, ifAlias and CiscolocIfDescr. (<font SIZE="-1">HTML</font> escaped variant: $html_if_description)</dd>
+<dt><code>$if_title</code></dt>
+<dd> The full string cfgmaker by default would have used for the Title[] directive in the configuration as well as the content of the topmost H1 tag in the PageTop[]. Is composed by the contents of $desc_prefix, $if_title_desc and $sysname. </dd>
 <p> As $if_title depends on $if_title_desc, it is possible to indirectly control $if_title by using the command line option <code>&#8211;if-descr</code>. </p>
 <p> (<font SIZE="-1">HTML</font> escaped variant: $html_if_title)</p>
-<dt><code>$if_port_name</code></p>
-<dd> If the host is a Cisco Catalyst <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$if_pp_port_name</code></p>
-<dd> If the host is a Nortel Passport <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</p>
-<dt><code>$desc_prefix</code></p>
-<dd> This variable is a prefix of the description of what the target is to use in the &#8220;Title[]&#8221; directive and in the H1 section of the &#8220;PageTop[]&#8221;. Default is &#8220;Traffic analysis for &#8221;. (<font SIZE="-1">HTML</font> escaped variant: $html_desc_prefix)</p>
-<dt><code>$if_title_desc</code></p>
-<dd> This is the description of the interface normally used by cfgmaker as part of the variable $if_title. The latter is used as the full string in the &#8220;Title[]&#8221; directove and the H1 section in the PageTop[]. </p>
+<dt><code>$if_port_name</code></dt>
+<dd> If the host is a Cisco Catalyst <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$if_pp_port_name</code></dt>
+<dd> If the host is a Nortel Passport <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dt><code>$desc_prefix</code></dt>
+<dd> This variable is a prefix of the description of what the target is to use in the &#8220;Title[]&#8221; directive and in the H1 section of the &#8220;PageTop[]&#8221;. Default is &#8220;Traffic analysis for &#8221;. (<font SIZE="-1">HTML</font> escaped variant: $html_desc_prefix)</dd>
+<dt><code>$if_title_desc</code></dt>
+<dd> This is the description of the interface normally used by cfgmaker as part of the variable $if_title. The latter is used as the full string in the &#8220;Title[]&#8221; directove and the H1 section in the PageTop[]. </dd>
 <p> $if_title_desc is controlled by the command line option <code>&#8211;if-descr</code> which indirectly controls the contents of $if_title </p>
 <p> (<font SIZE="-1">HTML</font> escaped variant: $html_if_title_desc)</dl>
 <p> <i>Help Functions for Templates</i> </p>
 <p> The following functions exists to facilitate the writing of host and interface templates.</p>
 <dl>
-<dt><code>html_escape(</code>string<code>)</code></p>
-<dd> html_escape() takes a string as an argument and returns a new string where the following substitutions has been done: the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;<font SIZE="-1">BR</font>&gt;&#8221; and appended with a space character (newlines at the end of the string are not touched).</p>
-<dt><code>oid_pick($router_connect,$v3opt,&quot;oid1&quot;,&quot;oid2&quot;&#8230;)</code></p>
-<dd> This function will try to poll each of the oids specified until it is successful or has run out of oids. It will return the name of the first oid that worked or undef if it is not successful</dl>
+<dt><code>html_escape(</code>string<code>)</code></dt>
+<dd> html_escape() takes a string as an argument and returns a new string where the following substitutions has been done: the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;<font SIZE="-1">BR</font>&gt;&#8221; and appended with a space character (newlines at the end of the string are not touched).</dd>
+<dt><code>oid_pick($router_connect,$v3opt,&quot;oid1&quot;,&quot;oid2&quot;&#8230;)</code></dt>
+<dd> This function will try to poll each of the oids specified until it is successful or has run out of oids. It will return the name of the first oid that worked or undef if it is not successful</dd></dl>
 <p> <i>Example Template Files</i> </p>
 <p> Template Example 1: Eliminating Rejected Targets From Appearing </p>
 <p> This template file generates exactly the same configuration code per interface as cfgmaker does by default, with the exception that it eliminates all lines (comments as well as config code) for an interface if the interface happens to be rejected. </p>
@@ -607,13 +607,13 @@ cfgmaker-- global "WorkDir: /home/tobi" --global "Options[_]: growright,bits" --
 <h2>COPYRIGHT</h2>
 <p> Cfgmaker is Copyright 2000 by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">EXAMPLES</a></p>
+<dt><a href="#lbAJ">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHOR</a></p>
+</dd><dt><a href="#lbAL">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAM">LICENSE</a></p>
+</dd><dt><a href="#lbAM">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAN">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
+<dd></dd></dl>

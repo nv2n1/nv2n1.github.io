@@ -22,7 +22,7 @@ imaxdiv_t imaxdiv(intmax_t numerator, intmax_t denominator);
 <p> <code>lldiv</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>div</code>() function computes the value <i>numerator</i>/<i>denominator</i> and returns the quotient and remainder in a structure named <i>div_t</i> that contains two integer members (in unspecified order) named <i>quot</i> and <i>rem</i>. The quotient is rounded toward zero. The result satisfies <i>quot</i>*<i>denominator</i>+<i>rem</i> = <i>numerator</i>. </p>
 <p> The <code>ldiv</code>(), <code>lldiv</code>(), and <code>imaxdiv</code>() functions do the same, dividing numbers of the indicated type and returning the result in a structure of the indicated name, in all cases with fields <i>quot</i> and <i>rem</i> of the same type as the function arguments.</p>

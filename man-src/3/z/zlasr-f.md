@@ -27,23 +27,15 @@ description: "zlasr.f –"
  where P is an orthogonal matrix consisting of a sequence of z plane
  rotations, with z = M when SIDE = 'L' and z = N when SIDE = 'R',
  and P**T is the transpose of P.
- 
  When DIRECT = 'F' (Forward sequence), then
- 
  P = P(z-1) * ... * P(2) * P(1)
- 
  and when DIRECT = 'B' (Backward sequence), then
- 
  P = P(1) * P(2) * ... * P(z-1)
- 
  where P(k) is a plane rotation matrix defined by the 2-by-2 rotation
- 
  R(k) = ( c(k) s(k) )
  = ( -s(k) c(k) ).
- 
  When PIVOT = 'V' (Variable pivot), the rotation is performed
  for the plane (k,k+1), i.e., P(k) has the form
- 
  P(k) = ( 1 )
  ( ... )
  ( 1 )
@@ -52,13 +44,10 @@ description: "zlasr.f –"
  ( 1 )
  ( ... )
  ( 1 )
- 
  where R(k) appears as a rank-2 modification to the identity matrix in
  rows and columns k and k+1.
- 
  When PIVOT = 'T' (Top pivot), the rotation is performed for the
  plane (1,k+1), so P(k) has the form
- 
  P(k) = ( c(k) s(k) )
  ( 1 )
  ( ... )
@@ -67,12 +56,9 @@ description: "zlasr.f –"
  ( 1 )
  ( ... )
  ( 1 )
- 
  where R(k) appears in rows and columns 1 and k+1.
- 
  Similarly, when PIVOT = 'B' (Bottom pivot), the rotation is
  performed for the plane (k,z), giving P(k) the form
- 
  P(k) = ( 1 )
  ( ... )
  ( 1 )
@@ -81,13 +67,12 @@ description: "zlasr.f –"
  ( ... )
  ( 1 )
  ( -s(k) c(k) )
- 
  where R(k) appears in rows and columns k and z. The rotations are
  performed without ever forming P(k) explicitly.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  Specifies whether the plane rotation matrix P is applied to
  A on the left or the right.
@@ -137,13 +122,13 @@ description: "zlasr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 201 of file zlasr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

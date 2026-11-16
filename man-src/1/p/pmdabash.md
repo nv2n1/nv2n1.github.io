@@ -17,17 +17,17 @@ description: "pmdabash – Bourne-Again SHell trace performance metrics domain a
 <p> This requires <code>bash</code> version 4 or later. </p>
 <p> A brief description of the <code>pmdabash</code> command line options follows:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the same PMDA on all hosts.</p>
-<dt><code>-l</code></p>
-<dd> Location of the log file. By default, a log file named <i>bash.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdabash</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</p>
-<dt><code>-s</code></p>
-<dd> Amount of time (in seconds) between subsequent evaluations of the shell trace file descriptor(s). The default is 2 seconds.</dl>
+<dt><code>-d</code></dt>
+<dd> It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the same PMDA on all hosts.</dd>
+<dt><code>-l</code></dt>
+<dd> Location of the log file. By default, a log file named <i>bash.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdabash</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</dd>
+<dt><code>-s</code></dt>
+<dd> Amount of time (in seconds) between subsequent evaluations of the shell trace file descriptor(s). The default is 2 seconds.</dd></dl>
 <dl>
-<dt><code>-m</code></p>
-<dd> Maximum amount of memory to be allowed for each event queue (one per traced process). The default is 2 megabytes.</p>
-<dt><code>-U</code></p>
-<dd> User account under which to run the agent. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dl>
+<dt><code>-m</code></dt>
+<dd> Maximum amount of memory to be allowed for each event queue (one per traced process). The default is 2 megabytes.</dd>
+<dt><code>-U</code></dt>
+<dd> User account under which to run the agent. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> In order for a host to export the names, help text and values for the bash performance metrics, do the following as root: </p>
 <pre>
@@ -75,16 +75,16 @@ $ pmevent - t 1 - x '' bash.xtrace.records host : localhost samples : all bash.x
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMCDCONF_PATH</code></p>
-<dd> command line options used to launch <code>pmdabash</code></p>
-<dt><code>$PCP_PMDAS_DIR/bash/help</code></p>
-<dd> default help text file for the bash metrics</p>
-<dt><code>$PCP_PMDAS_DIR/bash/Install</code></p>
-<dd> installation script for the <code>pmdabash</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/bash/Remove</code></p>
-<dd> undo installation script for <code>pmdabash</code></p>
-<dt><code>$PCP_LOG_DIR/pmcd/bash.log</code></p>
-<dd> default log file for error messages and other information from <code>pmdabash</code></dl>
+<dt><code>$PCP_PMCDCONF_PATH</code></dt>
+<dd> command line options used to launch <code>pmdabash</code></dd>
+<dt><code>$PCP_PMDAS_DIR/bash/help</code></dt>
+<dd> default help text file for the bash metrics</dd>
+<dt><code>$PCP_PMDAS_DIR/bash/Install</code></dt>
+<dd> installation script for the <code>pmdabash</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/bash/Remove</code></dt>
+<dd> undo installation script for <code>pmdabash</code></dd>
+<dt><code>$PCP_LOG_DIR/pmcd/bash.log</code></dt>
+<dd> default log file for error messages and other information from <code>pmdabash</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

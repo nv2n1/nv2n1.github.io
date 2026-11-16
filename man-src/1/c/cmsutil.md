@@ -11,9 +11,9 @@ description: "cmsutil – Performs basic cryptograpic operations, such as encryp
 <p> cmsutil &#8211; Performs basic cryptograpic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>cmsutil</code> [<i>options</i>] [[<i>arguments</i>]]</dl>
+<dt> <code>cmsutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></p>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
 <h2>DESCRIPTION</h2>
 <p> The <code>cmsutil</code> command-line uses the S/MIME Toolkit to perform basic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages. </p>
 <p> To run cmsutil, type the command cmsutil option [arguments] where option and arguments are combinations of the options and arguments listed in the following section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue the command without options.</p>
@@ -23,140 +23,140 @@ description: "cmsutil – Performs basic cryptograpic operations, such as encryp
 <p> -C</p>
 <dl>
 <dt>
-<dd> Encrypt a message.</dl>
+</dt><dd> Encrypt a message.</dd></dl>
 <p> -D</p>
 <dl>
 <dt>
-<dd> Decode a message.</dl>
+</dt><dd> Decode a message.</dd></dl>
 <p> -E</p>
 <dl>
 <dt>
-<dd> Envelope a message.</dl>
+</dt><dd> Envelope a message.</dd></dl>
 <p> -O</p>
 <dl>
 <dt>
-<dd> Create a certificates-only message.</dl>
+</dt><dd> Create a certificates-only message.</dd></dl>
 <p> -S</p>
 <dl>
 <dt>
-<dd> Sign a message.</dl>
+</dt><dd> Sign a message.</dd></dl>
 <p> <code>Arguments</code> </p>
 <p> Option arguments modify an action. </p>
 <p> -b</p>
 <dl>
 <dt>
-<dd> Decode a batch of files named in infile.</dl>
+</dt><dd> Decode a batch of files named in infile.</dd></dl>
 <p> -c content</p>
 <dl>
 <dt>
-<dd> Use this detached content (decode only).</dl>
+</dt><dd> Use this detached content (decode only).</dd></dl>
 <p> -d dbdir</p>
 <dl>
 <dt>
-<dd> Specify the key/certificate database directory (default is &quot;.&quot;)</dl>
+</dt><dd> Specify the key/certificate database directory (default is &quot;.&quot;)</dd></dl>
 <p> -e envfile</p>
 <dl>
 <dt>
-<dd> Specify a file containing an enveloped message for a set of recipients to which you would like to send an encrypted message. If this is the first encrypted message for that set of recipients, a new enveloped message will be created that you can then use for future messages (encrypt only).</dl>
+</dt><dd> Specify a file containing an enveloped message for a set of recipients to which you would like to send an encrypted message. If this is the first encrypted message for that set of recipients, a new enveloped message will be created that you can then use for future messages (encrypt only).</dd></dl>
 <p> -f pwfile</p>
 <dl>
 <dt>
-<dd> Use password file to set password on all PKCS#11 tokens.</dl>
+</dt><dd> Use password file to set password on all PKCS#11 tokens.</dd></dl>
 <p> -G</p>
 <dl>
 <dt>
-<dd> Include a signing time attribute (sign only).</dl>
+</dt><dd> Include a signing time attribute (sign only).</dd></dl>
 <p> -H hash</p>
 <dl>
 <dt>
-<dd> Use specified hash algorithm (default:SHA1).</dl>
+</dt><dd> Use specified hash algorithm (default:SHA1).</dd></dl>
 <p> -h num</p>
 <dl>
 <dt>
-<dd> Generate email headers with info about CMS message (decode only).</dl>
+</dt><dd> Generate email headers with info about CMS message (decode only).</dd></dl>
 <p> -i infile</p>
 <dl>
 <dt>
-<dd> Use infile as a source of data (default is stdin).</dl>
+</dt><dd> Use infile as a source of data (default is stdin).</dd></dl>
 <p> -k</p>
 <dl>
 <dt>
-<dd> Keep decoded encryption certs in permanent cert db.</dl>
+</dt><dd> Keep decoded encryption certs in permanent cert db.</dd></dl>
 <p> -N nickname</p>
 <dl>
 <dt>
-<dd> Specify nickname of certificate to sign with (sign only).</dl>
+</dt><dd> Specify nickname of certificate to sign with (sign only).</dd></dl>
 <p> -n</p>
 <dl>
 <dt>
-<dd> Suppress output of contents (decode only).</dl>
+</dt><dd> Suppress output of contents (decode only).</dd></dl>
 <p> -o outfile</p>
 <dl>
 <dt>
-<dd> Use outfile as a destination of data (default is stdout).</dl>
+</dt><dd> Use outfile as a destination of data (default is stdout).</dd></dl>
 <p> -P</p>
 <dl>
 <dt>
-<dd> Include an S/MIME capabilities attribute.</dl>
+</dt><dd> Include an S/MIME capabilities attribute.</dd></dl>
 <p> -p password</p>
 <dl>
 <dt>
-<dd> Use password as key database password.</dl>
+</dt><dd> Use password as key database password.</dd></dl>
 <p> -r recipient1,recipient2, &#8230;</p>
 <dl>
 <dt>
-<dd> Specify list of recipients (email addresses) for an encrypted or enveloped message. For certificates-only message, list of certificates to send.</dl>
+</dt><dd> Specify list of recipients (email addresses) for an encrypted or enveloped message. For certificates-only message, list of certificates to send.</dd></dl>
 <p> -T</p>
 <dl>
 <dt>
-<dd> Suppress content in CMS message (sign only).</dl>
+</dt><dd> Suppress content in CMS message (sign only).</dd></dl>
 <p> -u certusage</p>
 <dl>
 <dt>
-<dd> Set type of cert usage (default is certUsageEmailSigner).</dl>
+</dt><dd> Set type of cert usage (default is certUsageEmailSigner).</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Print debugging information.</dl>
+</dt><dd> Print debugging information.</dd></dl>
 <p> -Y ekprefnick</p>
 <dl>
 <dt>
-<dd> Specify an encryption key preference by nickname.</dl>
+</dt><dd> Specify an encryption key preference by nickname.</dd></dl>
 <h2>USAGE</h2>
 <p> Encrypt Example </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 cmsutil - C[-i infile][-o outfile][-d dbdir][-p password] - r "recipient1,recipient2, . . ." - e envfile
 </code></pre>
-</dl>
+</dd></dl>
 <p> Decode Example </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 cmsutil &#8211; D[-i infile][-o outfile][-d dbdir][-p password][-c content][-n][-h num]
-</dl>
+</dd></dl>
 <p> Envelope Example </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 cmsutil &#8211; E[-i infile][-o outfile][-d dbdir][-p password] &#8211; r &#8220;recipient1,recipient2, &#8230;&#8221;
-</dl>
+</dd></dl>
 <p> Certificate-only Example </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 cmsutil &#8211; O[-i infile][-o outfile][-d dbdir][-p password] &#8211; r &#8220;cert1,cert2, . . .&#8221;
-</dl>
+</dd></dl>
 <p> Sign Message Example </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 cmsutil - S[-i infile][-o outfile][-d dbdir][-p password] - N nickname[-TGP][-Y ekprefnick]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-certutil/">certutil</a>(1)</p>
 <h2>ADDITIONAL RESOURCES</h2>
@@ -170,10 +170,10 @@ cmsutil - S[-i infile][-o outfile][-d dbdir][-p password] - N nickname[-TGP][-Y 
 <p> Licensed under the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a rel="nofollow" href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a></p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Mozilla NSS bug 836477</p>
+<dt> 1.</dt>
+<dd> Mozilla NSS bug 836477</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dl>
+</dt><dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dd></dl>
 </dl>
 <h2>Index</h2>

@@ -91,3 +91,4 @@ used to print "il"
 <p> This is described in the <tt>&quot;charnames&quot;</tt> item in &#8220;Updated Modules and Pragmata&#8221; below. </p>
 <p> <i>Unicode Symbol Names</i> </p>
 <p> Perl now has proper support for Unicode in symbol names. It used to be that <tt>&quot;*{$foo}&quot;</tt> would ignore the internal <font SIZE="-1">UTF8</font> flag and use the bytes of the underlying representation to look up the symbol. That meant that <tt>&quot;*{&quot;
+</p>

@@ -28,15 +28,15 @@ target_link_libraries(subscriber Qt4::QtGui Qt4::QtDBus)</pre>
 <p> If a macro from <code>AUTOMOC_MACRO_NAMES</code> is found in a header file, <code>moc</code> will be run on the file. The result will be put into a file named according to <code>moc_&lt;basename&gt;.cpp</code>. If the macro is found in a C++ implementation file, the moc output will be put into a file named according to <code>&lt;basename&gt;.moc</code>, following the Qt conventions. The <code>&lt;basename&gt;.moc</code> must be included by the user in the C++ implementation file with a preprocessor <code>#include</code>. </p>
 <p> Included <code>moc_*.cpp</code> and <code>*.moc</code> files will be generated in the <code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> directory which is automatically added to the target&#8217;s <code>INCLUDE_DIRECTORIES</code>.</p>
 <dl>
-<dt>&bull;</p>
-<dd>This differs from CMake 3.7 and below; see their documentation for details.</p>
-<dt>&bull;</p>
-<dd>For <code>multi configuration generators</code>, the include directory is <code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code>.</p>
-<dt>&bull;</p>
-<dd>See <code>AUTOGEN_BUILD_DIR</code>. </p>
+<dt>&bull;</dt>
+<dd>This differs from CMake 3.7 and below; see their documentation for details.</dd>
+<dt>&bull;</dt>
+<dd>For <code>multi configuration generators</code>, the include directory is <code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd>See <code>AUTOGEN_BUILD_DIR</code>. </dd>
 <p> Not included <code>moc_&lt;basename&gt;.cpp</code> files will be generated in custom folders to avoid name collisions and included in a separate file which is compiled into the target, named either <code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation.cpp</code> or <code>&lt;AUTOGEN_BUILD_DIR&gt;/mocs_compilation_$&lt;CONFIG&gt;.cpp</code>.</p>
-<dt>&bull;</p>
-<dd>See <code>AUTOGEN_BUILD_DIR</code>. </p>
+<dt>&bull;</dt>
+<dd>See <code>AUTOGEN_BUILD_DIR</code>. </dd>
 <p> The <code>moc</code> command line will consume the <code>COMPILE_DEFINITIONS</code> and <code>INCLUDE_DIRECTORIES</code> target properties from the target it is being invoked for, and for the appropriate build configuration. </p>
 <p> The <code>AUTOMOC</code> target property may be pre-set for all following targets by setting the <code>CMAKE_AUTOMOC</code> variable. The <code>AUTOMOC_MOC_OPTIONS</code> target property may be populated to set options to pass to <code>moc</code>. The <code>CMAKE_AUTOMOC_MOC_OPTIONS</code> variable may be populated to pre-set the options for all following targets. </p>
 <p> Additional macro names to search for can be added to <code>AUTOMOC_MACRO_NAMES</code>. </p>
@@ -46,22 +46,22 @@ target_link_libraries(subscriber Qt4::QtGui Qt4::QtDBus)</pre>
 <p>The <code>AUTOUIC</code> target property controls whether <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> inspects the C++ files in the target to determine if they require <code>uic</code> to be run, and to create rules to execute <code>uic</code> at the appropriate time. </p>
 <p> If a preprocessor <code>#include</code> directive is found which matches <code>&lt;path&gt;ui_&lt;basename&gt;.h</code>, and a <code>&lt;basename&gt;.ui</code> file exists, then <code>uic</code> will be executed to generate the appropriate file. The <code>&lt;basename&gt;.ui</code> file is searched for in the following places</p>
 <dl>
-<dt>1.</p>
-<dd><code>&lt;source_dir&gt;/&lt;basename&gt;.ui</code></p>
-<dt>2.</p>
-<dd><code>&lt;source_dir&gt;/&lt;path&gt;&lt;basename&gt;.ui</code></p>
-<dt>3.</p>
-<dd><code>&lt;AUTOUIC_SEARCH_PATHS&gt;/&lt;basename&gt;.ui</code></p>
-<dt>4.</p>
-<dd><code>&lt;AUTOUIC_SEARCH_PATHS&gt;/&lt;path&gt;&lt;basename&gt;.ui</code> </p>
+<dt>1.</dt>
+<dd><code>&lt;source_dir&gt;/&lt;basename&gt;.ui</code></dd>
+<dt>2.</dt>
+<dd><code>&lt;source_dir&gt;/&lt;path&gt;&lt;basename&gt;.ui</code></dd>
+<dt>3.</dt>
+<dd><code>&lt;AUTOUIC_SEARCH_PATHS&gt;/&lt;basename&gt;.ui</code></dd>
+<dt>4.</dt>
+<dd><code>&lt;AUTOUIC_SEARCH_PATHS&gt;/&lt;path&gt;&lt;basename&gt;.ui</code> </dd>
 <p> where <code>&lt;source_dir&gt;</code> is the directory of the C++ file and <code>AUTOUIC_SEARCH_PATHS</code> is a list of additional search paths. </p>
 <p> The generated generated <code>ui_*.h</code> files are placed in the <code>&lt;AUTOGEN_BUILD_DIR&gt;/include</code> directory which is automatically added to the target&#8217;s <code>INCLUDE_DIRECTORIES</code>.</p>
-<dt>&bull;</p>
-<dd>This differs from CMake 3.7 and below; see their documentation for details.</p>
-<dt>&bull;</p>
-<dd>For <code>multi configuration generators</code>, the include directory is <code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code>.</p>
-<dt>&bull;</p>
-<dd>See <code>AUTOGEN_BUILD_DIR</code>. </p>
+<dt>&bull;</dt>
+<dd>This differs from CMake 3.7 and below; see their documentation for details.</dd>
+<dt>&bull;</dt>
+<dd>For <code>multi configuration generators</code>, the include directory is <code>&lt;AUTOGEN_BUILD_DIR&gt;/include_&lt;CONFIG&gt;</code>.</dd>
+<dt>&bull;</dt>
+<dd>See <code>AUTOGEN_BUILD_DIR</code>. </dd>
 <p> The <code>AUTOUIC</code> target property may be pre-set for all following targets by setting the <code>CMAKE_AUTOUIC</code> variable. The <code>AUTOUIC_OPTIONS</code> target property may be populated to set options to pass to <code>uic</code>. The <code>CMAKE_AUTOUIC_OPTIONS</code> variable may be populated to pre-set the options for all following targets. The <code>AUTOUIC_OPTIONS</code> source file property may be set on the <code>&lt;basename&gt;.ui</code> file to set particular options for the file. This overrides options from the <code>AUTOUIC_OPTIONS</code> target property. </p>
 <p> A target may populate the <code>INTERFACE_AUTOUIC_OPTIONS</code> target property with options that should be used when invoking <code>uic</code>. This must be consistent with the <code>AUTOUIC_OPTIONS</code> target property content of the depender target. The <code>CMAKE_DEBUG_TARGET_PROPERTIES</code> variable may be used to track the origin target of such <code>INTERFACE_AUTOUIC_OPTIONS</code>. This means that a library which provides an alternative translation system for Qt may specify options which should be used when running <code>uic</code>: </p>
 <pre>add_library(KI18n klocalizedstring.cpp)
@@ -94,12 +94,12 @@ target_link_libraries(LibWidget
 <h2>Visual Studio Generators</h2>
 <p>When using the <code>Visual Studio generators</code>, CMake generates a <code>PRE_BUILD</code> <code>custom command</code> instead of the <code>&lt;ORIGIN&gt;_autogen</code> <code>custom target</code> (for <code>AUTOMOC</code> and <code>AUTOUIC</code>). This isn&#8217;t always possible though and an <code>&lt;ORIGIN&gt;_autogen</code> <code>custom target</code> is used, when either</p>
 <dl>
-<dt>&bull;</p>
-<dd>the <code>&lt;ORIGIN&gt;</code> target depends on <code>GENERATED</code> files which aren&#8217;t excluded from <code>AUTOMOC</code> and <code>AUTOUIC</code> by <code>SKIP_AUTOMOC</code>, <code>SKIP_AUTOUIC</code>, <code>SKIP_AUTOGEN</code> or <code>CMP0071</code></p>
-<dt>&bull;</p>
-<dd><code>AUTOGEN_TARGET_DEPENDS</code> lists a source file</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_GLOBAL_AUTOGEN_TARGET</code> is enabled</dl>
+<dt>&bull;</dt>
+<dd>the <code>&lt;ORIGIN&gt;</code> target depends on <code>GENERATED</code> files which aren&#8217;t excluded from <code>AUTOMOC</code> and <code>AUTOUIC</code> by <code>SKIP_AUTOMOC</code>, <code>SKIP_AUTOUIC</code>, <code>SKIP_AUTOGEN</code> or <code>CMP0071</code></dd>
+<dt>&bull;</dt>
+<dd><code>AUTOGEN_TARGET_DEPENDS</code> lists a source file</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_GLOBAL_AUTOGEN_TARGET</code> is enabled</dd></dl>
 <h2>Qtmain.Lib On Windows</h2>
 <p>The Qt 4 and 5 <code>IMPORTED</code> targets for the QtGui libraries specify that the qtmain.lib static library shipped with Qt will be linked by all dependent executables which have the <code>WIN32_EXECUTABLE</code> enabled. </p>
 <p> To disable this behavior, enable the <code>Qt5_NO_LINK_QTMAIN</code> target property for Qt 5 based targets or <code>QT4_NO_LINK_QTMAIN</code> target property for Qt 4 based targets. </p>

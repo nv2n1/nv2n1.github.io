@@ -15,122 +15,122 @@ description: "ncpmount, mount.ncp, mount.ncpfs – mount volume(s) from a specif
 <h2>Options</h2>
 <p><code>mount-point</code></p>
 <dl>
-<dd><code>mount-point</code> is the directory you want to mount the filesystem over. Its function is the the same as for a normal mount command. </p>
+<dd><code>mount-point</code> is the directory you want to mount the filesystem over. Its function is the the same as for a normal mount command. </dd>
 <p> If the real uid of the caller is not root, <code>ncpmount</code> checks whether the user is allowed to mount a filesystem on the mount-point. So it should be safe to make <code>ncpmount</code> setuid root. The filesystem stores the uid of the user who called ncpmount. So <code>ncpumount</code> can check whether the caller is allowed to unmount the filesystem.</dl>
 <p> <code>-S</code> <i>server</i> (mount option <code>server=</code> or part before <code>/</code> in <i>remote-server-and-user</i>)</p>
 <dl>
-<dd><code>server</code> is the name of the server you want to use.</dl>
+<dd><code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd><code>-h</code> is used to print out a short help text.</dl>
+<dd><code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-C</code> (mount option <code>noupcasepasswd</code>)</p>
 <dl>
-<dd>By default passwords are converted to uppercase before they are sent to the server because most servers require this. This option disables this feature ensuring that passwords are sent without any case conversion.</dl>
+<dd>By default passwords are converted to uppercase before they are sent to the server because most servers require this. This option disables this feature ensuring that passwords are sent without any case conversion.</dd></dl>
 <p> <code>-n</code> (mount option <code>nopasswd</code>)</p>
 <dl>
-<dd><code>-n</code> must be specified for logins that do not have a password configured. This option means do not update /etc/mtab if there is option <code>-o</code> on command line. You must use <code>-o nopasswd</code> in this case.</dl>
+<dd><code>-n</code> must be specified for logins that do not have a password configured. This option means do not update /etc/mtab if there is option <code>-o</code> on command line. You must use <code>-o nopasswd</code> in this case.</dd></dl>
 <p> <code>passwdfile=file</code> (only mount option)</p>
 <dl>
-<dd>If you want specify password and you do not want store it into world readable /etc/fstab, you can use this option. <i>file</i> then contains lines in form SERVER/USER:PASSWORD:other_data (other_data are currently unused)</dl>
+<dd>If you want specify password and you do not want store it into world readable /etc/fstab, you can use this option. <i>file</i> then contains lines in form SERVER/USER:PASSWORD:other_data (other_data are currently unused)</dd></dl>
 <p> <code>pass-fd=fd</code> (only mount option)</p>
 <dl>
-<dd>If you want to pass password in secure way to ncpmount, you can pass it through specified <i>fd</i>.</dl>
+<dd>If you want to pass password in secure way to ncpmount, you can pass it through specified <i>fd</i>.</dd></dl>
 <p> <code>-P</code> <i>password</i> (mount option <code>passwd=</code>)</p>
 <dl>
-<dd>specifies the password to use for the Netware user id. </p>
+<dd>specifies the password to use for the Netware user id. </dd>
 <p> If neither <code>-n</code> nor the <code>-P</code> nor the <code>passwdfile=</code> nor the <code>pass-fd=</code> arguments are specified ncpmount will prompt for a password. This makes it difficult to use in scripts such as /etc/rc. If you want to have ncpmount work automatically from a script you must include the appropriate option and be very careful to ensure that appopriate file permissions are set for the script that includes your password to ensure that others can not read it.</dl>
 <p> <code>-U</code> <i>user name</i> (mount option <code>user=</code> or rest of <i>remote-server-and-user</i> after <code>/</code>)</p>
 <dl>
-<dd>Specifies the Netware user id to use when logging in to the fileserver. If this option is not specified then ncpmount will attempt to login to the fileserver using the Linux login id of the user invoking ncpmount.</dl>
+<dd>Specifies the Netware user id to use when logging in to the fileserver. If this option is not specified then ncpmount will attempt to login to the fileserver using the Linux login id of the user invoking ncpmount.</dd></dl>
 <p> <code>-m</code> (mount option <code>multiple</code>)</p>
 <dl>
-<dd>Normally, <code>ncpmount</code> limits number of connections from client to server to one per unique user name. If you want mount more than one connection with same username and server, you must specify <code>-m</code>.</dl>
+<dd>Normally, <code>ncpmount</code> limits number of connections from client to server to one per unique user name. If you want mount more than one connection with same username and server, you must specify <code>-m</code>.</dd></dl>
 <p> <code>-u</code> <i>uid,</i> <code>-g</code> <i>gid</i> (mount option <code>uid=</code> and <code>gid=</code>)</p>
 <dl>
-<dd>ncpmount does not yet implement a scheme for mapping NetWare users/groups to Linux users/groups. Linux requires that each file has an owner and group id. With <code>-u</code> and <code>-g</code> you can tell ncpmount which id&#8217;s it should assign to the files in the mounted directory. </p>
+<dd>ncpmount does not yet implement a scheme for mapping NetWare users/groups to Linux users/groups. Linux requires that each file has an owner and group id. With <code>-u</code> and <code>-g</code> you can tell ncpmount which id&#8217;s it should assign to the files in the mounted directory. </dd>
 <p> The defaults for these values are the current uid and gid.</dl>
 <p> <code>-c</code> <i>user name</i> (mount option <code>owner=</code>)</p>
 <dl>
-<dd><code>-c</code> names the user who is the <i>owner</i> of the connection, where owner does not refer to file ownership (that &quot;owner&quot; is set by the -u argument), but the owner of the mount, ie: who is allowed to call ncpumount on this mount. The default owner of the connection and the mount is the user who called ncpmount. This option allows you to specify that some other user should be set as the owner. </p>
+<dd><code>-c</code> names the user who is the <i>owner</i> of the connection, where owner does not refer to file ownership (that &quot;owner&quot; is set by the -u argument), but the owner of the mount, ie: who is allowed to call ncpumount on this mount. The default owner of the connection and the mount is the user who called ncpmount. This option allows you to specify that some other user should be set as the owner. </dd>
 <p> In this this way it is possible to mount a public read-only directory, but to allow the lp daemon to print on NetWare queues. This is possible because only users who have write permissions on a directory may issue ncp requests over a connection. The exception to this rule is the &#8216;mount owner&#8217;, who is also granted &#8216;request permission&#8217;.</dl>
 <p> <code>-f</code> <i>file mode,</i> <code>-d</code> <i>dir mode</i> (mount option <code>mode=</code> (or <code>filemode=</code>) and <code>dirmode=</code>)</p>
 <dl>
-<dd>Like <code>-u</code> and <code>-g</code>, these options are used to determine what permissions should be assigned files and directories of the mounted volumes. The values must be specified as octal numbers. The default values are taken from the current umask, where the file mode is the current umask, and the dir mode adds execute permissions where the file mode gives read permissions. </p>
+<dd>Like <code>-u</code> and <code>-g</code>, these options are used to determine what permissions should be assigned files and directories of the mounted volumes. The values must be specified as octal numbers. The default values are taken from the current umask, where the file mode is the current umask, and the dir mode adds execute permissions where the file mode gives read permissions. </dd>
 <p> Note that these permissions can differ from the rights the server gives to us. If you do not have write permissions on the server, you can very well choose a file mode that tells that you have. This certainly cannot override the restrictions imposed by the server.</dl>
 <p> <code>-V</code> <i>volume</i> (mount option <code>volume=</code>)</p>
 <dl>
-<dd>There are 2 general ways you can mount a NetWare server&#8217;s disk space: Either you can mount all volumes under one directory, or you can mount only a single volume. </p>
+<dd>There are 2 general ways you can mount a NetWare server&#8217;s disk space: Either you can mount all volumes under one directory, or you can mount only a single volume. </dd>
 <p> When you choose to mount the complete disk space at once, you have the advantage that only one Linux mount point and only one NetWare connection is used for all the volumes of this server. Both of these are limited resources. (Although raising the number of Linux mount points is significantly cheaper than raising the number of available NetWare connections ;-)) </p>
 <p> When you specify to mount a single volume by using the option <code>-V</code> <i>volume,</i> you have the big advantage that nfsd is able to re-export this mounted directory. You must invoke <code>nfsd</code> and <code>mountd</code> with the option <i>&#8211;re-export</i> to make nfsd re-export ncpfs mounted directories. This uses one Linux mount point and one NetWare connection per mounted volume. Maybe sometime in the future I will make it possible to mount all volumes on different mount points, using only one connection.</dl>
 <p> <code>-t</code> <i>time_out</i> (mount option <code>timeo=</code> or <code>timeout=</code>)</p>
 <dl>
-<dd>With <code>-t</code> you can adjust the time ncpfs waits for the server to answer a request it sent. Use the option to raise the timeout value when your ncpfs connections seem to be unstable although your servers are well up. This can happen when you have very busy servers, or servers that are very far away. </p>
+<dd>With <code>-t</code> you can adjust the time ncpfs waits for the server to answer a request it sent. Use the option to raise the timeout value when your ncpfs connections seem to be unstable although your servers are well up. This can happen when you have very busy servers, or servers that are very far away. </dd>
 <p> <i>time_out</i> is specified in 1/100s, the current default value is 60.</dl>
 <p> <code>-r</code> <i>retry_count</i> (mount option <code>retry=</code>)</p>
 <dl>
-<dd>As <code>-t</code>, <code>-r</code> can be used to tune the ncpfs connection to the server. With <i>retry_count</i> you can specify how many times ncpfs will attempt to send a packet to the server before it decides the connection is dead. The current default value is 5. </p>
+<dd>As <code>-t</code>, <code>-r</code> can be used to tune the ncpfs connection to the server. With <i>retry_count</i> you can specify how many times ncpfs will attempt to send a packet to the server before it decides the connection is dead. The current default value is 5. </dd>
 <p> Currently ncpfs is not too clever when trying to find out that connections are dead. If anybody knows how to do that correctly, as it is done by commercial workstations, please tell me.</dl>
 <p> <code>-y</code> <i>iocharset</i> (mount option <code>iocharset=</code>)</p>
 <dl>
-<dd>You can specify character translation rules for converting names from unicode to your desktop (it works together with <code>-p</code>). <i>iocharset</i> is charset name, for example <i>iso-8859-1</i>.</dl>
+<dd>You can specify character translation rules for converting names from unicode to your desktop (it works together with <code>-p</code>). <i>iocharset</i> is charset name, for example <i>iso-8859-1</i>.</dd></dl>
 <p> <code>-p</code> <i>codepage</i> (mount option <code>codepage=</code>)</p>
 <dl>
-<dd>You can specify character translation rules for converting names from Netware encoding to unicode (it works together with <code>-y</code>). <i>codepage</i> is codepage name, for example <i>cp437</i>.</dl>
+<dd>You can specify character translation rules for converting names from Netware encoding to unicode (it works together with <code>-y</code>). <i>codepage</i> is codepage name, for example <i>cp437</i>.</dd></dl>
 <p> <code>-b</code> (mount option <code>bindery</code>)</p>
 <dl>
-<dd>If you are connecting to NetWare 4 or NetWare 5 through bindery emulation instead of NDS, you must specify this option.</dl>
+<dd>If you are connecting to NetWare 4 or NetWare 5 through bindery emulation instead of NDS, you must specify this option.</dd></dl>
 <p> <code>-i</code> <i>level</i> (mount option <code>signature=</code><i>level</i>)</p>
 <dl>
-<dd>Enables packet signing. <i>level</i> is from 0 to 3: 0 means disable, 1 means sign if server needs it, 2 means sign if server allows it and 3 means sign packets always.</dl>
+<dd>Enables packet signing. <i>level</i> is from 0 to 3: 0 means disable, 1 means sign if server needs it, 2 means sign if server allows it and 3 means sign packets always.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>Print ncpfs version number. It has another meaning (<i>verbose</i>) if you specify <code>-o</code> on command line. If you are interested in version, type <code>ncpmount -v</code> without another options.</dl>
+<dd>Print ncpfs version number. It has another meaning (<i>verbose</i>) if you specify <code>-o</code> on command line. If you are interested in version, type <code>ncpmount -v</code> without another options.</dd></dl>
 <p> <code>-A</code> <i>dns name</i> (mount option <code>ipserver=</code><i>dns name</i>)</p>
 <dl>
-<dd>When you are mounting volumes from NetWare 5 server over UDP, you must specify <i>dns name</i> of server here and <i>logical server name</i> in <code>-S</code> (or in <code>server=</code>). This name is used to switch <code>ncpmount</code> into UDP mode and to specify server to connect. Currently, <code>DNS</code> is only supported <code>IP</code> name resolution protocol. There is currently no support for <code>SLP</code>.</dl>
+<dd>When you are mounting volumes from NetWare 5 server over UDP, you must specify <i>dns name</i> of server here and <i>logical server name</i> in <code>-S</code> (or in <code>server=</code>). This name is used to switch <code>ncpmount</code> into UDP mode and to specify server to connect. Currently, <code>DNS</code> is only supported <code>IP</code> name resolution protocol. There is currently no support for <code>SLP</code>.</dd></dl>
 <p> <code>-N</code> <i>ignored namespace</i> (mount option <code>nonfs</code> and <code>nolong</code>)</p>
 <dl>
-<dd><code>ncpfs</code> supports <i>NFS</i>, <i>LONG</i> (<i>OS/2</i>) and <i>DOS</i> namespace on NetWare volumes. If you do not want to use <i>NFS</i> or <i>LONG</i> namespace (because of bugs in (server) code or for backward compatibility), you must specify these ignored namespaces in mount parameters.</dl>
+<dd><code>ncpfs</code> supports <i>NFS</i>, <i>LONG</i> (<i>OS/2</i>) and <i>DOS</i> namespace on NetWare volumes. If you do not want to use <i>NFS</i> or <i>LONG</i> namespace (because of bugs in (server) code or for backward compatibility), you must specify these ignored namespaces in mount parameters.</dd></dl>
 <p> <code>-2</code></p>
 <dl>
-<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 2. This interface was used in 2.0.x kernels, does not support NCP/UDP, does not have NDS authentication info storage and uses only 16bit uid/gid.</dl>
+<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 2. This interface was used in 2.0.x kernels, does not support NCP/UDP, does not have NDS authentication info storage and uses only 16bit uid/gid.</dd></dl>
 <p> <code>-3</code></p>
 <dl>
-<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 3. This interface was used in kernels from 2.1.30 to 2.3.40 (laters 2.3.x and 2.4.x still supports this interface to make transition easier). This interface supports NCP/UDP, does have NDS authentication info storage (if you uncomment it in kernel sources) and uses 16bit uid/gid.</dl>
+<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 3. This interface was used in kernels from 2.1.30 to 2.3.40 (laters 2.3.x and 2.4.x still supports this interface to make transition easier). This interface supports NCP/UDP, does have NDS authentication info storage (if you uncomment it in kernel sources) and uses 16bit uid/gid.</dd></dl>
 <p> <code>-4</code></p>
 <dl>
-<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 4. This interface is used in kernels after 2.3.40. This interface supports NCP/UDP, does have NDS authentication info storage and uses 32bit uid/gid.</dl>
+<dd>If you have unusual <code>ncpfs</code> code in kernel and <code>ncpmount</code> is not able to autodetect it, use this option. It switches <code>ncpmount</code> to <code>ncpfs</code> interface version 4. This interface is used in kernels after 2.3.40. This interface supports NCP/UDP, does have NDS authentication info storage and uses 32bit uid/gid.</dd></dl>
 <p> <code>-s</code> (mount option <code>strong</code>)</p>
 <dl>
-<dd>Normally, files marked <i>read-only</i> cannot be removed from NetWare volume because of they are marked <i>Delete Inhibit</i> and <i>Rename Inhibit</i>. If you want to remove these files by simple <i>unlink</i>, you should mount volume with this option.</dl>
+<dd>Normally, files marked <i>read-only</i> cannot be removed from NetWare volume because of they are marked <i>Delete Inhibit</i> and <i>Rename Inhibit</i>. If you want to remove these files by simple <i>unlink</i>, you should mount volume with this option.</dd></dl>
 <p> mount option <code>nostrong</code></p>
 <dl>
-<dd>Refuse to remove <i>read-only</i> files. If you want remove such file, you must first remove <i>read-only</i> attribute. It is standard behavior of <code>ncpfs</code>.</dl>
+<dd>Refuse to remove <i>read-only</i> files. If you want remove such file, you must first remove <i>read-only</i> attribute. It is standard behavior of <code>ncpfs</code>.</dd></dl>
 <p> mount option <code>symlinks</code></p>
 <dl>
-<dd>Use special, normally unused, attributes combinations to express symlinks, executable attributes and files readable by world.</dl>
+<dd>Use special, normally unused, attributes combinations to express symlinks, executable attributes and files readable by world.</dd></dl>
 <p> mount option <code>nosymlinks</code></p>
 <dl>
-<dd>Do not allow special meaning of &#8216;shareable&#8217; attribute. This is a default.</dl>
+<dd>Do not allow special meaning of &#8216;shareable&#8217; attribute. This is a default.</dd></dl>
 <p> mount option <code>ipx</code></p>
 <dl>
-<dd>Use <i>IPX</i> for connection to server. Default if no <code>ipserver</code> option specified on cmdline.</dl>
+<dd>Use <i>IPX</i> for connection to server. Default if no <code>ipserver</code> option specified on cmdline.</dd></dl>
 <p> mount option <code>udp</code></p>
 <dl>
-<dd>Use <i>UDP</i> for connection to server. Not available in 2.0.x kernels. Default if <code>ipserver</code> is used.</dl>
+<dd>Use <i>UDP</i> for connection to server. Not available in 2.0.x kernels. Default if <code>ipserver</code> is used.</dd></dl>
 <p> mount option <code>tcp</code></p>
 <dl>
-<dd>Use <i>TCP</i> for connection to server. Available only with 2.4.0 and later kernels.</dl>
+<dd>Use <i>TCP</i> for connection to server. Available only with 2.4.0 and later kernels.</dd></dl>
 <p> mount option <code>nfsextras</code></p>
 <dl>
-<dd>Use the meta-data provided by the NFS namespace to allow files&#8217; modes to be changed, and to allow the creation of symlinks and named pipes. This adds significant overhead to fetching file information.</dl>
+<dd>Use the meta-data provided by the NFS namespace to allow files&#8217; modes to be changed, and to allow the creation of symlinks and named pipes. This adds significant overhead to fetching file information.</dd></dl>
 <p> mount option <code>nonfsextras</code></p>
 <dl>
-<dd>Do not make use of meta-data provided by the NFS namespace. This is the default.</dl>
+<dd>Do not make use of meta-data provided by the NFS namespace. This is the default.</dd></dl>
 <h2>Environment Variables</h2>
 <p><code>USER / LOGNAME</code></p>
 <dl>
-<dd>The variables USER or LOGNAME may contain the username of the person using the client. USER is tried first. If it&#8217;s empty, LOGNAME is tried.</dl>
+<dd>The variables USER or LOGNAME may contain the username of the person using the client. USER is tried first. If it&#8217;s empty, LOGNAME is tried.</dd></dl>
 <h2>Diagnostics</h2>
 <p>Most diagnostics issued by ncpfs are logged by syslogd. Normally nothing is printed, only error situations are logged there.</p>
 <h2>Examples</h2>
@@ -138,10 +138,10 @@ description: "ncpmount, mount.ncp, mount.ncpfs – mount volume(s) from a specif
 <h2>Notes</h2>
 <p><code>IPX</code></p>
 <dl>
-<dd>You must configure the IPX subsystem before ncpmount will work. It is especially important that there is a route to the internal network of your server.</dl>
+<dd>You must configure the IPX subsystem before ncpmount will work. It is especially important that there is a route to the internal network of your server.</dd></dl>
 <p> <code>IP</code></p>
 <dl>
-<dd>You must specify both <code>-S</code> <i>logical_name</i> and <code>-A</code> <i>dns_name</i>. <i>logical_name</i> is used for searching <i>.nwclient</i>, other configuration files and is logged into <i>/etc/mtab</i>, <i>dns_name</i> is used for connecting to server. In future, logical_name will be read from server.</dl>
+<dd>You must specify both <code>-S</code> <i>logical_name</i> and <code>-A</code> <i>dns_name</i>. <i>logical_name</i> is used for searching <i>.nwclient</i>, other configuration files and is logged into <i>/etc/mtab</i>, <i>dns_name</i> is used for connecting to server. In future, logical_name will be read from server.</dd></dl>
 <h2>See Also</h2>
 <p><code>syslogd(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/8-nfsd/">nfsd</a>(8), <a href="/docs/linux/man/8-mountd/">mountd</a>(8), <a href="/docs/linux/man/8-mount/">mount</a>(8)</code> </p>
 <h2>Credits</h2>

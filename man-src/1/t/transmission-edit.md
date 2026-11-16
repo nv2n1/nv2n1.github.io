@@ -15,14 +15,14 @@ description: "transmission-edit – command-line utility to modify .torrent file
 <p> command-line utility to modify .torrent files&#8217; announce URLs</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show a short help page and exit.</p>
-<dt><code>-a &#8211;add </code><i>URL</i></p>
-<dd> Add an announce URL to the torrent&#8217;s announce-list if it&#8217;s not already in the list</p>
-<dt><code>-d &#8211;delete </code><i>URL</i></p>
-<dd> Remove an announce URL from the torrent&#8217;s announce-list</p>
-<dt><code>-r &#8211;replace </code><i>search replace</i></p>
-<dd> Substring search-and-replace inside a torrent&#8217;s announce URLs. This can be used to change an announce URL when the tracker moves or your passcode changes.</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show a short help page and exit.</dd>
+<dt><code>-a &#8211;add </code><i>URL</i></dt>
+<dd> Add an announce URL to the torrent&#8217;s announce-list if it&#8217;s not already in the list</dd>
+<dt><code>-d &#8211;delete </code><i>URL</i></dt>
+<dd> Remove an announce URL from the torrent&#8217;s announce-list</dd>
+<dt><code>-r &#8211;replace </code><i>search replace</i></dt>
+<dd> Substring search-and-replace inside a torrent&#8217;s announce URLs. This can be used to change an announce URL when the tracker moves or your passcode changes.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Update a tracker passcode in all your torrents: </p>
 <blockquote>

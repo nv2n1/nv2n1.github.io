@@ -15,25 +15,25 @@ CALL STUMTA (XDA,YDA,XUS,YUS,XND,YND,DU,DV,TA,IST)
 <h2>Description</h2>
 
 <dl><dt>XDA
-<dd>(REAL, input): The X coordinate of a point on the streamline in the data coordinate system.
-<dt>YDA
-<dd>(REAL, input); The Y coordinate of a point on the streamline in the data coordinate system.
-<dt>XUS
-<dd>(REAL, input): The X coordinate of the point in the user coordinate system.
-<dt>YUS
-<dd>(REAL, input): The Y coordinate of the point in the user coordinate system.
-<dt>XND
-<dd>(REAL, input): The X coordinate of the point in NDC space.
-<dt>YND
-<dd>(REAL, input): The Y coordinate of the point in NDC space.
-<dt>DU
-<dd>(REAL, input): The interpolated value of the normalized component of the vector at the point, with direction parallel to the X axis of the data coordinate system.
-<dt>DV
-<dd>(REAL, input): The interpolated value of the normalized component of the vector at the point, with direction parallel to the Y axis of the data coordinate system.
-<dt>TA
-<dd>(REAL, output): The directional angle of the streamline at the point relative to NDC space.
-<dt>IST
-<dd>(REAL, output); Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dl>
+</dt><dd>(REAL, input): The X coordinate of a point on the streamline in the data coordinate system.
+</dd><dt>YDA
+</dt><dd>(REAL, input); The Y coordinate of a point on the streamline in the data coordinate system.
+</dd><dt>XUS
+</dt><dd>(REAL, input): The X coordinate of the point in the user coordinate system.
+</dd><dt>YUS
+</dt><dd>(REAL, input): The Y coordinate of the point in the user coordinate system.
+</dd><dt>XND
+</dt><dd>(REAL, input): The X coordinate of the point in NDC space.
+</dd><dt>YND
+</dt><dd>(REAL, input): The Y coordinate of the point in NDC space.
+</dd><dt>DU
+</dt><dd>(REAL, input): The interpolated value of the normalized component of the vector at the point, with direction parallel to the X axis of the data coordinate system.
+</dd><dt>DV
+</dt><dd>(REAL, input): The interpolated value of the normalized component of the vector at the point, with direction parallel to the Y axis of the data coordinate system.
+</dd><dt>TA
+</dt><dd>(REAL, output): The directional angle of the streamline at the point relative to NDC space.
+</dd><dt>IST
+</dt><dd>(REAL, output); Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dd></dl>
 
 <h2>Usage</h2>
 

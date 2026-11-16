@@ -11,10 +11,8 @@ std::allocator_traits&lt;Alloc&gt;::destroy - std::allocator_traits&lt;Alloc&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         static void destroy(Alloc &amp;a, T *p);</code></pre> 
 Calls the destructor of the object pointed to by p. If possible, does so by calling a.destroy(p). If not possible (e.g. a does not have the member function destroy()), then calls the destructor of *p directly, as p-&gt;~T(). 
 

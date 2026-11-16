@@ -21,7 +21,7 @@ CALL PCDLSC (IFCI)
 <h2>Description</h2>
 
 <dl><dt>IFCI
-<dd>(an input expression of type INTEGER) specifies the first of a set of sixteen color indices that may be defined by PCDLSC. Make sure that these color indices are not already used.</dl>
+</dt><dd>(an input expression of type INTEGER) specifies the first of a set of sixteen color indices that may be defined by PCDLSC. Make sure that these color indices are not already used.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

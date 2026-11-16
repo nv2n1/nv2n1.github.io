@@ -48,11 +48,9 @@ CZMQ_EXPORT void
 <pre><code>//  Create temporary directory for test files
 #define TESTDIR &quot;.test_zcertstore&quot;
 zsys_dir_create(TESTDIR);
-
 //  Load certificate store from disk; it will be empty
 zcertstore_t *certstore = zcertstore_new(TESTDIR);
 assert(certstore);
-
 //  Create a single new certificate and save to disk
 zcert_t *cert = zcert_new();
 assert(cert);
@@ -61,17 +59,14 @@ assert(client_key);
 zcert_set_meta(cert, &quot;name&quot;, &quot;John Doe&quot;);
 zcert_save(cert, TESTDIR &quot;/mycert.txt&quot;);
 zcert_destroy(&amp;cert);
-
 //  Check that certificate store refreshes as expected
 cert = zcertstore_lookup(certstore, client_key);
 assert(cert);
 assert(streq(zcert_meta(cert, &quot;name&quot;), &quot;John Doe&quot;));
 free(client_key);
-
 if (verbose)
     zcertstore_print(certstore);
 zcertstore_destroy(&amp;certstore);
-
 //  Delete all test files
 zdir_t *dir = zdir_new(TESTDIR, NULL);
 assert(dir);
@@ -87,7 +82,8 @@ zdir_destroy(&amp;dir);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

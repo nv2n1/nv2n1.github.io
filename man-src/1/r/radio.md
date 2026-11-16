@@ -15,24 +15,24 @@ description: "radio – console radio application"
 <p> <code>radio</code> is a interactive, ncurses-bases console radio application.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print a short help text.</p>
-<dt><code>-d</code></p>
-<dd> enable debug output.</p>
-<dt><code>-q</code></p>
-<dd> quit after processing the cmd line options, don&#8217;t enter interactive ncurses mode. Only useful together with other options for obvious reasons &#8230;</p>
-<dt><code>-m</code></p>
-<dd> mute radio.</p>
-<dt><code>-f freq</code></p>
-<dd> tune the specified radio frequency (and unmute the radio).</p>
-<dt><code>-c dev</code></p>
-<dd> specify radio device (default is /dev/radio0).</p>
-<dt><code>-s</code></p>
-<dd> Do a scan for radio stations.</p>
-<dt><code>-S</code></p>
-<dd> Same as above + write a radio.fmmap with the signal for every frequency. You can get a graph for it with gnuplot (plot &quot;radio.fmmap&quot; w lin).</p>
-<dt><code>-i</code></p>
-<dd> Scan, write a initial ~/.radio file to stdout and quit. So you can create a config file where you only have to fill in the correct station names later this way: &quot;radio -i &gt; ~/.radio&quot;. See below for the config file syntax.</dl>
+<dt><code>-h</code></dt>
+<dd> print a short help text.</dd>
+<dt><code>-d</code></dt>
+<dd> enable debug output.</dd>
+<dt><code>-q</code></dt>
+<dd> quit after processing the cmd line options, don&#8217;t enter interactive ncurses mode. Only useful together with other options for obvious reasons &#8230;</dd>
+<dt><code>-m</code></dt>
+<dd> mute radio.</dd>
+<dt><code>-f freq</code></dt>
+<dd> tune the specified radio frequency (and unmute the radio).</dd>
+<dt><code>-c dev</code></dt>
+<dd> specify radio device (default is /dev/radio0).</dd>
+<dt><code>-s</code></dt>
+<dd> Do a scan for radio stations.</dd>
+<dt><code>-S</code></dt>
+<dd> Same as above + write a radio.fmmap with the signal for every frequency. You can get a graph for it with gnuplot (plot &quot;radio.fmmap&quot; w lin).</dd>
+<dt><code>-i</code></dt>
+<dd> Scan, write a initial ~/.radio file to stdout and quit. So you can create a config file where you only have to fill in the correct station names later this way: &quot;radio -i &gt; ~/.radio&quot;. See below for the config file syntax.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> <code>radio</code> picks up station names and present stations from a config file. It can parse kradio (KDE radio app) config files, therefore it first tries the usual KDE config file location: <code>~/.kde/share/config/kradiorc</code>. Failing that, <code>radio</code> tries <code>~/.radio</code> (which makes things a bit easier for people who don&#8217;t use kradio). </p>
 <p> The format looks like this: </p>

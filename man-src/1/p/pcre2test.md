@@ -22,18 +22,18 @@ description: "pcre2test – a program for testing Perl-compatible regular expres
 <p> For maximum portability, therefore, it is safest to avoid non-printing characters in <code>pcre2test</code> input files. There is a facility for specifying a pattern&#8217;s characters as hexadecimal pairs, thus making it possible to include binary zeroes in a pattern for testing purposes. Subject lines are processed for backslash escapes, which makes it possible to include any data value.</p>
 <h2>COMMAND LINE OPTIONS</h2>
 <dl>
-<dt><code>-8</code></p>
-<dd> If the 8-bit library has been built, this option causes it to be used (this is the default). If the 8-bit library has not been built, this option causes an error.</p>
-<dt><code>-16</code></p>
-<dd> If the 16-bit library has been built, this option causes it to be used. If only the 16-bit library has been built, this is the default. If the 16-bit library has not been built, this option causes an error.</p>
-<dt><code>-32</code></p>
-<dd> If the 32-bit library has been built, this option causes it to be used. If only the 32-bit library has been built, this is the default. If the 32-bit library has not been built, this option causes an error.</p>
-<dt><code>-b</code></p>
-<dd> Behave as if each pattern has the <code>/fullbincode</code> modifier; the full internal binary form of the pattern is output after compilation.</p>
-<dt><code>-C</code></p>
-<dd> Output the version number of the PCRE2 library, and all available information about the optional features that are included, and then exit with zero exit code. All other options are ignored.</p>
-<dt><code>-C</code> <i>option</i></p>
-<dd> Output information about a specific build-time option, then exit. This functionality is intended for use in scripts such as <code>RunTest</code>. The following options output the value and set the exit code as indicated: </p>
+<dt><code>-8</code></dt>
+<dd> If the 8-bit library has been built, this option causes it to be used (this is the default). If the 8-bit library has not been built, this option causes an error.</dd>
+<dt><code>-16</code></dt>
+<dd> If the 16-bit library has been built, this option causes it to be used. If only the 16-bit library has been built, this is the default. If the 16-bit library has not been built, this option causes an error.</dd>
+<dt><code>-32</code></dt>
+<dd> If the 32-bit library has been built, this option causes it to be used. If only the 32-bit library has been built, this is the default. If the 32-bit library has not been built, this option causes an error.</dd>
+<dt><code>-b</code></dt>
+<dd> Behave as if each pattern has the <code>/fullbincode</code> modifier; the full internal binary form of the pattern is output after compilation.</dd>
+<dt><code>-C</code></dt>
+<dd> Output the version number of the PCRE2 library, and all available information about the optional features that are included, and then exit with zero exit code. All other options are ignored.</dd>
+<dt><code>-C</code> <i>option</i></dt>
+<dd> Output information about a specific build-time option, then exit. This functionality is intended for use in scripts such as <code>RunTest</code>. The following options output the value and set the exit code as indicated: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>ebcdic-nl&nbsp;<wbr>&nbsp;<wbr>the code for LF&nbsp;<wbr>(=&nbsp;<wbr>NL)&nbsp;<wbr>in an EBCDIC environment:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x15 or 0x25<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 if used in an ASCII environment<br />
@@ -55,39 +55,40 @@ description: "pcre2test – a program for testing Perl-compatible regular expres
 &nbsp;<wbr>&nbsp;<wbr>pcre2-8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the 8-bit library was built<br />
 &nbsp;<wbr>&nbsp;<wbr>unicode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Unicode support is available </p>
 <p> If an unknown option is given, an error message is output; the exit code is 0.</p>
-<dt><code>-d</code></p>
-<dd> Behave as if each pattern has the <code>debug</code> modifier; the internal form and information about the compiled pattern is output after compilation; <code>-d</code> is equivalent to <code>-b -i</code>.</p>
-<dt><code>-dfa</code></p>
-<dd> Behave as if each subject line has the <code>dfa</code> modifier; matching is done using the <code>pcre2_dfa_match()</code> function instead of the default <code>pcre2_match()</code>.</p>
-<dt><code>-help</code></p>
-<dd> Output a brief summary these options and then exit.</p>
-<dt><code>-i</code></p>
-<dd> Behave as if each pattern has the <code>/info</code> modifier; information about the compiled pattern is given after compilation.</p>
-<dt><code>-jit</code></p>
-<dd> Behave as if each pattern line has the <code>jit</code> modifier; after successful compilation, each pattern is passed to the just-in-time compiler, if available.</p>
-<dt><code>-pattern </code><i>modifier-list</i></p>
-<dd> Behave as if each pattern line contains the given modifiers.</p>
-<dt><code>-q</code></p>
-<dd> Do not output the version number of <code>pcre2test</code> at the start of execution.</p>
-<dt><code>-S</code> <i>size</i></p>
-<dd> On Unix-like systems, set the size of the run-time stack to <i>size</i> megabytes.</p>
-<dt><code>-subject</code> <i>modifier-list</i></p>
-<dd> Behave as if each subject line contains the given modifiers.</p>
-<dt><code>-t</code></p>
-<dd> Run each compile and match many times with a timer, and output the resulting times per compile or match. When JIT is used, separate times are given for the initial compile and the JIT compile. You can control the number of iterations that are used for timing by following <code>-t</code> with a number (as a separate item on the command line). For example, &quot;-t 1000&quot; iterates 1000 times. The default is to iterate 500,000 times.</p>
-<dt><code>-tm</code></p>
-<dd> This is like <code>-t</code> except that it times only the matching phase, not the compile phase.</p>
-<dt><code>-T</code> <code>-TM</code></p>
-<dd> These behave like <code>-t</code> and <code>-tm</code>, but in addition, at the end of a run, the total times for all compiles and matches are output.</p>
-<dt><code>-version</code></p>
-<dd> Output the PCRE2 version number and then exit.</dl>
+<dt><code>-d</code></dt>
+<dd> Behave as if each pattern has the <code>debug</code> modifier; the internal form and information about the compiled pattern is output after compilation; <code>-d</code> is equivalent to <code>-b -i</code>.</dd>
+<dt><code>-dfa</code></dt>
+<dd> Behave as if each subject line has the <code>dfa</code> modifier; matching is done using the <code>pcre2_dfa_match()</code> function instead of the default <code>pcre2_match()</code>.</dd>
+<dt><code>-help</code></dt>
+<dd> Output a brief summary these options and then exit.</dd>
+<dt><code>-i</code></dt>
+<dd> Behave as if each pattern has the <code>/info</code> modifier; information about the compiled pattern is given after compilation.</dd>
+<dt><code>-jit</code></dt>
+<dd> Behave as if each pattern line has the <code>jit</code> modifier; after successful compilation, each pattern is passed to the just-in-time compiler, if available.</dd>
+<dt><code>-pattern </code><i>modifier-list</i></dt>
+<dd> Behave as if each pattern line contains the given modifiers.</dd>
+<dt><code>-q</code></dt>
+<dd> Do not output the version number of <code>pcre2test</code> at the start of execution.</dd>
+<dt><code>-S</code> <i>size</i></dt>
+<dd> On Unix-like systems, set the size of the run-time stack to <i>size</i> megabytes.</dd>
+<dt><code>-subject</code> <i>modifier-list</i></dt>
+<dd> Behave as if each subject line contains the given modifiers.</dd>
+<dt><code>-t</code></dt>
+<dd> Run each compile and match many times with a timer, and output the resulting times per compile or match. When JIT is used, separate times are given for the initial compile and the JIT compile. You can control the number of iterations that are used for timing by following <code>-t</code> with a number (as a separate item on the command line). For example, &quot;-t 1000&quot; iterates 1000 times. The default is to iterate 500,000 times.</dd>
+<dt><code>-tm</code></dt>
+<dd> This is like <code>-t</code> except that it times only the matching phase, not the compile phase.</dd>
+<dt><code>-T</code> <code>-TM</code></dt>
+<dd> These behave like <code>-t</code> and <code>-tm</code>, but in addition, at the end of a run, the total times for all compiles and matches are output.</dd>
+<dt><code>-version</code></dt>
+<dd> Output the PCRE2 version number and then exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> If <code>pcre2test</code> is given two filename arguments, it reads from the first and writes to the second. If the first name is &quot;-&quot;, input is taken from the standard input. If <code>pcre2test</code> is given only one argument, it reads from that file and writes to stdout. Otherwise, it reads from stdin and writes to stdout. </p>
 <p> When <code>pcre2test</code> is built, a configuration option can specify that it should be linked with the <code>libreadline</code> or <code>libedit</code> library. When this is done, if the input is from a terminal, it is read using the <code>readline()</code> function. This provides line-editing and history facilities. The output from the <code>-help</code> option states whether or not <code>readline()</code> will be used. </p>
 <p> The program handles any number of tests, each of which consists of a set of input lines. Each set starts with a regular expression pattern, followed by any number of subject lines to be matched against that pattern. In between sets of test data, command lines that begin with # may appear. This file format, with some restrictions, can also be processed by the <code>perltest.sh</code> script that is distributed with PCRE2 as a means of checking that the behaviour of PCRE2 and Perl is the same. </p>
 <p> When the input is a terminal, <code>pcre2test</code> prompts for each line of input, using &quot;re&gt;&quot; to prompt for regular expression patterns, and &quot;data&gt;&quot; to prompt for subject lines. Command lines starting with # can be entered only in response to the &quot;re&gt;&quot; prompt. </p>
 <p> Each subject line is matched separately and independently. If you want to do multi-line matches, you have to use the 
- escape sequence (or  or 
+ escape sequence (or 
+ or 
 , etc., depending on the newline setting) in a single line of input to encode the newline sequences. There is no limit on the length of subject lines; the input buffer is automatically extended if it is too small. There are replication features that makes it possible to generate long repetitive pattern or subject lines without having to supply them explicitly. </p>
 <p> An empty line or the end of the file signals the end of the subject lines for a test, at which point a new pattern or command line is expected if there is still input to be read.</p>
 <h2>COMMAND LINES</h2>
@@ -138,7 +139,9 @@ description: "pcre2test – a program for testing Perl-compatible regular expres
 &nbsp;<wbr>&nbsp;<wbr>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline&nbsp;<wbr>(
 )<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return&nbsp;<wbr>()<br />
+&nbsp;<wbr>&nbsp;<wbr>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return&nbsp;<wbr>(
+)<br />
 &nbsp;<wbr>&nbsp;<wbr>	&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>tab&nbsp;<wbr>(	)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>vertical tab&nbsp;<wbr>()<br />
 &nbsp;<wbr>&nbsp;<wbr>
@@ -146,3 +149,4 @@ nn&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>o
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a byte unless&nbsp;<wbr>&gt;&nbsp;<wbr>255 in UTF-8 or 16-bit or 32-bit mode<br />
 &nbsp;<wbr>&nbsp;<wbr>\o{dd&#8230;}&nbsp;<wbr>&nbsp;<wbr>octal character&nbsp;<wbr>(any number of octal digits}<br />
 &nbsp;<wbr>&nbsp;<wbr>
+</p>

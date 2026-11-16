@@ -25,19 +25,19 @@ url: "/docs/linux/man/1-rsnapshot-diff/"
 
 <dl>
 <dt>-h (help)
-<dd> Displays help information
-<dt>-H (human)
-<dd> Display more human-friendly numbers - as well as showing the number of bytes changed, also show <font SIZE="-1">MB</font> and <font SIZE="-1">GB.</font>
-<dt>-i (ignore)
-<dd> If verbosity is turned on, -i suppresses information about symlinks, directories, and special files.
-<dt>-s (show size)
-<dd> Show the size of each changed file after the + or - sign. To sort the files by decreasing size, use this option and run the output through ``sort -k 2 -rn''.
-<dt>-v (verbose)
-<dd> Be verbose. This will spit out a list of all changes as they are encountered, apart from symlink, as well as the summary at the end.
-<dt>-V (more verbose)
-<dd> Be more verbose - as well as listing changed files, unchanged files and symlinks will be listed too.
-<dt>dir1 and dir2
-<dd> These are the only compulsory parameters, and should be the names of two directories to compare. Their order doesn't matter, rsnapshot-diff will always compare the younger to the older, so files that appear only in the older will be reported as having been removed, and files that appear only in the younger will be reported as having been added.</dl>
+</dt><dd> Displays help information
+</dd><dt>-H (human)
+</dt><dd> Display more human-friendly numbers - as well as showing the number of bytes changed, also show <font SIZE="-1">MB</font> and <font SIZE="-1">GB.</font>
+</dd><dt>-i (ignore)
+</dt><dd> If verbosity is turned on, -i suppresses information about symlinks, directories, and special files.
+</dd><dt>-s (show size)
+</dt><dd> Show the size of each changed file after the + or - sign. To sort the files by decreasing size, use this option and run the output through ``sort -k 2 -rn''.
+</dd><dt>-v (verbose)
+</dt><dd> Be verbose. This will spit out a list of all changes as they are encountered, apart from symlink, as well as the summary at the end.
+</dd><dt>-V (more verbose)
+</dt><dd> Be more verbose - as well as listing changed files, unchanged files and symlinks will be listed too.
+</dd><dt>dir1 and dir2
+</dt><dd> These are the only compulsory parameters, and should be the names of two directories to compare. Their order doesn't matter, rsnapshot-diff will always compare the younger to the older, so files that appear only in the older will be reported as having been removed, and files that appear only in the younger will be reported as having been added.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

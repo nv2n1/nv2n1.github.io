@@ -18,147 +18,147 @@ PDL::Modules - A guide to PDL's module reference.
  yvals Fills a piddle with Y index values. See the CAVEAT for xvals.
  zvals Fills a piddle with Z index values. See the CAVEAT for xvals.</pre>To learn more about the <font SIZE="-1">PDL</font> shell, see perldl or pdl2.
 <h2>Foundation</h2><dl><dt>perldl or pdl2
-<dd>Learn about the <font SIZE="-1">PDL</font> shell.</dl><h3>Functions</h3><dl><dt>PDL::Core
-<dd>Core module (e.g. creating piddles).
-<dt>PDL::Basic
-<dd>Simplified interface to the more general PDL::Primitive.
-<dt>PDL::Ops
-<dd>Basic operators (e.g. arithmetic, comparisons, etc.).
-<dt>PDL::Ufunc
-<dd>Functions that accumulate along a dimension (e.g. sum, max).</dl><h3>Other Features</h3><dl><dt>PDL::AutoLoader
-<dd>MATLAB-style function autoloader.
-<dt>PDL::Slices
-<dd>Indexing and slices. How to access a subset of a piddle.
-<dt>PDL::NiceSlice
-<dd>Nicer syntax for slices.</dl><h2>Miscellaneous</h2><dl><dt>PDL::Primitive
-<dd>Fundamental operations on piddles.
-<dt>PDL::Complex
-<dd>Complex numbers.
-<dt>PDL::Bad
-<dd>Bad value support.
-<dt>PDL::Reduce
-<dd>A 'reduce' function for <font SIZE="-1">PDL.</font>
-<dt>PDL::Lite
-<dd>Minimum <font SIZE="-1">PDL</font> module <font SIZE="-1">OO</font> loader.
-<dt>PDL::LiteF
-<dd>Minimum <font SIZE="-1">PDL</font> module function loader.
-<dt>PDL::Extended
-<dd>Extended Mathematical Operators.
-<dt>PDL::Func
-<dd>Interpolation-related functions.</dl><h2>Graphics</h2><dl><dt>PDL::Graphics::PGPLOT
-<dd><font SIZE="-1">PGPLOT</font> library.
-<dt>PDL::Graphics::PLplot
-<dd>PLplot library.</dl><h3>3D Graphics</h3><dl><dt>PDL::Graphics::TriD
-<dd>3D graphics core module.
-<dt>PDL::Graphics::TriD::Rout
-<dd>Helper routines for 3D graphics.
-<dt>PDL::Graphics::TriD::Contours
-<dd>3D surface contours.</dl><h3>Helper Modules</h3><dl><dt>PDL::Graphics::LUT
-<dd>Look-up tables.
-<dt>PDL::Graphics::IIS
-<dd>Display images on <font SIZE="-1">IIS</font> devices.
-<dt>PDL::Graphics::Limits
-<dd>Derive data limits for display purposes.</dl><h2>Image Processing</h2><dl><dt>PDL::Compression
-<dd>Compression utilities.
-<dt>PDL::Image2D
-<dd>2-dimmensional image processing.
-<dt>PDL::ImageND
-<dd>N-dimmensional image processing.
-<dt>PDL::ImageRGB
-<dd><font SIZE="-1">RGB</font> image data handling.</dl><h2>Numerical Methods</h2><dl><dt><font SIZE="-1">PDL::FFT</font>
-<dd>Fast Fourier Transform (native implementation).
-<dt><font SIZE="-1">PDL::FFTW</font>
-<dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">FFTW</font> library.
-<dt>PDL::Filter::LinPred
-<dd>Linear predictive filtering.
-<dt>PDL::Filter::Linear
-<dd>Linear filtering.
-<dt>PDL::Opt::Simplex
-<dd>Simplex optimization routines.
-<dt>PDL::Minuit
-<dd><font SIZE="-1">PDL</font> interface to the Minuit library.
-<dt>PDL::Slatec
-<dd><font SIZE="-1">PDL</font> interface to the Slatec library.</dl><h2>Coordinate Transformations</h2><dl><dt>PDL::Transform
-<dd>Coordinate transforms, image warping, and N-D functions.
-<dt>PDL::Transform::Cartography
-<dd>Cartographic projections.
-<dt>PDL::Transform::Proj4
-<dd><font SIZE="-1">PDL</font> interface to the Proj4 projection library.</dl><h2>Io Functions</h2><dl><dt><font SIZE="-1">PDL::IO</font>
-<dd>Overview of <font SIZE="-1">IO</font> functions.
-<dt>PDL::IO::Dumper
-<dd>Data dumper.
-<dt>PDL::IO::FastRaw
-<dd>Fast storage format (outdated).
-<dt>PDL::IO::FlexRaw
-<dd>Flexible storage format.
-<dt>PDL::IO::Rout
-<dd>Misc <font SIZE="-1">IO</font> routines.
-<dt>PDL::IO::Sortable
-<dd>Support for Perl's 'Storable' module.</dl><h3>Image Formats</h3><dl><dt><font SIZE="-1">PDL::IO::FITS</font>
-<dd><font SIZE="-1">PDL</font> support for <font SIZE="-1">FITS</font> images.
-<dt><font SIZE="-1">PDL::IO::PNM</font>
-<dd><font SIZE="-1">PDL</font> support for <font SIZE="-1">PNM</font> images.
-<dt><font SIZE="-1">PDL::IO::GD</font>
-<dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">GD</font> image library.
-<dt><font SIZE="-1">PDL::IO::HDF</font>
-<dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">HDH4</font> image library.
-<dt>PDL::IO::NetPBM
-<dd><font SIZE="-1">PDL</font> interface to the NetPBM image library.
-<dt><font SIZE="-1">PDL::IO::NDF</font>
-<dd><font SIZE="-1">PDL</font> interface to the Starlink image library. Available as a separate <font SIZE="-1">CPAN</font> download.</dl><h2>2D Matrices</h2><dl><dt>PDL::Matrix
-<dd>Convenience class for 2D matrix work.
-<dt>PDL::MatrixOps
-<dd>Additional matrix operators.</dl><h2>Gnu Scientific Library</h2><dl><dt><font SIZE="-1">PDL::GSL::DIFF</font>
-<dd>Numerical differentiation.
-<dt><font SIZE="-1">PDL::GSL::INTEG</font>
-<dd>Numerical integration.
-<dt><font SIZE="-1">PDL::GSL::INTERP</font>
-<dd>Interpolation.
-<dt><font SIZE="-1">PDL::GSL::MROOT</font>
-<dd>Multidimensional root-finding.
-<dt><font SIZE="-1">PDL::GSL::RNG</font>
-<dd><font SIZE="-1">RNG</font> and randist.</dl><h3>Special Functions</h3><dl><dt><font SIZE="-1">PDL::GSL::AIRY</font>
-<dd><dt><font SIZE="-1">PDL::GSL::BESSEL</font>
-<dd><dt><font SIZE="-1">PDL::GSL::CLAUSEN</font>
-<dd><dt><font SIZE="-1">PDL::GSL::COULOMB</font>
-<dd><dt><font SIZE="-1">PDL::GSL::COUPLING</font>
-<dd><dt><font SIZE="-1">PDL::GSL::DAWSON</font>
-<dd><dt><font SIZE="-1">PDL::GSL::DEBYE</font>
-<dd><dt><font SIZE="-1">PDL::GSL::DILOG</font>
-<dd><dt><font SIZE="-1">PDL::GSL::ELEMENTARY</font>
-<dd><dt><font SIZE="-1">PDL::GSL::ELLINT</font>
-<dd><dt><font SIZE="-1">PDL::GSL::ELLJAC</font>
-<dd><dt><font SIZE="-1">PDL::GSL::ERF</font>
-<dd><dt><font SIZE="-1">PDL::GSL::EXP</font>
-<dd><dt><font SIZE="-1">PDL::GSL::EXPINT</font>
-<dd><dt><font SIZE="-1">PDL::GSL::FERMI_DIRAC</font>
-<dd><dt><font SIZE="-1">PDL::GSL::GAMMA</font>
-<dd><dt><font SIZE="-1">PDL::GSL::GEGENBAUER</font>
-<dd><dt><font SIZE="-1">PDL::GSL::HYPERG</font>
-<dd><dt><font SIZE="-1">PDL::GSL::LAGUERRE</font>
-<dd><dt><font SIZE="-1">PDL::GSL::LEGENDRE</font>
-<dd><dt><font SIZE="-1">PDL::GSL::LOG</font>
-<dd><dt><font SIZE="-1">PDL::GSL::POLY</font>
-<dd><dt><font SIZE="-1">PDL::GSL::POW_INT</font>
-<dd><dt><font SIZE="-1">PDL::GSL::PSI</font>
-<dd><dt><font SIZE="-1">PDL::GSL::SYNCHROTRON</font>
-<dd><dt><font SIZE="-1">PDL::GSL::TRANSPORT</font>
-<dd><dt><font SIZE="-1">PDL::GSL::TRIG</font>
-<dd><dt><font SIZE="-1">PDL::GSL::ZETA</font>
-<dd></dl><h2>Fitting Functions</h2><dl><dt>PDL::Fit::Gaussian
-<dd>Fit gaussian curves.
-<dt>PDL::Fit::Polynomial
-<dd>Fit polynomials.
-<dt>PDL::Fit::Linfit
-<dd>Fit linear combinations of functions.
-<dt>PDL::Fit::LM
-<dd>Fit functions using the Levenberg-Marquardt algorithm.</dl><h2>Advanced</h2><dl><dt>PDL::Dbg
-<dd><font SIZE="-1">PDL</font> debugger.
-<dt>PDL::DiskCache
-<dd>Manage many piddles through a disk cache.
-<dt>PDL::CallExt
-<dd>Call external functions.
-<dt>PDL::Objects
-<dd>If you want to sub-class from <font SIZE="-1">PDL </font>(note: incomplete).</dl><h2>Copyright</h2>Copyright 2010 Daniel Carrera (dcarrera [at] gmail.com). You can distribute and/or modify this document under the same terms as the current Perl license. 
+</dt><dd>Learn about the <font SIZE="-1">PDL</font> shell.</dd></dl><h3>Functions</h3><dl><dt>PDL::Core
+</dt><dd>Core module (e.g. creating piddles).
+</dd><dt>PDL::Basic
+</dt><dd>Simplified interface to the more general PDL::Primitive.
+</dd><dt>PDL::Ops
+</dt><dd>Basic operators (e.g. arithmetic, comparisons, etc.).
+</dd><dt>PDL::Ufunc
+</dt><dd>Functions that accumulate along a dimension (e.g. sum, max).</dd></dl><h3>Other Features</h3><dl><dt>PDL::AutoLoader
+</dt><dd>MATLAB-style function autoloader.
+</dd><dt>PDL::Slices
+</dt><dd>Indexing and slices. How to access a subset of a piddle.
+</dd><dt>PDL::NiceSlice
+</dt><dd>Nicer syntax for slices.</dd></dl><h2>Miscellaneous</h2><dl><dt>PDL::Primitive
+</dt><dd>Fundamental operations on piddles.
+</dd><dt>PDL::Complex
+</dt><dd>Complex numbers.
+</dd><dt>PDL::Bad
+</dt><dd>Bad value support.
+</dd><dt>PDL::Reduce
+</dt><dd>A 'reduce' function for <font SIZE="-1">PDL.</font>
+</dd><dt>PDL::Lite
+</dt><dd>Minimum <font SIZE="-1">PDL</font> module <font SIZE="-1">OO</font> loader.
+</dd><dt>PDL::LiteF
+</dt><dd>Minimum <font SIZE="-1">PDL</font> module function loader.
+</dd><dt>PDL::Extended
+</dt><dd>Extended Mathematical Operators.
+</dd><dt>PDL::Func
+</dt><dd>Interpolation-related functions.</dd></dl><h2>Graphics</h2><dl><dt>PDL::Graphics::PGPLOT
+</dt><dd><font SIZE="-1">PGPLOT</font> library.
+</dd><dt>PDL::Graphics::PLplot
+</dt><dd>PLplot library.</dd></dl><h3>3D Graphics</h3><dl><dt>PDL::Graphics::TriD
+</dt><dd>3D graphics core module.
+</dd><dt>PDL::Graphics::TriD::Rout
+</dt><dd>Helper routines for 3D graphics.
+</dd><dt>PDL::Graphics::TriD::Contours
+</dt><dd>3D surface contours.</dd></dl><h3>Helper Modules</h3><dl><dt>PDL::Graphics::LUT
+</dt><dd>Look-up tables.
+</dd><dt>PDL::Graphics::IIS
+</dt><dd>Display images on <font SIZE="-1">IIS</font> devices.
+</dd><dt>PDL::Graphics::Limits
+</dt><dd>Derive data limits for display purposes.</dd></dl><h2>Image Processing</h2><dl><dt>PDL::Compression
+</dt><dd>Compression utilities.
+</dd><dt>PDL::Image2D
+</dt><dd>2-dimmensional image processing.
+</dd><dt>PDL::ImageND
+</dt><dd>N-dimmensional image processing.
+</dd><dt>PDL::ImageRGB
+</dt><dd><font SIZE="-1">RGB</font> image data handling.</dd></dl><h2>Numerical Methods</h2><dl><dt><font SIZE="-1">PDL::FFT</font>
+</dt><dd>Fast Fourier Transform (native implementation).
+</dd><dt><font SIZE="-1">PDL::FFTW</font>
+</dt><dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">FFTW</font> library.
+</dd><dt>PDL::Filter::LinPred
+</dt><dd>Linear predictive filtering.
+</dd><dt>PDL::Filter::Linear
+</dt><dd>Linear filtering.
+</dd><dt>PDL::Opt::Simplex
+</dt><dd>Simplex optimization routines.
+</dd><dt>PDL::Minuit
+</dt><dd><font SIZE="-1">PDL</font> interface to the Minuit library.
+</dd><dt>PDL::Slatec
+</dt><dd><font SIZE="-1">PDL</font> interface to the Slatec library.</dd></dl><h2>Coordinate Transformations</h2><dl><dt>PDL::Transform
+</dt><dd>Coordinate transforms, image warping, and N-D functions.
+</dd><dt>PDL::Transform::Cartography
+</dt><dd>Cartographic projections.
+</dd><dt>PDL::Transform::Proj4
+</dt><dd><font SIZE="-1">PDL</font> interface to the Proj4 projection library.</dd></dl><h2>Io Functions</h2><dl><dt><font SIZE="-1">PDL::IO</font>
+</dt><dd>Overview of <font SIZE="-1">IO</font> functions.
+</dd><dt>PDL::IO::Dumper
+</dt><dd>Data dumper.
+</dd><dt>PDL::IO::FastRaw
+</dt><dd>Fast storage format (outdated).
+</dd><dt>PDL::IO::FlexRaw
+</dt><dd>Flexible storage format.
+</dd><dt>PDL::IO::Rout
+</dt><dd>Misc <font SIZE="-1">IO</font> routines.
+</dd><dt>PDL::IO::Sortable
+</dt><dd>Support for Perl's 'Storable' module.</dd></dl><h3>Image Formats</h3><dl><dt><font SIZE="-1">PDL::IO::FITS</font>
+</dt><dd><font SIZE="-1">PDL</font> support for <font SIZE="-1">FITS</font> images.
+</dd><dt><font SIZE="-1">PDL::IO::PNM</font>
+</dt><dd><font SIZE="-1">PDL</font> support for <font SIZE="-1">PNM</font> images.
+</dd><dt><font SIZE="-1">PDL::IO::GD</font>
+</dt><dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">GD</font> image library.
+</dd><dt><font SIZE="-1">PDL::IO::HDF</font>
+</dt><dd><font SIZE="-1">PDL</font> interface to the <font SIZE="-1">HDH4</font> image library.
+</dd><dt>PDL::IO::NetPBM
+</dt><dd><font SIZE="-1">PDL</font> interface to the NetPBM image library.
+</dd><dt><font SIZE="-1">PDL::IO::NDF</font>
+</dt><dd><font SIZE="-1">PDL</font> interface to the Starlink image library. Available as a separate <font SIZE="-1">CPAN</font> download.</dd></dl><h2>2D Matrices</h2><dl><dt>PDL::Matrix
+</dt><dd>Convenience class for 2D matrix work.
+</dd><dt>PDL::MatrixOps
+</dt><dd>Additional matrix operators.</dd></dl><h2>Gnu Scientific Library</h2><dl><dt><font SIZE="-1">PDL::GSL::DIFF</font>
+</dt><dd>Numerical differentiation.
+</dd><dt><font SIZE="-1">PDL::GSL::INTEG</font>
+</dt><dd>Numerical integration.
+</dd><dt><font SIZE="-1">PDL::GSL::INTERP</font>
+</dt><dd>Interpolation.
+</dd><dt><font SIZE="-1">PDL::GSL::MROOT</font>
+</dt><dd>Multidimensional root-finding.
+</dd><dt><font SIZE="-1">PDL::GSL::RNG</font>
+</dt><dd><font SIZE="-1">RNG</font> and randist.</dd></dl><h3>Special Functions</h3><dl><dt><font SIZE="-1">PDL::GSL::AIRY</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::BESSEL</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::CLAUSEN</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::COULOMB</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::COUPLING</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::DAWSON</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::DEBYE</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::DILOG</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::ELEMENTARY</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::ELLINT</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::ELLJAC</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::ERF</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::EXP</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::EXPINT</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::FERMI_DIRAC</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::GAMMA</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::GEGENBAUER</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::HYPERG</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::LAGUERRE</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::LEGENDRE</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::LOG</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::POLY</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::POW_INT</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::PSI</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::SYNCHROTRON</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::TRANSPORT</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::TRIG</font>
+</dt><dd></dd><dt><font SIZE="-1">PDL::GSL::ZETA</font>
+</dt><dd></dd></dl><h2>Fitting Functions</h2><dl><dt>PDL::Fit::Gaussian
+</dt><dd>Fit gaussian curves.
+</dd><dt>PDL::Fit::Polynomial
+</dt><dd>Fit polynomials.
+</dd><dt>PDL::Fit::Linfit
+</dt><dd>Fit linear combinations of functions.
+</dd><dt>PDL::Fit::LM
+</dt><dd>Fit functions using the Levenberg-Marquardt algorithm.</dd></dl><h2>Advanced</h2><dl><dt>PDL::Dbg
+</dt><dd><font SIZE="-1">PDL</font> debugger.
+</dd><dt>PDL::DiskCache
+</dt><dd>Manage many piddles through a disk cache.
+</dd><dt>PDL::CallExt
+</dt><dd>Call external functions.
+</dd><dt>PDL::Objects
+</dt><dd>If you want to sub-class from <font SIZE="-1">PDL </font>(note: incomplete).</dd></dl><h2>Copyright</h2>Copyright 2010 Daniel Carrera (dcarrera [at] gmail.com). You can distribute and/or modify this document under the same terms as the current Perl license. 
 
  See: <a rel="nofollow" HREF="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a>

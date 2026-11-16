@@ -16,10 +16,10 @@ description: "bestfortress – Driver for old Best Fortress UPS equipment"
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>baudrate</code>=<i>num</i></p>
 <dl>
-<dd>Set the speed of the serial connection &#8211; 1200, 2400, 4800 or 9600.</dl>
+<dd>Set the speed of the serial connection &#8211; 1200, 2400, 4800 or 9600.</dd></dl>
 <p> <code>max_load</code>=<i>VA</i></p>
 <dl>
-<dd>Set the full-scale value of the <code>ups.load</code> variable.</dl>
+<dd>Set the full-scale value of the <code>ups.load</code> variable.</dd></dl>
 <h2>Author</h2>
 <p>Holger Dietze &lt;holger.dietze [at] advis.de&gt;, Stuart D. Gathman &lt;stuart [at] bmsi.com&gt;</p>
 <h2>See Also</h2>

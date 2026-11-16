@@ -14,14 +14,14 @@ description: "scsi_proc_hostdir_add – Create directory in /proc for a scsi hos
 <p><i>sht</i></p>
 <dl>
 <dd>
-<dd>owner of this directory</dl>
+</dd><dd>owner of this directory</dd></dl>
 <h2>Description</h2>
 <p>Sets sht-&gt;proc_dir to the new directory.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

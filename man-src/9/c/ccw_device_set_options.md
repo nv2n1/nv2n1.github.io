@@ -14,10 +14,10 @@ description: "ccw_device_set_options – set some options"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>device for which the options are to be set</dl>
+</dd><dd>device for which the options are to be set</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>options to be set</dl>
+<dd>options to be set</dd></dl>
 <h2>Description</h2>
 <p>All flags specified in <i>flags</i> are set, the remainder is left untouched.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "ccw_device_set_options – set some options"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

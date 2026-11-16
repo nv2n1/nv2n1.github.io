@@ -20,4 +20,4 @@ description: "timezone – Local time zone configuration file"
 <h2>Author</h2>
 <p><code>Lennart Poettering</code> &lt;lennart [at] poettering.net&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

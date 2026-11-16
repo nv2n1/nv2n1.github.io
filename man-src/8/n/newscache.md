@@ -13,42 +13,42 @@ description: "newscache – Cache for Network News Transport Protocol (NNTP)"
 <h2>Description</h2>
 <p>NewsCache is a free cache server for USENET News. NewsCache acts to news reading clients like a news server, except that it stores only those articles that have been requested by at least one client. NewsCache targets problems of the current News System like network bandwidth consumption or the IO load caused by news clients. NewsCache acts to the upstream news server like a news reader programm.</p>
 <dl>
-<dt>It supports principles the following modes (for a detailed description read ServerSpec Configuration Options below):</p>
+<dt>It supports principles the following modes (for a detailed description read ServerSpec Configuration Options below):</dt>
 <dd>
-<dt><i>cached</i></p>
-<dd>NewsCache store every retrieved article in his internal cache. If this article is retrieved by another news reader client, then NewsCache can get the article from his cache instead of retrieving this article again from the upstream newsserver.</p>
-<dt><i>not-cached</i></p>
-<dd>NewsCache act as a &quot;proxy&quot; and does&#8217;nt store retrieved article in his local cache. This is usefull for combined multiple local newsserver configuration.</p>
-<dt><i>offline</i></p>
-<dd>NewsCache does&#8217;nt connect to the upstream newsserver. Only the specified newsgroups are retrieved by <code><a href="/docs/linux/man/8-updatenews/">updatenews</a>(8)</code> and stored in the cache. This is usefull in dialup configurations. The news reader clients can only access this newsgroups.</p>
-<dt><i>semi-offline, cached</i></p>
-<dd>The overview informations are loaded with <code><a href="/docs/linux/man/8-updatenews/">updatenews</a>(8)</code> and the articles retrieved by NewsCache, if a news reader client request it. The article is stored in the internal cache. </p>
+</dd><dt><i>cached</i></dt>
+<dd>NewsCache store every retrieved article in his internal cache. If this article is retrieved by another news reader client, then NewsCache can get the article from his cache instead of retrieving this article again from the upstream newsserver.</dd>
+<dt><i>not-cached</i></dt>
+<dd>NewsCache act as a &quot;proxy&quot; and does&#8217;nt store retrieved article in his local cache. This is usefull for combined multiple local newsserver configuration.</dd>
+<dt><i>offline</i></dt>
+<dd>NewsCache does&#8217;nt connect to the upstream newsserver. Only the specified newsgroups are retrieved by <code><a href="/docs/linux/man/8-updatenews/">updatenews</a>(8)</code> and stored in the cache. This is usefull in dialup configurations. The news reader clients can only access this newsgroups.</dd>
+<dt><i>semi-offline, cached</i></dt>
+<dd>The overview informations are loaded with <code><a href="/docs/linux/man/8-updatenews/">updatenews</a>(8)</code> and the articles retrieved by NewsCache, if a news reader client request it. The article is stored in the internal cache. </dd>
 <h2>Options</h2>
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Show version of program.</p>
-<dt><code>-f &#8211;fqdn</code></p>
-<dd>Print what newscache thinks is the fully qualified domain name.</p>
-<dt><code>-c &#8211;configuration config-file</code></p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-f &#8211;fqdn</code></dt>
+<dd>Print what newscache thinks is the fully qualified domain name.</dd>
+<dt><code>-c &#8211;configuration config-file</code></dt>
 <dd>
-<dt><code>-i &#8211;inetd</code></p>
-<dd>newscache is used with inetd and read from stdin.</p>
-<dt><code>-d &#8211;debug</code></p>
-<dd>Do not detach.</p>
-<dt><code>-p &#8211;print-parameter</code></p>
-<dd>Print current parameter settings.</p>
-<dt><code>-o &#8211;configuration-options</code></p>
-<dd>Print all options specified in the configure phase. </p>
+</dd><dt><code>-i &#8211;inetd</code></dt>
+<dd>newscache is used with inetd and read from stdin.</dd>
+<dt><code>-d &#8211;debug</code></dt>
+<dd>Do not detach.</dd>
+<dt><code>-p &#8211;print-parameter</code></dt>
+<dd>Print current parameter settings.</dd>
+<dt><code>-o &#8211;configuration-options</code></dt>
+<dd>Print all options specified in the configure phase. </dd>
 </dl>
 <h2>Signals</h2>
 <dl>
-<dt><code>SIGTERM, SIGQUIT, SIGINT, SIGPIPE</code></p>
-<dd>These signals instruct NewsCache to abort any existing transfers, close all connections and terminate the process. If the target of the signal is the daemon, all current child processes wil also be terminated. </p>
-<dt><code>SIGHUP</code></p>
-<dd>This signal instruct NewsCache to reread its configuration file <i>/etc/newscache.conf</i> . </p>
+<dt><code>SIGTERM, SIGQUIT, SIGINT, SIGPIPE</code></dt>
+<dd>These signals instruct NewsCache to abort any existing transfers, close all connections and terminate the process. If the target of the signal is the daemon, all current child processes wil also be terminated. </dd>
+<dt><code>SIGHUP</code></dt>
+<dd>This signal instruct NewsCache to reread its configuration file <i>/etc/newscache.conf</i> . </dd>
 </dl>
 <h2>Notes</h2>
 <p>Running NewsCache in <code>inetd</code> mode requires a correct inetd configuration. An example configuration line looks like: <code>news stream tcp nowait news /usr/sbin/newscache -i</code> </p>
@@ -69,3 +69,4 @@ description: "newscache – Cache for Network News Transport Protocol (NNTP)"
 <p>Report bugs to &lt;newscache [at] linuxhacker.org&gt;.</p>
 <h2>Copyright</h2>
 <p><code>NewsCache</code> is released under the <code>GNU General Public License (GPL).</code> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+</dl>

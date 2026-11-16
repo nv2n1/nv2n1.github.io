@@ -11,10 +11,8 @@ std::compare_3way - std::compare_3way
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class T, class U&gt;
     (since C++ 20)
-
         constexpr auto compare_3way(const T &amp;a, const U &amp;b);</code></pre> 
 Compares two values using three-way comparison and produces a result of the strongest applicable comparison category type.
 
@@ -69,39 +67,31 @@ This function is useful in generic programming, since it uses &lt; and == as fal
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;compare&gt;
-
 #include &lt;algorithm&gt;
 // does not support &lt;=&gt;
-
 struct Rational_1 {
     int num;
     int den; // &gt; 0
 };
 inline constexpr bool operator&lt;(Rational_1 lhs, Rational_1 rhs)
-
 {
     return lhs.num * rhs.den &lt; rhs.num * lhs.den;
 }
 inline constexpr bool operator==(Rational_1 lhs, Rational_1 rhs)
-
 {
     return lhs.num * rhs.den == rhs.num * lhs.den;
 }
 // supports &lt;=&gt;
-
 struct Rational_2 {
     int num;
     int den; // &gt; 0
 };
 inline constexpr std::weak_ordering operator&lt;=&gt;(Rational_2 lhs, Rational_2 rhs)
-
 {
     return lhs.num * rhs.den &lt;=&gt; rhs.num * lhs.den;
 }
 void print(std::weak_ordering value)
-
 {
     if (value == 0)
         std::cout &lt;&lt; &quot;equal&quot;;
@@ -112,11 +102,9 @@ void print(std::weak_ordering value)
     std::cout &lt;&lt; &quot;\n&quot;;
 }
 int main()
-
 {
     Rational_1 a{1, 2};
     Rational_1 b{3, 4};
-
     //  print(a &lt;=&gt; b);                //doesn't work
     print(std::compare_3way(a, b)); // works, defaults to &lt; and ==
     Rational_2 c{6, 5};

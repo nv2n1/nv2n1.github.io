@@ -15,22 +15,22 @@ description: "yum-versionlock.conf(5)"
 <h2>File Format</h2>
 <p><code><a href="/docs/linux/man/5-yum-versionlock-conf/">yum-versionlock.conf</a>(5)</code> utilizes configuration options in the form of</p>
 <dl>
-<dt>OPTION=VALUE</p>
-<dd></dl>
+<dt>OPTION=VALUE</dt>
+<dd></dd></dl>
 <h2>Option</h2>
 <dl>
-<dt>follow_obsoletes</p>
-<dd>This option is a boolean flag which specifies if the versionlock plugin should look at all the obsoletes, and see if any of the packages specified have an obsoleter. If an obsoleter is found then all versions of that package will be excluded. This option is off by default, as <code><a href="/docs/linux/man/1-yum-versionlock/">yum-versionlock</a>(1)</code> will take some time to do the obsoletes processing, and for non-rename obsoletes any issues you had which kept you at a specific version of a package should be different with another package.</dl>
+<dt>follow_obsoletes</dt>
+<dd>This option is a boolean flag which specifies if the versionlock plugin should look at all the obsoletes, and see if any of the packages specified have an obsoleter. If an obsoleter is found then all versions of that package will be excluded. This option is off by default, as <code><a href="/docs/linux/man/1-yum-versionlock/">yum-versionlock</a>(1)</code> will take some time to do the obsoletes processing, and for non-rename obsoletes any issues you had which kept you at a specific version of a package should be different with another package.</dd></dl>
 <h2>Option</h2>
 <dl>
-<dt>locklist</p>
-<dd>This option is a string with points to the file which will have the versionlock information in it. Note that the file <code>has</code> to exist (or the versionlock plugin will make yum exit). However it can be empty.</dl>
+<dt>locklist</dt>
+<dd>This option is a string with points to the file which will have the versionlock information in it. Note that the file <code>has</code> to exist (or the versionlock plugin will make yum exit). However it can be empty.</dd></dl>
 <h2>Author</h2>
 <dl>
 <dd>Chitlesh Goorah &lt;chitlesh [at] fedoraproject.org&gt;<br />
- James Antill &lt;james [at] fedoraproject.org&gt;</p>
+ James Antill &lt;james [at] fedoraproject.org&gt;</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-yum-versionlock/">yum-versionlock</a>(1)</code> </p>

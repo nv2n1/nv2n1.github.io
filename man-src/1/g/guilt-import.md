@@ -17,11 +17,11 @@ description: "guilt-import – Import specified patch file"
 <p> -P &lt;patch&gt;</p>
 <dl>
 <dt>
-<dd> Name of the patch within Guilt.</dl>
+</dt><dd> Name of the patch within Guilt.</dd></dl>
 <p> &lt;patch_file&gt;</p>
 <dl>
 <dt>
-<dd> Name of the file to be imported into the series.</dl>
+</dt><dd> Name of the file to be imported into the series.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -30,10 +30,10 @@ description: "guilt-import – Import specified patch file"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

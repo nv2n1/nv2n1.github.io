@@ -16,18 +16,18 @@ description: "gdm-screenshot – take a picture of the screen"
 <h2>OPTIONS</h2>
 <p> <code>Help Options:</code></p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show <font SIZE="-1">GTK+</font> Options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show <font SIZE="-1">GTK+</font> Options</dd></dl>
 <p> <code>Application Options:</code></p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Debugging output</p>
-<dt><code>&#8211;display</code>=<i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i></p>
-<dd> X display to use</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Debugging output</dd>
+<dt><code>&#8211;display</code>=<i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i></dt>
+<dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-gdm3/">gdm3</a></code>(8).</p>
 <h2>AUTHORS</h2>

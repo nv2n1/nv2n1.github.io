@@ -14,20 +14,20 @@ description: "mark_bbt_block_bad – Mark one of the block reserved for BBT bad"
 <p><i>this</i></p>
 <dl>
 <dd>
-<dd>the NAND device</dl>
+</dd><dd>the NAND device</dd></dl>
 <p> <i>td</i></p>
 <dl>
-<dd>the BBT description</dl>
+<dd>the BBT description</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>the CHIP selector</dl>
+<dd>the CHIP selector</dd></dl>
 <p> <i>block</i></p>
 <dl>
-<dd>the BBT block to mark</dl>
+<dd>the BBT block to mark</dd></dl>
 <h2>Description</h2>
 <p>Blocks reserved for BBT can become bad. This functions is an helper to mark such blocks as bad. It takes care of updating the in-memory BBT, marking the block as bad using a bad block marker and invalidating the associated td-&gt;pages[] entry.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

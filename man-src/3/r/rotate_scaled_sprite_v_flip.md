@@ -10,9 +10,7 @@ description: "rotate_scaled_sprite_v_flip – Rotates, stretches and flips a spr
 <p>rotate_scaled_sprite_v_flip &#8211; Rotates, stretches and flips a sprite. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rotate_scaled_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, int y,
-
                                  fixed angle, fixed scale);</code></pre>
 <h2>Description</h2>
 <p>Draws the sprite, similar to rotate_scaled_sprite() except that it flips the sprite vertically first. </p>

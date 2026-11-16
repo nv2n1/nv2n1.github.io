@@ -25,7 +25,7 @@ description: "Sound_DecoderInfo – Information about available soudn decoders."
  }</pre>
 <p><code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Sound_AvailableDecoders</code></dl>
+<dd><code>Sound_AvailableDecoders</code></dd></dl>
 <h2>Field Documentation</h2>
 <h3>const char* <code>Sound_DecoderInfo::author</code></h3>
 <h3>const char* <code>Sound_DecoderInfo::description</code></h3>

@@ -28,29 +28,29 @@ description: "Callout Handle Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle that is to be destroyed</dl>
+</dt><dd> <i>handle</i> The handle that is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS</dl>
+</dt><dd> GLOBUS_SUCCESS</dd></dl>
 <h3>globus_result_t globus_callout_handle_init (<code>globus_callout_handle_t</code> *handle)</h3>
 <p> Initialize a Globus Callout Handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> Pointer to the handle that is to be initialized</dl>
+</dt><dd> <i>handle</i> Pointer to the handle that is to be initialized</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dl>
+</dt><dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Hashtable initialization failed</dl>
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Hashtable initialization failed</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

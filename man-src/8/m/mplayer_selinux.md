@@ -108,8 +108,8 @@ description: "mplayer_selinux – Security Enhanced Linux Policy for the mplayer
 <p> <code>mplayer_exec_t</code> </p>
 <p> &#8211; Set files with the mplayer_exec_t type, if you want to transition an executable to the mplayer_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/vlc, /usr/bin/xine, /usr/bin/mplayer </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/vlc, /usr/bin/xine, /usr/bin/mplayer </dd>
 </dl>
 <p> <code>mplayer_home_t</code> </p>
 <p> &#8211; Set files with the mplayer_home_t type, if you want to store mplayer files in the users home directory. </p>

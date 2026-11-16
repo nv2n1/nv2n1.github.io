@@ -15,15 +15,15 @@ blk_queue_write_cache - configure queue's write cache
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>wc</i>
-<dl><dd>write back cache on or off</dl>
+<dl><dd>write back cache on or off</dd></dl>
  
 
  <i>fua</i>
-<dl><dd>device supports FUA writes, if true</dl>
+<dl><dd>device supports FUA writes, if true</dd></dl>
 
 <h2>Description</h2>
 

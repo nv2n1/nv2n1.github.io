@@ -28,6 +28,6 @@ services: db files
 ethers: db files
 rpc: db files
 netgroup: nis</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-machined-service/">systemd-machined.service</a></code>(8), <code><a href="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></code>(8), <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1) </p>

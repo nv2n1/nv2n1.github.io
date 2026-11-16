@@ -15,11 +15,11 @@ snd_soc_register_platform - Register a platform with the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The device for the platform</dl>
+<dl><dd></dd><dd>The device for the platform</dd></dl>
  
 
  <i>platform_drv</i>
-<dl><dd>The driver for the platform</dl>
+<dl><dd>The driver for the platform</dd></dl>
 
 <h2>Copyright</h2>
 

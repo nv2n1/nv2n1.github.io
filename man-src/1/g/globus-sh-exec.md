@@ -19,19 +19,19 @@ description: "globus-sh-exec – Run a shell script"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Print usage information and exit.</dl>
+</dt><dd> Print usage information and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Print version information and exit.</dl>
+</dt><dd> Print version information and exit.</dd></dl>
 <p> <code>-list, -l</code></p>
 <dl>
 <dt>
-<dd> Lists the defined <i>GLOBUS_SH_</i> variables and exits.</dl>
+</dt><dd> Lists the defined <i>GLOBUS_SH_</i> variables and exits.</dd></dl>
 <p> <code>-exec </code><i>EXEC</i><code>, -e </code><i>EXEC</i></p>
 <dl>
 <dt>
-<dd> Run the command <i>EXEC</i> instead of executing a separate script.</dl>
+</dt><dd> Run the command <i>EXEC</i> instead of executing a separate script.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
 <h2>Index</h2>

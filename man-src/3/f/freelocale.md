@@ -24,13 +24,11 @@ void freelocale(locale_t locobj);
 
  <b>newlocale</b>(), <b>freelocale</b>():
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>Since glibc 2.10:
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;700
-<dt>Before glibc 2.10:
-<dd> _GNU_SOURCE</dl>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;700
+</dd><dt>Before glibc 2.10:
+</dt><dd> _GNU_SOURCE</dd></dl>
 </dl>
 
 <h2>DESCRIPTION</h2>
@@ -38,9 +36,9 @@ void freelocale(locale_t locobj);
  The <b>newlocale</b>() function creates a new locale object, or modifies an existing object, returning a reference to the new or modified object as the function result. Whether the call creates a new object or modifies an existing object is determined by the value of <i>base</i>:
 <dl>
 <dt>*
-<dd> If <i>base</i> is <i>(locale_t)&nbsp;0</i>, a new object is created.
-<dt>*
-<dd> If <i>base</i> refers to valid existing locale object (i.e., an object returned by a previous call to <b>newlocale</b>() or <b><a HREF="/docs/linux/man/3-duplocale/">duplocale</a></b>(3)), then that object is modified by the call. If the call is successful, the contents of <i>base</i> are unspecified (in particular, the object referred to by <i>base</i> may be freed, and a new object created). Therefore, the caller should ensure that it stops using <i>base</i> before the call to <b>newlocale</b>(), and should subsequently refer to the modified object via the reference returned as the function result. If the call fails, the contents of <i>base</i> remain valid and unchanged.</dl>
+</dt><dd> If <i>base</i> is <i>(locale_t)&nbsp;0</i>, a new object is created.
+</dd><dt>*
+</dt><dd> If <i>base</i> refers to valid existing locale object (i.e., an object returned by a previous call to <b>newlocale</b>() or <b><a HREF="/docs/linux/man/3-duplocale/">duplocale</a></b>(3)), then that object is modified by the call. If the call is successful, the contents of <i>base</i> are unspecified (in particular, the object referred to by <i>base</i> may be freed, and a new object created). Therefore, the caller should ensure that it stops using <i>base</i> before the call to <b>newlocale</b>(), and should subsequently refer to the modified object via the reference returned as the function result. If the call fails, the contents of <i>base</i> remain valid and unchanged.</dd></dl>
  
 
  If <i>base</i> is the special locale object <b>LC_GLOBAL_LOCALE</b> (see <b><a HREF="/docs/linux/man/3-duplocale/">duplocale</a></b>(3)), or is not <i>(locale_t)&nbsp;0</i> and is not a valid locale object handle, the behavior is undefined. 
@@ -52,11 +50,11 @@ void freelocale(locale_t locobj);
  The following preset values of <i>locale</i> are defined for all categories that can be specified in <i>category_mask</i>:
 <dl>
 <dt>&quot;POSIX&quot;
-<dd> A minimal locale environment for C language programs.
-<dt>&quot;C&quot;
-<dd> Equivalent to &quot;POSIX&quot;.
-<dt>&quot;&quot;
-<dd> An implementation-defined native environment corresponding to the values of the <b>LC_*</b> and <b>LANG</b> environment variables (see <b><a HREF="/docs/linux/man/7-locale/">locale</a></b>(7)).</dl>
+</dt><dd> A minimal locale environment for C language programs.
+</dd><dt>&quot;C&quot;
+</dt><dd> Equivalent to &quot;POSIX&quot;.
+</dd><dt>&quot;&quot;
+</dt><dd> An implementation-defined native environment corresponding to the values of the <b>LC_*</b> and <b>LANG</b> environment variables (see <b><a HREF="/docs/linux/man/7-locale/">locale</a></b>(7)).</dd></dl>
 
 <h3>freelocale()</h3>
 
@@ -72,13 +70,13 @@ void freelocale(locale_t locobj);
 
 <dl>
 <dt><b>EINVAL</b>
-<dd> One or more bits in <i>category_mask</i> do not correspond to a valid locale category.
-<dt><b>EINVAL</b>
-<dd> <i>locale</i> is NULL.
-<dt><b>ENOENT</b>
-<dd> <i>locale</i> is not a string pointer referring to a valid locale.
-<dt><b>ENOMEM</b>
-<dd> Insufficient memory to create a locale object.</dl>
+</dt><dd> One or more bits in <i>category_mask</i> do not correspond to a valid locale category.
+</dd><dt><b>EINVAL</b>
+</dt><dd> <i>locale</i> is NULL.
+</dd><dt><b>ENOENT</b>
+</dt><dd> <i>locale</i> is not a string pointer referring to a valid locale.
+</dd><dt><b>ENOMEM</b>
+</dt><dd> Insufficient memory to create a locale object.</dd></dl>
 
 <h2>VERSIONS</h2>
 
@@ -99,9 +97,9 @@ void freelocale(locale_t locobj);
  Having created and initialized the locale object, the program then applies it using <b><a HREF="/docs/linux/man/3-uselocale/">uselocale</a></b>(3), and then tests the effect of the locale changes by:
 <dl>
 <dt>1.
-<dd> Displaying a floating-point number with a fractional part. This output will be affected by the <b>LC_NUMERIC</b> setting. In many European-language locales, the fractional part of the number is separated from the integer part using a comma, rather than a period.
-<dt>2.
-<dd> Displaying the date. The format and language of the output will be affected by the <b>LC_TIME</b> setting.</dl>
+</dt><dd> Displaying a floating-point number with a fractional part. This output will be affected by the <b>LC_NUMERIC</b> setting. In many European-language locales, the fractional part of the number is separated from the integer part using a comma, rather than a period.
+</dd><dt>2.
+</dt><dd> Displaying the date. The format and language of the output will be affected by the <b>LC_TIME</b> setting.</dd></dl>
  
 
  The following shell sessions show some example runs of this program. 

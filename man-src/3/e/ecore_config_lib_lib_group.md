@@ -22,12 +22,12 @@ description: "Ecore Config Library Functions – Functions that are used to star
 <p> This function (or <code>ecore_config_init</code> ) must be run before any other function in the Enlightened Property Library, even if you have run <code>ecore_init</code> . </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the library is successfully set up. ECORE_CONFIG_ERR_FAIL otherwise.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the library is successfully set up. ECORE_CONFIG_ERR_FAIL otherwise.</dd></dl>
 <h3>EAPI int ecore_config_system_shutdown (void)</h3>
 <p>Frees memory and shuts down the library for other programming libraries. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_IGNORED</dl>
+<dd>ECORE_CONFIG_ERR_IGNORED</dd></dl>
 <p> References ecore_config_dst(). </p>
 <p> Referenced by ecore_config_shutdown().</p>
 <h2>Author</h2>

@@ -29,26 +29,26 @@ description: "gpt-pkg – Creates flavored binary packages out of an installatio
 <p>Installed files such as executables that are found in pgm and ptm_static packages will overwrite one another when multiple flavors of the same package are built by gpt-build. To preserve multiple flavors of these files, gpt-build copies them into flavored subdirectories. For example, the program <tt>$GLOBUS_LOCATION</tt>/bin/foo will be copied into the location <tt>$GLOBUS_LOCATION</tt>/bin/gcc32/shared if it was built with dynamically with the gcc32 flavor. <code>gpt-pkg</code> retrieves these files and copies them back to their proper location before packaging them. Thus gpt-pkg will also overwrite these files as it archives the different flavors of a pgm package.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-installdir</code></p>
-<dd>Specify the directory in which the installed files currently live. If this argument is not supplied, the value of the environment variable <font SIZE="-1">GLOBUS_LOCATION</font> is used instead.</p>
-<dt><code>-all</code></p>
-<dd>Packages all of the binaries in an installation.</p>
-<dt><code>-native</code></p>
-<dd>Creates a package in the native packaging format. Currently only rpm is supported.</p>
-<dt><code>-rpmprefix=&lt;path_to_installation</code>&gt;</p>
-<dd>This should be set to the path to your <font SIZE="-1">GLOBUS_LOCATION</font>. <font SIZE="-1">GPT</font> will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</p>
-<dt><code>-rpmlicense=&lt;label</code>&gt;</p>
-<dd>Provides an alternate copyright label for the rpms. The default is whatever <font SIZE="-1">GPT</font> was configured with.</p>
-<dt><code>-verbose</code></p>
-<dd>Prints out all of the build messages.</p>
-<dt><code>-log=FILE</code></p>
-<dd>Appends all of the build messages to <font SIZE="-1">FILE</font>. This option also sets -verbose.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-installdir</code></dt>
+<dd>Specify the directory in which the installed files currently live. If this argument is not supplied, the value of the environment variable <font SIZE="-1">GLOBUS_LOCATION</font> is used instead.</dd>
+<dt><code>-all</code></dt>
+<dd>Packages all of the binaries in an installation.</dd>
+<dt><code>-native</code></dt>
+<dd>Creates a package in the native packaging format. Currently only rpm is supported.</dd>
+<dt><code>-rpmprefix=&lt;path_to_installation</code>&gt;</dt>
+<dd>This should be set to the path to your <font SIZE="-1">GLOBUS_LOCATION</font>. <font SIZE="-1">GPT</font> will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</dd>
+<dt><code>-rpmlicense=&lt;label</code>&gt;</dt>
+<dd>Provides an alternate copyright label for the rpms. The default is whatever <font SIZE="-1">GPT</font> was configured with.</dd>
+<dt><code>-verbose</code></dt>
+<dd>Prints out all of the build messages.</dd>
+<dt><code>-log=FILE</code></dt>
+<dd>Appends all of the build messages to <font SIZE="-1">FILE</font>. This option also sets -verbose.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>pgm and pgm_static packages</h2>
 <p>gpt-build copies the files for these packages in a flavored location because different flavors of these types of packages will conflict with each other. <code>gpt-pkg</code> restores these files when it packages pgm and pgm_static types.</p>
 <h2>See Also</h2>

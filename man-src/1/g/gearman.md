@@ -13,40 +13,40 @@ description: "gearman – Gearmand Documentation, http://gearman.info/"
 <h2>SYNOPSIS</h2>
 <p> <code>Common options</code></p>
 <dl>
-<dt><code>-f &lt;function&gt;</code></p>
-<dd> Function name to use for jobs (can give many)</p>
-<dt><code>-h &lt;host&gt;</code></p>
-<dd> Job server host</p>
-<dt><code>-H</code></p>
-<dd> Print this help menu</p>
-<dt><code>-p &lt;port&gt;</code></p>
-<dd> Gearman server port</p>
-<dt><code>-t &lt;timeout&gt;</code></p>
-<dd> Timeout in milliseconds</p>
-<dt><code>-i &lt;pidfile&gt;</code></p>
-<dd> Create a pidfile for the process</p>
-<dt><code>-n</code></p>
-<dd> In client mode run one job per line, in worker mode send data packet for each line</p>
-<dt><code>-N</code></p>
-<dd> Same as -n, but strip off the newline </p>
+<dt><code>-f &lt;function&gt;</code></dt>
+<dd> Function name to use for jobs (can give many)</dd>
+<dt><code>-h &lt;host&gt;</code></dt>
+<dd> Job server host</dd>
+<dt><code>-H</code></dt>
+<dd> Print this help menu</dd>
+<dt><code>-p &lt;port&gt;</code></dt>
+<dd> Gearman server port</dd>
+<dt><code>-t &lt;timeout&gt;</code></dt>
+<dd> Timeout in milliseconds</dd>
+<dt><code>-i &lt;pidfile&gt;</code></dt>
+<dd> Create a pidfile for the process</dd>
+<dt><code>-n</code></dt>
+<dd> In client mode run one job per line, in worker mode send data packet for each line</dd>
+<dt><code>-N</code></dt>
+<dd> Same as -n, but strip off the newline </dd>
 <p> <code>Client options</code></p>
-<dt><code>-b</code></p>
-<dd> Run jobs in the background</p>
-<dt><code>-I</code></p>
-<dd> Run jobs as high priority</p>
-<dt><code>-L</code></p>
-<dd> Run jobs as low priority</p>
-<dt><code>-P</code></p>
-<dd> Prefix all output lines with functions names</p>
-<dt><code>-s</code></p>
-<dd> Send job without reading from standard input</p>
-<dt><code>-u &lt;unique&gt;</code></p>
-<dd> Unique key to use for job </p>
+<dt><code>-b</code></dt>
+<dd> Run jobs in the background</dd>
+<dt><code>-I</code></dt>
+<dd> Run jobs as high priority</dd>
+<dt><code>-L</code></dt>
+<dd> Run jobs as low priority</dd>
+<dt><code>-P</code></dt>
+<dd> Prefix all output lines with functions names</dd>
+<dt><code>-s</code></dt>
+<dd> Send job without reading from standard input</dd>
+<dt><code>-u &lt;unique&gt;</code></dt>
+<dd> Unique key to use for job </dd>
 <p> <i>Worker options*</i></p>
-<dt><code>-c &lt;count&gt;</code></p>
-<dd> Number of jobs for worker to run before exiting</p>
-<dt><code>-w</code></p>
-<dd> Run in worker mode</dl>
+<dt><code>-c &lt;count&gt;</code></dt>
+<dd> Number of jobs for worker to run before exiting</dd>
+<dt><code>-w</code></dt>
+<dd> Run in worker mode</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> With gearman you can run client and worker functions from the command line. </p>
 <p> The environmental variable GEARMAN_SERVER can be used to specify multiple gearmand servers. Please see the c:func:&#8217;gearman_client_add_servers&#8217; for an explanation of the required syntax.</p>

@@ -14,7 +14,7 @@ description: "snd_unregister_device – unregister the device on the given card"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device instance</dl>
+</dd><dd>the device instance</dd></dl>
 <h2>Description</h2>
 <p>Unregisters the device file already registered via <code>snd_register_device</code>.</p>
 <h2>Return</h2>

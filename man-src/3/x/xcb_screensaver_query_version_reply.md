@@ -10,12 +10,7 @@ description: "xcb_screensaver_query_version –"
 <p>xcb_screensaver_query_version &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/screensaver.h&gt;
-
-
 Request function
-
-
-
 xcb_screensaver_query_version_cookie_t xcb_screensaver_query_version(xcb_connection_t *conn, uint8_t client_major_version, uint8_t client_minor_version);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_screensaver_query_version_reply_t {
@@ -30,27 +25,27 @@ xcb_screensaver_query_version_cookie_t xcb_screensaver_query_version(xcb_connect
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_screensaver_query_version_reply_t *<code>xcb_screensaver_query_version_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_screensaver_query_version_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>client_major_version</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>client_minor_version</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>client_major_version</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>client_minor_version</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_SCREENSAVER_QUERY_VERSION</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>server_major_version</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>server_minor_version</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_SCREENSAVER_QUERY_VERSION</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>server_major_version</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>server_minor_version</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_screensaver_query_version_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_screensaver_query_version_reply</i>. </p>

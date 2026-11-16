@@ -110,14 +110,14 @@ description: "Atlas::Objects::Entity::AccountData – Base class for accounts."
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Entity::AdminEntityData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Entity::PlayerData</code>, and <code>Atlas::Objects::Entity::AdminData</code>.</p>
 <h3>static <code>AccountData</code>* Atlas::Objects::Entity::AccountData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Entity::AdminEntityData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Entity::PlayerData</code>, and <code>Atlas::Objects::Entity::AdminData</code>. </p>
 <h2>Author</h2>

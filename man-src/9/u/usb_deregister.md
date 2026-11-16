@@ -14,7 +14,7 @@ description: "usb_deregister – unregister a USB interface driver"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>USB operations of the interface driver to unregister</dl>
+</dd><dd>USB operations of the interface driver to unregister</dd></dl>
 <h2>Context</h2>
 <p>must be able to sleep</p>
 <h2>Description</h2>

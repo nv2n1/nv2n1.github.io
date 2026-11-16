@@ -29,12 +29,12 @@ description: "PCRE2 – Perl-compatible regular expressions"
 <h2>PARTIAL MATCHING USING pcre2_match()</h2>
 <p>When a partial matching option is set, the result of calling <code>pcre2_match()</code> can be one of the following:</p>
 <dl>
-<dt><code>A successful match</code></p>
-<dd>A complete match has been found, starting and ending within this subject.</p>
-<dt><code>PCRE2_ERROR_NOMATCH</code></p>
-<dd>No match can start anywhere in this subject.</p>
-<dt><code>PCRE2_ERROR_PARTIAL</code></p>
-<dd>Adding more characters may result in a complete match that uses one or more characters from the end of this subject.</dl>
+<dt><code>A successful match</code></dt>
+<dd>A complete match has been found, starting and ending within this subject.</dd>
+<dt><code>PCRE2_ERROR_NOMATCH</code></dt>
+<dd>No match can start anywhere in this subject.</dd>
+<dt><code>PCRE2_ERROR_PARTIAL</code></dt>
+<dd>Adding more characters may result in a complete match that uses one or more characters from the end of this subject.</dd></dl>
 <p> When a partial match is returned, the first two elements in the ovector point to the portion of the subject that was matched, but the values in the rest of the ovector are undefined. The appearance of \K in the pattern has no effect for a partial match. Consider this pattern: </p>
 <p>&nbsp;<wbr>&nbsp;/abc\K123/ </p>
 <p> If it is matched against &quot;456abc123xyz&quot; the result is a complete match, and the ovector defines the matched string as &quot;123&quot;, because \K resets the &quot;start of match&quot; point. However, if a partial match is requested and the subject string is &quot;456abc12&quot;, a partial match is found for the string &quot;abc12&quot;, because all these characters are needed for a subsequent re-match with additional characters. </p>

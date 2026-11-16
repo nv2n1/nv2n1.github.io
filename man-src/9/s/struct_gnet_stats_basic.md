@@ -18,11 +18,11 @@ struct_gnet_stats_basic - byte/packet throughput statistics
 <h2>Members</h2>
 
 bytes
-<dl><dd>number of seen bytes</dl>
+<dl><dd>number of seen bytes</dd></dl>
  
 
  packets
-<dl><dd>number of seen packets</dl>
+<dl><dd>number of seen packets</dd></dl>
 
 <h2>Copyright</h2>
 

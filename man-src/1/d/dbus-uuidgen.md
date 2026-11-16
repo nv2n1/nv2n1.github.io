@@ -11,21 +11,21 @@ description: "dbus-uuidgen – Utility to generate UUIDs"
 <p> dbus-uuidgen &#8211; Utility to generate UUIDs </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>dbus-uuidgen</code> [&#8211;version] [&#8211;ensure&nbsp;[<i>=FILENAME</i>]] [&#8211;get&nbsp;[<i>=FILENAME</i>]]</p>
+<dt> <code>dbus-uuidgen</code> [&#8211;version] [&#8211;ensure&nbsp;[<i>=FILENAME</i>]] [&#8211;get&nbsp;[<i>=FILENAME</i>]]</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>dbus-uuidgen</code> command generates or reads a universally unique ID. </p>
+<dd>The <code>dbus-uuidgen</code> command generates or reads a universally unique ID. </dd>
 <p> Note that the D-Bus UUID has no relationship to RFC 4122 and does not generate UUIDs compatible with that spec. Many systems have a separate command for that (often called &quot;uuidgen&quot;). </p>
 <p> See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about D-Bus. </p>
 <p> The primary usage of <code>dbus-uuidgen</code> is to run in the post-install script of a D-Bus package like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   dbus-uuidgen --ensure
 </pre>
-</dl>
+</dd></dl>
 <p> This will ensure that /var/lib/dbus/machine-id exists and has the uuid in it. It won&#8217;t overwrite an existing uuid, since this id should remain fixed for a single machine until the next reboot at least. </p>
 <p> The important properties of the machine UUID are that 1) it remains unchanged until the next reboot and 2) it is different for any two running instances of the OS kernel. That is, if two processes see the same UUID, they should also see the same shared memory, UNIX domain sockets, local X displays, localhost.localdomain resolution, process IDs, and so forth. </p>
 <p> If you run <code>dbus-uuidgen</code> with no options it just prints a new uuid made up out of thin air. </p>
@@ -37,15 +37,15 @@ description: "dbus-uuidgen – Utility to generate UUIDs"
 <p> <code>&#8211;get[=FILENAME]</code></p>
 <dl>
 <dt>
-<dd> If a filename is not given, defaults to localstatedir/lib/dbus/machine-id (localstatedir is usually /var). If this file exists and is valid, the uuid in the file is printed on stdout. Otherwise, the command exits with a nonzero status.</dl>
+</dt><dd> If a filename is not given, defaults to localstatedir/lib/dbus/machine-id (localstatedir is usually /var). If this file exists and is valid, the uuid in the file is printed on stdout. Otherwise, the command exits with a nonzero status.</dd></dl>
 <p> <code>&#8211;ensure[=FILENAME]</code></p>
 <dl>
 <dt>
-<dd> If a filename is not given, defaults to localstatedir/lib/dbus/machine-id (localstatedir is usually /var). If this file exists then it will be validated, and a failure code returned if it contains the wrong thing. If the file does not exist, it will be created with a new uuid in it. On success, prints no output.</dl>
+</dt><dd> If a filename is not given, defaults to localstatedir/lib/dbus/machine-id (localstatedir is usually /var). If this file exists then it will be validated, and a failure code returned if it contains the wrong thing. If the file does not exist, it will be created with a new uuid in it. On success, prints no output.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version of dbus-uuidgen</dl>
+</dt><dd> Print the version of dbus-uuidgen</dd></dl>
 <h2>AUTHOR</h2>
 <p> See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/doc/AUTHORS">http://www.freedesktop.org/software/dbus/doc/AUTHORS</a></code>m[]</p>
 <h2>BUGS</h2>

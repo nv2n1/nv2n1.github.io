@@ -14,10 +14,10 @@ description: "usb_clear_halt – tells device to clear endpoint halt/stall condi
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device whose endpoint is halted</dl>
+</dd><dd>device whose endpoint is halted</dd></dl>
 <p> <i>pipe</i></p>
 <dl>
-<dd>endpoint &#8220;pipe&#8221; being cleared</dl>
+<dd>endpoint &#8220;pipe&#8221; being cleared</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

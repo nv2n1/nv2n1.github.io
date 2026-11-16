@@ -11,11 +11,8 @@ std::experimental::minmax - std::experimental::minmax
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     template &lt;class T, class Abi&gt;
-
     std::pair&lt;simd&lt;T, Abi&gt;, simd&lt;T, Abi&gt;&gt;
-
     minmax(const simd&lt;T, Abi&gt; &amp;a, const simd&lt;T, Abi&gt; &amp;b) noexcept;</code></pre> 
 Returns both the element-wise min result and element-wise max result. 
 

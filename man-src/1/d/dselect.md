@@ -22,51 +22,49 @@ description: "dselect – Debian package management frontend"
 <h2>OPTIONS</h2>
 <p> All options can be specified both on the command line and in the <code>dselect</code> configuration file <i>/etc/dpkg/dselect.cfg</i> or the files on the configuration directory <i>/etc/dpkg/dselect.cfg.d/</i>. Each line in the configuration file is either an option (exactly the same as the command line option but without leading hyphens) or a comment (if it starts with a <code>#</code>). </p>
 <dl>
-<dt><code>&#8211;admindir</code><i> directory</i></p>
-<dd> Changes the directory where the dpkg `<i>status</i>&#8216;, `<i>available</i>&#8216; and similar files are located. This defaults to <i>/var/lib/dpkg</i> and normally there shouldn&#8217;t be any need to change it.</p>
-<dt><code>&#8211;debug</code><i> file </i>| <code>-D</code><i>file</i></p>
-<dd> Turn on debugging. Debugging information is sent to <i>file</i>.</p>
-<dt><code>&#8211;expert</code></p>
-<dd> Turns on expert mode, i.e. doesn&#8217;t display possibly annoying help messages.</p>
-<dt><code>&#8211;colour</code>|<code>&#8211;color</code> <i>screenpart:</i>[<i>foreground</i>],[<i>background</i>][<i>:attr</i>[<i>+attr+&#8230;</i>]]</p>
-<dd> Configures screen colors. This works only if your display supports colors. This option may be used multiple times (and is best used in <i>dselect.cfg</i>). Each use changes the color (and optionally, other attributes) of one part of the screen. The parts of the screen (from top to bottom) are:</p>
+<dt><code>&#8211;admindir</code><i> directory</i></dt>
+<dd> Changes the directory where the dpkg `<i>status</i>&#8216;, `<i>available</i>&#8216; and similar files are located. This defaults to <i>/var/lib/dpkg</i> and normally there shouldn&#8217;t be any need to change it.</dd>
+<dt><code>&#8211;debug</code><i> file </i>| <code>-D</code><i>file</i></dt>
+<dd> Turn on debugging. Debugging information is sent to <i>file</i>.</dd>
+<dt><code>&#8211;expert</code></dt>
+<dd> Turns on expert mode, i.e. doesn&#8217;t display possibly annoying help messages.</dd>
+<dt><code>&#8211;colour</code>|<code>&#8211;color</code> <i>screenpart:</i>[<i>foreground</i>],[<i>background</i>][<i>:attr</i>[<i>+attr+&#8230;</i>]]</dt>
+<dd> Configures screen colors. This works only if your display supports colors. This option may be used multiple times (and is best used in <i>dselect.cfg</i>). Each use changes the color (and optionally, other attributes) of one part of the screen. The parts of the screen (from top to bottom) are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>title</code></p>
-<dd> The screen title.</p>
-<dt><code>listhead</code></p>
-<dd> The header line above the list of packages.</p>
-<dt><code>list</code></p>
-<dd> The scrolling list of packages (and also some help text).</p>
-<dt><code>listsel</code></p>
-<dd> The selected item in the list.</p>
-<dt><code>pkgstate</code></p>
-<dd> In the list of packages, the text indicating the current state of each package.</p>
-<dt><code>pkgstatesel</code></p>
-<dd> In the list of packages, the text indicating the current state of the currently selected package.</p>
-<dt><code>infohead</code></p>
-<dd> The header line that displays the state of the currently selected package.</p>
-<dt><code>infodesc</code></p>
-<dd> The package&#8217;s short description.</p>
-<dt><code>info</code></p>
-<dd> Used to display package info such as the package&#8217;s description.</p>
-<dt><code>infofoot</code></p>
-<dd> The last line of the screen when selecting packages.</p>
-<dt><code>query</code></p>
-<dd> Used to display query lines</p>
-<dt><code>helpscreen</code></p>
-<dd> Color of help screens.</dl>
+<dt><code>title</code></dt>
+<dd> The screen title.</dd>
+<dt><code>listhead</code></dt>
+<dd> The header line above the list of packages.</dd>
+<dt><code>list</code></dt>
+<dd> The scrolling list of packages (and also some help text).</dd>
+<dt><code>listsel</code></dt>
+<dd> The selected item in the list.</dd>
+<dt><code>pkgstate</code></dt>
+<dd> In the list of packages, the text indicating the current state of each package.</dd>
+<dt><code>pkgstatesel</code></dt>
+<dd> In the list of packages, the text indicating the current state of the currently selected package.</dd>
+<dt><code>infohead</code></dt>
+<dd> The header line that displays the state of the currently selected package.</dd>
+<dt><code>infodesc</code></dt>
+<dd> The package&#8217;s short description.</dd>
+<dt><code>info</code></dt>
+<dd> Used to display package info such as the package&#8217;s description.</dd>
+<dt><code>infofoot</code></dt>
+<dd> The last line of the screen when selecting packages.</dd>
+<dt><code>query</code></dt>
+<dd> Used to display query lines</dd>
+<dt><code>helpscreen</code></dt>
+<dd> Color of help screens.</dd></dl>
 </dl>
 <dt>
-<dd> After the part of the screen comes a colon and the color specification. You can specify either the foreground color, the background color, or both, overriding the compiled-in colors. Use standard curses color names.</p>
+</dt><dd> After the part of the screen comes a colon and the color specification. You can specify either the foreground color, the background color, or both, overriding the compiled-in colors. Use standard curses color names.</dd>
 <dt>
-<dd> Optionally, after the color specification is another colon, and an attribute specification. This is a list of one or more attributes, separated by plus (&quot;+&quot;) characters. Available attributes include (not all of these will work on all terminals): normal, standout, underline, reverse, blink, bright, dim, bold</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a brief help text and exit successfully.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit successfully.</dl>
+</dt><dd> Optionally, after the color specification is another colon, and an attribute specification. This is a list of one or more attributes, separated by plus (&quot;+&quot;) characters. Available attributes include (not all of these will work on all terminals): normal, standout, underline, reverse, blink, bright, dim, bold</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a brief help text and exit successfully.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit successfully.</dd></dl>
 <h2>ACTIONS</h2>
 <p> When <code>dselect</code> is started it can perform the following actions, either directly if it was specified on the command line or by prompting the user with a menu of available actions if running interactively:</p>
 <h3>access</h3>
@@ -175,8 +173,8 @@ description: "dselect – Debian package management frontend"
 <p> If you mistakenly establish some settings and wish to revert all the selections to what is currently installed on the system, press the <code>&#8216;C&#8217;</code> key. This is somewhat similar to using the unhold command on all packages, but provides a more obvious panic button in cases where the user pressed <code>enter</code> by accident. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>HOME</code></p>
-<dd> If set, <code>dselect</code> will use it as the directory from which to read the user specific configuration file.</dl>
+<dt><code>HOME</code></dt>
+<dd> If set, <code>dselect</code> will use it as the directory from which to read the user specific configuration file.</dd></dl>
 <h2>BUGS</h2>
 <p> The <code>dselect</code> package selection interface is confusing to some new users. Reportedly, it even makes seasoned kernel developers cry. </p>
 <p> The documentation is lacking. </p>

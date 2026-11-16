@@ -21,41 +21,41 @@ git tar - tree[--remote = &lt;repo&gt;]&lt;tree - ish&gt;[&lt;base&gt;]
 <p> &lt;tree-ish&gt;</p>
 <dl>
 <dt>
-<dd> The tree or commit to produce tar archive for. If it is the object name of a commit object.</dl>
+</dt><dd> The tree or commit to produce tar archive for. If it is the object name of a commit object.</dd></dl>
 <p> &lt;base&gt;</p>
 <dl>
 <dt>
-<dd> Leading path to the files in the resulting tar archive.</dl>
+</dt><dd> Leading path to the files in the resulting tar archive.</dd></dl>
 <p> &#8211;remote=&lt;repo&gt;</p>
 <dl>
 <dt>
-<dd> Instead of making a tar archive from local repository, retrieve a tar archive from a remote repository.</dl>
+</dt><dd> Instead of making a tar archive from local repository, retrieve a tar archive from a remote repository.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> tar.umask</p>
 <dl>
 <dt>
-<dd> This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value &quot;user&quot; indicates that the archiving user&#8217;s umask will be used instead. See <a href="/docs/linux/man/2-umask/">umask</a>(2) for details.</dl>
+</dt><dd> This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value &quot;user&quot; indicates that the archiving user&#8217;s umask will be used instead. See <a href="/docs/linux/man/2-umask/">umask</a>(2) for details.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> git tar-tree HEAD junk | (cd /var/tmp/ &amp;&amp; tar xf -)</p>
 <dl>
 <dt>
-<dd> Create a tar archive that contains the contents of the latest commit on the current branch, and extracts it in /var/tmp/junk directory.</dl>
+</dt><dd> Create a tar archive that contains the contents of the latest commit on the current branch, and extracts it in /var/tmp/junk directory.</dd></dl>
 <p> git tar-tree v1.4.0 git-1.4.0 | gzip &gt;git-1.4.0.tar.gz</p>
 <dl>
 <dt>
-<dd> Create a tarball for v1.4.0 release.</dl>
+</dt><dd> Create a tarball for v1.4.0 release.</dd></dl>
 <p> git tar-tree v1.4.0^{tree} git-1.4.0 | gzip &gt;git-1.4.0.tar.gz</p>
 <dl>
 <dt>
-<dd> Create a tarball for v1.4.0 release, but without a global extended pax header.</dl>
+</dt><dd> Create a tarball for v1.4.0 release, but without a global extended pax header.</dd></dl>
 <p> git tar-tree &#8211;remote=example.com:git.git v1.4.0 &gt;git-1.4.0.tar</p>
 <dl>
 <dt>
-<dd> Get a tarball v1.4.0 from example.com.</dl>
+</dt><dd> Get a tarball v1.4.0 from example.com.</dd></dl>
 <p> git tar-tree HEAD:Documentation/ git-docs &gt; git-1.4.0-docs.tar</p>
 <dl>
 <dt>
-<dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.tar</i>, with the prefix <i>git-docs/</i>.</dl>
+</dt><dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.tar</i>, with the prefix <i>git-docs/</i>.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

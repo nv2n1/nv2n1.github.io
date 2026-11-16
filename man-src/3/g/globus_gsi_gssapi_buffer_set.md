@@ -26,53 +26,54 @@ description: "Buffer Set Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
  <i>member_buffer</i> Buffer to insert into the buffer set.<br />
- <i>buffer_set</i> Pointer to a initialized buffer set structure.</dl>
+ <i>buffer_set</i> Pointer to a initialized buffer set structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GSS_S_COMPLETE</i> Success<br />
- <i>GSS_S_FAILURE</i> Failure</dl>
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+ <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>gss_create_empty_buffer_set</code> </p>
+</dt><dd> <code>gss_create_empty_buffer_set</code> </dd>
 <p> <code>gss_release_buffer_set</code></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_create_empty_buffer_set (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)</h3>
 <p> Create a empty buffer set. This function allocates and initializes a empty buffer set. The memory allocated in this function should be freed by a call to gss_release_buffer_set. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
- <i>buffer_set</i> Pointer to a buffer set structure.</dl>
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
+ <i>buffer_set</i> Pointer to a buffer set structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GSS_S_COMPLETE</i> Success<br />
- <i>GSS_S_FAILURE</i> Failure</dl>
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+ <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>gss_add_buffer_set_member</code> </p>
+</dt><dd> <code>gss_add_buffer_set_member</code> </dd>
 <p> <code>gss_release_buffer_set</code></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_release_buffer_set (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)</h3>
 <p> Free a Buffer Set. This function will free all memory associated with a buffer set. Note that it will also free all memory associated with the buffers int the buffer set. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
- <i>buffer_set</i> Pointer to a buffer set structure. This pointer will point at a NULL value upon return.</dl>
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
+ <i>buffer_set</i> Pointer to a buffer set structure. This pointer will point at a NULL value upon return.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GSS_S_COMPLETE</i> Success<br />
- <i>GSS_S_FAILURE</i> Failure</dl>
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+ <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>gss_create_empty_buffer_set</code> </p>
+</dt><dd> <code>gss_create_empty_buffer_set</code> </dd>
 <p> <code>gss_add_buffer_set_member</code></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
 <h2>Index</h2>
+</p>

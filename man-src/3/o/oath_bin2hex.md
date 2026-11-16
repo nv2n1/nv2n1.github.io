@@ -16,11 +16,11 @@ void oath_bin2hex(const char *binstr, size_t binlen, char *hexstr);</code></pre>
 <h2>Arguments</h2>
 
 <dl><dt>const char * binstr
-<dd>input binary data
-<dt>size_t binlen
-<dd>length of input binary data <i>binstr</i>
-<dt>char * hexstr
-<dd>output string with hex data, must have room for 2*<i>binlen</i>+1.</dl>
+</dt><dd>input binary data
+</dd><dt>size_t binlen
+</dt><dd>length of input binary data <i>binstr</i>
+</dd><dt>char * hexstr
+</dt><dd>output string with hex data, must have room for 2*<i>binlen</i>+1.</dd></dl>
 
 <h2>Description</h2>
 

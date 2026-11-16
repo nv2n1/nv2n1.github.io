@@ -15,18 +15,18 @@ description: "booth-keygen – generate authentication key"
 <h2>Parameters</h2>
 <p><i>auth-file</i></p>
 <dl>
-<dd>The file to contain the generated key. Defaults to <i>/etc/booth/authkey</i>. Use absolute paths.</dl>
+<dd>The file to contain the generated key. Defaults to <i>/etc/booth/authkey</i>. Use absolute paths.</dd></dl>
 <h2>Options</h2>
 <p><code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print usage.</dl>
+<dd>Print usage.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>0</code></p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <p> <code>!= 0</code></p>
 <dl>
-<dd>File already exists or some other error.</dl>
+<dd>File already exists or some other error.</dd></dl>
 <h2>Copying</h2>
 <p>Copyright &#169; 2015 Dejan Muhamedagic &lt;dmuhamedagic [at] suse.com&gt; </p>
 <p> Free use of this software is granted under the terms of the GNU General Public License (GPL) as of version 2 (see COPYING file) or later.</p>

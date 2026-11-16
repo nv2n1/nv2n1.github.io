@@ -25,16 +25,16 @@ description: "pnmcomp – composite (overlay) two portable anymap files together
 <p> The overlay and underlying images may be of different formats (e.g. overlaying a PBM text image over a full color PPM image) and have different maxvals. The output image has the more general of the two input formats and a maxval that is the least common multiple the two maxvals (or the maximum maxval allowable by the format, if the LCM is more than that). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-invert</code></p>
-<dd> This option inverts the sense of the values in the alpha mask, which effectively switches the roles of the overlay image and the underlying image in places where the two intersect.</p>
-<dt><code>-xoff </code><i>X</i></p>
+<dt><code>-invert</code></dt>
+<dd> This option inverts the sense of the values in the alpha mask, which effectively switches the roles of the overlay image and the underlying image in places where the two intersect.</dd>
+<dt><code>-xoff </code><i>X</i></dt>
 <dd>
-<dt><code>-yoff </code><i>Y</i></p>
-<dd> These options position the overlay image with respect to the underlying image. <i>X</i> and <i>Y</i> are the horizontal and vertical displacements of the top left corner of the overlay image from the top left corner of the underlying image, in pixels. A positive value means right or down; a negative value means left or up. The overlay need not fit entirely (or at all) on the underlying image. <code>pnmcomp</code> uses only the parts that lie over the underlying image.</p>
-<dt><code>-align=</code>[<code>left</code>,<code>center</code>,<code>right</code>]</p>
-<dd> This option is an alternative to <code>-xoff</code>, in the style of HTML. It selects the horizontal position of the overlay image so that it is flush left, centered, or flush right on the underlying image.</p>
-<dt><code>-valign=</code>[<code>top</code>,<code>middle</code>,<code>bottom</code>]</p>
-<dd> This option is an alternative to <code>-yoff</code>, in the style of HTML. It selects the vertical position of the overlay image so that it is flush top, centered, or flush bottom on the underlying image. </p>
+</dd><dt><code>-yoff </code><i>Y</i></dt>
+<dd> These options position the overlay image with respect to the underlying image. <i>X</i> and <i>Y</i> are the horizontal and vertical displacements of the top left corner of the overlay image from the top left corner of the underlying image, in pixels. A positive value means right or down; a negative value means left or up. The overlay need not fit entirely (or at all) on the underlying image. <code>pnmcomp</code> uses only the parts that lie over the underlying image.</dd>
+<dt><code>-align=</code>[<code>left</code>,<code>center</code>,<code>right</code>]</dt>
+<dd> This option is an alternative to <code>-xoff</code>, in the style of HTML. It selects the horizontal position of the overlay image so that it is flush left, centered, or flush right on the underlying image.</dd>
+<dt><code>-valign=</code>[<code>top</code>,<code>middle</code>,<code>bottom</code>]</dt>
+<dd> This option is an alternative to <code>-yoff</code>, in the style of HTML. It selects the vertical position of the overlay image so that it is flush top, centered, or flush bottom on the underlying image. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmmix/">ppmmix</a></code>(1) and <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1) are simpler, less general versions of the same tool. </p>

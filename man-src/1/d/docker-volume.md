@@ -17,11 +17,11 @@ description: "docker-volume – Manage volumes"
 <p> To see help for a subcommand, use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker volume COMMAND --help
 </pre>
-</dl>
+</dd></dl>
 <p> For full details on using docker volume visit Docker&#8217;s online documentation. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for volume</p>

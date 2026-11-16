@@ -17,18 +17,18 @@ description: "grl-inspect – show information about Grilo sources and keys"
 <p> Alternatively, using <code>-k</code> prints out information about the available metadata keys.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of grl-inspect options.</p>
-<dt><code>&#8211;help-grl</code></p>
-<dd> Show summary of Grilo options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show summary of all options.</p>
-<dt><code>-k</code></p>
-<dd> Show information about metadata keys</p>
-<dt><code>-d, &#8211;delay</code><i> seconds</i></p>
-<dd> Wait for some seconds before showing results. Useful when plugins may need some time for the source discovery process (example: UPnP). If not specified, by default it waits 1 second.</p>
-<dt><code>-c, &#8211;config</code><i> config-file</i></p>
-<dd> Configuration file to use with the plugins.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of grl-inspect options.</dd>
+<dt><code>&#8211;help-grl</code></dt>
+<dd> Show summary of Grilo options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show summary of all options.</dd>
+<dt><code>-k</code></dt>
+<dd> Show information about metadata keys</dd>
+<dt><code>-d, &#8211;delay</code><i> seconds</i></dt>
+<dd> Wait for some seconds before showing results. Useful when plugins may need some time for the source discovery process (example: UPnP). If not specified, by default it waits 1 second.</dd>
+<dt><code>-c, &#8211;config</code><i> config-file</i></dt>
+<dd> Configuration file to use with the plugins.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Alberto Garcia &lt;agarcia [at] igalia.com&gt;. </p>
 <h2>Index</h2>

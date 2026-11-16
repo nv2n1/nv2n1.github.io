@@ -38,16 +38,11 @@ long double DECIMAL_DIG or LDBL_DECIMAL_DIG orstd::ceil(std::numeric_limits&lt;l
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;limits&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     float value = 10.0000086;
     constexpr auto digits10 = std::numeric_limits&lt;decltype(value)&gt;::digits10;

@@ -19,18 +19,18 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 <p> ldns_status ldns_zone_new_frm_fp_l(ldns_zone **z, FILE *fp, ldns_rdf *origin, uint32_t ttl, ldns_rr_class c, int *line_nr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_new</i>()</p>
-<dd>create a new ldns_zone structure .br Returns a pointer to a ldns_zone structure</dl>
+<dt> <i>ldns_zone_new</i>()</dt>
+<dd>create a new ldns_zone structure .br Returns a pointer to a ldns_zone structure</dd></dl>
 <dl>
-<dt> <i>ldns_zone_deep_free</i>()</p>
-<dd>Frees the allocated memory for the zone, the soa rr in it, and the rr_list structure in it, including the rr&#8217;s in that. etc. .br <code>zone</code>: the zone to free</dl>
+<dt> <i>ldns_zone_deep_free</i>()</dt>
+<dd>Frees the allocated memory for the zone, the soa rr in it, and the rr_list structure in it, including the rr&#8217;s in that. etc. .br <code>zone</code>: the zone to free</dd></dl>
 <dl>
-<dt> <i>ldns_zone_new_frm_fp</i>()</p>
-<dd>Create a new zone from a file .br <code>z</code>: the new zone .br <code>*fp</code>: the filepointer to use .br <code>*origin</code>: the zones&#8217; origin .br <code>ttl</code>: default ttl to use .br <code>c</code>: default class to use (IN) </p>
+<dt> <i>ldns_zone_new_frm_fp</i>()</dt>
+<dd>Create a new zone from a file .br <code>z</code>: the new zone .br <code>*fp</code>: the filepointer to use .br <code>*origin</code>: the zones&#8217; origin .br <code>ttl</code>: default ttl to use .br <code>c</code>: default class to use (IN) </dd>
 <p> .br Returns ldns_status mesg with an error or LDNS_STATUS_OK</dl>
 <dl>
-<dt> <i>ldns_zone_new_frm_fp_l</i>()</p>
-<dd>Create a new zone from a file, keep track of the line numbering .br <code>z</code>: the new zone .br <code>*fp</code>: the filepointer to use .br <code>*origin</code>: the zones&#8217; origin .br <code>ttl</code>: default ttl to use .br <code>c</code>: default class to use (IN) .br <code>line_nr</code>: used for error msg, to get to the line number </p>
+<dt> <i>ldns_zone_new_frm_fp_l</i>()</dt>
+<dd>Create a new zone from a file, keep track of the line numbering .br <code>z</code>: the new zone .br <code>*fp</code>: the filepointer to use .br <code>*origin</code>: the zones&#8217; origin .br <code>ttl</code>: default ttl to use .br <code>c</code>: default class to use (IN) .br <code>line_nr</code>: used for error msg, to get to the line number </dd>
 <p> .br Returns ldns_status mesg with an error or LDNS_STATUS_OK</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -44,3 +44,4 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

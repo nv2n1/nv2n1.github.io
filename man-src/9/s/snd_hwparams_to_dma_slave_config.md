@@ -15,15 +15,15 @@ snd_hwparams_to_dma_slave_config - Convert hw_params to dma_slave_config
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>params</i>
-<dl><dd>hw_params</dl>
+<dl><dd>hw_params</dd></dl>
  
 
  <i>slave_config</i>
-<dl><dd>DMA slave config</dl>
+<dl><dd>DMA slave config</dd></dl>
 
 <h2>Description</h2>
 

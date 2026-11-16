@@ -19,10 +19,10 @@ description: "pdbimgtopam – convert a Palm Pilot Image Viewer PDB Image to a P
 <p> If the Pilot image is monochrome, the PAM output has maxval 1. Otherwise, it has maxval 255. Note that Pilot images are always monochrome. The PAM image has tuple type GRAYSCALE. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Display various interesting information about the input file and process. </p>
-<dt><code>-notefile=</code><i>filename</i></p>
-<dd> Write the image note (if any) to the specified file. </p>
+<dt><code>-verbose</code></dt>
+<dd> Display various interesting information about the input file and process. </dd>
+<dt><code>-notefile=</code><i>filename</i></dt>
+<dd> Write the image note (if any) to the specified file. </dd>
 <p> If you don&#8217;t specify this, <code>pdbimgtopam</code> ignores any image note. </p>
 </dl>
 <h2>SEE ALSO</h2>

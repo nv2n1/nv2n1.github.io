@@ -21,10 +21,10 @@ description: "acl_copy_int – copy an ACL from external to internal representat
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_copy_int function returns a value of <code>(acl_t)NULL</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The buffer pointed to by the argument <i>buf_p</i> does not contain a valid external form ACL.</p>
-<dt><code>Bq </code>Er ENOMEM</p>
-<dd> The ACL working storage requires more memory than is allowed by the hardware or system-imposed memory management constraints.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The buffer pointed to by the argument <i>buf_p</i> does not contain a valid external form ACL.</dd>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The ACL working storage requires more memory than is allowed by the hardware or system-imposed memory management constraints.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

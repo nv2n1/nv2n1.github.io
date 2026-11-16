@@ -25,42 +25,42 @@ description: "sfb – Stochastic Fair Blue"
 <p> The default hashing method will use source and destination ip addresses and port numbers if possible, and also supports tunneling protocols. Alternatively, an external classifier can be configured, too.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>rehash</p>
-<dd>Time interval in milliseconds when queue perturbation occurs to avoid erroneously detecting unrelated, responsive flows as being part of a non-responsive flow for prolonged periods of time. Defaults to 10 minutes.</p>
-<dt>db</p>
-<dd>Double buffering warmup wait time, in milliseconds. To avoid destroying the probability history when rehashing is performed, this implementation maintains a second set of levels/bins as described in section 4.4 of the SFB reference. While one set is used to manage the queue, a second set is warmed up: Whenever a flow is then determined to be non-responsive, the marking probabilities in the second set are updated. When the rehashing happens, these bins will be used to manage the queue and all non-responsive flows can be rate-limited immediately. This value determines how much time has to pass before the 2nd set will start to be warmed up. Defaults to one minute, should be lower than <code>rehash.</code></p>
-<dt>limit</p>
-<dd>Hard limit on the real (not average) total queue size in packets. Further packets are dropped. Defaults to the transmit queue length of the device the qdisc is attached to.</p>
-<dt>max</p>
-<dd>Maximum length of a buckets queue, in packets, before packets start being dropped. Should be slightly larger than <code>target</code> , but should not be set to values exceeding 1.5 times that of <code>target .</code> Defaults to 25.</p>
-<dt>target</p>
-<dd>The desired average bin length. If the bin queue length reaches this value, the marking probability is increased by <code>increment.</code> The default value depends on the <code>max</code> setting, with max set to 25 <code>target</code> will default to 20.</p>
-<dt>increment</p>
-<dd>A value used to increase the marking probability when the queue appears to be over-used. Must be between 0 and 1.0. Defaults to 0.00050.</p>
-<dt>decrement</p>
-<dd>Value used to decrease the marking probability when the queue is found to be empty. Must be between 0 and 1.0. Defaults to 0.00005.</p>
-<dt>penalty_rate</p>
-<dd>The maximum number of packets belonging to flows identified as being non-responsive that can be enqueued per second. Once this number has been reached, further packets of such non-responsive flows are dropped. Set this to a reasonable fraction of your uplink throughput; the default value of 10 packets is probably too small.</p>
-<dt>penalty_burst</p>
-<dd>The number of packets a flow is permitted to exceed the penalty rate before packets start being dropped. Defaults to 20 packets. </p>
+<dt>rehash</dt>
+<dd>Time interval in milliseconds when queue perturbation occurs to avoid erroneously detecting unrelated, responsive flows as being part of a non-responsive flow for prolonged periods of time. Defaults to 10 minutes.</dd>
+<dt>db</dt>
+<dd>Double buffering warmup wait time, in milliseconds. To avoid destroying the probability history when rehashing is performed, this implementation maintains a second set of levels/bins as described in section 4.4 of the SFB reference. While one set is used to manage the queue, a second set is warmed up: Whenever a flow is then determined to be non-responsive, the marking probabilities in the second set are updated. When the rehashing happens, these bins will be used to manage the queue and all non-responsive flows can be rate-limited immediately. This value determines how much time has to pass before the 2nd set will start to be warmed up. Defaults to one minute, should be lower than <code>rehash.</code></dd>
+<dt>limit</dt>
+<dd>Hard limit on the real (not average) total queue size in packets. Further packets are dropped. Defaults to the transmit queue length of the device the qdisc is attached to.</dd>
+<dt>max</dt>
+<dd>Maximum length of a buckets queue, in packets, before packets start being dropped. Should be slightly larger than <code>target</code> , but should not be set to values exceeding 1.5 times that of <code>target .</code> Defaults to 25.</dd>
+<dt>target</dt>
+<dd>The desired average bin length. If the bin queue length reaches this value, the marking probability is increased by <code>increment.</code> The default value depends on the <code>max</code> setting, with max set to 25 <code>target</code> will default to 20.</dd>
+<dt>increment</dt>
+<dd>A value used to increase the marking probability when the queue appears to be over-used. Must be between 0 and 1.0. Defaults to 0.00050.</dd>
+<dt>decrement</dt>
+<dd>Value used to decrease the marking probability when the queue is found to be empty. Must be between 0 and 1.0. Defaults to 0.00005.</dd>
+<dt>penalty_rate</dt>
+<dd>The maximum number of packets belonging to flows identified as being non-responsive that can be enqueued per second. Once this number has been reached, further packets of such non-responsive flows are dropped. Set this to a reasonable fraction of your uplink throughput; the default value of 10 packets is probably too small.</dd>
+<dt>penalty_burst</dt>
+<dd>The number of packets a flow is permitted to exceed the penalty rate before packets start being dropped. Defaults to 20 packets. </dd>
 </dl>
 <h2>Statistics</h2>
 <p>This qdisc exposes additional statistics via &#8216;tc -s qdisc&#8217; output. These are:</p>
 <dl>
-<dt>earlydrop</p>
-<dd>The number of packets dropped before a per-flow queue was full.</p>
-<dt>ratedrop</p>
-<dd>The number of packets dropped because of rate-limiting. If this value is high, there are many non-reactive flows being sent through sfb. In such cases, it might be better to embed sfb within a classful qdisc to better control such flows using a different, shaping qdisc.</p>
-<dt>bucketdrop</p>
-<dd>The number of packets dropped because a per-flow queue was full. High bucketdrop may point to a high number of aggressive, short-lived flows.</p>
-<dt>queuedrop</p>
-<dd>The number of packets dropped due to reaching limit. This should normally be 0.</p>
-<dt>marked</p>
-<dd>The number of packets marked with ECN.</p>
-<dt>maxqlen</p>
-<dd>The length of the current longest per-flow (virtual) queue.</p>
-<dt>maxprob</p>
-<dd>The maximum per-flow drop probability. 1 means that some flows have been detected as non-reactive. </p>
+<dt>earlydrop</dt>
+<dd>The number of packets dropped before a per-flow queue was full.</dd>
+<dt>ratedrop</dt>
+<dd>The number of packets dropped because of rate-limiting. If this value is high, there are many non-reactive flows being sent through sfb. In such cases, it might be better to embed sfb within a classful qdisc to better control such flows using a different, shaping qdisc.</dd>
+<dt>bucketdrop</dt>
+<dd>The number of packets dropped because a per-flow queue was full. High bucketdrop may point to a high number of aggressive, short-lived flows.</dd>
+<dt>queuedrop</dt>
+<dd>The number of packets dropped due to reaching limit. This should normally be 0.</dd>
+<dt>marked</dt>
+<dd>The number of packets marked with ECN.</dd>
+<dt>maxqlen</dt>
+<dd>The length of the current longest per-flow (virtual) queue.</dd>
+<dt>maxprob</dt>
+<dd>The maximum per-flow drop probability. 1 means that some flows have been detected as non-reactive. </dd>
 </dl>
 <h2>Notes</h2>
 <p>SFB automatically enables use of Explicit Congestion Notification (ECN). Also, this SFB implementation does not queue packets itself. Rather, packets are enqueued to the inner qdisc (defaults to pfifo). Because sfb maintains virtual queue states, the inner qdisc must not drop a packet previously queued. Furthermore, if a buckets queue has a very high marking rate, this implementation will start dropping packets instead of marking them, as such a situation points to either bad congestion, or an unresponsive flow. </p>
@@ -73,8 +73,8 @@ description: "sfb – Stochastic Fair Blue"
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8), <code><a href="/docs/linux/man/8-tc-sfq/">tc-sfq</a></code>(8)</p>
 <h2>Sources</h2>
 <dl>
-<dt>o</p>
-<dd>W. Feng, D. Kandlur, D. Saha, K. Shin, BLUE: A New Class of Active Queue Management Algorithms, U. Michigan CSE-TR-387-99, April 1999. </p>
+<dt>o</dt>
+<dd>W. Feng, D. Kandlur, D. Saha, K. Shin, BLUE: A New Class of Active Queue Management Algorithms, U. Michigan CSE-TR-387-99, April 1999. </dd>
 </dl>
 <h2>Authors</h2>
 <p>This SFB implementation was contributed by Juliusz Chroboczek and Eric Dumazet.</p>

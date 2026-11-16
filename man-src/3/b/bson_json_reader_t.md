@@ -25,7 +25,7 @@ typedef enum {
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> <code>bson_json_reader_t</code> works upon JSON documents formatted in <code>MongoDB extended JSON</code> format.</dl>
+</dt><dd> <code>bson_json_reader_t</code> works upon JSON documents formatted in <code>MongoDB extended JSON</code> format.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre><code>
 /*

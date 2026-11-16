@@ -10,7 +10,6 @@ description: "std::wcsxfrm – std::wcsxfrm"
 <p>std::wcsxfrm &#8211; std::wcsxfrm</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cwchar&gt;
-
     std::size_t strxfrm(wchar_t *dest, const wchar_t *src, std::size_t count);</code></pre>
 <p>Transforms the null-terminated wide string pointed to by src into the implementation-defined form such that comparing two transformed strings with std::wcscmp gives the same result as comparing the original strings with std::wcscoll, in the current C locale.<br />
 The first count characters of the transformed string are written to destination, including the terminating null character, and the length of the full transformed string is returned, excluding the terminating null character.<br />
@@ -27,10 +26,8 @@ count &#8211; maximum number of characters to output</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;sv_SE.utf8&quot;);
     std::wstring in1 = L&quot;år&quot;;

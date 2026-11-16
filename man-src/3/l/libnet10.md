@@ -15,249 +15,183 @@ description: "libnet – \"libpwrite\" Network Routine Library"
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libnet.h&gt;
-
 PACKET MEMORY MANAGEMENT ROUTINES int libnet_init_packet(size_t p_size, u_char **buf);
 int libnet_destroy_packet(u_char **buf);
 int libnet_init_packet_arena(struct libnet_arena **arena, int p_size,
-
                              &amp;nbsp;
                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short p_num);
-
 u_char *libnet_next_packet_from_arena(struct libnet_arena **arena,
-
                                       &amp;nbsp;
                                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int p_size);
 int libnet_destroy_packet_arena(struct libnet_arena **arena);
-
 ADDRESS RESOLUTION ROUTINES
     u_char *
     libnet_host_lookup(u_long in, u_short use_name);
 void libnet_host_lookup_r(u_long in, u_short use_name, u_char *buf);
 u_long libnet_name_resolve(u_char *hostname, u_short use_name);
 u_long libnet_get_ipaddr(struct libnet_link_int *l, const u_char *device,
-
                          &amp;nbsp;
                          &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *buf);
 struct ether_addr *libnet_get_hwaddr(struct libnet_link_int *l,
-
                                      &amp;nbsp;
                                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *device, const u_char *buf);
 PACKET INJECTION FRAMEWORK ROUTINES int libnet_open_raw_sock(int protocol);
 int libnet_close_raw_sock(int fd);
 int libnet_select_device(struct sockaddr_in *sin, u_char **device,
-
                          &amp;nbsp;
                          &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * ebuf);
 struct libnet_link_int *libnet_open_link_interface(char *device, char *ebuf);
 int libnet_close_link_interface(struct libnet_link_int *l);
 int libnet_write_ip(int sock, u_char *packet, int len);
 int libnet_write_link_layer(struct libnet_link_int *l, const u_char *device,
-
                             &amp;nbsp;
                             &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf, int len);
 int libnet_do_checksum(u_char *buf, int protocol, int len);
 u_short libnet_ip_check(u_short *buf, int len);
 PACKET BUILDER ROUTINES int libnet_build_arp(u_short hrd, u_short pro, u_short hln, u_short pln,
-
                                              &amp;nbsp;
                                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short op, u_char *sha, u_char *spa, u_char *tha,
-
                                                                                               &amp;nbsp;
                                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * tpa, const u_char *payload, int payload_s,
-
                                                                                               &amp;nbsp;
                                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_dns(u_short id, u_short flags, u_short num_q,
-
                      &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short num_anws_rr, u_short num_auth_rr,
-
                                                                       &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short num_addi_rr, const u_char *payload, int payload_s,
-
                                                                       &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_ethernet(u_char *daddr, u_char *saddr, u_short id,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_icmp_echo(u_char type, u_char code, u_short id,
-
                            &amp;nbsp;
                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short seq, const u_char *payload, int payload_s,
-
                                                                             &amp;nbsp;
                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_icmp_mask(u_char type, u_char code, u_short id,
-
                            &amp;nbsp;
                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short seq, u_long mask, const u_char *payload,
-
                                                                             &amp;nbsp;
                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_icmp_unreach(u_char type, u_char code,
-
                               &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_len, u_char orig_tos, u_short orig_id,
-
                                                                                &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_frag, u_char orig_ttl, u_char orig_prot,
-
                                                                                &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long orig_src, u_long orig_dst, const u_char *orig_payload,
-
                                                                                &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_icmp_timeexceed(u_char type, u_char code,
-
                                  &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_len, u_char orig_tos, u_short orig_id,
-
                                                                                   &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_frag, u_char orig_ttl, u_char orig_prot,
-
                                                                                   &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long orig_src, u_long orig_dst, const u_char *orig_payload,
-
                                                                                   &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_icmp_redirect(u_char type, u_char code, u_long gateway
-
                                                              &amp;nbsp;
                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_len, u_char orig_tos, u_short orig_id,
-
                                                                                 &amp;nbsp;
                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short orig_frag, u_char orig_ttl, u_char orig_prot,
-
                                                                                 &amp;nbsp;
                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long orig_src, u_long orig_dst, const u_char *orig_payload,
-
                                                                                 &amp;nbsp;
                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_icmp_timestamp(u_char type, u_char code, u_short id,
-
                                 &amp;nbsp;
                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short seq, n_time otime, n_time rtime, n_time ttime,
-
                                                                                  &amp;nbsp;
                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_igmp(u_char type, u_char code, u_long ip,
-
                       &amp;nbsp;
                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_ip(u_short len, u_char tos, u_short id, u_short frag,
-
                     &amp;nbsp;
                     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char ttl, u_char prot, u_long saddr, u_long daddr,
-
                                                                      &amp;nbsp;
                     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf(u_short len, u_char type, u_long router_id,
-
                       &amp;nbsp;
                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long area_id, u_short auth_type, const char *payload,
-
                                                                        &amp;nbsp;
                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_ospf_hello(u_long netmask, u_short interval,
-
                             &amp;nbsp;
                             &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char options, u_char priority, u_int dead_interval,
-
                                                                              &amp;nbsp;
                             &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long des_router, u_long backup, u_long neighbor,
-
                                                                              &amp;nbsp;
                             &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf_dbd(u_short len, u_char options, u_char type,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_int sequence_num, const char *payload, int payload_s,
-
                                                                            &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_ospf_lsr(u_int type, u_int ls_id, u_long adv_router,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf_lsu(u_int num, const char *payload, int payload_s,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_ospf_lsa(u_short age, u_char options, u_char type,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_int ls_id, u_long adv_router, u_int sequence_num,
-
                                                                            &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short len, const char *payload, int payload_s,
-
                                                                            &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_ospf_lsa_rtr(u_short flags, u_short num, u_int id,
-
                               &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_int data, u_char type, u_char tos, u_short metric,
-
                                                                                &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf_lsa_net(u_long netmask, u_int router_id,
-
                               &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf_lsa_sum(u_long netmask, u_int metric, u_int tos,
-
                               &amp;nbsp;
                               &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const char *payload, int payload_s, u_char *buf);
 int libnet_build_ospf_lsa_as(u_long netmask, u_int metric,
-
                              &amp;nbsp;
                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long fwd_addr, u_int tag, const char *payload,
-
                                                                               &amp;nbsp;
                              &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int payload_s, u_char *buf);
 int libnet_build_rip(u_char command, u_char ver, u_short rd, u_short af,
-
                      &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short rt, u_long addr, u_long mask, u_long next_hop,
-
                                                                       &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long metric, const u_char *payload, int payload_s,
-
                                                                       &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 int libnet_build_tcp(u_short sport, u_short dport, u_long seq,
-
                      &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long ack, u_char control, u_short win, u_short urg,
-
                                                                       &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_udp(u_short sport, u_short dport,
-
                      &amp;nbsp;
                      &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_build_vrrp(u_char vrouter_id, u_char priority,
-
                       &amp;nbsp;
                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char ip_count, u_char auth_type, u_char advert_int,
-
                                                                        &amp;nbsp;
                       &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const u_char *payload, int payload_s, u_char *buf);
 int libnet_insert_ipo(struct ipoption *opt, u_char opt_len, u_char *buf);
 int libnet_insert_tcpo(struct tcpoption *opt, u_char opt_len,
-
                        &amp;nbsp;
                        &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * buf);
 MISCELLANEOUS SUPPORT ROUTINES int libnet_seed_prand();
 u_long libnet_get_prand(int type);
 void libnet_hex_dump(u_char *buf, int len, int swap, FILE *stream);
 int libnet_plist_chain_new(struct libnet_plist_chain **head,
-
                            &amp;nbsp;
                            &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; char *tok_list);
 int libnet_plist_chain_next_pair(struct libnet_plist_chain *p,
-
                                  &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_short * bport, u_short *eport);
 int libnet_plist_chain_dump(struct libnet_plist_chain *p);
@@ -267,33 +201,26 @@ void libnet_error(int severity, char *msg, ...);
 ASN .1 BER ROUTINES
     u_char *
     libnet_build_asn1_int(u_char *data, int *datalen, u_char type,
-
                           &amp;nbsp;
                           &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; long *int_p, int int_s);
 u_char *libnet_build_asn1_uint(u_char *data, int *datalen, u_char type,
-
                                &amp;nbsp;
                                &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char * int_p, int int_s);
 u_char *libnet_build_asn1_string(u_char *data, int *datalen, u_char type,
-
                                  &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_long * string, int str_s);
 u_char *libnet_build_asn1_header(u_char *data, int *datalen, u_char type,
-
                                  &amp;nbsp;
                                  &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int len);
 u_char *libnet_build_asn1_length(u_char *data, int *datalen, int len);
 u_char *libnet_build_asn1_sequence(u_char *data, int *datalen,
-
                                    &amp;nbsp;
                                    &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char type, int len);
 u_char *libnet_build_asn1_objid(u_char *data, int *datalen, u_char type,
-
                                 &amp;nbsp;
                                 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; oid * objid, int oid_s);
 u_char *libnet_build_asn1_null(u_char *data, int *datalen, u_char type);
 u_char *libnet_build_asn1_bitstring(u_char *data, int *datalen,
-
                                     &amp;nbsp;
                                     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; u_char type, u_long *string, int str_s);
 </code></pre>
@@ -414,7 +341,7 @@ u_char *libnet_build_asn1_bitstring(u_char *data, int *datalen,
 <p> The current version is always available: </p>
 <dl>
 <dt>
-<dd> <i><a rel="nofollow" href="http://www.packetfactory.net/libnet">http://www.packetfactory.net/libnet</a></i></dl>
+</dt><dd> <i><a rel="nofollow" href="http://www.packetfactory.net/libnet">http://www.packetfactory.net/libnet</a></i></dd></dl>
 <h2>BUGS</h2>
 <p> Solaris raw sockets are cooked. They do not allow one to set the ip_len, ip_frag or the ip_id (including IP options at the raw socket layer doesn&#8217;t work either). To work around this, use the link-layer API instead of raw socket functions. </p>
 <p> The Berkeley Packet Filter alone does not allow for the arbitrary specification of source ethernet addresses. This is not so much a bug as an oversight in the protocol. Included with the distribution is lkm code to work around this (FreeBSD has support for an ioctl that works around this). </p>

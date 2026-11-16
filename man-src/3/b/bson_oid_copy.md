@@ -16,11 +16,11 @@ void bson_oid_copy(const bson_oid_t *src,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>src</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>src</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>dst</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>dst</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Copies the contents of src into dst. </p>
 <h2>COLOPHON</h2>

@@ -15,16 +15,16 @@ description: "rmcp_ping – IPMI RMCP Ping program"
 <p> The <code>rmcp_ping</code> program sends an RMCP ping packet onces a second to the destination, printing unique responses it receives. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p&nbsp;<wbr></code><i>port</i></p>
-<dd> Set the destination <i>port</i>. This is the standard RMCP port by default, 623.</p>
-<dt><code>-t&nbsp;<wbr></code><i>waittime</i></p>
-<dd> Sets the number of seconds to wait for a response. Ten by default.</p>
-<dt><code>-s&nbsp;<wbr></code><i>starttag</i></p>
-<dd> There is an 8-bit tag value in every ping packet (0-254, 255 is reserved), this program will cycle through the values starting at starttag. This is zero by default</p>
-<dt><code>-d</code></p>
-<dd> Turns on debugging to standard output.</p>
-<dt><i>destination</i></p>
-<dd> The target address, default is the broadcast address (default 255.255.255.255) </p>
+<dt><code>-p&nbsp;<wbr></code><i>port</i></dt>
+<dd> Set the destination <i>port</i>. This is the standard RMCP port by default, 623.</dd>
+<dt><code>-t&nbsp;<wbr></code><i>waittime</i></dt>
+<dd> Sets the number of seconds to wait for a response. Ten by default.</dd>
+<dt><code>-s&nbsp;<wbr></code><i>starttag</i></dt>
+<dd> There is an 8-bit tag value in every ping packet (0-254, 255 is reserved), this program will cycle through the values starting at starttag. This is zero by default</dd>
+<dt><code>-d</code></dt>
+<dd> Turns on debugging to standard output.</dd>
+<dt><i>destination</i></dt>
+<dd> The target address, default is the broadcast address (default 255.255.255.255) </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Corey Minyard &lt;cminyard [at] mvista.org&gt; </p>

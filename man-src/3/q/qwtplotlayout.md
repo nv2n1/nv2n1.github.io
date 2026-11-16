@@ -64,27 +64,27 @@ description: "QwtPlotLayout –"
 <p> It is used by the <code>QwtPlot</code> widget to organize its internal widgets or by QwtPlot::print() to render its content to a QPaintDevice like a QPrinter, QPixmap/QImage or QSvgRenderer. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::setPlotLayout()</code></dl>
+<dd><code>QwtPlot::setPlotLayout()</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotLayout::Option</code></h3>
 <p>Options to configure the plot layout engine </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>QwtPlotRenderer</code></dl>
+<dd><code>activate()</code>, <code>QwtPlotRenderer</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>AlignScales </i></p>
-<dd>Unused.</p>
-<dt><i>IgnoreScrollbars </i></p>
-<dd>Ignore the dimension of the scrollbars. There are no scrollbars, when the plot is not rendered to widgets.</p>
-<dt><i>IgnoreFrames </i></p>
-<dd>Ignore all frames.</p>
-<dt><i>IgnoreLegend </i></p>
-<dd>Ignore the legend.</p>
-<dt><i>IgnoreTitle </i></p>
-<dd>Ignore the title.</p>
-<dt><i>IgnoreFooter </i></p>
-<dd>Ignore the footer.</dl>
+<dt><i>AlignScales </i></dt>
+<dd>Unused.</dd>
+<dt><i>IgnoreScrollbars </i></dt>
+<dd>Ignore the dimension of the scrollbars. There are no scrollbars, when the plot is not rendered to widgets.</dd>
+<dt><i>IgnoreFrames </i></dt>
+<dd>Ignore all frames.</dd>
+<dt><i>IgnoreLegend </i></dt>
+<dd>Ignore the legend.</dd>
+<dt><i>IgnoreTitle </i></dt>
+<dd>Ignore the title.</dd>
+<dt><i>IgnoreFooter </i></dt>
+<dd>Ignore the footer.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtPlotLayout::activate (const <code>QwtPlot</code> *plot, const QRectF &amp;plotRect, <code>Options</code>options = 0x00) [virtual]</h3>
 <p>Recalculate the geometry of all components. </p>
@@ -92,62 +92,62 @@ description: "QwtPlotLayout –"
 <dl COMPACT>
 <dd><i>plot</i> Plot to be layout<br />
  <i>plotRect</i> Rectangle where to place the components<br />
- <i>options</i> Layout options</dl>
+ <i>options</i> Layout options</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invalidate()</code>, <code>titleRect()</code>, <code>footerRect()</code> <code>legendRect()</code>, <code>scaleRect()</code>, <code>canvasRect()</code></dl>
+<dd><code>invalidate()</code>, <code>titleRect()</code>, <code>footerRect()</code> <code>legendRect()</code>, <code>scaleRect()</code>, <code>canvasRect()</code></dd></dl>
 <h3>bool QwtPlotLayout::alignCanvasToScale (intaxisId) const</h3>
 <p>Return the align-canvas-to-axis-scales setting. The canvas may:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>extend beyond the axis scale ends to maximize its size</p>
-<dt>&bull;</p>
-<dd>align with the axis scale ends to control its size.</dl>
+<dt>&bull;</dt>
+<dd>extend beyond the axis scale ends to maximize its size</dd>
+<dt>&bull;</dt>
+<dd>align with the axis scale ends to control its size.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index</dl>
+<dd><i>axisId</i> Axis index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>align-canvas-to-axis-scales setting</dl>
+<dd>align-canvas-to-axis-scales setting</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlignCanvasToScale()</code>, <code>setAlignCanvasToScale()</code>, <code>setCanvasMargin()</code></dl>
+<dd><code>setAlignCanvasToScale()</code>, <code>setAlignCanvasToScale()</code>, <code>setCanvasMargin()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::alignLegend (const QRectF &amp;canvasRect, const QRectF &amp;legendRect) const [protected]</h3>
 <p>Align the legend to the canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>canvasRect</i> Geometry of the canvas<br />
- <i>legendRect</i> Maximum geometry for the legend</dl>
+ <i>legendRect</i> Maximum geometry for the legend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the aligned legend</dl>
+<dd>Geometry for the aligned legend</dd></dl>
 <h3>void QwtPlotLayout::alignScales (<code>Options</code>options, QRectF &amp;canvasRect, QRectFscaleRect[QwtPlot::axisCnt]) const [protected]</h3>
 <p>Align the ticks of the axis to the canvas borders using the empty corners. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>options</i> Layout options<br />
  <i>canvasRect</i> Geometry of the canvas ( IN/OUT )<br />
- <i>scaleRect</i> Geometries of the scales ( IN/OUT )</dl>
+ <i>scaleRect</i> Geometries of the scales ( IN/OUT )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Options</code></dl>
+<dd><code>Options</code></dd></dl>
 <h3>int QwtPlotLayout::canvasMargin (intaxisId) const</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index</dl>
+<dd><i>axisId</i> Axis index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin around the scale tick borders</dl>
+<dd>Margin around the scale tick borders</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCanvasMargin()</code></dl>
+<dd><code>setCanvasMargin()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::canvasRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the canvas</dl>
+<dd>Geometry for the canvas</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>invalidate()</code></dl>
+<dd><code>activate()</code>, <code>invalidate()</code></dd></dl>
 <h3>void QwtPlotLayout::expandLineBreaks (<code>Options</code>options, const QRectF &amp;rect, int &amp;dimTitle, int &amp;dimFooter, intdimAxis[QwtPlot::axisCnt]) const [protected]</h3>
 <p>Expand all line breaks in text labels, and calculate the height of their widgets in orientation of the text. </p>
 <p> <code>Parameters:</code></p>
@@ -156,188 +156,188 @@ description: "QwtPlotLayout –"
  <i>rect</i> Bounding rectangle for title, footer, axes and canvas.<br />
  <i>dimTitle</i> Expanded height of the title widget<br />
  <i>dimFooter</i> Expanded height of the footer widget<br />
- <i>dimAxis</i> Expanded heights of the axis in axis orientation.</dl>
+ <i>dimAxis</i> Expanded heights of the axis in axis orientation.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Options</code></dl>
+<dd><code>Options</code></dd></dl>
 <h3>QRectF QwtPlotLayout::footerRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the footer</dl>
+<dd>Geometry for the footer</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>invalidate()</code></dl>
+<dd><code>activate()</code>, <code>invalidate()</code></dd></dl>
 <h3>void QwtPlotLayout::invalidate () [virtual]</h3>
 <p>Invalidate the geometry of all components. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code></dl>
+<dd><code>activate()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::layoutLegend (<code>Options</code>options, const QRectF &amp;rect) const [protected]</h3>
 <p>Find the geometry for the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>options</i> Options how to layout the legend<br />
- <i>rect</i> Rectangle where to place the legend</dl>
+ <i>rect</i> Rectangle where to place the legend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the legend</dl>
+<dd>Geometry for the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Options</code></dl>
+<dd><code>Options</code></dd></dl>
 <h3><code>QwtPlot::LegendPosition</code> QwtPlotLayout::legendPosition () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position of the legend</dl>
+<dd>Position of the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendPosition()</code>, QwtPlot::setLegendPosition(), QwtPlot::legendPosition()</dl>
+<dd><code>setLegendPosition()</code>, QwtPlot::setLegendPosition(), QwtPlot::legendPosition()</dd></dl>
 <h3>double QwtPlotLayout::legendRatio () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The relative size of the legend in the plot.</dl>
+<dd>The relative size of the legend in the plot.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendPosition()</code></dl>
+<dd><code>setLegendPosition()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::legendRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the legend</dl>
+<dd>Geometry for the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>invalidate()</code></dl>
+<dd><code>activate()</code>, <code>invalidate()</code></dd></dl>
 <h3>QSize QwtPlotLayout::minimumSizeHint (const <code>QwtPlot</code> *plot) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size hint</dl>
+<dd>Minimum size hint</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plot</i> Plot widget</dl>
+<dd><i>plot</i> Plot widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::minimumSizeHint()</code></dl>
+<dd><code>QwtPlot::minimumSizeHint()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::scaleRect (intaxis) const</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index</dl>
+<dd><i>axis</i> Axis index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the scale</dl>
+<dd>Geometry for the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>invalidate()</code></dl>
+<dd><code>activate()</code>, <code>invalidate()</code></dd></dl>
 <h3>void QwtPlotLayout::setAlignCanvasToScale (intaxisId, boolon)</h3>
 <p>Change the align-canvas-to-axis-scales setting. The canvas may: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>extend beyond the axis scale ends to maximize its size,</p>
-<dt>&bull;</p>
-<dd>align with the axis scale ends to control its size.</dl>
+<dt>&bull;</dt>
+<dd>extend beyond the axis scale ends to maximize its size,</dd>
+<dt>&bull;</dt>
+<dd>align with the axis scale ends to control its size.</dd></dl>
 <p> The axisId parameter is somehow confusing as it identifies a border of the plot and not the axes, that are aligned. F.e when <code>QwtPlot::yLeft</code> is set, the left end of the the x-axes ( <code>QwtPlot::xTop</code>, <code>QwtPlot::xBottom</code> ) is aligned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axisId</i> Axis index<br />
- <i>on</i> New align-canvas-to-axis-scales setting</dl>
+ <i>on</i> New align-canvas-to-axis-scales setting</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCanvasMargin()</code>, <code>alignCanvasToScale()</code>, <code>setAlignCanvasToScales()</code></dl>
+<dd><code>setCanvasMargin()</code>, <code>alignCanvasToScale()</code>, <code>setAlignCanvasToScales()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>In case of on == true <code>canvasMargin()</code> will have no effect</dl>
+<dd>In case of on == true <code>canvasMargin()</code> will have no effect</dd></dl>
 <h3>void QwtPlotLayout::setAlignCanvasToScales (boolon)</h3>
 <p>Set the align-canvas-to-axis-scales flag for all axes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> True/False</dl>
+<dd><i>on</i> True/False</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlignCanvasToScale()</code>, <code>alignCanvasToScale()</code></dl>
+<dd><code>setAlignCanvasToScale()</code>, <code>alignCanvasToScale()</code></dd></dl>
 <h3>void QwtPlotLayout::setCanvasMargin (intmargin, intaxis = -1)</h3>
 <p>Change a margin of the canvas. The margin is the space above/below the scale ticks. A negative margin will be set to -1, excluding the borders of the scales. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>margin</i> New margin<br />
- <i>axis</i> One of <code>QwtPlot::Axis</code>. Specifies where the position of the margin. -1 means margin at all borders.</dl>
+ <i>axis</i> One of <code>QwtPlot::Axis</code>. Specifies where the position of the margin. -1 means margin at all borders.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>canvasMargin()</code></dl>
+<dd><code>canvasMargin()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The margin will have no effect when <code>alignCanvasToScale()</code> is true</dl>
+<dd>The margin will have no effect when <code>alignCanvasToScale()</code> is true</dd></dl>
 <h3>void QwtPlotLayout::setCanvasRect (const QRectF &amp;rect) [protected]</h3>
 <p>Set the geometry for the canvas. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>canvasRect()</code>, <code>activate()</code></dl>
+<dd><code>canvasRect()</code>, <code>activate()</code></dd></dl>
 <h3>void QwtPlotLayout::setFooterRect (const QRectF &amp;rect) [protected]</h3>
 <p>Set the geometry for the footer. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>footerRect()</code>, <code>activate()</code></dl>
+<dd><code>footerRect()</code>, <code>activate()</code></dd></dl>
 <h3>void QwtPlotLayout::setLegendPosition (<code>QwtPlot::LegendPosition</code>pos, doubleratio)</h3>
 <p>Specify the position of the legend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>pos</i> The legend&#8217;s position.<br />
- <i>ratio</i> Ratio between legend and the bounding rectangle of title, footer, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dl>
+ <i>ratio</i> Ratio between legend and the bounding rectangle of title, footer, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QwtPlot::setLegendPosition()</dl>
+<dd>QwtPlot::setLegendPosition()</dd></dl>
 <h3>void QwtPlotLayout::setLegendPosition (<code>QwtPlot::LegendPosition</code>pos)</h3>
 <p>Specify the position of the legend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> The legend&#8217;s position. Valid values are <code>QwtPlot::LeftLegend</code>, <code>QwtPlot::RightLegend</code>, <code>QwtPlot::TopLegend</code>, <code>QwtPlot::BottomLegend</code>.</dl>
+<dd><i>pos</i> The legend&#8217;s position. Valid values are <code>QwtPlot::LeftLegend</code>, <code>QwtPlot::RightLegend</code>, <code>QwtPlot::TopLegend</code>, <code>QwtPlot::BottomLegend</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QwtPlot::setLegendPosition()</dl>
+<dd>QwtPlot::setLegendPosition()</dd></dl>
 <h3>void QwtPlotLayout::setLegendRatio (doubleratio)</h3>
 <p>Specify the relative size of the legend in the plot </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ratio</i> Ratio between legend and the bounding rectangle of title, footer, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dl>
+<dd><i>ratio</i> Ratio between legend and the bounding rectangle of title, footer, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dd></dl>
 <h3>void QwtPlotLayout::setLegendRect (const QRectF &amp;rect) [protected]</h3>
 <p>Set the geometry for the legend. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Rectangle for the legend</dl>
+<dd><i>rect</i> Rectangle for the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>legendRect()</code>, <code>activate()</code></dl>
+<dd><code>legendRect()</code>, <code>activate()</code></dd></dl>
 <h3>void QwtPlotLayout::setScaleRect (intaxis, const QRectF &amp;rect) [protected]</h3>
 <p>Set the geometry for an axis. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axis</i> Axis index<br />
- <i>rect</i> Rectangle for the scale</dl>
+ <i>rect</i> Rectangle for the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleRect()</code>, <code>activate()</code></dl>
+<dd><code>scaleRect()</code>, <code>activate()</code></dd></dl>
 <h3>void QwtPlotLayout::setSpacing (intspacing)</h3>
 <p>Change the spacing of the plot. The spacing is the distance between the plot components. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> New spacing</dl>
+<dd><i>spacing</i> New spacing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCanvasMargin()</code>, <code>spacing()</code></dl>
+<dd><code>setCanvasMargin()</code>, <code>spacing()</code></dd></dl>
 <h3>void QwtPlotLayout::setTitleRect (const QRectF &amp;rect) [protected]</h3>
 <p>Set the geometry for the title. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>titleRect()</code>, <code>activate()</code></dl>
+<dd><code>titleRect()</code>, <code>activate()</code></dd></dl>
 <h3>int QwtPlotLayout::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spacing</dl>
+<dd>Spacing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>margin(), <code>setSpacing()</code></dl>
+<dd>margin(), <code>setSpacing()</code></dd></dl>
 <h3>QRectF QwtPlotLayout::titleRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry for the title</dl>
+<dd>Geometry for the title</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>activate()</code>, <code>invalidate()</code></dl>
+<dd><code>activate()</code>, <code>invalidate()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

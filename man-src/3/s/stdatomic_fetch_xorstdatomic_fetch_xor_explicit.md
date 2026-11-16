@@ -11,33 +11,19 @@ std::atomic_fetch_xor,std::atomic_fetch_xor_explicit - std::atomic_fetch_xor,std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 T atomic_fetch_xor( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg ) noexcept;
-
 template&lt; class T &gt;
-
 T atomic_fetch_xor( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg ) noexcept;
-
 template&lt; class T &gt;                                        (1) (since C++11)
-
 T atomic_fetch_xor_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg,
-
 std::memory_order order) noexcept;                                           (2) (since C++11)
-
 template&lt; class T &gt;
-
 T atomic_fetch_xor_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg,
-
 std::memory_order order) noexcept;
 </code></pre> 
 Atomically replaces the value pointed by obj with the result of bitwise XOR between the old value of obj and arg. Returns the value obj held previously. 

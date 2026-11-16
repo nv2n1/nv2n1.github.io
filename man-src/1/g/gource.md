@@ -18,100 +18,100 @@ description: "Gource – a software version control visualization"
 <p> <i>gource</i> requires a OpenGL capable video card to run.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Fullscreen</p>
-<dt><code>-WIDTHxHEIGHT</code></p>
-<dd> Set the window size. If -f is also supplied, will attempt to set the video mode to this also.</p>
-<dt><code>-p, &#8211;start-position POSITION</code></p>
-<dd> Begin at some position in the log (between 0.0 and 1.0).</p>
-<dt><code> &#8211;stop-position POSITION</code></p>
-<dd> Stop (exit) at some position in the log (does not work with STDIN).</p>
-<dt><code> &#8211;stop-on-idle</code></p>
-<dd> Stop on break in activity. May be combined with &#8211;stop-position.</p>
-<dt><code> &#8211;stop-at-end</code></p>
-<dd> Stop (exit) at the end of the log / stream.</p>
-<dt><code> &#8211;loop</code></p>
-<dd> Loop back to the start of the log when the end is reached.</p>
-<dt><code>-a, &#8211;auto-skip-seconds SECONDS</code></p>
-<dd> Automatically skip to next entry if nothing happens for a specified number of seconds.</p>
-<dt><code>-s, &#8211;seconds-per-day SECONDS</code></p>
-<dd> Speed of simulation in seconds per day.</p>
-<dt><code>&nbsp;<wbr> &#8211;realtime</code></p>
-<dd> Realtime playback speed.</p>
-<dt><code>-i, &#8211;file-idle-time SECONDS</code></p>
-<dd> Time in seconds files remain idle before they are removed.</p>
-<dt><code>-e, &#8211;elasticity FLOAT</code></p>
-<dd> Elasticity of nodes.</p>
-<dt><code>-b, &#8211;background FFFFFF</code></p>
-<dd> Background colour in hex.</p>
-<dt><code>&#8211;date-format FORMAT</code></p>
-<dd> Specify display date string (strftime format).</p>
-<dt><code>&#8211;log-format FORMAT</code></p>
-<dd> Specify format of the log being read (git,cvs,custom). Required when reading STDIN.</p>
-<dt><code>&#8211;git-branch</code></p>
-<dd> Get the git log of a branch other than the current one.</p>
-<dt><code>&#8211;git-log-command</code></p>
-<dd> Print the git log command used by <i>gource</i>.</p>
-<dt><code>&#8211;hg-log-command</code></p>
-<dd> Print the hg log command (Mercurial) used by <i>gource</i>.</p>
-<dt><code>&#8211;cvs-exp-command</code></p>
-<dd> Print the cvs-exp.pl log command used by <i>gource</i>.</p>
-<dt><code>&#8211;follow-user USER</code></p>
-<dd> Have the camera automatically follow a particular user.</p>
-<dt><code>&#8211;highlight-user USER</code></p>
-<dd> Highlight the names of a particular user.</p>
-<dt><code>&#8211;highlight-all-users</code></p>
-<dd> Highlight the names of all users.</p>
-<dt><code>&#8211;file-filter REGEX</code></p>
-<dd> Filter out any files matching a specified regular expression.</p>
-<dt><code>&#8211;user-image-dir DIRECTORY</code></p>
-<dd> Directory containing .jpg or .png images of users (eg &#8216;Full Name.png&#8217;) to use as avatars.</p>
-<dt><code>&#8211;default-user-image IMAGE</code></p>
-<dd> Path of .jpg to use as the default user image.</p>
-<dt><code>&#8211;colour-images</code></p>
-<dd> Colourize user images.</p>
-<dt><code>&#8211;crop AXIS</code></p>
-<dd> Crop view on an axis (vertical,horizontal).</p>
-<dt><code>&#8211;multi-sampling</code></p>
-<dd> Enable multi-sampling.</p>
-<dt><code>&#8211;bloom-multiplier FLOAT</code></p>
-<dd> Adjust the amount of bloom.</p>
-<dt><code>&#8211;bloom-intensity FLOAT</code></p>
-<dd> Adjust the intensity of the bloom.</p>
-<dt><code>&#8211;disable-progress</code></p>
-<dd> Disable progress bar.</p>
-<dt><code>&#8211;disable-bloom</code></p>
-<dd> Disable bloom effect.</p>
-<dt><code>&#8211;max-files</code></p>
-<dd> Set the maximum number of files. Excess files will be discarded.</p>
-<dt><code>&#8211;max-file-lag SECONDS</code></p>
-<dd> Max time files of a commit can take to appear.</p>
-<dt><code>&#8211;max-user-speed UNITS</code></p>
-<dd> Max speed users can travel per second.</p>
-<dt><code>&#8211;user-friction SECONDS</code></p>
-<dd> Time users come to a complete hault.</p>
-<dt><code>&#8211;user-scale SCALE</code></p>
-<dd> Change scale of users.</p>
-<dt><code>&#8211;hide-users</code></p>
-<dd> Hide users.</p>
-<dt><code>&#8211;hide-tree</code></p>
-<dd> Hide tree.</p>
-<dt><code>&#8211;hide-files</code></p>
-<dd> Hide files.</p>
-<dt><code>&#8211;hide-usernames</code></p>
-<dd> Hide usernames.</p>
-<dt><code>&#8211;hide-filenames</code></p>
-<dd> Hide filenames.</p>
-<dt><code>&#8211;hide-dirnames</code></p>
-<dd> Hide directory names.</p>
-<dt><code>&#8211;hide-date</code></p>
-<dd> Hide the date.</p>
-<dt><code>&#8211;output-ppm-stream FILE</code></p>
-<dd> Write frames as PPM to a file (&#8216;-&#8216; for STDOUT).</p>
-<dt><code>&#8211;output-framerate FPS</code></p>
-<dd> Framerate of output (used with &#8211;output-ppm-stream).</p>
-<dt><code>path</code></p>
-<dd> Either a Git or Mercurial directory, a pre-generated log file (see &#8211;git-log-command, &#8211;hg-log-command or the custom log format) or &#8216;-&#8216; to read STDIN. If path is ommited <i>gource</i> will attempt to read a log from the current directory.</dl>
+<dt><code>-f</code></dt>
+<dd> Fullscreen</dd>
+<dt><code>-WIDTHxHEIGHT</code></dt>
+<dd> Set the window size. If -f is also supplied, will attempt to set the video mode to this also.</dd>
+<dt><code>-p, &#8211;start-position POSITION</code></dt>
+<dd> Begin at some position in the log (between 0.0 and 1.0).</dd>
+<dt><code> &#8211;stop-position POSITION</code></dt>
+<dd> Stop (exit) at some position in the log (does not work with STDIN).</dd>
+<dt><code> &#8211;stop-on-idle</code></dt>
+<dd> Stop on break in activity. May be combined with &#8211;stop-position.</dd>
+<dt><code> &#8211;stop-at-end</code></dt>
+<dd> Stop (exit) at the end of the log / stream.</dd>
+<dt><code> &#8211;loop</code></dt>
+<dd> Loop back to the start of the log when the end is reached.</dd>
+<dt><code>-a, &#8211;auto-skip-seconds SECONDS</code></dt>
+<dd> Automatically skip to next entry if nothing happens for a specified number of seconds.</dd>
+<dt><code>-s, &#8211;seconds-per-day SECONDS</code></dt>
+<dd> Speed of simulation in seconds per day.</dd>
+<dt><code>&nbsp;<wbr> &#8211;realtime</code></dt>
+<dd> Realtime playback speed.</dd>
+<dt><code>-i, &#8211;file-idle-time SECONDS</code></dt>
+<dd> Time in seconds files remain idle before they are removed.</dd>
+<dt><code>-e, &#8211;elasticity FLOAT</code></dt>
+<dd> Elasticity of nodes.</dd>
+<dt><code>-b, &#8211;background FFFFFF</code></dt>
+<dd> Background colour in hex.</dd>
+<dt><code>&#8211;date-format FORMAT</code></dt>
+<dd> Specify display date string (strftime format).</dd>
+<dt><code>&#8211;log-format FORMAT</code></dt>
+<dd> Specify format of the log being read (git,cvs,custom). Required when reading STDIN.</dd>
+<dt><code>&#8211;git-branch</code></dt>
+<dd> Get the git log of a branch other than the current one.</dd>
+<dt><code>&#8211;git-log-command</code></dt>
+<dd> Print the git log command used by <i>gource</i>.</dd>
+<dt><code>&#8211;hg-log-command</code></dt>
+<dd> Print the hg log command (Mercurial) used by <i>gource</i>.</dd>
+<dt><code>&#8211;cvs-exp-command</code></dt>
+<dd> Print the cvs-exp.pl log command used by <i>gource</i>.</dd>
+<dt><code>&#8211;follow-user USER</code></dt>
+<dd> Have the camera automatically follow a particular user.</dd>
+<dt><code>&#8211;highlight-user USER</code></dt>
+<dd> Highlight the names of a particular user.</dd>
+<dt><code>&#8211;highlight-all-users</code></dt>
+<dd> Highlight the names of all users.</dd>
+<dt><code>&#8211;file-filter REGEX</code></dt>
+<dd> Filter out any files matching a specified regular expression.</dd>
+<dt><code>&#8211;user-image-dir DIRECTORY</code></dt>
+<dd> Directory containing .jpg or .png images of users (eg &#8216;Full Name.png&#8217;) to use as avatars.</dd>
+<dt><code>&#8211;default-user-image IMAGE</code></dt>
+<dd> Path of .jpg to use as the default user image.</dd>
+<dt><code>&#8211;colour-images</code></dt>
+<dd> Colourize user images.</dd>
+<dt><code>&#8211;crop AXIS</code></dt>
+<dd> Crop view on an axis (vertical,horizontal).</dd>
+<dt><code>&#8211;multi-sampling</code></dt>
+<dd> Enable multi-sampling.</dd>
+<dt><code>&#8211;bloom-multiplier FLOAT</code></dt>
+<dd> Adjust the amount of bloom.</dd>
+<dt><code>&#8211;bloom-intensity FLOAT</code></dt>
+<dd> Adjust the intensity of the bloom.</dd>
+<dt><code>&#8211;disable-progress</code></dt>
+<dd> Disable progress bar.</dd>
+<dt><code>&#8211;disable-bloom</code></dt>
+<dd> Disable bloom effect.</dd>
+<dt><code>&#8211;max-files</code></dt>
+<dd> Set the maximum number of files. Excess files will be discarded.</dd>
+<dt><code>&#8211;max-file-lag SECONDS</code></dt>
+<dd> Max time files of a commit can take to appear.</dd>
+<dt><code>&#8211;max-user-speed UNITS</code></dt>
+<dd> Max speed users can travel per second.</dd>
+<dt><code>&#8211;user-friction SECONDS</code></dt>
+<dd> Time users come to a complete hault.</dd>
+<dt><code>&#8211;user-scale SCALE</code></dt>
+<dd> Change scale of users.</dd>
+<dt><code>&#8211;hide-users</code></dt>
+<dd> Hide users.</dd>
+<dt><code>&#8211;hide-tree</code></dt>
+<dd> Hide tree.</dd>
+<dt><code>&#8211;hide-files</code></dt>
+<dd> Hide files.</dd>
+<dt><code>&#8211;hide-usernames</code></dt>
+<dd> Hide usernames.</dd>
+<dt><code>&#8211;hide-filenames</code></dt>
+<dd> Hide filenames.</dd>
+<dt><code>&#8211;hide-dirnames</code></dt>
+<dd> Hide directory names.</dd>
+<dt><code>&#8211;hide-date</code></dt>
+<dd> Hide the date.</dd>
+<dt><code>&#8211;output-ppm-stream FILE</code></dt>
+<dd> Write frames as PPM to a file (&#8216;-&#8216; for STDOUT).</dd>
+<dt><code>&#8211;output-framerate FPS</code></dt>
+<dd> Framerate of output (used with &#8211;output-ppm-stream).</dd>
+<dt><code>path</code></dt>
+<dd> Either a Git or Mercurial directory, a pre-generated log file (see &#8211;git-log-command, &#8211;hg-log-command or the custom log format) or &#8216;-&#8216; to read STDIN. If path is ommited <i>gource</i> will attempt to read a log from the current directory.</dd></dl>
 <h2>GIT AND MERCURIAL EXAMPLES</h2>
 <p> View the log of the respository in the current path: </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>gource</i> </p>

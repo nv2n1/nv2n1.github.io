@@ -15,10 +15,10 @@ description: "smiucv – helper utility that provides an IUCV interface to the z
 <p> <code>smiucv</code> is a utility which reads requests from stdin, sends them to the SMAPI server via IUCV and writes the response to stdout. It is intended to be used with the smaclient shell command.</p>
 <h2>OPTIONAL PARAMETERS</h2>
 <dl>
-<dt><code>user</code></p>
-<dd> Defaults to VSMREQIU</p>
-<dt><code>name</code></p>
-<dd> Defaults to DMSRSRQU.</dl>
+<dt><code>user</code></dt>
+<dd> Defaults to VSMREQIU</dd>
+<dt><code>name</code></dt>
+<dd> Defaults to DMSRSRQU.</dd></dl>
 <h2>AUTHOR</h2>
 <p> smiucv written by Leland Lucius. Manpage written by Rafael Fonseca.</p>
 <h2>LICENSE</h2>

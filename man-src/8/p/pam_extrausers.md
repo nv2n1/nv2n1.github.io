@@ -10,9 +10,9 @@ description: "pam_extrausers – Module for libnss-extrausers authentication"
 <p>pam_extrausers &#8211; Module for libnss-extrausers authentication</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_extrausers.so</code> [&#8230;]</dl>
+<dt> <code>pam_extrausers.so</code> [&#8230;]</dt></dl>
 <h2>Description</h2>
-<dd>This is similar to the standard Unix authentication module pam_unix. But instead of using /etc/passwd and /etc/shadow, it uses /var/lib/extrausers/passwd and /var/lib/extrausers/shadow. </p>
+<dd>This is similar to the standard Unix authentication module pam_unix. But instead of using /etc/passwd and /etc/shadow, it uses /var/lib/extrausers/passwd and /var/lib/extrausers/shadow. </dd>
 <p> The account component performs the task of establishing the status of the user&#8217;s account and password based on the following <i>shadow</i> elements: expire, last_change, max_change, min_change, warn_change. In the case of the latter, it may offer advice to the user on changing their password or, through the <code>PAM_AUTHTOKEN_REQD</code> return, delay giving service to the user until they have established a new password. The entries listed above are documented in the <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) manual page. Should the user&#8217;s record not contain one or more of these entries, the corresponding <i>shadow</i> check is not performed. </p>
 <p> The authentication component performs the task of checking the users credentials (password). The default action of this module is to not permit the user access to a service if their official password is blank. </p>
 <p> The password component of this module performs the task of updating the user&#8217;s password. The default encryption hash is taken from the <code>ENCRYPT_METHOD</code> variable from <i>/etc/login.defs</i> </p>
@@ -21,82 +21,82 @@ description: "pam_extrausers – Module for libnss-extrausers authentication"
 <h2>Options</h2>
 <p><code>debug</code></p>
 <dl>
-<dd>Turns on debugging via <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</dl>
+<dd>Turns on debugging via <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</dd></dl>
 <p> <code>audit</code></p>
 <dl>
-<dd>A little more extreme than debug.</dl>
+<dd>A little more extreme than debug.</dd></dl>
 <p> <code>nullok</code></p>
 <dl>
-<dd>The default action of this module is to not permit the user access to a service if their official password is blank. The <code>nullok</code> argument overrides this default and allows any user with a blank password to access the service.</dl>
+<dd>The default action of this module is to not permit the user access to a service if their official password is blank. The <code>nullok</code> argument overrides this default and allows any user with a blank password to access the service.</dd></dl>
 <p> <code>nullok_secure</code></p>
 <dl>
-<dd>The default action of this module is to not permit the user access to a service if their official password is blank. The <code>nullok_secure</code> argument overrides this default and allows any user with a blank password to access the service as long as the value of PAM_TTY is set to one of the values found in /etc/securetty.</dl>
+<dd>The default action of this module is to not permit the user access to a service if their official password is blank. The <code>nullok_secure</code> argument overrides this default and allows any user with a blank password to access the service as long as the value of PAM_TTY is set to one of the values found in /etc/securetty.</dd></dl>
 <p> <code>try_first_pass</code></p>
 <dl>
-<dd>Before prompting the user for their password, the module first tries the previous stacked module&#8217;s password in case that satisfies this module as well.</dl>
+<dd>Before prompting the user for their password, the module first tries the previous stacked module&#8217;s password in case that satisfies this module as well.</dd></dl>
 <p> <code>use_first_pass</code></p>
 <dl>
-<dd>The argument <code>use_first_pass</code> forces the module to use a previous stacked modules password and will never prompt the user &#8211; if no password is available or the password is not appropriate, the user will be denied access.</dl>
+<dd>The argument <code>use_first_pass</code> forces the module to use a previous stacked modules password and will never prompt the user &#8211; if no password is available or the password is not appropriate, the user will be denied access.</dd></dl>
 <p> <code>nodelay</code></p>
 <dl>
-<dd>This argument can be used to discourage the authentication component from requesting a delay should the authentication as a whole fail. The default action is for the module to request a delay-on-failure of the order of two second.</dl>
+<dd>This argument can be used to discourage the authentication component from requesting a delay should the authentication as a whole fail. The default action is for the module to request a delay-on-failure of the order of two second.</dd></dl>
 <p> <code>use_authtok</code></p>
 <dl>
-<dd>When password changing enforce the module to set the new password to the one provided by a previously stacked <code>password</code> module (this is used in the example of the stacking of the <code>pam_cracklib</code> module documented below).</dl>
+<dd>When password changing enforce the module to set the new password to the one provided by a previously stacked <code>password</code> module (this is used in the example of the stacking of the <code>pam_cracklib</code> module documented below).</dd></dl>
 <p> <code>not_set_pass</code></p>
 <dl>
-<dd>This argument is used to inform the module that it is not to pay attention to/make available the old or new passwords from/to other (stacked) password modules.</dl>
+<dd>This argument is used to inform the module that it is not to pay attention to/make available the old or new passwords from/to other (stacked) password modules.</dd></dl>
 <p> <code>nis</code></p>
 <dl>
-<dd>NIS RPC is used for setting new passwords.</dl>
+<dd>NIS RPC is used for setting new passwords.</dd></dl>
 <p> <code>remember=</code><i>n</i></p>
 <dl>
-<dd>The last <i>n</i> passwords for each user are saved in /etc/security/opasswd in order to force password change history and keep the user from alternating between the same password too frequently. Instead of this option the <code>pam_pwhistory</code> module should be used.</dl>
+<dd>The last <i>n</i> passwords for each user are saved in /etc/security/opasswd in order to force password change history and keep the user from alternating between the same password too frequently. Instead of this option the <code>pam_pwhistory</code> module should be used.</dd></dl>
 <p> <code>shadow</code></p>
 <dl>
-<dd>Try to maintain a shadow based system.</dl>
+<dd>Try to maintain a shadow based system.</dd></dl>
 <p> <code>md5</code></p>
 <dl>
-<dd>When a user changes their password next, encrypt it with the MD5 algorithm.</dl>
+<dd>When a user changes their password next, encrypt it with the MD5 algorithm.</dd></dl>
 <p> <code>bigcrypt</code></p>
 <dl>
-<dd>When a user changes their password next, encrypt it with the DEC C2 algorithm.</dl>
+<dd>When a user changes their password next, encrypt it with the DEC C2 algorithm.</dd></dl>
 <p> <code>sha256</code></p>
 <dl>
-<dd>When a user changes their password next, encrypt it with the SHA256 algorithm. If the SHA256 algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dl>
+<dd>When a user changes their password next, encrypt it with the SHA256 algorithm. If the SHA256 algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dd></dl>
 <p> <code>sha512</code></p>
 <dl>
-<dd>When a user changes their password next, encrypt it with the SHA512 algorithm. If the SHA512 algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dl>
+<dd>When a user changes their password next, encrypt it with the SHA512 algorithm. If the SHA512 algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dd></dl>
 <p> <code>blowfish</code></p>
 <dl>
-<dd>When a user changes their password next, encrypt it with the blowfish algorithm. If the blowfish algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dl>
+<dd>When a user changes their password next, encrypt it with the blowfish algorithm. If the blowfish algorithm is not known to the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) function, fall back to MD5.</dd></dl>
 <p> <code>rounds=</code><i>n</i></p>
 <dl>
-<dd>Set the optional number of rounds of the SHA256, SHA512 and blowfish password hashing algorithms to <i>n</i>.</dl>
+<dd>Set the optional number of rounds of the SHA256, SHA512 and blowfish password hashing algorithms to <i>n</i>.</dd></dl>
 <p> <code>broken_shadow</code></p>
 <dl>
-<dd>Ignore errors reading shadow information for users in the account management module.</dl>
+<dd>Ignore errors reading shadow information for users in the account management module.</dd></dl>
 <p> <code>minlen=</code><i>n</i></p>
 <dl>
-<dd>Set a minimum password length of <i>n</i> characters. The default value is 6. The maximum for DES crypt-based passwords is 8 characters.</dl>
+<dd>Set a minimum password length of <i>n</i> characters. The default value is 6. The maximum for DES crypt-based passwords is 8 characters.</dd></dl>
 <p> <code>obscure</code></p>
 <dl>
-<dd>Enable some extra checks on password strength. These checks are based on the &quot;obscure&quot; checks in the original shadow package. The behavior is similar to the pam_cracklib module, but for non-dictionary-based checks. The following checks are implemented: </p>
+<dd>Enable some extra checks on password strength. These checks are based on the &quot;obscure&quot; checks in the original shadow package. The behavior is similar to the pam_cracklib module, but for non-dictionary-based checks. The following checks are implemented: </dd>
 <p> <code>Palindrome</code></p>
 <dl>
-<dd>Verifies that the new password is not a palindrome of (i.e., the reverse of) the previous one.</dl>
+<dd>Verifies that the new password is not a palindrome of (i.e., the reverse of) the previous one.</dd></dl>
 <p> <code>Case Change Only</code></p>
 <dl>
-<dd>Verifies that the new password isn&#8217;t the same as the old one with a change of case.</dl>
+<dd>Verifies that the new password isn&#8217;t the same as the old one with a change of case.</dd></dl>
 <p> <code>Similar</code></p>
 <dl>
-<dd>Verifies that the new password isn&#8217;t too much like the previous one.</dl>
+<dd>Verifies that the new password isn&#8217;t too much like the previous one.</dd></dl>
 <p> <code>Simple</code></p>
 <dl>
-<dd>Is the new password too simple? This is based on the length of the password and the number of different types of characters (alpha, numeric, etc.) used.</dl>
+<dd>Is the new password too simple? This is based on the length of the password and the number of different types of characters (alpha, numeric, etc.) used.</dd></dl>
 <p> <code>Rotated</code></p>
 <dl>
-<dd>Is the new password a rotated version of the old password? (E.g., &quot;billy&quot; and &quot;illyb&quot;)</dl>
+<dd>Is the new password a rotated version of the old password? (E.g., &quot;billy&quot; and &quot;illyb&quot;)</dd></dl>
 </dl>
 <p> Invalid arguments are logged with <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</p>
 <h2>Module Types Provided</h2>
@@ -104,7 +104,7 @@ description: "pam_extrausers – Module for libnss-extrausers authentication"
 <h2>Return Values</h2>
 <p>PAM_IGNORE</p>
 <dl>
-<dd>Ignore this module.</dl>
+<dd>Ignore this module.</dd></dl>
 <h2>Examples</h2>
 <p>An example usage for /etc/pam.d/common-password would be: </p>
 <pre><code>password[success = 2 default = ignore] pam_extrausers.so obscure sha512

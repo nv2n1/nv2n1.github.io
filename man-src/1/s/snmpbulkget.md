@@ -16,10 +16,10 @@ description: "snmpbulkget – communicates with a network entity using SNMP GETB
 <p> If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint why the request was malformed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Cn</code><i>&lt;NUM&gt;</i></p>
-<dd> Set the <i>non-repeaters</i> field in the GETBULK PDU. This specifies the number of supplied variables that should not be iterated over. The default is 0.</p>
-<dt><code>-Cr</code><i>&lt;NUM&gt;</i></p>
-<dd> Set the <i>max-repetitions</i> field in the GETBULK PDU. This specifies the maximum number of iterations over the repeating variables. The default is 10.</dl>
+<dt><code>-Cn</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>non-repeaters</i> field in the GETBULK PDU. This specifies the number of supplied variables that should not be iterated over. The default is 0.</dd>
+<dt><code>-Cr</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>max-repetitions</i> field in the GETBULK PDU. This specifies the maximum number of iterations over the repeating variables. The default is 10.</dd></dl>
 <p> In addition to these options, <code>snmpbulkget</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpbulkget</code> REQUIRES an argument specifying the agent to query and at least one OID argument, as described there.</p>
 <h2>EXAMPLE</h2>
 <p> The command: </p>

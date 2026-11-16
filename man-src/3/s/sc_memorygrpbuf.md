@@ -11,9 +11,7 @@ description: "sc::MemoryGrpBuf –"
 <p> The <code>MemoryGrpBuf</code> class provides access to pieces of the global shared memory that have been obtained with <code>MemoryGrp</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memory.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>MemoryGrpBuf</code> (const <code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;)<br />
  <i>Creates a new </i><code>MemoryGrpBuf</code> given a <code>MemoryGrp</code> reference.<br />

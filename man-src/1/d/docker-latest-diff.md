@@ -20,7 +20,7 @@ description: "docker-diff – Inspect changes on a container’s filesystem"
 <p> Inspect the changes to on a nginx container: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker diff 1fdfd1f54c1b
 C /dev
@@ -43,7 +43,7 @@ C /var/log/nginx
 A /var/log/nginx/access.log
 A /var/log/nginx/error.log
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
 <h2>Index</h2>

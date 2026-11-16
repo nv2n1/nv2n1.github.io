@@ -53,17 +53,17 @@ ELANNAME= Name of the emulated LAN</pre>
 <h2>Options</h2>
 <dl>
 <dt>
-<dt><code>-d&nbsp;<wbr></code><i>module</i></p>
+</dt><dt><code>-d&nbsp;<wbr></code><i>module</i></dt>
 <dd>
-<dd>Set debugging messages on for a module. &quot;All&quot; sets debugging on for all modules.</p>
-<dt><code>-m&nbsp;<wbr></code><i>module</i></p>
-<dd>Set memory debugging messages on for a module. &quot;All&quot; sets debugging on for all modules.</p>
-<dt><code>-f&nbsp;<wbr></code><i>configuration_file</i></p>
-<dd>Use the specified configuration file instead of <code>.lanevars</code>.</dl>
+</dd><dd>Set debugging messages on for a module. &quot;All&quot; sets debugging on for all modules.</dd>
+<dt><code>-m&nbsp;<wbr></code><i>module</i></dt>
+<dd>Set memory debugging messages on for a module. &quot;All&quot; sets debugging on for all modules.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>configuration_file</i></dt>
+<dd>Use the specified configuration file instead of <code>.lanevars</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>.lanevars</code></p>
-<dd>configuration file</dl>
+<dt><code>.lanevars</code></dt>
+<dd>configuration file</dd></dl>
 <h2>Bugs</h2>
 <p>Servers don&#8217;t establish point-to-multipoint connections to LE clients as the specification states, which means that some LE clients won&#8217;t work with these servers. </p>
 <p> Supports only IEEE 802.3 / Ethernet type of ELANs. </p>

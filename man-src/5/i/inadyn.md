@@ -12,9 +12,9 @@ description: "inadyn.conf – configuration for the inadyn client for open DNS s
 <p><code>inadyn</code> can read the very same options which can be present in the command line from a configuration file. This feature allows the user to write the options only once, and avoids frequent retyping. </p>
 <p> The format of the file follows the *NIX tradition:</p>
 <dl>
-<dd>a &#8216;#&#8217; character denotes a comment.</p>
-<dd>The long options (those with &#8216;&#8211;&#8216; in front) can also be placed at the beginning of the line without &#8216;&#8211;&#8216; signs.</p>
-<dd>a \ can be used as an escape character.</dl>
+<dd>a &#8216;#&#8217; character denotes a comment.</dd>
+<dd>The long options (those with &#8216;&#8211;&#8216; in front) can also be placed at the beginning of the line without &#8216;&#8211;&#8216; signs.</dd>
+<dd>a \ can be used as an escape character.</dd></dl>
 <h2>Examples</h2>
 <h3>1.</h3>
 <p>#Some comment about inadyn cfg file &#8211;username test &#8211;password test &#8211;update_period 60000 &#8211;alias test.homeip.net &#8211;alias my.second.domain<br />

@@ -10,21 +10,21 @@ description: "pam_motd – Display the motd file"
 <p>pam_motd &#8211; Display the motd file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_motd.so</code> [motd=<i>/path/filename</i>] [motd_dir=<i>/path/dirname.d</i>]</dl>
+<dt> <code>pam_motd.so</code> [motd=<i>/path/filename</i>] [motd_dir=<i>/path/dirname.d</i>]</dt></dl>
 <h2>Description</h2>
-<dd>pam_motd is a PAM module that can be used to display arbitrary motd (message of the day) files after a successful login. By default, pam_motd shows files in the following locations: </p>
+<dd>pam_motd is a PAM module that can be used to display arbitrary motd (message of the day) files after a successful login. By default, pam_motd shows files in the following locations: </dd>
 <dl>
-<dd>/etc/motd</dl>
+<dd>/etc/motd</dd></dl>
 <dl>
-<dd>/run/motd</dl>
+<dd>/run/motd</dd></dl>
 <dl>
-<dd>/usr/lib/motd</dl>
+<dd>/usr/lib/motd</dd></dl>
 <dl>
-<dd>/etc/motd.d/</dl>
+<dd>/etc/motd.d/</dd></dl>
 <dl>
-<dd>/run/motd.d/</dl>
+<dd>/run/motd.d/</dd></dl>
 <dl>
-<dd>/usr/lib/motd.d/</dl>
+<dd>/usr/lib/motd.d/</dd></dl>
 <p> Each message size is limited to 64KB. </p>
 <p> If /etc/motd does not exist, then /run/motd is shown. If /run/motd does not exist, then /usr/lib/motd is shown. </p>
 <p> Similar overriding behavior applies to the directories. Files in /etc/motd.d/ override files with the same name in /run/motd.d/ and /usr/lib/motd.d/. Files in /run/motd.d/ override files with the same name in /usr/lib/motd.d/. </p>
@@ -35,42 +35,42 @@ description: "pam_motd – Display the motd file"
 <h2>Options</h2>
 <p><code>motd=</code><i>/path/filename</i></p>
 <dl>
-<dd>The /path/filename file is displayed as message of the day. Multiple paths to try can be specified as a colon-separated list. By default this option is set to /etc/motd:/run/motd:/usr/lib/motd.</dl>
+<dd>The /path/filename file is displayed as message of the day. Multiple paths to try can be specified as a colon-separated list. By default this option is set to /etc/motd:/run/motd:/usr/lib/motd.</dd></dl>
 <p> <code>motd_dir=</code><i>/path/dirname.d</i></p>
 <dl>
-<dd>The /path/dirname.d directory is scanned and each file contained inside of it is displayed. Multiple directories to scan can be specified as a colon-separated list. By default this option is set to /etc/motd.d:/run/motd.d:/usr/lib/motd.d.</dl>
+<dd>The /path/dirname.d directory is scanned and each file contained inside of it is displayed. Multiple directories to scan can be specified as a colon-separated list. By default this option is set to /etc/motd.d:/run/motd.d:/usr/lib/motd.d.</dd></dl>
 <p> <code>noupdate</code></p>
 <dl>
-<dd>Don&#8217;t run the scripts in /etc/update-motd.d to refresh the motd file.</dl>
+<dd>Don&#8217;t run the scripts in /etc/update-motd.d to refresh the motd file.</dd></dl>
 <p> When no options are given, the default behavior applies for both options. Specifying either option (or both) will disable the default behavior for both options.</p>
 <h2>Module Types Provided</h2>
 <p>Only the <code>session</code> module type is provided.</p>
 <h2>Return Values</h2>
 <p>PAM_ABORT</p>
 <dl>
-<dd>Not all relevant data or options could be obtained.</dl>
+<dd>Not all relevant data or options could be obtained.</dd></dl>
 <p> PAM_BUF_ERR</p>
 <dl>
-<dd>Memory buffer error.</dl>
+<dd>Memory buffer error.</dd></dl>
 <p> PAM_IGNORE</p>
 <dl>
-<dd>This is the default return value of this module.</dl>
+<dd>This is the default return value of this module.</dd></dl>
 <h2>Examples</h2>
 <p>The suggested usage for /etc/pam.d/login is:</p>
 <dl>
 <dd>
 <pre>session optional pam_motd.so</pre>
-</dl>
+</dd></dl>
 <p> To use a motd file from a different location:</p>
 <dl>
 <dd>
 <pre>session optional pam_motd.so motd=/elsewhere/motd</pre>
-</dl>
+</dd></dl>
 <p> To use a motd file from elsewhere, along with a corresponding .d directory:</p>
 <dl>
 <dd>
 <pre>session optional pam_motd.so motd=/elsewhere/motd motd_dir=/elsewhere/motd.d</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-motd/">motd</a></code>(5), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7), <code><a href="/docs/linux/man/5-update-motd/">update-motd</a></code>(5)</p>
 <h2>Author</h2>

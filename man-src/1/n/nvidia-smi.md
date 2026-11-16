@@ -65,12 +65,12 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h3>&#8211;format=</h3>
 <p> Comma separated list of format options:</p>
 <dl>
-<dt>&bull;</p>
-<dd> csv &#8211; comma separated values (MANDATORY)</p>
-<dt>&bull;</p>
-<dd> noheader &#8211; skip first line with column headers</p>
-<dt>&bull;</p>
-<dd> nounits &#8211; don&#8217;t print units for numerical values </p>
+<dt>&bull;</dt>
+<dd> csv &#8211; comma separated values (MANDATORY)</dd>
+<dt>&bull;</dt>
+<dd> noheader &#8211; skip first line with column headers</dd>
+<dt>&bull;</dt>
+<dd> nounits &#8211; don&#8217;t print units for numerical values </dd>
 </dl>
 <h3>[plus any of]</h3>
 <h3>-i, &#8211;id=ID</h3>
@@ -166,32 +166,32 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h2>RETURN VALUE</h2>
 <p> Return code reflects whether the operation succeeded or failed and what was the reason of failure.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Return code 0 &#8211; Success</p>
-<dt>&bull;</p>
-<dd> Return code 2 &#8211; A supplied argument or flag is invalid</p>
-<dt>&bull;</p>
-<dd> Return code 3 &#8211; The requested operation is not available on target device</p>
-<dt>&bull;</p>
-<dd> Return code 4 &#8211; The current user does not have permission to access this device or perform this operation</p>
-<dt>&bull;</p>
-<dd> Return code 6 &#8211; A query to find an object was unsuccessful</p>
-<dt>&bull;</p>
-<dd> Return code 8 &#8211; A device&#8217;s external power cables are not properly attached</p>
-<dt>&bull;</p>
-<dd> Return code 9 &#8211; NVIDIA driver is not loaded</p>
-<dt>&bull;</p>
-<dd> Return code 10 &#8211; NVIDIA Kernel detected an interrupt issue with a GPU</p>
-<dt>&bull;</p>
-<dd> Return code 12 &#8211; NVML Shared Library couldn&#8217;t be found or loaded</p>
-<dt>&bull;</p>
-<dd> Return code 13 &#8211; Local version of NVML doesn&#8217;t implement this function</p>
-<dt>&bull;</p>
-<dd> Return code 14 &#8211; infoROM is corrupted</p>
-<dt>&bull;</p>
-<dd> Return code 15 &#8211; The GPU has fallen off the bus or has otherwise become inaccessible</p>
-<dt>&bull;</p>
-<dd> Return code 255 &#8211; Other error or internal driver error occurred </p>
+<dt>&bull;</dt>
+<dd> Return code 0 &#8211; Success</dd>
+<dt>&bull;</dt>
+<dd> Return code 2 &#8211; A supplied argument or flag is invalid</dd>
+<dt>&bull;</dt>
+<dd> Return code 3 &#8211; The requested operation is not available on target device</dd>
+<dt>&bull;</dt>
+<dd> Return code 4 &#8211; The current user does not have permission to access this device or perform this operation</dd>
+<dt>&bull;</dt>
+<dd> Return code 6 &#8211; A query to find an object was unsuccessful</dd>
+<dt>&bull;</dt>
+<dd> Return code 8 &#8211; A device&#8217;s external power cables are not properly attached</dd>
+<dt>&bull;</dt>
+<dd> Return code 9 &#8211; NVIDIA driver is not loaded</dd>
+<dt>&bull;</dt>
+<dd> Return code 10 &#8211; NVIDIA Kernel detected an interrupt issue with a GPU</dd>
+<dt>&bull;</dt>
+<dd> Return code 12 &#8211; NVML Shared Library couldn&#8217;t be found or loaded</dd>
+<dt>&bull;</dt>
+<dd> Return code 13 &#8211; Local version of NVML doesn&#8217;t implement this function</dd>
+<dt>&bull;</dt>
+<dd> Return code 14 &#8211; infoROM is corrupted</dd>
+<dt>&bull;</dt>
+<dd> Return code 15 &#8211; The GPU has fallen off the bus or has otherwise become inaccessible</dd>
+<dt>&bull;</dt>
+<dd> Return code 255 &#8211; Other error or internal driver error occurred </dd>
 </dl>
 <h2>GPU ATTRIBUTES</h2>
 <p> The following list describes all possible data returned by the <code>-q</code> device query option. Unless otherwise noted all numerical results are base 10 and unitless. </p>
@@ -216,10 +216,10 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h3>Driver Model</h3>
 <p> On Windows, the TCC and WDDM driver models are supported. The driver model can be changed with the (<i>-dm</i>) or (<i>-fdm</i>) flags. The TCC driver model is optimized for compute applications. I.E. kernel launch times will be quicker with TCC. The WDDM driver model is designed for graphics applications and is not recommended for compute applications. Linux does not support multiple driver models, and will always have the value of &quot;N/A&quot;. </p>
 <dl>
-<dt><code>Current</code></p>
-<dd> The driver model currently in use. Always &quot;N/A&quot; on Linux. </p>
-<dt><code>Pending</code></p>
-<dd> The driver model that will be used on the next reboot. Always &quot;N/A&quot; on Linux. </p>
+<dt><code>Current</code></dt>
+<dd> The driver model currently in use. Always &quot;N/A&quot; on Linux. </dd>
+<dt><code>Pending</code></dt>
+<dd> The driver model that will be used on the next reboot. Always &quot;N/A&quot; on Linux. </dd>
 </dl>
 <h3>Serial Number</h3>
 <p> This number matches the serial number physically printed on each board. It is a globally unique immutable alphanumeric value. </p>
@@ -237,14 +237,14 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> Version numbers for each object in the GPU board&#8217;s inforom storage. The inforom is a small, persistent store of configuration and state data for the GPU. All inforom version fields are numerical. It can be useful to know these version numbers because some GPU features are only available with inforoms of a certain version or higher. </p>
 <p> If any of the fields below return Unknown Error additional Inforom verification check is performed and appropriate warning message is displayed. </p>
 <dl>
-<dt><code>Image Version</code></p>
-<dd> Global version of the infoROM image. Image version just like VBIOS version uniquely describes the exact version of the infoROM flashed on the board in contrast to infoROM object version which is only an indicator of supported features. </p>
-<dt><code>OEM Object</code></p>
-<dd> Version for the OEM configuration data. </p>
-<dt><code>ECC Object</code></p>
-<dd> Version for the ECC recording data. </p>
-<dt><code>Power Object</code></p>
-<dd> Version for the power management data. </p>
+<dt><code>Image Version</code></dt>
+<dd> Global version of the infoROM image. Image version just like VBIOS version uniquely describes the exact version of the infoROM flashed on the board in contrast to infoROM object version which is only an indicator of supported features. </dd>
+<dt><code>OEM Object</code></dt>
+<dd> Version for the OEM configuration data. </dd>
+<dt><code>ECC Object</code></dt>
+<dd> Version for the ECC recording data. </dd>
+<dt><code>Power Object</code></dt>
+<dd> Version for the power management data. </dd>
 </dl>
 <h3>GPU Operation Mode</h3>
 <p> GOM allows to reduce power usage and optimize GPU throughput by disabling GPU features. </p>
@@ -255,41 +255,41 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> GOM can be changed with the (<i>&#8211;gom</i>) flag. </p>
 <p> Supported on GK110 M-class and X-class Tesla products from the Kepler family. Not supported on Quadro and Tesla C-class products. Low Double Precision and All On modes are the only modes available for supported GeForce Titan products. </p>
 <dl>
-<dt><code>Current</code></p>
-<dd> The GOM currently in use. </p>
-<dt><code>Pending</code></p>
-<dd> The GOM that will be used on the next reboot. </p>
+<dt><code>Current</code></dt>
+<dd> The GOM currently in use. </dd>
+<dt><code>Pending</code></dt>
+<dd> The GOM that will be used on the next reboot. </dd>
 </dl>
 <h3>PCI</h3>
 <p> Basic PCI info for the device. Some of this information may change whenever cards are added/removed/moved in a system. For all products. </p>
 <dl>
-<dt><code>Bus</code></p>
-<dd> PCI bus number, in hex </p>
-<dt><code>Device</code></p>
-<dd> PCI device number, in hex </p>
-<dt><code>Domain</code></p>
-<dd> PCI domain number, in hex </p>
-<dt><code>Device Id</code></p>
-<dd> PCI vendor device id, in hex </p>
-<dt><code>Sub System Id</code></p>
-<dd> PCI Sub System id, in hex </p>
-<dt><code>Bus Id</code></p>
-<dd> PCI bus id as &quot;domain:bus:device.function&quot;, in hex</dl>
+<dt><code>Bus</code></dt>
+<dd> PCI bus number, in hex </dd>
+<dt><code>Device</code></dt>
+<dd> PCI device number, in hex </dd>
+<dt><code>Domain</code></dt>
+<dd> PCI domain number, in hex </dd>
+<dt><code>Device Id</code></dt>
+<dd> PCI vendor device id, in hex </dd>
+<dt><code>Sub System Id</code></dt>
+<dd> PCI Sub System id, in hex </dd>
+<dt><code>Bus Id</code></dt>
+<dd> PCI bus id as &quot;domain:bus:device.function&quot;, in hex</dd></dl>
 <h3>GPU Link information</h3>
 <p> The PCIe link generation and bus width </p>
 <dl>
-<dt><code>Current</code></p>
-<dd> The current link generation and width. These may be reduced when the GPU is not in use. </p>
-<dt><code>Maximum</code></p>
-<dd> The maximum link generation and width possible with this GPU and system configuration. For example, if the GPU supports a higher PCIe generation than the system supports then this reports the system PCIe generation. </p>
+<dt><code>Current</code></dt>
+<dd> The current link generation and width. These may be reduced when the GPU is not in use. </dd>
+<dt><code>Maximum</code></dt>
+<dd> The maximum link generation and width possible with this GPU and system configuration. For example, if the GPU supports a higher PCIe generation than the system supports then this reports the system PCIe generation. </dd>
 </dl>
 <h3>Bridge Chip</h3>
 <p> Information related to Bridge Chip on the device. The bridge chip firmware is only present on certain boards and may display &quot;N/A&quot; for some newer multiGPUs boards. </p>
 <dl>
-<dt><code>Type</code></p>
-<dd> The type of bridge chip. Reported as N/A if doesn&#8217;t exist. </p>
-<dt><code>Firmware Version</code></p>
-<dd> The firmware version of the bridge chip. Reported as N/A if doesn&#8217;t exist. </p>
+<dt><code>Type</code></dt>
+<dd> The type of bridge chip. Reported as N/A if doesn&#8217;t exist. </dd>
+<dt><code>Firmware Version</code></dt>
+<dd> The firmware version of the bridge chip. Reported as N/A if doesn&#8217;t exist. </dd>
 </dl>
 <h3>Replays Since Reset</h3>
 <p> The number of PCIe replays since reset.</p>
@@ -307,40 +307,40 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> Retrieves information about factors that are reducing the frequency of clocks. </p>
 <p> If all throttle reasons are returned as &quot;Not Active&quot; it means that clocks are running as high as possible. </p>
 <dl>
-<dt><code>Idle</code></p>
-<dd> Nothing is running on the GPU and the clocks are dropping to Idle state. This limiter may be removed in a later release. </p>
-<dt><code>Application Clocks Setting</code></p>
-<dd> GPU clocks are limited by applications clocks setting. E.g. can be changed using nvidia-smi &#8211;applications-clocks= </p>
-<dt><code>SW Power Cap</code></p>
-<dd> SW Power Scaling algorithm is reducing the clocks below requested clocks because the GPU is consuming too much power. E.g. SW power cap limit can be changed with nvidia-smi &#8211;power-limit= </p>
-<dt><code>HW Slowdown</code></p>
-<dd> HW Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. HW Thermal Slowdown and HW Power Brake will be displayed on Pascal+. </p>
+<dt><code>Idle</code></dt>
+<dd> Nothing is running on the GPU and the clocks are dropping to Idle state. This limiter may be removed in a later release. </dd>
+<dt><code>Application Clocks Setting</code></dt>
+<dd> GPU clocks are limited by applications clocks setting. E.g. can be changed using nvidia-smi &#8211;applications-clocks= </dd>
+<dt><code>SW Power Cap</code></dt>
+<dd> SW Power Scaling algorithm is reducing the clocks below requested clocks because the GPU is consuming too much power. E.g. SW power cap limit can be changed with nvidia-smi &#8211;power-limit= </dd>
+<dt><code>HW Slowdown</code></dt>
+<dd> HW Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. HW Thermal Slowdown and HW Power Brake will be displayed on Pascal+. </dd>
 <p> This is an indicator of:<br />
  * Temperature being too high (HW Thermal Slowdown)<br />
  * External Power Brake Assertion is triggered (e.g. by the system power supply) (HW Power Brake Slowdown)<br />
  * Power draw is too high and Fast Trigger protection is reducing the clocks </p>
-<dt><code>SW Thermal Slowdown</code></p>
-<dd> SW Thermal capping algorithm is reducing clocks below requested clocks because GPU temperature is higher than Max Operating Temp </p>
+<dt><code>SW Thermal Slowdown</code></dt>
+<dd> SW Thermal capping algorithm is reducing clocks below requested clocks because GPU temperature is higher than Max Operating Temp </dd>
 </dl>
 <h3>FB Memory Usage</h3>
 <p> On-board frame buffer memory information. Reported total memory is affected by ECC state. If ECC is enabled the total available memory is decreased by several percent, due to the requisite parity bits. The driver may also reserve a small amount of memory for internal use, even without active work on the GPU. For all products. </p>
 <dl>
-<dt><code>Total</code></p>
-<dd> Total size of FB memory. </p>
-<dt><code>Used</code></p>
-<dd> Used size of FB memory. </p>
-<dt><code>Free</code></p>
-<dd> Available size of FB memory. </p>
+<dt><code>Total</code></dt>
+<dd> Total size of FB memory. </dd>
+<dt><code>Used</code></dt>
+<dd> Used size of FB memory. </dd>
+<dt><code>Free</code></dt>
+<dd> Available size of FB memory. </dd>
 </dl>
 <h3>BAR1 Memory Usage</h3>
 <p> BAR1 is used to map the FB (device memory) so that it can be directly accessed by the CPU or by 3rd party devices (peer-to-peer on the PCIe bus). </p>
 <dl>
-<dt><code>Total</code></p>
-<dd> Total size of BAR1 memory. </p>
-<dt><code>Used</code></p>
-<dd> Used size of BAR1 memory. </p>
-<dt><code>Free</code></p>
-<dd> Available size of BAR1 memory. </p>
+<dt><code>Total</code></dt>
+<dd> Total size of BAR1 memory. </dd>
+<dt><code>Used</code></dt>
+<dd> Used size of BAR1 memory. </dd>
+<dt><code>Free</code></dt>
+<dd> Available size of BAR1 memory. </dd>
 </dl>
 <h3>Compute Mode</h3>
 <p> The compute mode flag indicates whether individual or multiple compute applications may run on the GPU. </p>
@@ -353,40 +353,40 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> Utilization rates report how busy each GPU is over time, and can be used to determine how much an application is using the GPUs in the system. </p>
 <p> Note: During driver initialization when ECC is enabled one can see high GPU and Memory Utilization readings. This is caused by ECC Memory Scrubbing mechanism that is performed during driver initialization. </p>
 <dl>
-<dt><code>GPU</code></p>
-<dd> Percent of time over the past sample period during which one or more kernels was executing on the GPU. The sample period may be between 1 second and 1/6 second depending on the product. </p>
-<dt><code>Memory</code></p>
-<dd> Percent of time over the past sample period during which global (device) memory was being read or written. The sample period may be between 1 second and 1/6 second depending on the product. </p>
-<dt><code>Encoder</code></p>
-<dd> Percent of time over the past sample period during which the GPU&#8217;s video encoder was being used. The sampling rate is variable and can be obtained directly via the nvmlDeviceGetEncoderUtilization() API </p>
-<dt><code>Decoder</code></p>
-<dd> Percent of time over the past sample period during which the GPU&#8217;s video decoder was being used. The sampling rate is variable and can be obtained directly via the nvmlDeviceGetDecoderUtilization() API </p>
+<dt><code>GPU</code></dt>
+<dd> Percent of time over the past sample period during which one or more kernels was executing on the GPU. The sample period may be between 1 second and 1/6 second depending on the product. </dd>
+<dt><code>Memory</code></dt>
+<dd> Percent of time over the past sample period during which global (device) memory was being read or written. The sample period may be between 1 second and 1/6 second depending on the product. </dd>
+<dt><code>Encoder</code></dt>
+<dd> Percent of time over the past sample period during which the GPU&#8217;s video encoder was being used. The sampling rate is variable and can be obtained directly via the nvmlDeviceGetEncoderUtilization() API </dd>
+<dt><code>Decoder</code></dt>
+<dd> Percent of time over the past sample period during which the GPU&#8217;s video decoder was being used. The sampling rate is variable and can be obtained directly via the nvmlDeviceGetDecoderUtilization() API </dd>
 </dl>
 <h3>Ecc Mode</h3>
 <p> A flag that indicates whether ECC support is enabled. May be either &quot;Enabled&quot; or &quot;Disabled&quot;. Changes to ECC mode require a reboot. Requires Inforom ECC object version 1.0 or higher. </p>
 <dl>
-<dt><code>Current</code></p>
-<dd> The ECC mode that the GPU is currently operating under. </p>
-<dt><code>Pending</code></p>
-<dd> The ECC mode that the GPU will operate under after the next reboot. </p>
+<dt><code>Current</code></dt>
+<dd> The ECC mode that the GPU is currently operating under. </dd>
+<dt><code>Pending</code></dt>
+<dd> The ECC mode that the GPU will operate under after the next reboot. </dd>
 </dl>
 <h3>ECC Errors</h3>
 <p> NVIDIA GPUs can provide error counts for various types of ECC errors. Some ECC errors are either single or double bit, where single bit errors are corrected and double bit errors are uncorrectable. Texture memory errors may be correctable via resend or uncorrectable if the resend fails. These errors are available across two timescales (volatile and aggregate). Single bit ECC errors are automatically corrected by the HW and do not result in data corruption. Double bit errors are detected but not corrected. Please see the ECC documents on the web for information on compute application behavior when double bit errors occur. Volatile error counters track the number of errors detected since the last driver load. Aggregate error counts persist indefinitely and thus act as a lifetime counter. </p>
 <p> A note about volatile counts: On Windows this is once per boot. On Linux this can be more frequent. On Linux the driver unloads when no active clients exist. Hence, if persistence mode is enabled or there is always a driver client active (e.g. X11), then Linux also sees per-boot behavior. If not, volatile counts are reset each time a compute app is run. </p>
 <p> Tesla and Quadro products from the Fermi and Kepler family can display total ECC error counts, as well as a breakdown of errors based on location on the chip. The locations are described below. Location-based data for aggregate error counts requires Inforom ECC object version 2.0. All other ECC counts require ECC object version 1.0. </p>
 <dl>
-<dt><code>Device Memory</code></p>
-<dd> Errors detected in global device memory. </p>
-<dt><code>Register File</code></p>
-<dd> Errors detected in register file memory. </p>
-<dt><code>L1 Cache</code></p>
-<dd> Errors detected in the L1 cache. </p>
-<dt><code>L2 Cache</code></p>
-<dd> Errors detected in the L2 cache. </p>
-<dt><code>Texture Memory</code></p>
-<dd> Parity errors detected in texture memory. </p>
-<dt><code>Total</code></p>
-<dd> Total errors detected across entire chip. Sum of <code>Device Memory</code>, <code>Register File</code>, <code>L1 Cache</code>, <code>L2 Cache</code> and <code>Texture Memory</code>. </p>
+<dt><code>Device Memory</code></dt>
+<dd> Errors detected in global device memory. </dd>
+<dt><code>Register File</code></dt>
+<dd> Errors detected in register file memory. </dd>
+<dt><code>L1 Cache</code></dt>
+<dd> Errors detected in the L1 cache. </dd>
+<dt><code>L2 Cache</code></dt>
+<dd> Errors detected in the L2 cache. </dd>
+<dt><code>Texture Memory</code></dt>
+<dd> Parity errors detected in texture memory. </dd>
+<dt><code>Total</code></dt>
+<dd> Total errors detected across entire chip. Sum of <code>Device Memory</code>, <code>Register File</code>, <code>L1 Cache</code>, <code>L2 Cache</code> and <code>Texture Memory</code>. </dd>
 </dl>
 <h3>Page Retirement</h3>
 <p> NVIDIA GPUs can retire pages of GPU device memory when they become unreliable. This can happen when multiple single bit ECC errors occur for the same page, or on a double bit ECC error. When a page is retired, the NVIDIA driver will hide it such that no driver, or application memory allocations can access it. </p>
@@ -403,420 +403,420 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h3>Temperature</h3>
 <p> Readings from temperature sensors on the board. All readings are in degrees C. Not all products support all reading types. In particular, products in module form factors that rely on case fans or passive cooling do not usually provide temperature readings. See below for restrictions. </p>
 <dl>
-<dt><code>GPU</code></p>
-<dd> Core GPU temperature. For all discrete and S-class products. </p>
-<dt><code>Shutdown Temp</code></p>
-<dd> The temperature at which a GPU will shutdown.</p>
-<dt><code>Slowdown Temp</code></p>
-<dd> The temperature at which a GPU will begin slowing itself down through HW, in order to cool.</p>
-<dt><code>Max Operating Temp</code></p>
-<dd> The temperature at which a GPU will begin slowing itself down through SW, in order to cool. </p>
+<dt><code>GPU</code></dt>
+<dd> Core GPU temperature. For all discrete and S-class products. </dd>
+<dt><code>Shutdown Temp</code></dt>
+<dd> The temperature at which a GPU will shutdown.</dd>
+<dt><code>Slowdown Temp</code></dt>
+<dd> The temperature at which a GPU will begin slowing itself down through HW, in order to cool.</dd>
+<dt><code>Max Operating Temp</code></dt>
+<dd> The temperature at which a GPU will begin slowing itself down through SW, in order to cool. </dd>
 </dl>
 <h3>Power Readings</h3>
 <p> Power readings help to shed light on the current power usage of the GPU, and the factors that affect that usage. When power management is enabled the GPU limits power draw under load to fit within a predefined power envelope by manipulating the current performance state. See below for limits of availability. Please note that power readings are not applicable for Pascal and higher GPUs with BA sensor boards. </p>
 <dl>
-<dt><code>Power State</code></p>
-<dd> Power State is deprecated and has been renamed to Performance State in 2.285. To maintain XML compatibility, in XML format Performance State is listed in both places. </p>
-<dt><code>Power Management</code></p>
-<dd> A flag that indicates whether power management is enabled. Either &quot;Supported&quot; or &quot;N/A&quot;. Requires Inforom PWR object version 3.0 or higher or Kepler device. </p>
-<dt><code>Power Draw</code></p>
-<dd> The last measured power draw for the entire board, in watts. Only available if power management is supported. Please note that for boards without INA sensors, this refers to the power draw for the GPU and not for the entire board. </p>
-<dt><code>Power Limit</code></p>
-<dd> The software power limit, in watts. Set by software such as nvidia-smi. Only available if power management is supported. Requires Inforom PWR object version 3.0 or higher or Kepler device. On Kepler devices Power Limit can be adjusted using -pl,&#8211;power-limit= switches. </p>
-<dt><code>Enforced Power Limit</code></p>
-<dd> The power management algorithm&#8217;s power ceiling, in watts. Total board power draw is manipulated by the power management algorithm such that it stays under this value. This limit is the minimum of various limits such as the software limit listed above. Only available if power management is supported. Requires a Kepler device. Please note that for boards without INA sensors, it is the GPU power draw that is being manipulated. </p>
-<dt><code>Default Power Limit</code></p>
-<dd> The default power management algorithm&#8217;s power ceiling, in watts. Power Limit will be set back to Default Power Limit after driver unload. Only on supported devices from Kepler family. </p>
-<dt><code>Min Power Limit</code></p>
-<dd> The minimum value in watts that power limit can be set to. Only on supported devices from Kepler family. </p>
-<dt><code>Max Power Limit</code></p>
-<dd> The maximum value in watts that power limit can be set to. Only on supported devices from Kepler family. </p>
+<dt><code>Power State</code></dt>
+<dd> Power State is deprecated and has been renamed to Performance State in 2.285. To maintain XML compatibility, in XML format Performance State is listed in both places. </dd>
+<dt><code>Power Management</code></dt>
+<dd> A flag that indicates whether power management is enabled. Either &quot;Supported&quot; or &quot;N/A&quot;. Requires Inforom PWR object version 3.0 or higher or Kepler device. </dd>
+<dt><code>Power Draw</code></dt>
+<dd> The last measured power draw for the entire board, in watts. Only available if power management is supported. Please note that for boards without INA sensors, this refers to the power draw for the GPU and not for the entire board. </dd>
+<dt><code>Power Limit</code></dt>
+<dd> The software power limit, in watts. Set by software such as nvidia-smi. Only available if power management is supported. Requires Inforom PWR object version 3.0 or higher or Kepler device. On Kepler devices Power Limit can be adjusted using -pl,&#8211;power-limit= switches. </dd>
+<dt><code>Enforced Power Limit</code></dt>
+<dd> The power management algorithm&#8217;s power ceiling, in watts. Total board power draw is manipulated by the power management algorithm such that it stays under this value. This limit is the minimum of various limits such as the software limit listed above. Only available if power management is supported. Requires a Kepler device. Please note that for boards without INA sensors, it is the GPU power draw that is being manipulated. </dd>
+<dt><code>Default Power Limit</code></dt>
+<dd> The default power management algorithm&#8217;s power ceiling, in watts. Power Limit will be set back to Default Power Limit after driver unload. Only on supported devices from Kepler family. </dd>
+<dt><code>Min Power Limit</code></dt>
+<dd> The minimum value in watts that power limit can be set to. Only on supported devices from Kepler family. </dd>
+<dt><code>Max Power Limit</code></dt>
+<dd> The maximum value in watts that power limit can be set to. Only on supported devices from Kepler family. </dd>
 </dl>
 <h3>Clocks</h3>
 <p> Current frequency at which parts of the GPU are running. All readings are in MHz. </p>
 <dl>
-<dt><code>Graphics</code></p>
-<dd> Current frequency of graphics (shader) clock. </p>
-<dt><code>SM</code></p>
-<dd> Current frequency of SM (Streaming Multiprocessor) clock. </p>
-<dt><code>Memory</code></p>
-<dd> Current frequency of memory clock. </p>
-<dt><code>Video</code></p>
-<dd> Current frequency of video (encoder + decoder) clocks. </p>
+<dt><code>Graphics</code></dt>
+<dd> Current frequency of graphics (shader) clock. </dd>
+<dt><code>SM</code></dt>
+<dd> Current frequency of SM (Streaming Multiprocessor) clock. </dd>
+<dt><code>Memory</code></dt>
+<dd> Current frequency of memory clock. </dd>
+<dt><code>Video</code></dt>
+<dd> Current frequency of video (encoder + decoder) clocks. </dd>
 </dl>
 <h3>Applications Clocks</h3>
 <p> User specified frequency at which applications will be running at. Can be changed with [-ac | &#8211;applications-clocks] switches. </p>
 <dl>
-<dt><code>Graphics</code></p>
-<dd> User specified frequency of graphics (shader) clock. </p>
-<dt><code>Memory</code></p>
-<dd> User specified frequency of memory clock. </p>
+<dt><code>Graphics</code></dt>
+<dd> User specified frequency of graphics (shader) clock. </dd>
+<dt><code>Memory</code></dt>
+<dd> User specified frequency of memory clock. </dd>
 </dl>
 <h3>Default Applications Clocks</h3>
 <p> Default frequency at which applications will be running at. Application clocks can be changed with [-ac | &#8211;applications-clocks] switches. Application clocks can be set to default using [-rac | &#8211;reset-applications-clocks] switches. </p>
 <dl>
-<dt><code>Graphics</code></p>
-<dd> Default frequency of applications graphics (shader) clock. </p>
-<dt><code>Memory</code></p>
-<dd> Default frequency of applications memory clock. </p>
+<dt><code>Graphics</code></dt>
+<dd> Default frequency of applications graphics (shader) clock. </dd>
+<dt><code>Memory</code></dt>
+<dd> Default frequency of applications memory clock. </dd>
 </dl>
 <h3>Max Clocks</h3>
 <p> Maximum frequency at which parts of the GPU are design to run. All readings are in MHz. </p>
 <p> On GPUs from Fermi family current P0 clocks (reported in Clocks section) can differ from max clocks by few MHz. </p>
 <dl>
-<dt><code>Graphics</code></p>
-<dd> Maximum frequency of graphics (shader) clock. </p>
-<dt><code>SM</code></p>
-<dd> Maximum frequency of SM (Streaming Multiprocessor) clock. </p>
-<dt><code>Memory</code></p>
-<dd> Maximum frequency of memory clock. </p>
-<dt><code>Video</code></p>
-<dd> Maximum frequency of video (encoder + decoder) clock. </p>
+<dt><code>Graphics</code></dt>
+<dd> Maximum frequency of graphics (shader) clock. </dd>
+<dt><code>SM</code></dt>
+<dd> Maximum frequency of SM (Streaming Multiprocessor) clock. </dd>
+<dt><code>Memory</code></dt>
+<dd> Maximum frequency of memory clock. </dd>
+<dt><code>Video</code></dt>
+<dd> Maximum frequency of video (encoder + decoder) clock. </dd>
 </dl>
 <h3>Clock Policy</h3>
 <p> User-specified settings for automated clocking changes such as auto boost. </p>
 <dl>
-<dt><code>Auto Boost</code></p>
-<dd> Indicates whether auto boost mode is currently enabled for this GPU (On) or disabled for this GPU (Off). Shows (N/A) if boost is not supported. Auto boost allows dynamic GPU clocking based on power, thermal and utilization. When auto boost is disabled the GPU will attempt to maintain clocks at precisely the Current Application Clocks settings (whenever a CUDA context is active). With auto boost enabled the GPU will still attempt to maintain this floor, but will opportunistically boost to higher clocks when power, thermal and utilization headroom allow. This setting persists for the life of the CUDA context for which it was requested. Apps can request a particular mode either via an NVML call (see NVML SDK) or by setting the CUDA environment variable CUDA_AUTO_BOOST. </p>
-<dt><code>Auto Boost Default</code></p>
-<dd> Indicates the default setting for auto boost mode, either enabled (On) or disabled (Off). Shows (N/A) if boost is not supported. Apps will run in the default mode if they have not explicitly requested a particular mode. Note: Auto Boost settings can only be modified if &quot;Persistence Mode&quot; is enabled, which is NOT by default. </p>
+<dt><code>Auto Boost</code></dt>
+<dd> Indicates whether auto boost mode is currently enabled for this GPU (On) or disabled for this GPU (Off). Shows (N/A) if boost is not supported. Auto boost allows dynamic GPU clocking based on power, thermal and utilization. When auto boost is disabled the GPU will attempt to maintain clocks at precisely the Current Application Clocks settings (whenever a CUDA context is active). With auto boost enabled the GPU will still attempt to maintain this floor, but will opportunistically boost to higher clocks when power, thermal and utilization headroom allow. This setting persists for the life of the CUDA context for which it was requested. Apps can request a particular mode either via an NVML call (see NVML SDK) or by setting the CUDA environment variable CUDA_AUTO_BOOST. </dd>
+<dt><code>Auto Boost Default</code></dt>
+<dd> Indicates the default setting for auto boost mode, either enabled (On) or disabled (Off). Shows (N/A) if boost is not supported. Apps will run in the default mode if they have not explicitly requested a particular mode. Note: Auto Boost settings can only be modified if &quot;Persistence Mode&quot; is enabled, which is NOT by default. </dd>
 </dl>
 <h3>Supported clocks</h3>
 <p> List of possible memory and graphics clocks combinations that the GPU can operate on (not taking into account HW brake reduced clocks). These are the only clock combinations that can be passed to &#8211;applications-clocks flag. Supported Clocks are listed only when -q -d SUPPORTED_CLOCKS switches are provided or in XML format. </p>
 <h3>Voltage</h3>
 <p> Current voltage reported by the GPU. All units are in mV. </p>
 <dl>
-<dt><code>Graphics</code></p>
-<dd> Current voltage of the graphics unit. </p>
+<dt><code>Graphics</code></dt>
+<dd> Current voltage of the graphics unit. </dd>
 </dl>
 <h3>Processes</h3>
 <p> List of processes having Compute or Graphics Context on the device. Compute processes are reported on all the fully supported products. Reporting for Graphics processes is limited to the supported products starting with Kepler architecture. </p>
 <dl>
-<dt>Each Entry is of format &quot;&lt;GPU Index&gt; &lt;PID&gt; &lt;Type&gt; &lt;Process Name&gt; &lt;GPU Memory Usage&gt;&quot;</p>
+<dt>Each Entry is of format &quot;&lt;GPU Index&gt; &lt;PID&gt; &lt;Type&gt; &lt;Process Name&gt; &lt;GPU Memory Usage&gt;&quot;</dt>
 <dd>
-<dt><code>GPU Index</code></p>
-<dd> Represents NVML Index of the device. </p>
-<dt><code>PID</code></p>
-<dd> Represents Process ID corresponding to the active Compute or Graphics context. </p>
-<dt><code>Type</code></p>
-<dd> Displayed as &quot;C&quot; for Compute Process, &quot;G&quot; for Graphics Process, and &quot;C+G&quot; for the process having both Compute and Graphics contexts. </p>
-<dt><code>Process Name</code></p>
-<dd> Represents process name for the Compute or Graphics process. </p>
-<dt><code>GPU Memory Usage</code></p>
-<dd> Amount of memory used on the device by the context. Not available on Windows when running in WDDM mode because Windows KMD manages all the memory not NVIDIA driver. </p>
+</dd><dt><code>GPU Index</code></dt>
+<dd> Represents NVML Index of the device. </dd>
+<dt><code>PID</code></dt>
+<dd> Represents Process ID corresponding to the active Compute or Graphics context. </dd>
+<dt><code>Type</code></dt>
+<dd> Displayed as &quot;C&quot; for Compute Process, &quot;G&quot; for Graphics Process, and &quot;C+G&quot; for the process having both Compute and Graphics contexts. </dd>
+<dt><code>Process Name</code></dt>
+<dd> Represents process name for the Compute or Graphics process. </dd>
+<dt><code>GPU Memory Usage</code></dt>
+<dd> Amount of memory used on the device by the context. Not available on Windows when running in WDDM mode because Windows KMD manages all the memory not NVIDIA driver. </dd>
 </dl>
 <h3>Stats (EXPERIMENTAL)</h3>
 <p> List GPU statistics such as power samples, utilization samples, xid events, clock change events and violation counters.</p>
 <dl>
-<dt>Supported on Tesla, GRID and Quadro based products under Linux.</p>
+<dt>Supported on Tesla, GRID and Quadro based products under Linux.</dt>
 <dd>
-<dt>Limited to Kepler or newer GPUs.</p>
+</dd><dt>Limited to Kepler or newer GPUs.</dt>
 <dd>
-<dt>Displays statistics in CSV format as follows:</p>
+</dd><dt>Displays statistics in CSV format as follows:</dt>
 <dd>
-<dt>&lt;GPU device index&gt;, &lt;metric name&gt;, &lt;CPU Timestamp in us&gt;, &lt;value for metric&gt;</p>
+</dd><dt>&lt;GPU device index&gt;, &lt;metric name&gt;, &lt;CPU Timestamp in us&gt;, &lt;value for metric&gt;</dt>
 <dd>
-<dt>The metrics to display with their units are as follows:</p>
+</dd><dt>The metrics to display with their units are as follows:</dt>
 <dd>
-<dt>Power samples in Watts.</p>
+</dd><dt>Power samples in Watts.</dt>
 <dd>
-<dt>GPU Temperature samples in degrees Celsius.</p>
+</dd><dt>GPU Temperature samples in degrees Celsius.</dt>
 <dd>
-<dt>GPU, Memory, Encoder and Decoder utilization samples in Percentage.</p>
+</dd><dt>GPU, Memory, Encoder and Decoder utilization samples in Percentage.</dt>
 <dd>
-<dt>Xid error events reported with Xid error code. The error code is 999 for unknown xid error.</p>
+</dd><dt>Xid error events reported with Xid error code. The error code is 999 for unknown xid error.</dt>
 <dd>
-<dt>Processor and Memory clock changes in MHz.</p>
+</dd><dt>Processor and Memory clock changes in MHz.</dt>
 <dd>
-<dt>Violation due to Power capping with violation time in ns. (Tesla Only)</p>
+</dd><dt>Violation due to Power capping with violation time in ns. (Tesla Only)</dt>
 <dd>
-<dt>Violation due to Thermal capping with violation boolean flag (1/0). (Tesla Only)</p>
+</dd><dt>Violation due to Thermal capping with violation boolean flag (1/0). (Tesla Only)</dt>
 <dd>
-<dt>Notes:</p>
+</dd><dt>Notes:</dt>
 <dd>
-<dt>Any statistic preceded by &quot;#&quot; is a comment.</p>
+</dd><dt>Any statistic preceded by &quot;#&quot; is a comment.</dt>
 <dd>
-<dt>Non supported device is displayed as &quot;#&lt;device Index&gt;, Device not supported&quot;.</p>
+</dd><dt>Non supported device is displayed as &quot;#&lt;device Index&gt;, Device not supported&quot;.</dt>
 <dd>
-<dt>Non supported metric is displayed as &quot;&lt;device index&gt;, &lt;metric name&gt;, N/A, N/A&quot;.</p>
+</dd><dt>Non supported metric is displayed as &quot;&lt;device index&gt;, &lt;metric name&gt;, N/A, N/A&quot;.</dt>
 <dd>
-<dt>Violation due to Thermal/Power supported only for Tesla based products. Thermal Violations are limited to Tesla K20 and higher.</p>
+</dd><dt>Violation due to Thermal/Power supported only for Tesla based products. Thermal Violations are limited to Tesla K20 and higher.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Device Monitoring</h3>
 <p> The &quot;nvidia-smi dmon&quot; command-line is used to monitor one or more GPUs (up to 4 devices) plugged into the system. This tool allows the user to see one line of monitoring data per monitoring cycle. The output is in concise format and easy to interpret in interactive mode. The output data per line is limited by the terminal size. It is supported on Tesla, GRID, Quadro and limited GeForce products for Kepler or newer GPUs under bare metal 64 bits Linux. By default, the monitoring data includes Power Usage, Temperature, SM clocks, Memory clocks and Utilization values for SM, Memory, Encoder and Decoder. It can also be configured to report other metrics such as frame buffer memory usage, bar1 memory usage, power/thermal violations and aggregate single/double bit ecc errors. If any of the metric is not supported on the device or any other error in fetching the metric is reported as &quot;-&quot; in the output data. The user can also configure monitoring frequency and the number of monitoring iterations for each run. There is also an option to include date and time at each line. All the supported options are exclusive and can be used together in any order. </p>
 <p> <code>Usage:</code></p>
 <dl>
-<dt><code>1) Default with no arguments</code></p>
+<dt><code>1) Default with no arguments</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon</i></p>
+</dd><dt><i>nvidia-smi dmon</i></dt>
 <dd>
-<dt>Monitors default metrics for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 1 sec. Runs until terminated with ^C.</p>
+</dd><dt>Monitors default metrics for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 1 sec. Runs until terminated with ^C.</dt>
 <dd>
-<dt><code>2) Select one or more devices</code></p>
+</dd><dt><code>2) Select one or more devices</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -i &lt;device1,device2, .. , deviceN&gt;</i></p>
+</dd><dt><i>nvidia-smi dmon -i &lt;device1,device2, .. , deviceN&gt;</i></dt>
 <dd>
-<dt>Reports default metrics for the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</p>
+</dd><dt>Reports default metrics for the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</dt>
 <dd>
-<dt><code>3) Select metrics to be displayed</code></p>
+</dd><dt><code>3) Select metrics to be displayed</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -s &lt;metric_group&gt;</i></p>
+</dd><dt><i>nvidia-smi dmon -s &lt;metric_group&gt;</i></dt>
 <dd>
-<dt>&lt;metric_group&gt; can be one or more from the following:</p>
+</dd><dt>&lt;metric_group&gt; can be one or more from the following:</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e &#8211; ECC&nbsp;(Number of aggregated single bit, double bit ecc errors)&nbsp;and PCIe Replay errors</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e &#8211; ECC&nbsp;(Number of aggregated single bit, double bit ecc errors)&nbsp;and PCIe Replay errors</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</dt>
 <dd>
-<dt><code>4) Configure monitoring iterations</code></p>
+</dd><dt><code>4) Configure monitoring iterations</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -c &lt;number of samples&gt;</i></p>
+</dd><dt><i>nvidia-smi dmon -c &lt;number of samples&gt;</i></dt>
 <dd>
-<dt>Displays data for specified number of samples and exit.</p>
+</dd><dt>Displays data for specified number of samples and exit.</dt>
 <dd>
-<dt><code>5) Configure monitoring frequency</code></p>
+</dd><dt><code>5) Configure monitoring frequency</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -d &lt;time in secs&gt;</i></p>
+</dd><dt><i>nvidia-smi dmon -d &lt;time in secs&gt;</i></dt>
 <dd>
-<dt>Collects and displays data at every specified monitoring interval until terminated with ^C.</p>
+</dd><dt>Collects and displays data at every specified monitoring interval until terminated with ^C.</dt>
 <dd>
-<dt><code>6) Display date</code></p>
+</dd><dt><code>6) Display date</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -o D</i></p>
+</dd><dt><i>nvidia-smi dmon -o D</i></dt>
 <dd>
-<dt>Prepends monitoring data with date in YYYYMMDD format.</p>
+</dd><dt>Prepends monitoring data with date in YYYYMMDD format.</dt>
 <dd>
-<dt><code>7) Display time</code></p>
+</dd><dt><code>7) Display time</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -o T</i></p>
+</dd><dt><i>nvidia-smi dmon -o T</i></dt>
 <dd>
-<dt>Prepends monitoring data with time in HH:MM:SS format.</p>
+</dd><dt>Prepends monitoring data with time in HH:MM:SS format.</dt>
 <dd>
-<dt><code>8) Help Information</code></p>
+</dd><dt><code>8) Help Information</code></dt>
 <dd>
-<dt><i>nvidia-smi dmon -h</i></p>
+</dd><dt><i>nvidia-smi dmon -h</i></dt>
 <dd>
-<dt>Displays help information for using the command line.</p>
+</dd><dt>Displays help information for using the command line.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Daemon (EXPERIMENTAL)</h3>
 <p> The &quot;nvidia-smi daemon&quot; starts a background process to monitor one or more GPUs plugged in to the system. It monitors the requested GPUs every monitoring cycle and logs the file in compressed format at the user provided path or the default location at /var/log/nvstats/. The log file is created with system&#8217;s date appended to it and of the format nvstats-YYYYMMDD. The flush operation to the log file is done every alternate monitoring cycle. Daemon also logs it&#8217;s own PID at /var/run/nvsmi.pid. By default, the monitoring data to persist includes Power Usage, Temperature, SM clocks, Memory clocks and Utilization values for SM, Memory, Encoder and Decoder. The daemon tools can also be configured to record other metrics such as frame buffer memory usage, bar1 memory usage, power/thermal violations and aggregate single/double bit ecc errors.The default monitoring cycle is set to 10 secs and can be configured via command-line. It is supported on Tesla, GRID, Quadro and GeForce products for Kepler or newer GPUs under bare metal 64 bits Linux. The daemon requires root privileges to run, and only supports running a single instance on the system. All of the supported options are exclusive and can be used together in any order. </p>
 <p> <code>Usage:</code></p>
 <dl>
-<dt><code>1) Default with no arguments</code></p>
+<dt><code>1) Default with no arguments</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon</i></p>
+</dd><dt><i>nvidia-smi daemon</i></dt>
 <dd>
-<dt>Runs in the background to monitor default metrics for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 10 sec. The date stamped log file is created at /var/log/nvstats/.</p>
+</dd><dt>Runs in the background to monitor default metrics for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 10 sec. The date stamped log file is created at /var/log/nvstats/.</dt>
 <dd>
-<dt><code>2) Select one or more devices</code></p>
+</dd><dt><code>2) Select one or more devices</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -i &lt;device1,device2, .. , deviceN&gt;</i></p>
+</dd><dt><i>nvidia-smi daemon -i &lt;device1,device2, .. , deviceN&gt;</i></dt>
 <dd>
-<dt>Runs in the background to monitor default metrics for the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</p>
+</dd><dt>Runs in the background to monitor default metrics for the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</dt>
 <dd>
-<dt><code>3) Select metrics to be monitored</code></p>
+</dd><dt><code>3) Select metrics to be monitored</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -s &lt;metric_group&gt;</i></p>
+</dd><dt><i>nvidia-smi daemon -s &lt;metric_group&gt;</i></dt>
 <dd>
-<dt>&lt;metric_group&gt; can be one or more from the following:</p>
+</dd><dt>&lt;metric_group&gt; can be one or more from the following:</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</dt>
 <dd>
-<dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>e &#8211; ECC (Number of aggregated single bit, double bit ecc errors) and PCIe Replay errors</p>
+</dd><dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>e &#8211; ECC (Number of aggregated single bit, double bit ecc errors) and PCIe Replay errors</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</dt>
 <dd>
-<dt><code>4) Configure monitoring frequency</code></p>
+</dd><dt><code>4) Configure monitoring frequency</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -d &lt;time in secs&gt;</i></p>
+</dd><dt><i>nvidia-smi daemon -d &lt;time in secs&gt;</i></dt>
 <dd>
-<dt>Collects data at every specified monitoring interval until terminated.</p>
+</dd><dt>Collects data at every specified monitoring interval until terminated.</dt>
 <dd>
-<dt><code>5) Configure log directory</code></p>
+</dd><dt><code>5) Configure log directory</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -p &lt;path of directory&gt;</i></p>
+</dd><dt><i>nvidia-smi daemon -p &lt;path of directory&gt;</i></dt>
 <dd>
-<dt>The log files are created at the specified directory.</p>
+</dd><dt>The log files are created at the specified directory.</dt>
 <dd>
-<dt><code>6) Configure log file name</code></p>
+</dd><dt><code>6) Configure log file name</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -j &lt;string to append log file name&gt;</i></p>
+</dd><dt><i>nvidia-smi daemon -j &lt;string to append log file name&gt;</i></dt>
 <dd>
-<dt>The command-line is used to append the log file name with the user provided string.</p>
+</dd><dt>The command-line is used to append the log file name with the user provided string.</dt>
 <dd>
-<dt><code>7) Terminate the daemon</code></p>
+</dd><dt><code>7) Terminate the daemon</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -t</i></p>
+</dd><dt><i>nvidia-smi daemon -t</i></dt>
 <dd>
-<dt>This command-line uses the stored PID (at /var/run/nvsmi.pid) to terminate the daemon. It makes the best effort to stop the daemon and offers no guarantees for it&#8217;s termination. In case the daemon is not terminated, then the user can manually terminate by sending kill signal to the daemon. Performing a GPU reset operation (via nvidia-smi) requires all GPU processes to be exited, including the daemon. Users who have the daemon open will see an error to the effect that the GPU is busy.</p>
+</dd><dt>This command-line uses the stored PID (at /var/run/nvsmi.pid) to terminate the daemon. It makes the best effort to stop the daemon and offers no guarantees for it&#8217;s termination. In case the daemon is not terminated, then the user can manually terminate by sending kill signal to the daemon. Performing a GPU reset operation (via nvidia-smi) requires all GPU processes to be exited, including the daemon. Users who have the daemon open will see an error to the effect that the GPU is busy.</dt>
 <dd>
-<dt><code>8) Help Information</code></p>
+</dd><dt><code>8) Help Information</code></dt>
 <dd>
-<dt><i>nvidia-smi daemon -h</i></p>
+</dd><dt><i>nvidia-smi daemon -h</i></dt>
 <dd>
-<dt>Displays help information for using the command line.</p>
+</dd><dt>Displays help information for using the command line.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Replay Mode (EXPERIMENTAL)</h3>
 <p> The &quot;nvidia-smi replay&quot; command-line is used to extract/replay all or parts of log file generated by the daemon. By default, the tool tries to pull the metrics such as Power Usage, Temperature, SM clocks, Memory clocks and Utilization values for SM, Memory, Encoder and Decoder. The replay tool can also fetch other metrics such as frame buffer memory usage, bar1 memory usage, power/thermal violations and aggregate single/double bit ecc errors. There is an option to select a set of metrics to replay, If any of the requested metric is not maintained or logged as not-supported then it&#8217;s shown as &quot;-&quot; in the output. The format of data produced by this mode is such that the user is running the device monitoring utility interactively. The command line requires mandatory option &quot;-f&quot; to specify complete path of the log filename, all the other supported options are exclusive and can be used together in any order. </p>
 <p> <code>Usage:</code></p>
 <dl>
-<dt><code>1) Specify log file to be replayed</code></p>
+<dt><code>1) Specify log file to be replayed</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -f &lt;log file name&gt;</i></p>
+</dd><dt><i>nvidia-smi replay -f &lt;log file name&gt;</i></dt>
 <dd>
-<dt>Fetches monitoring data from the compressed log file and allows the user to see one line of monitoring data (default metrics with time-stamp) for each monitoring iteration stored in the log file. A new line of monitoring data is replayed every other second irrespective of the actual monitoring frequency maintained at the time of collection. It is displayed till the end of file or until terminated by ^C.</p>
+</dd><dt>Fetches monitoring data from the compressed log file and allows the user to see one line of monitoring data (default metrics with time-stamp) for each monitoring iteration stored in the log file. A new line of monitoring data is replayed every other second irrespective of the actual monitoring frequency maintained at the time of collection. It is displayed till the end of file or until terminated by ^C.</dt>
 <dd>
-<dt><code>2) Filter metrics to be replayed</code></p>
+</dd><dt><code>2) Filter metrics to be replayed</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -f &lt;path to log file&gt; -s &lt;metric_group&gt;</i></p>
+</dd><dt><i>nvidia-smi replay -f &lt;path to log file&gt; -s &lt;metric_group&gt;</i></dt>
 <dd>
-<dt>&lt;metric_group&gt; can be one or more from the following:</p>
+</dd><dt>&lt;metric_group&gt; can be one or more from the following:</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p &#8211; Power Usage&nbsp;(in Watts)&nbsp;and Gpu/Memory Temperature&nbsp;(in C)&nbsp;if supported</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization in&nbsp;%)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c &#8211; Proc and Mem Clocks&nbsp;(in MHz)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v &#8211; Power Violations&nbsp;(in&nbsp;%)&nbsp;and Thermal Violations&nbsp;(as a boolean flag)</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer and Bar1 memory usage&nbsp;(in MB)</dt>
 <dd>
-<dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>e &#8211; ECC (Number of aggregated single bit, double bit ecc errors) and PCIe Replay errors</p>
+</dd><dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>e &#8211; ECC (Number of aggregated single bit, double bit ecc errors) and PCIe Replay errors</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;t &#8211; PCIe Rx and Tx Throughput in MB/s&nbsp;(Maxwell and above)</dt>
 <dd>
-<dt><code>3) Limit replay to one or more devices</code></p>
+</dd><dt><code>3) Limit replay to one or more devices</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -f &lt;log file&gt; -i &lt;device1,device2, .. , deviceN&gt;</i></p>
+</dd><dt><i>nvidia-smi replay -f &lt;log file&gt; -i &lt;device1,device2, .. , deviceN&gt;</i></dt>
 <dd>
-<dt>Limits reporting of the metrics to the set of devices selected by comma separated device list. The tool skips any of the devices not maintained in the log file.</p>
+</dd><dt>Limits reporting of the metrics to the set of devices selected by comma separated device list. The tool skips any of the devices not maintained in the log file.</dt>
 <dd>
-<dt><code>4) Restrict the time frame between which data is reported</code></p>
+</dd><dt><code>4) Restrict the time frame between which data is reported</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -f &lt;log file&gt; -b &lt;start time in HH:MM:SS format&gt; -e &lt;end time in HH:MM:SS format&gt;</i></p>
+</dd><dt><i>nvidia-smi replay -f &lt;log file&gt; -b &lt;start time in HH:MM:SS format&gt; -e &lt;end time in HH:MM:SS format&gt;</i></dt>
 <dd>
-<dt>This option allows the data to be limited between the specified time range. Specifying time as 0 with -b or -e option implies start or end file respectively.</p>
+</dd><dt>This option allows the data to be limited between the specified time range. Specifying time as 0 with -b or -e option implies start or end file respectively.</dt>
 <dd>
-<dt><code>5) Redirect replay information to a log file</code></p>
+</dd><dt><code>5) Redirect replay information to a log file</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -f &lt;log file&gt; -r &lt;output file name&gt;</i></p>
+</dd><dt><i>nvidia-smi replay -f &lt;log file&gt; -r &lt;output file name&gt;</i></dt>
 <dd>
-<dt>This option takes log file as an input and extracts the information related to default metrics in the specified output file.</p>
+</dd><dt>This option takes log file as an input and extracts the information related to default metrics in the specified output file.</dt>
 <dd>
-<dt><code>6) Help Information</code></p>
+</dd><dt><code>6) Help Information</code></dt>
 <dd>
-<dt><i>nvidia-smi replay -h</i></p>
+</dd><dt><i>nvidia-smi replay -h</i></dt>
 <dd>
-<dt>Displays help information for using the command line.</p>
+</dd><dt>Displays help information for using the command line.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Process Monitoring</h3>
 <p> The &quot;nvidia-smi pmon&quot; command-line is used to monitor compute and graphics processes running on one or more GPUs (up to 4 devices) plugged into the system. This tool allows the user to see the statistics for all the running processes on each device at every monitoring cycle. The output is in concise format and easy to interpret in interactive mode. The output data per line is limited by the terminal size. It is supported on Tesla, GRID, Quadro and limited GeForce products for Kepler or newer GPUs under bare metal 64 bits Linux. By default, the monitoring data for each process includes the pid, command name and average utilization values for SM, Memory, Encoder and Decoder since the last monitoring cycle. It can also be configured to report frame buffer memory usage for each process. If there is no process running for the device, then all the metrics are reported as &quot;-&quot; for the device. If any of the metric is not supported on the device or any other error in fetching the metric is also reported as &quot;-&quot; in the output data. The user can also configure monitoring frequency and the number of monitoring iterations for each run. There is also an option to include date and time at each line. All the supported options are exclusive and can be used together in any order. </p>
 <p> <code>Usage:</code></p>
 <dl>
-<dt><code>1) Default with no arguments</code></p>
+<dt><code>1) Default with no arguments</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon</i></p>
+</dd><dt><i>nvidia-smi pmon</i></dt>
 <dd>
-<dt>Monitors all the processes running on each device for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 1 sec. Runs until terminated with ^C.</p>
+</dd><dt>Monitors all the processes running on each device for up to 4 supported devices under natural enumeration (starting with GPU index 0) at a frequency of 1 sec. Runs until terminated with ^C.</dt>
 <dd>
-<dt><code>2) Select one or more devices</code></p>
+</dd><dt><code>2) Select one or more devices</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -i &lt;device1,device2, .. , deviceN&gt;</i></p>
+</dd><dt><i>nvidia-smi pmon -i &lt;device1,device2, .. , deviceN&gt;</i></dt>
 <dd>
-<dt>Reports statistics for all the processes running on the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</p>
+</dd><dt>Reports statistics for all the processes running on the devices selected by comma separated device list. The tool picks up to 4 supported devices from the list under natural enumeration (starting with GPU index 0).</dt>
 <dd>
-<dt><code>3) Select metrics to be displayed</code></p>
+</dd><dt><code>3) Select metrics to be displayed</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -s &lt;metric_group&gt;</i></p>
+</dd><dt><i>nvidia-smi pmon -s &lt;metric_group&gt;</i></dt>
 <dd>
-<dt>&lt;metric_group&gt; can be one or more from the following:</p>
+</dd><dt>&lt;metric_group&gt; can be one or more from the following:</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization for the process in&nbsp;%). Reports average utilization since last monitoring cycle.</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u &#8211; Utilization&nbsp;(SM, Memory, Encoder and Decoder Utilization for the process in&nbsp;%). Reports average utilization since last monitoring cycle.</dt>
 <dd>
-<dt>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer usage&nbsp;(in MB). Reports instantaneous value for memory usage.</p>
+</dd><dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m &#8211; Frame Buffer usage&nbsp;(in MB). Reports instantaneous value for memory usage.</dt>
 <dd>
-<dt><code>4) Configure monitoring iterations</code></p>
+</dd><dt><code>4) Configure monitoring iterations</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -c &lt;number of samples&gt;</i></p>
+</dd><dt><i>nvidia-smi pmon -c &lt;number of samples&gt;</i></dt>
 <dd>
-<dt>Displays data for specified number of samples and exit.</p>
+</dd><dt>Displays data for specified number of samples and exit.</dt>
 <dd>
-<dt><code>5) Configure monitoring frequency</code></p>
+</dd><dt><code>5) Configure monitoring frequency</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -d &lt;time in secs&gt;</i></p>
+</dd><dt><i>nvidia-smi pmon -d &lt;time in secs&gt;</i></dt>
 <dd>
-<dt>Collects and displays data at every specified monitoring interval until terminated with ^C. The monitoring frequency must be between 1 to 10 secs.</p>
+</dd><dt>Collects and displays data at every specified monitoring interval until terminated with ^C. The monitoring frequency must be between 1 to 10 secs.</dt>
 <dd>
-<dt><code>6) Display date</code></p>
+</dd><dt><code>6) Display date</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -o D</i></p>
+</dd><dt><i>nvidia-smi pmon -o D</i></dt>
 <dd>
-<dt>Prepends monitoring data with date in YYYYMMDD format.</p>
+</dd><dt>Prepends monitoring data with date in YYYYMMDD format.</dt>
 <dd>
-<dt><code>7) Display time</code></p>
+</dd><dt><code>7) Display time</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -o T</i></p>
+</dd><dt><i>nvidia-smi pmon -o T</i></dt>
 <dd>
-<dt>Prepends monitoring data with time in HH:MM:SS format.</p>
+</dd><dt>Prepends monitoring data with time in HH:MM:SS format.</dt>
 <dd>
-<dt><code>8) Help Information</code></p>
+</dd><dt><code>8) Help Information</code></dt>
 <dd>
-<dt><i>nvidia-smi pmon -h</i></p>
+</dd><dt><i>nvidia-smi pmon -h</i></dt>
 <dd>
-<dt>Displays help information for using the command line.</p>
+</dd><dt>Displays help information for using the command line.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Topology (EXPERIMENTAL)</h3>
 <p> List topology information about the system&#8217;s GPUs, how they connect to each other as well as qualified NICs capable of RDMA </p>
 <dl>
-<dt>Displays a matrix of available GPUs with the following legend:</p>
+<dt>Displays a matrix of available GPUs with the following legend:</dt>
 <dd>
-<dt>
-<dd> Legend: </p>
+</dd><dt>
+</dt><dd> Legend: </dd>
 <p>&nbsp;<wbr>&nbsp;X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;Self<br />
 &nbsp;<wbr>&nbsp;SYS&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing PCIe as well as the SMP interconnect between NUMA nodes&nbsp;(e.g., QPI/UPI)<br />
 &nbsp;<wbr>&nbsp;NODE&nbsp;=&nbsp;Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node<br />
@@ -829,278 +829,278 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> The &quot;nvidia-smi vgpu&quot; command reports on GRID vGPUs executing on supported GPUs and hypervisors (refer to driver release notes for supported platforms). Summary reporting provides basic information about vGPUs currently executing on the system. Additional options provide detailed reporting of vGPU properties, per-vGPU reporting of SM, Memory, Encoder, and Decoder utilization, and per-GPU reporting of supported and creatable vGPUs. Periodic reports can be automatically generated by specifying a configurable loop frequency to any command. </p>
 <p> <code>Usage:</code> </p>
 <dl>
-<dt><code>1) Help Information</code></p>
+<dt><code>1) Help Information</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -h</i></p>
+</dd><dt><i>nvidia-smi vgpu -h</i></dt>
 <dd>
-<dt>Displays help information for using the command line.</p>
+</dd><dt>Displays help information for using the command line.</dt>
 <dd>
-<dt><code>2) Default with no arguments</code></p>
+</dd><dt><code>2) Default with no arguments</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu</i></p>
+</dd><dt><i>nvidia-smi vgpu</i></dt>
 <dd>
-<dt>Reports summary of all the vGPUs currently active on each device.</p>
+</dd><dt>Reports summary of all the vGPUs currently active on each device.</dt>
 <dd>
-<dt><code>3) Display detailed info on currently active vGPUs</code></p>
+</dd><dt><code>3) Display detailed info on currently active vGPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -q</i></p>
+</dd><dt><i>nvidia-smi vgpu -q</i></dt>
 <dd>
-<dt>Collects and displays information on currently active vGPUs on each device, including driver version, utilization, and other information.</p>
+</dd><dt>Collects and displays information on currently active vGPUs on each device, including driver version, utilization, and other information.</dt>
 <dd>
-<dt><code>4) Select one or more devices</code></p>
+</dd><dt><code>4) Select one or more devices</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -i &lt;device1,device2, .. , deviceN&gt;</i></p>
+</dd><dt><i>nvidia-smi vgpu -i &lt;device1,device2, .. , deviceN&gt;</i></dt>
 <dd>
-<dt>Reports summary for all the vGPUs currently active on the devices selected by comma-separated device list.</p>
+</dd><dt>Reports summary for all the vGPUs currently active on the devices selected by comma-separated device list.</dt>
 <dd>
-<dt><code>5) Display supported vGPUs</code></p>
+</dd><dt><code>5) Display supported vGPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -s</i></p>
+</dd><dt><i>nvidia-smi vgpu -s</i></dt>
 <dd>
-<dt>Displays vGPU types supported on each device. Use the -v / &#8211;verbose option to show detailed info on each vGPU type.</p>
+</dd><dt>Displays vGPU types supported on each device. Use the -v / &#8211;verbose option to show detailed info on each vGPU type.</dt>
 <dd>
-<dt><code>6) Display creatable vGPUs</code></p>
+</dd><dt><code>6) Display creatable vGPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -c</i></p>
+</dd><dt><i>nvidia-smi vgpu -c</i></dt>
 <dd>
-<dt>Displays vGPU types creatable on each device. This varies dynamically, depending on the vGPUs already active on the device. Use the -v / &#8211;verbose option to show detailed info on each vGPU type.</p>
+</dd><dt>Displays vGPU types creatable on each device. This varies dynamically, depending on the vGPUs already active on the device. Use the -v / &#8211;verbose option to show detailed info on each vGPU type.</dt>
 <dd>
-<dt><code>7) Report utilization for currently active vGPUs.</code></p>
+</dd><dt><code>7) Report utilization for currently active vGPUs.</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -u</i></p>
+</dd><dt><i>nvidia-smi vgpu -u</i></dt>
 <dd>
-<dt>Reports average utilization (SM, Memory, Encoder and Decoder) for each active vGPU since last monitoring cycle. The default cycle time is 1 second, and the command runs until terminated with ^C. If a device has no active vGPUs, its metrics are reported as &quot;-&quot;.</p>
+</dd><dt>Reports average utilization (SM, Memory, Encoder and Decoder) for each active vGPU since last monitoring cycle. The default cycle time is 1 second, and the command runs until terminated with ^C. If a device has no active vGPUs, its metrics are reported as &quot;-&quot;.</dt>
 <dd>
-<dt><code>8) Configure loop frequency</code></p>
+</dd><dt><code>8) Configure loop frequency</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu [-s -c -q -u] -l &lt;time in secs&gt;</i></p>
+</dd><dt><i>nvidia-smi vgpu [-s -c -q -u] -l &lt;time in secs&gt;</i></dt>
 <dd>
-<dt>Collects and displays data at a specified loop interval until terminated with ^C. The loop frequency must be between 1 and 10 secs. When no time is specified, the loop frequency defaults to 5 secs.</p>
+</dd><dt>Collects and displays data at a specified loop interval until terminated with ^C. The loop frequency must be between 1 and 10 secs. When no time is specified, the loop frequency defaults to 5 secs.</dt>
 <dd>
-<dt><code>9) Display GPU engine usage</code></p>
+</dd><dt><code>9) Display GPU engine usage</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -p</i></p>
+</dd><dt><i>nvidia-smi vgpu -p</i></dt>
 <dd>
-<dt>Display GPU engine usage of currently active processes running in the vGPU VMs.</p>
+</dd><dt>Display GPU engine usage of currently active processes running in the vGPU VMs.</dt>
 <dd>
-<dt><code>10) Display migration capabitlities.</code></p>
+</dd><dt><code>10) Display migration capabitlities.</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -m</i></p>
+</dd><dt><i>nvidia-smi vgpu -m</i></dt>
 <dd>
-<dt>Display pGPU&#8217;s migration/suspend/resume capability.</p>
+</dd><dt>Display pGPU&#8217;s migration/suspend/resume capability.</dt>
 <dd>
-<dt><code>11) Display Nvidia Encoder session info.</code></p>
+</dd><dt><code>11) Display Nvidia Encoder session info.</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -es</i></p>
+</dd><dt><i>nvidia-smi vgpu -es</i></dt>
 <dd>
-<dt>Display the information about encoder sessions for currently running vGPUs.</p>
+</dd><dt>Display the information about encoder sessions for currently running vGPUs.</dt>
 <dd>
-<dt><code>12) Display accounting statistics.</code></p>
+</dd><dt><code>12) Display accounting statistics.</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu &#8211;query-accounted-apps=[input parameters]</i></p>
+</dd><dt><i>nvidia-smi vgpu &#8211;query-accounted-apps=[input parameters]</i></dt>
 <dd>
-<dt>Display accounting stats for compute/graphics processes.</p>
+</dd><dt>Display accounting stats for compute/graphics processes.</dt>
 <dd>
-<dt>To find list of properties which can be queried, run &#8211; &#8216;nvidia-smi &#8211;help-query-accounted-apps&#8217;.</p>
+</dd><dt>To find list of properties which can be queried, run &#8211; &#8216;nvidia-smi &#8211;help-query-accounted-apps&#8217;.</dt>
 <dd>
-<dt><code>13) Display Nvidia Frame Buffer Capture session info.</code></p>
+</dd><dt><code>13) Display Nvidia Frame Buffer Capture session info.</code></dt>
 <dd>
-<dt><i>nvidia-smi vgpu -fs</i></p>
+</dd><dt><i>nvidia-smi vgpu -fs</i></dt>
 <dd>
-<dt>Display the information about FBC sessions for currently running vGPUs.</p>
+</dd><dt>Display the information about FBC sessions for currently running vGPUs.</dt>
 <dd>
-<dt><i>Note : Horizontal resolution, vertical resolution, average FPS and average latency data for a FBC session may be zero if there are no new frames captured since the session started.</i></p>
+</dd><dt><i>Note : Horizontal resolution, vertical resolution, average FPS and average latency data for a FBC session may be zero if there are no new frames captured since the session started.</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>MIG Management</h3>
 <p> The privileged &quot;nvidia-smi mig&quot; command-line is used to manage MIG-enabled GPUs. It provides options to create, list and destroy GPU instances and compute instances. </p>
 <p> <code>Usage:</code> </p>
 <dl>
-<dt><code>1) Display help menu</code></p>
+<dt><code>1) Display help menu</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -h</i></p>
+</dd><dt><i>nvidia-smi mig -h</i></dt>
 <dd>
-<dt>Displays help menu for using the command-line.</p>
+</dd><dt>Displays help menu for using the command-line.</dt>
 <dd>
-<dt><code>2) Select one or more GPUs</code></p>
+</dd><dt><code>2) Select one or more GPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</p>
+</dd><dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</dt>
 <dd>
-<dt><code>3) Select one or more GPU instances</code></p>
+</dd><dt><code>3) Select one or more GPU instances</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -gi &lt;GPU instance IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -gi &lt;GPU instance IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;gpu-instance-id &lt;GPU instance IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;gpu-instance-id &lt;GPU instance IDs&gt;</i></dt>
 <dd>
-<dt>Selects one or more GPU instances using the given comma-separated GPU instance IDs. If not used, the given command-line option applies to all of the GPU instances.</p>
+</dd><dt>Selects one or more GPU instances using the given comma-separated GPU instance IDs. If not used, the given command-line option applies to all of the GPU instances.</dt>
 <dd>
-<dt><code>4) Select one or more compute instances</code></p>
+</dd><dt><code>4) Select one or more compute instances</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -ci &lt;compute instance IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -ci &lt;compute instance IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;compute-instance-id &lt;compute instance IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;compute-instance-id &lt;compute instance IDs&gt;</i></dt>
 <dd>
-<dt>Selects one or more compute instances using the given comma-separated compute instance IDs. If not used, the given command-line option applies to all of the compute instances.</p>
+</dd><dt>Selects one or more compute instances using the given comma-separated compute instance IDs. If not used, the given command-line option applies to all of the compute instances.</dt>
 <dd>
-<dt><code>5) List GPU instance profiles</code></p>
+</dd><dt><code>5) List GPU instance profiles</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -lgip -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -lgip -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;list-gpu-instance-profiles &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;list-gpu-instance-profiles &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Lists GPU instance profiles, their availability and IDs. Profiles describe the supported types of GPU instances, including all of the GPU resources they exclusively control.</p>
+</dd><dt>Lists GPU instance profiles, their availability and IDs. Profiles describe the supported types of GPU instances, including all of the GPU resources they exclusively control.</dt>
 <dd>
-<dt><code>6) List GPU instance possible placements</code></p>
+</dd><dt><code>6) List GPU instance possible placements</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -lgipp -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -lgipp -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;list-gpu-instance-possible-placements &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;list-gpu-instance-possible-placements &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Lists GPU instance possible placements. Possible placements describe the locations of the supported types of GPU instances within the GPU.</p>
+</dd><dt>Lists GPU instance possible placements. Possible placements describe the locations of the supported types of GPU instances within the GPU.</dt>
 <dd>
-<dt><code>7) Create GPU instance</code></p>
+</dd><dt><code>7) Create GPU instance</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -cgi &lt;GPU instance specifiers&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -cgi &lt;GPU instance specifiers&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;create-gpu-instance &lt;GPU instance specifiers&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;create-gpu-instance &lt;GPU instance specifiers&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Creates GPU instances for the given GPU instance specifiers. A GPU instance specifier comprises a GPU instance profile name or ID and an optional placement specifier consisting of a colon and a placement start index. The command fails if the GPU resources required to allocate the requested GPU instances are not available, or if the placement index is not valid for the given profile.</p>
+</dd><dt>Creates GPU instances for the given GPU instance specifiers. A GPU instance specifier comprises a GPU instance profile name or ID and an optional placement specifier consisting of a colon and a placement start index. The command fails if the GPU resources required to allocate the requested GPU instances are not available, or if the placement index is not valid for the given profile.</dt>
 <dd>
-<dt><code>8) Create a GPU instance along with the default compute instance</code></p>
+</dd><dt><code>8) Create a GPU instance along with the default compute instance</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -cgi &lt;GPU instance profile IDs or names&gt; -i &lt;GPU IDs&gt; -C</i></p>
+</dd><dt><i>nvidia-smi mig -cgi &lt;GPU instance profile IDs or names&gt; -i &lt;GPU IDs&gt; -C</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;create-gpu-instance &lt;GPU instance profile IDs or names&gt; &#8211;id &lt;GPU IDs&gt; &#8211;default-compute-instance</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;create-gpu-instance &lt;GPU instance profile IDs or names&gt; &#8211;id &lt;GPU IDs&gt; &#8211;default-compute-instance</i></dt>
 <dd>
-<dt><code>9) List GPU instances</code></p>
+</dd><dt><code>9) List GPU instances</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -lgi -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -lgi -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;list-gpu-instances &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;list-gpu-instances &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Lists GPU instances and their IDs.</p>
+</dd><dt>Lists GPU instances and their IDs.</dt>
 <dd>
-<dt><code>10) Destroy GPU instance</code></p>
+</dd><dt><code>10) Destroy GPU instance</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -dgi -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -dgi -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;destroy-gpu-instances &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;destroy-gpu-instances &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Destroys GPU instances. The command fails if the requested GPU instance is in use by an application.</p>
+</dd><dt>Destroys GPU instances. The command fails if the requested GPU instance is in use by an application.</dt>
 <dd>
-<dt><code>11) List compute instance profiles</code></p>
+</dd><dt><code>11) List compute instance profiles</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -lcip -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -lcip -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;list-compute-instance-profiles &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;list-compute-instance-profiles &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Lists compute instance profiles, their availability and IDs. Profiles describe the supported types of compute instances, including all of the GPU resources they share or exclusively control.</p>
+</dd><dt>Lists compute instance profiles, their availability and IDs. Profiles describe the supported types of compute instances, including all of the GPU resources they share or exclusively control.</dt>
 <dd>
-<dt><code>12) Create compute instance</code></p>
+</dd><dt><code>12) Create compute instance</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -cci &lt;compute instance profile IDs or names&gt; -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -cci &lt;compute instance profile IDs or names&gt; -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;create-compute-instance &lt;compute instance profile IDs or names&gt; &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;create-compute-instance &lt;compute instance profile IDs or names&gt; &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Creates compute instances for the given compute instance profile IDs or names. The command fails if the GPU resources required to allocate the requested compute instances are not available.</p>
+</dd><dt>Creates compute instances for the given compute instance profile IDs or names. The command fails if the GPU resources required to allocate the requested compute instances are not available.</dt>
 <dd>
-<dt><code>13) List compute instances</code></p>
+</dd><dt><code>13) List compute instances</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -lci -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -lci -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;list-compute-instances &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;list-compute-instances &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Lists compute instances and their IDs.</p>
+</dd><dt>Lists compute instances and their IDs.</dt>
 <dd>
-<dt><code>14) Destroy compute instance</code></p>
+</dd><dt><code>14) Destroy compute instance</code></dt>
 <dd>
-<dt><i>nvidia-smi mig -dci -ci &lt;compute instance IDs&gt; -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig -dci -ci &lt;compute instance IDs&gt; -gi &lt;GPU instance IDs&gt; -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi mig &#8211;destroy-compute-instance &#8211;compute-instance-id &lt;compute instance IDs&gt; &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi mig &#8211;destroy-compute-instance &#8211;compute-instance-id &lt;compute instance IDs&gt; &#8211;gpu-instance-id &lt;GPU instance IDs&gt; &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Destroys compute instances. The command fails if the requested compute instance is in use by an application.</p>
+</dd><dt>Destroys compute instances. The command fails if the requested compute instance is in use by an application.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Boost Slider</h3>
 <p> The privileged &quot;nvidia-smi boost-slider&quot; command-line is used to manage boost slider on GPUs. It provides options to list and control boost sliders. </p>
 <p> <code>Usage:</code> </p>
 <dl>
-<dt><code>1) Display help menu</code></p>
+<dt><code>1) Display help menu</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -h</i></p>
+</dd><dt><i>nvidia-smi boost-slider -h</i></dt>
 <dd>
-<dt>Displays help menu for using the command-line.</p>
+</dd><dt>Displays help menu for using the command-line.</dt>
 <dd>
-<dt><code>2) List one or more GPUs</code></p>
+</dd><dt><code>2) List one or more GPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</p>
+</dd><dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</dt>
 <dd>
-<dt><code>3) List boost sliders</code></p>
+</dd><dt><code>3) List boost sliders</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -l</i></p>
+</dd><dt><i>nvidia-smi boost-slider -l</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;list</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;list</i></dt>
 <dd>
-<dt>List all boost sliders for the selected devices.</p>
+</dd><dt>List all boost sliders for the selected devices.</dt>
 <dd>
-<dt><code>4) Set video boost slider</code></p>
+</dd><dt><code>4) Set video boost slider</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;vboost &lt;value&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;vboost &lt;value&gt;</i></dt>
 <dd>
-<dt>Set the video boost slider for the selected devices.</p>
+</dd><dt>Set the video boost slider for the selected devices.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>Power Hint</h3>
 <p> The privileged &quot;nvidia-smi power-hint&quot; command-line is used to query power hint on GPUs. </p>
 <p> <code>Usage:</code> </p>
 <dl>
-<dt><code>1) Display help menu</code></p>
+<dt><code>1) Display help menu</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -h</i></p>
+</dd><dt><i>nvidia-smi boost-slider -h</i></dt>
 <dd>
-<dt>Displays help menu for using the command-line.</p>
+</dd><dt>Displays help menu for using the command-line.</dt>
 <dd>
-<dt><code>2) List one or more GPUs</code></p>
+</dd><dt><code>2) List one or more GPUs</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -i &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider -i &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;id &lt;GPU IDs&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;id &lt;GPU IDs&gt;</i></dt>
 <dd>
-<dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</p>
+</dd><dt>Selects one or more GPUs using the given comma-separated GPU indexes, PCI bus IDs or UUIDs. If not used, the given command-line option applies to all of the supported GPUs.</dt>
 <dd>
-<dt><code>3) List power hint info</code></p>
+</dd><dt><code>3) List power hint info</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -l</i></p>
+</dd><dt><i>nvidia-smi boost-slider -l</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;list-info</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;list-info</i></dt>
 <dd>
-<dt>List all boost sliders for the selected devices.</p>
+</dd><dt>List all boost sliders for the selected devices.</dt>
 <dd>
-<dt><code>4) Query power hint</code></p>
+</dd><dt><code>4) Query power hint</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -gc &lt;value&gt; -t &lt;value&gt; -p &lt;profile ID&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider -gc &lt;value&gt; -t &lt;value&gt; -p &lt;profile ID&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;graphics-clock &lt;value&gt; &#8211;temperature &lt;value&gt; &#8211;profile &lt;profile ID&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;graphics-clock &lt;value&gt; &#8211;temperature &lt;value&gt; &#8211;profile &lt;profile ID&gt;</i></dt>
 <dd>
-<dt>Query power hint with graphics clock, temperature and profile id.</p>
+</dd><dt>Query power hint with graphics clock, temperature and profile id.</dt>
 <dd>
-<dt><code>5) Query power hint</code></p>
+</dd><dt><code>5) Query power hint</code></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider -gc &lt;value&gt; -mc &lt;value&gt; -t &lt;value&gt; -p &lt;profile ID&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider -gc &lt;value&gt; -mc &lt;value&gt; -t &lt;value&gt; -p &lt;profile ID&gt;</i></dt>
 <dd>
-<dt><i>nvidia-smi boost-slider &#8211;graphics-clock &lt;value&gt; &#8211;memory-clock &lt;value&gt; &#8211;temperature &lt;value&gt; &#8211;profile &lt;profile ID&gt;</i></p>
+</dd><dt><i>nvidia-smi boost-slider &#8211;graphics-clock &lt;value&gt; &#8211;memory-clock &lt;value&gt; &#8211;temperature &lt;value&gt; &#8211;profile &lt;profile ID&gt;</i></dt>
 <dd>
-<dt>Query power hint with graphics clock, memory clock, temperature and profile id.</p>
+</dd><dt>Query power hint with graphics clock, memory clock, temperature and profile id.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>UNIT ATTRIBUTES</h2>
 <p> The following list describes all possible data returned by the <code>-q -u</code> unit query option. Unless otherwise noted all numerical results are base 10 and unitless. </p>
 <h3>Timestamp</h3>
@@ -1110,8 +1110,8 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h3>HIC Info</h3>
 <p> Information about any Host Interface Cards (HIC) that are installed in the system. </p>
 <dl>
-<dt><code>Firmware Version</code></p>
-<dd> The version of the firmware running on the HIC. </p>
+<dt><code>Firmware Version</code></dt>
+<dd> The version of the firmware running on the HIC. </dd>
 </dl>
 <h3>Attached Units</h3>
 <p> The number of attached Units in the system. </p>
@@ -1126,38 +1126,38 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <h3>LED State</h3>
 <p> The LED indicator is used to flag systems with potential problems. An LED color of AMBER indicates an issue. For all S-class products. </p>
 <dl>
-<dt><code>Color</code></p>
-<dd> The color of the LED indicator. Either &quot;GREEN&quot; or &quot;AMBER&quot;. </p>
-<dt><code>Cause</code></p>
-<dd> The reason for the current LED color. The cause may be listed as any combination of &quot;Unknown&quot;, &quot;Set to AMBER by host system&quot;, &quot;Thermal sensor failure&quot;, &quot;Fan failure&quot; and &quot;Temperature exceeds critical limit&quot;. </p>
+<dt><code>Color</code></dt>
+<dd> The color of the LED indicator. Either &quot;GREEN&quot; or &quot;AMBER&quot;. </dd>
+<dt><code>Cause</code></dt>
+<dd> The reason for the current LED color. The cause may be listed as any combination of &quot;Unknown&quot;, &quot;Set to AMBER by host system&quot;, &quot;Thermal sensor failure&quot;, &quot;Fan failure&quot; and &quot;Temperature exceeds critical limit&quot;. </dd>
 </dl>
 <h3>Temperature</h3>
 <p> Temperature readings for important components of the Unit. All readings are in degrees C. Not all readings may be available. For all S-class products. </p>
 <dl>
-<dt><code>Intake</code></p>
-<dd> Air temperature at the unit intake. </p>
-<dt><code>Exhaust</code></p>
-<dd> Air temperature at the unit exhaust point. </p>
-<dt><code>Board</code></p>
-<dd> Air temperature across the unit board. </p>
+<dt><code>Intake</code></dt>
+<dd> Air temperature at the unit intake. </dd>
+<dt><code>Exhaust</code></dt>
+<dd> Air temperature at the unit exhaust point. </dd>
+<dt><code>Board</code></dt>
+<dd> Air temperature across the unit board. </dd>
 </dl>
 <h3>PSU</h3>
 <p> Readings for the unit power supply. For all S-class products. </p>
 <dl>
-<dt><code>State</code></p>
-<dd> Operating state of the PSU. The power supply state can be any of the following: &quot;Normal&quot;, &quot;Abnormal&quot;, &quot;High voltage&quot;, &quot;Fan failure&quot;, &quot;Heatsink temperature&quot;, &quot;Current limit&quot;, &quot;Voltage below UV alarm threshold&quot;, &quot;Low-voltage&quot;, &quot;I2C remote off command&quot;, &quot;MOD_DISABLE input&quot; or &quot;Short pin transition&quot;. </p>
-<dt><code>Voltage</code></p>
-<dd> PSU voltage setting, in volts. </p>
-<dt><code>Current</code></p>
-<dd> PSU current draw, in amps. </p>
+<dt><code>State</code></dt>
+<dd> Operating state of the PSU. The power supply state can be any of the following: &quot;Normal&quot;, &quot;Abnormal&quot;, &quot;High voltage&quot;, &quot;Fan failure&quot;, &quot;Heatsink temperature&quot;, &quot;Current limit&quot;, &quot;Voltage below UV alarm threshold&quot;, &quot;Low-voltage&quot;, &quot;I2C remote off command&quot;, &quot;MOD_DISABLE input&quot; or &quot;Short pin transition&quot;. </dd>
+<dt><code>Voltage</code></dt>
+<dd> PSU voltage setting, in volts. </dd>
+<dt><code>Current</code></dt>
+<dd> PSU current draw, in amps. </dd>
 </dl>
 <h3>Fan Info</h3>
 <p> Fan readings for the unit. A reading is provided for each fan, of which there can be many. For all S-class products. </p>
 <dl>
-<dt><code>State</code></p>
-<dd> The state of the fan, either &quot;NORMAL&quot; or &quot;FAILED&quot;. </p>
-<dt><code>Speed</code></p>
-<dd> For a healthy fan, the fan&#8217;s speed in RPM. </p>
+<dt><code>State</code></dt>
+<dd> The state of the fan, either &quot;NORMAL&quot; or &quot;FAILED&quot;. </dd>
+<dt><code>Speed</code></dt>
+<dd> For a healthy fan, the fan&#8217;s speed in RPM. </dd>
 </dl>
 <h3>Attached GPUs</h3>
 <p> A list of PCI bus ids that correspond to each of the GPUs attached to the unit. The bus ids have the form &quot;domain:bus:device.function&quot;, in hex. For all S-class products. </p>

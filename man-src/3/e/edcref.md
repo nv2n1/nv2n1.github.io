@@ -13,7 +13,7 @@ description: "edcref – Edje Data Collection reference An Edje Data Collection,
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Andres Blanc (dresb) andresblanc [at] gmail.com</dl>
+</dt><dd> Andres Blanc (dresb) andresblanc [at] gmail.com</dd></dl>
 <p> <code> images </code> </p>
 <pre><code>
 images
@@ -28,12 +28,12 @@ image:
 <p>&nbsp;<wbr>The&nbsp;<wbr>&#8216;images&#8217;&nbsp;<wbr>block is used to list each image file that will be used in the theme along with its compression method&nbsp;<wbr>(if any). Besides the domcument&#8217;s root, additional&nbsp;<wbr>&#8216;images&#8217;&nbsp;<wbr>blocks can be included inside other blocks, normally&nbsp;<wbr>&#8216;collections&#8217;,&nbsp;<wbr>&#8216;group&#8217;&nbsp;<wbr>and&nbsp;<wbr>&#8216;part&#8217;, easing mantienance of the file list when the theme is split among multiple files.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>image&nbsp;<wbr>&nbsp;<wbr>[image file]&nbsp;<wbr>[compression method]&nbsp;<wbr>(compression level)&nbsp;<wbr>&nbsp;<wbr>Used to include each image file. The full path to the directory holding the images can be defined later with edje_cc&#8217;s&nbsp;<wbr>&#8216;-id&#8217;&nbsp;<wbr>option. Compression methods:&nbsp;<wbr> </p>
 <dl>
-<dt>*</p>
-<dd> RAW: Uncompressed.</p>
-<dt>*</p>
-<dd> COMP: Lossless compression.</p>
-<dt>*</p>
-<dd> LOSSY [0-100]: Lossy comression with quality from 0 to 100.</dl>
+<dt>*</dt>
+<dd> RAW: Uncompressed.</dd>
+<dt>*</dt>
+<dd> COMP: Lossless compression.</dd>
+<dt>*</dt>
+<dd> LOSSY [0-100]: Lossy comression with quality from 0 to 100.</dd></dl>
 <p> <code> fonts </code> </p>
 <p>fonts<br />
 {<br />
@@ -234,20 +234,20 @@ file:<br />
 <p>&nbsp;<wbr> </p>
 <p> type [TYPE] Set the type (all caps) from among the available types, it&#8217;s set to IMAGE by default. Valid types: </p>
 <dl>
-<dt>*</p>
-<dd> RECT</p>
-<dt>*</p>
-<dd> TEXT</p>
-<dt>*</p>
-<dd> IMAGE</p>
-<dt>*</p>
-<dd> SWALLOW</p>
-<dt>*</p>
-<dd> TEXTBLOCK</p>
-<dt>*</p>
-<dd> GRADIENT</p>
-<dt>*</p>
-<dd> GROUP</dl>
+<dt>*</dt>
+<dd> RECT</dd>
+<dt>*</dt>
+<dd> TEXT</dd>
+<dt>*</dt>
+<dd> IMAGE</dd>
+<dt>*</dt>
+<dd> SWALLOW</dd>
+<dt>*</dt>
+<dd> TEXTBLOCK</dd>
+<dt>*</dt>
+<dd> GRADIENT</dd>
+<dt>*</dt>
+<dd> GROUP</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> mouse_events [1 or 0] Specifies whether the part will emit signals, altought is named &#8216;mouse_events&#8217;, disabling it (0) will prevent the part from emitting any type of signal at all. Its set to 1 by default. </p>
 <p>&nbsp;<wbr> </p>
@@ -255,19 +255,19 @@ file:<br />
 <p>&nbsp;<wbr> </p>
 <p> ignore_flags [FLAG] &#8230; Specifies whether events with the given flags should be ignored, i.e., will not have the signals emitted to the parts. Multiple flags must be separated by spaces, the effect will be ignoring all events with one of the flags specified. Possible flags: </p>
 <dl>
-<dt>*</p>
-<dd> NONE (default value, no event will be ignored)</p>
-<dt>*</p>
-<dd> ON_HOLD</dl>
+<dt>*</dt>
+<dd> NONE (default value, no event will be ignored)</dd>
+<dt>*</dt>
+<dd> ON_HOLD</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> scale [1 or 0] Specifies whether the part will scale its size with an edje scaling factor. By default scale is off (0) and the default scale factor is 1.0 &#8211; that means no scaling. This would be used to scale properties such as font size, min/max size of the part, and possibly can be used to scale based on DPI of the target device. The reason to be selective is that some things work well being scaled, others do not, so the designer gets to choose what works best. </p>
 <p>&nbsp;<wbr> </p>
 <p> pointer_mode [MODE] Sets the mouse pointer behavior for a given part. The default value is AUTOGRAB. Aviable modes: </p>
 <dl>
-<dt>*</p>
-<dd> AUTOGRAB, when the part is clicked and the button remains pressed, the part will be the source of all future mouse signals emitted, even outside the object, until the button is released.</p>
-<dt>*</p>
-<dd> NOGRAB, the effect will be limited to the part&#8217;s container. container.</dl>
+<dt>*</dt>
+<dd> AUTOGRAB, when the part is clicked and the button remains pressed, the part will be the source of all future mouse signals emitted, even outside the object, until the button is released.</dd>
+<dt>*</dt>
+<dd> NOGRAB, the effect will be limited to the part&#8217;s container. container.</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> precise_is_inside [1 or 0] Enables precise point collision detection for the part, which is more resource intensive. Disabled by default. </p>
 <p>&nbsp;<wbr> </p>
@@ -279,26 +279,26 @@ file:<br />
 <p>&nbsp;<wbr> </p>
 <p> effect [EFFECT] Causes Edje to draw the selected effect among: </p>
 <dl>
-<dt>*</p>
-<dd> PLAIN</p>
-<dt>*</p>
-<dd> OUTLINE</p>
-<dt>*</p>
-<dd> SOFT_OUTLINE</p>
-<dt>*</p>
-<dd> SHADOW</p>
-<dt>*</p>
-<dd> SOFT_SHADOW</p>
-<dt>*</p>
-<dd> OUTLINE_SHADOW</p>
-<dt>*</p>
-<dd> OUTLINE_SOFT_SHADOW</p>
-<dt>*</p>
-<dd> FAR_SHADOW</p>
-<dt>*</p>
-<dd> FAR_SOFT_SHADOW</p>
-<dt>*</p>
-<dd> GLOW</dl>
+<dt>*</dt>
+<dd> PLAIN</dd>
+<dt>*</dt>
+<dd> OUTLINE</dd>
+<dt>*</dt>
+<dd> SOFT_OUTLINE</dd>
+<dt>*</dt>
+<dd> SHADOW</dd>
+<dt>*</dt>
+<dd> SOFT_SHADOW</dd>
+<dt>*</dt>
+<dd> OUTLINE_SHADOW</dd>
+<dt>*</dt>
+<dd> OUTLINE_SOFT_SHADOW</dd>
+<dt>*</dt>
+<dd> FAR_SHADOW</dd>
+<dt>*</dt>
+<dd> FAR_SOFT_SHADOW</dd>
+<dt>*</dt>
+<dd> GLOW</dd></dl>
 <p> <code> dragable </code> </p>
 <p>part<br />
 {<br />
@@ -587,10 +587,10 @@ offset:<br />
 <p>&nbsp;<wbr>A gradient block is used to display a given&nbsp;<wbr>&#8216;spectrum&#8217;&nbsp;<wbr>inside a container. The container&#8217;s shape is a rect but this not mean the gradient is restricted to a rectangular shape. Gradients can use&nbsp;<wbr>&#8216;rel1&#8217;&nbsp;<wbr>and&nbsp;<wbr>&#8216;rel2&#8217;&nbsp;<wbr>blocks to layout the initial and final point relatively inside the container.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>type&nbsp;<wbr>&nbsp;<wbr>[the name of the type]&nbsp;<wbr>&nbsp;<wbr>Alters the gradient&#8217;s rendering algorithm between:&nbsp;<wbr> </p>
 <dl>
-<dt>*</p>
-<dd> linear (default)</p>
-<dt>*</p>
-<dd> radial</dl>
+<dt>*</dt>
+<dd> linear (default)</dd>
+<dt>*</dt>
+<dd> radial</dd></dl>
 <p>&nbsp;<wbr> </p>
 <p> spectrum [an existing spectrum name] Causes the gradient to display the colors as defined by a given &#8216;spectrum&#8217; in the &#8216;spectra&#8217; block. </p>
 <p>&nbsp;<wbr> </p>

@@ -10,7 +10,6 @@ description: "sasl_getconfpath_t – The SASL callback to indicate location of t
 <p>sasl_getconfpath_t &#8211; The SASL callback to indicate location of the config files </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl.h&gt;
-
 int sasl_getconfpath_t(void *context,
                        char **path);</code></pre>
 <h2>Description</h2>

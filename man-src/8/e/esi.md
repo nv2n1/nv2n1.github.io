@@ -18,10 +18,10 @@ description: "esi – get or set the end system identifier (ESI)"
 <p> Note that ESI changes are not automatically propagated throughout the system, e.g. to <code>ilmid</code>. <code>esi</code> should therefore be used early during system initialization.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>force overwriting an existing ESI.</p>
-<dt><code>-V</code></p>
-<dd>print version number of <code>esi</code> on standard output and exit.</dl>
+<dt><code>-f</code></dt>
+<dd>force overwriting an existing ESI.</dd>
+<dt><code>-V</code></dt>
+<dd>print version number of <code>esi</code> on standard output and exit.</dd></dl>
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>

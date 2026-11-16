@@ -25,3 +25,4 @@ description: "perl5110delta – what is new for perl v5.11.0"
     alnum       [0-9A-Za-z]         IsPosixAlnum  ! IsAlnum
     alpha       [A-Za-z]            IsPosixAlpha  ! IsAlpha
     ascii       [
+</code></pre>

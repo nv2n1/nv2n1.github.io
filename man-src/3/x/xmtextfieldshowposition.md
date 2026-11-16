@@ -16,10 +16,10 @@ description: "XmTextFieldShowPosition — A TextField function that forces text 
 <h2>Description</h2>
 <p><code>XmTextFieldShowPosition</code> forces text at the specified position to be displayed. The cursor position is not updated nor is the cursor shown at this position.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>position</i></p>
-<dd>Specifies the character position to be displayed. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero). See <code><a href="/docs/linux/man/3-xmtextposition/">XmTextPosition</a></code>(3) for details on the <code>XmTextPosition</code> data type.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the character position to be displayed. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero). See <code><a href="/docs/linux/man/3-xmtextposition/">XmTextPosition</a></code>(3) for details on the <code>XmTextPosition</code> data type.</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextposition/">XmTextPosition</a></code>(3).</p>

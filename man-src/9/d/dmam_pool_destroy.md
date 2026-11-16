@@ -14,7 +14,7 @@ description: "dmam_pool_destroy – Managed dma_pool_destroy"
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>dma pool that will be destroyed</dl>
+</dd><dd>dma pool that will be destroyed</dd></dl>
 <h2>Description</h2>
 <p>Managed <code>dma_pool_destroy</code>.</p>
 <h2>Copyright</h2>

@@ -14,18 +14,18 @@ description: "ata_msense_caching – Simulate MODE SENSE caching info page"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data</dl>
+</dd><dd>device IDENTIFY data</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>output buffer</dl>
+<dd>output buffer</dd></dl>
 <p> <i>changeable</i></p>
 <dl>
-<dd>whether changeable parameters are requested</dl>
+<dd>whether changeable parameters are requested</dd></dl>
 <h2>Description</h2>
 <p>Generate a caching info page, which conditionally indicates write caching to the SCSI layer, depending on device capabilities. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

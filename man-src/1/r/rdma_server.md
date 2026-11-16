@@ -26,7 +26,7 @@ url: "/docs/linux/man/1-rdma_server/"
 
 <dl>
 <dt>-p port
-<dd> Changes the port number that the server listens on. By default the server listens on port 7471.</dl>
+</dt><dd> Changes the port number that the server listens on. By default the server listens on port 7471.</dd></dl>
 
 <h2>NOTES</h2>
 

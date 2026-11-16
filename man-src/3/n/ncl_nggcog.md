@@ -14,17 +14,17 @@ NGGCOG - Returns the latitudes and longitudes of a set of points approximating a
  void c_nggcog(float clat, float clon, float crad, float *alat, 
  float *alon, int npts)
 <h2>Description</h2><dl COMPACT><dt>CLAT
-<dd>(an input expression of type REAL) is the latitude, in degrees, of a point on the globe defining the center of the circle.
-<dt>CLON
-<dd>(an input expression of type REAL) is the longitude, in degrees, of a point on the globe defining the center of the circle.
-<dt>CRAD
-<dd>(an input expression of type REAL) specifies the radius of the circle. This is given as a great-circle distance, in degrees.
-<dt>ALAT
-<dd>(an output array, of type REAL, dimensioned NPTS) is an array in which the latitudes of points on the circle are to be returned.
-<dt>ALON
-<dd>(an output array, of type REAL, dimensioned NPTS) is an array in which the longitudes of points on the circle are to be returned.
-<dt>NPTS
-<dd>(an input expression, of type INTEGER) is the desired number of points to be used to represent the circle. Its value determines how accurately the circle will be represented.</dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) is the latitude, in degrees, of a point on the globe defining the center of the circle.
+</dd><dt>CLON
+</dt><dd>(an input expression of type REAL) is the longitude, in degrees, of a point on the globe defining the center of the circle.
+</dd><dt>CRAD
+</dt><dd>(an input expression of type REAL) specifies the radius of the circle. This is given as a great-circle distance, in degrees.
+</dd><dt>ALAT
+</dt><dd>(an output array, of type REAL, dimensioned NPTS) is an array in which the latitudes of points on the circle are to be returned.
+</dd><dt>ALON
+</dt><dd>(an output array, of type REAL, dimensioned NPTS) is an array in which the longitudes of points on the circle are to be returned.
+</dd><dt>NPTS
+</dt><dd>(an input expression, of type INTEGER) is the desired number of points to be used to represent the circle. Its value determines how accurately the circle will be represented.</dd></dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Let C represent (CLAT,CLON) and let O represent the center of the globe. The circle is the set of all points P on the globe such that the angle POC is of the size specified by CRAD. 
 
  SIN and COS are used to generate points representing a circle having the desired radius and centered at the North Pole. These points are then subjected to two rotations - one that brings the circle down to the desired latitude, and another that carries it to the desired longitude.

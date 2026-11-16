@@ -23,199 +23,197 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 <p> To create a stream appropriate for use in an SVCD: </p>
 <dl>
 <dt>
-<dd> y4mscaler -O preset=svcd</dl>
+</dt><dd> y4mscaler -O preset=svcd</dd></dl>
 <p> To create a stream for a VideoCD (a non-interlaced format), from a DV source (an interlaced format), shifting the input frame 4 pixels to the left: </p>
 <dl>
 <dt>
-<dd> y4mscaler -I ilace=bottom-only -I active=-4+0cc -O preset=vcd</dl>
+</dt><dd> y4mscaler -I ilace=bottom-only -I active=-4+0cc -O preset=vcd</dd></dl>
 <p> To take a widescreen NTSC DV source, and convert it to a letterboxed stream, with blue bars on the top and bottom: </p>
 <dl>
 <dt>
-<dd> y4mscaler -O sar=ntsc -O bg=RGB:0,0,255</dl>
+</dt><dd> y4mscaler -O sar=ntsc -O bg=RGB:0,0,255</dd></dl>
 <p> To take a widescreen NTSC DV source, and convert it to a &quot;fullscreen&quot; stream (i.e. the sides are clipped, just like on TV): </p>
 <dl>
 <dt>
-<dd> y4mscaler -O sar=ntsc -O infer=clip</dl>
+</dt><dd> y4mscaler -O sar=ntsc -O infer=clip</dd></dl>
 <p> To take a centered, letterboxed NTSC source, and convert it to a widescreen (16:9) format stream for DVD, with the black bars removed: </p>
 <dl>
 <dt>
-<dd> y4mscaler -O preset=dvd -O sar=ntsc_wide -O infer=clip</dl>
+</dt><dd> y4mscaler -O preset=dvd -O sar=ntsc_wide -O infer=clip</dd></dl>
 <p> To take the center 100&#215;100 pixel chunk of an NTSC DV stream, surround it with a 20-pixel blue border, and blow that up to a full-screen SuperVCD stream: </p>
 <dl>
 <dt>
-<dd> y4mscaler -I active=140&#215;140+0+0cc -I matte=100&#215;100+0+0cc -I bg=RGB:0,0,255 -O preset=svcd</dl>
+</dt><dd> y4mscaler -I active=140&#215;140+0+0cc -I matte=100&#215;100+0+0cc -I bg=RGB:0,0,255 -O preset=svcd</dd></dl>
 <h2>OPTIONS</h2>
 <p> The first three options, -v, -V, and -h, are simple straightforward options which take either no arguments or one numeric argument.</p>
 <dl>
-<dt><code>-v</code><i> [0,1,2]</i></p>
+<dt><code>-v</code><i> [0,1,2]</i></dt>
 <dd> Set verbosity level.<br />
 &nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
 &nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too&nbsp;<wbr>(default).<br />
-&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </p>
-<dt><code>-V</code></p>
-<dd> Show version information and exit. </p>
-<dt><code>-h</code></p>
-<dd> Show a help message (synopsis of options). </p>
+&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
+<dt><code>-V</code></dt>
+<dd> Show version information and exit. </dd>
+<dt><code>-h</code></dt>
+<dd> Show a help message (synopsis of options). </dd>
 </dl>
 <p> The -I, -O, and -S options each take one argument of the form <i>parameter=value,</i> which specify parameters for the input, output, and scaling, respectively. These options can be used repeatedly to specify multiple parameters. The parameter names and values are not case-sensitive. Definitions of the form &quot;parameter=[AAA|BBB|CCC]&quot; mean that only one of the listed keywords AAA, BBB, or CCC may be chosen. Succeeding options will override earlier ones. </p>
 <dl>
-<dt><code>-I</code><i> input_parameter</i></p>
+<dt><code>-I</code><i> input_parameter</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specify parameters for the source/input stream. All &#8216;-I&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-I&#8217; arguments are evaluated before any &#8216;-O&#8217; arguments.</p>
+</dt><dd> Specify parameters for the source/input stream. All &#8216;-I&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-I&#8217; arguments are evaluated before any &#8216;-O&#8217; arguments.</dd>
 <dl>
-<dt><code>active=</code><i>WxH+X+Yaa</i></p>
+<dt><code>active=</code><i>WxH+X+Yaa</i></dt>
 <dd> Specify the active region of the source frame, which is scaled to fit the active region of the target frame. The default is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
- Example: active=200&#215;180+30+24cc</p>
-<dt><code>matte=</code><i>WxH+X+Y</i></p>
+ Example: active=200&#215;180+30+24cc</dd>
+<dt><code>matte=</code><i>WxH+X+Y</i></dt>
 <dd> Specify a matte region for the source frame. All pixels outside of this region are set to the source background color. The default matte is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
- Example: matte=200&#215;180+30+24cc</dl>
+ Example: matte=200&#215;180+30+24cc</dd></dl>
 <p> <code>bg=</code><i>RGB:r,g,b</i><br />
  <code>bg=</code><i>YCBCR:y,cb,cr</i><br />
  <code>bg=</code><i>RGBA:r,g,b,a</i><br />
  <code>bg=</code><i>YCBCRA:y,cb,cr,a</i></p>
 <dl>
 <dt>
-<dd> Set the source background color. Pixels outside of the source&#8217;s matte region are set to this color. One can specify the color as either a R&#8217;G&#8217;B&#8217; or Y&#8217;CbCr triplet. For example, the default color is black, specified as &quot;bg=YCBCR:16,128,128&quot; or &quot;bg=RGB:0,0,0&quot;. The &#8216;A&#8217; versions will set the alpha (transparency) value of the color. The alpha range is [0,255] for RGBA and [16,235] for YCBCRA. The default is fully-opaque (255 for RGBA, 235 for YCBCRA).</dl>
+</dt><dd> Set the source background color. Pixels outside of the source&#8217;s matte region are set to this color. One can specify the color as either a R&#8217;G&#8217;B&#8217; or Y&#8217;CbCr triplet. For example, the default color is black, specified as &quot;bg=YCBCR:16,128,128&quot; or &quot;bg=RGB:0,0,0&quot;. The &#8216;A&#8217; versions will set the alpha (transparency) value of the color. The alpha range is [0,255] for RGBA and [16,235] for YCBCRA. The default is fully-opaque (255 for RGBA, 235 for YCBCRA).</dd></dl>
 <dl>
-<dt><code>norm=</code>[<code>NTSC</code>|<code>PAL</code>|<code>SECAM</code>]</p>
-<dd> Specify the &quot;norm&quot; of the source stream. This is normally inferred from the stream header.</p>
-<dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>|<code>TOP_ONLY</code>|<code>BOTTOM_ONLY</code>]</p>
+<dt><code>norm=</code>[<code>NTSC</code>|<code>PAL</code>|<code>SECAM</code>]</dt>
+<dd> Specify the &quot;norm&quot; of the source stream. This is normally inferred from the stream header.</dd>
+<dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>|<code>TOP_ONLY</code>|<code>BOTTOM_ONLY</code>]</dt>
 <dd> Specify the interlacing used by the source stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. These values are normally inferred from the stream header; specifying them will override the stream header.<br />
- TOP_ONLY and BOTTOM_ONLY specify that only the top or bottom field of each frame should be used; the other field is discarded. These options can only be used with an interlaced input, and cause the interlaced stream to be treated as a progressive stream with half the height. (This is particularly useful in creating a VCD from a full-size interlaced input stream.) These two special options can only be used when the source is a pure progressive stream (as opposed to a YUV4MPEG2 &quot;mixed-mode&quot; stream).</p>
-<dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</p>
-<dd> Specify the chroma subsampling mode used in the source stream. This parameter is inferred from the stream header, so this keyword should almost never be used in a source specification. The only useful reason to specify this keyword is to override one variety of 4:2:0 with another. Any other use will cause processing to fail.</dl>
+ TOP_ONLY and BOTTOM_ONLY specify that only the top or bottom field of each frame should be used; the other field is discarded. These options can only be used with an interlaced input, and cause the interlaced stream to be treated as a progressive stream with half the height. (This is particularly useful in creating a VCD from a full-size interlaced input stream.) These two special options can only be used when the source is a pure progressive stream (as opposed to a YUV4MPEG2 &quot;mixed-mode&quot; stream).</dd>
+<dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</dt>
+<dd> Specify the chroma subsampling mode used in the source stream. This parameter is inferred from the stream header, so this keyword should almost never be used in a source specification. The only useful reason to specify this keyword is to override one variety of 4:2:0 with another. Any other use will cause processing to fail.</dd></dl>
 <p> <code>sar=</code><i>N:D</i><br />
  <code>sar=</code>[<code>NTSC</code>|<code>PAL</code>|<code>NTSC_WIDE</code>|<code>PAL_WIDE</code>]</p>
 <dl>
 <dt>
-<dd> Specify the sample-aspect-ratio of the source stream. The value can either be or numeric ratio (such as &quot;10:11&quot;) or one of the keywords, which correspond to the CCIR-601 values for 4:3 or 16:9 displays, respectively. This parameter is usually inferred from the stream header.</dl>
+</dt><dd> Specify the sample-aspect-ratio of the source stream. The value can either be or numeric ratio (such as &quot;10:11&quot;) or one of the keywords, which correspond to the CCIR-601 values for 4:3 or 16:9 displays, respectively. This parameter is usually inferred from the stream header.</dd></dl>
 </dl>
-<dt><code>-O</code><i> output_parameter</i></p>
+<dt><code>-O</code><i> output_parameter</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Specify parameters for the destination/output stream. All &#8216;-O&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-O&#8217; arguments are evaluated after any &#8216;-I&#8217; arguments. </p>
+</dt><dd> Specify parameters for the destination/output stream. All &#8216;-O&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-O&#8217; arguments are evaluated after any &#8216;-I&#8217; arguments. </dd>
 <p> <code>size=</code><i>WxH</i><br />
  <code>size=SRC</code></p>
 <dl>
 <dt>
-<dd> Set the output/target frame size, as width W and height H in pixels. Use the keyword <code>SRC</code> to specify that the target frame size should match the source frame size.</dl>
+</dt><dd> Set the output/target frame size, as width W and height H in pixels. Use the keyword <code>SRC</code> to specify that the target frame size should match the source frame size.</dd></dl>
 <dl>
-<dt><code>active=</code><i>WxH+X+Yaa</i></p>
+<dt><code>active=</code><i>WxH+X+Yaa</i></dt>
 <dd> Specify the active region of the target frame, into which the active region of the source frame is scaled. The default is the full target frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the target frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
- Example: active=200&#215;180+30+24cc</dl>
+ Example: active=200&#215;180+30+24cc</dd></dl>
 <p> <code>bg=</code><i>RGB:r,g,b</i><br />
  <code>bg=</code><i>YCBCR:y,cb,cr</i><br />
  <code>bg=</code><i>RGBA:r,g,b,a</i><br />
  <code>bg=</code><i>YCBCRA:y,cb,cr,a</i></p>
 <dl>
 <dt>
-<dd> Set the target background color. Pixels outside of the target&#8217;s active region are set to this color. One can specify the color as either a R&#8217;G&#8217;B&#8217; or Y&#8217;CbCr triplet. For example, the default color is black, specified as &quot;bg=YCBCR:16,128,128&quot; or &quot;bg=RGB:0,0,0&quot;. The &#8216;A&#8217; versions will set the alpha (transparency) value of the color. The alpha range is [0,255] for RGBA and [16,235] for YCBCRA. The default is fully-opaque (255 for RGBA, 235 for YCBCRA).</dl>
+</dt><dd> Set the target background color. Pixels outside of the target&#8217;s active region are set to this color. One can specify the color as either a R&#8217;G&#8217;B&#8217; or Y&#8217;CbCr triplet. For example, the default color is black, specified as &quot;bg=YCBCR:16,128,128&quot; or &quot;bg=RGB:0,0,0&quot;. The &#8216;A&#8217; versions will set the alpha (transparency) value of the color. The alpha range is [0,255] for RGBA and [16,235] for YCBCRA. The default is fully-opaque (255 for RGBA, 235 for YCBCRA).</dd></dl>
 <dl>
-<dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>]</p>
+<dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>]</dt>
 <dd> Specify the interlacing used by the target stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. The default if to match the source stream.<br />
- If the source and target are both interlaced, but with different modes (i.e. one is bottom-first, and the other is top-first), then <code>y4mscaler</code> will convert one mode to the other by dropping the first source field.</p>
-<dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</p>
-<dd> Specify the chroma subsampling mode to be used in the target stream. The default is to match the source mode. See &quot;NOTES ON CHROMA MODES AND SUBSAMPLING&quot; for more information.</dl>
+ If the source and target are both interlaced, but with different modes (i.e. one is bottom-first, and the other is top-first), then <code>y4mscaler</code> will convert one mode to the other by dropping the first source field.</dd>
+<dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</dt>
+<dd> Specify the chroma subsampling mode to be used in the target stream. The default is to match the source mode. See &quot;NOTES ON CHROMA MODES AND SUBSAMPLING&quot; for more information.</dd></dl>
 <p> <code>sar=</code><i>N:D</i><br />
  <code>sar=</code>[<code>SRC</code>|<code>NTSC</code>|<code>PAL</code>|<code>NTSC_WIDE</code>|<code>PAL_WIDE</code>]</p>
 <dl>
 <dt>
-<dd> Specify the sample-aspect-ratio of the source stream. The value can either be or numeric ratio (such as &quot;10:11&quot;) or one of the keywords, which correspond to the CCIR-601 values for 4:3 or 16:9 displays, respectively. The keyword <code>SRC</code> specifies that the target SAR should match the source.</dl>
+</dt><dd> Specify the sample-aspect-ratio of the source stream. The value can either be or numeric ratio (such as &quot;10:11&quot;) or one of the keywords, which correspond to the CCIR-601 values for 4:3 or 16:9 displays, respectively. The keyword <code>SRC</code> specifies that the target SAR should match the source.</dd></dl>
 <p> <code>scale=</code><i>N/D</i><br />
  <code>Xscale=</code><i>N/D</i><br />
  <code>Yscale=</code><i>N/D</i></p>
 <dl>
 <dt>
-<dd> Set the scaling ratios, as a fraction; for example, scale=1/2. &quot;scale=&quot; sets both X and Y factors simultaneously. &quot;Xscale=&quot; and &quot;Yscale=&quot; can be used to set them independently.</dl>
+</dt><dd> Set the scaling ratios, as a fraction; for example, scale=1/2. &quot;scale=&quot; sets both X and Y factors simultaneously. &quot;Xscale=&quot; and &quot;Yscale=&quot; can be used to set them independently.</dd></dl>
 <dl>
-<dt><code>infer=</code>[<code>PAD</code>|<code>CLIP</code>|<code>PRESERVE_X</code>|<code>PRESERVE_Y</code>]</p>
-<dd> Set the mode used to infer scaling ratios from active regions and SAR&#8217;s. The keywords are mutually exclusive. The default is PAD.</p>
-<dt><code>infer=</code>[<code>SIMPLIFY</code>|<code>EXACT</code>]</p>
-<dd> Set whether the above heuristic uses exact ratios, or whether it is allowed to slightly adjust active regions to simplify the scaling ratios. The keywords are mutually exclusive. The default is SIMPLIFY.</p>
-<dt><code>align=</code>[<code>TL</code>|<code>TC</code>|<code>TR</code>|<code>CL</code>|<code>CC</code>|<code>CR</code>|<code>BL</code>|<code>BC</code>|<code>BR</code>]</p>
-<dd> Set the alignment point between the source and target active regions. The keywords specify &quot;top-left&quot;, &quot;top-center&quot;, &quot;top-right&quot;, etc. The specified corner or point from the source region will be mapped to the same spot in the target region; and cropping or padding which is applied to the active regions will preserve this mapping. The default is CC, for &quot;center-center&quot;, i.e. the source and target regions are mutually centered. The keywords are mutually exclusive. The default is CC. See &quot;NOTES ON SOURCE AND TARGET ALIGNMENT&quot; for details.</dl>
+<dt><code>infer=</code>[<code>PAD</code>|<code>CLIP</code>|<code>PRESERVE_X</code>|<code>PRESERVE_Y</code>]</dt>
+<dd> Set the mode used to infer scaling ratios from active regions and SAR&#8217;s. The keywords are mutually exclusive. The default is PAD.</dd>
+<dt><code>infer=</code>[<code>SIMPLIFY</code>|<code>EXACT</code>]</dt>
+<dd> Set whether the above heuristic uses exact ratios, or whether it is allowed to slightly adjust active regions to simplify the scaling ratios. The keywords are mutually exclusive. The default is SIMPLIFY.</dd>
+<dt><code>align=</code>[<code>TL</code>|<code>TC</code>|<code>TR</code>|<code>CL</code>|<code>CC</code>|<code>CR</code>|<code>BL</code>|<code>BC</code>|<code>BR</code>]</dt>
+<dd> Set the alignment point between the source and target active regions. The keywords specify &quot;top-left&quot;, &quot;top-center&quot;, &quot;top-right&quot;, etc. The specified corner or point from the source region will be mapped to the same spot in the target region; and cropping or padding which is applied to the active regions will preserve this mapping. The default is CC, for &quot;center-center&quot;, i.e. the source and target regions are mutually centered. The keywords are mutually exclusive. The default is CC. See &quot;NOTES ON SOURCE AND TARGET ALIGNMENT&quot; for details.</dd></dl>
 <p> <code>preset=</code>[<code>VCD</code>|<code>CVD</code>|<code>SVCD</code>|<code>DVD</code>|<code>DVD_WIDE</code>|<code>DV</code>|<code>DV_WIDE</code>|<br />
  <code>SVCD_STILL_HI</code>|<code>SVCD_STILL_LO</code>|<code>VCD_STILL_HI</code>|<code>VCD_STILL_LO</code>|<br />
  <code>ATSC_720P</code>|<code>ATSC_1080I</code>|<code>ATSC_1080P</code>] </p>
 <dl>
 <dt>
-<dd> Use preset target parameters for several common output formats. Individual parameters can be overridden by following with more &quot;-O&quot; settings. These keywords are mutually exclusive. For the details of what settings these preset keywords imply, see &quot;NOTES ON TARGET PRESETS&quot;.</p>
+</dt><dd> Use preset target parameters for several common output formats. Individual parameters can be overridden by following with more &quot;-O&quot; settings. These keywords are mutually exclusive. For the details of what settings these preset keywords imply, see &quot;NOTES ON TARGET PRESETS&quot;.</dd>
 <dl>
-<dt><code>VCD</code> &#8211; 352-wide VideoCD, progressive</p>
+<dt><code>VCD</code> &#8211; 352-wide VideoCD, progressive</dt>
 <dd>
-<dt><code>CVD</code> &#8211; 352-wide (full-height) ChinaVideoDisc</p>
+</dd><dt><code>CVD</code> &#8211; 352-wide (full-height) ChinaVideoDisc</dt>
 <dd>
-<dt><code>SVCD</code> &#8211; 480-wide SuperVCD</p>
+</dd><dt><code>SVCD</code> &#8211; 480-wide SuperVCD</dt>
 <dd>
-<dt><code>DVD</code> &#8211; 720-wide DVD</p>
+</dd><dt><code>DVD</code> &#8211; 720-wide DVD</dt>
 <dd>
-<dt><code>DVD_WIDE</code> &#8211; 720-wide DVD, anamorphic pixels</p>
+</dd><dt><code>DVD_WIDE</code> &#8211; 720-wide DVD, anamorphic pixels</dt>
 <dd>
-<dt><code>DV</code> &#8211; 720-wide DV (bottom-field-first, 4:1:1)</p>
+</dd><dt><code>DV</code> &#8211; 720-wide DV (bottom-field-first, 4:1:1)</dt>
 <dd>
-<dt><code>DV_WIDE</code> &#8211; 720-wide DV, anamorphic pixels</p>
+</dd><dt><code>DV_WIDE</code> &#8211; 720-wide DV, anamorphic pixels</dt>
 <dd>
-<dt><code>SVCD_STILL_HI</code> &#8211; high-resolution SVCD still image</p>
+</dd><dt><code>SVCD_STILL_HI</code> &#8211; high-resolution SVCD still image</dt>
 <dd>
-<dt><code>SVCD_STILL_LO</code> &#8211; low-resolution SVCD still image</p>
+</dd><dt><code>SVCD_STILL_LO</code> &#8211; low-resolution SVCD still image</dt>
 <dd>
-<dt><code>VCD_STILL_HI</code> &#8211; high-resolution VCD still image</p>
+</dd><dt><code>VCD_STILL_HI</code> &#8211; high-resolution VCD still image</dt>
 <dd>
-<dt><code>VCD_STILL_LO</code> &#8211; low-resolution SVCD still image</p>
+</dd><dt><code>VCD_STILL_LO</code> &#8211; low-resolution SVCD still image</dt>
 <dd>
-<dt><code>ATSC_720P</code> &#8211; ATSC 720p (progressive HDTV)</p>
+</dd><dt><code>ATSC_720P</code> &#8211; ATSC 720p (progressive HDTV)</dt>
 <dd>
-<dt><code>ATSC_1080I</code> &#8211; ATSC 1080i (interlaced HDTV)</p>
+</dd><dt><code>ATSC_1080I</code> &#8211; ATSC 1080i (interlaced HDTV)</dt>
 <dd>
-<dt><code>ATSC_1080P</code> &#8211; ATSC 1080p (HDTV)</p>
-<dd></dl>
+</dd><dt><code>ATSC_1080P</code> &#8211; ATSC 1080p (HDTV)</dt>
+<dd></dd></dl>
 </dl>
 </dl>
-<dt><code>-S</code><i> scaling_parameter</i></p>
+<dt><code>-S</code><i> scaling_parameter</i></dt>
 <dd>
+</dd><dl>
+<dt>
+</dt><dd> Specify parameters for the scaling engine. All &#8216;-S&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones.</dd>
+<dl>
+<dt><code>mode=MONO</code></dt>
+<dd> Request monochrome scaling. The source is treated as monochrome and its chroma channels are ignored. The chroma channels of the output stream will be zeroed to yield a grayscale output.</dd>
+<dt><code>mode=LINESWITCH</code></dt>
+<dd> Request line swapping. Effectively, the top and bottom fields within each frame will be swapped. This may help with malformed streams that have a messed up spatial order. This option is only effective on interlaced streams.</dd>
+<dt><code>scaler=</code><i>scaler-name</i></dt>
+<dd> Use a particular scaling engine. The available engines are:</dd>
 <dl>
 <dt>
-<dd> Specify parameters for the scaling engine. All &#8216;-S&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones.</p>
-<dl>
-<dt><code>mode=MONO</code></p>
-<dd> Request monochrome scaling. The source is treated as monochrome and its chroma channels are ignored. The chroma channels of the output stream will be zeroed to yield a grayscale output.</p>
-<dt><code>mode=LINESWITCH</code></p>
-<dd> Request line swapping. Effectively, the top and bottom fields within each frame will be swapped. This may help with malformed streams that have a messed up spatial order. This option is only effective on interlaced streams.</p>
-<dt><code>scaler=</code><i>scaler-name</i></p>
-<dd> Use a particular scaling engine. The available engines are:</p>
+</dt><dd>
+&nbsp;<wbr>&#8216;default&#8217;&nbsp;<wbr>&#8211; Matto&#8217;s Generic Scaler&nbsp;<wbr>(the default)</dd></dl>
+<dt><code>option=</code><i>scaler-option</i></dt>
+<dd> Specify an option for the chosen scaling engine. To see all the available options, use &quot;option=help&quot;.</dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&#8216;default&#8217;&nbsp;<wbr>&#8211; Matto&#8217;s Generic Scaler&nbsp;<wbr>(the default)</dl>
-<dt><code>option=</code><i>scaler-option</i></p>
-<dd> Specify an option for the chosen scaling engine. To see all the available options, use &quot;option=help&quot;.</p>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> For the default engine, the available <i>scaler-option</i>s select the filter kernel:</p>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>box</code> &#8211; box filter</dt>
 <dd>
-<dl>
-<dt><code>box</code> &#8211; box filter</p>
+</dd><dt><code>linear</code> &#8211; linear interpolation</dt>
 <dd>
-<dt><code>linear</code> &#8211; linear interpolation</p>
+</dd><dt><code>quadratic</code> &#8211; quadratic interpolation</dt>
 <dd>
-<dt><code>quadratic</code> &#8211; quadratic interpolation</p>
+</dd><dt><code>cubic</code> &#8211; cubic interpolation, Mitchell-Netravali spline</dt>
 <dd>
-<dt><code>cubic</code> &#8211; cubic interpolation, Mitchell-Netravali spline</p>
+</dd><dt><code>cubicCR</code> &#8211; cubic interpolation, Catmull-Rom spline</dt>
 <dd>
-<dt><code>cubicCR</code> &#8211; cubic interpolation, Catmull-Rom spline</p>
+</dd><dt><code>cubicB</code> &#8211; cubic interpolation, B-spline</dt>
 <dd>
-<dt><code>cubicB</code> &#8211; cubic interpolation, B-spline</p>
+</dd><dt><code>cubicK4</code> &#8211; Keys 4th-order cubic</dt>
 <dd>
-<dt><code>cubicK4</code> &#8211; Keys 4th-order cubic</p>
-<dd>
-<dt><code>sinc:N</code> &#8211; sinc with Lanczos window, N cycles</p>
-<dd></dl>
+</dd><dt><code>sinc:N</code> &#8211; sinc with Lanczos window, N cycles</dt>
+<dd></dd></dl>
 </dl>
 <p> To select kernels for the x and y scaling directions independently, use two kernel names separated by a comma, e.g. <i>option=box,quadratic</i>. </p>
 <p> <code>sinc:N</code> will give the best quality results (least aliasing), but is the slowest. The quality improves with larger values of N, as does processing time. <code>cubic</code> is generally regarded in the graphics world as the 3rd-order cubic spline with the best trade-off between smoothing and aliasing. <code>box</code> yields the worst quality results (most aliasing), but is the fastest. The default kernel is <code>cubicK4</code>, which has a flatter passband and sharper cutoff than <code>cubic</code>. (It requires the same computational power as <code>sinc:4</code>, but produces less ringing artifacts.)</dl>
@@ -321,27 +319,23 @@ Preset Frame Size Interlace SAR Subsampling-- -- -- -- -- -- -- -- -- -- -- -- -
 <p> If the X and Y scaling factors are not explicitly provided, <code>y4mscaler</code> will infer the factors from the source and target active regions and sample aspect ratios (SAR&#8217;s). </p>
 <p> If the active regions are not compatible shape-wise (given the SAR&#8217;s), the source and target regions will be clipped or padded according to one of four policies. The policy is selected using the &quot;infer=&quot; parameter and one of the keywords <code>PAD</code>, <code>CLIP</code>, <code>PRESERVE_X</code>, or <code>PRESERVE_Y</code>. (The default is <code>PAD</code>.)</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>PAD</code></p>
-<dd> Pick scaling factors which will pad the source, but ensure that all of the source image content ends up in the target.</p>
-<dt><code>CLIP</code></p>
-<dd> Pick scaling factors which will clip the source, but which will fill the target region as much as possible.</p>
-<dt><code>PRESERVE_X</code></p>
-<dd> Pick scaling factors which preserve as much of the horizontal source content as possible.</p>
-<dt><code>PRESERVE_Y</code></p>
-<dd> Pick scaling factors which preserve as much of the vertical source content as possible.</dl>
+<dt><code>PAD</code></dt>
+<dd> Pick scaling factors which will pad the source, but ensure that all of the source image content ends up in the target.</dd>
+<dt><code>CLIP</code></dt>
+<dd> Pick scaling factors which will clip the source, but which will fill the target region as much as possible.</dd>
+<dt><code>PRESERVE_X</code></dt>
+<dd> Pick scaling factors which preserve as much of the horizontal source content as possible.</dd>
+<dt><code>PRESERVE_Y</code></dt>
+<dd> Pick scaling factors which preserve as much of the vertical source content as possible.</dd></dl>
 </dl>
 <p> The policy is further affected by a choice of two other keywords, <code>SIMPLIFY</code>, or <code>EXACT</code>. (The default is <code>SIMPLIFY</code>.)</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>EXACT</code></p>
-<dd> Calculate exact scaling factors.</p>
-<dt><code>SIMPLIFY</code></p>
-<dd> Adjust the active regions and scaling factors (within 10% or so), to simplify the ratios as much as possible. (For example, crop or pad slightly to achieve a ratio of 2/1 rather than 45/22.)</dl>
+<dt><code>EXACT</code></dt>
+<dd> Calculate exact scaling factors.</dd>
+<dt><code>SIMPLIFY</code></dt>
+<dd> Adjust the active regions and scaling factors (within 10% or so), to simplify the ratios as much as possible. (For example, crop or pad slightly to achieve a ratio of 2/1 rather than 45/22.)</dd></dl>
 </dl>
 <h2>NOTES ON CHROMA MODES AND SUBSAMPLING</h2>
 <p> <code>y4mscaler</code> can convert streams from one chroma subsampling mode to another. Such conversions are always lossy operations, even if the overall frame is undergoing 1/1 scaling. </p>
@@ -354,19 +348,19 @@ Preset Frame Size Interlace SAR Subsampling-- -- -- -- -- -- -- -- -- -- -- -- -
 <p> <code>y4mscaler</code> will only process such frames if the target output format is non-vertically-subsampled (e.g. 4:4:4, 4:2:2, etc.) and no other vertical processing is required. Otherwise <code>y4mscaler</code> will bail on processing in midstream when it encounters an anomalous frame. If there is any possibility of encountering such an error, <code>y4mscaler</code> will print a warning when processing begins. </p>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt>0</p>
-<dd> Successful program execution.</p>
-<dt>1</p>
-<dd> Usage, syntax, or operational error. </p>
+<dt>0</dt>
+<dd> Successful program execution.</dd>
+<dt>1</dt>
+<dd> Usage, syntax, or operational error. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page is copyright 2005 by Matthew Marjanovic.<br />
  Feel free to direct any questions, remarks, problems, or bug reports concerning this tool to <i>&lt;dmg @ mir.com&gt;.</i> </p>
 <dl>
-<dt>For more info, see our website at:</p>
-<dd> &lt;<a rel="nofollow" href="http://www.mir.com/DMG/">http://www.mir.com/DMG/</a>&gt; </p>
-<dt>For more information on MJPEGtools, consult:</p>
-<dd> &lt;<a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a>&gt; </p>
+<dt>For more info, see our website at:</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.mir.com/DMG/">http://www.mir.com/DMG/</a>&gt; </dd>
+<dt>For more information on MJPEGtools, consult:</dt>
+<dd> &lt;<a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a>&gt; </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), <code>raw2yuv</code>(1), <code>smil2yuv</code>(1), <code><a href="/docs/linux/man/1-yuvplay/">yuvplay</a></code>(1), <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1) </p>

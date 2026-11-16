@@ -57,67 +57,67 @@ description: "telegram-cli – Command-line interface for Telegram messenger"
  <code>show_license</code> &#8211; Prints contents of GPLv2<br />
  <code>help</code> &#8211; Prints this help <code>get_self</code> &#8211; Get our user info <code>* Card</code> <code>export_card</code> &#8211; Print your &#8216;card&#8217; that anyone can later use to import your contact<br />
  <code>import_card</code> <i>&lt;card&gt;</i> &#8211; Gets user by card. You can write messages to him after that <code>* Other</code> <code>quit</code> &#8211; Quit<br />
- <code>safe_quit</code> &#8211; Wait for all queries to end then quit</dl>
+ <code>safe_quit</code> &#8211; Wait for all queries to end then quit</dd></dl>
 <h2>Options</h2>
 <p><i>telegram-cli</i> Usage </p>
 <p> <code>&#8211;phone</code>/-u Specify username (would not be asked during authorization)</p>
 <dl>
-<dt><code>&#8211;rsa-key</code>/-k</p>
-<dd>Specify location of public key (possible multiple entries)</p>
-<dt><code>&#8211;verbosity</code>/-v</p>
-<dd>Increase verbosity (0-ERROR 1-WARNIN 2-NOTICE 3+-DEBUG-levels)</p>
-<dt><code>&#8211;enable-msg-id</code>/-N</p>
-<dd>Message num mode</p>
-<dt><code>&#8211;config</code>/-c</p>
-<dd>Config file name</p>
-<dt><code>&#8211;profile</code>/-p</p>
-<dd>Use specified profile</p>
-<dt><code>&#8211;log-level</code>/-l</p>
-<dd>Log level</p>
-<dt><code>&#8211;sync-from-start</code>/-f</p>
-<dd>During authorization fetch all messages since registration</p>
-<dt><code>&#8211;disable-auto-accept</code>/-E</p>
-<dd>disable auto accept of encrypted chats</p>
-<dt><code>&#8211;lua-script</code>/-s</p>
-<dd>Lua script file</p>
-<dt><code>&#8211;wait-dialog-list</code>/-W</p>
-<dd>Send dialog_list query and wait for answer before reading input</p>
-<dt><code>&#8211;disable-colors</code>/-C</p>
-<dd>Disable color output</p>
-<dt><code>&#8211;disable-readline</code>/-R</p>
-<dd>Disable readline</p>
-<dt><code>&#8211;alert</code>/-A</p>
-<dd>Enable bell notifications</p>
-<dt><code>&#8211;daemonize</code>/-d</p>
-<dd>Daemon mode</p>
-<dt><code>&#8211;logname</code>/-L &lt;log-name&gt;</p>
-<dd>Log file name</p>
-<dt><code>&#8211;username</code>/-U &lt;user-name&gt;</p>
-<dd>Change uid after start</p>
-<dt><code>&#8211;groupname</code>/-G &lt;group-name&gt;</p>
-<dd>Change gid after start</p>
-<dt><code>&#8211;disable-output</code>/-D</p>
-<dd>Disable output</p>
-<dt><code>&#8211;tcp-port</code>/-P &lt;port&gt;</p>
-<dd>Port to listen for input commands</p>
-<dt><code>&#8211;udp-socket</code>/-S &lt;socket-name&gt;</p>
-<dd>Unix socket to create</p>
-<dt><code>&#8211;exec</code>/-e &lt;commands&gt;</p>
-<dd>Make commands end exit</p>
-<dt><code>&#8211;disable-names</code>/-I</p>
-<dd>Use user and chat IDs in updates instead of names</p>
-<dt><code>&#8211;enable-ipv6</code>/-6</p>
-<dd>Use ipv6 (may be unstable)</p>
-<dt><code>&#8211;help</code>/-h</p>
-<dd>Prints this help</p>
-<dt><code>&#8211;accept-any-tcp</code></p>
-<dd>Accepts tcp connections from any src (only loopback by default)</p>
-<dt><code>&#8211;disable-link-preview</code></p>
-<dd>Disables server-side previews to links</p>
-<dt><code>&#8211;bot</code>/-b</p>
-<dd>Bot mode</p>
-<dt><code>&#8211;json</code></p>
-<dd>Prints answers and values in json format</dl>
+<dt><code>&#8211;rsa-key</code>/-k</dt>
+<dd>Specify location of public key (possible multiple entries)</dd>
+<dt><code>&#8211;verbosity</code>/-v</dt>
+<dd>Increase verbosity (0-ERROR 1-WARNIN 2-NOTICE 3+-DEBUG-levels)</dd>
+<dt><code>&#8211;enable-msg-id</code>/-N</dt>
+<dd>Message num mode</dd>
+<dt><code>&#8211;config</code>/-c</dt>
+<dd>Config file name</dd>
+<dt><code>&#8211;profile</code>/-p</dt>
+<dd>Use specified profile</dd>
+<dt><code>&#8211;log-level</code>/-l</dt>
+<dd>Log level</dd>
+<dt><code>&#8211;sync-from-start</code>/-f</dt>
+<dd>During authorization fetch all messages since registration</dd>
+<dt><code>&#8211;disable-auto-accept</code>/-E</dt>
+<dd>disable auto accept of encrypted chats</dd>
+<dt><code>&#8211;lua-script</code>/-s</dt>
+<dd>Lua script file</dd>
+<dt><code>&#8211;wait-dialog-list</code>/-W</dt>
+<dd>Send dialog_list query and wait for answer before reading input</dd>
+<dt><code>&#8211;disable-colors</code>/-C</dt>
+<dd>Disable color output</dd>
+<dt><code>&#8211;disable-readline</code>/-R</dt>
+<dd>Disable readline</dd>
+<dt><code>&#8211;alert</code>/-A</dt>
+<dd>Enable bell notifications</dd>
+<dt><code>&#8211;daemonize</code>/-d</dt>
+<dd>Daemon mode</dd>
+<dt><code>&#8211;logname</code>/-L &lt;log-name&gt;</dt>
+<dd>Log file name</dd>
+<dt><code>&#8211;username</code>/-U &lt;user-name&gt;</dt>
+<dd>Change uid after start</dd>
+<dt><code>&#8211;groupname</code>/-G &lt;group-name&gt;</dt>
+<dd>Change gid after start</dd>
+<dt><code>&#8211;disable-output</code>/-D</dt>
+<dd>Disable output</dd>
+<dt><code>&#8211;tcp-port</code>/-P &lt;port&gt;</dt>
+<dd>Port to listen for input commands</dd>
+<dt><code>&#8211;udp-socket</code>/-S &lt;socket-name&gt;</dt>
+<dd>Unix socket to create</dd>
+<dt><code>&#8211;exec</code>/-e &lt;commands&gt;</dt>
+<dd>Make commands end exit</dd>
+<dt><code>&#8211;disable-names</code>/-I</dt>
+<dd>Use user and chat IDs in updates instead of names</dd>
+<dt><code>&#8211;enable-ipv6</code>/-6</dt>
+<dd>Use ipv6 (may be unstable)</dd>
+<dt><code>&#8211;help</code>/-h</dt>
+<dd>Prints this help</dd>
+<dt><code>&#8211;accept-any-tcp</code></dt>
+<dd>Accepts tcp connections from any src (only loopback by default)</dd>
+<dt><code>&#8211;disable-link-preview</code></dt>
+<dd>Disables server-side previews to links</dd>
+<dt><code>&#8211;bot</code>/-b</dt>
+<dd>Bot mode</dd>
+<dt><code>&#8211;json</code></dt>
+<dd>Prints answers and values in json format</dd></dl>
 <h2>Files</h2>
 <p><i>/usr/bin/generate</i><br />
  <i>/usr/bin/telegram-cli</i><br />

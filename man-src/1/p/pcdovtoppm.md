@@ -17,21 +17,21 @@ description: "pcdovtoppm – create index image for a photo CD"
 <p> You can achieve a similar result with <code>hpcdtoppm -Overview</code> followed by <code>pnmindex -black</code> on the generated PPM images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w</code><i>width</i></p>
-<dd> Maximum width of the result image (default: 1152).</p>
-<dt><code>-s</code><i>size</i></p>
-<dd> Maximum size of each of the images (default: 192).</p>
-<dt><code>-a</code><i>across</i></p>
-<dd> Maximum number of images across (default: 6).</p>
-<dt><code>-c</code><i>colors</i></p>
-<dd> Maximum number of colors, or <code>n</code> </p>
+<dt><code>-w</code><i>width</i></dt>
+<dd> Maximum width of the result image (default: 1152).</dd>
+<dt><code>-s</code><i>size</i></dt>
+<dd> Maximum size of each of the images (default: 192).</dd>
+<dt><code>-a</code><i>across</i></dt>
+<dd> Maximum number of images across (default: 6).</dd>
+<dt><code>-c</code><i>colors</i></dt>
+<dd> Maximum number of colors, or <code>n</code> </dd>
 <p> to mean no quantization</p>
-<dt><code>-f</code><i>font</i></p>
-<dd> Font to be used for annotation (default: internal font).</p>
-<dt><code>-b</code></p>
-<dd> Black background color (default).</p>
-<dt><code>-w</code></p>
-<dd> White background color. </p>
+<dt><code>-f</code><i>font</i></dt>
+<dd> Font to be used for annotation (default: internal font).</dd>
+<dt><code>-b</code></dt>
+<dd> Black background color (default).</dd>
+<dt><code>-w</code></dt>
+<dd> White background color. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <pre>

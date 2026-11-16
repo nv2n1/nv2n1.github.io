@@ -13,10 +13,10 @@ description: "PAPIF_is_initialized –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_is_initialized(&nbsp;<wbr>C_INT level&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_is_initialized</code></dl>
+<dd><code>PAPI_is_initialized</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

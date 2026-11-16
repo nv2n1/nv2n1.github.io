@@ -14,12 +14,12 @@ description: "gnutls_ocsp_resp_check_crt – API function"
 <p> <code>int gnutls_ocsp_resp_check_crt(gnutls_ocsp_resp_t </code><i>resp</i><code>, unsigned int </code><i>indx</i><code>, gnutls_x509_crt_t </code><i>crt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ocsp_resp_t resp</p>
-<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</p>
-<dt>unsigned int indx</p>
-<dd> Specifies response number to get. Use (0) to get the first one.</p>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> The certificate to check</dl>
+<dt>gnutls_ocsp_resp_t resp</dt>
+<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd>
+<dt>unsigned int indx</dt>
+<dd> Specifies response number to get. Use (0) to get the first one.</dd>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> The certificate to check</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will check whether the OCSP response is about the provided certificate.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_ocsp_resp_check_crt – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

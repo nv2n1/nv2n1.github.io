@@ -16,20 +16,20 @@ description: "robohdrs – insert ROBODoc headers to source code."
 <p> By default NAME and SYNOPSIS items are included in the template header. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Show brief help on usage and exit.</p>
-<dt>-i</p>
-<dd> Specify an extra header item to be included in template header. Repeat if multiple extra items are desired.</p>
-<dt>-l</p>
-<dd> Specify source code language (default C/C++) Supported options are: fortran, fortran90, script, and tex.</p>
-<dt>-p</p>
-<dd> Specify project name for source file header.</p>
-<dt>-s</p>
-<dd> Include SOURCE item.</p>
-<dt>-t</p>
-<dd> Specify version control tag to be included in the main header.</p>
-<dt>-x</p>
-<dd> Specify path to ctags binary which is used. </p>
+<dt>-h</dt>
+<dd> Show brief help on usage and exit.</dd>
+<dt>-i</dt>
+<dd> Specify an extra header item to be included in template header. Repeat if multiple extra items are desired.</dd>
+<dt>-l</dt>
+<dd> Specify source code language (default C/C++) Supported options are: fortran, fortran90, script, and tex.</dd>
+<dt>-p</dt>
+<dd> Specify project name for source file header.</dd>
+<dt>-s</dt>
+<dd> Include SOURCE item.</dd>
+<dt>-t</dt>
+<dd> Specify version control tag to be included in the main header.</dd>
+<dt>-x</dt>
+<dd> Specify path to ctags binary which is used. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <pre>

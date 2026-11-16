@@ -14,19 +14,20 @@ description: "vsnprintf – Format a string and place it in a buffer"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>The buffer to place the result into</dl>
+</dd><dd>The buffer to place the result into</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>The size of the buffer, including the trailing null space</dl>
+<dd>The size of the buffer, including the trailing null space</dd></dl>
 <p> <i>fmt</i></p>
 <dl>
-<dd>The format string to use</dl>
+<dd>The format string to use</dd></dl>
 <p> <i>args</i></p>
 <dl>
-<dd>Arguments for the format string</dl>
+<dd>Arguments for the format string</dd></dl>
 <h2>Description</h2>
 <p>This function generally follows C99 vsnprintf, but has some extensions and a few limitations: </p>
 <p> <code>n</code> is unsupported <code>p</code>* is handled by <code>pointer</code> </p>
 <p> See <code>pointer</code> or Documentation/printk-formats.txt for more extensive description. </p>
 <p> ** Please update the documentation in both places when making changes ** </p>
 <p> The return value is the number of characters which would be generated for the given input, excluding the trailing &#8216;
+</p>

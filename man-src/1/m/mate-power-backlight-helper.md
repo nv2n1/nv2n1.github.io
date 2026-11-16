@@ -18,14 +18,14 @@ description: "mate-power-backlight-helper – helper application for MATE’s po
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;set-brightness BRIGHTNESS_LEVEL</code></p>
-<dd> Set the given brightness.</p>
-<dt><code>&#8211;get-brightness</code></p>
-<dd> Get the current brightness.</p>
-<dt><code>&#8211;get-max-brightness</code></p>
-<dd> Get the number of brightness levels supported.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;set-brightness BRIGHTNESS_LEVEL</code></dt>
+<dd> Set the given brightness.</dd>
+<dt><code>&#8211;get-brightness</code></dt>
+<dd> Get the current brightness.</dd>
+<dt><code>&#8211;get-max-brightness</code></dt>
+<dd> Get the number of brightness levels supported.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> mate-power-manager (1).</p>
 <h2>AUTHOR</h2>

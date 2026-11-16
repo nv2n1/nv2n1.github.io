@@ -15,10 +15,10 @@ description: "annotate-output – annotate program output with time and stream"
 <p> <code>annotate-output</code> will execute the specified program, while prepending every line with the current time and O for stdout and E for stderr. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>+FORMAT</code></p>
-<dd> Controls the timestamp format, as per <code><a href="/docs/linux/man/1-date/">date</a></code>(1). Defaults to &quot;%H:%M:%S&quot;.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit successfully. </p>
+<dt><code>+FORMAT</code></dt>
+<dd> Controls the timestamp format, as per <code><a href="/docs/linux/man/1-date/">date</a></code>(1). Defaults to &quot;%H:%M:%S&quot;.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit successfully. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <pre>

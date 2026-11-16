@@ -10,11 +10,10 @@ description: "pthread_sigmask – examine and change mask of blocked signals"
 <p>pthread_sigmask &#8211; examine and change mask of blocked signals</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int pthread_sigmask(int how, const sigset_t *set, sigset_t *oldset);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_sigmask</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <h2>Description</h2>
 <p>The <code>pthread_sigmask</code>() function is just like <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), with the difference that its use in multithreaded programs is explicitly specified by POSIX.1. Other differences are noted in this page. </p>
 <p> For a description of the arguments and operation of this function, see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2).</p>
@@ -46,24 +45,14 @@ int pthread_sigmask(int how, const sigset_t *set, sigset_t *oldset);</code></pre
 <h2>Examples</h2>
 <p>The program below blocks some signals in the main thread, and then creates a dedicated thread to fetch those signals via <code><a href="/docs/linux/man/3-sigwait/">sigwait</a></code>(3). The following shell session demonstrates its use: </p>
 <pre><code>$ ./a.out &amp;
-
 [1] 5423
 $ kill -QUIT %1
-
 Signal handling thread got signal 3
 $ kill -USR1 %1
-
 Signal handling thread got signal 10
 $ kill -TERM %1
-
 [1]+  Terminated              ./a.out
-
-
-
 Program source
-
-
-
 #include &lt;pthread.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;

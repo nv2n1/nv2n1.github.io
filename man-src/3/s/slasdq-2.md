@@ -30,10 +30,10 @@ description: "slasdq.f –"
  See &quot;Computing Small Singular Values of Bidiagonal Matrices With
  Guaranteed High Relative Accuracy,&quot; by J. Demmel and W. Kahan,
  LAPACK Working Note #3, for a detailed description of the algorithm.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  On entry, UPLO specifies whether the input bidiagonal matrix
  is upper or lower bidiagonal, and wether it is square are
@@ -121,16 +121,16 @@ description: "slasdq.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 211 of file slasdq.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

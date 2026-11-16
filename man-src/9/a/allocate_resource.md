@@ -15,35 +15,35 @@ allocate_resource - allocate empty slot in the resource tree given range &amp; a
 <h2>Arguments</h2>
 
 <i>root</i>
-<dl><dd><dd>root resource descriptor</dl>
+<dl><dd></dd><dd>root resource descriptor</dd></dl>
  
 
  <i>new</i>
-<dl><dd>resource descriptor desired by caller</dl>
+<dl><dd>resource descriptor desired by caller</dd></dl>
  
 
  <i>size</i>
-<dl><dd>requested resource region size</dl>
+<dl><dd>requested resource region size</dd></dl>
  
 
  <i>min</i>
-<dl><dd>minimum boundary to allocate</dl>
+<dl><dd>minimum boundary to allocate</dd></dl>
  
 
  <i>max</i>
-<dl><dd>maximum boundary to allocate</dl>
+<dl><dd>maximum boundary to allocate</dd></dl>
  
 
  <i>align</i>
-<dl><dd>alignment requested, in bytes</dl>
+<dl><dd>alignment requested, in bytes</dd></dl>
  
 
  <i>alignf</i>
-<dl><dd>alignment function, optional, called if not NULL</dl>
+<dl><dd>alignment function, optional, called if not NULL</dd></dl>
  
 
  <i>alignf_data</i>
-<dl><dd>arbitrary data to pass to the <i>alignf</i> function</dl>
+<dl><dd>arbitrary data to pass to the <i>alignf</i> function</dd></dl>
 
 <h2>Copyright</h2>
 

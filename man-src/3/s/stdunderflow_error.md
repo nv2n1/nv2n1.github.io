@@ -10,7 +10,6 @@ description: "std::underflow_error – std::underflow_error"
 <p>std::underflow_error &#8211; std::underflow_error</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 class underflow_error;</code></pre>
 <p>Defines a type of object to be thrown as exception. It may be used to report arithmetic underflow errors (that is, situations where the result of a computation is a subnormal floating-point value)<br />
 The standard library components do not throw this exception (mathematical functions report underflow errors as specified in math_errhandling). Third-party libraries, however, use this. For example, boost.math throws std::underflow_error if boost::math::policies::throw_on_error is enabled (the default setting).<br />

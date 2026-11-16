@@ -25,10 +25,10 @@ description: "slasd0.f –"
  B = U * S * VT. The singular values S are overwritten on D.
  A related subroutine, SLASDA, computes only the singular values,
  and optionally, the singular vectors in compact form.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  On entry, the row dimension of the upper bidiagonal matrix.
  This is also the dimension of the main diagonal array D.</pre>
@@ -74,16 +74,16 @@ description: "slasd0.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 150 of file slasd0.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

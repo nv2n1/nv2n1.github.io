@@ -12,8 +12,8 @@ description: "XNoOp – No Operation"
 <p>int XNoOp(Display *<i>display</i>);</p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XNoOp</code> function sends a <code>NoOperation</code> protocol request to the X server, thereby exercising the connection.</p>
 <h2>See Also</h2>

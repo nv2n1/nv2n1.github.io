@@ -15,18 +15,18 @@ description: "llvm-addr2line – a drop-in replacement for addr2line"
 <p> <code>llvm-addr2line</code> is an alias for the <code>llvm-symbolizer(1)</code> tool with different defaults. The goal is to make it a drop-in replacement for GNU’s <code>addr2line</code>. </p>
 <p> Here are some of those differences:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> interprets all addresses as hexadecimal and ignores an optional <code>0x</code> prefix, whereas <code>llvm-symbolizer</code> attempts to determine the base from the literal’s prefix and defaults to decimal if there is no prefix.</p>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> defaults not to print function names. Use <i>-f</i> to enable that.</p>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> defaults not to demangle function names. Use <i>-C</i> to switch the demangling on.</p>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> defaults not to print inlined frames. Use <i>-i</i> to show inlined frames for a source code location in an inlined function.</p>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> uses <i>–output-style=GNU</i> by default.</p>
-<dt>&bull;</p>
-<dd> <code>llvm-addr2line</code> parses options from the environment variable <code>LLVM_ADDR2LINE_OPTS</code> instead of from <code>LLVM_SYMBOLIZER_OPTS</code>.</dl>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> interprets all addresses as hexadecimal and ignores an optional <code>0x</code> prefix, whereas <code>llvm-symbolizer</code> attempts to determine the base from the literal’s prefix and defaults to decimal if there is no prefix.</dd>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> defaults not to print function names. Use <i>-f</i> to enable that.</dd>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> defaults not to demangle function names. Use <i>-C</i> to switch the demangling on.</dd>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> defaults not to print inlined frames. Use <i>-i</i> to show inlined frames for a source code location in an inlined function.</dd>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> uses <i>–output-style=GNU</i> by default.</dd>
+<dt>&bull;</dt>
+<dd> <code>llvm-addr2line</code> parses options from the environment variable <code>LLVM_ADDR2LINE_OPTS</code> instead of from <code>LLVM_SYMBOLIZER_OPTS</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>llvm-symbolizer(1)</code></p>
 <h2>AUTHOR</h2>

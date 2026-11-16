@@ -15,19 +15,19 @@ snd_interval_list - refine the interval value from the list
 <h2>Arguments</h2>
 
 <i>i</i>
-<dl><dd><dd>the interval value to refine</dl>
+<dl><dd></dd><dd>the interval value to refine</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the number of elements in the list</dl>
+<dl><dd>the number of elements in the list</dd></dl>
  
 
  <i>list</i>
-<dl><dd>the value list</dl>
+<dl><dd>the value list</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>the bit-mask to evaluate</dl>
+<dl><dd>the bit-mask to evaluate</dd></dl>
 
 <h2>Description</h2>
 

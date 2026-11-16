@@ -14,11 +14,11 @@ description: "rio_find_mport – find RIO mport by its ID"
 <p><i>mport_id</i></p>
 <dl>
 <dd>
-<dd>number (ID) of mport device</dl>
+</dd><dd>number (ID) of mport device</dd></dl>
 <h2>Description</h2>
 <p>Given a RIO mport number, the desired mport is located in the global list of mports. If the mport is found, a pointer to its data structure is returned. If no mport is found, <code>NULL</code> is returned.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,16 +11,16 @@ description: "pam_mount – A PAM module that can mount volumes for a user sessi
 <h2>Overview</h2>
 <p>This module is aimed at environments with central file servers that a user wishes to mount on login and unmount on logout, such as (semi-)diskless stations where many users can logon and where statically mounting the entire /home from a server is a security risk, or listing all possible volumes in /etc/fstab is not feasible.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Users can define their own list of volumes without having to change (possibly non-writable) global config files.</p>
-<dt>&bull;</p>
-<dd>Single sign-on feature &#8211; the user needs to type the password just once (at login)</p>
-<dt>&bull;</p>
-<dd>Transparent mount process</p>
-<dt>&bull;</p>
-<dd>No stored passwords</p>
-<dt>&bull;</p>
-<dd>Volumes are unmounted on logout, freeing system resources and not leaving data exposed.</dl>
+<dt>&bull;</dt>
+<dd>Users can define their own list of volumes without having to change (possibly non-writable) global config files.</dd>
+<dt>&bull;</dt>
+<dd>Single sign-on feature &#8211; the user needs to type the password just once (at login)</dd>
+<dt>&bull;</dt>
+<dd>Transparent mount process</dd>
+<dt>&bull;</dt>
+<dd>No stored passwords</dd>
+<dt>&bull;</dt>
+<dd>Volumes are unmounted on logout, freeing system resources and not leaving data exposed.</dd></dl>
 <p> The module also supports mounting local filesystems of any kind the normal mount utility supports, with extra code to make sure certain volumes are set up properly because often they need more than just a mount call, such as encrypted volumes. This includes SMB/CIFS, FUSE, dm-crypt and LUKS. </p>
 <p> If you intend to use pam_mount to protect volumes on your computer using an encrypted filesystem system, please know that there are many other issues you need to consider in order to protect your data. For example, you probably want to disable or encrypt your swap partition (the cryptoswap can help you do this). Do not assume a system is secure without carefully considering potential threats.</p>
 <h2>Configuration</h2>
@@ -40,7 +40,7 @@ description: "pam_mount – A PAM module that can mount volumes for a user sessi
  session required pam_pwdb.so
  session optional pam_console.so
 +++ session optional pam_mount.so</pre>
-</dl>
+</dd></dl>
 <p> When &quot;sufficient&quot; is used in the second column, you must make sure that pam_mount is added before this entry. Otherwise pam_mount will not get executed should a previous PAM module succeed. Also be aware of the &quot;include&quot; statements. These make PAM look into the specified file. If there is a &quot;sufficient&quot; statement, then the pam_mount entry must either be in the included file before the &quot;sufficient&quot; statement or before the &quot;include&quot; statement. </p>
 <p> If you use pam_ldap, pam_winbind, or any other authentication services that make use of PAM&#8217;s sufficient keyword, model your configuration on the following order:</p>
 <dl>
@@ -52,15 +52,15 @@ auth sufficient pam_ldap.so use_first_pass
 auth required pam_unix.so use_first_pass
 session optional pam_mount.so
 &bull;&bull;&bull;</pre>
-</dl>
+</dd></dl>
 <p> This allows for:</p>
 <dl>
-<dt>1.</p>
-<dd>pam_mount, as the first &quot;auth&quot; module, will prompt for a password and export it to the PAM system.</p>
-<dt>2.</p>
-<dd>pam_ldap will use the password from the PAM system to try and authenticate the user. If this succedes, the user will be authenticated. If it fails, pam_unix will try to authenticate.</p>
-<dt>3.</p>
-<dd>pam_unix will try to authenticate the user if pam_ldap failed. If pam_unix fails, then the authentication will be refused (due to the &quot;required&quot;).</dl>
+<dt>1.</dt>
+<dd>pam_mount, as the first &quot;auth&quot; module, will prompt for a password and export it to the PAM system.</dd>
+<dt>2.</dt>
+<dd>pam_ldap will use the password from the PAM system to try and authenticate the user. If this succedes, the user will be authenticated. If it fails, pam_unix will try to authenticate.</dd>
+<dt>3.</dt>
+<dd>pam_unix will try to authenticate the user if pam_ldap failed. If pam_unix fails, then the authentication will be refused (due to the &quot;required&quot;).</dd></dl>
 <p> Alternatively, the following is possible (thanks to Andrew Morgan for the hint!):</p>
 <dl>
 <dd>
@@ -68,7 +68,7 @@ session optional pam_mount.so
 auth [success=1 default=ignore] pam_ldap.so use_first_pass
 auth requisite pam_deny.so
 auth optional pam_mount.so</pre>
-</dl>
+</dd></dl>
 <p> It may seem odd, but the first three lines will make it so that at least one of pam_unix2 or pam_ldap has to succeed. As you can see, pam_mount will be run <code>after</code> successful authentification with these subsystems.</p>
 <h2>Encrypted disks</h2>
 <p>pam_mount supports a few types of crypto. The most common are encfs, dm-crypt and dm-crypt+LUKS. </p>
@@ -88,8 +88,8 @@ auth optional pam_mount.so</pre>
 <h2>Community Support</h2>
 <p>The following two forms of communication are available. The maintainer has no preference, though you will reach more users who could answer by means of the mailing list.</p>
 <dl>
-<dt>Mailing List:</p>
-<dd><a rel="nofollow" href="http://sf.net/mail/?group_id=41452">http://sf.net/mail/?group_id=41452</a></p>
-<dt>Bug Tracker (no registration needed):</p>
-<dd><a rel="nofollow" href="http://sf.net/tracker/?group_id=41452">http://sf.net/tracker/?group_id=41452</a> </p>
+<dt>Mailing List:</dt>
+<dd><a rel="nofollow" href="http://sf.net/mail/?group_id=41452">http://sf.net/mail/?group_id=41452</a></dd>
+<dt>Bug Tracker (no registration needed):</dt>
+<dd><a rel="nofollow" href="http://sf.net/tracker/?group_id=41452">http://sf.net/tracker/?group_id=41452</a> </dd>
 </dl>

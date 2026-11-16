@@ -16,13 +16,13 @@ description: "nut-recorder – utility to record device status and values change
 <h2>Options</h2>
 <p><i>device-name</i></p>
 <dl>
-<dd>Record the changes of this device. The format for this option is <i>devname[@hostname[:port]]</i>. The default hostname is &quot;localhost&quot;.</dl>
+<dd>Record the changes of this device. The format for this option is <i>devname[@hostname[:port]]</i>. The default hostname is &quot;localhost&quot;.</dd></dl>
 <p> <i>output-file</i></p>
 <dl>
-<dd>Optional. Data will be saved to this file. The default is <i>dummy-device.seq</i>.</dl>
+<dd>Optional. Data will be saved to this file. The default is <i>dummy-device.seq</i>.</dd></dl>
 <p> <i>interval</i></p>
 <dl>
-<dd>Optional. The status of the device will be checked every <i>interval</i>. The default is 5 seconds.</dl>
+<dd>Optional. The status of the device will be checked every <i>interval</i>. The default is 5 seconds.</dd></dl>
 <h2>Examples</h2>
 <p>To record data from <i>ups1 [at] host1</i> every 10 seconds: </p>
 <dl>
@@ -37,14 +37,14 @@ ups.status: OL
 battery.charge: 90.0
 ups.status: OB
 . . .</pre>
-</dl>
+</dd></dl>
 <p> You can then define a dummy device in <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <dl>
 <dd>
 <pre>[ups-test]
  driver = dummy-ups
  port = ups1-output.seq</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Arnaud Quette</p>
 <h2>See Also</h2>

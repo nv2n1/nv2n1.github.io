@@ -14,13 +14,12 @@ description: "uchardet – universalchardet (Universal Charset Detector)"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd>uchardet [<code>Options</code>] [<code>File</code>]&#8230;</p>
-<dt> <code>-v</code></p>
-<dd>Print version and build information.</p>
-<dt> <code>-h</code></p>
-<dd>Print help text.</p>
+</dt><dd>uchardet [<code>Options</code>] [<code>File</code>]&#8230;</dd>
+<dt> <code>-v</code></dt>
+<dd>Print version and build information.</dd>
+<dt> <code>-h</code></dt>
+<dd>Print help text.</dd>
 <dt>
-<dt>
-<dd></dl>
-<dd>uchardet Command Line Tool </p>
+</dt></dl>
+<dd>uchardet Command Line Tool </dd>
 <h2>Index</h2>

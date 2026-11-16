@@ -10,104 +10,58 @@ description: "QuantLib::LiborForwardModelProcess – libor-forward-model process
 <p>QuantLib::LiborForwardModelProcess &#8211; libor-forward-model process </p>
 <h2>Synopsis</h2>
 <pre><code>LiborForwardModelProcess(Size size, const boost::shared_ptr&lt;IborIndex&gt; &amp;index)
-
     Disposable&lt;Array&gt; initialValues() const
-
     returns the initial values of the state variables
-
     Disposable&lt;Array&gt; drift(Time t, const Array &amp;x) const
-
     returns the drift part of the equation,
     i.e., $ mu(t, mathrm{x} _t) $
-
     Disposable&lt;Matrix&gt; diffusion(Time t, const Array &amp;x) const
-
     returns the diffusion part of the equation,
     i.e.$ igma(t, mathrm{x} _t) $
-
     Disposable&lt;Matrix&gt; covariance(Time t0, const Array &amp;x0, Time dt) const
-
     Disposable&lt;Array&gt; apply(const Array &amp;x0, const Array &amp;dx) const
-
     Disposable&lt;Array&gt; evolve(Time t0, const Array &amp;x0, Time dt, const Array &amp;dw) const
-
     Size size() const
-
     returns the number of dimensions of the stochastic process
-
     Size factors() const
-
     returns the number of independent factors of the process
-
     boost::shared_ptr&lt;IborIndex&gt; index() const
-
     Leg cashFlows(Real amount = 1.0) const
-
     void setCovarParam(const boost::shared_ptr&lt;LfmCovarianceParameterization&gt; &amp;param)
-
         boost::shared_ptr&lt;LfmCovarianceParameterization&gt; covarParam() const
-
     Size nextIndexReset(Time t) const
-
     const std::vector&lt;Time&gt; &amp;fixingTimes() const
-
     const std::vector&lt;Date&gt; &amp;fixingDates() const
-
     const std::vector&lt;Time&gt; &amp;accrualStartTimes() const
-
     const std::vector&lt;Time&gt; &amp;accrualEndTimes() const
-
     std::vector&lt;DiscountFactor&gt; discountBond(const std::vector&lt;Rate&gt; &amp;rates) const</code></pre>
 <p> Inherits <code>QuantLib::StochasticProcess</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LiborForwardModelProcess(Size size, const boost::shared_ptr&lt;IborIndex&gt; &amp;index)
-
     Disposable&lt;Array&gt; initialValues() const
-
     returns the initial values of the state variables
-
     Disposable&lt;Array&gt; drift(Time t, const Array &amp;x) const
-
     returns the drift part of the equation,
     i.e., $ mu(t, mathrm{x} _t) $
-
     Disposable&lt;Matrix&gt; diffusion(Time t, const Array &amp;x) const
-
     returns the diffusion part of the equation,
     i.e.$ igma(t, mathrm{x} _t) $
-
     Disposable&lt;Matrix&gt; covariance(Time t0, const Array &amp;x0, Time dt) const
-
     Disposable&lt;Array&gt; apply(const Array &amp;x0, const Array &amp;dx) const
-
     Disposable&lt;Array&gt; evolve(Time t0, const Array &amp;x0, Time dt, const Array &amp;dw) const
-
     Size size() const
-
     returns the number of dimensions of the stochastic process
-
     Size factors() const
-
     returns the number of independent factors of the process
-
     boost::shared_ptr&lt;IborIndex&gt; index() const
-
     Leg cashFlows(Real amount = 1.0) const
-
     void setCovarParam(const boost::shared_ptr&lt;LfmCovarianceParameterization&gt; &amp;param)
-
         boost::shared_ptr&lt;LfmCovarianceParameterization&gt; covarParam() const
-
     Size nextIndexReset(Time t) const
-
     const std::vector&lt;Time&gt; &amp;fixingTimes() const
-
     const std::vector&lt;Date&gt; &amp;fixingDates() const
-
     const std::vector&lt;Time&gt; &amp;accrualStartTimes() const
-
     const std::vector&lt;Time&gt; &amp;accrualEndTimes() const
-
     std::vector&lt;DiscountFactor&gt; discountBond(const std::vector&lt;Rate&gt; &amp;rates) const</code></pre>
 <h2>Detailed Description</h2>
 <p>libor-forward-model process </p>
@@ -118,10 +72,10 @@ description: "QuantLib::LiborForwardModelProcess – libor-forward-model process
 <p> Hull, John, White, Alan, 1999, <code>Forward</code> Rate Volatilities, <code>Swap</code> Rate Volatilities and the Implementation of the <code>Libor</code> Market Model (&lt;<a rel="nofollow" href="http://www.rotman.utoronto.ca/~amackay/fin/libormktmodel2.pdf">http://www.rotman.utoronto.ca/~amackay/fin/libormktmodel2.pdf</a>&gt;) </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet NPVs and comparison with Black pricing.</dl>
+<dd>the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet NPVs and comparison with Black pricing.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
-<dd>this class does not work correctly with Visual C++ 6.</dl>
+<dd>this class does not work correctly with Visual C++ 6.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Disposable</code>&lt;<code>Matrix</code>&gt; covariance (Time t0, const <code>Array</code> &amp; x0, Time dt) const [virtual]</h3>
 <p>returns the covariance $ V(mathrm{x}_{t_0 + Delta t} | mathrm{x}_{t_0} = mathrm{x}_0) $ of the process after a time interval $ Delta t $ according to the given discretization. This method can be overridden in derived classes which want to hard-code a particular discretization. </p>

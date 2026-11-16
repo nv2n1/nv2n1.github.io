@@ -14,56 +14,56 @@ description: "semodule – Manage SELinux policy modules."
 <p>semodule is the tool used to manage SELinux policy modules, including installing, upgrading, listing and removing modules. semodule may also be used to force a rebuild of policy from the module store and/or to force a reload of policy without performing any other transaction. semodule acts on module packages created by semodule_package. Conventionally, these files have a .pp suffix (policy package), although this is not mandated in any way. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-R, &#8211;reload</code></p>
-<dd>force a reload of policy</p>
-<dt><code>-B, &#8211;build</code></p>
-<dd>force a rebuild of policy (also reloads unless -n is used)</p>
-<dt><code>-D, &#8211;disable_dontaudit</code></p>
-<dd>Temporarily remove dontaudits from policy. Reverts whenever policy is rebuilt</p>
-<dt><code>-i,&#8211;install=MODULE_PKG</code></p>
-<dd>install/replace a module package</p>
-<dt><code>-u,&#8211;upgrade=MODULE_PKG</code></p>
-<dd>deprecated, alias for &#8211;install</p>
-<dt><code>-b,&#8211;base=MODULE_PKG </code></p>
-<dd>deprecated, alias for &#8211;install</p>
-<dt><code>-r,&#8211;remove=MODULE_NAME</code></p>
-<dd>remove existing module</p>
-<dt><code>-l[KIND],&#8211;list-modules[=KIND]</code></p>
-<dd>display list of installed modules (other than base)</p>
-<dt><code>-E,&#8211;extract=MODULE_PKG</code></p>
-<dd>Extract a module from the store as an HLL or CIL file to the current directory. A module is extracted as HLL by default. The name of the module written is &lt;module-name&gt;.&lt;lang_ext&gt;</p>
-<dt><code>KIND:</code></p>
+<dt><code>-R, &#8211;reload</code></dt>
+<dd>force a reload of policy</dd>
+<dt><code>-B, &#8211;build</code></dt>
+<dd>force a rebuild of policy (also reloads unless -n is used)</dd>
+<dt><code>-D, &#8211;disable_dontaudit</code></dt>
+<dd>Temporarily remove dontaudits from policy. Reverts whenever policy is rebuilt</dd>
+<dt><code>-i,&#8211;install=MODULE_PKG</code></dt>
+<dd>install/replace a module package</dd>
+<dt><code>-u,&#8211;upgrade=MODULE_PKG</code></dt>
+<dd>deprecated, alias for &#8211;install</dd>
+<dt><code>-b,&#8211;base=MODULE_PKG </code></dt>
+<dd>deprecated, alias for &#8211;install</dd>
+<dt><code>-r,&#8211;remove=MODULE_NAME</code></dt>
+<dd>remove existing module</dd>
+<dt><code>-l[KIND],&#8211;list-modules[=KIND]</code></dt>
+<dd>display list of installed modules (other than base)</dd>
+<dt><code>-E,&#8211;extract=MODULE_PKG</code></dt>
+<dd>Extract a module from the store as an HLL or CIL file to the current directory. A module is extracted as HLL by default. The name of the module written is &lt;module-name&gt;.&lt;lang_ext&gt;</dd>
+<dt><code>KIND:</code></dt>
 <dd>
-<dt>standard</p>
-<dd>list highest priority, enabled, non-base modules</p>
-<dt>full</p>
-<dd>list all modules</p>
-<dt><code>-X,&#8211;priority=PRIORITY</code></p>
-<dd>set priority for following operations (1-999)</p>
-<dt><code>-e,&#8211;enabled=MODULE_NAME</code></p>
-<dd>enable module</p>
-<dt><code>-d,&#8211;disable=MODULE_NAME</code></p>
-<dd>disable module</p>
-<dt><code>-s,&#8211;store</code></p>
-<dd>name of the store to operate on</p>
-<dt><code>-n,&#8211;noreload,-N</code></p>
-<dd>do not reload policy after commit</p>
-<dt><code>-h,&#8211;help </code></p>
-<dd>prints help message and quit</p>
-<dt><code>-P,&#8211;preserve_tunables</code></p>
-<dd>Preserve tunables in policy</p>
-<dt><code>-C,&#8211;ignore-module-cache</code></p>
-<dd>Recompile CIL modules built from HLL files</p>
-<dt><code>-p,&#8211;path</code></p>
-<dd>Use an alternate path for the policy root</p>
-<dt><code>-S,&#8211;store-path</code></p>
-<dd>Use an alternate path for the policy store root</p>
-<dt><code>-v,&#8211;verbose </code></p>
-<dd>be verbose</p>
-<dt><code>-c,&#8211;cil</code></p>
-<dd>Extract module as a CIL file. This only affects the &#8211;extract option and only modules listed in &#8211;extract after this option.</p>
-<dt><code>-H,&#8211;hll</code></p>
-<dd>Extract module as an HLL file. This only affects the &#8211;extract option and only modules listed in &#8211;extract after this option. </p>
+</dd><dt>standard</dt>
+<dd>list highest priority, enabled, non-base modules</dd>
+<dt>full</dt>
+<dd>list all modules</dd>
+<dt><code>-X,&#8211;priority=PRIORITY</code></dt>
+<dd>set priority for following operations (1-999)</dd>
+<dt><code>-e,&#8211;enabled=MODULE_NAME</code></dt>
+<dd>enable module</dd>
+<dt><code>-d,&#8211;disable=MODULE_NAME</code></dt>
+<dd>disable module</dd>
+<dt><code>-s,&#8211;store</code></dt>
+<dd>name of the store to operate on</dd>
+<dt><code>-n,&#8211;noreload,-N</code></dt>
+<dd>do not reload policy after commit</dd>
+<dt><code>-h,&#8211;help </code></dt>
+<dd>prints help message and quit</dd>
+<dt><code>-P,&#8211;preserve_tunables</code></dt>
+<dd>Preserve tunables in policy</dd>
+<dt><code>-C,&#8211;ignore-module-cache</code></dt>
+<dd>Recompile CIL modules built from HLL files</dd>
+<dt><code>-p,&#8211;path</code></dt>
+<dd>Use an alternate path for the policy root</dd>
+<dt><code>-S,&#8211;store-path</code></dt>
+<dd>Use an alternate path for the policy store root</dd>
+<dt><code>-v,&#8211;verbose </code></dt>
+<dd>be verbose</dd>
+<dt><code>-c,&#8211;cil</code></dt>
+<dd>Extract module as a CIL file. This only affects the &#8211;extract option and only modules listed in &#8211;extract after this option.</dd>
+<dt><code>-H,&#8211;hll</code></dt>
+<dd>Extract module as an HLL file. This only affects the &#8211;extract option and only modules listed in &#8211;extract after this option. </dd>
 </dl>
 <h2>Example</h2>
 <pre># Install or replace a base policy package.

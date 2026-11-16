@@ -10,16 +10,11 @@ description: "std::legendre,std::legendref,std::legendrel – std::legendre,std:
 <p>std::legendre,std::legendref,std::legendrel &#8211; std::legendre,std::legendref,std::legendrel</p>
 <h2>Synopsis</h2>
 <pre><code>double legendre(unsigned int n, double x);
-
 float legendre(unsigned int n, float x);
-
 long double legendre(unsigned int n, long double x);
 (1)(since C++ 17)
-
     float legendref(unsigned int n, float x);
-
 long double legendrel(unsigned int n, long double x);
-
 double legendre(unsigned int n, IntegralType x);
 (2)(since C++ 17)</code></pre>
 <p>1) Computes the unassociated Legendre_polynomials of the degree n and argument x<br />
@@ -67,21 +62,16 @@ The first few Legendre polynomials are: * legendre(0, x) = 1</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 double P3(double x)
 {
     return 0.5 * (5 * std::pow(x, 3) - 3 * x);
 }
-
 double P4(double x)
 {
     return 0.125 * (35 * std::pow(x, 4) - 30 * x * x + 3);
 }
-
 int main()
-
 {
     // spot-checks
     std::cout &lt;&lt; std::legendre(3, 0.25) &lt;&lt; '=' &lt;&lt; P3(0.25) &lt;&lt; '

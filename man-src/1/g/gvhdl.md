@@ -18,26 +18,26 @@ description: "gvhdl – Frontend to the VHDL compiler/simulator FreeHDL."
 <p> <i>OBJECT_FILES</i> specifies a list of object files that are linked to the simulator executable. <code>gvhdl</code> considers all files that end with .o to be object files. Typically, these object files are generated previously (using option -c) from VHDL source code during a separate compilation step.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-L</code> VHDLLIB</p>
-<dd> Path to VHDL library root directory. Within this directory the compiler search for a file named <i>v2cc.libs</i>. The mapping file <i>v2cc.libs</i> translates library unit names to directories. Note that more than one VHDLLIB may be provided.</p>
-<dt><code>-g</code></p>
-<dd> Adds debug information to the executable. In detail, this options associates the generated machine code to the corresponding lines in the VHDL source files.</p>
-<dt><code>-G</code></p>
-<dd> Adds debug information to the executable but does not associate machine code to VHDL source lines. This option is actually used to debug the generated C++ code.</p>
-<dt><code>-c</code></p>
-<dd> Do not generate simulator executable. Using this option, the compiler translated VHDL source into executables and compiles them into object code but does not generate a final simulator executable. This option is especially useful to compile VHDL packages.</p>
-<dt><code>-l</code> LIBNAME</p>
-<dd> Associate the VHDL source code to VHDL library LIBNAME. As default the library name WORK is used. This option is especially important if VHDL components from several VHDL libraries shall be build into the simulator. Note that in order to successfully use a VHDL component from another than the current working library, the corresponding VHDL files must be found by the compiler using the mechanisms described in v2cc.libs. Further, components must be compiled with the appropriate -l LIBNAME option.</p>
-<dt><code>&#8211;relaxed-component-visibility</code></p>
-<dd> Allows invisible default bindings from <i>WORK</i>.</p>
-<dt><code>&#8211;libieee</code></p>
-<dd> Add the IEEE standard library files to the simulation executable.</p>
-<dt></dl>
+<dt><code>-L</code> VHDLLIB</dt>
+<dd> Path to VHDL library root directory. Within this directory the compiler search for a file named <i>v2cc.libs</i>. The mapping file <i>v2cc.libs</i> translates library unit names to directories. Note that more than one VHDLLIB may be provided.</dd>
+<dt><code>-g</code></dt>
+<dd> Adds debug information to the executable. In detail, this options associates the generated machine code to the corresponding lines in the VHDL source files.</dd>
+<dt><code>-G</code></dt>
+<dd> Adds debug information to the executable but does not associate machine code to VHDL source lines. This option is actually used to debug the generated C++ code.</dd>
+<dt><code>-c</code></dt>
+<dd> Do not generate simulator executable. Using this option, the compiler translated VHDL source into executables and compiles them into object code but does not generate a final simulator executable. This option is especially useful to compile VHDL packages.</dd>
+<dt><code>-l</code> LIBNAME</dt>
+<dd> Associate the VHDL source code to VHDL library LIBNAME. As default the library name WORK is used. This option is especially important if VHDL components from several VHDL libraries shall be build into the simulator. Note that in order to successfully use a VHDL component from another than the current working library, the corresponding VHDL files must be found by the compiler using the mechanisms described in v2cc.libs. Further, components must be compiled with the appropriate -l LIBNAME option.</dd>
+<dt><code>&#8211;relaxed-component-visibility</code></dt>
+<dd> Allows invisible default bindings from <i>WORK</i>.</dd>
+<dt><code>&#8211;libieee</code></dt>
+<dd> Add the IEEE standard library files to the simulation executable.</dd>
+<dt></dt></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dd>
-<dl>
-<dt>V2CC_LIBRARY_PATH</p>
-<dd> The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line.</dl>
+</dd><dl>
+<dt>V2CC_LIBRARY_PATH</dt>
+<dd> The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line.</dd></dl>
 <h2>SUPPORTED VHDL SUBSET</h2>
 <p> Currently, FreeHDL does not support the entire VHDL&#8217;93 standard. The following incomplete list gives an overview on what is currently not supported: </p>
 <p> &#8211; Individual association of formals of composite type are not supported. </p>

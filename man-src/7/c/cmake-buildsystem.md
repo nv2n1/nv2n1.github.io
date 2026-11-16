@@ -274,30 +274,30 @@ target_link_libraries(exe1 lib1 lib3)</pre>
 <h3>Runtime Output Artifacts</h3>
 <p>A <i>runtime</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The executable file (e.g. <code>.exe</code>) of an executable target created by the <code>add_executable()</code> command.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the executable file (e.g. <code>.dll</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </p>
+<dt>&bull;</dt>
+<dd>The executable file (e.g. <code>.exe</code>) of an executable target created by the <code>add_executable()</code> command.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the executable file (e.g. <code>.dll</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </dd>
 <p> The <code>RUNTIME_OUTPUT_DIRECTORY</code> and <code>RUNTIME_OUTPUT_NAME</code> target properties may be used to control runtime output artifact locations and names in the build tree.</dl>
 <h3>Library Output Artifacts</h3>
 <p>A <i>library</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The loadable module file (e.g. <code>.dll</code> or <code>.so</code>) of a module library target created by the <code>add_library()</code> command with the <code>MODULE</code> option.</p>
-<dt>&bull;</p>
-<dd>On non-DLL platforms: the shared library file (e.g. <code>.so</code> or <code>.dylib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </p>
+<dt>&bull;</dt>
+<dd>The loadable module file (e.g. <code>.dll</code> or <code>.so</code>) of a module library target created by the <code>add_library()</code> command with the <code>MODULE</code> option.</dd>
+<dt>&bull;</dt>
+<dd>On non-DLL platforms: the shared library file (e.g. <code>.so</code> or <code>.dylib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. </dd>
 <p> The <code>LIBRARY_OUTPUT_DIRECTORY</code> and <code>LIBRARY_OUTPUT_NAME</code> target properties may be used to control library output artifact locations and names in the build tree.</dl>
 <h3>Archive Output Artifacts</h3>
 <p>An <i>archive</i> output artifact of a buildsystem target may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The static library file (e.g. <code>.lib</code> or <code>.a</code>) of a static library target created by the <code>add_library()</code> command with the <code>STATIC</code> option.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. This file is only guaranteed to exist if the library exports at least one unmanaged symbol.</p>
-<dt>&bull;</p>
-<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set.</p>
-<dt>&bull;</p>
-<dd>On AIX: the linker import file (e.g. <code>.imp</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set. </p>
+<dt>&bull;</dt>
+<dd>The static library file (e.g. <code>.lib</code> or <code>.a</code>) of a static library target created by the <code>add_library()</code> command with the <code>STATIC</code> option.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of a shared library target created by the <code>add_library()</code> command with the <code>SHARED</code> option. This file is only guaranteed to exist if the library exports at least one unmanaged symbol.</dd>
+<dt>&bull;</dt>
+<dd>On DLL platforms: the import library file (e.g. <code>.lib</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set.</dd>
+<dt>&bull;</dt>
+<dd>On AIX: the linker import file (e.g. <code>.imp</code>) of an executable target created by the <code>add_executable()</code> command when its <code>ENABLE_EXPORTS</code> target property is set. </dd>
 <p> The <code>ARCHIVE_OUTPUT_DIRECTORY</code> and <code>ARCHIVE_OUTPUT_NAME</code> target properties may be used to control archive output artifact locations and names in the build tree.</dl>
 <h3>Directory-Scoped Commands</h3>
 <p>The <code>target_include_directories()</code>, <code>target_compile_definitions()</code> and <code>target_compile_options()</code> commands have an effect on only one target at a time. The commands <code>add_compile_definitions()</code>, <code>add_compile_options()</code> and <code>include_directories()</code> have a similar function, but operate at directory scope instead of target scope for convenience.</p>
@@ -335,14 +335,14 @@ endif()</pre>
 <h3>Default And Custom Configurations</h3>
 <p>By default, CMake defines a number of standard configurations:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>Debug</code></p>
-<dt>&bull;</p>
-<dd><code>Release</code></p>
-<dt>&bull;</p>
-<dd><code>RelWithDebInfo</code></p>
-<dt>&bull;</p>
-<dd><code>MinSizeRel</code> </p>
+<dt>&bull;</dt>
+<dd><code>Debug</code></dd>
+<dt>&bull;</dt>
+<dd><code>Release</code></dd>
+<dt>&bull;</dt>
+<dd><code>RelWithDebInfo</code></dd>
+<dt>&bull;</dt>
+<dd><code>MinSizeRel</code> </dd>
 <p> In multi-config generators, the <code>CMAKE_CONFIGURATION_TYPES</code> variable will be populated with (potentially a subset of) the above list by default, unless overridden by the project or user. The actual configuration used is selected by the user at build time. </p>
 <p> For single-config generators, the configuration is specified with the <code>CMAKE_BUILD_TYPE</code> variable at configure time and cannot be changed at build time. The default value will often be none of the above standard configurations and will instead be an empty string. A common misunderstanding is that this is the same as <code>Debug</code>, but that is not the case. Users should always explicitly specify the build type instead to avoid this common problem. </p>
 <p> The above standard configuration types provide reasonable behavior on most platforms, but they can be extended to provide other types. Each configuration defines a set of compiler and linker flag variables for the language in use. These variables follow the convention <code>CMAKE_&lt;LANG&gt;_FLAGS_&lt;CONFIG&gt;</code>, where <code>&lt;CONFIG&gt;</code> is always the uppercase configuration name. When defining a custom configuration type, make sure these variables are set appropriately, typically as cache variables.</dl>
@@ -421,3 +421,4 @@ install(FILES ${Eigen_headers}
 )</pre>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>
+</p>

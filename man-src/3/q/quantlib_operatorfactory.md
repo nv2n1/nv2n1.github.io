@@ -17,6 +17,6 @@ description: "QuantLib::OperatorFactory – Black-Scholes-Merton differential op
 <p>Black-Scholes-Merton differential operator. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>coefficients are tested against constant BSM operator</dl>
+<dd>coefficients are tested against constant BSM operator</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

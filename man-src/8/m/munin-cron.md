@@ -12,12 +12,12 @@ description: "munin-cron – A program to batch other Munin master programs"
 <p>munin-cron [&#8211;options]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;service &lt;service&gt;</code></p>
-<dd>Limit services to &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</p>
-<dt><code>&#8211;host &lt;host&gt;</code></p>
-<dd>Limit hosts to &lt;host&gt;. Multiple &#8211;host options may be supplied. [unset]</p>
-<dt><code>&#8211;config &lt;file&gt;</code></p>
-<dd>Use &lt;file&gt; as configuration file. [<i>/etc/munin/munin.conf</i>]</dl>
+<dt><code>&#8211;service &lt;service&gt;</code></dt>
+<dd>Limit services to &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</dd>
+<dt><code>&#8211;host &lt;host&gt;</code></dt>
+<dd>Limit hosts to &lt;host&gt;. Multiple &#8211;host options may be supplied. [unset]</dd>
+<dt><code>&#8211;config &lt;file&gt;</code></dt>
+<dd>Use &lt;file&gt; as configuration file. [<i>/etc/munin/munin.conf</i>]</dd></dl>
 <h2>Description</h2>
 <p>Munin-cron is a part of the package Munin, which is used in combination with Munin&#8217;s node. Munin is a group of programs to gather data from Munin&#8217;s nodes, graph them, create html-pages, and optionally warn Nagios about any off-limit values. </p>
 <p> Munin-cron batches all the above tasks by running their respective programs. All parameters are passed directly to the underlying programs, so only use parameters that are understood by all the other programs.</p>

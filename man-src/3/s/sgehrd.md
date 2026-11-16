@@ -19,16 +19,16 @@ description: "sgehrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SGEHRD reduces a real general matrix A to upper Hessenberg form H by
  an orthogonal similarity transformation:  Q**T * A * Q = H .
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the matrix A.  N &gt;= 0.
@@ -99,18 +99,18 @@ ILO = 1 and IHI = 0, if N = 0.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The matrix Q is represented as a product of (ihi-ilo) elementary
   reflectors
@@ -137,8 +137,9 @@ ILO = 1 and IHI = 0, if N = 0.
   subroutine incorporating improvements proposed by Quintana-Orti and
   Van de Geijn (2006). (See DLAHR2.)
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 169 of file sgehrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

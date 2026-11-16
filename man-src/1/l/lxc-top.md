@@ -15,23 +15,22 @@ description: "lxc-top – monitor container statistics"
 <p> <code>lxc-top</code> displays container statistics. The output is updated every <i>delay</i> seconds, and is ordered according to the <i>sortby</i> value given. Specifying <i>count</i> will limit the number of containers displayed, otherwise <code>lxc-top</code> will display as many containers as can fit in your terminal.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>[-m, &#8211;max </code><i>count</i><code>]</code></p>
-<dd> Limit the number of containers displayed to <i>count</i>.</p>
-<dt><code>[-d, &#8211;delay </code><i>delay</i><code>]</code></p>
-<dd> Amount of time in seconds to delay between screen updates. This can be specified as less than a second by giving a rational number, for example 0.5 for a half second delay. The default is 3 seconds.</p>
-<dt><code>[-s, &#8211;sort </code><i>sortby</i><code>]</code></p>
-<dd> Sort the containers by name, cpu use, or memory use. The <i>sortby</i> argument should be one of the letters n,c,d,m,k to sort by name, cpu use, disk I/O, memory, or kernel memory use respectively. The default is &#8216;n&#8217;.</p>
-<dt><code>[-r, &#8211;reverse]</code></p>
-<dd> Reverse the default sort order. By default, names sort in ascending alphabetical order and values sort in descending amounts (ie. largest value first).</dl>
+<dt><code>[-m, &#8211;max </code><i>count</i><code>]</code></dt>
+<dd> Limit the number of containers displayed to <i>count</i>.</dd>
+<dt><code>[-d, &#8211;delay </code><i>delay</i><code>]</code></dt>
+<dd> Amount of time in seconds to delay between screen updates. This can be specified as less than a second by giving a rational number, for example 0.5 for a half second delay. The default is 3 seconds.</dd>
+<dt><code>[-s, &#8211;sort </code><i>sortby</i><code>]</code></dt>
+<dd> Sort the containers by name, cpu use, or memory use. The <i>sortby</i> argument should be one of the letters n,c,d,m,k to sort by name, cpu use, disk I/O, memory, or kernel memory use respectively. The default is &#8216;n&#8217;.</dd>
+<dt><code>[-r, &#8211;reverse]</code></dt>
+<dd> Reverse the default sort order. By default, names sort in ascending alphabetical order and values sort in descending amounts (ie. largest value first).</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
-<dt>lxc-top &#8211;delay 1 &#8211;sort m</p>
-<dd> Display containers, updating every second, sorted by memory use.</dl>
+<dt>lxc-top &#8211;delay 1 &#8211;sort m</dt>
+<dd> Display containers, updating every second, sorted by memory use.</dd></dl>
 <h2>NOTES</h2>
 <p> For performance reasons the kernel does not account kernel memory use unless a kernel memory limit is set. If a limit is not set, <code> lxc-top</code> will display kernel memory use as 0. If no containers are being accounted, the KMem column will not be displayed. A limit can be set by specifying </p>
 <pre>
       lxc.cgroup.memory.kmem.limit_in_bytes = <i>number</i>
-      
 </pre>
 <p> in your container configuration file, see <code><a href="/docs/linux/man/5-lxc-conf/">lxc.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

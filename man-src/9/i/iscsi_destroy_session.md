@@ -14,14 +14,14 @@ description: "iscsi_destroy_session – destroy iscsi session"
 <p><i>session</i></p>
 <dl>
 <dd>
-<dd>iscsi_session</dl>
+</dd><dd>iscsi_session</dd></dl>
 <h2>Description</h2>
 <p>Can be called by a LLD or iscsi_transport. There must not be any running connections.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

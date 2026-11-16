@@ -19,12 +19,12 @@ yarac[OPTION]...[RULE_FILE]... OUTPUT_FILE
 <p> The rules will be applied to the target specified as the last argument to YARA, if it’s a path to a directory all the files contained in it will be scanned.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code> &lt;identifier&gt;=&lt;value&gt;</p>
-<dd> define external variable.</p>
-<dt><code>-w</code></p>
-<dd> disable warnings.</p>
-<dt><code>-v</code></p>
-<dd> show version information.</dl>
+<dt><code>-d</code> &lt;identifier&gt;=&lt;value&gt;</dt>
+<dd> define external variable.</dd>
+<dt><code>-w</code></dt>
+<dd> disable warnings.</dd>
+<dt><code>-v</code></dt>
+<dd> show version information.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The <code>-d</code> is used to define external variables. For example: </p>
 <p> <code>-d</code> flag=true </p>

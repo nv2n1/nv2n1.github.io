@@ -17,11 +17,11 @@ The idmap_tdb2 plugin is a substitute for the default idmap_tdb backend used by 
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dl>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
  
 
  script
-<dl><dd>This option can be used to configure an external program for performing id mappings instead of using the tdb counter. The mappings are then stored int tdb2 idmap database. For details see the section on IDMAP SCRIPT below.</dl>
+<dl><dd>This option can be used to configure an external program for performing id mappings instead of using the tdb counter. The mappings are then stored int tdb2 idmap database. For details see the section on IDMAP SCRIPT below.</dd></dl>
 
 <h2>Idmap Script</h2>
 
@@ -33,7 +33,7 @@ The tdb2 idmap backend supports an external program for performing id mappings t
 
 <dl><dd><pre> SIDTOID S-1-xxxx
  IDTOSID UID xxxx
- IDTOSID GID xxxx</pre></dl>
+ IDTOSID GID xxxx</pre></dd></dl>
  
 
  And it should return one of the following responses as a single line of text. 
@@ -41,7 +41,7 @@ The tdb2 idmap backend supports an external program for performing id mappings t
 <dl><dd><pre> UID:yyyy
  GID:yyyy
  SID:yyyy
- ERR:yyyy</pre></dl>
+ ERR:yyyy</pre></dd></dl>
 
 <h2>Examples</h2>
 
@@ -49,7 +49,7 @@ This example shows how tdb2 is used as a the default idmap backend.
 
 <dl><dd><pre> [global]
  idmap config * : backend = tdb2
- idmap config * : range = 1000000-2000000</pre></dl>
+ idmap config * : range = 1000000-2000000</pre></dd></dl>
  
 
  This example shows how tdb2 is used as a the default idmap backend using an external program via the script parameter: 
@@ -57,7 +57,7 @@ This example shows how tdb2 is used as a the default idmap backend.
 <dl><dd><pre> [global]
  idmap config * : backend = tdb2
  idmap config * : range = 1000000-2000000
- idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dl>
+ idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dd></dl>
 
 <h2>Author</h2>
 

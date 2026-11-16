@@ -10,7 +10,6 @@ description: "ustrnicmp – Compares up to n letters of two strings ignoring cas
 <p>ustrnicmp &#8211; Compares up to n letters of two strings ignoring case. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ustrnicmp(const char *s1, const char *s2, int n);</code></pre>
 <h2>Description</h2>
 <p>This function compares up to `n&#8217; characters of `s1&#8242; and `s2&#8242;, ignoring case. Example: </p>

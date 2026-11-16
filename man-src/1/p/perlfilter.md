@@ -21,10 +21,10 @@ file-- -- ---&gt;parser
 </code></pre>
 <p> There are two important points to remember:</p>
 <dl>
-<dt>1.</p>
-<dd> Although there can be any number of source streams in existence at any given time, only one will be active.</p>
-<dt>2.</p>
-<dd> Every source stream is associated with only one file.</dl>
+<dt>1.</dt>
+<dd> Although there can be any number of source streams in existence at any given time, only one will be active.</dd>
+<dt>2.</dt>
+<dd> Every source stream is associated with only one file.</dd></dl>
 <p> A source filter is a special kind of Perl module that intercepts and modifies a source stream before it reaches the parser. A source filter changes our diagram like this: </p>
 <p>file&#8211; &#8212; &gt; filter&#8211; &#8212; &gt; parser</p>
 <p> If that doesn&#8217;t make much sense, consider the analogy of a command pipeline. Say you have a shell script stored in the compressed file <i>trial.gz</i>. The simple pipeline command below runs the script without needing to create a temporary file to hold the uncompressed file. </p>
@@ -88,8 +88,8 @@ use Filter::uncompress;<br />
 <p> The first of the three available techniques is to write the filter completely in C. The external module you create interfaces directly with the source filter hooks provided by Perl. </p>
 <p> The advantage of this technique is that you have complete control over the implementation of your filter. The big disadvantage is the increased complexity required to write the filter &#8211; not only do you need to understand the source filter hooks, but you also need a reasonable knowledge of Perl guts. One of the few times it is worth going to this trouble is when writing a source scrambler. The <tt>&quot;decrypt&quot;</tt> filter (which unscrambles the source before Perl parses it) included with the source filter distribution is an example of a C source filter (see Decryption Filters, below).</p>
 <dl>
-<dt><code>Decryption Filters</code></p>
-<dd> All decryption filters work on the principle of &#8220;security through obscurity.&#8221; Regardless of how well you write a decryption filter and how strong your encryption algorithm is, anyone determined enough can retrieve the original source code. The reason is quite simple &#8211; once the decryption filter has decrypted the source back to its original form, fragments of it will be stored in the computer&#8217;s memory as Perl parses it. The source might only be in memory for a short period of time, but anyone possessing a debugger, skill, and lots of patience can eventually reconstruct your program. </p>
+<dt><code>Decryption Filters</code></dt>
+<dd> All decryption filters work on the principle of &#8220;security through obscurity.&#8221; Regardless of how well you write a decryption filter and how strong your encryption algorithm is, anyone determined enough can retrieve the original source code. The reason is quite simple &#8211; once the decryption filter has decrypted the source back to its original form, fragments of it will be stored in the computer&#8217;s memory as Perl parses it. The source might only be in memory for a short period of time, but anyone possessing a debugger, skill, and lots of patience can eventually reconstruct your program. </dd>
 <p> That said, there are a number of steps that can be taken to make life difficult for the potential cracker. The most important: Write your decryption filter in C and statically link the decryption module into the Perl binary. For further tips to make life difficult for the potential cracker, see the file <i>decrypt.pm</i> in the source filters distribution.</dl>
 <h2>CREATING A SOURCE FILTER AS A SEPARATE EXECUTABLE</h2>
 <p> An alternative to writing the filter in C is to create a separate executable in the language of your choice. The separate executable reads from standard input, does whatever processing is necessary, and writes the filtered data to standard output. <tt>&quot;Filter::cpp&quot;</tt> is an example of a source filter implemented as a separate executable &#8211; the executable is the C preprocessor bundled with your C compiler. </p>
@@ -298,8 +298,8 @@ sub MySub($$ @)
 <p> Currently internal buffer lengths are limited to 32-bit only.</p>
 <h2>THINGS TO LOOK OUT FOR</h2>
 <dl>
-<dt>Some Filters Clobber the &quot;DATA&quot; Handle</p>
-<dd> Some source filters use the <tt>&quot;DATA&quot;</tt> handle to read the calling program. When using these source filters you cannot rely on this handle, nor expect any particular kind of behavior when operating on it. Filters based on Filter::Util::Call (and therefore Filter::Simple) do not alter the <tt>&quot;DATA&quot;</tt> filehandle, but on the other hand totally ignore the text after <tt>&quot;__DATA__&quot;</tt>.</dl>
+<dt>Some Filters Clobber the &quot;DATA&quot; Handle</dt>
+<dd> Some source filters use the <tt>&quot;DATA&quot;</tt> handle to read the calling program. When using these source filters you cannot rely on this handle, nor expect any particular kind of behavior when operating on it. Filters based on Filter::Util::Call (and therefore Filter::Simple) do not alter the <tt>&quot;DATA&quot;</tt> filehandle, but on the other hand totally ignore the text after <tt>&quot;__DATA__&quot;</tt>.</dd></dl>
 <h2>REQUIREMENTS</h2>
 <p> The Source Filters distribution is available on <font SIZE="-1">CPAN,</font> in </p>
 <pre>

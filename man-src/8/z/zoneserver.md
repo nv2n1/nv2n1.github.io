@@ -14,8 +14,8 @@ description: "zoneserver – handle zone transfers and other TCP functions for M
 <p><code>zoneserver -f</code> pointer_to_mararc_file</p>
 <h2>Options</h2>
 <dl>
-<dt>-f</p>
-<dd>Specifies the location of the configuration file. MaraDNS uses the same configuration file for both the main dns server and the zoneserver.</dl>
+<dt>-f</dt>
+<dd>Specifies the location of the configuration file. MaraDNS uses the same configuration file for both the main dns server and the zoneserver.</dd></dl>
 <h2>Configuration File Format</h2>
 <p>The file format for the mararc file can be found in the <code><a href="/docs/linux/man/5-mararc/">mararc</a>(5)</code> manual page. In particular, the zoneserver uses the zone_transfer_acl, tcp_convert_acl, tcp_convert_server, bind_address, and recursive_acl mararc parameters.</p>
 <h2>Example Mararc File</h2>

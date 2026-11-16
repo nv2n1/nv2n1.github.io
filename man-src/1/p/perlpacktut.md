@@ -123,7 +123,7 @@ while (&lt;&gt;) {
  Now comes the clever bit. Lines in our ledger which are just income and not expenditure might end at column 46. Hence, we don't want to tell our <tt>&quot;unpack&quot;</tt> pattern that we <b>need</b> to find another 12 characters; we'll just say ``if there's anything left, take it''. As you might guess from regular expressions, that's what the <tt>&quot;*&quot;</tt> means: ``use everything remaining''.
 <dl>
 <dt>&bull;
-<dd> Be warned, though, that unlike regular expressions, if the <tt>&quot;unpack&quot;</tt> template doesn't match the incoming data, Perl will scream and die.</dl>
+</dt><dd> Be warned, though, that unlike regular expressions, if the <tt>&quot;unpack&quot;</tt> template doesn't match the incoming data, Perl will scream and die.</dd></dl>
  
 
  Hence, putting it all together: 
@@ -205,23 +205,20 @@ print pack("A11 A28 A8 A*", $date, "Totals",
  So that's how we consume and produce fixed-width data. Let's recap what we've seen of <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> so far:
 <dl>
 <dt>&bull;
-<dd> Use <tt>&quot;pack&quot;</tt> to go from several pieces of data to one fixed-width version; use <tt>&quot;unpack&quot;</tt> to turn a fixed-width-format string into several pieces of data.
-<dt>&bull;
-<dd> The pack format <tt>&quot;A&quot;</tt> means ``any character''; if you're <tt>&quot;pack&quot;</tt>ing and you've run out of things to pack, <tt>&quot;pack&quot;</tt> will fill the rest up with spaces.
-<dt>&bull;
-<dd> <tt>&quot;x&quot;</tt> means ``skip a byte'' when <tt>&quot;unpack&quot;</tt>ing; when <tt>&quot;pack&quot;</tt>ing, it means ``introduce a null byte'' - that's probably not what you mean if you're dealing with plain text.
-<dt>&bull;
-<dd> You can follow the formats with numbers to say how many characters should be affected by that format: <tt>&quot;A12&quot;</tt> means ``take 12 characters''; <tt>&quot;x6&quot;</tt> means ``skip 6 bytes'' or ``character 0, 6 times''.
-<dt>&bull;
-<dd> Instead of a number, you can use <tt>&quot;*&quot;</tt> to mean ``consume everything else left''. 
-
+</dt><dd> Use <tt>&quot;pack&quot;</tt> to go from several pieces of data to one fixed-width version; use <tt>&quot;unpack&quot;</tt> to turn a fixed-width-format string into several pieces of data.
+</dd><dt>&bull;
+</dt><dd> The pack format <tt>&quot;A&quot;</tt> means ``any character''; if you're <tt>&quot;pack&quot;</tt>ing and you've run out of things to pack, <tt>&quot;pack&quot;</tt> will fill the rest up with spaces.
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;x&quot;</tt> means ``skip a byte'' when <tt>&quot;unpack&quot;</tt>ing; when <tt>&quot;pack&quot;</tt>ing, it means ``introduce a null byte'' - that's probably not what you mean if you're dealing with plain text.
+</dd><dt>&bull;
+</dt><dd> You can follow the formats with numbers to say how many characters should be affected by that format: <tt>&quot;A12&quot;</tt> means ``take 12 characters''; <tt>&quot;x6&quot;</tt> means ``skip 6 bytes'' or ``character 0, 6 times''.
+</dd><dt>&bull;
+</dt><dd> Instead of a number, you can use <tt>&quot;*&quot;</tt> to mean ``consume everything else left''. 
  <b>Warning</b>: when packing multiple pieces of data, <tt>&quot;*&quot;</tt> only means ``consume all of the current piece of data''. That's to say 
-
  <pre>
     pack(&quot;A*A*&quot;, $one, $two)
 </pre> 
-
- packs all of <tt>$one</tt> into the first <tt>&quot;A*&quot;</tt> and then all of <tt>$two</tt> into the second. This is a general principle: each format character corresponds to one piece of data to be <tt>&quot;pack&quot;</tt>ed.</dl>
+ packs all of <tt>$one</tt> into the first <tt>&quot;A*&quot;</tt> and then all of <tt>$two</tt> into the second. This is a general principle: each format character corresponds to one piece of data to be <tt>&quot;pack&quot;</tt>ed.</dd></dl>
 
 <h2>Packing Numbers</h2>
 
@@ -232,11 +229,11 @@ print pack("A11 A28 A8 A*", $date, "Totals",
  Packing and unpacking numbers implies conversion to and from some <i>specific</i> binary representation. Leaving floating point numbers aside for the moment, the salient properties of any such representation are:
 <dl>
 <dt>&bull;
-<dd> the number of bytes used for storing the integer,
-<dt>&bull;
-<dd> whether the contents are interpreted as a signed or unsigned number,
-<dt>&bull;
-<dd> the byte ordering: whether the first byte is the least or most significant byte (or: little-endian or big-endian, respectively).</dl>
+</dt><dd> the number of bytes used for storing the integer,
+</dd><dt>&bull;
+</dt><dd> whether the contents are interpreted as a signed or unsigned number,
+</dd><dt>&bull;
+</dt><dd> the byte ordering: whether the first byte is the least or most significant byte (or: little-endian or big-endian, respectively).</dd></dl>
  
 
  So, for instance, to pack 20302 to a signed 16 bit integer in your computer's representation you write 
@@ -863,11 +860,11 @@ print unpack('p', $buf);
  Using <tt>&quot;pack(..., $x)&quot;</tt> with <tt>&quot;P&quot;</tt> or <tt>&quot;p&quot;</tt> to get the address where <tt>$x</tt> is actually stored must be used with circumspection. Perl's internal machinery considers the relation between a variable and that address as its very own private matter and doesn't really care that we have obtained a copy. Therefore:
 <dl>
 <dt>&bull;
-<dd> Do not use <tt>&quot;pack&quot;</tt> with <tt>&quot;p&quot;</tt> or <tt>&quot;P&quot;</tt> to obtain the address of variable that's bound to go out of scope (and thereby freeing its memory) before you are done with using the memory at that address.
-<dt>&bull;
-<dd> Be very careful with Perl operations that change the value of the variable. Appending something to the variable, for instance, might require reallocation of its storage, leaving you with a pointer into no-man's land.
-<dt>&bull;
-<dd> Don't think that you can get the address of a Perl variable when it is stored as an integer or double number! <tt>&quot;pack('P', $x)&quot;</tt> will force the variable's internal representation to string, just as if you had written something like <tt>&quot;$x .= ''&quot;</tt>.</dl>
+</dt><dd> Do not use <tt>&quot;pack&quot;</tt> with <tt>&quot;p&quot;</tt> or <tt>&quot;P&quot;</tt> to obtain the address of variable that's bound to go out of scope (and thereby freeing its memory) before you are done with using the memory at that address.
+</dd><dt>&bull;
+</dt><dd> Be very careful with Perl operations that change the value of the variable. Appending something to the variable, for instance, might require reallocation of its storage, leaving you with a pointer into no-man's land.
+</dd><dt>&bull;
+</dt><dd> Don't think that you can get the address of a Perl variable when it is stored as an integer or double number! <tt>&quot;pack('P', $x)&quot;</tt> will force the variable's internal representation to string, just as if you had written something like <tt>&quot;$x .= ''&quot;</tt>.</dd></dl>
  
 
  It's safe, however, to P- or p-pack a string literal, because Perl simply allocates an anonymous variable.
@@ -920,12 +917,12 @@ my $advice = pack('all u can in a van');
 
 
 <dt><a HREF="#lbAX">Packing and Unpacking C Structures</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbBD">Pack Recipes</a>
-<dd>
-<dt><a HREF="#lbBE">Funnies Section</a>
-<dd>
-<dt><a HREF="#lbBF">Authors</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBD">Pack Recipes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBE">Funnies Section</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBF">Authors</a>
+</dt><dd></dd></dl>

@@ -17,24 +17,24 @@ description: "radzap – remove rogue entries from the active sessions database"
 <p> The sessions are &quot;zapped&quot; by sending an Accounting-Request packet which contains the information necessary for the server to delete the session record. <code>radzap</code> sends a packet to the server, rather than writing to <i>radutmp</i> directly, because session records may also be maintained in SQL.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d&nbsp;<wbr><i>raddb_directory</i></p>
-<dd> The directory that contains the RADIUS configuration files. <code>radzap</code> reads <i>radiusd.conf</i> to determine the location of the <i>radutmp</i> file.</p>
-<dt>-h</p>
-<dd> Print usage help information.</p>
-<dt>-N&nbsp;<wbr><i>nas_ip_address</i></p>
-<dd> Zap the entries which match the given NAS IP address.</p>
-<dt>-P&nbsp;<wbr><i>nas_port</i></p>
-<dd> Zap the entries which match the given NAS port.</p>
-<dt>-u&nbsp;<wbr><i>user</i></p>
-<dd> Zap the entries which match the given username (case insensitive).</p>
-<dt>-U&nbsp;<wbr><i>user</i></p>
-<dd> Zap the entries which match the given username (case sensitive).</p>
-<dt>-x</p>
-<dd> Enable debugging output.</p>
-<dt>server[:port]</p>
-<dd> The hostname or IP address of the remote server. Optionally a UDP port can be specified. If no UDP port is specified, it is looked up in <i>/etc/services</i>. The service name looked for is <code>radacct</code> for accounting packets, and <code>radius</code> for all other requests. If a service is not found in <i>/etc/services</i>, 1813 and 1812 are used respectively.</p>
-<dt>secret</p>
-<dd> The shared secret for this client. It needs to be defined on the radius server side too, for the IP address you are sending the radius packets from.</dl>
+<dt>-d&nbsp;<wbr><i>raddb_directory</i></dt>
+<dd> The directory that contains the RADIUS configuration files. <code>radzap</code> reads <i>radiusd.conf</i> to determine the location of the <i>radutmp</i> file.</dd>
+<dt>-h</dt>
+<dd> Print usage help information.</dd>
+<dt>-N&nbsp;<wbr><i>nas_ip_address</i></dt>
+<dd> Zap the entries which match the given NAS IP address.</dd>
+<dt>-P&nbsp;<wbr><i>nas_port</i></dt>
+<dd> Zap the entries which match the given NAS port.</dd>
+<dt>-u&nbsp;<wbr><i>user</i></dt>
+<dd> Zap the entries which match the given username (case insensitive).</dd>
+<dt>-U&nbsp;<wbr><i>user</i></dt>
+<dd> Zap the entries which match the given username (case sensitive).</dd>
+<dt>-x</dt>
+<dd> Enable debugging output.</dd>
+<dt>server[:port]</dt>
+<dd> The hostname or IP address of the remote server. Optionally a UDP port can be specified. If no UDP port is specified, it is looked up in <i>/etc/services</i>. The service name looked for is <code>radacct</code> for accounting packets, and <code>radius</code> for all other requests. If a service is not found in <i>/etc/services</i>, 1813 and 1812 are used respectively.</dd>
+<dt>secret</dt>
+<dd> The shared secret for this client. It needs to be defined on the radius server side too, for the IP address you are sending the radius packets from.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-radwho/">radwho</a>(1), <a href="/docs/linux/man/1-radclient/">radclient</a>(1), <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5).</p>
 <h2>AUTHOR</h2>

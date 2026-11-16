@@ -19,7 +19,7 @@ description: "cgghrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGGHRD reduces a pair of complex matrices (A,B) to generalized upper
  Hessenberg form using unitary transformations, where A is a
@@ -45,11 +45,11 @@ description: "cgghrd.f –"
  original equation A*x = lambda*B*x, then CGGHRD reduces the original
  problem to generalized Hessenberg form.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>COMPQ</i> </p>
+</dt><dd> <i>COMPQ</i> </dd>
 <pre>
           COMPQ is CHARACTER*1
           = 'N': do not compute Q;
@@ -140,25 +140,26 @@ LDZ &gt;= 1 otherwise.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   This routine reduces A to Hessenberg and B to triangular form by
   an unblocked reduction, as described in _Matrix_Computations_,
   by Golub and van Loan (Johns Hopkins Press).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 204 of file cgghrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

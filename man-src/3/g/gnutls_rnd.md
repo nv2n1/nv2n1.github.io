@@ -14,12 +14,12 @@ description: "gnutls_rnd – API function"
 <p> <code>int gnutls_rnd(gnutls_rnd_level_t </code><i>level</i><code>, void * </code><i>data</i><code>, size_t </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_rnd_level_t level</p>
-<dd> a security level</p>
-<dt>void * data</p>
-<dd> place to store random bytes</p>
-<dt>size_t len</p>
-<dd> The requested size</dl>
+<dt>gnutls_rnd_level_t level</dt>
+<dd> a security level</dd>
+<dt>void * data</dt>
+<dd> place to store random bytes</dd>
+<dt>size_t len</dt>
+<dd> The requested size</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will generate random data and store it to output buffer. </p>
 <p> This function is thread-safe and also fork-safe.</p>
@@ -36,6 +36,6 @@ description: "gnutls_rnd – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

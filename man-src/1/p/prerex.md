@@ -24,55 +24,55 @@ description: "prerex – interactive editor of prerequisite-chart descriptions"
 <p> If <code>prerex</code> is invoked on one existing file, a back-up copy is made of it, the <i>x,y</i> coordinate grid is turned on, the file is processed by using a system call to <code><a href="/docs/linux/man/1-pdflatex/">pdflatex</a></code>(1), and then the user gets a command summary and an interactive prompt of the form</p>
 <dl>
 <dt>
-<dd> <i>file.tex&gt;</i></dl>
+</dt><dd> <i>file.tex&gt;</i></dd></dl>
 <p> If no file argument is given on the command line, the user is prompted to supply a file name. In either case, if the file name provided does not have a <i>.tex </i> extension, <i>.tex</i> is appended to it. </p>
 <p> If the <i>file.tex </i> file named does <i>not </i> already exist, a new &quot;empty&quot; chart file with that name is created, and then it is processed as above. </p>
 <p> If a <i>second </i> filename is provided, the first filename is treated as the base file of a LaTeX document and the second as an included file that contains the <i>chart </i> environment to be edited. This allows more than one document to share an included chart file and allows more than one chart to be included in a single document. </p>
 <p> The user may enter commands at the interactive command prompt as follows:</p>
 <dl>
-<dt><code>box</code><i> x,y</i></p>
-<dd> edit a course box at <i>x,y, </i> if necessary, creating a new course box there</p>
-<dt><code>mini</code><i> x,y</i></p>
-<dd> edit a mini at <i>x,y,</i> if necessary, creating a new mini there</p>
-<dt><code>text</code><i> x,y</i></p>
-<dd> edit a text-line at <i>x,y,</i> if necessary, creating a new text-line there</p>
-<dt><code>arrow</code><i> x0,y0,x1,y1</i></p>
-<dd> edit an arrow from <i>x0,y0 </i> to <i>x1,y1,</i> if necessary, creating a new such arrow</p>
-<dt><code>cut</code><i> xi,yi &#8230; </i></p>
-<dd> (temporarily) remove the box, mini, or text at <i>xi,yi </i> (including arrows into/out of the box/mini/text)</p>
-<dt><code>paste [</code><i>x,y</i><code>]</code></p>
-<dd> re-insert most recently cut but not yet pasted box, mini, or text at <i>x,y </i> (including arrows into/out of the box/mini/text), or at the original coordinates if <i> x,y</i> omitted</p>
-<dt><code>xchange</code><i> x0,y0 x1,y1</i></p>
-<dd> exchange the box, mini or text at <i>x0,y0</i> with that at <i>x1,y1.</i> This is implemented as a sequence of two cuts followed by two pastes to the same points.</p>
-<dt><code>delete [ </code><i>x,y</i><code> | </code><i>x0,y0,x1,y1</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></p>
-<dd> remove the specified boxes, minis, texts, or arrows (including automatically all arrows into/out of each box/mini/text)</p>
-<dt><code>undo</code></p>
-<dd> undo the most recent editing command (not already undone)</p>
-<dt><code>shift [-]</code><i>s</i><code> [ </code><i>x,y</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></p>
-<dd> move specified diagram elements <i>x </i> units right [left]; if no elements are specified, the whole diagram is shifted</p>
-<dt><code>raise [-]</code><i>r</i><code> [ </code><i>x,y</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></p>
-<dd> move specified diagram elements <i>y </i> units up [down]; if no elements are specified, the whole diagram is raised</p>
-<dt><code>write, ! </code></p>
-<dd> save to the current <i>chartfile.tex</i> and process the chart by calling <code><a href="/docs/linux/man/1-pdflatex/">pdflatex</a></code>(1) on the base file.</p>
-<dt><code>quit, exit, x, ^D </code></p>
-<dd> turn off the coordinate grid, restore write-access, save to the current <i>chartfile.tex,</i> process the base file and exit.</p>
-<dt><code>!</code><i>cmd</i></p>
-<dd> restore write access to <i>chartfile.tex, </i> execute shell command <i>cmd,</i> re-load and re-process the base file (in case the command changed anything), and remove write-access.</p>
-<dt><code>Backup</code></p>
-<dd> copy the current <i>chartfile.tex</i> to the back-up file <i>.chartfile.tex;</i> equivalent to <code>!cp</code><i> chartfile.tex .chartfile.tex</i></p>
-<dt><code>Restore</code></p>
-<dd> delete the current <i>chartfile.tex </i> and editing buffer, and replace them using the current back-up in <i>.chartfile.tex.</i></p>
-<dt><code>grid</code> [y/n]</p>
-<dd> turn on/off coordinate-grid background</p>
-<dt><code>help, ?</code></p>
-<dd> print a command summary</dl>
+<dt><code>box</code><i> x,y</i></dt>
+<dd> edit a course box at <i>x,y, </i> if necessary, creating a new course box there</dd>
+<dt><code>mini</code><i> x,y</i></dt>
+<dd> edit a mini at <i>x,y,</i> if necessary, creating a new mini there</dd>
+<dt><code>text</code><i> x,y</i></dt>
+<dd> edit a text-line at <i>x,y,</i> if necessary, creating a new text-line there</dd>
+<dt><code>arrow</code><i> x0,y0,x1,y1</i></dt>
+<dd> edit an arrow from <i>x0,y0 </i> to <i>x1,y1,</i> if necessary, creating a new such arrow</dd>
+<dt><code>cut</code><i> xi,yi &#8230; </i></dt>
+<dd> (temporarily) remove the box, mini, or text at <i>xi,yi </i> (including arrows into/out of the box/mini/text)</dd>
+<dt><code>paste [</code><i>x,y</i><code>]</code></dt>
+<dd> re-insert most recently cut but not yet pasted box, mini, or text at <i>x,y </i> (including arrows into/out of the box/mini/text), or at the original coordinates if <i> x,y</i> omitted</dd>
+<dt><code>xchange</code><i> x0,y0 x1,y1</i></dt>
+<dd> exchange the box, mini or text at <i>x0,y0</i> with that at <i>x1,y1.</i> This is implemented as a sequence of two cuts followed by two pastes to the same points.</dd>
+<dt><code>delete [ </code><i>x,y</i><code> | </code><i>x0,y0,x1,y1</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></dt>
+<dd> remove the specified boxes, minis, texts, or arrows (including automatically all arrows into/out of each box/mini/text)</dd>
+<dt><code>undo</code></dt>
+<dd> undo the most recent editing command (not already undone)</dd>
+<dt><code>shift [-]</code><i>s</i><code> [ </code><i>x,y</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></dt>
+<dd> move specified diagram elements <i>x </i> units right [left]; if no elements are specified, the whole diagram is shifted</dd>
+<dt><code>raise [-]</code><i>r</i><code> [ </code><i>x,y</i><code> | </code><i>x0,y0</i><code>:</code><i>x1,y1</i><code> ] </code><i>&#8230;</i></dt>
+<dd> move specified diagram elements <i>y </i> units up [down]; if no elements are specified, the whole diagram is raised</dd>
+<dt><code>write, ! </code></dt>
+<dd> save to the current <i>chartfile.tex</i> and process the chart by calling <code><a href="/docs/linux/man/1-pdflatex/">pdflatex</a></code>(1) on the base file.</dd>
+<dt><code>quit, exit, x, ^D </code></dt>
+<dd> turn off the coordinate grid, restore write-access, save to the current <i>chartfile.tex,</i> process the base file and exit.</dd>
+<dt><code>!</code><i>cmd</i></dt>
+<dd> restore write access to <i>chartfile.tex, </i> execute shell command <i>cmd,</i> re-load and re-process the base file (in case the command changed anything), and remove write-access.</dd>
+<dt><code>Backup</code></dt>
+<dd> copy the current <i>chartfile.tex</i> to the back-up file <i>.chartfile.tex;</i> equivalent to <code>!cp</code><i> chartfile.tex .chartfile.tex</i></dd>
+<dt><code>Restore</code></dt>
+<dd> delete the current <i>chartfile.tex </i> and editing buffer, and replace them using the current back-up in <i>.chartfile.tex.</i></dd>
+<dt><code>grid</code> [y/n]</dt>
+<dd> turn on/off coordinate-grid background</dd>
+<dt><code>help, ?</code></dt>
+<dd> print a command summary</dd></dl>
 <p> After most editing commands, the editing buffer is automatically saved to <i>chartfile.tex</i> and the basefile is processed; the <code>cut</code> and <code>paste</code> commands are exceptions: saving and processing take place only when all outstanding cuts have been pasted. Saving and processing can be <i>forced </i> by using the <code>write </code> (or <code>!</code>) command, or <i>suppressed </i> for all commands (except <code>write</code> and <code>!</code>) by appending a &quot;;&quot; to the command immediately prior to entering it. To exit the editor <i>without</i> saving to the current <i>chartfile.tex</i>, use <code>quit; </code> (.i.e., <code>quit</code> followed by a semi-colon) or a similar combination. Starting in Version 3.8, <code>^C</code> and other interrupts result in the editing buffer being saved to <i>chartfile.tex</i> before the editor is exited.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> output program name and version number, and quit</p>
-<dt><code>-h</code></p>
-<dd> output usage summary and quit</dl>
+<dt><code>-v</code></dt>
+<dd> output program name and version number, and quit</dd>
+<dt><code>-h</code></dt>
+<dd> output usage summary and quit</dd></dl>
 <h2>NOTES</h2>
 <p> The main difference between <code>mini </code> and <code>text </code> is in the maximum lengths for the text displayed; the latter allows a full line of text, not merely a course code. Also a text-line does not have an associated URI (when the grid is off). The text &quot;line&quot; may actually be displayed as a paragraph by using a LaTeX \parbox. </p>
 <p> To save the current state of <i>chartfile.tex, </i> use <code>Backup</code> or a comparable shell command. A history list of interpreted commands is maintained and is accessible using the up-arrow key. </p>

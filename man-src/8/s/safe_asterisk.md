@@ -16,13 +16,13 @@ description: "safe_asterisk — A wrapper to run the asterisk executable in a lo
 <h2>Files</h2>
 <p><code>/tmp</code></p>
 <dl>
-<dd>safe_asterisk runs in that directory, rather than in / as usual.</dl>
+<dd>safe_asterisk runs in that directory, rather than in / as usual.</dd></dl>
 <p> <code>/tmp/core</code></p>
 <dl>
-<dd>If core files were generated there, they may be</dl>
+<dd>If core files were generated there, they may be</dd></dl>
 <p> <code>/etc/asterisk/startup.d</code></p>
 <dl>
-<dd>Files in this directory will be &#8216;source&#8217;d by the safe_asterisk script before it starts Asterisk proper, allowing them to set additional environment variables or run any other steps that are needed for your system.</dl>
+<dd>Files in this directory will be &#8216;source&#8217;d by the safe_asterisk script before it starts Asterisk proper, allowing them to set additional environment variables or run any other steps that are needed for your system.</dd></dl>
 <h2>Bugs</h2>
 <p>While showing the output on a console is useful, using <a href="/docs/linux/man/1-screen/">screen</a>(1) as the terminal may be better. The script does not read configuration from standard location under /etc It uses fixed locations under /tmp , and thus may be exposed to a symlink attacks. </p>
 <h2>See Also</h2>

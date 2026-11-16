@@ -19,6 +19,6 @@ description: "QuantLib::Euribor – Euribor index"
 <p> <code>Euribor</code> rate fixed by the ECB. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This is the rate fixed by the ECB. Use EurLibor if you&#8217;re interested in the London fixing by BBA.</dl>
+<dd>This is the rate fixed by the ECB. Use EurLibor if you&#8217;re interested in the London fixing by BBA.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

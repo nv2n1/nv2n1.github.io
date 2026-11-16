@@ -11,7 +11,6 @@ std::chrono::time_of_day&lt;Duration&gt;::time_of_day - std::chrono::time_of_day
 <h2>Synopsis</h2>
 
 <pre><code>time_of_day() = default;                                           (1)
-
 explicit constexpr time_of_day(precision since_midnight) noexcept; (2)</code></pre> 
 Constructs a time_of_day object. 
 1) Default constructor leaves the object uninitialized. 

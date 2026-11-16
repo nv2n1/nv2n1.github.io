@@ -18,27 +18,27 @@ ALTER COLLATION <i>name</i> SET SCHEMA <i>new_schema</i></pre>
 <h2>Parameters</h2>
 <p><i>name</i></p>
 <dl>
-<dd>The name (optionally schema-qualified) of an existing collation.</dl>
+<dd>The name (optionally schema-qualified) of an existing collation.</dd></dl>
 <p> <i>new_name</i></p>
 <dl>
-<dd>The new name of the collation.</dl>
+<dd>The new name of the collation.</dd></dl>
 <p> <i>new_owner</i></p>
 <dl>
-<dd>The new owner of the collation.</dl>
+<dd>The new owner of the collation.</dd></dl>
 <p> <i>new_schema</i></p>
 <dl>
-<dd>The new schema for the collation.</dl>
+<dd>The new schema for the collation.</dd></dl>
 <h2>Examples</h2>
 <p>To rename the collation de_DE to german: </p>
 <dl>
 <dd>
 <pre>ALTER COLLATION &quot;de_DE&quot; RENAME TO german;</pre>
-</dl>
+</dd></dl>
 <p> To change the owner of the collation en_US to joe: </p>
 <dl>
 <dd>
 <pre>ALTER COLLATION &quot;en_US&quot; OWNER TO joe;</pre>
-</dl>
+</dd></dl>
 <h2>Compatibility</h2>
 <p>There is no <code>ALTER COLLATION</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

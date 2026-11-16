@@ -14,10 +14,10 @@ description: "d_alloc – allocate a dcache entry"
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>parent of entry to allocate</dl>
+</dd><dd>parent of entry to allocate</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>qstr of the name</dl>
+<dd>qstr of the name</dd></dl>
 <h2>Description</h2>
 <p>Allocates a dentry. It returns <code>NULL</code> if there is insufficient memory available. On a success the dentry is returned. The name passed in is copied and the copy passed in may be reused after this call.</p>
 <h2>Copyright</h2>

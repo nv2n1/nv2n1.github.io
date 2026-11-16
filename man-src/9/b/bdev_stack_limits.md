@@ -15,15 +15,15 @@ bdev_stack_limits - adjust queue limits for stacked drivers
 <h2>Arguments</h2>
 
 <i>t</i>
-<dl><dd><dd>the stacking driver limits (top device)</dl>
+<dl><dd></dd><dd>the stacking driver limits (top device)</dd></dl>
  
 
  <i>bdev</i>
-<dl><dd>the component block_device (bottom)</dl>
+<dl><dd>the component block_device (bottom)</dd></dl>
  
 
  <i>start</i>
-<dl><dd>first data sector within component device</dl>
+<dl><dd>first data sector within component device</dd></dl>
 
 <h2>Description</h2>
 

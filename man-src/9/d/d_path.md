@@ -15,15 +15,15 @@ d_path - return the path of a dentry
 <h2>Arguments</h2>
 
 <i>path</i>
-<dl><dd><dd>path to report</dl>
+<dl><dd></dd><dd>path to report</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>buffer to return value in</dl>
+<dl><dd>buffer to return value in</dd></dl>
  
 
  <i>buflen</i>
-<dl><dd>buffer length</dl>
+<dl><dd>buffer length</dd></dl>
 
 <h2>Description</h2>
 

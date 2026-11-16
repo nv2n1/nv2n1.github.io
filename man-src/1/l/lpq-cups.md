@@ -17,24 +17,24 @@ description: "lpq – show printer queue status"
 <h2>OPTIONS</h2>
 <p> <i>lpq</i> supports the following options:</p>
 <dl>
-<dt>-E</p>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-P destination[/instance]</p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-P destination[/instance]</dt>
 <dd>
- Specifies an alternate printer or class name.</p>
-<dt>-U username</p>
+ Specifies an alternate printer or class name.</dd>
+<dt>-U username</dt>
 <dd>
- Specifies an alternate username.</p>
-<dt>-a</p>
+ Specifies an alternate username.</dd>
+<dt>-a</dt>
 <dd>
- Reports jobs on all printers.</p>
-<dt>-h server[:port]</p>
+ Reports jobs on all printers.</dd>
+<dt>-h server[:port]</dt>
 <dd>
- Specifies an alternate server.</p>
-<dt>-l</p>
+ Specifies an alternate server.</dd>
+<dt>-l</dt>
 <dd>
- Requests a more verbose (long) reporting format.</dl>
+ Requests a more verbose (long) reporting format.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/1-lpr/">lpr</a>(1)</i>, <i><a href="/docs/linux/man/1-lprm/">lprm</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br />
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>

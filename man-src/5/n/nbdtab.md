@@ -17,34 +17,34 @@ description: "/etc/nbdtab – configuration file for nbd-client"
 <h3>Fields</h3>
 <p>The file contains the following fields:</p>
 <dl>
-<dt>1.</p>
-<dd>The short name of the device file. That is, it should contain the name of the device without the leading <i>/dev/</i> part; e.g., it could say <i>nbd0</i>.</p>
-<dt>2.</p>
-<dd>The hostname (in case of a TCP socket) or filename (in case of a unix domain socket) on which the server is listening.</p>
-<dt>3.</p>
-<dd>The name of the export as exported by <code>nbd-server</code>.</p>
-<dt>4.</p>
-<dd>Any extra options. This field is optional (no pun intended), and need not appear in a file if no options are necessary. The options recognized by <code><a href="/docs/linux/man/8-nbd-client/">nbd-client</a></code>(8) are specified below, in the section &quot;Options&quot;. Any unknown options in this field will produce a warning by <code>nbd-client</code>, unless they are prepended by an underscore (&#8216;_&#8217;) character; the underscore is specifically reserved for local use, or for distribution customization.</dl>
+<dt>1.</dt>
+<dd>The short name of the device file. That is, it should contain the name of the device without the leading <i>/dev/</i> part; e.g., it could say <i>nbd0</i>.</dd>
+<dt>2.</dt>
+<dd>The hostname (in case of a TCP socket) or filename (in case of a unix domain socket) on which the server is listening.</dd>
+<dt>3.</dt>
+<dd>The name of the export as exported by <code>nbd-server</code>.</dd>
+<dt>4.</dt>
+<dd>Any extra options. This field is optional (no pun intended), and need not appear in a file if no options are necessary. The options recognized by <code><a href="/docs/linux/man/8-nbd-client/">nbd-client</a></code>(8) are specified below, in the section &quot;Options&quot;. Any unknown options in this field will produce a warning by <code>nbd-client</code>, unless they are prepended by an underscore (&#8216;_&#8217;) character; the underscore is specifically reserved for local use, or for distribution customization.</dd></dl>
 <h3>Options</h3>
 <p>Every command-line <code>nbd-client</code> option has a corresponding option in the <i>nbdtab</i> file, and vice versa; where this isn&#8217;t the case, that is a bug. </p>
 <p> Individual options in this field should be separated from one another by the comma character.</p>
 <dl>
-<dt><code>bs=</code><i>block size</i></p>
-<dd>The block size for this export. If this option is not used, the kernel&#8217;s default will be used instead. </p>
+<dt><code>bs=</code><i>block size</i></dt>
+<dd>The block size for this export. If this option is not used, the kernel&#8217;s default will be used instead. </dd>
 <p> Corresponds to the <code>-b</code> option on the command line.</p>
-<dt><code>port=</code><i>port number</i></p>
-<dd>The port on which to communicate with the <code>nbd-server</code>. Defaults to the IANA-assigned port for NBD, 10809.</p>
-<dt><code>timeout=</code><i>timeout</i></p>
-<dd>The timeout. If this option is not specified, no timeout is configured. </p>
+<dt><code>port=</code><i>port number</i></dt>
+<dd>The port on which to communicate with the <code>nbd-server</code>. Defaults to the IANA-assigned port for NBD, 10809.</dd>
+<dt><code>timeout=</code><i>timeout</i></dt>
+<dd>The timeout. If this option is not specified, no timeout is configured. </dd>
 <p> Corresponds to the <code>-t</code> option on the command line.</p>
-<dt><code>persist</code></p>
-<dd>Persist the connection, using the semantics of the <code>-p</code> command-line option.</p>
-<dt><code>swap</code></p>
-<dd>Optimize for swap; <code>-s</code>.</p>
-<dt><code>sdp</code></p>
-<dd>Use the Socket Direct protocol; <code>-S</code>.</p>
-<dt><code>unix</code></p>
-<dd>Use a Unix Domain socket to connect to the server; <code>-u</code>.</dl>
+<dt><code>persist</code></dt>
+<dd>Persist the connection, using the semantics of the <code>-p</code> command-line option.</dd>
+<dt><code>swap</code></dt>
+<dd>Optimize for swap; <code>-s</code>.</dd>
+<dt><code>sdp</code></dt>
+<dd>Use the Socket Direct protocol; <code>-S</code>.</dd>
+<dt><code>unix</code></dt>
+<dd>Use a Unix Domain socket to connect to the server; <code>-u</code>.</dd></dl>
 <h2>See Also</h2>
 <p>nbd-server (1), nbd-client (8), nbd-trdump (8)</p>
 <h2>Author</h2>

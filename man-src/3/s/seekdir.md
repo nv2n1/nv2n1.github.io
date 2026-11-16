@@ -10,7 +10,6 @@ description: "seekdir – set the position of the next readdir() call in the dir
 <p>seekdir &#8211; set the position of the next readdir() call in the directory stream.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;dirent.h&gt;
-
 void seekdir(DIR *dirp, long loc);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>seekdir</code>():<br />
 &nbsp;_XOPEN_SOURCE<br />

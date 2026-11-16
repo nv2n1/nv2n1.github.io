@@ -22,33 +22,33 @@ description: "wmfmio – WindowMaker dockable application to manipulate fm radio
 <p> After pressing the &quot;A&quot; button the first time you may set the now displayed clock type panel to the desired setting using the SCAN buttons to set your timer in the 24-hour format. Be aware in this state other buttons cease to work. You must press the A button again at which point the indicator light will turn on and the alarm will be set. Lastly, pressing the &quot;A&quot; button once more, will disengance the timer. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-n</code></p>
-<dd> Turn radio on initially on startup.</p>
-<dt><code>-t </code><i>&lt;##:##&gt;</i></p>
-<dd> Set timer on startup, military time.</p>
-<dt><code>-p </code><i>&lt;##&gt;</i></p>
-<dd> Set startup preset <i>&lt;##&gt;</i> listed in wmfmiorc file.</p>
-<dt><code>-d </code><i>display</i></p>
-<dd> Selects target display.</p>
-<dt><code>-h</code></p>
-<dd> Display help screen.</dl>
+<dt><code>-n</code></dt>
+<dd> Turn radio on initially on startup.</dd>
+<dt><code>-t </code><i>&lt;##:##&gt;</i></dt>
+<dd> Set timer on startup, military time.</dd>
+<dt><code>-p </code><i>&lt;##&gt;</i></dt>
+<dd> Set startup preset <i>&lt;##&gt;</i> listed in wmfmiorc file.</dd>
+<dt><code>-d </code><i>display</i></dt>
+<dd> Selects target display.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help screen.</dd></dl>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>wmfmio -n -p 5</code></p>
-<dd> Turn on radio on startup using preset 5</p>
-<dt><code>wmfmio -p 2 -t 14:35</code></p>
-<dd> Turn radio on at 2:35pm using preset 2</p>
-<dt><code>wmfmio -n -t 00:00</code></p>
-<dd> Turn on radio on startup and turn radio off at midnight</dl>
+<dt><code>wmfmio -n -p 5</code></dt>
+<dd> Turn on radio on startup using preset 5</dd>
+<dt><code>wmfmio -p 2 -t 14:35</code></dt>
+<dd> Turn radio on at 2:35pm using preset 2</dd>
+<dt><code>wmfmio -n -t 00:00</code></dt>
+<dd> Turn on radio on startup and turn radio off at midnight</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/wmfmiorc </code></p>
-<dd> Global configuration file</p>
-<dt><code>~/.wmfmiorc </code></p>
-<dd> User configuration file</p>
-<dt><code>/usr/local/bin/fmio </code></p>
-<dd> Utility used to control the radiocard</dl>
+<dt><code>/etc/wmfmiorc </code></dt>
+<dd> Global configuration file</dd>
+<dt><code>~/.wmfmiorc </code></dt>
+<dd> User configuration file</dd>
+<dt><code>/usr/local/bin/fmio </code></dt>
+<dd> Utility used to control the radiocard</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fmio/">fmio</a>(1)</p>
 <h2>AUTHORS</h2>

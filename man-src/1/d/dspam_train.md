@@ -15,27 +15,25 @@ description: "dspam_train – train a corpus of mail"
 <p> <code>dspam_train</code> is used to train and test a corpus of mail (in maildir or MBOX format). This tool will present each message to DSPAM for a classification and then retrain only if the message was incorrect. This provides close to real-world training and should be used to build pretrained databases. Upon execution, the tool will automatically determine the ratio of spam:nonspam and train based on that ratio to ensure both corpora are trained consecutively. This tool can also be used as a test jig to measure the efficiency and accuracy of a particular corpus against DSPAM in a given configuration. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>
-<dd>
-<dt><code>&#8211;client</code></p>
-<dd> If specified, DSPAM is used in client-server mode. </p>
-<dt><code>username</code></p>
-<dd> Specifies the user to train, if omitted the current user name is used. </p>
-<dt><code>-i</code>&nbsp;<wbr>index</p>
-<dd> Use a index file instead of the usual spam_corpus and nonspam_corpus. </p>
+<dt><code>&#8211;client</code></dt>
+<dd> If specified, DSPAM is used in client-server mode. </dd>
+<dt><code>username</code></dt>
+<dd> Specifies the user to train, if omitted the current user name is used. </dd>
+<dt><code>-i</code>&nbsp;<wbr>index</dt>
+<dd> Use a index file instead of the usual spam_corpus and nonspam_corpus. </dd>
 <p> <code>index</code> : Path to the index file having the following format per line:<br />
  [class] [path to message] </p>
-<dt><code>spam_corpus</code></p>
-<dd> Specifies either the pathname to the directory containing the corpus of spam, with each in a separate file (e.g. maildir format) or a path to the mailbox in the traditional Unix MBOX format. </p>
-<dt><code>nonspam_corpus</code></p>
-<dd> Specifies either the pathname to the directory containing the corpus of nonspam with each message in a separate file or a path to the mailbox in the traditional Unix MBOX format. </p>
+<dt><code>spam_corpus</code></dt>
+<dd> Specifies either the pathname to the directory containing the corpus of spam, with each in a separate file (e.g. maildir format) or a path to the mailbox in the traditional Unix MBOX format. </dd>
+<dt><code>nonspam_corpus</code></dt>
+<dd> Specifies either the pathname to the directory containing the corpus of nonspam with each message in a separate file or a path to the mailbox in the traditional Unix MBOX format. </dd>
 </dl>
 <h2>EXIT VALUE</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Operation was successful.</p>
-<dt><code>other</code></p>
-<dd> Operation resulted in an error. </p>
+<dt><code>0</code></dt>
+<dd> Operation was successful.</dd>
+<dt><code>other</code></dt>
+<dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2012 DSPAM Project<br />

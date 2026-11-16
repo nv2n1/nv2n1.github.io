@@ -10,7 +10,6 @@ description: "std::locale::global – std::locale::global"
 <p>std::locale::global &#8211; std::locale::global</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     static locale global(const locale &amp;loc);
 Replaces the global C++ locale with loc, which means all future calls to the std::locale default constructor will now return a copy of loc.If loc has a name, also replaces the C locale as if by std::setlocale(LC_ALL, loc.name().c_str());
 .This function is the only way to modify the global C++ locale, which is otherwise equivalent to std::locale::classic() at program startup.

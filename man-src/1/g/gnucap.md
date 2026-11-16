@@ -20,10 +20,10 @@ description: "gnucap – GNU Circuit Analysis Package"
 <h2>OPTIONS</h2>
 <p> Two command-line options are available. Only one of these may be specified. If no parameters are given, gnucap will start in interactive mode.</p>
 <dl>
-<dt><i>-b filename</i></p>
-<dd> execute the commands in the named file then exit (batch mode)</p>
-<dt><i>-i filename</p>
-<dd> execute the commands in the named file then go into interactive mode</dl>
+<dt><i>-b filename</i></dt>
+<dd> execute the commands in the named file then exit (batch mode)</dd>
+<dt><i>-i filename</dt>
+<dd> execute the commands in the named file then go into interactive mode</dd></dl>
 <p> </i></p>
 <h2>BUGS</h2>
 <p> See <code>/usr/share/doc/gnucap/bugs </code> for a list of known bugs in this release. </p>

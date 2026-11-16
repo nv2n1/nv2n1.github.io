@@ -18,7 +18,7 @@ description: "bundle-platform – Displays platform compatibility information"
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
 ruby &quot;1.9.3&quot;
 gem &quot;rack&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> If you run <code>bundle platform</code> on Ruby 1.9.3, it will display the following output:</p>
 <dl>
 <dd>
@@ -28,10 +28,10 @@ Your app has gems that work on these platforms:
 Your Gemfile specifies a Ruby version requirement:
 * ruby 1.9.3
 Your current platform satisfies the Ruby version requirement.</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> <code>platform</code> will list all the platforms in your <code>Gemfile.lock</code> as well as the <code>ruby</code> directive if applicable from your Gemfile(5). It will also let you know if the <code>ruby</code> directive requirement has been met. If <code>ruby</code> directive doesn&#8217;t match the running Ruby VM, it will tell you what part does not.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;ruby</code></p>
-<dd>It will display the ruby directive information, so you don&#8217;t have to parse it from the Gemfile(5). </p>
+<dt><code>&#8211;ruby</code></dt>
+<dd>It will display the ruby directive information, so you don&#8217;t have to parse it from the Gemfile(5). </dd>
 </dl>

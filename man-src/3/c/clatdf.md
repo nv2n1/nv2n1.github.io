@@ -19,7 +19,7 @@ description: "clatdf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLATDF computes the contribution to the reciprocal Dif-estimate
  by solving for x in Z * x = b, where b is chosen such that the norm
@@ -30,11 +30,11 @@ description: "clatdf.f –"
  Z = P * L * U * Q, where P and Q are permutation matrices. L is lower
  triangular with unit diagonal elements and U is upper triangular.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>IJOB</i> </p>
+</dt><dd> <i>IJOB</i> </dd>
 <pre>
           IJOB is INTEGER
           IJOB = 2: First compute an approximative null-vector e
@@ -109,31 +109,31 @@ JPIV is INTEGER array, dimension(N).The pivot indices; for
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd> This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dl>
+</dt><dd> This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Bo Kagstrom and Lars Westin, Generalized Schur Methods with Condition Estimators for Solving the Generalized Sylvester Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7, July 1989, pp 745-751.</dl>
+</dt><dd> [1] Bo Kagstrom and Lars Westin, Generalized Schur Methods with Condition Estimators for Solving the Generalized Sylvester Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7, July 1989, pp 745-751.</dd></dl>
 <p> [2] Peter Poromaa, On Efficient and Robust Estimators for the Separation between two Regular Matrix Pairs with Applications in Condition Estimation. Report UMINF-95.05, Department of Computing Science, Umea University, S-901 87 Umea, Sweden,</p>
 <dl>
-<dt>1995.</p>
+<dt>1995.</dt>
 <dd>
-</dl>
+</dd></dl>
 <p> Definition at line 169 of file clatdf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

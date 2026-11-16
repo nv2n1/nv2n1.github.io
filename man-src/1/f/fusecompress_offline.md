@@ -19,11 +19,11 @@ description: "fusecompress_offline – decompress or compress data without need 
 <p> $ fusecompress_offline compressed_folder </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Prints help.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Prints version.</p>
-<dt><code>-o, &#8211;options</code></p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Prints help.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Prints version.</dd>
+<dt><code>-o, &#8211;options</code></dt>
 <dd>
 <p> <code>fc_c:arg</code> set compression method (lzo/bzip2/zlib/lzma) (default:zlib) </p>
 <p> <code>fc_b:arg</code> set size of the blocks in kilobytes (default:100) </p>
@@ -32,7 +32,7 @@ description: "fusecompress_offline – decompress or compress data without need 
 <p> <code>fc_mr:arg1;arg2</code> files with passed mime types to be always compressed </p>
 <p> Lzo is the fastest, bzip2 has high compression ratio, but it is the slowest, zlib is somewhere between them in terms of speed and compression ratio and lzma has highest compression ratio, it&#8217;s compression speed is better than bzip2 and decompression is fast. </p>
 <p> Block size influences compression ratio. Bigger block size allows better compression ratio, but random access to data will be slower and memory requirements will be bigger. </p>
-</dl>
+</dd></dl>
 <h2>DISCLAIMER</h2>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Please refer to the &quot;COPYING&quot; file distributed with fusecompress for complete details.</p>
 <h2>AUTHORS</h2>

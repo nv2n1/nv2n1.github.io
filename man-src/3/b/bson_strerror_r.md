@@ -18,14 +18,14 @@ bson_strerror_r(int err_code,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>err_code</code></p>
-<dd> An errno.</dl>
+<dt><code>err_code</code></dt>
+<dd> An errno.</dd></dl>
 <dl>
-<dt><code>buf</code></p>
-<dd> A location to store the string.</dl>
+<dt><code>buf</code></dt>
+<dd> A location to store the string.</dd></dl>
 <dl>
-<dt><code>buflen</code></p>
-<dd> The size of <code>buf</code> \&amp;.</dl>
+<dt><code>buflen</code></dt>
+<dd> The size of <code>buf</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a portability wrapper around <code><a href="/docs/linux/man/3-strerror/">strerror</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>

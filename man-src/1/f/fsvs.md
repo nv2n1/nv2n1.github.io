@@ -14,60 +14,60 @@ description: "FSVS – fast versioning tool"
 <p> The following commands are understood by fsvs:</p>
 <h2>Local configuration and information:</h2>
 <dl>
-<dt><code>urls</code></p>
-<dd> Define working copy base directories by their URL(s)</p>
-<dt><code>status</code></p>
-<dd> Get a list of changed entries</p>
-<dt><code>info</code></p>
-<dd> Display detailed information about single entries</p>
-<dt><code>log</code></p>
-<dd> Fetch the log messages from the repository</p>
-<dt><code>diff</code></p>
-<dd> Get differences between files (local and remote)</p>
-<dt><code>copyfrom-detect</code></p>
-<dd> Ask fsvs about probably copied/moved/renamed entries; see <code>cp</code></dl>
+<dt><code>urls</code></dt>
+<dd> Define working copy base directories by their URL(s)</dd>
+<dt><code>status</code></dt>
+<dd> Get a list of changed entries</dd>
+<dt><code>info</code></dt>
+<dd> Display detailed information about single entries</dd>
+<dt><code>log</code></dt>
+<dd> Fetch the log messages from the repository</dd>
+<dt><code>diff</code></dt>
+<dd> Get differences between files (local and remote)</dd>
+<dt><code>copyfrom-detect</code></dt>
+<dd> Ask fsvs about probably copied/moved/renamed entries; see <code>cp</code></dd></dl>
 <h2>Defining which entries to take:</h2>
 <dl>
-<dt><code>ignore</code> and <code>rign</code></p>
-<dd> Define ignore patterns</p>
-<dt><code>unversion</code></p>
-<dd> Remove entries from versioning</p>
-<dt><code>add</code></p>
-<dd> Add entries that would be ignored</p>
-<dt><code>cp</code>, <code>mv</code></p>
-<dd> Tell fsvs that entries were copied</dl>
+<dt><code>ignore</code> and <code>rign</code></dt>
+<dd> Define ignore patterns</dd>
+<dt><code>unversion</code></dt>
+<dd> Remove entries from versioning</dd>
+<dt><code>add</code></dt>
+<dd> Add entries that would be ignored</dd>
+<dt><code>cp</code>, <code>mv</code></dt>
+<dd> Tell fsvs that entries were copied</dd></dl>
 <h2>Commands working with the repository:</h2>
 <dl>
-<dt><code>commit</code></p>
-<dd> Send changed data to the repository</p>
-<dt><code>update</code></p>
-<dd> Get updates from the repository</p>
-<dt><code>checkout</code></p>
-<dd> Fetch some part of the repository, and register it as working copy</p>
-<dt><code>cat</code></p>
-<dd> Get a file from the directory</p>
-<dt>revert and uncp</p>
-<dd> Undo local changes and entry markings</p>
-<dt>remote-status</p>
-<dd> Ask what an <code>update</code> would bring</dl>
+<dt><code>commit</code></dt>
+<dd> Send changed data to the repository</dd>
+<dt><code>update</code></dt>
+<dd> Get updates from the repository</dd>
+<dt><code>checkout</code></dt>
+<dd> Fetch some part of the repository, and register it as working copy</dd>
+<dt><code>cat</code></dt>
+<dd> Get a file from the directory</dd>
+<dt>revert and uncp</dt>
+<dd> Undo local changes and entry markings</dd>
+<dt>remote-status</dt>
+<dd> Ask what an <code>update</code> would bring</dd></dl>
 <h2>Property handling:</h2>
 <dl>
-<dt><code>prop-set</code></p>
-<dd> Set user-defined properties</p>
-<dt><code>prop-get</code></p>
-<dd> Ask value of user-defined properties</p>
-<dt><code>prop-list</code></p>
-<dd> Get a list of user-defined properties</dl>
+<dt><code>prop-set</code></dt>
+<dd> Set user-defined properties</dd>
+<dt><code>prop-get</code></dt>
+<dd> Ask value of user-defined properties</dd>
+<dt><code>prop-list</code></dt>
+<dd> Get a list of user-defined properties</dd></dl>
 <h2>Additional commands used for recovery and debugging:</h2>
 <dl>
-<dt><code>export</code></p>
-<dd> Fetch some part of the repository</p>
-<dt><code>sync-repos</code></p>
-<dd> Drop local information about the entries, and fetch the current list from the repository.</dl>
+<dt><code>export</code></dt>
+<dd> Fetch some part of the repository</dd>
+<dt><code>sync-repos</code></dt>
+<dd> Drop local information about the entries, and fetch the current list from the repository.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Multi-url-operations are relatively new; there might be rough edges.</dl>
+</dt><dd> Multi-url-operations are relatively new; there might be rough edges.</dd></dl>
 <p> The <code>return code</code> is 0 for success, or 2 for an error. 1 is returned if the option <code>Stopping status reports as soon as changes are found</code> is used, and changes are found; see also <code>Filtering entries</code>. </p>
 <h2>Universal options</h2>
 <h3>-V &#8212; show version</h3>
@@ -83,7 +83,7 @@ description: "FSVS – fast versioning tool"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> That string is taken only once &#8211; at the first debug output line. So you have to use the correct order of parameters: -o debug_output=&#8230; -d.</dl>
+</dt><dd> That string is taken only once &#8211; at the first debug output line. So you have to use the correct order of parameters: -o debug_output=&#8230; -d.</dd></dl>
 <p> An example: writing the last 200 lines of debug output into a file. </p>
 <pre>
    fsvs -o debug_output='| tail -200 &gt; /tmp/debug.log' -d ....
@@ -102,7 +102,7 @@ description: "FSVS – fast versioning tool"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Please see <code>Change detection</code> for some more information. </p>
+</dt><dd> Please see <code>Change detection</code> for some more information. </dd>
 <p> If an entry gets replaced with an entry of a different type (eg. a directory gets replaced by a file), that counts as deleted <code>and</code> new.</dl>
 <p> If you use -v, it&#8217;s used as a any internally. </p>
 <p> If you use the string none, it resets the bitmask to <code>no</code> entries shown; then you can built a new mask. So owner,none,any,none,delete would show deleted entries. If the value after all commandline parsing is none, it is reset to the default. </p>
@@ -110,16 +110,16 @@ description: "FSVS – fast versioning tool"
 <p> Here you can define the behaviour for certain situations that should not normally happen, but which you might encounter. </p>
 <p> The general format here is <i>specification</i> = <i>action</i>, where <i>specification</i> is a string matching the start of at least one of the defined situations, and <i>action</i> is one of these:</p>
 <dl>
-<dt>*</p>
-<dd> <i>once</i> to print only a single warning,</p>
-<dt>*</p>
-<dd> <i>always</i> to print a warning message <code>every</code> time,</p>
-<dt>*</p>
-<dd> <i>stop</i> to abort the program,</p>
-<dt>*</p>
-<dd> <i>ignore</i> to simply ignore this situation, or</p>
-<dt>*</p>
-<dd> <i>count</i> to just count the number of occurrences.</dl>
+<dt>*</dt>
+<dd> <i>once</i> to print only a single warning,</dd>
+<dt>*</dt>
+<dd> <i>always</i> to print a warning message <code>every</code> time,</dd>
+<dt>*</dt>
+<dd> <i>stop</i> to abort the program,</dd>
+<dt>*</dt>
+<dd> <i>ignore</i> to simply ignore this situation, or</dd>
+<dt>*</dt>
+<dd> <i>count</i> to just count the number of occurrences.</dd></dl>
 <p> If <i>specification</i> matches more than one situation, all of them are set; eg. for <i>meta=ignore</i> all of <i>meta-mtime</i>, <i>meta-user</i> etc. are ignored. </p>
 <p> If at least a single warning that is <code>not</code> ignored is encountered during the program run, a list of warnings along with the number of messages it would have printed with the setting <i>always</i> is displayed, to inform the user of possible problems. </p>
 <p> The following situations can be handled with this: <i>meta-mtime</i>, <i>meta-user</i>, <i>meta-group</i>, <i>meta-umask</i> These warnings are issued if a meta-data property that was fetched from the repository couldn&#8217;t be parsed. This can only happen if some other program or a user changes properties on entries. </p>
@@ -145,7 +145,7 @@ description: "FSVS – fast versioning tool"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The second revision specification will be used for eg. the <code>diff</code> command; but this is not yet implemented.</dl>
+</dt><dd> The second revision specification will be used for eg. the <code>diff</code> command; but this is not yet implemented.</dd></dl>
 <h3>-o [name[=value]] &#8212; other options</h3>
 <p> This is used for setting some seldom used option, for which default can be set in a configuration file (to be implemented, currently only command-line). </p>
 <p> For a list of these please see <code>Further options for FSVS.</code>. </p>
@@ -168,7 +168,7 @@ description: "FSVS – fast versioning tool"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This loads the wc data, writes the given paths with some flags to it, and saves the wc data again.</dl>
+</dt><dd> This loads the wc data, writes the given paths with some flags to it, and saves the wc data again.</dd></dl>
 <h2>unversion</h2>
 <pre>
  fsvs unversion PATH [PATH...]
@@ -193,7 +193,7 @@ description: "FSVS – fast versioning tool"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> If you didn&#8217;t use some kind of escaping for the pattern, the shell would expand it to the actual filenames, which is (normally) not what you want.</dl>
+</dt><dd> If you didn&#8217;t use some kind of escaping for the pattern, the shell would expand it to the actual filenames, which is (normally) not what you want.</dd></dl>
 <h2>_build_new_list</h2>
 <p> This is used mainly for debugging. It traverses the filesystem and build a new entries file. In production it should not be used &#8211; as the revision of the entries is unknown, we can only use 0 &#8211; and loose information this way! </p>
 <h2>delay</h2>
@@ -252,7 +252,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Or TODO: There will be differences in the exact usage &#8211; copy will try to run the cp command, whereas copied will just remember the relation.</dl>
+</dt><dd> Or TODO: There will be differences in the exact usage &#8211; copy will try to run the cp command, whereas copied will just remember the relation.</dd></dl>
 <p> If this command are used without parameters, the currently defined relations are printed; please keep in mind that the <code>key</code> is the destination name, ie. the 2nd line of each pair! </p>
 <p> The input format for load is newline-separated &#8211; first a SRC line, followed by a DEST line, then an line with just a dot (&#8216;.&#8217;) as delimiter. If you&#8217;ve got filenames with newlines or other special characters, you have to give the paths as arguments. </p>
 <p> Internally the paths are stored relative to the working copy base directory, and they&#8217;re printed that way, too. </p>
@@ -260,13 +260,13 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> <code>Important:</code> User-defined properties like <code>fsvs:commit-pipe</code> are <code>not</code> copied to the destinations, because of space/time issues (traversing through entire subtrees, copying a lot of property-files) and because it&#8217;s not sure that this is really wanted. <code>TODO:</code> option for copying properties? </p>
+</dt><dd> <code>Important:</code> User-defined properties like <code>fsvs:commit-pipe</code> are <code>not</code> copied to the destinations, because of space/time issues (traversing through entire subtrees, copying a lot of property-files) and because it&#8217;s not sure that this is really wanted. <code>TODO:</code> option for copying properties? </dd>
 <p> As subversion currently treats a rename as copy+delete, the <code>mv</code> command is an alias to <code>cp</code>.</dl>
 <p> If you have a need to give the filenames dump or load as first parameter for copyfrom relations, give some path, too, as in ./dump. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The source is internally stored as URL with revision number, because else an operation like </p>
+</dt><dd> The source is internally stored as URL with revision number, because else an operation like </dd>
 <pre>
    $ fsvs cp a b
    $ rm a/1
@@ -310,7 +310,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Only <code>md5</code>, <code>name</code> and <code>inode</code> matching currently done. </p>
+</dt><dd> Only <code>md5</code>, <code>name</code> and <code>inode</code> matching currently done. </dd>
 <p> If too many possible matches are found, not all may be printed; only the indicator &#8230; is shown at the end.</dl>
 <h2>uncp</h2>
 <pre>
@@ -350,7 +350,8 @@ fsvs checkout[path] URL[URLs...]
 <p>fsvs ignore dump | load<br />
                        fsvs ignore[prepend | append | at = n] pattern[pattern&#8230;]</p>
 <p> This command adds patterns to the end of the ignore list, or, with <i>prepend</i> , puts them at the beginning of the list. With at=x the patterns are inserted at the position x , counting from 0. </p>
-<p> fsvs dump prints the patterns to STDOUT . If there are special characters like CR or LF embedded in the pattern <code>without encoding</code> (like  or 
+<p> fsvs dump prints the patterns to STDOUT . If there are special characters like CR or LF embedded in the pattern <code>without encoding</code> (like 
+ or 
 ), the output will be garbled. </p>
 <p> The patterns may include * and ? as wildcards in one directory level, or ** for arbitrary strings. </p>
 <p> These patterns are only matched against new files; entries that are already versioned are not invalidated. If the given path matches a new directory, entries below aren&#8217;t found, either; but if this directory or entries below are already versioned, the pattern doesn&#8217;t work, as the match is restricted to the directory. </p>
@@ -381,7 +382,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Please take care that your wildcard patterns are not expanded by the shell!</dl>
+</dt><dd> Please take care that your wildcard patterns are not expanded by the shell!</dd></dl>
 <h2>rign</h2>
 <p>fsvs rel &#8211; ignore[prepend | append | at = n] path &#8211; spec[path &#8211; spec&#8230;] fsvs ri[prepend | append | at = n] path &#8211; spec[path &#8211; spec&#8230;]</p>
 <p> If you use more than a single working copy for the same data, it will be stored in different paths &#8211; and that makes absolute ignore patterns infeasible. But relative ignore patterns are anchored at the beginning of the WC root &#8211; which is a bit tiring if you&#8217;re deep in your WC hierarchy and want to ignore some files. </p>
@@ -389,7 +390,6 @@ fsvs checkout[path] URL[URLs...]
 <p> Example for /etc as working copy root: </p>
 <pre>
         fsvs rel-ignore '/etc/X11/xorg.conf.*'
- 
         cd /etc/X11
         fsvs rel-ignore 'xorg.conf.*'
 </pre>
@@ -397,7 +397,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This works only for <code>shell patterns</code>.</dl>
+</dt><dd> This works only for <code>shell patterns</code>.</dd></dl>
 <p> For more details about ignoring files please see the <code>ignore</code> command and <code>Using ignore patterns</code>. </p>
 <h2>info</h2>
 <p>fsvs info[-R[-R]][PATH&#8230;]</p>
@@ -429,12 +429,12 @@ fsvs checkout[path] URL[URLs...]
 <p> There is an option controlling the output format; see <code>&#8216;fsvs log&#8217; output format</code>. </p>
 <p> TODOs:</p>
 <dl>
-<dt>*</p>
-<dd> &#8211;stop-on-copy</p>
-<dt>*</p>
-<dd> Show revision for <code>all</code> URLs associated with a working copy? In which order?</p>
-<dt>*</p>
-<dd> A URL-parameter, to specify the log URL. (Name)</dl>
+<dt>*</dt>
+<dd> &#8211;stop-on-copy</dd>
+<dt>*</dt>
+<dd> Show revision for <code>all</code> URLs associated with a working copy? In which order?</dd>
+<dt>*</dt>
+<dd> A URL-parameter, to specify the log URL. (Name)</dd></dl>
 <h2>prop-get</h2>
 <pre>
  fsvs prop-get PROPERTY-NAME PATH...
@@ -443,7 +443,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Be careful! This command will dump the property <code>as it is</code>, ie. with any special characters! If there are escape sequences or binary data in the property, your terminal might get messed up! </p>
+</dt><dd> Be careful! This command will dump the property <code>as it is</code>, ie. with any special characters! If there are escape sequences or binary data in the property, your terminal might get messed up! </dd>
 <p>&nbsp;<wbr>If you want a safe way to look at the properties, use prop-list with the -v parameter.</dl>
 <h2>prop-set</h2>
 <pre>
@@ -453,7 +453,7 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Some property prefixes are reserved; currently everything starting with svn: throws a (fatal) warning, and fsvs: is already used, too. See <code>Special property names</code>.</dl>
+</dt><dd> Some property prefixes are reserved; currently everything starting with svn: throws a (fatal) warning, and fsvs: is already used, too. See <code>Special property names</code>.</dd></dl>
 <h2>prop-del</h2>
 <pre>
  fsvs prop-del PROPERTY-NAME PATH...
@@ -482,14 +482,14 @@ fsvs checkout[path] URL[URLs...]
 <p>fsvs revert[-rRev][-R] PATH[PATH&#8230;]</p>
 <p> This command undoes local modifications:</p>
 <dl>
-<dt>*</p>
-<dd> An entry that is marked to be unversioned gets this flag removed.</p>
-<dt>*</p>
-<dd> For a already versioned entry (existing in the repository), the local entry is replaced with its repository version, and its status and flags are cleared.</p>
-<dt>*</p>
-<dd> An entry that is a copy destination, but modified, gets reverted to the copy source data.</p>
-<dt>*</p>
-<dd> An unmodified direct copy destination entry, and other uncommitted entries with special flags (manually added, or defined as copied), are changed back to <i>&#8216;N&#8217;</i>ew &#8212; the copy definition and the special status is removed. </p>
+<dt>*</dt>
+<dd> An entry that is marked to be unversioned gets this flag removed.</dd>
+<dt>*</dt>
+<dd> For a already versioned entry (existing in the repository), the local entry is replaced with its repository version, and its status and flags are cleared.</dd>
+<dt>*</dt>
+<dd> An entry that is a copy destination, but modified, gets reverted to the copy source data.</dd>
+<dt>*</dt>
+<dd> An unmodified direct copy destination entry, and other uncommitted entries with special flags (manually added, or defined as copied), are changed back to <i>&#8216;N&#8217;</i>ew &#8212; the copy definition and the special status is removed. </dd>
 <p>&nbsp;<wbr>Please note that on implicitly copied entries&nbsp;<wbr>(entries that are marked as copied because some parent directory is the base of a copy)&nbsp;<wbr><code>cannot</code>&nbsp;<wbr>be un-copied;&nbsp;<wbr>they can only be reverted to their original&nbsp;<wbr>(copied-from)&nbsp;<wbr>data, or removed.</dl>
 <p> See also <code>HOWTO: Understand the entries&#8217; statii</code>. </p>
 <p> If a directory is given on the command line <code>all known entries in this directory</code> are reverted to the old state; this behaviour can be modified with <code>-R/-N</code>, or see below. </p>
@@ -498,15 +498,15 @@ fsvs checkout[path] URL[URLs...]
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Please note that mixed revision working copies are not possible; the <i>BASE</i> revision is not changed, and a simple revert without a revision arguments gives you that.</dl>
+</dt><dd> Please note that mixed revision working copies are not possible; the <i>BASE</i> revision is not changed, and a simple revert without a revision arguments gives you that.</dd></dl>
 <h3>Difference to update</h3>
 <p> If you find that something doesn&#8217;t work as it should, you can revert entries until you are satisfied, and directly <code>commit</code> the new state. </p>
 <p> In contrast, if you <code>update</code> to an older version, you</p>
 <dl>
-<dt>*</p>
-<dd> cannot choose single entries (no mixed revision working copies),</p>
-<dt>*</p>
-<dd> and you cannot commit the old version with changes, as later changes will create conflicts in the repository.</dl>
+<dt>*</dt>
+<dd> cannot choose single entries (no mixed revision working copies),</dd>
+<dt>*</dt>
+<dd> and you cannot commit the old version with changes, as later changes will create conflicts in the repository.</dd></dl>
 <h3>Currently only known entries are handled.</h3>
 <p> If you need a switch (like &#8211;delete in <a href="/docs/linux/man/1-rsync/">rsync</a>(1) ) to remove unknown (new, not yet versioned) entries, to get the directory in the exact state it is in the repository, say so. </p>
 <h3>If a path is specified whose parent is missing, 

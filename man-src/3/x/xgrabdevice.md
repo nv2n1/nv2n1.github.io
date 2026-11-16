@@ -50,7 +50,7 @@ grab_window if selected. If owner_events is True and if a
 generated device event would normally be reported to this
 client, it is reported normally; otherwise, the event is
 reported with respect to the grab_window, and is only reported
-if specified in the event_list.</pre></dl><dl COMPACT><dd><pre>If the this_device_mode argument is GrabModeAsync, device event
+if specified in the event_list.</pre></dd></dl><dl COMPACT><dd><pre>If the this_device_mode argument is GrabModeAsync, device event
 processing continues as usual. If the device is currently
 frozen by this client, then processing of device events is
 resumed. If the this_device_mode argument is GrabModeSync, the
@@ -59,7 +59,7 @@ freeze, and the X server generates no further device events
 until the grabbing client issues a releasing XAllowDeviceEvents
 call or until the device grab is released. Actual device
 changes are not lost while the device is frozen; they are
-simply queued in the server for later processing.</pre></dl><dl COMPACT><dd><pre>If other_devices_mode is GrabModeAsync, processing of events
+simply queued in the server for later processing.</pre></dd></dl><dl COMPACT><dd><pre>If other_devices_mode is GrabModeAsync, processing of events
 from other devices is unaffected by activation of the grab. If
 other_devices_mode is GrabModeSync, the state of all devices
 except the grabbed device (as seen by client applications)
@@ -67,7 +67,7 @@ appears to freeze, and the X server generates no further events
 from those devices until the grabbing client issues a releasing
 XAllowDeviceEvents call or until the device grab is released.
 Actual events are not lost while the devices are frozen; they
-are simply queued in the server for later processing.</pre></dl><dl COMPACT><dd><pre>If the device is actively grabbed by some other client,
+are simply queued in the server for later processing.</pre></dd></dl><dl COMPACT><dd><pre>If the device is actively grabbed by some other client,
 XGrabDevice fails and returns AlreadyGrabbed. If grab_window is
 not viewable, it fails and returns GrabNotViewable. If the
 device is frozen by an active grab of another client, it fails
@@ -75,11 +75,11 @@ and returns GrabFrozen. If the specified time is earlier than
 the last-device-grab time or later than the current X server
 time, it fails and returns GrabInvalidTime. Otherwise, the
 last-device-grab time is set to the specified time
-(CurrentTime is replaced by the current X server time).</pre></dl><dl COMPACT><dd><pre>If a grabbed device is closed by a client while an active grab
+(CurrentTime is replaced by the current X server time).</pre></dd></dl><dl COMPACT><dd><pre>If a grabbed device is closed by a client while an active grab
 by that client is in effect, the active grab is released. If
 the device is frozen only by an active grab of the requesting
-client, it is thawed.</pre></dl><dl COMPACT><dd><pre>XGrabDevice can generate BadClass, BadDevice, BadValue, and
-BadWindow errors.</pre></dl><dl COMPACT><dd><pre>The XUngrabDevice request releases the device and any queued
+client, it is thawed.</pre></dd></dl><dl COMPACT><dd><pre>XGrabDevice can generate BadClass, BadDevice, BadValue, and
+BadWindow errors.</pre></dd></dl><dl COMPACT><dd><pre>The XUngrabDevice request releases the device and any queued
 events if this client has it actively grabbed from either
 XGrabDevice or XGrabDeviceKey. If other devices are frozen by
 the grab, XUngrabDevice thaws them.XUngrabDevice does not
@@ -88,15 +88,15 @@ is earlier than the last-device-grab time or is later than the
 current X server time. It also generates DeviceFocusIn and
 DeviceFocusOut events. The X server automatically performs an
 UngrabDevice request if the event window for an active device
-grab becomes not viewable.</pre></dl><dl COMPACT><dd><pre>XUngrabDevice can generate a BadDevice error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+grab becomes not viewable.</pre></dd></dl><dl COMPACT><dd><pre>XUngrabDevice can generate a BadDevice error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadValue
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDeviceButton(3), XGrabDeviceKey(3)</pre></dl>
+ Window.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDeviceButton(3), XGrabDeviceKey(3)</pre></dd></dl>

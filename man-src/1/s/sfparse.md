@@ -20,7 +20,7 @@ description: "sfparse – string file parse"
 <h2>HISTORY</h2>
 <dl>
 <dt>
-<dd> Written in 1999. </p>
+</dt><dd> Written in 1999. </dd>
 <p> This manual page first appeared in gnustep-base 1.9.2 (March 2004). </p>
 </dl>
 <h2>AUTHORS</h2>

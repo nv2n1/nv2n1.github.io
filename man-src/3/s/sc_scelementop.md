@@ -11,100 +11,36 @@ description: "sc::SCElementOp –"
 <p> Objects of class <code>SCElementOp</code> are used to perform operations on the elements of matrices.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;elemop.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::BlockedSCElementOp</code>, <code>sc::OneBodyIntOp</code>, <code>sc::SCElementAccumulateDiagSCMatrix</code>, <code>sc::SCElementAccumulateSCMatrix</code>, <code>sc::SCElementAccumulateSCVector</code>, <code>sc::SCElementAccumulateSymmSCMatrix</code>, <code>sc::SCElementAssign</code>, <code>sc::SCElementDot</code>, <code>sc::SCElementInvert</code>, <code>sc::SCElementKNorm</code>, <code>sc::SCElementMaxAbs</code>, <code>sc::SCElementMinAbs</code>, <code>sc::SCElementRandomize</code>, <code>sc::SCElementScale</code>, <code>sc::SCElementScaleDiagonal</code>, <code>sc::SCElementShiftDiagonal</code>, <code>sc::SCElementSquareRoot</code>, and <code>sc::SCElementSumAbs</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SCElementOp (StateIn &amp;s)
-
-
-
 virtual int has_collect ()
-
-
 If duplicates of the SCElementOp exist (that is, there is more than one node), then if has_collect returns nonzero then collect is called with a MessageGrp reference after all of the blocks have been processed.
-
-
 virtual void defer_collect (int)
-
-
-
 virtual void collect (const Ref&lt; MessageGrp &gt; &amp;)
-
-
-
 virtual void collect (const Ref&lt; SCElementOp &gt; &amp;)
-
-
 Multithreaded use of cloneable SCElementOp objects requires that data from cloned objects be collected.
-
-
 virtual int has_side_effects ()
-
-
 By default this returns nonzero.
-
-
 virtual bool threadsafe ()
-
-
 Returns true if this SCElementOp is threadsafe.
-
-
 virtual bool cloneable ()
-
-
 Returns true if this SCElementOp supports the cloneable member.
-
-
 virtual Ref&lt; SCElementOp &gt; clone ()
-
-
 Returns a clone of this object.
-
-
 virtual void process (SCMatrixBlockIter &amp;)=0
-
-
 This is the fallback routine to process blocks and is called by process_spec members that are not overridden.
-
-
 void process_base (SCMatrixBlock *block)
-
-
 Lazy matrix implementors can call this member when the type of block specialization is unknown.
-
-
 virtual void process_spec_rect (SCMatrixRectBlock *)
-
-
 Matrices should call these members when the type of block is known.
-
-
 virtual void process_spec_ltri (SCMatrixLTriBlock *)
-
-
-
 virtual void process_spec_diag (SCMatrixDiagBlock *)
-
-
-
 virtual void process_spec_vsimp (SCVectorSimpleBlock *)
-
-
-
 virtual void process_spec_rectsub (SCMatrixRectSubBlock *)
-
-
-
 virtual void process_spec_ltrisub (SCMatrixLTriSubBlock *)
-
-
-
 virtual void process_spec_diagsub (SCMatrixDiagSubBlock *)
-
-
-
 virtual void process_spec_vsimpsub (SCVectorSimpleSubBlock *)</code></pre>
 <h2>Detailed Description</h2>
 <p>Objects of class <code>SCElementOp</code> are used to perform operations on the elements of matrices. </p>

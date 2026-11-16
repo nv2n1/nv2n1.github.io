@@ -15,18 +15,18 @@ description: "xl2tpd – Layer 2 Tunnelling Protocol Daemon"
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.xelerance.com/software/xl2tpd/">http://www.xelerance.com/software/xl2tpd/</a> xl2tpd implements the Layer 2 Tunnelling Protocol, defined by RFC 2661. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd>This option prevents xl2tpd from detaching from the terminal and daemonizing. </p>
-<dt><code>-l</code></p>
-<dd>This option tells xl2tpd to use syslog for logging even when <code>-D</code> was specified. </p>
-<dt><code>-c &lt;config file&gt;</code></p>
-<dd>Tells xl2tpd to use an alternate config file. Default is /etc/xl2tpd/xl2tpd.conf. Fallback configuration file is /etc/l2tpd/l2tpd.conf </p>
-<dt><code>-s &lt;secret file&gt;</code></p>
-<dd>Tells xl2tpd to use an alternate &quot;secrets&quot; file. Default is /etc/xl2tpd/l2tp-secrets </p>
-<dt><code>-p &lt;pid file&gt;</code></p>
-<dd>Tells xl2tpd to use an alternate pid file. Default is /var/run/xl2tpd/xl2tpd.pid </p>
-<dt><code>-C &lt;control file&gt;</code></p>
-<dd>Tells xl2tpd to use an alternate control file. Default is /var/run/xl2tpd/l2tp-control </p>
+<dt><code>-D</code></dt>
+<dd>This option prevents xl2tpd from detaching from the terminal and daemonizing. </dd>
+<dt><code>-l</code></dt>
+<dd>This option tells xl2tpd to use syslog for logging even when <code>-D</code> was specified. </dd>
+<dt><code>-c &lt;config file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate config file. Default is /etc/xl2tpd/xl2tpd.conf. Fallback configuration file is /etc/l2tpd/l2tpd.conf </dd>
+<dt><code>-s &lt;secret file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate &quot;secrets&quot; file. Default is /etc/xl2tpd/l2tp-secrets </dd>
+<dt><code>-p &lt;pid file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate pid file. Default is /var/run/xl2tpd/xl2tpd.pid </dd>
+<dt><code>-C &lt;control file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate control file. Default is /var/run/xl2tpd/l2tp-control </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/xl2tpd/xl2tpd.conf /etc/xl2tpd/l2tp-secrets /var/run/xl2tpd/l2tp-control</p>

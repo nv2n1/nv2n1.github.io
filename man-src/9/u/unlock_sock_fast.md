@@ -14,10 +14,10 @@ description: "unlock_sock_fast – complement of lock_sock_fast"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>socket</dl>
+</dd><dd>socket</dd></dl>
 <p> <i>slow</i></p>
 <dl>
-<dd>slow mode</dl>
+<dd>slow mode</dd></dl>
 <h2>Description</h2>
 <p>fast unlock socket for user context. If slow mode is on, we call regular <code>release_sock</code></p>
 <h2>Copyright</h2>

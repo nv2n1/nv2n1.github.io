@@ -15,11 +15,11 @@ snd_soc_remove_dai_link - Remove a DAI link from the list
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>The ASoC card that owns the link</dl>
+<dl><dd></dd><dd>The ASoC card that owns the link</dd></dl>
  
 
  <i>dai_link</i>
-<dl><dd>The DAI link to remove</dl>
+<dl><dd>The DAI link to remove</dd></dl>
 
 <h2>Description</h2>
 

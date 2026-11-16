@@ -15,17 +15,17 @@ description: "ipxd – IPX RIP/SAP daemon program"
 <h2>Options</h2>
 <p><code>-d</code></p>
 <dl>
-<dd>With option <code>-d,</code> ipxd does not daemonize itself and logs the IPX traffic it receives and sends out to the log file.</dl>
+<dd>With option <code>-d,</code> ipxd does not daemonize itself and logs the IPX traffic it receives and sends out to the log file.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>With option <code>-p,</code> ipxd works in passive mode. This means it does not output any response on the net. It does not broadcast its internal tables, and does not answer requests. This makes it suitable for use in a normal IPX workstation, which should not act as a router. By starting ipxd in passive mode, the kernel routing tables are kept up to date. This means that utilities like slist or nprint do not have to run suid root, to be able to add IPX routing table entries. </p>
+<dd>With option <code>-p,</code> ipxd works in passive mode. This means it does not output any response on the net. It does not broadcast its internal tables, and does not answer requests. This makes it suitable for use in a normal IPX workstation, which should not act as a router. By starting ipxd in passive mode, the kernel routing tables are kept up to date. This means that utilities like slist or nprint do not have to run suid root, to be able to add IPX routing table entries. </dd>
 <p> It is not possible to use ipxd in passive mode when you have an internal net, because other IPX nodes must know how to reach the internal net. They can only know it if ipxd tells them where the internal net is.</dl>
 <p> <code>-l</code> <i>logfile</i></p>
 <dl>
-<dd>With this option you can tell ipxd where to put its log output. The default is /dev/null.</dl>
+<dd>With this option you can tell ipxd where to put its log output. The default is /dev/null.</dd></dl>
 <p> <code>-t</code> <i>ticks_file</i></p>
 <dl>
-<dd>With this option you can override the default file name for the ticks file. The default is /etc/ipx_ticks. See <a href="/docs/linux/man/5-ipx_ticks/">ipx_ticks</a>(5) for more information. </p>
+<dd>With this option you can override the default file name for the ticks file. The default is /etc/ipx_ticks. See <a href="/docs/linux/man/5-ipx_ticks/">ipx_ticks</a>(5) for more information. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/ipx_ticks</p>

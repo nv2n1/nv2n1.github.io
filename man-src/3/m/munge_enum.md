@@ -25,12 +25,12 @@ description: "munge_enum_is_valid, munge_enum_int_to_str, munge_enum_str_to_int 
 <h2>Enum Types</h2>
 <p>The following enumeration types can be specified.</p>
 <dl COMPACT>
-<dt><code>MUNGE_ENUM_CIPHER</code></p>
-<dd>Specify enumerations for the available cipher types.</p>
-<dt><code>MUNGE_ENUM_MAC</code></p>
-<dd>Specify enumerations for the available MAC types.</p>
-<dt><code>MUNGE_ENUM_ZIP</code></p>
-<dd>Specify enumerations for the available compression types. </p>
+<dt><code>MUNGE_ENUM_CIPHER</code></dt>
+<dd>Specify enumerations for the available cipher types.</dd>
+<dt><code>MUNGE_ENUM_MAC</code></dt>
+<dd>Specify enumerations for the available MAC types.</dd>
+<dt><code>MUNGE_ENUM_ZIP</code></dt>
+<dd>Specify enumerations for the available compression types. </dd>
 </dl>
 <h2>Errors</h2>
 <p>Refer to <code><a href="/docs/linux/man/3-munge/">munge</a></code>(3) for a complete list of errors. </p>

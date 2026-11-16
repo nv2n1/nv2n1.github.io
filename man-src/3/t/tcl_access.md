@@ -16,9 +16,9 @@ int
 <code>Tcl_Stat</code>(<i>path</i>, <i>statPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>char <i>*path</i> (in) Native name of the file to check the attributes of.</p>
-<dd>int <i>mode</i> (in) Mask consisting of one or more of R_OK, W_OK, X_OK and F_OK. R_OK, W_OK and X_OK request checking whether the file exists and has read, write and execute permissions, respectively. F_OK just requests checking for the existence of the file.</p>
-<dd>struct stat <i>*statPtr</i> (out) The structure that contains the result. </p>
+<dd>char <i>*path</i> (in) Native name of the file to check the attributes of.</dd>
+<dd>int <i>mode</i> (in) Mask consisting of one or more of R_OK, W_OK, X_OK and F_OK. R_OK, W_OK and X_OK request checking whether the file exists and has read, write and execute permissions, respectively. F_OK just requests checking for the existence of the file.</dd>
+<dd>struct stat <i>*statPtr</i> (out) The structure that contains the result. </dd>
 </dl>
 <h2>Description</h2>
 <p>As of Tcl 8.4, the object-based APIs <code>Tcl_FSAccess</code> and <code>Tcl_FSStat</code> should be used in preference to <code>Tcl_Access</code> and <code>Tcl_Stat</code>, wherever possible. </p>

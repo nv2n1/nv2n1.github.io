@@ -24,7 +24,7 @@ description: "QuantLib::MersenneTwisterUniformRng – Uniform random number gene
 <p> For more details see <a rel="nofollow" href="http://www.math.keio.ac.jp/matumoto/emt.html">http://www.math.keio.ac.jp/matumoto/emt.html</a> </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against known good results.</dl>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>MersenneTwisterUniformRng</code> (unsigned long seed = 0) [explicit]</h3>
 <p>if the given seed is 0, a random seed will be chosen based on clock()</p>

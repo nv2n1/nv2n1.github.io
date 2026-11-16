@@ -19,18 +19,18 @@ description: "dggbak.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGBAK forms the right or left eigenvectors of a real generalized
  eigenvalue problem A*x = lambda*B*x, by backward transformation on
  the computed eigenvectors of the balanced pair of matrices output by
  DGGBAL.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
 JOB is CHARACTER * 1 Specifies the type of backward transformation required : = 'N' : do nothing, return immediately;
           = 'P':  do backward transformation for permutation only;
@@ -100,24 +100,25 @@ ILO = 1 and IHI = 0, if N = 0.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   See R.C. Ward, Balancing the generalized eigenvalue problem,
                  SIAM J. Sci. Stat. Comp. 2 (1981), 141-152.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 147 of file dggbak.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

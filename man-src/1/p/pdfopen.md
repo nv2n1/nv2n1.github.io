@@ -14,18 +14,18 @@ description: "pdfopen, pdfclose – open or close a PDF file viewer"
  <code>pdfclose</code> [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help, -?</code></p>
-<dd> output help and exit.</p>
-<dt><code>-v, &#8211;version, -V</code></p>
-<dd> output the version number and exit.</p>
-<dt><code>-p &lt;n&gt;, &#8211;page &lt;n&gt;</code></p>
-<dd> when starting the viewer, display page &lt;n&gt; of the document (notes: not all viewers support this feature, and even in those cases this option only has effect when the document is initially loaded). This option is over-ridden by <code>-g</code>.</p>
-<dt><code>-g &lt;named destination&gt;, &#8211;goto &lt;named destination&gt;</code></p>
-<dd> when starting the viewer, display the page of the document containing the named destination (notes: not all viewers support this feature, and even in those cases this option only has effect when the document is initially loaded).</p>
-<dt><code>-r, &#8211;reset_focus</code></p>
-<dd> after sending commands to the PDF viewer, attempt to reset the input focus to the window which had focus before the commands were sent.</p>
-<dt><code>-viewer, &#8211;viewer &lt;</code><i>ar9</i>|<i>ar9-tab</i>|<i>ar8</i>|<i>ar7</i>|<i>ar5</i>|<i>xpdf</i>|<i>evince</i>&gt;</p>
-<dd> use (respectively) Adobe Reader 9 (in a new window), Adobe Reader 9 (in a new tab of a running AR9, if any), Adobe Reader 8, Adobe Reader 7, Adobe Reader 5, xpdf or evince as the PDF viewer program. Adobe Reader 9 (in a new window) is the default.</dl>
+<dt><code>-h, &#8211;help, -?</code></dt>
+<dd> output help and exit.</dd>
+<dt><code>-v, &#8211;version, -V</code></dt>
+<dd> output the version number and exit.</dd>
+<dt><code>-p &lt;n&gt;, &#8211;page &lt;n&gt;</code></dt>
+<dd> when starting the viewer, display page &lt;n&gt; of the document (notes: not all viewers support this feature, and even in those cases this option only has effect when the document is initially loaded). This option is over-ridden by <code>-g</code>.</dd>
+<dt><code>-g &lt;named destination&gt;, &#8211;goto &lt;named destination&gt;</code></dt>
+<dd> when starting the viewer, display the page of the document containing the named destination (notes: not all viewers support this feature, and even in those cases this option only has effect when the document is initially loaded).</dd>
+<dt><code>-r, &#8211;reset_focus</code></dt>
+<dd> after sending commands to the PDF viewer, attempt to reset the input focus to the window which had focus before the commands were sent.</dd>
+<dt><code>-viewer, &#8211;viewer &lt;</code><i>ar9</i>|<i>ar9-tab</i>|<i>ar8</i>|<i>ar7</i>|<i>ar5</i>|<i>xpdf</i>|<i>evince</i>&gt;</dt>
+<dd> use (respectively) Adobe Reader 9 (in a new window), Adobe Reader 9 (in a new tab of a running AR9, if any), Adobe Reader 8, Adobe Reader 7, Adobe Reader 5, xpdf or evince as the PDF viewer program. Adobe Reader 9 (in a new window) is the default.</dd></dl>
 <h2>RATIONALE</h2>
 <p> At certain points of TeX document preparation, many people repeat a &quot;edit-compile-view&quot; cycle. Since PDF viewers such as Adobe&#8217;s Acrobat Reader (&quot;<code>acroread</code>&quot;) do not automatically refresh the display when the PDF file changes, this cycle can be more cumbersome than desired. The <code>pdfopen</code> program provides the ability to automate the reloading of the PDF document when it is changed. </p>
 <p> Note: there seems to be little need for <code>pdfclose</code> under GNU/Linux, since (unlike the situation for MS windows) <code>acroread</code> does not lock the PDF file, which would prevent <code>pdftex</code> (or a DVI to PDF converter) from creating a new version of the PDF output file. However, <code>pdfclose</code> is provided in case someone finds it useful.</p>

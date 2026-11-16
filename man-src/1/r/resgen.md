@@ -17,11 +17,13 @@ description: "resgen, resgen2 – Mono/CLI Resource Generator"
 <p> Convert a resource file from one format to another. </p>
 <p> The currently supported formats are text, resources, resx and po.</p>
 <dl>
-<dt><i>.txt, .text</i></p>
+<dt><i>.txt, .text</i></dt>
 <dd>
 <p> Used to process text files, the format of the text file is of the form: </p>
 <pre>
         key=value
 </pre>
 <p> The value argument can contain special characters as long as they are escaped. The escape sequences currently supported are 
-, , 	, \ (to get the escape sequence itself) and with resgen2 unicode escape sequences are supported with the 
+, 
+, 	, \ (to get the escape sequence itself) and with resgen2 unicode escape sequences are supported with the 
+</p></dd></dl>

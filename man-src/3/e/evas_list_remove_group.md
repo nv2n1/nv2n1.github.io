@@ -22,10 +22,10 @@ description: "Linked List Remove Functions – Functions that remove data from l
 <p>Free an entire list and all the nodes, ignoring the data contained. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to free</dl>
+<dd><i>list</i> The list to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A NULL pointer</dl>
+<dd>A NULL pointer</dd></dl>
 <p> This function will free all the list nodes in list specified by list. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -39,10 +39,10 @@ description: "Linked List Remove Functions – Functions that remove data from l
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given list.<br />
- <i>data</i> The specified data.</dl>
+ <i>data</i> The specified data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list pointer that should be used in place of the one passed to this functions.</dl>
+<dd>A new list pointer that should be used in place of the one passed to this functions.</dd></dl>
 <p> References _Evas_List::data, evas_list_remove_list(), and _Evas_List::next. </p>
 <p> Referenced by evas_event_feed_mouse_move(), evas_font_path_clear(), evas_free(), evas_object_clip_set(), evas_object_clip_unset(), evas_object_hide(), evas_object_polygon_points_clear(), evas_object_textblock_style_set(), evas_obscured_clear(), evas_render_method_list_free(), and evas_render_updates_free().</p>
 <h3>EAPI <code>Evas_List</code>* evas_list_remove_list (<code>Evas_List</code> * list, <code>Evas_List</code> * remove_list)</h3>
@@ -51,10 +51,10 @@ description: "Linked List Remove Functions – Functions that remove data from l
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list handle to remove remove_list from<br />
- <i>remove_list</i> The list node which is to be removed</dl>
+ <i>remove_list</i> The list node which is to be removed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new list handle to replace the old one</dl>
+<dd>A new list handle to replace the old one</dd></dl>
 <p> Calling this function takes the list node remove_list and removes it from the list list, freeing the list node structure remove_list. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;

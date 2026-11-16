@@ -93,3 +93,4 @@ b&quot; because LF is no longer a newline. If more than one of these settings is
 <p>A second use of backslash provides a way of encoding non-printing characters in patterns in a visible manner. There is no restriction on the appearance of non-printing characters, apart from the binary zero that terminates a pattern, but when a pattern is being prepared by text editing, it is often easier to use one of the following escape sequences than the binary character it represents. In an ASCII or Unicode environment, these escapes are as follows: </p>
 <p>&nbsp;<wbr>&nbsp;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;alarm, that is, the BEL character&nbsp;(hex 07)<br />
 &nbsp;<wbr>&nbsp;
+</p>

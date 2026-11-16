@@ -15,7 +15,7 @@ snd_ctl_unregister_ioctl - de-register the device-specific control-ioctls
 <h2>Arguments</h2>
 
 <i>fcn</i>
-<dl><dd><dd>ioctl callback function to unregister</dl>
+<dl><dd></dd><dd>ioctl callback function to unregister</dd></dl>
 
 <h2>Copyright</h2>
 

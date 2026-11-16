@@ -10,9 +10,7 @@ description: "std::time_put_byname – std::time_put_byname"
 <p>std::time_put_byname &#8211; std::time_put_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT, class OutputIterator = std::ostreambuf_iterator&lt;CharT&gt; &gt;
-
 class time_put_byname : public std::time_put&lt;CharT, OutputIterator&gt;;</code></pre>
 <p>std::time_put_byname is a std::time_put facet which encapsulates time and date formatting rules of the locale specified at its construction.<br />
 Two specializations are provided by the standard library<br />
@@ -55,14 +53,10 @@ put <i>(public member function of std::time_put&lt;CharT,OutputIt&gt;)</i></p>
 <p>This example prints current time using the &quot;C&quot; locale with the time_put facet replaced by various time_put_byname facets<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;codecvt&gt;
 int main()
-
 {
     std::time_t t = std::time(NULL);
     std::wbuffer_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; conv(std::cout.rdbuf());

@@ -11,10 +11,8 @@ std::less_equal&lt;void&gt; - std::less_equal&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class less_equal&lt;void&gt;;</code></pre> 
 std::less_equal&lt;&gt; is a specialization of std::less_equal with parameter and return type deduced. 
 

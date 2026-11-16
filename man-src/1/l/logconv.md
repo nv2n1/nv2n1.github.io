@@ -16,23 +16,23 @@ description: "logconv.pl – analyzes Directory Server access log files"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> help/usage</p>
-<dt><code>-d</code> &lt;Directory Managers DN&gt;</p>
-<dd> DEFAULT -&gt; cn=directory manager</p>
-<dt><code>-s</code> &lt;Number of results to return per category&gt;</p>
-<dd> DEFAULT -&gt; 20</p>
-<dt><code>-X</code> &lt;IP address to exclude from connection stats&gt;</p>
-<dd> E.g. Load balancers</p>
-<dt><code>-v</code> show version of tool</p>
-<dd> Print version of the tool</p>
-<dt><code>-S</code> &lt;time to begin analyzing logfile from&gt;</p>
-<dd> Time to begin analyzing logfile from E.g. [28/Mar/2002:13:14:22 <code>-0800]</code></p>
-<dt><code>-E</code> &lt;time to stop analyzing logfile&gt;</p>
-<dd> Time to stop analyzing logfile from E.g. [28/Mar/2002:13:24:62 <code>-0800]</code></p>
-<dt><code>-V</code> &lt;enable verbose output &#8211; includes all stats listed below&gt;</p>
-<dd> Verbose output</p>
-<dt><code>-[efcibaltnxgju]</code></p>
+<dt><code>-h</code></dt>
+<dd> help/usage</dd>
+<dt><code>-d</code> &lt;Directory Managers DN&gt;</dt>
+<dd> DEFAULT -&gt; cn=directory manager</dd>
+<dt><code>-s</code> &lt;Number of results to return per category&gt;</dt>
+<dd> DEFAULT -&gt; 20</dd>
+<dt><code>-X</code> &lt;IP address to exclude from connection stats&gt;</dt>
+<dd> E.g. Load balancers</dd>
+<dt><code>-v</code> show version of tool</dt>
+<dd> Print version of the tool</dd>
+<dt><code>-S</code> &lt;time to begin analyzing logfile from&gt;</dt>
+<dd> Time to begin analyzing logfile from E.g. [28/Mar/2002:13:14:22 <code>-0800]</code></dd>
+<dt><code>-E</code> &lt;time to stop analyzing logfile&gt;</dt>
+<dd> Time to stop analyzing logfile from E.g. [28/Mar/2002:13:24:62 <code>-0800]</code></dd>
+<dt><code>-V</code> &lt;enable verbose output &#8211; includes all stats listed below&gt;</dt>
+<dd> Verbose output</dd>
+<dt><code>-[efcibaltnxgju]</code></dt>
 <dd>
  <code>e</code> Error Code stats<br />
  <code>f</code> Failed Login Stats<br />
@@ -49,19 +49,19 @@ description: "logconv.pl – analyzes Directory Server access log files"
  <code>j</code> Recommendations<br />
  <code>u</code> Unindexed Search Stats<br />
  <code>y</code> Connection Latency Stats<br />
- <code>p</code> Open Connection ID Stats</dl>
+ <code>p</code> Open Connection ID Stats</dd></dl>
 <h2>USAGE</h2>
 <p> Examples:</p>
 <dl>
 <dt>
-<dd> logconv.pl <code>-s</code> 10 <code>-V</code> access</p>
+</dt><dd> logconv.pl <code>-s</code> 10 <code>-V</code> access</dd>
 <dt>
-<dd> logconv.pl <code>-d</code> &quot;cn=directory manager&quot; /export/server4/slapd-host/logs/access*</p>
+</dt><dd> logconv.pl <code>-d</code> &quot;cn=directory manager&quot; /export/server4/slapd-host/logs/access*</dd>
 <dt>
-<dd> logconv.pl <code>-s</code> 50 <code>-ibgju</code> access*</p>
+</dt><dd> logconv.pl <code>-s</code> 50 <code>-ibgju</code> access*</dd>
 <dt>
-<dd> logconv.pl <code>-S</code> &quot;[28/Mar/2002:13:14:22 <code>-0800]</code>&quot; <code>-E</code> &quot;[28/Mar/2002:13:50:05 <code>-0800]</code>&quot; <code>-e</code> access
-</dl>
+</dt><dd> logconv.pl <code>-S</code> &quot;[28/Mar/2002:13:14:22 <code>-0800]</code>&quot; <code>-E</code> &quot;[28/Mar/2002:13:50:05 <code>-0800]</code>&quot; <code>-e</code> access
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> logconv.pl was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

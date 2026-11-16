@@ -17,14 +17,14 @@ description: "dropbearconvert – convert between Dropbear and OpenSSH private k
 <p> Encrypted private keys are not supported, use <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1) to decrypt them first.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>input_type</i></p>
-<dd> Either <i>dropbear</i> or <i>openssh</i></p>
-<dt><i>output_type</i></p>
-<dd> Either <i>dropbear</i> or <i>openssh</i></p>
-<dt><i>input_file</i></p>
-<dd> An existing Dropbear or OpenSSH private key file</p>
-<dt><i>output_file</i></p>
-<dd> The path to write the converted private key file. For client authentication ~/.ssh/id_dropbear is loaded by default</dl>
+<dt><i>input_type</i></dt>
+<dd> Either <i>dropbear</i> or <i>openssh</i></dd>
+<dt><i>output_type</i></dt>
+<dd> Either <i>dropbear</i> or <i>openssh</i></dd>
+<dt><i>input_file</i></dt>
+<dd> An existing Dropbear or OpenSSH private key file</dd>
+<dt><i>output_file</i></dt>
+<dd> The path to write the converted private key file. For client authentication ~/.ssh/id_dropbear is loaded by default</dd></dl>
 <h2>EXAMPLE</h2>
 <p>&nbsp;<wbr>#&nbsp;<wbr>dropbearconvert openssh dropbear&nbsp;<wbr>~/.ssh/id_rsa&nbsp;<wbr>~/.ssh/id_dropbear</p>
 <h2>AUTHOR</h2>

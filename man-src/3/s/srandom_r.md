@@ -10,19 +10,15 @@ description: "random_r, srandom_r, initstate_r, setstate_r – reentrant random 
 <p>random_r, srandom_r, initstate_r, setstate_r &#8211; reentrant random number generator</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int random_r(struct random_data *buf, int32_t *result);
-
 int srandom_r(unsigned int seed, struct random_data *buf);
-
 int initstate_r(unsigned int seed, char *statebuf,
                 size_t statelen, struct random_data *buf);
-
 int setstate_r(char *statebuf, struct random_data *buf);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>random_r</code>(), <code>srandom_r</code>(), <code>initstate_r</code>(), <code>setstate_r</code>():</p>
 <dl>
 <dd>/* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions are the reentrant equivalents of the functions described in <code><a href="/docs/linux/man/3-random/">random</a></code>(3). They are suitable for use in multithreaded programs where each thread needs to obtain an independent, reproducible sequence of random numbers. </p>
 <p> The <code>random_r</code>() function is like <code><a href="/docs/linux/man/3-random/">random</a></code>(3), except that instead of using state information maintained in a global variable, it uses the state information in the argument pointed to by <i>buf</i>, which must have been previously initialized by <code>initstate_r</code>(). The generated random number is returned in the argument <i>result</i>. </p>
@@ -33,12 +29,12 @@ int setstate_r(char *statebuf, struct random_data *buf);</code></pre>
 <p>All of these functions return 0 on success. On error, -1 is returned, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>A state array of less than 8 bytes was specified to <code>initstate_r</code>().</p>
-<dt><code>EINVAL</code></p>
-<dd>The <i>statebuf</i> or <i>buf</i> argument to <code>setstate_r</code>() was NULL.</p>
-<dt><code>EINVAL</code></p>
-<dd>The <i>buf</i> or <i>result</i> argument to <code>random_r</code>() was NULL.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>A state array of less than 8 bytes was specified to <code>initstate_r</code>().</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>statebuf</i> or <i>buf</i> argument to <code>setstate_r</code>() was NULL.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>buf</i> or <i>result</i> argument to <code>random_r</code>() was NULL.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

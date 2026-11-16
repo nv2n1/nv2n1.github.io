@@ -19,32 +19,33 @@ description: "dv2dt – convert a binary TeX DVI file to DTL text representation
 <p> For convenience, we provide a summary of DVI commands here. In the following list, operation code bytes are given as unsigned decimal values, followed by their symbolic names (not present in the DVI file), and a short description. A designation like <i>b[+n]</i> means that the operation code byte is followed by a parameter <i>b</i> which uses <i>n</i> bytes, and is signed. Without the plus sign, the parameter is unsigned. Signed integer parameter values are always represented in two&#8217;s complement arithmetic, which is the system followed by most computers manufactured today, including all personal computers and workstations.</p>
 <dl>
 <dt>
-<dd> <i>0 set_char_0</i> Set character 0 from current font.</p>
-<dt><i>&#8230;</i></p>
+</dt><dd> <i>0 set_char_0</i> Set character 0 from current font.</dd>
+<dt><i>&#8230;</i></dt>
 <dd>
-<dt><i>127 set_char_127</i></p>
-<dd> Set character 127 from current font.</p>
-<dt><i>128 set1 c[1]</i></p>
-<dd> Set 1-byte unsigned character (uchar) number <i>c</i>.</p>
-<dt><i>129 set2 c[2]</i></p>
-<dd> Set 2-byte uchar number <i>c</i>.</p>
-<dt><i>130 set3 c[3]</i></p>
-<dd> Set 3-byte uchar number <i>c</i>.</p>
-<dt><i>131 set4 c[+4]</i></p>
-<dd> Set 4-byte signed character (schar) number <i>c</i>.</p>
-<dt><i>132 set_rule a[+4] b[+4]</i></p>
-<dd> Set rule, height <i>a</i>, width <i>b</i>.</p>
-<dt><i>133 put1 c[1]</i></p>
-<dd> Put 1-byte uchar <i>c</i>.</p>
-<dt><i>134 put2 c[2]</i></p>
-<dd> Put 2-byte uchar <i>c</i>.</p>
-<dt><i>135 put3 c[3]</i></p>
-<dd> Put 3-byte uchar <i>c</i>.</p>
-<dt><i>136 put4 c[+4]</i></p>
-<dd> Put 4-byte schar <i>c</i>.</p>
-<dt><i>137 put_rule a[+4] b[+4]</i></p>
-<dd> Put rule, height <i>a</i>, width <i>b</i>.</p>
-<dt><i>138 nop</i></p>
-<dd> Do nothing.</p>
-<dt><i>139 bop c0[+4] &#8230; c9[+4] p[+4]</i></p>
+</dd><dt><i>127 set_char_127</i></dt>
+<dd> Set character 127 from current font.</dd>
+<dt><i>128 set1 c[1]</i></dt>
+<dd> Set 1-byte unsigned character (uchar) number <i>c</i>.</dd>
+<dt><i>129 set2 c[2]</i></dt>
+<dd> Set 2-byte uchar number <i>c</i>.</dd>
+<dt><i>130 set3 c[3]</i></dt>
+<dd> Set 3-byte uchar number <i>c</i>.</dd>
+<dt><i>131 set4 c[+4]</i></dt>
+<dd> Set 4-byte signed character (schar) number <i>c</i>.</dd>
+<dt><i>132 set_rule a[+4] b[+4]</i></dt>
+<dd> Set rule, height <i>a</i>, width <i>b</i>.</dd>
+<dt><i>133 put1 c[1]</i></dt>
+<dd> Put 1-byte uchar <i>c</i>.</dd>
+<dt><i>134 put2 c[2]</i></dt>
+<dd> Put 2-byte uchar <i>c</i>.</dd>
+<dt><i>135 put3 c[3]</i></dt>
+<dd> Put 3-byte uchar <i>c</i>.</dd>
+<dt><i>136 put4 c[+4]</i></dt>
+<dd> Put 4-byte schar <i>c</i>.</dd>
+<dt><i>137 put_rule a[+4] b[+4]</i></dt>
+<dd> Put rule, height <i>a</i>, width <i>b</i>.</dd>
+<dt><i>138 nop</i></dt>
+<dd> Do nothing.</dd>
+<dt><i>139 bop c0[+4] &#8230; c9[+4] p[+4]</i></dt>
 <dd> Beginning of page. The parameters <i>c0 &#8230; c9</i> are the TeX page counters, the contents of TeX count registers <i>
+</dd></dl>

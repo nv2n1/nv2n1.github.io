@@ -16,32 +16,32 @@ description: "ospf6d – an OSPFv3 routing engine for use with Quagga routing so
 <p>Options available for the <code>ospf6d</code> command:</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd>Runs in daemon mode, forking and exiting from tty.</p>
-<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></p>
-<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/ospf6d.conf</i>.</p>
-<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></p>
-<dd>Specify the group to run as. Default is <i>quagga</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>A brief message.</p>
-<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></p>
-<dd>When ospf6d starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart ospf6d. The likely default is <i>/var/run/ospf6d.pid</i>.</p>
-<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></p>
-<dd>Specify the port that the ospf6d VTY will listen on. This defaults to 2606, as specified in <i>/etc/services</i>.</p>
-<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></p>
-<dd>Specify the address that the ospf6d VTY will listen on. Default is all interfaces.</p>
-<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></p>
-<dd>Specify the user to run as. Default is <i>quagga</i>.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print the version and exit.</dl>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd>Runs in daemon mode, forking and exiting from tty.</dd>
+<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></dt>
+<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/ospf6d.conf</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></dt>
+<dd>Specify the group to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>A brief message.</dd>
+<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></dt>
+<dd>When ospf6d starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart ospf6d. The likely default is <i>/var/run/ospf6d.pid</i>.</dd>
+<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></dt>
+<dd>Specify the port that the ospf6d VTY will listen on. This defaults to 2606, as specified in <i>/etc/services</i>.</dd>
+<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></dt>
+<dd>Specify the address that the ospf6d VTY will listen on. Default is all interfaces.</dd>
+<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></dt>
+<dd>Specify the user to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print the version and exit.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/local/sbin/ospf6d</code></p>
-<dd>The default location of the <code>ospf6d</code> binary.</p>
-<dt><code>/usr/local/etc/ospf6d.conf</code></p>
-<dd>The default location of the <code>ospf6d</code> config file.</p>
-<dt><code>$(PWD)/ospf6d.log</code></p>
-<dd>If the <code>ospf6d</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>ospf6d</code>.</dl>
+<dt><code>/usr/local/sbin/ospf6d</code></dt>
+<dd>The default location of the <code>ospf6d</code> binary.</dd>
+<dt><code>/usr/local/etc/ospf6d.conf</code></dt>
+<dd>The default location of the <code>ospf6d</code> config file.</dd>
+<dt><code>$(PWD)/ospf6d.log</code></dt>
+<dd>If the <code>ospf6d</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>ospf6d</code>.</dd></dl>
 <h2>Warning</h2>
 <p>This man page is intended to be a quick reference for command line options. The definitive document is the Info file <code>Quagga</code>.</p>
 <h2>Diagnostics</h2>

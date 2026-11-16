@@ -17,11 +17,11 @@ description: "ldns_dname_cat_clone, ldns_dname_cat"
 <p> ldns_status ldns_dname_cat(ldns_rdf *rd1, ldns_rdf *rd2); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname_cat_clone</i>()</p>
-<dd>concatenates two dnames together .br <code>rd1</code>: the leftside .br <code>rd2</code>: the rightside .br Returns a new rdf with leftside/rightside</dl>
+<dt> <i>ldns_dname_cat_clone</i>()</dt>
+<dd>concatenates two dnames together .br <code>rd1</code>: the leftside .br <code>rd2</code>: the rightside .br Returns a new rdf with leftside/rightside</dd></dl>
 <dl>
-<dt> <i>ldns_dname_cat</i>()</p>
-<dd>concatenates rd2 after rd1 (rd2 is copied, rd1 is modified) .br <code>rd1</code>: the leftside .br <code>rd2</code>: the rightside .br Returns LDNS_STATUS_OK on success</dl>
+<dt> <i>ldns_dname_cat</i>()</dt>
+<dd>concatenates rd2 after rd1 (rd2 is copied, rd1 is modified) .br <code>rd1</code>: the leftside .br <code>rd2</code>: the rightside .br Returns LDNS_STATUS_OK on success</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -21,8 +21,8 @@ user.cld are created from a text-form dictionary user.ctd.
 </pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>TMPDIR</p>
-<dd> mkbindic uses the value of this variable for the working directory when it makes temporary files. The value defaults to /tmp if not specified. </p>
+<dt>TMPDIR</dt>
+<dd> mkbindic uses the value of this variable for the working directory when it makes temporary files. The value defaults to /tmp if not specified. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dicar/">dicar</a>(1), <a href="/docs/linux/man/1-dpbindic/">dpbindic</a>(1) </p>

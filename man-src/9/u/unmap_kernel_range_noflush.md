@@ -14,10 +14,10 @@ description: "unmap_kernel_range_noflush – unmap kernel VM area"
 <p><i>addr</i></p>
 <dl>
 <dd>
-<dd>start of the VM area to unmap</dl>
+</dd><dd>start of the VM area to unmap</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the VM area to unmap</dl>
+<dd>size of the VM area to unmap</dd></dl>
 <h2>Description</h2>
 <p>Unmap PFN_UP(<i>size</i>) pages at <i>addr</i>. The VM area <i>addr</i> and <i>size</i> specify should have been allocated using <code>get_vm_area</code> and its friends.</p>
 <h2>Note</h2>

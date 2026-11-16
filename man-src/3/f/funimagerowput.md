@@ -19,16 +19,16 @@ description: "FunImageRowPut – put row(s) of an image"
 <p> The FunImageRowPut() routine writes one or more image rows to the specified <font SIZE="-1">FITS</font> image file. The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to the row data buffer, while the third and fourth arguments specify the starting and ending rows to write. Valid rows values range from 1 to dim2, i.e., row is one-valued. </p>
 <p> The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument data type of the image and can have the following FITS-standard values:</p>
 <dl>
-<dt>*</p>
-<dd> 8 unsigned char</p>
-<dt>*</p>
-<dd> 16 short</p>
-<dt>*</p>
-<dd> 32 int</p>
-<dt>*</p>
-<dd> -32 float</p>
-<dt>*</p>
-<dd> -64 double</dl>
+<dt>*</dt>
+<dd> 8 unsigned char</dd>
+<dt>*</dt>
+<dd> 16 short</dd>
+<dt>*</dt>
+<dd> 32 int</dd>
+<dt>*</dt>
+<dd> -32 float</dd>
+<dt>*</dt>
+<dd> -64 double</dd></dl>
 <p> For example: </p>
 <pre><code>
 double *drow;

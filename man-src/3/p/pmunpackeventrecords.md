@@ -19,29 +19,29 @@ description: "pmUnpackEventRecords – unpack event records"
 <p> The only difference between the two result types is the timestamp scale; the <i>pmHighResResult</i> allows for nanosecond precision, whereas <i>pmResult</i> allows for microsecond resolution. </p>
 <p> Some control information from the packed event records is unpacked into additional &#8220;anonymous&#8221; metrics as follows:</p>
 <dl>
-<dt>1.</p>
-<dd>If the event record has a non-zero flags value, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have the flags value encoded with the additional metric <code>event.flags</code> that is inserted ahead of all other event parameters.</p>
-<dt>2.</p>
-<dd>If the event record flag is set to <code>PM_EVENT_FLAG_MISSED</code>, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have one metric <code>event.missed</code> with a value that equals the number of event records &#8220;missed&#8221; because either the PMDA could not keep up, or the PMAPI client did not collect the event records fast enough.</dl>
+<dt>1.</dt>
+<dd>If the event record has a non-zero flags value, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have the flags value encoded with the additional metric <code>event.flags</code> that is inserted ahead of all other event parameters.</dd>
+<dt>2.</dt>
+<dd>If the event record flag is set to <code>PM_EVENT_FLAG_MISSED</code>, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have one metric <code>event.missed</code> with a value that equals the number of event records &#8220;missed&#8221; because either the PMDA could not keep up, or the PMAPI client did not collect the event records fast enough.</dd></dl>
 <p> <code>pmUnpackEventRecords</code> returns the number of <i>pmResult</i> structures as the return value, which is &gt;= 0 for success. Similarly, <code>pmUnpackHighResEventRecords</code> returns the number of <i>pmHighResResult</i> structures as the return value, which is &gt;= 0 for success. </p>
 <p> <i>rap</i> and the associated <i>pmResult</i> structures may be freed using the convenience function <code><a href="/docs/linux/man/3-pmfreeeventresult/">pmFreeEventResult</a></code>(3). </p>
 <p> Similarly, the <i>hrap</i> and the associated <i>pmHighResResult</i> structures may be freed using the convenience function <code>pmFreeHighResEventResult</code>.</p>
 <h2>Return Value</h2>
 <p>The following errors are possible:</p>
 <dl>
-<dt>PM_ERR_CONV</p>
-<dd>The values associated with <i>vsp</i> are not encoded using the format PM_VAL_DPTR or PM_VAL_SPTR, or the flags at the head of the event record has an unexpected value.</p>
-<dt>PM_ERR_INST</p>
-<dd>The value associated with <i>vsp</i> is not singular as expected.</p>
-<dt>PM_ERR_TYPE</p>
-<dd><i>vsp</i> is not a value of type <code>PM_TYPE_EVENT</code>.</p>
-<dt>PM_ERR_TOOSMALL</p>
-<dd>The value identified by <i>vbp</i> is not legal because the value length is less than the minimum size, or the number of event records encoded in the (value header) <i>pmEventArray</i>/<i>pmEventHighResArray</i> structure is negative, or the number of missed event records in the array is negative.</p>
-<dt>PM_ERR_TOOBIG</p>
-<dd>Either <code>vsp</code> indicates more than one value is present (all the event records are expected to be packed in a single metric value), or when unpacking the event records, the processing continues past the end of the enclosing value. Indicates corruption of the packed event record.</p>
-<dt>PM_ERR_TYPE</p>
-<dd>Event parameters must have one of the arithmetic types, else <code>PM_TYPE_AGGREGATE</code>, <code>PM_TYPE_STRING</code> or <code>PM_TYPE_AGGREGATE_STATIC</code>.</p>
-<dt>other values &lt; 0</p>
-<dd>refer to <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3).</dl>
+<dt>PM_ERR_CONV</dt>
+<dd>The values associated with <i>vsp</i> are not encoded using the format PM_VAL_DPTR or PM_VAL_SPTR, or the flags at the head of the event record has an unexpected value.</dd>
+<dt>PM_ERR_INST</dt>
+<dd>The value associated with <i>vsp</i> is not singular as expected.</dd>
+<dt>PM_ERR_TYPE</dt>
+<dd><i>vsp</i> is not a value of type <code>PM_TYPE_EVENT</code>.</dd>
+<dt>PM_ERR_TOOSMALL</dt>
+<dd>The value identified by <i>vbp</i> is not legal because the value length is less than the minimum size, or the number of event records encoded in the (value header) <i>pmEventArray</i>/<i>pmEventHighResArray</i> structure is negative, or the number of missed event records in the array is negative.</dd>
+<dt>PM_ERR_TOOBIG</dt>
+<dd>Either <code>vsp</code> indicates more than one value is present (all the event records are expected to be packed in a single metric value), or when unpacking the event records, the processing continues past the end of the enclosing value. Indicates corruption of the packed event record.</dd>
+<dt>PM_ERR_TYPE</dt>
+<dd>Event parameters must have one of the arithmetic types, else <code>PM_TYPE_AGGREGATE</code>, <code>PM_TYPE_STRING</code> or <code>PM_TYPE_AGGREGATE_STATIC</code>.</dd>
+<dt>other values &lt; 0</dt>
+<dd>refer to <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code><a href="/docs/linux/man/3-pmfreeeventresult/">pmFreeEventResult</a></code>(3). </p>

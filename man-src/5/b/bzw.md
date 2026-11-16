@@ -11,8 +11,8 @@ description: "bzw – BZFlag world file format"
 <h2>Description</h2>
 <p>The BZFlag world file format describes a world environment that is used by the BZFlag game server, bzfs. <i>X BZW file format</i> The BZFlag world file format describes and environment that includes the game map, physical world attributes, and automatic world weapons. The map may contain a variety of &quot;obstacles&quot; like buildings, pyramids, and meshes. These obstacles make up the world that the BZFlag tanks will drive around in. Map attributes may be set to create worlds of various sizes, the default size is 800&#215;800.</p>
 <dl>
-<dt>Here is small example world:</p>
-<dd></dl>
+<dt>Here is small example world:</dt>
+<dd></dd></dl>
 <p> # simple world containing a box, pyramid, and mesh<br />
  <code>world</code><br />
  <code> name</code> Simple World<br />
@@ -378,24 +378,24 @@ description: "bzw – BZFlag world file format"
 <p>The symbol &#8216;?&#8217; means that the item is optional. </p>
 <p> The notation {a..b} means that the number of times the item can be present must be between &#8216;a&#8217; and &#8216;b&#8217;, where &#8216;*&#8217; mean infinity. (&#8216;?&#8217; is equivalent to {0..1})</p>
 <dl>
-<dt>angle := &lt;float&gt;</p>
+<dt>angle := &lt;float&gt;</dt>
 <dd>
-<dt>2dpoint := &lt;float&gt; &lt;float&gt;</p>
+</dd><dt>2dpoint := &lt;float&gt; &lt;float&gt;</dt>
 <dd>
-<dt>3dpoint := &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
+</dd><dt>3dpoint := &lt;float&gt; &lt;float&gt; &lt;float&gt;</dt>
 <dd>
-<dt>rgbColor := &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
+</dd><dt>rgbColor := &lt;float&gt; &lt;float&gt; &lt;float&gt;</dt>
 <dd>
-<dt>alpha := &lt;float&gt;</p>
+</dd><dt>alpha := &lt;float&gt;</dt>
 <dd>
-<dt>rgbaColor := rgbColor alpha? | &lt;color_name&gt; alpha?</p>
+</dd><dt>rgbaColor := rgbColor alpha? | &lt;color_name&gt; alpha?</dt>
 <dd>
-<dt>channel := &quot;red&quot; | &quot;green&quot; | &quot;blue&quot; | &quot;alpha&quot;</p>
+</dd><dt>channel := &quot;red&quot; | &quot;green&quot; | &quot;blue&quot; | &quot;alpha&quot;</dt>
 <dd>
-<dt><code>(BZWReader.cxx/parseNormalObject)</code></p>
+</dd><dt><code>(BZWReader.cxx/parseNormalObject)</code></dt>
 <dd>
-<dt>allObjects :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;box&quot;</p>
+</dd><dt>allObjects :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;box&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;pyramid&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;base&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;link&quot;</p>
@@ -415,10 +415,10 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;material&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;physics&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;transform&quot;</p>
-<dt><code>(BZWReader.cxx/BZWReader::readWorldStream)</code></p>
-<dd>Note: Blank lines and lines starting with # are discarded. </p>
-<dt>worldStream :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;end&quot;</p>
+<dt><code>(BZWReader.cxx/BZWReader::readWorldStream)</code></dt>
+<dd>Note: Blank lines and lines starting with # are discarded. </dd>
+<dt>worldStream :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;end&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| allObjects</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;define&quot; &lt;group_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;enddef&quot;</p>
@@ -427,10 +427,10 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;options&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;include&quot; &lt;filename&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;world&quot;</p>
-<dt><code>(ParseMaterial.cxx/parseMaterials)</code></p>
+<dt><code>(ParseMaterial.cxx/parseMaterials)</code></dt>
 <dd>
-<dt>material :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>object</p>
+</dd><dt>material :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>object</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;matref&quot; &lt;material_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;resetmat&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;dyncol&quot; &lt;dynamic_color_name&gt;</p>
@@ -457,14 +457,14 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;shader&quot; &lt;shader_name&gt; # NOT IMPLEMENTED</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;addshader&quot; &lt;shader_name&gt; # NOT IMPLEMENTED</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;noshaders&quot; # NOT IMPLEMENTED</p>
-<dt><code>(WorldFileObject:.cxx/WorldFileObject::read)</code></p>
+<dt><code>(WorldFileObject:.cxx/WorldFileObject::read)</code></dt>
 <dd>
-<dt>object := &quot;name&quot; &lt;name&gt;</p>
+</dd><dt>object := &quot;name&quot; &lt;name&gt;</dt>
 <dd>
-<dt><code>(WorldFileLocation.cxx/readWorldFileLocation::read)</code></p>
+</dd><dt><code>(WorldFileLocation.cxx/readWorldFileLocation::read)</code></dt>
 <dd>
-<dt>location :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> (&quot;pos&quot; | &quot;position&quot;) 3dpoint</p>
+</dd><dt>location :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> (&quot;pos&quot; | &quot;position&quot;) 3dpoint</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;size&quot; 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;rot&quot; | &quot;rotation&quot;) &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;shift&quot; 3dpoint</p>
@@ -473,17 +473,17 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;spin&quot; angle 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;xform&quot; &lt;transform_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(WorldFileObstacle.cxx/WorldFileObstacle::read)</code></p>
+<dt><code>(WorldFileObstacle.cxx/WorldFileObstacle::read)</code></dt>
 <dd>
-<dt>obstacle :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;drivethrough&quot;</p>
+</dd><dt>obstacle :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;drivethrough&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;shootthrough&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;passable&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| location</p>
-<dt><code>(CustomArc.cxx/CustomArc::read)</code></p>
+<dt><code>(CustomArc.cxx/CustomArc::read)</code></dt>
 <dd>
-<dt>meshbox :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</p>
+</dd><dt>meshbox :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angle&quot; angle</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;ratio&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texsize&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
@@ -493,8 +493,8 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;top&quot; | &quot;bottom&quot; | &quot;inside&quot; | &quot;outside&quot; | &quot;startside&quot; | &quot;endside&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt>arc :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</p>
+<dt>arc :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angle&quot; angle</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;ratio&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texsize&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
@@ -504,19 +504,19 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;top&quot; | &quot;bottom&quot; | &quot;inside&quot; | &quot;outside&quot; | &quot;startside&quot; | &quot;endside&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomBase.cxx/CustomBase::read)</code></p>
+<dt><code>(CustomBase.cxx/CustomBase::read)</code></dt>
 <dd>
-<dt>base :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;color&quot; &lt;integer&gt;</p>
+</dd><dt>base :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;color&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomBox.cxx)</code></p>
+<dt><code>(CustomBox.cxx)</code></dt>
 <dd>
-<dt>box := obstacle</p>
+</dd><dt>box := obstacle</dt>
 <dd>
-<dt><code>(CustomCone.cxx/CustomCone::read)</code></p>
+</dd><dt><code>(CustomCone.cxx/CustomCone::read)</code></dt>
 <dd>
-<dt>meshpyr :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</p>
+</dd><dt>meshpyr :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angle&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texsize&quot; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;phydrv&quot; &lt;physics_driver_name&gt;</p>
@@ -526,8 +526,8 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;edge&quot; | &quot;bottom&quot; | &quot;startside&quot; | &quot;endside&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;flipz&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt>cone :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</p>
+<dt>cone :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angle&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texsize&quot; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;phydrv&quot; &lt;physics_driver_name&gt;</p>
@@ -536,42 +536,42 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;edge&quot; | &quot;bottom&quot; | &quot;startside&quot; | &quot;endside&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomDynamicColor.cxx/CustomDynamicColor::read)</code></p>
+<dt><code>(CustomDynamicColor.cxx/CustomDynamicColor::read)</code></dt>
 <dd>
-<dt>dynamicColor :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> object</p>
+</dd><dt>dynamicColor :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> object</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| channel &quot;limits&quot; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| channel &quot;sinusoid&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| channel &quot;clampup&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| channel &quot;clampdown&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| channel &quot;sequence&quot; &lt;float&gt; &lt;float&gt; (&quot;0&quot; &quot;1&quot; &quot;2&quot;){1..*}</p>
-<dt><code>(CustomGate.cxx/CustomGate::read)</code></p>
+<dt><code>(CustomGate.cxx/CustomGate::read)</code></dt>
 <dd>
-<dt>teleporter :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;border&quot; &lt;float&gt;</p>
+</dd><dt>teleporter :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;border&quot; &lt;float&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;horizontal&quot; # NOT IMPLEMENTED</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomGroup.cxx/CustomGroup::read)</code></p>
+<dt><code>(CustomGroup.cxx/CustomGroup::read)</code></dt>
 <dd>
-<dt>group :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;team&quot; &lt;integer&gt;</p>
+</dd><dt>group :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;team&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;tint&quot; rgbaColor</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;phydrv&quot; &lt;physics_driver_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;matref&quot; &lt;material_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomLink.cxx/CustomLink::read)</code></p>
+<dt><code>(CustomLink.cxx/CustomLink::read)</code></dt>
 <dd>
-<dt>teleporter_spec :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &lt;integer&gt;</p>
+</dd><dt>teleporter_spec :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &lt;teleporter_name_with_wilcards&gt; (&quot;:f&quot; | &quot;:b&quot;)?</p>
-<dt>link :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;from&quot; &lt;teleporter_spec&gt;</p>
+<dt>link :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;from&quot; &lt;teleporter_spec&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;to&quot; &lt;teleporter_spec&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawCmd)</code></p>
+<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawCmd)</code></dt>
 <dd>
-<dt>drawInfoCmd :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;points&quot; &lt;integer&gt;+</p>
+</dd><dt>drawInfoCmd :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;points&quot; &lt;integer&gt;+</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;lines&quot; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;{2}*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;lineloop&quot; &lt;integer&gt; &lt;integer&gt;+</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;linestrip&quot; &lt;integer&gt; &lt;integer&gt; &lt;integer{2}*</p>
@@ -581,23 +581,23 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;quads&quot; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;{4}*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;quadstrip&quot; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;{2}+</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;polygon&quot; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;{3}*</p>
-<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawSet)</code></p>
+<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawSet)</code></dt>
 <dd>
-<dt>drawInfoSet :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;matref&quot; &lt;material_name&gt;</p>
+</dd><dt>drawInfoSet :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;matref&quot; &lt;material_name&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;dlist&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;sphere&quot; 3dpoint &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| drawInfoCmd</p>
-<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawLod)</code></p>
+<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parseDrawLod)</code></dt>
 <dd>
-<dt>drawInfoLod :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;lod&quot;</p>
+</dd><dt>drawInfoLod :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;lod&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;lengthPerPixel&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| drawInfoSet</p>
-<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parse)</code></p>
+<dt><code>(MeshDrawInfo.cxx/MeshDrawInfo::parse)</code></dt>
 <dd>
-<dt>drawInfo :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;drawInfo&quot;</p>
+</dd><dt>drawInfo :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;drawInfo&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;dlist&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;decorative&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angvel&quot; &lt;float&gt;</p>
@@ -608,10 +608,10 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;normal&quot; 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texcoord&quot; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| drawInfoLod</p>
-<dt><code>(CustomMesh.cxx/CustomMesh::read)</code></p>
+<dt><code>(CustomMesh.cxx/CustomMesh::read)</code></dt>
 <dd>
-<dt>mesh :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;face&quot;</p>
+</dd><dt>mesh :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;face&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| face</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;endface&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;inside&quot; 3dpoint</p>
@@ -625,10 +625,10 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| drawInfo</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomMeshFace.cxx/CustomMeshFace::read)</code></p>
+<dt><code>(CustomMeshFace.cxx/CustomMeshFace::read)</code></dt>
 <dd>
-<dt>face :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;vertices&quot; &lt;integer&gt;{3..*}</p>
+</dd><dt>face :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;vertices&quot; &lt;integer&gt;{3..*}</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;normals&quot; &lt;integer&gt;{3..*}</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texcoords&quot; &lt;integer&gt;{3..*}</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;phydrv&quot; &lt;physics_driver_name&gt;</p>
@@ -638,33 +638,33 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;shootthrough&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;passable&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
-<dt><code>(CustomMeshTransform.cxx/CustomMeshTransform::read)</code></p>
+<dt><code>(CustomMeshTransform.cxx/CustomMeshTransform::read)</code></dt>
 <dd>
-<dt>transform :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;shift&quot; 3dpoint</p>
+</dd><dt>transform :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;shift&quot; 3dpoint</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;scale&quot; 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;shear&quot; 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;spin&quot; angle 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;xform&quot; &lt;transform_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(CustomPhysicsDriver.cxx/CustomPhysicsDriver::read)</code></p>
+<dt><code>(CustomPhysicsDriver.cxx/CustomPhysicsDriver::read)</code></dt>
 <dd>
-<dt>physics :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;linear&quot; 3dpoint</p>
+</dd><dt>physics :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;linear&quot; 3dpoint</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;angular&quot; &lt;float&gt; 2dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;radial&quot; &lt;float&gt; 2dpoint # NOT IMPLEMENTED</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;slide&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;death&quot; &lt;string&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(CustomPyramid.cxx/CustomPyramid::read)</code></p>
+<dt><code>(CustomPyramid.cxx/CustomPyramid::read)</code></dt>
 <dd>
-<dt>pyramid :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;flipz&quot;</p>
+</dd><dt>pyramid :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;flipz&quot;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomSphere.cxx/CustomSphere::read)</code></p>
+<dt><code>(CustomSphere.cxx/CustomSphere::read)</code></dt>
 <dd>
-<dt>sphere :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</p>
+</dd><dt>sphere :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;divisions&quot; &lt;integer&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;radius&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;hemi&quot; | &quot;hemisphere&quot;)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texsize&quot; &lt;float&gt; &lt;float&gt;</p>
@@ -674,19 +674,19 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;edge&quot; | &quot;bottom&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomTetra.cxx/CustomTetra::read)</code></p>
+<dt><code>(CustomTetra.cxx/CustomTetra::read)</code></dt>
 <dd>Note: At most 4 vertices can be specified.<br />
- Note2: material will apply to all vertices when specified first, otherwise like &quot;normals&quot; and &quot;texcoords&quot; they apply to the previous vertex. </p>
-<dt>tetra :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;vertex&quot; 3dpoint</p>
+ Note2: material will apply to all vertices when specified first, otherwise like &quot;normals&quot; and &quot;texcoords&quot; they apply to the previous vertex. </dd>
+<dt>tetra :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;vertex&quot; 3dpoint</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;normals&quot; 3dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;texcoords&quot; 2dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
-<dt><code>(CustomTextureMatrix.cxx/CustomTextureMatrix::read)</code></p>
+<dt><code>(CustomTextureMatrix.cxx/CustomTextureMatrix::read)</code></dt>
 <dd>
-<dt>textureMatrix :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;fixedshift&quot; 2dpoint</p>
+</dd><dt>textureMatrix :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;fixedshift&quot; 2dpoint</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;fixedscale&quot; 2dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;fixedspin&quot; angle</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;fixedcenter&quot; 2dpoint</p>
@@ -695,29 +695,29 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;scale&quot; &lt;float&gt; &lt;float&gt; &lt;float&gt; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;center&quot; 2dpoint</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(CustomWaterLevel.cxx/CustomWaterLevel::read)</code></p>
+<dt><code>(CustomWaterLevel.cxx/CustomWaterLevel::read)</code></dt>
 <dd>
-<dt>waterLevel :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;height&quot; &lt;float&gt;</p>
+</dd><dt>waterLevel :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;height&quot; &lt;float&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(CustomWeapon.cxx/CustomWeapon::read)</code></p>
+<dt><code>(CustomWeapon.cxx/CustomWeapon::read)</code></dt>
 <dd>
-<dt>weapon :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;initdelay&quot; &lt;float&gt;</p>
+</dd><dt>weapon :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;initdelay&quot; &lt;float&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;delay&quot; &lt;float&gt;{1..*}</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;type&quot; &lt;flag_short_name&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| location</p>
-<dt><code>(CustomWorld.cxx/CustomWorld::read)</code></p>
+<dt><code>(CustomWorld.cxx/CustomWorld::read)</code></dt>
 <dd>
-<dt>world :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;size&quot; &lt;float&gt;</p>
+</dd><dt>world :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;size&quot; &lt;float&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;flagHeight&quot; &lt;float&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| object</p>
-<dt><code>(CustomZone.cxx/CustomZone::read)</code></p>
+<dt><code>(CustomZone.cxx/CustomZone::read)</code></dt>
 <dd>
-<dt>zone :=</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;team&quot; &lt;integer&gt;{1..*}</p>
+</dd><dt>zone :=</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;team&quot; &lt;integer&gt;{1..*}</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;flag&quot; (&quot;good&quot; | &quot;bad&quot; | &lt;flag_short_name&gt;){1..*}</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;safety&quot; &lt;integer&gt;{1..*}</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| &quot;zoneflag&quot; &lt;flag_short_name&gt; &lt;integer&gt;?</p>

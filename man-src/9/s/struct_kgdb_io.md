@@ -22,30 +22,30 @@ description: "struct_kgdb_io – Describe the interface for an I/O driver to tal
 <h2>Members</h2>
 <p>name</p>
 <dl>
-<dd>Name of the I/O driver.</dl>
+<dd>Name of the I/O driver.</dd></dl>
 <p> read_char</p>
 <dl>
-<dd>Pointer to a function that will return one char.</dl>
+<dd>Pointer to a function that will return one char.</dd></dl>
 <p> write_char</p>
 <dl>
-<dd>Pointer to a function that will write one char.</dl>
+<dd>Pointer to a function that will write one char.</dd></dl>
 <p> flush</p>
 <dl>
-<dd>Pointer to a function that will flush any pending writes.</dl>
+<dd>Pointer to a function that will flush any pending writes.</dd></dl>
 <p> init</p>
 <dl>
-<dd>Pointer to a function that will initialize the device.</dl>
+<dd>Pointer to a function that will initialize the device.</dd></dl>
 <p> pre_exception</p>
 <dl>
-<dd>Pointer to a function that will do any prep work for the I/O driver.</dl>
+<dd>Pointer to a function that will do any prep work for the I/O driver.</dd></dl>
 <p> post_exception</p>
 <dl>
-<dd>Pointer to a function that will do any cleanup work for the I/O driver.</dl>
+<dd>Pointer to a function that will do any cleanup work for the I/O driver.</dd></dl>
 <p> is_console</p>
 <dl>
-<dd>1 if the end device is a console 0 if the I/O device is not a console</dl>
+<dd>1 if the end device is a console 0 if the I/O device is not a console</dd></dl>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

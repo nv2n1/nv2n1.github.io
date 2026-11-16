@@ -14,18 +14,18 @@ description: "scsi_eh_ready_devs – check device ready state and recover if not
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>host to be recovered.</dl>
+</dd><dd>host to be recovered.</dd></dl>
 <p> <i>work_q</i></p>
 <dl>
-<dd>list_head for pending commands.</dl>
+<dd>list_head for pending commands.</dd></dl>
 <p> <i>done_q</i></p>
 <dl>
-<dd>list_head for processed commands.</dl>
+<dd>list_head for processed commands.</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

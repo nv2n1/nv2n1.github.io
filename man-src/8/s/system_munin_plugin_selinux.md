@@ -53,8 +53,8 @@ description: "system_munin_plugin_selinux – Security Enhanced Linux Policy for
 <p> <code>system_munin_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the system_munin_plugin_exec_t type, if you want to transition an executable to the system_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/cpu.*, /usr/share/munin/plugins/if_.*, /usr/share/munin/plugins/nfs.*, /usr/share/munin/plugins/iostat.*, /usr/share/munin/plugins/munin_.*, /usr/share/munin/plugins/acpi, /usr/share/munin/plugins/load, /usr/share/munin/plugins/swap, /usr/share/munin/plugins/forks, /usr/share/munin/plugins/users, /usr/share/munin/plugins/memory, /usr/share/munin/plugins/uptime, /usr/share/munin/plugins/netstat, /usr/share/munin/plugins/threads, /usr/share/munin/plugins/unbound, /usr/share/munin/plugins/irqstats, /usr/share/munin/plugins/proc_pri, /usr/share/munin/plugins/processes, /usr/share/munin/plugins/interrupts, /usr/share/munin/plugins/open_files </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/cpu.*, /usr/share/munin/plugins/if_.*, /usr/share/munin/plugins/nfs.*, /usr/share/munin/plugins/iostat.*, /usr/share/munin/plugins/munin_.*, /usr/share/munin/plugins/acpi, /usr/share/munin/plugins/load, /usr/share/munin/plugins/swap, /usr/share/munin/plugins/forks, /usr/share/munin/plugins/users, /usr/share/munin/plugins/memory, /usr/share/munin/plugins/uptime, /usr/share/munin/plugins/netstat, /usr/share/munin/plugins/threads, /usr/share/munin/plugins/unbound, /usr/share/munin/plugins/irqstats, /usr/share/munin/plugins/proc_pri, /usr/share/munin/plugins/processes, /usr/share/munin/plugins/interrupts, /usr/share/munin/plugins/open_files </dd>
 </dl>
 <p> <code>system_munin_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the system_munin_plugin_tmp_t type, if you want to store system munin plugin temporary files in the /tmp directories. </p>

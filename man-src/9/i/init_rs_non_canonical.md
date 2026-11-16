@@ -14,21 +14,21 @@ description: "init_rs_non_canonical – Find a matching or allocate a new rs con
 <p><i>symsize</i></p>
 <dl>
 <dd>
-<dd>the symbol size (number of bits)</dl>
+</dd><dd>the symbol size (number of bits)</dd></dl>
 <p> <i>gffunc</i></p>
 <dl>
-<dd>pointer to function to generate the next field element, or the multiplicative identity element if given 0. Used instead of gfpoly if gfpoly is 0</dl>
+<dd>pointer to function to generate the next field element, or the multiplicative identity element if given 0. Used instead of gfpoly if gfpoly is 0</dd></dl>
 <p> <i>fcr</i></p>
 <dl>
-<dd>the first consecutive root of the rs code generator polynomial in index form</dl>
+<dd>the first consecutive root of the rs code generator polynomial in index form</dd></dl>
 <p> <i>prim</i></p>
 <dl>
-<dd>primitive element to generate polynomial roots</dl>
+<dd>primitive element to generate polynomial roots</dd></dl>
 <p> <i>nroots</i></p>
 <dl>
-<dd>RS code generator polynomial degree (number of roots)</dl>
+<dd>RS code generator polynomial degree (number of roots)</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,15 +14,15 @@ description: "futex_wait_queue_me – queue_me and wait for wakeup, timeout, or 
 <p><i>hb</i></p>
 <dl>
 <dd>
-<dd>the futex hash bucket, must be locked by the caller</dl>
+</dd><dd>the futex hash bucket, must be locked by the caller</dd></dl>
 <p> <i>q</i></p>
 <dl>
-<dd>the futex_q to queue up on</dl>
+<dd>the futex_q to queue up on</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>the prepared hrtimer_sleeper, or null for no timeout</dl>
+<dd>the prepared hrtimer_sleeper, or null for no timeout</dd></dl>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

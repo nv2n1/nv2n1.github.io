@@ -11,20 +11,20 @@ description: "XtAppError, XtAppSetErrorHandler, XtAppSetWarningHandler, XtAppWar
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtAppError(XtAppContext <i>app_context</i>, const char *<i>message</i>);</p>
-<dd>XtErrorHandler XtAppSetErrorHandler(XtAppContext <i>app_context</i>, XtErrorHandler <i>handler</i>);</p>
-<dd>XtErrorHandler XtAppSetWarningHandler(XtAppContext <i>app_context</i>, XtErrorHandler <i>handler</i>);</p>
-<dd>void XtAppWarning(XtAppContext <i>app_context</i>, const char *<i>message</i>);</dl>
+<dd>void XtAppError(XtAppContext <i>app_context</i>, const char *<i>message</i>);</dd>
+<dd>XtErrorHandler XtAppSetErrorHandler(XtAppContext <i>app_context</i>, XtErrorHandler <i>handler</i>);</dd>
+<dd>XtErrorHandler XtAppSetWarningHandler(XtAppContext <i>app_context</i>, XtErrorHandler <i>handler</i>);</dd>
+<dd>void XtAppWarning(XtAppContext <i>app_context</i>, const char *<i>message</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</p>
-<dt><i>message</i></p>
-<dd>Specifies the nonfatal error message that is to be reported.</p>
-<dt><i>handler</i></p>
-<dd>Specifies the new fatal error procedure, which should not return, or the nonfatal error procedure, which usually returns.</p>
-<dt><i>message</i></p>
-<dd>Specifies the message that is to be reported.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>message</i></dt>
+<dd>Specifies the nonfatal error message that is to be reported.</dd>
+<dt><i>handler</i></dt>
+<dd>Specifies the new fatal error procedure, which should not return, or the nonfatal error procedure, which usually returns.</dd>
+<dt><i>message</i></dt>
+<dd>Specifies the message that is to be reported.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtAppError</code> function calls the installed error procedure and passes the specified message. </p>
 <p> The <code>XtAppSetErrorHandler</code> function registers the specified procedure, which is called when a fatal error condition occurs. </p>

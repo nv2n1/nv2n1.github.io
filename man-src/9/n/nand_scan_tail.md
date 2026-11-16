@@ -14,11 +14,11 @@ description: "nand_scan_tail – [NAND Interface] Scan for the NAND device"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <h2>Description</h2>
 <p>This is the second phase of the normal <code>nand_scan</code> function. It fills out all the uninitialized function pointers with the defaults and scans for a bad block table if appropriate.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

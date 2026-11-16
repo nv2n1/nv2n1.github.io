@@ -25,13 +25,13 @@ url: "/docs/linux/man/1-qsgeo/"
 
 <dl>
 <dt>-d &lt;path&gt;
-<dd> Specifies the path to the geographical database files (CSV file containing IP address ranges and country codes).
-<dt>-s
-<dd> Writes a summary of the requests per country only.
-<dt>-l
-<dd> Writes the database to stdout (ignoring stdin) inserting local (127.*) and private (10.*, 172.16*, 192.168.*) network addresses.
-<dt>-ip &lt;ip&gt;
-<dd> Resolves a single IP address instead of processing a log file.</dl>
+</dt><dd> Specifies the path to the geographical database files (CSV file containing IP address ranges and country codes).
+</dd><dt>-s
+</dt><dd> Writes a summary of the requests per country only.
+</dd><dt>-l
+</dt><dd> Writes the database to stdout (ignoring stdin) inserting local (127.*) and private (10.*, 172.16*, 192.168.*) network addresses.
+</dd><dt>-ip &lt;ip&gt;
+</dt><dd> Resolves a single IP address instead of processing a log file.</dd></dl>
 
 <h2>EXAMPLE</h2>
 

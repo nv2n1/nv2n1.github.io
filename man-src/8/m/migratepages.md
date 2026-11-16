@@ -15,7 +15,7 @@ description: "migratepages – Migrate the physical location a processes pages"
 <p> If multiple nodes are specified for from-nodes or to-nodes then an attempt is made to preserve the relative location of each page in each nodeset. </p>
 <p> For example if we move from nodes 2-5 to 7,9,12-13 then the preferred mode of operation is to move pages from 2-&gt;7, 3-&gt;9, 4-&gt;12 and 5-&gt;13. However, this is only posssible if enough memory is available.</p>
 <dl>
-<dt>Valid node specifiers</p>
+<dt>Valid node specifiers</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -44,7 +44,7 @@ description: "migratepages – Migrate the physical location a processes pages"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>Requires an NUMA policy aware kernel with support for page migration (linux 2.6.16 and later). migratepages will only move pages that are not shared with other processes if called by a user without administrative priviledges (but with the right to modify the process). migratepages will move all pages if invoked from root (or a user with administrative priviledges). </p>
 <h2>Files</h2>

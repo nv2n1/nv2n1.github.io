@@ -10,27 +10,27 @@ description: "XAllocSizeHints, XSetWMNormalHints, XGetWMNormalHints, XSetWMSizeH
 <p>XAllocSizeHints, XSetWMNormalHints, XGetWMNormalHints, XSetWMSizeHints, XGetWMSizeHints, XSizeHints &#8211; allocate size hints structure and set or read a window&#8217;s WM_NORMAL_HINTS property </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XSizeHints *XAllocSizeHints(void);</p>
-<dd>void XSetWMNormalHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints</i>);</p>
-<dd>Status XGetWMNormalHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints_return</i>, long *<i>supplied_return</i>);</p>
-<dd>void XSetWMSizeHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints</i>, Atom <i>property</i>);</p>
-<dd>Status XGetWMSizeHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints_return</i>, long *<i>supplied_return</i>, Atom <i>property</i>);</dl>
+<dd>XSizeHints *XAllocSizeHints(void);</dd>
+<dd>void XSetWMNormalHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints</i>);</dd>
+<dd>Status XGetWMNormalHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints_return</i>, long *<i>supplied_return</i>);</dd>
+<dd>void XSetWMSizeHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints</i>, Atom <i>property</i>);</dd>
+<dd>Status XGetWMSizeHints(Display *<i>display</i>, Window <i>w</i>, XSizeHints *<i>hints_return</i>, long *<i>supplied_return</i>, Atom <i>property</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>hints</i></p>
-<dd>Specifies the size hints for the window in its normal state.</p>
-<dt><i>hints</i></p>
-<dd>Specifies the <code>XSizeHints</code> structure to be used.</p>
-<dt><i>hints_return</i></p>
-<dd>Returns the size hints for the window in its normal state.</p>
-<dt><i>property</i></p>
-<dd>Specifies the property name.</p>
-<dt><i>supplied_return</i></p>
-<dd>Returns the hints that were supplied by the user.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>hints</i></dt>
+<dd>Specifies the size hints for the window in its normal state.</dd>
+<dt><i>hints</i></dt>
+<dd>Specifies the <code>XSizeHints</code> structure to be used.</dd>
+<dt><i>hints_return</i></dt>
+<dd>Returns the size hints for the window in its normal state.</dd>
+<dt><i>property</i></dt>
+<dd>Specifies the property name.</dd>
+<dt><i>supplied_return</i></dt>
+<dd>Returns the hints that were supplied by the user.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocSizeHints</code> function allocates and returns a pointer to a <code>XSizeHints</code> structure. Note that all fields in the <code>XSizeHints</code> structure are initially set to zero. If insufficient memory is available, <code>XAllocSizeHints</code> returns NULL. To free the memory allocated to this structure, use <code>XFree</code>. </p>
 <p> The <code>XSetWMNormalHints</code> function replaces the size hints for the WM_NORMAL_HINTS property on the specified window. If the property does not already exist, <code>XSetWMNormalHints</code> sets the size hints for the WM_NORMAL_HINTS property on the specified window. The property is stored with a type of WM_SIZE_HINTS and a format of 32. </p>
@@ -53,8 +53,8 @@ description: "XAllocSizeHints, XSetWMNormalHints, XGetWMNormalHints, XSetWMSizeH
 <p> <code>XGetWMSizeHints</code> can generate <code>BadAtom</code> and <code>BadWindow</code> errors.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_NORMAL_HINTS</font></p>
-<dd>Size hints for a window in its normal state. The C type of this property is <code>XSizeHints</code>.</dl>
+<dt><font SIZE="-1">WM_NORMAL_HINTS</font></dt>
+<dd>Size hints for a window in its normal state. The C type of this property is <code>XSizeHints</code>.</dd></dl>
 <h2>Structures</h2>
 <p>The <code>XSizeHints</code> structure contains: </p>
 <p> /* Size hints mask bits */ </p>
@@ -132,7 +132,7 @@ description: "XAllocSizeHints, XSetWMNormalHints, XGetWMNormalHints, XSetWMSizeH
 <tr VALIGN=top>
 <td> #define </td>
 <td> <code>PAllHints</code> </td>
-<td> (PPosition| </p>
+<td> (PPosition| 
 <p>&nbsp;PSize| </p>
 <p>&nbsp;PMinSize| </p>
 <p>&nbsp;PMaxSize| </p>
@@ -161,12 +161,12 @@ description: "XAllocSizeHints, XSetWMNormalHints, XGetWMNormalHints, XSetWMSizeH
 <p> Note that use of the <code>PAllHints</code> macro is highly discouraged.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadAtom</code></p>
-<dd>A value for an Atom argument does not name a defined Atom.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadAtom</code></dt>
+<dd>A value for an Atom argument does not name a defined Atom.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface, O&#8217;Reilly and Associates,</i></p>

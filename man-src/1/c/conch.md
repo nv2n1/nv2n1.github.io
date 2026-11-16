@@ -29,56 +29,56 @@ description: "conch – Conch SSH client"
 <p> Now, when CVS connects to cvs_host as cvs_user, instead of making a new connection to the server, <code>conch</code> will add a new channel to the existing connection. This saves the cost of repeatedly negotiating the cryptography and authentication. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> Enables authentication agent forwarding.</p>
-<dt><code>-a</code></p>
-<dd> Disables authentication agent forwarding (default).</p>
-<dt><code>-C</code></p>
-<dd> Enable compression.</p>
-<dt><code>-c </code><i>cipher_spec</i></p>
-<dd> Selects encryption algorithms to be used for this connection, as a comma-separated list of ciphers in order of preference. The list that <code>conch</code> supports is (in order of default preference): aes256-ctr, aes256-cbc, aes192-ctr, aes192-cbc, aes128-ctr, aes128-cbc, cast128-ctr, cast128-cbc, blowfish-ctr, blowfish, idea-ctr, idea-cbc, 3des-ctr, 3des-cbc.</p>
-<dt><code>-e </code><i>ch | ^ch | none</i></p>
-<dd> Sets the escape character for sessions with a PTY (default: `~&#8217; ) . The escape character is only recognized at the beginning of a line (after a newline). The escape character followed by a dot (`.&#8217; ) closes the connection; followed by ^Z suspends the connection; and followed by the escape character sends the escape character once. Setting the character to &#8220;none&#8221; disables any escapes.</p>
-<dt><code>-f</code></p>
-<dd> Fork to background after authentication.</p>
-<dt><code>-I</code></p>
-<dd> Do not allow connection sharing over this connection.</p>
-<dt><code>-i </code><i>identity_spec</i></p>
-<dd> The file from which the identity (private key) for RSA or DSA authentication is read. The defaults are $HOME/.ssh/id_rsa and $HOME/.ssh/id_dsa . It is possible to use this option more than once to use more than one private key.</p>
-<dt><code>-K </code><i>connection_spec</i></p>
-<dd> Selects methods for connection to the server, as a comma-separated list of methods in order of preference. See <code>Connection sharing</code> for more information.</p>
-<dt><code>-L </code> <i>port : host : hostport</i></p>
+<dt><code>-A</code></dt>
+<dd> Enables authentication agent forwarding.</dd>
+<dt><code>-a</code></dt>
+<dd> Disables authentication agent forwarding (default).</dd>
+<dt><code>-C</code></dt>
+<dd> Enable compression.</dd>
+<dt><code>-c </code><i>cipher_spec</i></dt>
+<dd> Selects encryption algorithms to be used for this connection, as a comma-separated list of ciphers in order of preference. The list that <code>conch</code> supports is (in order of default preference): aes256-ctr, aes256-cbc, aes192-ctr, aes192-cbc, aes128-ctr, aes128-cbc, cast128-ctr, cast128-cbc, blowfish-ctr, blowfish, idea-ctr, idea-cbc, 3des-ctr, 3des-cbc.</dd>
+<dt><code>-e </code><i>ch | ^ch | none</i></dt>
+<dd> Sets the escape character for sessions with a PTY (default: `~&#8217; ) . The escape character is only recognized at the beginning of a line (after a newline). The escape character followed by a dot (`.&#8217; ) closes the connection; followed by ^Z suspends the connection; and followed by the escape character sends the escape character once. Setting the character to &#8220;none&#8221; disables any escapes.</dd>
+<dt><code>-f</code></dt>
+<dd> Fork to background after authentication.</dd>
+<dt><code>-I</code></dt>
+<dd> Do not allow connection sharing over this connection.</dd>
+<dt><code>-i </code><i>identity_spec</i></dt>
+<dd> The file from which the identity (private key) for RSA or DSA authentication is read. The defaults are $HOME/.ssh/id_rsa and $HOME/.ssh/id_dsa . It is possible to use this option more than once to use more than one private key.</dd>
+<dt><code>-K </code><i>connection_spec</i></dt>
+<dd> Selects methods for connection to the server, as a comma-separated list of methods in order of preference. See <code>Connection sharing</code> for more information.</dd>
+<dt><code>-L </code> <i>port : host : hostport</i></dt>
 <dd>
-<dd>Specifies that the given port on the client host is to be forwarded to the given host and port on the remote side. This allocates a socket to listen to <i>port </i> on the local side, and when connections are made to that socket, they are forwarded over the secure channel and a connection is made to <i>host</i> port <i>hostport</i> from the remote machine. Only root can forward privieged ports.</p>
-<dt><code>-l </code><i>user</i></p>
-<dd> Log in using this username.</p>
-<dt><code>-m </code><i>mac_spec</i></p>
-<dd> Selects MAC (message authentication code) algorithms, as a comma-separated list in order of preference. The list that <code>conch</code> supports is (in order of preference): hmac-sha2-512, hmac-sha2-256, hmac-sha1, hmac-md5.</p>
-<dt><code>-N</code></p>
-<dd> Do not execute a shell or command.</p>
-<dt><code>-n</code></p>
-<dd> Redirect input from /dev/null.</p>
-<dt><code>-o </code><i>openssh_option</i></p>
-<dd> Ignored OpenSSH options.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd> The port to connect to on the server.</p>
-<dt><code>-R </code> <i>port : host : hostport</i></p>
+</dd><dd>Specifies that the given port on the client host is to be forwarded to the given host and port on the remote side. This allocates a socket to listen to <i>port </i> on the local side, and when connections are made to that socket, they are forwarded over the secure channel and a connection is made to <i>host</i> port <i>hostport</i> from the remote machine. Only root can forward privieged ports.</dd>
+<dt><code>-l </code><i>user</i></dt>
+<dd> Log in using this username.</dd>
+<dt><code>-m </code><i>mac_spec</i></dt>
+<dd> Selects MAC (message authentication code) algorithms, as a comma-separated list in order of preference. The list that <code>conch</code> supports is (in order of preference): hmac-sha2-512, hmac-sha2-256, hmac-sha1, hmac-md5.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not execute a shell or command.</dd>
+<dt><code>-n</code></dt>
+<dd> Redirect input from /dev/null.</dd>
+<dt><code>-o </code><i>openssh_option</i></dt>
+<dd> Ignored OpenSSH options.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd> The port to connect to on the server.</dd>
+<dt><code>-R </code> <i>port : host : hostport</i></dt>
 <dd>
-<dd>Specifies that the given port on the remote host is to be forwarded to the given host and port on the local side. This allocates a socket to listen to <i>port </i> on the remote side, and when connections are made to that socket, they are forwarded over the secure channel and a connection is made to <i>host</i> port <i>hostport</i> from the client host. Only root can forward privieged ports.</p>
-<dt><code>-s</code></p>
-<dd> Reconnect to the server if the connection is lost.</p>
-<dt><code>-s</code></p>
-<dd> Invoke <i>command</i> (mandatory) as a SSHv2 subsystem.</p>
-<dt><code>-T</code></p>
-<dd> Do not allocate a TTY.</p>
-<dt><code>-t</code></p>
-<dd> Allocate a TTY even if command is given.</p>
-<dt><code>-V</code></p>
-<dd> Display version number only.</p>
-<dt><code>-v</code></p>
-<dd> Log to stderr.</p>
-<dt><code>-x</code></p>
-<dd> Disable X11 connection forwarding (default).</dl>
+</dd><dd>Specifies that the given port on the remote host is to be forwarded to the given host and port on the local side. This allocates a socket to listen to <i>port </i> on the remote side, and when connections are made to that socket, they are forwarded over the secure channel and a connection is made to <i>host</i> port <i>hostport</i> from the client host. Only root can forward privieged ports.</dd>
+<dt><code>-s</code></dt>
+<dd> Reconnect to the server if the connection is lost.</dd>
+<dt><code>-s</code></dt>
+<dd> Invoke <i>command</i> (mandatory) as a SSHv2 subsystem.</dd>
+<dt><code>-T</code></dt>
+<dd> Do not allocate a TTY.</dd>
+<dt><code>-t</code></dt>
+<dd> Allocate a TTY even if command is given.</dd>
+<dt><code>-V</code></dt>
+<dd> Display version number only.</dd>
+<dt><code>-v</code></dt>
+<dd> Log to stderr.</dd>
+<dt><code>-x</code></dt>
+<dd> Disable X11 connection forwarding (default).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Paul Swartz &lt;z3p [at] twistedmatrix.com&gt;.</p>
 <h2>REPORTING BUGS</h2>

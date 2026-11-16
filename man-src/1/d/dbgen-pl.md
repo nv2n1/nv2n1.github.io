@@ -15,37 +15,37 @@ description: "dbgen.pl – Random LDIF database creator"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-v </code></p>
-<dd>Verbose output</p>
-<dt><code>-q</code></p>
-<dd>Quiet output</p>
-<dt><code>-s suffix </code></p>
-<dd>LDAP suffix. Default is &#8216;dc=example,dc=com&#8217;</p>
-<dt><code>-c CN naming style</code></p>
-<dd>Naming style for RDN&#8217;s. Default is UID</p>
-<dt><code>-O organizationalPersons</code></p>
-<dd>Organizationalpersons objectClass. Default is inetOrgPerson.</p>
-<dt><code>-p piranha style ACI</code></p>
-<dd>Piranha style aci. Default is barracua</p>
-<dt><code>-r seed</code></p>
-<dd>Seed number for random number generator</p>
-<dt><code>-g</code></p>
-<dd>Print extra entries for orgchart</p>
-<dt><code>-x</code></p>
-<dd>Suppress printing of the preamble</p>
-<dt><code>-y</code></p>
-<dd>Suppress printing of Organizational Units</p>
-<dt><code>-l</code></p>
-<dd>Location of directory containing data files, default is /usr/share/dirsrv/data</p>
-<dt><code>-n number</code></p>
-<dd>Number of entries to be generated</p>
-<dt><code>-b number</code></p>
-<dd>Beginning number for RDN e.g. uid=1 (ending number is -n value + beginning number)</p>
-<dt><code>-j number</code></p>
-<dd>0 pad numbers used in RDN to this many digits e.g. with 4 1 becomes 0001 (ignored unless -b number is specified)</p>
-<dt><code>-u</code></p>
+<dt><code>-v </code></dt>
+<dd>Verbose output</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet output</dd>
+<dt><code>-s suffix </code></dt>
+<dd>LDAP suffix. Default is &#8216;dc=example,dc=com&#8217;</dd>
+<dt><code>-c CN naming style</code></dt>
+<dd>Naming style for RDN&#8217;s. Default is UID</dd>
+<dt><code>-O organizationalPersons</code></dt>
+<dd>Organizationalpersons objectClass. Default is inetOrgPerson.</dd>
+<dt><code>-p piranha style ACI</code></dt>
+<dd>Piranha style aci. Default is barracua</dd>
+<dt><code>-r seed</code></dt>
+<dd>Seed number for random number generator</dd>
+<dt><code>-g</code></dt>
+<dd>Print extra entries for orgchart</dd>
+<dt><code>-x</code></dt>
+<dd>Suppress printing of the preamble</dd>
+<dt><code>-y</code></dt>
+<dd>Suppress printing of Organizational Units</dd>
+<dt><code>-l</code></dt>
+<dd>Location of directory containing data files, default is /usr/share/dirsrv/data</dd>
+<dt><code>-n number</code></dt>
+<dd>Number of entries to be generated</dd>
+<dt><code>-b number</code></dt>
+<dd>Beginning number for RDN e.g. uid=1 (ending number is -n value + beginning number)</dd>
+<dt><code>-j number</code></dt>
+<dd>0 pad numbers used in RDN to this many digits e.g. with 4 1 becomes 0001 (ignored unless -b number is specified)</dd>
+<dt><code>-u</code></dt>
 <dd>Add groups containing uniquemembers; generate a group for every 100 user entries created that contains the 100 members
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>dbgen.pl was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

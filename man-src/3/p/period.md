@@ -11,9 +11,7 @@ description: "ql/time/period.hpp – period- and frequency-related classes and e
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/time/frequency.hpp&gt;
-
 #include &lt;ql/time/timeunit.hpp&gt;
-
 #include &lt;ql/types.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>Period</code></p>

@@ -49,10 +49,10 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>t</i> The talloc context to hang the result off.<br />
  <i>fmt</i> The format string.<br />
- <i>&#8230;</i> The parameters used to fill fmt.</dl>
+ <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <h3>char* talloc_asprintf_append (char *s, const char *fmt, &#8230;)</h3>
 <p>Append a formatted string to another string. This function appends the given formatted string to the given string. Use this variant when the string in the current talloc buffer may have been truncated in length. </p>
 <p> This functions sets the name of the new pointer to the new string. This is equivalent to: </p>
@@ -63,10 +63,10 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>s</i> The string to append to.<br />
  <i>fmt</i> The format string.<br />
- <i>&#8230;</i> The parameters used to fill fmt.</dl>
+ <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <h3>char* talloc_asprintf_append_buffer (char *s, const char *fmt, &#8230;)</h3>
 <p>Append a formatted string to another string. This is a more efficient version of <code>talloc_asprintf_append()</code>. It determines the length of the destination string by the size of the talloc context. </p>
 <p> Use this very carefully as it produces a different result than <code>talloc_asprintf_append()</code> when a zero character is in the middle of the destination string. </p>
@@ -85,13 +85,13 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>s</i> The string to append to<br />
  <i>fmt</i> The format string.<br />
- <i>&#8230;</i> The parameters used to fill fmt.</dl>
+ <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_asprintf()</code> </p>
+<dd><code>talloc_asprintf()</code> </dd>
 <p> <code>talloc_asprintf_append()</code></dl>
 <h3>char* talloc_strdup (const void *t, const char *p)</h3>
 <p>Duplicate a string into a talloc chunk. This function is equivalent to: </p>
@@ -104,10 +104,10 @@ description: "The talloc string functions. –"
 <p><code>Parameters:</code></p>
 <dl>
 <dd><i>t</i> The talloc context to hang the result off.<br />
- <i>p</i> The string you want to duplicate.</dl>
+ <i>p</i> The string you want to duplicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The duplicated string, NULL on error.</dl>
+<dd>The duplicated string, NULL on error.</dd></dl>
 <h3>char* talloc_strdup_append (char *s, const char *a)</h3>
 <p>Append a string to given string. The destination string is reallocated to take strlen(s) + strlen(a) + 1 characters. </p>
 <p> This functions sets the name of the new pointer to the new string. This is equivalent to: </p>
@@ -117,13 +117,13 @@ description: "The talloc string functions. –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>s</i> The destination to append to.<br />
- <i>a</i> The string you want to append.</dl>
+ <i>a</i> The string you want to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The concatenated strings, NULL on error.</dl>
+<dd>The concatenated strings, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_strdup()</code> </p>
+<dd><code>talloc_strdup()</code> </dd>
 <p> <code>talloc_strdup_append_buffer()</code></dl>
 <h3>char* talloc_strdup_append_buffer (char *s, const char *a)</h3>
 <p>Append a string to a given buffer. This is a more efficient version of <code>talloc_strdup_append()</code>. It determines the length of the destination string by the size of the talloc context. </p>
@@ -142,13 +142,13 @@ description: "The talloc string functions. –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>s</i> The destination buffer to append to.<br />
- <i>a</i> The string you want to append.</dl>
+ <i>a</i> The string you want to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The concatenated strings, NULL on error.</dl>
+<dd>The concatenated strings, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_strdup()</code> </p>
+<dd><code>talloc_strdup()</code> </dd>
 <p> <code>talloc_strdup_append()</code> </p>
 <p> <code>talloc_array_length()</code></dl>
 <h3>char* talloc_strndup (const void *t, const char *p, size_tn)</h3>
@@ -160,10 +160,10 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>t</i> The talloc context to hang the result off.<br />
  <i>p</i> The string you want to duplicate.<br />
- <i>n</i> The maximum string length to duplicate.</dl>
+ <i>n</i> The maximum string length to duplicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The duplicated string, NULL on error.</dl>
+<dd>The duplicated string, NULL on error.</dd></dl>
 <h3>char* talloc_strndup_append (char *s, const char *a, size_tn)</h3>
 <p>Append at most n characters of a string to given string. The destination string is reallocated to take strlen(s) + strnlen(a, n) + 1 characters. </p>
 <p> This functions sets the name of the new pointer to the new string. This is equivalent to: </p>
@@ -174,13 +174,13 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>s</i> The destination string to append to.<br />
  <i>a</i> The source string you want to append.<br />
- <i>n</i> The number of characters you want to append from the string.</dl>
+ <i>n</i> The number of characters you want to append from the string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The concatenated strings, NULL on error.</dl>
+<dd>The concatenated strings, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_strndup()</code> </p>
+<dd><code>talloc_strndup()</code> </dd>
 <p> <code>talloc_strndup_append_buffer()</code></dl>
 <h3>char* talloc_strndup_append_buffer (char *s, const char *a, size_tn)</h3>
 <p>Append at most n characters of a string to given buffer. This is a more efficient version of <code>talloc_strndup_append()</code>. It determines the length of the destination string by the size of the talloc context. </p>
@@ -200,13 +200,13 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>s</i> The destination buffer to append to.<br />
  <i>a</i> The source string you want to append.<br />
- <i>n</i> The number of characters you want to append from the string.</dl>
+ <i>n</i> The number of characters you want to append from the string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The concatenated strings, NULL on error.</dl>
+<dd>The concatenated strings, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_strndup()</code> </p>
+<dd><code>talloc_strndup()</code> </dd>
 <p> <code>talloc_strndup_append()</code> </p>
 <p> <code>talloc_array_length()</code></dl>
 <h3>char* talloc_vasprintf (const void *t, const char *fmt, va_listap)</h3>
@@ -218,23 +218,23 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>t</i> The talloc context to hang the result off.<br />
  <i>fmt</i> The format string.<br />
- <i>ap</i> The parameters used to fill fmt.</dl>
+ <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <h3>char* talloc_vasprintf_append (char *s, const char *fmt, va_listap)</h3>
 <p>Format a string given a va_list and append it to the given destination string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>s</i> The destination string to append to.<br />
  <i>fmt</i> The format string.<br />
- <i>ap</i> The parameters used to fill fmt.</dl>
+ <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_vasprintf()</code></dl>
+<dd><code>talloc_vasprintf()</code></dd></dl>
 <p> Format a string given a va_list and append it to the given destination string. </p>
 <p> Good for gradually accumulating output into a string buffer. Appends at the end of the string.</p>
 <h3>char* talloc_vasprintf_append_buffer (char *s, const char *fmt, va_listap)</h3>
@@ -243,13 +243,13 @@ description: "The talloc string functions. –"
 <dl>
 <dd><i>s</i> The destination buffer to append to.<br />
  <i>fmt</i> The format string.<br />
- <i>ap</i> The parameters used to fill fmt.</dl>
+ <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The formatted string, NULL on error.</dl>
+<dd>The formatted string, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>talloc_vasprintf()</code></dl>
+<dd><code>talloc_vasprintf()</code></dd></dl>
 <p> Format a string given a va_list and append it to the given destination buffer. </p>
 <p> Always appends at the end of the talloc&#8217;ed buffer, not the end of the string.</p>
 <h2>Author</h2>

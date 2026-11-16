@@ -17,20 +17,20 @@ mongoc_stream_readv (mongoc_stream_t *stream,
  int32_t timeout_msec);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iov</code></p>
-<dd>A vector of <code>mongoc_iovec_t</code> \&amp;.</dl>
+<dt><code>iov</code></dt>
+<dd>A vector of <code>mongoc_iovec_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iovcnt</code></p>
-<dd>The number of items in <code>iov</code> \&amp;.</dl>
+<dt><code>iovcnt</code></dt>
+<dd>The number of items in <code>iov</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>min_bytes</code></p>
-<dd>The minimum number of bytes to read or failure will be indicated.</dl>
+<dt><code>min_bytes</code></dt>
+<dd>The minimum number of bytes to read or failure will be indicated.</dd></dl>
 <dl COMPACT>
-<dt><code>timeout_msec</code></p>
-<dd>A timeout in milliseconds, or 0 to indicate non-blocking. A negative value with use the default timeout.</dl>
+<dt><code>timeout_msec</code></dt>
+<dd>A timeout in milliseconds, or 0 to indicate non-blocking. A negative value with use the default timeout.</dd></dl>
 <p> This function is identical to <code><a href="/docs/linux/man/3-mongoc_stream_read/">mongoc_stream_read</a>(3)</code> except that it takes a <code>mongoc_iovec_t</code> to perform gathered I/O. </p>
 <h2>Returns</h2>
 <p><code>&gt;= 0</code> on success, <code>-1</code> on failure and <code>errno</code> is set. </p>

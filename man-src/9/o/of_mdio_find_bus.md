@@ -14,7 +14,7 @@ description: "of_mdio_find_bus – Given an mii_bus node, find the mii_bus."
 <p><i>mdio_bus_np</i></p>
 <dl>
 <dd>
-<dd>Pointer to the mii_bus.</dl>
+</dd><dd>Pointer to the mii_bus.</dd></dl>
 <h2>Description</h2>
 <p>Returns a reference to the mii_bus, or NULL if none found. The embedded struct device will have its reference count incremented, and this must be put once the bus is finished with. </p>
 <p> Because the association of a device_node and mii_bus is made via <code>of_mdiobus_register</code>, the mii_bus cannot be found before it is registered with <code>of_mdiobus_register</code>.</p>

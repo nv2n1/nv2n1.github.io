@@ -21,27 +21,27 @@ description: "lttng — LTTng 2.x tracer control command line tool"
 <h2>OPTIONS</h2>
 <p> This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Increase verbosity. Three levels of verbosity are available which are triggered by putting additional v to the option (-vv or -vvv)</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress all messages (even errors).</p>
-<dt><code>-g, &#8211;group NAME</code></p>
-<dd> Set unix tracing group name. (default: tracing)</p>
-<dt><code>-n, &#8211;no-sessiond</code></p>
-<dd> Don&#8217;t automatically spawn a session daemon.</p>
-<dt><code>&#8211;sessiond-path PATH</code></p>
-<dd> Set session daemon full binary path.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of lttng options.</p>
-<dt><code>&#8211;list-commands</code></p>
-<dd> Simple listing of lttng commands.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Increase verbosity. Three levels of verbosity are available which are triggered by putting additional v to the option (-vv or -vvv)</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress all messages (even errors).</dd>
+<dt><code>-g, &#8211;group NAME</code></dt>
+<dd> Set unix tracing group name. (default: tracing)</dd>
+<dt><code>-n, &#8211;no-sessiond</code></dt>
+<dd> Don&#8217;t automatically spawn a session daemon.</dd>
+<dt><code>&#8211;sessiond-path PATH</code></dt>
+<dd> Set session daemon full binary path.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of lttng options.</dd>
+<dt><code>&#8211;list-commands</code></dt>
+<dd> Simple listing of lttng commands.</dd></dl>
 <h2>COMMANDS</h2>
 <p> <code>add-context</code> [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Add context to event(s) and/or channel(s). </p>
+</dt><dd> Add context to event(s) and/or channel(s). </dd>
 <p> A context is basically extra information appended to a channel. For instance, you could ask the tracer to add the PID information for all events in a channel. You can also add performance monitoring unit counters (perf PMU) using the perf kernel API). </p>
 <p> For example, this command will add the context information &#8216;prio&#8217; and two perf counters (hardware branch misses and cache misses), to all events in the trace data output: </p>
 <pre>
@@ -53,23 +53,23 @@ description: "lttng — LTTng 2.x tracer control command line tool"
 <p> If <code>-s, &#8211;session</code> is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply on session name.</p>
-<dt><code>-c, &#8211;channel NAME</code></p>
-<dd> Apply on channel name.</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply for the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply for the user-space tracer</p>
-<dt><code>-t, &#8211;type TYPE</code></p>
-<dd> Context type. You can repeat this option on the command line. Please use &quot;lttng add-context -h&quot; to list all available types.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply on session name.</dd>
+<dt><code>-c, &#8211;channel NAME</code></dt>
+<dd> Apply on channel name.</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply for the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply for the user-space tracer</dd>
+<dt><code>-t, &#8211;type TYPE</code></dt>
+<dd> Context type. You can repeat this option on the command line. Please use &quot;lttng add-context -h&quot; to list all available types.</dd></dl>
 </dl>
 <p> <code>calibrate</code> [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Quantify LTTng overhead </p>
+</dt><dd> Quantify LTTng overhead </dd>
 <p> The LTTng calibrate command can be used to find out the combined average overhead of the LTTng tracer and the instrumentation mechanisms used. This overhead can be calibrated in terms of time or using any of the PMU performance counter available on the system. </p>
 <p> For now, the only calibration implemented is that of the kernel function instrumentation (kretprobes). </p>
 <p> * Calibrate kernel function instrumentation </p>
@@ -96,19 +96,19 @@ perf_LLC_prefetch_misses:   9.0      14.742
 <p> As we can notice, the load and store misses are relatively stable across runs (their standard deviation is relatively low) compared to the prefetch misses. We can conclude from this information that LLC load and store misses can be accounted for quite precisely, but prefetches within a function seems to behave too erratically (not much causality link between the code executed and the CPU prefetch activity) to be accounted for. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply for the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply for the user-space tracer</p>
-<dt><code>&#8211;function</code></p>
-<dd> Dynamic function entry/return probe (default)</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply for the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply for the user-space tracer</dd>
+<dt><code>&#8211;function</code></dt>
+<dd> Dynamic function entry/return probe (default)</dd></dl>
 </dl>
 <p> <code>create</code> [NAME] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Create tracing session. </p>
+</dt><dd> Create tracing session. </dd>
 <p> A tracing session contains channel(s) which contains event(s). It is domain agnostic, meaning that channels and events can be enabled for the user-space tracer and/or the kernel tracer. It acts like a container aggregating multiple tracing sources. </p>
 <p> On creation, a <code>.lttngrc</code> file is created in your $HOME directory containing the current session name. If NAME is omitted, a session name is automatically created having this form: &#8216;auto-yyyymmdd-hhmmss&#8217;. </p>
 <p> If no <code>-o, &#8211;output</code> is specified, the traces will be written in $HOME/lttng-traces. </p>
@@ -116,18 +116,18 @@ perf_LLC_prefetch_misses:   9.0      14.742
 <p> The session name MUST NOT contain the character &#8216;/&#8217;. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-o, &#8211;output PATH</code></p>
-<dd> Specify output path for traces</p>
-<dt><code>&#8211;no-output</code></p>
-<dd> Traces will not be output</p>
-<dt><code>&#8211;snapshot</code></p>
-<dd> Set the session in snapshot mode. Created in no-output mode and uses the URL, if one is specified, as the default snapshot output. Every channel will be set in overwrite mode and with mmap output (splice not supported).</p>
-<dt><code>&#8211;live [USEC]</code></p>
-<dd> Set the session exclusively in live mode. The paremeter is the delay in micro seconds before the data is flushed and streamed. The live mode allows you to stream the trace and view it while it&#8217;s being recorded by any tracer. For that, you need a lttng-relayd and this session requires a network URL (-U or -C/-D). If no USEC nor URL is provided, the default is to use a timer value set to 1000000 and the network URL set to <a href="net://127.0.0.1.">net://127.0.0.1.</a> </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-o, &#8211;output PATH</code></dt>
+<dd> Specify output path for traces</dd>
+<dt><code>&#8211;no-output</code></dt>
+<dd> Traces will not be output</dd>
+<dt><code>&#8211;snapshot</code></dt>
+<dd> Set the session in snapshot mode. Created in no-output mode and uses the URL, if one is specified, as the default snapshot output. Every channel will be set in overwrite mode and with mmap output (splice not supported).</dd>
+<dt><code>&#8211;live [USEC]</code></dt>
+<dd> Set the session exclusively in live mode. The paremeter is the delay in micro seconds before the data is flushed and streamed. The live mode allows you to stream the trace and view it while it&#8217;s being recorded by any tracer. For that, you need a lttng-relayd and this session requires a network URL (-U or -C/-D). If no USEC nor URL is provided, the default is to use a timer value set to 1000000 and the network URL set to <a href="net://127.0.0.1.">net://127.0.0.1.</a> </dd>
 <p> To read a live session, you can use <a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1) or the live streaming protocol in doc/live-reading-protocol.txt. Here is an example: </p>
 <pre>
 $ lttng-relayd -o /tmp/lttng
@@ -136,23 +136,23 @@ $ lttng enable-event -a --userspace
 $ lttng start
 </pre>
 <p> After the start, you&#8217;ll be able to read the events while they are being recorded in /tmp/lttng. </p>
-<dt><code>-U, &#8211;set-url=URL</code></p>
-<dd> Set URL for the consumer output destination. It is persistent for the session lifetime. Redo the command to change it. This will set both data and control URL for network.</p>
-<dt><code>-C, &#8211;ctrl-url=URL</code></p>
-<dd> Set control path URL. (Must use -D also)</p>
-<dt><code>-D, &#8211;data-url=URL</code></p>
-<dd> Set data path URL. (Must use -C also)</dl>
+<dt><code>-U, &#8211;set-url=URL</code></dt>
+<dd> Set URL for the consumer output destination. It is persistent for the session lifetime. Redo the command to change it. This will set both data and control URL for network.</dd>
+<dt><code>-C, &#8211;ctrl-url=URL</code></dt>
+<dd> Set control path URL. (Must use -D also)</dd>
+<dt><code>-D, &#8211;data-url=URL</code></dt>
+<dd> Set data path URL. (Must use -C also)</dd></dl>
 <p> Using these options, each API call can be controlled individually. For instance, -C does not enable the consumer automatically. You&#8217;ll need the -e option for that. </p>
 <p> <code>URL FORMAT:</code> </p>
 <p> <a href="proto://[HOST|IP][:PORT1[:PORT2]][/TRACE_PATH]">proto://[HOST|IP][:PORT1[:PORT2]][/TRACE_PATH]</a> </p>
 <p> Supported protocols are (proto):</p>
 <dl>
-<dt><code>file://&#8230;</code></p>
-<dd> Local filesystem full path. </p>
-<dt><code><a href="net://...">net://&#8230;</a></code></p>
-<dd> This will use the default network transport layer which is TCP for both control (PORT1) and data port (PORT2). The default ports are respectively 5342 and 5343. Note that net[6]:// is not yet supported. </p>
-<dt><code>tcp[6]://&#8230;</code></p>
-<dd> Can only be used with -C and -D together </p>
+<dt><code>file://&#8230;</code></dt>
+<dd> Local filesystem full path. </dd>
+<dt><code><a href="net://...">net://&#8230;</a></code></dt>
+<dd> This will use the default network transport layer which is TCP for both control (PORT1) and data port (PORT2). The default ports are respectively 5342 and 5343. Note that net[6]:// is not yet supported. </dd>
+<dt><code>tcp[6]://&#8230;</code></dt>
+<dd> Can only be used with -C and -D together </dd>
 <p> NOTE: IPv6 address MUST be enclosed in brackets &#8216;[]&#8217; (rfc2732) </p>
 <p> <code>EXAMPLES:</code> </p>
 <pre>
@@ -171,22 +171,22 @@ $ lttng start
 <p> <code>destroy</code> [NAME] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Teardown tracing session </p>
+</dt><dd> Teardown tracing session </dd>
 <p> Free memory on the session daemon and tracer side. It&#8217;s gone! </p>
 <p> If NAME is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd> Destroy all sessions</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd> Destroy all sessions</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd></dl>
 </dl>
 <p> <code>enable-channel</code> NAME[,NAME2,&#8230;] (-k | -u) [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Enable tracing channel </p>
+</dt><dd> Enable tracing channel </dd>
 <p> To enable an event, you must enable both the event and the channel that contains it. </p>
 <p> If <code>-s, &#8211;session</code> is omitted, the session name is taken from the .lttngrc file. </p>
 <p> Exactly one of -k or -u must be specified. </p>
@@ -194,41 +194,41 @@ $ lttng start
 <p> Note that once the session has been started and enabled on the tracer side, it&#8217;s not possible anymore to enable a new channel for that session. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show this help</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply on session name</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply to the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply to the user-space tracer</p>
-<dt><code>&#8211;discard</code></p>
-<dd> Discard event when subbuffers are full (default)</p>
-<dt><code>&#8211;overwrite</code></p>
-<dd> Flight recorder mode : overwrites events when subbuffers are full</p>
-<dt><code>&#8211;subbuf-size SIZE</code></p>
-<dd> Subbuffer size in bytes {+k,+M,+G}. (default UST uid: 131072, UST pid: 4096, kernel: 262144, metadata: 4096) Rounded up to the next power of 2. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show this help</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply on session name</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply to the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply to the user-space tracer</dd>
+<dt><code>&#8211;discard</code></dt>
+<dd> Discard event when subbuffers are full (default)</dd>
+<dt><code>&#8211;overwrite</code></dt>
+<dd> Flight recorder mode : overwrites events when subbuffers are full</dd>
+<dt><code>&#8211;subbuf-size SIZE</code></dt>
+<dd> Subbuffer size in bytes {+k,+M,+G}. (default UST uid: 131072, UST pid: 4096, kernel: 262144, metadata: 4096) Rounded up to the next power of 2. </dd>
 <p> The minimum subbuffer size, for each tracer, is the max value between the default above and the system page size. You can issue this command to get the current page size on your system: <code>$ getconf PAGE_SIZE</code></p>
-<dt><code>&#8211;num-subbuf NUM</code></p>
-<dd> Number of subbuffers. (default UST uid: 4, UST pid: 4, kernel: 4, metadata: 2) Rounded up to the next power of 2.</p>
-<dt><code>&#8211;switch-timer USEC</code></p>
-<dd> Switch subbuffer timer interval in µsec. (default UST uid: 0, UST pid: 0, kernel: 0, metadata: 0)</p>
-<dt><code>&#8211;read-timer USEC</code></p>
-<dd> Read timer interval in µsec. (default UST uid: 0, UST pid: 0, kernel: 200000, metadata: 0)</p>
-<dt><code>&#8211;output TYPE</code></p>
-<dd> Channel output type. Possible values: mmap, splice (default UST uid: mmap, UST pid: mmap, kernel: splice, metadata: mmap)</p>
-<dt><code>&#8211;buffers-uid</code></p>
-<dd> Use per UID buffer (-u only). Buffers are shared between applications that have the same UID.</p>
-<dt><code>&#8211;buffers-pid</code></p>
-<dd> Use per PID buffer (-u only). Each application has its own buffers.</p>
-<dt><code>&#8211;buffers-global</code></p>
-<dd> Use shared buffer for the whole system (-k only)</p>
-<dt><code>-C, &#8211;tracefile-size SIZE</code></p>
-<dd> Maximum size of each tracefile within a stream (in bytes). 0 means unlimited. (default: 0)</p>
-<dt><code>-W, &#8211;tracefile-count COUNT</code></p>
-<dd> Used in conjunction with -C option, this will limit the number of files created to the specified count. 0 means unlimited. (default: 0) </p>
+<dt><code>&#8211;num-subbuf NUM</code></dt>
+<dd> Number of subbuffers. (default UST uid: 4, UST pid: 4, kernel: 4, metadata: 2) Rounded up to the next power of 2.</dd>
+<dt><code>&#8211;switch-timer USEC</code></dt>
+<dd> Switch subbuffer timer interval in µsec. (default UST uid: 0, UST pid: 0, kernel: 0, metadata: 0)</dd>
+<dt><code>&#8211;read-timer USEC</code></dt>
+<dd> Read timer interval in µsec. (default UST uid: 0, UST pid: 0, kernel: 200000, metadata: 0)</dd>
+<dt><code>&#8211;output TYPE</code></dt>
+<dd> Channel output type. Possible values: mmap, splice (default UST uid: mmap, UST pid: mmap, kernel: splice, metadata: mmap)</dd>
+<dt><code>&#8211;buffers-uid</code></dt>
+<dd> Use per UID buffer (-u only). Buffers are shared between applications that have the same UID.</dd>
+<dt><code>&#8211;buffers-pid</code></dt>
+<dd> Use per PID buffer (-u only). Each application has its own buffers.</dd>
+<dt><code>&#8211;buffers-global</code></dt>
+<dd> Use shared buffer for the whole system (-k only)</dd>
+<dt><code>-C, &#8211;tracefile-size SIZE</code></dt>
+<dd> Maximum size of each tracefile within a stream (in bytes). 0 means unlimited. (default: 0)</dd>
+<dt><code>-W, &#8211;tracefile-count COUNT</code></dt>
+<dd> Used in conjunction with -C option, this will limit the number of files created to the specified count. 0 means unlimited. (default: 0) </dd>
 <p> <code>EXAMPLES:</code> </p>
 <pre>
 $ lttng enable-channel -k -C 4096 -W 32 chan1
@@ -243,45 +243,45 @@ $ lttng enable-channel -k -C 4096
 <p> <code>enable-event</code> NAME[,NAME2,&#8230;] [-k|-u] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Enable tracing event </p>
+</dt><dd> Enable tracing event </dd>
 <p> A tracing event is always assigned to a channel. If <code>-c, &#8211;channel</code> is omitted, a default channel named &#8216;<code>channel0</code>&#8216; is created and the event is added to it. If <code>-c, &#8211;channel</code> is omitted, but a non-default channel already exists within the session, an error is returned. For the user-space tracer, using <code>-a, &#8211;all</code> is the same as using the wildcard &quot;*&quot;. </p>
 <p> If <code>-s, &#8211;session</code> is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply on session name</p>
-<dt><code>-c, &#8211;channel NAME</code></p>
-<dd> Apply on channel name</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd> Enable all tracepoints and syscalls. This actually enables a single wildcard event &quot;*&quot;.</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply for the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply for the user-space tracer</p>
-<dt><code>-j, &#8211;jul</code></p>
-<dd> Apply for Java application using Java Util Logging interface (JUL)</p>
-<dt><code>&#8211;tracepoint</code></p>
-<dd> Tracepoint event (default). Userspace tracer supports wildcards at the end of string. Don&#8217;t forget to quote to deal with bash expansion. e.g.: </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply on session name</dd>
+<dt><code>-c, &#8211;channel NAME</code></dt>
+<dd> Apply on channel name</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd> Enable all tracepoints and syscalls. This actually enables a single wildcard event &quot;*&quot;.</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply for the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply for the user-space tracer</dd>
+<dt><code>-j, &#8211;jul</code></dt>
+<dd> Apply for Java application using Java Util Logging interface (JUL)</dd>
+<dt><code>&#8211;tracepoint</code></dt>
+<dd> Tracepoint event (default). Userspace tracer supports wildcards at the end of string. Don&#8217;t forget to quote to deal with bash expansion. e.g.: </dd>
 <pre>
         &quot;*&quot;
         &quot;app_component:na*&quot;
 </pre>
-<dt><code>&#8211;loglevel NAME</code></p>
-<dd> Tracepoint loglevel range from 0 to loglevel. Listed in the help (-h). For the JUL domain, the loglevel ranges are detailed with the &#8211;help option thus starting from SEVERE to FINEST.</p>
-<dt><code>&#8211;loglevel-only NAME</code></p>
-<dd> Tracepoint loglevel (only this loglevel). The loglevel or loglevel-only options should be combined with a tracepoint name or tracepoint wildcard.</p>
-<dt><code>&#8211;probe (addr | symbol | symbol+offset)</code></p>
-<dd> Dynamic probe. Addr and offset can be octal (0NNN&#8230;), decimal (NNN&#8230;) or hexadecimal (0xNNN&#8230;)</p>
-<dt><code>&#8211;function (addr | symbol | symbol+offset)</code></p>
-<dd> Dynamic function entry/return probe. Addr and offset can be octal (0NNN&#8230;), decimal (NNN&#8230;) or hexadecimal (0xNNN&#8230;)</p>
-<dt><code>&#8211;syscall</code></p>
-<dd> System call event. Enabling syscalls tracing (kernel tracer), you will not be able to disable them with disable-event. This is a known limitation. You can disable the entire channel to do the trick.</p>
-<dt><code>&#8211;filter &#8216;expression&#8217;</code></p>
-<dd> Set a filter on a newly enabled event. Filter expression on event fields and context. The event will be recorded if the filter&#8217;s expression evaluates to TRUE. Only specify on first activation of a given event within a session. Specifying a filter is only allowed when enabling events within a session before tracing is started. If the filter fails to link with the event within the traced domain, the event will be discarded. Filtering is currently only implemented for the user-space tracer. </p>
+<dt><code>&#8211;loglevel NAME</code></dt>
+<dd> Tracepoint loglevel range from 0 to loglevel. Listed in the help (-h). For the JUL domain, the loglevel ranges are detailed with the &#8211;help option thus starting from SEVERE to FINEST.</dd>
+<dt><code>&#8211;loglevel-only NAME</code></dt>
+<dd> Tracepoint loglevel (only this loglevel). The loglevel or loglevel-only options should be combined with a tracepoint name or tracepoint wildcard.</dd>
+<dt><code>&#8211;probe (addr | symbol | symbol+offset)</code></dt>
+<dd> Dynamic probe. Addr and offset can be octal (0NNN&#8230;), decimal (NNN&#8230;) or hexadecimal (0xNNN&#8230;)</dd>
+<dt><code>&#8211;function (addr | symbol | symbol+offset)</code></dt>
+<dd> Dynamic function entry/return probe. Addr and offset can be octal (0NNN&#8230;), decimal (NNN&#8230;) or hexadecimal (0xNNN&#8230;)</dd>
+<dt><code>&#8211;syscall</code></dt>
+<dd> System call event. Enabling syscalls tracing (kernel tracer), you will not be able to disable them with disable-event. This is a known limitation. You can disable the entire channel to do the trick.</dd>
+<dt><code>&#8211;filter &#8216;expression&#8217;</code></dt>
+<dd> Set a filter on a newly enabled event. Filter expression on event fields and context. The event will be recorded if the filter&#8217;s expression evaluates to TRUE. Only specify on first activation of a given event within a session. Specifying a filter is only allowed when enabling events within a session before tracing is started. If the filter fails to link with the event within the traced domain, the event will be discarded. Filtering is currently only implemented for the user-space tracer. </dd>
 <p> Expression examples: </p>
 <p>&#8216;intfield &gt; 500 &amp;&amp; intfield &lt; 503&#8217; &#8216;(strfield == &#8220;test&#8221; || intfield != 10) &amp;&amp; intfield &gt; 33&#8217; &#8216;doublefield &gt; 1.1 &amp;&amp; intfield &lt; 5.3&#8217;</p>
 <p> Wildcards are allowed at the end of strings:<br />
@@ -290,59 +290,59 @@ $ lttng enable-channel -k -C 4096
 <pre><code>
 '$ctx.procname == "demo*"' '$ctx.vpid &gt;= 4433 &amp;&amp; $ctx.vpid &lt; 4455' '$ctx.vtid == 1234'
 </code></pre>
-<dt><code>-x, &#8211;exclude LIST</code></p>
-<dd> Add exclusions to UST tracepoints: Events that match any of the items in the comma-separated LIST are not enabled, even if they match a wildcard definition of the event. </p>
+<dt><code>-x, &#8211;exclude LIST</code></dt>
+<dd> Add exclusions to UST tracepoints: Events that match any of the items in the comma-separated LIST are not enabled, even if they match a wildcard definition of the event. </dd>
 <p> This option is also applicable with the <code>-a, &#8211;all</code> option, in which case all UST tracepoints are enabled except the ones whose names match any of the items in LIST.</dl>
 </dl>
 <p> <code>disable-channel</code> NAME[,NAME2,&#8230;] (-k | -u) [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Disable tracing channel </p>
+</dt><dd> Disable tracing channel </dd>
 <p> Disabling a channel disables the tracing of all of the channel&#8217;s events. A channel can be reenabled by calling <code>lttng enable-channel NAME</code> again. </p>
 <p> If <code>-s, &#8211;session</code> is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply on session name</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply for the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply for the user-space tracer</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply on session name</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply for the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply for the user-space tracer</dd></dl>
 </dl>
 <p> <code>disable-event</code> NAME[,NAME2,&#8230;] (-k | -u) [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Disable tracing event </p>
+</dt><dd> Disable tracing event </dd>
 <p> The event, once disabled, can be re-enabled by calling <code>lttng enable-event NAME</code> again. </p>
 <p> If <code>-s, &#8211;session</code> is omitted, the session name is taken from the .lttngrc file. </p>
 <p> If <code>-c, &#8211;channel</code> is omitted, the default channel name is used. If <code>-c, &#8211;channel</code> is omitted, but a non-default channel already exists within the session, an error is returned. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply on session name</p>
-<dt><code>-c, &#8211;channel NAME</code></p>
-<dd> Apply on channel name</p>
-<dt><code>-a, &#8211;all-events</code></p>
-<dd> Disable all events. This does NOT disable &quot;*&quot; but rather every known events of the session.</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Apply for the kernel tracer</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Apply for the user-space tracer</p>
-<dt><code>-j, &#8211;jul</code></p>
-<dd> Apply for Java application using Java Util Logging interface (JUL)</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply on session name</dd>
+<dt><code>-c, &#8211;channel NAME</code></dt>
+<dd> Apply on channel name</dd>
+<dt><code>-a, &#8211;all-events</code></dt>
+<dd> Disable all events. This does NOT disable &quot;*&quot; but rather every known events of the session.</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Apply for the kernel tracer</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Apply for the user-space tracer</dd>
+<dt><code>-j, &#8211;jul</code></dt>
+<dd> Apply for Java application using Java Util Logging interface (JUL)</dd></dl>
 </dl>
 <p> <code>list</code> [OPTIONS] [SESSION [SESSION OPTIONS]]</p>
 <dl>
 <dt>
-<dd> List tracing session information. </p>
+</dt><dd> List tracing session information. </dd>
 <p> With no arguments, it will list available tracing session(s). </p>
 <p> With the session name, it will display the details of the session including the trace file path, the associated channels and their state (activated and deactivated), the activated events and more. </p>
 <p> With -k alone, it will list all available kernel events (except the system calls events). With -j alone, the available JUL event from registered application will be list. The event corresponds to the Logger name in the Java JUL application. With -u alone, it will list all available user-space events from registered applications. Here is an example of &#8216;lttng list -u&#8217;: </p>
@@ -354,61 +354,61 @@ PID: 7448 - Name: /tmp/lttng-ust/tests/hello/.libs/lt-hello
 <p> You can now enable any event listed by using the name : <code>ust_tests_hello:tptest</code>. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-k, &#8211;kernel</code></p>
-<dd> Select kernel domain</p>
-<dt><code>-u, &#8211;userspace</code></p>
-<dd> Select user-space domain.</p>
-<dt><code>-j, &#8211;jul</code></p>
-<dd> Apply for Java application using JUL</p>
-<dt><code>-f, &#8211;fields</code></p>
-<dd> List event fields </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-k, &#8211;kernel</code></dt>
+<dd> Select kernel domain</dd>
+<dt><code>-u, &#8211;userspace</code></dt>
+<dd> Select user-space domain.</dd>
+<dt><code>-j, &#8211;jul</code></dt>
+<dd> Apply for Java application using JUL</dd>
+<dt><code>-f, &#8211;fields</code></dt>
+<dd> List event fields </dd>
 </dl>
 <p> <code>SESSION OPTIONS:</code> </p>
 <dl>
-<dt><code>-c, &#8211;channel NAME</code></p>
-<dd> List details of a channel</p>
-<dt><code>-d, &#8211;domain</code></p>
-<dd> List available domain(s)</dl>
+<dt><code>-c, &#8211;channel NAME</code></dt>
+<dd> List details of a channel</dd>
+<dt><code>-d, &#8211;domain</code></dt>
+<dd> List available domain(s)</dd></dl>
 </dl>
 <p> <code>set-session</code> NAME [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Set current session name </p>
+</dt><dd> Set current session name </dd>
 <p> Will change the session name in the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd></dl>
 </dl>
 <p> <code>snapshot</code> [OPTIONS] ACTION</p>
 <dl>
 <dt>
-<dd> Snapshot command for LTTng session. </p>
+</dt><dd> Snapshot command for LTTng session. </dd>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options </dd>
 </dl>
 <p> <code>ACTION:</code> </p>
 <dl>
-<dt><code>add-output</code> [-m &lt;SIZE&gt;] [-s &lt;NAME&gt;] [-n &lt;NAME&gt;] &lt;URL&gt; | -C &lt;URL&gt; -D &lt;URL&gt;</p>
+<dt><code>add-output</code> [-m &lt;SIZE&gt;] [-s &lt;NAME&gt;] [-n &lt;NAME&gt;] &lt;URL&gt; | -C &lt;URL&gt; -D &lt;URL&gt;</dt>
 <dd>
 <p> Setup and add an snapshot output for a session. Output are the destination where the snapshot will be sent. Only one output is permitted. To change it, you&#8217;ll need to delete it and add back the new one. </p>
-<dt><code>del-output</code> ID | NAME [-s &lt;NAME&gt;]</p>
+</dd><dt><code>del-output</code> ID | NAME [-s &lt;NAME&gt;]</dt>
 <dd>
 <p> Delete an output for a session using the ID. You can either specify the output&#8217;s ID that can be found with list-output or the name. </p>
-<dt><code>list-output</code> [-s &lt;NAME&gt;]</p>
+</dd><dt><code>list-output</code> [-s &lt;NAME&gt;]</dt>
 <dd>
 <p> List the output of a session. Attributes of the output are printed. </p>
-<dt><code>record</code> [-m &lt;SIZE&gt;] [-s &lt;NAME&gt;] [-n &lt;NAME&gt;] [&lt;URL&gt; | -C &lt;URL&gt; -D &lt;URL&gt;]</p>
+</dd><dt><code>record</code> [-m &lt;SIZE&gt;] [-s &lt;NAME&gt;] [-n &lt;NAME&gt;] [&lt;URL&gt; | -C &lt;URL&gt; -D &lt;URL&gt;]</dt>
 <dd>
 <p> Snapshot a session&#8217;s buffer(s) for all domains. If an URL is specified, it is used instead of a previously added output. Specifying only a name or/and a max size will override the current output values. For instance, you can record a snapshot with a custom maximum size or with a different name. </p>
 <pre>
@@ -417,72 +417,72 @@ $ lttng snapshot add-output -n mysnapshot file:///data/snapshot
 $ lttng snapshot record -n new_name_snapshot
 </pre>
 <p> The above will create a snapshot in /data/snapshot/new_name_snapshot* directory rather then in mysnapshot*/ </p>
-</dl>
+</dd></dl>
 <p> <code>DETAILED ACTION OPTIONS</code> </p>
 <dl>
-<dt><code>-s, &#8211;session NAME</code></p>
-<dd> Apply to session name.</p>
-<dt><code>-n, &#8211;name NAME</code></p>
-<dd> Name of the snapshot&#8217;s output.</p>
-<dt><code>-m, &#8211;max-size SIZE</code></p>
-<dd> Maximum size in bytes of the snapshot. The maxium size does not include the metadata file. Human readable format is accepted: {+k,+M,+G}. For instance, &#8211;max-size 5M</p>
-<dt><code>-C, &#8211;ctrl-url URL</code></p>
-<dd> Set control path URL. (Must use -D also)</p>
-<dt><code>-D, &#8211;data-url URL</code></p>
-<dd> Set data path URL. (Must use -C also)</dl>
+<dt><code>-s, &#8211;session NAME</code></dt>
+<dd> Apply to session name.</dd>
+<dt><code>-n, &#8211;name NAME</code></dt>
+<dd> Name of the snapshot&#8217;s output.</dd>
+<dt><code>-m, &#8211;max-size SIZE</code></dt>
+<dd> Maximum size in bytes of the snapshot. The maxium size does not include the metadata file. Human readable format is accepted: {+k,+M,+G}. For instance, &#8211;max-size 5M</dd>
+<dt><code>-C, &#8211;ctrl-url URL</code></dt>
+<dd> Set control path URL. (Must use -D also)</dd>
+<dt><code>-D, &#8211;data-url URL</code></dt>
+<dd> Set data path URL. (Must use -C also)</dd></dl>
 </dl>
 <p> <code>start</code> [NAME] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Start tracing </p>
+</dt><dd> Start tracing </dd>
 <p> It will start tracing for all tracers for a specific tracing session. If NAME is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd></dl>
 </dl>
 <p> <code>stop</code> [NAME] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> Stop tracing </p>
+</dt><dd> Stop tracing </dd>
 <p> It will stop tracing for all tracers for a specific tracing session. Before returning, the command checks for data availability meaning that it will wait until the trace is readable for the session. Use &#8211;no-wait to avoid this behavior. </p>
 <p> If NAME is omitted, the session name is taken from the .lttngrc file. </p>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>&#8211;no-wait</code></p>
-<dd> Don&#8217;t wait for data availability.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>&#8211;no-wait</code></dt>
+<dd> Don&#8217;t wait for data availability.</dd></dl>
 </dl>
 <p> <code>version</code></p>
 <dl>
 <dt>
-<dd> Show version information </p>
+</dt><dd> Show version information </dd>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd></dl>
 </dl>
 <p> <code>view</code> [SESSION_NAME] [OPTIONS]</p>
 <dl>
 <dt>
-<dd> View traces of a tracing session. By default, the babeltrace viewer will be used for text viewing. If SESSION_NAME is omitted, the session name is taken from the .lttngrc file. </p>
+</dt><dd> View traces of a tracing session. By default, the babeltrace viewer will be used for text viewing. If SESSION_NAME is omitted, the session name is taken from the .lttngrc file. </dd>
 <p> <code>OPTIONS:</code> </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show this help</p>
-<dt><code>&#8211;list-options</code></p>
-<dd> Simple listing of options</p>
-<dt><code>-t, &#8211;trace-path PATH</code></p>
-<dd> Trace directory path for the viewer</p>
-<dt><code>-e, &#8211;viewer CMD</code></p>
-<dd> Specify viewer and/or options to use This will completely override the default viewers so please make sure to specify the full command. The trace directory path of the session will be appended at the end to the arguments</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show this help</dd>
+<dt><code>&#8211;list-options</code></dt>
+<dd> Simple listing of options</dd>
+<dt><code>-t, &#8211;trace-path PATH</code></dt>
+<dd> Trace directory path for the viewer</dd>
+<dt><code>-e, &#8211;viewer CMD</code></dt>
+<dd> Specify viewer and/or options to use This will completely override the default viewers so please make sure to specify the full command. The trace directory path of the session will be appended at the end to the arguments</dd></dl>
 </dl>
 <h2>JUL DOMAIN</h2>
 <p> This section explains the JUL domain (-j, &#8211;jul) where JUL stands for Java Util Logging. You can use that feature by using the <code>liblttng-ust-jul.so</code> from the <a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3) project. </p>
@@ -506,8 +506,8 @@ $ lttng start
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> Note that all command line options override environment variables. </p>
 <dl>
-<dt>LTTNG_SESSIOND_PATH</p>
-<dd> Allows one to specify the full session daemon binary path to lttng command line tool. You can also use &#8211;sessiond-path option having the same effect.</dl>
+<dt>LTTNG_SESSIOND_PATH</dt>
+<dd> Allows one to specify the full session daemon binary path to lttng command line tool. You can also use &#8211;sessiond-path option having the same effect.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1),</code> <code><a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3),</code> <code><a href="/docs/linux/man/8-lttng-sessiond/">lttng-sessiond</a>(8),</code> <code><a href="/docs/linux/man/8-lttng-relayd/">lttng-relayd</a>(8),</code> </p>
 <h2>BUGS</h2>

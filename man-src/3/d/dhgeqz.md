@@ -19,7 +19,7 @@ description: "dhgeqz.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DHGEQZ computes the eigenvalues of a real matrix pair(H, T),
     where H is an upper Hessenberg matrix and T is upper triangular,
@@ -30,15 +30,12 @@ DHGEQZ computes the eigenvalues of a real matrix pair(H, T),
       as computed by DGGHRD.If JOB = 'S', then the Hessenberg - triangular pair(H, T)
 is
     also reduced to generalized Schur form,
-
     H = Q * S * Z * *T, T = Q * P * Z * *T,
-
     where Q and Z are orthogonal matrices, P is an upper triangular matrix, and S is a quasi - triangular matrix with 1 - by - 1 and 2 - by - 2 diagonal blocks.The 1 - by - 1 blocks correspond to real eigenvalues of the matrix pair(H, T) and the 2 - by - 2 blocks correspond to complex conjugate pairs of eigenvalues.Additionally, the 2 - by - 2 upper triangular diagonal blocks of P corresponding to 2 - by - 2 blocks of S are reduced to positive diagonal form, i.e., if S (j + 1, j) is non - zero, then P(j + 1, j) = P(j, j + 1) = 0,
     P(j, j) &gt; 0, and P(j + 1, j + 1) &gt; 0. Optionally, the orthogonal matrix Q from the generalized Schur factorization may be postmultiplied into an input matrix Q1, and the orthogonal matrix Z may be postmultiplied into an input matrix Z1.If Q1 and Z1 are the orthogonal matrices from DGGHRD that reduced the matrix pair(A, B)
 to generalized upper Hessenberg form, then the output matrices Q1 *Q and Z1 *Z are the orthogonal factors from the generalized Schur factorization of(A, B)
     : A = (Q1 * Q) * S * (Z1 * Z) * *T,
       B = (Q1 * Q) * P * (Z1 * Z) * *T.
-
                                      To avoid overflow,
       eigenvalues of the matrix pair(H, T)(equivalently,
                                            of(A, B)) are computed as a pair of values(alpha, beta),
@@ -51,11 +48,11 @@ A *x = lambda * B * x and if alpha is nonzero, mu = beta / alpha is an eigenvalu
                                                                                                                                                                                                                                                                            Eigenvalue Problems ", SIAM J. Numer. Anal., 10(1973),
                                                                                                                                                                                                                                                                            pp.241 --256.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is CHARACTER*1
           = 'E': Compute eigenvalues only;
@@ -203,18 +200,18 @@ to generalized Hessenberg form.On exit, if COMPZ = 'I', the orthogonal matrix of
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Iteration counters:
   JITER  -- counts iterations.
@@ -222,8 +219,9 @@ to generalized Hessenberg form.On exit, if COMPZ = 'I', the orthogonal matrix of
             changed.  This is therefore reset only when a 1-by-1 or
             2-by-2 block deflates off the bottom.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 303 of file dhgeqz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -13,34 +13,34 @@ description: "kcstashtest – command line interface to test the stash database"
 <p> The command `<code>kcstashtest</code>&#8216; is a utility for facility test and performance test of the stash database. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>
-<dd>
- <code>kccachetest order </code>[<code>-th </code><i>num</i>][<code>-rnd</code>][<code>-etc</code>][<code>-tran</code>][<code>-bnum </code><i>num</i>][<code>-lv</code>]<i>rnum</i></p>
+</dt><dd>
+ <code>kccachetest order </code>[<code>-th </code><i>num</i>][<code>-rnd</code>][<code>-etc</code>][<code>-tran</code>][<code>-bnum </code><i>num</i>][<code>-lv</code>]<i>rnum</i></dd>
 <dl>
 <dt>
-<dd> Performs in-order tests.</dl>
+</dt><dd> Performs in-order tests.</dd></dl>
 <p> <code>kccachetest queue </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-rnd</code>][<code>-bnum </code><i>num</i>][<code>-lv</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs queuing operations.</dl>
+</dt><dd> Performs queuing operations.</dd></dl>
 <p> <code>kccachetest wicked </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-bnum </code><i>num</i>][<code>-lv</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs mixed operations selected at random.</dl>
+</dt><dd> Performs mixed operations selected at random.</dd></dl>
 <p> <code>kccachetest tran </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-bnum </code><i>num</i>][<code>-lv</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs test of transaction.</dl>
+</dt><dd> Performs test of transaction.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
  <code>-rnd</code> : performs random test.<br />
  <code>-etc</code> : performs miscellaneous operations.<br />
  <code>-tran</code> : performs transaction.<br />
  <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
  <code>-lv</code> : reports all errors.<br />
  <code>-it </code><i>num</i> : specifies the number of repetition.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>Index</h2>

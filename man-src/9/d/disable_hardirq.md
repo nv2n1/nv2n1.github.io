@@ -10,12 +10,12 @@ description: "disable_hardirq – disables an irq and waits for hardirq completi
 <p>disable_hardirq &#8211; disables an irq and waits for hardirq completion</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool disable_hardirq(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dl>
+<dt> <code>bool disable_hardirq(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Interrupt to disable</dl>
+</dd><dd>Interrupt to disable</dd></dl>
 <h2>Description</h2>
 <p>Disable the selected interrupt line. Enables and Disables are nested. This function waits for any pending hard IRQ handlers for this interrupt to complete before returning. If you use this function while holding a resource the hard IRQ handler may need you will deadlock. </p>
 <p> When used to optimistically disable an interrupt from atomic context the return value must be checked.</p>

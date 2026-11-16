@@ -11,7 +11,6 @@ description: "sc::SCMatrixBlockIter –"
 <p> The <code>SCMatrixBlockIter</code> class is used to described iterates that loop through the elements in a block.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;blkiter.h&gt;</code></pre>
 <p> Inherited by <code>sc::SCMatrixDiagBlockIter</code>, <code>sc::SCMatrixDiagSubBlockIter</code>, <code>sc::SCMatrixLTriBlockIter</code>, <code>sc::SCMatrixLTriSubBlockIter</code>, <code>sc::SCMatrixRectBlockIter</code>, <code>sc::SCMatrixRectSubBlockIter</code>, <code>sc::SCVectorSimpleBlockIter</code>, and <code>sc::SCVectorSimpleSubBlockIter</code>.</p>
 <h3>Public Member Functions</h3>

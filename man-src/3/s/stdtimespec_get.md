@@ -11,9 +11,7 @@ std::timespec_get - std::timespec_get
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 int timespec_get( std::timespec* ts, int base)  (since C++17)
-
 #define TIME_UTC /* implementation-defined */   (since C++17)</code></pre> 
 1) Modifies the std::timespec object pointed to by ts to hold the current calendar time in the time base base. 
 2) Expands to a value suitable for use as the base argument of std::timespec_get 
@@ -38,10 +36,8 @@ The POSIX function clock_gettime(CLOCK_REALTIME,_ts) may also be used to populat
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::timespec ts;
     std::timespec_get(&amp;ts, TIME_UTC);

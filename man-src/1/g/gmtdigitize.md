@@ -16,9 +16,9 @@ description: "gmtdigitize – Digitizing and Inverse map transformation of map x
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>No space between the option flag and the associated arguments. Use upper case for the<br />
  option flags and lower case for modifiers.</p>
 <dl>
-<dt><code>-J</code></p>
+<dt><code>-J</code></dt>
 <dd> Selects the map projection. Scale is UNIT/degree, 1:xxxxx, or width in UNIT (upper case modifier). UNIT is cm, inch, or m, depending on the <code>MEASURE_UNIT</code> setting in .gmtdefaults4, but this can be overridden on the command line by appending <code>c</code>, <code>i</code>, or <code>m</code> to the scale/width value. When central meridian is optional, default is center of longitude range on <code>-R</code> option. Default standard parallel is the equator. For map height, max dimension, or min dimension, append <code>h</code>, <code>+</code>, or <code>&#8211;</code> to the width, respectively.<br />
- More details can be found in the <code>psbasemap</code> man pages. </p>
+ More details can be found in the <code>psbasemap</code> man pages. </dd>
 <p> <code>CYLINDRICAL PROJECTIONS:</code> </p>
 <p> <code>-Jc</code><i>lon0/lat0/scale</i> (Cassini)<br />
  <code>-Jcyl_stere</code>/[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Stereographic)<br />
@@ -57,34 +57,34 @@ description: "gmtdigitize – Digitizing and Inverse map transformation of map x
 <p> <code>-Jp</code>[<code>a</code>]<i>scale</i>[<i>/origin</i>][<code>r</code>|<code>z</code>] (Polar coordinates (theta,r))<br />
  <code>-Jx</code><i>x-scale</i>[<code>d</code>|<code>l</code>|<code>p</code><i>pow</i>|<code>t</code>|<code>T</code>][<i>/y-scale</i>[<code>d</code>|<code>l</code>|<code>p</code><i>pow</i>|<code>t</code>|<code>T</code>]] (Linear, log, and power scaling)<br />
  For geographic projections you can give 1 as the scale will be solved for anyway.</p>
-<dt><code>-R</code></p>
-<dd> <i>xmin</i>, <i>xmax</i>, <i>ymin</i>, and <i>ymax</i> specify the Region of interest. For geographic regions, these limits correspond to <i>west, east, south,</i> and <i>north</i> and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid. For calendar time coordinates you may either give (a) relative time (relative to the selected <code>TIME_EPOCH</code> and in the selected <code>TIME_UNIT</code>; append <code>t</code> to <code>-JX</code>|<code>x</code>), or (b) absolute time of the form [<i>date</i>]<code>T</code>[<i>clock</i>] (append <code>T</code> to <code>-JX</code>|<code>x</code>). At least one of <i>date</i> and <i>clock</i> must be present; the <code>T</code> is always required. The <i>date</i> string must be of the form [-]yyyy[-mm[-dd]] (Gregorian calendar) or yyyy[-Www[-d]] (ISO week calendar), while the <i>clock</i> string must be of the form hh:mm:ss[.xxx]. The use of delimiters and their type and positions must be exactly as indicated (however, input, output and plot formats are customizable; see <code>gmtdefaults</code>).</dl>
+<dt><code>-R</code></dt>
+<dd> <i>xmin</i>, <i>xmax</i>, <i>ymin</i>, and <i>ymax</i> specify the Region of interest. For geographic regions, these limits correspond to <i>west, east, south,</i> and <i>north</i> and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid. For calendar time coordinates you may either give (a) relative time (relative to the selected <code>TIME_EPOCH</code> and in the selected <code>TIME_UNIT</code>; append <code>t</code> to <code>-JX</code>|<code>x</code>), or (b) absolute time of the form [<i>date</i>]<code>T</code>[<i>clock</i>] (append <code>T</code> to <code>-JX</code>|<code>x</code>). At least one of <i>date</i> and <i>clock</i> must be present; the <code>T</code> is always required. The <i>date</i> string must be of the form [-]yyyy[-mm[-dd]] (Gregorian calendar) or yyyy[-Www[-d]] (ISO week calendar), while the <i>clock</i> string must be of the form hh:mm:ss[.xxx]. The use of delimiters and their type and positions must be exactly as indicated (however, input, output and plot formats are customizable; see <code>gmtdefaults</code>).</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code></p>
-<dd> Give an audible signal each time the digitizer mouse/puck is clicked [Default is silent].</p>
-<dt><code>-C</code></p>
-<dd> Specify the device (port) to read from [Default is /dev/ttyS0].</p>
-<dt><code>-D</code></p>
-<dd> Only output a point if it is further than <i>limit</i> units from the previous point. Append <code>c, i, m, p</code> for cm, inch, meter, or point, respectively [Default is no limit].</p>
-<dt><code>-F</code></p>
-<dd> Force the program to ask for 4 arbitrary calibration points [Default is to use the 4 corners of the map, if possible].</p>
-<dt><code>-H</code></p>
-<dd> This option allows you to write out any number of header records to the beginning of the output file. Each record will automatically start with a #-character to indicate comment. Headers are not written if multiple output files are selected with <code>-N</code> <code>-m</code>.</p>
-<dt><code>-L</code></p>
-<dd> Set the digitizer table resolution in lines per inch [2540].</p>
-<dt><code>-N</code></p>
-<dd> Set name for output file(s). If a regular filename is given, then all digitized data will be written to that file. If the file contains a C-format for an integer (i.e., %d) then the file is used as a format statement to create unique filenames based on the current segment number (e.g., line_%d.d will yield files line_0.d, line_1.d, etc). By default, all output is written to stdout. Multiple segment files requires specifying the <code>-m</code> option.</p>
-<dt><code>-S</code></p>
-<dd> Suppress points that fall outside the specified map region [Default outputs all points].</p>
-<dt><code>-V</code></p>
-<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;]. The program will also duplicate data output to stderr for monitoring.</p>
-<dt><code>-Z</code></p>
-<dd> Append <code>v</code> to prompt for a <i>z</i>-value and output it as a third data column. Append <code>k</code> to output the button key as the final data column. Both <code>-Zk</code> and <code>-Zv</code> can be specified. [Default is just 2 column x,y output].</p>
-<dt><code>-bo</code></p>
-<dd> Selects binary output. Append <code>s</code> for single precision [Default is <code>d</code> (double)]. Uppercase <code>S</code> or <code>D</code> will force byte-swapping. Optionally, append <i>ncol</i>, the number of desired columns in your binary output file.</p>
-<dt><code>-m</code></p>
-<dd> Multiple segment file(s). Segments are separated by a special record. For ASCII files the first character must be <i>flag</i> [Default is &#8216;&gt;&#8217;]. For binary files all fields must be NaN and <code>-b</code> must set the number of output columns explicitly. By default the <code>-m</code> setting applies to both input and output. Use <code>-mi</code> and <code>-mo</code> to give separate settings to input and output.</dl>
+<dt><code>-A</code></dt>
+<dd> Give an audible signal each time the digitizer mouse/puck is clicked [Default is silent].</dd>
+<dt><code>-C</code></dt>
+<dd> Specify the device (port) to read from [Default is /dev/ttyS0].</dd>
+<dt><code>-D</code></dt>
+<dd> Only output a point if it is further than <i>limit</i> units from the previous point. Append <code>c, i, m, p</code> for cm, inch, meter, or point, respectively [Default is no limit].</dd>
+<dt><code>-F</code></dt>
+<dd> Force the program to ask for 4 arbitrary calibration points [Default is to use the 4 corners of the map, if possible].</dd>
+<dt><code>-H</code></dt>
+<dd> This option allows you to write out any number of header records to the beginning of the output file. Each record will automatically start with a #-character to indicate comment. Headers are not written if multiple output files are selected with <code>-N</code> <code>-m</code>.</dd>
+<dt><code>-L</code></dt>
+<dd> Set the digitizer table resolution in lines per inch [2540].</dd>
+<dt><code>-N</code></dt>
+<dd> Set name for output file(s). If a regular filename is given, then all digitized data will be written to that file. If the file contains a C-format for an integer (i.e., %d) then the file is used as a format statement to create unique filenames based on the current segment number (e.g., line_%d.d will yield files line_0.d, line_1.d, etc). By default, all output is written to stdout. Multiple segment files requires specifying the <code>-m</code> option.</dd>
+<dt><code>-S</code></dt>
+<dd> Suppress points that fall outside the specified map region [Default outputs all points].</dd>
+<dt><code>-V</code></dt>
+<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;]. The program will also duplicate data output to stderr for monitoring.</dd>
+<dt><code>-Z</code></dt>
+<dd> Append <code>v</code> to prompt for a <i>z</i>-value and output it as a third data column. Append <code>k</code> to output the button key as the final data column. Both <code>-Zk</code> and <code>-Zv</code> can be specified. [Default is just 2 column x,y output].</dd>
+<dt><code>-bo</code></dt>
+<dd> Selects binary output. Append <code>s</code> for single precision [Default is <code>d</code> (double)]. Uppercase <code>S</code> or <code>D</code> will force byte-swapping. Optionally, append <i>ncol</i>, the number of desired columns in your binary output file.</dd>
+<dt><code>-m</code></dt>
+<dd> Multiple segment file(s). Segments are separated by a special record. For ASCII files the first character must be <i>flag</i> [Default is &#8216;&gt;&#8217;]. For binary files all fields must be NaN and <code>-b</code> must set the number of output columns explicitly. By default the <code>-m</code> setting applies to both input and output. Use <code>-mi</code> and <code>-mo</code> to give separate settings to input and output.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To digitize lines from a mercator map made for a given region, and save each line segment in individual files called segment_000.xy, segment_001.xy etc, try </p>
 <p> gmtdigitize <code>-R</code>20/50/12/25 <code>-Jm</code>1:1 <code>-m</code> <code>-N</code>segment_%3.3d.xy </p>

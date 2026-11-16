@@ -11,53 +11,29 @@ std::find_first_of - std::find_first_of
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt1 find_first_of( ForwardIt1 first, ForwardIt1 last,                                         (until C++11)
-
 ForwardIt2 s_first, ForwardIt2 s_last );
-
 template&lt; class InputIt, class ForwardIt &gt;                                                           (since C++11)
-
 InputIt find_first_of( InputIt first, InputIt last,                                                  (until C++20)
-
 ForwardIt s_first, ForwardIt s_last );
-
 template&lt; class InputIt, class ForwardIt &gt;
-
 constexpr InputIt find_first_of( InputIt first, InputIt last,                                        (since C++20)
-
 ForwardIt s_first, ForwardIt s_last );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt1 find_first_of( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,           (2) (since C++17)
-
 ForwardIt2 s_first, ForwardIt2 s_last );                                                     (1)
-
 template&lt; class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 ForwardIt1 find_first_of( ForwardIt1 first, ForwardIt1 last,                                                        (until C++11)
-
 ForwardIt2 s_first, ForwardIt2 s_last, BinaryPredicate p );
-
 template&lt; class InputIt, class ForwardIt, class BinaryPredicate &gt;                                                   (since C++11)
-
 InputIt find_first_of( InputIt first, InputIt last,                                                                 (until C++20)
-
 ForwardIt s_first, ForwardIt s_last, BinaryPredicate p );                                        (3)
-
 template&lt; class InputIt, class ForwardIt, class BinaryPredicate &gt;
-
 constexpr InputIt find_first_of( InputIt first, InputIt last,                                                       (since C++20)
-
 ForwardIt s_first, ForwardIt s_last, BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 ForwardIt1 find_first_of( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt last,                (4)            (since C++17)
-
 ForwardIt2 s_first, ForwardIt2 s_last, BinaryPredicate p );</code></pre> 
 Searches the range [first, last) for any of the elements in the range [s_first, s_last). 
 1) Elements are compared using operator==. 
@@ -141,12 +117,9 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 
 The following code searches for any of specified integers in a vector of integers: 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{0, 2, 3, 25, 5};
     std::vector&lt;int&gt; t{3, 19, 10, 2};

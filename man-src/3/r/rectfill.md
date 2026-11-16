@@ -10,7 +10,6 @@ description: "rectfill – Draws a solid filled rectangle. Allegro game programm
 <p>rectfill &#8211; Draws a solid filled rectangle. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rectfill(BITMAP *bmp, int x1, int y1, int x2, int y2, int color);</code></pre>
 <h2>Description</h2>
 <p>Draws a solid, filled rectangle with the two points as its opposite corners. </p>

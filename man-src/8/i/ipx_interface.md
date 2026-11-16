@@ -21,16 +21,16 @@ description: "ipx_interface – add, delete, or display an IPX interface"
 <p> Frame Type: 802.2. There is a special IPX interface per host known as the <code>PRIMARY</code> or default interface. You should specify <code>node number</code> only if you really know, what you are doing &#8211; on <i>point-to-point</i> devices, on <i>loopback</i> and on <i>tap</i> device if you are running <code>Compatibility mode driver</code>.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>add</i></p>
-<dd>This option is used to create an IPX interface. If the <code>-p</code> flag is used, the interface is made <code>PRIMARY.</code> The network number can be optionally assigned. If it is not assigned, it is set to 0 which indicates it should be detected from the traffic on the network.</p>
-<dt><i>del</i></p>
-<dd>This option is used to delete an IPX interface.</p>
-<dt><i>delall</i></p>
-<dd>This option is used to delete all IPX interfaces.</p>
-<dt><i>check</i></p>
-<dd>This option is used to display the device, frame type, and network number of an IPX interface.</p>
-<dt><i>help</i></p>
-<dd>This option displays information about the utility.</dl>
+<dt><i>add</i></dt>
+<dd>This option is used to create an IPX interface. If the <code>-p</code> flag is used, the interface is made <code>PRIMARY.</code> The network number can be optionally assigned. If it is not assigned, it is set to 0 which indicates it should be detected from the traffic on the network.</dd>
+<dt><i>del</i></dt>
+<dd>This option is used to delete an IPX interface.</dd>
+<dt><i>delall</i></dt>
+<dd>This option is used to delete all IPX interfaces.</dd>
+<dt><i>check</i></dt>
+<dd>This option is used to display the device, frame type, and network number of an IPX interface.</dd>
+<dt><i>help</i></dt>
+<dd>This option displays information about the utility.</dd></dl>
 <h2>Files</h2>
 <p><i>/proc/net/ipx_interface /proc/net/ipx_route</i></p>
 <h2>Bugs</h2>

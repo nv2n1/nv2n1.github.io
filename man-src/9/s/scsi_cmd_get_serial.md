@@ -14,17 +14,17 @@ description: "scsi_cmd_get_serial – Assign a serial number to a command"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>the scsi host</dl>
+</dd><dd>the scsi host</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>command to assign serial number to</dl>
+<dd>command to assign serial number to</dd></dl>
 <h2>Description</h2>
 <p>a serial number identifies a request for error recovery and debugging purposes. Protected by the Host_Lock of host.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

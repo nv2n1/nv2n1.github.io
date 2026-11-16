@@ -50,7 +50,7 @@ struct ibv_tm_cap {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_srq</code>(3), <code>ibv_query_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

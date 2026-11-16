@@ -14,22 +14,22 @@ description: "cciss_vol_status – show status of logical drives attached to HP 
 <p>Shows the status of logical drives configured on HP Smartarray controllers.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p, &#8211;persnickety</code></p>
-<dd>Without this option, device nodes which can&#8217;t be opened, or which are not found to be of the correct device type are silently ignored. This lets you use wildcards, e.g.: cciss_vol_status /dev/sg* /dev/cciss/c*d0, and the program will not complain as long as all devices which are found to be of the correct type are found to be ok. However, you may wish to explicitly list the devices you expect to be there, and be notified if they are not there (e.g. perhaps a PCI slot has died, and the system has rebooted, so that what was once /dev/cciss/c1d0 is no longer there at all). This option will cause the program to complain about any device node listed which does not appear to be the right device type, or is not openable.</p>
-<dt><code>-C, &#8211;copyright</code></p>
-<dd>If stderr is a terminal, Print out a copyright message, and exit.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>This option doesn&#8217;t do anything. Previously, without this option and if stderr is a terminal, a copyright message precedes the normal program output. Now, the copyright message is only printed via the -C option.</p>
-<dt><code>-s</code></p>
-<dd>Query each physical drive for S.M.A.R.T data and report any drives in &quot;predictive failure&quot; state.</p>
-<dt><code>-u, &#8211;try-unknown-devices</code></p>
-<dd>If a device has an unrecognized board ID, normally the program will not attempt to communicate with it. In case you have some Smart Array controller which is newer than this program, the program may not recognize it. This option permits the program to attempt to interrogate the board even if it is unrecognized on the assumption that it is in fact a Smart Array of some kind.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Print the version number and exit.</p>
-<dt><code>-V, &#8211;verbose</code></p>
-<dd>Print out more information about the controllers and physical drives. For each controller, the board ID, number of logical drives, currently running firmware revision and ROM firmware revision are printed. For each physical drive, the location, vendor, model, serial number, and firmware revision are printed.</p>
-<dt><code>-x, &#8211;exhaustive</code></p>
-<dd>Deprecated. Previously, it &quot;exhaustively&quot; searched for logical drives, as, under some circumstances some logical drives might otherwise be missed. This option no longer does anything, as the algorithm for finding logical drives was changed to obviate the need for it.</dl>
+<dt><code>-p, &#8211;persnickety</code></dt>
+<dd>Without this option, device nodes which can&#8217;t be opened, or which are not found to be of the correct device type are silently ignored. This lets you use wildcards, e.g.: cciss_vol_status /dev/sg* /dev/cciss/c*d0, and the program will not complain as long as all devices which are found to be of the correct type are found to be ok. However, you may wish to explicitly list the devices you expect to be there, and be notified if they are not there (e.g. perhaps a PCI slot has died, and the system has rebooted, so that what was once /dev/cciss/c1d0 is no longer there at all). This option will cause the program to complain about any device node listed which does not appear to be the right device type, or is not openable.</dd>
+<dt><code>-C, &#8211;copyright</code></dt>
+<dd>If stderr is a terminal, Print out a copyright message, and exit.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>This option doesn&#8217;t do anything. Previously, without this option and if stderr is a terminal, a copyright message precedes the normal program output. Now, the copyright message is only printed via the -C option.</dd>
+<dt><code>-s</code></dt>
+<dd>Query each physical drive for S.M.A.R.T data and report any drives in &quot;predictive failure&quot; state.</dd>
+<dt><code>-u, &#8211;try-unknown-devices</code></dt>
+<dd>If a device has an unrecognized board ID, normally the program will not attempt to communicate with it. In case you have some Smart Array controller which is newer than this program, the program may not recognize it. This option permits the program to attempt to interrogate the board even if it is unrecognized on the assumption that it is in fact a Smart Array of some kind.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Print the version number and exit.</dd>
+<dt><code>-V, &#8211;verbose</code></dt>
+<dd>Print out more information about the controllers and physical drives. For each controller, the board ID, number of logical drives, currently running firmware revision and ROM firmware revision are printed. For each physical drive, the location, vendor, model, serial number, and firmware revision are printed.</dd>
+<dt><code>-x, &#8211;exhaustive</code></dt>
+<dd>Deprecated. Previously, it &quot;exhaustively&quot; searched for logical drives, as, under some circumstances some logical drives might otherwise be missed. This option no longer does anything, as the algorithm for finding logical drives was changed to obviate the need for it.</dd></dl>
 <h2>Device</h2>
 <p>The DEVICE argument indicates which RAID controller is to be queried. Note, that it indicates which RAID controller, not which logical drive. </p>
 <p> For the cciss driver, the &quot;d0&quot; nodes matching &quot;/dev/cciss/c*d0&quot; are the nodes which correspond to the RAID controllers. (See note 1, below.) It is not necessary to invoke cciss_vol_status on each logical drive individually, though if you do this, each time it will report the status of ALL logical drives on the controller. </p>
@@ -103,32 +103,32 @@ wumpus:/home/scameron # lsscsi
 <h2>Diagnostics</h2>
 <p>Normally, a logical drive in good working order should report a status of &quot;OK.&quot; Possible status values are:</p>
 <dl>
-<dt>&quot;OK.&quot; (0) &#8211; The logical drive is in good working order.</p>
+<dt>&quot;OK.&quot; (0) &#8211; The logical drive is in good working order.</dt>
 <dd>
-<dt>&quot;FAILED.&quot; (1) &#8211; The logical drive has failed, and no i/o to it is poosible.</p>
-<dd>Additionally, failed drives will be identified by connector, box and bay, as well as vendor, model, serial number, and firmware revision.</p>
-<dt>&quot;Using interim recovery mode.&quot; (3) &#8211; One or more drives has failed,</p>
-<dd>but not so many that the logical drive can no longer operate. The failed drives should be replaced as soon as possible.</p>
-<dt>&quot;Ready for recovery operation.&quot; (4) &#8211; Failed drive(s) have been</p>
-<dd>replaced, and the controller is about to begin rebuilding redundant parity data.</p>
-<dt>&quot;Currently recovering.&quot; (5) &#8211; Failed drive(s) have been replaced,</p>
-<dd>and the controller is currently rebuilding redundant parity information.</p>
-<dt>&quot;Wrong physical drive was replaced.&quot; (6) &#8211; A drive has failed, and</p>
-<dd>another (working) drive was replaced.</p>
-<dt>&quot;A physical drive is not properly connected.&quot; (7) &#8211; There is some</p>
-<dd>cabling or backplane problem in the drive enclosure.</p>
-<dt>(From fwspec<a rel="nofollow" href="http://www.doc">www.doc</a>, see cpqarray project on sourceforge.net):</p>
-<dd>Note: If the unit_status value is 6 (Wrong physical drive was replaced) or 7 (A physical drive is not properly connected), the unit_status of all other configured logical drives will be marked as 1 (Logical drive failed). This is to force the user to correct the problem and to insure that once the problem is corrected, the data will not have been corrupted by any user action.</p>
-<dt>&quot;Hardware is overheating.&quot; (8) &#8211; Hardware is too hot.</p>
+</dd><dt>&quot;FAILED.&quot; (1) &#8211; The logical drive has failed, and no i/o to it is poosible.</dt>
+<dd>Additionally, failed drives will be identified by connector, box and bay, as well as vendor, model, serial number, and firmware revision.</dd>
+<dt>&quot;Using interim recovery mode.&quot; (3) &#8211; One or more drives has failed,</dt>
+<dd>but not so many that the logical drive can no longer operate. The failed drives should be replaced as soon as possible.</dd>
+<dt>&quot;Ready for recovery operation.&quot; (4) &#8211; Failed drive(s) have been</dt>
+<dd>replaced, and the controller is about to begin rebuilding redundant parity data.</dd>
+<dt>&quot;Currently recovering.&quot; (5) &#8211; Failed drive(s) have been replaced,</dt>
+<dd>and the controller is currently rebuilding redundant parity information.</dd>
+<dt>&quot;Wrong physical drive was replaced.&quot; (6) &#8211; A drive has failed, and</dt>
+<dd>another (working) drive was replaced.</dd>
+<dt>&quot;A physical drive is not properly connected.&quot; (7) &#8211; There is some</dt>
+<dd>cabling or backplane problem in the drive enclosure.</dd>
+<dt>(From fwspec<a rel="nofollow" href="http://www.doc">www.doc</a>, see cpqarray project on sourceforge.net):</dt>
+<dd>Note: If the unit_status value is 6 (Wrong physical drive was replaced) or 7 (A physical drive is not properly connected), the unit_status of all other configured logical drives will be marked as 1 (Logical drive failed). This is to force the user to correct the problem and to insure that once the problem is corrected, the data will not have been corrupted by any user action.</dd>
+<dt>&quot;Hardware is overheating.&quot; (8) &#8211; Hardware is too hot.</dt>
 <dd>
-<dt>&quot;Hardware was overheated.&quot; (9) &#8211; At some point in the past,</p>
-<dd>the hardware got too hot.</p>
-<dt>&quot;Currently expannding.&quot; (10) &#8211; The controller is currently in the</p>
-<dd>process of expanding a logical drive.</p>
-<dt>&quot;Not yet available.&quot; (11) &#8211; The logical drive is not yet finished</p>
-<dd>being configured.</p>
-<dt>&quot;Queued for expansion.&quot; (12) &#8211; The logical drive will be expended</p>
-<dd>when the controller is able to begin working on it.</dl>
+</dd><dt>&quot;Hardware was overheated.&quot; (9) &#8211; At some point in the past,</dt>
+<dd>the hardware got too hot.</dd>
+<dt>&quot;Currently expannding.&quot; (10) &#8211; The controller is currently in the</dt>
+<dd>process of expanding a logical drive.</dd>
+<dt>&quot;Not yet available.&quot; (11) &#8211; The logical drive is not yet finished</dt>
+<dd>being configured.</dd>
+<dt>&quot;Queued for expansion.&quot; (12) &#8211; The logical drive will be expended</dt>
+<dd>when the controller is able to begin working on it.</dd></dl>
 <p> Additionally, the following messages may appear regarding spare drive status: </p>
 <pre> &quot;At least one spare drive designated&quot;
  &quot;At least one spare drive activated and currently rebuilding&quot;
@@ -141,8 +141,8 @@ as by vendor, model, serial number, and firmware revision.</pre>
 <p>For each logical drive, the total number of failed physical drives, if more than zero, will be reported as:</p>
 <dl>
 <dt>
-<pre><dd>&quot;Total of n failed physical drives detected on this logical drive.&quot;</pre>
-</dl>
+<pre></dt><dd>&quot;Total of n failed physical drives detected on this logical drive.&quot;</pre>
+</dd></dl>
 <p> with &quot;n&quot; replaced by the actual number, of course. </p>
 <p> &quot;Replacement&quot; drives &#8212; newly inserted drives that replace a previously failed drive but are not yet finished rebuilding &#8212; are also identified by connector, box and bay, as well as by vendor, model, serial number, and firmware revision. </p>
 <p> If the -s option is specified, each physical drive will be queried for S.M.A.R.T data, any any drives in predictive failure state will be reported, identified by connector, box and bay, as well as vendor, model, serial number, and firmware revision. </p>
@@ -156,10 +156,10 @@ as by vendor, model, serial number, and firmware revision.</pre>
  /dev/sg* (Fibre attached MSA1000 controllers and Smart Array controllers using the hpsa driver or hpahcisr software RAID driver.)</p>
 <h2>Exit Codes</h2>
 <dl>
-<dt>0 &#8211; All configured logical drives queried have status of &quot;OK.&quot;</p>
+<dt>0 &#8211; All configured logical drives queried have status of &quot;OK.&quot;</dt>
 <dd>
-<dt>1 &#8211; One or more configured logical drives queried have status other than &quot;OK.&quot;</p>
-<dd></dl>
+</dd><dt>1 &#8211; One or more configured logical drives queried have status other than &quot;OK.&quot;</dt>
+<dd></dd></dl>
 <h2>Bugs</h2>
 <p>MSA500 G1 logical drive numbers may not be reported correctly. </p>
 <p> I&#8217;ve seen enclosure serial numbers contain garbage. </p>

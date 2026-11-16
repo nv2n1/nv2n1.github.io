@@ -13,17 +13,17 @@ description: "Java IDL: Transient Naming Service – tnameserv"
 <p> Topics in this section include: </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>Java IDL Transient Naming Service</p>
-<dt>o</p>
-<dd>Starting the Java IDL Transient Naming Service</p>
-<dt>o</p>
-<dd>Stopping the Java IDL Transient Naming Service</p>
-<dt>o</p>
-<dd>Sample Client: Adding Objects to the Namespace</p>
-<dt>o</p>
-<dd>Sample Client: Browsing the Namespace</dl>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>Java IDL Transient Naming Service</dd>
+<dt>o</dt>
+<dd>Starting the Java IDL Transient Naming Service</dd>
+<dt>o</dt>
+<dd>Stopping the Java IDL Transient Naming Service</dd>
+<dt>o</dt>
+<dd>Sample Client: Adding Objects to the Namespace</dd>
+<dt>o</dt>
+<dd>Sample Client: Browsing the Namespace</dd></dl>
 </dl>
 <h2>Java IDL Transient Naming Service</h2>
 <p>The CORBA COS (Common Object Services) Naming Service provides a tree-like directory for object references much like a filesystem provides a directory structure for files. The Transient Naming Service provided with Java IDL, <i>tnameserv</i>, is a simple implementation of the COS Naming Service specification. </p>
@@ -44,15 +44,15 @@ description: "Java IDL: Transient Naming Service – tnameserv"
 <p> For example, suppose the Transient Naming Service, <i>tnameserv</i> is running on port 1050 on host <i>nameserverhost</i>. The client is running on host <i>clienthost</i> and the server is running on host <i>serverhost</i>. </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>Start <i>tnameserv</i> on the host <i>nameserverhost</i>, as follows: </p>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>Start <i>tnameserv</i> on the host <i>nameserverhost</i>, as follows: </dd>
 <pre><code> tnameserv -ORBInitialPort 1050</code></pre>
-<dt>o</p>
-<dd>Start the server on the <i>serverhost</i>, as follows: </p>
+<dt>o</dt>
+<dd>Start the server on the <i>serverhost</i>, as follows: </dd>
 <pre><code> java Server -ORBInitialPort 1050 -ORBInitialHost nameserverhost</code></pre>
-<dt>o</p>
-<dd>Start the client on the <i>clienthost</i>, as follows: </p>
+<dt>o</dt>
+<dd>Start the client on the <i>clienthost</i>, as follows: </dd>
 <pre><code> java Client -ORBInitialPort 1050 -ORBInitialHost nameserverhost</code></pre>
 </dl>
 </dl>
@@ -60,9 +60,9 @@ description: "Java IDL: Transient Naming Service – tnameserv"
 <p>This command-line option is available for use with <i>tnameserve</i>:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-Joption</p>
-<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the <i>java application launcher</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html.">http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html.</a> For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</dl>
+</dd><dl COMPACT>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the <i>java application launcher</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html.">http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html.</a> For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</dd></dl>
 </dl>
 <h2>Stopping the Java IDL Transient Naming Service</h2>
 <p>To stop the Java IDL naming service, use the relevant operating system command, such as <i>kill</i> for a Unix process, or <i>Ctrl-C</i> for a Windows process. The naming service will continue to wait for invocations until it is explicitly shutdown. Note that names registered with the Java IDL naming service disappear when the service is terminated. </p>

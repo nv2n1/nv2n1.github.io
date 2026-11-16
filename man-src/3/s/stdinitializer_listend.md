@@ -12,7 +12,6 @@ std::initializer_list&lt;T&gt;::end - std::initializer_list&lt;T&gt;::end
 
 <pre><code>const T *end() const noexcept;
 (since C++ 11)(until C++ 14)
-
     constexpr const T *end() const noexcept;
 (since C++ 14)</code></pre> 
 Returns a pointer to one past the last element in the initializer list, i.e. begin() + size(). 

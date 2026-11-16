@@ -11,7 +11,6 @@ description: "sc::SCMatrixLTriSubBlock –"
 <p> The <code>SCMatrixLTriSubBlock</code> describes a triangular subblock of a matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixBlock</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,21 +23,9 @@ description: "sc::SCMatrixLTriSubBlock –"
 <p> void <code>process</code> (<code>SCElementOp3</code> *, <code>SCMatrixBlock</code> *, <code>SCMatrixBlock</code> *)</p>
 <h3>Public Attributes</h3>
 <pre><code>int istart
-
-
-
 int iend
-
-
-
 int jstart
-
-
-
 int jend
-
-
-
 double * data</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SCMatrixLTriSubBlock</code> describes a triangular subblock of a matrix. </p>

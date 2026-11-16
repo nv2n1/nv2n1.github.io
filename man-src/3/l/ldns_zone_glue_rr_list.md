@@ -17,11 +17,11 @@ description: "ldns_zone_sort, ldns_zone_glue_rr_list"
 <p> ldns_rr_list* ldns_zone_glue_rr_list(const ldns_zone *z); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_sort</i>()</p>
-<dd>Sort the rrs in a zone, with the current impl. this is slow .br <code>zone</code>: the zone to sort</dl>
+<dt> <i>ldns_zone_sort</i>()</dt>
+<dd>Sort the rrs in a zone, with the current impl. this is slow .br <code>zone</code>: the zone to sort</dd></dl>
 <dl>
-<dt> <i>ldns_zone_glue_rr_list</i>()</p>
-<dd>Retrieve all resource records from the zone that are glue records. The resulting list does are pointer references to the zone&#8217;s data. </p>
+<dt> <i>ldns_zone_glue_rr_list</i>()</dt>
+<dd>Retrieve all resource records from the zone that are glue records. The resulting list does are pointer references to the zone&#8217;s data. </dd>
 <p> Due to the current zone implementation (as a list of rr&#8217;s), this function is extremely slow. Another (probably better) way to do this is to use an ldns_dnssec_zone structure and the ldns_dnssec_mark_and_get_glue() function. </p>
 <p> .br <code>z</code>: the zone to look for glue .br Returns the rr_list with the glue</dl>
 <h2>AUTHOR</h2>
@@ -36,3 +36,4 @@ description: "ldns_zone_sort, ldns_zone_glue_rr_list"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

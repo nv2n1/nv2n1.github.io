@@ -14,9 +14,10 @@ description: "pkcsslotd – shared memory manager for opencryptoki"
 <p>Only one instance of the pkcsslotd daemon should be running on any given host. If a prior instance of pkcsslotd did not shut down cleanly, then it may leave an allocated shared memory segment on the system. The allocated memory segment can be identified by its key and can be safely removed once the daemon is stopped with the ipcrm command, such as: <i>ipcrm -M 0x6202AB38</i> The daemon creates the shared memory segment with group ownership by the <i>pkcs11</i> group. All non-root users that should be able to use openCryptoki need to be members of the group. Only trusted users should be assigned to the group, see the &quot;SECURITY NOTE&quot; in the <code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7) manual page for details. </p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</p>
+<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/5-opencryptoki-conf/">opencryptoki.conf</a></code>(5),</p>
+</dd><dt><code><a href="/docs/linux/man/5-opencryptoki-conf/">opencryptoki.conf</a></code>(5),</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-pkcsconf/">pkcsconf</a></code>(1),</p>
+</dd><dt><code><a href="/docs/linux/man/1-pkcsconf/">pkcsconf</a></code>(1),</dt>
 <dd>
+</dd></dl>

@@ -19,7 +19,7 @@ description: "stgsna.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  STGSNA estimates reciprocal condition numbers for specified
  eigenvalues and/or eigenvectors of a matrix pair (A, B) in
@@ -30,11 +30,11 @@ description: "stgsna.f –"
  i.e. A is block upper triangular with 1-by-1 and 2-by-2 diagonal
  blocks. B is upper triangular.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
           JOB is CHARACTER*1
           Specifies whether condition numbers are required for
@@ -185,18 +185,18 @@ description: "stgsna.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>The reciprocal of the condition number of a generalized eigenvalue<br />
     w = (a, b)is defined as S(w) = (| u * *TAv | **2 + | u * *TBv | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the left and right eigenvectors of(A, B)<br />
 corresponding to w;<br />
@@ -265,15 +265,15 @@ is wanted(see SLATDF), then the parameter DIFDRI(see below) should be<br />
   VR(i) is given by<br />
              EPS * norm(A, B) / DIF(i).<br />
   See ref. [2-3] for more details and further references.</p>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [1] B.Kagstrom; A Direct Method for Reordering Eigenvalues in the
       Generalized Real Schur Form of a Regular Matrix Pair (A, B), in
@@ -293,8 +293,9 @@ is wanted(see SLATDF), then the parameter DIFDRI(see below) should be<br />
       Note 75.  To appear in ACM Trans. on Math. Software, Vol 22,
       No 1, 1996.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 380 of file stgsna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

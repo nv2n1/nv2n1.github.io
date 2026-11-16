@@ -11,12 +11,9 @@ std::isupper - std::isupper
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isupper(int ch);
 Checks if the given character is an uppercase character as classified by the currently installed C locale. In the default &quot;C&quot; locale, isupper returns a nonzero value only for the uppercase letters (ABCDEFGHIJKLMNOPQRSTUVWXYZ).
-
 If isupper returns a nonzero value, it is guaranteed that iscntrl, isdigit, ispunct, and isspace return zero for the same character in the same C locale.
-
 The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
 </code></pre>
 
@@ -50,12 +47,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xc6'; // letter Æ in ISO-8859-1
     std::cout &lt;&lt; &quot;isupper(\'\\xc6\', default C locale) returned &quot;

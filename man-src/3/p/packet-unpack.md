@@ -104,29 +104,29 @@ Usage:
 <code>__init__(self, data)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>data:</code>
-<dd>Raw packet data
-</dl></dl>
+<dl><dl><dt><code>data:</code>
+</dt><dd>Raw packet data
+</dd></dl></dl>
 <code>__len__ = size(self)</code>
 <code>append(self, data)</code>
 Append data to the working buffer.
 <code>getbytes(self, offset=None)</code>
 Get the number of bytes given from the working buffer.
 Do not move the offset pointer.
-<dl><dt><dd><dl><dt><code>offset:</code>
-<dd>Starting offset of data to return [default: current offset]
-</dl></dl>
+<dl><dl><dt><code>offset:</code>
+</dt><dd>Starting offset of data to return [default: current offset]
+</dd></dl></dl>
 <code>insert(self, data)</code>
 Insert data to the beginning of the current working buffer.
 <code>read(self, size, pad=0)</code>
 Get the number of bytes given from the working buffer.
 Move the offset pointer.
-<dl><dt><dd><dl><dt><code>size:</code>
-<dd>Length of data to get
-<dt><code>pad:</code>
-<dd>Get and discard padding bytes [default: 0]
+<dl><dl><dt><code>size:</code>
+</dt><dd>Length of data to get
+</dd><dt><code>pad:</code>
+</dt><dd>Get and discard padding bytes [default: 0]
 If given, data is padded to this byte boundary
-</dl></dl>
+</dd></dl></dl>
 <code>restore_state(self, sid)</code>
 Restore state given by the state id
 <code>save_state(self)</code>
@@ -141,25 +141,25 @@ Get the offset pointer.
 Get the number of bytes given from the working buffer and process
 it according to the given format.
 Return a tuple of unpack items, see struct.unpack.
-<dl><dt><dd><dl><dt><code>size:</code>
-<dd>Length of data to process
-<dt><code>fmt:</code>
-<dd>Format string on how to process data
-</dl></dl>
+<dl><dl><dt><code>size:</code>
+</dt><dd>Length of data to process
+</dd><dt><code>fmt:</code>
+</dt><dd>Format string on how to process data
+</dd></dl></dl>
 <code>unpack_array(self, unpack_item=&lt;function unpack_uint&gt;, ltype=&lt;function unpack_uint&gt;, uargs={}, maxcount=0, islist=False)</code>
 Get a variable length array, the type of objects in the array
 is given by the unpacking function unpack_item and the type
 to decode the length of the array is given by ltype
-<dl><dt><dd><dl><dt><code>unpack_item:</code>
-<dd>Unpack function for each item in the array [default: unpack_uint]
-<dt><code>ltype:</code>
-<dd>Function to decode length of array [default: unpack_uint]
+<dl><dl><dt><code>unpack_item:</code>
+</dt><dd>Unpack function for each item in the array [default: unpack_uint]
+</dd><dt><code>ltype:</code>
+</dt><dd>Function to decode length of array [default: unpack_uint]
 Could also be given as an integer to have a fixed length array
-<dt><code>uargs:</code>
-<dd>Named arguments to pass to unpack_item function [default: {}]
-<dt><code>maxcount:</code>
-<dd>Maximum length of array [default: any length]
-</dl></dl>
+</dd><dt><code>uargs:</code>
+</dt><dd>Named arguments to pass to unpack_item function [default: {}]
+</dd><dt><code>maxcount:</code>
+</dt><dd>Maximum length of array [default: any length]
+</dd></dl></dl>
 <code>unpack_bitmap(self)</code>
 Unpack an array of unsigned integers and convert array into
 a single long integer
@@ -168,13 +168,13 @@ Get a signed char
 <code>unpack_conditional(self, unpack_item=&lt;function unpack_uint&gt;, ltype=&lt;function unpack_uint&gt;, uargs={})</code>
 Get an item if condition flag given by ltype is true, if condition
 flag is false then return None
-<dl><dt><dd><dl><dt><code>unpack_item:</code>
-<dd>Unpack function for item if condition is true [default: unpack_uint]
-<dt><code>ltype:</code>
-<dd>Function to decode the condition flag [default: unpack_uint]
-<dt><code>uargs:</code>
-<dd>Named arguments to pass to unpack_item function [default: {}]
-</dl></dl>
+<dl><dl><dt><code>unpack_item:</code>
+</dt><dd>Unpack function for item if condition is true [default: unpack_uint]
+</dd><dt><code>ltype:</code>
+</dt><dd>Function to decode the condition flag [default: unpack_uint]
+</dd><dt><code>uargs:</code>
+</dt><dd>Named arguments to pass to unpack_item function [default: {}]
+</dd></dl></dl>
 <code>unpack_fopaque(self, size)</code>
 Get a fixed length opaque
 <code>unpack_int(self)</code>
@@ -185,28 +185,28 @@ Get a signed 64 bit integer
 Get an indeterminate size list, the type of objects in the list
 is given by the unpacking function unpack_item and the type
 to decode the next item flag is given by ltype
-<dl><dt><dd><dl><dt><code>unpack_item:</code>
-<dd>Unpack function for each item in the list [default: unpack_uint]
-<dt><code>ltype:</code>
-<dd>Function to decode the next item flag [default: unpack_uint]
-<dt><code>uargs:</code>
-<dd>Named arguments to pass to unpack_item function [default: {}]
-</dl></dl>
+<dl><dl><dt><code>unpack_item:</code>
+</dt><dd>Unpack function for each item in the list [default: unpack_uint]
+</dd><dt><code>ltype:</code>
+</dt><dd>Function to decode the next item flag [default: unpack_uint]
+</dd><dt><code>uargs:</code>
+</dt><dd>Named arguments to pass to unpack_item function [default: {}]
+</dd></dl></dl>
 <code>unpack_opaque(self, maxcount=0)</code>
 Get a variable length opaque up to a maximum length of maxcount
 <code>unpack_short(self)</code>
 Get a signed short integer
 <code>unpack_string(self, ltype=&lt;function unpack_uint&gt;, pad=0, maxcount=0)</code>
 Get a variable length string
-<dl><dt><dd><dl><dt><code>ltype:</code>
-<dd>Function to decode length of string [default: unpack_uint]
+<dl><dl><dt><code>ltype:</code>
+</dt><dd>Function to decode length of string [default: unpack_uint]
 Could also be given as an integer to have a fixed length string
-<dt><code>pad:</code>
-<dd>Get and discard padding bytes [default: 0]
+</dd><dt><code>pad:</code>
+</dt><dd>Get and discard padding bytes [default: 0]
 If given, string is padded to this byte boundary
-<dt><code>maxcount:</code>
-<dd>Maximum length of string [default: any length]
-</dl></dl>
+</dd><dt><code>maxcount:</code>
+</dt><dd>Maximum length of string [default: any length]
+</dd></dl></dl>
 <code>unpack_uchar(self)</code>
 Get an unsigned char
 <code>unpack_uint(self)</code>

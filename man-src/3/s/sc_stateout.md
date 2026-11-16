@@ -11,7 +11,6 @@ description: "sc::StateOut –"
 <p> Serializes objects that derive from <code>SavableState</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;stateout.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::MsgStateSend</code>, and <code>sc::StateOutFile</code>.</p>
 <h3>Public Member Functions</h3>
@@ -71,37 +70,13 @@ description: "sc::StateOut –"
  <i>Write out information about the given </i><code>ClassDesc</code>.</p>
 <h3>Protected Attributes</h3>
 <pre><code>int dir_loc_loc_
-
-
-
 TranslateDataOut * translate_
-
-
-
 int copy_references_
-
-
-
 int next_object_number_
-
-
-
 std::map&lt; Ref&lt; SavableState &gt;, StateOutData &gt; ps_
-
-
-
 std::map&lt; ClassDescP, int &gt; classidmap_
-
-
-
 int nextclassid_
-
-
-
 int node_to_node_
-
-
-
 Friends</code></pre>
 <p> class <code>SavableState</code> </p>
 <p> class <code>TranslateDataOut</code></p>

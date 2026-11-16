@@ -35,10 +35,8 @@ The entropy of the Linux kernel device /dev/urandom may be obtained using ioctl_
 
 Example output on one of the implementations 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::cout &lt;&lt; rd.entropy() &lt;&lt; '\n';

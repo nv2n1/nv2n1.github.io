@@ -28,44 +28,44 @@ description: "text2pcap – Generate a capture file from an ASCII hexdump of pac
 <p> <code>Text2pcap</code> also allows the user to read in dumps of application-level data, by inserting dummy L2, L3 and L4 headers before each packet. The user can elect to insert Ethernet headers, Ethernet and <font SIZE="-1">IP,</font> or Ethernet, <font SIZE="-1">IP</font> and <font SIZE="-1">UDP/TCP/SCTP</font> headers before each packet. This allows Wireshark or any other full-packet decoder to handle these dumps.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a</p>
-<dd> Enables <font SIZE="-1">ASCII</font> text dump identification. It allows to identify the start of the <font SIZE="-1">ASCII</font> text dump and not include it in the packet even if it looks like <font SIZE="-1">HEX.</font> </p>
+<dt>-a</dt>
+<dd> Enables <font SIZE="-1">ASCII</font> text dump identification. It allows to identify the start of the <font SIZE="-1">ASCII</font> text dump and not include it in the packet even if it looks like <font SIZE="-1">HEX.</font> </dd>
 <p> <font SIZE="-1"><code>NOTE:</code></font> Do not enable it if the input file does not contain the <font SIZE="-1">ASCII</font> text dump.</p>
-<dt>-d</p>
-<dd> Displays debugging information during the process. Can be used multiple times to generate more debugging information.</p>
-<dt>-D</p>
-<dd> The text before the packet starts either with an I or O indicating that the packet is inbound or outbound. This is only stored if the output format is PCAP-NG.</p>
-<dt>-e &lt;l3pid&gt;</p>
-<dd> Include a dummy Ethernet header before each packet. Specify the L3PID for the Ethernet header in hex. Use this option if your dump has Layer 3 header and payload (e.g. <font SIZE="-1">IP</font> header), but no Layer 2 encapsulation. Example: <i>-e 0x806</i> to specify an <font SIZE="-1">ARP</font> packet. </p>
+<dt>-d</dt>
+<dd> Displays debugging information during the process. Can be used multiple times to generate more debugging information.</dd>
+<dt>-D</dt>
+<dd> The text before the packet starts either with an I or O indicating that the packet is inbound or outbound. This is only stored if the output format is PCAP-NG.</dd>
+<dt>-e &lt;l3pid&gt;</dt>
+<dd> Include a dummy Ethernet header before each packet. Specify the L3PID for the Ethernet header in hex. Use this option if your dump has Layer 3 header and payload (e.g. <font SIZE="-1">IP</font> header), but no Layer 2 encapsulation. Example: <i>-e 0x806</i> to specify an <font SIZE="-1">ARP</font> packet. </dd>
 <p> For <font SIZE="-1">IP</font> packets, instead of generating a fake Ethernet header you can also use <i>-l 101</i> to indicate a raw <font SIZE="-1">IP</font> packet to Wireshark. Note that <i>-l 101</i> does not work for any non-IP Layer 3 packet (e.g. <font SIZE="-1">ARP</font>), whereas generating a dummy Ethernet header with <i>-e</i> works for any sort of L3 packet.</p>
-<dt>-h</p>
-<dd> Displays a help message.</p>
-<dt>-i &lt;proto&gt;</p>
-<dd> Include dummy <font SIZE="-1">IP</font> headers before each packet. Specify the <font SIZE="-1">IP</font> protocol for the packet in decimal. Use this option if your dump is the payload of an <font SIZE="-1">IP</font> packet (i.e. has complete L4 information) but does not have an <font SIZE="-1">IP</font> header with each packet. Note that an appropriate Ethernet header is automatically included with each packet as well. Example: <i>-i 46</i> to specify an <font SIZE="-1">RSVP</font> packet (<font SIZE="-1">IP</font> protocol 46).</p>
-<dt>-l</p>
-<dd> Specify the link-layer header type of this packet. Default is Ethernet (1). See &lt;<a rel="nofollow" href="http://www.tcpdump.org/linktypes.html">http://www.tcpdump.org/linktypes.html</a>&gt; for the complete list of possible encapsulations. Note that this option should be used if your dump is a complete hex dump of an encapsulated packet and you wish to specify the exact type of encapsulation. Example: <i>-l 7</i> for ARCNet packets encapsulated BSD-style.</p>
-<dt>-m &lt;max-packet&gt;</p>
-<dd> Set the maximum packet length, default is 65535. Useful for testing various packet boundaries when only an application level datastream is available. Example: </p>
+<dt>-h</dt>
+<dd> Displays a help message.</dd>
+<dt>-i &lt;proto&gt;</dt>
+<dd> Include dummy <font SIZE="-1">IP</font> headers before each packet. Specify the <font SIZE="-1">IP</font> protocol for the packet in decimal. Use this option if your dump is the payload of an <font SIZE="-1">IP</font> packet (i.e. has complete L4 information) but does not have an <font SIZE="-1">IP</font> header with each packet. Note that an appropriate Ethernet header is automatically included with each packet as well. Example: <i>-i 46</i> to specify an <font SIZE="-1">RSVP</font> packet (<font SIZE="-1">IP</font> protocol 46).</dd>
+<dt>-l</dt>
+<dd> Specify the link-layer header type of this packet. Default is Ethernet (1). See &lt;<a rel="nofollow" href="http://www.tcpdump.org/linktypes.html">http://www.tcpdump.org/linktypes.html</a>&gt; for the complete list of possible encapsulations. Note that this option should be used if your dump is a complete hex dump of an encapsulated packet and you wish to specify the exact type of encapsulation. Example: <i>-l 7</i> for ARCNet packets encapsulated BSD-style.</dd>
+<dt>-m &lt;max-packet&gt;</dt>
+<dd> Set the maximum packet length, default is 65535. Useful for testing various packet boundaries when only an application level datastream is available. Example: </dd>
 <p> <i>od -Ax -tx1 -v stream | text2pcap -m1460 -T1234,1234 &#8211; stream.pcap</i> </p>
 <p> will convert from plain datastream format to a sequence of Ethernet <font SIZE="-1">TCP</font> packets.</p>
-<dt>-n</p>
-<dd> Write PCAP-NG file instead of a <font SIZE="-1">PCAP.</font></p>
-<dt>-o hex|oct|dec</p>
-<dd> Specify the radix for the offsets (hex, octal or decimal). Defaults to hex. This corresponds to the <tt>&quot;-A&quot;</tt> option for <i>od</i>.</p>
-<dt>-q</p>
-<dd> Be completely quiet during the process.</p>
-<dt>-s &lt;srcport&gt;,&lt;destport&gt;,&lt;tag&gt;</p>
-<dd> Include dummy <font SIZE="-1">SCTP</font> headers before each packet. Specify, in decimal, the source and destination <font SIZE="-1">SCTP</font> ports, and verification tag, for the packet. Use this option if your dump is the <font SIZE="-1">SCTP</font> payload of a packet but does not include any <font SIZE="-1">SCTP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. A <font SIZE="-1">CRC32C</font> checksum will be put into the <font SIZE="-1">SCTP</font> header.</p>
-<dt>-S &lt;srcport&gt;,&lt;destport&gt;,&lt;ppi&gt;</p>
-<dd> Include dummy <font SIZE="-1">SCTP</font> headers before each packet. Specify, in decimal, the source and destination <font SIZE="-1">SCTP</font> ports, and a verification tag of 0, for the packet, and prepend a dummy <font SIZE="-1">SCTP DATA</font> chunk header with a payload protocol identifier if <i>ppi</i>. Use this option if your dump is the <font SIZE="-1">SCTP</font> payload of a packet but does not include any <font SIZE="-1">SCTP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically included with each packet. A <font SIZE="-1">CRC32C</font> checksum will be put into the <font SIZE="-1">SCTP</font> header.</p>
-<dt>-t &lt;timefmt&gt;</p>
-<dd> Treats the text before the packet as a date/time code; <i>timefmt</i> is a format string of the sort supported by <i><a href="/docs/linux/man/3-strptime/">strptime</a></i>(3). Example: The time &#8220;10:15:14.5476&#8221; has the format code &#8220;%H:%M:%S.&#8221; </p>
+<dt>-n</dt>
+<dd> Write PCAP-NG file instead of a <font SIZE="-1">PCAP.</font></dd>
+<dt>-o hex|oct|dec</dt>
+<dd> Specify the radix for the offsets (hex, octal or decimal). Defaults to hex. This corresponds to the <tt>&quot;-A&quot;</tt> option for <i>od</i>.</dd>
+<dt>-q</dt>
+<dd> Be completely quiet during the process.</dd>
+<dt>-s &lt;srcport&gt;,&lt;destport&gt;,&lt;tag&gt;</dt>
+<dd> Include dummy <font SIZE="-1">SCTP</font> headers before each packet. Specify, in decimal, the source and destination <font SIZE="-1">SCTP</font> ports, and verification tag, for the packet. Use this option if your dump is the <font SIZE="-1">SCTP</font> payload of a packet but does not include any <font SIZE="-1">SCTP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. A <font SIZE="-1">CRC32C</font> checksum will be put into the <font SIZE="-1">SCTP</font> header.</dd>
+<dt>-S &lt;srcport&gt;,&lt;destport&gt;,&lt;ppi&gt;</dt>
+<dd> Include dummy <font SIZE="-1">SCTP</font> headers before each packet. Specify, in decimal, the source and destination <font SIZE="-1">SCTP</font> ports, and a verification tag of 0, for the packet, and prepend a dummy <font SIZE="-1">SCTP DATA</font> chunk header with a payload protocol identifier if <i>ppi</i>. Use this option if your dump is the <font SIZE="-1">SCTP</font> payload of a packet but does not include any <font SIZE="-1">SCTP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically included with each packet. A <font SIZE="-1">CRC32C</font> checksum will be put into the <font SIZE="-1">SCTP</font> header.</dd>
+<dt>-t &lt;timefmt&gt;</dt>
+<dd> Treats the text before the packet as a date/time code; <i>timefmt</i> is a format string of the sort supported by <i><a href="/docs/linux/man/3-strptime/">strptime</a></i>(3). Example: The time &#8220;10:15:14.5476&#8221; has the format code &#8220;%H:%M:%S.&#8221; </dd>
 <p> <font SIZE="-1"><code>NOTE:</code></font> The subsecond component delimiter must be specified (.) but no pattern is required; the remaining number is assumed to be fractions of a second. </p>
 <p> <font SIZE="-1"><code>NOTE:</code></font> Date/time fields from the current date/time are used as the default for unspecified fields.</p>
-<dt>-T &lt;srcport&gt;,&lt;destport&gt;</p>
-<dd> Include dummy <font SIZE="-1">TCP</font> headers before each packet. Specify the source and destination <font SIZE="-1">TCP</font> ports for the packet in decimal. Use this option if your dump is the <font SIZE="-1">TCP</font> payload of a packet but does not include any <font SIZE="-1">TCP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. Sequence numbers will start at 0.</p>
-<dt>-u &lt;srcport&gt;,&lt;destport&gt;</p>
-<dd> Include dummy <font SIZE="-1">UDP</font> headers before each packet. Specify the source and destination <font SIZE="-1">UDP</font> ports for the packet in decimal. Use this option if your dump is the <font SIZE="-1">UDP</font> payload of a packet but does not include any <font SIZE="-1">UDP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. Example: <i>-u1000,69</i> to make the packets look like <font SIZE="-1">TFTP/UDP</font> packets.</dl>
+<dt>-T &lt;srcport&gt;,&lt;destport&gt;</dt>
+<dd> Include dummy <font SIZE="-1">TCP</font> headers before each packet. Specify the source and destination <font SIZE="-1">TCP</font> ports for the packet in decimal. Use this option if your dump is the <font SIZE="-1">TCP</font> payload of a packet but does not include any <font SIZE="-1">TCP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. Sequence numbers will start at 0.</dd>
+<dt>-u &lt;srcport&gt;,&lt;destport&gt;</dt>
+<dd> Include dummy <font SIZE="-1">UDP</font> headers before each packet. Specify the source and destination <font SIZE="-1">UDP</font> ports for the packet in decimal. Use this option if your dump is the <font SIZE="-1">UDP</font> payload of a packet but does not include any <font SIZE="-1">UDP, IP</font> or Ethernet headers. Note that appropriate Ethernet and <font SIZE="-1">IP</font> headers are automatically also included with each packet. Example: <i>-u1000,69</i> to make the packets look like <font SIZE="-1">TFTP/UDP</font> packets.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-od/">od</a></i>(1), <i>pcap</i>(3), <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1), <i><a href="/docs/linux/man/1-tshark/">tshark</a></i>(1), <i><a href="/docs/linux/man/1-dumpcap/">dumpcap</a></i>(1), <i><a href="/docs/linux/man/1-mergecap/">mergecap</a></i>(1), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1), <i><a href="/docs/linux/man/3-strptime/">strptime</a></i>(3), <i><a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a></i>(7) or <i><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></i>(8)</p>
 <h2>NOTES</h2>

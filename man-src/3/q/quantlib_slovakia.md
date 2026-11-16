@@ -19,46 +19,46 @@ description: "QuantLib::Slovakia – Slovak calendars."
 <p>Slovak calendars. </p>
 <p> Holidays for the Bratislava stock exchange (data from &lt;<a rel="nofollow" href="http://www.bsse.sk/">http://www.bsse.sk/</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Epiphany, January 6th</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>May Day, May 1st</p>
-<dt>*</p>
-<dd>Liberation of the Republic, May 8th</p>
-<dt>*</p>
-<dd>SS. Cyril and Methodius, July 5th</p>
-<dt>*</p>
-<dd>Slovak National Uprising, August 29th</p>
-<dt>*</p>
-<dd>Constitution of the Slovak Republic, September 1st</p>
-<dt>*</p>
-<dd>Our Lady of the Seven Sorrows, September 15th</p>
-<dt>*</p>
-<dd>All Saints Day, November 1st</p>
-<dt>*</p>
-<dd>Freedom and Democracy of the Slovak Republic, November 17th</p>
-<dt>*</p>
-<dd>Christmas Eve, December 24th</p>
-<dt>*</p>
-<dd>Christmas, December 25th</p>
-<dt>*</p>
-<dd>St. Stephen, December 26th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Epiphany, January 6th</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>May Day, May 1st</dd>
+<dt>*</dt>
+<dd>Liberation of the Republic, May 8th</dd>
+<dt>*</dt>
+<dd>SS. Cyril and Methodius, July 5th</dd>
+<dt>*</dt>
+<dd>Slovak National Uprising, August 29th</dd>
+<dt>*</dt>
+<dd>Constitution of the Slovak Republic, September 1st</dd>
+<dt>*</dt>
+<dd>Our Lady of the Seven Sorrows, September 15th</dd>
+<dt>*</dt>
+<dd>All Saints Day, November 1st</dd>
+<dt>*</dt>
+<dd>Freedom and Democracy of the Slovak Republic, November 17th</dd>
+<dt>*</dt>
+<dd>Christmas Eve, December 24th</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd>
+<dt>*</dt>
+<dd>St. Stephen, December 26th</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>BSSE </i></p>
-<dd>Bratislava stock exchange. </p>
+<dt><i>BSSE </i></dt>
+<dd>Bratislava stock exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

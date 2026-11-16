@@ -15,7 +15,7 @@ description: "XmIsMotifWMRunning — A function that determines whether the wind
 <h2>Description</h2>
 <p><code>XmIsMotifWMRunning</code> lets a user know whether the Motif Window Manager is running on a screen that contains a specific widget hierarchy. This function first sees whether the <code>_MOTIF_WM_INFO</code> property is present on the root window of the shell&#8217;s screen. If it is, its window field is used to query for the presence of the specified window as a child of root.</p>
 <dl COMPACT>
-<dt><i>shell</i></p>
-<dd>Specifies the shell whose screen will be tested for <code>mwm</code>&#8216;s presence.</dl>
+<dt><i>shell</i></dt>
+<dd>Specifies the shell whose screen will be tested for <code>mwm</code>&#8216;s presence.</dd></dl>
 <h2>Return</h2>
 <p>Returns True if MWM is running.</p>

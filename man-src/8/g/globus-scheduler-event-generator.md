@@ -20,21 +20,21 @@ description: "globus-scheduler-event-generator – Process job state change even
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Display a help message and exit.</dl>
+<dd>Display a help message and exit.</dd></dl>
 <p> <code>-s </code><i>LRM_NAME</i></p>
 <dl>
-<dd>Load the LRM-specific module for <i>LRM_NAME</i>. This is translated to loading the dynamic library libglobus_seg_&#8217;LRM_NAME&#8217;.</dl>
+<dd>Load the LRM-specific module for <i>LRM_NAME</i>. This is translated to loading the dynamic library libglobus_seg_&#8217;LRM_NAME&#8217;.</dd></dl>
 <p> <code>-t </code><i>TIMESTAMP</i></p>
 <dl>
-<dd>Process events starting at <i>TIMESTAMP</i>. This is the only way to get the globus-scheduler-event-generator to process events that occur before the process begins. If not specified, it will generate events from the current timestamp only.</dl>
+<dd>Process events starting at <i>TIMESTAMP</i>. This is the only way to get the globus-scheduler-event-generator to process events that occur before the process begins. If not specified, it will generate events from the current timestamp only.</dd></dl>
 <p> <code>-d </code><i>DIRECTORY</i></p>
 <dl>
-<dd>Write job state change events to files in <i>DIRECTORY</i>, named by the day that the event occurred (DIRECTORY/YYYYMMDD); if not specified, the events will be written to standard output.</dl>
+<dd>Write job state change events to files in <i>DIRECTORY</i>, named by the day that the event occurred (DIRECTORY/YYYYMMDD); if not specified, the events will be written to standard output.</dd></dl>
 <p> <code>-b</code></p>
 <dl>
-<dd>Run in the background. This only works if the <code>-d</code> option above is used.</dl>
+<dd>Run in the background. This only works if the <code>-d</code> option above is used.</dd></dl>
 <p> <code>-p </code><i>PIDFILE</i></p>
 <dl>
-<dd>Write the process id of the globus-scheduler-event-generator to <i>PIDFILE</i>.</dl>
+<dd>Write the process id of the globus-scheduler-event-generator to <i>PIDFILE</i>.</dd></dl>
 <h2>Author</h2>
 <p>Copyright (c) 1999-2014 University of Chicago</p>

@@ -14,10 +14,10 @@ description: "sk_state_store – update sk->sk_state"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>socket pointer</dl>
+</dd><dd>socket pointer</dd></dl>
 <p> <i>newstate</i></p>
 <dl>
-<dd>new state</dl>
+<dd>new state</dd></dl>
 <h2>Description</h2>
 <p>Paired with <code>sk_state_load</code>. Should be used in contexts where state change might impact lockless readers.</p>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ eth_hw_addr_random - Generate software assigned random Ethernet and set device f
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>pointer to net_device structure</dl>
+<dl><dd></dd><dd>pointer to net_device structure</dd></dl>
 
 <h2>Description</h2>
 

@@ -12,7 +12,7 @@ description: "apcsmart-old – Driver for American Power Conversion Smart Protoc
 <p><code>apcsmart-old</code> -h <code>apcsmart-old</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- This man page only documents the hardware-specific features of the apcsmart-old driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </p>
+ This man page only documents the hardware-specific features of the apcsmart-old driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>apcsmart-old should recognize all recent APC models that use a serial protocol at 2400 bps. This is primarily the Smart-UPS, Matrix-UPS and Back-UPS Pro lines. </p>
 <p> The driver attempts to support every bell and whistle of the APC reporting interface, whether or not this is strictly sensible. </p>
@@ -25,25 +25,25 @@ description: "apcsmart-old – Driver for American Power Conversion Smart Protoc
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>cable=940-0095B</code></p>
 <dl>
-<dd>Configure the serial port for the APC 940-0095B dual-mode cable.</dl>
+<dd>Configure the serial port for the APC 940-0095B dual-mode cable.</dd></dl>
 <p> <code>sdtype=</code><i>num</i></p>
 <dl>
-<dd>Use shutdown type <i>num</i>, according to this table: </p>
+<dd>Use shutdown type <i>num</i>, according to this table: </dd>
 <p> 0</p>
 <dl>
-<dd>soft shutdown or powerdown, depending on battery status</dl>
+<dd>soft shutdown or powerdown, depending on battery status</dd></dl>
 <p> 1</p>
 <dl>
-<dd>soft shutdown followed by powerdown</dl>
+<dd>soft shutdown followed by powerdown</dd></dl>
 <p> 2</p>
 <dl>
-<dd>instant power off</dl>
+<dd>instant power off</dd></dl>
 <p> 3</p>
 <dl>
-<dd>power off with grace period</dl>
+<dd>power off with grace period</dd></dl>
 <p> 4</p>
 <dl>
-<dd>&quot;force OB&quot; hack method for CS 350</dl>
+<dd>&quot;force OB&quot; hack method for CS 350</dd></dl>
 </dl>
 <p> Modes 0 and 1 will power up the load when power returns. Modes 2 and 3 will keep the load turned off when the power returns. </p>
 <p> Mode 4 exploits an oddity in the CS 350 models since they only seem to support the S command, but then only when running on battery. As a result, the driver will force the UPS to go on battery if necessary before sending the shutdown command. This ensures that the load gets reset.</p>
@@ -57,3 +57,4 @@ description: "apcsmart-old – Driver for American Power Conversion Smart Protoc
 <p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>
+</dl>

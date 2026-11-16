@@ -20,10 +20,10 @@ description: "fityk – non-linear curve fitting and data analysis"
  A user manual for <code>fityk</code> and <code>cfityk</code> can be found in /usr/share/doc/fityk/fitykhelp.html. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Print the usage and exit.</p>
-<dt>-V, &#8211;version</p>
-<dd> Print the version number and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Print the usage and exit.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Print the version number and exit.</dd></dl>
 <p> Use &#8211;help to see the full list of options.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Carlo Segre &lt;segre [at] iit.edu&gt; and updated by Marcin Wojdyr. </p>

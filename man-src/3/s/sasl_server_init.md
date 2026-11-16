@@ -10,7 +10,6 @@ description: "sasl_server_init – SASL server authentication initialization"
 <p>sasl_server_init &#8211; SASL server authentication initialization </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_server_init(const sasl_callback_t *callbacks,
                      const char *appname);</code></pre>
 <h2>Description</h2>

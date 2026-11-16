@@ -14,8 +14,8 @@ mongoc_client_new (const char *uri_string);</pre>
 <p>Creates a new <code>mongoc_client_t</code> using the URI string provided. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri_string</code></p>
-<dd>A string containing the MongoDB connection URI.</dl>
+<dt><code>uri_string</code></dt>
+<dd>A string containing the MongoDB connection URI.</dd></dl>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_client_t</code> if the URI parsed successfully, otherwise <code>NULL</code> \&amp;. </p>
 <h2>See Also</h2>

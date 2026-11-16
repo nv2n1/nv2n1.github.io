@@ -11,13 +11,11 @@ description: "strtod, strtof, strtold – convert ASCII string to floating-point
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
 double strtod(const char *nptr, char **endptr);
-
 float strtof(const char *nptr, char **endptr);
-
 long double strtold(const char *nptr, char **endptr);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>strtof</code>(), <code>strtold</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>The <code>strtod</code>(), <code>strtof</code>(), and <code>strtold</code>() functions convert the initial portion of the string pointed to by <i>nptr</i> to <i>double</i>, <i>float</i>, and <i>long double</i> representation, respectively. </p>
 <p> The expected form of the (initial portion of the) string is optional leading white space as recognized by <code>isspace</code>(3), an optional plus (&#8216;+&#8217;) or minus sign (&#8216;-&#8216;) and then either (i) a decimal number, or (ii) a hexadecimal number, or (iii) an infinity, or (iv) a NAN (not-a-number). </p>
@@ -33,8 +31,8 @@ long double strtold(const char *nptr, char **endptr);</code></pre>
 <p> If the correct value would cause underflow, a value with magnitude no larger than <code>DBL_MIN</code>, <code>FLT_MIN</code>, or <code>LDBL_MIN</code> is returned and <code>ERANGE</code> is stored in <i>errno</i>.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ERANGE</code></p>
-<dd>Overflow or underflow occurred.</dl>
+<dt><code>ERANGE</code></dt>
+<dd>Overflow or underflow occurred.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

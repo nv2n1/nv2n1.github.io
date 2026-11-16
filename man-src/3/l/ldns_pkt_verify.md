@@ -16,8 +16,8 @@ description: "ldns_pkt_verify"
 <p> ldns_status ldns_pkt_verify(ldns_pkt *p, ldns_rr_type t, ldns_rdf *o, ldns_rr_list *k, ldns_rr_list *s, ldns_rr_list *good_keys); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_verify</i>()</p>
-<dd>verify a packet .br <code>p</code>: the packet .br <code>t</code>: the rr set type to check .br <code>o</code>: the rr set name to check .br <code>k</code>: list of keys .br <code>s</code>: list of sigs (may be null) .br <code>good_keys</code>: keys which validated the packet .br Returns status </p>
+<dt> <i>ldns_pkt_verify</i>()</dt>
+<dd>verify a packet .br <code>p</code>: the packet .br <code>t</code>: the rr set type to check .br <code>o</code>: the rr set name to check .br <code>k</code>: list of keys .br <code>s</code>: list of sigs (may be null) .br <code>good_keys</code>: keys which validated the packet .br Returns status </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>

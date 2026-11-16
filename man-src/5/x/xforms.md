@@ -17,28 +17,28 @@ description: "xforms – A GUI Toolkit for X Window Systems"
 <h2>Options</h2>
 <p>All programs written using the <code>Forms Library</code> recognize the following command line options</p>
 <dl>
-<dt><code>-display</code><i> host:dpy</i></p>
-<dd>specifies the server to connect to.</p>
-<dt><code>-bw</code><i> borderwidth</i></p>
-<dd>specifies the border width to use for built-in objects.</p>
-<dt><code>-flversion</code></p>
-<dd>prints the xforms version information.</p>
-<dt><code>-visual</code><i> visualName</i></p>
-<dd>requests a visual by name such as TrueColor etc. By default the <code>Forms Library</code> always selects the visual that has the most depth.</p>
-<dt><code>-depth</code><i> depth</i></p>
-<dd>requests a specific depth.</p>
-<dt><code>-fldebug</code><i> level</i></p>
-<dd>generates some info about the state of the <code>XForms.</code> where <i>level</i> is an integer between 1-5 and controls the amount of information to output. Depending on the options used when the <code>Forms Library</code> was built, a level more than 3 might not be available.</p>
-<dt><code>-sync</code></p>
-<dd>runs the application in synchronous mode with debug level set to 4.</p>
-<dt><code>-private</code></p>
-<dd>requests a private colormap for the application.</p>
-<dt><code>-shared</code></p>
-<dd>requests a shared colormap even if the application needs more colors than available. For those colors that can&#8217;t be allocated in the shared colormap, substitutions are made so the closest matching color is used.</p>
-<dt><code>-stdcmap</code></p>
-<dd>requests a standard colormap.</p>
-<dt><code>-name newname</code></p>
-<dd>specifies the application name under which resources are to be obtained, rather than the default executable file name. <code></dl>
+<dt><code>-display</code><i> host:dpy</i></dt>
+<dd>specifies the server to connect to.</dd>
+<dt><code>-bw</code><i> borderwidth</i></dt>
+<dd>specifies the border width to use for built-in objects.</dd>
+<dt><code>-flversion</code></dt>
+<dd>prints the xforms version information.</dd>
+<dt><code>-visual</code><i> visualName</i></dt>
+<dd>requests a visual by name such as TrueColor etc. By default the <code>Forms Library</code> always selects the visual that has the most depth.</dd>
+<dt><code>-depth</code><i> depth</i></dt>
+<dd>requests a specific depth.</dd>
+<dt><code>-fldebug</code><i> level</i></dt>
+<dd>generates some info about the state of the <code>XForms.</code> where <i>level</i> is an integer between 1-5 and controls the amount of information to output. Depending on the options used when the <code>Forms Library</code> was built, a level more than 3 might not be available.</dd>
+<dt><code>-sync</code></dt>
+<dd>runs the application in synchronous mode with debug level set to 4.</dd>
+<dt><code>-private</code></dt>
+<dd>requests a private colormap for the application.</dd>
+<dt><code>-shared</code></dt>
+<dd>requests a shared colormap even if the application needs more colors than available. For those colors that can&#8217;t be allocated in the shared colormap, substitutions are made so the closest matching color is used.</dd>
+<dt><code>-stdcmap</code></dt>
+<dd>requests a standard colormap.</dd>
+<dt><code>-name newname</code></dt>
+<dd>specifies the application name under which resources are to be obtained, rather than the default executable file name. <code></dd></dl>
 <p> </code></p>
 <h2>See Also</h2>
 <p>fdesign(1L), fd2ps(1L) </p>

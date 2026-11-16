@@ -33,7 +33,7 @@ description: "amanda-taperscan – Amanda Taperscan Algorithms"
 <p> Second, if there is no oldest reusable volume, or if that volume is not available in the changer, then the algorithm begins a sequential scan of the changer, starting at the current slot. It selects the first suitable volume it finds: a reusable volume (perhaps newly-labeled) or, if <code>autolabel</code> includes <code>empty</code>, a blank volume. Even across multiple invocations (when <i>runtapes &gt; 1</i>), it will not return the same slot twice. </p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- This algorithm shows an undue preference for volumes already containing data, by omitting newly-labeled volumes from its first stage. Historically, many Amanda changer scripts were not fast-searchable (including <i>chg-multi</i>, <i>chg-disk</i> and, if <i>havereader=0</i>, <i>chg-zd-mtx</i>), and thus skipped the first stage, allowing new volumes to find their way into the tape cycle. New changers are almost all fast-searchable, so both stages of the algorithm are used and new tapes may be unexpectedly excluded. If this causes an undesirable change in behavior, consider one of the other taperscan algorithms..sp .5v</dl>
+ This algorithm shows an undue preference for volumes already containing data, by omitting newly-labeled volumes from its first stage. Historically, many Amanda changer scripts were not fast-searchable (including <i>chg-multi</i>, <i>chg-disk</i> and, if <i>havereader=0</i>, <i>chg-zd-mtx</i>), and thus skipped the first stage, allowing new volumes to find their way into the tape cycle. New changers are almost all fast-searchable, so both stages of the algorithm are used and new tapes may be unexpectedly excluded. If this causes an undesirable change in behavior, consider one of the other taperscan algorithms..sp .5v</dd></dl>
 <h3>oldest</h3>
 <p>This algorithm works with the Changer API (see <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7)), using the inventory returned by the changer to locate the oldest acceptable volume available. Note that this will not work with changers that do not support inventory (old changers). The algorithms scans unknown slots only if no known usable volume is found in the inventory. </p>
 <p> An acceptable volume is a reusable volume, a new labeled volume or an unlabeled volume that can be labeled according to <code>autolabel</code>. Note that changers do not always know the contents of every slot &#8211; for example, a tape with an unknown barcode will not be considered usable. </p>
@@ -48,4 +48,4 @@ description: "amanda-taperscan – Amanda Taperscan Algorithms"
 <h2>Author</h2>
 <p><code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

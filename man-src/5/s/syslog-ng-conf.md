@@ -10,9 +10,9 @@ description: "syslog-ng.conf – syslog-ng configuration file"
 <p>syslog-ng.conf &#8211; syslog-ng configuration file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>syslog-ng.conf</code></dl>
+<dt> <code>syslog-ng.conf</code></dt></dl>
 <h2>Description</h2>
-<dd>This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[2]</font>. </p>
+<dd>This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[2]</font>. </dd>
 <p> The syslog-ng OSE application is a flexible and highly scalable system logging application. Typically, syslog-ng is used to manage log messages and implement centralized logging, where the aim is to collect the log messages of several devices on a single, central log server. The different devices &#8211; called syslog-ng clients &#8211; all run syslog-ng, and collect the log messages from the various applications, files, and other <i>sources</i>. The clients send all important log messages to the remote syslog-ng server, where the server sorts and stores them. </p>
 <p> The syslog-ng application reads incoming messages and forwards them to the selected <i>destinations</i>. The syslog-ng application can receive messages from files, remote hosts, and other <i>sources</i>. </p>
 <p> Log messages enter syslog-ng in one of the defined sources, and are sent to one or more <i>destinations</i>. </p>
@@ -20,47 +20,47 @@ description: "syslog-ng.conf – syslog-ng configuration file"
 <p> Optionally, log paths can include <i>filters</i>. Filters are rules that select only certain messages, for example, selecting only messages sent by a specific application. If a log path includes filters, syslog-ng sends only the messages satisfying the filter rules to the destinations set in the log path.</p>
 <h2>Configuring Syslog-Ng</h2>
 <dl>
-<dd>&bull; The main body of the configuration file consists of object definitions: sources, destinations, logpaths define which log message are received and where they are sent. All identifiers, option names and attributes, and any other strings used in the syslog-ng configuration file are case sensitive. Objects must be defined before they are referenced in another statement. Object definitions (also called statements) have the following syntax: </p>
+<dd>&bull; The main body of the configuration file consists of object definitions: sources, destinations, logpaths define which log message are received and where they are sent. All identifiers, option names and attributes, and any other strings used in the syslog-ng configuration file are case sensitive. Objects must be defined before they are referenced in another statement. Object definitions (also called statements) have the following syntax: </dd>
 <dl>
 <dd>
 <pre>object_type object_id {&lt;options&gt;};</pre>
-</dl>
+</dd></dl>
 <dl>
-<dd>&bull; <i>Type of the object</i>: One of <i>source</i>, <i>destination</i>, <i>log</i>, <i>filter</i>, <i>parser</i>, <i>rewrite</i> rule, or <i>template</i>.</dl>
+<dd>&bull; <i>Type of the object</i>: One of <i>source</i>, <i>destination</i>, <i>log</i>, <i>filter</i>, <i>parser</i>, <i>rewrite</i> rule, or <i>template</i>.</dd></dl>
 <dl>
-<dd>&bull; <i>Identifier of the object</i>: A unique name identifying the object. When using a reserved word as an identifier, enclose the identifier in quotation marks. </p>
+<dd>&bull; <i>Identifier of the object</i>: A unique name identifying the object. When using a reserved word as an identifier, enclose the identifier in quotation marks. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Tip</code> </font><br />
- Use identifiers that refer to the type of the object they identify. For example, prefix source objects with <i>s_</i>, destinations with <i>d_</i>, and so on. </p>
+ Use identifiers that refer to the type of the object they identify. For example, prefix source objects with <i>s_</i>, destinations with <i>d_</i>, and so on. </dd>
 </dl>
 </dl>
 <dl>
-<dd>&bull; <i>Parameters</i>: The parameters of the object, enclosed in braces <i>{parameters}</i>.</dl>
+<dd>&bull; <i>Parameters</i>: The parameters of the object, enclosed in braces <i>{parameters}</i>.</dd></dl>
 <dl>
-<dd>&bull; <i>Semicolon</i>: Object definitions end with a semicolon (<i>;</i>).</dl>
+<dd>&bull; <i>Semicolon</i>: Object definitions end with a semicolon (<i>;</i>).</dd></dl>
 <p> For example, the following line defines a source and calls it <i>s_internal</i>. </p>
 <dl>
 <dd>
 <pre>source s_internal { internal(); };</pre>
-</dl>
+</dd></dl>
 <p> The object can be later referenced in other statements using its ID, for example, the previous source is used as a parameter of the following log statement: </p>
 <dl>
 <dd>
 <pre>log { source(s_internal); destination(d_file); };</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; The parameters and options within a statement are similar to function calls of the C programming language: the name of the option followed by a list of its parameters enclosed within brackets and terminated with a semicolon. </p>
+<dd>&bull; The parameters and options within a statement are similar to function calls of the C programming language: the name of the option followed by a list of its parameters enclosed within brackets and terminated with a semicolon. </dd>
 <dl>
 <dd>
 <pre>option(parameter1, parameter2); option2(parameter1, parameter2);</pre>
-</dl>
+</dd></dl>
 <p> For example, the following source statement has three options; the first two options (<i>file()</i> and <i>follow_freq()</i>) have a single parameter, while the third one (<i>flags()</i>) has two parameters: </p>
 <dl>
 <dd>
 <pre>source s_tail { file(&quot;/var/log/apache/access.log&quot;
  follow_freq(1) flags(no-parse, validate-utf8)); };</pre>
-</dl>
+</dd></dl>
 <p> Objects may have required and optional parameters. Required parameters are positional, meaning that they must be specified in a defined order. Optional parameters can be specified in any order using the option(value) format. If a parameter (optional or required) is not specified, its default value is used. The parameters and their default values are listed in the reference section of the particular object. </p>
 <p> <code>Example 1. Using required and optional parameters</code> The <i>unix-stream()</i> source driver has a single required argument: the name of the socket to listen on. Optional parameters follow the socket name in any order, so the following source definitions have the same effect: </p>
 <dl>
@@ -69,27 +69,27 @@ description: "syslog-ng.conf – syslog-ng configuration file"
  unix-stream(&quot;/dev/log&quot; max-connections(10) group(log)); };
 source s_demo_stream2 {
  unix-stream(&quot;/dev/log&quot; group(log) max-connections(10)); };</pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd>&bull; Some options are global options, or can be set globally, for example, whether syslog-ng OSE should use DNS resolution to resolve IP addresses. Global options are detailed in ???. </p>
+<dd>&bull; Some options are global options, or can be set globally, for example, whether syslog-ng OSE should use DNS resolution to resolve IP addresses. Global options are detailed in ???. </dd>
 <dl>
 <dd>
 <pre>options { use_dns(no); };</pre>
+</dd></dl>
 </dl>
-</dl>
 <dl>
-<dd>&bull; All identifiers, attributes, and any other strings used in the syslog-ng configuration file are case sensitive.</dl>
+<dd>&bull; All identifiers, attributes, and any other strings used in the syslog-ng configuration file are case sensitive.</dd></dl>
 <dl>
-<dd>&bull; Objects can be used before definition.</dl>
+<dd>&bull; Objects can be used before definition.</dd></dl>
 <dl>
-<dd>&bull; To add comments to the configuration file, start a line with <i>#</i> and write your comments. These lines are ignored by syslog-ng. </p>
+<dd>&bull; To add comments to the configuration file, start a line with <i>#</i> and write your comments. These lines are ignored by syslog-ng. </dd>
 <dl>
 <dd>
 <pre># Comment: This is a stream source
 source s_demo_stream {
  unix-stream(&quot;/dev/log&quot; max-connections(10) group(log)); };</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> The syntax of log statements is as follows: </p>
 <dl>
@@ -100,19 +100,19 @@ source s_demo_stream {
  destination(d1); destination(d2); ...
  flags(flag1[, flag2...]);
  };</pre>
-</dl>
+</dd></dl>
 <p> The following log statement sends all messages arriving to the localhost to a remote server. </p>
 <dl>
 <dd>
 <pre>source s_localhost { tcp(ip(127.0.0.1) port(1999) ); };
 destination d_tcp { tcp(&quot;10.1.2.3&quot; port(1999); localport(999)); };
 log { source(s_localhost); destination(d_tcp); };</pre>
-</dl>
+</dd></dl>
 <p> The syslog-ng application has a number of global options governing DNS usage, the timestamp format used, and other general points. Each option may have parameters, similarly to driver specifications. To set global options, add an option statement to the syslog-ng configuration file using the following syntax: </p>
 <dl>
 <dd>
 <pre>options { option1(params); option2(params); ... };</pre>
-</dl>
+</dd></dl>
 <p> The sources, destinations, and filters available in syslog-ng are listed below. For details, see m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font>. </p>
 <p> &#8211; .sp<br />
  <code>Table 1. Source drivers available in syslog-ng</code> </p>
@@ -314,23 +314,24 @@ log { source(s_localhost); destination(d_tcp); };</pre>
 <p>The authors grant permission to copy, distribute and/or modify this manual page under the terms of the GNU General Public License Version 2 or newer (GPL v2+).</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><code>The syslog-ng Open Source Edition Administrator Guide</code></p>
+<dt> 1.</dt>
+<dd><code>The syslog-ng Open Source Edition Administrator Guide</code></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.balabit.com/support/documentation/">http://www.balabit.com/support/documentation/</a></dl>
-<dt> 2.</p>
-<dd>the official syslog-ng website</p>
+<dd><a rel="nofollow" href="http://www.balabit.com/support/documentation/">http://www.balabit.com/support/documentation/</a></dd></dl>
+<dt> 2.</dt>
+<dd>the official syslog-ng website</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.balabit.com/network-security/syslog-ng/">http://www.balabit.com/network-security/syslog-ng/</a></dl>
-<dt> 3.</p>
-<dd>visit the syslog-ng wiki</p>
+<dd><a rel="nofollow" href="http://www.balabit.com/network-security/syslog-ng/">http://www.balabit.com/network-security/syslog-ng/</a></dd></dl>
+<dt> 3.</dt>
+<dd>visit the syslog-ng wiki</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.balabit.com/wiki/syslog-ng-faq">http://www.balabit.com/wiki/syslog-ng-faq</a></dl>
-<dt> 4.</p>
-<dd><code>syslog-ng mailing list</code></p>
+<dd><a rel="nofollow" href="http://www.balabit.com/wiki/syslog-ng-faq">http://www.balabit.com/wiki/syslog-ng-faq</a></dd></dl>
+<dt> 4.</dt>
+<dd><code>syslog-ng mailing list</code></dd>
 <dl>
-<dd><a rel="nofollow" href="https://lists.balabit.hu/mailman/listinfo/syslog-ng">https://lists.balabit.hu/mailman/listinfo/syslog-ng</a></dl>
-<dt> 5.</p>
-<dd><code>syslog-ng Insider Blog</code></p>
+<dd><a rel="nofollow" href="https://lists.balabit.hu/mailman/listinfo/syslog-ng">https://lists.balabit.hu/mailman/listinfo/syslog-ng</a></dd></dl>
+<dt> 5.</dt>
+<dd><code>syslog-ng Insider Blog</code></dd>
 <dl>
-<dd><a rel="nofollow" href="http://insider.blogs.balabit.com">http://insider.blogs.balabit.com</a></dl>
+<dd><a rel="nofollow" href="http://insider.blogs.balabit.com">http://insider.blogs.balabit.com</a></dd></dl>
+</dl>

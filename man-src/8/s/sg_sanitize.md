@@ -19,38 +19,38 @@ description: "sg_sanitize – remove all user data from disk with SCSI SANITIZE 
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-A</code>, <code>&#8211;ause</code></p>
-<dd>sets the AUSE bit in the cdb. AUSE is an acronym for &quot;allow unrestricted sanitize exit&quot;. Default action is to leave the bit cleared.</p>
-<dt><code>-B</code>, <code>&#8211;block</code></p>
-<dd>perform a &quot;block erase&quot; sanitize operation.</p>
-<dt><code>-c</code>, <code>&#8211;count</code>=<i>OC</i></p>
-<dd>where <i>OC</i> is the &quot;overwrite count&quot; associated with the &quot;overwrite&quot; sanitize operation. <i>OC</i> can be a value between 1 and 31 and 1 is the default.</p>
-<dt><code>-C</code>, <code>&#8211;crypto</code></p>
-<dd>perform a &quot;cryptographic erase&quot; sanitize operation.</p>
-<dt><code>-e</code>, <code>&#8211;early</code></p>
-<dd>the default action of this utility is to poll the disk every 60 seconds to fetch the progress indication until the sanitize is finished. When this option is given this utility will exit &quot;early&quot; as soon as the sanitize has commenced. This option and <i>&#8211;wait</i> cannot both be given.</p>
-<dt><code>-F</code>, <code>&#8211;fail</code></p>
-<dd>perform an &quot;exit failure mode&quot; sanitize operation. Typically requires the preceding SANITIZE command to have set the AUSE bit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage information then exit.</p>
-<dt><code>-i</code>, <code>&#8211;ipl</code>=<i>LEN</i></p>
-<dd>set the initialization pattern length to <i>LEN</i> bytes. By default it is set to the length of the pattern file (<i>PF</i>). Only active when the <i>&#8211;overwrite</i> option is also given. It is the number of bytes from the <i>PF</i> file that will be used as the initialization pattern. The minimum size is 1 byte and the maximum is the logical block size of the <i>DEVICE</i> (and not to exceed 65535). If <i>LEN</i> exceeds the <i>PF</i> file size then the initialization pattern is padded with zeros.</p>
-<dt><code>-I</code>, <code>&#8211;invert</code></p>
-<dd>set the INVERT bit in the overwrite service action parameter list. This only affects the &quot;overwrite&quot; sanitize operation. The default is a clear INVERT bit. When the INVERT bit is set then the initialization pattern is inverted between consecutive overwrite passes.</p>
-<dt><code>-O</code>, <code>&#8211;overwrite</code></p>
-<dd>perform an &quot;overwrite&quot; sanitize operation. When this option is given then the <i>&#8211;pattern=PF</i> option is required.</p>
-<dt><code>-p</code>, <code>&#8211;pattern</code>=<i>PF</i></p>
-<dd>where <i>PF</i> is the filename of a file containing the initialization pattern required by an &quot;overwrite&quot; sanitize operation. The length of this file will be used as the length of the initialization pattern unless the <i>&#8211;ipl=LEN</i> option is given. The length of the initialization pattern must be from 1 to the logical block size of the <i>DEVICE</i>.</p>
-<dt><code>-Q</code>, <code>&#8211;quick</code></p>
-<dd>the default action (i.e. when the option is not given) is to give the user 15 seconds to reconsider doing a sanitize operation on the <i>DEVICE</i>. When this option is given that step (i.e. the 15 second warning period) is skipped.</p>
-<dt><code>-T</code>, <code>&#8211;test</code>=<i>TE</i></p>
-<dd>set the TEST field in the overwrite service action parameter list. This only affects the &quot;overwrite&quot; sanitize operation. The default is to place 0 in that field.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</p>
-<dt><code>-w</code>, <code>&#8211;wait</code></p>
-<dd>the default action (i.e. without this option and the <i>&#8211;early</i> option) is to start the SANITIZE command with the IMMED bit set then poll for the progress indication with the REQUEST SENSE command until the sanitize operation is complete (or fails). When this option is given (and the <i>&#8211;early</i> option is not given) then the SANITIZE command is started with the IMMED bit clear. For a large disk this might take hours. [A cryptographic erase operation could potentially be very quick.]</dl>
+<dt><code>-A</code>, <code>&#8211;ause</code></dt>
+<dd>sets the AUSE bit in the cdb. AUSE is an acronym for &quot;allow unrestricted sanitize exit&quot;. Default action is to leave the bit cleared.</dd>
+<dt><code>-B</code>, <code>&#8211;block</code></dt>
+<dd>perform a &quot;block erase&quot; sanitize operation.</dd>
+<dt><code>-c</code>, <code>&#8211;count</code>=<i>OC</i></dt>
+<dd>where <i>OC</i> is the &quot;overwrite count&quot; associated with the &quot;overwrite&quot; sanitize operation. <i>OC</i> can be a value between 1 and 31 and 1 is the default.</dd>
+<dt><code>-C</code>, <code>&#8211;crypto</code></dt>
+<dd>perform a &quot;cryptographic erase&quot; sanitize operation.</dd>
+<dt><code>-e</code>, <code>&#8211;early</code></dt>
+<dd>the default action of this utility is to poll the disk every 60 seconds to fetch the progress indication until the sanitize is finished. When this option is given this utility will exit &quot;early&quot; as soon as the sanitize has commenced. This option and <i>&#8211;wait</i> cannot both be given.</dd>
+<dt><code>-F</code>, <code>&#8211;fail</code></dt>
+<dd>perform an &quot;exit failure mode&quot; sanitize operation. Typically requires the preceding SANITIZE command to have set the AUSE bit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage information then exit.</dd>
+<dt><code>-i</code>, <code>&#8211;ipl</code>=<i>LEN</i></dt>
+<dd>set the initialization pattern length to <i>LEN</i> bytes. By default it is set to the length of the pattern file (<i>PF</i>). Only active when the <i>&#8211;overwrite</i> option is also given. It is the number of bytes from the <i>PF</i> file that will be used as the initialization pattern. The minimum size is 1 byte and the maximum is the logical block size of the <i>DEVICE</i> (and not to exceed 65535). If <i>LEN</i> exceeds the <i>PF</i> file size then the initialization pattern is padded with zeros.</dd>
+<dt><code>-I</code>, <code>&#8211;invert</code></dt>
+<dd>set the INVERT bit in the overwrite service action parameter list. This only affects the &quot;overwrite&quot; sanitize operation. The default is a clear INVERT bit. When the INVERT bit is set then the initialization pattern is inverted between consecutive overwrite passes.</dd>
+<dt><code>-O</code>, <code>&#8211;overwrite</code></dt>
+<dd>perform an &quot;overwrite&quot; sanitize operation. When this option is given then the <i>&#8211;pattern=PF</i> option is required.</dd>
+<dt><code>-p</code>, <code>&#8211;pattern</code>=<i>PF</i></dt>
+<dd>where <i>PF</i> is the filename of a file containing the initialization pattern required by an &quot;overwrite&quot; sanitize operation. The length of this file will be used as the length of the initialization pattern unless the <i>&#8211;ipl=LEN</i> option is given. The length of the initialization pattern must be from 1 to the logical block size of the <i>DEVICE</i>.</dd>
+<dt><code>-Q</code>, <code>&#8211;quick</code></dt>
+<dd>the default action (i.e. when the option is not given) is to give the user 15 seconds to reconsider doing a sanitize operation on the <i>DEVICE</i>. When this option is given that step (i.e. the 15 second warning period) is skipped.</dd>
+<dt><code>-T</code>, <code>&#8211;test</code>=<i>TE</i></dt>
+<dd>set the TEST field in the overwrite service action parameter list. This only affects the &quot;overwrite&quot; sanitize operation. The default is to place 0 in that field.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd>
+<dt><code>-w</code>, <code>&#8211;wait</code></dt>
+<dd>the default action (i.e. without this option and the <i>&#8211;early</i> option) is to start the SANITIZE command with the IMMED bit set then poll for the progress indication with the REQUEST SENSE command until the sanitize operation is complete (or fails). When this option is given (and the <i>&#8211;early</i> option is not given) then the SANITIZE command is started with the IMMED bit clear. For a large disk this might take hours. [A cryptographic erase operation could potentially be very quick.]</dd></dl>
 <h2>Notes</h2>
 <p>The SCSI SANITIZE command is closely related to the ATA SANITIZE command, both are relatively new with the ATA command being the first one defined. The SCSI to ATA Translation (SAT) definition for the SCSI SANITIZE command appeared in the SAT-3 revision 4 draft. </p>
 <p> The SCSI SANITIZE command is related to the SCSI FORMAT UNIT command. It is likely that a block erase sanitize operation would take a similar amount of time as a format on the same disk (e.g. 9 hours for a 2 Terabyte disk). The primary goal of a format is the configuration of the disk at the end of a format (e.g. different logical block size or protection information added). Removal of user data is only a side effect of a format. With the SCSI SANITIZE command, removal of user data is the primary goal. If a sanitize operation is interrupted (e.g. the disk is power cycled) then after power up any remaining user data will not be available and the sanitize operation will continue. When a format is interrupted (e.g. the disk is power cycled) the drafts say very little about the state of the disk. In practice some of the original user data may remain and the format may need to be restarted. </p>

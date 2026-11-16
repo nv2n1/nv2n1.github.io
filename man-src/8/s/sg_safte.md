@@ -16,28 +16,28 @@ description: "sg_safte – access SCSI Accessed Fault-Tolerant Enclosure (SAF-TE
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config</code></p>
-<dd>will issues a <i>Read Enclosure Configuration</i> (READ BUFFER ID 0) cdb to the device, which returns a list of the enclosure hardware resources.</p>
-<dt><code>-d</code>, <code>&#8211;devstatus</code></p>
-<dd>will issue a <i>Read Device Slot Status</i> (READ BUFFER ID 4) cdb to the device, which returns information about the current state of each drive or slot.</p>
-<dt><code>-s</code>, <code>&#8211;encstatus</code></p>
-<dd>will issue a <i>Read Enclosure Status</i> (READ BUFFER ID 1) cdb to the device, which returns the operational state of the components.</p>
-<dt><code>-f</code>, <code>&#8211;flags</code></p>
-<dd>will issue a <i>Read Global Flags</i> (READ BUFFER ID 5) cdb to the device, which read the most recent state of the global flags of the RAID processor device.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response to a READ BUFFER command in ASCII hex to stdout. If used once, output the response to the first READ BUFFER command (i.e. with buffer_id=0). This should be the enclosure configuration. If used twice (or more often), the response to subsequent READ BUFFER commands is output.</p>
-<dt><code>-i</code>, <code>&#8211;insertions</code></p>
-<dd>will issue a <i>Read Device Insertions</i> (READ BUFFER ID 3) cdb to the device, which returns information about the number of times devices have been inserted whilst the RAID system was powered on.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output the response to a READ BUFFER command in binary to stdout. If used once, output the response to the first READ BUFFER command (i.e. with buffer_id=0). This should be the enclosure configuration. If used twice (or more often), the response to subsequent READ BUFFER commands is output.</p>
-<dt><code>-u</code>, <code>&#8211;usage</code></p>
-<dd>will issue a <i>Read Usage Statistics</i> (READ BUFFER ID 2) cdb to the device, which returns the information on total usage time and number of power-on cycles of the RAID device.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-c</code>, <code>&#8211;config</code></dt>
+<dd>will issues a <i>Read Enclosure Configuration</i> (READ BUFFER ID 0) cdb to the device, which returns a list of the enclosure hardware resources.</dd>
+<dt><code>-d</code>, <code>&#8211;devstatus</code></dt>
+<dd>will issue a <i>Read Device Slot Status</i> (READ BUFFER ID 4) cdb to the device, which returns information about the current state of each drive or slot.</dd>
+<dt><code>-s</code>, <code>&#8211;encstatus</code></dt>
+<dd>will issue a <i>Read Enclosure Status</i> (READ BUFFER ID 1) cdb to the device, which returns the operational state of the components.</dd>
+<dt><code>-f</code>, <code>&#8211;flags</code></dt>
+<dd>will issue a <i>Read Global Flags</i> (READ BUFFER ID 5) cdb to the device, which read the most recent state of the global flags of the RAID processor device.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response to a READ BUFFER command in ASCII hex to stdout. If used once, output the response to the first READ BUFFER command (i.e. with buffer_id=0). This should be the enclosure configuration. If used twice (or more often), the response to subsequent READ BUFFER commands is output.</dd>
+<dt><code>-i</code>, <code>&#8211;insertions</code></dt>
+<dd>will issue a <i>Read Device Insertions</i> (READ BUFFER ID 3) cdb to the device, which returns information about the number of times devices have been inserted whilst the RAID system was powered on.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output the response to a READ BUFFER command in binary to stdout. If used once, output the response to the first READ BUFFER command (i.e. with buffer_id=0). This should be the enclosure configuration. If used twice (or more often), the response to subsequent READ BUFFER commands is output.</dd>
+<dt><code>-u</code>, <code>&#8211;usage</code></dt>
+<dd>will issue a <i>Read Usage Statistics</i> (READ BUFFER ID 2) cdb to the device, which returns the information on total usage time and number of power-on cycles of the RAID device.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>The implementation is based on the intermediate review document eg as found at </p>
 <p> <a rel="nofollow" href="http://www.intel.com/design/servers/ipmi/saf-te.htm">http://www.intel.com/design/servers/ipmi/saf-te.htm</a> </p>

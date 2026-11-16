@@ -11,9 +11,7 @@ std::get_money - std::get_money
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iomanip&gt;
-
 template&lt; class MoneyT &gt;                                      (since C++11)
-
 /*unspecified*/ get_money( MoneyT&amp; mon, bool intl = false );</code></pre> 
 When used in an expression in &gt;&gt; get_money(mon, intl), parses the character input as a monetary value, as specified by the std::money_get facet of the locale currently imbued in in, and stores the value in mon. 
 The extraction operation in in &gt;&gt; get_money(mon, intl) behaves as a FormattedInputFunction. 
@@ -45,14 +43,10 @@ if (std::ios_base::goodbit != err)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     std::istringstream in(&quot;$1,234.56 2.22 USD  3.33&quot;);
     long double v1, v2;

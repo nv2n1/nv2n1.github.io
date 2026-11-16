@@ -21,28 +21,28 @@ description: "mime.types – mime type description file for cups"
 <h3>Rules</h3>
 <p>Rules take two forms &#8211; a filename extension by itself and functions with test values inside parenthesis. The following functions are available:</p>
 <dl>
-<dt><code>match(&quot;</code><i>pattern</i><code>&quot;)</code></p>
-<dd>True if the filename matches the given shell wildcard <i>pattern</i>.</p>
-<dt><code>ascii(</code><i>offset</i><code>,</code><i>length</i><code>)</code></p>
-<dd>True if the <i>length</i> bytes starting at <i>offset</i> are valid printable ASCII (CR, NL, TAB, BS, 32-126).</p>
-<dt><code>printable(</code><i>offset</i><code>,</code><i>length</i><code>)</code></p>
-<dd>True if the <i>length</i> bytes starting at <i>offset</i> are printable 8-bit chars (CR, NL, TAB, BS, 32-126, 128-254).</p>
-<dt><code>priority(</code><i>number</i><code>)</code></p>
-<dd>Specifies the relative priority of this MIME media type. The default priority is 100. Larger values have higher priority while smaller values have lower priority.</p>
-<dt><code>string(</code><i>offset</i><code>,&quot;</code><i>string</i><code>&quot;)</code></p>
-<dd>True if the bytes starting at <i>offset</i> are identical to <i>string</i>.</p>
-<dt><code>istring(</code><i>offset</i><code>,&quot;</code><i>string</i><code>&quot;)</code></p>
-<dd>True if the bytes starting at <i>offset</i> match <i>string</i> without respect to case.</p>
-<dt><code>char(</code><i>offset</i><code>,</code><i>value</i><code>)</code></p>
-<dd>True if the byte at <i>offset</i> is identical to <i>value</i>.</p>
-<dt><code>short(</code><i>offset</i><code>,</code><i>value</i><code>)</code></p>
-<dd>True if the 16-bit big-endian integer at <i>offset</i> is identical to <i>value</i>.</p>
-<dt><code>int(</code><i>offset</i><code>,</code><i>value</i><code>)</code></p>
-<dd>True if the 32-bit big-endian integer at <i>offset</i> is identical to <i>value</i>.</p>
-<dt><code>locale(&quot;</code><i>string</i><code>&quot;)</code></p>
-<dd>True if current locale matches <i>string</i>.</p>
-<dt><code>contains(</code><i>offset</i><code>,</code><i>range</i><code>,&quot;</code><i>string</i><code>&quot;)</code></p>
-<dd>True if the bytes starting at <i>offset</i> for <i>range</i> bytes contains <i>string</i>.</dl>
+<dt><code>match(&quot;</code><i>pattern</i><code>&quot;)</code></dt>
+<dd>True if the filename matches the given shell wildcard <i>pattern</i>.</dd>
+<dt><code>ascii(</code><i>offset</i><code>,</code><i>length</i><code>)</code></dt>
+<dd>True if the <i>length</i> bytes starting at <i>offset</i> are valid printable ASCII (CR, NL, TAB, BS, 32-126).</dd>
+<dt><code>printable(</code><i>offset</i><code>,</code><i>length</i><code>)</code></dt>
+<dd>True if the <i>length</i> bytes starting at <i>offset</i> are printable 8-bit chars (CR, NL, TAB, BS, 32-126, 128-254).</dd>
+<dt><code>priority(</code><i>number</i><code>)</code></dt>
+<dd>Specifies the relative priority of this MIME media type. The default priority is 100. Larger values have higher priority while smaller values have lower priority.</dd>
+<dt><code>string(</code><i>offset</i><code>,&quot;</code><i>string</i><code>&quot;)</code></dt>
+<dd>True if the bytes starting at <i>offset</i> are identical to <i>string</i>.</dd>
+<dt><code>istring(</code><i>offset</i><code>,&quot;</code><i>string</i><code>&quot;)</code></dt>
+<dd>True if the bytes starting at <i>offset</i> match <i>string</i> without respect to case.</dd>
+<dt><code>char(</code><i>offset</i><code>,</code><i>value</i><code>)</code></dt>
+<dd>True if the byte at <i>offset</i> is identical to <i>value</i>.</dd>
+<dt><code>short(</code><i>offset</i><code>,</code><i>value</i><code>)</code></dt>
+<dd>True if the 16-bit big-endian integer at <i>offset</i> is identical to <i>value</i>.</dd>
+<dt><code>int(</code><i>offset</i><code>,</code><i>value</i><code>)</code></dt>
+<dd>True if the 32-bit big-endian integer at <i>offset</i> is identical to <i>value</i>.</dd>
+<dt><code>locale(&quot;</code><i>string</i><code>&quot;)</code></dt>
+<dd>True if current locale matches <i>string</i>.</dd>
+<dt><code>contains(</code><i>offset</i><code>,</code><i>range</i><code>,&quot;</code><i>string</i><code>&quot;)</code></dt>
+<dd>True if the bytes starting at <i>offset</i> for <i>range</i> bytes contains <i>string</i>.</dd></dl>
 <h3>String Constants</h3>
 <p>String constants can be specified inside quotes (&quot;&quot;) for strings containing whitespace and angle brackets (&lt;&gt;) for hexadecimal strings.</p>
 <h3>Type Matching And Priority</h3>

@@ -10,7 +10,6 @@ description: "next_fli_frame – Reads the next frame of the current animation f
 <p>next_fli_frame &#8211; Reads the next frame of the current animation file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int next_fli_frame(int loop);</code></pre>
 <h2>Description</h2>
 <p>Reads the next frame of the current animation file. If `loop&#8217; is not zero, the player will cycle when it reaches the end of the file, otherwise it will return FLI_EOF. The frame is read into the global variables fli_bitmap and fli_palette. Example: </p>

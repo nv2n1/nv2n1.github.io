@@ -15,7 +15,7 @@ blk_queue_bypass_end - leave queue bypass mode
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>queue of interest</dl>
+<dl><dd></dd><dd>queue of interest</dd></dl>
 
 <h2>Description</h2>
 

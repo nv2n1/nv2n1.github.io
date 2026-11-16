@@ -15,7 +15,7 @@ invalidate_inode_pages2 - remove all pages from an address_space
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the address_space</dl>
+<dl><dd></dd><dd>the address_space</dd></dl>
 
 <h2>Description</h2>
 

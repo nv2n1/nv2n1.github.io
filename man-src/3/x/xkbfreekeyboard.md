@@ -11,16 +11,16 @@ description: "XkbFreeKeyboard – Destroys either an entire XkbDescRec or just s
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeKeyboard</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>xkb</i></p>
+<dt><i>xkb</i></dt>
 <dd>
-<dd>keyboard description with components to free</p>
-<dt><i>which</i></p>
-<dd>mask selecting components to free</p>
-<dt><i>free_all</i></p>
-<dd>True =&gt; free all components and <i>xkb</i></dl>
+</dd><dd>keyboard description with components to free</dd>
+<dt><i>which</i></dt>
+<dd>mask selecting components to free</dd>
+<dt><i>free_all</i></dt>
+<dd>True =&gt; free all components and <i>xkb</i></dd></dl>
 <h2>Description</h2>
 <p><i>XkbFreeKeyboard </i> frees the components of <i>xkb </i> specified by <i>which </i> and sets the corresponding values to NULL. If <i>free_all </i> is True, <i>XkbFreeKeyboard </i> frees every non-NULL component of <i>xkb </i> and then frees the <i>xkb </i> structure itself. </p>
 <p> If kbd is NULL, no operation is performed. </p>

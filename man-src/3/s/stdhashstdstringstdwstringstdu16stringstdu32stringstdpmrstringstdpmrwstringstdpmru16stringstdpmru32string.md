@@ -11,35 +11,25 @@ std::hash(std::string,std::wstring,std::u16string,std::u32string,std::pmr::strin
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;string&gt;
-
     template &lt;&gt;
     struct hash&lt;std::string&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::wstring&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::u8string&gt;; // c++20  (since C++11)
-
 template &lt;&gt;
 struct hash&lt;std::u16string&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::u32string&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::pmr::string&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::pmr::wstring&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::pmr::u8string&gt;;
 (since C++ 20)
-
     template &lt;&gt;
     struct hash&lt;std::pmr::u16string&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::pmr::u32string&gt;;</code></pre> 
 The template specializations of std::hash for the various string classes allow users to obtain hashes of strings. 
@@ -49,12 +39,9 @@ These hashes equal the hashes of corresponding std::basic_string_view classes: I
 
 The following code shows one possible output of a hash function used on a string: 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::string s = &quot;Stand back! I've got jimmies!&quot;;
     std::hash&lt;std::string&gt; hash_fn;

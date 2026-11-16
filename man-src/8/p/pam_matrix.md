@@ -19,19 +19,19 @@ description: "pam_matrix – A PAM test module to retrieve module-specific PAM i
 <dl>
 <dd>
 <pre>username:password:allowed_service</pre>
-</dl>
+</dd></dl>
 <p> Example: User bob allowed to authenticate with the service sshd </p>
 <dl>
 <dd>
 <pre>bob:secret:sshd</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <dl>
-<dd>&bull; <code>passdb=/path/to/file</code> &#8211; the patch to the password database. If the database is not provided with this module option, pam_matrix.so reads the PAM_MATRIX_PASSWD environment variable and tries to load the file from there. If that fails as well, PAM_AUTHINFO_UNAVAIL is returned.</dl>
+<dd>&bull; <code>passdb=/path/to/file</code> &#8211; the patch to the password database. If the database is not provided with this module option, pam_matrix.so reads the PAM_MATRIX_PASSWD environment variable and tries to load the file from there. If that fails as well, PAM_AUTHINFO_UNAVAIL is returned.</dd></dl>
 <dl>
-<dd>&bull; <code>echo</code> &#8211; if this option is provided, pam_matrix.so will ask for password using PAM_PROMPT_ECHO_ON, that is, the password will be echoed back to user. This option was added to make it possible to test conversation functions better.</dl>
+<dd>&bull; <code>echo</code> &#8211; if this option is provided, pam_matrix.so will ask for password using PAM_PROMPT_ECHO_ON, that is, the password will be echoed back to user. This option was added to make it possible to test conversation functions better.</dd></dl>
 <dl>
-<dd>&bull; <code>verbose</code> &#8211; if this option is provided, pam_matrix.so will display a PAM_TEXT_INFO message when authentication succeeds and a PAM_ERROR_MSG when authentication fails. This option was added to make it possible to test conversation functions better.</dl>
+<dd>&bull; <code>verbose</code> &#8211; if this option is provided, pam_matrix.so will display a PAM_TEXT_INFO message when authentication succeeds and a PAM_ERROR_MSG when authentication fails. This option was added to make it possible to test conversation functions better.</dd></dl>
 <h2>Module Types Provided</h2>
 <p>All module types (<code>account</code>, <code>auth</code>, <code>password</code> and <code>session</code>) are supported. </p>
 <p> The <code>auth</code> module searches for the user in the passdb file and compares the provided password with the one in the passdb file. </p>
@@ -45,4 +45,4 @@ description: "pam_matrix – A PAM test module to retrieve module-specific PAM i
 account required pam_matrix.so passdb=/tmp/passdb verbose
 password required pam_matrix.so passdb=/tmp/passdb verbose
 session required pam_matrix.so passdb=/tmp/passdb verbose</pre>
-</dl>
+</dd></dl>

@@ -15,7 +15,7 @@ dmi_check_system - check system DMI data
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>array of dmi_system_id structures to match against All non-null elements of the list must match their slot's (field index's) data (i.e., each list string must be a substring of the specified DMI slot's string data) to be considered a successful match.</dl>
+<dl><dd></dd><dd>array of dmi_system_id structures to match against All non-null elements of the list must match their slot's (field index's) data (i.e., each list string must be a substring of the specified DMI slot's string data) to be considered a successful match.</dd></dl>
 
 <h2>Description</h2>
 

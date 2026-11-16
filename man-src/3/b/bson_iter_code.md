@@ -19,11 +19,11 @@ bson_iter_code(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> A location for the length of the UTF-8 encoded string or NULL.</dl>
+<dt><code>length</code></dt>
+<dd> A location for the length of the UTF-8 encoded string or NULL.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function returns the contents of a BSON_TYPE_CODE field. The length of the string is stored in <code>length</code> if non-NULL. </p>
 <p> It is invalid to call this function on a field that is not of type BSON_TYPE_CODE. </p>

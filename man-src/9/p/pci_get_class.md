@@ -14,10 +14,10 @@ description: "pci_get_class – begin or continue searching for a PCI device by 
 <p><i>class</i></p>
 <dl>
 <dd>
-<dd>search for a PCI device with this class designation</dl>
+</dd><dd>search for a PCI device with this class designation</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>Previous PCI device found in search, or <code>NULL</code> for new search.</dl>
+<dd>Previous PCI device found in search, or <code>NULL</code> for new search.</dd></dl>
 <h2>Description</h2>
 <p>Iterates through the list of known PCI devices. If a PCI device is found with a matching <i>class</i>, the reference count to the device is incremented and a pointer to its device structure is returned. Otherwise, <code>NULL</code> is returned. A new search is initiated by passing <code>NULL</code> as the <i>from</i> argument. Otherwise if <i>from</i> is not <code>NULL</code>, searches continue from next device on the global list. The reference count for <i>from</i> is always decremented if it is not <code>NULL</code>.</p>
 <h2>Copyright</h2>

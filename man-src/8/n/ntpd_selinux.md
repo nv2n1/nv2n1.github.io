@@ -59,9 +59,9 @@ description: "ntpd_selinux – Security Enhanced Linux Policy for the ntpd proce
 <p> Policy governs the access confined processes have to these ports. SELinux ntpd policy is very flexible allowing users to setup their ntpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for ntpd: </p>
 <dl>
-<dt><code>ntp_port_t</code></p>
+<dt><code>ntp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 123</dl>
+</dd><dd>Default Defined Ports: udp 123</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ntpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -121,22 +121,22 @@ description: "ntpd_selinux – Security Enhanced Linux Policy for the ntpd proce
 <p> <code>ntpd_exec_t</code> </p>
 <p> &#8211; Set files with the ntpd_exec_t type, if you want to transition an executable to the ntpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|weekly)/ntp-simple, /etc/cron.(daily|weekly)/ntp-server, /usr/sbin/ntpd </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|weekly)/ntp-simple, /etc/cron.(daily|weekly)/ntp-server, /usr/sbin/ntpd </dd>
 </dl>
 <p> <code>ntpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ntpd_initrc_exec_t type, if you want to transition an executable to the ntpd_initrc_t domain. </p>
 <p> <code>ntpd_key_t</code> </p>
 <p> &#8211; Set files with the ntpd_key_t type, if you want to treat the files as ntpd key data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/ntp/crypto(/.*)?, /etc/ntp/keys </p>
+<dt>Paths:</dt>
+<dd>/etc/ntp/crypto(/.*)?, /etc/ntp/keys </dd>
 </dl>
 <p> <code>ntpd_log_t</code> </p>
 <p> &#8211; Set files with the ntpd_log_t type, if you want to treat the data as ntpd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/ntp.*, /var/log/xntpd.*, /var/log/ntpstats(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/ntp.*, /var/log/xntpd.*, /var/log/ntpstats(/.*)? </dd>
 </dl>
 <p> <code>ntpd_tmp_t</code> </p>
 <p> &#8211; Set files with the ntpd_tmp_t type, if you want to store ntpd temporary files in the /tmp directories. </p>
@@ -149,8 +149,8 @@ description: "ntpd_selinux – Security Enhanced Linux Policy for the ntpd proce
 <p> <code>ntpdate_exec_t</code> </p>
 <p> &#8211; Set files with the ntpdate_exec_t type, if you want to transition an executable to the ntpdate_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/sntp, /usr/sbin/ntpdate, /usr/libexec/ntpdate-wrapper </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/sntp, /usr/sbin/ntpdate, /usr/libexec/ntpdate-wrapper </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

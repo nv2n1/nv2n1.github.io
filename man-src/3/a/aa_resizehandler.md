@@ -18,10 +18,10 @@ description: "aa_resizehandler – Set user handler to be called on resize event
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>void (*handler)(aa_context *)</code></p>
-<dd> Function to be called when resize happends.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>void (*handler)(aa_context *)</code></dt>
+<dd> Function to be called when resize happends.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Set user handler to be called on resize event.</p>
 <h2>SEE ALSO</h2>

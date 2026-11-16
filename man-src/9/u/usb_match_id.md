@@ -14,10 +14,10 @@ description: "usb_match_id – find first usb_device_id matching device or inter
 <p><i>interface</i></p>
 <dl>
 <dd>
-<dd>the interface of interest</dl>
+</dd><dd>the interface of interest</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>array of usb_device_id structures, terminated by zero entry</dl>
+<dd>array of usb_device_id structures, terminated by zero entry</dd></dl>
 <h2>Description</h2>
 <p>usb_match_id searches an array of usb_device_id&#8217;s and returns the first one matching the device or interface, or null. This is used when binding (or rebinding) a driver to an interface. Most USB device drivers will use this indirectly, through the usb core, but some layered driver frameworks use it directly. These device tables are exported with MODULE_DEVICE_TABLE, through modutils, to support the driver loading functionality of USB hotplugging.</p>
 <h2>Return</h2>

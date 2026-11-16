@@ -15,7 +15,7 @@ rpc_init_pipe_dir_head - initialise a struct rpc_pipe_dir_head
 <h2>Arguments</h2>
 
 <i>pdh</i>
-<dl><dd><dd>pointer to struct rpc_pipe_dir_head</dl>
+<dl><dd></dd><dd>pointer to struct rpc_pipe_dir_head</dd></dl>
 
 <h2>Copyright</h2>
 

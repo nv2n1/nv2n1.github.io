@@ -15,11 +15,11 @@ xprt_reserve_xprt - serialize write access to transports
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>pointer to the target transport</dl>
+<dl><dd></dd><dd>pointer to the target transport</dd></dl>
  
 
  <i>task</i>
-<dl><dd>task that is requesting access to the transport</dl>
+<dl><dd>task that is requesting access to the transport</dd></dl>
 
 <h2>Description</h2>
 

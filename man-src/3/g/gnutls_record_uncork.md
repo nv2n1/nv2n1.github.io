@@ -14,10 +14,10 @@ description: "gnutls_record_uncork – API function"
 <p> <code>int gnutls_record_uncork(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>unsigned int flags</p>
-<dd> Could be zero or <code>GNUTLS_RECORD_WAIT</code></dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>unsigned int flags</dt>
+<dd> Could be zero or <code>GNUTLS_RECORD_WAIT</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This resets the effect of <code>gnutls_record_cork()</code>, and flushes any pending data. If the <code>GNUTLS_RECORD_WAIT</code> flag is specified then this function will block until the data is sent or a fatal error occurs (i.e., the function will retry on <code>GNUTLS_E_AGAIN</code> and <code>GNUTLS_E_INTERRUPTED</code>). </p>
 <p> If the flag <code>GNUTLS_RECORD_WAIT</code> is not specified and the function is interrupted then the <code>GNUTLS_E_AGAIN</code> or <code>GNUTLS_E_INTERRUPTED</code> errors will be returned. To obtain the data left in the corked buffer use <code>gnutls_record_check_corked()</code>.</p>
@@ -34,6 +34,6 @@ description: "gnutls_record_uncork – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

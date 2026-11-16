@@ -19,12 +19,12 @@ description: "krb5_keytab_intro – The keytab handing functions"
 <p> The default value can be changed in the configuration file /etc/krb5.conf by setting the variable [defaults]default_keytab_name. </p>
 <p> The keytab types that are implemented in Heimdal are:</p>
 <dl>
-<dt>&bull;</p>
-<dd> file store the keytab in a file, the type&#8217;s name is FILE . The residual part is a filename. For compatibility with other Kerberos implemtation WRFILE and JAVA14 is also accepted. WRFILE has the same format as FILE. JAVA14 have a format that is compatible with older versions of MIT kerberos and SUN&#8217;s Java based installation. They store a truncted kvno, so when the knvo excess 255, they are truncted in this format.</p>
-<dt>&bull;</p>
-<dd> keytab store the keytab in a AFS keyfile (usually /usr/afs/etc/KeyFile ), the type&#8217;s name is AFSKEYFILE. The residual part is a filename.</p>
-<dt>&bull;</p>
-<dd> memory The keytab is stored in a memory segment. This allows sensitive and/or temporary data not to be stored on disk. The type&#8217;s name is MEMORY. Each MEMORY keytab is referenced counted by and opened by the residual name, so two handles can point to the same memory area. When the last user closes using <code>krb5_kt_close()</code> the keytab, the keys in they keytab is memset() to zero and freed and can no longer be looked up by name.</dl>
+<dt>&bull;</dt>
+<dd> file store the keytab in a file, the type&#8217;s name is FILE . The residual part is a filename. For compatibility with other Kerberos implemtation WRFILE and JAVA14 is also accepted. WRFILE has the same format as FILE. JAVA14 have a format that is compatible with older versions of MIT kerberos and SUN&#8217;s Java based installation. They store a truncted kvno, so when the knvo excess 255, they are truncted in this format.</dd>
+<dt>&bull;</dt>
+<dd> keytab store the keytab in a AFS keyfile (usually /usr/afs/etc/KeyFile ), the type&#8217;s name is AFSKEYFILE. The residual part is a filename.</dd>
+<dt>&bull;</dt>
+<dd> memory The keytab is stored in a memory segment. This allows sensitive and/or temporary data not to be stored on disk. The type&#8217;s name is MEMORY. Each MEMORY keytab is referenced counted by and opened by the residual name, so two handles can point to the same memory area. When the last user closes using <code>krb5_kt_close()</code> the keytab, the keys in they keytab is memset() to zero and freed and can no longer be looked up by name.</dd></dl>
 <h3>Keytab example</h3>
 <pre>
 This is a minimalistic version of ktutil.

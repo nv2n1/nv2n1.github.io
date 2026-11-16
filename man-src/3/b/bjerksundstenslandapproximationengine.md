@@ -18,7 +18,7 @@ description: "QuantLib::BjerksundStenslandApproximationEngine – Bjerksund and 
 <p>Bjerksund and Stensland pricing engine for American options (1993). </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>EquityOption.cpp</code>. </p>
 <h2>Author</h2>

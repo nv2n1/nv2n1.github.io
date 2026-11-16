@@ -10,12 +10,7 @@ description: "xcb_xkb_get_geometry –"
 <p>xcb_xkb_get_geometry &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_geometry_cookie_t xcb_xkb_get_geometry(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, xcb_atom_t name);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_geometry_reply_t {
@@ -39,66 +34,66 @@ xcb_xkb_get_geometry_cookie_t xcb_xkb_get_geometry(xcb_connection_t *conn, xcb_x
 } <code>xcb_xkb_get_geometry_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xkb_get_geometry_reply_t *<code>xcb_xkb_get_geometry_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_geometry_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xkb_get_geometry_reply_t *<code>xcb_xkb_get_geometry_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_geometry_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <p>xcb_xkb_counted_string_16_t *xcb_xkb_get_geometry_label_font (const xcb_xkb_get_geometry_request_t *reply)</p>
 <dl>
-<dd>int <code>xcb_xkb_get_geometry_properties_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_property_iterator_t <code>xcb_xkb_get_geometry_properties_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_geometry_colors_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_counted_string_16_iterator_t <code>xcb_xkb_get_geometry_colors_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_geometry_shapes_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_shape_iterator_t <code>xcb_xkb_get_geometry_shapes_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_geometry_sections_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_section_iterator_t <code>xcb_xkb_get_geometry_sections_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_geometry_doodads_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_doodad_iterator_t <code>xcb_xkb_get_geometry_doodads_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_key_alias_t *<code>xcb_xkb_get_geometry_key_aliases</code>(const xcb_xkb_get_geometry_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_geometry_key_aliases_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</p>
+<dd>int <code>xcb_xkb_get_geometry_properties_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_property_iterator_t <code>xcb_xkb_get_geometry_properties_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_geometry_colors_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_counted_string_16_iterator_t <code>xcb_xkb_get_geometry_colors_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_geometry_shapes_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_shape_iterator_t <code>xcb_xkb_get_geometry_shapes_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_geometry_sections_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_section_iterator_t <code>xcb_xkb_get_geometry_sections_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_geometry_doodads_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_doodad_iterator_t <code>xcb_xkb_get_geometry_doodads_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_key_alias_t *<code>xcb_xkb_get_geometry_key_aliases</code>(const xcb_xkb_get_geometry_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_geometry_key_aliases_length</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);</dd>
 <dd>xcb_xkb_key_alias_iterator_t <code>xcb_xkb_get_geometry_key_aliases_iterator</code>(const xcb_xkb_get_geometry_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_GEOMETRY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>found</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>widthMM</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>heightMM</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nProperties</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nColors</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nShapes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nSections</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nDoodads</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyAliases</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>baseColorNdx</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>labelColorNdx</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_GEOMETRY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>found</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>widthMM</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>heightMM</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nProperties</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nColors</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nShapes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nSections</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nDoodads</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyAliases</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>baseColorNdx</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>labelColorNdx</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_geometry_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_geometry_reply</i>. </p>

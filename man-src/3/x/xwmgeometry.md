@@ -10,46 +10,46 @@ description: "XParseGeometry, XWMGeometry – parse window geometry"
 <p>XParseGeometry, XWMGeometry &#8211; parse window geometry </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XParseGeometry(char *<i>parsestring</i>, int *<i>x_return</i>, int *<i>y_return</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>);</p>
-<dd>int XWMGeometry(Display *<i>display</i>, int <i>screen</i>, char *<i>user_geom</i>, char *<i>def_geom</i>, unsigned int <i>bwidth</i>, XSizeHints *<i>hints</i>, int *<i>x_return</i>, int *<i>y_return</i>, int *<i>width_return</i>, int *<i>height_return</i>, int *<i>gravity_return</i>);</dl>
+<dd>int XParseGeometry(char *<i>parsestring</i>, int *<i>x_return</i>, int *<i>y_return</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>);</dd>
+<dd>int XWMGeometry(Display *<i>display</i>, int <i>screen</i>, char *<i>user_geom</i>, char *<i>def_geom</i>, unsigned int <i>bwidth</i>, XSizeHints *<i>hints</i>, int *<i>x_return</i>, int *<i>y_return</i>, int *<i>width_return</i>, int *<i>height_return</i>, int *<i>gravity_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>position</i></p>
+<dt><i>position</i></dt>
 <dd>
-<dt><i>default_position</i></p>
-<dd>Specify the geometry specifications.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>fheight</i></p>
+</dd><dt><i>default_position</i></dt>
+<dd>Specify the geometry specifications.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>fheight</i></dt>
 <dd>
-<dt><i>fwidth</i></p>
-<dd>Specify the font height and width in pixels (increment size).</p>
-<dt><i>parsestring</i></p>
-<dd>Specifies the string you want to parse.</p>
-<dt><i>screen</i></p>
-<dd>Specifies the screen.</p>
-<dt><i>width_return</i></p>
+</dd><dt><i>fwidth</i></dt>
+<dd>Specify the font height and width in pixels (increment size).</dd>
+<dt><i>parsestring</i></dt>
+<dd>Specifies the string you want to parse.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies the screen.</dd>
+<dt><i>width_return</i></dt>
 <dd>
-<dt><i>height_return</i></p>
-<dd>Return the width and height determined.</p>
-<dt><i>xadder</i></p>
+</dd><dt><i>height_return</i></dt>
+<dd>Return the width and height determined.</dd>
+<dt><i>xadder</i></dt>
 <dd>
-<dt><i>yadder</i></p>
-<dd>Specify additional interior padding needed in the window.</p>
-<dt><i>x_return</i></p>
+</dd><dt><i>yadder</i></dt>
+<dd>Specify additional interior padding needed in the window.</dd>
+<dt><i>x_return</i></dt>
 <dd>
-<dt><i>y_return</i></p>
-<dd>Return the x and y offsets.</p>
-<dt><i>bwidth</i></p>
-<dd>Specifies the border width.</p>
-<dt><i>hints</i></p>
-<dd>Specifies the size hints for the window in its normal state.</p>
-<dt><i>def_geom</i></p>
-<dd>Specifies the application&#8217;s default geometry or NULL.</p>
-<dt><i>gravity_return</i></p>
-<dd>Returns the window gravity.</p>
-<dt><i>user_geom</i></p>
-<dd>Specifies the user-specified geometry or NULL.</dl>
+</dd><dt><i>y_return</i></dt>
+<dd>Return the x and y offsets.</dd>
+<dt><i>bwidth</i></dt>
+<dd>Specifies the border width.</dd>
+<dt><i>hints</i></dt>
+<dd>Specifies the size hints for the window in its normal state.</dd>
+<dt><i>def_geom</i></dt>
+<dd>Specifies the application&#8217;s default geometry or NULL.</dd>
+<dt><i>gravity_return</i></dt>
+<dd>Returns the window gravity.</dd>
+<dt><i>user_geom</i></dt>
+<dd>Specifies the user-specified geometry or NULL.</dd></dl>
 <h2>Description</h2>
 <p>By convention, X applications use a standard string to indicate window size and placement. <code>XParseGeometry</code> makes it easier to conform to this standard because it allows you to parse the standard window geometry. Specifically, this function lets you parse strings of the form: </p>
 <p> [=][&lt;<i>width</i>&gt;{xX}&lt;<i>height</i>&gt;][{+-}&lt;<i>xoffset</i>&gt;{+-}&lt;<i>yoffset</i>&gt;] </p>

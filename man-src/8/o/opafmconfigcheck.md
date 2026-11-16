@@ -21,21 +21,16 @@ opafmconfigcheck [-s] [-c <i>config_file</i>] [-v] [-d]
 <h2>Options</h2>
 
 <dl><dt>--help
-<dd>Produces full help text. 
-
-<dt>-s
-<dd>Enables strict check mode. This option points out inconsistencies or invalid settings in VF and multicast configurations. 
-
-<dt>-c <i>config_file</i>
-<dd>Specifies configuration file. Default = /etc/sysconfig/opafm.xml 
-
-<dt>-v
-<dd>Displays debugging and status information. 
-
-<dt>-d
-<dd>Displays configuration checksum information. 
-
-</dl>
+</dt><dd>Produces full help text. 
+</dd><dt>-s
+</dt><dd>Enables strict check mode. This option points out inconsistencies or invalid settings in VF and multicast configurations. 
+</dd><dt>-c <i>config_file</i>
+</dt><dd>Specifies configuration file. Default = /etc/sysconfig/opafm.xml 
+</dd><dt>-v
+</dt><dd>Displays debugging and status information. 
+</dd><dt>-d
+</dt><dd>Displays configuration checksum information. 
+</dd></dl>
 
 <h2>Example</h2>
 

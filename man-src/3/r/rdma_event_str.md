@@ -12,13 +12,12 @@ rdma_event_str - Returns a string representation of an rdma cm event.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 char *rdma_event_str
-
     (enumrdma_cm_event_type event);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>event
-<dd>Asynchronous event.</dl>
+</dt><dd>Asynchronous event.</dd></dl>
 
 <h2>Description</h2>
 

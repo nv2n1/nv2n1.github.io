@@ -15,16 +15,16 @@ scsi_remove_device - unregister a device from the scsi bus
 <h2>Arguments</h2>
 
 <i>sdev</i>
-<dl><dd><dd>scsi_device to unregister</dl>
+<dl><dd></dd><dd>scsi_device to unregister</dd></dl>
 
 <h2>Authors</h2>
 
 <b>James Bottomley</b> &lt;James.Bottomley [at] hansenpartnership.com&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
  
 
  <b>Rob Landley</b> &lt;rob [at] landley.net&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
 
 <h2>Copyright</h2>
 

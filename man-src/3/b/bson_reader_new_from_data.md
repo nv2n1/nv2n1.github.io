@@ -17,11 +17,11 @@ bson_reader_new_from_data (const uint8_t *data,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>data</code></p>
-<dd> A uint8_t.</dl>
+<dt><code>data</code></dt>
+<dd> A uint8_t.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> A size_t.</dl>
+<dt><code>length</code></dt>
+<dd> A size_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_reader_new_from_data/">bson_reader_new_from_data</a>(3)</code> function shall create a new <code>bson_reader_t</code> using the buffer supplied. <code>data</code> is not copied and <code>MUST</code> be valid for the lifetime of the resulting <code>bson_reader_t</code> \&amp;. </p>
 <h2>RETURNS</h2>

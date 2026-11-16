@@ -14,11 +14,11 @@ description: "sh64_put_wired_dtlb_entry – Free a wired (locked-in) entry in th
 <p><i>entry</i></p>
 <dl>
 <dd>
-<dd>Address of TLB slot.</dl>
+</dd><dd>Address of TLB slot.</dd></dl>
 <h2>Description</h2>
 <p>Works like a stack, last one to allocate must be first one to free.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

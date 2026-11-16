@@ -39,14 +39,14 @@ It works with :<br />
 &#8211; XFS, SGI&#8217;s Journaled File System&nbsp;<wbr></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>/log</code></p>
-<dd> create a testdisk.log file</p>
-<dt><code>/debug</code></p>
-<dd> add debug information</p>
-<dt><code>/dump</code></p>
-<dd> dump raw sectors</p>
-<dt><code>/list</code></p>
-<dd> display current partitions</dl>
+<dt><code>/log</code></dt>
+<dd> create a testdisk.log file</dd>
+<dt><code>/debug</code></dt>
+<dd> add debug information</dd>
+<dt><code>/dump</code></dt>
+<dd> dump raw sectors</dd>
+<dt><code>/list</code></dt>
+<dd> display current partitions</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>fdisk</code>(1), <code><a href="/docs/linux/man/1-photorec/">photorec</a>(1).</code> <code>.SH</code>AUTHOR TestDisk 6.11, Data Recovery Utility, April 2009<br />
  Christophe GRENIER &lt;grenier [at] cgsecurity.org&gt;<br />

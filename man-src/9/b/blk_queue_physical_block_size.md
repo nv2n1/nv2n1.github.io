@@ -15,11 +15,11 @@ blk_queue_physical_block_size - set physical block size for the queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>size</i>
-<dl><dd>the physical block size, in bytes</dl>
+<dl><dd>the physical block size, in bytes</dd></dl>
 
 <h2>Description</h2>
 

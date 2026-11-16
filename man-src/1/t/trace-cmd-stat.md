@@ -34,10 +34,10 @@ description: "trace-cmd-stat – show the status of the tracing (ftrace) system"
 <p> Copyright (C) 2014 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

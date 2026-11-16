@@ -20,20 +20,20 @@ description: "pmstore – modify performance metric values"
 <p> The <code>-f</code> option forces the given value to be stored, even if there is no current value set. </p>
 <p> The interpretation of <i>value</i> is dependent on the syntax used in its specification and the underlying data type of <i>metricname</i>, as follows.</p>
 <dl>
-<dt>1.</p>
-<dd> If the metric has an <code>integer</code> type, then <i>value</i> should be an optional leading hyphen, followed either by decimal digits or &#8220;0x&#8221; and some hexadecimal digits. &#8220;0X&#8221; is also acceptable in lieu of &#8220;0x&#8221;. See <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3) and the related routines.</p>
-<dt>2.</p>
-<dd> If the metric has a <code>floating point</code> type, then <i>value</i> should be either in the form of an integer described above, or a fixed point number, or a number in scientific notation. See <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3).</p>
-<dt>3.</p>
-<dd> If the metric has a <code>string</code> type, then <i>value</i> is interpreted as a literal string of ASCII characters.</p>
-<dt>4.</p>
-<dd> If the metric has any other type (i.e. <code>PM_TYPE_EVENT</code> or <code>PM_TYPE_AGGREGATE</code>) then no encoding of <i>value</i> from the command line makes sense, and the values of these metrics cannot be modified with <code>pmstore</code>.</dl>
+<dt>1.</dt>
+<dd> If the metric has an <code>integer</code> type, then <i>value</i> should be an optional leading hyphen, followed either by decimal digits or &#8220;0x&#8221; and some hexadecimal digits. &#8220;0X&#8221; is also acceptable in lieu of &#8220;0x&#8221;. See <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3) and the related routines.</dd>
+<dt>2.</dt>
+<dd> If the metric has a <code>floating point</code> type, then <i>value</i> should be either in the form of an integer described above, or a fixed point number, or a number in scientific notation. See <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3).</dd>
+<dt>3.</dt>
+<dd> If the metric has a <code>string</code> type, then <i>value</i> is interpreted as a literal string of ASCII characters.</dd>
+<dt>4.</dt>
+<dd> If the metric has any other type (i.e. <code>PM_TYPE_EVENT</code> or <code>PM_TYPE_AGGREGATE</code>) then no encoding of <i>value</i> from the command line makes sense, and the values of these metrics cannot be modified with <code>pmstore</code>.</dd></dl>
 <p> The output reports the old value and the new value for each updated instance of the requested metric. </p>
 <p> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

@@ -10,9 +10,7 @@ description: "ip-token – tokenized interface identifier support"
 <p>ip-token &#8211; tokenized interface identifier support</p>
 <h2>Synopsis</h2>
 <pre><code>ip token
-
 { COMMAND |
-
     help }
 </code></pre>
 <p> <code>ip token set</code> <i>TOKEN</i> <code>dev</code> <i>DEV</i><br />
@@ -24,15 +22,15 @@ description: "ip-token – tokenized interface identifier support"
 <h3>ip token set &#8211; set an interface token</h3>
 <p>set the interface token to the kernel.</p>
 <dl>
-<dt><i>TOKEN</i></p>
-<dd>the interface identifier token address.</p>
-<dt><code>dev</code><i> DEV</i></p>
-<dd>the networking interface.</dl>
+<dt><i>TOKEN</i></dt>
+<dd>the interface identifier token address.</dd>
+<dt><code>dev</code><i> DEV</i></dt>
+<dd>the networking interface.</dd></dl>
 <h3>ip token del &#8211; delete an interface token</h3>
 <p>delete the interface token from the kernel.</p>
 <dl>
-<dt><code>dev</code><i> DEV</i></p>
-<dd>the networking interface.</dl>
+<dt><code>dev</code><i> DEV</i></dt>
+<dd>the networking interface.</dd></dl>
 <h3>ip token get &#8211; get the interface token from the kernel</h3>
 <p>show a tokenized interface identifier of a particular networking device. <code>Arguments:</code> coincide with the arguments of <code>ip token set</code> but the <i>TOKEN</i> must be left out.</p>
 <h3>ip token list &#8211; list all interface tokens</h3>

@@ -33,10 +33,10 @@ description: "xerbla_array.f –"
  }
  Providing XERBLA_ARRAY is not necessary for intercepting LAPACK
  errors. XERBLA_ARRAY calls XERBLA.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SRNAME_ARRAY</i> </p>
+<dd><i>SRNAME_ARRAY</i> </dd>
 <pre> SRNAME_ARRAY is CHARACTER(1) array, dimension (SRNAME_LEN)
  The name of the routine which called XERBLA_ARRAY.</pre>
 <p><i>SRNAME_LEN</i> </p>
@@ -49,13 +49,13 @@ description: "xerbla_array.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 81 of file BLAS/SRC/xerbla_array.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

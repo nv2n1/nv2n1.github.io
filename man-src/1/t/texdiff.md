@@ -16,4 +16,4 @@ description: "texdiff – Compares two (La)TeX documents to create a merged vers
 <p> <tt>&quot;texdiff&quot;</tt> uses and therefore requires the <tt>&quot;wdiff&quot;</tt> command to insert these marks. If LaTeX macros are included in those striked out or underlined passages, the latex run will most likely fail. The source of most problems lies in <tt>&quot;wdiff&quot;</tt> tearing apart pairs of braces. Therefore <tt>&quot;texdiff&quot;</tt> is a perl script that calls <tt>&quot;wdiff&quot;</tt> internally and fixes <tt>&quot;wdiff&quot;</tt>&#8216;s output by re-pairing braces again and handling some commonly used LaTeX macros. </p>
 <p> For texdiff to work, the following LaTeX code must be inserted in the preamble of the LaTeX document: </p>
 <pre><code>
-
+</code></pre>

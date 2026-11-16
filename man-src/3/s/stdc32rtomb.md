@@ -14,3 +14,4 @@ std::size_t c32rtomb( char* s, char32_t c32, std::mbstate_t* ps ); <i>(since C++
 Converts a UTF-32 character to its narrow multibyte representation.<br />
 If s is not a null pointer, the function determines the number of bytes necessary to store the multibyte character representation of c32 (including any shift sequences, and taking into account the current multibyte conversion state *ps), and stores the multibyte character representation in the character array whose first element is pointed to by s, updating *ps as necessary. At most MB_CUR_MAX bytes can be written by this function.<br />
 If s is a null pointer, the call is equivalent to std::c32rtomb(buf, U&#8217;
+</p>

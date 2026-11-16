@@ -11,17 +11,11 @@ std::ios_base::openmode - std::ios_base::openmode
 <h2>Synopsis</h2>
 
 <pre><code>typedef /*implementation defined*/ openmode;
-
 static constexpr openmode app = /*implementation defined*/
-
 static constexpr openmode binary = /*implementation defined*/
-
 static constexpr openmode in = /*implementation defined*/
-
 static constexpr openmode out = /*implementation defined*/
-
 static constexpr openmode trunc = /*implementation defined*/
-
 static constexpr openmode ate = /*implementation defined*/</code></pre> 
 Specifies available file open flags. It is a BitmaskType, the following constants are defined: 
 Constant Explanation 

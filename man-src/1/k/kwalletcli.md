@@ -16,44 +16,44 @@ description: "kwalletcli – command line interface to the KDE Wallet"
 <p> The utility is a command line interface to KWallet. It will only work if KDE is running (DCOP) and reachable (via X11). can be used to get password entries from the Wallet, or to write them there. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-e </code><i>entry</i></p>
-<dd> Define the key (<i>entry</i> ) to use when accessing the Wallet. Mandatory.</p>
-<dt><code>-f </code><i>folder</i></p>
-<dd> Set the <i>folder</i> to use when accessing the Wallet. Mandatory.</p>
-<dt><code>-h</code></p>
-<dd> Display the usage.</p>
-<dt><code>-P</code></p>
-<dd> Read the password to write from standard input. Currently limited to 65535 octets.</p>
-<dt><code>-p </code><i>password</i></p>
-<dd> Write <i>password</i> into the designated location in the Wallet.</p>
-<dt><code>-q</code></p>
-<dd> Be more quiet. In combination with &#8211;<code>V</code> do not display anything.</p>
-<dt><code>-V</code></p>
-<dd> Display the version information.</dl>
+<dt><code>-e </code><i>entry</i></dt>
+<dd> Define the key (<i>entry</i> ) to use when accessing the Wallet. Mandatory.</dd>
+<dt><code>-f </code><i>folder</i></dt>
+<dd> Set the <i>folder</i> to use when accessing the Wallet. Mandatory.</dd>
+<dt><code>-h</code></dt>
+<dd> Display the usage.</dd>
+<dt><code>-P</code></dt>
+<dd> Read the password to write from standard input. Currently limited to 65535 octets.</dd>
+<dt><code>-p </code><i>password</i></dt>
+<dd> Write <i>password</i> into the designated location in the Wallet.</dd>
+<dt><code>-q</code></dt>
+<dd> Be more quiet. In combination with &#8211;<code>V</code> do not display anything.</dd>
+<dt><code>-V</code></dt>
+<dd> Display the version information.</dd></dl>
 <p> Default mode of operation, that is, unless &#8211;<code>P</code> or &#8211;<code>p</code> are used, is to read the password from the Wallet and print it to standard output as-is, without any trailing newline. </p>
 <p> All input and output is assumed to be in UTF-8. The password string (whether read from standard input or command line) is now converted from &#8220;possibly UTF-8 but binary transparent&#8221; to standards-conformant UTF-8 for the Qt side, and back upon reading out.</p>
 <h2>RETURN VALUES</h2>
 <p> The utility exits 0 on success or &gt;0 if an error occurred:</p>
 <dl>
-<dt><code>1</code></p>
-<dd> The entry specified cannot be found (read access).</p>
-<dt><code>2</code></p>
-<dd> The usage was shown.</p>
-<dt><code>3</code></p>
-<dd> The Wallet could not be opened. May be a missing DCOP connection. Perhaps <code>DISPLAY</code> is not set.</p>
-<dt><code>4</code></p>
-<dd> The folder specified cannot be found (read access).</p>
-<dt><code>5</code></p>
-<dd> The folder specified cannot be opened.</p>
-<dt><code>6</code></p>
-<dd> The value to the key specified could not be retrieved.</p>
-<dt><code>8</code></p>
-<dd> An error occurred trying to write the value.</dl>
+<dt><code>1</code></dt>
+<dd> The entry specified cannot be found (read access).</dd>
+<dt><code>2</code></dt>
+<dd> The usage was shown.</dd>
+<dt><code>3</code></dt>
+<dd> The Wallet could not be opened. May be a missing DCOP connection. Perhaps <code>DISPLAY</code> is not set.</dd>
+<dt><code>4</code></dt>
+<dd> The folder specified cannot be found (read access).</dd>
+<dt><code>5</code></dt>
+<dd> The folder specified cannot be opened.</dd>
+<dt><code>6</code></dt>
+<dd> The value to the key specified could not be retrieved.</dd>
+<dt><code>8</code></dt>
+<dd> An error occurred trying to write the value.</dd></dl>
 <p> The exit codes 1 and 4, on reading, are not fatal; they merely indicate that the folder or entry specified does not exist. The other errors are fatal and may be used to indicate the user that the KWallet should not be used any more during the current session.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> The X11 display to use for communicating with the KDE Wallet.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> The X11 display to use for communicating with the KDE Wallet.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> kwalletcli_getpin1</p>
 <h2>AUTHORS</h2>

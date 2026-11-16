@@ -24,16 +24,11 @@ A time point representing the current time.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;chrono&gt;
 volatile int sink;
-
 int main()
-
 {
     for (auto size = 1ull; size &lt; 1000000000ull; size *= 100) {
         // record start time

@@ -14,16 +14,16 @@ description: "gnet_stats_copy_queue – copy queue statistics into statistics TL
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>dumping handle</dl>
+</dd><dd>dumping handle</dd></dl>
 <p> <i>cpu_q</i></p>
 <dl>
-<dd>per cpu queue statistics</dl>
+<dd>per cpu queue statistics</dd></dl>
 <p> <i>q</i></p>
 <dl>
-<dd>queue statistics</dl>
+<dd>queue statistics</dd></dl>
 <p> <i>qlen</i></p>
 <dl>
-<dd>queue length statistics</dl>
+<dd>queue length statistics</dd></dl>
 <h2>Description</h2>
 <p>Appends the queue statistics to the top level TLV created by <code>gnet_stats_start_copy</code>. Using per cpu queue statistics if they are available. </p>
 <p> Returns 0 on success or -1 with the statistic lock released if the room in the socket buffer was not sufficient.</p>

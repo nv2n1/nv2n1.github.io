@@ -15,15 +15,15 @@ sysfs_create_link - create symlink between two objects.
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object whose directory we're creating the link in.</dl>
+<dl><dd></dd><dd>object whose directory we're creating the link in.</dd></dl>
  
 
  <i>target</i>
-<dl><dd>object we're pointing to.</dl>
+<dl><dd>object we're pointing to.</dd></dl>
  
 
  <i>name</i>
-<dl><dd>name of the symlink.</dl>
+<dl><dd>name of the symlink.</dd></dl>
 
 <h2>Copyright</h2>
 

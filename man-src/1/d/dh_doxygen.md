@@ -14,14 +14,14 @@ description: "dh_doxygen – helps with packaging doxygen-generated documentatio
 <h2>DESCRIPTION</h2>
 <p> <code>dh_doxygen</code> is a debhelper program that prepares doxygen-generated documentation for inclusion in a Debian package. More specifically:</p>
 <dl>
-<dt>&bull;</p>
-<dd> It removes <i>*.md5</i> and <i>*.map</i> files. These are created by doxygen to speed up incremental runs.</dl>
+<dt>&bull;</dt>
+<dd> It removes <i>*.md5</i> and <i>*.map</i> files. These are created by doxygen to speed up incremental runs.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>directory</i></p>
-<dd> By default, <code>dh_doxygen</code> scans your package looking for directories looking like they contain doxygen-generated documentation. However, if you explicitly provide one or more directories, only they will be processed.</p>
-<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain <i>item</i> anywhere in their filename from being symlinked, removed or checked for existence.</dl>
+<dt><i>directory</i></dt>
+<dd> By default, <code>dh_doxygen</code> scans your package looking for directories looking like they contain doxygen-generated documentation. However, if you explicitly provide one or more directories, only they will be processed.</dd>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from being symlinked, removed or checked for existence.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably.</p>
 <h2>SEE ALSO</h2>

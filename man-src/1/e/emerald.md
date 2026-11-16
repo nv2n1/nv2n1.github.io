@@ -15,20 +15,20 @@ description: "emerald – The Emerald Windows Decorator"
 <p> <i>emerald</i> emerald is the windows decorator of the beryl project. .</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;replace</p>
-<dd> Replaces a current running decorator</p>
-<dt>&#8211;version</p>
-<dd> outputs the current version of <i>emerald</i></p>
-<dt>&#8211;help</p>
-<dd> short usage statement about <i>emerald</i></dl>
+<dt>&#8211;replace</dt>
+<dd> Replaces a current running decorator</dd>
+<dt>&#8211;version</dt>
+<dd> outputs the current version of <i>emerald</i></dd>
+<dt>&#8211;help</dt>
+<dd> short usage statement about <i>emerald</i></dd></dl>
 <h2>SIGNALS</h2>
 <dl>
-<dt>USR1</p>
-<dd> Reloads its settings.</dl>
+<dt>USR1</dt>
+<dd> Reloads its settings.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.emerald/settings.ini</p>
-<dd> Here are the settings stored.</dl>
+<dt>$HOME/.emerald/settings.ini</dt>
+<dd> Here are the settings stored.</dd></dl>
 <h2>AUTHORS</h2>
 <p> &#8211; Quinn Storm (livinglatexkali [at] gmail.com)</p>
 <h2>SEE ALSO</h2>

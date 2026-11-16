@@ -13,10 +13,10 @@ description: "PAPIF_thread_init –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_thread_init(&nbsp;<wbr>C_INT FUNCTION&nbsp;<wbr>&nbsp;<wbr>handle,&nbsp;<wbr>&nbsp;<wbr>C_INT&nbsp;<wbr>&nbsp;<wbr>check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_thread_init</code></dl>
+<dd><code>PAPI_thread_init</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

@@ -47,18 +47,14 @@ template&lt; class U &gt; using rebind U*</p>
 <h2>Notes</h2>
 <p>The rebind member template alias makes it possible, given a pointer-like type that points to T, to obtain the same pointer-like type that points to U. For example, </p>
 <pre><code>using another_pointer = std::pointer_traits&lt;std::shared_ptr&lt;int&gt;&gt;::rebind&lt;double&gt;;
-
 static_assert(std::is_same&lt;another_pointer, std::shared_ptr&lt;double&gt;&gt;::value);
 </code></pre>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 template &lt;class Ptr&gt;
-
 struct BlockList
-
 {
     // Predefine a memory block
     struct block;
@@ -73,7 +69,6 @@ struct BlockList
     block_ptr_t free_blocks;
 };
 int main()
-
 {
     BlockList&lt;int *&gt; bl1;
     // The type of bl1.free_blocks is block*

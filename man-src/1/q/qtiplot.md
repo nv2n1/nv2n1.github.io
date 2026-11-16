@@ -17,20 +17,20 @@ description: "QtiPlot – Data Analysis and Scientific Plotting"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;about</code></p>
-<dd> Show about dialog and exit</p>
-<dt><code>&#8211;default</code></p>
-<dd> Start QtiPlot with the default settings</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show command line options</p>
-<dt><code>&#8211;lang=XX</code></p>
-<dd> Start QtiPlot in language XX (&#8216;en&#8217;, &#8216;fr&#8217;, &#8216;de&#8217;, &#8230;)</p>
-<dt><code>&#8211;manual</code></p>
-<dd> Show QtiPlot manual in a standalone window</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print QtiPlot version and release date</p>
-<dt><code>&#8211;execute</code></p>
-<dd> Execute the script file given as argument </p>
+<dt><code>&#8211;about</code></dt>
+<dd> Show about dialog and exit</dd>
+<dt><code>&#8211;default</code></dt>
+<dd> Start QtiPlot with the default settings</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show command line options</dd>
+<dt><code>&#8211;lang=XX</code></dt>
+<dd> Start QtiPlot in language XX (&#8216;en&#8217;, &#8216;fr&#8217;, &#8216;de&#8217;, &#8230;)</dd>
+<dt><code>&#8211;manual</code></dt>
+<dd> Show QtiPlot manual in a standalone window</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print QtiPlot version and release date</dd>
+<dt><code>&#8211;execute</code></dt>
+<dd> Execute the script file given as argument </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Gudjon I. Gudjonsson &lt;gudjon [at] gudjon.org&gt;, for Debian GNU/Linux, but may be used by others. </p>

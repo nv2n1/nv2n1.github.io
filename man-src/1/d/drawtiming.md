@@ -15,62 +15,62 @@ description: "drawtiming – generate timing diagram from signal description"
 <p> This application provides a command line tool for documenting hardware and software designs through ideal timing diagrams. It reads signal descriptions from a text file with an intuitive syntax, and outputs an ideal timing diagram to an image file. Notation typical of timing diagrams found in the Electrical Engineering discipline is used, including arrows indicating causal relationships between signal transitions. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show usage reminder.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Increase diagnostic output.</p>
-<dt><code>&#8211;scale </code><i>factor</i></p>
-<dd> Scale the diagram by the given <i>factor</i> The default scaling factor is 1.0.</p>
-<dt><code>&#8211;pagesize </code><i>WidthxHeight</i></p>
-<dd> Scale the diagram to fit given image size.</p>
-<dt><code>&#8211;aspect</code></p>
-<dd> Maintain fixed aspect ratio if &#8211;pagesize given.</p>
-<dt><code>&#8211;cell-height </code><i>H</i></p>
-<dd> Height of the each signal in pixels. Default is 32.</p>
-<dt><code>&#8211;cell-width </code><i>W</i></p>
-<dd> Width for the time unit in pixels. Defaults is 64.</p>
-<dt><code>&#8211;font-size </code><i>pts</i></p>
-<dd> Font size in pts. Default is 18.</p>
-<dt><code>&#8211;line-width </code><i>W</i></p>
-<dd> Line width for drawings in pixels. Default is 1.</p>
-<dt><code>&#8211;output </code><i>target</i></p>
-<dd> The name and format of the output image is determined by <i>target</i></p>
-<dt><i>file &#8230;</i></p>
-<dd> The input files describe the signals to be diagrammed. See the Sx FILES and Sx EXAMPLES sections for a description of their format.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show usage reminder.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Increase diagnostic output.</dd>
+<dt><code>&#8211;scale </code><i>factor</i></dt>
+<dd> Scale the diagram by the given <i>factor</i> The default scaling factor is 1.0.</dd>
+<dt><code>&#8211;pagesize </code><i>WidthxHeight</i></dt>
+<dd> Scale the diagram to fit given image size.</dd>
+<dt><code>&#8211;aspect</code></dt>
+<dd> Maintain fixed aspect ratio if &#8211;pagesize given.</dd>
+<dt><code>&#8211;cell-height </code><i>H</i></dt>
+<dd> Height of the each signal in pixels. Default is 32.</dd>
+<dt><code>&#8211;cell-width </code><i>W</i></dt>
+<dd> Width for the time unit in pixels. Defaults is 64.</dd>
+<dt><code>&#8211;font-size </code><i>pts</i></dt>
+<dd> Font size in pts. Default is 18.</dd>
+<dt><code>&#8211;line-width </code><i>W</i></dt>
+<dd> Line width for drawings in pixels. Default is 1.</dd>
+<dt><code>&#8211;output </code><i>target</i></dt>
+<dd> The name and format of the output image is determined by <i>target</i></dd>
+<dt><i>file &#8230;</i></dt>
+<dd> The input files describe the signals to be diagrammed. See the Sx FILES and Sx EXAMPLES sections for a description of their format.</dd></dl>
 <h2>FILES</h2>
 <p> The following is a technical description of the input file syntax and semantics. If you are reading this for the first time, you may want to skip ahead to the Sx EXAMPLES section. </p>
 <p> The input file consists of a series of statements describing the signal transitions during each clock period of the timing diagram. Whitespace and comments following a `#&#8217; are ignored. </p>
 <dl>
-<dt><code>SIGNAL=VALUE</code></p>
-<dd> This statement changes the value of a signal at the beginning of the current clock, and adds it to the list of signal dependencies. The signal name may consist of one or more words consisting of alphanumerics and underscores joined by periods, `signal.name&#8217; , for example. The signal value format is described further on.</p>
-<dt><code>SIGNAL</code></p>
-<dd> This statement adds a signal to the list of dependencies without changing its value.</dl>
+<dt><code>SIGNAL=VALUE</code></dt>
+<dd> This statement changes the value of a signal at the beginning of the current clock, and adds it to the list of signal dependencies. The signal name may consist of one or more words consisting of alphanumerics and underscores joined by periods, `signal.name&#8217; , for example. The signal value format is described further on.</dd>
+<dt><code>SIGNAL</code></dt>
+<dd> This statement adds a signal to the list of dependencies without changing its value.</dd></dl>
 <p> Statements are seperated by the following symbols:</p>
 <dl>
-<dt><code>,</code></p>
-<dd> The comma seperator is used to seperate statements without affecting the dependency list or clock (ie: the next statement will add to the dependency list).</p>
-<dt><code>;</code></p>
-<dd> The semicolon seperator resets the list of dependencies without incrementing the clock</p>
-<dt><code>.</code></p>
-<dd> The period seperator resets the list of dependencies and increments the clock.</p>
-<dt><code>=&gt;</code></p>
-<dd> The &quot;causes&quot; seperator renders dependency arrows based on the current list of dependencies and then resets the dependency list.</p>
-<dt><code>-tD&gt;</code></p>
-<dd> The &quot;delay&quot; seperator renders a delay arrow from the last dependency with the annotation <i>tD</i></dl>
+<dt><code>,</code></dt>
+<dd> The comma seperator is used to seperate statements without affecting the dependency list or clock (ie: the next statement will add to the dependency list).</dd>
+<dt><code>;</code></dt>
+<dd> The semicolon seperator resets the list of dependencies without incrementing the clock</dd>
+<dt><code>.</code></dt>
+<dd> The period seperator resets the list of dependencies and increments the clock.</dd>
+<dt><code>=&gt;</code></dt>
+<dd> The &quot;causes&quot; seperator renders dependency arrows based on the current list of dependencies and then resets the dependency list.</dd>
+<dt><code>-tD&gt;</code></dt>
+<dd> The &quot;delay&quot; seperator renders a delay arrow from the last dependency with the annotation <i>tD</i></dd></dl>
 <p> Signal values are rendered according to the following rules:</p>
 <dl>
-<dt><code>0 , 1 , true , false</code></p>
-<dd> A binary high/low signal.</p>
-<dt><code>tick</code></p>
-<dd> A clock pulse which repeats.</p>
-<dt><code>pulse</code></p>
-<dd> A one-shot clock pulse.</p>
-<dt><code>X</code></p>
-<dd> A don&#8217;t care value.</p>
-<dt><code>Z</code></p>
-<dd> A tristate value.</p>
-<dt><code>Qq </code>ABC</p>
-<dd> Any other alphanumeric token, or text enclosed in quotes is rendered as a state. For example, `Qq 1 &#8216; , is rendered as a state, whereas, `1&#8217; , is rendered as a high signal.</dl>
+<dt><code>0 , 1 , true , false</code></dt>
+<dd> A binary high/low signal.</dd>
+<dt><code>tick</code></dt>
+<dd> A clock pulse which repeats.</dd>
+<dt><code>pulse</code></dt>
+<dd> A one-shot clock pulse.</dd>
+<dt><code>X</code></dt>
+<dd> A don&#8217;t care value.</dd>
+<dt><code>Z</code></dt>
+<dd> A tristate value.</dd>
+<dt><code>Qq </code>ABC</dt>
+<dd> Any other alphanumeric token, or text enclosed in quotes is rendered as a state. For example, `Qq 1 &#8216; , is rendered as a state, whereas, `1&#8217; , is rendered as a high signal.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Let&#8217;s look at an example input file, and parse its meaning. </p>
 <blockquote>

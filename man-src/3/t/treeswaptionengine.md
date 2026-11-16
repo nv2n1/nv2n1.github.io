@@ -16,17 +16,17 @@ description: "QuantLib::TreeSwaptionEngine – Numerical lattice engine for swap
 <p> <code>Constructors</code><br />
  <code>Note:</code></p>
 <dl COMPACT>
-<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dl>
+<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>
 <p> <code>TreeSwaptionEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;, Size timeSteps, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <p> <code>TreeSwaptionEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;, const <code>TimeGrid</code> &amp;timeGrid, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <h2>Detailed Description</h2>
 <p>Numerical lattice engine for swaptions. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This engine is not guaranteed to work if the underlying swap has a start date in the past, i.e., before today&#8217;s date. When using this engine, prune the initial part of the swap so that it starts at $ t geq 0 $.</dl>
+<dd>This engine is not guaranteed to work if the underlying swap has a start date in the past, i.e., before today&#8217;s date. When using this engine, prune the initial part of the swap so that it starts at $ t geq 0 $.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calculations are checked against cached results</dl>
+<dd>calculations are checked against cached results</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>. </p>
 <h2>Author</h2>

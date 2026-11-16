@@ -11,27 +11,19 @@ std::random_shuffle,std::shuffle - std::random_shuffle,std::shuffle
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (1)(deprecated in C++ 14)
-
         void random_shuffle(RandomIt first, RandomIt last);
 (removed in C++ 17)
-
     template &lt;class RandomIt, class RandomFunc&gt;
     (until C++ 11)
-
         void random_shuffle(RandomIt first, RandomIt last, RandomFunc &amp;r);
-
 template &lt;class RandomIt, class RandomFunc&gt;
 (since C++ 11)
-
     void random_shuffle(RandomIt first, RandomIt last, RandomFunc &amp;&amp;r);
 (2)(deprecated in C++ 14)(removed in C++ 17)
-
     template &lt;class RandomIt, class URBG&gt;
     (3)(since C++ 11)
-
         void shuffle(RandomIt first, RandomIt last, URBG &amp;&amp;g);</code></pre> 
 Reorders the elements in the given range [first, last) such that each possible permutation of those elements has equal probability of appearance. 
 1) The random number generator is implementation-defined, but the function std::rand is often used. 
@@ -119,14 +111,10 @@ Third version
 
 The following code randomly shuffles the integers 1..10: 
  // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::random_device rd;

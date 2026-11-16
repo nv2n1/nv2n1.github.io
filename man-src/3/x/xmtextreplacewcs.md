@@ -20,14 +20,14 @@ description: "XmTextReplaceWcs — A Text function that replaces part of a wide 
 <p> An example text replacement would be to replace the second and third characters in the text string. To accomplish this, the <i>from_pos</i> parameter must be 1 and the <i>to_pos</i> parameter must be 3. To insert a string after the fourth character, both the <i>from_pos</i> and <i>to_pos</i> parameters must be 4. </p>
 <p> This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. This routine calls the widget&#8217;s <code>XmNmotionVerifyCallback</code> callback when <i>from_pos</i> is less than or equal to the cursor position.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</p>
-<dt><i>from_pos</i></p>
-<dd>Specifies the start position of the text to be replaced</p>
-<dt><i>to_pos</i></p>
-<dd>Specifies the end position of the text to be replaced</p>
-<dt><i>wcstring</i></p>
-<dd>Specifies the wide character string value to be added to the Text widget</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd>
+<dt><i>from_pos</i></dt>
+<dd>Specifies the start position of the text to be replaced</dd>
+<dt><i>to_pos</i></dt>
+<dd>Specifies the end position of the text to be replaced</dd>
+<dt><i>wcstring</i></dt>
+<dd>Specifies the wide character string value to be added to the Text widget</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextreplace/">XmTextReplace</a></code>(3).</p>

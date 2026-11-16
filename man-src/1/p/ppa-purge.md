@@ -16,14 +16,12 @@ description: "ppa-purge – disables a PPA and reverts to official packages"
 <p> You have to run it using root privileges because of the package manager. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display usage help.</p>
+<dt><code>-h</code></dt>
+<dd> Display usage help.</dd>
+<dt><code>-p</code> <i>PPA name</i></dt>
+<dd> Name of the PPA to be reset, the default value is ppa.</dd>
 <dt>
-<dd>
-<dt><code>-p</code> <i>PPA name</i></p>
-<dd> Name of the PPA to be reset, the default value is ppa.</p>
-<dt>
-<dd> <code>-s</code> <i>PPA host</i> Address of the repository server, the default value is ppa.launchpad.net. </p>
+</dt><dd> <code>-s</code> <i>PPA host</i> Address of the repository server, the default value is ppa.launchpad.net. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> This manual page is Copyright 2010 Lorenzo De Liso &lt;blackz [at] ubuntu.com&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation. </p>

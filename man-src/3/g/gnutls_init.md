@@ -14,10 +14,10 @@ description: "gnutls_init – API function"
 <p> <code>int gnutls_init(gnutls_session_t * </code><i>session</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t * session</p>
-<dd> is a pointer to a <code>gnutls_session_t</code> structure.</p>
-<dt>unsigned int flags</p>
-<dd> indicate if this session is to be used for server or client.</dl>
+<dt>gnutls_session_t * session</dt>
+<dd> is a pointer to a <code>gnutls_session_t</code> structure.</dd>
+<dt>unsigned int flags</dt>
+<dd> indicate if this session is to be used for server or client.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function initializes the current session to null. Every session must be initialized before use, so internal structures can be allocated. This function allocates structures which can only be free&#8217;d by calling <code>gnutls_deinit()</code>. Returns <code>GNUTLS_E_SUCCESS</code> (0) on success. </p>
 <p>&nbsp;<wbr><i>flags</i>&nbsp;<wbr>can be one of&nbsp;<wbr><code>GNUTLS_CLIENT</code>&nbsp;<wbr>and&nbsp;<wbr><code>GNUTLS_SERVER</code>. For a DTLS entity, the flags <code>GNUTLS_DATAGRAM</code> and <code>GNUTLS_NONBLOCK</code> are also available. The latter flag will enable a non-blocking operation of the DTLS timers. </p>
@@ -34,6 +34,6 @@ description: "gnutls_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

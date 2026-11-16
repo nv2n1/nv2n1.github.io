@@ -15,14 +15,14 @@ description: "autopoint – copies standard gettext infrastructure"
 <p> Copies standard gettext infrastructure files into a source package.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> print this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> print version information and exit</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> force overwriting of files that already exist</p>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> print modifications but don&#8217;t perform them</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> print this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version information and exit</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> force overwriting of files that already exist</dd>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> print modifications but don&#8217;t perform them</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Bruno Haible</p>
 <h2>REPORTING BUGS</h2>
@@ -32,6 +32,6 @@ description: "autopoint – copies standard gettext infrastructure"
 <p> The full documentation for <code>autopoint</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autopoint</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autopoint</code></dl>
+</dt><dd> <code>info autopoint</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

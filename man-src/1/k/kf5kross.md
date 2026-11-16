@@ -11,32 +11,32 @@ description: "kf5kross – KDE application to run kross scripts."
 <p> kf5kross &#8211; KDE application to run kross scripts. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kf5kross</code> [-h, &#8211;help] [-v, &#8211;version] [&#8211;author] [&#8211;license] [file &#8230;]</dl>
+<dt> <code>kf5kross</code> [-h, &#8211;help] [-v, &#8211;version] [&#8211;author] [&#8211;license] [file &#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>kf5kross</code></p>
-<dd>executes kross scripts written in KDE Javascript, Python, Ruby, Java and Falcon. </p>
+<dd>executes kross scripts written in KDE Javascript, Python, Ruby, Java and Falcon. </dd>
 <p> This command line tool is used for any non-GUI scripts, e.g. Calligra Sheets has some of these.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code><code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help about options.</dl>
+</dt><dd> Show help about options.</dd></dl>
 <p> <code>-v</code><code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show version information</dl>
+</dt><dd> Show version information</dd></dl>
 <p> <code>&#8211;author</code></p>
 <dl>
 <dt>
-<dd> Show author information.</dl>
+</dt><dd> Show author information.</dd></dl>
 <p> <code>&#8211;license</code></p>
 <dl>
 <dt>
-<dd> Show license information.</dl>
+</dt><dd> Show license information.</dd></dl>
 <p> <code>file</code>&#8230;</p>
 <dl>
 <dt>
-<dd> The files with the scripts to run.</dl>
+</dt><dd> The files with the scripts to run.</dd></dl>
 <h2>USAGE</h2>
 <p> <code>kf5kross</code><i>file</i> runs the script in <i>file</i> after loading the interpreter plugin for the script language (detected by filename suffix). </p>
 <p> To interpret other languages than KDE Javascript, <i>kdebindings</i> must be installed.</p>
@@ -49,13 +49,13 @@ description: "kf5kross – KDE application to run kross scripts."
 <p> <code>Sebastian Sauer</code> &lt;mail [at] dipe.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> KDE&#8217;s bugtracker</p>
+<dt> 1.</dt>
+<dd> KDE&#8217;s bugtracker</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
 </dl>
 <h2>Index</h2>

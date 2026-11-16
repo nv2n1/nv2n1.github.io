@@ -19,7 +19,7 @@ description: "claqr1.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       Given a 2-by-2 or 3-by-3 matrix H, CLAQR1 sets v to a
       scalar multiple of the first column of the product
@@ -28,11 +28,11 @@ description: "claqr1.f –"
       This is useful for starting double implicit shift bulges
       in the QR algorithm.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is integer
               Order of the matrix H. N must be either 2 or 3.
@@ -67,18 +67,18 @@ description: "claqr1.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+</dt><dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> Definition at line 108 of file claqr1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

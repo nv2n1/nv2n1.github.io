@@ -15,16 +15,14 @@ description: "chroot – change root directory"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>chroot</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.2.2:</p>
+<dt>Since glibc 2.2.2:</dt>
 <dd>
 <pre><code>
 _XOPEN_SOURCE &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L) || /* Since glibc 2.20: */ _DEFAULT_SOURCE || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE
 </code></pre>
-<dt>Before glibc 2.2.2: none</p>
-<dd></dl>
+</dd><dt>Before glibc 2.2.2: none</dt>
+<dd></dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>chroot</code>() changes the root directory of the calling process to that specified in <i>path</i>. This directory will be used for pathnames beginning with <i>/</i>. The root directory is inherited by all children of the calling process. </p>
@@ -39,24 +37,24 @@ _XOPEN_SOURCE &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 <h2>ERRORS</h2>
 <p> Depending on the filesystem, other errors can be returned. The more general errors are listed below:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>path</i> points outside your accessible address space.</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>path</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>path</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> The file does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of <i>path</i> is not a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller has insufficient privilege.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>path</i> points outside your accessible address space.</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>path</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>path</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The file does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of <i>path</i> is not a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller has insufficient privilege.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.4BSD, SUSv2 (marked LEGACY). This function is not part of POSIX.1-2001.</p>
 <h2>NOTES</h2>

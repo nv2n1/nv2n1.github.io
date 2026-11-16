@@ -20,194 +20,159 @@ description: "xmonad – a tiling window manager"
 <h3>Flags</h3>
 <p> xmonad has several flags which you may pass to the executable. These flags are:</p>
 <dl>
-<dt><code>&#8211;recompile</code></p>
-<dd> Recompiles your configuration in ~/.xmonad/xmonad.hs</p>
+<dt><code>&#8211;recompile</code></dt>
+<dd> Recompiles your configuration in ~/.xmonad/xmonad.hs</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;restart</code></p>
-<dd> Causes the currently running xmonad process to restart</p>
+</dl>
+<dt><code>&#8211;restart</code></dt>
+<dd> Causes the currently running xmonad process to restart</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the current window manager with xmonad</p>
+</dl>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the current window manager with xmonad</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;version</code></p>
-<dd> Display version of xmonad</p>
+</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version of xmonad</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;verbose-version</code></p>
-<dd> Display detailed version of xmonad</p>
+</dl>
+<dt><code>&#8211;verbose-version</code></dt>
+<dd> Display detailed version of xmonad</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>Default keyboard bindings</h3>
 <dl>
-<dt><code>mod-shift-return</code></p>
-<dd> Launch terminal</p>
+<dt><code>mod-shift-return</code></dt>
+<dd> Launch terminal</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-p</code></p>
-<dd> Launch dmenu</p>
+</dl>
+<dt><code>mod-p</code></dt>
+<dd> Launch dmenu</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-p</code></p>
-<dd> Launch gmrun</p>
+</dl>
+<dt><code>mod-shift-p</code></dt>
+<dd> Launch gmrun</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-c</code></p>
-<dd> Close the focused window</p>
+</dl>
+<dt><code>mod-shift-c</code></dt>
+<dd> Close the focused window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-space</code></p>
-<dd> Rotate through the available layout algorithms</p>
+</dl>
+<dt><code>mod-space</code></dt>
+<dd> Rotate through the available layout algorithms</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-space</code></p>
-<dd> Reset the layouts on the current workspace to default</p>
+</dl>
+<dt><code>mod-shift-space</code></dt>
+<dd> Reset the layouts on the current workspace to default</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-n</code></p>
-<dd> Resize viewed windows to the correct size</p>
+</dl>
+<dt><code>mod-n</code></dt>
+<dd> Resize viewed windows to the correct size</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-tab</code></p>
-<dd> Move focus to the next window</p>
+</dl>
+<dt><code>mod-tab</code></dt>
+<dd> Move focus to the next window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-tab</code></p>
-<dd> Move focus to the previous window</p>
+</dl>
+<dt><code>mod-shift-tab</code></dt>
+<dd> Move focus to the previous window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-j</code></p>
-<dd> Move focus to the next window</p>
+</dl>
+<dt><code>mod-j</code></dt>
+<dd> Move focus to the next window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-k</code></p>
-<dd> Move focus to the previous window</p>
+</dl>
+<dt><code>mod-k</code></dt>
+<dd> Move focus to the previous window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-m</code></p>
-<dd> Move focus to the master window</p>
+</dl>
+<dt><code>mod-m</code></dt>
+<dd> Move focus to the master window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-return</code></p>
-<dd> Swap the focused window and the master window</p>
+</dl>
+<dt><code>mod-return</code></dt>
+<dd> Swap the focused window and the master window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-j</code></p>
-<dd> Swap the focused window with the next window</p>
+</dl>
+<dt><code>mod-shift-j</code></dt>
+<dd> Swap the focused window with the next window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-k</code></p>
-<dd> Swap the focused window with the previous window</p>
+</dl>
+<dt><code>mod-shift-k</code></dt>
+<dd> Swap the focused window with the previous window</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-h</code></p>
-<dd> Shrink the master area</p>
+</dl>
+<dt><code>mod-h</code></dt>
+<dd> Shrink the master area</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-l</code></p>
-<dd> Expand the master area</p>
+</dl>
+<dt><code>mod-l</code></dt>
+<dd> Expand the master area</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-t</code></p>
-<dd> Push window back into tiling</p>
+</dl>
+<dt><code>mod-t</code></dt>
+<dd> Push window back into tiling</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-comma</code></p>
-<dd> Increment the number of windows in the master area</p>
+</dl>
+<dt><code>mod-comma</code></dt>
+<dd> Increment the number of windows in the master area</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-period</code></p>
-<dd> Deincrement the number of windows in the master area</p>
+</dl>
+<dt><code>mod-period</code></dt>
+<dd> Deincrement the number of windows in the master area</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-q</code></p>
-<dd> Quit xmonad</p>
+</dl>
+<dt><code>mod-shift-q</code></dt>
+<dd> Quit xmonad</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-q</code></p>
-<dd> Restart xmonad</p>
+</dl>
+<dt><code>mod-q</code></dt>
+<dd> Restart xmonad</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-slash</code></p>
-<dd> Run xmessage with a summary of the default keybindings (useful for beginners)</p>
+</dl>
+<dt><code>mod-shift-slash</code></dt>
+<dd> Run xmessage with a summary of the default keybindings (useful for beginners)</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-[1..9]</code></p>
-<dd> Switch to workspace N</p>
+</dl>
+<dt><code>mod-[1..9]</code></dt>
+<dd> Switch to workspace N</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-[1..9]</code></p>
-<dd> Move client to workspace N</p>
+</dl>
+<dt><code>mod-shift-[1..9]</code></dt>
+<dd> Move client to workspace N</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-{w,e,r}</code></p>
-<dd> Switch to physical/Xinerama screens 1, 2, or 3</p>
+</dl>
+<dt><code>mod-{w,e,r}</code></dt>
+<dd> Switch to physical/Xinerama screens 1, 2, or 3</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-shift-{w,e,r}</code></p>
-<dd> Move client to screen 1, 2, or 3</p>
+</dl>
+<dt><code>mod-shift-{w,e,r}</code></dt>
+<dd> Move client to screen 1, 2, or 3</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-button1</code></p>
-<dd> Set the window to floating mode and move by dragging</p>
+</dl>
+<dt><code>mod-button1</code></dt>
+<dd> Set the window to floating mode and move by dragging</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-button2</code></p>
-<dd> Raise the window to the top of the stack</p>
+</dl>
+<dt><code>mod-button2</code></dt>
+<dd> Raise the window to the top of the stack</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>mod-button3</code></p>
-<dd> Set the window to floating mode and resize by dragging</p>
+</dl>
+<dt><code>mod-button3</code></dt>
+<dd> Set the window to floating mode and resize by dragging</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Examples</h2>
 <p> To use xmonad as your window manager add to your ~/.xinitrc file:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 exec xmonad
 </pre>
-</dl>
+</dd></dl>
 <h2>Customization</h2>
 <p> xmonad is customized in ~/.xmonad/xmonad.hs, and then restarting with mod-q. </p>
 <p> You can find many extensions to the core feature set in the xmonad- contrib package, available through your package manager or from xmonad.org (<a rel="nofollow" href="http://xmonad.org">http://xmonad.org</a>).</p>
@@ -215,7 +180,7 @@ exec xmonad
 <p> As of xmonad-0.9, any additional Haskell modules may be placed in ~/.xmonad/lib/ are available in GHC&#8217;s searchpath. Hierarchical modules are supported: for example, the file ~/.xmonad/lib/XMonad/Stack/MyAdditions.hs could contain:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 module XMonad.Stack.MyAdditions &amp;nbsp;
 (function1) &amp; nbsp;
@@ -229,7 +194,7 @@ function1 &amp;nbsp;
 error &amp;nbsp;
 "function1: Not implemented yet!"
 </code></pre>
-</dl>
+</dd></dl>
 <p> Your xmonad.hs may then import XMonad.Stack.MyAdditions as if that module was contained within xmonad or xmonad-contrib.</p>
 <h2>Bugs</h2>
 <p> Probably. If you find any, please report them to the bugtracker (<a rel="nofollow" href="http://code.google.com/p/xmonad/issues/list)">http://code.google.com/p/xmonad/issues/list)</a> </p>

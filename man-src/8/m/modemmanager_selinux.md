@@ -87,8 +87,8 @@ description: "modemmanager_selinux – Security Enhanced Linux Policy for the mo
 <p> <code>modemmanager_exec_t</code> </p>
 <p> &#8211; Set files with the modemmanager_exec_t type, if you want to transition an executable to the modemmanager_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ModemManager, /usr/sbin/modem-manager </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ModemManager, /usr/sbin/modem-manager </dd>
 </dl>
 <p> <code>modemmanager_unit_file_t</code> </p>
 <p> &#8211; Set files with the modemmanager_unit_file_t type, if you want to treat the files as modemmanager unit content. </p>

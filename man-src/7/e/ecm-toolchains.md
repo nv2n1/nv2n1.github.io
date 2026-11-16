@@ -21,23 +21,23 @@ description: "ecm-toolchains – ECM Toolchains Reference"
 <pre>cmake -DCMAKE_TOOLCHAIN_FILE=/usr/share/ECM/toolchain/AndroidToolchain.cmake</pre>
 <p>You will also need to provide the locations of the Android NDK and SDK. This can be done on the commandline or with environment variables; in either case the variable names are:</p>
 <dl>
-<dt><code>ANDROID_NDK</code></p>
-<dd>The NSK root path.</p>
-<dt><code>ANDROID_SDK_ROOT</code></p>
-<dd>The SDK root path. </p>
+<dt><code>ANDROID_NDK</code></dt>
+<dd>The NSK root path.</dd>
+<dt><code>ANDROID_SDK_ROOT</code></dt>
+<dd>The SDK root path. </dd>
 <p> Additional options are specified as cache variables (eg: on the command line):</p>
-<dt><code>ANDROID_ARCHITECTURE</code></p>
-<dd>The architecture to compile for. Default: <code>arm</code>.</p>
-<dt><code>ANDROID_TOOLCHAIN</code></p>
-<dd>The toolchain to use. See the <code>toolchains</code> directory of the NDK. Default: <code>arm-linux-androideabi</code>.</p>
-<dt><code>ANDROID_ABI</code></p>
-<dd>The ABI to use. See the <code>sources/cxx-stl/gnu-libstdc++/*/libs</code> directories in the NDK. Default: <code>armeabi-v7a</code>.</p>
-<dt><code>ANDROID_GCC_VERSION</code></p>
-<dd>The GCC version to use. Default: <code>4.9</code>.</p>
-<dt><code>ANDROID_API_LEVEL</code></p>
-<dd>The <i>API level</i> to require. Default: <code>14</code>.</p>
-<dt><code>ANDROID_SDK_BUILD_TOOLS_REVISION</code></p>
-<dd>The build tools version to use. Default: <code>21.1.1</code>. </p>
+<dt><code>ANDROID_ARCHITECTURE</code></dt>
+<dd>The architecture to compile for. Default: <code>arm</code>.</dd>
+<dt><code>ANDROID_TOOLCHAIN</code></dt>
+<dd>The toolchain to use. See the <code>toolchains</code> directory of the NDK. Default: <code>arm-linux-androideabi</code>.</dd>
+<dt><code>ANDROID_ABI</code></dt>
+<dd>The ABI to use. See the <code>sources/cxx-stl/gnu-libstdc++/*/libs</code> directories in the NDK. Default: <code>armeabi-v7a</code>.</dd>
+<dt><code>ANDROID_GCC_VERSION</code></dt>
+<dd>The GCC version to use. Default: <code>4.9</code>.</dd>
+<dt><code>ANDROID_API_LEVEL</code></dt>
+<dd>The <i>API level</i> to require. Default: <code>14</code>.</dd>
+<dt><code>ANDROID_SDK_BUILD_TOOLS_REVISION</code></dt>
+<dd>The build tools version to use. Default: <code>21.1.1</code>. </dd>
 <p> For integrating other libraries which are not part of the Android toolchain, like Qt5, and installed to a separate prefix on the host system, the install prefixes of those libraries would be passed as alternative roots as list via <code>ECM_ADDITIONAL_FIND_ROOT_PATH</code>. Since 5.30.0. </p>
 <p> For example, for integrating a Qt5 for Android with armv7 target present at <code>/opt/android/Qt5/5.7/android_armv7</code> and some other libraries installed to the prefix <code>/opt/android/foo</code>, you would use: </p>
 <pre>cmake \
@@ -61,3 +61,4 @@ make create-apk-myapp</pre>
 <p>See Android documentation on how to create a keystore to use</p>
 <h2>Copyright</h2>
 <p>KDE Developers</p>
+</p>

@@ -16,23 +16,23 @@ description: "pedigree – create a TeX file for pedigree from a csv file"
 <p> The program converts a comma separated <i>input_file</i> into a TeX file with pst-pdgr macros.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>configuration_file</i></p>
-<dd> The configuration file to read along with the system-wide and user&#8217;s configuration files</p>
-<dt><code>-d</code></p>
-<dd> Debug mode on</p>
-<dt><code>-o</code> &#8211;<i>output_file</i></p>
-<dd> The ouput file instead of <i>input_file.tex</i></p>
-<dt><code>-s</code> &#8211;<i>start_id</i></p>
-<dd> If this option is selected, the pedigree is constructed starting from the node with the Id i&lt;start_id&gt;. Otherwise it is started from the proband node. </p>
+<dt><code>-c</code> <i>configuration_file</i></dt>
+<dd> The configuration file to read along with the system-wide and user&#8217;s configuration files</dd>
+<dt><code>-d</code></dt>
+<dd> Debug mode on</dd>
+<dt><code>-o</code> &#8211;<i>output_file</i></dt>
+<dd> The ouput file instead of <i>input_file.tex</i></dd>
+<dt><code>-s</code> &#8211;<i>start_id</i></dt>
+<dd> If this option is selected, the pedigree is constructed starting from the node with the Id i&lt;start_id&gt;. Otherwise it is started from the proband node. </dd>
 <p> This option allows to create pedigrees with multiple probands or absent probands, or show people who are not proband&#8217;s relatives.</p>
-<dt><code>-v</code></p>
-<dd> Print version information</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/pedigree.cfg</code></p>
-<dd> Global configuration file</p>
-<dt>$HOME<code>/.pedigreerc</code></p>
-<dd> User configuration file</dl>
+<dt><code>/etc/pedigree.cfg</code></dt>
+<dd> Global configuration file</dd>
+<dt>$HOME<code>/.pedigreerc</code></dt>
+<dd> User configuration file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The manual distributed with this program describes the format of the configuration file and the input file. </p>
 <p> The library functions are described in <code>Pedigree::Language</code>(3), <code>Pedigree::Parser</code>(3), <code>Pedigree::Node</code>(3), <code>Pedigree::PersonNode</code>(3), <code>Pedigree::MarriageNode</code>(3), <code>Pedigree::Area</code>(3).</p>

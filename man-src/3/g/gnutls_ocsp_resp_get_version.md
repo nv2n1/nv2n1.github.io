@@ -20,7 +20,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_version/"
 
 <dl>
 <dt>gnutls_ocsp_resp_t resp
-<dd> should contain a <b>gnutls_ocsp_resp_t</b> structure</dl>
+</dt><dd> should contain a <b>gnutls_ocsp_resp_t</b> structure</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -45,7 +45,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_version/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

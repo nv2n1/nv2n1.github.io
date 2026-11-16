@@ -12,13 +12,10 @@ std::chrono::month::operator+=,std::chrono::month::operator-= - std::chrono::mon
 
 <pre><code>constexpr std::chrono::month &amp;operator+=(const std::chrono::months &amp;m) noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::month &amp;
     operator+=(const std::chrono::months &amp;m) noexcept; (2) (since C++20)
 Adds or subtracts m.count() from the month value, reducing the result modulo 12 to an integer in the range [1, 12].
-
 1) Performs *this = *this + m;
-
 2) Performs *this = *this - m;
 </code></pre>
 

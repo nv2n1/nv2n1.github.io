@@ -79,10 +79,10 @@ description: "dtgsja.f –"
  The computation of the orthogonal transformation matrices U, V or Q
  is optional. These matrices may either be formed explicitly, or they
  may be postmultiplied into input matrices U1, V1, or Q1.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBU</i> </p>
+<dd><i>JOBU</i> </dd>
 <pre> JOBU is CHARACTER*1
  = 'U': U must contain an orthogonal matrix U1 on entry, and
  the product U1*U is returned;
@@ -215,18 +215,17 @@ description: "dtgsja.f –"
  MAXIT specifies the total loops that the iterative procedure
  may take. If after MAXIT cycles, the routine fails to
  converge, we return INFO = 1..fi
- 
 <code>Author:</code>
-<dl COMPACT><dt><dd>Univ. of Tennessee 
+<dl COMPACT><dt></dt><dd>Univ. of Tennessee 
 Univ. of California Berkeley 
 Univ. of Colorado Denver 
 NAG Ltd. 
-</dl>
+</dd></dl>
 <code>Date:</code>
-<dl COMPACT><dt><dd>November 2011 
-</dl>
+<dl COMPACT><dt></dt><dd>November 2011 
+</dd></dl>
 <code>Further Details: </code>
-<dl COMPACT><dt><dd>DTGSJA essentially uses a variant of Kogbetliantz algorithm to reduce
+<dl COMPACT><dt></dt><dd>DTGSJA essentially uses a variant of Kogbetliantz algorithm to reduce
  min(L,M-K)-by-L triangular (or trapezoidal) matrix A23 and L-by-L
  matrix B13 to the form:
  U1**T *A13*Q1 = C1*R1; V1**T *B13*Q1 = S1*R1,
@@ -234,7 +233,8 @@ NAG Ltd.
  of Z. C1 and S1 are diagonal matrices satisfying
  C1**2 + S1**2 = I,
  and R1 is an L-by-L nonsingular upper triangular matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 377 of file dtgsja.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

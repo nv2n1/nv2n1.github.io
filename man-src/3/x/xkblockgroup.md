@@ -11,16 +11,16 @@ description: "XkbLockGroup – Locks the keysym group"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbLockGroup</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>group</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>group</i></p>
-<dd>index of the keysym group to lock</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>group</i></dt>
+<dd>index of the keysym group to lock</dd></dl>
 <h2>Description</h2>
 <p><i>XkbLockGroup </i> sends a request to the server to lock the specified <i>group </i> and does not wait for a reply. It returns True if the request was sent and False otherwise. </p>
 <p> Reference the keysym group indices with these symbolic constants: </p>
@@ -67,8 +67,8 @@ description: "XkbLockGroup – Locks the keysym group"
 </table>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbLockGroup</i> function returns True when a request was sent to the server to lock the specified <i>group</i> and does not wait for a reply.</p>
-<dt>False</p>
-<dd>The <i>XkbLockGroup</i> function returns False if the request was not sent. </p>
+<dt>True</dt>
+<dd>The <i>XkbLockGroup</i> function returns True when a request was sent to the server to lock the specified <i>group</i> and does not wait for a reply.</dd>
+<dt>False</dt>
+<dd>The <i>XkbLockGroup</i> function returns False if the request was not sent. </dd>
 </dl>

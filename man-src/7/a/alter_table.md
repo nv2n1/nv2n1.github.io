@@ -49,98 +49,98 @@ where <i>action</i> is one of:
 <h2>Description</h2>
 <p><code>ALTER TABLE</code> changes the definition of an existing table. There are several subforms:</p>
 <dl>
-<dt><code>ADD COLUMN</code></p>
-<dd>This form adds a new column to the table, using the same syntax as CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)].</p>
-<dt><code>DROP COLUMN</code></p>
-<dd>This form drops a column from a table. Indexes and table constraints involving the column will be automatically dropped as well. You will need to say CASCADE if anything outside the table depends on the column, for example, foreign key references or views.</p>
-<dt><code>SET DATA TYPE</code></p>
-<dd>This form changes the type of a column of a table. Indexes and simple table constraints involving the column will be automatically converted to use the new column type by reparsing the originally supplied expression. The optional USING clause specifies how to compute the new column value from the old; if omitted, the default conversion is the same as an assignment cast from old data type to new. A USING clause must be provided if there is no implicit or assignment cast from old to new type.</p>
-<dt><code>SET/DROP DEFAULT</code></p>
-<dd>These forms set or remove the default value for a column. The default values only apply to subsequent <code>INSERT</code> commands; they do not cause rows already in the table to change. Defaults can also be created for views, in which case they are inserted into <code>INSERT</code> statements on the view before the view&#8217;s ON INSERT rule is applied.</p>
-<dt><code>SET/DROP NOT NULL</code></p>
-<dd>These forms change whether a column is marked to allow null values or to reject null values. You can only use SET NOT NULL when the column contains no null values.</p>
-<dt><code>SET STATISTICS</code></p>
-<dd>This form sets the per-column statistics-gathering target for subsequent ANALYZE [<code><a href="/docs/linux/man/7-analyze/">analyze</a></code>(7)] operations. The target can be set in the range 0 to 10000; alternatively, set it to -1 to revert to using the system default statistics target (default_statistics_target). For more information on the use of statistics by the PostgreSQL query planner, refer to in the documentation. </p>
-<dt><code>SET STORAGE</code></p>
-<dd>This form sets the storage mode for a column. This controls whether this column is held inline or in a secondary TOAST table, and whether the data should be compressed or not. PLAIN must be used for fixed-length values such as <code>integer</code> and is inline, uncompressed. MAIN is for inline, compressible data. EXTERNAL is for external, uncompressed data, and EXTENDED is for external, compressed data. EXTENDED is the default for most data types that support non-PLAIN storage. Use of EXTERNAL will make substring operations on very large <code>text</code> and <code>bytea</code> values run faster, at the penalty of increased storage space. Note that SET STORAGE doesn&#8217;t itself change anything in the table, it just sets the strategy to be pursued during future table updates. See in the documentation for more information.</p>
-<dt><code>ADD </code><i>table_constraint</i></p>
-<dd>This form adds a new constraint to a table using the same syntax as CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)].</p>
-<dt><code>DROP CONSTRAINT</code></p>
-<dd>This form drops the specified constraint on a table.</p>
-<dt><code>DISABLE/ENABLE [ REPLICA | ALWAYS ] TRIGGER</code></p>
-<dd>These forms configure the firing of trigger(s) belonging to the table. A disabled trigger is still known to the system, but is not executed when its triggering event occurs. For a deferred trigger, the enable status is checked when the event occurs, not when the trigger function is actually executed. One can disable or enable a single trigger specified by name, or all triggers on the table, or only user triggers (this option excludes triggers that are used to implement foreign key constraints). Disabling or enabling constraint triggers requires superuser privileges; it should be done with caution since of course the integrity of the constraint cannot be guaranteed if the triggers are not executed. The trigger firing mechanism is also affected by the configuration variable session_replication_role. Simply enabled triggers will fire when the replication role is &#8220;origin&#8221; (the default) or &#8220;local&#8221;. Triggers configured as ENABLE REPLICA will only fire if the session is in &#8220;replica&#8221; mode, and triggers configured as ENABLE ALWAYS will fire regardless of the current replication mode.</p>
-<dt><code>DISABLE/ENABLE [ REPLICA | ALWAYS ] RULE</code></p>
-<dd>These forms configure the firing of rewrite rules belonging to the table. A disabled rule is still known to the system, but is not applied during query rewriting. The semantics are as for disabled/enabled triggers. This configuration is ignored for ON SELECT rules, which are always applied in order to keep views working even if the current session is in a non-default replication role.</p>
-<dt><code>CLUSTER</code></p>
-<dd>This form selects the default index for future CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] operations. It does not actually re-cluster the table.</p>
-<dt><code>SET WITHOUT CLUSTER</code></p>
-<dd>This form removes the most recently used CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] index specification from the table. This affects future cluster operations that don&#8217;t specify an index.</p>
-<dt><code>SET WITH OIDS</code></p>
-<dd>This form adds an oid system column to the table (see in the documentation). It does nothing if the table already has OIDs. </p>
+<dt><code>ADD COLUMN</code></dt>
+<dd>This form adds a new column to the table, using the same syntax as CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)].</dd>
+<dt><code>DROP COLUMN</code></dt>
+<dd>This form drops a column from a table. Indexes and table constraints involving the column will be automatically dropped as well. You will need to say CASCADE if anything outside the table depends on the column, for example, foreign key references or views.</dd>
+<dt><code>SET DATA TYPE</code></dt>
+<dd>This form changes the type of a column of a table. Indexes and simple table constraints involving the column will be automatically converted to use the new column type by reparsing the originally supplied expression. The optional USING clause specifies how to compute the new column value from the old; if omitted, the default conversion is the same as an assignment cast from old data type to new. A USING clause must be provided if there is no implicit or assignment cast from old to new type.</dd>
+<dt><code>SET/DROP DEFAULT</code></dt>
+<dd>These forms set or remove the default value for a column. The default values only apply to subsequent <code>INSERT</code> commands; they do not cause rows already in the table to change. Defaults can also be created for views, in which case they are inserted into <code>INSERT</code> statements on the view before the view&#8217;s ON INSERT rule is applied.</dd>
+<dt><code>SET/DROP NOT NULL</code></dt>
+<dd>These forms change whether a column is marked to allow null values or to reject null values. You can only use SET NOT NULL when the column contains no null values.</dd>
+<dt><code>SET STATISTICS</code></dt>
+<dd>This form sets the per-column statistics-gathering target for subsequent ANALYZE [<code><a href="/docs/linux/man/7-analyze/">analyze</a></code>(7)] operations. The target can be set in the range 0 to 10000; alternatively, set it to -1 to revert to using the system default statistics target (default_statistics_target). For more information on the use of statistics by the PostgreSQL query planner, refer to in the documentation. </dd>
+<dt><code>SET STORAGE</code></dt>
+<dd>This form sets the storage mode for a column. This controls whether this column is held inline or in a secondary TOAST table, and whether the data should be compressed or not. PLAIN must be used for fixed-length values such as <code>integer</code> and is inline, uncompressed. MAIN is for inline, compressible data. EXTERNAL is for external, uncompressed data, and EXTENDED is for external, compressed data. EXTENDED is the default for most data types that support non-PLAIN storage. Use of EXTERNAL will make substring operations on very large <code>text</code> and <code>bytea</code> values run faster, at the penalty of increased storage space. Note that SET STORAGE doesn&#8217;t itself change anything in the table, it just sets the strategy to be pursued during future table updates. See in the documentation for more information.</dd>
+<dt><code>ADD </code><i>table_constraint</i></dt>
+<dd>This form adds a new constraint to a table using the same syntax as CREATE TABLE [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)].</dd>
+<dt><code>DROP CONSTRAINT</code></dt>
+<dd>This form drops the specified constraint on a table.</dd>
+<dt><code>DISABLE/ENABLE [ REPLICA | ALWAYS ] TRIGGER</code></dt>
+<dd>These forms configure the firing of trigger(s) belonging to the table. A disabled trigger is still known to the system, but is not executed when its triggering event occurs. For a deferred trigger, the enable status is checked when the event occurs, not when the trigger function is actually executed. One can disable or enable a single trigger specified by name, or all triggers on the table, or only user triggers (this option excludes triggers that are used to implement foreign key constraints). Disabling or enabling constraint triggers requires superuser privileges; it should be done with caution since of course the integrity of the constraint cannot be guaranteed if the triggers are not executed. The trigger firing mechanism is also affected by the configuration variable session_replication_role. Simply enabled triggers will fire when the replication role is &#8220;origin&#8221; (the default) or &#8220;local&#8221;. Triggers configured as ENABLE REPLICA will only fire if the session is in &#8220;replica&#8221; mode, and triggers configured as ENABLE ALWAYS will fire regardless of the current replication mode.</dd>
+<dt><code>DISABLE/ENABLE [ REPLICA | ALWAYS ] RULE</code></dt>
+<dd>These forms configure the firing of rewrite rules belonging to the table. A disabled rule is still known to the system, but is not applied during query rewriting. The semantics are as for disabled/enabled triggers. This configuration is ignored for ON SELECT rules, which are always applied in order to keep views working even if the current session is in a non-default replication role.</dd>
+<dt><code>CLUSTER</code></dt>
+<dd>This form selects the default index for future CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] operations. It does not actually re-cluster the table.</dd>
+<dt><code>SET WITHOUT CLUSTER</code></dt>
+<dd>This form removes the most recently used CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] index specification from the table. This affects future cluster operations that don&#8217;t specify an index.</dd>
+<dt><code>SET WITH OIDS</code></dt>
+<dd>This form adds an oid system column to the table (see in the documentation). It does nothing if the table already has OIDs. </dd>
 <p> Note that this is not equivalent to ADD COLUMN oid oid; that would add a normal column that happened to be named oid, not a system column.</p>
-<dt><code>SET WITHOUT OIDS</code></p>
-<dd>This form removes the oid system column from the table. This is exactly equivalent to DROP COLUMN oid RESTRICT, except that it will not complain if there is already no oid column.</p>
-<dt><code>SET ( </code><i>storage_parameter</i><code> = </code><i>value</i><code> [, &#8230; ] )</code></p>
-<dd>This form changes one or more storage parameters for the table. See Storage Parameters [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)] for details on the available parameters. Note that the table contents will not be modified immediately by this command; depending on the parameter you might need to rewrite the table to get the desired effects. That can be done with CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] or one of the forms of <code>ALTER TABLE</code> that forces a table rewrite. </p>
+<dt><code>SET WITHOUT OIDS</code></dt>
+<dd>This form removes the oid system column from the table. This is exactly equivalent to DROP COLUMN oid RESTRICT, except that it will not complain if there is already no oid column.</dd>
+<dt><code>SET ( </code><i>storage_parameter</i><code> = </code><i>value</i><code> [, &#8230; ] )</code></dt>
+<dd>This form changes one or more storage parameters for the table. See Storage Parameters [<code><a href="/docs/linux/man/7-create_table/">create_table</a></code>(7)] for details on the available parameters. Note that the table contents will not be modified immediately by this command; depending on the parameter you might need to rewrite the table to get the desired effects. That can be done with CLUSTER [<code><a href="/docs/linux/man/7-cluster/">cluster</a></code>(7)] or one of the forms of <code>ALTER TABLE</code> that forces a table rewrite. </dd>
 <dl>
-<dd><code>Note:</code> While <code>CREATE TABLE</code> allows OIDS to be specified in the WITH (<i>storage_parameter</i>) syntax, <code>ALTER TABLE</code> does not treat OIDS as a storage parameter. Instead use the SET WITH OIDS and SET WITHOUT OIDS forms to change OID status.</dl>
-<dt><code>RESET ( </code><i>storage_parameter</i><code> [, &#8230; ] )</code></p>
-<dd>This form resets one or more storage parameters to their defaults. As with SET, a table rewrite might be needed to update the table entirely.</p>
-<dt><code>INHERIT </code><i>parent_table</i></p>
-<dd>This form adds the target table as a new child of the specified parent table. Subsequently, queries against the parent will include records of the target table. To be added as a child, the target table must already contain all the same columns as the parent (it could have additional columns, too). The columns must have matching data types, and if they have NOT NULL constraints in the parent then they must also have NOT NULL constraints in the child. </p>
+<dd><code>Note:</code> While <code>CREATE TABLE</code> allows OIDS to be specified in the WITH (<i>storage_parameter</i>) syntax, <code>ALTER TABLE</code> does not treat OIDS as a storage parameter. Instead use the SET WITH OIDS and SET WITHOUT OIDS forms to change OID status.</dd></dl>
+<dt><code>RESET ( </code><i>storage_parameter</i><code> [, &#8230; ] )</code></dt>
+<dd>This form resets one or more storage parameters to their defaults. As with SET, a table rewrite might be needed to update the table entirely.</dd>
+<dt><code>INHERIT </code><i>parent_table</i></dt>
+<dd>This form adds the target table as a new child of the specified parent table. Subsequently, queries against the parent will include records of the target table. To be added as a child, the target table must already contain all the same columns as the parent (it could have additional columns, too). The columns must have matching data types, and if they have NOT NULL constraints in the parent then they must also have NOT NULL constraints in the child. </dd>
 <p> There must also be matching child-table constraints for all CHECK constraints of the parent. Currently UNIQUE, PRIMARY KEY, and FOREIGN KEY constraints are not considered, but this might change in the future.</p>
-<dt><code>NO INHERIT </code><i>parent_table</i></p>
-<dd>This form removes the target table from the list of children of the specified parent table. Queries against the parent table will no longer include records drawn from the target table.</p>
-<dt><code>OWNER</code></p>
-<dd>This form changes the owner of the table, sequence, or view to the specified user.</p>
-<dt><code>SET TABLESPACE</code></p>
-<dd>This form changes the table&#8217;s tablespace to the specified tablespace and moves the data file(s) associated with the table to the new tablespace. Indexes on the table, if any, are not moved; but they can be moved separately with additional SET TABLESPACE commands. See also CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)].</p>
-<dt><code>RENAME</code></p>
-<dd>The RENAME forms change the name of a table (or an index, sequence, or view) or the name of an individual column in a table. There is no effect on the stored data.</p>
-<dt><code>SET SCHEMA</code></p>
-<dd>This form moves the table into another schema. Associated indexes, constraints, and sequences owned by table columns are moved as well.</dl>
+<dt><code>NO INHERIT </code><i>parent_table</i></dt>
+<dd>This form removes the target table from the list of children of the specified parent table. Queries against the parent table will no longer include records drawn from the target table.</dd>
+<dt><code>OWNER</code></dt>
+<dd>This form changes the owner of the table, sequence, or view to the specified user.</dd>
+<dt><code>SET TABLESPACE</code></dt>
+<dd>This form changes the table&#8217;s tablespace to the specified tablespace and moves the data file(s) associated with the table to the new tablespace. Indexes on the table, if any, are not moved; but they can be moved separately with additional SET TABLESPACE commands. See also CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)].</dd>
+<dt><code>RENAME</code></dt>
+<dd>The RENAME forms change the name of a table (or an index, sequence, or view) or the name of an individual column in a table. There is no effect on the stored data.</dd>
+<dt><code>SET SCHEMA</code></dt>
+<dd>This form moves the table into another schema. Associated indexes, constraints, and sequences owned by table columns are moved as well.</dd></dl>
 <p> All the actions except RENAME and SET SCHEMA can be combined into a list of multiple alterations to apply in parallel. For example, it is possible to add several columns and/or alter the type of several columns in a single command. This is particularly useful with large tables, since only one pass over the table need be made. </p>
 <p> You must own the table to use <code>ALTER TABLE</code>. To change the schema of a table, you must also have CREATE privilege on the new schema. To add the table as a new child of a parent table, you must own the parent table as well. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have CREATE privilege on the table&#8217;s schema. (These restrictions enforce that altering the owner doesn&#8217;t do anything you couldn&#8217;t do by dropping and recreating the table. However, a superuser can alter ownership of any table anyway.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (possibly schema-qualified) of an existing table to alter. If ONLY is specified, only that table is altered. If ONLY is not specified, the table and any descendant tables are altered.</p>
-<dt><i>column</i></p>
-<dd>Name of a new or existing column.</p>
-<dt><i>new_column</i></p>
-<dd>New name for an existing column.</p>
-<dt><i>new_name</i></p>
-<dd>New name for the table.</p>
-<dt><i>type</i></p>
-<dd>Data type of the new column, or new data type for an existing column.</p>
-<dt><i>table_constraint</i></p>
-<dd>New table constraint for the table.</p>
-<dt><i>constraint_name</i></p>
-<dd>Name of an existing constraint to drop.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the dropped column or constraint (for example, views referencing the column).</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the column or constraint if there are any dependent objects. This is the default behavior.</p>
-<dt><i>trigger_name</i></p>
-<dd>Name of a single trigger to disable or enable.</p>
-<dt><code>ALL</code></p>
-<dd>Disable or enable all triggers belonging to the table. (This requires superuser privilege if any of the triggers are for foreign key constraints.)</p>
-<dt><code>USER</code></p>
-<dd>Disable or enable all triggers belonging to the table except for foreign key constraint triggers.</p>
-<dt><i>index_name</i></p>
-<dd>The index name on which the table should be marked for clustering.</p>
-<dt><i>storage_parameter</i></p>
-<dd>The name of a table storage parameter.</p>
-<dt><i>value</i></p>
-<dd>The new value for a table storage parameter. This might be a number or a word depending on the parameter.</p>
-<dt><i>parent_table</i></p>
-<dd>A parent table to associate or de-associate with this table.</p>
-<dt><i>new_owner</i></p>
-<dd>The user name of the new owner of the table.</p>
-<dt><i>new_tablespace</i></p>
-<dd>The name of the tablespace to which the table will be moved.</p>
-<dt><i>new_schema</i></p>
-<dd>The name of the schema to which the table will be moved.</dl>
+<dt><i>name</i></dt>
+<dd>The name (possibly schema-qualified) of an existing table to alter. If ONLY is specified, only that table is altered. If ONLY is not specified, the table and any descendant tables are altered.</dd>
+<dt><i>column</i></dt>
+<dd>Name of a new or existing column.</dd>
+<dt><i>new_column</i></dt>
+<dd>New name for an existing column.</dd>
+<dt><i>new_name</i></dt>
+<dd>New name for the table.</dd>
+<dt><i>type</i></dt>
+<dd>Data type of the new column, or new data type for an existing column.</dd>
+<dt><i>table_constraint</i></dt>
+<dd>New table constraint for the table.</dd>
+<dt><i>constraint_name</i></dt>
+<dd>Name of an existing constraint to drop.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the dropped column or constraint (for example, views referencing the column).</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the column or constraint if there are any dependent objects. This is the default behavior.</dd>
+<dt><i>trigger_name</i></dt>
+<dd>Name of a single trigger to disable or enable.</dd>
+<dt><code>ALL</code></dt>
+<dd>Disable or enable all triggers belonging to the table. (This requires superuser privilege if any of the triggers are for foreign key constraints.)</dd>
+<dt><code>USER</code></dt>
+<dd>Disable or enable all triggers belonging to the table except for foreign key constraint triggers.</dd>
+<dt><i>index_name</i></dt>
+<dd>The index name on which the table should be marked for clustering.</dd>
+<dt><i>storage_parameter</i></dt>
+<dd>The name of a table storage parameter.</dd>
+<dt><i>value</i></dt>
+<dd>The new value for a table storage parameter. This might be a number or a word depending on the parameter.</dd>
+<dt><i>parent_table</i></dt>
+<dd>A parent table to associate or de-associate with this table.</dd>
+<dt><i>new_owner</i></dt>
+<dd>The user name of the new owner of the table.</dd>
+<dt><i>new_tablespace</i></dt>
+<dd>The name of the tablespace to which the table will be moved.</dd>
+<dt><i>new_schema</i></dt>
+<dd>The name of the schema to which the table will be moved.</dd></dl>
 <h2>Notes</h2>
 <p>The key word COLUMN is noise and can be omitted. </p>
 <p> When a column is added with ADD COLUMN, all existing rows in the table are initialized with the column&#8217;s default value (NULL if no DEFAULT clause is specified). </p>

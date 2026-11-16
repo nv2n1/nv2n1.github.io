@@ -11,19 +11,12 @@ operator-(std::move_iterator) - operator-(std::move_iterator)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Iterator1, class Iterator2&gt;
-
 auto operator-(const move_iterator&lt;Iterator1&gt; &amp;lhs, (since C++ 11)
-
                                                         const move_iterator&lt;Iterator2&gt; &amp;rhs(until C++ 17)
-
                    ) -&gt; decltype(lhs.base() - rhs.base());
-
 template &lt;class Iterator1, class Iterator2&gt;
-
 constexpr auto operator-(const move_iterator&lt;Iterator1&gt; &amp;lhs, (since C++ 17)
-
                                                                   const move_iterator&lt;Iterator2&gt; &amp;rhs
-
                          ) -&gt; decltype(lhs.base() - rhs.base());</code></pre> 
 Returns the distance between two iterator adaptors. 
 

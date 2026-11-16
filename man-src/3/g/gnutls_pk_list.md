@@ -14,8 +14,8 @@ description: "gnutls_pk_list – API function"
 <p> <code>const gnutls_pk_algorithm_t * gnutls_pk_list( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get a list of supported public key algorithms. </p>
 <p> This function is not thread safe.</p>
@@ -32,6 +32,6 @@ description: "gnutls_pk_list – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

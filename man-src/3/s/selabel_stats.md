@@ -10,7 +10,6 @@ description: "selabel_stats – obtain SELinux labeling statistics"
 <p>selabel_stats &#8211; obtain SELinux labeling statistics</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/selinux.h&gt;
-
 #include &lt;selinux/label.h&gt;
 void selabel_stats(struct selabel_handle *hnd);</code></pre>
 <h2>Description</h2>

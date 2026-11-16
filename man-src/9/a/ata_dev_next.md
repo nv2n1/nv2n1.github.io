@@ -14,13 +14,13 @@ description: "ata_dev_next – device iteration helper"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the previous device, NULL to start</dl>
+</dd><dd>the previous device, NULL to start</dd></dl>
 <p> <i>link</i></p>
 <dl>
-<dd>ATA link containing devices to iterate</dl>
+<dd>ATA link containing devices to iterate</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>iteration mode, one of ATA_DITER_*</dl>
+<dd>iteration mode, one of ATA_DITER_*</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: Host lock or EH context.</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "ata_dev_next – device iteration helper"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

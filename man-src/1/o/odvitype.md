@@ -18,23 +18,23 @@ description: "dvitype, odvitype – translate a dvi file for humans"
 <p> The <code>.dvi</code> extension is supplied if omitted from <i>dvi_name</i>. The output goes to <i>stdout</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-dpi=</code><i>REAL</i></p>
-<dd> Set resolution to <i>REAL</i> pixels per inch; default 300.0.</dl>
+<dt><code>-dpi=</code><i>REAL</i></dt>
+<dd> Set resolution to <i>REAL</i> pixels per inch; default 300.0.</dd></dl>
 <dl>
-<dt><code>-magnification=</code><i>NUMBER</i></p>
-<dd> Override existing magnification with <i>NUMBER</i>.</dl>
+<dt><code>-magnification=</code><i>NUMBER</i></dt>
+<dd> Override existing magnification with <i>NUMBER</i>.</dd></dl>
 <dl>
-<dt><code>-max-pages=</code><i>NUMBER</i></p>
-<dd> Process <i>NUMBER</i> pages; default one million.</dl>
+<dt><code>-max-pages=</code><i>NUMBER</i></dt>
+<dd> Process <i>NUMBER</i> pages; default one million.</dd></dl>
 <dl>
-<dt><code>-output-level=</code><i>NUMBER</i></p>
-<dd> Verbosity level, from 0 to 4; default 4.</dl>
+<dt><code>-output-level=</code><i>NUMBER</i></dt>
+<dd> Verbosity level, from 0 to 4; default 4.</dd></dl>
 <dl>
-<dt><code>-page-start=</code><i>PAGE-SPEC</i></p>
-<dd> Start at <i>PAGE-SPEC</i>, for example `2&#8242; or `5.*.-2&#8242;.</dl>
+<dt><code>-page-start=</code><i>PAGE-SPEC</i></dt>
+<dd> Start at <i>PAGE-SPEC</i>, for example `2&#8242; or `5.*.-2&#8242;.</dd></dl>
 <dl>
-<dt><code>-show-opcodes</code></p>
-<dd> Show numeric opcodes (in decimal).</dl>
+<dt><code>-show-opcodes</code></dt>
+<dd> Show numeric opcodes (in decimal).</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable TEXFONTS is used to search for the TFM files used in the DVI file. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. If TEXFONTS is not set, it uses the system default.</p>
 <h2>SEE ALSO</h2>

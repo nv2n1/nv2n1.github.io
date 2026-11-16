@@ -14,10 +14,10 @@ description: "ata_host_register – register initialized ATA host"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>ATA host to register</dl>
+</dd><dd>ATA host to register</dd></dl>
 <p> <i>sht</i></p>
 <dl>
-<dd>template for SCSI host</dl>
+<dd>template for SCSI host</dd></dl>
 <h2>Description</h2>
 <p>Register initialized ATA host. <i>host</i> is allocated using <code>ata_host_alloc</code> and fully initialized by LLD. This function starts ports, registers <i>host</i> with ATA and SCSI layers and probe registered devices. </p>
 <p> LOCKING: Inherited from calling layer (may sleep).</p>
@@ -26,5 +26,5 @@ description: "ata_host_register – register initialized ATA host"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

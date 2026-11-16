@@ -15,19 +15,19 @@ pci_mmap_legacy_mem - map legacy PCI memory into user memory space
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>open sysfs file</dl>
+<dl><dd></dd><dd>open sysfs file</dd></dl>
  
 
  <i>kobj</i>
-<dl><dd>kobject corresponding to device to be mapped</dl>
+<dl><dd>kobject corresponding to device to be mapped</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>struct bin_attribute for this file</dl>
+<dl><dd>struct bin_attribute for this file</dd></dl>
  
 
  <i>vma</i>
-<dl><dd>struct vm_area_struct passed to mmap</dl>
+<dl><dd>struct vm_area_struct passed to mmap</dd></dl>
 
 <h2>Description</h2>
 

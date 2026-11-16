@@ -17,7 +17,7 @@ description: "QuantLib::FDEuropeanEngine – Pricing engine for European options
 <p>Pricing engine for European options using finite-differences. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against analytic results.</dl>
+<dd>the correctness of the returned value is tested by checking it against analytic results.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>EquityOption.cpp</code>. </p>
 <h2>Author</h2>

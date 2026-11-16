@@ -18,7 +18,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_create_cmd_comp/"
  mlx5dv_devx_get_async_cmd_comp - Get an asynchronous command completion. # SYNOPSIS
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;
 infiniband / mlx5dv.h &gt;
     struct mlx5dv_devx_cmd_comp {
@@ -32,7 +32,7 @@ mlx5dv_devx_create_cmd_comp(struct ibv_context *context) void mlx5dv_devx_destro
 int mlx5dv_devx_get_async_cmd_comp(struct mlx5dv_devx_cmd_comp *cmd_comp,
                                    struct mlx5dv_devx_async_cmd_hdr *cmd_resp,
                                    size_t cmd_resp_len)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -48,17 +48,17 @@ int mlx5dv_devx_get_async_cmd_comp(struct mlx5dv_devx_cmd_comp *cmd_comp,
 
 <dl>
 <dt>context
-<dd>
-<dt>
-<dd> <pre>
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
 RDMA device context to create the action on.
 </pre>
-<dt>cmd_comp
-<dd> The command completion object.
-<dt>cmd_resp
-<dd> The output data from the asynchronous command.
-<dt>cmd_resp_len
-<dd> The output buffer size to hold the response.</dl>
+</dd><dt>cmd_comp
+</dt><dd> The command completion object.
+</dd><dt>cmd_resp
+</dt><dd> The output data from the asynchronous command.
+</dd><dt>cmd_resp_len
+</dt><dd> The output buffer size to hold the response.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

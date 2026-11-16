@@ -10,9 +10,9 @@ c_cssetr - set float valued parameters
 <h2>Function Prototype</h2>void c_cssetr(char *, float);
 <h2>Synopsis</h2>void c_cssetr(pnam, rval);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>A string that specifies the name of the parameter to be set.
-<dt>rval
-<dd>A float value to be assigned to the internal parameter specified by pnam.</dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the csgrid_params man page.
+</dt><dd>A string that specifies the name of the parameter to be set.
+</dd><dt>rval
+</dt><dd>A float value to be assigned to the internal parameter specified by pnam.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the csgrid_params man page.
 <h2>Access</h2>To use c_cssetr, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>c_csgrid, c_csgetr, csgrid_params. 
 

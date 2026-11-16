@@ -30,59 +30,59 @@ enum_snd_jack_types - Jack types which can be reported
 <h2>Constants</h2>
 
 SND_JACK_HEADPHONE
-<dl><dd>Headphone</dl>
+<dl><dd>Headphone</dd></dl>
  
 
  SND_JACK_MICROPHONE
-<dl><dd>Microphone</dl>
+<dl><dd>Microphone</dd></dl>
  
 
  SND_JACK_HEADSET
-<dl><dd>Headset</dl>
+<dl><dd>Headset</dd></dl>
  
 
  SND_JACK_LINEOUT
-<dl><dd>Line out</dl>
+<dl><dd>Line out</dd></dl>
  
 
  SND_JACK_MECHANICAL
-<dl><dd>Mechanical switch</dl>
+<dl><dd>Mechanical switch</dd></dl>
  
 
  SND_JACK_VIDEOOUT
-<dl><dd>Video out</dl>
+<dl><dd>Video out</dd></dl>
  
 
  SND_JACK_AVOUT
-<dl><dd>AV (Audio Video) out</dl>
+<dl><dd>AV (Audio Video) out</dd></dl>
  
 
  SND_JACK_LINEIN
-<dl><dd>Line in</dl>
+<dl><dd>Line in</dd></dl>
  
 
  SND_JACK_BTN_0
-<dl><dd>Button 0</dl>
+<dl><dd>Button 0</dd></dl>
  
 
  SND_JACK_BTN_1
-<dl><dd>Button 1</dl>
+<dl><dd>Button 1</dd></dl>
  
 
  SND_JACK_BTN_2
-<dl><dd>Button 2</dl>
+<dl><dd>Button 2</dd></dl>
  
 
  SND_JACK_BTN_3
-<dl><dd>Button 3</dl>
+<dl><dd>Button 3</dd></dl>
  
 
  SND_JACK_BTN_4
-<dl><dd>Button 4</dl>
+<dl><dd>Button 4</dd></dl>
  
 
  SND_JACK_BTN_5
-<dl><dd>Button 5</dl>
+<dl><dd>Button 5</dd></dl>
 
 <h2>Description</h2>
 

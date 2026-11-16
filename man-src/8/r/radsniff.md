@@ -14,34 +14,34 @@ description: "radsniff – dump radius protocol"
 <p><code>radsniff</code> is a simple wrapper around libpcap. It can also print out the contents of RADIUS packets using the FreeRADIUS dictionaries. </p>
 <h2>Options</h2>
 <dl>
-<dt>-c&nbsp;<wbr><i>count</i></p>
-<dd>Number of packets to capture.</p>
-<dt>-d&nbsp;<wbr><i>directory</i></p>
-<dd>Directory where the dictionaries are found.</p>
-<dt>-F</p>
-<dd>Filter PCAP file from stdin to stdout. Output file will contain RADIUS packets.</p>
-<dt>-f&nbsp;<wbr><i>filter</i></p>
-<dd>PCAP filter. (default is udp port 1812 or 1813)</p>
-<dt>-h</p>
-<dd>Print usage help information.</p>
-<dt>-i&nbsp;<wbr><i>interface</i></p>
-<dd>Interface to capture.</p>
-<dt>-I&nbsp;<wbr><i>filename</i></p>
-<dd>Read packets from filename.</p>
-<dt>-m</p>
-<dd>Print packet headers only, not contents.</p>
-<dt>-p&nbsp;<wbr><i>port</i></p>
-<dd>Listen for packets on port.</p>
-<dt>-r&nbsp;<wbr><i>filter</i></p>
-<dd>RADIUS attribute filter.</p>
-<dt>-s&nbsp;<wbr><i>secret</i></p>
-<dd>RADIUS secret.</p>
-<dt>-S</p>
-<dd>Sort attributes in the packet. Used to compare server results.</p>
-<dt>-w&nbsp;<wbr><i>file</i></p>
-<dd>Write output packets to file.</p>
-<dt>-x</p>
-<dd>Print out debugging information. </p>
+<dt>-c&nbsp;<wbr><i>count</i></dt>
+<dd>Number of packets to capture.</dd>
+<dt>-d&nbsp;<wbr><i>directory</i></dt>
+<dd>Directory where the dictionaries are found.</dd>
+<dt>-F</dt>
+<dd>Filter PCAP file from stdin to stdout. Output file will contain RADIUS packets.</dd>
+<dt>-f&nbsp;<wbr><i>filter</i></dt>
+<dd>PCAP filter. (default is udp port 1812 or 1813)</dd>
+<dt>-h</dt>
+<dd>Print usage help information.</dd>
+<dt>-i&nbsp;<wbr><i>interface</i></dt>
+<dd>Interface to capture.</dd>
+<dt>-I&nbsp;<wbr><i>filename</i></dt>
+<dd>Read packets from filename.</dd>
+<dt>-m</dt>
+<dd>Print packet headers only, not contents.</dd>
+<dt>-p&nbsp;<wbr><i>port</i></dt>
+<dd>Listen for packets on port.</dd>
+<dt>-r&nbsp;<wbr><i>filter</i></dt>
+<dd>RADIUS attribute filter.</dd>
+<dt>-s&nbsp;<wbr><i>secret</i></dt>
+<dd>RADIUS secret.</dd>
+<dt>-S</dt>
+<dd>Sort attributes in the packet. Used to compare server results.</dd>
+<dt>-w&nbsp;<wbr><i>file</i></dt>
+<dd>Write output packets to file.</dd>
+<dt>-x</dt>
+<dd>Print out debugging information. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-radiusd/">radiusd</a>(8),pcap(3)</p>

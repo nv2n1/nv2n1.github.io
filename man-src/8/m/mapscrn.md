@@ -16,10 +16,10 @@ description: "mapscrn – load screen output mapping table"
 <h2>Use</h2>
 <p>There are two kinds of mapping tables: direct-to-font tables, that give a font position for each user byte value, and user-to-unicode tables that give a unicode value for each user byte. The corresponding glyph is now found using the unicode index of the font. The command</p>
 <dl>
-<dd>mapscrn trivial</dl>
+<dd>mapscrn trivial</dd></dl>
 <p> sets up a one-to-one direct-to-font table where user bytes directly address the font. This is useful for fonts that are in the same order as the character set one uses. A command like</p>
 <dl>
-<dd>mapscrn 8859-2</dl>
+<dd>mapscrn 8859-2</dd></dl>
 <p> sets up a user-to-unicode table that assumes that the user uses ISO 8859-2.</p>
 <h2>Input Format</h2>
 <p>The <i>mapscrn</i> command can read the map in either of two formats:<br />
@@ -36,14 +36,14 @@ description: "mapscrn – load screen output mapping table"
 <p> Note that control characters (with codes &lt; 32) cannot be re-mapped with <i>mapscrn</i> because they have special meaning for the driver.</p>
 <h2>Other Options</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd>Prints version number and exits.</p>
-<dt><code>-v</code></p>
-<dd>Be verbose.</dl>
+<dt><code>-V</code></dt>
+<dd>Prints version number and exits.</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/share/consoletrans</i></p>
-<dd>The default directory for screen mappings.</dl>
+<dt><i>/usr/share/consoletrans</i></dt>
+<dd>The default directory for screen mappings.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-setfont/">setfont</a></i>(8)</p>
 <h2>Author</h2>

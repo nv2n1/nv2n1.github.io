@@ -26,30 +26,30 @@ description: "X Display Attributes – Functions that set and retrieve X display
 <p>Retrieves the Ecore_X_Connection handle used for the current X connection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current X connection.</dl>
+<dd>The current X connection.</dd></dl>
 <p> Referenced by ecore_evas_software_x11_new(), and ecore_evas_xrender_x11_new().</p>
 <h3>EAPI Ecore_X_Screen* ecore_x_default_screen_get (void)</h3>
 <p>Retrieves the Ecore_X_Screen handle used for the current X connection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current default screen.</dl>
+<dd>The current default screen.</dd></dl>
 <p> Referenced by ecore_evas_software_x11_new(), and ecore_evas_xrender_x11_new().</p>
 <h3>EAPI double ecore_x_double_click_time_get (void)</h3>
 <p>Retrieves the double and triple click flag timeout. </p>
 <p> See <code>ecore_xcb_double_click_time_set</code> for more information. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The timeout for double clicks in seconds.</dl>
+<dd>The timeout for double clicks in seconds.</dd></dl>
 <h3>EAPI void ecore_x_double_click_time_set (double t)</h3>
 <p>Sets the timeout for a double and triple clicks to be flagged. </p>
 <p> This sets the time between clicks before the double_click flag is set in a button down event. If 3 clicks occur within double this time, the triple_click flag is also set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>t</i> The time in seconds</dl>
+<dd><i>t</i> The time in seconds</dd></dl>
 <h3>EAPI int ecore_x_fd_get (void)</h3>
 <p>Retrieves the X display file descriptor. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current X display file descriptor.</dl>
+<dd>The current X display file descriptor.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

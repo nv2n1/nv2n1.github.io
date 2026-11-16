@@ -14,10 +14,10 @@ description: "gnutls_digest_self_test – API function"
 <p> <code>int gnutls_digest_self_test(unsigned </code><i>all</i><code>, gnutls_digest_algorithm_t </code><i>digest</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>unsigned all</p>
-<dd> if non-zero then tests to all ciphers are performed.</p>
-<dt>gnutls_digest_algorithm_t digest</p>
-<dd> the digest algorithm to use</dl>
+<dt>unsigned all</dt>
+<dd> if non-zero then tests to all ciphers are performed.</dd>
+<dt>gnutls_digest_algorithm_t digest</dt>
+<dd> the digest algorithm to use</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will run self tests on the provided digest.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_digest_self_test – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

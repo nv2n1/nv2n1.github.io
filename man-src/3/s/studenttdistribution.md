@@ -11,9 +11,7 @@ description: "ql/math/distributions/studenttdistribution.hpp – Student’s t-d
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/errors.hpp&gt;
-
 #include &lt;ql/types.hpp&gt;
-
 #include &lt;functional&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>StudentDistribution</code><br />

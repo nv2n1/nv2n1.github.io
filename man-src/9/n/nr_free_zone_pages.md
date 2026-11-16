@@ -14,7 +14,7 @@ description: "nr_free_zone_pages – count number of pages beyond high watermark
 <p><i>offset</i></p>
 <dl>
 <dd>
-<dd>The zone index of the highest zone</dl>
+</dd><dd>The zone index of the highest zone</dd></dl>
 <h2>Description</h2>
 <p><code>nr_free_zone_pages</code> counts the number of counts pages which are beyond the high watermark within all zones at or below a given zone index. For each zone, the number of pages is calculated as: managed_pages &#8211; high_pages</p>
 <h2>Copyright</h2>

@@ -11,11 +11,8 @@ description: "stdarg, va_start, va_arg, va_end, va_copy – variable argument li
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdarg.h&gt;
 void va_start(va_list ap, last);
-
 type va_arg(va_list ap, type);
-
 void va_end(va_list ap);
-
 void va_copy(va_list dest, va_list src);</code></pre>
 <h2>Description</h2>
 <p>A function may be called with a varying number of arguments of varying types. The include file <i>&lt;stdarg.h&gt;</i> declares a type <i>va_list</i> and defines three macros for stepping through a list of arguments whose number and types are not known to the called function. The called function must declare an object of type <i>va_list</i> which is used by the macros <code>va_start</code>(), <code>va_arg</code>(), and <code>va_end</code>().</p>

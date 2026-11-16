@@ -17,22 +17,22 @@ description: "virtdetect — Detect if this system is running as a virtual machi
 <p> if &#8211;detect-host is enabled, try and detect virtualization host (as opposed to guest) platforms</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable debug output</p>
-<dt><code>&#8211;detect-host</code></p>
-<dd> Try to detect virtualization host (as opposed to guest) platform.</p>
-<dt><code>&#8211;help</code></p>
-<dd> This help</p>
-<dt><code>&#8211;man</code></p>
-<dd> Full manpage</dl>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Enable debug output</dd>
+<dt><code>&#8211;detect-host</code></dt>
+<dd> Try to detect virtualization host (as opposed to guest) platform.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> This help</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Full manpage</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> 0 &#8211; No virtualization detected</p>
-<dt>&bull;</p>
-<dd> 1 &#8211; Virtualization detected</p>
-<dt>&bull;</p>
-<dd> 2 &#8211; More than one kind of virtualization detected</dl>
+<dt>&bull;</dt>
+<dd> 0 &#8211; No virtualization detected</dd>
+<dt>&bull;</dt>
+<dd> 1 &#8211; Virtualization detected</dd>
+<dt>&bull;</dt>
+<dd> 2 &#8211; More than one kind of virtualization detected</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Sys::Detect::Virtualization, &lt;<a rel="nofollow" href="http://www.dmo.ca/blog/detecting-virtualization-on-linux">http://www.dmo.ca/blog/detecting-virtualization-on-linux</a>&gt;</p>
 <h2>LICENCE AND COPYRIGHT</h2>

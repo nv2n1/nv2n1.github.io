@@ -16,34 +16,34 @@ description: "festival – a text-to-speech system."
 <p> Festival has two major modes, command and tts (text-to-speech). When in command mode input (from file or interactively) is interpreted by the command interpreter. When in tts mode input is rendered as speech. When in command mode filenames that start with a left paranthesis are treated as literal commands and evaluated. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q </code></p>
-<dd> Load no default setup files</p>
-<dt><code>&#8211;libdir </code><i>&lt;string&gt;</i></p>
-<dd> Set library directory pathname</p>
-<dt><code>-b </code></p>
-<dd> Run in batch mode (no interaction)</p>
-<dt><code>&#8211;batch </code></p>
-<dd> Run in batch mode (no interaction)</p>
-<dt><code>&#8211;tts </code></p>
-<dd> Synthesize text in files as speech no files means read from stdin (implies no interaction by default)</p>
-<dt><code>-i </code></p>
-<dd> Run in interactive mode (default)</p>
-<dt><code>&#8211;interactive </code></p>
-<dd> Run in interactive mode (default)</p>
-<dt><code>&#8211;pipe </code></p>
-<dd> Run in pipe mode, reading commands from stdin, but no prompt or return values are printed (default if stdin not a tty)</p>
-<dt><code>&#8211;language </code><i>&lt;string&gt;</i></p>
-<dd> Run in named language, default is english, spanish and welsh are available</p>
-<dt><code>&#8211;server </code></p>
-<dd> Run in server mode waiting for clients of server_port (1314)</p>
-<dt><code>&#8211;script </code></p>
-<dd> &lt;ifile&gt; Used in #! scripts, runs in batch mode on file and passes all other args to Scheme</p>
-<dt><code>&#8211;heap </code><i>&lt;int&gt;</i><code> {1000000}</code></p>
-<dd> Set size of Lisp heap, should not normally need to be changed from its default</p>
-<dt><code>-v </code></p>
-<dd> Display version number and exit</p>
-<dt><code>&#8211;version </code></p>
-<dd> Display version number and exit</dl>
+<dt><code>-q </code></dt>
+<dd> Load no default setup files</dd>
+<dt><code>&#8211;libdir </code><i>&lt;string&gt;</i></dt>
+<dd> Set library directory pathname</dd>
+<dt><code>-b </code></dt>
+<dd> Run in batch mode (no interaction)</dd>
+<dt><code>&#8211;batch </code></dt>
+<dd> Run in batch mode (no interaction)</dd>
+<dt><code>&#8211;tts </code></dt>
+<dd> Synthesize text in files as speech no files means read from stdin (implies no interaction by default)</dd>
+<dt><code>-i </code></dt>
+<dd> Run in interactive mode (default)</dd>
+<dt><code>&#8211;interactive </code></dt>
+<dd> Run in interactive mode (default)</dd>
+<dt><code>&#8211;pipe </code></dt>
+<dd> Run in pipe mode, reading commands from stdin, but no prompt or return values are printed (default if stdin not a tty)</dd>
+<dt><code>&#8211;language </code><i>&lt;string&gt;</i></dt>
+<dd> Run in named language, default is english, spanish and welsh are available</dd>
+<dt><code>&#8211;server </code></dt>
+<dd> Run in server mode waiting for clients of server_port (1314)</dd>
+<dt><code>&#8211;script </code></dt>
+<dd> &lt;ifile&gt; Used in #! scripts, runs in batch mode on file and passes all other args to Scheme</dd>
+<dt><code>&#8211;heap </code><i>&lt;int&gt;</i><code> {1000000}</code></dt>
+<dd> Set size of Lisp heap, should not normally need to be changed from its default</dd>
+<dt><code>-v </code></dt>
+<dd> Display version number and exit</dd>
+<dt><code>&#8211;version </code></dt>
+<dd> Display version number and exit</dd></dl>
 <h2>BUGS</h2>
 <p> More than you can imagine. </p>
 <p> A manual with much detail (though not complete) is available in distributed as part of the system and is also accessible at<br />

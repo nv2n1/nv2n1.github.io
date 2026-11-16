@@ -16,28 +16,28 @@ description: "gravfft – Compute gravitational attraction of 3-D surfaces in th
 <p> <code>gravfft</code> can be used into three main modes. Mode 1: Simply compute the geopotential due to the surface given in the topo.grd file. Requires a density contrast (<code>-D</code>) and possibly a different observation level (<code>-W</code>). It will take the 2-D forward FFT of the grid and use the full Parker&#8217;s method up to the chosen terms. Mode 2: Compute the geopotential response due to flexure of the topography file. It will take the 2-D forward FFT of the grid and use the full Parker&#8217;s method applied to the chosen isostatic model. The available models are the &quot;loading from top&quot;, or elastic plate model, and the &quot;loading from below&quot; which accounts for the plate&#8217;s response to a sub-surface load (appropriate for hot spot modeling &#8211; if you believe them). In both cases, the model parameters are set with <code>-T</code> and <code>-Z</code> options. Mode 3: compute the admittance or coherence between two grids. The output is the average in the radial direction. Optionally, the model admittance may also be calculated. The horizontal dimensions of the grdfiles are assumed to be in meters. Geographical grids may be used by specifying the <code>-fg</code> option that scales degrees to meters. If you have grids with dimensions in km, you could change this to meters using <code>grdedit</code> or scale the output with <code>grdmath</code>. Given the number of choices this program offers, is difficult to state what are options and what are required arguments. It depends on what you are doing; see the examples for further guidance.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>ingrid</i></p>
-<dd> 2-D binary grid file to be operated on. (See GRID FILE FORMATS below). For cross-spectral operations, also give the second grid file <i>ingrd2</i>.</p>
-<dt><code>-G</code><i>outfile</i></p>
-<dd> Specify the name of the output grid file or the 1-D spectrum table (see <code>-E</code>). (See GRID FILE FORMATS below).</dl>
+<dt><i>ingrid</i></dt>
+<dd> 2-D binary grid file to be operated on. (See GRID FILE FORMATS below). For cross-spectral operations, also give the second grid file <i>ingrd2</i>.</dd>
+<dt><code>-G</code><i>outfile</i></dt>
+<dd> Specify the name of the output grid file or the 1-D spectrum table (see <code>-E</code>). (See GRID FILE FORMATS below).</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-C</code><i>n/wavelength/mean_depth/tbw</i></p>
-<dd> Compute only the theoretical admittance curves of the selected model and exit. <i>n</i> and <i>wavelength</i> are used to compute (n * wavelength) the total profile length in meters. <i>mean_depth</i> is the mean water depth. Append dataflags (one or two) of <i>tbw</i> in any order. <i>t</i> = use &quot;from top&quot; model, <i>b</i> = use &quot;from below&quot; model. Optionally specify <i>w</i> to write wavelength instead of frequency.</p>
-<dt><code>-D</code><i>density</i>|<i>rhogrid</i></p>
-<dd> Sets density contrast across surface. Used, for example, to compute the gravity attraction of the water layer that can later be combined with the free-air anomaly to get the Bouguer anomaly. In this case do not use <code>-T</code>. It also implicitly sets <code>-N+h</code>. Alternatively, specify a co-registered grid with density contrasts if a variable density contrast is required.</p>
-<dt><code>-E</code><i>n_terms</i></p>
-<dd> Number of terms used in Parker expansion (limit is 10, otherwise terms depending on n will blow out the program) [Default = 3]</p>
-<dt><code>-F</code>[<code>f</code>[<code>+</code>]|<code>g</code>|<code>v</code>|<code>n</code>|<code>e</code>]</p>
-<dd> Specify desired geopotential field: compute geoid rather than gravity <code>f</code> = Free-air anomalies (mGal) [Default]. Append <code>+</code> to add in the slab implied when removing the mean value from the topography. This requires zero topography to mean no mass anomaly. </p>
+<dt><code>-C</code><i>n/wavelength/mean_depth/tbw</i></dt>
+<dd> Compute only the theoretical admittance curves of the selected model and exit. <i>n</i> and <i>wavelength</i> are used to compute (n * wavelength) the total profile length in meters. <i>mean_depth</i> is the mean water depth. Append dataflags (one or two) of <i>tbw</i> in any order. <i>t</i> = use &quot;from top&quot; model, <i>b</i> = use &quot;from below&quot; model. Optionally specify <i>w</i> to write wavelength instead of frequency.</dd>
+<dt><code>-D</code><i>density</i>|<i>rhogrid</i></dt>
+<dd> Sets density contrast across surface. Used, for example, to compute the gravity attraction of the water layer that can later be combined with the free-air anomaly to get the Bouguer anomaly. In this case do not use <code>-T</code>. It also implicitly sets <code>-N+h</code>. Alternatively, specify a co-registered grid with density contrasts if a variable density contrast is required.</dd>
+<dt><code>-E</code><i>n_terms</i></dt>
+<dd> Number of terms used in Parker expansion (limit is 10, otherwise terms depending on n will blow out the program) [Default = 3]</dd>
+<dt><code>-F</code>[<code>f</code>[<code>+</code>]|<code>g</code>|<code>v</code>|<code>n</code>|<code>e</code>]</dt>
+<dd> Specify desired geopotential field: compute geoid rather than gravity <code>f</code> = Free-air anomalies (mGal) [Default]. Append <code>+</code> to add in the slab implied when removing the mean value from the topography. This requires zero topography to mean no mass anomaly. </dd>
 <p> <code>g</code> = Geoid anomalies (m). </p>
 <p> <code>v</code> = Vertical Gravity Gradient (VGG; 1 Eotvos = 0.1 mGal/km). </p>
 <p> <code>e</code> = East deflections of the vertical (micro-radian). </p>
 <p> <code>n</code> = North deflections of the vertical (micro-radian).</p>
-<dt><code>-I</code><code>w</code>|<code>b</code>|<code>c</code>|<code>t</code> |<code>k</code></p>
-<dd> Use <i>ingrd2</i> and <i>ingrd1</i> (a grid with topography/bathymetry) to estimate admittance|coherence and write it to stdout (<code>-G</code> ignored if set). This grid should contain gravity or geoid for the same region of <i>ingrd1</i>. Default computes admittance. Output contains 3 or 4 columns. Frequency (wavelength), admittance (coherence) one sigma error bar and, optionally, a theoretical admittance. Append dataflags (one to three) from <code>w</code>|<code>b</code>|<code>c</code>|<code>t</code>. <code>w</code> writes wavelength instead of wavenumber, <code>k</code> selects km for wavelength unit [m], <code>c</code> computes coherence instead of admittance, <code>b</code> writes a fourth column with &quot;loading from below&quot; theoretical admittance, and <code>t</code> writes a fourth column with &quot;elastic plate&quot; theoretical admittance.</p>
-<dt><code>-N</code>[<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|[<code>+d</code>|<code>h</code>|<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]]</p>
-<dd> Choose or inquire about suitable grid dimensions for FFT and set optional parameters. Control the FFT dimension: <code>-Nf</code> will force the FFT to use the actual dimensions of the data. </p>
+<dt><code>-I</code><code>w</code>|<code>b</code>|<code>c</code>|<code>t</code> |<code>k</code></dt>
+<dd> Use <i>ingrd2</i> and <i>ingrd1</i> (a grid with topography/bathymetry) to estimate admittance|coherence and write it to stdout (<code>-G</code> ignored if set). This grid should contain gravity or geoid for the same region of <i>ingrd1</i>. Default computes admittance. Output contains 3 or 4 columns. Frequency (wavelength), admittance (coherence) one sigma error bar and, optionally, a theoretical admittance. Append dataflags (one to three) from <code>w</code>|<code>b</code>|<code>c</code>|<code>t</code>. <code>w</code> writes wavelength instead of wavenumber, <code>k</code> selects km for wavelength unit [m], <code>c</code> computes coherence instead of admittance, <code>b</code> writes a fourth column with &quot;loading from below&quot; theoretical admittance, and <code>t</code> writes a fourth column with &quot;elastic plate&quot; theoretical admittance.</dd>
+<dt><code>-N</code>[<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|[<code>+d</code>|<code>h</code>|<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]]</dt>
+<dd> Choose or inquire about suitable grid dimensions for FFT and set optional parameters. Control the FFT dimension: <code>-Nf</code> will force the FFT to use the actual dimensions of the data. </dd>
 <p> <code>-Nq</code> will inQuire about more suitable dimensions, report those, then continue. </p>
 <p> <code>-Ns</code> will present a list of optional dimensions, then exit. </p>
 <p> <code>-N</code><i>nx/ny</i> will do FFT on array size <i>nx/ny</i> (must be &gt;= grid file size). Default chooses dimensions &gt;= data which optimize speed and accuracy of FFT. If FFT dimensions &gt; grid file dimensions, data are extended and tapered to zero. </p>
@@ -50,30 +50,30 @@ description: "gravfft – Compute gravitational attraction of 3-D surfaces in th
 <p> <code>+n</code> turns off data extension. </p>
 <p> Tapering is performed from the data edge to the FFT grid edge [100%]. Change this percentage via <code>+t</code><i>width</i>. When <code>+n</code> is in effect, the tapering is applied instead to the data margins as no extension is available [0%]. </p>
 <p> Control writing of temporary results: For detailed investigation you can write the intermediate grid being passed to the forward FFT; this is likely to have been detrended, extended by point-symmetry along all edges, and tapered. Append <code>+w</code>[<i>suffix</i>] from which output file name(s) will be created (i.e., <i>ingrid_prefix.ext</i>) [tapered], where <i>ext</i> is your file extension. Finally, you may save the complex grid produced by the forward FFT by appending <code>+z</code>. By default we write the real and imaginary components to <i>ingrid</i>_real.<i>ext</i> and <i>ingrid</i>_imag.<i>ext</i>. Append <code>p</code> to save instead the polar form of magnitude and phase to files <i>ingrid</i>_mag.<i>ext</i> and <i>ingrid</i>_phase.<i>ext</i>.</p>
-<dt><code>-Q</code></p>
-<dd> Writes out a grid with the flexural topography (with z positive up) whose average was set by <code>-Z</code><i>zm</i> and model parameters by <code>-T</code> (and output by <code>-G</code>). That is the &quot;gravimetric Moho&quot;. <code>-Q</code> implicitly sets <code>-N+h</code></p>
-<dt><code>-S</code></p>
-<dd> Computes predicted gravity or geoid grid due to a subplate load produced by the current bathymetry and the theoretical model. The necessary parameters are set within <code>-T</code> and <code>-Z</code> options. The number of powers in Parker expansion is restricted to 1. See an example further down.</p>
-<dt><code>-T</code><i>te/rl/rm/rw</i>[<code>+m</code>]</p>
-<dd> Compute the isostatic compensation from the topography load (input grid file) on an elastic plate of thickness <i>te</i>. Also append densities for load, mantle, and water in SI units. Give average mantle depth via <code>-Z</code>. If the elastic thickness is &gt; 1e10 it will be interpreted as the flexural rigidity (by default it is computed from <i>te</i> and Young modulus). Optionally, append <i>+m</i> to write a grid with the Moho&#8217;s geopotential effect (see <code>-F</code>) from model selected by <code>-T</code>. If <i>te</i> = 0 then the Airy response is returned. <code>-T+m</code> implicitly sets <code>-N+h</code></p>
-<dt><code>-W</code><i>wd</i></p>
-<dd> Set water depth (or observation height) relative to topography [0]. Append <code>k</code> to indicate km.</p>
-<dt><code>-Z</code><i>zm</i>[<i>zl</i>]</p>
-<dd> Moho [and swell] average compensation depths. For the &quot;load from top&quot; model you only have to provide <i>zm</i>, but for the &quot;loading from below&quot; don&#8217;t forget <i>zl</i>.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-fg</code></p>
-<dd> Geographic grids (dimensions of longitude, latitude) will be converted to meters via a &quot;Flat Earth&quot; approximation using the current ellipsoid parameters.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-Q</code></dt>
+<dd> Writes out a grid with the flexural topography (with z positive up) whose average was set by <code>-Z</code><i>zm</i> and model parameters by <code>-T</code> (and output by <code>-G</code>). That is the &quot;gravimetric Moho&quot;. <code>-Q</code> implicitly sets <code>-N+h</code></dd>
+<dt><code>-S</code></dt>
+<dd> Computes predicted gravity or geoid grid due to a subplate load produced by the current bathymetry and the theoretical model. The necessary parameters are set within <code>-T</code> and <code>-Z</code> options. The number of powers in Parker expansion is restricted to 1. See an example further down.</dd>
+<dt><code>-T</code><i>te/rl/rm/rw</i>[<code>+m</code>]</dt>
+<dd> Compute the isostatic compensation from the topography load (input grid file) on an elastic plate of thickness <i>te</i>. Also append densities for load, mantle, and water in SI units. Give average mantle depth via <code>-Z</code>. If the elastic thickness is &gt; 1e10 it will be interpreted as the flexural rigidity (by default it is computed from <i>te</i> and Young modulus). Optionally, append <i>+m</i> to write a grid with the Moho&#8217;s geopotential effect (see <code>-F</code>) from model selected by <code>-T</code>. If <i>te</i> = 0 then the Airy response is returned. <code>-T+m</code> implicitly sets <code>-N+h</code></dd>
+<dt><code>-W</code><i>wd</i></dt>
+<dd> Set water depth (or observation height) relative to topography [0]. Append <code>k</code> to indicate km.</dd>
+<dt><code>-Z</code><i>zm</i>[<i>zl</i>]</dt>
+<dd> Moho [and swell] average compensation depths. For the &quot;load from top&quot; model you only have to provide <i>zm</i>, but for the &quot;loading from below&quot; don&#8217;t forget <i>zl</i>.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-fg</code></dt>
+<dd> Geographic grids (dimensions of longitude, latitude) will be converted to meters via a &quot;Flat Earth&quot; approximation using the current ellipsoid parameters.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>GRID FILE FORMATS</h2>
 <p> By default GMT writes out grid as single precision floats in a COARDS-complaint netCDF file format. However, GMT is able to produce grid files in many other commonly used grid file formats and also facilitates so called &quot;packing&quot; of grids, writing out floating point data as 1- or 2-byte integers. To specify the precision, scale and offset, the user should add the suffix <code>=</code><i>id</i>[<code>/</code><i>scale</i><code>/</code><i>offset</i>[<code>/</code><i>nan</i>]], where <i>id</i> is a two-letter identifier of the grid type and precision, and <i>scale</i> and <i>offset</i> are optional scale factor and offset to be applied to all grid values, and <i>nan</i> is the value used to indicate missing data. In case the two characters <i>id</i> is not provided, as in <code>=/</code><i>scale</i> than a <i>id</i><code>=</code><i>nf</i> is assumed. When reading grids, the format is generally automatically recognized. If not, the same suffix can be added to input grid file names. See <code>grdconvert</code> and Section <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information. </p>
 <p> When reading a netCDF file that contains multiple grids, GMT will read, by default, the first 2-dimensional grid that can find in that file. To coax GMT into reading another multi-dimensional variable in the grid file, append <code>?</code><i>varname</i> to the file name, where <i>varname</i> is the name of the variable. Note that you may need to escape the special meaning of <code>?</code> in your shell program by putting a backslash in front of it, or by placing the filename and suffix between quotes or double quotes. The <code>?</code><i>varname</i> suffix can also be used for output grids to specify a variable name different from the default: &quot;z&quot;. See <code>grdconvert</code> and Sections <i>modifiers-for-CF</i> and <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information, particularly on how to read splices of 3-, 4-, or 5-dimensional grids.</p>

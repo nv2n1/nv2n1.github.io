@@ -56,80 +56,80 @@ my $can_foo = eval
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Archive::Tar has been upgraded from version 2.04 to 2.04_01.</p>
-<dt>&bull;</p>
-<dd> bignum has been upgraded from version 0.39 to 0.39_01.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">CPAN</font> has been upgraded from version 2.11 to 2.11_01.</p>
-<dt>&bull;</p>
-<dd> Digest has been upgraded from version 1.17 to 1.17_01.</p>
-<dt>&bull;</p>
-<dd> Digest::SHA has been upgraded from version 5.95 to 5.95_01.</p>
-<dt>&bull;</p>
-<dd> Encode has been upgraded from version 2.72 to 2.72_01.</p>
-<dt>&bull;</p>
-<dd> ExtUtils::Command has been upgraded from version 1.20 to 1.20_01.</p>
-<dt>&bull;</p>
-<dd> ExtUtils::MakeMaker has been upgraded from version 7.04_01 to 7.04_02.</p>
-<dt>&bull;</p>
-<dd> File::Fetch has been upgraded from version 0.48 to 0.48_01.</p>
-<dt>&bull;</p>
-<dd> File::Spec has been upgraded from version 3.56_01 to 3.56_02.</p>
-<dt>&bull;</p>
-<dd> HTTP::Tiny has been upgraded from version 0.054 to 0.054_01.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">IO</font> has been upgraded from version 1.35 to 1.35_01.</p>
-<dt>&bull;</p>
-<dd> The IO-Compress modules have been upgraded from version 2.068 to 2.068_001.</p>
-<dt>&bull;</p>
-<dd> IPC::Cmd has been upgraded from version 0.92 to 0.92_01.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">JSON::PP</font> has been upgraded from version 2.27300 to 2.27300_01.</p>
-<dt>&bull;</p>
-<dd> Locale::Maketext has been upgraded from version 1.26 to 1.26_01.</p>
-<dt>&bull;</p>
-<dd> Locale::Maketext::Simple has been upgraded from version 0.21 to 0.21_01.</p>
-<dt>&bull;</p>
-<dd> Memoize has been upgraded from version 1.03 to 1.03_01.</p>
-<dt>&bull;</p>
-<dd> Module::CoreList has been upgraded from version 5.20160429 to 5.20170114_22.</p>
-<dt>&bull;</p>
-<dd> Net::Ping has been upgraded from version 2.43 to 2.43_01.</p>
-<dt>&bull;</p>
-<dd> Parse::CPAN::Meta has been upgraded from version 1.4414 to 1.4414_001.</p>
-<dt>&bull;</p>
-<dd> Pod::Html has been upgraded from version 1.22 to 1.2201.</p>
-<dt>&bull;</p>
-<dd> Pod::Perldoc has been upgraded from version 3.25 to 3.25_01.</p>
-<dt>&bull;</p>
-<dd> Storable has been upgraded from version 2.53_01 to 2.53_02.</p>
-<dt>&bull;</p>
-<dd> Sys::Syslog has been upgraded from version 0.33 to 0.33_01.</p>
-<dt>&bull;</p>
-<dd> Test has been upgraded from version 1.26 to 1.26_01.</p>
-<dt>&bull;</p>
-<dd> Test::Harness has been upgraded from version 3.35 to 3.35_01.</p>
-<dt>&bull;</p>
-<dd> XSLoader has been upgraded from version 0.20 to 0.20_01, fixing a security hole in which binary files could be loaded from a path outside of <tt>@INC</tt>. [perl #128528] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128528">https://rt.perl.org/Public/Bug/Display.html?id=128528</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> Archive::Tar has been upgraded from version 2.04 to 2.04_01.</dd>
+<dt>&bull;</dt>
+<dd> bignum has been upgraded from version 0.39 to 0.39_01.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">CPAN</font> has been upgraded from version 2.11 to 2.11_01.</dd>
+<dt>&bull;</dt>
+<dd> Digest has been upgraded from version 1.17 to 1.17_01.</dd>
+<dt>&bull;</dt>
+<dd> Digest::SHA has been upgraded from version 5.95 to 5.95_01.</dd>
+<dt>&bull;</dt>
+<dd> Encode has been upgraded from version 2.72 to 2.72_01.</dd>
+<dt>&bull;</dt>
+<dd> ExtUtils::Command has been upgraded from version 1.20 to 1.20_01.</dd>
+<dt>&bull;</dt>
+<dd> ExtUtils::MakeMaker has been upgraded from version 7.04_01 to 7.04_02.</dd>
+<dt>&bull;</dt>
+<dd> File::Fetch has been upgraded from version 0.48 to 0.48_01.</dd>
+<dt>&bull;</dt>
+<dd> File::Spec has been upgraded from version 3.56_01 to 3.56_02.</dd>
+<dt>&bull;</dt>
+<dd> HTTP::Tiny has been upgraded from version 0.054 to 0.054_01.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">IO</font> has been upgraded from version 1.35 to 1.35_01.</dd>
+<dt>&bull;</dt>
+<dd> The IO-Compress modules have been upgraded from version 2.068 to 2.068_001.</dd>
+<dt>&bull;</dt>
+<dd> IPC::Cmd has been upgraded from version 0.92 to 0.92_01.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">JSON::PP</font> has been upgraded from version 2.27300 to 2.27300_01.</dd>
+<dt>&bull;</dt>
+<dd> Locale::Maketext has been upgraded from version 1.26 to 1.26_01.</dd>
+<dt>&bull;</dt>
+<dd> Locale::Maketext::Simple has been upgraded from version 0.21 to 0.21_01.</dd>
+<dt>&bull;</dt>
+<dd> Memoize has been upgraded from version 1.03 to 1.03_01.</dd>
+<dt>&bull;</dt>
+<dd> Module::CoreList has been upgraded from version 5.20160429 to 5.20170114_22.</dd>
+<dt>&bull;</dt>
+<dd> Net::Ping has been upgraded from version 2.43 to 2.43_01.</dd>
+<dt>&bull;</dt>
+<dd> Parse::CPAN::Meta has been upgraded from version 1.4414 to 1.4414_001.</dd>
+<dt>&bull;</dt>
+<dd> Pod::Html has been upgraded from version 1.22 to 1.2201.</dd>
+<dt>&bull;</dt>
+<dd> Pod::Perldoc has been upgraded from version 3.25 to 3.25_01.</dd>
+<dt>&bull;</dt>
+<dd> Storable has been upgraded from version 2.53_01 to 2.53_02.</dd>
+<dt>&bull;</dt>
+<dd> Sys::Syslog has been upgraded from version 0.33 to 0.33_01.</dd>
+<dt>&bull;</dt>
+<dd> Test has been upgraded from version 1.26 to 1.26_01.</dd>
+<dt>&bull;</dt>
+<dd> Test::Harness has been upgraded from version 3.35 to 3.35_01.</dd>
+<dt>&bull;</dt>
+<dd> XSLoader has been upgraded from version 0.20 to 0.20_01, fixing a security hole in which binary files could be loaded from a path outside of <tt>@INC</tt>. [perl #128528] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128528">https://rt.perl.org/Public/Bug/Display.html?id=128528</a>&gt;</dd></dl>
 <h2>Documentation</h2>
 <h3>Changes to Existing Documentation</h3>
 <p> <i>perlapio</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> The documentation of <tt>&quot;PERLIO_DEBUG&quot;</tt> has been updated.</dl>
+<dt>&bull;</dt>
+<dd> The documentation of <tt>&quot;PERLIO_DEBUG&quot;</tt> has been updated.</dd></dl>
 <p> <i>perlrun</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> The new <code>-Di</code> switch has been documented, and the documentation of <tt>&quot;PERLIO_DEBUG&quot;</tt> has been updated.</dl>
+<dt>&bull;</dt>
+<dd> The new <code>-Di</code> switch has been documented, and the documentation of <tt>&quot;PERLIO_DEBUG&quot;</tt> has been updated.</dd></dl>
 <h2>Testing</h2>
 <dl>
-<dt>&bull;</p>
-<dd> A new test script, <i>t/run/switchDx.t</i>, has been added to test that the new <code>-Di</code> switch is working correctly.</dl>
+<dt>&bull;</dt>
+<dd> A new test script, <i>t/run/switchDx.t</i>, has been added to test that the new <code>-Di</code> switch is working correctly.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;PadlistNAMES&quot;</tt> macro is an lvalue again.</dl>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;PadlistNAMES&quot;</tt> macro is an lvalue again.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.22.3 represents approximately 9 months of development since Perl 5.22.2 and contains approximately 4,400 lines of changes across 240 files from 20 authors. </p>
 <p> Excluding auto-generated files, documentation and release tools, there were approximately 2,200 lines of changes to 170 .pm, .t, .c and .h files. </p>
@@ -148,19 +148,19 @@ my $can_foo = eval
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Incompatible Changes</a></p>
+<dt><a href="#lbAG">Incompatible Changes</a></dt>
 <dd>
-<dt><a href="#lbAH">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAH">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAJ">Documentation</a></p>
+</dd><dt><a href="#lbAJ">Documentation</a></dt>
 <dd>
-<dt><a href="#lbAL">Testing</a></p>
+</dd><dt><a href="#lbAL">Testing</a></dt>
 <dd>
-<dt><a href="#lbAM">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbAM">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbAN">Acknowledgements</a></p>
+</dd><dt><a href="#lbAN">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbAO">Reporting Bugs</a></p>
+</dd><dt><a href="#lbAO">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbAP">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
+<dd></dd></dl>

@@ -16,31 +16,31 @@ description: "WildMidi_Init – Initialize the library"
 <h2>Description</h2>
 <p>Initializes libWildMidi in preparation for playback. This function only needs to be called once by the program using libWildMidi. </p>
 <dl COMPACT>
-<dt><i>config-file</i></p>
-<dd>The file that contains the instrument configuration for the library.</dl>
+<dt><i>config-file</i></dt>
+<dd>The file that contains the instrument configuration for the library.</dd></dl>
 <dl COMPACT>
-<dt><i>rate</i></p>
-<dd>The sound rate you want the the audio data output at. Rates accepted by libWildMidi are 11025 &#8211; 65000.</dl>
+<dt><i>rate</i></dt>
+<dd>The sound rate you want the the audio data output at. Rates accepted by libWildMidi are 11025 &#8211; 65000.</dd></dl>
 <dl COMPACT>
-<dt><i>options</i></p>
-<dd>The initial options to set for the library. see below.</p>
+<dt><i>options</i></dt>
+<dd>The initial options to set for the library. see below.</dd>
 <dl COMPACT>
 <dd>
+</dd><dl COMPACT>
+<dt>WM_MO_LOG_VOLUME</dt>
+<dd>By default the library uses linear volume levels typically used in computer MIDI players. These can differ somewhat to volume levels found on some midi hardware which may use a volume curve based on decibels. This option sets the volume levels to what you&#8217;d expect on such devices.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_LOG_VOLUME</p>
-<dd>By default the library uses linear volume levels typically used in computer MIDI players. These can differ somewhat to volume levels found on some midi hardware which may use a volume curve based on decibels. This option sets the volume levels to what you&#8217;d expect on such devices.</dl>
+<dt>WM_MO_ENHANCED_RESAMPLING</dt>
+<dd>By default libWildMidi uses linear interpolation for the resampling of the sound samples. Setting this option enables the library to use a resampling method that attempts to fill in the gaps giving richer sound.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_ENHANCED_RESAMPLING</p>
-<dd>By default libWildMidi uses linear interpolation for the resampling of the sound samples. Setting this option enables the library to use a resampling method that attempts to fill in the gaps giving richer sound.</dl>
+<dt>WM_MO_REVERB</dt>
+<dd>libWildMidi has an 8 reflection reverb engine. Use this option to give more depth to the output.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_REVERB</p>
-<dd>libWildMidi has an 8 reflection reverb engine. Use this option to give more depth to the output.</dl>
+<dt>WM_MO_WHOLETEMPO</dt>
+<dd>Ignores the fractional or decimal part of a tempo setting. If you are having timing issues try <i>WM_MO_ROUNDTEMPO</i> before trying this option. This option added due to some software not supporting fractional tempos allowable in the MIDI specification.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_WHOLETEMPO</p>
-<dd>Ignores the fractional or decimal part of a tempo setting. If you are having timing issues try <i>WM_MO_ROUNDTEMPO</i> before trying this option. This option added due to some software not supporting fractional tempos allowable in the MIDI specification.</dl>
-<dl COMPACT>
-<dt>WM_MO_ROUNDTEMPO</p>
-<dd>Rounds the fractional or decimal part of a tempo setting. Try this option is you are having timing issues, if this fails then try <i>WM_MO_WHOLETEMPO</i>. This option added due to some software not supporting fractional tempos allowable in the MIDI specification.</dl>
+<dt>WM_MO_ROUNDTEMPO</dt>
+<dd>Rounds the fractional or decimal part of a tempo setting. Try this option is you are having timing issues, if this fails then try <i>WM_MO_WHOLETEMPO</i>. This option added due to some software not supporting fractional tempos allowable in the MIDI specification.</dd></dl>
 </dl>
 </dl>
 <h2>See Also</h2>

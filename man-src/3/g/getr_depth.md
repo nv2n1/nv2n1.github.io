@@ -19,7 +19,6 @@ description: "getr_depth, getg_depth, getb_depth, geta_depth – Extract a color
 <p> Given a color in the format being used by the specified color depth, these functions extract one of the red, green, blue, or alpha components (ranging 0-255). The alpha part is only meaningful for 32-bit pixels. Example: </p>
 <pre><code>
 int r, g, b, color_value, bpp;
-
 bpp = bitmap_color_depth(bitmap);
 color_value = getpixel(bitmap, 100, 100);
 r = getr_depth(bpp, color_value);

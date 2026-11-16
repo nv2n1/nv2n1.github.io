@@ -16,32 +16,32 @@ description: "uniq – report or omit repeated lines"
 <p> With no options, matching lines are merged to the first occurrence. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;count</code></p>
-<dd> prefix lines by the number of occurrences</p>
-<dt><code>-d</code>, <code>&#8211;repeated</code></p>
-<dd> only print duplicate lines, one for each group</p>
-<dt><code>-D</code></p>
-<dd> print all duplicate lines</p>
-<dt><code>&#8211;all-repeated</code>[=<i>,METHOD/</i>]</p>
-<dd> like <code>-D</code>, but allow separating groups with an empty line; METHOD={none(default),prepend,separate}</p>
-<dt><code>-f</code>, <code>&#8211;skip-fields</code>=<i>,N/</i></p>
-<dd> avoid comparing the first N fields</p>
-<dt><code>&#8211;group</code>[=<i>,METHOD/</i>]</p>
-<dd> show all items, separating groups with an empty line; METHOD={separate(default),prepend,append,both}</p>
-<dt><code>-i</code>, <code>&#8211;ignore-case</code></p>
-<dd> ignore differences in case when comparing</p>
-<dt><code>-s</code>, <code>&#8211;skip-chars</code>=<i>,N/</i></p>
-<dd> avoid comparing the first N characters</p>
-<dt><code>-u</code>, <code>&#8211;unique</code></p>
-<dd> only print unique lines</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>-w</code>, <code>&#8211;check-chars</code>=<i>,N/</i></p>
-<dd> compare no more than N characters in lines</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;count</code></dt>
+<dd> prefix lines by the number of occurrences</dd>
+<dt><code>-d</code>, <code>&#8211;repeated</code></dt>
+<dd> only print duplicate lines, one for each group</dd>
+<dt><code>-D</code></dt>
+<dd> print all duplicate lines</dd>
+<dt><code>&#8211;all-repeated</code>[=<i>,METHOD/</i>]</dt>
+<dd> like <code>-D</code>, but allow separating groups with an empty line; METHOD={none(default),prepend,separate}</dd>
+<dt><code>-f</code>, <code>&#8211;skip-fields</code>=<i>,N/</i></dt>
+<dd> avoid comparing the first N fields</dd>
+<dt><code>&#8211;group</code>[=<i>,METHOD/</i>]</dt>
+<dd> show all items, separating groups with an empty line; METHOD={separate(default),prepend,append,both}</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-case</code></dt>
+<dd> ignore differences in case when comparing</dd>
+<dt><code>-s</code>, <code>&#8211;skip-chars</code>=<i>,N/</i></dt>
+<dd> avoid comparing the first N characters</dd>
+<dt><code>-u</code>, <code>&#8211;unique</code></dt>
+<dd> only print unique lines</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>-w</code>, <code>&#8211;check-chars</code>=<i>,N/</i></dt>
+<dd> compare no more than N characters in lines</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> A field is a run of blanks (usually spaces and/or TABs), then non-blank characters. Fields are skipped before chars. </p>
 <p> Note: &#8216;uniq&#8217; does not detect repeated lines unless they are adjacent. You may want to sort the input first, or use &#8216;sort <code>-u</code>&#8216; without &#8216;uniq&#8217;.</p>
 <h2>AUTHOR</h2>

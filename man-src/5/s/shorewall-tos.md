@@ -10,31 +10,31 @@ description: "tos – Shorewall Type of Service rules file"
 <p>tos &#8211; Shorewall Type of Service rules file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>/etc/shorewall/tos</code></dl>
+<dt> <code>/etc/shorewall/tos</code></dt></dl>
 <h2>Description</h2>
-<dd>This file defines rules for setting Type Of Service (TOS) </p>
+<dd>This file defines rules for setting Type Of Service (TOS) </dd>
 <p> The columns in the file are as follows. </p>
 <p> <code>SOURCE</code> &#8211; {<code>all</code>|<i>address</i>]|<code>all</code>:<i>address</i>|<code>$FW</code>}</p>
 <dl>
-<dd>If <code>all</code>, may optionally be followed by &quot;:&quot; and an IP address, a MAC address, a subnet specification or the name of an interface. </p>
+<dd>If <code>all</code>, may optionally be followed by &quot;:&quot; and an IP address, a MAC address, a subnet specification or the name of an interface. </dd>
 <p> Example: all:192.168.2.3 </p>
 <p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. </p>
 <p> Example: ~00-A0-C9-15-39-78</dl>
 <p> <code>DEST</code> &#8211; {<code>all</code>|<i>address</i>]|<code>all</code>:<i>address</i>}</p>
 <dl>
-<dd>Example: 192.168.2.3</dl>
+<dd>Example: 192.168.2.3</dd></dl>
 <p> <code>PROTOCOL</code> &#8211; <i>proto-name-or-number</i></p>
 <dl>
-<dd>Protocol name or number.</dl>
+<dd>Protocol name or number.</dd></dl>
 <p> <code>SOURCE PORT(S)</code> &#8211; {-|<i>port</i>|<i>lowport</i><code>:</code><i>highport</i>}</p>
 <dl>
-<dd>Source port or port range. If all ports, use &quot;-&quot;.</dl>
+<dd>Source port or port range. If all ports, use &quot;-&quot;.</dd></dl>
 <p> <code>DEST PORT(S)</code> &#8211; {-|<i>port</i>|<i>lowport</i><code>:</code><i>highport</i>}</p>
 <dl>
-<dd>Destination port or port range. If all ports, use &quot;-&quot;</dl>
+<dd>Destination port or port range. If all ports, use &quot;-&quot;</dd></dl>
 <p> <code>TOS</code> &#8211; <i>tos</i></p>
 <dl>
-<dd>Must be one of the following; </p>
+<dd>Must be one of the following; </dd>
 <dl>
 <dd>
 <pre> <code>tos-minimize-delay</code> (16)
@@ -42,23 +42,23 @@ description: "tos – Shorewall Type of Service rules file"
  <code>tos-maximize-reliability</code> (4)
  <code>tos-minimize-cost</code> (2)
  <code>tos-normal-service</code> (0)</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>MARK</code> &#8211; [<code>!</code>]<i>value</i>[/<i>mask</i>][<code>:C</code>]</p>
 <dl>
-<dd>If you don&#8217;t want to define a test but need to specify anything in the following columns, place a &quot;-&quot; in this field. </p>
+<dd>If you don&#8217;t want to define a test but need to specify anything in the following columns, place a &quot;-&quot; in this field. </dd>
 <p> !</p>
 <dl>
-<dd>Inverts the test (not equal)</dl>
+<dd>Inverts the test (not equal)</dd></dl>
 <p> <i>value</i></p>
 <dl>
-<dd>Value of the packet or connection mark.</dl>
+<dd>Value of the packet or connection mark.</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>A mask to be applied to the mark before testing.</dl>
+<dd>A mask to be applied to the mark before testing.</dd></dl>
 <p> <code>:C</code></p>
 <dl>
-<dd>Designates a connection mark. If omitted, the packet mark&#8217;s value is tested.</dl>
+<dd>Designates a connection mark. If omitted, the packet mark&#8217;s value is tested.</dd></dl>
 </dl>
 <h2>Files</h2>
 <p>/etc/shorewall/tos</p>

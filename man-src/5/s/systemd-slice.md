@@ -20,16 +20,17 @@ description: "systemd.slice – Slice unit configuration"
 <h3>Implicit Dependencies</h3>
 <p>The following dependencies are implicitly added: </p>
 <dl>
-<dd>&bull; Slice units automatically gain dependencies of type <i>After=</i> and <i>Requires=</i> on their immediate parent slice unit.</dl>
+<dd>&bull; Slice units automatically gain dependencies of type <i>After=</i> and <i>Requires=</i> on their immediate parent slice unit.</dd></dl>
 <h3>Default Dependencies</h3>
 <p>The following dependencies are added unless <i>DefaultDependencies=no</i> is set: </p>
 <dl>
-<dd>&bull; Slice units will automatically have dependencies of type <i>Conflicts=</i> and <i>Before=</i> on shutdown.target. These ensure that slice units are removed prior to system shutdown. Only slice units involved with late system shutdown should disable <i>DefaultDependencies=</i> option.</dl>
+<dd>&bull; Slice units will automatically have dependencies of type <i>Conflicts=</i> and <i>Before=</i> on shutdown.target. These ensure that slice units are removed prior to system shutdown. Only slice units involved with late system shutdown should disable <i>DefaultDependencies=</i> option.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-scope/">systemd.scope</a></code>(5), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/7-systemd-directives/">systemd.directives</a></code>(7)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>New Control Group Interfaces</p>
+<dt> 1.</dt>
+<dd>New Control Group Interfaces</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dl>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dd></dl>
+</dl>

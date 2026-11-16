@@ -14,7 +14,7 @@ description: "remove_resource – Remove a resource in the resource tree"
 <p><i>old</i></p>
 <dl>
 <dd>
-<dd>resource to remove</dl>
+</dd><dd>resource to remove</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 on success, -EINVAL if the resource is not valid. </p>
 <p> This function removes a resource previously inserted by <code>insert_resource</code> or <code>insert_resource_conflict</code>, and moves the children (if any) up to where they were before. <code>insert_resource</code> and <code>insert_resource_conflict</code> insert a new resource, and move any conflicting resources down to the children of the new resource. </p>

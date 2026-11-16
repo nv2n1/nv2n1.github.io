@@ -13,8 +13,8 @@ description: "mongoc_read_concern_destroy() – Frees all resources associated w
 mongoc_read_concern_destroy (mongoc_read_concern_t *read_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_concern</code></p>
-<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dl>
+<dt><code>read_concern</code></dt>
+<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Frees all resources associated with the read concern structure. </p>
 <h2>Colophon</h2>

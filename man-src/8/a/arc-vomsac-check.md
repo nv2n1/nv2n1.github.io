@@ -14,16 +14,16 @@ description: "arc-vomsac-check – ARC VOMS AC-based queue policy enforcing plug
 <p>arc-vomsac-check [-N] -P &lt;user proxy&gt; -L &lt;A-REX local&gt; [-c &lt;configfile&gt;] [-d &lt;loglevel&gt;] </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-N</code></p>
-<dd>treat absence of VOMS AC as allowed access (deny by default)</p>
-<dt><code>-P</code> <i>user proxy</i></p>
-<dd>path to user proxy certificate file to get VOMS AC from</p>
-<dt><code>-L</code> <i>A-REX local</i></p>
-<dd>A-REX jobstatus .local file (used to determine submission queue)</p>
-<dt><code>-c</code> <i>configfile</i></p>
-<dd>plugin configuration file (/etc/arc.conf will be used by default)</p>
-<dt><code>-d</code> <i>loglevel</i></p>
-<dd>logging level from 0(ERROR) to 5(DEBUG) </p>
+<dt><code>-N</code></dt>
+<dd>treat absence of VOMS AC as allowed access (deny by default)</dd>
+<dt><code>-P</code> <i>user proxy</i></dt>
+<dd>path to user proxy certificate file to get VOMS AC from</dd>
+<dt><code>-L</code> <i>A-REX local</i></dt>
+<dd>A-REX jobstatus .local file (used to determine submission queue)</dd>
+<dt><code>-c</code> <i>configfile</i></dt>
+<dd>plugin configuration file (/etc/arc.conf will be used by default)</dd>
+<dt><code>-d</code> <i>loglevel</i></dt>
+<dd>logging level from 0(ERROR) to 5(DEBUG) </dd>
 </dl>
 <h2>Getting A-Rex To Work With Plugin</h2>
 <p>You must attach plugin as handler for ACCEPTED state: </p>

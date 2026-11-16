@@ -14,10 +14,10 @@ description: "PROXYCERTINFO_st –"
 <p>This typedef maintains information about a proxy certificate. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>NOTE: The API provides functions to manipulate the fields of a PROXYCERTINFO. Accessing the fields directly is not a good idea.</dl>
+<dd>NOTE: The API provides functions to manipulate the fields of a PROXYCERTINFO. Accessing the fields directly is not a good idea.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>path_length</i> an optional field in the ANS.1 DER encoding, it specifies the maximum depth of the path of Proxy Certificates that can be signed by this End Entity Certificate or Proxy Certificate.<br />
- <i>policy</i> a non-optional field in the ANS.1 DER encoding, specifies policies on the use of this certificate.</dl>
+ <i>policy</i> a non-optional field in the ANS.1 DER encoding, specifies policies on the use of this certificate.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus gsi proxy ssl from the source code.</p>

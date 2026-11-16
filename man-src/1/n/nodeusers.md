@@ -15,16 +15,16 @@ description: "nodeusers – LinuxNode user information lookup program"
 <p> <code>Nodeusers </code> displays information about current LinuxNode users.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Tells nodeusers to use a plain &lt;CR&gt; as end-of-line. This is usefull if nodeusers is called from ax25d.</p>
-<dt><code>-i</code></p>
-<dd> Tells nodeusers to use a &lt;CR&gt;&lt;LF&gt; pair as end-of-line sequence and also to wait for one line of input before sending the user data. This should be used if nodeusers is used in an internet environment (eg. as a fingerd replacement). The received line is ignored.</p>
-<dt><code>-l</code></p>
-<dd> Enables logging of errors to the system logging facility.</dl>
+<dt><code>-a</code></dt>
+<dd> Tells nodeusers to use a plain &lt;CR&gt; as end-of-line. This is usefull if nodeusers is called from ax25d.</dd>
+<dt><code>-i</code></dt>
+<dd> Tells nodeusers to use a &lt;CR&gt;&lt;LF&gt; pair as end-of-line sequence and also to wait for one line of input before sending the user data. This should be used if nodeusers is used in an internet environment (eg. as a fingerd replacement). The received line is ignored.</dd>
+<dt><code>-l</code></dt>
+<dd> Enables logging of errors to the system logging facility.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/ax25/node/loggedin</code></p>
-<dd> Database of current users.</dl>
+<dt><code>/var/ax25/node/loggedin</code></dt>
+<dd> Database of current users.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-node/">node</a></code>(8)</p>
 <h2>AUTHOR</h2>

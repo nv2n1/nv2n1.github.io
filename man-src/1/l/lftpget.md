@@ -16,12 +16,12 @@ description: "lftpget – get a file with lftp(1)"
 <p> <code>lftpget</code> is a shell script for downloading by URL, it calls `lftp -c&#8217;. It supports the same set of protocols as lftp does, including ftp, http, fish, sftp. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code></p>
-<dd> Continue a previous download.</p>
-<dt><code>-d</code></p>
-<dd> Debug output.</p>
-<dt><code>-v</code></p>
-<dd> Verbose messages. </p>
+<dt><code>-c </code></dt>
+<dd> Continue a previous download.</dd>
+<dt><code>-d</code></dt>
+<dd> Debug output.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose messages. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lftp/">lftp</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1). </p>

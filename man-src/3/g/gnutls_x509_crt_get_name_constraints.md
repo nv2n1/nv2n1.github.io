@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_get_name_constraints – API function"
 <p> <code>int gnutls_x509_crt_get_name_constraints(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_name_constraints_t </code><i>nc</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>gnutls_x509_name_constraints_t nc</p>
-<dd> The nameconstraints intermediate structure</p>
-<dt>unsigned int flags</p>
-<dd> zero or <code>GNUTLS_NAME_CONSTRAINTS_FLAG_APPEND</code></p>
-<dt>unsigned int * critical</p>
-<dd> the extension status</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>gnutls_x509_name_constraints_t nc</dt>
+<dd> The nameconstraints intermediate structure</dd>
+<dt>unsigned int flags</dt>
+<dd> zero or <code>GNUTLS_NAME_CONSTRAINTS_FLAG_APPEND</code></dd>
+<dt>unsigned int * critical</dt>
+<dd> the extension status</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return an intermediate structure containing the name constraints of the provided CA certificate. That structure can be used in combination with <code>gnutls_x509_name_constraints_check()</code> to verify whether a server&#8217;s name is in accordance with the constraints. </p>
 <p> When the <i>flags</i> is set to <code>GNUTLS_NAME_CONSTRAINTS_FLAG_APPEND</code>, then if the <i>nc</i> structure is empty this function will behave identically as if the flag was not set. Otherwise if there are elements in the <i>nc</i> structure then only the excluded constraints will be appended to the constraints. </p>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crt_get_name_constraints – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -119,14 +119,14 @@ my @lines = (&#8220;There Beren came from mountains cold&#8221;,<br />
 <p> Ask the current maintainer to make you a co-maintainer or transfer the module to you. </p>
 <p> If you can not reach the author for some reason contact the <font SIZE="-1">PAUSE</font> admins at modules [at] perl.org who may be able to help, but each case is treated separately.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Get a login for the Perl Authors Upload Server (<font SIZE="-1">PAUSE</font>) if you don&#8217;t already have one: &lt;<a rel="nofollow" href="http://pause.perl.org">http://pause.perl.org</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Write to modules [at] perl.org explaining what you did to contact the current maintainer. The <font SIZE="-1">PAUSE</font> admins will also try to reach the maintainer.</p>
-<dt>&bull;</p>
-<dd> Post a public message in a heavily trafficked site announcing your intention to take over the module.</p>
-<dt>&bull;</p>
-<dd> Wait a bit. The <font SIZE="-1">PAUSE</font> admins don&#8217;t want to act too quickly in case the current maintainer is on holiday. If there&#8217;s no response to private communication or the public post, a <font SIZE="-1">PAUSE</font> admin can transfer it to you.</dl>
+<dt>&bull;</dt>
+<dd> Get a login for the Perl Authors Upload Server (<font SIZE="-1">PAUSE</font>) if you don&#8217;t already have one: &lt;<a rel="nofollow" href="http://pause.perl.org">http://pause.perl.org</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Write to modules [at] perl.org explaining what you did to contact the current maintainer. The <font SIZE="-1">PAUSE</font> admins will also try to reach the maintainer.</dd>
+<dt>&bull;</dt>
+<dd> Post a public message in a heavily trafficked site announcing your intention to take over the module.</dd>
+<dt>&bull;</dt>
+<dd> Wait a bit. The <font SIZE="-1">PAUSE</font> admins don&#8217;t want to act too quickly in case the current maintainer is on holiday. If there&#8217;s no response to private communication or the public post, a <font SIZE="-1">PAUSE</font> admin can transfer it to you.</dd></dl>
 <h3>How do I create a class?</h3>
 <p> (contributed by brian d foy) </p>
 <p> In Perl, a class is just a package, and methods are just subroutines. Perl doesn&#8217;t get more formal than that and lets you set up the package just the way that you like it (that is, it doesn&#8217;t set up anything for you). </p>
@@ -202,8 +202,8 @@ print &#8220;Finally $f
 <h3>How can I pass/return a {Function, FileHandle, Array, Hash, Method, Regex}?</h3>
 <p> You need to pass references to these objects. See &#8220;Pass by Reference&#8221; in perlsub for this particular question, and perlref for information on references.</p>
 <dl>
-<dt>Passing Variables and Functions</p>
-<dd> Regular variables and functions are quite easy to pass: just pass in a reference to an existing or anonymous variable or function: </p>
+<dt>Passing Variables and Functions</dt>
+<dd> Regular variables and functions are quite easy to pass: just pass in a reference to an existing or anonymous variable or function: </dd>
 <p>func( \$some_scalar);<br />
 func( \@some_array);<br />
 func([1..10]);<br />
@@ -211,8 +211,8 @@ func( \% some_hash);<br />
 func({this = &gt; 10, that = &gt; 20});<br />
 func( \&amp;some_func);<br />
 func(sub{$_[0] * *$_[1]});</p>
-<dt>Passing Filehandles</p>
-<dd> As of Perl 5.6, you can represent filehandles with scalar variables which you treat as any other scalar. </p>
+<dt>Passing Filehandles</dt>
+<dd> As of Perl 5.6, you can represent filehandles with scalar variables which you treat as any other scalar. </dd>
 <p>open my $fh, $filename or die &#8220;Cannot open $filename! $!&#8221;;<br />
 func($fh);<br />
 sub func<br />
@@ -221,8 +221,8 @@ sub func<br />
     my $line = &lt;$passed_fh&gt;;<br />
 }</p>
 <p> Before Perl 5.6, you had to use the <tt>*FH</tt> or <tt>&quot;\*FH&quot;</tt> notations. These are &#8220;typeglobs&#8221;&#8211;see &#8220;Typeglobs and Filehandles&#8221; in perldata and especially &#8220;Pass by Reference&#8221; in perlsub for more information.</p>
-<dt>Passing Regexes</p>
-<dd> Here&#8217;s an example of how to pass in a string and a regular expression for it to match against. You construct the pattern with the <tt>&quot;qr//&quot;</tt> operator: </p>
+<dt>Passing Regexes</dt>
+<dd> Here&#8217;s an example of how to pass in a string and a regular expression for it to match against. You construct the pattern with the <tt>&quot;qr//&quot;</tt> operator: </dd>
 <p>sub compare<br />
 {<br />
     my($val1, $regex) = @_;<br />
@@ -230,8 +230,8 @@ sub func<br />
     return $retval;<br />
 }<br />
 $match = compare(&#8220;old McDonald&#8221;, qr / d.*D / i);</p>
-<dt>Passing Methods</p>
-<dd> To pass an object method into a subroutine, you can do this: </p>
+<dt>Passing Methods</dt>
+<dd> To pass an object method into a subroutine, you can do this: </dd>
 <p>call_a_lot(10, $some_obj, &#8220;methname&#8221;)<br />
     sub call_a_lot<br />
 {<br />
@@ -652,5 +652,5 @@ $folks{&#8220;barney&#8221;} {WIFE} = &#8220;betty&#8221;;</p>
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples in this file are hereby placed into the public domain. You are permitted and encouraged to use this code in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit would be courteous but is not required. </p>
 <h2>Index</h2>
-<dt><a href="#lbBJ">AUTHOR AND COPYRIGHT</a></p>
-<dd></dl>
+<dt><a href="#lbBJ">AUTHOR AND COPYRIGHT</a></dt>
+<dd></dd></dl>

@@ -20,19 +20,19 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 <h2>OPTIONS</h2>
 <p> You must specify exactly one of <code>-sum</code>, <code>-mean</code>, <code>-min</code>, or <code>-max</code>. </p>
 <dl>
-<dt><code>-sum</code></p>
+<dt><code>-sum</code></dt>
 <dd>
 <p> This option makes the summary function addition. </p>
-<dt><code>-mean</code></p>
+</dd><dt><code>-mean</code></dt>
 <dd>
 <p> This option makes the summary function arithmetic mean. </p>
-<dt><code>-min</code></p>
+</dd><dt><code>-min</code></dt>
 <dd>
 <p> This option makes the summary function arithmetic minimum. </p>
-<dt><code>-max</code></p>
+</dd><dt><code>-max</code></dt>
 <dd>
 <p> This option makes the summary function arithmetic maximum. </p>
-<dt><code>-normalize</code></p>
+</dd><dt><code>-normalize</code></dt>
 <dd>
 <p> This option causes each sample to be normalized to a fraction<br />
 &nbsp;<wbr>&nbsp;<wbr>(in the range 0..1)&nbsp;<wbr>so the result is independent of the image&#8217;s<br />
@@ -50,12 +50,12 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 </pre>
 <p> This option was new in Netpbm 10.22 (April 2004)<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-brief</code></p>
+</dd><dt><code>-brief</code></dt>
 <dd>
 <p> This option causes <code>pamsumm</code> to display the answer as a bare<br />
 &nbsp;<wbr>&nbsp;<wbr>number, rather than in a complete sentence. </p>
 <p> This option was new in Netpbm 10.22 (April 2004) </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>

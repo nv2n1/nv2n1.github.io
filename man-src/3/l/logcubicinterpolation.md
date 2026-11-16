@@ -19,6 +19,6 @@ description: "QuantLib::LogCubicInterpolation – log-cubic interpolation betwee
 <h3><code>LogCubicInterpolation</code> (const I1 &amp; xBegin, const I1 &amp; xEnd, const I2 &amp; yBegin, <code>CubicInterpolation::DerivativeApprox</code> da, bool monotonic, <code>CubicInterpolation::BoundaryCondition</code> leftC, <code>Real</code> leftConditionValue, <code>CubicInterpolation::BoundaryCondition</code> rightC, <code>Real</code> rightConditionValue)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the $ x $ values must be sorted.</dl>
+<dd>the $ x $ values must be sorted.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

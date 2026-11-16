@@ -22,11 +22,8 @@ std::max_align_t is usually synonymous with the largest scalar type, which is lo
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstddef&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; alignof(std::max_align_t) &lt;&lt; '\n';
 }

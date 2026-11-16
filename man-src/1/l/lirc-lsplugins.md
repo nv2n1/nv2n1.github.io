@@ -18,26 +18,26 @@ description: "lirc-lsplugins – print dynamic modules info"
 <p> The <i>[drivers]</i> argument is an optional selector which limits the output to matching drivers. The match is a glob-type match as done by fnmatch()</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-U</code> <code>&#8211;plugindir &lt;path&gt;</code></p>
-<dd> Use &lt;path&gt; to search for plugins. The path is a&#8217;:&#8217;-separated search path similar to e. g., $PATH.</p>
-<dt><code>-q</code> <code>&#8211;quiet</code></p>
-<dd> Don&#8217;t write headers and trailing legend.</p>
-<dt><code>-s</code> <code>&#8211;summary</code></p>
-<dd> Just write a summary over number of plugins, drivers and errors.</p>
-<dt><code>-e</code> <code>&#8211;errors</code></p>
-<dd> Only list plugins which can&#8217;t be loaded, or does not contain any drivers.</p>
-<dt><code>-l</code> <code>&#8211;long</code></p>
-<dd> Add info on driver features.</p>
-<dt><code>-p</code> <code>&#8211;default-path</code></p>
-<dd> Print default search path and exit.</p>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> Display usage summary.</p>
-<dt><code>-v</code> <code>&#8211;version</code></p>
-<dd> Display version info.</dl>
+<dt><code>-U</code> <code>&#8211;plugindir &lt;path&gt;</code></dt>
+<dd> Use &lt;path&gt; to search for plugins. The path is a&#8217;:&#8217;-separated search path similar to e. g., $PATH.</dd>
+<dt><code>-q</code> <code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t write headers and trailing legend.</dd>
+<dt><code>-s</code> <code>&#8211;summary</code></dt>
+<dd> Just write a summary over number of plugins, drivers and errors.</dd>
+<dt><code>-e</code> <code>&#8211;errors</code></dt>
+<dd> Only list plugins which can&#8217;t be loaded, or does not contain any drivers.</dd>
+<dt><code>-l</code> <code>&#8211;long</code></dt>
+<dd> Add info on driver features.</dd>
+<dt><code>-p</code> <code>&#8211;default-path</code></dt>
+<dd> Print default search path and exit.</dd>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Display usage summary.</dd>
+<dt><code>-v</code> <code>&#8211;version</code></dt>
+<dd> Display version info.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> $ lirc-lsplugins -U ../lib/.libs:/usr/local/lib/lirc/plugins tira*</dl>
+</dt><dd> $ lirc-lsplugins -U ../lib/.libs:/usr/local/lib/lirc/plugins tira*</dd></dl>
 <p> Lists all drivers with name matching &#8216;tira*&#8217; found in plugins living in ../lib/.libs or /usr/local/lib/lirc/plugins.</p>
 <h2>RETURN VALUE</h2>
 <p> lirc-lsplugins returns a non-zero error code if there is at least one plugin from which no driver can be loaded or options and parameters can&#8217;t be parsed. Otherwise it returns zero.</p>

@@ -16,24 +16,24 @@ description: "pmv – move (rename) files"
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d <i>LEVEL</i></p>
-<dd> Set debug log level:</p>
+<dt>-d <i>LEVEL</i></dt>
+<dd> Set debug log level:</dd>
 <dt>
-<dd> 0 &#8211; No logging (default)</p>
+</dt><dd> 0 &#8211; No logging (default)</dd>
 <dt>
-<dd> 1 &#8211; Errors only</p>
+</dt><dd> 1 &#8211; Errors only</dd>
 <dt>
-<dd> 2 &#8211; Errors and warnings</p>
+</dt><dd> 2 &#8211; Errors and warnings</dd>
 <dt>
-<dd> 3 &#8211; Everything </p>
-<dt>-p <i>DEVNAME</i></p>
-<dd> Use the device with the given name, instead of the default. </p>
-<dt>-h</p>
-<dd> Display help message. </p>
-<dt><i>SOURCE</i></p>
-<dd> Full path to the current filename. </p>
-<dt><i>DESTINATION</i></p>
-<dd> Full path to the new filename. </p>
+</dt><dd> 3 &#8211; Everything </dd>
+<dt>-p <i>DEVNAME</i></dt>
+<dd> Use the device with the given name, instead of the default. </dd>
+<dt>-h</dt>
+<dd> Display help message. </dd>
+<dt><i>SOURCE</i></dt>
+<dd> Full path to the current filename. </dd>
+<dt><i>DESTINATION</i></dt>
+<dd> Full path to the new filename. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>

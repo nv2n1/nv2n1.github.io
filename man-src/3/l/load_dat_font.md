@@ -21,14 +21,12 @@ description: "load_dat_font – Loads a FONT from an Allegro datafile."
    FONT  FONT_3_DATA
    PAL   FONT_1_PALETTE
    PAL   FONT_2_PALETTE
-   
 </pre>
 <p> Then the following code will load FONT_1_DATA as a FONT and return FONT_1_PALETTE as the palette: </p>
 <pre><code>
 FONT *f;
 PALETTE pal;
 char *names[] = {"FONT_1_DATA", "FONT_1_PALETTE"}
-
 f = load_dat_font("fonts.dat", pal, names);
 </code></pre>
 <p> If instead you want to load the second font, FONT_2, from the datafile, you would use: </p>
@@ -40,7 +38,6 @@ char *names[] = {&#8220;FONT_2_DATA&#8221;, &#8220;FONT_2_PALETTE&#8221;}</p>
 <pre><code>
 FONT *f;
 char *names[] = {"FONT_3_DATA", NULL}
-
 f = load_dat_font("fonts.dat", NULL, names);
 </code></pre>
 <h2>RETURN VALUE</h2>

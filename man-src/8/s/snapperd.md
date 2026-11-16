@@ -10,9 +10,9 @@ description: "snapperd – DBus daemon for snapper"
 <p>snapperd &#8211; DBus daemon for snapper</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>snapperd</code></dl>
+<dt> <code>snapperd</code></dt></dl>
 <h2>Description</h2>
-<dd>Snapperd is a DBus daemon for snapper and not for direct use by the user.</p>
+<dd>Snapperd is a DBus daemon for snapper and not for direct use by the user.</dd>
 <h2>Homepage</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://snapper.io/">http://snapper.io/</a></code>m[]</p>
 <h2>Authors</h2>

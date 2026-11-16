@@ -10,9 +10,9 @@ c_ftgetc - retrieve a string valued parameter
 <h2>Function Prototype</h2>void c_ftgetc(char *, char *);
 <h2>Synopsis</h2>void c_ftgetc (pnam, cval);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>The name of the control parameter whose value is to be retrieved.
-<dt>cval
-<dd>cval will point to a string containing the returned value. The user is required to reserve enough space to store the string.</dl><h2>Usage</h2>c_ftgetc is a called to obtain current values for any of the string valued control parameters.
+</dt><dd>The name of the control parameter whose value is to be retrieved.
+</dd><dt>cval
+</dt><dd>cval will point to a string containing the returned value. The user is required to reserve enough space to store the string.</dd></dl><h2>Usage</h2>c_ftgetc is a called to obtain current values for any of the string valued control parameters.
 <h2>Access</h2>To use c_ftgetc, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>fitgrid_params, c_ftsetc 
 

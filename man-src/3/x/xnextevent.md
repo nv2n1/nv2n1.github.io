@@ -10,30 +10,30 @@ description: "XNextEvent, XPeekEvent, XWindowEvent, XCheckWindowEvent, XMaskEven
 <p>XNextEvent, XPeekEvent, XWindowEvent, XCheckWindowEvent, XMaskEvent, XCheckMaskEvent, XCheckTypedEvent, XCheckTypedWindowEvent &#8211; select events by type </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XNextEvent(Display *<i>display</i>, XEvent *<i>event_return</i>);</p>
-<dd>int XPeekEvent(Display *<i>display</i>, XEvent *<i>event_return</i>);</p>
-<dd>int XWindowEvent(Display *<i>display</i>, Window <i>w</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</p>
-<dd>Bool XCheckWindowEvent(Display *<i>display</i>, Window <i>w</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</p>
-<dd>int XMaskEvent(Display *<i>display</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</p>
-<dd>Bool XCheckMaskEvent(Display *<i>display</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</p>
-<dd>Bool XCheckTypedEvent(Display *<i>display</i>, int <i>event_type</i>, XEvent *<i>event_return</i>);</p>
-<dd>Bool XCheckTypedWindowEvent(Display *<i>display</i>, Window <i>w</i>, int <i>event_type</i>, XEvent *<i>event_return</i>);</dl>
+<dd>int XNextEvent(Display *<i>display</i>, XEvent *<i>event_return</i>);</dd>
+<dd>int XPeekEvent(Display *<i>display</i>, XEvent *<i>event_return</i>);</dd>
+<dd>int XWindowEvent(Display *<i>display</i>, Window <i>w</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</dd>
+<dd>Bool XCheckWindowEvent(Display *<i>display</i>, Window <i>w</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</dd>
+<dd>int XMaskEvent(Display *<i>display</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</dd>
+<dd>Bool XCheckMaskEvent(Display *<i>display</i>, long <i>event_mask</i>, XEvent *<i>event_return</i>);</dd>
+<dd>Bool XCheckTypedEvent(Display *<i>display</i>, int <i>event_type</i>, XEvent *<i>event_return</i>);</dd>
+<dd>Bool XCheckTypedWindowEvent(Display *<i>display</i>, Window <i>w</i>, int <i>event_type</i>, XEvent *<i>event_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>event_mask</i></p>
-<dd>Specifies the event mask.</p>
-<dt><i>event_return</i></p>
-<dd>Returns the matched event&#8217;s associated structure.</p>
-<dt><i>event_return</i></p>
-<dd>Returns the next event in the queue.</p>
-<dt><i>event_return</i></p>
-<dd>Returns a copy of the matched event&#8217;s associated structure.</p>
-<dt><i>event_type</i></p>
-<dd>Specifies the event type to be compared.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window whose event you are interested in.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_mask</i></dt>
+<dd>Specifies the event mask.</dd>
+<dt><i>event_return</i></dt>
+<dd>Returns the matched event&#8217;s associated structure.</dd>
+<dt><i>event_return</i></dt>
+<dd>Returns the next event in the queue.</dd>
+<dt><i>event_return</i></dt>
+<dd>Returns a copy of the matched event&#8217;s associated structure.</dd>
+<dt><i>event_type</i></dt>
+<dd>Specifies the event type to be compared.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window whose event you are interested in.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XNextEvent</code> function copies the first event from the event queue into the specified <code>XEvent</code> structure and then removes it from the queue. If the event queue is empty, <code>XNextEvent</code> flushes the output buffer and blocks until an event is received. </p>
 <p> The <code>XPeekEvent</code> function returns the first event from the event queue, but it does not remove the event from the queue. If the queue is empty, <code>XPeekEvent</code> flushes the output buffer and blocks until an event is received. It then copies the event into the client-supplied <code>XEvent</code> structure without removing it from the event queue. </p>

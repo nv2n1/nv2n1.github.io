@@ -11,7 +11,6 @@ description: "sc::SetIntCoor –"
 <p> The <code>SetIntCoor</code> class describes a set of internal coordinates.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;coor.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
@@ -63,8 +62,8 @@ description: "sc::SetIntCoor –"
 <h3>sc::SetIntCoor::SetIntCoor (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. .IP &quot;generator&quot; 1c A <code>IntCoorGen</code> object that will be used to generate the internal coordinates. </p>
 <dl>
-<dt>i</p>
-<dd>A sequence of integer keywords, all $i$ for $0 </p>
+<dt>i</dt>
+<dd>A sequence of integer keywords, all $i$ for $0 </dd>
 <hr>
 <p> assigned to <code>IntCoor</code> objects.</dl>
 <h2>Member Function Documentation</h2>
@@ -75,3 +74,4 @@ description: "sc::SetIntCoor –"
 <p> Reimplemented from <code>sc::SavableState</code>.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for MPQC from the source code.</p>
+</p>

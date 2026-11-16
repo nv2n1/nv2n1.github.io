@@ -16,20 +16,20 @@ description: "texdirflatten – Collects all components of a (La)TeX file in a s
 <p> This Perl script parses a LaTeX file recursively, scanning all child files, and collects details of any included and other data files, such as graphics and BiBTeX bibliography files. These component files, are then all put into a single directory (thus &#8220;flattening&#8221; the document&#8217;s directory tree). This is useful in distributing manuscripts to collaborators or in submitting to journals.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;file</code>, <code>-f</code> <i>input.tex</i></p>
-<dd> Specifies input (La)TeX file.</p>
-<dt><code>&#8211;onetex</code>, <code>-1</code></p>
-<dd> If specified, produces a single TeX file by expanding all \input and \include commands in place.</p>
-<dt><code>&#8211;output</code>, <code>-o</code> <i>outputdir</i></p>
-<dd> Directory to collect all files. <code>texdirflatten</code> will copy each source file, graphics and bibliography file to this directory. It will be created if it is unexistent. If unspecified, it defaults to <tt>&quot;flat/&quot;</tt>.</p>
-<dt><code>&#8211;imgexts</code> <i>.ext1,.ext2[,&#8230;]</i></p>
-<dd> Prepends to the prioritized list of image extensions to search when trying to find the image to copy to output folder. The first file with the extension found will be copied and search stopped. Default order is <tt>&quot;&quot;, &quot;.eps&quot;, &quot;.pdf&quot;, &quot;.pstex&quot;</tt> (note that it includes files with no extension). If using pdflatex, one may want to add <font SIZE="-1">PDF</font> before <font SIZE="-1">EPS</font> with <tt>&quot;--imgexts .pdf&quot;</tt>. Don&#8217;t forget the dot before the extension!</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enables copious amounts of debugging output &#8211; useful if something is going wrong.</p>
-<dt><code>&#8211;version</code>, <code>-V</code></p>
-<dd> Displays the current version number and the usage and exits.</p>
-<dt><code>&#8211;help</code>, <code>-?</code></p>
-<dd> Show this manual page.</dl>
+<dt><code>&#8211;file</code>, <code>-f</code> <i>input.tex</i></dt>
+<dd> Specifies input (La)TeX file.</dd>
+<dt><code>&#8211;onetex</code>, <code>-1</code></dt>
+<dd> If specified, produces a single TeX file by expanding all \input and \include commands in place.</dd>
+<dt><code>&#8211;output</code>, <code>-o</code> <i>outputdir</i></dt>
+<dd> Directory to collect all files. <code>texdirflatten</code> will copy each source file, graphics and bibliography file to this directory. It will be created if it is unexistent. If unspecified, it defaults to <tt>&quot;flat/&quot;</tt>.</dd>
+<dt><code>&#8211;imgexts</code> <i>.ext1,.ext2[,&#8230;]</i></dt>
+<dd> Prepends to the prioritized list of image extensions to search when trying to find the image to copy to output folder. The first file with the extension found will be copied and search stopped. Default order is <tt>&quot;&quot;, &quot;.eps&quot;, &quot;.pdf&quot;, &quot;.pstex&quot;</tt> (note that it includes files with no extension). If using pdflatex, one may want to add <font SIZE="-1">PDF</font> before <font SIZE="-1">EPS</font> with <tt>&quot;--imgexts .pdf&quot;</tt>. Don&#8217;t forget the dot before the extension!</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enables copious amounts of debugging output &#8211; useful if something is going wrong.</dd>
+<dt><code>&#8211;version</code>, <code>-V</code></dt>
+<dd> Displays the current version number and the usage and exits.</dd>
+<dt><code>&#8211;help</code>, <code>-?</code></dt>
+<dd> Show this manual page.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following example scans <tt>&quot;manuscript.tex&quot;</tt> in the current directory and gathers it and all its components in the <tt>&quot;submit_01/&quot;</tt> directory: </p>
 <pre>

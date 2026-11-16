@@ -21,17 +21,17 @@ xrd[host][options][command] options : [-DSpname stringval][-DIpname numberval][o
 <p> <code>-DS</code><i>pname stringval</i></p>
 <dl>
 <dt>
-<dd> set the internal parameter <i>pname</i> with the string value <i>stringval</i>. </p>
+</dt><dd> set the internal parameter <i>pname</i> with the string value <i>stringval</i>. </dd>
 </dl>
 <p> <code>-DI</code><i>pname numberval</i></p>
 <dl>
 <dt>
-<dd> set the internal parameter <i>pname</i> with the numeric value <i>numberval</i>. </p>
+</dt><dd> set the internal parameter <i>pname</i> with the numeric value <i>numberval</i>. </dd>
 </dl>
 <p> <code>-O</code><i>opaqueinfo</i></p>
 <dl>
 <dt>
-<dd> add opaque information <i>opaqueinfo</i> to any path. </p>
+</dt><dd> add opaque information <i>opaqueinfo</i> to any path. </dd>
 </dl>
 <p> <code>-h</code> display usage information.</p>
 <h2>NOTES</h2>

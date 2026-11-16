@@ -15,7 +15,7 @@ description: "ncpumount – unmount a NetWare filesystem mounted with ncpmount."
 <h2>Options</h2>
 <p><code>mount-point</code></p>
 <dl>
-<dd><code>mount-point</code> is the directory you want to unmount. </p>
+<dd><code>mount-point</code> is the directory you want to unmount. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8)</code> </p>

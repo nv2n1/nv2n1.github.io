@@ -16,14 +16,14 @@ description: "lcf – Determine which of the historical versions of a config is 
 <p> The source directory is the place where historical md5sums are expected to live. Specifically, the historical md5sums are looked for in either the file <i>${filename}.md5sum, </i> or the subdirectory <i>${filename}.md5sum.d/</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a short usage message</p>
-<dt><code>-n, &#8211;no-action</code></p>
-<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</p>
-<dt><code>-d [n], &#8211;debug [n]</code></p>
-<dd> Set the debug level to the (optional) level <i>n </i> (n defaults to 1). This turns on copious debugging information.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Make the script be very verbose about setting internal variables.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a short usage message</dd>
+<dt><code>-n, &#8211;no-action</code></dt>
+<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</dd>
+<dt><code>-d [n], &#8211;debug [n]</code></dt>
+<dd> Set the debug level to the (optional) level <i>n </i> (n defaults to 1). This turns on copious debugging information.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Make the script be very verbose about setting internal variables.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/var/lib/ucf/hashfile,</i> <i>/etc/ucf.conf</i></p>
 <h2>SEE ALSO</h2>

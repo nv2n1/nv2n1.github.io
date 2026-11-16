@@ -10,29 +10,17 @@ description: "std::filesystem::copy – std::filesystem::copy"
 <p>std::filesystem::copy &#8211; std::filesystem::copy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;filesystem&gt;
-
     void copy(const std::filesystem::path &amp;from,
-
               const std::filesystem::path &amp;to);
-
 void copy(const std::filesystem::path &amp;from, (1)(since C++ 17)
-
                                                  const std::filesystem::path &amp;to,
-
           std::error_code &amp;ec);
-
 void copy(const std::filesystem::path &amp;from,
-
           const std::filesystem::path &amp;to,
-
           std::filesystem::copy_options options);
-
 void copy(const std::filesystem::path &amp;from, (2)(since C++ 17)
-
                                                  const std::filesystem::path &amp;to,
-
           std::filesystem::copy_options options,
-
           std::error_code &amp;ec);</code></pre>
 <p>Copies files and directories, with a variety of options<br />
 1) The default, equivalent to <code>(2)</code> with copy_options::none used as options<br />
@@ -97,14 +85,10 @@ LWG_2682 C++17 attempting to create a symlink for a directory succeeds but does 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/dir/subdir&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

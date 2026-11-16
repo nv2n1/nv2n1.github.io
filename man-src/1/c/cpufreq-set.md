@@ -15,20 +15,20 @@ description: "cpufreq-set – A small tool which allows to modify cpufreq settin
 <p> cpufreq-set allows you to modify cpufreq settings without having to type e.g. &quot;/sys/devices/system/cpu/cpu0/cpufreq/scaling_set_speed&quot; all the time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <code>&#8211;cpu</code> &lt;CPU&gt;</p>
-<dd> number of CPU where cpufreq settings shall be modified.</p>
-<dt><code>-d</code> <code>&#8211;min</code> &lt;FREQ&gt;</p>
-<dd> new minimum CPU frequency the governor may select.</p>
-<dt><code>-u</code> <code>&#8211;max</code> &lt;FREQ&gt;</p>
-<dd> new maximum CPU frequency the governor may select.</p>
-<dt><code>-g</code> <code>&#8211;governor</code> &lt;GOV&gt;</p>
-<dd> new cpufreq governor.</p>
-<dt><code>-f</code> <code>&#8211;freq</code> &lt;FREQ&gt;</p>
-<dd> specific frequency to be set. Requires userspace governor to be available and loaded.</p>
-<dt><code>-r</code> <code>&#8211;related</code></p>
-<dd> modify all hardware-related CPUs at the same time</p>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> Prints out the help screen.</dl>
+<dt><code>-c</code> <code>&#8211;cpu</code> &lt;CPU&gt;</dt>
+<dd> number of CPU where cpufreq settings shall be modified.</dd>
+<dt><code>-d</code> <code>&#8211;min</code> &lt;FREQ&gt;</dt>
+<dd> new minimum CPU frequency the governor may select.</dd>
+<dt><code>-u</code> <code>&#8211;max</code> &lt;FREQ&gt;</dt>
+<dd> new maximum CPU frequency the governor may select.</dd>
+<dt><code>-g</code> <code>&#8211;governor</code> &lt;GOV&gt;</dt>
+<dd> new cpufreq governor.</dd>
+<dt><code>-f</code> <code>&#8211;freq</code> &lt;FREQ&gt;</dt>
+<dd> specific frequency to be set. Requires userspace governor to be available and loaded.</dd>
+<dt><code>-r</code> <code>&#8211;related</code></dt>
+<dd> modify all hardware-related CPUs at the same time</dd>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Prints out the help screen.</dd></dl>
 <h2>REMARKS</h2>
 <p> Omitting the -c or &#8211;cpu argument is equivalent to setting it to zero. </p>
 <p> The -f FREQ, &#8211;freq FREQ parameter cannot be combined with any other parameter except the -c CPU, &#8211;cpu CPU parameter. </p>

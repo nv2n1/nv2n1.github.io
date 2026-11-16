@@ -13,22 +13,22 @@ description: "GSQL – an integrated database development environment for GNOME"
 <p> Current version is 0.2.1</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>gsql </code><i>[options]</i></p>
+<dt><code>gsql </code><i>[options]</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>GSQL</code> is a gtk2-based modular development tool for various RDBMS, such as Oracle, MySQL, PostgreSQL and others </p>
 <h2>OPTIONS</h2>
 <p> The following options are provided by <code>GSQL</code> using the standard GNU command line syntax:</p>
 <dl>
-<dt><code>&#8211;enable-debug</code></p>
-<dd> Print debugging messages to stdout. </p>
-<dt><code>&#8211;enable-trace</code></p>
-<dd> Print tracing messages to stdout. </p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this help and exit. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display the version information window. </p>
+<dt><code>&#8211;enable-debug</code></dt>
+<dd> Print debugging messages to stdout. </dd>
+<dt><code>&#8211;enable-trace</code></dt>
+<dd> Print tracing messages to stdout. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this help and exit. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display the version information window. </dd>
 </dl>
 <h2>ENGINES</h2>
 <p> The <code>Engine</code> are <code>GSQL</code>&#8216;s shared library contains a set of functions to access specific database plus the GUI components performing access to the database objects. Engines can be enabled and configured from the <code>Preferences</code> window. See <a rel="nofollow" href="http://gsql.org/development/">http://gsql.org/development/</a> page for more information on developing engines. </p>

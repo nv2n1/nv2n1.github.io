@@ -25,10 +25,10 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>x</i> The screen/output x co-ordinate</dl>
+ <i>x</i> The screen/output x co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The screen co-ordinate translated to canvas unit co-ordinates</dl>
+<dd>The screen co-ordinate translated to canvas unit co-ordinates</dd></dl>
 <p> This function takes in a horizontal co-ordinate as the x parameter and converts it into canvas units, accounting for output size, viewport size and location, returning it as the function return value. If e is invalid, the results are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -41,10 +41,10 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>y</i> The screen/output y co-ordinate</dl>
+ <i>y</i> The screen/output y co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The screen co-ordinate translated to canvas unit co-ordinates</dl>
+<dd>The screen co-ordinate translated to canvas unit co-ordinates</dd></dl>
 <p> This function takes in a vertical co-ordinate as the y parameter and converts it into canvas units, accounting for output size, viewport size and location, returning it as the function return value. If e is invalid, the results are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -57,10 +57,10 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>x</i> The canvas x co-ordinate</dl>
+ <i>x</i> The canvas x co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The output/screen co-ordinate translated to output co-ordinates</dl>
+<dd>The output/screen co-ordinate translated to output co-ordinates</dd></dl>
 <p> This function takes in a horizontal co-ordinate as the x parameter and converts it into output units, accounting for output size, viewport size and location, returning it as the function return value. If e is invalid, the results are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -73,10 +73,10 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>y</i> The canvas y co-ordinate</dl>
+ <i>y</i> The canvas y co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The output/screen co-ordinate translated to output co-ordinates</dl>
+<dd>The output/screen co-ordinate translated to output co-ordinates</dd></dl>
 <p> This function takes in a vertical co-ordinate as the x parameter and converts it into output units, accounting for output size, viewport size and location, returning it as the function return value. If e is invalid, the results are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;

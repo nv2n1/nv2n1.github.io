@@ -10,35 +10,35 @@ description: "amtoc – generate TOC (Table Of Contents) for an Amanda run"
 <p>amtoc &#8211; generate TOC (Table Of Contents) for an Amanda run</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amtoc</code> [-a] [-i] [-t] [-f&nbsp;<wbr><i>file</i>] [-s&nbsp;<wbr><i>subs</i>] [-w] [&#8211;] <i>logfile</i></dl>
+<dt> <code>amtoc</code> [-a] [-i] [-t] [-f&nbsp;<wbr><i>file</i>] [-s&nbsp;<wbr><i>subs</i>] [-w] [&#8211;] <i>logfile</i></dt></dl>
 <h2>Description</h2>
 <p><i>Amtoc</i></p>
-<dd>generates a table of contents for an Amanda run. It&#8217;s a perl script (if you don&#8217;t have perl, install it first!).</p>
+<dd>generates a table of contents for an Amanda run. It&#8217;s a perl script (if you don&#8217;t have perl, install it first!).</dd>
 <h2>Options</h2>
 <p><code>-a</code></p>
 <dl>
-<dd>The output file name will be <i>label-of-the-tape</i>.toc in the same directory as <i>logfile</i>.</dl>
+<dd>The output file name will be <i>label-of-the-tape</i>.toc in the same directory as <i>logfile</i>.</dd></dl>
 <p> <code>-i</code></p>
 <dl>
-<dd>Display help about <code>amtoc</code>.</dl>
+<dd>Display help about <code>amtoc</code>.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
-<dd>Generate the output in tabular form.</dl>
+<dd>Generate the output in tabular form.</dd></dl>
 <p> <code>-f file</code></p>
 <dl>
-<dd>Write the output to a file (&#8216;-&#8216; for stdout).</dl>
+<dd>Write the output to a file (&#8216;-&#8216; for stdout).</dd></dl>
 <p> <code>-s subs</code></p>
 <dl>
-<dd>Evaluate the output file name from <i>subs</i>, with $_ set to <i>label-of-the-tape</i>. The <code>-a</code> option is equivalent to <code>-s</code> <i>&#8216;s/$_/.toc/&#8217;</i>.</dl>
+<dd>Evaluate the output file name from <i>subs</i>, with $_ set to <i>label-of-the-tape</i>. The <code>-a</code> option is equivalent to <code>-s</code> <i>&#8216;s/$_/.toc/&#8217;</i>.</dd></dl>
 <p> <code>-w</code></p>
 <dl>
-<dd>Separate tapes with form-feeds and display blank lines before totals.</dl>
+<dd>Separate tapes with form-feeds and display blank lines before totals.</dd></dl>
 <p> <code>&#8212;</code></p>
 <dl>
-<dd>Marks the last option so the next parameter is the <i>logfile</i>.</dl>
+<dd>Marks the last option so the next parameter is the <i>logfile</i>.</dd></dl>
 <p> <code>logfile</code></p>
 <dl>
-<dd>(use &#8216;-&#8216; for stdin)</dl>
+<dd>(use &#8216;-&#8216; for stdin)</dd></dl>
 <h2>Output Format</h2>
 <p>The standard output has five fields separated by two spaces: </p>
 <pre># Server:/partition date level size[Kb]
@@ -66,5 +66,5 @@ description: "amtoc – generate TOC (Table Of Contents) for an Amanda run"
 <h2>Authors</h2>
 <p><code>Nicolas Mayencourt</code> &lt;Nicolas.Mayencourt [at] cui.unige.ch&gt;</p>
 <dl>
-<dd>University of Geneva/Switzerland</dl>
+<dd>University of Geneva/Switzerland</dd></dl>
 <p> <code>Stefan G. Weichinger</code> &lt;sgw [at] amanda.org&gt;</p>

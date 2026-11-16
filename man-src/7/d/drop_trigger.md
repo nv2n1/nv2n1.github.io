@@ -14,16 +14,16 @@ description: "DROP TRIGGER – remove a trigger"
 <p><code>DROP TRIGGER</code> removes an existing trigger definition. To execute this command, the current user must be the owner of the table for which the trigger is defined.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the trigger does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of the trigger to remove.</p>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of the table for which the trigger is defined.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the trigger.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the trigger if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the trigger does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the trigger to remove.</dd>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of the table for which the trigger is defined.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the trigger.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the trigger if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Destroy the trigger if_dist_exists on the table films: </p>
 <pre>DROP TRIGGER if_dist_exists ON films;</pre>

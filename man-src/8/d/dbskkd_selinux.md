@@ -47,9 +47,9 @@ description: "dbskkd_selinux – Security Enhanced Linux Policy for the dbskkd p
 <p> Policy governs the access confined processes have to these ports. SELinux dbskkd policy is very flexible allowing users to setup their dbskkd processes in as secure a method as possible. </p>
 <p> The following port types are defined for dbskkd: </p>
 <dl>
-<dt><code>dbskkd_port_t</code></p>
+<dt><code>dbskkd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1178</dl>
+</dd><dd>Default Defined Ports: tcp 1178</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dbskkd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>dbskkd_tmp_t</code> </p>

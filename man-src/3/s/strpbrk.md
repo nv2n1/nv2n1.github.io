@@ -10,7 +10,6 @@ description: "strpbrk – search a string for any of a set of bytes"
 <p>strpbrk &#8211; search a string for any of a set of bytes</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;string.h&gt;
-
 char *strpbrk(const char *s, const char *accept);</code></pre>
 <h2>Description</h2>
 <p>The <code>strpbrk</code>() function locates the first occurrence in the string <i>s</i> of any of the bytes in the string <i>accept</i>.</p>

@@ -29,16 +29,11 @@ The exact behavior of this function depends on the implementation, in particular
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
 // &quot;busy sleep&quot; while suggesting that other threads run
-
 // for a small amount of time
-
 void little_sleep(std::chrono::microseconds us)
-
 {
     auto start = std::chrono::high_resolution_clock::now();
     auto end = start + us;
@@ -47,7 +42,6 @@ void little_sleep(std::chrono::microseconds us)
     } while (std::chrono::high_resolution_clock::now() &lt; end);
 }
 int main()
-
 {
     auto start = std::chrono::high_resolution_clock::now();
     little_sleep(std::chrono::microseconds(100));

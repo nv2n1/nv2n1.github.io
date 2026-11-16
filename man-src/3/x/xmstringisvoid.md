@@ -15,8 +15,8 @@ description: "XmStringIsVoid — A compound string function that provides inform
 <h2>Description</h2>
 <p><code>XmStringIsVoid</code> returns a Boolean value indicating whether or not string <i>s1</i> is void.</p>
 <dl COMPACT>
-<dt><i>s1</i></p>
-<dd>Specifies the compound string</dl>
+<dt><i>s1</i></dt>
+<dd>Specifies the compound string</dd></dl>
 <h2>Return</h2>
 <p>Returns True if any non-zero-length text components, tab components, or separator components exist in <i>s1</i>. That is, the function returns True if the string has no text, tabs, or separators. If <i>s1</i> contains the NULL string, the function returns True.</p>
 <h2>Related</h2>

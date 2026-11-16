@@ -15,15 +15,15 @@ invalidate_inode_pages2_range - remove range of pages from an address_space
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the address_space</dl>
+<dl><dd></dd><dd>the address_space</dd></dl>
  
 
  <i>start</i>
-<dl><dd>the page offset 'from' which to invalidate</dl>
+<dl><dd>the page offset 'from' which to invalidate</dd></dl>
  
 
  <i>end</i>
-<dl><dd>the page offset 'to' which to invalidate (inclusive)</dl>
+<dl><dd>the page offset 'to' which to invalidate (inclusive)</dd></dl>
 
 <h2>Description</h2>
 

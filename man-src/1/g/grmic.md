@@ -17,26 +17,26 @@ description: "grmic – Generate stubs for Remote Method Invocation"
 <p> Long options can also be given with a GNU-style leading <code>&#8212;</code>. For instance, <code>&#8211;help</code> is accepted.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-keep</code></p>
+<dt><code>-keep</code></dt>
 <dd>
-<dt><code>-keepgenerated</code></p>
-<dd> By default, <code>grmic</code> deletes intermediate files. Either of these options causes it not to delete such files.</p>
-<dt><code>-v1.1</code></p>
-<dd> Cause <code>grmic</code> to create stubs and skeletons for the 1.1 protocol version.</p>
-<dt><code>-vcompat</code></p>
-<dd> Cause <code>grmic</code> to create stubs and skeletons compatible with both the 1.1 and 1.2 protocol versions. This is the default.</p>
-<dt><code>-v1.2</code></p>
-<dd> Cause <code>grmic</code> to create stubs and skeletons for the 1.2 protocol version.</p>
-<dt><code>-nocompile</code></p>
-<dd> Don&#8217;t compile the generated files.</p>
-<dt><code>-verbose</code></p>
-<dd> Print information about what <code>grmic</code> is doing.</p>
-<dt><code>-d</code> <i>directory</i></p>
-<dd> Put output files in <i>directory</i>. By default the files are put in the current working directory.</p>
-<dt><code>-help</code></p>
-<dd> Print a help message, then exit.</p>
-<dt><code>-version</code></p>
-<dd> Print version information, then exit.</dl>
+</dd><dt><code>-keepgenerated</code></dt>
+<dd> By default, <code>grmic</code> deletes intermediate files. Either of these options causes it not to delete such files.</dd>
+<dt><code>-v1.1</code></dt>
+<dd> Cause <code>grmic</code> to create stubs and skeletons for the 1.1 protocol version.</dd>
+<dt><code>-vcompat</code></dt>
+<dd> Cause <code>grmic</code> to create stubs and skeletons compatible with both the 1.1 and 1.2 protocol versions. This is the default.</dd>
+<dt><code>-v1.2</code></dt>
+<dd> Cause <code>grmic</code> to create stubs and skeletons for the 1.2 protocol version.</dd>
+<dt><code>-nocompile</code></dt>
+<dd> Don&#8217;t compile the generated files.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print information about what <code>grmic</code> is doing.</dd>
+<dt><code>-d</code> <i>directory</i></dt>
+<dd> Put output files in <i>directory</i>. By default the files are put in the current working directory.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a help message, then exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version information, then exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>

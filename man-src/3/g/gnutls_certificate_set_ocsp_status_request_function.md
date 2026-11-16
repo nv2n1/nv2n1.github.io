@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_ocsp_status_request_function – API functi
 <p> <code>void gnutls_certificate_set_ocsp_status_request_function(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_status_request_ocsp_func </code><i>ocsp_func</i><code>, void * </code><i>ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t sc</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_status_request_ocsp_func ocsp_func</p>
-<dd> function pointer to OCSP status request callback.</p>
-<dt>void * ptr</p>
-<dd> opaque pointer passed to callback function</dl>
+<dt>gnutls_certificate_credentials_t sc</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_status_request_ocsp_func ocsp_func</dt>
+<dd> function pointer to OCSP status request callback.</dd>
+<dt>void * ptr</dt>
+<dd> opaque pointer passed to callback function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is to be used by server to register a callback to handle OCSP status requests from the client. The callback will be invoked if the client supplied a status-request OCSP extension. The callback function prototype is: </p>
 <p> typedef int (*gnutls_status_request_ocsp_func) (gnutls_session_t session, void *ptr, gnutls_datum_t *ocsp_response); </p>
@@ -38,6 +38,6 @@ description: "gnutls_certificate_set_ocsp_status_request_function – API functi
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

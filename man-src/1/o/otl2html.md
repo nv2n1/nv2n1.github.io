@@ -17,24 +17,24 @@ description: "otl2html – converts vimoutliner outline to HTML"
 <p> <code>otl2html</code> script called just with filename of the processed outline will produce HTML document on standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code></p>
-<dd> Presentation: slide show output for use with HtmlSlides.</p>
-<dt><code>-D</code></p>
-<dd> First-level is divisions (&lt;div&gt; &lt;/div&gt;) for making pretty web pages.</p>
-<dt><code>-s</code></p>
-<dd> <i>sheet</i> Use the specified style sheet with a link.</p>
-<dt><code>-S</code></p>
-<dd> <i>sheet</i> Include the specified style sheet in-line the output. For encapsulated style.</p>
-<dt><code>-T</code></p>
-<dd> The first line is not the title. Treat it as outline data</p>
-<dt><code>-c</code></p>
-<dd> Hide comments (line with [ as the first non-whitespace character. Ending with ] is optional.</p>
-<dt><code>-C</code></p>
-<dd> <i>copyright</i> Override the internal copyright notice with the one supplied in the quoted string following this flag. Single or double quotes can be used.</p>
-<dt><code>-v</code></p>
-<dd> Print version (RCS) information.</p>
-<dt><code>-H</code></p>
-<dd> Show the file syntax help.</dl>
+<dt><code>-p</code></dt>
+<dd> Presentation: slide show output for use with HtmlSlides.</dd>
+<dt><code>-D</code></dt>
+<dd> First-level is divisions (&lt;div&gt; &lt;/div&gt;) for making pretty web pages.</dd>
+<dt><code>-s</code></dt>
+<dd> <i>sheet</i> Use the specified style sheet with a link.</dd>
+<dt><code>-S</code></dt>
+<dd> <i>sheet</i> Include the specified style sheet in-line the output. For encapsulated style.</dd>
+<dt><code>-T</code></dt>
+<dd> The first line is not the title. Treat it as outline data</dd>
+<dt><code>-c</code></dt>
+<dd> Hide comments (line with [ as the first non-whitespace character. Ending with ] is optional.</dd>
+<dt><code>-C</code></dt>
+<dd> <i>copyright</i> Override the internal copyright notice with the one supplied in the quoted string following this flag. Single or double quotes can be used.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version (RCS) information.</dd>
+<dt><code>-H</code></dt>
+<dd> Show the file syntax help.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vim/">vim</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1)</p>
 <h2>AUTHOR</h2>

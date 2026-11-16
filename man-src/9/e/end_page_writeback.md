@@ -15,7 +15,7 @@ end_page_writeback - end writeback against a page
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>the page</dl>
+<dl><dd></dd><dd>the page</dd></dl>
 
 <h2>Copyright</h2>
 

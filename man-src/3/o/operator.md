@@ -10,94 +10,28 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p>QuantLib::Array &#8211; 1-D array used in linear algebra. </p>
 <h2>Synopsis</h2>
 <pre><code>void swap (Array &amp;)
-
-
-
 Related Functions
-
 (Note that these are not member functions.)
-
-
 Real DotProduct (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;v)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;v)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator+ (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator- (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator* (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator* (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator* (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator/ (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator/ (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator/ (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Abs (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Sqrt (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Log (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Exp (const Array &amp;)
-
-
-
 void swap (Array &amp;, Array &amp;)
-
-
-
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</code></pre>
 <h3>Public Types</h3>
 <p>typedef Real <code>value_type</code> </p>
@@ -133,7 +67,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;) <code>Vector algebra</code><br />
  v += x and similar operation involving a scalar value are shortcuts for $ rall i : v_i = v_i + x $ v *= w and similar operation involving two vectors are shortcuts for $ rall i : v_i = v_i imes w_i $ <code>Precondition:</code></p>
 <dl>
-<dd>all arrays involved in an algebraic expression must have the same size.</dl>
+<dd>all arrays involved in an algebraic expression must have the same size.</dd></dl>
 <p> void swap (Array &amp;)</p>
 <p>Related Functions</p>
 <p>(Note that these are not member functions.)</p>
@@ -183,101 +117,35 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p> reverse_iterator <code>rend</code> ()<br />
  <code>Utilities</code> </p>
 <pre><code>void swap (Array &amp;)
-
-
-
 Related Functions
-
 (Note that these are not member functions.)
-
-
 Real DotProduct (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;v)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;v)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator+ (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator+ (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator- (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator- (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator* (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator* (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator* (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator/ (const Array &amp;, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; operator/ (const Array &amp;, Real)
-
-
-
 const Disposable&lt; Array &gt; operator/ (Real, const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Abs (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Sqrt (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Log (const Array &amp;)
-
-
-
 const Disposable&lt; Array &gt; Exp (const Array &amp;)
-
-
-
 void swap (Array &amp;, Array &amp;)
-
-
-
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</code></pre>
 <h2>Detailed Description</h2>
 <p>1-D array used in linear algebra. </p>
 <p> This class implements the concept of vector as used in linear algebra. As such, it is <code>not</code> meant to be used as a container &#8211; std::vector should be used instead. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>construction of arrays is checked in a number of cases</dl>
+<dd>construction of arrays is checked in a number of cases</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>Real DotProduct (const <code>Array</code> &amp;, const <code>Array</code> &amp;) [related]</h3>
 <h3>const <code>Disposable</code>&lt; <code>Array</code> &gt; operator+ (const <code>Array</code> &amp; v) [related]</h3>

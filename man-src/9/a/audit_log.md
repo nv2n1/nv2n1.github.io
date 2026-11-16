@@ -15,23 +15,23 @@ audit_log - Log an audit record
 <h2>Arguments</h2>
 
 <i>ctx</i>
-<dl><dd><dd>audit context</dl>
+<dl><dd></dd><dd>audit context</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>type of allocation</dl>
+<dl><dd>type of allocation</dd></dl>
  
 
  <i>type</i>
-<dl><dd>audit message type</dl>
+<dl><dd>audit message type</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>format string to use</dl>
+<dl><dd>format string to use</dd></dl>
  
 
  <i>...</i>
-<dl><dd>variable parameters matching the format string</dl>
+<dl><dd>variable parameters matching the format string</dd></dl>
 
 <h2>Description</h2>
 

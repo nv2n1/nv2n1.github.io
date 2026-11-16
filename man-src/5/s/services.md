@@ -16,17 +16,17 @@ description: "services – Internet network services list"
 <p> The location of the <code>services</code> file is defined by <code>_PATH_SERVICES</code> in <i>&lt;netdb.h&gt;</i>. This is usually set to <i>/etc/services</i>. </p>
 <p> Each line describes one service, and is of the form:</p>
 <dl>
-<dd><i>service-name&nbsp;<wbr>&nbsp;<wbr>&nbsp;port</i><code>/</code><i>protocol&nbsp;<wbr>&nbsp;<wbr>&nbsp;</i>[<i>aliases &#8230;</i>]</p>
-<dt>where:</p>
+<dd><i>service-name&nbsp;<wbr>&nbsp;<wbr>&nbsp;port</i><code>/</code><i>protocol&nbsp;<wbr>&nbsp;<wbr>&nbsp;</i>[<i>aliases &#8230;</i>]</dd>
+<dt>where:</dt>
 <dd>
-<dt><i>service-name</i></p>
-<dd>is the friendly name the service is known by and looked up under. It is case sensitive. Often, the client program is named after the <i>service-name</i>.</p>
-<dt><i>port</i></p>
-<dd>is the port number (in decimal) to use for this service.</p>
-<dt><i>protocol</i></p>
-<dd>is the type of protocol to be used. This field should match an entry in the <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5) file. Typical values include <code>tcp</code> and <code>udp</code>.</p>
-<dt><i>aliases</i></p>
-<dd>is an optional space or tab separated list of other names for this service. Again, the names are case sensitive.</dl>
+</dd><dt><i>service-name</i></dt>
+<dd>is the friendly name the service is known by and looked up under. It is case sensitive. Often, the client program is named after the <i>service-name</i>.</dd>
+<dt><i>port</i></dt>
+<dd>is the port number (in decimal) to use for this service.</dd>
+<dt><i>protocol</i></dt>
+<dd>is the type of protocol to be used. This field should match an entry in the <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5) file. Typical values include <code>tcp</code> and <code>udp</code>.</dd>
+<dt><i>aliases</i></dt>
+<dd>is an optional space or tab separated list of other names for this service. Again, the names are case sensitive.</dd></dl>
 <p> Either spaces or tabs may be used to separate the fields. </p>
 <p> Comments are started by the hash sign (#) and continue until the end of the line. Blank lines are skipped. </p>
 <p> The <i>service-name</i> should begin in the first column of the file, since leading spaces are not stripped. <i>service-names</i> can be any printable characters excluding space and tab. However, a conservative choice of characters should be used to minimize compatibility problems. For example, a-z, 0-9, and hyphen (-) would seem a sensible choice. </p>
@@ -36,10 +36,10 @@ description: "services – Internet network services list"
 <p> netstat 15/tcp qotd 17/tcp quote msp 18/tcp # message send protocol msp 18/udp # message send protocol chargen 19/tcp ttytst source chargen 19/udp ttytst source ftp 21/tcp # 22 &#8211; unassigned telnet 23/tcp</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/services</i></p>
-<dd>The Internet network services list</p>
-<dt><i>&lt;netdb.h&gt;</i></p>
-<dd>Definition of <code>_PATH_SERVICES</code></dl>
+<dt><i>/etc/services</i></dt>
+<dd>The Internet network services list</dd>
+<dt><i>&lt;netdb.h&gt;</i></dt>
+<dd>Definition of <code>_PATH_SERVICES</code></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-listen/">listen</a></code>(2), <code><a href="/docs/linux/man/3-endservent/">endservent</a></code>(3), <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3), <code><a href="/docs/linux/man/3-getservbyport/">getservbyport</a></code>(3), <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3), <code><a href="/docs/linux/man/3-setservent/">setservent</a></code>(3), <code>inetd.conf</code>(5), <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5), <code>inetd</code>(8) </p>
 <p> Assigned Numbers RFC, most recently RFC 1700, (AKA STD0002).</p>

@@ -23,12 +23,12 @@ description: "hwlocality_helper_find_misc – Finding objects, miscellaneous hel
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of objects returned in objs. </p>
+</dt><dd> the number of objects returned in objs. </dd>
 <p> 0 if src is an I/O object.</dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function requires the src object to have a CPU set.</dl>
+</dt><dd> This function requires the src object to have a CPU set.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_numanode_obj_by_os_index (<code>hwloc_topology_t</code> topology, unsigned os_index) [inline], [static]</h3>
 <p> Returns the object of type <code>HWLOC_OBJ_NUMANODE</code> with os_index. This function is useful for converting a nodeset into the NUMA node objects it contains. When retrieving the current binding (e.g. with <code>hwloc_get_membind_nodeset()</code>), one may iterate over the bits of the resulting nodeset with <code>hwloc_bitmap_foreach_begin()</code>, and find the corresponding NUMA nodes with this function.</p>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_obj_below_array_by_type (<code>hwloc_topology_t</code> topology, int nr, <code>hwloc_obj_type_t</code> * typev, unsigned * idxv) [inline], [static]</h3>
@@ -39,18 +39,18 @@ description: "hwlocality_helper_find_misc – Finding objects, miscellaneous hel
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function requires all these objects and the root object to have a CPU set.</dl>
+</dt><dd> This function requires all these objects and the root object to have a CPU set.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_obj_below_by_type (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_type_t</code> type1, unsigned idx1, <code>hwloc_obj_type_t</code> type2, unsigned idx2) [inline], [static]</h3>
 <p> Find an object below another object, both specified by types and indexes. Start from the top system object and find object of type type1 and logical index idx1. Then look below this object and find another object of type type2 and logical index idx2. Indexes are specified within the parent, not withing the entire system. </p>
 <p> For instance, if type1 is PACKAGE, idx1 is 2, type2 is CORE and idx2 is 3, return the fourth core object below the third package. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function requires these objects to have a CPU set.</dl>
+</dt><dd> This function requires these objects to have a CPU set.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_get_pu_obj_by_os_index (<code>hwloc_topology_t</code> topology, unsigned os_index) [inline], [static]</h3>
 <p> Returns the object of type <code>HWLOC_OBJ_PU</code> with os_index. This function is useful for converting a CPU set into the PU objects it contains. When retrieving the current binding (e.g. with <code>hwloc_get_cpubind()</code>), one may iterate over the bits of the resulting CPU set with <code>hwloc_bitmap_foreach_begin()</code>, and find the corresponding PUs with this function.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

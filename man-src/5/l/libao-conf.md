@@ -15,20 +15,20 @@ description: "libao.conf – configuration for libao."
 <h2>File Format</h2>
 <p>The file consists of comments and key-value pairs. Comments are on separate lines that start with a <code>#</code> symbol. The key-value pairs are of the form:</p>
 <dl>
-<dd><code>key=value</code></dl>
+<dd><code>key=value</code></dd></dl>
 <p> where <code>key</code> contains no whitespace and no equal signs. <code>value</code> will be all of the text after the equal sign until (but not including) the ending newline. Beware of extra spaces at the end of the line! They will probably be interpreted as part of the option value. </p>
 <p> The following is a list of valid global option keys. Any driver specific option may be used as well as those keys.</p>
 <dl>
 <dd>
-<dl>
-<dt>default_driver</p>
-<dd>The short name of the driver libao should use by default. Valid values include (not all are available on every platform): pulse, oss, esd, arts, alsa, nas, irix, sun, and sndio. Note that &quot;sun&quot; is used on many BSD systems as well as Solaris.</p>
-<dt>debug (Value optional/ignored)</p>
-<dd>Sets all the drivers as well as AO itself into debugging output mode. Unlike passing the debug option to a driver, debug will also print debugging information from driver loading and testing.</p>
-<dt>quiet (Value optional/ignored)</p>
-<dd>Sets all the drivers as well as AO itself into silent mode. Errors will return only error codes; neither ao nor the drivers will print any output whatsoever to stderr.</p>
-<dt>verbose (Value optional/ignored)</p>
-<dd>Sets all the drivers as well as AO itself into verbose mode.</dl>
+</dd><dl>
+<dt>default_driver</dt>
+<dd>The short name of the driver libao should use by default. Valid values include (not all are available on every platform): pulse, oss, esd, arts, alsa, nas, irix, sun, and sndio. Note that &quot;sun&quot; is used on many BSD systems as well as Solaris.</dd>
+<dt>debug (Value optional/ignored)</dt>
+<dd>Sets all the drivers as well as AO itself into debugging output mode. Unlike passing the debug option to a driver, debug will also print debugging information from driver loading and testing.</dd>
+<dt>quiet (Value optional/ignored)</dt>
+<dd>Sets all the drivers as well as AO itself into silent mode. Errors will return only error codes; neither ao nor the drivers will print any output whatsoever to stderr.</dd>
+<dt>verbose (Value optional/ignored)</dt>
+<dd>Sets all the drivers as well as AO itself into verbose mode.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p>Here is an example <code>libao.conf</code> that forces the OSS driver to be used by default: </p>

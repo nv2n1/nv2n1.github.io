@@ -19,18 +19,18 @@ description: "ffmpeg – ffmpeg video converter"
 <p> As a general rule, options are applied to the next specified file. Therefore, order is important, and you can have the same option on the command line multiple times. Each occurrence is then applied to the next input or output file. Exceptions from this rule are the global options (e.g. verbosity level), which should be specified first. </p>
 <p> Do not mix input and output files &#8212; first specify all input files, then all output files. Also do not mix options which belong to different files. All options apply <font SIZE="-1">ONLY</font> to the next input or output file and are reset between files.</p>
 <dl>
-<dt>&bull;</p>
-<dd> To set the video bitrate of the output file to 64 kbit/s: </p>
+<dt>&bull;</dt>
+<dd> To set the video bitrate of the output file to 64 kbit/s: </dd>
 <pre>
         ffmpeg -i input.avi -b:v 64k -bufsize 64k output.avi
 </pre>
-<dt>&bull;</p>
-<dd> To force the frame rate of the output file to 24 fps: </p>
+<dt>&bull;</dt>
+<dd> To force the frame rate of the output file to 24 fps: </dd>
 <pre>
         ffmpeg -i input.avi -r 24 output.avi
 </pre>
-<dt>&bull;</p>
-<dd> To force the frame rate of the input file (valid for raw formats only) to 1 fps and the frame rate of the output file to 24 fps: </p>
+<dt>&bull;</dt>
+<dd> To force the frame rate of the input file (valid for raw formats only) to 1 fps and the frame rate of the output file to 24 fps: </dd>
 <pre>
         ffmpeg -r 1 -i input.m2v -r 24 output.avi
 </pre>
@@ -113,12 +113,12 @@ _______ ______________ | | | |
 <p> In the absence of any map options for a particular output file, ffmpeg inspects the output format to check which type of streams can be included in it, viz. video, audio and/or subtitles. For each acceptable stream type, ffmpeg will pick one stream, when available, from among all the inputs. </p>
 <p> It will select that stream based upon the following criteria:</p>
 <dl>
-<dt>&bull;</p>
-<dd> for video, it is the stream with the highest resolution,</p>
-<dt>&bull;</p>
-<dd> for audio, it is the stream with the most channels,</p>
-<dt>&bull;</p>
-<dd> for subtitles, it is the first subtitle stream found but there&#8217;s a caveat. The output format&#8217;s default subtitle encoder can be either text-based or image-based, and only a subtitle stream of the same type will be chosen.</dl>
+<dt>&bull;</dt>
+<dd> for video, it is the stream with the highest resolution,</dd>
+<dt>&bull;</dt>
+<dd> for audio, it is the stream with the most channels,</dd>
+<dt>&bull;</dt>
+<dd> for subtitles, it is the first subtitle stream found but there&#8217;s a caveat. The output format&#8217;s default subtitle encoder can be either text-based or image-based, and only a subtitle stream of the same type will be chosen.</dd></dl>
 <p> In the case where several streams of the same type rate equally, the stream with the lowest index is chosen. </p>
 <p> Data or attachment streams are not automatically selected and can only be included using <tt>&quot;-map&quot;</tt>. </p>
 <p> <i>Manual stream selection</i> </p>
@@ -136,14 +136,12 @@ _______ ______________ | | | |
         input file 'A.avi'
               stream 0: video 640x360
               stream 1: audio 2 channels
-        
         input file 'B.mp4'
               stream 0: video 1920x1080
               stream 1: audio 2 channels
               stream 2: subtitles (text)
               stream 3: audio 5.1 channels
               stream 4: subtitles (text)
-        
         input file 'C.mkv'
               stream 0: video 1280x720
               stream 1: audio 2 channels
@@ -193,136 +191,131 @@ _______ ______________ | | | |
 <p> An empty stream specifier matches all streams. For example, <tt>&quot;-codec copy&quot;</tt> or <tt>&quot;-codec: copy&quot;</tt> would copy all the streams without reencoding. </p>
 <p> Possible forms of stream specifiers are:</p>
 <dl>
-<dt><i>stream_index</i></p>
-<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program <font SIZE="-1">ID</font> is also specified. In this case it is based on the ordering of the streams in the program.</p>
-<dt><i>stream_type</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></p>
-<dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>additional_stream_specifier</i> is used, then it matches streams which both have this type and match the <i>additional_stream_specifier</i>. Otherwise, it matches all streams of the specified type.</p>
-<dt><code>p:</code><i>program_id</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></p>
-<dd> Matches streams which are in the program with the id <i>program_id</i>. If <i>additional_stream_specifier</i> is used, then it matches streams which both are part of the program and match the <i>additional_stream_specifier</i>.</p>
-<dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></p>
-<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</p>
-<dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></p>
-<dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</p>
-<dt><code>u</code></p>
-<dd> Matches streams with usable configuration, the codec must be defined and the essential information such as video dimension or audio sample rate must be present. </p>
+<dt><i>stream_index</i></dt>
+<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program <font SIZE="-1">ID</font> is also specified. In this case it is based on the ordering of the streams in the program.</dd>
+<dt><i>stream_type</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
+<dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>additional_stream_specifier</i> is used, then it matches streams which both have this type and match the <i>additional_stream_specifier</i>. Otherwise, it matches all streams of the specified type.</dd>
+<dt><code>p:</code><i>program_id</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
+<dd> Matches streams which are in the program with the id <i>program_id</i>. If <i>additional_stream_specifier</i> is used, then it matches streams which both are part of the program and match the <i>additional_stream_specifier</i>.</dd>
+<dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></dt>
+<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</dd>
+<dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></dt>
+<dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</dd>
+<dt><code>u</code></dt>
+<dd> Matches streams with usable configuration, the codec must be defined and the essential information such as video dimension or audio sample rate must be present. </dd>
 <p> Note that in <code>ffmpeg</code>, matching by metadata will only work properly for input files.</dl>
 <h3>Generic options</h3>
 <p> These options are shared amongst the ff* tools.</p>
 <dl>
-<dt><code>-L</code></p>
-<dd> Show license.</p>
-<dt><code>-h, -?, -help, &#8211;help [</code><i>arg</i><code>]</code></p>
-<dd> Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown. </p>
+<dt><code>-L</code></dt>
+<dd> Show license.</dd>
+<dt><code>-h, -?, -help, &#8211;help [</code><i>arg</i><code>]</code></dt>
+<dd> Show help. An optional parameter may be specified to print help about a specific item. If no argument is specified, only basic (non advanced) tool options are shown. </dd>
 <p> Possible values of <i>arg</i> are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>long</code></p>
-<dd> Print advanced tool options in addition to the basic tool options.</p>
-<dt><code>full</code></p>
-<dd> Print complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.</p>
-<dt><code>decoder=</code><i>decoder_name</i></p>
-<dd> Print detailed information about the decoder named <i>decoder_name</i>. Use the <code>-decoders</code> option to get a list of all decoders.</p>
-<dt><code>encoder=</code><i>encoder_name</i></p>
-<dd> Print detailed information about the encoder named <i>encoder_name</i>. Use the <code>-encoders</code> option to get a list of all encoders.</p>
-<dt><code>demuxer=</code><i>demuxer_name</i></p>
-<dd> Print detailed information about the demuxer named <i>demuxer_name</i>. Use the <code>-formats</code> option to get a list of all demuxers and muxers.</p>
-<dt><code>muxer=</code><i>muxer_name</i></p>
-<dd> Print detailed information about the muxer named <i>muxer_name</i>. Use the <code>-formats</code> option to get a list of all muxers and demuxers.</p>
-<dt><code>filter=</code><i>filter_name</i></p>
-<dd> Print detailed information about the filter named <i>filter_name</i>. Use the <code>-filters</code> option to get a list of all filters.</p>
-<dt><code>bsf=</code><i>bitstream_filter_name</i></p>
-<dd> Print detailed information about the bitstream filter named <i>bitstream_filter_name</i>. Use the <code>-bsfs</code> option to get a list of all bitstream filters.</p>
-<dt><code>protocol=</code><i>protocol_name</i></p>
-<dd> Print detailed information about the protocol named <i>protocol_name</i>. Use the <code>-protocols</code> option to get a list of all protocols.</dl>
+<dt><code>long</code></dt>
+<dd> Print advanced tool options in addition to the basic tool options.</dd>
+<dt><code>full</code></dt>
+<dd> Print complete list of options, including shared and private options for encoders, decoders, demuxers, muxers, filters, etc.</dd>
+<dt><code>decoder=</code><i>decoder_name</i></dt>
+<dd> Print detailed information about the decoder named <i>decoder_name</i>. Use the <code>-decoders</code> option to get a list of all decoders.</dd>
+<dt><code>encoder=</code><i>encoder_name</i></dt>
+<dd> Print detailed information about the encoder named <i>encoder_name</i>. Use the <code>-encoders</code> option to get a list of all encoders.</dd>
+<dt><code>demuxer=</code><i>demuxer_name</i></dt>
+<dd> Print detailed information about the demuxer named <i>demuxer_name</i>. Use the <code>-formats</code> option to get a list of all demuxers and muxers.</dd>
+<dt><code>muxer=</code><i>muxer_name</i></dt>
+<dd> Print detailed information about the muxer named <i>muxer_name</i>. Use the <code>-formats</code> option to get a list of all muxers and demuxers.</dd>
+<dt><code>filter=</code><i>filter_name</i></dt>
+<dd> Print detailed information about the filter named <i>filter_name</i>. Use the <code>-filters</code> option to get a list of all filters.</dd>
+<dt><code>bsf=</code><i>bitstream_filter_name</i></dt>
+<dd> Print detailed information about the bitstream filter named <i>bitstream_filter_name</i>. Use the <code>-bsfs</code> option to get a list of all bitstream filters.</dd>
+<dt><code>protocol=</code><i>protocol_name</i></dt>
+<dd> Print detailed information about the protocol named <i>protocol_name</i>. Use the <code>-protocols</code> option to get a list of all protocols.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-version</code></p>
-<dd> Show version.</p>
-<dt><code>-buildconf</code></p>
-<dd> Show the build configuration, one option per line.</p>
-<dt><code>-formats</code></p>
-<dd> Show available formats (including devices).</p>
-<dt><code>-demuxers</code></p>
-<dd> Show available demuxers.</p>
-<dt><code>-muxers</code></p>
-<dd> Show available muxers.</p>
-<dt><code>-devices</code></p>
-<dd> Show available devices.</p>
-<dt><code>-codecs</code></p>
-<dd> Show all codecs known to libavcodec. </p>
+</dl>
+<dt><code>-version</code></dt>
+<dd> Show version.</dd>
+<dt><code>-buildconf</code></dt>
+<dd> Show the build configuration, one option per line.</dd>
+<dt><code>-formats</code></dt>
+<dd> Show available formats (including devices).</dd>
+<dt><code>-demuxers</code></dt>
+<dd> Show available demuxers.</dd>
+<dt><code>-muxers</code></dt>
+<dd> Show available muxers.</dd>
+<dt><code>-devices</code></dt>
+<dd> Show available devices.</dd>
+<dt><code>-codecs</code></dt>
+<dd> Show all codecs known to libavcodec. </dd>
 <p> Note that the term &#8216;codec&#8217; is used throughout this documentation as a shortcut for what is more correctly called a media bitstream format.</p>
-<dt><code>-decoders</code></p>
-<dd> Show available decoders.</p>
-<dt><code>-encoders</code></p>
-<dd> Show all available encoders.</p>
-<dt><code>-bsfs</code></p>
-<dd> Show available bitstream filters.</p>
-<dt><code>-protocols</code></p>
-<dd> Show available protocols.</p>
-<dt><code>-filters</code></p>
-<dd> Show available libavfilter filters.</p>
-<dt><code>-pix_fmts</code></p>
-<dd> Show available pixel formats.</p>
-<dt><code>-sample_fmts</code></p>
-<dd> Show available sample formats.</p>
-<dt><code>-layouts</code></p>
-<dd> Show channel names and standard channel layouts.</p>
-<dt><code>-colors</code></p>
-<dd> Show recognized color names.</p>
-<dt><code>-sources</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></p>
-<dd> Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete. </p>
+<dt><code>-decoders</code></dt>
+<dd> Show available decoders.</dd>
+<dt><code>-encoders</code></dt>
+<dd> Show all available encoders.</dd>
+<dt><code>-bsfs</code></dt>
+<dd> Show available bitstream filters.</dd>
+<dt><code>-protocols</code></dt>
+<dd> Show available protocols.</dd>
+<dt><code>-filters</code></dt>
+<dd> Show available libavfilter filters.</dd>
+<dt><code>-pix_fmts</code></dt>
+<dd> Show available pixel formats.</dd>
+<dt><code>-sample_fmts</code></dt>
+<dd> Show available sample formats.</dd>
+<dt><code>-layouts</code></dt>
+<dd> Show channel names and standard channel layouts.</dd>
+<dt><code>-colors</code></dt>
+<dd> Show recognized color names.</dd>
+<dt><code>-sources</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></dt>
+<dd> Show autodetected sources of the input device. Some devices may provide system-dependent source names that cannot be autodetected. The returned list cannot be assumed to be always complete. </dd>
 <pre>
         ffmpeg -sources pulse,server=192.168.0.4
 </pre>
-<dt><code>-sinks</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></p>
-<dd> Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete. </p>
+<dt><code>-sinks</code> <i>device</i><code>[,</code><i>opt1</i><code>=</code><i>val1</i><code>[,</code><i>opt2</i><code>=</code><i>val2</i><code>]&#8230;]</code></dt>
+<dd> Show autodetected sinks of the output device. Some devices may provide system-dependent sink names that cannot be autodetected. The returned list cannot be assumed to be always complete. </dd>
 <pre>
         ffmpeg -sinks pulse,server=192.168.0.4
 </pre>
-<dt><code>-loglevel [</code><i>flags</i><code>+]</code><i>loglevel</i> <code>| -v [</code><i>flags</i><code>+]</code><i>loglevel</i></p>
-<dd> Set logging level and flags used by the library. </p>
+<dt><code>-loglevel [</code><i>flags</i><code>+]</code><i>loglevel</i> <code>| -v [</code><i>flags</i><code>+]</code><i>loglevel</i></dt>
+<dd> Set logging level and flags used by the library. </dd>
 <p> The optional <i>flags</i> prefix can consist of the following values:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>repeat</code></p>
-<dd> Indicates that repeated log output should not be compressed to the first line and the &#8220;Last message repeated n times&#8221; line will be omitted.</p>
-<dt><code>level</code></p>
-<dd> Indicates that log output should add a <tt>&quot;[level]&quot;</tt> prefix to each message line. This can be used as an alternative to log coloring, e.g. when dumping the log to file.</dl>
+<dt><code>repeat</code></dt>
+<dd> Indicates that repeated log output should not be compressed to the first line and the &#8220;Last message repeated n times&#8221; line will be omitted.</dd>
+<dt><code>level</code></dt>
+<dd> Indicates that log output should add a <tt>&quot;[level]&quot;</tt> prefix to each message line. This can be used as an alternative to log coloring, e.g. when dumping the log to file.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Flags can also be used alone by adding a &#8216;+&#8217;/&#8217;-&#8216; prefix to set/reset a single flag without affecting other <i>flags</i> or changing <i>loglevel</i>. When setting both <i>flags</i> and <i>loglevel</i>, a &#8216;+&#8217; separator is expected between the last <i>flags</i> value and before <i>loglevel</i>. </p>
 <p> <i>loglevel</i> is a string or a number containing one of the following values:</p>
-<dl>
-<dt><code>quiet, -8</code></p>
-<dd> Show nothing at all; be silent.</p>
-<dt><code>panic, 0</code></p>
-<dd> Only show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.</p>
-<dt><code>fatal, 8</code></p>
-<dd> Only show fatal errors. These are errors after which the process absolutely cannot continue.</p>
-<dt><code>error, 16</code></p>
-<dd> Show all errors, including ones which can be recovered from.</p>
-<dt><code>warning, 24</code></p>
-<dd> Show all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.</p>
-<dt><code>info, 32</code></p>
-<dd> Show informative messages during processing. This is in addition to warnings and errors. This is the default value.</p>
-<dt><code>verbose, 40</code></p>
-<dd> Same as <tt>&quot;info&quot;</tt>, except more verbose.</p>
-<dt><code>debug, 48</code></p>
-<dd> Show everything, including debugging information.</p>
-<dt><code>trace, 56</code></p>
-<dd></dl>
+</dd><dl>
+<dt><code>quiet, -8</code></dt>
+<dd> Show nothing at all; be silent.</dd>
+<dt><code>panic, 0</code></dt>
+<dd> Only show fatal errors which could lead the process to crash, such as an assertion failure. This is not currently used for anything.</dd>
+<dt><code>fatal, 8</code></dt>
+<dd> Only show fatal errors. These are errors after which the process absolutely cannot continue.</dd>
+<dt><code>error, 16</code></dt>
+<dd> Show all errors, including ones which can be recovered from.</dd>
+<dt><code>warning, 24</code></dt>
+<dd> Show all warnings and errors. Any message related to possibly incorrect or unexpected events will be shown.</dd>
+<dt><code>info, 32</code></dt>
+<dd> Show informative messages during processing. This is in addition to warnings and errors. This is the default value.</dd>
+<dt><code>verbose, 40</code></dt>
+<dd> Same as <tt>&quot;info&quot;</tt>, except more verbose.</dd>
+<dt><code>debug, 48</code></dt>
+<dd> Show everything, including debugging information.</dd>
+<dt><code>trace, 56</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> For example to enable repeated log output, add the <tt>&quot;level&quot;</tt> prefix, and set <i>loglevel</i> to <tt>&quot;verbose&quot;</tt>: </p>
 <pre>
         ffmpeg -loglevel repeat+level+verbose -i input output
@@ -331,33 +324,31 @@ _______ ______________ | | | |
 <pre>
         ffmpeg [...] -loglevel +repeat
 </pre>
-<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>.</dl>
-<dt><code>-report</code></p>
-<dd> Dump full command line and log output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel debug&quot;</tt>. </p>
+<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>.</dd></dl>
+<dt><code>-report</code></dt>
+<dd> Dump full command line and log output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel debug&quot;</tt>. </dd>
 <p> Setting the environment variable <font SIZE="-1"><code>FFREPORT</code></font> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
 <p> The following options are recognized:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>file</code></p>
-<dd> set the file name to use for the report; <tt>%p</tt> is expanded to the name of the program, <tt>%t</tt> is expanded to a timestamp, <tt>&quot;%%&quot;</tt> is expanded to a plain <tt>&quot;%&quot;</tt></p>
-<dt><code>level</code></p>
-<dd> set the log verbosity level using a numerical value (see <tt>&quot;-loglevel&quot;</tt>).</dl>
+<dt><code>file</code></dt>
+<dd> set the file name to use for the report; <tt>%p</tt> is expanded to the name of the program, <tt>%t</tt> is expanded to a timestamp, <tt>&quot;%%&quot;</tt> is expanded to a plain <tt>&quot;%&quot;</tt></dd>
+<dt><code>level</code></dt>
+<dd> set the log verbosity level using a numerical value (see <tt>&quot;-loglevel&quot;</tt>).</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> For example, to output a report to a file named <i>ffreport.log</i> using a log level of <tt>32</tt> (alias for log level <tt>&quot;info&quot;</tt>): </p>
 <pre>
         FFREPORT=file=ffreport.log:level=32 ffmpeg -i input output
 </pre>
-<p> Errors in parsing the environment variable are not fatal, and will not appear in the report.</dl>
-<dt><code>-hide_banner</code></p>
-<dd> Suppress printing banner. </p>
+<p> Errors in parsing the environment variable are not fatal, and will not appear in the report.</dd></dl>
+<dt><code>-hide_banner</code></dt>
+<dd> Suppress printing banner. </dd>
 <p> All FFmpeg tools will normally show a copyright notice, build options and library versions. This option can be used to suppress printing this information.</p>
-<dt><code>-cpuflags flags (</code><i>global</i><code>)</code></p>
-<dd> Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you&#8217;re doing. </p>
+<dt><code>-cpuflags flags (</code><i>global</i><code>)</code></dt>
+<dd> Allows setting and clearing cpu flags. This option is intended for testing. Do not use it unless you know what you&#8217;re doing. </dd>
 <pre>
         ffmpeg -cpuflags -sse+mmx ...
         ffmpeg -cpuflags mmx ...
@@ -365,153 +356,135 @@ _______ ______________ | | | |
 </pre>
 <p> Possible flags for this option are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>x86</code></p>
+<dt><code>x86</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>mmx</code></dt>
 <dd>
-<dl>
-<dt><code>mmx</code></p>
+</dd><dt><code>mmxext</code></dt>
 <dd>
-<dt><code>mmxext</code></p>
+</dd><dt><code>sse</code></dt>
 <dd>
-<dt><code>sse</code></p>
+</dd><dt><code>sse2</code></dt>
 <dd>
-<dt><code>sse2</code></p>
+</dd><dt><code>sse2slow</code></dt>
 <dd>
-<dt><code>sse2slow</code></p>
+</dd><dt><code>sse3</code></dt>
 <dd>
-<dt><code>sse3</code></p>
+</dd><dt><code>sse3slow</code></dt>
 <dd>
-<dt><code>sse3slow</code></p>
+</dd><dt><code>ssse3</code></dt>
 <dd>
-<dt><code>ssse3</code></p>
+</dd><dt><code>atom</code></dt>
 <dd>
-<dt><code>atom</code></p>
+</dd><dt><code>sse4.1</code></dt>
 <dd>
-<dt><code>sse4.1</code></p>
+</dd><dt><code>sse4.2</code></dt>
 <dd>
-<dt><code>sse4.2</code></p>
+</dd><dt><code>avx</code></dt>
 <dd>
-<dt><code>avx</code></p>
+</dd><dt><code>avx2</code></dt>
 <dd>
-<dt><code>avx2</code></p>
+</dd><dt><code>xop</code></dt>
 <dd>
-<dt><code>xop</code></p>
+</dd><dt><code>fma3</code></dt>
 <dd>
-<dt><code>fma3</code></p>
+</dd><dt><code>fma4</code></dt>
 <dd>
-<dt><code>fma4</code></p>
+</dd><dt><code>3dnow</code></dt>
 <dd>
-<dt><code>3dnow</code></p>
+</dd><dt><code>3dnowext</code></dt>
 <dd>
-<dt><code>3dnowext</code></p>
+</dd><dt><code>bmi1</code></dt>
 <dd>
-<dt><code>bmi1</code></p>
+</dd><dt><code>bmi2</code></dt>
 <dd>
-<dt><code>bmi2</code></p>
-<dd>
-<dt><code>cmov</code></p>
-<dd></dl>
+</dd><dt><code>cmov</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><font SIZE="-1"><code>ARM</code></font></p>
+</dl>
+<dt><font SIZE="-1"><code>ARM</code></font></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>armv5te</code></dt>
 <dd>
-<dl>
-<dt><code>armv5te</code></p>
+</dd><dt><code>armv6</code></dt>
 <dd>
-<dt><code>armv6</code></p>
+</dd><dt><code>armv6t2</code></dt>
 <dd>
-<dt><code>armv6t2</code></p>
+</dd><dt><code>vfp</code></dt>
 <dd>
-<dt><code>vfp</code></p>
+</dd><dt><code>vfpv3</code></dt>
 <dd>
-<dt><code>vfpv3</code></p>
+</dd><dt><code>neon</code></dt>
 <dd>
-<dt><code>neon</code></p>
-<dd>
-<dt><code>setend</code></p>
-<dd></dl>
+</dd><dt><code>setend</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>AArch64</code></p>
+</dl>
+<dt><code>AArch64</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>armv8</code></dt>
 <dd>
-<dl>
-<dt><code>armv8</code></p>
+</dd><dt><code>vfp</code></dt>
 <dd>
-<dt><code>vfp</code></p>
-<dd>
-<dt><code>neon</code></p>
-<dd></dl>
+</dd><dt><code>neon</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>PowerPC</code></p>
+</dl>
+<dt><code>PowerPC</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><code>altivec</code></p>
-<dd></dl>
+<dt><code>altivec</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>Specific Processors</code></p>
+</dl>
+<dt><code>Specific Processors</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt><code>pentium2</code></dt>
 <dd>
-<dl>
-<dt><code>pentium2</code></p>
+</dd><dt><code>pentium3</code></dt>
 <dd>
-<dt><code>pentium3</code></p>
+</dd><dt><code>pentium4</code></dt>
 <dd>
-<dt><code>pentium4</code></p>
+</dd><dt><code>k6</code></dt>
 <dd>
-<dt><code>k6</code></p>
+</dd><dt><code>k62</code></dt>
 <dd>
-<dt><code>k62</code></p>
+</dd><dt><code>athlon</code></dt>
 <dd>
-<dt><code>athlon</code></p>
+</dd><dt><code>athlonxp</code></dt>
 <dd>
-<dt><code>athlonxp</code></p>
-<dd>
-<dt><code>k8</code></p>
-<dd></dl>
+</dd><dt><code>k8</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-max_alloc</code> <i>bytes</i></p>
-<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is <font SIZE="-1">INT_MAX.</font></dl>
+</dl>
+<dt><code>-max_alloc</code> <i>bytes</i></dt>
+<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is <font SIZE="-1">INT_MAX.</font></dd></dl>
 <h3>AVOptions</h3>
 <p> These options are provided directly by the libavformat, libavdevice and libavcodec libraries. To see the list of available AVOptions, use the <code>-help</code> option. They are separated into two categories:</p>
 <dl>
-<dt><code>generic</code></p>
-<dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</p>
-<dt><code>private</code></p>
-<dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dl>
+<dt><code>generic</code></dt>
+<dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</dd>
+<dt><code>private</code></dt>
+<dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dd></dl>
 <p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an <font SIZE="-1">MP3</font> file, use the <code>id3v2_version</code> private option of the <font SIZE="-1">MP3</font> muxer: </p>
 <pre>
         ffmpeg -i input.flac -id3v2_version 3 out.mp3
@@ -525,20 +498,20 @@ _______ ______________ | | | |
 <p> Note: the old undocumented way of specifying per-stream AVOptions by prepending v/a/s to the options name is now obsolete and will be removed soon.</p>
 <h3>Main options</h3>
 <dl>
-<dt><code>-f</code> <i>fmt</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> Force input or output file format. The format is normally auto detected for input files and guessed from the file extension for output files, so this option is not needed in most cases.</p>
-<dt><code>-i</code> <i>url</i> <code>(</code><i>input</i><code>)</code></p>
-<dd> input file url</p>
-<dt><code>-y (</code><i>global</i><code>)</code></p>
-<dd> Overwrite output files without asking.</p>
-<dt><code>-n (</code><i>global</i><code>)</code></p>
-<dd> Do not overwrite output files, and exit immediately if a specified output file already exists.</p>
-<dt><code>-stream_loop</code> <i>number</i> <code>(</code><i>input</i><code>)</code></p>
-<dd> Set number of times input stream shall be looped. Loop 0 means no loop, loop -1 means infinite loop.</p>
-<dt><code>-c[:</code><i>stream_specifier</i><code>]</code> <i>codec</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
+<dt><code>-f</code> <i>fmt</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> Force input or output file format. The format is normally auto detected for input files and guessed from the file extension for output files, so this option is not needed in most cases.</dd>
+<dt><code>-i</code> <i>url</i> <code>(</code><i>input</i><code>)</code></dt>
+<dd> input file url</dd>
+<dt><code>-y (</code><i>global</i><code>)</code></dt>
+<dd> Overwrite output files without asking.</dd>
+<dt><code>-n (</code><i>global</i><code>)</code></dt>
+<dd> Do not overwrite output files, and exit immediately if a specified output file already exists.</dd>
+<dt><code>-stream_loop</code> <i>number</i> <code>(</code><i>input</i><code>)</code></dt>
+<dd> Set number of times input stream shall be looped. Loop 0 means no loop, loop -1 means infinite loop.</dd>
+<dt><code>-c[:</code><i>stream_specifier</i><code>]</code> <i>codec</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
 <dd>
-<dt><code>-codec[:</code><i>stream_specifier</i><code>]</code> <i>codec</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Select an encoder (when used before an output file) or a decoder (when used before an input file) for one or more streams. <i>codec</i> is the name of a decoder/encoder or a special value <tt>&quot;copy&quot;</tt> (output only) to indicate that the stream is not to be re-encoded. </p>
+</dd><dt><code>-codec[:</code><i>stream_specifier</i><code>]</code> <i>codec</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Select an encoder (when used before an output file) or a decoder (when used before an input file) for one or more streams. <i>codec</i> is the name of a decoder/encoder or a special value <tt>&quot;copy&quot;</tt> (output only) to indicate that the stream is not to be re-encoded. </dd>
 <p> For example </p>
 <pre>
         ffmpeg -i INPUT -map 0 -c:v libx264 -c:a copy OUTPUT
@@ -549,33 +522,33 @@ _______ ______________ | | | |
         ffmpeg -i INPUT -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis OUTPUT
 </pre>
 <p> will copy all the streams except the second video, which will be encoded with libx264, and the 138th audio, which will be encoded with libvorbis.</p>
-<dt><code>-t</code> <i>duration</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> When used as an input option (before <tt>&quot;-i&quot;</tt>), limit the <i>duration</i> of data read from the input file. </p>
+<dt><code>-t</code> <i>duration</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> When used as an input option (before <tt>&quot;-i&quot;</tt>), limit the <i>duration</i> of data read from the input file. </dd>
 <p> When used as an output option (before an output url), stop writing the output after its duration reaches <i>duration</i>. </p>
 <p> <i>duration</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>. </p>
 <p> -to and -t are mutually exclusive and -t has priority.</p>
-<dt><code>-to</code> <i>position</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> Stop writing the output or reading the input at <i>position</i>. <i>position</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>. </p>
+<dt><code>-to</code> <i>position</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> Stop writing the output or reading the input at <i>position</i>. <i>position</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>. </dd>
 <p> -to and -t are mutually exclusive and -t has priority.</p>
-<dt><code>-fs</code> <i>limit_size</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the file size limit, expressed in bytes. No further chunk of bytes is written after the limit is exceeded. The size of the output file is slightly more than the requested file size.</p>
-<dt><code>-ss</code> <i>position</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> When used as an input option (before <tt>&quot;-i&quot;</tt>), seeks in this input file to <i>position</i>. Note that in most formats it is not possible to seek exactly, so <code>ffmpeg</code> will seek to the closest seek point before <i>position</i>. When transcoding and <code>-accurate_seek</code> is enabled (the default), this extra segment between the seek point and <i>position</i> will be decoded and discarded. When doing stream copy or when <code>-noaccurate_seek</code> is used, it will be preserved. </p>
+<dt><code>-fs</code> <i>limit_size</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the file size limit, expressed in bytes. No further chunk of bytes is written after the limit is exceeded. The size of the output file is slightly more than the requested file size.</dd>
+<dt><code>-ss</code> <i>position</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> When used as an input option (before <tt>&quot;-i&quot;</tt>), seeks in this input file to <i>position</i>. Note that in most formats it is not possible to seek exactly, so <code>ffmpeg</code> will seek to the closest seek point before <i>position</i>. When transcoding and <code>-accurate_seek</code> is enabled (the default), this extra segment between the seek point and <i>position</i> will be decoded and discarded. When doing stream copy or when <code>-noaccurate_seek</code> is used, it will be preserved. </dd>
 <p> When used as an output option (before an output url), decodes but discards input until the timestamps reach <i>position</i>. </p>
 <p> <i>position</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>.</p>
-<dt><code>-sseof</code> <i>position</i> <code>(</code><i>input</i><code>)</code></p>
-<dd> Like the <tt>&quot;-ss&quot;</tt> option but relative to the &#8220;end of file&#8221;. That is negative values are earlier in the file, 0 is at <font SIZE="-1">EOF.</font></p>
-<dt><code>-itsoffset</code> <i>offset</i> <code>(</code><i>input</i><code>)</code></p>
-<dd> Set the input time offset. </p>
+<dt><code>-sseof</code> <i>position</i> <code>(</code><i>input</i><code>)</code></dt>
+<dd> Like the <tt>&quot;-ss&quot;</tt> option but relative to the &#8220;end of file&#8221;. That is negative values are earlier in the file, 0 is at <font SIZE="-1">EOF.</font></dd>
+<dt><code>-itsoffset</code> <i>offset</i> <code>(</code><i>input</i><code>)</code></dt>
+<dd> Set the input time offset. </dd>
 <p> <i>offset</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>. </p>
 <p> The offset is added to the timestamps of the input files. Specifying a positive offset means that the corresponding streams are delayed by the time duration specified in <i>offset</i>.</p>
-<dt><code>-itsscale</code> <i>scale</i> <code>(</code><i>input,per-stream</i><code>)</code></p>
-<dd> Rescale input timestamps. <i>scale</i> should be a floating point number.</p>
-<dt><code>-timestamp</code> <i>date</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the recording timestamp in the container. </p>
+<dt><code>-itsscale</code> <i>scale</i> <code>(</code><i>input,per-stream</i><code>)</code></dt>
+<dd> Rescale input timestamps. <i>scale</i> should be a floating point number.</dd>
+<dt><code>-timestamp</code> <i>date</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the recording timestamp in the container. </dd>
 <p> <i>date</i> must be a date specification, see <code>the Date section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>.</p>
-<dt><code>-metadata[:metadata_specifier]</code> <i>key</i><code>=</code><i>value</i> <code>(</code><i>output,per-metadata</i><code>)</code></p>
-<dd> Set a metadata key/value pair. </p>
+<dt><code>-metadata[:metadata_specifier]</code> <i>key</i><code>=</code><i>value</i> <code>(</code><i>output,per-metadata</i><code>)</code></dt>
+<dd> Set a metadata key/value pair. </dd>
 <p> An optional <i>metadata_specifier</i> may be given to set metadata on streams, chapters or programs. See <tt>&quot;-map_metadata&quot;</tt> documentation for details. </p>
 <p> This option overrides metadata set with <tt>&quot;-map_metadata&quot;</tt>. It is also possible to delete metadata by using an empty value. </p>
 <p> For example, for setting the title in the output file: </p>
@@ -586,48 +559,46 @@ _______ ______________ | | | |
 <pre>
         ffmpeg -i INPUT -metadata:s:a:0 language=eng OUTPUT
 </pre>
-<dt><code>-disposition[:stream_specifier]</code> <i>value</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Sets the disposition for a stream. </p>
+<dt><code>-disposition[:stream_specifier]</code> <i>value</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Sets the disposition for a stream. </dd>
 <p> This option overrides the disposition copied from the input stream. It is also possible to delete the disposition by setting it to 0. </p>
 <p> The following dispositions are recognized:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>default</code></p>
+<dt><code>default</code></dt>
 <dd>
-<dt><code>dub</code></p>
+</dd><dt><code>dub</code></dt>
 <dd>
-<dt><code>original</code></p>
+</dd><dt><code>original</code></dt>
 <dd>
-<dt><code>comment</code></p>
+</dd><dt><code>comment</code></dt>
 <dd>
-<dt><code>lyrics</code></p>
+</dd><dt><code>lyrics</code></dt>
 <dd>
-<dt><code>karaoke</code></p>
+</dd><dt><code>karaoke</code></dt>
 <dd>
-<dt><code>forced</code></p>
+</dd><dt><code>forced</code></dt>
 <dd>
-<dt><code>hearing_impaired</code></p>
+</dd><dt><code>hearing_impaired</code></dt>
 <dd>
-<dt><code>visual_impaired</code></p>
+</dd><dt><code>visual_impaired</code></dt>
 <dd>
-<dt><code>clean_effects</code></p>
+</dd><dt><code>clean_effects</code></dt>
 <dd>
-<dt><code>attached_pic</code></p>
+</dd><dt><code>attached_pic</code></dt>
 <dd>
-<dt><code>captions</code></p>
+</dd><dt><code>captions</code></dt>
 <dd>
-<dt><code>descriptions</code></p>
+</dd><dt><code>descriptions</code></dt>
 <dd>
-<dt><code>dependent</code></p>
+</dd><dt><code>dependent</code></dt>
 <dd>
-<dt><code>metadata</code></p>
-<dd></dl>
+</dd><dt><code>metadata</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> For example, to make the second audio stream the default stream: </p>
 <pre>
         ffmpeg -i in.mkv -c copy -disposition:a:1 default out.mkv
@@ -640,11 +611,11 @@ _______ ______________ | | | |
 <pre>
         ffmpeg -i in.mp4 -i IMAGE -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic out.mp4
 </pre>
-<p> Not all muxers support embedded thumbnails, and those who do, only support a few formats, like <font SIZE="-1">JPEG</font> or <font SIZE="-1">PNG.</font></dl>
-<dt><code>-program [title=</code><i>title</i><code>:][program_num=</code><i>program_num</i><code>:]st=</code><i>stream</i><code>[:st=</code><i>stream</i><code>&#8230;] (</code><i>output</i><code>)</code></p>
-<dd> Creates a program with the specified <i>title</i>, <i>program_num</i> and adds the specified <i>stream</i>(s) to it.</p>
-<dt><code>-target</code> <i>type</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Specify target file type (<tt>&quot;vcd&quot;</tt>, <tt>&quot;svcd&quot;</tt>, <tt>&quot;dvd&quot;</tt>, <tt>&quot;dv&quot;</tt>, <tt>&quot;dv50&quot;</tt>). <i>type</i> may be prefixed with <tt>&quot;pal-&quot;</tt>, <tt>&quot;ntsc-&quot;</tt> or <tt>&quot;film-&quot;</tt> to use the corresponding standard. All the format options (bitrate, codecs, buffer sizes) are then set automatically. You can just type: </p>
+<p> Not all muxers support embedded thumbnails, and those who do, only support a few formats, like <font SIZE="-1">JPEG</font> or <font SIZE="-1">PNG.</font></dd></dl>
+<dt><code>-program [title=</code><i>title</i><code>:][program_num=</code><i>program_num</i><code>:]st=</code><i>stream</i><code>[:st=</code><i>stream</i><code>&#8230;] (</code><i>output</i><code>)</code></dt>
+<dd> Creates a program with the specified <i>title</i>, <i>program_num</i> and adds the specified <i>stream</i>(s) to it.</dd>
+<dt><code>-target</code> <i>type</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Specify target file type (<tt>&quot;vcd&quot;</tt>, <tt>&quot;svcd&quot;</tt>, <tt>&quot;dvd&quot;</tt>, <tt>&quot;dv&quot;</tt>, <tt>&quot;dv50&quot;</tt>). <i>type</i> may be prefixed with <tt>&quot;pal-&quot;</tt>, <tt>&quot;ntsc-&quot;</tt> or <tt>&quot;film-&quot;</tt> to use the corresponding standard. All the format options (bitrate, codecs, buffer sizes) are then set automatically. You can just type: </dd>
 <pre>
         ffmpeg -i myfile.avi -target vcd /tmp/vcd.mpg
 </pre>
@@ -661,14 +632,12 @@ _______ ______________ | | | |
         -codec:v mpeg1video -g 15 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680
         -ar 44100 -ac 2
         -codec:a mp2 -b:a 224k
-        
         &lt;ntsc&gt;:
         -f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324
         -s 352x240 -r 30000/1001
         -codec:v mpeg1video -g 18 -b:v 1150k -maxrate:v 1150v -minrate:v 1150k -bufsize:v 327680
         -ar 44100 -ac 2
         -codec:a mp2 -b:a 224k
-        
         &lt;film&gt;:
         -f vcd -muxrate 1411200 -muxpreload 0.44 -packetsize 2324
         -s 352x240 -r 24000/1001
@@ -684,14 +653,12 @@ _______ ______________ | | | |
         -codec:v mpeg2video -g 15 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1
         -ar 44100
         -codec:a mp2 -b:a 224k
-        
         &lt;ntsc&gt;:
         -f svcd -packetsize 2324
         -s 480x480 -pix_fmt yuv420p -r 30000/1001
         -codec:v mpeg2video -g 18 -b:v 2040k -maxrate:v 2516k -minrate:v 0 -bufsize:v 1835008 -scan_offset 1
         -ar 44100
         -codec:a mp2 -b:a 224k
-        
         &lt;film&gt;:
         -f svcd -packetsize 2324
         -s 480x480 -pix_fmt yuv420p -r 24000/1001
@@ -707,14 +674,12 @@ _______ ______________ | | | |
         -codec:v mpeg2video -g 15 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008
         -ar 48000
         -codec:a ac3 -b:a 448k
-        
         &lt;ntsc&gt;:
         -f dvd -muxrate 10080k -packetsize 2048
         -s 720x480 -pix_fmt yuv420p -r 30000/1001
         -codec:v mpeg2video -g 18 -b:v 6000k -maxrate:v 9000k -minrate:v 0 -bufsize:v 1835008
         -ar 48000
         -codec:a ac3 -b:a 448k
-        
         &lt;film&gt;:
         -f dvd -muxrate 10080k -packetsize 2048
         -s 720x480 -pix_fmt yuv420p -r 24000/1001
@@ -728,12 +693,10 @@ _______ ______________ | | | |
         -f dv
         -s 720x576 -pix_fmt yuv420p -r 25
         -ar 48000 -ac 2
-        
         &lt;ntsc&gt;:
         -f dv
         -s 720x480 -pix_fmt yuv411p -r 30000/1001
         -ar 48000 -ac 2
-        
         &lt;film&gt;:
         -f dv
         -s 720x480 -pix_fmt yuv411p -r 24000/1001
@@ -741,50 +704,50 @@ _______ ______________ | | | |
 </pre>
 <p> The <tt>&quot;dv50&quot;</tt> target is identical to the <tt>&quot;dv&quot;</tt> target except that the pixel format set is <tt>&quot;yuv422p&quot;</tt> for all three standards. </p>
 <p> Any user-set value for a parameter above will override the target preset value. In that case, the output may not comply with the target standard.</p>
-<dt><code>-dn (</code><i>input/output</i><code>)</code></p>
-<dd> As an input option, blocks all data streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </p>
+<dt><code>-dn (</code><i>input/output</i><code>)</code></dt>
+<dd> As an input option, blocks all data streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </dd>
 <p> As an output option, disables data recording i.e. automatic selection or mapping of any data stream. For full manual control see the <tt>&quot;-map&quot;</tt> option.</p>
-<dt><code>-dframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the number of data frames to output. This is an obsolete alias for <tt>&quot;-frames:d&quot;</tt>, which you should use instead.</p>
-<dt><code>-frames[:</code><i>stream_specifier</i><code>]</code> <i>framecount</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Stop writing to the stream after <i>framecount</i> frames.</p>
-<dt><code>-q[:</code><i>stream_specifier</i><code>]</code> <i>q</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
+<dt><code>-dframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the number of data frames to output. This is an obsolete alias for <tt>&quot;-frames:d&quot;</tt>, which you should use instead.</dd>
+<dt><code>-frames[:</code><i>stream_specifier</i><code>]</code> <i>framecount</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Stop writing to the stream after <i>framecount</i> frames.</dd>
+<dt><code>-q[:</code><i>stream_specifier</i><code>]</code> <i>q</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
 <dd>
-<dt><code>-qscale[:</code><i>stream_specifier</i><code>]</code> <i>q</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Use fixed quality scale (<font SIZE="-1">VBR</font>). The meaning of <i>q</i>/<i>qscale</i> is codec-dependent. If <i>qscale</i> is used without a <i>stream_specifier</i> then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used.</p>
-<dt><code>-filter[:</code><i>stream_specifier</i><code>]</code> <i>filtergraph</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </p>
+</dd><dt><code>-qscale[:</code><i>stream_specifier</i><code>]</code> <i>q</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Use fixed quality scale (<font SIZE="-1">VBR</font>). The meaning of <i>q</i>/<i>qscale</i> is codec-dependent. If <i>qscale</i> is used without a <i>stream_specifier</i> then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used.</dd>
+<dt><code>-filter[:</code><i>stream_specifier</i><code>]</code> <i>filtergraph</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </dd>
 <p> <i>filtergraph</i> is a description of the filtergraph to apply to the stream, and must have a single input and a single output of the same type of the stream. In the filtergraph, the input is associated to the label <tt>&quot;in&quot;</tt>, and the output to the label <tt>&quot;out&quot;</tt>. See the ffmpeg-filters manual for more information about the filtergraph syntax. </p>
 <p> See the <code>-filter_complex option</code> if you want to create filtergraphs with multiple inputs and/or outputs.</p>
-<dt><code>-filter_script[:</code><i>stream_specifier</i><code>]</code> <i>filename</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> This option is similar to <code>-filter</code>, the only difference is that its argument is the name of the file from which a filtergraph description is to be read.</p>
-<dt><code>-filter_threads</code> <i>nb_threads</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Defines how many threads are used to process a filter pipeline. Each pipeline will produce a thread pool with this many threads available for parallel processing. The default is the number of available CPUs.</p>
-<dt><code>-pre[:</code><i>stream_specifier</i><code>]</code> <i>preset_name</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Specify the preset for matching stream(s).</p>
-<dt><code>-stats (</code><i>global</i><code>)</code></p>
-<dd> Print encoding progress/statistics. It is on by default, to explicitly disable it you need to specify <tt>&quot;-nostats&quot;</tt>.</p>
-<dt><code>-stats_period</code> <i>time</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Set period at which encoding progress/statistics are updated. Default is 0.5 seconds.</p>
-<dt><code>-progress</code> <i>url</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Send program-friendly progress information to <i>url</i>. </p>
+<dt><code>-filter_script[:</code><i>stream_specifier</i><code>]</code> <i>filename</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> This option is similar to <code>-filter</code>, the only difference is that its argument is the name of the file from which a filtergraph description is to be read.</dd>
+<dt><code>-filter_threads</code> <i>nb_threads</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Defines how many threads are used to process a filter pipeline. Each pipeline will produce a thread pool with this many threads available for parallel processing. The default is the number of available CPUs.</dd>
+<dt><code>-pre[:</code><i>stream_specifier</i><code>]</code> <i>preset_name</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Specify the preset for matching stream(s).</dd>
+<dt><code>-stats (</code><i>global</i><code>)</code></dt>
+<dd> Print encoding progress/statistics. It is on by default, to explicitly disable it you need to specify <tt>&quot;-nostats&quot;</tt>.</dd>
+<dt><code>-stats_period</code> <i>time</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Set period at which encoding progress/statistics are updated. Default is 0.5 seconds.</dd>
+<dt><code>-progress</code> <i>url</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Send program-friendly progress information to <i>url</i>. </dd>
 <p> Progress information is written periodically and at the end of the encoding process. It is made of &quot;<i>key</i>=<i>value</i>&quot; lines. <i>key</i> consists of only alphanumeric characters. The last key of a sequence of progress information is always &#8220;progress&#8221;. </p>
 <p> The update period is set using <tt>&quot;-stats_period&quot;</tt>.</p>
-<dt><code>-stdin</code></p>
-<dd> Enable interaction on standard input. On by default unless standard input is used as an input. To explicitly disable interaction you need to specify <tt>&quot;-nostdin&quot;</tt>. </p>
+<dt><code>-stdin</code></dt>
+<dd> Enable interaction on standard input. On by default unless standard input is used as an input. To explicitly disable interaction you need to specify <tt>&quot;-nostdin&quot;</tt>. </dd>
 <p> Disabling interaction on standard input is useful, for example, if ffmpeg is in the background process group. Roughly the same result can be achieved with <tt>&quot;ffmpeg ... &lt; /dev/null&quot;</tt> but it requires a shell.</p>
-<dt><code>-debug_ts (</code><i>global</i><code>)</code></p>
-<dd> Print timestamp information. It is off by default. This option is mostly useful for testing and debugging purposes, and the output format may change from one version to another, so it should not be employed by portable scripts. </p>
+<dt><code>-debug_ts (</code><i>global</i><code>)</code></dt>
+<dd> Print timestamp information. It is off by default. This option is mostly useful for testing and debugging purposes, and the output format may change from one version to another, so it should not be employed by portable scripts. </dd>
 <p> See also the option <tt>&quot;-fdebug ts&quot;</tt>.</p>
-<dt><code>-attach</code> <i>filename</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Add an attachment to the output file. This is supported by a few formats like Matroska for e.g. fonts used in rendering subtitles. Attachments are implemented as a specific type of stream, so this option will add a new stream to the file. It is then possible to use per-stream options on this stream in the usual way. Attachment streams created with this option will be created after all the other streams (i.e. those created with <tt>&quot;-map&quot;</tt> or automatic mappings). </p>
+<dt><code>-attach</code> <i>filename</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Add an attachment to the output file. This is supported by a few formats like Matroska for e.g. fonts used in rendering subtitles. Attachments are implemented as a specific type of stream, so this option will add a new stream to the file. It is then possible to use per-stream options on this stream in the usual way. Attachment streams created with this option will be created after all the other streams (i.e. those created with <tt>&quot;-map&quot;</tt> or automatic mappings). </dd>
 <p> Note that for Matroska you also have to set the mimetype metadata tag: </p>
 <pre>
         ffmpeg -i INPUT -attach DejaVuSans.ttf -metadata:s:2 mimetype=application/x-truetype-font out.mkv
 </pre>
 <p> (assuming that the attachment stream will be third in the output file).</p>
-<dt><code>-dump_attachment[:</code><i>stream_specifier</i><code>]</code> <i>filename</i> <code>(</code><i>input,per-stream</i><code>)</code></p>
-<dd> Extract the matching attachment stream into a file named <i>filename</i>. If <i>filename</i> is empty, then the value of the <tt>&quot;filename&quot;</tt> metadata tag will be used. </p>
+<dt><code>-dump_attachment[:</code><i>stream_specifier</i><code>]</code> <i>filename</i> <code>(</code><i>input,per-stream</i><code>)</code></dt>
+<dd> Extract the matching attachment stream into a file named <i>filename</i>. If <i>filename</i> is empty, then the value of the <tt>&quot;filename&quot;</tt> metadata tag will be used. </dd>
 <p> E.g. to extract the first attachment to a file named &#8216;out.ttf&#8217;: </p>
 <pre>
         ffmpeg -dump_attachment:t:0 out.ttf -i INPUT
@@ -796,114 +759,110 @@ _______ ______________ | | | |
 <p> Technical note &#8212; attachments are implemented as codec extradata, so this option can actually be used to extract extradata from any stream, not just attachments.</dl>
 <h3>Video Options</h3>
 <dl>
-<dt><code>-vframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the number of video frames to output. This is an obsolete alias for <tt>&quot;-frames:v&quot;</tt>, which you should use instead.</p>
-<dt><code>-r[:</code><i>stream_specifier</i><code>]</code> <i>fps</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Set frame rate (Hz value, fraction or abbreviation). </p>
+<dt><code>-vframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the number of video frames to output. This is an obsolete alias for <tt>&quot;-frames:v&quot;</tt>, which you should use instead.</dd>
+<dt><code>-r[:</code><i>stream_specifier</i><code>]</code> <i>fps</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Set frame rate (Hz value, fraction or abbreviation). </dd>
 <p> As an input option, ignore any timestamps stored in the file and instead generate timestamps assuming constant frame rate <i>fps</i>. This is not the same as the <code>-framerate</code> option used for some input formats like image2 or v4l2 (it used to be the same in older versions of FFmpeg). If in doubt use <code>-framerate</code> instead of the input option <code>-r</code>. </p>
 <p> As an output option, duplicate or drop input frames to achieve constant output frame rate <i>fps</i>.</p>
-<dt><code>-fpsmax[:</code><i>stream_specifier</i><code>]</code> <i>fps</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set maximum frame rate (Hz value, fraction or abbreviation). </p>
+<dt><code>-fpsmax[:</code><i>stream_specifier</i><code>]</code> <i>fps</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set maximum frame rate (Hz value, fraction or abbreviation). </dd>
 <p> Clamps output frame rate when output framerate is auto-set and is higher than this value. Useful in batch processing or when input framerate is wrongly detected as very high. It cannot be set together with <tt>&quot;-r&quot;</tt>. It is ignored during streamcopy.</p>
-<dt><code>-s[:</code><i>stream_specifier</i><code>]</code> <i>size</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Set frame size. </p>
+<dt><code>-s[:</code><i>stream_specifier</i><code>]</code> <i>size</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Set frame size. </dd>
 <p> As an input option, this is a shortcut for the <code>video_size</code> private option, recognized by some demuxers for which the frame size is either not stored in the file or is configurable &#8212; e.g. raw video or video grabbers. </p>
 <p> As an output option, this inserts the <tt>&quot;scale&quot;</tt> video filter to the <i>end</i> of the corresponding filtergraph. Please use the <tt>&quot;scale&quot;</tt> filter directly to insert it at the beginning or some other place. </p>
 <p> The format is <code>wxh</code> (default &#8211; same as source).</p>
-<dt><code>-aspect[:</code><i>stream_specifier</i><code>]</code> <i>aspect</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set the video display aspect ratio specified by <i>aspect</i>. </p>
+<dt><code>-aspect[:</code><i>stream_specifier</i><code>]</code> <i>aspect</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set the video display aspect ratio specified by <i>aspect</i>. </dd>
 <p> <i>aspect</i> can be a floating point number string, or a string of the form <i>num</i>:<i>den</i>, where <i>num</i> and <i>den</i> are the numerator and denominator of the aspect ratio. For example &#8220;4:3&#8221;, &#8220;16:9&#8221;, &#8220;1.3333&#8221;, and &#8220;1.7777&#8221; are valid argument values. </p>
 <p> If used together with <code>-vcodec copy</code>, it will affect the aspect ratio stored at container level, but not the aspect ratio stored in encoded frames, if it exists.</p>
-<dt><code>-vn (</code><i>input/output</i><code>)</code></p>
-<dd> As an input option, blocks all video streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </p>
+<dt><code>-vn (</code><i>input/output</i><code>)</code></dt>
+<dd> As an input option, blocks all video streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </dd>
 <p> As an output option, disables video recording i.e. automatic selection or mapping of any video stream. For full manual control see the <tt>&quot;-map&quot;</tt> option.</p>
-<dt><code>-vcodec</code> <i>codec</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the video codec. This is an alias for <tt>&quot;-codec:v&quot;</tt>.</p>
-<dt><code>-pass[:</code><i>stream_specifier</i><code>]</code> <i>n</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Select the pass number (1 or 2). It is used to do two-pass video encoding. The statistics of the video are recorded in the first pass into a log file (see also the option -passlogfile), and in the second pass that log file is used to generate the video at the exact requested bitrate. On pass 1, you may just deactivate audio and set output to null, examples for Windows and Unix: </p>
+<dt><code>-vcodec</code> <i>codec</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the video codec. This is an alias for <tt>&quot;-codec:v&quot;</tt>.</dd>
+<dt><code>-pass[:</code><i>stream_specifier</i><code>]</code> <i>n</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Select the pass number (1 or 2). It is used to do two-pass video encoding. The statistics of the video are recorded in the first pass into a log file (see also the option -passlogfile), and in the second pass that log file is used to generate the video at the exact requested bitrate. On pass 1, you may just deactivate audio and set output to null, examples for Windows and Unix: </dd>
 <pre>
         ffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y NUL
         ffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y /dev/null
 </pre>
-<dt><code>-passlogfile[:</code><i>stream_specifier</i><code>]</code> <i>prefix</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set two-pass log file name prefix to <i>prefix</i>, the default file name prefix is &#8220;ffmpeg2pass&#8221;. The complete file name will be <i></i><font SIZE="-1"><i>PREFIX-N</i></font><i>.log</i>, where N is a number specific to the output stream</p>
-<dt><code>-vf</code> <i>filtergraph</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </p>
+<dt><code>-passlogfile[:</code><i>stream_specifier</i><code>]</code> <i>prefix</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set two-pass log file name prefix to <i>prefix</i>, the default file name prefix is &#8220;ffmpeg2pass&#8221;. The complete file name will be <i></i><font SIZE="-1"><i>PREFIX-N</i></font><i>.log</i>, where N is a number specific to the output stream</dd>
+<dt><code>-vf</code> <i>filtergraph</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </dd>
 <p> This is an alias for <tt>&quot;-filter:v&quot;</tt>, see the <code>-filter option</code>.</p>
-<dt><code>-autorotate</code></p>
-<dd> Automatically rotate the video according to file metadata. Enabled by default, use <code>-noautorotate</code> to disable it.</p>
-<dt><code>-autoscale</code></p>
-<dd> Automatically scale the video according to the resolution of first frame. Enabled by default, use <code>-noautoscale</code> to disable it. When autoscale is disabled, all output frames of filter graph might not be in the same resolution and may be inadequate for some encoder/muxer. Therefore, it is not recommended to disable it unless you really know what you are doing. Disable autoscale at your own risk.</dl>
+<dt><code>-autorotate</code></dt>
+<dd> Automatically rotate the video according to file metadata. Enabled by default, use <code>-noautorotate</code> to disable it.</dd>
+<dt><code>-autoscale</code></dt>
+<dd> Automatically scale the video according to the resolution of first frame. Enabled by default, use <code>-noautoscale</code> to disable it. When autoscale is disabled, all output frames of filter graph might not be in the same resolution and may be inadequate for some encoder/muxer. Therefore, it is not recommended to disable it unless you really know what you are doing. Disable autoscale at your own risk.</dd></dl>
 <h3>Advanced Video options</h3>
 <dl>
-<dt><code>-pix_fmt[:</code><i>stream_specifier</i><code>]</code> <i>format</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Set pixel format. Use <tt>&quot;-pix_fmts&quot;</tt> to show all the supported pixel formats. If the selected pixel format can not be selected, ffmpeg will print a warning and select the best pixel format supported by the encoder. If <i>pix_fmt</i> is prefixed by a <tt>&quot;+&quot;</tt>, ffmpeg will exit with an error if the requested pixel format can not be selected, and automatic conversions inside filtergraphs are disabled. If <i>pix_fmt</i> is a single <tt>&quot;+&quot;</tt>, ffmpeg selects the same pixel format as the input (or graph output) and automatic conversions are disabled.</p>
-<dt><code>-sws_flags</code> <i>flags</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> Set SwScaler flags.</p>
-<dt><code>-rc_override[:</code><i>stream_specifier</i><code>]</code> <i>override</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Rate control override for specific intervals, formatted as &#8220;int,int,int&#8221; list separated with slashes. Two first values are the beginning and end frame numbers, last one is quantizer to use if positive, or quality factor if negative.</p>
-<dt><code>-ilme</code></p>
-<dd> Force interlacing support in encoder (<font SIZE="-1">MPEG-2</font> and <font SIZE="-1">MPEG-4</font> only). Use this option if your input file is interlaced and you want to keep the interlaced format for minimum losses. The alternative is to deinterlace the input stream by use of a filter such as <tt>&quot;yadif&quot;</tt> or <tt>&quot;bwdif&quot;</tt>, but deinterlacing introduces losses.</p>
-<dt><code>-psnr</code></p>
-<dd> Calculate <font SIZE="-1">PSNR</font> of compressed frames.</p>
-<dt><code>-vstats</code></p>
-<dd> Dump video coding statistics to <i>vstats_HHMMSS.log</i>.</p>
-<dt><code>-vstats_file</code> <i>file</i></p>
-<dd> Dump video coding statistics to <i>file</i>.</p>
-<dt><code>-vstats_version</code> <i>file</i></p>
-<dd> Specifies which version of the vstats format to use. Default is 2. </p>
+<dt><code>-pix_fmt[:</code><i>stream_specifier</i><code>]</code> <i>format</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Set pixel format. Use <tt>&quot;-pix_fmts&quot;</tt> to show all the supported pixel formats. If the selected pixel format can not be selected, ffmpeg will print a warning and select the best pixel format supported by the encoder. If <i>pix_fmt</i> is prefixed by a <tt>&quot;+&quot;</tt>, ffmpeg will exit with an error if the requested pixel format can not be selected, and automatic conversions inside filtergraphs are disabled. If <i>pix_fmt</i> is a single <tt>&quot;+&quot;</tt>, ffmpeg selects the same pixel format as the input (or graph output) and automatic conversions are disabled.</dd>
+<dt><code>-sws_flags</code> <i>flags</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> Set SwScaler flags.</dd>
+<dt><code>-rc_override[:</code><i>stream_specifier</i><code>]</code> <i>override</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Rate control override for specific intervals, formatted as &#8220;int,int,int&#8221; list separated with slashes. Two first values are the beginning and end frame numbers, last one is quantizer to use if positive, or quality factor if negative.</dd>
+<dt><code>-ilme</code></dt>
+<dd> Force interlacing support in encoder (<font SIZE="-1">MPEG-2</font> and <font SIZE="-1">MPEG-4</font> only). Use this option if your input file is interlaced and you want to keep the interlaced format for minimum losses. The alternative is to deinterlace the input stream by use of a filter such as <tt>&quot;yadif&quot;</tt> or <tt>&quot;bwdif&quot;</tt>, but deinterlacing introduces losses.</dd>
+<dt><code>-psnr</code></dt>
+<dd> Calculate <font SIZE="-1">PSNR</font> of compressed frames.</dd>
+<dt><code>-vstats</code></dt>
+<dd> Dump video coding statistics to <i>vstats_HHMMSS.log</i>.</dd>
+<dt><code>-vstats_file</code> <i>file</i></dt>
+<dd> Dump video coding statistics to <i>file</i>.</dd>
+<dt><code>-vstats_version</code> <i>file</i></dt>
+<dd> Specifies which version of the vstats format to use. Default is 2. </dd>
 <p> version = 1 : </p>
 <p> <tt>&quot;frame= %5d q= %2.1f PSNR= %6.2f f_size= %6d s_size= %8.0fkB time= %0.3f br= %7.1fkbits/s avg_br= %7.1fkbits/s&quot;</tt> </p>
 <p> version &gt; 1: </p>
 <p> <tt>&quot;out= %2d st= %2d frame= %5d q= %2.1f PSNR= %6.2f f_size= %6d s_size= %8.0fkB time= %0.3f br= %7.1fkbits/s avg_br= %7.1fkbits/s&quot;</tt></p>
-<dt><code>-top[:</code><i>stream_specifier</i><code>]</code> <i>n</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> top=1/bottom=0/auto=-1 field first</p>
-<dt><code>-dc</code> <i>precision</i></p>
-<dd> Intra_dc_precision.</p>
-<dt><code>-vtag</code> <i>fourcc/tag</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Force video tag/fourcc. This is an alias for <tt>&quot;-tag:v&quot;</tt>.</p>
-<dt><code>-qphist (</code><i>global</i><code>)</code></p>
-<dd> Show <font SIZE="-1">QP</font> histogram</p>
-<dt><code>-vbsf</code> <i>bitstream_filter</i></p>
-<dd> Deprecated see -bsf</p>
-<dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>]</code> <i>time</i><code>[,</code><i>time</i><code>&#8230;] (</code><i>output,per-stream</i><code>)</code></p>
+<dt><code>-top[:</code><i>stream_specifier</i><code>]</code> <i>n</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> top=1/bottom=0/auto=-1 field first</dd>
+<dt><code>-dc</code> <i>precision</i></dt>
+<dd> Intra_dc_precision.</dd>
+<dt><code>-vtag</code> <i>fourcc/tag</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Force video tag/fourcc. This is an alias for <tt>&quot;-tag:v&quot;</tt>.</dd>
+<dt><code>-qphist (</code><i>global</i><code>)</code></dt>
+<dd> Show <font SIZE="-1">QP</font> histogram</dd>
+<dt><code>-vbsf</code> <i>bitstream_filter</i></dt>
+<dd> Deprecated see -bsf</dd>
+<dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>]</code> <i>time</i><code>[,</code><i>time</i><code>&#8230;] (</code><i>output,per-stream</i><code>)</code></dt>
 <dd>
-<dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>] expr:</code><i>expr</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
+</dd><dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>] expr:</code><i>expr</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
 <dd>
-<dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>] source (</code><i>output,per-stream</i><code>)</code></p>
-<dd> <i>force_key_frames</i> can take arguments of the following form:</p>
+</dd><dt><code>-force_key_frames[:</code><i>stream_specifier</i><code>] source (</code><i>output,per-stream</i><code>)</code></dt>
+<dd> <i>force_key_frames</i> can take arguments of the following form:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>time</i><code>[,</code><i>time</i><code>&#8230;]</code></p>
-<dd> If the argument consists of timestamps, ffmpeg will round the specified times to the nearest output timestamp as per the encoder time base and force a keyframe at the first frame having timestamp equal or greater than the computed timestamp. Note that if the encoder time base is too coarse, then the keyframes may be forced on frames with timestamps lower than the specified time. The default encoder time base is the inverse of the output framerate but may be set otherwise via <tt>&quot;-enc_time_base&quot;</tt>. </p>
+<dt><i>time</i><code>[,</code><i>time</i><code>&#8230;]</code></dt>
+<dd> If the argument consists of timestamps, ffmpeg will round the specified times to the nearest output timestamp as per the encoder time base and force a keyframe at the first frame having timestamp equal or greater than the computed timestamp. Note that if the encoder time base is too coarse, then the keyframes may be forced on frames with timestamps lower than the specified time. The default encoder time base is the inverse of the output framerate but may be set otherwise via <tt>&quot;-enc_time_base&quot;</tt>. </dd>
 <p> If one of the times is &quot;<tt>&quot;chapters&quot;</tt>[<i>delta</i>]&quot;, it is expanded into the time of the beginning of all chapters in the file, shifted by <i>delta</i>, expressed as a time in seconds. This option can be useful to ensure that a seek point is present at a chapter mark or any other designated place in the output file. </p>
 <p> For example, to insert a key frame at 5 minutes, plus key frames 0.1 second before the beginning of every chapter: </p>
 <pre>
         -force_key_frames 0:05:00,chapters-0.1
 </pre>
-<dt><code>expr:</code><i>expr</i></p>
-<dd> If the argument is prefixed with <tt>&quot;expr:&quot;</tt>, the string <i>expr</i> is interpreted like an expression and is evaluated for each frame. A key frame is forced in case the evaluation is non-zero. </p>
+<dt><code>expr:</code><i>expr</i></dt>
+<dd> If the argument is prefixed with <tt>&quot;expr:&quot;</tt>, the string <i>expr</i> is interpreted like an expression and is evaluated for each frame. A key frame is forced in case the evaluation is non-zero. </dd>
 <p> The expression in <i>expr</i> can contain the following constants:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>n</code></p>
-<dd> the number of current processed frame, starting from 0</p>
-<dt><code>n_forced</code></p>
-<dd> the number of forced frames</p>
-<dt><code>prev_forced_n</code></p>
-<dd> the number of the previous forced frame, it is <tt>&quot;NAN&quot;</tt> when no keyframe was forced yet</p>
-<dt><code>prev_forced_t</code></p>
-<dd> the time of the previous forced frame, it is <tt>&quot;NAN&quot;</tt> when no keyframe was forced yet</p>
-<dt><code>t</code></p>
-<dd> the time of the current processed frame</dl>
+<dt><code>n</code></dt>
+<dd> the number of current processed frame, starting from 0</dd>
+<dt><code>n_forced</code></dt>
+<dd> the number of forced frames</dd>
+<dt><code>prev_forced_n</code></dt>
+<dd> the number of the previous forced frame, it is <tt>&quot;NAN&quot;</tt> when no keyframe was forced yet</dd>
+<dt><code>prev_forced_t</code></dt>
+<dd> the time of the previous forced frame, it is <tt>&quot;NAN&quot;</tt> when no keyframe was forced yet</dd>
+<dt><code>t</code></dt>
+<dd> the time of the current processed frame</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> For example to force a key frame every 5 seconds, you can specify: </p>
 <pre>
         -force_key_frames expr:gte(t,n_forced*5)
@@ -912,229 +871,216 @@ _______ ______________ | | | |
 <pre>
         -force_key_frames expr:if(isnan(prev_forced_t),gte(t,13),gte(t,prev_forced_t+5))
 </pre>
-</dl>
-<dt><code>source</code></p>
-<dd> If the argument is <tt>&quot;source&quot;</tt>, ffmpeg will force a key frame if the current frame being encoded is marked as a key frame in its source.</dl>
+</dd></dl>
+<dt><code>source</code></dt>
+<dd> If the argument is <tt>&quot;source&quot;</tt>, ffmpeg will force a key frame if the current frame being encoded is marked as a key frame in its source.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> Note that forcing too many keyframes is very harmful for the lookahead algorithms of certain encoders: using fixed-GOP options or similar would be more efficient.</dl>
-<dt><code>-copyinkf[:</code><i>stream_specifier</i><code>] (</code><i>output,per-stream</i><code>)</code></p>
-<dd> When doing stream copy, copy also non-key frames found at the beginning.</p>
-<dt><code>-init_hw_device</code> <i>type</i><code>[=</code><i>name</i><code>][:</code><i>device</i><code>[,</code><i>key=value</i><code>&#8230;]]</code></p>
-<dd> Initialise a new hardware device of type <i>type</i> called <i>name</i>, using the given device parameters. If no name is specified it will receive a default name of the form &quot;<i>type</i><tt>%d</tt>&quot;. </p>
+</dt><dd>
+<p> Note that forcing too many keyframes is very harmful for the lookahead algorithms of certain encoders: using fixed-GOP options or similar would be more efficient.</dd></dl>
+<dt><code>-copyinkf[:</code><i>stream_specifier</i><code>] (</code><i>output,per-stream</i><code>)</code></dt>
+<dd> When doing stream copy, copy also non-key frames found at the beginning.</dd>
+<dt><code>-init_hw_device</code> <i>type</i><code>[=</code><i>name</i><code>][:</code><i>device</i><code>[,</code><i>key=value</i><code>&#8230;]]</code></dt>
+<dd> Initialise a new hardware device of type <i>type</i> called <i>name</i>, using the given device parameters. If no name is specified it will receive a default name of the form &quot;<i>type</i><tt>%d</tt>&quot;. </dd>
 <p> The meaning of <i>device</i> and the following arguments depends on the device type:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>cuda</code></p>
-<dd> <i>device</i> is the number of the <font SIZE="-1">CUDA</font> device.</p>
-<dt><code>dxva2</code></p>
-<dd> <i>device</i> is the number of the Direct3D 9 display adapter.</p>
-<dt><code>vaapi</code></p>
-<dd> <i>device</i> is either an X11 display name or a <font SIZE="-1">DRM</font> render node. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>) and then the first <font SIZE="-1">DRM</font> render node (<i>/dev/dri/renderD128</i>).</p>
-<dt><code>vdpau</code></p>
-<dd> <i>device</i> is an X11 display name. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>).</p>
-<dt><code>qsv</code></p>
-<dd> <i>device</i> selects a value in <code>MFX_IMPL_*</code>. Allowed values are:</p>
+<dt><code>cuda</code></dt>
+<dd> <i>device</i> is the number of the <font SIZE="-1">CUDA</font> device.</dd>
+<dt><code>dxva2</code></dt>
+<dd> <i>device</i> is the number of the Direct3D 9 display adapter.</dd>
+<dt><code>vaapi</code></dt>
+<dd> <i>device</i> is either an X11 display name or a <font SIZE="-1">DRM</font> render node. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>) and then the first <font SIZE="-1">DRM</font> render node (<i>/dev/dri/renderD128</i>).</dd>
+<dt><code>vdpau</code></dt>
+<dd> <i>device</i> is an X11 display name. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>).</dd>
+<dt><code>qsv</code></dt>
+<dd> <i>device</i> selects a value in <code>MFX_IMPL_*</code>. Allowed values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>auto</code></p>
+<dt><code>auto</code></dt>
 <dd>
-<dt><code>sw</code></p>
+</dd><dt><code>sw</code></dt>
 <dd>
-<dt><code>hw</code></p>
+</dd><dt><code>hw</code></dt>
 <dd>
-<dt><code>auto_any</code></p>
+</dd><dt><code>auto_any</code></dt>
 <dd>
-<dt><code>hw_any</code></p>
+</dd><dt><code>hw_any</code></dt>
 <dd>
-<dt><code>hw2</code></p>
+</dd><dt><code>hw2</code></dt>
 <dd>
-<dt><code>hw3</code></p>
+</dd><dt><code>hw3</code></dt>
 <dd>
-<dt><code>hw4</code></p>
-<dd></dl>
+</dd><dt><code>hw4</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> If not specified, <code>auto_any</code> is used. (Note that it may be easier to achieve the desired result for <font SIZE="-1">QSV</font> by creating the platform-appropriate subdevice (<code>dxva2</code> or <code>vaapi</code>) and then deriving a <font SIZE="-1">QSV</font> device from that.)</dl>
-<dt><code>opencl</code></p>
-<dd> <i>device</i> selects the platform and device as <i>platform_index.device_index</i>. </p>
+</dt><dd>
+<p> If not specified, <code>auto_any</code> is used. (Note that it may be easier to achieve the desired result for <font SIZE="-1">QSV</font> by creating the platform-appropriate subdevice (<code>dxva2</code> or <code>vaapi</code>) and then deriving a <font SIZE="-1">QSV</font> device from that.)</dd></dl>
+<dt><code>opencl</code></dt>
+<dd> <i>device</i> selects the platform and device as <i>platform_index.device_index</i>. </dd>
 <p> The set of devices can also be filtered using the key-value pairs to find only devices matching particular platform or device strings. </p>
 <p> The strings usable as filters are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>platform_profile</code></p>
+<dt><code>platform_profile</code></dt>
 <dd>
-<dt><code>platform_version</code></p>
+</dd><dt><code>platform_version</code></dt>
 <dd>
-<dt><code>platform_name</code></p>
+</dd><dt><code>platform_name</code></dt>
 <dd>
-<dt><code>platform_vendor</code></p>
+</dd><dt><code>platform_vendor</code></dt>
 <dd>
-<dt><code>platform_extensions</code></p>
+</dd><dt><code>platform_extensions</code></dt>
 <dd>
-<dt><code>device_name</code></p>
+</dd><dt><code>device_name</code></dt>
 <dd>
-<dt><code>device_vendor</code></p>
+</dd><dt><code>device_vendor</code></dt>
 <dd>
-<dt><code>driver_version</code></p>
+</dd><dt><code>driver_version</code></dt>
 <dd>
-<dt><code>device_version</code></p>
+</dd><dt><code>device_version</code></dt>
 <dd>
-<dt><code>device_profile</code></p>
+</dd><dt><code>device_profile</code></dt>
 <dd>
-<dt><code>device_extensions</code></p>
+</dd><dt><code>device_extensions</code></dt>
 <dd>
-<dt><code>device_type</code></p>
-<dd></dl>
+</dd><dt><code>device_type</code></dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> The indices and filters must together uniquely select a device. </p>
 <p> Examples:</p>
-<dl>
-<dt><i>-init_hw_device opencl:0.1</i></p>
-<dd> Choose the second device on the first platform.</p>
-<dt><i>-init_hw_device opencl:,device_name=Foo9000</i></p>
-<dd> Choose the device with a name containing the string <i>Foo9000</i>.</p>
-<dt><i>-init_hw_device opencl:1,device_type=gpu,device_extensions=cl_khr_fp16</i></p>
-<dd> Choose the <font SIZE="-1">GPU</font> device on the second platform supporting the <i>cl_khr_fp16</i> extension.</dl>
+</dd><dl>
+<dt><i>-init_hw_device opencl:0.1</i></dt>
+<dd> Choose the second device on the first platform.</dd>
+<dt><i>-init_hw_device opencl:,device_name=Foo9000</i></dt>
+<dd> Choose the device with a name containing the string <i>Foo9000</i>.</dd>
+<dt><i>-init_hw_device opencl:1,device_type=gpu,device_extensions=cl_khr_fp16</i></dt>
+<dd> Choose the <font SIZE="-1">GPU</font> device on the second platform supporting the <i>cl_khr_fp16</i> extension.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>vulkan</code></p>
-<dd> If <i>device</i> is an integer, it selects the device by its index in a system-dependent list of devices. If <i>device</i> is any other string, it selects the first device with a name containing that string as a substring. </p>
+</dl>
+<dt><code>vulkan</code></dt>
+<dd> If <i>device</i> is an integer, it selects the device by its index in a system-dependent list of devices. If <i>device</i> is any other string, it selects the first device with a name containing that string as a substring. </dd>
 <p> The following options are recognized:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>debug</code></p>
-<dd> If set to 1, enables the validation layer, if installed.</p>
-<dt><code>linear_images</code></p>
-<dd> If set to 1, images allocated by the hwcontext will be linear and locally mappable.</p>
-<dt><code>instance_extensions</code></p>
-<dd> A plus separated list of additional instance extensions to enable.</p>
-<dt><code>device_extensions</code></p>
-<dd> A plus separated list of additional device extensions to enable.</dl>
+<dt><code>debug</code></dt>
+<dd> If set to 1, enables the validation layer, if installed.</dd>
+<dt><code>linear_images</code></dt>
+<dd> If set to 1, images allocated by the hwcontext will be linear and locally mappable.</dd>
+<dt><code>instance_extensions</code></dt>
+<dd> A plus separated list of additional instance extensions to enable.</dd>
+<dt><code>device_extensions</code></dt>
+<dd> A plus separated list of additional device extensions to enable.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Examples:</p>
-<dl>
-<dt><i>-init_hw_device vulkan:1</i></p>
-<dd> Choose the second device on the system.</p>
-<dt><i>-init_hw_device vulkan:RADV</i></p>
-<dd> Choose the first device with a name containing the string <i></i><font SIZE="-1"><i>RADV</i></font><i></i>.</p>
-<dt><i>-init_hw_device vulkan:0,instance_extensions=VK_KHR_wayland_surface+VK_KHR_xcb_surface</i></p>
-<dd> Choose the first device and enable the Wayland and <font SIZE="-1">XCB</font> instance extensions.</dl>
+</dd><dl>
+<dt><i>-init_hw_device vulkan:1</i></dt>
+<dd> Choose the second device on the system.</dd>
+<dt><i>-init_hw_device vulkan:RADV</i></dt>
+<dd> Choose the first device with a name containing the string <i></i><font SIZE="-1"><i>RADV</i></font><i></i>.</dd>
+<dt><i>-init_hw_device vulkan:0,instance_extensions=VK_KHR_wayland_surface+VK_KHR_xcb_surface</i></dt>
+<dd> Choose the first device and enable the Wayland and <font SIZE="-1">XCB</font> instance extensions.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-init_hw_device</code> <i>type</i><code>[=</code><i>name</i><code>]@</code><i>source</i></p>
-<dd> Initialise a new hardware device of type <i>type</i> called <i>name</i>, deriving it from the existing device with the name <i>source</i>.</p>
-<dt><code>-init_hw_device list</code></p>
-<dd> List all hardware device types supported in this build of ffmpeg.</p>
-<dt><code>-filter_hw_device</code> <i>name</i></p>
-<dd> Pass the hardware device called <i>name</i> to all filters in any filter graph. This can be used to set the device to upload to with the <tt>&quot;hwupload&quot;</tt> filter, or the device to map to with the <tt>&quot;hwmap&quot;</tt> filter. Other filters may also make use of this parameter when they require a hardware device. Note that this is typically only required when the input is not already in hardware frames &#8211; when it is, filters will derive the device they require from the context of the frames they receive as input. </p>
+</dl>
+<dt><code>-init_hw_device</code> <i>type</i><code>[=</code><i>name</i><code>]@</code><i>source</i></dt>
+<dd> Initialise a new hardware device of type <i>type</i> called <i>name</i>, deriving it from the existing device with the name <i>source</i>.</dd>
+<dt><code>-init_hw_device list</code></dt>
+<dd> List all hardware device types supported in this build of ffmpeg.</dd>
+<dt><code>-filter_hw_device</code> <i>name</i></dt>
+<dd> Pass the hardware device called <i>name</i> to all filters in any filter graph. This can be used to set the device to upload to with the <tt>&quot;hwupload&quot;</tt> filter, or the device to map to with the <tt>&quot;hwmap&quot;</tt> filter. Other filters may also make use of this parameter when they require a hardware device. Note that this is typically only required when the input is not already in hardware frames &#8211; when it is, filters will derive the device they require from the context of the frames they receive as input. </dd>
 <p> This is a global setting, so all filters will receive the same device.</p>
-<dt><code>-hwaccel[:</code><i>stream_specifier</i><code>]</code> <i>hwaccel</i> <code>(</code><i>input,per-stream</i><code>)</code></p>
-<dd> Use hardware acceleration to decode the matching stream(s). The allowed values of <i>hwaccel</i> are:</p>
+<dt><code>-hwaccel[:</code><i>stream_specifier</i><code>]</code> <i>hwaccel</i> <code>(</code><i>input,per-stream</i><code>)</code></dt>
+<dd> Use hardware acceleration to decode the matching stream(s). The allowed values of <i>hwaccel</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>none</code></p>
-<dd> Do not use any hardware acceleration (the default).</p>
-<dt><code>auto</code></p>
-<dd> Automatically select the hardware acceleration method.</p>
-<dt><code>vdpau</code></p>
-<dd> Use <font SIZE="-1">VDPAU</font> (Video Decode and Presentation <font SIZE="-1">API</font> for Unix) hardware acceleration.</p>
-<dt><code>dxva2</code></p>
-<dd> Use <font SIZE="-1">DXVA2</font> (DirectX Video Acceleration) hardware acceleration.</p>
-<dt><code>vaapi</code></p>
-<dd> Use <font SIZE="-1">VAAPI</font> (Video Acceleration <font SIZE="-1">API</font>) hardware acceleration.</p>
-<dt><code>qsv</code></p>
-<dd> Use the Intel QuickSync Video acceleration for video transcoding. </p>
+<dt><code>none</code></dt>
+<dd> Do not use any hardware acceleration (the default).</dd>
+<dt><code>auto</code></dt>
+<dd> Automatically select the hardware acceleration method.</dd>
+<dt><code>vdpau</code></dt>
+<dd> Use <font SIZE="-1">VDPAU</font> (Video Decode and Presentation <font SIZE="-1">API</font> for Unix) hardware acceleration.</dd>
+<dt><code>dxva2</code></dt>
+<dd> Use <font SIZE="-1">DXVA2</font> (DirectX Video Acceleration) hardware acceleration.</dd>
+<dt><code>vaapi</code></dt>
+<dd> Use <font SIZE="-1">VAAPI</font> (Video Acceleration <font SIZE="-1">API</font>) hardware acceleration.</dd>
+<dt><code>qsv</code></dt>
+<dd> Use the Intel QuickSync Video acceleration for video transcoding. </dd>
 <p> Unlike most other values, this option does not enable accelerated decoding (that is used automatically whenever a qsv decoder is selected), but accelerated transcoding, without copying the frames into the system memory. </p>
 <p> For it to work, both the decoder and the encoder must support <font SIZE="-1">QSV</font> acceleration and no filters must be used.</dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> This option has no effect if the selected hwaccel is not available or not supported by the chosen decoder. </p>
-<p> Note that most acceleration methods are intended for playback and will not be faster than software decoding on modern CPUs. Additionally, <code>ffmpeg</code> will usually need to copy the decoded frames from the <font SIZE="-1">GPU</font> memory into the system memory, resulting in further performance loss. This option is thus mainly useful for testing.</dl>
-<dt><code>-hwaccel_device[:</code><i>stream_specifier</i><code>]</code> <i>hwaccel_device</i> <code>(</code><i>input,per-stream</i><code>)</code></p>
-<dd> Select a device to use for hardware acceleration. </p>
+<p> Note that most acceleration methods are intended for playback and will not be faster than software decoding on modern CPUs. Additionally, <code>ffmpeg</code> will usually need to copy the decoded frames from the <font SIZE="-1">GPU</font> memory into the system memory, resulting in further performance loss. This option is thus mainly useful for testing.</dd></dl>
+<dt><code>-hwaccel_device[:</code><i>stream_specifier</i><code>]</code> <i>hwaccel_device</i> <code>(</code><i>input,per-stream</i><code>)</code></dt>
+<dd> Select a device to use for hardware acceleration. </dd>
 <p> This option only makes sense when the <code>-hwaccel</code> option is also specified. It can either refer to an existing device created with <code>-init_hw_device</code> by name, or it can create a new device as if <code>-init_hw_device</code> <i>type</i>:<i>hwaccel_device</i> were called immediately before.</p>
-<dt><code>-hwaccels</code></p>
-<dd> List all hardware acceleration methods supported in this build of ffmpeg.</dl>
+<dt><code>-hwaccels</code></dt>
+<dd> List all hardware acceleration methods supported in this build of ffmpeg.</dd></dl>
 <h3>Audio Options</h3>
 <dl>
-<dt><code>-aframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the number of audio frames to output. This is an obsolete alias for <tt>&quot;-frames:a&quot;</tt>, which you should use instead.</p>
-<dt><code>-ar[:</code><i>stream_specifier</i><code>]</code> <i>freq</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Set the audio sampling frequency. For output streams it is set by default to the frequency of the corresponding input stream. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.</p>
-<dt><code>-aq</code> <i>q</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the audio quality (codec-specific, <font SIZE="-1">VBR</font>). This is an alias for -q:a.</p>
-<dt><code>-ac[:</code><i>stream_specifier</i><code>]</code> <i>channels</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Set the number of audio channels. For output streams it is set by default to the number of input audio channels. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.</p>
-<dt><code>-an (</code><i>input/output</i><code>)</code></p>
-<dd> As an input option, blocks all audio streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </p>
+<dt><code>-aframes</code> <i>number</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the number of audio frames to output. This is an obsolete alias for <tt>&quot;-frames:a&quot;</tt>, which you should use instead.</dd>
+<dt><code>-ar[:</code><i>stream_specifier</i><code>]</code> <i>freq</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Set the audio sampling frequency. For output streams it is set by default to the frequency of the corresponding input stream. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.</dd>
+<dt><code>-aq</code> <i>q</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the audio quality (codec-specific, <font SIZE="-1">VBR</font>). This is an alias for -q:a.</dd>
+<dt><code>-ac[:</code><i>stream_specifier</i><code>]</code> <i>channels</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Set the number of audio channels. For output streams it is set by default to the number of input audio channels. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.</dd>
+<dt><code>-an (</code><i>input/output</i><code>)</code></dt>
+<dd> As an input option, blocks all audio streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </dd>
 <p> As an output option, disables audio recording i.e. automatic selection or mapping of any audio stream. For full manual control see the <tt>&quot;-map&quot;</tt> option.</p>
-<dt><code>-acodec</code> <i>codec</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> Set the audio codec. This is an alias for <tt>&quot;-codec:a&quot;</tt>.</p>
-<dt><code>-sample_fmt[:</code><i>stream_specifier</i><code>]</code> <i>sample_fmt</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set the audio sample format. Use <tt>&quot;-sample_fmts&quot;</tt> to get a list of supported sample formats.</p>
-<dt><code>-af</code> <i>filtergraph</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </p>
+<dt><code>-acodec</code> <i>codec</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> Set the audio codec. This is an alias for <tt>&quot;-codec:a&quot;</tt>.</dd>
+<dt><code>-sample_fmt[:</code><i>stream_specifier</i><code>]</code> <i>sample_fmt</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set the audio sample format. Use <tt>&quot;-sample_fmts&quot;</tt> to get a list of supported sample formats.</dd>
+<dt><code>-af</code> <i>filtergraph</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. </dd>
 <p> This is an alias for <tt>&quot;-filter:a&quot;</tt>, see the <code>-filter option</code>.</dl>
 <h3>Advanced Audio options</h3>
 <dl>
-<dt><code>-atag</code> <i>fourcc/tag</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Force audio tag/fourcc. This is an alias for <tt>&quot;-tag:a&quot;</tt>.</p>
-<dt><code>-absf</code> <i>bitstream_filter</i></p>
-<dd> Deprecated, see -bsf</p>
-<dt><code>-guess_layout_max</code> <i>channels</i> <code>(</code><i>input,per-stream</i><code>)</code></p>
-<dd> If some input channel layout is not known, try to guess only if it corresponds to at most the specified number of channels. For example, 2 tells to <code>ffmpeg</code> to recognize 1 channel as mono and 2 channels as stereo but not 6 channels as 5.1. The default is to always try to guess. Use 0 to disable all guessing.</dl>
+<dt><code>-atag</code> <i>fourcc/tag</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Force audio tag/fourcc. This is an alias for <tt>&quot;-tag:a&quot;</tt>.</dd>
+<dt><code>-absf</code> <i>bitstream_filter</i></dt>
+<dd> Deprecated, see -bsf</dd>
+<dt><code>-guess_layout_max</code> <i>channels</i> <code>(</code><i>input,per-stream</i><code>)</code></dt>
+<dd> If some input channel layout is not known, try to guess only if it corresponds to at most the specified number of channels. For example, 2 tells to <code>ffmpeg</code> to recognize 1 channel as mono and 2 channels as stereo but not 6 channels as 5.1. The default is to always try to guess. Use 0 to disable all guessing.</dd></dl>
 <h3>Subtitle options</h3>
 <dl>
-<dt><code>-scodec</code> <i>codec</i> <code>(</code><i>input/output</i><code>)</code></p>
-<dd> Set the subtitle codec. This is an alias for <tt>&quot;-codec:s&quot;</tt>.</p>
-<dt><code>-sn (</code><i>input/output</i><code>)</code></p>
-<dd> As an input option, blocks all subtitle streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </p>
+<dt><code>-scodec</code> <i>codec</i> <code>(</code><i>input/output</i><code>)</code></dt>
+<dd> Set the subtitle codec. This is an alias for <tt>&quot;-codec:s&quot;</tt>.</dd>
+<dt><code>-sn (</code><i>input/output</i><code>)</code></dt>
+<dd> As an input option, blocks all subtitle streams of a file from being filtered or being automatically selected or mapped for any output. See <tt>&quot;-discard&quot;</tt> option to disable streams individually. </dd>
 <p> As an output option, disables subtitle recording i.e. automatic selection or mapping of any subtitle stream. For full manual control see the <tt>&quot;-map&quot;</tt> option.</p>
-<dt><code>-sbsf</code> <i>bitstream_filter</i></p>
-<dd> Deprecated, see -bsf</dl>
+<dt><code>-sbsf</code> <i>bitstream_filter</i></dt>
+<dd> Deprecated, see -bsf</dd></dl>
 <h3>Advanced Subtitle options</h3>
 <dl>
-<dt><code>-fix_sub_duration</code></p>
-<dd> Fix subtitles durations. For each subtitle, wait for the next packet in the same stream and adjust the duration of the first to avoid overlap. This is necessary with some subtitles codecs, especially <font SIZE="-1">DVB</font> subtitles, because the duration in the original packet is only a rough estimate and the end is actually marked by an empty subtitle frame. Failing to use this option when necessary can result in exaggerated durations or muxing failures due to non-monotonic timestamps. </p>
+<dt><code>-fix_sub_duration</code></dt>
+<dd> Fix subtitles durations. For each subtitle, wait for the next packet in the same stream and adjust the duration of the first to avoid overlap. This is necessary with some subtitles codecs, especially <font SIZE="-1">DVB</font> subtitles, because the duration in the original packet is only a rough estimate and the end is actually marked by an empty subtitle frame. Failing to use this option when necessary can result in exaggerated durations or muxing failures due to non-monotonic timestamps. </dd>
 <p> Note that this option will delay the output of all data until the next subtitle packet is decoded: it may increase memory consumption and latency a lot.</p>
-<dt><code>-canvas_size</code> <i>size</i></p>
-<dd> Set the size of the canvas used to render subtitles.</dl>
+<dt><code>-canvas_size</code> <i>size</i></dt>
+<dd> Set the size of the canvas used to render subtitles.</dd></dl>
 <h3>Advanced options</h3>
 <dl>
-<dt><code>-map [-]</code><i>input_file_id</i><code>[:</code><i>stream_specifier</i><code>][?][,</code><i>sync_file_id</i><code>[:</code><i>stream_specifier</i><code>]] |</code> <i>[linklabel]</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Designate one or more input streams as a source for the output file. Each input stream is identified by the input file index <i>input_file_id</i> and the input stream index <i>input_stream_id</i> within the input file. Both indices start at 0. If specified, <i>sync_file_id</i>:<i>stream_specifier</i> sets which input stream is used as a presentation sync reference. </p>
+<dt><code>-map [-]</code><i>input_file_id</i><code>[:</code><i>stream_specifier</i><code>][?][,</code><i>sync_file_id</i><code>[:</code><i>stream_specifier</i><code>]] |</code> <i>[linklabel]</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Designate one or more input streams as a source for the output file. Each input stream is identified by the input file index <i>input_file_id</i> and the input stream index <i>input_stream_id</i> within the input file. Both indices start at 0. If specified, <i>sync_file_id</i>:<i>stream_specifier</i> sets which input stream is used as a presentation sync reference. </dd>
 <p> The first <tt>&quot;-map&quot;</tt> option on the command line specifies the source for output stream 0, the second <tt>&quot;-map&quot;</tt> option specifies the source for output stream 1, etc. </p>
 <p> A <tt>&quot;-&quot;</tt> character before the stream identifier creates a &#8220;negative&#8221; mapping. It disables matching streams from already created mappings. </p>
 <p> A trailing <tt>&quot;?&quot;</tt> after the stream index will allow the map to be optional: if the map matches no streams the map will be ignored instead of failing. Note the map will still fail if an invalid input file index is used; such as if the map refers to a non-existent input. </p>
@@ -1169,12 +1115,12 @@ _______ ______________ | | | |
         ffmpeg -i INPUT -map 0:m:language:eng OUTPUT
 </pre>
 <p> Note that using this option disables the default mappings for this output file.</p>
-<dt><code>-ignore_unknown</code></p>
-<dd> Ignore input streams with unknown type instead of failing if copying such streams is attempted.</p>
-<dt><code>-copy_unknown</code></p>
-<dd> Allow input streams with unknown type to be copied instead of failing if copying such streams is attempted.</p>
-<dt><code>-map_channel [</code><i>input_file_id</i><code>.</code><i>stream_specifier</i><code>.</code><i>channel_id</i><code>|-1][?][:</code><i>output_file_id</i><code>.</code><i>stream_specifier</i><code>]</code></p>
-<dd> Map an audio channel from a given input to an output. If <i>output_file_id</i>.<i>stream_specifier</i> is not set, the audio channel will be mapped on all the audio streams. </p>
+<dt><code>-ignore_unknown</code></dt>
+<dd> Ignore input streams with unknown type instead of failing if copying such streams is attempted.</dd>
+<dt><code>-copy_unknown</code></dt>
+<dd> Allow input streams with unknown type to be copied instead of failing if copying such streams is attempted.</dd>
+<dt><code>-map_channel [</code><i>input_file_id</i><code>.</code><i>stream_specifier</i><code>.</code><i>channel_id</i><code>|-1][?][:</code><i>output_file_id</i><code>.</code><i>stream_specifier</i><code>]</code></dt>
+<dd> Map an audio channel from a given input to an output. If <i>output_file_id</i>.<i>stream_specifier</i> is not set, the audio channel will be mapped on all the audio streams. </dd>
 <p> Using &#8220;-1&#8221; instead of <i>input_file_id</i>.<i>stream_specifier</i>.<i>channel_id</i> will map a muted channel. </p>
 <p> A trailing <tt>&quot;?&quot;</tt> will allow the map_channel to be optional: if the map_channel matches no channel the map_channel will be ignored instead of failing. </p>
 <p> For example, assuming <i></i><font SIZE="-1"><i>INPUT</i></font><i></i> is a stereo audio file, you can switch the two audio channels with the following command: </p>
@@ -1201,24 +1147,22 @@ _______ ______________ | | | |
 <pre>
         ffmpeg -i INPUT -map_channel 0.0.0 -map_channel 0.0.1? OUTPUT
 </pre>
-<dt><code>-map_metadata[:</code><i>metadata_spec_out</i><code>]</code> <i>infile</i><code>[:</code><i>metadata_spec_in</i><code>] (</code><i>output,per-metadata</i><code>)</code></p>
-<dd> Set metadata information of the next output file from <i>infile</i>. Note that those are file indices (zero-based), not filenames. Optional <i>metadata_spec_in/out</i> parameters specify, which metadata to copy. A metadata specifier can have the following forms:</p>
+<dt><code>-map_metadata[:</code><i>metadata_spec_out</i><code>]</code> <i>infile</i><code>[:</code><i>metadata_spec_in</i><code>] (</code><i>output,per-metadata</i><code>)</code></dt>
+<dd> Set metadata information of the next output file from <i>infile</i>. Note that those are file indices (zero-based), not filenames. Optional <i>metadata_spec_in/out</i> parameters specify, which metadata to copy. A metadata specifier can have the following forms:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>g</i></p>
-<dd> global metadata, i.e. metadata that applies to the whole file</p>
-<dt><i>s</i><code>[:</code><i>stream_spec</i><code>]</code></p>
-<dd> per-stream metadata. <i>stream_spec</i> is a stream specifier as described in the <code>Stream specifiers</code> chapter. In an input metadata specifier, the first matching stream is copied from. In an output metadata specifier, all matching streams are copied to.</p>
-<dt><i>c</i><code>:</code><i>chapter_index</i></p>
-<dd> per-chapter metadata. <i>chapter_index</i> is the zero-based chapter index.</p>
-<dt><i>p</i><code>:</code><i>program_index</i></p>
-<dd> per-program metadata. <i>program_index</i> is the zero-based program index.</dl>
+<dt><i>g</i></dt>
+<dd> global metadata, i.e. metadata that applies to the whole file</dd>
+<dt><i>s</i><code>[:</code><i>stream_spec</i><code>]</code></dt>
+<dd> per-stream metadata. <i>stream_spec</i> is a stream specifier as described in the <code>Stream specifiers</code> chapter. In an input metadata specifier, the first matching stream is copied from. In an output metadata specifier, all matching streams are copied to.</dd>
+<dt><i>c</i><code>:</code><i>chapter_index</i></dt>
+<dd> per-chapter metadata. <i>chapter_index</i> is the zero-based chapter index.</dd>
+<dt><i>p</i><code>:</code><i>program_index</i></dt>
+<dd> per-program metadata. <i>program_index</i> is the zero-based program index.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> If metadata specifier is omitted, it defaults to global. </p>
 <p> By default, global metadata is copied from the first input file, per-stream and per-chapter metadata is copied along with streams/chapters. These default mappings are disabled by creating any mapping of the relevant type. A negative file index can be used to create a dummy mapping that just disables automatic copying. </p>
 <p> For example to copy metadata from the first stream of the input file to global metadata of the output file: </p>
@@ -1229,132 +1173,125 @@ _______ ______________ | | | |
 <pre>
         ffmpeg -i in.mkv -map_metadata:s:a 0:g out.mkv
 </pre>
-<p> Note that simple <tt>0</tt> would work as well in this example, since global metadata is assumed by default.</dl>
-<dt><code>-map_chapters</code> <i>input_file_index</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Copy chapters from input file with index <i>input_file_index</i> to the next output file. If no chapter mapping is specified, then chapters are copied from the first input file with at least one chapter. Use a negative file index to disable any chapter copying.</p>
-<dt><code>-benchmark (</code><i>global</i><code>)</code></p>
-<dd> Show benchmarking information at the end of an encode. Shows real, system and user time used and maximum memory consumption. Maximum memory consumption is not supported on all systems, it will usually display as 0 if not supported.</p>
-<dt><code>-benchmark_all (</code><i>global</i><code>)</code></p>
-<dd> Show benchmarking information during the encode. Shows real, system and user time used in various steps (audio/video encode/decode).</p>
-<dt><code>-timelimit</code> <i>duration</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Exit after ffmpeg has been running for <i>duration</i> seconds in <font SIZE="-1">CPU</font> user time.</p>
-<dt><code>-dump (</code><i>global</i><code>)</code></p>
-<dd> Dump each input packet to stderr.</p>
-<dt><code>-hex (</code><i>global</i><code>)</code></p>
-<dd> When dumping packets, also dump the payload.</p>
-<dt><code>-re (</code><i>input</i><code>)</code></p>
-<dd> Read input at native frame rate. Mainly used to simulate a grab device, or live input stream (e.g. when reading from a file). Should not be used with actual grab devices or live input streams (where it can cause packet loss). By default <code>ffmpeg</code> attempts to read the input(s) as fast as possible. This option will slow down the reading of the input(s) to the native frame rate of the input(s). It is useful for real-time output (e.g. live streaming).</p>
-<dt><code>-vsync</code> <i>parameter</i></p>
-<dd> Video sync method. For compatibility reasons old values can be specified as numbers. Newly added values will have to be specified as strings always.</p>
+<p> Note that simple <tt>0</tt> would work as well in this example, since global metadata is assumed by default.</dd></dl>
+<dt><code>-map_chapters</code> <i>input_file_index</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Copy chapters from input file with index <i>input_file_index</i> to the next output file. If no chapter mapping is specified, then chapters are copied from the first input file with at least one chapter. Use a negative file index to disable any chapter copying.</dd>
+<dt><code>-benchmark (</code><i>global</i><code>)</code></dt>
+<dd> Show benchmarking information at the end of an encode. Shows real, system and user time used and maximum memory consumption. Maximum memory consumption is not supported on all systems, it will usually display as 0 if not supported.</dd>
+<dt><code>-benchmark_all (</code><i>global</i><code>)</code></dt>
+<dd> Show benchmarking information during the encode. Shows real, system and user time used in various steps (audio/video encode/decode).</dd>
+<dt><code>-timelimit</code> <i>duration</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Exit after ffmpeg has been running for <i>duration</i> seconds in <font SIZE="-1">CPU</font> user time.</dd>
+<dt><code>-dump (</code><i>global</i><code>)</code></dt>
+<dd> Dump each input packet to stderr.</dd>
+<dt><code>-hex (</code><i>global</i><code>)</code></dt>
+<dd> When dumping packets, also dump the payload.</dd>
+<dt><code>-re (</code><i>input</i><code>)</code></dt>
+<dd> Read input at native frame rate. Mainly used to simulate a grab device, or live input stream (e.g. when reading from a file). Should not be used with actual grab devices or live input streams (where it can cause packet loss). By default <code>ffmpeg</code> attempts to read the input(s) as fast as possible. This option will slow down the reading of the input(s) to the native frame rate of the input(s). It is useful for real-time output (e.g. live streaming).</dd>
+<dt><code>-vsync</code> <i>parameter</i></dt>
+<dd> Video sync method. For compatibility reasons old values can be specified as numbers. Newly added values will have to be specified as strings always.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0, passthrough</code></p>
-<dd> Each frame is passed with its timestamp from the demuxer to the muxer.</p>
-<dt><code>1, cfr</code></p>
-<dd> Frames will be duplicated and dropped to achieve exactly the requested constant frame rate.</p>
-<dt><code>2, vfr</code></p>
-<dd> Frames are passed through with their timestamp or dropped so as to prevent 2 frames from having the same timestamp.</p>
-<dt><code>drop</code></p>
-<dd> As passthrough but destroys all timestamps, making the muxer generate fresh timestamps based on frame-rate.</p>
-<dt><code>-1, auto</code></p>
-<dd> Chooses between 1 and 2 depending on muxer capabilities. This is the default method.</dl>
+<dt><code>0, passthrough</code></dt>
+<dd> Each frame is passed with its timestamp from the demuxer to the muxer.</dd>
+<dt><code>1, cfr</code></dt>
+<dd> Frames will be duplicated and dropped to achieve exactly the requested constant frame rate.</dd>
+<dt><code>2, vfr</code></dt>
+<dd> Frames are passed through with their timestamp or dropped so as to prevent 2 frames from having the same timestamp.</dd>
+<dt><code>drop</code></dt>
+<dd> As passthrough but destroys all timestamps, making the muxer generate fresh timestamps based on frame-rate.</dd>
+<dt><code>-1, auto</code></dt>
+<dd> Chooses between 1 and 2 depending on muxer capabilities. This is the default method.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Note that the timestamps may be further modified by the muxer, after this. For example, in the case that the format option <code>avoid_negative_ts</code> is enabled. </p>
-<p> With -map you can select from which stream the timestamps should be taken. You can leave either video or audio unchanged and sync the remaining stream(s) to the unchanged one.</dl>
-<dt><code>-frame_drop_threshold</code> <i>parameter</i></p>
-<dd> Frame drop threshold, which specifies how much behind video frames can be before they are dropped. In frame rate units, so 1.0 is one frame. The default is -1.1. One possible usecase is to avoid framedrops in case of noisy timestamps or to increase frame drop precision in case of exact timestamps.</p>
-<dt><code>-async</code> <i>samples_per_second</i></p>
-<dd> Audio sync method. &#8220;Stretches/squeezes&#8221; the audio stream to match the timestamps, the parameter is the maximum samples per second by which the audio is changed. -async 1 is a special case where only the start of the audio stream is corrected without any later correction. </p>
+<p> With -map you can select from which stream the timestamps should be taken. You can leave either video or audio unchanged and sync the remaining stream(s) to the unchanged one.</dd></dl>
+<dt><code>-frame_drop_threshold</code> <i>parameter</i></dt>
+<dd> Frame drop threshold, which specifies how much behind video frames can be before they are dropped. In frame rate units, so 1.0 is one frame. The default is -1.1. One possible usecase is to avoid framedrops in case of noisy timestamps or to increase frame drop precision in case of exact timestamps.</dd>
+<dt><code>-async</code> <i>samples_per_second</i></dt>
+<dd> Audio sync method. &#8220;Stretches/squeezes&#8221; the audio stream to match the timestamps, the parameter is the maximum samples per second by which the audio is changed. -async 1 is a special case where only the start of the audio stream is corrected without any later correction. </dd>
 <p> Note that the timestamps may be further modified by the muxer, after this. For example, in the case that the format option <code>avoid_negative_ts</code> is enabled. </p>
 <p> This option has been deprecated. Use the <tt>&quot;aresample&quot;</tt> audio filter instead.</p>
-<dt><code>-adrift_threshold</code> <i>time</i></p>
-<dd> Set the minimum difference between timestamps and audio data (in seconds) to trigger adding/dropping samples to make it match the timestamps. This option effectively is a threshold to select between hard (add/drop) and soft (squeeze/stretch) compensation. <tt>&quot;-async&quot;</tt> must be set to a positive value.</p>
-<dt><code>-apad</code> <i>parameters</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Pad the output audio stream(s). This is the same as applying <tt>&quot;-af apad&quot;</tt>. Argument is a string of filter parameters composed the same as with the <tt>&quot;apad&quot;</tt> filter. <tt>&quot;-shortest&quot;</tt> must be set for this output for the option to take effect.</p>
-<dt><code>-copyts</code></p>
-<dd> Do not process input timestamps, but keep their values without trying to sanitize them. In particular, do not remove the initial start time offset value. </p>
+<dt><code>-adrift_threshold</code> <i>time</i></dt>
+<dd> Set the minimum difference between timestamps and audio data (in seconds) to trigger adding/dropping samples to make it match the timestamps. This option effectively is a threshold to select between hard (add/drop) and soft (squeeze/stretch) compensation. <tt>&quot;-async&quot;</tt> must be set to a positive value.</dd>
+<dt><code>-apad</code> <i>parameters</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Pad the output audio stream(s). This is the same as applying <tt>&quot;-af apad&quot;</tt>. Argument is a string of filter parameters composed the same as with the <tt>&quot;apad&quot;</tt> filter. <tt>&quot;-shortest&quot;</tt> must be set for this output for the option to take effect.</dd>
+<dt><code>-copyts</code></dt>
+<dd> Do not process input timestamps, but keep their values without trying to sanitize them. In particular, do not remove the initial start time offset value. </dd>
 <p> Note that, depending on the <code>vsync</code> option or on specific muxer processing (e.g. in case the format option <code>avoid_negative_ts</code> is enabled) the output timestamps may mismatch with the input timestamps even when this option is selected.</p>
-<dt><code>-start_at_zero</code></p>
-<dd> When used with <code>copyts</code>, shift input timestamps so they start at zero. </p>
+<dt><code>-start_at_zero</code></dt>
+<dd> When used with <code>copyts</code>, shift input timestamps so they start at zero. </dd>
 <p> This means that using e.g. <tt>&quot;-ss 50&quot;</tt> will make output timestamps start at 50 seconds, regardless of what timestamp the input file started at.</p>
-<dt><code>-copytb</code> <i>mode</i></p>
-<dd> Specify how to set the encoder timebase when stream copying. <i>mode</i> is an integer numeric value, and can assume one of the following values:</p>
+<dt><code>-copytb</code> <i>mode</i></dt>
+<dd> Specify how to set the encoder timebase when stream copying. <i>mode</i> is an integer numeric value, and can assume one of the following values:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>1</code></p>
-<dd> Use the demuxer timebase. </p>
+<dt><code>1</code></dt>
+<dd> Use the demuxer timebase. </dd>
 <p> The time base is copied to the output encoder from the corresponding input demuxer. This is sometimes required to avoid non monotonically increasing timestamps when copying video streams with variable frame rate.</p>
-<dt><code>0</code></p>
-<dd> Use the decoder timebase. </p>
+<dt><code>0</code></dt>
+<dd> Use the decoder timebase. </dd>
 <p> The time base is copied to the output encoder from the corresponding input decoder.</p>
-<dt><code>-1</code></p>
-<dd> Try to make the choice automatically, in order to generate a sane output.</dl>
+<dt><code>-1</code></dt>
+<dd> Try to make the choice automatically, in order to generate a sane output.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> Default value is -1.</dl>
-<dt><code>-enc_time_base[:</code><i>stream_specifier</i><code>]</code> <i>timebase</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set the encoder timebase. <i>timebase</i> is a floating point number, and can assume one of the following values:</p>
+</dt><dd>
+<p> Default value is -1.</dd></dl>
+<dt><code>-enc_time_base[:</code><i>stream_specifier</i><code>]</code> <i>timebase</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set the encoder timebase. <i>timebase</i> is a floating point number, and can assume one of the following values:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0</code></p>
-<dd> Assign a default value according to the media type. </p>
+<dt><code>0</code></dt>
+<dd> Assign a default value according to the media type. </dd>
 <p> For video &#8211; use 1/framerate, for audio &#8211; use 1/samplerate.</p>
-<dt><code>-1</code></p>
-<dd> Use the input stream timebase when possible. </p>
+<dt><code>-1</code></dt>
+<dd> Use the input stream timebase when possible. </dd>
 <p> If an input stream is not available, the default timebase will be used.</p>
-<dt><code>&gt;0</code></p>
-<dd> Use the provided number as the timebase. </p>
+<dt><code>&gt;0</code></dt>
+<dd> Use the provided number as the timebase. </dd>
 <p> This field can be provided as a ratio of two integers (e.g. 1:24, 1:48000) or as a floating point number (e.g. 0.04166, 2.0833e-5)</dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> Default value is 0.</dl>
-<dt><code>-bitexact (</code><i>input/output</i><code>)</code></p>
-<dd> Enable bitexact mode for (de)muxer and (de/en)coder</p>
-<dt><code>-shortest (</code><i>output</i><code>)</code></p>
-<dd> Finish encoding when the shortest input stream ends.</p>
-<dt><code>-dts_delta_threshold</code></p>
-<dd> Timestamp discontinuity delta threshold.</p>
-<dt><code>-dts_error_threshold</code> <i>seconds</i></p>
-<dd> Timestamp error delta threshold. This threshold use to discard crazy/damaged timestamps and the default is 30 hours which is arbitrarily picked and quite conservative.</p>
-<dt><code>-muxdelay</code> <i>seconds</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the maximum demux-decode delay.</p>
-<dt><code>-muxpreload</code> <i>seconds</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Set the initial demux-decode delay.</p>
-<dt><code>-streamid</code> <i>output-stream-index</i><code>:</code><i>new-value</i> <code>(</code><i>output</i><code>)</code></p>
-<dd> Assign a new stream-id value to an output stream. This option should be specified prior to the output filename to which it applies. For the situation where multiple output files exist, a streamid may be reassigned to a different value. </p>
+</dt><dd>
+<p> Default value is 0.</dd></dl>
+<dt><code>-bitexact (</code><i>input/output</i><code>)</code></dt>
+<dd> Enable bitexact mode for (de)muxer and (de/en)coder</dd>
+<dt><code>-shortest (</code><i>output</i><code>)</code></dt>
+<dd> Finish encoding when the shortest input stream ends.</dd>
+<dt><code>-dts_delta_threshold</code></dt>
+<dd> Timestamp discontinuity delta threshold.</dd>
+<dt><code>-dts_error_threshold</code> <i>seconds</i></dt>
+<dd> Timestamp error delta threshold. This threshold use to discard crazy/damaged timestamps and the default is 30 hours which is arbitrarily picked and quite conservative.</dd>
+<dt><code>-muxdelay</code> <i>seconds</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the maximum demux-decode delay.</dd>
+<dt><code>-muxpreload</code> <i>seconds</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Set the initial demux-decode delay.</dd>
+<dt><code>-streamid</code> <i>output-stream-index</i><code>:</code><i>new-value</i> <code>(</code><i>output</i><code>)</code></dt>
+<dd> Assign a new stream-id value to an output stream. This option should be specified prior to the output filename to which it applies. For the situation where multiple output files exist, a streamid may be reassigned to a different value. </dd>
 <p> For example, to set the stream 0 <font SIZE="-1">PID</font> to 33 and the stream 1 <font SIZE="-1">PID</font> to 36 for an output mpegts file: </p>
 <pre>
         ffmpeg -i inurl -streamid 0:33 -streamid 1:36 out.ts
 </pre>
-<dt><code>-bsf[:</code><i>stream_specifier</i><code>]</code> <i>bitstream_filters</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> Set bitstream filters for matching streams. <i>bitstream_filters</i> is a comma-separated list of bitstream filters. Use the <tt>&quot;-bsfs&quot;</tt> option to get the list of bitstream filters. </p>
+<dt><code>-bsf[:</code><i>stream_specifier</i><code>]</code> <i>bitstream_filters</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> Set bitstream filters for matching streams. <i>bitstream_filters</i> is a comma-separated list of bitstream filters. Use the <tt>&quot;-bsfs&quot;</tt> option to get the list of bitstream filters. </dd>
 <pre>
         ffmpeg -i h264.mp4 -c:v copy -bsf:v h264_mp4toannexb -an out.h264
-        
         ffmpeg -i file.mov -an -vn -bsf:s mov2textsub -c:s copy -f rawvideo sub.txt
 </pre>
-<dt><code>-tag[:</code><i>stream_specifier</i><code>]</code> <i>codec_tag</i> <code>(</code><i>input/output,per-stream</i><code>)</code></p>
-<dd> Force a tag/fourcc for matching streams.</p>
-<dt><code>-timecode</code> <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i><font SIZE="-1"><code>SEP</code></font><i>ff</i></p>
-<dd> Specify Timecode for writing. <i></i><font SIZE="-1"><i>SEP</i></font><i></i> is &#8216;:&#8217; for non drop timecode and &#8216;;&#8217; (or &#8216;.&#8217;) for drop. </p>
+<dt><code>-tag[:</code><i>stream_specifier</i><code>]</code> <i>codec_tag</i> <code>(</code><i>input/output,per-stream</i><code>)</code></dt>
+<dd> Force a tag/fourcc for matching streams.</dd>
+<dt><code>-timecode</code> <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i><font SIZE="-1"><code>SEP</code></font><i>ff</i></dt>
+<dd> Specify Timecode for writing. <i></i><font SIZE="-1"><i>SEP</i></font><i></i> is &#8216;:&#8217; for non drop timecode and &#8216;;&#8217; (or &#8216;.&#8217;) for drop. </dd>
 <pre>
         ffmpeg -i input.mpg -timecode 01:02:03.04 -r 30000/1001 -s ntsc output.mpg
 </pre>
-<dt><code>-filter_complex</code> <i>filtergraph</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. For simple graphs &#8212; those with one input and one output of the same type &#8212; see the <code>-filter</code> options. <i>filtergraph</i> is a description of the filtergraph, as described in the &#8220;Filtergraph syntax&#8221; section of the ffmpeg-filters manual. </p>
+<dt><code>-filter_complex</code> <i>filtergraph</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. For simple graphs &#8212; those with one input and one output of the same type &#8212; see the <code>-filter</code> options. <i>filtergraph</i> is a description of the filtergraph, as described in the &#8220;Filtergraph syntax&#8221; section of the ffmpeg-filters manual. </dd>
 <p> Input link labels must refer to input streams using the <tt>&quot;[file_index:stream_specifier]&quot;</tt> syntax (i.e. the same as <code>-map</code> uses). If <i>stream_specifier</i> matches multiple streams, the first one will be used. An unlabeled input will be connected to the first unused input stream of the matching type. </p>
 <p> Output link labels are referred to with <code>-map</code>. Unlabeled outputs are added to the first output file. </p>
 <p> Note that with this option it is possible to use only lavfi sources without normal input files. </p>
@@ -1377,67 +1314,61 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <pre>
         ffmpeg -filter_complex 'color=c=red' -t 5 out.mkv
 </pre>
-<dt><code>-filter_complex_threads</code> <i>nb_threads</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Defines how many threads are used to process a filter_complex graph. Similar to filter_threads but used for <tt>&quot;-filter_complex&quot;</tt> graphs only. The default is the number of available CPUs.</p>
-<dt><code>-lavfi</code> <i>filtergraph</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. Equivalent to <code>-filter_complex</code>.</p>
-<dt><code>-filter_complex_script</code> <i>filename</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> This option is similar to <code>-filter_complex</code>, the only difference is that its argument is the name of the file from which a complex filtergraph description is to be read.</p>
-<dt><code>-accurate_seek (</code><i>input</i><code>)</code></p>
-<dd> This option enables or disables accurate seeking in input files with the <code>-ss</code> option. It is enabled by default, so seeking is accurate when transcoding. Use <code>-noaccurate_seek</code> to disable it, which may be useful e.g. when copying some streams and transcoding the others.</p>
-<dt><code>-seek_timestamp (</code><i>input</i><code>)</code></p>
-<dd> This option enables or disables seeking by timestamp in input files with the <code>-ss</code> option. It is disabled by default. If enabled, the argument to the <code>-ss</code> option is considered an actual timestamp, and is not offset by the start time of the file. This matters only for files which do not start from timestamp 0, such as transport streams.</p>
-<dt><code>-thread_queue_size</code> <i>size</i> <code>(</code><i>input</i><code>)</code></p>
-<dd> This option sets the maximum number of queued packets when reading from the file or device. With low latency / high rate live streams, packets may be discarded if they are not read in a timely manner; setting this value can force ffmpeg to use a separate input thread and read packets as soon as they arrive. By default ffmpeg only do this if multiple inputs are specified.</p>
-<dt><code>-sdp_file</code> <i>file</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Print sdp information for an output stream to <i>file</i>. This allows dumping sdp information when at least one output isn&#8217;t an rtp stream. (Requires at least one of the output formats to be rtp).</p>
-<dt><code>-discard (</code><i>input</i><code>)</code></p>
-<dd> Allows discarding specific streams or frames from streams. Any input stream can be fully discarded, using value <tt>&quot;all&quot;</tt> whereas selective discarding of frames from a stream occurs at the demuxer and is not supported by all demuxers.</p>
+<dt><code>-filter_complex_threads</code> <i>nb_threads</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Defines how many threads are used to process a filter_complex graph. Similar to filter_threads but used for <tt>&quot;-filter_complex&quot;</tt> graphs only. The default is the number of available CPUs.</dd>
+<dt><code>-lavfi</code> <i>filtergraph</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Define a complex filtergraph, i.e. one with arbitrary number of inputs and/or outputs. Equivalent to <code>-filter_complex</code>.</dd>
+<dt><code>-filter_complex_script</code> <i>filename</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> This option is similar to <code>-filter_complex</code>, the only difference is that its argument is the name of the file from which a complex filtergraph description is to be read.</dd>
+<dt><code>-accurate_seek (</code><i>input</i><code>)</code></dt>
+<dd> This option enables or disables accurate seeking in input files with the <code>-ss</code> option. It is enabled by default, so seeking is accurate when transcoding. Use <code>-noaccurate_seek</code> to disable it, which may be useful e.g. when copying some streams and transcoding the others.</dd>
+<dt><code>-seek_timestamp (</code><i>input</i><code>)</code></dt>
+<dd> This option enables or disables seeking by timestamp in input files with the <code>-ss</code> option. It is disabled by default. If enabled, the argument to the <code>-ss</code> option is considered an actual timestamp, and is not offset by the start time of the file. This matters only for files which do not start from timestamp 0, such as transport streams.</dd>
+<dt><code>-thread_queue_size</code> <i>size</i> <code>(</code><i>input</i><code>)</code></dt>
+<dd> This option sets the maximum number of queued packets when reading from the file or device. With low latency / high rate live streams, packets may be discarded if they are not read in a timely manner; setting this value can force ffmpeg to use a separate input thread and read packets as soon as they arrive. By default ffmpeg only do this if multiple inputs are specified.</dd>
+<dt><code>-sdp_file</code> <i>file</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Print sdp information for an output stream to <i>file</i>. This allows dumping sdp information when at least one output isn&#8217;t an rtp stream. (Requires at least one of the output formats to be rtp).</dd>
+<dt><code>-discard (</code><i>input</i><code>)</code></dt>
+<dd> Allows discarding specific streams or frames from streams. Any input stream can be fully discarded, using value <tt>&quot;all&quot;</tt> whereas selective discarding of frames from a stream occurs at the demuxer and is not supported by all demuxers.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>none</code></p>
-<dd> Discard no frame.</p>
-<dt><code>default</code></p>
-<dd> Default, which discards no frames.</p>
-<dt><code>noref</code></p>
-<dd> Discard all non-reference frames.</p>
-<dt><code>bidir</code></p>
-<dd> Discard all bidirectional frames.</p>
-<dt><code>nokey</code></p>
-<dd> Discard all frames excepts keyframes.</p>
-<dt><code>all</code></p>
-<dd> Discard all frames.</dl>
+<dt><code>none</code></dt>
+<dd> Discard no frame.</dd>
+<dt><code>default</code></dt>
+<dd> Default, which discards no frames.</dd>
+<dt><code>noref</code></dt>
+<dd> Discard all non-reference frames.</dd>
+<dt><code>bidir</code></dt>
+<dd> Discard all bidirectional frames.</dd>
+<dt><code>nokey</code></dt>
+<dd> Discard all frames excepts keyframes.</dd>
+<dt><code>all</code></dt>
+<dd> Discard all frames.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-abort_on</code> <i>flags</i> <code>(</code><i>global</i><code>)</code></p>
-<dd> Stop and abort on various conditions. The following flags are available:</p>
+</dl>
+<dt><code>-abort_on</code> <i>flags</i> <code>(</code><i>global</i><code>)</code></dt>
+<dd> Stop and abort on various conditions. The following flags are available:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>empty_output</code></p>
-<dd> No packets were passed to the muxer, the output is empty.</p>
-<dt><code>empty_output_stream</code></p>
-<dd> No packets were passed to the muxer in some of the output streams.</dl>
+<dt><code>empty_output</code></dt>
+<dd> No packets were passed to the muxer, the output is empty.</dd>
+<dt><code>empty_output_stream</code></dt>
+<dd> No packets were passed to the muxer in some of the output streams.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-max_error_rate (</code><i>global</i><code>)</code></p>
-<dd> Set fraction of decoding frame failures across all inputs which when crossed ffmpeg will return exit code 69. Crossing this threshold does not terminate processing. Range is a floating-point number between 0 to 1. Default is 2/3.</p>
-<dt><code>-xerror (</code><i>global</i><code>)</code></p>
-<dd> Stop and exit on error</p>
-<dt><code>-max_muxing_queue_size</code> <i>packets</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> When transcoding audio and/or video streams, ffmpeg will not begin writing into the output until it has one packet for each such stream. While waiting for that to happen, packets for other streams are buffered. This option sets the size of this buffer, in packets, for the matching output stream. </p>
+</dl>
+<dt><code>-max_error_rate (</code><i>global</i><code>)</code></dt>
+<dd> Set fraction of decoding frame failures across all inputs which when crossed ffmpeg will return exit code 69. Crossing this threshold does not terminate processing. Range is a floating-point number between 0 to 1. Default is 2/3.</dd>
+<dt><code>-xerror (</code><i>global</i><code>)</code></dt>
+<dd> Stop and exit on error</dd>
+<dt><code>-max_muxing_queue_size</code> <i>packets</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> When transcoding audio and/or video streams, ffmpeg will not begin writing into the output until it has one packet for each such stream. While waiting for that to happen, packets for other streams are buffered. This option sets the size of this buffer, in packets, for the matching output stream. </dd>
 <p> The default value of this option should be high enough for most uses, so only touch this option if you are sure that you need it.</p>
-<dt><code>-muxing_queue_data_threshold</code> <i>bytes</i> <code>(</code><i>output,per-stream</i><code>)</code></p>
-<dd> This is a minimum threshold until which the muxing queue size is not taken into account. Defaults to 50 megabytes per stream, and is based on the overall size of packets passed to the muxer.</p>
-<dt><code>-auto_conversion_filters (</code><i>global</i><code>)</code></p>
-<dd> Enable automatically inserting format conversion filters in all filter graphs, including those defined by <code>-vf</code>, <code>-af</code>, <code>-filter_complex</code> and <code>-lavfi</code>. If filter format negotiation requires a conversion, the initialization of the filters will fail. Conversions can still be performed by inserting the relevant conversion filter (scale, aresample) in the graph. On by default, to explicitly disable it you need to specify <tt>&quot;-noauto_conversion_filters&quot;</tt>.</dl>
+<dt><code>-muxing_queue_data_threshold</code> <i>bytes</i> <code>(</code><i>output,per-stream</i><code>)</code></dt>
+<dd> This is a minimum threshold until which the muxing queue size is not taken into account. Defaults to 50 megabytes per stream, and is based on the overall size of packets passed to the muxer.</dd>
+<dt><code>-auto_conversion_filters (</code><i>global</i><code>)</code></dt>
+<dd> Enable automatically inserting format conversion filters in all filter graphs, including those defined by <code>-vf</code>, <code>-af</code>, <code>-filter_complex</code> and <code>-lavfi</code>. If filter format negotiation requires a conversion, the initialization of the filters will fail. Conversions can still be performed by inserting the relevant conversion filter (scale, aresample) in the graph. On by default, to explicitly disable it you need to specify <tt>&quot;-noauto_conversion_filters&quot;</tt>.</dd></dl>
 <h3>Preset files</h3>
 <p> A preset file contains a sequence of <i>option</i>=<i>value</i> pairs, one for each line, specifying a sequence of options which would be awkward to specify on the command line. Lines starting with the hash (&#8216;#&#8217;) character are ignored and are used to provide comments. Check the <i>presets</i> directory in the FFmpeg source tree for examples. </p>
 <p> There are two types of preset files: ffpreset and avpreset files. </p>
@@ -1476,8 +1407,8 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <p> Any supported file format and protocol can serve as input to ffmpeg: </p>
 <p> Examples:</p>
 <dl>
-<dt>&bull;</p>
-<dd> You can use <font SIZE="-1">YUV</font> files as input: </p>
+<dt>&bull;</dt>
+<dd> You can use <font SIZE="-1">YUV</font> files as input: </dd>
 <pre>
         ffmpeg -i /tmp/test%d.Y /tmp/out.mpg
 </pre>
@@ -1487,44 +1418,44 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
         /tmp/test1.Y, /tmp/test1.U, /tmp/test1.V, etc...
 </pre>
 <p> The Y files use twice the resolution of the U and V files. They are raw files, without header. They can be generated by all decent video decoders. You must specify the size of the image with the <code>-s</code> option if ffmpeg cannot guess it.</p>
-<dt>&bull;</p>
-<dd> You can input from a raw <font SIZE="-1">YUV420P</font> file: </p>
+<dt>&bull;</dt>
+<dd> You can input from a raw <font SIZE="-1">YUV420P</font> file: </dd>
 <pre>
         ffmpeg -i /tmp/test.yuv /tmp/out.avi
 </pre>
 <p> test.yuv is a file containing raw <font SIZE="-1">YUV</font> planar data. Each frame is composed of the Y plane followed by the U and V planes at half vertical and horizontal resolution.</p>
-<dt>&bull;</p>
-<dd> You can output to a raw <font SIZE="-1">YUV420P</font> file: </p>
+<dt>&bull;</dt>
+<dd> You can output to a raw <font SIZE="-1">YUV420P</font> file: </dd>
 <pre>
         ffmpeg -i mydivx.avi hugefile.yuv
 </pre>
-<dt>&bull;</p>
-<dd> You can set several input files and output files: </p>
+<dt>&bull;</dt>
+<dd> You can set several input files and output files: </dd>
 <pre>
         ffmpeg -i /tmp/a.wav -s 640x480 -i /tmp/a.yuv /tmp/a.mpg
 </pre>
 <p> Converts the audio file a.wav and the raw <font SIZE="-1">YUV</font> video file a.yuv to <font SIZE="-1">MPEG</font> file a.mpg.</p>
-<dt>&bull;</p>
-<dd> You can also do audio and video conversions at the same time: </p>
+<dt>&bull;</dt>
+<dd> You can also do audio and video conversions at the same time: </dd>
 <pre>
         ffmpeg -i /tmp/a.wav -ar 22050 /tmp/a.mp2
 </pre>
 <p> Converts a.wav to <font SIZE="-1">MPEG</font> audio at 22050 Hz sample rate.</p>
-<dt>&bull;</p>
-<dd> You can encode to several formats at the same time and define a mapping from input stream to output streams: </p>
+<dt>&bull;</dt>
+<dd> You can encode to several formats at the same time and define a mapping from input stream to output streams: </dd>
 <pre>
         ffmpeg -i /tmp/a.wav -map 0:a -b:a 64k /tmp/a.mp2 -map 0:a -b:a 128k /tmp/b.mp2
 </pre>
 <p> Converts a.wav to a.mp2 at 64 kbits and to b.mp2 at 128 kbits. &#8216;-map file:index&#8217; specifies which input stream is used for each output stream, in the order of the definition of output streams.</p>
-<dt>&bull;</p>
-<dd> You can transcode decrypted VOBs: </p>
+<dt>&bull;</dt>
+<dd> You can transcode decrypted VOBs: </dd>
 <pre>
         ffmpeg -i snatch_1.vob -f avi -c:v mpeg4 -b:v 800k -g 300 -bf 2 -c:a libmp3lame -b:a 128k snatch.avi
 </pre>
 <p> This is a typical <font SIZE="-1">DVD</font> ripping example; the input is a <font SIZE="-1">VOB</font> file, the output an <font SIZE="-1">AVI</font> file with <font SIZE="-1">MPEG-4</font> video and <font SIZE="-1">MP3</font> audio. Note that in this command we use B-frames so the <font SIZE="-1">MPEG-4</font> stream is DivX5 compatible, and <font SIZE="-1">GOP</font> size is 300 which means one intra frame every 10 seconds for 29.97fps input video. Furthermore, the audio stream is MP3-encoded so you need to enable <font SIZE="-1">LAME</font> support by passing <tt>&quot;--enable-libmp3lame&quot;</tt> to configure. The mapping is particularly useful for <font SIZE="-1">DVD</font> transcoding to get the desired audio language. </p>
 <p> <font SIZE="-1">NOTE:</font> To see the supported input formats, use <tt>&quot;ffmpeg -demuxers&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> You can extract images from a video, or create a video from many images: </p>
+<dt>&bull;</dt>
+<dd> You can extract images from a video, or create a video from many images: </dd>
 <p> For extracting images from a video: </p>
 <pre>
         ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg
@@ -1541,19 +1472,19 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <pre>
         ffmpeg -f image2 -pattern_type glob -framerate 12 -i 'foo-*.jpeg' -s WxH foo.avi
 </pre>
-<dt>&bull;</p>
-<dd> You can put many streams of the same type in the output: </p>
+<dt>&bull;</dt>
+<dd> You can put many streams of the same type in the output: </dd>
 <pre>
         ffmpeg -i test1.avi -i test2.avi -map 1:1 -map 1:0 -map 0:1 -map 0:0 -c copy -y test12.nut
 </pre>
 <p> The resulting output file <i>test12.nut</i> will contain the first four streams from the input files in reverse order.</p>
-<dt>&bull;</p>
-<dd> To force <font SIZE="-1">CBR</font> video output: </p>
+<dt>&bull;</dt>
+<dd> To force <font SIZE="-1">CBR</font> video output: </dd>
 <pre>
         ffmpeg -i myfile.avi -b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k out.m2v
 </pre>
-<dt>&bull;</p>
-<dd> The four options lmin, lmax, mblmin and mblmax use &#8216;lambda&#8217; units, but you may use the <font SIZE="-1">QP2LAMBDA</font> constant to easily convert from &#8216;q&#8217; units: </p>
+<dt>&bull;</dt>
+<dd> The four options lmin, lmax, mblmin and mblmax use &#8216;lambda&#8217; units, but you may use the <font SIZE="-1">QP2LAMBDA</font> constant to easily convert from &#8216;q&#8217; units: </dd>
 <pre>
         ffmpeg -i src.ext -lmax 21*QP2LAMBDA dst.ext
 </pre>

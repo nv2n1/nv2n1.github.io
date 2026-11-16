@@ -15,11 +15,11 @@ pci_adjust_legacy_attr - adjustment of legacy file attributes
 <h2>Arguments</h2>
 
 <i>b</i>
-<dl><dd><dd>bus to create files under</dl>
+<dl><dd></dd><dd>bus to create files under</dd></dl>
  
 
  <i>mmap_type</i>
-<dl><dd>I/O port or memory</dl>
+<dl><dd>I/O port or memory</dd></dl>
 
 <h2>Description</h2>
 

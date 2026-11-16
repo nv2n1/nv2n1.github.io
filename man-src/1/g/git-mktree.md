@@ -19,15 +19,15 @@ git mktree[-z][--missing][--batch]
 <p> -z</p>
 <dl>
 <dt>
-<dd> Read the NUL-terminated <code>ls-tree -z</code> output instead.</dl>
+</dt><dd> Read the NUL-terminated <code>ls-tree -z</code> output instead.</dd></dl>
 <p> &#8211;missing</p>
 <dl>
 <dt>
-<dd> Allow missing objects. The default behaviour (without this option) is to verify that each tree entry&#8217;s sha1 identifies an existing object. This option has no effect on the treatment of gitlink entries (aka &quot;submodules&quot;) which are always allowed to be missing.</dl>
+</dt><dd> Allow missing objects. The default behaviour (without this option) is to verify that each tree entry&#8217;s sha1 identifies an existing object. This option has no effect on the treatment of gitlink entries (aka &quot;submodules&quot;) which are always allowed to be missing.</dd></dl>
 <p> &#8211;batch</p>
 <dl>
 <dt>
-<dd> Allow building of more than one tree object before exiting. Each tree is separated by as single blank line. The final new-line is optional. Note &#8211; if the <code>-z</code> option is used, lines are terminated with NUL.</dl>
+</dt><dd> Allow building of more than one tree object before exiting. Each tree is separated by as single blank line. The final new-line is optional. Note &#8211; if the <code>-z</code> option is used, lines are terminated with NUL.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

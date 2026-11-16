@@ -15,51 +15,51 @@ description: "tegrarcm – tegra firmware download utility"
 <p> This program is used to send code to a Tegra device in recovery mode. It does not supported locked devices with an encrypted boot key, only open devices such as the ventana or cardhu reference boards. It is not capable of flashing firmware to a device, but can be used to download firmware that is then capable of flashing. For example in ChromeOS tegrarcm is used to download a special build of u-boot to the target Tegra device with a payload that it then flashes to the boot device. </p>
 <h3>Platforms supported</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Tegra20</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra30</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra114</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra124</code> </p>
+<dt>&bull;</dt>
+<dd> <code>Tegra20</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra30</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra114</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra124</code> </dd>
 </dl>
 <h3>How to use</h3>
 <dl>
-<dt>&#8212;</p>
-<dd> Connect a USB cable from your development system to your Tegra device. You will either need a USB A to A cable or A to micro B depending on the target board.</p>
-<dt>&#8212;</p>
-<dd> Find the appropriate BCT file for your board. For reference boards, BCT files can be found in the L4T distribution from NVIDIA.</p>
-<dt>&#8212;</p>
-<dd> Build some firmware for your device (such as u-boot)</p>
-<dt>&#8212;</p>
-<dd> Run tegrarcm to download the firmware </p>
+<dt>&#8212;</dt>
+<dd> Connect a USB cable from your development system to your Tegra device. You will either need a USB A to A cable or A to micro B depending on the target board.</dd>
+<dt>&#8212;</dt>
+<dd> Find the appropriate BCT file for your board. For reference boards, BCT files can be found in the L4T distribution from NVIDIA.</dd>
+<dt>&#8212;</dt>
+<dd> Build some firmware for your device (such as u-boot)</dd>
+<dt>&#8212;</dt>
+<dd> Run tegrarcm to download the firmware </dd>
 </dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>readbct</code></p>
-<dd> Read the BCT from the target device and write it to <i>bctfile</i>. </p>
+<dt><code>readbct</code></dt>
+<dd> Read the BCT from the target device and write it to <i>bctfile</i>. </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;bct </code><i>bctfile</i></p>
-<dd> Specify the BCT file to download to the Tegra device. This file contains memory configuation information for the board. BCT files can be obtained through the NVIDIA L4T distribution or generated with cbootimage and a proper configuration file.</p>
-<dt><code>&#8211;bootloader </code><i>blfile</i></p>
-<dd> Specify the bootloader file to download to the Tegra device. This is the firmware file that will be downloaded and executed.</p>
-<dt><code>&#8211;loadaddr </code><i>loadaddr</i></p>
-<dd> Specify the address the bootloader will be loaded at. This should be specified in hex and is typically 0x108000 for a Tegra20 device or 0x80108000 for a Tegra30, Tegra114, or Tegra124 device.</p>
-<dt><code>&#8211;entryaddr </code><i>entryaddr</i></p>
-<dd> Specify the entry address that control will be passed to after the firmware is loaded. This should be specified in hex. If this option is omitted it is assumed to be the same as the load address.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help text and exit.</p>
-<dt><code>&#8211;miniloader </code><i>mlfile</i></p>
-<dd> Read the miniloader from the specified file instead of using the built-in one.</p>
-<dt><code>&#8211;miniloader_entry </code><i>mlentry</i></p>
-<dd> Specify the entry address of the miniloader.</p>
-<dt><code>&#8211;usb-port-path </code><i>path</i></p>
-<dd> Specify the physical USB port path of the Tegra device to control. </p>
+<dt><code>&#8211;bct </code><i>bctfile</i></dt>
+<dd> Specify the BCT file to download to the Tegra device. This file contains memory configuation information for the board. BCT files can be obtained through the NVIDIA L4T distribution or generated with cbootimage and a proper configuration file.</dd>
+<dt><code>&#8211;bootloader </code><i>blfile</i></dt>
+<dd> Specify the bootloader file to download to the Tegra device. This is the firmware file that will be downloaded and executed.</dd>
+<dt><code>&#8211;loadaddr </code><i>loadaddr</i></dt>
+<dd> Specify the address the bootloader will be loaded at. This should be specified in hex and is typically 0x108000 for a Tegra20 device or 0x80108000 for a Tegra30, Tegra114, or Tegra124 device.</dd>
+<dt><code>&#8211;entryaddr </code><i>entryaddr</i></dt>
+<dd> Specify the entry address that control will be passed to after the firmware is loaded. This should be specified in hex. If this option is omitted it is assumed to be the same as the load address.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help text and exit.</dd>
+<dt><code>&#8211;miniloader </code><i>mlfile</i></dt>
+<dd> Read the miniloader from the specified file instead of using the built-in one.</dd>
+<dt><code>&#8211;miniloader_entry </code><i>mlentry</i></dt>
+<dd> Specify the entry address of the miniloader.</dd>
+<dt><code>&#8211;usb-port-path </code><i>path</i></dt>
+<dd> Specify the physical USB port path of the Tegra device to control. </dd>
 </dl>
 <h2>USB PORT PATH</h2>
 <p> By default, tegrarcm operates on the first USB applicable device it finds. In a system that contains multiple Tegra devices, the user may wish to specify which device tegrarcm should operate upon. The &#8211;usb-port-path option allows this, and in a manner that is most immune to the set of attached USB devices varying. </p>
@@ -72,7 +72,7 @@ Bus 003 Device 045: ID 0955:7140 NVidia Corp.
 fi
 Then, to determine the USB port path, do one of:
 <dl>
-<dt>1.<dd>
+<dt>1.</dt><dd>
 Execute udevmadm on the USB device, and look for the DEVPATH entry. The
 final component in the path is the USB port path:
 $ udevadm info /dev/bus/usb/003/045
@@ -82,7 +82,7 @@ E: BUSNUM=003
 E: DEVNUM=045
 E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10.4
 </pre>
-<dt>2.</p>
+</dd><dt>2.</dt>
 <dd>
 <p> Look at all the sub-directories of /sys/bus/usb/devices/* that do not contain either &quot;:&quot; or &quot;usb&quot;. Each of these will contain a busnum and devnum file. Find the directory which matches the lsusb output, and use its name: </p>
 <pre>
@@ -93,7 +93,7 @@ $ cat /sys/bus/usb/devices/3-10.4/devnum
 </pre>
 <p> Alternatively, you may already have udev rules that create a device node symlink for the device (after some specific identification algorithm). In that case, you can search the udev output for MAJOR/MINOR values, or /sys/bus/usb/devices/* directories for &quot;dev&quot; files, that match the device node the symlink points to. </p>
 <p> Once the port path is known, this value will not vary unless your USB connections are physically changed, so you can use it over and over without repeating the steps above. </p>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To download u-boot firmware to a Tegra20 seaboard: </p>
 <pre>

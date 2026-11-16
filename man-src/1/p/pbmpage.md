@@ -19,17 +19,17 @@ description: "pbmpage – create a one page test pattern for printing"
 <p> If, due to addition of margins, the printer refuses to print the image because it is too big, use <code>pnmcut</code> to cut the right and bottom edges off the test pattern until it is small enough to print. </p>
 <p> <i>test_pattern </i> is the number of the test pattern to generate, as follows. The default is <code>1</code>.</p>
 <dl>
-<dt><code>1</code></p>
-<dd> A grid ruled in numbers of pixels. The outermost rules are exactly at the edges of the paper.</p>
-<dt><code>2</code></p>
-<dd> A vertical line segment, one pixel wide, extending 1/2&quot; up from the exact center of the page.</p>
-<dt><code>3</code></p>
-<dd> Two diagonal line segments, one starting at the upper left corner of the page, the other starting from the lower left corner of the page. Both extend 1/2&quot; toward the center of the page at 45 degrees. </p>
+<dt><code>1</code></dt>
+<dd> A grid ruled in numbers of pixels. The outermost rules are exactly at the edges of the paper.</dd>
+<dt><code>2</code></dt>
+<dd> A vertical line segment, one pixel wide, extending 1/2&quot; up from the exact center of the page.</dd>
+<dt><code>3</code></dt>
+<dd> Two diagonal line segments, one starting at the upper left corner of the page, the other starting from the lower left corner of the page. Both extend 1/2&quot; toward the center of the page at 45 degrees. </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a4</code></p>
-<dd> Generate an image for A4 (European) paper. Without this option, <code>pbmpage</code> generates an image for US standard paper (8 1/2&quot; wide x 11&quot; high). </p>
+<dt><code>-a4</code></dt>
+<dd> Generate an image for A4 (European) paper. Without this option, <code>pbmpage</code> generates an image for US standard paper (8 1/2&quot; wide x 11&quot; high). </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtoppa/">pbmtoppa</a></code>(1), <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>

@@ -37,51 +37,38 @@ url: "/docs/linux/man/3-sdot/"
  <b>SDOT</b> <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
     SDOT forms the dot product of two vectors.
     uses unrolled loops for increments equal to one.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  <b>Further Details: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
      jack dongarra, linpack, 3/11/78.
      modified 12/3/93, array(1) declarations changed to array(*)
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  

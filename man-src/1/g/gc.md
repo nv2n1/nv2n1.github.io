@@ -16,41 +16,41 @@ description: "gc – count graph components"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-n</code></p>
-<dd> Count nodes.</p>
-<dt><code>-e</code></p>
-<dd> Count edges.</p>
-<dt><code>-c</code></p>
-<dd> Count connected components.</p>
-<dt><code>-C</code></p>
-<dd> Count clusters. By definition, a cluster is a graph or subgraph whose name begins with &quot;cluster&quot;.</p>
-<dt><code>-a</code></p>
-<dd> Count all. Equivalent to <code>-encC</code></p>
-<dt><code>-r</code></p>
-<dd> Recursively analyze subgraphs.</p>
-<dt><code>-s</code></p>
-<dd> Print no output. Only exit value is important.</p>
-<dt><code>-D</code></p>
-<dd> Only analyze directed graphs.</p>
-<dt><code>-U</code></p>
-<dd> Only analyze undirected graphs.</p>
-<dt><code>-v</code></p>
-<dd> Verbose output.</p>
-<dt><code>-?</code></p>
-<dd> Print usage information.</dl>
+<dt><code>-n</code></dt>
+<dd> Count nodes.</dd>
+<dt><code>-e</code></dt>
+<dd> Count edges.</dd>
+<dt><code>-c</code></dt>
+<dd> Count connected components.</dd>
+<dt><code>-C</code></dt>
+<dd> Count clusters. By definition, a cluster is a graph or subgraph whose name begins with &quot;cluster&quot;.</dd>
+<dt><code>-a</code></dt>
+<dd> Count all. Equivalent to <code>-encC</code></dd>
+<dt><code>-r</code></dt>
+<dd> Recursively analyze subgraphs.</dd>
+<dt><code>-s</code></dt>
+<dd> Print no output. Only exit value is important.</dd>
+<dt><code>-D</code></dt>
+<dd> Only analyze directed graphs.</dd>
+<dt><code>-U</code></dt>
+<dd> Only analyze undirected graphs.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>-?</code></dt>
+<dd> Print usage information.</dd></dl>
 <p> By default, <i>gc</i> returns the number of nodes and edges.</p>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The following exit values are returned:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful completion.</p>
-<dt><code>1</code></p>
-<dd> The <code>-U</code> or <code>-E</code> option was used, and a graph of the wrong type was encountered.</dl>
+<dt><code>0</code></dt>
+<dd> Successful completion.</dd>
+<dt><code>1</code></dt>
+<dd> The <code>-U</code> or <code>-E</code> option was used, and a graph of the wrong type was encountered.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>

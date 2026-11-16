@@ -17,12 +17,11 @@ description: "git-clear-soft – Soft clean up a repository"
 <p> Clears the repo.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git clear-soft
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Modified version of script written by Daniel &#8216;grindhold&#8217; Brendle &lt;<i>grindhold [at] gmx.net</i>&gt; by Matiss Treinis &lt;<i>mrtreinis [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

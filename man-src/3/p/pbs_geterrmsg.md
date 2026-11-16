@@ -10,7 +10,6 @@ description: "pbs_geterrmsg – get error message for last pbs batch operation"
 <p>pbs_geterrmsg &#8211; get error message for last pbs batch operation</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>char *pbs_geterrmsg(int connect)</pre>
 <h2>Description</h2>

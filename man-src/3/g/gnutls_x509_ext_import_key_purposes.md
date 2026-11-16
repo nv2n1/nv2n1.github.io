@@ -14,12 +14,12 @@ description: "gnutls_x509_ext_import_key_purposes – API function"
 <p> <code>int gnutls_x509_ext_import_key_purposes(const gnutls_datum_t * </code><i>ext</i><code>, gnutls_x509_key_purposes_t </code><i>p</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_datum_t * ext</p>
-<dd> The DER-encoded extension data</p>
-<dt>gnutls_x509_key_purposes_t p</p>
-<dd> The key purposes structure</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>const gnutls_datum_t * ext</dt>
+<dd> The DER-encoded extension data</dd>
+<dt>gnutls_x509_key_purposes_t p</dt>
+<dd> The key purposes structure</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the key purposes in the provided DER-encoded ExtKeyUsageSyntax PKIX extension, to a <code>gnutls_x509_key_purposes_t</code> structure. The structure must be initialized.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_ext_import_key_purposes – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

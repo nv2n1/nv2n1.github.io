@@ -10,11 +10,9 @@ description: "pthread_attr_setguardsize, pthread_attr_getguardsize – set/get g
 <p>pthread_attr_setguardsize, pthread_attr_getguardsize &#8211; set/get guard size attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setguardsize(pthread_attr_t *attr, size_t guardsize);
 int pthread_attr_getguardsize(const pthread_attr_t *attr,
                               size_t *guardsize);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setguardsize</code>() function sets the guard size attribute of the thread attributes object referred to by <i>attr</i> to the value specified in <i>guardsize</i>. </p>

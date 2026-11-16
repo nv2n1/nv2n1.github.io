@@ -18,7 +18,7 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 <p> If there is no &#8216;OK&#8217; file to compare returned CIM-XML results against xmltest will generate one.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td># xmltest test/getclass.Linux_OperatingSystem.xml</td>
@@ -41,11 +41,11 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If the returned CIM-XML results match the existing &#8216;OK&#8217; file xmltest will signal that the test passed.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td># xmltest test/getclass.Linux_OperatingSystem.xml</td>
@@ -63,11 +63,11 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If the returned CIM-XML results don&#8217;t match the existing &#8216;OK&#8217; file xmltest will signal that the tes failed and generate a &#8216;result&#8217; file containing the erroneous results.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td># xmltest test/getclass.Linux_OperatingSystem.xml</td>
@@ -90,7 +90,7 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>PREREQUISITES</h2>
 <p> Requires wbemcat on search path.</p>
 <h2>AUTHOR</h2>
@@ -102,18 +102,18 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 <p> The SBLIM project maintains a mailing list to which you should direct all questions regarding sfcb, sfcc, wbemcli, or any of the SBLIM providers. To subscribe to this mailing list visit</p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://lists.sourceforge.net/lists/listinfo/sblim-issues">http://lists.sourceforge.net/lists/listinfo/sblim-issues</a></dl>
+</dt><dd> <a rel="nofollow" href="http://lists.sourceforge.net/lists/listinfo/sblim-issues">http://lists.sourceforge.net/lists/listinfo/sblim-issues</a></dd></dl>
 <p> The SBLIM Project Bug tracking page can be found at</p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=128809">http://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784</dl>
+</dt><dd> <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=128809">http://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> (C) Copyright IBM Corp. 2004, 2005</p>
 <h2>AVAILABILITY</h2>
 <p> The Small-Footprint CIM Broker (sfcb) is a part of the SBLIM project. The most recent version is available on the web at</p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wbemcat/">wbemcat</a></code>(1) </p>
 <h2>Index</h2>

@@ -13,10 +13,10 @@ description: "pskc_validate – API function"
 int pskc_validate(pskc_t *container, int *isvalid);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>int * isvalid</p>
-<dd>output variable holding validation result, non-0 for valid.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>int * isvalid</dt>
+<dd>output variable holding validation result, non-0 for valid.</dd></dl>
 <h2>Description</h2>
 <p>This function validate the PSKC <i>container</i> handle the PSKC XML Schema.</p>
 <h2>Returns</h2>

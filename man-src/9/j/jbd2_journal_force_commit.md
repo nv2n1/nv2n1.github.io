@@ -14,14 +14,14 @@ description: "jbd2_journal_force_commit – force any uncommitted transactions"
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>journal to force</dl>
+</dd><dd>journal to force</dd></dl>
 <h2>Description</h2>
 <p>Caller want unconditional commit. We can only force the running transaction if we don&#8217;t have an active handle, otherwise, we will deadlock.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

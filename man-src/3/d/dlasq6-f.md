@@ -20,10 +20,10 @@ description: "dlasq6.f –"
 <dd>
 <pre> DLASQ6 computes one dqd (shift equal to zero) transform in
  ping-pong form, with protection against underflow and overflow.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>I0</i> </p>
+<dd><i>I0</i> </dd>
 <pre> I0 is INTEGER
  First index.</pre>
 <p><i>N0</i> </p>
@@ -57,13 +57,13 @@ description: "dlasq6.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 119 of file dlasq6.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

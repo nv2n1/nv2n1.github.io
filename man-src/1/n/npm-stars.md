@@ -12,27 +12,25 @@ description: "npm-stars – View packages marked as favorites"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm stars [&lt;user&gt;]
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> If you have starred a lot of neat things and want to find them again quickly this command lets you do just that. </p>
 <p> You may also want to see your friend&#8217;s favorite packages, in this case you will most certainly enjoy this command.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help star</p>
-<dt>&bull;</p>
-<dd> npm help view</p>
-<dt>&bull;</p>
-<dd> npm help whoami</p>
-<dt>&bull;</p>
-<dd> npm help adduser </p>
+<dt>&bull;</dt>
+<dd> npm help star</dd>
+<dt>&bull;</dt>
+<dd> npm help view</dd>
+<dt>&bull;</dt>
+<dd> npm help whoami</dd>
+<dt>&bull;</dt>
+<dd> npm help adduser </dd>
 </dl>
 </dl>
 <h2>Index</h2>

@@ -21,22 +21,22 @@ description: "Ecore Jobs – You can queue jobs that are to be done by the main 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when the job gets handled.<br />
- <i>data</i> Data pointer to be passed to the job function when the job is handled.</dl>
+ <i>data</i> Data pointer to be passed to the job function when the job is handled.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The handle of the job. NULL is returned if the job could not be added to the queue.</dl>
+<dd>The handle of the job. NULL is returned if the job could not be added to the queue.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Once the job has been executed, the job handle is invalid.</dl>
+<dd>Once the job has been executed, the job handle is invalid.</dd></dl>
 <p> References ecore_event_add().</p>
 <h3>EAPI void* ecore_job_del (<code>Ecore_Job</code> * job)</h3>
 <p>Delete a queued job that has not yet been executed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>job</i> Handle of the job to delete.</dl>
+<dd><i>job</i> Handle of the job to delete.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer that was to be passed to the job.</dl>
+<dd>The data pointer that was to be passed to the job.</dd></dl>
 <p> References ecore_event_del().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

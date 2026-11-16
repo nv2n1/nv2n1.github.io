@@ -20,10 +20,10 @@ description: "victronups – Driver for IMV/Victron UPS unit Match, Match Lite, 
 <p>This driver supports the following optional setting in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>modelname</code>=<i>name</i></p>
 <dl>
-<dd>Set model name</dl>
+<dd>Set model name</dd></dl>
 <p> <code>usd</code>=<i>delay</i></p>
 <dl>
-<dd>Set delay before shutdown on UPS</dl>
+<dd>Set delay before shutdown on UPS</dd></dl>
 <h2>Bugs</h2>
 <p>The protocol for this UPS is not officially documented.</p>
 <h2>Author</h2>

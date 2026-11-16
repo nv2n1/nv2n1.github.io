@@ -19,7 +19,7 @@ description: "dlapmt.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLAPMT rearranges the columns of the M by N matrix X as specified
  by the permutation K(1),K(2),...,K(N) of the integers 1,...,N.
@@ -28,11 +28,11 @@ description: "dlapmt.f –"
  If FORWRD = .FALSE., backward permutation:
       X(*,J) is moved to X(*,K(J)) for J = 1,2,...,N.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FORWRD</i> </p>
+</dt><dd> <i>FORWRD</i> </dd>
 <pre>
           FORWRD is LOGICAL
           = .TRUE., forward permutation
@@ -70,14 +70,14 @@ description: "dlapmt.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 105 of file dlapmt.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

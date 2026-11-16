@@ -11,23 +11,23 @@ c_natgrids - primary double precision C entry for natural neighbor gridding
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int, int, double&nbsp;<wbr>[], double&nbsp;<wbr>[], int&nbsp;<wbr>*);
 <h2>Synopsis</h2>double *c_natgridd (npnts, x, y, z, numxout, numyout, xi, yi, ier);
 <h2>Description</h2><dl COMPACT><dt>npnts
-<dd>The number of input data points. (npnts &gt; 3).
-<dt>x
-<dd>An array containing the x coordinates of the input data points.
-<dt>y
-<dd>An array containing the y coordinates of the input data points.
-<dt>z
-<dd>An array containing the functional values of the input data points. That is, z[m] is the value of the input function at coordinate (x[m],y[m]), for 0 &lt;= m &lt; npnts.
-<dt>numxout
-<dd>The number of x values in the output grid.
-<dt>numyout
-<dd>The number of y values in the output grid.
-<dt>xi
-<dd>An array of dimension numxout containing the x coordinates of the output data grid. The values in xi must be increasing, but need not be equally spaced.
-<dt>yi
-<dd>An array of dimension numyout containing the y coordinates of the output data grid. The values in yi must be increasing, but need not be equally spaced.
-<dt>ier
-<dd>An error value. If *ier is 0, then no errors were detected. If *ier is non-zero, then refer to the man page for natgrid_errors for details.</dl><h2>Usage</h2>c_natgridd returns a pointer to a linear array of data that is is the interpolated grid stored in row-major order. That is, if out is declared as 
+</dt><dd>The number of input data points. (npnts &gt; 3).
+</dd><dt>x
+</dt><dd>An array containing the x coordinates of the input data points.
+</dd><dt>y
+</dt><dd>An array containing the y coordinates of the input data points.
+</dd><dt>z
+</dt><dd>An array containing the functional values of the input data points. That is, z[m] is the value of the input function at coordinate (x[m],y[m]), for 0 &lt;= m &lt; npnts.
+</dd><dt>numxout
+</dt><dd>The number of x values in the output grid.
+</dd><dt>numyout
+</dt><dd>The number of y values in the output grid.
+</dd><dt>xi
+</dt><dd>An array of dimension numxout containing the x coordinates of the output data grid. The values in xi must be increasing, but need not be equally spaced.
+</dd><dt>yi
+</dt><dd>An array of dimension numyout containing the y coordinates of the output data grid. The values in yi must be increasing, but need not be equally spaced.
+</dd><dt>ier
+</dt><dd>An error value. If *ier is 0, then no errors were detected. If *ier is non-zero, then refer to the man page for natgrid_errors for details.</dd></dl><h2>Usage</h2>c_natgridd returns a pointer to a linear array of data that is is the interpolated grid stored in row-major order. That is, if out is declared as 
 
  double *out; 
 

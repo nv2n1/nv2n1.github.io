@@ -19,20 +19,20 @@ bool bson_append_timestamp(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> An ASCII C string containing the name of the field.</dl>
+<dt><code>key</code></dt>
+<dd> An ASCII C string containing the name of the field.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>timestamp</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>timestamp</code></dt>
+<dd> A uint32_t.</dd></dl>
 <dl>
-<dt><code>increment</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>increment</code></dt>
+<dd> A uint32_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is not similar in functionality to <code><a href="/docs/linux/man/3-bson_append_date_time/">bson_append_date_time</a>(3)</code> \&amp;. Timestamp elements are different in that they include only second precision and an increment field. </p>
 <p> They are primarily used for intra-MongoDB server communication. </p>

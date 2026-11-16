@@ -25,30 +25,30 @@ description: "estconfig – configuration utility of Hyper Estraier"
 <h2>DESCRIPTION</h2>
 <p> <code>estconfig</code> is useful for integration of an application or a system using Hyper Estraier. It outputs setting and configurations of Hyper Estraier.</p>
 <dl>
-<dt><code>estconfig &#8211;version</code></p>
-<dd> to output version information.</p>
-<dt><code>estconfig &#8211;prefix</code></p>
-<dd> to output the prefix of the destination of installation.</p>
-<dt><code>estconfig &#8211;execprefix</code></p>
-<dd> to output the prefix of the files depending on the platform.</p>
-<dt><code>estconfig &#8211;headdir</code></p>
-<dd> to output the prefix of the headers.</p>
-<dt><code>estconfig &#8211;libdir</code></p>
-<dd> to output the prefix of the libraries.</p>
-<dt><code>estconfig &#8211;bindir</code></p>
-<dd> to output the prefix of the commands.</p>
-<dt><code>estconfig &#8211;libexecdir</code></p>
-<dd> to output the prefix of the CGI script.</p>
-<dt><code>estconfig &#8211;datadir</code></p>
-<dd> to output the prefix of the configuration files.</p>
-<dt><code>estconfig &#8211;cflags</code></p>
-<dd> to output the compiler options to be specified when building.</p>
-<dt><code>estconfig &#8211;ldflags</code></p>
-<dd> to output the linker options to be specified when building.</p>
-<dt><code>estconfig &#8211;libs</code></p>
-<dd> to output the libraries to be specified when building.</p>
-<dt><code>estconfig &#8211;mtlibs</code></p>
-<dd> to output the libraries for applications with multi thread.</dl>
+<dt><code>estconfig &#8211;version</code></dt>
+<dd> to output version information.</dd>
+<dt><code>estconfig &#8211;prefix</code></dt>
+<dd> to output the prefix of the destination of installation.</dd>
+<dt><code>estconfig &#8211;execprefix</code></dt>
+<dd> to output the prefix of the files depending on the platform.</dd>
+<dt><code>estconfig &#8211;headdir</code></dt>
+<dd> to output the prefix of the headers.</dd>
+<dt><code>estconfig &#8211;libdir</code></dt>
+<dd> to output the prefix of the libraries.</dd>
+<dt><code>estconfig &#8211;bindir</code></dt>
+<dd> to output the prefix of the commands.</dd>
+<dt><code>estconfig &#8211;libexecdir</code></dt>
+<dd> to output the prefix of the CGI script.</dd>
+<dt><code>estconfig &#8211;datadir</code></dt>
+<dd> to output the prefix of the configuration files.</dd>
+<dt><code>estconfig &#8211;cflags</code></dt>
+<dd> to output the compiler options to be specified when building.</dd>
+<dt><code>estconfig &#8211;ldflags</code></dt>
+<dd> to output the linker options to be specified when building.</dd>
+<dt><code>estconfig &#8211;libs</code></dt>
+<dd> to output the libraries to be specified when building.</dd>
+<dt><code>estconfig &#8211;mtlibs</code></dt>
+<dd> to output the libraries for applications with multi thread.</dd></dl>
 <p> estconfig always returns 0 as the exit status. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3) <code>estnode</code>(3) </p>

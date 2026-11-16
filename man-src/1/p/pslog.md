@@ -16,8 +16,8 @@ description: "pslog – report current logs path of a process"
 <p> The <code>pslog</code> command reports the current working logs of a process.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Display version information.</dl>
+<dt><code>-V</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-pwdx/">pwdx</a></code>(1).</p>
 <h2>AUTHOR</h2>

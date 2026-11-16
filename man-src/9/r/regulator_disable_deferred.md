@@ -14,10 +14,10 @@ description: "regulator_disable_deferred – disable regulator output with delay
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>regulator source</dl>
+</dd><dd>regulator source</dd></dl>
 <p> <i>ms</i></p>
 <dl>
-<dd>miliseconds until the regulator is disabled</dl>
+<dd>miliseconds until the regulator is disabled</dd></dl>
 <h2>Description</h2>
 <p>Execute <code>regulator_disable</code> on the regulator after a delay. This is intended for use with devices that require some time to quiesce.</p>
 <h2>Note</h2>
@@ -25,10 +25,10 @@ description: "regulator_disable_deferred – disable regulator output with delay
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

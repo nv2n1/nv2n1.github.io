@@ -11,11 +11,8 @@ description: "ql/termstructures/volatility/optionlet/strippedoptionletadapter.hp
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/volatility/optionlet/strippedoptionletbase.hpp&gt;
-
 #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;
-
 #include &lt;ql/math/interpolation.hpp&gt;
-
 #include &lt;ql/math/interpolations/sabrinterpolation.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>StrippedOptionletAdapter</code></p>

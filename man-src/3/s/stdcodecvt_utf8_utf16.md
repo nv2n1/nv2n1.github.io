@@ -10,14 +10,10 @@ description: "std::codecvt_utf8_utf16 – std::codecvt_utf8_utf16"
 <p>std::codecvt_utf8_utf16 &#8211; std::codecvt_utf8_utf16</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;codecvt&gt;
-
     template &lt;class Elem,
-
               unsigned long Maxcode = 0x10ffff, (since C++ 11)
-
                                                     std::codecvt_mode Mode = (std::codecvt_mode)0&gt;
     (deprecated in C++ 17)
-
         class codecvt_utf8_utf16 : public std::codecvt&lt;Elem, char, std::mbstate_t&gt;;</code></pre>
 <p>std::codecvt_utf8_utf16 is a std::codecvt facet which encapsulates conversion between a UTF-8 encoded byte string and UTF-16 encoded character string. If Elem is a 32-bit type, one UTF-16 code unit will be stored in each 32-bit character of the output sequence.<br />
 This is an N:M conversion facet, and cannot be used with std::basic_filebuf (which only permits 1:N conversions, such as UTF-32/UTF-8, between the internal and the external encodings). This facet can be used with std::wstring_convert. </p>
@@ -95,16 +91,11 @@ noconv no conversion required, input and output types are the same</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;codecvt&gt;
-
 #include &lt;cassert&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::string u8 = u8&quot;zß水&#x1f34c;&quot;;
     std::u16string u16 = u&quot;zß水&#x1f34c;&quot;;

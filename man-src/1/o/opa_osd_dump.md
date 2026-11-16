@@ -26,12 +26,10 @@ url: "/docs/linux/man/1-opa_osd_dump/"
 
 <dl>
 <dt>--help
-<dd> Produces full help text. 
-
-<dt>--verbose/-v <i>arg</i>
-<dd> Specifies the logging level to perform. Range = 1 - 7. 
-
-</dl>
+</dt><dd> Produces full help text. 
+</dd><dt>--verbose/-v <i>arg</i>
+</dt><dd> Specifies the logging level to perform. Range = 1 - 7. 
+</dd></dl>
 
 <h2>Example</h2>
 

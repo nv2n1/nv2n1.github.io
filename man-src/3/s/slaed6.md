@@ -19,7 +19,7 @@ description: "slaed6.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SLAED6 computes the positive or negative root(closest to the origin)
                                     of
@@ -29,11 +29,11 @@ otherwise it is between d(1) and d(2)
                                      This routine will be called by SLAED4 when necessary.In most cases,
     the root sought is the smallest in magnitude, though it might not be in some extremely rare situations.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>KNITER</i> </p>
+</dt><dd> <i>KNITER</i> </dd>
 <pre>
           KNITER is INTEGER
                Refer to SLAED4 for its significance.
@@ -82,29 +82,29 @@ otherwise it is between d(1) and d(2)
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   10/02/03: This version has a few statements commented out for thread
   safety (machine parameters are computed on each entry). SJH.
   05/10/06: Modified from a new version of Ren-Cang Li, use
      Gragg-Thornton-Warner cubic convergent scheme for better stability.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 141 of file slaed6.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

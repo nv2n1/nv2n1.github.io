@@ -11,54 +11,22 @@ description: "sc::SCElementKNorm –"
 <p> Computed k-norm of matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;elemop.h&gt;</code></pre>
 <p> Inherits <code>sc::SCElementOp</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SCElementKNorm (double k=2.0)
-
-
 by default compute 2-norm
-
-
 SCElementKNorm (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void process (SCMatrixBlockIter &amp;)
-
-
 This is the fallback routine to process blocks and is called by process_spec members that are not overridden.
-
-
 int has_collect ()
-
-
 If duplicates of the SCElementOp exist (that is, there is more than one node), then if has_collect returns nonzero then collect is called with a MessageGrp reference after all of the blocks have been processed.
-
-
 void defer_collect (int)
-
-
-
 void collect (const Ref&lt; MessageGrp &gt; &amp;)
-
-
-
 void collect (const Ref&lt; SCElementOp &gt; &amp;)
-
-
-
 double result ()
-
-
-
 void init ()</code></pre>
 <h2>Detailed Description</h2>
 <p>Computed k-norm of matrix.</p>

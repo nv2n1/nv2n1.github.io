@@ -118,8 +118,8 @@ printf("%d CPUs: %d usr   %d sys   %d   idle,
 <p> More complete examples that demonstrate the use of <code>pmgenmap</code> which may be used as a basis for program development are included in the PCP demos, e.g. <i>$PCP_DEMOS_DIR/pmclient</i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

@@ -155,92 +155,90 @@ description: "src/antlr3string.c –"
 <p> Creates a new 16 bit string initialized with the 16 bit characters at the supplied ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
- <i>ptr</i> &#8211; Pointer to 16 bit encoded characters</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+ <i>ptr</i> &#8211; Pointer to 16 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to the new string</dl>
+</dt><dd> pointer to the new string</dd></dl>
 <p> References ANTLR3_MEMMOVE, ANTLR3_STRING_struct::chars, and ANTLR3_STRING_FACTORY_struct::newSize. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newPtr16_8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p> Creates a new 16 bit string initialized with the 8 bit characters at the supplied 8 bit character ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
- <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+ <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to the new string</dl>
+</dt><dd> pointer to the new string</dd></dl>
 <p> References ANTLR3_STRING_struct::chars, and ANTLR3_STRING_FACTORY_struct::newSize. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newPtr8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p> Creates a new 8 bit string initialized with the 8 bit characters at the supplied ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
- <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+ <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to the new string</dl>
+</dt><dd> pointer to the new string</dd></dl>
 <p> References ANTLR3_MEMMOVE, ANTLR3_STRING_struct::chars, and ANTLR3_STRING_FACTORY_struct::newSize. </p>
 <p> Referenced by antlr3StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newRaw16 (<code>pANTLR3_STRING_FACTORY</code> factory) [static]<code>Parameters:</code></h3>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i></dl>
+</dt><dd> <i>factory</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 <p> References ANTLR3_CDECL, ANTLR3_MALLOC, ANTLR3_TRUE, ANTLR3_STRING_FACTORY_struct::index, ANTLR3_VECTOR_struct::set, stringFree(), stringInit16(), and ANTLR3_STRING_FACTORY_struct::strings. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newRaw8 (<code>pANTLR3_STRING_FACTORY</code> factory) [static]<code>Parameters:</code></h3>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i></dl>
+</dt><dd> <i>factory</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 <p> References ANTLR3_CDECL, ANTLR3_MALLOC, ANTLR3_TRUE, ANTLR3_STRING_FACTORY_struct::index, ANTLR3_VECTOR_struct::set, stringFree(), stringInit8(), and ANTLR3_STRING_FACTORY_struct::strings. </p>
 <p> Referenced by antlr3StringFactoryNew(), and to8_16().</p>
 <h3>static <code>pANTLR3_STRING</code> newSize16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p> Creates a new string with enough capacity for size 16 bit characters plus a terminator. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; POitner to the string factory that owns strings<br />
- <i>size</i> &#8211; In characters</dl>
+</dt><dd> <i>factory</i> &#8211; POitner to the string factory that owns strings<br />
+ <i>size</i> &#8211; In characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to the new string.</dl>
+</dt><dd> pointer to the new string.</dd></dl>
 <p> References ANTLR3_MALLOC, ANTLR3_STRING_struct::chars, and ANTLR3_STRING_FACTORY_struct::newRaw. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newSize8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p> Creates a new string with enough capacity for size 8 bit characters plus a terminator. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings<br />
- <i>size</i> &#8211; In characters</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings<br />
+ <i>size</i> &#8211; In characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to the new string.</dl>
+</dt><dd> pointer to the new string.</dd></dl>
 <p> References ANTLR3_MALLOC, ANTLR3_STRING_struct::chars, and ANTLR3_STRING_FACTORY_struct::newRaw. </p>
 <p> Referenced by antlr3StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newStr16_16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr) [static]</h3>
 <p> Create a new 16 bit string from the supplied, null terminated, 16 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
- <i>ptr</i> &#8211; Pointer to the 16 bit encoded string</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+ <i>ptr</i> &#8211; Pointer to the 16 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Pointer to the newly initialized string</dl>
+</dt><dd> Pointer to the newly initialized string</dd></dl>
 <p> First, determine the length of the input string </p>
 <p> References ANTLR3_STRING_FACTORY_struct::newPtr. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
@@ -248,24 +246,24 @@ description: "src/antlr3string.c –"
 <p> Create a new 16 bit string from the supplied, null terminated, 8 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
- <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+ <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> POinter to the newly initialized string</dl>
+</dt><dd> POinter to the newly initialized string</dd></dl>
 <p> References ANTLR3_STRING_FACTORY_struct::newPtr8. </p>
 <p> Referenced by antlr3UCS2StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> newStr8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr) [static]</h3>
 <p> Create a new 8 bit string from the supplied, null terminated, 8 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
- <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dl>
+</dt><dd> <i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+ <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Pointer to the newly initialized string</dl>
+</dt><dd> Pointer to the newly initialized string</dd></dl>
 <p> References ANTLR3_STRING_FACTORY_struct::newPtr8. </p>
 <p> Referenced by antlr3StringFactoryNew().</p>
 <h3>static <code>pANTLR3_STRING</code> printable16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_STRING</code> string) [static]</h3>
@@ -293,31 +291,29 @@ description: "src/antlr3string.c –"
 <h3>static void stringInit16 (<code>pANTLR3_STRING</code> string) [static]<code>Parameters:</code></h3>
 <dl COMPACT>
 <dt>
-<dd> <i>string</i></dl>
+</dt><dd> <i>string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 <p> References addc16(), addi16(), ANTLR3_ENCODING_UCS2, append16_16(), append16_8(), appendS(), charAt16(), compare16_16(), compare16_8(), compareS(), ANTLR3_STRING_struct::compareS, insert16_16(), insert16_8(), inserti16(), insertS(), set16_16(), set16_8(), setS(), subString16(), to8_16(), ANTLR3_STRING_struct::toInt32, toInt32_16(), ANTLR3_STRING_struct::toUTF8, and toUTF8_16(). </p>
 <p> Referenced by newRaw16().</p>
 <h3>static void stringInit8 (<code>pANTLR3_STRING</code> string) [static]<code>Parameters:</code></h3>
 <dl COMPACT>
 <dt>
-<dd> <i>string</i></dl>
+</dt><dd> <i>string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd></dl>
+</dl>
 <p> References addc8(), addi8(), ANTLR3_ENCODING_LATIN1, append8(), appendS(), charAt8(), compare8(), compareS(), ANTLR3_STRING_struct::compareS, insert8(), inserti8(), insertS(), set8(), setS(), subString8(), to8_8(), ANTLR3_STRING_struct::toInt32, toInt32_8(), ANTLR3_STRING_struct::toUTF8, and toUTF8_8(). </p>
 <p> Referenced by newRaw8().</p>
 <h3>static void stringInitUTF8 (<code>pANTLR3_STRING</code> string) [static]<code>Parameters:</code></h3>
 <dl COMPACT>
 <dt>
-<dd> <i>string</i></dl>
+</dt><dd> <i>string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> TODO: Implement UTF-8</dl>
+</dt><dd> TODO: Implement UTF-8</dd></dl>
 <h3>static <code>pANTLR3_STRING</code> subString16 (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> startIndex, <code>ANTLR3_UINT32</code> endIndex) [static]</h3>
 <p> References ANTLR3_STRING_struct::chars, ANTLR3_STRING_struct::factory, ANTLR3_STRING_struct::len, and ANTLR3_STRING_FACTORY_struct::newPtr. </p>
 <p> Referenced by stringInit16().</p>

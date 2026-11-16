@@ -42,10 +42,10 @@ description: "zlaed7.f –"
  directly using the updated eigenvalues. The eigenvectors for
  the current problem are multiplied with the eigenvectors from
  the overall problem.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The dimension of the symmetric tridiagonal matrix. N &gt;= 0.</pre>
 <p><i>CUTPNT</i> </p>
@@ -137,13 +137,13 @@ description: "zlaed7.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 247 of file zlaed7.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

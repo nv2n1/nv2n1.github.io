@@ -23,9 +23,9 @@ description: "apt-secure – Archive authentication support for APT"
 <p> End users can check the signature of the Release file, extract a checksum of a package from it and compare it with the checksum of the package they downloaded by hand &#8211; or rely on APT doing this automatically. </p>
 <p> Notice that this is distinct from checking signatures on a per package basis. It is designed to prevent two possible attacks: </p>
 <dl>
-<dd>&bull; Network &quot;man in the middle&quot; attacks. Without signature checking, malicious agents can introduce themselves into the package download process and provide malicious software either by controlling a network element (router, switch, etc.) or by redirecting traffic to a rogue server (through ARP or DNS spoofing attacks).</dl>
+<dd>&bull; Network &quot;man in the middle&quot; attacks. Without signature checking, malicious agents can introduce themselves into the package download process and provide malicious software either by controlling a network element (router, switch, etc.) or by redirecting traffic to a rogue server (through ARP or DNS spoofing attacks).</dd></dl>
 <dl>
-<dd>&bull; Mirror network compromise. Without signature checking, a malicious agent can compromise a mirror host and modify the files in it to propagate malicious software to all users downloading packages from that host.</dl>
+<dd>&bull; Mirror network compromise. Without signature checking, a malicious agent can compromise a mirror host and modify the files in it to propagate malicious software to all users downloading packages from that host.</dd></dl>
 <p> However, it does not defend against a compromise of the master server itself (which signs the packages) or against a compromise of the key used to sign the Release files. In any case, this mechanism can complement a per-package signature.</p>
 <h2>Information Changes</h2>
 <p>A Release file contains beside the checksums for the files in the repository also general information about the repository like the origin, codename or version number of the release. </p>
@@ -37,13 +37,13 @@ description: "apt-secure – Archive authentication support for APT"
 <h2>Repository Configuration</h2>
 <p>If you want to provide archive signatures in an archive under your maintenance you have to: </p>
 <dl>
-<dd>&bull; <i>Create a toplevel Release file</i>, if it does not exist already. You can do this by running <code>apt-ftparchive release</code> (provided in apt-utils).</dl>
+<dd>&bull; <i>Create a toplevel Release file</i>, if it does not exist already. You can do this by running <code>apt-ftparchive release</code> (provided in apt-utils).</dd></dl>
 <dl>
-<dd>&bull; <i>Sign it</i>. You can do this by running <code>gpg &#8211;clearsign -o InRelease Release</code> and <code>gpg -abs -o Release.gpg Release</code>.</dl>
+<dd>&bull; <i>Sign it</i>. You can do this by running <code>gpg &#8211;clearsign -o InRelease Release</code> and <code>gpg -abs -o Release.gpg Release</code>.</dd></dl>
 <dl>
-<dd>&bull; <i>Publish the key fingerprint</i>, so that your users will know what key they need to import in order to authenticate the files in the archive. It is best to ship your key in its own keyring package like Ubuntu does with ubuntu-keyring to be able to distribute updates and key transitions automatically later.</dl>
+<dd>&bull; <i>Publish the key fingerprint</i>, so that your users will know what key they need to import in order to authenticate the files in the archive. It is best to ship your key in its own keyring package like Ubuntu does with ubuntu-keyring to be able to distribute updates and key transitions automatically later.</dd></dl>
 <dl>
-<dd>&bull; <i>Provide instructions on how to add your archive and key</i>. If your users can&#8217;t acquire your key securely the chain of trust described above is broken. How you can help users add your key depends on your archive and target audience ranging from having your keyring package included in another archive users already have configured (like the default repositories of their distribution) to leveraging the web of trust.</dl>
+<dd>&bull; <i>Provide instructions on how to add your archive and key</i>. If your users can&#8217;t acquire your key securely the chain of trust described above is broken. How you can help users add your key depends on your archive and target audience ranging from having your keyring package included in another archive users already have configured (like the default repositories of their distribution) to leveraging the web of trust.</dd></dl>
 <p> Whenever the contents of the archive change (new packages are added or removed) the archive maintainer has to follow the first two steps outlined above.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5), <code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5), <code><a href="/docs/linux/man/8-apt-key/">apt-key</a></code>(8), <code><a href="/docs/linux/man/1-apt-ftparchive/">apt-ftparchive</a></code>(1), <code>debsign</code>(1), <code>debsig-verify</code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) </p>
@@ -57,21 +57,22 @@ description: "apt-secure – Archive authentication support for APT"
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> <code>APT team</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Debian Security Infrastructure</p>
+<dt> 1.</dt>
+<dd>Debian Security Infrastructure</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.debian.org/doc/manuals/securing-debian-howto/ch7">https://www.debian.org/doc/manuals/securing-debian-howto/ch7</a></dl>
-<dt> 2.</p>
-<dd>Strong Distribution HOWTO</p>
+<dd><a rel="nofollow" href="https://www.debian.org/doc/manuals/securing-debian-howto/ch7">https://www.debian.org/doc/manuals/securing-debian-howto/ch7</a></dd></dl>
+<dt> 2.</dt>
+<dd>Strong Distribution HOWTO</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.cryptnet.net/fdp/crypto/strong_distro.html">http://www.cryptnet.net/fdp/crypto/strong_distro.html</a></dl>
-<dt> 3.</p>
-<dd>APT bug page</p>
+<dd><a rel="nofollow" href="http://www.cryptnet.net/fdp/crypto/strong_distro.html">http://www.cryptnet.net/fdp/crypto/strong_distro.html</a></dd></dl>
+<dt> 3.</dt>
+<dd>APT bug page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dl>
+<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
+</dl>

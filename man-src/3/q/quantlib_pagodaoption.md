@@ -26,7 +26,7 @@ description: "QuantLib::PagodaOption – Roofed Asian option on a number of asse
 <p> The payoff is a given fraction multiplied by the minimum between a given roof and the positive portfolio performance. If the performance of the portfolio is below then the payoff is null. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This implementation still does not manage seasoned options.</dl>
+<dd>This implementation still does not manage seasoned options.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing <code>engine</code> is used. </p>

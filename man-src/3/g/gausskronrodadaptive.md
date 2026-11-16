@@ -23,6 +23,6 @@ description: "QuantLib::GaussKronrodAdaptive – Integral of a 1-dimensional fun
 <p> NMS &#8211; Numerical Analysis Library &lt;<a rel="nofollow" href="http://www.math.iastate.edu/burkardt/f_src/nms/nms.html">http://www.math.iastate.edu/burkardt/f_src/nms/nms.html</a>&gt; </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the result is tested by checking it against known good values.</dl>
+<dd>the correctness of the result is tested by checking it against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -21,9 +21,9 @@ CALL POINT (PX,PY)
 <h2>Description</h2>
 
 <dl><dt>PX
-<dd>(an input expression of type REAL) defines the X user coordinate where the dot is to be drawn.
-<dt>PY
-<dd>(an input expression of type REAL) defines the Y user coordinate where the dot is to be drawn.</dl>
+</dt><dd>(an input expression of type REAL) defines the X user coordinate where the dot is to be drawn.
+</dd><dt>PY
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate where the dot is to be drawn.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

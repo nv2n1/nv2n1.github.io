@@ -49,7 +49,7 @@ description: "instance – Process individual MIB instances easily."
 <p>Creates an instance helper handler, calls netsnmp_create_handler, which then could be registered, using <code>netsnmp_register_handler()</code>. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dl>
+<dd>Returns a pointer to a netsnmp_mib_handler struct which contains the handler&#8217;s name and the access method</dd></dl>
 <p> Definition at line 48 of file instance.c. </p>
 <p> References netsnmp_create_handler(), and netsnmp_instance_helper_handler(). </p>
 <p> Referenced by netsnmp_register_instance(), netsnmp_register_read_only_instance(), netsnmp_register_read_only_scalar(), netsnmp_register_scalar(), and netsnmp_register_scalar_group().</p>
@@ -62,10 +62,10 @@ description: "instance – Process individual MIB instances easily."
 <p> First need to inject it into the calling chain of the handler defined by the netsnmp_handler_registration struct, reginfo. The new handler is injected at the top of the list and will be the new handler to be called first. This function also injects a serialize handler before actually calling netsnmp_register_handle, registering reginfo. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register an instance helper handler.</dl>
+<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register an instance helper handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dl>
+<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dd></dl>
 <p> <code>Examples: </code> <code>delayed_instance.c</code>. </p>
 <p> Definition at line 73 of file instance.c. </p>
 <p> References netsnmp_mib_handler_s::flags, MIB_HANDLER_INSTANCE, netsnmp_get_instance_handler(), netsnmp_inject_handler(), and netsnmp_register_serialize(). </p>
@@ -78,10 +78,10 @@ description: "instance – Process individual MIB instances easily."
  <i>reg_oid</i> the OID where you want to register your integer at<br />
  <i>reg_oid_len</i> the length of the OID<br />
  <i>it</i> the integer value to be registered during initialization<br />
- <i>subhandler</i> a handler to do whatever you want to do, otherwise use NULL to use the default int handler.</dl>
+ <i>subhandler</i> a handler to do whatever you want to do, otherwise use NULL to use the default int handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dl>
+<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dd></dl>
 <p> <code>Examples: </code> <code>scalar_int.c</code>. </p>
 <p> Definition at line 460 of file instance.c. </p>
 <p> References HANDLER_CAN_RWRITE, netsnmp_instance_int_handler(), netsnmp_register_instance(), and NULL.</p>
@@ -90,10 +90,10 @@ description: "instance – Process individual MIB instances easily."
 <p> The only purpose of this &#8216;read only&#8217; handler is to return an appropriate error for any requests passed to it in a SET mode. Inserting it into your handler chain will ensure you&#8217;re never asked to perform a SET request so you can ignore those error conditions. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a read only instance helper handler.</dl>
+<dd><i>reginfo</i> a handler registration structure which could get created using netsnmp_create_handler_registration. Used to register a read only instance helper handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dl>
+<dd>MIB_REGISTERED_OK is returned if the registration was a success. Failures are MIB_REGISTRATION_FAILED and MIB_DUPLICATE_REGISTRATION.</dd></dl>
 <p> Definition at line 100 of file instance.c. </p>
 <p> References netsnmp_get_instance_handler(), netsnmp_get_read_only_handler(), netsnmp_inject_handler(), and netsnmp_register_serialize(). </p>
 <p> Referenced by netsnmp_register_num_file_instance(), netsnmp_register_read_only_counter32_instance(), netsnmp_register_read_only_counter32_instance_context(), netsnmp_register_read_only_int_instance(), netsnmp_register_read_only_int_instance_context(), netsnmp_register_read_only_long_instance(), netsnmp_register_read_only_long_instance_context(), netsnmp_register_read_only_uint_instance(), netsnmp_register_read_only_ulong_instance(), and netsnmp_register_read_only_ulong_instance_context().</p>

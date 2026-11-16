@@ -9,7 +9,6 @@ url: "/docs/linux/man/3-ncl_natgrid_errors/"
 natgrid_errors - This document briefly describes all the errors reported from Natgrid. 
 
 <h2>Description</h2><pre><code>Each entry below includes the error number and its meaning.
-
 1
 Insufficient data in gridded region to triangulate.
 2
@@ -84,7 +83,6 @@ Fortran DOUBLE PRECISION entries are not supported on UNICOS.
 30
 Error number out of range.</code></pre>
 <h2>See Also</h2>natgrid, c_natgridd, c_natgrids, c_nngetaspectd, c_nngetaspects, c_nngetsloped, c_nngetslopes, natgridd, natgrids, nngetaspectd, nngetaspects, nngetslopes, nngetslpped. <pre><code>Complete documentation for Natgrid is available at URL
-
 http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html</code></pre>
 <h2>Copyright</h2>Copyright (C) 2000 
  University Corporation for Atmospheric Research 

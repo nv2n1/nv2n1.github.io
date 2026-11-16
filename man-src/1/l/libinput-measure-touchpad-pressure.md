@@ -19,12 +19,12 @@ description: "libinput-measure-touchpad-pressure – measure pressure properties
 <h2>OPTIONS</h2>
 <p> If a device node is given, this tool opens that device node. Otherwise, this tool searches for the first node that looks like a touchpad and uses that node.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</p>
-<dt><code>&#8211;touch-thresholds=</code><i>down:up</i></p>
-<dd> Set the logical touch pressure thresholds to <i>down</i> and <i>up,</i> respectively. When a touch exceeds the pressure in <i>down</i> it is considered logically down. If a touch is logically down and goes below the pressure in <i>up,</i> it is considered logically up. The thresholds have to be in device-specific pressure values and it is required that <i>down</i> &gt;= <i>up.</i></p>
-<dt><code>&#8211;palm-threshold=</code><i>N</i></p>
-<dd> Assume a palm threshold of <i>N.</i> The threshold has to be in device-specific pressure values.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd>
+<dt><code>&#8211;touch-thresholds=</code><i>down:up</i></dt>
+<dd> Set the logical touch pressure thresholds to <i>down</i> and <i>up,</i> respectively. When a touch exceeds the pressure in <i>down</i> it is considered logically down. If a touch is logically down and goes below the pressure in <i>up,</i> it is considered logically up. The thresholds have to be in device-specific pressure values and it is required that <i>down</i> &gt;= <i>up.</i></dd>
+<dt><code>&#8211;palm-threshold=</code><i>N</i></dt>
+<dd> Assume a palm threshold of <i>N.</i> The threshold has to be in device-specific pressure values.</dd></dl>
 <p> If the touch-thresholds or the palm-threshold are not provided, this tool uses the thresholds provided by the device quirks (if any) or the built-in defaults.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>

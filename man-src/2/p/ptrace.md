@@ -27,32 +27,32 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 <p> When the tracer is finished tracing, it can cause the tracee to continue executing in a normal, untraced mode via <code>PTRACE_DETACH</code>. </p>
 <p> The value of <i>request</i> determines the action to be performed:</p>
 <dl>
-<dt><code>PTRACE_TRACEME</code></p>
-<dd> Indicate that this process is to be traced by its parent. A process probably shouldn&#8217;t make this request if its parent isn&#8217;t expecting to trace it. (<i>pid</i>, <i>addr</i>, and <i>data</i> are ignored.)</p>
+<dt><code>PTRACE_TRACEME</code></dt>
+<dd> Indicate that this process is to be traced by its parent. A process probably shouldn&#8217;t make this request if its parent isn&#8217;t expecting to trace it. (<i>pid</i>, <i>addr</i>, and <i>data</i> are ignored.)</dd>
 <dt>
-<dd> The <code>PTRACE_TRACEME</code> request is used only by the tracee; the remaining requests are used only by the tracer. In the following requests, <i>pid</i> specifies the thread ID of the tracee to be acted on. For requests other than <code>PTRACE_ATTACH</code>, <code>PTRACE_SEIZE</code>, <code>PTRACE_INTERRUPT</code>, and <code>PTRACE_KILL</code>, the tracee must be stopped.</p>
-<dt><code>PTRACE_PEEKTEXT</code>, <code>PTRACE_PEEKDATA</code></p>
-<dd> Read a word at the address <i>addr</i> in the tracee&#8217;s memory, returning the word as the result of the <code>ptrace</code>() call. Linux does not have separate text and data address spaces, so these two requests are currently equivalent. (<i>data</i> is ignored; but see NOTES.)</p>
-<dt><code>PTRACE_PEEKUSER</code></p>
-<dd> Read a word at offset <i>addr</i> in the tracee&#8217;s USER area, which holds the registers and other information about the process (see <i>&lt;sys/user.h&gt;</i>). The word is returned as the result of the <code>ptrace</code>() call. Typically, the offset must be word-aligned, though this might vary by architecture. See NOTES. (<i>data</i> is ignored; but see NOTES.)</p>
-<dt><code>PTRACE_POKETEXT</code>, <code>PTRACE_POKEDATA</code></p>
-<dd> Copy the word <i>data</i> to the address <i>addr</i> in the tracee&#8217;s memory. As for <code>PTRACE_PEEKTEXT</code> and <code>PTRACE_PEEKDATA</code>, these two requests are currently equivalent.</p>
-<dt><code>PTRACE_POKEUSER</code></p>
-<dd> Copy the word <i>data</i> to offset <i>addr</i> in the tracee&#8217;s USER area. As for <code>PTRACE_PEEKUSER</code>, the offset must typically be word-aligned. In order to maintain the integrity of the kernel, some modifications to the USER area are disallowed.</p>
-<dt><code>PTRACE_GETREGS</code>, <code>PTRACE_GETFPREGS</code></p>
-<dd> Copy the tracee&#8217;s general-purpose or floating-point registers, respectively, to the address <i>data</i> in the tracer. See <i>&lt;sys/user.h&gt;</i> for information on the format of this data. (<i>addr</i> is ignored.) Note that SPARC systems have the meaning of <i>data</i> and <i>addr</i> reversed; that is, <i>data</i> is ignored and the registers are copied to the address <i>addr</i>. <code>PTRACE_GETREGS</code> and <code>PTRACE_GETFPREGS</code> are not present on all architectures.</p>
-<dt><code>PTRACE_GETREGSET</code> (since Linux 2.6.34)</p>
-<dd> Read the tracee&#8217;s registers. <i>addr</i> specifies, in an architecture-dependent way, the type of registers to be read. <code>NT_PRSTATUS</code> (with numerical value 1) usually results in reading of general-purpose registers. If the CPU has, for example, floating-point and/or vector registers, they can be retrieved by setting <i>addr</i> to the corresponding <code>NT_foo</code> constant. <i>data</i> points to a <code>struct iovec</code>, which describes the destination buffer&#8217;s location and length. On return, the kernel modifies <code>iov.len</code> to indicate the actual number of bytes returned.</p>
-<dt><code>PTRACE_SETREGS</code>, <code>PTRACE_SETFPREGS</code></p>
-<dd> Modify the tracee&#8217;s general-purpose or floating-point registers, respectively, from the address <i>data</i> in the tracer. As for <code>PTRACE_POKEUSER</code>, some general-purpose register modifications may be disallowed. (<i>addr</i> is ignored.) Note that SPARC systems have the meaning of <i>data</i> and <i>addr</i> reversed; that is, <i>data</i> is ignored and the registers are copied from the address <i>addr</i>. <code>PTRACE_SETREGS</code> and <code>PTRACE_SETFPREGS</code> are not present on all architectures.</p>
-<dt><code>PTRACE_SETREGSET</code> (since Linux 2.6.34)</p>
-<dd> Modify the tracee&#8217;s registers. The meaning of <i>addr</i> and <i>data</i> is analogous to <code>PTRACE_GETREGSET</code>.</p>
-<dt><code>PTRACE_GETSIGINFO</code> (since Linux 2.3.99-pre6)</p>
-<dd> Retrieve information about the signal that caused the stop. Copy a <i>siginfo_t</i> structure (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) from the tracee to the address <i>data</i> in the tracer. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_SETSIGINFO</code> (since Linux 2.3.99-pre6)</p>
-<dd> Set signal information: copy a <i>siginfo_t</i> structure from the address <i>data</i> in the tracer to the tracee. This will affect only signals that would normally be delivered to the tracee and were caught by the tracer. It may be difficult to tell these normal signals from synthetic signals generated by <code>ptrace</code>() itself. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_PEEKSIGINFO</code> (since Linux 3.10)</p>
-<dd> Retrieve <i>siginfo_t</i> structures without removing signals from a queue. <i>addr</i> points to a <i>ptrace_peeksiginfo_args</i> structure that specifies the ordinal position from which copying of signals should start, and the number of signals to copy. <i>siginfo_t</i> structures are copied into the buffer pointed to by <i>data</i>. The return value contains the number of copied signals (zero indicates that there is no signal corresponding to the specified ordinal position). Within the returned <i>siginfo</i> structures, the <i>si_code</i> field includes information (<code>__SI_CHLD</code>, <code>__SI_FAULT</code>, etc.) that are not otherwise exposed to user space.</dl>
+</dt><dd> The <code>PTRACE_TRACEME</code> request is used only by the tracee; the remaining requests are used only by the tracer. In the following requests, <i>pid</i> specifies the thread ID of the tracee to be acted on. For requests other than <code>PTRACE_ATTACH</code>, <code>PTRACE_SEIZE</code>, <code>PTRACE_INTERRUPT</code>, and <code>PTRACE_KILL</code>, the tracee must be stopped.</dd>
+<dt><code>PTRACE_PEEKTEXT</code>, <code>PTRACE_PEEKDATA</code></dt>
+<dd> Read a word at the address <i>addr</i> in the tracee&#8217;s memory, returning the word as the result of the <code>ptrace</code>() call. Linux does not have separate text and data address spaces, so these two requests are currently equivalent. (<i>data</i> is ignored; but see NOTES.)</dd>
+<dt><code>PTRACE_PEEKUSER</code></dt>
+<dd> Read a word at offset <i>addr</i> in the tracee&#8217;s USER area, which holds the registers and other information about the process (see <i>&lt;sys/user.h&gt;</i>). The word is returned as the result of the <code>ptrace</code>() call. Typically, the offset must be word-aligned, though this might vary by architecture. See NOTES. (<i>data</i> is ignored; but see NOTES.)</dd>
+<dt><code>PTRACE_POKETEXT</code>, <code>PTRACE_POKEDATA</code></dt>
+<dd> Copy the word <i>data</i> to the address <i>addr</i> in the tracee&#8217;s memory. As for <code>PTRACE_PEEKTEXT</code> and <code>PTRACE_PEEKDATA</code>, these two requests are currently equivalent.</dd>
+<dt><code>PTRACE_POKEUSER</code></dt>
+<dd> Copy the word <i>data</i> to offset <i>addr</i> in the tracee&#8217;s USER area. As for <code>PTRACE_PEEKUSER</code>, the offset must typically be word-aligned. In order to maintain the integrity of the kernel, some modifications to the USER area are disallowed.</dd>
+<dt><code>PTRACE_GETREGS</code>, <code>PTRACE_GETFPREGS</code></dt>
+<dd> Copy the tracee&#8217;s general-purpose or floating-point registers, respectively, to the address <i>data</i> in the tracer. See <i>&lt;sys/user.h&gt;</i> for information on the format of this data. (<i>addr</i> is ignored.) Note that SPARC systems have the meaning of <i>data</i> and <i>addr</i> reversed; that is, <i>data</i> is ignored and the registers are copied to the address <i>addr</i>. <code>PTRACE_GETREGS</code> and <code>PTRACE_GETFPREGS</code> are not present on all architectures.</dd>
+<dt><code>PTRACE_GETREGSET</code> (since Linux 2.6.34)</dt>
+<dd> Read the tracee&#8217;s registers. <i>addr</i> specifies, in an architecture-dependent way, the type of registers to be read. <code>NT_PRSTATUS</code> (with numerical value 1) usually results in reading of general-purpose registers. If the CPU has, for example, floating-point and/or vector registers, they can be retrieved by setting <i>addr</i> to the corresponding <code>NT_foo</code> constant. <i>data</i> points to a <code>struct iovec</code>, which describes the destination buffer&#8217;s location and length. On return, the kernel modifies <code>iov.len</code> to indicate the actual number of bytes returned.</dd>
+<dt><code>PTRACE_SETREGS</code>, <code>PTRACE_SETFPREGS</code></dt>
+<dd> Modify the tracee&#8217;s general-purpose or floating-point registers, respectively, from the address <i>data</i> in the tracer. As for <code>PTRACE_POKEUSER</code>, some general-purpose register modifications may be disallowed. (<i>addr</i> is ignored.) Note that SPARC systems have the meaning of <i>data</i> and <i>addr</i> reversed; that is, <i>data</i> is ignored and the registers are copied from the address <i>addr</i>. <code>PTRACE_SETREGS</code> and <code>PTRACE_SETFPREGS</code> are not present on all architectures.</dd>
+<dt><code>PTRACE_SETREGSET</code> (since Linux 2.6.34)</dt>
+<dd> Modify the tracee&#8217;s registers. The meaning of <i>addr</i> and <i>data</i> is analogous to <code>PTRACE_GETREGSET</code>.</dd>
+<dt><code>PTRACE_GETSIGINFO</code> (since Linux 2.3.99-pre6)</dt>
+<dd> Retrieve information about the signal that caused the stop. Copy a <i>siginfo_t</i> structure (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) from the tracee to the address <i>data</i> in the tracer. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_SETSIGINFO</code> (since Linux 2.3.99-pre6)</dt>
+<dd> Set signal information: copy a <i>siginfo_t</i> structure from the address <i>data</i> in the tracer to the tracee. This will affect only signals that would normally be delivered to the tracee and were caught by the tracer. It may be difficult to tell these normal signals from synthetic signals generated by <code>ptrace</code>() itself. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_PEEKSIGINFO</code> (since Linux 3.10)</dt>
+<dd> Retrieve <i>siginfo_t</i> structures without removing signals from a queue. <i>addr</i> points to a <i>ptrace_peeksiginfo_args</i> structure that specifies the ordinal position from which copying of signals should start, and the number of signals to copy. <i>siginfo_t</i> structures are copied into the buffer pointed to by <i>data</i>. The return value contains the number of copied signals (zero indicates that there is no signal corresponding to the specified ordinal position). Within the returned <i>siginfo</i> structures, the <i>si_code</i> field includes information (<code>__SI_CHLD</code>, <code>__SI_FAULT</code>, etc.) that are not otherwise exposed to user space.</dd></dl>
 <p> struct ptrace_peeksiginfo_args {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 off;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Ordinal position in queue at which<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to start copying signals&nbsp;*/<br />
@@ -60,141 +60,139 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s32 nr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of signals to copy&nbsp;*/ };</p>
 <dl>
 <dt>
-<dd> Currently, there is only one flag, <code>PTRACE_PEEKSIGINFO_SHARED</code>, for dumping signals from the process-wide signal queue. If this flag is not set, signals are read from the per-thread queue of the specified thread.</p>
-<dt><code>PTRACE_GETSIGMASK</code> (since Linux 3.11)</p>
-<dd> Place a copy of the mask of blocked signals (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)) in the buffer pointed to by <i>data</i>, which should be a pointer to a buffer of type <i>sigset_t</i>. The <i>addr</i> argument contains the size of the buffer pointed to by <i>data</i> (i.e., <i>sizeof(sigset_t)</i>).</p>
-<dt><code>PTRACE_SETSIGMASK</code> (since Linux 3.11)</p>
-<dd> Change the mask of blocked signals (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)) to the value specified in the buffer pointed to by <i>data</i>, which should be a pointer to a buffer of type <i>sigset_t</i>. The <i>addr</i> argument contains the size of the buffer pointed to by <i>data</i> (i.e., <i>sizeof(sigset_t)</i>).</p>
-<dt><code>PTRACE_SETOPTIONS</code> (since Linux 2.4.6; see BUGS for caveats)</p>
-<dd> Set ptrace options from <i>data</i>. (<i>addr</i> is ignored.) <i>data</i> is interpreted as a bit mask of options, which are specified by the following flags:</p>
+</dt><dd> Currently, there is only one flag, <code>PTRACE_PEEKSIGINFO_SHARED</code>, for dumping signals from the process-wide signal queue. If this flag is not set, signals are read from the per-thread queue of the specified thread.</dd>
+<dt><code>PTRACE_GETSIGMASK</code> (since Linux 3.11)</dt>
+<dd> Place a copy of the mask of blocked signals (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)) in the buffer pointed to by <i>data</i>, which should be a pointer to a buffer of type <i>sigset_t</i>. The <i>addr</i> argument contains the size of the buffer pointed to by <i>data</i> (i.e., <i>sizeof(sigset_t)</i>).</dd>
+<dt><code>PTRACE_SETSIGMASK</code> (since Linux 3.11)</dt>
+<dd> Change the mask of blocked signals (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)) to the value specified in the buffer pointed to by <i>data</i>, which should be a pointer to a buffer of type <i>sigset_t</i>. The <i>addr</i> argument contains the size of the buffer pointed to by <i>data</i> (i.e., <i>sizeof(sigset_t)</i>).</dd>
+<dt><code>PTRACE_SETOPTIONS</code> (since Linux 2.4.6; see BUGS for caveats)</dt>
+<dd> Set ptrace options from <i>data</i>. (<i>addr</i> is ignored.) <i>data</i> is interpreted as a bit mask of options, which are specified by the following flags:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>PTRACE_O_EXITKILL</code> (since Linux 3.8)</p>
-<dd> Send a <code>SIGKILL</code> signal to the tracee if the tracer exits. This option is useful for ptrace jailers that want to ensure that tracees can never escape the tracer&#8217;s control.</p>
-<dt><code>PTRACE_O_TRACECLONE</code> (since Linux 2.5.46)</p>
-<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) and automatically start tracing the newly cloned process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
+<dt><code>PTRACE_O_EXITKILL</code> (since Linux 3.8)</dt>
+<dd> Send a <code>SIGKILL</code> signal to the tracee if the tracer exits. This option is useful for ptrace jailers that want to ensure that tracees can never escape the tracer&#8217;s control.</dd>
+<dt><code>PTRACE_O_TRACECLONE</code> (since Linux 2.5.46)</dt>
+<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) and automatically start tracing the newly cloned process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_CLONE&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
 <dt>
-<dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
+</dt><dd> This option may not catch <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) calls in all cases. If the tracee calls <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag, <code>PTRACE_EVENT_VFORK</code> will be delivered instead if <code>PTRACE_O_TRACEVFORK</code> is set; otherwise if the tracee calls <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the exit signal set to <code>SIGCHLD</code>, <code>PTRACE_EVENT_FORK</code> will be delivered if <code>PTRACE_O_TRACEFORK</code> is set.</dd>
+<dt><code>PTRACE_O_TRACEEXEC</code> (since Linux 2.5.46)</dt>
+<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> This option may not catch <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) calls in all cases. If the tracee calls <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag, <code>PTRACE_EVENT_VFORK</code> will be delivered instead if <code>PTRACE_O_TRACEVFORK</code> is set; otherwise if the tracee calls <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the exit signal set to <code>SIGCHLD</code>, <code>PTRACE_EVENT_FORK</code> will be delivered if <code>PTRACE_O_TRACEFORK</code> is set.</p>
-<dt><code>PTRACE_O_TRACEEXEC</code> (since Linux 2.5.46)</p>
-<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_EXEC&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> If the execing thread is not a thread group leader, the thread ID is reset to thread group leader&#8217;s ID before this stop. Since Linux 3.0, the former thread ID can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
+<dt><code>PTRACE_O_TRACEEXIT</code> (since Linux 2.5.60)</dt>
+<dd> Stop the tracee at exit. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> If the execing thread is not a thread group leader, the thread ID is reset to thread group leader&#8217;s ID before this stop. Since Linux 3.0, the former thread ID can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
-<dt><code>PTRACE_O_TRACEEXIT</code> (since Linux 2.5.60)</p>
-<dd> Stop the tracee at exit. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_EXIT&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> The tracee&#8217;s exit status can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
 <dt>
-<dd> The tracee&#8217;s exit status can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
+</dt><dd> The tracee is stopped early during process exit, when registers are still available, allowing the tracer to see where the exit occurred, whereas the normal exit notification is done after the process is finished exiting. Even though context is available, the tracer cannot prevent the exit from happening at this point.</dd>
+<dt><code>PTRACE_O_TRACEFORK</code> (since Linux 2.5.46)</dt>
+<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and automatically start tracing the newly forked process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> The tracee is stopped early during process exit, when registers are still available, allowing the tracer to see where the exit occurred, whereas the normal exit notification is done after the process is finished exiting. Even though context is available, the tracer cannot prevent the exit from happening at this point.</p>
-<dt><code>PTRACE_O_TRACEFORK</code> (since Linux 2.5.46)</p>
-<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and automatically start tracing the newly forked process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_FORK&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
+<dt><code>PTRACE_O_TRACESYSGOOD</code> (since Linux 2.4.6)</dt>
+<dd> When delivering system call traps, set bit 7 in the signal number (i.e., deliver <i>SIGTRAP|0x80</i>). This makes it easy for the tracer to distinguish normal traps from those caused by a system call.</dd>
+<dt><code>PTRACE_O_TRACEVFORK</code> (since Linux 2.5.46)</dt>
+<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) and automatically start tracing the newly vforked process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
-<dt><code>PTRACE_O_TRACESYSGOOD</code> (since Linux 2.4.6)</p>
-<dd> When delivering system call traps, set bit 7 in the signal number (i.e., deliver <i>SIGTRAP|0x80</i>). This makes it easy for the tracer to distinguish normal traps from those caused by a system call.</p>
-<dt><code>PTRACE_O_TRACEVFORK</code> (since Linux 2.5.46)</p>
-<dd> Stop the tracee at the next <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) and automatically start tracing the newly vforked process, which will start with a <code>SIGSTOP</code>, or <code>PTRACE_EVENT_STOP</code> if <code>PTRACE_SEIZE</code> was used. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_VFORK&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
+<dt><code>PTRACE_O_TRACEVFORKDONE</code> (since Linux 2.5.60)</dt>
+<dd> Stop the tracee at the completion of the next <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2). A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> The PID of the new process can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
-<dt><code>PTRACE_O_TRACEVFORKDONE</code> (since Linux 2.5.60)</p>
-<dd> Stop the tracee at the completion of the next <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2). A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_VFORK_DONE&lt;&lt;8))
 </pre>
+</dd><dt>
+</dt><dd> The PID of the new process can (since Linux 2.6.18) be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
+<dt><code>PTRACE_O_TRACESECCOMP</code> (since Linux 3.5)</dt>
+<dd> Stop the tracee when a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) <code>SECCOMP_RET_TRACE</code> rule is triggered. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</dd>
 <dt>
-<dd> The PID of the new process can (since Linux 2.6.18) be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
-<dt><code>PTRACE_O_TRACESECCOMP</code> (since Linux 3.5)</p>
-<dd> Stop the tracee when a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) <code>SECCOMP_RET_TRACE</code> rule is triggered. A <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) by the tracer will return a <i>status</i> value such that</p>
-<dt>
-<dd>
+</dt><dd>
 <pre>
   status&gt;&gt;8 == (SIGTRAP | (PTRACE_EVENT_SECCOMP&lt;&lt;8))
 </pre>
-<dt>
-<dd> While this triggers a <code>PTRACE_EVENT</code> stop, it is similar to a syscall-enter-stop. For details, see the note on <code>PTRACE_EVENT_SECCOMP</code> below. The seccomp event message data (from the <code>SECCOMP_RET_DATA</code> portion of the seccomp filter rule) can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</p>
-<dt><code>PTRACE_O_SUSPEND_SECCOMP</code> (since Linux 4.3)</p>
-<dd> Suspend the tracee&#8217;s seccomp protections. This applies regardless of mode, and can be used when the tracee has not yet installed seccomp filters. That is, a valid use case is to suspend a tracee&#8217;s seccomp protections before they are installed by the tracee, let the tracee install the filters, and then clear this flag when the filters should be resumed. Setting this option requires that the tracer have the <code>CAP_SYS_ADMIN</code> capability, not have any seccomp protections installed, and not have <code>PTRACE_O_SUSPEND_SECCOMP</code> set on itself.</dl>
+</dd><dt>
+</dt><dd> While this triggers a <code>PTRACE_EVENT</code> stop, it is similar to a syscall-enter-stop. For details, see the note on <code>PTRACE_EVENT_SECCOMP</code> below. The seccomp event message data (from the <code>SECCOMP_RET_DATA</code> portion of the seccomp filter rule) can be retrieved with <code>PTRACE_GETEVENTMSG</code>.</dd>
+<dt><code>PTRACE_O_SUSPEND_SECCOMP</code> (since Linux 4.3)</dt>
+<dd> Suspend the tracee&#8217;s seccomp protections. This applies regardless of mode, and can be used when the tracee has not yet installed seccomp filters. That is, a valid use case is to suspend a tracee&#8217;s seccomp protections before they are installed by the tracee, let the tracee install the filters, and then clear this flag when the filters should be resumed. Setting this option requires that the tracer have the <code>CAP_SYS_ADMIN</code> capability, not have any seccomp protections installed, and not have <code>PTRACE_O_SUSPEND_SECCOMP</code> set on itself.</dd></dl>
 </dl>
-<dt><code>PTRACE_GETEVENTMSG</code> (since Linux 2.5.46)</p>
-<dd> Retrieve a message (as an <i>unsigned long</i>) about the ptrace event that just happened, placing it at the address <i>data</i> in the tracer. For <code>PTRACE_EVENT_EXIT</code>, this is the tracee&#8217;s exit status. For <code>PTRACE_EVENT_FORK</code>, <code>PTRACE_EVENT_VFORK</code>, <code>PTRACE_EVENT_VFORK_DONE</code>, and <code>PTRACE_EVENT_CLONE</code>, this is the PID of the new process. For <code>PTRACE_EVENT_SECCOMP</code>, this is the <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) filter&#8217;s <code>SECCOMP_RET_DATA</code> associated with the triggered rule. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_CONT</code></p>
-<dd> Restart the stopped tracee process. If <i>data</i> is nonzero, it is interpreted as the number of a signal to be delivered to the tracee; otherwise, no signal is delivered. Thus, for example, the tracer can control whether a signal sent to the tracee is delivered or not. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_SYSCALL</code>, <code>PTRACE_SINGLESTEP</code></p>
-<dd> Restart the stopped tracee as for <code>PTRACE_CONT</code>, but arrange for the tracee to be stopped at the next entry to or exit from a system call, or after execution of a single instruction, respectively. (The tracee will also, as usual, be stopped upon receipt of a signal.) From the tracer&#8217;s perspective, the tracee will appear to have been stopped by receipt of a <code>SIGTRAP</code>. So, for <code>PTRACE_SYSCALL</code>, for example, the idea is to inspect the arguments to the system call at the first stop, then do another <code>PTRACE_SYSCALL</code> and inspect the return value of the system call at the second stop. The <i>data</i> argument is treated as for <code>PTRACE_CONT</code>. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_SET_SYSCALL</code> (since Linux 2.6.16)</p>
-<dd> When in syscall-enter-stop, change the number of the system call that is about to be executed to the number specified in the <i>data</i> argument. The <i>addr</i> argument is ignored. This request is currently supported only on arm (and arm64, though only for backwards compatibility), but most other architectures have other means of accomplishing this (usually by changing the register that the userland code passed the system call number in).</p>
-<dt><code>PTRACE_SYSEMU</code>, <code>PTRACE_SYSEMU_SINGLESTEP</code> (since Linux 2.6.14)</p>
-<dd> For <code>PTRACE_SYSEMU</code>, continue and stop on entry to the next system call, which will not be executed. See the documentation on syscall-stops below. For <code>PTRACE_SYSEMU_SINGLESTEP</code>, do the same but also singlestep if not a system call. This call is used by programs like User Mode Linux that want to emulate all the tracee&#8217;s system calls. The <i>data</i> argument is treated as for <code>PTRACE_CONT</code>. The <i>addr</i> argument is ignored. These requests are currently supported only on x86.</p>
-<dt><code>PTRACE_LISTEN</code> (since Linux 3.4)</p>
-<dd> Restart the stopped tracee, but prevent it from executing. The resulting state of the tracee is similar to a process which has been stopped by a <code>SIGSTOP</code> (or other stopping signal). See the &quot;group-stop&quot; subsection for additional information. <code>PTRACE_LISTEN</code> works only on tracees attached by <code>PTRACE_SEIZE</code>.</p>
-<dt><code>PTRACE_KILL</code></p>
-<dd> Send the tracee a <code>SIGKILL</code> to terminate it. (<i>addr</i> and <i>data</i> are ignored.)</p>
+<dt><code>PTRACE_GETEVENTMSG</code> (since Linux 2.5.46)</dt>
+<dd> Retrieve a message (as an <i>unsigned long</i>) about the ptrace event that just happened, placing it at the address <i>data</i> in the tracer. For <code>PTRACE_EVENT_EXIT</code>, this is the tracee&#8217;s exit status. For <code>PTRACE_EVENT_FORK</code>, <code>PTRACE_EVENT_VFORK</code>, <code>PTRACE_EVENT_VFORK_DONE</code>, and <code>PTRACE_EVENT_CLONE</code>, this is the PID of the new process. For <code>PTRACE_EVENT_SECCOMP</code>, this is the <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) filter&#8217;s <code>SECCOMP_RET_DATA</code> associated with the triggered rule. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_CONT</code></dt>
+<dd> Restart the stopped tracee process. If <i>data</i> is nonzero, it is interpreted as the number of a signal to be delivered to the tracee; otherwise, no signal is delivered. Thus, for example, the tracer can control whether a signal sent to the tracee is delivered or not. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_SYSCALL</code>, <code>PTRACE_SINGLESTEP</code></dt>
+<dd> Restart the stopped tracee as for <code>PTRACE_CONT</code>, but arrange for the tracee to be stopped at the next entry to or exit from a system call, or after execution of a single instruction, respectively. (The tracee will also, as usual, be stopped upon receipt of a signal.) From the tracer&#8217;s perspective, the tracee will appear to have been stopped by receipt of a <code>SIGTRAP</code>. So, for <code>PTRACE_SYSCALL</code>, for example, the idea is to inspect the arguments to the system call at the first stop, then do another <code>PTRACE_SYSCALL</code> and inspect the return value of the system call at the second stop. The <i>data</i> argument is treated as for <code>PTRACE_CONT</code>. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_SET_SYSCALL</code> (since Linux 2.6.16)</dt>
+<dd> When in syscall-enter-stop, change the number of the system call that is about to be executed to the number specified in the <i>data</i> argument. The <i>addr</i> argument is ignored. This request is currently supported only on arm (and arm64, though only for backwards compatibility), but most other architectures have other means of accomplishing this (usually by changing the register that the userland code passed the system call number in).</dd>
+<dt><code>PTRACE_SYSEMU</code>, <code>PTRACE_SYSEMU_SINGLESTEP</code> (since Linux 2.6.14)</dt>
+<dd> For <code>PTRACE_SYSEMU</code>, continue and stop on entry to the next system call, which will not be executed. See the documentation on syscall-stops below. For <code>PTRACE_SYSEMU_SINGLESTEP</code>, do the same but also singlestep if not a system call. This call is used by programs like User Mode Linux that want to emulate all the tracee&#8217;s system calls. The <i>data</i> argument is treated as for <code>PTRACE_CONT</code>. The <i>addr</i> argument is ignored. These requests are currently supported only on x86.</dd>
+<dt><code>PTRACE_LISTEN</code> (since Linux 3.4)</dt>
+<dd> Restart the stopped tracee, but prevent it from executing. The resulting state of the tracee is similar to a process which has been stopped by a <code>SIGSTOP</code> (or other stopping signal). See the &quot;group-stop&quot; subsection for additional information. <code>PTRACE_LISTEN</code> works only on tracees attached by <code>PTRACE_SEIZE</code>.</dd>
+<dt><code>PTRACE_KILL</code></dt>
+<dd> Send the tracee a <code>SIGKILL</code> to terminate it. (<i>addr</i> and <i>data</i> are ignored.)</dd>
 <dt>
-<dd> <i>This operation is deprecated; do not use it!</i> Instead, send a <code>SIGKILL</code> directly using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) or <code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2). The problem with <code>PTRACE_KILL</code> is that it requires the tracee to be in signal-delivery-stop, otherwise it may not work (i.e., may complete successfully but won&#8217;t kill the tracee). By contrast, sending a <code>SIGKILL</code> directly has no such limitation.</p>
-<dt><code>PTRACE_INTERRUPT</code> (since Linux 3.4)</p>
-<dd> Stop a tracee. If the tracee is running or sleeping in kernel space and <code>PTRACE_SYSCALL</code> is in effect, the system call is interrupted and syscall-exit-stop is reported. (The interrupted system call is restarted when the tracee is restarted.) If the tracee was already stopped by a signal and <code>PTRACE_LISTEN</code> was sent to it, the tracee stops with <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns the stop signal. If any other ptrace-stop is generated at the same time (for example, if a signal is sent to the tracee), this ptrace-stop happens. If none of the above applies (for example, if the tracee is running in user space), it stops with <code>PTRACE_EVENT_STOP</code> with <i>WSTOPSIG(status)</i> == <code>SIGTRAP</code>. <code>PTRACE_INTERRUPT</code> only works on tracees attached by <code>PTRACE_SEIZE</code>.</p>
-<dt><code>PTRACE_ATTACH</code></p>
-<dd> Attach to the process specified in <i>pid</i>, making it a tracee of the calling process. The tracee is sent a <code>SIGSTOP</code>, but will not necessarily have stopped by the completion of this call; use <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) to wait for the tracee to stop. See the &quot;Attaching and detaching&quot; subsection for additional information. (<i>addr</i> and <i>data</i> are ignored.)</p>
+</dt><dd> <i>This operation is deprecated; do not use it!</i> Instead, send a <code>SIGKILL</code> directly using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) or <code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2). The problem with <code>PTRACE_KILL</code> is that it requires the tracee to be in signal-delivery-stop, otherwise it may not work (i.e., may complete successfully but won&#8217;t kill the tracee). By contrast, sending a <code>SIGKILL</code> directly has no such limitation.</dd>
+<dt><code>PTRACE_INTERRUPT</code> (since Linux 3.4)</dt>
+<dd> Stop a tracee. If the tracee is running or sleeping in kernel space and <code>PTRACE_SYSCALL</code> is in effect, the system call is interrupted and syscall-exit-stop is reported. (The interrupted system call is restarted when the tracee is restarted.) If the tracee was already stopped by a signal and <code>PTRACE_LISTEN</code> was sent to it, the tracee stops with <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns the stop signal. If any other ptrace-stop is generated at the same time (for example, if a signal is sent to the tracee), this ptrace-stop happens. If none of the above applies (for example, if the tracee is running in user space), it stops with <code>PTRACE_EVENT_STOP</code> with <i>WSTOPSIG(status)</i> == <code>SIGTRAP</code>. <code>PTRACE_INTERRUPT</code> only works on tracees attached by <code>PTRACE_SEIZE</code>.</dd>
+<dt><code>PTRACE_ATTACH</code></dt>
+<dd> Attach to the process specified in <i>pid</i>, making it a tracee of the calling process. The tracee is sent a <code>SIGSTOP</code>, but will not necessarily have stopped by the completion of this call; use <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) to wait for the tracee to stop. See the &quot;Attaching and detaching&quot; subsection for additional information. (<i>addr</i> and <i>data</i> are ignored.)</dd>
 <dt>
-<dd> Permission to perform a <code>PTRACE_ATTACH</code> is governed by a ptrace access mode <code>PTRACE_MODE_ATTACH_REALCREDS</code> check; see below.</p>
-<dt><code>PTRACE_SEIZE</code> (since Linux 3.4)</p>
-<dd> Attach to the process specified in <i>pid</i>, making it a tracee of the calling process. Unlike <code>PTRACE_ATTACH</code>, <code>PTRACE_SEIZE</code> does not stop the process. Group-stops are reported as <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns the stop signal. Automatically attached children stop with <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns <code>SIGTRAP</code> instead of having <code>SIGSTOP</code> signal delivered to them. <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) does not deliver an extra <code>SIGTRAP</code>. Only a <code>PTRACE_SEIZE</code>d process can accept <code>PTRACE_INTERRUPT</code> and <code>PTRACE_LISTEN</code> commands. The &quot;seized&quot; behavior just described is inherited by children that are automatically attached using <code>PTRACE_O_TRACEFORK</code>, <code>PTRACE_O_TRACEVFORK</code>, and <code>PTRACE_O_TRACECLONE</code>. <i>addr</i> must be zero. <i>data</i> contains a bit mask of ptrace options to activate immediately.</p>
+</dt><dd> Permission to perform a <code>PTRACE_ATTACH</code> is governed by a ptrace access mode <code>PTRACE_MODE_ATTACH_REALCREDS</code> check; see below.</dd>
+<dt><code>PTRACE_SEIZE</code> (since Linux 3.4)</dt>
+<dd> Attach to the process specified in <i>pid</i>, making it a tracee of the calling process. Unlike <code>PTRACE_ATTACH</code>, <code>PTRACE_SEIZE</code> does not stop the process. Group-stops are reported as <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns the stop signal. Automatically attached children stop with <code>PTRACE_EVENT_STOP</code> and <i>WSTOPSIG(status)</i> returns <code>SIGTRAP</code> instead of having <code>SIGSTOP</code> signal delivered to them. <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) does not deliver an extra <code>SIGTRAP</code>. Only a <code>PTRACE_SEIZE</code>d process can accept <code>PTRACE_INTERRUPT</code> and <code>PTRACE_LISTEN</code> commands. The &quot;seized&quot; behavior just described is inherited by children that are automatically attached using <code>PTRACE_O_TRACEFORK</code>, <code>PTRACE_O_TRACEVFORK</code>, and <code>PTRACE_O_TRACECLONE</code>. <i>addr</i> must be zero. <i>data</i> contains a bit mask of ptrace options to activate immediately.</dd>
 <dt>
-<dd> Permission to perform a <code>PTRACE_SEIZE</code> is governed by a ptrace access mode <code>PTRACE_MODE_ATTACH_REALCREDS</code> check; see below.</p>
-<dt><code>PTRACE_SECCOMP_GET_FILTER</code> (since Linux 4.4)</p>
-<dd> This operation allows the tracer to dump the tracee&#8217;s classic BPF filters.</p>
+</dt><dd> Permission to perform a <code>PTRACE_SEIZE</code> is governed by a ptrace access mode <code>PTRACE_MODE_ATTACH_REALCREDS</code> check; see below.</dd>
+<dt><code>PTRACE_SECCOMP_GET_FILTER</code> (since Linux 4.4)</dt>
+<dd> This operation allows the tracer to dump the tracee&#8217;s classic BPF filters.</dd>
 <dt>
-<dd> <i>addr</i> is an integer specifying the index of the filter to be dumped. The most recently installed filter has the index 0. If <i>addr</i> is greater than the number of installed filters, the operation fails with the error <code>ENOENT</code>.</p>
+</dt><dd> <i>addr</i> is an integer specifying the index of the filter to be dumped. The most recently installed filter has the index 0. If <i>addr</i> is greater than the number of installed filters, the operation fails with the error <code>ENOENT</code>.</dd>
 <dt>
-<dd> <i>data</i> is either a pointer to a <i>struct sock_filter</i> array that is large enough to store the BPF program, or NULL if the program is not to be stored.</p>
+</dt><dd> <i>data</i> is either a pointer to a <i>struct sock_filter</i> array that is large enough to store the BPF program, or NULL if the program is not to be stored.</dd>
 <dt>
-<dd> Upon success, the return value is the number of instructions in the BPF program. If <i>data</i> was NULL, then this return value can be used to correctly size the <i>struct sock_filter</i> array passed in a subsequent call.</p>
+</dt><dd> Upon success, the return value is the number of instructions in the BPF program. If <i>data</i> was NULL, then this return value can be used to correctly size the <i>struct sock_filter</i> array passed in a subsequent call.</dd>
 <dt>
-<dd> This operation fails with the error <code>EACCES</code> if the caller does not have the <code>CAP_SYS_ADMIN</code> capability or if the caller is in strict or filter seccomp mode. If the filter referred to by <i>addr</i> is not a classic BPF filter, the operation fails with the error <code>EMEDIUMTYPE</code>.</p>
+</dt><dd> This operation fails with the error <code>EACCES</code> if the caller does not have the <code>CAP_SYS_ADMIN</code> capability or if the caller is in strict or filter seccomp mode. If the filter referred to by <i>addr</i> is not a classic BPF filter, the operation fails with the error <code>EMEDIUMTYPE</code>.</dd>
 <dt>
-<dd> This operation is available if the kernel was configured with both the <code>CONFIG_SECCOMP_FILTER</code> and the <code>CONFIG_CHECKPOINT_RESTORE</code> options.</p>
-<dt><code>PTRACE_DETACH</code></p>
-<dd> Restart the stopped tracee as for <code>PTRACE_CONT</code>, but first detach from it. Under Linux, a tracee can be detached in this way regardless of which method was used to initiate tracing. (<i>addr</i> is ignored.)</p>
-<dt><code>PTRACE_GET_THREAD_AREA</code> (since Linux 2.6.0)</p>
-<dd> This operation performs a similar task to <code><a href="/docs/linux/man/2-get_thread_area/">get_thread_area</a></code>(2). It reads the TLS entry in the GDT whose index is given in <i>addr</i>, placing a copy of the entry into the <i>struct user_desc</i> pointed to by <i>data</i>. (By contrast with <code><a href="/docs/linux/man/2-get_thread_area/">get_thread_area</a></code>(2), the <i>entry_number</i> of the <i>struct user_desc</i> is ignored.)</p>
-<dt><code>PTRACE_SET_THREAD_AREA</code> (since Linux 2.6.0)</p>
-<dd> This operation performs a similar task to <code><a href="/docs/linux/man/2-set_thread_area/">set_thread_area</a></code>(2). It sets the TLS entry in the GDT whose index is given in <i>addr</i>, assigning it the data supplied in the <i>struct user_desc</i> pointed to by <i>data</i>. (By contrast with <code><a href="/docs/linux/man/2-set_thread_area/">set_thread_area</a></code>(2), the <i>entry_number</i> of the <i>struct user_desc</i> is ignored; in other words, this ptrace operation can&#8217;t be used to allocate a free TLS entry.)</p>
-<dt><code>PTRACE_GET_SYSCALL_INFO</code> (since Linux 5.3)</p>
-<dd> Retrieve information about the system call that caused the stop. The information is placed into the buffer pointed by the <i>data</i> argument, which should be a pointer to a buffer of type <i>struct ptrace_syscall_info</i>. The <i>addr</i> argument contains the size of the buffer pointed to by the <i>data</i> argument (i.e., <i>sizeof(struct ptrace_syscall_info)</i>). The return value contains the number of bytes available to be written by the kernel. If the size of the data to be written by the kernel exceeds the size specified by the <i>addr</i> argument, the output data is truncated.</p>
+</dt><dd> This operation is available if the kernel was configured with both the <code>CONFIG_SECCOMP_FILTER</code> and the <code>CONFIG_CHECKPOINT_RESTORE</code> options.</dd>
+<dt><code>PTRACE_DETACH</code></dt>
+<dd> Restart the stopped tracee as for <code>PTRACE_CONT</code>, but first detach from it. Under Linux, a tracee can be detached in this way regardless of which method was used to initiate tracing. (<i>addr</i> is ignored.)</dd>
+<dt><code>PTRACE_GET_THREAD_AREA</code> (since Linux 2.6.0)</dt>
+<dd> This operation performs a similar task to <code><a href="/docs/linux/man/2-get_thread_area/">get_thread_area</a></code>(2). It reads the TLS entry in the GDT whose index is given in <i>addr</i>, placing a copy of the entry into the <i>struct user_desc</i> pointed to by <i>data</i>. (By contrast with <code><a href="/docs/linux/man/2-get_thread_area/">get_thread_area</a></code>(2), the <i>entry_number</i> of the <i>struct user_desc</i> is ignored.)</dd>
+<dt><code>PTRACE_SET_THREAD_AREA</code> (since Linux 2.6.0)</dt>
+<dd> This operation performs a similar task to <code><a href="/docs/linux/man/2-set_thread_area/">set_thread_area</a></code>(2). It sets the TLS entry in the GDT whose index is given in <i>addr</i>, assigning it the data supplied in the <i>struct user_desc</i> pointed to by <i>data</i>. (By contrast with <code><a href="/docs/linux/man/2-set_thread_area/">set_thread_area</a></code>(2), the <i>entry_number</i> of the <i>struct user_desc</i> is ignored; in other words, this ptrace operation can&#8217;t be used to allocate a free TLS entry.)</dd>
+<dt><code>PTRACE_GET_SYSCALL_INFO</code> (since Linux 5.3)</dt>
+<dd> Retrieve information about the system call that caused the stop. The information is placed into the buffer pointed by the <i>data</i> argument, which should be a pointer to a buffer of type <i>struct ptrace_syscall_info</i>. The <i>addr</i> argument contains the size of the buffer pointed to by the <i>data</i> argument (i.e., <i>sizeof(struct ptrace_syscall_info)</i>). The return value contains the number of bytes available to be written by the kernel. If the size of the data to be written by the kernel exceeds the size specified by the <i>addr</i> argument, the output data is truncated.</dd>
 <dt>
-<dd> The <i>ptrace_syscall_info</i> structure contains the following fields:</p>
+</dt><dd> The <i>ptrace_syscall_info</i> structure contains the following fields:</dd>
 <dt>
-<dd> struct ptrace_syscal_info {<br />
+</dt><dd> struct ptrace_syscal_info {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u8 op;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Type of system call stop&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 arch;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;AUDIT_ARCH_*&nbsp;value;&nbsp;see&nbsp;<a href="/docs/linux/man/2-seccomp/">seccomp</a>(2)&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64 instruction_pointer;&nbsp;/*&nbsp;CPU instruction pointer&nbsp;*/<br />
@@ -218,23 +216,21 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;of SECCOMP_RET_TRACE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return value&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}&nbsp;seccomp;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}; };</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}; };</dd>
 <dt>
-<dd> The <i>op</i>, <i>arch</i>, <i>instruction_pointer</i>, and <i>stack_pointer</i> fields are defined for all kinds of ptrace system call stops. The rest of the structure is a union; one should read only those fields that are meaningful for the kind of system call stop specified by the <i>op</i> field.</p>
+</dt><dd> The <i>op</i>, <i>arch</i>, <i>instruction_pointer</i>, and <i>stack_pointer</i> fields are defined for all kinds of ptrace system call stops. The rest of the structure is a union; one should read only those fields that are meaningful for the kind of system call stop specified by the <i>op</i> field.</dd>
 <dt>
-<dd> The <i>op</i> field has one of the following values (defined in <i>&lt;linux/ptrace.h&gt;)</i> indicating what type of stop occurred and which part of the union is filled:</p>
+</dt><dd> The <i>op</i> field has one of the following values (defined in <i>&lt;linux/ptrace.h&gt;)</i> indicating what type of stop occurred and which part of the union is filled:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>PTRACE_SYSCALL_INFO_ENTRY</code></p>
-<dd> The <i>entry</i> component of the union contains information relating to a system call entry stop.</p>
-<dt><code>PTRACE_SYSCALL_INFO_EXIT</code></p>
-<dd> The <i>exit</i> component of the union contains information relating to a system call exit stop.</p>
-<dt><code>PTRACE_SYSCALL_INFO_SECCOMP</code></p>
-<dd> The <i>seccomp</i> component of the union contains information relating to a <code>PTRACE_EVENT_SECCOMP</code> stop.</p>
-<dt><code>PTRACE_SYSCALL_INFO_NONE</code></p>
-<dd> No component of the union contains relevant information.</dl>
+<dt><code>PTRACE_SYSCALL_INFO_ENTRY</code></dt>
+<dd> The <i>entry</i> component of the union contains information relating to a system call entry stop.</dd>
+<dt><code>PTRACE_SYSCALL_INFO_EXIT</code></dt>
+<dd> The <i>exit</i> component of the union contains information relating to a system call exit stop.</dd>
+<dt><code>PTRACE_SYSCALL_INFO_SECCOMP</code></dt>
+<dd> The <i>seccomp</i> component of the union contains information relating to a <code>PTRACE_EVENT_SECCOMP</code> stop.</dd>
+<dt><code>PTRACE_SYSCALL_INFO_NONE</code></dt>
+<dd> No component of the union contains relevant information.</dd></dl>
 </dl>
 </dl>
 <h3>Death under ptrace</h3>
@@ -293,24 +289,24 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;((PTRACE_EVENT_foo&lt;&lt;8)&nbsp;| SIGTRAP). </p>
 <p> The following events exist:</p>
 <dl>
-<dt><code>PTRACE_EVENT_VFORK</code></p>
-<dd> Stop before return from <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag. When the tracee is continued after this stop, it will wait for child to exit/exec before continuing its execution (in other words, the usual behavior on <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2)).</p>
-<dt><code>PTRACE_EVENT_FORK</code></p>
-<dd> Stop before return from <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the exit signal set to <code>SIGCHLD</code>.</p>
-<dt><code>PTRACE_EVENT_CLONE</code></p>
-<dd> Stop before return from <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>PTRACE_EVENT_VFORK_DONE</code></p>
-<dd> Stop before return from <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag, but after the child unblocked this tracee by exiting or execing.</dl>
+<dt><code>PTRACE_EVENT_VFORK</code></dt>
+<dd> Stop before return from <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag. When the tracee is continued after this stop, it will wait for child to exit/exec before continuing its execution (in other words, the usual behavior on <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2)).</dd>
+<dt><code>PTRACE_EVENT_FORK</code></dt>
+<dd> Stop before return from <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the exit signal set to <code>SIGCHLD</code>.</dd>
+<dt><code>PTRACE_EVENT_CLONE</code></dt>
+<dd> Stop before return from <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>PTRACE_EVENT_VFORK_DONE</code></dt>
+<dd> Stop before return from <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with the <code>CLONE_VFORK</code> flag, but after the child unblocked this tracee by exiting or execing.</dd></dl>
 <p> For all four stops described above, the stop occurs in the parent (i.e., the tracee), not in the newly created thread. <code>PTRACE_GETEVENTMSG</code> can be used to retrieve the new thread&#8217;s ID.</p>
 <dl>
-<dt><code>PTRACE_EVENT_EXEC</code></p>
-<dd> Stop before return from <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). Since Linux 3.0, <code>PTRACE_GETEVENTMSG</code> returns the former thread ID.</p>
-<dt><code>PTRACE_EVENT_EXIT</code></p>
-<dd> Stop before exit (including death from <code><a href="/docs/linux/man/2-exit_group/">exit_group</a></code>(2)), signal death, or exit caused by <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) in a multithreaded process. <code>PTRACE_GETEVENTMSG</code> returns the exit status. Registers can be examined (unlike when &quot;real&quot; exit happens). The tracee is still alive; it needs to be <code>PTRACE_CONT</code>ed or <code>PTRACE_DETACH</code>ed to finish exiting.</p>
-<dt><code>PTRACE_EVENT_STOP</code></p>
-<dd> Stop induced by <code>PTRACE_INTERRUPT</code> command, or group-stop, or initial ptrace-stop when a new child is attached (only if attached using <code>PTRACE_SEIZE</code>).</p>
-<dt><code>PTRACE_EVENT_SECCOMP</code></p>
-<dd> Stop triggered by a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) rule on tracee syscall entry when <code>PTRACE_O_TRACESECCOMP</code> has been set by the tracer. The seccomp event message data (from the <code>SECCOMP_RET_DATA</code> portion of the seccomp filter rule) can be retrieved with <code>PTRACE_GETEVENTMSG</code>. The semantics of this stop are described in detail in a separate section below.</dl>
+<dt><code>PTRACE_EVENT_EXEC</code></dt>
+<dd> Stop before return from <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). Since Linux 3.0, <code>PTRACE_GETEVENTMSG</code> returns the former thread ID.</dd>
+<dt><code>PTRACE_EVENT_EXIT</code></dt>
+<dd> Stop before exit (including death from <code><a href="/docs/linux/man/2-exit_group/">exit_group</a></code>(2)), signal death, or exit caused by <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) in a multithreaded process. <code>PTRACE_GETEVENTMSG</code> returns the exit status. Registers can be examined (unlike when &quot;real&quot; exit happens). The tracee is still alive; it needs to be <code>PTRACE_CONT</code>ed or <code>PTRACE_DETACH</code>ed to finish exiting.</dd>
+<dt><code>PTRACE_EVENT_STOP</code></dt>
+<dd> Stop induced by <code>PTRACE_INTERRUPT</code> command, or group-stop, or initial ptrace-stop when a new child is attached (only if attached using <code>PTRACE_SEIZE</code>).</dd>
+<dt><code>PTRACE_EVENT_SECCOMP</code></dt>
+<dd> Stop triggered by a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) rule on tracee syscall entry when <code>PTRACE_O_TRACESECCOMP</code> has been set by the tracer. The seccomp event message data (from the <code>SECCOMP_RET_DATA</code> portion of the seccomp filter rule) can be retrieved with <code>PTRACE_GETEVENTMSG</code>. The semantics of this stop are described in detail in a separate section below.</dd></dl>
 <p> <code>PTRACE_GETSIGINFO</code> on <code>PTRACE_EVENT</code> stops returns <code>SIGTRAP</code> in <i>si_signo</i>, with <i>si_code</i> set to <i>(event&lt;&lt;8)&nbsp;| SIGTRAP</i>.</p>
 <h3>Syscall-stops</h3>
 <p> If the tracee was restarted by <code>PTRACE_SYSCALL</code> or <code>PTRACE_SYSEMU</code>, the tracee enters syscall-enter-stop just prior to entering any system call (which will not be executed if the restart was using <code>PTRACE_SYSEMU</code>, regardless of any change made to registers at this point or how the tracee is restarted after this stop). No matter which method caused the syscall-entry-stop, if the tracer restarts the tracee with <code>PTRACE_SYSCALL</code>, the tracee enters syscall-exit-stop when the system call is finished, or if it is interrupted by a signal. (That is, signal-delivery-stop never happens between syscall-enter-stop and syscall-exit-stop; it happens <i>after</i> syscall-exit-stop.). If the tracee is continued using any other method (including <code>PTRACE_SYSEMU</code>), no syscall-exit-stop occurs. Note that all mentions <code>PTRACE_SYSEMU</code> apply equally to <code>PTRACE_SYSEMU_SINGLESTEP</code>. </p>
@@ -318,12 +314,12 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 <p> Syscall-enter-stop and syscall-exit-stop are observed by the tracer as <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) returning with <i>WIFSTOPPED(status)</i> true, and <i>WSTOPSIG(status)</i> giving <code>SIGTRAP</code>. If the <code>PTRACE_O_TRACESYSGOOD</code> option was set by the tracer, then <i>WSTOPSIG(status)</i> will give the value <i>(SIGTRAP | 0x80)</i>. </p>
 <p> Syscall-stops can be distinguished from signal-delivery-stop with <code>SIGTRAP</code> by querying <code>PTRACE_GETSIGINFO</code> for the following cases:</p>
 <dl>
-<dt><i>si_code</i> &lt;= 0</p>
-<dd> <code>SIGTRAP</code> was delivered as a result of a user-space action, for example, a system call (<code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), etc.), expiration of a POSIX timer, change of state on a POSIX message queue, or completion of an asynchronous I/O request.</p>
-<dt><i>si_code</i> == SI_KERNEL (0x80)</p>
-<dd> <code>SIGTRAP</code> was sent by the kernel.</p>
-<dt><i>si_code</i> == SIGTRAP or <i>si_code</i> == (SIGTRAP|0x80)</p>
-<dd> This is a syscall-stop.</dl>
+<dt><i>si_code</i> &lt;= 0</dt>
+<dd> <code>SIGTRAP</code> was delivered as a result of a user-space action, for example, a system call (<code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), etc.), expiration of a POSIX timer, change of state on a POSIX message queue, or completion of an asynchronous I/O request.</dd>
+<dt><i>si_code</i> == SI_KERNEL (0x80)</dt>
+<dd> <code>SIGTRAP</code> was sent by the kernel.</dd>
+<dt><i>si_code</i> == SIGTRAP or <i>si_code</i> == (SIGTRAP|0x80)</dt>
+<dd> This is a syscall-stop.</dd></dl>
 <p> However, syscall-stops happen very often (twice per system call), and performing <code>PTRACE_GETSIGINFO</code> for every syscall-stop may be somewhat expensive. </p>
 <p> Some architectures allow the cases to be distinguished by examining registers. For example, on x86, <i>rax</i> == &#8211;<code>ENOSYS</code> in syscall-enter-stop. Since <code>SIGTRAP</code> (like any other signal) always happens <i>after</i> syscall-exit-stop, and at this point <i>rax</i> almost never contains &#8211;<code>ENOSYS</code>, the <code>SIGTRAP</code> looks like &quot;syscall-stop which is not syscall-enter-stop&quot;; in other words, it looks like a &quot;stray syscall-exit-stop&quot; and can be detected this way. But such detection is fragile and is best avoided. </p>
 <p> Using the <code>PTRACE_O_TRACESYSGOOD</code> option is the recommended method to distinguish syscall-stops from other kinds of ptrace-stops, since it is reliable and does not incur a performance penalty. </p>
@@ -373,14 +369,14 @@ long ptrace(enum __ptrace_request request, pid_t pid,
 <h3><a href="/docs/linux/man/2-execve/">execve</a>(2) under ptrace</h3>
 <p> When one thread in a multithreaded process calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), the kernel destroys all other threads in the process, and resets the thread ID of the execing thread to the thread group ID (process ID). (Or, to put things another way, when a multithreaded process does an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), at completion of the call, it appears as though the <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) occurred in the thread group leader, regardless of which thread did the <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).) This resetting of the thread ID looks very confusing to tracers:</p>
 <dl>
-<dt>*</p>
-<dd> All other threads stop in <code>PTRACE_EVENT_EXIT</code> stop, if the <code>PTRACE_O_TRACEEXIT</code> option was turned on. Then all other threads except the thread group leader report death as if they exited via <code>_exit</code>(2) with exit code 0.</p>
-<dt>*</p>
-<dd> The execing tracee changes its thread ID while it is in the <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). (Remember, under ptrace, the &quot;pid&quot; returned from <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2), or fed into ptrace calls, is the tracee&#8217;s thread ID.) That is, the tracee&#8217;s thread ID is reset to be the same as its process ID, which is the same as the thread group leader&#8217;s thread ID.</p>
-<dt>*</p>
-<dd> Then a <code>PTRACE_EVENT_EXEC</code> stop happens, if the <code>PTRACE_O_TRACEEXEC</code> option was turned on.</p>
-<dt>*</p>
-<dd> If the thread group leader has reported its <code>PTRACE_EVENT_EXIT</code> stop by this time, it appears to the tracer that the dead thread leader &quot;reappears from nowhere&quot;. (Note: the thread group leader does not report death via <i>WIFEXITED(status)</i> until there is at least one other live thread. This eliminates the possibility that the tracer will see it dying and then reappearing.) If the thread group leader was still alive, for the tracer this may look as if thread group leader returns from a different system call than it entered, or even &quot;returned from a system call even though it was not in any system call&quot;. If the thread group leader was not traced (or was traced by a different tracer), then during <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) it will appear as if it has become a tracee of the tracer of the execing tracee.</dl>
+<dt>*</dt>
+<dd> All other threads stop in <code>PTRACE_EVENT_EXIT</code> stop, if the <code>PTRACE_O_TRACEEXIT</code> option was turned on. Then all other threads except the thread group leader report death as if they exited via <code>_exit</code>(2) with exit code 0.</dd>
+<dt>*</dt>
+<dd> The execing tracee changes its thread ID while it is in the <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). (Remember, under ptrace, the &quot;pid&quot; returned from <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2), or fed into ptrace calls, is the tracee&#8217;s thread ID.) That is, the tracee&#8217;s thread ID is reset to be the same as its process ID, which is the same as the thread group leader&#8217;s thread ID.</dd>
+<dt>*</dt>
+<dd> Then a <code>PTRACE_EVENT_EXEC</code> stop happens, if the <code>PTRACE_O_TRACEEXEC</code> option was turned on.</dd>
+<dt>*</dt>
+<dd> If the thread group leader has reported its <code>PTRACE_EVENT_EXIT</code> stop by this time, it appears to the tracer that the dead thread leader &quot;reappears from nowhere&quot;. (Note: the thread group leader does not report death via <i>WIFEXITED(status)</i> until there is at least one other live thread. This eliminates the possibility that the tracer will see it dying and then reappearing.) If the thread group leader was still alive, for the tracer this may look as if thread group leader returns from a different system call than it entered, or even &quot;returned from a system call even though it was not in any system call&quot;. If the thread group leader was not traced (or was traced by a different tracer), then during <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) it will appear as if it has become a tracee of the tracer of the execing tracee.</dd></dl>
 <p> All of the above effects are the artifacts of the thread ID change in the tracee. </p>
 <p> The <code>PTRACE_O_TRACEEXEC</code> option is the recommended tool for dealing with this situation. First, it enables <code>PTRACE_EVENT_EXEC</code> stop, which occurs before <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) returns. In this stop, the tracer can use <code>PTRACE_GETEVENTMSG</code> to retrieve the tracee&#8217;s former thread ID. (This feature was introduced in Linux 3.0.) Second, the <code>PTRACE_O_TRACEEXEC</code> option disables legacy <code>SIGTRAP</code> generation on <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). </p>
 <p> When the tracer receives <code>PTRACE_EVENT_EXEC</code> stop notification, it is guaranteed that except this tracee and the thread group leader, no other threads from the process are alive. </p>
@@ -405,25 +401,25 @@ PID0 &lt;... execve resumed&gt; )             = 0
 <p> Many of these bugs have been fixed, but as of Linux 2.6.38 several still exist; see BUGS below. </p>
 <p> As of Linux 2.6.38, the following is believed to work correctly:</p>
 <dl>
-<dt>*</p>
-<dd> exit/death by signal is reported first to the tracer, then, when the tracer consumes the <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) result, to the real parent (to the real parent only when the whole multithreaded process exits). If the tracer and the real parent are the same process, the report is sent only once.</dl>
+<dt>*</dt>
+<dd> exit/death by signal is reported first to the tracer, then, when the tracer consumes the <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) result, to the real parent (to the real parent only when the whole multithreaded process exits). If the tracer and the real parent are the same process, the report is sent only once.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, the <code>PTRACE_PEEK*</code> requests return the requested data (but see NOTES), the <code>PTRACE_SECCOMP_GET_FILTER</code> request returns the number of instructions in the BPF program, and other requests return zero. </p>
 <p> On error, all requests return -1, and <i>errno</i> is set appropriately. Since the value returned by a successful <code>PTRACE_PEEK*</code> request may be -1, the caller must clear <i>errno</i> before the call, and then check it afterward to determine whether or not an error occurred.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> (i386 only) There was an error with allocating or freeing a debug register.</p>
-<dt><code>EFAULT</code></p>
-<dd> There was an attempt to read from or write to an invalid area in the tracer&#8217;s or the tracee&#8217;s memory, probably because the area wasn&#8217;t mapped or accessible. Unfortunately, under Linux, different variations of this fault will return <code>EIO</code> or <code>EFAULT</code> more or less arbitrarily.</p>
-<dt><code>EINVAL</code></p>
-<dd> An attempt was made to set an invalid option.</p>
-<dt><code>EIO</code></p>
-<dd> <i>request</i> is invalid, or an attempt was made to read from or write to an invalid area in the tracer&#8217;s or the tracee&#8217;s memory, or there was a word-alignment violation, or an invalid signal was specified during a restart request.</p>
-<dt><code>EPERM</code></p>
-<dd> The specified process cannot be traced. This could be because the tracer has insufficient privileges (the required capability is <code>CAP_SYS_PTRACE</code>); unprivileged processes cannot trace processes that they cannot send signals to or those running set-user-ID/set-group-ID programs, for obvious reasons. Alternatively, the process may already be being traced, or (on kernels before 2.6.26) be <code><a href="/docs/linux/man/1-init/">init</a></code>(1) (PID 1).</p>
-<dt><code>ESRCH</code></p>
-<dd> The specified process does not exist, or is not currently being traced by the caller, or is not stopped (for requests that require a stopped tracee).</dl>
+<dt><code>EBUSY</code></dt>
+<dd> (i386 only) There was an error with allocating or freeing a debug register.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> There was an attempt to read from or write to an invalid area in the tracer&#8217;s or the tracee&#8217;s memory, probably because the area wasn&#8217;t mapped or accessible. Unfortunately, under Linux, different variations of this fault will return <code>EIO</code> or <code>EFAULT</code> more or less arbitrarily.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An attempt was made to set an invalid option.</dd>
+<dt><code>EIO</code></dt>
+<dd> <i>request</i> is invalid, or an attempt was made to read from or write to an invalid area in the tracer&#8217;s or the tracee&#8217;s memory, or there was a word-alignment violation, or an invalid signal was specified during a restart request.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The specified process cannot be traced. This could be because the tracer has insufficient privileges (the required capability is <code>CAP_SYS_PTRACE</code>); unprivileged processes cannot trace processes that they cannot send signals to or those running set-user-ID/set-group-ID programs, for obvious reasons. Alternatively, the process may already be being traced, or (on kernels before 2.6.26) be <code><a href="/docs/linux/man/1-init/">init</a></code>(1) (PID 1).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The specified process does not exist, or is not currently being traced by the caller, or is not stopped (for requests that require a stopped tracee).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.3BSD.</p>
 <h2>NOTES</h2>
@@ -437,102 +433,96 @@ PID0 &lt;... execve resumed&gt; )             = 0
 <p> Various parts of the kernel-user-space API (not just <code>ptrace</code>() operations), require so-called &quot;ptrace access mode&quot; checks, whose outcome determines whether an operation is permitted (or, in a few cases, causes a &quot;read&quot; operation to return sanitized data). These checks are performed in cases where one process can inspect sensitive information about, or in some cases modify the state of, another process. The checks are based on factors such as the credentials and capabilities of the two processes, whether or not the &quot;target&quot; process is dumpable, and the results of checks performed by any enabled Linux Security Module (LSM)&#8212;for example, SELinux, Yama, or Smack&#8212;and by the commoncap LSM (which is always invoked). </p>
 <p> Prior to Linux 2.6.27, all access checks were of a single type. Since Linux 2.6.27, two access mode levels are distinguished:</p>
 <dl>
-<dt><code>PTRACE_MODE_READ</code></p>
-<dd> For &quot;read&quot; operations or other operations that are less dangerous, such as: <code><a href="/docs/linux/man/2-get_robust_list/">get_robust_list</a></code>(2); <code><a href="/docs/linux/man/2-kcmp/">kcmp</a></code>(2); reading <i>/proc/[pid]/auxv</i>, <i>/proc/[pid]/environ</i>, or <i>/proc/[pid]/stat</i>; or <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2) of a <i>/proc/[pid]/ns/*</i> file.</p>
-<dt><code>PTRACE_MODE_ATTACH</code></p>
-<dd> For &quot;write&quot; operations, or other operations that are more dangerous, such as: ptrace attaching (<code>PTRACE_ATTACH</code>) to another process or calling <code><a href="/docs/linux/man/2-process_vm_writev/">process_vm_writev</a></code>(2). (<code>PTRACE_MODE_ATTACH</code> was effectively the default before Linux 2.6.27.)</dl>
+<dt><code>PTRACE_MODE_READ</code></dt>
+<dd> For &quot;read&quot; operations or other operations that are less dangerous, such as: <code><a href="/docs/linux/man/2-get_robust_list/">get_robust_list</a></code>(2); <code><a href="/docs/linux/man/2-kcmp/">kcmp</a></code>(2); reading <i>/proc/[pid]/auxv</i>, <i>/proc/[pid]/environ</i>, or <i>/proc/[pid]/stat</i>; or <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2) of a <i>/proc/[pid]/ns/*</i> file.</dd>
+<dt><code>PTRACE_MODE_ATTACH</code></dt>
+<dd> For &quot;write&quot; operations, or other operations that are more dangerous, such as: ptrace attaching (<code>PTRACE_ATTACH</code>) to another process or calling <code><a href="/docs/linux/man/2-process_vm_writev/">process_vm_writev</a></code>(2). (<code>PTRACE_MODE_ATTACH</code> was effectively the default before Linux 2.6.27.)</dd></dl>
 <p> Since Linux 4.5, the above access mode checks are combined (ORed) with one of the following modifiers:</p>
 <dl>
-<dt><code>PTRACE_MODE_FSCREDS</code></p>
-<dd> Use the caller&#8217;s filesystem UID and GID (see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)) or effective capabilities for LSM checks.</p>
-<dt><code>PTRACE_MODE_REALCREDS</code></p>
-<dd> Use the caller&#8217;s real UID and GID or permitted capabilities for LSM checks. This was effectively the default before Linux 4.5.</dl>
+<dt><code>PTRACE_MODE_FSCREDS</code></dt>
+<dd> Use the caller&#8217;s filesystem UID and GID (see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)) or effective capabilities for LSM checks.</dd>
+<dt><code>PTRACE_MODE_REALCREDS</code></dt>
+<dd> Use the caller&#8217;s real UID and GID or permitted capabilities for LSM checks. This was effectively the default before Linux 4.5.</dd></dl>
 <p> Because combining one of the credential modifiers with one of the aforementioned access modes is typical, some macros are defined in the kernel sources for the combinations:</p>
 <dl>
-<dt><code>PTRACE_MODE_READ_FSCREDS</code></p>
-<dd> Defined as <code>PTRACE_MODE_READ | PTRACE_MODE_FSCREDS</code>.</p>
-<dt><code>PTRACE_MODE_READ_REALCREDS</code></p>
-<dd> Defined as <code>PTRACE_MODE_READ | PTRACE_MODE_REALCREDS</code>.</p>
-<dt><code>PTRACE_MODE_ATTACH_FSCREDS</code></p>
-<dd> Defined as <code>PTRACE_MODE_ATTACH | PTRACE_MODE_FSCREDS</code>.</p>
-<dt><code>PTRACE_MODE_ATTACH_REALCREDS</code></p>
-<dd> Defined as <code>PTRACE_MODE_ATTACH | PTRACE_MODE_REALCREDS</code>.</dl>
+<dt><code>PTRACE_MODE_READ_FSCREDS</code></dt>
+<dd> Defined as <code>PTRACE_MODE_READ | PTRACE_MODE_FSCREDS</code>.</dd>
+<dt><code>PTRACE_MODE_READ_REALCREDS</code></dt>
+<dd> Defined as <code>PTRACE_MODE_READ | PTRACE_MODE_REALCREDS</code>.</dd>
+<dt><code>PTRACE_MODE_ATTACH_FSCREDS</code></dt>
+<dd> Defined as <code>PTRACE_MODE_ATTACH | PTRACE_MODE_FSCREDS</code>.</dd>
+<dt><code>PTRACE_MODE_ATTACH_REALCREDS</code></dt>
+<dd> Defined as <code>PTRACE_MODE_ATTACH | PTRACE_MODE_REALCREDS</code>.</dd></dl>
 <p> One further modifier can be ORed with the access mode:</p>
 <dl>
-<dt><code>PTRACE_MODE_NOAUDIT</code> (since Linux 3.3)</p>
-<dd> Don&#8217;t audit this access mode check. This modifier is employed for ptrace access mode checks (such as checks when reading <i>/proc/[pid]/stat</i>) that merely cause the output to be filtered or sanitized, rather than causing an error to be returned to the caller. In these cases, accessing the file is not a security violation and there is no reason to generate a security audit record. This modifier suppresses the generation of such an audit record for the particular access check.</dl>
+<dt><code>PTRACE_MODE_NOAUDIT</code> (since Linux 3.3)</dt>
+<dd> Don&#8217;t audit this access mode check. This modifier is employed for ptrace access mode checks (such as checks when reading <i>/proc/[pid]/stat</i>) that merely cause the output to be filtered or sanitized, rather than causing an error to be returned to the caller. In these cases, accessing the file is not a security violation and there is no reason to generate a security audit record. This modifier suppresses the generation of such an audit record for the particular access check.</dd></dl>
 <p> Note that all of the <code>PTRACE_MODE_*</code> constants described in this subsection are kernel-internal, and not visible to user space. The constant names are mentioned here in order to label the various kinds of ptrace access mode checks that are performed for various system calls and accesses to various pseudofiles (e.g., under <i>/proc</i>). These names are used in other manual pages to provide a simple shorthand for labeling the different kernel checks. </p>
 <p> The algorithm employed for ptrace access mode checking determines whether the calling process is allowed to perform the corresponding action on the target process. (In the case of opening <i>/proc/[pid]</i> files, the &quot;calling process&quot; is the one opening the file, and the process with the corresponding PID is the &quot;target process&quot;.) The algorithm is as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> If the calling thread and the target thread are in the same thread group, access is always allowed.</p>
-<dt>2.</p>
-<dd> If the access mode specifies <code>PTRACE_MODE_FSCREDS</code>, then, for the check in the next step, employ the caller&#8217;s filesystem UID and GID. (As noted in <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), the filesystem UID and GID almost always have the same values as the corresponding effective IDs.)</p>
+<dt>1.</dt>
+<dd> If the calling thread and the target thread are in the same thread group, access is always allowed.</dd>
+<dt>2.</dt>
+<dd> If the access mode specifies <code>PTRACE_MODE_FSCREDS</code>, then, for the check in the next step, employ the caller&#8217;s filesystem UID and GID. (As noted in <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), the filesystem UID and GID almost always have the same values as the corresponding effective IDs.)</dd>
 <dt>
-<dd> Otherwise, the access mode specifies <code>PTRACE_MODE_REALCREDS</code>, so use the caller&#8217;s real UID and GID for the checks in the next step. (Most APIs that check the caller&#8217;s UID and GID use the effective IDs. For historical reasons, the <code>PTRACE_MODE_REALCREDS</code> check uses the real IDs instead.)</p>
-<dt>3.</p>
-<dd> Deny access if <i>neither</i> of the following is true:</p>
+</dt><dd> Otherwise, the access mode specifies <code>PTRACE_MODE_REALCREDS</code>, so use the caller&#8217;s real UID and GID for the checks in the next step. (Most APIs that check the caller&#8217;s UID and GID use the effective IDs. For historical reasons, the <code>PTRACE_MODE_REALCREDS</code> check uses the real IDs instead.)</dd>
+<dt>3.</dt>
+<dd> Deny access if <i>neither</i> of the following is true:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The real, effective, and saved-set user IDs of the target match the caller&#8217;s user ID, <i>and</i> the real, effective, and saved-set group IDs of the target match the caller&#8217;s group ID.</p>
-<dt>&bull;</p>
-<dd> The caller has the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target.</dl>
+<dt>&bull;</dt>
+<dd> The real, effective, and saved-set user IDs of the target match the caller&#8217;s user ID, <i>and</i> the real, effective, and saved-set group IDs of the target match the caller&#8217;s group ID.</dd>
+<dt>&bull;</dt>
+<dd> The caller has the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target.</dd></dl>
 </dl>
-<dt>4.</p>
-<dd> Deny access if the target process &quot;dumpable&quot; attribute has a value other than 1 (<code>SUID_DUMP_USER</code>; see the discussion of <code>PR_SET_DUMPABLE</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2)), and the caller does not have the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process.</p>
-<dt>5.</p>
-<dd> The kernel LSM <i>security_ptrace_access_check</i>() interface is invoked to see if ptrace access is permitted. The results depend on the LSM(s). The implementation of this interface in the commoncap LSM performs the following steps:</p>
+<dt>4.</dt>
+<dd> Deny access if the target process &quot;dumpable&quot; attribute has a value other than 1 (<code>SUID_DUMP_USER</code>; see the discussion of <code>PR_SET_DUMPABLE</code> in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2)), and the caller does not have the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process.</dd>
+<dt>5.</dt>
+<dd> The kernel LSM <i>security_ptrace_access_check</i>() interface is invoked to see if ptrace access is permitted. The results depend on the LSM(s). The implementation of this interface in the commoncap LSM performs the following steps:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>a)</p>
-<dd> If the access mode includes <code>PTRACE_MODE_FSCREDS</code>, then use the caller&#8217;s <i>effective</i> capability set in the following check; otherwise (the access mode specifies <code>PTRACE_MODE_REALCREDS</code>, so) use the caller&#8217;s <i>permitted</i> capability set.</p>
-<dt>b)</p>
-<dd> Deny access if <i>neither</i> of the following is true:</p>
+<dt>a)</dt>
+<dd> If the access mode includes <code>PTRACE_MODE_FSCREDS</code>, then use the caller&#8217;s <i>effective</i> capability set in the following check; otherwise (the access mode specifies <code>PTRACE_MODE_REALCREDS</code>, so) use the caller&#8217;s <i>permitted</i> capability set.</dd>
+<dt>b)</dt>
+<dd> Deny access if <i>neither</i> of the following is true:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The caller and the target process are in the same user namespace, and the caller&#8217;s capabilities are a superset of the target process&#8217;s <i>permitted</i> capabilities.</p>
-<dt>&bull;</p>
-<dd> The caller has the <code>CAP_SYS_PTRACE</code> capability in the target process&#8217;s user namespace.</dl>
+<dt>&bull;</dt>
+<dd> The caller and the target process are in the same user namespace, and the caller&#8217;s capabilities are a superset of the target process&#8217;s <i>permitted</i> capabilities.</dd>
+<dt>&bull;</dt>
+<dd> The caller has the <code>CAP_SYS_PTRACE</code> capability in the target process&#8217;s user namespace.</dd></dl>
 </dl>
 <dt>
-<dd> Note that the commoncap LSM does not distinguish between <code>PTRACE_MODE_READ</code> and <code>PTRACE_MODE_ATTACH</code>.</dl>
+</dt><dd> Note that the commoncap LSM does not distinguish between <code>PTRACE_MODE_READ</code> and <code>PTRACE_MODE_ATTACH</code>.</dd></dl>
 </dl>
-<dt>6.</p>
-<dd> If access has not been denied by any of the preceding steps, then access is allowed.</dl>
+<dt>6.</dt>
+<dd> If access has not been denied by any of the preceding steps, then access is allowed.</dd></dl>
 <h3>/proc/sys/kernel/yama/ptrace_scope</h3>
 <p> On systems with the Yama Linux Security Module (LSM) installed (i.e., the kernel was configured with <code>CONFIG_SECURITY_YAMA</code>), the <i>/proc/sys/kernel/yama/ptrace_scope</i> file (available since Linux 3.4) can be used to restrict the ability to trace a process with <code>ptrace</code>() (and thus also the ability to use tools such as <code><a href="/docs/linux/man/1-strace/">strace</a></code>(1) and <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1)). The goal of such restrictions is to prevent attack escalation whereby a compromised process can ptrace-attach to other sensitive processes (e.g., a GPG agent or an SSH session) owned by the user in order to gain additional credentials that may exist in memory and thus expand the scope of the attack. </p>
 <p> More precisely, the Yama LSM limits two types of operations:</p>
 <dl>
-<dt>*</p>
-<dd> Any operation that performs a ptrace access mode <code>PTRACE_MODE_ATTACH</code> check&#8212;for example, <code>ptrace</code>() <code>PTRACE_ATTACH</code>. (See the &quot;Ptrace access mode checking&quot; discussion above.)</p>
-<dt>*</p>
-<dd> <code>ptrace</code>() <code>PTRACE_TRACEME</code>.</dl>
+<dt>*</dt>
+<dd> Any operation that performs a ptrace access mode <code>PTRACE_MODE_ATTACH</code> check&#8212;for example, <code>ptrace</code>() <code>PTRACE_ATTACH</code>. (See the &quot;Ptrace access mode checking&quot; discussion above.)</dd>
+<dt>*</dt>
+<dd> <code>ptrace</code>() <code>PTRACE_TRACEME</code>.</dd></dl>
 <p> A process that has the <code>CAP_SYS_PTRACE</code> capability can update the <i>/proc/sys/kernel/yama/ptrace_scope</i> file with one of the following values:</p>
 <dl>
-<dt>0 (&quot;classic ptrace permissions&quot;)</p>
-<dd> No additional restrictions on operations that perform <code>PTRACE_MODE_ATTACH</code> checks (beyond those imposed by the commoncap and other LSMs).</p>
+<dt>0 (&quot;classic ptrace permissions&quot;)</dt>
+<dd> No additional restrictions on operations that perform <code>PTRACE_MODE_ATTACH</code> checks (beyond those imposed by the commoncap and other LSMs).</dd>
 <dt>
-<dd> The use of <code>PTRACE_TRACEME</code> is unchanged.</p>
-<dt>1 (&quot;restricted ptrace&quot;) [default value]</p>
-<dd> When performing an operation that requires a <code>PTRACE_MODE_ATTACH</code> check, the calling process must either have the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process or it must have a predefined relationship with the target process. By default, the predefined relationship is that the target process must be a descendant of the caller.</p>
+</dt><dd> The use of <code>PTRACE_TRACEME</code> is unchanged.</dd>
+<dt>1 (&quot;restricted ptrace&quot;) [default value]</dt>
+<dd> When performing an operation that requires a <code>PTRACE_MODE_ATTACH</code> check, the calling process must either have the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process or it must have a predefined relationship with the target process. By default, the predefined relationship is that the target process must be a descendant of the caller.</dd>
 <dt>
-<dd> A target process can employ the <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PTRACER</code> operation to declare an additional PID that is allowed to perform <code>PTRACE_MODE_ATTACH</code> operations on the target. See the kernel source file <i>Documentation/admin-guide/LSM/Yama.rst</i> (or <i>Documentation/security/Yama.txt</i> before Linux 4.13) for further details.</p>
+</dt><dd> A target process can employ the <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_PTRACER</code> operation to declare an additional PID that is allowed to perform <code>PTRACE_MODE_ATTACH</code> operations on the target. See the kernel source file <i>Documentation/admin-guide/LSM/Yama.rst</i> (or <i>Documentation/security/Yama.txt</i> before Linux 4.13) for further details.</dd>
 <dt>
-<dd> The use of <code>PTRACE_TRACEME</code> is unchanged.</p>
-<dt>2 (&quot;admin-only attach&quot;)</p>
-<dd> Only processes with the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process may perform <code>PTRACE_MODE_ATTACH</code> operations or trace children that employ <code>PTRACE_TRACEME</code>.</p>
-<dt>3 (&quot;no attach&quot;)</p>
-<dd> No process may perform <code>PTRACE_MODE_ATTACH</code> operations or trace children that employ <code>PTRACE_TRACEME</code>.</p>
+</dt><dd> The use of <code>PTRACE_TRACEME</code> is unchanged.</dd>
+<dt>2 (&quot;admin-only attach&quot;)</dt>
+<dd> Only processes with the <code>CAP_SYS_PTRACE</code> capability in the user namespace of the target process may perform <code>PTRACE_MODE_ATTACH</code> operations or trace children that employ <code>PTRACE_TRACEME</code>.</dd>
+<dt>3 (&quot;no attach&quot;)</dt>
+<dd> No process may perform <code>PTRACE_MODE_ATTACH</code> operations or trace children that employ <code>PTRACE_TRACEME</code>.</dd>
 <dt>
-<dd> Once this value has been written to the file, it cannot be changed.</dl>
+</dt><dd> Once this value has been written to the file, it cannot be changed.</dd></dl>
 <p> With respect to values 1 and 2, note that creating a new user namespace effectively removes the protection offered by Yama. This is because a process in the parent user namespace whose effective UID matches the UID of the creator of a child namespace has all capabilities (including <code>CAP_SYS_PTRACE</code>) when performing operations within the child user namespace (and further-removed descendants of that namespace). Consequently, when a process tries to use user namespaces to sandbox itself, it inadvertently weakens the protections offered by the Yama LSM.</p>
 <h3>C library/kernel differences</h3>
 <p> At the system call level, the <code>PTRACE_PEEKTEXT</code>, <code>PTRACE_PEEKDATA</code>, and <code>PTRACE_PEEKUSER</code> requests have a different API: they store the result at the address specified by the <i>data</i> parameter, and the return value is the error flag. The glibc wrapper function provides the API given in DESCRIPTION above, with the result being returned via the function return value.</p>

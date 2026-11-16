@@ -10,28 +10,27 @@ description: "sigwait – wait for a signal"
 <p>sigwait &#8211; wait for a signal</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int sigwait(const sigset_t *set, int *sig);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sigwait</code>():</p>
 <dl>
 <dd>Since glibc 2.26:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br />
  Glibc 2.25 and earlier:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>sigwait</code>() function suspends execution of the calling thread until one of the signals specified in the signal set <i>set</i> becomes pending. The function accepts the signal (removes it from the pending list of signals), and returns the signal number in <i>sig</i>. </p>
 <p> The operation of <code>sigwait</code>() is the same as <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2), except that:</p>
 <dl>
-<dt>*</p>
-<dd><code>sigwait</code>() returns only the signal number, rather than a <i>siginfo_t</i> structure describing the signal.</p>
-<dt>*</p>
-<dd>The return values of the two functions are different.</dl>
+<dt>*</dt>
+<dd><code>sigwait</code>() returns only the signal number, rather than a <i>siginfo_t</i> structure describing the signal.</dd>
+<dt>*</dt>
+<dd>The return values of the two functions are different.</dd></dl>
 <h2>Return Value</h2>
 <p>On success, <code>sigwait</code>() returns 0. On error, it returns a positive error number (listed in ERRORS).</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>set</i> contains an invalid signal number.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>set</i> contains an invalid signal number.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

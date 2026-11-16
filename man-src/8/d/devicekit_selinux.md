@@ -72,36 +72,36 @@ description: "devicekit_selinux – Security Enhanced Linux Policy for the devic
 <p> <code>devicekit_disk_exec_t</code> </p>
 <p> &#8211; Set files with the devicekit_disk_exec_t type, if you want to transition an executable to the devicekit_disk_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/lib/udisks2/udisksd, /lib/udev/udisks-part-id, /usr/lib/udisks2/udisksd, /usr/libexec/udisks-daemon, /usr/lib/udev/udisks-part-id, /usr/lib/udisks/udisks-daemon, /usr/libexec/devkit-disks-daemon </p>
+<dt>Paths:</dt>
+<dd>/lib/udisks2/udisksd, /lib/udev/udisks-part-id, /usr/lib/udisks2/udisksd, /usr/libexec/udisks-daemon, /usr/lib/udev/udisks-part-id, /usr/lib/udisks/udisks-daemon, /usr/libexec/devkit-disks-daemon </dd>
 </dl>
 <p> <code>devicekit_exec_t</code> </p>
 <p> &#8211; Set files with the devicekit_exec_t type, if you want to transition an executable to the devicekit_t domain. </p>
 <p> <code>devicekit_power_exec_t</code> </p>
 <p> &#8211; Set files with the devicekit_power_exec_t type, if you want to transition an executable to the devicekit_power_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/upowerd, /usr/lib/upower/upowerd, /usr/libexec/devkit-power-daemon </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/upowerd, /usr/lib/upower/upowerd, /usr/libexec/devkit-power-daemon </dd>
 </dl>
 <p> <code>devicekit_tmp_t</code> </p>
 <p> &#8211; Set files with the devicekit_tmp_t type, if you want to store devicekit temporary files in the /tmp directories. </p>
 <p> <code>devicekit_var_lib_t</code> </p>
 <p> &#8211; Set files with the devicekit_var_lib_t type, if you want to store the devicekit files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/udisks.*, /var/lib/upower(/.*)?, /var/lib/DeviceKit-.* </p>
+<dt>Paths:</dt>
+<dd>/var/lib/udisks.*, /var/lib/upower(/.*)?, /var/lib/DeviceKit-.* </dd>
 </dl>
 <p> <code>devicekit_var_log_t</code> </p>
 <p> &#8211; Set files with the devicekit_var_log_t type, if you want to treat the data as devicekit var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/pm-suspend.log.*, /var/log/pm-powersave.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/pm-suspend.log.*, /var/log/pm-powersave.log.* </dd>
 </dl>
 <p> <code>devicekit_var_run_t</code> </p>
 <p> &#8211; Set files with the devicekit_var_run_t type, if you want to store the devicekit files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/udisks.*, /var/run/devkit(/.*)?, /var/run/upower(/.*)?, /var/run/pm-utils(/.*)?, /var/run/DeviceKit-disks(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/udisks.*, /var/run/devkit(/.*)?, /var/run/upower(/.*)?, /var/run/pm-utils(/.*)?, /var/run/DeviceKit-disks(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

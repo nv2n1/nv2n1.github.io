@@ -21,7 +21,7 @@ url: "/docs/linux/man/3-fribidi_parse_charset/"
 
 <dl>
 <dt><b>const char *s</b>
-<dd> Input name of the character set.</dl>
+</dt><dd> Input name of the character set.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -33,21 +33,19 @@ url: "/docs/linux/man/3-fribidi_parse_charset/"
 
  Possible values for an <b>extern FriBidiCharSet</b> are as follows:
 <dl>
-<dt>
-<dd>
 <dl>
 <dt><b>FRIBIDI_CHAR_SET_UTF8</b>
-<dd> UTF-8 (Unicode).
-<dt><b>FRIBIDI_CHAR_SET_CAP_RTL</b>
-<dd> CapRTL (Test).
-<dt><b>FRIBIDI_CHAR_SET_ISO8859_6</b>
-<dd> ISO8859-6 (Arabic).
-<dt><b>FRIBIDI_CHAR_SET_ISO8859_8</b>
-<dd> ISO8859-8 (Hebrew).
-<dt><b>FRIBIDI_CHAR_SET_CP1255</b>
-<dd> CP1255 (MS Hebrew/Yiddish).
-<dt><b>FRIBIDI_CHAR_SET_CP1256</b>
-<dd> CP1256 (MS Arabic).</dl>
+</dt><dd> UTF-8 (Unicode).
+</dd><dt><b>FRIBIDI_CHAR_SET_CAP_RTL</b>
+</dt><dd> CapRTL (Test).
+</dd><dt><b>FRIBIDI_CHAR_SET_ISO8859_6</b>
+</dt><dd> ISO8859-6 (Arabic).
+</dd><dt><b>FRIBIDI_CHAR_SET_ISO8859_8</b>
+</dt><dd> ISO8859-8 (Hebrew).
+</dd><dt><b>FRIBIDI_CHAR_SET_CP1255</b>
+</dt><dd> CP1255 (MS Hebrew/Yiddish).
+</dd><dt><b>FRIBIDI_CHAR_SET_CP1256</b>
+</dt><dd> CP1256 (MS Arabic).</dd></dl>
 </dl>
 
 <h2>SEE ALSO</h2>

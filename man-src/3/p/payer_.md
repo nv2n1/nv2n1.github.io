@@ -10,9 +10,6 @@ description: "QuantLib::Swap – Interest rate swap."
 <p>QuantLib::Swap &#8211; Interest rate swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>. Inherited by <code>AssetSwap</code>, <code>BMASwap</code>, and <code>VanillaSwap</code>.</p>
 <h3>Public Member Functions</h3>
@@ -35,9 +32,6 @@ Protected Attributes</code></pre>
 <p> <code>Swap</code> (Size legs)<br />
  <code>Instrument interface</code> </p>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> std::vector&lt; Leg &gt; <code>legs_</code> </p>
 <p> std::vector&lt; <code>Real</code> &gt; <code>payer_</code> </p>

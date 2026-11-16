@@ -18,16 +18,16 @@ description: "snmpbulkwalk – retrieve a subtree of management values using SNM
 <p> If the tree search causes attempts to search beyond the end of the MIB, the message &quot;End of MIB&quot; will be displayed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-Cc</code></p>
-<dd> Do not check whether the returned OIDs are increasing. Some agents (LaserJets are an example) return OIDs out of order, but can complete the walk anyway. Other agents return OIDs that are out of order and can cause <code>snmpbulkwalk</code> to loop indefinitely. By default, <code>snmpbulkwalk</code> tries to detect this behavior and warns you when it hits an agent acting illegally. Use <code>-Cc</code> to turn off this behaviour.</p>
-<dt><code>-Ci</code></p>
-<dd> Include the given OID in the search range. Normally <code>snmpbulkwalk</code> uses GETBULK requests starting with the OID you specified and returns all results in the MIB tree after that OID. Sometimes, you may wish to include the OID specified on the command line in the printed results if it is a valid OID in the tree itself. This option lets you do this.</p>
-<dt><code>-Cn</code><i>&lt;NUM&gt;</i></p>
-<dd> Set the <i>non-repeaters</i> field in the GETBULK PDUs. This specifies the number of supplied variables that should not be iterated over. The default is 0.</p>
-<dt><code>-Cp</code></p>
-<dd> Upon completion of the walk, print the number of variables found.</p>
-<dt><code>-Cr</code><i>&lt;NUM&gt;</i></p>
-<dd> Set the <i>max-repetitions</i> field in the GETBULK PDUs. This specifies the maximum number of iterations over the repeating variables. The default is 10.</dl>
+<dt><code>-Cc</code></dt>
+<dd> Do not check whether the returned OIDs are increasing. Some agents (LaserJets are an example) return OIDs out of order, but can complete the walk anyway. Other agents return OIDs that are out of order and can cause <code>snmpbulkwalk</code> to loop indefinitely. By default, <code>snmpbulkwalk</code> tries to detect this behavior and warns you when it hits an agent acting illegally. Use <code>-Cc</code> to turn off this behaviour.</dd>
+<dt><code>-Ci</code></dt>
+<dd> Include the given OID in the search range. Normally <code>snmpbulkwalk</code> uses GETBULK requests starting with the OID you specified and returns all results in the MIB tree after that OID. Sometimes, you may wish to include the OID specified on the command line in the printed results if it is a valid OID in the tree itself. This option lets you do this.</dd>
+<dt><code>-Cn</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>non-repeaters</i> field in the GETBULK PDUs. This specifies the number of supplied variables that should not be iterated over. The default is 0.</dd>
+<dt><code>-Cp</code></dt>
+<dd> Upon completion of the walk, print the number of variables found.</dd>
+<dt><code>-Cr</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>max-repetitions</i> field in the GETBULK PDUs. This specifies the maximum number of iterations over the repeating variables. The default is 10.</dd></dl>
 <p> In addition to these options, <code>snmpbulkwalk</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpbulkget</code> REQUIRES an argument specifying the agent to query and at most one OID argument, as described above.</p>
 <h2>EXAMPLE</h2>
 <p> The command: </p>

@@ -11,74 +11,23 @@ description: "sc::vec2 –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>vec2 (const double x, const double y)
-
-
-
 vec2 (const double d)
-
-
-
 vec2 (const vec2 &amp;v)
-
-
-
 vec2 (const vec3 &amp;v)
-
-
-
 vec2 (const vec3 &amp;v, int dropAxis)
-
-
-
 vec2 &amp; operator= (const vec2 &amp;v)
-
-
-
 vec2 &amp; operator+= (const vec2 &amp;v)
-
-
-
 vec2 &amp; operator-= (const vec2 &amp;v)
-
-
-
 vec2 &amp; operator*= (const double d)
-
-
-
 vec2 &amp; operator/= (const double d)
-
-
-
 double &amp; operator[] (int i)
-
-
-
 const double &amp; operator[] (int i) const
-
-
-
 double length ()
-
-
-
 double length2 ()
-
-
-
 vec2 &amp; normalize ()
-
-
-
 vec2 &amp; apply (V_FCT_PTR fct)
-
-
-
 Protected Attributes
 double n [2]
-
-
-
 Friends</code></pre>
 <p> class <code>vec3</code> </p>
 <p> <code>vec2</code> <code>operator-</code> (const <code>vec2</code> &amp;v) </p>

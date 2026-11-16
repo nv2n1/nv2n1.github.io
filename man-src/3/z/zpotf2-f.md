@@ -25,10 +25,10 @@ description: "zpotf2.f –"
  A = L * L**H, if UPLO = 'L',
  where U is an upper triangular matrix and L is lower triangular.
  This is the unblocked version of the algorithm, calling Level 2 BLAS.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the upper or lower triangular part of the
  Hermitian matrix A is stored.
@@ -61,13 +61,13 @@ description: "zpotf2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 110 of file zpotf2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

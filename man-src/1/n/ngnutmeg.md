@@ -16,19 +16,19 @@ description: "ngnutmeg – ngspice post-processor"
  <code>ngnutmeg</code> is a post processor for ngspice] &#8211; it takes the raw output file created by <code>ngspice -r</code> and plots the data on a graphics terminal or a workstation display. Note that the raw output file is different from the data that ngspice] writes to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code></p>
+<dt><code>&#8211;</code></dt>
 <dd>
- Don&#8217;t try to load the default data file (&quot;rawspice&quot;) if no other files are given.</p>
-<dt><code>-n</code> or <code>&#8211;no-spiceinit</code></p>
-<dd> Don&#8217;t try to source the file &quot;.spiceinit&quot; upon startup. Normally <code>ngnutmeg</code> tries to find the file in the current directory, and if it is not found then in the user&#8217;s home directory.</p>
-<dt><code>-q</code> or <code>&#8211;completion</code></p>
-<dd> Enable command completion. (defect)</p>
-<dt><code>-t</code> <i>term</i> or <code>&#8211;term=</code><i>term</i></p>
-<dd> The program is being run on a terminal with <code>mfb</code> name <i>term</i>.</p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd> Display a verbose help on the arguments available to the program.</p>
-<dt><code>-v</code> or <code>&#8211;version</code></p>
-<dd> Display a version number and copyright information of the program.</dl>
+ Don&#8217;t try to load the default data file (&quot;rawspice&quot;) if no other files are given.</dd>
+<dt><code>-n</code> or <code>&#8211;no-spiceinit</code></dt>
+<dd> Don&#8217;t try to source the file &quot;.spiceinit&quot; upon startup. Normally <code>ngnutmeg</code> tries to find the file in the current directory, and if it is not found then in the user&#8217;s home directory.</dd>
+<dt><code>-q</code> or <code>&#8211;completion</code></dt>
+<dd> Enable command completion. (defect)</dd>
+<dt><code>-t</code> <i>term</i> or <code>&#8211;term=</code><i>term</i></dt>
+<dd> The program is being run on a terminal with <code>mfb</code> name <i>term</i>.</dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd> Display a verbose help on the arguments available to the program.</dd>
+<dt><code>-v</code> or <code>&#8211;version</code></dt>
+<dd> Display a version number and copyright information of the program.</dd></dl>
 <p> Further arguments are taken to be data files in binary or ascii format (see <code>sconvert</code>(1)) which are loaded into ngnutmeg. If the file is in binary format, it may be only partially completed (useful for examining ngspice] ouput before the simulation is finished). One file may contain any number of data sets from different analyses.</p>
 <h2>ENVIRONMENT</h2>
 <p> See <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1)</p>

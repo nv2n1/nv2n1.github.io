@@ -10,7 +10,6 @@ description: "pack_fgets – Reads a line from the stream. Allegro game programm
 <p>pack_fgets &#8211; Reads a line from the stream. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *pack_fgets(char *p, int max, PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Reads a line from the stream `f&#8217;, storing it at location pointed to by `p&#8217;. Stops when a linefeed is encountered, or `max&#8217; bytes have been read. The end of line is handled by detecting the right combination of characters for the platform. This supports CR-LF (DOS/Windows), LF (Unix), and CR (Mac) formats. However, the trailing carriage return is not included in the returned string, in order to provide easy code portability across platforms. If you need the carriage return, use pack_fread() and/or pack_getc() instead. Note: This function internally may make calls to pack_ungetc, so you cannot use pack_ungetc directly afterwards. Example: </p>

@@ -15,10 +15,10 @@ description: "XmIconGadget — The IconGadget widget class"
 <p> IconGadget text is a compound string. If no text is supplied, then the compound string is generated from the gadget name. IconGadget text is placed relative to the type of associated pixmap. </p>
 <p> Depending upon the <code>XmNviewType</code> resource, IconGadget can display two views:</p>
 <dl COMPACT>
-<dt><code>XmLARGE_ICON</code></p>
-<dd>The IconGadget text string is displayed below the pixmap, and centered.</p>
-<dt><code>XmSMALL_ICON</code></p>
-<dd>The IconGadget text string is placed on the side of the small icon, in the widget&#8217;s <code>XmNlayoutDirection</code>.</dl>
+<dt><code>XmLARGE_ICON</code></dt>
+<dd>The IconGadget text string is displayed below the pixmap, and centered.</dd>
+<dt><code>XmSMALL_ICON</code></dt>
+<dd>The IconGadget text string is placed on the side of the small icon, in the widget&#8217;s <code>XmNlayoutDirection</code>.</dd></dl>
 <p> A bitmap mask can be supplied for each pixmap to clip the pixmap into some shape other than a rectangle. The <code>XmNlargeIconMask</code> and <code>XmNsmallIconMask</code> resources specify the large and small bitmap masks respectively. Visual emphasis for the IconGadget is provided with the <code>XmNvisualEmphasis</code> resource. IconGadget&#8217;s <code>XmNdetail</code> and <code>XmNdetailCount</code> resources provide a detail view for IconGadgets, enabling the display of Strings alongside the IconGadget. The exact layout ordering of the strings depends on the associated containing widget. </p>
 <p> IconGadget uses the <code>XmQTcontainer</code> and <code>XmQTspecifyRenderTable</code> traits, and holds the <code>XmQTcareParentVisual</code> and <code>XmQTcontainerItem</code> traits.</p>
 <h3>Classes</h3>
@@ -438,51 +438,51 @@ description: "XmIconGadget — The IconGadget widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNalignment</code></p>
-<dd>Specifies the horizontal alignment of the pixmap with respect to the label when the icon is in <code>LARGE_ICON</code> view. Valid values are <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code>, and <code>XmALIGNMENT_END</code>.</p>
-<dt><code>XmNdetail</code></p>
-<dd>Specifies an array of <code>XmString</code>s that are the detail information associated with the gadget.</p>
-<dt><code>XmNdetailCount</code></p>
-<dd>Specifies the size of the <code>XmNdetail</code> array.</p>
-<dt><code>XmNfontList</code></p>
-<dd>Specifies the font list associated with <code>XmIconGadget</code>. The font list is an obsolete construct, and has been superseded by the render table. It is included for compatibility with earlier versions of Motif, and for applications that do not easily support render tables. The default font list is derived from the default render table, and if both a font list and a render table are specified, the render table takes precedence.</p>
-<dt><code>XmNlabelString</code></p>
-<dd>Specifies the compound string. If this value is NULL, it is initialized by converting the name of the gadget to a compound string. Refer to <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3) for more information on the creation and structure of compound strings.</p>
-<dt><code>XmNlargeIconMask</code></p>
-<dd>Specifies the icon mask used when <code>XmNviewType</code> is <code>XmLARGE_ICON</code>.</p>
-<dt><code>XmNlargeIconPixmap</code></p>
-<dd>Specifies the pixmap when <code>XmNviewType</code> is <code>XmLARGE_ICON</code>. If this resource&#8217;s value is <code>XmUNSPECIFIED_PIXMAP</code>, there is no pixmap. If a large icon pixmap is specified, and if during conversion an associated mask can be fetched, then the <code>XmNlargeIconMask</code> resource is set to that mask.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the amount of vertical space between the highlight and the inside (pixmap and label).</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the amount of horizontal space between the highlight and the inside (pixmap and label).</p>
-<dt><code>XmNrenderTable</code></p>
-<dd>Specifies the <code>XmRenderTable</code> of the text used in the gadget. If <code>XmNrenderTable</code> is NULL when the IconGadget is created, the parent&#8217;s render table resource value is used if there is a render table. If the parent does not have a render table, the parent hierarchy of the widget is searched for a widget that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmLABEL_RENDER_TABLE</code> value of the ancestor widget. If no such widget is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a <code>XmRenderTable</code>. If both a render table and a font list are specified, the render table will take precedence.</p>
-<dt><code>XmNsmallIconMask</code></p>
-<dd>Specifies the icon mask used when <code>XmNviewType</code> is <code>XmSMALL_ICON</code>.</p>
-<dt><code>XmNsmallIconPixmap</code></p>
-<dd>Specifies the pixmap when <code>XmNviewType</code> is <code>XmSMALL_ICON</code>. If this resource&#8217;s value is <code>XmUNSPECIFIED_PIXMAP</code>, there is no pixmap. If a small icon pixmap is specified, and if during conversion an associated mask can be fetched, then the <code>XmNsmallIconMask</code> resource is set to that mask.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the amount of space between the pixmap and the label parts of the icon.</p>
-<dt><code>XmNviewType</code></p>
-<dd>Specifies the view (combination of pixmaps/text) that will be displayed. If the IconGadget is a child of a Container widget, however, then the specification of this resource will be taken from the Container&#8212; if Container&#8217;s <code>XmNentryViewType</code> is either <code>XmLARGE_ICON</code> or <code>XmSMALL_ICON</code>, then IconGadget&#8217;s <code>XmNviewType</code> takes that value; otherwise, the default is <code>XmLARGE_ICON</code>. This resource is set to one of the following:</p>
+<dt><code>XmNalignment</code></dt>
+<dd>Specifies the horizontal alignment of the pixmap with respect to the label when the icon is in <code>LARGE_ICON</code> view. Valid values are <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code>, and <code>XmALIGNMENT_END</code>.</dd>
+<dt><code>XmNdetail</code></dt>
+<dd>Specifies an array of <code>XmString</code>s that are the detail information associated with the gadget.</dd>
+<dt><code>XmNdetailCount</code></dt>
+<dd>Specifies the size of the <code>XmNdetail</code> array.</dd>
+<dt><code>XmNfontList</code></dt>
+<dd>Specifies the font list associated with <code>XmIconGadget</code>. The font list is an obsolete construct, and has been superseded by the render table. It is included for compatibility with earlier versions of Motif, and for applications that do not easily support render tables. The default font list is derived from the default render table, and if both a font list and a render table are specified, the render table takes precedence.</dd>
+<dt><code>XmNlabelString</code></dt>
+<dd>Specifies the compound string. If this value is NULL, it is initialized by converting the name of the gadget to a compound string. Refer to <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3) for more information on the creation and structure of compound strings.</dd>
+<dt><code>XmNlargeIconMask</code></dt>
+<dd>Specifies the icon mask used when <code>XmNviewType</code> is <code>XmLARGE_ICON</code>.</dd>
+<dt><code>XmNlargeIconPixmap</code></dt>
+<dd>Specifies the pixmap when <code>XmNviewType</code> is <code>XmLARGE_ICON</code>. If this resource&#8217;s value is <code>XmUNSPECIFIED_PIXMAP</code>, there is no pixmap. If a large icon pixmap is specified, and if during conversion an associated mask can be fetched, then the <code>XmNlargeIconMask</code> resource is set to that mask.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the amount of vertical space between the highlight and the inside (pixmap and label).</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the amount of horizontal space between the highlight and the inside (pixmap and label).</dd>
+<dt><code>XmNrenderTable</code></dt>
+<dd>Specifies the <code>XmRenderTable</code> of the text used in the gadget. If <code>XmNrenderTable</code> is NULL when the IconGadget is created, the parent&#8217;s render table resource value is used if there is a render table. If the parent does not have a render table, the parent hierarchy of the widget is searched for a widget that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmLABEL_RENDER_TABLE</code> value of the ancestor widget. If no such widget is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a <code>XmRenderTable</code>. If both a render table and a font list are specified, the render table will take precedence.</dd>
+<dt><code>XmNsmallIconMask</code></dt>
+<dd>Specifies the icon mask used when <code>XmNviewType</code> is <code>XmSMALL_ICON</code>.</dd>
+<dt><code>XmNsmallIconPixmap</code></dt>
+<dd>Specifies the pixmap when <code>XmNviewType</code> is <code>XmSMALL_ICON</code>. If this resource&#8217;s value is <code>XmUNSPECIFIED_PIXMAP</code>, there is no pixmap. If a small icon pixmap is specified, and if during conversion an associated mask can be fetched, then the <code>XmNsmallIconMask</code> resource is set to that mask.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the amount of space between the pixmap and the label parts of the icon.</dd>
+<dt><code>XmNviewType</code></dt>
+<dd>Specifies the view (combination of pixmaps/text) that will be displayed. If the IconGadget is a child of a Container widget, however, then the specification of this resource will be taken from the Container&#8212; if Container&#8217;s <code>XmNentryViewType</code> is either <code>XmLARGE_ICON</code> or <code>XmSMALL_ICON</code>, then IconGadget&#8217;s <code>XmNviewType</code> takes that value; otherwise, the default is <code>XmLARGE_ICON</code>. This resource is set to one of the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmLARGE_ICON</code></p>
-<dd>The pixmap specified by <code>XmNlargeIconPixmap</code> is displayed with the <code>XmNlabelString</code> beneath it.</p>
-<dt><code>XmSMALL_ICON</code></p>
-<dd>The pixmap specified by <code>XmNsmallIconPixmap</code> is displayed with the <code>XmNlabelString</code> displayed in the direction of the <code>XmNlayoutDirection</code> resource.</dl>
+</dd><dl COMPACT>
+<dt><code>XmLARGE_ICON</code></dt>
+<dd>The pixmap specified by <code>XmNlargeIconPixmap</code> is displayed with the <code>XmNlabelString</code> beneath it.</dd>
+<dt><code>XmSMALL_ICON</code></dt>
+<dd>The pixmap specified by <code>XmNsmallIconPixmap</code> is displayed with the <code>XmNlabelString</code> displayed in the direction of the <code>XmNlayoutDirection</code> resource.</dd></dl>
 </dl>
-<dt><code>XmNvisualEmphasis</code></p>
-<dd>Specifies the visual state of the IconGadget. If the IconGadget is in a selected state all visuals are displayed using the Container <code>XmNselectColor</code> resource. It is set to one of the following:</p>
+<dt><code>XmNvisualEmphasis</code></dt>
+<dd>Specifies the visual state of the IconGadget. If the IconGadget is in a selected state all visuals are displayed using the Container <code>XmNselectColor</code> resource. It is set to one of the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSELECTED</code></p>
-<dd>The IconGadget is in the selected state and displays the appropriate visuals.</p>
-<dt><code>XmNOT_SELECTED</code></p>
-<dd>The IconGadget is not in the selected state.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSELECTED</code></dt>
+<dd>The IconGadget is in the selected state and displays the appropriate visuals.</dd>
+<dt><code>XmNOT_SELECTED</code></dt>
+<dd>The IconGadget is not in the selected state.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>

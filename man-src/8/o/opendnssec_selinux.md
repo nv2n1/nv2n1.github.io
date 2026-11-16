@@ -109,16 +109,16 @@ description: "opendnssec_selinux – Security Enhanced Linux Policy for the open
 <p> <code>opendnssec_exec_t</code> </p>
 <p> &#8211; Set files with the opendnssec_exec_t type, if you want to transition an executable to the opendnssec_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ods-signer, /usr/sbin/ods-control, /usr/sbin/ods-signerd, /usr/sbin/ods-enforcerd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ods-signer, /usr/sbin/ods-control, /usr/sbin/ods-signerd, /usr/sbin/ods-enforcerd </dd>
 </dl>
 <p> <code>opendnssec_tmp_t</code> </p>
 <p> &#8211; Set files with the opendnssec_tmp_t type, if you want to store opendnssec temporary files in the /tmp directories. </p>
 <p> <code>opendnssec_unit_file_t</code> </p>
 <p> &#8211; Set files with the opendnssec_unit_file_t type, if you want to treat the files as opendnssec unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/ods-signerd.service, /usr/lib/systemd/system/ods-enforcerd.service </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/ods-signerd.service, /usr/lib/systemd/system/ods-enforcerd.service </dd>
 </dl>
 <p> <code>opendnssec_var_run_t</code> </p>
 <p> &#8211; Set files with the opendnssec_var_run_t type, if you want to store the opendnssec files under the /run or /var/run directory. </p>

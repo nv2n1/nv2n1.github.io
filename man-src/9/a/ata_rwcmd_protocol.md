@@ -14,15 +14,15 @@ description: "ata_rwcmd_protocol – set taskfile r/w commands and protocol"
 <p><i>tf</i></p>
 <dl>
 <dd>
-<dd>command to examine and configure</dl>
+</dd><dd>command to examine and configure</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>device tf belongs to</dl>
+<dd>device tf belongs to</dd></dl>
 <h2>Description</h2>
 <p>Examine the device configuration and tf-&gt;flags to calculate the proper read/write commands and protocol to use. </p>
 <p> LOCKING: caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -25,14 +25,14 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 <p> <i>name</i> must be unique across all derived metrics and should <code>not</code> match the name of any regular metric in the PMNS. It is acceptable for <i>name</i> to share some part of its prefix with an existing subtree of the PMNS, e.g. the average I/O size metric above could be named disk.dev.avgsz which would place it amongst the other disk.dev metrics in the PMNS. Alternatively, derived metrics could populate their own subtree of the PMNS, e.g. the average I/O size metric above could be named my.summary.disk.avgsz . </p>
 <p> The expression <i>expr</i> follows these syntactic rules:</p>
 <dl>
-<dt>*</p>
-<dd>Terminal elements are either names of existing metrics or integer constants. Recursive definitions are not allowed, so only the names of regular metrics (not other derived metrics) may be used. Integer constants are constrained to the precision of 32-bit unsigned integers.</p>
-<dt>*</p>
-<dd>The usual binary arithmetic operators are supported, namely &#8211; addition (&#8220;+&#8221;), subtraction (&#8220;-&#8221;), multiplication (&#8220;*&#8221;) and division (&#8220;/&#8221;) with the normal precedence rules where multiplication and division have higher precedence than addition and subtraction, so a+b*c is evaluated as a+(b*c)</p>
-<dt>*</p>
-<dd>Parenthesis may be used for grouping.</p>
-<dt>*</p>
-<dd>The following unary functions operate on a single performance metric and return one or more values. For all functions (except count() and instant() ), the type of the operand metric must be arithmetic (integer of various sizes and signedness, float or double). <center></p>
+<dt>*</dt>
+<dd>Terminal elements are either names of existing metrics or integer constants. Recursive definitions are not allowed, so only the names of regular metrics (not other derived metrics) may be used. Integer constants are constrained to the precision of 32-bit unsigned integers.</dd>
+<dt>*</dt>
+<dd>The usual binary arithmetic operators are supported, namely &#8211; addition (&#8220;+&#8221;), subtraction (&#8220;-&#8221;), multiplication (&#8220;*&#8221;) and division (&#8220;/&#8221;) with the normal precedence rules where multiplication and division have higher precedence than addition and subtraction, so a+b*c is evaluated as a+(b*c)</dd>
+<dt>*</dt>
+<dd>Parenthesis may be used for grouping.</dd>
+<dt>*</dt>
+<dd>The following unary functions operate on a single performance metric and return one or more values. For all functions (except count() and instant() ), the type of the operand metric must be arithmetic (integer of various sizes and signedness, float or double). <center></dd>
 <table BORDER>
 <tr>
 <td>
@@ -125,25 +125,25 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 </table>
 </table>
 <p></center></p>
-<dt>*</p>
-<dd>White space is ignored.</dl>
+<dt>*</dt>
+<dd>White space is ignored.</dd></dl>
 <h2>Semantic Checks And Rules</h2>
 <p>There are a number of conversions required to determine the metadata for a derived metric and to ensure the semantics of the expressions are sound. </p>
 <p> In a binary expression, if the semantics of both operands is not a counter (i.e. PM_SEM_INSTANT or PM_SEM_DISCRETE) then the result will have semantics PM_SEM_INSTANT unless both operands are PM_SEM_DISCRETE in which case the result is also PM_SEM_DISCRETE. </p>
 <p> The mapping of the pmUnits of the metadata uses the following rules:</p>
 <dl>
-<dt>*</p>
-<dd>If both operands have a dimension of COUNT and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</p>
-<dt>*</p>
-<dd>If both operands have a dimension of TIME and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</p>
-<dt>*</p>
-<dd>If both operands have a dimension of SPACE and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</p>
-<dt>*</p>
-<dd>For addition and subtraction all dimensions for each of the operands and result are identical.</p>
-<dt>*</p>
-<dd>For multiplication, the dimensions of the result are the sum of the dimensions of the operands.</p>
-<dt>*</p>
-<dd>For division, the dimensions of the result are the difference of the dimensions of the operands.</dl>
+<dt>*</dt>
+<dd>If both operands have a dimension of COUNT and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</dd>
+<dt>*</dt>
+<dd>If both operands have a dimension of TIME and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</dd>
+<dt>*</dt>
+<dd>If both operands have a dimension of SPACE and the scales are not the same, use the larger scale and convert the values of the operand with the smaller scale.</dd>
+<dt>*</dt>
+<dd>For addition and subtraction all dimensions for each of the operands and result are identical.</dd>
+<dt>*</dt>
+<dd>For multiplication, the dimensions of the result are the sum of the dimensions of the operands.</dd>
+<dt>*</dt>
+<dd>For division, the dimensions of the result are the difference of the dimensions of the operands.</dd></dl>
 <p> Scale conversion involves division if the dimension is positive else multiplication if the dimension is negative. If scale conversion is applied to either of the operands, the result is promoted to type PM_TYPE_DOUBLE. </p>
 <p> Putting all of this together in an example, consider the derived metric defined as follows:<br />
  x = network.interface.speed &#8211; delta(network.interface.in.bytes) / delta(sample.milliseconds)<br />
@@ -218,22 +218,22 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 <p></center> </p>
 <p> Because semantic checking cannot be done at the time <code>pmRegisterDerived</code> is called, errors found during semantic checking are reported using <code>pmprintf</code>(3). These include:</p>
 <dl>
-<dt>Error: derived metric &lt;name1&gt;: operand: &lt;name2&gt;: &lt;reason&gt;</p>
-<dd>There was a problem calling <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3) to identify the operand metric &lt;name2&gt; used in the definition of the derived metric &lt;name1&gt;.</p>
-<dt>Error: derived metric &lt;name1&gt;: operand (&lt;name2&gt; [&lt;pmid2&gt;]): &lt;reason&gt;</p>
-<dd>There was a problem calling <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3) to identify the operand metric &lt;name2&gt; with PMID &lt;pmid2&gt; used in the definition of the derived metric &lt;name1&gt;.</p>
-<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for counters</p>
-<dd>If both operands have the semantics of counter, only addition or subtraction make sense, so multiplication and division are not allowed.</p>
-<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for counter and non-counter</p>
-<dd>Only multiplication or division are allowed if the left operand has the semantics of a counter and the right operand is <code>not</code> a counter.</p>
-<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for non-counter and counter</p>
-<dd>Only multiplication is allowed if the right operand has the semantics of a counter and the left operand is <code>not</code> a counter.</p>
-<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Non-arithmetic type for &lt;left-or-right&gt; operand</p>
-<dd>The binary arithmetic operators are only allowed with operands with an arithmetic type (integer of various sizes and signedness, float or double).</p>
-<dt>Semantic error: derived metric &lt;name&gt;: &lt;function&gt;(&lt;operand&gt;): Non-arithmetic operand for function</p>
-<dd>The unary functions are only defined if the operand has arithmetic type.</p>
-<dt>Semantic error: derived metric &lt;name&gt;: Incorrect time dimension for operand</p>
-<dd>Rate conversion using the <code>rate</code>() function is only possible for operand metrics with a Time dimension of 0 or 1 (see <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3)). If the operand metric&#8217;s Time dimension is 0, then the derived metrics has a value &quot;per second&quot; (Time dimension of -1). If the operand metric&#8217;s Time dimension is 1, then the derived metrics has a value of time utilization (Time dimension of 0).</dl>
+<dt>Error: derived metric &lt;name1&gt;: operand: &lt;name2&gt;: &lt;reason&gt;</dt>
+<dd>There was a problem calling <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3) to identify the operand metric &lt;name2&gt; used in the definition of the derived metric &lt;name1&gt;.</dd>
+<dt>Error: derived metric &lt;name1&gt;: operand (&lt;name2&gt; [&lt;pmid2&gt;]): &lt;reason&gt;</dt>
+<dd>There was a problem calling <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3) to identify the operand metric &lt;name2&gt; with PMID &lt;pmid2&gt; used in the definition of the derived metric &lt;name1&gt;.</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for counters</dt>
+<dd>If both operands have the semantics of counter, only addition or subtraction make sense, so multiplication and division are not allowed.</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for counter and non-counter</dt>
+<dd>Only multiplication or division are allowed if the left operand has the semantics of a counter and the right operand is <code>not</code> a counter.</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Illegal operator for non-counter and counter</dt>
+<dd>Only multiplication is allowed if the right operand has the semantics of a counter and the left operand is <code>not</code> a counter.</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: &lt;operand&gt; &lt;op&gt; &lt;operand&gt;: Non-arithmetic type for &lt;left-or-right&gt; operand</dt>
+<dd>The binary arithmetic operators are only allowed with operands with an arithmetic type (integer of various sizes and signedness, float or double).</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: &lt;function&gt;(&lt;operand&gt;): Non-arithmetic operand for function</dt>
+<dd>The unary functions are only defined if the operand has arithmetic type.</dd>
+<dt>Semantic error: derived metric &lt;name&gt;: Incorrect time dimension for operand</dt>
+<dd>Rate conversion using the <code>rate</code>() function is only possible for operand metrics with a Time dimension of 0 or 1 (see <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3)). If the operand metric&#8217;s Time dimension is 0, then the derived metrics has a value &quot;per second&quot; (Time dimension of -1). If the operand metric&#8217;s Time dimension is 1, then the derived metrics has a value of time utilization (Time dimension of 0).</dd></dl>
 <h2>Expression Evaluation</h2>
 <p>For the binary arithmetic operators, if either operand must be scaled (e.g. convert bytes to Kbytes) then the result is promoted to PM_TYPE_DOUBLE. Otherwise the type of the result is determined by the types of the operands, as per the following table which is evaluated from top to bottom until a match is found. <center></p>
 <table BORDER>

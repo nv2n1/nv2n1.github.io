@@ -14,13 +14,13 @@ description: "usb_add_hcd – finish generic HCD structure initialization and re
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>the usb_hcd structure to initialize</dl>
+</dd><dd>the usb_hcd structure to initialize</dd></dl>
 <p> <i>irqnum</i></p>
 <dl>
-<dd>Interrupt line to allocate</dl>
+<dd>Interrupt line to allocate</dd></dl>
 <p> <i>irqflags</i></p>
 <dl>
-<dd>Interrupt type flags</dl>
+<dd>Interrupt type flags</dd></dl>
 <h2>Description</h2>
 <p>Finish the remaining parts of generic HCD initialization: allocate the buffers of consistent memory, register the bus, request the IRQ line, and call the driver&#8217;s <code>reset</code> and <code>start</code> routines.</p>
 <h2>Copyright</h2>

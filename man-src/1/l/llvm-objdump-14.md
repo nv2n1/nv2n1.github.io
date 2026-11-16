@@ -14,195 +14,195 @@ description: "llvm-objdump – manual page for llvm-objdump 14"
 <p> USAGE: llvm-objdump [options] &lt;input object files&gt;</p>
 <h3>OPTIONS:</h3>
 <dl>
-<dt><code>&#8211;adjust-vma</code>=<i>,offset/</i></p>
-<dd> Increase the displayed address by the specified offset</p>
-<dt><code>&#8211;all-headers</code></p>
-<dd> Display all available header information, relocation entries and the symbol table</p>
-<dt><code>&#8211;arch-name=</code>&lt;value&gt;</p>
-<dd> Target arch to disassemble for, see <code>&#8211;version</code> for available targets</p>
-<dt><code>&#8211;archive-headers</code></p>
-<dd> Display archive header information</p>
-<dt><code>-a</code></p>
-<dd> Alias for <code>&#8211;archive-headers</code></p>
-<dt><code>-C</code></p>
-<dd> Alias for <code>&#8211;demangle</code></p>
-<dt><code>&#8211;debug-vars-indent=</code>&lt;value&gt;</p>
-<dd> Distance to indent the source-level variable display, relative to the start of the disassembly</p>
-<dt><code>&#8211;debug-vars=</code>&lt;value&gt;</p>
-<dd> Print the locations (in registers or memory) of source-level variables alongside disassembly. Supported formats: ascii, unicode (default)</p>
-<dt><code>&#8211;demangle</code></p>
-<dd> Demangle symbol names</p>
-<dt><code>&#8211;disassemble-all</code></p>
-<dd> Disassemble all sections found in the input files</p>
-<dt><code>&#8211;disassemble-symbols=</code>&lt;value&gt;</p>
-<dd> List of symbols to disassemble. Accept demangled names when <code>&#8211;demangle</code> is specified, otherwise accept mangled names</p>
-<dt><code>&#8211;disassemble-zeroes</code></p>
-<dd> Do not skip blocks of zeroes when disassembling</p>
-<dt><code>&#8211;disassembler-options</code>=<i>,options/</i></p>
-<dd> Pass target specific disassembler options</p>
-<dt><code>&#8211;disassemble</code></p>
-<dd> Disassemble all executable sections found in the input files</p>
-<dt><code>&#8211;dwarf=</code>&lt;value&gt;</p>
-<dd> Dump the specified DWARF debug sections. The only supported value is &#8216;frames&#8217;</p>
-<dt><code>&#8211;dynamic-reloc</code></p>
-<dd> Display the dynamic relocation entries in the file</p>
-<dt><code>&#8211;dynamic-syms</code></p>
-<dd> Display the contents of the dynamic symbol table</p>
-<dt><code>-D</code></p>
-<dd> Alias for <code>&#8211;disassemble-all</code></p>
-<dt><code>-d</code></p>
-<dd> Alias for <code>&#8211;disassemble</code></p>
-<dt><code>&#8211;fault-map-section</code></p>
-<dd> Display the content of the fault map section</p>
-<dt><code>&#8211;file-headers</code></p>
-<dd> Display the contents of the overall file header</p>
-<dt><code>&#8211;full-contents</code></p>
-<dd> Display the content of each section</p>
-<dt><code>-f</code></p>
-<dd> Alias for <code>&#8211;file-headers</code></p>
-<dt><code>&#8211;headers</code></p>
-<dd> Alias for <code>&#8211;section-headers</code></p>
-<dt><code>&#8211;help</code></p>
-<dd> Display available options (<code>&#8211;help-hidden</code> for more)</p>
-<dt><code>-h</code></p>
-<dd> Alias for <code>&#8211;section-headers</code></p>
-<dt><code>-j</code> &lt;value&gt;</p>
-<dd> Alias for <code>&#8211;section</code></p>
-<dt><code>&#8211;line-numbers</code></p>
-<dd> When disassembling, display source line numbers. Implies <code>&#8211;disassemble</code></p>
-<dt><code>-l</code></p>
-<dd> Alias for <code>&#8211;line-numbers</code></p>
-<dt><code>&#8211;macho</code></p>
-<dd> Use MachO specific object file parser</p>
-<dt><code>&#8211;mattr</code>=<i>,a1/</i>,+a2,-a3,&#8230;</p>
-<dd> Target specific attributes (<code>&#8211;mattr</code>=<i>,help/</i> for details)</p>
-<dt><code>&#8211;mcpu</code>=<i>,cpu-name/</i></p>
-<dd> Target a specific cpu type (<code>&#8211;mcpu</code>=<i>,help/</i> for details)</p>
-<dt><code>-M</code> &lt;value&gt;</p>
-<dd> Alias for <code>&#8211;disassembler-options=</code></p>
-<dt><code>-m</code></p>
-<dd> Alias for <code>&#8211;macho</code></p>
-<dt><code>&#8211;no-leading-addr</code></p>
-<dd> When disassembling, do not print leading addresses</p>
-<dt><code>&#8211;no-print-imm-hex</code></p>
-<dd> Do not use hex format for immediate values (default)</p>
-<dt><code>&#8211;no-show-raw-insn</code></p>
-<dd> When disassembling instructions, do not print the instruction bytes.</p>
-<dt><code>&#8211;prefix-strip</code>=<i>,prefix/</i></p>
-<dd> Strip out initial directories from absolute paths. No effect without <code>&#8211;prefix</code></p>
-<dt><code>&#8211;prefix</code>=<i>,prefix/</i></p>
-<dd> Add prefix to absolute paths</p>
-<dt><code>&#8211;print-imm-hex</code></p>
-<dd> Use hex format for immediate values</p>
-<dt><code>&#8211;private-headers</code></p>
-<dd> Display format specific file headers</p>
-<dt><code>-p</code></p>
-<dd> Alias for <code>&#8211;private-headers</code></p>
-<dt><code>&#8211;raw-clang-ast</code></p>
-<dd> Dump the raw binary contents of the clang AST section</p>
-<dt><code>&#8211;reloc</code></p>
-<dd> Display the relocation entries in the file</p>
-<dt><code>-R</code></p>
-<dd> Alias for <code>&#8211;dynamic-reloc</code></p>
-<dt><code>-r</code></p>
-<dd> Alias for <code>&#8211;reloc</code></p>
-<dt><code>&#8211;section-headers</code></p>
-<dd> Display summaries of the headers for each section.</p>
-<dt><code>&#8211;section=</code>&lt;value&gt;</p>
-<dd> Operate on the specified sections only. With <code>&#8211;macho</code> dump segment,section</p>
-<dt><code>&#8211;show-lma</code></p>
-<dd> Display LMA column when dumping ELF section headers</p>
-<dt><code>&#8211;source</code></p>
-<dd> When disassembling, display source interleaved with the disassembly. Implies <code>&#8211;disassemble</code></p>
-<dt> <code>&#8211;start-address</code>=<i>,address/</i> Set the start address for disassembling, printing relocations and printing symbols</p>
-<dt><code>&#8211;stop-address</code>=<i>,address/</i></p>
+<dt><code>&#8211;adjust-vma</code>=<i>,offset/</i></dt>
+<dd> Increase the displayed address by the specified offset</dd>
+<dt><code>&#8211;all-headers</code></dt>
+<dd> Display all available header information, relocation entries and the symbol table</dd>
+<dt><code>&#8211;arch-name=</code>&lt;value&gt;</dt>
+<dd> Target arch to disassemble for, see <code>&#8211;version</code> for available targets</dd>
+<dt><code>&#8211;archive-headers</code></dt>
+<dd> Display archive header information</dd>
+<dt><code>-a</code></dt>
+<dd> Alias for <code>&#8211;archive-headers</code></dd>
+<dt><code>-C</code></dt>
+<dd> Alias for <code>&#8211;demangle</code></dd>
+<dt><code>&#8211;debug-vars-indent=</code>&lt;value&gt;</dt>
+<dd> Distance to indent the source-level variable display, relative to the start of the disassembly</dd>
+<dt><code>&#8211;debug-vars=</code>&lt;value&gt;</dt>
+<dd> Print the locations (in registers or memory) of source-level variables alongside disassembly. Supported formats: ascii, unicode (default)</dd>
+<dt><code>&#8211;demangle</code></dt>
+<dd> Demangle symbol names</dd>
+<dt><code>&#8211;disassemble-all</code></dt>
+<dd> Disassemble all sections found in the input files</dd>
+<dt><code>&#8211;disassemble-symbols=</code>&lt;value&gt;</dt>
+<dd> List of symbols to disassemble. Accept demangled names when <code>&#8211;demangle</code> is specified, otherwise accept mangled names</dd>
+<dt><code>&#8211;disassemble-zeroes</code></dt>
+<dd> Do not skip blocks of zeroes when disassembling</dd>
+<dt><code>&#8211;disassembler-options</code>=<i>,options/</i></dt>
+<dd> Pass target specific disassembler options</dd>
+<dt><code>&#8211;disassemble</code></dt>
+<dd> Disassemble all executable sections found in the input files</dd>
+<dt><code>&#8211;dwarf=</code>&lt;value&gt;</dt>
+<dd> Dump the specified DWARF debug sections. The only supported value is &#8216;frames&#8217;</dd>
+<dt><code>&#8211;dynamic-reloc</code></dt>
+<dd> Display the dynamic relocation entries in the file</dd>
+<dt><code>&#8211;dynamic-syms</code></dt>
+<dd> Display the contents of the dynamic symbol table</dd>
+<dt><code>-D</code></dt>
+<dd> Alias for <code>&#8211;disassemble-all</code></dd>
+<dt><code>-d</code></dt>
+<dd> Alias for <code>&#8211;disassemble</code></dd>
+<dt><code>&#8211;fault-map-section</code></dt>
+<dd> Display the content of the fault map section</dd>
+<dt><code>&#8211;file-headers</code></dt>
+<dd> Display the contents of the overall file header</dd>
+<dt><code>&#8211;full-contents</code></dt>
+<dd> Display the content of each section</dd>
+<dt><code>-f</code></dt>
+<dd> Alias for <code>&#8211;file-headers</code></dd>
+<dt><code>&#8211;headers</code></dt>
+<dd> Alias for <code>&#8211;section-headers</code></dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display available options (<code>&#8211;help-hidden</code> for more)</dd>
+<dt><code>-h</code></dt>
+<dd> Alias for <code>&#8211;section-headers</code></dd>
+<dt><code>-j</code> &lt;value&gt;</dt>
+<dd> Alias for <code>&#8211;section</code></dd>
+<dt><code>&#8211;line-numbers</code></dt>
+<dd> When disassembling, display source line numbers. Implies <code>&#8211;disassemble</code></dd>
+<dt><code>-l</code></dt>
+<dd> Alias for <code>&#8211;line-numbers</code></dd>
+<dt><code>&#8211;macho</code></dt>
+<dd> Use MachO specific object file parser</dd>
+<dt><code>&#8211;mattr</code>=<i>,a1/</i>,+a2,-a3,&#8230;</dt>
+<dd> Target specific attributes (<code>&#8211;mattr</code>=<i>,help/</i> for details)</dd>
+<dt><code>&#8211;mcpu</code>=<i>,cpu-name/</i></dt>
+<dd> Target a specific cpu type (<code>&#8211;mcpu</code>=<i>,help/</i> for details)</dd>
+<dt><code>-M</code> &lt;value&gt;</dt>
+<dd> Alias for <code>&#8211;disassembler-options=</code></dd>
+<dt><code>-m</code></dt>
+<dd> Alias for <code>&#8211;macho</code></dd>
+<dt><code>&#8211;no-leading-addr</code></dt>
+<dd> When disassembling, do not print leading addresses</dd>
+<dt><code>&#8211;no-print-imm-hex</code></dt>
+<dd> Do not use hex format for immediate values (default)</dd>
+<dt><code>&#8211;no-show-raw-insn</code></dt>
+<dd> When disassembling instructions, do not print the instruction bytes.</dd>
+<dt><code>&#8211;prefix-strip</code>=<i>,prefix/</i></dt>
+<dd> Strip out initial directories from absolute paths. No effect without <code>&#8211;prefix</code></dd>
+<dt><code>&#8211;prefix</code>=<i>,prefix/</i></dt>
+<dd> Add prefix to absolute paths</dd>
+<dt><code>&#8211;print-imm-hex</code></dt>
+<dd> Use hex format for immediate values</dd>
+<dt><code>&#8211;private-headers</code></dt>
+<dd> Display format specific file headers</dd>
+<dt><code>-p</code></dt>
+<dd> Alias for <code>&#8211;private-headers</code></dd>
+<dt><code>&#8211;raw-clang-ast</code></dt>
+<dd> Dump the raw binary contents of the clang AST section</dd>
+<dt><code>&#8211;reloc</code></dt>
+<dd> Display the relocation entries in the file</dd>
+<dt><code>-R</code></dt>
+<dd> Alias for <code>&#8211;dynamic-reloc</code></dd>
+<dt><code>-r</code></dt>
+<dd> Alias for <code>&#8211;reloc</code></dd>
+<dt><code>&#8211;section-headers</code></dt>
+<dd> Display summaries of the headers for each section.</dd>
+<dt><code>&#8211;section=</code>&lt;value&gt;</dt>
+<dd> Operate on the specified sections only. With <code>&#8211;macho</code> dump segment,section</dd>
+<dt><code>&#8211;show-lma</code></dt>
+<dd> Display LMA column when dumping ELF section headers</dd>
+<dt><code>&#8211;source</code></dt>
+<dd> When disassembling, display source interleaved with the disassembly. Implies <code>&#8211;disassemble</code></dd>
+<dt> <code>&#8211;start-address</code>=<i>,address/</i> Set the start address for disassembling, printing relocations and printing symbols</dt>
+<dt><code>&#8211;stop-address</code>=<i>,address/</i></dt>
 <dd>
-<dd>Set the stop address for disassembling, printing relocations and printing symbols</p>
-<dt><code>&#8211;symbol-description</code></p>
-<dd> Add symbol description for disassembly. This option is for XCOFF files only.</p>
-<dt><code>&#8211;symbolize-operands</code></p>
-<dd> Symbolize instruction operands when disassembling</p>
-<dt><code>&#8211;syms</code></p>
-<dd> Display the symbol table</p>
-<dt><code>-S</code></p>
-<dd> Alias for <code>&#8211;source</code></p>
-<dt><code>-s</code></p>
-<dd> Alias for <code>&#8211;full-contents</code></p>
-<dt><code>&#8211;triple=</code>&lt;value&gt;</p>
-<dd> Target triple to disassemble for, see <code>&#8211;version</code> for available targets</p>
-<dt><code>-T</code></p>
-<dd> Alias for <code>&#8211;dynamic-syms</code></p>
-<dt><code>-t</code></p>
-<dd> Alias for <code>&#8211;syms</code></p>
-<dt><code>&#8211;unwind-info</code></p>
-<dd> Display unwind information</p>
-<dt><code>-u</code></p>
-<dd> Alias for <code>&#8211;unwind-info</code></p>
-<dt><code>&#8211;version</code></p>
-<dd> Display the version of this program</p>
-<dt><code>-v</code></p>
-<dd> Alias for <code>&#8211;version</code></p>
-<dt><code>&#8211;wide</code></p>
-<dd> Ignored for compatibility with GNU objdump</p>
-<dt><code>&#8211;x86-asm-syntax</code>=<i>,att/</i></p>
-<dd> Emit AT&amp;T-style disassembly</p>
-<dt><code>&#8211;x86-asm-syntax</code>=<i>,intel/</i></p>
-<dd> Emit Intel-style disassembly</p>
-<dt><code>-x</code></p>
-<dd> Alias for <code>&#8211;all-headers</code></p>
-<dt><code>-z</code></p>
-<dd> Alias for <code>&#8211;disassemble-zeroes</code></dl>
+</dd><dd>Set the stop address for disassembling, printing relocations and printing symbols</dd>
+<dt><code>&#8211;symbol-description</code></dt>
+<dd> Add symbol description for disassembly. This option is for XCOFF files only.</dd>
+<dt><code>&#8211;symbolize-operands</code></dt>
+<dd> Symbolize instruction operands when disassembling</dd>
+<dt><code>&#8211;syms</code></dt>
+<dd> Display the symbol table</dd>
+<dt><code>-S</code></dt>
+<dd> Alias for <code>&#8211;source</code></dd>
+<dt><code>-s</code></dt>
+<dd> Alias for <code>&#8211;full-contents</code></dd>
+<dt><code>&#8211;triple=</code>&lt;value&gt;</dt>
+<dd> Target triple to disassemble for, see <code>&#8211;version</code> for available targets</dd>
+<dt><code>-T</code></dt>
+<dd> Alias for <code>&#8211;dynamic-syms</code></dd>
+<dt><code>-t</code></dt>
+<dd> Alias for <code>&#8211;syms</code></dd>
+<dt><code>&#8211;unwind-info</code></dt>
+<dd> Display unwind information</dd>
+<dt><code>-u</code></dt>
+<dd> Alias for <code>&#8211;unwind-info</code></dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the version of this program</dd>
+<dt><code>-v</code></dt>
+<dd> Alias for <code>&#8211;version</code></dd>
+<dt><code>&#8211;wide</code></dt>
+<dd> Ignored for compatibility with GNU objdump</dd>
+<dt><code>&#8211;x86-asm-syntax</code>=<i>,att/</i></dt>
+<dd> Emit AT&amp;T-style disassembly</dd>
+<dt><code>&#8211;x86-asm-syntax</code>=<i>,intel/</i></dt>
+<dd> Emit Intel-style disassembly</dd>
+<dt><code>-x</code></dt>
+<dd> Alias for <code>&#8211;all-headers</code></dd>
+<dt><code>-z</code></dt>
+<dd> Alias for <code>&#8211;disassemble-zeroes</code></dd></dl>
 <h3>llvm-objdump MachO Specific Options:</h3>
 <dl>
-<dt><code>&#8211;arch=</code>&lt;value&gt;</p>
-<dd> architecture(s) from a Mach-O file to dump</p>
-<dt><code>&#8211;archive-member-offsets</code></p>
-<dd> Print the offset to each archive member for Mach-O archives (requires <code>&#8211;macho</code> and <code>&#8211;archive-headers</code>)</p>
-<dt><code>&#8211;bind</code></p>
-<dd> Display mach-o binding info</p>
-<dt><code>&#8211;data-in-code</code></p>
-<dd> Print the data in code table for Mach-O objects (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;dis-symname</code> &lt;value&gt;</p>
-<dd> disassemble just this symbol&#8217;s instructions (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;dsym=</code>&lt;value&gt;</p>
-<dd> Use .dSYM file for debug info</p>
-<dt><code>&#8211;dylib-id</code></p>
-<dd> Print the shared library&#8217;s id for the dylib Mach-O file (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;dylibs-used</code></p>
-<dd> Print the shared libraries used for linked Mach-O files (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;exports-trie</code></p>
-<dd> Display mach-o exported symbols</p>
-<dt><code>&#8211;full-leading-addr</code></p>
-<dd> Print full leading address</p>
-<dt><code>&#8211;function-starts</code></p>
-<dd> Print the function starts table for Mach-O objects (requires <code>&#8211;macho</code>)</p>
-<dt><code>-g</code></p>
-<dd> Print line information from debug info if available</p>
-<dt><code>&#8211;indirect-symbols</code></p>
-<dd> Print indirect symbol table for Mach-O objects (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;info-plist</code></p>
-<dd> Print the info plist section as strings for Mach-O objects (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;lazy-bind</code></p>
-<dd> Display mach-o lazy binding info</p>
-<dt><code>&#8211;link-opt-hints</code></p>
-<dd> Print the linker optimization hints for Mach-O objects (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;no-leading-headers</code></p>
-<dd> Print no leading headers</p>
-<dt> <code>&#8211;no-symbolic-operands</code> do not symbolic operands when disassembling (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;non-verbose</code></p>
+<dt><code>&#8211;arch=</code>&lt;value&gt;</dt>
+<dd> architecture(s) from a Mach-O file to dump</dd>
+<dt><code>&#8211;archive-member-offsets</code></dt>
+<dd> Print the offset to each archive member for Mach-O archives (requires <code>&#8211;macho</code> and <code>&#8211;archive-headers</code>)</dd>
+<dt><code>&#8211;bind</code></dt>
+<dd> Display mach-o binding info</dd>
+<dt><code>&#8211;data-in-code</code></dt>
+<dd> Print the data in code table for Mach-O objects (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;dis-symname</code> &lt;value&gt;</dt>
+<dd> disassemble just this symbol&#8217;s instructions (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;dsym=</code>&lt;value&gt;</dt>
+<dd> Use .dSYM file for debug info</dd>
+<dt><code>&#8211;dylib-id</code></dt>
+<dd> Print the shared library&#8217;s id for the dylib Mach-O file (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;dylibs-used</code></dt>
+<dd> Print the shared libraries used for linked Mach-O files (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;exports-trie</code></dt>
+<dd> Display mach-o exported symbols</dd>
+<dt><code>&#8211;full-leading-addr</code></dt>
+<dd> Print full leading address</dd>
+<dt><code>&#8211;function-starts</code></dt>
+<dd> Print the function starts table for Mach-O objects (requires <code>&#8211;macho</code>)</dd>
+<dt><code>-g</code></dt>
+<dd> Print line information from debug info if available</dd>
+<dt><code>&#8211;indirect-symbols</code></dt>
+<dd> Print indirect symbol table for Mach-O objects (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;info-plist</code></dt>
+<dd> Print the info plist section as strings for Mach-O objects (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;lazy-bind</code></dt>
+<dd> Display mach-o lazy binding info</dd>
+<dt><code>&#8211;link-opt-hints</code></dt>
+<dd> Print the linker optimization hints for Mach-O objects (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;no-leading-headers</code></dt>
+<dd> Print no leading headers</dd>
+<dt> <code>&#8211;no-symbolic-operands</code> do not symbolic operands when disassembling (requires <code>&#8211;macho</code>)</dt>
+<dt><code>&#8211;non-verbose</code></dt>
 <dd>
-<dd>Print the info for Mach-O objects in non-verbose or numeric form (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;objc-meta-data</code></p>
-<dd> Print the Objective-C runtime meta data for Mach-O files (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;private-header</code></p>
-<dd> Display only the first format specific file header</p>
-<dt><code>&#8211;rebase</code></p>
-<dd> Display mach-o rebasing info</p>
-<dt><code>&#8211;rpaths</code></p>
-<dd> Print the runtime search paths for the Mach-O file (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;universal-headers</code></p>
-<dd> Print Mach-O universal headers (requires <code>&#8211;macho</code>)</p>
-<dt><code>&#8211;weak-bind</code></p>
-<dd> Display mach-o weak binding info</dl>
+</dd><dd>Print the info for Mach-O objects in non-verbose or numeric form (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;objc-meta-data</code></dt>
+<dd> Print the Objective-C runtime meta data for Mach-O files (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;private-header</code></dt>
+<dd> Display only the first format specific file header</dd>
+<dt><code>&#8211;rebase</code></dt>
+<dd> Display mach-o rebasing info</dd>
+<dt><code>&#8211;rpaths</code></dt>
+<dd> Print the runtime search paths for the Mach-O file (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;universal-headers</code></dt>
+<dd> Print Mach-O universal headers (requires <code>&#8211;macho</code>)</dd>
+<dt><code>&#8211;weak-bind</code></dt>
+<dd> Display mach-o weak binding info</dd></dl>
 <p> Pass @FILE as argument to read options from FILE. </p>
 <h2>Index</h2>

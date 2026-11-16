@@ -29,17 +29,17 @@ AddToMenu Module-Popup &quot;Modules&quot; Title
 <h2>Invocation</h2>
 <p>The invocation method was shown in the synopsis section. No command line invocation is possible. <i>FvwmEvent</i> must be invoked by the <i>fvwm</i> window manager. <i>FvwmEvent</i> accepts a single argument: </p>
 <dl>
-<dt>-audio</p>
-<dd>Enables FvwmAudio compatibility mode. </p>
-<dt>alias</p>
-<dd>Makes FvwmEvent use <i>alias</i> as its name. This affects which lines from the user&#8217;s configuration file are used. </p>
+<dt>-audio</dt>
+<dd>Enables FvwmAudio compatibility mode. </dd>
+<dt>alias</dt>
+<dd>Makes FvwmEvent use <i>alias</i> as its name. This affects which lines from the user&#8217;s configuration file are used. </dd>
 <p> Invoking FvwmEvent as <i>FvwmAudio</i> (either by using an alias or creating a symlink) enables FvwmAudio compatibility mode. </p>
 </dl>
 <h2>Configuration Options</h2>
 <p><i>FvwmEvent</i> gets config info from <code>fvwm</code>&#8216;s module configuration database (see <i><a href="/docs/linux/man/1-fvwm/">fvwm</a></i>(1), section <code>MODULE COMMANDS</code>), and looks for certain configuration options: </p>
 <dl>
-<dt>*FvwmEvent: Cmd <i>command</i></p>
-<dd>This determines the <i>fvwm</i> function that is to be called with the event parameters. You might want to do one of the following (details below): </p>
+<dt>*FvwmEvent: Cmd <i>command</i></dt>
+<dd>This determines the <i>fvwm</i> function that is to be called with the event parameters. You might want to do one of the following (details below): </dd>
 <pre> # play sounds
  *FvwmEvent: Cmd <i>builtin-rplay</i>
  # execute distinct fvwm functions
@@ -63,10 +63,10 @@ AddToMenu Module-Popup &quot;Modules&quot; Title
 <p>You can even call different shell commands for each event just by setting </p>
 <pre> *FvwmEvent: Cmd exec
  *FvwmEvent: add_window 'killname &quot;APPL ERROR&quot;'</pre>
-<dt>*FvwmEvent: PassId</p>
-<dd>Specifies that the event action will have an ID parameter added to the end of the command line. Most events will have the windowID of the window that the event refers to, new_desk will have the new desk number. The windowID is a hexadecimal string preceded by 0x, desk numbers are decimal. </p>
-<dt>*FvwmEvent: <i>window-manager-event action-or-filename</i></p>
-<dd>Binds particular actions to window manager events. </p>
+<dt>*FvwmEvent: PassId</dt>
+<dd>Specifies that the event action will have an ID parameter added to the end of the command line. Most events will have the windowID of the window that the event refers to, new_desk will have the new desk number. The windowID is a hexadecimal string preceded by 0x, desk numbers are decimal. </dd>
+<dt>*FvwmEvent: <i>window-manager-event action-or-filename</i></dt>
+<dd>Binds particular actions to window manager events. </dd>
 <p> e.g. for audio-events: </p>
 <pre> *FvwmEvent: startup TaDa.au
  *FvwmEvent: shutdown Elvis_Left.au
@@ -114,28 +114,28 @@ AddToMenu Module-Popup &quot;Modules&quot; Title
 <p> Note: When the shutdown event arrives, FvwmEvent may be killed before it can trigger the associated action. </p>
 <p> Provided <i>fvwm</i> supports it (not yet), there&#8217;s an additional event to replace all <i>fvwm</i> beeps with a sound: </p>
 <pre> *FvwmEvent: beep beep.au</pre>
-<dt>*FvwmEvent: Delay <i>5</i></p>
-<dd>Specifies that an event-action will only be executed if it occurs at least 5 seconds after the previous event. Events that occur during the delay period are ignored. This option is useful if you don&#8217;t want several sounds playing at the same time. The default delay is 0 which disables the Event delay. </p>
-<dt>*FvwmEvent: StartDelay <i>delay</i></p>
-<dd>Specifies that an event-action will only be executed if it occurs at least <i>delay</i> seconds after the startup event. Events that occur during the delay period are ignored. This option is useful when <i>fvwm</i> starts and restarts using an audio player. The default delay is 0. </p>
+<dt>*FvwmEvent: Delay <i>5</i></dt>
+<dd>Specifies that an event-action will only be executed if it occurs at least 5 seconds after the previous event. Events that occur during the delay period are ignored. This option is useful if you don&#8217;t want several sounds playing at the same time. The default delay is 0 which disables the Event delay. </dd>
+<dt>*FvwmEvent: StartDelay <i>delay</i></dt>
+<dd>Specifies that an event-action will only be executed if it occurs at least <i>delay</i> seconds after the startup event. Events that occur during the delay period are ignored. This option is useful when <i>fvwm</i> starts and restarts using an audio player. The default delay is 0. </dd>
 </dl>
 <h2>Rplay Options</h2>
 <p>The following options are only valid with builtin rplay support. i.e: when <i>FvwmEvent</i> was compiled with <i>HAVE_RPLAY</i> defined. They are used only if <i>FvwmEvent: Cmd</i> is set to <i>builtin-rplay</i>. </p>
 <dl>
-<dt>*FvwmEvent: RplayHost <i>hostname</i></p>
-<dd>Specifies what host the rplay sounds will play on. The <i>hostname</i> can also be an environment variable such as $HOSTDISPLAY. </p>
-<dt>*FvwmEvent: RplayPriority <i>0</i></p>
-<dd>Specifies what priority will be assigned to the rplay sounds when they are played. </p>
-<dt>*FvwmEvent: RplayVolume <i>127</i></p>
-<dd>Specifies what volume will be assigned to the sounds when they are played. </p>
+<dt>*FvwmEvent: RplayHost <i>hostname</i></dt>
+<dd>Specifies what host the rplay sounds will play on. The <i>hostname</i> can also be an environment variable such as $HOSTDISPLAY. </dd>
+<dt>*FvwmEvent: RplayPriority <i>0</i></dt>
+<dd>Specifies what priority will be assigned to the rplay sounds when they are played. </dd>
+<dt>*FvwmEvent: RplayVolume <i>127</i></dt>
+<dd>Specifies what volume will be assigned to the sounds when they are played. </dd>
 </dl>
 <h2>FvwmAudio Compatibility Mode</h2>
 <p>When invoked in FvwmAudio compatibility mode (see above), FvwmEvent accepts the following options to provide backwards compatibility for FvwmAudio: </p>
 <dl>
-<dt>*FvwmEvent: PlayCmd <i>command</i></p>
-<dd>This is equivalent to using *FvwmEvent: Cmd to Exec commands. This determines the independent audio player program that will actually play the sounds. If the play command is set to <i>builtin-rplay</i> then the builtin rplay support will be used. </p>
-<dt>*FvwmAudio: Dir <i>directory</i></p>
-<dd>Specifies the directory to look for the audio files. This option is ignored when rplay is used. </p>
+<dt>*FvwmEvent: PlayCmd <i>command</i></dt>
+<dd>This is equivalent to using *FvwmEvent: Cmd to Exec commands. This determines the independent audio player program that will actually play the sounds. If the play command is set to <i>builtin-rplay</i> then the builtin rplay support will be used. </dd>
+<dt>*FvwmAudio: Dir <i>directory</i></dt>
+<dd>Specifies the directory to look for the audio files. This option is ignored when rplay is used. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>It&#8217;s REALLY noisy when <i>fvwm</i> starts and restarts using an audio player. You can use FvwmEvent: StartDelay to fix this problem. </p>

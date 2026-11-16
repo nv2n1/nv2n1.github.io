@@ -15,18 +15,18 @@ description: "op-check-perfevents – checks for kernel perf pmu support"
 <p> The small helper program <code>op-check-perfevents</code> determines whether the kernel supports the perf interface and returns a zero exit status if the perf pmu support is available.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help / -h</code></p>
-<dd> Show usage help message. </p>
-<dt><code>&#8211;verbose / -v</code></p>
-<dd> Print string describing the error number of perf_event_open syscall </p>
+<dt><code>&#8211;help / -h</code></dt>
+<dd> Show usage help message. </dd>
+<dt><code>&#8211;verbose / -v</code></dt>
+<dd> Print string describing the error number of perf_event_open syscall </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> No special environment variables are recognised by op-check-perfevents. </p>
 <h2>VERSION</h2>
 <dl>
-<dt>This man page is current for oprofile-0.9.9.</p>
+<dt>This man page is current for oprofile-0.9.9.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>/usr/share/doc/oprofile/,</code> <code><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1)</code> </p>
 <h2>Index</h2>

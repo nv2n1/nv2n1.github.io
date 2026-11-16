@@ -10,29 +10,19 @@ description: "std::stoi,std::stol,std::stoll – std::stoi,std::stol,std::stoll"
 <p>std::stoi,std::stol,std::stoll &#8211; std::stoi,std::stol,std::stoll</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;string&gt;
-
     int stoi(const std::string &amp;str, std::size_t *pos = 0, int base = 10);
 (1)(since C++ 11)
-
     int stoi(const std::wstring &amp;str, std::size_t *pos = 0, int base = 10);
-
 long stol(const std::string &amp;str, std::size_t *pos = 0, int base = 10);
 (2)(since C++ 11)
-
     long stol(const std::wstring &amp;str, std::size_t *pos = 0, int base = 10);
-
 long long stoll(const std::string &amp;str, std::size_t *pos = 0, int base = 10);
 (3)(since C++ 11)
-
     long long stoll(const std::wstring &amp;str, std::size_t *pos = 0, int base = 10);
 Interprets a signed integer value in the string str.
-
 1) calls std::strtol(str.c_str(), &amp;ptr, base) or std::wcstol(str.c_str(), &amp;ptr, base)
-
 2) calls std::strtol(str.c_str(), &amp;ptr, base) or std::wcstol(str.c_str(), &amp;ptr, base)
-
 3) calls std::strtoll(str.c_str(), &amp;ptr, base) or std::wcstoll(str.c_str(), &amp;ptr, base)
-
 Discards any whitespace characters (as identified by calling isspace()) until the first non-whitespace character is found, then takes as many characters as possible to form a valid base-n (where n=base) integer number representation and converts them to an integer value. The valid integer value consists of the following parts:</code></pre>
 <p>* (optional) plus or minus sign<br />
 * (optional) prefix <code>(0)</code> indicating octal base (applies only when the base is 8 or 0)<br />
@@ -55,10 +45,8 @@ base &#8211; the number base</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::string str1 = &quot;45&quot;;
     std::string str2 = &quot;3.14159&quot;;

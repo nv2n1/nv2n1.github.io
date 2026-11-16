@@ -80,12 +80,12 @@ description: "SGI –"
 <p> The operator() of the project1st functor takes two arbitrary arguments and returns the first one, while project2nd returns the second one. They are extensions provided by SGI. </p>
 <p> These three functors are each constructed from a single arbitrary variable/value. Later, their operator()s completely ignore any arguments passed, and return the stored value.</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>constant_void_fun&#8217;s operator() takes no arguments</p>
-<dt>&bull;</p>
-<dd>constant_unary_fun&#8217;s operator() takes one argument (ignored)</p>
-<dt>&bull;</p>
-<dd>constant_binary_fun&#8217;s operator() takes two arguments (ignored)</dl>
+<dt>&bull;</dt>
+<dd>constant_void_fun&#8217;s operator() takes no arguments</dd>
+<dt>&bull;</dt>
+<dd>constant_unary_fun&#8217;s operator() takes one argument (ignored)</dd>
+<dt>&bull;</dt>
+<dd>constant_binary_fun&#8217;s operator() takes two arguments (ignored)</dd></dl>
 <p> The helper creator functions constant0, constant1, and constant2 each take a <i>result</i> argument and construct variables of the appropriate functor type.</p>
 <h2>Function Documentation</h2>
 <h3>template&lt;typename _Tp &gt; const _Tp&amp; __gnu_cxx::__median (const _Tp &amp;__a, const _Tp &amp;__b, const _Tp &amp;__c)</h3>
@@ -94,10 +94,10 @@ description: "SGI –"
 <dl COMPACT>
 <dd><i>__a</i> A value.<br />
  <i>__b</i> A value.<br />
- <i>__c</i> A value.</dl>
+ <i>__c</i> A value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>One of a, b or c.</dl>
+<dd>One of a, b or c.</dd></dl>
 <p> If {l,m,n} is some convolution of {a,b,c} such that l&lt;=m&lt;=n then the value returned will be m. This is an SGI extension. </p>
 <p> Definition at line 546 of file ext/algorithm.</p>
 <h3>template&lt;typename _Tp , typename _Compare &gt; const _Tp&amp; __gnu_cxx::__median (const _Tp &amp;__a, const _Tp &amp;__b, const _Tp &amp;__c, _Compare__comp)</h3>
@@ -107,32 +107,32 @@ description: "SGI –"
 <dd><i>__a</i> A value.<br />
  <i>__b</i> A value.<br />
  <i>__c</i> A value.<br />
- <i>__comp</i> A binary predicate.</dl>
+ <i>__comp</i> A binary predicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>One of a, b or c.</dl>
+<dd>One of a, b or c.</dd></dl>
 <p> If {l,m,n} is some convolution of {a,b,c} such that comp(l,m) and comp(m,n) are both true then the value returned will be m. This is an SGI extension. </p>
 <p> Definition at line 580 of file ext/algorithm.</p>
 <h3>size_t std::_Find_first () const [noexcept]</h3>
 <p>Finds the index of the first &#8216;on&#8217; bit. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The index of the first bit set, or size() if not found.</dl>
+<dd>The index of the first bit set, or size() if not found.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>_Find_next</dl>
+<dd>_Find_next</dd></dl>
 <p> Definition at line 1354 of file bitset.</p>
 <h3>size_t std::_Find_next (size_t__prev) const [noexcept]</h3>
 <p>Finds the index of the next &#8216;on&#8217; bit after prev. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The index of the next bit set, or size() if not found.</dl>
+<dd>The index of the next bit set, or size() if not found.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__prev</i> Where to start searching.</dl>
+<dd><i>__prev</i> Where to start searching.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>_Find_first</dl>
+<dd>_Find_first</dd></dl>
 <p> Definition at line 1365 of file bitset.</p>
 <h3>bitset&lt;_Nb&gt;&amp; std::_Unchecked_flip (size_t__pos) [noexcept]</h3>
 <p>These versions of single-bit set, reset, flip, and test are extensions from the SGI version. They do no range checking. </p>
@@ -174,10 +174,10 @@ description: "SGI –"
 <dl COMPACT>
 <dd><i>__first</i> An input iterator.<br />
  <i>__count</i> The number of elements to copy.<br />
- <i>__result</i> An output iterator.</dl>
+ <i>__result</i> An output iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A std::pair composed of first+count and result+count.</dl>
+<dd>A std::pair composed of first+count and result+count.</dd></dl>
 <p> This is an SGI extension. This inline function will boil down to a call to memmove whenever possible. Failing that, if random access iterators are passed, then the loop count will be known (and therefore a candidate for compiler optimizations such as unrolling). </p>
 <p> Definition at line 120 of file ext/algorithm. </p>
 <p> References std::__iterator_category().</p>
@@ -185,7 +185,7 @@ description: "SGI –"
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 105 of file ext/iterator. </p>
 <p> References std::__iterator_category().</p>
 <h3>template&lt;class _Tp &gt; _Tp __gnu_cxx::identity_element (<code>std::plus</code>&lt; _Tp &gt;) [inline]</h3>
@@ -201,48 +201,48 @@ description: "SGI –"
 <dd><i>__first1</i> An input iterator.<br />
  <i>__last1</i> An input iterator.<br />
  <i>__first2</i> An input iterator.<br />
- <i>__last2</i> An input iterator.</dl>
+ <i>__last2</i> An input iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An int, as with memcmp.</dl>
+<dd>An int, as with memcmp.</dd></dl>
 <p> The return value will be less than zero if the first range is <i>lexigraphically less than</i> the second, greater than zero if the second range is <i>lexigraphically less than</i> the first, and zero otherwise. This is an SGI extension. </p>
 <p> Definition at line 201 of file ext/algorithm.</p>
 <h3>template&lt;typename _Tp , typename _Integer , typename _MonoidOperation &gt; _Tp __gnu_cxx::power (_Tp__x, _Integer__n, _MonoidOperation__monoid_op) [inline]</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 113 of file ext/numeric.</p>
 <h3>template&lt;typename _Tp , typename _Integer &gt; _Tp __gnu_cxx::power (_Tp__x, _Integer__n) [inline]</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 123 of file ext/numeric.</p>
 <h3>template&lt;typename _InputIterator , typename _RandomAccessIterator &gt; _RandomAccessIterator __gnu_cxx::random_sample (_InputIterator__first, _InputIterator__last, _RandomAccessIterator__out_first, _RandomAccessIterator__out_last) [inline]</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 388 of file ext/algorithm.</p>
 <h3>template&lt;typename _InputIterator , typename _RandomAccessIterator , typename _RandomNumberGenerator &gt; _RandomAccessIterator __gnu_cxx::random_sample (_InputIterator__first, _InputIterator__last, _RandomAccessIterator__out_first, _RandomAccessIterator__out_last, _RandomNumberGenerator &amp;__rand) [inline]</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 411 of file ext/algorithm.</p>
 <h3>template&lt;typename _ForwardIterator , typename _OutputIterator , typename _Distance &gt; _OutputIterator __gnu_cxx::random_sample_n (_ForwardIterator__first, _ForwardIterator__last, _OutputIterator__out, const _Distance__n)</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 267 of file ext/algorithm. </p>
 <p> References std::distance(), and std::min().</p>
 <h3>template&lt;typename _ForwardIterator , typename _OutputIterator , typename _Distance , typename _RandomNumberGenerator &gt; _OutputIterator __gnu_cxx::random_sample_n (_ForwardIterator__first, _ForwardIterator__last, _OutputIterator__out, const _Distance__n, _RandomNumberGenerator &amp;__rand)</h3>
 <p>This is an SGI extension. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dl>
+<dd>Needs documentation! See <a rel="nofollow" href="http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html">http://gcc.gnu.org/onlinedocs/libstdc++/manual/documentation_style.html</a></dd></dl>
 <p> Definition at line 301 of file ext/algorithm. </p>
 <p> References std::distance(), and std::min().</p>
 <h3>template&lt;typename _InputIter , typename _Size , typename _ForwardIter &gt; pair&lt;_InputIter, _ForwardIter&gt; __gnu_cxx::uninitialized_copy_n (_InputIter__first, _Size__count, _ForwardIter__result) [inline]</h3>
@@ -251,10 +251,10 @@ description: "SGI –"
 <dl COMPACT>
 <dd><i>__first</i> An input iterator.<br />
  <i>__count</i> Length<br />
- <i>__result</i> An output iterator.</dl>
+ <i>__result</i> An output iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>__result + (__first + __count)</dl>
+<dd>__result + (__first + __count)</dd></dl>
 <p> Like copy(), but does not require an initialized output range. </p>
 <p> Definition at line 122 of file ext/memory. </p>
 <p> References std::__iterator_category().</p>

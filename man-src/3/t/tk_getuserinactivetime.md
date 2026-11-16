@@ -15,7 +15,7 @@ long
 <code>Tk_GetUserInactiveTime(</code><i>display</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Display <i>*display</i> (in) The display on which the user inactivity timer is to be queried or reset. </p>
+<dd>Display <i>*display</i> (in) The display on which the user inactivity timer is to be queried or reset. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_GetUserInactiveTime</code> returns the number of milliseconds that have passed since the last user interaction (usually via keyboard or mouse) with the respective display. On systems and displays that do not support querying the user inactiviy time, <code>-1</code> is returned. <code>Tk_GetUserInactiveTime</code> resets the user inactivity timer of the given display to zero. On windowing systems that do not support multiple displays <i>display</i> can be passed as <code>NULL</code>. </p>

@@ -15,26 +15,26 @@ description: "hp-sendfax – PC Sendfax Utility"
 <p> <code>hp-sendfax [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>
-<dt>To specify a device-URI:</p>
-<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</p>
-<dt>To specify a CUPS printer:</p>
-<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dl>
+<dt>To specify a device-URI:</dt>
+<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</dd>
+<dt>To specify a CUPS printer:</dt>
+<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dd></dl>
 <h2>MODE</h2>
 <dl>
-<dt>Run in non-interactive mode:</p>
-<dd> -n or &#8211;non-interactive</dl>
+<dt>Run in non-interactive mode:</dt>
+<dd> -n or &#8211;non-interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Specify the fax number(s):</p>
-<dd> -f&lt;number(s)&gt; or &#8211;faxnum=&lt;number(s)&gt; or &#8211;fax-num=&lt;number(s)&gt; or &#8211;num=&lt;number(s)&gt;(-n only)</p>
-<dt>Specify the recipient(s):</p>
-<dd> -r&lt;recipient(s)&gt; or &#8211;recipient=&lt;recipient(s)&gt; (-n only)</p>
-<dt>Specify the groups(s):</p>
-<dd> &#8211;group=&lt;group(s)&gt; or &#8211;groups=&lt;group(s)&gt; (-n only)</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Specify the fax number(s):</dt>
+<dd> -f&lt;number(s)&gt; or &#8211;faxnum=&lt;number(s)&gt; or &#8211;fax-num=&lt;number(s)&gt; or &#8211;num=&lt;number(s)&gt;(-n only)</dd>
+<dt>Specify the recipient(s):</dt>
+<dd> -r&lt;recipient(s)&gt; or &#8211;recipient=&lt;recipient(s)&gt; (-n only)</dd>
+<dt>Specify the groups(s):</dt>
+<dd> &#8211;group=&lt;group(s)&gt; or &#8211;groups=&lt;group(s)&gt; (-n only)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-faxsetup hp-fab</p>
 <h2>AUTHOR</h2>

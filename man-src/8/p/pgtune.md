@@ -21,31 +21,31 @@ Pgtune takes the wimpy default postgresql.conf and expands the database server t
 <h2>Options</h2>
 
 -i, --input-config
-<dl><dd>Specifies the current postgresql.conf file.</dl>
+<dl><dd>Specifies the current postgresql.conf file.</dd></dl>
  
 
  -o, --input-config
-<dl><dd>Specifies the file name for the new postgresql.conf file.</dl>
+<dl><dd>Specifies the file name for the new postgresql.conf file.</dd></dl>
  
 
  -M, --memory
-<dl><dd>Use this parameter to specify total system memory. If not specified, pgtune will attempt to detect memory size.</dl>
+<dl><dd>Use this parameter to specify total system memory. If not specified, pgtune will attempt to detect memory size.</dd></dl>
  
 
  -T, --type
-<dl><dd>Specifies database type. Valid options are: DW, OLTP, Web, Mixed, Desktop</dl>
+<dl><dd>Specifies database type. Valid options are: DW, OLTP, Web, Mixed, Desktop</dd></dl>
  
 
  -c, --connections
-<dl><dd>Specifies number of maximum connections expected. If not specified, it depends on database type.</dl>
+<dl><dd>Specifies number of maximum connections expected. If not specified, it depends on database type.</dd></dl>
  
 
  -D, --debug
-<dl><dd>Enables debugging mode.</dl>
+<dl><dd>Enables debugging mode.</dd></dl>
  
 
  -S, --settings
-<dl><dd>Directory where settings data files are located at. Defaults to the directory where the script is being run from. The RPM package includes a patch to use the correct location these files were installed into.</dl>
+<dl><dd>Directory where settings data files are located at. Defaults to the directory where the script is being run from. The RPM package includes a patch to use the correct location these files were installed into.</dd></dl>
 
 <h2>See Also</h2>
 

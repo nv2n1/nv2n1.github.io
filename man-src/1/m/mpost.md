@@ -24,20 +24,20 @@ description: "mpost, pmpost, upmpost – MetaPost, a system for creating graphic
 <p> The MetaPost language is similar to Metafont, but the manual assumes no knowledge of Metafont. MetaPost does not have bitmap output commands or Metafont&#8217;s online display mechanism.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>plain.mp</i></p>
-<dd> The standard preload file.</p>
-<dt><i>mfplain.mp</i></p>
-<dd> The Metafont-compatible preload file.</p>
-<dt><i>$TEXMFMAIN/metapost/base/*.mp</i></p>
-<dd> The standard MetaPost macros included in the original distribution.</p>
-<dt><i>$TEXMFMAIN/metapost/support/*</i></p>
-<dd> Various tables for handling included <i>tex</i> and <i>troff</i>.</p>
-<dt><i>$TEXMFMAIN/metapost/support/trfonts.map</i></p>
-<dd> Table of corresponding font names for <i>troff </i> and PostScript.</p>
-<dt><i>psfonts.map</i></p>
-<dd> Table of corresponding font names for <i>tex</i> and PostScript.</p>
-<dt><i>$TEXMFMAIN/doc/metapost/*</i></p>
-<dd> The MetaPost manual and tutorial source, also including sample figures</dl>
+<dt><i>plain.mp</i></dt>
+<dd> The standard preload file.</dd>
+<dt><i>mfplain.mp</i></dt>
+<dd> The Metafont-compatible preload file.</dd>
+<dt><i>$TEXMFMAIN/metapost/base/*.mp</i></dt>
+<dd> The standard MetaPost macros included in the original distribution.</dd>
+<dt><i>$TEXMFMAIN/metapost/support/*</i></dt>
+<dd> Various tables for handling included <i>tex</i> and <i>troff</i>.</dd>
+<dt><i>$TEXMFMAIN/metapost/support/trfonts.map</i></dt>
+<dd> Table of corresponding font names for <i>troff </i> and PostScript.</dd>
+<dt><i>psfonts.map</i></dt>
+<dd> Table of corresponding font names for <i>tex</i> and PostScript.</dd>
+<dt><i>$TEXMFMAIN/doc/metapost/*</i></dt>
+<dd> The MetaPost manual and tutorial source, also including sample figures</dd></dl>
 <h2>SUGGESTED READING</h2>
 <p> Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br />
  <i>TUGboat</i> (the journal of the TeX Users Group).</p>

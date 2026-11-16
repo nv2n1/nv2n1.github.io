@@ -14,14 +14,14 @@ description: "pt_regs_to_gdb_regs – Convert ptrace regs to GDB regs"
 <p><i>gdb_regs</i></p>
 <dl>
 <dd>
-<dd>A pointer to hold the registers in the order GDB wants.</dl>
+</dd><dd>A pointer to hold the registers in the order GDB wants.</dd></dl>
 <p> <i>regs</i></p>
 <dl>
-<dd>The struct pt_regs of the current process.</dl>
+<dd>The struct pt_regs of the current process.</dd></dl>
 <h2>Description</h2>
 <p>Convert the pt_regs in <i>regs</i> into the format for registers that GDB expects, stored in <i>gdb_regs</i>.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

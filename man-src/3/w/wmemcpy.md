@@ -10,7 +10,6 @@ description: "wmemcpy – copy an array of wide-characters"
 <p>wmemcpy &#8211; copy an array of wide-characters</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wchar_t *wmemcpy(wchar_t *dest, const wchar_t *src, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>wmemcpy</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3) function. It copies <i>n</i> wide characters from the array starting at <i>src</i> to the array starting at <i>dest</i>. </p>

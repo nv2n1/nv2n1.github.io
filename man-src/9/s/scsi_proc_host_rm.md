@@ -15,16 +15,16 @@ scsi_proc_host_rm - remove this host's entry from /proc
 <h2>Arguments</h2>
 
 <i>shost</i>
-<dl><dd><dd>which host</dl>
+<dl><dd></dd><dd>which host</dd></dl>
 
 <h2>Authors</h2>
 
 <b>James Bottomley</b> &lt;James.Bottomley [at] hansenpartnership.com&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
  
 
  <b>Rob Landley</b> &lt;rob [at] landley.net&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>
 
 <h2>Copyright</h2>
 

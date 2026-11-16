@@ -10,7 +10,6 @@ description: "request_video_bitmap – Triple buffering page flip request. Alleg
 <p>request_video_bitmap &#8211; Triple buffering page flip request. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int request_video_bitmap(BITMAP *bitmap);</code></pre>
 <h2>Description</h2>
 <p>This function is used for triple buffering. It requests a page flip to display the specified video bitmap object, but returns immediately rather than waiting for a retrace. The flip will then take place during the next vertical retrace, but you can carry on running other code in the meantime and use the poll_scroll() routine to detect when the flip has actually taken place. Triple buffering is only possible on certain hardware: see the comments about request_scroll(). Example: </p>

@@ -34,16 +34,15 @@ description: "cgegv.f –"
  lambda or mu is zero or small, two values alpha and beta are returned
  for each eigenvalue, such that lambda = alpha/beta and
  mu = beta/alpha.
- 
  The vectors x and y in the above equations are right eigenvectors of
  the matrix pair (A,B). Vectors u and v satisfying
  u**H*A = lambda*u**H*B or mu*v**H*A = v**H*B
  are left eigenvectors of (A,B).
  Note: this routine performs &quot;full balancing&quot; on A and B</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBVL</i> </p>
+<dd><i>JOBVL</i> </dd>
 <pre> JOBVL is CHARACTER*1
  = 'N': do not compute the left generalized eigenvectors;
  = 'V': compute the left generalized eigenvectors (returned
@@ -87,7 +86,6 @@ description: "cgegv.f –"
 <p><i>BETA</i> </p>
 <pre> BETA is COMPLEX array, dimension (N)
  The complex scalars beta that define the eigenvalues of GNEP.
- 
  Together, the quantities alpha = ALPHA(j) and beta = BETA(j)
  represent the j-th eigenvalue of the matrix pair (A,B), in
  one of the forms lambda = alpha/beta or mu = beta/alpha.
@@ -159,13 +157,13 @@ description: "cgegv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -189,7 +187,8 @@ description: "cgegv.f –"
  form[*] of the &quot;balanced&quot; versions of A and B. If no eigenvectors
  are computed, then only the diagonal blocks will be correct.
  [*] In other words, upper triangular form.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 282 of file cgegv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

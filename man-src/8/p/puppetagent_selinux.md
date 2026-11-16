@@ -77,8 +77,8 @@ description: "puppetagent_selinux – Security Enhanced Linux Policy for the pup
 <p> <code>puppetagent_exec_t</code> </p>
 <p> &#8211; Set files with the puppetagent_exec_t type, if you want to transition an executable to the puppetagent_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/puppet, /usr/bin/puppetd, /usr/sbin/puppetd, /usr/bin/start-puppet-agent </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/puppet, /usr/bin/puppetd, /usr/sbin/puppetd, /usr/bin/start-puppet-agent </dd>
 </dl>
 <p> <code>puppetagent_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the puppetagent_initrc_exec_t type, if you want to transition an executable to the puppetagent_initrc_t domain. </p>

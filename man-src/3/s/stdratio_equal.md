@@ -10,10 +10,8 @@ description: "std::ratio_equal – std::ratio_equal"
 <p>std::ratio_equal &#8211; std::ratio_equal</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;ratio&gt;
-
     template &lt;class R1, class R2&gt;
     (since C++ 11)
-
         struct ratio_equal : std::integral_constant;</code></pre>
 <p>If the ratios R1 and R2 are equal, provides the member constant value equal true. Otherwise, value is false.<br />
 Helper variable template template&lt; class R1, class R2 &gt;                                     (since C++17)</p>
@@ -42,10 +40,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;ratio&gt;
 int main()
-
 {
     if (std::ratio_equal&lt;std::ratio&lt;2, 3&gt;, std::ratio&lt;4, 6&gt;&gt;::value) {
         std::cout &lt;&lt; &quot;2/3 == 4/6

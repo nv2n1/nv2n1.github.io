@@ -14,17 +14,17 @@ description: "rio_release_inb_dbell – release inbound doorbell message service
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port from which to release the doorbell resource</dl>
+</dd><dd>RIO master port from which to release the doorbell resource</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>Doorbell info range start</dl>
+<dd>Doorbell info range start</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>Doorbell info range end</dl>
+<dd>Doorbell info range end</dd></dl>
 <h2>Description</h2>
 <p>Releases ownership of an inbound doorbell resource and removes callback from the doorbell event list. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

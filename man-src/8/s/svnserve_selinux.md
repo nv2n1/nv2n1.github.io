@@ -94,8 +94,8 @@ description: "svnserve_selinux – Security Enhanced Linux Policy for the svnser
 <p> <code>svnserve_content_t</code> </p>
 <p> &#8211; Set files with the svnserve_content_t type, if you want to treat the files as svnserve content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/svn(/.*)?, /var/subversion/repo(/.*)?, /var/lib/subversion/repo(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/svn(/.*)?, /var/subversion/repo(/.*)?, /var/lib/subversion/repo(/.*)? </dd>
 </dl>
 <p> <code>svnserve_exec_t</code> </p>
 <p> &#8211; Set files with the svnserve_exec_t type, if you want to transition an executable to the svnserve_t domain. </p>
@@ -106,14 +106,14 @@ description: "svnserve_selinux – Security Enhanced Linux Policy for the svnser
 <p> <code>svnserve_unit_file_t</code> </p>
 <p> &#8211; Set files with the svnserve_unit_file_t type, if you want to treat the files as svnserve unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/lib/systemd/system/svnserve.service, /usr/lib/systemd/system/svnserve.service </p>
+<dt>Paths:</dt>
+<dd>/lib/systemd/system/svnserve.service, /usr/lib/systemd/system/svnserve.service </dd>
 </dl>
 <p> <code>svnserve_var_run_t</code> </p>
 <p> &#8211; Set files with the svnserve_var_run_t type, if you want to store the svnserve files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/svnserve.pid, /var/run/svnserve(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/svnserve.pid, /var/run/svnserve(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -17,39 +17,39 @@ description: "ebrowse – create a class hierarchy database"
 <h2>OPTIONS</h2>
 <p> The program follows the usual GNU command line syntax, with long options starting with two dashes (&quot;-&quot;).</p>
 <dl>
-<dt><code>-a, &#8211;append</code></p>
-<dd> append output to existing file</p>
-<dt><code>-f, &#8211;files=FILES</code></p>
-<dd> read input file names from <i>FILE</i></p>
-<dt><code>-I, &#8211;search-path=LIST</code></p>
-<dd> set search path for input files</p>
-<dt><code>-m, &#8211;min-regexp-length=N</code></p>
-<dd> set minimum regexp length to <i>N</i></p>
-<dt><code>-M, &#8211;max-regexp-length=N</code></p>
-<dd> set maximum regexp length to <i>N</i></p>
-<dt><code>-n, &#8211;no-nested-classes</code></p>
-<dd> exclude nested classes</p>
-<dt><code>-o, &#8211;output-file=FILE</code></p>
-<dd> set output file name to <i>FILE</i></p>
-<dt><code>-p, &#8211;position-info</code></p>
-<dd> print info about position in file</p>
-<dt><code>-s, &#8211;no-structs-or-unions</code></p>
-<dd> don&#8217;t record structs or unions</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> be verbose</p>
-<dt><code>-V, &#8211;very-verbose</code></p>
-<dd> be very verbose</p>
-<dt><code>-x, &#8211;no-regexps</code></p>
-<dd> don&#8217;t record regular expressions</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version info</dl>
+<dt><code>-a, &#8211;append</code></dt>
+<dd> append output to existing file</dd>
+<dt><code>-f, &#8211;files=FILES</code></dt>
+<dd> read input file names from <i>FILE</i></dd>
+<dt><code>-I, &#8211;search-path=LIST</code></dt>
+<dd> set search path for input files</dd>
+<dt><code>-m, &#8211;min-regexp-length=N</code></dt>
+<dd> set minimum regexp length to <i>N</i></dd>
+<dt><code>-M, &#8211;max-regexp-length=N</code></dt>
+<dd> set maximum regexp length to <i>N</i></dd>
+<dt><code>-n, &#8211;no-nested-classes</code></dt>
+<dd> exclude nested classes</dd>
+<dt><code>-o, &#8211;output-file=FILE</code></dt>
+<dd> set output file name to <i>FILE</i></dd>
+<dt><code>-p, &#8211;position-info</code></dt>
+<dd> print info about position in file</dd>
+<dt><code>-s, &#8211;no-structs-or-unions</code></dt>
+<dd> don&#8217;t record structs or unions</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> be verbose</dd>
+<dt><code>-V, &#8211;very-verbose</code></dt>
+<dd> be very verbose</dd>
+<dt><code>-x, &#8211;no-regexps</code></dt>
+<dd> don&#8217;t record regular expressions</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version info</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1), <code><a href="/docs/linux/man/1-etags/">etags</a></code>(1), and the full documentation for <code>ebrowse</code> which is maintained as a Texinfo manual. If the <code>info</code> and <code>ebrowse</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info ebrowse</code></dl>
+</dt><dd> <code>info ebrowse</code></dd></dl>
 <p> should give you access to the complete manual.</p>
 <h2>AUTHOR</h2>
 <p> <i>Ebrowse</i> was written by Gerd Moellmann.</p>

@@ -21,9 +21,9 @@ CALL SLSETI (PNAM, IVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. Only the first three characters of the string are examined.
-<dt>IVAL
-<dd>(an input expression of type INTEGER) is the desired value of the internal parameter. If the internal parameter is of type INTEGER, it will be given the value IVAL. If the internal parameter is of type REAL, it will be given the value REAL(IVAL).</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. Only the first three characters of the string are examined.
+</dd><dt>IVAL
+</dt><dd>(an input expression of type INTEGER) is the desired value of the internal parameter. If the internal parameter is of type INTEGER, it will be given the value IVAL. If the internal parameter is of type REAL, it will be given the value REAL(IVAL).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

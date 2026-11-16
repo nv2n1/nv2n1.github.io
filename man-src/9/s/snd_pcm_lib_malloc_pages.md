@@ -14,10 +14,10 @@ description: "snd_pcm_lib_malloc_pages – allocate the DMA buffer"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream to allocate the DMA buffer to</dl>
+</dd><dd>the substream to allocate the DMA buffer to</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>the requested buffer size in bytes</dl>
+<dd>the requested buffer size in bytes</dd></dl>
 <h2>Description</h2>
 <p>Allocates the DMA buffer on the BUS type given earlier to <code>snd_pcm_lib_preallocate_xxx_pages</code>.</p>
 <h2>Return</h2>

@@ -14,17 +14,17 @@ description: "trace_block_bio_bounce – used bounce buffer when processing bloc
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue holding the block operation</dl>
+</dd><dd>queue holding the block operation</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>block operation</dl>
+<dd>block operation</dd></dl>
 <h2>Description</h2>
 <p>A bounce buffer was used to handle the block operation <i>bio</i> in <i>q</i>. This occurs when hardware limitations prevent a direct transfer of data between the <i>bio</i> data memory area and the IO device. Use of a bounce buffer requires extra copying of data and decreases performance.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

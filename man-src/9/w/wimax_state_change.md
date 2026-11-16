@@ -15,11 +15,11 @@ wimax_state_change - Set the current state of a WiMAX device
 <h2>Arguments</h2>
 
 <i>wimax_dev</i>
-<dl><dd><dd>WiMAX device descriptor (properly referenced)</dl>
+<dl><dd></dd><dd>WiMAX device descriptor (properly referenced)</dd></dl>
  
 
  <i>new_state</i>
-<dl><dd>New state to switch to</dl>
+<dl><dd>New state to switch to</dd></dl>
 
 <h2>Description</h2>
 

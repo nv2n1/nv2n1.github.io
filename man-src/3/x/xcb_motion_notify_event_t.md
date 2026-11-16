@@ -29,32 +29,32 @@ description: "xcb_motion_notify_event_t – a key was pressed"
 } <code>xcb_motion_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_MOTION_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>detail</i></p>
-<dd>The keycode (a number representing a physical key on the keyboard) of the key which was pressed.</p>
-<dt><i>time</i></p>
-<dd>Time when the event was generated (in milliseconds).</p>
-<dt><i>root</i></p>
-<dd>The root window of <i>child</i>.</p>
-<dt><i>event</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>child</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>root_x</i></p>
-<dd>The X coordinate of the pointer relative to the <i>root</i> window at the time of the event.</p>
-<dt><i>root_y</i></p>
-<dd>The Y coordinate of the pointer relative to the <i>root</i> window at the time of the event.</p>
-<dt><i>event_x</i></p>
-<dd>If <i>same_screen</i> is true, this is the X coordinate relative to the <i>event</i> window&#8217;s origin. Otherwise, <i>event_x</i> will be set to zero.</p>
-<dt><i>event_y</i></p>
-<dd>If <i>same_screen</i> is true, this is the Y coordinate relative to the <i>event</i> window&#8217;s origin. Otherwise, <i>event_y</i> will be set to zero.</p>
-<dt><i>state</i></p>
-<dd>The logical state of the pointer buttons and modifier keys just prior to the event.</p>
-<dt><i>same_screen</i></p>
-<dd>Whether the <i>event</i> window is on the same screen as the <i>root</i> window.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_MOTION_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>detail</i></dt>
+<dd>The keycode (a number representing a physical key on the keyboard) of the key which was pressed.</dd>
+<dt><i>time</i></dt>
+<dd>Time when the event was generated (in milliseconds).</dd>
+<dt><i>root</i></dt>
+<dd>The root window of <i>child</i>.</dd>
+<dt><i>event</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>child</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>root_x</i></dt>
+<dd>The X coordinate of the pointer relative to the <i>root</i> window at the time of the event.</dd>
+<dt><i>root_y</i></dt>
+<dd>The Y coordinate of the pointer relative to the <i>root</i> window at the time of the event.</dd>
+<dt><i>event_x</i></dt>
+<dd>If <i>same_screen</i> is true, this is the X coordinate relative to the <i>event</i> window&#8217;s origin. Otherwise, <i>event_x</i> will be set to zero.</dd>
+<dt><i>event_y</i></dt>
+<dd>If <i>same_screen</i> is true, this is the Y coordinate relative to the <i>event</i> window&#8217;s origin. Otherwise, <i>event_y</i> will be set to zero.</dd>
+<dt><i>state</i></dt>
+<dd>The logical state of the pointer buttons and modifier keys just prior to the event.</dd>
+<dt><i>same_screen</i></dt>
+<dd>Whether the <i>event</i> window is on the same screen as the <i>root</i> window.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_grab_key/">xcb_grab_key</a></code>(3), <code><a href="/docs/linux/man/3-xcb_grab_keyboard/">xcb_grab_keyboard</a></code>(3)</p>

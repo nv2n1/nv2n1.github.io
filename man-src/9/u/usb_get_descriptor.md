@@ -14,19 +14,19 @@ description: "usb_get_descriptor – issues a generic GET_DESCRIPTOR request"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device whose descriptor is being retrieved</dl>
+</dd><dd>the device whose descriptor is being retrieved</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>the descriptor type (USB_DT_*)</dl>
+<dd>the descriptor type (USB_DT_*)</dd></dl>
 <p> <i>index</i></p>
 <dl>
-<dd>the number of the descriptor</dl>
+<dd>the number of the descriptor</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>where to put the descriptor</dl>
+<dd>where to put the descriptor</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>how big is &#8220;buf&#8221;?</dl>
+<dd>how big is &#8220;buf&#8221;?</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

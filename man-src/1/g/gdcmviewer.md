@@ -56,14 +56,14 @@ file-in   DICOM input filename
 </pre>
 <p> gdcmviewer will try to read your file, and the print the vtk information associated with this file. Basically what kind of image you are looking at. </p>
 <dl>
-<dt>*</p>
-<dd> ScalarType is the DICOM Real World Value type</p>
-<dt>*</p>
-<dd> Dimensions is the dimension of the image</p>
-<dt>*</p>
-<dd> Spacing is the spacing of the image</p>
-<dt>*</p>
-<dd> NumberOfScalarComponents should be 1 for grayscale &amp; PALETTE COLOR and 3 for RGB, YBR data.</dl>
+<dt>*</dt>
+<dd> ScalarType is the DICOM Real World Value type</dd>
+<dt>*</dt>
+<dd> Dimensions is the dimension of the image</dd>
+<dt>*</dt>
+<dd> Spacing is the spacing of the image</dd>
+<dt>*</dt>
+<dd> NumberOfScalarComponents should be 1 for grayscale &amp; PALETTE COLOR and 3 for RGB, YBR data.</dd></dl>
 <h2>Wiki Link</h2>
 <p> The wiki page, will color pictures can be found at: <a rel="nofollow" href="http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer">http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer</a></p>
 <h2>SEE ALSO</h2>

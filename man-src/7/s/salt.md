@@ -13,24 +13,24 @@ description: "salt – Salt Documentation"
 <p> Weâre not just talking about NaCl..SS The 30 second summary </p>
 <p> Salt is:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a configuration management system, capable of maintaining remote nodes in defined states (for example, ensuring that specific packages are installed and specific services are running)</p>
-<dt>&bull;</p>
-<dd> a distributed remote execution system used to execute commands and query data on remote nodes, either individually or by arbitrary selection criteria </p>
+<dt>&bull;</dt>
+<dd> a configuration management system, capable of maintaining remote nodes in defined states (for example, ensuring that specific packages are installed and specific services are running)</dd>
+<dt>&bull;</dt>
+<dd> a distributed remote execution system used to execute commands and query data on remote nodes, either individually or by arbitrary selection criteria </dd>
 <p> It was developed in order to bring the best solutions found in the world of remote execution together and make them better, faster, and more malleable. Salt accomplishes this through its ability to handle large loads of information, and not just dozens but hundreds and even thousands of individual servers quickly through a simple and manageable interface.</dl>
 <h3>Simplicity</h3>
 <p> Providing versatility between massive scale deployments and smaller systems may seem daunting, but Salt is very simple to set up and maintain, regardless of the size of the project. The architecture of Salt is designed to work with any number of servers, from a handful of local network systems to international deployments across different data centers. The topology is a simple server/client model with the needed functionality built into a single set of daemons. While the default configuration will work with little to no modification, Salt can be fine tuned to meet specific needs.</p>
 <h3>Parallel execution</h3>
 <p> The core functions of Salt:</p>
 <dl>
-<dt>&bull;</p>
-<dd> enable commands to remote systems to be called in parallel rather than serially</p>
-<dt>&bull;</p>
-<dd> use a secure and encrypted protocol</p>
-<dt>&bull;</p>
-<dd> use the smallest and fastest network payloads possible</p>
-<dt>&bull;</p>
-<dd> provide a simple programming interface </p>
+<dt>&bull;</dt>
+<dd> enable commands to remote systems to be called in parallel rather than serially</dd>
+<dt>&bull;</dt>
+<dd> use a secure and encrypted protocol</dd>
+<dt>&bull;</dt>
+<dd> use the smallest and fastest network payloads possible</dd>
+<dt>&bull;</dt>
+<dd> provide a simple programming interface </dd>
 <p> Salt also introduces more granular controls to the realm of remote execution, allowing systems to be targeted not just by hostname, but also by system properties.</dl>
 <h3>Building on proven technology</h3>
 <p> Salt takes advantage of a number of technologies and techniques. The networking layer is built with the excellent <i>ZeroMQ</i> networking library, so the Salt daemon includes a viable and transparent AMQ broker. Salt uses public keys for authentication with the master daemon, then uses faster <i>AES</i> encryption for payload communication; authentication and encryption are integral to Salt. Salt takes advantage of communication via <i>msgpack</i>, enabling fast and light network traffic.</p>
@@ -65,40 +65,40 @@ description: "salt – Salt Documentation"
 <p> The official <code>salt-states</code> repository is: <i><a rel="nofollow noopener" href="https://github.com/saltstack/salt-states" target="_blank">https://github.com/saltstack/salt-states</a></i> </p>
 <p> A few examples of salt states from the community:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/blast-hardcheese/blast-salt-states" target="_blank">https://github.com/blast-hardcheese/blast-salt-states</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/kevingranade/kevingranade-salt-state" target="_blank">https://github.com/kevingranade/kevingranade-salt-state</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/uggedal/states" target="_blank">https://github.com/uggedal/states</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/mattmcclean/salt-openstack/tree/master/salt" target="_blank">https://github.com/mattmcclean/salt-openstack/tree/master/salt</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/rentalita/ubuntu-setup/" target="_blank">https://github.com/rentalita/ubuntu-setup/</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/brutasse/states" target="_blank">https://github.com/brutasse/states</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/bclermont/states" target="_blank">https://github.com/bclermont/states</a></i></p>
-<dt>&bull;</p>
-<dd> <i><a rel="nofollow noopener" href="https://github.com/pcrews/salt-data" target="_blank">https://github.com/pcrews/salt-data</a></i></dl>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/blast-hardcheese/blast-salt-states" target="_blank">https://github.com/blast-hardcheese/blast-salt-states</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/kevingranade/kevingranade-salt-state" target="_blank">https://github.com/kevingranade/kevingranade-salt-state</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/uggedal/states" target="_blank">https://github.com/uggedal/states</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/mattmcclean/salt-openstack/tree/master/salt" target="_blank">https://github.com/mattmcclean/salt-openstack/tree/master/salt</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/rentalita/ubuntu-setup/" target="_blank">https://github.com/rentalita/ubuntu-setup/</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/brutasse/states" target="_blank">https://github.com/brutasse/states</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/bclermont/states" target="_blank">https://github.com/bclermont/states</a></i></dd>
+<dt>&bull;</dt>
+<dd> <i><a rel="nofollow noopener" href="https://github.com/pcrews/salt-data" target="_blank">https://github.com/pcrews/salt-data</a></i></dd></dl>
 <h3>Follow on ohloh</h3>
 <p> <i><a rel="nofollow noopener" href="https://www.ohloh.net/p/salt" target="_blank">https://www.ohloh.net/p/salt</a></i></p>
 <h3>Other community links</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Salt Stack Inc.</i></p>
-<dt>&bull;</p>
-<dd> <i>Subreddit</i></p>
-<dt>&bull;</p>
-<dd> <i>Google+</i></p>
-<dt>&bull;</p>
-<dd> <i>YouTube</i></p>
-<dt>&bull;</p>
-<dd> <i>Facebook</i></p>
-<dt>&bull;</p>
-<dd> <i>Twitter</i></p>
-<dt>&bull;</p>
-<dd> <i>Wikipedia page</i></dl>
+<dt>&bull;</dt>
+<dd> <i>Salt Stack Inc.</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Subreddit</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Google+</i></dd>
+<dt>&bull;</dt>
+<dd> <i>YouTube</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Facebook</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Twitter</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Wikipedia page</i></dd></dl>
 <h3>Hack the Source</h3>
 <p> If you want to get involved with the development of source code or the documentation efforts, please review the <code>hacking section</code>!</p>
 <h2 id="INSTALLATION"></h2>
@@ -223,10 +223,10 @@ yum --enablerepo=updates-testing install salt-minion
 <p> Since Salt is on <i>PyPI</i>, it can be installed using pip, though most users prefer to install using a package manager. </p>
 <p> Installing from pip has a few additional requirements:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Install the group &#8216;Development Tools&#8217;, <code>dnf groupinstall &#8216;Development Tools&#8217;</code></p>
-<dt>&bull;</p>
-<dd> Install the &#8216;zeromq-devel&#8217; package if it fails on linking against that afterwards as well. </p>
+<dt>&bull;</dt>
+<dd> Install the group &#8216;Development Tools&#8217;, <code>dnf groupinstall &#8216;Development Tools&#8217;</code></dd>
+<dt>&bull;</dt>
+<dd> Install the &#8216;zeromq-devel&#8217; package if it fails on linking against that afterwards as well. </dd>
 <p> A pip install does not make the init scripts or the /etc/salt directory, and you will need to provide your own systemd service unit. </p>
 <p> Installation from pip: </p>
 <pre>
@@ -417,10 +417,10 @@ yum --enablerepo=epel-testing install salt-minion
 <p> Since Salt is on <i>PyPI</i>, it can be installed using pip, though most users prefer to install using RPMs (which can be installed from <i>EPEL</i>). </p>
 <p> Installing from pip has a few additional requirements:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Install the group &#8216;Development Tools&#8217;, <code>yum groupinstall &#8216;Development Tools&#8217;</code></p>
-<dt>&bull;</p>
-<dd> Install the &#8216;zeromq-devel&#8217; package if it fails on linking against that afterwards as well. </p>
+<dt>&bull;</dt>
+<dd> Install the group &#8216;Development Tools&#8217;, <code>yum groupinstall &#8216;Development Tools&#8217;</code></dd>
+<dt>&bull;</dt>
+<dd> Install the &#8216;zeromq-devel&#8217; package if it fails on linking against that afterwards as well. </dd>
 <p> A pip install does not make the init scripts or the /etc/salt directory, and you will need to provide your own systemd service unit. </p>
 <p> Installation from pip: </p>
 <pre>
@@ -459,35 +459,35 @@ service salt-minion start
 <p> Comments and patches for better support on these platforms is very welcome. </p>
 <p> As of version 0.10.4, Solaris is well supported under salt, with all of the following working well:</p>
 <dl>
-<dt>1.</p>
-<dd> remote execution</p>
-<dt>2.</p>
-<dd> grain detection</p>
-<dt>3.</p>
-<dd> service control with SMF</p>
-<dt>4.</p>
-<dd> &#8216;pkg&#8217; states with &#8216;pkgadd&#8217; and &#8216;pkgutil&#8217; modules</p>
-<dt>5.</p>
-<dd> cron modules/states</p>
-<dt>6.</p>
-<dd> user and group modules/states</p>
-<dt>7.</p>
-<dd> shadow password management modules/states </p>
+<dt>1.</dt>
+<dd> remote execution</dd>
+<dt>2.</dt>
+<dd> grain detection</dd>
+<dt>3.</dt>
+<dd> service control with SMF</dd>
+<dt>4.</dt>
+<dd> &#8216;pkg&#8217; states with &#8216;pkgadd&#8217; and &#8216;pkgutil&#8217; modules</dd>
+<dt>5.</dt>
+<dd> cron modules/states</dd>
+<dt>6.</dt>
+<dd> user and group modules/states</dd>
+<dt>7.</dt>
+<dd> shadow password management modules/states </dd>
 <p> Salt is dependent on the following additional packages. These will automatically be installed as dependencies of the <code>py_salt</code> package:</p>
-<dt>&bull;</p>
-<dd> py_yaml</p>
-<dt>&bull;</p>
-<dd> py_pyzmq</p>
-<dt>&bull;</p>
-<dd> py_jinja2</p>
-<dt>&bull;</p>
-<dd> py_msgpack_python</p>
-<dt>&bull;</p>
-<dd> py_m2crypto</p>
-<dt>&bull;</p>
-<dd> py_crypto</p>
-<dt>&bull;</p>
-<dd> python</dl>
+<dt>&bull;</dt>
+<dd> py_yaml</dd>
+<dt>&bull;</dt>
+<dd> py_pyzmq</dd>
+<dt>&bull;</dt>
+<dd> py_jinja2</dd>
+<dt>&bull;</dt>
+<dd> py_msgpack_python</dd>
+<dt>&bull;</dt>
+<dd> py_m2crypto</dd>
+<dt>&bull;</dt>
+<dd> py_crypto</dd>
+<dt>&bull;</dt>
+<dd> python</dd></dl>
 <h3>Installation</h3>
 <p> To install Salt from the OpenCSW package repository you first need to install <i>pkgutil</i> assuming you don&#8217;t already have it installed: </p>
 <p> On Solaris 10: </p>
@@ -549,7 +549,7 @@ salt '&lt;your-salt-minion&gt;' test.ping
 sudo add-apt-repository ppa:saltstack/salt
 </pre>
 <dl>
-<dt>add-apt-repository: command not found?</p>
+<dt>add-apt-repository: command not found?</dt>
 <dd>
 <p> The <code>add-apt-repository</code> command is not always present on Ubuntu systems. This can be fixed by installing <i>python-software-properties</i>: </p>
 <pre>
@@ -569,7 +569,7 @@ wget -q -O- &quot;<a rel="nofollow noopener" href="http://keyserver.ubuntu.com:1
 <pre>
 sudo apt-get update
 </pre>
-</dl>
+</dd></dl>
 <h3>Install packages</h3>
 <p> Install the Salt master, minion, or syndic from the repository with the apt-get command. These examples each install one daemon, but more than one package name may be given at a time: </p>
 <pre>
@@ -602,12 +602,12 @@ sudo apt-get install salt-syndic
 <h3>Silent Installer options</h3>
 <p> The installer can be run silently by providing the <i>/S</i> option at the command line. The installer also accepts the following options for configuring the Salt Minion silently:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>/master=</i> A string value to set the IP address or host name of the master. Default value is &#8216;salt&#8217;</p>
-<dt>&bull;</p>
-<dd> <i>/minion-name=</i> A string value to set the minion name. Default is &#8216;hostname&#8217;</p>
-<dt>&bull;</p>
-<dd> <i>/start-service=</i> Either a 1 or 0. &#8216;1&#8217; will start the service, &#8216;0&#8217; will not. Default is to start the service after installation. </p>
+<dt>&bull;</dt>
+<dd> <i>/master=</i> A string value to set the IP address or host name of the master. Default value is &#8216;salt&#8217;</dd>
+<dt>&bull;</dt>
+<dd> <i>/minion-name=</i> A string value to set the minion name. Default is &#8216;hostname&#8217;</dd>
+<dt>&bull;</dt>
+<dd> <i>/start-service=</i> Either a 1 or 0. &#8216;1&#8217; will start the service, &#8216;0&#8217; will not. Default is to start the service after installation. </dd>
 <p> Here&#8217;s an example of using the silent installer: </p>
 <pre>
 Salt-Minion-2015.5.6-Setup-amd64.exe /S /master=yoursaltmaster /minion-name=yourminionname /start-service=0
@@ -617,72 +617,72 @@ Salt-Minion-2015.5.6-Setup-amd64.exe /S /master=yoursaltmaster /minion-name=your
 <p> Notes: &#8211; These instructions were tested with Windows Server 2008 R2 &#8211; They are generalizable to any version of Windows that supports a salt-minion</p>
 <h3>A. Create the Unprivileged User that the Salt Minion will Run As</h3>
 <dl>
-<dt>1.</p>
-<dd> Click &quot;Start&quot;, &quot;Control Panel&quot;, &quot;User Accounts&quot;</p>
-<dt>2.</p>
-<dd> Click &quot;Add or remove user accounts&quot;</p>
-<dt>3.</p>
-<dd> Click &quot;Create new account&quot;</p>
-<dt>4.</p>
-<dd> Enter &quot;salt-user&quot; (or a name of your preference) in the &quot;New account name&quot; field</p>
-<dt>5.</p>
-<dd> Select the &quot;Standard user&quot; radio button</p>
-<dt>6.</p>
-<dd> Click the &quot;Create Account&quot; button</p>
-<dt>7.</p>
-<dd> Click on the newly created user account</p>
-<dt>8.</p>
-<dd> Click the &quot;Create a password&quot; link</p>
-<dt>9.</p>
-<dd> In the &quot;New password&quot; and &quot;Confirm new password&quot; fields, provide a password (e.g &quot;SuperSecretMinionPassword4Me!&quot;)</p>
-<dt>10.</p>
-<dd> In the &quot;Type a password hint&quot; field, provide appropriate text (e.g. &quot;My Salt Password&quot;)</p>
-<dt>11.</p>
-<dd> Click the &quot;Create password&quot; button</p>
-<dt>12.</p>
-<dd> Close the &quot;Change an Account&quot; window</dl>
+<dt>1.</dt>
+<dd> Click &quot;Start&quot;, &quot;Control Panel&quot;, &quot;User Accounts&quot;</dd>
+<dt>2.</dt>
+<dd> Click &quot;Add or remove user accounts&quot;</dd>
+<dt>3.</dt>
+<dd> Click &quot;Create new account&quot;</dd>
+<dt>4.</dt>
+<dd> Enter &quot;salt-user&quot; (or a name of your preference) in the &quot;New account name&quot; field</dd>
+<dt>5.</dt>
+<dd> Select the &quot;Standard user&quot; radio button</dd>
+<dt>6.</dt>
+<dd> Click the &quot;Create Account&quot; button</dd>
+<dt>7.</dt>
+<dd> Click on the newly created user account</dd>
+<dt>8.</dt>
+<dd> Click the &quot;Create a password&quot; link</dd>
+<dt>9.</dt>
+<dd> In the &quot;New password&quot; and &quot;Confirm new password&quot; fields, provide a password (e.g &quot;SuperSecretMinionPassword4Me!&quot;)</dd>
+<dt>10.</dt>
+<dd> In the &quot;Type a password hint&quot; field, provide appropriate text (e.g. &quot;My Salt Password&quot;)</dd>
+<dt>11.</dt>
+<dd> Click the &quot;Create password&quot; button</dd>
+<dt>12.</dt>
+<dd> Close the &quot;Change an Account&quot; window</dd></dl>
 <h3>B. Add the New User to the Access Control List for the Salt Folder</h3>
 <dl>
-<dt>1.</p>
-<dd> In a File Explorer window, browse to the path where Salt is installed (the default path is C:Salt)</p>
-<dt>2.</p>
-<dd> Right-click on the &quot;Salt&quot; folder and select &quot;Properties&quot;</p>
-<dt>3.</p>
-<dd> Click on the &quot;Security&quot; tab</p>
-<dt>4.</p>
-<dd> Click the &quot;Edit&quot; button</p>
-<dt>5.</p>
-<dd> Click the &quot;Add&quot; button</p>
-<dt>6.</p>
-<dd> Type the name of your designated Salt user and click the &quot;OK&quot; button</p>
-<dt>7.</p>
-<dd> Check the box to &quot;Allow&quot; the &quot;Modify&quot; permission</p>
-<dt>8.</p>
-<dd> Click the &quot;OK&quot; button</p>
-<dt>9.</p>
-<dd> Click the &quot;OK&quot; button to close the &quot;Salt Properties&quot; window</dl>
+<dt>1.</dt>
+<dd> In a File Explorer window, browse to the path where Salt is installed (the default path is C:Salt)</dd>
+<dt>2.</dt>
+<dd> Right-click on the &quot;Salt&quot; folder and select &quot;Properties&quot;</dd>
+<dt>3.</dt>
+<dd> Click on the &quot;Security&quot; tab</dd>
+<dt>4.</dt>
+<dd> Click the &quot;Edit&quot; button</dd>
+<dt>5.</dt>
+<dd> Click the &quot;Add&quot; button</dd>
+<dt>6.</dt>
+<dd> Type the name of your designated Salt user and click the &quot;OK&quot; button</dd>
+<dt>7.</dt>
+<dd> Check the box to &quot;Allow&quot; the &quot;Modify&quot; permission</dd>
+<dt>8.</dt>
+<dd> Click the &quot;OK&quot; button</dd>
+<dt>9.</dt>
+<dd> Click the &quot;OK&quot; button to close the &quot;Salt Properties&quot; window</dd></dl>
 <h3>C. Update the Windows Service User for the salt-minion Service</h3>
 <dl>
-<dt>1.</p>
-<dd> Click &quot;Start&quot;, &quot;Administrative Tools&quot;, &quot;Services&quot;</p>
-<dt>2.</p>
-<dd> In the list of Services, Right-Click on &quot;salt-minion&quot; and select &quot;Properties&quot;</p>
-<dt>3.</p>
-<dd> Click the &quot;Log On&quot; tab</p>
-<dt>4.</p>
-<dd> Click the &quot;This account&quot; radio button</p>
-<dt>5.</p>
-<dd> Provide the account credentials created in section A</p>
-<dt>6.</p>
-<dd> Click the &quot;OK&quot; button</p>
-<dt>7.</p>
-<dd> Click the &quot;OK&quot; button to the prompt confirming that the user &quot;has been granted the Log On As A Service right&quot;</p>
-<dt>8.</p>
-<dd> Click the &quot;OK&quot; button to the prompt confirming that &quot;The new logon name will not take effect until you stop and restart the service&quot;</p>
-<dt>9.</p>
-<dd> Right-Click on &quot;salt-minion&quot; and select &quot;Stop&quot;</p>
-<dt>10.</p>
-<dd> Right-Click on &quot;salt-minion&quot; and select &quot;Start&quot;</dl>
+<dt>1.</dt>
+<dd> Click &quot;Start&quot;, &quot;Administrative Tools&quot;, &quot;Services&quot;</dd>
+<dt>2.</dt>
+<dd> In the list of Services, Right-Click on &quot;salt-minion&quot; and select &quot;Properties&quot;</dd>
+<dt>3.</dt>
+<dd> Click the &quot;Log On&quot; tab</dd>
+<dt>4.</dt>
+<dd> Click the &quot;This account&quot; radio button</dd>
+<dt>5.</dt>
+<dd> Provide the account credentials created in section A</dd>
+<dt>6.</dt>
+<dd> Click the &quot;OK&quot; button</dd>
+<dt>7.</dt>
+<dd> Click the &quot;OK&quot; button to the prompt confirming that the user &quot;has been granted the Log On As A Service right&quot;</dd>
+<dt>8.</dt>
+<dd> Click the &quot;OK&quot; button to the prompt confirming that &quot;The new logon name will not take effect until you stop and restart the service&quot;</dd>
+<dt>9.</dt>
+<dd> Right-Click on &quot;salt-minion&quot; and select &quot;Stop&quot;</dd>
+<dt>10.</dt>
+<dd> Right-Click on &quot;salt-minion&quot; and select &quot;Start&quot;</dd></dl>
 <h3>Setting up a Windows build environment</h3>
 <p> This document will explain how to set up a development environment for salt on Windows. The development environment allows you to work with the source code to customize or fix bugs. It will also allow you to build your own installation.</p>
 <h3>The Easy Way</h3>
@@ -690,14 +690,14 @@ Salt-Minion-2015.5.6-Setup-amd64.exe /S /master=yoursaltmaster /minion-name=your
 <p> To do this the easy way you only need to install <i>Git for Windows</i>.</p>
 <h3>Create the Build Environment</h3>
 <dl>
-<dt>1.</p>
-<dd> Clone the <i>Salt-Windows-Dev</i> repo from github. </p>
+<dt>1.</dt>
+<dd> Clone the <i>Salt-Windows-Dev</i> repo from github. </dd>
 <p> Open a command line and type: </p>
 <pre>
 git clone <a rel="nofollow noopener" href="https://github.com/saltstack/salt-windows-dev" target="_blank">https://github.com/saltstack/salt-windows-dev</a>
 </pre>
-<dt>2.</p>
-<dd> Build the Python Environment </p>
+<dt>2.</dt>
+<dd> Build the Python Environment </dd>
 <p> Go into the salt-windows-dev directory. Right-click the file named <code>dev_env.ps1</code> and select <code>Run with PowerShell</code> </p>
 <p> If you get an error, you may need to change the execution policy. </p>
 <p> Open a powershell window and type the following: </p>
@@ -705,8 +705,8 @@ git clone <a rel="nofollow noopener" href="https://github.com/saltstack/salt-win
 Set-ExecutionPolicy RemoteSigned
 </pre>
 <p> This will download and install Python with all the dependencies needed to develop and build salt.</p>
-<dt>3.</p>
-<dd> Build the Salt Environment </p>
+<dt>3.</dt>
+<dd> Build the Salt Environment </dd>
 <p> Right-click on the file named <code>dev_env_salt.ps1</code> and select <code>Run with Powershell</code> </p>
 <p> This will clone salt into <code>C:\Salt-Dev\salt</code> and set it to the 2015.5 branch. You could optionally run the command from a powershell window with a <code>-Version</code> switch to pull a different version. For example: </p>
 <pre>
@@ -722,36 +722,36 @@ git tag -n
 <h3>Prerequisite Software</h3>
 <p> Install the following software:</p>
 <dl>
-<dt>1.</p>
-<dd> <i>Git for Windows</i></p>
-<dt>2.</p>
-<dd> <i>Nullsoft Installer</i> </p>
+<dt>1.</dt>
+<dd> <i>Git for Windows</i></dd>
+<dt>2.</dt>
+<dd> <i>Nullsoft Installer</i> </dd>
 <p> Download the Prerequisite zip file for your CPU architecture from the SaltStack download site:</p>
-<dt>&bull;</p>
-<dd> <i>Salt32.zip</i></p>
-<dt>&bull;</p>
-<dd> <i>Salt64.zip</i> </p>
+<dt>&bull;</dt>
+<dd> <i>Salt32.zip</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Salt64.zip</i> </dd>
 <p> These files contain all sofware required to build and develop salt. Unzip the contents of the file to <code>C:\Salt-Dev\temp</code>.</dl>
 <h3>Create the Build Environment</h3>
 <dl>
-<dt>1.</p>
-<dd> Build the Python Environment</p>
-<dt>&bull;</p>
-<dd> Install Python: </p>
+<dt>1.</dt>
+<dd> Build the Python Environment</dd>
+<dt>&bull;</dt>
+<dd> Install Python: </dd>
 <p> Browse to the <code>C:\Salt-Dev\temp</code> directory and find the Python installation file for your CPU Architecture under the corresponding subfolder. Double-click the file to install python. </p>
 <p> Make sure the following are in your <code>PATH</code> environment variable: </p>
 <pre>
 C:\Python27
 C:\Python27\Scripts
 </pre>
-<dt>&bull;</p>
-<dd> Install Pip </p>
+<dt>&bull;</dt>
+<dd> Install Pip </dd>
 <p> Open a command prompt and navigate to <code>C:\Salt-Dev\temp</code> Run the following command: </p>
 <pre>
 python get-pip.py
 </pre>
-<dt>&bull;</p>
-<dd> Easy Install compiled binaries. </p>
+<dt>&bull;</dt>
+<dd> Easy Install compiled binaries. </dd>
 <p> M2Crypto, PyCrypto, and PyWin32 need to be installed using Easy Install. Open a command prompt and navigate to <code>C:\Salt-Dev\temp\&lt;cpuarch&gt;</code>. Run the following commands: </p>
 <pre>
 easy_install -Z &lt;M2Crypto file name&gt;
@@ -759,27 +759,27 @@ easy_install -Z &lt;PyCrypto file name&gt;
 easy_install -Z &lt;PyWin32 file name&gt;
 </pre>
 <p> <code>NOTE:</code> You can type the first part of the file name and then press the tab key to auto-complete the name of the file.</p>
-<dt>&bull;</p>
-<dd> Pip Install Additional Prerequisites </p>
+<dt>&bull;</dt>
+<dd> Pip Install Additional Prerequisites </dd>
 <p> All remaining prerequisites need to be pip installed. These prerequisites are as follow:</p>
-<dt>&bull;</p>
-<dd> MarkupSafe</p>
-<dt>&bull;</p>
-<dd> Jinja</p>
-<dt>&bull;</p>
-<dd> MsgPack</p>
-<dt>&bull;</p>
-<dd> PSUtil</p>
-<dt>&bull;</p>
-<dd> PyYAML</p>
-<dt>&bull;</p>
-<dd> PyZMQ</p>
-<dt>&bull;</p>
-<dd> WMI</p>
-<dt>&bull;</p>
-<dd> Requests</p>
-<dt>&bull;</p>
-<dd> Certifi </p>
+<dt>&bull;</dt>
+<dd> MarkupSafe</dd>
+<dt>&bull;</dt>
+<dd> Jinja</dd>
+<dt>&bull;</dt>
+<dd> MsgPack</dd>
+<dt>&bull;</dt>
+<dd> PSUtil</dd>
+<dt>&bull;</dt>
+<dd> PyYAML</dd>
+<dt>&bull;</dt>
+<dd> PyZMQ</dd>
+<dt>&bull;</dt>
+<dd> WMI</dd>
+<dt>&bull;</dt>
+<dd> Requests</dd>
+<dt>&bull;</dt>
+<dd> Certifi </dd>
 <p> Open a command prompt and navigate to <code>C:\Salt-Dev\temp</code>. Run the following commands: </p>
 <pre>
 pip install &lt;cpuarch&gt;\&lt;MarkupSafe file name&gt;
@@ -792,16 +792,16 @@ pip install &lt;WMI file name&gt;
 pip install &lt;requests file name&gt;
 pip install &lt;certifi file name&gt;
 </pre>
-<dt>2.</p>
-<dd> Build the Salt Environment</p>
-<dt>&bull;</p>
-<dd> Clone Salt </p>
+<dt>2.</dt>
+<dd> Build the Salt Environment</dd>
+<dt>&bull;</dt>
+<dd> Clone Salt </dd>
 <p> Open a command prompt and navigate to <code>C:\Salt-Dev</code>. Run the following command to clone salt: </p>
 <pre>
 git clone <a rel="nofollow noopener" href="https://github.com/saltstack/salt" target="_blank">https://github.com/saltstack/salt</a>
 </pre>
-<dt>&bull;</p>
-<dd> Checkout Branch </p>
+<dt>&bull;</dt>
+<dd> Checkout Branch </dd>
 <p> Checkout the branch or tag of salt you want to work on or build. Open a command prompt and navigate to <code>C:\Salt-Dev\salt</code>. Get a list of available tags and branches by running the following commands: </p>
 <pre>
 git fetch --all
@@ -814,8 +814,8 @@ git tag -n
 <pre>
 git checkout &lt;branch/tag name&gt;
 </pre>
-<dt>&bull;</p>
-<dd> Clean the Environment </p>
+<dt>&bull;</dt>
+<dd> Clean the Environment </dd>
 <p> When switching between branches residual files can be left behind that will interfere with the functionality of salt. Therefore, after you check out the branch you want to work on, type the following commands to clean the salt environment:</dl>
 <h3>Developing with Salt</h3>
 <p> There are two ways to develop with salt. You can run salt&#8217;s setup.py each time you make a change to source code or you can use the setup tools develop mode.</p>
@@ -851,10 +851,10 @@ pip install -e .
 <h3>Clean the Environment</h3>
 <p> Make sure you don&#8217;t have any leftover salt files from previous versions of salt in your Python directory.</p>
 <dl>
-<dt>1.</p>
-<dd> Remove all files that start with salt in the <code>C:\Python27\Scripts</code> directory</p>
-<dt>2.</p>
-<dd> Remove all files and directorys that start with salt in the <code>C:\Python27\Lib\site-packages</code> directory</dl>
+<dt>1.</dt>
+<dd> Remove all files that start with salt in the <code>C:\Python27\Scripts</code> directory</dd>
+<dt>2.</dt>
+<dd> Remove all files and directorys that start with salt in the <code>C:\Python27\Lib\site-packages</code> directory</dd></dl>
 <h3>Install Salt</h3>
 <p> Install salt using salt&#8217;s setup.py. From the <code>C:\Salt-Dev\salt</code> directory type the following command: </p>
 <pre>
@@ -868,29 +868,29 @@ BuildSalt.bat &lt;branch or tag&gt;
 <p> This will copy python with salt installed to the <code>buildenv\bin</code> directory, make it portable, and then create the windows installer . The .exe for the windows installer will be placed in the <code>installer</code> directory.</p>
 <h3>Testing the Salt minion</h3>
 <dl>
-<dt>1.</p>
-<dd> Create the directory C:\salt (if it doesn&#8217;t exist already)</p>
-<dt>2.</p>
-<dd> Copy the example <code>conf</code> and <code>var</code> directories from <code>pkg/windows/buildenv/</code> into C:\salt</p>
-<dt>3.</p>
-<dd> Edit C:\salt\conf\minion </p>
+<dt>1.</dt>
+<dd> Create the directory C:\salt (if it doesn&#8217;t exist already)</dd>
+<dt>2.</dt>
+<dd> Copy the example <code>conf</code> and <code>var</code> directories from <code>pkg/windows/buildenv/</code> into C:\salt</dd>
+<dt>3.</dt>
+<dd> Edit C:\salt\conf\minion </dd>
 <pre>
 master: ipaddress or hostname of your salt-master
 </pre>
-<dt>4.</p>
-<dd> Start the salt-minion </p>
+<dt>4.</dt>
+<dd> Start the salt-minion </dd>
 <pre>
 cd C:\Python27\Scripts
 python salt-minion
 </pre>
-<dt>5.</p>
-<dd> On the salt-master accept the new minion&#8217;s key </p>
+<dt>5.</dt>
+<dd> On the salt-master accept the new minion&#8217;s key </dd>
 <pre>
 sudo salt-key -A
 </pre>
 <p> This accepts all unaccepted keys. If you&#8217;re concerned about security just accept the key for this specific minion.</p>
-<dt>6.</p>
-<dd> Test that your minion is responding </p>
+<dt>6.</dt>
+<dd> Test that your minion is responding </dd>
 <p> On the salt-master run: </p>
 <pre>
 sudo salt '*' test.ping
@@ -899,7 +899,7 @@ sudo salt '*' test.ping
 <h3>Single command bootstrap script</h3>
 <p> On a 64 bit Windows host the following script makes an unattended install of salt, including all dependencies:</p>
 <dl>
-<dt>Not up to date.</p>
+<dt>Not up to date.</dt>
 <dd>
 <p> This script is not up to date. Please use the installer found above </p>
 <pre>
@@ -910,7 +910,7 @@ sudo salt '*' test.ping
 <pre>
 winexe -U &quot;administrator&quot; //fqdn &quot;PowerShell (New-Object ......);&quot;
 </pre>
-<p> For more info check <i><a rel="nofollow noopener" href="http://csa-net.dk/salt" target="_blank">http://csa-net.dk/salt</a></i></dl>
+<p> For more info check <i><a rel="nofollow noopener" href="http://csa-net.dk/salt" target="_blank">http://csa-net.dk/salt</a></i></dd></dl>
 <h3>Packages management under Windows 2003</h3>
 <p> On windows Server 2003, you need to install optional component &quot;wmi windows installer provider&quot; to have full list of installed packages. If you don&#8217;t have this, salt-minion can&#8217;t report some installed softwares.</p>
 <h3>SUSE Installation</h3>
@@ -1010,39 +1010,39 @@ zypper install salt salt-minion salt-master
 <h3>Dependencies</h3>
 <p> Salt should run on any Unix-like platform so long as the dependencies are met.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Python 2.6</i> &gt;= 2.6 &lt;3.0</p>
-<dt>&bull;</p>
-<dd> <i>msgpack-python</i> &#8211; High-performance message interchange format</p>
-<dt>&bull;</p>
-<dd> <i>YAML</i> &#8211; Python YAML bindings</p>
-<dt>&bull;</p>
-<dd> <i>Jinja2</i> &#8211; parsing Salt States (configurable in the master settings)</p>
-<dt>&bull;</p>
-<dd> <i>MarkupSafe</i> &#8211; Implements a XML/HTML/XHTML Markup safe string for Python</p>
-<dt>&bull;</p>
-<dd> <i>apache-libcloud</i> &#8211; Python lib for interacting with many of the popular cloud service providers using a unified API</p>
-<dt>&bull;</p>
-<dd> <i>Requests</i> &#8211; HTTP library </p>
+<dt>&bull;</dt>
+<dd> <i>Python 2.6</i> &gt;= 2.6 &lt;3.0</dd>
+<dt>&bull;</dt>
+<dd> <i>msgpack-python</i> &#8211; High-performance message interchange format</dd>
+<dt>&bull;</dt>
+<dd> <i>YAML</i> &#8211; Python YAML bindings</dd>
+<dt>&bull;</dt>
+<dd> <i>Jinja2</i> &#8211; parsing Salt States (configurable in the master settings)</dd>
+<dt>&bull;</dt>
+<dd> <i>MarkupSafe</i> &#8211; Implements a XML/HTML/XHTML Markup safe string for Python</dd>
+<dt>&bull;</dt>
+<dd> <i>apache-libcloud</i> &#8211; Python lib for interacting with many of the popular cloud service providers using a unified API</dd>
+<dt>&bull;</dt>
+<dd> <i>Requests</i> &#8211; HTTP library </dd>
 <p> Depending on the chosen Salt transport, <i>ZeroMQ</i> or <i>RAET</i>, dependencies vary:</p>
-<dt>&bull;</p>
-<dd> ZeroMQ:</p>
-<dt>&bull;</p>
-<dd> <i>ZeroMQ</i> &gt;= 3.2.0</p>
-<dt>&bull;</p>
-<dd> <i>pyzmq</i> &gt;= 2.2.0 &#8211; ZeroMQ Python bindings</p>
-<dt>&bull;</p>
-<dd> <i>PyCrypto</i> &#8211; The Python cryptography toolkit</p>
-<dt>&bull;</p>
-<dd> <i>M2Crypto</i> &#8211; &quot;Me Too Crypto&quot; &#8211; Python OpenSSL wrapper</p>
-<dt>&bull;</p>
-<dd> RAET:</p>
-<dt>&bull;</p>
-<dd> <i>libnacl</i> &#8211; Python bindings to <i>libsodium</i></p>
-<dt>&bull;</p>
-<dd> <i>ioflo</i> &#8211; The flo programming interface raet and salt-raet is built on</p>
-<dt>&bull;</p>
-<dd> <i>RAET</i> &#8211; The worlds most awesome UDP protocol </p>
+<dt>&bull;</dt>
+<dd> ZeroMQ:</dd>
+<dt>&bull;</dt>
+<dd> <i>ZeroMQ</i> &gt;= 3.2.0</dd>
+<dt>&bull;</dt>
+<dd> <i>pyzmq</i> &gt;= 2.2.0 &#8211; ZeroMQ Python bindings</dd>
+<dt>&bull;</dt>
+<dd> <i>PyCrypto</i> &#8211; The Python cryptography toolkit</dd>
+<dt>&bull;</dt>
+<dd> <i>M2Crypto</i> &#8211; &quot;Me Too Crypto&quot; &#8211; Python OpenSSL wrapper</dd>
+<dt>&bull;</dt>
+<dd> RAET:</dd>
+<dt>&bull;</dt>
+<dd> <i>libnacl</i> &#8211; Python bindings to <i>libsodium</i></dd>
+<dt>&bull;</dt>
+<dd> <i>ioflo</i> &#8211; The flo programming interface raet and salt-raet is built on</dd>
+<dt>&bull;</dt>
+<dd> <i>RAET</i> &#8211; The worlds most awesome UDP protocol </dd>
 <p> Salt defaults to the <i>ZeroMQ</i> transport, and the choice can be made at install time, for example: </p>
 <pre>
 python setup.py install --salt-transport=raet
@@ -1055,10 +1055,10 @@ pip install --install-option=&quot;--salt-transport=raet&quot; salt
 </dl>
 <h3>Optional Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>mako</i> &#8211; an optional parser for Salt States (configurable in the master settings)</p>
-<dt>&bull;</p>
-<dd> gcc &#8211; dynamic <i>Cython</i> module compiling</dl>
+<dt>&bull;</dt>
+<dd> <i>mako</i> &#8211; an optional parser for Salt States (configurable in the master settings)</dd>
+<dt>&bull;</dt>
+<dd> gcc &#8211; dynamic <i>Cython</i> module compiling</dd></dl>
 <h3>Upgrading Salt</h3>
 <p> When upgrading Salt, the master(s) should always be upgraded first. Backward compatibility for minions running newer versions of salt than their masters is not guaranteed. </p>
 <p> Whenever possible, backward compatibility between new masters and old minions will be preserved. Generally, the only exception to this policy is in case of a security vulnerability.</p>
@@ -1068,12 +1068,12 @@ pip install --install-option=&quot;--salt-transport=raet&quot; salt
 <p> Running a masterless salt-minion lets you use Salt&#8217;s configuration management for a single machine without calling out to a Salt master on another machine. </p>
 <p> Since the Salt minion contains such extensive functionality it can be useful to run it standalone. A standalone minion can be used to do a number of things:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Stand up a master server via States (Salting a Salt Master)</p>
-<dt>&bull;</p>
-<dd> Use salt-call commands on a system without connectivity to a master</p>
-<dt>&bull;</p>
-<dd> Masterless States, run states entirely from files local to the minion </p>
+<dt>&bull;</dt>
+<dd> Stand up a master server via States (Salting a Salt Master)</dd>
+<dt>&bull;</dt>
+<dd> Use salt-call commands on a system without connectivity to a master</dd>
+<dt>&bull;</dt>
+<dd> Masterless States, run states entirely from files local to the minion </dd>
 <p> It is also useful for testing out state trees before deploying to a production setup.</dl>
 <h3>Bootstrap Salt Minion</h3>
 <p> The <i>salt-bootstrap</i> script makes bootstrapping a server with Salt simple for any OS with a Bourne shell: </p>
@@ -1093,16 +1093,16 @@ file_client: local
 <p> The following example walks through the steps necessary to create a state tree that ensures that the server has the Apache webserver installed. </p>
 <p> <code>NOTE:</code> For a complete explanation on Salt States, see the <i>tutorial</i>.</p>
 <dl>
-<dt>1.</p>
-<dd> Create the <code>top.sls</code> file: </p>
+<dt>1.</dt>
+<dd> Create the <code>top.sls</code> file: </dd>
 <p> <code>/srv/salt/top.sls:</code> </p>
 <pre>
 base:
   '*':
     - webserver
 </pre>
-<dt>2.</p>
-<dd> Create the webserver state tree: </p>
+<dt>2.</dt>
+<dd> Create the webserver state tree: </dd>
 <p> <code>/srv/salt/webserver.sls:</code> </p>
 <pre>
 apache:               # ID declaration
@@ -1128,10 +1128,10 @@ salt-call --local state.highstate -l debug
 <h3>Standalone Minion</h3>
 <p> Since the Salt minion contains such extensive functionality it can be useful to run it standalone. A standalone minion can be used to do a number of things:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Use salt-call commands on a system without connectivity to a master</p>
-<dt>&bull;</p>
-<dd> Masterless States, run states entirely from files local to the minion </p>
+<dt>&bull;</dt>
+<dd> Use salt-call commands on a system without connectivity to a master</dd>
+<dt>&bull;</dt>
+<dd> Masterless States, run states entirely from files local to the minion </dd>
 <p> <code>NOTE:</code> When running Salt in masterless mode, do not run the salt-minion daemon. Otherwise, it will attempt to connect to a master and fail. The salt-call command stands on its own and does not need the salt-minion daemon.</dl>
 <h3>Telling Salt Call to Run Masterless</h3>
 <p> The salt-call command is used to run module functions locally on a minion instead of executing them from the master. Normally the salt-call command checks into the master to retrieve file server and pillar data, but when running standalone salt-call needs to be instructed to not check the master for this data. To instruct the minion to not look for a master when running salt-call the <code>file_client</code> configuration option needs to be set. By default the <code>file_client</code> is set to <code>remote</code> so that the minion knows that file server and pillar data are to be gathered from the master. When setting the <code>file_client</code> option to <code>local</code> the minion is configured to not gather this data from the master. </p>
@@ -1260,9 +1260,9 @@ $ salt-call state.highstate
 <h3>Remote execution tutorial</h3>
 <p> <code>Before continuing</code> make sure you have a working Salt installation by following the <code>installation</code> and the <code>configuration</code> instructions.</p>
 <dl>
-<dt>Stuck?</p>
+<dt>Stuck?</dt>
 <dd>
-<p> There are many ways to get help from the Salt community including our <i>mailing list</i> and our <i>IRC channel</i> #salt.</dl>
+<p> There are many ways to get help from the Salt community including our <i>mailing list</i> and our <i>IRC channel</i> #salt.</dd></dl>
 <h3>Order your minions around</h3>
 <p> Now that you have a master and at least one minion communicating with each other you can perform commands on the minion via the <code>salt</code> command. Salt calls are comprised of three main components: </p>
 <pre>
@@ -1323,14 +1323,14 @@ salt '*' pip.install salt timeout=5 upgrade=True
 <p> <code>NOTE:</code> Grains and Pillar are sometimes confused, just remember that Grains are data about a minion which is stored or generated from the minion. This is why information like the OS and CPU type are found in Grains. Pillar is information about a minion or many minions stored or generated on the Salt Master. </p>
 <p> Pillar data is useful for:</p>
 <dl>
-<dt><code>Highly Sensitive Data:</code></p>
-<dd> Information transferred via pillar is guaranteed to only be presented to the minions that are targeted, making Pillar suitable for managing security information, such as cryptographic keys and passwords.</p>
-<dt><code>Minion Configuration:</code></p>
-<dd> Minion modules such as the execution modules, states, and returners can often be configured via data stored in pillar.</p>
-<dt><code>Variables:</code></p>
-<dd> Variables which need to be assigned to specific minions or groups of minions can be defined in pillar and then accessed inside sls formulas and template files.</p>
-<dt><code>Arbitrary Data:</code></p>
-<dd> Pillar can contain any basic data structure in dictionary format, so a key/value store can be defined making it easy to iterate over a group of values in sls formulas. </p>
+<dt><code>Highly Sensitive Data:</code></dt>
+<dd> Information transferred via pillar is guaranteed to only be presented to the minions that are targeted, making Pillar suitable for managing security information, such as cryptographic keys and passwords.</dd>
+<dt><code>Minion Configuration:</code></dt>
+<dd> Minion modules such as the execution modules, states, and returners can often be configured via data stored in pillar.</dd>
+<dt><code>Variables:</code></dt>
+<dd> Variables which need to be assigned to specific minions or groups of minions can be defined in pillar and then accessed inside sls formulas and template files.</dd>
+<dt><code>Arbitrary Data:</code></dt>
+<dd> Pillar can contain any basic data structure in dictionary format, so a key/value store can be defined making it easy to iterate over a group of values in sls formulas. </dd>
 <p> Pillar is therefore one of the most important systems when using Salt. This walkthrough is designed to get a simple Pillar up and running in a few minutes and then to dive into the capabilities of Pillar and where the data is available.</dl>
 <h3>Setting Up Pillar</h3>
 <p> The pillar is already running in Salt by default. To see the minion&#8217;s pillar data: </p>
@@ -1639,9 +1639,9 @@ mod_python:
 <p> The <code>custom-server.sls</code> file uses the extend statement to overwrite where the banner is being downloaded from, and therefore changing what file is being used to configure the banner. </p>
 <p> In the new mod_python SLS the mod_python package is added, but more importantly the apache service was extended to also watch the mod_python package.</p>
 <dl>
-<dt>Using extend with require or watch</p>
+<dt>Using extend with require or watch</dt>
 <dd>
-<p> The <code>extend</code> statement works differently for <code>require</code> or <code>watch</code>. It appends to, rather than replacing the requisite component.</dl>
+<p> The <code>extend</code> statement works differently for <code>require</code> or <code>watch</code>. It appends to, rather than replacing the requisite component.</dd></dl>
 <h3>Understanding the Render System</h3>
 <p> Since SLS data is simply that (data), it does not need to be represented with YAML. Salt defaults to YAML because it is very straightforward and easy to learn and use. But the SLS files can be rendered from almost any imaginable medium, so long as a renderer module is provided. </p>
 <p> The default rendering system is the <code>yaml_jinja</code> renderer. The <code>yaml_jinja</code> renderer will first pass the template through the <i>Jinja2</i> templating system, and then through the YAML parser. The benefit here is that full programming constructs are available when creating SLS files. </p>
@@ -1747,9 +1747,9 @@ django:
 <p> This tutorial will walk you through using Salt to configure a minion to run the Apache HTTP server and to ensure the server is running. </p>
 <p> <code>Before continuing</code> make sure you have a working Salt installation by following the <code>installation</code> and the <code>configuration</code> instructions.</p>
 <dl>
-<dt>Stuck?</p>
+<dt>Stuck?</dt>
 <dd>
-<p> There are many ways to get help from the Salt community including our <i>mailing list</i> and our <i>IRC channel</i> #salt.</dl>
+<p> There are many ways to get help from the Salt community including our <i>mailing list</i> and our <i>IRC channel</i> #salt.</dd></dl>
 <h3>Setting up the Salt State Tree</h3>
 <p> States are stored in text files on the master and transferred to the minions on demand via the master&#8217;s File Server. The collection of state files make up the <code>State Tree</code>. </p>
 <p> To start using a central state system in Salt, the Salt File Server must first be set up. Edit the master config file (<code>file_roots</code>) and uncomment the following lines: </p>
@@ -1773,7 +1773,7 @@ base:
 </pre>
 <p> The top file is separated into environments (discussed later). The default environment is <code>base</code>. Under the <code>base</code> environment a collection of minion matches is defined; for now simply specify all hosts (<code>*</code>).</p>
 <dl>
-<dt>Targeting minions</p>
+<dt>Targeting minions</dt>
 <dd>
 <p> The expressions can use any of the targeting mechanisms used by Salt â minions can be matched by glob, PCRE regular expression, or by <code>grains</code>. For example: </p>
 <pre>
@@ -1782,7 +1782,7 @@ base:
     - match: grain
     - webserver
 </pre>
-</dl>
+</dd></dl>
 <h3>Create an <code>sls</code> file</h3>
 <p> In the same directory as the top file, create a file named <code>webserver.sls</code>, containing the following: </p>
 <pre>
@@ -1795,11 +1795,11 @@ apache:                 # ID declaration
 <p> The second line, called the state-declaration, defines which of the Salt States we are using. In this example, we are using the <code>pkg state</code> to ensure that a given package is installed. </p>
 <p> The third line, called the function-declaration, defines which function in the <code>pkg state</code> module to call.</p>
 <dl>
-<dt>Renderers</p>
+<dt>Renderers</dt>
 <dd>
 <p> States <code>sls</code> files can be written in many formats. Salt requires only a simple data structure and is not concerned with how that data structure is built. Templating languages and <i>DSLs</i> are a dime-a-dozen and everyone has a favorite. </p>
 <p> Building the expected data structure is the job of Salt <code>renderers</code> and they are dead-simple to write. </p>
-<p> In this tutorial we will be using YAML in Jinja2 templates, which is the default format. The default can be changed by editing <code>renderer</code> in the master configuration file.</dl>
+<p> In this tutorial we will be using YAML in Jinja2 templates, which is the default format. The default can be changed by editing <code>renderer</code> in the master configuration file.</dd></dl>
 <h3>Install the package</h3>
 <p> Next, let&#8217;s run the state we created. Open a terminal on the master and run: </p>
 <pre>
@@ -1809,33 +1809,33 @@ apache:                 # ID declaration
 <p> Once completed, the minion will report back with a summary of all actions taken and all changes made. </p>
 <p> <code>WARNING:</code> If you have created custom grain modules, they will not be available in the top file until after the first <i>highstate</i>. To make custom grains available on a minion&#8217;s first highstate, it is recommended to use this example to ensure that the custom grains are synced when the minion starts.</p>
 <dl>
-<dt>SLS File Namespace</p>
+<dt>SLS File Namespace</dt>
 <dd>
 <p> Note that in the <i>example</i> above, the SLS file <code>webserver.sls</code> was referred to simply as <code>webserver</code>. The namespace for SLS files follows a few simple rules:</p>
-<dt>1.</p>
-<dd> The <code>.sls</code> is discarded (i.e. <code>webserver.sls</code> becomes <code>webserver</code>).</p>
-<dt>2.</p>
+</dd><dt>1.</dt>
+<dd> The <code>.sls</code> is discarded (i.e. <code>webserver.sls</code> becomes <code>webserver</code>).</dd>
+<dt>2.</dt>
 <dd>
-<dt><code>Subdirectories can be used for better organization.</code></p>
+</dd><dt><code>Subdirectories can be used for better organization.</code></dt>
 <dd>
-<dt>a.</p>
-<dd> Each subdirectory is represented by a dot.</p>
-<dt>b.</p>
-<dd> <code>webserver/dev.sls</code> is referred to as <code>webserver.dev</code>.</p>
-<dt>3.</p>
-<dd> A file called <code>init.sls</code> in a subdirectory is referred to by the path of the directory. So, <code>webserver/init.sls</code> is referred to as <code>webserver</code>.</p>
-<dt>4.</p>
-<dd> If both <code>webserver.sls</code> and <code>webserver/init.sls</code> happen to exist, <code>webserver/init.sls</code> will be ignored and <code>webserver.sls</code> will be the file referred to as <code>webserver</code>.</p>
-<dt>Troubleshooting Salt</p>
+</dd><dt>a.</dt>
+<dd> Each subdirectory is represented by a dot.</dd>
+<dt>b.</dt>
+<dd> <code>webserver/dev.sls</code> is referred to as <code>webserver.dev</code>.</dd>
+<dt>3.</dt>
+<dd> A file called <code>init.sls</code> in a subdirectory is referred to by the path of the directory. So, <code>webserver/init.sls</code> is referred to as <code>webserver</code>.</dd>
+<dt>4.</dt>
+<dd> If both <code>webserver.sls</code> and <code>webserver/init.sls</code> happen to exist, <code>webserver/init.sls</code> will be ignored and <code>webserver.sls</code> will be the file referred to as <code>webserver</code>.</dd>
+<dt>Troubleshooting Salt</dt>
 <dd>
 <p> If the expected output isn&#8217;t seen, the following tips can help to narrow down the problem.</p>
-<dt><code>Turn up logging</code></p>
-<dd> Salt can be quite chatty when you change the logging setting to <code>debug</code>: </p>
+</dd><dt><code>Turn up logging</code></dt>
+<dd> Salt can be quite chatty when you change the logging setting to <code>debug</code>: </dd>
 <pre>
 salt-minion -l debug
 </pre>
-<dt><code>Run the minion in the foreground</code></p>
-<dd> By not starting the minion in daemon mode (<code>-d</code>) one can view any output from the minion as it works: </p>
+<dt><code>Run the minion in the foreground</code></dt>
+<dd> By not starting the minion in daemon mode (<code>-d</code>) one can view any output from the minion as it works: </dd>
 <pre>
 salt-minion &amp;
 </pre>
@@ -1901,7 +1901,7 @@ salt '*' state.highstate
 </pre>
 <p> Verify that Apache is now serving your custom HTML.</p>
 <dl>
-<dt><code>require</code> vs. <code>watch</code></p>
+<dt><code>require</code> vs. <code>watch</code></dt>
 <dd>
 <p> There are two requisite-declaration, ârequireâ, and âwatchâ. Not every state supports âwatchâ. The <code>service state</code> does support âwatchâ and will restart a service based on the watch condition. </p>
 <p> For example, if you use Salt to install an Apache virtual host configuration file and want to restart Apache whenever that file is changed you could modify our Apache example from earlier as follows: </p>
@@ -1917,7 +1917,7 @@ apache:
     - require:
       - pkg: apache
 </pre>
-<p> If the pkg and service names differ on your OS or distro of choice you can specify each one separately using a name-declaration which explained in <code>Part 3</code>.</dl>
+<p> If the pkg and service names differ on your OS or distro of choice you can specify each one separately using a name-declaration which explained in <code>Part 3</code>.</dd></dl>
 <h3>Next steps</h3>
 <p> In <code>part 3</code> we will discuss how to use includes, extends, and templating to make a more complete State Tree configuration.</p>
 <h3>States tutorial, part 3 &#8211; Templating, Includes, Extends</h3>
@@ -2040,9 +2040,9 @@ extend:
     - source: <a href="salt://apache/httpd-vhosts.conf" rel="nofollow">salt://apache/httpd-vhosts.conf</a>
 </pre>
 <dl>
-<dt>Using extend with require or watch</p>
+<dt>Using extend with require or watch</dt>
 <dd>
-<p> The <code>extend</code> statement works differently for <code>require</code> or <code>watch</code>. It appends to, rather than replacing the requisite component.</dl>
+<p> The <code>extend</code> statement works differently for <code>require</code> or <code>watch</code>. It appends to, rather than replacing the requisite component.</dd></dl>
 <h3>Name declaration</h3>
 <p> You can override the id-declaration by using a name-declaration. For example, the previous example is a bit more maintainable if rewritten as follows: </p>
 <p> <code>apache/mywebsite.sls:</code> </p>
@@ -2183,10 +2183,10 @@ salt --pillar 'webserver_role:prod' state.sls webserver.foobarcom
 <p> <code>NOTE:</code> Orchestrate Deprecates OverState </p>
 <p> The Orchestrate Runner (originally called the state.sls runner) offers all the functionality of the OverState, but with some advantages:</p>
 <dl>
-<dt>&bull;</p>
-<dd> All <code>requisites</code> available in states can be used.</p>
-<dt>&bull;</p>
-<dd> The states/functions will also work on salt-ssh minions. </p>
+<dt>&bull;</dt>
+<dd> All <code>requisites</code> available in states can be used.</dd>
+<dt>&bull;</dt>
+<dd> The states/functions will also work on salt-ssh minions. </dd>
 <p> The Orchestrate Runner was added with the intent to eventually deprecate the OverState system, however the OverState will still be maintained until Salt Boron. </p>
 <p> The orchestrate runner generalizes the Salt state system to a Salt master context. Whereas the <code>state.sls</code>, <code>state.highstate</code>, et al functions are concurrently and independently executed on each Salt minion, the <code>state.orchestrate</code> runner is executed on the master, giving it a master-level view and control over requisites, such as state ordering and conditionals. This allows for inter minion requisites, like ordering the application of states on different minions that must not happen simultaneously, or for halting the state run on all minions if a minion fails one of its states. </p>
 <p> If you want to setup a load balancer in front of a cluster of web servers, for example, you can ensure the load balancer is setup before the web servers or stop the state run altogether if one of the minions does not set up correctly. </p>
@@ -2260,12 +2260,12 @@ webserver_setup:
 </pre>
 <p> Given the above setup, the orchestration will be carried out as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> The shell command <code>bootstrap</code> will be executed on all minions in the 10.0.0.0/24 subnet.</p>
-<dt>2.</p>
-<dd> A Highstate will be run on all minions whose ID starts with &quot;web&quot;, since the <code>storage_setup</code> state requires it.</p>
-<dt>3.</p>
-<dd> Finally, the <code>ceph</code> SLS target will be executed on all minions which have a grain called <code>role</code> with a value of <code>storage</code>.</dl>
+<dt>1.</dt>
+<dd> The shell command <code>bootstrap</code> will be executed on all minions in the 10.0.0.0/24 subnet.</dd>
+<dt>2.</dt>
+<dd> A Highstate will be run on all minions whose ID starts with &quot;web&quot;, since the <code>storage_setup</code> state requires it.</dd>
+<dt>3.</dt>
+<dd> Finally, the <code>ceph</code> SLS target will be executed on all minions which have a grain called <code>role</code> with a value of <code>storage</code>.</dd></dl>
 <h3>The OverState System</h3>
 <p> <code>WARNING:</code> The OverState runner is deprecated, and will be removed in the feature release of Salt codenamed Boron. (Three feature releases after 2014.7.0, which is codenamed Helium) </p>
 <p> Often, servers need to be set up and configured in a specific order, and systems should only be set up if systems earlier in the sequence have been set up without any issues. </p>
@@ -2292,12 +2292,12 @@ all:
 <p> <code>NOTE:</code> The <code>match</code> argument uses compound matching </p>
 <p> Given the above setup, the OverState will be carried out as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> The <code>mysql</code> stage will be executed first because it is required by the <code>webservers</code> and <code>all</code> stages. It will execute <code>state.sls</code> once for each of the two listed SLS targets (<code>mysql.server</code> and <code>drbd</code>). These states will be executed on all minions whose minion ID starts with &quot;db&quot;.</p>
-<dt>2.</p>
-<dd> The <code>webservers</code> stage will then be executed, but only if the <code>mysql</code> stage executes without any failures. The <code>webservers</code> stage will execute a <code>state.highstate</code> on all minions whose minion IDs start with &quot;web&quot;.</p>
-<dt>3.</p>
-<dd> Finally, the <code>all</code> stage will execute, running <code>state.highstate</code> on all systems, if, and only if the <code>mysql</code> and <code>webservers</code> stages completed without any failures. </p>
+<dt>1.</dt>
+<dd> The <code>mysql</code> stage will be executed first because it is required by the <code>webservers</code> and <code>all</code> stages. It will execute <code>state.sls</code> once for each of the two listed SLS targets (<code>mysql.server</code> and <code>drbd</code>). These states will be executed on all minions whose minion ID starts with &quot;db&quot;.</dd>
+<dt>2.</dt>
+<dd> The <code>webservers</code> stage will then be executed, but only if the <code>mysql</code> stage executes without any failures. The <code>webservers</code> stage will execute a <code>state.highstate</code> on all minions whose minion IDs start with &quot;web&quot;.</dd>
+<dt>3.</dt>
+<dd> Finally, the <code>all</code> stage will execute, running <code>state.highstate</code> on all systems, if, and only if the <code>mysql</code> and <code>webservers</code> stages completed without any failures. </dd>
 <p> Any failure in the above steps would cause the requires to fail, preventing the dependent stages from executing.</dl>
 <h3>Using Functions with OverState</h3>
 <p> In the above example, you&#8217;ll notice that the stages lacking an <code>sls</code> entry run a <code>state.highstate</code>. As mentioned earlier, it is also possible to execute other functions in a stage. This functionality was added in version 0.15.0. </p>
@@ -2326,12 +2326,12 @@ salt-run state.over dev /root/other-overstate.sls
 <h3>Overview</h3>
 <p> Syslog_ng state module is for generating syslog-ng configurations. You can do the following things:</p>
 <dl>
-<dt>&bull;</p>
-<dd> generate syslog-ng configuration from YAML,</p>
-<dt>&bull;</p>
-<dd> use non-YAML configuration,</p>
-<dt>&bull;</p>
-<dd> start, stop or reload syslog-ng. </p>
+<dt>&bull;</dt>
+<dd> generate syslog-ng configuration from YAML,</dd>
+<dt>&bull;</dt>
+<dd> use non-YAML configuration,</dd>
+<dt>&bull;</dt>
+<dd> start, stop or reload syslog-ng. </dd>
 <p> There is also an execution module, which can check the syntax of the configuration, get the version and other information about syslog-ng.</dl>
 <h3>Configuration</h3>
 <p> Users can create syslog-ng configuration statements with the <code>syslog_ng.config</code> function. It requires a <i>name</i> and a <i>config</i> parameter. The <i>name</i> parameter determines the name of the generated statement and the <i>config</i> parameter holds a parsed YAML structure. </p>
@@ -2356,12 +2356,12 @@ s_localhost:
 <p> The first one is called short form, because it needs less typing. Users can use lists and dictionaries to specify their configuration. The format is quite self describing and there are more examples [at the end](#examples) of this document.</p>
 <h3>Quotation</h3>
 <dl>
-<dt><code>The quotation can be tricky sometimes but here are some rules to follow:</code></p>
+<dt><code>The quotation can be tricky sometimes but here are some rules to follow:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> when a string meant to be <code>&quot;string&quot;</code> in the generated configuration, it should be like <code>&#8216;&quot;string&quot;&#8217;</code> in the YAML document</p>
-<dt>&bull;</p>
-<dd> similarly, users should write <code>&quot;&#8217;string&#8217;&quot;</code> to get <code>&#8216;string&#8217;</code> in the generated configuration</dl>
+</dd><dt>&bull;</dt>
+<dd> when a string meant to be <code>&quot;string&quot;</code> in the generated configuration, it should be like <code>&#8216;&quot;string&quot;&#8217;</code> in the YAML document</dd>
+<dt>&bull;</dt>
+<dd> similarly, users should write <code>&quot;&#8217;string&#8217;&quot;</code> to get <code>&#8216;string&#8217;</code> in the generated configuration</dd></dl>
 <h3>Full example</h3>
 <p> The following configuration is an example, how a complete syslog-ng configuration looks like: </p>
 <pre>
@@ -2666,12 +2666,12 @@ l_gsoc2014:
 <h3>SaltStack Walk-through</h3>
 <p> <code>NOTE:</code> Welcome to SaltStack! I am excited that you are interested in Salt and starting down the path to better infrastructure management. I developed (and am continuing to develop) Salt with the goal of making the best software available to manage computers of almost any kind. I hope you enjoy working with Salt and that the software can solve your real world needs!</p>
 <dl>
-<dt>&bull;</p>
-<dd> Thomas S Hatch</p>
-<dt>&bull;</p>
-<dd> Salt creator and Chief Developer</p>
-<dt>&bull;</p>
-<dd> CTO of SaltStack, Inc.</dl>
+<dt>&bull;</dt>
+<dd> Thomas S Hatch</dd>
+<dt>&bull;</dt>
+<dd> Salt creator and Chief Developer</dd>
+<dt>&bull;</dt>
+<dd> CTO of SaltStack, Inc.</dd></dl>
 <h3>Getting Started</h3>
 <h3>What is Salt?</h3>
 <p> Salt is a different approach to infrastructure management, founded on the idea that high-speed communication with large numbers of systems can open up new capabilities. This approach makes Salt a powerful multitasking system that can solve many specific problems in an infrastructure. </p>
@@ -2725,12 +2725,12 @@ salt-minion -l debug
 </pre>
 <p> When the minion is started, it will generate an <code>id</code> value, unless it has been generated on a previous run and cached in the configuration directory, which is <code>/etc/salt</code> by default. This is the name by which the minion will attempt to authenticate to the master. The following steps are attempted, in order to try to find a value that is not <code>localhost</code>:</p>
 <dl>
-<dt>1.</p>
-<dd> The Python function <code>socket.getfqdn()</code> is run</p>
-<dt>2.</p>
-<dd> <code>/etc/hostname</code> is checked (non-Windows only)</p>
-<dt>3.</p>
-<dd> <code>/etc/hosts</code> (<code>%WINDIR%\system32\drivers\etc\hosts</code> on Windows hosts) is checked for hostnames that map to anything within <code>127.0.0.0/8</code>. </p>
+<dt>1.</dt>
+<dd> The Python function <code>socket.getfqdn()</code> is run</dd>
+<dt>2.</dt>
+<dd> <code>/etc/hostname</code> is checked (non-Windows only)</dd>
+<dt>3.</dt>
+<dd> <code>/etc/hosts</code> (<code>%WINDIR%\system32\drivers\etc\hosts</code> on Windows hosts) is checked for hostnames that map to anything within <code>127.0.0.0/8</code>. </dd>
 <p> If none of the above are able to produce an id which is not <code>localhost</code>, then a sorted list of IP addresses on the minion (excluding any within <code>127.0.0.0/8</code>) is inspected. The first publicly-routable IP address is used, if there is one. Otherwise, the first privately-routable IP address is used. </p>
 <p> If all else fails, then <code>localhost</code> is used as a fallback. </p>
 <p> <code>NOTE:</code> Overriding the <code>id</code> </p>
@@ -2830,18 +2830,18 @@ salt '*' network.interfaces
 <p> Salt allows for minions to be targeted based on a wide range of criteria. The default targeting system uses globular expressions to match minions, hence if there are minions named <code>larry1</code>, <code>larry2</code>, <code>curly1</code>, and <code>curly2</code>, a glob of <code>larry*</code> will match <code>larry1</code> and <code>larry2</code>, and a glob of <code>*1</code> will match <code>larry1</code> and <code>curly1</code>. </p>
 <p> Many other targeting systems can be used other than globs, these systems include:</p>
 <dl>
-<dt><code>Regular Expressions</code></p>
-<dd> Target using PCRE-compliant regular expressions</p>
-<dt><code>Grains</code></p>
-<dd> Target based on grains data: <code>Targeting with Grains</code></p>
-<dt><code>Pillar</code></p>
-<dd> Target based on pillar data: <code>Targeting with Pillar</code></p>
-<dt><code>IP</code></p>
-<dd> Target based on IP address/subnet/range</p>
-<dt><code>Compound</code></p>
-<dd> Create logic to target based on multiple targets: <code>Targeting with Compound</code></p>
-<dt><code>Nodegroup</code></p>
-<dd> Target with nodegroups: <code>Targeting with Nodegroup</code> </p>
+<dt><code>Regular Expressions</code></dt>
+<dd> Target using PCRE-compliant regular expressions</dd>
+<dt><code>Grains</code></dt>
+<dd> Target based on grains data: <code>Targeting with Grains</code></dd>
+<dt><code>Pillar</code></dt>
+<dd> Target based on pillar data: <code>Targeting with Pillar</code></dd>
+<dt><code>IP</code></dt>
+<dd> Target based on IP address/subnet/range</dd>
+<dt><code>Compound</code></dt>
+<dd> Create logic to target based on multiple targets: <code>Targeting with Compound</code></dd>
+<dt><code>Nodegroup</code></dt>
+<dd> Target with nodegroups: <code>Targeting with Nodegroup</code> </dd>
 <p> The concepts of targets are used on the command line with Salt, but also function in many other areas as well, including the state system and the systems used for ACLs and user permissions.</dl>
 <h3>Passing in Arguments</h3>
 <p> Many of the functions available accept arguments which can be passed in on the command line: </p>
@@ -2924,31 +2924,31 @@ vim:
 <h3>Next Reading</h3>
 <p> Two walk-throughs are specifically recommended at this point. First, a deeper run through States, followed by an explanation of Pillar.</p>
 <dl>
-<dt>1.</p>
-<dd> <code>Starting States</code></p>
-<dt>2.</p>
-<dd> <code>Pillar Walkthrough</code> </p>
+<dt>1.</dt>
+<dd> <code>Starting States</code></dd>
+<dt>2.</dt>
+<dd> <code>Pillar Walkthrough</code> </dd>
 <p> An understanding of Pillar is extremely helpful in using States.</dl>
 <h3>Getting Deeper Into States</h3>
 <p> Two more in-depth States tutorials exist, which delve much more deeply into States functionality.</p>
 <dl>
-<dt>1.</p>
-<dd> <code>How Do I Use Salt States?</code>, covers much more to get off the ground with States.</p>
-<dt>2.</p>
-<dd> The <code>States Tutorial</code> also provides a fantastic introduction. </p>
+<dt>1.</dt>
+<dd> <code>How Do I Use Salt States?</code>, covers much more to get off the ground with States.</dd>
+<dt>2.</dt>
+<dd> The <code>States Tutorial</code> also provides a fantastic introduction. </dd>
 <p> These tutorials include much more in-depth information including templating SLS formulas etc.</dl>
 <h3>So Much More!</h3>
 <p> This concludes the initial Salt walk-through, but there are many more things still to learn! These documents will cover important core aspects of Salt:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Pillar</code></p>
-<dt>&bull;</p>
-<dd> <code>Job Management</code> </p>
+<dt>&bull;</dt>
+<dd> <code>Pillar</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Job Management</code> </dd>
 <p> A few more tutorials are also available:</p>
-<dt>&bull;</p>
-<dd> <code>Remote Execution Tutorial</code></p>
-<dt>&bull;</p>
-<dd> <code>Standalone Minion</code> </p>
+<dt>&bull;</dt>
+<dd> <code>Remote Execution Tutorial</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Standalone Minion</code> </dd>
 <p> This still is only scratching the surface, many components such as the reactor and event systems, extending Salt, modular components and more are not covered here. For an overview of all Salt features and documentation, look at the <code>Table of Contents</code>.</dl>
 <h3>MinionFS Backend Walkthrough</h3>
 <h3>Propagating Files</h3>
@@ -3008,8 +3008,8 @@ file_recv: True
                                                                                                                 minion &#8211;<br />
                                                                                                                 destination : new</p>
 <dl>
-<dt>[*]</p>
-<dd> Yes, that was the actual key on my server, but the server is already destroyed.</dl>
+<dt>[*]</dt>
+<dd> Yes, that was the actual key on my server, but the server is already destroyed.</dd></dl>
 <h3>Automatic Updates / Frozen Deployments</h3>
 <p> New in version 0.10.3.d. </p>
 <p> Salt has support for the <i>Esky</i> application freezing and update tool. This tool allows one to build a complete zipfile out of the salt scripts and all their dependencies &#8211; including shared objects / DLLs.</p>
@@ -3048,18 +3048,18 @@ python setup.py bdist_esky
 <p> In 0.16.0, the masters do not share any information, keys need to be accepted on both masters, and shared files need to be shared manually or use tools like the git fileserver backend to ensure that the <code>file_roots</code> are kept consistent.</p>
 <h3>Summary of Steps</h3>
 <dl>
-<dt>1.</p>
-<dd> Create a redundant master server</p>
-<dt>2.</p>
-<dd> Copy primary master key to redundant master</p>
-<dt>3.</p>
-<dd> Start redundant master</p>
-<dt>4.</p>
-<dd> Configure minions to connect to redundant master</p>
-<dt>5.</p>
-<dd> Restart minions</p>
-<dt>6.</p>
-<dd> Accept keys on redundant master</dl>
+<dt>1.</dt>
+<dd> Create a redundant master server</dd>
+<dt>2.</dt>
+<dd> Copy primary master key to redundant master</dd>
+<dt>3.</dt>
+<dd> Start redundant master</dd>
+<dt>4.</dt>
+<dd> Configure minions to connect to redundant master</dd>
+<dt>5.</dt>
+<dd> Restart minions</dd>
+<dt>6.</dt>
+<dd> Accept keys on redundant master</dd></dl>
 <h3>Prepping a Redundant Master</h3>
 <p> The first task is to prepare the redundant master. If the redundant master is already running, stop it. There is only one requirement when preparing a redundant master, which is that masters share the same private key. When the first master was created, the master&#8217;s identifying key pair was generated and placed in the master&#8217;s <code>pki_dir</code>. The default location of the master&#8217;s key pair is <code>/etc/salt/pki/master/</code>. Take the private key, <code>master.pem</code>, and copy it to the same location on the redundant master. Do the same for the master&#8217;s public key, <code>master.pub</code>. Assuming that no minions have yet been connected to the new redundant master, it is safe to delete any existing key in this location and replace it. </p>
 <p> <code>NOTE:</code> There is no logical limit to the number of redundant masters that can be used. </p>
@@ -3089,26 +3089,26 @@ master:
 <p> While reasons may exist to maintain separate master configurations, it is wise to remember that each master maintains independent control over minions. Therefore, access controls should be in sync between masters unless a valid reason otherwise exists to keep them inconsistent. </p>
 <p> These access control options include but are not limited to:</p>
 <dl>
-<dt>&bull;</p>
-<dd> external_auth</p>
-<dt>&bull;</p>
-<dd> client_acl</p>
-<dt>&bull;</p>
-<dd> peer</p>
-<dt>&bull;</p>
-<dd> peer_run</dl>
+<dt>&bull;</dt>
+<dd> external_auth</dd>
+<dt>&bull;</dt>
+<dd> client_acl</dd>
+<dt>&bull;</dt>
+<dd> peer</dd>
+<dt>&bull;</dt>
+<dd> peer_run</dd></dl>
 <h3>Multi-Master-PKI Tutorial With Failover</h3>
 <p> This tutorial will explain, how to run a salt-environment where a single minion can have multiple masters and fail-over between them if its current master fails. </p>
 <p> The individual steps are</p>
 <dl>
-<dt>&bull;</p>
-<dd> setup the master(s) to sign its auth-replies</p>
-<dt>&bull;</p>
-<dd> setup minion(s) to verify master-public-keys</p>
-<dt>&bull;</p>
-<dd> enable multiple masters on minion(s)</p>
-<dt>&bull;</p>
-<dd> enable master-check on minion(s) Please note, that it is advised to have good knowledge of the salt- authentication and communication-process to understand this tutorial. All of the settings described here, go on top of the default authentication/communication process.</dl>
+<dt>&bull;</dt>
+<dd> setup the master(s) to sign its auth-replies</dd>
+<dt>&bull;</dt>
+<dd> setup minion(s) to verify master-public-keys</dd>
+<dt>&bull;</dt>
+<dd> enable multiple masters on minion(s)</dd>
+<dt>&bull;</dt>
+<dd> enable master-check on minion(s) Please note, that it is advised to have good knowledge of the salt- authentication and communication-process to understand this tutorial. All of the settings described here, go on top of the default authentication/communication process.</dd></dl>
 <h3>Motivation</h3>
 <p> The default behaviour of a salt-minion is to connect to a master and accept the masters public key. With each publication, the master sends his public-key for the minion to check and if this public-key ever changes, the minion complains and exits. Practically this means, that there can only be a single master at any given time. </p>
 <p> Would it not be much nicer, if the minion could have any number of masters (1:n) and jump to the next master if its current master died because of a network or hardware failure? </p>
@@ -3167,10 +3167,10 @@ always_verify_signature: True
 <h3>Multiple Masters For A Minion</h3>
 <p> Configuring multiple masters on a minion is done by specifying two settings:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a list of masters addresses</p>
-<dt>&bull;</p>
-<dd> what type of master is defined </p>
+<dt>&bull;</dt>
+<dd> a list of masters addresses</dd>
+<dt>&bull;</dt>
+<dd> what type of master is defined </dd>
 <pre>
 master:
     - 172.16.0.10
@@ -3281,22 +3281,22 @@ M2Cryptos EVP.verify_update().
 <p> salt-api exposes an HTTP call to Salt&#8217;s REST API to <code>generate and download the new minion keys as a tarball</code>. </p>
 <p> There is a general four step process to do this:</p>
 <dl>
-<dt>1.</p>
-<dd> Generate the keys on the master: </p>
+<dt>1.</dt>
+<dd> Generate the keys on the master: </dd>
 <p>root[at] saltmaster #salt &#8211; key&#8211; gen &#8211; keys = [key_name]</p>
 <p> Pick a name for the key, such as the minion&#8217;s id.</p>
-<dt>2.</p>
-<dd> Add the public key to the accepted minion folder: </p>
+<dt>2.</dt>
+<dd> Add the public key to the accepted minion folder: </dd>
 <p>root[at] saltmaster #cp key_name.pub / etc / salt / pki / master / minions / [minion_id]</p>
 <p> It is necessary that the public key file has the same name as your minion id. This is how Salt matches minions with their keys. Also note that the pki folder could be in a different location, depending on your OS or if specified in the master config file.</p>
-<dt>3.</p>
-<dd> Distribute the minion keys. </p>
+<dt>3.</dt>
+<dd> Distribute the minion keys. </dd>
 <p> There is no single method to get the keypair to your minion. The difficulty is finding a distribution method which is secure. For Amazon EC2 only, an AWS best practice is to use IAM Roles to pass credentials. (See blog post, <i><a rel="nofollow noopener" href="http://blogs.aws.amazon.com/security/post/Tx610S2MLVZWEA/Using-IAM-roles-to-distribute-non-AWS-credentials-to-your-EC2-instances" target="_blank">http://blogs.aws.amazon.com/security/post/Tx610S2MLVZWEA/Using-IAM-roles-to-distribute-non-AWS-credentials-to-your-EC2-instances</a></i> )</p>
-<dt>Security Warning</p>
+<dt>Security Warning</dt>
 <dd>
 <p> Since the minion key is already accepted on the master, distributing the private key poses a potential security risk. A malicious party will have access to your entire state tree and other sensitive data if they gain access to a preseeded minion key.</p>
-<dt>4.</p>
-<dd> Preseed the Minion with the keys </p>
+</dd><dt>4.</dt>
+<dd> Preseed the Minion with the keys </dd>
 <p> You will want to place the minion keys before starting the salt-minion daemon: </p>
 <pre>
 /etc/salt/pki/minion/minion.pem
@@ -3307,42 +3307,42 @@ M2Cryptos EVP.verify_update().
 <p> The Salt Bootstrap script allows for a user to install the Salt Minion or Master on a variety of system distributions and versions. This shell script known as <code>bootstrap-salt.sh</code> runs through a series of checks to determine the operating system type and version. It then installs the Salt binaries using the appropriate methods. The Salt Bootstrap script installs the minimum number of packages required to run Salt. This means that in the event you run the bootstrap to install via package, Git will not be installed. Installing the minimum number of packages helps ensure the script stays as lightweight as possible, assuming the user will install any other required packages after the Salt binaries are present on the system. The script source is available on GitHub: <i><a rel="nofollow noopener" href="https://github.com/saltstack/salt-bootstrap" target="_blank">https://github.com/saltstack/salt-bootstrap</a></i></p>
 <h3>Supported Operating Systems</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Amazon Linux 2012.09</p>
-<dt>&bull;</p>
-<dd> Arch</p>
-<dt>&bull;</p>
-<dd> CentOS 5/6</p>
-<dt>&bull;</p>
-<dd> Debian 6.x/7.x/8(git installations only)</p>
-<dt>&bull;</p>
-<dd> Fedora 17/18</p>
-<dt>&bull;</p>
-<dd> FreeBSD 9.1/9.2/10</p>
-<dt>&bull;</p>
-<dd> Gentoo</p>
-<dt>&bull;</p>
-<dd> Linaro</p>
-<dt>&bull;</p>
-<dd> Linux Mint 13/14</p>
-<dt>&bull;</p>
-<dd> OpenSUSE 12.x</p>
-<dt>&bull;</p>
-<dd> Oracle Linux 5/5</p>
-<dt>&bull;</p>
-<dd> Red Hat 5/6</p>
-<dt>&bull;</p>
-<dd> Red Hat Enterprise 5/6</p>
-<dt>&bull;</p>
-<dd> Scientific Linux 5/6</p>
-<dt>&bull;</p>
-<dd> SmartOS</p>
-<dt>&bull;</p>
-<dd> SuSE 11 SP1/11 SP2</p>
-<dt>&bull;</p>
-<dd> Ubuntu 10.x/11.x/12.x/13.04/13.10</p>
-<dt>&bull;</p>
-<dd> Elementary OS 0.2 </p>
+<dt>&bull;</dt>
+<dd> Amazon Linux 2012.09</dd>
+<dt>&bull;</dt>
+<dd> Arch</dd>
+<dt>&bull;</dt>
+<dd> CentOS 5/6</dd>
+<dt>&bull;</dt>
+<dd> Debian 6.x/7.x/8(git installations only)</dd>
+<dt>&bull;</dt>
+<dd> Fedora 17/18</dd>
+<dt>&bull;</dt>
+<dd> FreeBSD 9.1/9.2/10</dd>
+<dt>&bull;</dt>
+<dd> Gentoo</dd>
+<dt>&bull;</dt>
+<dd> Linaro</dd>
+<dt>&bull;</dt>
+<dd> Linux Mint 13/14</dd>
+<dt>&bull;</dt>
+<dd> OpenSUSE 12.x</dd>
+<dt>&bull;</dt>
+<dd> Oracle Linux 5/5</dd>
+<dt>&bull;</dt>
+<dd> Red Hat 5/6</dd>
+<dt>&bull;</dt>
+<dd> Red Hat Enterprise 5/6</dd>
+<dt>&bull;</dt>
+<dd> Scientific Linux 5/6</dd>
+<dt>&bull;</dt>
+<dd> SmartOS</dd>
+<dt>&bull;</dt>
+<dd> SuSE 11 SP1/11 SP2</dd>
+<dt>&bull;</dt>
+<dd> Ubuntu 10.x/11.x/12.x/13.04/13.10</dd>
+<dt>&bull;</dt>
+<dd> Elementary OS 0.2 </dd>
 <p> <code>NOTE:</code> In the event you do not see your distribution or version available please review the develop branch on Github as it main contain updates that are not present in the stable release: <i><a rel="nofollow noopener" href="https://github.com/saltstack/salt-bootstrap/tree/develop" target="_blank">https://github.com/saltstack/salt-bootstrap/tree/develop</a></i></dl>
 <h3>Example Usage</h3>
 <p> If you&#8217;re looking for the <i>one-liner</i> to install salt, please scroll to the bottom and use the instructions for <i>Installing via an Insecure One-Liner</i> </p>
@@ -3545,14 +3545,14 @@ rm -rf /var/cache/salt/master{,/file_lists}/gitfs
 <h3>Simple Configuration</h3>
 <p> To use the gitfs backend, only two configuration changes are required on the master:</p>
 <dl>
-<dt>1.</p>
-<dd> Include <code>git</code> in the <code>fileserver_backend</code> list in the master config file: </p>
+<dt>1.</dt>
+<dd> Include <code>git</code> in the <code>fileserver_backend</code> list in the master config file: </dd>
 <pre>
 fileserver_backend:
   - git
 </pre>
-<dt>2.</p>
-<dd> Specify one or more <code>git://</code>, <code>https://</code>, <code>file://</code>, or <code>ssh://</code> URLs in <code>gitfs_remotes</code> to configure which repositories to cache and search for requested files: </p>
+<dt>2.</dt>
+<dd> Specify one or more <code>git://</code>, <code>https://</code>, <code>file://</code>, or <code>ssh://</code> URLs in <code>gitfs_remotes</code> to configure which repositories to cache and search for requested files: </dd>
 <pre>
 gitfs_remotes:
   - <a rel="nofollow noopener" href="https://github.com/saltstack-formulas/salt-formula.git" target="_blank">https://github.com/saltstack-formulas/salt-formula.git</a>
@@ -3565,8 +3565,8 @@ gitfs_remotes:
 </pre>
 <p> Information on how to authenticate to SSH remotes can be found <i>here</i>. </p>
 <p> <code>NOTE:</code> Dulwich does not recognize <code>ssh://</code> URLs, <code>git+ssh://</code> must be used instead. Salt version 2015.5.0 and later will automatically add the <code>git+</code> to the beginning of these URLs before fetching, but earlier Salt versions will fail to fetch unless the URL is specified using <code>git+ssh://</code>.</p>
-<dt>3.</p>
-<dd> Restart the master to load the new configuration. </p>
+<dt>3.</dt>
+<dd> Restart the master to load the new configuration. </dd>
 <p> <code>NOTE:</code> In a master/minion setup, files from a gitfs remote are cached once by the master, so minions do not need direct access to the git repository.</dl>
 <h3>Multiple Remotes</h3>
 <p> The <code>gitfs_remotes</code> option accepts an ordered list of git remotes to cache and search, in listed order, for requested files. </p>
@@ -3594,10 +3594,10 @@ third:
 </pre>
 <p> Salt will attempt to lookup the requested file from each gitfs remote repository in the order in which they are defined in the configuration. The <code><a href="git://github.com/example/first.git" rel="nofollow noopener" target="_blank">git://github.com/example/first.git</a></code> remote will be searched first. If the requested file is found, then it is served and no further searching is executed. For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd> A request for the file <code><a href="salt://haproxy/init.sls" rel="nofollow">salt://haproxy/init.sls</a></code> will be served from the <code><a rel="nofollow noopener" href="https://github.com/example/second.git" target="_blank">https://github.com/example/second.git</a></code> git repo.</p>
-<dt>&bull;</p>
-<dd> A request for the file <code><a href="salt://haproxy/haproxy.conf" rel="nofollow">salt://haproxy/haproxy.conf</a></code> will be served from the <code>file:///root/third</code> repo. </p>
+<dt>&bull;</dt>
+<dd> A request for the file <code><a href="salt://haproxy/init.sls" rel="nofollow">salt://haproxy/init.sls</a></code> will be served from the <code><a rel="nofollow noopener" href="https://github.com/example/second.git" target="_blank">https://github.com/example/second.git</a></code> git repo.</dd>
+<dt>&bull;</dt>
+<dd> A request for the file <code><a href="salt://haproxy/haproxy.conf" rel="nofollow">salt://haproxy/haproxy.conf</a></code> will be served from the <code>file:///root/third</code> repo. </dd>
 <p> <code>NOTE:</code> This example is purposefully contrived to illustrate the behavior of the gitfs backend. This example should not be read as a recommended way to lay out files and git repos. </p>
 <p> The <code>file://</code> prefix denotes a git repository in a local directory. However, it will still use the given <code>file://</code> URL as a remote, rather than copying the git repo to the salt cache. This means that any refs you want accessible must exist as <i>local</i> refs in the specified repo. </p>
 <p> <code>WARNING:</code> Salt versions prior to 2014.1.0 are not tolerant of changing the order of remotes or modifying the URI of existing remotes. In those versions, when modifying remotes it is a good idea to remove the gitfs cache directory (<code>/var/cache/salt/master/gitfs</code>) before restarting the salt-master service.</dl>
@@ -3605,24 +3605,24 @@ third:
 <p> New in version 2014.7.0. </p>
 <p> The following master config parameters are global (that is, they apply to all configured gitfs remotes):</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>gitfs_base</code></p>
-<dt>&bull;</p>
-<dd> <code>gitfs_root</code></p>
-<dt>&bull;</p>
-<dd> <code>gitfs_mountpoint</code> (new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_user</code> (<code>pygit2 only</code>, new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_password</code> (<code>pygit2 only</code>, new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_insecure_auth</code> (<code>pygit2 only</code>, new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_pubkey</code> (<code>pygit2 only</code>, new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_privkey</code> (<code>pygit2 only</code>, new in 2014.7.0)</p>
-<dt>&bull;</p>
-<dd> <code>gitfs_passphrase</code> (<code>pygit2 only</code>, new in 2014.7.0) </p>
+<dt>&bull;</dt>
+<dd> <code>gitfs_base</code></dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_root</code></dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_mountpoint</code> (new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_user</code> (<code>pygit2 only</code>, new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_password</code> (<code>pygit2 only</code>, new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_insecure_auth</code> (<code>pygit2 only</code>, new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_pubkey</code> (<code>pygit2 only</code>, new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_privkey</code> (<code>pygit2 only</code>, new in 2014.7.0)</dd>
+<dt>&bull;</dt>
+<dd> <code>gitfs_passphrase</code> (<code>pygit2 only</code>, new in 2014.7.0) </dd>
 <p> These parameters can now be overridden on a per-remote basis. This allows for a tremendous amount of customization. Here&#8217;s some example usage: </p>
 <pre>
 gitfs_provider: pygit2
@@ -3640,19 +3640,19 @@ gitfs_remotes:
     - insecure_auth: True
 </pre>
 <p> <code>IMPORTANT:</code> There are two important distinctions which should be noted for per-remote configuration:</p>
-<dt>1.</p>
-<dd> The URL of a remote which has per-remote configuration must be suffixed with a colon.</p>
-<dt>2.</p>
-<dd> Per-remote configuration parameters are named like the global versions, with the <code>gitfs_</code> removed from the beginning. </p>
+<dt>1.</dt>
+<dd> The URL of a remote which has per-remote configuration must be suffixed with a colon.</dd>
+<dt>2.</dt>
+<dd> Per-remote configuration parameters are named like the global versions, with the <code>gitfs_</code> removed from the beginning. </dd>
 <p> In the example configuration above, the following is true:</p>
-<dt>1.</p>
-<dd> The first and third gitfs remotes will use the <code>develop</code> branch/tag as the <code>base</code> environment, while the second one will use the <code>salt-base</code> branch/tag as the <code>base</code> environment.</p>
-<dt>2.</p>
-<dd> The first remote will serve all files in the repository. The second remote will only serve files from the <code>salt</code> directory (and its subdirectories), while the third remote will only serve files from the <code>salt/states</code> directory (and its subdirectories).</p>
-<dt>3.</p>
-<dd> The files from the second remote will be located under <code><a href="salt://foo/bar/baz" rel="nofollow">salt://foo/bar/baz</a></code>, while the files from the first and third remotes will be located under the root of the Salt fileserver namespace (<code>salt://</code>).</p>
-<dt>4.</p>
-<dd> The third remote overrides the default behavior of <i>not authenticating to insecure (non-HTTPS) remotes</i>.</dl>
+<dt>1.</dt>
+<dd> The first and third gitfs remotes will use the <code>develop</code> branch/tag as the <code>base</code> environment, while the second one will use the <code>salt-base</code> branch/tag as the <code>base</code> environment.</dd>
+<dt>2.</dt>
+<dd> The first remote will serve all files in the repository. The second remote will only serve files from the <code>salt</code> directory (and its subdirectories), while the third remote will only serve files from the <code>salt/states</code> directory (and its subdirectories).</dd>
+<dt>3.</dt>
+<dd> The files from the second remote will be located under <code><a href="salt://foo/bar/baz" rel="nofollow">salt://foo/bar/baz</a></code>, while the files from the first and third remotes will be located under the root of the Salt fileserver namespace (<code>salt://</code>).</dd>
+<dt>4.</dt>
+<dd> The third remote overrides the default behavior of <i>not authenticating to insecure (non-HTTPS) remotes</i>.</dd></dl>
 <h3>Serving from a Subdirectory</h3>
 <p> The <code>gitfs_root</code> parameter allows files to be served from a subdirectory within the repository. This allows for only part of a repository to be exposed to the Salt fileserver. </p>
 <p> Assume the below layout: </p>
@@ -3724,12 +3724,12 @@ gitfs_env_whitelist:
 <p> <code>NOTE:</code> <code>v1.*</code>, in this example, will match as both a glob and a regular expression (though it will have been matched as a glob, since globs are evaluated before regular expressions). </p>
 <p> The behavior of the blacklist/whitelist will differ depending on which combination of the two options is used:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If only <code>gitfs_env_whitelist</code> is used, then <code>only</code> branches/tags which match the whitelist will be available as environments</p>
-<dt>&bull;</p>
-<dd> If only <code>gitfs_env_blacklist</code> is used, then the branches/tags which match the blacklist will <code>not</code> be available as environments</p>
-<dt>&bull;</p>
-<dd> If both are used, then the branches/tags which match the whitelist, but do <code>not</code> match the blacklist, will be available as environments.</dl>
+<dt>&bull;</dt>
+<dd> If only <code>gitfs_env_whitelist</code> is used, then <code>only</code> branches/tags which match the whitelist will be available as environments</dd>
+<dt>&bull;</dt>
+<dd> If only <code>gitfs_env_blacklist</code> is used, then the branches/tags which match the blacklist will <code>not</code> be available as environments</dd>
+<dt>&bull;</dt>
+<dd> If both are used, then the branches/tags which match the whitelist, but do <code>not</code> match the blacklist, will be available as environments.</dd></dl>
 <h3>Authentication</h3>
 <h3>pygit2</h3>
 <p> New in version 2014.7.0. </p>
@@ -3754,10 +3754,10 @@ gitfs_remotes:
 <h3>SSH</h3>
 <p> SSH repositories can be configured using the <code>ssh://</code> protocol designation, or using scp-like syntax. So, the following two configurations are equivalent:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code><a href="ssh://git@github.com/user/repo.git" rel="nofollow noopener" target="_blank">ssh://git@github.com/user/repo.git</a></code></p>
-<dt>&bull;</p>
-<dd> <code>git [at] github.com:user/repo.git</code> </p>
+<dt>&bull;</dt>
+<dd> <code><a href="ssh://git@github.com/user/repo.git" rel="nofollow noopener" target="_blank">ssh://git@github.com/user/repo.git</a></code></dd>
+<dt>&bull;</dt>
+<dd> <code>git [at] github.com:user/repo.git</code> </dd>
 <p> Both <code>gitfs_pubkey</code> and <code>gitfs_privkey</code> (or their <i>per-remote counterparts</i>) must be configured in order to authenticate to SSH-based repos. If the private key is protected with a passphrase, it can be configured using <code>gitfs_passphrase</code> (or simply <code>passphrase</code> if being configured <i>per-remote</i>). For example: </p>
 <pre>
 gitfs_remotes:
@@ -3833,21 +3833,21 @@ $ ssh-keygen -l -f /dev/stdin &lt;&lt;&lt;`ssh-keyscan -t rsa github.com 2&gt;/d
 <h3>Refreshing gitfs Upon Push</h3>
 <p> By default, Salt updates the remote fileserver backends every 60 seconds. However, if it is desirable to refresh quicker than that, the Reactor System can be used to signal the master to update the fileserver on each push, provided that the git server is also a Salt minion. There are three steps to this process:</p>
 <dl>
-<dt>1.</p>
-<dd> On the master, create a file <code>/srv/reactor/update_fileserver.sls</code>, with the following contents: </p>
+<dt>1.</dt>
+<dd> On the master, create a file <code>/srv/reactor/update_fileserver.sls</code>, with the following contents: </dd>
 <pre>
 update_fileserver:
   runner.fileserver.update
 </pre>
-<dt>2.</p>
-<dd> Add the following reactor configuration to the master config file: </p>
+<dt>2.</dt>
+<dd> Add the following reactor configuration to the master config file: </dd>
 <pre>
 reactor:
   - 'salt/fileserver/gitfs/update':
     - /srv/reactor/update_fileserver.sls
 </pre>
-<dt>3.</p>
-<dd> On the git server, add a <i>post-receive hook</i> with the following contents: </p>
+<dt>3.</dt>
+<dd> On the git server, add a <i>post-receive hook</i> with the following contents: </dd>
 <pre>
 #!/usr/bin/env sh
 salt-call event.fire_master update salt/fileserver/gitfs/update
@@ -3882,15 +3882,15 @@ ext_pillar:
 <h3>The 5 Cent Salt Intro</h3>
 <p> Since you&#8217;re here you&#8217;ve probably already heard about Salt, so you already know Salt lets you configure and run commands on hordes of servers easily. Here&#8217;s a brief overview of a Salt cluster:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Salt works by having a &quot;master&quot; server sending commands to one or multiple &quot;minion&quot; servers [1]. The master server is the &quot;command center&quot;. It is going to be the place where you store your configuration files, aka: &quot;which server is the db, which is the web server, and what libraries and software they should have installed&quot;. The minions receive orders from the master. Minions are the servers actually performing work for your business.</p>
-<dt>&bull;</p>
-<dd> Salt has two types of configuration files: </p>
+<dt>&bull;</dt>
+<dd> Salt works by having a &quot;master&quot; server sending commands to one or multiple &quot;minion&quot; servers [1]. The master server is the &quot;command center&quot;. It is going to be the place where you store your configuration files, aka: &quot;which server is the db, which is the web server, and what libraries and software they should have installed&quot;. The minions receive orders from the master. Minions are the servers actually performing work for your business.</dd>
+<dt>&bull;</dt>
+<dd> Salt has two types of configuration files: </dd>
 <p> 1. the &quot;salt communication channels&quot; or &quot;meta&quot; or &quot;config&quot; configuration files (not official names): one for the master (usually is /etc/salt/master , <code>on the master server</code>), and one for minions (default is /etc/salt/minion or /etc/salt/minion.conf, <code>on the minion servers</code>). Those files are used to determine things like the Salt Master IP, port, Salt folder locations, etc.. If these are configured incorrectly, your minions will probably be unable to receive orders from the master, or the master will not know which software a given minion should install. </p>
 <p> 2. the &quot;business&quot; or &quot;service&quot; configuration files (once again, not an official name): these are configuration files, ending with &quot;.sls&quot; extension, that describe which software should run on which server, along with particular configuration properties for the software that is being installed. These files should be created in the /srv/salt folder by default, but their location can be changed using &#8230; /etc/salt/master configuration file! </p>
 <p> <code>NOTE:</code> This tutorial contains a third important configuration file, not to be confused with the previous two: the virtual machine provisioning configuration file. This in itself is not specifically tied to Salt, but it also contains some Salt configuration. More on that in step 3. Also note that all configuration files are YAML files. So indentation matters.</p>
-<dt>[1]</p>
-<dd> Salt also works with &quot;masterless&quot; configuration where a minion is autonomous (in which case salt can be seen as a local configuration tool), or in &quot;multiple master&quot; configuration. See the documentation for more on that.</dl>
+<dt>[1]</dt>
+<dd> Salt also works with &quot;masterless&quot; configuration where a minion is autonomous (in which case salt can be seen as a local configuration tool), or in &quot;multiple master&quot; configuration. See the documentation for more on that.</dd></dl>
 <h3>Before Digging In, The Architecture Of The Salt Cluster</h3>
 <h3>Salt Master</h3>
 <p> The &quot;Salt master&quot; server is going to be the Mac OS machine, directly. Commands will be run from a terminal app, so Salt will need to be installed on the Mac. This is going to be more convenient for toying around with configuration files.</p>
@@ -3939,16 +3939,16 @@ sudo salt-master --log-level=all
 <p> The Salt minion is going to run on a Virtual Machine. There are a lot of software options that let you run virtual machines on a mac, But for this tutorial we&#8217;re going to use VirtualBox. In addition to virtualBox, we will use Vagrant, which allows you to create the base VM configuration. </p>
 <p> Vagrant lets you build ready to use VM images, starting from an OS image and customizing it using &quot;provisioners&quot;. In our case, we&#8217;ll use it to:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Download the base Ubuntu image</p>
-<dt>&bull;</p>
-<dd> Install salt on that Ubuntu image (Salt is going to be the &quot;provisioner&quot; for the VM).</p>
-<dt>&bull;</p>
-<dd> Launch the VM</p>
-<dt>&bull;</p>
-<dd> SSH into the VM to debug</p>
-<dt>&bull;</p>
-<dd> Stop the VM once you&#8217;re done.</dl>
+<dt>&bull;</dt>
+<dd> Download the base Ubuntu image</dd>
+<dt>&bull;</dt>
+<dd> Install salt on that Ubuntu image (Salt is going to be the &quot;provisioner&quot; for the VM).</dd>
+<dt>&bull;</dt>
+<dd> Launch the VM</dd>
+<dt>&bull;</dt>
+<dd> SSH into the VM to debug</dd>
+<dt>&bull;</dt>
+<dd> Stop the VM once you&#8217;re done.</dd></dl>
 <h3>Install VirtualBox</h3>
 <p> Go get it here: <i><a rel="nofollow noopener" href="https://www.virtualBox.org/wiki/Downloads" target="_blank">https://www.virtualBox.org/wiki/Downloads</a></i> (click on VirtualBox for OS X hosts =&gt; x86/amd64)</p>
 <h3>Install Vagrant</h3>
@@ -4400,24 +4400,24 @@ if match in html_text:
 <h3>Dependencies</h3>
 <p> Manipulation of LXC containers in Salt requires the minion to have an LXC version of at least 1.0 (an alpha or beta release of LXC 1.0 is acceptable). The following distributions are known to have new enough versions of LXC packaged:</p>
 <dl>
-<dt>&bull;</p>
-<dd> RHEL/CentOS 6 and later (via <i>EPEL</i>)</p>
-<dt>&bull;</p>
-<dd> Fedora (All non-EOL releases)</p>
-<dt>&bull;</p>
-<dd> Debian 8.0 (Jessie)</p>
-<dt>&bull;</p>
-<dd> Ubuntu 14.04 LTS and later (LXC templates are packaged separately as <code>lxc-templates</code>, it is recommended to also install this package)</p>
-<dt>&bull;</p>
-<dd> openSUSE 13.2 and later</dl>
+<dt>&bull;</dt>
+<dd> RHEL/CentOS 6 and later (via <i>EPEL</i>)</dd>
+<dt>&bull;</dt>
+<dd> Fedora (All non-EOL releases)</dd>
+<dt>&bull;</dt>
+<dd> Debian 8.0 (Jessie)</dd>
+<dt>&bull;</dt>
+<dd> Ubuntu 14.04 LTS and later (LXC templates are packaged separately as <code>lxc-templates</code>, it is recommended to also install this package)</dd>
+<dt>&bull;</dt>
+<dd> openSUSE 13.2 and later</dd></dl>
 <h3>Profiles</h3>
 <p> Profiles allow for a sort of shorthand for commonly-used configurations to be defined in the minion config file, grains, pillar, or the master config file. The profile is retrieved by Salt using the <code>config.get</code> function, which looks in those locations, in that order. This allows for profiles to be defined centrally in the master config file, with several options for overriding them (if necessary) on groups of minions or individual minions. </p>
 <p> There are two types of profiles:</p>
 <dl>
-<dt>&bull;</p>
-<dd> One for defining the parameters used in container creation/clone.</p>
-<dt>&bull;</p>
-<dd> One for defining the container&#8217;s network interface(s) settings.</dl>
+<dt>&bull;</dt>
+<dd> One for defining the parameters used in container creation/clone.</dd>
+<dt>&bull;</dt>
+<dd> One for defining the container&#8217;s network interface(s) settings.</dd></dl>
 <h3>Container Profiles</h3>
 <p> LXC container profiles are defined defined underneath the <code>lxc.container_profile</code> config option: </p>
 <pre>
@@ -4563,10 +4563,10 @@ lxc.container_profile:
 </table>
 <p></center></p>
 <dl>
-<dt>1.</p>
-<dd> Parameter is only supported for container creation, and will be ignored if the profile is used when cloning a container.</p>
-<dt>2.</p>
-<dd> Parameter is only supported for container cloning, and will be ignored if the profile is used when not cloning a container.</dl>
+<dt>1.</dt>
+<dd> Parameter is only supported for container creation, and will be ignored if the profile is used when cloning a container.</dd>
+<dt>2.</dt>
+<dd> Parameter is only supported for container cloning, and will be ignored if the profile is used when not cloning a container.</dd></dl>
 <h3>Network Profiles</h3>
 <p> LXC network profiles are defined defined underneath the <code>lxc.network_profile</code> config option. By default, the module uses a DHCP based configuration and try to guess a bridge to get connectivity. </p>
 <p> <code>WARNING:</code> on pre <code>2015.5.2</code>, you need to specify explicitly the network bridge </p>
@@ -4604,12 +4604,12 @@ lxc.network_profile:
 <p> <code>NOTE:</code> In the 2014.7.x release cycle and earlier, network profiles are defined under <code>lxc.nic</code>. This parameter will still work in version 2015.5.0, but is deprecated and will be removed in a future release. Please note however that the profile merging feature described above will only work with profiles defined under <code>lxc.network_profile</code>, and only in versions 2015.5.0 and later. </p>
 <p> The following are parameters which can be configured in network profiles. These will directly correspond to a parameter in an LXC configuration file (see <code>man 5 lxc.container.conf</code>).</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>type</code> &#8211; Corresponds to <code>lxc.network.type</code></p>
-<dt>&bull;</p>
-<dd> <code>link</code> &#8211; Corresponds to <code>lxc.network.link</code></p>
-<dt>&bull;</p>
-<dd> <code>flags</code> &#8211; Corresponds to <code>lxc.network.flags</code> </p>
+<dt>&bull;</dt>
+<dd> <code>type</code> &#8211; Corresponds to <code>lxc.network.type</code></dd>
+<dt>&bull;</dt>
+<dd> <code>link</code> &#8211; Corresponds to <code>lxc.network.link</code></dd>
+<dt>&bull;</dt>
+<dd> <code>flags</code> &#8211; Corresponds to <code>lxc.network.flags</code> </dd>
 <p> Interface-specific options (MAC address, IPv4/IPv6, etc.) must be passed on a container-by-container basis, for instance using the <code>nic_opts</code> argument to <code>lxc.create</code>: </p>
 <p>salt myminion lxc.create container1 profile = centos network_profile = centos nic_opts = &#8216;{eth0: {ipv4: 10.0.0.20/24, gateway: 10.0.0.1}}&#8217;</p>
 <p> <code>WARNING:</code> The <code>ipv4</code>, <code>ipv6</code>, <code>gateway</code>, and <code>link</code> (bridge) settings in network profiles / nic_opts will only work if the container doesnt redefine the network configuration (for example in <code>/etc/sysconfig/network-scripts/ifcfg-&lt;interface_name&gt;</code> on RHEL/CentOS, or <code>/etc/network/interfaces</code> on Debian/Ubuntu/etc.). Use these with caution. The container images installed using the <code>download</code> template, for instance, typically are configured for eth0 to use DHCP, which will conflict with static IP addresses set at the container level.</dl>
@@ -4645,12 +4645,12 @@ salt mycentosminion lxc.create container1 template=centos
 </pre>
 <p> For these instances, there is a <code>download</code> template which retrieves minimal container images for several different operating systems. To use this template, it is necessary to provide an <code>options</code> parameter when creating the container, with three values:</p>
 <dl>
-<dt>1.</p>
-<dd> <code>dist</code> &#8211; the Linux distribution (i.e. <code>ubuntu</code> or <code>centos</code>)</p>
-<dt>2.</p>
-<dd> <code>release</code> &#8211; the release name/version (i.e. <code>trusty</code> or <code>6</code>)</p>
-<dt>3.</p>
-<dd> <code>arch</code> &#8211; CPU architecture (i.e. <code>amd64</code> or <code>i386</code>) </p>
+<dt>1.</dt>
+<dd> <code>dist</code> &#8211; the Linux distribution (i.e. <code>ubuntu</code> or <code>centos</code>)</dd>
+<dt>2.</dt>
+<dd> <code>release</code> &#8211; the release name/version (i.e. <code>trusty</code> or <code>6</code>)</dd>
+<dt>3.</dt>
+<dd> <code>arch</code> &#8211; CPU architecture (i.e. <code>amd64</code> or <code>i386</code>) </dd>
 <p> The <code>lxc.images</code> function (new in version 2015.5.0) can be used to list the available images. Alternatively, the releases can be viewed on <i><a rel="nofollow noopener" href="http://images.linuxcontainers.org/images/" target="_blank">http://images.linuxcontainers.org/images/</a></i>. The images are organized in such a way that the <code>dist</code>, <code>release</code>, and <code>arch</code> can be determined using the following URL format: <code><a rel="nofollow noopener" href="http://images.linuxcontainers.org/images/dist/release/arch" target="_blank">http://images.linuxcontainers.org/images/dist/release/arch</a></code>. For example, <code><a rel="nofollow noopener" href="http://images.linuxcontainers.org/images/centos/6/amd64" target="_blank">http://images.linuxcontainers.org/images/centos/6/amd64</a></code> would correspond to a <code>dist</code> of <code>centos</code>, a <code>release</code> of <code>6</code>, and an <code>arch</code> of <code>amd64</code>. </p>
 <p> Therefore, to use the <code>download</code> template to create a new 64-bit CentOS 6 container, the following command can be used: </p>
 <pre>
@@ -4693,12 +4693,12 @@ umount /var/lib/lxc/cent6/rootfs
 <h3>Initializing a New Container as a Salt Minion</h3>
 <p> The above examples illustrate a few ways to create containers on the CLI, but often it is desirable to also have the new container run as a Minion. To do this, the <code>lxc.init</code> function can be used. This function will do the following:</p>
 <dl>
-<dt>1.</p>
-<dd> Create a new container</p>
-<dt>2.</p>
-<dd> Optionally set password and/or DNS</p>
-<dt>3.</p>
-<dd> Bootstrap the minion (using either <i>salt-bootstrap</i> or a custom command) </p>
+<dt>1.</dt>
+<dd> Create a new container</dd>
+<dt>2.</dt>
+<dd> Optionally set password and/or DNS</dd>
+<dt>3.</dt>
+<dd> Bootstrap the minion (using either <i>salt-bootstrap</i> or a custom command) </dd>
 <p> By default, the new container will be pointed at the same Salt Master as the host machine on which the container was created. It will then request to authenticate with the Master like any other bootstrapped Minion, at which point it can be accepted. </p>
 <pre>
 salt myminion lxc.init test1 profile=centos
@@ -4845,12 +4845,12 @@ web1:
 <h3>Ensuring a Container is Running/Stopped/Frozen</h3>
 <p> Containers can be in one of three states:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>running</code> &#8211; Container is running and active</p>
-<dt>&bull;</p>
-<dd> <code>frozen</code> &#8211; Container is running, but all process are blocked and the container is essentially non-active until the container is &quot;unfrozen&quot;</p>
-<dt>&bull;</p>
-<dd> <code>stopped</code> &#8211; Container is not running </p>
+<dt>&bull;</dt>
+<dd> <code>running</code> &#8211; Container is running and active</dd>
+<dt>&bull;</dt>
+<dd> <code>frozen</code> &#8211; Container is running, but all process are blocked and the container is essentially non-active until the container is &quot;unfrozen&quot;</dd>
+<dt>&bull;</dt>
+<dd> <code>stopped</code> &#8211; Container is not running </dd>
 <p> Salt has three states (<code>lxc.running</code>, <code>lxc.frozen</code>, and <code>lxc.stopped</code>) which can be used to ensure a container is in one of these states: </p>
 <pre>
 web1:
@@ -4920,8 +4920,8 @@ libvirt_keys:
 <p> Virtual machine images can be manually created using KVM and running through the installer, but this process is not recommended since it is very manual and prone to errors. </p>
 <p> Virtual Machine generation applications are available for many platforms:</p>
 <dl>
-<dt><code>vm-builder:</code></p>
-<dd> <i><a rel="nofollow noopener" href="https://wiki.debian.org/VMBuilder" target="_blank">https://wiki.debian.org/VMBuilder</a></i> </p>
+<dt><code>vm-builder:</code></dt>
+<dd> <i><a rel="nofollow noopener" href="https://wiki.debian.org/VMBuilder" target="_blank">https://wiki.debian.org/VMBuilder</a></i> </dd>
 <p> <code>SEE ALSO:</code> <i>vmbuilder-formula</i> </p>
 <p> Once virtual machine images are available, the easiest way to make them available to Salt Virt is to place them in the Salt file server. Just copy an image into <code>/srv/salt</code> and it can now be used by Salt Virt. </p>
 <p> For purposes of this demo, the file name <code>centos.img</code> will be used.</dl>
@@ -5131,24 +5131,24 @@ salt-call tls.create_self_signed_cert tls
 <h3>The Master</h3>
 <p> The most common problems on the Salt Master are:</p>
 <dl>
-<dt>1.</p>
-<dd> too many minions authing at once</p>
-<dt>2.</p>
-<dd> too many minions re-authing at once</p>
-<dt>3.</p>
-<dd> too many minions re-connecting at once</p>
-<dt>4.</p>
-<dd> too many minions returning at once</p>
-<dt>5.</p>
-<dd> too few resources (CPU/HDD) </p>
+<dt>1.</dt>
+<dd> too many minions authing at once</dd>
+<dt>2.</dt>
+<dd> too many minions re-authing at once</dd>
+<dt>3.</dt>
+<dd> too many minions re-connecting at once</dd>
+<dt>4.</dt>
+<dd> too many minions returning at once</dd>
+<dt>5.</dt>
+<dd> too few resources (CPU/HDD) </dd>
 <p> The first three are all &quot;thundering herd&quot; problems. To mitigate these issues we must configure the minions to back-off appropriately when the Master is under heavy load. </p>
 <p> The fourth is caused by masters with little hardware resources in combination with a possible bug in ZeroMQ. At least thats what it looks like till today (<i>Issue 118651</i>, <i>Issue 5948</i>, <i>Mail thread</i>) </p>
 <p> To fully understand each problem, it is important to understand, how Salt works. </p>
 <p> Very briefly, the Salt Master offers two services to the minions.</p>
-<dt>&bull;</p>
-<dd> a job publisher on port 4505</p>
-<dt>&bull;</p>
-<dd> an open port 4506 to receive the minions returns </p>
+<dt>&bull;</dt>
+<dd> a job publisher on port 4505</dd>
+<dt>&bull;</dt>
+<dd> an open port 4506 to receive the minions returns </dd>
 <p> All minions are always connected to the publisher on port 4505 and only connect to the open return port 4506 if necessary. On an idle Master, there will only be connections on port 4505.</dl>
 <h3>Too many minions authing</h3>
 <p> When the Minion service is first started up, it will connect to its Master&#8217;s publisher on port 4505. If too many minions are started at once, this can cause a &quot;thundering herd&quot;. This can be avoided by not starting too many minions at once. </p>
@@ -5170,17 +5170,17 @@ recon_max: 5000
 recon_randomize: True
 </pre>
 <dl>
-<dt>&bull;</p>
-<dd> recon_default: the default value the socket should use, i.e. 100ms</p>
-<dt>&bull;</p>
-<dd> recon_max: the max value that the socket should use as a delay before trying to reconnect</p>
-<dt>&bull;</p>
-<dd> recon_randomize: enables randomization between recon_default and recon_max </p>
+<dt>&bull;</dt>
+<dd> recon_default: the default value the socket should use, i.e. 100ms</dd>
+<dt>&bull;</dt>
+<dd> recon_max: the max value that the socket should use as a delay before trying to reconnect</dd>
+<dt>&bull;</dt>
+<dd> recon_randomize: enables randomization between recon_default and recon_max </dd>
 <p> To tune this values to an existing environment, a few decision have to be made.</p>
-<dt>1.</p>
-<dd> How long can one wait, before the minions should be online and reachable via Salt?</p>
-<dt>2.</p>
-<dd> How many reconnects can the Master handle without a syn flood? </p>
+<dt>1.</dt>
+<dd> How long can one wait, before the minions should be online and reachable via Salt?</dd>
+<dt>2.</dt>
+<dd> How many reconnects can the Master handle without a syn flood? </dd>
 <p> These questions can not be answered generally. Their answers depend on the hardware and the administrators requirements. </p>
 <p> Here is an example scenario with the goal, to have all minions reconnect within a 60 second time-frame on a Salt Master service restart. </p>
 <pre>
@@ -5246,10 +5246,10 @@ job_cache: False
 </pre>
 <p> If the job cache is necessary there are (currently) 2 options:</p>
 <dl>
-<dt>&bull;</p>
-<dd> ext_job_cache: this will have the minions store their return data directly into a returner (not sent through the Master)</p>
-<dt>&bull;</p>
-<dd> master_job_cache (New in <i>2014.7.0</i>): this will make the Master store the job data using a returner (instead of the local job cache on disk).</dl>
+<dt>&bull;</dt>
+<dd> ext_job_cache: this will have the minions store their return data directly into a returner (not sent through the Master)</dd>
+<dt>&bull;</dt>
+<dd> master_job_cache (New in <i>2014.7.0</i>): this will make the Master store the job data using a returner (instead of the local job cache on disk).</dd></dl>
 <h2 id="TARGETING MINIONS"></h2>
 <p> Targeting minions is specifying which minions should run a command or execute a state by matching against hostnames, or system information, or defined groups, or even combinations thereof. </p>
 <p> For example the command <code>salt web1 apache.signal restart</code> to restart the Apache httpd server specifies the machine <code>web1</code> as the target and the command will only be run on that one minion. </p>
@@ -5402,14 +5402,14 @@ def yourfunction()<br />
 <h3>Precedence</h3>
 <p> Core grains can be overridden by custom grains. As there are several ways of defining custom grains, there is an order of precedence which should be kept in mind when defining them. The order of evaluation is as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> Core grains.</p>
-<dt>2.</p>
-<dd> Custom grains in <code>/etc/salt/grains</code>.</p>
-<dt>3.</p>
-<dd> Custom grains in <code>/etc/salt/minion</code>.</p>
-<dt>4.</p>
-<dd> Custom grain modules in <code>_grains</code> directory, synced to minions. </p>
+<dt>1.</dt>
+<dd> Core grains.</dd>
+<dt>2.</dt>
+<dd> Custom grains in <code>/etc/salt/grains</code>.</dd>
+<dt>3.</dt>
+<dd> Custom grains in <code>/etc/salt/minion</code>.</dd>
+<dt>4.</dt>
+<dd> Custom grain modules in <code>_grains</code> directory, synced to minions. </dd>
 <p> Each successive evaluation overrides the previous ones, so any grains defined by custom grains modules synced to minions that have the same name as a core grain will override that core grain. Similarly, grains from <code>/etc/salt/minion</code> override both core grains and custom grain modules, and grains in <code>_grains</code> will override <i>any</i> grains of the same name.</dl>
 <h3>Examples of Grains</h3>
 <p> The core module in the grains package is where the main grains are loaded by the Salt minion and provides the principal example of how to write grains: </p>
@@ -5838,10 +5838,10 @@ reactor:                            # Master config section &quot;reactor&quot;
 <p> Reactor sls files are similar to state and pillar sls files. They are by default yaml + Jinja templates and are passed familiar context variables. </p>
 <p> They differ because of the addition of the <code>tag</code> and <code>data</code> variables.</p>
 <dl>
-<dt>&bull;</p>
-<dd> The <code>tag</code> variable is just the tag in the fired event.</p>
-<dt>&bull;</p>
-<dd> The <code>data</code> variable is the event&#8217;s data dict. </p>
+<dt>&bull;</dt>
+<dd> The <code>tag</code> variable is just the tag in the fired event.</dd>
+<dt>&bull;</dt>
+<dd> The <code>data</code> variable is the event&#8217;s data dict. </dd>
 <p> Here is a simple reactor sls: </p>
 <p>{<br />
     % if data[&#8216;id&#8217;] == &#8216;mysql1&#8217; %<br />
@@ -5899,15 +5899,15 @@ salt-run state.event pretty=True
 <h3>Debugging the Reactor</h3>
 <p> The best window into the Reactor is to run the master in the foreground with debug logging enabled. The output will include when the master sees the event, what the master does in response to that event, and it will also include the rendered SLS file (or any errors generated while rendering the SLS file).</p>
 <dl>
-<dt>1.</p>
-<dd> Stop the master.</p>
-<dt>2.</p>
-<dd> Start the master manually: </p>
+<dt>1.</dt>
+<dd> Stop the master.</dd>
+<dt>2.</dt>
+<dd> Start the master manually: </dd>
 <pre>
 salt-master -l debug
 </pre>
-<dt>3.</p>
-<dd> Look for log entries in the form: </p>
+<dt>3.</dt>
+<dd> Look for log entries in the form: </dd>
 <p>[DEBUG   ] Gathering reactors for tag foo/bar<br />
 [DEBUG   ] Compiling reactions for tag foo/bar<br />
 [DEBUG   ] Rendered data from file: /path/to/the/reactor_file.sls:<br />
@@ -6095,12 +6095,12 @@ mine_interval: 60
 <p> As of the 2015.5.0 release of salt, salt-ssh supports <code>mine.get</code>. </p>
 <p> Because the Minions cannot provide their own <code>mine_functions</code> configuration, we retrieve the args for specified mine functions in one of three places, searched in the following order:</p>
 <dl>
-<dt>1.</p>
-<dd> Roster data</p>
-<dt>2.</p>
-<dd> Pillar</p>
-<dt>3.</p>
-<dd> Master config </p>
+<dt>1.</dt>
+<dd> Roster data</dd>
+<dt>2.</dt>
+<dd> Pillar</dd>
+<dt>3.</dt>
+<dd> Master config </dd>
 <p> The <code>mine_functions</code> are formatted exactly the same as in normal salt, just stored in a different location. Here is an example of a flat roster containing <code>mine_functions</code>: </p>
 <pre>
 test:
@@ -6313,16 +6313,16 @@ external_auth:
 <h3>Functions in the saltutil Module</h3>
 <p> Salt 0.9.7 introduced a few new functions to the <code>saltutil</code> module for managing jobs. These functions are:</p>
 <dl>
-<dt>1.</p>
-<dd> <code>running</code> Returns the data of all running jobs that are found in the <i>proc</i> directory.</p>
-<dt>2.</p>
-<dd> <code>find_job</code> Returns specific data about a certain job based on job id.</p>
-<dt>3.</p>
-<dd> <code>signal_job</code> Allows for a given jid to be sent a signal.</p>
-<dt>4.</p>
-<dd> <code>term_job</code> Sends a termination signal (SIGTERM, 15) to the process controlling the specified job.</p>
-<dt>5.</p>
-<dd> <code>kill_job</code> Sends a kill signal (SIGKILL, 9) to the process controlling the specified job. </p>
+<dt>1.</dt>
+<dd> <code>running</code> Returns the data of all running jobs that are found in the <i>proc</i> directory.</dd>
+<dt>2.</dt>
+<dd> <code>find_job</code> Returns specific data about a certain job based on job id.</dd>
+<dt>3.</dt>
+<dd> <code>signal_job</code> Allows for a given jid to be sent a signal.</dd>
+<dt>4.</dt>
+<dd> <code>term_job</code> Sends a termination signal (SIGTERM, 15) to the process controlling the specified job.</dd>
+<dt>5.</dt>
+<dd> <code>kill_job</code> Sends a kill signal (SIGKILL, 9) to the process controlling the specified job. </dd>
 <p> These functions make up the core of the back end used to manage jobs at the minion level.</dl>
 <h3>The jobs Runner</h3>
 <p> A convenience runner front end and reporting system has been added as well. The jobs runner contains functions to make viewing data easier and cleaner. </p>
@@ -6641,26 +6641,26 @@ keep_jobs: 24
 <p> After a job executes, job results are returned to the Salt Master by each Salt Minion. These results are stored in the Default Job Cache. </p>
 <p> In addition to the Default Job Cache, Salt provides two additional mechanisms to send job results to other systems (databases, local syslog, and others):</p>
 <dl>
-<dt>&bull;</p>
-<dd> External Job Cache</p>
-<dt>&bull;</p>
-<dd> Master Job Cache </p>
+<dt>&bull;</dt>
+<dd> External Job Cache</dd>
+<dt>&bull;</dt>
+<dd> Master Job Cache </dd>
 <p> The major difference between these two mechanism is from where results are returned (from the Salt Master or Salt Minion).</dl>
 <h3>External Job Cache &#8211; Minion-Side Returner</h3>
 <p> When an External Job Cache is configured, data is returned to the Default Job Cache on the Salt Master like usual, and then results are also sent to an External Job Cache using a Salt returner module running on the Salt Minion. [image]</p>
 <dl>
-<dt>&bull;</p>
-<dd> Advantages: Data is stored without placing additional load on the Salt Master.</p>
-<dt>&bull;</p>
-<dd> Disadvantages: Each Salt Minion connects to the external job cache, which can result in a large number of connections. Also requires additional configuration to get returner module settings on all Salt Minions.</dl>
+<dt>&bull;</dt>
+<dd> Advantages: Data is stored without placing additional load on the Salt Master.</dd>
+<dt>&bull;</dt>
+<dd> Disadvantages: Each Salt Minion connects to the external job cache, which can result in a large number of connections. Also requires additional configuration to get returner module settings on all Salt Minions.</dd></dl>
 <h3>Master Job Cache &#8211; Master-Side Returner</h3>
 <p> New in version 2014.7.0. </p>
 <p> Instead of configuring an External Job Cache on each Salt Minion, you can configure the Master Job Cache to send job results from the Salt Master instead. In this configuration, Salt Minions send data to the Default Job Cache as usual, and then the Salt Master sends the data to the external system using a Salt returner module running on the Salt Master. [image]</p>
 <dl>
-<dt>&bull;</p>
-<dd> Advantages: A single connection is required to the external system. This is preferred for databases and similar systems.</p>
-<dt>&bull;</p>
-<dd> Disadvantages: Places additional load on your Salt Master.</dl>
+<dt>&bull;</dt>
+<dd> Advantages: A single connection is required to the external system. This is preferred for databases and similar systems.</dd>
+<dt>&bull;</dt>
+<dd> Disadvantages: Places additional load on your Salt Master.</dd></dl>
 <h3>Configure an External or Master Job Cache</h3>
 <h3>Step 1: Understand Salt Returners</h3>
 <p> Before you configure a job cache, it is essential to understand Salt returner modules (&quot;returners&quot;). Returners are pluggable Salt Modules that take the data returned by jobs, and then perform any necessary steps to send the data to an external system. For example, a returner might establish a connection, authenticate, and then format and transfer data. </p>
@@ -6668,19 +6668,19 @@ keep_jobs: 24
 <p> Salt currently provides many different returners that let you connect to a wide variety of systems. A complete list is available at all Salt returners. Each returner is configured differently, so make sure you read and follow the instructions linked from that page. </p>
 <p> For example, the MySQL returner requires:</p>
 <dl>
-<dt>&bull;</p>
-<dd> A database created using provided schema (structure is available at <code>MySQL returner</code>)</p>
-<dt>&bull;</p>
-<dd> A user created with with privileges to the database</p>
-<dt>&bull;</p>
-<dd> Optional SSL configuration </p>
+<dt>&bull;</dt>
+<dd> A database created using provided schema (structure is available at <code>MySQL returner</code>)</dd>
+<dt>&bull;</dt>
+<dd> A user created with with privileges to the database</dd>
+<dt>&bull;</dt>
+<dd> Optional SSL configuration </dd>
 <p> A simpler returner, such as Slack or HipChat, requires:</p>
-<dt>&bull;</p>
-<dd> An API key/version</p>
-<dt>&bull;</p>
-<dd> The target channel/room</p>
-<dt>&bull;</p>
-<dd> The username that should be used to send the message</dl>
+<dt>&bull;</dt>
+<dd> An API key/version</dd>
+<dt>&bull;</dt>
+<dd> The target channel/room</dd>
+<dt>&bull;</dt>
+<dd> The username that should be used to send the message</dd></dl>
 <h3>Step 2: Configure the Returner</h3>
 <p> After you understand the configuration and have the external system ready, add the returner configuration settings to the Salt Minion configuration file for the External Job Cache, or to the Salt Master configuration file for the Master Job Cache. </p>
 <p> For example, MySQL requires: </p>
@@ -6762,199 +6762,199 @@ __func_alias__ = {
 <p> The Salt Event System is used to fire off events enabling third party applications or external processes to react to behavior within Salt. </p>
 <p> The event system is comprised of a two primary components:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The event sockets which publishes events.</p>
-<dt>&bull;</p>
-<dd> The event library which can listen to events and send events into the salt system.</dl>
+<dt>&bull;</dt>
+<dd> The event sockets which publishes events.</dd>
+<dt>&bull;</dt>
+<dd> The event library which can listen to events and send events into the salt system.</dd></dl>
 <h3>Event types</h3>
 <h3>Salt Master Events</h3>
 <p> These events are fired on the Salt Master event bus. This list is <code>not</code> comprehensive.</p>
 <h3>Authentication events</h3>
 <dl>
-<dt><code>salt/auth</code></p>
-<dd> Fired when a minion performs an authentication check with the master.</p>
-<dt><code>Variables</code></p>
+<dt><code>salt/auth</code></dt>
+<dd> Fired when a minion performs an authentication check with the master.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>id</code> &#8212; The minion ID.</p>
-<dt>&bull;</p>
-<dd> <code>act</code> &#8212; The current status of the minion key: <code>accept</code>, <code>pend</code>, <code>reject</code>.</p>
-<dt>&bull;</p>
-<dd> <code>pub</code> &#8212; The minion public key. </p>
+</dd><dt>&bull;</dt>
+<dd> <code>id</code> &#8212; The minion ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>act</code> &#8212; The current status of the minion key: <code>accept</code>, <code>pend</code>, <code>reject</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>pub</code> &#8212; The minion public key. </dd>
 <p> <code>NOTE:</code> Minions fire auth events on fairly regular basis for a number of reasons. Writing reactors to respond to events through the auth cycle can lead to infinite reactor event loops (minion tries to auth, reactor responds by doing something that generates another auth event, minion sends auth event, etc.). Consider reacting to <code>salt/key</code> or <code>salt/minion/&lt;MID&gt;/start</code> or firing a custom event tag instead.</dl>
 <h3>Start events</h3>
 <dl>
-<dt><code>salt/minion/&lt;MID&gt;/start</code></p>
-<dd> Fired every time a minion connects to the Salt master.</p>
-<dt><code>Variables</code></p>
-<dd> <code>id</code> &#8212; The minion ID.</dl>
+<dt><code>salt/minion/&lt;MID&gt;/start</code></dt>
+<dd> Fired every time a minion connects to the Salt master.</dd>
+<dt><code>Variables</code></dt>
+<dd> <code>id</code> &#8212; The minion ID.</dd></dl>
 <h3>Key events</h3>
 <dl>
-<dt><code>salt/key</code></p>
-<dd> Fired when accepting and rejecting minions keys on the Salt master.</p>
-<dt><code>Variables</code></p>
+<dt><code>salt/key</code></dt>
+<dd> Fired when accepting and rejecting minions keys on the Salt master.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>id</code> &#8212; The minion ID.</p>
-<dt>&bull;</p>
-<dd> <code>act</code> &#8212; The new status of the minion key: <code>accept</code>, <code>pend</code>, <code>reject</code>. </p>
+</dd><dt>&bull;</dt>
+<dd> <code>id</code> &#8212; The minion ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>act</code> &#8212; The new status of the minion key: <code>accept</code>, <code>pend</code>, <code>reject</code>. </dd>
 <p> <code>WARNING:</code> If a master is in <code>auto_accept mode</code>, <code>salt/key</code> events will not be fired when the keys are accepted. In addition, pre-seeding keys (like happens through Salt-Cloud) will not cause firing of these events.</dl>
 <h3>Job events</h3>
 <dl>
-<dt><code>salt/job/&lt;JID&gt;/new</code></p>
-<dd> Fired as a new job is sent out to minions.</p>
-<dt><code>Variables</code></p>
+<dt><code>salt/job/&lt;JID&gt;/new</code></dt>
+<dd> Fired as a new job is sent out to minions.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>jid</code> &#8212; The job ID.</p>
-<dt>&bull;</p>
-<dd> <code>tgt</code> &#8212; The target of the job: <code>*</code>, a minion ID, <code>G@os_family:RedHat</code>, etc.</p>
-<dt>&bull;</p>
-<dd> <code>tgt_type</code> &#8212; The type of targeting used: <code>glob</code>, <code>grain</code>, <code>compound</code>, etc.</p>
-<dt>&bull;</p>
-<dd> <code>fun</code> &#8212; The function to run on minions: <code>test.ping</code>, <code>network.interfaces</code>, etc.</p>
-<dt>&bull;</p>
-<dd> <code>arg</code> &#8212; A list of arguments to pass to the function that will be called.</p>
-<dt>&bull;</p>
-<dd> <code>minions</code> &#8212; A list of minion IDs that Salt expects will return data for this job.</p>
-<dt>&bull;</p>
-<dd> <code>user</code> &#8212; The name of the user that ran the command as defined in Salt&#8217;s Client ACL or external auth.</p>
-<dt><code>salt/job/&lt;JID&gt;/ret/&lt;MID&gt;</code></p>
-<dd> Fired each time a minion returns data for a job.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>jid</code> &#8212; The job ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>tgt</code> &#8212; The target of the job: <code>*</code>, a minion ID, <code>G@os_family:RedHat</code>, etc.</dd>
+<dt>&bull;</dt>
+<dd> <code>tgt_type</code> &#8212; The type of targeting used: <code>glob</code>, <code>grain</code>, <code>compound</code>, etc.</dd>
+<dt>&bull;</dt>
+<dd> <code>fun</code> &#8212; The function to run on minions: <code>test.ping</code>, <code>network.interfaces</code>, etc.</dd>
+<dt>&bull;</dt>
+<dd> <code>arg</code> &#8212; A list of arguments to pass to the function that will be called.</dd>
+<dt>&bull;</dt>
+<dd> <code>minions</code> &#8212; A list of minion IDs that Salt expects will return data for this job.</dd>
+<dt>&bull;</dt>
+<dd> <code>user</code> &#8212; The name of the user that ran the command as defined in Salt&#8217;s Client ACL or external auth.</dd>
+<dt><code>salt/job/&lt;JID&gt;/ret/&lt;MID&gt;</code></dt>
+<dd> Fired each time a minion returns data for a job.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>id</code> &#8212; The minion ID.</p>
-<dt>&bull;</p>
-<dd> <code>jid</code> &#8212; The job ID.</p>
-<dt>&bull;</p>
-<dd> <code>retcode</code> &#8212; The return code for the job.</p>
-<dt>&bull;</p>
-<dd> <code>fun</code> &#8212; The function the minion ran. E.g., <code>test.ping</code>.</p>
-<dt>&bull;</p>
-<dd> <code>return</code> &#8212; The data returned from the execution module.</p>
-<dt><code>salt/job/&lt;JID&gt;/prog/&lt;MID&gt;/&lt;RUN NUM&gt;</code></p>
-<dd> Fired each time a each function in a state run completes execution. Must be enabled using the <code>state_events</code> option.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>id</code> &#8212; The minion ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>jid</code> &#8212; The job ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>retcode</code> &#8212; The return code for the job.</dd>
+<dt>&bull;</dt>
+<dd> <code>fun</code> &#8212; The function the minion ran. E.g., <code>test.ping</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>return</code> &#8212; The data returned from the execution module.</dd>
+<dt><code>salt/job/&lt;JID&gt;/prog/&lt;MID&gt;/&lt;RUN NUM&gt;</code></dt>
+<dd> Fired each time a each function in a state run completes execution. Must be enabled using the <code>state_events</code> option.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>data</code> &#8212; The data returned from the state module function.</p>
-<dt>&bull;</p>
-<dd> <code>id</code> &#8212; The minion ID.</p>
-<dt>&bull;</p>
-<dd> <code>jid</code> &#8212; The job ID.</dl>
+</dd><dt>&bull;</dt>
+<dd> <code>data</code> &#8212; The data returned from the state module function.</dd>
+<dt>&bull;</dt>
+<dd> <code>id</code> &#8212; The minion ID.</dd>
+<dt>&bull;</dt>
+<dd> <code>jid</code> &#8212; The job ID.</dd></dl>
 <h3>Presence events</h3>
 <dl>
-<dt><code>salt/presence/present</code></p>
-<dd> Events fired on a regular interval about currently connected, newly connected, or recently disconnected minions. Requires the <code>presence_events</code> setting to be enabled.</p>
-<dt><code>Variables</code></p>
-<dd> <code>present</code> &#8212; A list of minions that are currently connected to the Salt master.</p>
-<dt><code>salt/presence/change</code></p>
-<dd> Fired when the Presence system detects new minions connect or disconnect.</p>
-<dt><code>Variables</code></p>
+<dt><code>salt/presence/present</code></dt>
+<dd> Events fired on a regular interval about currently connected, newly connected, or recently disconnected minions. Requires the <code>presence_events</code> setting to be enabled.</dd>
+<dt><code>Variables</code></dt>
+<dd> <code>present</code> &#8212; A list of minions that are currently connected to the Salt master.</dd>
+<dt><code>salt/presence/change</code></dt>
+<dd> Fired when the Presence system detects new minions connect or disconnect.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>new</code> &#8212; A list of minions that have connected since the last presence event.</p>
-<dt>&bull;</p>
-<dd> <code>lost</code> &#8212; A list of minions that have disconnected since the last presence event.</dl>
+</dd><dt>&bull;</dt>
+<dd> <code>new</code> &#8212; A list of minions that have connected since the last presence event.</dd>
+<dt>&bull;</dt>
+<dd> <code>lost</code> &#8212; A list of minions that have disconnected since the last presence event.</dd></dl>
 <h3>Cloud Events</h3>
 <p> Unlike other Master events, <code>salt-cloud</code> events are not fired on behalf of a Salt Minion. Instead, <code>salt-cloud</code> events are fired on behalf of a VM. This is because the minion-to-be may not yet exist to fire events to or also may have been destroyed. </p>
 <p> This behavior is reflected by the <code>name</code> variable in the event data for <code>salt-cloud</code> events as compared to the <code>id</code> variable for Salt Minion-triggered events.</p>
 <dl>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/creating</code></p>
-<dd> Fired when salt-cloud starts the VM creation process.</p>
-<dt><code>Variables</code></p>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/creating</code></dt>
+<dd> Fired when salt-cloud starts the VM creation process.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>name</code> &#8212; the name of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>provider</code> &#8212; the cloud provider of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>profile</code> &#8212; the cloud profile for the VM being created.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/deploying</code></p>
-<dd> Fired when the VM is available and salt-cloud begins deploying Salt to the new VM.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>name</code> &#8212; the name of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>provider</code> &#8212; the cloud provider of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>profile</code> &#8212; the cloud profile for the VM being created.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/deploying</code></dt>
+<dd> Fired when the VM is available and salt-cloud begins deploying Salt to the new VM.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>name</code> &#8212; the name of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>kwargs</code> &#8212; options available as the deploy script is invoked: <code>conf_file</code>, <code>deploy_command</code>, <code>display_ssh_output</code>, <code>host</code>, <code>keep_tmp</code>, <code>key_filename</code>, <code>make_minion</code>, <code>minion_conf</code>, <code>name</code>, <code>parallel</code>, <code>preseed_minion_keys</code>, <code>script</code>, <code>script_args</code>, <code>script_env</code>, <code>sock_dir</code>, <code>start_action</code>, <code>sudo</code>, <code>tmp_dir</code>, <code>tty</code>, <code>username</code></p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/requesting</code></p>
-<dd> Fired when salt-cloud sends the request to create a new VM.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>name</code> &#8212; the name of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>kwargs</code> &#8212; options available as the deploy script is invoked: <code>conf_file</code>, <code>deploy_command</code>, <code>display_ssh_output</code>, <code>host</code>, <code>keep_tmp</code>, <code>key_filename</code>, <code>make_minion</code>, <code>minion_conf</code>, <code>name</code>, <code>parallel</code>, <code>preseed_minion_keys</code>, <code>script</code>, <code>script_args</code>, <code>script_env</code>, <code>sock_dir</code>, <code>start_action</code>, <code>sudo</code>, <code>tmp_dir</code>, <code>tty</code>, <code>username</code></dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/requesting</code></dt>
+<dd> Fired when salt-cloud sends the request to create a new VM.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>location</code> &#8212; the location of the VM being requested.</p>
-<dt>&bull;</p>
-<dd> <code>kwargs</code> &#8212; options available as the VM is being requested: <code>Action</code>, <code>ImageId</code>, <code>InstanceType</code>, <code>KeyName</code>, <code>MaxCount</code>, <code>MinCount</code>, <code>SecurityGroup.1</code></p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/querying</code></p>
-<dd> Fired when salt-cloud queries data for a new instance.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>location</code> &#8212; the location of the VM being requested.</dd>
+<dt>&bull;</dt>
+<dd> <code>kwargs</code> &#8212; options available as the VM is being requested: <code>Action</code>, <code>ImageId</code>, <code>InstanceType</code>, <code>KeyName</code>, <code>MaxCount</code>, <code>MinCount</code>, <code>SecurityGroup.1</code></dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/querying</code></dt>
+<dd> Fired when salt-cloud queries data for a new instance.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>instance_id</code> &#8212; the ID of the new VM.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/tagging</code></p>
-<dd> Fired when salt-cloud tags a new instance.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>instance_id</code> &#8212; the ID of the new VM.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/tagging</code></dt>
+<dd> Fired when salt-cloud tags a new instance.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>tags</code> &#8212; tags being set on the new instance.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/waiting_for_ssh</code></p>
-<dd> Fired while the salt-cloud deploy process is waiting for ssh to become available on the new instance.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>tags</code> &#8212; tags being set on the new instance.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/waiting_for_ssh</code></dt>
+<dd> Fired while the salt-cloud deploy process is waiting for ssh to become available on the new instance.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>ip_address</code> &#8212; IP address of the new instance.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/deploy_script</code></p>
-<dd> Fired once the deploy script is finished.</p>
-<dt><code>Variables</code></p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/created</code></p>
-<dd> Fired once the new instance has been fully created.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>ip_address</code> &#8212; IP address of the new instance.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/deploy_script</code></dt>
+<dd> Fired once the deploy script is finished.</dd>
+<dt><code>Variables</code></dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/created</code></dt>
+<dd> Fired once the new instance has been fully created.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>name</code> &#8212; the name of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>instance_id</code> &#8212; the ID of the new instance.</p>
-<dt>&bull;</p>
-<dd> <code>provider</code> &#8212; the cloud provider of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>profile</code> &#8212; the cloud profile for the VM being created.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/destroying</code></p>
-<dd> Fired when salt-cloud requests the destruction of an instance.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>name</code> &#8212; the name of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>instance_id</code> &#8212; the ID of the new instance.</dd>
+<dt>&bull;</dt>
+<dd> <code>provider</code> &#8212; the cloud provider of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>profile</code> &#8212; the cloud profile for the VM being created.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/destroying</code></dt>
+<dd> Fired when salt-cloud requests the destruction of an instance.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>name</code> &#8212; the name of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>instance_id</code> &#8212; the ID of the new instance.</p>
-<dt><code>salt/cloud/&lt;VM NAME&gt;/destroyed</code></p>
-<dd> Fired when an instance has been destroyed.</p>
-<dt><code>Variables</code></p>
+</dd><dt>&bull;</dt>
+<dd> <code>name</code> &#8212; the name of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>instance_id</code> &#8212; the ID of the new instance.</dd>
+<dt><code>salt/cloud/&lt;VM NAME&gt;/destroyed</code></dt>
+<dd> Fired when an instance has been destroyed.</dd>
+<dt><code>Variables</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> <code>name</code> &#8212; the name of the VM being created.</p>
-<dt>&bull;</p>
-<dd> <code>event</code> &#8212; description of the event.</p>
-<dt>&bull;</p>
-<dd> <code>instance_id</code> &#8212; the ID of the new instance.</dl>
+</dd><dt>&bull;</dt>
+<dd> <code>name</code> &#8212; the name of the VM being created.</dd>
+<dt>&bull;</dt>
+<dd> <code>event</code> &#8212; description of the event.</dd>
+<dt>&bull;</dt>
+<dd> <code>instance_id</code> &#8212; the ID of the new instance.</dd></dl>
 <h3>Listening for Events</h3>
 <p> Salt&#8217;s Event Bus is used heavily within Salt and it is also written to integrate heavily with existing tooling and scripts. There is a variety of ways to consume it.</p>
 <h3>From the CLI</h3>
@@ -7050,16 +7050,16 @@ def do_something()<br />
 <p> The beacon system allows the minion to hook into a variety of system processes and continually monitor these processes. When monitored activity occurs in a system process, an event is sent on the Salt event bus that can be used to trigger a reactor. </p>
 <p> Salt beacons can currently monitor and send Salt events for many system activities, including:</p>
 <dl>
-<dt>&bull;</p>
-<dd> file system changes</p>
-<dt>&bull;</p>
-<dd> system load</p>
-<dt>&bull;</p>
-<dd> service status</p>
-<dt>&bull;</p>
-<dd> shell activity, such as user login</p>
-<dt>&bull;</p>
-<dd> network and disk usage </p>
+<dt>&bull;</dt>
+<dd> file system changes</dd>
+<dt>&bull;</dt>
+<dd> system load</dd>
+<dt>&bull;</dt>
+<dd> service status</dd>
+<dt>&bull;</dt>
+<dd> shell activity, such as user login</dd>
+<dt>&bull;</dt>
+<dd> network and disk usage </dd>
 <p> See beacon modules for a current list. </p>
 <p> <code>NOTE:</code> Salt beacons are an event generation mechanism. Beacons leverage the Salt reactor system to make changes when beacon events occur.</dl>
 <h3>Configuring Beacons</h3>
@@ -7247,18 +7247,18 @@ minion_3:
 <h3>Syndic config options</h3>
 <p> These are the options that can be used to configure a Syndic node. Note that other than <code>id</code>, Syndic config options are placed in the Master config on the Syndic node.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>id</code>: Syndic id (shared by the <code>salt-syndic</code> daemon with a potential <code>salt-minion</code> daemon on the same system)</p>
-<dt>&bull;</p>
-<dd> <code>syndic_master</code>: Master node IP address or hostname</p>
-<dt>&bull;</p>
-<dd> <code>syndic_master_port</code>: Master node ret_port</p>
-<dt>&bull;</p>
-<dd> <code>syndic_log_file</code>: path to the logfile (absolute or not)</p>
-<dt>&bull;</p>
-<dd> <code>syndic_pidfile</code>: path to the pidfile (absolute or not)</p>
-<dt>&bull;</p>
-<dd> <code>syndic_wait</code>: time in seconds to wait on returns from this syndic</dl>
+<dt>&bull;</dt>
+<dd> <code>id</code>: Syndic id (shared by the <code>salt-syndic</code> daemon with a potential <code>salt-minion</code> daemon on the same system)</dd>
+<dt>&bull;</dt>
+<dd> <code>syndic_master</code>: Master node IP address or hostname</dd>
+<dt>&bull;</dt>
+<dd> <code>syndic_master_port</code>: Master node ret_port</dd>
+<dt>&bull;</dt>
+<dd> <code>syndic_log_file</code>: path to the logfile (absolute or not)</dd>
+<dt>&bull;</dt>
+<dd> <code>syndic_pidfile</code>: path to the pidfile (absolute or not)</dd>
+<dt>&bull;</dt>
+<dd> <code>syndic_wait</code>: time in seconds to wait on returns from this syndic</dd></dl>
 <h2 id="SALT PROXY MINION DOCUMENTATION"></h2>
 <p> Proxy minions are a developing Salt feature that enables controlling devices that, for whatever reason, cannot run a standard salt-minion. Examples include network gear that has an API but runs a proprietary OS, devices with limited CPU or memory, or devices that could run a minion, but for security reasons, will not. </p>
 <p> <i>Proxy minions are not an &quot;out of the box&quot; feature</i>. Because there are an infinite number of controllable devices, you will most likely have to write the interface yourself. Fortunately, this is only as difficult as the actual interface to the proxied device. Devices that have an existing Python module (PyUSB for example) would be relatively simple to interface. Code to control a device that has an HTML REST-based interface should be easy. Code to control your typical housecat would be excellent source material for a PhD thesis. </p>
@@ -7269,14 +7269,14 @@ minion_3:
 <p> After the proxy minion is started and initiates its connection to the &#8216;dumb&#8217; device, it connects back to the salt-master and ceases to be affiliated in any way with the minion that started it. </p>
 <p> To create support for a proxied device one needs to create four things:</p>
 <dl>
-<dt>1.</p>
-<dd> The <i>proxy_connection_module</i> (located in salt/proxy).</p>
-<dt>2.</p>
-<dd> The <i>grains support code</i> (located in salt/grains).</p>
-<dt>3.</p>
-<dd> Salt modules specific to the controlled device.</p>
-<dt>4.</p>
-<dd> Salt states specific to the controlled device.</dl>
+<dt>1.</dt>
+<dd> The <i>proxy_connection_module</i> (located in salt/proxy).</dd>
+<dt>2.</dt>
+<dd> The <i>grains support code</i> (located in salt/grains).</dd>
+<dt>3.</dt>
+<dd> Salt modules specific to the controlled device.</dd>
+<dt>4.</dt>
+<dd> Salt states specific to the controlled device.</dd></dl>
 <h3>Configuration parameters on the master</h3>
 <p> Proxy minions require no configuration parameters in /etc/salt/master. </p>
 <p> Salt&#8217;s Pillar system is ideally suited for configuring proxy-minions. Proxies can either be designated via a pillar file in pillar_roots, or through an external pillar. External pillars afford the opportunity for interfacing with a configuration management system, database, or other knowledgeable system that that may already contain all the details of proxy targets. To use static files in pillar_roots, pattern your files after the following examples, which are based on the diagram above: </p>
@@ -7332,14 +7332,14 @@ proxy:
 <p> Note the contents of each minioncontroller key may differ widely based on the type of device that the proxy-minion is managing. </p>
 <p> In the above example</p>
 <dl>
-<dt>&bull;</p>
-<dd> dumbdevices 1, 2, and 3 are network switches that have a management interface available at a particular IP address.</p>
-<dt>&bull;</p>
-<dd> dumbdevices 4 and 5 are very low-level devices controlled over an i2c bus. In this case the devices are physically connected to machine &#8216;minioncontroller2&#8217;, and are addressable on the i2c bus at their respective i2c addresses.</p>
-<dt>&bull;</p>
-<dd> dumbdevice6 is a 433 MHz wireless transmitter, also physically connected to minioncontroller2</p>
-<dt>&bull;</p>
-<dd> dumbdevice7 is an SMS gateway connected to machine minioncontroller3 via a serial port. </p>
+<dt>&bull;</dt>
+<dd> dumbdevices 1, 2, and 3 are network switches that have a management interface available at a particular IP address.</dd>
+<dt>&bull;</dt>
+<dd> dumbdevices 4 and 5 are very low-level devices controlled over an i2c bus. In this case the devices are physically connected to machine &#8216;minioncontroller2&#8217;, and are addressable on the i2c bus at their respective i2c addresses.</dd>
+<dt>&bull;</dt>
+<dd> dumbdevice6 is a 433 MHz wireless transmitter, also physically connected to minioncontroller2</dd>
+<dt>&bull;</dt>
+<dd> dumbdevice7 is an SMS gateway connected to machine minioncontroller3 via a serial port. </dd>
 <p> Because of the way pillar works, each of the salt-minions that fork off the proxy minions will only see the keys specific to the proxies it will be handling. In other words, from the above example, only minioncontroller1 will see the connection information for dumbdevices 1, 2, and 3. Minioncontroller2 will see configuration data for dumbdevices 4, 5, and 6, and minioncontroller3 will be privy to dumbdevice7. </p>
 <p> Also, in general, proxy-minions are lightweight, so the machines that run them could conceivably control a large number of devices. The example above is just to illustrate that it is possible for the proxy services to be spread across many machines if necessary, or intentionally run on machines that need to control devices because of some physical interface (e.g. i2c and serial above). Another reason to divide proxy services might be security. In more secure environments only certain machines may have a network path to certain devices. </p>
 <p> Now our salt-minions know if they are supposed to spawn a proxy-minion process to control a particular device. That proxy-minion process will initiate a connection back to the master to enable control.</dl>
@@ -7545,32 +7545,32 @@ transport: raet
 <p> The Salt Windows Software Repository provides a package manager and software repository similar to what is provided by yum and apt on Linux. </p>
 <p> It permits the installation of software using the installers on remote windows machines. In many senses, the operation is similar to that of the other package managers salt is aware of:</p>
 <dl>
-<dt>&bull;</p>
-<dd> the <code>pkg.installed</code> and similar states work on Windows.</p>
-<dt>&bull;</p>
-<dd> the <code>pkg.install</code> and similar module functions work on Windows.</p>
-<dt>&bull;</p>
-<dd> each windows machine needs to have <code>pkg.refresh_db</code> executed against it to pick up the latest version of the package database. </p>
+<dt>&bull;</dt>
+<dd> the <code>pkg.installed</code> and similar states work on Windows.</dd>
+<dt>&bull;</dt>
+<dd> the <code>pkg.install</code> and similar module functions work on Windows.</dd>
+<dt>&bull;</dt>
+<dd> each windows machine needs to have <code>pkg.refresh_db</code> executed against it to pick up the latest version of the package database. </dd>
 <p> High level differences to yum and apt are:</p>
-<dt>&bull;</p>
-<dd> The repository metadata (sls files) is hosted through either salt or git.</p>
-<dt>&bull;</p>
-<dd> Packages can be downloaded from within the salt repository, a git repository or from http(s) or ftp urls.</p>
-<dt>&bull;</p>
-<dd> No dependencies are managed. Dependencies between packages needs to be managed manually.</dl>
+<dt>&bull;</dt>
+<dd> The repository metadata (sls files) is hosted through either salt or git.</dd>
+<dt>&bull;</dt>
+<dd> Packages can be downloaded from within the salt repository, a git repository or from http(s) or ftp urls.</dd>
+<dt>&bull;</dt>
+<dd> No dependencies are managed. Dependencies between packages needs to be managed manually.</dd></dl>
 <h3>Operation</h3>
 <p> The install state/module function of the windows package manager works roughly as follows:</p>
 <dl>
-<dt>1.</p>
-<dd> Execute <code>pkg.list_pkgs</code> and store the result</p>
-<dt>2.</p>
-<dd> Check if any action needs to be taken. (i.e. compare required package and version against <code>pkg.list_pkgs</code> results)</p>
-<dt>3.</p>
-<dd> If so, run the installer command.</p>
-<dt>4.</p>
-<dd> Execute <code>pkg.list_pkgs</code> and compare to the result stored from before installation.</p>
-<dt>5.</p>
-<dd> Success/Failure/Changes will be reported based on the differences between the original and final <code>pkg.list_pkgs</code> results. </p>
+<dt>1.</dt>
+<dd> Execute <code>pkg.list_pkgs</code> and store the result</dd>
+<dt>2.</dt>
+<dd> Check if any action needs to be taken. (i.e. compare required package and version against <code>pkg.list_pkgs</code> results)</dd>
+<dt>3.</dt>
+<dd> If so, run the installer command.</dd>
+<dt>4.</dt>
+<dd> Execute <code>pkg.list_pkgs</code> and compare to the result stored from before installation.</dd>
+<dt>5.</dt>
+<dd> Success/Failure/Changes will be reported based on the differences between the original and final <code>pkg.list_pkgs</code> results. </dd>
 <p> If there are any problems in using the package manager it is likely to be due to the data in your sls files not matching the difference between the pre and post <code>pkg.list_pkgs</code> results.</dl>
 <h3>Usage</h3>
 <p> By default, the Windows software repository is found at <code>/srv/salt/win/repo</code> This can be changed in the master config file (default location is <code>/etc/salt/master</code>) by modifying the <code>win_repo</code> variable. Each piece of software should have its own directory which contains the installers and a package definition file. This package definition file is a YAML file named <code>init.sls</code>. </p>
@@ -7809,83 +7809,83 @@ salt-cloud -p PROFILE NAME1 NAME2 NAME3 NAME4 NAME5 NAME6
 <p> Salt Cloud is the system used to provision virtual machines on various public clouds via a cleanly controlled profile and mapping system.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version of Salt that is running.</p>
-<dt><code>&#8211;versions-report</code></p>
-<dd> Show program&#8217;s dependencies and version number, and then exit</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show the help message and exit</p>
-<dt><code>-c CONFIG_DIR, &#8211;config-dir=CONFIG_dir</code></p>
-<dd> The location of the Salt configuration directory. This directory contains the configuration files for Salt master and minions. The default location on most systems is <code>/etc/salt</code>.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version of Salt that is running.</dd>
+<dt><code>&#8211;versions-report</code></dt>
+<dd> Show program&#8217;s dependencies and version number, and then exit</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the help message and exit</dd>
+<dt><code>-c CONFIG_DIR, &#8211;config-dir=CONFIG_dir</code></dt>
+<dd> The location of the Salt configuration directory. This directory contains the configuration files for Salt master and minions. The default location on most systems is <code>/etc/salt</code>.</dd></dl>
 <h3>Execution Options</h3>
 <dl>
-<dt><code>-L LOCATION, &#8211;location=LOCATION</code></p>
-<dd> Specify which region to connect to.</p>
-<dt><code>-a ACTION, &#8211;action=ACTION</code></p>
-<dd> Perform an action that may be specific to this cloud provider. This argument requires one or more instance names to be specified.</p>
-<dt><code>-f &lt;FUNC-NAME&gt; &lt;PROVIDER&gt;, &#8211;function=&lt;FUNC-NAME&gt; &lt;PROVIDER&gt;</code></p>
-<dd> Perform an function that may be specific to this cloud provider, that does not apply to an instance. This argument requires a provider to be specified (i.e.: nova).</p>
-<dt><code>-p PROFILE, &#8211;profile=PROFILE</code></p>
-<dd> Select a single profile to build the named cloud VMs from. The profile must be defined in the specified profiles file.</p>
-<dt><code>-m MAP, &#8211;map=MAP</code></p>
-<dd> Specify a map file to use. If used without any other options, this option will ensure that all of the mapped VMs are created. If the named VM already exists then it will be skipped.</p>
-<dt><code>-H, &#8211;hard</code></p>
-<dd> When specifying a map file, the default behavior is to ensure that all of the VMs specified in the map file are created. If the &#8211;hard option is set, then any VMs that exist on configured cloud providers that are not specified in the map file will be destroyed. Be advised that this can be a destructive operation and should be used with care.</p>
-<dt><code>-d, &#8211;destroy</code></p>
-<dd> Pass in the name(s) of VMs to destroy, salt-cloud will search the configured cloud providers for the specified names and destroy the VMs. Be advised that this is a destructive operation and should be used with care. Can be used in conjunction with the -m option to specify a map of VMs to be deleted.</p>
-<dt><code>-P, &#8211;parallel</code></p>
-<dd> Normally when building many cloud VMs they are executed serially. The -P option will run each cloud vm build in a separate process allowing for large groups of VMs to be build at once. </p>
+<dt><code>-L LOCATION, &#8211;location=LOCATION</code></dt>
+<dd> Specify which region to connect to.</dd>
+<dt><code>-a ACTION, &#8211;action=ACTION</code></dt>
+<dd> Perform an action that may be specific to this cloud provider. This argument requires one or more instance names to be specified.</dd>
+<dt><code>-f &lt;FUNC-NAME&gt; &lt;PROVIDER&gt;, &#8211;function=&lt;FUNC-NAME&gt; &lt;PROVIDER&gt;</code></dt>
+<dd> Perform an function that may be specific to this cloud provider, that does not apply to an instance. This argument requires a provider to be specified (i.e.: nova).</dd>
+<dt><code>-p PROFILE, &#8211;profile=PROFILE</code></dt>
+<dd> Select a single profile to build the named cloud VMs from. The profile must be defined in the specified profiles file.</dd>
+<dt><code>-m MAP, &#8211;map=MAP</code></dt>
+<dd> Specify a map file to use. If used without any other options, this option will ensure that all of the mapped VMs are created. If the named VM already exists then it will be skipped.</dd>
+<dt><code>-H, &#8211;hard</code></dt>
+<dd> When specifying a map file, the default behavior is to ensure that all of the VMs specified in the map file are created. If the &#8211;hard option is set, then any VMs that exist on configured cloud providers that are not specified in the map file will be destroyed. Be advised that this can be a destructive operation and should be used with care.</dd>
+<dt><code>-d, &#8211;destroy</code></dt>
+<dd> Pass in the name(s) of VMs to destroy, salt-cloud will search the configured cloud providers for the specified names and destroy the VMs. Be advised that this is a destructive operation and should be used with care. Can be used in conjunction with the -m option to specify a map of VMs to be deleted.</dd>
+<dt><code>-P, &#8211;parallel</code></dt>
+<dd> Normally when building many cloud VMs they are executed serially. The -P option will run each cloud vm build in a separate process allowing for large groups of VMs to be build at once. </dd>
 <p> Be advised that some cloud provider&#8217;s systems don&#8217;t seem to be well suited for this influx of vm creation. When creating large groups of VMs watch the cloud provider carefully.</p>
-<dt><code>-u, &#8211;update-bootstrap</code></p>
-<dd> Update salt-bootstrap to the latest develop version on GitHub.</p>
-<dt><code>-y, &#8211;assume-yes</code></p>
-<dd> Default yes in answer to all confirmation questions.</p>
-<dt><code>-k, &#8211;keep-tmp</code></p>
-<dd> Do not remove files from /tmp/ after deploy.sh finishes.</p>
-<dt><code>&#8211;show-deploy-args</code></p>
-<dd> Include the options used to deploy the minion in the data returned.</p>
-<dt><code>&#8211;script-args=SCRIPT_ARGS</code></p>
-<dd> Script arguments to be fed to the bootstrap script when deploying the VM.</dl>
+<dt><code>-u, &#8211;update-bootstrap</code></dt>
+<dd> Update salt-bootstrap to the latest develop version on GitHub.</dd>
+<dt><code>-y, &#8211;assume-yes</code></dt>
+<dd> Default yes in answer to all confirmation questions.</dd>
+<dt><code>-k, &#8211;keep-tmp</code></dt>
+<dd> Do not remove files from /tmp/ after deploy.sh finishes.</dd>
+<dt><code>&#8211;show-deploy-args</code></dt>
+<dd> Include the options used to deploy the minion in the data returned.</dd>
+<dt><code>&#8211;script-args=SCRIPT_ARGS</code></dt>
+<dd> Script arguments to be fed to the bootstrap script when deploying the VM.</dd></dl>
 <h3>Query Options</h3>
 <dl>
-<dt><code>-Q, &#8211;query</code></p>
-<dd> Execute a query and return some information about the nodes running on configured cloud providers</p>
-<dt><code>-F, &#8211;full-query</code></p>
-<dd> Execute a query and print out all available information about all cloud VMs. Can be used in conjunction with -m to display only information about the specified map.</p>
-<dt><code>-S, &#8211;select-query</code></p>
-<dd> Execute a query and print out selected information about all cloud VMs. Can be used in conjunction with -m to display only information about the specified map.</p>
-<dt><code>&#8211;list-providers</code></p>
-<dd> Display a list of configured providers.</p>
-<dt><code>&#8211;list-profiles</code></p>
-<dd> New in version 2014.7.0. </p>
+<dt><code>-Q, &#8211;query</code></dt>
+<dd> Execute a query and return some information about the nodes running on configured cloud providers</dd>
+<dt><code>-F, &#8211;full-query</code></dt>
+<dd> Execute a query and print out all available information about all cloud VMs. Can be used in conjunction with -m to display only information about the specified map.</dd>
+<dt><code>-S, &#8211;select-query</code></dt>
+<dd> Execute a query and print out selected information about all cloud VMs. Can be used in conjunction with -m to display only information about the specified map.</dd>
+<dt><code>&#8211;list-providers</code></dt>
+<dd> Display a list of configured providers.</dd>
+<dt><code>&#8211;list-profiles</code></dt>
+<dd> New in version 2014.7.0. </dd>
 <p> Display a list of configured profiles. Pass in a cloud provider to view the provider&#8217;s associated profiles, such as <code>digital_ocean</code>, or pass in <code>all</code> to list all the configured profiles.</dl>
 <h3>Cloud Providers Listings</h3>
 <dl>
-<dt><code>&#8211;list-locations=LIST_LOCATIONS</code></p>
-<dd> Display a list of locations available in configured cloud providers. Pass the cloud provider that available locations are desired on, aka &quot;linode&quot;, or pass &quot;all&quot; to list locations for all configured cloud providers</p>
-<dt><code>&#8211;list-images=LIST_IMAGES</code></p>
-<dd> Display a list of images available in configured cloud providers. Pass the cloud provider that available images are desired on, aka &quot;linode&quot;, or pass &quot;all&quot; to list images for all configured cloud providers</p>
-<dt><code>&#8211;list-sizes=LIST_SIZES</code></p>
-<dd> Display a list of sizes available in configured cloud providers. Pass the cloud provider that available sizes are desired on, aka &quot;AWS&quot;, or pass &quot;all&quot; to list sizes for all configured cloud providers</dl>
+<dt><code>&#8211;list-locations=LIST_LOCATIONS</code></dt>
+<dd> Display a list of locations available in configured cloud providers. Pass the cloud provider that available locations are desired on, aka &quot;linode&quot;, or pass &quot;all&quot; to list locations for all configured cloud providers</dd>
+<dt><code>&#8211;list-images=LIST_IMAGES</code></dt>
+<dd> Display a list of images available in configured cloud providers. Pass the cloud provider that available images are desired on, aka &quot;linode&quot;, or pass &quot;all&quot; to list images for all configured cloud providers</dd>
+<dt><code>&#8211;list-sizes=LIST_SIZES</code></dt>
+<dd> Display a list of sizes available in configured cloud providers. Pass the cloud provider that available sizes are desired on, aka &quot;AWS&quot;, or pass &quot;all&quot; to list sizes for all configured cloud providers</dd></dl>
 <h3>Cloud Credentials</h3>
 <dl>
-<dt><code>&#8211;set-password=&lt;USERNAME&gt; &lt;PROVIDER&gt;</code></p>
-<dd> Configure password for a cloud provider and save it to the keyring. PROVIDER can be specified with or without a driver, for example: &quot;&#8211;set-password bob rackspace&quot; or more specific &quot;&#8211;set-password bob rackspace:openstack&quot; DEPRECATED!</dl>
+<dt><code>&#8211;set-password=&lt;USERNAME&gt; &lt;PROVIDER&gt;</code></dt>
+<dd> Configure password for a cloud provider and save it to the keyring. PROVIDER can be specified with or without a driver, for example: &quot;&#8211;set-password bob rackspace&quot; or more specific &quot;&#8211;set-password bob rackspace:openstack&quot; DEPRECATED!</dd></dl>
 <h3>Output Options</h3>
 <dl>
-<dt><code>&#8211;out</code></p>
-<dd> Pass in an alternative outputter to display the return of data. This outputter can be any of the available outputters: <code>grains</code>, <code>highstate</code>, <code>json</code>, <code>key</code>, <code>overstatestage</code>, <code>pprint</code>, <code>raw</code>, <code>txt</code>, <code>yaml</code> </p>
+<dt><code>&#8211;out</code></dt>
+<dd> Pass in an alternative outputter to display the return of data. This outputter can be any of the available outputters: <code>grains</code>, <code>highstate</code>, <code>json</code>, <code>key</code>, <code>overstatestage</code>, <code>pprint</code>, <code>raw</code>, <code>txt</code>, <code>yaml</code> </dd>
 <p> Some outputters are formatted only for data returned from specific functions; for instance, the <code>grains</code> outputter will not work for non-grains data. </p>
 <p> If an outputter is used that does not support the data passed into it, then Salt will fall back on the <code>pprint</code> outputter and display the return data using the Python <code>pprint</code> standard library module. </p>
 <p> <code>NOTE:</code> If using <code>&#8211;out=json</code>, you will probably want <code>&#8211;static</code> as well. Without the static option, you will get a separate JSON string per minion which makes JSON output invalid as a whole. This is due to using an iterative outputter. So if you want to feed it to a JSON parser, use <code>&#8211;static</code> as well.</p>
-<dt><code>&#8211;out-indent OUTPUT_INDENT, &#8211;output-indent OUTPUT_INDENT</code></p>
-<dd> Print the output indented by the provided value in spaces. Negative values disable indentation. Only applicable in outputters that support indentation.</p>
-<dt><code>&#8211;out-file=OUTPUT_FILE, &#8211;output-file=OUTPUT_FILE</code></p>
-<dd> Write the output to the specified file.</p>
-<dt><code>&#8211;no-color</code></p>
-<dd> Disable all colored output</p>
-<dt><code>&#8211;force-color</code></p>
-<dd> Force colored output </p>
+<dt><code>&#8211;out-indent OUTPUT_INDENT, &#8211;output-indent OUTPUT_INDENT</code></dt>
+<dd> Print the output indented by the provided value in spaces. Negative values disable indentation. Only applicable in outputters that support indentation.</dd>
+<dt><code>&#8211;out-file=OUTPUT_FILE, &#8211;output-file=OUTPUT_FILE</code></dt>
+<dd> Write the output to the specified file.</dd>
+<dt><code>&#8211;no-color</code></dt>
+<dd> Disable all colored output</dd>
+<dt><code>&#8211;force-color</code></dt>
+<dd> Force colored output </dd>
 <p> <code>NOTE:</code> When using colored output the color codes are as follows: </p>
 <p> <code>green</code> denotes success, <code>red</code> denotes failure, <code>blue</code> denotes changes and success and <code>yellow</code> denotes a expected future change in configuration.</dl>
 <h3>Examples</h3>
@@ -8147,12 +8147,12 @@ $ salt-cloud -f show_image ec2 image=ami-fd20ad94
 </pre>
 <p> There are three universal salt-cloud functions that are extremely useful for gathering information about instances on a provider basis:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>list_nodes</code>: Returns some general information about the instances for the given provider.</p>
-<dt>&bull;</p>
-<dd> <code>list_nodes_full</code>: Returns all information about the instances for the given provider.</p>
-<dt>&bull;</p>
-<dd> <code>list_nodes_select</code>: Returns select information about the instances for the given provider. </p>
+<dt>&bull;</dt>
+<dd> <code>list_nodes</code>: Returns some general information about the instances for the given provider.</dd>
+<dt>&bull;</dt>
+<dd> <code>list_nodes_full</code>: Returns all information about the instances for the given provider.</dd>
+<dt>&bull;</dt>
+<dd> <code>list_nodes_select</code>: Returns select information about the instances for the given provider. </dd>
 <pre>
 $ salt-cloud -f list_nodes linode
 $ salt-cloud -f list_nodes_full linode
@@ -8540,16 +8540,16 @@ CentOS-5:
 <p> Salt Cloud makes use of <i>impacket</i> and <i>winexe</i> to set up the Windows Salt Minion installer. </p>
 <p> <i>impacket</i> is usually available as either the <i>impacket</i> or the <i>python-impacket</i> package, depending on the distribution. More information on <i>impacket</i> can be found at the project home:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>impacket project home</i> </p>
+<dt>&bull;</dt>
+<dd> <i>impacket project home</i> </dd>
 <p> <i>winexe</i> is less commonly available in distribution-specific repositories. However, it is currently being built for various distributions in 3rd party channels:</p>
-<dt>&bull;</p>
-<dd> <i>RPMs at pbone.net</i></p>
-<dt>&bull;</p>
-<dd> <i>OpenSuse Build Service</i> </p>
+<dt>&bull;</dt>
+<dd> <i>RPMs at pbone.net</i></dd>
+<dt>&bull;</dt>
+<dd> <i>OpenSuse Build Service</i> </dd>
 <p> Additionally, a copy of the Salt Minion Windows installer must be present on the system on which Salt Cloud is running. This installer may be downloaded from saltstack.com:</p>
-<dt>&bull;</p>
-<dd> <i>SaltStack Download Area</i></dl>
+<dt>&bull;</dt>
+<dd> <i>SaltStack Download Area</i></dd></dl>
 <h3>Firewall Settings</h3>
 <p> Because Salt Cloud makes use of <i>smbclient</i> and <i>winexe</i>, port 445 must be open on the target image. This port is not generally open by default on a standard Windows distribution, and care must be taken to use an image in which this port is open, or the Windows firewall is disabled. </p>
 <p> If supported by the cloud provider, a PowerShell script may be used to open up this port automatically, using the cloud provider&#8217;s <i>userdata</i>. The following script would open up port 445, and apply the changes: </p>
@@ -8643,14 +8643,14 @@ my &#8211; aliyun &#8211; config : &#8212; &#8212; &#8212; &#8212; &#8211;aliyun
 <p> More information about Azure is located at <i><a rel="nofollow noopener" href="http://www.windowsazure.com/" target="_blank">http://www.windowsazure.com/</a></i>.</p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>Azure</i> Python SDK.</p>
-<dt>&bull;</p>
-<dd> A Microsoft Azure account</p>
-<dt>&bull;</p>
-<dd> OpenSSL (to generate the certificates)</p>
-<dt>&bull;</p>
-<dd> <i>Salt</i></dl>
+<dt>&bull;</dt>
+<dd> The <i>Azure</i> Python SDK.</dd>
+<dt>&bull;</dt>
+<dd> A Microsoft Azure account</dd>
+<dt>&bull;</dt>
+<dd> OpenSSL (to generate the certificates)</dd>
+<dt>&bull;</dt>
+<dd> <i>Salt</i></dd></dl>
 <h3>Configuration</h3>
 <p> Set up the provider config at <code>/etc/salt/cloud.providers.d/azure.conf</code>: </p>
 <pre>
@@ -8890,10 +8890,10 @@ my &#8211; ec2 &#8211; southeast &#8211; public &#8211; ips :<br />
 <p> Amazon EC2 instances support the concept of an <i>instance profile</i>, which is a logical container for the IAM role. At the time that you launch an EC2 instance, you can associate the instance with an instance profile, which in turn corresponds to the IAM role. Any software that runs on the EC2 instance is able to access AWS using the permissions associated with the IAM role. </p>
 <p> Scaffolding the profile is a 2-step configuration process:</p>
 <dl>
-<dt>1.</p>
-<dd> Configure an IAM Role from the <i>IAM Management Console</i>.</p>
-<dt>2.</p>
-<dd> Attach this role to a new profile. It can be done with the <i>AWS CLI</i>: </p>
+<dt>1.</dt>
+<dd> Configure an IAM Role from the <i>IAM Management Console</i>.</dd>
+<dt>2.</dt>
+<dd> Attach this role to a new profile. It can be done with the <i>AWS CLI</i>: </dd>
 <pre>
 &gt; aws iam create-instance-profile --instance-profile-name PROFILE_NAME
 &gt; aws iam add-role-to-instance-profile --instance-profile-name PROFILE_NAME --role-name ROLE_NAME
@@ -8986,14 +8986,14 @@ my-ec2-config:
 <p> NOTE: Spot instances are a great way to save a bit of money, but you do run the risk of losing your spot instances if the current price for the instance size goes above your maximum bid. </p>
 <p> The following parameters may be set in the cloud configuration file to control various aspects of the spot instance launching:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>wait_for_spot_timeout</code>: seconds to wait before giving up on spot instance launch (default=600)</p>
-<dt>&bull;</p>
-<dd> <code>wait_for_spot_interval</code>: seconds to wait in between polling requests to determine if a spot instance is available (default=30)</p>
-<dt>&bull;</p>
-<dd> <code>wait_for_spot_interval_multiplier</code>: a multiplier to add to the interval in between requests, which is useful if AWS is throttling your requests (default=1)</p>
-<dt>&bull;</p>
-<dd> <code>wait_for_spot_max_failures</code>: maximum number of failures before giving up on launching your spot instance (default=10) </p>
+<dt>&bull;</dt>
+<dd> <code>wait_for_spot_timeout</code>: seconds to wait before giving up on spot instance launch (default=600)</dd>
+<dt>&bull;</dt>
+<dd> <code>wait_for_spot_interval</code>: seconds to wait in between polling requests to determine if a spot instance is available (default=30)</dd>
+<dt>&bull;</dt>
+<dd> <code>wait_for_spot_interval_multiplier</code>: a multiplier to add to the interval in between requests, which is useful if AWS is throttling your requests (default=1)</dd>
+<dt>&bull;</dt>
+<dd> <code>wait_for_spot_max_failures</code>: maximum number of failures before giving up on launching your spot instance (default=10) </dd>
 <p> If you find that you&#8217;re being throttled by AWS while polling for spot instances, you can set the following in your core cloud configuration file that will double the polling interval after each request to AWS. </p>
 <pre>
 wait_for_spot_interval: 1
@@ -9088,22 +9088,22 @@ salt-cloud -f avail_images my-ec2-config owner=aws-marketplace
 <h3>EC2 Images</h3>
 <p> The following are lists of available AMI images, generally sorted by OS. These lists are on 3rd-party websites, are not managed by Salt Stack in any way. They are provided here as a reference for those who are interested, and contain no warranty (express or implied) from anyone affiliated with Salt Stack. Most of them have never been used, much less tested, by the Salt Stack team.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Arch Linux</i></p>
-<dt>&bull;</p>
-<dd> <i>FreeBSD</i></p>
-<dt>&bull;</p>
-<dd> <i>Fedora</i></p>
-<dt>&bull;</p>
-<dd> <i>CentOS</i></p>
-<dt>&bull;</p>
-<dd> <i>Ubuntu</i></p>
-<dt>&bull;</p>
-<dd> <i>Debian</i></p>
-<dt>&bull;</p>
-<dd> <i>OmniOS</i></p>
-<dt>&bull;</p>
-<dd> <i>All Images on Amazon</i></dl>
+<dt>&bull;</dt>
+<dd> <i>Arch Linux</i></dd>
+<dt>&bull;</dt>
+<dd> <i>FreeBSD</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Fedora</i></dd>
+<dt>&bull;</dt>
+<dd> <i>CentOS</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Ubuntu</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Debian</i></dd>
+<dt>&bull;</dt>
+<dd> <i>OmniOS</i></dd>
+<dt>&bull;</dt>
+<dd> <i>All Images on Amazon</i></dd></dl>
 <h3>show_image</h3>
 <p> This is a function that describes an AMI on EC2. This will give insight as to the defaults that will be applied to an instance using a particular AMI. </p>
 <pre>
@@ -9294,8 +9294,8 @@ profile-id:
 <p> GoGrid is a public cloud provider supporting Linux and Windows. <a NAME="lb[J">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Libcloud &gt;= 0.13.2</dl>
+<dt>&bull;</dt>
+<dd> Libcloud &gt;= 0.13.2</dd></dl>
 <p> <a NAME="lb[K">&nbsp;<wbr></a></p>
 <h3>Configuration</h3>
 <p> To use Salt Cloud with GoGrid log into the GoGrid web interface and create an API key. Do this by clicking on &quot;My Account&quot; and then going to the API Keys tab. </p>
@@ -9332,35 +9332,35 @@ my &#8211; gogrid &#8211; config : &#8212; &#8212; &#8212; &#8212; &#8211;gogrid
 <p> You can find out more about GCE and other Google Cloud Platform services at <i><a rel="nofollow noopener" href="https://cloud.google.com" target="_blank">https://cloud.google.com</a></i>. <a NAME="lb[O">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Libcloud &gt;= 0.14.0-beta3</p>
-<dt>&bull;</p>
-<dd> PyCrypto &gt;= 2.1.</p>
-<dt>&bull;</p>
-<dd> A Google Cloud Platform account with Compute Engine enabled</p>
-<dt>&bull;</p>
-<dd> A registered Service Account for authorization</p>
-<dt>&bull;</p>
-<dd> Oh, and obviously you&#8217;ll need <i>salt</i></dl>
+<dt>&bull;</dt>
+<dd> Libcloud &gt;= 0.14.0-beta3</dd>
+<dt>&bull;</dt>
+<dd> PyCrypto &gt;= 2.1.</dd>
+<dt>&bull;</dt>
+<dd> A Google Cloud Platform account with Compute Engine enabled</dd>
+<dt>&bull;</dt>
+<dd> A registered Service Account for authorization</dd>
+<dt>&bull;</dt>
+<dd> Oh, and obviously you&#8217;ll need <i>salt</i></dd></dl>
 <p> <a NAME="lb[P">&nbsp;<wbr></a></p>
 <h3>Google Compute Engine Setup</h3>
 <dl>
-<dt>1.</p>
-<dd> Sign up for Google Cloud Platform </p>
+<dt>1.</dt>
+<dd> Sign up for Google Cloud Platform </dd>
 <p> Go to <i><a rel="nofollow noopener" href="https://cloud.google.com" target="_blank">https://cloud.google.com</a></i> and use your Google account to sign up for Google Cloud Platform and complete the guided instructions.</p>
-<dt>2.</p>
-<dd> Create a Project </p>
+<dt>2.</dt>
+<dd> Create a Project </dd>
 <p> Next, go to the console at <i><a rel="nofollow noopener" href="https://cloud.google.com/console" target="_blank">https://cloud.google.com/console</a></i> and create a new Project. Make sure to select your new Project if you are not automatically directed to the Project. </p>
 <p> Projects are a way of grouping together related users, services, and billing. You may opt to create multiple Projects and the remaining instructions will need to be completed for each Project if you wish to use GCE and Salt Cloud to manage your virtual machines.</p>
-<dt>3.</p>
-<dd> Enable the Google Compute Engine service </p>
+<dt>3.</dt>
+<dd> Enable the Google Compute Engine service </dd>
 <p> In your Project, either just click <i>Compute Engine</i> to the left, or go to the <i>APIs &amp; auth</i> section and <i>APIs</i> link and enable the Google Compute Engine service.</p>
-<dt>4.</p>
-<dd> Create a Service Account </p>
+<dt>4.</dt>
+<dd> Create a Service Account </dd>
 <p> To set up authorization, navigate to <i>APIs &amp; auth</i> section and then the <i>Credentials</i> link and click the <i>CREATE NEW CLIENT ID</i> button. Select <i>Service Account</i> and click the <i>Create Client ID</i> button. This will automatically download a <code>.json</code> file which can be ignored. </p>
 <p> Look for a new <i>Service Account</i> section in the page and record the generated email address for the matching key/fingerprint. The email address will be used in the <code>service_account_email_address</code> of the <code>/etc/salt/cloud</code> file.</p>
-<dt>5.</p>
-<dd> Key Format </p>
+<dt>5.</dt>
+<dd> Key Format </dd>
 <p> <i>If you are using &#8220;libcloud &gt;= 0.17.0&#8220; it is recommended that you use the &#8220;JSON format&#8220; file you downloaded above and skip to the &quot;Configuration&quot; section below, using the JSON file **_in place of &#8216;NEW.pem&#8217;_*</i> in the documentation. </p>
 <p> If you are using an older version of libcloud or are unsure of the version you have, please follow the instructions below to generate and format a new P12 key.* </p>
 <p> In the new <i>Service Account</i> section, click <i>Generate new P12 key</i>, which will automatically download a <code>.p12</code> private key file. The <code>.p12</code> private key needs to be converted to a format compatible with libcloud. This new Google-generated private key was encrypted using <i>notasecret</i> as a passphrase. Use the following command and record the location of the converted private key and record the location for use in the <code>service_account_private_key</code> of the <code>/etc/salt/cloud</code> file: </p>
@@ -9429,19 +9429,19 @@ salt gce-instance test.ping
 <p> Specify whether to use public or private IP for deploy script. </p>
 <p> Valid options are:</p>
 <dl>
-<dt>&bull;</p>
-<dd> private_ips: The salt-master is also hosted with GCE</p>
-<dt>&bull;</p>
-<dd> public_ips: The salt-master is hosted outside of GCE</dl>
+<dt>&bull;</dt>
+<dd> private_ips: The salt-master is also hosted with GCE</dd>
+<dt>&bull;</dt>
+<dd> public_ips: The salt-master is hosted outside of GCE</dd></dl>
 <p> <a NAME="lb\D">&nbsp;<wbr></a></p>
 <h3>external_ip</h3>
 <p> Per instance setting: Used a named fixed IP address to this host. </p>
 <p> Valid options are:</p>
 <dl>
-<dt>&bull;</p>
-<dd> ephemeral: The host will use a GCE ephemeral IP</p>
-<dt>&bull;</p>
-<dd> None: No external IP will be configured on this host. </p>
+<dt>&bull;</dt>
+<dd> ephemeral: The host will use a GCE ephemeral IP</dd>
+<dt>&bull;</dt>
+<dd> None: No external IP will be configured on this host. </dd>
 <p> Optionally, pass the name of a GCE address to use a fixed IP address. If the address does not already exist, it will be created.</dl>
 <p> <a NAME="lb\E">&nbsp;<wbr></a></p>
 <h3>ex_disk_type</h3>
@@ -9676,19 +9676,19 @@ hp_ae1_ubuntu:
 </pre>
 <p> Some important things about the example above:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The <code>image</code> parameter can use either the image name or image ID which you can obtain by running in the example below (this case US East): </p>
+<dt>&bull;</dt>
+<dd> The <code>image</code> parameter can use either the image name or image ID which you can obtain by running in the example below (this case US East): </dd>
 <pre>
 # salt-cloud --list-images hp_ae1
 </pre>
-<dt>&bull;</p>
-<dd> The parameter <code>ignore_cidr</code> specifies a range of addresses to ignore when trying to connect to the instance. In this case, it&#8217;s the range of IP addresses used for an private IP of the instance.</p>
-<dt>&bull;</p>
-<dd> The parameter <code>networks</code> is very important to include. In previous versions of Salt Cloud, this is what made it possible for salt-cloud to be able to attach a floating IP to the instance in order to connect to the instance and set up the minion. The current version of salt-cloud doesn&#8217;t require it, though having it is of no harm either. Newer versions of salt-cloud will use this, and without it, will attempt to find a list of floating IP addresses to use regardless.</p>
-<dt>&bull;</p>
-<dd> The <code>ssh_key_file</code> and <code>ssh_key_name</code> are the keys that will make it possible to connect to the instance to set up the minion</p>
-<dt>&bull;</p>
-<dd> The <code>ssh_username</code> parameter, in this case, being that the image used will be ubuntu, will make it possible to not only log in but install the minion</dl>
+<dt>&bull;</dt>
+<dd> The parameter <code>ignore_cidr</code> specifies a range of addresses to ignore when trying to connect to the instance. In this case, it&#8217;s the range of IP addresses used for an private IP of the instance.</dd>
+<dt>&bull;</dt>
+<dd> The parameter <code>networks</code> is very important to include. In previous versions of Salt Cloud, this is what made it possible for salt-cloud to be able to attach a floating IP to the instance in order to connect to the instance and set up the minion. The current version of salt-cloud doesn&#8217;t require it, though having it is of no harm either. Newer versions of salt-cloud will use this, and without it, will attempt to find a list of floating IP addresses to use regardless.</dd>
+<dt>&bull;</dt>
+<dd> The <code>ssh_key_file</code> and <code>ssh_key_name</code> are the keys that will make it possible to connect to the instance to set up the minion</dd>
+<dt>&bull;</dt>
+<dd> The <code>ssh_username</code> parameter, in this case, being that the image used will be ubuntu, will make it possible to not only log in but install the minion</dd></dl>
 <p> <a NAME="lb]L">&nbsp;<wbr></a></p>
 <h3>Launch an instance</h3>
 <p> To instantiate a machine based on this profile (example): </p>
@@ -9801,23 +9801,23 @@ api_host_suffix: .api.myhostname.com
 <p> The LXC module is designed to install Salt in an LXC container on a controlled and possibly remote minion. </p>
 <p> In other words, Salt will connect to a minion, then from that minion:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Provision and configure a container for networking access</p>
-<dt>&bull;</p>
-<dd> Use those modules to deploy salt and re-attach to master.</p>
-<dt>&bull;</p>
-<dd> <code>lxc runner</code></p>
-<dt>&bull;</p>
-<dd> <code>lxc module</code></p>
-<dt>&bull;</p>
-<dd> <code>seed</code></dl>
+<dt>&bull;</dt>
+<dd> Provision and configure a container for networking access</dd>
+<dt>&bull;</dt>
+<dd> Use those modules to deploy salt and re-attach to master.</dd>
+<dt>&bull;</dt>
+<dd> <code>lxc runner</code></dd>
+<dt>&bull;</dt>
+<dd> <code>lxc module</code></dd>
+<dt>&bull;</dt>
+<dd> <code>seed</code></dd></dl>
 <p> <a NAME="lb]Z">&nbsp;<wbr></a></p>
 <h3>Limitations</h3>
 <dl>
-<dt>&bull;</p>
-<dd> You can only act on one minion and one provider at a time.</p>
-<dt>&bull;</p>
-<dd> Listing images must be targeted to a particular LXC provider (nothing will be outputted with <code>all</code>) </p>
+<dt>&bull;</dt>
+<dd> You can only act on one minion and one provider at a time.</dd>
+<dt>&bull;</dt>
+<dd> Listing images must be targeted to a particular LXC provider (nothing will be outputted with <code>all</code>) </dd>
 <p> <code>WARNING:</code> On pre <code>2015.5.2</code>, you need to specify explitly the network bridge</dl>
 <p> <a NAME="lb^A">&nbsp;<wbr></a></p>
 <h3>Operation</h3>
@@ -9825,22 +9825,22 @@ api_host_suffix: .api.myhostname.com
 <p> You can provide to those lxc VMs a profile and a network profile like if you were directly using the minion module. </p>
 <p> Order of operation:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Create the LXC container on the desired minion (clone or template)</p>
-<dt>&bull;</p>
-<dd> Change LXC config options (if any need to be changed)</p>
-<dt>&bull;</p>
-<dd> Start container</p>
-<dt>&bull;</p>
-<dd> Change base passwords if any</p>
-<dt>&bull;</p>
-<dd> Change base DNS configuration if necessary</p>
-<dt>&bull;</p>
-<dd> Wait for LXC container to be up and ready for ssh</p>
-<dt>&bull;</p>
-<dd> Test SSH connection and bailout in error</p>
-<dt>&bull;</p>
-<dd> Upload deploy script and seeds, then re-attach the minion.</dl>
+<dt>&bull;</dt>
+<dd> Create the LXC container on the desired minion (clone or template)</dd>
+<dt>&bull;</dt>
+<dd> Change LXC config options (if any need to be changed)</dd>
+<dt>&bull;</dt>
+<dd> Start container</dd>
+<dt>&bull;</dt>
+<dd> Change base passwords if any</dd>
+<dt>&bull;</dt>
+<dd> Change base DNS configuration if necessary</dd>
+<dt>&bull;</dt>
+<dd> Wait for LXC container to be up and ready for ssh</dd>
+<dt>&bull;</dt>
+<dd> Test SSH connection and bailout in error</dd>
+<dt>&bull;</dt>
+<dd> Upload deploy script and seeds, then re-attach the minion.</dd></dl>
 <p> <a NAME="lb^B">&nbsp;<wbr></a></p>
 <h3>Provider configuration</h3>
 <p> Here is a simple provider configuration: </p>
@@ -9856,14 +9856,14 @@ devhost10-lxc:
 <p> Please read tutorial-lxc before anything else. And specially tutorial-lxc-profiles. </p>
 <p> Here are the options to configure your containers:</p>
 <dl>
-<dt><code>target</code></p>
-<dd> Host minion id to install the lxc Container into</p>
-<dt><code>lxc_profile</code></p>
-<dd> Name of the profile or inline options for the LXC vm creation/cloning, please see tutorial-lxc-profiles-container.</p>
-<dt><code>network_profile</code></p>
-<dd> Name of the profile or inline options for the LXC vm network settings, please see tutorial-lxc-profiles-network.</p>
-<dt><code>nic_opts</code></p>
-<dd> Totally optionnal. Per interface new-style configuration options mappings which will override any profile default option: </p>
+<dt><code>target</code></dt>
+<dd> Host minion id to install the lxc Container into</dd>
+<dt><code>lxc_profile</code></dt>
+<dd> Name of the profile or inline options for the LXC vm creation/cloning, please see tutorial-lxc-profiles-container.</dd>
+<dt><code>network_profile</code></dt>
+<dd> Name of the profile or inline options for the LXC vm network settings, please see tutorial-lxc-profiles-network.</dd>
+<dt><code>nic_opts</code></dt>
+<dd> Totally optionnal. Per interface new-style configuration options mappings which will override any profile default option: </dd>
 <pre>
 eth0: {'mac': '00:16:3e:01:29:40',
               'gateway': None, (default)
@@ -9872,18 +9872,18 @@ eth0: {'mac': '00:16:3e:01:29:40',
               'netmask': '', (default)
               'ip': '22.1.4.25'}}
 </pre>
-<dt><code>password</code></p>
-<dd> password for root and sysadmin users</p>
-<dt><code>dnsservers</code></p>
-<dd> List of DNS servers to use. This is optional.</p>
-<dt><code>minion</code></p>
-<dd> minion configuration (see <code>Minion Configuration in Salt Cloud</code>)</p>
-<dt><code>bootstrap_shell</code></p>
-<dd> shell for bootstraping script (default: /bin/sh)</p>
-<dt><code>script</code></p>
-<dd> defaults to salt-boostrap</p>
-<dt><code>script_args</code></p>
-<dd> arguments which are given to the bootstrap script. the {0} placeholder will be replaced by the path which contains the minion config and key files, eg: </p>
+<dt><code>password</code></dt>
+<dd> password for root and sysadmin users</dd>
+<dt><code>dnsservers</code></dt>
+<dd> List of DNS servers to use. This is optional.</dd>
+<dt><code>minion</code></dt>
+<dd> minion configuration (see <code>Minion Configuration in Salt Cloud</code>)</dd>
+<dt><code>bootstrap_shell</code></dt>
+<dd> shell for bootstraping script (default: /bin/sh)</dd>
+<dt><code>script</code></dt>
+<dd> defaults to salt-boostrap</dd>
+<dt><code>script_args</code></dt>
+<dd> arguments which are given to the bootstrap script. the {0} placeholder will be replaced by the path which contains the minion config and key files, eg: </dd>
 <pre>
 script_args=&quot;-c {0}&quot;
 </pre>
@@ -9952,22 +9952,22 @@ devhost10-lxc:
 <p> <a NAME="lb^D">&nbsp;<wbr></a></p>
 <h3>Driver Support</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Container creation</p>
-<dt>&bull;</p>
-<dd> Image listing (LXC templates)</p>
-<dt>&bull;</p>
-<dd> Running container information (IP addresses, etc.)</dl>
+<dt>&bull;</dt>
+<dd> Container creation</dd>
+<dt>&bull;</dt>
+<dd> Image listing (LXC templates)</dd>
+<dt>&bull;</dt>
+<dd> Running container information (IP addresses, etc.)</dd></dl>
 <p> <a NAME="lb^E">&nbsp;<wbr></a></p>
 <h3>Getting Started With Linode</h3>
 <p> Linode is a public cloud provider with a focus on Linux instances. <a NAME="lb^F">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> linode-python &gt;= 1.1.1 </p>
+<dt>&bull;</dt>
+<dd> linode-python &gt;= 1.1.1 </dd>
 <p> OR</p>
-<dt>&bull;</p>
-<dd> Libcloud &gt;= 0.13.2 </p>
+<dt>&bull;</dt>
+<dd> Libcloud &gt;= 0.13.2 </dd>
 <p> This driver supports accessing Linode via linode-python or Apache Libcloud. Linode-python is recommended, it is more full-featured than Libcloud. In particular using linode-python enables stopping, starting, and cloning machines. </p>
 <p> Driver selection is automatic. If linode-python is present it will be used. If it is absent, salt-cloud will fall back to Libcloud. If neither are present salt-cloud will abort. </p>
 <p> NOTE: linode-python 1.1.1 or later is recommended. Earlier versions of linode-python should work but leak sensitive information into the debug logs. </p>
@@ -10024,13 +10024,13 @@ li-clone:
 <p> OpenStack is one the most popular cloud projects. It&#8217;s an open source project to build public and/or private clouds. You can use Salt Cloud to launch OpenStack instances. <a NAME="lb^L">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Libcloud &gt;= 0.13.2</dl>
+<dt>&bull;</dt>
+<dd> Libcloud &gt;= 0.13.2</dd></dl>
 <p> <a NAME="lb^M">&nbsp;<wbr></a></p>
 <h3>Configuration</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Using the new format, set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/openstack.conf</code>: </p>
+<dt>&bull;</dt>
+<dd> Using the new format, set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/openstack.conf</code>: </dd>
 <pre>
 my-openstack-config:
   # Set the location of the salt-master
@@ -10080,16 +10080,16 @@ openstack_512:
 </pre>
 <p> The following list explains some of the important properties.</p>
 <dl>
-<dt><code>size</code></p>
-<dd> can be one of the options listed in the output of <code>nova flavor-list</code>.</p>
-<dt><code>image</code></p>
-<dd> can be one of the options listed in the output of <code>nova image-list</code>.</p>
-<dt><code>ssh_key_file</code></p>
-<dd> The SSH private key that the salt-cloud uses to SSH into the VM after its first booted in order to execute a command or script. This private key&#8217;s <i>public key</i> must be the openstack public key inserted into the authorized_key&#8217;s file of the VM&#8217;s root user account.</p>
-<dt><code>ssh_key_name</code></p>
-<dd> The name of the openstack SSH public key that is inserted into the authorized_keys file of the VM&#8217;s root user account. Prior to using this public key, you must use openstack commands or the horizon web UI to load that key into the tenant&#8217;s account. Note that this openstack tenant must be the one you defined in the cloud provider.</p>
-<dt><code>ssh_interface</code></p>
-<dd> This option allows you to create a VM without a public IP. If this option is omitted and the VM does not have a public IP, then the salt-cloud waits for a certain period of time and then destroys the VM. </p>
+<dt><code>size</code></dt>
+<dd> can be one of the options listed in the output of <code>nova flavor-list</code>.</dd>
+<dt><code>image</code></dt>
+<dd> can be one of the options listed in the output of <code>nova image-list</code>.</dd>
+<dt><code>ssh_key_file</code></dt>
+<dd> The SSH private key that the salt-cloud uses to SSH into the VM after its first booted in order to execute a command or script. This private key&#8217;s <i>public key</i> must be the openstack public key inserted into the authorized_key&#8217;s file of the VM&#8217;s root user account.</dd>
+<dt><code>ssh_key_name</code></dt>
+<dd> The name of the openstack SSH public key that is inserted into the authorized_keys file of the VM&#8217;s root user account. Prior to using this public key, you must use openstack commands or the horizon web UI to load that key into the tenant&#8217;s account. Note that this openstack tenant must be the one you defined in the cloud provider.</dd>
+<dt><code>ssh_interface</code></dt>
+<dd> This option allows you to create a VM without a public IP. If this option is omitted and the VM does not have a public IP, then the salt-cloud waits for a certain period of time and then destroys the VM. </dd>
 <p> For more information concerning cloud profiles, see <code>here</code>.</dl>
 <p> <a NAME="lb^R">&nbsp;<wbr></a></p>
 <h3>change_password</h3>
@@ -10108,8 +10108,8 @@ userdata_file: /etc/salt/cloud-init/packages.yml
 <p> Parallels Cloud Server is a product by Parallels that delivers a cloud hosting solution. The PARALLELS module for Salt Cloud enables you to manage instances hosted by a provider using PCS. Further information can be found at: </p>
 <p> <i><a rel="nofollow noopener" href="http://www.parallels.com/products/pcs/" target="_blank">http://www.parallels.com/products/pcs/</a></i></p>
 <dl>
-<dt>&bull;</p>
-<dd> Using the old format, set up the cloud configuration at <code>/etc/salt/cloud</code>: </p>
+<dt>&bull;</dt>
+<dd> Using the old format, set up the cloud configuration at <code>/etc/salt/cloud</code>: </dd>
 <pre>
 # Set up the location of the salt master
 #
@@ -10123,8 +10123,8 @@ PARALLELS.password: badpass
 #
 PARALLELS.url: <a rel="nofollow noopener" href="https://api.cloud.xmission.com:4465/paci/v1.0/" target="_blank">https://api.cloud.xmission.com:4465/paci/v1.0/</a>
 </pre>
-<dt>&bull;</p>
-<dd> Using the new format, set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/parallels.conf</code>: </p>
+<dt>&bull;</dt>
+<dd> Using the new format, set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/parallels.conf</code>: </dd>
 <pre>
 my-parallels-config:
   # Set up the location of the salt master
@@ -10147,15 +10147,15 @@ my-parallels-config:
 <h3>Cloud Profiles</h3>
 <p> Set up an initial profile at <code>/etc/salt/cloud.profiles</code> or <code>/etc/salt/cloud.profiles.d/parallels.conf</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Using the old cloud configuration format: </p>
+<dt>&bull;</dt>
+<dd> Using the old cloud configuration format: </dd>
 <pre>
 parallels-ubuntu:
     provider: parallels
     image: ubuntu-12.04-x86_64
 </pre>
-<dt>&bull;</p>
-<dd> Using the new cloud configuration format and the cloud configuration example from above: </p>
+<dt>&bull;</dt>
+<dd> Using the new cloud configuration format and the cloud configuration example from above: </dd>
 <pre>
 parallels-ubuntu:
     provider: my-parallels-config
@@ -10175,15 +10175,15 @@ parallels-ubuntu:
 <h3>Required Settings</h3>
 <p> The following settings are always required for PARALLELS:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Using the old cloud configuration format: </p>
+<dt>&bull;</dt>
+<dd> Using the old cloud configuration format: </dd>
 <pre>
 PARALLELS.user: myuser
 PARALLELS.password: badpass
 PARALLELS.url: <a rel="nofollow noopener" href="https://api.cloud.xmission.com:4465/paci/v1.0/" target="_blank">https://api.cloud.xmission.com:4465/paci/v1.0/</a>
 </pre>
-<dt>&bull;</p>
-<dd> Using the new cloud configuration format: </p>
+<dt>&bull;</dt>
+<dd> Using the new cloud configuration format: </dd>
 <pre>
 my-parallels-config:
   user: myuser
@@ -10221,13 +10221,13 @@ image: ubuntu-12.04-x86_64
 <p> <i><a rel="nofollow noopener" href="http://www.proxmox.org/" target="_blank">http://www.proxmox.org/</a></i> <a NAME="lb^Z">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> IPy &gt;= 0.81</p>
-<dt>&bull;</p>
-<dd> requests &gt;= 2.2.1 </p>
+<dt>&bull;</dt>
+<dd> IPy &gt;= 0.81</dd>
+<dt>&bull;</dt>
+<dd> requests &gt;= 2.2.1 </dd>
 <p> Please note: This module allows you to create both OpenVZ and KVM but installing Salt on it will only be done when the VM is an OpenVZ container rather than a KVM virtual machine.</p>
-<dt>&bull;</p>
-<dd> Set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/proxmox.conf</code>: </p>
+<dt>&bull;</dt>
+<dd> Set up the cloud configuration at <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/proxmox.conf</code>: </dd>
 <pre>
 my-proxmox-config:
   # Set up the location of the salt master
@@ -10250,8 +10250,8 @@ my-proxmox-config:
 <h3>Cloud Profiles</h3>
 <p> Set up an initial profile at <code>/etc/salt/cloud.profiles</code> or <code>/etc/salt/cloud.profiles.d/proxmox.conf</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Configure a profile to be used: </p>
+<dt>&bull;</dt>
+<dd> Configure a profile to be used: </dd>
 <pre>
 proxmox-ubuntu:
     provider: proxmox
@@ -10275,8 +10275,8 @@ proxmox-ubuntu:
 <h3>Required Settings</h3>
 <p> The following settings are always required for PROXMOX:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Using the new cloud configuration format: </p>
+<dt>&bull;</dt>
+<dd> Using the new cloud configuration format: </dd>
 <pre>
 my-proxmox-config:
   provider: proxmox
@@ -10318,13 +10318,13 @@ image: local:vztmpl/ubuntu-12.04-standard_12.04-1_amd64.tar.gz
 <p> Please note that the <i>rackspace</i> driver is only intended for 1st gen instances, aka, &quot;the old cloud&quot; at Rackspace. It is required for 1st gen instances, but will <i>not</i> work with OpenStack-based instances. Unless you explicitly have a reason to use it, it is highly recommended that you use the <i>openstack</i> driver instead. <a NAME="lb_F">&nbsp;<wbr></a></p>
 <h3>Dependencies</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Libcloud &gt;= 0.13.2</dl>
+<dt>&bull;</dt>
+<dd> Libcloud &gt;= 0.13.2</dd></dl>
 <p> <a NAME="lb_G">&nbsp;<wbr></a></p>
 <h3>Configuration</h3>
 <dl>
-<dt><code>To use the </code><i>openstack</i> driver (recommended), set up the cloud configuration at</p>
-<dd> <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/rackspace.conf</code>: </p>
+<dt><code>To use the </code><i>openstack</i> driver (recommended), set up the cloud configuration at</dt>
+<dd> <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/rackspace.conf</code>: </dd>
 <pre>
 my-rackspace-config:
   # Set the location of the salt-master
@@ -10346,8 +10346,8 @@ my-rackspace-config:
   apikey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   provider: openstack
 </pre>
-<dt><code>To use the </code><i>rackspace</i> driver, set up the cloud configuration at</p>
-<dd> <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/rackspace.conf</code>: </p>
+<dt><code>To use the </code><i>rackspace</i> driver, set up the cloud configuration at</dt>
+<dd> <code>/etc/salt/cloud.providers</code> or <code>/etc/salt/cloud.providers.d/rackspace.conf</code>: </dd>
 <pre>
 my-rackspace-config:
   provider: rackspace
@@ -10533,12 +10533,12 @@ salt 'my-instance-*' test.ping
 <h3>Access Credentials</h3>
 <p> The <code>user</code> setting is the same user as is used to log into the SoftLayer Administration area. The <code>apikey</code> setting is found inside the Admin area after logging in:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Hover over the <code>Account</code> menu item.</p>
-<dt>&bull;</p>
-<dd> Click the <code>Users</code> link.</p>
-<dt>&bull;</p>
-<dd> Find the <code>API Key</code> column and click <code>View</code>.</dl>
+<dt>&bull;</dt>
+<dd> Hover over the <code>Account</code> menu item.</dd>
+<dt>&bull;</dt>
+<dd> Click the <code>Users</code> link.</dd>
+<dt>&bull;</dt>
+<dd> Find the <code>API Key</code> column and click <code>View</code>.</dd></dl>
 <p> <a NAME="lb_W">&nbsp;<wbr></a></p>
 <h3>Profiles</h3>
 <p> <a NAME="lb_X">&nbsp;<wbr></a></p>
@@ -10668,34 +10668,34 @@ base_softlayer_hw_centos:
 <h3>port_speed</h3>
 <p> Specifies the speed for the instance&#8217;s network port. This setting refers to an ID within the SoftLayer API, which sets the port speed. This setting is optional. The default is 273, or, 100 Mbps Public &amp; Private Networks. The following settings are available:</p>
 <dl>
-<dt>&bull;</p>
-<dd> 273: 100 Mbps Public &amp; Private Networks</p>
-<dt>&bull;</p>
-<dd> 274: 1 Gbps Public &amp; Private Networks</p>
-<dt>&bull;</p>
-<dd> 21509: 10 Mbps Dual Public &amp; Private Networks (up to 20 Mbps)</p>
-<dt>&bull;</p>
-<dd> 21513: 100 Mbps Dual Public &amp; Private Networks (up to 200 Mbps)</p>
-<dt>&bull;</p>
-<dd> 2314: 1 Gbps Dual Public &amp; Private Networks (up to 2 Gbps)</p>
-<dt>&bull;</p>
-<dd> 272: 10 Mbps Public &amp; Private Networks</dl>
+<dt>&bull;</dt>
+<dd> 273: 100 Mbps Public &amp; Private Networks</dd>
+<dt>&bull;</dt>
+<dd> 274: 1 Gbps Public &amp; Private Networks</dd>
+<dt>&bull;</dt>
+<dd> 21509: 10 Mbps Dual Public &amp; Private Networks (up to 20 Mbps)</dd>
+<dt>&bull;</dt>
+<dd> 21513: 100 Mbps Dual Public &amp; Private Networks (up to 200 Mbps)</dd>
+<dt>&bull;</dt>
+<dd> 2314: 1 Gbps Dual Public &amp; Private Networks (up to 2 Gbps)</dd>
+<dt>&bull;</dt>
+<dd> 272: 10 Mbps Public &amp; Private Networks</dd></dl>
 <p> <a NAME="lb`U">&nbsp;<wbr></a></p>
 <h3>bandwidth</h3>
 <p> Specifies the network bandwidth available for the instance. This setting refers to an ID within the SoftLayer API, which sets the bandwidth. This setting is optional. The default is 248, or, 5000 GB Bandwidth. The following settings are available:</p>
 <dl>
-<dt>&bull;</p>
-<dd> 248: 5000 GB Bandwidth</p>
-<dt>&bull;</p>
-<dd> 129: 6000 GB Bandwidth</p>
-<dt>&bull;</p>
-<dd> 130: 8000 GB Bandwidth</p>
-<dt>&bull;</p>
-<dd> 131: 10000 GB Bandwidth</p>
-<dt>&bull;</p>
-<dd> 36: Unlimited Bandwidth (10 Mbps Uplink)</p>
-<dt>&bull;</p>
-<dd> 125: Unlimited Bandwidth (100 Mbps Uplink)</dl>
+<dt>&bull;</dt>
+<dd> 248: 5000 GB Bandwidth</dd>
+<dt>&bull;</dt>
+<dd> 129: 6000 GB Bandwidth</dd>
+<dt>&bull;</dt>
+<dd> 130: 8000 GB Bandwidth</dd>
+<dt>&bull;</dt>
+<dd> 131: 10000 GB Bandwidth</dd>
+<dt>&bull;</dt>
+<dd> 36: Unlimited Bandwidth (10 Mbps Uplink)</dd>
+<dt>&bull;</dt>
+<dd> 125: Unlimited Bandwidth (100 Mbps Uplink)</dd></dl>
 <p> <a NAME="lb`V">&nbsp;<wbr></a></p>
 <h3>Actions</h3>
 <p> The following actions are currently supported by the SoftLayer Salt Cloud driver. <a NAME="lb`W">&nbsp;<wbr></a></p>
@@ -10743,140 +10743,140 @@ softlayer_hw_test:
 <p> These values can be manually obtained by looking at the source of an order page on the SoftLayer web interface. For convenience, many of these values are listed here:</p>
 <h3>Public Secondary IP Addresses</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 22: 4 Public IP Addresses</p>
-<dt>&bull;</p>
-<dd> 23: 8 Public IP Addresses</dl>
+<dt>&bull;</dt>
+<dd> 22: 4 Public IP Addresses</dd>
+<dt>&bull;</dt>
+<dd> 23: 8 Public IP Addresses</dd></dl>
 <h3>Primary IPv6 Addresses</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 17129: 1 IPv6 Address</dl>
+<dt>&bull;</dt>
+<dd> 17129: 1 IPv6 Address</dd></dl>
 <h3>Public Static IPv6 Addresses</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 1481: /64 Block Static Public IPv6 Addresses</dl>
+<dt>&bull;</dt>
+<dd> 1481: /64 Block Static Public IPv6 Addresses</dd></dl>
 <h3>OS-Specific Addon</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 17139: XenServer Advanced for XenServer 6.x</p>
-<dt>&bull;</p>
-<dd> 17141: XenServer Enterprise for XenServer 6.x</p>
-<dt>&bull;</p>
-<dd> 2334: XenServer Advanced for XenServer 5.6</p>
-<dt>&bull;</p>
-<dd> 2335: XenServer Enterprise for XenServer 5.6</p>
-<dt>&bull;</p>
-<dd> 13915: Microsoft WebMatrix</p>
-<dt>&bull;</p>
-<dd> 21276: VMware vCenter 5.1 Standard</dl>
+<dt>&bull;</dt>
+<dd> 17139: XenServer Advanced for XenServer 6.x</dd>
+<dt>&bull;</dt>
+<dd> 17141: XenServer Enterprise for XenServer 6.x</dd>
+<dt>&bull;</dt>
+<dd> 2334: XenServer Advanced for XenServer 5.6</dd>
+<dt>&bull;</dt>
+<dd> 2335: XenServer Enterprise for XenServer 5.6</dd>
+<dt>&bull;</dt>
+<dd> 13915: Microsoft WebMatrix</dd>
+<dt>&bull;</dt>
+<dd> 21276: VMware vCenter 5.1 Standard</dd></dl>
 <h3>Control Panel Software</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 121: cPanel/WHM with Fantastico and RVskin</p>
-<dt>&bull;</p>
-<dd> 20778: Parallels Plesk Panel 11 (Linux) 100 Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 20786: Parallels Plesk Panel 11 (Windows) 100 Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 20787: Parallels Plesk Panel 11 (Linux) Unlimited Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 20792: Parallels Plesk Panel 11 (Windows) Unlimited Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 2340: Parallels Plesk Panel 10 (Linux) 100 Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 2339: Parallels Plesk Panel 10 (Linux) Unlimited Domain w/ Power Pack</p>
-<dt>&bull;</p>
-<dd> 13704: Parallels Plesk Panel 10 (Windows) Unlimited Domain w/ Power Pack</dl>
+<dt>&bull;</dt>
+<dd> 121: cPanel/WHM with Fantastico and RVskin</dd>
+<dt>&bull;</dt>
+<dd> 20778: Parallels Plesk Panel 11 (Linux) 100 Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 20786: Parallels Plesk Panel 11 (Windows) 100 Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 20787: Parallels Plesk Panel 11 (Linux) Unlimited Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 20792: Parallels Plesk Panel 11 (Windows) Unlimited Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 2340: Parallels Plesk Panel 10 (Linux) 100 Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 2339: Parallels Plesk Panel 10 (Linux) Unlimited Domain w/ Power Pack</dd>
+<dt>&bull;</dt>
+<dd> 13704: Parallels Plesk Panel 10 (Windows) Unlimited Domain w/ Power Pack</dd></dl>
 <h3>Database Software</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 29: MySQL 5.0 for Windows</p>
-<dt>&bull;</p>
-<dd> 28: MySQL for Linux</p>
-<dt>&bull;</p>
-<dd> 21501: Riak 1.x</p>
-<dt>&bull;</p>
-<dd> 20893: MongoDB</p>
-<dt>&bull;</p>
-<dd> 30: Microsoft SQL Server 2005 Express</p>
-<dt>&bull;</p>
-<dd> 92: Microsoft SQL Server 2005 Workgroup</p>
-<dt>&bull;</p>
-<dd> 90: Microsoft SQL Server 2005 Standard</p>
-<dt>&bull;</p>
-<dd> 94: Microsoft SQL Server 2005 Enterprise</p>
-<dt>&bull;</p>
-<dd> 1330: Microsoft SQL Server 2008 Express</p>
-<dt>&bull;</p>
-<dd> 1340: Microsoft SQL Server 2008 Web</p>
-<dt>&bull;</p>
-<dd> 1337: Microsoft SQL Server 2008 Workgroup</p>
-<dt>&bull;</p>
-<dd> 1334: Microsoft SQL Server 2008 Standard</p>
-<dt>&bull;</p>
-<dd> 1331: Microsoft SQL Server 2008 Enterprise</p>
-<dt>&bull;</p>
-<dd> 2179: Microsoft SQL Server 2008 Express R2</p>
-<dt>&bull;</p>
-<dd> 2173: Microsoft SQL Server 2008 Web R2</p>
-<dt>&bull;</p>
-<dd> 2183: Microsoft SQL Server 2008 Workgroup R2</p>
-<dt>&bull;</p>
-<dd> 2180: Microsoft SQL Server 2008 Standard R2</p>
-<dt>&bull;</p>
-<dd> 2176: Microsoft SQL Server 2008 Enterprise R2</dl>
+<dt>&bull;</dt>
+<dd> 29: MySQL 5.0 for Windows</dd>
+<dt>&bull;</dt>
+<dd> 28: MySQL for Linux</dd>
+<dt>&bull;</dt>
+<dd> 21501: Riak 1.x</dd>
+<dt>&bull;</dt>
+<dd> 20893: MongoDB</dd>
+<dt>&bull;</dt>
+<dd> 30: Microsoft SQL Server 2005 Express</dd>
+<dt>&bull;</dt>
+<dd> 92: Microsoft SQL Server 2005 Workgroup</dd>
+<dt>&bull;</dt>
+<dd> 90: Microsoft SQL Server 2005 Standard</dd>
+<dt>&bull;</dt>
+<dd> 94: Microsoft SQL Server 2005 Enterprise</dd>
+<dt>&bull;</dt>
+<dd> 1330: Microsoft SQL Server 2008 Express</dd>
+<dt>&bull;</dt>
+<dd> 1340: Microsoft SQL Server 2008 Web</dd>
+<dt>&bull;</dt>
+<dd> 1337: Microsoft SQL Server 2008 Workgroup</dd>
+<dt>&bull;</dt>
+<dd> 1334: Microsoft SQL Server 2008 Standard</dd>
+<dt>&bull;</dt>
+<dd> 1331: Microsoft SQL Server 2008 Enterprise</dd>
+<dt>&bull;</dt>
+<dd> 2179: Microsoft SQL Server 2008 Express R2</dd>
+<dt>&bull;</dt>
+<dd> 2173: Microsoft SQL Server 2008 Web R2</dd>
+<dt>&bull;</dt>
+<dd> 2183: Microsoft SQL Server 2008 Workgroup R2</dd>
+<dt>&bull;</dt>
+<dd> 2180: Microsoft SQL Server 2008 Standard R2</dd>
+<dt>&bull;</dt>
+<dd> 2176: Microsoft SQL Server 2008 Enterprise R2</dd></dl>
 <h3>Anti-Virus &amp; Spyware Protection</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 594: McAfee VirusScan Anti-Virus &#8211; Windows</p>
-<dt>&bull;</p>
-<dd> 414: McAfee Total Protection &#8211; Windows</dl>
+<dt>&bull;</dt>
+<dd> 594: McAfee VirusScan Anti-Virus &#8211; Windows</dd>
+<dt>&bull;</dt>
+<dd> 414: McAfee Total Protection &#8211; Windows</dd></dl>
 <h3>Insurance</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 104: Business Continuance Insurance</dl>
+<dt>&bull;</dt>
+<dd> 104: Business Continuance Insurance</dd></dl>
 <h3>Monitoring</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 55: Host Ping</p>
-<dt>&bull;</p>
-<dd> 56: Host Ping and TCP Service Monitoring</dl>
+<dt>&bull;</dt>
+<dd> 55: Host Ping</dd>
+<dt>&bull;</dt>
+<dd> 56: Host Ping and TCP Service Monitoring</dd></dl>
 <h3>Notification</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 57: Email and Ticket</dl>
+<dt>&bull;</dt>
+<dd> 57: Email and Ticket</dd></dl>
 <h3>Advanced Monitoring</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 2302: Monitoring Package &#8211; Basic</p>
-<dt>&bull;</p>
-<dd> 2303: Monitoring Package &#8211; Advanced</p>
-<dt>&bull;</p>
-<dd> 2304: Monitoring Package &#8211; Premium Application</dl>
+<dt>&bull;</dt>
+<dd> 2302: Monitoring Package &#8211; Basic</dd>
+<dt>&bull;</dt>
+<dd> 2303: Monitoring Package &#8211; Advanced</dd>
+<dt>&bull;</dt>
+<dd> 2304: Monitoring Package &#8211; Premium Application</dd></dl>
 <h3>Response</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 58: Automated Notification</p>
-<dt>&bull;</p>
-<dd> 59: Automated Reboot from Monitoring</p>
-<dt>&bull;</p>
-<dd> 60: 24x7x365 NOC Monitoring, Notification, and Response</dl>
+<dt>&bull;</dt>
+<dd> 58: Automated Notification</dd>
+<dt>&bull;</dt>
+<dd> 59: Automated Reboot from Monitoring</dd>
+<dt>&bull;</dt>
+<dd> 60: 24x7x365 NOC Monitoring, Notification, and Response</dd></dl>
 <h3>Intrusion Detection &amp; Protection</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 413: McAfee Host Intrusion Protection w/Reporting</dl>
+<dt>&bull;</dt>
+<dd> 413: McAfee Host Intrusion Protection w/Reporting</dd></dl>
 <h3>Hardware &amp; Software Firewalls</h3>
 <dl>
-<dt>&bull;</p>
-<dd> 411: APF Software Firewall for Linux</p>
-<dt>&bull;</p>
-<dd> 894: Microsoft Windows Firewall</p>
-<dt>&bull;</p>
-<dd> 410: 10Mbps Hardware Firewall</p>
-<dt>&bull;</p>
-<dd> 409: 100Mbps Hardware Firewall</p>
-<dt>&bull;</p>
-<dd> 408: 1000Mbps Hardware Firewall</dl>
+<dt>&bull;</dt>
+<dd> 411: APF Software Firewall for Linux</dd>
+<dt>&bull;</dt>
+<dd> 894: Microsoft Windows Firewall</dd>
+<dt>&bull;</dt>
+<dd> 410: 10Mbps Hardware Firewall</dd>
+<dt>&bull;</dt>
+<dd> 409: 100Mbps Hardware Firewall</dd>
+<dt>&bull;</dt>
+<dd> 408: 1000Mbps Hardware Firewall</dd></dl>
 <h3>Getting Started with VEXXHOST</h3>
 <p> <i>VEXXHOST</i> is an cloud computing provider which provides <i>Canadian cloud computing</i> services which are based in Monteral and uses the libcloud OpenStack driver. VEXXHOST currently runs the Havana release of OpenStack. When provisioning new instances, they automatically get a public IP and private IP address. Therefore, you do not need to assign a floating IP to access your instance once it&#8217;s booted.</p>
 <h3>Cloud Provider Configuration</h3>
@@ -10987,16 +10987,16 @@ vsphere-centos:
 <h3>host</h3>
 <p> The MOR of the host where the vm should be registered.</p>
 <dl>
-<dt><code>If not specified:</code></p>
+<dt><code>If not specified:</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd> if resourcepool is not specified, the current host is used.</p>
-<dt>&bull;</p>
-<dd> if resourcepool is specified, and the target pool represents a stand-alone host, the host is used.</p>
-<dt>&bull;</p>
-<dd> if resourcepool is specified, and the target pool represents a DRS-enabled cluster, a host selected by DRS is used.</p>
-<dt>&bull;</p>
-<dd> if resourcepool is specified, and the target pool represents a cluster without DRS enabled, an InvalidArgument exception will be thrown.</dl>
+</dd><dt>&bull;</dt>
+<dd> if resourcepool is not specified, the current host is used.</dd>
+<dt>&bull;</dt>
+<dd> if resourcepool is specified, and the target pool represents a stand-alone host, the host is used.</dd>
+<dt>&bull;</dt>
+<dd> if resourcepool is specified, and the target pool represents a DRS-enabled cluster, a host selected by DRS is used.</dd>
+<dt>&bull;</dt>
+<dd> if resourcepool is specified, and the target pool represents a cluster without DRS enabled, an InvalidArgument exception will be thrown.</dd></dl>
 <h3>template</h3>
 <p> Specifies whether or not the new virtual machine should be marked as a template. Default is False.</p>
 <h3>Miscellaneous Options</h3>
@@ -11069,10 +11069,10 @@ display_ssh_output: False
 <p> There are several stages when deploying Salt where Salt Cloud needs to wait for something to happen. The VM getting it&#8217;s IP address, the VM&#8217;s SSH port is available, etc. </p>
 <p> If you find that the Salt Cloud defaults are not enough and your deployment fails because Salt Cloud did not wait log enough, there are some settings you can tweak.</p>
 <dl>
-<dt>Note</p>
+<dt>Note</dt>
 <dd>
 <p> All settings should be provided in lowercase All values should be provided in seconds </p>
-<p> You can tweak these settings globally, per cloud provider, or event per profile definition.</dl>
+<p> You can tweak these settings globally, per cloud provider, or event per profile definition.</dd></dl>
 <h3>wait_for_ip_timeout</h3>
 <p> The amount of time Salt Cloud should wait for a VM to start and get an IP back from the cloud provider. Default: 5 minutes.</p>
 <h3>wait_for_ip_interval</h3>
@@ -11143,12 +11143,12 @@ ubuntu14:
 <h3>Generic Troubleshooting Steps</h3>
 <p> This section describes a set of instructions that are useful to a large number of situations, and are likely to solve most issues that arise.</p>
 <dl>
-<dt>Version Compatibility</p>
+<dt>Version Compatibility</dt>
 <dd>
 <p> One of the most common issues that Salt Cloud users run into is import errors. These are often caused by version compatibility issues with Salt. </p>
 <p> Salt 0.16.x works with Salt Cloud 0.8.9 or greater. </p>
 <p> Salt 0.17.x requires Salt Cloud 0.8.11. </p>
-<p> Releases after 0.17.x (0.18 or greater) should not encounter issues as Salt Cloud has been merged into Salt itself.</dl>
+<p> Releases after 0.17.x (0.18 or greater) should not encounter issues as Salt Cloud has been merged into Salt itself.</dd></dl>
 <h3>Debug Mode</h3>
 <p> Frequently, running Salt Cloud in debug mode will reveal information about a deployment which would otherwise not be obvious: </p>
 <pre>
@@ -11172,14 +11172,14 @@ salt-cloud -p myprofile myinstance --keep-tmp
 <p> Most cloud providers are configured to use <code>root</code> as the default initial user for deployment, and as such, this directory and all files in it should be owned by the <code>root</code> user. </p>
 <p> The <code>/tmp/.saltcloud/</code> directory should the following files:</p>
 <dl>
-<dt>&bull;</p>
-<dd> A <code>deploy.sh</code> script. This script should have permissions of <code>0755</code>.</p>
-<dt>&bull;</p>
-<dd> A <code>.pem</code> and <code>.pub</code> key named after the minion. The <code>.pem</code> file should have permissions of <code>0600</code>. Ensure that the <code>.pem</code> and <code>.pub</code> files have been properly copied to the <code>/etc/salt/pki/minion/</code> directory.</p>
-<dt>&bull;</p>
-<dd> A file called <code>minion</code>. This file should have been copied to the <code>/etc/salt/</code> directory.</p>
-<dt>&bull;</p>
-<dd> Optionally, a file called <code>grains</code>. This file, if present, should have been copied to the <code>/etc/salt/</code> directory.</dl>
+<dt>&bull;</dt>
+<dd> A <code>deploy.sh</code> script. This script should have permissions of <code>0755</code>.</dd>
+<dt>&bull;</dt>
+<dd> A <code>.pem</code> and <code>.pub</code> key named after the minion. The <code>.pem</code> file should have permissions of <code>0600</code>. Ensure that the <code>.pem</code> and <code>.pub</code> files have been properly copied to the <code>/etc/salt/pki/minion/</code> directory.</dd>
+<dt>&bull;</dt>
+<dd> A file called <code>minion</code>. This file should have been copied to the <code>/etc/salt/</code> directory.</dd>
+<dt>&bull;</dt>
+<dd> Optionally, a file called <code>grains</code>. This file, if present, should have been copied to the <code>/etc/salt/</code> directory.</dd></dl>
 <h3>Unprivileged Primary Users</h3>
 <p> Some providers, most notably EC2, are configured with a different primary user. Some common examples are <code>ec2-user</code>, <code>ubuntu</code>, <code>fedora</code>, and <code>bitnami</code>. In these cases, the <code>/tmp/.saltcloud/</code> directory and all files in it should be owned by this user. </p>
 <p> Some providers, such as EC2, are configured to not require these users to provide a password when using the <code>sudo</code> command. Because it is more secure to require <code>sudo</code> users to provide a password, other providers are configured that way. </p>
@@ -11232,16 +11232,16 @@ cd /tmp/.saltcloud/
 <p> <i><a rel="nofollow noopener" href="https://github.com/saltstack/salt/tree/develop/salt/cloud/clouds/linode.py" target="_blank">https://github.com/saltstack/salt/tree/develop/salt/cloud/clouds/linode.py</a></i> </p>
 <p> The basic flow of a <code>create()</code> function is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Send a request to the cloud provider to create a virtual machine.</p>
-<dt>&bull;</p>
-<dd> Wait for the virtual machine to become available.</p>
-<dt>&bull;</p>
-<dd> Generate kwargs to be used to deploy Salt.</p>
-<dt>&bull;</p>
-<dd> Log into the virtual machine and deploy Salt.</p>
-<dt>&bull;</p>
-<dd> Return a data structure that describes the newly-created virtual machine. </p>
+<dt>&bull;</dt>
+<dd> Send a request to the cloud provider to create a virtual machine.</dd>
+<dt>&bull;</dt>
+<dd> Wait for the virtual machine to become available.</dd>
+<dt>&bull;</dt>
+<dd> Generate kwargs to be used to deploy Salt.</dd>
+<dt>&bull;</dt>
+<dd> Log into the virtual machine and deploy Salt.</dd>
+<dt>&bull;</dt>
+<dd> Return a data structure that describes the newly-created virtual machine. </dd>
 <p> At various points throughout this function, events may be fired on the Salt event bus. Four of these events, which are described below, are required. Other events may be added by the user, where appropriate. </p>
 <p> When the <code>create()</code> function is called, it is passed a data structure called <code>vm_</code>. This dict contains a composite of information describing the virtual machine to be created. A dict called <code>__opts__</code> is also provided by Salt, which contains the options used to run Salt Cloud, as well as a set of configuration and environment variables. </p>
 <p> The first thing the <code>create()</code> function must do is fire an event stating that it has started the create process. This event is tagged <code>salt/cloud/&lt;vm name&gt;/creating</code>. The payload contains the names of the VM, profile and provider. </p>
@@ -11312,18 +11312,18 @@ salt-cloud -d myinstance
 <h3>The list_nodes() Function</h3>
 <p> This function returns a list of nodes available on this cloud provider, using the following fields:</p>
 <dl>
-<dt>&bull;</p>
-<dd> id (str)</p>
-<dt>&bull;</p>
-<dd> image (str)</p>
-<dt>&bull;</p>
-<dd> size (str)</p>
-<dt>&bull;</p>
-<dd> state (str)</p>
-<dt>&bull;</p>
-<dd> private_ips (list)</p>
-<dt>&bull;</p>
-<dd> public_ips (list) </p>
+<dt>&bull;</dt>
+<dd> id (str)</dd>
+<dt>&bull;</dt>
+<dd> image (str)</dd>
+<dt>&bull;</dt>
+<dd> size (str)</dd>
+<dt>&bull;</dt>
+<dd> state (str)</dd>
+<dt>&bull;</dt>
+<dd> private_ips (list)</dd>
+<dt>&bull;</dt>
+<dd> public_ips (list) </dd>
 <p> No other fields should be returned in this function, and all of these fields should be returned, even if empty. The private_ips and public_ips fields should always be of a list type, even if empty, and the other fields should always be of a str type. This function is normally called with the <code>-Q</code> option: </p>
 <pre>
 salt-cloud -Q
@@ -11407,14 +11407,14 @@ salt-cloud -f show_image my-cloud-provider image='Ubuntu 13.10 64-bit'
 <p> If you do not specify a script argument, this script will be used at the default. </p>
 <p> If the Salt Bootstrap script does not meet your needs, you may write your own. The script should be written in bash and is a Jinja template. Deploy scripts need to execute a number of functions to do a complete salt setup. These functions include:</p>
 <dl>
-<dt>1.</p>
-<dd> Install the salt minion. If this can be done via system packages this method is HIGHLY preferred.</p>
-<dt>2.</p>
-<dd> Add the salt minion keys before the minion is started for the first time. The minion keys are available as strings that can be copied into place in the Jinja template under the dict named &quot;vm&quot;.</p>
-<dt>3.</p>
-<dd> Start the salt-minion daemon and enable it at startup time.</p>
-<dt>4.</p>
-<dd> Set up the minion configuration file from the &quot;minion&quot; data available in the Jinja template. </p>
+<dt>1.</dt>
+<dd> Install the salt minion. If this can be done via system packages this method is HIGHLY preferred.</dd>
+<dt>2.</dt>
+<dd> Add the salt minion keys before the minion is started for the first time. The minion keys are available as strings that can be copied into place in the Jinja template under the dict named &quot;vm&quot;.</dd>
+<dt>3.</dt>
+<dd> Start the salt-minion daemon and enable it at startup time.</dd>
+<dt>4.</dt>
+<dd> Set up the minion configuration file from the &quot;minion&quot; data available in the Jinja template. </dd>
 <p> A good, well commented, example of this process is the Fedora deployment script: </p>
 <p> <i><a rel="nofollow noopener" href="https://github.com/saltstack/salt-cloud/blob/master/saltcloud/deploy/Fedora.sh" target="_blank">https://github.com/saltstack/salt-cloud/blob/master/saltcloud/deploy/Fedora.sh</a></i> </p>
 <p> A number of legacy deploy scripts are included with the release tarball. None of them are as functional or complete as Salt Bootstrap, and are still included for academic purposes.</dl>
@@ -11522,18 +11522,18 @@ salt myminion cloud.list_locations my-cloud-provider
 <h3>query</h3>
 <p> This command is used to query all configured cloud providers, and display all instances associated with those accounts. By default, it will run a standard query, returning the following fields:</p>
 <dl>
-<dt><code>id</code></p>
-<dd> The name or ID of the instance, as used by the cloud provider.</p>
-<dt><code>image</code></p>
-<dd> The disk image that was used to create this instance.</p>
-<dt><code>private_ips</code></p>
-<dd> Any public IP addresses currently assigned to this instance.</p>
-<dt><code>public_ips</code></p>
-<dd> Any private IP addresses currently assigned to this instance.</p>
-<dt><code>size</code></p>
-<dd> The size of the instance; can refer to RAM, CPU(s), disk space, etc., depending on the cloud provider.</p>
-<dt><code>state</code></p>
-<dd> The running state of the instance; for example, <code>running</code>, <code>stopped</code>, <code>pending</code>, etc. This state is dependent upon the provider. </p>
+<dt><code>id</code></dt>
+<dd> The name or ID of the instance, as used by the cloud provider.</dd>
+<dt><code>image</code></dt>
+<dd> The disk image that was used to create this instance.</dd>
+<dt><code>private_ips</code></dt>
+<dd> Any public IP addresses currently assigned to this instance.</dd>
+<dt><code>public_ips</code></dt>
+<dd> Any private IP addresses currently assigned to this instance.</dd>
+<dt><code>size</code></dt>
+<dd> The size of the instance; can refer to RAM, CPU(s), disk space, etc., depending on the cloud provider.</dd>
+<dt><code>state</code></dt>
+<dd> The running state of the instance; for example, <code>running</code>, <code>stopped</code>, <code>pending</code>, etc. This state is dependent upon the provider. </dd>
 <p> This command may also be used to perform a full query or a select query, as described below. The following usages are available: </p>
 <pre>
 salt myminion cloud.query
@@ -11586,14 +11586,14 @@ salt myminion cloud.action show_image provider=my-ec2-config \
 </pre>
 <p> The actions available are largely dependent upon the module for the specific cloud provider. The following actions are available for all cloud providers:</p>
 <dl>
-<dt><code>list_nodes</code></p>
-<dd> This is a direct call to the <code>query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</p>
-<dt><code>list_nodes_select</code></p>
-<dd> This is a direct call to the <code>full_query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</p>
-<dt><code>list_nodes_select</code></p>
-<dd> This is a direct call to the <code>select_query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</p>
-<dt><code>show_instance</code></p>
-<dd> This is a thin wrapper around <code>list_nodes</code>, which returns the full information about a single instance. An instance name must be provided.</dl>
+<dt><code>list_nodes</code></dt>
+<dd> This is a direct call to the <code>query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</dd>
+<dt><code>list_nodes_select</code></dt>
+<dd> This is a direct call to the <code>full_query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</dd>
+<dt><code>list_nodes_select</code></dt>
+<dd> This is a direct call to the <code>select_query</code> function as described above, but is only performed against a single cloud provider. A provider configuration must be included.</dd>
+<dt><code>show_instance</code></dt>
+<dd> This is a thin wrapper around <code>list_nodes</code>, which returns the full information about a single instance. An instance name must be provided.</dd></dl>
 <h3>State Module</h3>
 <p> A subset of the execution module is available through the <code>cloud</code> state module. Not all functions are currently included, because there is currently insufficient code for them to perform statefully. For example, a command to create an instance may be issued with a series of options, but those options cannot currently be statefully managed. Additional states to manage these options will be released at a later time.</p>
 <h3>cloud.present</h3>
@@ -11625,24 +11625,24 @@ my-instance-name:
 <p> The <code>cloud</code> runner module is executed on the master, and performs actions using the configuration and Salt modules on the master itself. This means that any public minion keys will also be properly accepted by the master. </p>
 <p> Using the functions in the runner module is no different than using those in the execution module, outside of the behavior described in the above paragraph. The following functions are available inside the runner:</p>
 <dl>
-<dt>&bull;</p>
-<dd> list_images</p>
-<dt>&bull;</p>
-<dd> list_sizes</p>
-<dt>&bull;</p>
-<dd> list_locations</p>
-<dt>&bull;</p>
-<dd> query</p>
-<dt>&bull;</p>
-<dd> full_query</p>
-<dt>&bull;</p>
-<dd> select_query</p>
-<dt>&bull;</p>
-<dd> profile</p>
-<dt>&bull;</p>
-<dd> destroy</p>
-<dt>&bull;</p>
-<dd> action </p>
+<dt>&bull;</dt>
+<dd> list_images</dd>
+<dt>&bull;</dt>
+<dd> list_sizes</dd>
+<dt>&bull;</dt>
+<dd> list_locations</dd>
+<dt>&bull;</dt>
+<dd> query</dd>
+<dt>&bull;</dt>
+<dd> full_query</dd>
+<dt>&bull;</dt>
+<dd> select_query</dd>
+<dt>&bull;</dt>
+<dd> profile</dd>
+<dt>&bull;</dt>
+<dd> destroy</dd>
+<dt>&bull;</dt>
+<dd> action </dd>
 <p> Outside of the standard usage of <code>salt-run</code> itself, commands are executed as usual: </p>
 <pre>
 salt-run cloud.profile ec2-centos64-x86_64 my-instance-name
@@ -13331,65 +13331,65 @@ rest_cherrypy:
 <p> netapi modules are enabled by adding configuration to your Salt Master config file and then starting the <code>salt-api</code> daemon. Check the docs for each module to see external requirements and configuration settings. </p>
 <p> Communication with Salt and Salt satellite projects is done using Salt&#8217;s own Python API. A list of available client interfaces is below.</p>
 <dl>
-<dt>salt-api</p>
+<dt>salt-api</dt>
 <dd>
 <p> Prior to Salt&#8217;s 2014.7.0 release, netapi modules lived in the separate sister projected <code>salt-api</code>. That project has been merged into the main Salt project. </p>
-<p> <code>SEE ALSO:</code> The full list of netapi modules</dl>
+<p> <code>SEE ALSO:</code> The full list of netapi modules</dd></dl>
 <h3>Client interfaces</h3>
 <p> Salt&#8217;s client interfaces expose executing functions by crafting a dictionary of values that are mapped to function arguments. This allows calling functions simply by creating a data structure. (And this is exactly how much of Salt&#8217;s own internals work!)</p>
 <dl>
-<dt><code>class salt.netapi.NetapiClient(opts)</code></p>
-<dd> Provide a uniform method of accessing the various client interfaces in Salt in the form of low-data data structures. For example: </p>
+<dt><code>class salt.netapi.NetapiClient(opts)</code></dt>
+<dd> Provide a uniform method of accessing the various client interfaces in Salt in the form of low-data data structures. For example: </dd>
 <pre>
 &gt;&gt;&gt; client = NetapiClient(__opts__)
 &gt;&gt;&gt; lowstate = {'client': 'local', 'tgt': '*', 'fun': 'test.ping', 'arg': ''}
 &gt;&gt;&gt; client.run(lowstate)
 </pre>
-<dt><code>local(*args, **kwargs)</code></p>
-<dd> Run execution modules synchronously </p>
+<dt><code>local(*args, **kwargs)</code></dt>
+<dd> Run execution modules synchronously </dd>
 <p> See <code>salt.client.LocalClient.cmd()</code> for all available parameters. </p>
 <p> Sends a command from the master to the targeted minions. This is the same interface that Salt&#8217;s own CLI uses. Note the <code>arg</code> and <code>kwarg</code> parameters are sent down to the minion(s) and the given function, <code>fun</code>, is called with those parameters.</p>
-<dt><code>Returns</code></p>
-<dd> Returns the result from the execution module</p>
-<dt><code>local_async(*args, **kwargs)</code></p>
-<dd> Run execution modules asynchronously </p>
+<dt><code>Returns</code></dt>
+<dd> Returns the result from the execution module</dd>
+<dt><code>local_async(*args, **kwargs)</code></dt>
+<dd> Run execution modules asynchronously </dd>
 <p> Wraps <code>salt.client.LocalClient.run_job()</code>.</p>
-<dt><code>Returns</code></p>
-<dd> job ID</p>
-<dt><code>local_batch(*args, **kwargs)</code></p>
-<dd> Run execution modules against batches of minions </p>
+<dt><code>Returns</code></dt>
+<dd> job ID</dd>
+<dt><code>local_batch(*args, **kwargs)</code></dt>
+<dd> Run execution modules against batches of minions </dd>
 <p> New in version 0.8.4. </p>
 <p> Wraps <code>salt.client.LocalClient.cmd_batch()</code></p>
-<dt><code>Returns</code></p>
-<dd> Returns the result from the exeuction module for each batch of returns</p>
-<dt><code>runner(fun, timeout=None, **kwargs)</code></p>
-<dd> Run <i>runner modules &lt;all-salt.runners&gt;</i> synchronously </p>
+<dt><code>Returns</code></dt>
+<dd> Returns the result from the exeuction module for each batch of returns</dd>
+<dt><code>runner(fun, timeout=None, **kwargs)</code></dt>
+<dd> Run <i>runner modules &lt;all-salt.runners&gt;</i> synchronously </dd>
 <p> Wraps <code>salt.runner.RunnerClient.cmd_sync()</code>. </p>
 <p> Note that runner functions must be called using keyword arguments. Positional arguments are not supported.</p>
-<dt><code>Returns</code></p>
-<dd> Returns the result from the runner module</p>
-<dt><code>wheel(fun, **kwargs)</code></p>
-<dd> Run wheel modules synchronously </p>
+<dt><code>Returns</code></dt>
+<dd> Returns the result from the runner module</dd>
+<dt><code>wheel(fun, **kwargs)</code></dt>
+<dd> Run wheel modules synchronously </dd>
 <p> Wraps <code>salt.wheel.WheelClient.master_call()</code>. </p>
 <p> Note that wheel functions must be called using keyword arguments. Positional arguments are not supported.</p>
-<dt><code>Returns</code></p>
-<dd> Returns the result from the wheel module</dl>
+<dt><code>Returns</code></dt>
+<dd> Returns the result from the wheel module</dd></dl>
 <h2 id="SALT VIRT"></h2>
 <p> The Salt Virt cloud controller capability was initially added to Salt in version 0.14.0 as an alpha technology. </p>
 <p> The initial Salt Virt system supports core cloud operations:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Virtual machine deployment</p>
-<dt>&bull;</p>
-<dd> Inspection of deployed VMs</p>
-<dt>&bull;</p>
-<dd> Virtual machine migration</p>
-<dt>&bull;</p>
-<dd> Network profiling</p>
-<dt>&bull;</p>
-<dd> Automatic VM integration with all aspects of Salt</p>
-<dt>&bull;</p>
-<dd> Image Pre-seeding </p>
+<dt>&bull;</dt>
+<dd> Virtual machine deployment</dd>
+<dt>&bull;</dt>
+<dd> Inspection of deployed VMs</dd>
+<dt>&bull;</dt>
+<dd> Virtual machine migration</dd>
+<dt>&bull;</dt>
+<dd> Network profiling</dd>
+<dt>&bull;</dt>
+<dd> Automatic VM integration with all aspects of Salt</dd>
+<dt>&bull;</dt>
+<dd> Image Pre-seeding </dd>
 <p> Many features are currently under development to enhance the capabilities of the Salt Virt systems. </p>
 <p> <code>NOTE:</code> It is noteworthy that Salt was originally developed with the intent of using the Salt communication system as the backbone to a cloud controller. This means that the Salt Virt system is not an afterthought, simply a system that took the back seat to other development. The original attempt to develop the cloud control aspects of Salt was a project called butter. This project never took off, but was functional and proves the early viability of Salt to be a cloud controller.</dl>
 <h3>Salt Virt Tutorial</h3>
@@ -13580,16 +13580,16 @@ master_tops:
 <h3>Getting Started</h3>
 <p> Salt SSH is very easy to use, simply set up a basic <i>roster</i> file of the systems to connect to and run <code>salt-ssh</code> commands in a similar way as standard <code>salt</code> commands.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Salt ssh is considered production ready in version 2014.7.0</p>
-<dt>&bull;</p>
-<dd> Python is required on the remote system (unless using the <code>-r</code> option to send raw ssh commands)</p>
-<dt>&bull;</p>
-<dd> On many systems, the <code>salt-ssh</code> executable will be in its own package, usually named <code>salt-ssh</code></p>
-<dt>&bull;</p>
-<dd> The Salt SSH system does not supercede the standard Salt communication systems, it simply offers an SSH-based alternative that does not require ZeroMQ and a remote agent. Be aware that since all communication with Salt SSH is executed via SSH it is substantially slower than standard Salt with ZeroMQ.</p>
-<dt>&bull;</p>
-<dd> At the moment fileserver operations must be wrapped to ensure that the relevant files are delivered with the <code>salt-ssh</code> commands. The state module is an exception, which compiles the state run on the master, and in the process finds all the references to <code>salt://</code> paths and copies those files down in the same tarball as the state run. However, needed fileserver wrappers are still under development.</dl>
+<dt>&bull;</dt>
+<dd> Salt ssh is considered production ready in version 2014.7.0</dd>
+<dt>&bull;</dt>
+<dd> Python is required on the remote system (unless using the <code>-r</code> option to send raw ssh commands)</dd>
+<dt>&bull;</dt>
+<dd> On many systems, the <code>salt-ssh</code> executable will be in its own package, usually named <code>salt-ssh</code></dd>
+<dt>&bull;</dt>
+<dd> The Salt SSH system does not supercede the standard Salt communication systems, it simply offers an SSH-based alternative that does not require ZeroMQ and a remote agent. Be aware that since all communication with Salt SSH is executed via SSH it is substantially slower than standard Salt with ZeroMQ.</dd>
+<dt>&bull;</dt>
+<dd> At the moment fileserver operations must be wrapped to ensure that the relevant files are delivered with the <code>salt-ssh</code> commands. The state module is an exception, which compiles the state run on the master, and in the process finds all the references to <code>salt://</code> paths and copies those files down in the same tarball as the state run. However, needed fileserver wrappers are still under development.</dd></dl>
 <h3>Salt SSH Roster</h3>
 <p> The roster system in Salt allows for remote minions to be easily defined. </p>
 <p> <code>NOTE:</code> See the <code>Roster documentation</code> for more details. </p>

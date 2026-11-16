@@ -11,7 +11,6 @@ std::char_traits&lt;CharT&gt;::eq_int_type - std::char_traits&lt;CharT&gt;::eq_i
 <h2>Synopsis</h2>
 
 <pre><code>static bool eq_int_type( int_type c1, int_type c2 );                     (until C++11)
-
 static constexpr bool eq_int_type( int_type c1, int_type c2 ) noexcept;  (since C++11)</code></pre> 
 Checks whether two values of type int_type are equal. 
 Formally, 

@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-reporter-print/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=report  reporter-print -o &quot;${Log_File:-/tmp/abrt.log}&quot;
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -42,31 +42,31 @@ EVENT=report  reporter-print -o &quot;${Log_File:-/tmp/abrt.log}&quot;
  -d DIR
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -o FILE
 <dl>
 <dt>
-<dd> Output file</dl>
+</dt><dd> Output file</dd></dl>
  
 
  -a yes/no
 <dl>
 <dt>
-<dd> If -o FILE is specified, controls whether FILE is appended to, or overwritten. (default: no)</dl>
+</dt><dd> If -o FILE is specified, controls whether FILE is appended to, or overwritten. (default: no)</dd></dl>
  
 
  -r
 <dl>
 <dt>
-<dd> Add a record to <i>reported_to</i> in DIR which specifies that this problem was reported. Some tools use this to differentiate between problems which were and weren't yet reported.</dl>
+</dt><dd> Add a record to <i>reported_to</i> in DIR which specifies that this problem was reported. Some tools use this to differentiate between problems which were and weren't yet reported.</dd></dl>
 
 <h3>Output format</h3>
 
@@ -76,21 +76,21 @@ EVENT=report  reporter-print -o &quot;${Log_File:-/tmp/abrt.log}&quot;
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 NAME:&lt;whitespace&gt;VALUE
-</pre></dl>
+</pre></dd></dl>
  
 
  Elements which have more than one line are printed in the form 
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 NAME:
 :LINE1
 :LINE2
 :LINE3
-</pre></dl>
+</pre></dd></dl>
  
 
  Output may contain empty lines for better readability.
@@ -107,7 +107,7 @@ NAME:
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

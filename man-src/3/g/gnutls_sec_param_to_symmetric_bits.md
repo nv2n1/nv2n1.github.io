@@ -14,8 +14,8 @@ description: "gnutls_sec_param_to_symmetric_bits – API function"
 <p> <code>unsigned int gnutls_sec_param_to_symmetric_bits(gnutls_sec_param_t </code><i>param</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_sec_param_t param</p>
-<dd> is a security parameter</dl>
+<dt>gnutls_sec_param_t param</dt>
+<dd> is a security parameter</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the number of bits that correspond to symmetric cipher strength for the given security parameter.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_sec_param_to_symmetric_bits – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

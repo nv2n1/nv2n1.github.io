@@ -24,31 +24,31 @@ url: "/docs/linux/man/1-abrt-action-trim-files/"
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -d SIZE:DIR
 <dl>
 <dt>
-<dd> Delete problem directories in DIR. SIZE can be suffixed by k,m,g,t to specify kilo,mega,giga,terabytes.</dl>
+</dt><dd> Delete problem directories in DIR. SIZE can be suffixed by k,m,g,t to specify kilo,mega,giga,terabytes.</dd></dl>
  
 
  -f SIZE:DIR
 <dl>
 <dt>
-<dd> Delete files in DIR</dl>
+</dt><dd> Delete files in DIR</dd></dl>
  
 
  -p DIR
 <dl>
 <dt>
-<dd> Preserve DIR (never consider it for deletion)</dl>
+</dt><dd> Preserve DIR (never consider it for deletion)</dd></dl>
  
 
  FILE
 <dl>
 <dt>
-<dd> Preserve FILE (never consider it for deletion)</dl>
+</dt><dd> Preserve FILE (never consider it for deletion)</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -56,7 +56,7 @@ url: "/docs/linux/man/1-abrt-action-trim-files/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

@@ -27,6 +27,6 @@ which is pthread_self() on Linux platforms. </pre>
  * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_register_thread</code> <code>PAPI_unregister_thread</code> <code>PAPI_get_thr_specific</code> <code>PAPI_set_thr_specific</code> <code>PAPI_thread_id</code> <code>PAPI_list_threads</code></dl>
+<dd><code>PAPI_register_thread</code> <code>PAPI_unregister_thread</code> <code>PAPI_get_thr_specific</code> <code>PAPI_set_thr_specific</code> <code>PAPI_thread_id</code> <code>PAPI_list_threads</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

@@ -14,10 +14,10 @@ description: "Tcl_CreateFileHandler, Tcl_DeleteFileHandler – associate procedu
 <code>Tcl_DeleteFileHandler</code>(<i>fd</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>fd</i> (in) Unix file descriptor for an open file or device.</p>
-<dd>int <i>mask</i> (in) Conditions under which <i>proc</i> should be called: OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code>, and <code>TCL_EXCEPTION</code>. May be set to 0 to temporarily disable a handler.</p>
-<dd>Tcl_FileProc <i>*proc</i> (in) Procedure to invoke whenever the file or device indicated by <i>file</i> meets the conditions specified by <i>mask</i>.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>int <i>fd</i> (in) Unix file descriptor for an open file or device.</dd>
+<dd>int <i>mask</i> (in) Conditions under which <i>proc</i> should be called: OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code>, and <code>TCL_EXCEPTION</code>. May be set to 0 to temporarily disable a handler.</dd>
+<dd>Tcl_FileProc <i>*proc</i> (in) Procedure to invoke whenever the file or device indicated by <i>file</i> meets the conditions specified by <i>mask</i>.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_CreateFileHandler</code> arranges for <i>proc</i> to be invoked in the future whenever I/O becomes possible on a file or an exceptional condition exists for the file. The file is indicated by <i>fd</i>, and the conditions of interest are indicated by <i>mask</i>. For example, if <i>mask</i> is <code>TCL_READABLE</code>, <i>proc</i> will be called when the file is readable. The callback to <i>proc</i> is made by <code>Tcl_DoOneEvent</code>, so <code>Tcl_CreateFileHandler</code> is only useful in programs that dispatch events through <code>Tcl_DoOneEvent</code> or through Tcl commands such as <code>vwait</code>. </p>
@@ -27,7 +27,7 @@ description: "Tcl_CreateFileHandler, Tcl_DeleteFileHandler – associate procedu
 <pre>typedef void Tcl_FileProc(
  ClientData <i>clientData</i>,
  int <i>mask</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> parameter to <i>proc</i> is a copy of the <i>clientData</i> argument given to <code>Tcl_CreateFileHandler</code> when the callback was created. Typically, <i>clientData</i> points to a data structure containing application-specific information about the file. <i>Mask</i> is an integer mask indicating which of the requested conditions actually exists for the file; it will contain a subset of the bits in the <i>mask</i> argument to <code>Tcl_CreateFileHandler</code>. </p>
 <p> There may exist only one handler for a given file at a given time. If <code>Tcl_CreateFileHandler</code> is called when a handler already exists for <i>fd</i>, then the new callback replaces the information that was previously recorded. </p>
 <p> <code>Tcl_DeleteFileHandler</code> may be called to delete the file handler for <i>fd</i>; if no handler exists for the file given by <i>fd</i> then the procedure has no effect. </p>

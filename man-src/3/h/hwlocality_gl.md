@@ -26,16 +26,16 @@ description: "hwlocality_gl – Interoperability with OpenGL displays"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dl>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_gl_get_display_osdev_by_port_device (<code>hwloc_topology_t</code> topology, unsigned port, unsigned device) [inline], [static]</h3>
 <p> Get the hwloc OS device object corresponding to the OpenGL display given by port and device index. Return the OS device object describing the OpenGL display whose port (server) is port and device (screen) is device. Return NULL if there is none. </p>
 <p> The topology topology does not necessarily have to match the current machine. For instance the topology may be an XML import of a remote host. I/O devices detection and the GL component must be enabled in the topology. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dl>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

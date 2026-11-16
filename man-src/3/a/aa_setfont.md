@@ -26,9 +26,9 @@ url: "/docs/linux/man/3-aa_setfont/"
 
 <dl>
 <dt><b>aa_context *c</b>
-<dd> Specifies the AA-lib context to operate on.
-<dt><b>const struct aa_font *font</b>
-<dd> Font specification structure.</dl>
+</dt><dd> Specifies the AA-lib context to operate on.
+</dd><dt><b>const struct aa_font *font</b>
+</dt><dd> Font specification structure.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

@@ -11,21 +11,9 @@ description: "std::chrono –"
 <h2>Synopsis</h2>
 <h3>Classes</h3>
 <pre><code>struct duration
-
-
-
 struct duration_values
-
-
-
 struct time_point
-
-
-
 struct treat_as_floating_point
-
-
-
 Typedefs</code></pre>
 <p> typedef <code>duration</code>&lt; int, <code>ratio</code>&lt; 3600 &gt; &gt; <code>hours</code> </p>
 <p> typedef <code>duration</code>&lt; int64_t, micro &gt; <code>microseconds</code> </p>
@@ -35,189 +23,69 @@ Typedefs</code></pre>
 <p> typedef <code>duration</code>&lt; int64_t &gt; <code>seconds</code></p>
 <h3>Functions</h3>
 <pre><code>template&lt;typename _ToDur , typename _Rep , typename _Period &gt; constexpr enable_if
-
-
 &lt; __is_duration&lt; _ToDur &gt;
-
 ::value, _ToDur &gt;::type duration_cast (const duration&lt; _Rep, _Period &gt; &amp;__d)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator!= (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator!= (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Rep1 , typename _Period , typename _Rep2 &gt; constexpr duration&lt; typename
-
-
 __common_rep_type&lt; _Rep1,
-
 typename enable_if
-
 &lt;!__is_duration&lt; _Rep2 &gt;
-
 ::value, _Rep2 &gt;::type &gt;::type,
-
 _Period &gt; operator% (const duration&lt; _Rep1, _Period &gt; &amp;__d, const _Rep2 &amp;__s)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr common_type
-
-
 &lt; duration&lt; _Rep1, _Period1 &gt;
-
 , duration&lt; _Rep2, _Period2 &gt;
-
-
 &gt;::type operator% (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period , typename _Rep2 &gt; constexpr duration&lt; typename
-
-
 __common_rep_type&lt; _Rep1,
-
 _Rep2 &gt;::type, _Period &gt; operator* (const duration&lt; _Rep1, _Period &gt; &amp;__d, const _Rep2 &amp;__s)&quot;
-
-
 template&lt;typename _Rep1 , typename _Rep2 , typename _Period &gt; constexpr duration&lt; typename
-
-
 __common_rep_type&lt; _Rep2,
-
 _Rep1 &gt;::type, _Period &gt; operator* (const _Rep1 &amp;__s, const duration&lt; _Rep2, _Period &gt; &amp;__d)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr common_type
-
-
 &lt; duration&lt; _Rep1, _Period1 &gt;
-
 , duration&lt; _Rep2, _Period2 &gt;
-
-
 &gt;::type operator+ (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Rep2 , typename _Period2 &gt; constexpr time_point&lt; _Clock,
-
-
 typename common_type&lt; _Dur1,
-
 duration&lt; _Rep2, _Period2 &gt;
-
-
 &gt;::type &gt; operator+ (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Clock , typename _Dur2 &gt; constexpr time_point&lt; _Clock,
-
-
 typename common_type&lt; duration
-
 &lt; _Rep1, _Period1 &gt;, _Dur2 &gt;
-
 ::type &gt; operator+ (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr common_type
-
-
 &lt; duration&lt; _Rep1, _Period1 &gt;
-
 , duration&lt; _Rep2, _Period2 &gt;
-
-
 &gt;::type operator- (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Rep2 , typename _Period2 &gt; constexpr time_point&lt; _Clock,
-
-
 typename common_type&lt; _Dur1,
-
 duration&lt; _Rep2, _Period2 &gt;
-
-
 &gt;::type &gt; operator- (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr common_type&lt; _Dur1,
-
-
 _Dur2 &gt;::type operator- (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period , typename _Rep2 &gt; constexpr duration&lt; typename
-
-
 __common_rep_type&lt; _Rep1,
-
 typename enable_if
-
 &lt;!__is_duration&lt; _Rep2 &gt;
-
 ::value, _Rep2 &gt;::type &gt;::type,
-
 _Period &gt; operator/ (const duration&lt; _Rep1, _Period &gt; &amp;__d, const _Rep2 &amp;__s)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr common_type&lt; _Rep1,
-
-
 _Rep2 &gt;::type operator/ (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)&quot;
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator&lt; (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator&lt; (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator&lt;= (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator&lt;= (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator== (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator== (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator&gt; (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator&gt; (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Rep1 , typename _Period1 , typename _Rep2 , typename _Period2 &gt; constexpr bool operator&gt;= (const duration&lt; _Rep1, _Period1 &gt; &amp;__lhs, const duration&lt; _Rep2, _Period2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _Clock , typename _Dur1 , typename _Dur2 &gt; constexpr bool operator&gt;= (const time_point&lt; _Clock, _Dur1 &gt; &amp;__lhs, const time_point&lt; _Clock, _Dur2 &gt; &amp;__rhs)
-
-
-
 template&lt;typename _ToDur , typename _Clock , typename _Dur &gt; constexpr enable_if
-
-
 &lt; __is_duration&lt; _ToDur &gt;
-
 ::value, time_point&lt; _Clock,
-
 _ToDur &gt; &gt;::type time_point_cast (const time_point&lt; _Clock, _Dur &gt; &amp;__t)&quot;</code></pre>
 <h2>Detailed Description</h2>
 <p>ISO C++ 2011 entities sub-namespace for time and date.</p>

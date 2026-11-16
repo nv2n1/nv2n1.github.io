@@ -14,7 +14,7 @@ description: "w1_reset_resume_command – resume instead of another match ROM"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <h2>Description</h2>
 <p>When the workflow with a slave amongst many requires several successive commands a reset between each, this function is similar to doing a reset then a match ROM for the last matched ROM. The advantage being that the matched ROM step is skipped in favor of the resume command. The slave must support the command of course. </p>
 <p> If the bus has only one slave, traditionnaly the match ROM is skipped and a &#8220;SKIP ROM&#8221; is done for efficiency. On multi-slave busses, this doesn&#8217;t work of course, but the resume command is the next best thing. </p>
@@ -22,5 +22,5 @@ description: "w1_reset_resume_command – resume instead of another match ROM"
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

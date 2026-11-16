@@ -24,10 +24,10 @@ description: "vsftpd – Very Secure FTP Daemon"
 <p>An optional configuration file or files may be given on the command line. These files must be owned as root if running as root. Any command line option not starting with a &quot;-&quot; character is treated as a config file that will be loaded. Note that config files are loaded in the strict order that they are encountered on the command line. If no config files are specified, the default configuration file of /etc/vsftpd/vsftpd.conf will be loaded, after all other command line options are processed. </p>
 <p> Supported options are:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Print the version information and exit, even if other options are encountered.</p>
-<dt><code>-ooption=value</code></p>
-<dd>Set a single option, value pair as per the format in the config file. Multiple -o options are supported, and they are applied in strict order relative to their appearance on the command line, including intermingling with loading of config files.</dl>
+<dt><code>-v</code></dt>
+<dd>Print the version information and exit, even if other options are encountered.</dd>
+<dt><code>-ooption=value</code></dt>
+<dd>Set a single option, value pair as per the format in the config file. Multiple -o options are supported, and they are applied in strict order relative to their appearance on the command line, including intermingling with loading of config files.</dd></dl>
 <h2>Examples</h2>
 <p>vsftpd -olisten=NO /etc/vsftpd/vsftpd.conf -oftpd_banner=blah </p>
 <p> That example overrides vsftpd&#8217;s built-in default for the &quot;listen&quot; option to be NO, but then loads /etc/vsftpd/vsftpd.conf which may override that setting. Finally, the &quot;ftpd_banner&quot; setting is set to &quot;blah&quot;, which overrides any default vsftpd setting and any identical setting that was in the config file.</p>

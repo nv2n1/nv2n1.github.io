@@ -12,61 +12,19 @@ description: "sc::Render –"
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::FileRender</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>Render (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 Ref&lt; Material &gt; default_material ()
-
-
-
 Ref&lt; Appearance &gt; default_appearance ()
-
-
-
 Ref&lt; Transform &gt; default_transform ()
-
-
-
 void default_material (const Ref&lt; Material &gt; &amp;m)
-
-
-
 void default_appearance (const Ref&lt; Appearance &gt; &amp;a)
-
-
-
 void default_transform (const Ref&lt; Transform &gt; &amp;t)
-
-
-
 virtual void clear ()=0
-
-
-
 virtual void render (const Ref&lt; RenderedObject &gt; &amp;)
-
-
-
 virtual void animate (const Ref&lt; AnimatedObject &gt; &amp;)
-
-
-
 virtual void set (const Ref&lt; RenderedObjectSet &gt; &amp;)
-
-
-
 virtual void sphere (const Ref&lt; RenderedSphere &gt; &amp;)
-
-
-
 virtual void polygons (const Ref&lt; RenderedPolygons &gt; &amp;)=0
-
-
-
 virtual void polylines (const Ref&lt; RenderedPolylines &gt; &amp;)=0
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual void <code>push_material</code> (const <code>Ref</code>&lt; <code>Material</code> &gt; &amp;m) </p>
 <p> virtual void <code>push_appearance</code> (const <code>Ref</code>&lt; <code>Appearance</code> &gt; &amp;a) </p>

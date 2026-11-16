@@ -15,15 +15,15 @@ devm_snd_dmaengine_pcm_register - resource managed dmaengine PCM registration
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The parent device for the PCM device</dl>
+<dl><dd></dd><dd>The parent device for the PCM device</dd></dl>
  
 
  <i>config</i>
-<dl><dd>Platform specific PCM configuration</dl>
+<dl><dd>Platform specific PCM configuration</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>Platform specific quirks</dl>
+<dl><dd>Platform specific quirks</dd></dl>
 
 <h2>Description</h2>
 

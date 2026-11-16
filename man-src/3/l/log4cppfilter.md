@@ -44,12 +44,12 @@ description: "log4cpp::Filter –"
 <h3>enum <code>log4cpp::Filter::Decision</code></h3>
 <p><code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>DENY </i></p>
+<dt><i>DENY </i></dt>
 <dd>
-<dt><i>NEUTRAL </i></p>
+</dd><dt><i>NEUTRAL </i></dt>
 <dd>
-<dt><i>ACCEPT </i></p>
-<dd></dl>
+</dd><dt><i>ACCEPT </i></dt>
+<dd></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>log4cpp::Filter::Filter ()</h3>
 <p>Default Constructor for <code>Filter</code>.</p>
@@ -60,37 +60,37 @@ description: "log4cpp::Filter –"
 <p>Decide whether <code>this</code> <code>Filter</code> accepts or denies the given <code>LoggingEvent</code>. Actual implementation of <code>Filter</code> should override this method and not decide(LoggingEvent&amp;). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to decide on.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to decide on.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Decision</dl>
+<dd>The Decision</dd></dl>
 <h3>void log4cpp::Filter::appendChainedFilter (<code>Filter</code> *filter) [virtual]</h3>
 <p>Add a <code>Filter</code> to the end of the <code>Filter</code> chain. Convience method for <code>getEndOfChain()</code>-&gt;setChainedFilter(filter). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filter</i> The filter to add to the end of the chain.</dl>
+<dd><i>filter</i> The filter to add to the end of the chain.</dd></dl>
 <h3><code>Filter::Decision</code> log4cpp::Filter::decide (const <code>LoggingEvent</code> &amp;event) [virtual]</h3>
 <p>Decide whether to accept or deny a <code>LoggingEvent</code>. This method will walk the entire chain until a non neutral decision has been made or the end of the chain has been reached. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to decide on.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to decide on.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Decision</dl>
+<dd>The Decision</dd></dl>
 <h3><code>Filter</code> * log4cpp::Filter::getChainedFilter () [virtual]</h3>
 <p>Get the next <code>Filter</code> in the <code>Filter</code> chain. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The next <code>Filter</code> or NULL if the current filter is the last in the chain</dl>
+<dd>The next <code>Filter</code> or NULL if the current filter is the last in the chain</dd></dl>
 <h3><code>Filter</code> * log4cpp::Filter::getEndOfChain () [virtual]</h3>
 <p>Get the last <code>Filter</code> in the <code>Filter</code> chain. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The last <code>Filter</code> in the <code>Filter</code> chain</dl>
+<dd>The last <code>Filter</code> in the <code>Filter</code> chain</dd></dl>
 <h3>void log4cpp::Filter::setChainedFilter (<code>Filter</code> *filter) [virtual]</h3>
 <p>Set the next <code>Filter</code> in the <code>Filter</code> chain. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filter</i> The filter to chain</dl>
+<dd><i>filter</i> The filter to chain</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

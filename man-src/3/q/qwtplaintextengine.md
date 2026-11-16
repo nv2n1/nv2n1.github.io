@@ -35,7 +35,7 @@ description: "QwtPlainTextEngine –"
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Clipping rectangle<br />
  <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
- <i>text</i> Text to be rendered</dl>
+ <i>text</i> Text to be rendered</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>double QwtPlainTextEngine::heightForWidth (const QFont &amp;font, intflags, const QString &amp;text, doublewidth) const [virtual]</h3>
 <p>Find the height for a given width </p>
@@ -44,16 +44,16 @@ description: "QwtPlainTextEngine –"
 <dd><i>font</i> Font of the text<br />
  <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
  <i>text</i> Text to be rendered<br />
- <i>width</i> Width</dl>
+ <i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated height</dl>
+<dd>Calculated height</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>bool QwtPlainTextEngine::mightRender (const QString &amp;) const [virtual]</h3>
 <p>Test if a string can be rendered by this text engine. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Always true. All texts can be rendered by <code>QwtPlainTextEngine</code></dl>
+<dd>Always true. All texts can be rendered by <code>QwtPlainTextEngine</code></dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>void QwtPlainTextEngine::textMargins (const QFont &amp;font, const QString &amp;, double &amp;left, double &amp;right, double &amp;top, double &amp;bottom) const [virtual]</h3>
 <p>Return margins around the texts </p>
@@ -63,7 +63,7 @@ description: "QwtPlainTextEngine –"
  <i>left</i> Return 0<br />
  <i>right</i> Return 0<br />
  <i>top</i> Return value for the top margin<br />
- <i>bottom</i> Return value for the bottom margin</dl>
+ <i>bottom</i> Return value for the bottom margin</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>QSizeF QwtPlainTextEngine::textSize (const QFont &amp;font, intflags, const QString &amp;text) const [virtual]</h3>
 <p>Returns the size, that is needed to render text </p>
@@ -71,10 +71,10 @@ description: "QwtPlainTextEngine –"
 <dl COMPACT>
 <dd><i>font</i> Font of the text<br />
  <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
- <i>text</i> Text to be rendered</dl>
+ <i>text</i> Text to be rendered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Caluclated size</dl>
+<dd>Caluclated size</dd></dl>
 <p> Implements <code>QwtTextEngine</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

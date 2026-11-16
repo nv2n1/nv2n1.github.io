@@ -14,11 +14,11 @@ CPPKCL - Picks a set of contour levels.
  void c_cppkcl (float *zdat, float *rwrk, int *iwrk)
 <h2>Description</h2>All three arguments are arrays used in the last call to CPRECT, CPSPS1, or CPSPS2, the contents of which must not have been changed since that call.
 <dl COMPACT><dt>ZDAT
-<dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input) is the data array.
-<dt>RWRK
-<dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the real workspace array.
-<dt>IWRK
-<dd>(INTEGER array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the integer workspace array.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input) is the data array.
+</dd><dt>RWRK
+</dt><dd>(REAL array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the real workspace array.
+</dd><dt>IWRK
+</dt><dd>(INTEGER array, dimensioned as specified in the last call to CPRECT, CPSPS1, or CPSPS2, input/output) is the integer workspace array.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Normally, CPPKCL is called by CONPACK when the contour levels are needed; it may be called directly by the user when it is desired to modify the resulting parameter arrays specifying contour levels and associated quantities in some way. CPPKCL must be called after initialization has been done (by a call to one of the initialization routines CPRECT, CPSPS1, or CPSPS2); this is because CPPKCL depends on values set during initialization. 
 
  If the contour-level-selection parameter 'CLS' is zero (indicating that the user intends to pick contour levels), or if the constant-field-flag 'CFF' is non-zero (indicating that, during initialization, the data were found to be essentially constant), CPPKCL does nothing. Otherwise, CPPKCL picks a set of contour levels. The way in which it picks these levels is determined by the value of the internal parameter 'CLS'; see the description of this parameter in the conpack_params man page. 
@@ -35,15 +35,15 @@ CPPKCL - Picks a set of contour levels.
 
  Thus, after CPPKCL is called, the situation for each contour level is as follows:
 <dl COMPACT><dt>&bull;
-<dd>Contour lines at the level are to be drawn by calls to CPCLDM or CPCLDR.
-<dt>&bull;
-<dd>The lines will be labeled if 'CLU'=3, but not if 'CLU'=1.
-<dt>&bull;
-<dd>If CPCLAM is called, lines at the level will be added to the area map; the area identifiers for areas &quot;above&quot; the level and for areas &quot;below&quot; the level are as specified by 'AIA' and 'AIB'.
-<dt>&bull;
-<dd>The dash pattern for the level is solid, and neither the color of the line, the color of the labels on it, nor its width are to be set.
-<dt>&bull;
-<dd>The text of the label associated with the level is, as yet, unspecified.</dl>
+</dt><dd>Contour lines at the level are to be drawn by calls to CPCLDM or CPCLDR.
+</dd><dt>&bull;
+</dt><dd>The lines will be labeled if 'CLU'=3, but not if 'CLU'=1.
+</dd><dt>&bull;
+</dt><dd>If CPCLAM is called, lines at the level will be added to the area map; the area identifiers for areas &quot;above&quot; the level and for areas &quot;below&quot; the level are as specified by 'AIA' and 'AIB'.
+</dd><dt>&bull;
+</dt><dd>The dash pattern for the level is solid, and neither the color of the line, the color of the labels on it, nor its width are to be set.
+</dd><dt>&bull;
+</dt><dd>The text of the label associated with the level is, as yet, unspecified.</dd></dl>
  
 
  By resetting elements in these parameter arrays, the user can change the situation in various ways.

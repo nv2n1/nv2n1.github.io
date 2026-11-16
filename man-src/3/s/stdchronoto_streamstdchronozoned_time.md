@@ -11,14 +11,10 @@ std::chrono::to_stream(std::chrono::zoned_time) - std::chrono::to_stream(std::ch
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Duration, class TimeZonePtr&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;(since C++ 20)
-
     to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt,
-
               const std::chrono::zoned_time&lt;Duration, TimeZonePtr&gt; &amp;tp);</code></pre> 
 Outputs tp to the stream os, formatted according to the null-terminated format string fmt. Equivalent to <pre><code>auto info = tp.get_info();
-
 return std::chrono::to_stream(os, fmt, tp.get_local_time(), &amp;info.abbrev, &amp;info.offset);
 </code></pre> 
 Format string 

@@ -10,7 +10,7 @@ poolset - persistent memory pool configuration file format
 
 <h2>Synopsis</h2>
 
-<dl><dd><pre>mypool.set</pre></dl>
+<dl><dd><pre>mypool.set</pre></dd></dl>
 
 <h2>Description</h2>
 
@@ -20,15 +20,15 @@ Depending on the configuration of the system, the available non-volatile memory 
 
  The set file for each type of pool is a plain text file. Lines in the file are formatted as follows:
 <dl><dt>&bull;
-<dd>The first line of the file must be the literal string "PMEMPOOLSET"
-<dt>&bull;
-<dd>The pool parts are specified, one per line, in the format:
-<dl><dd>size pathname</dl><dt>&bull;
-<dd>Replica sections, if any, start with the literal string "REPLICA". See REPLICAS, below, for further details.
-<dt>&bull;
-<dd>Pool set options, if any, start with literal string OPTION. See POOL SET OPTIONS below for details.
-<dt>&bull;
-<dd>Lines starting with "#" are considered comments and are ignored.</dl>
+</dt><dd>The first line of the file must be the literal string "PMEMPOOLSET"
+</dd><dt>&bull;
+</dt><dd>The pool parts are specified, one per line, in the format:
+</dd><dl><dd>size pathname</dd></dl><dt>&bull;
+</dt><dd>Replica sections, if any, start with the literal string "REPLICA". See REPLICAS, below, for further details.
+</dd><dt>&bull;
+</dt><dd>Pool set options, if any, start with literal string OPTION. See POOL SET OPTIONS below for details.
+</dd><dt>&bull;
+</dt><dd>Lines starting with "#" are considered comments and are ignored.</dd></dl>
  
 
  The size must be compliant with the format specified in IEC 80000-13, IEEE 1541 or the Metric Interchange Format. These standards accept SI units with obligatory B - kB, MB, GB, ... (multiplier by 1000) suffixes, and IEC units with optional "iB" - KiB, MiB, GiB, ..., K, M, G, ... - (multiplier by 1024) suffixes. 
@@ -39,39 +39,39 @@ Depending on the configuration of the system, the available non-volatile memory 
 
  Pools created on Device DAX have additional options and restrictions:
 <dl><dt>&bull;
-<dd>The size may be set to "AUTO", in which case the size of the device will be automatically resolved at pool creation time.
-<dt>&bull;
-<dd>To concatenate more than one Device DAX device into a single pool set, the configured internal alignment of the devices must be 4KiB, unless the SINGLEHDR or NOHDRS option is used in the pool set file. See POOL SET OPTIONS below for details.</dl>
+</dt><dd>The size may be set to "AUTO", in which case the size of the device will be automatically resolved at pool creation time.
+</dd><dt>&bull;
+</dt><dd>To concatenate more than one Device DAX device into a single pool set, the configured internal alignment of the devices must be 4KiB, unless the SINGLEHDR or NOHDRS option is used in the pool set file. See POOL SET OPTIONS below for details.</dd></dl>
  
 
  Please see <a HREF="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a>(1) for more information on Device DAX, including how to configure desired alignment. 
 
  The minimum file size of each part of the pool set is defined as follows:
 <dl><dt>&bull;
-<dd>For block pools, as PMEMBLK_MIN_PART in &lt;libpmemblk.h&gt;
-<dt>&bull;
-<dd>For object pools, as PMEMOBJ_MIN_PART in &lt;libpmemobj.h&gt;
-<dt>&bull;
-<dd>For log pools, as PMEMLOG_MIN_PART in &lt;libpmemlog.h&gt;</dl>
+</dt><dd>For block pools, as PMEMBLK_MIN_PART in &lt;libpmemblk.h&gt;
+</dd><dt>&bull;
+</dt><dd>For object pools, as PMEMOBJ_MIN_PART in &lt;libpmemobj.h&gt;
+</dd><dt>&bull;
+</dt><dd>For log pools, as PMEMLOG_MIN_PART in &lt;libpmemlog.h&gt;</dd></dl>
  
 
  The net pool size of the pool set is equal to:
-<dl><dd><pre>net_pool_size&nbsp;=&nbsp;sum_over_all_parts(page_aligned_part_size - 4KiB)&nbsp;+&nbsp;4KiB</pre></dl>
+<dl><dd><pre>net_pool_size&nbsp;=&nbsp;sum_over_all_parts(page_aligned_part_size - 4KiB)&nbsp;+&nbsp;4KiB</pre></dd></dl>
  
 
  where
-<dl><dd><pre>page_aligned_part_size&nbsp;=&nbsp;part_size&nbsp;&amp;&nbsp;~(page_size - 1)</pre></dl>
+<dl><dd><pre>page_aligned_part_size&nbsp;=&nbsp;part_size&nbsp;&amp;&nbsp;~(page_size - 1)</pre></dd></dl>
  
 
  Note that page size is OS specific. For more information please see <a HREF="/docs/linux/man/3-sysconf/">sysconf</a>(3). 
 
  The minimum net pool size of a pool set is defined as follows:
 <dl><dt>&bull;
-<dd>For block pools, as PMEMBLK_MIN_POOL in &lt;libpmemblk.h&gt;
-<dt>&bull;
-<dd>For object pools, as PMEMOBJ_MIN_POOL in &lt;libpmemobj.h&gt;
-<dt>&bull;
-<dd>For log pools, as PMEMLOG_MIN_POOL in &lt;libpmemlog.h&gt;</dl>
+</dt><dd>For block pools, as PMEMBLK_MIN_POOL in &lt;libpmemblk.h&gt;
+</dd><dt>&bull;
+</dt><dd>For object pools, as PMEMOBJ_MIN_POOL in &lt;libpmemobj.h&gt;
+</dd><dt>&bull;
+</dt><dd>For log pools, as PMEMLOG_MIN_POOL in &lt;libpmemlog.h&gt;</dd></dl>
  
 
  Here is an example "mypool.set" file:
@@ -79,15 +79,15 @@ Depending on the configuration of the system, the available non-volatile memory 
 OPTION NOHDRS
 100G&nbsp;/mountpoint0/myfile.part0
 200G&nbsp;/mountpoint1/myfile.part1
-400G&nbsp;/mountpoint2/myfile.part2</pre></dl>
+400G&nbsp;/mountpoint2/myfile.part2</pre></dd></dl>
  
 
  The files in the set may be created by running one of the following commands. To create a block pool:
-<dl><dd><pre>$&nbsp;pmempool create blk&nbsp;&lt;bsize&gt;&nbsp;mypool.set</pre></dl>
+<dl><dd><pre>$&nbsp;pmempool create blk&nbsp;&lt;bsize&gt;&nbsp;mypool.set</pre></dd></dl>
  
 
  To create a log pool:
-<dl><dd><pre>$&nbsp;pmempool create log mypool.set</pre></dl>
+<dl><dd><pre>$&nbsp;pmempool create log mypool.set</pre></dd></dl>
 
 <h2>Replicas</h2>
 
@@ -96,10 +96,10 @@ Sections defining replica sets are optional. There may be multiple replica secti
  Local replica sections begin with a line containing only the literal string "REPLICA", followed by one or more pool part lines as described above. 
 
  Remote replica sections consist of the REPLICA keyword, followed on the same line by the address of a remote host and a relative path to a remote pool set file:
-<dl><dd><pre>REPLICA&nbsp;[&lt;user&gt;@]&lt;hostname&gt;&nbsp;[&lt;relative-path&gt;/]&lt;remote-pool-set-file&gt;</pre><dt>&bull;
-<dd>hostname must be in the format recognized by the <a HREF="/docs/linux/man/1-ssh/">ssh</a>(1) remote login client
-<dt>&bull;
-<dd>pathname is relative to the root config directory on the target node - see librpmem(7)</dl>
+<dl><dd><pre>REPLICA&nbsp;[&lt;user&gt;@]&lt;hostname&gt;&nbsp;[&lt;relative-path&gt;/]&lt;remote-pool-set-file&gt;</pre></dd><dt>&bull;
+</dt><dd>hostname must be in the format recognized by the <a HREF="/docs/linux/man/1-ssh/">ssh</a>(1) remote login client
+</dd><dt>&bull;
+</dt><dd>pathname is relative to the root config directory on the target node - see librpmem(7)</dd></dl>
  
 
  There are no other lines in the remote replica section - the REPLICA line defines a remote replica entirely. 
@@ -114,11 +114,11 @@ REPLICA
 500G&nbsp;/mountpoint3/mymirror.part0
 200G&nbsp;/mountpoint4/mymirror.part1&nbsp;
 #&nbsp;remote replica
-REPLICA user [at] example.com remote-objpool.set</pre></dl>
+REPLICA user [at] example.com remote-objpool.set</pre></dd></dl>
  
 
  The files in the object pool set may be created by running the following command:
-<dl><dd><pre>$&nbsp;pmempool create --layout=&quot;mylayout&quot;&nbsp;obj myobjpool.set</pre></dl>
+<dl><dd><pre>$&nbsp;pmempool create --layout=&quot;mylayout&quot;&nbsp;obj myobjpool.set</pre></dd></dl>
  
 
  Remote replica cannot have replicas, i.e. a remote pool set file cannot define any replicas.
@@ -127,9 +127,9 @@ REPLICA user [at] example.com remote-objpool.set</pre></dl>
 
 Pool set options can appear anywhere after the line with PMEMPOOLSET string. Pool set file can contain several pool set options. The following options are supported:
 <dl><dt>&bull;
-<dd>SINGLEHDR
-<dt>&bull;
-<dd>NOHDRS</dl>
+</dt><dd>SINGLEHDR
+</dd><dt>&bull;
+</dt><dd>NOHDRS</dd></dl>
  
 
  If the SINGLEHDR option is used, only the first part in each replica contains the pool part internal metadata. In that case the effective size of a replica is the sum of sizes of all its part files decreased once by 4096 bytes. 

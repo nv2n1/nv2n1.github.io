@@ -20,10 +20,10 @@ description: "chbev.f –"
 <dd>
 <pre> CHBEV computes all the eigenvalues and, optionally, eigenvectors of
  a complex Hermitian band matrix A.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBZ</i> </p>
+<dd><i>JOBZ</i> </dd>
 <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre>
@@ -82,13 +82,13 @@ description: "chbev.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 152 of file chbev.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

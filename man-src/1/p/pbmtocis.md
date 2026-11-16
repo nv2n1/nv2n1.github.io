@@ -16,10 +16,10 @@ description: "pbmtocis – convert a PBM image to a CompuServe RLE image"
 <p> <code>pbmtocis</code> reads a PBM image as input and produces a CompuServe RLE image as output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> Inverse: Reverse the mapping of foreground/background to black/white. </p>
-<dt><code>-w</code></p>
-<dd> If the input image is smaller than the fixed size of the output image, pad with white pixels rather than black. </p>
+<dt><code>-i</code></dt>
+<dd> Inverse: Reverse the mapping of foreground/background to black/white. </dd>
+<dt><code>-w</code></dt>
+<dd> If the input image is smaller than the fixed size of the output image, pad with white pixels rather than black. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cistopbm/">cistopbm</a></code>(1) , <code>pbm</code>(1) CompuServe RLE file format </p>

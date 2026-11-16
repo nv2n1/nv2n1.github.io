@@ -19,10 +19,10 @@ where <i>transaction_mode</i> is one of:
 <p> If the isolation level or read/write mode is specified, the new transaction has those characteristics, as if SET TRANSACTION [<code><a href="/docs/linux/man/7-set_transaction/">set_transaction</a></code>(7)] was executed.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>WORK</code></p>
+<dt><code>WORK</code></dt>
 <dd>
-<dt><code>TRANSACTION</code></p>
-<dd>Optional key words. They have no effect.</dl>
+</dd><dt><code>TRANSACTION</code></dt>
+<dd>Optional key words. They have no effect.</dd></dl>
 <p> Refer to SET TRANSACTION [<code><a href="/docs/linux/man/7-set_transaction/">set_transaction</a></code>(7)] for information on the meaning of the other parameters to this statement.</p>
 <h2>Notes</h2>
 <p>START TRANSACTION [<code><a href="/docs/linux/man/7-start_transaction/">start_transaction</a></code>(7)] has the same functionality as <code>BEGIN</code>. </p>

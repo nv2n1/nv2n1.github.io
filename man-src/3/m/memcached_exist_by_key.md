@@ -12,10 +12,10 @@ description: "memcached_exist_by_key – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_exist(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</p>
+<dt><code>memcached_return_t memcached_exist(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_exist_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>*group_key_length</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</p>
-<dd> New in version 0.53. </p>
+</dd><dt><code>memcached_return_t memcached_exist_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>*group_key_length</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</dt>
+<dd> New in version 0.53. </dd>
 <p> Compile and link with -lmemcached</dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_exist()</i> can be used to check to see if a key exists. No value is returned if the key exists, or does not exist, on the server.</p>
@@ -30,3 +30,4 @@ description: "memcached_exist_by_key – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

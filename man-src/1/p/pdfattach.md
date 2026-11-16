@@ -15,26 +15,26 @@ description: "pdfattach – Portable Document Format (PDF) document embedded fil
 <p> <code>Pdfattach</code> adds a new embedded file (attachment) to an existing Portable Document Format (PDF) file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-replace</code></p>
-<dd> Replace embedded file with same name (if it exists)</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-replace</code></dt>
+<dd> Replace embedded file with same name (if it exists)</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <h2>EXIT CODES</h2>
 <dl>
-<dt>0</p>
-<dd> No error.</p>
-<dt>1</p>
-<dd> Error opening input PDF file.</p>
-<dt>2</p>
-<dd> Error opening file to attach.</p>
-<dt>3</p>
-<dd> Output file already exists.</p>
-<dt>3</p>
-<dd> There is already an attached file with that name.</p>
-<dt>5</p>
-<dd> Error saving the output file.</dl>
+<dt>0</dt>
+<dd> No error.</dd>
+<dt>1</dt>
+<dd> Error opening input PDF file.</dd>
+<dt>2</dt>
+<dd> Error opening file to attach.</dd>
+<dt>3</dt>
+<dd> Output file already exists.</dd>
+<dt>3</dt>
+<dd> There is already an attached file with that name.</dd>
+<dt>5</dt>
+<dd> Error saving the output file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The pdfattach software and documentation are copyright 2019 The Poppler developers</p>
 <h2>SEE ALSO</h2>

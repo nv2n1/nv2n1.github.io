@@ -24,31 +24,31 @@ description: "generic – Postfix generic table format"
 <h2>Table Format</h2>
 <p>The input format for the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command is as follows:</p>
 <dl>
-<dt><i>pattern result</i></p>
-<dd>When <i>pattern</i> matches a mail address, replace it by the corresponding <i>result</i>.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt><i>pattern result</i></dt>
+<dd>When <i>pattern</i> matches a mail address, replace it by the corresponding <i>result</i>.</dd>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <h2>Table Search Order</h2>
 <p>With lookups from indexed files such as DB or DBM, or from networked tables such as NIS, LDAP or SQL, each <i>user</i>@<i>domain</i> query produces a sequence of query patterns as described below. </p>
 <p> Each query pattern is sent to each specified lookup table before trying the next query pattern, until a match is found.</p>
 <dl>
-<dt><i>user</i>@<i>domain address</i></p>
-<dd>Replace <i>user</i>@<i>domain</i> by <i>address</i>. This form has the highest precedence.</p>
-<dt><i>user address</i></p>
-<dd>Replace <i>user</i>@<i>site</i> by <i>address</i> when <i>site</i> is equal to $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when it is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>.</p>
-<dt>@<i>domain address</i></p>
-<dd>Replace other addresses in <i>domain</i> by <i>address</i>. This form has the lowest precedence.</dl>
+<dt><i>user</i>@<i>domain address</i></dt>
+<dd>Replace <i>user</i>@<i>domain</i> by <i>address</i>. This form has the highest precedence.</dd>
+<dt><i>user address</i></dt>
+<dd>Replace <i>user</i>@<i>site</i> by <i>address</i> when <i>site</i> is equal to $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when it is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>.</dd>
+<dt>@<i>domain address</i></dt>
+<dd>Replace other addresses in <i>domain</i> by <i>address</i>. This form has the lowest precedence.</dd></dl>
 <h2>Result Address Rewriting</h2>
 <p>The lookup result is subject to address rewriting:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When the result has the form @<i>otherdomain</i>, the result becomes the same <i>user</i> in <i>otherdomain</i>.</p>
-<dt>&bull;</p>
-<dd>When &quot;<code>append_at_myorigin=yes</code>&quot;, append &quot;<code>@$myorigin</code>&quot; to addresses without &quot;@domain&quot;.</p>
-<dt>&bull;</p>
-<dd>When &quot;<code>append_dot_mydomain=yes</code>&quot;, append &quot;<code>.$mydomain</code>&quot; to addresses without &quot;.domain&quot;.</dl>
+<dt>&bull;</dt>
+<dd>When the result has the form @<i>otherdomain</i>, the result becomes the same <i>user</i> in <i>otherdomain</i>.</dd>
+<dt>&bull;</dt>
+<dd>When &quot;<code>append_at_myorigin=yes</code>&quot;, append &quot;<code>@$myorigin</code>&quot; to addresses without &quot;@domain&quot;.</dd>
+<dt>&bull;</dt>
+<dd>When &quot;<code>append_dot_mydomain=yes</code>&quot;, append &quot;<code>.$mydomain</code>&quot; to addresses without &quot;.domain&quot;.</dd></dl>
 <h2>Address Extension</h2>
 <p>When a mail address localpart contains the optional recipient delimiter (e.g., <i>user+foo</i>@<i>domain</i>), the lookup order becomes: <i>user+foo</i>@<i>domain</i>, <i>user</i>@<i>domain</i>, <i>user+foo</i>, <i>user</i>, and @<i>domain</i>. </p>
 <p> The <code>propagate_unmatched_extensions</code> parameter controls whether an unmatched address extension (<i>+foo</i>) is propagated to the result of table lookup.</p>
@@ -75,22 +75,22 @@ description: "generic – Postfix generic table format"
 <h2>Configuration Parameters</h2>
 <p>The following <code>main.cf</code> parameters are especially relevant. The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>smtp_generic_maps</code></p>
-<dd>Address mapping lookup table for envelope and header sender and recipient addresses while delivering mail via SMTP.</p>
-<dt><code>propagate_unmatched_extensions</code></p>
-<dd>A list of address rewriting or forwarding mechanisms that propagate an address extension from the original address to the result. Specify zero or more of <code>canonical</code>, <code>virtual</code>, <code>alias</code>, <code>forward</code>, <code>include</code>, or <code>generic</code>.</dl>
+<dt><code>smtp_generic_maps</code></dt>
+<dd>Address mapping lookup table for envelope and header sender and recipient addresses while delivering mail via SMTP.</dd>
+<dt><code>propagate_unmatched_extensions</code></dt>
+<dd>A list of address rewriting or forwarding mechanisms that propagate an address extension from the original address to the result. Specify zero or more of <code>canonical</code>, <code>virtual</code>, <code>alias</code>, <code>forward</code>, <code>include</code>, or <code>generic</code>.</dd></dl>
 <p> Other parameters of interest:</p>
 <dl>
-<dt><code>inet_interfaces</code></p>
-<dd>The network interface addresses that this system receives mail on. You need to stop and start Postfix when this parameter changes.</p>
-<dt><code>proxy_interfaces</code></p>
-<dd>Other interfaces that this machine receives mail on by way of a proxy agent or network address translator.</p>
-<dt><code>mydestination</code></p>
-<dd>List of domains that this mail system considers local.</p>
-<dt><code>myorigin</code></p>
-<dd>The domain that is appended to locally-posted mail.</p>
-<dt><code>owner_request_special</code></p>
-<dd>Give special treatment to <code>owner-</code><i>xxx</i> and <i>xxx</i><code>-request</code> addresses.</dl>
+<dt><code>inet_interfaces</code></dt>
+<dd>The network interface addresses that this system receives mail on. You need to stop and start Postfix when this parameter changes.</dd>
+<dt><code>proxy_interfaces</code></dt>
+<dd>Other interfaces that this machine receives mail on by way of a proxy agent or network address translator.</dd>
+<dt><code>mydestination</code></dt>
+<dd>List of domains that this mail system considers local.</dd>
+<dt><code>myorigin</code></dt>
+<dd>The domain that is appended to locally-posted mail.</dd>
+<dt><code>owner_request_special</code></dt>
+<dd>Give special treatment to <code>owner-</code><i>xxx</i> and <i>xxx</i><code>-request</code> addresses.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/1-postmap/">postmap</a>(1), Postfix lookup table manager
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters

@@ -41,11 +41,12 @@ description: "cckd – Hercules Compressed CKD DASD image file"
 <p>End Of Track &#8211; indicated by 8X&#8217;FF&#8217; in the COUNT field.</p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a></code> the Hercules emulator homepage.</p>
+<dt><code><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a></code> the Hercules emulator homepage.</dt>
 <dd>
-<dt><code><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a></code> which describes</p>
-<dd>the Hercules CCKD DASD facility.</p>
-<dt><code><a rel="nofollow" href="http://www.hercules-390.org/hercconf.html">http://www.hercules-390.org/hercconf.html</a></code> which describes</p>
-<dd>the Hercules configuration file. </p>
+</dd><dt><code><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a></code> which describes</dt>
+<dd>the Hercules CCKD DASD facility.</dd>
+<dt><code><a rel="nofollow" href="http://www.hercules-390.org/hercconf.html">http://www.hercules-390.org/hercconf.html</a></code> which describes</dt>
+<dd>the Hercules configuration file. </dd>
 <h2>History</h2>
 <p>2003-02-07 originally written by James M. Morrison</p>
+</dl>

@@ -19,10 +19,10 @@ description: "lsame.f –"
 <dd>
 <pre> LSAME returns .TRUE. if CA is the same letter as CB regardless of
  case.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>CA</i> </p>
+<dd><i>CA</i> </dd>
 <pre> CA is CHARACTER*1</pre>
 <p><i>CB</i> </p>
 <pre> CB is CHARACTER*1
@@ -30,13 +30,13 @@ description: "lsame.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 54 of file BLAS/SRC/lsame.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

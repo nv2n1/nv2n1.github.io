@@ -24,10 +24,10 @@ description: "dtrcon.f –"
  norm(inv(A)), then the reciprocal of the condition number is
  computed as
  RCOND = 1 / ( norm(A) * norm(inv(A)) ).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>NORM</i> </p>
+<dd><i>NORM</i> </dd>
 <pre> NORM is CHARACTER*1
  Specifies whether the 1-norm condition number or the
  infinity-norm condition number is required:
@@ -72,13 +72,13 @@ description: "dtrcon.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 137 of file dtrcon.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

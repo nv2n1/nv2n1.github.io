@@ -13,42 +13,42 @@ description: "biosdecode – BIOS information decoder"
 <h2>Description</h2>
 <p><code>biosdecode</code> parses the <font SIZE="-1">BIOS</font> memory and prints information about all structures (or entry points) it knows of. Currently known entry point types are:</p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd><font SIZE="-1">SMBIOS</font> (System Management <font SIZE="-1">BIOS</font>)<br />
- Use <code>dmidecode</code> for a more detailed output.</p>
-<dt>&bull;</p>
+ Use <code>dmidecode</code> for a more detailed output.</dd>
+<dt>&bull;</dt>
 <dd><font SIZE="-1">DMI</font> (Desktop Management Interface, a legacy version of <font SIZE="-1">SMBIOS</font>)<br />
- Use <code>dmidecode</code> for a more detailed output.</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">SYSID</font></p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PNP</font> (Plug and Play)</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">ACPI</font> (Advanced Configuration and Power Interface)</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">BIOS32</font> (<font SIZE="-1">BIOS32</font> Service Directory)</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PIR</font> (<font SIZE="-1">PCI</font> <font SIZE="-1">IRQ</font> Routing)</p>
-<dt>&bull;</p>
+ Use <code>dmidecode</code> for a more detailed output.</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">SYSID</font></dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PNP</font> (Plug and Play)</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">ACPI</font> (Advanced Configuration and Power Interface)</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">BIOS32</font> (<font SIZE="-1">BIOS32</font> Service Directory)</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PIR</font> (<font SIZE="-1">PCI</font> <font SIZE="-1">IRQ</font> Routing)</dd>
+<dt>&bull;</dt>
 <dd><font SIZE="-1">32OS</font> (<font SIZE="-1">BIOS32</font> Extension, Compaq-specific)<br />
- See <code>ownership</code> for a Compaq ownership tag retrieval tool.</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">SNY</font> (Sony-specific, not decoded)</p>
-<dt>&bull;</p>
+ See <code>ownership</code> for a Compaq ownership tag retrieval tool.</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">SNY</font> (Sony-specific, not decoded)</dd>
+<dt>&bull;</dt>
 <dd><font SIZE="-1">VPD</font> (Vital Product Data, IBM-specific)<br />
- Use <code>vpddecode</code> for a more detailed output.</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">FJKEYINF</font> (Application Panel, Fujitsu-specific)  <code>biosdecode</code> started its life as a part of <code>dmidecode</code> but as more entry point types were added, it was moved to a different program.</p>
+ Use <code>vpddecode</code> for a more detailed output.</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">FJKEYINF</font> (Application Panel, Fujitsu-specific)  <code>biosdecode</code> started its life as a part of <code>dmidecode</code> but as more entry point types were added, it was moved to a different program.</dd>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></p>
-<dd>Read memory from device <code>FILE</code> (default: <code>/dev/mem</code>)</p>
-<dt> <code>&#8211;pir full</code></p>
-<dd>Decode the details of the PCI IRQ routing table</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display usage information and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display the version and exit</dl>
+<dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></dt>
+<dd>Read memory from device <code>FILE</code> (default: <code>/dev/mem</code>)</dd>
+<dt> <code>&#8211;pir full</code></dt>
+<dd>Decode the details of the PCI IRQ routing table</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display usage information and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display the version and exit</dd></dl>
 <h2>Files</h2>
 <p><i>/dev/mem</i></p>
 <h2>Bugs</h2>
@@ -57,3 +57,4 @@ description: "biosdecode – BIOS information decoder"
 <p>Alan Cox, Jean Delvare</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-dmidecode/">dmidecode</a></code>(8), <code><a href="/docs/linux/man/4-mem/">mem</a></code>(4), <code><a href="/docs/linux/man/8-ownership/">ownership</a></code>(8), <code><a href="/docs/linux/man/8-vpddecode/">vpddecode</a></code>(8) </p>
+</dl>

@@ -10,84 +10,84 @@ description: "samba – A Windows AD and SMB/CIFS fileserver for UNIX"
 <p>samba &#8211; A Windows AD and SMB/CIFS fileserver for UNIX</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>samba</dl>
+<dd>samba</dd></dl>
 <h2>Description</h2>
 <p>The Samba software suite is a collection of programs that implements the Server Message Block (commonly abbreviated as SMB) protocol for UNIX systems and provides Active Directory services. The first version of the SMB protocol is sometimes also referred to as the Common Internet File System (CIFS). For a more thorough description, see <a rel="nofollow noopener" href="http://www.ubiqx.org/cifs/." target="_blank">http://www.ubiqx.org/cifs/.</a> Samba also implements the NetBIOS protocol in nmbd. </p>
 <p> <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8)</p>
 <dl>
-<dd>The samba daemon provides the Active Directory services and file and print services to SMB clients. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dl>
+<dd>The samba daemon provides the Active Directory services and file and print services to SMB clients. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dd></dl>
 <p> <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8)</p>
 <dl>
-<dd>The smbd daemon provides the file and print services to SMB clients. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dl>
+<dd>The smbd daemon provides the file and print services to SMB clients. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dd></dl>
 <p> <code><a href="/docs/linux/man/8-nmbd/">nmbd</a></code>(8)</p>
 <dl>
-<dd>The nmbd daemon provides NetBIOS nameservice and browsing support. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dl>
+<dd>The nmbd daemon provides NetBIOS nameservice and browsing support. The configuration file for this daemon is described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</dd></dl>
 <p> <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8)</p>
 <dl>
-<dd>winbindd is a daemon that is used for integrating authentication and the user database into unix.</dl>
+<dd>winbindd is a daemon that is used for integrating authentication and the user database into unix.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1)</p>
 <dl>
-<dd>The smbclient program implements a simple ftp-like client. This is useful for accessing SMB shares on other compatible SMB servers, and can also be used to allow a UNIX box to print to a printer attached to any SMB server.</dl>
+<dd>The smbclient program implements a simple ftp-like client. This is useful for accessing SMB shares on other compatible SMB servers, and can also be used to allow a UNIX box to print to a printer attached to any SMB server.</dd></dl>
 <p> <code><a href="/docs/linux/man/8-samba-tool/">samba-tool</a></code>(8)</p>
 <dl>
-<dd>The samba-tool is the main Samba Administration tool regarding Active Directory services.</dl>
+<dd>The samba-tool is the main Samba Administration tool regarding Active Directory services.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-testparm/">testparm</a></code>(1)</p>
 <dl>
-<dd>The testparm utility is a simple syntax checker for Samba&#8217;s <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) configuration file. In AD server mode samba-tool testparm should be used though.</dl>
+<dd>The testparm utility is a simple syntax checker for Samba&#8217;s <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) configuration file. In AD server mode samba-tool testparm should be used though.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbstatus/">smbstatus</a></code>(1)</p>
 <dl>
-<dd>The smbstatus tool provides access to information about the current connections to smbd.</dl>
+<dd>The smbstatus tool provides access to information about the current connections to smbd.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1)</p>
 <dl>
-<dd>The nmblookup tool allows NetBIOS name queries to be made.</dl>
+<dd>The nmblookup tool allows NetBIOS name queries to be made.</dd></dl>
 <p> <code><a href="/docs/linux/man/8-smbpasswd/">smbpasswd</a></code>(8)</p>
 <dl>
-<dd>The smbpasswd command is a tool for setting passwords on local Samba but also on remote SMB servers.</dl>
+<dd>The smbpasswd command is a tool for setting passwords on local Samba but also on remote SMB servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbcacls/">smbcacls</a></code>(1)</p>
 <dl>
-<dd>The smbcacls command is a tool to set ACL&#8217;s on remote SMB servers.</dl>
+<dd>The smbcacls command is a tool to set ACL&#8217;s on remote SMB servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbtree/">smbtree</a></code>(1)</p>
 <dl>
-<dd>The smbtree command is a text-based network neighborhood tool.</dl>
+<dd>The smbtree command is a text-based network neighborhood tool.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbtar/">smbtar</a></code>(1)</p>
 <dl>
-<dd>The smbtar can make backups of data directly from SMB servers.</dl>
+<dd>The smbtar can make backups of data directly from SMB servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/8-smbspool/">smbspool</a></code>(8)</p>
 <dl>
-<dd>smbspool is a helper utility for printing on printers connected to SMB servers.</dl>
+<dd>smbspool is a helper utility for printing on printers connected to SMB servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbcontrol/">smbcontrol</a></code>(1)</p>
 <dl>
-<dd>smbcontrol is a utility that can change the behaviour of running samba, smbd, nmbd and winbindd daemons.</dl>
+<dd>smbcontrol is a utility that can change the behaviour of running samba, smbd, nmbd and winbindd daemons.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-rpcclient/">rpcclient</a></code>(1)</p>
 <dl>
-<dd>rpcclient is a utility that can be used to execute RPC commands on remote SMB servers.</dl>
+<dd>rpcclient is a utility that can be used to execute RPC commands on remote SMB servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/8-pdbedit/">pdbedit</a></code>(8)</p>
 <dl>
-<dd>The pdbedit command can be used to maintain the local user database on a Samba server.</dl>
+<dd>The pdbedit command can be used to maintain the local user database on a Samba server.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-findsmb/">findsmb</a></code>(1)</p>
 <dl>
-<dd>The findsmb command can be used to find SMB servers on the local network.</dl>
+<dd>The findsmb command can be used to find SMB servers on the local network.</dd></dl>
 <p> <code><a href="/docs/linux/man/8-net/">net</a></code>(8)</p>
 <dl>
-<dd>The net command is the main administration tool for Samba member and standalone servers.</dl>
+<dd>The net command is the main administration tool for Samba member and standalone servers.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-wbinfo/">wbinfo</a></code>(1)</p>
 <dl>
-<dd>wbinfo is a utility that retrieves and stores information related to winbind.</dl>
+<dd>wbinfo is a utility that retrieves and stores information related to winbind.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-profiles/">profiles</a></code>(1)</p>
 <dl>
-<dd>profiles is a command-line utility that can be used to replace all occurrences of a certain SID with another SID.</dl>
+<dd>profiles is a command-line utility that can be used to replace all occurrences of a certain SID with another SID.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-log2pcap/">log2pcap</a></code>(1)</p>
 <dl>
-<dd>log2pcap is a utility for generating pcap trace files from Samba log files.</dl>
+<dd>log2pcap is a utility for generating pcap trace files from Samba log files.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-vfstest/">vfstest</a></code>(1)</p>
 <dl>
-<dd>vfstest is a utility that can be used to test vfs modules.</dl>
+<dd>vfstest is a utility that can be used to test vfs modules.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-ntlm_auth/">ntlm_auth</a></code>(1)</p>
 <dl>
-<dd>ntlm_auth is a helper-utility for external programs wanting to do NTLM-authentication.</dl>
+<dd>ntlm_auth is a helper-utility for external programs wanting to do NTLM-authentication.</dd></dl>
 <p> <code><a href="/docs/linux/man/1-smbcquotas/">smbcquotas</a></code>(1)</p>
 <dl>
-<dd>smbcquotas is a tool to manage quotas on remote SMB servers.</dl>
+<dd>smbcquotas is a tool to manage quotas on remote SMB servers.</dd></dl>
 <h2>Components</h2>
 <p>The Samba suite is made up of several components. Each component is described in a separate manual page. It is strongly recommended that you read the documentation that comes with Samba and the manual pages of those components that you use. If the manual pages and documents aren&#8217;t clear enough then please visit <a rel="nofollow noopener" href="https://devel.samba.org" target="_blank">https://devel.samba.org</a> for information on how to file a bug report or submit a patch. </p>
 <p> If you require help, visit the Samba webpage at <a rel="nofollow noopener" href="https://www.samba.org/" target="_blank">https://www.samba.org/</a> and explore the many option available to you.</p>

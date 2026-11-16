@@ -18,17 +18,17 @@ bool bson_append_oid(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> An ASCII C string containing the name of the field.</dl>
+<dt><code>key</code></dt>
+<dd> An ASCII C string containing the name of the field.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>oid</code></p>
-<dd> A bson_oid_t.</dl>
+<dt><code>oid</code></dt>
+<dd> A bson_oid_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_oid/">bson_append_oid</a>(3)</code> function shall append a new element to <code>bson</code> of type BSON_TYPE_OID. <code>oid</code> </p>
 <p> <code>MUST</code> be a pointer to a <code>bson_oid_t</code> \&amp;. </p>

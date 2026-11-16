@@ -10,39 +10,39 @@ description: "ocf_heartbeat_SendArp – Broadcasts unsolicited ARP announcements
 <p>ocf_heartbeat_SendArp &#8211; Broadcasts unsolicited ARP announcements</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>SendArp</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>SendArp</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This RA can be used _instead_ of the IPaddr2 or IPaddr RA to send gratuitous ARP for an IP address on a given interface, without adding the address to that interface. For example, if for some resaon you wanted to send gratuitous ARP for addresses managed by IPaddr2 or IPaddr on an additional interface.</p>
+<dd>This RA can be used _instead_ of the IPaddr2 or IPaddr RA to send gratuitous ARP for an IP address on a given interface, without adding the address to that interface. For example, if for some resaon you wanted to send gratuitous ARP for addresses managed by IPaddr2 or IPaddr on an additional interface.</dd>
 <h2>Supported Parameters</h2>
 <p><code>ip</code></p>
 <dl>
-<dd>The IP address for sending ARP packet. </p>
+<dd>The IP address for sending ARP packet. </dd>
 <p> (required, string, no default)</dl>
 <p> <code>nic</code></p>
 <dl>
-<dd>The NIC for sending ARP packet. </p>
+<dd>The NIC for sending ARP packet. </dd>
 <p> (required, string, no default)</dl>
 <p> <code>background</code></p>
 <dl>
-<dd>Send ARPs in background. Set to false if you want to test if sending ARPs succeeded. </p>
+<dd>Send ARPs in background. Set to false if you want to test if sending ARPs succeeded. </dd>
 <p> (optional, boolean, default true)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20s.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20s.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a SendArp resource using the <code>crm</code>(8) shell: </p>
 <dl>
@@ -52,7 +52,7 @@ description: "ocf_heartbeat_SendArp – Broadcasts unsolicited ARP announcements
  ip=<i>string</i> \
  nic=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a SendArp resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
@@ -61,7 +61,7 @@ description: "ocf_heartbeat_SendArp – Broadcasts unsolicited ARP announcements
  ip=<i>string</i> \
  nic=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/SendArp_(resource_agent)">http://www.linux-ha.org/wiki/SendArp_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

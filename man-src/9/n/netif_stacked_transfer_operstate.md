@@ -15,11 +15,11 @@ netif_stacked_transfer_operstate - transfer operstate
 <h2>Arguments</h2>
 
 <i>rootdev</i>
-<dl><dd><dd>the root or lower level device to transfer state from</dl>
+<dl><dd></dd><dd>the root or lower level device to transfer state from</dd></dl>
  
 
  <i>dev</i>
-<dl><dd>the device to transfer operstate to</dl>
+<dl><dd>the device to transfer operstate to</dd></dl>
 
 <h2>Description</h2>
 

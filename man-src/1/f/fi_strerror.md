@@ -17,9 +17,9 @@ url: "/docs/linux/man/1-fi_strerror/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 fi_strerror FI_ERROR_CODE
-</pre></dl>
+</pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

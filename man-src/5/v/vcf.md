@@ -74,41 +74,42 @@ description: "vcf – Variant Call Format"
 </table>
 <p> The following table gives the <code>INFO</code> tags used by samtools and bcftools.</p>
 <dl>
-<dt><code>AF1</code></p>
-<dd>Max-likelihood estimate of the site allele frequency (AF) of the first ALT allele (double)</p>
-<dt><code>DP</code></p>
-<dd>Raw read depth (without quality filtering) (int)</p>
-<dt><code>DP4</code></p>
-<dd># high-quality reference forward bases, ref reverse, alternate for and alt rev bases (int[4])</p>
-<dt><code>FQ</code></p>
-<dd>Consensus quality. Positive: sample genotypes different; negative: otherwise (int)</p>
-<dt><code>MQ</code></p>
-<dd>Root-Mean-Square mapping quality of covering reads (int)</p>
-<dt><code>PC2</code></p>
-<dd>Phred probability of AF in group1 samples being larger (,smaller) than in group2 (int[2])</p>
-<dt><code>PCHI2</code></p>
-<dd>Posterior weighted chi^2 P-value between group1 and group2 samples (double)</p>
-<dt><code>PV4</code></p>
-<dd>P-value for strand bias, baseQ bias, mapQ bias and tail distance bias (double[4])</p>
-<dt><code>QCHI2</code></p>
-<dd>Phred-scaled PCHI2 (int)</p>
-<dt><code>RP</code></p>
-<dd># permutations yielding a smaller PCHI2 (int)</p>
-<dt><code>CLR</code></p>
-<dd>Phred log ratio of genotype likelihoods with and without the trio/pair constraint (int)</p>
-<dt><code>UGT</code></p>
-<dd>Most probable genotype configuration without the trio constraint (string)</p>
-<dt><code>CGT</code></p>
-<dd>Most probable configuration with the trio constraint (string)</p>
-<dt><code>VDB</code></p>
-<dd>Tests variant positions within reads. Intended for filtering RNA-seq artifacts around splice sites (float)</p>
-<dt><code>RPB</code></p>
-<dd>Mann-Whitney rank-sum test for tail distance bias (float)</p>
-<dt><code>HWE</code></p>
-<dd>Hardy-Weinberg equilibrium test (Wigginton et al) (float)</dl>
+<dt><code>AF1</code></dt>
+<dd>Max-likelihood estimate of the site allele frequency (AF) of the first ALT allele (double)</dd>
+<dt><code>DP</code></dt>
+<dd>Raw read depth (without quality filtering) (int)</dd>
+<dt><code>DP4</code></dt>
+<dd># high-quality reference forward bases, ref reverse, alternate for and alt rev bases (int[4])</dd>
+<dt><code>FQ</code></dt>
+<dd>Consensus quality. Positive: sample genotypes different; negative: otherwise (int)</dd>
+<dt><code>MQ</code></dt>
+<dd>Root-Mean-Square mapping quality of covering reads (int)</dd>
+<dt><code>PC2</code></dt>
+<dd>Phred probability of AF in group1 samples being larger (,smaller) than in group2 (int[2])</dd>
+<dt><code>PCHI2</code></dt>
+<dd>Posterior weighted chi^2 P-value between group1 and group2 samples (double)</dd>
+<dt><code>PV4</code></dt>
+<dd>P-value for strand bias, baseQ bias, mapQ bias and tail distance bias (double[4])</dd>
+<dt><code>QCHI2</code></dt>
+<dd>Phred-scaled PCHI2 (int)</dd>
+<dt><code>RP</code></dt>
+<dd># permutations yielding a smaller PCHI2 (int)</dd>
+<dt><code>CLR</code></dt>
+<dd>Phred log ratio of genotype likelihoods with and without the trio/pair constraint (int)</dd>
+<dt><code>UGT</code></dt>
+<dd>Most probable genotype configuration without the trio constraint (string)</dd>
+<dt><code>CGT</code></dt>
+<dd>Most probable configuration with the trio constraint (string)</dd>
+<dt><code>VDB</code></dt>
+<dd>Tests variant positions within reads. Intended for filtering RNA-seq artifacts around splice sites (float)</dd>
+<dt><code>RPB</code></dt>
+<dd>Mann-Whitney rank-sum test for tail distance bias (float)</dd>
+<dt><code>HWE</code></dt>
+<dd>Hardy-Weinberg equilibrium test (Wigginton et al) (float)</dd></dl>
 <h2>See Also</h2>
 <dl>
-<dt><a rel="nofollow" href="https://github.com/samtools/hts-specs">https://github.com/samtools/hts-specs</a></p>
-<dd>The full VCF/BCF file format specification</p>
-<dt><i>A note on exact tests of Hardy-Weinberg equilibrium</i></p>
-<dd>Wigginton JE et al PMID:15789306 </p>
+<dt><a rel="nofollow" href="https://github.com/samtools/hts-specs">https://github.com/samtools/hts-specs</a></dt>
+<dd>The full VCF/BCF file format specification</dd>
+<dt><i>A note on exact tests of Hardy-Weinberg equilibrium</i></dt>
+<dd>Wigginton JE et al PMID:15789306 </dd>
+</dl>

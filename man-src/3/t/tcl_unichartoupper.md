@@ -24,8 +24,8 @@ int
 <code>Tcl_UtfToTitle</code>(<i>str</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>ch</i> (in) The Tcl_UniChar to be converted.</p>
-<dd>char <i>*str</i> (in/out) Pointer to UTF-8 string to be converted in place. </p>
+<dd>int <i>ch</i> (in) The Tcl_UniChar to be converted.</dd>
+<dd>char <i>*str</i> (in/out) Pointer to UTF-8 string to be converted in place. </dd>
 </dl>
 <h2>Description</h2>
 <p>The first three routines convert the case of individual Unicode characters: </p>

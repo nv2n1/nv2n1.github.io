@@ -43,10 +43,10 @@ description: "QwtRasterData –"
 <p>Flags to modify the contour algorithm. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>IgnoreAllVerticesOnLevel </i></p>
-<dd>Ignore all vertices on the same level.</p>
-<dt><i>IgnoreOutOfRange </i></p>
-<dd>Ignore all values, that are out of range.</dl>
+<dt><i>IgnoreAllVerticesOnLevel </i></dt>
+<dd>Ignore all vertices on the same level.</dd>
+<dt><i>IgnoreOutOfRange </i></dt>
+<dd>Ignore all values, that are out of range.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtRasterData::ContourLines</code> QwtRasterData::contourLines (const QRectF &amp;rect, const QSize &amp;raster, const QList&lt; double &gt; &amp;levels, <code>ConrecFlags</code>flags) const [virtual]</h3>
 <p>Calculate contour lines </p>
@@ -55,34 +55,34 @@ description: "QwtRasterData –"
 <dd><i>rect</i> Bounding rectangle for the contour lines<br />
  <i>raster</i> Number of data pixels of the raster data<br />
  <i>levels</i> List of limits, where to insert contour lines<br />
- <i>flags</i> Flags to customize the contouring algorithm</dl>
+ <i>flags</i> Flags to customize the contouring algorithm</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated contour lines</dl>
+<dd>Calculated contour lines</dd></dl>
 <p> An adaption of CONREC, a simple contouring algorithm. <a rel="nofollow" href="http://local.wasp.uwa.edu.au/~pbourke/papers/conrec/">http://local.wasp.uwa.edu.au/~pbourke/papers/conrec/</a></p>
 <h3>void QwtRasterData::discardRaster () [virtual]</h3>
 <p>Discard a raster. After the composition of an image <code>QwtPlotSpectrogram</code> calls <code>discardRaster()</code>. </p>
 <p> The default implementation does nothing, but if data has been loaded in <code>initRaster()</code>, it could deleted now. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>initRaster()</code>, <code>value()</code></dl>
+<dd><code>initRaster()</code>, <code>value()</code></dd></dl>
 <h3>void QwtRasterData::initRaster (const QRectF &amp;area, const QSize &amp;raster) [virtual]</h3>
 <p>Initialize a raster. Before the composition of an image <code>QwtPlotSpectrogram</code> calls <code>initRaster()</code>, announcing the area and its resolution that will be requested. </p>
 <p> The default implementation does nothing, but for data sets that are stored in files, it might be good idea to reimplement <code>initRaster()</code>, where the data is resampled and loaded into memory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>area</i> Area of the raster<br />
- <i>raster</i> Number of horizontal and vertical pixels</dl>
+ <i>raster</i> Number of horizontal and vertical pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>initRaster()</code>, <code>value()</code></dl>
+<dd><code>initRaster()</code>, <code>value()</code></dd></dl>
 <h3>const <code>QwtInterval</code> &amp; QwtRasterData::interval (Qt::Axisaxis) const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding interval for a axis</dl>
+<dd>Bounding interval for a axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setInterval</code></dl>
+<dd><code>setInterval</code></dd></dl>
 <h3>QRectF QwtRasterData::pixelHint (const QRectF &amp;area) const [virtual]</h3>
 <p>Pixel hint. <code>pixelHint()</code> returns the geometry of a pixel, that can be used to calculate the resolution and alignment of the plot item, that is representing the data. </p>
 <p> Width and height of the hint need to be the horizontal and vertical distances between 2 neighbored points. The center of the hint has to be the position of any point ( it doesn&#8217;t matter which one ). </p>
@@ -91,29 +91,29 @@ description: "QwtRasterData –"
 <p> The default implementation returns an empty rectangle recommending to render in target device ( f.e. screen ) resolution. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dl>
+<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of a pixel</dl>
+<dd>Bounding rectangle of a pixel</dd></dl>
 <p> Reimplemented in <code>QwtMatrixRasterData</code>.</p>
 <h3>void QwtRasterData::setInterval (Qt::Axisaxis, const <code>QwtInterval</code> &amp;interval) [virtual]</h3>
 <p>Set the bounding interval for the x, y or z coordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>axis</i> Axis<br />
- <i>interval</i> Bounding interval</dl>
+ <i>interval</i> Bounding interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>interval()</code></dl>
+<dd><code>interval()</code></dd></dl>
 <p> Reimplemented in <code>QwtMatrixRasterData</code>.</p>
 <h3>virtual double QwtRasterData::value (doublex, doubley) const [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the value at a raster position</dl>
+<dd>the value at a raster position</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> X value in plot coordinates<br />
- <i>y</i> Y value in plot coordinates</dl>
+ <i>y</i> Y value in plot coordinates</dd></dl>
 <p> Implemented in <code>QwtMatrixRasterData</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

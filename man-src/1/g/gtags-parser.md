@@ -20,30 +20,30 @@ description: "gtags-parser – print cross reference list for gtags."
 <h2>OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;begin-block</code></p>
-<dd> Force level 1 block to begin when reach the left brace at the first column. (C only)</p>
-<dt><code>-e</code>, <code>&#8211;end-block</code></p>
-<dd> Force level 1 block to end when reach the right brace at the first column. (C only)</p>
-<dt><code>-n</code>, <code>&#8211;no-tags</code></p>
-<dd> Suppress output of tags. It is useful to use with <code>-w</code> option.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Quiet mode.</p>
-<dt><code>-r</code>, <code>&#8211;reference</code></p>
-<dd> Locate object references instead of object definitions. &#8216;GTAGS&#8217; is needed at the current directory. (C, C++ and Java source only) By default, locate object definitions.</p>
-<dt><code>-s</code>, <code>&#8211;symbol</code></p>
-<dd> Collect symbols other than object definitions and references. By default, locate object definitions.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-w</code>, <code>&#8211;warning</code></p>
-<dd> Print warning message.</p>
-<dt><code>&#8211;langmap</code>=map</p>
-<dd> Language mapping. Each comma-separated map consists of the language name, a colon, and a list of file extensions. Default mapping is &#8216;c:.c.h,yacc:.y,asm:.s.S,java:.java,cpp:.c++.cc.cpp.cxx.hxx.hpp.C.H,php:.php.php3.phtml&#8217;.</dl>
+<dt><code>-b</code>, <code>&#8211;begin-block</code></dt>
+<dd> Force level 1 block to begin when reach the left brace at the first column. (C only)</dd>
+<dt><code>-e</code>, <code>&#8211;end-block</code></dt>
+<dd> Force level 1 block to end when reach the right brace at the first column. (C only)</dd>
+<dt><code>-n</code>, <code>&#8211;no-tags</code></dt>
+<dd> Suppress output of tags. It is useful to use with <code>-w</code> option.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Quiet mode.</dd>
+<dt><code>-r</code>, <code>&#8211;reference</code></dt>
+<dd> Locate object references instead of object definitions. &#8216;GTAGS&#8217; is needed at the current directory. (C, C++ and Java source only) By default, locate object definitions.</dd>
+<dt><code>-s</code>, <code>&#8211;symbol</code></dt>
+<dd> Collect symbols other than object definitions and references. By default, locate object definitions.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-w</code>, <code>&#8211;warning</code></dt>
+<dd> Print warning message.</dd>
+<dt><code>&#8211;langmap</code>=map</dt>
+<dd> Language mapping. Each comma-separated map consists of the language name, a colon, and a list of file extensions. Default mapping is &#8216;c:.c.h,yacc:.y,asm:.s.S,java:.java,cpp:.c++.cc.cpp.cxx.hxx.hpp.C.H,php:.php.php3.phtml&#8217;.</dd></dl>
 <p> The <code>-r</code> and <code>-s</code> options override each other; the last one specified determines the method used.</p>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>gtags-parser</code>:</p>
 <dl>
-<dt><code>GTAGSFORCECPP</code></p>
-<dd> If this variable is set, each file whose suffix is &#8216;h&#8217; is treated as a C++ source file.</dl>
+<dt><code>GTAGSFORCECPP</code></dt>
+<dd> If this variable is set, each file whose suffix is &#8216;h&#8217; is treated as a C++ source file.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> <code>Gtags-parser</code> exits with a non 0 value if an error occurred, 0 otherwise. Duplicate objects are not considered errors.</p>
 <h2>SEE ALSO</h2>

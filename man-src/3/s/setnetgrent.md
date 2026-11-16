@@ -10,16 +10,11 @@ description: "setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr – 
 <p>setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr &#8211; handle network group entries</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 int setnetgrent(const char *netgroup);
-
 void endnetgrent(void);
-
 int getnetgrent(char **host, char **user, char **domain);
-
 int getnetgrent_r(char **host, char **user,
                   char **domain, char *buf, size_t buflen);
-
 int innetgr(const char *netgroup, const char *host,
             const char *user, const char *domain);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>setnetgrent</code>(), <code>endnetgrent</code>(), <code>getnetgrent</code>(), <code>getnetgrent_r</code>(), <code>innetgr</code>():<br />

@@ -17,15 +17,15 @@ description: "globus-version – Display the Globus Toolkit version"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Print help and exit</dl>
+</dt><dd> Print help and exit</dd></dl>
 <p> <code>-full</code></p>
 <dl>
 <dt>
-<dd> Show expanded version information</dl>
+</dt><dd> Show expanded version information</dd></dl>
 <p> <code>-dirt</code></p>
 <dl>
 <dt>
-<dd> Show source code branch and timestamp</dl>
+</dt><dd> Show source code branch and timestamp</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
 <h2>Index</h2>

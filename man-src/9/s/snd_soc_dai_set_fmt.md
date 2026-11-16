@@ -15,11 +15,11 @@ snd_soc_dai_set_fmt - configure DAI hardware audio format.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>SND_SOC_DAIFMT_ format value.</dl>
+<dl><dd>SND_SOC_DAIFMT_ format value.</dd></dl>
 
 <h2>Description</h2>
 

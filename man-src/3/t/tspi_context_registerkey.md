@@ -40,14 +40,14 @@ description: "Tspi_Context_RegisterKey – register a key in the TSS Persistent 
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_RegisterKey</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hContext</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_PS_KEY_NOTFOUND</font></p>
-<dd>The key cannot be found in the persistent storage database. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
-<dd>One or more parameters is bad. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hContext</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_PS_KEY_NOTFOUND</font></dt>
+<dd>The key cannot be found in the persistent storage database. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Example</h2>
 <pre>#include &lt;trousers/tss.h&gt;

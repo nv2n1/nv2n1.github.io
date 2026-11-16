@@ -18,67 +18,67 @@ description: "gnome-shell – Graphical shell for the GNOME desktop"
 <p> <code>&#8211;wayland</code></p>
 <dl>
 <dt>
-<dd> Run as a wayland compositor</dl>
+</dt><dd> Run as a wayland compositor</dd></dl>
 <p> <code>&#8211;display-server</code></p>
 <dl>
 <dt>
-<dd> Run as a full display server, rather than nested</dl>
+</dt><dd> Run as a full display server, rather than nested</dd></dl>
 <p> <code>&#8211;nested</code></p>
 <dl>
 <dt>
-<dd> Run as a nested compositor</dl>
+</dt><dd> Run as a nested compositor</dd></dl>
 <p> <code>&#8211;no-x11</code></p>
 <dl>
 <dt>
-<dd> Run wayland compositor without starting Xwayland</dl>
+</dt><dd> Run wayland compositor without starting Xwayland</dd></dl>
 <p> <code>&#8211;x11</code></p>
 <dl>
 <dt>
-<dd> Run with X11 backend</dl>
+</dt><dd> Run with X11 backend</dd></dl>
 <p> <code>&#8211;wayland-display</code>=<i>DISPLAY</i></p>
 <dl>
 <dt>
-<dd> Wayland display name to use</dl>
+</dt><dd> Wayland display name to use</dd></dl>
 <p> <code>-d</code>, <code>&#8211;display</code>=<i>DISPLAY</i></p>
 <dl>
 <dt>
-<dd> X display to use</dl>
+</dt><dd> X display to use</dd></dl>
 <p> <code>-r</code>, <code>&#8211;replace</code></p>
 <dl>
 <dt>
-<dd> Replace the running window manager</dl>
+</dt><dd> Replace the running window manager</dd></dl>
 <p> <code>&#8211;sm-disable</code></p>
 <dl>
 <dt>
-<dd> Disable connection to the session manager</dl>
+</dt><dd> Disable connection to the session manager</dd></dl>
 <p> <code>&#8211;sm-client-id</code>=<i>ID</i></p>
 <dl>
 <dt>
-<dd> Specify session management <i>ID</i></dl>
+</dt><dd> Specify session management <i>ID</i></dd></dl>
 <p> <code>&#8211;sm-save-file</code>=<i>FILE</i></p>
 <dl>
 <dt>
-<dd> Initialize session from <i>FILE</i></dl>
+</dt><dd> Initialize session from <i>FILE</i></dd></dl>
 <p> <code>&#8211;sync</code></p>
 <dl>
 <dt>
-<dd> Make X calls synchronous</dl>
+</dt><dd> Make X calls synchronous</dd></dl>
 <p> <code>&#8211;mode</code>=<i>MODE</i></p>
 <dl>
 <dt>
-<dd> Use a specific mode, e.g. &quot;gdm&quot; for login screen</dl>
+</dt><dd> Use a specific mode, e.g. &quot;gdm&quot; for login screen</dd></dl>
 <p> <code>&#8211;list-modes</code></p>
 <dl>
 <dt>
-<dd> List possible modes and exit</dl>
+</dt><dd> List possible modes and exit</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print version and exit</dl>
+</dt><dd> Print version and exit</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help and exit</dl>
+</dt><dd> Display help and exit</dd></dl>
 <h2>FILES</h2>
 <p> /usr/share/gnome-session/sessions/gnome.session, /usr/share/applications/org.gnome.Shell.desktop.</p>
 <h2>BUGS</h2>

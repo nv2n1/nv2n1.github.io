@@ -10,9 +10,9 @@ description: "yasm_dbgfmts – Yasm Supported Debugging Formats"
 <p>yasm_dbgfmts &#8211; Yasm Supported Debugging Formats</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>yasm</code> <code>-g&nbsp;<wbr></code><i>dbgfmt</i> <i>&#8230;</i></dl>
+<dt> <code>yasm</code> <code>-g&nbsp;<wbr></code><i>dbgfmt</i> <i>&#8230;</i></dt></dl>
 <h2>Description</h2>
-<dd>The standard Yasm distribution includes a number of modules for different debugging formats. The debugging information is embedded into the object file. Use of a non-&#8220;null&#8221; debug format also causes Yasm to output all symbols to the object file (including local symbols). </p>
+<dd>The standard Yasm distribution includes a number of modules for different debugging formats. The debugging information is embedded into the object file. Use of a non-&#8220;null&#8221; debug format also causes Yasm to output all symbols to the object file (including local symbols). </dd>
 <p> The debug format is selected on the <code><a href="/docs/linux/man/1-yasm/">yasm</a></code>(1) command line by use of the <code>-g </code><i>dbgfmt</i> command line option.</p>
 <h2>Cv8</h2>
 <p>The CV8 debug format is used by Microsoft Visual Studio 2005 (version 8.0) and is completely undocumented, although it bears strong similarities to earlier CodeView formats. Yasm&#8217;s support for the CV8 debug format is currently limited to generating assembly-level line number information (to allow some level of source-level debugging). The CV8 debug information is stored in the .debug$S and .debug$T sections of the Win64 object file.</p>
@@ -27,6 +27,6 @@ description: "yasm_dbgfmts – Yasm Supported Debugging Formats"
 <h2>Author</h2>
 <p><code>Peter Johnson</code> &lt;peter [at] tortall.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2006 Peter Johnson</p>

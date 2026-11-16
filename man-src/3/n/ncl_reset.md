@@ -26,11 +26,11 @@ The &quot;super&quot; version of the Dashline utility attempts to cull crowded l
 
  This culling process has the following implications for the user of the &quot;super&quot; version of Dashline:
 <dl><dt>&bull;
-<dd>The routine RESET should be called at the beginning of each new picture. If this is not done, each of a consecutive series of pictures will have progressively more gaps where line segments have been culled.
-<dt>&bull;
-<dd>More important lines should be drawn first, followed by less important lines. For example, the &quot;super&quot; version of the routine CONREC draws labeled contour lines first, followed by the contour lines halfway in between the labeled lines, followed by the rest of the lines.
-<dt>&bull;
-<dd>Because each line segment is either drawn in its entirety or not at all, long straight line segments are broken into shorter pieces. The internal parameter MLLINE determines how small the resulting pieces will be; you may wish to reduce its value so that smaller pieces will be used.</dl>
+</dt><dd>The routine RESET should be called at the beginning of each new picture. If this is not done, each of a consecutive series of pictures will have progressively more gaps where line segments have been culled.
+</dd><dt>&bull;
+</dt><dd>More important lines should be drawn first, followed by less important lines. For example, the &quot;super&quot; version of the routine CONREC draws labeled contour lines first, followed by the contour lines halfway in between the labeled lines, followed by the rest of the lines.
+</dd><dt>&bull;
+</dt><dd>Because each line segment is either drawn in its entirety or not at all, long straight line segments are broken into shorter pieces. The internal parameter MLLINE determines how small the resulting pieces will be; you may wish to reduce its value so that smaller pieces will be used.</dd></dl>
 
 <h2>Examples</h2>
 

@@ -19,7 +19,7 @@ description: "sgesvj.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SGESVJ computes the singular value decomposition(SVD)
 of a real
@@ -32,11 +32,11 @@ of a real
                                            by - N diagonal matrix,
                                     U is an M - by - N orthonormal matrix, and V is an N - by - N orthogonal matrix.The diagonal elements of SIGMA are the singular values of A.The columns of U and V are the left and the right singular vectors of A, respectively.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBA</i> </p>
+</dt><dd> <i>JOBA</i> </dd>
 <pre>
           JOBA is CHARACTER* 1
           Specifies the structure of A.
@@ -224,27 +224,27 @@ or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd> The orthogonal N-by-N matrix V is obtained as a product of Jacobi plane rotations. The rotations are implemented as fast scaled rotations of Anda and Park [1]. In the case of underflow of the Jacobi angle, a modified Jacobi transformation of Drmac [4] is used. Pivot strategy uses column interchanges of de Rijk [2]. The relative accuracy of the computed singular values and the accuracy of the computed singular vectors (in angle metric) is as guaranteed by the theory of Demmel and Veselic [3]. The condition number that determines the accuracy in the full rank case is essentially min_{D=diag} kappa(A*D), where kappa(.) is the spectral condition number. The best performance of this Jacobi SVD procedure is achieved if used in an accelerated version of Drmac and Veselic [5,6], and it is the kernel routine in the SIGMA library [7]. Some tunning parameters (marked with [TP]) are available for the implementer. </p>
+</dt><dd> The orthogonal N-by-N matrix V is obtained as a product of Jacobi plane rotations. The rotations are implemented as fast scaled rotations of Anda and Park [1]. In the case of underflow of the Jacobi angle, a modified Jacobi transformation of Drmac [4] is used. Pivot strategy uses column interchanges of de Rijk [2]. The relative accuracy of the computed singular values and the accuracy of the computed singular vectors (in angle metric) is as guaranteed by the theory of Demmel and Veselic [3]. The condition number that determines the accuracy in the full rank case is essentially min_{D=diag} kappa(A*D), where kappa(.) is the spectral condition number. The best performance of this Jacobi SVD procedure is achieved if used in an accelerated version of Drmac and Veselic [5,6], and it is the kernel routine in the SIGMA library [7]. Some tunning parameters (marked with [TP]) are available for the implementer. </dd>
 <p>&nbsp;<wbr>The computational range for the nonzero singular values is the machine number interval&nbsp;<wbr>(&nbsp;<wbr>UNDERFLOW , OVERFLOW&nbsp;<wbr>). In extreme cases, even denormalized singular values can be computed with the corresponding gradual loss of accurate digits.</dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+</dt><dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] A. A. Anda and H. Park: Fast plane rotations with dynamic scaling. </p>
+</dt><dd> [1] A. A. Anda and H. Park: Fast plane rotations with dynamic scaling. </dd>
 <p>&nbsp;<wbr>SIAM J. matrix Anal. Appl., Vol. 15&nbsp;<wbr>(1994), pp. 162-174.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>[2]&nbsp;<wbr>P. P. M. De Rijk: A one-sided Jacobi algorithm for computing the singular value decomposition on a vector computer.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>SIAM J. Sci. Stat. Comp., Vol. 10&nbsp;<wbr>(1998), pp. 359-371.&nbsp;<wbr> </p>
@@ -262,7 +262,7 @@ or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
 <p> <code>Bugs, Examples and Comments: </code></p>
 <dl>
 <dt>
-<dd> Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dl>
+</dt><dd> Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dd></dl>
 <p> Definition at line 321 of file sgesvj.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

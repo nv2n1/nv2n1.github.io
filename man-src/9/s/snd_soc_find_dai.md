@@ -15,7 +15,7 @@ snd_soc_find_dai - Find a registered DAI
 <h2>Arguments</h2>
 
 <i>dlc</i>
-<dl><dd><dd>name of the DAI and optional component info to match</dl>
+<dl><dd></dd><dd>name of the DAI and optional component info to match</dd></dl>
 
 <h2>Description</h2>
 

@@ -13,10 +13,10 @@ description: "tld_default_table – API function"
 const Tld_table *tld_default_table(const char *tld, const Tld_table **overrides);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * tld</p>
-<dd>TLD name (e.g. &quot;com&quot;) as zero terminated ASCII byte string.</p>
-<dt>const Tld_table ** overrides</p>
-<dd>Additional zero terminated array of <code>Tld_table</code> info-structures for TLDs, or <code>NULL</code> to only use library deault tables.</dl>
+<dt>const char * tld</dt>
+<dd>TLD name (e.g. &quot;com&quot;) as zero terminated ASCII byte string.</dd>
+<dt>const Tld_table ** overrides</dt>
+<dd>Additional zero terminated array of <code>Tld_table</code> info-structures for TLDs, or <code>NULL</code> to only use library deault tables.</dd></dl>
 <h2>Description</h2>
 <p>Get the TLD table for a named TLD, using the internal defaults, possibly overrided by the (optional) supplied tables.</p>
 <h2>Return Value</h2>
@@ -29,5 +29,5 @@ const Tld_table *tld_default_table(const char *tld, const Tld_table **overrides)
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

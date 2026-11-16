@@ -62,46 +62,46 @@ CREATE TYPE <i>name</i></pre>
 <p> You might reasonably ask why there is an <code>ELEMENT</code> option, if the system makes the correct array type automatically. The only case where it&#8217;s useful to use <code>ELEMENT</code> is when you are making a fixed-length type that happens to be internally an array of a number of identical things, and you want to allow these things to be accessed directly by subscripting, in addition to whatever operations you plan to provide for the type as a whole. For example, type <code>point</code> is represented as just two floating-point numbers, which it allows to be accessed as point[0] and point[1]. Note that this facility only works for fixed-length types whose internal form is exactly a sequence of identical fixed-length fields. A subscriptable variable-length type must have the generalized internal representation used by array_in and array_out. For historical reasons (i.e., this is clearly wrong but it&#8217;s far too late to change it), subscripting of fixed-length array types starts from zero, rather than from one as for variable-length arrays.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of a type to be created.</p>
-<dt><i>attribute_name</i></p>
-<dd>The name of an attribute (column) for the composite type.</p>
-<dt><i>data_type</i></p>
-<dd>The name of an existing data type to become a column of the composite type.</p>
-<dt><i>label</i></p>
-<dd>A string literal representing the textual label associated with one value of an enum type.</p>
-<dt><i>input_function</i></p>
-<dd>The name of a function that converts data from the type&#8217;s external textual form to its internal form.</p>
-<dt><i>output_function</i></p>
-<dd>The name of a function that converts data from the type&#8217;s internal form to its external textual form.</p>
-<dt><i>receive_function</i></p>
-<dd>The name of a function that converts data from the type&#8217;s external binary form to its internal form.</p>
-<dt><i>send_function</i></p>
-<dd>The name of a function that converts data from the type&#8217;s internal form to its external binary form.</p>
-<dt><i>type_modifier_input_function</i></p>
-<dd>The name of a function that converts an array of modifier(s) for the type into internal form.</p>
-<dt><i>type_modifier_output_function</i></p>
-<dd>The name of a function that converts the internal form of the type&#8217;s modifier(s) to external textual form.</p>
-<dt><i>analyze_function</i></p>
-<dd>The name of a function that performs statistical analysis for the data type.</p>
-<dt><i>internallength</i></p>
-<dd>A numeric constant that specifies the length in bytes of the new type&#8217;s internal representation. The default assumption is that it is variable-length.</p>
-<dt><i>alignment</i></p>
-<dd>The storage alignment requirement of the data type. If specified, it must be char, int2, int4, or double; the default is int4.</p>
-<dt><i>storage</i></p>
-<dd>The storage strategy for the data type. If specified, must be plain, external, extended, or main; the default is plain.</p>
-<dt><i>like_type</i></p>
-<dd>The name of an existing data type that the new type will have the same representation as. The values of <i>internallength</i>, <i>passedbyvalue</i>, <i>alignment</i>, and <i>storage</i> are copied from that type, unless overridden by explicit specification elsewhere in this <code>CREATE TYPE</code> command.</p>
-<dt><i>category</i></p>
-<dd>The category code (a single ASCII character) for this type. The default is &#8216;U&#8217; for &#8220;user-defined type&#8221;. Other standard category codes can be found in in the documentation. You may also choose other ASCII characters in order to create custom categories.</p>
-<dt><i>preferred</i></p>
-<dd>True if this type is a preferred type within its type category, else false. The default is false. Be very careful about creating a new preferred type within an existing type category, as this could cause surprising changes in behavior.</p>
-<dt><i>default</i></p>
-<dd>The default value for the data type. If this is omitted, the default is null.</p>
-<dt><i>element</i></p>
-<dd>The type being created is an array; this specifies the type of the array elements.</p>
-<dt><i>delimiter</i></p>
-<dd>The delimiter character to be used between values in arrays made of this type.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of a type to be created.</dd>
+<dt><i>attribute_name</i></dt>
+<dd>The name of an attribute (column) for the composite type.</dd>
+<dt><i>data_type</i></dt>
+<dd>The name of an existing data type to become a column of the composite type.</dd>
+<dt><i>label</i></dt>
+<dd>A string literal representing the textual label associated with one value of an enum type.</dd>
+<dt><i>input_function</i></dt>
+<dd>The name of a function that converts data from the type&#8217;s external textual form to its internal form.</dd>
+<dt><i>output_function</i></dt>
+<dd>The name of a function that converts data from the type&#8217;s internal form to its external textual form.</dd>
+<dt><i>receive_function</i></dt>
+<dd>The name of a function that converts data from the type&#8217;s external binary form to its internal form.</dd>
+<dt><i>send_function</i></dt>
+<dd>The name of a function that converts data from the type&#8217;s internal form to its external binary form.</dd>
+<dt><i>type_modifier_input_function</i></dt>
+<dd>The name of a function that converts an array of modifier(s) for the type into internal form.</dd>
+<dt><i>type_modifier_output_function</i></dt>
+<dd>The name of a function that converts the internal form of the type&#8217;s modifier(s) to external textual form.</dd>
+<dt><i>analyze_function</i></dt>
+<dd>The name of a function that performs statistical analysis for the data type.</dd>
+<dt><i>internallength</i></dt>
+<dd>A numeric constant that specifies the length in bytes of the new type&#8217;s internal representation. The default assumption is that it is variable-length.</dd>
+<dt><i>alignment</i></dt>
+<dd>The storage alignment requirement of the data type. If specified, it must be char, int2, int4, or double; the default is int4.</dd>
+<dt><i>storage</i></dt>
+<dd>The storage strategy for the data type. If specified, must be plain, external, extended, or main; the default is plain.</dd>
+<dt><i>like_type</i></dt>
+<dd>The name of an existing data type that the new type will have the same representation as. The values of <i>internallength</i>, <i>passedbyvalue</i>, <i>alignment</i>, and <i>storage</i> are copied from that type, unless overridden by explicit specification elsewhere in this <code>CREATE TYPE</code> command.</dd>
+<dt><i>category</i></dt>
+<dd>The category code (a single ASCII character) for this type. The default is &#8216;U&#8217; for &#8220;user-defined type&#8221;. Other standard category codes can be found in in the documentation. You may also choose other ASCII characters in order to create custom categories.</dd>
+<dt><i>preferred</i></dt>
+<dd>True if this type is a preferred type within its type category, else false. The default is false. Be very careful about creating a new preferred type within an existing type category, as this could cause surprising changes in behavior.</dd>
+<dt><i>default</i></dt>
+<dd>The default value for the data type. If this is omitted, the default is null.</dd>
+<dt><i>element</i></dt>
+<dd>The type being created is an array; this specifies the type of the array elements.</dd>
+<dt><i>delimiter</i></dt>
+<dd>The delimiter character to be used between values in arrays made of this type.</dd></dl>
 <h2>Notes</h2>
 <p>Because there are no restrictions on use of a data type once it&#8217;s been created, creating a base type is tantamount to granting public execute permission on the functions mentioned in the type definition. This is usually not an issue for the sorts of functions that are useful in a type definition. But you might want to think twice before designing a type in a way that would require &#8220;secret&#8221; information to be used while converting it to or from external form. </p>
 <p> Before PostgreSQL version 8.3, the name of a generated array type was always exactly the element type&#8217;s name with one underscore character (_) prepended. (Type names were therefore restricted in length to one less character than other names.) While this is still usually the case, the array type name may vary from this in case of maximum-length names or collisions with user type names that begin with underscore. Writing code that depends on this convention is therefore deprecated. Instead, use <code>pg_type</code>.<code>typarray</code> to locate the array type associated with a given type. </p>

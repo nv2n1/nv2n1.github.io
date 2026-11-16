@@ -20,8 +20,8 @@ description: "perlref – Perl references and nested data structures"
 <h3>Making References</h3>
 <p> References can be created in several ways.</p>
 <dl>
-<dt>1.</p>
-<dd> By using the backslash operator on a variable, subroutine, or value. (This works much like the &amp; (address-of) operator in C.) This typically creates <i>another</i> reference to a variable, because there&#8217;s already a reference to the variable in the symbol table. But the symbol table reference might go away, and you&#8217;ll still have the reference that the backslash returned. Here are some examples: </p>
+<dt>1.</dt>
+<dd> By using the backslash operator on a variable, subroutine, or value. (This works much like the &amp; (address-of) operator in C.) This typically creates <i>another</i> reference to a variable, because there&#8217;s already a reference to the variable in the symbol table. But the symbol table reference might go away, and you&#8217;ll still have the reference that the backslash returned. Here are some examples: </dd>
 <pre><code>
 $scalarref = \$foo;
 $arrayref = \@ARGV;
@@ -30,8 +30,8 @@ $coderef = \&amp; handler;
 $globref = \* foo;
 </code></pre>
 <p> It isn&#8217;t possible to create a true reference to an <font SIZE="-1">IO</font> handle (filehandle or dirhandle) using the backslash operator. The most you can get is a reference to a typeglob, which is actually a complete symbol table entry. But see the explanation of the <tt>*foo{THING}</tt> syntax below. However, you can still use type globs and globrefs as though they were <font SIZE="-1">IO</font> handles.</p>
-<dt>2.</p>
-<dd> A reference to an anonymous array can be created using square brackets: </p>
+<dt>2.</dt>
+<dd> A reference to an anonymous array can be created using square brackets: </dd>
 <p>$arrayref = [ 1, 2, [ &#8216;a&#8217;, &#8216;b&#8217;, &#8216;c&#8217; ] ];</p>
 <p> Here we&#8217;ve created a reference to an anonymous array of three elements whose final element is itself a reference to another anonymous array of three elements. (The multidimensional syntax described later can be used to access this. For example, after the above, <tt>&quot;$arrayref-&gt;[2][1]&quot;</tt> would have the value &#8220;b&#8221;.) </p>
 <p> Taking a reference to an enumerated list is not the same as using square brackets&#8212;instead it&#8217;s the same as creating a list of references! </p>
@@ -39,8 +39,8 @@ $globref = \* foo;
 @list = \($a, @b, % c);<br />
 #same thing !</p>
 <p> As a special case, <tt>&quot;\(@foo)&quot;</tt> returns a list of references to the contents of <tt>@foo</tt>, not a reference to <tt>@foo</tt> itself. Likewise for <tt>%foo</tt>, except that the key references are to copies (since the keys are just strings rather than full-fledged scalars).</p>
-<dt>3.</p>
-<dd> A reference to an anonymous hash can be created using curly brackets: </p>
+<dt>3.</dt>
+<dd> A reference to an anonymous hash can be created using curly brackets: </dd>
 <pre>
     $hashref = {
         'Adam'  =&gt; 'Eve',
@@ -84,8 +84,8 @@ $globref = \* foo;
 #but may change)<br />
     sub showem {       {; @_ } } #ok sub showem { { return @_ } } #ok</p>
 <p> The leading <tt>&quot;+{&quot;</tt> and <tt>&quot;{;&quot;</tt> always serve to disambiguate the expression to mean either the <font SIZE="-1">HASH</font> reference, or the <font SIZE="-1">BLOCK.</font></p>
-<dt>4.</p>
-<dd> A reference to an anonymous subroutine can be created by using <tt>&quot;sub&quot;</tt> without a subname: </p>
+<dt>4.</dt>
+<dd> A reference to an anonymous subroutine can be created by using <tt>&quot;sub&quot;</tt> without a subname: </dd>
 <pre>
     $coderef = sub { print &quot;Boink!
 &quot; };
@@ -116,8 +116,8 @@ $g = newprint(&#8220;Greetings&#8221;);<br />
 </pre>
 <p> Note particularly that <tt>$x</tt> continues to refer to the value passed into <code>newprint()</code> <i>despite</i> &#8220;my <tt>$x</tt>&#8221; having gone out of scope by the time the anonymous subroutine runs. That&#8217;s what a closure is all about. </p>
 <p> This applies only to lexical variables, by the way. Dynamic variables continue to work as they have always worked. Closure is not something that most Perl programmers need trouble themselves about to begin with.</p>
-<dt>5.</p>
-<dd> References are often returned by special subroutines called constructors. Perl objects are just references to a special type of object that happens to know which package it&#8217;s associated with. Constructors are just special subroutines that know how to create that association. They do so by starting with an ordinary reference, and it remains an ordinary reference even while it&#8217;s also being an object. Constructors are often named <tt>&quot;new()&quot;</tt>. You <i>can</i> call them indirectly: </p>
+<dt>5.</dt>
+<dd> References are often returned by special subroutines called constructors. Perl objects are just references to a special type of object that happens to know which package it&#8217;s associated with. Constructors are just special subroutines that know how to create that association. They do so by starting with an ordinary reference, and it remains an ordinary reference even while it&#8217;s also being an object. Constructors are often named <tt>&quot;new()&quot;</tt>. You <i>can</i> call them indirectly: </dd>
 <p>$objref = new Doggie(Tail = &gt; &#8216;short&#8217;, Ears = &gt; &#8216;long&#8217;);</p>
 <p> But that can produce ambiguous syntax in certain cases, so it&#8217;s often better to use the direct method invocation approach: </p>
 <p>$objref = Doggie-&gt;new (Tail = &gt; &#8216;short&#8217;, Ears = &gt; &#8216;long&#8217;);<br />
@@ -127,10 +127,10 @@ use Tk;<br />
 $main = MainWindow-&gt;new ();<br />
 $menubar = $main-&gt;Frame(-relief = &gt; &#8220;raised&#8221;,<br />
                         -borderwidth = &gt; 2)</p>
-<dt>6.</p>
-<dd> References of the appropriate type can spring into existence if you dereference them in a context that assumes they exist. Because we haven&#8217;t talked about dereferencing yet, we can&#8217;t show you any examples yet.</p>
-<dt>7.</p>
-<dd> A reference can be created by using a special syntax, lovingly known as the *foo{<font SIZE="-1">THING</font>} syntax. *foo{<font SIZE="-1">THING</font>} returns a reference to the <font SIZE="-1">THING</font> slot in *foo (which is the symbol table entry which holds everything known as foo). </p>
+<dt>6.</dt>
+<dd> References of the appropriate type can spring into existence if you dereference them in a context that assumes they exist. Because we haven&#8217;t talked about dereferencing yet, we can&#8217;t show you any examples yet.</dd>
+<dt>7.</dt>
+<dd> A reference can be created by using a special syntax, lovingly known as the *foo{<font SIZE="-1">THING</font>} syntax. *foo{<font SIZE="-1">THING</font>} returns a reference to the <font SIZE="-1">THING</font> slot in *foo (which is the symbol table entry which holds everything known as foo). </dd>
 <p>$scalarref = *foo{SCALAR};<br />
 $arrayref = *ARGV{ARRAY};<br />
 $hashref = *ENV{HASH};<br />
@@ -168,8 +168,8 @@ $rec = get_rec(*STDIN);<br />
 <h3>Using References</h3>
 <p> That&#8217;s it for creating references. By now you&#8217;re probably dying to know how to use references to get back to your long-lost data. There are several basic methods.</p>
 <dl>
-<dt>1.</p>
-<dd> Anywhere you&#8217;d put an identifier (or chain of identifiers) as part of a variable or subroutine name, you can replace the identifier with a simple scalar variable containing a reference of the correct type: </p>
+<dt>1.</dt>
+<dd> Anywhere you&#8217;d put an identifier (or chain of identifiers) as part of a variable or subroutine name, you can replace the identifier with a simple scalar variable containing a reference of the correct type: </dd>
 <p>$bar = $$scalarref;<br />
 push(@$arrayref, $filename);<br />
 $$arrayref[0] = &#8220;January&#8221;;<br />
@@ -182,8 +182,8 @@ print $globref &#8220;output
     $refrefref = \\&quot;howdy&quot;;
     print $$$$refrefref;
 </pre>
-<dt>2.</p>
-<dd> Anywhere you&#8217;d put an identifier (or chain of identifiers) as part of a variable or subroutine name, you can replace the identifier with a <font SIZE="-1">BLOCK</font> returning a reference of the correct type. In other words, the previous examples could be written like this: </p>
+<dt>2.</dt>
+<dd> Anywhere you&#8217;d put an identifier (or chain of identifiers) as part of a variable or subroutine name, you can replace the identifier with a <font SIZE="-1">BLOCK</font> returning a reference of the correct type. In other words, the previous examples could be written like this: </dd>
 <p>$bar = ${$scalarref};<br />
 push(@{$arrayref}, $filename);<br />
 ${$arrayref}[0] = &#8220;January&#8221;;<br />
@@ -202,8 +202,8 @@ $globref-&gt;print(&#8220;output
 #CASE 2 ${$hashref-&gt;{&#8220;KEY&#8221; } } = &#8220;VALUE&#8221;;<br />
 #CASE 3</p>
 <p> Case 2 is also deceptive in that you&#8217;re accessing a variable called <tt>%hashref</tt>, not dereferencing through <tt>$hashref</tt> to the hash it&#8217;s presumably referencing. That would be case 3.</p>
-<dt>3.</p>
-<dd> Subroutine calls and lookups of individual array elements arise often enough that it gets cumbersome to use method 2. As a form of syntactic sugar, the examples for method 2 may be written: </p>
+<dt>3.</dt>
+<dd> Subroutine calls and lookups of individual array elements arise often enough that it gets cumbersome to use method 2. As a form of syntactic sugar, the examples for method 2 may be written: </dd>
 <p>$arrayref-&gt;[0] = &#8220;January&#8221;;<br />
 #Array element<br />
     $hashref-&gt;{&#8220;KEY&#8221; } = &#8220;VALUE&#8221;;<br />
@@ -221,8 +221,8 @@ $globref-&gt;print(&#8220;output
 <p> Which, in the degenerate case of using only ordinary arrays, gives you multidimensional arrays just like C&#8217;s: </p>
 <p>$score[$x][$y][$z] += 42;</p>
 <p> Well, okay, not entirely like C&#8217;s arrays, actually. C doesn&#8217;t know how to grow its arrays on demand. Perl does.</p>
-<dt>4.</p>
-<dd> If a reference happens to be a reference to an object, then there are probably methods to access the things referred to, and you should probably stick to those methods unless you&#8217;re in the class package that defines the object&#8217;s methods. In other words, be nice, and don&#8217;t violate the object&#8217;s encapsulation without a very good reason. Perl does not enforce encapsulation. We are not totalitarians here. We do expect some basic civility though.</dl>
+<dt>4.</dt>
+<dd> If a reference happens to be a reference to an object, then there are probably methods to access the things referred to, and you should probably stick to those methods unless you&#8217;re in the class package that defines the object&#8217;s methods. In other words, be nice, and don&#8217;t violate the object&#8217;s encapsulation without a very good reason. Perl does not enforce encapsulation. We are not totalitarians here. We do expect some basic civility though.</dd></dl>
 <p> Using a string or number as a reference produces a symbolic reference, as explained above. Using a reference as a number produces an integer representing its storage location in memory. The only useful thing to be done with this is to compare two references numerically to see whether they refer to the same location. </p>
 <p>if ($ref1 == $ref2) {<br />
 #cheap numeric compare of references<br />

@@ -14,11 +14,9 @@ void setaliasent(void);
 void endaliasent(void);
 struct aliasent *getaliasent(void);
 int getaliasent_r(struct aliasent *result,
-
                   char *buffer, size_t buflen, struct aliasent **res);
 struct aliasent *getaliasbyname(const char *name);
 int getaliasbyname_r(const char *name, struct aliasent *result,
-
                      char *buffer, size_t buflen, struct aliasent **res);</code></pre>
 <h2>Description</h2>
 <p>One of the databases available with the Name Service Switch (NSS) is the aliases database, that contains mail aliases. (To find out which databases are supported, try <i>getent &#8211;help</i>.) Six functions are provided to access the aliases database. The <code>getaliasent</code>() function returns a pointer to a structure containing the group information from the aliases database. The first time it is called it returns the first entry; thereafter, it returns successive entries. The <code>setaliasent</code>() function rewinds the file pointer to the beginning of the aliases database. The <code>endaliasent</code>() function closes the aliases database. <code>getaliasent_r</code>() is the reentrant version of the previous function. The requested structure is stored via the first argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The function <code>getaliasbyname</code>() takes the name argument and searches the aliases database. The entry is returned as a pointer to a <i>struct aliasent</i>. <code>getaliasbyname_r</code>() is the reentrant version of the previous function. The requested structure is stored via the second argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The <i>struct aliasent</i> is defined in <i>&lt;aliases.h&gt;</i>: struct aliasent {<br />

@@ -20,26 +20,26 @@ description: "globus-k5 – Acquire Kerberos Credentials for use with Grid Servi
 <dl>
 <dd>
 <pre>&quot;/O=Example/OU=Grid/CN=Joe User&quot; /usr/afsws/bin/klog -principal juser -password mypasswd -cell infn.it</pre>
-</dl>
+</dd></dl>
 <h2>Environment</h2>
 <p>The following variables affect the execution of <code>globus-k5</code>: </p>
 <p> <code>GLOBUSKMAP</code></p>
 <dl>
-<dd>Path to the globuskmap file.</dl>
+<dd>Path to the globuskmap file.</dd></dl>
 <p> <code>USER</code></p>
 <dl>
-<dd>POSIX username that the service will run as.</dl>
+<dd>POSIX username that the service will run as.</dd></dl>
 <p> <code>KRB5CCNAME</code></p>
 <dl>
-<dd>Path to a Kerberos credential cache.</dl>
+<dd>Path to a Kerberos credential cache.</dd></dl>
 <p> <code>GLOBUS_ID</code></p>
 <dl>
-<dd>Grid identity to generate Kerberos credentials for.</dl>
+<dd>Grid identity to generate Kerberos credentials for.</dd></dl>
 <h2>Files</h2>
 <p>The following files affect the execution of <code>globus-k5</code>: </p>
 <p> <code>/etc/globuskmap</code></p>
 <dl>
-<dd>Default file mapping Grid identities to Kerberos 5 principals.</dl>
+<dd>Default file mapping Grid identities to Kerberos 5 principals.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-globus-k5/">globus-k5</a></code>(8), <code><a href="/docs/linux/man/8-globus-job-manager/">globus-job-manager</a></code>(8)</p>
 <h2>Author</h2>

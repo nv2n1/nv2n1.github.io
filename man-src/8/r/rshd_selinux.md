@@ -63,9 +63,9 @@ description: "rshd_selinux – Security Enhanced Linux Policy for the rshd proce
 <p> Policy governs the access confined processes have to these ports. SELinux rshd policy is very flexible allowing users to setup their rshd processes in as secure a method as possible. </p>
 <p> The following port types are defined for rshd: </p>
 <dl>
-<dt><code>rsh_port_t</code></p>
+<dt><code>rsh_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 514</dl>
+</dd><dd>Default Defined Ports: tcp 514</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type rshd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>auth_cache_t</code> </p>
@@ -148,8 +148,8 @@ description: "rshd_selinux – Security Enhanced Linux Policy for the rshd proce
 <p> <code>rshd_exec_t</code> </p>
 <p> &#8211; Set files with the rshd_exec_t type, if you want to transition an executable to the rshd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/in.rshd, /usr/sbin/in.rexecd, /usr/kerberos/sbin/kshd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/in.rshd, /usr/sbin/in.rexecd, /usr/kerberos/sbin/kshd </dd>
 </dl>
 <p> <code>rshd_keytab_t</code> </p>
 <p> &#8211; Set files with the rshd_keytab_t type, if you want to treat the files as kerberos keytab files. </p>

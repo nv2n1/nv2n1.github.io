@@ -15,16 +15,16 @@ description: "flow-send – Transmit flow data with the NetFlow protocol."
 <p> The <code>flow-send</code> utility is used to transmit flows in NetFlow format to a collector specified by localip/remoteip/port.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-s</code></p>
-<dd> Enable spoofing of source IP address.</p>
-<dt><code>-m</code><i> privacy_mask</i></p>
-<dd> Apply <i>privacy_mask</i> to the source and destination IP address of flows. For example a privacy_mask of 255.255.255.0 would convert flows with source/destination IP addresses 10.1.1.1 and 10.2.2.2 to 10.1.1.0 and 10.2.2.0 respectively.</p>
-<dt><code>-V</code><i> pdu_version</i></p>
-<dd> Use <i>pdu_version</i> format when transmitting. </p>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-s</code></dt>
+<dd> Enable spoofing of source IP address.</dd>
+<dt><code>-m</code><i> privacy_mask</i></dt>
+<dd> Apply <i>privacy_mask</i> to the source and destination IP address of flows. For example a privacy_mask of 255.255.255.0 would convert flows with source/destination IP addresses 10.1.1.1 and 10.2.2.2 to 10.1.1.0 and 10.2.2.0 respectively.</dd>
+<dt><code>-V</code><i> pdu_version</i></dt>
+<dd> Use <i>pdu_version</i> format when transmitting. </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -46,8 +46,8 @@ description: "flow-send – Transmit flow data with the NetFlow protocol."
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-x</code><i> xmit_delay</i></p>
-<dd> Configure a microsecond transmit delay between packets. This may be necessary in some configurations to prevent a transmit buffer overrun.</dl>
+<dt><code>-x</code><i> xmit_delay</i></dt>
+<dd> Configure a microsecond transmit delay between packets. This may be necessary in some configurations to prevent a transmit buffer overrun.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Transmit all flows in the directory /flows/krc4 to the collector at 10.0.0.1 listening on port 9500. </p>
 <p> <code>flow-cat /flows/krc4 | flow-send 0/10.0.0.1/9500</code> </p>

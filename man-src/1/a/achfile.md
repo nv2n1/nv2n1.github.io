@@ -11,10 +11,10 @@ description: "achfile – change type and/or creator of Apple Macintosh files (n
 <p> achfile &#8211; change type and/or creator of Apple Macintosh files (netatalk format) </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>achfile</code> [-t&nbsp;<wbr><i>type</i>] [-c&nbsp;<wbr><i>creator</i>] <i>file</i>&#8230;</dl>
+<dt> <code>achfile</code> [-t&nbsp;<wbr><i>type</i>] [-c&nbsp;<wbr><i>creator</i>] <i>file</i>&#8230;</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>achfile</code></p>
-<dd>changes the Macintosh type and/or creator of the <i>file</i> arguments which have a corresponding .AppleDouble file.</p>
+<dd>changes the Macintosh type and/or creator of the <i>file</i> arguments which have a corresponding .AppleDouble file.</dd>
 <h2>OPTIONS</h2>
 <p> <code>-t</code> <i>type</i> change the type. </p>
 <p> <code>-c</code> <i>creator</i> change the creator.</p>

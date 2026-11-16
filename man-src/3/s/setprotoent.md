@@ -10,15 +10,10 @@ description: "getprotoent, getprotobyname, getprotobynumber, setprotoent, endpro
 <p>getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent &#8211; get protocol entry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 struct protoent *getprotoent(void);
-
 struct protoent *getprotobyname(const char *name);
-
 struct protoent *getprotobynumber(int proto);
-
 void setprotoent(int stayopen);
-
 void endprotoent(void);</code></pre>
 <h2>Description</h2>
 <p>The <code>getprotoent</code>() function reads the next entry from the protocols database (see <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5)) and returns a <i>protoent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. The <code>getprotobyname</code>() function returns a <i>protoent</i> structure for the entry from the database that matches the protocol name <i>name</i>. A connection is opened to the database if necessary. The <code>getprotobynumber</code>() function returns a <i>protoent</i> structure for the entry from the database that matches the protocol number <i>number</i>. A connection is opened to the database if necessary. The <code>setprotoent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getproto*</code>() functions. The <code>endprotoent</code>() function closes the connection to the database. The <i>protoent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
@@ -29,18 +24,18 @@ void endprotoent(void);</code></pre>
 }</code></pre>
 <p> The members of the <i>protoent</i> structure are:</p>
 <dl>
-<dt><i>p_name</i></p>
-<dd>The official name of the protocol.</p>
-<dt><i>p_aliases</i></p>
-<dd>A NULL-terminated list of alternative names for the protocol.</p>
-<dt><i>p_proto</i></p>
-<dd>The protocol number.</dl>
+<dt><i>p_name</i></dt>
+<dd>The official name of the protocol.</dd>
+<dt><i>p_aliases</i></dt>
+<dd>A NULL-terminated list of alternative names for the protocol.</dd>
+<dt><i>p_proto</i></dt>
+<dd>The protocol number.</dd></dl>
 <h2>Return Value</h2>
 <p>The <code>getprotoent</code>(), <code>getprotobyname</code>(), and <code>getprotobynumber</code>() functions return a pointer to a statically allocated <i>protoent</i> structure, or a null pointer if an error occurs or the end of the file is reached.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/protocols</i></p>
-<dd>protocol database file</dl>
+<dt><i>/etc/protocols</i></dt>
+<dd>protocol database file</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

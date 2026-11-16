@@ -11,11 +11,11 @@ description: "pkexec – Execute a command as another user"
 <p> pkexec &#8211; Execute a command as another user </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pkexec</code> [<code>&#8211;version</code>] [<code>&#8211;disable-internal-agent</code>] [<code>&#8211;help</code>]</p>
-<dt> <code>pkexec</code> [<code>&#8211;user</code>&nbsp;<i>username</i>] <i>PROGRAM</i> [<i>ARGUMENTS</i>&#8230;]</dl>
+<dt> <code>pkexec</code> [<code>&#8211;version</code>] [<code>&#8211;disable-internal-agent</code>] [<code>&#8211;help</code>]</dt>
+<dt> <code>pkexec</code> [<code>&#8211;user</code>&nbsp;<i>username</i>] <i>PROGRAM</i> [<i>ARGUMENTS</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>pkexec</code></p>
-<dd>allows an authorized user to execute <i>PROGRAM</i> as another user. If <i>username</i> is not specified, then the program will be executed as the administrative super user, <i>root</i>.</p>
+<dd>allows an authorized user to execute <i>PROGRAM</i> as another user. If <i>username</i> is not specified, then the program will be executed as the administrative super user, <i>root</i>.</dd>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, the return value is the return value of <i>PROGRAM</i>. If the calling process is not authorized or an authorization could not be obtained through authentication or an error occured, <code>pkexec</code> exits with a return value of 127. If the authorization could not be obtained because the user dismissed the authentication dialog, <code>pkexec</code> exits with a return value of 126.</p>
 <h2>AUTHENTICATION AGENT</h2>
@@ -24,10 +24,10 @@ description: "pkexec – Execute a command as another user"
 <p> Executing a program as another user is a privileged operation. By default the required authorization (See the section called &#8220;REQUIRED AUTHORIZATIONS&#8221;) requires administrator authentication. In addition, the authentication dialog presented to the user will display the full path to the program to be executed so the user is aware of what will happen: </p>
 <dl>
 <dt>
-<dd> [IMAGE]<font SIZE="-2">[1]</font> </p>
+</dt><dd> [IMAGE]<font SIZE="-2">[1]</font> </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 +----------------------------------------------------------+
 |                     Authenticate                     [X] |
@@ -52,7 +52,7 @@ description: "pkexec – Execute a command as another user"
 |                                  [Cancel] [Authenticate] |
 +----------------------------------------------------------+
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <p> The environment that <i>PROGRAM</i> will run it, will be set to a minimal known and safe environment in order to avoid injecting code through LD_LIBRARY_PATH or similar mechanisms. In addition the PKEXEC_UID environment variable is set to the user id of the process invoking <code>pkexec</code>. As a result, <code>pkexec</code> will not allow you to run X11 applications as another user since the $DISPLAY and $XAUTHORITY environment variables are not set. These two variables will be retained if the <i>org.freedesktop.policykit.exec.allow_gui</i> annotation on an action is set to a nonempty value; this is discouraged, though, and should only be used for legacy programs.</p>
 <h2>REQUIRED AUTHORIZATIONS</h2>
@@ -61,7 +61,7 @@ description: "pkexec – Execute a command as another user"
 <p> To specify what kind of authorization is needed to execute the program /usr/bin/pk-example-frobnicate as another user, simply write an action definition file like this </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE policyconfig PUBLIC
@@ -85,14 +85,14 @@ description: "pkexec – Execute a command as another user"
   &lt;/action&gt;
 &lt;/policyconfig&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> and drop it in the /usr/share/polkit-1/actions directory under a suitable name (e.g. matching the namespace of the action). Note that in addition to specifying the program, the authentication message, description, icon and defaults can be specified. Note that occurences of the strings $(user), $(program) and $(command_line) in the message will be replaced with respectively the user (of the form &quot;Real Name (username)&quot; or just &quot;username&quot; if there is no real name for the username), the binary to execute (a fully-qualified path, e.g. &quot;/usr/bin/pk-example-frobnicate&quot;) and the command-line, e.g. &quot;pk-example-frobnicate foo bar&quot;. For example, for the action defined above, the following authentication dialog will be shown: </p>
 <dl>
 <dt>
-<dd> [IMAGE]<font SIZE="-2">[2]</font> </p>
+</dt><dd> [IMAGE]<font SIZE="-2">[2]</font> </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />
 |                     Authenticate                     [X] |<br />
 +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />
@@ -114,15 +114,15 @@ description: "pkexec – Execute a command as another user"
 |                                                          |<br />
 |                                  [Cancel] [Authenticate] |<br />
 +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+
-</dl>
+</dd></dl>
 </dl>
 <p> If the user is using the da_DK locale, the dialog looks like this: </p>
 <dl>
 <dt>
-<dd> [IMAGE]<font SIZE="-2">[3]</font> </p>
+</dt><dd> [IMAGE]<font SIZE="-2">[3]</font> </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 +----------------------------------------------------------+
 |                     Autorisering                     [X] |
@@ -145,7 +145,7 @@ description: "pkexec – Execute a command as another user"
 |                                [Annullér] [Autorisering] |
 +----------------------------------------------------------+
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Note that <code>pkexec</code> does no validation of the <i>ARGUMENTS</i> passed to <i>PROGRAM</i>. In the normal case (where administrator authentication is required every time <code>pkexec</code> is used), this is not a problem since if the user is an administrator he might as well just run <code>pkexec bash</code> to get root. </p>
 <p> However, if an action is used for which the user can retain authorization (or if the user is implicitly authorized), such as with pk-example-frobnicate above, this could be a security hole. Therefore, as a rule of thumb, programs for which the default required authorization is changed, should never implicitly trust user input (e.g. like any other well-written <i>suid</i> program).</p>
@@ -157,11 +157,11 @@ description: "pkexec – Execute a command as another user"
 <p> <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8), <code><a href="/docs/linux/man/1-pkaction/">pkaction</a></code>(1), <code><a href="/docs/linux/man/1-pkcheck/">pkcheck</a></code>(1), <code><a href="/docs/linux/man/1-pkttyagent/">pkttyagent</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-bash.png</p>
-<dt> 2.</p>
-<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-frobnicate.png</p>
-<dt> 3.</p>
-<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-frobnicate-da.png </p>
+<dt> 1.</dt>
+<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-bash.png</dd>
+<dt> 2.</dt>
+<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-frobnicate.png</dd>
+<dt> 3.</dt>
+<dd> /usr/share/gtk-doc/html/polkit-1/pkexec-frobnicate-da.png </dd>
 </dl>
 <h2>Index</h2>

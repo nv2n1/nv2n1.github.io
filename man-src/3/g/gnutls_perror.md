@@ -14,8 +14,8 @@ description: "gnutls_perror – API function"
 <p> <code>void gnutls_perror(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>int error</p>
-<dd> is a GnuTLS error code, a negative error code</dl>
+<dt>int error</dt>
+<dd> is a GnuTLS error code, a negative error code</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is like <code>perror()</code>. The only difference is that it accepts an error number returned by a gnutls function.</p>
 <h2>REPORTING BUGS</h2>
@@ -27,6 +27,6 @@ description: "gnutls_perror – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

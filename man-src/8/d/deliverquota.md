@@ -10,10 +10,10 @@ description: "deliverquota – deliver to a maildir with a quota"
 <p>deliverquota &#8211; deliver to a maildir with a quota</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>deliverquota</code> [-c] [-w&nbsp;<wbr><i>percent</i>] [-W&nbsp;<wbr><i>filename</i>] {<i>maildir</i>} {<i>quota</i>}</dl>
+<dt> <code>deliverquota</code> [-c] [-w&nbsp;<wbr><i>percent</i>] [-W&nbsp;<wbr><i>filename</i>] {<i>maildir</i>} {<i>quota</i>}</dt></dl>
 <h2>Description</h2>
 <p><code>deliverquota</code></p>
-<dd>delivers mail to a <i>maildir</i> taking into account any software-imposed quota on the maildir. This manually-enforced quota mechanism is described in the m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[]<font SIZE="-2">[1]</font> and m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[]<font SIZE="-2">[2]</font> manual pages. Instead of setting up your mail server to deliver the message directly to a maildir, configure the mail server to run the <code>deliverquota</code> program in order to deliver the message, and specify the location of the maildir as the argument to <code>deliverquota</code>. </p>
+<dd>delivers mail to a <i>maildir</i> taking into account any software-imposed quota on the maildir. This manually-enforced quota mechanism is described in the m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[]<font SIZE="-2">[1]</font> and m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[]<font SIZE="-2">[2]</font> manual pages. Instead of setting up your mail server to deliver the message directly to a maildir, configure the mail server to run the <code>deliverquota</code> program in order to deliver the message, and specify the location of the maildir as the argument to <code>deliverquota</code>. </dd>
 <p> The second argument to <code>deliverquota</code> is optional. If present, <i>quota</i> specifies a new quota setting for this maildir. Specifying <i>quota</i> is equivalent to running m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[]<font SIZE="-2">[2]</font> with the <code>-q</code> option. The second argument to <code>deliverquota</code> is considered obsolete, and may be removed in the future. </p>
 <p> <code>deliverquota</code> reads the message from standard input and delivers it to <i>maildir</i>. <i>maildir</i> may specify a path directly to a maildir folder, not the main <i>maildir</i> (as long as the folder was created by the m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[]<font SIZE="-2">[2]</font> command. </p>
 <p> The <code>-c</code> option automatically creates the maildir, and all missing parent subdirectories (as &#8216;<code>mkdir -p</code>&#8216;). This option should be used with caution. </p>
@@ -26,14 +26,15 @@ description: "deliverquota – deliver to a maildir with a quota"
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)</p>
+<dt> 1.</dt>
+<dd><code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildirquota.html</dl>
-<dt> 2.</p>
-<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</p>
+<dd>[set $man.base.url.for.relative.links]/maildirquota.html</dd></dl>
+<dt> 2.</dt>
+<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dl>
+<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dd></dl>
+</dl>

@@ -14,17 +14,17 @@ description: "nand_read_buf – [DEFAULT] read chip data into buffer"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>buffer to store date</dl>
+<dd>buffer to store date</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to read</dl>
+<dd>number of bytes to read</dd></dl>
 <h2>Description</h2>
 <p>Default read function for 8bit buswidth.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

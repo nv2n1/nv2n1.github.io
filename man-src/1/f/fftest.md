@@ -15,8 +15,8 @@ description: "fftest – tests force-feedback devices."
 <p> fftest provides a variety of tests which can be applied to force-feedback devices. <code>Beware, the tests may damage your device!</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&lt;<i>device</i>&gt;</p>
-<dd> The device to test.</dl>
+<dt>&lt;<i>device</i>&gt;</dt>
+<dd> The device to test.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffcfstress/">ffcfstress</a></code>(1), <code><a href="/docs/linux/man/1-ffmvforce/">ffmvforce</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1).</p>
 <h2>AUTHOR</h2>

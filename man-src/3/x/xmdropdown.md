@@ -506,42 +506,42 @@ description: "XmDropDown — The DropDown widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcustomizedCombinationBox</code></p>
-<dd>If this resource is True then the widget will not automatically create a popup shell and list widget. This resource can be used, as the name implies, to create a custom combination box that has something other than a list in it. If this resource is true then a shell must be provided to the DropDown widget via the popupShellWidget resource. Just before the shell is popped up the updateShellCallback is called. Just after the shell is popped down the updateTextCallback is called. If verify is true then the verifyTextCallback is called when the combo box needs to verify the contents of the text widget against the allowable values in the custom shell.</p>
-<dt><code>XmNeditable</code></p>
-<dd>This boolean value determines whether the user is allowed to type into TextField widget of the DropDown widget. If this value is False, selecting the text field will popup the combo box list</p>
-<dt><code>XmNhorizontalMargin</code></p>
-<dd>Specifies the horizontal spacing between the child widgets and the boundary of the DropDown widget.</p>
-<dt><code>XmNverticalMargin</code></p>
-<dd>Specifies the vertical spacing between the child widgets and the boundary of the DropDown widget.</p>
-<dt><code>XmNitemCount</code></p>
-<dd>The number of items in the popup list.</p>
-<dt><code>XmNitems</code></p>
-<dd>The list of all choice that will be displayed in the popup list.</p>
-<dt><code>XmNlabelString</code></p>
-<dd>The string displayed as the label of the DropDown widget.</p>
-<dt><code>XmNpopupCursor</code></p>
-<dd>The cursor to display to the user when the DropDown&#8217;s list is popped up. See X Window System, Robert Scheiffler et al., Appendix B, for choices.</p>
-<dt><code>XmNpopupOffset</code></p>
-<dd>The amount of space in pixels between the left edge of the Text widget and the left edge of the list when the list is displayed. Positive values mean the text&#8217;s left edge is farther to the left, negative values mean the list&#8217;s edge is farther to the left. If this is a non-custom DropDown widget the right edge of the text and the right edge of the arrow button will always line up.</p>
-<dt><code>XmNpopupShellWidget</code></p>
-<dd>The widget identifier for the shell that is popped up when the arrow is clicked. If customizedCombinationBox is False then this widget is automatically created by the DropDown widget.</p>
-<dt><code>XmNshowLabel</code></p>
-<dd>A boolean value that specifies whether or not to display the DropDown Label widget.</p>
-<dt><code>XmNupdateShellCallback</code></p>
+<dt><code>XmNcustomizedCombinationBox</code></dt>
+<dd>If this resource is True then the widget will not automatically create a popup shell and list widget. This resource can be used, as the name implies, to create a custom combination box that has something other than a list in it. If this resource is true then a shell must be provided to the DropDown widget via the popupShellWidget resource. Just before the shell is popped up the updateShellCallback is called. Just after the shell is popped down the updateTextCallback is called. If verify is true then the verifyTextCallback is called when the combo box needs to verify the contents of the text widget against the allowable values in the custom shell.</dd>
+<dt><code>XmNeditable</code></dt>
+<dd>This boolean value determines whether the user is allowed to type into TextField widget of the DropDown widget. If this value is False, selecting the text field will popup the combo box list</dd>
+<dt><code>XmNhorizontalMargin</code></dt>
+<dd>Specifies the horizontal spacing between the child widgets and the boundary of the DropDown widget.</dd>
+<dt><code>XmNverticalMargin</code></dt>
+<dd>Specifies the vertical spacing between the child widgets and the boundary of the DropDown widget.</dd>
+<dt><code>XmNitemCount</code></dt>
+<dd>The number of items in the popup list.</dd>
+<dt><code>XmNitems</code></dt>
+<dd>The list of all choice that will be displayed in the popup list.</dd>
+<dt><code>XmNlabelString</code></dt>
+<dd>The string displayed as the label of the DropDown widget.</dd>
+<dt><code>XmNpopupCursor</code></dt>
+<dd>The cursor to display to the user when the DropDown&#8217;s list is popped up. See X Window System, Robert Scheiffler et al., Appendix B, for choices.</dd>
+<dt><code>XmNpopupOffset</code></dt>
+<dd>The amount of space in pixels between the left edge of the Text widget and the left edge of the list when the list is displayed. Positive values mean the text&#8217;s left edge is farther to the left, negative values mean the list&#8217;s edge is farther to the left. If this is a non-custom DropDown widget the right edge of the text and the right edge of the arrow button will always line up.</dd>
+<dt><code>XmNpopupShellWidget</code></dt>
+<dd>The widget identifier for the shell that is popped up when the arrow is clicked. If customizedCombinationBox is False then this widget is automatically created by the DropDown widget.</dd>
+<dt><code>XmNshowLabel</code></dt>
+<dd>A boolean value that specifies whether or not to display the DropDown Label widget.</dd>
+<dt><code>XmNupdateShellCallback</code></dt>
 <dd>
-<dt><code>XmNupdateTextCallback</code></p>
-<dd>The callback routine to call when either the shell widget contents or the Text widget need to be updated to correspond with the other. The shell is updated just before it is popped up. The text is updated just after the shell is popped down. If customizedComboBox is False then the updates are done automatically by the combo box. These routines are called to inform the application that an action has been taken, in case it would like to do any further processing.</p>
-<dt><code>XmNuseTextField</code></p>
-<dd>A boolean value that specifies if an XmTextField or an XmText widget should be used for the text entry portion of the DropDown widget.</p>
-<dt><code>XmNvalue</code></p>
-<dd>The string displayed in the Text widget.</p>
-<dt><code>XmNverify</code></p>
-<dd>If this resource is true the DropDown widget will verify its value against the list whenever it loses focus or the user types &lt;Carriage Return&gt;. If the verification fails, an XtWarning is generated with a name of XmNtextVerifyFailed. To trap this message register an XtWarningMsgHandler.</p>
-<dt><code>XmNverifyTextCallback</code></p>
-<dd>This routine is called whenever the Text widget&#8217;s contents may need to be verified against the popup shell&#8217;s contents. If the customizedComboBox resource is False then the DropDown widget has already performed the verification when this routine is called.</p>
-<dt><code>XmNvisibleItemCount</code></p>
-<dd>The number of items visible in the popup list at one time.</dl>
+</dd><dt><code>XmNupdateTextCallback</code></dt>
+<dd>The callback routine to call when either the shell widget contents or the Text widget need to be updated to correspond with the other. The shell is updated just before it is popped up. The text is updated just after the shell is popped down. If customizedComboBox is False then the updates are done automatically by the combo box. These routines are called to inform the application that an action has been taken, in case it would like to do any further processing.</dd>
+<dt><code>XmNuseTextField</code></dt>
+<dd>A boolean value that specifies if an XmTextField or an XmText widget should be used for the text entry portion of the DropDown widget.</dd>
+<dt><code>XmNvalue</code></dt>
+<dd>The string displayed in the Text widget.</dd>
+<dt><code>XmNverify</code></dt>
+<dd>If this resource is true the DropDown widget will verify its value against the list whenever it loses focus or the user types &lt;Carriage Return&gt;. If the verification fails, an XtWarning is generated with a name of XmNtextVerifyFailed. To trap this message register an XtWarningMsgHandler.</dd>
+<dt><code>XmNverifyTextCallback</code></dt>
+<dd>This routine is called whenever the Text widget&#8217;s contents may need to be verified against the popup shell&#8217;s contents. If the customizedComboBox resource is False then the DropDown widget has already performed the verification when this routine is called.</dd>
+<dt><code>XmNvisibleItemCount</code></dt>
+<dd>The number of items visible in the popup list at one time.</dd></dl>
 <h3>Children</h3>
 <p>The DropDown is composed of many sub-widgets. Most of the information displayed to the user is set through these sub widgets. Most values passed to this widget through the argument list at creation time or via set values are passed to each of this widget&#8217;s children. Get values requests must be made on a child by child basis. The children of the DropDown are listed below. The OSF/Motifdocumentation should be consulted for an exhaustive set of resources for each child. A partial list of the most common resources are listed here for convenience. </p>
 <p> XmDropDown<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>comboBox</p>
@@ -1639,21 +1639,21 @@ description: "XmDropDown — The DropDown widget class"
 <h3>Callback Information</h3>
 <p>None of the DropDown&#8217;s callback procedures have any call data currently defined for them. The widget passed to each of these functions is the DropDown widget.</p>
 <dl COMPACT>
-<dd>void (Callback)(Widget cbw, XtPointer client_data, XtPointer unused)</p>
+<dd>void (Callback)(Widget cbw, XtPointer client_data, XtPointer unused)</dd>
 <dd>cbw<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is the widget identifier of the DropDown widget.
-</dl>
+</dd></dl>
 <dl COMPACT>
-<dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The client data passed to this widget by the application programmer.</p>
+<dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The client data passed to this widget by the application programmer.</dd>
 <dd>unused<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This value is undefined.
-</dl>
+</dd></dl>
 <h3>Geometry Management</h3>
 <p>The DropDown widget lays out its children (the label, text and arrow) in a row. The amount of space they are each allocated when the DropDown is not allowed to be the exact size it desires is determined using the following rules:</p>
 <dl COMPACT>
-<dd>1.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The arrow is always given its requested size.</p>
+<dd>1.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The arrow is always given its requested size.</dd>
 <dd>2.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is bigger than it wants to be all extra space is given to the text<br />
- widget.</p>
+ widget.</dd>
 <dd>3.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is smaller that is wants to be then the text and label widgets<br />
- are each sized smaller than they desire in exactly the same ratio. </p>
+ are each sized smaller than they desire in exactly the same ratio. </dd>
 <p> For example: </p>
 <p> If the amount of space for the label and text is 100 pixels and the label wants to be 50 pixels wide and the text would like to be 100 pixels wide then the label will get 34 pixels and the text 66. </p>
 <p> The popup shell widget is sized such that the width of the scrolled list widget equals the width of the text widget minus the value of the &quot;popupOffset&quot; resource. If the popup shell resides in a customized combination box, however, it is allowed to be whatever size the child of the popup shell would like to be.</dl>
@@ -1661,3 +1661,4 @@ description: "XmDropDown — The DropDown widget class"
 <p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatedropdown/">XmCreateDropDown</a></code>(3), <code>XmDropDownGetArrow</code>(3), <code>XmDropDownGetLabel</code>(3), <code>XmDropDownGetList</code>(3), <code>XmDropDownGetText</code>(3), <code>XmDropDownGetValue</code>(3), <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatedropdown/">XmVaCreateDropDown</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanageddropdown/">XmVaCreateManagedDropDown</a></code>(3). </p>
 <h2>Copyright</h2>
 <p>Copyright (c) 1992 by Integrated Computer Solutions, Inc.</p>
+</p>

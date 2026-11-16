@@ -14,10 +14,10 @@ description: "mempool_free – return an element to the pool."
 <p><i>element</i></p>
 <dl>
 <dd>
-<dd>pool element pointer.</dl>
+</dd><dd>pool element pointer.</dd></dl>
 <p> <i>pool</i></p>
 <dl>
-<dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dl>
+<dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dd></dl>
 <h2>Description</h2>
 <p>this function only sleeps if the <code>free_fn</code> function sleeps.</p>
 <h2>Copyright</h2>

@@ -11,19 +11,12 @@ description: "ql/math/randomnumbers/rngtraits.hpp – random-number generation p
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/methods/montecarlo/pathgenerator.hpp&gt;
-
 #include &lt;ql/math/randomnumbers/mt19937uniformrng.hpp&gt;
-
 #include &lt;ql/math/randomnumbers/inversecumulativerng.hpp&gt;
-
 #include &lt;ql/math/randomnumbers/randomsequencegenerator.hpp&gt;
-
 #include &lt;ql/math/randomnumbers/sobolrsg.hpp&gt;
-
 #include &lt;ql/math/randomnumbers/inversecumulativersg.hpp&gt;
-
 #include &lt;ql/math/distributions/normaldistribution.hpp&gt;
-
 #include &lt;ql/math/distributions/poissondistribution.hpp&gt;</code></pre>
 <h3>Typedefs</h3>
 <p>typedef GenericPseudoRandom&lt; MersenneTwisterUniformRng, InverseCumulativeNormal &gt; <code>PseudoRandom</code><br />

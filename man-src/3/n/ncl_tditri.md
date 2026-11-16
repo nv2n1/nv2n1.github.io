@@ -22,31 +22,31 @@ CALL TDITRI (U, NU, V, NV, W, NW, F, LF1D, LF2D, FISO, RTRI, MTRI, NTRI, IRST)
 
 The arguments of TDITRI are as follows:
 <dl><dt>U
-<dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that U(1) &lt; U(2) &lt; ... U(NU-1) &lt; U(NU).
-<dt>NU
-<dd>(an input expression of type INTEGER) - the dimension of U.
-<dt>V
-<dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; V(2) &lt; ... V(NV-1) &lt; V(NV).
-<dt>NV
-<dd>(an input expression of type INTEGER) - the dimension of V.
-<dt>W
-<dd>(an input array, of type REAL, dimensioned NW) - values of an independent variable &quot;w&quot;. It must be the case that <a HREF="/docs/linux/man/1-w/">W</a>(1) &lt; W(2) &lt; ... W(NV-1) &lt; W(NV).
-<dt>NW
-<dd>(an input expression of type INTEGER) - the dimension of W.
-<dt>F
-<dd>(an input array, of type REAL, dimensioned NU x NV x NW and having FORTRAN first and second dimensions LF1D and LF2D, respectively) - values of a dependent variable &quot;f(u,v,w)&quot;. F(I,J,K) is the value of the function &quot;f&quot; at the position (U(I),V(J),W(K)); the equation &quot;f(u,v,w)=FISO&quot; defines a surface that one wishes to draw.
-<dt>LF1D and LF2D
-<dd>(input expressions of type INTEGER) - the FORTRAN first and second dimensions of the array F. It must be the case that LF1D is greater than or equal to NU and that LF2D is greater than or equal to NV.
-<dt>FISO
-<dd>(an input expression of type REAL) - the value of the function f defining the isosurface to be drawn.
-<dt>RTRI
-<dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
-<dt>MTRI
-<dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
-<dt>NTRI
-<dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDITRI. If NTRI becomes equal to MTRI, TDITRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDITRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
-<dt>IRST
-<dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.</dl>
+</dt><dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that U(1) &lt; U(2) &lt; ... U(NU-1) &lt; U(NU).
+</dd><dt>NU
+</dt><dd>(an input expression of type INTEGER) - the dimension of U.
+</dd><dt>V
+</dt><dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; V(2) &lt; ... V(NV-1) &lt; V(NV).
+</dd><dt>NV
+</dt><dd>(an input expression of type INTEGER) - the dimension of V.
+</dd><dt>W
+</dt><dd>(an input array, of type REAL, dimensioned NW) - values of an independent variable &quot;w&quot;. It must be the case that <a HREF="/docs/linux/man/1-w/">W</a>(1) &lt; W(2) &lt; ... W(NV-1) &lt; W(NV).
+</dd><dt>NW
+</dt><dd>(an input expression of type INTEGER) - the dimension of W.
+</dd><dt>F
+</dt><dd>(an input array, of type REAL, dimensioned NU x NV x NW and having FORTRAN first and second dimensions LF1D and LF2D, respectively) - values of a dependent variable &quot;f(u,v,w)&quot;. F(I,J,K) is the value of the function &quot;f&quot; at the position (U(I),V(J),W(K)); the equation &quot;f(u,v,w)=FISO&quot; defines a surface that one wishes to draw.
+</dd><dt>LF1D and LF2D
+</dt><dd>(input expressions of type INTEGER) - the FORTRAN first and second dimensions of the array F. It must be the case that LF1D is greater than or equal to NU and that LF2D is greater than or equal to NV.
+</dd><dt>FISO
+</dt><dd>(an input expression of type REAL) - the value of the function f defining the isosurface to be drawn.
+</dd><dt>RTRI
+</dt><dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
+</dd><dt>MTRI
+</dt><dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
+</dd><dt>NTRI
+</dt><dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDITRI. If NTRI becomes equal to MTRI, TDITRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDITRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
+</dd><dt>IRST
+</dt><dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -16,10 +16,10 @@ description: "Musetup – Configuration script for Museekd"
 <h2>OPTIONS</h2>
 <p> Musetup accepts the following options:</p>
 <dl>
-<dt>&lt;<i>config-filename</i>&gt;</p>
-<dd> Selected Config&#8217;s path and filename.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit.</dl>
+<dt>&lt;<i>config-filename</i>&gt;</dt>
+<dd> Selected Config&#8217;s path and filename.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
 <p> musetup </p>
@@ -28,11 +28,11 @@ description: "Musetup – Configuration script for Museekd"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.xml</i></p>
-<dd> The default location for the <code>museekd</code> config file.</p>
+&nbsp;<wbr><i>~/.museekd/config.xml</i></dt>
+<dd> The default location for the <code>museekd</code> config file.</dd>
 <dt>
-&nbsp;<wbr><i>/usr/share/museek/museekd/config.xml.tmpl</i></p>
-<dd> Config file template that&#8217;s used if no config exists.</dl>
+&nbsp;<wbr><i>/usr/share/museek/museekd/config.xml.tmpl</i></dt>
+<dd> Config file template that&#8217;s used if no config exists.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>

@@ -16,18 +16,18 @@ description: "hman – browse the on-line manual pages"
 <p> The <code>hman</code> script is an interface to <a href="/docs/linux/man/1-man2html/">man2html</a>(1) that allows you to enter man page requests at the command line and view the output in your favourite browser. The behaviour reminds of that of <code><a href="/docs/linux/man/1-man/">man</a></code>(1) so that many people will be able to alias <code>hman</code> to <code>man</code>. If the browser used is netscape, and an incarnation of netscape is running already, <code>hman</code> will pass the request to the existing browser. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-P browser</code></p>
+<dt><code>-P browser</code></dt>
 <dd> Specify which browser (like lynx, xmosaic, arena, chimera, netscape, amaya, &#8230;) to use. This option overrides the <code>MANHTMLPAGER</code> environment variable. The default is <code>sensible-browser</code>.<br />
- A special value <i>lynxcgi</i> can be used for the non-httpd version of <code>lynx</code>, but this requires the <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) command to be installed and approprietly configured.</p>
-<dt><code>-H host</code></p>
-<dd> Specify from what host to get the man pages. This option overrides the <code>MANHTMLHOST</code> environment variable. The default is <code>localhost</code>. </p>
+ A special value <i>lynxcgi</i> can be used for the non-httpd version of <code>lynx</code>, but this requires the <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) command to be installed and approprietly configured.</dd>
+<dt><code>-H host</code></dt>
+<dd> Specify from what host to get the man pages. This option overrides the <code>MANHTMLHOST</code> environment variable. The default is <code>localhost</code>. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>MANHTMLPAGER</p>
-<dd> The default browser to use is selected using this environment variable.</p>
-<dt>MANHTMLHOST</p>
-<dd> The default host to use is selected using this environment variable. </p>
+<dt>MANHTMLPAGER</dt>
+<dd> The default browser to use is selected using this environment variable.</dd>
+<dt>MANHTMLHOST</dt>
+<dd> The default host to use is selected using this environment variable. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-man2html/">man2html</a></code>(1), <code>arena</code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-sensible-browser/">sensible-browser</a></code>(1), <code>netscape</code>(1), <code>xmosaic</code>(1), <code>glimpse</code>(1) </p>

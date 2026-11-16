@@ -10,16 +10,10 @@ description: "QuantLib::CapFloor::arguments – Arguments for cap/floor calculat
 <p>QuantLib::CapFloor::arguments &#8211; Arguments for cap/floor calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits QuantLib::PricingEngine::arguments.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> CapFloor::Type <code>type</code> </p>
 <p> std::vector&lt; <code>Date</code> &gt; <code>startDates</code> </p>

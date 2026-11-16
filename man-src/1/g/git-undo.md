@@ -24,21 +24,19 @@ description: "git-undo – Remove latest commits"
 <p> Removes the latest commit.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git undo
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Remove the latest 3 commits:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git undo 3
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Kenneth Reitz &lt;<i>me [at] kennethreitz.com</i>&gt; and Nick Lombard &lt;<i>github [at] jigsoft.co.za</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

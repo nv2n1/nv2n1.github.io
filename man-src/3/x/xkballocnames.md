@@ -11,18 +11,18 @@ description: "XkbAllocNames – Allocate symbolic names structures"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocNames</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>int </code><i>num_rg</i><code>,</code> <code>int </code><i>num_key_aliases</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description for which names are to be allocated</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of names to be allocated</p>
-<dt><i>&#8211; num_rg</i></p>
-<dd>total number of radio group names needed</p>
-<dt><i>&#8211; num_key_aliases</i></p>
-<dd>total number of key aliases needed</dl>
+</dd><dd>keyboard description for which names are to be allocated</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of names to be allocated</dd>
+<dt><i>&#8211; num_rg</i></dt>
+<dd>total number of radio group names needed</dd>
+<dt><i>&#8211; num_key_aliases</i></dt>
+<dd>total number of key aliases needed</dd></dl>
 <h2>Description</h2>
 <p>Most applications do not need to directly allocate symbolic names structures. Do not allocate a names structure directly using <i>malloc </i> or <i>Xmalloc </i> if your application changes the number of key aliases or radio groups or constructs a symbolic names structure without loading the necessary components from the X server. Instead use <i>XkbAllocNames.</i> </p>
 <p> <i>XkbAllocNames </i> can return BadAlloc, BadMatch, and BadValue errors. The <i>which </i> parameter is the bitwise inclusive OR of the valid names mask bits defined in Table 1. </p>
@@ -206,11 +206,11 @@ description: "XkbAllocNames – Allocate symbolic names structures"
 <p> Do not free symbolic names structures directly using <i>free </i> or <i>XFree. </i> Use <i>XkbFreeNames </i> instead.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbfreenames/">XkbFreeNames</a></code>(3)</p>

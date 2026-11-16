@@ -10,17 +10,11 @@ description: "rdma-link – rdma link configuration"
 <p>rdma-link &#8211; rdma link configuration</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ]
-
 link
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -d[etails] }</code></pre>
 <p> <code>rdma link show</code> [ <i>DEV/PORT_INDEX</i> ]<br />
@@ -37,16 +31,16 @@ OPTIONS := {
 <h2>Examples</h2>
 <p>rdma link show</p>
 <dl>
-<dd>Shows the state of all rdma links on the system.</dl>
+<dd>Shows the state of all rdma links on the system.</dd></dl>
 <p> rdma link show mlx5_2/1</p>
 <dl>
-<dd>Shows the state of specified rdma link.</dl>
+<dd>Shows the state of specified rdma link.</dd></dl>
 <p> rdma link add rxe_eth0 type rxe netdev eth0</p>
 <dl>
-<dd>Adds a RXE link named rxe_eth0 to network device eth0</dl>
+<dd>Adds a RXE link named rxe_eth0 to network device eth0</dd></dl>
 <p> rdma link del rxe_eth0</p>
 <dl>
-<dd>Removes RXE link rxe_eth0</dl>
+<dd>Removes RXE link rxe_eth0</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-dev/">rdma-dev</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), <code><a href="/docs/linux/man/8-rdma-statistic/">rdma-statistic</a></code>(8), </p>
 <h2>Author</h2>

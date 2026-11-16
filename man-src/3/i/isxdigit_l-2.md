@@ -41,62 +41,62 @@ description: "isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, isl
 <dl COMPACT>
 <dd>_XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>isblank</code>():</p>
 <dl COMPACT>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <p> <code>isalnum_l</code>(), <code>isalpha_l</code>(), <code>isblank_l</code>(), <code>iscntrl_l</code>(), <code>isdigit_l</code>(), <code>isgraph_l</code>(), <code>islower_l</code>(), <code>isprint_l</code>(), <code>ispunct_l</code>(), <code>isspace_l</code>(), <code>isupper_l</code>(), <code>isxdigit_l</code>():</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>Since glibc 2.10:</p>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl COMPACT>
+<dt>Since glibc 2.10:</dt>
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <p> <code>isascii_l</code>():</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>Since glibc 2.10:</p>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700 &amp;&amp; (_SVID_SOURCE || _BSD_SOURCE)</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl COMPACT>
+<dt>Since glibc 2.10:</dt>
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700 &amp;&amp; (_SVID_SOURCE || _BSD_SOURCE)</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>These functions check whether <i>c</i>, which must have the value of an <i>unsigned char</i> or <code>EOF</code>, falls into a certain character class according to the specified locale. The functions without the &quot;_l&quot; suffix perform the check based on the current locale. </p>
 <p> The functions with the &quot;_l&quot; suffix perform the check based on the locale specified by the locale object <i>locale</i>. The behavior of these functions is undefined if <i>locale</i> is the special locale object <code>LC_GLOBAL_LOCALE</code> (see <code><a href="/docs/linux/man/3-duplocale/">duplocale</a></code>(3)) or is not a valid locale object handle. </p>
 <p> The list below explains the operation of the functions without the &quot;_l&quot; suffix; the functions with the &quot;_l&quot; suffix differ only in using the locale object <i>locale</i> instead of the current locale.</p>
 <dl COMPACT>
-<dt><code>isalnum</code>()</p>
-<dd>checks for an alphanumeric character; it is equivalent to <code>(isalpha(</code><i>c</i><code>) || isdigit(</code><i>c</i><code>))</code><i></i>.</p>
-<dt><code>isalpha</code>()</p>
-<dd>checks for an alphabetic character; in the standard <code>&quot;C&quot;</code> locale, it is equivalent to <code>(isupper(</code><i>c</i><code>) || islower(</code><i>c</i><code>))</code><i></i>. In some locales, there may be additional characters for which <code>isalpha</code>() is true&#8212;letters which are neither uppercase nor lowercase.</p>
-<dt><code>isascii</code>()</p>
-<dd>checks whether <i>c</i> is a 7-bit <i>unsigned char</i> value that fits into the ASCII character set.</p>
-<dt><code>isblank</code>()</p>
-<dd>checks for a blank character; that is, a space or a tab.</p>
-<dt><code>iscntrl</code>()</p>
-<dd>checks for a control character.</p>
-<dt><code>isdigit</code>()</p>
-<dd>checks for a digit (0 through 9).</p>
-<dt><code>isgraph</code>()</p>
-<dd>checks for any printable character except space.</p>
-<dt><code>islower</code>()</p>
-<dd>checks for a lowercase character.</p>
-<dt><code>isprint</code>()</p>
-<dd>checks for any printable character including space.</p>
-<dt><code>ispunct</code>()</p>
-<dd>checks for any printable character which is not a space or an alphanumeric character.</p>
-<dt><code>isspace</code>()</p>
+<dt><code>isalnum</code>()</dt>
+<dd>checks for an alphanumeric character; it is equivalent to <code>(isalpha(</code><i>c</i><code>) || isdigit(</code><i>c</i><code>))</code><i></i>.</dd>
+<dt><code>isalpha</code>()</dt>
+<dd>checks for an alphabetic character; in the standard <code>&quot;C&quot;</code> locale, it is equivalent to <code>(isupper(</code><i>c</i><code>) || islower(</code><i>c</i><code>))</code><i></i>. In some locales, there may be additional characters for which <code>isalpha</code>() is true&#8212;letters which are neither uppercase nor lowercase.</dd>
+<dt><code>isascii</code>()</dt>
+<dd>checks whether <i>c</i> is a 7-bit <i>unsigned char</i> value that fits into the ASCII character set.</dd>
+<dt><code>isblank</code>()</dt>
+<dd>checks for a blank character; that is, a space or a tab.</dd>
+<dt><code>iscntrl</code>()</dt>
+<dd>checks for a control character.</dd>
+<dt><code>isdigit</code>()</dt>
+<dd>checks for a digit (0 through 9).</dd>
+<dt><code>isgraph</code>()</dt>
+<dd>checks for any printable character except space.</dd>
+<dt><code>islower</code>()</dt>
+<dd>checks for a lowercase character.</dd>
+<dt><code>isprint</code>()</dt>
+<dd>checks for any printable character including space.</dd>
+<dt><code>ispunct</code>()</dt>
+<dd>checks for any printable character which is not a space or an alphanumeric character.</dd>
+<dt><code>isspace</code>()</dt>
 <dd>checks for white-space characters. In the <code>C</code> and <code>POSIX</code> locales, these are: space, form-feed (<code>&#8216;&#8217;</code>), newline (<code>&#8216;
 &#8217;</code>), carriage return (<code>&#8216;
-&#8217;</code>), horizontal tab (<code>&#8216;	&#8217;</code>), and vertical tab (<code>&#8216;&#8217;</code>).</p>
-<dt><code>isupper</code>()</p>
-<dd>checks for an uppercase letter.</p>
-<dt><code>isxdigit</code>()</p>
+&#8217;</code>), horizontal tab (<code>&#8216;	&#8217;</code>), and vertical tab (<code>&#8216;&#8217;</code>).</dd>
+<dt><code>isupper</code>()</dt>
+<dd>checks for an uppercase letter.</dd>
+<dt><code>isxdigit</code>()</dt>
 <dd>checks for hexadecimal digits, that is, one of<br />
- <code>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</code>.</dl>
+ <code>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</code>.</dd></dl>
 <h2>Return Value</h2>
 <p>The values returned are nonzero if the character <i>c</i> falls into the tested class, and zero if not.</p>
 <h2>Versions</h2>

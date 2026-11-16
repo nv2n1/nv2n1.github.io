@@ -15,10 +15,10 @@ description: "nohup – run a command immune to hangups, with output to a non-tt
 <h2>DESCRIPTION</h2>
 <p> Run COMMAND, ignoring hangup signals.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If standard input is a terminal, redirect it from an unreadable file. If standard output is a terminal, append output to &#8216;nohup.out&#8217; if possible, &#8216;$HOME/nohup.out&#8217; otherwise. If standard error is a terminal, redirect it to standard output. To save output to FILE, use &#8216;nohup COMMAND &gt; FILE&#8217;. </p>
 <p> NOTE: your shell may have its own version of nohup, which usually supersedes the version described here. Please refer to your shell&#8217;s documentation for details about the options it supports.</p>
 <h2>AUTHOR</h2>

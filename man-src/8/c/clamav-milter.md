@@ -15,12 +15,12 @@ description: "clamav-milter – milter compatible mail scanner"
 <p> Clamav-milter can use load balancing and fault tolerant techniques to connect to more than one <a href="/docs/linux/man/8-clamd/">clamd</a>(8) server and seamlessly hot-swap to even the load between different machines and to keep scanning for viruses even when a server goes down.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Output help information and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print the version number and exit.</p>
-<dt><code>-c FILE, &#8211;config-file=FILE</code></p>
-<dd>Read configuration from FILE.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Output help information and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print the version number and exit.</dd>
+<dt><code>-c FILE, &#8211;config-file=FILE</code></dt>
+<dd>Read configuration from FILE.</dd></dl>
 <h2>Files</h2>
 <p>/etc/clamav-milter.conf</p>
 <h2>Author</h2>

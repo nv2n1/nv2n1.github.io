@@ -14,15 +14,15 @@ description: "w1_touch_block – Touches a series of bytes."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>pointer to the data to write</dl>
+<dd>pointer to the data to write</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>the number of bytes to write</dl>
+<dd>the number of bytes to write</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

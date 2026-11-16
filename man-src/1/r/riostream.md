@@ -28,21 +28,21 @@ riostream[-s server_address][-b bind_address][-B buffer_size]
 
 <dl>
 <dt>-s server_address
-<dd> The network name or IP address of the server system listening for connections. The used name or address must route over an RDMA device. This option must be specified by the client.
-<dt>-b bind_address
-<dd> The local network address to bind to.
-<dt>-B buffer_size
-<dd> Indicates the size of the send and receive network buffers.
-<dt>-I iterations
-<dd> The number of times that the specified number of messages will be exchanged between the client and server. (default 1000)
-<dt>-C transfer_count
-<dd> The number of messages to transfer from the client to the server and back again on each iteration. (default 1)
-<dt>-S transfer_size
-<dd> The size of each send transfer, in bytes. (default 1000) If 'all' is specified, rstream will run a series of tests of various sizes.
-<dt>-p server_port
-<dd> The server's port number.
-<dt>-T test_option
-<dd> Specifies test parameters. Available options are:</dl>
+</dt><dd> The network name or IP address of the server system listening for connections. The used name or address must route over an RDMA device. This option must be specified by the client.
+</dd><dt>-b bind_address
+</dt><dd> The local network address to bind to.
+</dd><dt>-B buffer_size
+</dt><dd> Indicates the size of the send and receive network buffers.
+</dd><dt>-I iterations
+</dt><dd> The number of times that the specified number of messages will be exchanged between the client and server. (default 1000)
+</dd><dt>-C transfer_count
+</dt><dd> The number of messages to transfer from the client to the server and back again on each iteration. (default 1)
+</dd><dt>-S transfer_size
+</dt><dd> The size of each send transfer, in bytes. (default 1000) If 'all' is specified, rstream will run a series of tests of various sizes.
+</dd><dt>-p server_port
+</dt><dd> The server's port number.
+</dd><dt>-T test_option
+</dt><dd> Specifies test parameters. Available options are:</dd></dl>
  
 
  a | async - uses asynchronous operation (e.g. select / poll) 

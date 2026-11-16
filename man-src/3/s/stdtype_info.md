@@ -10,7 +10,6 @@ description: "std::type_info – std::type_info"
 <p>std::type_info &#8211; std::type_info</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;typeinfo&gt;
-
 class type_info;</code></pre>
 <p>The class type_info holds implementation-specific information about a type, including the name of the type and means to compare two types for equality or collating order. This is the class returned by the typeid operator.<br />
 The type_info class is neither CopyConstructible nor CopyAssignable. </p>

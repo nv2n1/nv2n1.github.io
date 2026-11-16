@@ -31,9 +31,9 @@ description: "hwlocality_helper_ancestors – Looking at Ancestor and Child Obje
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function assumes that both obj and subtree_root have a cpuset.</dl>
+</dt><dd> This function assumes that both obj and subtree_root have a cpuset.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

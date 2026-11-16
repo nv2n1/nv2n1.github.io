@@ -23,56 +23,56 @@ description: "ifup – bring a network interface up"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd>If given to <code>ifup</code>, affect all interfaces marked <code>auto</code>. Interfaces are brought up in the order in which they are defined in <i>/etc/network/interfaces</i>. Combined with <code>&#8211;allow</code>, acts on all interfaces of a specified class instead. If given to <code>ifdown</code>, affect all defined interfaces. Interfaces are brought down in the order in which they are currently listed in the state file. Only interfaces defined in <i>/etc/network/interfaces</i> will be brought down.</p>
-<dt><code>&#8211;force</code></p>
-<dd>Force configuration or deconfiguration of the interface.</p>
-<dt><code>&#8211;ignore-errors</code></p>
-<dd>If any of the commands of scripts fails, continue.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>&#8211;allow=</code><i>CLASS</i></p>
-<dd>Only allow interfaces listed in an <i>allow-CLASS</i> line in <i>/etc/network/interfaces</i> to be acted upon.</p>
-<dt><code>-i</code> <i>FILE</i>, <code>&#8211;interfaces=</code><i>FILE</i></p>
-<dd>Read interface definitions from <i>FILE</i> instead of from <i>/etc/network/interfaces</i>.</p>
-<dt><code>&#8211;state-dir=</code><i>DIR</i></p>
-<dd>Keep interface state in <i>DIR</i> instead of in <i>/run/network</i>.</p>
-<dt><code>-X</code><i> PATTERN</i>, <code>&#8211;exclude=</code><i>PATTERN</i></p>
-<dd>Exclude interfaces from the list of interfaces to operate on by the <i>PATTERN</i>. <i>PATTERN</i> uses a usual shell glob syntax. If shell wildcards are not used, it must match the exact interface name. This option may be specified multiple times resulting in more than one pattern being excluded.</p>
-<dt><code>-o</code><i> OPTION</i><code>=</code><i>VALUE</i></p>
-<dd>Set <i>OPTION</i> to <i>VALUE</i> as though it were in <i>/etc/network/interfaces</i>.</p>
-<dt><code>-n</code>, <code>&#8211;no-act</code></p>
-<dd>Don&#8217;t configure any interfaces or run any &quot;up&quot; or &quot;down&quot; commands.</p>
-<dt><code>&#8211;no-mappings</code></p>
-<dd>Don&#8217;t run any mappings. See <code><a href="/docs/linux/man/5-interfaces/">interfaces</a></code>(5) for more information about the mapping feature.</p>
-<dt><code>&#8211;no-scripts</code></p>
-<dd>Don&#8217;t run any scripts under /etc/network/if-*.d/</p>
-<dt><code>&#8211;no-loopback</code></p>
-<dd>Disable special handling of the loopback interface. By default, the loopback interface (<i>lo</i> on Linux) is predefined internally as an auto interface, so it&#8217;s brought up on <code>ifup -a</code> automatically. In the case the loopback device is redefined by user, the interface is configured just once anyway. If, however, another interface is also defined as loopback, it&#8217;s configured as usual. Specifying this option disables this behaviour, so the loopback interface won&#8217;t be configured automatically.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show copyright and version information.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Show commands as they are executed.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd>For <code>ifquery</code>, list all the interfaces which match the specified class. If no class specified, prints all the interfaces listed as <code>auto</code>.</p>
-<dt><code>&#8211;state</code></p>
-<dd>For <code>ifquery</code>, dump the state of the interfaces. When no interfaces specified, lists all interfaces brought up together with logical interfaces assigned to them and exits with a status code indicating success. If one or more interfaces specified, display state of these interfaces only; successful code is returned if all of interfaces given as arguments are up. Otherwise, 0 is returned.</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd>If given to <code>ifup</code>, affect all interfaces marked <code>auto</code>. Interfaces are brought up in the order in which they are defined in <i>/etc/network/interfaces</i>. Combined with <code>&#8211;allow</code>, acts on all interfaces of a specified class instead. If given to <code>ifdown</code>, affect all defined interfaces. Interfaces are brought down in the order in which they are currently listed in the state file. Only interfaces defined in <i>/etc/network/interfaces</i> will be brought down.</dd>
+<dt><code>&#8211;force</code></dt>
+<dd>Force configuration or deconfiguration of the interface.</dd>
+<dt><code>&#8211;ignore-errors</code></dt>
+<dd>If any of the commands of scripts fails, continue.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>&#8211;allow=</code><i>CLASS</i></dt>
+<dd>Only allow interfaces listed in an <i>allow-CLASS</i> line in <i>/etc/network/interfaces</i> to be acted upon.</dd>
+<dt><code>-i</code> <i>FILE</i>, <code>&#8211;interfaces=</code><i>FILE</i></dt>
+<dd>Read interface definitions from <i>FILE</i> instead of from <i>/etc/network/interfaces</i>.</dd>
+<dt><code>&#8211;state-dir=</code><i>DIR</i></dt>
+<dd>Keep interface state in <i>DIR</i> instead of in <i>/run/network</i>.</dd>
+<dt><code>-X</code><i> PATTERN</i>, <code>&#8211;exclude=</code><i>PATTERN</i></dt>
+<dd>Exclude interfaces from the list of interfaces to operate on by the <i>PATTERN</i>. <i>PATTERN</i> uses a usual shell glob syntax. If shell wildcards are not used, it must match the exact interface name. This option may be specified multiple times resulting in more than one pattern being excluded.</dd>
+<dt><code>-o</code><i> OPTION</i><code>=</code><i>VALUE</i></dt>
+<dd>Set <i>OPTION</i> to <i>VALUE</i> as though it were in <i>/etc/network/interfaces</i>.</dd>
+<dt><code>-n</code>, <code>&#8211;no-act</code></dt>
+<dd>Don&#8217;t configure any interfaces or run any &quot;up&quot; or &quot;down&quot; commands.</dd>
+<dt><code>&#8211;no-mappings</code></dt>
+<dd>Don&#8217;t run any mappings. See <code><a href="/docs/linux/man/5-interfaces/">interfaces</a></code>(5) for more information about the mapping feature.</dd>
+<dt><code>&#8211;no-scripts</code></dt>
+<dd>Don&#8217;t run any scripts under /etc/network/if-*.d/</dd>
+<dt><code>&#8211;no-loopback</code></dt>
+<dd>Disable special handling of the loopback interface. By default, the loopback interface (<i>lo</i> on Linux) is predefined internally as an auto interface, so it&#8217;s brought up on <code>ifup -a</code> automatically. In the case the loopback device is redefined by user, the interface is configured just once anyway. If, however, another interface is also defined as loopback, it&#8217;s configured as usual. Specifying this option disables this behaviour, so the loopback interface won&#8217;t be configured automatically.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show copyright and version information.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Show commands as they are executed.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>For <code>ifquery</code>, list all the interfaces which match the specified class. If no class specified, prints all the interfaces listed as <code>auto</code>.</dd>
+<dt><code>&#8211;state</code></dt>
+<dd>For <code>ifquery</code>, dump the state of the interfaces. When no interfaces specified, lists all interfaces brought up together with logical interfaces assigned to them and exits with a status code indicating success. If one or more interfaces specified, display state of these interfaces only; successful code is returned if all of interfaces given as arguments are up. Otherwise, 0 is returned.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt><code>ifup -a</code></p>
-<dd>Bring up all the interfaces defined with <i>auto</i> in <i>/etc/network/interfaces</i></p>
-<dt><code>ifup eth0</code></p>
-<dd>Bring up interface <code>eth0</code></p>
-<dt><code>ifup eth0=home</code></p>
-<dd>Bring up interface <code>eth0</code> as logical interface <code>home</code></p>
-<dt><code>ifdown -a</code></p>
-<dd>Bring down all interfaces that are currently up.</p>
-<dt><code>ifquery -l</code></p>
-<dd>Print names of all interfaces specified with the <code>auto</code> keyword.</p>
-<dt><code>ifquery -l &#8211;allow=hotplug</code></p>
-<dd>Print names of all interfaces specified with the <code>allow-hotplug</code> keyword.</p>
-<dt><code>ifquery eth0</code></p>
-<dd>Display the interface options as specified in the <code>ifupdown</code> configuration. Each key-value pair is printed out on individual line using &quot;<code>: </code>&quot; as separator.</dl>
+<dt><code>ifup -a</code></dt>
+<dd>Bring up all the interfaces defined with <i>auto</i> in <i>/etc/network/interfaces</i></dd>
+<dt><code>ifup eth0</code></dt>
+<dd>Bring up interface <code>eth0</code></dd>
+<dt><code>ifup eth0=home</code></dt>
+<dd>Bring up interface <code>eth0</code> as logical interface <code>home</code></dd>
+<dt><code>ifdown -a</code></dt>
+<dd>Bring down all interfaces that are currently up.</dd>
+<dt><code>ifquery -l</code></dt>
+<dd>Print names of all interfaces specified with the <code>auto</code> keyword.</dd>
+<dt><code>ifquery -l &#8211;allow=hotplug</code></dt>
+<dd>Print names of all interfaces specified with the <code>allow-hotplug</code> keyword.</dd>
+<dt><code>ifquery eth0</code></dt>
+<dd>Display the interface options as specified in the <code>ifupdown</code> configuration. Each key-value pair is printed out on individual line using &quot;<code>: </code>&quot; as separator.</dd></dl>
 <h2>Notes</h2>
 <p><code>ifup</code>, <code>ifdown</code>, and <code>ifquery</code> are actually the same program called by different names. </p>
 <p> The program does not configure network interfaces directly; it runs low level utilities such as <code>ip</code> to do its dirty work. </p>
@@ -80,10 +80,10 @@ description: "ifup – bring a network interface up"
 <p> During interface deconfiguration, <code>ifdown</code> ignores errors the same way as if <code>&#8211;ignore-errors</code> was specified.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/network/interfaces</i></p>
-<dd>definitions of network interfaces See <code><a href="/docs/linux/man/5-interfaces/">interfaces</a></code>(5) for more information.</p>
-<dt><i>/run/network/ifstate</i></p>
-<dd>current state of network interfaces</dl>
+<dt><i>/etc/network/interfaces</i></dt>
+<dd>definitions of network interfaces See <code><a href="/docs/linux/man/5-interfaces/">interfaces</a></code>(5) for more information.</dd>
+<dt><i>/run/network/ifstate</i></dt>
+<dd>current state of network interfaces</dd></dl>
 <h2>Concurrency</h2>
 <p>Ifupdown uses per-interface locking to ensure that concurrent ifup and ifdown calls to the same interface are run in serial. However, calls to different interfaces will be able to run in parallel.</p>
 <h2>Exit Status</h2>

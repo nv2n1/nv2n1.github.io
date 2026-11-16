@@ -63,7 +63,6 @@ description: "zbeacon – LAN discovery and presence"
 //  This is the zbeacon constructor as a zactor_fn:
 CZMQ_EXPORT void
 zbeacon(zsock_t *pipe, void *unused);
-
 //  Self test of this class
 CZMQ_EXPORT void
 zbeacon_test(bool verbose);</code></pre>
@@ -78,7 +77,6 @@ zactor_t *speaker = zactor_new(zbeacon, NULL);
 assert(speaker);
 if (verbose)
     zstr_sendx(speaker, &quot;VERBOSE&quot;, NULL);
-
 zsock_send(speaker, &quot;si&quot;, &quot;CONFIGURE&quot;, 9999);
 char *hostname = zstr_recv(speaker);
 if (!*hostname) {
@@ -89,7 +87,6 @@ if (!*hostname) {
     return;
 }
 free(hostname);
-
 //  Create listener beacon on port 9999 to lookup service
 zactor_t *listener = zactor_new(zbeacon, NULL);
 assert(listener);
@@ -99,13 +96,11 @@ zsock_send(listener, &quot;si&quot;, &quot;CONFIGURE&quot;, 9999);
 hostname = zstr_recv(listener);
 assert(*hostname);
 free(hostname);
-
 //  We will broadcast the magic value 0xCAFE
 byte announcement[2] = {0xCA, 0xFE};
 zsock_send(speaker, &quot;sbi&quot;, &quot;PUBLISH&quot;, announcement, 2, 100);
 //  We will listen to anything (empty subscription)
 zsock_send(listener, &quot;sb&quot;, &quot;SUBSCRIBE&quot;, &quot;&quot;, 0);
-
 //  Wait for at most 1/2 second if there's no broadcasting
 zsock_set_rcvtimeo(listener, 500);
 char *ipaddress = zstr_recv(listener);
@@ -120,7 +115,6 @@ if (ipaddress) {
 }
 zactor_destroy(&amp;listener);
 zactor_destroy(&amp;speaker);
-
 //  Test subscription filter using a 3-node setup
 zactor_t *node1 = zactor_new(zbeacon, NULL);
 assert(node1);
@@ -128,26 +122,22 @@ zsock_send(node1, &quot;si&quot;, &quot;CONFIGURE&quot;, 5670);
 hostname = zstr_recv(node1);
 assert(*hostname);
 free(hostname);
-
 zactor_t *node2 = zactor_new(zbeacon, NULL);
 assert(node2);
 zsock_send(node2, &quot;si&quot;, &quot;CONFIGURE&quot;, 5670);
 hostname = zstr_recv(node2);
 assert(*hostname);
 free(hostname);
-
 zactor_t *node3 = zactor_new(zbeacon, NULL);
 assert(node3);
 zsock_send(node3, &quot;si&quot;, &quot;CONFIGURE&quot;, 5670);
 hostname = zstr_recv(node3);
 assert(*hostname);
 free(hostname);
-
 zsock_send(node1, &quot;sbi&quot;, &quot;PUBLISH&quot;, &quot;NODE/1&quot;, 6, 250);
 zsock_send(node2, &quot;sbi&quot;, &quot;PUBLISH&quot;, &quot;NODE/2&quot;, 6, 250);
 zsock_send(node3, &quot;sbi&quot;, &quot;PUBLISH&quot;, &quot;RANDOM&quot;, 6, 250);
 zsock_send(node1, &quot;sb&quot;, &quot;SUBSCRIBE&quot;, &quot;NODE&quot;, 4);
-
 //  Poll on three API sockets at once
 zpoller_t *poller = zpoller_new(node1, node2, node3, NULL);
 assert(poller);
@@ -167,15 +157,12 @@ while (zclock_mono() &lt; stop_at) {
     }
 }
 zpoller_destroy(&amp;poller);
-
 //  Stop listening
 zstr_sendx(node1, &quot;UNSUBSCRIBE&quot;, NULL);
-
 //  Stop all node broadcasts
 zstr_sendx(node1, &quot;SILENCE&quot;, NULL);
 zstr_sendx(node2, &quot;SILENCE&quot;, NULL);
 zstr_sendx(node3, &quot;SILENCE&quot;, NULL);
-
 //  Destroy the test nodes
 zactor_destroy(&amp;node1);
 zactor_destroy(&amp;node2);
@@ -190,7 +177,8 @@ zactor_destroy(&amp;node3);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

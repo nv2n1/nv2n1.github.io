@@ -25,7 +25,7 @@ void free_index(IndexPtr idx); <code>SynsetPtr traceptrs_ds(SynsetPtr synptr, in
 <code>2</code> VERB
 <code>3</code> ADJECTIVE
 <code>4</code> ADVERB</pre>
-</dl>
+</dd></dl>
 <p> <code>findtheinfo()</code> is the primary search algorithm for use with database interface applications. Search results are automatically formatted, and a pointer to the text buffer is returned. All searches listed in <code>WNHOME/include/wn.h</code> can be done by <code>findtheinfo()</code>. <code>findtheinfo_ds()</code> can be used to perform most of the searches, with results returned in a linked list data structure. This is for use with applications that need to analyze the search results rather than just display them. </p>
 <p> Both functions are passed the same arguments: <i>searchstr</i> is the word or collocation to search for; <i>pos</i> indicates the syntactic category to search in; <i>ptr_type</i> is one of the valid search types for <i>searchstr</i> in <i>pos</i>. (Available searches can be obtained by calling <code>is_defined()</code> described below.) <i>sense_num</i> should be <font SIZE="-1"><code>ALLSENSES</code></font> if the search is to be done on all senses of <i>searchstr</i> in <i>pos</i>, or a positive integer indicating which sense to search. </p>
 <p> <code>findtheinfo_ds()</code> returns a linked list data structures representing synsets. Senses are linked through the <i>nextss</i> field of a <code>Synset</code> data structure. For each sense, synsets that match the search specified with <i>ptr_type</i> are linked through the <i>ptrlist</i> field. See <font SIZE="-1"><code>&quot;Synset Navigation&quot;,</code></font> below, for detailed information on the linked lists returned. </p>
@@ -362,7 +362,7 @@ FRAMES
 RELATIVES
 WNGREP
 OVERVIEW</pre>
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>Applications that use WordNet and/or the morphological functions must call <code>wninit()</code> at the start of the program. See <code><a href="/docs/linux/man/3-wnutil/">wnutil</a></code>(3) for more information. In all function calls, <i>searchstr</i> may be either a word or a collocation formed by joining individual words with underscore characters (<code>_</code>). The <code>SearchResults</code> structure defines fields in the <i>wnresults</i> global variable that are set by the various search functions. This is a way to get additional information, such as the number of senses the word has, from the search functions. The <i>searchds</i> field is set by <code>findtheinfo_ds()</code>. The <i>pos</i> passed to <code>traceptrs_ds()</code> is not used. </p>
 <h2>See Also</h2>

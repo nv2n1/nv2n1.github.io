@@ -53,120 +53,120 @@ description: "QwtScaleMap –"
 <p>Transform an paint device value into a value in the interval of the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> Value relative to the coordinates of the paint device</dl>
+<dd><i>p</i> Value relative to the coordinates of the paint device</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Transformed value</dl>
+<dd>Transformed value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <h3>QRectF QwtScaleMap::invTransform (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) [static]</h3>
 <p>Transform a rectangle from paint to scale coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xMap</i> X map<br />
  <i>yMap</i> Y map<br />
- <i>rect</i> Rectangle in paint coordinates</dl>
+ <i>rect</i> Rectangle in paint coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle in scale coordinates</dl>
+<dd>Rectangle in scale coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <h3>QPointF QwtScaleMap::invTransform (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QPointF &amp;pos) [static]</h3>
 <p>Transform a rectangle from paint to scale coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xMap</i> X map<br />
  <i>yMap</i> Y map<br />
- <i>pos</i> Position in paint coordinates</dl>
+ <i>pos</i> Position in paint coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position in scale coordinates</dl>
+<dd>Position in scale coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <h3>bool QwtScaleMap::isInverting () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when ( <code>p1()</code> &lt; <code>p2()</code> ) != ( <code>s1()</code> &lt; <code>s2()</code> )</dl>
+<dd>True, when ( <code>p1()</code> &lt; <code>p2()</code> ) != ( <code>s1()</code> &lt; <code>s2()</code> )</dd></dl>
 <h3>double QwtScaleMap::p1 () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>First border of the paint interval</dl>
+<dd>First border of the paint interval</dd></dl>
 <h3>double QwtScaleMap::p2 () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Second border of the paint interval</dl>
+<dd>Second border of the paint interval</dd></dl>
 <h3>double QwtScaleMap::pDist () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>qwtAbs(<code>p2()</code> &#8211; <code>p1()</code>)</dl>
+<dd>qwtAbs(<code>p2()</code> &#8211; <code>p1()</code>)</dd></dl>
 <h3>double QwtScaleMap::s1 () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>First border of the scale interval</dl>
+<dd>First border of the scale interval</dd></dl>
 <h3>double QwtScaleMap::s2 () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Second border of the scale interval</dl>
+<dd>Second border of the scale interval</dd></dl>
 <h3>double QwtScaleMap::sDist () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>qwtAbs(<code>s2()</code> &#8211; <code>s1()</code>)</dl>
+<dd>qwtAbs(<code>s2()</code> &#8211; <code>s1()</code>)</dd></dl>
 <h3>void QwtScaleMap::setPaintInterval (doublep1, doublep2)</h3>
 <p>Specify the borders of the paint device interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>p1</i> first border<br />
- <i>p2</i> second border</dl>
+ <i>p2</i> second border</dd></dl>
 <h3>void QwtScaleMap::setScaleInterval (doubles1, doubles2)</h3>
 <p>Specify the borders of the scale interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>s1</i> first border<br />
- <i>s2</i> second border</dl>
+ <i>s2</i> second border</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>scales might be aligned to transformation depending boundaries</dl>
+<dd>scales might be aligned to transformation depending boundaries</dd></dl>
 <h3>void QwtScaleMap::setTransformation (<code>QwtTransform</code> *transform)</h3>
 <p>Initialize the map with a transformation</p>
 <h3>double QwtScaleMap::transform (doubles) const [inline]</h3>
 <p>Transform a point related to the scale interval into an point related to the interval of the paint device </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>s</i> Value relative to the coordinates of the scale</dl>
+<dd><i>s</i> Value relative to the coordinates of the scale</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Transformed value</dl>
+<dd>Transformed value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <h3>QRectF QwtScaleMap::transform (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) [static]</h3>
 <p>Transform a rectangle from scale to paint coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xMap</i> X map<br />
  <i>yMap</i> Y map<br />
- <i>rect</i> Rectangle in scale coordinates</dl>
+ <i>rect</i> Rectangle in scale coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle in paint coordinates</dl>
+<dd>Rectangle in paint coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <h3>QPointF QwtScaleMap::transform (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QPointF &amp;pos) [static]</h3>
 <p>Transform a point from scale to paint coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xMap</i> X map<br />
  <i>yMap</i> Y map<br />
- <i>pos</i> Position in scale coordinates</dl>
+ <i>pos</i> Position in scale coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position in paint coordinates</dl>
+<dd>Position in paint coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

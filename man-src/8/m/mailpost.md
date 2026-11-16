@@ -21,32 +21,32 @@ description: "mailpost – Feed an e-mail message into a newsgroup"
 <p> Instead of <i>/var/tmp</i>, the mail spool directory can be specified, or any other directory where the <code>mailpost</code> process has write access.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code> <i>addr</i></p>
-<dd>If the <code>-a</code> flag is used, the value given is added to the article as an Approved: header.</p>
-<dt><code>-b</code> <i>database</i></p>
-<dd>If the <code>-b</code> flag is used, then it defines the location of the persistent database used to store the Message-IDs of articles sent on. This is to prevent articles looping around if a news-to-mail gateway sends them back here. This option may be required if the <code>mailpost</code> process does not have write access to the news temporary directory. The default value is <i>pathtmp</i> as set in <i>inn.conf</i>.</p>
-<dt><code>-c</code> <i>wait-time</i></p>
-<dd>The <code>-c</code> flag indicates a length of time to sleep before posting. If duplicate messages are received in this interval (by any instance of <code>mailpost</code> using the same database), the article is only posted once, but with Newsgroups: header modified to crosspost the article to all indicated groups. The units for <i>wait-time</i> are seconds; a reasonable value may be anywhere from tens to hundreds of seconds, or even higher, depending on how long mail can be delayed on its way to your system.</p>
-<dt><code>-d</code> <i>distribution</i></p>
-<dd>If the <code>-d</code> flag is used, the value given is added to the article as a Distribution: header.</p>
-<dt><code>-f</code> <i>addr</i></p>
-<dd>The <code>-f</code> flag is a synonym for the <code>-r</code> flag.</p>
-<dt><code>-h</code></p>
-<dd>Print usage information and exit.</p>
-<dt><code>-m</code> <i>mailing-list</i></p>
-<dd>If the <code>-m</code> flag is used, the value given is added to the article in a Mailing-List: header, if such a header doesn&#8217;t already exist.</p>
-<dt><code>-n</code></p>
-<dd>If the <code>-n</code> flag is used, neither an article is posted nor a mail is sent in case an error occurs. Everything is written to the standard output.</p>
-<dt><code>-o</code> <i>output-command</i></p>
-<dd>Specifies the program to which the resulting article processed by <code>mailpost</code> should be sent. For debugging purpose, <tt>&quot;-o cat&quot;</tt> can be used. The default value is <tt>&quot;inews -S -h&quot;</tt>.</p>
-<dt><code>-p</code> <i>port</i></p>
-<dd>Specifies the port on which <code>nnrpd</code> is listening, used for article posting. If given, <code>-p</code> is passed along to <code>inews</code>.</p>
-<dt><code>-r</code> <i>addr</i></p>
-<dd>A heuristic is used to determine a reasonable value for the Path: header. The <code>-r</code> flag indicates what to use if no other value can be determined.</p>
-<dt><code>-t</code> <i>tempdir</i></p>
-<dd>If the <code>-t</code> flag is used, then it defines the location of the directory to use to temporarily store error messages that are sent to the newsmaster. This option may be required if the default value refers to a path that does not exist or the <code>mailpost</code> process does not have write access to. Two paths are tried by default: <i>pathtmp</i> as set in <i>inn.conf</i>, and then <i>/var/tmp</i> if <i>pathtmp</i> is not writable.</p>
-<dt><code>-x</code> <i>header</i>[<code>:</code><i>header</i>&#8230;]</p>
-<dd>A colon-separated list of additional headers which should be treated as known headers; these headers will be passed through to <code>inews</code> without having <tt>&quot;X-&quot;</tt> prepended. </p>
+<dt><code>-a</code> <i>addr</i></dt>
+<dd>If the <code>-a</code> flag is used, the value given is added to the article as an Approved: header.</dd>
+<dt><code>-b</code> <i>database</i></dt>
+<dd>If the <code>-b</code> flag is used, then it defines the location of the persistent database used to store the Message-IDs of articles sent on. This is to prevent articles looping around if a news-to-mail gateway sends them back here. This option may be required if the <code>mailpost</code> process does not have write access to the news temporary directory. The default value is <i>pathtmp</i> as set in <i>inn.conf</i>.</dd>
+<dt><code>-c</code> <i>wait-time</i></dt>
+<dd>The <code>-c</code> flag indicates a length of time to sleep before posting. If duplicate messages are received in this interval (by any instance of <code>mailpost</code> using the same database), the article is only posted once, but with Newsgroups: header modified to crosspost the article to all indicated groups. The units for <i>wait-time</i> are seconds; a reasonable value may be anywhere from tens to hundreds of seconds, or even higher, depending on how long mail can be delayed on its way to your system.</dd>
+<dt><code>-d</code> <i>distribution</i></dt>
+<dd>If the <code>-d</code> flag is used, the value given is added to the article as a Distribution: header.</dd>
+<dt><code>-f</code> <i>addr</i></dt>
+<dd>The <code>-f</code> flag is a synonym for the <code>-r</code> flag.</dd>
+<dt><code>-h</code></dt>
+<dd>Print usage information and exit.</dd>
+<dt><code>-m</code> <i>mailing-list</i></dt>
+<dd>If the <code>-m</code> flag is used, the value given is added to the article in a Mailing-List: header, if such a header doesn&#8217;t already exist.</dd>
+<dt><code>-n</code></dt>
+<dd>If the <code>-n</code> flag is used, neither an article is posted nor a mail is sent in case an error occurs. Everything is written to the standard output.</dd>
+<dt><code>-o</code> <i>output-command</i></dt>
+<dd>Specifies the program to which the resulting article processed by <code>mailpost</code> should be sent. For debugging purpose, <tt>&quot;-o cat&quot;</tt> can be used. The default value is <tt>&quot;inews -S -h&quot;</tt>.</dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd>Specifies the port on which <code>nnrpd</code> is listening, used for article posting. If given, <code>-p</code> is passed along to <code>inews</code>.</dd>
+<dt><code>-r</code> <i>addr</i></dt>
+<dd>A heuristic is used to determine a reasonable value for the Path: header. The <code>-r</code> flag indicates what to use if no other value can be determined.</dd>
+<dt><code>-t</code> <i>tempdir</i></dt>
+<dd>If the <code>-t</code> flag is used, then it defines the location of the directory to use to temporarily store error messages that are sent to the newsmaster. This option may be required if the default value refers to a path that does not exist or the <code>mailpost</code> process does not have write access to. Two paths are tried by default: <i>pathtmp</i> as set in <i>inn.conf</i>, and then <i>/var/tmp</i> if <i>pathtmp</i> is not writable.</dd>
+<dt><code>-x</code> <i>header</i>[<code>:</code><i>header</i>&#8230;]</dt>
+<dd>A colon-separated list of additional headers which should be treated as known headers; these headers will be passed through to <code>inews</code> without having <tt>&quot;X-&quot;</tt> prepended. </dd>
 <p> Known headers are: </p>
 <pre> Approved
  Content-*
@@ -63,10 +63,10 @@ description: "mailpost – Feed an e-mail message into a newsgroup"
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/mailpost</p>
-<dd>The Perl script itself used to feed an e-mail message to a newsgroup.</p>
-<dt><i>pathtmp</i>/mailpost-msgid.dir and <i>pathtmp</i>/mailpost-msgid.pag</p>
-<dd>The default database files which record previously seen Message-IDs.</dl>
+<dt><i>pathbin</i>/mailpost</dt>
+<dd>The Perl script itself used to feed an e-mail message to a newsgroup.</dd>
+<dt><i>pathtmp</i>/mailpost-msgid.dir and <i>pathtmp</i>/mailpost-msgid.pag</dt>
+<dd>The default database files which record previously seen Message-IDs.</dd></dl>
 <h2>History</h2>
 <p>Written by Paul Vixie long ago and then hacked up by James Brister for <font SIZE="-1">INN</font> integration. </p>
 <p> <tt>$Id:</tt> mailpost.in 9831 2015-04-23 19:07:39Z iulius $</p>

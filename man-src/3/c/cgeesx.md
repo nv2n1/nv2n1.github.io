@@ -19,7 +19,7 @@ description: "cgeesx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CGEESX computes for an N-by-N complex nonsymmetric matrix A, the
  eigenvalues, the Schur form T, and, optionally, the matrix of Schur
@@ -36,11 +36,11 @@ description: "cgeesx.f –"
  these quantities are called s and sep respectively).
  A complex matrix is in Schur form if it is upper triangular.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVS</i> </p>
+</dt><dd> <i>JOBVS</i> </dd>
 <pre>
           JOBVS is CHARACTER*1
           = 'N': Schur vectors are not computed;
@@ -178,14 +178,14 @@ if JOBVS
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 238 of file cgeesx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

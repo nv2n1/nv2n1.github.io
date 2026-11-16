@@ -16,11 +16,11 @@ void bson_oid_init_from_string(bson_oid_t *oid,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>str</code></p>
-<dd> A string containing a hex encoded version of the oid.</dl>
+<dt><code>str</code></dt>
+<dd> A string containing a hex encoded version of the oid.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Parses the string containing hex encoded oid and initialize the bytes in <code>oid</code> \&amp;. </p>
 <h2>EXAMPLE</h2>

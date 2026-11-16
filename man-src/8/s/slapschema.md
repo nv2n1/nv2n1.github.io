@@ -16,40 +16,40 @@ description: "slapschema – SLAPD in-database schema checking utility"
 <p> The entry records are checked in database order, not superior first order. The entry records will be checked considering all (user and operational) attributes stored in the database. Dynamically generated attributes (such as subschemaSubentry) will not be considered.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code><i>&nbsp;<wbr>filter</i></p>
-<dd>Only check entries matching the asserted filter. For example </p>
+<dt><code>-a</code><i>&nbsp;<wbr>filter</i></dt>
+<dd>Only check entries matching the asserted filter. For example </dd>
 <p> slapschema -a \<br />
 &nbsp;<wbr>&quot;(!(entryDN:dnSubtreeMatch:=ou=People,dc=example,dc=com))&quot; </p>
 <p> will check all but the &quot;ou=People,dc=example,dc=com&quot; subtree of the &quot;dc=example,dc=com&quot; database. Deprecated; use <code>-H</code> <i><a href="ldap:///???(filter)">ldap:///???(filter)</a></i> instead.</p>
-<dt><code>-b</code><i>&nbsp;<wbr>suffix</i></p>
-<dd>Use the specified <i>suffix</i> to determine which database to check. The <code>-b</code> cannot be used in conjunction with the <code>-n</code> option.</p>
-<dt><code>-c</code></p>
-<dd>Enable continue (ignore errors) mode.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>debug-level</i></p>
-<dd>Enable debugging messages as defined by the specified <i>debug-level</i>; see <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) for details.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>slapd.conf</i></p>
-<dd>Specify an alternative <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file.</p>
-<dt><code>-F</code><i>&nbsp;<wbr>confdir</i></p>
-<dd>specify a config directory. If both <code>-f</code> and <code>-F</code> are specified, the config file will be read and converted to config directory format and written to the specified directory. If neither option is specified, an attempt to read the default config directory will be made before trying to use the default config file. If a valid config directory exists then the default config file is ignored.</p>
-<dt><code>-g</code></p>
-<dd>disable subordinate gluing. Only the specified database will be processed, and not its glued subordinates (if any).</p>
-<dt><code>-H &nbsp;<wbr>URI</code></p>
-<dd>use dn, scope and filter from URI to only handle matching entries.</p>
-<dt><code>-l</code><i>&nbsp;<wbr>error-file</i></p>
-<dd>Write errors to specified file instead of standard output.</p>
-<dt><code>-n</code><i>&nbsp;<wbr>dbnum</i></p>
-<dd>Check the <i>dbnum</i>-th database listed in the configuration file. The config database <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), is always the first database, so use <code>-n 0</code> </p>
+<dt><code>-b</code><i>&nbsp;<wbr>suffix</i></dt>
+<dd>Use the specified <i>suffix</i> to determine which database to check. The <code>-b</code> cannot be used in conjunction with the <code>-n</code> option.</dd>
+<dt><code>-c</code></dt>
+<dd>Enable continue (ignore errors) mode.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debug-level</i></dt>
+<dd>Enable debugging messages as defined by the specified <i>debug-level</i>; see <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) for details.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>slapd.conf</i></dt>
+<dd>Specify an alternative <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file.</dd>
+<dt><code>-F</code><i>&nbsp;<wbr>confdir</i></dt>
+<dd>specify a config directory. If both <code>-f</code> and <code>-F</code> are specified, the config file will be read and converted to config directory format and written to the specified directory. If neither option is specified, an attempt to read the default config directory will be made before trying to use the default config file. If a valid config directory exists then the default config file is ignored.</dd>
+<dt><code>-g</code></dt>
+<dd>disable subordinate gluing. Only the specified database will be processed, and not its glued subordinates (if any).</dd>
+<dt><code>-H &nbsp;<wbr>URI</code></dt>
+<dd>use dn, scope and filter from URI to only handle matching entries.</dd>
+<dt><code>-l</code><i>&nbsp;<wbr>error-file</i></dt>
+<dd>Write errors to specified file instead of standard output.</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>dbnum</i></dt>
+<dd>Check the <i>dbnum</i>-th database listed in the configuration file. The config database <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), is always the first database, so use <code>-n 0</code> </dd>
 <p> The <code>-n</code> cannot be used in conjunction with the <code>-b</code> option.</p>
-<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</p>
-<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dl>
+<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</dt>
+<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dd></dl>
 <pre> syslog=&lt;subsystems&gt; (see `-s' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
  syslog-level=&lt;level&gt; (see `-S' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
  syslog-user=&lt;user&gt; (see `-l' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))</pre>
 <dl>
-<dt><code>-s</code><i>&nbsp;<wbr>subtree-dn</i></p>
-<dd>Only check entries in the subtree specified by this DN. Implies <code>-b</code> <i>subtree-dn</i> if no <code>-b</code> nor <code>-n</code> option is given. Deprecated; use <code>-H</code> <i><a href="ldap:///subtree-dn">ldap:///subtree-dn</a></i> instead.</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose mode.</dl>
+<dt><code>-s</code><i>&nbsp;<wbr>subtree-dn</i></dt>
+<dd>Only check entries in the subtree specified by this DN. Implies <code>-b</code> <i>subtree-dn</i> if no <code>-b</code> nor <code>-n</code> option is given. Deprecated; use <code>-H</code> <i><a href="ldap:///subtree-dn">ldap:///subtree-dn</a></i> instead.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose mode.</dd></dl>
 <h2>Limitations</h2>
 <p>For some backend types, your <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) should not be running (at least, not in read-write mode) when you do this to ensure consistency of the database. It is always safe to run <code>slapschema</code> with the <code><a href="/docs/linux/man/5-slapd-bdb/">slapd-bdb</a></code>(5), <code><a href="/docs/linux/man/5-slapd-hdb/">slapd-hdb</a></code>(5), and <code><a href="/docs/linux/man/5-slapd-null/">slapd-null</a></code>(5) backends.</p>
 <h2>Examples</h2>

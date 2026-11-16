@@ -11,8 +11,6 @@ description: "zspsvx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zspsvx (FACT, UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)
-
-
 ZSPSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zspsvx (characterFACT, characterUPLO, integerN, integerNRHS, complex*16, dimension( * )AP, complex*16, dimension( * )AFP, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>
@@ -26,7 +24,7 @@ ZSPSVX computes the solution to system of linear equations A * X = B for OTHER m
  in packed format and X and B are N-by-NRHS matrices.
  Error bounds on the solution and a condition estimate are also
  provided.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -48,10 +46,10 @@ ZSPSVX computes the solution to system of linear equations A * X = B for OTHER m
  4. Iterative refinement is applied to improve the computed solution
  matrix and calculate error bounds and backward error estimates
  for it.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of A has been
  supplied on entry.
@@ -162,13 +160,13 @@ ZSPSVX computes the solution to system of linear equations A * X = B for OTHER m
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -181,7 +179,8 @@ ZSPSVX computes the solution to system of linear equations A * X = B for OTHER m
  a44
  Packed storage of the upper triangle of A:
  AP = [ a11, a12, a22, a13, a23, a33, a14, a24, a34, a44 ]</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 277 of file zspsvx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

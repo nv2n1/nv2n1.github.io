@@ -16,16 +16,16 @@ description: "llvm-locstats – calculate statistics on DWARF debug location"
 <p> The line 0% shows the number and the percentage of DIEs with no location information, but the line 100% shows the information for DIEs where there is location information in all code section bytes (where the variable or parameter is in the scope). The line [50%,60%) shows the number and the percentage of DIEs where the location information is between 50 and 60 percentage of its scope covered.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;only-variables</code></p>
-<dd> calculate the location statistics only for local variables</p>
-<dt><code>&#8211;only-formal-parameters</code></p>
-<dd> calculate the location statistics only for formal parameters</p>
-<dt><code>&#8211;ignore-debug-entry-values</code></p>
-<dd> ignore the location statistics on locations containing the debug entry values DWARF operation</p>
-<dt><code>&#8211;draw-plot</code></p>
-<dd> make histogram of location buckets generated (requires matplotlib)</p>
-<dt><code>&#8211;compare</code></p>
-<dd> compare the debug location coverage on two files provided, and draw a plot showing the difference (requires matplotlib)</dl>
+<dt><code>&#8211;only-variables</code></dt>
+<dd> calculate the location statistics only for local variables</dd>
+<dt><code>&#8211;only-formal-parameters</code></dt>
+<dd> calculate the location statistics only for formal parameters</dd>
+<dt><code>&#8211;ignore-debug-entry-values</code></dt>
+<dd> ignore the location statistics on locations containing the debug entry values DWARF operation</dd>
+<dt><code>&#8211;draw-plot</code></dt>
+<dd> make histogram of location buckets generated (requires matplotlib)</dd>
+<dt><code>&#8211;compare</code></dt>
+<dd> compare the debug location coverage on two files provided, and draw a plot showing the difference (requires matplotlib)</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-locstats</code> returns 0 if the input file were parsed successfully. Otherwise, it returns 1.</p>
 <h2>EXAMPLE 1</h2>

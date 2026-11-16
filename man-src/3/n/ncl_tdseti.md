@@ -22,9 +22,9 @@ CALL TDSETI (PNAM,IVAL)
 
 The arguments of TDSETI are as follows:
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first three characters of it will be examined.
-<dt>IVAL
-<dd>(an input expression of type INTEGER) - The integer value you select for the parameter. If the parameter is of type INTEGER, it will be given the value IVAL; if is is of type REAL, it will be given the value REAL(IVAL).</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first three characters of it will be examined.
+</dd><dt>IVAL
+</dt><dd>(an input expression of type INTEGER) - The integer value you select for the parameter. If the parameter is of type INTEGER, it will be given the value IVAL; if is is of type REAL, it will be given the value REAL(IVAL).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

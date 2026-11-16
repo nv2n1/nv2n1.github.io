@@ -14,16 +14,16 @@ description: "usb_buffer_map_sg – create scatterlist DMA mapping(s) for an end
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to which the scatterlist will be mapped</dl>
+</dd><dd>device to which the scatterlist will be mapped</dd></dl>
 <p> <i>is_in</i></p>
 <dl>
-<dd>mapping transfer direction</dl>
+<dd>mapping transfer direction</dd></dl>
 <p> <i>sg</i></p>
 <dl>
-<dd>the scatterlist to map</dl>
+<dd>the scatterlist to map</dd></dl>
 <p> <i>nents</i></p>
 <dl>
-<dd>the number of entries in the scatterlist</dl>
+<dd>the number of entries in the scatterlist</dd></dl>
 <h2>Return</h2>
 <p>Either &lt; 0 (indicating no buffers could be mapped), or the number of DMA mapping array entries in the scatterlist.</p>
 <h2>Note</h2>

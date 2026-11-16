@@ -11,7 +11,6 @@ std::mblen - std::mblen
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     int mblen(const char *s, std::size_t n);</code></pre> 
 Determines the size, in bytes, of the multibyte character whose first byte is pointed to by s. 
 If s is a null pointer, resets the global conversion state and determines whether shift sequences are used. 
@@ -34,20 +33,13 @@ If s is a null pointer, resets its internal conversion state to represent the in
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;stdexcept&gt;
 // the number of characters in a multibyte string is the sum of mblen()'s
-
 // note: the simpler approach is std::mbstowcs(NULL, s.c_str(), s.size())
-
 std::size_t strlen_mb(const std::string &amp;s)
-
 {
     std::size_t result = 0;
     const char *ptr = s.data();
@@ -64,7 +56,6 @@ std::size_t strlen_mb(const std::string &amp;s)
     return result;
 }
 int main()
-
 {
     // allow mblen() to work with UTF-8 multibyte encoding
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);

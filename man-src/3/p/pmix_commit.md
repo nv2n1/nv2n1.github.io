@@ -11,7 +11,6 @@ PMIx_Commit - Push all previously PMIxPut_ values to the local PMIx server.
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pmix.h&gt;
-
 pmix_status_t PMIx_Commit(void);</code></pre>
 
 <h2>Arguments</h2>

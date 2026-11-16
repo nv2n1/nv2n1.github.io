@@ -15,19 +15,19 @@ rpc_clnt_add_xprt - Add a new transport to a rpc_clnt
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to struct rpc_clnt</dl>
+<dl><dd></dd><dd>pointer to struct rpc_clnt</dd></dl>
  
 
  <i>xprtargs</i>
-<dl><dd>pointer to struct xprt_create</dl>
+<dl><dd>pointer to struct xprt_create</dd></dl>
  
 
  <i>setup</i>
-<dl><dd>callback to test and/or set up the connection</dl>
+<dl><dd>callback to test and/or set up the connection</dd></dl>
  
 
  <i>data</i>
-<dl><dd>pointer to setup function data</dl>
+<dl><dd>pointer to setup function data</dd></dl>
 
 <h2>Description</h2>
 

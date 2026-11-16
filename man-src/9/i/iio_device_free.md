@@ -14,9 +14,9 @@ description: "iio_device_free – free an iio_dev from a driver"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the iio_dev associated with the device</dl>
+</dd><dd>the iio_dev associated with the device</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

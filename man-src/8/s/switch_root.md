@@ -17,10 +17,10 @@ description: "switch_root – switch to another filesystem as the root of the mo
 <h2>Options</h2>
 <p><code>-h, &#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <p> <code>-V, &#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>switch_root</code> returns 0 on success and 1 on failure.</p>
 <h2>Notes</h2>
@@ -28,7 +28,7 @@ description: "switch_root – switch to another filesystem as the root of the mo
 <dl>
 <dd>
 <pre>mount --bind $DIR $DIR</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2), <code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/8-mkinitrd/">mkinitrd</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)</p>

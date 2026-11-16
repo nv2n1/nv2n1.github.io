@@ -16,37 +16,37 @@ description: "enca — detect and convert encoding of text files"
 <p> If you are lucky enough, the only two things you will ever need to know are: command</p>
 <dl>
 <dt>
-<dd>
-<p> enca <i>FILE</i></dl>
+</dt><dd>
+<p> enca <i>FILE</i></dd></dl>
 <p> will tell you which encoding file <i>FILE</i> uses (without changing it), and</p>
 <dl>
 <dt>
-<dd>
-<p> enconv <i>FILE</i></dl>
+</dt><dd>
+<p> enconv <i>FILE</i></dd></dl>
 <p> will convert file <i>FILE</i> to your locale native encoding. To convert the file to some other encoding use the <code>-x</code> option (see <code>-x</code> entry in section <code>OPTIONS</code> and sections <code>CONVERSION</code> and <code>ENCODINGS</code> for details). </p>
 <p> Both work with multiple files and standard input (output) too. E.g.</p>
 <dl>
 <dt>
-<dd>
-<p> enca -x latin2 &lt;sometext | lpr</dl>
+</dt><dd>
+<p> enca -x latin2 &lt;sometext | lpr</dd></dl>
 <p> assures file `sometext&#8217; is in ISO Latin~2 when it&#8217;s sent to printer. </p>
 <p> The main reason why these command will fail and turn your files into garbage is that Enca needs to know their language to detect the encoding. It tries to determine your language and preferred charset from locale settings, which might not be what you want. </p>
 <p> You can (or have to) use <code>-L</code> option to tell it the right language. Suppose, you downloaded some Russian HTML file, `file.htm&#8217;, it claims it&#8217;s windows-1251 but it isn&#8217;t. So you run</p>
 <dl>
 <dt>
-<dd>
-<p> enca -L ru file.htm</dl>
+</dt><dd>
+<p> enca -L ru file.htm</dd></dl>
 <p> and find out it&#8217;s KOI8-R (for example). Be warned, currently there are not many supported languages (see section <code>LANGUAGES</code>). </p>
 <p> Another warning concerns the fact several Enca&#8217;s features, namely its charset conversion capabilities, strongly depend on what other tools are installed on your system (see section <code>CONVERSION)</code>&#8211;run</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;version</dl>
+</dt><dd>
+<p> enca &#8211;version</dd></dl>
 <p> to get list of features (see section <code>FEATURES</code>). Also try</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;help</dl>
+</dt><dd>
+<p> enca &#8211;help</dd></dl>
 <p> to get description of all other Enca options (and to find the rest of this manual page redundant).</p>
 <h2>DESCRIPTION</h2>
 <p> Enca reads given text files, or standard input when none are given, and uses knowledge about their language (must be supported by you) and a mixture of parsing, statistical analysis, guessing and black magic to determine their encodings, which it then prints to standard output (or it confesses it doesn&#8217;t have any idea what the encoding could be). By default, Enca presents results as a multiline human-readable descriptions, several other formats are available&#8211;see Output type selectors below. </p>
@@ -60,86 +60,86 @@ description: "enca — detect and convert encoding of text files"
 <h3>Operation modes</h3>
 <p> are following:</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;auto-convert</code></p>
-<dd> Equivalent to calling Enca as <code>enconv</code>. </p>
+<dt><code>-c</code>, <code>&#8211;auto-convert</code></dt>
+<dd> Equivalent to calling Enca as <code>enconv</code>. </dd>
 <p> If no output type selector is specified, detect file encodings, guess your preferred charset from locales, and convert files to it (only available with +target-charset-auto feature).</p>
-<dt><code>-g</code>, <code>&#8211;guess</code></p>
-<dd> Equivalent to calling Enca as <code>enca</code>. </p>
+<dt><code>-g</code>, <code>&#8211;guess</code></dt>
+<dd> Equivalent to calling Enca as <code>enca</code>. </dd>
 <p> If no output type selector is specified, detect file encodings and report them.</dl>
 <h3>Output type selectors</h3>
 <p> select what action Enca will take when it determines the encoding; most of them just choose between different names, formats and conventions how encodings can be printed, but one of them (<code>-x</code>) is special: it tells Enca to recode files to some other encoding <i>ENC</i>. These options are mutually exclusive; if you specify more than one output type selector the last one takes precedence. </p>
 <p> Several output types represent charset name used by some other program, but not all these programs know all the charsets which Enca recognises. Be warned, Enca makes no difference between unrecognised charset and charset having no name in given namespace in such situations.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;details</code></p>
-<dd> It used to print a few pages of details about the guessing process, but since Enca is just a program linked against Enca library, this is not possible and this option is roughly equivalent to <code>&#8211;human-readable</code>, except it reports failure reason when Enca doesn&#8217;t recognize the encoding.</p>
-<dt><code>-e</code>, <code>&#8211;enca-name</code></p>
-<dd> Prints Enca&#8217;s nice name of the charset, i.e., perhaps the most generally accepted and more or less human-readable charset identifier, with surfaces appended. </p>
+<dt><code>-d</code>, <code>&#8211;details</code></dt>
+<dd> It used to print a few pages of details about the guessing process, but since Enca is just a program linked against Enca library, this is not possible and this option is roughly equivalent to <code>&#8211;human-readable</code>, except it reports failure reason when Enca doesn&#8217;t recognize the encoding.</dd>
+<dt><code>-e</code>, <code>&#8211;enca-name</code></dt>
+<dd> Prints Enca&#8217;s nice name of the charset, i.e., perhaps the most generally accepted and more or less human-readable charset identifier, with surfaces appended. </dd>
 <p> This name is used when calling an external converter, too.</p>
-<dt><code>-f</code>, <code>&#8211;human-readable</code></p>
-<dd> Prints verbal description of the detected charset and surfaces&#8211;something a human understands best. This is the default behaviour. </p>
+<dt><code>-f</code>, <code>&#8211;human-readable</code></dt>
+<dd> Prints verbal description of the detected charset and surfaces&#8211;something a human understands best. This is the default behaviour. </dd>
 <p> The precise format is following: the first line contains charset name alone, and it&#8217;s followed by zero or more indented lines containing names of detected surfaces. This format is not, however, suitable or intended for further machine-processing, and the verbal charset descriptions are like to change in the future.</p>
-<dt><code>-i</code>, <code>&#8211;iconv-name</code></p>
-<dd> Prints how <i>iconv</i>(3) (and/or <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1)) calls the detected charset. More precisely, it prints one, more or less arbitrarily chosen, alias accepted by iconv. A charset unknown to iconv counts as unknown. </p>
+<dt><code>-i</code>, <code>&#8211;iconv-name</code></dt>
+<dd> Prints how <i>iconv</i>(3) (and/or <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1)) calls the detected charset. More precisely, it prints one, more or less arbitrarily chosen, alias accepted by iconv. A charset unknown to iconv counts as unknown. </dd>
 <p> This output type makes sense only when Enca is compiled with iconv support (feature +iconv-interface).</p>
-<dt><code>-r</code>, <code>&#8211;rfc1345-name</code></p>
-<dd> Prints RFC~1345 charset name. When such a name doesn&#8217;t exist because RFC~1345 doesn&#8217;t define a given encoding, some other name defined in some other RFC or just the name which author considers `the most canonical&#8217;, is printed. </p>
+<dt><code>-r</code>, <code>&#8211;rfc1345-name</code></dt>
+<dd> Prints RFC~1345 charset name. When such a name doesn&#8217;t exist because RFC~1345 doesn&#8217;t define a given encoding, some other name defined in some other RFC or just the name which author considers `the most canonical&#8217;, is printed. </dd>
 <p> Since RFC~1345 doesn&#8217;t define surfaces, no surface info is appended.</p>
-<dt><code>-m</code>, <code>&#8211;mime-name</code></p>
-<dd> Prints preferred MIME name of detected charset. This is the name you should normally use when fixing e-mails or web pages. </p>
+<dt><code>-m</code>, <code>&#8211;mime-name</code></dt>
+<dd> Prints preferred MIME name of detected charset. This is the name you should normally use when fixing e-mails or web pages. </dd>
 <p> A charset not present in <a rel="nofollow" href="http://www.iana.org/assignments/character-sets">http://www.iana.org/assignments/character-sets</a> counts as unknown.</p>
-<dt><code>-s</code>, <code>&#8211;cstocs-name</code></p>
-<dd> Prints how <i>cstocs</i>(1) calls the detected charset. A charset unknown to cstocs counts as unknown.</p>
-<dt><code>-n</code>, <code>&#8211;name=</code><i>WORD</i></p>
-<dd> Prints charset (encoding) name selected by <i>WORD</i> (can be abbreviated as long as is unambiguous). For names listed above, <code>&#8211;name=</code><i>WORD</i> is equivalent to <code>&#8212;</code><i>WORD</i>. </p>
+<dt><code>-s</code>, <code>&#8211;cstocs-name</code></dt>
+<dd> Prints how <i>cstocs</i>(1) calls the detected charset. A charset unknown to cstocs counts as unknown.</dd>
+<dt><code>-n</code>, <code>&#8211;name=</code><i>WORD</i></dt>
+<dd> Prints charset (encoding) name selected by <i>WORD</i> (can be abbreviated as long as is unambiguous). For names listed above, <code>&#8211;name=</code><i>WORD</i> is equivalent to <code>&#8212;</code><i>WORD</i>. </dd>
 <p> Using <code>aliases</code> as the output type causes Enca to print list of all accepted aliases of detected charset.</p>
-<dt><code>-x</code>, <code>&#8211;convert-to=</code>[<code>..</code>]<i>ENC</i></p>
-<dd> Converts file to encoding <i>ENC</i>. </p>
+<dt><code>-x</code>, <code>&#8211;convert-to=</code>[<code>..</code>]<i>ENC</i></dt>
+<dd> Converts file to encoding <i>ENC</i>. </dd>
 <p> The optional `..&#8217; before encoding name has no special meaning, except you can use it to remind yourself that, unlike in <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1), you should specify <i>desired</i> encoding, instead of current. </p>
 <p> You can use <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1) recoding chains or any other kind of braindead recoding specification for <i>ENC</i>, provided that you tell Enca to use some tool understanding it for conversion (see section <code>CONVERSION</code>). </p>
 <p> When Enca fails to determine the encoding, it prints a warning and leaves the the file as is; when it is run as a filter it tries to do its best to copy standard input to standard output unchanged. Nevertheless, you should not rely on it and do backup.</dl>
 <h3>Guessing parameters</h3>
 <p> There&#8217;s only one: <code>-L</code> setting language of input files. This option is mandatory (but see below).</p>
 <dl>
-<dt><code>-L</code>, <code>&#8211;language=</code><i>LANG</i></p>
-<dd> Sets language of input files to <i>LANG</i>. </p>
+<dt><code>-L</code>, <code>&#8211;language=</code><i>LANG</i></dt>
+<dd> Sets language of input files to <i>LANG</i>. </dd>
 <p> More precisely, <i>LANG</i> can be any valid locale name (or alias with +locale-alias feature) of some supported language. You can also specify `none&#8217; as language name, only multibyte encodings are recognised then. Run </p>
 <p> enca &#8211;list languages </p>
 <p> to get list of supported languages. When you don&#8217;t specify any language Enca tries to guess your language from locale settings and assumes input files use this language. See section <code>LANGUAGES</code> for details.</dl>
 <h3>Conversion parameters</h3>
 <p> give you finer control of how charset conversion will be performed. They don&#8217;t affect anything when <code>-x</code> is not specified as output type. Please see section <code>CONVERSION</code> for the gory conversion details.</p>
 <dl>
-<dt><code>-C</code>, <code>&#8211;try-converters=</code><i>LIST</i></p>
-<dd> Appends comma separated <i>LIST</i> to the list of converters that will be tried when you ask for conversion. Their names can be abbreviated as long as they are unambiguous. Run </p>
+<dt><code>-C</code>, <code>&#8211;try-converters=</code><i>LIST</i></dt>
+<dd> Appends comma separated <i>LIST</i> to the list of converters that will be tried when you ask for conversion. Their names can be abbreviated as long as they are unambiguous. Run </dd>
 <p> enca &#8211;list converters </p>
 <p> to get list of all valid converter names (and see section <code>CONVERSION</code> for their description). </p>
 <p> The default list depends on how Enca has been compiled, run </p>
 <p> enca &#8211;help </p>
 <p> to find out default converter list. </p>
 <p> Note the default list is used only when you don&#8217;t specify <code>-C</code> at all. Otherwise, the list is built as if it were initially empty and every <code>-C</code> adds new converter(s) to it. Moreover, specifying <code>none</code> as converter name causes clearing the converter list.</p>
-<dt><code>-E</code>, <code>&#8211;external-converter-program=</code><i>PATH</i></p>
-<dd> Sets external converter program name to <i>PATH</i>. Default external converter depends on how enca has been complied, and the possibility to use external converters may not be available at all. Run </p>
+<dt><code>-E</code>, <code>&#8211;external-converter-program=</code><i>PATH</i></dt>
+<dd> Sets external converter program name to <i>PATH</i>. Default external converter depends on how enca has been complied, and the possibility to use external converters may not be available at all. Run </dd>
 <p> enca &#8211;help </p>
 <p> to find out default converter program in your enca build.</dl>
 <h3>General options</h3>
 <p> don&#8217;t fit to other option categories&#8230;</p>
 <dl>
-<dt><code>-p</code>, <code>&#8211;with-filename</code></p>
-<dd> Forces Enca to prefix each result with corresponding file name. By default, Enca prefixes results with filenames when run on multiple files. </p>
+<dt><code>-p</code>, <code>&#8211;with-filename</code></dt>
+<dd> Forces Enca to prefix each result with corresponding file name. By default, Enca prefixes results with filenames when run on multiple files. </dd>
 <p> Standard input is printed as <code>STDIN</code> and standard output as <code>STDOUT</code> (the latter can be probably seen in error messages only).</p>
-<dt><code>-P</code>, <code>&#8211;no-filename</code></p>
-<dd> Forces Enca to not prefix results with file names. By default, Enca doesn&#8217;t prefix result with file name when run on a single file (including standard input).</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Increases verbosity level (each use increases it by one). </p>
+<dt><code>-P</code>, <code>&#8211;no-filename</code></dt>
+<dd> Forces Enca to not prefix results with file names. By default, Enca doesn&#8217;t prefix result with file name when run on a single file (including standard input).</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Increases verbosity level (each use increases it by one). </dd>
 <p> Currently this option in not very useful because different parts of Enca respond differently to the same verbosity level, mostly not at all.</dl>
 <h3>Listings</h3>
 <p> are all terminal, i.e. when Enca encounters some of them it prints the required listing and terminates without processing any following options.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Prints brief usage help.</p>
-<dt><code>-G</code>, <code>&#8211;license</code></p>
-<dd> Prints full Enca license (through a pager, if possible).</p>
-<dt><code>-l</code>, <code>&#8211;list=</code><i>WORD</i></p>
-<dd> Prints list specified by <i>WORD</i> (can be abbreviated as long as it is unambiguous). Available lists include: </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Prints brief usage help.</dd>
+<dt><code>-G</code>, <code>&#8211;license</code></dt>
+<dd> Prints full Enca license (through a pager, if possible).</dd>
+<dt><code>-l</code>, <code>&#8211;list=</code><i>WORD</i></dt>
+<dd> Prints list specified by <i>WORD</i> (can be abbreviated as long as it is unambiguous). Available lists include: </dd>
 <p> <code>built-in-charsets</code>. All encodings convertible by built-in converter, by group (both input and output encoding must be from this list and belong to the same group for internal conversion). </p>
 <p> <code>built-in-encodings</code>. Equivalent to <code>built-in-charsets</code>, but considered obsolete; will be accepted with a warning, for a while. </p>
 <p> <code>converters</code>. All valid converter names (to be used with <code>-C</code>). </p>
@@ -149,8 +149,8 @@ description: "enca — detect and convert encoding of text files"
 <p> <code>names</code>. All possible values of <code>&#8211;name</code> option. </p>
 <p> <code>lists</code>. All possible values of this option. (Crazy?) </p>
 <p> <code>surfaces</code>. All surfaces Enca recognises.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Prints program version and list of features (see section <code>FEATURES</code>).</dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Prints program version and list of features (see section <code>FEATURES</code>).</dd></dl>
 <h2>CONVERSION</h2>
 <p> Though Enca has been originally designed as a tool for guessing encoding only, it now features several methods of charset conversion. You can control which of them will be used with <code>-C</code>. </p>
 <p> Enca sequentially tries converters from the list specified by <code>-C</code> until it finds some that is able to perform required conversion or until it exhausts the list. You should specify preferred converters first, less preferred later. External converter (<code>extern</code>) should be always specified last, only as last resort, since it&#8217;s usually not possible to recover when it fails. The default list of converters always starts with <code>built-in</code> and then continues with the first one available from: <code>librecode</code>, <code>iconv</code>, nothing. </p>
@@ -159,16 +159,16 @@ description: "enca — detect and convert encoding of text files"
 <p> is the simplest and far the fastest of all, can perform only a few byte-to-byte conversions and modifies files directly in place (may be considered dangerous, but is pretty efficient). You can get list of all encodings it can convert with</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;list built-in</dl>
+</dt><dd>
+<p> enca &#8211;list built-in</dd></dl>
 <p> Beside speed, its main advantage (and also disadvantage) is that it doesn&#8217;t care: it simply converts characters having a representation in target encoding, doesn&#8217;t touch anything else and never prints any error message. </p>
 <p> This converter can be specified as <code>built-in</code> with <code>-C</code>. </p>
 <h3>Librecode converter</h3>
 <p> is an interface to GNU recode library, that does the actual recoding job. It may or may not be compiled in; run</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;version</dl>
+</dt><dd>
+<p> enca &#8211;version</dd></dl>
 <p> to find out its availability in your enca build (feature +librecode-interface). </p>
 <p> You should be familiar with <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1) before using it, since recode is a quite sophisticated and powerful charset conversion tool. You may run into problems using it together with Enca particularly because Enca&#8217;s support for surfaces not 100% compatible, because recode tries too hard to make the transformation reversible, because it sometimes silently ignores I/O errors, and because it&#8217;s incredibly buggy. Please see GNU recode info pages for details about recode library. </p>
 <p> This converter can be specified as <code>librecode</code> with <code>-C</code>. </p>
@@ -176,8 +176,8 @@ description: "enca — detect and convert encoding of text files"
 <p> is an interface to the UNIX98 <i>iconv</i>(3) conversion functions, that do the actual recoding job. It may or may not be compiled in; run</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;version</dl>
+</dt><dd>
+<p> enca &#8211;version</dd></dl>
 <p> to find out its availability in your enca build (feature +iconv-interface). </p>
 <p> While iconv is present on most today systems it only rarely offer some useful set of available conversions, the only notable exception being iconv from GNU libc. It is usually quite picky about surfaces, too (while, at the same time, not implementing surface conversion). It however probably represents the only standard(ized) tool able to perform conversion from/to Unicode. Please see iconv documentation about for details about its capabilities on your particular system. </p>
 <p> This converter can be specified as <code>iconv</code> with <code>-C</code>. </p>
@@ -187,8 +187,8 @@ description: "enca — detect and convert encoding of text files"
 <p> If you want to make your own converter to use with enca, you should know it is always called</p>
 <dl>
 <dt>
-<dd>
-<p> <i>CONVERTER</i> <i>ENC_CURRENT</i> <i>ENC</i> <i>FILE</i> [<code>&#8211;</code>]</dl>
+</dt><dd>
+<p> <i>CONVERTER</i> <i>ENC_CURRENT</i> <i>ENC</i> <i>FILE</i> [<code>&#8211;</code>]</dd></dl>
 <p> where <i>CONVERTER</i> is what has been set by <code>-E</code>, <i>ENC_CURRENT</i> is detected encoding, <i>ENC</i> is what has been specified with <code>-x</code>, and <i>FILE</i> is the file to convert, i.e. it is called for each file separately. The optional fourth parameter, <code>&#8211;</code>, should cause (when present) sending result of conversion to standard output instead of overwriting the file <i>FILE</i>. The converter should also take care of not changing file permissions, returning error code~1 when it fails and cleaning its temporary files. Please see the standard external converters for examples. </p>
 <p> This converter can be specified as <code>extern</code> with <i>-C</i>. </p>
 <h3>Default target charset</h3>
@@ -210,13 +210,13 @@ description: "enca — detect and convert encoding of text files"
 <p> You can get list of recognised character sets with</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;list charsets</dl>
+</dt><dd>
+<p> enca &#8211;list charsets</dd></dl>
 <p> and using <code>&#8211;name</code> parameter you can select any name you want to be used in the listing. You can also list all surfaces with</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;list surfaces</dl>
+</dt><dd>
+<p> enca &#8211;list surfaces</dd></dl>
 <p> Encoding and surface names are case insensitive and non-alphanumeric characters are not taken into account. However, non-alphanumeric characters are mostly not allowed at all. The only allowed are: `-&#8216;, `_&#8217;, `.&#8217;, `:&#8217;, and~`/&#8217; (as charset/surface separator). So `ibm852&#8242; and `IBM-852&#8242; are the same, while `IBM 852&#8242; is not accepted. </p>
 <h3>Charsets</h3>
 <p> Following list of recognised charsets uses Enca&#8217;s names (<code>-e</code>) and verbal descriptions as reported by Enca (<code>-f</code>): </p>
@@ -603,8 +603,8 @@ description: "enca — detect and convert encoding of text files"
 <p> Several Enca&#8217;s features depend on what is available on your system and how it was compiled. You can get their list with</p>
 <dl>
 <dt>
-<dd>
-<p> enca &#8211;version</dl>
+</dt><dd>
+<p> enca &#8211;version</dd></dl>
 <p> Plus sign before a feature name means it&#8217;s available, minus sign means this build lacks the particular feature. </p>
 <p> <code>librecode-interface</code>. Enca has interface to GNU recode library charset conversion functions. </p>
 <p> <code>iconv-interface</code>. Enca has interface to UNIX98 iconv charset conversion functions. </p>
@@ -652,3 +652,4 @@ description: "enca — detect and convert encoding of text files"
 <p> Enca is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p> You should have received a copy of the GNU General Public License along with Enca; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. </p>
 <h2>Index</h2>
+</p>

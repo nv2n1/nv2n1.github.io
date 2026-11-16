@@ -11,19 +11,19 @@ description: "trickled.conf – format of the configuration file used by trickle
 <h2>Description</h2>
 <p>The configuration file format is quite simple. Sections are delimited by square brackets:</p>
 <dl>
-<dd>[Section]</dl>
+<dd>[Section]</dd></dl>
 <p> And options within brackets sections are simple key value pairs:</p>
 <dl>
-<dd>Option = Value</dl>
+<dd>Option = Value</dd></dl>
 <h2>Options</h2>
 <p>Per-application customizable variables are specified within sections with section names matching the application name. The options are:</p>
 <dl>
-<dt><code>Priority</code></p>
-<dd>Sets the priority of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for details.</p>
-<dt><code>Time-Smoothing</code></p>
-<dd>Sets the time smoothing parameter of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for an details.</p>
-<dt><code>Length-Smoothing</code></p>
-<dd>Sets the length smoothing parameter of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for details.</dl>
+<dt><code>Priority</code></dt>
+<dd>Sets the priority of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for details.</dd>
+<dt><code>Time-Smoothing</code></dt>
+<dd>Sets the time smoothing parameter of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for an details.</dd>
+<dt><code>Length-Smoothing</code></dt>
+<dd>Sets the length smoothing parameter of the application, see <a href="/docs/linux/man/8-trickled/">trickled</a>(8) for details.</dd></dl>
 </dl>
 <h2>Examples</h2>
 <pre>[ssh]

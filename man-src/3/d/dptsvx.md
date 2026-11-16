@@ -19,7 +19,7 @@ description: "dptsvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DPTSVX uses the factorization A = L*D*L**T to compute the solution
  to a real system of linear equations A*X = B, where A is an N-by-N
@@ -28,11 +28,11 @@ description: "dptsvx.f –"
  Error bounds on the solution and a condition estimate are also
  provided.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  The following steps are performed:
  1. If FACT = 'N', the matrix A is factored as A = L*D*L**T, where L
@@ -52,11 +52,11 @@ description: "dptsvx.f –"
     matrix and calculate error bounds and backward error estimates
     for it.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
           Specifies whether or not the factored form of A has been
@@ -178,14 +178,14 @@ description: "dptsvx.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 228 of file dptsvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -20,70 +20,70 @@ description: "megatec_usb – Driver for Megatec protocol based USB UPS equipmen
 <p> This driver takes the standard serial interface and passes this over USB to the UPS. This means that most, but not all, commands available for the serial driver will work. For Krauler, Agiler, and Upsonic (with Ablerex interface) UPSes it appears to give very similar results to the serial interface. The driver supports monitoring most of the usual UPS variables, and also supports automatic shutdown.</p>
 <h2>Extra Arguments</h2>
 <dl>
-<dt>mfr=<i>string</i></p>
-<dd>Optional. Specify the UPS manufacturer name. </p>
-<dt>model=<i>string</i></p>
-<dd>Optional. Specify the UPS model name. </p>
-<dt>serial=<i>string</i></p>
-<dd>Optional. Specify the UPS serial number. </p>
-<dt>lowbatt=<i>float</i></p>
-<dd>Optional. Low battery level (%). Overrides the hardware default level. </p>
-<dt>ondelay=<i>int</i></p>
-<dd>Optional. Delay before the UPS is turned back on (minutes). </p>
-<dt>offdelay=<i>int</i></p>
-<dd>Optional. Delay before the UPS is turned off (minutes). </p>
-<dt>battvolts=<i>float</i>:<i>float</i></p>
-<dd>Optional. The battery voltage interval &lt;empty:full&gt; (volts). </p>
-<dt>vendor=<i>regex</i></p>
+<dt>mfr=<i>string</i></dt>
+<dd>Optional. Specify the UPS manufacturer name. </dd>
+<dt>model=<i>string</i></dt>
+<dd>Optional. Specify the UPS model name. </dd>
+<dt>serial=<i>string</i></dt>
+<dd>Optional. Specify the UPS serial number. </dd>
+<dt>lowbatt=<i>float</i></dt>
+<dd>Optional. Low battery level (%). Overrides the hardware default level. </dd>
+<dt>ondelay=<i>int</i></dt>
+<dd>Optional. Delay before the UPS is turned back on (minutes). </dd>
+<dt>offdelay=<i>int</i></dt>
+<dd>Optional. Delay before the UPS is turned off (minutes). </dd>
+<dt>battvolts=<i>float</i>:<i>float</i></dt>
+<dd>Optional. The battery voltage interval &lt;empty:full&gt; (volts). </dd>
+<dt>vendor=<i>regex</i></dt>
 <dd>
-<dt>product=<i>regex</i></p>
+</dd><dt>product=<i>regex</i></dt>
 <dd>
-<dt>vendorid=<i>regex</i></p>
+</dd><dt>vendorid=<i>regex</i></dt>
 <dd>
-<dt>productid=<i>regex</i></p>
-<dd>Select a specific UPS, in case there is more than one connected via USB. Each option specifies an extended regular expression (see <code><a href="/docs/linux/man/7-regex/">regex</a>(7)</code>) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </p>
+</dd><dt>productid=<i>regex</i></dt>
+<dd>Select a specific UPS, in case there is more than one connected via USB. Each option specifies an extended regular expression (see <code><a href="/docs/linux/man/7-regex/">regex</a>(7)</code>) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </dd>
 <p> Examples: </p>
 <p>&nbsp;<wbr><code>-x vendor=&quot;Foo.Corporation.*&quot;</code> </p>
 <p>&nbsp;<wbr><code>-x vendorid=05b8</code>&nbsp;<wbr>(Agiler) </p>
 <p>&nbsp;<wbr><code>-x product=&quot;.*(Smart|Back)-?UPS.*&quot;</code> </p>
-<dt>bus=<i>regex</i></p>
-<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;). </p>
-<dt>subdriver=<i>string</i></p>
-<dd>Select a serial-over-USB subdriver to use. You have a choice between &quot;agiler&quot; and &quot;krauler&quot; subdrivers currently. </p>
+<dt>bus=<i>regex</i></dt>
+<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;). </dd>
+<dt>subdriver=<i>string</i></dt>
+<dd>Select a serial-over-USB subdriver to use. You have a choice between &quot;agiler&quot; and &quot;krauler&quot; subdrivers currently. </dd>
 </dl>
 <h2>Ups Commands</h2>
 <p>This driver supports some extra commands (see <code><a href="/docs/linux/man/8-upscmd/">upscmd</a></code>(8)): </p>
 <dl>
-<dt>beeper.toggle</p>
-<dd>Toggle the UPS beeper. (Not available on some hardware.) </p>
-<dt>load.on</p>
-<dd>Turn on the load immediately. </p>
-<dt>load.off</p>
-<dd>Turn off the load immediately. (Not yet supported) </p>
-<dt>reset.input.minmax</p>
-<dd>Reset minimum and maximum input voltage status. (Not yet supported) </p>
-<dt>reset.watchdog</p>
-<dd>Restarts the UPS watchdog timeout. The watchdog is started if it isn&#8217;t running, which means the UPS shuts down one minute after this command is executed for the last time, restarting one minute afterwards. To cancel the watchdog, run the &quot;shutdown.stop&quot; command. </p>
-<dt>shutdown.return</p>
-<dd>Turn off the load and return when power is back. (Not yet supported) </p>
-<dt>shutdown.stayoff</p>
-<dd>Turn off the load and remain off. (Not yet supported) </p>
-<dt>shutdown.stop</p>
-<dd>Stop a shutdown in progress. </p>
-<dt>test.battery.start.deep</p>
-<dd>Perform a long battery test (Not available on some hardware.) </p>
-<dt>test.battery.start</p>
-<dd>Perform a (10 second) battery test. </p>
-<dt>test.battery.stop</p>
-<dd>Stop a running battery test. (Not available on some hardware.) </p>
+<dt>beeper.toggle</dt>
+<dd>Toggle the UPS beeper. (Not available on some hardware.) </dd>
+<dt>load.on</dt>
+<dd>Turn on the load immediately. </dd>
+<dt>load.off</dt>
+<dd>Turn off the load immediately. (Not yet supported) </dd>
+<dt>reset.input.minmax</dt>
+<dd>Reset minimum and maximum input voltage status. (Not yet supported) </dd>
+<dt>reset.watchdog</dt>
+<dd>Restarts the UPS watchdog timeout. The watchdog is started if it isn&#8217;t running, which means the UPS shuts down one minute after this command is executed for the last time, restarting one minute afterwards. To cancel the watchdog, run the &quot;shutdown.stop&quot; command. </dd>
+<dt>shutdown.return</dt>
+<dd>Turn off the load and return when power is back. (Not yet supported) </dd>
+<dt>shutdown.stayoff</dt>
+<dd>Turn off the load and remain off. (Not yet supported) </dd>
+<dt>shutdown.stop</dt>
+<dd>Stop a shutdown in progress. </dd>
+<dt>test.battery.start.deep</dt>
+<dd>Perform a long battery test (Not available on some hardware.) </dd>
+<dt>test.battery.start</dt>
+<dd>Perform a (10 second) battery test. </dd>
+<dt>test.battery.stop</dt>
+<dd>Stop a running battery test. (Not available on some hardware.) </dd>
 </dl>
 <h2>User Variables</h2>
 <p>The behavior of the driver can be controlled by some user definable variables (see <code><a href="/docs/linux/man/8-upsrw/">upsrw</a></code>(8)): </p>
 <dl>
-<dt>ups.delay.shutdown</p>
-<dd>Interval to wait after shutdown with delay command (seconds) </p>
-<dt>ups.delay.start</p>
-<dd>Interval to wait before (re)starting the load (seconds) </p>
+<dt>ups.delay.shutdown</dt>
+<dd>Interval to wait after shutdown with delay command (seconds) </dd>
+<dt>ups.delay.start</dt>
+<dd>Interval to wait before (re)starting the load (seconds) </dd>
 </dl>
 <h2>Known Problems</h2>
 <p>The battery charge (%) value is only a best-effort calculation and may be incorrect, or non-existant, for some UPS models. In any case, you can always resort to finding the voltages at which the battery becomes fully discharged and fully charged, and specify them manually using the &quot;battvolts&quot; option. If you do this, please notify the author of this driver. </p>

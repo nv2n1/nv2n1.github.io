@@ -99,8 +99,8 @@ description: "puppetmaster_selinux – Security Enhanced Linux Policy for the pu
 <p> <code>puppetmaster_exec_t</code> </p>
 <p> &#8211; Set files with the puppetmaster_exec_t type, if you want to transition an executable to the puppetmaster_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/puppetmasterd, /usr/sbin/puppetmasterd, /usr/bin/start-puppet-master </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/puppetmasterd, /usr/sbin/puppetmasterd, /usr/bin/start-puppet-master </dd>
 </dl>
 <p> <code>puppetmaster_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the puppetmaster_initrc_exec_t type, if you want to transition an executable to the puppetmaster_initrc_t domain. </p>

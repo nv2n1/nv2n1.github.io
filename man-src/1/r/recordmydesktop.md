@@ -70,136 +70,136 @@ description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbi
 <p> <code>Generic Options:</code> </p>
 <dl>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-h or &#8211;help</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-h or &#8211;help</code></dt>
 <dd>
-&nbsp;<wbr>Print help summary and exit. </p>
+&nbsp;<wbr>Print help summary and exit. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;version</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;version</code></dt>
 <dd>
-&nbsp;<wbr>Print program version and exit. </p>
+&nbsp;<wbr>Print program version and exit. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;print-config</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;print-config</code></dt>
 <dd>
 &nbsp;<wbr>Print info about options selected during compilation and exit.
-</dl>
+</dd></dl>
 <p> <code>Image Options:</code> </p>
 <dl>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;windowid id_of_window</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;windowid id_of_window</code></dt>
 <dd>
-&nbsp;<wbr>id of window to be recorded. </p>
+&nbsp;<wbr>id of window to be recorded. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;display DISPLAY</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;display DISPLAY</code></dt>
 <dd>
-&nbsp;<wbr>Display to connect to. </p>
+&nbsp;<wbr>Display to connect to. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-x X</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-x X</code></dt>
 <dd>
-&nbsp;<wbr>Offset in x direction. </p>
+&nbsp;<wbr>Offset in x direction. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-y Y</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-y Y</code></dt>
 <dd>
-&nbsp;<wbr>Offset in y direction. </p>
+&nbsp;<wbr>Offset in y direction. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;width N</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;width N</code></dt>
 <dd>
-&nbsp;<wbr>Width of recorded window. </p>
+&nbsp;<wbr>Width of recorded window. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;height N</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;height N</code></dt>
 <dd>
-&nbsp;<wbr>Height of recorded window. </p>
+&nbsp;<wbr>Height of recorded window. </dd>
 <dt><code><br />
- </code></p>
+ </code></dt>
 <dd>
-<dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;dummy-cursor color</code></p>
+</dd><dt><code><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;dummy-cursor color</code></dt>
 <dd>
-&nbsp;<wbr>Draw a dummy cursor, instead of the normal one.Value of color can be&nbsp;<wbr>&quot;black&quot;&nbsp;<wbr>or&nbsp;<wbr>&quot;white&quot;. </p>
+&nbsp;<wbr>Draw a dummy cursor, instead of the normal one.Value of color can be&nbsp;<wbr>&quot;black&quot;&nbsp;<wbr>or&nbsp;<wbr>&quot;white&quot;. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-cursor</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-cursor</code></dt>
 <dd>
-&nbsp;<wbr>Disable drawing of the cursor. </p>
+&nbsp;<wbr>Disable drawing of the cursor. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-shared</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-shared</code></dt>
 <dd>
-&nbsp;<wbr>Disable usage of MIT-shared memory extension <code>(Not Recommended).</code> </p>
+&nbsp;<wbr>Disable usage of MIT-shared memory extension <code>(Not Recommended).</code> </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;full-shots</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;full-shots</code></dt>
 <dd>
-&nbsp;<wbr>Take full screenshot at every frame(Not recomended!). </p>
+&nbsp;<wbr>Take full screenshot at every frame(Not recomended!). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;follow-mouse</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;follow-mouse</code></dt>
 <dd>
 &nbsp;<wbr>When this option is enabled, the capture area follows the mouse cursor. This<br />
 &nbsp;<wbr>is meaningfull only when the selected area is a subset of the full screen.<br />
-&nbsp;<wbr>This option auto-enables &#8211;full-shots. </p>
+&nbsp;<wbr>This option auto-enables &#8211;full-shots. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;quick-subsampling</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;quick-subsampling</code></dt>
 <dd>
-&nbsp;<wbr>Do subsampling of the chroma planes by discarding extra pixels. </p>
+&nbsp;<wbr>Do subsampling of the chroma planes by discarding extra pixels. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;fps N(number&gt;0.0)</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;fps N(number&gt;0.0)</code></dt>
 <dd>
-&nbsp;<wbr>A positive number denoting desired framerate. </p>
+&nbsp;<wbr>A positive number denoting desired framerate. </dd>
 </dl>
 <p> <code>Sound Options:</code> </p>
 <dl>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;channels N(number&gt;0)</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;channels N(number&gt;0)</code></dt>
 <dd>
-&nbsp;<wbr>A positive number denoting desired sound channels in recording. </p>
+&nbsp;<wbr>A positive number denoting desired sound channels in recording. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;freq N(number&gt;0)</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;freq N(number&gt;0)</code></dt>
 <dd>
-&nbsp;<wbr>A positive number denoting desired sound frequency. </p>
+&nbsp;<wbr>A positive number denoting desired sound frequency. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;buffer-size N(number&gt;0)</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;buffer-size N(number&gt;0)</code></dt>
 <dd>
-&nbsp;<wbr>A positive number denoting the desired sound buffer size(in frames, when using ALSA or OSS). </p>
+&nbsp;<wbr>A positive number denoting the desired sound buffer size(in frames, when using ALSA or OSS). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;ring-buffer-size N(float number&gt;0)</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;ring-buffer-size N(float number&gt;0)</code></dt>
 <dd>
 &nbsp;<wbr>A float number denoting the desired ring buffer size&nbsp;<wbr>(in seconds,when using JACK only).<br />
 &nbsp;<wbr>The overall size of the buffer in bytes will be:<br />
 &nbsp;<wbr>ring_buffer_size&nbsp;<wbr>*&nbsp;<wbr>samplerate&nbsp;<wbr>*&nbsp;<wbr>number_of_ports&nbsp;<wbr>*&nbsp;<wbr>sizeof(jack_default_audio_sample_t),<br />
-&nbsp;<wbr>where sizeof(jack_default_audio_sample_t)&nbsp;<wbr>is normally 4. </p>
+&nbsp;<wbr>where sizeof(jack_default_audio_sample_t)&nbsp;<wbr>is normally 4. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;device SOUND_DEVICE</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;device SOUND_DEVICE</code></dt>
 <dd>
-&nbsp;<wbr>Sound device(default hw:0,0 or&nbsp;<wbr>/dev/dsp, depending on whether ALSA or OSS is used). </p>
+&nbsp;<wbr>Sound device(default hw:0,0 or&nbsp;<wbr>/dev/dsp, depending on whether ALSA or OSS is used). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;use-jack port1 port2&#8230; portn</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;use-jack port1 port2&#8230; portn</code></dt>
 <dd>
 &nbsp;<wbr>Record audio from the specified list of <code>space-separated</code> jack ports.<br />
-&nbsp;<wbr>When using this option, all the rest audio related ones(except &#8211;no-sound)&nbsp;<wbr>are not taken into account. </p>
+&nbsp;<wbr>When using this option, all the rest audio related ones(except &#8211;no-sound)&nbsp;<wbr>are not taken into account. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-sound</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-sound</code></dt>
 <dd>
 &nbsp;<wbr>Do not record sound.
-</dl>
+</dd></dl>
 <p> <code>Encoding Options:</code> </p>
 <dl>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;on-the-fly-encoding</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;on-the-fly-encoding</code></dt>
 <dd>
-&nbsp;<wbr>Encode the audio-video data, while recording. </p>
+&nbsp;<wbr>Encode the audio-video data, while recording. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;v_quality n</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;v_quality n</code></dt>
 <dd>
-&nbsp;<wbr>A number from 0 to 63 for desired encoded video quality(default 63). </p>
+&nbsp;<wbr>A number from 0 to 63 for desired encoded video quality(default 63). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;v_bitrate n</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;v_bitrate n</code></dt>
 <dd>
-&nbsp;<wbr>A number from 45000 to 2000000 for desired encoded video bitrate(default 45000). </p>
+&nbsp;<wbr>A number from 45000 to 2000000 for desired encoded video bitrate(default 45000). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;s_quality n</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;s_quality n</code></dt>
 <dd>
 &nbsp;<wbr>Desired audio quality(-1 to 10).
-</dl>
+</dd></dl>
 <p> <code>Misc Options:</code> </p>
 <dl>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;rescue path_to_data&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;rescue path_to_data&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd>
 &nbsp;<wbr>Encode cache data from a previous session, into an Ogg/Theora+Vorbis<br />
 &nbsp;<wbr>file. The filename will be the one that was chosen initially.<br />
@@ -208,29 +208,29 @@ description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbi
 &nbsp;<wbr>This option was added in recordMyDesktop 0.3.7 and it will not<br />
 &nbsp;<wbr>work with cache files produced from earlier versions.<br />
 &nbsp;<wbr>When using this option, remember that recordMyDesktop&#8217;s cache is&nbsp;<wbr><br />
-&nbsp;<wbr>not safe, in respect to type-sizes and endianness. </p>
+&nbsp;<wbr>not safe, in respect to type-sizes and endianness. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;print-config</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;print-config</code></dt>
 <dd>
 &nbsp;<wbr>Print compilation time options. Currently prints whether Jack capture is<br />
 &nbsp;<wbr>enabled and if ALSA or OSS is used&nbsp;<wbr>(may contain more information<br />
-&nbsp;<wbr>in the future). </p>
+&nbsp;<wbr>in the future). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-wm-check</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-wm-check</code></dt>
 <dd>
 &nbsp;<wbr>When a 3d compositing window manager is detected the program will function as if the<br />
 &nbsp;<wbr>&#8211;full-shots option has been specified. This option disables that<br />
-&nbsp;<wbr>behavior alltogether. </p>
+&nbsp;<wbr>behavior alltogether. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-frame</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;no-frame</code></dt>
 <dd>
 &nbsp;<wbr>Normally, around the recording area, there is drawn a frame to assist<br />
 &nbsp;<wbr>the user in identifying what does and what doesn&#8217;t get captured.<br />
 &nbsp;<wbr>This frame will also follow around the mouse, when &#8211;follow-mouse<br />
 &nbsp;<wbr>is used. The frame might cause problems for drag and drop. If you do<br />
-&nbsp;<wbr>not wish this frame to appear, use this option. </p>
+&nbsp;<wbr>not wish this frame to appear, use this option. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;pause-shortcut MOD+KEY</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;pause-shortcut MOD+KEY</code></dt>
 <dd>
 &nbsp;<wbr>Shortcut that will be used for pausing or unpausing the recording.<br />
 &nbsp;<wbr>MOD can be any combination of the following modifier keys:<br />
@@ -240,50 +240,50 @@ description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbi
 &nbsp;<wbr>The list of modifiers must be separated from the key with a plus(&#8216;+&#8217;)<br />
 &nbsp;<wbr>sign.<br />
 &nbsp;<wbr>Default is Control+Mod1+p&nbsp;<wbr>(Mod1 usually corresponds to left Alt).<br />
-&nbsp;<wbr> </p>
+&nbsp;<wbr> </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;stop-shortcut MOD+KEY</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;stop-shortcut MOD+KEY</code></dt>
 <dd>
 &nbsp;<wbr>Shortcut that will be used to stop the recording.<br />
 &nbsp;<wbr>For more, see -pause-shortcut above.<br />
-&nbsp;<wbr>Default is Control+Mod1+s.&nbsp;<wbr> </p>
+&nbsp;<wbr>Default is Control+Mod1+s.&nbsp;<wbr> </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;compress-cache</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;compress-cache</code></dt>
 <dd>
-&nbsp;<wbr>Image data are cached with a light compression. </p>
+&nbsp;<wbr>Image data are cached with a light compression. </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;workdir DIR</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;workdir DIR</code></dt>
 <dd>
-&nbsp;<wbr>Location where a temporary directory will be created to hold project files(default&nbsp;<wbr>/var/tmp). </p>
+&nbsp;<wbr>Location where a temporary directory will be created to hold project files(default&nbsp;<wbr>/var/tmp). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;delay n[H|h|M|m]</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;delay n[H|h|M|m]</code></dt>
 <dd>
-&nbsp;<wbr>Number of secs(default),minutes or hours before capture starts(number can be float). </p>
+&nbsp;<wbr>Number of secs(default),minutes or hours before capture starts(number can be float). </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;overwrite</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;overwrite</code></dt>
 <dd>
 &nbsp;<wbr>If there is already a file with the same name, delete it.<br />
 &nbsp;<wbr>Default action is to add a number postfix to the new file.<br />
 &nbsp;<wbr>For example when not specifying a name, if out.ogv exists,<br />
 &nbsp;<wbr>the new file will be out-1.ogv and if that exists too, out-2.ogv<br />
-&nbsp;<wbr>and so on&nbsp;<wbr>(no ad-infinitum though, more like ad-short-integer&#8230;) </p>
+&nbsp;<wbr>and so on&nbsp;<wbr>(no ad-infinitum though, more like ad-short-integer&#8230;) </dd>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o filename</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o filename</code></dt>
 <dd>
-&nbsp;<wbr>Name of recorded video(default out.ogv). </p>
+&nbsp;<wbr>Name of recorded video(default out.ogv). </dd>
 </dl>
 <p> If no other option is specified, filename can be given without the -o switch. </p>
 <h2>USAGE</h2>
 <dl>
-<dt><code>recordmydesktop [OPTIONS]^filename</code></p>
+<dt><code>recordmydesktop [OPTIONS]^filename</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
+<dt><code>DISPLAY</code></dt>
 <dd>
  Display environment variable, specifying X server to connect to.
-</dl>
+</dd></dl>
 <h2>NOTES</h2>
 <p>&nbsp;<wbr>Recording a window using the &#8211;windowid option, doesn&#8217;t track the window itself, but the region that it covers.<br />
  Also when using that option the -x,-y,&#8211;width and &#8211;height options are relative to the specified window area.<br />

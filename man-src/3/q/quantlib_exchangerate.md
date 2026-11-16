@@ -34,15 +34,15 @@ description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 <p>exchange rate between two currencies </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>application of direct and derived exchange rate is tested against calculations.</dl>
+<dd>application of direct and derived exchange rate is tested against calculations.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Type</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>Direct </i></p>
-<dd>given directly by the user</p>
-<dt><i>Derived </i></p>
-<dd>derived from exchange rates between other currencies</dl>
+<dt><i>Direct </i></dt>
+<dd>given directly by the user</dd>
+<dt><i>Derived </i></dt>
+<dd>derived from exchange rates between other currencies</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>ExchangeRate</code> (const <code>Currency</code> &amp; source, const <code>Currency</code> &amp; target, Decimal rate)</h3>
 <p>the rate $ r $ is given with the convention that a unit of the source is worth $ r $ units of the target. </p>

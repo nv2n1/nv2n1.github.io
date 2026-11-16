@@ -12,7 +12,6 @@ std::binomial_distribution&lt;IntType&gt;::p,t - std::binomial_distribution&lt;I
 
 <pre><code>double p() const;
 (1)(since C++ 11)
-
     IntType t() const;
 (2)(since C++ 11)</code></pre> 
 Returns the parameters the distribution was constructed with. 

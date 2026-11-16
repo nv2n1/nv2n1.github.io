@@ -11,7 +11,6 @@ voice_set_playmode - Adjusts the loop status of the specified voice. Allegro gam
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;allegro.h&gt;
-
 void voice_set_playmode(int voice, int playmode);</code></pre>
 
 <h2>Description</h2>

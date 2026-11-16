@@ -11,7 +11,6 @@ description: "sc::P86CFunctional –"
 <p> Implements the Perdew 1986 (P86) correlation functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -23,38 +22,14 @@ description: "sc::P86CFunctional –"
 <p> void <code>point</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_constants ()
-
-
-
 Protected Attributes
 double a_
-
-
-
 double C1_
-
-
-
 double C2_
-
-
-
 double C3_
-
-
-
 double C4_
-
-
-
 double C5_
-
-
-
 double C6_
-
-
-
 double C7_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the Perdew 1986 (P86) correlation functional. </p>

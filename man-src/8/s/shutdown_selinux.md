@@ -30,8 +30,8 @@ description: "shutdown_selinux – Security Enhanced Linux Policy for the shutdo
 <p> <code>shutdown_exec_t </code> </p>
 <p> &#8211; Set files with the shutdown_exec_t type, if you want to transition an executable to the shutdown_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/shutdown, /usr/sbin/shutdown, /usr/lib/upstart/shutdown, /lib/upstart/shutdown </p>
+<dt>Paths:</dt>
+<dd>/sbin/shutdown, /usr/sbin/shutdown, /usr/lib/upstart/shutdown, /lib/upstart/shutdown </dd>
 </dl>
 <p> <code>shutdown_var_run_t </code> </p>
 <p> &#8211; Set files with the shutdown_var_run_t type, if you want to store the shutdown files under the /run directory. </p>

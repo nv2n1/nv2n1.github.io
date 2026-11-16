@@ -10,84 +10,30 @@ description: "QuantLib::CalibratedModel – Calibrated model class."
 <p>QuantLib::CalibratedModel &#8211; Calibrated model class. </p>
 <h2>Synopsis</h2>
 <pre><code>CalibratedModel (Size nArguments)
-
-
-
 void update ()
-
-
-
 void calibrate (const std::vector&lt; boost::shared_ptr&lt; CalibrationHelper &gt; &gt; &amp;, OptimizationMethod &amp;method, const EndCriteria &amp;endCriteria, const Constraint &amp;constraint=Constraint(), const std::vector&lt; Real &gt; &amp;weights=std::vector&lt; Real &gt;())
-
-
 Calibrate to a set of market instruments (caps/swaptions).
-
-
 Real value (const Array &amp;params, const std::vector&lt; boost::shared_ptr&lt; CalibrationHelper &gt; &gt; &amp;)
-
-
-
 const boost::shared_ptr&lt; Constraint &gt; &amp; constraint () const
-
-
-
 EndCriteria::Type endCriteria ()
-
-
 returns end criteria result
-
-
 Disposable&lt; Array &gt; params () const
-
-
 Returns array of arguments on which calibration is done.
-
-
 virtual void setParams (const Array &amp;params)
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::Observer</code>, and <code>QuantLib::Observable</code>. Inherited by <code>GJRGARCHModel</code>, <code>HestonModel</code>, <code>LiborForwardModel</code>, and <code>ShortRateModel</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>CalibratedModel (Size nArguments)
-
-
-
 void update ()
-
-
-
 void calibrate (const std::vector&lt; boost::shared_ptr&lt; CalibrationHelper &gt; &gt; &amp;, OptimizationMethod &amp;method, const EndCriteria &amp;endCriteria, const Constraint &amp;constraint=Constraint(), const std::vector&lt; Real &gt; &amp;weights=std::vector&lt; Real &gt;())
-
-
 Calibrate to a set of market instruments (caps/swaptions).
-
-
 Real value (const Array &amp;params, const std::vector&lt; boost::shared_ptr&lt; CalibrationHelper &gt; &gt; &amp;)
-
-
-
 const boost::shared_ptr&lt; Constraint &gt; &amp; constraint () const
-
-
-
 EndCriteria::Type endCriteria ()
-
-
 returns end criteria result
-
-
 Disposable&lt; Array &gt; params () const
-
-
 Returns array of arguments on which calibration is done.
-
-
 virtual void setParams (const Array &amp;params)
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual void <code>generateArguments</code> ()</p>
 <h3>Protected Attributes</h3>

@@ -26,39 +26,39 @@ description: "QwtClipper –"
 <dl COMPACT>
 <dd><i>clipRect</i> Clip rectangle<br />
  <i>center</i> Center of the circle<br />
- <i>radius</i> Radius of the circle</dl>
+ <i>radius</i> Radius of the circle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Arcs of the circle</dl>
+<dd>Arcs of the circle</dd></dl>
 <h3>QPolygon QwtClipper::clipPolygon (const QRect &amp;clipRect, const QPolygon &amp;polygon, boolclosePolygon = false) [static]</h3>
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>clipRect</i> Clip rectangle<br />
  <i>polygon</i> Polygon<br />
- <i>closePolygon</i> True, when the polygon is closed</dl>
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clipped polygon</dl>
+<dd>Clipped polygon</dd></dl>
 <h3>QPolygon QwtClipper::clipPolygon (const QRectF &amp;clipRect, const QPolygon &amp;polygon, boolclosePolygon = false) [static]</h3>
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>clipRect</i> Clip rectangle<br />
  <i>polygon</i> Polygon<br />
- <i>closePolygon</i> True, when the polygon is closed</dl>
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clipped polygon</dl>
+<dd>Clipped polygon</dd></dl>
 <h3>QPolygonF QwtClipper::clipPolygonF (const QRectF &amp;clipRect, const QPolygonF &amp;polygon, boolclosePolygon = false) [static]</h3>
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>clipRect</i> Clip rectangle<br />
  <i>polygon</i> Polygon<br />
- <i>closePolygon</i> True, when the polygon is closed</dl>
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clipped polygon</dl>
+<dd>Clipped polygon</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

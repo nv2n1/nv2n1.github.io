@@ -51,10 +51,10 @@ description: "std::_Deque_base< _Tp, _Alloc > –"
 <p>Layout storage. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__num_elements</i> The count of T&#8217;s for which to allocate space at first.</dl>
+<dd><i>__num_elements</i> The count of T&#8217;s for which to allocate space at first.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Nothing.</dl>
+<dd>Nothing.</dd></dl>
 <p> The initial underlying memory layout is a bit complicated&#8230; </p>
 <p> Definition at line 582 of file stl_deque.h. </p>
 <p> References std::max().</p>

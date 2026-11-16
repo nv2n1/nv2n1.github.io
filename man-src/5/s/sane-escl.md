@@ -28,21 +28,21 @@ description: "sane-escl – SANE backend for eSCL scanners"
  HP LASERJET MFP M28W, LASERJET MFP M630<br />
  HP OFFICEJET 4630, OFFICEJET PRO 8610<br />
  RICOH SP3710S<br />
- XEROX VERSALINK C7220</dl>
+ XEROX VERSALINK C7220</dd></dl>
 <p> The. <code>sane-escl</code> backend for SANE supports AirScan/eSCL devices that announce themselves on mDNS as _uscan._utcp or _uscans._utcp. If the device is available, the <code>sane-escl</code> backend recovers these capacities. The user configures and starts scanning. A list of devices that use the eSCL protocol can be found at <i><a rel="nofollow" href="https://support.apple.com/en-us/HT201311">https://support.apple.com/en-us/HT201311</a></i>. While these devices are expected to work, your mileage may vary. </p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/escl.conf</i></p>
-<dd>The backend configuration file.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-escl.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-escl.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/escl.conf</i></dt>
+<dd>The backend configuration file.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-escl.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-escl.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_ESCL</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
+<dt><code>SANE_DEBUG_ESCL</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) <code>xscanimage</code>(1) <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>

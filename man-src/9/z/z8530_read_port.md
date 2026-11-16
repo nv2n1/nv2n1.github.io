@@ -14,7 +14,7 @@ description: "z8530_read_port – Architecture specific interface function"
 <p><i>p</i></p>
 <dl>
 <dd>
-<dd>port to read</dl>
+</dd><dd>port to read</dd></dl>
 <h2>Description</h2>
 <p>Provided port access methods. The Comtrol SV11 requires no delays between accesses and uses PC I/O. Some drivers may need a 5uS delay </p>
 <p> In the longer term this should become an architecture specific section so that this can become a generic driver interface for all platforms. For now we only handle PC I/O ports with or without the dread 5uS sanity delay. </p>
@@ -22,5 +22,5 @@ description: "z8530_read_port – Architecture specific interface function"
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -16,18 +16,18 @@ description: "night_filter – select filter or print current one"
 <p> options: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> info print current filter</p>
 <dl>
-<dt><code>-f</code></p>
+<dt><code>-f</code></dt>
 <dd>
-&nbsp;<wbr>set filter, one from -list</p>
-<dt><code>-list</code></p>
-<dd> list of defined filters</p>
-<dt><code>-init</code></p>
-<dd> (re)initialize filter wheel</p>
-<dt><code>-p</code></p>
+&nbsp;<wbr>set filter, one from -list</dd>
+<dt><code>-list</code></dt>
+<dd> list of defined filters</dd>
+<dt><code>-init</code></dt>
+<dd> (re)initialize filter wheel</dd>
+<dt><code>-p</code></dt>
 <dd>
-show progress indicator</p>
-<dt><code>-host</code></p>
-<dd> address:port internet address server, default: local connect</dl>
+show progress indicator</dd>
+<dt><code>-host</code></dt>
+<dd> address:port internet address server, default: local connect</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Setting of environment variable NIGHTVIEW_HOST is equivalent to -host option.</p>
 <h2>REPORTING BUGS</h2>

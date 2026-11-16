@@ -24,19 +24,19 @@ description: "getzone – get dns zone from server"
 <p> To obtain the zone example.com from the server 192.168.9.8: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 getzone example.com 192.168.9.8 
 </pre>
-</dl>
+</dd></dl>
 <p> To obtain the zone example.org from the server 10.9.8.78 using a query class of 255: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 getzone example.com 10.9.8.78 255
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The man pages <code><a href="/docs/linux/man/8-maradns/">maradns</a>(8)</code> and <code><a href="/docs/linux/man/5-csv1/">csv1</a>(5)</code> </p>
 <p> <a rel="nofollow" href="http://www.maradns.org">http://www.maradns.org</a></p>

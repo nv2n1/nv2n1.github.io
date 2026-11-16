@@ -14,16 +14,16 @@ description: "skb_prepare_seq_read – Prepare a sequential read of skb data"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>the buffer to read</dl>
+</dd><dd>the buffer to read</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>lower offset of data to be read</dl>
+<dd>lower offset of data to be read</dd></dl>
 <p> <i>to</i></p>
 <dl>
-<dd>upper offset of data to be read</dl>
+<dd>upper offset of data to be read</dd></dl>
 <p> <i>st</i></p>
 <dl>
-<dd>state variable</dl>
+<dd>state variable</dd></dl>
 <h2>Description</h2>
 <p>Initializes the specified state variable. Must be called before invoking <code>skb_seq_read</code> for the first time.</p>
 <h2>Copyright</h2>

@@ -37,23 +37,23 @@ description: "shadow, getspnam – encrypted password file routines"
 }</code></pre>
 <p> The meanings of each field are:</p>
 <dl>
-<dd>&bull; sp_namp &#8211; pointer to null-terminated user name</dl>
+<dd>&bull; sp_namp &#8211; pointer to null-terminated user name</dd></dl>
 <dl>
-<dd>&bull; sp_pwdp &#8211; pointer to null-terminated password</dl>
+<dd>&bull; sp_pwdp &#8211; pointer to null-terminated password</dd></dl>
 <dl>
-<dd>&bull; sp_lstchg &#8211; days since Jan 1, 1970 password was last changed</dl>
+<dd>&bull; sp_lstchg &#8211; days since Jan 1, 1970 password was last changed</dd></dl>
 <dl>
-<dd>&bull; sp_min &#8211; days before which password may not be changed</dl>
+<dd>&bull; sp_min &#8211; days before which password may not be changed</dd></dl>
 <dl>
-<dd>&bull; sp_max &#8211; days after which password must be changed</dl>
+<dd>&bull; sp_max &#8211; days after which password must be changed</dd></dl>
 <dl>
-<dd>&bull; sp_warn &#8211; days before password is to expire that user is warned of pending password expiration</dl>
+<dd>&bull; sp_warn &#8211; days before password is to expire that user is warned of pending password expiration</dd></dl>
 <dl>
-<dd>&bull; sp_inact &#8211; days after password expires that account is considered inactive and disabled</dl>
+<dd>&bull; sp_inact &#8211; days after password expires that account is considered inactive and disabled</dd></dl>
 <dl>
-<dd>&bull; sp_expire &#8211; days since Jan 1, 1970 when account will be disabled</dl>
+<dd>&bull; sp_expire &#8211; days since Jan 1, 1970 when account will be disabled</dd></dl>
 <dl>
-<dd>&bull; sp_flag &#8211; reserved for future use</dl>
+<dd>&bull; sp_flag &#8211; reserved for future use</dd></dl>
 <h2>Description</h2>
 <p><i>getspent</i>, <i>getspname</i>, <i>fgetspent</i>, and <i>sgetspent</i> each return a pointer to a <i>struct spwd</i>. <i>getspent</i> returns the next entry from the file, and <i>fgetspent</i> returns the next entry from the given stream, which is assumed to be a file of the proper format. <i>sgetspent</i> returns a pointer to a <i>struct spwd</i> using the provided string as input. <i>getspnam</i> searches from the current position in the file for an entry matching <i>name</i>. </p>
 <p> <i>setspent</i> and <i>endspent</i> may be used to begin and end, respectively, access to the shadow password file. </p>
@@ -65,6 +65,6 @@ description: "shadow, getspnam – encrypted password file routines"
 <h2>Files</h2>
 <p>/etc/shadow</p>
 <dl>
-<dd>Secure user account information.</dl>
+<dd>Secure user account information.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5). </p>

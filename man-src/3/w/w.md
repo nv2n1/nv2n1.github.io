@@ -10,48 +10,18 @@ description: "QuantLib::GaussianOrthogonalPolynomial – orthogonal polynomial f
 <p>QuantLib::GaussianOrthogonalPolynomial &#8211; orthogonal polynomial for Gaussian quadratures </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Real mu_0 () const =0
-
-
-
 virtual Real alpha (Size i) const =0
-
-
-
 virtual Real beta (Size i) const =0
-
-
-
 virtual Real w (Real x) const =0
-
-
-
 Real value (Size i, Real x) const
-
-
-
 Real weightedValue (Size i, Real x) const</code></pre>
 <p> Inherited by <code>GaussHermitePolynomial</code>, <code>GaussHyperbolicPolynomial</code>, <code>GaussJacobiPolynomial</code>, and <code>GaussLaguerrePolynomial</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual Real mu_0 () const =0
-
-
-
 virtual Real alpha (Size i) const =0
-
-
-
 virtual Real beta (Size i) const =0
-
-
-
 virtual Real w (Real x) const =0
-
-
-
 Real value (Size i, Real x) const
-
-
-
 Real weightedValue (Size i, Real x) const</code></pre>
 <h2>Detailed Description</h2>
 <p>orthogonal polynomial for Gaussian quadratures </p>

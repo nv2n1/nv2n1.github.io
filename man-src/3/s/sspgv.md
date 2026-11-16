@@ -19,7 +19,7 @@ description: "sspgv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SSPGV computes all the eigenvalues and, optionally, the eigenvectors
  of a real generalized symmetric-definite eigenproblem, of the form
@@ -27,11 +27,11 @@ description: "sspgv.f –"
  Here A and B are assumed to be symmetric, stored in packed format,
  and B is also positive definite.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ITYPE</i> </p>
+</dt><dd> <i>ITYPE</i> </dd>
 <pre>
           ITYPE is INTEGER
           Specifies the problem type to be solved:
@@ -110,14 +110,14 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 161 of file sspgv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

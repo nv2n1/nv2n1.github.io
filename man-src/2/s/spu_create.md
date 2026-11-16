@@ -24,60 +24,60 @@ int spu_create(const char *pathname, int flags, mode_t mode,
 <p> The <i>neighbor_fd</i> is used only when the <code>SPU_CREATE_AFFINITY_SPU</code> flag is specified; see below. </p>
 <p> The <i>flags</i> argument can be zero or any bitwise OR-ed combination of the following constants:</p>
 <dl>
-<dt><code>SPU_CREATE_EVENTS_ENABLED</code></p>
-<dd> Rather than using signals for reporting DMA errors, use the <i>event</i> argument to <code><a href="/docs/linux/man/2-spu_run/">spu_run</a></code>(2).</p>
-<dt><code>SPU_CREATE_GANG</code></p>
-<dd> Create an SPU gang instead of a context. (A gang is a group of SPU contexts that are functionally related to each other and which share common scheduling parameters&#8212;priority and policy. In the future, gang scheduling may be implemented causing the group to be switched in and out as a single unit.)</p>
+<dt><code>SPU_CREATE_EVENTS_ENABLED</code></dt>
+<dd> Rather than using signals for reporting DMA errors, use the <i>event</i> argument to <code><a href="/docs/linux/man/2-spu_run/">spu_run</a></code>(2).</dd>
+<dt><code>SPU_CREATE_GANG</code></dt>
+<dd> Create an SPU gang instead of a context. (A gang is a group of SPU contexts that are functionally related to each other and which share common scheduling parameters&#8212;priority and policy. In the future, gang scheduling may be implemented causing the group to be switched in and out as a single unit.)</dd>
 <dt>
-<dd> A new directory will be created at the location specified by the <i>pathname</i> argument. This gang may be used to hold other SPU contexts, by providing a pathname that is within the gang directory to further calls to <code>spu_create</code>().</p>
-<dt><code>SPU_CREATE_NOSCHED</code></p>
-<dd> Create a context that is not affected by the SPU scheduler. Once the context is run, it will not be scheduled out until it is destroyed by the creating process.</p>
+</dt><dd> A new directory will be created at the location specified by the <i>pathname</i> argument. This gang may be used to hold other SPU contexts, by providing a pathname that is within the gang directory to further calls to <code>spu_create</code>().</dd>
+<dt><code>SPU_CREATE_NOSCHED</code></dt>
+<dd> Create a context that is not affected by the SPU scheduler. Once the context is run, it will not be scheduled out until it is destroyed by the creating process.</dd>
 <dt>
-<dd> Because the context cannot be removed from the SPU, some functionality is disabled for <code>SPU_CREATE_NOSCHED</code> contexts. Only a subset of the files will be available in this context directory in <code>spufs</code>. Additionally, <code>SPU_CREATE_NOSCHED</code> contexts cannot dump a core file when crashing.</p>
+</dt><dd> Because the context cannot be removed from the SPU, some functionality is disabled for <code>SPU_CREATE_NOSCHED</code> contexts. Only a subset of the files will be available in this context directory in <code>spufs</code>. Additionally, <code>SPU_CREATE_NOSCHED</code> contexts cannot dump a core file when crashing.</dd>
 <dt>
-<dd> Creating <code>SPU_CREATE_NOSCHED</code> contexts requires the <code>CAP_SYS_NICE</code> capability.</p>
-<dt><code>SPU_CREATE_ISOLATE</code></p>
-<dd> Create an isolated SPU context. Isolated contexts are protected from some PPE (PowerPC Processing Element) operations, such as access to the SPU local store and the NPC register.</p>
+</dt><dd> Creating <code>SPU_CREATE_NOSCHED</code> contexts requires the <code>CAP_SYS_NICE</code> capability.</dd>
+<dt><code>SPU_CREATE_ISOLATE</code></dt>
+<dd> Create an isolated SPU context. Isolated contexts are protected from some PPE (PowerPC Processing Element) operations, such as access to the SPU local store and the NPC register.</dd>
 <dt>
-<dd> Creating <code>SPU_CREATE_ISOLATE</code> contexts also requires the <code>SPU_CREATE_NOSCHED</code> flag.</p>
-<dt><code>SPU_CREATE_AFFINITY_SPU</code> (since Linux 2.6.23)</p>
-<dd> Create a context with affinity to another SPU context. This affinity information is used within the SPU scheduling algorithm. Using this flag requires that a file descriptor referring to the other SPU context be passed in the <i>neighbor_fd</i> argument.</p>
-<dt><code>SPU_CREATE_AFFINITY_MEM</code> (since Linux 2.6.23)</p>
-<dd> Create a context with affinity to system memory. This affinity information is used within the SPU scheduling algorithm.</dl>
+</dt><dd> Creating <code>SPU_CREATE_ISOLATE</code> contexts also requires the <code>SPU_CREATE_NOSCHED</code> flag.</dd>
+<dt><code>SPU_CREATE_AFFINITY_SPU</code> (since Linux 2.6.23)</dt>
+<dd> Create a context with affinity to another SPU context. This affinity information is used within the SPU scheduling algorithm. Using this flag requires that a file descriptor referring to the other SPU context be passed in the <i>neighbor_fd</i> argument.</dd>
+<dt><code>SPU_CREATE_AFFINITY_MEM</code> (since Linux 2.6.23)</dt>
+<dd> Create a context with affinity to system memory. This affinity information is used within the SPU scheduling algorithm.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>spu_create</code>() returns a new file descriptor. On error, -1 is returned, and <i>errno</i> is set to one of the error codes listed below.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The current user does not have write access to the <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7) mount point.</p>
-<dt><code>EEXIST</code></p>
-<dd> An SPU context already exists at the given pathname.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> is not a valid string pointer in the calling process&#8217;s address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>pathname</i> is not a directory in the <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7) mount point, or invalid flags have been provided.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were found while resolving <i>pathname</i>.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENODEV</code></p>
-<dd> An isolated context was requested, but the hardware does not support SPU isolation.</p>
-<dt><code>ENOENT</code></p>
-<dd> Part of <i>pathname</i> could not be resolved.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel could not allocate all resources required.</p>
-<dt><code>ENOSPC</code></p>
-<dd> There are not enough SPU resources available to create a new context or the user-specific limit for the number of SPU contexts has been reached.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The functionality is not provided by the current system, because either the hardware does not provide SPUs or the spufs module is not loaded.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A part of <i>pathname</i> is not a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The <code>SPU_CREATE_NOSCHED</code> flag has been given, but the user does not have the <code>CAP_SYS_NICE</code> capability.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The current user does not have write access to the <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7) mount point.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> An SPU context already exists at the given pathname.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> is not a valid string pointer in the calling process&#8217;s address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>pathname</i> is not a directory in the <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7) mount point, or invalid flags have been provided.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were found while resolving <i>pathname</i>.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> An isolated context was requested, but the hardware does not support SPU isolation.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> Part of <i>pathname</i> could not be resolved.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel could not allocate all resources required.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> There are not enough SPU resources available to create a new context or the user-specific limit for the number of SPU contexts has been reached.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The functionality is not provided by the current system, because either the hardware does not provide SPUs or the spufs module is not loaded.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A part of <i>pathname</i> is not a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The <code>SPU_CREATE_NOSCHED</code> flag has been given, but the user does not have the <code>CAP_SYS_NICE</code> capability.</dd></dl>
 <h2>FILES</h2>
 <p> <i>pathname</i> must point to a location beneath the mount point of <code>spufs</code>. By convention, it gets mounted in <i>/spu</i>.</p>
 <h2>VERSIONS</h2>

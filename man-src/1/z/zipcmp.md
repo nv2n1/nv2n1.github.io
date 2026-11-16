@@ -15,19 +15,17 @@ description: "zipcmp – compare contents of zip archives"
 <p> <code>zipcmp</code> compares the zip archives <code>zip1</code> and <code>zip2</code> and checks if they contain the same files, comparing their names, uncompressed sizes, and CRCs. File order and compressed size differences are ignored. </p>
 <p> Supported options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a short help message and exit.</p>
-<dt><code>-i</code></p>
-<dd> Compare names ignoring case distinctions.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode. Compare <code>-v</code>.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Print details about differences to stdout. (This is the default.)</p>
-<dt><code>-V</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-h</code></dt>
+<dd> Display a short help message and exit.</dd>
+<dt><code>-i</code></dt>
+<dd> Compare names ignoring case distinctions.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. Compare <code>-v</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Print details about differences to stdout. (This is the default.)</dd>
+<dt><code>-V</code></dt>
+<dd> Display version information and exit.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <code>zipcmp</code> exits 0 if the two zip archives contain the same files, 1 if they differ, and &gt;1 if an error occurred.</p>

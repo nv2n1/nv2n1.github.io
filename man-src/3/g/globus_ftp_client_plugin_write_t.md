@@ -212,9 +212,9 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
- <i>handle</i> The handle associated with the request.</dl>
+ <i>handle</i> The handle associated with the request.</dd></dl>
  
 
  
@@ -230,11 +230,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the connection. 
  <i>url</i> The URL of the server to connect to. 
- <i>auth_info</i> Authentication and authorization info being used to authenticate with the FTP or GridFTP server.</dl>
+ <i>auth_info</i> Authentication and authorization info being used to authenticate with the FTP or GridFTP server.</dd></dl>
  
 
  
@@ -250,13 +250,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the delete operation. 
  <i>url</i> The url to chgrp. 
  <i>group</i> The group name or ID to change to. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -272,13 +272,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the delete operation. 
  <i>url</i> The url to chmod. 
  <i>mode</i> The file mode to be applied. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -294,7 +294,7 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the delete operation. 
  <i>url</i> The url to cksm. 
@@ -302,7 +302,7 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file. 
  <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -316,11 +316,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>url</i> The URL which this command is being sent to. 
- <i>command</i> A string containing the command which is being sent to the server (TYPE I, for example).</dl>
+ <i>command</i> A string containing the command which is being sent to the server (TYPE I, for example).</dd></dl>
  
 
  
@@ -334,9 +334,9 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
- <i>handle</i> The handle associated with the operation.</dl>
+ <i>handle</i> The handle associated with the operation.</dd></dl>
  
 
  
@@ -352,15 +352,15 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
- <i>handle</i> The handle associated with the connection.</dl>
+ <i>handle</i> The handle associated with the connection.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> This function will not be called for a get, put, or third-party transfer operation when a cached connection is used.</dl>
+</dt><dd> This function will not be called for a get, put, or third-party transfer operation when a cached connection is used.</dd></dl>
  
 
  
@@ -376,20 +376,20 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin_template</i> A plugin previously initialized by a call to the plugin-specific initialization function. by the user. 
- <i>plugin_specific</i> Plugin-specific data.</dl>
+</dt><dd> <i>plugin_template</i> A plugin previously initialized by a call to the plugin-specific initialization function. by the user. 
+ <i>plugin_specific</i> Plugin-specific data.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> A pointer to a plugin. This plugin copy must remain valid until the copy's <b>destroy</b> function is called on the copy.</dl>
+</dt><dd> A pointer to a plugin. This plugin copy must remain valid until the copy's <b>destroy</b> function is called on the copy.</dd></dl>
  
 
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_plugin_destroy_t</b></dl>
+</dt><dd> <b>globus_ftp_client_plugin_destroy_t</b></dd></dl>
  
 
  
@@ -403,13 +403,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>buffer</i> The buffer which was successfully transferred over the network. 
  <i>length</i> The amount of data to read or written. 
  <i>offset</i> The offset into the file where this data buffer belongs. 
- <i>eof</i> This value is set to GLOBUS_TRUE if end-of-file is being processed for this transfer.</dl>
+ <i>eof</i> This value is set to GLOBUS_TRUE if end-of-file is being processed for this transfer.</dd></dl>
  
 
  
@@ -425,12 +425,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the delete operation. 
  <i>url</i> The url to be deleted. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -444,8 +444,8 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin, created by the create function, which is to be destroyed. 
- <i>plugin_specific</i> Plugin-specific data.</dl>
+</dt><dd> <i>plugin</i> The plugin, created by the create function, which is to be destroyed. 
+ <i>plugin_specific</i> Plugin-specific data.</dd></dl>
  
 
  
@@ -459,11 +459,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>url</i> The url being processed when the fault ocurred. 
- <i>error</i> An error object describing the fault.</dl>
+ <i>error</i> An error object describing the fault.</dd></dl>
  
 
  
@@ -479,12 +479,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the feat operation. 
  <i>url</i> The url to be feat'd. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current feat operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current feat operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -500,12 +500,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the get operation. 
  <i>url</i> The url of the get operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current get transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current get transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -521,12 +521,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -542,12 +542,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -563,12 +563,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the mkdir operation. 
  <i>url</i> The url of the directory to create. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current mkdir operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current mkdir operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -584,12 +584,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -605,12 +605,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -626,13 +626,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the move operation. 
  <i>source_url</i> The source url of the move operation. 
  <i>dest_url</i> The destination url of the move operation. 
  <i>attr</i> The attributes to be used during this move. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current move transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current move transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -648,12 +648,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the put operation. 
  <i>url</i> The url of the put operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current put transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current put transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -667,11 +667,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>buffer</i> The data buffer to read into. 
- <i>buffer_length</i> The maximum amount of data to read into the buffer.</dl>
+ <i>buffer_length</i> The maximum amount of data to read into the buffer.</dd></dl>
  
 
  
@@ -687,12 +687,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -706,12 +706,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>url</i> The URL which this response came from. 
  <i>error</i> An error which occurred while processing this command/response pair. 
- <i>ftp_response</i> The response structure from the ftp control library.</dl>
+ <i>ftp_response</i> The response structure from the ftp control library.</dd></dl>
  
 
  
@@ -727,12 +727,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the rmdir operation. 
  <i>url</i> The url of the rmdir operation. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current rmdir operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current rmdir operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -748,12 +748,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -769,12 +769,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -790,13 +790,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the symlink operation. 
  <i>url</i> The url of the new link. 
  <i>link_url</i> The url to which the new link should point. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -814,7 +814,7 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_handle_init()</b>, <b>globus_ftp_client_handle_destroy()</b>, <b>globus_ftp_client_handleattr_t</b>, <b>Debugging Plugin </b></dl>
+</dt><dd> <b>globus_ftp_client_handle_init()</b>, <b>globus_ftp_client_handle_destroy()</b>, <b>globus_ftp_client_handleattr_t</b>, <b>Debugging Plugin </b></dd></dl>
  
 
  
@@ -830,14 +830,14 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the transfer operation. 
  <i>source_url</i> The source url of the transfer operation. 
  <i>source_attr</i> The attributes to be used during this transfer on the source. 
  <i>dest_url</i> The destination url of the third-party transfer operation. 
  <i>dest_attr</i> The attributes to be used during this transfer on the destination. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current transfer transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current transfer transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -853,13 +853,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the utime operation. 
  <i>url</i> The url to utime. 
  <i>utime_time</i> The modification time to change the file to. 
  <i>attr</i> The attributes to be used during this operation. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -875,12 +875,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the list operation. 
  <i>url</i> The url of the list operation. 
  <i>attr</i> The attributes to be used during this transfer. 
- <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dl>
+ <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
  
 
  
@@ -894,13 +894,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>plugin</i> The plugin which is being notified. 
+</dt><dd> <i>plugin</i> The plugin which is being notified. 
  <i>plugin_specific</i> Plugin-specific data. 
  <i>handle</i> The handle associated with the request. 
  <i>buffer</i> The buffer which is being written. 
  <i>buffer_length</i> The amount of data in the buffer. 
  <i>offset</i> The offset within the file where the buffer is to be written. 
- <i>eof</i> This value is set to GLOBUS_TRUE if this is the last data buffer to be sent for this put request.</dl>
+ <i>eof</i> This value is set to GLOBUS_TRUE if this is the last data buffer to be sent for this put request.</dd></dl>
  
 
  
@@ -928,23 +928,23 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Enumerator</b>
 <dl>
 <dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_CONTROL_ESTABLISHMENT </i>
-<dd> connect, authenticate
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_DATA_ESTABLISHMENT </i>
-<dd> PASV, PORT, SPOR, SPAS
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_TRANSFER_PARAMETERS </i>
-<dd> MODE, TYPE, STRU, OPTS RETR, DCAU
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_TRANSFER_MODIFIERS </i>
-<dd> ALLO, REST
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_FILE_ACTIONS </i>
-<dd> STOR, RETR, ESTO, ERET, APPE, LIST, NLST, MLSD, MLSR, GET, PUT
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_INFORMATION </i>
-<dd> HELP, SITE HELP, FEAT, STAT, SYST, SIZE
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_MISC </i>
-<dd> SITE, NOOP
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_BUFFER </i>
-<dd> SBUF, ABUF
-<dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_ALL </i>
-<dd> All possible commands</dl>
+</dt><dd> connect, authenticate
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_DATA_ESTABLISHMENT </i>
+</dt><dd> PASV, PORT, SPOR, SPAS
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_TRANSFER_PARAMETERS </i>
+</dt><dd> MODE, TYPE, STRU, OPTS RETR, DCAU
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_TRANSFER_MODIFIERS </i>
+</dt><dd> ALLO, REST
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_FILE_ACTIONS </i>
+</dt><dd> STOR, RETR, ESTO, ERET, APPE, LIST, NLST, MLSD, MLSR, GET, PUT
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_INFORMATION </i>
+</dt><dd> HELP, SITE HELP, FEAT, STAT, SYST, SIZE
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_MISC </i>
+</dt><dd> SITE, NOOP
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_BUFFER </i>
+</dt><dd> SBUF, ABUF
+</dd><dt><i>GLOBUS_FTP_CLIENT_CMD_MASK_ALL </i>
+</dt><dd> All possible commands</dd></dl>
 
 <h2>Function Documentation</h2>
 
@@ -961,7 +961,7 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the transfer.</dl>
+</dt><dd> <i>handle</i> The handle which is associated with the transfer.</dd></dl>
  
 
  
@@ -975,15 +975,15 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the transfer. 
+</dt><dd> <i>handle</i> The handle which is associated with the transfer. 
  <i>num_channels</i> The number of channels to add to the transfer. 
- <i>stripe</i> The stripe number to have the channels added to.</dl>
+ <i>stripe</i> The stripe number to have the channels added to.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Do the plugins need to be notified when this happens?</dl>
+</dt><dd> Do the plugins need to be notified when this happens?</dd></dl>
  
 
  
@@ -997,15 +997,15 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the transfer. 
+</dt><dd> <i>handle</i> The handle which is associated with the transfer. 
  <i>num_channels</i> The number of channels to remove from the transfer. 
- <i>stripe</i> The stripe number to have the channels removed from.</dl>
+ <i>stripe</i> The stripe number to have the channels removed from.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Do the plugins need to be notified when this happens?</dl>
+</dt><dd> Do the plugins need to be notified when this happens?</dd></dl>
  
 
  
@@ -1021,11 +1021,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the chgrp. 
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp. 
  <i>url</i> The destination URL of the transfer. This may be different than the original chgrp's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>group</i> The group name or ID to change the file to. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chgrp's attribute set. 
- <i>when</i> Absolute time for when to restart the chgrp. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the chgrp. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1041,11 +1041,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the chmod. 
+</dt><dd> <i>handle</i> The handle which is associated with the chmod. 
  <i>url</i> The destination URL of the transfer. This may be different than the original chmod's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>mode</i> The file mode that will be applied. Must be an octal number repre- senting the bit pattern for the new permissions. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chmod's attribute set. 
- <i>when</i> Absolute time for when to restart the chmod. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the chmod. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1061,13 +1061,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the cksm. 
+</dt><dd> <i>handle</i> The handle which is associated with the cksm. 
  <i>url</i> The destination URL of the transfer. This may be different than the original cksm's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>offset</i> File offset to start calculating checksum. 
  <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file. 
  <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original cksm's attribute set. 
- <i>when</i> Absolute time for when to restart the cksm. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the cksm. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1083,10 +1083,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the delete. 
+</dt><dd> <i>handle</i> The handle which is associated with the delete. 
  <i>url</i> The destination URL of the transfer. This may be different than the original delete's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original delete's attribute set. 
- <i>when</i> Absolute time for when to restart the delete. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the delete. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1102,10 +1102,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the feat. 
+</dt><dd> <i>handle</i> The handle which is associated with the feat. 
  <i>url</i> The destination URL of the transfer. This may be different than the original feat's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original feat's attribute set. 
- <i>when</i> Absolute time for when to restart the feat. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the feat. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1121,11 +1121,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the get. 
+</dt><dd> <i>handle</i> The handle which is associated with the get. 
  <i>url</i> The source URL of the transfer. This may be different than the original get's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original get's attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent. 
  <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted. 
- <i>when</i> Absolute time for when to restart the get. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the get. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1139,21 +1139,19 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the transfer. 
- <i>marker</i> Pointer to an uninitialized restart marker type</dl>
+</dt><dd> <i>handle</i> The handle which is associated with the transfer. 
+ <i>marker</i> Pointer to an uninitialized restart marker type</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>&bull;
-<dd> Error on NULL handle or marker
-<dt>&bull;
-<dd> Error on invalid use of function
-<dt>&bull;
-<dd> GLOBUS_SUCCESS (marker will be populated)</dl>
+</dt><dd> Error on NULL handle or marker
+</dd><dt>&bull;
+</dt><dd> Error on invalid use of function
+</dd><dt>&bull;
+</dt><dd> GLOBUS_SUCCESS (marker will be populated)</dd></dl>
  
 
 </dl>
@@ -1172,10 +1170,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1191,10 +1189,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1210,10 +1208,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the mkdir. 
+</dt><dd> <i>handle</i> The handle which is associated with the mkdir. 
  <i>url</i> The destination URL of the transfer. This may be different than the original mkdir's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original mkdir's attribute set. 
- <i>when</i> Absolute time for when to restart the mkdir. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the mkdir. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1229,10 +1227,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1248,10 +1246,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the operation. 
+</dt><dd> <i>handle</i> The handle which is associated with the operation. 
  <i>url</i> The source URL of the modification time check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations's attribute set. 
- <i>when</i> Absolute time for when to restart the modification time check. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the modification time check. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1267,11 +1265,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the move. 
+</dt><dd> <i>handle</i> The handle which is associated with the move. 
  <i>source_url</i> The source URL of the move. This may be different than the original get's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>dest_url</i> The destination URL of the move. This may be different than the original get's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. Note that only the path component of this URL is used. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original move's attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent. 
- <i>when</i> Absolute time for when to restart the move. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the move. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1287,11 +1285,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the put. 
+</dt><dd> <i>handle</i> The handle which is associated with the put. 
  <i>url</i> The URL of the transfer. This may be different than the original put's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. If the put is restarted with a different URL, the plugin must re-send any data which has already been acknowledged by it's callback. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original put's attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent. 
  <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted. 
- <i>when</i> Absolute time for when to restart the put. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the put. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1307,10 +1305,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1326,10 +1324,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the rmdir. 
+</dt><dd> <i>handle</i> The handle which is associated with the rmdir. 
  <i>url</i> The destination URL of the transfer. This may be different than the original rmdir's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original rmdir's attribute set. 
- <i>when</i> Absolute time for when to restart the rmdir. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the rmdir. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1345,10 +1343,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the operation. 
+</dt><dd> <i>handle</i> The handle which is associated with the operation. 
  <i>url</i> The source URL of the size check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations's attribute set. 
- <i>when</i> Absolute time for when to restart the size check. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the size check. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1364,10 +1362,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1383,11 +1381,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the chgrp. 
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp. 
  <i>url</i> The destination URL of the transfer. This may be different than the original symlink's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>link_url</i> The URL to symbolically link the file to. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original symlink's attribute set. 
- <i>when</i> Absolute time for when to restart the symlink. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the symlink. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1403,13 +1401,13 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the transfer. 
+</dt><dd> <i>handle</i> The handle which is associated with the transfer. 
  <i>source_url</i> The source URL of the transfer. This may be different than the original URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL 
  <i>source_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer's attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent. 
  <i>dest_url</i> The destination URL of the transfer. This may be different than the original destination URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>dest_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer's attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent. 
  <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted. 
- <i>when</i> Absolute time for when to restart the transfer. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the transfer. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1425,11 +1423,11 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the chgrp. 
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp. 
  <i>url</i> The destination URL of the transfer. This may be different than the original utime's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>utime_time</i> The time value to change the file to. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original utime's attribute set. 
- <i>when</i> Absolute time for when to restart the utime. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the utime. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1445,10 +1443,10 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle which is associated with the list. 
+</dt><dd> <i>handle</i> The handle which is associated with the list. 
  <i>url</i> The destination URL of the transfer. This may be different than the original list's URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. 
  <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list's attribute set. 
- <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dl>
+ <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <b>when</b>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
  
 
  
@@ -1464,12 +1462,12 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
 
 
 <dt><a HREF="#lbBS">Enumeration Type Documentation</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbBU">Function Documentation</a>
-<dd>
+</dd><dt><a HREF="#lbBU">Function Documentation</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCU">Author</a>
-<dd></dl>
+</dd><dt><a HREF="#lbCU">Author</a>
+</dt><dd></dd></dl>

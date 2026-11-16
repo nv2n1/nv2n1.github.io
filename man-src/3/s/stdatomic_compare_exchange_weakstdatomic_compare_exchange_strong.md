@@ -128,9 +128,7 @@ description: "std::atomic_compare_exchange_weak,std::atomic_compare_exchange_str
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> // Run this code </p>
 <pre><code>#include &lt;atomic&gt;
 template &lt;class T&gt;
-
 struct node
-
 {
     T data;
     node *next;
@@ -140,12 +138,9 @@ struct node
     }
 };
 template &lt;class T&gt;
-
 class stack
-
 {
     std::atomic&lt;node&lt;T&gt; *&gt; head;
-
   public:
     void push(const T &amp;data)
     {
@@ -163,16 +158,12 @@ class stack
             std::memory_order_release,
             std::memory_order_relaxed))
             ; // the body of the loop is empty
-
         // note: the above loop is not thread-safe in at least
-
         // GCC prior to 4.8.3 (bug 60272), clang prior to 2014-05-05 (bug 18899)
-
         // MSVC prior to 2014-03-17 (bug 819819). See member function version for workaround
     }
 };
 int main()
-
 {
     stack&lt;int&gt; s;
     s.push(1);

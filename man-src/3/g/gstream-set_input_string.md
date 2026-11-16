@@ -18,7 +18,6 @@ description: "set_input_string"
 char buf[100];
 gs &lt;&lt; "What's your opinion about gstream?
 ";
-
 gs.set_input_string("I think it is incredible wonderful!");
 gs.getline(buf, 100);
 </code></pre>
@@ -26,13 +25,11 @@ gs.getline(buf, 100);
 <pre>
    What's your opinion about gstream?
    I think it is incredible wonderful!|
-   
 </pre>
 <p> where the &#8216;|&#8217; represents the cursor, and (s)he can edit the string, for example </p>
 <pre>
    What's your opinion about gstream?
    I think it is superior, fantastic and| wonderful!
-   
 </pre>
 <p> resulting in &#8216;buf&#8217; containing the string &quot;I think it is superior, fantastic and wonderful!&quot; </p>
 <h2>Index</h2>

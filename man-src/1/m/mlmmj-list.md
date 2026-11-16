@@ -12,19 +12,19 @@ description: "mlmmj-list – list people / subscribers associated with a list"
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-list</code> <i>-L /path/to/listdir </i>[<i>-c</i>] [<i>-d</i>] [<i>-h</i>] [<i>-m</i>] [<i>-n</i>] [<i>-o</i>] [<i>-s</i>] [<i>-V</i>]</p>
 <dl>
-<dt> <code>-c</code>: Count the emailaddresses</p>
-<dt> <code>-d</code>: Print for digesters list</p>
-<dt> <code>-L</code>: Full path to list directory</p>
-<dt> <code>-m</code>: Print moderators for list</p>
-<dt> <code>-n</code>: Print for nomail version of list</p>
-<dt> <code>-o</code>: Print the owner(s) of the list</p>
-<dt> <code>-s</code>: Print normail subscribers (default)</p>
-<dt> <code>-V</code>: Print version </p>
+<dt> <code>-c</code>: Count the emailaddresses</dt>
+<dt> <code>-d</code>: Print for digesters list</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-m</code>: Print moderators for list</dt>
+<dt> <code>-n</code>: Print for nomail version of list</dt>
+<dt> <code>-o</code>: Print the owner(s) of the list</dt>
+<dt> <code>-s</code>: Print normail subscribers (default)</dt>
+<dt> <code>-V</code>: Print version </dt>
 </dl>
 <h2>AUTHORS</h2>
-<dd>This manual page was written by the following person:</p>
+<dd>This manual page was written by the following person:</dd>
 <dl>
 <dt>
-<dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </p>
+</dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
 <h2>Index</h2>

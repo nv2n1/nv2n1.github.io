@@ -24,34 +24,34 @@ gif2png[-bdfghinprsvwO][file.[gif]...]
 <p> The program automatically converts interlaced GIFs to interlaced PNGs. It detects images in which all colors are gray (equal R, G, and B values) and converts such images to PNG grayscale. Other images are converted to use the PNG palette type. Duplicate color entries are silently preserved. Unused color-table entries cause an error message. </p>
 <p> The action of the program can be modified with the following command-line switches: </p>
 <dl>
-<dt><code>-b</code> {#}RRGGBB</p>
-<dd> Background. Replace transparent pixels with given RGB value, six hexadecimal digits interpreted as two hexits each of red, green, and blue value. The value may optionally be led with a #, HTML-style. </p>
-<dt><code>-d </code></p>
-<dd> Delete source GIF files after successful conversion. </p>
-<dt><code>-f </code></p>
-<dd> Filter mode. Convert GIF on stdin to PNG on stdout, return error if the GIF is multi-image. </p>
-<dt><code>-g </code></p>
-<dd> Write gamma=1/2.2 and sRGB chunks in the PNG. </p>
-<dt><code>-h </code></p>
-<dd> Generate PNG color-frequency histogram chunks into converted color files. </p>
-<dt><code>-i </code></p>
-<dd> Force conversion to interlaced PNG files. </p>
-<dt><code>-n </code></p>
-<dd> Force conversion to non-interlaced PNG files. </p>
-<dt><code>-p </code></p>
-<dd> Display progress of PNG writing. </p>
-<dt><code>-r </code></p>
-<dd> Try to recover data from corrupted GIF files. </p>
-<dt><code>-s </code></p>
-<dd> Do not translate the GIF Software chunk to a PNG annotation. </p>
-<dt><code>-t </code></p>
-<dd> Change behavior of web-probe (-w) mode to accept GIFs with transparency. </p>
-<dt><code>-v </code></p>
-<dd> Verbose mode; show summary line, -vv enables conversion-statistics and debugging messages. </p>
-<dt><code>-w </code></p>
-<dd> Web-probe switch; list GIFs that do not have multiple images or transparency to stdout. GIFs that fail this filter cause error messages to stderr. </p>
-<dt><code>-O </code></p>
-<dd> Optimize; remove unused color-table entries. Normally these trigger an error message and disable <code>-d</code> (but conversion is completed anyway). Also, use zlib compression level 9 (best compression) instead of the default level. The recovery algorithm enabled by <code>-r</code> is as follows: Unused color table entries will not trigger an error message as they normally do, but will still be preserved unless <code>-O</code> is also on, in which case they will be discarded. Missing color tables will be patched with a default that puts black at index 0, white at index 1, and supplies red, green, blue, yellow, purple and cyan as the remaining color values. Missing image pixels will be set to 0. Unrecognized or corrupted extensions will be discarded. </p>
+<dt><code>-b</code> {#}RRGGBB</dt>
+<dd> Background. Replace transparent pixels with given RGB value, six hexadecimal digits interpreted as two hexits each of red, green, and blue value. The value may optionally be led with a #, HTML-style. </dd>
+<dt><code>-d </code></dt>
+<dd> Delete source GIF files after successful conversion. </dd>
+<dt><code>-f </code></dt>
+<dd> Filter mode. Convert GIF on stdin to PNG on stdout, return error if the GIF is multi-image. </dd>
+<dt><code>-g </code></dt>
+<dd> Write gamma=1/2.2 and sRGB chunks in the PNG. </dd>
+<dt><code>-h </code></dt>
+<dd> Generate PNG color-frequency histogram chunks into converted color files. </dd>
+<dt><code>-i </code></dt>
+<dd> Force conversion to interlaced PNG files. </dd>
+<dt><code>-n </code></dt>
+<dd> Force conversion to non-interlaced PNG files. </dd>
+<dt><code>-p </code></dt>
+<dd> Display progress of PNG writing. </dd>
+<dt><code>-r </code></dt>
+<dd> Try to recover data from corrupted GIF files. </dd>
+<dt><code>-s </code></dt>
+<dd> Do not translate the GIF Software chunk to a PNG annotation. </dd>
+<dt><code>-t </code></dt>
+<dd> Change behavior of web-probe (-w) mode to accept GIFs with transparency. </dd>
+<dt><code>-v </code></dt>
+<dd> Verbose mode; show summary line, -vv enables conversion-statistics and debugging messages. </dd>
+<dt><code>-w </code></dt>
+<dd> Web-probe switch; list GIFs that do not have multiple images or transparency to stdout. GIFs that fail this filter cause error messages to stderr. </dd>
+<dt><code>-O </code></dt>
+<dd> Optimize; remove unused color-table entries. Normally these trigger an error message and disable <code>-d</code> (but conversion is completed anyway). Also, use zlib compression level 9 (best compression) instead of the default level. The recovery algorithm enabled by <code>-r</code> is as follows: Unused color table entries will not trigger an error message as they normally do, but will still be preserved unless <code>-O</code> is also on, in which case they will be discarded. Missing color tables will be patched with a default that puts black at index 0, white at index 1, and supplies red, green, blue, yellow, purple and cyan as the remaining color values. Missing image pixels will be set to 0. Unrecognized or corrupted extensions will be discarded. </dd>
 </dl>
 <h2>PROBLEMS</h2>
 <p> Naively converting all your GIFs at one go with <code>gif2png</code> is not likely to give you the results you want. The problem is not with PNG itself or with gif2png, but with the poor-to-nonexistent support for PNG transparency and animation in most browsers. </p>

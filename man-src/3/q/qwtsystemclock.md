@@ -26,21 +26,21 @@ description: "QwtSystemClock –"
 <p> Precision and time intervals are multiples of milliseconds (ms). </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The implementation uses high-resolution performance counter on Windows, mach_absolute_time() on the Mac or POSIX timers on other systems. If none is available it falls back on QTimer.</dl>
+<dd>The implementation uses high-resolution performance counter on Windows, mach_absolute_time() on the Mac or POSIX timers on other systems. If none is available it falls back on QTimer.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtSystemClock::elapsed () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of milliseconds that have elapsed since the last time <code>start()</code> or <code>restart()</code> was called or 0.0 for null clocks.</dl>
+<dd>Number of milliseconds that have elapsed since the last time <code>start()</code> or <code>restart()</code> was called or 0.0 for null clocks.</dd></dl>
 <h3>bool QwtSystemClock::isNull () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if the clock has never been started.</dl>
+<dd>true if the clock has never been started.</dd></dl>
 <h3>double QwtSystemClock::restart ()</h3>
 <p>Set the start time to the current time </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Time, that is elapsed since the previous start time.</dl>
+<dd>Time, that is elapsed since the previous start time.</dd></dl>
 <h3>void QwtSystemClock::start ()</h3>
 <p>Sets the start time to the current time. </p>
 <h2>Author</h2>

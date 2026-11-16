@@ -17,14 +17,15 @@ description: "wd_identify – a simplified software watchdog daemon"
 <h2>Options</h2>
 <p>Available command line options are the following:</p>
 <dl>
-<dt><code>-c</code> <i>config-file</i>, <code>&#8211;config-file</code> <i>config-file</i></p>
-<dd>Use <i>config-file</i> as the configuration file instead of the default <i>/etc/watchdog.conf</i>.</dl>
+<dt><code>-c</code> <i>config-file</i>, <code>&#8211;config-file</code> <i>config-file</i></dt>
+<dd>Use <i>config-file</i> as the configuration file instead of the default <i>/etc/watchdog.conf</i>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/dev/watchdog </i></p>
-<dd>The watchdog device.</dl>
+<dt><i>/dev/watchdog </i></dt>
+<dd>The watchdog device.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-watchdog-conf/">watchdog.conf</a></code>(5)</p>
 <dl>
-<dt><code><a href="/docs/linux/man/8-watchdog/">watchdog</a></code>(8)</p>
+<dt><code><a href="/docs/linux/man/8-watchdog/">watchdog</a></code>(8)</dt>
 <dd>
+</dd></dl>

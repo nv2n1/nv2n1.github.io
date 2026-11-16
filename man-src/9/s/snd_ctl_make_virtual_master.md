@@ -14,10 +14,10 @@ description: "snd_ctl_make_virtual_master – Create a virtual master control"
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>name string of the control element to create</dl>
+</dd><dd>name string of the control element to create</dd></dl>
 <p> <i>tlv</i></p>
 <dl>
-<dd>optional TLV int array for dB information</dl>
+<dd>optional TLV int array for dB information</dd></dl>
 <h2>Description</h2>
 <p>Creates a virtual master control with the given name string. </p>
 <p> After creating a vmaster element, you can add the slave controls via <code>snd_ctl_add_slave</code> or <code>snd_ctl_add_slave_uncached</code>. </p>

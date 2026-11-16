@@ -14,8 +14,8 @@ description: "ods-signer – OpenDNSSEC Signer Engine client"
 <p>ods-signer is part of the OpenDNSSEC software. With this tool, you can send commands to the signer engine daemon. For more information, go to <code><a rel="nofollow" href="http://www.opendnssec.org">http://www.opendnssec.org</a></code> and visit the Documentation page. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show this help.</dl>
+<dt><code>-h</code></dt>
+<dd>Show this help.</dd></dl>
 <h2>Diagnostics</h2>
 <p>will log all the problems via stderr.</p>
 <h2>See Also</h2>

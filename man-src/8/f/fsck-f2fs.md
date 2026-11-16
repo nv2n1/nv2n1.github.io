@@ -15,19 +15,19 @@ description: "fsck.f2fs – check a Linux F2FS file system"
 <p> The exit code returned by <code>fsck.f2fs</code> is 0 on success and -1 on failure.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code><i> enable auto fix</i></p>
-<dd>Enable to run file system check only if a bug was reported by the F2FS kernel module. It is disabled by default.</p>
-<dt><code>-f</code><i> enable force fix</i></p>
-<dd>Enable to fix all the inconsistency in the partition.</p>
-<dt><code>-p</code><i> enable preen mode</i></p>
-<dd>Same as &quot;-a&quot; to support general fsck convention.</p>
-<dt><code>-t</code><i> show stored directory tree</i></p>
-<dd>Enable to show every directory entries in the partition.</p>
-<dt><code>-d</code><i> debug-level</i></p>
-<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</p>
-<dt></dl>
+<dt><code>-a</code><i> enable auto fix</i></dt>
+<dd>Enable to run file system check only if a bug was reported by the F2FS kernel module. It is disabled by default.</dd>
+<dt><code>-f</code><i> enable force fix</i></dt>
+<dd>Enable to fix all the inconsistency in the partition.</dd>
+<dt><code>-p</code><i> enable preen mode</i></dt>
+<dd>Same as &quot;-a&quot; to support general fsck convention.</dd>
+<dt><code>-t</code><i> show stored directory tree</i></dt>
+<dd>Enable to show every directory entries in the partition.</dd>
+<dt><code>-d</code><i> debug-level</i></dt>
+<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</dd>
+<dt></dt></dl>
 <h2>Author</h2>
-<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;. Jaegeuk Kim &lt;jaegeuk [at] kernel.org&gt; reworked most parts of the codes to support fixing any corrupted images.</p>
+<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;. Jaegeuk Kim &lt;jaegeuk [at] kernel.org&gt; reworked most parts of the codes to support fixing any corrupted images.</dd>
 <h2>Availability</h2>
 <p><code>fsck.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
 <h2>See Also</h2>

@@ -15,11 +15,11 @@ insert_resource - Inserts a resource in the resource tree
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>parent of the new resource</dl>
+<dl><dd></dd><dd>parent of the new resource</dd></dl>
  
 
  <i>new</i>
-<dl><dd>new resource to insert</dl>
+<dl><dd>new resource to insert</dd></dl>
 
 <h2>Description</h2>
 

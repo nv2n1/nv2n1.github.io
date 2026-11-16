@@ -15,15 +15,15 @@ sysfs_create_file_ns - create an attribute file for an object with custom ns
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're creating for</dl>
+<dl><dd></dd><dd>object we're creating for</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>attribute descriptor</dl>
+<dl><dd>attribute descriptor</dd></dl>
  
 
  <i>ns</i>
-<dl><dd>namespace the new file should belong to</dl>
+<dl><dd>namespace the new file should belong to</dd></dl>
 
 <h2>Copyright</h2>
 

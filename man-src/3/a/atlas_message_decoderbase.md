@@ -63,11 +63,11 @@ description: "Atlas::Message::DecoderBase – Base class for decoders that take 
 <p> This class is passed to a codec as receiver bridge. It decodes a stream into Message::Object objects, and after completion calls the abstract <code>messageArrived()</code> method. This is to be overridden by base classes, which might, for instance, provide an object queue or a callback method for arrived messages. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Atlas::Bridge</code> </p>
+<dd><code>Atlas::Bridge</code> </dd>
 <p> <code>Atlas::Codec</code> </p>
 <p> Object</dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

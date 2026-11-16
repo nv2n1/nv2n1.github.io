@@ -19,15 +19,15 @@ struct_usb_interface_cache - long-term representation of a device interface
 <h2>Members</h2>
 
 num_altsetting
-<dl><dd>number of altsettings defined.</dl>
+<dl><dd>number of altsettings defined.</dd></dl>
  
 
  ref
-<dl><dd>reference counter.</dl>
+<dl><dd>reference counter.</dd></dl>
  
 
  altsetting[0]
-<dl><dd>variable-length array of interface structures, one for each alternate setting that may be selected. Each one includes a set of endpoint configurations. They will be in no particular order.</dl>
+<dl><dd>variable-length array of interface structures, one for each alternate setting that may be selected. Each one includes a set of endpoint configurations. They will be in no particular order.</dd></dl>
 
 <h2>Description</h2>
 

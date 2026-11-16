@@ -23,10 +23,10 @@ description: "acl_calc_mask – calculate the file group class mask"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_calc_mask function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</p>
-<dt><code>Bq </code>Er ENOMEM</p>
-<dd> The Fn acl_calc_mask function is unable to allocate the memory required for an ACL_MASK ACL entry.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL.</dd>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The Fn acl_calc_mask function is unable to allocate the memory required for an ACL_MASK ACL entry.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

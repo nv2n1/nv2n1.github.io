@@ -18,28 +18,28 @@ description: "ipmipower – IPMI power control utility"
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands.</p>
 <dl>
-<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></p>
-<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively.</p>
-<dt><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></p>
-<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</p>
-<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></p>
-<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast OPERATOR privileges to run the &#8211;on, &#8211;off, &#8211;reset, &#8211;cycle, &#8211;pulse, or &#8211;soft power control commands. The user must have atleast USER privileges to determine the power status of the machine through &#8211;stat.</p>
-<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></p>
-<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</p>
-<dt><code>-P</code>, <code>&#8211;password-prompt</code></p>
-<dd>Prompt for password to avoid possibility of listing it in process lists.</p>
-<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></p>
-<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</p>
-<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></p>
-<dd>Prompt for k-g to avoid possibility of listing it in process lists.</p>
-<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</p>
-<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 400 milliseconds (0.4 seconds) if not specified.</p>
-<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></p>
-<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</p>
-<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </p>
+<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></dt>
+<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively.</dd>
+<dt><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></dt>
+<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</dd>
+<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></dt>
+<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast OPERATOR privileges to run the &#8211;on, &#8211;off, &#8211;reset, &#8211;cycle, &#8211;pulse, or &#8211;soft power control commands. The user must have atleast USER privileges to determine the power status of the machine through &#8211;stat.</dd>
+<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</dd>
+<dt><code>-P</code>, <code>&#8211;password-prompt</code></dt>
+<dd>Prompt for password to avoid possibility of listing it in process lists.</dd>
+<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></dt>
+<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</dd>
+<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></dt>
+<dd>Prompt for k-g to avoid possibility of listing it in process lists.</dd>
+<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</dd>
+<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 400 milliseconds (0.4 seconds) if not specified.</dd>
+<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></dt>
+<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</dd>
+<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </dd>
 <p> 0 &#8211; Authentication Algorithm = None; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 1 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 2 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = HMAC-SHA1-96; Confidentiality Algorithm = None </p>
@@ -52,158 +52,158 @@ description: "ipmipower – IPMI power control utility"
 <p> 15 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 16 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = None </p>
 <p> 17 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = AES-CBC-128</p>
-<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to OPERATOR if not specified.</p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to OPERATOR if not specified.</dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Ipmipower Options</h2>
 <p>The following options are specific to <code>ipmipower.</code></p>
 <dl>
-<dt><code>-n</code>, <code>&#8211;on</code></p>
-<dd>Power on the target hosts.</p>
-<dt><code>-f</code>, <code>&#8211;off</code></p>
-<dd>Power off the target hosts.</p>
-<dt><code>-c</code>, <code>&#8211;cycle</code></p>
-<dd>Power cycle the target hosts.</p>
-<dt><code>-r</code>, <code>&#8211;reset</code></p>
-<dd>Reset the target hosts.</p>
-<dt><code>-s</code>, <code>&#8211;stat</code></p>
-<dd>Get power status of the target hosts.</p>
-<dt><code>&#8211;pulse</code></p>
-<dd>Send power diagnostic interrupt to target hosts.</p>
-<dt><code>&#8211;soft</code></p>
-<dd>Initiate a soft-shutdown of the OS via ACPI.</p>
-<dt><code>&#8211;on-if-off</code></p>
-<dd>The IPMI specification does not require the power cycle or hard reset commands to turn on a machine that is currently powered off. This option will force <code>ipmipower</code> to issue a power on command instead of a power cycle or hard reset command if the remote machine&#8217;s power is currently off.</p>
-<dt><code>&#8211;wait-until-on</code></p>
-<dd>The IPMI specification allows power on commands to return prior to the power on actually taking place. This option will force <code>ipmipower</code> to regularly query the remote BMC and return only after the machine has powered on.</p>
-<dt><code>&#8211;wait-until-off</code></p>
-<dd>The IPMI specification allows power off commands to return prior the power off actually taking place. This option will force <code>ipmipower</code> to regularly query the remote BMC and return only after the machine has powered off.</p>
-<dt><code>&#8211;oem-power-type</code>=<i>OEM-POWER-TYPE</i></p>
-<dd>This option informs <code>ipmipower</code> to initiate power control operations via an IPMI OEM specific power control extension. The currently available POWERTYPEs are <i>NONE</i> and <i>C410X</i>. Please see OEM POWER EXTENSIONS below for additional information.</dl>
+<dt><code>-n</code>, <code>&#8211;on</code></dt>
+<dd>Power on the target hosts.</dd>
+<dt><code>-f</code>, <code>&#8211;off</code></dt>
+<dd>Power off the target hosts.</dd>
+<dt><code>-c</code>, <code>&#8211;cycle</code></dt>
+<dd>Power cycle the target hosts.</dd>
+<dt><code>-r</code>, <code>&#8211;reset</code></dt>
+<dd>Reset the target hosts.</dd>
+<dt><code>-s</code>, <code>&#8211;stat</code></dt>
+<dd>Get power status of the target hosts.</dd>
+<dt><code>&#8211;pulse</code></dt>
+<dd>Send power diagnostic interrupt to target hosts.</dd>
+<dt><code>&#8211;soft</code></dt>
+<dd>Initiate a soft-shutdown of the OS via ACPI.</dd>
+<dt><code>&#8211;on-if-off</code></dt>
+<dd>The IPMI specification does not require the power cycle or hard reset commands to turn on a machine that is currently powered off. This option will force <code>ipmipower</code> to issue a power on command instead of a power cycle or hard reset command if the remote machine&#8217;s power is currently off.</dd>
+<dt><code>&#8211;wait-until-on</code></dt>
+<dd>The IPMI specification allows power on commands to return prior to the power on actually taking place. This option will force <code>ipmipower</code> to regularly query the remote BMC and return only after the machine has powered on.</dd>
+<dt><code>&#8211;wait-until-off</code></dt>
+<dd>The IPMI specification allows power off commands to return prior the power off actually taking place. This option will force <code>ipmipower</code> to regularly query the remote BMC and return only after the machine has powered off.</dd>
+<dt><code>&#8211;oem-power-type</code>=<i>OEM-POWER-TYPE</i></dt>
+<dd>This option informs <code>ipmipower</code> to initiate power control operations via an IPMI OEM specific power control extension. The currently available POWERTYPEs are <i>NONE</i> and <i>C410X</i>. Please see OEM POWER EXTENSIONS below for additional information.</dd></dl>
 <h2>Ipmipower Advanced Network Options</h2>
 <p>The following options are used to change the networking behavior of <code>ipmipower.</code></p>
 <dl>
-<dt><code>&#8211;retransmission-wait-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the retransmission wait timeout length in milliseconds. The retransmission wait timeout is similar to the retransmission timeout above, but is used specifically for power completion verification with the <code>&#8211;wait-until-on</code> and <code>&#8211;wait-until-off</code> options. Defaults to 500 milliseconds (0.5 seconds).</p>
-<dt><code>&#8211;retransmission-backoff-count</code>=<i>COUNT</i></p>
-<dd>Specify the retransmission backoff count for retransmissions. After ever COUNT retransmissions, the retransmission timeout length will be increased by another factor. Defaults to 8.</p>
-<dt><code>&#8211;ping-interval</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the ping interval length in milliseconds. When running in interactive mode, RMCP (Remote Management Control Protocol) discovery messages will be sent to all configured remote hosts every MILLISECONDS to confirm their support of IPMI. Power commands cannot be sent to a host until it is discovered (or re-discovered if previously lost). Defaults to 5000 milliseconds (5 seconds). Ping discovery messages can be disabled by setting this valu to 0. RMCP ping discovery messages are automatically disabled in non-interactive mode.</p>
-<dt><code>&#8211;ping-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the ping timeout length in milliseconds. When running in interactive mode, RMCP (Remote Management Control Protocol) messages discovery will be sent to all configured remote hosts to confirm their support of IPMI. A remote host is considered undiscovered if the host does not respond in MILLISECONDS time. Defaults to 30000 milliseconds (30 seconds). The ping timeout cannot be larger than the ping interval.</p>
-<dt><code>&#8211;ping-packet-count</code>=<i>COUNT</i></p>
-<dd>Specify the ping packet count size. Defaults to 10. See the <code>&#8211;ping-percent-fR option below for more information on this option.</p>
-<dt>&#8211;ping-percent</code>=<i>PERCENT</i></p>
-<dd>Specify the ping percent value. Defaults to 50. Since IPMI is based on UDP, it is difficult for <code>ipmipower</code> to distinguish between a missing machine and a bad (or heavily loaded) network connection in interactive mode. when running in interactive mode. For example, suppose a link consistently drops 80% of the packets to a particular machine. The power control operation may have difficulty completing, although a recent pong response from RMCP makes <code>ipmipower</code> believe the machine is up and functioning properly. The ping packet acount and percent options are used to alleviate this problem. <code>Ipmipower</code> will monitor RMCP ping packets in packet count chunks. If <code>ipmipower</code> does not receive a response to greater than ping percent of those packets, <code>ipmipower</code> will assume the link to this node is bad and will not send power control operations to that node until the connection is determined to be reliable. This heuristic can be disabled by setting either the ping packet count or ping percent to 0. This feature is not used if ping interval is set to 0.</p>
-<dt><code>&#8211;ping-consec-count</code>=<i>COUNT</i></p>
-<dd>Specify the ping consecutive count. This is another heuristic used to determine if a node should be considered discovered, undiscovered, or with a bad connection. If a valid RMCP pong response was received for the last COUNT ping packets, a node will be considered discovered, regardless of other heuristics listed above. Defaults to 5. This heuristic can be disabled by setting this value to 0. This feature is not used if other ping features described above are disabled.</dl>
+<dt><code>&#8211;retransmission-wait-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the retransmission wait timeout length in milliseconds. The retransmission wait timeout is similar to the retransmission timeout above, but is used specifically for power completion verification with the <code>&#8211;wait-until-on</code> and <code>&#8211;wait-until-off</code> options. Defaults to 500 milliseconds (0.5 seconds).</dd>
+<dt><code>&#8211;retransmission-backoff-count</code>=<i>COUNT</i></dt>
+<dd>Specify the retransmission backoff count for retransmissions. After ever COUNT retransmissions, the retransmission timeout length will be increased by another factor. Defaults to 8.</dd>
+<dt><code>&#8211;ping-interval</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the ping interval length in milliseconds. When running in interactive mode, RMCP (Remote Management Control Protocol) discovery messages will be sent to all configured remote hosts every MILLISECONDS to confirm their support of IPMI. Power commands cannot be sent to a host until it is discovered (or re-discovered if previously lost). Defaults to 5000 milliseconds (5 seconds). Ping discovery messages can be disabled by setting this valu to 0. RMCP ping discovery messages are automatically disabled in non-interactive mode.</dd>
+<dt><code>&#8211;ping-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the ping timeout length in milliseconds. When running in interactive mode, RMCP (Remote Management Control Protocol) messages discovery will be sent to all configured remote hosts to confirm their support of IPMI. A remote host is considered undiscovered if the host does not respond in MILLISECONDS time. Defaults to 30000 milliseconds (30 seconds). The ping timeout cannot be larger than the ping interval.</dd>
+<dt><code>&#8211;ping-packet-count</code>=<i>COUNT</i></dt>
+<dd>Specify the ping packet count size. Defaults to 10. See the <code>&#8211;ping-percent-fR option below for more information on this option.</dd>
+<dt>&#8211;ping-percent</code>=<i>PERCENT</i></dt>
+<dd>Specify the ping percent value. Defaults to 50. Since IPMI is based on UDP, it is difficult for <code>ipmipower</code> to distinguish between a missing machine and a bad (or heavily loaded) network connection in interactive mode. when running in interactive mode. For example, suppose a link consistently drops 80% of the packets to a particular machine. The power control operation may have difficulty completing, although a recent pong response from RMCP makes <code>ipmipower</code> believe the machine is up and functioning properly. The ping packet acount and percent options are used to alleviate this problem. <code>Ipmipower</code> will monitor RMCP ping packets in packet count chunks. If <code>ipmipower</code> does not receive a response to greater than ping percent of those packets, <code>ipmipower</code> will assume the link to this node is bad and will not send power control operations to that node until the connection is determined to be reliable. This heuristic can be disabled by setting either the ping packet count or ping percent to 0. This feature is not used if ping interval is set to 0.</dd>
+<dt><code>&#8211;ping-consec-count</code>=<i>COUNT</i></dt>
+<dd>Specify the ping consecutive count. This is another heuristic used to determine if a node should be considered discovered, undiscovered, or with a bad connection. If a valid RMCP pong response was received for the last COUNT ping packets, a node will be considered discovered, regardless of other heuristics listed above. Defaults to 5. This heuristic can be disabled by setting this value to 0. This feature is not used if other ping features described above are disabled.</dd></dl>
 <h2>Hostranged Options</h2>
 <p>The following options manipulate hostranged output. See HOSTRANGED SUPPORT below for additional information on hostranges.</p>
 <dl>
-<dt><code>-B</code>, <code>&#8211;buffer-output</code></p>
-<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-C</code>, <code>&#8211;consolidate-output</code></p>
-<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></p>
-<dd>Specify multiple host fanout. Indicates the maximum number of power control operations that can be executed in parallel.</p>
-<dt><code>-E</code>, <code>&#8211;eliminate</code></p>
-<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</p>
-<dt><code>&#8211;always-prefix</code></p>
-<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dl>
+<dt><code>-B</code>, <code>&#8211;buffer-output</code></dt>
+<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-C</code>, <code>&#8211;consolidate-output</code></dt>
+<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></dt>
+<dd>Specify multiple host fanout. Indicates the maximum number of power control operations that can be executed in parallel.</dd>
+<dt><code>-E</code>, <code>&#8211;eliminate</code></dt>
+<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</dd>
+<dt><code>&#8211;always-prefix</code></dt>
+<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dd></dl>
 <h2>Interactive Commands</h2>
 <p><code>ipmipower</code> provides the following interactive commands at the ipmipower&gt; prompt. Before any power commands (on, off, cycle, reset, stat, pulse, or soft) can be used, hostnames must be configured into <code>ipmipower,</code> either through the command prompt or the hostname command below. The parameters and options to the commands below mirror their appropriate command line options.</p>
 <dl>
-<dt><code>hostname</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Specify a new set of hosts. No input to unconfigure all hosts.</p>
-<dt><code>username</code> <i>[USERNAME]</i></p>
-<dd>Specify a new username. No input for null username.</p>
-<dt><code>password</code> <i>[PASSWORD]</i></p>
-<dd>Specify a new password. No input for null password.</p>
-<dt><code>k_g</code> <i>[K_G]</i></p>
-<dd>Specify a new K_g BMC Key. No input for null key. Prefix with &#8216;0x&#8217; to enter a key in hexadecimal</p>
-<dt><code>ipmi-version</code> <i>IPMIVERSION</i></p>
-<dd>Specify the ipmi version to use.</p>
-<dt><code>session-timeout</code> <i>MILLISECONDS</i></p>
-<dd>Specify a new session timeout length.</p>
-<dt><code>retransmission-timeout</code> <i>MILLISECONDS</i></p>
-<dd>Specify a new retransmiision timeout length.</p>
-<dt><code>authentication-type</code> <i>AUTHENTICATION-TYPE</i></p>
-<dd>Specify the authentication type to use.</p>
-<dt><code>cipher-suite-id</code> <i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the cipher suite id to use.</p>
-<dt><code>privilege-level</code> <i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to use.</p>
-<dt><code>workaround-flags</code> <i>WORKAROUNDS</i></p>
-<dd>Specify workaround flags.</p>
-<dt><code>debug</code> <i>[on|off]</i></p>
-<dd>Toggle debug output.</p>
-<dt><code>on</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Turn on all configured hosts or specified hosts.</p>
-<dt><code>off</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Turn off all configured hosts or specified hosts.</p>
-<dt><code>cycle</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Power cycle all configured hosts or specified hosts.</p>
-<dt><code>reset</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Reset all configured hosts or specified hosts.</p>
-<dt><code>stat</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Query power status for all configured hosts or specified hosts.</p>
-<dt><code>pulse</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Pulse diagnostic interrupt all configured hosts or specified hosts.</p>
-<dt><code>soft</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Initiate a soft-shutdown for all configured hosts or specified hosts.</p>
-<dt><code>identify-on</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Turn on physical system identification.</p>
-<dt><code>identify-off</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Turn off physical system identification.</p>
-<dt><code>identify-status</code> <i>[IPMIHOST(s)]</i></p>
-<dd>Query physical system identification status.</p>
-<dt><code>on-if-off</code> <i>[on|off]</i></p>
-<dd>Toggle on-if-off functionality.</p>
-<dt><code>wait-until-on</code> <i>[on|off]</i></p>
-<dd>Toggle wait-until-on functionality.</p>
-<dt><code>wait-until-off</code> <i>[on|off]</i></p>
-<dd>Toggle wait-until-off functionality.</p>
-<dt><code>retransmission-wait-timeout</code> <i>MILLISECONDS</i></p>
-<dd>Specify a new retransmission wait timeout length.</p>
-<dt><code>retransmission-backoff-count</code> <i>COUNT</i></p>
-<dd>Specify a new retransmission backoff count.</p>
-<dt><code>ping-interval</code> <i>MILLISECONDS</i></p>
-<dd>Specify a new ping interval length.</p>
-<dt><code>ping-timeout</code> <i>MILLISECONDS</i></p>
-<dd>Specify a new ping timeout length.</p>
-<dt><code>ping-packet-count</code> <i>COUNT</i></p>
-<dd>Specify a new ping packet count.</p>
-<dt><code>ping-percent</code> <i>PERCENT</i></p>
-<dd>Specify a new ping percent.</p>
-<dt><code>ping-consec-count</code> <i>COUNT</i></p>
-<dd>Specify a new ping consec count.</p>
-<dt><code>buffer-output</code> <i>[on|off]</i></p>
-<dd>Toggle buffer-output functionality.</p>
-<dt><code>consolidate-output</code> <i>[on|off]</i></p>
-<dd>Toggle consolidate-output functionality.</p>
-<dt><code>fanout</code> <i>COUNT</i></p>
-<dd>Specify a fanout.</p>
-<dt><code>always-prefix</code> <i>[on|off]</i></p>
-<dd>Toggle always-prefix functionality.</p>
-<dt><code>help</code></p>
-<dd>Output help menu.</p>
-<dt><code>version</code></p>
-<dd>Output version.</p>
-<dt><code>config</code></p>
-<dd>Output the current configuration.</p>
-<dt><code>quit</code></p>
-<dd>Quit program. <code>ipmipower.</code></dl>
+<dt><code>hostname</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Specify a new set of hosts. No input to unconfigure all hosts.</dd>
+<dt><code>username</code> <i>[USERNAME]</i></dt>
+<dd>Specify a new username. No input for null username.</dd>
+<dt><code>password</code> <i>[PASSWORD]</i></dt>
+<dd>Specify a new password. No input for null password.</dd>
+<dt><code>k_g</code> <i>[K_G]</i></dt>
+<dd>Specify a new K_g BMC Key. No input for null key. Prefix with &#8216;0x&#8217; to enter a key in hexadecimal</dd>
+<dt><code>ipmi-version</code> <i>IPMIVERSION</i></dt>
+<dd>Specify the ipmi version to use.</dd>
+<dt><code>session-timeout</code> <i>MILLISECONDS</i></dt>
+<dd>Specify a new session timeout length.</dd>
+<dt><code>retransmission-timeout</code> <i>MILLISECONDS</i></dt>
+<dd>Specify a new retransmiision timeout length.</dd>
+<dt><code>authentication-type</code> <i>AUTHENTICATION-TYPE</i></dt>
+<dd>Specify the authentication type to use.</dd>
+<dt><code>cipher-suite-id</code> <i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the cipher suite id to use.</dd>
+<dt><code>privilege-level</code> <i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to use.</dd>
+<dt><code>workaround-flags</code> <i>WORKAROUNDS</i></dt>
+<dd>Specify workaround flags.</dd>
+<dt><code>debug</code> <i>[on|off]</i></dt>
+<dd>Toggle debug output.</dd>
+<dt><code>on</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Turn on all configured hosts or specified hosts.</dd>
+<dt><code>off</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Turn off all configured hosts or specified hosts.</dd>
+<dt><code>cycle</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Power cycle all configured hosts or specified hosts.</dd>
+<dt><code>reset</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Reset all configured hosts or specified hosts.</dd>
+<dt><code>stat</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Query power status for all configured hosts or specified hosts.</dd>
+<dt><code>pulse</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Pulse diagnostic interrupt all configured hosts or specified hosts.</dd>
+<dt><code>soft</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Initiate a soft-shutdown for all configured hosts or specified hosts.</dd>
+<dt><code>identify-on</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Turn on physical system identification.</dd>
+<dt><code>identify-off</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Turn off physical system identification.</dd>
+<dt><code>identify-status</code> <i>[IPMIHOST(s)]</i></dt>
+<dd>Query physical system identification status.</dd>
+<dt><code>on-if-off</code> <i>[on|off]</i></dt>
+<dd>Toggle on-if-off functionality.</dd>
+<dt><code>wait-until-on</code> <i>[on|off]</i></dt>
+<dd>Toggle wait-until-on functionality.</dd>
+<dt><code>wait-until-off</code> <i>[on|off]</i></dt>
+<dd>Toggle wait-until-off functionality.</dd>
+<dt><code>retransmission-wait-timeout</code> <i>MILLISECONDS</i></dt>
+<dd>Specify a new retransmission wait timeout length.</dd>
+<dt><code>retransmission-backoff-count</code> <i>COUNT</i></dt>
+<dd>Specify a new retransmission backoff count.</dd>
+<dt><code>ping-interval</code> <i>MILLISECONDS</i></dt>
+<dd>Specify a new ping interval length.</dd>
+<dt><code>ping-timeout</code> <i>MILLISECONDS</i></dt>
+<dd>Specify a new ping timeout length.</dd>
+<dt><code>ping-packet-count</code> <i>COUNT</i></dt>
+<dd>Specify a new ping packet count.</dd>
+<dt><code>ping-percent</code> <i>PERCENT</i></dt>
+<dd>Specify a new ping percent.</dd>
+<dt><code>ping-consec-count</code> <i>COUNT</i></dt>
+<dd>Specify a new ping consec count.</dd>
+<dt><code>buffer-output</code> <i>[on|off]</i></dt>
+<dd>Toggle buffer-output functionality.</dd>
+<dt><code>consolidate-output</code> <i>[on|off]</i></dt>
+<dd>Toggle consolidate-output functionality.</dd>
+<dt><code>fanout</code> <i>COUNT</i></dt>
+<dd>Specify a fanout.</dd>
+<dt><code>always-prefix</code> <i>[on|off]</i></dt>
+<dd>Toggle always-prefix functionality.</dd>
+<dt><code>help</code></dt>
+<dd>Output help menu.</dd>
+<dt><code>version</code></dt>
+<dd>Output version.</dd>
+<dt><code>config</code></dt>
+<dd>Output the current configuration.</dd>
+<dt><code>quit</code></dt>
+<dd>Quit program. <code>ipmipower.</code></dd></dl>
 <h2>Oem Power Extensions</h2>
 <p>Some motherboards include IPMI OEM extensions for alternate power control mechanisms. For example, these power control mechanisms may allow you to power control a sub-device within the system rather than the entire system itself. </p>
 <p> By specifying an OEM power type via <code>&#8211;oem-power-type</code> on the command line or <code><a href="/docs/linux/man/5-freeipmi-conf/">freeipmi.conf</a>(5),</code> you can instruct <code>ipmipower</code> to execute alternate power control implementations over the standard ones. Depending on the OEM extension, some power control commands may no longer be available. For example, an OEM extension may allow <code>on</code> but not <code>cycle</code>. Specific <code>ipmipower</code> options may not longer function either. </p>
@@ -211,10 +211,10 @@ description: "ipmipower – IPMI power control utility"
 <p> Because OEM power control may involve subtypes, it is possible a user may wish to power control multiple sub-devices on the same host. For example, you might specify the hosts <i>mynode+1,mynode+2</i>, indicating to power control subdevice 1 and 2 on <i>mynode</i>. Because many BMCs cannot handle multiple IPMI sessions, power control operations to the same host will be serialized internally by <code>ipmipower.</code> </p>
 <p> The following are the current OEM power types available, along with information on the systems they work with and the power control operations available.</p>
 <dl>
-<dt><code>C410X</code></p>
-<dd>This OEM power type supports the power control of PCIe slots on Dell Poweredge C410x systems. It supports <code>on</code>, <code>off</code>, and <code>stat</code>. The PCIe slot number ranges from 1-16 and must always be specified when attempting to power control with this extension. For example, the hostname <i>mynode+2</i> would inform <code>ipmipower</code> to operate on slot number <i>2</i> on <i>mynode</i>. The C410x appears to have difficulty handling new slot power control requests until prior ones have completed. Users may wish to strongly consider using the <code>&#8211;wait-until-on</code> and <code>&#8211;wait-until-off</code> options if multiple slots will be power controlled in short succession.</p>
-<dt><code>NONE</code></p>
-<dd>This informs <code>ipmipower</code> that no OEM power type extension is to be used and standard IPMI power control is used. This is the default.</dl>
+<dt><code>C410X</code></dt>
+<dd>This OEM power type supports the power control of PCIe slots on Dell Poweredge C410x systems. It supports <code>on</code>, <code>off</code>, and <code>stat</code>. The PCIe slot number ranges from 1-16 and must always be specified when attempting to power control with this extension. For example, the hostname <i>mynode+2</i> would inform <code>ipmipower</code> to operate on slot number <i>2</i> on <i>mynode</i>. The C410x appears to have difficulty handling new slot power control requests until prior ones have completed. Users may wish to strongly consider using the <code>&#8211;wait-until-on</code> and <code>&#8211;wait-until-off</code> options if multiple slots will be power controlled in short succession.</dd>
+<dt><code>NONE</code></dt>
+<dd>This informs <code>ipmipower</code> that no OEM power type extension is to be used and standard IPMI power control is used. This is the default.</dd></dl>
 <h2>Hostranged Support</h2>
 <p>Multiple hosts can be input either as an explicit comma separated lists of hosts or a range of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc. The later form should not be confused with regular expression character classes (also denoted by []). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

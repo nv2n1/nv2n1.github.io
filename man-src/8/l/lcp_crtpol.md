@@ -14,40 +14,40 @@ description: "lcp_crtpol – create a TXT v1 Launch Control Policy"
 <p><code>lcp_crtpol</code> is used to create a TXT v1 LCP policy (and optionally policy data), which can later be written to the TPM. The policy created are for platforms produced before 2009 (Weybridge, Montevina, McCreary).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-t&nbsp;<wbr></code><i>policy-type</i></p>
-<dd>Policy type can be UINT8 or string. 5 strings are supported for the reserved LCP policy types. Strings and default policy type values for each string are:</p>
+<dt><code>-t&nbsp;<wbr></code><i>policy-type</i></dt>
+<dd>Policy type can be UINT8 or string. 5 strings are supported for the reserved LCP policy types. Strings and default policy type values for each string are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>0 or &quot;hashonly&quot;</p>
+</dd><dl>
+<dt>0 or &quot;hashonly&quot;</dt>
 <dd>
-<dt>1 or &quot;unsigned&quot;</p>
+</dd><dt>1 or &quot;unsigned&quot;</dt>
 <dd>
-<dt>2 or &quot;signed&quot;</p>
+</dd><dt>2 or &quot;signed&quot;</dt>
 <dd>
-<dt>3 or &quot;any&quot;</p>
+</dd><dt>3 or &quot;any&quot;</dt>
 <dd>
-<dt>4 or &quot;forceowner&quot;</p>
-<dd></dl>
+</dd><dt>4 or &quot;forceowner&quot;</dt>
+<dd></dd></dl>
 </dl>
-<dt><code>-a&nbsp;<wbr></code><i>hashalg</i></p>
-<dd>Hash algorithm. Currently we only support SHA-1 algorithm: 0 OR &#8216;sha1&#8217;.</p>
-<dt><code>-v&nbsp;<wbr></code><i>version</i></p>
-<dd>Version number. Currently it can be set to 0 or 1 if specified. The default value is 0.</p>
-<dt><code>-sr&nbsp;<wbr></code><i>SINIT-revocation-counter</i></p>
-<dd>The default sinit revocation counter is 0.</p>
-<dt><code>-s&nbsp;<wbr></code><i>srtm-file</i></p>
-<dd>File name of platform configuration data, as produced by <code>lcp_crtpconf.</code></p>
-<dt><code>-m&nbsp;<wbr></code><i>mle-file</i></p>
-<dd>File name of file containing the MLE hash values. This is a text file that contains one SHA-1 hash per line. The value of the hash must be hexadecimal values, specified either a single un-deliminated set or as space-delimited two-character (i.e. one byte) values. This can be produced by the <code>lcp_mlehash</code> command.</p>
-<dt><code>-o&nbsp;<wbr></code><i>policy-file</i></p>
-<dd>File name to store the output policy.</p>
-<dt><code>-b&nbsp;<wbr></code><i>policy-data-file</i></p>
-<dd>File name to store the LCP Policy data.</p>
-<dt><code>-pcf&nbsp;<wbr></code><i>policy-control-field</i></p>
-<dd>The default policy control field value is 0.</p>
-<dt><code>-h</code></p>
-<dd>Print out the help message</dl>
+<dt><code>-a&nbsp;<wbr></code><i>hashalg</i></dt>
+<dd>Hash algorithm. Currently we only support SHA-1 algorithm: 0 OR &#8216;sha1&#8217;.</dd>
+<dt><code>-v&nbsp;<wbr></code><i>version</i></dt>
+<dd>Version number. Currently it can be set to 0 or 1 if specified. The default value is 0.</dd>
+<dt><code>-sr&nbsp;<wbr></code><i>SINIT-revocation-counter</i></dt>
+<dd>The default sinit revocation counter is 0.</dd>
+<dt><code>-s&nbsp;<wbr></code><i>srtm-file</i></dt>
+<dd>File name of platform configuration data, as produced by <code>lcp_crtpconf.</code></dd>
+<dt><code>-m&nbsp;<wbr></code><i>mle-file</i></dt>
+<dd>File name of file containing the MLE hash values. This is a text file that contains one SHA-1 hash per line. The value of the hash must be hexadecimal values, specified either a single un-deliminated set or as space-delimited two-character (i.e. one byte) values. This can be produced by the <code>lcp_mlehash</code> command.</dd>
+<dt><code>-o&nbsp;<wbr></code><i>policy-file</i></dt>
+<dd>File name to store the output policy.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>policy-data-file</i></dt>
+<dd>File name to store the LCP Policy data.</dd>
+<dt><code>-pcf&nbsp;<wbr></code><i>policy-control-field</i></dt>
+<dd>The default policy control field value is 0.</dd>
+<dt><code>-h</code></dt>
+<dd>Print out the help message</dd></dl>
 <h2>Examples</h2>
 <p><code>lcp_crtpol -t </code><i>0 </i><code> -m </code><i>mle-file </i><code> -o </code><i>policy-hashonly-file </p>
 <p> </i><code>lcp_crtpol -t </code><i>1 </i><code> -m </code><i>mle-file </i><code> -s </code><i>pconf-file </i><code> -b </code><i> policy-data-file </p>

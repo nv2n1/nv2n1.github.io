@@ -14,12 +14,12 @@ description: "makepattern – make GMT color pattern from b/w pattern or icon"
 <h2>DESCRIPTION</h2>
 <p> <code>makepattern</code> reads either a Sun 1-bit rasterfile OR a Sun icon file. It then accepts color choices for the foreground and background pixels and colorizes the pattern, writing it as a 8-bit Sun rasterfile on stdout. These patterns may then be used in <code>GMT</code> (3.1 or later) <code>-Gp</code> settings or by <code>psimage</code>.</p>
 <dl>
-<dt><i>1bit.ras</i> | <i>iconfile</i></p>
-<dd> Either a 1-bit Sun rasterfile (standard format, no RLE) or a Sun icon file (as used in <code>GMT</code> 3.0).</p>
-<dt><code>-Cf</code></p>
-<dd> Sets the color for the foreground pixels (the ones) [black].</p>
-<dt><code>-Cb</code></p>
-<dd> Sets the color for the background pixels (the zeros) [white].</dl>
+<dt><i>1bit.ras</i> | <i>iconfile</i></dt>
+<dd> Either a 1-bit Sun rasterfile (standard format, no RLE) or a Sun icon file (as used in <code>GMT</code> 3.0).</dd>
+<dt><code>-Cf</code></dt>
+<dd> Sets the color for the foreground pixels (the ones) [black].</dd>
+<dt><code>-Cb</code></dt>
+<dd> Sets the color for the background pixels (the zeros) [white].</dd></dl>
 <h2>WIN32 fix</h2>
 <p> Since binary redirection under WIN32 does not work, you must specify the output file with <code>-G</code><i>newfile.ras</i>. This option is only available under WIN32.</p>
 <h2>EXAMPLES</h2>

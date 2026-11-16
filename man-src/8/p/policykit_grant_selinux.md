@@ -65,8 +65,8 @@ description: "policykit_grant_selinux – Security Enhanced Linux Policy for the
 <p> <code>policykit_grant_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_grant_exec_t type, if you want to transition an executable to the policykit_grant_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/polkit-grant-helper.*, /usr/lib/policykit/polkit-grant-helper.* </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/polkit-grant-helper.*, /usr/lib/policykit/polkit-grant-helper.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

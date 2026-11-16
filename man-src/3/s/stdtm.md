@@ -11,7 +11,6 @@ std::tm - std::tm
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     struct tm;</code></pre> 
 Structure holding a calendar date and time broken down into its components. 
 

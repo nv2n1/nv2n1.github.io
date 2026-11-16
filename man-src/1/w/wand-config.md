@@ -19,18 +19,18 @@ description: "Wand-config – get information about the installed version of the
 <pre> cc `Wand-config --cflags --cppflags --ldflags --libs` program.c</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;cflags</code></p>
-<dd>Print the compiler flags that were used to compile <code>libWand</code>.</p>
-<dt><code>&#8211;cppflags</code></p>
-<dd>Print the preprocessor flags that are needed to find the <code>Wand</code> C include files and defines to ensure that the Wand data structures match between your program and the installed libraries.</p>
-<dt><code>&#8211;exec-prefix</code></p>
-<dd>Print the directory under which target specific binaries and executables are installed.</p>
-<dt><code>&#8211;ldflags</code></p>
-<dd>Print the linker flags that are needed to link with the <code>Wand</code> library.</p>
-<dt><code>&#8211;libs</code></p>
-<dd>Print the linker flags that are needed to link a program with <code>libWand</code>.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print the version of the <code>Wand</code> distribution to standard output.</dl>
+<dt><code>&#8211;cflags</code></dt>
+<dd>Print the compiler flags that were used to compile <code>libWand</code>.</dd>
+<dt><code>&#8211;cppflags</code></dt>
+<dd>Print the preprocessor flags that are needed to find the <code>Wand</code> C include files and defines to ensure that the Wand data structures match between your program and the installed libraries.</dd>
+<dt><code>&#8211;exec-prefix</code></dt>
+<dd>Print the directory under which target specific binaries and executables are installed.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd>Print the linker flags that are needed to link with the <code>Wand</code> library.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd>Print the linker flags that are needed to link a program with <code>libWand</code>.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the version of the <code>Wand</code> distribution to standard output.</dd></dl>
 <h2>Copyright</h2>
 <p>See <a rel="nofollow" href="http://www.imagemagick.org/script/license.php">http://www.imagemagick.org/script/license.php</a></p>
 <h2>Authors</h2>

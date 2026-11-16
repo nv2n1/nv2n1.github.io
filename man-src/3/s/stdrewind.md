@@ -11,7 +11,6 @@ std::rewind - std::rewind
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     void rewind(std::FILE *stream);</code></pre> 
 Moves the file position indicator to the beginning of the given file stream. 
 The function is equivalent to std::fseek(stream, 0, SEEK_SET);, except that end-of-file and error indicators are cleared. 
@@ -29,7 +28,6 @@ stream - file stream to modify
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
 int main()
-
 {
     std::FILE *f;
     char ch;
@@ -39,7 +37,6 @@ int main()
         std::fputc(ch, f);
     }
     std::fclose(f);
-
     std::FILE *f2 = std::fopen(&quot;file.txt&quot;, &quot;r&quot;);
     unsigned int size = std::fread(str, 1, 10, f2);
     std::puts(str);

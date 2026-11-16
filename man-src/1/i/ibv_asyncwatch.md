@@ -15,16 +15,16 @@ description: "ibv_asyncwatch – display asynchronous events"
 <p> Display asynchronous events forwarded to userspace for an RDMA device. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;ib-dev</code>=<i>DEVICE</i></p>
-<dd> use IB device <i>DEVICE</i> (default first device found)</p>
-<dt><code>-h</code>, <code>&#8211;help</code>=<i>DEVICE</i></p>
-<dd> Print a help text and exit. </p>
+<dt><code>-d</code>, <code>&#8211;ib-dev</code>=<i>DEVICE</i></dt>
+<dd> use IB device <i>DEVICE</i> (default first device found)</dd>
+<dt><code>-h</code>, <code>&#8211;help</code>=<i>DEVICE</i></dt>
+<dd> Print a help text and exit. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Roland Dreier</p>
-<dd> &lt;<i>rolandd [at] cisco.com</i>&gt;</p>
-<dt>Eran Ben Elisha</p>
-<dd> &lt;<i>eranbe [at] mellanox.com</i>&gt; </p>
+<dt>Roland Dreier</dt>
+<dd> &lt;<i>rolandd [at] cisco.com</i>&gt;</dd>
+<dt>Eran Ben Elisha</dt>
+<dd> &lt;<i>eranbe [at] mellanox.com</i>&gt; </dd>
 </dl>
 <h2>Index</h2>

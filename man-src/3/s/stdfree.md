@@ -11,7 +11,6 @@ std::free - std::free
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void free(void *ptr);</code></pre> 
 Deallocates the space previously allocated by std::malloc, std::calloc 
 , std::aligned_alloc 
@@ -48,7 +47,6 @@ The function accepts (and does nothing with) the null pointer to reduce the amou
 
 // Run this code <pre><code>#include &lt;cstdlib&gt;
 int main()
-
 {
     int *p1 = (int *)std::malloc(10 * sizeof *p1);
     std::free(p1); // every allocated pointer must be freed

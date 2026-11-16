@@ -19,18 +19,19 @@ description: "systemd-veritysetup [at] .service, systemd-veritysetup – Disk ve
 <p>The following commands are understood by <code>systemd-veritysetup</code>: </p>
 <p> <code>attach</code> <i>volume</i> <i>datadevice</i> <i>hashdevice</i> <i>roothash</i> [<i>option</i>&#8230;]</p>
 <dl>
-<dd>Create a block device <i>volume</i> using <i>datadevice</i> and <i>hashdevice</i> as the backing devices. <i>roothash</i> forms the root of the tree of hashes stored on <i>hashdevice</i>. See m[blue]<code>Kernel dm-verity</code>m[]<font SIZE="-2">[1]</font> documentation for details.</dl>
+<dd>Create a block device <i>volume</i> using <i>datadevice</i> and <i>hashdevice</i> as the backing devices. <i>roothash</i> forms the root of the tree of hashes stored on <i>hashdevice</i>. See m[blue]<code>Kernel dm-verity</code>m[]<font SIZE="-2">[1]</font> documentation for details.</dd></dl>
 <p> <code>detach</code> <i>volume</i></p>
 <dl>
-<dd>Detach (destroy) the block device <i>volume</i>.</dl>
+<dd>Detach (destroy) the block device <i>volume</i>.</dd></dl>
 <p> <code>help</code></p>
 <dl>
-<dd>Print short information about command syntax.</dl>
+<dd>Print short information about command syntax.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-veritysetup-generator/">systemd-veritysetup-generator</a></code>(8), <code><a href="/docs/linux/man/8-veritysetup/">veritysetup</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Kernel dm-verity</p>
+<dt> 1.</dt>
+<dd>Kernel dm-verity</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.kernel.org/doc/html/latest/admin-guide/device-mapper/verity.html">https://www.kernel.org/doc/html/latest/admin-guide/device-mapper/verity.html</a></dl>
+<dd><a rel="nofollow" href="https://www.kernel.org/doc/html/latest/admin-guide/device-mapper/verity.html">https://www.kernel.org/doc/html/latest/admin-guide/device-mapper/verity.html</a></dd></dl>
+</dl>

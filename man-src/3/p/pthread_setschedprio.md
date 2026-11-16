@@ -10,9 +10,7 @@ description: "pthread_setschedprio – set scheduling priority of a thread"
 <p>pthread_setschedprio &#8211; set scheduling priority of a thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_setschedprio(pthread_t thread, int prio);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setschedprio</code>() function sets the scheduling priority of the thread <i>thread</i> to the value specified in <i>prio</i>. (By contrast <code><a href="/docs/linux/man/3-pthread_setschedparam/">pthread_setschedparam</a></code>(3) changes both the scheduling policy and priority of a thread.)</p>
@@ -20,12 +18,12 @@ Compile and link with - pthread.</code></pre>
 <p>On success, this function returns 0; on error, it returns a nonzero error number. If <code>pthread_setschedprio</code>() fails, the scheduling priority of <i>thread</i> is not changed.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>prio</i> is not valid for the scheduling policy of the specified thread.</p>
-<dt><code>EPERM</code></p>
-<dd>The caller does not have appropriate privileges to set the specified priority.</p>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>prio</i> is not valid for the scheduling policy of the specified thread.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The caller does not have appropriate privileges to set the specified priority.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <p> POSIX.1 also documents an <code>ENOTSUP</code> (&quot;attempt was made to set the priority to an unsupported value&quot;) error for <code><a href="/docs/linux/man/3-pthread_setschedparam/">pthread_setschedparam</a></code>(3).</p>
 <h2>Versions</h2>
 <p>This function is available in glibc since version 2.3.4.</p>

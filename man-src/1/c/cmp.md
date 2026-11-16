@@ -16,22 +16,22 @@ description: "cmp – compare two files byte by byte"
 <p> The optional SKIP1 and SKIP2 specify the number of bytes to skip at the beginning of each file (zero by default). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;print-bytes</code></p>
-<dd> print differing bytes</p>
-<dt><code>-i</code>, <code>&#8211;ignore-initial</code>=<i>SKIP</i></p>
-<dd> skip first SKIP bytes of both inputs</p>
-<dt><code>-i</code>, <code>&#8211;ignore-initial</code>=<i>SKIP1</i>:SKIP2</p>
-<dd> skip first SKIP1 bytes of FILE1 and first SKIP2 bytes of FILE2</p>
-<dt><code>-l</code>, <code>&#8211;verbose</code></p>
-<dd> output byte numbers and differing byte values</p>
-<dt><code>-n</code>, <code>&#8211;bytes</code>=<i>LIMIT</i></p>
-<dd> compare at most LIMIT bytes</p>
-<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> suppress all normal output</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-b</code>, <code>&#8211;print-bytes</code></dt>
+<dd> print differing bytes</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-initial</code>=<i>SKIP</i></dt>
+<dd> skip first SKIP bytes of both inputs</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-initial</code>=<i>SKIP1</i>:SKIP2</dt>
+<dd> skip first SKIP1 bytes of FILE1 and first SKIP2 bytes of FILE2</dd>
+<dt><code>-l</code>, <code>&#8211;verbose</code></dt>
+<dd> output byte numbers and differing byte values</dd>
+<dt><code>-n</code>, <code>&#8211;bytes</code>=<i>LIMIT</i></dt>
+<dd> compare at most LIMIT bytes</dd>
+<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> suppress all normal output</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> SKIP values may be followed by the following multiplicative suffixes: kB 1000, K 1024, MB 1,000,000, M 1,048,576, GB 1,000,000,000, G 1,073,741,824, and so on for T, P, E, Z, Y. </p>
 <p> If a FILE is &#8216;-&#8216; or missing, read standard input. Exit status is 0 if inputs are the same, 1 if different, 2 if trouble.</p>
 <h2>AUTHOR</h2>
@@ -48,6 +48,6 @@ description: "cmp – compare two files byte by byte"
 <p> The full documentation for <code>cmp</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>cmp</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info cmp</code></dl>
+</dt><dd> <code>info cmp</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

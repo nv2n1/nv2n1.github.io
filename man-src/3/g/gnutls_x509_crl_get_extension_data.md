@@ -14,14 +14,14 @@ description: "gnutls_x509_crl_get_extension_data – API function"
 <p> <code>int gnutls_x509_crl_get_extension_data(gnutls_x509_crl_t </code><i>crl</i><code>, int </code><i>indx</i><code>, void * </code><i>data</i><code>, size_t * </code><i>sizeof_data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crl_t crl</p>
-<dd> should contain a <code>gnutls_x509_crl_t</code> structure</p>
-<dt>int indx</p>
-<dd> Specifies which extension OID to send. Use (0) to get the first one.</p>
-<dt>void * data</p>
-<dd> a pointer to a structure to hold the data (may be null)</p>
-<dt>size_t * sizeof_data</p>
-<dd> initially holds the size of <i>oid</i></dl>
+<dt>gnutls_x509_crl_t crl</dt>
+<dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd>
+<dt>int indx</dt>
+<dd> Specifies which extension OID to send. Use (0) to get the first one.</dd>
+<dt>void * data</dt>
+<dd> a pointer to a structure to hold the data (may be null)</dd>
+<dt>size_t * sizeof_data</dt>
+<dd> initially holds the size of <i>oid</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the requested extension data in the CRL. The extension data will be stored as a string in the provided buffer. </p>
 <p> Use <code>gnutls_x509_crl_get_extension_info()</code> to extract the OID and critical flag. Use <code>gnutls_x509_crl_get_extension_info()</code> instead, if you want to get data indexed by the extension OID rather than sequence.</p>
@@ -38,6 +38,6 @@ description: "gnutls_x509_crl_get_extension_data – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

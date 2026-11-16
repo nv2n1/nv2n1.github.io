@@ -30,12 +30,9 @@ The underlying iterator.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {0, 1, 2, 3, 4, 5};
     using RevIt = std::reverse_iterator&lt;std::vector&lt;int&gt;::iterator&gt;;

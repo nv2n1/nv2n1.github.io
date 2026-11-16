@@ -15,7 +15,7 @@ set_dma_reserve - set the specified number of pages reserved in the first zone
 <h2>Arguments</h2>
 
 <i>new_dma_reserve</i>
-<dl><dd><dd>The number of pages to mark reserved</dl>
+<dl><dd></dd><dd>The number of pages to mark reserved</dd></dl>
 
 <h2>Description</h2>
 

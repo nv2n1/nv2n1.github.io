@@ -33,86 +33,86 @@ description: "fedpkg – RPM Packaging utility"
 &nbsp;<wbr>&nbsp;<wbr>-q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run quietly only displaying errors</p>
 <h2>COMMAND OVERVIEW</h2>
 <dl>
-<dt><code>fedpkg build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;skip-nvr-check] [&#8211;skip-tag] [&#8211;scratch] [&#8211;srpm [SRPM]]</code></p>
-<dd> Request build</p>
-<dt><code>fedpkg chain-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] package [package &#8230;]</code></p>
-<dd> Build current package in order with other packages</p>
-<dt><code>fedpkg ci [-h] [-c] [&#8211;raw] [-t] [-m MESSAGE] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></p>
-<dd> Alias for commit</p>
-<dt><code>fedpkg clean [-h] [&#8211;dry-run] [-x]</code></p>
-<dd> Remove untracked files</p>
-<dt><code>fedpkg clog [-h] [&#8211;raw]</code></p>
-<dd> Make a clog file containing top changelog entry</p>
-<dt><code>fedpkg clone [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></p>
-<dd> Clone and checkout a module</p>
-<dt><code>fedpkg co [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></p>
-<dd> Alias for clone</p>
-<dt><code>fedpkg commit [-h] [-c] [&#8211;raw] [-t] [-m MESSAGE] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></p>
-<dd> Commit changes</p>
-<dt><code>fedpkg compile [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></p>
-<dd> Local test rpmbuild compile</p>
-<dt><code>fedpkg container-build [-h] [&#8211;repo-url [URL [URL &#8230;]]] [&#8211;osbs-config PATH] [&#8211;instance SECTION] [&#8211;scratch] [&#8211;target TARGET] [&#8211;build-with {koji,osbs}] [&#8211;nowait]</code></p>
-<dd> build a container</p>
-<dt><code>fedpkg container-build-setup [-h] (&#8211;get-autorebuild | &#8211;set-autorebuild {true,false})</code></p>
-<dd> set options for container-build</p>
-<dt><code>fedpkg copr-build [-h] [&#8211;nowait] project</code></p>
-<dd> Build package in Copr</p>
-<dt><code>fedpkg diff [-h] [&#8211;cached] [files [files &#8230;]]</code></p>
-<dd> Show changes between commits, commit and working tree, etc</p>
-<dt><code>fedpkg gimmespec [-h]</code></p>
-<dd> Print the spec file name</p>
-<dt><code>fedpkg gitbuildhash [-h] build</code></p>
-<dd> Print the git hash used to build the provided n-v-r</p>
-<dt><code>fedpkg giturl [-h]</code></p>
-<dd> Print the git url for building</p>
-<dt><code>fedpkg help [-h]</code></p>
-<dd> Show usage</p>
-<dt><code>fedpkg import [-h] [&#8211;skip-diffs] srpm</code></p>
-<dd> Import srpm content into a module</p>
-<dt><code>fedpkg install [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></p>
-<dd> Local test rpmbuild install</p>
-<dt><code>fedpkg lint [-h] [&#8211;info] [&#8211;rpmlintconf RPMLINTCONF]</code></p>
-<dd> Run rpmlint against local spec and build output if present.</p>
-<dt><code>fedpkg local [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;md5]</code></p>
-<dd> Local test rpmbuild binary</p>
-<dt><code>fedpkg mock-config [-h] [&#8211;target TARGET] [&#8211;arch ARCH]</code></p>
-<dd> Generate a mock config</p>
-<dt><code>fedpkg mockbuild [-h] [&#8211;root ROOT] [&#8211;md5] [&#8211;no-clean] [&#8211;no-cleanup-after] [&#8211;no-clean-all]</code></p>
-<dd> Local test build using mock</p>
-<dt><code>fedpkg new [-h]</code></p>
-<dd> Diff against last tag</p>
-<dt><code>fedpkg new-sources [-h] files [files &#8230;]</code></p>
-<dd> Upload new source files</p>
-<dt><code>fedpkg patch [-h] [&#8211;rediff] suffix</code></p>
-<dd> Create and add a gendiff patch file</p>
-<dt><code>fedpkg prep [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></p>
-<dd> Local test rpmbuild prep</p>
-<dt><code>fedpkg pull [-h] [&#8211;rebase] [&#8211;no-rebase]</code></p>
-<dd> Pull changes from the remote repository and update the working copy.</p>
-<dt><code>fedpkg push [-h] [&#8211;force]</code></p>
-<dd> Push changes to remote repository</p>
-<dt><code>fedpkg retire [-h] reason</code></p>
-<dd> Retire a package</p>
-<dt><code>fedpkg scratch-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;srpm [SRPM]]</code></p>
-<dd> Request scratch build</p>
-<dt><code>fedpkg sources [-h] [&#8211;outdir OUTDIR]</code></p>
-<dd> Download source files</p>
-<dt><code>fedpkg srpm [-h] [&#8211;md5]</code></p>
-<dd> Create a source rpm</p>
-<dt><code>fedpkg switch-branch [-h] [-l] [&#8211;fetch] [branch]</code></p>
-<dd> Work with branches</p>
-<dt><code>fedpkg tag [-h] [-f] [-m MESSAGE] [-c] [&#8211;raw] [-F FILE] [-l] [-d] [tag]</code></p>
-<dd> Management of git tags</p>
-<dt><code>fedpkg unused-patches [-h]</code></p>
-<dd> Print list of patches not referenced by name in the specfile</p>
-<dt><code>fedpkg update [-h]</code></p>
-<dd> Submit last build as update</p>
-<dt><code>fedpkg upload [-h] files [files &#8230;]</code></p>
-<dd> Upload source files</p>
-<dt><code>fedpkg verify-files [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></p>
-<dd> Locally verify %%files section</p>
-<dt><code>fedpkg verrel [-h]</code></p>
-<dd> Print the name-version-release</dl>
+<dt><code>fedpkg build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;skip-nvr-check] [&#8211;skip-tag] [&#8211;scratch] [&#8211;srpm [SRPM]]</code></dt>
+<dd> Request build</dd>
+<dt><code>fedpkg chain-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] package [package &#8230;]</code></dt>
+<dd> Build current package in order with other packages</dd>
+<dt><code>fedpkg ci [-h] [-c] [&#8211;raw] [-t] [-m MESSAGE] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></dt>
+<dd> Alias for commit</dd>
+<dt><code>fedpkg clean [-h] [&#8211;dry-run] [-x]</code></dt>
+<dd> Remove untracked files</dd>
+<dt><code>fedpkg clog [-h] [&#8211;raw]</code></dt>
+<dd> Make a clog file containing top changelog entry</dd>
+<dt><code>fedpkg clone [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></dt>
+<dd> Clone and checkout a module</dd>
+<dt><code>fedpkg co [-h] [&#8211;branches] [&#8211;branch BRANCH] [&#8211;anonymous] module [clone_target]</code></dt>
+<dd> Alias for clone</dd>
+<dt><code>fedpkg commit [-h] [-c] [&#8211;raw] [-t] [-m MESSAGE] [-F FILE] [-p] [-s] [files [files &#8230;]]</code></dt>
+<dd> Commit changes</dd>
+<dt><code>fedpkg compile [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></dt>
+<dd> Local test rpmbuild compile</dd>
+<dt><code>fedpkg container-build [-h] [&#8211;repo-url [URL [URL &#8230;]]] [&#8211;osbs-config PATH] [&#8211;instance SECTION] [&#8211;scratch] [&#8211;target TARGET] [&#8211;build-with {koji,osbs}] [&#8211;nowait]</code></dt>
+<dd> build a container</dd>
+<dt><code>fedpkg container-build-setup [-h] (&#8211;get-autorebuild | &#8211;set-autorebuild {true,false})</code></dt>
+<dd> set options for container-build</dd>
+<dt><code>fedpkg copr-build [-h] [&#8211;nowait] project</code></dt>
+<dd> Build package in Copr</dd>
+<dt><code>fedpkg diff [-h] [&#8211;cached] [files [files &#8230;]]</code></dt>
+<dd> Show changes between commits, commit and working tree, etc</dd>
+<dt><code>fedpkg gimmespec [-h]</code></dt>
+<dd> Print the spec file name</dd>
+<dt><code>fedpkg gitbuildhash [-h] build</code></dt>
+<dd> Print the git hash used to build the provided n-v-r</dd>
+<dt><code>fedpkg giturl [-h]</code></dt>
+<dd> Print the git url for building</dd>
+<dt><code>fedpkg help [-h]</code></dt>
+<dd> Show usage</dd>
+<dt><code>fedpkg import [-h] [&#8211;skip-diffs] srpm</code></dt>
+<dd> Import srpm content into a module</dd>
+<dt><code>fedpkg install [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;short-circuit] [&#8211;nocheck]</code></dt>
+<dd> Local test rpmbuild install</dd>
+<dt><code>fedpkg lint [-h] [&#8211;info] [&#8211;rpmlintconf RPMLINTCONF]</code></dt>
+<dd> Run rpmlint against local spec and build output if present.</dd>
+<dt><code>fedpkg local [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH] [&#8211;md5]</code></dt>
+<dd> Local test rpmbuild binary</dd>
+<dt><code>fedpkg mock-config [-h] [&#8211;target TARGET] [&#8211;arch ARCH]</code></dt>
+<dd> Generate a mock config</dd>
+<dt><code>fedpkg mockbuild [-h] [&#8211;root ROOT] [&#8211;md5] [&#8211;no-clean] [&#8211;no-cleanup-after] [&#8211;no-clean-all]</code></dt>
+<dd> Local test build using mock</dd>
+<dt><code>fedpkg new [-h]</code></dt>
+<dd> Diff against last tag</dd>
+<dt><code>fedpkg new-sources [-h] files [files &#8230;]</code></dt>
+<dd> Upload new source files</dd>
+<dt><code>fedpkg patch [-h] [&#8211;rediff] suffix</code></dt>
+<dd> Create and add a gendiff patch file</dd>
+<dt><code>fedpkg prep [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></dt>
+<dd> Local test rpmbuild prep</dd>
+<dt><code>fedpkg pull [-h] [&#8211;rebase] [&#8211;no-rebase]</code></dt>
+<dd> Pull changes from the remote repository and update the working copy.</dd>
+<dt><code>fedpkg push [-h] [&#8211;force]</code></dt>
+<dd> Push changes to remote repository</dd>
+<dt><code>fedpkg retire [-h] reason</code></dt>
+<dd> Retire a package</dd>
+<dt><code>fedpkg scratch-build [-h] [&#8211;arches [ARCHES [ARCHES &#8230;]]] [&#8211;md5] [&#8211;nowait] [&#8211;target TARGET] [&#8211;background] [&#8211;srpm [SRPM]]</code></dt>
+<dd> Request scratch build</dd>
+<dt><code>fedpkg sources [-h] [&#8211;outdir OUTDIR]</code></dt>
+<dd> Download source files</dd>
+<dt><code>fedpkg srpm [-h] [&#8211;md5]</code></dt>
+<dd> Create a source rpm</dd>
+<dt><code>fedpkg switch-branch [-h] [-l] [&#8211;fetch] [branch]</code></dt>
+<dd> Work with branches</dd>
+<dt><code>fedpkg tag [-h] [-f] [-m MESSAGE] [-c] [&#8211;raw] [-F FILE] [-l] [-d] [tag]</code></dt>
+<dd> Management of git tags</dd>
+<dt><code>fedpkg unused-patches [-h]</code></dt>
+<dd> Print list of patches not referenced by name in the specfile</dd>
+<dt><code>fedpkg update [-h]</code></dt>
+<dd> Submit last build as update</dd>
+<dt><code>fedpkg upload [-h] files [files &#8230;]</code></dt>
+<dd> Upload source files</dd>
+<dt><code>fedpkg verify-files [-h] [&#8211;builddir BUILDDIR] [&#8211;arch ARCH]</code></dt>
+<dd> Locally verify %%files section</dd>
+<dt><code>fedpkg verrel [-h]</code></dt>
+<dd> Print the name-version-release</dd></dl>
 <h2>COMMAND REFERENCE</h2>
 <h3>fedpkg build</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr>usage: fedpkg build&nbsp;<wbr>[-h]&nbsp;<wbr>[&#8211;arches&nbsp;<wbr>[ARCHES&nbsp;<wbr>[ARCHES &#8230;]]]&nbsp;<wbr>[&#8211;md5]&nbsp;<wbr>[&#8211;nowait]<br />

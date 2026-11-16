@@ -13,8 +13,8 @@ description: "pskc_free – API function"
 void pskc_free(void *ptr);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>void * ptr</p>
-<dd>memory region to deallocate, or NULL.</dl>
+<dt>void * ptr</dt>
+<dd>memory region to deallocate, or NULL.</dd></dl>
 <h2>Description</h2>
 <p>Deallocates memory region by calling <code>free()</code>. If <i>ptr</i> is NULL no operation is performed. </p>
 <p> This function is necessary on Windows, where different parts of the same application may use different memory heaps.</p>

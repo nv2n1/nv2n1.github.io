@@ -71,7 +71,7 @@ description: "org.freedesktop.import1 – The D-Bus interface of systemd-importd
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>ImportTar()</code> and <code>ImportRaw()</code> import a system image and place it into /var/lib/machines/. The first argument should be a file descriptor (opened for reading) referring to the tar or raw file to import. It should reference a file on disk, a pipe or a socket. When <code>ImportTar()</code> is used the file descriptor should refer to a tar file, optionally compressed with <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), or <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1). <code>systemd-importd</code> will detect the used compression scheme (if any) automatically. When <code>ImportRaw()</code> is used the file descriptor should refer to a raw or qcow2 disk image containing an MBR or GPT disk label, also optionally compressed with gzip, bzip2 or xz. In either case, if the file is specified as a file descriptor on disk, progress information is generated for the import operation (as in that case we know the total size on disk). If a socket or pipe is specified, progress information is not available. The file descriptor argument is followed by a local name for the image. This should be a name suitable as a hostname and will be used to name the imported image below /var/lib/machines/. A tar import is placed as a directory tree or a <code><a href="/docs/linux/man/8-btrfs/">btrfs</a></code>(8) subvolume below /var/lib/machines/ under the specified name with no suffix appended. A raw import is placed as a file in /var/lib/machines/ with the .raw suffix appended. If the <code>force</code> argument is true, any pre-existing image with the same name is removed before starting the operation. Otherwise, the operation fails if an image with the same name already exists. Finally, the <code>read_only</code> argument controls whether to create a writable or read-only image. Both methods return immediately after starting the import, with the import transfer ongoing. They return a pair of transfer identifier and object path, which may be used to retrieve progress information about the transfer or to cancel it. The transfer identifier is a simple numeric identifier, the object path references an org.freedesktop.import1.Transfer object, see below. Listen for a <code>TransferRemoved</code> signal for the transfer ID in order to detect when a transfer is complete. The returned transfer object is useful to determine the current progress or log output of the ongoing import operation. </p>
 <p> <code>ExportTar()</code> and <code>ExportRaw()</code> implement the reverse operation, and may be used to export a system image in order to place it in a tar or raw image. They take the machine name to export as their first parameter, followed by a file descriptor (opened for writing) where the tar or raw file will be written. It may either reference a file on disk or a pipe/socket. The third argument specifies in which compression format to write the image. It takes one of &quot;uncompressed&quot;, &quot;xz&quot;, &quot;bzip2&quot; or &quot;gzip&quot;, depending on which compression scheme is required. The image written to the specified file descriptor will be a tar file in case of <code>ExportTar()</code> or a raw disk image in case of <code>ExportRaw()</code>. Note that currently raw disk images may not be exported as tar files, and vice versa. This restriction might be lifted eventually. The method returns a transfer identifier and object path for cancelling or tracking the export operation, similar to <code>ImportTar()</code> or <code>ImportRaw()</code> as described above. </p>
@@ -109,7 +109,7 @@ description: "org.freedesktop.import1 – The D-Bus interface of systemd-importd
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p>The <code>Cancel()</code> method may be used to cancel the transfer. It takes no parameters. This method is pretty much equivalent to the <code>CancelTransfer()</code> method on the Manager interface (see above), but is exposed on the Transfer object itself instead of taking a transfer ID.</p>
 <h3>Properties</h3>
@@ -124,19 +124,20 @@ description: "org.freedesktop.import1 – The D-Bus interface of systemd-importd
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.import1 \
  --object-path /org/freedesktop/import1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Introspect org.freedesktop.import1.Transfer on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.import1 \
  --object-path /org/freedesktop/import1/transfer/_1</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>the usual interface versioning guidelines</p>
+<dt> 1.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

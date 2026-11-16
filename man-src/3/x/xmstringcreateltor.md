@@ -18,10 +18,10 @@ description: "XmStringCreateLtoR — A compound string function that creates a c
 </code> characters in the text. When one is found, the text up to that point is put into a segment followed by a separator component. No final separator component is appended to the end of the compound string. The direction component defaults to left-to-right. This function assumes that the encoding is single byte rather than multibyte. </p>
 <p> The function will allocate space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag component to be associated with the given text. The value <code>XmFONTLIST_DEFAULT_TAG</code> is retained for compatibility with previous releases.</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag component to be associated with the given text. The value <code>XmFONTLIST_DEFAULT_TAG</code> is retained for compatibility with previous releases.</dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

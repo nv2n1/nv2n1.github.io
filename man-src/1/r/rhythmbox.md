@@ -16,32 +16,32 @@ description: "rhythmbox – music player and library for tagged files using GStr
 <p> For performance reasons, the remote control abilities have been moved from the rhythmbox binary to a separate program. See <code>rhythmbox-client</code> and the corresponding man page for documentation.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Enable debug output</p>
-<dt><code>-D, &#8211;debug-match=match</code></p>
-<dd> Enable debug output matching a specified string</p>
-<dt><code>&#8211;no-update</code></p>
-<dd> Do not update the library with file changes</p>
-<dt><code>-n, &#8211;no-registration</code></p>
-<dd> Do not register the shell</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd> Don&#8217;t save any data permanently (implies &#8211;no-registration)</p>
-<dt><code>&#8211;rhythmdb-file=file</code></p>
-<dd> Path for database file to use</p>
-<dt><code>&#8211;playlists-file=file</code></p>
-<dd> Path for playlists file to use</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gst</code></p>
-<dd> Show GStreamer Options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;help-sm-client</code></p>
-<dd> Show session management options</dl>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable debug output</dd>
+<dt><code>-D, &#8211;debug-match=match</code></dt>
+<dd> Enable debug output matching a specified string</dd>
+<dt><code>&#8211;no-update</code></dt>
+<dd> Do not update the library with file changes</dd>
+<dt><code>-n, &#8211;no-registration</code></dt>
+<dd> Do not register the shell</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> Don&#8217;t save any data permanently (implies &#8211;no-registration)</dd>
+<dt><code>&#8211;rhythmdb-file=file</code></dt>
+<dd> Path for database file to use</dd>
+<dt><code>&#8211;playlists-file=file</code></dt>
+<dd> Path for playlists file to use</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gst</code></dt>
+<dd> Show GStreamer Options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;help-sm-client</code></dt>
+<dd> Show session management options</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;, for the Debian system (but may be used by others).</p>
 <h2>SEE ALSO</h2>

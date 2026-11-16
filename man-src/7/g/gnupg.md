@@ -15,5 +15,5 @@ description: "GnuPG – The GNU Privacy Guard suite of programs"
 <dl>
 <dd>
 <pre>info gnupg</pre>
-</dl>
+</dd></dl>
 <p> should give you access to the complete manual including a menu structure and an index. </p>

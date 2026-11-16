@@ -15,11 +15,11 @@ description: "chert-update – Update a chert database to the new format keys"
 <p> chert-update &#8211; Update a chert database to the new format keys</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Set the blocksize in bytes (e.g. 4096) or K (e.g. 4K) (must be between 2K and 64K and a power of 2, default 8K)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit </p>
+<dt><code>-b</code></dt>
+<dd> Set the blocksize in bytes (e.g. 4096) or K (e.g. 4K) (must be between 2K and 64K and a power of 2, default 8K)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit </dd>
 </dl>
 <h2>Index</h2>

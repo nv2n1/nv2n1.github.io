@@ -11,29 +11,17 @@ std::is_sorted - std::is_sorted
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                        (since C++11)
-
 bool is_sorted( ForwardIt first, ForwardIt last );                                                 (until C++20)
-
 template&lt; class ForwardIt &gt;                                                                        (since C++20)
-
 constexpr bool is_sorted( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;                                             (2) (since C++17)
-
 bool is_sorted( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );               (1)
-
 template&lt; class ForwardIt, class Compare &gt;                                                                        (since C++11)
-
 bool is_sorted( ForwardIt first, ForwardIt last, Compare comp );                                                  (until C++20)
-
 template&lt; class ForwardIt, class Compare &gt;                                                     (3)                (since C++20)
-
 constexpr bool is_sorted( ForwardIt first, ForwardIt last, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Compare &gt;                                  (4)            (since C++17)
-
 bool is_sorted( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, Compare comp );</code></pre> 
 Checks if the elements in range [first, last) are sorted in non-descending order. 
 1) Elements are compared using operator&lt;. 
@@ -98,13 +86,9 @@ std::is_sorted and std::is_sorted_until both return true for empty ranges and ra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 int main()
-
 {
     int digits[] = {3, 1, 4, 1, 5};
     for (auto i : digits)

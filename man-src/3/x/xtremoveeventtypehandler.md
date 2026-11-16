@@ -11,31 +11,31 @@ description: "XtInsertEventTypeHandler, XtRemoveEventTypeHandler, XtRegisterExte
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtInsertEventTypeHandler(Widget <i>widget</i>, int <i>event_type</i>, XtPointer <i>select_data</i>, XtEventHandler <i>proc</i>, XtPointer <i>client_data</i>, XtListPosition <i>position</i>);</p>
-<dd>void XtRemoveEventTypeHandler(Widget <i>widget</i>, int <i>event_type</i>, XtPointer <i>select_data</i>, XtEventHandler <i>proc</i>, XtPointer <i>client_data</i>);</p>
-<dd>void XtRegisterExtensionSelector(Display* <i>display</i>, int <i>min_event_type</i>, int <i>max_event_type</i>, XtExtensionSelectProc <i>proc</i>, XtPointer <i>client_data</i>);</p>
-<dd>XtEventDispatchProc XtSetEventDispatcher(Display* <i>display</i>, int <i>event_type</i>, XtEventDispatchProc <i>proc</i>);</p>
-<dd>Boolean XtDispatchEventToWidget(Widget <i>widget</i>, XEvent* <i>event</i>);</dl>
+<dd>void XtInsertEventTypeHandler(Widget <i>widget</i>, int <i>event_type</i>, XtPointer <i>select_data</i>, XtEventHandler <i>proc</i>, XtPointer <i>client_data</i>, XtListPosition <i>position</i>);</dd>
+<dd>void XtRemoveEventTypeHandler(Widget <i>widget</i>, int <i>event_type</i>, XtPointer <i>select_data</i>, XtEventHandler <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRegisterExtensionSelector(Display* <i>display</i>, int <i>min_event_type</i>, int <i>max_event_type</i>, XtExtensionSelectProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>XtEventDispatchProc XtSetEventDispatcher(Display* <i>display</i>, int <i>event_type</i>, XtEventDispatchProc <i>proc</i>);</dd>
+<dd>Boolean XtDispatchEventToWidget(Widget <i>widget</i>, XEvent* <i>event</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget for this event handler. Must be of class Core or any subclass thereof.</p>
-<dt><i>event_type</i></p>
-<dd>Specifies the event type.</p>
-<dt><i>select_data</i></p>
-<dd>Specifies data used to select or deselect events from the server.</p>
-<dt><i>proc</i></p>
-<dd>Specifies the proc.</p>
-<dt><i>client_data</i></p>
-<dd>Specifies additional data to be passed to the event handler.</p>
-<dt><i>position</i></p>
-<dd>Specifies when the event handler is to be called relative to other previously registered handlers.</p>
-<dt><i>display</i></p>
-<dd>Specifies the display.</p>
-<dt><i>min_event_type, max_event_type</i></p>
-<dd>Specifies the range of event types for this extension.</p>
-<dt><i>event</i></p>
-<dd>Specifies a pointer to the event to be dispatched.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget for this event handler. Must be of class Core or any subclass thereof.</dd>
+<dt><i>event_type</i></dt>
+<dd>Specifies the event type.</dd>
+<dt><i>select_data</i></dt>
+<dd>Specifies data used to select or deselect events from the server.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the proc.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies additional data to be passed to the event handler.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies when the event handler is to be called relative to other previously registered handlers.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the display.</dd>
+<dt><i>min_event_type, max_event_type</i></dt>
+<dd>Specifies the range of event types for this extension.</dd>
+<dt><i>event</i></dt>
+<dd>Specifies a pointer to the event to be dispatched.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtInsertEventTypeHandler</code> function registers a procedure with the dispatch mechanism that is to be called when an event that matches the specified <i>event_type</i> is dispatched to the specified <i>widget</i>. </p>
 <p> If <i>event_type</i> is one of the core X protocol events then <i>select_data</i> must be a pointer to a value of type <code>EventMask</code>, indicating the event mask to be used to select for the desired event. This event mask will be included in the value returned by <code>XtBuildEventMask</code>. If the widget is realized <code>XtInsertEventTypeHandler</code> calls <code>XSelectInput</code> if necessary. Specifying NULL for <i>select_data</i> is equivalent to specifying a pointer to an event mask containing 0. This is similar to the <code>XtInsertRawEventHandler</code> function. </p>

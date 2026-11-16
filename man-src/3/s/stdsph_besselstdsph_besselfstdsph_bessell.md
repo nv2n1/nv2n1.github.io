@@ -10,15 +10,10 @@ description: "std::sph_bessel,std::sph_besself,std::sph_bessell – std::sph_bes
 <p>std::sph_bessel,std::sph_besself,std::sph_bessell &#8211; std::sph_bessel,std::sph_besself,std::sph_bessell</p>
 <h2>Synopsis</h2>
 <pre><code>double sph_bessel ( unsigned n, double x );
-
 float sph_bessel ( unsigned n, float x );
-
 long double sph_bessel ( unsigned n, long double x ); (1) (since C++17)
-
 float sph_besself( unsigned n, float x );
-
 long double sph_bessell( unsigned n, long double x );
-
 double sph_bessel( unsigned n, IntegralType x );      (2) (since C++17)</code></pre>
 <p>1) Computes the spherical_Bessel_function_of_the_first_kind of n and x.<br />
 2) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(1)</code> after casting the argument to double. </p>
@@ -42,11 +37,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     // spot check for n == 1
     double x = 1.2345;

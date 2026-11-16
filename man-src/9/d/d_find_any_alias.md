@@ -14,7 +14,7 @@ description: "d_find_any_alias – find any alias for a given inode"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode to find an alias for</dl>
+</dd><dd>inode to find an alias for</dd></dl>
 <h2>Description</h2>
 <p>If any aliases exist for the given inode, take and return a reference for one of them. If no aliases exist, return <code>NULL</code>.</p>
 <h2>Copyright</h2>

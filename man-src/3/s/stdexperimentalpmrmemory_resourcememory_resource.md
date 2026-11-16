@@ -12,7 +12,6 @@ std::experimental::pmr::memory_resource::memory_resource - std::experimental::pm
 
 <pre><code>memory_resource() = default;
 (1)(library fundamentals TS)(implicitly declared)
-
     memory_resource(const memory_resource &amp;) = default;
 (2)(library fundamentals TS)(implicitly declared)</code></pre> 
 1) Implicitly declared default constructor. 

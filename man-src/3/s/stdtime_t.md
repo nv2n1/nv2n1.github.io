@@ -11,7 +11,6 @@ std::time_t - std::time_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 typedef /* unspecified */ time_t;</code></pre> 
 Arithmetic type capable of representing times. 
 Although not defined, this is almost always an integral value holding the number of seconds (not counting leap seconds) since 00:00, Jan 1 1970 UTC, corresponding to POSIX_time. 

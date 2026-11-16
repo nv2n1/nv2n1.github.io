@@ -10,15 +10,10 @@ description: "std::float_denorm_style – std::float_denorm_style"
 <p>std::float_denorm_style &#8211; std::float_denorm_style</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;limits&gt;
-
 enum float_denorm_style {
-
     denorm_indeterminate = -1,
-
     denorm_absent = 0,
-
     denorm_present = 1
-
 };</code></pre>
 <p>Enumeration constants of type std::float_denorm_style indicate support of subnormal values by floating-point types.<br />
 Enumeration constants<br />

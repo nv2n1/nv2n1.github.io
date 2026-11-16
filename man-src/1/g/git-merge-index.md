@@ -32,25 +32,25 @@ git merge - index[-o][-q]&lt;merge - program&gt;(-a | [--]&lt;file&gt; *)
  --
 <dl>
 <dt>
-<dd> Do not interpret any more arguments as options.</dl>
+</dt><dd> Do not interpret any more arguments as options.</dd></dl>
  
 
  -a
 <dl>
 <dt>
-<dd> Run merge against all files in the index that need merging.</dl>
+</dt><dd> Run merge against all files in the index that need merging.</dd></dl>
  
 
  -o
 <dl>
 <dt>
-<dd> Instead of stopping at the first failed merge, do all of them in one shot - continue with merging even when previous merges returned errors, and only return the error code after all the merges.</dl>
+</dt><dd> Instead of stopping at the first failed merge, do all of them in one shot - continue with merging even when previous merges returned errors, and only return the error code after all the merges.</dd></dl>
  
 
  -q
 <dl>
 <dt>
-<dd> Do not complain about a failed merge program (a merge program failure usually indicates conflicts during the merge). This is for porcelains which might want to emit custom messages.</dl>
+</dt><dd> Do not complain about a failed merge program (a merge program failure usually indicates conflicts during the merge). This is for porcelains which might want to emit custom messages.</dd></dl>
  
 
  If <i>git merge-index</i> is called with multiple &lt;file&gt;s (or -a) then it processes them in turn only stopping if merge returns a non-zero exit code. 
@@ -65,13 +65,13 @@ git merge - index[-o][-q]&lt;merge - program&gt;(-a | [--]&lt;file&gt; *)
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 torvalds [at] ppc970:~/merge-test&gt; git merge-index cat MM
 This is MM from the original tree.              # original
 This is modified MM in the branch A.            # merge1
 This is modified MM in the branch B.            # merge2
 This is modified MM in the branch B.            # current contents
-</pre></dl>
+</pre></dd></dl>
  
 
  
@@ -80,14 +80,14 @@ This is modified MM in the branch B.            # current contents
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 torvalds [at] ppc970:~/merge-test&gt; git merge-index cat AA MM
 cat: : No such file or directory
 This is added AA in the branch A.
 This is added AA in the branch B.
 This is added AA in the branch B.
 fatal: merge program failed
-</pre></dl>
+</pre></dd></dl>
  
 
  

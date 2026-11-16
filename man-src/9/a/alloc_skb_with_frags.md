@@ -15,23 +15,23 @@ alloc_skb_with_frags - allocate skb with page frags
 <h2>Arguments</h2>
 
 <i>header_len</i>
-<dl><dd><dd>size of linear part</dl>
+<dl><dd></dd><dd>size of linear part</dd></dl>
  
 
  <i>data_len</i>
-<dl><dd>needed length in frags</dl>
+<dl><dd>needed length in frags</dd></dl>
  
 
  <i>max_page_order</i>
-<dl><dd>max page order desired.</dl>
+<dl><dd>max page order desired.</dd></dl>
  
 
  <i>errcode</i>
-<dl><dd>pointer to error code if any</dl>
+<dl><dd>pointer to error code if any</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation mask</dl>
+<dl><dd>allocation mask</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,7 +11,6 @@ std::strtok - std::strtok
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strtok(char *str, const char *delim);</code></pre> 
 Finds the next token in a null-terminated byte string pointed to by str. The separator characters are identified by null-terminated byte string pointed to by delim. 
 This function is designed to be called multiple times to obtain successive tokens from the same string. 
@@ -41,10 +40,8 @@ Unlike most other tokenizers, the delimiters in strtok can be different for each
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstring&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     char input[100] = &quot;A bird came down the walk&quot;;
     char *token = std::strtok(input, &quot; &quot;);

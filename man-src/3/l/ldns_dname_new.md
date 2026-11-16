@@ -18,15 +18,15 @@ description: "ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data"
 <p> ldns_rdf* ldns_dname_new_frm_data(uint16_t size, const void *data); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname_new</i>()</p>
-<dd>Create a new dname rdf from a string .br <code>s</code>: the size of the new dname .br <code>*data</code>: pointer to the actual data </p>
+<dt> <i>ldns_dname_new</i>()</dt>
+<dd>Create a new dname rdf from a string .br <code>s</code>: the size of the new dname .br <code>*data</code>: pointer to the actual data </dd>
 <p> .br Returns ldns_rdf*</dl>
 <dl>
-<dt> <i>ldns_dname_new_frm_str</i>()</p>
-<dd>creates a new dname rdf from a string. .br <code>str</code>: string to use .br Returns ldns_rdf* or NULL in case of an error</dl>
+<dt> <i>ldns_dname_new_frm_str</i>()</dt>
+<dd>creates a new dname rdf from a string. .br <code>str</code>: string to use .br Returns ldns_rdf* or NULL in case of an error</dd></dl>
 <dl>
-<dt> <i>ldns_dname_new_frm_data</i>()</p>
-<dd>Create a new dname rdf from data (the data is copied) .br <code>size</code>: the size of the data .br <code>*data</code>: pointer to the actual data </p>
+<dt> <i>ldns_dname_new_frm_data</i>()</dt>
+<dd>Create a new dname rdf from data (the data is copied) .br <code>size</code>: the size of the data .br <code>*data</code>: pointer to the actual data </dd>
 <p> .br Returns ldns_rdf*</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -40,3 +40,4 @@ description: "ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

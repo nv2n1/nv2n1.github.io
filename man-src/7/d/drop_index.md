@@ -14,14 +14,14 @@ description: "DROP INDEX – remove an index"
 <p><code>DROP INDEX</code> drops an existing index from the database system. To execute this command you must be the owner of the index.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the index does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an index to remove.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the index.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the index if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the index does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an index to remove.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the index.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the index if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>This command will remove the index title_idx: </p>
 <pre>DROP INDEX title_idx;</pre>

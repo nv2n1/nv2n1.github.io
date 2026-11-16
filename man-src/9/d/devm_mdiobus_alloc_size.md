@@ -14,10 +14,10 @@ description: "devm_mdiobus_alloc_size – Resource-managed mdiobus_alloc_size"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to allocate mii_bus for</dl>
+</dd><dd>Device to allocate mii_bus for</dd></dl>
 <p> <i>sizeof_priv</i></p>
 <dl>
-<dd>Space to allocate for private structure.</dl>
+<dd>Space to allocate for private structure.</dd></dl>
 <h2>Description</h2>
 <p>Managed mdiobus_alloc_size. mii_bus allocated with this function is automatically freed on driver detach. </p>
 <p> If an mii_bus allocated with this function needs to be freed separately, <code>devm_mdiobus_free</code> must be used.</p>

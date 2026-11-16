@@ -23,8 +23,8 @@ description: "pmtrace – command line performance instrumentation"
 <p> Since <code>pmtrace</code> uses the <i>libpcp_trace</i> library routines, the environment variables <code>PCP_TRACE_HOST</code>, <code>PCP_TRACE_PORT</code>, and <code>PCP_TRACE_TIMEOUT</code> are all honored. Refer to <code><a href="/docs/linux/man/3-pmdatrace/">pmdatrace</a></code>(3) for a detailed description of the semantics of each.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_DEMOS_DIR/trace/pmtrace.c</code></p>
-<dd> source code for <code>pmtrace</code></dl>
+<dt><code>$PCP_DEMOS_DIR/trace/pmtrace.c</code></dt>
+<dd> source code for <code>pmtrace</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

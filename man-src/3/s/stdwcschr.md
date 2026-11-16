@@ -11,9 +11,7 @@ std::wcschr - std::wcschr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     const wchar_t *wcschr(const wchar_t *str, wchar_t ch);
-
 wchar_t *wcschr(wchar_t *str, wchar_t ch);</code></pre> 
 Finds the first occurrence of the wide character ch in the wide string pointed to by str. 
 
@@ -29,12 +27,9 @@ Pointer to the found character in str, or NULL if no such character is found.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     wchar_t arr[] = L&quot;招き猫 кошка&quot;;
     const wchar_t *cat = std::wcschr(arr, L'猫');

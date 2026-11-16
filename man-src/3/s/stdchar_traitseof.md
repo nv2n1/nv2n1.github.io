@@ -10,7 +10,6 @@ description: "std::char_traits<CharT>::eof – std::char_traits<CharT>::eof"
 <p>std::char_traits&lt;CharT&gt;::eof &#8211; std::char_traits&lt;CharT&gt;::eof</p>
 <h2>Synopsis</h2>
 <pre><code>static int_type eof();                     (until C++11)
-
 static constexpr int_type eof() noexcept;  (since C++11)</code></pre>
 <p>Returns a value not equivalent to any valid value of type char_type.<br />
 Formally, returns a value e such that X::eq_int_type(e, X::to_int_type(c)) is false for all values c. </p>

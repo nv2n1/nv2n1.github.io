@@ -25,10 +25,10 @@ description: "X Library Init and Shutdown Functions – Functions that start and
 <p>Initialize the X display connection to the given display. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> Display target name. If NULL, the default display is assumed.</dl>
+<dd><i>name</i> Display target name. If NULL, the default display is assumed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the library has been initialized without being shut down. 0 is returned if an error occurs.</dl>
+<dd>The number of times the library has been initialized without being shut down. 0 is returned if an error occurs.</dd></dl>
 <p> References ecore_event_type_new(), ECORE_FD_READ, ecore_main_fd_handler_add(), ECORE_X_NET_WM_PROTOCOL_PING, ECORE_X_NET_WM_PROTOCOL_SYNC_REQUEST, ecore_x_netwm_init(), ecore_x_window_override_new(), ECORE_X_WM_PROTOCOL_DELETE_REQUEST, and ECORE_X_WM_PROTOCOL_TAKE_FOCUS. </p>
 <p> Referenced by ecore_evas_gl_x11_new(), ecore_evas_software_x11_16_new(), ecore_evas_software_x11_new(), and ecore_evas_xrender_x11_new().</p>
 <h3>EAPI int ecore_x_shutdown (void)</h3>
@@ -36,6 +36,6 @@ description: "X Library Init and Shutdown Functions – Functions that start and
 <p> In shutting down the library, the X display connection is terminated and any event handlers for it are removed. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the library has been initialized without being shut down.</dl>
+<dd>The number of times the library has been initialized without being shut down.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

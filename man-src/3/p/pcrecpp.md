@@ -148,3 +148,4 @@ description: "PCRE – Perl-compatible regular expressions."
 <p> will leave 64 in a, b, c, and d.</p>
 <h2>Replacing Parts Of Strings</h2>
 <p>You can replace the first match of &quot;pattern&quot; in &quot;str&quot; with &quot;rewrite&quot;. Within &quot;rewrite&quot;, backslash-escaped digits (\1 to \9) can be used to insert text matching corresponding parenthesized group from the pattern. 
+</p>

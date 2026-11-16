@@ -32,12 +32,12 @@ description: "QuantLib::IMM – Main cycle of the International Money Market (a.
 <p>returns the <code>IMM</code> code for the given date (e.g. H3 for March 20th, 2013). </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>It raises an exception if the input date is not an <code>IMM</code> date</dl>
+<dd>It raises an exception if the input date is not an <code>IMM</code> date</dd></dl>
 <h3>static <code>Date</code> date (const std::string &amp; immCode, const <code>Date</code> &amp; referenceDate = <code>Date</code>()) [static]</h3>
 <p>returns the <code>IMM</code> date for the given <code>IMM</code> code (e.g. March 20th, 2013 for H3). </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>It raises an exception if the input string is not an <code>IMM</code> code</dl>
+<dd>It raises an exception if the input string is not an <code>IMM</code> code</dd></dl>
 <h3>static <code>Date</code> nextDate (const <code>Date</code> &amp; d = <code>Date</code>(), bool mainCycle = true) [static]</h3>
 <p>next <code>IMM</code> date following the given date </p>
 <p> returns the 1st delivery date for next contract listed in the International <code>Money</code> Market section of the Chicago Mercantile Exchange.</p>

@@ -10,7 +10,6 @@ description: "putwchar – write a wide character to standard output"
 <p>putwchar &#8211; write a wide character to standard output</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wint_t putwchar(wchar_t wc);</code></pre>
 <h2>Description</h2>
 <p>The <code>putwchar</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-putchar/">putchar</a></code>(3) function. It writes the wide character <i>wc</i> to <i>stdout</i>. If <i>ferror(stdout)</i> becomes true, it returns <code>WEOF</code>. If a wide character conversion error occurs, it sets <i>errno</i> to <code>EILSEQ</code> and returns <code>WEOF</code>. Otherwise, it returns <i>wc</i>. </p>

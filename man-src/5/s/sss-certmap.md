@@ -20,114 +20,114 @@ description: "sss-certmap – SSSD Certificate Matching and Mapping Rules"
 <p> The available options are: </p>
 <p> &lt;SUBJECT&gt;regular-expression</p>
 <dl>
-<dd>With this a part or the whole subject name of the certificate can be matched. For the matching POSIX Extended Regular Expression syntax is used, see <a href="/docs/linux/man/7-regex/">regex</a>(7) for details. </p>
+<dd>With this a part or the whole subject name of the certificate can be matched. For the matching POSIX Extended Regular Expression syntax is used, see <a href="/docs/linux/man/7-regex/">regex</a>(7) for details. </dd>
 <p> For the matching the subject name stored in the certificate in DER encoded ASN.1 is converted into a string according to RFC 4514. This means the most specific name component comes first. Please note that not all possible attribute names are covered by RFC 4514. The names included are &#8216;CN&#8217;, &#8216;L&#8217;, &#8216;ST&#8217;, &#8216;O&#8217;, &#8216;OU&#8217;, &#8216;C&#8217;, &#8216;STREET&#8217;, &#8216;DC&#8217; and &#8216;UID&#8217;. Other attribute names might be shown differently on different platform and by different tools. To avoid confusion those attribute names are best not used or covered by a suitable regular-expression. </p>
 <p> Example: &lt;SUBJECT&gt;.*,DC=MY,DC=DOMAIN</dl>
 <p> &lt;ISSUER&gt;regular-expression</p>
 <dl>
-<dd>With this a part or the whole issuer name of the certificate can be matched. All comments for &lt;SUBJECT&gt; apply her as well. </p>
+<dd>With this a part or the whole issuer name of the certificate can be matched. All comments for &lt;SUBJECT&gt; apply her as well. </dd>
 <p> Example: &lt;ISSUER&gt;^CN=My-CA,DC=MY,DC=DOMAIN$</dl>
 <p> &lt;KU&gt;key-usage</p>
 <dl>
-<dd>This option can be used to specify which key usage values the certificate should have. The following value can be used in a comma separate list: </p>
+<dd>This option can be used to specify which key usage values the certificate should have. The following value can be used in a comma separate list: </dd>
 <dl>
-<dd>&bull; digitalSignature</dl>
+<dd>&bull; digitalSignature</dd></dl>
 <dl>
-<dd>&bull; nonRepudiation</dl>
+<dd>&bull; nonRepudiation</dd></dl>
 <dl>
-<dd>&bull; keyEncipherment</dl>
+<dd>&bull; keyEncipherment</dd></dl>
 <dl>
-<dd>&bull; dataEncipherment</dl>
+<dd>&bull; dataEncipherment</dd></dl>
 <dl>
-<dd>&bull; keyAgreement</dl>
+<dd>&bull; keyAgreement</dd></dl>
 <dl>
-<dd>&bull; keyCertSign</dl>
+<dd>&bull; keyCertSign</dd></dl>
 <dl>
-<dd>&bull; cRLSign</dl>
+<dd>&bull; cRLSign</dd></dl>
 <dl>
-<dd>&bull; encipherOnly</dl>
+<dd>&bull; encipherOnly</dd></dl>
 <dl>
-<dd>&bull; decipherOnly</dl>
+<dd>&bull; decipherOnly</dd></dl>
 <p> A numerical value in the range of a 32bit unsigned integer can be used as well to cover special use cases. </p>
 <p> Example: &lt;KU&gt;digitalSignature,keyEncipherment</dl>
 <p> &lt;EKU&gt;extended-key-usage</p>
 <dl>
-<dd>This option can be used to specify which extended key usage the certificate should have. The following value can be used in a comma separated list: </p>
+<dd>This option can be used to specify which extended key usage the certificate should have. The following value can be used in a comma separated list: </dd>
 <dl>
-<dd>&bull; serverAuth</dl>
+<dd>&bull; serverAuth</dd></dl>
 <dl>
-<dd>&bull; clientAuth</dl>
+<dd>&bull; clientAuth</dd></dl>
 <dl>
-<dd>&bull; codeSigning</dl>
+<dd>&bull; codeSigning</dd></dl>
 <dl>
-<dd>&bull; emailProtection</dl>
+<dd>&bull; emailProtection</dd></dl>
 <dl>
-<dd>&bull; timeStamping</dl>
+<dd>&bull; timeStamping</dd></dl>
 <dl>
-<dd>&bull; OCSPSigning</dl>
+<dd>&bull; OCSPSigning</dd></dl>
 <dl>
-<dd>&bull; KPClientAuth</dl>
+<dd>&bull; KPClientAuth</dd></dl>
 <dl>
-<dd>&bull; pkinit</dl>
+<dd>&bull; pkinit</dd></dl>
 <dl>
-<dd>&bull; msScLogin</dl>
+<dd>&bull; msScLogin</dd></dl>
 <p> Extended key usages which are not listed above can be specified with their OID in dotted-decimal notation. </p>
 <p> Example: &lt;EKU&gt;clientAuth,1.3.6.1.5.2.3.4</dl>
 <p> &lt;SAN&gt;regular-expression</p>
 <dl>
-<dd>To be compatible with the usage of MIT Kerberos this option will match the Kerberos principals in the PKINIT or AD NT Principal SAN as &lt;SAN:Principal&gt; does. </p>
+<dd>To be compatible with the usage of MIT Kerberos this option will match the Kerberos principals in the PKINIT or AD NT Principal SAN as &lt;SAN:Principal&gt; does. </dd>
 <p> Example: &lt;SAN&gt;.*@MY\.REALM</dl>
 <p> &lt;SAN:Principal&gt;regular-expression</p>
 <dl>
-<dd>Match the Kerberos principals in the PKINIT or AD NT Principal SAN. </p>
+<dd>Match the Kerberos principals in the PKINIT or AD NT Principal SAN. </dd>
 <p> Example: &lt;SAN:Principal&gt;.*@MY\.REALM</dl>
 <p> &lt;SAN:ntPrincipalName&gt;regular-expression</p>
 <dl>
-<dd>Match the Kerberos principals from the AD NT Principal SAN. </p>
+<dd>Match the Kerberos principals from the AD NT Principal SAN. </dd>
 <p> Example: &lt;SAN:ntPrincipalName&gt;.*@MY.AD.REALM</dl>
 <p> &lt;SAN:pkinit&gt;regular-expression</p>
 <dl>
-<dd>Match the Kerberos principals from the PKINIT SAN. </p>
+<dd>Match the Kerberos principals from the PKINIT SAN. </dd>
 <p> Example: &lt;SAN:ntPrincipalName&gt;.*@MY\.PKINIT\.REALM</dl>
 <p> &lt;SAN:dotted-decimal-oid&gt;regular-expression</p>
 <dl>
-<dd>Take the value of the otherName SAN component given by the OID in dotted-decimal notation, interpret it as string and try to match it against the regular expression. </p>
+<dd>Take the value of the otherName SAN component given by the OID in dotted-decimal notation, interpret it as string and try to match it against the regular expression. </dd>
 <p> Example: &lt;SAN:1.2.3.4&gt;test</dl>
 <p> &lt;SAN:otherName&gt;base64-string</p>
 <dl>
-<dd>Do a binary match with the base64 encoded blob against all otherName SAN components. With this option it is possible to match against custom otherName components with special encodings which could not be treated as strings. </p>
+<dd>Do a binary match with the base64 encoded blob against all otherName SAN components. With this option it is possible to match against custom otherName components with special encodings which could not be treated as strings. </dd>
 <p> Example: &lt;SAN:otherName&gt;MTIz</dl>
 <p> &lt;SAN:rfc822Name&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the rfc822Name SAN. </p>
+<dd>Match the value of the rfc822Name SAN. </dd>
 <p> Example: &lt;SAN:rfc822Name&gt;.*@email\.domain</dl>
 <p> &lt;SAN:dNSName&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the dNSName SAN. </p>
+<dd>Match the value of the dNSName SAN. </dd>
 <p> Example: &lt;SAN:dNSName&gt;.*\.my\.dns\.domain</dl>
 <p> &lt;SAN:x400Address&gt;base64-string</p>
 <dl>
-<dd>Binary match the value of the x400Address SAN. </p>
+<dd>Binary match the value of the x400Address SAN. </dd>
 <p> Example: &lt;SAN:x400Address&gt;MTIz</dl>
 <p> &lt;SAN:directoryName&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the directoryName SAN. The same comments as given for &lt;ISSUER&gt; and &lt;SUBJECT&gt; apply here as well. </p>
+<dd>Match the value of the directoryName SAN. The same comments as given for &lt;ISSUER&gt; and &lt;SUBJECT&gt; apply here as well. </dd>
 <p> Example: &lt;SAN:directoryName&gt;.*,DC=com</dl>
 <p> &lt;SAN:ediPartyName&gt;base64-string</p>
 <dl>
-<dd>Binary match the value of the ediPartyName SAN. </p>
+<dd>Binary match the value of the ediPartyName SAN. </dd>
 <p> Example: &lt;SAN:ediPartyName&gt;MTIz</dl>
 <p> &lt;SAN:uniformResourceIdentifier&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the uniformResourceIdentifier SAN. </p>
+<dd>Match the value of the uniformResourceIdentifier SAN. </dd>
 <p> Example: &lt;SAN:uniformResourceIdentifier&gt;URN:.*</dl>
 <p> &lt;SAN:iPAddress&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the iPAddress SAN. </p>
+<dd>Match the value of the iPAddress SAN. </dd>
 <p> Example: &lt;SAN:iPAddress&gt;192\.168\..*</dl>
 <p> &lt;SAN:registeredID&gt;regular-expression</p>
 <dl>
-<dd>Match the value of the registeredID SAN as dotted-decimal string. </p>
+<dd>Match the value of the registeredID SAN as dotted-decimal string. </dd>
 <p> Example: &lt;SAN:registeredID&gt;1\.2\.3\..*</dl>
 <h3>Mapping Rule</h3>
 <p>The mapping rule is used to associate a certificate with one or more accounts. A Smartcard with the certificate and the matching private key can then be used to authenticate as one of those accounts. </p>
@@ -137,14 +137,14 @@ description: "sss-certmap – SSSD Certificate Matching and Mapping Rules"
 <p> The templates to add certificate data to the search filter are based on Python-style formatting strings. They consists of a keyword in curly braces with an optional sub-component specifier separated by a &#8216;.&#8217; or an optional conversion/formatting option separated by a &#8216;!&#8217;. Allowed values are: </p>
 <p> {issuer_dn[!((ad|ad_x500)|ad_ldap|nss_x500|(nss|nss_ldap))]}</p>
 <dl>
-<dd>This template will add the full issuer DN converted to a string according to RFC 4514. If X.500 ordering (most specific RDN comes last) an option with the &#8216;_x500&#8217; prefix should be used. </p>
+<dd>This template will add the full issuer DN converted to a string according to RFC 4514. If X.500 ordering (most specific RDN comes last) an option with the &#8216;_x500&#8217; prefix should be used. </dd>
 <p> The conversion options starting with &#8216;ad_&#8217; will use attribute names as used by AD, e.g. &#8216;S&#8217; instead of &#8216;ST&#8217;. </p>
 <p> The conversion options starting with &#8216;nss_&#8217; will use attribute names as used by NSS. </p>
 <p> The default conversion option is &#8216;nss&#8217;, i.e. attribute names according to NSS and LDAP/RFC 4514 ordering. </p>
 <p> Example: (ipacertmapdata=X509:&lt;I&gt;{issuer_dn!ad}&lt;S&gt;{subject_dn!ad})</dl>
 <p> {subject_dn[!((ad|ad_x500)|ad_ldap|nss_x500|(nss|nss_ldap))]}</p>
 <dl>
-<dd>This template will add the full subject DN converted to string according to RFC 4514. If X.500 ordering (most specific RDN comes last) an option with the &#8216;_x500&#8217; prefix should be used. </p>
+<dd>This template will add the full subject DN converted to string according to RFC 4514. If X.500 ordering (most specific RDN comes last) an option with the &#8216;_x500&#8217; prefix should be used. </dd>
 <p> The conversion options starting with &#8216;ad_&#8217; will use attribute names as used by AD, e.g. &#8216;S&#8217; instead of &#8216;ST&#8217;. </p>
 <p> The conversion options starting with &#8216;nss_&#8217; will use attribute names as used by NSS. </p>
 <p> The default conversion option is &#8216;nss&#8217;, i.e. attribute names according to NSS and LDAP/RFC 4514 ordering. </p>
@@ -152,3 +152,4 @@ description: "sss-certmap – SSSD Certificate Matching and Mapping Rules"
 <p> {cert[!(bin|base64)]}</p>
 <dl>
 <dd>This template will add the whole DER encoded certificate as a string to the search filter. Depending on the conversion option the binary certificate is either converted to an escaped hex sequence &#8216;
+</dd></dl>

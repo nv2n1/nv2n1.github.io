@@ -24,7 +24,7 @@ description: "QuantLib::CubicBSplinesFitting – CubicSpline B-splines fitting m
 <p> McCulloch, J. 1975, &#8216;The tax adjusted yield curve.&#8217; Journal of Finance, XXX811-30 </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>FittedBondCurve.cpp</code>. </p>
 <h2>Author</h2>

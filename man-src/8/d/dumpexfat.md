@@ -15,14 +15,14 @@ description: "dumpexfat – dump exFAT file system"
 <h2>Options</h2>
 <p>Command line options available:</p>
 <dl>
-<dt><code>-s</code></p>
-<dd>Dump only info from super block. May be useful for heavily corrupted file systems.</p>
-<dt><code>-u</code></p>
-<dd>Dump ranges of used sectors starting from 0 and separated with spaces. May be useful for backup tools.</p>
-<dt><code>-f file</code></p>
-<dd>Print out a list of fragments that compose the given file. Each fragment is printed on its own line, as the start offset (in bytes) into the file system, and the length (in bytes).</p>
-<dt><code>-V</code></p>
-<dd>Print version and copyright. </p>
+<dt><code>-s</code></dt>
+<dd>Dump only info from super block. May be useful for heavily corrupted file systems.</dd>
+<dt><code>-u</code></dt>
+<dd>Dump ranges of used sectors starting from 0 and separated with spaces. May be useful for backup tools.</dd>
+<dt><code>-f file</code></dt>
+<dd>Print out a list of fragments that compose the given file. Each fragment is printed on its own line, as the start offset (in bytes) into the file system, and the length (in bytes).</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <p>Zero is returned on success. Any other code means an error.</p>

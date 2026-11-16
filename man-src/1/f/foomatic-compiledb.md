@@ -15,14 +15,14 @@ description: "foomatic-compiledb – Compile the Foomatic printer/driver databas
 <p> <code>foomatic-compiledb</code> generates all PPD files or Foomatic combo XML files for all possible printer/driver combos, or only for a selected range of drivers. It generally should not be necessary except for people who want to generate a set of Foomatic data files for distribution. For configuring single printers <code><a href="/docs/linux/man/1-foomatic-ppdfile/">foomatic-ppdfile</a>(1)</code> and especially <code><a href="/docs/linux/man/1-foomatic-configure/">foomatic-configure</a>(1)</code> will automagically compute just what they need. </p>
 <h3>Options</h3>
 <dl>
-<dt><code>-t</code><i>&nbsp;<wbr>type</i></p>
-<dd> Output file type, either ppd or xml. </p>
-<dt><code>-f</code></p>
-<dd> Force: Write into the destination directory even if it already exists. </p>
-<dt><code>-j</code><i>&nbsp;<wbr>n</i></p>
-<dd> n = number of work processes to run </p>
-<dt><i>driver &#8230; </i></p>
-<dd> only generate data files for these driver(s) </p>
+<dt><code>-t</code><i>&nbsp;<wbr>type</i></dt>
+<dd> Output file type, either ppd or xml. </dd>
+<dt><code>-f</code></dt>
+<dd> Force: Write into the destination directory even if it already exists. </dd>
+<dt><code>-j</code><i>&nbsp;<wbr>n</i></dt>
+<dd> n = number of work processes to run </dd>
+<dt><i>driver &#8230; </i></dt>
+<dd> only generate data files for these driver(s) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-foomatic-ppdfile/">foomatic-ppdfile</a></i>(1),<i><a href="/docs/linux/man/1-foomatic-configure/">foomatic-configure</a></i>(1) </p>

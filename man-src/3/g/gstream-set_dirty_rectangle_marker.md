@@ -17,14 +17,11 @@ description: "set_dirty_rectangle_marker"
 <p> The provided function will be given the parameters: x and y coordinates, and width and height of the rectangle, in that order. So if you&#8217;re using DRS, you could call this function like this (since that function takes these four parameters x, y, width, height directly): </p>
 <pre>
    set_dirty_rectangle_marker(DRS_add_rectangle);  
-   
 </pre>
 <p> The marker type function is typedef&#8217;ed in the class gbuf, which may come in handy in some situations: </p>
 <pre><code>
 gbuf::dirty_rectangle_marker tmp_drm;
-
 //...
-
 tmp_drm = gs1.get_dirty_rectangle_marker();
 gs1.set_dirty_rectangle_marker(gs2.get_dirty_rectangle_marker());
 gs2.set_dirty_rectangle_marker(tmp_drm);

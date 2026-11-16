@@ -11,7 +11,6 @@ natgrid_params - This document briefly describes all the internal parameters of 
 <h2>Description</h2><pre><code>Each entry below includes the name of a parameter, its Fortran type
 (use the obvious equivalents for C),
 its default value, and a short description of the parameter.
-
 'ADF'   -   Integer   -    0
 Flags if the data file of algorithmic information for display with
 nnalg is produced - see parameter alg (0=no; 1=yes).
@@ -69,7 +68,6 @@ in the most recent interpolation call.  For retrieval only.
 Contains the scale value for automatic scaling of Z input values
 in the most recent interpolation call.  For retrieval only.</code></pre>
 <h2>See Also</h2>c_natgridd, c_natgrids, c_nngetaspectd, c_nngetaspects, c_nngetc, c_nngeti, c_nngetr, c_nngetrd, c_nngetsloped, c_nngetslopes, c_nnpntd, c_nnpntend, c_nnpntendd, c_nnpntinitd, c_nnpntinits, c_nnpnts, c_nnsetc, c_nnseti, c_nnsetr, c_nnsetrd, natgrid, natgrid_params, natgridd, natgrids, nngetaspectd, nngetaspects, nngetc, nngeti, nngetr, nngetrd, nngetslopes, nngetslpped, nnpntd, nnpntend, nnpntendd, nnpntinitd, nnpntinits, nnpnts, nnsetc, nnseti, nnsetr, nnsetrd. <pre><code>Complete documentation for Natgrid is available at URL
-
 http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html</code></pre>
 <h2>Copyright</h2>Copyright (C) 2000 
  University Corporation for Atmospheric Research 

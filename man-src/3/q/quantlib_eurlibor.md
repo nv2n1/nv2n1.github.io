@@ -24,6 +24,6 @@ description: "QuantLib::EURLibor – base class for all BBA EUR LIBOR indexes bu
 <p> See &lt;<a rel="nofollow" href="http://www.bba.org.uk/bba/jsp/polopoly.jsp?d=225">http://www.bba.org.uk/bba/jsp/polopoly.jsp?d=225</a>&amp;a=1414&gt;. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This is the rate fixed in London by BBA. Use <code>Euribor</code> if you&#8217;re interested in the fixing by the ECB.</dl>
+<dd>This is the rate fixed in London by BBA. Use <code>Euribor</code> if you&#8217;re interested in the fixing by the ECB.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

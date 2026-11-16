@@ -33,17 +33,17 @@ int
 <code>Tcl_DictObjRemoveKeyList</code>(<i>interp, dictPtr, keyc, keyv</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) If an error occurs while converting an object to be a dictionary object, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</p>
-<dd>Tcl_Obj <i>*dictPtr</i> (in/out) Points to the dictionary object to be manipulated. If <i>dictPtr</i> does not already point to a dictionary object, an attempt will be made to convert it to one.</p>
-<dd>Tcl_Obj <i>*keyPtr</i> (in) Points to the key for the key/value pair being manipulated within the dictionary object.</p>
-<dd>Tcl_Obj <i>**keyPtrPtr</i> (out) Points to a variable that will have the key from a key/value pair placed within it. May be NULL to indicate that the caller is not interested in the key.</p>
-<dd>Tcl_Obj <i>*valuePtr</i> (in) Points to the value for the key/value pair being manipulate within the dictionary object (or sub-object, in the case of <code>Tcl_DictObjPutKeyList</code>.)</p>
-<dd>Tcl_Obj <i>**valuePtrPtr</i> (out) Points to a variable that will have the value from a key/value pair placed within it. For <code>Tcl_DictObjFirst</code> and <code>Tcl_DictObjNext</code>, this may be NULL to indicate that the caller is not interested in the value.</p>
-<dd>int <i>*sizePtr</i> (out) Points to a variable that will have the number of key/value pairs contained within the dictionary placed within it.</p>
-<dd>Tcl_DictSearch <i>*searchPtr</i> (in/out) Pointer to record to use to keep track of progress in enumerating all key/value pairs in a dictionary. The contents of the record will be initialized by the call to <code>Tcl_DictObjFirst</code>. If the enumerating is to be terminated before all values in the dictionary have been returned, the search record <i>must</i> be passed to <code>Tcl_DictObjDone</code> to enable the internal locks to be released.</p>
-<dd>int <i>*donePtr</i> (out) Points to a variable that will have a non-zero value written into it when the enumeration of the key/value pairs in a dictionary has completed, and a zero otherwise.</p>
-<dd>int <i>keyc</i> (in) Indicates the number of keys that will be supplied in the <i>keyv</i> array.</p>
-<dd>Tcl_Obj *const <i>*keyv</i> (in) Array of <i>keyc</i> pointers to objects that <code>Tcl_DictObjPutKeyList</code> and <code>Tcl_DictObjRemoveKeyList</code> will use to locate the key/value pair to manipulate within the sub-dictionaries of the main dictionary object passed to them. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) If an error occurs while converting an object to be a dictionary object, an error message is left in the interpreter&#8217;s result object unless <i>interp</i> is NULL.</dd>
+<dd>Tcl_Obj <i>*dictPtr</i> (in/out) Points to the dictionary object to be manipulated. If <i>dictPtr</i> does not already point to a dictionary object, an attempt will be made to convert it to one.</dd>
+<dd>Tcl_Obj <i>*keyPtr</i> (in) Points to the key for the key/value pair being manipulated within the dictionary object.</dd>
+<dd>Tcl_Obj <i>**keyPtrPtr</i> (out) Points to a variable that will have the key from a key/value pair placed within it. May be NULL to indicate that the caller is not interested in the key.</dd>
+<dd>Tcl_Obj <i>*valuePtr</i> (in) Points to the value for the key/value pair being manipulate within the dictionary object (or sub-object, in the case of <code>Tcl_DictObjPutKeyList</code>.)</dd>
+<dd>Tcl_Obj <i>**valuePtrPtr</i> (out) Points to a variable that will have the value from a key/value pair placed within it. For <code>Tcl_DictObjFirst</code> and <code>Tcl_DictObjNext</code>, this may be NULL to indicate that the caller is not interested in the value.</dd>
+<dd>int <i>*sizePtr</i> (out) Points to a variable that will have the number of key/value pairs contained within the dictionary placed within it.</dd>
+<dd>Tcl_DictSearch <i>*searchPtr</i> (in/out) Pointer to record to use to keep track of progress in enumerating all key/value pairs in a dictionary. The contents of the record will be initialized by the call to <code>Tcl_DictObjFirst</code>. If the enumerating is to be terminated before all values in the dictionary have been returned, the search record <i>must</i> be passed to <code>Tcl_DictObjDone</code> to enable the internal locks to be released.</dd>
+<dd>int <i>*donePtr</i> (out) Points to a variable that will have a non-zero value written into it when the enumeration of the key/value pairs in a dictionary has completed, and a zero otherwise.</dd>
+<dd>int <i>keyc</i> (in) Indicates the number of keys that will be supplied in the <i>keyv</i> array.</dd>
+<dd>Tcl_Obj *const <i>*keyv</i> (in) Array of <i>keyc</i> pointers to objects that <code>Tcl_DictObjPutKeyList</code> and <code>Tcl_DictObjRemoveKeyList</code> will use to locate the key/value pair to manipulate within the sub-dictionaries of the main dictionary object passed to them. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl dictionary objects have an internal representation that supports efficient mapping from keys to values and which guarantees that the particular ordering of keys within the dictionary remains the same modulo any keys being deleted (which removes them from the order) or added (which adds them to the end of the order). If reinterpreted as a list, the values at the even-valued indices in the list will be the keys of the dictionary, and each will be followed (in the odd-valued index) by the value associated with that key. </p>
@@ -91,7 +91,7 @@ for (; !done ; <code>Tcl_DictObjNext</code>(&amp;search, &amp;key, &amp;value, &
 <code>Tcl_DictObjDone</code>(&amp;search);
 Tcl_SetObjResult(interp, Tcl_NewBooleanObj(!done));
 return TCL_OK;</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>Tcl_NewObj, Tcl_DecrRefCount, Tcl_IncrRefCount, Tcl_InitObjHashTable</p>
 <h2>Keywords</h2>

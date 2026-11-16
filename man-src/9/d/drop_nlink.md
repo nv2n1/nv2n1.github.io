@@ -15,7 +15,7 @@ drop_nlink - directly drop an inode's link count
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode</dl>
+<dl><dd></dd><dd>inode</dd></dl>
 
 <h2>Description</h2>
 

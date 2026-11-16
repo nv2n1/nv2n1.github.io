@@ -18,63 +18,53 @@ description: "condor_tail Display the last contents of a running job’s standar
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit.</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information and exit.</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number.</dd>
+</dl>
 <p> <code>-name </code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Query the <i>condor_schedd</i> daemon identified with <i>name</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Query the <i>condor_schedd</i> daemon identified with <i>name</i> .</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Display extra debugging information.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display extra debugging information.</dd>
+</dl>
 <p> <code>-maxbytes </code> <i>numbytes</i></p>
 <dl>
 <dt>
-<dd> Limits the maximum number of bytes transferred per tail access. If not specified, the maximum number of bytes is 1024.</p>
-<dt>
-<dd></dl>
+</dt><dd> Limits the maximum number of bytes transferred per tail access. If not specified, the maximum number of bytes is 1024.</dd>
+</dl>
 <p> <code>-auto-retry</code></p>
 <dl>
 <dt>
-<dd> Retry the tail of the file(s) every 2 seconds, if the job is not yet running.</p>
-<dt>
-<dd></dl>
+</dt><dd> Retry the tail of the file(s) every 2 seconds, if the job is not yet running.</dd>
+</dl>
 <p> <code>-follow</code></p>
 <dl>
 <dt>
-<dd> Repetitively tail the file(s), until interrupted.</p>
-<dt>
-<dd></dl>
+</dt><dd> Repetitively tail the file(s), until interrupted.</dd>
+</dl>
 <p> <code>-no-stdout</code></p>
 <dl>
 <dt>
-<dd> Do not tail stdout .</p>
-<dt>
-<dd></dl>
+</dt><dd> Do not tail stdout .</dd>
+</dl>
 <p> <code>-stderr</code></p>
 <dl>
 <dt>
-<dd> Tail stderr instead of stdout .</p>
-<dt>
-<dd></dl>
+</dt><dd> Tail stderr instead of stdout .</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> The exit status of <i>condor_tail</i> is zero on success. </p>
 <h2>Author</h2>

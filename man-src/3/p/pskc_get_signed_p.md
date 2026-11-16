@@ -13,8 +13,8 @@ description: "pskc_get_signed_p – API function"
 int pskc_get_signed_p(pskc_t *container);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Check whether the container is signed or not (note that it does not validate the signature, merely checks whether there is one).</p>
 <h2>Returns</h2>

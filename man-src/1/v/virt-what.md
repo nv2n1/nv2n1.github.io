@@ -17,97 +17,97 @@ description: "virt-what – detect if we are running in a virtual machine"
 <p> If nothing is printed and the script exits with code 0 (no error), then it can mean <i>either</i> that the program is running on bare-metal <i>or</i> the program is running inside a type of virtual machine which we don&#8217;t know about or cannot detect.</p>
 <h2>FACTS</h2>
 <dl>
-<dt><code>docker</code></p>
-<dd> This is a Docker container. </p>
+<dt><code>docker</code></dt>
+<dd> This is a Docker container. </dd>
 <p> Status: confirmed by Charles Nguyen</p>
-<dt><code>hyperv</code></p>
-<dd> This is Microsoft Hyper-V hypervisor. </p>
+<dt><code>hyperv</code></dt>
+<dd> This is Microsoft Hyper-V hypervisor. </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>ibm_power-kvm</code></p>
-<dd> This is an <font SIZE="-1">IBM POWER KVM</font> guest. </p>
+<dt><code>ibm_power-kvm</code></dt>
+<dd> This is an <font SIZE="-1">IBM POWER KVM</font> guest. </dd>
 <p> Status: contributed by Adrian Likins.</p>
-<dt><code>ibm_power-lpar_shared</code></p>
+<dt><code>ibm_power-lpar_shared</code></dt>
 <dd>
-<dt><code>ibm_power-lpar_dedicated</code></p>
-<dd> This is an <font SIZE="-1">IBM POWER LPAR </font>(hardware partition) in either shared or dedicated mode. </p>
+</dd><dt><code>ibm_power-lpar_dedicated</code></dt>
+<dd> This is an <font SIZE="-1">IBM POWER LPAR </font>(hardware partition) in either shared or dedicated mode. </dd>
 <p> Status: contributed by Adrian Likins.</p>
-<dt><code>ibm_systemz</code></p>
-<dd> This is an <font SIZE="-1">IBM</font> SystemZ (or other S/390) hardware partitioning system. Additional facts listed below may also be printed.</p>
-<dt><code>ibm_systemz-direct</code></p>
-<dd> This is Linux running directly on a <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </p>
+<dt><code>ibm_systemz</code></dt>
+<dd> This is an <font SIZE="-1">IBM</font> SystemZ (or other S/390) hardware partitioning system. Additional facts listed below may also be printed.</dd>
+<dt><code>ibm_systemz-direct</code></dt>
+<dd> This is Linux running directly on a <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </dd>
 <p> This is expected to be a highly unusual configuration &#8211; if you see this result you should treat it with suspicion. </p>
 <p> Status: not confirmed</p>
-<dt><code>ibm_systemz-lpar</code></p>
-<dd> This is Linux running directly on an <font SIZE="-1">LPAR</font> on an <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </p>
+<dt><code>ibm_systemz-lpar</code></dt>
+<dd> This is Linux running directly on an <font SIZE="-1">LPAR</font> on an <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </dd>
 <p> Status: not confirmed</p>
-<dt><code>ibm_systemz-zvm</code></p>
-<dd> This is a z/VM guest running in an <font SIZE="-1">LPAR</font> on an <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </p>
+<dt><code>ibm_systemz-zvm</code></dt>
+<dd> This is a z/VM guest running in an <font SIZE="-1">LPAR</font> on an <font SIZE="-1">IBM</font> SystemZ hardware partitioning system. </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font> using a Fedora guest running in z/VM</p>
-<dt><code>linux_vserver</code></p>
-<dd> This is printed for backwards compatibility with older virt-what which could not distinguish between a Linux VServer container guest and host.</p>
-<dt><code>linux_vserver-guest</code></p>
-<dd> This process is running in a Linux VServer container. </p>
+<dt><code>linux_vserver</code></dt>
+<dd> This is printed for backwards compatibility with older virt-what which could not distinguish between a Linux VServer container guest and host.</dd>
+<dt><code>linux_vserver-guest</code></dt>
+<dd> This process is running in a Linux VServer container. </dd>
 <p> Status: contributed by BarXX Metin</p>
-<dt><code>linux_vserver-host</code></p>
-<dd> This process is running as the Linux VServer host (VxID 0). </p>
+<dt><code>linux_vserver-host</code></dt>
+<dd> This process is running as the Linux VServer host (VxID 0). </dd>
 <p> Status: contributed by BarXX Metin and Elan Ruusama.e</p>
-<dt><code>lxc</code></p>
-<dd> This process is running in a Linux <font SIZE="-1">LXC</font> container. </p>
+<dt><code>lxc</code></dt>
+<dd> This process is running in a Linux <font SIZE="-1">LXC</font> container. </dd>
 <p> Status: contributed by Marc Fournier</p>
-<dt><code>kvm</code></p>
-<dd> This guest is running on the <font SIZE="-1">KVM</font> hypervisor using hardware acceleration. </p>
+<dt><code>kvm</code></dt>
+<dd> This guest is running on the <font SIZE="-1">KVM</font> hypervisor using hardware acceleration. </dd>
 <p> Note that if the hypervisor is using software acceleration you should <i>not</i> see this, but should see the <tt>&quot;qemu&quot;</tt> fact instead. </p>
 <p> Status: confirmed by <font SIZE="-1">RWMJ.</font></p>
-<dt><code>lkvm</code></p>
-<dd> This guest is running on the <font SIZE="-1">KVM</font> hypervisor using hardware acceleration, and the userspace component of the hypervisor is lkvm (a.k.a kvmtool). </p>
+<dt><code>lkvm</code></dt>
+<dd> This guest is running on the <font SIZE="-1">KVM</font> hypervisor using hardware acceleration, and the userspace component of the hypervisor is lkvm (a.k.a kvmtool). </dd>
 <p> Status: contributed by Andrew Jones</p>
-<dt><code>openvz</code></p>
-<dd> The guest appears to be running inside an OpenVZ or Virtuozzo container. </p>
+<dt><code>openvz</code></dt>
+<dd> The guest appears to be running inside an OpenVZ or Virtuozzo container. </dd>
 <p> Status: contributed by Evgeniy Sokolov</p>
-<dt><code>ovirt</code></p>
-<dd> The guest is running on an oVirt node. (See also <tt>&quot;rhev&quot;</tt> below). </p>
+<dt><code>ovirt</code></dt>
+<dd> The guest is running on an oVirt node. (See also <tt>&quot;rhev&quot;</tt> below). </dd>
 <p> Status: contributed by <font SIZE="-1">RWMJ,</font> not confirmed</p>
-<dt><code>parallels</code></p>
-<dd> The guest is running inside Parallels Virtual Platform (Parallels Desktop, Parallels Server). </p>
+<dt><code>parallels</code></dt>
+<dd> The guest is running inside Parallels Virtual Platform (Parallels Desktop, Parallels Server). </dd>
 <p> Status: contributed by Justin Clift</p>
-<dt><code>powervm_lx86</code></p>
-<dd> The guest is running inside <font SIZE="-1">IBM</font> PowerVM Lx86 Linux/x86 emulator. </p>
+<dt><code>powervm_lx86</code></dt>
+<dd> The guest is running inside <font SIZE="-1">IBM</font> PowerVM Lx86 Linux/x86 emulator. </dd>
 <p> Status: data originally supplied by Jeffrey Scheel, confirmed by Yufang Zhang and <font SIZE="-1">RWMJ</font></p>
-<dt><code>qemu</code></p>
-<dd> This is <font SIZE="-1">QEMU</font> hypervisor using software emulation. </p>
+<dt><code>qemu</code></dt>
+<dd> This is <font SIZE="-1">QEMU</font> hypervisor using software emulation. </dd>
 <p> Note that for <font SIZE="-1">KVM </font>(hardware accelerated) guests you should <i>not</i> see this. </p>
 <p> Status: confirmed by <font SIZE="-1">RWMJ.</font></p>
-<dt><code>rhev</code></p>
-<dd> The guest is running on a Red Hat Enterprise Virtualization (<font SIZE="-1">RHEV</font>) node. </p>
+<dt><code>rhev</code></dt>
+<dd> The guest is running on a Red Hat Enterprise Virtualization (<font SIZE="-1">RHEV</font>) node. </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>uml</code></p>
-<dd> This is a User-Mode Linux (<font SIZE="-1">UML</font>) guest. </p>
+<dt><code>uml</code></dt>
+<dd> This is a User-Mode Linux (<font SIZE="-1">UML</font>) guest. </dd>
 <p> Status: contributed by Laurent Leonard</p>
-<dt><code>virt</code></p>
-<dd> Some sort of virtualization appears to be present, but we are not sure what it is. In some very rare corner cases where we know that virtualization is hard to detect, we will try a timing attack to see if certain machine instructions are running much more slowly than they should be, which would indicate virtualization. In this case, the generic fact <tt>&quot;virt&quot;</tt> is printed.</p>
-<dt><code>virtage</code></p>
-<dd> This is Hitachi Virtualization Manager (<font SIZE="-1">HVM</font>) Virtage hardware partitioning system. </p>
+<dt><code>virt</code></dt>
+<dd> Some sort of virtualization appears to be present, but we are not sure what it is. In some very rare corner cases where we know that virtualization is hard to detect, we will try a timing attack to see if certain machine instructions are running much more slowly than they should be, which would indicate virtualization. In this case, the generic fact <tt>&quot;virt&quot;</tt> is printed.</dd>
+<dt><code>virtage</code></dt>
+<dd> This is Hitachi Virtualization Manager (<font SIZE="-1">HVM</font>) Virtage hardware partitioning system. </dd>
 <p> Status: data supplied by Bhavna Sarathy, not confirmed</p>
-<dt><code>virtualbox</code></p>
-<dd> This is a VirtualBox guest. </p>
+<dt><code>virtualbox</code></dt>
+<dd> This is a VirtualBox guest. </dd>
 <p> Status: contributed by Laurent Leonard</p>
-<dt><code>virtualpc</code></p>
-<dd> The guest appears to be running on Microsoft VirtualPC. </p>
+<dt><code>virtualpc</code></dt>
+<dd> The guest appears to be running on Microsoft VirtualPC. </dd>
 <p> Status: not confirmed</p>
-<dt><code>vmware</code></p>
-<dd> The guest appears to be running on VMware hypervisor. </p>
+<dt><code>vmware</code></dt>
+<dd> The guest appears to be running on VMware hypervisor. </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>xen</code></p>
-<dd> The guest appears to be running on Xen hypervisor. </p>
+<dt><code>xen</code></dt>
+<dd> The guest appears to be running on Xen hypervisor. </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>xen-dom0</code></p>
-<dd> This is the Xen dom0 (privileged domain). </p>
+<dt><code>xen-dom0</code></dt>
+<dd> This is the Xen dom0 (privileged domain). </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>xen-domU</code></p>
-<dd> This is a Xen domU (paravirtualized guest domain). </p>
+<dt><code>xen-domU</code></dt>
+<dd> This is a Xen domU (paravirtualized guest domain). </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></p>
-<dt><code>xen-hvm</code></p>
-<dd> This is a Xen guest fully virtualized (<font SIZE="-1">HVM</font>). </p>
+<dt><code>xen-hvm</code></dt>
+<dd> This is a Xen guest fully virtualized (<font SIZE="-1">HVM</font>). </dd>
 <p> Status: confirmed by <font SIZE="-1">RWMJ</font></dl>
 <h2>EXIT STATUS</h2>
 <p> Programs that use or wrap <tt>&quot;virt-what&quot;</tt> should check that the exit status is 0 before they attempt to parse the output of the command. </p>
@@ -125,12 +125,12 @@ description: "virt-what – detect if we are running in a virtual machine"
 <p> Most of the time, using this program is the <i>wrong</i> thing to do. Instead you should detect the specific features you actually want to use. (As an example, if you wanted to issue Xen hypervisor commands you would look for the <tt>&quot;/proc/xen/privcmd&quot;</tt> file). </p>
 <p> However people keep asking for this, so we provide it. There are a few legitimate uses:</p>
 <dl>
-<dt>Bug reporting tool</p>
-<dd> If you think that virtualization could affect how your program runs, then you might use <tt>&quot;virt-what&quot;</tt> to report this in a bug reporting tool.</p>
-<dt>Status display and monitoring tools</p>
-<dd> You might include this information in status and monitoring programs.</p>
-<dt>System tuning (sometimes)</p>
-<dd> You might use this program to tune an operating system so it runs better as a virtual machine of a particular hypervisor. However if installing paravirtualized drivers, it&#8217;s better to check for the specific features your drivers need (eg. for the presence of <font SIZE="-1">PCI</font> devices).</dl>
+<dt>Bug reporting tool</dt>
+<dd> If you think that virtualization could affect how your program runs, then you might use <tt>&quot;virt-what&quot;</tt> to report this in a bug reporting tool.</dd>
+<dt>Status display and monitoring tools</dt>
+<dd> You might include this information in status and monitoring programs.</dd>
+<dt>System tuning (sometimes)</dt>
+<dd> You might use this program to tune an operating system so it runs better as a virtual machine of a particular hypervisor. However if installing paravirtualized drivers, it&#8217;s better to check for the specific features your drivers need (eg. for the presence of <font SIZE="-1">PCI</font> devices).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/virt-what/">http://people.redhat.com/~rjones/virt-what/</a>&gt;, &lt;<a rel="nofollow" href="http://www.vmware.com/">http://www.vmware.com/</a>&gt;, &lt;<a rel="nofollow" href="http://www.microsoft.com/windows/products/winfamily/virtualpc">http://www.microsoft.com/windows/products/winfamily/virtualpc</a>&gt;, &lt;<a rel="nofollow" href="http://xensource.com/">http://xensource.com/</a>&gt;, &lt;<a rel="nofollow" href="http://bellard.org/qemu/">http://bellard.org/qemu/</a>&gt;, &lt;<a rel="nofollow" href="http://kvm.qumranet.com/">http://kvm.qumranet.com/</a>&gt;, &lt;<a rel="nofollow" href="http://openvz.org/">http://openvz.org/</a>&gt;</p>
 <h2>AUTHORS</h2>
@@ -144,23 +144,23 @@ description: "virt-what – detect if we are running in a virtual machine"
 <p> Bugs can be viewed on the Red Hat Bugzilla page: &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt;. </p>
 <p> If you find a bug in virt-what, please follow these steps to report it:</p>
 <dl>
-<dt>1. Check for existing bug reports</p>
-<dd> Go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt; and search for similar bugs. Someone may already have reported the same bug, and they may even have fixed it.</p>
-<dt>2. Capture debug and error messages</p>
-<dd> Run </p>
+<dt>1. Check for existing bug reports</dt>
+<dd> Go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt; and search for similar bugs. Someone may already have reported the same bug, and they may even have fixed it.</dd>
+<dt>2. Capture debug and error messages</dt>
+<dd> Run </dd>
 <pre>
  virt-what &gt; virt-what.log 2&gt;&amp;1
 </pre>
 <p> and keep <i>virt-what.log</i>. It may contain error messages which you should submit with your bug report.</p>
-<dt>3. Get version of virt-what.</p>
-<dd> Run </p>
+<dt>3. Get version of virt-what.</dt>
+<dd> Run </dd>
 <pre>
  virt-what --version
 </pre>
-<dt>4. Submit a bug report.</p>
-<dd> Go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt; and enter a new bug. Please describe the problem in as much detail as possible. </p>
+<dt>4. Submit a bug report.</dt>
+<dd> Go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt; and enter a new bug. Please describe the problem in as much detail as possible. </dd>
 <p> Remember to include the version numbers (step 3) and the debug messages file (step 2) and as much other detail as possible.</p>
-<dt>5. Assign the bug to rjones @ redhat.com</p>
-<dd> Assign or reassign the bug to <code>rjones @ redhat.com</code> (without the spaces). You can also send me an email with the bug number if you want a faster response. </p>
+<dt>5. Assign the bug to rjones @ redhat.com</dt>
+<dd> Assign or reassign the bug to <code>rjones @ redhat.com</code> (without the spaces). You can also send me an email with the bug number if you want a faster response. </dd>
 </dl>
 <h2>Index</h2>

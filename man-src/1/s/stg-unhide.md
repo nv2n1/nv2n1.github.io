@@ -19,7 +19,7 @@ stg unhide[options][--]&lt;patch - range&gt;
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default branch.</dl>
+</dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

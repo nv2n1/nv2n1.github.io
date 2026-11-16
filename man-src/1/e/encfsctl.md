@@ -21,22 +21,22 @@ description: "encfsctl – administrative tool for working with EncFS filesystem
 <p> <code>encfsctl</code> is an administrative tool for working with EncFS filesystems. It is capable of changing the user supplied password, displaying basic information about an encrypted volume, and other related operations.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>info</code></p>
-<dd> Display basic information about the filesystem. Takes a single argument, <i>rootdir</i>, which is the root directory of the encrypted filesystem. The filesystem need not be mounted. <code>Info</code> is also the default command if only a root directory is provided on the command line.</p>
-<dt><code>passwd</code></p>
-<dd> Allows changing the password of the encrypted filesystem. The user will be prompted for the existing password and the new password.</p>
-<dt><code>showcruft</code></p>
-<dd> Recursively search through the entire volume and display all files which are not decodable (only checks filename encoding, not block <font SIZE="-1">MAC</font> headers). This might be useful for cleanup in case you&#8217;ve made use of features which create files which are not decodable under the primary key.</p>
-<dt><code>decode</code></p>
-<dd> Allows you to specify an encoded name on the command line, and displays decoded version. This is mostly useful for debugging, as debug messages always display encrypted filenames (to avoid leaking sensitive data through the debug channels). So this command provides a way to decode the filenames. </p>
+<dt><code>info</code></dt>
+<dd> Display basic information about the filesystem. Takes a single argument, <i>rootdir</i>, which is the root directory of the encrypted filesystem. The filesystem need not be mounted. <code>Info</code> is also the default command if only a root directory is provided on the command line.</dd>
+<dt><code>passwd</code></dt>
+<dd> Allows changing the password of the encrypted filesystem. The user will be prompted for the existing password and the new password.</dd>
+<dt><code>showcruft</code></dt>
+<dd> Recursively search through the entire volume and display all files which are not decodable (only checks filename encoding, not block <font SIZE="-1">MAC</font> headers). This might be useful for cleanup in case you&#8217;ve made use of features which create files which are not decodable under the primary key.</dd>
+<dt><code>decode</code></dt>
+<dd> Allows you to specify an encoded name on the command line, and displays decoded version. This is mostly useful for debugging, as debug messages always display encrypted filenames (to avoid leaking sensitive data through the debug channels). So this command provides a way to decode the filenames. </dd>
 <p> The <code>&#8211;extpass</code> option can be used to specify the program which returns the password &#8211; just like with encfs. </p>
 <p> If no names are specified on the command line, then a list of filenames will be read from stdin and decoded.</p>
-<dt><code>encode</code></p>
-<dd> Allows you to specify a filename on the command line, and displays its encoded version. This is useful if e.g. you are taking a backup of an encrypted directory and would like to exclude some files. </p>
+<dt><code>encode</code></dt>
+<dd> Allows you to specify a filename on the command line, and displays its encoded version. This is useful if e.g. you are taking a backup of an encrypted directory and would like to exclude some files. </dd>
 <p> The <code>&#8211;extpass</code> option can be used to specify the program which returns the password &#8211; just like with encfs. </p>
 <p> If no names are specified on the command line, then a list of filenames will be read from stdin and encoded.</p>
-<dt><code>cat</code></p>
-<dd> Decodes and <code>cat</code>s the content of an encrypted file. The filename can be given in a plain or ciphered form. With <code>&#8211;reverse</code> The file content will instead be encrypted.</dl>
+<dt><code>cat</code></dt>
+<dd> Decodes and <code>cat</code>s the content of an encrypted file. The filename can be given in a plain or ciphered form. With <code>&#8211;reverse</code> The file content will instead be encrypted.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Show information about an encrypted filesystem: </p>
 <pre>

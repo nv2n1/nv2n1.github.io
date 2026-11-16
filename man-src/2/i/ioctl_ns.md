@@ -15,22 +15,22 @@ description: "ioctl_ns – ioctl() operations for Linux namespaces"
 <p> new_fd = ioctl(fd, request); </p>
 <p> In each case, <i>fd</i> refers to a <i>/proc/[pid]/ns/*</i> file. Both operations return a new file descriptor on success.</p>
 <dl>
-<dt><code>NS_GET_USERNS</code> (since Linux 4.9)</p>
-<dd> Returns a file descriptor that refers to the owning user namespace for the namespace referred to by <i>fd</i>.</p>
-<dt><code>NS_GET_PARENT</code> (since Linux 4.9)</p>
-<dd> Returns a file descriptor that refers to the parent namespace of the namespace referred to by <i>fd</i>. This operation is valid only for hierarchical namespaces (i.e., PID and user namespaces). For user namespaces, <code>NS_GET_PARENT</code> is synonymous with <code>NS_GET_USERNS</code>.</dl>
+<dt><code>NS_GET_USERNS</code> (since Linux 4.9)</dt>
+<dd> Returns a file descriptor that refers to the owning user namespace for the namespace referred to by <i>fd</i>.</dd>
+<dt><code>NS_GET_PARENT</code> (since Linux 4.9)</dt>
+<dd> Returns a file descriptor that refers to the parent namespace of the namespace referred to by <i>fd</i>. This operation is valid only for hierarchical namespaces (i.e., PID and user namespaces). For user namespaces, <code>NS_GET_PARENT</code> is synonymous with <code>NS_GET_USERNS</code>.</dd></dl>
 <p> The new file descriptor returned by these operations is opened with the <code>O_RDONLY</code> and <code>O_CLOEXEC</code> (close-on-exec; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)) flags. </p>
 <p> By applying <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2) to the returned file descriptor, one obtains a <i>stat</i> structure whose <i>st_dev</i> (resident device) and <i>st_ino</i> (inode number) fields together identify the owning/parent namespace. This inode number can be matched with the inode number of another <i>/proc/[pid]/ns/{pid,user}</i> file to determine whether that is the owning/parent namespace. </p>
 <p> Either of these <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations can fail with the following errors:</p>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> The requested namespace is outside of the caller&#8217;s namespace scope. This error can occur if, for example, the owning user namespace is an ancestor of the caller&#8217;s current user namespace. It can also occur on attempts to obtain the parent of the initial user or PID namespace.</p>
-<dt><code>ENOTTY</code></p>
-<dd> The operation is not supported by this kernel version.</dl>
+<dt><code>EPERM</code></dt>
+<dd> The requested namespace is outside of the caller&#8217;s namespace scope. This error can occur if, for example, the owning user namespace is an ancestor of the caller&#8217;s current user namespace. It can also occur on attempts to obtain the parent of the initial user or PID namespace.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> The operation is not supported by this kernel version.</dd></dl>
 <p> Additionally, the <code>NS_GET_PARENT</code> operation can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> refers to a nonhierarchical namespace.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> refers to a nonhierarchical namespace.</dd></dl>
 <p> See the EXAMPLES section for an example of the use of these operations.</p>
 <h3>Discovering the namespace type</h3>
 <p> The <code>NS_GET_NSTYPE</code> operation (available since Linux 4.11) can be used to discover the type of namespace referred to by the file descriptor <i>fd</i>: </p>
@@ -44,13 +44,13 @@ description: "ioctl_ns – ioctl() operations for Linux namespaces"
 <p> The owner user ID is returned in the <i>uid_t</i> pointed to by the third argument. </p>
 <p> This operation can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> does not refer to a user namespace.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> does not refer to a user namespace.</dd></dl>
 <h2>ERRORS</h2>
 <p> Any of the above <code>ioctl</code>() operations can return the following errors:</p>
 <dl>
-<dt><code>ENOTTY</code></p>
-<dd> <i>fd</i> does not refer to a <i>/proc/[pid]/ns/*</i> file.</dl>
+<dt><code>ENOTTY</code></dt>
+<dd> <i>fd</i> does not refer to a <i>/proc/[pid]/ns/*</i> file.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> Namespaces and the operations described on this page are a Linux-specific.</p>
 <h2>EXAMPLES</h2>

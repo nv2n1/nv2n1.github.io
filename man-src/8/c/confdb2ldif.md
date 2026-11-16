@@ -14,10 +14,10 @@ description: "confdb2ldif – Create an LDIF file from a cluster configuration"
 <p><code>confdb2ldif</code> reads the cluster configuration from the openais object database and generates an LDIF file suitable for importing into an LDAP database. The LDIF file is written to standard output. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;basedn&gt;</code></p>
-<dd>This is the base DN of the LDAP server into which the configuration will be imported. confdb2ldif will create a &quot;cn=cluster&quot; object below this to contain the cluster configuration. The base DN is usually derived from the host&#8217;s domain name. So if the host is ldapsrv.mycorp.com then the base DN could be dc=mycorp,dc=com.</p>
-<dt><code>[&lt;config object base&gt;]</code></p>
-<dd>Configuration object in the objdb to start from. This defaults to &quot;cluster&quot; and there should rarely be any need to change it. </p>
+<dt><code>&lt;basedn&gt;</code></dt>
+<dd>This is the base DN of the LDAP server into which the configuration will be imported. confdb2ldif will create a &quot;cn=cluster&quot; object below this to contain the cluster configuration. The base DN is usually derived from the host&#8217;s domain name. So if the host is ldapsrv.mycorp.com then the base DN could be dc=mycorp,dc=com.</dd>
+<dt><code>[&lt;config object base&gt;]</code></dt>
+<dd>Configuration object in the objdb to start from. This defaults to &quot;cluster&quot; and there should rarely be any need to change it. </dd>
 </dl>
 <h2>Comments</h2>
 <p><code>confdb2ldif</code> uses the openais libconfdb to read the configuration. The default way to do this is run against a running aisexec to read the live configuration. It is possible to generate an LDIF file from a non-running system by using the standalone feature of openais&#8217;s libconfdb.<br />

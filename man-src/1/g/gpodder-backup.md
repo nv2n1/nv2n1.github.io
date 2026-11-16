@@ -15,42 +15,42 @@ description: "gpodder-backup – Backup and restore utility for gPodder user dat
 <p> This utility can be used to create a dump of the current gPodder data (configuration files + downloads), optionally skipping the real contents of the download folder (for submitting your data to a bug report without having to transfer lots of data).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-c</code> &lt;FILE&gt;, <code>&#8211;create=</code>&lt;FILE&gt;</p>
-<dd> Create a new archive</p>
-<dt><code>-x</code> &lt;FILE&gt;, <code>&#8211;extract=</code>&lt;FILE&gt;</p>
-<dd> Extract an existing archive</p>
-<dt><code>-f</code>, <code>&#8211;fake-downloads</code></p>
-<dd> Do not store contents of downloaded files</p>
-<dt><code>-n</code>, <code>&#8211;no-covers</code></p>
-<dd> Do not include cover files in archive</p>
-<dt><code>-D</code> &lt;DIR&gt;, <code>&#8211;destination=</code>&lt;DIR&gt;</p>
-<dd> Extract downloads in different folder</p>
-<dt><code>-P</code>, <code>&#8211;purge</code></p>
-<dd> Remove current data (can be combined with &#8211;extract)</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-c</code> &lt;FILE&gt;, <code>&#8211;create=</code>&lt;FILE&gt;</dt>
+<dd> Create a new archive</dd>
+<dt><code>-x</code> &lt;FILE&gt;, <code>&#8211;extract=</code>&lt;FILE&gt;</dt>
+<dd> Extract an existing archive</dd>
+<dt><code>-f</code>, <code>&#8211;fake-downloads</code></dt>
+<dd> Do not store contents of downloaded files</dd>
+<dt><code>-n</code>, <code>&#8211;no-covers</code></dt>
+<dd> Do not include cover files in archive</dd>
+<dt><code>-D</code> &lt;DIR&gt;, <code>&#8211;destination=</code>&lt;DIR&gt;</dt>
+<dd> Extract downloads in different folder</dd>
+<dt><code>-P</code>, <code>&#8211;purge</code></dt>
+<dd> Remove current data (can be combined with &#8211;extract)</dd></dl>
 <h2>USAGE FOR BUG REPORTING</h2>
 <dl>
-<dt>This command is useful if you want to report a bug in gPodder:</p>
+<dt>This command is useful if you want to report a bug in gPodder:</dt>
 <dd>
-<dt><code>gpodder-backup &#8211;create bug123.gpo.tar.gz &#8211;fake-downloads</code></p>
-<dd> Backup your current data to file <i>bug123.gpo.tar.gz</i>, but don&#8217;t store download data (create zero-size dummy files instead). You can then attach <i>bug123.gpo.tar.gz</i> to the bug report.</p>
-<dt>If you are instructed to try gPodder from a &quot;clean state&quot;, you can use the following command (be sure to backup your data before!):</p>
+</dd><dt><code>gpodder-backup &#8211;create bug123.gpo.tar.gz &#8211;fake-downloads</code></dt>
+<dd> Backup your current data to file <i>bug123.gpo.tar.gz</i>, but don&#8217;t store download data (create zero-size dummy files instead). You can then attach <i>bug123.gpo.tar.gz</i> to the bug report.</dd>
+<dt>If you are instructed to try gPodder from a &quot;clean state&quot;, you can use the following command (be sure to backup your data before!):</dt>
 <dd>
-<dt><code>gpodder-backup &#8211;purge</code></p>
-<dd> Remove all gPodder data, so you can start from a clean state</dl>
+</dd><dt><code>gpodder-backup &#8211;purge</code></dt>
+<dd> Remove all gPodder data, so you can start from a clean state</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>gpodder-backup &#8211;create today.gpo.tar.gz</code></p>
-<dd> Backup your current data to file <i>today.gpo.tar.gz</i></p>
-<dt><code>gpodder-backup &#8211;extract mybackup.gpo.tar.gz</code></p>
-<dd> Restore (without purging) the contents of <i>mybackup.gpo.tar.gz</i></p>
-<dt><code>gpodder-backup &#8211;extract default.gpo.tar.gz &#8211;purge</code></p>
-<dd> Remove current data, then restore the contents of <i>default.gpo.tar.gz</i></p>
-<dt><code>gpodder-backup &#8211;purge</code></p>
-<dd> Remove all gPodder data, so you can start from a clean state</dl>
+<dt><code>gpodder-backup &#8211;create today.gpo.tar.gz</code></dt>
+<dd> Backup your current data to file <i>today.gpo.tar.gz</i></dd>
+<dt><code>gpodder-backup &#8211;extract mybackup.gpo.tar.gz</code></dt>
+<dd> Restore (without purging) the contents of <i>mybackup.gpo.tar.gz</i></dd>
+<dt><code>gpodder-backup &#8211;extract default.gpo.tar.gz &#8211;purge</code></dt>
+<dd> Remove current data, then restore the contents of <i>default.gpo.tar.gz</i></dd>
+<dt><code>gpodder-backup &#8211;purge</code></dt>
+<dd> Remove all gPodder data, so you can start from a clean state</dd></dl>
 <h2>AUTHOR</h2>
 <p> gpodder-backup was written by Thomas Perl (thp [at] gpodder.org) </p>
 <h2>Index</h2>

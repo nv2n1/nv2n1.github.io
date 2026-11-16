@@ -14,10 +14,10 @@ description: "vzalloc_node – allocate memory on a specific node with zero fill
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>allocation size</dl>
+</dd><dd>allocation size</dd></dl>
 <p> <i>node</i></p>
 <dl>
-<dd>numa node</dl>
+<dd>numa node</dd></dl>
 <h2>Description</h2>
 <p>Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space. The memory allocated is set to zero. </p>
 <p> For tight control over page level allocator and protection flags use <code>__vmalloc_node</code> instead.</p>

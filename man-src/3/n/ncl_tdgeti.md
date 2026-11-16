@@ -22,9 +22,9 @@ CALL TDGETI (PNAM,IVAL)
 
 The arguments of TDGETI are as follows:
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to retrieve. The character string can be of any length, but only the first three characters of it will be examined.
-<dt>IVAL
-<dd>(an output variable of type INTEGER) - An integer variable to receive the desired parameter value. If the internal parameter is of type INTEGER and has the value &quot;i&quot;, IVAL will be given the value &quot;i&quot;; if the internal parameter is of type REAL and has the value &quot;r&quot;, IVAL will be given the value &quot;INT(r)&quot;.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to retrieve. The character string can be of any length, but only the first three characters of it will be examined.
+</dd><dt>IVAL
+</dt><dd>(an output variable of type INTEGER) - An integer variable to receive the desired parameter value. If the internal parameter is of type INTEGER and has the value &quot;i&quot;, IVAL will be given the value &quot;i&quot;; if the internal parameter is of type REAL and has the value &quot;r&quot;, IVAL will be given the value &quot;INT(r)&quot;.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

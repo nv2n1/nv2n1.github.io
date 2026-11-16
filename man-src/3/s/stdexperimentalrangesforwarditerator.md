@@ -11,17 +11,11 @@ std::experimental::ranges::ForwardIterator - std::experimental::ranges::ForwardI
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt; class I &gt;
-
 concept bool ForwardIterator =
-
 InputIterator&lt;I&gt; &amp;&amp;                                                           (ranges TS)
-
 DerivedFrom&lt;ranges::iterator_category_t&lt;I&gt;, ranges::forward_iterator_tag&gt; &amp;&amp;
-
 Incrementable&lt;I&gt; &amp;&amp;
-
 Sentinel&lt;I, I&gt;;</code></pre> 
 The concept ForwardIterator&lt;I&gt; refines InputIterator by adding equality comparison and the multi-pass guarantee. 
 The domain of == for forward iterators is that of iterators over the same underlying sequence, except that value-initialized iterators of the same type may be compared with each other and shall compare equal. 

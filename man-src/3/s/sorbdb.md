@@ -19,7 +19,7 @@ description: "sorbdb.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SORBDB simultaneously bidiagonalizes the blocks of an M-by-M
  partitioned orthogonal matrix X:
@@ -38,11 +38,11 @@ description: "sorbdb.f –"
  B11, B12, B21, and B22 are Q-by-Q bidiagonal matrices represented
  implicitly by angles THETA, PHI.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER
           = 'T':      X, U1, U2, V1T, and V2T are stored in row-major
@@ -184,18 +184,18 @@ else LDX22 &gt;= M &#8211; Q.</p>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   The bidiagonal blocks B11, B12, B21, and B22 are represented
   implicitly by angles THETA(1), ..., THETA(Q) and PHI(1), ...,
@@ -207,11 +207,11 @@ else LDX22 &gt;= M &#8211; Q.</p>
   reflectors. See SORCSD for details on generating P1, P2, Q1, and Q2
   using SORGQR and SORGLQ.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+</dt><dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> Definition at line 286 of file sorbdb.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -15,30 +15,30 @@ description: "boincmgr – The graphical BOINC manager for the client."
 <p> The BOINC manager (<code>boincmgr</code>) is a graphical controlling and monitoring utility for the BOINC client (<code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)). It communicates with a running client using port 31416 over TCP/IP. It can only connect to one client at a time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show all options.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Generate verbose log messages.</p>
-<dt><code>-a</code>, <code>&#8211;autostart</code></p>
-<dd> Tells the BOINC Manager that it was started by the operating system automatically. Use this if the Manager is started at login time.</p>
-<dt><code>-e</code> <i>client_dir</i>, <code>&#8211;clientdir=</code><i>client_dir</i></p>
-<dd> Directory containing the <i>locale</i> directory containing the Manager localisation files.</p>
-<dt><code>-d</code> <i>data_dir</i>, <code>&#8211;datadir=</code><i>data_dir</i></p>
-<dd> Directory containing the configuration files .</p>
-<dt><code>-n</code> <i>hostname</i>, <code>&#8211;namehost=</code><i>hostname</i></p>
-<dd> Hostname or IP address of client to which the manager should connect to.</p>
-<dt><code>-g</code> <i>port</i>, <code>&#8211;gui_rpc_port=</code><i>port</i></p>
-<dd> RPC port number used to communicate with the client. Has to be the same value as on the client (see <code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)).</p>
-<dt><code>-p</code> <i>passwd</i>, <code>&#8211;password=</code><i>passwd</i></p>
-<dd> Use <i>passwd</i> as password for RPC authentication. If the current working directory contains a file <i>gui_rpc_auth.cfg</i>, <code>boincmgr</code> will read the password from this file.</p>
-<dt><code>-b</code> <i>BOINC_ARGS</i>, <code>&#8211;boincargs=</code><i>BOINC_ARGS</i></p>
-<dd> Startup the BOINC client with these optional arguments if necessary.</p>
-<dt><code>-i</code>, <code>&#8211;insecure</code></p>
-<dd> Disable BOINC security users and permissions.</p>
-<dt><code>-c</code>, <code>&#8211;checkskins</code></p>
-<dd> Set skin debugging mode to enable skin manager error messages.</p>
-<dt><code>-m</code>, <code>&#8211;multiple</code></p>
-<dd> Allow multiple instances of BOINC manager on this host.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show all options.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Generate verbose log messages.</dd>
+<dt><code>-a</code>, <code>&#8211;autostart</code></dt>
+<dd> Tells the BOINC Manager that it was started by the operating system automatically. Use this if the Manager is started at login time.</dd>
+<dt><code>-e</code> <i>client_dir</i>, <code>&#8211;clientdir=</code><i>client_dir</i></dt>
+<dd> Directory containing the <i>locale</i> directory containing the Manager localisation files.</dd>
+<dt><code>-d</code> <i>data_dir</i>, <code>&#8211;datadir=</code><i>data_dir</i></dt>
+<dd> Directory containing the configuration files .</dd>
+<dt><code>-n</code> <i>hostname</i>, <code>&#8211;namehost=</code><i>hostname</i></dt>
+<dd> Hostname or IP address of client to which the manager should connect to.</dd>
+<dt><code>-g</code> <i>port</i>, <code>&#8211;gui_rpc_port=</code><i>port</i></dt>
+<dd> RPC port number used to communicate with the client. Has to be the same value as on the client (see <code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)).</dd>
+<dt><code>-p</code> <i>passwd</i>, <code>&#8211;password=</code><i>passwd</i></dt>
+<dd> Use <i>passwd</i> as password for RPC authentication. If the current working directory contains a file <i>gui_rpc_auth.cfg</i>, <code>boincmgr</code> will read the password from this file.</dd>
+<dt><code>-b</code> <i>BOINC_ARGS</i>, <code>&#8211;boincargs=</code><i>BOINC_ARGS</i></dt>
+<dd> Startup the BOINC client with these optional arguments if necessary.</dd>
+<dt><code>-i</code>, <code>&#8211;insecure</code></dt>
+<dd> Disable BOINC security users and permissions.</dd>
+<dt><code>-c</code>, <code>&#8211;checkskins</code></dt>
+<dd> Set skin debugging mode to enable skin manager error messages.</dd>
+<dt><code>-m</code>, <code>&#8211;multiple</code></dt>
+<dd> Allow multiple instances of BOINC manager on this host.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1), <code><a href="/docs/linux/man/1-boinccmd/">boinccmd</a></code>(1) </p>
 <p> &lt;<a rel="nofollow" href="http://boinc.berkeley.edu/wiki/The_BOINC_Manager">http://boinc.berkeley.edu/wiki/The_BOINC_Manager</a>&gt;</p>

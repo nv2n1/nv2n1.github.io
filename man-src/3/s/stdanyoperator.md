@@ -12,14 +12,11 @@ std::any::operator= - std::any::operator=
 
 <pre><code>any &amp;operator=(const any &amp;rhs);
 (1)(since C++ 17)
-
     any &amp;
     operator=(any &amp;&amp;rhs) noexcept;
 (2)(since C++ 17)
-
     template &lt;typename ValueType&gt;
     (3)(since C++ 17)
-
         any &amp;
         operator=(ValueType &amp;&amp;rhs);</code></pre> 
 Assigns contents to the contained value. 

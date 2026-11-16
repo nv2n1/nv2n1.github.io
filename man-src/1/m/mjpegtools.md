@@ -63,121 +63,117 @@ NTSC FULL size: (720 * 480 * 30 * 80) / (200 * 1024) = 4050 kB/sec
 <p> Recording with lavrec looks like this: </p>
 <p> <code>&gt; lavrec -f a -i P -d 2 record.avi</code> </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> Should start recording now,</p>
 <dl>
-<dt>-f a</p>
-<dd></dl>
+<dt>-f a</dt>
+<dd></dd></dl>
 <p> use AVI as output format,</p>
 <dl>
-<dt>-i P</p>
-<dd></dl>
+<dt>-i P</dt>
+<dd></dd></dl>
 <p> use as input source the SVHS-In with PAL format,</p>
 <dl>
-<dt>-d 2</p>
-<dd></dl>
+<dt>-d 2</dt>
+<dd></dd></dl>
 <p> the size of the pictures are half size (352&#215;288)</p>
 <dl>
-<dt>record.avi</p>
-<dd></dl>
+<dt>record.avi</dt>
+<dd></dd></dl>
 <p> name of the created file. </p>
 <p> Recording is finished by pressing Ctrl-C (on German Keyboards: Strg-C). Sometimes using <code>-f A</code> instead of <code>-f a</code> might be necessary </p>
 <p> Other example: </p>
 <p> <code>&gt; lavrec -f q -i n -d 1 -q 80 -s -l 80 -R l -U record.avi </code> </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> Should start recording now,</p>
 <dl>
-<dt>-f q</p>
-<dd></dl>
+<dt>-f q</dt>
+<dd></dd></dl>
 <p> use Quicktime as output format,</p>
 <dl>
-<dt>-i n</p>
-<dd></dl>
+<dt>-i n</dt>
+<dd></dd></dl>
 <p> use Composite-In with NTSC format,</p>
 <dl>
-<dt>-d 1</p>
-<dd></dl>
+<dt>-d 1</dt>
+<dd></dd></dl>
 <p> record pictures with full size (640&#215;480)</p>
 <dl>
-<dt>-q 80</p>
-<dd></dl>
+<dt>-q 80</dt>
+<dd></dd></dl>
 <p> set the quality to 80% of the captured image</p>
 <dl>
-<dt>-s</p>
-<dd></dl>
+<dt>-s</dt>
+<dd></dd></dl>
 <p> use stereo mode (default mono)</p>
 <dl>
-<dt>-l 80</p>
-<dd></dl>
+<dt>-l 80</dt>
+<dd></dd></dl>
 <p> set the recording level to 80% of the max during recording</p>
 <dl>
-<dt>-R l</p>
-<dd></dl>
+<dt>-R l</dt>
+<dd></dd></dl>
 <p> set the recording source to Line-In</p>
 <dl>
-<dt>-U</p>
-<dd></dl>
+<dt>-U</dt>
+<dd></dd></dl>
 <p> With this lavrec uses the read instead of mmap for recording this is needed if your sound card does not support the mmap for recording. </p>
 <p> Setting the mixer does not work with every sound card. If you record with 2 different settings and both recordings are equally loud you should setup the mixer with a mixer program. After that you should use the <code>-l -1</code> option when you record using lavrec </p>
 <p> The size of the image depends on the card you use. At full size (-d 1) you get these image sizes: BUZ and LML33: 720&#215;576, the DC10 and DC30: 768&#215;576 </p>
 <p> Other example: </p>
 <p> <code>&gt; lavrec -w -f a -i S -d 2 -l -1 record%02d.avi</code> </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> Should start recording,</p>
 <dl>
-<dt>-w</p>
-<dd></dl>
+<dt>-w</dt>
+<dd></dd></dl>
 <p> Waits for user confirmation to start (press enter)</p>
 <dl>
-<dt>-f a</p>
-<dd></dl>
+<dt>-f a</dt>
+<dd></dd></dl>
 <p> use AVI as output format,</p>
 <dl>
-<dt>-i S</p>
-<dd></dl>
+<dt>-i S</dt>
+<dd></dd></dl>
 <p> use SECAM SVHS-Input (SECAM Composite recording is also possible: -i s)</p>
 <dl>
-<dt>-d 2</p>
-<dd></dl>
+<dt>-d 2</dt>
+<dd></dd></dl>
 <p> the size of the pictures are half size</p>
 <dl>
-<dt>-l -1</p>
-<dd></dl>
+<dt>-l -1</dt>
+<dd></dd></dl>
 <p> do not touch the mixer settings</p>
 <dl>
-<dt>record%02d.avi</p>
-<dd></dl>
+<dt>record%02d.avi</dt>
+<dd></dd></dl>
 <p> Here lavrec creates the first file named record00.avi after the file has reached a size of 1.6GB (after about 20 Minutes recording) it starts a new sequence named record01.avi and so on till the recording is stopped or the disk is full. With the release of the 1.9.0 Version mjpegtools is able to handle AVI files larger than 2GB. So that option is present for compatibility. </p>
 <p> Other example: </p>
 <p> <code>&gt; lavrec -f a -i t -q 80 -d 2 -C europe-west:SE20 test.avi</code> </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> Should start recording now,</p>
 <dl>
-<dt>-f a</p>
-<dd></dl>
+<dt>-f a</dt>
+<dd></dd></dl>
 <p> use AVI as output format,</p>
 <dl>
-<dt>-i t</p>
-<dd></dl>
+<dt>-i t</dt>
+<dd></dd></dl>
 <p> use tuner input,</p>
 <dl>
-<dt>-q 80</p>
-<dd></dl>
+<dt>-q 80</dt>
+<dd></dd></dl>
 <p> set the quality to 80% of the captured image</p>
 <dl>
-<dt>-d 2</p>
-<dd></dl>
+<dt>-d 2</dt>
+<dd></dd></dl>
 <p> the size of the pictures are half size (352&#215;288)</p>
 <dl>
-<dt>-C</p>
-<dd></dl>
+<dt>-C</dt>
+<dd></dd></dl>
 <p> choose TV channels, and the corresponding -it and -iT (video source: TV tuner) can currently be used on the Marvel G200/G400 and the Matrox Millenium G200/G400 with Rainbow Runner extension (BTTV-Support is under construction). For more information on how to make the TV tuner parts of these cards work, see the Marvel/Linux project on: </p>
 <p> Last example: </p>
 <p> <code>&gt; lavrec -f a -i p -g 352&#215;288 -q 80 -s -l 70 -R l &#8211;software-encoding test03.avi</code> </p>
@@ -309,26 +305,26 @@ NTSC FULL size: (720 * 480 * 30 * 80) / (200 * 1024) = 4050 kB/sec
 <p> If you want to get a &quot;destructive&quot; version of your edited video use: </p>
 <p> <code>&gt; lavtrans -o short_version.avi -f a editlist.eli</code> </p>
 <dl>
-<dt>-o</p>
-<dd></dl>
+<dt>-o</dt>
+<dd></dd></dl>
 <p> specifies the output name</p>
 <dl>
-<dt>-f a</p>
-<dd></dl>
+<dt>-f a</dt>
+<dd></dd></dl>
 <p> specifies the output format (AVI for example)</p>
 <dl>
-<dt>editlist.eli</p>
-<dd></dl>
+<dt>editlist.eli</dt>
+<dd></dd></dl>
 <p> is the list file where the modifications are described. You generate the list file with the &quot;save all&quot; or &#8220;save select&#8221; buttons in glav. </p>
 <h2>Unify videos</h2>
 <p> <code>&gt; lavtrans -o stream.qt -f q record_1.avi record_2.avi &#8230; record_n.avi</code> </p>
 <dl>
-<dt>-o</p>
-<dd></dl>
+<dt>-o</dt>
+<dd></dd></dl>
 <p> specifies the outputfile name</p>
 <dl>
-<dt>-f q</p>
-<dd></dl>
+<dt>-f q</dt>
+<dd></dd></dl>
 <p> specifies the output format, quicktime in this case </p>
 <p> This is usually not needed. Keep in your mind that there is a 2GB file-size-limit on 32Bit systems with an older glibc. Usually not a problem these days </p>
 <h2>Separate sound</h2>
@@ -352,16 +348,13 @@ NTSC FULL size: (720 * 480 * 30 * 80) / (200 * 1024) = 4050 kB/sec
 <p> Intro.avi and epiloque.mov have to be of the same format (the same frame rate and resolution). In this example they are both 352&#215;288 PAL files. intro.avi contains 250 frames and epilogue.mov is 1000 frames long. </p>
 <p> Therefore our output file will contain: </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> the first 225 frames of intro.avi</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> a 25 frame transition containing the last 25 frames of intro.avi and the first 25 frames of epilogue.mov</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> the last 975 frames of epilogue.mov </p>
 <p> We could get the last 25 frames of intro.avi by calling: </p>
 <p> <code>&gt;lav2yuv -o 225 -f 25 intro.avi</code> </p>
@@ -376,16 +369,16 @@ NTSC FULL size: (720 * 480 * 30 * 80) / (200 * 1024) = 4050 kB/sec
 <p> The output of this is a raw yuv stream that can be fed into transist.flt. </p>
 <p> transist.flt needs to be informed about the duration of the transition and the opacity of the second stream at the beginning and at the end of the transition: </p>
 <dl>
-<dt>-o num</p>
-<dd></dl>
+<dt>-o num</dt>
+<dd></dd></dl>
 <p> opacity of second input at the beginning [0-255]</p>
 <dl>
-<dt>-O num</p>
-<dd></dl>
+<dt>-O num</dt>
+<dd></dd></dl>
 <p> opacity of second input at the end [0-255]</p>
 <dl>
-<dt>-d num</p>
-<dd></dl>
+<dt>-d num</dt>
+<dd></dd></dl>
 <p> duration of transition in frames </p>
 <p> An opacity of 0 means that the second stream is fully transparent (only stream one visible), at 255 stream two is fully opaque. </p>
 <p> In our case the correct call (transition from stream 1 to stream 2) would be: </p>
@@ -512,20 +505,20 @@ epilogue.mov
 <p> <code>&gt; lav2yuv stream.avi | mpeg2enc -b 1500 -n s -g 6 -G 20 -P -o video.m1v</code> </p>
 <p> Here the stream.avi will be encoded with: </p>
 <dl>
-<dt>-b 1500</p>
-<dd></dl>
+<dt>-b 1500</dt>
+<dd></dd></dl>
 <p> a Bitrate of 1500kBit/sec</p>
 <dl>
-<dt>-n s</p>
-<dd></dl>
+<dt>-n s</dt>
+<dd></dd></dl>
 <p> the input Video norm is forced to SECAM</p>
 <dl>
-<dt>-P</p>
-<dd></dl>
+<dt>-P</dt>
+<dd></dd></dl>
 <p> This ensures that 2 B frames appear between adjacent I/P frames. Several common MPEG-1 decoders can&#8217;t handle streams that do not have 2 B-frames between I/P frames</p>
 <dl>
-<dt>-g 6 -G 20</p>
-<dd></dl>
+<dt>-g 6 -G 20</dt>
+<dd></dd></dl>
 <p> the encoder can dynamically change the group-of-pictures size to reflect scene changes. This is done by setting a maximum GOP (-G flag) size larger than the minimum (-g flag). For VCDs sensible values might be a minimum of 9 and a maximum of 15. For SVCD 9 and 15 would be good values. If you only want to play it back on SW player you can use other min-max values. </p>
 <p> Example: </p>
 <p> <code>&gt; lav2yuv stream*.avi | mpeg2enc -b 1500 -r 16 -4 1 -2 1 -S 630 -B 260 -o video_n1_1500_r16_41_21_S630_B240.m1v</code> </p>
@@ -609,16 +602,16 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> If you have the typical VCD settings the CRC data needs about 0,27% of the whole data. In the worst case where you have a MONO 32k Bitrate stream the CRC data needs 1,92%.SVCD Video creation example </p>
 <p> <code>&gt; lav2yuv stream.avi | yuvscaler -O SVCD | mpeg2enc -f 4 -q 7 -I 1 -V 200 -o video.m2v</code> </p>
 <dl>
-<dt>-f 4</p>
-<dd></dl>
+<dt>-f 4</dt>
+<dd></dd></dl>
 <p> sets the options for mpeg2enc to SVCD</p>
 <dl>
-<dt>-q 7</p>
-<dd></dl>
+<dt>-q 7</dt>
+<dd></dd></dl>
 <p> tell mpeg2enc to generate a variable bitrate stream</p>
 <dl>
-<dt>-I 1</p>
-<dd></dl>
+<dt>-I 1</dt>
+<dd></dd></dl>
 <p> tell mpeg2enc to assume that the original signal is field interlaced video where the odd rows of pixels are sampled a half frame interval after the even ones in each frame. The -I 0 (progressive output (no field pictures)) option will also work for PAL </p>
 <p> You can use lower bitrates but the SVCD standard limits <code>total bit-rate (audio and video) to 2788800 Bit/sec</code>. So with 224Kbps audio and overhead 2550 may already be marginally too tight. Since the SVCD format permits any audio rate between 32 and 384 kBit/sec you can save a few bits/sec by using 192k audio (or for non-musical material 160k). </p>
 <p> SVCD supports variable bitrate (VBR), because MPEG-2 is usually VBR, but with the top video bitrate limit of 2500kBit/sec. With the -f 4 flag the encoder also sets dynamic GOP with a low limit of -g 6 and a high limit of -G 18. This saves a few bits/sec and improves the picture quality during scene changes. When encoding with -f 4 mpeg2enc ignores the video bitrate (-b) and search radius (-r) options. If you use -f 5 you have to specify the bitrate and other options to mpeg2enc. </p>
@@ -629,16 +622,16 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> Don&#8217;t forget the -S and -B options mentioned above. You want the stream to fit on a CD don&#8217;t you ?SVCD multiplexing example </p>
 <p> <code>&gt; mplex -f 4 -b 300 -r 2750 sound.mp2 video.m2v -o svcd_out.mpg</code> </p>
 <dl>
-<dt>-f 4</p>
-<dd></dl>
+<dt>-f 4</dt>
+<dd></dd></dl>
 <p> tells mplex to mplex a SVCD</p>
 <dl>
-<dt>-r 2750</p>
-<dd></dl>
+<dt>-r 2750</dt>
+<dd></dd></dl>
 <p> is the calculated Audio + Video Bitrate + 1-2% multiplex information</p>
 <dl>
-<dt>-b 300</p>
-<dd></dl>
+<dt>-b 300</dt>
+<dd></dd></dl>
 <p> is the buffer available on the playback device (the same value as used for the video encoding (mpeg2enc&#8217;s -V option). SVCD creating the CD </p>
 <p> Example: </p>
 <p> <code>&gt; vcdimager -t svcd testvideo.mpg</code> </p>
@@ -654,19 +647,19 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> The sample rate has to be 48kHz. The mp2enc does create by default a sample rate of 48kHz. If it is not a 48kHz mp2enc will resample the audio to get the sample rate. If the audio is recorded at 48kHz then no resampling is needed and toolame can be used for the encoding (it is faster than mp2enc). DVD Video creation example </p>
 <p> <code>&gt; lav2yuv stream.eli | mpeg2enc -f 8 -o video.m2v</code> </p>
 <dl>
-<dt>-f 8</p>
-<dd></dl>
+<dt>-f 8</dt>
+<dd></dd></dl>
 <p> This sets the options correctly for a MPEG-2 video that is compliant with the DVD standard. The maximum bitrate is set to 7500kBps and the video buffer size is set to 230KB. The default quality factor is set to 8. mpeg2enc sets currenty no automatic sequence length as it does for VCD/SVCD. </p>
 <p> The other options to get a low bitrate and high quality stream can also be used to override the default settings mentioned above. You can also use yuvdenoise to increase the picture quality if the input data is noisy (from a VHS tape for example). A typical command will look like this: </p>
 <p> <code>lav2yuv moby.eli | yuvdenoise | mpeg2enc -f 8 -q 7 -4 1 -2 1 -P -I 0 -N -o video_DVD.m2v</code>DVD multiplexing example </p>
 <p> <code>&gt; mplex -f 8 sound.mp2 video.m2v -o my_dvdlikestream.mpg</code> </p>
 <dl>
-<dt>-f 8</p>
-<dd></dl>
+<dt>-f 8</dt>
+<dd></dd></dl>
 <p> Here again we specify that we want to have DVD like MPEG stream. mplex cannot do all the fancy things allowed for a DVD, but it is close enough that the HW-DVD players accept it.</p>
 <dl>
-<dt>-o</p>
-<dd></dl>
+<dt>-o</dt>
+<dd></dd></dl>
 <p> there we specify the output filename. DVD creation example </p>
 <p> This topic will be covered by the documentation of the dvdauthor program. For questions please see In general it will work like this: </p>
 <p> <code>&gt; dvdauthor -o output/ stream1.mpg stream2.mpg &#8230; my_dvdlikestream.mpg; dvdauthor -T -o output/ </code> </p>
@@ -773,16 +766,16 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> So transcoding looks like this: </p>
 <p> <code>&gt; mjpegtranscode -V -o vcd_stream mpeg2src.mpg</code> </p>
 <dl>
-<dt>-V</p>
-<dd></dl>
+<dt>-V</dt>
+<dd></dd></dl>
 <p> set&#8217;s the options so that a VCD compatible stream is generated</p>
 <dl>
-<dt>-o vcd_stream</p>
-<dd></dl>
+<dt>-o vcd_stream</dt>
+<dd></dd></dl>
 <p> a vcd_stream.m1v (video) and vcd_stream.mp2 (audio) is created</p>
 <dl>
-<dt>mpeg2src.mpg</p>
-<dd></dl>
+<dt>mpeg2src.mpg</dt>
+<dd></dd></dl>
 <p> specifies the source stream </p>
 <p> The script prints also something like this: </p>
 <p> <code>&gt; SYNC 234 mSec</code> </p>
@@ -790,20 +783,20 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> Then you need to multiplex them like this: </p>
 <p> <code>&gt; mplex -f 1 -O 234 vcd_stream.mp2 vcd_stream.m1v -o lowrate.mpg</code> </p>
 <dl>
-<dt>-f 1</p>
-<dd></dl>
+<dt>-f 1</dt>
+<dd></dd></dl>
 <p> Mux format is set to VCD</p>
 <dl>
-<dt>-O 234</p>
-<dd></dl>
+<dt>-O 234</dt>
+<dd></dd></dl>
 <p> Video timestamp offset in mSec, generated by the mjpegtranscoding script, there negative values are allowed</p>
 <dl>
-<dt>vcd_stream.mp2 &amp; vcd_stream.m1v</p>
-<dd></dl>
+<dt>vcd_stream.mp2 &amp; vcd_stream.m1v</dt>
+<dd></dd></dl>
 <p> generated files by the script</p>
 <dl>
-<dt>lowrate.mpg</p>
-<dd></dl>
+<dt>lowrate.mpg</dt>
+<dd></dd></dl>
 <p> the VCD compatible output stream </p>
 <p> Here we have a SVCD (MPEG-2 video) example: </p>
 <p> <code>&gt; mjpegtranscode -S -o svcd_stream mpeg2src.mpg</code> </p>
@@ -819,66 +812,65 @@ q &lt;= 6 real sharp pictures, and good quality
 <p> One of the first lines showed contains the label &#8220;SYNC&#8221; you have to use this time later when multiplexing. The 2&gt;/dev/null redirects the output of ac3dec to /dev/null. In the next step you generate the mpeg audio file: </p>
 <p> <code>&gt; cat sound.wav | mp2enc -V -v 2 -o audio.mp2</code> </p>
 <dl>
-<dt>-V</p>
-<dd></dl>
+<dt>-V</dt>
+<dd></dd></dl>
 <p> forces VCD format, the sampling rate is converted to 44.1kHz from 48kHz</p>
 <dl>
-<dt>-v 2</p>
-<dd></dl>
+<dt>-v 2</dt>
+<dd></dd></dl>
 <p> unnecessary but if you use it mp2enc tells you how many seconds of the audio file are already encoded.</p>
 <dl>
-<dt>-o</p>
-<dd></dl>
+<dt>-o</dt>
+<dd></dd></dl>
 <p> Specifies the output file. </p>
 <p> <code>cat test2.mpg | extract_a52 &#8211; -s | ac3dec -o wav | sox -t wav /dev/stdin -t wav -r 44100 /dev/stdout | toolame -p 2 -b 224 /dev/stdin audio.mp2</code> </p>
 <p> One of the first lines again output contains the label &#8220;SYNC&#8221;. You have to use this time (referred to as &quot;SYNC_value&quot; below) when doing the multiplexing. </p>
 <p> For VCD creation use: </p>
 <p> <code>&gt; mpeg2dec -s -o pgmpipe test2.mpg | pgmtoy4m -a 59:54 -r 25:1 -i t | mpeg2enc -s -o video_vcd.m1v</code> </p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> mpeg2dec:</p>
 <dl>
-<dt>-s</p>
-<dd></dl>
+<dt>-s</dt>
+<dd></dd></dl>
 <p> tells mpeg2dec to use program stream demultiplexer</p>
 <dl>
-<dt>-o pgmpipe</p>
-<dd></dl>
+<dt>-o pgmpipe</dt>
+<dd></dd></dl>
 <p> the output format of the pictures, suitable for pgmtoy4m </p>
 <p> Mplex with: </p>
 <p> <code>&gt; mplex -f 1 -O SYNC_value audio.mp2 video_vcd.m1v -o vcd_stream.mpg</code> </p>
 <dl>
-<dt>-f 1</p>
-<dd></dl>
+<dt>-f 1</dt>
+<dd></dd></dl>
 <p> generates an VCD stream</p>
 <dl>
-<dt>-O SYNC_value</p>
-<dd></dl>
+<dt>-O SYNC_value</dt>
+<dd></dd></dl>
 <p> the value mentioned above </p>
 <p> For SVCD creation use: </p>
 <p> <code>&gt; mpeg2dec -s -o mpeg2src.mpg | pgmtoy4m -a 59:54 -r 25:1 -i t | mpeg2enc -f 4 -q 9 -V 230 -o video_svcd.mpg</code> </p>
 <dl>
-<dt>-q 9</p>
-<dd></dl>
+<dt>-q 9</dt>
+<dd></dd></dl>
 <p> Quality factor for the stream (VBR stream) (default q: 12)</p>
 <dl>
-<dt>-V 230</p>
-<dd></dl>
+<dt>-V 230</dt>
+<dd></dd></dl>
 <p> Target video buffer size in KB</p>
 <dl>
-<dt>-o</p>
-<dd></dl>
+<dt>-o</dt>
+<dd></dd></dl>
 <p> Output file </p>
 <p> Mplex with: </p>
 <p> <code>&gt; mplex -f 4 -b 230 audio.mp2 video_svcd -o svcd_stream.mpg</code> </p>
 <dl>
-<dt>-f 4</p>
-<dd></dl>
+<dt>-f 4</dt>
+<dd></dd></dl>
 <p> generate an SVCD stream</p>
 <dl>
-<dt>-b 200</p>
-<dd></dl>
+<dt>-b 200</dt>
+<dd></dd></dl>
 <p> Specify the video buffer size by the playback device. </p>
 <p> For other video output formats this might work: </p>
 <p> <code>&gt; mpeg2dec -s -o pgmpipe test2.mpg | pgmtoy4m -a 59:54 -r 25:1 -i t | yuvscaler -O SIZE_320x200 -O NOT_INTERLACED | mpeg2enc -o strange_video.m1v</code> </p>

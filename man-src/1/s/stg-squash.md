@@ -17,38 +17,39 @@ stg squash[options][--]&lt;patches&gt;
 <p> Squash two or more patches, creating one big patch that contains all their changes. In more detail: </p>
 <dl>
 <dt>
-<dd> 1. Pop all the given patches, plus any other patches on top of them.</dl>
+</dt><dd> 1. Pop all the given patches, plus any other patches on top of them.</dd></dl>
 <dl>
 <dt>
-<dd> 2. Push the given patches in the order they were given on the command line.</dl>
+</dt><dd> 2. Push the given patches in the order they were given on the command line.</dd></dl>
 <dl>
 <dt>
-<dd> 3. Squash the given patches into one big patch.</dl>
+</dt><dd> 3. Squash the given patches into one big patch.</dd></dl>
 <dl>
 <dt>
-<dd> 4. Allow the user to edit the commit message of the new patch interactively.</dl>
+</dt><dd> 4. Allow the user to edit the commit message of the new patch interactively.</dd></dl>
 <dl>
 <dt>
-<dd> 5. Push the other patches that were popped in step (1).</dl>
+</dt><dd> 5. Push the other patches that were popped in step (1).</dd></dl>
 <p> Conflicts can occur whenever we push a patch; that is, in step (2) and (5). If there are conflicts, the command will stop so that you can resolve them.</p>
 <h2>OPTIONS</h2>
 <p> -n NAME, &#8211;name NAME</p>
 <dl>
 <dt>
-<dd> Name of squashed patch.</dl>
+</dt><dd> Name of squashed patch.</dd></dl>
 <p> -m MESSAGE, &#8211;message MESSAGE</p>
 <dl>
 <dt>
-<dd> Use MESSAGE instead of invoking the editor.</dl>
+</dt><dd> Use MESSAGE instead of invoking the editor.</dd></dl>
 <p> -f FILE, &#8211;file FILE</p>
 <dl>
 <dt>
-<dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dl>
+</dt><dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dd></dl>
 <p> &#8211;save-template FILE</p>
 <dl>
 <dt>
-<dd> Instead of running the command, just write the message template to FILE, and exit. (If FILE is &quot;-&quot;, write to stdout.) </p>
+</dt><dd> Instead of running the command, just write the message template to FILE, and exit. (If FILE is &quot;-&quot;, write to stdout.) </dd>
 <p> When driving StGit from another program, it is often useful to first call a command with <i>&#8211;save-template</i>, then let the user edit the message, and then call the same command with <i>&#8211;file</i>.</dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>
+</p>

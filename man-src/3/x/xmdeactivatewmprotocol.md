@@ -17,10 +17,10 @@ description: "XmDeactivateWMProtocol — A VendorShell convenience interface tha
 <h2>Description</h2>
 <p><code>XmDeactivateWMProtocol</code> is a convenience interface. It calls <code>XmDeactivateProtocol</code> with the property value set to the atom returned by interning <code>WM_PROTOCOLS</code>.</p>
 <dl COMPACT>
-<dt><i>shell</i></p>
-<dd>Specifies the widget with which the protocol property is associated</p>
-<dt><i>protocol</i></p>
-<dd>Specifies the protocol atom</dl>
+<dt><i>shell</i></dt>
+<dd>Specifies the widget with which the protocol property is associated</dd>
+<dt><i>protocol</i></dt>
+<dd>Specifies the protocol atom</dd></dl>
 <p> For a complete definition of VendorShell and its associated resources, see <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-xmactivatewmprotocol/">XmActivateWMProtocol</a></code>(3), <code><a href="/docs/linux/man/3-xmdeactivateprotocol/">XmDeactivateProtocol</a></code>(3), and <code><a href="/docs/linux/man/3-xminternatom/">XmInternAtom</a></code>(3).</p>

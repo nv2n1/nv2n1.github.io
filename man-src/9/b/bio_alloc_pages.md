@@ -15,11 +15,11 @@ bio_alloc_pages - allocates a single page for each bvec in a bio
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>bio to allocate pages for</dl>
+<dl><dd></dd><dd>bio to allocate pages for</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>flags for allocation</dl>
+<dl><dd>flags for allocation</dd></dl>
 
 <h2>Description</h2>
 

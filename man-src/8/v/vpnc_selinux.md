@@ -87,8 +87,8 @@ description: "vpnc_selinux – Security Enhanced Linux Policy for the vpnc proce
 <p> <code>vpnc_exec_t</code> </p>
 <p> &#8211; Set files with the vpnc_exec_t type, if you want to transition an executable to the vpnc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/vpnc, /usr/sbin/vpnc, /usr/bin/openconnect </p>
+<dt>Paths:</dt>
+<dd>/sbin/vpnc, /usr/sbin/vpnc, /usr/bin/openconnect </dd>
 </dl>
 <p> <code>vpnc_tmp_t</code> </p>
 <p> &#8211; Set files with the vpnc_tmp_t type, if you want to store vpnc temporary files in the /tmp directories. </p>

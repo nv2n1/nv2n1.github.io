@@ -34,7 +34,7 @@ int
 <code>Tcl_UniCharIsWordChar</code>(<i>ch</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>ch</i> (in) The Tcl_UniChar to be examined. </p>
+<dd>int <i>ch</i> (in) The Tcl_UniChar to be examined. </dd>
 </dl>
 <h2>Description</h2>
 <p>All of the routines described examine Tcl_UniChars and return a boolean value. A non-zero return value means that the character does belong to the character class associated with the called routine. The rest of this document just describes the character classes associated with the various routines. </p>

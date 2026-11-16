@@ -14,16 +14,16 @@ description: "usb_buffer_unmap_sg – free DMA mapping(s) for a scatterlist"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to which the scatterlist will be mapped</dl>
+</dd><dd>device to which the scatterlist will be mapped</dd></dl>
 <p> <i>is_in</i></p>
 <dl>
-<dd>mapping transfer direction</dl>
+<dd>mapping transfer direction</dd></dl>
 <p> <i>sg</i></p>
 <dl>
-<dd>the scatterlist to unmap</dl>
+<dd>the scatterlist to unmap</dd></dl>
 <p> <i>n_hw_ents</i></p>
 <dl>
-<dd>the positive return value from usb_buffer_map_sg</dl>
+<dd>the positive return value from usb_buffer_map_sg</dd></dl>
 <h2>Description</h2>
 <p>Reverses the effect of <code>usb_buffer_map_sg</code>.</p>
 <h2>Copyright</h2>

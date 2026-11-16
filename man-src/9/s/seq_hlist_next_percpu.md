@@ -14,16 +14,16 @@ description: "seq_hlist_next_percpu – move to the next position of the percpu 
 <p><i>v</i></p>
 <dl>
 <dd>
-<dd>pointer to current hlist_node</dl>
+</dd><dd>pointer to current hlist_node</dd></dl>
 <p> <i>head</i></p>
 <dl>
-<dd>pointer to percpu array of struct hlist_heads</dl>
+<dd>pointer to percpu array of struct hlist_heads</dd></dl>
 <p> <i>cpu</i></p>
 <dl>
-<dd>pointer to cpu &#8220;cursor&#8221;</dl>
+<dd>pointer to cpu &#8220;cursor&#8221;</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>start position of sequence</dl>
+<dd>start position of sequence</dd></dl>
 <h2>Description</h2>
 <p>Called at seq_file-&gt;op-&gt;<code>next</code>.</p>
 <h2>Copyright</h2>

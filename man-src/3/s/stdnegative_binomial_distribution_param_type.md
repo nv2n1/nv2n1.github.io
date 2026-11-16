@@ -15,17 +15,8 @@ description: "std::negative_binomial_distribution< _IntType >::param_type –"
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_IntType __k=1, double __p=0.5)
-
-
-
 _IntType k () const
-
-
-
 double p () const
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>
 <h2>Detailed Description</h2>

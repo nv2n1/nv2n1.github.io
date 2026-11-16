@@ -14,10 +14,10 @@ description: "FcDefaultSubstitute – Perform default substitutions in a pattern
 <h2>Description</h2>
 <p>Supplies default values for underspecified font patterns:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Patterns without a specified style or weight are set to Medium</p>
-<dt>&bull;</p>
-<dd>Patterns without a specified style or slant are set to Roman</p>
-<dt>&bull;</p>
-<dd>Patterns without a specified pixel size are given one computed from any specified point size (default 12), dpi (default 75) and scale (default 1). </p>
+<dt>&bull;</dt>
+<dd>Patterns without a specified style or weight are set to Medium</dd>
+<dt>&bull;</dt>
+<dd>Patterns without a specified style or slant are set to Roman</dd>
+<dt>&bull;</dt>
+<dd>Patterns without a specified pixel size are given one computed from any specified point size (default 12), dpi (default 75) and scale (default 1). </dd>
 </dl>

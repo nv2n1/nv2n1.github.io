@@ -13,38 +13,38 @@ description: "local.users – The SELinux local users configuration file"
 <p> This file is only read by <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3) when <code>SETLOCALDEFS</code> in the SELinux <i>config</i> file (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)) is set to <i>1</i>. </p>
 <p> <code>selinux_users_path</code>(3) will return the active policy path to the directory where this file is located. The default local users file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/users/local.users</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/users/local.users</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)).</p>
 <h2>File Format</h2>
 <p>The file consists of one or more entries terminated with &#8216;<code>;</code>&#8216;, each on a separate line as follows:</p>
 <dl>
-<dd><code>user </code><i>seuser_id </i><code>roles </code><i>role_id</i> [[<code>level </code><i>level</i>] [<code>range </code><i>range</i>]]<code>;</code></dl>
+<dd><code>user </code><i>seuser_id </i><code>roles </code><i>role_id</i> [[<code>level </code><i>level</i>] [<code>range </code><i>range</i>]]<code>;</code></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><code>user</code></p>
+<dd><code>user</code></dd>
 <dl>
-<dd>The user keyword.</dl>
+<dd>The user keyword.</dd></dl>
 <p> <i>seuser_id</i></p>
 <dl>
-<dd>The SELinux user identifier.</dl>
+<dd>The SELinux user identifier.</dd></dl>
 <p> <code>roles</code></p>
 <dl>
-<dd>The roles keyword.</dl>
+<dd>The roles keyword.</dd></dl>
 <p> <i>role_id</i></p>
 <dl>
-<dd>One or more previously declared role identifiers. Multiple role identifiers consist of a space separated list enclosed in braces &#8216;{}&#8217;.</dl>
+<dd>One or more previously declared role identifiers. Multiple role identifiers consist of a space separated list enclosed in braces &#8216;{}&#8217;.</dd></dl>
 <p> <code>level</code></p>
 <dl>
-<dd>If MLS/MCS is configured, the level keyword.</dl>
+<dd>If MLS/MCS is configured, the level keyword.</dd></dl>
 <p> <i>level</i></p>
 <dl>
-<dd>The users default security level. Note that only the sensitivity component of the level (e.g. s0) is required.</dl>
+<dd>The users default security level. Note that only the sensitivity component of the level (e.g. s0) is required.</dd></dl>
 <p> <code>range</code></p>
 <dl>
-<dd>If MLS/MCS is configured, the range keyword.</dl>
+<dd>If MLS/MCS is configured, the range keyword.</dd></dl>
 <p> <i>range</i></p>
 <dl>
-<dd>The current and clearance levels that the user can run. These are separated by a hyphen &#8216;<code>&#8211;</code>&#8216; as shown in the <code>EXAMPLE</code> section.</dl>
+<dd>The current and clearance levels that the user can run. These are separated by a hyphen &#8216;<code>&#8211;</code>&#8216; as shown in the <code>EXAMPLE</code> section.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># ./users/local.users<br />

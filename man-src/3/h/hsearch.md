@@ -42,14 +42,14 @@ void hdestroy_r(struct hsearch_data *htab);
 <h2>ERRORS</h2>
 <p> <code>hcreate_r</code>() and <code>hdestroy_r</code>() can fail for the following reasons:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>htab</i> is NULL.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>htab</i> is NULL.</dd></dl>
 <p> <code>hsearch</code>() and <code>hsearch_r</code>() can fail for the following reasons:</p>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> <i>action</i> was <code>ENTER</code>, <i>key</i> was not found in the table, and there was no room in the table to add a new entry.</p>
-<dt><code>ESRCH</code></p>
-<dd> <i>action</i> was <code>FIND</code>, and <i>key</i> was not found in the table.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> <i>action</i> was <code>ENTER</code>, <i>key</i> was not found in the table, and there was no room in the table to add a new entry.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> <i>action</i> was <code>FIND</code>, and <i>key</i> was not found in the table.</dd></dl>
 <p> POSIX.1 specifies only the <code>ENOMEM</code> error.</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

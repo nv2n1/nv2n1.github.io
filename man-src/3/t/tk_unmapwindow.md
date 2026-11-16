@@ -15,7 +15,7 @@ Tk_Window
 <code>Tk_UnmapWindow</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures may be used to map and unmap windows managed by Tk. <code>Tk_MapWindow</code> maps the window given by <i>tkwin</i>, and also creates an X window corresponding to <i>tkwin</i> if it does not already exist. See the <code>Tk_CreateWindow</code> manual entry for information on deferred window creation. <code>Tk_UnmapWindow</code> unmaps <i>tkwin</i>&#8216;s window from the screen. </p>

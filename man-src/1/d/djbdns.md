@@ -12,37 +12,37 @@ description: "djbdns – djbdns DNS tools"
 <h2>DESCRIPTION</h2>
 <p> <code>djbdns</code> is a collection of DNS tools, originally written by Dr D J Bernstein. This release of djbdns includes the following ones </p>
 <dl>
-<dt>+ dnscache</p>
+<dt>+ dnscache</dt>
 <dd>
-<dt>+ dnsfilter</p>
+</dd><dt>+ dnsfilter</dt>
 <dd>
-<dt>+ dnsip</p>
+</dd><dt>+ dnsip</dt>
 <dd>
-<dt>+ dnsipq</p>
+</dd><dt>+ dnsipq</dt>
 <dd>
-<dt>+ dnsmx</p>
+</dd><dt>+ dnsmx</dt>
 <dd>
-<dt>+ dnsname</p>
+</dd><dt>+ dnsname</dt>
 <dd>
-<dt>+ dnsq</p>
+</dd><dt>+ dnsq</dt>
 <dd>
-<dt>+ dnsqr</p>
+</dd><dt>+ dnsqr</dt>
 <dd>
-<dt>+ dnstrace</p>
+</dd><dt>+ dnstrace</dt>
 <dd>
-<dt>+ dnstracesort</p>
+</dd><dt>+ dnstracesort</dt>
 <dd>
-<dt>+ dnstxt</p>
+</dd><dt>+ dnstxt</dt>
 <dd>
-<dt>+ tinydns</p>
+</dd><dt>+ tinydns</dt>
 <dd>
-<dt>+ tinydns-data</p>
+</dd><dt>+ tinydns-data</dt>
 <dd>
-<dt>+ tinydns-edit</p>
+</dd><dt>+ tinydns-edit</dt>
 <dd>
-<dt>+ tinydns-get</p>
+</dd><dt>+ tinydns-get</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;pj.pandit [at] yahoo.co.in&gt; </p>
 <h2>AUTHOR</h2>

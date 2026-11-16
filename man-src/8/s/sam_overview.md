@@ -15,17 +15,17 @@ description: "sam_overview – Overview of the Simple Availability Manager"
 <p> The main features of SAM include: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>A configurable recovery policy.</p>
-<dt>&bull;</p>
-<dd>A configurable time interval for health check operations.</p>
-<dt>&bull;</p>
-<dd>A notification via signal before recovery action is taken.</p>
-<dt>&bull;</p>
-<dd>A mechanism to indicate to the application the number of times an active process has been created by the SAM server.</p>
-<dt>&bull;</p>
-<dd>Both application driven health checking and event driven health checking.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>A configurable recovery policy.</dd>
+<dt>&bull;</dt>
+<dd>A configurable time interval for health check operations.</dd>
+<dt>&bull;</dt>
+<dd>A notification via signal before recovery action is taken.</dd>
+<dt>&bull;</dt>
+<dd>A mechanism to indicate to the application the number of times an active process has been created by the SAM server.</dd>
+<dt>&bull;</dt>
+<dd>Both application driven health checking and event driven health checking.</dd></dl>
 </dl>
 <h2>Initializing SAM</h2>
 <p>The SAM library is initialized by <code><a href="/docs/linux/man/3-sam_initialize/">sam_initialize</a>(3)</code>. <code>sam_initalize(3)</code> may only be called once per process. Calling it more then once has undefined results and is not recommended or tested.</p>
@@ -41,11 +41,11 @@ description: "sam_overview – Overview of the Simple Availability Manager"
 <p>SAM has special policies (<i>SAM_RECOVERY_POLICY_QUIT</i> and <i>SAM_RECOVERY_POLICY_RESTART</i>) for integration with quorum service. This policies changes SAM behaviour in two aspects.</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Call of <code><a href="/docs/linux/man/3-sam_start/">sam_start</a>(3)</code> blocks until corosync becomes quorate</p>
-<dt>&bull;</p>
-<dd>User selected recovery action is taken immediately after lost of quorum.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Call of <code><a href="/docs/linux/man/3-sam_start/">sam_start</a>(3)</code> blocks until corosync becomes quorate</dd>
+<dt>&bull;</dt>
+<dd>User selected recovery action is taken immediately after lost of quorum.</dd></dl>
 </dl>
 <h2>Storing user data</h2>
 <p>Sometimes there is need to store some data, which survives between instances. One can in such case use files, databases, &#8230; or much simpler in memory solution presented by <code><a href="/docs/linux/man/3-sam_data_store/">sam_data_store</a>(3)</code>, <code><a href="/docs/linux/man/3-sam_data_restore/">sam_data_restore</a>(3)</code> and <code><a href="/docs/linux/man/3-sam_data_getsize/">sam_data_getsize</a>(3)</code> functions.</p>
@@ -53,15 +53,15 @@ description: "sam_overview – Overview of the Simple Availability Manager"
 <p>SAM has policy flag used for confdb system integration (<i>SAM_RECOVERY_POLICY_CONFDB</i>). If process is registered with this flag, new confdb object PROCESS_NAME:PID is created with following keys:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><i>recovery</i> &#8211; will be quit or restart depending on policy</p>
-<dt>&bull;</p>
-<dd><i>poll_period</i> &#8211; period of health checking in milliseconds</p>
-<dt>&bull;</p>
-<dd><i>last_updated</i> &#8211; Timestamp (in nanoseconds) of the last health check.</p>
-<dt>&bull;</p>
-<dd><i>state</i> &#8211; state of process (can be one of registered, started, failed, waiting for quorum)</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><i>recovery</i> &#8211; will be quit or restart depending on policy</dd>
+<dt>&bull;</dt>
+<dd><i>poll_period</i> &#8211; period of health checking in milliseconds</dd>
+<dt>&bull;</dt>
+<dd><i>last_updated</i> &#8211; Timestamp (in nanoseconds) of the last health check.</dd>
+<dt>&bull;</dt>
+<dd><i>state</i> &#8211; state of process (can be one of registered, started, failed, waiting for quorum)</dd></dl>
 </dl>
 <p> Object is automatically deleted if process exits with stopped health checking. </p>
 <p> Confdb integration with corosync wathdog can be used in implicit and explicit way. </p>

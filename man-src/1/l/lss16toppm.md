@@ -17,8 +17,8 @@ description: "lss16toppm — Convert an LSS-16 image to PPM"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-map</code></p>
-<dd> Output the color map to standard error.</dl>
+<dt><code>-map</code></dt>
+<dd> Output the color map to standard error.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmtolss16/">ppmtolss16</a></code>(1) </p>
 <h2>AUTHOR</h2>

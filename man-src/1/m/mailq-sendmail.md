@@ -16,22 +16,22 @@ description: "mailq – print the mail queue"
 <p> <code>Mailq</code> is identical to &#8220;sendmail -bp&#8221;. </p>
 <p> The relevant options are as follows:</p>
 <dl COMPACT>
-<dt><code>-Ac</code></p>
-<dd>Show the mail submission queue specified in <i>/etc/mail/submit.cf</i> instead of the MTA queue specified in <i>/etc/mail/sendmail.cf</i>.</p>
-<dt><code>-qL</code></p>
-<dd>Show the &quot;lost&quot; items in the mail queue instead of the normal queue items.</p>
-<dt><code>-qQ</code></p>
-<dd>Show the quarantined items in the mail queue instead of the normal queue items.</p>
-<dt><code>-q</code>[<i>!</i>]I substr</p>
-<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the queue id or not when <i>!</i> is specified.</p>
-<dt><code>-q</code>[<i>!</i>]Q substr</p>
-<dd>Limit processed jobs to quarantined jobs containing <i>substr</i> as a substring of the quarantine reason or not when <i>!</i> is specified.</p>
-<dt><code>-q</code>[<i>!</i>]R substr</p>
-<dd>Limit processed jobs to those containing <i>substr</i> as a substring of one of the recipients or not when <i>!</i> is specified.</p>
-<dt><code>-q</code>[<i>!</i>]S substr</p>
-<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the sender or not when <i>!</i> is specified.</p>
-<dt><code>-v</code></p>
-<dd>Print verbose information. This adds the priority of the message and a single character indicator (&#8220;+&#8221; or blank) indicating whether a warning message has been sent on the first line of the message. Additionally, extra lines may be intermixed with the recipients indicating the &#8220;controlling user&#8221; information; this shows who will own any programs that are executed on behalf of this message and the name of the alias this command expanded from, if any. Moreover, status messages for each recipient are printed if available.</dl>
+<dt><code>-Ac</code></dt>
+<dd>Show the mail submission queue specified in <i>/etc/mail/submit.cf</i> instead of the MTA queue specified in <i>/etc/mail/sendmail.cf</i>.</dd>
+<dt><code>-qL</code></dt>
+<dd>Show the &quot;lost&quot; items in the mail queue instead of the normal queue items.</dd>
+<dt><code>-qQ</code></dt>
+<dd>Show the quarantined items in the mail queue instead of the normal queue items.</dd>
+<dt><code>-q</code>[<i>!</i>]I substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the queue id or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]Q substr</dt>
+<dd>Limit processed jobs to quarantined jobs containing <i>substr</i> as a substring of the quarantine reason or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]R substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of one of the recipients or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]S substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the sender or not when <i>!</i> is specified.</dd>
+<dt><code>-v</code></dt>
+<dd>Print verbose information. This adds the priority of the message and a single character indicator (&#8220;+&#8221; or blank) indicating whether a warning message has been sent on the first line of the message. Additionally, extra lines may be intermixed with the recipients indicating the &#8220;controlling user&#8221; information; this shows who will own any programs that are executed on behalf of this message and the name of the alias this command expanded from, if any. Moreover, status messages for each recipient are printed if available.</dd></dl>
 <p> Several sendmail.cf options influence the behavior of the <code>mailq</code> utility: The number of items printed per queue group is restricted by <code>MaxQueueRunSize</code> if that value is set. The status character <code>*</code> is not printed for some values of <code>QueueSortOrder,</code> e.g., filename, random, modification, and none, unless a <code>-q</code> option is used to limit the processed jobs. </p>
 <p> The <code>mailq</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>See Also</h2>

@@ -15,11 +15,11 @@ skb_put_padto - increase size and pad an skbuff up to a minimal size
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to pad</dl>
+<dl><dd></dd><dd>buffer to pad</dd></dl>
  
 
  <i>len</i>
-<dl><dd>minimal length</dl>
+<dl><dd>minimal length</dd></dl>
 
 <h2>Description</h2>
 

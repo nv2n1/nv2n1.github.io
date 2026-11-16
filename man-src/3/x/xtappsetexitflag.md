@@ -11,12 +11,12 @@ description: "XtAppSetExitFlag, XtAppGetExitFlag – thread support functions"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtAppSetExitFlag(XtAppContext <i>app_context</i>);</p>
-<dd>Boolean XtAppGetExitFlag(XtAppContext <i>app_context</i>);</dl>
+<dd>void XtAppSetExitFlag(XtAppContext <i>app_context</i>);</dd>
+<dd>Boolean XtAppGetExitFlag(XtAppContext <i>app_context</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd></dl>
 <h2>Description</h2>
 <p>To indicate that an application context should exit, use <code>XtAppSetExitFlag</code>. </p>
 <p> To test the exit status of an application context, use <code>XtAppGetExitFlag</code>.</p>

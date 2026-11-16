@@ -13,10 +13,10 @@ description: "pskc_set_key_algparm_resp_checkdigits – API function"
 void pskc_set_key_algparm_resp_checkdigits(pskc_key_t *key, int checkdigit);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int checkdigit</p>
-<dd>non-zero to indicate setting true CheckDigit, 0 otherwise.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int checkdigit</dt>
+<dd>non-zero to indicate setting true CheckDigit, 0 otherwise.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key AlgorithmParameters ResponseFormat CheckDigits value. This attribute indicates whether the device needs to append a Luhn check digit, as defined in [ISOIEC7812], to the response. This is only valid if the &#8216;Encoding&#8217; attribute is set to &#8216;DECIMAL&#8217;. If the value is TRUE, then the device will append a Luhn check digit to the response. If the value is FALSE, then the device will not append a Luhn check digit to the response.</p>
 <h2>Since</h2>

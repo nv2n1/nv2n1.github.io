@@ -14,7 +14,7 @@ Tk_Window
 <code>Tk_HWNDToWindow</code>(<i>hwnd</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>HWND <i>hwnd</i> (in) Windows handle for the window. </p>
+<dd>HWND <i>hwnd</i> (in) Windows handle for the window. </dd>
 </dl>
 <h2>Description</h2>
 <p>Given a Windows HWND window identifier, this procedure returns the corresponding Tk_Window handle. If there is no Tk_Window corresponding to <i>hwnd</i> then NULL is returned. </p>

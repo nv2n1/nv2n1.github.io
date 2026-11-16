@@ -13,22 +13,22 @@ description: "esparse – ECMAScript Parser using Esprima"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> esparse [options] file.js</dl>
+</dt><dd> esparse [options] file.js</dd></dl>
 <p> Available options:</p>
 <dl>
-<dt><code>&#8211;comment</code></p>
-<dd> Gather all line and block comments in an array</p>
-<dt><code>&#8211;loc</code></p>
-<dd> Include line-column location info for each syntax node</p>
-<dt><code>&#8211;range</code></p>
-<dd> Include index-based range for each syntax node</p>
-<dt><code>&#8211;raw</code></p>
-<dd> Display the raw value of literals</p>
-<dt><code>&#8211;tokens</code></p>
-<dd> List all tokens in an array</p>
-<dt><code>&#8211;tolerant</code></p>
-<dd> Tolerate errors on a best-effort basis (experimental)</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Shows program version </p>
+<dt><code>&#8211;comment</code></dt>
+<dd> Gather all line and block comments in an array</dd>
+<dt><code>&#8211;loc</code></dt>
+<dd> Include line-column location info for each syntax node</dd>
+<dt><code>&#8211;range</code></dt>
+<dd> Include index-based range for each syntax node</dd>
+<dt><code>&#8211;raw</code></dt>
+<dd> Display the raw value of literals</dd>
+<dt><code>&#8211;tokens</code></dt>
+<dd> List all tokens in an array</dd>
+<dt><code>&#8211;tolerant</code></dt>
+<dd> Tolerate errors on a best-effort basis (experimental)</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Shows program version </dd>
 </dl>
 <h2>Index</h2>

@@ -27,14 +27,10 @@ result_type ResultType
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 struct less_than_7 : std::unary_function&lt;int, bool&gt;
-
 {
     bool operator()(int i) const
     {
@@ -42,7 +38,6 @@ struct less_than_7 : std::unary_function&lt;int, bool&gt;
     }
 };
 int main()
-
 {
     std::vector&lt;int&gt; v;
     for (int i = 0; i &lt; 10; ++i)

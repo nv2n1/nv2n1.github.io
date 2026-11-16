@@ -12,7 +12,6 @@ std::experimental::filesystem::recursive_directory_iterator::operator= - std::ex
 
 <pre><code>recursive_directory_iterator &amp;operator=(const recursive_directory_iterator &amp;) = default;
 (filesystem TS)
-
     recursive_directory_iterator &amp;
     operator=(recursive_directory_iterator &amp;&amp;) = default;
 (filesystem TS)</code></pre> 

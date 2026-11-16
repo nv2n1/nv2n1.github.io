@@ -15,19 +15,19 @@ description: "digest_file_auth – File based digest authentication helper for S
 <p><code>digest_file_auth</code> is an installed binary authentication program for Squid. It handles digest authentication protocol and authenticates against a text file backend. This program will automatically detect the existence of a concurrecy channel-ID and adjust appropriately. It may be used with any value 0 or above for the auth_param children concurrency= parameter.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Accept digest hashed passwords rather than plaintext in the password file</dl>
+<dt><code>-c</code></dt>
+<dd>Accept digest hashed passwords rather than plaintext in the password file</dd></dl>
 <h2>Configuration</h2>
 <p>Username database file format:</p>
 <dl>
-<dt>&#8211; comment lines are possible and should start with a &#8216;#&#8217;;</p>
+<dt>&#8211; comment lines are possible and should start with a &#8216;#&#8217;;</dt>
 <dd>
-<dt>&#8211; empty or blank lines are possible;</p>
+</dd><dt>&#8211; empty or blank lines are possible;</dt>
 <dd>
-<dt>&#8211; plaintext entry format is username:password</p>
+</dd><dt>&#8211; plaintext entry format is username:password</dt>
 <dd>
-<dt>&#8211; HA1 entry format is username:realm:HA1</p>
-<dd></dl>
+</dd><dt>&#8211; HA1 entry format is username:realm:HA1</dt>
+<dd></dd></dl>
 <p> To build a directory integrated backend, you need to be able to calculate the HA1 returned to squid. To avoid storing a plaintext password you can calculate <code>MD5(username:realm:password) </code> when the user changes their password, and store the tuple <code>username:realm:HA1.</code> then find the matching <code>username:realm </code> when squid asks for the HA1. </p>
 <p> This implementation could be improved by using such a triple for the file format. However storing such a triple does little to improve security: If compromised the <code>username:realm:HA1 </code> combination is &quot;plaintext equivalent&quot; &#8211; for the purposes of digest authentication they allow the user access. Password syncronisation is not tackled by digest &#8211; just preventing on the wire compromise.</p>
 <h2>Author</h2>

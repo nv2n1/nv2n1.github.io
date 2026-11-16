@@ -44,46 +44,45 @@ zipdetails[-v][--scan] zipfile.zip
 
 <dl>
 <dt>-h
-<dd> Display help
-<dt>--scan
-<dd> Walk the zip file loking for possible zip records. Can be error-prone. See ``Scan-Mode''
-<dt>-v
-<dd> Enable Verbose mode. See ``Verbose Output''.
-<dt>--version
-<dd> Display version number of the program and exit.</dl>
+</dt><dd> Display help
+</dd><dt>--scan
+</dt><dd> Walk the zip file loking for possible zip records. Can be error-prone. See ``Scan-Mode''
+</dd><dt>-v
+</dt><dd> Enable Verbose mode. See ``Verbose Output''.
+</dd><dt>--version
+</dt><dd> Display version number of the program and exit.</dd></dl>
 
 <h3>Default Output</h3>
 
  By default zipdetails will output the details of the zip file in three columns.
 <dl>
 <dt>Column 1
-<dd> This contains the offset from the start of the file in hex.
-<dt>Column 2
-<dd> This contains a textual description of the field.
-<dt>Column 3
-<dd> If the field contains a numeric value it will be displayed in hex. Zip stores most numbers in little-endian format - the value displayed will have the little-endian encoding removed. 
-
- Next, is an optional description of what the value means.</dl>
+</dt><dd> This contains the offset from the start of the file in hex.
+</dd><dt>Column 2
+</dt><dd> This contains a textual description of the field.
+</dd><dt>Column 3
+</dt><dd> If the field contains a numeric value it will be displayed in hex. Zip stores most numbers in little-endian format - the value displayed will have the little-endian encoding removed. 
+ Next, is an optional description of what the value means.</dd></dl>
 
 <h3>Verbose Output</h3>
 
  If the <tt>&quot;-v&quot;</tt> option is present, column 1 is expanded to include
 <dl>
 <dt>&bull;
-<dd> The offset from the start of the file in hex.
-<dt>&bull;
-<dd> The length of the field in hex.
-<dt>&bull;
-<dd> A hex dump of the bytes in field in the order they are stored in the zip file.</dl>
+</dt><dd> The offset from the start of the file in hex.
+</dd><dt>&bull;
+</dt><dd> The length of the field in hex.
+</dd><dt>&bull;
+</dt><dd> A hex dump of the bytes in field in the order they are stored in the zip file.</dd></dl>
 
 <h2>LIMITATIONS</h2>
 
  The following zip file features are not supported by this program:
 <dl>
 <dt>&bull;
-<dd> Multi-part archives.
-<dt>&bull;
-<dd> The strong encryption features defined in the ``<font SIZE="-1">APPNOTE''</font> document.</dl>
+</dt><dd> Multi-part archives.
+</dd><dt>&bull;
+</dt><dd> The strong encryption features defined in the ``<font SIZE="-1">APPNOTE''</font> document.</dd></dl>
 
 <h2>TODO</h2>
 
@@ -118,14 +117,14 @@ zipdetails[-v][--scan] zipfile.zip
 
 
 <dt><a HREF="#lbAJ">LIMITATIONS</a>
-<dd>
-<dt><a HREF="#lbAK">TODO</a>
-<dd>
-<dt><a HREF="#lbAL">SUPPORT</a>
-<dd>
-<dt><a HREF="#lbAM">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbAN">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbAO">COPYRIGHT</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">TODO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">SUPPORT</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">COPYRIGHT</a>
+</dt><dd></dd></dl>

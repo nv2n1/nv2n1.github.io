@@ -11,16 +11,16 @@ description: "XkbGetUpdatedMap – Update the client or server map information i
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbGetUpdatedMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask selecting subcomponents to populate</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description to be updated</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask selecting subcomponents to populate</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description to be updated</dd></dl>
 <h2>Description</h2>
 <p>The <i>which </i> parameter is a bitwise inclusive OR of the masks in Table 1. If the needed components of the <i>xkb </i> structure are not already allocated, <i>XkbGetUpdatedMap </i> allocates them. <i>XkbGetUpdatedMap </i> fetches the requested information for the device specified in the XkbDescRec passed in the <i>xkb </i> parameter. </p>
 <table>
@@ -140,8 +140,8 @@ description: "XkbGetUpdatedMap – Update the client or server map information i
 <p> <i>XkbGetUpdatedMap </i> is synchronous; it queries the server for the desired information, waits for a reply, and then returns. If successful, <i>XkbGetUpdatedMap </i> returns Success. If unsuccessful, <i>XkbGetUpdatedMap </i> returns one of the following: BadAlloc (unable to allocate a component in the XkbDescRec structure), BadValue (some mask bits in <i>which </i> are undefined), BadImplementation (a compatible version of the Xkb extension is not available in the server or the reply from the server was invalid).</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>Success</p>
-<dd>The <i>XkbGetUpdatedMap </i> function returns Success if a reply is received to the server query for the desired information.</dl>
+<dt>Success</dt>
+<dd>The <i>XkbGetUpdatedMap </i> function returns Success if a reply is received to the server query for the desired information.</dd></dl>
 <h2>Structures</h2>
 <p>The complete description of an Xkb keyboard is given by an XkbDescRec. The component structures in the XkbDescRec represent the major Xkb components. </p>
 <pre>typedef struct {
@@ -232,11 +232,11 @@ description: "XkbGetUpdatedMap – Update the client or server map information i
 </table>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbchangetypesofkey/">XkbChangeTypesOfKey</a></code>(3), <code><a href="/docs/linux/man/3-xkbcopykeytype/">XkbCopyKeyType</a></code>(3), <code><a href="/docs/linux/man/3-xkbcopykeytypes/">XkbCopyKeyTypes</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeyactions/">XkbGetKeyActions</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeybehaviors/">XkbGetKeyBehaviors</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeyexplicitcomponents/">XkbGetKeyExplicitComponents</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeymodifiermap/">XkbGetKeyModifierMap</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeysyms/">XkbGetKeySyms</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeytypes/">XkbGetKeyTypes</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeyactions/">XkbResizeKeyActions</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeysyms/">XkbResizeKeySyms</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeytype/">XkbResizeKeyType</a></code>(3), <code>XkbGetVirtualModMap</code>(3), <code><a href="/docs/linux/man/3-xkbgetvirtualmods/">XkbGetVirtualMods</a></code>(3)</p>

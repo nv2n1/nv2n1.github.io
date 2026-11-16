@@ -15,27 +15,27 @@ CALL SHGETNP (PX, PY, PZ, N, X, Y, Z, IFLAG, IWK, RWK, NP, IER)
 <h2>Description</h2>
 
 <dl><dt>PX
-<dd>(real,input) The X coordinate value for a point P whose nearest neighbor is to be found.
-<dt>PY
-<dd>(real,input) The Y coordinate value for a point P whose nearest neighbor is to be found.
-<dt>PZ
-<dd>(real,input) The Z coordinate value for a point P whose nearest neighbor is to be found.
-<dt>X
-<dd>(real, input) An array containing the X coordinates of the input data points.
-<dt>Y
-<dd>(real, input) An array containing the Y coordinates of the input data points.
-<dt>Z
-<dd>(real, input) An array containing the Z coordinates of the input data points.
-<dt>IFLAG
-<dd>(integer, input) A flag that equals 0 if this is the first call to this subroutine for the given dataset and equals 1 otherwise.
-<dt>IRK
-<dd>(integer, input) An integer workspace dimensioned for at least 2*N.
-<dt>RWK
-<dd>(real, input) A real workspace dimensioned for at least 11*N+6.
-<dt>NP
-<dd>(integer, output) An index such that (X(NP),Y(NP),Z(NP)) is the nearest input data point to P. NP = 0 if IER .NE. 0. On successive calls to this subroutine after the first (that is when IFLAG=1) you can find the Mth closest point to (PX,PY,PZ) with the Mth call. IWK and RWK should not be modified between calls to SHGETNP if you are wanting to find successive nearest neighbors.
-<dt>IER
-<dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for shgrid_errors for details.</dl>
+</dt><dd>(real,input) The X coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>PY
+</dt><dd>(real,input) The Y coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>PZ
+</dt><dd>(real,input) The Z coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>X
+</dt><dd>(real, input) An array containing the X coordinates of the input data points.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing the Y coordinates of the input data points.
+</dd><dt>Z
+</dt><dd>(real, input) An array containing the Z coordinates of the input data points.
+</dd><dt>IFLAG
+</dt><dd>(integer, input) A flag that equals 0 if this is the first call to this subroutine for the given dataset and equals 1 otherwise.
+</dd><dt>IRK
+</dt><dd>(integer, input) An integer workspace dimensioned for at least 2*N.
+</dd><dt>RWK
+</dt><dd>(real, input) A real workspace dimensioned for at least 11*N+6.
+</dd><dt>NP
+</dt><dd>(integer, output) An index such that (X(NP),Y(NP),Z(NP)) is the nearest input data point to P. NP = 0 if IER .NE. 0. On successive calls to this subroutine after the first (that is when IFLAG=1) you can find the Mth closest point to (PX,PY,PZ) with the Mth call. IWK and RWK should not be modified between calls to SHGETNP if you are wanting to find successive nearest neighbors.
+</dd><dt>IER
+</dt><dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for shgrid_errors for details.</dd></dl>
 
 <h2>Usage</h2>
 

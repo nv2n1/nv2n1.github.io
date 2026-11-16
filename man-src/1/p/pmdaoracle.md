@@ -14,26 +14,26 @@ description: "pmdaoracle – Oracle database PMDA"
 <h2>INSTALLATION</h2>
 <p> <code>pmdaoracle</code> uses a configuration file from (in this order):</p>
 <dl>
-<dt>&bull;</p>
-<dd> /etc/pcpdbi.conf</p>
-<dt>&bull;</p>
-<dd> <tt>$PCP_PMDAS_DIR</tt>/oracle/oracle.conf</p>
-<dt>&bull;</p>
-<dd> ./oracle.conf</dl>
+<dt>&bull;</dt>
+<dd> /etc/pcpdbi.conf</dd>
+<dt>&bull;</dt>
+<dd> <tt>$PCP_PMDAS_DIR</tt>/oracle/oracle.conf</dd>
+<dt>&bull;</dt>
+<dd> ./oracle.conf</dd></dl>
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of pmdaoracle.pl, for example:</p>
 <dl>
-<dt>&bull;</p>
-<dd> $username &#8211; username to connect to the database [default: &#8216;SYSTEM&#8217;]</p>
-<dt>&bull;</p>
-<dd> $password &#8211; password to connect to the database [default: &#8216;manager&#8217;]</p>
-<dt>&bull;</p>
-<dd> $host &#8211; host the database is running on [default: &#8216;localhost&#8217;]</p>
-<dt>&bull;</p>
-<dd> $port &#8211; port the database is listening on [default: &#8216;1521&#8217;]</p>
-<dt>&bull;</p>
-<dd> $os_user &#8211; operating system username (PMDA will run with the corresponding user id) [default: oracle]</p>
-<dt>&bull;</p>
-<dd> @sids &#8211; an array of $ORACLE_SID database identifiers [default: (&#8216;master&#8217;)]</dl>
+<dt>&bull;</dt>
+<dd> $username &#8211; username to connect to the database [default: &#8216;SYSTEM&#8217;]</dd>
+<dt>&bull;</dt>
+<dd> $password &#8211; password to connect to the database [default: &#8216;manager&#8217;]</dd>
+<dt>&bull;</dt>
+<dd> $host &#8211; host the database is running on [default: &#8216;localhost&#8217;]</dd>
+<dt>&bull;</dt>
+<dd> $port &#8211; port the database is listening on [default: &#8216;1521&#8217;]</dd>
+<dt>&bull;</dt>
+<dd> $os_user &#8211; operating system username (PMDA will run with the corresponding user id) [default: oracle]</dd>
+<dt>&bull;</dt>
+<dd> @sids &#8211; an array of $ORACLE_SID database identifiers [default: (&#8216;master&#8217;)]</dd></dl>
 <p> In order to test your local settings, a simple script is provided that will connect and disconnect from the database &#8211; verifying fundamental configuration is in place before continuing on. If the <code>$PCP_PMDAS_DIR/oracle/connect.pl</code> script cannot connect, do not proceed with installation of the PMDA as it will be unsuccessful. Correct your local settings first. </p>
 <p> Once this is setup, you can access the names and values for the oracle performance metrics by doing the following as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/oracle </p>
@@ -55,20 +55,20 @@ oracle.control.connected
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/pcpdbi.conf</code></p>
-<dd> configuration file for all <font SIZE="-1">PCP</font> database monitors</p>
-<dt><code>$PCP_PMDAS_DIR/oracle/oracle.conf</code></p>
-<dd> configuration file for <code>pmdaoracle</code></p>
-<dt><code>$PCP_PMDAS_DIR/oracle/sample.conf</code></p>
-<dd> example configuration file for <code>pmdaoracle</code> using $LD_LIBRARY_PATH</p>
-<dt><code>$PCP_PMDAS_DIR/oracle/connect.pl</code></p>
-<dd> configuration test script for <code>Oracle</code> database connectivity</p>
-<dt><code>$PCP_PMDAS_DIR/oracle/Install</code></p>
-<dd> installation script for the <code>pmdaoracle</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/oracle/Remove</code></p>
-<dd> undo installation script for the <code>pmdaoracle</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/oracle.log</code></p>
-<dd> default log file for error messages from <code>pmdaoracle</code></dl>
+<dt><code>/etc/pcpdbi.conf</code></dt>
+<dd> configuration file for all <font SIZE="-1">PCP</font> database monitors</dd>
+<dt><code>$PCP_PMDAS_DIR/oracle/oracle.conf</code></dt>
+<dd> configuration file for <code>pmdaoracle</code></dd>
+<dt><code>$PCP_PMDAS_DIR/oracle/sample.conf</code></dt>
+<dd> example configuration file for <code>pmdaoracle</code> using $LD_LIBRARY_PATH</dd>
+<dt><code>$PCP_PMDAS_DIR/oracle/connect.pl</code></dt>
+<dd> configuration test script for <code>Oracle</code> database connectivity</dd>
+<dt><code>$PCP_PMDAS_DIR/oracle/Install</code></dt>
+<dd> installation script for the <code>pmdaoracle</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/oracle/Remove</code></dt>
+<dd> undo installation script for the <code>pmdaoracle</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/oracle.log</code></dt>
+<dd> default log file for error messages from <code>pmdaoracle</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

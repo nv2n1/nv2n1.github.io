@@ -21,29 +21,29 @@ mongoc_collection_find (mongoc_collection_t *collection,
  BSON_GNUC_WARN_UNUSED_RESULT;</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>skip</code></p>
-<dd>A uint32_t of number of documents to skip or 0.</dl>
+<dt><code>skip</code></dt>
+<dd>A uint32_t of number of documents to skip or 0.</dd></dl>
 <dl COMPACT>
-<dt><code>limit</code></p>
-<dd>A uint32_t of max number of documents to return or 0.</dl>
+<dt><code>limit</code></dt>
+<dd>A uint32_t of max number of documents to return or 0.</dd></dl>
 <dl COMPACT>
-<dt><code>batch_size</code></p>
-<dd>A uint32_t containing batch size of document result sets or 0 for default. Default is 100.</dl>
+<dt><code>batch_size</code></dt>
+<dd>A uint32_t containing batch size of document result sets or 0 for default. Default is 100.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> containing the query and options to execute.</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> containing the query and options to execute.</dd></dl>
 <dl COMPACT>
-<dt><code>fields</code></p>
-<dd>A <code>bson_t</code> containing fields to return or <code>NULL</code> \&amp;.</dl>
+<dt><code>fields</code></dt>
+<dd>A <code>bson_t</code> containing fields to return or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> for default read preferences.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> for default read preferences.</dd></dl>
 <h2>Description</h2>
 <p>This function shall execute a query on the underlying <code>collection</code> \&amp;. </p>
 <p> If no options are necessary, <code>query</code> can simply contain a query such as <code>{a:1}</code> \&amp;. If you would like to specify options such as a sort order, the query must be placed inside of <code>{$query: {}}</code> as specified by the server documentation. See the example below for how to properly specify additional options to <code>query</code> \&amp;. </p>
@@ -51,7 +51,7 @@ mongoc_collection_find (mongoc_collection_t *collection,
 <p>A newly allocated <code>mongoc_cursor_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_cursor_destroy/">mongoc_cursor_destroy</a>(3)</code> when no longer in use. If invalid parameters are supplied, <code>NULL</code> may be returned. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Failure to handle the result of this function is a programming error.</dl>
+<dd>Failure to handle the result of this function is a programming error.</dd></dl>
 <h2>Example</h2>
 <pre>#include &lt;mongoc.h&gt;
 #include &lt;stdio.h&gt;
@@ -88,17 +88,17 @@ query = BCON_NEW (&quot;filter&quot;, &quot;{&quot;, &quot;foo&quot;, BCON_INT32
 cursor = mongoc_collection_find (collection, MONGOC_QUERY_NONE, 0, 0, 0, query, NULL, NULL);</pre>
 <p>The &quot;find&quot; command takes different options from the traditional OP_QUERY message. </p>
 <dl COMPACT>
-<dt><code>Query</code></p>
-<dd><code>$query</code> <code>filter</code></dl>
+<dt><code>Query</code></dt>
+<dd><code>$query</code> <code>filter</code></dd></dl>
 <dl COMPACT>
-<dt><code>Sort</code></p>
-<dd><code>$orderby</code> <code>sort</code></dl>
+<dt><code>Sort</code></dt>
+<dd><code>$orderby</code> <code>sort</code></dd></dl>
 <dl COMPACT>
-<dt><code>Show record location</code></p>
-<dd><code>$showDiskLoc</code> <code>showRecordId</code></dl>
+<dt><code>Show record location</code></dt>
+<dd><code>$showDiskLoc</code> <code>showRecordId</code></dd></dl>
 <dl COMPACT>
-<dt><code>Other $-options</code></p>
-<dd><code>$&lt;option name&gt;</code> <code>&lt;option name&gt;</code></dl>
+<dt><code>Other $-options</code></dt>
+<dd><code>$&lt;option name&gt;</code> <code>&lt;option name&gt;</code></dd></dl>
 <p> Most applications should use the OP_QUERY syntax, with &quot;$query&quot;, &quot;$orderby&quot;, and so on, and rely on the driver to convert to the new syntax if needed. There are two caveats: querying documents by a key named &quot;filter&quot;, and using new &quot;find&quot; command options that OP_QUERY does not support. </p>
 <h2>See Also</h2>
 <p><code>The find command</code> in the MongoDB Manual. </p>

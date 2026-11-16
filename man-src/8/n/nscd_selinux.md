@@ -112,8 +112,8 @@ description: "nscd_selinux – Security Enhanced Linux Policy for the nscd proce
 <p> <code>nscd_var_run_t</code> </p>
 <p> &#8211; Set files with the nscd_var_run_t type, if you want to store the nscd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/db/nscd(/.*)?, /var/run/nscd(/.*)?, /var/cache/nscd(/.*)?, /var/run/nscd.pid, /var/run/.nscd_socket </p>
+<dt>Paths:</dt>
+<dd>/var/db/nscd(/.*)?, /var/run/nscd(/.*)?, /var/cache/nscd(/.*)?, /var/run/nscd.pid, /var/run/.nscd_socket </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

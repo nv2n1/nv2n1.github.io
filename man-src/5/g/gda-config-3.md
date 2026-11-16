@@ -28,7 +28,7 @@ description: "$(sysconfdir)/libgda/config – libgda global configuration file. 
  value=&quot;Mi favourite provider&quot;/&gt;
  &lt;/section&gt;
 &lt;/libgda-config&gt;</pre>
-</dl>
+</dd></dl>
 <p> You can also use <code>gda-config-tool-3.0</code> or <code>mergeant</code> (recommended) to modify this file.</p>
 <h2>See Also</h2>
 <p><code>mergeant</code>(1), <code>gda-config-tool-3.0</code>(1) </p>
@@ -54,7 +54,7 @@ description: "$(sysconfdir)/libgda/config – libgda global configuration file. 
  value=&quot;Mi favourite provider&quot;/&gt;
  &lt;/section&gt;
 &lt;/libgda-config&gt;</pre>
-</dl>
+</dd></dl>
 <p> You can also use <code>gda-config-tool-3.0</code> or <code>mergeant</code> (recommended) to modify this file.</p>
 <h2>See Also</h2>
 <p><code>mergeant</code>(1), <code>gda-config-tool-3.0</code>(1) </p>

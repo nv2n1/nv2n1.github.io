@@ -19,99 +19,99 @@ description: "globus-personal-gatekeeper – Manage a user’s personal gatekeep
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Print command-line option summary and exit</dl>
+</dt><dd> Print command-line option summary and exit</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Print software version</dl>
+</dt><dd> Print software version</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Print software version including DiRT information</dl>
+</dt><dd> Print software version including DiRT information</dd></dl>
 <p> <code>-list</code></p>
 <dl>
 <dt>
-<dd> Print a list of all currently running personal gatekeepers. These entries will be printed one per line.</dl>
+</dt><dd> Print a list of all currently running personal gatekeepers. These entries will be printed one per line.</dd></dl>
 <p> <code>-directory </code><i>CONTACT</i></p>
 <dl>
 <dt>
-<dd> Print the configuration directory for the personal gatekeeper with the contact string <i>CONTACT</i>.</dl>
+</dt><dd> Print the configuration directory for the personal gatekeeper with the contact string <i>CONTACT</i>.</dd></dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Print additional debugging information when starting a personal gatekeeper. This option is ignored in other modes.</dl>
+</dt><dd> Print additional debugging information when starting a personal gatekeeper. This option is ignored in other modes.</dd></dl>
 <p> <code>-start</code></p>
 <dl>
 <dt>
-<dd> Start a new personal gatekeeper process.</dl>
+</dt><dd> Start a new personal gatekeeper process.</dd></dl>
 <p> <code>-jmtype </code><i>LRM</i></p>
 <dl>
 <dt>
-<dd> Use <i>LRM</i> as the local resource manager interface. If not provided when starting a personal gatekeeper, the job manager will use the default fork LRM.</dl>
+</dt><dd> Use <i>LRM</i> as the local resource manager interface. If not provided when starting a personal gatekeeper, the job manager will use the default fork LRM.</dd></dl>
 <p> <code>-auditdir </code><i>AUDIT_DIRECTORY</i></p>
 <dl>
 <dt>
-<dd> Write audit report files to <i>AUDIT_DIRECTORY</i>. If not provided, the job manager will not write any audit files.</dl>
+</dt><dd> Write audit report files to <i>AUDIT_DIRECTORY</i>. If not provided, the job manager will not write any audit files.</dd></dl>
 <p> <code>-port </code><i>PORT</i></p>
 <dl>
 <dt>
-<dd> Listen for gatekeeper TCP/IP connections on the port <i>PORT</i>. If not provided, the gatekeeper will let the operating system choose.</dl>
+</dt><dd> Listen for gatekeeper TCP/IP connections on the port <i>PORT</i>. If not provided, the gatekeeper will let the operating system choose.</dd></dl>
 <p> <code>-log[=</code><i>DIRECTORY</i><code>]</code></p>
 <dl>
 <dt>
-<dd> Write job manager log files to <i>DIRECTORY</i>. If <i>DIRECTORY</i> is omitted, the default of $HOME will be used. If this option is not present, the job manager will not write any log files. will be used. If this option is not present, the job manager will not write any log files.</dl>
+</dt><dd> Write job manager log files to <i>DIRECTORY</i>. If <i>DIRECTORY</i> is omitted, the default of $HOME will be used. If this option is not present, the job manager will not write any log files. will be used. If this option is not present, the job manager will not write any log files.</dd></dl>
 <p> <code>-seg</code></p>
 <dl>
 <dt>
-<dd> Try to use the SEG mechanism to receive job state change information, instead of polling for these. These require either the system administrator or the user to run an instance of the <code>globus-job-manager-event-generator</code> program for the LRM specified by the <i>-jmtype</i> option.</dl>
+</dt><dd> Try to use the SEG mechanism to receive job state change information, instead of polling for these. These require either the system administrator or the user to run an instance of the <code>globus-job-manager-event-generator</code> program for the LRM specified by the <i>-jmtype</i> option.</dd></dl>
 <p> <code>-acctfile </code><i>ACCOUNTING_FILE</i></p>
 <dl>
 <dt>
-<dd> Write gatekeeper accounting entries to <i>ACCOUNTING_FILE</i>. If not provided, no accounting records are written.</dl>
+</dt><dd> Write gatekeeper accounting entries to <i>ACCOUNTING_FILE</i>. If not provided, no accounting records are written.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> This example shows the output when starting a new personal gatekeeper which will schedule jobs via the lsf LRM, with debugging enabled. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % globus-personal-gatekeeper -start -jmtype lsf
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 verifying setup...
 done.
 GRAM contact: personal-grid.example.org:57846:/DC=org/DC=example/CN=Joe User
 </pre>
-</dl>
+</dd></dl>
 <p> This example shows the output when listing the current active personal gatekeepers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %  globus-personal-gatekeeper -list
 personal-grid.example.org:57846:/DC=org/DC=example/CN=Joe User
 </pre>
-</dl>
+</dd></dl>
 <p> This example shows the output when querying the configuration directory for the above personal gatekeeper. gatekeepers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %  globus-personal-gatekeeper -directory &quot;personal-grid.example.org:57846:/DC=org/DC=example/CN=Joe User&quot;
 /home/juser/.globus/.personal-gatekeeper.personal-grid.example.org.1337
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %  globus-personal-gatekeeper -kill &quot;personal-grid.example.org:57846:/DC=org/DC=example/CN=Joe User&quot;
 killing gatekeeper: &quot;personal-grid.example.org:57846:/DC=org/DC=example/CN=Joe User&quot;
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1), <a href="/docs/linux/man/8-globus-job-manager/">globus-job-manager</a>(8), <a href="/docs/linux/man/8-globus-gatekeeper/">globus-gatekeeper</a>(8)</p>
 <h2>AUTHOR</h2>

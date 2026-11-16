@@ -19,33 +19,33 @@ description: "opt – LLVM optimizer"
 <p> If an output filename is not specified with the <i>-o</i> option, <code>opt</code> writes its output to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Enable binary output on terminals. Normally, <code>opt</code> will refuse to write raw bitcode output if the output stream is a terminal. With this option, <code>opt</code> will write raw bitcode regardless of the output device.</p>
-<dt><code>-help</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>-o &lt;filename&gt;</code></p>
-<dd> Specify the output filename.</p>
-<dt><code>-S</code></p>
-<dd> Write output in LLVM intermediate language (instead of bitcode).</p>
-<dt><code>-{passname}</code></p>
-<dd> <code>opt</code> provides the ability to run any of LLVM’s optimization or analysis passes in any order. The <i>-help</i> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</p>
-<dt><code>-strip-debug</code></p>
-<dd> This option causes opt to strip debug information from the module before applying other optimizations. It is essentially the same as <i>-strip</i> but it ensures that stripping of debug information is done first.</p>
-<dt><code>-verify-each</code></p>
-<dd> This option causes opt to add a verify pass after every pass otherwise specified on the command line (including <i>-verify</i>). This is useful for cases where it is suspected that a pass is creating an invalid module but it is not clear which pass is doing it.</p>
-<dt><code>-stats</code></p>
-<dd> Print statistics.</p>
-<dt><code>-time-passes</code></p>
-<dd> Record the amount of time needed for each pass and print it to standard error.</p>
-<dt><code>-debug</code></p>
-<dd> If this is a debug build, this option will enable debug printouts from passes which use the <code>LLVM_DEBUG()</code> macro. See the <i>LLVM Programmer’s Manual</i>, section <code>#DEBUG</code> for more information.</p>
-<dt><code>-load=&lt;plugin&gt;</code></p>
-<dd> Load the dynamic object <code>plugin</code>. This object should register new optimization or analysis passes. Once loaded, the object will add new command line options to enable various optimizations or analyses. To see the new complete list of optimizations, use the <i>-help</i> and <i>-load</i> options together. For example: </p>
+<dt><code>-f</code></dt>
+<dd> Enable binary output on terminals. Normally, <code>opt</code> will refuse to write raw bitcode output if the output stream is a terminal. With this option, <code>opt</code> will write raw bitcode regardless of the output device.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>-o &lt;filename&gt;</code></dt>
+<dd> Specify the output filename.</dd>
+<dt><code>-S</code></dt>
+<dd> Write output in LLVM intermediate language (instead of bitcode).</dd>
+<dt><code>-{passname}</code></dt>
+<dd> <code>opt</code> provides the ability to run any of LLVM’s optimization or analysis passes in any order. The <i>-help</i> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</dd>
+<dt><code>-strip-debug</code></dt>
+<dd> This option causes opt to strip debug information from the module before applying other optimizations. It is essentially the same as <i>-strip</i> but it ensures that stripping of debug information is done first.</dd>
+<dt><code>-verify-each</code></dt>
+<dd> This option causes opt to add a verify pass after every pass otherwise specified on the command line (including <i>-verify</i>). This is useful for cases where it is suspected that a pass is creating an invalid module but it is not clear which pass is doing it.</dd>
+<dt><code>-stats</code></dt>
+<dd> Print statistics.</dd>
+<dt><code>-time-passes</code></dt>
+<dd> Record the amount of time needed for each pass and print it to standard error.</dd>
+<dt><code>-debug</code></dt>
+<dd> If this is a debug build, this option will enable debug printouts from passes which use the <code>LLVM_DEBUG()</code> macro. See the <i>LLVM Programmer’s Manual</i>, section <code>#DEBUG</code> for more information.</dd>
+<dt><code>-load=&lt;plugin&gt;</code></dt>
+<dd> Load the dynamic object <code>plugin</code>. This object should register new optimization or analysis passes. Once loaded, the object will add new command line options to enable various optimizations or analyses. To see the new complete list of optimizations, use the <i>-help</i> and <i>-load</i> options together. For example: </dd>
 <pre>
 opt -load=plugin.so -help
 </pre>
-<dt><code>-print-passes</code></p>
-<dd> Print all available passes and exit.</dl>
+<dt><code>-print-passes</code></dt>
+<dd> Print all available passes and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If <code>opt</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHOR</h2>

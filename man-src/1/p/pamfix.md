@@ -32,12 +32,12 @@ description: "pamfix – repair a Netpbm image with various corruptions"
 <p> A regular Netpbm program fails if you give it input that contains a value larger than the maxval where a sample value belongs. </p>
 <p> <code>pamfix</code> has three ways of salvaging such a stream: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Clip to the maxval. Request this with <code>-clip</code>.</p>
-<dt>&bull;</p>
-<dd> Raise the maxval, thus lowering the fraction represented by every sample in the image. Request this with <code>-changemaxval</code>.</p>
-<dt>&bull;</p>
-<dd> Truncate the image at the first invalid sample value. Request this with <code>-truncate</code> and neither <code>-clip</code> nor <code>-changemaxval</code>. </p>
+<dt>&bull;</dt>
+<dd> Clip to the maxval. Request this with <code>-clip</code>.</dd>
+<dt>&bull;</dt>
+<dd> Raise the maxval, thus lowering the fraction represented by every sample in the image. Request this with <code>-changemaxval</code>.</dd>
+<dt>&bull;</dt>
+<dd> Truncate the image at the first invalid sample value. Request this with <code>-truncate</code> and neither <code>-clip</code> nor <code>-changemaxval</code>. </dd>
 </dl>
 <p> You cannot specify both <code>-clip</code> and <code>-changemaxval</code>. </p>
 <h2>SEE ALSO</h2>

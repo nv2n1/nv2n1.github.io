@@ -10,164 +10,52 @@ description: "QuantLib::AbcdFunction – Abcd functional form for instantaneous 
 <p>QuantLib::AbcdFunction &#8211; Abcd functional form for instantaneous volatility </p>
 <h2>Synopsis</h2>
 <pre><code>AbcdFunction (Real a=-0.06, Real b=0.17, Real c=0.54, Real d=0.17)
-
-
-
 Real operator() (Time u) const
-
-
 volatility function value at time u: [ f(u) ]
-
-
 Real maximumLocation () const
-
-
 time at which the volatility function reaches maximum (if any)
-
-
 Real maximumVolatility () const
-
-
 maximum value of the volatility function
-
-
 Real shortTermVolatility () const
-
-
 volatility function value at time 0: [ f(0) ]
-
-
 Real longTermVolatility () const
-
-
 volatility function value at time +inf: [ f(inf) ]
-
-
 Real covariance (Time t, Time T, Time S) const
-
-
-
 Real covariance (Time t1, Time t2, Time T, Time S) const
-
-
-
 Real volatility (Time T, Time tMax, Time tMin) const
-
-
-
 Real variance (Time T, Time tMax, Time tMin) const
-
-
-
 Real instantaneousVolatility (Time t, Time T) const
-
-
-
 Real instantaneousVariance (Time t, Time T) const
-
-
-
 Real instantaneousCovariance (Time u, Time T, Time S) const
-
-
-
 Real primitive (Time t, Time T, Time S) const
-
-
-
 Real a () const
-
-
-
 Real b () const
-
-
-
 Real c () const
-
-
-
 Real d () const</code></pre>
 <p> Inherits std::unary_function&lt;Real, Real&gt;.</p>
 <h3>Public Member Functions</h3>
 <pre><code>AbcdFunction (Real a=-0.06, Real b=0.17, Real c=0.54, Real d=0.17)
-
-
-
 Real operator() (Time u) const
-
-
 volatility function value at time u: [ f(u) ]
-
-
 Real maximumLocation () const
-
-
 time at which the volatility function reaches maximum (if any)
-
-
 Real maximumVolatility () const
-
-
 maximum value of the volatility function
-
-
 Real shortTermVolatility () const
-
-
 volatility function value at time 0: [ f(0) ]
-
-
 Real longTermVolatility () const
-
-
 volatility function value at time +inf: [ f(inf) ]
-
-
 Real covariance (Time t, Time T, Time S) const
-
-
-
 Real covariance (Time t1, Time t2, Time T, Time S) const
-
-
-
 Real volatility (Time T, Time tMax, Time tMin) const
-
-
-
 Real variance (Time T, Time tMax, Time tMin) const
-
-
-
 Real instantaneousVolatility (Time t, Time T) const
-
-
-
 Real instantaneousVariance (Time t, Time T) const
-
-
-
 Real instantaneousCovariance (Time u, Time T, Time S) const
-
-
-
 Real primitive (Time t, Time T, Time S) const
-
-
-
 Real a () const
-
-
-
 Real b () const
-
-
-
 Real c () const
-
-
-
 Real d () const</code></pre>
 <h2>Detailed Description</h2>
 <p>Abcd functional form for instantaneous volatility </p>

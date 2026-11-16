@@ -10,24 +10,12 @@ description: "QuantLib::FDVanillaEngine – Finite-differences pricing engine fo
 <p>QuantLib::FDVanillaEngine &#8211; Finite-differences pricing engine for BSM one asset options. </p>
 <h2>Synopsis</h2>
 <pre><code>FDVanillaEngine (const boost::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process, Size timeSteps, Size gridPoints, bool timeDependent=false)
-
-
-
 const Array &amp; grid () const
-
-
-
 Protected Types</code></pre>
 <p> Inherited by <code>FDEuropeanEngine</code>, FDMultiPeriodEngine, and <code>FDStepConditionEngine</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>FDVanillaEngine (const boost::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;process, Size timeSteps, Size gridPoints, bool timeDependent=false)
-
-
-
 const Array &amp; grid () const
-
-
-
 Protected Types</code></pre>
 <p> typedef <code>BoundaryCondition</code>&lt; <code>TridiagonalOperator</code> &gt; <code>bc_type</code></p>
 <h3>Protected Member Functions</h3>

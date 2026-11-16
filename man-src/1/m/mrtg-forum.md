@@ -14,25 +14,25 @@ description: "mrtg-forum – Interactive Help for MRTG users"
 <h2>MAILING-LIST</h2>
 <p> There are three mailing lists for <font SIZE="-1">MRTG</font> available.</p>
 <dl>
-<dt>mrtg</p>
-<dd> for discussion among mrtg users.</p>
-<dt>mrtg-announce</p>
-<dd> for announcements regarding new versions of mrtg related software.</p>
-<dt>mrtg-developers</p>
-<dd> for discussion among people who write software in connection with mrtg or who hack mrtg itself.</dl>
+<dt>mrtg</dt>
+<dd> for discussion among mrtg users.</dd>
+<dt>mrtg-announce</dt>
+<dd> for announcements regarding new versions of mrtg related software.</dd>
+<dt>mrtg-developers</dt>
+<dd> for discussion among people who write software in connection with mrtg or who hack mrtg itself.</dd></dl>
 <h3><font SIZE="-1">THE</font> <font SIZE="-1">RULES</font></h3>
 <p> Please note that the memebers of the mrtg mailinglist value politeness highly. This means behave in a way you would like others to behave towards you.</p>
 <dl>
-<dt>&bull;</p>
-<dd> No shouting. (<font SIZE="-1">NO</font> <font SIZE="-1">CAPS</font>)</p>
-<dt>&bull;</p>
-<dd> No rude language</p>
-<dt>&bull;</p>
-<dd> No demands. everybody is on the list out of their own free will. If you do not get an answer to your question, chances are high that you did not give sufficent details about the nature of your problem or that the answer to your problem is in the documentation.</p>
-<dt>&bull;</p>
-<dd> If you do not follow the rules you will be unsubscribed from the list with no further questions asked.</p>
-<dt>&bull;</p>
-<dd> Decisions about your unsubscription from the list will be taken by </p>
+<dt>&bull;</dt>
+<dd> No shouting. (<font SIZE="-1">NO</font> <font SIZE="-1">CAPS</font>)</dd>
+<dt>&bull;</dt>
+<dd> No rude language</dd>
+<dt>&bull;</dt>
+<dd> No demands. everybody is on the list out of their own free will. If you do not get an answer to your question, chances are high that you did not give sufficent details about the nature of your problem or that the answer to your problem is in the documentation.</dd>
+<dt>&bull;</dt>
+<dd> If you do not follow the rules you will be unsubscribed from the list with no further questions asked.</dd>
+<dt>&bull;</dt>
+<dd> Decisions about your unsubscription from the list will be taken by </dd>
 <pre>
  Alex van den Bogaerdt &lt;alex at ergens.op.het.net&gt;
  Paul C. Williamson    &lt;pwilliamson at MANDTBANK.COM&gt;
@@ -86,11 +86,11 @@ description: "mrtg-forum – Interactive Help for MRTG users"
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and many contributors </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">NEWSGROUP</a></p>
+<dt><a href="#lbAG">NEWSGROUP</a></dt>
 <dd>
-<dt><a href="#lbAH">IRC Channel</a></p>
+</dd><dt><a href="#lbAH">IRC Channel</a></dt>
 <dd>
-<dt><a href="#lbAI">MRTG Japan</a></p>
+</dd><dt><a href="#lbAI">MRTG Japan</a></dt>
 <dd>
-<dt><a href="#lbAJ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
+<dd></dd></dl>

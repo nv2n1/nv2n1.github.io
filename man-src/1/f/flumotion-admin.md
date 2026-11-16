@@ -16,25 +16,25 @@ description: "flumotion-admin – streaming media server administration GUI"
 <p> You must start <i>flumotion-manager</i> before you can use <code>flumotion-admin</code> , but once you&#8217;ve done so you can just run <code>flumotion-admin</code> with no arguments to start the GUI. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Show a brief help message, then exit.</p>
-<dt>&#8211;version</p>
-<dd> Show the version number.</p>
-<dt>-v, &#8211;verbose</p>
-<dd> Be verbose in console output. This is equivalent to setting the debug level to 3, and will override any debug specifiers.</p>
-<dt>-dDEBUG, &#8211;debug=DEBUG</p>
-<dd> Set the debug configuration to the specified <code>debug</code> string. See the <i>Debugging</i> section for details of this.</p>
-<dt>-mMANAGER, &#8211;manager=MANAGER</p>
-<dd> Set the manager connection string in the form [username[:password]@]host:port</p>
-<dt>&#8211;no-ssl</p>
-<dd> Disable encryption when connecting to the manager. </p>
+<dt>-h, &#8211;help</dt>
+<dd> Show a brief help message, then exit.</dd>
+<dt>&#8211;version</dt>
+<dd> Show the version number.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Be verbose in console output. This is equivalent to setting the debug level to 3, and will override any debug specifiers.</dd>
+<dt>-dDEBUG, &#8211;debug=DEBUG</dt>
+<dd> Set the debug configuration to the specified <code>debug</code> string. See the <i>Debugging</i> section for details of this.</dd>
+<dt>-mMANAGER, &#8211;manager=MANAGER</dt>
+<dd> Set the manager connection string in the form [username[:password]@]host:port</dd>
+<dt>&#8211;no-ssl</dt>
+<dd> Disable encryption when connecting to the manager. </dd>
 </dl>
 <h2>DEBUGGING</h2>
 <p> In the unlikely event of something in flumotion not working, you might want to debug it. The flumotion tools ( <code>flumotion-worker</code> , <code>flumotion-admin</code> , and <code>flumotion-manager</code> ) all alow you to turn on debugging output in two different ways. </p>
 <p> Firstly, you can use an environment variable, FLU_DEBUG. Secondly, you can launch the program with a -d or &#8211;debug switch. Either approach allows you to specify a debug configuration string with the following syntax: </p>
 <dl>
 <dt>
-<dd> <code>name1:n1,name2:n2,name3:n3</code></dl>
+</dt><dd> <code>name1:n1,name2:n2,name3:n3</code></dd></dl>
 <p> In this syntax, the &#8216;name&#8217; variables can be replaced with the name of a particular module within flumotion (such as &#8216;admin&#8217;, &#8216;twisted&#8217;, etc.). You can also use &#8216;*&#8217; to specify all modules. The &#8216;n&#8217; variables are numbers from 1 to 5, larger numbers corresponding to more verbose output (ERROR, WARN, INFO, DEBUG, and LOG). At level 4, full debugging information is emitted. </p>
 <p> You can also use an abbreviated form where you just supply a single number, thisuses that debug level for all modules. Thus the simplest way to enable full debug output for all modules is to use &#8216;-d 4&#8217; on the command line. </p>
 <p> A more complex example would be &#8216;-d *:3,admin:4&#8217; to set the logging level for the admin module to DEBUG, and for all other modules to INFO. </p>

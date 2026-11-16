@@ -16,30 +16,30 @@ description: "sound-juicer – GNOME-desktop CD ripper and player using GStreame
 <p> For additional documentation on interactive use of <code>sound-juicer</code> select the <i>Help</i> menu option. The menus allow access to features not available through command-line options.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a, &#8211;auto-start</code></p>
-<dd> Start extracting immediately</p>
-<dt><code>-p, &#8211;play</code></p>
-<dd> Start playing immediately</p>
-<dt><code>-d, &#8211;device=DEVICE</code></p>
-<dd> What CD device to read</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gst</code></p>
-<dd> Show GStreamer Options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;help-bonobo-activation</code></p>
-<dd> Show Bonobo Activation options</p>
-<dt><code>&#8211;help-gnome</code></p>
-<dd> Show GNOME options</p>
-<dt><code>&#8211;help-gnome-session</code></p>
-<dd> Show session management options</p>
-<dt><code>&#8211;help-gnome-ui</code></p>
-<dd> Show GNOME GUI options </p>
+<dt><code>-a, &#8211;auto-start</code></dt>
+<dd> Start extracting immediately</dd>
+<dt><code>-p, &#8211;play</code></dt>
+<dd> Start playing immediately</dd>
+<dt><code>-d, &#8211;device=DEVICE</code></dt>
+<dd> What CD device to read</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gst</code></dt>
+<dd> Show GStreamer Options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;help-bonobo-activation</code></dt>
+<dd> Show Bonobo Activation options</dd>
+<dt><code>&#8211;help-gnome</code></dt>
+<dd> Show GNOME options</dd>
+<dt><code>&#8211;help-gnome-session</code></dt>
+<dd> Show session management options</dd>
+<dt><code>&#8211;help-gnome-ui</code></dt>
+<dd> Show GNOME GUI options </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>sound-juicer</code> was written by Ross Burton &lt;ross [at] burtonini.com&gt;. This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;, for the Debian GNU/Linux system (but may be used by others).</p>

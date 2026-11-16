@@ -17,15 +17,15 @@ description: "postfix-wrapper – Postfix multi-instance API"
 <p> Even with multiple Postfix instances, you can keep using the same postfix commands in boot scripts, upgrade procedures, and other places. The commands do more work, but humans are not forced to learn new tricks. </p>
 <p> For example, to start all Postfix instances, use:</p>
 <dl>
-<dd># postfix start</dl>
+<dd># postfix start</dd></dl>
 <p> Other <a href="/docs/linux/man/1-postfix/">postfix</a>(1) commands also work as expected. For example, to find out what Postfix instances exist in a multi-instance configuration, use:</p>
 <dl>
-<dd># postfix status</dl>
+<dd># postfix status</dd></dl>
 <p> This enumerates the status of all Postfix instances within a multi-instance configuration.</p>
 <h2>Managing An Individual Postfix Instance</h2>
 <p>To manage a specific Postfix instance, specify its configuration directory on the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command line:</p>
 <dl>
-<dd># postfix -c <i>/path/to/config_directory command</i></dl>
+<dd># postfix -c <i>/path/to/config_directory command</i></dd></dl>
 <p> Alternatively, the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command accepts the instance&#8217;s configuration directory via the MAIL_CONFIG environment variable (the -c command-line option has higher precedence). </p>
 <p> Otherwise, the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command will operate on all Postfix instances.</p>
 <h2>ENABLING <a href="/docs/linux/man/1-postfix/">POSTFIX</a>(1) MULTI-INSTANCE MODE</h2>
@@ -37,7 +37,7 @@ description: "postfix-wrapper – Postfix multi-instance API"
 <pre>/etc/postfix/main.cf:
  multi_instance_wrapper = $daemon_directory/postfix-wrapper
  multi_instance_directories = /etc/postfix-test</pre>
-</dl>
+</dd></dl>
 <p> The $daemon_directory/postfix-wrapper file implements a simple manager and contains instructions for creating Postfix instances by hand. The <a href="/docs/linux/man/1-postmulti/">postmulti</a>(1) command provides a more extensive implementation including support for life-cycle management. </p>
 <p> The multi_instance_directories and other main.cf parameters are listed below in the CONFIGURATION PARAMETERS section. </p>
 <p> In multi-instance mode, the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command invokes the $multi_instance_wrapper command instead of the postfix-script file. This multi-instance manager in turn executes the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command in single-instance mode for each Postfix instance. </p>
@@ -67,7 +67,7 @@ do
  $POSTFIX -c $dir &quot;$@&quot; || err=$?
 done
 exit $err</pre>
-</dl>
+</dd></dl>
 <h2>Per-Instance Multi-Instance Manager Controls</h2>
 <p>Each Postfix instance has its own main.cf file with parameters that control how the multi-instance manager operates on that instance. This section discusses the most important settings. </p>
 <p> The setting &quot;multi_instance_enable = yes&quot; allows the multi-instance manager to start (stop, etc.) the corresponding Postfix instance. For safety reasons, this setting is not the default. </p>
@@ -88,29 +88,29 @@ exit $err</pre>
 <p> The legacy alternate_config_directories parameter remains necessary for non-default Postfix instances that are running different versions of Postfix, or that are not managed together with the default Postfix instance.</p>
 <h2>Environment Variables</h2>
 <dl>
-<dt>MAIL_CONFIG</p>
-<dd>When present, this forces the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command to operate only on the specified Postfix instance. This environment variable is exported by the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) -c option, so that <a href="/docs/linux/man/1-postfix/">postfix</a>(1) commands in descendant processes will work correctly.</dl>
+<dt>MAIL_CONFIG</dt>
+<dd>When present, this forces the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) command to operate only on the specified Postfix instance. This environment variable is exported by the <a href="/docs/linux/man/1-postfix/">postfix</a>(1) -c option, so that <a href="/docs/linux/man/1-postfix/">postfix</a>(1) commands in descendant processes will work correctly.</dd></dl>
 <h2>Configuration Parameters</h2>
 <p>The text below provides only a parameter summary. See <a href="/docs/linux/man/5-postconf/">postconf</a>(5) for more details.</p>
 <dl>
-<dt><code>multi_instance_directories (empty)</code></p>
-<dd>An optional list of non-default Postfix configuration directories; these directories belong to additional Postfix instances that share the Postfix executable files and documentation with the default Postfix instance, and that are started, stopped, etc., together with the default Postfix instance.</p>
-<dt><code>multi_instance_wrapper (empty)</code></p>
-<dd>The pathname of a multi-instance manager command that the <code><a href="/docs/linux/man/1-postfix/">postfix</a></code>(1) command invokes when the multi_instance_directories parameter value is non-empty.</p>
-<dt><code>multi_instance_name (empty)</code></p>
-<dd>The optional instance name of this Postfix instance.</p>
-<dt><code>multi_instance_group (empty)</code></p>
-<dd>The optional instance group name of this Postfix instance.</p>
-<dt><code>multi_instance_enable (no)</code></p>
-<dd>Allow this Postfix instance to be started, stopped, etc., by a multi-instance manager.</dl>
+<dt><code>multi_instance_directories (empty)</code></dt>
+<dd>An optional list of non-default Postfix configuration directories; these directories belong to additional Postfix instances that share the Postfix executable files and documentation with the default Postfix instance, and that are started, stopped, etc., together with the default Postfix instance.</dd>
+<dt><code>multi_instance_wrapper (empty)</code></dt>
+<dd>The pathname of a multi-instance manager command that the <code><a href="/docs/linux/man/1-postfix/">postfix</a></code>(1) command invokes when the multi_instance_directories parameter value is non-empty.</dd>
+<dt><code>multi_instance_name (empty)</code></dt>
+<dd>The optional instance name of this Postfix instance.</dd>
+<dt><code>multi_instance_group (empty)</code></dt>
+<dd>The optional instance group name of this Postfix instance.</dd>
+<dt><code>multi_instance_enable (no)</code></dt>
+<dd>Allow this Postfix instance to be started, stopped, etc., by a multi-instance manager.</dd></dl>
 <h2>Non-Shared Files</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/1-postfix/">postfix</a>(1) Postfix control program
 <a href="//www.systutorials.com/docs/linux/man/1-postmulti/">postmulti</a>(1) full-blown multi-instance manager

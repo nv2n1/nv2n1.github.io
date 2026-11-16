@@ -20,42 +20,42 @@ description: "sloccount – count source lines of code (SLOC)"
 <p> sloccount will normally report estimates of schedule time, effort, and cost, and for single projects it also estimates the average number of active developers. These are merely estimates, not etched in stone; you can modify the parameters used to improve the estimates. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Report the version number of SLOCCount and immediately exit. This option can&#8217;t be usefully combined with any other option. </p>
-<dt><code>&#8211;cached</code></p>
-<dd> Do not recalculate; instead, use cached results from a previous execution. Without the &#8211;cached or &#8211;append option, sloccount automatically removes the data directory and recreates it. </p>
-<dt><code>&#8211;append</code></p>
-<dd> Do not remove previous calculations from the data directory; instead, add the analysis to the current contents of the data directory. </p>
-<dt><code>&#8211;datadir</code><i> directory</i></p>
-<dd> Store or use cached data in the given data directory; default value is &quot;~/.slocdata&quot;. </p>
-<dt><code>&#8211;follow</code></p>
-<dd> Follow symbolic links. </p>
-<dt><code>&#8211;duplicates</code></p>
-<dd> Count all duplicates. Normally, if files have equal content (as determined using MD5 hash values), only one is counted. </p>
-<dt><code>&#8211;crossdups</code></p>
-<dd> Count duplicates if they occur in different portions of the breakdown. Thus, if the top directory contains many different projects, and you want the duplicates in different projects to count in each project, choose this option. </p>
-<dt><code>&#8211;autogen</code></p>
-<dd> Count source code files that appear to be automatically generated. Normally these are excluded. </p>
-<dt><code>&#8211;multiproject</code></p>
-<dd> The different directories represent different projects; otherwise, it&#8217;s assumed that all of the source code belongs to a single project. This doesn&#8217;t change the total number of files or SLOC values, but it does affect the effort and schedule estimates. Given this option, effort is computed separately for each project (and then summed), and the schedule is the estimated schedule of the largest project. </p>
-<dt><code>&#8211;filecount</code></p>
-<dd> Display counts of files instead of SLOC. </p>
-<dt><code>&#8211;wide</code></p>
-<dd> Display in the &quot;wide&quot; (tab-separated) format. </p>
-<dt><code>&#8211;details</code></p>
-<dd> Display details, that is, results for every source code file. </p>
-<dt><code>&#8211;effort</code><i> F E</i></p>
-<dd> Change the factor and exponent for the effort model. Effort (in person-months) is computed as F*(SLOC/1000)^E. </p>
-<dt><code>&#8211;schedule</code><i> F E</i></p>
-<dd> Change the factor and exponent for the schedule model. Schedule (in months) is computed as F*(effort)^E. </p>
-<dt><code>&#8211;personcost</code><i> cost</i></p>
-<dd> Change the average annual salary to <i>cost</i>. </p>
-<dt><code>&#8211;overhead</code><i> overhead</i></p>
-<dd> Change the overhead value to <i>overhead</i>. Estimated cost is computed as effort * personcost * overhead. </p>
-<dt><code>&#8211;addlang</code><i> language</i></p>
-<dd> Add a language not considered by default to be a &#8220;language&#8221; to be reported. Currently the only legal values for language are &quot;makefile&quot;, &quot;sql&quot;, and &quot;html&quot;. These files are not normally included in the SLOC counts, although their SLOCs are internally calculated and they are shown in the file counts. If you want to include more than one such language, do it by passing &#8211;addlang more than once, e.g., &#8211;addlang makefile &#8211;addlang sql. </p>
-<dt><code>&#8211;addlangall</code></p>
-<dd> Add all languages not normally included in final reports. </p>
+<dt><code>&#8211;version</code></dt>
+<dd> Report the version number of SLOCCount and immediately exit. This option can&#8217;t be usefully combined with any other option. </dd>
+<dt><code>&#8211;cached</code></dt>
+<dd> Do not recalculate; instead, use cached results from a previous execution. Without the &#8211;cached or &#8211;append option, sloccount automatically removes the data directory and recreates it. </dd>
+<dt><code>&#8211;append</code></dt>
+<dd> Do not remove previous calculations from the data directory; instead, add the analysis to the current contents of the data directory. </dd>
+<dt><code>&#8211;datadir</code><i> directory</i></dt>
+<dd> Store or use cached data in the given data directory; default value is &quot;~/.slocdata&quot;. </dd>
+<dt><code>&#8211;follow</code></dt>
+<dd> Follow symbolic links. </dd>
+<dt><code>&#8211;duplicates</code></dt>
+<dd> Count all duplicates. Normally, if files have equal content (as determined using MD5 hash values), only one is counted. </dd>
+<dt><code>&#8211;crossdups</code></dt>
+<dd> Count duplicates if they occur in different portions of the breakdown. Thus, if the top directory contains many different projects, and you want the duplicates in different projects to count in each project, choose this option. </dd>
+<dt><code>&#8211;autogen</code></dt>
+<dd> Count source code files that appear to be automatically generated. Normally these are excluded. </dd>
+<dt><code>&#8211;multiproject</code></dt>
+<dd> The different directories represent different projects; otherwise, it&#8217;s assumed that all of the source code belongs to a single project. This doesn&#8217;t change the total number of files or SLOC values, but it does affect the effort and schedule estimates. Given this option, effort is computed separately for each project (and then summed), and the schedule is the estimated schedule of the largest project. </dd>
+<dt><code>&#8211;filecount</code></dt>
+<dd> Display counts of files instead of SLOC. </dd>
+<dt><code>&#8211;wide</code></dt>
+<dd> Display in the &quot;wide&quot; (tab-separated) format. </dd>
+<dt><code>&#8211;details</code></dt>
+<dd> Display details, that is, results for every source code file. </dd>
+<dt><code>&#8211;effort</code><i> F E</i></dt>
+<dd> Change the factor and exponent for the effort model. Effort (in person-months) is computed as F*(SLOC/1000)^E. </dd>
+<dt><code>&#8211;schedule</code><i> F E</i></dt>
+<dd> Change the factor and exponent for the schedule model. Schedule (in months) is computed as F*(effort)^E. </dd>
+<dt><code>&#8211;personcost</code><i> cost</i></dt>
+<dd> Change the average annual salary to <i>cost</i>. </dd>
+<dt><code>&#8211;overhead</code><i> overhead</i></dt>
+<dd> Change the overhead value to <i>overhead</i>. Estimated cost is computed as effort * personcost * overhead. </dd>
+<dt><code>&#8211;addlang</code><i> language</i></dt>
+<dd> Add a language not considered by default to be a &#8220;language&#8221; to be reported. Currently the only legal values for language are &quot;makefile&quot;, &quot;sql&quot;, and &quot;html&quot;. These files are not normally included in the SLOC counts, although their SLOCs are internally calculated and they are shown in the file counts. If you want to include more than one such language, do it by passing &#8211;addlang more than once, e.g., &#8211;addlang makefile &#8211;addlang sql. </dd>
+<dt><code>&#8211;addlangall</code></dt>
+<dd> Add all languages not normally included in final reports. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> As with many other programs using Unix-like options, directories whose names begin with a dash (&#8220;-&#8221;) can be misinterpreted as options. If the directories to be analyzed might begin with a dash, use the double-dash (&#8220;- -&#8221;) to indicate the end of the option list before listing the directories. </p>

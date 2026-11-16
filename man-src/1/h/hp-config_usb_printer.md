@@ -15,33 +15,33 @@ description: "hp-config_usb_printer – HP device config using USB"
 <p> <code>hp-config_usb_printer [OPTIONS] [USB bus:device]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd></dl>
 <h2>USB BUSDEVICE</h2>
 <dl>
-<dt>USB bus:device :</p>
-<dd> &quot;xxx:yyy&quot; where &#8216;xxx&#8217; is the USB bus and &#8216;yyy&#8217; is the USB device. (Note: The &#8216;:&#8217; and all leading zeros must be present.) Use the &#8216;lsusb&#8217; command to obtain this information.</dl>
+<dt>USB bus:device :</dt>
+<dd> &quot;xxx:yyy&quot; where &#8216;xxx&#8217; is the USB bus and &#8216;yyy&#8217; is the USB device. (Note: The &#8216;:&#8217; and all leading zeros must be present.) Use the &#8216;lsusb&#8217; command to obtain this information.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>USB, IDs specified:</p>
-<dd> $hp-config_usb_printer 001:002</dl>
+<dt>USB, IDs specified:</dt>
+<dd> $hp-config_usb_printer 001:002</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt>1. Using &#8216;lsusb&#8217; to obtain USB IDs: (example)</p>
+<dt>1. Using &#8216;lsusb&#8217; to obtain USB IDs: (example)</dt>
 <dd>
-<dt> $ lsusb</p>
+</dd><dt> $ lsusb</dt>
 <dd>
-<dt> Bus 003 Device 011: ID 03f0:c202 Hewlett-Packard</p>
+</dd><dt> Bus 003 Device 011: ID 03f0:c202 Hewlett-Packard</dt>
 <dd>
-<dt> $ hp-config_usb_printer 003:011</p>
+</dd><dt> $ hp-config_usb_printer 003:011</dt>
 <dd>
-<dt> (Note: You may have to run &#8216;lsusb&#8217; from /sbin or another location. Use &#8216;$ locate lsusb&#8217; to determine this.)</p>
+</dd><dt> (Note: You may have to run &#8216;lsusb&#8217; from /sbin or another location. Use &#8216;$ locate lsusb&#8217; to determine this.)</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> HPLIP (HP Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.</p>
 <h2>REPORTING BUGS</h2>

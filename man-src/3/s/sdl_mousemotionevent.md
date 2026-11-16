@@ -17,14 +17,14 @@ description: "SDL_MouseMotionEvent – Mouse motion event structure"
 } SDL_MouseMotionEvent;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>type</code></p>
-<dd><code>SDL_MOUSEMOTION</code></p>
-<dt><code>state</code></p>
-<dd>The current button state</p>
-<dt><code>x</code>, <code>y</code></p>
-<dd>The X/Y coordinates of the mouse</p>
-<dt><code>xrel</code>, <code>yrel</code></p>
-<dd>Relative motion in the X/Y direction</dl>
+<dt><code>type</code></dt>
+<dd><code>SDL_MOUSEMOTION</code></dd>
+<dt><code>state</code></dt>
+<dd>The current button state</dd>
+<dt><code>x</code>, <code>y</code></dt>
+<dd>The X/Y coordinates of the mouse</dd>
+<dt><code>xrel</code>, <code>yrel</code></dt>
+<dd>Relative motion in the X/Y direction</dd></dl>
 <h2>Description</h2>
 <p><code>SDL_MouseMotionEvent</code> is a member of the <i></i><code>SDL_Event</code> union and is used when an event of type <code>SDL_MOUSEMOTION</code> is reported. </p>
 <p> Simply put, a <code>SDL_MOUSEMOTION</code> type event occurs when a user moves the mouse within the application window or when <i></i><code>SDL_WarpMouse</code> is called. Both the absolute (<code>x</code> and <code>y</code>) and relative (<code>xrel</code> and <code>yrel</code>) coordinates are reported along with the current button states (<code>state</code>). The button state can be interpreted using the <code>SDL_BUTTON</code> macro (see <i></i><code>SDL_GetMouseState</code>). </p>

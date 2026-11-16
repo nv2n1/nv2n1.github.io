@@ -10,7 +10,6 @@ description: "uconvert_size – Number of bytes needed to store a string after c
 <p>uconvert_size &#8211; Number of bytes needed to store a string after conversion. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uconvert_size(const char *s, int type, int newtype);</code></pre>
 <h2>Description</h2>
 <p>Finds out how many bytes are required to store the specified string `s&#8217; after a conversion from `type&#8217; to `newtype&#8217;, including the mandatory zero terminator of the string. You can use U_CURRENT for either `type&#8217; or `newtype&#8217; as a shortcut to represent whatever text encoding format is currently selected. Example: </p>

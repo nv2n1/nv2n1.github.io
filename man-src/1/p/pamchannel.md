@@ -21,11 +21,11 @@ description: "pamchannel – extract channels from a PAM image"
 <p> <code>pamstack</code> does the opposite of <code>pamchannel</code>: It takes multiple PAM or PNM images as input and stacks their planes (channels) on top of one another to yield a single PAM. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-infile</code> <i>infile</i></p>
-<dd> This specifies the input file, which defaults to Standard Input. You may specify <code>&#8211;</code> to select Standard Input explicitly. </p>
+<dt><code>-infile</code> <i>infile</i></dt>
+<dd> This specifies the input file, which defaults to Standard Input. You may specify <code>&#8211;</code> to select Standard Input explicitly. </dd>
 <p> This is a little unconventional for Netpbm programs, which usually have the input file specification as an argument. For <code>pamchannel</code>, the arguments are channel numbers. </p>
-<dt><code>-tupletype</code> <i>tupletype</i></p>
-<dd> This specified the tuple type name to be recorded in the output. You may use any string up to 255 characters. Some programs recognize some names. If you omit this option, the default tuple type name is null. </p>
+<dt><code>-tupletype</code> <i>tupletype</i></dt>
+<dd> This specified the tuple type name to be recorded in the output. You may use any string up to 255 characters. Some programs recognize some names. If you omit this option, the default tuple type name is null. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>pam</code>(1) </p>

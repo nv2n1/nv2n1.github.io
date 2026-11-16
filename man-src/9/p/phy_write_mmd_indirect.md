@@ -15,19 +15,19 @@ phy_write_mmd_indirect - writes data to the MMD registers
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>The PHY device</dl>
+<dl><dd></dd><dd>The PHY device</dd></dl>
  
 
  <i>prtad</i>
-<dl><dd>MMD Address</dl>
+<dl><dd>MMD Address</dd></dl>
  
 
  <i>devad</i>
-<dl><dd>MMD DEVAD</dl>
+<dl><dd>MMD DEVAD</dd></dl>
  
 
  <i>data</i>
-<dl><dd>data to write in the MMD register</dl>
+<dl><dd>data to write in the MMD register</dd></dl>
 
 <h2>Description</h2>
 

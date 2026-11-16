@@ -11,10 +11,10 @@ description: "Available_Native_Calls_Page – Available Calls Embryo provides a 
 <p> Those calls are detailed here. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Some of the &#8216;core&#8217; functions here are also described in the full Small documentation given</dl>
+<dd>Some of the &#8216;core&#8217; functions here are also described in the full Small documentation given</dd></dl>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Finish this section.</dl>
+<dd>Finish this section.</dd></dl>
 <h2>Argument Functions</h2>
 <h3>numargs</h3>
 <p>Returns the number of arguments passed to a function. Useful when dealing with variable argument lists.</p>

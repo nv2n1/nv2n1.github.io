@@ -14,30 +14,30 @@ description: "bundle-lock – Creates / Updates a lockfile without installing"
 <p>Lock the gems specified in Gemfile.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;update=&lt;*gems&gt;</code></p>
-<dd>Ignores the existing lockfile. Resolve then updates lockfile. Taking a list of gems or updating all gems if no list is given.</p>
-<dt><code>&#8211;local</code></p>
-<dd>Do not attempt to connect to <code>rubygems.org</code>. Instead, Bundler will use the gems already present in Rubygems&#8217; cache or in <code>vendor/cache</code>. Note that if a appropriate platform-specific gem exists on <code>rubygems.org</code> it will not be found.</p>
-<dt><code>&#8211;print</code></p>
-<dd>Prints the lockfile to STDOUT instead of writing to the file system.</p>
-<dt><code>&#8211;lockfile=&lt;path&gt;</code></p>
-<dd>The path where the lockfile should be written to.</p>
-<dt><code>&#8211;full-index</code></p>
-<dd>Fall back to using the single-file index of all gems.</p>
-<dt><code>&#8211;add-platform</code></p>
-<dd>Add a new platform to the lockfile, re-resolving for the addition of that platform.</p>
-<dt><code>&#8211;remove-platform</code></p>
-<dd>Remove a platform from the lockfile.</p>
-<dt><code>&#8211;patch</code></p>
-<dd>If updating, prefer updating only to next patch version.</p>
-<dt><code>&#8211;minor</code></p>
-<dd>If updating, prefer updating only to next minor version.</p>
-<dt><code>&#8211;major</code></p>
-<dd>If updating, prefer updating to next major version (default).</p>
-<dt><code>&#8211;strict</code></p>
-<dd>If updating, do not allow any gem to be updated past latest &#8211;patch | &#8211;minor | &#8211;major.</p>
-<dt><code>&#8211;conservative</code></p>
-<dd>If updating, use bundle install conservative update behavior and do not allow shared dependencies to be updated.</dl>
+<dt><code>&#8211;update=&lt;*gems&gt;</code></dt>
+<dd>Ignores the existing lockfile. Resolve then updates lockfile. Taking a list of gems or updating all gems if no list is given.</dd>
+<dt><code>&#8211;local</code></dt>
+<dd>Do not attempt to connect to <code>rubygems.org</code>. Instead, Bundler will use the gems already present in Rubygems&#8217; cache or in <code>vendor/cache</code>. Note that if a appropriate platform-specific gem exists on <code>rubygems.org</code> it will not be found.</dd>
+<dt><code>&#8211;print</code></dt>
+<dd>Prints the lockfile to STDOUT instead of writing to the file system.</dd>
+<dt><code>&#8211;lockfile=&lt;path&gt;</code></dt>
+<dd>The path where the lockfile should be written to.</dd>
+<dt><code>&#8211;full-index</code></dt>
+<dd>Fall back to using the single-file index of all gems.</dd>
+<dt><code>&#8211;add-platform</code></dt>
+<dd>Add a new platform to the lockfile, re-resolving for the addition of that platform.</dd>
+<dt><code>&#8211;remove-platform</code></dt>
+<dd>Remove a platform from the lockfile.</dd>
+<dt><code>&#8211;patch</code></dt>
+<dd>If updating, prefer updating only to next patch version.</dd>
+<dt><code>&#8211;minor</code></dt>
+<dd>If updating, prefer updating only to next minor version.</dd>
+<dt><code>&#8211;major</code></dt>
+<dd>If updating, prefer updating to next major version (default).</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>If updating, do not allow any gem to be updated past latest &#8211;patch | &#8211;minor | &#8211;major.</dd>
+<dt><code>&#8211;conservative</code></dt>
+<dd>If updating, use bundle install conservative update behavior and do not allow shared dependencies to be updated.</dd></dl>
 <h2>Updating All Gems</h2>
 <p>If you run <code>bundle lock</code> with <code>&#8211;update</code> option without list of gems, bundler will ignore any previously installed gems and resolve all dependencies again based on the latest versions of all gems available in the sources.</p>
 <h2>Updating A List Of Gems</h2>

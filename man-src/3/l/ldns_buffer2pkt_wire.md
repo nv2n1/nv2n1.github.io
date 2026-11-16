@@ -16,8 +16,8 @@ description: "ldns_buffer2pkt_wire"
 <p> ldns_status ldns_buffer2pkt_wire(ldns_pkt **packet, ldns_buffer *buffer); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_buffer2pkt_wire</i>()</p>
-<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS packet. This function will initialize and allocate memory space for the packet structure. </p>
+<dt> <i>ldns_buffer2pkt_wire</i>()</dt>
+<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS packet. This function will initialize and allocate memory space for the packet structure. </dd>
 <p> .br <code>packet</code>: pointer to the structure to hold the packet .br <code>buffer</code>: the buffer with the data .br Returns LDNS_STATUS_OK if everything succeeds, error otherwise</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -31,3 +31,4 @@ description: "ldns_buffer2pkt_wire"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

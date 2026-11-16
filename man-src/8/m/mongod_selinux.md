@@ -55,9 +55,9 @@ description: "mongod_selinux – Security Enhanced Linux Policy for the mongod p
 <p> Policy governs the access confined processes have to these ports. SELinux mongod policy is very flexible allowing users to setup their mongod processes in as secure a method as possible. </p>
 <p> The following port types are defined for mongod: </p>
 <dl>
-<dt><code>mongod_port_t</code></p>
+<dt><code>mongod_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 27017-27019,28017-28019</dl>
+</dd><dd>Default Defined Ports: tcp 27017-27019,28017-28019</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type mongod_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -107,36 +107,36 @@ description: "mongod_selinux – Security Enhanced Linux Policy for the mongod p
 <p> <code>mongod_exec_t</code> </p>
 <p> &#8211; Set files with the mongod_exec_t type, if you want to transition an executable to the mongod_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/mongod, /usr/bin/mongos, /usr/libexec/mongodb-scl-helper, /usr/share/aeolus-conductor/dbomatic/dbomatic </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/mongod, /usr/bin/mongos, /usr/libexec/mongodb-scl-helper, /usr/share/aeolus-conductor/dbomatic/dbomatic </dd>
 </dl>
 <p> <code>mongod_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the mongod_initrc_exec_t type, if you want to transition an executable to the mongod_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/mongod, /etc/rc.d/init.d/mongos </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/mongod, /etc/rc.d/init.d/mongos </dd>
 </dl>
 <p> <code>mongod_log_t</code> </p>
 <p> &#8211; Set files with the mongod_log_t type, if you want to treat the data as mongod log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/mongo.*, /var/log/aeolus-conductor/dbomatic.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/mongo.*, /var/log/aeolus-conductor/dbomatic.log.* </dd>
 </dl>
 <p> <code>mongod_tmp_t</code> </p>
 <p> &#8211; Set files with the mongod_tmp_t type, if you want to store mongod temporary files in the /tmp directories. </p>
 <p> <code>mongod_unit_file_t</code> </p>
 <p> &#8211; Set files with the mongod_unit_file_t type, if you want to treat the files as mongod unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/mongod.*, /usr/lib/systemd/system/mongos.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/mongod.*, /usr/lib/systemd/system/mongos.* </dd>
 </dl>
 <p> <code>mongod_var_lib_t</code> </p>
 <p> &#8211; Set files with the mongod_var_lib_t type, if you want to store the mongod files under the /var/lib directory. </p>
 <p> <code>mongod_var_run_t</code> </p>
 <p> &#8211; Set files with the mongod_var_run_t type, if you want to store the mongod files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/mongo.*, /var/run/aeolus/dbomatic.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/mongo.*, /var/run/aeolus/dbomatic.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

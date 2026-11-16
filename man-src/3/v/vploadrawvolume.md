@@ -13,31 +13,31 @@ description: "vpLoadRawVolume, vpLoadMinMaxOctree, vpLoadClassifiedVolume, vpLoa
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpLoadRawVolume(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpLoadRawVolume(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpLoadMinMaxOctree(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpLoadMinMaxOctree(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpLoadClassifiedVolume(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpLoadClassifiedVolume(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpLoadContext(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpLoadContext(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>fd</i></p>
-<dd>File descriptor from <code><a href="/docs/linux/man/2-open/">open</a></code>(2), open for reading.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>fd</i></dt>
+<dd>File descriptor from <code><a href="/docs/linux/man/2-open/">open</a></code>(2), open for reading.</dd></dl>
 <h2>Description</h2>
 <p>These functions are used to load volume data structures into a rendering context from files in the format written by the VolPack file storing routines (see <a href="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3)). </p>
 <p> <code>vpLoadRawVolume</code> loads a 3D voxel array file. The file includes information about the size of the volume and the layout of the voxels as well as the volume data itself. A new voxel array is allocated, the data is read into the array, and the array is stored in the rendering context. Note that the array will not be freed automatically when the context is destroyed; the application is responsible for freeing the array when appropriate (by using <code>vpGetp</code> with the VP_VOXEL_DATA state variable code to retrieve the array pointer), or for unmapping the voxel array if it has been memory mapped (see below). </p>
@@ -51,13 +51,14 @@ description: "vpLoadRawVolume, vpLoadMinMaxOctree, vpLoadClassifiedVolume, vpLoa
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return values are possible:</p>
 <dl>
-<dt>VPERROR_IO</p>
-<dd>The file reading or memory mapping function returned an error value (in which case the external variable <code>errno</code> should contain an operating-system specific error code), or the end of the file was reached prematurely.</p>
-<dt>VPERROR_BAD_FILE</p>
-<dd>The data in the file is invalid, usually meaning that it isn&#8217;t a file written by the appropriate VolPack function.</p>
-<dt>VPERROR_BAD_VOLUME</p>
-<dd>The data in a min-max octree file does not match the current volume size (<code>vpLoadMinMaxOctree</code> only).</p>
-<dt>VPERROR_BAD_VOXEL</p>
-<dd>The data in a min-max octree file does not match the current voxel layout parameters (<code>vpLoadMinMaxOctree</code> only).</dl>
+<dt>VPERROR_IO</dt>
+<dd>The file reading or memory mapping function returned an error value (in which case the external variable <code>errno</code> should contain an operating-system specific error code), or the end of the file was reached prematurely.</dd>
+<dt>VPERROR_BAD_FILE</dt>
+<dd>The data in the file is invalid, usually meaning that it isn&#8217;t a file written by the appropriate VolPack function.</dd>
+<dt>VPERROR_BAD_VOLUME</dt>
+<dd>The data in a min-max octree file does not match the current volume size (<code>vpLoadMinMaxOctree</code> only).</dd>
+<dt>VPERROR_BAD_VOXEL</dt>
+<dd>The data in a min-max octree file does not match the current voxel layout parameters (<code>vpLoadMinMaxOctree</code> only).</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3) </p>
+</dl></dl></dl>

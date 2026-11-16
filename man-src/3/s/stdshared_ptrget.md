@@ -29,17 +29,13 @@ A shared_ptr may share ownership of an object while storing a pointer to another
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;string_view&gt;
 void output(std::string_view msg, int const *pInt)
-
 {
     std::cout &lt;&lt; msg &lt;&lt; *pInt &lt;&lt; &quot;\n&quot;;
 }
 int main()
-
 {
     int *pInt = new int(42);
     std::shared_ptr&lt;int&gt; pShared = std::make_shared&lt;int&gt;(42);

@@ -165,8 +165,8 @@ description: "exim_selinux – Security Enhanced Linux Policy for the exim proce
 <p> <code>exim_exec_t</code> </p>
 <p> &#8211; Set files with the exim_exec_t type, if you want to transition an executable to the exim_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/exim[0-9]?, /usr/sbin/exim_tidydb </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/exim[0-9]?, /usr/sbin/exim_tidydb </dd>
 </dl>
 <p> <code>exim_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the exim_initrc_exec_t type, if you want to transition an executable to the exim_initrc_t domain. </p>
@@ -183,8 +183,8 @@ description: "exim_selinux – Security Enhanced Linux Policy for the exim proce
 <p> <code>exim_var_run_t</code> </p>
 <p> &#8211; Set files with the exim_var_run_t type, if you want to store the exim files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/exim[0-9]?.pid, /var/run/exim[0-9]?(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/exim[0-9]?.pid, /var/run/exim[0-9]?(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

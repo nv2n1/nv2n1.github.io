@@ -16,17 +16,17 @@ mongoc_socket_sendv (mongoc_socket_t *sock,
  int64_t expire_at);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iov</code></p>
-<dd>A mongoc_iovec_t.</dl>
+<dt><code>iov</code></dt>
+<dd>A mongoc_iovec_t.</dd></dl>
 <dl COMPACT>
-<dt><code>iovcnt</code></p>
-<dd>A size_t containing the number of elements in iov.</dl>
+<dt><code>iovcnt</code></dt>
+<dd>A size_t containing the number of elements in iov.</dd></dl>
 <dl COMPACT>
-<dt><code>expire_at</code></p>
-<dd>A int64_t with absolute timeout in monotonic time. The monotonic clock is in microseconds and can be fetched using <code>bson_get_monotonic_time(3)</code> \&amp;.</dl>
+<dt><code>expire_at</code></dt>
+<dd>A int64_t with absolute timeout in monotonic time. The monotonic clock is in microseconds and can be fetched using <code>bson_get_monotonic_time(3)</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Sends a vector of buffers to the destination. This uses <code>sendmsg(3)</code> when available to perform a gathered write. If IOV_MAX is reached, a fallback will be used. </p>
 <h2>Returns</h2>

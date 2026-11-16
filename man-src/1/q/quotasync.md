@@ -18,28 +18,28 @@ description: "quotasync – synchronize in-kernel file system usage and limits t
 <p> This tool can be useful if you want to display accurate quotas by tools that parse quota files, like <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u, &#8211;user</code></p>
-<dd> Synchronize user usage and limits.</p>
-<dt><code>-g, &#8211;group</code></p>
-<dd> Synchronize group usage and limits.</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd> Synchronize usage and limits on all file systems. You have to specify this option or to specify desired file systems.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show program version information and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show program usage and exit.</dl>
+<dt><code>-u, &#8211;user</code></dt>
+<dd> Synchronize user usage and limits.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd> Synchronize group usage and limits.</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd> Synchronize usage and limits on all file systems. You have to specify this option or to specify desired file systems.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show program version information and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show program usage and exit.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> If requested synchronization fails, or invalid option is given, <code>quotasync</code> will terminate with non-zero exit code. Otherwise it will return zero.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>aquota.user or aquota.group</code></p>
-<dd> Quota file at the file system root (version 2 quota, non-XFS/GFS2 file systems).</p>
-<dt><code>quota.user or quota.group</code></p>
-<dd> Quota file at the file system root (version 1 quota, non-XFS/GFS2 file systems).</p>
-<dt><code>/etc/mtab</code></p>
-<dd> List of mounted file systems maintained by user space.</p>
-<dt><code>/proc/mounts</code></p>
-<dd> List of mounted file systems maintained by kernel.</dl>
+<dt><code>aquota.user or aquota.group</code></dt>
+<dd> Quota file at the file system root (version 2 quota, non-XFS/GFS2 file systems).</dd>
+<dt><code>quota.user or quota.group</code></dt>
+<dd> Quota file at the file system root (version 1 quota, non-XFS/GFS2 file systems).</dd>
+<dt><code>/etc/mtab</code></dt>
+<dd> List of mounted file systems maintained by user space.</dd>
+<dt><code>/proc/mounts</code></dt>
+<dd> List of mounted file systems maintained by kernel.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-quota/">quota</a></code>(1), <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8), <code><a href="/docs/linux/man/8-quotaon/">quotaon</a></code>(8), <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8), <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8). </p>
 <h2>Index</h2>

@@ -48,48 +48,48 @@ description: "QwtScaleDiv –"
 <p> Scale divisions can be calculated from a <code>QwtScaleEngine</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtScaleEngine::divideScale()</code>, <code>QwtPlot::setAxisScaleDiv()</code>, QwtAbstractSlider::setScaleDiv()</dl>
+<dd><code>QwtScaleEngine::divideScale()</code>, <code>QwtPlot::setAxisScaleDiv()</code>, QwtAbstractSlider::setScaleDiv()</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtScaleDiv::TickType</code></h3>
 <p>Scale tick types. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoTick </i></p>
-<dd>No ticks.</p>
-<dt><i>MinorTick </i></p>
-<dd>Minor ticks.</p>
-<dt><i>MediumTick </i></p>
-<dd>Medium ticks.</p>
-<dt><i>MajorTick </i></p>
-<dd>Major ticks.</p>
-<dt><i>NTickTypes </i></p>
-<dd>Number of valid tick types.</dl>
+<dt><i>NoTick </i></dt>
+<dd>No ticks.</dd>
+<dt><i>MinorTick </i></dt>
+<dd>Minor ticks.</dd>
+<dt><i>MediumTick </i></dt>
+<dd>Medium ticks.</dd>
+<dt><i>MajorTick </i></dt>
+<dd>Major ticks.</dd>
+<dt><i>NTickTypes </i></dt>
+<dd>Number of valid tick types.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtScaleDiv::QwtScaleDiv (doublelowerBound = 0.0, doubleupperBound = 0.0) [explicit]</h3>
 <p>Construct a division without ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> First boundary<br />
- <i>upperBound</i> Second boundary</dl>
+ <i>upperBound</i> Second boundary</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>lowerBound might be greater than upperBound for inverted scales</dl>
+<dd>lowerBound might be greater than upperBound for inverted scales</dd></dl>
 <h3>QwtScaleDiv::QwtScaleDiv (const <code>QwtInterval</code> &amp;interval, QList&lt; double &gt;ticks[NTickTypes]) [explicit]</h3>
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Interval<br />
- <i>ticks</i> List of major, medium and minor ticks</dl>
+ <i>ticks</i> List of major, medium and minor ticks</dd></dl>
 <h3>QwtScaleDiv::QwtScaleDiv (doublelowerBound, doubleupperBound, QList&lt; double &gt;ticks[NTickTypes]) [explicit]</h3>
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> First boundary<br />
  <i>upperBound</i> Second boundary<br />
- <i>ticks</i> List of major, medium and minor ticks</dl>
+ <i>ticks</i> List of major, medium and minor ticks</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>lowerBound might be greater than upperBound for inverted scales</dl>
+<dd>lowerBound might be greater than upperBound for inverted scales</dd></dl>
 <h3>QwtScaleDiv::QwtScaleDiv (doublelowerBound, doubleupperBound, const QList&lt; double &gt; &amp;minorTicks, const QList&lt; double &gt; &amp;mediumTicks, const QList&lt; double &gt; &amp;majorTicks) [explicit]</h3>
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
@@ -98,118 +98,118 @@ description: "QwtScaleDiv –"
  <i>upperBound</i> Second boundary<br />
  <i>minorTicks</i> List of minor ticks<br />
  <i>mediumTicks</i> List medium ticks<br />
- <i>majorTicks</i> List of major ticks</dl>
+ <i>majorTicks</i> List of major ticks</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>lowerBound might be greater than upperBound for inverted scales</dl>
+<dd>lowerBound might be greater than upperBound for inverted scales</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtScaleDiv</code> QwtScaleDiv::bounded (doublelowerBound, doubleupperBound) const</h3>
 <p>Return a scale division with an interval [lowerBound, upperBound] where all ticks outside this interval are removed </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> Lower bound<br />
- <i>upperBound</i> Upper bound</dl>
+ <i>upperBound</i> Upper bound</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale division with all ticks inside of the given interval</dl>
+<dd>Scale division with all ticks inside of the given interval</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>lowerBound might be greater than upperBound for inverted scales</dl>
+<dd>lowerBound might be greater than upperBound for inverted scales</dd></dl>
 <h3>bool QwtScaleDiv::contains (doublevalue) const</h3>
 <p>Return if a value is between <code>lowerBound()</code> and <code>upperBound()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value</dl>
+<dd><i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true/false</dl>
+<dd>true/false</dd></dl>
 <h3><code>QwtInterval</code> QwtScaleDiv::interval () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>lowerBound -&gt; upperBound</dl>
+<dd>lowerBound -&gt; upperBound</dd></dl>
 <h3>void QwtScaleDiv::invert ()</h3>
 <p>Invert the scale division </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>inverted()</code></dl>
+<dd><code>inverted()</code></dd></dl>
 <h3><code>QwtScaleDiv</code> QwtScaleDiv::inverted () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A scale division with inverted boundaries and ticks</dl>
+<dd>A scale division with inverted boundaries and ticks</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invert()</code></dl>
+<dd><code>invert()</code></dd></dl>
 <h3>double QwtScaleDiv::lowerBound () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>First boundary</dl>
+<dd>First boundary</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>upperBound()</code></dl>
+<dd><code>upperBound()</code></dd></dl>
 <h3>bool QwtScaleDiv::operator!= (const <code>QwtScaleDiv</code> &amp;other) const</h3>
 <p>Inequality. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if this instance is not equal to other</dl>
+<dd>true if this instance is not equal to other</dd></dl>
 <h3>bool QwtScaleDiv::operator== (const <code>QwtScaleDiv</code> &amp;other) const</h3>
 <p>Equality operator. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if this instance is equal to other</dl>
+<dd>true if this instance is equal to other</dd></dl>
 <h3>double QwtScaleDiv::range () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>upperBound()</code> &#8211; <code>lowerBound()</code></dl>
+<dd><code>upperBound()</code> &#8211; <code>lowerBound()</code></dd></dl>
 <h3>void QwtScaleDiv::setInterval (doublelowerBound, doubleupperBound)</h3>
 <p>Change the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lowerBound</i> First boundary<br />
- <i>upperBound</i> Second boundary</dl>
+ <i>upperBound</i> Second boundary</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>lowerBound might be greater than upperBound for inverted scales</dl>
+<dd>lowerBound might be greater than upperBound for inverted scales</dd></dl>
 <h3>void QwtScaleDiv::setInterval (const <code>QwtInterval</code> &amp;interval)</h3>
 <p>Change the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval</dl>
+<dd><i>interval</i> Interval</dd></dl>
 <h3>void QwtScaleDiv::setLowerBound (doublelowerBound)</h3>
 <p>Set the first boundary </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> First boundary</dl>
+<dd><i>lowerBound</i> First boundary</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>lowerBiound(), <code>setUpperBound()</code></dl>
+<dd>lowerBiound(), <code>setUpperBound()</code></dd></dl>
 <h3>void QwtScaleDiv::setTicks (inttype, const QList&lt; double &gt; &amp;ticks)</h3>
 <p>Assign ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>type</i> MinorTick, MediumTick or MajorTick<br />
- <i>ticks</i> Values of the tick positions</dl>
+ <i>ticks</i> Values of the tick positions</dd></dl>
 <h3>void QwtScaleDiv::setUpperBound (doubleupperBound)</h3>
 <p>Set the second boundary </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>upperBound</i> Second boundary</dl>
+<dd><i>upperBound</i> Second boundary</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>upperBound()</code>, <code>setLowerBound()</code></dl>
+<dd><code>upperBound()</code>, <code>setLowerBound()</code></dd></dl>
 <h3>QList&lt; double &gt; QwtScaleDiv::ticks (inttype) const</h3>
 <p>Return a list of ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> MinorTick, MediumTick or MajorTick</dl>
+<dd><i>type</i> MinorTick, MediumTick or MajorTick</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Tick list</dl>
+<dd>Tick list</dd></dl>
 <h3>double QwtScaleDiv::upperBound () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>upper bound</dl>
+<dd>upper bound</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>lowerBound()</code></dl>
+<dd><code>lowerBound()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -13,8 +13,8 @@ description: "–"
 <p>Use the Puppet RAL to directly interact with the system.</p>
 <h2>Usage</h2>
 <dl>
-<dt><code>ralsh [-h|&#8211;help] [-d|&#8211;debug] [-v|&#8211;verbose] [-e|&#8211;edit] [-H|&#8211;host &lt;host&gt;]</code></p>
-<dd>[-p|&#8211;param &lt;param&gt;] [-t|&#8211;types] type &lt;name&gt;</dl>
+<dt><code>ralsh [-h|&#8211;help] [-d|&#8211;debug] [-v|&#8211;verbose] [-e|&#8211;edit] [-H|&#8211;host &lt;host&gt;]</code></dt>
+<dd>[-p|&#8211;param &lt;param&gt;] [-t|&#8211;types] type &lt;name&gt;</dd></dl>
 <h2>Description</h2>
 <p>This command provides simple facilities for converting current system state into Puppet code, along with some ability to use Puppet to affect the current state. </p>
 <p> By default, you must at least provide a type to list, which case ralsh will tell you everything it knows about all instances of that type. You can optionally specify an instance name, and ralsh will only describe that single instance. </p>

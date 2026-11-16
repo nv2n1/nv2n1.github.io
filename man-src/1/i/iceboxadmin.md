@@ -16,23 +16,23 @@ description: "iceboxadmin – The IceBox administrative utility."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/IceBox+Administration#IceBoxAdministration-IceBoxAdministrativeUtility">http://doc.zeroc.com/display/Ice/IceBox+Administration#IceBoxAdministration-IceBoxAdministrativeUtility</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Displays a help message. </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays the Ice version. </p>
+ Displays a help message. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the Ice version. </dd>
 </dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>start</code> <code>SERVICE</code></p>
+<dt><code>start</code> <code>SERVICE</code></dt>
 <dd>
- Start a service. </p>
-<dt><code>stop</code> <code>SERVICE</code></p>
+ Start a service. </dd>
+<dt><code>stop</code> <code>SERVICE</code></dt>
 <dd>
- Stop a service. </p>
-<dt><code>shutdown</code></p>
+ Stop a service. </dd>
+<dt><code>shutdown</code></dt>
 <dd>
- Shutdown the server. </p>
+ Shutdown the server. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icebox/">icebox</a></code>(1), <code><a href="/docs/linux/man/1-iceboxnet/">iceboxnet</a></code>(1) </p>

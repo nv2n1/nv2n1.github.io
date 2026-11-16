@@ -30,23 +30,23 @@ url: "/docs/linux/man/1-pbs/"
  Other commands of interest which have man pages of their own are:
 <dl>
 <dt>qalter
-<dd> Alter a job's attributes.
-<dt>qdel
-<dd> Delete a job.
-<dt>qhold
-<dd> Place a hold on a job to keep it from being scheduled for running.
-<dt>qmove
-<dd> Move a job to a different queue or server.
-<dt>qmsg
-<dd> Append a message to the output of an executing job.
-<dt>qrerun
-<dd> Terminate an executing job and return it to a queue.
-<dt>qrls
-<dd> Remove a hold from a job.
-<dt>qselect
-<dd> Obtain a list of jobs that met certain criteria.
-<dt>qsig
-<dd> Send a signal to an executing job.</dl>
+</dt><dd> Alter a job's attributes.
+</dd><dt>qdel
+</dt><dd> Delete a job.
+</dd><dt>qhold
+</dt><dd> Place a hold on a job to keep it from being scheduled for running.
+</dd><dt>qmove
+</dt><dd> Move a job to a different queue or server.
+</dd><dt>qmsg
+</dt><dd> Append a message to the output of an executing job.
+</dd><dt>qrerun
+</dt><dd> Terminate an executing job and return it to a queue.
+</dd><dt>qrls
+</dt><dd> Remove a hold from a job.
+</dd><dt>qselect
+</dt><dd> Obtain a list of jobs that met certain criteria.
+</dd><dt>qsig
+</dt><dd> Send a signal to an executing job.</dd></dl>
  
 
 <h2>SEE ALSO</h2>

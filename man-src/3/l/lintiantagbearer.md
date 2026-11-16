@@ -16,10 +16,10 @@ use namespace::clean;
 <p>A class for collecting Lintian tags as they are found</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>tag (<font SIZE="-1">ARGS</font>)</p>
-<dd>Store found tags for later processing.</p>
-<dt>tags</p>
-<dd></dl>
+<dt>tag (<font SIZE="-1">ARGS</font>)</dt>
+<dd>Store found tags for later processing.</dd>
+<dt>tags</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

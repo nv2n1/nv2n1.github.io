@@ -15,19 +15,19 @@ description: "idevicebackup – Create or restore backup for devices."
 <p> Create or restore backup from the current or specified directory. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u, &#8211;udid UDID</code></p>
-<dd> target specific device by its 40-digit device UDID.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable communication debugging.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information. </p>
+<dt><code>-u, &#8211;udid UDID</code></dt>
+<dd> target specific device by its 40-digit device UDID.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable communication debugging.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information. </dd>
 </dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>backup</code></p>
-<dd> saves a device backup into DIRECTORY.</p>
-<dt><code>restore</code></p>
-<dd> restores a device backup from DIRECTORY. </p>
+<dt><code>backup</code></dt>
+<dd> saves a device backup into DIRECTORY.</dd>
+<dt><code>restore</code></dt>
+<dd> restores a device backup from DIRECTORY. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>

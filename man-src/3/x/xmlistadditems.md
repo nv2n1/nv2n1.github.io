@@ -18,14 +18,14 @@ description: "XmListAddItems — A List function that adds items to the list"
 <h2>Description</h2>
 <p><code>XmListAddItems</code> adds the specified items to the list at the given position. The first <i>item_count</i> items of the <i>items</i> array are added to the list. When the items are inserted into the list, they are compared with the current <code>XmNselectedItems</code> list. If any of the new items matches an item on the selected list, it appears selected.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List to which an item is added.</p>
-<dt><i>items</i></p>
-<dd>Specifies a pointer to the items to be added to the list.</p>
-<dt><i>item_count</i></p>
-<dd>Specifies the number of items in <i>items</i>. This number must be nonnegative.</p>
-<dt><i>position</i></p>
-<dd>Specifies the position of the first new item in the list. A value of 1 makes the first new item the first item in the list; a value of 2 makes it the second item; and so on. A value of 0 (zero) makes the first new item follow the last item in the list.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List to which an item is added.</dd>
+<dt><i>items</i></dt>
+<dd>Specifies a pointer to the items to be added to the list.</dd>
+<dt><i>item_count</i></dt>
+<dd>Specifies the number of items in <i>items</i>. This number must be nonnegative.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position of the first new item in the list. A value of 1 makes the first new item the first item in the list; a value of 2 makes it the second item; and so on. A value of 0 (zero) makes the first new item follow the last item in the list.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

@@ -22,7 +22,7 @@ description: "QuantLib::DirichletBC – Neumann boundary condition (i.e., consta
 <p>Neumann boundary condition (i.e., constant value). </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>generalize to time-dependent conditions.</dl>
+<dd>generalize to time-dependent conditions.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void applyBeforeApplying (<code>TridiagonalOperator</code> &amp;) const [virtual]</h3>
 <p>This method modifies an operator $ L $ before it is applied to an array $ u $ so that $ v = Lu $ will satisfy the given condition. </p>

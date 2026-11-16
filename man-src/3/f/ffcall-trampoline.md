@@ -26,10 +26,10 @@ description: "trampoline – closures as first-class C functions"
 <p> <code>is_trampoline(</code><i>function</i><code>)</code> checks whether the C function <i>function</i> was produced by a call to <i>alloc_trampoline</i>. If this returns true, the arguments given to <i>alloc_trampoline</i> can be retrieved:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>trampoline_address(</code><i>function</i><code>)</code> returns <i>address</i>, </p>
 <p> <code>trampoline_variable(</code><i>function</i><code>)</code> returns <i>variable</i>, </p>
-<p> <code>trampoline_data(</code><i>function</i><code>)</code> returns <i>data</i>.</dl>
+<p> <code>trampoline_data(</code><i>function</i><code>)</code> returns <i>data</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code>varargs</code>(3), <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3) </p>
 <h2>BUGS</h2>
@@ -41,3 +41,4 @@ description: "trampoline – closures as first-class C functions"
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Many ideas were cribbed from the gcc source. </p>
 <h2>Index</h2>
+</p>

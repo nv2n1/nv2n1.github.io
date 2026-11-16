@@ -13,46 +13,46 @@ description: "csgrep – filter the list of defects by the specified regex-based
 <p> <code>csgrep</code> [<i>options</i>] [<i>file1.err </i>[&#8230;]]<i>, where options are:</i></p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>&#8211;checker</code> arg</p>
-<dd> defect matches if its checker matches the given regex (each defect has assigned exactly one checker)</p>
-<dt><code>&#8211;path</code> arg</p>
-<dd> defect matches if the path of its key event matches the given regex</p>
-<dt><code>&#8211;event</code> arg</p>
-<dd> defect matches if its key event matches the given regex (each defect has exactly one key event, which determines its location in the code)</p>
-<dt><code>&#8211;error</code> arg</p>
-<dd> defect matches if the message of its key event matches the given regex</p>
-<dt><code>&#8211;msg</code> arg</p>
-<dd> defect matches if any of its messages matches the given regex</p>
-<dt><code>&#8211;annot</code> arg</p>
-<dd> defect matches if its annotation matches the given regex</p>
-<dt><code>&#8211;src-annot</code> arg</p>
-<dd> defect matches if an annotation in the _source_ file matches the given regex</p>
-<dt><code>-U</code> [ <code>&#8211;embed-context</code> ] arg</p>
-<dd> embed a number of lines of context from the source file for the key event</p>
-<dt><code>&#8211;prune-events</code> arg</p>
-<dd> event is preserved if its verbosity level is below the given number</p>
-<dt><code>-u</code> [ <code>&#8211;remove-duplicates</code> ]</p>
-<dd> remove defects that are not unique by their key event</p>
-<dt><code>&#8211;strip-path-prefix</code> arg</p>
-<dd> string prefix to strip from path (applied after all filters)</p>
-<dt><code>-i</code> [ <code>&#8211;ignore-case</code> ]</p>
-<dd> ignore case when matching regular expressions</p>
-<dt><code>-v</code> [ <code>&#8211;invert-match</code> ]</p>
-<dd> select defects that do not match the selected criteria</p>
-<dt><code>-n</code> [ <code>&#8211;invert-regex</code> ]</p>
-<dd> invert regular expressions in all predicates</p>
-<dt><code>&#8211;color</code></p>
-<dd> use colorized console output (default if connected to a terminal)</p>
-<dt><code>&#8211;no-color</code></p>
-<dd> do not use colorized console output</p>
-<dt><code>-q</code> [ <code>&#8211;quiet</code> ]</p>
-<dd> do not report any parsing errors</p>
-<dt><code>&#8211;mode</code> arg (=grep)</p>
-<dd> grep, json, stat, grouped, files, filestat, or dig_key_events</p>
-<dt><code>&#8211;help</code></p>
-<dd> print the usage of csgrep</p>
-<dt><code>&#8211;version</code></p>
-<dd> print the version of csgrep</dl>
+<dt><code>&#8211;checker</code> arg</dt>
+<dd> defect matches if its checker matches the given regex (each defect has assigned exactly one checker)</dd>
+<dt><code>&#8211;path</code> arg</dt>
+<dd> defect matches if the path of its key event matches the given regex</dd>
+<dt><code>&#8211;event</code> arg</dt>
+<dd> defect matches if its key event matches the given regex (each defect has exactly one key event, which determines its location in the code)</dd>
+<dt><code>&#8211;error</code> arg</dt>
+<dd> defect matches if the message of its key event matches the given regex</dd>
+<dt><code>&#8211;msg</code> arg</dt>
+<dd> defect matches if any of its messages matches the given regex</dd>
+<dt><code>&#8211;annot</code> arg</dt>
+<dd> defect matches if its annotation matches the given regex</dd>
+<dt><code>&#8211;src-annot</code> arg</dt>
+<dd> defect matches if an annotation in the _source_ file matches the given regex</dd>
+<dt><code>-U</code> [ <code>&#8211;embed-context</code> ] arg</dt>
+<dd> embed a number of lines of context from the source file for the key event</dd>
+<dt><code>&#8211;prune-events</code> arg</dt>
+<dd> event is preserved if its verbosity level is below the given number</dd>
+<dt><code>-u</code> [ <code>&#8211;remove-duplicates</code> ]</dt>
+<dd> remove defects that are not unique by their key event</dd>
+<dt><code>&#8211;strip-path-prefix</code> arg</dt>
+<dd> string prefix to strip from path (applied after all filters)</dd>
+<dt><code>-i</code> [ <code>&#8211;ignore-case</code> ]</dt>
+<dd> ignore case when matching regular expressions</dd>
+<dt><code>-v</code> [ <code>&#8211;invert-match</code> ]</dt>
+<dd> select defects that do not match the selected criteria</dd>
+<dt><code>-n</code> [ <code>&#8211;invert-regex</code> ]</dt>
+<dd> invert regular expressions in all predicates</dd>
+<dt><code>&#8211;color</code></dt>
+<dd> use colorized console output (default if connected to a terminal)</dd>
+<dt><code>&#8211;no-color</code></dt>
+<dd> do not use colorized console output</dd>
+<dt><code>-q</code> [ <code>&#8211;quiet</code> ]</dt>
+<dd> do not report any parsing errors</dd>
+<dt><code>&#8211;mode</code> arg (=grep)</dt>
+<dd> grep, json, stat, grouped, files, filestat, or dig_key_events</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print the usage of csgrep</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print the version of csgrep</dd></dl>
 <h2>EXAMPLE &#8211; CHECKERS, EVENTS, MESSAGES</h2>
 <pre>
 Error: FORWARD_NULL (CWE-476):

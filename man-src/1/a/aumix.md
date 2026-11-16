@@ -16,55 +16,55 @@ description: "aumix – adjust audio mixer"
 <h2>OPTIONS</h2>
 <h3>CHANNEL OPTIONS</h3>
 <dl>
-<dt><code>-v</code></p>
-<dd> main volume</p>
-<dt><code>-b</code></p>
-<dd> bass</p>
-<dt><code>-c</code></p>
-<dd> CD</p>
-<dt><code>-i</code></p>
-<dd> line in</p>
-<dt><code>-l</code></p>
-<dd> line</p>
-<dt><code>-m</code></p>
-<dd> microphone</p>
-<dt><code>-o</code></p>
-<dd> line out</p>
-<dt><code>-p</code></p>
-<dd> PC speaker</p>
-<dt><code>-s</code></p>
-<dd> synthesizer</p>
-<dt><code>-t</code></p>
-<dd> treble</p>
-<dt><code>-w</code></p>
-<dd> PCM</p>
-<dt><code>-x</code></p>
-<dd> imix</p>
-<dt><code>-1</code></p>
-<dd> line 1</p>
-<dt><code>-2</code></p>
-<dd> line 2</p>
-<dt><code>-3</code></p>
-<dd> line 3</dl>
+<dt><code>-v</code></dt>
+<dd> main volume</dd>
+<dt><code>-b</code></dt>
+<dd> bass</dd>
+<dt><code>-c</code></dt>
+<dd> CD</dd>
+<dt><code>-i</code></dt>
+<dd> line in</dd>
+<dt><code>-l</code></dt>
+<dd> line</dd>
+<dt><code>-m</code></dt>
+<dd> microphone</dd>
+<dt><code>-o</code></dt>
+<dd> line out</dd>
+<dt><code>-p</code></dt>
+<dd> PC speaker</dd>
+<dt><code>-s</code></dt>
+<dd> synthesizer</dd>
+<dt><code>-t</code></dt>
+<dd> treble</dd>
+<dt><code>-w</code></dt>
+<dd> PCM</dd>
+<dt><code>-x</code></dt>
+<dd> imix</dd>
+<dt><code>-1</code></dt>
+<dd> line 1</dd>
+<dt><code>-2</code></dt>
+<dd> line 2</dd>
+<dt><code>-3</code></dt>
+<dd> line 3</dd></dl>
 <p> For each channel, <code>q</code> queries, <code>+</code> and <code>&#8211;</code> increment and decrement by one, or an amount if one is specified. If no <code>+</code> or <code>&#8211;</code> is given after the channel option, a number sets a specific level (monophonically).</p>
 <h3>OTHER OPTIONS</h3>
 <dl>
-<dt><code>-C </code><i>color_scheme_file</i></p>
-<dd> specify the name of a file containing a color scheme. This implies &#8211;<code>I</code></p>
-<dt><code>-d </code><i>device_file</i></p>
-<dd> specify the name of the mixer device (default is /dev/mixer</p>
-<dt><code>-f </code><i>rc_file</i></p>
-<dd> specify file for saving and loading settings</p>
-<dt><code>-h</code></p>
-<dd> display information on usage</p>
-<dt><code>-I</code></p>
-<dd> run interactively, using the full-screen ncurses-based interface. This is the default if no options are given, but must be specified in order to have go into interactive mode after doing things non-interactively.</p>
-<dt><code>-L</code></p>
-<dd> load settings from $HOME/.aumixrc or /etc/aumixrc if the former is inaccessible</p>
-<dt><code>-q</code></p>
-<dd> query all devices and print their settings</p>
-<dt><code>-S</code></p>
-<dd> save settings to $HOME/.aumixrc</dl>
+<dt><code>-C </code><i>color_scheme_file</i></dt>
+<dd> specify the name of a file containing a color scheme. This implies &#8211;<code>I</code></dd>
+<dt><code>-d </code><i>device_file</i></dt>
+<dd> specify the name of the mixer device (default is /dev/mixer</dd>
+<dt><code>-f </code><i>rc_file</i></dt>
+<dd> specify file for saving and loading settings</dd>
+<dt><code>-h</code></dt>
+<dd> display information on usage</dd>
+<dt><code>-I</code></dt>
+<dd> run interactively, using the full-screen ncurses-based interface. This is the default if no options are given, but must be specified in order to have go into interactive mode after doing things non-interactively.</dd>
+<dt><code>-L</code></dt>
+<dd> load settings from $HOME/.aumixrc or /etc/aumixrc if the former is inaccessible</dd>
+<dt><code>-q</code></dt>
+<dd> query all devices and print their settings</dd>
+<dt><code>-S</code></dt>
+<dd> save settings to $HOME/.aumixrc</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <blockquote>
@@ -89,32 +89,32 @@ vol:50:50
 <h3>KEYS</h3>
 <p> The following keys control in interactive mode:</p>
 <dl>
-<dt><code>page up, page down, up and down cursor</code></p>
-<dd> select a new control.</p>
-<dt><code>Tab, Enter, &lt;, &gt;, comma and period</code></p>
-<dd> toggle between level and balance controls</p>
-<dt><code>+ , &#8211; , [ , ] , left and right cursor and digits</code></p>
-<dd> adjust the setting of the current device. The <code>+</code> and right cursor keys increase the level by 3%; the <code>&#8211;</code> and left cursor keys decrease it by the same amount. The <code>[</code> key sets it to 0% and <code>]</code> sets it to 100%. The digits <code>1</code> to <code>9</code> set it to 10% through 90%. The same keys work analogously on the balance controls.</p>
-<dt><code>Space</code></p>
-<dd> toggles between record and play for controls which are capable of this.</p>
-<dt><code>|</code></p>
-<dd> centers the balance of the current device.</p>
-<dt><code>K or k</code></p>
-<dd> show a description of the functions of keys</p>
-<dt><code>L or l</code></p>
-<dd> load settings from $HOME/.aumixrc falling back to /etc/aumixrc</p>
-<dt><code>M or m</code></p>
-<dd> mute or unmute</p>
-<dt><code>O or o</code></p>
-<dd> &#8220;only&#8221; mute all channels but the current one</p>
-<dt><code>S or s</code></p>
-<dd> save settings to the rc file</p>
-<dt><code>U or u</code></p>
-<dd> undo any muting</p>
-<dt><code>Q or q</code></p>
-<dd> end the program</p>
-<dt><code>^L</code></p>
-<dd> refresh screen</dl>
+<dt><code>page up, page down, up and down cursor</code></dt>
+<dd> select a new control.</dd>
+<dt><code>Tab, Enter, &lt;, &gt;, comma and period</code></dt>
+<dd> toggle between level and balance controls</dd>
+<dt><code>+ , &#8211; , [ , ] , left and right cursor and digits</code></dt>
+<dd> adjust the setting of the current device. The <code>+</code> and right cursor keys increase the level by 3%; the <code>&#8211;</code> and left cursor keys decrease it by the same amount. The <code>[</code> key sets it to 0% and <code>]</code> sets it to 100%. The digits <code>1</code> to <code>9</code> set it to 10% through 90%. The same keys work analogously on the balance controls.</dd>
+<dt><code>Space</code></dt>
+<dd> toggles between record and play for controls which are capable of this.</dd>
+<dt><code>|</code></dt>
+<dd> centers the balance of the current device.</dd>
+<dt><code>K or k</code></dt>
+<dd> show a description of the functions of keys</dd>
+<dt><code>L or l</code></dt>
+<dd> load settings from $HOME/.aumixrc falling back to /etc/aumixrc</dd>
+<dt><code>M or m</code></dt>
+<dd> mute or unmute</dd>
+<dt><code>O or o</code></dt>
+<dd> &#8220;only&#8221; mute all channels but the current one</dd>
+<dt><code>S or s</code></dt>
+<dd> save settings to the rc file</dd>
+<dt><code>U or u</code></dt>
+<dd> undo any muting</dd>
+<dt><code>Q or q</code></dt>
+<dd> end the program</dd>
+<dt><code>^L</code></dt>
+<dd> refresh screen</dd></dl>
 <p> ^Z, ^D and ^C also have their normal function (the screen is refreshed when is brought to the foreground).</p>
 <h3>MOUSE</h3>
 <p> In interactive mode, can accept input from the mouse if <a href="/docs/linux/man/8-gpm/">gpm</a>(8) is running and is compiled with <a href="/docs/linux/man/8-gpm/">gpm</a>(8) support. If gpm is not running but gpm support is included, the message `mouse&#8217; off will appear at the top of the screen, and only keyboard input will be accepted. With <a href="/docs/linux/man/8-gpm/">gpm</a>(8) running, most functions can be performed through the mouse. The mouse is active whenever one of its buttons is held down. While active, it works in the following ways: </p>

@@ -15,15 +15,15 @@ pcie_get_minimum_link - determine minimum link settings of a PCI device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
  
 
  <i>speed</i>
-<dl><dd>storage for minimum speed</dl>
+<dl><dd>storage for minimum speed</dd></dl>
  
 
  <i>width</i>
-<dl><dd>storage for minimum width</dl>
+<dl><dd>storage for minimum width</dd></dl>
 
 <h2>Description</h2>
 

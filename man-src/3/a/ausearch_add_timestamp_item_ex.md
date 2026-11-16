@@ -16,15 +16,13 @@ description: "ausearch_add_timestamp_item_ex – build up search rule"
 <p> ausearch_add_timestamp_item adds an event time condition to the current audit search expression. The search conditions can then be used to scan logs, files, or buffers for something of interest. The op parameter specifies the desired comparison. Legal op values are <i>&lt;</i>, <i>&lt;=</i>, <i>&gt;=</i>, <i>&gt;</i> and <i>=</i>. The left operand of the comparison operator is the timestamp of the examined event, the right operand is specified by the sec, milli, and serial parameters. </p>
 <p> The how value determines how this search condition will affect the existing search expression if one is already defined. The possible values are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>AUSEARCH_RULE_CLEAR</i></p>
-<dd> Clear the current search expression, if any, and use only this search condition.</p>
-<dt><i>AUSEARCH_RULE_OR</i></p>
-<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> || </code><i>this_search_condition</i><code>)</code>.</p>
-<dt><i>AUSEARCH_RULE_AND</i></p>
-<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> &amp;&amp; </code><i>this_search_condition</i><code>)</code>.</dl>
+<dt><i>AUSEARCH_RULE_CLEAR</i></dt>
+<dd> Clear the current search expression, if any, and use only this search condition.</dd>
+<dt><i>AUSEARCH_RULE_OR</i></dt>
+<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> || </code><i>this_search_condition</i><code>)</code>.</dd>
+<dt><i>AUSEARCH_RULE_AND</i></dt>
+<dd> If a search expression <i>E</i> is already configured, replace it by <code>(</code><i>E</i><code> &amp;&amp; </code><i>this_search_condition</i><code>)</code>.</dd></dl>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs; otherwise, 0 for success. </p>

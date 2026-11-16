@@ -15,8 +15,8 @@ description: "ximtoppm – convert an Xim file into a portable pixmap"
 <p> Reads an Xim file as input. Produces a portable pixmap as output. The Xim toolkit is included in the contrib tree of the X.V11R4 release.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;alphaout=</code><i>alpha-filename</i></p>
-<dd> <code>ximtoppm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>&#8211;alphaout</code>, <code>ximtoppm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>ximtoppm</code> simply discards it. </p>
+<dt><code>&#8211;alphaout=</code><i>alpha-filename</i></dt>
+<dd> <code>ximtoppm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>&#8211;alphaout</code>, <code>ximtoppm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>ximtoppm</code> simply discards it. </dd>
 <p> If you specify <code>&#8211;</code> as the filename, <code>ximtoppm</code> writes the alpha output to Standard Output and discards the image. </p>
 <p> Actually, an Xim image can contain an arbitrary fourth channel &#8212; it need not be an Alpha channel. <code>ximtoppm</code> extracts any fourth channel it finds as described above; it doesn&#8217;t matter if it is an alpha channel or not. </p>
 <p> See <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1) for one way to use the alpha output file. </p>

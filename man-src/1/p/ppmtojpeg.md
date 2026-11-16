@@ -19,23 +19,23 @@ description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 <h2>OPTIONS</h2>
 <p> The basic options are:</p>
 <dl>
-<dt><code>&#8211;exif=</code><i>filespec</i></p>
-<dd> This option specifies that the output image is to be EXIF (a subformat of JFIF), i.e. it will have an EXIF header as a JFIF APP1 marker. The contents of that marker are the contents of the specified file. The special value <code>&#8211;</code> means to read the EXIF header contents from standard input. It is invalid to specify standard input for both the EXIF header and the input image. </p>
+<dt><code>&#8211;exif=</code><i>filespec</i></dt>
+<dd> This option specifies that the output image is to be EXIF (a subformat of JFIF), i.e. it will have an EXIF header as a JFIF APP1 marker. The contents of that marker are the contents of the specified file. The special value <code>&#8211;</code> means to read the EXIF header contents from standard input. It is invalid to specify standard input for both the EXIF header and the input image. </dd>
 <p> The EXIF file starts with a two byte field which is the length of the file, including the length field, in pure binary, most significant byte first. The special value of zero for the length field means there is to be no EXIF header, i.e. the same as no <code>-exif</code> option. This is useful for when you convert a file from JFIF to PNM using <code>jpegtopnm</code>, then transform it, then convert it back to JFIF with <code>pnmtojpeg</code>, and you don&#8217;t know whether or not it includes an EXIF header. <code>jpegtopnm</code> creates an EXIF file containing nothing but two bytes of zero when the input JFIF file has no EXIF header. Thus, you can transfer any EXIF header from the input JFIF to the output JFIF without worrying about whether an EXIF header actually exists. </p>
 <p> The contents of the EXIF file after the length field are the exact byte for byte contents of the APP1 marker, not counting the length field, that constitutes the EXIF header. </p>
-<dt><code>&#8211;quality=</code><i>n</i></p>
-<dd> Scale quantization tables to adjust image quality. <i>n</i> is 0 (worst) to 100 (best); default is 75. (See below for more info.)</p>
-<dt><code>&#8211;grayscale</code></p>
+<dt><code>&#8211;quality=</code><i>n</i></dt>
+<dd> Scale quantization tables to adjust image quality. <i>n</i> is 0 (worst) to 100 (best); default is 75. (See below for more info.)</dd>
+<dt><code>&#8211;grayscale</code></dt>
 <dd>
-<dt><code>&#8211;greyscale</code></p>
-<dd> Create gray scale JFIF file. With this option, <code>pnmtojpeg</code> converts color input to gray scale. If you don&#8217;t specify this option, The output file is in color format if the input is PPM, and grayscale format if the input is PBM or PGM. </p>
+</dd><dt><code>&#8211;greyscale</code></dt>
+<dd> Create gray scale JFIF file. With this option, <code>pnmtojpeg</code> converts color input to gray scale. If you don&#8217;t specify this option, The output file is in color format if the input is PPM, and grayscale format if the input is PBM or PGM. </dd>
 <p> In the PPM input case, even if all the colors in the image are gray, the output is in color format. Of course, the colors in it are still gray. The difference is that color format takes up a lot more space and takes longer to create and process.</p>
-<dt><code>&#8211;optimize</code></p>
-<dd> Perform optimization of entropy encoding parameters. Without this, <code>pnmtojpeg</code> uses default encoding parameters. <code>&#8211;optimize</code> usually makes the JFIF file a little smaller, but <code>pnmtojpeg</code> runs somewhat slower and needs much more memory. Image quality and speed of decompression are unaffected by <code>&#8211;optimize</code>.</p>
-<dt><code>&#8211;progressive</code></p>
-<dd> Create a progressive JPEG file (see below).</p>
-<dt><code>&#8211;comment=</code><i>text</i></p>
-<dd> Include a comment marker in the JFIF output, with comment text <i>text</i>. Without this option, there are no comment markers in the output. </p>
+<dt><code>&#8211;optimize</code></dt>
+<dd> Perform optimization of entropy encoding parameters. Without this, <code>pnmtojpeg</code> uses default encoding parameters. <code>&#8211;optimize</code> usually makes the JFIF file a little smaller, but <code>pnmtojpeg</code> runs somewhat slower and needs much more memory. Image quality and speed of decompression are unaffected by <code>&#8211;optimize</code>.</dd>
+<dt><code>&#8211;progressive</code></dt>
+<dd> Create a progressive JPEG file (see below).</dd>
+<dt><code>&#8211;comment=</code><i>text</i></dt>
+<dd> Include a comment marker in the JFIF output, with comment text <i>text</i>. Without this option, there are no comment markers in the output. </dd>
 </dl>
 <p> The <code>&#8211;quality</code> option lets you trade off compressed file size against quality of the reconstructed image: the higher the quality setting, the larger the JFIF file, and the closer the output image will be to the original input. Normally you want to use the lowest quality setting (smallest file) that decompresses into something visually indistinguishable from the original image. For this purpose the quality setting should be between 50 and 95; the default of 75 is often about right. If you see defects at <code>&#8211;quality=75</code>, then go up 5 or 10 counts at a time until you are happy with the output image. (The optimal setting will vary from one image to another.) </p>
 <p> <code>&#8211;quality=100</code> generates a quantization table of all 1&#8217;s, minimizing loss in the quantization step (but there is still information loss in subsampling, as well as roundoff error). This setting is mainly of interest for experimental purposes. Quality values above about 95 are <i>not</i> recommended for normal use; the compressed file size goes up dramatically for hardly any gain in output image quality. </p>
@@ -43,42 +43,42 @@ description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 <p> The <code>&#8211;progressive</code> option creates a &quot;progressive JPEG&quot; file. In this type of JFIF file, the data is stored in multiple scans of increasing quality. If the file is being transmitted over a slow communications link, the decoder can use the first scan to display a low-quality image very quickly, and can then improve the display with each subsequent scan. The final image is exactly equivalent to a standard JFIF file of the same quality setting, and the total file size is about the same &#8212; often a little smaller. <code>Caution:</code> progressive JPEG is not yet widely implemented, so many decoders will be unable to view a progressive JPEG file at all. </p>
 <p> Options for advanced users:</p>
 <dl>
-<dt><code>&#8211;dct=int</code></p>
-<dd> Use integer DCT method (default).</p>
-<dt><code>&#8211;dct=fast</code></p>
-<dd> Use fast integer DCT (less accurate).</p>
-<dt><code>&#8211;dct=float</code></p>
-<dd> Use floating-point DCT method. The float method is very slightly more accurate than the int method, but is much slower unless your machine has very fast floating-point hardware. Also note that results of the floating-point method may vary slightly across machines, while the integer methods should give the same results everywhere. The fast integer method is much less accurate than the other two.</p>
-<dt><code>&#8211;restart=</code><i>n</i></p>
-<dd> Emit a JPEG restart marker every <i>n </i> MCU rows, or every <i>n </i> MCU blocks if you append <code>B </code> to the number. <code>&#8211;restart 0</code> (the default) means no restart markers.</p>
-<dt><code>&#8211;smooth=</code><i>n</i></p>
-<dd> Smooth the input image to eliminate dithering noise. <i>n</i>, ranging from 1 to 100, indicates the strength of smoothing. 0 (the default) means no smoothing.</p>
-<dt><code>&#8211;maxmemory=</code><i>n</i></p>
-<dd> Set a limit for amount of memory to use in processing large images. Value is in thousands of bytes, or millions of bytes if you append <code>M </code> to the number. For example, <code>&#8211;max=4m</code> selects 4,000,000 bytes. If <code>pnmtojpeg</code> needs more space, it will use temporary files.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print to the Standard Error file messages about the conversion process. This can be helpful in debugging problems.</dl>
+<dt><code>&#8211;dct=int</code></dt>
+<dd> Use integer DCT method (default).</dd>
+<dt><code>&#8211;dct=fast</code></dt>
+<dd> Use fast integer DCT (less accurate).</dd>
+<dt><code>&#8211;dct=float</code></dt>
+<dd> Use floating-point DCT method. The float method is very slightly more accurate than the int method, but is much slower unless your machine has very fast floating-point hardware. Also note that results of the floating-point method may vary slightly across machines, while the integer methods should give the same results everywhere. The fast integer method is much less accurate than the other two.</dd>
+<dt><code>&#8211;restart=</code><i>n</i></dt>
+<dd> Emit a JPEG restart marker every <i>n </i> MCU rows, or every <i>n </i> MCU blocks if you append <code>B </code> to the number. <code>&#8211;restart 0</code> (the default) means no restart markers.</dd>
+<dt><code>&#8211;smooth=</code><i>n</i></dt>
+<dd> Smooth the input image to eliminate dithering noise. <i>n</i>, ranging from 1 to 100, indicates the strength of smoothing. 0 (the default) means no smoothing.</dd>
+<dt><code>&#8211;maxmemory=</code><i>n</i></dt>
+<dd> Set a limit for amount of memory to use in processing large images. Value is in thousands of bytes, or millions of bytes if you append <code>M </code> to the number. For example, <code>&#8211;max=4m</code> selects 4,000,000 bytes. If <code>pnmtojpeg</code> needs more space, it will use temporary files.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print to the Standard Error file messages about the conversion process. This can be helpful in debugging problems.</dd></dl>
 <p> The <code>&#8211;restart</code> option tells <code>pnmtojpeg </code> to insert extra markers that allow a JPEG decoder to resynchronize after a transmission error. Without restart markers, any damage to a compressed file will usually ruin the image from the point of the error to the end of the image; with restart markers, the damage is usually confined to the portion of the image up to the next restart marker. Of course, the restart markers occupy extra space. We recommend <code>&#8211;restart=1</code> for images that will be transmitted across unreliable networks such as Usenet. </p>
 <p> The <code>&#8211;smooth</code> option filters the input to eliminate fine-scale noise. This is often useful when converting dithered images to JFIF: a moderate smoothing factor of 10 to 50 gets rid of dithering patterns in the input file, resulting in a smaller JFIF file and a better-looking image. Too large a smoothing factor will visibly blur the image, however. </p>
 <p> Options for wizards:</p>
 <dl>
-<dt><code>&#8211;baseline</code></p>
-<dd> Force baseline-compatible quantization tables to be generated. This clamps quantization values to 8 bits even at low quality settings. (This switch is poorly named, since it does not ensure that the output is actually baseline JPEG. For example, you can use <code>&#8211;baseline</code> and <code>&#8211;progressive</code> together.)</p>
-<dt><code>&#8211;qtables=</code><i>filespec</i></p>
-<dd> Use the quantization tables given in the specified text file.</p>
-<dt><code>&#8211;qslots=n[,&#8230;]</code></p>
-<dd> Select which quantization table to use for each color component.</p>
-<dt><code>&#8211;sample=</code><i>HxV[,&#8230;]</i></p>
-<dd> Set JPEG sampling factors for each color component.</p>
-<dt><code>&#8211;scans=</code><i>filespec</i></p>
-<dd> Use the scan script given in the specified text file. See below for information on scan scripts.</dl>
+<dt><code>&#8211;baseline</code></dt>
+<dd> Force baseline-compatible quantization tables to be generated. This clamps quantization values to 8 bits even at low quality settings. (This switch is poorly named, since it does not ensure that the output is actually baseline JPEG. For example, you can use <code>&#8211;baseline</code> and <code>&#8211;progressive</code> together.)</dd>
+<dt><code>&#8211;qtables=</code><i>filespec</i></dt>
+<dd> Use the quantization tables given in the specified text file.</dd>
+<dt><code>&#8211;qslots=n[,&#8230;]</code></dt>
+<dd> Select which quantization table to use for each color component.</dd>
+<dt><code>&#8211;sample=</code><i>HxV[,&#8230;]</i></dt>
+<dd> Set JPEG sampling factors for each color component.</dd>
+<dt><code>&#8211;scans=</code><i>filespec</i></dt>
+<dd> Use the scan script given in the specified text file. See below for information on scan scripts.</dd></dl>
 <p> The &quot;wizard&quot; options are intended for experimentation with JPEG. If you don&#8217;t know what you are doing, <code>don&#8217;t use them</code>. These switches are documented further in the file wizard.doc that comes with the Independent JPEG Group&#8217;s JPEG library.</p>
 <h2>EXAMPLES</h2>
 <p> This example compresses the PPM file foo.ppm with a quality factor of 60 and saves the output as foo.jpg:</p>
 <dl>
 <dt>
-<dd> <code>pnmtojpeg &#8211;quality=60 foo.ppm &gt; foo.jpg</code></p>
+</dt><dd> <code>pnmtojpeg &#8211;quality=60 foo.ppm &gt; foo.jpg</code></dd>
 <dt>
-<dd> <code>cat foo.bmp | bmptoppm | pnmtojpeg &gt; foo.jpg</code> </p>
+</dt><dd> <code>cat foo.bmp | bmptoppm | pnmtojpeg &gt; foo.jpg</code> </dd>
 </dl>
 <h2>HINTS</h2>
 <p> JFIF is not ideal for cartoons, line drawings, and other images that have only a few distinct colors. For those, try instead <code>pnmtopng</code> or <code>ppmtobmp</code>. If you need to convert such an image to JFIF, though, you should experiment with <code>pnmtojpeg</code>&#8216;s <code>&#8211;quality</code> and <code>&#8211;smooth</code> options to get a satisfactory conversion. <code>&#8211;smooth 10</code> or so is often helpful. </p>
@@ -100,8 +100,8 @@ description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 <p> There is a standard option in building the JPEG library to omit scan script capability. If for some reason your library was built with this option, you get the message &quot;Requested feature was omitted at compile time.&quot; </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>JPEGMEM</code></p>
-<dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>&#8211;maxmemory</code> option. An explicit <code>&#8211;maxmemory </code> option overrides any <code>JPEGMEM</code>. </p>
+<dt><code>JPEGMEM</code></dt>
+<dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>&#8211;maxmemory</code> option. An explicit <code>&#8211;maxmemory </code> option overrides any <code>JPEGMEM</code>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1)<br />

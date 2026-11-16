@@ -33,10 +33,10 @@ description: "dlatzm.f –"
  C = [ C1, C2 ] m
  1 n-1
  Then C is overwritten by C*P.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': form P * C
  = 'R': form C * P</pre>
@@ -84,13 +84,13 @@ description: "dlatzm.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 152 of file dlatzm.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

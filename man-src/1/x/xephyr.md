@@ -17,30 +17,30 @@ description: "Xephyr – X server outputting to a window on a pre-existing X dis
 <h2>Options</h2>
 <p>The server accepts all the standard options of <a href="/docs/linux/man/1-xserver/">Xserver</a>(1) and the following additional options:</p>
 <dl>
-<dt><code>-screen</code><i> width</i><code>x</code><i>height</i></p>
-<dd>sets the screen size.</p>
-<dt><code>-parent</code><i> id</i></p>
-<dd>uses existing window <i>id .</i> If a <code>-screen</code> argument follows a <code>-parent</code> argument, this screen is embedded into the given window.</p>
-<dt><code>-host-cursor</code></p>
-<dd>set &#8216;cursor acceleration&#8217;: The host&#8217;s cursor is reused. This is only really there to aid debugging by avoiding server paints for the cursor. Performance improvement is negligible.</p>
-<dt><code>-resizeable</code></p>
-<dd>Allow the Xephyr window to be resized, even if not embedded into a parent window. By default, the Xephyr window has a fixed size.</p>
-<dt><code>-no-host-grab</code></p>
-<dd>Disable grabbing the keyboard and mouse.</dl>
+<dt><code>-screen</code><i> width</i><code>x</code><i>height</i></dt>
+<dd>sets the screen size.</dd>
+<dt><code>-parent</code><i> id</i></dt>
+<dd>uses existing window <i>id .</i> If a <code>-screen</code> argument follows a <code>-parent</code> argument, this screen is embedded into the given window.</dd>
+<dt><code>-host-cursor</code></dt>
+<dd>set &#8216;cursor acceleration&#8217;: The host&#8217;s cursor is reused. This is only really there to aid debugging by avoiding server paints for the cursor. Performance improvement is negligible.</dd>
+<dt><code>-resizeable</code></dt>
+<dd>Allow the Xephyr window to be resized, even if not embedded into a parent window. By default, the Xephyr window has a fixed size.</dd>
+<dt><code>-no-host-grab</code></dt>
+<dd>Disable grabbing the keyboard and mouse.</dd></dl>
 <h2>Signals</h2>
 <p>Send a SIGUSR1 to the server (e.g. pkill -USR1 Xephyr) to toggle the debugging mode. In this mode red rectangles are painted to screen areas getting painted before painting the actual content. The delay between this can be altered by setting a XEPHYR_PAUSE env var to a value in micro seconds.</p>
 <h2>Caveats</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Rotated displays are currently updated via full blits. This is slower than a normal orientated display. Debug mode will therefore not be of much use rotated.</p>
-<dt>&bull;</p>
-<dd>The &#8216;-host-cursor&#8217; cursor is static in its appearance.</p>
-<dt>&bull;</p>
-<dd>The build gets a warning about &#8216;nanosleep&#8217;. I think the various &#8216;-D&#8217; build flags are causing this. I haven&#8217;t figured as yet how to work round it. It doesn&#8217;t appear to break anything however.</p>
-<dt>&bull;</p>
-<dd>Keyboard handling is basic but works.</p>
-<dt>&bull;</p>
-<dd>Mouse button 5 probably won&#8217;t work.</dl>
+<dt>&bull;</dt>
+<dd>Rotated displays are currently updated via full blits. This is slower than a normal orientated display. Debug mode will therefore not be of much use rotated.</dd>
+<dt>&bull;</dt>
+<dd>The &#8216;-host-cursor&#8217; cursor is static in its appearance.</dd>
+<dt>&bull;</dt>
+<dd>The build gets a warning about &#8216;nanosleep&#8217;. I think the various &#8216;-D&#8217; build flags are causing this. I haven&#8217;t figured as yet how to work round it. It doesn&#8217;t appear to break anything however.</dd>
+<dt>&bull;</dt>
+<dd>Keyboard handling is basic but works.</dd>
+<dt>&bull;</dt>
+<dd>Mouse button 5 probably won&#8217;t work.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1)</p>
 <h2>Author</h2>

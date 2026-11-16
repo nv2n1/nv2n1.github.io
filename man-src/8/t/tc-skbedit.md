@@ -15,15 +15,15 @@ description: "skbedit – SKB editing action"
 <p> The most unique feature of <code>skbedit</code> is its ability to decide over which queue of an interface with multiple transmit queues the packet is to be sent out. The number of available transmit queues is reflected by sysfs entries within <i>/sys/class/net/&lt;interface&gt;/queues</i> with name <i>tx-N</i> (where <i>N</i> is the actual queue number).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>queue_mapping</code><i> QUEUE_MAPPING</i></p>
-<dd>Override the packet&#8217;s transmit queue. Useful when applied to packets transmitted over MQ-capable network interfaces. <i>QUEUE_MAPPING</i> is an unsigned 16bit value in decimal format.</p>
-<dt><code>priority</code><i> PRIORITY</i></p>
-<dd>Override the packet classification decision. <i>PRIORITY</i> is either <code>root</code>, <code>none</code> or a hexadecimal major class ID optionally followed by a colon (<code>:</code>) and a hexadecimal minor class ID.</p>
-<dt><code>mark</code><i> MARK</i>[<code>/</code><i>MASK]</i></p>
-<dd>Change the packet&#8217;s firewall mark value. <i>MARK</i> is an unsigned 32bit value in automatically detected format (i.e., prefix with &#8216;<code>0x</code>&#8216; for hexadecimal interpretation, etc.). <i>MASK</i> defines the 32-bit mask selecting bits of mark value. Default is 0xffffffff.</p>
-<dt><code>ptype</code><i> PTYPE</i></p>
-<dd>Override the packet&#8217;s type. Useful for setting packet type to host when needing to allow ingressing packets with the wrong MAC address but correct IP address. <i>PTYPE</i> is one of: host, otherhost, broadcast, multicast</p>
-<dt><code>inheritdsfield</code></p>
-<dd>Override the packet classification decision, and any value specified with <code>priority</code>, using the information stored in the Differentiated Services Field of the IPv6/IPv4 header (RFC2474).</dl>
+<dt><code>queue_mapping</code><i> QUEUE_MAPPING</i></dt>
+<dd>Override the packet&#8217;s transmit queue. Useful when applied to packets transmitted over MQ-capable network interfaces. <i>QUEUE_MAPPING</i> is an unsigned 16bit value in decimal format.</dd>
+<dt><code>priority</code><i> PRIORITY</i></dt>
+<dd>Override the packet classification decision. <i>PRIORITY</i> is either <code>root</code>, <code>none</code> or a hexadecimal major class ID optionally followed by a colon (<code>:</code>) and a hexadecimal minor class ID.</dd>
+<dt><code>mark</code><i> MARK</i>[<code>/</code><i>MASK]</i></dt>
+<dd>Change the packet&#8217;s firewall mark value. <i>MARK</i> is an unsigned 32bit value in automatically detected format (i.e., prefix with &#8216;<code>0x</code>&#8216; for hexadecimal interpretation, etc.). <i>MASK</i> defines the 32-bit mask selecting bits of mark value. Default is 0xffffffff.</dd>
+<dt><code>ptype</code><i> PTYPE</i></dt>
+<dd>Override the packet&#8217;s type. Useful for setting packet type to host when needing to allow ingressing packets with the wrong MAC address but correct IP address. <i>PTYPE</i> is one of: host, otherhost, broadcast, multicast</dd>
+<dt><code>inheritdsfield</code></dt>
+<dd>Override the packet classification decision, and any value specified with <code>priority</code>, using the information stored in the Differentiated Services Field of the IPv6/IPv4 header (RFC2474).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-pedit/">tc-pedit</a></code>(8) </p>

@@ -14,61 +14,61 @@ description: "inadyn – a client for open DNS servers."
 <p><code>inadyn</code> is a client for `open&#8217; name servers. That is, it let the user have an Internet recognized name for his machine by transferring to him some control over a name server that he does not manage. Some of the services that are offered by those open name servers are free of charge, and work even when the client machine does not have a static IP. The name servers that are supported by <code>inayn</code> are: <a rel="nofollow" href="http://www.dyndns.org">http://www.dyndns.org</a> and <a rel="nofollow" href="http://freedns.afraid.org">http://freedns.afraid.org</a> Its basic operation is to periodically check whether the actual IP of the client machine is the same one that is recorded in the name server, and update the name server records when there is a mismatch.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>Print a summary of the options to <code>inadyn</code> and exit.</p>
-<dt><i>-u, &#8211;username</i></p>
-<dd>The username, if applicable. This might be referred to as hash.</p>
-<dt><i>-p, &#8211;password</i></p>
-<dd>The password, if applicable.</p>
-<dt><i>-a, &#8211;alias[,hash]</i></p>
-<dd>A host name alias. This option can appear multiple times, for each domain that has the same IP.</p>
-<dt><i>&#8211;input_file</i></p>
-<dd>The file name that contains inadyn command options exactly as specified in the command line syntax (adds to those already present in the cmd line). The default configuration file name is &#8216;/etc/inadyn.conf&#8217;. It is looked at automatically if <code>inadyn</code> is called without any command line options. The format is as expected for a **NIX config the hash character is used to comment entire lines. Spaces are ingored. The long options may be specified without &#8212; if placed at the beginning of the line.</p>
-<dt><i>&#8211;ip_server_name[:port] url</i></p>
-<dd>The client IP is detected by calling &#8216;url&#8217; from this &#8216;ip_server_name:port&#8217;. Defaults to checkip.dyndns.org:80 /.</p>
-<dt><i>&#8211;dyndns_server_name[:port]</i></p>
-<dd>The server that receives the update DNS requests. When no proxy is specified it is sufficient to set the dyndns_system so that the default servers will be taken. The option is useful for generic DynDNS services that support HTTP update.</p>
-<dt><i>&#8211;dyndns_server_url name</i></p>
-<dd>The update path inside the DynDNS server.</p>
-<dt><i>&#8211;dyndns_system</i></p>
-<dd>An optional DNS service. For <a rel="nofollow" href="http://www.dyndns.org">http://www.dyndns.org</a> the acceptable services are one of dyndns [at] dyndns.org, statdns [at] dyndns.org or custom [at] dyndns.org. There is only one acceptable service for <a rel="nofollow" href="http://freedns.afraid.org">http://freedns.afraid.org</a> , which is default [at] freedns.afraid.org. Other services are: default [at] zoneedit.com, custom [at] http_svr_basic_auth. The default service is dyndns [at] dyndns.org, which is believed to be used by most users, at least initially.</p>
-<dt><i>&#8211;proxy_server[:port]</i></p>
-<dd>An http proxy server name and port. The default is none.</p>
-<dt><i>&#8211;update_period</i></p>
-<dd>How often the IP is checked. This value denotes millisecond (There are 1000 milliseconds in one second). The default is about 1 minute. The maximum is 10 days.</p>
-<dt><i>&#8211;update_period_sec</i></p>
-<dd>How often the IP is checked. Here the value denotes seconds. The default is about 1 minute. The maximum value is 10 days.</p>
-<dt><i>&#8211;forced_update_period</i></p>
-<dd>How often the IP should be updated even if it is not changed. The time should be given in seconds.</p>
-<dt><i>&#8211;log_file</i></p>
-<dd>The name, including the full path, of a log file.</p>
-<dt><i>&#8211;background</i></p>
-<dd>run in background. Output is sent to the UNIX syslog facilities or to a log file, if one was specified.</p>
-<dt><i>&#8211;verbose</i></p>
-<dd>Set the debug level, which is an integer between 0 to 5.</p>
-<dt><i>&#8211;iterations</i></p>
-<dd>Set the number of DNS updates. The default is 0, which means infinity.</p>
-<dt><i>&#8211;syslog</i></p>
-<dd>Explicitly sending the output to a syslog like file, such as /var/log/messages.</p>
-<dt><i>&#8211;change_persona uid[:gid]</i></p>
-<dd>After init changes user ID and group ID to the provided ones. This allows dropping unneeded [root] privileges after startup. </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>Print a summary of the options to <code>inadyn</code> and exit.</dd>
+<dt><i>-u, &#8211;username</i></dt>
+<dd>The username, if applicable. This might be referred to as hash.</dd>
+<dt><i>-p, &#8211;password</i></dt>
+<dd>The password, if applicable.</dd>
+<dt><i>-a, &#8211;alias[,hash]</i></dt>
+<dd>A host name alias. This option can appear multiple times, for each domain that has the same IP.</dd>
+<dt><i>&#8211;input_file</i></dt>
+<dd>The file name that contains inadyn command options exactly as specified in the command line syntax (adds to those already present in the cmd line). The default configuration file name is &#8216;/etc/inadyn.conf&#8217;. It is looked at automatically if <code>inadyn</code> is called without any command line options. The format is as expected for a **NIX config the hash character is used to comment entire lines. Spaces are ingored. The long options may be specified without &#8212; if placed at the beginning of the line.</dd>
+<dt><i>&#8211;ip_server_name[:port] url</i></dt>
+<dd>The client IP is detected by calling &#8216;url&#8217; from this &#8216;ip_server_name:port&#8217;. Defaults to checkip.dyndns.org:80 /.</dd>
+<dt><i>&#8211;dyndns_server_name[:port]</i></dt>
+<dd>The server that receives the update DNS requests. When no proxy is specified it is sufficient to set the dyndns_system so that the default servers will be taken. The option is useful for generic DynDNS services that support HTTP update.</dd>
+<dt><i>&#8211;dyndns_server_url name</i></dt>
+<dd>The update path inside the DynDNS server.</dd>
+<dt><i>&#8211;dyndns_system</i></dt>
+<dd>An optional DNS service. For <a rel="nofollow" href="http://www.dyndns.org">http://www.dyndns.org</a> the acceptable services are one of dyndns [at] dyndns.org, statdns [at] dyndns.org or custom [at] dyndns.org. There is only one acceptable service for <a rel="nofollow" href="http://freedns.afraid.org">http://freedns.afraid.org</a> , which is default [at] freedns.afraid.org. Other services are: default [at] zoneedit.com, custom [at] http_svr_basic_auth. The default service is dyndns [at] dyndns.org, which is believed to be used by most users, at least initially.</dd>
+<dt><i>&#8211;proxy_server[:port]</i></dt>
+<dd>An http proxy server name and port. The default is none.</dd>
+<dt><i>&#8211;update_period</i></dt>
+<dd>How often the IP is checked. This value denotes millisecond (There are 1000 milliseconds in one second). The default is about 1 minute. The maximum is 10 days.</dd>
+<dt><i>&#8211;update_period_sec</i></dt>
+<dd>How often the IP is checked. Here the value denotes seconds. The default is about 1 minute. The maximum value is 10 days.</dd>
+<dt><i>&#8211;forced_update_period</i></dt>
+<dd>How often the IP should be updated even if it is not changed. The time should be given in seconds.</dd>
+<dt><i>&#8211;log_file</i></dt>
+<dd>The name, including the full path, of a log file.</dd>
+<dt><i>&#8211;background</i></dt>
+<dd>run in background. Output is sent to the UNIX syslog facilities or to a log file, if one was specified.</dd>
+<dt><i>&#8211;verbose</i></dt>
+<dd>Set the debug level, which is an integer between 0 to 5.</dd>
+<dt><i>&#8211;iterations</i></dt>
+<dd>Set the number of DNS updates. The default is 0, which means infinity.</dd>
+<dt><i>&#8211;syslog</i></dt>
+<dd>Explicitly sending the output to a syslog like file, such as /var/log/messages.</dd>
+<dt><i>&#8211;change_persona uid[:gid]</i></dt>
+<dd>After init changes user ID and group ID to the provided ones. This allows dropping unneeded [root] privileges after startup. </dd>
 <h2>Typical Usage</h2>
 <h3></h3>
 <p><a rel="nofollow" href="http://www.dyndns.org">http://www.dyndns.org</a></p>
 <dl>
-<dt><code>inadyn</code></p>
-<dd>&nbsp;<wbr>-u username -p password -a my.registered.name</p>
-<dt><code>inadyn</code></p>
-<dd>&#8211;username test &#8211;password test &#8211;update_period 60000 &#8211;alias test.homeip.net &#8211;alias my.second.domain</p>
-<dt><code>inadyn</code></p>
-<dd>&#8211;background -u test -p test &#8211;update_period 60000 &#8211;alias inarcis.homeip.net &#8211;alias my.second.domain &#8211;log_file inadyn_srv.log</dl>
+<dt><code>inadyn</code></dt>
+<dd>&nbsp;<wbr>-u username -p password -a my.registered.name</dd>
+<dt><code>inadyn</code></dt>
+<dd>&#8211;username test &#8211;password test &#8211;update_period 60000 &#8211;alias test.homeip.net &#8211;alias my.second.domain</dd>
+<dt><code>inadyn</code></dt>
+<dd>&#8211;background -u test -p test &#8211;update_period 60000 &#8211;alias inarcis.homeip.net &#8211;alias my.second.domain &#8211;log_file inadyn_srv.log</dd></dl>
 <h3></h3>
 <p><a rel="nofollow" href="http://freedns.afraid.org">http://freedns.afraid.org</a></p>
 <dl>
-<dt><code>inadyn</code></p>
-<dd>&#8211;dyndns_service default [at] freedns.afraid.org -a my.registrated.name,hash_from_freedns</p>
-<dt><code>inadyn</code></p>
-<dd>&#8211;update_period 60000 &#8211;alias test.homeip.net,hash_for_host1 -a my.second.domain,hash2 &#8211;dyndns_system default [at] freedns.afraid.org</dl>
+<dt><code>inadyn</code></dt>
+<dd>&#8211;dyndns_service default [at] freedns.afraid.org -a my.registrated.name,hash_from_freedns</dd>
+<dt><code>inadyn</code></dt>
+<dd>&#8211;update_period 60000 &#8211;alias test.homeip.net,hash_for_host1 -a my.second.domain,hash2 &#8211;dyndns_system default [at] freedns.afraid.org</dd></dl>
 <p> The &#8216;hash&#8217; should be extracted from the grab url batch file that can be downloaded from the site. A single hashed (base64 encoded) string is preferred upon a username and password pair, apparently to reduce the computational resources that is required on their side. Unfortunately the hash can not be computed by inadyn because it requires the index to the username record in the freedns database, which is not known. The simplest solution seems to be a copy&amp;paste action from the grab url batch file offered on their website. When the batch file looks is like </p>
 <p> graburl <a rel="nofollow" href="http://freedns.afraid.org/dynamic/update.php?YUGIUGSEIUFGOUIHEOIFEOIHJFEIO=">http://freedns.afraid.org/dynamic/update.php?YUGIUGSEIUFGOUIHEOIFEOIHJFEIO=</a> </p>
 <p> the hash string, which is what the user should copy and paste, is the string that begins right after the &#8216;?&#8217; character and ends with the end of line. This string shell be used as the username in inadyn command. When the user has several names then each name should be followed with that name hash string.</p>
@@ -84,3 +84,4 @@ description: "inadyn – a client for open DNS servers."
 <h2>Author</h2>
 <p><code>inadyn</code> was written by Narcis Ilisei, &lt;inarcis2002 [at] hotpop.com&gt;. </p>
 <p> This manual page was written by Shaul Karl, &lt;shaul [at] debian.org&gt;, for the <code>Debian GNU/Linux</code> system, based on the readme.html file that is found in the source.</p>
+</dl>

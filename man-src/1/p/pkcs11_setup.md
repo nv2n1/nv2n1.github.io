@@ -15,12 +15,12 @@ description: "pkcs11_setup – SmartCard PKCS#11 setup"
 <p> pkcs11_setup display all the certificates.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>debug </code></p>
-<dd> Enable debugging output.</p>
-<dt><code>list_modules</code></p>
-<dd> List the modules available and configured in <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</p>
-<dt><code>use_module</code></p>
-<dd> Display the module used by pam_pkcs11.</dl>
+<dt><code>debug </code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>list_modules</code></dt>
+<dd> List the modules available and configured in <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dd>
+<dt><code>use_module</code></dt>
+<dd> Display the module used by pam_pkcs11.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>

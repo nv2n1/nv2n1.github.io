@@ -10,11 +10,8 @@ description: "dcb-app – show / manipulate application priority table of the DC
 <p>dcb-app &#8211; show / manipulate application priority table of the DCB (Data Center Bridging) subsystem</p>
 <h2>Synopsis</h2>
 <pre><code>dcb
-
 [ OPTIONS ]
-
 app
-
 { COMMAND | help }
 </code></pre>
 <p> <code>dcb app { show | flush } dev</code> DEV [ <code>default-prio</code> ] [ <code>ethtype-prio</code> ] [ <code>stream-port-prio</code> ] [ <code>dgram-port-prio</code> ] [ <code>port-prio</code> ] [ <code>dscp-prio</code> ]<br />
@@ -35,26 +32,26 @@ PRIO := { 0 .. 7 }
 <p><code>dcb app</code> is used to configure APP table, or application priority table in the DCB (Data Center Bridging) subsystem. The APP table is used to assign priority to traffic based on value in one of several headers: EtherType, L4 destination port, or DSCP. It also allows configuration of port-default priority that is chosen if no other prioritization rule applies. DCB APP entries are 3-tuples of selector, protocol ID, and priority. Selector is an enumeration that picks one of the prioritization namespaces. Currently it mostly corresponds to configurable parameters described below. Protocol ID is a value in the selector namespace. E.g. for EtherType selector, protocol IDs are the individual EtherTypes, for DSCP they are individual code points. The priority is the priority that should be assigned to traffic that matches the selector and protocol ID. The APP table is a set of DCB APP entries. The only requirement is that duplicate entries are not added. Notably, it is valid to have conflicting priority assignment for the same selector and protocol ID. For example, the set of two APP entries (DSCP, 10, 1) and (DSCP, 10, 2), where packets with DSCP of 10 should get priority of both 1 and 2, form a well-defined APP table. The <code>dcb app</code> tool allows low-level management of the app table by adding and deleting individual APP 3-tuples through <code>add</code> and <code>del</code> commands. On the other other hand, the command <code>replace</code> does what one would typically want in this situation&#8211;first adds the new configuration, and then removes the obsolete one, so that only one prioritization is in effect for a given selector and protocol ID. </p>
 <h2>Commands</h2>
 <dl>
-<dt><code>show</code></p>
-<dd>Display all entries with a given selector. When no selector is given, shows all APP table entries categorized per selector. </p>
-<dt><code>flush</code></p>
-<dd>Remove all entries with a given selector. When no selector is given, removes all APP table entries. </p>
-<dt><code>add</code></p>
-<dd><code>del</code> Add and, respectively, remove individual APP 3-tuples to and from the DCB APP table. </p>
-<dt><code>replace</code></p>
-<dd>Take the list of entries mentioned as parameter, and add those that are not present in the APP table yet. Then remove those entries, whose selector and protocol ID have been mentioned as parameter, but not with the exact same priority. This has the effect of, for the given selector and protocol ID, causing that the table only contains the priority (or priorities) given as parameter. </p>
+<dt><code>show</code></dt>
+<dd>Display all entries with a given selector. When no selector is given, shows all APP table entries categorized per selector. </dd>
+<dt><code>flush</code></dt>
+<dd>Remove all entries with a given selector. When no selector is given, removes all APP table entries. </dd>
+<dt><code>add</code></dt>
+<dd><code>del</code> Add and, respectively, remove individual APP 3-tuples to and from the DCB APP table. </dd>
+<dt><code>replace</code></dt>
+<dd>Take the list of entries mentioned as parameter, and add those that are not present in the APP table yet. Then remove those entries, whose selector and protocol ID have been mentioned as parameter, but not with the exact same priority. This has the effect of, for the given selector and protocol ID, causing that the table only contains the priority (or priorities) given as parameter. </dd>
 </dl>
 <h2>Parameters</h2>
 <p>The following table shows parameters in a way that they would be used with <code>add</code>, <code>del</code> and <code>replace</code> commands. For <code>show</code> and <code>flush</code>, the parameter name is to be used as a simple keyword without further arguments. </p>
 <dl>
-<dt><code>default-prio </code><i>PRIO-LIST</i></p>
-<dd>The priority to be used for traffic the priority of which is otherwise unspecified. The argument is a list of individual priorities. Note that <code>default-prio</code> rules are configured as triplets (<code>EtherType</code>, <code>0</code>, <i>PRIO</i>). <code>dcb app</code> translates these rules to the symbolic name <code>default-prio</code> and back. </p>
-<dt><code>ethtype-prio </code><i>ET-MAP</i></p>
-<dd><i>ET-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are EtherType values. Values are priorities to be assigned to traffic with the matching EtherType. </p>
-<dt><code>stream-port-prio </code><i>PORT-MAP</i></p>
-<dd><code>dgram-port-prio </code><i>PORT-MAP</i> <code>port-prio </code><i>PORT-MAP</i> <i>PORT-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are L4 destination port numbers that match on, respectively, TCP and SCTP traffic, UDP and DCCP traffic, and either of those. Values are priorities that should be assigned to matching traffic. </p>
-<dt><code>dscp-prio </code><i>DSCP-MAP</i></p>
-<dd><i>DSCP-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are DSCP points, values are priorities assigned to traffic with matching DSCP. DSCP points can be written either direcly as numeric values, or using symbolic names specified in <code>/etc/iproute2/rt_dsfield</code> (however note that that file specifies full 8-bit dsfield values, whereas <code>dcb app</code> will only use the higher six bits). <code>dcb app show</code> will similarly format DSCP values as symbolic names if possible. The command line option <code>-N</code> turns the show translation off. </p>
+<dt><code>default-prio </code><i>PRIO-LIST</i></dt>
+<dd>The priority to be used for traffic the priority of which is otherwise unspecified. The argument is a list of individual priorities. Note that <code>default-prio</code> rules are configured as triplets (<code>EtherType</code>, <code>0</code>, <i>PRIO</i>). <code>dcb app</code> translates these rules to the symbolic name <code>default-prio</code> and back. </dd>
+<dt><code>ethtype-prio </code><i>ET-MAP</i></dt>
+<dd><i>ET-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are EtherType values. Values are priorities to be assigned to traffic with the matching EtherType. </dd>
+<dt><code>stream-port-prio </code><i>PORT-MAP</i></dt>
+<dd><code>dgram-port-prio </code><i>PORT-MAP</i> <code>port-prio </code><i>PORT-MAP</i> <i>PORT-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are L4 destination port numbers that match on, respectively, TCP and SCTP traffic, UDP and DCCP traffic, and either of those. Values are priorities that should be assigned to matching traffic. </dd>
+<dt><code>dscp-prio </code><i>DSCP-MAP</i></dt>
+<dd><i>DSCP-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are DSCP points, values are priorities assigned to traffic with matching DSCP. DSCP points can be written either direcly as numeric values, or using symbolic names specified in <code>/etc/iproute2/rt_dsfield</code> (however note that that file specifies full 8-bit dsfield values, whereas <code>dcb app</code> will only use the higher six bits). <code>dcb app show</code> will similarly format DSCP values as symbolic names if possible. The command line option <code>-N</code> turns the show translation off. </dd>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>Prioritize traffic with DSCP 0 to priority 0, 24 to 3 and 48 to 6: </p>

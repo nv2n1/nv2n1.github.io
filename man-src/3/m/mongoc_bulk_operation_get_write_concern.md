@@ -15,8 +15,8 @@ mongoc_bulk_operation_get_write_concern (const mongoc_bulk_operation_t *bulk);
 </pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p> Fetches the write concern to be used for <code>bulk</code> \&amp;. </p>
 <h2>Returns</h2>

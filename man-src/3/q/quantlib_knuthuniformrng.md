@@ -20,7 +20,7 @@ description: "QuantLib::KnuthUniformRng – Uniform random number generator."
 <p> Random number generator by Knuth. For more details see Knuth, Seminumerical Algorithms, 3rd edition, Section 3.6. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is <code>not</code> Knuth&#8217;s original implementation which is available at <a rel="nofollow" href="http://www-cs-faculty.stanford.edu/~knuth/programs.html,">http://www-cs-faculty.stanford.edu/~knuth/programs.html,</a> but rather a slightly modified version wrapped in a C++ class. Such modifications did not affect the code but only the data structures used, which were converted to their standard C++ equivalents.</dl>
+<dd>This is <code>not</code> Knuth&#8217;s original implementation which is available at <a rel="nofollow" href="http://www-cs-faculty.stanford.edu/~knuth/programs.html,">http://www-cs-faculty.stanford.edu/~knuth/programs.html,</a> but rather a slightly modified version wrapped in a C++ class. Such modifications did not affect the code but only the data structures used, which were converted to their standard C++ equivalents.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>KnuthUniformRng</code> (long seed = 0) [explicit]</h3>
 <p>if the given seed is 0, a random seed will be chosen based on clock()</p>

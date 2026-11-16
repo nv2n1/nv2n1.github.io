@@ -15,20 +15,20 @@ description: "kdestroy – remove one credential or destroy the current ticket f
 <p> removes one credential or the current set of tickets. </p>
 <p> Supported options:</p>
 <dl>
-<dt><code>-credential= </code><i>principal</i></p>
-<dd> remove Fa principal from the credential cache if it exists.</p>
-<dt><code>-c </code><i>cachefile</i></p>
+<dt><code>-credential= </code><i>principal</i></dt>
+<dd> remove Fa principal from the credential cache if it exists.</dd>
+<dt><code>-c </code><i>cachefile</i></dt>
 <dd>
-<dt><code>-cache= </code><i>cachefile</i></p>
-<dd> The cache file to remove.</p>
-<dt><code>-A</code></p>
+</dd><dt><code>-cache= </code><i>cachefile</i></dt>
+<dd> The cache file to remove.</dd>
+<dt><code>-A</code></dt>
 <dd>
-<dt><code>&#8211;all</code></p>
-<dd> remove all credential caches.</p>
-<dt><code>&#8211;no-unlog</code></p>
-<dd> Do not remove AFS tokens.</p>
-<dt><code>&#8211;no-delete-v4</code></p>
-<dd> Do not remove v4 tickets.</dl>
+</dd><dt><code>&#8211;all</code></dt>
+<dd> remove all credential caches.</dd>
+<dt><code>&#8211;no-unlog</code></dt>
+<dd> Do not remove AFS tokens.</dd>
+<dt><code>&#8211;no-delete-v4</code></dt>
+<dd> Do not remove v4 tickets.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1) </p>
 <h2>Index</h2>

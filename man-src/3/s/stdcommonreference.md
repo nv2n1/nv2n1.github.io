@@ -11,15 +11,10 @@ std::CommonReference - std::CommonReference
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class T, class U &gt;
-
 concept CommonReference =
-
 std::Same&lt;std::common_reference_t&lt;T, U&gt;, std::common_reference_t&lt;U, T&gt;&gt; &amp;&amp;  (since C++20)
-
 std::ConvertibleTo&lt;T, std::common_reference_t&lt;T, U&gt;&gt; &amp;&amp;
-
 std::ConvertibleTo&lt;U, std::common_reference_t&lt;T, U&gt;&gt;;</code></pre> 
 The concept CommonReference&lt;T, U&gt; specifies that two types T and U share a common reference type (as computed by std::common_reference_t) to which both can be converted. 
 T and U model CommonReference&lt;T, U&gt; only if, given equality-preserving expressions t1, t2, u1 and u2 such that decltype((t1)) and decltype((t2)) are both T and decltype((u1)) and decltype((u2)) are both U, 

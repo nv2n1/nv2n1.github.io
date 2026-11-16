@@ -16,12 +16,12 @@ description: "ksplice-view – View in-kernel or on-disk Ksplice kernel updates"
 <p> <code>ksplice-view</code> can report about a specific Ksplice update when given the update&#8217;s identification tag <i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i> (if the update is in the kernel) or given the update&#8217;s tarball filename <i></i><font SIZE="-1"><i>UPDATE_TARBALL</i></font><i></i> or unpacked tree root <i></i><font SIZE="-1"><i>UPDATE_TREE</i></font><i></i> (if the update is on disk).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;id=</code><i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i></p>
-<dd>Report information about the Ksplice update <i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i> currently loaded in the running kernel.</p>
-<dt><code>&#8211;file=</code>{<i></i><font SIZE="-1"><i>UPDATE_TARBALL</i></font><i></i> | <i></i><font SIZE="-1"><i>UPDATE_TREE</i></font><i></i>}</p>
-<dd>Report information about the Ksplice update on disk as the tarball <i></i><font SIZE="-1"><i>UPDATE_TARBALL</i></font><i></i> or unpacked as the tree <i></i><font SIZE="-1"><i>UPDATE_TREE</i></font><i></i>.</p>
-<dt><code>-q</code></p>
-<dd>Output only the update IDs, one per line, omitting descriptions.</dl>
+<dt><code>&#8211;id=</code><i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i></dt>
+<dd>Report information about the Ksplice update <i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i> currently loaded in the running kernel.</dd>
+<dt><code>&#8211;file=</code>{<i></i><font SIZE="-1"><i>UPDATE_TARBALL</i></font><i></i> | <i></i><font SIZE="-1"><i>UPDATE_TREE</i></font><i></i>}</dt>
+<dd>Report information about the Ksplice update on disk as the tarball <i></i><font SIZE="-1"><i>UPDATE_TARBALL</i></font><i></i> or unpacked as the tree <i></i><font SIZE="-1"><i>UPDATE_TREE</i></font><i></i>.</dd>
+<dt><code>-q</code></dt>
+<dd>Output only the update IDs, one per line, omitting descriptions.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ksplice-create/">ksplice-create</a></i>(8), <i><a href="/docs/linux/man/8-ksplice-apply/">ksplice-apply</a></i>(8), <i><a href="/docs/linux/man/8-ksplice-undo/">ksplice-undo</a></i>(8)</p>
 <h2>Bugs</h2>

@@ -11,7 +11,6 @@ std::strcat - std::strcat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strcat(char *dest, const char *src);</code></pre> 
 Appends a copy of the character string pointed to by src to the end of the character string pointed to by dest. The character src[0] replaces the null terminator at the end of dest. The resulting byte string is null-terminated. 
 The behavior is undefined if the destination array is not large enough for the contents of both src and dest and the terminating null character. 
@@ -29,10 +28,8 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstring&gt;
-
 #include &lt;cstdio&gt;
 int main()
-
 {
     char str[50] = &quot;Hello &quot;;
     char str2[50] = &quot;World!&quot;;

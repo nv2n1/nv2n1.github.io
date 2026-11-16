@@ -11,7 +11,6 @@ std::isalnum - std::isalnum
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isalnum(int ch);</code></pre> 
 Checks if the given character is an alphanumeric character as classified by the current C locale. In the default locale, the following characters are alphanumeric: 
 * digits (0123456789) 
@@ -50,12 +49,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 
 Demonstrates the use of isalnum() with different locales (OS-specific). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xdf'; // German letter ß in ISO-8859-1
     std::cout &lt;&lt; &quot;isalnum(\'\\xdf\', default C locale) returned &quot;

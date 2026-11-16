@@ -17,16 +17,16 @@ description: "tinyca2 – Very simple Certification Authority"
 <p> On first time, run with &#8211;ManageCA to create information for a new Certificate Authority.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program version/exit</p>
-<dt><code>&#8211;ManageCA</code></p>
-<dd> enable CA management options</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program version/exit</dd>
+<dt><code>&#8211;ManageCA</code></dt>
+<dd> enable CA management options</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/tinyca2/openssl.cnf</p>
-<dd> Openssl configuration template for tinyca</p>
-<dt>~/.TinyCA/</p>
-<dd> Storage place for the different CAs</dl>
+<dt>/etc/tinyca2/openssl.cnf</dt>
+<dd> Openssl configuration template for tinyca</dd>
+<dt>~/.TinyCA/</dt>
+<dd> Storage place for the different CAs</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>openssl(1).</code></p>
 <h2>AUTHOR</h2>

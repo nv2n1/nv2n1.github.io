@@ -15,23 +15,23 @@ snd_soc_dai_set_tdm_slot - Configures a DAI for TDM operation
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>The DAI to configure</dl>
+<dl><dd></dd><dd>The DAI to configure</dd></dl>
  
 
  <i>tx_mask</i>
-<dl><dd>bitmask representing active TX slots.</dl>
+<dl><dd>bitmask representing active TX slots.</dd></dl>
  
 
  <i>rx_mask</i>
-<dl><dd>bitmask representing active RX slots.</dl>
+<dl><dd>bitmask representing active RX slots.</dd></dl>
  
 
  <i>slots</i>
-<dl><dd>Number of slots in use.</dl>
+<dl><dd>Number of slots in use.</dd></dl>
  
 
  <i>slot_width</i>
-<dl><dd>Width in bits for each slot.</dl>
+<dl><dd>Width in bits for each slot.</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,7 +10,6 @@ description: "ustrncat – Concatenates a string to another one, specifying size
 <p>ustrncat &#8211; Concatenates a string to another one, specifying size. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrncat(char *dest, const char *src, int n);</code></pre>
 <h2>Description</h2>
 <p>This function is like ustrcat() except that no more than `n&#8217; characters from `src&#8217; are appended to the end of `dest&#8217;. If the terminating null character in `src&#8217; is reached before `n&#8217; characters have been written, the null character is copied, but no other characters are written. If `n&#8217; characters are written before a terminating null is encountered, the function appends its own null character to `dest&#8217;, so that `n+1&#8242; characters are written. You should try to avoid this function because it is very easy to overflow the destination buffer. Use ustrzncat instead.</p>

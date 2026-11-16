@@ -25,62 +25,62 @@ description: "qmqpd – Postfix QMQP server"
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Content Inspection Controls</h2>
 <dl>
-<dt><code>content_filter (empty)</code></p>
-<dd>After the message is queued, send the entire message to the specified <i>transport:destination</i>.</p>
-<dt><code>receive_override_options (empty)</code></p>
-<dd>Enable or disable recipient validation, built-in content filtering, or address mapping.</dl>
+<dt><code>content_filter (empty)</code></dt>
+<dd>After the message is queued, send the entire message to the specified <i>transport:destination</i>.</dd>
+<dt><code>receive_override_options (empty)</code></dt>
+<dd>Enable or disable recipient validation, built-in content filtering, or address mapping.</dd></dl>
 <h2>Resource And Rate Controls</h2>
 <dl>
-<dt><code>line_length_limit (2048)</code></p>
-<dd>Upon input, long lines are chopped up into pieces of at most this length; upon delivery, long lines are reconstructed.</p>
-<dt><code>hopcount_limit (50)</code></p>
-<dd>The maximal number of Received: message headers that is allowed in the primary message headers.</p>
-<dt><code>message_size_limit (10240000)</code></p>
-<dd>The maximal size in bytes of a message, including envelope information.</p>
-<dt><code>qmqpd_timeout (300s)</code></p>
-<dd>The time limit for sending or receiving information over the network.</dl>
+<dt><code>line_length_limit (2048)</code></dt>
+<dd>Upon input, long lines are chopped up into pieces of at most this length; upon delivery, long lines are reconstructed.</dd>
+<dt><code>hopcount_limit (50)</code></dt>
+<dd>The maximal number of Received: message headers that is allowed in the primary message headers.</dd>
+<dt><code>message_size_limit (10240000)</code></dt>
+<dd>The maximal size in bytes of a message, including envelope information.</dd>
+<dt><code>qmqpd_timeout (300s)</code></dt>
+<dd>The time limit for sending or receiving information over the network.</dd></dl>
 <h2>Trouble Shooting Controls</h2>
 <dl>
-<dt><code>debug_peer_level (2)</code></p>
-<dd>The increment in verbose logging level when a remote client or server matches a pattern in the debug_peer_list parameter.</p>
-<dt><code>debug_peer_list (empty)</code></p>
-<dd>Optional list of remote client or server hostname or network address patterns that cause the verbose logging level to increase by the amount specified in $debug_peer_level.</p>
-<dt><code>soft_bounce (no)</code></p>
-<dd>Safety net to keep mail queued that would otherwise be returned to the sender.</dl>
+<dt><code>debug_peer_level (2)</code></dt>
+<dd>The increment in verbose logging level when a remote client or server matches a pattern in the debug_peer_list parameter.</dd>
+<dt><code>debug_peer_list (empty)</code></dt>
+<dd>Optional list of remote client or server hostname or network address patterns that cause the verbose logging level to increase by the amount specified in $debug_peer_level.</dd>
+<dt><code>soft_bounce (no)</code></dt>
+<dd>Safety net to keep mail queued that would otherwise be returned to the sender.</dd></dl>
 <h2>Tarpit Controls</h2>
 <dl>
-<dt><code>qmqpd_error_delay (1s)</code></p>
-<dd>How long the Postfix QMQP server will pause before sending a negative reply to the remote QMQP client.</dl>
+<dt><code>qmqpd_error_delay (1s)</code></dt>
+<dd>How long the Postfix QMQP server will pause before sending a negative reply to the remote QMQP client.</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>qmqpd_authorized_clients (empty)</code></p>
-<dd>What remote QMQP clients are allowed to connect to the Postfix QMQP server port.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</p>
-<dt><code>verp_delimiter_filter (-=+)</code></p>
-<dd>The characters Postfix accepts as VERP delimiter characters on the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command line and in SMTP commands.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>qmqpd_authorized_clients (empty)</code></dt>
+<dd>What remote QMQP clients are allowed to connect to the Postfix QMQP server port.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd>
+<dt><code>verp_delimiter_filter (-=+)</code></dt>
+<dd>The characters Postfix accepts as VERP delimiter characters on the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command line and in SMTP commands.</dd></dl>
 <p> Available in Postfix version 2.5 and later:</p>
 <dl>
-<dt><code>qmqpd_client_port_logging (no)</code></p>
-<dd>Enable logging of the remote QMQP client port in addition to the hostname and IP address.</dl>
+<dt><code>qmqpd_client_port_logging (no)</code></dt>
+<dd>Enable logging of the remote QMQP client port in addition to the hostname and IP address.</dd></dl>
 <h2>See Also</h2>
 <pre><a rel="nofollow" href="http://cr.yp.to/proto/qmqp.html,">http://cr.yp.to/proto/qmqp.html,</a> QMQP protocol
 <a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), message canonicalization

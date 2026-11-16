@@ -70,31 +70,31 @@ description: "QwtPlotMarker –"
 <p> With <code>setLabel()</code>, a label can be assigned to the marker. The <code>setLabelAlignment()</code> member specifies where the label is drawn. All the Align*-constants in Qt::AlignmentFlags (see Qt documentation) are valid. The interpretation of the alignment depends on the marker&#8217;s line style. The alignment refers to the center point of the marker, which means, for example, that the label would be printed left above the center point if the alignment was set to Qt::AlignLeft | Qt::AlignTop. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotTextLabel</code> is intended to align a text label according to the geometry of canvas ( unrelated to plot coordinates )</dl>
+<dd><code>QwtPlotTextLabel</code> is intended to align a text label according to the geometry of canvas ( unrelated to plot coordinates )</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotMarker::LineStyle</code></h3>
 <p>Line styles. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineStyle()</code>, <code>lineStyle()</code></dl>
+<dd><code>setLineStyle()</code>, <code>lineStyle()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoLine </i></p>
-<dd>No line.</p>
-<dt><i>HLine </i></p>
-<dd>A horizontal line.</p>
-<dt><i>VLine </i></p>
-<dd>A vertical line.</p>
-<dt><i>Cross </i></p>
-<dd>A crosshair.</dl>
+<dt><i>NoLine </i></dt>
+<dd>No line.</dd>
+<dt><i>HLine </i></dt>
+<dd>A horizontal line.</dd>
+<dt><i>VLine </i></dt>
+<dd>A vertical line.</dd>
+<dt><i>Cross </i></dt>
+<dd>A crosshair.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtPlotMarker::boundingRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>An invalid bounding rect: QRectF(1.0, 1.0, -2.0, -2.0)</dl>
+<dd>An invalid bounding rect: QRectF(1.0, 1.0, -2.0, -2.0)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>A width or height &lt; 0.0 is ignored by the autoscaler</dl>
+<dd>A width or height &lt; 0.0 is ignored by the autoscaler</dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotMarker::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Draw the marker </p>
@@ -103,7 +103,7 @@ description: "QwtPlotMarker –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> x Scale Map<br />
  <i>yMap</i> y Scale Map<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dl>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotMarker::drawLabel (QPainter *painter, const QRectF &amp;canvasRect, const QPointF &amp;pos) const [protected], [virtual]</h3>
 <p>Align and draw the text label of the marker </p>
@@ -111,97 +111,97 @@ description: "QwtPlotMarker –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
- <i>pos</i> Position of the marker, translated into widget coordinates</dl>
+ <i>pos</i> Position of the marker, translated into widget coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawLabel()</code>, <code>QwtSymbol::drawSymbol()</code></dl>
+<dd><code>drawLabel()</code>, <code>QwtSymbol::drawSymbol()</code></dd></dl>
 <h3>void QwtPlotMarker::drawLines (QPainter *painter, const QRectF &amp;canvasRect, const QPointF &amp;pos) const [protected], [virtual]</h3>
 <p>Draw the lines marker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
- <i>pos</i> Position of the marker, translated into widget coordinates</dl>
+ <i>pos</i> Position of the marker, translated into widget coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawLabel()</code>, <code>QwtSymbol::drawSymbol()</code></dl>
+<dd><code>drawLabel()</code>, <code>QwtSymbol::drawSymbol()</code></dd></dl>
 <h3><code>QwtText</code> QwtPlotMarker::label () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the label</dl>
+<dd>the label</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLabel()</code></dl>
+<dd><code>setLabel()</code></dd></dl>
 <h3>Qt::Alignment QwtPlotMarker::labelAlignment () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the label alignment</dl>
+<dd>the label alignment</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLabelAlignment()</code>, <code>setLabelOrientation()</code></dl>
+<dd><code>setLabelAlignment()</code>, <code>setLabelOrientation()</code></dd></dl>
 <h3>Qt::Orientation QwtPlotMarker::labelOrientation () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the label orientation</dl>
+<dd>the label orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLabelOrientation()</code>, <code>labelAlignment()</code></dl>
+<dd><code>setLabelOrientation()</code>, <code>labelAlignment()</code></dd></dl>
 <h3><code>QwtGraphic</code> QwtPlotMarker::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Icon representing the marker on the legend</dl>
+<dd>Icon representing the marker on the legend</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
- <i>size</i> Icon size</dl>
+ <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dl>
+<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>const QPen &amp; QwtPlotMarker::linePen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the line pen</dl>
+<dd>the line pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLinePen()</code></dl>
+<dd><code>setLinePen()</code></dd></dl>
 <h3><code>QwtPlotMarker::LineStyle</code> QwtPlotMarker::lineStyle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the line style</dl>
+<dd>the line style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineStyle()</code></dl>
+<dd><code>setLineStyle()</code></dd></dl>
 <h3>int QwtPlotMarker::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotMarker</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotMarker</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotMarker::setLabel (const <code>QwtText</code> &amp;label)</h3>
 <p>Set the label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>label</i> Label text</dl>
+<dd><i>label</i> Label text</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>label()</code></dl>
+<dd><code>label()</code></dd></dl>
 <h3>void QwtPlotMarker::setLabelAlignment (Qt::Alignmentalign)</h3>
 <p>Set the alignment of the label. In case of <code>QwtPlotMarker::HLine</code> the alignment is relative to the y position of the marker, but the horizontal flags correspond to the canvas rectangle. In case of <code>QwtPlotMarker::VLine</code> the alignment is relative to the x position of the marker, but the vertical flags correspond to the canvas rectangle. </p>
 <p> In all other styles the alignment is relative to the marker&#8217;s position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>align</i> Alignment.</dl>
+<dd><i>align</i> Alignment.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>labelAlignment()</code>, <code>labelOrientation()</code></dl>
+<dd><code>labelAlignment()</code>, <code>labelOrientation()</code></dd></dl>
 <h3>void QwtPlotMarker::setLabelOrientation (Qt::Orientationorientation)</h3>
 <p>Set the orientation of the label. When orientation is Qt::Vertical the label is rotated by 90.0 degrees ( from bottom to top ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>orientation</i> Orientation of the label</dl>
+<dd><i>orientation</i> Orientation of the label</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>labelOrientation()</code>, <code>setLabelAlignment()</code></dl>
+<dd><code>labelOrientation()</code>, <code>setLabelAlignment()</code></dd></dl>
 <h3>void QwtPlotMarker::setLinePen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a line pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -209,55 +209,55 @@ description: "QwtPlotMarker –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotMarker::setLinePen (const QPen &amp;pen)</h3>
 <p>Specify a pen for the line. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> New pen</dl>
+<dd><i>pen</i> New pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>linePen()</code></dl>
+<dd><code>linePen()</code></dd></dl>
 <h3>void QwtPlotMarker::setLineStyle (<code>LineStyle</code>style)</h3>
 <p>Set the line style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Line style.</dl>
+<dd><i>style</i> Line style.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>lineStyle()</code></dl>
+<dd><code>lineStyle()</code></dd></dl>
 <h3>void QwtPlotMarker::setSpacing (intspacing)</h3>
 <p>Set the spacing. When the label is not centered on the marker position, the spacing is the distance between the position and the label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Spacing</dl>
+<dd><i>spacing</i> Spacing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>, <code>setLabelAlignment()</code></dl>
+<dd><code>spacing()</code>, <code>setLabelAlignment()</code></dd></dl>
 <h3>void QwtPlotMarker::setSymbol (const <code>QwtSymbol</code> *symbol)</h3>
 <p>Assign a symbol. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>symbol</i> New symbol</dl>
+<dd><i>symbol</i> New symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbol()</code></dl>
+<dd><code>symbol()</code></dd></dl>
 <h3>int QwtPlotMarker::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the spacing</dl>
+<dd>the spacing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code></dl>
+<dd><code>setSpacing()</code></dd></dl>
 <h3>const <code>QwtSymbol</code> * QwtPlotMarker::symbol () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the symbol</dl>
+<dd>the symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code>, <code>QwtSymbol</code></dl>
+<dd><code>setSymbol()</code>, <code>QwtSymbol</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -18,12 +18,12 @@ description: "etext, edata, end – end of program segments"
 <h2>DESCRIPTION</h2>
 <p> The addresses of these symbols indicate the end of various program segments:</p>
 <dl>
-<dt><i>etext</i></p>
-<dd> This is the first address past the end of the text segment (the program code).</p>
-<dt><i>edata</i></p>
-<dd> This is the first address past the end of the initialized data segment.</p>
-<dt><i>end</i></p>
-<dd> This is the first address past the end of the uninitialized data segment (also known as the BSS segment).</dl>
+<dt><i>etext</i></dt>
+<dd> This is the first address past the end of the text segment (the program code).</dd>
+<dt><i>edata</i></dt>
+<dd> This is the first address past the end of the initialized data segment.</dd>
+<dt><i>end</i></dt>
+<dd> This is the first address past the end of the uninitialized data segment (also known as the BSS segment).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> Although these symbols have long been provided on most UNIX systems, they are not standardized; use with caution.</p>
 <h2>NOTES</h2>

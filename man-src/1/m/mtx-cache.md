@@ -15,14 +15,14 @@ description: "mtx-cache – ConTeXt & MetaTeX Cache Management"
 <p> <code>ConTeXt &amp; MetaTeX Cache Management</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;make</code></p>
-<dd> generate databases and formats</p>
-<dt><code>&#8211;erase</code></p>
-<dd> completely remove cache</p>
-<dt><code>&#8211;list</code></p>
-<dd> show cache</p>
-<dt><code>&#8211;fonts</code></p>
-<dd> only wipe fonts</dl>
+<dt><code>&#8211;make</code></dt>
+<dd> generate databases and formats</dd>
+<dt><code>&#8211;erase</code></dt>
+<dd> completely remove cache</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> show cache</dd>
+<dt><code>&#8211;fonts</code></dt>
+<dd> only wipe fonts</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -14,18 +14,18 @@ description: "XAllocIconSize, XSetIconSizes, XGetIconSizes, XIconSize – alloca
 <p> Status XGetIconSizes(Display *<i>display</i>, Window <i>w</i>, XIconSize **<i>size_list_return</i>, int <i>count_return</i>);</p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of items in the size list.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of items in the size list.</p>
-<dt><i>size_list</i></p>
-<dd>Specifies the size list.</p>
-<dt><i>size_list_return</i></p>
-<dd>Returns the size list.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of items in the size list.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of items in the size list.</dd>
+<dt><i>size_list</i></dt>
+<dd>Specifies the size list.</dd>
+<dt><i>size_list_return</i></dt>
+<dd>Returns the size list.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocIconSize</code> function allocates and returns a pointer to a <code>XIconSize</code> structure. Note that all fields in the <code>XIconSize</code> structure are initially set to zero. If insufficient memory is available, <code>XAllocIconSize</code> returns NULL. To free the memory allocated to this structure, use <code>XFree</code>. </p>
 <p> The <code>XSetIconSizes</code> function is used only by window managers to set the supported icon sizes. </p>
@@ -34,8 +34,8 @@ description: "XAllocIconSize, XSetIconSizes, XGetIconSizes, XIconSize – alloca
 <p> <code>XGetIconSizes</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_ICON_SIZES</font></p>
-<dd>The window manager may set this property on the root window to specify the icon sizes it supports. The C type of this property is <code>XIconSize</code>.</dl>
+<dt><font SIZE="-1">WM_ICON_SIZES</font></dt>
+<dd>The window manager may set this property on the root window to specify the icon sizes it supports. The C type of this property is <code>XIconSize</code>.</dd></dl>
 <h2>Structures</h2>
 <p>The <code>XIconSize</code> structure contains: </p>
 <p> typedef struct {<br />
@@ -45,10 +45,10 @@ description: "XAllocIconSize, XSetIconSizes, XGetIconSizes, XIconSize – alloca
 <p> The width_inc and height_inc members define an arithmetic progression of sizes (minimum to maximum) that represent the supported icon sizes.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

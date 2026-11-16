@@ -20,14 +20,14 @@ description: "pinentry-kwallet – kwallet-based pass-phrase dialog for use with
 <p> exits 1 if it is called recursively, 0 if help or version information are requested, and return codes do not matter in any other cases because errors are signalled in-band. It will exit 0 after the Assuan session is terminated.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> The X11 display to use for child processes. If not set, will immediately replace itself with the slave <code>PINENTRY</code> programme to use.</p>
-<dt><code>GPG_TERM</code></p>
-<dd> Terminal type of the current tty.</p>
-<dt><code>GPG_TTY</code></p>
-<dd> The current terminal.</p>
-<dt><code>PINENTRY</code></p>
-<dd> The <code>pinentry</code> programme to use. Default: &#8220;pinentry&#8221;</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> The X11 display to use for child processes. If not set, will immediately replace itself with the slave <code>PINENTRY</code> programme to use.</dd>
+<dt><code>GPG_TERM</code></dt>
+<dd> Terminal type of the current tty.</dd>
+<dt><code>GPG_TTY</code></dt>
+<dd> The current terminal.</dd>
+<dt><code>PINENTRY</code></dt>
+<dd> The <code>pinentry</code> programme to use. Default: &#8220;pinentry&#8221;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-date/">date</a>(1), gpg-agent1, <a href="/docs/linux/man/1-gpg2/">gpg2</a>(1), <a href="/docs/linux/man/1-kwalletcli/">kwalletcli</a>(1), kwalletcli_getpin1, <a href="/docs/linux/man/1-mksh/">mksh</a>(1), pinentry-curses1, pinentry-gtk-21, pinentry-qt1, pinentry-x111</p>
 <h2>AUTHORS</h2>

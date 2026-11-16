@@ -12,43 +12,33 @@ description: "ziflist – List of network interfaces available on system"
 <pre><code>//  Get a list of network interfaces currently defined on the system
 CZMQ_EXPORT ziflist_t *
 ziflist_new();
-
 //  Destroy a ziflist instance
 CZMQ_EXPORT void
 ziflist_destroy(ziflist_t **self_p);
-
 //  Print properties of the ziflist object.
 CZMQ_EXPORT void
 ziflist_print(ziflist_t *self);
-
 //  Reload network interfaces from system
 CZMQ_EXPORT void
 ziflist_reload(ziflist_t *self);
-
 //  Return the number of network interfaces on system
 CZMQ_EXPORT size_t
 ziflist_size(ziflist_t *self);
-
 //  Get first network interface, return NULL if there are none
 CZMQ_EXPORT const char *
 ziflist_first(ziflist_t *self);
-
 //  Get next network interface, return NULL if we hit the last one
 CZMQ_EXPORT const char *
 ziflist_next(ziflist_t *self);
-
 //  Return the current interface IP address as a printable string
 CZMQ_EXPORT const char *
 ziflist_address(ziflist_t *self);
-
 //  Return the current interface broadcast address as a printable string
 CZMQ_EXPORT const char *
 ziflist_broadcast(ziflist_t *self);
-
 //  Return the current interface network mask as a printable string
 CZMQ_EXPORT const char *
 ziflist_netmask(ziflist_t *self);
-
 //  Self test of this class.
 CZMQ_EXPORT void
 ziflist_test(bool verbose);</code></pre>
@@ -59,9 +49,7 @@ ziflist_test(bool verbose);</code></pre>
 <p><code>From ziflist_test method</code>. </p>
 <pre><code>ziflist_t *iflist = ziflist_new();
 assert(iflist);
-
 size_t items = ziflist_size(iflist);
-
 if (verbose) {
     //        printf (&quot;ziflist: interfaces=%zu
 &quot;, ziflist_size (iflist));
@@ -86,7 +74,8 @@ ziflist_destroy(&amp;iflist);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

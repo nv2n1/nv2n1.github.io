@@ -16,42 +16,42 @@ description: "blaze-make – generate static content from the BlazeBlogger repos
 <p> <code>blaze-make</code> reads the BlazeBlogger repository and generates a complete directory tree of static pages, optionally including all blog posts, single pages, browsable yearly and monthly archives, tags and even a <font SIZE="-1">RSS</font> feed. This way, you can benefit from most of the features other <font SIZE="-1">CMS</font> usually have, but without any additional hosting requirements.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the generated static content is to be placed. The default option is the current working directory.</p>
-<dt><code>-c</code>, <code>&#8211;no-css</code></p>
-<dd> Disable creation of stylesheet.</p>
-<dt><code>-I</code>, <code>&#8211;no-index</code></p>
-<dd> Disable creation of index page. This is especially useful for websites with pages only.</p>
-<dt><code>-p</code>, <code>&#8211;no-posts</code></p>
-<dd> Disable creation of posts as well as any related pages, i.e. tags and <font SIZE="-1">RSS</font> feed. This is especially useful for websites with pages only.</p>
-<dt><code>-P</code>, <code>&#8211;no-pages</code></p>
-<dd> Disable creation of pages.</p>
-<dt><code>-t</code>, <code>&#8211;no-tags</code></p>
-<dd> Disable support for tags.</p>
-<dt><code>-r</code>, <code>&#8211;no-rss</code></p>
-<dd> Disable creation of <font SIZE="-1">RSS</font> feed.</p>
-<dt><code>-F</code>, <code>&#8211;full-paths</code></p>
-<dd> Enable full paths creation, i.e. always include page names in generated links.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages including the list of created files.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the generated static content is to be placed. The default option is the current working directory.</dd>
+<dt><code>-c</code>, <code>&#8211;no-css</code></dt>
+<dd> Disable creation of stylesheet.</dd>
+<dt><code>-I</code>, <code>&#8211;no-index</code></dt>
+<dd> Disable creation of index page. This is especially useful for websites with pages only.</dd>
+<dt><code>-p</code>, <code>&#8211;no-posts</code></dt>
+<dd> Disable creation of posts as well as any related pages, i.e. tags and <font SIZE="-1">RSS</font> feed. This is especially useful for websites with pages only.</dd>
+<dt><code>-P</code>, <code>&#8211;no-pages</code></dt>
+<dd> Disable creation of pages.</dd>
+<dt><code>-t</code>, <code>&#8211;no-tags</code></dt>
+<dd> Disable support for tags.</dd>
+<dt><code>-r</code>, <code>&#8211;no-rss</code></dt>
+<dd> Disable creation of <font SIZE="-1">RSS</font> feed.</dd>
+<dt><code>-F</code>, <code>&#8211;full-paths</code></dt>
+<dd> Enable full paths creation, i.e. always include page names in generated links.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages including the list of created files.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>.blaze/config</i></p>
-<dd> BlazeBlogger configuration file.</p>
-<dt><i>.blaze/theme/</i></p>
-<dd> BlazeBlogger themes directory.</p>
-<dt><i>.blaze/style/</i></p>
-<dd> BlazeBlogger stylesheets directory.</p>
-<dt><i>.blaze/lang/</i></p>
-<dd> BlazeBlogger language files directory.</dl>
+<dt><i>.blaze/config</i></dt>
+<dd> BlazeBlogger configuration file.</dd>
+<dt><i>.blaze/theme/</i></dt>
+<dd> BlazeBlogger themes directory.</dd>
+<dt><i>.blaze/style/</i></dt>
+<dd> BlazeBlogger stylesheets directory.</dd>
+<dt><i>.blaze/lang/</i></dt>
+<dd> BlazeBlogger language files directory.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-blazetheme/">blazetheme</a></code>(7), <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

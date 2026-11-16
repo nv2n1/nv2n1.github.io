@@ -15,8 +15,8 @@ description: "XmTextFieldGetStringWcs — A TextField function that retrieves a 
 <h2>Description</h2>
 <p><code>XmTextFieldGetStringWcs</code> retrieves a copy of the wide character string value of the TextField widget. The application is responsible for freeing the storage associated with the string by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the wide character string value of the TextField widget. The function returns an empty string if the length of the TextField widget&#8217;s string is 0 (zero).</p>

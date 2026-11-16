@@ -14,20 +14,20 @@ description: "beacon – transmit periodic messages on an AX.25 port."
 <p><code>Beacon</code> transmits the message text on an AX.25 port every thirty minutes. The message is addressed to lqIDENTrq and is sent using the AX.25 callsign of the port specified on the command line. Typically the message text will contain spaces and/or other characters, therefore the message text should be enclosed in quotes to ensure they are passed to the <code>beacon</code> program untranslated.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Configure the source callsign for beacons. The default is to use the interface callsign.</p>
-<dt><code>-d</code></p>
-<dd>Configure the destination callsign for beacons. The default is lqIDENTrq. Optional: Digipeaters may follow, separated with spaces. Use -d &quot;DEST DIGI1 DIGI2 ..&quot;</p>
-<dt><code>-l</code></p>
-<dd>Enables the logging of errors to the system log, the default is off.</p>
-<dt><code>-m</code></p>
-<dd>Changes the destination address to lqMAILrq and sends the message text once only. This option overrides any destination callsign given with the -d option.</p>
-<dt><code>-s</code></p>
-<dd>Sends the message text once only.</p>
-<dt><code>-t interval</code></p>
-<dd>The time interval between messages, the interval is given in minutes and the default is thirty minutes.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-c</code></dt>
+<dd>Configure the source callsign for beacons. The default is to use the interface callsign.</dd>
+<dt><code>-d</code></dt>
+<dd>Configure the destination callsign for beacons. The default is lqIDENTrq. Optional: Digipeaters may follow, separated with spaces. Use -d &quot;DEST DIGI1 DIGI2 ..&quot;</dd>
+<dt><code>-l</code></dt>
+<dd>Enables the logging of errors to the system log, the default is off.</dd>
+<dt><code>-m</code></dt>
+<dd>Changes the destination address to lqMAILrq and sends the message text once only. This option overrides any destination callsign given with the -d option.</dd>
+<dt><code>-s</code></dt>
+<dd>Sends the message text once only.</dd>
+<dt><code>-t interval</code></dt>
+<dd>The time interval between messages, the interval is given in minutes and the default is thirty minutes.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5).</p>
 <h2>Authors</h2>

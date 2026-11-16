@@ -15,12 +15,12 @@ description: "infokey – compile customizations for Info"
 <p> Compile infokey source file to infokey file. Reads INPUT-FILE (default $HOME/.infokey) and writes compiled key file to (by default) $HOME/.info.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;output</code> FILE</p>
-<dd> output to FILE instead of $HOME/.info</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version information and exit.</dl>
+<dt><code>&#8211;output</code> FILE</dt>
+<dd> output to FILE instead of $HOME/.info</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version information and exit.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br />
  Texinfo home page: <a rel="nofollow" href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a></p>
@@ -31,6 +31,6 @@ description: "infokey – compile customizations for Info"
 <p> The full documentation for <code>infokey</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>infokey</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info infokey</code></dl>
+</dt><dd> <code>info infokey</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

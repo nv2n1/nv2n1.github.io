@@ -47,9 +47,9 @@ description: "mysqlmanagerd_selinux – Security Enhanced Linux Policy for the m
 <p> Policy governs the access confined processes have to these ports. SELinux mysqlmanagerd policy is very flexible allowing users to setup their mysqlmanagerd processes in as secure a method as possible. </p>
 <p> The following port types are defined for mysqlmanagerd: </p>
 <dl>
-<dt><code>mysqlmanagerd_port_t</code></p>
+<dt><code>mysqlmanagerd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2273</dl>
+</dd><dd>Default Defined Ports: tcp 2273</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type mysqlmanagerd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

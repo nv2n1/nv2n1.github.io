@@ -12,7 +12,7 @@ url: "/docs/linux/man/3-globus_xio_mode_e_driver_envs/"
  Env Variables - The mode_e driver uses the following environment variable
 <dl>
 <dt>&bull;
-<dd> GLOBUS_XIO_MODE_E_DEBUG Available if using a debug build. See globus_debug.h for format.</dl>
+</dt><dd> GLOBUS_XIO_MODE_E_DEBUG Available if using a debug build. See globus_debug.h for format.</dd></dl>
  
 
 <h2>Author</h2>

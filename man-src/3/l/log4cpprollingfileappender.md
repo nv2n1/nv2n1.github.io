@@ -31,7 +31,7 @@ description: "log4cpp::RollingFileAppender –"
 <p><code>RollingFileAppender</code> is a <code>FileAppender</code> that rolls over the logfile once it has reached a certain size limit. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.1</dl>
+<dd>0.3.1</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>log4cpp::RollingFileAppender::RollingFileAppender (const std::string &amp;name, const std::string &amp;fileName, size_tmaxFileSize = 10*1024*1024, unsigned intmaxBackupIndex = 1, boolappend = true, mode_tmode = 00644)</h3>
 <h2>Member Function Documentation</h2>
@@ -39,7 +39,7 @@ description: "log4cpp::RollingFileAppender –"
 <p>Log in <code>Appender</code> specific way. Subclasses of <code>Appender</code> should implement this method to perform actual logging. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Reimplemented from <code>log4cpp::FileAppender</code>.</p>
 <h3>unsigned int log4cpp::RollingFileAppender::getMaxBackupIndex () const [virtual]</h3>
 <h3>size_t log4cpp::RollingFileAppender::getMaxFileSize () const [virtual]</h3>

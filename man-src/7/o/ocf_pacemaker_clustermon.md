@@ -15,25 +15,25 @@ description: "ocf_pacemaker_ClusterMon – Runs crm_mon in the background, recor
 <h2>Supported Parameters</h2>
 <p><code>OCF_RESKEY_user</code> = string [root]</p>
 <dl>
-<dd>The user we want to run crm_mon as </p>
+<dd>The user we want to run crm_mon as </dd>
 <p> The user we want to run crm_mon as</dl>
 <p> <code>OCF_RESKEY_update</code> = integer [15]</p>
 <dl>
-<dd>Update interval </p>
+<dd>Update interval </dd>
 <p> How frequently should we update the cluster status</dl>
 <p> <code>OCF_RESKEY_extra_options</code> = string []</p>
 <dl>
-<dd>Extra options </p>
+<dd>Extra options </dd>
 <p> Additional options to pass to crm_mon. Eg. -n -r</dl>
 <p> <code>OCF_RESKEY_pidfile</code> = string [/tmp/ClusterMon_.pid]</p>
 <dl>
-<dd>PID file </p>
+<dd>PID file </dd>
 <p> PID file location to ensure only one instance is running</dl>
 <p> <code>OCF_RESKEY_htmlfile</code> = string [/tmp/ClusterMon_.html]</p>
 <dl>
-<dd>HTML output </p>
+<dd>HTML output </dd>
 <p> Location to write HTML output to.</dl>
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

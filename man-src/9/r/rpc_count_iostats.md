@@ -15,11 +15,11 @@ rpc_count_iostats - tally up per-task stats
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>completed rpc_task</dl>
+<dl><dd></dd><dd>completed rpc_task</dd></dl>
  
 
  <i>stats</i>
-<dl><dd>array of stat structures</dl>
+<dl><dd>array of stat structures</dd></dl>
 
 <h2>Description</h2>
 

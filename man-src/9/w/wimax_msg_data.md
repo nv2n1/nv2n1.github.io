@@ -14,5 +14,5 @@ description: "wimax_msg_data – Return a pointer to a message’s payload"
 <p><i>msg</i></p>
 <dl>
 <dd>
-<dd>Pointer to a message created with <code>wimax_msg_alloc</code></dl>
+</dd><dd>Pointer to a message created with <code>wimax_msg_alloc</code></dd></dl>
 <h2>Copyright</h2>

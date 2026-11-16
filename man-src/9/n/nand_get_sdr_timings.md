@@ -14,9 +14,9 @@ description: "nand_get_sdr_timings – get SDR timing from data interface"
 <p><i>conf</i></p>
 <dl>
 <dd>
-<dd>The data interface</dl>
+</dd><dd>The data interface</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

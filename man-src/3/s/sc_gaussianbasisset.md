@@ -11,7 +11,6 @@ description: "sc::GaussianBasisSet –"
 <p> The <code>GaussianBasisSet</code> class is used describe a basis set composed of atomic gaussian orbitals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;gaussbas.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Classes</h3>
@@ -22,304 +21,104 @@ description: "sc::GaussianBasisSet –"
  <i>This can be given to a CTOR to construct a unit basis function. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>GaussianBasisSet (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The KeyVal constructor.
-
-
 GaussianBasisSet (UnitType)
-
-
 This can be given GaussianBasisSet::Unit to construct a basis set with a single basis function that is one everywhere.
-
-
 GaussianBasisSet (StateIn &amp;)
-
-
-
 Ref&lt; GaussianBasisSet &gt; operator+ (const Ref&lt; GaussianBasisSet &gt; &amp;B)
-
-
 Returns a GaussianBasisSet object that consists of the basis functions for each atom in this followed by the basis functions in B for the corresponding atom.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 const char * name () const
-
-
 Return the name of the basis set (is nonnull only if keyword 'name' was provided).
-
-
 const char * label () const
-
-
 Return the label of the basis set.
-
-
 Ref&lt; Molecule &gt; molecule () const
-
-
 Return the Molecule object.
-
-
 Ref&lt; SCMatrixKit &gt; matrixkit ()
-
-
 Returns the SCMatrixKit that is to be used for AO bases.
-
-
 Ref&lt; SCMatrixKit &gt; so_matrixkit ()
-
-
 Returns the SCMatrixKit that is to be used for SO bases.
-
-
 RefSCDimension basisdim ()
-
-
 Returns the SCDimension object for the dimension.
-
-
 int ncenter () const
-
-
 Return the number of centers.
-
-
 int nshell () const
-
-
 Return the number of shells.
-
-
 int nshell_on_center (int icenter) const
-
-
 Return the number of shells on the given center.
-
-
 int shell_on_center (int icenter, int shell) const
-
-
 Return an overall shell number, given a center and the shell number on that center.
-
-
 int shell_to_center (int ishell) const
-
-
 Return the center on which the given shell is located.
-
-
 int shell_to_primitive (int ishell) const
-
-
 Return the overall index of the first primitive from the given shell.
-
-
 int nbasis () const
-
-
 Return the number of basis functions.
-
-
 int nbasis_on_center (int icenter) const
-
-
 Return the number of basis functions on the given center.
-
-
 int nprimitive () const
-
-
 Return the number of primitive Gaussians.
-
-
 int has_pure () const
-
-
 Return true if basis contains solid harmonics Gaussians.
-
-
 int max_nfunction_in_shell () const
-
-
 Return the maximum number of functions that any shell has.
-
-
 int max_ncartesian_in_shell (int aminc=0) const
-
-
 Return the maximum number of Cartesian functions that any shell has.
-
-
 int max_nprimitive_in_shell () const
-
-
 Return the maximum number of primitive Gaussian that any shell has.
-
-
 int max_angular_momentum () const
-
-
 Return the highest angular momentum in any shell.
-
-
 int max_ncontraction () const
-
-
 Return the maximum number of Gaussians in a contraction in any shell.
-
-
 int max_am_for_contraction (int con) const
-
-
 Return the maximum angular momentum found in the given contraction number for any shell.
-
-
 int max_cartesian () const
-
-
 Return the maximum number of Cartesian functions in any shell.
-
-
 int shell_to_function (int i) const
-
-
 Return the number of the first function in the given shell.
-
-
 int function_to_shell (int i) const
-
-
 Return the shell to which the given function belongs.
-
-
 const GaussianShell &amp; operator() (int i) const
-
-
 Return a reference to GaussianShell number i.
-
-
 GaussianShell &amp; operator() (int i)
-
-
 Return a reference to GaussianShell number i.
-
-
 const GaussianShell &amp; operator[] (int i) const
-
-
 Return a reference to GaussianShell number i.
-
-
 GaussianShell &amp; operator[] (int i)
-
-
 Return a reference to GaussianShell number i.
-
-
 const GaussianShell &amp; shell (int i) const
-
-
 Return a reference to GaussianShell number i.
-
-
 GaussianShell &amp; shell (int i)
-
-
 Return a reference to GaussianShell number i.
-
-
 const GaussianShell &amp; operator() (int icenter, int ishell) const
-
-
 Return a reference to GaussianShell number ishell on center icenter.
-
-
 GaussianShell &amp; operator() (int icenter, int ishell)
-
-
 Return a reference to GaussianShell number ishell on center icenter.
-
-
 const GaussianShell &amp; shell (int i, int j) const
-
-
 Return a reference to GaussianShell number j on center i.
-
-
 GaussianShell &amp; shell (int i, int j)
-
-
 Return a reference to GaussianShell number j on center i.
-
-
 double r (int icenter, int xyz) const
-
-
 The location of center icenter.
-
-
 int values (const SCVector3 &amp;r, ValueData *, double *basis_values) const
-
-
 Compute the values for this basis set at position r.
-
-
 int grad_values (const SCVector3 &amp;r, ValueData *, double *g_values, double *basis_values=0) const
-
-
 Like values(.
-
-
 int hessian_values (const SCVector3 &amp;r, ValueData *, double *h_values, double *g_values=0, double *basis_values=0) const
-
-
 Like values(.
-
-
 int shell_values (const SCVector3 &amp;r, int sh, ValueData *, double *basis_values) const
-
-
 Compute the values for the given shell functions at position r.
-
-
 int grad_shell_values (const SCVector3 &amp;r, int sh, ValueData *, double *g_values, double *basis_values=0) const
-
-
 Like values(.
-
-
 int hessian_shell_values (const SCVector3 &amp;r, int sh, ValueData *, double *h_values, double *g_values=0, double *basis_values=0) const
-
-
 Like values(.
-
-
 int equiv (const Ref&lt; GaussianBasisSet &gt; &amp;b)
-
-
 Returns true if this and the argument are equivalent.
-
-
 void print_brief (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print a brief description of the basis set.
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print a detailed description of the basis set.
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>GaussianBasisSet</code> (const <code>GaussianBasisSet</code> &amp;) </p>
 <p> virtual void <code>set_matrixkit</code> (const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;)</p>
@@ -334,48 +133,48 @@ Protected Member Functions</code></pre>
 <h3>sc::GaussianBasisSet::GaussianBasisSet (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. .IP &quot;molecule&quot; 1c The gives a <code>Molecule</code> object. The is no default. </p>
 <dl>
-<dt>puream</p>
-<dd>If this boolean parameter is true then 5D, 7F, etc. will be used. Otherwise all cartesian functions will be used. The default depends on the particular basis set.</dl>
+<dt>puream</dt>
+<dd>If this boolean parameter is true then 5D, 7F, etc. will be used. Otherwise all cartesian functions will be used. The default depends on the particular basis set.</dd></dl>
 <dl>
-<dt>name</p>
-<dd>This is a string giving the name of the basis set. The above table of basis sets gives some of the recognized basis set names. It may be necessary to put the name in double quotes. There is no default.</dl>
+<dt>name</dt>
+<dd>This is a string giving the name of the basis set. The above table of basis sets gives some of the recognized basis set names. It may be necessary to put the name in double quotes. There is no default.</dd></dl>
 <dl>
-<dt>basis</p>
-<dd>This is a vector of basis set names that can give a different basis set to each atom in the molecule. If the element vector is given, then it gives different basis sets to different elements. The default is to give every atom the basis set specified in name.</dl>
+<dt>basis</dt>
+<dd>This is a vector of basis set names that can give a different basis set to each atom in the molecule. If the element vector is given, then it gives different basis sets to different elements. The default is to give every atom the basis set specified in name.</dd></dl>
 <dl>
-<dt>element</p>
-<dd>This is a vector of elements. If it is given then it must have the same number of entries as the basis vector.</dl>
+<dt>element</dt>
+<dd>This is a vector of elements. If it is given then it must have the same number of entries as the basis vector.</dd></dl>
 <dl>
-<dt>basisdir</p>
-<dd>A string giving a directory where basis set data files are to be sought. See the text below for a complete description of what directories are consulted.</dl>
+<dt>basisdir</dt>
+<dd>A string giving a directory where basis set data files are to be sought. See the text below for a complete description of what directories are consulted.</dd></dl>
 <dl>
-<dt>basisfiles</p>
-<dd>Each keyword in this vector of files is appended to the directory specified with basisdir and basis set data is read from them.</dl>
+<dt>basisfiles</dt>
+<dd>Each keyword in this vector of files is appended to the directory specified with basisdir and basis set data is read from them.</dd></dl>
 <dl>
-<dt>matrixkit</p>
-<dd>Specifies a <code>SCMatrixKit</code> object. It is usually not necessary to give this keyword, as the default action should get the correct <code>SCMatrixKit</code>.</dl>
+<dt>matrixkit</dt>
+<dd>Specifies a <code>SCMatrixKit</code> object. It is usually not necessary to give this keyword, as the default action should get the correct <code>SCMatrixKit</code>.</dd></dl>
 <p> Several files in various directories are checked for basis set data. First, basis sets can be given by the user in the basis section at the top level of the main input file. Next, if a path is given with the basisdir keyword, then all of the files given with the basisfiles keyword are read in after appending their names to the value of basisdir. Basis sets can be given in these files in the basis section at the top level as well. If the named basis set still cannot be found, then <code>GaussianBasisSet</code> will try convert the basis set name to a file name and check first in the directory given by basisdir. Next it checks for the environment variable SCLIBDIR. If it is set it will look for the basis file in $SCLIBDIR/basis. Otherwise it will look in the source code distribution in the directory SC/lib/basis. If the executable has changed machines or the source code has be moved, then it may be necessary to copy the library files to your machine and set the SCLIBDIR environmental variable. </p>
 <p> The basis set itself is also given in the <code>ParsedKeyVal</code> format. There are two recognized formats for basis sets:</p>
 <dl>
-<dt><code>array of shells</code></p>
-<dd>One must specify the keyword :basis: followed by the lowercase atomic name followed by : followed by the basis set name (which may need to be placed inside double quotes). The value for the keyword is an array of shells. Each shell reads the following keywords:</dl>
+<dt><code>array of shells</code></dt>
+<dd>One must specify the keyword :basis: followed by the lowercase atomic name followed by : followed by the basis set name (which may need to be placed inside double quotes). The value for the keyword is an array of shells. Each shell reads the following keywords:</dd></dl>
 <dl>
-<dt>type</p>
-<dd>This is a vector that describes each component of this shell. For each element the following two keywords are read:</dl>
+<dt>type</dt>
+<dd>This is a vector that describes each component of this shell. For each element the following two keywords are read:</dd></dl>
 <dl>
-<dt>am</p>
-<dd>The angular momentum of the component. This can be given as the letter designation, s, p, d, etc. There is no default.</dl>
+<dt>am</dt>
+<dd>The angular momentum of the component. This can be given as the letter designation, s, p, d, etc. There is no default.</dd></dl>
 <dl>
-<dt>puream</p>
-<dd>If this boolean parameter is true then 5D, 7F, etc. shells are used. The default is false. This parameter can be overridden in the <code>GaussianBasisSet</code> specification.</dl>
+<dt>puream</dt>
+<dd>If this boolean parameter is true then 5D, 7F, etc. shells are used. The default is false. This parameter can be overridden in the <code>GaussianBasisSet</code> specification.</dd></dl>
 <dl>
-<dt>exp</p>
-<dd>This is a vector giving the exponents of the primitive Gaussian functions.</dl>
+<dt>exp</dt>
+<dd>This is a vector giving the exponents of the primitive Gaussian functions.</dd></dl>
 <dl>
-<dt>coef</p>
-<dd>This is a matrix giving the coeffients of the primitive Gaussian functions. The first index gives the component number of the shell and the second gives the primitive number.</dl>
+<dt>coef</dt>
+<dd>This is a matrix giving the coeffients of the primitive Gaussian functions. The first index gives the component number of the shell and the second gives the primitive number.</dd></dl>
 <dl>
-<dd>An example might be easier to understand. This is a basis set specificition for STO-2G carbon:</dl>
+<dd>An example might be easier to understand. This is a basis set specificition for STO-2G carbon:</dd></dl>
 <pre> basis: (
  carbon: 'STO-2G': [
  (type: [(am = s)]
@@ -391,19 +190,19 @@ Protected Member Functions</code></pre>
  ]
  )</pre>
 <dl>
-<dt><code>basis set of even-tempered primitive Gaussians</code></p>
-<dd>Such basis set format is given as a group of keywords. The name of the group is :basis: followed by the lowercase atomic name followed by : followed by the basis set name (which may need to be placed inside double quotes). The group of keywords must contain vectors am and nprim, which specify the angular momentum and the number of shells in each block of even-tempered primitives. In addition, one must provide any two of the following vectors:</dl>
+<dt><code>basis set of even-tempered primitive Gaussians</code></dt>
+<dd>Such basis set format is given as a group of keywords. The name of the group is :basis: followed by the lowercase atomic name followed by : followed by the basis set name (which may need to be placed inside double quotes). The group of keywords must contain vectors am and nprim, which specify the angular momentum and the number of shells in each block of even-tempered primitives. In addition, one must provide any two of the following vectors:</dd></dl>
 <dl>
-<dt>first_exp</p>
-<dd>The exponent of the &#8216;tightest&#8217; primitive Gaussian in the block.</dl>
+<dt>first_exp</dt>
+<dd>The exponent of the &#8216;tightest&#8217; primitive Gaussian in the block.</dd></dl>
 <dl>
-<dt>last_exp</p>
-<dd>The exponent of the most &#8216;diffuse&#8217; primitive Gaussian in the block.</dl>
+<dt>last_exp</dt>
+<dd>The exponent of the most &#8216;diffuse&#8217; primitive Gaussian in the block.</dd></dl>
 <dl>
-<dt>exp_ratio</p>
-<dd>The ratio of exponents of consecutive primitive Gaussians in the block.</dl>
+<dt>exp_ratio</dt>
+<dd>The ratio of exponents of consecutive primitive Gaussians in the block.</dd></dl>
 <dl>
-<dd>Note that the dimensions of each vector must be the same.</dl>
+<dd>Note that the dimensions of each vector must be the same.</dd></dl>
 <p> Here&#8217;s an example of a basis set composed of 2 blocks of even-tempered s-functions and 1 block of even-tempered p-functions. </p>
 <pre> basis: (
  neon: '20s5s13p':(</pre>

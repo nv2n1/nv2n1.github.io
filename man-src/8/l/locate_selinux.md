@@ -60,8 +60,8 @@ description: "locate_selinux – Security Enhanced Linux Policy for the locate p
 <p> <code>locate_exec_t</code> </p>
 <p> &#8211; Set files with the locate_exec_t type, if you want to transition an executable to the locate_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.daily/[sm]locate, /usr/bin/updatedb.* </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.daily/[sm]locate, /usr/bin/updatedb.* </dd>
 </dl>
 <p> <code>locate_var_lib_t</code> </p>
 <p> &#8211; Set files with the locate_var_lib_t type, if you want to store the locate files under the /var/lib directory. </p>

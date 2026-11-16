@@ -15,15 +15,15 @@ CALL STUIXY (XUS,YUS,XDA,YDA,IST)
 <h2>Description</h2>
 
 <dl><dt>XUS
-<dd>(REAL, input): The X coordinate of a point in the user coordinate system.
-<dt>YUS
-<dd>(REAL, input): The Y coordinate of a point in the user coordinate system.
-<dt>XDA
-<dd>(REAL, output): The X coordinate of the point in the data coordinate system.
-<dt>YDA
-<dd>(REAL, output): The Y coordinate of the point in the data coordinate system.
-<dt>IST
-<dd>(REAL, output): Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dl>
+</dt><dd>(REAL, input): The X coordinate of a point in the user coordinate system.
+</dd><dt>YUS
+</dt><dd>(REAL, input): The Y coordinate of a point in the user coordinate system.
+</dd><dt>XDA
+</dt><dd>(REAL, output): The X coordinate of the point in the data coordinate system.
+</dd><dt>YDA
+</dt><dd>(REAL, output): The Y coordinate of the point in the data coordinate system.
+</dd><dt>IST
+</dt><dd>(REAL, output): Status of the mapping operation: 0 indicates success, negative values indicate that the mapping failed; positive values are reserved and should not be used by the implementor of a mapping routine.</dd></dl>
 
 <h2>Usage</h2>
 
@@ -37,7 +37,7 @@ STUIXY is a user-modifiable routine provided to support custom mappings of the d
  ...map YUS to YDA
  ...if error, set IST to a negative value
  RETURN
-ENDIF</pre></dl>
+ENDIF</pre></dd></dl>
  
 
  Note that after the return from STUIXY, Streamlines checks to ensure that XDA and YDA are within the current boundaries of the data coordinate system. 

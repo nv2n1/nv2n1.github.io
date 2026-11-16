@@ -23,50 +23,50 @@ int timer_create(clockid_t clockid, struct sigevent *sevp,
 <p> <code>timer_create</code>() creates a new per-process interval timer. The ID of the new timer is returned in the buffer pointed to by <i>timerid</i>, which must be a non-null pointer. This ID is unique within the process, until the timer is deleted. The new timer is initially disarmed. </p>
 <p> The <i>clockid</i> argument specifies the clock that the new timer uses to measure time. It can be specified as one of the following values:</p>
 <dl>
-<dt><code>CLOCK_REALTIME</code></p>
-<dd> A settable system-wide real-time clock.</p>
-<dt><code>CLOCK_MONOTONIC</code></p>
-<dd> A nonsettable monotonically increasing clock that measures time from some unspecified point in the past that does not change after system startup.</p>
-<dt><code>CLOCK_PROCESS_CPUTIME_ID</code> (since Linux 2.6.12)</p>
-<dd> A clock that measures (user and system) CPU time consumed by (all of the threads in) the calling process.</p>
-<dt><code>CLOCK_THREAD_CPUTIME_ID</code> (since Linux 2.6.12)</p>
-<dd> A clock that measures (user and system) CPU time consumed by the calling thread.</p>
-<dt><code>CLOCK_BOOTTIME</code> (Since Linux 2.6.39)</p>
-<dd> Like <code>CLOCK_MONOTONIC</code>, this is a monotonically increasing clock. However, whereas the <code>CLOCK_MONOTONIC</code> clock does not measure the time while a system is suspended, the <code>CLOCK_BOOTTIME</code> clock does include the time during which the system is suspended. This is useful for applications that need to be suspend-aware. <code>CLOCK_REALTIME</code> is not suitable for such applications, since that clock is affected by discontinuous changes to the system clock.</p>
-<dt><code>CLOCK_REALTIME_ALARM</code> (since Linux 3.0)</p>
-<dd> This clock is like <code>CLOCK_REALTIME</code>, but will wake the system if it is suspended. The caller must have the <code>CAP_WAKE_ALARM</code> capability in order to set a timer against this clock.</p>
-<dt><code>CLOCK_BOOTTIME_ALARM</code> (since Linux 3.0)</p>
-<dd> This clock is like <code>CLOCK_BOOTTIME</code>, but will wake the system if it is suspended. The caller must have the <code>CAP_WAKE_ALARM</code> capability in order to set a timer against this clock.</p>
-<dt><code>CLOCK_TAI</code> (since Linux 3.10)</p>
-<dd> A system-wide clock derived from wall-clock time but ignoring leap seconds.</dl>
+<dt><code>CLOCK_REALTIME</code></dt>
+<dd> A settable system-wide real-time clock.</dd>
+<dt><code>CLOCK_MONOTONIC</code></dt>
+<dd> A nonsettable monotonically increasing clock that measures time from some unspecified point in the past that does not change after system startup.</dd>
+<dt><code>CLOCK_PROCESS_CPUTIME_ID</code> (since Linux 2.6.12)</dt>
+<dd> A clock that measures (user and system) CPU time consumed by (all of the threads in) the calling process.</dd>
+<dt><code>CLOCK_THREAD_CPUTIME_ID</code> (since Linux 2.6.12)</dt>
+<dd> A clock that measures (user and system) CPU time consumed by the calling thread.</dd>
+<dt><code>CLOCK_BOOTTIME</code> (Since Linux 2.6.39)</dt>
+<dd> Like <code>CLOCK_MONOTONIC</code>, this is a monotonically increasing clock. However, whereas the <code>CLOCK_MONOTONIC</code> clock does not measure the time while a system is suspended, the <code>CLOCK_BOOTTIME</code> clock does include the time during which the system is suspended. This is useful for applications that need to be suspend-aware. <code>CLOCK_REALTIME</code> is not suitable for such applications, since that clock is affected by discontinuous changes to the system clock.</dd>
+<dt><code>CLOCK_REALTIME_ALARM</code> (since Linux 3.0)</dt>
+<dd> This clock is like <code>CLOCK_REALTIME</code>, but will wake the system if it is suspended. The caller must have the <code>CAP_WAKE_ALARM</code> capability in order to set a timer against this clock.</dd>
+<dt><code>CLOCK_BOOTTIME_ALARM</code> (since Linux 3.0)</dt>
+<dd> This clock is like <code>CLOCK_BOOTTIME</code>, but will wake the system if it is suspended. The caller must have the <code>CAP_WAKE_ALARM</code> capability in order to set a timer against this clock.</dd>
+<dt><code>CLOCK_TAI</code> (since Linux 3.10)</dt>
+<dd> A system-wide clock derived from wall-clock time but ignoring leap seconds.</dd></dl>
 <p> See <code><a href="/docs/linux/man/2-clock_getres/">clock_getres</a></code>(2) for some further details on the above clocks. </p>
 <p> As well as the above values, <i>clockid</i> can be specified as the <i>clockid</i> returned by a call to <code><a href="/docs/linux/man/3-clock_getcpuclockid/">clock_getcpuclockid</a></code>(3) or <code><a href="/docs/linux/man/3-pthread_getcpuclockid/">pthread_getcpuclockid</a></code>(3). </p>
 <p> The <i>sevp</i> argument points to a <i>sigevent</i> structure that specifies how the caller should be notified when the timer expires. For the definition and general details of this structure, see <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7). </p>
 <p> The <i>sevp.sigev_notify</i> field can have the following values:</p>
 <dl>
-<dt><code>SIGEV_NONE</code></p>
-<dd> Don&#8217;t asynchronously notify when the timer expires. Progress of the timer can be monitored using <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2).</p>
-<dt><code>SIGEV_SIGNAL</code></p>
-<dd> Upon timer expiration, generate the signal <i>sigev_signo</i> for the process. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_TIMER</code>. At any point in time, at most one signal is queued to the process for a given timer; see <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2) for more details.</p>
-<dt><code>SIGEV_THREAD</code></p>
-<dd> Upon timer expiration, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</p>
-<dt><code>SIGEV_THREAD_ID</code> (Linux-specific)</p>
-<dd> As for <code>SIGEV_SIGNAL</code>, but the signal is targeted at the thread whose ID is given in <i>sigev_notify_thread_id</i>, which must be a thread in the same process as the caller. The <i>sigev_notify_thread_id</i> field specifies a kernel thread ID, that is, the value returned by <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-gettid/">gettid</a></code>(2). This flag is intended only for use by threading libraries.</dl>
+<dt><code>SIGEV_NONE</code></dt>
+<dd> Don&#8217;t asynchronously notify when the timer expires. Progress of the timer can be monitored using <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2).</dd>
+<dt><code>SIGEV_SIGNAL</code></dt>
+<dd> Upon timer expiration, generate the signal <i>sigev_signo</i> for the process. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for general details. The <i>si_code</i> field of the <i>siginfo_t</i> structure will be set to <code>SI_TIMER</code>. At any point in time, at most one signal is queued to the process for a given timer; see <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2) for more details.</dd>
+<dt><code>SIGEV_THREAD</code></dt>
+<dd> Upon timer expiration, invoke <i>sigev_notify_function</i> as if it were the start function of a new thread. See <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) for details.</dd>
+<dt><code>SIGEV_THREAD_ID</code> (Linux-specific)</dt>
+<dd> As for <code>SIGEV_SIGNAL</code>, but the signal is targeted at the thread whose ID is given in <i>sigev_notify_thread_id</i>, which must be a thread in the same process as the caller. The <i>sigev_notify_thread_id</i> field specifies a kernel thread ID, that is, the value returned by <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-gettid/">gettid</a></code>(2). This flag is intended only for use by threading libraries.</dd></dl>
 <p> Specifying <i>sevp</i> as NULL is equivalent to specifying a pointer to a <i>sigevent</i> structure in which <i>sigev_notify</i> is <code>SIGEV_SIGNAL</code>, <i>sigev_signo</i> is <code>SIGALRM</code>, and <i>sigev_value.sival_int</i> is the timer ID.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>timer_create</code>() returns 0, and the ID of the new timer is placed in <i>*timerid</i>. On failure, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Temporary error during kernel allocation of timer structures.</p>
-<dt><code>EINVAL</code></p>
-<dd> Clock ID, <i>sigev_notify</i>, <i>sigev_signo</i>, or <i>sigev_notify_thread_id</i> is invalid.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Could not allocate memory.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> The kernel does not support creating a timer against this <i>clockid</i>.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>clockid</i> was <code>CLOCK_REALTIME_ALARM</code> or <code>CLOCK_BOOTTIME_ALARM</code> but the caller did not have the <code>CAP_WAKE_ALARM</code> capability.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Temporary error during kernel allocation of timer structures.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Clock ID, <i>sigev_notify</i>, <i>sigev_signo</i>, or <i>sigev_notify_thread_id</i> is invalid.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Could not allocate memory.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> The kernel does not support creating a timer against this <i>clockid</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>clockid</i> was <code>CLOCK_REALTIME_ALARM</code> or <code>CLOCK_BOOTTIME_ALARM</code> but the caller did not have the <code>CAP_WAKE_ALARM</code> capability.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is available since Linux 2.6.</p>
 <h2>CONFORMING TO</h2>
@@ -77,27 +77,27 @@ int timer_create(clockid_t clockid, struct sigevent *sevp,
 <p> The kernel preallocates a &quot;queued real-time signal&quot; for each timer created using <code>timer_create</code>(). Consequently, the number of timers is limited by the <code>RLIMIT_SIGPENDING</code> resource limit (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)). </p>
 <p> The timers created by <code>timer_create</code>() are commonly known as &quot;POSIX (interval) timers&quot;. The POSIX timers API consists of the following interfaces:</p>
 <dl>
-<dt>*</p>
-<dd> <code>timer_create</code>(): Create a timer.</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-timer_settime/">timer_settime</a></code>(2): Arm (start) or disarm (stop) a timer.</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2): Fetch the time remaining until the next expiration of a timer, along with the interval setting of the timer.</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2): Return the overrun count for the last timer expiration.</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-timer_delete/">timer_delete</a></code>(2): Disarm and delete a timer.</dl>
+<dt>*</dt>
+<dd> <code>timer_create</code>(): Create a timer.</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-timer_settime/">timer_settime</a></code>(2): Arm (start) or disarm (stop) a timer.</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2): Fetch the time remaining until the next expiration of a timer, along with the interval setting of the timer.</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2): Return the overrun count for the last timer expiration.</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-timer_delete/">timer_delete</a></code>(2): Disarm and delete a timer.</dd></dl>
 <p> Since Linux 3.10, the <i>/proc/[pid]/timers</i> file can be used to list the POSIX timers for the process with PID <i>pid</i>. See <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5) for further information. </p>
 <p> Since Linux 4.10, support for POSIX timers is a configurable option that is enabled by default. Kernel support can be disabled via the <code>CONFIG_POSIX_TIMERS</code> option.</p>
 <h3>C library/kernel differences</h3>
 <p> Part of the implementation of the POSIX timers API is provided by glibc. In particular:</p>
 <dl>
-<dt>*</p>
-<dd> Much of the functionality for <code>SIGEV_THREAD</code> is implemented within glibc, rather than the kernel. (This is necessarily so, since the thread involved in handling the notification is one that must be managed by the C library POSIX threads implementation.) Although the notification delivered to the process is via a thread, internally the NPTL implementation uses a <i>sigev_notify</i> value of <code>SIGEV_THREAD_ID</code> along with a real-time signal that is reserved by the implementation (see <code><a href="/docs/linux/man/7-nptl/">nptl</a></code>(7)).</p>
-<dt>*</p>
-<dd> The implementation of the default case where <i>evp</i> is NULL is handled inside glibc, which invokes the underlying system call with a suitably populated <i>sigevent</i> structure.</p>
-<dt>*</p>
-<dd> The timer IDs presented at user level are maintained by glibc, which maps these IDs to the timer IDs employed by the kernel.</dl>
+<dt>*</dt>
+<dd> Much of the functionality for <code>SIGEV_THREAD</code> is implemented within glibc, rather than the kernel. (This is necessarily so, since the thread involved in handling the notification is one that must be managed by the C library POSIX threads implementation.) Although the notification delivered to the process is via a thread, internally the NPTL implementation uses a <i>sigev_notify</i> value of <code>SIGEV_THREAD_ID</code> along with a real-time signal that is reserved by the implementation (see <code><a href="/docs/linux/man/7-nptl/">nptl</a></code>(7)).</dd>
+<dt>*</dt>
+<dd> The implementation of the default case where <i>evp</i> is NULL is handled inside glibc, which invokes the underlying system call with a suitably populated <i>sigevent</i> structure.</dd>
+<dt>*</dt>
+<dd> The timer IDs presented at user level are maintained by glibc, which maps these IDs to the timer IDs employed by the kernel.</dd></dl>
 <p> The POSIX timers system calls first appeared in Linux 2.6. Prior to this, glibc provided an incomplete user-space implementation (<code>CLOCK_REALTIME</code> timers only) using POSIX threads, and in glibc versions before 2.17, the implementation falls back to this technique on systems running pre-2.6 Linux kernels.</p>
 <h2>EXAMPLES</h2>
 <p> The program below takes two arguments: a sleep period in seconds, and a timer frequency in nanoseconds. The program establishes a handler for the signal it uses for the timer, blocks that signal, creates and arms a timer that expires with the given frequency, sleeps for the specified number of seconds, and then unblocks the timer signal. Assuming that the timer expired at least once while the program slept, the signal handler will be invoked, and the handler displays some information about the timer notification. The program terminates after one invocation of the signal handler. </p>

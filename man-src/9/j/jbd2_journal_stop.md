@@ -14,7 +14,7 @@ description: "jbd2_journal_stop – complete a transaction"
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>transaction to complete.</dl>
+</dd><dd>transaction to complete.</dd></dl>
 <h2>Description</h2>
 <p>All done for a particular handle. </p>
 <p> There is not much action needed here. We just return any remaining buffer credits to the transaction and remove the handle. The only complication is that we need to start a commit operation if the filesystem is marked for synchronous update. </p>
@@ -22,8 +22,8 @@ description: "jbd2_journal_stop – complete a transaction"
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

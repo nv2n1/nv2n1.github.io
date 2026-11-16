@@ -11,10 +11,8 @@ std::common_reference - std::common_reference
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class... T&gt;
     (since C++ 20)
-
         struct common_reference;</code></pre> 
 Determines the common reference type of the types T..., that is, the type to which all the types in T... can be converted or bound. If such a type exists (as determined according to the rules below), the member type names that type. Otherwise, there is no member type. The behavior is undefined if any of the types in T... is an incomplete type other than (possibly cv-qualified) void. 
 When given reference types, common_reference attempts to find a reference type to which the supplied reference types can all be bound, but may return a non-reference type if it cannot find such a reference type. 

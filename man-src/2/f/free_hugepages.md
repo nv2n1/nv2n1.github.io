@@ -27,14 +27,14 @@ int free_hugepages(void *addr);
 <p> On success, <code>alloc_hugepages</code>() returns the allocated virtual address, and <code>free_hugepages</code>() returns zero. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> The system call is not supported on this kernel.</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> The system call is not supported on this kernel.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/proc/sys/vm/nr_hugepages</i></p>
-<dd> Number of configured hugetlb pages. This can be read and written.</p>
-<dt><i>/proc/meminfo</i></p>
-<dd> Gives info on the number of configured hugetlb pages and on their size in the three variables HugePages_Total, HugePages_Free, Hugepagesize.</dl>
+<dt><i>/proc/sys/vm/nr_hugepages</i></dt>
+<dd> Number of configured hugetlb pages. This can be read and written.</dd>
+<dt><i>/proc/meminfo</i></dt>
+<dd> Gives info on the number of configured hugetlb pages and on their size in the three variables HugePages_Total, HugePages_Free, Hugepagesize.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> These calls are specific to Linux on Intel processors, and should not be used in programs intended to be portable.</p>
 <h2>NOTES</h2>

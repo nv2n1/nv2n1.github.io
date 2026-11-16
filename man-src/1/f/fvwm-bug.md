@@ -17,9 +17,9 @@ description: "fvwm-bug – report a bug in fvwm"
 <h2>ENVIRONMENT</h2>
 <p> <code>fvwm-bug</code> will utilize the following environment variables if they exist:</p>
 <dl>
-<dt><code>EDITOR</code></p>
-<dd> Specifies the preferred editor. If <font SIZE="-1"><code>EDITOR</code> </font> is not set, <code>fvwm-bug</code> defaults to <code>emacs</code>.</p>
-<dt><code>HOME</code></p>
-<dd> Directory in which the failed bug report is saved if the mail fails. </p>
+<dt><code>EDITOR</code></dt>
+<dd> Specifies the preferred editor. If <font SIZE="-1"><code>EDITOR</code> </font> is not set, <code>fvwm-bug</code> defaults to <code>emacs</code>.</dd>
+<dt><code>HOME</code></dt>
+<dd> Directory in which the failed bug report is saved if the mail fails. </dd>
 </dl>
 <h2>Index</h2>

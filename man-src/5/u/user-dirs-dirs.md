@@ -14,30 +14,30 @@ description: "user-dirs.dirs – settings for XDG user dirs"
 <dl>
 <dd>
 <pre>XDG_<i>NAME</i>_DIR=<i>VALUE</i></pre>
-</dl>
+</dd></dl>
 <p> The following names are recognised:</p>
 <dl>
-<dd>DESKTOP</dl>
+<dd>DESKTOP</dd></dl>
 <dl>
-<dd>DOWNLOAD</dl>
+<dd>DOWNLOAD</dd></dl>
 <dl>
-<dd>TEMPLATES</dl>
+<dd>TEMPLATES</dd></dl>
 <dl>
-<dd>PUBLICSHARE</dl>
+<dd>PUBLICSHARE</dd></dl>
 <dl>
-<dd>DOCUMENTS</dl>
+<dd>DOCUMENTS</dd></dl>
 <dl>
-<dd>MUSIC</dl>
+<dd>MUSIC</dd></dl>
 <dl>
-<dd>PICTURES</dl>
+<dd>PICTURES</dd></dl>
 <dl>
-<dd>VIDEOS</dl>
+<dd>VIDEOS</dd></dl>
 <p> <i>VALUE</i> must be of the form &quot;$HOME/Path&quot; or &quot;/Path&quot;. </p>
 <p> Lines beginning with a # character are ignored. </p>
 <p> The format of user-dirs.dirs is designed to allow direct sourcing of this file in shell scripts.</p>
 <h2>Environment</h2>
 <p><code>XDG_CONFIG_DIRS</code></p>
 <dl>
-<dd>The user-dirs.defaults file is located in this directory. The default is /etc/xdg.</dl>
+<dd>The user-dirs.defaults file is located in this directory. The default is /etc/xdg.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-xdg-user-dirs-update/">xdg-user-dirs-update</a></code>(1) </p>

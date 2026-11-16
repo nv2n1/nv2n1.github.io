@@ -14,84 +14,84 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 <p><code>airodump-ng</code> is used for packet capturing of raw 802.11 frames for the intent of using them with aircrack-ng. If you have a GPS receiver connected to the computer, airodump-ng is capable of logging the coordinates of the found access points. Additionally, airodump-ng writes out a text file containing the details of all access points and clients seen.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd>Shows the help screen.</p>
-<dt><i>-i, &#8211;ivs</i></p>
-<dd>It only saves IVs (only useful for cracking). If this option is specified, you have to give a dump prefix (&#8211;write option)</p>
-<dt><i>-g, &#8211;gpsd</i></p>
-<dd>Indicate that airodump-ng should try to use GPSd to get coordinates.</p>
-<dt><i>-w &lt;prefix&gt;, &#8211;write &lt;prefix&gt;</i></p>
-<dd>Is the dump file prefix to use. If this option is not given, it will only show data on the screen. Beside this file a CSV file with the same filename as the capture will be created.</p>
-<dt><i>-e, &#8211;beacons</i></p>
-<dd>It will record all beacons into the cap file. By default it only records one beacon for each network.</p>
-<dt><i>-u &lt;secs&gt;, &#8211;update &lt;secs&gt;</i></p>
-<dd>Delay &lt;secs&gt; seconds delay between display updates (default: 1 second). Useful for slow CPU.</p>
-<dt><i>&#8211;showack</i></p>
-<dd>Prints ACK/CTS/RTS statistics. Helps in debugging and general injection optimization. It is indication if you inject, inject too fast, reach the AP, the frames are valid encrypted frames. Allows one to detect &quot;hidden&quot; stations, which are too far away to capture high bitrate frames, as ACK frames are sent at 1Mbps.</p>
-<dt><i>-h</i></p>
-<dd>Hides known stations for &#8211;showack.</p>
-<dt><i>&#8211;berlin &lt;secs&gt;</i></p>
-<dd>Time before removing the AP/client from the screen when no more packets are received (Default: 120 seconds). See airodump-ng source for the history behind this option ;).</p>
-<dt><i>-c &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]], &#8211;channel &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]]</i></p>
-<dd>Indicate the channel(s) to listen to. By default airodump-ng hop on all 2.4GHz channels.</p>
-<dt><i>-b &lt;abg&gt;, &#8211;band &lt;abg&gt;</i></p>
-<dd>Indicate the band on which airodump-ng should hop. It can be a combination of &#8216;a&#8217;, &#8216;b&#8217; and &#8216;g&#8217; letters (&#8216;b&#8217; and &#8216;g&#8217; uses 2.4GHz and &#8216;a&#8217; uses 5GHz). Incompatible with &#8211;channel option.</p>
-<dt><i>-s &lt;method&gt;, &#8211;cswitch &lt;method&gt;</i></p>
-<dd>Defines the way airodump-ng sets the channels when using more than one card. Valid values: 0 (FIFO, default value), 1 (Round Robin) or 2 (Hop on last).</p>
-<dt><i>-r &lt;file&gt;</i></p>
-<dd>Reads packet from a file.</p>
-<dt><i>-x &lt;msecs&gt;</i></p>
-<dd>Active Scanning Simulation (send probe requests and parse the probe responses).</p>
-<dt><i>-M, &#8211;manufacturer</i></p>
-<dd>Display a manufacturer column with the information obtained from the IEEE OUI list. See <a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</p>
-<dt><i>-U, &#8211;uptime</i></p>
-<dd>Display APs uptime obtained from its beacon timestamp.</p>
-<dt><i>-W, &#8211;wps</i></p>
-<dd>Display a WPS column with WPS version, config method(s), AP Setup Locked obtained from APs beacon or probe response (if any).</p>
-<dt><i>&#8211;output-format &lt;formats&gt;</i></p>
+<dt><i>-H, &#8211;help</i></dt>
+<dd>Shows the help screen.</dd>
+<dt><i>-i, &#8211;ivs</i></dt>
+<dd>It only saves IVs (only useful for cracking). If this option is specified, you have to give a dump prefix (&#8211;write option)</dd>
+<dt><i>-g, &#8211;gpsd</i></dt>
+<dd>Indicate that airodump-ng should try to use GPSd to get coordinates.</dd>
+<dt><i>-w &lt;prefix&gt;, &#8211;write &lt;prefix&gt;</i></dt>
+<dd>Is the dump file prefix to use. If this option is not given, it will only show data on the screen. Beside this file a CSV file with the same filename as the capture will be created.</dd>
+<dt><i>-e, &#8211;beacons</i></dt>
+<dd>It will record all beacons into the cap file. By default it only records one beacon for each network.</dd>
+<dt><i>-u &lt;secs&gt;, &#8211;update &lt;secs&gt;</i></dt>
+<dd>Delay &lt;secs&gt; seconds delay between display updates (default: 1 second). Useful for slow CPU.</dd>
+<dt><i>&#8211;showack</i></dt>
+<dd>Prints ACK/CTS/RTS statistics. Helps in debugging and general injection optimization. It is indication if you inject, inject too fast, reach the AP, the frames are valid encrypted frames. Allows one to detect &quot;hidden&quot; stations, which are too far away to capture high bitrate frames, as ACK frames are sent at 1Mbps.</dd>
+<dt><i>-h</i></dt>
+<dd>Hides known stations for &#8211;showack.</dd>
+<dt><i>&#8211;berlin &lt;secs&gt;</i></dt>
+<dd>Time before removing the AP/client from the screen when no more packets are received (Default: 120 seconds). See airodump-ng source for the history behind this option ;).</dd>
+<dt><i>-c &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]], &#8211;channel &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]]</i></dt>
+<dd>Indicate the channel(s) to listen to. By default airodump-ng hop on all 2.4GHz channels.</dd>
+<dt><i>-b &lt;abg&gt;, &#8211;band &lt;abg&gt;</i></dt>
+<dd>Indicate the band on which airodump-ng should hop. It can be a combination of &#8216;a&#8217;, &#8216;b&#8217; and &#8216;g&#8217; letters (&#8216;b&#8217; and &#8216;g&#8217; uses 2.4GHz and &#8216;a&#8217; uses 5GHz). Incompatible with &#8211;channel option.</dd>
+<dt><i>-s &lt;method&gt;, &#8211;cswitch &lt;method&gt;</i></dt>
+<dd>Defines the way airodump-ng sets the channels when using more than one card. Valid values: 0 (FIFO, default value), 1 (Round Robin) or 2 (Hop on last).</dd>
+<dt><i>-r &lt;file&gt;</i></dt>
+<dd>Reads packet from a file.</dd>
+<dt><i>-x &lt;msecs&gt;</i></dt>
+<dd>Active Scanning Simulation (send probe requests and parse the probe responses).</dd>
+<dt><i>-M, &#8211;manufacturer</i></dt>
+<dd>Display a manufacturer column with the information obtained from the IEEE OUI list. See <a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</dd>
+<dt><i>-U, &#8211;uptime</i></dt>
+<dd>Display APs uptime obtained from its beacon timestamp.</dd>
+<dt><i>-W, &#8211;wps</i></dt>
+<dd>Display a WPS column with WPS version, config method(s), AP Setup Locked obtained from APs beacon or probe response (if any).</dd>
+<dt><i>&#8211;output-format &lt;formats&gt;</i></dt>
 <dd>Define the formats to use (separated by a comma). Possible values are: pcap, ivs, csv, gps, kismet, netxml. The default values are: pcap, csv, kismet, kismet-newcore. &#8216;pcap&#8217; is for recording a capture in pcap format, &#8216;ivs&#8217; is for ivs format (it is a shortcut for &#8211;ivs). &#8216;csv&#8217; will create an airodump-ng CSV file, &#8216;kismet&#8217; will create a kismet csv file and &#8216;kismet-newcore&#8217; will create the kismet netxml file. &#8216;gps&#8217; is a shortcut for &#8211;gps.<br />
- Theses values can be combined with the exception of ivs and pcap.</p>
-<dt><i>-I &lt;seconds&gt;, &#8211;write-interval &lt;seconds&gt;</i></p>
-<dd>Output file(s) write interval for CSV, Kismet CSV and Kismet NetXML in seconds (minimum: 1 second). By default: 5 seconds. Note that an interval too small might slow down airodump-ng.</p>
-<dt><i>&#8211;ignore-negative-one</i></p>
-<dd>Removes the message that says &#8216;fixed channel &lt;interface&gt;: -1&#8217;.</dl>
+ Theses values can be combined with the exception of ivs and pcap.</dd>
+<dt><i>-I &lt;seconds&gt;, &#8211;write-interval &lt;seconds&gt;</i></dt>
+<dd>Output file(s) write interval for CSV, Kismet CSV and Kismet NetXML in seconds (minimum: 1 second). By default: 5 seconds. Note that an interval too small might slow down airodump-ng.</dd>
+<dt><i>&#8211;ignore-negative-one</i></dt>
+<dd>Removes the message that says &#8216;fixed channel &lt;interface&gt;: -1&#8217;.</dd></dl>
 <p> <code>Filter options:</code></p>
 <dl>
-<dt><i>-t &lt;OPN|WEP|WPA|WPA1|WPA2&gt;, &#8211;encrypt &lt;OPN|WEP|WPA|WPA1|WPA2&gt;</i></p>
-<dd>It will only show networks matching the given encryption. May be specified more than once: &#8216;-t OPN -t WPA2&#8217;</p>
-<dt><i>-d &lt;bssid&gt;, &#8211;bssid &lt;bssid&gt;</i></p>
-<dd>It will only show networks, matching the given bssid.</p>
-<dt><i>-m &lt;mask&gt;, &#8211;netmask &lt;mask&gt;</i></p>
-<dd>It will only show networks, matching the given bssid ^ netmask combination. Need &#8211;bssid (or -d) to be specified.</p>
-<dt><i>-a</i></p>
-<dd>It will only show associated clients.</p>
-<dt><i>-N, &#8211;essid</i></p>
-<dd>Filter APs by ESSID. Can be used several times to match a set of ESSID.</p>
-<dt><i>-R, &#8211;essid-regex</i></p>
-<dd>Filter APs by ESSID using a regular expression.</dl>
+<dt><i>-t &lt;OPN|WEP|WPA|WPA1|WPA2&gt;, &#8211;encrypt &lt;OPN|WEP|WPA|WPA1|WPA2&gt;</i></dt>
+<dd>It will only show networks matching the given encryption. May be specified more than once: &#8216;-t OPN -t WPA2&#8217;</dd>
+<dt><i>-d &lt;bssid&gt;, &#8211;bssid &lt;bssid&gt;</i></dt>
+<dd>It will only show networks, matching the given bssid.</dd>
+<dt><i>-m &lt;mask&gt;, &#8211;netmask &lt;mask&gt;</i></dt>
+<dd>It will only show networks, matching the given bssid ^ netmask combination. Need &#8211;bssid (or -d) to be specified.</dd>
+<dt><i>-a</i></dt>
+<dd>It will only show associated clients.</dd>
+<dt><i>-N, &#8211;essid</i></dt>
+<dd>Filter APs by ESSID. Can be used several times to match a set of ESSID.</dd>
+<dt><i>-R, &#8211;essid-regex</i></dt>
+<dd>Filter APs by ESSID using a regular expression.</dd></dl>
 <h2>Interaction</h2>
 <p><code>airodump-ng</code> can receive and interpret key strokes while running. The following list describes the currently assigned keys and supposed actions:</p>
 <dl>
-<dt><i>a</i></p>
-<dd>Select active areas by cycling through these display options: AP+STA; AP+STA+ACK; AP only; STA only</p>
-<dt><i>d</i></p>
-<dd>Reset sorting to defaults (Power)</p>
-<dt><i>i</i></p>
-<dd>Invert sorting algorithm</p>
-<dt><i>m</i></p>
-<dd>Mark the selected AP or cycle through different colors if the selected AP is already marked</p>
-<dt><i>r</i></p>
-<dd>(De-)Activate realtime sorting &#8211; applies sorting algorithm everytime the display will be redrawn</p>
-<dt><i>s</i></p>
-<dd>Change column to sort by, which currently includes: First seen; BSSID; PWR level; Beacons; Data packets; Packet rate; Channel; Max. data rate; Encryption; Strongest Ciphersuite; Strongest Authentication; ESSID</p>
-<dt><i>SPACE</i></p>
-<dd>Pause display redrawing/ Resume redrawing</p>
-<dt><i>TAB</i></p>
-<dd>Enable/Disable scrolling through AP list</p>
-<dt><i>UP</i></p>
-<dd>Select the AP prior to the currently marked AP in the displayed list if available</p>
-<dt><i>DOWN</i></p>
-<dd>Select the AP after the currently marked AP if available</dl>
+<dt><i>a</i></dt>
+<dd>Select active areas by cycling through these display options: AP+STA; AP+STA+ACK; AP only; STA only</dd>
+<dt><i>d</i></dt>
+<dd>Reset sorting to defaults (Power)</dd>
+<dt><i>i</i></dt>
+<dd>Invert sorting algorithm</dd>
+<dt><i>m</i></dt>
+<dd>Mark the selected AP or cycle through different colors if the selected AP is already marked</dd>
+<dt><i>r</i></dt>
+<dd>(De-)Activate realtime sorting &#8211; applies sorting algorithm everytime the display will be redrawn</dd>
+<dt><i>s</i></dt>
+<dd>Change column to sort by, which currently includes: First seen; BSSID; PWR level; Beacons; Data packets; Packet rate; Channel; Max. data rate; Encryption; Strongest Ciphersuite; Strongest Authentication; ESSID</dd>
+<dt><i>SPACE</i></dt>
+<dd>Pause display redrawing/ Resume redrawing</dd>
+<dt><i>TAB</i></dt>
+<dd>Enable/Disable scrolling through AP list</dd>
+<dt><i>UP</i></dt>
+<dd>Select the AP prior to the currently marked AP in the displayed list if available</dd>
+<dt><i>DOWN</i></dt>
+<dd>Select the AP after the currently marked AP if available</dd></dl>
 <p> If an AP is selected or marked, all the connected stations will also be selected or marked with the same color as the corresponding Access Point.</p>
 <h2>Examples</h2>
 <p><code>airodump-ng</code> &#8211;band bg ath0 </p>
@@ -109,42 +109,42 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
  00:14:6C:7E:40:80 00:0F:B5:FD:FB:C2 35 36-24 0 99 teddy<br />
  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </p>
 <dl>
-<dt><i>BSSID</i></p>
-<dd>MAC address of the access point. In the Client section, a BSSID of &quot;(not associated)&quot; means that the client is not associated with any AP. In this unassociated state, it is searching for an AP to connect with.</p>
-<dt><i>PWR</i></p>
-<dd>Signal level reported by the card. Its signification depends on the driver, but as the signal gets higher you get closer to the AP or the station. If the BSSID PWR is -1, then the driver doesn&#8217;t support signal level reporting. If the PWR is -1 for a limited number of stations then this is for a packet which came from the AP to the client but the client transmissions are out of range for your card. Meaning you are hearing only 1/2 of the communication. If all clients have PWR as -1 then the driver doesn&#8217;t support signal level reporting.</p>
-<dt><i>RXQ</i></p>
-<dd>Only shown when on a fixed channel. Receive Quality as measured by the percentage of packets (management and data frames) successfully received over the last 10 seconds. It&#8217;s measured over all management and data frames. That&#8217;s the clue, this allows you to read more things out of this value. Lets say you got 100 percent RXQ and all 10 (or whatever the rate) beacons per second coming in. Now all of a sudden the RXQ drops below 90, but you still capture all sent beacons. Thus you know that the AP is sending frames to a client but you can&#8217;t hear the client nor the AP sending to the client (need to get closer). Another thing would be, that you got a 11MB card to monitor and capture frames (say a prism2.5) and you have a very good position to the AP. The AP is set to 54MBit and then again the RXQ drops, so you know that there is at least one 54MBit client connected to the AP.</p>
-<dt><i>Beacons</i></p>
-<dd>Number of beacons sent by the AP. Each access point sends about ten beacons per second at the lowest rate (1M), so they can usually be picked up from very far.</p>
-<dt><i>#Data</i></p>
-<dd>Number of captured data packets (if WEP, unique IV count), including data broadcast packets.</p>
-<dt><i>#/s</i></p>
-<dd>Number of data packets per second measure over the last 10 seconds.</p>
-<dt><i>CH</i></p>
-<dd>Channel number (taken from beacon packets). Note: sometimes packets from other channels are captured even if airodump-ng is not hopping, because of radio interference.</p>
-<dt><i>MB</i></p>
-<dd>Maximum speed supported by the AP. If MB = 11, it&#8217;s 802.11b, if MB = 22 it&#8217;s 802.11b+ and higher rates are 802.11g. The dot (after 54 above) indicates short preamble is supported. &#8216;e&#8217; indicates that the network has QoS (802.11e) enabled.</p>
-<dt><i>ENC</i></p>
-<dd>Encryption algorithm in use. OPN = no encryption,&quot;WEP?&quot; = WEP or higher (not enough data to choose between WEP and WPA/WPA2), WEP (without the question mark) indicates static or dynamic WEP, and WPA or WPA2 if TKIP or CCMP or MGT is present.</p>
-<dt><i>CIPHER</i></p>
-<dd>The cipher detected. One of CCMP, WRAP, TKIP, WEP, WEP40, or WEP104. Not mandatory, but TKIP is typically used with WPA and CCMP is typically used with WPA2. WEP40 is displayed when the key index is greater then 0. The standard states that the index can be 0-3 for 40bit and should be 0 for 104 bit.</p>
-<dt><i>AUTH</i></p>
-<dd>The authentication protocol used. One of MGT (WPA/WPA2 using a separate authentication server), SKA (shared key for WEP), PSK (pre-shared key for WPA/WPA2), or OPN (open for WEP).</p>
-<dt><i>WPS</i></p>
-<dd>This is only displayed when &#8211;wps (or -W) is specified. If the AP supports WPS, the first field of the column indicates version supported. The second field indicates WPS config methods (can be more than one method, separated by comma): USB = USB method, ETHER = Ethernet, LAB = Label, DISP = Display, EXTNFC = External NFC, INTNFC = Internal NFC, NFCINTF = NFC Interface, PBC = Push Button, KPAD = Keypad. Locked is displayed when AP setup is locked.</p>
-<dt><i>ESSID</i></p>
-<dd>The so-called &quot;SSID&quot;, which can be empty if SSID hiding is activated. In this case, airodump-ng will try to recover the SSID from probe responses and association requests.</p>
-<dt><i>STATION</i></p>
-<dd>MAC address of each associated station or stations searching for an AP to connect with. Clients not currently associated with an AP have a BSSID of &quot;(not associated)&quot;.</p>
-<dt><i>Rate</i></p>
-<dd>This is only displayed when using a single channel. The first number is the last data rate from the AP (BSSID) to the Client (STATION). The second number is the last data rate from Client (STATION) to the AP (BSSID).</p>
-<dt><i>Lost</i></p>
-<dd>It means lost packets coming from the client. To determine the number of packets lost, there is a sequence field on every non-control frame, so you can subtract the second last sequence number from the last sequence number and you know how many packets you have lost.</p>
-<dt><i>Packets</i></p>
-<dd>The number of data packets sent by the client.</p>
-<dt><i>Probes</i></p>
-<dd>The ESSIDs probed by the client. These are the networks the client is trying to connect to if it is not currently connected.</dl>
+<dt><i>BSSID</i></dt>
+<dd>MAC address of the access point. In the Client section, a BSSID of &quot;(not associated)&quot; means that the client is not associated with any AP. In this unassociated state, it is searching for an AP to connect with.</dd>
+<dt><i>PWR</i></dt>
+<dd>Signal level reported by the card. Its signification depends on the driver, but as the signal gets higher you get closer to the AP or the station. If the BSSID PWR is -1, then the driver doesn&#8217;t support signal level reporting. If the PWR is -1 for a limited number of stations then this is for a packet which came from the AP to the client but the client transmissions are out of range for your card. Meaning you are hearing only 1/2 of the communication. If all clients have PWR as -1 then the driver doesn&#8217;t support signal level reporting.</dd>
+<dt><i>RXQ</i></dt>
+<dd>Only shown when on a fixed channel. Receive Quality as measured by the percentage of packets (management and data frames) successfully received over the last 10 seconds. It&#8217;s measured over all management and data frames. That&#8217;s the clue, this allows you to read more things out of this value. Lets say you got 100 percent RXQ and all 10 (or whatever the rate) beacons per second coming in. Now all of a sudden the RXQ drops below 90, but you still capture all sent beacons. Thus you know that the AP is sending frames to a client but you can&#8217;t hear the client nor the AP sending to the client (need to get closer). Another thing would be, that you got a 11MB card to monitor and capture frames (say a prism2.5) and you have a very good position to the AP. The AP is set to 54MBit and then again the RXQ drops, so you know that there is at least one 54MBit client connected to the AP.</dd>
+<dt><i>Beacons</i></dt>
+<dd>Number of beacons sent by the AP. Each access point sends about ten beacons per second at the lowest rate (1M), so they can usually be picked up from very far.</dd>
+<dt><i>#Data</i></dt>
+<dd>Number of captured data packets (if WEP, unique IV count), including data broadcast packets.</dd>
+<dt><i>#/s</i></dt>
+<dd>Number of data packets per second measure over the last 10 seconds.</dd>
+<dt><i>CH</i></dt>
+<dd>Channel number (taken from beacon packets). Note: sometimes packets from other channels are captured even if airodump-ng is not hopping, because of radio interference.</dd>
+<dt><i>MB</i></dt>
+<dd>Maximum speed supported by the AP. If MB = 11, it&#8217;s 802.11b, if MB = 22 it&#8217;s 802.11b+ and higher rates are 802.11g. The dot (after 54 above) indicates short preamble is supported. &#8216;e&#8217; indicates that the network has QoS (802.11e) enabled.</dd>
+<dt><i>ENC</i></dt>
+<dd>Encryption algorithm in use. OPN = no encryption,&quot;WEP?&quot; = WEP or higher (not enough data to choose between WEP and WPA/WPA2), WEP (without the question mark) indicates static or dynamic WEP, and WPA or WPA2 if TKIP or CCMP or MGT is present.</dd>
+<dt><i>CIPHER</i></dt>
+<dd>The cipher detected. One of CCMP, WRAP, TKIP, WEP, WEP40, or WEP104. Not mandatory, but TKIP is typically used with WPA and CCMP is typically used with WPA2. WEP40 is displayed when the key index is greater then 0. The standard states that the index can be 0-3 for 40bit and should be 0 for 104 bit.</dd>
+<dt><i>AUTH</i></dt>
+<dd>The authentication protocol used. One of MGT (WPA/WPA2 using a separate authentication server), SKA (shared key for WEP), PSK (pre-shared key for WPA/WPA2), or OPN (open for WEP).</dd>
+<dt><i>WPS</i></dt>
+<dd>This is only displayed when &#8211;wps (or -W) is specified. If the AP supports WPS, the first field of the column indicates version supported. The second field indicates WPS config methods (can be more than one method, separated by comma): USB = USB method, ETHER = Ethernet, LAB = Label, DISP = Display, EXTNFC = External NFC, INTNFC = Internal NFC, NFCINTF = NFC Interface, PBC = Push Button, KPAD = Keypad. Locked is displayed when AP setup is locked.</dd>
+<dt><i>ESSID</i></dt>
+<dd>The so-called &quot;SSID&quot;, which can be empty if SSID hiding is activated. In this case, airodump-ng will try to recover the SSID from probe responses and association requests.</dd>
+<dt><i>STATION</i></dt>
+<dd>MAC address of each associated station or stations searching for an AP to connect with. Clients not currently associated with an AP have a BSSID of &quot;(not associated)&quot;.</dd>
+<dt><i>Rate</i></dt>
+<dd>This is only displayed when using a single channel. The first number is the last data rate from the AP (BSSID) to the Client (STATION). The second number is the last data rate from Client (STATION) to the AP (BSSID).</dd>
+<dt><i>Lost</i></dt>
+<dd>It means lost packets coming from the client. To determine the number of packets lost, there is a sequence field on every non-control frame, so you can subtract the second last sequence number from the last sequence number and you know how many packets you have lost.</dd>
+<dt><i>Packets</i></dt>
+<dd>The number of data packets sent by the client.</dd>
+<dt><i>Probes</i></dt>
+<dd>The ESSIDs probed by the client. These are the networks the client is trying to connect to if it is not currently connected.</dd></dl>
 <p> The first part is the detected access points. The second part is a list of detected wireless clients, stations. By relying on the signal power, one can even physically pinpoint the location of a given station.</p>
 <h2>Author</h2>
 <p>This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>

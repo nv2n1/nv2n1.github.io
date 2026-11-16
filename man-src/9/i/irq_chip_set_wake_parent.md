@@ -14,17 +14,17 @@ description: "irq_chip_set_wake_parent – Set/reset wake-up on the parent inter
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>Pointer to interrupt specific data</dl>
+</dd><dd>Pointer to interrupt specific data</dd></dl>
 <p> <i>on</i></p>
 <dl>
-<dd>Whether to set or reset the wake-up capability of this irq</dl>
+<dd>Whether to set or reset the wake-up capability of this irq</dd></dl>
 <h2>Description</h2>
 <p>Conditional, as the underlying parent chip might not implement it.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

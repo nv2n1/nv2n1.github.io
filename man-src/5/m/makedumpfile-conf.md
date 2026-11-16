@@ -18,10 +18,10 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
  &quot;[&quot; is the character <code>[</code><br />
  &quot;]&quot; is the character <code>]</code></p>
 <dl>
-<dt>&lt;<i>ModuleName</i>&gt;</p>
-<dd>is either &#8216;vmlinux&#8217; or name of a Linux kernel module.</p>
-<dt>&lt;<i>FilterCommands</i>&gt;</p>
-<dd>is a list of one or more filter commands as described in the section <code>FILTER COMMANDS</code> of this manual page.</dl>
+<dt>&lt;<i>ModuleName</i>&gt;</dt>
+<dd>is either &#8216;vmlinux&#8217; or name of a Linux kernel module.</dd>
+<dt>&lt;<i>FilterCommands</i>&gt;</dt>
+<dd>is a list of one or more filter commands as described in the section <code>FILTER COMMANDS</code> of this manual page.</dd></dl>
 <p> The section name indicates a kernel module name (including <code>vmlinux</code>) where the symbols specified in subsequent erase commands belong to. The unnamed section defaults to <code>[vmlinux]</code> section. However, a user can also explicitly define <code>[vmlinux]</code> section. The sections help makedumpfile tool to select appropriate kernel or module debuginfo file before processing the subsequent erase commands. Before selecting appropriate debuginfo file, the module name is validated against the loaded modules from the vmcore. If no match is found, then the section is ignored and makedumpfile skips to the next module section. If match is found, then makedumpfile will try to load the corresponding module debuginfo file. If module debuginfo is not available then, makedumpfile will skip the section with a warning message.</p>
 <h2>Filter Commands</h2>
 <h3>filter command</h3>
@@ -29,10 +29,10 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p> &lt;<i>EraseCommands</i>&gt;|&lt;<i>LoopConstruct</i>&gt; </p>
 <p> where</p>
 <dl>
-<dt>&lt;<i>EraseCommands</i>&gt;</p>
-<dd>Described in the subsection <code>erase command</code> of this manual page.</p>
-<dt>&lt;<i>LoopConstruct</i>&gt;</p>
-<dd>Described in the subsection <code>Loop construct</code> of this manual page.</dl>
+<dt>&lt;<i>EraseCommands</i>&gt;</dt>
+<dd>Described in the subsection <code>erase command</code> of this manual page.</dd>
+<dt>&lt;<i>LoopConstruct</i>&gt;</dt>
+<dd>Described in the subsection <code>Loop construct</code> of this manual page.</dd></dl>
 <h3>erase command</h3>
 <p>Erase specified size of a kernel data referred by specified kernel/module symbol or its member component. The erase command syntax is: </p>
 <p> <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>size</code> &lt;<i>SizeValue</i>&gt;[K|M]]<br />
@@ -40,16 +40,16 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
  <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>nullify</code>] </p>
 <p> where </p>
 <dl>
-<dt>&lt;<i>Symbol</i>&gt;</p>
-<dd>A kernel or module symbol (variable) name that is part of global symbols <code>/proc/kallsyms</code>.</p>
-<dt>&lt;<i>SizeValue</i>&gt;</p>
-<dd>A positive integer value as a size of the data in bytes to be erased. The suffixes &#8216;K&#8217; and &#8216;M&#8217; can be used to specify kilobytes and Megabytes respectively where, K means 1024 bytes and M means 1024 ^ 2 = 1048576 bytes. The suffixes are not case sensitive.</p>
-<dt>&lt;<i>SizeSymbol</i>&gt;</p>
-<dd>A simple expression of the form &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that denotes a symbol which contains a positive integer value as a size of the data in bytes to be erased.</p>
-<dt>&lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]]</p>
-<dd>A simple expression that results into either a global kernel symbol name or its member components. The expression always uses &#8216;.&#8217; operator to specify the <i>member</i> component of kernel symbol or its member irrespective of whether it is of pointer type or not.</p>
-<dt><i>member</i>[&#8230;]</p>
-<dd>Member or component of member in &lt;<i>Symbol</i>&gt;.</dl>
+<dt>&lt;<i>Symbol</i>&gt;</dt>
+<dd>A kernel or module symbol (variable) name that is part of global symbols <code>/proc/kallsyms</code>.</dd>
+<dt>&lt;<i>SizeValue</i>&gt;</dt>
+<dd>A positive integer value as a size of the data in bytes to be erased. The suffixes &#8216;K&#8217; and &#8216;M&#8217; can be used to specify kilobytes and Megabytes respectively where, K means 1024 bytes and M means 1024 ^ 2 = 1048576 bytes. The suffixes are not case sensitive.</dd>
+<dt>&lt;<i>SizeSymbol</i>&gt;</dt>
+<dd>A simple expression of the form &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that denotes a symbol which contains a positive integer value as a size of the data in bytes to be erased.</dd>
+<dt>&lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]]</dt>
+<dd>A simple expression that results into either a global kernel symbol name or its member components. The expression always uses &#8216;.&#8217; operator to specify the <i>member</i> component of kernel symbol or its member irrespective of whether it is of pointer type or not.</dd>
+<dt><i>member</i>[&#8230;]</dt>
+<dd>Member or component of member in &lt;<i>Symbol</i>&gt;.</dd></dl>
 <p> The <code>erase</code> command takes two arguments 1. kernel symbol name or its member components and 2. size of the data referred by argument (1) OR <code>nullify</code> keyword. The second argument <code>size</code> OR <code>nullify</code> is optional. The unit for size value is in <code>bytes</code>. If <code>size</code> option is not specified then the size of the first argument is determined according to its data type using dwarf info from debuginfo file. In case of &#8216;<code>char *</code>&#8216; data type, the length of string pointed by &#8216;<code>char *</code>&#8216; pointer is determined with an upper limit of 1024. The <code>size</code> can be specified in two forms 1. a integer value as explained above (&lt;<i>SizeValue</i>&gt;) and 2. a simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]]] that results into base type (integer) variable. </p>
 <p> If the specified &lt;<i>Symbol</i>&gt; is of type &#8216;<code>void *</code>&#8216;, then user needs to provide either <code>size</code> or <code>nullify</code> option, otherwise the erase command will not have any effect. </p>
 <p> The <code>nullify</code> option only works if specified &lt;<i>Symbol</i>&gt; is a pointer. Instead of erasing data pointed by the specified pointer <code>nullify</code> erases the pointer value and set it to &#8216;0&#8217; (NULL). Please note that by nullifying the pointer values may affect the debug ability of created <i>DUMPFILE</i>. Use the <code>nullify</code> option only when the size of data to be erased is not known. <code>e.g.</code> data pointed by &#8216;<code>void *</code>&#8216;. </p>
@@ -99,24 +99,24 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p> <code>endfor</code> </p>
 <p> where </p>
 <dl>
-<dt>&lt;<i>id</i>&gt;</p>
-<dd>Arbitrary name used to temporarily point to elements of the list. This is also called iteration variable.</p>
-<dt>&lt;<i>ArrayVar</i>&gt;</p>
-<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into an array variable.</p>
-<dt>&lt;<i>StructVar</i>&gt;</p>
-<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into a variable that points to a structure.</p>
-<dt>&lt;<i>NextMember</i>&gt;</p>
-<dd>Member within &lt;<i>StructVar</i>&gt; that points to an object of same type that of &lt;<i>StructVar</i>&gt;.</p>
-<dt>&lt;<i>ListHeadVar</i>&gt;</p>
-<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into a variable of type struct list_head.</p>
-<dt>&lt;<i>StructName</i>&gt;</p>
-<dd>Name of the structure type that can be traversed using HEAD variable &lt;<i>ListHeadVar</i>&gt; and contains a member named &lt;<i>ListHeadMember</i>&gt;.</p>
-<dt>&lt;<i>ListHeadMember</i>&gt;</p>
-<dd>Name of a member in &lt;<i>StructName</i>&gt;, of type struct list_head.</p>
-<dt>&lt;<i>MemberExpression</i>&gt;</p>
-<dd>A simple expression in the form of [.<i>member</i>[&#8230;]] to specify a member or component of an element in &lt;<i>ArrayVar</i>&gt;, &lt;<i>StructVar</i>&gt; or &lt;<i>StructName</i>&gt;.</p>
-<dt>&lt;<i>SizeExpression</i>&gt;</p>
-<dd>Size value in the form of &lt;<i>SizeValue</i>&gt;, &lt;<i>id</i>&gt;[.<i>MemberExpression</i>] or &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]].</dl>
+<dt>&lt;<i>id</i>&gt;</dt>
+<dd>Arbitrary name used to temporarily point to elements of the list. This is also called iteration variable.</dd>
+<dt>&lt;<i>ArrayVar</i>&gt;</dt>
+<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into an array variable.</dd>
+<dt>&lt;<i>StructVar</i>&gt;</dt>
+<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into a variable that points to a structure.</dd>
+<dt>&lt;<i>NextMember</i>&gt;</dt>
+<dd>Member within &lt;<i>StructVar</i>&gt; that points to an object of same type that of &lt;<i>StructVar</i>&gt;.</dd>
+<dt>&lt;<i>ListHeadVar</i>&gt;</dt>
+<dd>A simple expression in the form of &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] that results into a variable of type struct list_head.</dd>
+<dt>&lt;<i>StructName</i>&gt;</dt>
+<dd>Name of the structure type that can be traversed using HEAD variable &lt;<i>ListHeadVar</i>&gt; and contains a member named &lt;<i>ListHeadMember</i>&gt;.</dd>
+<dt>&lt;<i>ListHeadMember</i>&gt;</dt>
+<dd>Name of a member in &lt;<i>StructName</i>&gt;, of type struct list_head.</dd>
+<dt>&lt;<i>MemberExpression</i>&gt;</dt>
+<dd>A simple expression in the form of [.<i>member</i>[&#8230;]] to specify a member or component of an element in &lt;<i>ArrayVar</i>&gt;, &lt;<i>StructVar</i>&gt; or &lt;<i>StructName</i>&gt;.</dd>
+<dt>&lt;<i>SizeExpression</i>&gt;</dt>
+<dd>Size value in the form of &lt;<i>SizeValue</i>&gt;, &lt;<i>id</i>&gt;[.<i>MemberExpression</i>] or &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]].</dd></dl>
 <p> The <code>for</code> loop construct allows to iterate on list of elements in an array or linked lists. Each element in the list is assigned to iteration variable &lt;<i>id</i>&gt;. The type of the iteration variable is determined by that of the list elements. The entry specified after &#8216;<code>in</code>&#8216; terminal is called LIST entry. The LIST entry can be an array variable, structure variable/pointer or a struct list_head type variable. The set of <code>erase</code> commands specified between <code>for</code> and <code>endfor</code>, will be executed for each element in the LIST entry. </p>
 <p> If the LIST entry specified is an array variable, then the loop will be executed for each array element. The size of the array will be determined by using dwarf information. </p>
 <p> If the LIST entry specified is a structure variable/pointer, then a traversal member (&lt;<i>NextMember</i>&gt;) must be specified using &#8216;<code>via</code>&#8216; terminal. The <code>for</code> loop will continue until the value of traversal member is NULL or matches with address of the first node &lt;<i>StructVar</i>&gt; if it is a circular linked list. </p>

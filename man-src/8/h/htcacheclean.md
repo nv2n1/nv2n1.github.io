@@ -22,35 +22,35 @@ description: "htcacheclean – Clean up the disk cache"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-d</code><i>interval</i></p>
-<dd>Daemonize and repeat cache cleaning every <i>interval</i> minutes. This option is mutually exclusive with the <code>-D</code>, <code>-v</code> and <code>-r</code> options. To shutdown the daemon cleanly, just send it a <code>SIGTERM</code> or <code>SIGINT</code>.</p>
-<dt><code>-D</code></p>
-<dd>Do a dry run and don&#8217;t delete anything. This option is mutually exclusive with the <code>-d</code> option. When doing a dry run and deleting directories with <code>-t</code>, the inodes reported deleted in the stats cannot take into account the directories deleted, and will be marked as an estimate.</p>
-<dt><code>-v</code></p>
-<dd>Be verbose and print statistics. This option is mutually exclusive with the <code>-d</code> option.</p>
-<dt><code>-r</code></p>
-<dd>Clean thoroughly. This assumes that the Apache web server is not running (otherwise you may get garbage in the cache). This option is mutually exclusive with the <code>-d</code> option and implies the <code>-t</code> option.</p>
-<dt><code>-n</code></p>
-<dd>Be nice. This causes slower processing in favour of other processes. <code>htcacheclean</code> will sleep from time to time so that (a) the disk IO will be delayed and (b) the kernel can schedule other processes in the meantime.</p>
-<dt><code>-t</code></p>
-<dd>Delete all empty directories. By default only cache files are removed, however with some configurations the large number of directories created may require attention. If your configuration requires a very large number of directories, to the point that inode or file allocation table exhaustion may become an issue, use of this option is advised.</p>
-<dt><code>-p</code><i>path</i></p>
-<dd>Specify <i>path</i> as the root directory of the disk cache. This should be the same value as specified with the CacheRoot directive.</p>
-<dt><code>-P</code><i>pidfile</i></p>
-<dd>Specify <i>pidfile</i> as the name of the file to write the process ID to when daemonized.</p>
-<dt><code>-R</code><i>round</i></p>
-<dd>Specify <i>round</i> as the amount to round sizes up to, to compensate for disk block sizes. Set to the block size of the cache partition.</p>
-<dt><code>-l</code><i>limit</i></p>
-<dd>Specify <i>limit</i> as the total disk cache size limit. The value is expressed in bytes by default (or attaching <code>B</code> to the number). Attach <code>K</code> for Kbytes, <code>M</code> for MBytes or <code>G</code> for Gbytes.</p>
-<dt><code>-L</code><i>limit</i></p>
-<dd>Specify <i>limit</i> as the total disk cache inode limit. <code>K</code>, <code>M</code> or <code>G</code> suffix can also be used.</p>
-<dt><code>-i</code></p>
-<dd>Be intelligent and run only when there was a modification of the disk cache. This option is only possible together with the <code>-d</code> option.</p>
-<dt><code>-a</code></p>
-<dd>List the URLs currently stored in the cache. Variants of the same URL will be listed once for each variant.</p>
-<dt><code>-A</code></p>
+<dt><code>-d</code><i>interval</i></dt>
+<dd>Daemonize and repeat cache cleaning every <i>interval</i> minutes. This option is mutually exclusive with the <code>-D</code>, <code>-v</code> and <code>-r</code> options. To shutdown the daemon cleanly, just send it a <code>SIGTERM</code> or <code>SIGINT</code>.</dd>
+<dt><code>-D</code></dt>
+<dd>Do a dry run and don&#8217;t delete anything. This option is mutually exclusive with the <code>-d</code> option. When doing a dry run and deleting directories with <code>-t</code>, the inodes reported deleted in the stats cannot take into account the directories deleted, and will be marked as an estimate.</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose and print statistics. This option is mutually exclusive with the <code>-d</code> option.</dd>
+<dt><code>-r</code></dt>
+<dd>Clean thoroughly. This assumes that the Apache web server is not running (otherwise you may get garbage in the cache). This option is mutually exclusive with the <code>-d</code> option and implies the <code>-t</code> option.</dd>
+<dt><code>-n</code></dt>
+<dd>Be nice. This causes slower processing in favour of other processes. <code>htcacheclean</code> will sleep from time to time so that (a) the disk IO will be delayed and (b) the kernel can schedule other processes in the meantime.</dd>
+<dt><code>-t</code></dt>
+<dd>Delete all empty directories. By default only cache files are removed, however with some configurations the large number of directories created may require attention. If your configuration requires a very large number of directories, to the point that inode or file allocation table exhaustion may become an issue, use of this option is advised.</dd>
+<dt><code>-p</code><i>path</i></dt>
+<dd>Specify <i>path</i> as the root directory of the disk cache. This should be the same value as specified with the CacheRoot directive.</dd>
+<dt><code>-P</code><i>pidfile</i></dt>
+<dd>Specify <i>pidfile</i> as the name of the file to write the process ID to when daemonized.</dd>
+<dt><code>-R</code><i>round</i></dt>
+<dd>Specify <i>round</i> as the amount to round sizes up to, to compensate for disk block sizes. Set to the block size of the cache partition.</dd>
+<dt><code>-l</code><i>limit</i></dt>
+<dd>Specify <i>limit</i> as the total disk cache size limit. The value is expressed in bytes by default (or attaching <code>B</code> to the number). Attach <code>K</code> for Kbytes, <code>M</code> for MBytes or <code>G</code> for Gbytes.</dd>
+<dt><code>-L</code><i>limit</i></dt>
+<dd>Specify <i>limit</i> as the total disk cache inode limit. <code>K</code>, <code>M</code> or <code>G</code> suffix can also be used.</dd>
+<dt><code>-i</code></dt>
+<dd>Be intelligent and run only when there was a modification of the disk cache. This option is only possible together with the <code>-d</code> option.</dd>
+<dt><code>-a</code></dt>
+<dd>List the URLs currently stored in the cache. Variants of the same URL will be listed once for each variant.</dd>
+<dt><code>-A</code></dt>
 <dd>List the URLs currently stored in the cache, along with their attributes in the following order: url, header size, body size, status, entity version, date, expiry, request time, response time, body present, head request.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>Deleting A Specific Url</h2>
 <p>&nbsp; </p>
 <p> If <code>htcacheclean</code> is passed one or more URLs, each URL will be deleted from the cache. If multiple variants of an URL exists, all variants would be deleted.<br />
@@ -63,29 +63,29 @@ description: "htcacheclean – Clean up the disk cache"
 &nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt>url</p>
-<dd>The URL of the entry.</p>
-<dt>header size</p>
-<dd>The size of the header in bytes.</p>
-<dt>body size</p>
-<dd>The size of the body in bytes.</p>
-<dt>status</p>
-<dd>Status of the cached response.</p>
-<dt>entity version</p>
-<dd>The number of times this entry has been revalidated without being deleted.</p>
-<dt>date</p>
-<dd>Date of the response.</p>
-<dt>expiry</p>
-<dd>Expiry date of the response.</p>
-<dt>request time</p>
-<dd>Time of the start of the request.</p>
-<dt>response time</p>
-<dd>Time of the end of the request.</p>
-<dt>body present</p>
-<dd>If 0, no body is stored with this request, 1 otherwise.</p>
-<dt>head request</p>
+<dt>url</dt>
+<dd>The URL of the entry.</dd>
+<dt>header size</dt>
+<dd>The size of the header in bytes.</dd>
+<dt>body size</dt>
+<dd>The size of the body in bytes.</dd>
+<dt>status</dt>
+<dd>Status of the cached response.</dd>
+<dt>entity version</dt>
+<dd>The number of times this entry has been revalidated without being deleted.</dd>
+<dt>date</dt>
+<dd>Date of the response.</dd>
+<dt>expiry</dt>
+<dd>Expiry date of the response.</dd>
+<dt>request time</dt>
+<dd>Time of the start of the request.</dd>
+<dt>response time</dt>
+<dd>Time of the end of the request.</dd>
+<dt>body present</dt>
+<dd>If 0, no body is stored with this request, 1 otherwise.</dd>
+<dt>head request</dt>
 <dd>If 1, the entry contains a cached HEAD request with no body, 0 otherwise.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>Exit Status</h2>
 <p>&nbsp; </p>
 <p> <code>htcacheclean</code> returns a zero status (&quot;true&quot;) if all operations were successful, <code>1</code> otherwise. If an URL is specified, and the URL was cached and successfully removed, <code>0</code> is returned, <code>2</code> otherwise. If an error occurred during URL removal, <code>1</code> is returned.<br />

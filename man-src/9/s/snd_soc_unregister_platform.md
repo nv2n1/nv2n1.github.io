@@ -15,7 +15,7 @@ snd_soc_unregister_platform - Unregister a platform from the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>platform to unregister</dl>
+<dl><dd></dd><dd>platform to unregister</dd></dl>
 
 <h2>Copyright</h2>
 

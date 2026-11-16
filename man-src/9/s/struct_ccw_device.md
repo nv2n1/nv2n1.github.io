@@ -20,26 +20,26 @@ description: "struct_ccw_device – channel attached device"
 <h2>Members</h2>
 <p>ccwlock</p>
 <dl>
-<dd>pointer to device lock</dl>
+<dd>pointer to device lock</dd></dl>
 <p> id</p>
 <dl>
-<dd>id of this device</dl>
+<dd>id of this device</dd></dl>
 <p> drv</p>
 <dl>
-<dd>ccw driver for this device</dl>
+<dd>ccw driver for this device</dd></dl>
 <p> dev</p>
 <dl>
-<dd>embedded device structure</dl>
+<dd>embedded device structure</dd></dl>
 <p> online</p>
 <dl>
-<dd>online status of device</dl>
+<dd>online status of device</dd></dl>
 <p> handler</p>
 <dl>
-<dd>interrupt handler</dl>
+<dd>interrupt handler</dd></dl>
 <h2>Description</h2>
 <p><i>handler</i> is a member of the device rather than the driver since a driver can have different interrupt handlers for different ccw devices (multi-subchannel drivers).</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,22 +15,22 @@ description: "sotruss – trace shared library calls through PLT"
 <p> <code>sotruss </code> is a small wrapper around <code>ld.so</code> that runs the specified <i>executable</i> until it exits. It intercepts and produce a trace of the dynamic library calls which are called by the executed process via the Procedure Linkage Table (PLT). It outputs the caller, the calle and the parameters as each call is executed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-F</code>, <code>&#8211;from</code> FROMLIST</p>
-<dd> Trace calls from objects on FROMLIST.</p>
-<dt><code>-T</code>, <code>&#8211;to</code> TOLIST</p>
-<dd> Trace calls to objects on TOLIST.</p>
-<dt><code>-e</code>, <code>&#8211;exit</code></p>
-<dd> Also show exits from the function calls.</p>
-<dt><code>-f</code>, <code>&#8211;follow</code></p>
-<dd> Trace child processes as they are created by currently traced processes as a result of the <code><a href="/docs/linux/man/2-fork/">fork</a>(2)</code> system call.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> FILENAME</p>
-<dd> Write output to FILENAME (or FILENAME. in case <code>-f</code> is also used) instead of standard error.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Give a short usage message</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print program version</dl>
+<dt><code>-F</code>, <code>&#8211;from</code> FROMLIST</dt>
+<dd> Trace calls from objects on FROMLIST.</dd>
+<dt><code>-T</code>, <code>&#8211;to</code> TOLIST</dt>
+<dd> Trace calls to objects on TOLIST.</dd>
+<dt><code>-e</code>, <code>&#8211;exit</code></dt>
+<dd> Also show exits from the function calls.</dd>
+<dt><code>-f</code>, <code>&#8211;follow</code></dt>
+<dd> Trace child processes as they are created by currently traced processes as a result of the <code><a href="/docs/linux/man/2-fork/">fork</a>(2)</code> system call.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> FILENAME</dt>
+<dd> Write output to FILENAME (or FILENAME. in case <code>-f</code> is also used) instead of standard error.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Give a short usage message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print program version</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper.</p>
 <h2>COPYRIGHT</h2>

@@ -10,15 +10,15 @@ description: "usb_hcd_irq – hook IRQs to HCD framework (bus glue)"
 <p>usb_hcd_irq &#8211; hook IRQs to HCD framework (bus glue)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>irqreturn_t usb_hcd_irq(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>__hcd</i><code>);</code></dl>
+<dt> <code>irqreturn_t usb_hcd_irq(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>__hcd</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>the IRQ being raised</dl>
+</dd><dd>the IRQ being raised</dd></dl>
 <p> <i>__hcd</i></p>
 <dl>
-<dd>pointer to the HCD whose IRQ is being signaled</dl>
+<dd>pointer to the HCD whose IRQ is being signaled</dd></dl>
 <h2>Description</h2>
 <p>If the controller isn&#8217;t HALTed, calls the driver&#8217;s irq handler. Checks whether the controller is now dead.</p>
 <h2>Return</h2>

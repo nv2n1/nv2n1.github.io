@@ -12,10 +12,10 @@ description: "rhnplugin – Spacewalk/Red Hat Satellite support for yum(8)."
 <p><code>rhnplugin</code> provides Spacewalk support for <code><a href="/docs/linux/man/8-yum/">yum</a></code>(8) via its plugin architecture. A system registered with Spacewalk will be able to update and install packages from Spacewalk. </p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sysconfig/rhn/up2date</i></p>
-<dd>The common configuration file used by RHN client programs. </p>
-<dt><i>/etc/yum/pluginconf.d/rhnplugin.conf</i></p>
-<dd>A file containing plugin specific configuration options. </p>
+<dt><i>/etc/sysconfig/rhn/up2date</i></dt>
+<dd>The common configuration file used by RHN client programs. </dd>
+<dt><i>/etc/yum/pluginconf.d/rhnplugin.conf</i></dt>
+<dd>A file containing plugin specific configuration options. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-yum/">yum</a></code>(8), <code><a href="/docs/linux/man/8-rhn_check/">rhn_check</a></code>(8), <code><a href="/docs/linux/man/8-rhn_register/">rhn_register</a></code>(8), <code><a href="/docs/linux/man/5-rhnplugin-conf/">rhnplugin.conf</a></code>(5), <code><a href="/docs/linux/man/5-up2date/">up2date</a></code>(5). </p>

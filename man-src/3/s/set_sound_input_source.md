@@ -10,7 +10,6 @@ description: "set_sound_input_source – Selects the audio input source. Allegro
 <p>set_sound_input_source &#8211; Selects the audio input source. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int set_sound_input_source(int source);</code></pre>
 <h2>Description</h2>
 <p>Selects the audio input source. The parameter should be one of the values: </p>

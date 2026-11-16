@@ -15,12 +15,12 @@ description: "libtalloc_pools – Chapter 5: Memory pools"
 <p> The talloc library contains its own implementation of a memory pool. It is highly transparent for the programmer. The only thing that needs to be done is an initialization of a new pool context using <code>talloc_pool()</code> &#8211; which can be used in the same way as any other context. </p>
 <p> Refactoring of existing code (that uses talloc) to take the advantage of a memory pool is quite simple due to the following properties of the pool context: </p>
 <dl>
-<dt>&bull;</p>
-<dd> if we are allocating data on a pool context, it takes the desired amount of memory from the pool,</p>
-<dt>&bull;</p>
-<dd> if the context is a descendant of the pool context, it takes the space from the pool as well,</p>
-<dt>&bull;</p>
-<dd> if the pool does not have sufficient portion of memory left, it will create a new non-pool context, leaving the pool intact</dl>
+<dt>&bull;</dt>
+<dd> if we are allocating data on a pool context, it takes the desired amount of memory from the pool,</dd>
+<dt>&bull;</dt>
+<dd> if the context is a descendant of the pool context, it takes the space from the pool as well,</dd>
+<dt>&bull;</dt>
+<dd> if the pool does not have sufficient portion of memory left, it will create a new non-pool context, leaving the pool intact</dd></dl>
 <pre><code>
 /* allocate 1KiB in a pool */
 TALLOC_CTX *pool_ctx = talloc_pool(NULL, 1024);

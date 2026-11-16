@@ -16,13 +16,13 @@ MAPIQA - Terminates a string of calls to MAPITA.
  void c_mapita (float rlat, float rlon, int ifst, 
  int *iama, int igid, int iail, int iair)
 <h2>Description</h2><dl COMPACT><dt>IAMA
-<dd>(an input/output array of type INTEGER, dimensioned as specified in a call to the AREAS initialization routine ARINAM) is the area map to which lines in MAPITA's buffer are to be added.
-<dt>IGID
-<dd>(an input expression of type INTEGER) is the group identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.
-<dt>IAIL
-<dd>(an input expression of type INTEGER) is the left area identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.
-<dt>IAIR
-<dd>(an input expression of type INTEGER) is the right area identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input/output array of type INTEGER, dimensioned as specified in a call to the AREAS initialization routine ARINAM) is the area map to which lines in MAPITA's buffer are to be added.
+</dd><dt>IGID
+</dt><dd>(an input expression of type INTEGER) is the group identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.
+</dd><dt>IAIL
+</dt><dd>(an input expression of type INTEGER) is the left area identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.
+</dd><dt>IAIR
+</dt><dd>(an input expression of type INTEGER) is the right area identifier to be passed to the AREAS routine AREDAM when the lines in MAPITA's buffer are added to the area map in IAMA.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>You must call MAPITA once for each point along the line. After your last call to MAPITA for a given line, you must call MAPIQA to signal the end of the line. 
 
  For more information, see the man pages for the routines MAPIT and MAPITA.

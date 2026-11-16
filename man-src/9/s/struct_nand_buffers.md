@@ -17,17 +17,17 @@ description: "struct_nand_buffers – buffer structure for read/write"
 <h2>Members</h2>
 <p>ecccalc</p>
 <dl>
-<dd>buffer pointer for calculated ECC, size is oobsize.</dl>
+<dd>buffer pointer for calculated ECC, size is oobsize.</dd></dl>
 <p> ecccode</p>
 <dl>
-<dd>buffer pointer for ECC read from flash, size is oobsize.</dl>
+<dd>buffer pointer for ECC read from flash, size is oobsize.</dd></dl>
 <p> databuf</p>
 <dl>
-<dd>buffer pointer for data, size is (page size + oobsize).</dl>
+<dd>buffer pointer for data, size is (page size + oobsize).</dd></dl>
 <h2>Description</h2>
 <p>Do not change the order of buffers. databuf and oobrbuf must be in consecutive order.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

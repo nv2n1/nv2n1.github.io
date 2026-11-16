@@ -36,25 +36,25 @@ url: "/docs/linux/man/1-reporter-mailx/"
  <i>Subject</i>
 <dl>
 <dt>
-<dd> The subject of the email message.</dl>
+</dt><dd> The subject of the email message.</dd></dl>
  
 
  <i>EmailFrom</i>
 <dl>
 <dt>
-<dd> The sender of the email message.</dl>
+</dt><dd> The sender of the email message.</dd></dl>
  
 
  <i>EmailTo</i>
 <dl>
 <dt>
-<dd> The recipient of the email message.</dl>
+</dt><dd> The recipient of the email message.</dd></dl>
  
 
  <i>SendBinaryData</i>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to attach all binary files from the problem directory to the email. This can cause the emails to be very large.</dl>
+</dt><dd> Use yes/true/on/1 to attach all binary files from the problem directory to the email. This can cause the emails to be very large.</dd></dl>
 
 <h3>Formatting configuration files</h3>
 
@@ -69,34 +69,33 @@ url: "/docs/linux/man/1-reporter-mailx/"
  &quot;%summary
 <dl>
 <dt>
-<dd> subject format&quot;</dl>
+</dt><dd> subject format&quot;</dd></dl>
  
 
  &quot;section
 <dl>
 <dt>
-<dd> element1[,element2]...&quot; The literal text line to be added to email. Can be empty. (Empty lines are NOT ignored!) 
-
-<dl>
+</dt><dd> element1[,element2]...&quot; The literal text line to be added to email. Can be empty. (Empty lines are NOT ignored!) 
+</dd><dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 Subject format is a line of text, where % element % is replaced by text element's content, and [[...%element%...]] block is used only if % element % exists.[[...]] blocks can nest.
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 Sections can be:
 - %summary: email subject format string.
 - %attach: a list of elements to attach.
 - text, double colon (::) and the list of comma-separated elements.
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 Elements can be:
 - problem directory element names, which get formatted as
   &lt;element_name&gt;: &lt;contents&gt;
@@ -113,15 +112,15 @@ Elements can be:
   binary elements
 - problem directory element names prefixed by &quot;-&quot;,
   which excludes given element from all wildcards
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 Nonexistent elements are silently ignored.
 If none of elements exists, the section will not be created.
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h3>Integration with ABRT events</h3>
@@ -132,18 +131,18 @@ If none of elements exists, the section will not be created.
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=report_Mailx      reporter-mailx
-</pre></dl>
+</pre></dd></dl>
  
 
  It can also be used to notify administrator automatically when a problem happens. When this is desired, modify the event configuration file to run the tool on the <i>post-create</i> event: 
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=post-create       reporter-mailx
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -152,13 +151,13 @@ EVENT=post-create       reporter-mailx
  -d DIR
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
  
 
  -c CONFFILE
 <dl>
 <dt>
-<dd> Path to configuration file. When used in ABRT event system, the file contains site-wide configuration. Users can change the values via environment variables.</dl>
+</dt><dd> Path to configuration file. When used in ABRT event system, the file contains site-wide configuration. Users can change the values via environment variables.</dd></dl>
  
 
  -F CONF_FORMAT_FILE Formatting file for an email.
@@ -172,25 +171,25 @@ EVENT=post-create       reporter-mailx
  <i>Mailx_Subject</i>
 <dl>
 <dt>
-<dd> Subject of the email message.</dl>
+</dt><dd> Subject of the email message.</dd></dl>
  
 
  <i>Mailx_EmailFrom</i>
 <dl>
 <dt>
-<dd> Sender of the email message.</dl>
+</dt><dd> Sender of the email message.</dd></dl>
  
 
  <i>Mailx_EmailTo</i>
 <dl>
 <dt>
-<dd> Recipient of the email message. If nor the environment variable nor the corresponding option is defined, the message is send to &quot;root [at] localhost&quot;.</dl>
+</dt><dd> Recipient of the email message. If nor the environment variable nor the corresponding option is defined, the message is send to &quot;root [at] localhost&quot;.</dd></dl>
  
 
  <i>Mailx_SendBinaryData</i>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to attach all binary files from the problem directory to the email.</dl>
+</dt><dd> Use yes/true/on/1 to attach all binary files from the problem directory to the email.</dd></dl>
 
 <h2>FILES</h2>
 
@@ -199,13 +198,13 @@ EVENT=post-create       reporter-mailx
  /usr/share/libreport/conf.d/plugins/mailx.conf
 <dl>
 <dt>
-<dd> Readonly default configuration files.</dl>
+</dt><dd> Readonly default configuration files.</dd></dl>
  
 
  /etc/libreport/plugins/mailx.conf
 <dl>
 <dt>
-<dd> Configuration files.</dl>
+</dt><dd> Configuration files.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -219,7 +218,7 @@ EVENT=post-create       reporter-mailx
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

@@ -10,35 +10,30 @@ description: "xcb_dri3_pixmap_from_buffer –"
 <p>xcb_dri3_pixmap_from_buffer &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/dri3.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_dri3_pixmap_from_buffer(xcb_connection_t *conn, xcb_pixmap_t pixmap, xcb_drawable_t drawable, uint32_t size, uint16_t width, uint16_t height, uint16_t stride, uint8_t depth, uint8_t bpp, int32_t pixmap_fd);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>pixmap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>size</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>stride</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>depth</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bpp</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pixmap_fd</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>pixmap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>size</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>stride</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>depth</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bpp</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pixmap_fd</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

@@ -11,9 +11,9 @@ c_nngetr - Retrieves the value of an internal parameter of type float.
 <h2>Function Prototype</h2>void c_nngetr(char *, float *);
 <h2>Synopsis</h2>c_nngetr (pnam,fval)
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>A string that specifies the name of the parameter to get. The name must appear as the first three characters of the string.
-<dt>fval
-<dd>*fval will be the value currently assigned to the control parameter whose name is pointed to by pnam.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
+</dt><dd>A string that specifies the name of the parameter to get. The name must appear as the first three characters of the string.
+</dd><dt>fval
+</dt><dd>*fval will be the value currently assigned to the control parameter whose name is pointed to by pnam.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
 <h2>Access</h2>To use c_nngetr, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>natgrid, natgrid_params, c_natgrids, c_nnsetr. 
 

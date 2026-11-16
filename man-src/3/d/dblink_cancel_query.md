@@ -19,15 +19,15 @@ dblink_cancel_query(text connname) returns text
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use.</dl>
+</dt><dd> Name of the connection to use.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns OK if the cancel request has been sent, or the text of an error message on failure.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SELECT dblink_cancel_query('dtest1');
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

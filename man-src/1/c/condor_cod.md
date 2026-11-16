@@ -35,87 +35,73 @@ description: "condor_cod manage COD machines and jobs"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>scheddname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>scheddname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>scheddname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <code>-lease </code> <i>N</i></p>
 <dl>
 <dt>
-<dd> For the <code>request</code> of a new claim, automatically release the claim after <i>N</i> seconds.</p>
-<dt>
-<dd></dl>
+</dt><dd> For the <code>request</code> of a new claim, automatically release the claim after <i>N</i> seconds.</dd>
+</dl>
 <p> <code>request</code></p>
 <dl>
 <dt>
-<dd> Create a new COD claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Create a new COD claim</dd>
+</dl>
 <p> <code>release</code></p>
 <dl>
 <dt>
-<dd> Relinquish a claim and kill any running job</p>
-<dt>
-<dd></dl>
+</dt><dd> Relinquish a claim and kill any running job</dd>
+</dl>
 <p> <code>activate</code></p>
 <dl>
 <dt>
-<dd> Start a job on a given claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Start a job on a given claim</dd>
+</dl>
 <p> <code>deactivate</code></p>
 <dl>
 <dt>
-<dd> Kill the current job, but keep the claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Kill the current job, but keep the claim</dd>
+</dl>
 <p> <code>suspend</code></p>
 <dl>
 <dt>
-<dd> Suspend the job on a given claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend the job on a given claim</dd>
+</dl>
 <p> <code>renew</code></p>
 <dl>
 <dt>
-<dd> Renew the lease to the COD claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Renew the lease to the COD claim</dd>
+</dl>
 <p> <code>resume</code></p>
 <dl>
 <dt>
-<dd> Resume the job on a given claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Resume the job on a given claim</dd>
+</dl>
 <p> <code>delegate_proxy</code></p>
 <dl>
 <dt>
-<dd> Delegate an X509 proxy for the given claim</p>
-<dt>
-<dd></dl>
+</dt><dd> Delegate an X509 proxy for the given claim</dd>
+</dl>
 <h2>General Remarks</h2>
 <h2>Examples</h2>
 <h2>Exit Status</h2>

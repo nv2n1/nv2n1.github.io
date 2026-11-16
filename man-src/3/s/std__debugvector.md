@@ -31,269 +31,73 @@ description: "std::__debug::vector< _Tp, _Allocator > –"
 <p> typedef _Tp <code>value_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>vector (size_type __n, const _Tp &amp;__value, const _Allocator &amp;__a=_Allocator())
-
-
-
 template&lt;class _InputIterator , typename  = std::_RequireInputIter&lt;_InputIterator&gt;&gt; vector (_InputIterator __first, _InputIterator __last, const _Allocator &amp;__a=_Allocator())
-
-
-
 vector (const vector &amp;__x)
-
-
-
 vector (const _Base &amp;__x)
-
-
-
 vector (vector &amp;&amp;__x) noexcept
-
-
-
 vector (const vector &amp;__x, const allocator_type &amp;__a)
-
-
-
 vector (vector &amp;&amp;__x, const allocator_type &amp;__a)
-
-
-
 vector (initializer_list&lt; value_type &gt; __l, const allocator_type &amp;__a=allocator_type())
-
-
-
 _Base::swap (__x)
-
-
-
 void _M_attach (_Safe_iterator_base *__it, bool __constant)
-
-
-
 void _M_attach_single (_Safe_iterator_base *__it, bool __constant)  throw ()
-
-
-
 _Base &amp; _M_base () noexcept
-
-
-
 const _Base &amp; _M_base () const noexcept
-
-
-
 void _M_detach (_Safe_iterator_base *__it)
-
-
-
 void _M_detach_single (_Safe_iterator_base *__it)  throw ()
-
-
-
 _M_guaranteed_capacity (0)
-
-
-
 _M_guaranteed_capacity (__n)
-
-
-
 void _M_invalidate_all () const
-
-
-
 void _M_invalidate_if (_Predicate __pred)
-
-
-
 this _M_swap (__x)
-
-
-
 void _M_transfer_from_if (_Safe_sequence &amp;__from, _Predicate __pred)
-
-
-
 template&lt;typename _InputIterator , typename  = std::_RequireInputIter&lt;_InputIterator&gt;&gt; void assign (_InputIterator __first, _InputIterator __last)
-
-
-
 void assign (size_type __n, const _Tp &amp;__u)
-
-
-
 void assign (initializer_list&lt; value_type &gt; __l)
-
-
-
 reference back ()
-
-
-
 const_reference back () const
-
-
-
 iterator begin () noexcept
-
-
-
 const_iterator begin () const noexcept
-
-
-
 size_type capacity () const noexcept
-
-
-
 const_iterator cbegin () const noexcept
-
-
-
 const_iterator cend () const noexcept
-
-
-
 void clear () noexcept
-
-
-
 const_reverse_iterator crbegin () const noexcept
-
-
-
 const_reverse_iterator crend () const noexcept
-
-
-
 template&lt;typename... _Args&gt; iterator emplace (iterator __position, _Args &amp;&amp;...__args)
-
-
-
 template&lt;typename... _Args&gt; void emplace_back (_Args &amp;&amp;...__args)
-
-
-
 iterator end () noexcept
-
-
-
 const_iterator end () const noexcept
-
-
-
 iterator erase (iterator __position)
-
-
-
 iterator erase (iterator __first, iterator __last)
-
-
-
 reference front ()
-
-
-
 const_reference front () const
-
-
-
 iterator insert (iterator __position, const _Tp &amp;__x)
-
-
-
 template&lt;typename _Up  = _Tp&gt; __gnu_cxx::__enable_if
-
-
 &lt;!std::__are_same&lt; _Up, bool &gt;
-
 ::__value, iterator &gt;::__type insert (iterator __position, _Tp &amp;&amp;__x)&quot;
-
-
 void insert (iterator __position, initializer_list&lt; value_type &gt; __l)
-
-
-
 void insert (iterator __position, size_type __n, const _Tp &amp;__x)
-
-
-
 template&lt;class _InputIterator , typename  = std::_RequireInputIter&lt;_InputIterator&gt;&gt; void insert (iterator __position, _InputIterator __first, _InputIterator __last)
-
-
-
 vector &amp; operator= (const vector &amp;__x)
-
-
-
 vector &amp; operator= (vector &amp;&amp;__x) noexcept(_Alloc_traits::_S_nothrow_move())
-
-
-
 vector &amp; operator= (initializer_list&lt; value_type &gt; __l)
-
-
-
 reference operator[] (size_type __n)
-
-
-
 const_reference operator[] (size_type __n) const
-
-
-
 void pop_back ()
-
-
-
 void push_back (const _Tp &amp;__x)
-
-
-
 template&lt;typename _Up  = _Tp&gt; __gnu_cxx::__enable_if
-
-
 &lt;!std::__are_same&lt; _Up, bool &gt;
-
 ::__value, void &gt;::__type push_back (_Tp &amp;&amp;__x)&quot;
-
-
 reverse_iterator rbegin () noexcept
-
-
-
 const_reverse_iterator rbegin () const noexcept
-
-
-
 reverse_iterator rend () noexcept
-
-
-
 const_reverse_iterator rend () const noexcept
-
-
-
 void reserve (size_type __n)
-
-
-
 void resize (size_type __sz)
-
-
-
 void resize (size_type __sz, const _Tp &amp;__c)
-
-
-
 void shrink_to_fit ()
-
-
-
 std::swap (_M_guaranteed_capacity, __x._M_guaranteed_capacity)
-
-
-
 Public Attributes</code></pre>
 <p> <code>__a</code> </p>
 <p> <code>__pad0__</code>: <code>_Base</code>(__a) </p>
@@ -304,21 +108,9 @@ Public Attributes</code></pre>
 <p> <code>void</code></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void _M_detach_all ()
-
-
-
 void _M_detach_singular ()
-
-
-
 __gnu_cxx::__mutex &amp; _M_get_mutex ()  throw ()
-
-
-
 void _M_revalidate_singular ()
-
-
-
 void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Tp, typename _Allocator = std::allocator&lt;_Tp&gt;&gt;class std::__debug::vector&lt; _Tp, _Allocator &gt;</h3>
@@ -344,7 +136,7 @@ void _M_swap (_Safe_sequence_base &amp;__x)</code></pre>
 <p>Detach all singular iterators. </p>
 <p> <code>Postcondition:</code></p>
 <dl>
-<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dl>
+<dd>for all iterators i attached to this sequence, i-&gt;_M_version == _M_version.</dd></dl>
 <h3>__gnu_cxx::__mutex&amp; __gnu_debug::_Safe_sequence_base::_M_get_mutex () [protected], [inherited]</h3>
 <p>For use in _Safe_sequence. </p>
 <p> Referenced by __gnu_debug::_Safe_sequence&lt; _Sequence &gt;::_M_transfer_from_if().</p>

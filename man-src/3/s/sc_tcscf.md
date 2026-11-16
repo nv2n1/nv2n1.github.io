@@ -12,236 +12,69 @@ description: "sc::TCSCF –"
 <p> Inherits <code>sc::SCF</code>. Inherited by <code>sc::TCHF</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>TCSCF (StateIn &amp;)
-
-
-
 TCSCF (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 double occupation (int ir, int vectornum)
-
-
 Returns the occupation.
-
-
 double alpha_occupation (int irrep, int vectornum)
-
-
 Returns the alpha occupation.
-
-
 double beta_occupation (int irrep, int vectornum)
-
-
 Returns the beta occupation.
-
-
 int n_fock_matrices () const
-
-
-
 RefSymmSCMatrix fock (int)
-
-
-
 RefSymmSCMatrix effective_fock ()
-
-
-
 RefSymmSCMatrix density ()
-
-
 Returns the SO density.
-
-
 RefSymmSCMatrix alpha_density ()
-
-
 Return alpha electron densities in the SO basis.
-
-
 RefSymmSCMatrix beta_density ()
-
-
 Return beta electron densities in the SO basis.
-
-
 void symmetry_changed ()
-
-
 Call this if you have changed the molecular symmetry of the molecule contained by this MolecularEnergy.
-
-
 int spin_polarized ()
-
-
 Return 1 if the alpha density is not equal to the beta density.
-
-
-
 Protected Member Functions
 void set_occupations (const RefDiagSCMatrix &amp;evals)
-
-
-
 void init_vector ()
-
-
-
 void done_vector ()
-
-
-
 void reset_density ()
-
-
-
 double new_density ()
-
-
-
 double scf_energy ()
-
-
-
 Ref&lt; SCExtrapData &gt; extrap_data ()
-
-
-
 void init_gradient ()
-
-
-
 void done_gradient ()
-
-
-
 RefSymmSCMatrix lagrangian ()
-
-
-
 RefSymmSCMatrix gradient_density ()
-
-
-
 void init_hessian ()
-
-
-
 void done_hessian ()
-
-
-
 Protected Attributes
 int user_occupations_
-
-
-
 int tndocc_
-
-
-
 int nirrep_
-
-
-
 int * ndocc_
-
-
-
 int osa_
-
-
-
 int osb_
-
-
-
 double occa_
-
-
-
 double occb_
-
-
-
 double ci1_
-
-
-
 double ci2_
-
-
-
 ResultRefSymmSCMatrix focka_
-
-
-
 ResultRefSymmSCMatrix fockb_
-
-
-
 ResultRefSymmSCMatrix ka_
-
-
-
 ResultRefSymmSCMatrix kb_
-
-
-
 RefSymmSCMatrix cl_dens_
-
-
-
 RefSymmSCMatrix cl_dens_diff_
-
-
-
 RefSymmSCMatrix op_densa_
-
-
-
 RefSymmSCMatrix op_densa_diff_
-
-
-
 RefSymmSCMatrix op_densb_
-
-
-
 RefSymmSCMatrix op_densb_diff_
-
-
-
 RefSymmSCMatrix ao_gmata_
-
-
-
 RefSymmSCMatrix ao_gmatb_
-
-
-
 RefSymmSCMatrix ao_ka_
-
-
-
 RefSymmSCMatrix ao_kb_
-
-
-
 RefSymmSCMatrix cl_hcore_</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>double sc::TCSCF::alpha_occupation (int irrep, int vectornum) [virtual]</h3>

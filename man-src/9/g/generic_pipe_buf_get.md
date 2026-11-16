@@ -14,10 +14,10 @@ description: "generic_pipe_buf_get – get a reference to a struct pipe_buffer"
 <p><i>pipe</i></p>
 <dl>
 <dd>
-<dd>the pipe that the buffer belongs to</dl>
+</dd><dd>the pipe that the buffer belongs to</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>the buffer to get a reference to</dl>
+<dd>the buffer to get a reference to</dd></dl>
 <h2>Description</h2>
 <p>This function grabs an extra reference to <i>buf</i>. It&#8217;s used in in the <code>tee</code> system call, when we duplicate the buffers in one pipe into another.</p>
 <h2>Copyright</h2>

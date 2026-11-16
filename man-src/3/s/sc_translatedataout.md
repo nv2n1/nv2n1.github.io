@@ -11,9 +11,7 @@ description: "sc::TranslateDataOut –"
 <p> Convert data to other formats.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;translate.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>TranslateDataOut</code> (<code>StateOut</code> *s, <code>TranslateData</code> *t)<br />
  <i>Write to s using the translation defined by t. </i><br />

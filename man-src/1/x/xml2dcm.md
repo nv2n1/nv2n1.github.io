@@ -126,3 +126,4 @@ deflate compression level (only with --write-xfer-deflated):
         &lt;element tag=&quot;0028,3002&quot; vr=&quot;xs&quot; vm=&quot;3&quot; len=&quot;6&quot;
                  name=&quot;LUTDescriptor&quot;&gt;
           256
+</pre>

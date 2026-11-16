@@ -13,45 +13,35 @@ description: "zdir_patch – work with directory patches"
     ZDIR_PATCH_CREATE = 1,
     ZDIR_PATCH_DELETE = 2
 } zdir_patch_op_t;
-
 //  Create new patch
 CZMQ_EXPORT zdir_patch_t *
 zdir_patch_new(const char *path, zfile_t *file, zdir_patch_op_t op, const char *alias);
-
 //  Destroy a patch
 CZMQ_EXPORT void
 zdir_patch_destroy(zdir_patch_t **self_p);
-
 //  Create copy of a patch. If the patch is null, or memory was exhausted,
 //  returns null.
 //  The caller is responsible for destroying the return value when finished with it.
 CZMQ_EXPORT zdir_patch_t *
 zdir_patch_dup(zdir_patch_t *self);
-
 //  Return patch file directory path
 CZMQ_EXPORT const char *
 zdir_patch_path(zdir_patch_t *self);
-
 //  Return patch file item
 CZMQ_EXPORT zfile_t *
 zdir_patch_file(zdir_patch_t *self);
-
 //  Return operation
 CZMQ_EXPORT zdir_patch_op_t
 zdir_patch_op(zdir_patch_t *self);
-
 //  Return patch virtual file path
 CZMQ_EXPORT const char *
 zdir_patch_vpath(zdir_patch_t *self);
-
 //  Calculate hash digest for file (create only)
 CZMQ_EXPORT void
 zdir_patch_digest_set(zdir_patch_t *self);
-
 //  Return hash digest for patch file
 CZMQ_EXPORT const char *
 zdir_patch_digest(zdir_patch_t *self);
-
 //  Self test of this class.
 CZMQ_EXPORT void
 zdir_patch_test(bool verbose);</code></pre>
@@ -65,7 +55,6 @@ assert (file);
 zdir_patch_t *patch = zdir_patch_new (&quot;.&quot;, file, patch_create, &quot;/&quot;);
 assert (patch);
 zfile_destroy (&amp;file);
-
 file = zdir_patch_file (patch);
 assert (file);
 assert (streq (zfile_filename (file, &quot;.&quot;), &quot;bilbo&quot;));
@@ -81,7 +70,8 @@ zdir_patch_destroy (&amp;patch);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

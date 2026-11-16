@@ -11,14 +11,14 @@ description: "XkbKeyHasActions – Determines if the key corresponding to keycod
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbKeyHasActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description of interest</p>
-<dt><i>&#8211; keycode</i></p>
-<dd>keycode of interest</dl>
+</dd><dd>Xkb description of interest</dd>
+<dt><i>&#8211; keycode</i></dt>
+<dd>keycode of interest</dd></dl>
 <h2>Description</h2>
 <p>A key action defines the effect key presses and releases have on the internal state of the server. For example, the expected key action associated with pressing the Shift key is to set the Shift modifier. There is zero or one key action associated with each keysym bound to each key. </p>
 <p> Just as the entire list of key symbols for the keyboard mapping is held in the <i>syms </i> field of the client map, the entire list of key actions for the keyboard mapping is held in the <i>acts </i> array of the server map. The total size of <i>acts </i> is specified by <i>size_acts, </i> and the number of entries is specified by <i>num_acts. </i> </p>
@@ -28,15 +28,14 @@ description: "XkbKeyHasActions – Determines if the key corresponding to keycod
 <p> <i>XkbKeyHasActions </i> returns True if the key corresponding to <i>keycode </i> has any actions associated with it; otherwise, it returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbKeyHasActions </i> function will return True if the key corresponding to <i>keycode </i> has any actions associated with it.</p>
-<dt>False</p>
-<dd>The <i>XkbKeyHasActions </i> function will return False if the key corresponding to <i>keycode </i> does not have any actions associated with it.</dl>
+<dt>True</dt>
+<dd>The <i>XkbKeyHasActions </i> function will return True if the key corresponding to <i>keycode </i> has any actions associated with it.</dd>
+<dt>False</dt>
+<dd>The <i>XkbKeyHasActions </i> function will return False if the key corresponding to <i>keycode </i> does not have any actions associated with it.</dd></dl>
 <h2>Structures</h2>
 <p>The KeySymMapRec structure is defined as follows: </p>
 <pre> #define XkbNumKbdGroups 4
  #define XkbMaxKbdGroup (XkbNumKbdGroups-1)
- 
  typedef struct { /* map to keysyms for a single keycode */
  unsigned char kt_index[XkbNumKbdGroups]; /* key type index for each group */
  unsigned char group_info; /* # of groups and out of range group handling */

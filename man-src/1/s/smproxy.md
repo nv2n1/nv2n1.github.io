@@ -13,12 +13,12 @@ description: "smproxy – Session Manager Proxy"
 <p> <code>smproxy</code> [-clientId id] [-restore saveFile] [-version]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-clientId </code><i>id</i></p>
-<dd> Specifies the session ID used by <i>smproxy</i> in the previous session.</p>
-<dt><code>-restore </code><i>saveFile</i></p>
-<dd> Specifies the file used by <i>smproxy</i> to save state in the previous session.</p>
-<dt><code>-version</code></p>
-<dd> Prints the program version and exits.</dl>
+<dt><code>-clientId </code><i>id</i></dt>
+<dd> Specifies the session ID used by <i>smproxy</i> in the previous session.</dd>
+<dt><code>-restore </code><i>saveFile</i></dt>
+<dd> Specifies the file used by <i>smproxy</i> to save state in the previous session.</dd>
+<dt><code>-version</code></dt>
+<dd> Prints the program version and exits.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>smproxy</i> allows X applications that do not support X11R6 session management to participate in an X11R6 session. </p>
 <p> In order for <i>smproxy</i> to act as a proxy for an X application, one of the following must be true: </p>

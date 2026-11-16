@@ -33,20 +33,20 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_DEBUGFUNCTION,
 <p> The <i>userptr</i> argument is the pointer set with <i><a href="/docs/linux/man/3-curlopt_debugdata/">CURLOPT_DEBUGDATA</a>(3)</i>. </p>
 <p> Available curl_infotype values:</p>
 <dl COMPACT>
-<dt>CURLINFO_TEXT</p>
-<dd>The data is informational text.</p>
-<dt>CURLINFO_HEADER_IN</p>
-<dd>The data is header (or header-like) data received from the peer.</p>
-<dt>CURLINFO_HEADER_OUT</p>
-<dd>The data is header (or header-like) data sent to the peer.</p>
-<dt>CURLINFO_DATA_IN</p>
-<dd>The data is protocol data received from the peer.</p>
-<dt>CURLINFO_DATA_OUT</p>
-<dd>The data is protocol data sent to the peer.</p>
-<dt>CURLINFO_SSL_DATA_OUT</p>
-<dd>The data is SSL/TLS (binary) data sent to the peer.</p>
-<dt>CURLINFO_SSL_DATA_IN</p>
-<dd>The data is SSL/TLS (binary) data received from the peer.</dl>
+<dt>CURLINFO_TEXT</dt>
+<dd>The data is informational text.</dd>
+<dt>CURLINFO_HEADER_IN</dt>
+<dd>The data is header (or header-like) data received from the peer.</dd>
+<dt>CURLINFO_HEADER_OUT</dt>
+<dd>The data is header (or header-like) data sent to the peer.</dd>
+<dt>CURLINFO_DATA_IN</dt>
+<dd>The data is protocol data received from the peer.</dd>
+<dt>CURLINFO_DATA_OUT</dt>
+<dd>The data is protocol data sent to the peer.</dd>
+<dt>CURLINFO_SSL_DATA_OUT</dt>
+<dd>The data is SSL/TLS (binary) data sent to the peer.</dd>
+<dt>CURLINFO_SSL_DATA_IN</dt>
+<dd>The data is SSL/TLS (binary) data received from the peer.</dd></dl>
 <h2>Default</h2>
 <p>NULL</p>
 <h2>Protocols</h2>

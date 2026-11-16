@@ -14,20 +14,20 @@ description: "lwres_getrrsetbyname, lwres_freerrset – retrieve DNS records"
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
-<dt> <code>int lwres_getrrsetbyname(const char&nbsp;<wbr>*</code><i>hostname</i><code>, unsigned int&nbsp;<wbr></code><i>rdclass</i><code>, unsigned int&nbsp;<wbr></code><i>rdtype</i><code>, unsigned int&nbsp;<wbr></code><i>flags</i><code>, struct rrsetinfo&nbsp;<wbr>**</code><i>res</i><code>);</code></p>
-<dt> <code>void lwres_freerrset(struct rrsetinfo&nbsp;<wbr>*</code><i>rrset</i><code>);</code></dl>
-<dd>The following structures are used: </p>
+<dt> <code>int lwres_getrrsetbyname(const char&nbsp;<wbr>*</code><i>hostname</i><code>, unsigned int&nbsp;<wbr></code><i>rdclass</i><code>, unsigned int&nbsp;<wbr></code><i>rdtype</i><code>, unsigned int&nbsp;<wbr></code><i>flags</i><code>, struct rrsetinfo&nbsp;<wbr>**</code><i>res</i><code>);</code></dt>
+<dt> <code>void lwres_freerrset(struct rrsetinfo&nbsp;<wbr>*</code><i>rrset</i><code>);</code></dt></dl>
+<dd>The following structures are used: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 struct rdatainfo {<br />
     unsigned int rdi_length; /* length of data */<br />
     unsigned char *rdi_data; /* record data */<br />
 };
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct rrsetinfo {
     unsigned int rri_flags;       /* RRSET_VALIDATED... */
@@ -41,7 +41,7 @@ struct rrsetinfo {
     struct rdatainfo *rri_sigs;   /* individual signatures */
 };
 </code></pre>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lwres_getrrsetbyname()</code> gets a set of resource records associated with a <i>hostname</i>, <i>class</i>, and <i>type</i>. <i>hostname</i> is a pointer a to null-terminated string. The <i>flags</i> field is currently unused and must be zero. </p>
 <p> After a successful call to <code>lwres_getrrsetbyname()</code>, <i>*res</i> is a pointer to an <code>rrsetinfo</code> structure, containing a list of one or more <code>rdatainfo</code> structures containing resource records and potentially another list of <code>rdatainfo</code> structures containing SIG resource records associated with those records. The members <code>rri_rdclass</code> and <code>rri_rdtype</code> are copied from the parameters. <code>rri_ttl</code> and <code>rri_name</code> are properties of the obtained rrset. The resource records contained in <code>rri_rdatas</code> and <code>rri_sigs</code> are in uncompressed DNS wire format. Properties of the rdataset are represented in the <code>rri_flags</code> bitfield. If the RRSET_VALIDATED bit is set, the data has been DNSSEC validated and the signatures verified. </p>
@@ -51,26 +51,25 @@ struct rrsetinfo {
 <p> <code>ERRSET_NONAME</code></p>
 <dl>
 <dt>
-<dd> the name does not exist</dl>
+</dt><dd> the name does not exist</dd></dl>
 <p> <code>ERRSET_NODATA</code></p>
 <dl>
 <dt>
-<dd> the name exists, but does not have data of the desired type</dl>
+</dt><dd> the name exists, but does not have data of the desired type</dd></dl>
 <p> <code>ERRSET_NOMEMORY</code></p>
 <dl>
 <dt>
-<dd> memory could not be allocated</dl>
+</dt><dd> memory could not be allocated</dd></dl>
 <p> <code>ERRSET_INVAL</code></p>
 <dl>
 <dt>
-<dd> a parameter is invalid</dl>
+</dt><dd> a parameter is invalid</dd></dl>
 <p> <code>ERRSET_FAIL</code></p>
 <dl>
 <dt>
-<dd> other failure</dl>
+</dt><dd> other failure</dd></dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres/">lwres</a></code>(3).</p>
 <h2>COPYRIGHT</h2>

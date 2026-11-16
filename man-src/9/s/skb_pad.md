@@ -15,11 +15,11 @@ skb_pad - zero pad the tail of an skb
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to pad</dl>
+<dl><dd></dd><dd>buffer to pad</dd></dl>
  
 
  <i>pad</i>
-<dl><dd>space to pad</dl>
+<dl><dd>space to pad</dd></dl>
 
 <h2>Description</h2>
 

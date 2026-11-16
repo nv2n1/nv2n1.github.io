@@ -15,19 +15,19 @@ phy_connect - connect an ethernet device to a PHY device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the network device to connect</dl>
+<dl><dd></dd><dd>the network device to connect</dd></dl>
  
 
  <i>bus_id</i>
-<dl><dd>the id string of the PHY device to connect</dl>
+<dl><dd>the id string of the PHY device to connect</dd></dl>
  
 
  <i>handler</i>
-<dl><dd>callback function for state change notifications</dl>
+<dl><dd>callback function for state change notifications</dd></dl>
  
 
  <i>interface</i>
-<dl><dd>PHY device's interface</dl>
+<dl><dd>PHY device's interface</dd></dl>
 
 <h2>Description</h2>
 

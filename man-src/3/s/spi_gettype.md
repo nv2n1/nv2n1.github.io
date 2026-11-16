@@ -15,9 +15,9 @@ description: "SPI_gettype – return the data type name of the specified column"
 <h2>Arguments</h2>
 <p>TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>input row description</dl>
+<dd>input row description</dd></dl>
 <p> int <i>colnumber</i></p>
 <dl COMPACT>
-<dd>column number (count starts at 1)</dl>
+<dd>column number (count starts at 1)</dd></dl>
 <h2>Return Value</h2>
 <p>The data type name of the specified column, or NULL on error. <i>SPI_result</i> is set to SPI_ERROR_NOATTRIBUTE on error.</p>

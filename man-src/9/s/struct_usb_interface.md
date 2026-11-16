@@ -32,58 +32,58 @@ description: "struct_usb_interface – what usb device drivers talk to"
 <h2>Members</h2>
 <p>altsetting</p>
 <dl>
-<dd>array of interface structures, one for each alternate setting that may be selected. Each one includes a set of endpoint configurations. They will be in no particular order.</dl>
+<dd>array of interface structures, one for each alternate setting that may be selected. Each one includes a set of endpoint configurations. They will be in no particular order.</dd></dl>
 <p> cur_altsetting</p>
 <dl>
-<dd>the current altsetting.</dl>
+<dd>the current altsetting.</dd></dl>
 <p> num_altsetting</p>
 <dl>
-<dd>number of altsettings defined.</dl>
+<dd>number of altsettings defined.</dd></dl>
 <p> intf_assoc</p>
 <dl>
-<dd>interface association descriptor</dl>
+<dd>interface association descriptor</dd></dl>
 <p> minor</p>
 <dl>
-<dd>the minor number assigned to this interface, if this interface is bound to a driver that uses the USB major number. If this interface does not use the USB major, this field should be unused. The driver should set this value in the <code>probe</code> function of the driver, after it has been assigned a minor number from the USB core by calling <code>usb_register_dev</code>.</dl>
+<dd>the minor number assigned to this interface, if this interface is bound to a driver that uses the USB major number. If this interface does not use the USB major, this field should be unused. The driver should set this value in the <code>probe</code> function of the driver, after it has been assigned a minor number from the USB core by calling <code>usb_register_dev</code>.</dd></dl>
 <p> condition</p>
 <dl>
-<dd>binding state of the interface: not bound, binding (in <code>probe</code>), bound to a driver, or unbinding (in <code>disconnect</code>)</dl>
+<dd>binding state of the interface: not bound, binding (in <code>probe</code>), bound to a driver, or unbinding (in <code>disconnect</code>)</dd></dl>
 <p> sysfs_files_created</p>
 <dl>
-<dd>sysfs attributes exist</dl>
+<dd>sysfs attributes exist</dd></dl>
 <p> ep_devs_created</p>
 <dl>
-<dd>endpoint child pseudo-devices exist</dl>
+<dd>endpoint child pseudo-devices exist</dd></dl>
 <p> unregistering</p>
 <dl>
-<dd>flag set when the interface is being unregistered</dl>
+<dd>flag set when the interface is being unregistered</dd></dl>
 <p> needs_remote_wakeup</p>
 <dl>
-<dd>flag set when the driver requires remote-wakeup capability during autosuspend.</dl>
+<dd>flag set when the driver requires remote-wakeup capability during autosuspend.</dd></dl>
 <p> needs_altsetting0</p>
 <dl>
-<dd>flag set when a set-interface request for altsetting 0 has been deferred.</dl>
+<dd>flag set when a set-interface request for altsetting 0 has been deferred.</dd></dl>
 <p> needs_binding</p>
 <dl>
-<dd>flag set when the driver should be re-probed or unbound following a reset or suspend operation it doesn&#8217;t support.</dl>
+<dd>flag set when the driver should be re-probed or unbound following a reset or suspend operation it doesn&#8217;t support.</dd></dl>
 <p> resetting_device</p>
 <dl>
-<dd>USB core reset the device, so use alt setting 0 as current; needs bandwidth alloc after reset.</dl>
+<dd>USB core reset the device, so use alt setting 0 as current; needs bandwidth alloc after reset.</dd></dl>
 <p> authorized</p>
 <dl>
-<dd>This allows to (de)authorize individual interfaces instead a whole device in contrast to the device authorization.</dl>
+<dd>This allows to (de)authorize individual interfaces instead a whole device in contrast to the device authorization.</dd></dl>
 <p> dev</p>
 <dl>
-<dd>driver model&#8217;s view of this device</dl>
+<dd>driver model&#8217;s view of this device</dd></dl>
 <p> usb_dev</p>
 <dl>
-<dd>if an interface is bound to the USB major, this will point to the sysfs representation for that device.</dl>
+<dd>if an interface is bound to the USB major, this will point to the sysfs representation for that device.</dd></dl>
 <p> pm_usage_cnt</p>
 <dl>
-<dd>PM usage counter for this interface</dl>
+<dd>PM usage counter for this interface</dd></dl>
 <p> reset_ws</p>
 <dl>
-<dd>Used for scheduling resets from atomic context.</dl>
+<dd>Used for scheduling resets from atomic context.</dd></dl>
 <h2>Description</h2>
 <p>USB device drivers attach to interfaces on a physical device. Each interface encapsulates a single high level function, such as feeding an audio stream to a speaker or reporting a change in a volume control. Many USB devices only have one interface. The protocol used to talk to an interface&#8217;s endpoints can be defined in a usb &#8220;class&#8221; specification, or by a product&#8217;s vendor. The (default) control endpoint is part of every interface, but is never listed among the interface&#8217;s descriptors. </p>
 <p> The driver that is bound to the interface can use standard driver model calls such as <code>dev_get_drvdata</code> on the dev member of this structure. </p>

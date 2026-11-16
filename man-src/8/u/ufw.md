@@ -12,50 +12,50 @@ description: "ufw – program for managing a netfilter firewall"
 <p>This program is for managing a Linux firewall and aims to provide an easy to use interface for the user. </p>
 <h2>Usage</h2>
 <dl>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>enable|disable|reload</code></p>
+<dt>ufw [<code>&#8211;dry-run</code>] <code>enable|disable|reload</code></dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>default</code> allow|deny|reject [incoming|outgoing|routed]</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>default</code> allow|deny|reject [incoming|outgoing|routed]</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>logging</code> on|off|LEVEL</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>logging</code> on|off|LEVEL</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>reset</code></p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>reset</code></dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>status</code> [verbose|numbered]</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>status</code> [verbose|numbered]</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>show</code> REPORT</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>show</code> REPORT</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code>] [<code>log|log-all</code>] [ PORT[/PROTOCOL] | APPNAME ] [<code>comment</code> COMMENT]</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code>] [<code>log|log-all</code>] [ PORT[/PROTOCOL] | APPNAME ] [<code>comment</code> COMMENT]</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] [<code>rule</code>] [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code> [<code>on</code> INTERFACE]] [<code>log|log-all</code>] [<code>proto</code> PROTOCOL] [<code>from</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME ]] [<code>to</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME ]] [<code>comment</code> COMMENT]</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] [<code>rule</code>] [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code> [<code>on</code> INTERFACE]] [<code>log|log-all</code>] [<code>proto</code> PROTOCOL] [<code>from</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME ]] [<code>to</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME ]] [<code>comment</code> COMMENT]</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>route</code> [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code> <code>on</code> INTERFACE] [<code>log|log-all</code>] [<code>proto</code> PROTOCOL] [<code>from</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME]] [<code>to</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME]] [<code>comment</code> COMMENT]</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>route</code> [<code>delete</code>] [<code>insert</code> NUM] [<code>prepend</code>] <code>allow|deny|reject|limit</code> [<code>in|out</code> <code>on</code> INTERFACE] [<code>log|log-all</code>] [<code>proto</code> PROTOCOL] [<code>from</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME]] [<code>to</code> ADDRESS [<code>port</code> PORT | <code>app</code> APPNAME]] [<code>comment</code> COMMENT]</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] [<code>&#8211;force</code>] <code>delete</code> NUM</p>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] [<code>&#8211;force</code>] <code>delete</code> NUM</dt>
 <dd>
-<dt>ufw [<code>&#8211;dry-run</code>] <code>app</code> <code>list|info|default|update</code></p>
-<dd></dl>
+</dd><dt>ufw [<code>&#8211;dry-run</code>] <code>app</code> <code>list|info|default|update</code></dt>
+<dd></dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd>show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>show help message and exit</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd>don&#8217;t modify anything, just show the changes</p>
-<dt><code>enable</code></p>
-<dd>reloads firewall and enables firewall on boot.</p>
-<dt><code>disable</code></p>
-<dd>unloads firewall and disables firewall on boot</p>
-<dt><code>reload</code></p>
-<dd>reloads firewall</p>
-<dt><code>default</code> allow|deny|reject DIRECTION</p>
-<dd>change the default policy for traffic going DIRECTION, where DIRECTION is one of <code>incoming</code>, <code>outgoing</code> or <code>routed</code>. Note that existing rules will have to be migrated manually when changing the default policy. See <code>RULE SYNTAX</code> for more on <code>deny</code> and <code>reject</code>.</p>
-<dt><code>logging</code> on|off|LEVEL</p>
-<dd>toggle logging. Logged packets use the LOG_KERN syslog facility. Systems configured for rsyslog support may also log to /var/log/ufw.log. Specifying a LEVEL turns logging on for the specified LEVEL. The default log level is &#8216;low&#8217;. See <code>LOGGING</code> for details.</p>
-<dt><code>reset</code></p>
-<dd>Disables and resets firewall to installation defaults. Can also give the <code>&#8211;force</code> option to perform the reset without confirmation.</p>
-<dt><code>status</code></p>
-<dd>show status of firewall and ufw managed rules. Use <code>status verbose</code> for extra information. In the status output, &#8216;Anywhere&#8217; is synonymous with &#8216;any&#8217;, 0.0.0.0/0 (IPv4) and ::/0 (IPv6). Note that when using <code>status</code>, there is a subtle difference when reporting interfaces. For example, if the following rules are added: </p>
+<dt><code>&#8211;version</code></dt>
+<dd>show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>show help message and exit</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd>don&#8217;t modify anything, just show the changes</dd>
+<dt><code>enable</code></dt>
+<dd>reloads firewall and enables firewall on boot.</dd>
+<dt><code>disable</code></dt>
+<dd>unloads firewall and disables firewall on boot</dd>
+<dt><code>reload</code></dt>
+<dd>reloads firewall</dd>
+<dt><code>default</code> allow|deny|reject DIRECTION</dt>
+<dd>change the default policy for traffic going DIRECTION, where DIRECTION is one of <code>incoming</code>, <code>outgoing</code> or <code>routed</code>. Note that existing rules will have to be migrated manually when changing the default policy. See <code>RULE SYNTAX</code> for more on <code>deny</code> and <code>reject</code>.</dd>
+<dt><code>logging</code> on|off|LEVEL</dt>
+<dd>toggle logging. Logged packets use the LOG_KERN syslog facility. Systems configured for rsyslog support may also log to /var/log/ufw.log. Specifying a LEVEL turns logging on for the specified LEVEL. The default log level is &#8216;low&#8217;. See <code>LOGGING</code> for details.</dd>
+<dt><code>reset</code></dt>
+<dd>Disables and resets firewall to installation defaults. Can also give the <code>&#8211;force</code> option to perform the reset without confirmation.</dd>
+<dt><code>status</code></dt>
+<dd>show status of firewall and ufw managed rules. Use <code>status verbose</code> for extra information. In the status output, &#8216;Anywhere&#8217; is synonymous with &#8216;any&#8217;, 0.0.0.0/0 (IPv4) and ::/0 (IPv6). Note that when using <code>status</code>, there is a subtle difference when reporting interfaces. For example, if the following rules are added: </dd>
 <p>&nbsp;<wbr>&nbsp;ufw allow in on eth0 from 192.168.0.0/16<br />
 &nbsp;<wbr>&nbsp;ufw allow out on eth1 to 10.0.0.0/8<br />
 &nbsp;<wbr>&nbsp;ufw route allow in on eth0 out on eth1 to 10.0.0.0/8 from 192.168.0.0/16<br />
@@ -68,22 +68,22 @@ description: "ufw – program for managing a netfilter firewall"
 &nbsp;<wbr>&nbsp;10.0.0.0/8 on eth1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ALLOW FWD&nbsp;<wbr>&nbsp;<wbr>&nbsp;192.168.0.0/16 on eth0<br />
 &nbsp;<wbr>&nbsp;Anywhere&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;LIMIT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Anywhere&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;SSH port </p>
 <p> For the input and output rules, the interface is reported relative to the firewall system as an endpoint, whereas with route rules, the interface is reported relative to the direction packets flow through the firewall. </p>
-<dt><code>show</code> REPORT</p>
-<dd>display information about the running firewall. See <code>REPORTS</code></p>
-<dt><code>allow</code> ARGS</p>
-<dd>add allow rule. See <code>RULE SYNTAX</code></p>
-<dt><code>deny</code> ARGS</p>
-<dd>add deny rule. See <code>RULE SYNTAX</code></p>
-<dt><code>reject</code> ARGS</p>
-<dd>add reject rule. See <code>RULE SYNTAX</code></p>
-<dt><code>limit</code> ARGS</p>
-<dd>add limit rule. See <code>RULE SYNTAX</code></p>
-<dt><code>delete</code> RULE|NUM</p>
-<dd>deletes the corresponding RULE</p>
-<dt><code>insert</code> NUM RULE</p>
-<dd>insert the corresponding RULE as rule number NUM</p>
-<dt><code>prepend</code> RULE</p>
-<dd>prepend the corresponding RULE to the top of the ruleset </p>
+<dt><code>show</code> REPORT</dt>
+<dd>display information about the running firewall. See <code>REPORTS</code></dd>
+<dt><code>allow</code> ARGS</dt>
+<dd>add allow rule. See <code>RULE SYNTAX</code></dd>
+<dt><code>deny</code> ARGS</dt>
+<dd>add deny rule. See <code>RULE SYNTAX</code></dd>
+<dt><code>reject</code> ARGS</dt>
+<dd>add reject rule. See <code>RULE SYNTAX</code></dd>
+<dt><code>limit</code> ARGS</dt>
+<dd>add limit rule. See <code>RULE SYNTAX</code></dd>
+<dt><code>delete</code> RULE|NUM</dt>
+<dd>deletes the corresponding RULE</dd>
+<dt><code>insert</code> NUM RULE</dt>
+<dd>insert the corresponding RULE as rule number NUM</dd>
+<dt><code>prepend</code> RULE</dt>
+<dd>prepend the corresponding RULE to the top of the ruleset </dd>
 </dl>
 <h2>Rule Syntax</h2>
 <p>Users can specify rules using either a simple syntax or a full syntax. The simple syntax only specifies the port and optionally the protocol to be allowed or denied on the host. </p>
@@ -203,16 +203,16 @@ description: "ufw – program for managing a netfilter firewall"
 <p>&nbsp;<wbr>&nbsp;ufw logging LEVEL </p>
 <p> LEVEL may be &#8216;off&#8217;, &#8216;low&#8217;, &#8216;medium&#8217;, &#8216;high&#8217; and &#8216;full&#8217;. Log levels are defined as:</p>
 <dl>
-<dt><code>off</code></p>
-<dd>disables ufw managed logging</p>
-<dt><code>low</code></p>
-<dd>logs all blocked packets not matching the defined policy (with rate limiting), as well as packets matching logged rules</p>
-<dt><code>medium</code></p>
-<dd>log level low, plus all allowed packets not matching the defined policy, all INVALID packets, and all new connections. All logging is done with rate limiting.</p>
-<dt><code>high</code></p>
-<dd>log level medium (without rate limiting), plus all packets with rate limiting</p>
-<dt><code>full</code></p>
-<dd>log level high without rate limiting </p>
+<dt><code>off</code></dt>
+<dd>disables ufw managed logging</dd>
+<dt><code>low</code></dt>
+<dd>logs all blocked packets not matching the defined policy (with rate limiting), as well as packets matching logged rules</dd>
+<dt><code>medium</code></dt>
+<dd>log level low, plus all allowed packets not matching the defined policy, all INVALID packets, and all new connections. All logging is done with rate limiting.</dd>
+<dt><code>high</code></dt>
+<dd>log level medium (without rate limiting), plus all packets with rate limiting</dd>
+<dt><code>full</code></dt>
+<dd>log level high without rate limiting </dd>
 </dl>
 <p> Loglevels above medium generate a lot of logging output, and may quickly fill up your disk. Loglevel medium may generate a lot of logging output on a busy system. </p>
 <p> Specifying &#8216;on&#8217; simply enables logging at log level &#8216;low&#8217; if logging is currently not enabled.</p>
@@ -232,23 +232,23 @@ description: "ufw – program for managing a netfilter firewall"
 <h2>Notes</h2>
 <p>On installation, <code>ufw</code> is disabled with a default incoming policy of deny, a default forward policy of deny, and a default outgoing policy of allow, with stateful tracking for NEW connections for incoming and forwarded connections. In addition to the above, a default ruleset is put in place that does the following:</p>
 <dl>
-<dt>&#8211; DROP packets with RH0 headers</p>
+<dt>&#8211; DROP packets with RH0 headers</dt>
 <dd>
-<dt>&#8211; DROP INVALID packets</p>
+</dd><dt>&#8211; DROP INVALID packets</dt>
 <dd>
-<dt>&#8211; ACCEPT certain icmp packets (INPUT and FORWARD): destination-unreachable, source-quench, time-exceeded, parameter-problem, and echo-request for IPv4. destination-unreachable, packet-too-big, time-exceeded, parameter-problem, and echo-request for IPv6.</p>
+</dd><dt>&#8211; ACCEPT certain icmp packets (INPUT and FORWARD): destination-unreachable, source-quench, time-exceeded, parameter-problem, and echo-request for IPv4. destination-unreachable, packet-too-big, time-exceeded, parameter-problem, and echo-request for IPv6.</dt>
 <dd>
-<dt>&#8211; ACCEPT icmpv6 packets for stateless autoconfiguration (INPUT)</p>
+</dd><dt>&#8211; ACCEPT icmpv6 packets for stateless autoconfiguration (INPUT)</dt>
 <dd>
-<dt>&#8211; ACCEPT ping replies from IPv6 link-local (ffe8::/10) addresses (INPUT)</p>
+</dd><dt>&#8211; ACCEPT ping replies from IPv6 link-local (ffe8::/10) addresses (INPUT)</dt>
 <dd>
-<dt>&#8211; ACCEPT DHCP client traffic (INPUT)</p>
+</dd><dt>&#8211; ACCEPT DHCP client traffic (INPUT)</dt>
 <dd>
-<dt>&#8211; DROP non-local traffic (INPUT)</p>
+</dd><dt>&#8211; DROP non-local traffic (INPUT)</dt>
 <dd>
-<dt>&#8211; ACCEPT mDNS (zeroconf/bonjour/avahi 224.0.0.251 for IPv4 and ff02::fb for IPv6) for service discovery (INPUT)</p>
+</dd><dt>&#8211; ACCEPT mDNS (zeroconf/bonjour/avahi 224.0.0.251 for IPv4 and ff02::fb for IPv6) for service discovery (INPUT)</dt>
 <dd>
-<dt>&#8211; ACCEPT UPnP (239.255.255.250 for IPv4 and ff02::f for IPv6) for service discovery (INPUT)</p>
+</dd><dt>&#8211; ACCEPT UPnP (239.255.255.250 for IPv4 and ff02::f for IPv6) for service discovery (INPUT)</dt>
 <dd> Rule ordering is important and the first match wins. Therefore when adding rules, add the more specific rules first with more general rules later. <code>ufw</code> is not intended to provide complete firewall functionality via its command interface, but instead provides an easy way to add or remove simple rules. The status command shows basic information about the state of the firewall, as well as rules managed via the <code>ufw</code> command. It does not show rules from the rules files in /etc/ufw. To see the complete state of the firewall, users can <code>ufw show raw</code>. This displays the filter, nat, mangle and raw tables using:<br />
 &nbsp;<wbr>&nbsp;iptables -n -L -v -x -t&nbsp;&lt;table&gt;<br />
 &nbsp;<wbr>&nbsp;ip6tables -n -L -v -x -t&nbsp;&lt;table&gt; See the <code>iptables</code> and <code>ip6tables</code> documentation for more details. If the default policy is set to REJECT, <code>ufw</code> may interfere with rules added outside of the ufw framework. See README for details. IPV6 is allowed by default. To change this behavior to only accept IPv6 traffic on the loopback interface, set IPV6 to &#8216;no&#8217; in /etc/default/ufw and reload <code>ufw</code>. When IPv6 is enabled, you may specify rules in the same way as for IPv4 rules, and they will be displayed with <code>ufw status</code>. Rules that match both IPv4 and IPv6 addresses apply to both IP versions. For example, when IPv6 is enabled, the following rule will allow access to port 22 for both IPv4 and IPv6 traffic:<br />
@@ -258,8 +258,9 @@ description: "ufw – program for managing a netfilter firewall"
 &nbsp;<wbr>&nbsp;ufw allow to 10.0.0.1 proto esp<br />
 &nbsp;<wbr>&nbsp;ufw allow to 10.0.0.1 from 10.4.0.0/16 proto esp<br />
 &nbsp;<wbr>&nbsp;ufw allow to 10.0.0.1 proto ah<br />
-&nbsp;<wbr>&nbsp;ufw allow to 10.0.0.1 from 10.4.0.0/16 proto ah In addition to the command-line interface, <code>ufw</code> also provides a framework which allows administrators to modify default behavior as well as take full advantage of netfilter. See the <code>ufw-framework</code> manual page for more information. </p>
+&nbsp;<wbr>&nbsp;ufw allow to 10.0.0.1 from 10.4.0.0/16 proto ah In addition to the command-line interface, <code>ufw</code> also provides a framework which allows administrators to modify default behavior as well as take full advantage of netfilter. See the <code>ufw-framework</code> manual page for more information. </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ufw-framework/">ufw-framework</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a></code>(8), <code><a href="/docs/linux/man/8-iptables-restore/">iptables-restore</a></code>(8), <code><a href="/docs/linux/man/8-ip6tables-restore/">ip6tables-restore</a></code>(8), <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8), <code><a href="/docs/linux/man/5-sysctl-conf/">sysctl.conf</a></code>(5) </p>
 <h2>Author</h2>
 <p>ufw is Copyright 2008-2021, Canonical Ltd.</p>
+</dl>

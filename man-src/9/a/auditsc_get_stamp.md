@@ -15,15 +15,15 @@ auditsc_get_stamp - get local copies of audit_context values
 <h2>Arguments</h2>
 
 <i>ctx</i>
-<dl><dd><dd>audit_context for the task</dl>
+<dl><dd></dd><dd>audit_context for the task</dd></dl>
  
 
  <i>t</i>
-<dl><dd>timespec to store time recorded in the audit_context</dl>
+<dl><dd>timespec to store time recorded in the audit_context</dd></dl>
  
 
  <i>serial</i>
-<dl><dd>serial value that is recorded in the audit_context</dl>
+<dl><dd>serial value that is recorded in the audit_context</dd></dl>
 
 <h2>Description</h2>
 

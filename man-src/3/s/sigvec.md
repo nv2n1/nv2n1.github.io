@@ -34,12 +34,12 @@ description: "sigvec, sigblock, sigsetmask, siggetmask, sigmask – BSD signal A
 <p> If <i>sv_handler</i> specifies the address of a signal handler, then <i>sv_mask</i> specifies a mask of signals that are to be blocked while the handler is executing. In addition, the signal for which the handler is invoked is also blocked. Attempts to block <code>SIGKILL</code> or <code>SIGSTOP</code> are silently ignored. </p>
 <p> If <i>sv_handler</i> specifies the address of a signal handler, then the <i>sv_flags</i> field specifies flags controlling what happens when the handler is called. This field may contain zero or more of the following flags:</p>
 <dl COMPACT>
-<dt><code>SV_INTERRUPT</code></p>
-<dd> If the signal handler interrupts a blocking system call, then upon return from the handler the system call s not be restarted: instead it fails with the error <code>EINTR</code>. If this flag is not specified, then system calls are restarted by default.</p>
-<dt><code>SV_RESETHAND</code></p>
-<dd> Reset the disposition of the signal to the default before calling the signal handler. If this flag is not specified, then the handler remains established until explicitly removed by a later call to <code>sigvec</code>() or until the process performs an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt><code>SV_ONSTACK</code></p>
-<dd> Handle the signal on the alternate signal stack (historically established under BSD using the obsolete <code>sigstack</code>() function; the POSIX replacement is <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dl>
+<dt><code>SV_INTERRUPT</code></dt>
+<dd> If the signal handler interrupts a blocking system call, then upon return from the handler the system call s not be restarted: instead it fails with the error <code>EINTR</code>. If this flag is not specified, then system calls are restarted by default.</dd>
+<dt><code>SV_RESETHAND</code></dt>
+<dd> Reset the disposition of the signal to the default before calling the signal handler. If this flag is not specified, then the handler remains established until explicitly removed by a later call to <code>sigvec</code>() or until the process performs an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt><code>SV_ONSTACK</code></dt>
+<dd> Handle the signal on the alternate signal stack (historically established under BSD using the obsolete <code>sigstack</code>() function; the POSIX replacement is <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dd></dl>
 <p> The <code>sigmask</code>() macro constructs and returns a &quot;signal mask&quot; for <i>signum</i>. For example, we can initialize the <i>vec.sv_mask</i> field given to <code>sigvec</code>() using code such as the following: </p>
 <p> vec.sv_mask = sigmask(SIGQUIT) | sigmask(SIGABRT);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Block SIGQUIT and SIGABRT during<br />

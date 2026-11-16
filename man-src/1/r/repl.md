@@ -11,8 +11,8 @@ description: "repl – reply to a message"
 <p> repl &#8211; reply to a message </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>repl</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-group</code> | <code>-nogroup</code>] [<code>-cc</code></p>
-<dd>all/to/cc/me] [<code>-nocc</code> all/to/cc/me] [<code>-query</code> | <code>-noquery</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> | <code>-noformat</code>] [<code>-filter</code> <i>filterfile</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-fcc</code> <i>+folder</i>] [<code>-width</code> <i>columns</i>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-fmtproc</code> <i>program</i>] [<code>-nofmtproc</code>] [<code>-build</code>] [<code>-file</code> <i>msgfile</i>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>repl</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-group</code> | <code>-nogroup</code>] [<code>-cc</code></dt>
+<dd>all/to/cc/me] [<code>-nocc</code> all/to/cc/me] [<code>-query</code> | <code>-noquery</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> | <code>-noformat</code>] [<code>-filter</code> <i>filterfile</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-fcc</code> <i>+folder</i>] [<code>-width</code> <i>columns</i>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-fmtproc</code> <i>program</i>] [<code>-nofmtproc</code>] [<code>-build</code>] [<code>-file</code> <i>msgfile</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Repl</code> may be used to produce a reply to an existing message. </p>
 <p> In its simplest form (with no arguments), <code>repl</code> will set up a message-form skeleton in reply to the current message in the current folder, and invoke the whatnow shell. </p>
@@ -21,31 +21,30 @@ description: "repl – reply to a message"
 <p> The default reply template &#8220;replcomps&#8221; will direct <code>repl</code> to construct the reply message draft as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 To : &lt;Mail - Reply - To&gt; or &lt;Reply - To&gt; or &lt;From&gt; cc : &lt;To&gt; and&lt;cc&gt; and&lt;personal address&gt; Fcc:
 {
     fcc switch
 }
 or +outbox Subject : Re : &lt;Subject&gt; In - Reply - To : &lt;Message - Id&gt; References : &lt;Message - Id&gt; Comments : In - Reply - To&lt;From&gt; or &lt;apparently from&gt; or &lt;Sender&gt;
-
                                                                                                                                                               &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 message dated&lt;date&gt; -- -- -- --
 </code></pre>
-</dl>
+</dd></dl>
 <p> where field names enclosed in angle brackets (&lt;&nbsp;<wbr>&gt;) indicate the contents of the named field from the message to which the reply is being made. </p>
 <p> By default, the &#8220;cc:&#8221; field is empty. You may selectively add addresses to this default with the <code>-cc</code> <i>type</i> switch. This switch takes an argument (<i>all</i>/<i>to</i>/<i>cc</i>/<i>me</i>) which specifies who gets added to the default &#8220;cc:&#8221; list of the reply. You may give this switch multiple times (with different arguments) if you wish to add multiple types of addresses. </p>
 <p> If the switch <code>-group</code> is given, then <code>repl</code> will use the standard forms file &#8220;replgroupcomps&#8221;. This will construct a draft message that is intended as a group or followup reply. If a file named &#8220;replgroupcomps&#8221; exists in the user&#8217;s nmh directory, it will be used instead of this default forms file, unless you specify another forms file on the command line or in your profile. </p>
 <p> The default group reply template &#8220;replgroupcomps&#8221; will direct <code>repl</code> to construct the reply message draft as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 To : &lt;Mail &#8211; Followup &#8211; To&gt;<br />
          Subject : Re : &lt;Subject&gt;<br />
                             In &#8211;<br />
-                        Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</p>
+                        Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</dd>
 <p>                                         &amp;nbsp;<br />
 &amp;nbsp;<br />
 &amp;nbsp;<br />
@@ -64,8 +63,8 @@ To : &lt;Mail &#8211; Followup &#8211; To&gt;<br />
 <p> or if the field &lt;Mail-Followup-To&gt; is not available: </p>
 <dl>
 <dt>
-<dd>
-To : &lt;Mail &#8211; Reply &#8211; To&gt; or &lt;Reply &#8211; To&gt; or &lt;From&gt; cc : &lt;To&gt; and&lt;cc&gt; and&lt;personal address&gt; Subject : Re : &lt;Subject&gt; In &#8211; Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</p>
+</dt><dd>
+To : &lt;Mail &#8211; Reply &#8211; To&gt; or &lt;Reply &#8211; To&gt; or &lt;From&gt; cc : &lt;To&gt; and&lt;cc&gt; and&lt;personal address&gt; Subject : Re : &lt;Subject&gt; In &#8211; Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</dd>
 <p>                                                                                                                                          &amp;nbsp;<br />
 &amp;nbsp;<br />
 &amp;nbsp;<br />
@@ -93,64 +92,64 @@ To : &lt;Mail &#8211; Reply &#8211; To&gt; or &lt;Reply &#8211; To&gt; or &lt;Fr
 <p> If the switch <code>-format</code> is given, then a default message filter file is used. This default message filter should be adequate for most users. This default filter &#8220;<i>mhl.reply</i>&#8221; is: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 ;<br />
 mhl.reply;<br />
 ; default message filter for `repl&#8217; (repl -format)<br />
 ;<br />
 from : nocomponent, formatfield = &#8220;%(decode(friendly{text})) writes:&#8221; body : component = &#8220;&gt; &#8220;, overflowtext = &#8220;&gt; &#8220;, overflowoffset = 0
-</dl>
+</dd></dl>
 <p> which outputs each line of the body of the message prefaced with the &#8220;&gt;&#8221; character and a space. </p>
 <p> If a file named &#8220;<i>mhl.reply</i>&#8221; exists in the user&#8217;s <code>nmh</code> directory, it will be used instead of this form. You may specify an alternate message filter file with the switch <code>-filter</code> <i>filterfile</i>. </p>
 <p> Other reply filters are commonly used, such as: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 :
 body:nocomponent,compwidth=9,offset=9
 </pre>
-</dl>
+</dd></dl>
 <p> which says to output a blank line and then the body of the message being replied-to, indented by one tab-stop. Another popular format is: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 message - id : nocomponent, nonewline,
     formatfield =``In message % {text}, &amp;nbsp;
 '' from : nocomponent, formatfield =``% (decode(friendly{text}))writes :'' body : component =``&gt;'', overflowtext =``&gt;'', overflowoffset = 0
 </code></pre>
-</dl>
+</dd></dl>
 <p> This message filter file cites the Message-ID and author of the message being replied-to, and then outputs each line of the body prefaced with the &#8220;&gt;&#8221; character. </p>
 <p> You can also use an external format program to format the message body. The format program is specified by the <i>formatproc</i> profile entry, and is enabled by the &#8220;format&#8221; flag. A message filter using an external format program would look like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 body:component=``&gt;'',nowrap,format
 </pre>
-</dl>
+</dd></dl>
 <p> See the <i><a href="/docs/linux/man/1-mhl/">mhl</a>(1)</i> documentation for more information. The format program can be changed by the <code>-fmtproc</code> <i>program</i> and <code>-nofmtproc</code> switches. </p>
 <p> To use the MIME rules for encapsulation, specify the <code>-mime</code> switch. This directs <code>repl</code> to generate an <code>mhbuild</code> composition file. Note that <code>nmh</code> will not invoke <code>mhbuild</code> automatically; you must specifically give the command </p>
 <dl>
 <dt>
-<dd> What now? mime</dl>
+</dt><dd> What now? mime</dd></dl>
 <p> prior to sending the draft. </p>
 <p> If the <code>-annotate</code> switch is given, the message being replied-to will be annotated with the lines </p>
 <dl>
 <dt>
-<dd> Replied: date Replied: addrs</dl>
+</dt><dd> Replied: date Replied: addrs</dd></dl>
 <p> where the address list contains one line for each addressee. The annotation will be done only if the message is sent directly from <code>repl</code>. If the message is not sent immediately from <code>repl</code>, &#8220;<code>comp -use</code>&#8221; may be used to re-edit and send the constructed message, but the annotations won&#8217;t take place. Normally annotations are done inplace in order to preserve any links to the message. You may use the <code>-noinplace</code> switch to change this. </p>
 <p> Although the default template specifies that a copy of the reply will be put in the folder &#8216;outbox&#8217;, if the <code>-fcc</code> <i>+folder</i> switch is given it will override the default value. More than one folder, each preceded by <code>-fcc</code> can be named. </p>
 <p> In addition to the standard <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) escapes, <code>repl</code> also recognizes the following additional <i>component</i> escape: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <i>Escape Returns  Description</i>
 fcc     string   Any folders specified with `-fcc folder'
 </pre>
-</dl>
+</dd></dl>
 <p> To avoid reiteration, <code>repl</code> strips any leading `Re: &#8216; strings from the <i>subject</i> component. </p>
 <p> The <code>-draftfolder</code> <i>+folder</i> and <code>-draftmessage</code> <i>msg</i> switches invoke the <code>nmh</code> draft folder facility. This is an advanced (and highly useful) feature. Consult the <i><a href="/docs/linux/man/5-mh-draft/">mh-draft</a></i>(5) man page for more information. </p>
 <p> Upon exiting from the editor, <code>repl</code> will invoke the <code>whatnow</code> program. See <i><a href="/docs/linux/man/1-whatnow/">whatnow</a></i>(1) for a discussion of available options. The invocation of this program can be inhibited by using the <code>-nowhatnowproc</code> switch. (In truth of fact, it is the <code>whatnow</code> program which starts the initial edit. Hence, <code>-nowhatnowproc</code> will prevent any edit from occurring.) </p>

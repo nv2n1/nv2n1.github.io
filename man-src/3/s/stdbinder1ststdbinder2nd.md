@@ -14,17 +14,12 @@ class binder1st : public std::unary_function&lt;typename Fn::second_argument_typ
 typename Fn::result_type&gt; {<br />
 protected: </p>
 <pre><code>Fn op;
-
 typename Fn::first_argument_type value;
-
 public:
 (deprecated in C++ 11)(1)(removed in C++ 17)
-
     binder1st(const Fn &amp;fn,
-
               const typename Fn::first_argument_type &amp;value);
 typename Fn::result_type
-
 operator()(const typename Fn::second_argument_type &amp;x) const;</code></pre>
 <p>typename Fn::result_type<br />
 operator()(typename Fn::second_argument_type&amp; x) const;<br />
@@ -50,17 +45,11 @@ The value of the parameter is passed to the object at the construction time and 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;vector&gt;
-
 const double pi = std::acos(-1);
-
 int main()
-
 {
     // deprecated in C++11, removed in C++17
     std::binder1st&lt;std::multiplies&lt;double&gt;&gt; f1 = std::bind1st(

@@ -12,7 +12,6 @@ description: "sctp_send – Send a message from a SCTP socket."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_send(int sd, const void *msg, size_t len,
               const struct sctp_sndrcvinfo *sinfo,
               uint32_t flags);</code></pre>

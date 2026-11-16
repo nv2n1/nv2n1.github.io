@@ -20,11 +20,11 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_response/"
 
 <dl>
 <dt>gnutls_ocsp_resp_t resp
-<dd> should contain a <b>gnutls_ocsp_resp_t</b> structure
-<dt>gnutls_datum_t * response_type_oid
-<dd> newly allocated output buffer with response type OID
-<dt>gnutls_datum_t * response
-<dd> newly allocated output buffer with DER encoded response</dl>
+</dt><dd> should contain a <b>gnutls_ocsp_resp_t</b> structure
+</dd><dt>gnutls_datum_t * response_type_oid
+</dt><dd> newly allocated output buffer with response type OID
+</dd><dt>gnutls_datum_t * response
+</dt><dd> newly allocated output buffer with DER encoded response</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -53,7 +53,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_response/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

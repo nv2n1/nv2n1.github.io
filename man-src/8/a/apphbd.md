@@ -14,18 +14,18 @@ description: "apphbd – Application Heartbeat Monitor for High-Availability Lin
 <p><code>apphbd</code> is a basic application heartbeat monitor daemon for Linux-HA. A group of Application Heartbeat APIs are defined for this heartbeat monitoring service. Applications may register with the daemon in order to be monitored. If an application fails to send a heartbeat within the specified interval, the daemon will log an event. apphbd may use watchdog timer to monitor itself. apphbd extends its functionality by using plugins. Currently a plugin <code>recmgr</code> is implemented to notify Recovery Manager daemon if some events (specified in apphb_notify.h) happen (e.g. an application fails to heartbeat). The Recovery Manager daemon <code>recoverymgrd</code> receives notification from recmgr plugin, then it tries to execute recovery scripts as configured. See recoverymgrd default configure file recoverymgrd.conf for detail. recoverymgrd registers itself with apphbd as a client application. apphbd should be started first with plugin recmgr loaded. Then configure and start recoverymgrd. For details relating to the Application Heartbeat API, see <code>apphb.h</code> . </p>
 <h2>Options</h2>
 <dl>
-<dt>-s</p>
-<dd>Show the status of apphbd, running or stopped.</p>
-<dt>-k</p>
-<dd>Stop (kill) the daemon</p>
-<dt>-r</p>
-<dd>Restart the daemon. apphbd will reload configure file when restarted.</p>
-<dt>-d</p>
-<dd>Set debug level</p>
-<dt>-h</p>
-<dd>Show help message</p>
-<dt>-c configure file</p>
-<dd>Configure file for apphbd. Default configure file is <code>./apphbd.cf</code>. User can configure debug setting, log file, watchdog setting, plugins and real time setting. For details, see sample configure file apphbd.cf.</dl>
+<dt>-s</dt>
+<dd>Show the status of apphbd, running or stopped.</dd>
+<dt>-k</dt>
+<dd>Stop (kill) the daemon</dd>
+<dt>-r</dt>
+<dd>Restart the daemon. apphbd will reload configure file when restarted.</dd>
+<dt>-d</dt>
+<dd>Set debug level</dd>
+<dt>-h</dt>
+<dd>Show help message</dd>
+<dt>-c configure file</dt>
+<dd>Configure file for apphbd. Default configure file is <code>./apphbd.cf</code>. User can configure debug setting, log file, watchdog setting, plugins and real time setting. For details, see sample configure file apphbd.cf.</dd></dl>
 <h2>Files</h2>
 <p><i>/var/run/apphbd.pid </i> Default PID file. </p>
 <p> <i>apphbd.cf </i> Default configure file for apphbd. apphbd searches the file in its working directory. This sample configure file is installed together with other Heartbeat documents. </p>

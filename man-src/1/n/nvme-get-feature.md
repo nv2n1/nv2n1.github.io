@@ -40,45 +40,44 @@ nvme get - feature&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Retrieve the feature for the given nsid. This is optional and most features do not use this value.</dl>
+</dt><dd> Retrieve the feature for the given nsid. This is optional and most features do not use this value.</dd></dl>
  
 
  -f &lt;fid&gt;, --feature-id=&lt;fid&gt;
 <dl>
 <dt>
-<dd> The feature id to send with the command. Value provided should be in hex.</dl>
+</dt><dd> The feature id to send with the command. Value provided should be in hex.</dd></dl>
  
 
  -s &lt;select&gt;, --sel=&lt;select&gt;
 <dl>
 <dt>
-<dd> Select (SEL): This field specifies which value of the attributes to return in the provided data: <table BORDER> <tr VALIGN=top><td> Select </td><td> Description 
+</dt><dd> Select (SEL): This field specifies which value of the attributes to return in the provided data: <table BORDER> <tr VALIGN=top><td> Select </td><td> Description 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> Current 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> Default 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> Saved 
 </td></tr> <tr VALIGN=top><td> 3 </td><td> Supported capabilities 
 </td></tr> <tr VALIGN=top><td> 4-7 </td><td> Reserved 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -l &lt;data-len&gt;, --data-len=&lt;data-len&gt;
 <dl>
 <dt>
-<dd> The data length for the buffer returned for this feature. Most known features do not use this value. The exception is LBA Range Type</dl>
+</dt><dd> The data length for the buffer returned for this feature. Most known features do not use this value. The exception is LBA Range Type</dd></dl>
  
 
  --cdw11=&lt;cdw11&gt;
 <dl>
 <dt>
-<dd> The value for command dword 11, if applicable. Only known feature using this is the interrupt vector configuration feature.</dl>
+</dt><dd> The value for command dword 11, if applicable. Only known feature using this is the interrupt vector configuration feature.</dd></dl>
  
 
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw feature buffer to stdout if the feature returns a structure.</dl>
+</dt><dd> Print the raw feature buffer to stdout if the feature returns a structure.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -86,49 +85,45 @@ nvme get - feature&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt
 
 <dl>
 <dt>
-<dd> &bull; Retrieves the feature for Number of Queues, or feature id 7: 
-
-<dl>
+</dt><dd> &bull; Retrieves the feature for Number of Queues, or feature id 7: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme get-feature /dev/nvme0 -f 7
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; The following retrieves the feature for the LBA Range Type, which implicitly requires a buffer and will be printed to the screen in human readable format: 
-
-<dl>
+</dt><dd> &bull; The following retrieves the feature for the LBA Range Type, which implicitly requires a buffer and will be printed to the screen in human readable format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme get-feature /dev/nvme0 -f 3
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; Retrieves the feature for the some vendor specific feature and specifically requesting a buffer be allocate for this feature, which will be displayed to the user in as a hex dump: 
-
-<dl>
+</dt><dd> &bull; Retrieves the feature for the some vendor specific feature and specifically requesting a buffer be allocate for this feature, which will be displayed to the user in as a hex dump: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme get-feature /dev/nvme0 -f 0xc0 -l 512
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; The following retrieves the feature for the LBA Range Type, which implicitly requires a buffer and will be saved to a file in its raw format: 
-
-<dl>
+</dt><dd> &bull; The following retrieves the feature for the LBA Range Type, which implicitly requires a buffer and will be saved to a file in its raw format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme get-feature /dev/nvme0 -f 3 --raw-binary &gt; lba_range.raw
-</pre></dl>
+</pre></dd></dl>
  
 
  It is probably a bad idea to not redirect stdout when using this mode.</dl>

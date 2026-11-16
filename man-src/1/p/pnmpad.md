@@ -24,57 +24,57 @@ description: "pnmpad – add borders to portable anymap"
 <p> <code>-verbose</code></p>
 <dl>
 <dt>
-<dd> Verbose output.</dl>
+</dt><dd> Verbose output.</dd></dl>
 <p> <code>-white</code><br />
  <code>-black</code> (default)</p>
 <dl>
 <dt>
-<dd> Set pad color.</dl>
+</dt><dd> Set pad color.</dd></dl>
 <p> <code>-left </code><i>leftpad</i><br />
  <code>-right </code><i>rightpad</i><br />
  <code>-top </code><i>toppad</i><br />
  <code>-bottom </code><i>bottompad</i></p>
 <dl>
 <dt>
-<dd> Specify amount of padding in pixels.</dl>
+</dt><dd> Specify amount of padding in pixels.</dd></dl>
 <p> <code>-width </code><i>width</i></p>
 <dl>
 <dt>
-<dd> Set desired width of image. Overrides <code>-left</code> and <code>-right</code> if specified. If <i>width</i> is less than the actual image width, it is ignored. Use <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1) to cut off parts of images.</dl>
+</dt><dd> Set desired width of image. Overrides <code>-left</code> and <code>-right</code> if specified. If <i>width</i> is less than the actual image width, it is ignored. Use <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1) to cut off parts of images.</dd></dl>
 <p> <code>-height </code><i>height</i></p>
 <dl>
 <dt>
-<dd> Set desired height of image. Overrides <code>-top</code> and <code>-bottom</code> if specified. If <i>height</i> is less than the actual image height, it is ignored. Use <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1) to cut off parts of images.</dl>
+</dt><dd> Set desired height of image. Overrides <code>-top</code> and <code>-bottom</code> if specified. If <i>height</i> is less than the actual image height, it is ignored. Use <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1) to cut off parts of images.</dd></dl>
 <p> <code>-halign </code><i>ratio</i></p>
 <dl>
 <dt>
-<dd> A real number between 0 and 1. Used in conjunction with <code>-width</code>, sets the alignment ratio between left padding and right padding. </p>
+</dt><dd> A real number between 0 and 1. Used in conjunction with <code>-width</code>, sets the alignment ratio between left padding and right padding. </dd>
 <p> Useful values:</p>
 <dl>
-<dt><code>0.0</code></p>
-<dd> &#8211; left aligned;</p>
-<dt><code>0.5</code></p>
-<dd> &#8211; center aligned (default);</p>
-<dt><code>1.0</code></p>
-<dd> &#8211; right aligned.</dl>
+<dt><code>0.0</code></dt>
+<dd> &#8211; left aligned;</dd>
+<dt><code>0.5</code></dt>
+<dd> &#8211; center aligned (default);</dd>
+<dt><code>1.0</code></dt>
+<dd> &#8211; right aligned.</dd></dl>
 </dl>
 <p> <code>-valign </code><i>ratio</i></p>
 <dl>
 <dt>
-<dd> A real number between 0 and 1. Used in conjunction with <code>-height</code>, sets the alignment ratio between bottom padding and top padding. </p>
+</dt><dd> A real number between 0 and 1. Used in conjunction with <code>-height</code>, sets the alignment ratio between bottom padding and top padding. </dd>
 <p> Useful values:</p>
 <dl>
-<dt><code>0.0</code></p>
-<dd> &#8211; bottom aligned;</p>
-<dt><code>0.5</code></p>
-<dd> &#8211; center aligned (default);</p>
-<dt><code>1.0</code></p>
-<dd> &#8211; top aligned.</dl>
+<dt><code>0.0</code></dt>
+<dd> &#8211; bottom aligned;</dd>
+<dt><code>0.5</code></dt>
+<dd> &#8211; center aligned (default);</dd>
+<dt><code>1.0</code></dt>
+<dd> &#8211; top aligned.</dd></dl>
 </dl>
 <h2>HISTORY</h2>
 <dl>
-<dt>Before February 2002,</p>
-<dd> <code>pnmpad</code> had a different option syntax which was less expressive and not like conventional Netpbm programs. That syntax is still understood by <code>pnmpad</code> for backward compatibility, but not documented or supported for future use. </p>
+<dt>Before February 2002,</dt>
+<dd> <code>pnmpad</code> had a different option syntax which was less expressive and not like conventional Netpbm programs. That syntax is still understood by <code>pnmpad</code> for backward compatibility, but not documented or supported for future use. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmmake/">pbmmake</a></code>(1), <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1), <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1), <code><a href="/docs/linux/man/1-pnmcrop/">pnmcrop</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>

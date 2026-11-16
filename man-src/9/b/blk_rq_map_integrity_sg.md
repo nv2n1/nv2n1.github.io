@@ -14,13 +14,13 @@ description: "blk_rq_map_integrity_sg – Map integrity metadata into a scatterl
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>request queue</dl>
+</dd><dd>request queue</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>bio with integrity metadata attached</dl>
+<dd>bio with integrity metadata attached</dd></dl>
 <p> <i>sglist</i></p>
 <dl>
-<dd>target scatterlist</dl>
+<dd>target scatterlist</dd></dl>
 <h2>Description</h2>
 <p>Map the integrity vectors in request into a scatterlist. The scatterlist must be big enough to hold all elements. I.e. sized using <code>blk_rq_count_integrity_sg</code>.</p>
 <h2>Copyright</h2>

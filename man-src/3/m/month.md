@@ -87,7 +87,7 @@ description: "QuantLib::Date – Concrete date class."
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> self-consistency of dates, serial numbers, days of month, months, and weekdays is checked over the whole date range.</dl>
+</dt><dd> self-consistency of dates, serial numbers, days of month, months, and weekdays is checked over the whole date range.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>DiscreteHedging.cpp</code>, <code>EquityOption.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>FRA.cpp</code>, <code>Replication.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -110,7 +110,7 @@ description: "QuantLib::Date – Concrete date class."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Friends And Related Function Documentation</a></p>
+<dt><a href="#lbAK">Friends And Related Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAS">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAS">Author</a></dt>
+<dd></dd></dl>

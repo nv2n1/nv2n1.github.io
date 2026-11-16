@@ -97,14 +97,14 @@ description: "spamc_selinux – Security Enhanced Linux Policy for the spamc pro
 <p> <code>spamc_exec_t</code> </p>
 <p> &#8211; Set files with the spamc_exec_t type, if you want to transition an executable to the spamc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/razor.*, /usr/bin/spamc, /usr/bin/pyzor, /usr/bin/sa-learn, /usr/bin/spamassassin </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/razor.*, /usr/bin/spamc, /usr/bin/pyzor, /usr/bin/sa-learn, /usr/bin/spamassassin </dd>
 </dl>
 <p> <code>spamc_home_t</code> </p>
 <p> &#8211; Set files with the spamc_home_t type, if you want to store spamc files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.pyzor(/.*)?, /root/.razor(/.*)?, /root/.spamd(/.*)?, /root/.spamassassin(/.*)?, /home/[^/]+/.pyzor(/.*)?, /home/[^/]+/.razor(/.*)?, /home/[^/]+/.spamd(/.*)?, /home/[^/]+/.spamassassin(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/root/.pyzor(/.*)?, /root/.razor(/.*)?, /root/.spamd(/.*)?, /root/.spamassassin(/.*)?, /home/[^/]+/.pyzor(/.*)?, /home/[^/]+/.razor(/.*)?, /home/[^/]+/.spamd(/.*)?, /home/[^/]+/.spamassassin(/.*)? </dd>
 </dl>
 <p> <code>spamc_tmp_t</code> </p>
 <p> &#8211; Set files with the spamc_tmp_t type, if you want to store spamc temporary files in the /tmp directories. </p>

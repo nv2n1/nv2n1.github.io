@@ -15,7 +15,7 @@ phy_stop - Bring down the PHY link, and stop checking the status
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>target phy_device struct</dl>
+<dl><dd></dd><dd>target phy_device struct</dd></dl>
 
 <h2>Copyright</h2>
 

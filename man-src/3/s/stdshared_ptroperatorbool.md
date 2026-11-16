@@ -28,10 +28,8 @@ An empty shared_ptr (where use_count() == 0) may store a non-null pointer access
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 void report(std::shared_ptr&lt;int&gt; ptr)
-
 {
     if (ptr) {
         std::cout &lt;&lt; &quot;*ptr=&quot; &lt;&lt; *ptr &lt;&lt; &quot;\n&quot;;
@@ -40,7 +38,6 @@ void report(std::shared_ptr&lt;int&gt; ptr)
     }
 }
 int main()
-
 {
     std::shared_ptr&lt;int&gt; ptr;
     report(ptr);

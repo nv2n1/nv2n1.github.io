@@ -15,26 +15,26 @@ description: "chrpath – change the rpath or runpath in binaries"
 <p> <code>chrpath</code> changes, lists or removes the rpath or runpath setting in a binary. The rpath, or runpath if it is present, is where the runtime linker should look for the libraries needed for a program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code></p>
-<dd> Display program version number</p>
-<dt><code>-d</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;delete</code></p>
-<dd> Delete current rpath or runpath setting</p>
-<dt><code>-c</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;convert</code></p>
-<dd> Convert the rpath setting into a runpath setting</p>
-<dt><code>-r&nbsp;<wbr></code><i>&lt;path&gt;</i>&nbsp;<wbr>| &#8211;replace&nbsp;<wbr><i>&lt;path&gt;</i></p>
-<dd> Replace current rpath or runpath setting with the path given</p>
-<dt><code>-k</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;keepgoing</code></p>
-<dd> Do not fail on first error, but process all arguments before returning the error.</p>
-<dt><code>-l</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;list</code></p>
-<dd> List the current rpath or runpath (default)</p>
-<dt><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code></p>
-<dd> Show usage information.</dl>
+<dt><code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code></dt>
+<dd> Display program version number</dd>
+<dt><code>-d</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;delete</code></dt>
+<dd> Delete current rpath or runpath setting</dd>
+<dt><code>-c</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;convert</code></dt>
+<dd> Convert the rpath setting into a runpath setting</dd>
+<dt><code>-r&nbsp;<wbr></code><i>&lt;path&gt;</i>&nbsp;<wbr>| &#8211;replace&nbsp;<wbr><i>&lt;path&gt;</i></dt>
+<dd> Replace current rpath or runpath setting with the path given</dd>
+<dt><code>-k</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;keepgoing</code></dt>
+<dd> Do not fail on first error, but process all arguments before returning the error.</dd>
+<dt><code>-l</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;list</code></dt>
+<dd> List the current rpath or runpath (default)</dd>
+<dt><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code></dt>
+<dd> Show usage information.</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> If all operations were successful</p>
-<dt><code>&gt;</code>0</p>
-<dd> if one of the operations failed. A failing operation terminates the program unless -k is specified. </p>
+<dt><code>0</code></dt>
+<dd> If all operations were successful</dd>
+<dt><code>&gt;</code>0</dt>
+<dd> if one of the operations failed. A failing operation terminates the program unless -k is specified. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> The chrpath program was written by Petter Reinholdtsen &lt;pere [at] hungry.com&gt;, based on works by Geoffrey Keating &lt;geoffk [at] ozemail.com.au&gt; and Peeter Joot &lt;peeterj [at] ca.ibm.com&gt;. </p>

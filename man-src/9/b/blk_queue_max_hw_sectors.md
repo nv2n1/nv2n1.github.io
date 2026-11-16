@@ -15,11 +15,11 @@ blk_queue_max_hw_sectors - set max sectors for a request for this queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>max_hw_sectors</i>
-<dl><dd>max hardware sectors in the usual 512b unit</dl>
+<dl><dd>max hardware sectors in the usual 512b unit</dd></dl>
 
 <h2>Description</h2>
 

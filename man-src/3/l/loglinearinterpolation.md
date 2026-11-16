@@ -19,6 +19,6 @@ description: "QuantLib::LogLinearInterpolation – log-linear interpolation betw
 <h3><code>LogLinearInterpolation</code> (const I1 &amp; xBegin, const I1 &amp; xEnd, const I2 &amp; yBegin)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the $ x $ values must be sorted.</dl>
+<dd>the $ x $ values must be sorted.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -15,7 +15,7 @@ pci_prepare_to_sleep - prepare PCI device for system-wide transition into a slee
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Device to handle.</dl>
+<dl><dd></dd><dd>Device to handle.</dd></dl>
 
 <h2>Description</h2>
 

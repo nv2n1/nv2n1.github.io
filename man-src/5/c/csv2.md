@@ -16,7 +16,7 @@ description: "csv2 – Description of the csv2 zone file that MaraDNS uses"
 <p> <code>Resource record format</code> </p>
 <p> This zone file format has records in the following form: </p>
 <dl>
-<dd>name [+ttl] [rtype] rdata ~</dl>
+<dd>name [+ttl] [rtype] rdata ~</dd></dl>
 <p> The name is the name of the record we will add, such as &quot;<a rel="nofollow" href="http://www.example.net">www.example.net</a>.&quot;. This must be placed at the beginning of a line. The rtype is the record type for the record, such as &quot;A&quot; (ipv4 IP address), &quot;MX&quot; (mail exchanger), or &quot;AAAA&quot; (ipv6 IP address). The ttl is how long other DNS servers should store this data in their memory (in seconds); this field needs a aq+aq as its initial character. The rdata is the actual data for this record; the format for the rdata is type-specific. </p>
 <p> Anything in square brackets is an optional field. If the ttl is not specified, the ttl is set to the default ttl value (see &quot;Default TTL&quot; below). If the rtype is not specified, it is set to be an &quot;A&quot; (ipv4 address) record. </p>
 <p> The zone file supports comments; comments are specified by having a aq#aq anywhere between fields or records; when a aq#aq is seen, the csv2 parser ignores any character it sees (with the exception of the aq{aq, which is not allowed in comments) until a newline. A aq#aq can usually be placed inside a field, and indicates the end of a field when placed there. </p>

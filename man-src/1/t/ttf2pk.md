@@ -19,20 +19,20 @@ description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 <p> <code>ttf2pk</code> always assumes 10pt as the design size for the written TeX font.</p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>-q</code></p>
-<dd> This optional switch makes <code>ttf2pk</code> quiet. It suppresses any informational output except warning and error messages.</p>
-<dt><code>-n</code></p>
-<dd> Use only ` as the extension instead of ` &lt;<i>resolution</i>&gt;</p>
-<dt><code>-t</code></p>
-<dd> Test for the existence of <i>font-name</i>. Returns 0 on success and prints out the corresponding line of a map file (default: provided the <code>-q</code> switch isn&#8217;t set.</p>
-<dt><i>font-name</i></p>
-<dd> The TeX name of the font. <code>ttf2pk</code> looks this name up in a map file (see below) for further information how to process the font.</p>
-<dt><i>resolution</i></p>
-<dd> The resolution, given in dots per inch. Currently the horizontal resolution is equal to the vertical resolution. The design size is always assumed to be 10pt.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the current version of <code>ttf2pk</code> and the used file search library (e.g.&nbsp;<code>kpathsea</code>).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Shows usage information.</dl>
+<dt><code>-q</code></dt>
+<dd> This optional switch makes <code>ttf2pk</code> quiet. It suppresses any informational output except warning and error messages.</dd>
+<dt><code>-n</code></dt>
+<dd> Use only ` as the extension instead of ` &lt;<i>resolution</i>&gt;</dd>
+<dt><code>-t</code></dt>
+<dd> Test for the existence of <i>font-name</i>. Returns 0 on success and prints out the corresponding line of a map file (default: provided the <code>-q</code> switch isn&#8217;t set.</dd>
+<dt><i>font-name</i></dt>
+<dd> The TeX name of the font. <code>ttf2pk</code> looks this name up in a map file (see below) for further information how to process the font.</dd>
+<dt><i>resolution</i></dt>
+<dd> The resolution, given in dots per inch. Currently the horizontal resolution is equal to the vertical resolution. The design size is always assumed to be 10pt.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the current version of <code>ttf2pk</code> and the used file search library (e.g.&nbsp;<code>kpathsea</code>).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Shows usage information.</dd></dl>
 <p> Environment variables for file searching are described in the manual page of <code>ttf2tfm</code>.</p>
 <h2>THE CONFIGURATION FILE</h2>
 <p> <code>ttf2pk</code> uses a small configuration file called in each line it contains a keyword with its value, separated by whitespace. Comment lines can start with any of the following characters: `*&#8217;, `#&#8217;, `;&#8217;, and `%&#8217;. Leading whitespace is ignored. </p>

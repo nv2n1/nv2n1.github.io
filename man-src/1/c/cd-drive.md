@@ -13,20 +13,20 @@ description: "cd-drive – show CD-ROM drive characteristics"
 <p> <code>cd-drive</code> [<i>OPTION</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></p>
-<dd> Set debugging to LEVEL</p>
-<dt><code>-i</code>, <code>&#8211;cdrom-device</code>[=<i>DEVICE</i>]</p>
-<dd> show only info about CD-ROM device</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Don&#8217;t produce warning output</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> display version and copyright information and exit</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
+<dd> Set debugging to LEVEL</dd>
+<dt><code>-i</code>, <code>&#8211;cdrom-device</code>[=<i>DEVICE</i>]</dt>
+<dd> show only info about CD-ROM device</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t produce warning output</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> display version and copyright information and exit</dd></dl>
 <h3>Help options:</h3>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Show this help message</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Show this help message</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message</dd></dl>
 <h2>AUTHOR</h2>
 <p> Rocky Bernstein rocky [at] gnu.org</p>
 <h2>COPYRIGHT</h2>

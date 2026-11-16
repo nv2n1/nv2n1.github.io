@@ -22,7 +22,7 @@ intmax_t imaxabs(intmax_t j);
 <p> <code>llabs</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>abs</code>() function computes the absolute value of the integer argument <i>j</i>. The <code>labs</code>(), <code>llabs</code>(), and <code>imaxabs</code>() functions compute the absolute value of the argument <i>j</i> of the appropriate integer type for the function.</p>
 <h2>RETURN VALUE</h2>

@@ -29,8 +29,8 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> The calling process has insufficient privilege to call <code>vhangup</code>(); the <code>CAP_SYS_TTY_CONFIG</code> capability is required.</dl>
+<dt><code>EPERM</code></dt>
+<dd> The calling process has insufficient privilege to call <code>vhangup</code>(); the <code>CAP_SYS_TTY_CONFIG</code> capability is required.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> This call is Linux-specific, and should not be used in programs intended to be portable.</p>
 <h2>SEE ALSO</h2>

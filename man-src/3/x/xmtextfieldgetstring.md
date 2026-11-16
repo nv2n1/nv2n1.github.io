@@ -15,8 +15,8 @@ description: "XmTextFieldGetString — A TextField function that accesses the st
 <h2>Description</h2>
 <p><code>XmTextFieldGetString</code> accesses the string value of the TextField widget. The application is responsible for freeing the storage associated with the string by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns a character pointer to the string value of the TextField widget. This returned value is a copy of the value of the <code>XmNvalue</code> resource. Returns an empty string if the length of the TextField widget&#8217;s string is 0 (zero).</p>

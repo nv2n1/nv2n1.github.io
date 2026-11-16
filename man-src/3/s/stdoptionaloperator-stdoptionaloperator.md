@@ -30,12 +30,9 @@ The behavior is undefined if *this does not contain a value. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;optional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     using namespace std::string_literals;
     std::optional&lt;int&gt; opt1 = 1;

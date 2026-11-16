@@ -21,15 +21,15 @@ abrt-dbus - dbus server for querying problem data
 <h2>Options</h2>
 
 -v
-<dl><dd>Log more detailed debugging information.</dl>
+<dl><dd>Log more detailed debugging information.</dd></dl>
  
 
  -t NUM
-<dl><dd>Exit after NUM seconds of inactivity.</dl>
+<dl><dd>Exit after NUM seconds of inactivity.</dd></dl>
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>
 
 <h2>See Also</h2>
 

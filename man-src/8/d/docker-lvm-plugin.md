@@ -17,29 +17,29 @@ description: "docker-lvm-plugin – Docker Volume Driver for lvm volumes"
 <dl>
 <dd>
 <pre>systemctl start docker </pre>
-</dl>
+</dd></dl>
 <p> Once docker daemon is up and running, you can start docker-lvm-plugin daemon using command: </p>
 <dl>
 <dd>
 <pre>systemctl start docker-lvm-plugin</pre>
-</dl>
+</dd></dl>
 <p> docker-lvm-plugin daemon is on-demand socket activated. Running docker volume ls command will automatically start the daemon. </p>
 <p> Since logical volumes (lv&#8217;s) are based on a volume group, it is the responsibility of the user (administrator) to provide a volume group name. You can choose an existing volume group name by listing volume groups on your system using vgs command OR create a new volume group using vgcreate command. e.g. </p>
 <dl>
 <dd>
 <pre>vgcreate vg1 /dev/hda </pre>
-</dl>
+</dd></dl>
 <p> where /dev/hda is your partition or whole disk on which physical volumes were created. </p>
 <p> Add this volume group name in the config file. </p>
 <dl>
 <dd>
 <pre>/etc/docker/docker-lvm-plugin</pre>
-</dl>
+</dd></dl>
 <p> The docker-lvm-plugin also supports the creation of thinly-provisioned volumes. To create a thinly-provisioned volume, a user (administrator) must first create a thin pool using the lvcreate command. </p>
 <dl>
 <dd>
 <pre>lvcreate -L 10G -T vg1/mythinpool</pre>
-</dl>
+</dd></dl>
 <p> This will create a thinpool named mythinpool of size 10G under volume group vg1. NOTE: thinpools are special kind of logical volumes carved out of the volume group. Hence in the above example, to create the thinpool mythinpool you must have atleast 10G of freespace in volume group vg1.</p>
 <h2>Options</h2>
 <p><code>-debug</code>=<i>true</i>|<i>false</i><br />

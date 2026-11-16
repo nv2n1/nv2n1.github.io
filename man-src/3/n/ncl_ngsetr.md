@@ -21,9 +21,9 @@ CALL NGSETR (PNAM, RVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. Only the first two characters of the string are examined.
-<dt>RVAL
-<dd>(an input expression of type REAL) is the desired value of the internal parameter.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. Only the first two characters of the string are examined.
+</dd><dt>RVAL
+</dt><dd>(an input expression of type REAL) is the desired value of the internal parameter.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

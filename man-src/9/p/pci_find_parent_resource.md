@@ -15,11 +15,11 @@ pci_find_parent_resource - return resource region of parent bus of given region
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device structure contains resources to be searched</dl>
+<dl><dd></dd><dd>PCI device structure contains resources to be searched</dd></dl>
  
 
  <i>res</i>
-<dl><dd>child resource record for which parent is sought</dl>
+<dl><dd>child resource record for which parent is sought</dd></dl>
 
 <h2>Description</h2>
 

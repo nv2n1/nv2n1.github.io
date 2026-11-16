@@ -31,18 +31,18 @@ void endprotoent(void);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p_proto;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;protocol number&nbsp;*/ } </p>
 <p> The members of the <i>protoent</i> structure are:</p>
 <dl>
-<dt><i>p_name</i></p>
-<dd> The official name of the protocol.</p>
-<dt><i>p_aliases</i></p>
-<dd> A NULL-terminated list of alternative names for the protocol.</p>
-<dt><i>p_proto</i></p>
-<dd> The protocol number.</dl>
+<dt><i>p_name</i></dt>
+<dd> The official name of the protocol.</dd>
+<dt><i>p_aliases</i></dt>
+<dd> A NULL-terminated list of alternative names for the protocol.</dd>
+<dt><i>p_proto</i></dt>
+<dd> The protocol number.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The <code>getprotoent</code>(), <code>getprotobyname</code>(), and <code>getprotobynumber</code>() functions return a pointer to a statically allocated <i>protoent</i> structure, or a null pointer if an error occurs or the end of the file is reached.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/protocols</i></p>
-<dd> protocol database file</dl>
+<dt><i>/etc/protocols</i></dt>
+<dd> protocol database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

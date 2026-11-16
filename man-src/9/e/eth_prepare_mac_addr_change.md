@@ -15,11 +15,11 @@ eth_prepare_mac_addr_change - prepare for mac change
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
  
 
  <i>p</i>
-<dl><dd>socket address</dl>
+<dl><dd>socket address</dd></dl>
 
 <h2>Copyright</h2>
 

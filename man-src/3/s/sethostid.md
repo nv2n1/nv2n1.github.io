@@ -11,11 +11,10 @@ description: "gethostid, sethostid – get or set the unique identifier of the c
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
 long gethostid(void);
-
 int sethostid(long hostid);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>gethostid</code>():</p>
 <dl>
-<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <p> <code>sethostid</code>(): </p>
 <pre> Since glibc 2.21:
  _DEFAULT_SOURCE
@@ -32,10 +31,10 @@ int sethostid(long hostid);</code></pre>
 <h2>Errors</h2>
 <p><code>sethostid</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>The caller did not have permission to write to the file used to store the host ID.</p>
-<dt><code>EPERM</code></p>
-<dd>The calling process&#8217;s effective user or group ID is not the same as its corresponding real ID.</dl>
+<dt><code>EACCES</code></dt>
+<dd>The caller did not have permission to write to the file used to store the host ID.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The calling process&#8217;s effective user or group ID is not the same as its corresponding real ID.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -10,12 +10,12 @@ description: "synchronize_hardirq – wait for pending hard IRQ handlers (on oth
 <p>synchronize_hardirq &#8211; wait for pending hard IRQ handlers (on other CPUs)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool synchronize_hardirq(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dl>
+<dt> <code>bool synchronize_hardirq(unsigned int&nbsp;<wbr></code><i>irq</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>interrupt number to wait for</dl>
+</dd><dd>interrupt number to wait for</dd></dl>
 <h2>Description</h2>
 <p>This function waits for any pending hard IRQ handlers for this interrupt to complete before returning. If you use this function while holding a resource the IRQ handler may need you will deadlock. It does not take associated threaded handlers into account. </p>
 <p> Do not use this for shutdown scenarios where you must be sure that all parts (hardirq and threaded handler) have completed.</p>

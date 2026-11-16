@@ -20,15 +20,15 @@ description: "ignored_words.conf – configuration file for libreport."
 <pre>USER=
 login.so
 SSH_ASKPASS=</pre>
-</dl>
+</dd></dl>
 <p> User configuration: </p>
 <p> $XDG_CONFIG_HOME/abrt/settings/ignored_words.conf </p>
 <dl>
 <dd>
 <pre>libpassword.so</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-report-gtk/">report-gtk</a>(1), <a href="/docs/linux/man/5-forbidden_words-conf/">forbidden_words.conf</a>(5)</p>
 <h2>Author</h2>
 <dl>
-<dd>&bull; ABRT team</dl>
+<dd>&bull; ABRT team</dd></dl>

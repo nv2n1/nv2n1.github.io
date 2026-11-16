@@ -18,30 +18,30 @@ description: "upscli_get – retrieve data from a UPS"
 <h2>Uses</h2>
 <p>This function implements the &quot;GET&quot; command in the protocol. As a result, you can use it to request many different things from the server. Some examples are: </p>
 <dl>
-<dd>&bull; GET NUMLOGINS &lt;ups&gt;</dl>
+<dd>&bull; GET NUMLOGINS &lt;ups&gt;</dd></dl>
 <dl>
-<dd>&bull; GET UPSDESC &lt;ups&gt;</dl>
+<dd>&bull; GET UPSDESC &lt;ups&gt;</dd></dl>
 <dl>
-<dd>&bull; GET VAR &lt;ups&gt; &lt;var&gt;</dl>
+<dd>&bull; GET VAR &lt;ups&gt; &lt;var&gt;</dd></dl>
 <dl>
-<dd>&bull; GET TYPE &lt;ups&gt; &lt;var&gt;</dl>
+<dd>&bull; GET TYPE &lt;ups&gt; &lt;var&gt;</dd></dl>
 <dl>
-<dd>&bull; GET DESC &lt;ups&gt; &lt;var&gt;</dl>
+<dd>&bull; GET DESC &lt;ups&gt; &lt;var&gt;</dd></dl>
 <dl>
-<dd>&bull; GET CMDDESC &lt;ups&gt; &lt;cmd&gt;</dl>
+<dd>&bull; GET CMDDESC &lt;ups&gt; &lt;cmd&gt;</dd></dl>
 <h2>Query Formatting</h2>
 <p>To generate a request for GET NUMLOGINS su700, you would populate query and numq as follows: </p>
 <dl>
 <dd>
 <pre>int numq;
 const char *query[2];</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>query[0] = &quot;NUMLOGINS&quot;;
 query[1] = &quot;su700&quot;;
 numq = 2;</pre>
-</dl>
+</dd></dl>
 <p> All escaping of special characters and quoting of elements with spaces is handled for you inside this function.</p>
 <h2>Answer Formatting</h2>
 <p>The raw response from upsd to the above query would be NUMLOGINS su700 1. Since this is split up for you, the values work out like this: </p>
@@ -51,7 +51,7 @@ numq = 2;</pre>
 answer[0] = &quot;NUMLOGINS&quot;
 answer[1] = &quot;su700&quot;
 answer[2] = &quot;1&quot;</pre>
-</dl>
+</dd></dl>
 <p> Notice that the value which you seek typically starts at answer[numq].</p>
 <h2>Error Checking</h2>
 <p>This function will check your query against the response from <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8). For example, if you send &quot;VAR&quot; &quot;su700&quot; &quot;ups.status&quot;, it will expect to see those at the beginning of the response. </p>

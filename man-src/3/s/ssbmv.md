@@ -18,18 +18,18 @@ description: "ssbmv.f –"
 <p> <code>SSBMV</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SSBMV  performs the matrix-vector  operation
     y := alpha*A*x + beta*y,
  where alpha and beta are scalars, x and y are n element vectors and
  A is an n by n symmetric band matrix, with k super-diagonals.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
            On entry, UPLO specifies whether the upper or lower
@@ -135,18 +135,18 @@ description: "ssbmv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 2 Blas routine.
   The vector and matrix arguments are not referenced when N = 0, or M = 0
@@ -156,8 +156,9 @@ description: "ssbmv.f –"
      Sven Hammarling, Nag Central Office.
      Richard Hanson, Sandia National Labs.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 185 of file ssbmv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

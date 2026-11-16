@@ -16,7 +16,8 @@ description: "(un)register-common-lisp-{implementation|source) – internal clc 
 <p>Bug reports should be sent to the debian BTS, preferably with reportbug. </p>
 <h2>See Also</h2>
 <dl>
-<dt>The Common Lisp in Debian Manual at</p>
-<dd><code><a rel="nofollow" href="http://cl-debian.alioth.debian.org/clid/clid.html/">http://cl-debian.alioth.debian.org/clid/clid.html/</a></code> </p>
+<dt>The Common Lisp in Debian Manual at</dt>
+<dd><code><a rel="nofollow" href="http://cl-debian.alioth.debian.org/clid/clid.html/">http://cl-debian.alioth.debian.org/clid/clid.html/</a></code> </dd>
 <h2>Author</h2>
 <p>Peter Van Eynde (pvaneynd [at] debian.org), Kevin M. Rosenberg (kmr [at] debian.org) and Ren&eacute; van Bevern (rvb [at] progn.org) 2001-2006</p>
+</dl>

@@ -15,24 +15,24 @@ description: "IBMgtSim – Infiniband Management Simulator"
 <p>Simulates the Fabric as defined by the given topology file and start a server to handle <font SIZE="-1">MAD</font> requests from clients like OpenSM.</p>
 <h2>Arguments</h2>
 <dl>
-<dt>-t topology</p>
-<dd>A topology file describing the fabric to be simulated (see <code>ibdm-topo-file</code>)</dl>
+<dt>-t topology</dt>
+<dd>A topology file describing the fabric to be simulated (see <code>ibdm-topo-file</code>)</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt>-s seed</p>
-<dd>The seed to be used for random number generation.</p>
-<dt>-f flow-tcl-file</p>
-<dd>A tcl file to be sourced after the fabric is setup.</p>
-<dt>-l log-file</p>
-<dd>Set the log file of the simulator (default is /var/cache/ibutils/ibsim.log)</p>
-<dt>-p server-port</p>
-<dd>Set the port number the server attaches to (default 46517)</p>
-<dt>-w num-threads</p>
-<dd>The number of threads processing the mads</p>
-<dt>-V &lt;module-verbosity-pair-list&gt;</p>
-<dd>Provides a fine grain control over the log file verbosity. Given list of pairs of simulator software module names and their verbosity levels &#8211; every module is separatly controlled. The first value (missing module name) is controlling the default verbosity for all un-explicitly set modules. </p>
+<dt>-s seed</dt>
+<dd>The seed to be used for random number generation.</dd>
+<dt>-f flow-tcl-file</dt>
+<dd>A tcl file to be sourced after the fabric is setup.</dd>
+<dt>-l log-file</dt>
+<dd>Set the log file of the simulator (default is /var/cache/ibutils/ibsim.log)</dd>
+<dt>-p server-port</dt>
+<dd>Set the port number the server attaches to (default 46517)</dd>
+<dt>-w num-threads</dt>
+<dd>The number of threads processing the mads</dd>
+<dt>-V &lt;module-verbosity-pair-list&gt;</dt>
+<dd>Provides a fine grain control over the log file verbosity. Given list of pairs of simulator software module names and their verbosity levels &#8211; every module is separatly controlled. The first value (missing module name) is controlling the default verbosity for all un-explicitly set modules. </dd>
 <dl>
-<dd>Current Verbosity Levels: </p>
+<dd>Current Verbosity Levels: </dd>
 <pre> MsgShowFatal = 0x01;
  MsgShowError = 0x02;
  MsgShowWarning= 0x04;
@@ -54,7 +54,7 @@ description: "IBMgtSim – Infiniband Management Simulator"
  full verbosity for the SMA module and default verbosity for the
  Server module.</pre>
 </dl>
-<dt>-h</p>
-<dd>This help message</dl>
+<dt>-h</dt>
+<dd>This help message</dd></dl>
 <h2>Author</h2>
 <p>Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il</p>

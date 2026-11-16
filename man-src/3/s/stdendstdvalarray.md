@@ -12,12 +12,9 @@ std::end(std::valarray) - std::end(std::valarray)
 
 <pre><code>template &lt;class T&gt;
 (1)(since C++ 11)
-
     /*unspecified1*/ end(valarray&lt;T&gt; &amp;v);
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     /*unspecified2*/ end(const valarray&lt;T&gt; &amp;v);</code></pre> 
 The overload of std::end for valarray returns an iterator of unspecified type referring to the one past the last element in the numeric array. 
 1) The return type meets the requirements of mutable LegacyRandomAccessIterator. 

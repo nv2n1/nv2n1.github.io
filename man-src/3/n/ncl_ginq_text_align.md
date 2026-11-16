@@ -13,39 +13,39 @@ description: "ginq_text_align (Inquire text alignment) – retrieves the horizon
 <p> void ginq_text_align(Gint *err_ind, Gtext_align *text_align);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired values cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>text_align.hor</p>
-<dd>(Output) &#8211; Returns the current horizontal text alignment:</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired values cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>text_align.hor</dt>
+<dd>(Output) &#8211; Returns the current horizontal text alignment:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GHOR_NORM</p>
-<dd>Normal (default)</p>
-<dt>GHOR_LEFT</p>
-<dd>Left</p>
-<dt>GHOR_CTR</p>
-<dd>Center</p>
-<dt>GHOR_RIGHT</p>
-<dd>Right</dl>
+</dd><dl COMPACT>
+<dt>GHOR_NORM</dt>
+<dd>Normal (default)</dd>
+<dt>GHOR_LEFT</dt>
+<dd>Left</dd>
+<dt>GHOR_CTR</dt>
+<dd>Center</dd>
+<dt>GHOR_RIGHT</dt>
+<dd>Right</dd></dl>
 </dl>
-<dt>text_align.vert</p>
-<dd>(Output) &#8211; Returns the current vertical text alignment:</p>
+<dt>text_align.vert</dt>
+<dd>(Output) &#8211; Returns the current vertical text alignment:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GVERT_NORM</p>
-<dd>Normal (default)</p>
-<dt>GVERT_TOP</p>
-<dd>Top</p>
-<dt>GVERT_CAP</p>
-<dd>Cap</p>
-<dt>GVERT_HALF</p>
-<dd>Half</p>
-<dt>GVERT_BASE</p>
-<dd>Base</p>
-<dt>GVERT_BOTTOM</p>
-<dd>Bottom</dl>
+</dd><dl COMPACT>
+<dt>GVERT_NORM</dt>
+<dd>Normal (default)</dd>
+<dt>GVERT_TOP</dt>
+<dd>Top</dd>
+<dt>GVERT_CAP</dt>
+<dd>Cap</dd>
+<dt>GVERT_HALF</dt>
+<dd>Half</dd>
+<dt>GVERT_BASE</dt>
+<dd>Base</dd>
+<dt>GVERT_BOTTOM</dt>
+<dd>Bottom</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

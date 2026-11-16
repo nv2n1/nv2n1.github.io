@@ -18,7 +18,6 @@ description: "load_txt_font – Loads a font script. Allegro game programming li
    ascii.fnt 0x20 0x7F
    - 0xA0 0xFF
    dingbats.fnt 0x1000
-   
 </pre>
 <p> would import the first 96 characters from ascii.fnt as the range 0x20-0x7F, the next 96 characters from ascii.fnt as the range 0xA0-0xFF, and the entire contents of dingbats.fnt starting at Unicode position 0x1000.</p>
 <h2>RETURN VALUE</h2>

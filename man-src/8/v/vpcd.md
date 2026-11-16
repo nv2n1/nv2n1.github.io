@@ -14,33 +14,33 @@ description: "vpcd – virtual power control daemon"
 <p><code>vpcd</code> is a test program for PowerMan which emulates a remote power control device. It can be run interactively by the powerman daemon, or it can listen on a port of your choosing.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-p, &#8211;port PORT</i></p>
-<dd>Instructs <code>vpcd</code> to listen for connections on the specified port instead of using stdin/stdout. Only one connection will be accepted.</dl>
+<dt><i>-p, &#8211;port PORT</i></dt>
+<dd>Instructs <code>vpcd</code> to listen for connections on the specified port instead of using stdin/stdout. Only one connection will be accepted.</dd></dl>
 <h2>Interactive Commands</h2>
 <p>The following commands are available at the vpcd&gt; prompt:</p>
 <dl>
-<dt><i>login</i></p>
-<dd>The login command must br run before any of the other commands will work. No username or password is required.</p>
-<dt><i>logoff</i></p>
-<dd>Return <code>vpcd</code> to the initial state.</p>
-<dt><i>stat PLUG|*</i></p>
-<dd>Show the power status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>beacon PLUG|*</i></p>
-<dd>Show the beacon status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>temp PLUG|*</i></p>
-<dd>Show the temperature of the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>spew COUNT</i></p>
-<dd>Print COUNT 80-char lines. This is the basis of a buffer handling test.</p>
-<dt><i>on PLUG|*</i></p>
-<dd>Turn on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>off PLUG|*</i></p>
-<dd>Turn off PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>flash PLUG|*</i></p>
-<dd>Light the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>unflash PLUG|*</i></p>
-<dd>Unlight the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</p>
-<dt><i>reset PLUG|*</i></p>
-<dd>Reset the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs. </p>
+<dt><i>login</i></dt>
+<dd>The login command must br run before any of the other commands will work. No username or password is required.</dd>
+<dt><i>logoff</i></dt>
+<dd>Return <code>vpcd</code> to the initial state.</dd>
+<dt><i>stat PLUG|*</i></dt>
+<dd>Show the power status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>beacon PLUG|*</i></dt>
+<dd>Show the beacon status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>temp PLUG|*</i></dt>
+<dd>Show the temperature of the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>spew COUNT</i></dt>
+<dd>Print COUNT 80-char lines. This is the basis of a buffer handling test.</dd>
+<dt><i>on PLUG|*</i></dt>
+<dd>Turn on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>off PLUG|*</i></dt>
+<dd>Turn off PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>flash PLUG|*</i></dt>
+<dd>Light the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>unflash PLUG|*</i></dt>
+<dd>Unlight the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>reset PLUG|*</i></dt>
+<dd>Reset the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs. </dd>
 </dl>
 <h2>Files</h2>
 <p>/usr/sbin/vpcd</p>

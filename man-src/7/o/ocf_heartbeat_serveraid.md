@@ -10,39 +10,39 @@ description: "ocf_heartbeat_ServeRAID – Enables and disables shared ServeRAID 
 <p>ocf_heartbeat_ServeRAID &#8211; Enables and disables shared ServeRAID merge groups</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ServeRAID</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>ServeRAID</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Resource script for ServeRAID. It enables/disables shared ServeRAID merge groups.</p>
+<dd>Resource script for ServeRAID. It enables/disables shared ServeRAID merge groups.</dd>
 <h2>Supported Parameters</h2>
 <p><code>serveraid</code></p>
 <dl>
-<dd>The adapter number of the ServeRAID adapter. (required, integer, no default)</dl>
+<dd>The adapter number of the ServeRAID adapter. (required, integer, no default)</dd></dl>
 <p> <code>mergegroup</code></p>
 <dl>
-<dd>The logical drive under consideration. (required, integer, no default)</dl>
+<dd>The logical drive under consideration. (required, integer, no default)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 40.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 40.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 40.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 40.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>methods</code></p>
 <dl>
-<dd>Suggested minimum timeout: 5.</dl>
+<dd>Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a ServeRAID resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_ServeRAID ocf:heartbeat:ServeRAID \

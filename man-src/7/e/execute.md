@@ -16,10 +16,10 @@ description: "EXECUTE – execute a prepared statement"
 <p> For more information on the creation and usage of prepared statements, see PREPARE [<code><a href="/docs/linux/man/7-prepare/">prepare</a></code>(7)].</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the prepared statement to execute.</p>
-<dt><i>parameter</i></p>
-<dd>The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as was determined when the prepared statement was created.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the prepared statement to execute.</dd>
+<dt><i>parameter</i></dt>
+<dd>The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as was determined when the prepared statement was created.</dd></dl>
 <h2>Outputs</h2>
 <p>The command tag returned by <code>EXECUTE</code> is that of the prepared statement, and not EXECUTE.</p>
 <h2>Examples</h2>

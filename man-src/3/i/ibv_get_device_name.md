@@ -17,10 +17,10 @@ url: "/docs/linux/man/3-ibv_get_device_name/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 const char *ibv_get_device_name(struct ibv_device *device);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

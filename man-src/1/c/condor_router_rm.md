@@ -16,34 +16,30 @@ description: "condor_router_rm Remove jobs being managed by the HTCondor Job Rou
 <p> The options that may be supplied to <i>condor_router_rm</i> belong to two groups:</p>
 <dl>
 <dt>
-<dd> * <code>router_rm options</code> provide the additional features</p>
+</dt><dd> * <code>router_rm options</code> provide the additional features</dd>
 <dt>
-<dd> * <code>condor_rm options</code> are those options already offered by <i>condor_rm</i> . See the <i>condor_rm</i> manual page for specification of these options.</dl>
+</dt><dd> * <code>condor_rm options</code> are those options already offered by <i>condor_rm</i> . See the <i>condor_rm</i> manual page for specification of these options.</dd></dl>
 <h2>Options</h2>
 <p> <code>-constraint </code> <i>X</i></p>
 <dl>
 <dt>
-<dd> (router_rm option) Remove jobs matching the constraint specified by <i>X</i></p>
-<dt>
-<dd></dl>
+</dt><dd> (router_rm option) Remove jobs matching the constraint specified by <i>X</i></dd>
+</dl>
 <p> <code>-held</code></p>
 <dl>
 <dt>
-<dd> (router_rm option) Remove only jobs in the hold state</p>
-<dt>
-<dd></dl>
+</dt><dd> (router_rm option) Remove only jobs in the hold state</dd>
+</dl>
 <p> <code>-idle</code></p>
 <dl>
 <dt>
-<dd> (router_rm option) Remove only idle jobs</p>
-<dt>
-<dd></dl>
+</dt><dd> (router_rm option) Remove only idle jobs</dd>
+</dl>
 <p> <code>-route </code> <i>name</i></p>
 <dl>
 <dt>
-<dd> (router_rm option) Remove only jobs on specified route</p>
-<dt>
-<dd></dl>
+</dt><dd> (router_rm option) Remove only jobs on specified route</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_router_rm</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

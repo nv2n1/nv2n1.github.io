@@ -13,15 +13,15 @@ description: "log_db_daemon – Database logging daemon for Squid"
 <h2>Descriptoin</h2>
 <p>This program writes Squid access.log entries to a database. Presently only accepts the <code>squid</code> native format</p>
 <dl>
-<dt><font SIZE="-1"><code>DSN</code></font></p>
-<dd>Database <font SIZE="-1">DSN</font> encoded as a path. This is sent as the access_log file path. </p>
+<dt><font SIZE="-1"><code>DSN</code></font></dt>
+<dd>Database <font SIZE="-1">DSN</font> encoded as a path. This is sent as the access_log file path. </dd>
 <p> Sample configuration:<br />
 &nbsp;<wbr>&nbsp;<wbr>access_log daemon:/host/database/table/username/password squid </p>
 <pre> to leave a parameter unspecified use a double slash:
  access_log <a href="daemon://database/table/username/password">daemon://database/table/username/password</a> squid</pre>
 <p>Default &#8220;DBI:mysql:database=squid&#8221;</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Write debug messages to Squid stderr or cache.log</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd>Write debug messages to Squid stderr or cache.log</dd></dl>
 <h2>Description</h2>
 <p>This module exploits the new logfile daemon support available in squid 2.7 and 3.2 to store access log entries in a MySQL database.</p>
 <h2>Configuration</h2>
@@ -32,16 +32,16 @@ description: "log_db_daemon – Database logging daemon for Squid"
 <p>The &#8216;daemon&#8217; prefix is mandatory and tells squid that the <code>logfile_daemon</code> helper is to be used instead of the normal file logging. </p>
 <p> The last parameter tells squid which log format to use when writing lines to the log daemon. Presently <code>squid</code> format is supported.</p>
 <dl>
-<dt>mysql_host:port</p>
-<dd>Host where the mysql server is running. If left empty, &#8216;localhost&#8217; is assumed.</p>
-<dt>database</p>
-<dd>Name of the database to connect to. If left empty, &#8216;squid_log&#8217; is assumed.</p>
-<dt>table</p>
-<dd>Name of the database table where log lines are stored. If left empty, &#8216;access_log&#8217; is assumed.</p>
-<dt>username</p>
-<dd>Username to use when connecting to the database. If left empty, &#8216;squid&#8217; is assumed.</p>
-<dt>password</p>
-<dd>Password to use when connecting to the database. If left empty, no password is used.</dl>
+<dt>mysql_host:port</dt>
+<dd>Host where the mysql server is running. If left empty, &#8216;localhost&#8217; is assumed.</dd>
+<dt>database</dt>
+<dd>Name of the database to connect to. If left empty, &#8216;squid_log&#8217; is assumed.</dd>
+<dt>table</dt>
+<dd>Name of the database table where log lines are stored. If left empty, &#8216;access_log&#8217; is assumed.</dd>
+<dt>username</dt>
+<dd>Username to use when connecting to the database. If left empty, &#8216;squid&#8217; is assumed.</dd>
+<dt>password</dt>
+<dd>Password to use when connecting to the database. If left empty, no password is used.</dd></dl>
 <p> To leave all fields to their default values, you can use a single slash: </p>
 <pre> access_log daemon:/ squid</pre>
 <p>To specify only the database password, which by default is empty, you must leave unspecified all the other parameters by using null strings: </p>
@@ -82,21 +82,21 @@ description: "log_db_daemon – Database logging daemon for Squid"
 <p>This document refers to <tt>&quot;log_db_daemon&quot;</tt> script version 0.5. </p>
 <p> The script has been developed and tested in the following environment:</p>
 <dl>
-<dt>squid-2.7 Squid-3.2</p>
+<dt>squid-2.7 Squid-3.2</dt>
 <dd>
-<dt>mysql 5.0.26 and 5.1</p>
+</dd><dt>mysql 5.0.26 and 5.1</dt>
 <dd>
-<dt>perl 5.8.8</p>
+</dd><dt>perl 5.8.8</dt>
 <dd>
-<dt>OpenSUSE 10.2</p>
-<dd></dl>
+</dd><dt>OpenSUSE 10.2</dt>
+<dd></dd></dl>
 <h2>Data Extraction</h2>
 <h3>Sample queries.</h3>
 <dl>
-<dt>Clients accessing the cache</p>
+<dt>Clients accessing the cache</dt>
 <dd>
 <pre> SELECT DISTINCT ip_client FROM access_log;</pre>
-<dt>Number of request per day</p>
+</dd><dt>Number of request per day</dt>
 <dd>
 <pre> SELECT
  DATE(FROM_UNIXTIME(time_since_epoch)) AS date_day,
@@ -104,8 +104,8 @@ description: "log_db_daemon – Database logging daemon for Squid"
  FROM access_log
  GROUP BY 1
  ORDER BY 1;</pre>
-<dt>Request status count</p>
-<dd>To obtain the raw count of each request status: </p>
+</dd><dt>Request status count</dt>
+<dd>To obtain the raw count of each request status: </dd>
 <pre> SELECT squid_request_status, COUNT(*) AS n
  FROM access_log
  GROUP BY squid_request_status
@@ -135,7 +135,7 @@ description: "log_db_daemon – Database logging daemon for Squid"
  /
  (SELECT COUNT(*) FROM access_log)*100
  AS pecentage;</pre>
-<dt>Response time ranges</p>
+<dt>Response time ranges</dt>
 <dd>
 <pre> SELECT
  '0..500',
@@ -160,7 +160,7 @@ description: "log_db_daemon – Database logging daemon for Squid"
  COUNT(*)/(SELECT COUNT(*) FROM access_log)*100 AS percentage
  FROM access_log
  WHERE time_response &gt;= 2000;</pre>
-<dt>Traffic by mime type</p>
+</dd><dt>Traffic by mime type</dt>
 <dd>
 <pre> SELECT
  http_mime_type,
@@ -168,7 +168,7 @@ description: "log_db_daemon – Database logging daemon for Squid"
  FROM access_log
  GROUP BY http_mime_type
  ORDER BY 2 DESC;</pre>
-<dt>Traffic by client</p>
+</dd><dt>Traffic by client</dt>
 <dd>
 <pre> SELECT
  ip_client,
@@ -176,7 +176,7 @@ description: "log_db_daemon – Database logging daemon for Squid"
  FROM access_log
  GROUP BY 1
  ORDER BY 2 DESC;</pre>
-</dl>
+</dd></dl>
 <h3>Speed issues</h3>
 <p>The MyISAM storage engine is known to be faster than the InnoDB one, so although it doesn&#8217;t support transactions and referential integrity, it might be more appropriate in this scenario. You might want to append &#8220;ENGINE=MYISAM&#8221; at the end of the table creation code in the above <font SIZE="-1">SQL</font> script. </p>
 <p> Indexes should be created according to the queries that are more frequently run. The <font SIZE="-1">DDL</font> script only creates an implicit index for the primary key column.</p>

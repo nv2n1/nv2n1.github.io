@@ -28,27 +28,27 @@ description: "lvmdump — create lvm2 information dumps for diagnostic purposes"
  &#8211; if enabled with -u, udev info and context</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Advanced collection. <code>WARNING</code>: if lvm is already hung, then this script may hang as well if <code>-a</code> is used.</p>
-<dt><code>-d </code><i>directory</i></p>
-<dd>Dump into a directory instead of tarball By default, lvmdump will produce a single compressed tarball containing all the information. Using this option, it can be instructed to only produce the raw dump tree, rooted in <i>directory</i>.</p>
-<dt><code>-h</code></p>
-<dd>Print help message</p>
-<dt><code>-l</code></p>
-<dd>Include <code><a href="/docs/linux/man/8-lvmetad/">lvmetad</a></code>(8) daemon dump if it is running. The dump contains cached information that is currently stored in lvmetad: VG metadata, PV metadata and various mappings in between these metadata for quick access.</p>
-<dt><code>-m</code></p>
-<dd>Gather LVM metadata from the PVs This option generates a 1:1 dump of the metadata area from all PVs visible to the system, which can cause the dump to increase in size considerably. However, the metadata dump may represent a valuable diagnostic resource.</p>
-<dt><code>-p</code></p>
-<dd>Include <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) daemon dump if it is running. The dump contains all in-progress operation currently monitored by the daemon and partial history for all yet uncollected results of polling operations already finished including reason.</p>
-<dt><code>-s</code></p>
-<dd>Gather system info and context. Currently, this encompasses info gathered by calling lsblk command and various systemd info and context: overall state of systemd units present in the system, more detailed status of units controlling LVM functionality and the content of systemd journal for current boot.</p>
-<dt><code>-u</code></p>
-<dd>Gather udev info and context: /etc/udev/udev.conf file, udev daemon version (output of &#8216;udevadm info &#8211;version&#8217; command), udev rules currently used in the system (content of /lib/udev/rules.d and /etc/udev/rules.d directory), list of files in /lib/udev directory and dump of current udev database content (the output of &#8216;udevadm info &#8211;export-db&#8217; command).</dl>
+<dt><code>-a</code></dt>
+<dd>Advanced collection. <code>WARNING</code>: if lvm is already hung, then this script may hang as well if <code>-a</code> is used.</dd>
+<dt><code>-d </code><i>directory</i></dt>
+<dd>Dump into a directory instead of tarball By default, lvmdump will produce a single compressed tarball containing all the information. Using this option, it can be instructed to only produce the raw dump tree, rooted in <i>directory</i>.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help message</dd>
+<dt><code>-l</code></dt>
+<dd>Include <code><a href="/docs/linux/man/8-lvmetad/">lvmetad</a></code>(8) daemon dump if it is running. The dump contains cached information that is currently stored in lvmetad: VG metadata, PV metadata and various mappings in between these metadata for quick access.</dd>
+<dt><code>-m</code></dt>
+<dd>Gather LVM metadata from the PVs This option generates a 1:1 dump of the metadata area from all PVs visible to the system, which can cause the dump to increase in size considerably. However, the metadata dump may represent a valuable diagnostic resource.</dd>
+<dt><code>-p</code></dt>
+<dd>Include <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) daemon dump if it is running. The dump contains all in-progress operation currently monitored by the daemon and partial history for all yet uncollected results of polling operations already finished including reason.</dd>
+<dt><code>-s</code></dt>
+<dd>Gather system info and context. Currently, this encompasses info gathered by calling lsblk command and various systemd info and context: overall state of systemd units present in the system, more detailed status of units controlling LVM functionality and the content of systemd journal for current boot.</dd>
+<dt><code>-u</code></dt>
+<dd>Gather udev info and context: /etc/udev/udev.conf file, udev daemon version (output of &#8216;udevadm info &#8211;version&#8217; command), udev rules currently used in the system (content of /lib/udev/rules.d and /etc/udev/rules.d directory), list of files in /lib/udev directory and dump of current udev database content (the output of &#8216;udevadm info &#8211;export-db&#8217; command).</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>LVM_BINARY</code></p>
-<dd>The LVM2 binary to use. Defaults to &quot;lvm&quot;. Sometimes you might need to set this to &quot;/sbin/lvm.static&quot;, for example.</p>
-<dt><code>DMSETUP_BINARY</code></p>
-<dd>The dmsetup binary to use. Defaults to &quot;dmsetup&quot;.</dl>
+<dt><code>LVM_BINARY</code></dt>
+<dd>The LVM2 binary to use. Defaults to &quot;lvm&quot;. Sometimes you might need to set this to &quot;/sbin/lvm.static&quot;, for example.</dd>
+<dt><code>DMSETUP_BINARY</code></dt>
+<dd>The dmsetup binary to use. Defaults to &quot;dmsetup&quot;.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) </p>

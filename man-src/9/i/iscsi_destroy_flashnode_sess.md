@@ -14,14 +14,14 @@ description: "iscsi_destroy_flashnode_sess – destroy flashnode session entry"
 <p><i>fnode_sess</i></p>
 <dl>
 <dd>
-<dd>pointer to flashnode session entry to be destroyed</dl>
+</dd><dd>pointer to flashnode session entry to be destroyed</dd></dl>
 <h2>Description</h2>
 <p>Deletes the flashnode session entry and all children flashnode connection entries from sysfs</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

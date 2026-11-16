@@ -14,15 +14,15 @@ description: "ata_scsi_rbuf_fill – wrapper for SCSI command simulators"
 <p><i>args</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data / SCSI command of interest.</dl>
+</dd><dd>device IDENTIFY data / SCSI command of interest.</dd></dl>
 <p> <i>actor</i></p>
 <dl>
-<dd>Callback hook for desired SCSI command simulator</dl>
+<dd>Callback hook for desired SCSI command simulator</dd></dl>
 <h2>Description</h2>
 <p>Takes care of the hard work of simulating a SCSI command&#8230; Mapping the response buffer, calling the command&#8217;s handler, and handling the handler&#8217;s return value. This return value indicates whether the handler wishes the SCSI command to be completed successfully (0), or not (in which case cmd-&gt;result and sense buffer are assumed to be set). </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

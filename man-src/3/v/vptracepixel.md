@@ -13,16 +13,16 @@ description: "vpTracePixel – print a trace of the voxels composited into a pix
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpTracePixel(</code><i>vpc, trace_u, trace_v</i><code>)</code></p>
+<dt> <code>vpTracePixel(</code><i>vpc, trace_u, trace_v</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>trace_u, trace_v;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>trace_u, trace_v;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>trace_u, trace_v</i></p>
-<dd>Intermediate image coordinates of the pixel to trace.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>trace_u, trace_v</i></dt>
+<dd>Intermediate image coordinates of the pixel to trace.</dd></dl>
 <h2>Description</h2>
 <p>This routine is for debugging the rendering algorithms. If <i>(trace_u, trace_v)</i> is a valid set of coordinates in the intermediate image then a printout appears during rendering showing a trace of all of the voxels that contribute to the pixel. The intermediate image is not the same as the final image; see vpGetvpSetImage(3). </p>
 <p> The VolPack library must be compiled with the -DDEBUG compiler option for this function to have any effect.</p>

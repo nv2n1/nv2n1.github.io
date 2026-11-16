@@ -15,15 +15,15 @@ pci_msi_create_irq_domain - Create a MSI interrupt domain
 <h2>Arguments</h2>
 
 <i>fwnode</i>
-<dl><dd><dd>Optional fwnode of the interrupt controller</dl>
+<dl><dd></dd><dd>Optional fwnode of the interrupt controller</dd></dl>
  
 
  <i>info</i>
-<dl><dd>MSI domain info</dl>
+<dl><dd>MSI domain info</dd></dl>
  
 
  <i>parent</i>
-<dl><dd>Parent irq domain</dl>
+<dl><dd>Parent irq domain</dd></dl>
 
 <h2>Description</h2>
 

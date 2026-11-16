@@ -16,29 +16,29 @@ description: "Pacemaker – Part of the Pacemaker cluster resource manager"
 <p> This program should normally only be invoked from inside an OCF resource agent</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>This text</p>
-<dt><code>&#8211;version</code></p>
-<dd>Version information</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd>Increase debug output</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Print only the value on stdout</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Print only the value on stdout</dd></dl>
 <h3>Commands:</h3>
 <dl>
-<dt><code>-G</code>, <code>&#8211;query</code></p>
-<dd>Query the current value of the attribute/option</p>
-<dt><code>-v</code>, <code>&#8211;update</code>=<i>value</i></p>
-<dd>Update the value of the attribute/option</p>
-<dt><code>-D</code>, <code>&#8211;delete</code></p>
-<dd>Delete the attribute/option</dl>
+<dt><code>-G</code>, <code>&#8211;query</code></dt>
+<dd>Query the current value of the attribute/option</dd>
+<dt><code>-v</code>, <code>&#8211;update</code>=<i>value</i></dt>
+<dd>Update the value of the attribute/option</dd>
+<dt><code>-D</code>, <code>&#8211;delete</code></dt>
+<dd>Delete the attribute/option</dd></dl>
 <h3>Additional Options:</h3>
 <dl>
-<dt><code>-N</code>, <code>&#8211;node</code>=<i>value</i></p>
-<dd>Set an attribute for the named node (instead of the current one).</p>
-<dt><code>-l</code>, <code>&#8211;lifetime</code>=<i>value</i></p>
-<dd>Until when should the setting take affect. Valid values: reboot, forever</p>
-<dt><code>-i</code>, <code>&#8211;id</code>=<i>value</i></p>
-<dd>(Advanced) The ID used to identify the attribute</dl>
+<dt><code>-N</code>, <code>&#8211;node</code>=<i>value</i></dt>
+<dd>Set an attribute for the named node (instead of the current one).</dd>
+<dt><code>-l</code>, <code>&#8211;lifetime</code>=<i>value</i></dt>
+<dd>Until when should the setting take affect. Valid values: reboot, forever</dd>
+<dt><code>-i</code>, <code>&#8211;id</code>=<i>value</i></dt>
+<dd>(Advanced) The ID used to identify the attribute</dd></dl>
 <h2>Author</h2>
 <p>Written by Andrew Beekhof</p>

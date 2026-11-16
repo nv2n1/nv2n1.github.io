@@ -17,16 +17,16 @@ description: "qmqp-sink – parallelized QMQP test server"
 <p> Note: this is an unsupported test program. No attempt is made to maintain compatibility between successive versions. </p>
 <p> Arguments:</p>
 <dl>
-<dt><code>-4</code></p>
-<dd> Support IPv4 only. This option has no effect when Postfix is built without IPv6 support.</p>
-<dt><code>-6</code></p>
-<dd> Support IPv6 only. This option is not available when Postfix is built without IPv6 support.</p>
-<dt><code>-c</code></p>
-<dd> Display a running counter that is updated whenever a delivery is completed.</p>
-<dt><code>-v</code></p>
-<dd> Increase verbosity. Specify <code>-v -v</code> to see some of the QMQP conversation.</p>
-<dt><code>-x </code><i>time</i></p>
-<dd> Terminate after <i>time</i> seconds. This is to facilitate memory leak testing.</dl>
+<dt><code>-4</code></dt>
+<dd> Support IPv4 only. This option has no effect when Postfix is built without IPv6 support.</dd>
+<dt><code>-6</code></dt>
+<dd> Support IPv6 only. This option is not available when Postfix is built without IPv6 support.</dd>
+<dt><code>-c</code></dt>
+<dd> Display a running counter that is updated whenever a delivery is completed.</dd>
+<dt><code>-v</code></dt>
+<dd> Increase verbosity. Specify <code>-v -v</code> to see some of the QMQP conversation.</dd>
+<dt><code>-x </code><i>time</i></dt>
+<dd> Terminate after <i>time</i> seconds. This is to facilitate memory leak testing.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/1-qmqp-source/">qmqp-source</a>(1), QMQP message generator

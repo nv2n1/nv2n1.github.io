@@ -15,23 +15,23 @@ svc_find_xprt - find an RPC transport instance
 <h2>Arguments</h2>
 
 <i>serv</i>
-<dl><dd><dd>pointer to svc_serv to search</dl>
+<dl><dd></dd><dd>pointer to svc_serv to search</dd></dl>
  
 
  <i>xcl_name</i>
-<dl><dd>C string containing transport's class name</dl>
+<dl><dd>C string containing transport's class name</dd></dl>
  
 
  <i>net</i>
-<dl><dd>owner net pointer</dl>
+<dl><dd>owner net pointer</dd></dl>
  
 
  <i>af</i>
-<dl><dd>Address family of transport's local address</dl>
+<dl><dd>Address family of transport's local address</dd></dl>
  
 
  <i>port</i>
-<dl><dd>transport's IP port number</dl>
+<dl><dd>transport's IP port number</dd></dl>
 
 <h2>Description</h2>
 

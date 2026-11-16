@@ -10,12 +10,7 @@ description: "xcb_randr_get_output_info –"
 <p>xcb_randr_get_output_info &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/randr.h&gt;
-
-
 Request function
-
-
-
 xcb_randr_get_output_info_cookie_t xcb_randr_get_output_info(xcb_connection_t *conn, xcb_randr_output_t output, xcb_timestamp_t config_timestamp);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_randr_get_output_info_reply_t {
@@ -37,62 +32,62 @@ xcb_randr_get_output_info_cookie_t xcb_randr_get_output_info(xcb_connection_t *c
 } <code>xcb_randr_get_output_info_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_randr_get_output_info_reply_t *<code>xcb_randr_get_output_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_randr_get_output_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_randr_get_output_info_reply_t *<code>xcb_randr_get_output_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_randr_get_output_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_randr_crtc_t *<code>xcb_randr_get_output_info_crtcs</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_output_info_crtcs_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_crtcs_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_randr_mode_t *<code>xcb_randr_get_output_info_modes</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_output_info_modes_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_modes_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_randr_output_t *<code>xcb_randr_get_output_info_clones</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_output_info_clones_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_clones_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
-<dd>uint8_t *<code>xcb_randr_get_output_info_name</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_output_info_name_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</p>
+<dd>xcb_randr_crtc_t *<code>xcb_randr_get_output_info_crtcs</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_output_info_crtcs_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_crtcs_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_randr_mode_t *<code>xcb_randr_get_output_info_modes</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_output_info_modes_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_modes_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_randr_output_t *<code>xcb_randr_get_output_info_clones</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_output_info_clones_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_clones_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
+<dd>uint8_t *<code>xcb_randr_get_output_info_name</code>(const xcb_randr_get_output_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_output_info_name_length</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_randr_get_output_info_name_end</code>(const xcb_randr_get_output_info_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>output</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>config_timestamp</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>output</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>config_timestamp</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_RANDR_GET_OUTPUT_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>status</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>timestamp</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>crtc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mm_width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mm_height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>connection</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>subpixel_order</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_crtcs</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_modes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_preferred</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_clones</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_RANDR_GET_OUTPUT_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>status</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>timestamp</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>crtc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mm_width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mm_height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>connection</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>subpixel_order</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_crtcs</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_modes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_preferred</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_clones</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_randr_get_output_info_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_randr_get_output_info_reply</i>. </p>

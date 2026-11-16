@@ -11,10 +11,10 @@ description: "leaf – Lightweight Editor of Ascii(and more) Files"
 <p> leaf &#8211; Lightweight Editor of Ascii(and more) Files </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>leaf</code> [-f] [-d&nbsp;<wbr><i>dictionary</i>] [+<i>n</i>] [<i>filename</i>]</dl>
+<dt> <code>leaf</code> [-f] [-d&nbsp;<wbr><i>dictionary</i>] [+<i>n</i>] [<i>filename</i>]</dt></dl>
 <h2>USAGE</h2>
 <p> <code>leaf</code></p>
-<dd>is a simple console text file editor, with paragraph word-wrapping and spell checking. <code>leaf</code> is based on the text editor in the Cone mail reader and composer. <code>leaf</code> opens <i>filename</i>, positioning the cursor on the first line, or line #<i>n</i>, if specified. </p>
+<dd>is a simple console text file editor, with paragraph word-wrapping and spell checking. <code>leaf</code> is based on the text editor in the Cone mail reader and composer. <code>leaf</code> opens <i>filename</i>, positioning the cursor on the first line, or line #<i>n</i>, if specified. </dd>
 <p> This is not really the best editor for program sources. <code>leaf</code> is meant to be used as a quick editor for writing short notes and memos. As text is typed, words will automatically flow to wrap within a typical 80-character terminal display, even on larger display (due to <code>leaf</code>&#8216;s heritage as an editor for E-mail messages, which are traditionally formatted to fit an 80-character display). Word wrapping is &quot;lazy&quot;: only long text lines are wrapped. Short text lines are not folded together. Individual paragraphs are separated by blank lines of text. Press CTRL-J to optimally rejustify the paragraph under the cursor. The bottom two lines on the screen list which keys to press for other functions.</p>
 <h3>Flowed text</h3>
 <p> The <code>-f</code> option enables &#8220;flowed text&#8221; formatting convention. Plain text files have no explicit means for joining multiple lines into logical paragraph. Each line of text is an individual line, and a blank line marks the end of a paragraph. </p>
@@ -26,8 +26,8 @@ description: "leaf – Lightweight Editor of Ascii(and more) Files"
 <p> Pressing CTRL-J optimally rejustifies the text in flowed text mode. <code>leaf</code> heuristically determines the start and the end of the paragraph, readjusts the width of the paragraph, and marks each line as flowed, except the last paragraph line. <code>leaf</code> uses a unicode-based algorithm for determining whether the last character line needs a space character, in addition to the flowed space marker. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> <code>leaf</code> is frequently used to edit plain text email message content. Because email messages assign some semantical meaning to lines of text that start with spaces or &quot;&gt;&quot; characters, CTRL-J will not rejustify lines of text that begin with a &quot;&gt;&quot; or a space. These lines will be considered paragraph boundaries, in addition to blank lines. </p>
 </dl>
 <h3>Spell checking</h3>
@@ -37,6 +37,5 @@ description: "leaf – Lightweight Editor of Ascii(and more) Files"
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ description: "SPI_keepplan – save a prepared statement"
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>the prepared statement to be saved</dl>
+<dd>the prepared statement to be saved</dd></dl>
 <h2>Return Value</h2>
 <p>0 on success; SPI_ERROR_ARGUMENT if <i>plan</i> is NULL or invalid</p>
 <h2>Notes</h2>

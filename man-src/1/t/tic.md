@@ -24,7 +24,7 @@ url: "/docs/linux/man/1-tic/"
 &nbsp;.IP&nbsp;&bull;&nbsp;4 For hashed databases, a filename is needed. If the given file is not found by that name, but can be found by adding the suffix &quot;.db&quot;, then that is used.
 <dl>
 <dt>
-<dd> The default name for the hashed database is the same as the default directory name (only adding a &quot;.db&quot; suffix).</dl>
+</dt><dd> The default name for the hashed database is the same as the default directory name (only adding a &quot;.db&quot; suffix).</dd></dl>
  
 
  In either case (directory or hashed database), <b>tic</b> will create the container if it does not exist. For a directory, this would be the ``terminfo'' leaf, versus a &quot;terminfo.db&quot; file. 
@@ -52,119 +52,116 @@ url: "/docs/linux/man/1-tic/"
 
 <dl>
 <dt><b>-0</b>
-<dd> restricts the output to a single line
-<dt><b>-1</b>
-<dd> restricts the output to a single column
-<dt><b>-a</b>
-<dd> tells <b>tic</b> to retain commented-out capabilities rather than discarding them. Capabilities are commented by prefixing them with a period. This sets the <b>-x</b> option, because it treats the commented-out entries as user-defined names. If the source is termcap, accept the 2-character names required by version 6. Otherwise these are ignored.
-<dt><b>-C</b>
-<dd> Force source translation to termcap format. Note: this differs from the <b>-C</b> option of <b><a HREF="/docs/linux/man/1-infocmp/">infocmp</a></b>(1) in that it does not merely translate capability names, but also translates terminfo strings to termcap format. Capabilities that are not translatable are left in the entry under their terminfo names but commented out with two preceding dots. The actual format used incorporates some improvements for escaped characters from terminfo format. For a stricter BSD-compatible translation, add the <b>-K</b> option.
+</dt><dd> restricts the output to a single line
+</dd><dt><b>-1</b>
+</dt><dd> restricts the output to a single column
+</dd><dt><b>-a</b>
+</dt><dd> tells <b>tic</b> to retain commented-out capabilities rather than discarding them. Capabilities are commented by prefixing them with a period. This sets the <b>-x</b> option, because it treats the commented-out entries as user-defined names. If the source is termcap, accept the 2-character names required by version 6. Otherwise these are ignored.
+</dd><dt><b>-C</b>
+</dt><dd> Force source translation to termcap format. Note: this differs from the <b>-C</b> option of <b><a HREF="/docs/linux/man/1-infocmp/">infocmp</a></b>(1) in that it does not merely translate capability names, but also translates terminfo strings to termcap format. Capabilities that are not translatable are left in the entry under their terminfo names but commented out with two preceding dots. The actual format used incorporates some improvements for escaped characters from terminfo format. For a stricter BSD-compatible translation, add the <b>-K</b> option.
+</dd><dt>
+</dt><dd> If this is combined with <b>-c</b>, <b>tic</b> makes additional checks to report cases where the terminfo values do not have an exact equivalent in termcap form. For example:
+</dd><dl>
 <dt>
-<dd> If this is combined with <b>-c</b>, <b>tic</b> makes additional checks to report cases where the terminfo values do not have an exact equivalent in termcap form. For example:
-<dl>
-<dt>
-<dd> 
+</dt><dd> 
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <b>sgr</b> usually will not convert, because termcap lacks the ability to work with more than two parameters, and because termcap lacks many of the arithmetic/logical operators used in terminfo. 
-&nbsp;.IP&nbsp;&bull;&nbsp;4 capabilities with more than one delay or with delays before the end of the string will not convert completely.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 capabilities with more than one delay or with delays before the end of the string will not convert completely.</dd></dl>
 
 <dt><b>-c</b>
-<dd> tells <b>tic</b> to only check <i>file</i> for errors, including syntax problems and bad use-links. If you specify <b>-C</b> (<b>-I</b>) with this option, the code will print warnings about entries which, after use resolution, are more than 1023 (4096) bytes long. Due to a fixed buffer length in older termcap libraries, as well as buggy checking for the buffer length (and a documented limit in terminfo), these entries may cause core dumps with other implementations.
-<dt>
-<dd> <b>tic</b> checks string capabilities to ensure that those with parameters will be valid expressions. It does this check only for the predefined string capabilities; those which are defined with the <b>-x</b> option are ignored.
-<dt><b>-D</b>
-<dd> tells <b>tic</b> to print the database locations that it knows about, and exit. The first location shown is the one to which it would write compiled terminal descriptions. If <b>tic</b> is not able to find a writable database location according to the rules summarized above, it will print a diagnostic and exit with an error rather than printing a list of database locations.
-<dt><b>-e </b><i>names</i>
-<dd> Limit writes and translations to the following comma-separated list of terminals. If any name or alias of a terminal matches one of the names in the list, the entry will be written or translated as normal. Otherwise no output will be generated for it. The option value is interpreted as a file containing the list if it contains a '/'. (Note: depending on how tic was compiled, this option may require <b>-I</b> or <b>-C</b>.)
-<dt><b>-f</b>
-<dd> Display complex terminfo strings which contain if/then/else/endif expressions indented for readability.
-<dt><b>-G</b>
-<dd> Display constant literals in decimal form rather than their character equivalents.
-<dt><b>-g</b>
-<dd> Display constant character literals in quoted form rather than their decimal equivalents.
-<dt><b>-I</b>
-<dd> Force source translation to terminfo format.
-<dt><b>-K</b>
-<dd> Suppress some longstanding ncurses extensions to termcap format, e.g., &quot;\s&quot; for space.
-<dt><b>-L</b>
-<dd> Force source translation to terminfo format using the long C variable names listed in &lt;<b>term.h</b>&gt;
-<dt><b>-N</b>
-<dd> Disable smart defaults. Normally, when translating from termcap to terminfo, the compiler makes a number of assumptions about the defaults of string capabilities <b>reset1_string</b>, <b>carriage_return</b>, <b>cursor_left</b>, <b>cursor_down</b>, <b>scroll_forward</b>, <b>tab</b>, <b>newline</b>, <b>key_backspace</b>, <b>key_left</b>, and <b>key_down</b>, then attempts to use obsolete termcap capabilities to deduce correct values. It also normally suppresses output of obsolete termcap capabilities such as <b>bs</b>. This option forces a more literal translation that also preserves the obsolete capabilities.
-<dt><b>-o</b><i>dir</i>
-<dd> Write compiled entries to given database location. Overrides the TERMINFO environment variable.
-<dt><b>-Q</b><i>n</i>
-<dd> Rather than show source in terminfo (text) format, print the compiled (binary) format in hexadecimal or base64 form, depending on the option's value:
-<dl>
-<dt>
-<dd>
+</dt><dd> tells <b>tic</b> to only check <i>file</i> for errors, including syntax problems and bad use-links. If you specify <b>-C</b> (<b>-I</b>) with this option, the code will print warnings about entries which, after use resolution, are more than 1023 (4096) bytes long. Due to a fixed buffer length in older termcap libraries, as well as buggy checking for the buffer length (and a documented limit in terminfo), these entries may cause core dumps with other implementations.
+</dd><dt>
+</dt><dd> <b>tic</b> checks string capabilities to ensure that those with parameters will be valid expressions. It does this check only for the predefined string capabilities; those which are defined with the <b>-x</b> option are ignored.
+</dd><dt><b>-D</b>
+</dt><dd> tells <b>tic</b> to print the database locations that it knows about, and exit. The first location shown is the one to which it would write compiled terminal descriptions. If <b>tic</b> is not able to find a writable database location according to the rules summarized above, it will print a diagnostic and exit with an error rather than printing a list of database locations.
+</dd><dt><b>-e </b><i>names</i>
+</dt><dd> Limit writes and translations to the following comma-separated list of terminals. If any name or alias of a terminal matches one of the names in the list, the entry will be written or translated as normal. Otherwise no output will be generated for it. The option value is interpreted as a file containing the list if it contains a '/'. (Note: depending on how tic was compiled, this option may require <b>-I</b> or <b>-C</b>.)
+</dd><dt><b>-f</b>
+</dt><dd> Display complex terminfo strings which contain if/then/else/endif expressions indented for readability.
+</dd><dt><b>-G</b>
+</dt><dd> Display constant literals in decimal form rather than their character equivalents.
+</dd><dt><b>-g</b>
+</dt><dd> Display constant character literals in quoted form rather than their decimal equivalents.
+</dd><dt><b>-I</b>
+</dt><dd> Force source translation to terminfo format.
+</dd><dt><b>-K</b>
+</dt><dd> Suppress some longstanding ncurses extensions to termcap format, e.g., &quot;\s&quot; for space.
+</dd><dt><b>-L</b>
+</dt><dd> Force source translation to terminfo format using the long C variable names listed in &lt;<b>term.h</b>&gt;
+</dd><dt><b>-N</b>
+</dt><dd> Disable smart defaults. Normally, when translating from termcap to terminfo, the compiler makes a number of assumptions about the defaults of string capabilities <b>reset1_string</b>, <b>carriage_return</b>, <b>cursor_left</b>, <b>cursor_down</b>, <b>scroll_forward</b>, <b>tab</b>, <b>newline</b>, <b>key_backspace</b>, <b>key_left</b>, and <b>key_down</b>, then attempts to use obsolete termcap capabilities to deduce correct values. It also normally suppresses output of obsolete termcap capabilities such as <b>bs</b>. This option forces a more literal translation that also preserves the obsolete capabilities.
+</dd><dt><b>-o</b><i>dir</i>
+</dt><dd> Write compiled entries to given database location. Overrides the TERMINFO environment variable.
+</dd><dt><b>-Q</b><i>n</i>
+</dt><dd> Rather than show source in terminfo (text) format, print the compiled (binary) format in hexadecimal or base64 form, depending on the option's value:
+</dd><dl>
 <dl>
 <dt>1
-<dd> hexadecimal
-<dt>2
-<dd> base64
-<dt>3
-<dd> hexadecimal and base64</dl>
+</dt><dd> hexadecimal
+</dd><dt>2
+</dt><dd> base64
+</dd><dt>3
+</dt><dd> hexadecimal and base64</dd></dl>
 </dl>
 
 <dt><b>-q</b>
-<dd> Suppress comments and blank lines when showing translated source.
-<dt><b>-R</b><i>subset</i>
-<dd> Restrict output to a given subset. This option is for use with archaic versions of terminfo like those on SVr1, Ultrix, or HP-UX that do not support the full set of SVR4/XSI Curses terminfo; and outright broken ports like AIX 3.x that have their own extensions incompatible with SVr4/XSI. Available subsets are ``SVr1'', ``Ultrix'', ``HP'', ``BSD'' and ``AIX''; see <b><a HREF="/docs/linux/man/5-terminfo/">terminfo</a></b>(5) for details.
-<dt><b>-r</b>
-<dd> Force entry resolution (so there are no remaining tc capabilities) even when doing translation to termcap format. This may be needed if you are preparing a termcap file for a termcap library (such as GNU termcap through version 1.3 or BSD termcap through 4.3BSD) that does not handle multiple tc capabilities per entry.
-<dt><b>-s</b>
-<dd> Summarize the compile by showing the database location into which entries are written, and the number of entries which are compiled.
-<dt><b>-T</b>
-<dd> eliminates size-restrictions on the generated text. This is mainly useful for testing and analysis, since the compiled descriptions are limited (e.g., 1023 for termcap, 4096 for terminfo).
-<dt><b>-t</b>
-<dd> tells <b>tic</b> to discard commented-out capabilities. Normally when translating from terminfo to termcap, untranslatable capabilities are commented-out.
-<dt><b>-U</b>
-<dd> tells <b>tic</b> to not post-process the data after parsing the source file. Normally, it infers data which is commonly missing in older terminfo data, or in termcaps.
-<dt><b>-V</b>
-<dd> reports the version of ncurses which was used in this program, and exits.
-<dt><b>-v</b><i>n</i>
-<dd> specifies that (verbose) output be written to standard error trace information showing <b>tic</b>'s progress.
+</dt><dd> Suppress comments and blank lines when showing translated source.
+</dd><dt><b>-R</b><i>subset</i>
+</dt><dd> Restrict output to a given subset. This option is for use with archaic versions of terminfo like those on SVr1, Ultrix, or HP-UX that do not support the full set of SVR4/XSI Curses terminfo; and outright broken ports like AIX 3.x that have their own extensions incompatible with SVr4/XSI. Available subsets are ``SVr1'', ``Ultrix'', ``HP'', ``BSD'' and ``AIX''; see <b><a HREF="/docs/linux/man/5-terminfo/">terminfo</a></b>(5) for details.
+</dd><dt><b>-r</b>
+</dt><dd> Force entry resolution (so there are no remaining tc capabilities) even when doing translation to termcap format. This may be needed if you are preparing a termcap file for a termcap library (such as GNU termcap through version 1.3 or BSD termcap through 4.3BSD) that does not handle multiple tc capabilities per entry.
+</dd><dt><b>-s</b>
+</dt><dd> Summarize the compile by showing the database location into which entries are written, and the number of entries which are compiled.
+</dd><dt><b>-T</b>
+</dt><dd> eliminates size-restrictions on the generated text. This is mainly useful for testing and analysis, since the compiled descriptions are limited (e.g., 1023 for termcap, 4096 for terminfo).
+</dd><dt><b>-t</b>
+</dt><dd> tells <b>tic</b> to discard commented-out capabilities. Normally when translating from terminfo to termcap, untranslatable capabilities are commented-out.
+</dd><dt><b>-U</b>
+</dt><dd> tells <b>tic</b> to not post-process the data after parsing the source file. Normally, it infers data which is commonly missing in older terminfo data, or in termcaps.
+</dd><dt><b>-V</b>
+</dt><dd> reports the version of ncurses which was used in this program, and exits.
+</dd><dt><b>-v</b><i>n</i>
+</dt><dd> specifies that (verbose) output be written to standard error trace information showing <b>tic</b>'s progress.
+</dd><dt>
+</dt><dd> The optional parameter <i>n</i> is a number from 1 to 10, inclusive, indicating the desired level of detail of information. If ncurses is built without tracing support, the optional parameter is ignored. If <i>n</i> is omitted, the default level is 1. If <i>n</i> is specified and greater than 1, the level of detail is increased.
+</dd><dl>
 <dt>
-<dd> The optional parameter <i>n</i> is a number from 1 to 10, inclusive, indicating the desired level of detail of information. If ncurses is built without tracing support, the optional parameter is ignored. If <i>n</i> is omitted, the default level is 1. If <i>n</i> is specified and greater than 1, the level of detail is increased.
-<dl>
-<dt>
-<dd> 
-
+</dt><dd> 
  The debug flag levels are as follows:
-<dl>
+</dd><dl>
 <dt>1
-<dd> Names of files created and linked
-<dt>2
-<dd> Information related to the ``use'' facility
-<dt>3
-<dd> Statistics from the hashing algorithm
-<dt>5
-<dd> String-table memory allocations
-<dt>7
-<dd> Entries into the string-table
-<dt>8
-<dd> List of tokens encountered by scanner
-<dt>9
-<dd> All values computed in construction of the hash table</dl>
+</dt><dd> Names of files created and linked
+</dd><dt>2
+</dt><dd> Information related to the ``use'' facility
+</dd><dt>3
+</dt><dd> Statistics from the hashing algorithm
+</dd><dt>5
+</dt><dd> String-table memory allocations
+</dd><dt>7
+</dt><dd> Entries into the string-table
+</dd><dt>8
+</dt><dd> List of tokens encountered by scanner
+</dd><dt>9
+</dt><dd> All values computed in construction of the hash table</dd></dl>
  
 
  If the debug level <i>n</i> is not given, it is taken to be one.</dl>
 
 <dt><b>-W</b>
-<dd> By itself, the <b>-w</b> option will not force long strings to be wrapped. Use the <b>-W</b> option to do this.
-<dt>
-<dd> If you specify both <b>-f</b> and <b>-W</b> options, the latter is ignored when <b>-f</b> has already split the line.
-<dt><b>-w</b><i>n</i>
-<dd> specifies the width of the output. The parameter is optional. If it is omitted, it defaults to 60.
-<dt><b>-x</b>
-<dd> Treat unknown capabilities as user-defined (see <b><a HREF="/docs/linux/man/5-user_caps/">user_caps</a>(5)</b>). That is, if you supply a capability name which <b>tic</b> does not recognize, it will infer its type (boolean, number or string) from the syntax and make an extended table entry for that. User-defined capability strings whose name begins with ``k'' are treated as function keys.</dl>
+</dt><dd> By itself, the <b>-w</b> option will not force long strings to be wrapped. Use the <b>-W</b> option to do this.
+</dd><dt>
+</dt><dd> If you specify both <b>-f</b> and <b>-W</b> options, the latter is ignored when <b>-f</b> has already split the line.
+</dd><dt><b>-w</b><i>n</i>
+</dt><dd> specifies the width of the output. The parameter is optional. If it is omitted, it defaults to 60.
+</dd><dt><b>-x</b>
+</dt><dd> Treat unknown capabilities as user-defined (see <b><a HREF="/docs/linux/man/5-user_caps/">user_caps</a>(5)</b>). That is, if you supply a capability name which <b>tic</b> does not recognize, it will infer its type (boolean, number or string) from the syntax and make an extended table entry for that. User-defined capability strings whose name begins with ``k'' are treated as function keys.</dd></dl>
 
 <h3>PARAMETERS</h3>
 
 <dl>
 <dt><i>file</i>
-<dd> contains one or more <b>terminfo</b> terminal descriptions in source format [see <b><a HREF="/docs/linux/man/5-terminfo/">terminfo</a></b>(5)]. Each description in the file describes the capabilities of a particular terminal.
-<dt>
-<dd> If <i>file</i> is ``-'', then the data is read from the standard input. The <i>file</i> parameter may also be the path of a character-device.</dl>
+</dt><dd> contains one or more <b>terminfo</b> terminal descriptions in source format [see <b><a HREF="/docs/linux/man/5-terminfo/">terminfo</a></b>(5)]. Each description in the file describes the capabilities of a particular terminal.
+</dd><dt>
+</dt><dd> If <i>file</i> is ``-'', then the data is read from the standard input. The <i>file</i> parameter may also be the path of a character-device.</dd></dl>
 
 <h3>PROCESSING</h3>
 
@@ -230,17 +227,17 @@ url: "/docs/linux/man/1-tic/"
 
 <dl>
 <dt>
-<dd> <b>-0</b> <b>-1</b> <b>-C</b> <b>-G</b> <b>-I</b> <b>-N</b> <b>-R</b> <b>-T</b> <b>-V</b> <b>-a</b> <b>-e</b> <b>-f</b> <b>-g</b> <b>-o</b> <b>-r</b> <b>-s</b> <b>-t</b> <b>-x</b></dl>
+</dt><dd> <b>-0</b> <b>-1</b> <b>-C</b> <b>-G</b> <b>-I</b> <b>-N</b> <b>-R</b> <b>-T</b> <b>-V</b> <b>-a</b> <b>-e</b> <b>-f</b> <b>-g</b> <b>-o</b> <b>-r</b> <b>-s</b> <b>-t</b> <b>-x</b></dd></dl>
  
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The NetBSD <b>tic</b> supports a few of the ncurses options 
 
 <dl>
 <dt>
-<dd> <b>-a</b> <b>-o</b> <b>-x</b></dl>
+</dt><dd> <b>-a</b> <b>-o</b> <b>-x</b></dd></dl>
 
 <dl>
 <dt>
-<dd> and adds <b>-S</b> (a feature which does the same thing as infocmp's <b>-e</b> and <b>-E</b> options).</dl>
+</dt><dd> and adds <b>-S</b> (a feature which does the same thing as infocmp's <b>-e</b> and <b>-E</b> options).</dd></dl>
  
 
  The SVr4 <b>-c</b> mode does not report bad ``use='' links. 
@@ -251,7 +248,7 @@ url: "/docs/linux/man/1-tic/"
 
 <dl>
 <dt><b>/etc/terminfo/?/*</b>
-<dd> Compiled terminal description database.</dl>
+</dt><dd> Compiled terminal description database.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

@@ -14,18 +14,18 @@ description: "gnutls_x509_crq_get_dn_by_oid – API function"
 <p> <code>int gnutls_x509_crq_get_dn_by_oid(gnutls_x509_crq_t </code><i>crq</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, unsigned int </code><i>raw_flag</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a gnutls_x509_crq_t structure</p>
-<dt>const char * oid</p>
-<dd> holds an Object Identifier in a null terminated string</p>
-<dt>int indx</p>
-<dd> In case multiple same OIDs exist in the RDN, this specifies which to get. Use (0) to get the first one.</p>
-<dt>unsigned int raw_flag</p>
-<dd> If non-zero returns the raw DER data of the DN part.</p>
-<dt>void * buf</p>
-<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</p>
-<dt>size_t * buf_size</p>
-<dd> initially holds the size of <i>buf</i></dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a gnutls_x509_crq_t structure</dd>
+<dt>const char * oid</dt>
+<dd> holds an Object Identifier in a null terminated string</dd>
+<dt>int indx</dt>
+<dd> In case multiple same OIDs exist in the RDN, this specifies which to get. Use (0) to get the first one.</dd>
+<dt>unsigned int raw_flag</dt>
+<dd> If non-zero returns the raw DER data of the DN part.</dd>
+<dt>void * buf</dt>
+<dd> a pointer to a structure to hold the name (may be <code>NULL</code>)</dd>
+<dt>size_t * buf_size</dt>
+<dd> initially holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the part of the name of the Certificate request subject, specified by the given OID. The output will be encoded as described in RFC2253. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h If raw flag is (0), this function will only return known OIDs as text. Other OIDs will be DER encoded, as described in RFC2253 &#8212; in hex format with a &#8216;#&#8217; prefix. You can check about known OIDs using <code>gnutls_x509_dn_oid_known()</code>.</p>
@@ -40,6 +40,6 @@ description: "gnutls_x509_crq_get_dn_by_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

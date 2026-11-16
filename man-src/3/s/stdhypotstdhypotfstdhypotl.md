@@ -21,15 +21,10 @@ double hypot ( double x, double y, double z ); <code>(6)</code> <i>(since C++17)
 long double hypot ( long double x, long double y, long double z ); <code>(7)</code> <i>(since C++17)</i><br />
 Promoted hypot ( Arithmetic1 x, Arithmetic2 y, Arithmetic3 z ); <code>(8)</code> <i>(since C++17)</i> </p>
 <pre><code>1-3) Computes the square root of the sum of the squares of x and y, without undue overflow or underflow at intermediate stages of the computation.
-
 4) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by (1-3). If any argument has integral_type, it is cast to double. If any other argument is long double, then the return type is long double, otherwise it is double.
-
 5-7) Computes the square root of the sum of the squares of x, y, and z, without undue overflow or underflow at intermediate stages of the computation.
-
 8) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by (5-7). If any argument has integral_type, it is cast to double. If any other argument is long double, then the return type is long double, otherwise it is double.
-
 The value computed by the two-argument version of this function is the length of the hypotenuse of a right-angled triangle with sides of length x and y, or the distance of the point (x,y) from the origin (0,0), or the magnitude of a complex number x+iy
-
 The value computed by the three-argument version of this function is the distance of the point (x,y,z) from the origin (0,0,0).
 </code></pre>
 <h2>Parameters</h2>
@@ -63,20 +58,13 @@ Distance between two points (x1,y1,z1) and (x2,y2,z2)on 3D space can be calculat
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cfloat&gt;
-
 #include &lt;cstring&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     // typical usage
     std::cout &lt;&lt; &quot;(1,1) cartesian is (&quot; &lt;&lt; std::hypot(1, 1)

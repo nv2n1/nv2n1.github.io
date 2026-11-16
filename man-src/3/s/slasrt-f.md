@@ -22,10 +22,10 @@ description: "slasrt.f –"
  in decreasing order (if ID = 'D' ).
  Use Quick Sort, reverting to Insertion sort on arrays of
  size &lt;= 20. Dimension of STACK limits N to about 2**32.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ID</i> </p>
+<dd><i>ID</i> </dd>
 <pre> ID is CHARACTER*1
  = 'I': sort D in increasing order;
  = 'D': sort D in decreasing order.</pre>
@@ -45,13 +45,13 @@ description: "slasrt.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 89 of file slasrt.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

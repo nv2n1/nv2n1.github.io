@@ -11,34 +11,34 @@ description: "nfdump – netflow display and analyze program"
 <p> nfdump &#8211; netflow display and analyze program</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>nfdump [options] [filter]</code></dl>
+<dt> <code>nfdump [options] [filter]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>nfdump</code></p>
-<dd>is the netflow display and analyzing program of the nfdump tool set. It reads the netflow data from files stored by nfcapd and processes the flows according the options given. The filter syntax is comparable to tcpdump and extended for netflow data. Nfdump can also display many different top N flow and flow element statistics. </p>
+<dd>is the netflow display and analyzing program of the nfdump tool set. It reads the netflow data from files stored by nfcapd and processes the flows according the options given. The filter syntax is comparable to tcpdump and extended for netflow data. Nfdump can also display many different top N flow and flow element statistics. </dd>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r </code><i>inputfile</i></p>
-<dd> Read input data from <i>inputfile</i>. Default is read from stdin.</p>
-<dt><code>-R </code><i>expr</i></p>
-<dd> Read input from a sequence of files in the same directory. <i>expr</i> may be one of:</p>
+<dt><code>-r </code><i>inputfile</i></dt>
+<dd> Read input data from <i>inputfile</i>. Default is read from stdin.</dd>
+<dt><code>-R </code><i>expr</i></dt>
+<dd> Read input from a sequence of files in the same directory. <i>expr</i> may be one of:</dd>
 <dl>
 <dt>
-<dd> /any/<i>dir</i> Read recursively all files in directory <i>dir</i>. </p>
+</dt><dd> /any/<i>dir</i> Read recursively all files in directory <i>dir</i>. </dd>
 <p> /dir/<i>file</i> Read all files beginning with <i>file</i>. </p>
 <p> /dir/<i>file1:file2</i> Read all files from <i>file1</i> to <i>file2</i>. </p>
 <p> When using in combination with a sub hierarchy: </p>
 <p> /dir/<i>sub1/sub2/file1:sub3/sub4/file2</i> </p>
 <p> Read all files from <i>sub1/sub2/file1</i> <i>sub3/sub4/file2</i> iterating over all required hierarchy levels. </p>
 <p> Note: files are read in alphabetical sequence.</dl>
-<dt><code>-M </code><i>expr</i></p>
-<dd> Read input from multiple directories. <i>expr</i> looks like: <i>/any/path/to/dir1:dir2:dir3</i> etc. and will be expanded to the directories: <i>/any/path/to/dir1</i>, <i>/any/path/to/dir2</i> and <i>/any/path/to/dir3</i> Any number of colon separated directories may be given. The files to read are specified by -r or -R and are expected to exist in all the given directories. The options -r and -R must not contain any directory part when used in conjunction with -M.</p>
-<dt><code>-m</code></p>
-<dd> depricated option. Use -O tstart instead.</p>
-<dt><code>-O </code><i>order</i></p>
-<dd> Set sort order to print flows or aggregated flows. <i>order</i> can be:</p>
+<dt><code>-M </code><i>expr</i></dt>
+<dd> Read input from multiple directories. <i>expr</i> looks like: <i>/any/path/to/dir1:dir2:dir3</i> etc. and will be expanded to the directories: <i>/any/path/to/dir1</i>, <i>/any/path/to/dir2</i> and <i>/any/path/to/dir3</i> Any number of colon separated directories may be given. The files to read are specified by -r or -R and are expected to exist in all the given directories. The options -r and -R must not contain any directory part when used in conjunction with -M.</dd>
+<dt><code>-m</code></dt>
+<dd> depricated option. Use -O tstart instead.</dd>
+<dt><code>-O </code><i>order</i></dt>
+<dd> Set sort order to print flows or aggregated flows. <i>order</i> can be:</dd>
 <dl>
 <dt>
-<dd> flows Sort according the number of flows<br />
+</dt><dd> flows Sort according the number of flows<br />
  packets Sort according to (in)packets<br />
  ipkg Same as packets<br />
  opkg Sort according to output packets<br />
@@ -55,22 +55,22 @@ description: "nfdump – netflow display and analyze program"
  ibpp Same as bpp<br />
  obpp Sort according to output packets<br />
  tstart Sort according to start time of flow &#8211; former -m<br />
- tend&quot; Sort according to end time of flows</dl>
-<dt><code>-w </code><i>outputfile</i></p>
-<dd> If specified writes binary netflow records to <i>outputfile</i> ready to be processed again with nfdump. The default output is ASCII on stdout. In combination with options -m, -a, -b, and -B write aggregated and/or sorted flow cache in binary format to disk.</p>
-<dt><code>-f </code><i>filterfile</i></p>
-<dd> Reads the filter syntax from <i>filterfile</i>. Note: Any filter specified directly on the command line takes precedence over -f.</p>
-<dt><code>-t </code><i>timewin</i></p>
-<dd> Process only flows, which fall in the time window <i>timewin</i>, where <i>timewin</i> is YYYY/MM/dd.hh:mm:ss[-YYYY/MM/dd.hh:mm:ss]. Any parts of the time spec may be omitted e.g YYYY/MM/dd expands to YYYY/MM/dd.00:00:00-infinity and processes all flow from a given day onwards. The time window may also be specified as +/- n. In this case it is relativ to the beginning or end of all flows. +10 means the first 10 seconds of all flows, -10 means the last 10 seconds of all flows.</p>
-<dt><code>-c </code><i>num</i></p>
-<dd> Limit the number of records to read and process from file(es) to the first <i>num</i> flows.</p>
-<dt><code>-a</code></p>
-<dd> Aggregate netflow data. Automatically implies -a. Aggregation is done at connection level by taking the 5-tuple protocol, srcip, dstip, srcport and dstport.</p>
-<dt><code>-A </code><i>aggregation </i></p>
-<dd> Similar to Flexible Netflow (FNF), netflow records can be aggregated by any number of given v9 fields. <i>aggregation</i> is a &#8216;,&#8217; separated list of recognised tags of the following list:</p>
+ tend&quot; Sort according to end time of flows</dd></dl>
+<dt><code>-w </code><i>outputfile</i></dt>
+<dd> If specified writes binary netflow records to <i>outputfile</i> ready to be processed again with nfdump. The default output is ASCII on stdout. In combination with options -m, -a, -b, and -B write aggregated and/or sorted flow cache in binary format to disk.</dd>
+<dt><code>-f </code><i>filterfile</i></dt>
+<dd> Reads the filter syntax from <i>filterfile</i>. Note: Any filter specified directly on the command line takes precedence over -f.</dd>
+<dt><code>-t </code><i>timewin</i></dt>
+<dd> Process only flows, which fall in the time window <i>timewin</i>, where <i>timewin</i> is YYYY/MM/dd.hh:mm:ss[-YYYY/MM/dd.hh:mm:ss]. Any parts of the time spec may be omitted e.g YYYY/MM/dd expands to YYYY/MM/dd.00:00:00-infinity and processes all flow from a given day onwards. The time window may also be specified as +/- n. In this case it is relativ to the beginning or end of all flows. +10 means the first 10 seconds of all flows, -10 means the last 10 seconds of all flows.</dd>
+<dt><code>-c </code><i>num</i></dt>
+<dd> Limit the number of records to read and process from file(es) to the first <i>num</i> flows.</dd>
+<dt><code>-a</code></dt>
+<dd> Aggregate netflow data. Automatically implies -a. Aggregation is done at connection level by taking the 5-tuple protocol, srcip, dstip, srcport and dstport.</dd>
+<dt><code>-A </code><i>aggregation </i></dt>
+<dd> Similar to Flexible Netflow (FNF), netflow records can be aggregated by any number of given v9 fields. <i>aggregation</i> is a &#8216;,&#8217; separated list of recognised tags of the following list:</dd>
 <dl>
 <dt>
-<dd> proto IP protocol<br />
+</dt><dd> proto IP protocol<br />
  srcip Source IP address<br />
  dstip Destination IP address<br />
  srcip4/net IPv4 source IP address with applied netmask<br />
@@ -110,31 +110,31 @@ description: "nfdump – netflow display and analyze program"
  mpls8 MPLS label 8<br />
  mpls9 MPLS label 9<br />
  mpls10 MPLS label 10<br />
- router Exporting router IP</dl>
+ router Exporting router IP</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> nfdump automatically compiles an appropriate output format for the selected aggregation unless an explicit output format is given. The automatic output format is identical to <code>-o &#8216;fmt:%ts %td &lt;fields&gt; %pkt %byt %bps %bpp %fl&#8217;</code> where &lt;fields&gt; represents the selected aggregation tags. </p>
 <p> Example:</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code> -A proto,srcip,dstport</code> </p>
+</dt><dd> <code> -A proto,srcip,dstport</code> </dd>
 <p> <code> -A srcas,dstas</code> </p>
 </dl>
 </dl>
-<dt><code>-b</code></p>
-<dd> Aggregate netflow records as bidirectional flows. Automatically implies -a. Aggregation is done on connection level by taking the 5-tuple protocol, srcip, dstip, srcport and dstport, or the reverse order for the corresponding connection flow. Input and output packets/bytes are counted and reported separate. Both flows are merged into a single record. An appropriate output format is selected automatically, which may be overwritten by any -o format option.</p>
-<dt><code>-B</code></p>
-<dd> Like -b but automagically swaps flows, such that src port is &gt; 1024 and dst port is &lt; 1024 as some exporters do not care sending the flows in proper order. It&#8217;s considered to be a convenient option. If src and dst port are &gt; 1024 or &lt; 1024, the flows are taken as is.</p>
-<dt><code>-I</code></p>
-<dd> Print flow statistics from file specified by -r, or timeslot specified by -R/-M.</p>
-<dt><code>-D </code><i>dns</i></p>
-<dd> Set <i>dns</i> as nameserver to lookup hostnames.</p>
-<dt><code>-s </code><i>statistic[:p][/orderby]</i></p>
-<dd> Generate the Top N flow or flow element statistic. <i>statistic</i> can be:</p>
+<dt><code>-b</code></dt>
+<dd> Aggregate netflow records as bidirectional flows. Automatically implies -a. Aggregation is done on connection level by taking the 5-tuple protocol, srcip, dstip, srcport and dstport, or the reverse order for the corresponding connection flow. Input and output packets/bytes are counted and reported separate. Both flows are merged into a single record. An appropriate output format is selected automatically, which may be overwritten by any -o format option.</dd>
+<dt><code>-B</code></dt>
+<dd> Like -b but automagically swaps flows, such that src port is &gt; 1024 and dst port is &lt; 1024 as some exporters do not care sending the flows in proper order. It&#8217;s considered to be a convenient option. If src and dst port are &gt; 1024 or &lt; 1024, the flows are taken as is.</dd>
+<dt><code>-I</code></dt>
+<dd> Print flow statistics from file specified by -r, or timeslot specified by -R/-M.</dd>
+<dt><code>-D </code><i>dns</i></dt>
+<dd> Set <i>dns</i> as nameserver to lookup hostnames.</dd>
+<dt><code>-s </code><i>statistic[:p][/orderby]</i></dt>
+<dd> Generate the Top N flow or flow element statistic. <i>statistic</i> can be:</dd>
 <dl>
 <dt>
-<dd> record Statistic about arregated netflow records.<br />
+</dt><dd> record Statistic about arregated netflow records.<br />
  srcip Statistic about source IP addresses<br />
  dstip Statistic about destination IP addresses<br />
  ip Statistic about any (source or destination) IP addresses<br />
@@ -179,7 +179,7 @@ description: "nfdump – netflow display and analyze program"
  mpls8 Statistic about MPLS label 8<br />
  mpls9 Statistic about MPLS label 9<br />
  mpls10 Statistic about MPLS label 10<br />
- sysid Internal SysID of exporter </p>
+ sysid Internal SysID of exporter </dd>
 <p> NSEL/ASA stats<br />
  event NSEL/ASA event<br />
  xevent NSEL/ASA extended event<br />
@@ -204,30 +204,30 @@ description: "nfdump – netflow display and analyze program"
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> By adding <i>:p</i> to the statistic name, the resulting statistic is split up into transport layer protocols. Default is transport protocol independent statistics. </p>
 <p> <i>orderby</i> is optional and specifies the order by which the statistics is ordered and can be <i>flows</i>, <i>packets</i>, <i>bytes</i>, <i>pps</i>, <i>bps</i> or <i>bpp</i>. You may specify more than one <i>orderby</i> which results in the same statistic but ordered differently. If no <i>orderby</i> is given, statistics are ordered by <i>flows</i>. You can specify as many -s flow element statistics on the command line for the same run. </p>
 <p> Example:</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>-s srcip -s ip/flows -s dstport/pps/packets/bytes -s record/bytes</code></dl>
+</dt><dd> <code>-s srcip -s ip/flows -s dstport/pps/packets/bytes -s record/bytes</code></dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><code>-O </code><i>orderby</i></p>
-<dd> Specifies the default <i>orderby</i> for flow element statistics -s, which applies when no <i>orderby</i> is given at -s. <i>orderby</i> can be <i>flows</i>, <i>packets</i>, <i>bytes</i>, <i>pps</i>, <i>bps</i> or <i>bpp</i>. Defaults to <i>flows</i>.</p>
-<dt><code>-l </code><i>[+/-]packet_num</i></p>
-<dd> Limit statistics output to those records above or below the <i>packet_num</i> limit. <i>packet_num</i> accepts positive or negative numbers followed by &#8216;K&#8217; , &#8216;M&#8217; or &#8216;G&#8217; 10E3, 10E6 or 10E9 flows respectively. See also note at -L</p>
-<dt><code>-L </code><i>[+/-]byte_num</i></p>
-<dd> Limit statistics output to those records above or below the <i>byte_num</i> limit. <i>byte_num</i> accepts positive or negative numbers followed by &#8216;K&#8217; , &#8216;M&#8217; or &#8216;G&#8217; 10E3, 10E6 or 10E9 bytes respectively. <i>Note:</i> These limits only apply to the statistics and aggregated outputs generated with -a -s. To filter netflow records by packets and bytes, use the filter syntax &#8216;packets&#8217; and &#8216;bytes&#8217; described below.</p>
-<dt><code>-n </code><i>num</i></p>
+<dt><code>-O </code><i>orderby</i></dt>
+<dd> Specifies the default <i>orderby</i> for flow element statistics -s, which applies when no <i>orderby</i> is given at -s. <i>orderby</i> can be <i>flows</i>, <i>packets</i>, <i>bytes</i>, <i>pps</i>, <i>bps</i> or <i>bpp</i>. Defaults to <i>flows</i>.</dd>
+<dt><code>-l </code><i>[+/-]packet_num</i></dt>
+<dd> Limit statistics output to those records above or below the <i>packet_num</i> limit. <i>packet_num</i> accepts positive or negative numbers followed by &#8216;K&#8217; , &#8216;M&#8217; or &#8216;G&#8217; 10E3, 10E6 or 10E9 flows respectively. See also note at -L</dd>
+<dt><code>-L </code><i>[+/-]byte_num</i></dt>
+<dd> Limit statistics output to those records above or below the <i>byte_num</i> limit. <i>byte_num</i> accepts positive or negative numbers followed by &#8216;K&#8217; , &#8216;M&#8217; or &#8216;G&#8217; 10E3, 10E6 or 10E9 bytes respectively. <i>Note:</i> These limits only apply to the statistics and aggregated outputs generated with -a -s. To filter netflow records by packets and bytes, use the filter syntax &#8216;packets&#8217; and &#8216;bytes&#8217; described below.</dd>
+<dt><code>-n </code><i>num</i></dt>
 <dd> For record statistics (-s .. ): Define the number for the Top N. Defaults to 10. Use -n 0 to list all records.<br />
- For record sorting and aggregation (-a .. -O ..): Limit the records to the first top <i>num</i> sorted records. if not specified or -n 0 is given, all records are listed.</p>
-<dt><code>-o </code><i>format</i></p>
-<dd> Selects the output format to print flows or flow record statistics (-s record). The following formats are available:</p>
+ For record sorting and aggregation (-a .. -O ..): Limit the records to the first top <i>num</i> sorted records. if not specified or -n 0 is given, all records are listed.</dd>
+<dt><code>-o </code><i>format</i></dt>
+<dd> Selects the output format to print flows or flow record statistics (-s record). The following formats are available:</dd>
 <dl>
 <dt>
-<dd> raw Print each file flow record on multiple lines.<br />
+</dt><dd> raw Print each file flow record on multiple lines.<br />
  line Print each flow on one line. Default format.<br />
  long Print each flow on one line with more details<br />
  biline Same as line, but for bidir flows<br />
@@ -237,45 +237,45 @@ description: "nfdump – netflow display and analyze program"
  nel Print each NAT event on one line. Default if NEL enabled.<br />
  csv Comma separated output for machine readable processing.<br />
  pipe Legacy machine readable format: fields &#8216;|&#8217; separated.<br />
- fmt:<i>format</i> User defined output format.</dl>
+ fmt:<i>format</i> User defined output format.</dd></dl>
 <dl>
 <dt>
-<dd> For each defined output format except -o fmt:&lt;format&gt; an IPv6 long output format exists. <code>line6, long6 and extended6</code>. See <i>output formats</i> below for more information.</dl>
-<dt><code>-q</code></p>
-<dd> Suppress the header line and the statistics at the bottom.</p>
-<dt><code>-N</code></p>
-<dd> Print plain numbers in output. Easier for post-parsing.</p>
-<dt><code>-i </code><i>ident</i></p>
-<dd> Change ident label in file, specified by -r to <i>ident</p>
-<dt></i><code>-v </code><i>file</i></p>
-<dd> Verify <i>file</i>. Print data file version, number of blocks and compression status.</p>
-<dt><code>-E </code>file</p>
-<dd> Print exporter/sampler list found in <i>file</i>. In case of a nfcapd collector file, an additional statistics per exporter is printed with number of flows, packets and sequence errors.</p>
-<dt><code>-x </code>file</p>
-<dd> Scan and print extension maps located in file file</p>
-<dt><code>-j</code></p>
-<dd> Compress flows. Use bz2 compression in output file. Space efficient method</p>
-<dt><code>-z</code></p>
-<dd> Compress flows. Use fast LZO1X-1 compression in output file. Time efficient method</p>
-<dt><code>-J </code>num</p>
-<dd> Change compression for file(s) given by -r &lt;file&gt; or -R &lt;dir&gt; num: 0 uncompress, 1: LZO1X-1 compression, 2: bz2 compression</p>
-<dt><code>-Z</code></p>
-<dd> Check filter syntax and exit. Sets the return value accordingly.</p>
-<dt><code>-X</code></p>
-<dd> Compiles the filer syntax and dumps the filter engine table to stdout. This is for debugging purpose only.</p>
-<dt><code>-V</code></p>
-<dd> Print nfdump version and exit.</p>
-<dt><code>-h</code></p>
-<dd> Print help text on stdout with all options and exit.</dl>
+</dt><dd> For each defined output format except -o fmt:&lt;format&gt; an IPv6 long output format exists. <code>line6, long6 and extended6</code>. See <i>output formats</i> below for more information.</dd></dl>
+<dt><code>-q</code></dt>
+<dd> Suppress the header line and the statistics at the bottom.</dd>
+<dt><code>-N</code></dt>
+<dd> Print plain numbers in output. Easier for post-parsing.</dd>
+<dt><code>-i </code><i>ident</i></dt>
+<dd> Change ident label in file, specified by -r to <i>ident</dd>
+<dt></i><code>-v </code><i>file</i></dt>
+<dd> Verify <i>file</i>. Print data file version, number of blocks and compression status.</dd>
+<dt><code>-E </code>file</dt>
+<dd> Print exporter/sampler list found in <i>file</i>. In case of a nfcapd collector file, an additional statistics per exporter is printed with number of flows, packets and sequence errors.</dd>
+<dt><code>-x </code>file</dt>
+<dd> Scan and print extension maps located in file file</dd>
+<dt><code>-j</code></dt>
+<dd> Compress flows. Use bz2 compression in output file. Space efficient method</dd>
+<dt><code>-z</code></dt>
+<dd> Compress flows. Use fast LZO1X-1 compression in output file. Time efficient method</dd>
+<dt><code>-J </code>num</dt>
+<dd> Change compression for file(s) given by -r &lt;file&gt; or -R &lt;dir&gt; num: 0 uncompress, 1: LZO1X-1 compression, 2: bz2 compression</dd>
+<dt><code>-Z</code></dt>
+<dd> Check filter syntax and exit. Sets the return value accordingly.</dd>
+<dt><code>-X</code></dt>
+<dd> Compiles the filer syntax and dumps the filter engine table to stdout. This is for debugging purpose only.</dd>
+<dt><code>-V</code></dt>
+<dd> Print nfdump version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help text on stdout with all options and exit.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 0 No error. </p>
 <p> 255 Initialization failed. </p>
 <p> 254 Error in filter syntax. </p>
-<p> 250 Internal error.</dl>
+<p> 250 Internal error.</dd></dl>
 <h2>OUTPUT FORMATS</h2>
 <p> The output format <code>raw</code> prints each flow record on multiple lines, including all information available in the record. This is the most detailed view on a flow. </p>
 <p> Other output formats print each flow on a single line. Predefined output formats are <code>line</code>, <code>long</code> and <code>extended</code> The output format <code>line</code> is the default output format when no format is specified. It limits the imformation to the connection details as well as number of packets, bytes and flows. </p>
@@ -284,7 +284,7 @@ description: "nfdump – netflow display and analyze program"
 <p> <i>Fields:</i> </p>
 <dl>
 <dt>
-<dd> <code>Date flow start:</code> Start time flow first seen. ISO 8601 format including miliseconds. </p>
+</dt><dd> <code>Date flow start:</code> Start time flow first seen. ISO 8601 format including miliseconds. </dd>
 <p> <code>Duration:</code> Duration of the flow in seconds and miliseconds. If flows are aggregated, <i>duration</i> is the time span over the entire periode of time from first seen to last seen. </p>
 <p> <code>Proto:</code> Protocol used in the connection. </p>
 <p> <code>Src IP Addr:Port:</code> Source IP address and source port. </p>
@@ -303,7 +303,7 @@ description: "nfdump – netflow display and analyze program"
 <p> The output format <code>fmt:&lt;format&gt;</code> allows you to define your own output format. A format description <code>format</code> consists of a single line containing arbitrary strings and format specifier as described below </p>
 <dl>
 <dt>
-<dd> <code>%&lt;format&gt;</code> Inserts the predefined <code>format</code> at this position. e.g. <code>%line</code><br />
+</dt><dd> <code>%&lt;format&gt;</code> Inserts the predefined <code>format</code> at this position. e.g. <code>%line</code><br />
  <code>%ff</code> flow record flags in hex.<br />
  <code>%ts</code> Start Time &#8211; first seen<br />
  <code>%te</code> End Time &#8211; last seen<br />
@@ -363,7 +363,7 @@ description: "nfdump – netflow display and analyze program"
  <code>%mpls</code> MPLS labels 1-10<br />
  <code>%bps</code> bps &#8211; bits per second<br />
  <code>%pps</code> pps &#8211; packets per second<br />
- <code>%bpp</code> bps &#8211; Bytes per package </p>
+ <code>%bpp</code> bps &#8211; Bytes per package </dd>
 <p> NSEL specific formats<br />
  <code>%nfc</code> NSEL connection ID<br />
  <code>%evt</code> NSEL event<br />
@@ -398,35 +398,35 @@ description: "nfdump – netflow display and analyze program"
 <p> The &quot;flow flags&quot; format (%ff) prints the internal record flags as a single hexadecimal number, consisting of any of these flag values or-ed together: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  1 Record contains IPv6 addresses<br />
  2 Packet counters are 64-bit<br />
  4 Byte counters are 64-bit<br />
  8 IP next hop is an IPv6 address<br />
- 16<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>BGP next hop is an IPv6 address</p>
+ 16<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>BGP next hop is an IPv6 address</dd>
 <p> 32 Exporting router is an IPv6 address<br />
  64 Record is an EVENT record<br />
  128 Record is sampled</dl>
 <p> Example: the standard output format <code>long</code> can be created as</p>
 <dl>
 <dt>
-<dd> <code>-o &quot;fmt:%ts %td %pr %sap -&gt; %dap %flg %tos %pkt %byt %fl&quot;</code></dl>
+</dt><dd> <code>-o &quot;fmt:%ts %td %pr %sap -&gt; %dap %flg %tos %pkt %byt %fl&quot;</code></dd></dl>
 <p> You may also define your own output format and have it compiled into nfdump. See nfdump.c section <code>Output Formats</code> for more details. </p>
 <p> The <code>csv</code> output format is intended to be read by another program for further processing. As an example, see the parse_csv.pl Perl program. The cvs output format consists of one or more output blocks and one summary block. Each output block starts with a cvs index line followed by the cvs record lines. The index lines describes the order, how each following record is composed. </p>
 <p> Example:</p>
 <dl>
 <dt>
-<dd> Index line: ts,te,td,sa,da,sp,dp,pr,&#8230;<br />
+</dt><dd> Index line: ts,te,td,sa,da,sp,dp,pr,&#8230;<br />
  Record line: 2004-07-11 10:30:00,2004-07-11 10:30:10,10.010,&#8230;
-</dl>
+</dd></dl>
 <p> All records are in ASCII readable form. Numbers are not scaled, so each line can easily be parsed. </p>
 <p> Indices used in nfdump 1.6: </p>
 <dl>
 <dt>
-<dd> ts,te,td time records: t-start, t-end, duration<br />
+</dt><dd> ts,te,td time records: t-start, t-end, duration<br />
  sa,da src dst address sp,dp src, dst port<br />
  pr protocol PF_INET or PF_INET6<br />
- flg TCP Flags: </p>
+ flg TCP Flags: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>000001 FIN. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>000010 SYN </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>000100 RESET </p>
@@ -462,198 +462,198 @@ description: "nfdump – netflow display and analyze program"
 <p> expr <code>and</code> expr, expr <code>or</code> expr, <code>not</code> expr and <code>(</code> expr <code>)</code>. </p>
 <p> <i>Expr</i> can be one of the following filter primitives:</p>
 <dl>
-<dt><i>include</i></p>
+<dt><i>include</i></dt>
 <dd> <code>@include &lt;file&gt;</code><br />
- include the content of <i>&lt;file&gt;</i> into filter.</p>
-<dt><i>ip version</i></p>
+ include the content of <i>&lt;file&gt;</i> into filter.</dd>
+<dt><i>ip version</i></dt>
 <dd> <code>inet</code> or <code>ipv4</code> for IPv4<br />
- <code>inet6</code> or <code>ipv6</code> for IPv6</p>
-<dt><i>protocol</i></p>
+ <code>inet6</code> or <code>ipv6</code> for IPv6</dd>
+<dt><i>protocol</i></dt>
 <dd> <code>proto &lt;protocol&gt;</code><br />
  <code>proto &lt;number&gt;</code><br />
- where <code>&lt;protocol&gt;</code> is known protocol such as <code>tcp</code>, <code>udp</code>, <code>icmp</code>, <code>icmp6</code>, <code>gre</code>, <code>esp</code>, <code>ah</code>, etc. or a valid protocol number: <code>6</code>, <code>17</code> etc.</p>
-<dt><i>IP address</i></p>
+ where <code>&lt;protocol&gt;</code> is known protocol such as <code>tcp</code>, <code>udp</code>, <code>icmp</code>, <code>icmp6</code>, <code>gre</code>, <code>esp</code>, <code>ah</code>, etc. or a valid protocol number: <code>6</code>, <code>17</code> etc.</dd>
+<dt><i>IP address</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>[src|dst] ip &lt;ipaddr&gt;</code><br />
+</dt><dd> <code>[src|dst] ip &lt;ipaddr&gt;</code><br />
  <code>[src|dst] host &lt;ipaddr&gt;</code><br />
- with <i>&lt;ipaddr&gt;</i> as any valid IPv4, IPv6 address, or a full qualified hostname. In case of a hostname, the IP address is looked up in DNS. If more than a single IP address is found, all IP addresses are chained together. <code>(ip1 or ip2 or ip3 &#8230; )</code> </p>
+ with <i>&lt;ipaddr&gt;</i> as any valid IPv4, IPv6 address, or a full qualified hostname. In case of a hostname, the IP address is looked up in DNS. If more than a single IP address is found, all IP addresses are chained together. <code>(ip1 or ip2 or ip3 &#8230; )</code> </dd>
 <p> To check if an IP address is in a known IP list, use<br />
  <code>[src|dst] ip in [ &lt;iplist&gt; ] </code><br />
  <code>[src|dst] host in [ &lt;iplist&gt; ] </code><br />
  <i>&lt;iplist&gt;</i> is a space or comma separated list of individual <code>&lt;ipaddr&gt;</code> or full qualified hostnames, which are looked up in DNS. If more than a single IP address is found, all IP addresses are put into the list.</dl>
-<dt><i>[src|dst]</i></p>
-<dd> IP addresses, networks, ports, AS number etc. can be specifically selected by using a direction qualifier, such as src or <code>dst</code>. They can also be used in combination with <code>and</code> and <code>or</code>. such as <code>src and dst ip ..</code>.</p>
-<dt><i>network</i></p>
+<dt><i>[src|dst]</i></dt>
+<dd> IP addresses, networks, ports, AS number etc. can be specifically selected by using a direction qualifier, such as src or <code>dst</code>. They can also be used in combination with <code>and</code> and <code>or</code>. such as <code>src and dst ip ..</code>.</dd>
+<dt><i>network</i></dt>
 <dd> <code>[src|dst] net a.b.c.d m.n.r.s</code><br />
- Select the IPv4 network <i>a.b.c.d</i> with netmask <i>m.n.r.s</i>. </p>
+ Select the IPv4 network <i>a.b.c.d</i> with netmask <i>m.n.r.s</i>. </dd>
 <p> <code>[src|dst] net &lt;net&gt;/&lt;num&gt;</code><br />
  with <i>&lt;net&gt;</i> as a valid IPv4 or IPv6 network and <i>&lt;num&gt;</i> as maskbits. The number of mask bits must match the appropriate address familiy in IPv4 or IPv6. Networks may be abreviated such as 172.16/16 if they are unambiguous.</p>
-<dt><i>Port</i></p>
+<dt><i>Port</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>[src|dst] port [comp] &lt;num&gt;</code><br />
+</dt><dd> <code>[src|dst] port [comp] &lt;num&gt;</code><br />
  with <i>&lt;num&gt;</i> as any valid port number. If <i>comp</i> is omitted,<br />
 &nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>is assumed.&nbsp;<wbr><i>comp</i>&nbsp;<wbr>is explained more detailed below.<br />
  <code>[src|dst] port in [ &lt;portlist&gt; ] </code><br />
- A port can be compared against a know list, where <code>&lt;portlist&gt;</code> is a space separated list of individual port numbers.</dl>
-<dt><i>ICMP</i></p>
+ A port can be compared against a know list, where <code>&lt;portlist&gt;</code> is a space separated list of individual port numbers.</dd></dl>
+<dt><i>ICMP</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>icmp-type &lt;num&gt;</code><br />
+</dt><dd> <code>icmp-type &lt;num&gt;</code><br />
  <code>icmp-code &lt;num&gt;</code><br />
- with <i>&lt;num&gt;</i> as a valid icmp type/code. This automatically implies <code>proto icmp</code>.</dl>
-<dt><i>Router ID</i></p>
+ with <i>&lt;num&gt;</i> as a valid icmp type/code. This automatically implies <code>proto icmp</code>.</dd></dl>
+<dt><i>Router ID</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>engine-type &lt;num&gt;</code><br />
+</dt><dd> <code>engine-type &lt;num&gt;</code><br />
  <code>engine-id &lt;num&gt;</code><br />
  <code>sysid &lt;num&gt;</code><br />
- with <i>&lt;num&gt;</i> as a valid router engine type/id or exporter ID(0..255).</dl>
-<dt><i>Interface</i></p>
+ with <i>&lt;num&gt;</i> as a valid router engine type/id or exporter ID(0..255).</dd></dl>
+<dt><i>Interface</i></dt>
 <dd> <code>[in|out] if &lt;num&gt;</code><br />
  Select input or output or either interface ID, with <i>num</i> as the SNMP interface number.<br />
- Example: <code>in if 3</code></p>
-<dt><i>AS numbers</i></p>
+ Example: <code>in if 3</code></dd>
+<dt><i>AS numbers</i></dt>
 <dd> <code>[src|dst|prev|next] as [comp] &lt;num&gt;</code><br />
- Selects source, dstination, previous, next or any AS number with <i>&lt;num&gt;</i> as any valid as number. 32bit AS numbers are suported. If <i>comp</i> is omitted, &#8216;=&#8217; is assumed. <i>comp</i> is explained more detailed below. </p>
+ Selects source, dstination, previous, next or any AS number with <i>&lt;num&gt;</i> as any valid as number. 32bit AS numbers are suported. If <i>comp</i> is omitted, &#8216;=&#8217; is assumed. <i>comp</i> is explained more detailed below. </dd>
 <p> <code>[src|dst|prev|next] as in [ &lt;ASlist&gt; ] </code><br />
  An AS number can be compared against a know list, where <code>&lt;ASlist&gt;</code> is a space or comma separated list of individual AS numbers.</p>
-<dt><i>Prefix mask bits </i></p>
+<dt><i>Prefix mask bits </i></dt>
 <dd> <code>[src|dst] mask &lt;bits&gt;</code><br />
- with <i>&lt;bits&gt;</i> as any valid prefix mask bit value.</p>
-<dt><i>Vlan labels</i></p>
+ with <i>&lt;bits&gt;</i> as any valid prefix mask bit value.</dd>
+<dt><i>Vlan labels</i></dt>
 <dd> <code>[src|dst] vlan &lt;num&gt;</code><br />
- with <i>&lt;num&gt;</i> as any valid vlan label.</p>
-<dt><i>Flags</i></p>
+ with <i>&lt;num&gt;</i> as any valid vlan label.</dd>
+<dt><i>Flags</i></dt>
 <dd> <code>flags &lt;tcpflags&gt;</code><br />
- with <i>&lt;tcpflags&gt;</i> as a combination of:</p>
+ with <i>&lt;tcpflags&gt;</i> as a combination of:</dd>
 <dl>
 <dt>
-<dd> A ACK.<br />
+</dt><dd> A ACK.<br />
  S SYN.<br />
  F FIN.<br />
  R Reset.<br />
  P Push.<br />
  U Urgent.<br />
- X All flags on.</dl>
+ X All flags on.</dd></dl>
 <p> The ordering of the flags is not relevant. Flags not mentioned are treated as don&#8217;t care. In order to get those flows with only the SYN flag set, use the syntax &#8216;<code>flags S and not flags AFRPU</code>&#8216;.</p>
-<dt><i>Next hop IP</i></p>
+<dt><i>Next hop IP</i></dt>
 <dd> <code>next ip &lt;ipaddr&gt;</code><br />
- with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 IP address of next hop router.</p>
-<dt><i>Next-hop router&#8217;s IP in the BGP domain</i></p>
+ with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 IP address of next hop router.</dd>
+<dt><i>Next-hop router&#8217;s IP in the BGP domain</i></dt>
 <dd> <code>bgpnext ip &lt;ipaddr&gt;</code><br />
- with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 next-hop router&#8217;s IP in the BGP domain. ( v9 #18 )</p>
-<dt><i>Router IP</i></p>
+ with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 next-hop router&#8217;s IP in the BGP domain. ( v9 #18 )</dd>
+<dt><i>Router IP</i></dt>
 <dd>
  <code>router ip &lt;ipaddr&gt;</code><br />
- Filter the flows according the IP address of the exporting router.</p>
-<dt><i>MAC addresses</i></p>
+ Filter the flows according the IP address of the exporting router.</dd>
+<dt><i>MAC addresses</i></dt>
 <dd> <code>[InOutSrcDst] mac &lt;addr&gt;</code><br />
- With <i>&lt;addr&gt;</i> any valid MAC address. <code>mac</code> can be more specific specified by using any combination of a direction specifier as defined by CISCO v9. <code>in src</code>, <code>in dst</code>, <code>out src</code>, <code>out dst</code>.</p>
-<dt><i>MPLS labels</i></p>
+ With <i>&lt;addr&gt;</i> any valid MAC address. <code>mac</code> can be more specific specified by using any combination of a direction specifier as defined by CISCO v9. <code>in src</code>, <code>in dst</code>, <code>out src</code>, <code>out dst</code>.</dd>
+<dt><i>MPLS labels</i></dt>
 <dd> <code>mpls label&lt;n&gt; [comp] &lt;num&gt;</code><br />
  With <i>&lt;n&gt;</i> as any mpls label number 1..10. Filters exactly specified label&lt;n&gt;.<br />
- <code>mpls eos [comp] &lt;num&gt;</code> </p>
+ <code>mpls eos [comp] &lt;num&gt;</code> </dd>
 <p> Filters End of Stack label for a given value <i>&lt;num&gt;</i>.<br />
  <code>mpls exp&lt;n&gt; [comp] &lt;bits&gt;</code><br />
  Filters experimental bits of label <i>&lt;n&gt;</i> with <i>&lt;bits&gt;</i> 0..7.</p>
-<dt><i>Packets</i></p>
+<dt><i>Packets</i></dt>
 <dd> <code>packets [comp] &lt;num&gt; [scale]</code><br />
  To filter for netflow records with a specific packet count.<br />
- Example: <code>packets &gt; 1k</code></p>
-<dt><i>Bytes</i></p>
+ Example: <code>packets &gt; 1k</code></dd>
+<dt><i>Bytes</i></dt>
 <dd> <code>bytes [comp] &lt;num&gt; [scale]</code><br />
  To filter for netflow records with a specific byte count.<br />
- Example: <code>bytes 46</code> filters all empty IPv4 packets</p>
-<dt><i>Aggregated flows</i></p>
+ Example: <code>bytes 46</code> filters all empty IPv4 packets</dd>
+<dt><i>Aggregated flows</i></dt>
 <dd> <code>flows [comp] &lt;num&gt; [scale]</code><br />
- To filter for netflow records with a specific number of aggregated flows.</p>
-<dt><i>Type of Service (TOS)</i></p>
+ To filter for netflow records with a specific number of aggregated flows.</dd>
+<dt><i>Type of Service (TOS)</i></dt>
 <dd> <i>[SourceDestination]</i> <code>tos &lt;num&gt;</code><br />
- With <i>&lt;num&gt;</i> 0..255. For compatibility with nfump 1.5.x: <code>tos &lt;num&gt;</code> is equivalent with <code>src tos &lt;num&gt;</code></p>
-<dt><i>Packets per second: Calculated value.</i></p>
+ With <i>&lt;num&gt;</i> 0..255. For compatibility with nfump 1.5.x: <code>tos &lt;num&gt;</code> is equivalent with <code>src tos &lt;num&gt;</code></dd>
+<dt><i>Packets per second: Calculated value.</i></dt>
 <dd> <code>pps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
- To filter for flows with specific packets per second.</p>
-<dt><i>Duration: Calculated value</i></p>
+ To filter for flows with specific packets per second.</dd>
+<dt><i>Duration: Calculated value</i></dt>
 <dd> <code>duration</code> <i>[comp]</i> <i>num</i><br />
- To filter for flows with specific duration in miliseconds.</p>
-<dt><i>Bits per second: Calculated value.</i></p>
+ To filter for flows with specific duration in miliseconds.</dd>
+<dt><i>Bits per second: Calculated value.</i></dt>
 <dd> <code>bps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
- To filter for flows with specific bytes per second.</p>
-<dt><i>Bytes per packet: Calculated value.</i></p>
+ To filter for flows with specific bytes per second.</dd>
+<dt><i>Bytes per packet: Calculated value.</i></dt>
 <dd> <code>bpp</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
- To filter for flows with specific bytes per packet.</p>
-<dt><i>scale</i> scaling factor. Maybe <i>k</i> <i>m</i> <i>g</i>. Factor is 1000</p>
+ To filter for flows with specific bytes per packet.</dd>
+<dt><i>scale</i> scaling factor. Maybe <i>k</i> <i>m</i> <i>g</i>. Factor is 1000</dt>
 <dd>
-<dt><i>comp</i> The following comparators are supported:</p>
-<dd> <code>=, ==, &gt;, &lt;, EQ, LT, GT .</code> If <i>comp</i> is omitted, &#8216;=&#8217; is assumed.</dl>
+</dd><dt><i>comp</i> The following comparators are supported:</dt>
+<dd> <code>=, ==, &gt;, &lt;, EQ, LT, GT .</code> If <i>comp</i> is omitted, &#8216;=&#8217; is assumed.</dd></dl>
 <dl>
-<dt><code>NSEL/ASA specific filters:</code></p>
-<dd></dl>
+<dt><code>NSEL/ASA specific filters:</code></dt>
+<dd></dd></dl>
 <p> <i>NSEL/ASA Event</i></p>
 <dl>
 <dt>
-<dd> <code>asa event &lt;ignore|create|term|delete|deny&gt;</code><br />
+</dt><dd> <code>asa event &lt;ignore|create|term|delete|deny&gt;</code><br />
  <code>asa event [comp] &lt;number&gt;</code><br />
  select NSEL/ASA event by name or number. If given as number it can be compared with a number
-</dl>
+</dd></dl>
 <dl>
-<dt><i>NSEL/ASA denied reason</i></p>
+<dt><i>NSEL/ASA denied reason</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>asa event denied &lt;ingress|egress|interface|nosyn&gt;</code><br />
- Select a NSEL/ASA denied event by type</dl>
-<dt><i>NSEL/ASA extended events</i></p>
+</dt><dd> <code>asa event denied &lt;ingress|egress|interface|nosyn&gt;</code><br />
+ Select a NSEL/ASA denied event by type</dd></dl>
+<dt><i>NSEL/ASA extended events</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>asa xevent [comp] &lt;num&gt;</code><br />
- Select an extended NSELL ASA event by number, or optionally compared by a number.</dl>
-<dt><i>X-late IP addresses and ports</i></p>
+</dt><dd> <code>asa xevent [comp] &lt;num&gt;</code><br />
+ Select an extended NSELL ASA event by number, or optionally compared by a number.</dd></dl>
+<dt><i>X-late IP addresses and ports</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>[src|dst] xip &lt;ip&gt;</code><br />
- Select the translated IP address </p>
+</dt><dd> <code>[src|dst] xip &lt;ip&gt;</code><br />
+ Select the translated IP address </dd>
 <p> <code>[src|dst] xnet &lt;net&gt;/&lt;num&gt;</code><br />
  with <i>&lt;net&gt;</i> as a valid translated IPv4 or IPv6 network and <i>&lt;num&gt;</i> as maskbits. The number of mask bits must match the appropriate address familiy in IPv4 or IPv6. Networks may be abreviated such as 172.16/16 if they are unambiguous. </p>
 <p> <code>[src|dst] xport &lt;port&gt;</code><br />
  Select the translated port</dl>
-<dt><i>NSEL/ASA ingress/egress</i></p>
+<dt><i>NSEL/ASA ingress/egress</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>ingress &lt;ACL|ACE|XACE&gt; [comp] number<br />
- Select/compare an ingress ACL </p>
+</dt><dd> <code>ingress &lt;ACL|ACE|XACE&gt; [comp] number<br />
+ Select/compare an ingress ACL </dd>
 <p> egress ACL [comp] &lt;number&gt;</code><br />
  Select/compare an egress ACL </p>
 </dl>
-<dt><code>NEL specific NAT filters:</code></p>
-<dd></dl>
+<dt><code>NEL specific NAT filters:</code></dt>
+<dd></dd></dl>
 <p> <i>NAT Event</i></p>
 <dl>
 <dt>
-<dd> <code>nat event &lt;add|delete&gt;</code><br />
+</dt><dd> <code>nat event &lt;add|delete&gt;</code><br />
  <code>nat event [comp] &lt;number&gt;</code><br />
  select NEL NAT event by name or number. If given as number it can be compared with a number
-</dl>
+</dd></dl>
 <dl>
-<dt><i>NEL NAT ip addresses and ports</i></p>
+<dt><i>NEL NAT ip addresses and ports</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>[src|dst] nip &lt;ip&gt;<br />
- Select the NAT IP address </p>
+</dt><dd> <code>[src|dst] nip &lt;ip&gt;<br />
+ Select the NAT IP address </dd>
 <p> [src|dst] nport &lt;port&gt;<br />
  Select the NAT port</dl>
-<dt></code><i>NEL NAT vrf</i></p>
-<dd> <code>ingress vrf &lt;num&gt;</code> Select the vrf </p>
+<dt></code><i>NEL NAT vrf</i></dt>
+<dd> <code>ingress vrf &lt;num&gt;</code> Select the vrf </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> <code>nfdump -r /and/dir/nfcapd.201107110845 -c 100 &#8216;proto tcp and ( src ip 172.16.17.18 or dst ip 172.16.17.19 )&#8217;</code> Dumps the first 100 netflow records which match the given filter: </p>

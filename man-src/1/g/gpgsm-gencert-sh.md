@@ -18,5 +18,5 @@ description: "gpgsm-gencert.sh – Generate an X.509 certificate request"
 <dl>
 <dd>
 <pre>info gnupg</pre>
-</dl>
+</dd></dl>
 <p> should give you access to the complete manual including a menu structure and an index.</p>

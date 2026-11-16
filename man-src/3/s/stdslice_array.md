@@ -11,7 +11,6 @@ std::slice_array - std::slice_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;valarray&gt;
-
 template&lt; class T &gt; class slice_array;</code></pre> 
 std::slice_array is a helper template used by std::slice subscript operator. It has reference semantics to a subset of the array specified by the std::slice object. 
 

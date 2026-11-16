@@ -13,8 +13,8 @@ description: "pskc_pinusagemode2str – API function"
 const char *pskc_pinusagemode2str(pskc_pinusagemode pinusagemode);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_pinusagemode pinusagemode</p>
-<dd>an <code>pskc_pinusagemode</code> enumeration type</dl>
+<dt>pskc_pinusagemode pinusagemode</dt>
+<dd>an <code>pskc_pinusagemode</code> enumeration type</dd></dl>
 <h2>Description</h2>
 <p>Convert <code>pskc_pinusagemode</code> to a string. For example, pskc_pinusagemode2str(<code>PSKC_PINUSAGEMODE_LOCAL</code>) will return &quot;Local&quot;. The returned string must not be deallocated.</p>
 <h2>Returns</h2>

@@ -15,11 +15,11 @@ pci_sriov_set_totalvfs - - reduce the TotalVFs available
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI PF device</dl>
+<dl><dd></dd><dd>the PCI PF device</dd></dl>
  
 
  <i>numvfs</i>
-<dl><dd>number that should be used for TotalVFs supported</dl>
+<dl><dd>number that should be used for TotalVFs supported</dd></dl>
 
 <h2>Description</h2>
 

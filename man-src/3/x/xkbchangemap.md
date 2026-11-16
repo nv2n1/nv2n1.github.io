@@ -11,16 +11,16 @@ description: "XkbChangeMap – Update only partial components of a keyboard desc
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbMapChangesPtr </code><i>changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>description from which new values are taken</p>
-<dt><i>&#8211; changes</i></p>
-<dd>identifies component parts to update</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>description from which new values are taken</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>identifies component parts to update</dd></dl>
 <h2>Description</h2>
 <p>To update only partial components of a keyboard description, modify the appropriate fields in the server and map components of a local copy of the keyboard description, then call <i>XkbChangeMap </i> with an XkbMapChangesRec structure indicating which components have changed. </p>
 <p> <i>XkbChangeMap </i> copies any components specified by the <i>changes </i> structure from the keyboard description, <i>xkb, </i> to the X server specified by <i>dpy.</i> </p>
@@ -28,10 +28,10 @@ description: "XkbChangeMap – Update only partial components of a keyboard desc
 <p> <i>XkbChangeMap </i> can generate BadAlloc, BadLength, and BadValue protocol errors.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The XkbChangeMap function returns True if the components specified by <i>changes </i> are present in the <i>xkb </i> parameter.</p>
-<dt>False</p>
-<dd>The XkbChangeMap function returns False if the components specified by <i>changes </i> are not present in the <i>xkb </i> parameter.</dl>
+<dt>True</dt>
+<dd>The XkbChangeMap function returns True if the components specified by <i>changes </i> are present in the <i>xkb </i> parameter.</dd>
+<dt>False</dt>
+<dd>The XkbChangeMap function returns False if the components specified by <i>changes </i> are not present in the <i>xkb </i> parameter.</dd></dl>
 <h2>Structures</h2>
 <p>Use the XkbMapChangesRec structure to identify and track partial modifications to the mapping components and to reduce the amount of traffic between the server and clients. </p>
 <pre>typedef struct _XkbMapChanges {
@@ -65,10 +65,10 @@ changed */
 } XkbMapChangesRec,*XkbMapChangesPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadLength</code></p>
-<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range </p>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadLength</code></dt>
+<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
 </dl>

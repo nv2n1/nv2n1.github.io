@@ -17,28 +17,28 @@ description: "freight-init – initialize a Freight directory"
 <p> Configuration is stored in <i>dirname</i><code>/etc/freight.conf</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-g</code> <i>gpg</i>, <code>&#8211;gpg=</code><i>gpg</i></p>
-<dd> GPG key. May be given multiple times.</p>
-<dt><code>&#8211;libdir=</code><i>varlib</i></p>
-<dd> VARLIB directory to use. Defaults to <i>dirname</i><code>/var/lib</code></p>
-<dt><code>&#8211;cachedir=</code><i>varcache</i></p>
-<dd> VARCACHE directory to use. Defaults to <i>dirname</i><code>/var/cache</code></p>
-<dt><code>&#8211;archs=</code><i>archs</i></p>
-<dd> Architectures to generate archives for. Defaults to <code>i386 amd64</code></p>
-<dt><code>&#8211;origin=</code><i>origin</i></p>
-<dd> Debian archive Origin field value. Defaults to <code>Freight</code></p>
-<dt><code>&#8211;label=</code><i>label</i></p>
-<dd> Debian archive Label field value. Defaults to <code>Freight</code></p>
-<dt><code>&#8211;suite=</code><i>suite</i></p>
-<dd> Debian archive Suite field value.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show a help message.</dl>
+<dt><code>-g</code> <i>gpg</i>, <code>&#8211;gpg=</code><i>gpg</i></dt>
+<dd> GPG key. May be given multiple times.</dd>
+<dt><code>&#8211;libdir=</code><i>varlib</i></dt>
+<dd> VARLIB directory to use. Defaults to <i>dirname</i><code>/var/lib</code></dd>
+<dt><code>&#8211;cachedir=</code><i>varcache</i></dt>
+<dd> VARCACHE directory to use. Defaults to <i>dirname</i><code>/var/cache</code></dd>
+<dt><code>&#8211;archs=</code><i>archs</i></dt>
+<dd> Architectures to generate archives for. Defaults to <code>i386 amd64</code></dd>
+<dt><code>&#8211;origin=</code><i>origin</i></dt>
+<dd> Debian archive Origin field value. Defaults to <code>Freight</code></dd>
+<dt><code>&#8211;label=</code><i>label</i></dt>
+<dd> Debian archive Label field value. Defaults to <code>Freight</code></dd>
+<dt><code>&#8211;suite=</code><i>suite</i></dt>
+<dd> Debian archive Suite field value.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show a help message.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></p>
-<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dl>
+<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></dt>
+<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd></dl>
 <h2>THEME SONG</h2>
 <p> The New Pornographers &#8211; &quot;All the Old Showstoppers&quot;</p>
 <h2>AUTHOR</h2>

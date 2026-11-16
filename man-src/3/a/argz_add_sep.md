@@ -34,3 +34,4 @@ void argz_stringify(char *argz, size_t len, int sep);
 <h2>DESCRIPTION</h2>
 <p> These functions are glibc-specific. </p>
 <p> An argz vector is a pointer to a character buffer together with a length. The intended interpretation of the character buffer is an array of strings, where the strings are separated by null bytes (&#8216;
+</p>

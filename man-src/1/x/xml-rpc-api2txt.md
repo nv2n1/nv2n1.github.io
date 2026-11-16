@@ -16,8 +16,8 @@ description: "xml-rpc-api2txt – Print out a description of an XML-RPC API as t
 <p> You can find a list of supported XML-RPC server libraries (and patches for many others) at <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/hacks.php">http://xmlrpc-c.sourceforge.net/hacks.php</a></code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>server-url</i></p>
-<dd> The name of the server to query. Try <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi">http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi</a></code>.</dl>
+<dt><i>server-url</i></dt>
+<dd> The name of the server to query. Try <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi">http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi</a></code>.</dd></dl>
 <h2>BUGS</h2>
 <p> xml-rpc-api2txt assumes that method descriptions are ASCII text, not HTML as specified in the standard. (In practice, both conventions are often seen.)</p>
 <h2>SEE ALSO</h2>

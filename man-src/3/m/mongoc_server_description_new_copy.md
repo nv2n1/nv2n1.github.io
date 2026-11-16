@@ -13,8 +13,8 @@ description: "mongoc_server_description_new_copy() – This function copies the 
 mongoc_server_description_new_copy (const mongoc_server_description_t *description);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>description</code></p>
-<dd>A <code>The server description to copy</code> \&amp;.</dl>
+<dt><code>description</code></dt>
+<dd>A <code>The server description to copy</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function copies the given server description and returns a new server description object. The caller is responsible for destroying the new copy. </p>
 <h2>Returns</h2>

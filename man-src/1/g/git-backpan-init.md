@@ -29,13 +29,13 @@ git backpan - init[--help | --man][--mkdir&lt;directory&gt;][--force] Foo::Bar
 
 <dl>
 <dt>--mkdir <i>directory</i>
-<dd> Creates a sub-directory and create the git repository there instead than in the current directory. If no directory name is given, figures one out based on the name of the module.
-<dt>--force, -f
-<dd> Forces the imports, even if a git repository was already present in the directory.
-<dt>--help, -h
-<dd> Prints the synopsis and valid options and exits.
-<dt>--man
-<dd> Prints the man page and exits.</dl>
+</dt><dd> Creates a sub-directory and create the git repository there instead than in the current directory. If no directory name is given, figures one out based on the name of the module.
+</dd><dt>--force, -f
+</dt><dd> Forces the imports, even if a git repository was already present in the directory.
+</dd><dt>--help, -h
+</dt><dd> Prints the synopsis and valid options and exits.
+</dd><dt>--man
+</dt><dd> Prints the man page and exits.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

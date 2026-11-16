@@ -10,7 +10,7 @@ description: "vfs_snapper – Expose snapshots managed by snapper as shadow-copi
 <p>vfs_snapper &#8211; Expose snapshots managed by snapper as shadow-copies</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = snapper</dl>
+<dd>vfs objects = snapper</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8) suite. </p>
 <p> The vfs_snapper VFS module exposes snapshots managed by snapper for use by Samba. This provides the ability for remote SMB clients to access shadow-copies via Windows Explorer using the &quot;previous versions&quot; dialog. </p>
@@ -22,7 +22,7 @@ description: "vfs_snapper – Expose snapshots managed by snapper as shadow-copi
 <dd>
 <pre> <i>[share]</i>
  m[blue]<code>vfs objects = snapper</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> For remote snapshot creation and deletion, Samba&#8217;s FSRVP server must be configured in the [global] section: </p>
 <dl>
 <dd>
@@ -30,7 +30,7 @@ description: "vfs_snapper – Expose snapshots managed by snapper as shadow-copi
  m[blue]<code>rpc_daemon:fssd = fork</code>m[]
  m[blue]<code>registry shares = yes</code>m[]
  m[blue]<code>include = registry</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Permissions</h2>
 <p>Snapper stores snapshots under a .snapshots subdirectory. This directory must permit traversal for any users wishing to access snapshots via the Windows Explorer previous versions dialog. By default, traversal is forbidden for all non-root users. Additionally, users must be granted permission to list snapshots managed by snapper, via snapper&#8217;s ALLOW_USERS or ALLOW_GROUPS options. Snapper can grant these users and groups .snapshots traversal access automatically via the SYNC_ACL option. </p>
 <p> Remote snapshot creation and deletion is only permitted by Samba for Active Directory administrators, backup operators, or users explicitly granted SeBackupPrivilege. Snapper must also permit creation and deletion for the appropriate user, via snapper&#8217;s ALLOW_USERS or ALLOW_GROUPS options. </p>

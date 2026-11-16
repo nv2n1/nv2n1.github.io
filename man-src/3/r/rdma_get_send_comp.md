@@ -12,17 +12,15 @@ rdma_get_send_comp - retrieves a completed send, read, or write request.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_get_send_comp
-
     (struct rdma_cm_id *id,
-
      struct ibv_wc *wc);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier to check for completions.
-<dt>wc
-<dd>A reference to a work completion structure to fill in.</dl>
+</dt><dd>A reference to a communication identifier to check for completions.
+</dd><dt>wc
+</dt><dd>A reference to a work completion structure to fill in.</dd></dl>
 
 <h2>Description</h2>
 

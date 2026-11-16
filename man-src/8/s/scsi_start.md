@@ -15,12 +15,12 @@ description: "scsi_start – start one or more SCSI disks"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</p>
-<dt><code>-w</code>, <code>&#8211;wait</code></p>
-<dd>wait for the spin up (start) on each given <i>DEVICE</i> to complete. The default action is to do each start in immediate mode.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd>
+<dt><code>-w</code>, <code>&#8211;wait</code></dt>
+<dd>wait for the spin up (start) on each given <i>DEVICE</i> to complete. The default action is to do each start in immediate mode.</dd></dl>
 <h2>Notes</h2>
 <p>If a large number of disks are spun up at the same time (i.e. without the <i>&#8211;wait</i> option) then the power supply may be overloaded.</p>
 <h2>Exit Status</h2>

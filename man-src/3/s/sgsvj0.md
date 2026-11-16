@@ -19,18 +19,18 @@ description: "sgsvj0.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SGSVJ0 is called from SGESVJ as a pre-processor and that is its main
  purpose. It applies Jacobi rotations in the same way as SGESVJ does, but
  it does not check convergence (stopping criterion). Few tuning
  parameters (marked by [TP]) are available for the implementer.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBV</i> </p>
+</dt><dd> <i>JOBV</i> </dd>
 <pre>
           JOBV is CHARACTER*1
           Specifies whether the output from this procedure is used
@@ -156,26 +156,26 @@ description: "sgsvj0.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd> SGSVJ0 is used just to enable SGESVJ to call a simplified version of itself to work on a submatrix of the original matrix.</dl>
+</dt><dd> SGSVJ0 is used just to enable SGESVJ to call a simplified version of itself to work on a submatrix of the original matrix.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+</dt><dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> <code>Bugs, Examples and Comments: </code></p>
 <dl>
 <dt>
-<dd> Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dl>
+</dt><dd> Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dd></dl>
 <p> Definition at line 218 of file sgsvj0.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

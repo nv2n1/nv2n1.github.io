@@ -10,11 +10,11 @@ description: "ipsec_spigrp – list IPSEC Security Association groupings"
 <p>ipsec_spigrp &#8211; list IPSEC Security Association groupings</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>spigrp</i></p>
-<dd><i>cat/proc/net/ipsec_spigrp</i></p>
+<dt> <code>ipsec</code> <i>spigrp</i></dt>
+<dd><i>cat/proc/net/ipsec_spigrp</i></dd>
 <dd>
 <h2>Obsolete</h2>
-<dd>Note that spigrp is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</p>
+</dd><dd>Note that spigrp is only supported on the classic KLIPS stack. It is not supported on any other stack and will be completely removed in future versions. A replacement command still needs to be designed</dd>
 <h2>Description</h2>
 <p>/proc/net/ipsec_spigrp is a read-only file that lists groups of IPSEC Security Associations (SAs). </p>
 <p> An entry in the IPSEC extended routing table can only point (via an SAID) to one SA. If more than one transform must be applied to a given type of packet, this can be accomplished by setting up several SAs with the same destination address but potentially different SPIs and protocols, and grouping them with <i><a href="/docs/linux/man/8-ipsec_spigrp/">ipsec_spigrp</a>(8)</i>. </p>
@@ -22,11 +22,11 @@ description: "ipsec_spigrp – list IPSEC Security Association groupings"
 <h2>Examples</h2>
 <p><code>tun.3d0 [at] 192.168.2.110</code></p>
 <dl>
-<dd><code>comp.3d0 [at] 192.168.2.110</code><code>esp.187a101b [at] 192.168.2.110</code><code>ah.187a101a [at] 192.168.2.110</code></dl>
+<dd><code>comp.3d0 [at] 192.168.2.110</code><code>esp.187a101b [at] 192.168.2.110</code><code>ah.187a101a [at] 192.168.2.110</code></dd></dl>
 <p> is a group of 3 SAs, destined for 192.168.2.110 with an IPv4-in-IPv4 tunnel SA applied first with an SPI of <code>3d0</code> in hexadecimal, followed by a Deflate compression header to compress the packet with CPI of <code>3d0</code> in hexadecimal, followed by an Encapsulating Security Payload header to encrypt the packet with SPI <code>187a101b</code> in hexadecimal, followed by an Authentication Header to authenticate the packet with SPI <code>187a101a</code> in hexadecimal, applied from inside to outside the packet. This could be an incoming or outgoing group, depending on the address of the local machine. </p>
 <p> <code>tun:3d0 [at] 3049:1::2</code></p>
 <dl>
-<dd><code>comp:3d0 [at] 3049:1::2</code><code>esp:187a101b [at] 3049:1::2</code><code>ah:187a101a [at] 3049:1::2</code></dl>
+<dd><code>comp:3d0 [at] 3049:1::2</code><code>esp:187a101b [at] 3049:1::2</code><code>ah:187a101a [at] 3049:1::2</code></dd></dl>
 <p> is a group of 3 SAs, destined for <code>3049:1::2</code> with an IPv6-in-IPv6 tunnel SA applied first with an SPI of <code>3d0</code> in hexadecimal, followed by a Deflate compression header to compress the packet with CPI of <code>3d0</code> in hexadecimal, followed by an Encapsulating Security Payload header to encrypt the packet with SPI <code>187a101b</code> in hexadecimal, followed by an Authentication Header to authenticate the packet with SPI <code>187a101a</code> in hexadecimal, applied from inside to outside the packet. This could be an incoming or outgoing group, depending on the address of the local machine.</p>
 <h2>Files</h2>
 <p>/proc/net/ipsec_spigrp, /usr/local/bin/ipsec</p>
@@ -39,4 +39,5 @@ description: "ipsec_spigrp – list IPSEC Security Association groupings"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>
+</dl>

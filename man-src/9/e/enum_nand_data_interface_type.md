@@ -15,9 +15,9 @@ description: "enum_nand_data_interface_type – NAND interface timing type"
 <h2>Constants</h2>
 <p>NAND_SDR_IFACE</p>
 <dl>
-<dd>Single Data Rate interface</dl>
+<dd>Single Data Rate interface</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

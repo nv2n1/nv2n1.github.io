@@ -9,11 +9,11 @@ url: "/docs/linux/man/3-sd_journal_foreach_data/"
 sd_journal_get_data, sd_journal_enumerate_data, sd_journal_restart_data, SD_JOURNAL_FOREACH_DATA, sd_journal_set_data_threshold, sd_journal_get_data_threshold - Read data fields from the current journal entry 
 
 <h2>Synopsis</h2><pre>#include &lt;systemd/sd-journal.h&gt;</pre><dl COMPACT><dt> <b>int sd_journal_get_data(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, const char&nbsp;<wbr>*</b><i>field</i><b>, const void&nbsp;<wbr>**</b><i>data</i><b>, size_t&nbsp;<wbr>*</b><i>length</i><b>);</b>
-<dt> <b>int sd_journal_enumerate_data(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, const void&nbsp;<wbr>**</b><i>data</i><b>, size_t&nbsp;<wbr>*</b><i>length</i><b>);</b>
-<dt> <b>void sd_journal_restart_data(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>SD_JOURNAL_FOREACH_DATA(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, const void&nbsp;<wbr>*</b><i>data</i><b>, size_t&nbsp;<wbr></b><i>length</i><b>);</b>
-<dt> <b>int sd_journal_set_data_threshold(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, size_t&nbsp;<wbr></b><i>sz</i><b>);</b>
-<dt> <b>int sd_journal_get_data_threshold(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, size_t&nbsp;<wbr>*</b><i>sz</i><b>);</b></dl><h2>Description</h2><b>sd_journal_get_data()</b>
+</dt><dt> <b>int sd_journal_enumerate_data(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, const void&nbsp;<wbr>**</b><i>data</i><b>, size_t&nbsp;<wbr>*</b><i>length</i><b>);</b>
+</dt><dt> <b>void sd_journal_restart_data(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
+</dt><dt> <b>SD_JOURNAL_FOREACH_DATA(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, const void&nbsp;<wbr>*</b><i>data</i><b>, size_t&nbsp;<wbr></b><i>length</i><b>);</b>
+</dt><dt> <b>int sd_journal_set_data_threshold(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, size_t&nbsp;<wbr></b><i>sz</i><b>);</b>
+</dt><dt> <b>int sd_journal_get_data_threshold(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, size_t&nbsp;<wbr>*</b><i>sz</i><b>);</b></dt></dl><h2>Description</h2><b>sd_journal_get_data()</b>
 <dd>gets the data object associated with a specific field from the current journal entry. It takes four arguments: the journal context object, a string with the field name to request, plus a pair of pointers to pointer/size variables where the data object and its size shall be stored in. The field name should be an entry field name. Well-known field names are listed in <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7). The returned data is in a read-only memory map and is only valid until the next invocation of <b>sd_journal_get_data()</b> or <b>sd_journal_enumerate_data()</b>, or the read pointer is altered. Note that the data returned will be prefixed with the field name and '='. Also note that by default data fields larger than 64K might get truncated to 64K. This threshold may be changed and turned off with <b>sd_journal_set_data_threshold()</b> (see below). 
 
  <b>sd_journal_enumerate_data()</b> may be used to iterate through all fields of the current entry. On each invocation the data for the next field is returned. The order of these fields is not defined. The data returned is in the same format as with <b>sd_journal_get_data()</b> and also follows the same life-time semantics. 
@@ -33,11 +33,11 @@ sd_journal_get_data, sd_journal_enumerate_data, sd_journal_restart_data, SD_JOUR
 
  Use the <b>SD_JOURNAL_FOREACH_DATA</b> macro to iterate through all fields of the current journal entry: 
 
-<dl COMPACT><dd><pre>...
+</dd><dl COMPACT><dd><pre>...
 int print_fields(sd_journal *j) {
  const void *data;
  size_t length;
  SD_JOURNAL_FOREACH_DATA(j, data, length)
  printf(&quot;%.*s\n&quot;, (int) length, data);
 }
-...</pre></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)
+...</pre></dd></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)

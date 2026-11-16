@@ -18,34 +18,30 @@ int delete_module(const char *name, int flags);
 <p> The <code>delete_module</code>() system call attempts to remove the unused loadable module entry identified by <i>name</i>. If the module has an <i>exit</i> function, then that function is executed before unloading the module. The <i>flags</i> argument is used to modify the behavior of the system call, as described below. This system call requires privilege. </p>
 <p> Module removal is attempted according to the following rules:</p>
 <dl>
-<dt>1.</p>
-<dd> If there are other loaded modules that depend on (i.e., refer to symbols defined in) this module, then the call fails.</p>
-<dt>2.</p>
-<dd> Otherwise, if the reference count for the module (i.e., the number of processes currently using the module) is zero, then the module is immediately unloaded.</p>
-<dt>3.</p>
-<dd> If a module has a nonzero reference count, then the behavior depends on the bits set in <i>flags</i>. In normal usage (see NOTES), the <code>O_NONBLOCK</code> flag is always specified, and the <code>O_TRUNC</code> flag may additionally be specified.</p>
+<dt>1.</dt>
+<dd> If there are other loaded modules that depend on (i.e., refer to symbols defined in) this module, then the call fails.</dd>
+<dt>2.</dt>
+<dd> Otherwise, if the reference count for the module (i.e., the number of processes currently using the module) is zero, then the module is immediately unloaded.</dd>
+<dt>3.</dt>
+<dd> If a module has a nonzero reference count, then the behavior depends on the bits set in <i>flags</i>. In normal usage (see NOTES), the <code>O_NONBLOCK</code> flag is always specified, and the <code>O_TRUNC</code> flag may additionally be specified.</dd>
 <dt>
-<dd> The various combinations for <i>flags</i> have the following effect:</p>
+</dt><dd> The various combinations for <i>flags</i> have the following effect:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>flags == O_NONBLOCK</code></p>
-<dd> The call returns immediately, with an error.</p>
-<dt><code>flags == (O_NONBLOCK | O_TRUNC)</code></p>
-<dd> The module is unloaded immediately, regardless of whether it has a nonzero reference count.</p>
-<dt><code>(flags &amp; O_NONBLOCK) == 0</code></p>
-<dd> If <i>flags</i> does not specify <code>O_NONBLOCK</code>, the following steps occur:</p>
+<dt><code>flags == O_NONBLOCK</code></dt>
+<dd> The call returns immediately, with an error.</dd>
+<dt><code>flags == (O_NONBLOCK | O_TRUNC)</code></dt>
+<dd> The module is unloaded immediately, regardless of whether it has a nonzero reference count.</dd>
+<dt><code>(flags &amp; O_NONBLOCK) == 0</code></dt>
+<dd> If <i>flags</i> does not specify <code>O_NONBLOCK</code>, the following steps occur:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> The module is marked so that no new references are permitted.</p>
-<dt>*</p>
-<dd> If the module&#8217;s reference count is nonzero, the caller is placed in an uninterruptible sleep state (<code>TASK_UNINTERRUPTIBLE</code>) until the reference count is zero, at which point the call unblocks.</p>
-<dt>*</p>
-<dd> The module is unloaded in the usual way.</dl>
+<dt>*</dt>
+<dd> The module is marked so that no new references are permitted.</dd>
+<dt>*</dt>
+<dd> If the module&#8217;s reference count is nonzero, the caller is placed in an uninterruptible sleep state (<code>TASK_UNINTERRUPTIBLE</code>) until the reference count is zero, at which point the call unblocks.</dd>
+<dt>*</dt>
+<dd> The module is unloaded in the usual way.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -56,16 +52,16 @@ int delete_module(const char *name, int flags);
 <p> On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> The module is not &quot;live&quot; (i.e., it is still being initialized or is already marked for removal); or, the module has an <i>init</i> function but has no <i>exit</i> function, and <code>O_TRUNC</code> was not specified in <i>flags</i>.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>name</i> refers to a location outside the process&#8217;s accessible address space.</p>
-<dt><code>ENOENT</code></p>
-<dd> No module by that name exists.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability), or module unloading is disabled (see <i>/proc/sys/kernel/modules_disabled</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</p>
-<dt><code>EWOULDBLOCK</code></p>
-<dd> Other modules depend on this module; or, <code>O_NONBLOCK</code> was specified in <i>flags</i>, but the reference count of this module is nonzero and <code>O_TRUNC</code> was not specified in <i>flags</i>.</dl>
+<dt><code>EBUSY</code></dt>
+<dd> The module is not &quot;live&quot; (i.e., it is still being initialized or is already marked for removal); or, the module has an <i>init</i> function but has no <i>exit</i> function, and <code>O_TRUNC</code> was not specified in <i>flags</i>.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>name</i> refers to a location outside the process&#8217;s accessible address space.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No module by that name exists.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller was not privileged (did not have the <code>CAP_SYS_MODULE</code> capability), or module unloading is disabled (see <i>/proc/sys/kernel/modules_disabled</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dd>
+<dt><code>EWOULDBLOCK</code></dt>
+<dd> Other modules depend on this module; or, <code>O_NONBLOCK</code> was specified in <i>flags</i>, but the reference count of this module is nonzero and <code>O_TRUNC</code> was not specified in <i>flags</i>.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>delete_module</code>() is Linux-specific.</p>
 <h2>NOTES</h2>

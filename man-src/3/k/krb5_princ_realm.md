@@ -86,24 +86,24 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>fmt</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>fmt</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Return an error code or 0.</dl>
+</dt><dd> Return an error code or 0.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL __attribute__ ((format(printf, 2, 0)))</h3>
 <p> Set the error message returned by krb5_get_error_string(), deprecated, use <code>krb5_set_error_message()</code>. </p>
 <p> Deprecated: use <code>krb5_vset_error_message()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>msg</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>msg</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Return an error code or 0.</dl>
+</dt><dd> Return an error code or 0.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_auth_getremoteseqnumber (krb5_contextcontext, krb5_auth_contextauth_context, int32_t *seqnumber)</h3>
 <p> Deprecated: use krb5_auth_con_getremoteseqnumber()</p>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_c_enctype_compare (krb5_contextcontext, krb5_enctypee1, krb5_enctypee2, krb5_boolean *similar)</h3>
@@ -113,16 +113,16 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context<br />
+</dt><dd> <i>context</i> a Keberos context<br />
  <i>creds</i><br />
  <i>newpw</i><br />
  <i>result_code</i><br />
  <i>result_code_string</i><br />
- <i>result_string</i></dl>
+ <i>result_string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On sucess password is changed.</dl>
+</dt><dd> On sucess password is changed.</dd></dl>
 <p> @</p>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_config_parse_string_multi (krb5_contextcontext, const char *string, krb5_config_section **res)</h3>
 <p> Deprecated: configuration files are not strings</p>
@@ -132,22 +132,22 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context.<br />
- <i>data</i> krb5_data to free.</dl>
+</dt><dd> <i>context</i> Kerberos 5 context.<br />
+ <i>data</i> krb5_data to free.</dd></dl>
 <p> Deprecated: use <code>krb5_free_cred_contents()</code> </p>
 <p> Free the error message returned by krb5_get_error_string(). </p>
 <p> Deprecated: use <code>krb5_free_error_message()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>str</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>str</i> error message to free</dd></dl>
 <p> Clear the error message returned by krb5_get_error_string(). </p>
 <p> Deprecated: use <code>krb5_clear_error_message()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context</dl>
+</dt><dd> <i>context</i> Kerberos context</dd></dl>
 <p> Deprecated: use krb5_xfree(). </p>
 <p> Deprecated: use <code>krb5_get_init_creds_opt_alloc()</code>. </p>
 <p> The reason krb5_get_init_creds_opt_init() is deprecated is that krb5_get_init_creds_opt is a static structure and for ABI reason it can&#8217;t grow, ie can&#8217;t add new functionality.</p>
@@ -161,16 +161,16 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context.<br />
- <i>data</i> krb5_data to free.</dl>
+</dt><dd> <i>context</i> Kerberos 5 context.<br />
+ <i>data</i> krb5_data to free.</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_error_string (krb5_context, char *)</h3>
 <p> Free the error message returned by krb5_get_error_string(). </p>
 <p> Deprecated: use <code>krb5_free_error_message()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>str</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>str</i> error message to free</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_unparsed_name (krb5_context, char *)</h3>
 <p> Deprecated: use krb5_xfree().</p>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_generate_subkey (krb5_contextcontext, const krb5_keyblock *key, krb5_keyblock **subkey)</h3>
@@ -207,12 +207,12 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>fmt</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>fmt</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Return an error code or 0.</dl>
+</dt><dd> Return an error code or 0.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_string_to_keytype (krb5_contextcontext, const char *string, krb5_keytype *keytype)</h3>
 <p> Deprecated: keytypes doesn&#8217;t exists, they are really enctypes in most cases, use krb5_string_to_enctype().</p>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL KRB5_LIB_FUNCTION void KRB5_LIB_CALL KRB5_LIB_FUNCTION void KRB5_LIB_CALL KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_vset_error_string (krb5_context, const char *, va_list)</h3>
@@ -221,12 +221,12 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>msg</i> error message to free</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>msg</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Return an error code or 0.</dl>
+</dt><dd> Return an error code or 0.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

@@ -13,10 +13,10 @@ description: "tuned-profiles-atomic – description of profiles provided for the
 <h2>Profiles</h2>
 <p>The following profiles are provided: </p>
 <dl>
-<dt><code>atomic-host</code></p>
-<dd>Profile optimized for Atomic hosts (bare metal). It is based on throughput-performance profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </p>
-<dt><code>atomic-guest</code></p>
-<dd>Profile optimized for virtual Atomic guests. It is based on virtual-guest profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </p>
+<dt><code>atomic-host</code></dt>
+<dd>Profile optimized for Atomic hosts (bare metal). It is based on throughput-performance profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
+<dt><code>atomic-guest</code></dt>
+<dd>Profile optimized for virtual Atomic guests. It is based on virtual-guest profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>

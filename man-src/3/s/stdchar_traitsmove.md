@@ -12,7 +12,6 @@ std::char_traits&lt;CharT&gt;::move - std::char_traits&lt;CharT&gt;::move
 
 <pre><code>static char_type *move(char_type *dest, const char_type *src, std::size_t count);
 (until C++ 20)
-
     static constexpr char_type *move(char_type *dest, const char_type *src, std::size_t count);
 (since C++ 20)</code></pre> 
 Copies count character from character string pointed to by src to character string pointed to by dest. 

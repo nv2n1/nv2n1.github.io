@@ -28,38 +28,38 @@ description: "FbTerm – a fast Frame Buffer based TERMinal emulator for linux"
 <p> <i>command</i> [<i>arguments</i>] may be given to override the built-in choice of shell program. Normally FbTerm checks the <i>SHELL</i> variable. If that is not set, it tries to use the user&#8217;s login shell program specified in the password file. If that is not set, /bin/sh will be used. You should use the <i>&#8212;</i> argument to separate FbTerm&#8217;s options from the arguments supplied to the <i>command</i>. </p>
 <p> FbTerm first uses option value specified in command line arguments, then in the configure file <i>$HOME/.fbtermrc</i>. If that file doesn&#8217;t exist, FbTerm will create it with default options on startup.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> display the help and exit</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> display FbTerm version and exit</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> display extra FbTerm&#8217;s information</p>
-<dt><code>-n, &#8211;font-names=</code><i>text</i></p>
-<dd> specify font family names</p>
-<dt><code>-s, &#8211;font-size=</code><i>num</i></p>
-<dd> specify font pixel size</p>
-<dt><code>&#8211;font-width=</code><i>num</i></p>
-<dd> force font width</p>
-<dt><code>-f, &#8211;color-foreground=</code><i>num</i></p>
-<dd> specify foreground color</p>
-<dt><code>-b, &#8211;color-background=</code><i>num</i></p>
-<dd> specify background color</p>
-<dt><code>-e, &#8211;text-encodings=</code><i>text</i></p>
-<dd> specify additional text encodings</p>
-<dt><code>-r, &#8211;screen-rotate=</code><i>num</i></p>
-<dd> specify the orientation of screen display</p>
-<dt><code>-i, &#8211;input-method=</code><i>text</i></p>
-<dd> specify input method program</p>
-<dt><code>&#8211;cursor-shape=</code><i>num</i></p>
-<dd> specify default cursor shape</p>
-<dt><code>&#8211;cursor-interval=</code><i>num</i></p>
-<dd> specify cursor flash interval</p>
-<dt><code>&#8211;vesa-mode=</code><i>num</i></p>
-<dd> specify VESA video mode</p>
-<dt><code>&#8211;vesa-mode=list</code></p>
-<dd> display available VESA video modes </p>
-<dt>see comments in <i>$HOME/.fbtermrc</i> for details of these options.</p>
-<dd></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> display the help and exit</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> display FbTerm version and exit</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> display extra FbTerm&#8217;s information</dd>
+<dt><code>-n, &#8211;font-names=</code><i>text</i></dt>
+<dd> specify font family names</dd>
+<dt><code>-s, &#8211;font-size=</code><i>num</i></dt>
+<dd> specify font pixel size</dd>
+<dt><code>&#8211;font-width=</code><i>num</i></dt>
+<dd> force font width</dd>
+<dt><code>-f, &#8211;color-foreground=</code><i>num</i></dt>
+<dd> specify foreground color</dd>
+<dt><code>-b, &#8211;color-background=</code><i>num</i></dt>
+<dd> specify background color</dd>
+<dt><code>-e, &#8211;text-encodings=</code><i>text</i></dt>
+<dd> specify additional text encodings</dd>
+<dt><code>-r, &#8211;screen-rotate=</code><i>num</i></dt>
+<dd> specify the orientation of screen display</dd>
+<dt><code>-i, &#8211;input-method=</code><i>text</i></dt>
+<dd> specify input method program</dd>
+<dt><code>&#8211;cursor-shape=</code><i>num</i></dt>
+<dd> specify default cursor shape</dd>
+<dt><code>&#8211;cursor-interval=</code><i>num</i></dt>
+<dd> specify cursor flash interval</dd>
+<dt><code>&#8211;vesa-mode=</code><i>num</i></dt>
+<dd> specify VESA video mode</dd>
+<dt><code>&#8211;vesa-mode=list</code></dt>
+<dd> display available VESA video modes </dd>
+<dt>see comments in <i>$HOME/.fbtermrc</i> for details of these options.</dt>
+<dd></dd></dl>
 <h2>SHORTCUT SUMMARY</h2>
 <p> keyboard:<br />
 &nbsp;<wbr>&nbsp;<wbr>CTRL_ALT_E:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exit from FbTerm<br />

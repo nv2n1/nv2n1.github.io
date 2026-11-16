@@ -16,7 +16,7 @@ description: "docker-image-history – Show the history of an image"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker history fedora
 IMAGE          CREATED          CREATED BY                                      SIZE                COMMENT
@@ -24,12 +24,12 @@ IMAGE          CREATED          CREATED BY                                      
 73bd853d2ea5   13 days ago      /bin/sh -c #(nop) MAINTAINER Lokesh Mandvekar   0 B
 511136ea3c5a   10 months ago                                                    0 B                 Imported from -
 </pre>
-</dl>
+</dd></dl>
 <h2>Display comments in the image history</h2>
 <p> The docker commit command has a <code>-m</code> flag for adding comments to the image. These comments will be displayed in the image history. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ sudo docker history docker:scm
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
@@ -38,7 +38,7 @@ IMAGE               CREATED             CREATED BY                              
 c69cab00d6ef        5 months ago        /bin/sh -c #(nop) MAINTAINER Lokesh Mandvekar   0 B                 
 511136ea3c5a        19 months ago                                                       0 B                 Imported from -
 </pre>
-</dl>
+</dd></dl>
 <h3>Format the output</h3>
 <p> The formatting option (&#8211;format) will pretty-prints history output using a Go template. </p>
 <p> Valid placeholders for the Go template are listed below: </p>
@@ -83,11 +83,11 @@ c69cab00d6ef        5 months ago        /bin/sh -c #(nop) MAINTAINER Lokesh Mand
 <p> The following example uses a template without headers and outputs the ID and CreatedSince entries separated by a colon for all images: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker images-- format "&#123;&#123;.ID}}: &#123;&#123;.CreatedSince}} ago" cc1b61406712 : 2 weeks ago&lt;missing&gt; : 2 weeks ago&lt;missing&gt; : 2 weeks ago&lt;missing&gt; : 2 weeks ago&lt;missing&gt; : 2 weeks ago&lt;missing&gt; : 3 weeks ago&lt;missing&gt; : 3 weeks ago&lt;missing&gt; : 3 weeks ago
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Pretty-print images using a Go template</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for history</p>

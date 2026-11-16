@@ -44,39 +44,39 @@ description: "pamundice – combine grid of images (tiles) into one"
 <p> You cannot supply any of the data on Standard Input, and the files must be the kind that <code>pamundice</code> can close and reopen and read the same image a second time (e.g. a regular file is fine; a named pipe is probably not). </p>
 <p> <i>input_filename_pattern</i> is a printf-style pattern. (See the standard C library <code>printf</code> subroutine). For the example above, it would be <code>tile_%2d_%2a.ppm</code>. The only possible conversion specifiers are: </p>
 <dl>
-<dt><code>d</code></p>
-<dd> &#8216;down&#8217;: The rank (row) number, starting with 0. </p>
-<dt><code>a</code></p>
-<dd> &#8216;across&#8217;: The file (column) number, starting with 0. </p>
-<dt><code>%</code></p>
-<dd> The per cent character (%). </p>
+<dt><code>d</code></dt>
+<dd> &#8216;down&#8217;: The rank (row) number, starting with 0. </dd>
+<dt><code>a</code></dt>
+<dd> &#8216;across&#8217;: The file (column) number, starting with 0. </dd>
+<dt><code>%</code></dt>
+<dd> The per cent character (%). </dd>
 </dl>
 <p> The number between the % and the conversion specifier is the precision and is required. It says how many characters of the file name are described by that conversion. The rank or file number is filled with leading zeroes as necessary. </p>
 <p> So the example <code>tile_%2d_%2a.ppm</code> means to get the name of the file that contains the tile at Rank 0, File 5, you: </p>
 <dl>
-<dt>&bull;</p>
-<dd> replace the &#8216;%2d&#8217; with the rank number, as a 2 digit decimal number: &#8217;00&#8217; </p>
-<dt>&bull;</p>
-<dd> Replace the &#8216;%2a&#8217; with the file number, as a 2 digit decimal number: &#8217;05&#8217; </p>
+<dt>&bull;</dt>
+<dd> replace the &#8216;%2d&#8217; with the rank number, as a 2 digit decimal number: &#8217;00&#8217; </dd>
+<dt>&bull;</dt>
+<dd> Replace the &#8216;%2a&#8217; with the file number, as a 2 digit decimal number: &#8217;05&#8217; </dd>
 </dl>
 <p> Note that this pattern describes file names that <code>pamdice</code> produces, except that the precision may be more or less. (<code>pamdice</code> uses however many digits are required for the highest numbered image). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-across=</code><i>N</i></p>
-<dd> This is the number of tiles across in the grid, i.e. the number of tiles in each rank, or the number of files. </p>
+<dt><code>-across=</code><i>N</i></dt>
+<dd> This is the number of tiles across in the grid, i.e. the number of tiles in each rank, or the number of files. </dd>
 <p> Default is 1. </p>
-<dt><code>-down=</code><i>N</i></p>
-<dd> This is the number of tiles up and down in the grid, i.e. the number of tiles in each file, or the number of ranks. </p>
+<dt><code>-down=</code><i>N</i></dt>
+<dd> This is the number of tiles up and down in the grid, i.e. the number of tiles in each file, or the number of ranks. </dd>
 <p> Default is 1. </p>
-<dt><code>-hoverlap=</code><i>pixels</i></p>
-<dd> This is the amount in pixels to overlap the tiles horizontally. <code>pamundice</code> clips this much off the right edge of every tile before joining it to the adjacent image to the right. The tiles along the right edge remain whole. </p>
+<dt><code>-hoverlap=</code><i>pixels</i></dt>
+<dd> This is the amount in pixels to overlap the tiles horizontally. <code>pamundice</code> clips this much off the right edge of every tile before joining it to the adjacent image to the right. The tiles along the right edge remain whole. </dd>
 <p> There must not be any input image narrower than this. </p>
 <p> Note that this undoes the effect of the same <code>-hoverlap</code> option of <code>pamdice</code>. </p>
 <p> Default is zero &#8212; no overlap. </p>
-<dt><code>-voverlap=</code><i>pixels</i></p>
-<dd> This is analogous to <code>-hoverlap</code>, but <code>pamundice</code> clips the bottom edge of each image before joining it to the one below. </p>
-<dt><code>-verbose</code></p>
-<dd> Print information about the processing to Standard Error. </p>
+<dt><code>-voverlap=</code><i>pixels</i></dt>
+<dd> This is analogous to <code>-hoverlap</code>, but <code>pamundice</code> clips the bottom edge of each image before joining it to the one below. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Print information about the processing to Standard Error. </dd>
 </dl>
 <h2>HISTORY</h2>
 <p> <code>pamundice</code> was new in Netpbm 10.39 (June 2007). Before that, <code>pnmcat</code> is the best substitute. </p>

@@ -14,13 +14,13 @@ description: "fixup_owner – Post lock pi_state and corner case management"
 <p><i>uaddr</i></p>
 <dl>
 <dd>
-<dd>user address of the futex</dl>
+</dd><dd>user address of the futex</dd></dl>
 <p> <i>q</i></p>
 <dl>
-<dd>futex_q (contains pi_state and access to the rt_mutex)</dl>
+<dd>futex_q (contains pi_state and access to the rt_mutex)</dd></dl>
 <p> <i>locked</i></p>
 <dl>
-<dd>if the attempt to take the rt_mutex succeeded (1) or not (0)</dl>
+<dd>if the attempt to take the rt_mutex succeeded (1) or not (0)</dd></dl>
 <h2>Description</h2>
 <p>After attempting to lock an rt_mutex, this function is called to cleanup the pi_state owner as well as handle race conditions that may allow us to acquire the lock. Must be called with the hb lock held.</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "fixup_owner – Post lock pi_state and corner case management"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

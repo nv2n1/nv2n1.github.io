@@ -28,16 +28,16 @@ description: "pmnewlog – stop and restart archive logging for PCP performance 
 <p> The <code>-N</code> option enables a &#8220;show me&#8221; mode, where the actions are echoed, but not executed, in the style of &#8220;make -n&#8221;. Using <code>-N</code> in conjunction with <code>-V</code> maximizes the diagnostic capabilities for debugging. </p>
 <p> The <i>other pmlogger options</i> are as described for <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). Note that <code>pmnewlog</code> does <code>not</code> support the following options of <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</p>
 <dl>
-<dt><code>-h</code> <i>host</i></p>
-<dd> <code>pmnewlog</code> determines the host to which the new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) should connect based upon the current host connection for the old <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</p>
-<dt><code>-s</code> <i>samples</i></p>
-<dd> The new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is expected to be long running, and the <code>-s</code> option of <code>pmnewlog</code> takes precedence.</p>
-<dt><code>-T</code> <i>runtime</i></p>
-<dd> The new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is expected to be long running</p>
-<dt><code>-V</code> <i>version</i></p>
-<dd> The new <code>pmlogger</code> will always create the latest version PCP archive format, and the <code>-V</code> option of <code>pmnewlog</code> takes precedence.</p>
-<dt><code>-x</code> <i>fd</i></p>
-<dd> The launched <code>pmlogger</code> cannot be controlled by <code>pmRecordControl</code>(3).</dl>
+<dt><code>-h</code> <i>host</i></dt>
+<dd> <code>pmnewlog</code> determines the host to which the new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) should connect based upon the current host connection for the old <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</dd>
+<dt><code>-s</code> <i>samples</i></dt>
+<dd> The new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is expected to be long running, and the <code>-s</code> option of <code>pmnewlog</code> takes precedence.</dd>
+<dt><code>-T</code> <i>runtime</i></dt>
+<dd> The new <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is expected to be long running</dd>
+<dt><code>-V</code> <i>version</i></dt>
+<dd> The new <code>pmlogger</code> will always create the latest version PCP archive format, and the <code>-V</code> option of <code>pmnewlog</code> takes precedence.</dd>
+<dt><code>-x</code> <i>fd</i></dt>
+<dd> The launched <code>pmlogger</code> cannot be controlled by <code>pmRecordControl</code>(3).</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) script could be executed by root via <code>cron</code>(1) to start a new set of archive logs for the primary logger each evening. A more complete version of this script may be found in <i>$PCP_BINADM_DIR/pmlogger_daily</i>, and is documented in the manual page for <code>pmlogger_daily</code>(1). </p>
 <pre><code>
@@ -53,14 +53,14 @@ LOGDIR = $PCP_LOG_DIR / pmlogger /`hostname`
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt><i>archive</i><code>.meta</p>
-<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</p>
-<dt></code><i>archive</i><code>.0</p>
-<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;)</p>
-<dt><i>archive</i><code>.index</p>
-<dd> temporal index to support rapid random access to the other files in the archive log</p>
-<dt>$PCP_BINADM_DIR/pmlogger_daily</code></p>
-<dd> sample script to rotate archives for a number of loggers</dl>
+<dt><i>archive</i><code>.meta</dt>
+<dd> metadata (metric descriptions, instance domains, etc.) for the archive log</dd>
+<dt></code><i>archive</i><code>.0</dt>
+<dd> initial volume of metrics values (subsequent volumes have suffixes 1</code>, <code>2</code>, &#8230;)</dd>
+<dt><i>archive</i><code>.index</dt>
+<dd> temporal index to support rapid random access to the other files in the archive log</dd>
+<dt>$PCP_BINADM_DIR/pmlogger_daily</code></dt>
+<dd> sample script to rotate archives for a number of loggers</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

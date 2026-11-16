@@ -22,26 +22,26 @@ description: "dsync – Dovecot’s mailbox synchronization utility"
 <h2>OPTIONS</h2>
 <p> <code>dsync</code> recognizes the following command line options:</p>
 <dl>
-<dt><code>-c</code><i>&nbsp;<wbr>config-file</i></p>
-<dd> read configuration from the given <i>config-file</i>. By default <i>/etc/dovecot/dovecot.conf</i> will be used. <code>-C&nbsp;<wbr></code><i>alt_char</i> Specifies an alternative mailbox name character. If source and destination mailbox formats are different, it&#8217;s possible that on one side there exists a mailbox name that isn&#8217;t valid for the other side. These invalid mailbox names are fixed by replacing such invalid characters with the given <i>alt_char</i>. The default is &#8216;<code>_</code>&#8216;.</p>
-<dt><code>-D</code></p>
-<dd> Activates debug messages and makes <code>dsync</code> more verbose.</p>
-<dt><code>-f</code></p>
-<dd> Makes <code>dsync</code> run in &quot;full sync&quot; mode rather than &quot;fast sync&quot; mode. In fast sync mode <code>dsync</code> might skip syncing a mailbox, if both locations had modified it equally many times (i.e. highest-modseqs were equal), but with different changes.</p>
-<dt><code>-m&nbsp;<wbr></code><i>mailbox</i></p>
-<dd> Specifies the <i>mailbox</i> that should be synchronized or from which mails should be converted. The default is to synchronize all respectively convert from all mailboxes.</p>
-<dt><code>-o&nbsp;<wbr></code><i>setting</i><code>=</code><i>value</i></p>
-<dd> Overrides the configuration <i>setting</i> from <i>/etc/dovecot/dovecot.conf</i> and from the userdb with the given <i>value</i>. In order to override multiple settings, the <code>-o</code> option may be specified multiple times.</p>
-<dt><code>-R</code></p>
-<dd> Reverse backup direction, so mails in <i>location2</i> are backed up to default mail location.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user</i></p>
-<dd> Specifies that the userdb lookup for the given <i>user</i> should be done and used to set up the environment (uid, gid, home, etc.). By default the system user&#8217;s current environment will be used.</p>
-<dt><code>-v</code></p>
-<dd> Makes <code>dsync</code> more verbose.</dl>
+<dt><code>-c</code><i>&nbsp;<wbr>config-file</i></dt>
+<dd> read configuration from the given <i>config-file</i>. By default <i>/etc/dovecot/dovecot.conf</i> will be used. <code>-C&nbsp;<wbr></code><i>alt_char</i> Specifies an alternative mailbox name character. If source and destination mailbox formats are different, it&#8217;s possible that on one side there exists a mailbox name that isn&#8217;t valid for the other side. These invalid mailbox names are fixed by replacing such invalid characters with the given <i>alt_char</i>. The default is &#8216;<code>_</code>&#8216;.</dd>
+<dt><code>-D</code></dt>
+<dd> Activates debug messages and makes <code>dsync</code> more verbose.</dd>
+<dt><code>-f</code></dt>
+<dd> Makes <code>dsync</code> run in &quot;full sync&quot; mode rather than &quot;fast sync&quot; mode. In fast sync mode <code>dsync</code> might skip syncing a mailbox, if both locations had modified it equally many times (i.e. highest-modseqs were equal), but with different changes.</dd>
+<dt><code>-m&nbsp;<wbr></code><i>mailbox</i></dt>
+<dd> Specifies the <i>mailbox</i> that should be synchronized or from which mails should be converted. The default is to synchronize all respectively convert from all mailboxes.</dd>
+<dt><code>-o&nbsp;<wbr></code><i>setting</i><code>=</code><i>value</i></dt>
+<dd> Overrides the configuration <i>setting</i> from <i>/etc/dovecot/dovecot.conf</i> and from the userdb with the given <i>value</i>. In order to override multiple settings, the <code>-o</code> option may be specified multiple times.</dd>
+<dt><code>-R</code></dt>
+<dd> Reverse backup direction, so mails in <i>location2</i> are backed up to default mail location.</dd>
+<dt><code>-u&nbsp;<wbr></code><i>user</i></dt>
+<dd> Specifies that the userdb lookup for the given <i>user</i> should be done and used to set up the environment (uid, gid, home, etc.). By default the system user&#8217;s current environment will be used.</dd>
+<dt><code>-v</code></dt>
+<dd> Makes <code>dsync</code> more verbose.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>location2</i></p>
-<dd> The first mail location is based on configuration (<i>mail_location</i> or <i>userdb</i> settings). It&#8217;s also possible to override it by giving <code>-o mail_location=</code><i>mail_location</i> setting. This parameter defines the other mail location that is used. </p>
+<dt><i>location2</i></dt>
+<dd> The first mail location is based on configuration (<i>mail_location</i> or <i>userdb</i> settings). It&#8217;s also possible to override it by giving <code>-o mail_location=</code><i>mail_location</i> setting. This parameter defines the other mail location that is used. </dd>
 <p> If the location is on local filesystem, you can use a regular mail_location, such as maildir:/backup/user/Maildir </p>
 <p> If the location is on a remote server, <code>dsync</code> can ssh to it by giving <i>host</i> or <i>user [at] host</i> as the parameter. If user is specified, it&#8217;s given as <code>-u</code> parameter to <code>dsync</code>, not to ssh. The ssh username is always the default. </p>
 <p> The final way to specify a location is to give a full command line or a path to a script that executes the <code>dsync</code>. For example: </p>
@@ -58,64 +58,60 @@ ssh mailuser [at] host dsync -u user
 <h2>EXIT STATUS</h2>
 <p> <code>dsync</code> will exit with one of the following values:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Synchronization was done perfectly.</p>
-<dt><code>2</code></p>
-<dd> Synchronization was done without errors, but some changes couldn&#8217;t be done, so the mailboxes aren&#8217;t perfectly synchronized. Running dsync again usually fixes this. Typically this occurs for message modification sequences with newly created mailboxes. It can also occur if one of the mailboxes change during the syncing.</p>
-<dt><code>1, &gt;2</code></p>
-<dd> Synchronization failed.</dl>
+<dt><code>0</code></dt>
+<dd> Synchronization was done perfectly.</dd>
+<dt><code>2</code></dt>
+<dd> Synchronization was done without errors, but some changes couldn&#8217;t be done, so the mailboxes aren&#8217;t perfectly synchronized. Running dsync again usually fixes this. Typically this occurs for message modification sequences with newly created mailboxes. It can also occur if one of the mailboxes change during the syncing.</dd>
+<dt><code>1, &gt;2</code></dt>
+<dd> Synchronization failed.</dd></dl>
 <h2>EXAMPLE</h2>
 <h3>MIRRORING</h3>
 <p> Mirror mailboxes to a remote server. Any errors are written to stderr. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>dsync -u username mirror username [at] example.com</code>
 </pre>
-</dl>
+</dd></dl>
 <p> If you need more complex parameters to ssh, you can use e.g.: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>dsync -u username mirror ssh -i id_dsa.dovecot mailuser [at] example.com dsync -u username</code>
 </pre>
-</dl>
+</dd></dl>
 <h3>CONVERTING</h3>
 <p> Assuming that the <i>mail_location</i> setting in <i>/etc/dovecot/conf.d/10-mail.conf</i> is set to: <code>mail_location = mdbox:~/mdbox</code>, a logged in system user may convert her/his mails from its Maildir in her/his home directory to the mdbox mailbox format. The user has to execute the command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>dsync mirror maildir:~/Maildir</code>
 </pre>
-</dl>
+</dd></dl>
 <p> If you want to do this without any downtime, you can do the conversion one user at a time. Initially:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Configuration uses <code>mail_location = maildir:~/Maildir</code></p>
-<dt>&bull;</p>
-<dd> Set up the possibility of doing per-user mail location using <i>userdb</i> extra fields.</dl>
+<dt>&bull;</dt>
+<dd> Configuration uses <code>mail_location = maildir:~/Maildir</code></dd>
+<dt>&bull;</dt>
+<dd> Set up the possibility of doing per-user mail location using <i>userdb</i> extra fields.</dd></dl>
 </dl>
 <p> Then for each user:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
-<dd> Run <i>dsync mirror</i> once to do the initial conversion.</p>
-<dt>2.</p>
-<dd> Run <i>dsync mirror</i> again, because the initial conversion could have taken a while and new changes could have occurred during it. This second time only applies changes, so it should be fast.</p>
-<dt>3.</p>
-<dd> Update mail extra field in userdb to <code>mdbox:~/mdbox</code>. If you&#8217;re using auth cache, you need to flush it.</p>
-<dt>4.</p>
-<dd> Wait for a few seconds and then kill the user&#8217;s all existing imap and pop3 sessions (that are still using maildir).</p>
-<dt>5.</p>
-<dd> Run <i>dsync mirror</i> once more to apply final changes that were possibly done. After this there should be no changes to Maildir, because the user&#8217;s mail location has been changed and all existing processes using it have been killed.</dl>
+<dt>1.</dt>
+<dd> Run <i>dsync mirror</i> once to do the initial conversion.</dd>
+<dt>2.</dt>
+<dd> Run <i>dsync mirror</i> again, because the initial conversion could have taken a while and new changes could have occurred during it. This second time only applies changes, so it should be fast.</dd>
+<dt>3.</dt>
+<dd> Update mail extra field in userdb to <code>mdbox:~/mdbox</code>. If you&#8217;re using auth cache, you need to flush it.</dd>
+<dt>4.</dt>
+<dd> Wait for a few seconds and then kill the user&#8217;s all existing imap and pop3 sessions (that are still using maildir).</dd>
+<dt>5.</dt>
+<dd> Run <i>dsync mirror</i> once more to apply final changes that were possibly done. After this there should be no changes to Maildir, because the user&#8217;s mail location has been changed and all existing processes using it have been killed.</dd></dl>
 </dl>
 <p> Once all users have been converted, you can set the default <i>mail_location</i> to mdbox and remove the per-user mail locations from <i>userdb</i>.</p>
 <h2>REPORTING BUGS</h2>
@@ -124,7 +120,7 @@ ssh mailuser [at] host dsync -u user
 <p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-doveadm-kick/">doveadm-kick</a></code>(1), <code><a href="/docs/linux/man/1-doveconf/">doveconf</a></code>(1), <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) </p>
 <p> Additional resources:</p>
 <dl>
-<dt>dsync design</p>
-<dd> <a rel="nofollow" href="http://wiki2.dovecot.org/Design/Dsync">http://wiki2.dovecot.org/Design/Dsync</a> </p>
+<dt>dsync design</dt>
+<dd> <a rel="nofollow" href="http://wiki2.dovecot.org/Design/Dsync">http://wiki2.dovecot.org/Design/Dsync</a> </dd>
 </dl>
 <h2>Index</h2>

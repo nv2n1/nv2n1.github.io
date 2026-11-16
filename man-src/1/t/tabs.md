@@ -31,14 +31,14 @@ tabs -8
 <h2>OPTIONS</h2>
 <h3>General Options</h3>
 <dl>
-<dt><code>-T</code><i>name</i></p>
-<dd> Tell <code>tabs</code> which terminal type to use. If this option is not given, <code>tabs</code> will use the <code>$TERM</code> environment variable. If that is not set, it will use the <i>ansi+tabs</i> entry.</p>
-<dt><code>-d</code></p>
-<dd> The debugging option shows a ruler line, followed by two data lines. The first data line shows the expected tab-stops marked with asterisks. The second data line shows the actual tab-stops, marked with asterisks.</p>
-<dt><code>-n</code></p>
-<dd> This option tells <code>tabs</code> to check the options and run any debugging option, but not to modify the terminal settings.</p>
-<dt><code>-V</code></p>
-<dd> reports the version of ncurses which was used in this program, and exits.</dl>
+<dt><code>-T</code><i>name</i></dt>
+<dd> Tell <code>tabs</code> which terminal type to use. If this option is not given, <code>tabs</code> will use the <code>$TERM</code> environment variable. If that is not set, it will use the <i>ansi+tabs</i> entry.</dd>
+<dt><code>-d</code></dt>
+<dd> The debugging option shows a ruler line, followed by two data lines. The first data line shows the expected tab-stops marked with asterisks. The second data line shows the actual tab-stops, marked with asterisks.</dd>
+<dt><code>-n</code></dt>
+<dd> This option tells <code>tabs</code> to check the options and run any debugging option, but not to modify the terminal settings.</dd>
+<dt><code>-V</code></dt>
+<dd> reports the version of ncurses which was used in this program, and exits.</dd></dl>
 <p> The <code>tabs</code> program processes a single list of tab stops. The last option to be processed which defines a list is the one that determines the list to be processed.</p>
 <h3>Implicit Lists</h3>
 <p> Use a single number as an option, e.g., &#8220;<code>-5</code>&#8221; to set tabs at the given interval (in this case 1, 6, 11, 16, 21, etc.). Tabs are repeated up to the right margin of the screen. </p>
@@ -65,45 +65,45 @@ tabs 1,+5,+5,+5,+5
 <h3>Predefined Tab-Stops</h3>
 <p> POSIX defines several predefined lists of tab stops.</p>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd> Assembler, IBM S/370, first format<br />
- 1,10,16,36,72</p>
-<dt><code>-a2</code></p>
+ 1,10,16,36,72</dd>
+<dt><code>-a2</code></dt>
 <dd> Assembler, IBM S/370, second format<br />
- 1,10,16,40,72</p>
-<dt><code>-c</code></p>
+ 1,10,16,40,72</dd>
+<dt><code>-c</code></dt>
 <dd> COBOL, normal format<br />
- 1,8,12,16,20,55</p>
-<dt><code>-c2</code></p>
+ 1,8,12,16,20,55</dd>
+<dt><code>-c2</code></dt>
 <dd> COBOL compact format<br />
- 1,6,10,14,49</p>
-<dt><code>-c3</code></p>
+ 1,6,10,14,49</dd>
+<dt><code>-c3</code></dt>
 <dd> COBOL compact format extended<br />
- 1,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,67</p>
-<dt><code>-f</code></p>
+ 1,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,67</dd>
+<dt><code>-f</code></dt>
 <dd> FORTRAN<br />
- 1,7,11,15,19,23</p>
-<dt><code>-p</code></p>
+ 1,7,11,15,19,23</dd>
+<dt><code>-p</code></dt>
 <dd> PL/I<br />
- 1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61</p>
-<dt><code>-s</code></p>
+ 1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61</dd>
+<dt><code>-s</code></dt>
 <dd> SNOBOL<br />
- 1,10,55</p>
-<dt><code>-u</code></p>
+ 1,10,55</dd>
+<dt><code>-u</code></dt>
 <dd> UNIVAC 1100 Assembler<br />
- 1,12,20,44</dl>
+ 1,12,20,44</dd></dl>
 <h3>Margins</h3>
 <p> A few terminals provide the capability for changing their left/right margins. The tabs program has an option to use this feature:</p>
 <dl>
-<dt><code>+m</code><i>&nbsp;margin</i></p>
-<dd> The effect depends on whether the terminal has the margin capabilities:</p>
+<dt><code>+m</code><i>&nbsp;margin</i></dt>
+<dd> The effect depends on whether the terminal has the margin capabilities:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal provides the capability for setting the left margin, tabs uses this, and adjusts the available width for tab-stops.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal does not provide the margin capabilities, tabs imitates the effect, putting the tab stops at the appropriate place on each line. The terminal&#8217;s left-margin is not modified.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal does not provide the margin capabilities, tabs imitates the effect, putting the tab stops at the appropriate place on each line. The terminal&#8217;s left-margin is not modified.</dd></dl>
 <dt>
-<dd> If the <i>margin</i> parameter is omitted, the default is 10. Use <code>+m0</code> to reset the left margin, i.e., to the left edge of the terminal&#8217;s display. Before setting a left-margin, tabs resets the margin to reduce problems which might arise on moving the cursor before the current left-margin.</dl>
+</dt><dd> If the <i>margin</i> parameter is omitted, the default is 10. Use <code>+m0</code> to reset the left margin, i.e., to the left edge of the terminal&#8217;s display. Before setting a left-margin, tabs resets the margin to reduce problems which might arise on moving the cursor before the current left-margin.</dd></dl>
 <p> When setting or resetting the left-margin, tabs may reset the right-margin.</p>
 <h2>PORTABILITY</h2>
 <p> <i>IEEE Std 1003.1/The Open Group Base Specifications Issue 7</i> (POSIX.1-2008) describes a <code>tabs</code> utility. However<br />
@@ -118,10 +118,11 @@ tabs 1,+5,+5,+5,+5
 <p> The <i>Rationale</i> section of the POSIX documentation goes into some detail about the ways the committee considered redesigning the <code>tabs</code> and <code>tput</code> utilities, without proposing an improved solution. It comments that</p>
 <dl>
 <dt>
-<dd>
-<p> no known historical version of tabs supports the capability of setting arbitrary tab stops.</dl>
+</dt><dd>
+<p> no known historical version of tabs supports the capability of setting arbitrary tab stops.</dd></dl>
 <p> However, the <i>Explicit Lists</i> described in this manual page were implemented in PWB/Unix. Those provide the capability of setting abitrary tab stops.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-infocmp/">infocmp</a></code>(1), <code><a href="/docs/linux/man/1-tset/">tset</a></code>(1), <code>ncurses</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5). </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
 <h2>Index</h2>
+</p>

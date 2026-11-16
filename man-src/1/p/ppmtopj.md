@@ -24,20 +24,20 @@ description: "ppmtopj – convert a portable pixmap to an HP PaintJet file"
 <p> Or else you could use use <i>ppmdither -red 2 -green 2 -blue 2.</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-rle</code></p>
-<dd> Run length encode the image. (This can result in larger images)</p>
-<dt><code>-back</code></p>
-<dd> Enhance the foreground by indicating if the background is light or dark compated to the foreground.</p>
-<dt><code>-render</code><i> alg</i></p>
-<dd> Use an internal rendering algorithm (default dither).</p>
-<dt><code>-gamma</code><i> int</i></p>
-<dd> Gamma correct the image using the integet parameter as a gamma (default 0).</p>
-<dt><code>-center</code></p>
-<dd> Center the image to an 8.5 by 11 page</p>
-<dt><code>-xpos</code><i> pos</i></p>
-<dd> Move by pos pixels in the x direction.</p>
-<dt><code>-ypos</code><i> pos</i></p>
-<dd> Move by pos pixels in the y direction.</dl>
+<dt><code>-rle</code></dt>
+<dd> Run length encode the image. (This can result in larger images)</dd>
+<dt><code>-back</code></dt>
+<dd> Enhance the foreground by indicating if the background is light or dark compated to the foreground.</dd>
+<dt><code>-render</code><i> alg</i></dt>
+<dd> Use an internal rendering algorithm (default dither).</dd>
+<dt><code>-gamma</code><i> int</i></dt>
+<dd> Gamma correct the image using the integet parameter as a gamma (default 0).</dd>
+<dt><code>-center</code></dt>
+<dd> Center the image to an 8.5 by 11 page</dd>
+<dt><code>-xpos</code><i> pos</i></dt>
+<dd> Move by pos pixels in the x direction.</dd>
+<dt><code>-ypos</code><i> pos</i></dt>
+<dd> Move by pos pixels in the y direction.</dd></dl>
 <h2>REFERENCES</h2>
 <p> HP PaintJet XL Color Graphics Printer User&#8217;s Guide</p>
 <h2>SEE ALSO</h2>

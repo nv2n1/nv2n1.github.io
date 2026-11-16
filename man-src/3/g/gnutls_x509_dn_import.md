@@ -14,10 +14,10 @@ description: "gnutls_x509_dn_import – API function"
 <p> <code>int gnutls_x509_dn_import(gnutls_x509_dn_t </code><i>dn</i><code>, const gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_dn_t dn</p>
-<dd> the structure that will hold the imported DN</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> should contain a DER encoded RDN sequence</dl>
+<dt>gnutls_x509_dn_t dn</dt>
+<dd> the structure that will hold the imported DN</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> should contain a DER encoded RDN sequence</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function parses an RDN sequence and stores the result to a <code>gnutls_x509_dn_t</code> structure. The structure must have been initialized with <code>gnutls_x509_dn_init()</code>. You may use <code>gnutls_x509_dn_get_rdn_ava()</code> to decode the DN.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_dn_import – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

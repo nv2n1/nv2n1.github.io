@@ -44,8 +44,8 @@ void encrypt_r(char *block, int edflag, struct crypt_data *data);
 <h2>ERRORS</h2>
 <p> Set <i>errno</i> to zero before calling the above functions. On success, it is unchanged.</p>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> The function is not provided. (For example because of former USA export restrictions.)</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> The function is not provided. (For example because of former USA export restrictions.)</dd></dl>
 <h2>VERSIONS</h2>
 <p> Because they employ the DES block cipher, which is no longer considered secure, <code>crypt</code>(), <code>crypt_r</code>(), <code>setkey</code>(), and <code>setkey_r</code>() were removed in glibc 2.28. Applications should switch to a modern cryptography library, such as <code>libgcrypt</code>.</p>
 <h2>ATTRIBUTES</h2>
@@ -99,3 +99,4 @@ void encrypt_r(char *block, int edflag, struct crypt_data *data);
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;encrypt(buf, 0);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;8;&nbsp;i++)&nbsp;{<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0, txt[i]&nbsp;=&nbsp;&#8216;
+</p>

@@ -11,10 +11,8 @@ std::experimental::erase(std::basic_string) - std::experimental::erase(std::basi
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / string&gt;
-
     template &lt;class charT, class traits, class A, class U&gt;
     (library fundamentals TS v2)
-
         void erase(std::basic_string&lt;charT, traits, A&gt; &amp;c, const U &amp;value);
 Erases all elements that compare equal to value from the container.Equivalent to c.erase(std::remove(c.begin(), c.end(), value), c.end());
 </code></pre>

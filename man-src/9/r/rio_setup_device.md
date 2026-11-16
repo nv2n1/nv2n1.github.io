@@ -14,23 +14,23 @@ description: "rio_setup_device – Allocates and sets up a RIO device"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network</dl>
+</dd><dd>RIO network</dd></dl>
 <p> <i>port</i></p>
 <dl>
-<dd>Master port to send transactions</dl>
+<dd>Master port to send transactions</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>Current destination ID</dl>
+<dd>Current destination ID</dd></dl>
 <p> <i>hopcount</i></p>
 <dl>
-<dd>Current hopcount</dl>
+<dd>Current hopcount</dd></dl>
 <p> <i>do_enum</i></p>
 <dl>
-<dd>Enumeration/Discovery mode flag</dl>
+<dd>Enumeration/Discovery mode flag</dd></dl>
 <h2>Description</h2>
 <p>Allocates a RIO device and configures fields based on configuration space contents. If device has a destination ID register, a destination ID is either assigned in enumeration mode or read from configuration space in discovery mode. If the device has switch capabilities, then a switch is allocated and configured appropriately. Returns a pointer to a RIO device on success or NULL on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

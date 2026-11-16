@@ -14,14 +14,14 @@ description: "grub-script-check – check grub.cfg for syntax errors"
 <h2>DESCRIPTION</h2>
 <p> Checks GRUB script configuration file for syntax errors.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> print verbose messages.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> print verbose messages.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
 <h2>SEE ALSO</h2>
@@ -29,6 +29,6 @@ description: "grub-script-check – check grub.cfg for syntax errors"
 <p> The full documentation for <code>grub-script-check</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-script-check</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-script-check</code></dl>
+</dt><dd> <code>info grub-script-check</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

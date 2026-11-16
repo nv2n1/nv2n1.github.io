@@ -15,7 +15,7 @@ phy_sanitize_settings - make sure the PHY is set to supported speed and duplex
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>the target phy_device struct</dl>
+<dl><dd></dd><dd>the target phy_device struct</dd></dl>
 
 <h2>Description</h2>
 

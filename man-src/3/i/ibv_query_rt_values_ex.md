@@ -34,9 +34,9 @@ enum ibv_values_mask {
 <p> <code>ibv_query_device</code>(3), <code>ibv_open_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_pkey</code>(3), <code>ibv_query_gid</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</p>
+<dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

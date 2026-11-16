@@ -29,20 +29,20 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 <h2>OPTIONS</h2>
 <p> &lt;dl compact=&quot;compact&quot;&gt; </p>
 <dl>
-<dt><code>-tri</code> | <code>-quad</code></p>
+<dt><code>-tri</code> | <code>-quad</code></dt>
 <dd>
 <p> This selects the type of rubber sheeting done. You must specify exactly one of these options. </p>
-<dt><code>-linear</code></p>
+</dd><dt><code>-linear</code></dt>
 <dd>
 <p> This determines whether <code>pamrubber</code> uses nearest neighbor interpolation or bilinear interpolation of four source pixels. </p>
-<dt><code>-frame</code></p>
+</dd><dt><code>-frame</code></dt>
 <dd>
 <p> This option causes <code>pamrubber</code> to overlay the target image with the edges of the quadrilaterals, respectively the triangles used for the rubber sheeting. To get the same overlay for the source image, use a <code>pamrubber</code> transformation with identical control points for source and target. </p>
-<dt><code>-randomseed=</code><i>N</i></p>
+</dd><dt><code>-randomseed=</code><i>N</i></dt>
 <dd>
 <p> <code>pamrubber</code> randomizes some of its output. So that you can produce repeatable results, you can choose the seed of the random number generator with this option. If you use the same input image and the same random number generator seed, you should always get the exact same output. By default, <code>pamrubber</code> uses the time of day as the seed, so you get slightly different output when you run the program twice on the same input. </p>
 <p> Before Netpbm 10.61 (December 2012), this was called <code>-randseed</code>, and that still works. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pam</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamperspective/">pamperspective</a></code>(1) </p>

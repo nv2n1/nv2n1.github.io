@@ -11,7 +11,6 @@ description: "sc::StateInFile –"
 <p> Reads state information from a file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_file.h&gt;</code></pre>
 <p> Inherits <code>sc::StateIn</code>. Inherited by <code>sc::StateInBin</code>, and <code>sc::StateInText</code>.</p>
 <h3>Public Member Functions</h3>
@@ -27,9 +26,6 @@ description: "sc::StateInFile –"
  <i>Close the output file. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int opened_
-
-
-
 std::streambuf * buf_</code></pre>
 <h2>Detailed Description</h2>
 <p>Reads state information from a file.</p>

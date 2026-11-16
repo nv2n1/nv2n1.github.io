@@ -20,31 +20,31 @@ description: "irtestcase – create or check decoding testcases."
 <p> The optional socket is the lircd output socket (lircd must be running). It defaults to LIRC_SOCKET_PATH in environment, falling back to a hardcoded default value (usually /var/run/lirc/lircd). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l, &#8211;lircrc &lt;lircrc config file&gt;</code></p>
-<dd> Log also applications strings (as <a href="/docs/linux/man/1-ircat/">ircat</a>(1)) using lircrc type config file. </p>
-<dt><code>-p, &#8211;prog &lt;program id&gt;</code></p>
-<dd> When using -l/&#8211;lircrc, the program name matching the PROG = entries in lircrc </p>
-<dt><code>-t, &#8211;testdata</code></p>
-<dd> Use data i file instead of &quot;live&quot; input from the remote. This can be the durations.log file from a previous run, see FILES. It can also be logged output from <a href="/docs/linux/man/1-mode2/">mode2</a>(1). </p>
-<dt><code>-v , &#8211;version</code></p>
-<dd> Print version and exit. </p>
-<dt><code>-h , &#8211;help</code></p>
-<dd> Print help message. </p>
+<dt><code>-l, &#8211;lircrc &lt;lircrc config file&gt;</code></dt>
+<dd> Log also applications strings (as <a href="/docs/linux/man/1-ircat/">ircat</a>(1)) using lircrc type config file. </dd>
+<dt><code>-p, &#8211;prog &lt;program id&gt;</code></dt>
+<dd> When using -l/&#8211;lircrc, the program name matching the PROG = entries in lircrc </dd>
+<dt><code>-t, &#8211;testdata</code></dt>
+<dd> Use data i file instead of &quot;live&quot; input from the remote. This can be the durations.log file from a previous run, see FILES. It can also be logged output from <a href="/docs/linux/man/1-mode2/">mode2</a>(1). </dd>
+<dt><code>-v , &#8211;version</code></dt>
+<dd> Print version and exit. </dd>
+<dt><code>-h , &#8211;help</code></dt>
+<dd> Print help message. </dd>
 </dl>
 <h2>FILES</h2>
 <p> irtestcase creates files in /tmp/irtestcase (hardcoded, sorry). After a successful run here is:</p>
 <dl>
-<dt><code>durations.log</code></p>
-<dd> Printable space/pulse durations in the same format as <a href="/docs/linux/man/1-mode2/">mode2</a>(1). This file is usable as -t/&#8211;testdata input.</p>
-<dt><code>codes.log</code></p>
-<dd> The decoded buttons, in same format as irw(1).</p>
-<dt><code>app_strings.log</code></p>
-<dd> The application strings, as presented by <a href="/docs/linux/man/1-ircat/">ircat</a>(1). </p>
+<dt><code>durations.log</code></dt>
+<dd> Printable space/pulse durations in the same format as <a href="/docs/linux/man/1-mode2/">mode2</a>(1). This file is usable as -t/&#8211;testdata input.</dd>
+<dt><code>codes.log</code></dt>
+<dd> The decoded buttons, in same format as irw(1).</dd>
+<dt><code>app_strings.log</code></dt>
+<dd> The application strings, as presented by <a href="/docs/linux/man/1-ircat/">ircat</a>(1). </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.cache/irtestcase.log</code></p>
-<dd> Debug output. Setting the XDG_CACHE_HOME environment variable relocates this file to $XDG_CACHE_HOME/irtestcase.log </p>
+<dt><code>~/.cache/irtestcase.log</code></dt>
+<dd> Debug output. Setting the XDG_CACHE_HOME environment variable relocates this file to $XDG_CACHE_HOME/irtestcase.log </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>

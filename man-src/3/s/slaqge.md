@@ -19,16 +19,16 @@ description: "slaqge.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAQGE equilibrates a general M by N matrix A using the row and
  column scaling factors in the vectors R and C.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -91,7 +91,7 @@ description: "slaqge.f –"
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   THRESH is a threshold value used to decide if row or column scaling
   should be done based on the ratio of the row or column scaling
@@ -101,18 +101,18 @@ description: "slaqge.f –"
   should be done based on the absolute size of the largest matrix
   element.  If AMAX &gt; LARGE or AMAX &lt; SMALL, row scaling is done.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 142 of file slaqge.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -99,7 +99,7 @@ description: "table_dataset – Helps you implement a table with automatted stor
 <p> If registration_name is NULL then the name used when the table was created will be used instead. </p>
 <p> <code>Todo</code></p>
 <dl>
-<dd>create a properly free&#8217;ing registeration pointer for the datalist, and get the datalist freed at shutdown.</dl>
+<dd>create a properly free&#8217;ing registeration pointer for the datalist, and get the datalist freed at shutdown.</dd></dl>
 <p> <code>Examples: </code> <code>data_set.c</code>. </p>
 <p> Definition at line 853 of file table_dataset.c. </p>
 <p> References netsnmp_table_data_s::name, netsnmp_add_list_data(), netsnmp_create_data_list(), NULL, SNMP_MALLOC_TYPEDEF, netsnmp_table_data_set_s::table, and data_set_tables_s::table_set. </p>

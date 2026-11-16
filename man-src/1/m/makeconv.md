@@ -17,20 +17,20 @@ description: "makeconv – compile a converter table"
 <p> Note that new converters will be automatically found by ICU after their installation in ICU&#8217;s data directory. They do not need to be listed in the <code>convrtrs.txt</code>(5) converters aliases file in order to be available to applications using ICU. They do need to be listed there if one wants to give them aliases, or tags, though.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-c</code>, <code>&#8211;copyright</code></p>
-<dd> Include a copyright notice in the binary data.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display extra informative messages during execution.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></p>
-<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-c</code>, <code>&#8211;copyright</code></dt>
+<dd> Include a copyright notice in the binary data.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display extra informative messages during execution.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dd></dl>
 <h2>CAVEATS</h2>
 <p> If an existing converter table is changed and recompiled using <code>makeconv</code>, the resulting binary file must be packaged in the same way that it was packaged initially. For example, if converters were grouped together in an archive or a library with <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1), then the archive or library must be rebuilt with the new binary file. A standalone binary converter file will not take precedence over a packaged one.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>ICU_DATA</code></p>
-<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dl>
+<dt><code>ICU_DATA</code></dt>
+<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
 <h2>VERSION</h2>
 <p> 70.1</p>
 <h2>COPYRIGHT</h2>

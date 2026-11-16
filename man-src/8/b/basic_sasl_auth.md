@@ -24,7 +24,7 @@ description: "basic_sasl_auth – Basic Authentication using SASL (specifically 
 <p> Typically the authentication database ( <code>/etc/sasldb</code> , <code>/etc/shadow</code> , <code>PAM</code> ) can not be accessed by a normal user. You should use setuid/setgid and an appropriate user/group on the executable to allow the authenticator to access the appropriate password database. If the access to the database is not permitted then the authenticator will typically fail with &quot;-1, generic error&quot;. </p>
 <dl>
 <dd><code>chown root.mail basic_sasl_auth</code><br />
- <code>chmod ug+s basic_sasl_auth</code></dl>
+ <code>chmod ug+s basic_sasl_auth</code></dd></dl>
 <p> If the application name <code>basic_sasl_auth</code> will also be used for the PAM service name if <code>pwcheck_method:pam</code> is chosen. And example PAM configuration file <code>basic_sasl_auth.pam</code> is also included.</p>
 <h2>Author</h2>
 <p>This program was written by <i>Ian Castle &lt;ian.castle [at] coldcomfortfarm.net&gt;</i> </p>

@@ -26,26 +26,26 @@ mcopy[-bspanvmQT][-D clash_option] sourcefile targetfile
 <p> A filename of `<tt>-</tt>&#8216; means standard input or standard output, depending on its position on the command line. </p>
 <p> <tt>Mcopy</tt> accepts the following command line options:</p>
 <dl>
-<dt><tt>t</tt>&nbsp;</p>
-<dd> Text file transfer. Mcopy translates incoming carriage return/line feeds to line feeds when copying from MS-DOS to Unix, and vice-versa when copying from Unix to MS-DOS.</p>
-<dt><tt>b</tt>&nbsp;</p>
-<dd> Batch mode. Optimized for huge recursive copies, but less secure if a crash happens during the copy.</p>
-<dt><tt>s</tt>&nbsp;</p>
-<dd> Recursive copy. Also copies directories and their contents</p>
-<dt><tt>p</tt>&nbsp;</p>
-<dd> Preserves the attributes of the copied files</p>
-<dt><tt>Q</tt>&nbsp;</p>
-<dd> When mcopying multiple files, quits as soon as one copy fails (for example due to lacking storage space on the target disk)</p>
-<dt><tt>a</tt>&nbsp;</p>
-<dd> Text (ASCII) file transfer. <tt>ASCII</tt> translates incoming carriage return/line feeds to line feeds.</p>
-<dt><tt>T</tt>&nbsp;</p>
-<dd> Text (ASCII) file transfer with character set conversion. Differs from <tt>-a</tt> in the <tt>ASCII</tt> also translates incoming PC-8 characters to ISO-8859-1 equivalents as far as possible. When reading DOS files, untranslatable characters are replaced by &#8216;<tt>#</tt>&#8216;; when writing DOS files, untranslatable characters are replaced by &#8216;<tt>.</tt>&#8216;.</p>
-<dt><tt>n</tt>&nbsp;</p>
-<dd> No confirmation when overwriting Unix files. <tt>ASCII</tt> doesn&#8217;t warn the user when overwriting an existing Unix file. If the target file already exists, and the <tt>-n</tt> option is not in effect, <tt>mcopy</tt> asks whether to overwrite the file or to rename the new file (&infin;name clashesIntegral) for details). In order to switch off confirmation for DOS files, use <tt>-o</tt>.</p>
-<dt><tt>m</tt>&nbsp;</p>
-<dd> Preserve the file modification time.</p>
-<dt><tt>v</tt>&nbsp;</p>
-<dd> Verbose. Displays the name of each file as it is copied.</dl>
+<dt><tt>t</tt>&nbsp;</dt>
+<dd> Text file transfer. Mcopy translates incoming carriage return/line feeds to line feeds when copying from MS-DOS to Unix, and vice-versa when copying from Unix to MS-DOS.</dd>
+<dt><tt>b</tt>&nbsp;</dt>
+<dd> Batch mode. Optimized for huge recursive copies, but less secure if a crash happens during the copy.</dd>
+<dt><tt>s</tt>&nbsp;</dt>
+<dd> Recursive copy. Also copies directories and their contents</dd>
+<dt><tt>p</tt>&nbsp;</dt>
+<dd> Preserves the attributes of the copied files</dd>
+<dt><tt>Q</tt>&nbsp;</dt>
+<dd> When mcopying multiple files, quits as soon as one copy fails (for example due to lacking storage space on the target disk)</dd>
+<dt><tt>a</tt>&nbsp;</dt>
+<dd> Text (ASCII) file transfer. <tt>ASCII</tt> translates incoming carriage return/line feeds to line feeds.</dd>
+<dt><tt>T</tt>&nbsp;</dt>
+<dd> Text (ASCII) file transfer with character set conversion. Differs from <tt>-a</tt> in the <tt>ASCII</tt> also translates incoming PC-8 characters to ISO-8859-1 equivalents as far as possible. When reading DOS files, untranslatable characters are replaced by &#8216;<tt>#</tt>&#8216;; when writing DOS files, untranslatable characters are replaced by &#8216;<tt>.</tt>&#8216;.</dd>
+<dt><tt>n</tt>&nbsp;</dt>
+<dd> No confirmation when overwriting Unix files. <tt>ASCII</tt> doesn&#8217;t warn the user when overwriting an existing Unix file. If the target file already exists, and the <tt>-n</tt> option is not in effect, <tt>mcopy</tt> asks whether to overwrite the file or to rename the new file (&infin;name clashesIntegral) for details). In order to switch off confirmation for DOS files, use <tt>-o</tt>.</dd>
+<dt><tt>m</tt>&nbsp;</dt>
+<dd> Preserve the file modification time.</dd>
+<dt><tt>v</tt>&nbsp;</dt>
+<dd> Verbose. Displays the name of each file as it is copied.</dd></dl>
 <h2>Bugs</h2>
 <p> Unlike MS-DOS, the &#8216;+&#8217; operator (append) from MS-DOS is not supported. However, you may use <tt>mtype</tt> to produce the same effect:<br />
 &nbsp; </p>
@@ -59,27 +59,27 @@ mtype a:file1 a:file2 a:file3 | mcopy - a:msdosfile
 <h2>Viewing the texi doc</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
 </code></pre>
 </dl>
 <p>&nbsp;</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a html copy, run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make html
 </code></pre>
 </dl>
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make info
 </code></pre>

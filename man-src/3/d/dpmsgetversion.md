@@ -13,28 +13,28 @@ description: "DPMSGetVersion – returns the version of the DPMS extension imple
 #include &lt;X11/extensions/dpms.h&gt;
 <dl COMPACT><dt><code>Status DPMSGetVersion</code>
 (
-<dd>Display *<i>display</i>,
-<dd>int *<i>major_version</i>,
-<dd>int *<i>minor_version</i>
+</dt><dd>Display *<i>display</i>,
+</dd><dd>int *<i>major_version</i>,
+</dd><dd>int *<i>minor_version</i>
 );
 <br>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl></pre>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>Specifies the connection to the X server</p>
-<dt><i>major_version</i></p>
-<dd>Specifies the return location for the extension major version</p>
-<dt><i>minor_version</i></p>
-<dd>Specifies the return location for the extension minor version</dl>
+</dd><dd>Specifies the connection to the X server</dd>
+<dt><i>major_version</i></dt>
+<dd>Specifies the return location for the extension major version</dd>
+<dt><i>minor_version</i></dt>
+<dd>Specifies the return location for the extension minor version</dd></dl>
 <h2>Description</h2>
 <p>The <i>DPMSGetVersion</i> function returns the version of the Display Power Management Signaling (DPMS) extension implemented by the X server. It returns a major and minor version number. The major version number will be incremented for protocol incompatible changes, and the minor version number will be incremented for small, upward compatible changes.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>TRUE</p>
-<dd>The <i>DPMSGetVersion</i> function returns TRUE when the extension is supported and values are returned.</p>
-<dt>FALSE</p>
-<dd>The <i>DPMSGetVersion</i> function returns FALSE when the extension is not supported.</dl>
+<dt>TRUE</dt>
+<dd>The <i>DPMSGetVersion</i> function returns TRUE when the extension is supported and values are returned.</dd>
+<dt>FALSE</dt>
+<dd>The <i>DPMSGetVersion</i> function returns FALSE when the extension is not supported.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-dpmscapable/">DPMSCapable</a></code>(3), <code><a href="/docs/linux/man/3-dpmsqueryextension/">DPMSQueryExtension</a></code>(3)</p>

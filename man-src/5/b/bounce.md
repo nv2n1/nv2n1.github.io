@@ -43,54 +43,54 @@ description: "bounce – Postfix bounce message template format"
  EOF</pre>
 <p>The usage and specification of bounce templates is subject to the following restrictions:</p>
 <dl>
-<dt>&bull;</p>
-<dd>No special meaning is given to the backslash character or to leading whitespace; these are always taken literally.</p>
-<dt>&bull;</p>
-<dd>Inside the &lt;&lt; context, the &quot;$&quot; character is special. To produce a &quot;$&quot; character as output, specify &quot;$$&quot;.</p>
-<dt>&bull;</p>
-<dd>Outside the &lt;&lt; context, lines beginning with &quot;#&quot; are ignored, as are empty lines, and lines consisting of whitespace only.</dl>
+<dt>&bull;</dt>
+<dd>No special meaning is given to the backslash character or to leading whitespace; these are always taken literally.</dd>
+<dt>&bull;</dt>
+<dd>Inside the &lt;&lt; context, the &quot;$&quot; character is special. To produce a &quot;$&quot; character as output, specify &quot;$$&quot;.</dd>
+<dt>&bull;</dt>
+<dd>Outside the &lt;&lt; context, lines beginning with &quot;#&quot; are ignored, as are empty lines, and lines consisting of whitespace only.</dd></dl>
 <p> Examples of all templates can be found in the file <code>bounce.cf.default</code> in the Postfix configuration directory.</p>
 <h2>Template Header Format</h2>
 <p>The first portion of a bounce template consists of optional template headers. Some become message headers in the delivery status notification; some control the formatting of that notification. Headers not specified in a template will be left at their default value. </p>
 <p> The following headers are supported:</p>
 <dl>
-<dt><code>Charset:</code></p>
-<dd>The MIME character set of the template message text. See the &quot;TEMPLATE MESSAGE TEXT FORMAT&quot; description below.</p>
-<dt><code>From:</code></p>
-<dd>The sender address in the message header of the delivery status notification.</p>
-<dt><code>Subject:</code></p>
-<dd>The subject in the message header of the delivery status notification that is returned to the sender.</p>
-<dt><code>Postmaster-Subject:</code></p>
-<dd>The subject that will be used in Postmaster copies of undeliverable or delayed mail notifications. These copies are sent under control of the notify_classes configuration parameter.</dl>
+<dt><code>Charset:</code></dt>
+<dd>The MIME character set of the template message text. See the &quot;TEMPLATE MESSAGE TEXT FORMAT&quot; description below.</dd>
+<dt><code>From:</code></dt>
+<dd>The sender address in the message header of the delivery status notification.</dd>
+<dt><code>Subject:</code></dt>
+<dd>The subject in the message header of the delivery status notification that is returned to the sender.</dd>
+<dt><code>Postmaster-Subject:</code></dt>
+<dd>The subject that will be used in Postmaster copies of undeliverable or delayed mail notifications. These copies are sent under control of the notify_classes configuration parameter.</dd></dl>
 <p> The usage and specification of template message headers is subject to the following restrictions:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Template message header names can be specified in upper case, lower case or mixed case. Postfix always produces bounce message header labels of the form &quot;<code>From:</code>&quot; and &quot;<code>Subject:</code>&quot;.</p>
-<dt>&bull;</p>
-<dd>Template message headers must not span multiple lines.</p>
-<dt>&bull;</p>
-<dd>Template message headers do not support $parameter expansions.</p>
-<dt>&bull;</p>
-<dd>Template message headers must contain ASCII characters only, and must not contain ASCII null characters.</dl>
+<dt>&bull;</dt>
+<dd>Template message header names can be specified in upper case, lower case or mixed case. Postfix always produces bounce message header labels of the form &quot;<code>From:</code>&quot; and &quot;<code>Subject:</code>&quot;.</dd>
+<dt>&bull;</dt>
+<dd>Template message headers must not span multiple lines.</dd>
+<dt>&bull;</dt>
+<dd>Template message headers do not support $parameter expansions.</dd>
+<dt>&bull;</dt>
+<dd>Template message headers must contain ASCII characters only, and must not contain ASCII null characters.</dd></dl>
 <h2>Template Message Text Format</h2>
 <p>The second portion of a bounce template consists of message text. As the above example shows, template message text may contain main.cf $parameters. Besides the parameters that are defined in main.cf, the following parameters are treated specially depending on the suffix that is appended to their name.</p>
 <dl>
-<dt><code>delay_warning_time_</code><i>suffix</i></p>
-<dd>Expands into the value of the <code>delay_warning_time</code> parameter, expressed in the time unit specified by <i>suffix</i>, which is one of <code>seconds</code>, <code>minutes</code>, <code>hours, days</code>, or <code>weeks</code>.</p>
-<dt><code>maximal_queue_lifetime_</code><i>suffix</i></p>
-<dd>Expands into the value of the <code>maximal_queue_lifetime</code> parameter, expressed in the time unit specified by <i>suffix</i>. See above under <code>delay_warning_time</code> for possible <i>suffix</i> values.</p>
-<dt><code>mydomain</code></p>
-<dd>Expands into the value of the <code>mydomain</code> parameter. With &quot;smtputf8_enable = yes&quot;, this replaces ACE labels (xn--mumble) with their UTF-8 equivalent. </p>
+<dt><code>delay_warning_time_</code><i>suffix</i></dt>
+<dd>Expands into the value of the <code>delay_warning_time</code> parameter, expressed in the time unit specified by <i>suffix</i>, which is one of <code>seconds</code>, <code>minutes</code>, <code>hours, days</code>, or <code>weeks</code>.</dd>
+<dt><code>maximal_queue_lifetime_</code><i>suffix</i></dt>
+<dd>Expands into the value of the <code>maximal_queue_lifetime</code> parameter, expressed in the time unit specified by <i>suffix</i>. See above under <code>delay_warning_time</code> for possible <i>suffix</i> values.</dd>
+<dt><code>mydomain</code></dt>
+<dd>Expands into the value of the <code>mydomain</code> parameter. With &quot;smtputf8_enable = yes&quot;, this replaces ACE labels (xn--mumble) with their UTF-8 equivalent. </dd>
 <p> This feature is available in Postfix 3.0.</p>
-<dt><code>myhostname</code></p>
-<dd>Expands into the value of the <code>myhostname</code> parameter. With &quot;smtputf8_enable = yes&quot;, this replaces ACE labels (xn--mumble) with their UTF-8 equivalent. </p>
+<dt><code>myhostname</code></dt>
+<dd>Expands into the value of the <code>myhostname</code> parameter. With &quot;smtputf8_enable = yes&quot;, this replaces ACE labels (xn--mumble) with their UTF-8 equivalent. </dd>
 <p> This feature is available in Postfix 3.0.</dl>
 <p> The usage and specification of template message text is subject to the following restrictions:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The template message text is not sent in Postmaster copies of delivery status notifications.</p>
-<dt>&bull;</p>
-<dd>If the template message text contains non-ASCII characters, Postfix requires that the <code>Charset:</code> template header is updated. Specify an appropriate superset of US-ASCII. A superset is needed because Postfix appends ASCII text after the message template when it sends a delivery status notification.</dl>
+<dt>&bull;</dt>
+<dd>The template message text is not sent in Postmaster copies of delivery status notifications.</dd>
+<dt>&bull;</dt>
+<dd>If the template message text contains non-ASCII characters, Postfix requires that the <code>Charset:</code> template header is updated. Specify an appropriate superset of US-ASCII. A superset is needed because Postfix appends ASCII text after the message template when it sends a delivery status notification.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-bounce/">bounce</a>(8), Postfix delivery status notifications
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters</pre>

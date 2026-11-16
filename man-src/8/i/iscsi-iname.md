@@ -14,10 +14,10 @@ description: "iscsi-iname – iSCSI initiator name generation tool"
 <p><code>iscsi-iname</code> generates a unique iSCSI node name on every invocation. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>[-h|&#8211;help]</code></p>
-<dd>Display help</p>
-<dt><code>[-p=]</code><i>prefix</i></p>
-<dd>Use the prefix passed in instead of the default &quot;iqn.2005-03.org.open-iscsi&quot; </p>
+<dt><code>[-h|&#8211;help]</code></dt>
+<dd>Display help</dd>
+<dt><code>[-p=]</code><i>prefix</i></dt>
+<dd>Use the prefix passed in instead of the default &quot;iqn.2005-03.org.open-iscsi&quot; </dd>
 </dl>
 <h2>Authors</h2>
 <p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br />

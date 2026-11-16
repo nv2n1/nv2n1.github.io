@@ -22,8 +22,8 @@ description: "ypbind_selinux – Security Enhanced Linux Policy for the ypbind p
 <p> ypbind_exec_t </code> </p>
 <p> &#8211; Set files with the ypbind_exec_t type, if you want to transition an executable to the ypbind_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ypbind, /sbin/ypbind </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ypbind, /sbin/ypbind </dd>
 </dl>
 <p> <code>ypbind_initrc_exec_t </code> </p>
 <p> &#8211; Set files with the ypbind_initrc_exec_t type, if you want to transition an executable to the ypbind_initrc_t domain. </p>

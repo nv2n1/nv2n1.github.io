@@ -20,14 +20,14 @@ src2man[-n][-d date][-v volume][-r release][srcfile...]
 <p> The best place for code documentation is in the source file, where the body is implemented, not the header file which only contains the prototype. <code>src2man</code> automatically searches for the presence of a prototype in the corresponding header file, and if found, will print a &quot;#include&quot; statement in the synopsis.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code> date</p>
-<dd> Set the date of the man pages. Defaults to current date.</p>
-<dt><code>-n</code></p>
-<dd> No man page is created. The name of the manpages that would be created are printed.</p>
-<dt><code>-v</code> volume</p>
-<dd> Specify the name of the volume to be printed in center header of generated manpages.</p>
-<dt><code>-r</code> <i>release</i></p>
-<dd> Specify the project name and <i>release</i> number for the generated manpage.</dl>
+<dt><code>-d</code> date</dt>
+<dd> Set the date of the man pages. Defaults to current date.</dd>
+<dt><code>-n</code></dt>
+<dd> No man page is created. The name of the manpages that would be created are printed.</dd>
+<dt><code>-v</code> volume</dt>
+<dd> Specify the name of the volume to be printed in center header of generated manpages.</dd>
+<dt><code>-r</code> <i>release</i></dt>
+<dd> Specify the project name and <i>release</i> number for the generated manpage.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following example displays C code and comments to generate a manpage foobar.3: </p>
 <pre><code>

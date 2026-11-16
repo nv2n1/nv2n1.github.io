@@ -27,16 +27,16 @@ description: "XmPrintSetup — setup and create a Print Shell widget"
 *Print*background:white
 *Print*highlightThickness:0</tt></pre>
 <dl COMPACT>
-<dt><i>video_widget</i></p>
-<dd>A video widget to fetch app video data from.</p>
-<dt><i>print_screen</i></p>
-<dd>A print screen on the print display &#8211; specifies the screen onto which the new shell is created.</p>
-<dt><i>print_shell_name</i></p>
-<dd>Specifies the name of the XmPrintShell created on the X Print server.</p>
-<dt><i>args</i></p>
-<dd>Specifies the argument list from which to get the resources for the XmPrintShell.</p>
-<dt><i>num_args</i></p>
-<dd>Specifies the number of arguments in the argument list.</dl>
+<dt><i>video_widget</i></dt>
+<dd>A video widget to fetch app video data from.</dd>
+<dt><i>print_screen</i></dt>
+<dd>A print screen on the print display &#8211; specifies the screen onto which the new shell is created.</dd>
+<dt><i>print_shell_name</i></dt>
+<dd>Specifies the name of the XmPrintShell created on the X Print server.</dd>
+<dt><i>args</i></dt>
+<dd>Specifies the argument list from which to get the resources for the XmPrintShell.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of arguments in the argument list.</dd></dl>
 <h2>Return Value</h2>
 <p>The id the <code>XmPrintShell</code> widget created on the X Print Server connection, or NULL if an error has occured.</p>
 <h2>Errors/Warnings</h2>

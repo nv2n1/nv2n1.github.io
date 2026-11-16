@@ -102,8 +102,8 @@ description: "mscan_selinux – Security Enhanced Linux Policy for the mscan pro
 <p> <code>mscan_etc_t</code> </p>
 <p> &#8211; Set files with the mscan_etc_t type, if you want to store mscan files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/MailScanner(/.*)?, /etc/sysconfig/MailScanner, /etc/sysconfig/update_spamassassin </p>
+<dt>Paths:</dt>
+<dd>/etc/MailScanner(/.*)?, /etc/sysconfig/MailScanner, /etc/sysconfig/update_spamassassin </dd>
 </dl>
 <p> <code>mscan_exec_t</code> </p>
 <p> &#8211; Set files with the mscan_exec_t type, if you want to transition an executable to the mscan_t domain. </p>

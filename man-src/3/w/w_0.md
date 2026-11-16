@@ -36,6 +36,6 @@ description: "QuantLib::LiborForwardModel – Libor forward model"
 <p> Damiano Brigo, Fabio Mercurio, Massimo Morini, 2003, Different Covariance Parameterizations of <code>Libor</code> Market Model and Joint Caps/Swaptions Calibration, (&lt;<a rel="nofollow" href="http://www.business.uts.edu.au/qfrc/conferences/qmf2001/Brigo_D.pdf">http://www.business.uts.edu.au/qfrc/conferences/qmf2001/Brigo_D.pdf</a>&gt; </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness is tested using Monte-Carlo Simulation to reproduce swaption npvs, model calibration and exact cap pricing</dl>
+<dd>the correctness is tested using Monte-Carlo Simulation to reproduce swaption npvs, model calibration and exact cap pricing</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

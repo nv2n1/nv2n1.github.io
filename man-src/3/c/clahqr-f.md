@@ -22,10 +22,10 @@ description: "clahqr.f –"
  eigenvalues and Schur decomposition already computed by CHSEQR, by
  dealing with the Hessenberg submatrix in rows and columns ILO to
  IHI.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>WANTT</i> </p>
+<dd><i>WANTT</i> </dd>
 <pre> WANTT is LOGICAL
  = .TRUE. : the full Schur form T is required;
  = .FALSE.: only eigenvalues are required.</pre>
@@ -105,13 +105,13 @@ description: "clahqr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
 <dd>
@@ -123,7 +123,8 @@ description: "clahqr.f –"
  It is (1) more robust against overflow and underflow and
  (2) adopts the more conservative Ahues &amp; Tisseur stopping
  criterion (LAWN 122, 1997).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 195 of file clahqr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

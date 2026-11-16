@@ -15,24 +15,24 @@ description: "vzt2vcd – Converts VZT files to VCD"
 <p> Converts VZT files to VCD files. If an output filename is not specified, the VCD is emitted to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v,&#8211;vztname</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify VZT input filename.</p>
-<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify optional VCD output filename.</p>
-<dt><code>-f,&#8211;flatearth</code></p>
-<dd> Emit flattened hierarchies.</p>
-<dt><code>-c,&#8211;coalesce</code></p>
-<dd> Coalesce bitblasted vectors.</p>
-<dt><code>-n,&#8211;notruncate</code></p>
-<dd> Do not shorten bitvectors. This disables binary value compression as described in the IEEE-1364 specification. (i.e., all values except for &#8216;1&#8217; left propagate as a sign bit on vectors which do not fill up their entire declared width)</p>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Display help then exit. </p>
+<dt><code>-v,&#8211;vztname</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify VZT input filename.</dd>
+<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify optional VCD output filename.</dd>
+<dt><code>-f,&#8211;flatearth</code></dt>
+<dd> Emit flattened hierarchies.</dd>
+<dt><code>-c,&#8211;coalesce</code></dt>
+<dd> Coalesce bitblasted vectors.</dd>
+<dt><code>-n,&#8211;notruncate</code></dt>
+<dd> Do not shorten bitvectors. This disables binary value compression as described in the IEEE-1364 specification. (i.e., all values except for &#8216;1&#8217; left propagate as a sign bit on vectors which do not fill up their entire declared width)</dd>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display help then exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To run this program the standard way type:</p>
 <dl>
-<dt>vzt2vcd filename.vzt</p>
-<dd> The VCD conversion is emitted to stdout.</dl>
+<dt>vzt2vcd filename.vzt</dt>
+<dd> The VCD conversion is emitted to stdout.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> <i>vzt2vcd</i> does not re-create glitches as these are coalesced together into one value change during the writing of the VZT file. </p>
 <h2>AUTHORS</h2>

@@ -13,25 +13,25 @@ description: "PAPI_set_debug –"
 <h2>Detailed Description</h2>
 <p><code>C Prototype:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_set_debug(&nbsp;<wbr>int level&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>level</i> one of the constants shown in the table below and defined in the <code>papi.h</code> header file. </p>
+<dd><i>level</i> one of the constants shown in the table below and defined in the <code>papi.h</code> header file. </dd>
 <p>&nbsp;<wbr>The possible debug levels for debugging are shown below.&nbsp;<wbr> </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>PAPI_QUIET Do not print anything, just return the error code</p>
-<dt>&bull;</p>
-<dd>PAPI_VERB_ECONT Print error message and continue</p>
-<dt>&bull;</p>
-<dd>PAPI_VERB_ESTOP Print error message and exit </p>
+<dt>&bull;</dt>
+<dd>PAPI_QUIET Do not print anything, just return the error code</dd>
+<dt>&bull;</dt>
+<dd>PAPI_VERB_ECONT Print error message and continue</dd>
+<dt>&bull;</dt>
+<dd>PAPI_VERB_ESTOP Print error message and exit </dd>
 <p>&nbsp;<wbr></dl>
 </dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> The debug level is invalid. </p>
+ <i>PAPI_EINVAL</i> The debug level is invalid. </dd>
 <p>&nbsp;<wbr>The current debug level is used by both the internal error and debug message handler subroutines.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>The debug handler is only used if the library was compiled with -DDEBUG.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>The debug handler is called when there is an error upon a call to the PAPI API. </p>
@@ -44,7 +44,7 @@ description: "PAPI_set_debug –"
 <p>&nbsp;<wbr> </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is the ONLY function that may be called BEFORE <code>PAPI_library_init()</code>. </p>
+<dd>This is the ONLY function that may be called BEFORE <code>PAPI_library_init()</code>. </dd>
 <p>&nbsp;<wbr></dl>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -53,11 +53,12 @@ description: "PAPI_set_debug –"
 ret = PAPI_set_debug(PAPI_VERB_ECONT);
 if ( ret != PAPI_OK ) handle_error();
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_library_init</code> </p>
+<dd><code>PAPI_library_init</code> </dd>
 <p> <code>PAPI_get_opt</code> </p>
 <p> <code>PAPI_set_opt</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

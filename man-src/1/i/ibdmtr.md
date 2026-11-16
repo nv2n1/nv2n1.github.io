@@ -16,94 +16,74 @@ description: "ibdmtr – Fabric Trace Route"
 <p> This utility parses a cabling list or topology file describing the systems connections that make a fabric. Then it start following the direct route provided and print out the systems and nodes on the route.</p>
 <h2>ARGUMENTS Required arguments description.</h2>
 <dl>
-<dt>-t|&#8211;topology &lt;file&gt;</p>
+<dt>-t|&#8211;topology &lt;file&gt;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>Topology file describing the network. See man ibdm-topology-file.</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-c|&#8211;cables &lt;file&gt;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>Topology file describing the network. See man ibdm-topology-file.</p>
-<dd></dl>
+<dt>Cabling list file. Following the line format:</dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd></dl>
-<dt>-c|&#8211;cables &lt;file&gt;</p>
+</dt><dd>
+<p> &lt;Sys1Type&gt; &lt;Sys1Name&gt; &lt;Port1Name&gt; &lt;Sys2Type&gt; &lt;Sys2Name&gt; &lt;Port2Name&gt;</dd></dl>
+<dt>-s|&#8211;sm-node &lt;name&gt;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>Cabling list file. Following the line format:</p>
-<dd></dl>
+<dt>The name of the <font SIZE="-1">SM</font> node (not system). E.g. <font SIZE="-1">OSM/U1</font>.</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
+</dl>
+<dt>-p|&#8211;port-num &lt;num&gt;</dt>
 <dd>
-<p> &lt;Sys1Type&gt; &lt;Sys1Name&gt; &lt;Port1Name&gt; &lt;Sys2Type&gt; &lt;Sys2Name&gt; &lt;Port2Name&gt;</dl>
-<dt>-s|&#8211;sm-node &lt;name&gt;</p>
-<dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>The name of the <font SIZE="-1">SM</font> node (not system). E.g. <font SIZE="-1">OSM/U1</font>.</p>
-<dd></dl>
+<dt>The number of the <font SIZE="-1">SM</font> node port the <font SIZE="-1">SM</font> is attached to</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>-p|&#8211;port-num &lt;num&gt;</p>
+</dl>
+<dt>-d|&#8211;dr-path &lt;comm-sep-dr-path&gt;</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>The number of the <font SIZE="-1">SM</font> node port the <font SIZE="-1">SM</font> is attached to</p>
-<dd></dl>
+<dt>A list of ports to go out through</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>-d|&#8211;dr-path &lt;comm-sep-dr-path&gt;</p>
-<dd>
-<dl>
-<dt>
-<dd>
-<dl>
-<dt>A list of ports to go out through</p>
-<dd></dl>
 </dl>
-<dl>
-<dt>
-<dd></dl>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v|&#8211;verbose</p>
+<dt>-v|&#8211;verbose</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>verbsoe mode</p>
-<dd></dl>
+<dt>verbsoe mode</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>-h|&#8211;help</p>
+</dl>
+<dt>-h|&#8211;help</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>provide this help message</p>
-<dd></dl>
+<dt>provide this help message</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>

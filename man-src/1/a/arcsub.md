@@ -15,48 +15,48 @@ description: "arcsub – ARC Submission"
 <p> <code>arcsub [options] [filename &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></p>
-<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</p>
-<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></p>
-<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</p>
-<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></p>
-<dd> skip the service with the given URL during service discovery</p>
-<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></p>
-<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</p>
-<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></p>
-<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</p>
-<dt><code>-e</code>, <code>&#8211;jobdescrstring=</code><i>String</p>
-<dd> jobdescription string describing the job to be submitted</p>
-<dt></i><code>-f</code>, <code>&#8211;jobdescrfile=</code><i>filename</p>
-<dd> jobdescription file describing the job to be submitted</p>
-<dt></i><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></p>
-<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</p>
-<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></p>
-<dd> the IDs of the submitted jobs will be appended to this file</p>
-<dt><code>-D</code>, <code>&#8211;dryrun</code></p>
-<dd> submit jobs as dry run (no submission to batch system)</p>
-<dt><code> &#8211;direct</code></p>
-<dd> submit directly &#8211; no resource discovery or matchmaking</p>
-<dt><code>-x</code>, <code>&#8211;dumpdescription</code></p>
-<dd> do not submit &#8211; dump job description in the language accepted by the target</p>
-<dt><code>-P</code>, <code>&#8211;listplugins</code></p>
-<dd> list the available plugins</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></p>
-<dd> timeout in seconds (default 20)</p>
-<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></p>
-<dd> configuration file (default ~/.arc/client.conf)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></p>
-<dd> selected broker: Random (default), FastestQueue or custom. Use -P to find possible options.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version information</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> print help</dl>
+<dt><code>-c</code>, <code>&#8211;cluster</code>=<i>name</i></dt>
+<dd> select one or more computing elements: <i>name</i> can be an alias for a single CE, a group of CEs or a URL</dd>
+<dt><code>-g</code>, <code>&#8211;index</code>=<i>name</i></dt>
+<dd> select one or more registries: <i>name</i> can be an alias for a single registry, a group of registries or a URL</dd>
+<dt><code>-R</code>, <code>&#8211;rejectdiscovery</code>=<i>URL</i></dt>
+<dd> skip the service with the given URL during service discovery</dd>
+<dt><code>-S</code>, <code>&#8211;submissioninterface</code>=<i>InterfaceName</i></dt>
+<dd> only use this interface for submitting (e.g. org.nordugrid.gridftpjob, org.ogf.glue.emies.activitycreation, org.ogf.bes)</dd>
+<dt><code>-I</code>, <code>&#8211;infointerface</code>=<i>InterfaceName</i></dt>
+<dd> the computing element specified by URL at the command line should be queried using this information interface (possible options: org.nordugrid.ldapng, org.nordugrid.ldapglue2, org.nordugrid.wsrfglue2, org.ogf.glue.emies.resourceinfo)</dd>
+<dt><code>-e</code>, <code>&#8211;jobdescrstring=</code><i>String</dt>
+<dd> jobdescription string describing the job to be submitted</dd>
+<dt></i><code>-f</code>, <code>&#8211;jobdescrfile=</code><i>filename</dt>
+<dd> jobdescription file describing the job to be submitted</dd>
+<dt></i><code>-j</code>, <code>&#8211;joblist</code>=<i>filename</i></dt>
+<dd> the file storing information about active jobs (default ~/.arc/jobs.xml)</dd>
+<dt><code>-o</code>, <code>&#8211;jobids-to-file</code>=<i>filename</i></dt>
+<dd> the IDs of the submitted jobs will be appended to this file</dd>
+<dt><code>-D</code>, <code>&#8211;dryrun</code></dt>
+<dd> submit jobs as dry run (no submission to batch system)</dd>
+<dt><code> &#8211;direct</code></dt>
+<dd> submit directly &#8211; no resource discovery or matchmaking</dd>
+<dt><code>-x</code>, <code>&#8211;dumpdescription</code></dt>
+<dd> do not submit &#8211; dump job description in the language accepted by the target</dd>
+<dt><code>-P</code>, <code>&#8211;listplugins</code></dt>
+<dd> list the available plugins</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
+<dd> timeout in seconds (default 20)</dd>
+<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></dt>
+<dd> configuration file (default ~/.arc/client.conf)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-b</code>, <code>&#8211;broker</code>=<i>broker</i></dt>
+<dd> selected broker: Random (default), FastestQueue or custom. Use -P to find possible options.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version information</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> print help</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>filename</code> &#8230;</p>
-<dd> job description files describing the jobs to be submitted</dl>
+<dt><code>filename</code> &#8230;</dt>
+<dd> job description files describing the jobs to be submitted</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> <code>arcsub</code> is the key command when submitting jobs to Grid enabled computing resources with the ARC client. As default <code>arcsub</code> is able to submit jobs to A-REX, CREAM and EMI ES enabled computing elements (CEs), and as always for successful submission you need to be authenticated at the targeted computing services. Since <code>arcsub</code> is build on a modular library, modules can be installed which enables submission to other targets, e.g. the classic ARC CE Grid-Manager. </p>
 <p> Job submission can be accomplished by specifying a job description file to submit as an argument. <code>arcsub</code> will then by default perform resource discovery on the Grid and then the discovered resources will be matched to the job description and ranked according to the chosen broker (<code>&#8211;broker</code> option). If no Grid environment has been configured, please contact your system administrator, or setup one yourself in the client configuration file (see files section). Another option is to explicitly specify a registry service (or multiple) to <code>arcsub</code> using the <code>&#8211;index</code> option, which accepts an URL, alias or group. Alternatively a specific CE (or multiple) can be targeted by using the <code>&#8211;cluster</code> option. If such a scenario is the most common, it is worthwhile to specify those CEs in the client configuration as default services, which makes it superfluous to specify them as argument. In the same manner aliases and groups, defined in the configuration file, can be utilized, and can be used as argument to the <code>&#8211;cluster</code> or <code>&#8211;index</code> options. In all of the above scenarios <code>arcsub</code> obtains resource information from the services which is then used for matchmaking against the job description, however that step can be avoided by specifying the <code>&#8211;direct</code> option, in which case the job description is submitted directly to first specified endpoint. </p>
@@ -71,18 +71,18 @@ description: "arcsub – ARC Submission"
 <p> As mentioned above registry or index services can be specified with the <code>&#8211;index</code> option. Specifying one or multiple index servers instructs the <code>arcsub</code> command to query the servers for registered CEs, the returned CEs will then be matched against the job description and those matching will be ranked by the chosen broker (see below) and submission will be tried in order until successful or reaching the end. From the returned list of CEs it might happen that a troublesome or undesirable CE is selected for submission, in that case it possible to reject that cluster using the <code>&#8211;rejectdiscovery</code> option and providing the URL (or just the hostname) of the CE, which will disregard that CE as a target for submission. </p>
 <p> When multiple CEs are targeted for submission, the resource broker will be used to filter out CEs which do not match the job description requirements and then rank the remaining CEs. The broker used by default will rank the CEs randomly, however a different broker can be chosen by using the <code>&#8211;broker</code> option, which takes the name of the broker as argument. The broker type can also be specified in client.conf. The brokers available can be seen using <code>arcsub -P.</code> By default the following brokers are available:</p>
 <dl>
-<dt>Random (default)</p>
-<dd> Chooses a random CE matching the job requirements.</p>
-<dt>FastestQueue</p>
-<dd> Ranks matching CEs according to the length of the job queue at the CEs, ranking those with shortest queue first/highest.</p>
-<dt>Benchmark</p>
-<dd> Ranks matching CEs according to a specified benchmark, which should be specified by appending the broker name with &#8216;:&#8217; and then the name of the benchmark. If no option is given to the Benchmark broker then CEs will be ranked according to the &#8216;specint2000&#8217; benchmark.</p>
-<dt>Data</p>
-<dd> Ranks matching CEs according to the amount of input data cached by each CE, by querying the CE. Only CEs with the A-REX BES interface support this operation.</p>
-<dt>Null</p>
-<dd> Choose a random CE with no filtering at all of CEs.</p>
-<dt>PythonBroker</p>
-<dd> User-defined custom brokers can be created in Python. See the example broker SampleBroker.py or ACIXBroker.py (like Data broker but uses the ARC Cache Index) that come installed with ARC for more details of how to write your own broker. A PythonBroker is specified by <code>&#8211;broker PythonBroker:Filename.Class:args</code>, where Filename is the file containing the class Class which implements the broker interface. The directory containing this file must be in the PYTHONPATH. args is optional and allows specifying arguments to the broker.</dl>
+<dt>Random (default)</dt>
+<dd> Chooses a random CE matching the job requirements.</dd>
+<dt>FastestQueue</dt>
+<dd> Ranks matching CEs according to the length of the job queue at the CEs, ranking those with shortest queue first/highest.</dd>
+<dt>Benchmark</dt>
+<dd> Ranks matching CEs according to a specified benchmark, which should be specified by appending the broker name with &#8216;:&#8217; and then the name of the benchmark. If no option is given to the Benchmark broker then CEs will be ranked according to the &#8216;specint2000&#8217; benchmark.</dd>
+<dt>Data</dt>
+<dd> Ranks matching CEs according to the amount of input data cached by each CE, by querying the CE. Only CEs with the A-REX BES interface support this operation.</dd>
+<dt>Null</dt>
+<dd> Choose a random CE with no filtering at all of CEs.</dd>
+<dt>PythonBroker</dt>
+<dd> User-defined custom brokers can be created in Python. See the example broker SampleBroker.py or ACIXBroker.py (like Data broker but uses the ARC Cache Index) that come installed with ARC for more details of how to write your own broker. A PythonBroker is specified by <code>&#8211;broker PythonBroker:Filename.Class:args</code>, where Filename is the file containing the class Class which implements the broker interface. The directory containing this file must be in the PYTHONPATH. args is optional and allows specifying arguments to the broker.</dd></dl>
 <p> Before submission, <code>arcsub</code> performs an intelligent modification of the job description (adding or modifying attributes, even converting the description language to fit the needs of the CE) ensuring that it is valid. The modified job description can be printed by specifying the <code>&#8211;dumpdescription</code> option. The format, i.e. job description language, of the printed job description cannot be specified, and will be that which will be sent to and accepted by the chosen target. Further information from <code>arcsub</code> can be obtained by increasing the verbosity, which is done with the <code>&#8211;debug</code> option where the default verbosity level is WARNING. Setting the level to DEBUG will show all messages, while setting it to FATAL will only show fatal log messages. </p>
 <p> To <code>validate</code> your job description without actually submitting a job, use the <code>&#8211;dryrun</code> option: it will capture possible syntax or other errors, but will instruct the site not to submit the job for execution. Only the grid-manager (ARC0) and A-REX (ARC1) CEs support this feature. </p>
 <h2>EXAMPLES</h2>
@@ -107,19 +107,19 @@ description: "arcsub – ARC Submission"
  <code>arcsub -c example.com/arex -x helloworld.jsdl</code> </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.arc/client.conf</code></p>
-<dd> Some options can be given default values by specifying them in the ARC client configuration file. Registry and computing element services can be specified in separate sections of the config. The default services can be specified by adding &#8216;default=yes&#8217; attribute to the section of the service, thus when no <code>&#8211;cluster</code> or <code>&#8211;index</code> options are given these will be used for submission. Each service has an alias, and can be member of any number of groups. Then specifying the alias or the name of the group with the <code>&#8211;cluster</code> or <code>&#8211;index</code> options will select the given services. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. Note that some installations also have a system client configuration file, however attributes in the client one takes precedence, and then command line options takes precedence over configuration file attributes. </p>
-<dt><code>~/.arc/jobs.xml</code></p>
-<dd> This a local list of the user&#8217;s active jobs. When a job is successfully submitted it is added to this list and when it is removed from the remote cluster it is removed from this list. This list is used as the list of all active jobs when the user specifies the <code>&#8211;all</code> option to the various NorduGrid ARC user interface commands. By using the <code>&#8211;joblist</code> option a different file can be used than the default. </p>
+<dt><code>~/.arc/client.conf</code></dt>
+<dd> Some options can be given default values by specifying them in the ARC client configuration file. Registry and computing element services can be specified in separate sections of the config. The default services can be specified by adding &#8216;default=yes&#8217; attribute to the section of the service, thus when no <code>&#8211;cluster</code> or <code>&#8211;index</code> options are given these will be used for submission. Each service has an alias, and can be member of any number of groups. Then specifying the alias or the name of the group with the <code>&#8211;cluster</code> or <code>&#8211;index</code> options will select the given services. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. Note that some installations also have a system client configuration file, however attributes in the client one takes precedence, and then command line options takes precedence over configuration file attributes. </dd>
+<dt><code>~/.arc/jobs.xml</code></dt>
+<dd> This a local list of the user&#8217;s active jobs. When a job is successfully submitted it is added to this list and when it is removed from the remote cluster it is removed from this list. This list is used as the list of all active jobs when the user specifies the <code>&#8211;all</code> option to the various NorduGrid ARC user interface commands. By using the <code>&#8211;joblist</code> option a different file can be used than the default. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>X509_USER_PROXY</code></p>
-<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </p>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
-<dt><code>ARC_PLUGIN_PATH</code></p>
-<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </p>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </dd>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
+<dt><code>ARC_PLUGIN_PATH</code></dt>
+<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>

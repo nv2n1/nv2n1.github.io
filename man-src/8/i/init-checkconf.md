@@ -14,30 +14,30 @@ description: "init-checkconf – manual page for init-checkconf"
 <h2>Description</h2>
 <p>Determine if specified Upstart <code><a href="/docs/linux/man/8-init/">init</a></code>(8) job configuration file is valid. By default, two checks are performed:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Ensure Upstart can parse overall file successfully</p>
-<dt>&bull;</p>
-<dd>Ensure all script sections are parseable by shell</dl>
+<dt>&bull;</dt>
+<dd>Ensure Upstart can parse overall file successfully</dd>
+<dt>&bull;</dt>
+<dd>Ensure all script sections are parseable by shell</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> , <code>&#8211;debug</code></p>
-<dd>Show some debug output.</p>
-<dt><code>-f</code> <i>file</i><code> , </code>&#8211;file=<i>file</i></p>
-<dd>Specify job configuration file to check.</p>
-<dt><code>-i</code> <i>path</i><code> , </code>&#8211;initctl-path=<i>path</i></p>
-<dd>Specify path to <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) binary.</p>
-<dt><code>-s</code> , <code>&#8211;noscript</code></p>
-<dd>Do not check script sections.</p>
-<dt><code>-x</code> <i>path</i><code> , </code>&#8211;upstart-path=<i>path</i></p>
-<dd>Specify path to <code><a href="/docs/linux/man/8-init/">init</a></code>(8) binary.</p>
-<dt><code>-h</code> , <code>&#8211;help</code></p>
-<dd>Display usage statement.</dl>
+<dt><code>-d</code> , <code>&#8211;debug</code></dt>
+<dd>Show some debug output.</dd>
+<dt><code>-f</code> <i>file</i><code> , </code>&#8211;file=<i>file</i></dt>
+<dd>Specify job configuration file to check.</dd>
+<dt><code>-i</code> <i>path</i><code> , </code>&#8211;initctl-path=<i>path</i></dt>
+<dd>Specify path to <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) binary.</dd>
+<dt><code>-s</code> , <code>&#8211;noscript</code></dt>
+<dd>Do not check script sections.</dd>
+<dt><code>-x</code> <i>path</i><code> , </code>&#8211;upstart-path=<i>path</i></dt>
+<dd>Specify path to <code><a href="/docs/linux/man/8-init/">init</a></code>(8) binary.</dd>
+<dt><code>-h</code> , <code>&#8211;help</code></dt>
+<dd>Display usage statement.</dd></dl>
 <h2>Author</h2>
 <p>Written by James Hunt &lt;<code>james.hunt [at] ubuntu.com</code>&gt;</p>
 <h2>Limitations</h2>
 <dl>
-<dt>&bull;</p>
-<dd><code>exec</code> stanzas containing shell meta-characters will not be checked as scripts.</dl>
+<dt>&bull;</dt>
+<dd><code>exec</code> stanzas containing shell meta-characters will not be checked as scripts.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs at &lt;<code><a rel="nofollow" href="https://launchpad.net/upstart/+bugs">https://launchpad.net/upstart/+bugs</a></code>&gt;</p>
 <h2>Copyright</h2>

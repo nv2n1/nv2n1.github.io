@@ -17,19 +17,19 @@ description: "verify_krb5_conf – checks krb5.conf for obvious errors"
 <p><code>KRB5_CONFIG</code> points to the configuration file to read.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/krb5.conf </code></p>
-<dd>Kerberos 5 configuration file</dl>
+<dt><code>/etc/krb5.conf </code></dt>
+<dd>Kerberos 5 configuration file</dd></dl>
 <h2>Diagnostics</h2>
 <p>Possible output from include:</p>
 <dl>
-<dt><code>&quot;&lt;path&gt;: failed to parse &lt;something&gt; as size/time/number/boolean&quot;</code></p>
-<dd>Usually means that &lt;something&gt; is misspelled, or that it contains weird characters. The parsing done by is more strict than the one performed by libkrb5, so strings that work in real life might be reported as bad.</p>
-<dt><code>&quot;&lt;path&gt;: host not found (&lt;hostname&gt;)&quot;</code></p>
-<dd>Means that &lt;path&gt; is supposed to point to a host, but it can&#8217;t be recognised as one.</p>
-<dt><code>&lt;path&gt;: unknown or wrong type</code></p>
-<dd>Means that &lt;path&gt; is either a string when it should be a list, vice versa, or just that is confused.</p>
-<dt><code>&lt;path&gt;: unknown entry</code></p>
-<dd>Means that &lt;string&gt; is not known by <code>.</code></dl>
+<dt><code>&quot;&lt;path&gt;: failed to parse &lt;something&gt; as size/time/number/boolean&quot;</code></dt>
+<dd>Usually means that &lt;something&gt; is misspelled, or that it contains weird characters. The parsing done by is more strict than the one performed by libkrb5, so strings that work in real life might be reported as bad.</dd>
+<dt><code>&quot;&lt;path&gt;: host not found (&lt;hostname&gt;)&quot;</code></dt>
+<dd>Means that &lt;path&gt; is supposed to point to a host, but it can&#8217;t be recognised as one.</dd>
+<dt><code>&lt;path&gt;: unknown or wrong type</code></dt>
+<dd>Means that &lt;path&gt; is either a string when it should be a list, vice versa, or just that is confused.</dd>
+<dt><code>&lt;path&gt;: unknown entry</code></dt>
+<dd>Means that &lt;string&gt; is not known by <code>.</code></dd></dl>
 <h2>See Also</h2>
 <p>krb5.conf5</p>
 <h2>Bugs</h2>

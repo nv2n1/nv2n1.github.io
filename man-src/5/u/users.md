@@ -20,57 +20,57 @@ description: "users – user authorization file for the FreeRADIUS server"
 <h2>Operators</h2>
 <p>Additional operators other than <code>=</code> may be used for the attributes in either the check item, or reply item list. The following is a list of operators, and their meaning. </p>
 <dl>
-<dt><code>Attribute = Value</code></p>
+<dt><code>Attribute = Value</code></dt>
 <dd>Not allowed as a check item for RADIUS protocol attributes. It is allowed for server configuration attributes (Auth-Type, etc), and sets the value of on attribute, only if there is no other item of the same attribute.<br />
- As a reply item, it means &quot;add the item to the reply list, but only if there is no other item of the same attribute.&quot; </p>
-<dt><code>Attribute := Value</code></p>
+ As a reply item, it means &quot;add the item to the reply list, but only if there is no other item of the same attribute.&quot; </dd>
+<dt><code>Attribute := Value</code></dt>
 <dd>Always matches as a check item, and replaces in the configuration items any attribute of the same name. If no attribute of that name appears in the request, then this attribute is added.<br />
- As a reply item, it has an identical meaning, but for the reply items, instead of the request items. </p>
-<dt><code>Attribute == Value</code></p>
+ As a reply item, it has an identical meaning, but for the reply items, instead of the request items. </dd>
+<dt><code>Attribute == Value</code></dt>
 <dd>As a check item, it matches if the named attribute is present in the request, AND has the given value.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute += Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute += Value</code></dt>
 <dd>Always matches as a check item, and adds the current attribute with value to the list of configuration items.<br />
- As a reply item, it has an identical meaning, but the attribute is added to the reply items. </p>
-<dt><code>Attribute != Value</code></p>
+ As a reply item, it has an identical meaning, but the attribute is added to the reply items. </dd>
+<dt><code>Attribute != Value</code></dt>
 <dd>As a check item, matches if the given attribute is in the request, AND does not have the given value.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute &gt; Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute &gt; Value</code></dt>
 <dd>As a check item, it matches if the request contains an attribute with a value greater than the one given.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute &gt;= Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute &gt;= Value</code></dt>
 <dd>As a check item, it matches if the request contains an attribute with a value greater than, or equal to the one given.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute &lt; Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute &lt; Value</code></dt>
 <dd>As a check item, it matches if the request contains an attribute with a value less than the one given.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute &lt;= Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute &lt;= Value</code></dt>
 <dd>As a check item, it matches if the request contains an attribute with a value less than, or equal to the one given.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute =~ Expression</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute =~ Expression</code></dt>
 <dd>As a check item, it matches if the request contains an attribute which matches the given regular expression. This operator may only be applied to string attributes.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute !~ Expression</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute !~ Expression</code></dt>
 <dd>As a check item, it matches if the request contains an attribute which does not match the given regular expression. This operator may only be applied to string attributes.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute =* Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute =* Value</code></dt>
 <dd>As a check item, it matches if the request contains the named attribute, no matter what the value is.<br />
- Not allowed as a reply item. </p>
-<dt><code>Attribute !* Value</code></p>
+ Not allowed as a reply item. </dd>
+<dt><code>Attribute !* Value</code></dt>
 <dd>As a check item, it matches if the request does not contain the named attribute, no matter what the value is.<br />
- Not allowed as a reply item. </p>
+ Not allowed as a reply item. </dd>
 </dl>
 <h2>Examples</h2>
 <dl>
-<dd>Requests containing the User-Name attribute, with value &quot;bob&quot;, will be authenticated using the &quot;known good&quot; password &quot;hello&quot;. There are no reply items, so the reply will be empty.</dl>
+<dd>Requests containing the User-Name attribute, with value &quot;bob&quot;, will be authenticated using the &quot;known good&quot; password &quot;hello&quot;. There are no reply items, so the reply will be empty.</dd></dl>
 <dl>
 <dd>
 <pre>DEFAULT Auth-Type = System
 <br>
  Fall-Through = Yes</pre>
-</dl>
+</dd></dl>
 <dl>
-<dd>For all users reaching this entry, perform authentication against the system, unless Auth-Type has already been set. Also, process any following entries which may match.</dl>
+<dd>For all users reaching this entry, perform authentication against the system, unless Auth-Type has already been set. Also, process any following entries which may match.</dd></dl>
 <dl>
 <dd>
 <pre>DEFAULT Service-Type == Framed-User, Framed-Protocol == PPP
@@ -80,9 +80,9 @@ description: "users – user authorization file for the FreeRADIUS server"
  Framed-Protocol = PPP,
 <br>
  Fall-Through = Yes</pre>
-</dl>
+</dd></dl>
 <dl>
-<dd>If the request packet contains the attributes Service-Type and Framed-Protocol, with the given values, then include those attributes in the reply. That is, give the user what they ask for. This entry also shows how to specify multiple reply items.</dl>
+<dd>If the request packet contains the attributes Service-Type and Framed-Protocol, with the given values, then include those attributes in the reply. That is, give the user what they ask for. This entry also shows how to specify multiple reply items.</dd></dl>
 <p> See the <code>users</code> file supplied with the server for more examples and comments. </p>
 <h2>Hints</h2>
 <p>Run the server in debugging mode (<code>-X</code>), and use the <code>radclient</code> program to send it test packets which you think will match specific entries. The server will print out which entries were matched for that request, so you can verify your expectations. This should be the FIRST thing you do if you suspect problems with the file. </p>

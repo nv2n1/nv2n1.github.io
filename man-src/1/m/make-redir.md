@@ -13,7 +13,7 @@ description: "make-redir – run \"make\" but automatically redirect its results
 <p> <code>make-redir</code> [<i>MAKE_ARGUMENT*</i>]&#8230;[<i>install</i>] </p>
 <dl>
 <dt>
-<dd> * DESTDIR=<i>directory</i> and -k/&#8211;keep-going are especially common.</dl>
+</dt><dd> * DESTDIR=<i>directory</i> and -k/&#8211;keep-going are especially common.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The make-redir program runs &quot;make&quot; in a way that redirects file installations to descend from the $DESTDIR directory, even if the provided makefile doesn&#8217;t natively support $DESTDIR. In most cases, simply replace &quot;make install&quot; with &quot;make-redir DESTDIR=<i>directory</i> install&quot; (adding options as necessary). </p>
 <p> The make-redir program attempts to solve a common problem for packagers of software and for users who directly install source code: Inadequate DESTDIR support. Software is typically installed on Unix/Linux from a source code package by typing &quot;make install&quot;. Historically, this script would write directly to privileged directories to perform the installation (e.g., /usr/bin), or at least to a directory that merged all installed files (e.g., $HOME/bin). However, packagers of software using most modern packaging systems (such as .rpm and .deb) instead require that files be written to some intermediate directory, even though they will be run from a different filesystem location. Similarly, users who directly install source code often use programs such as GNU stow, encap, or toast. These programs install each package in its own separate directory, but work best if the installed programs are invoked through a different directory (which merges the contents of multiple packages, simplifying the PATH and supporting plug-ins). Thus, for both many packagers of software and for many users who directly install source code, a program should be installed in one directory, yet actually be run from a different directory. This is easy to do if the installation script supports the &quot;DESTDIR convention&quot;; simply run &quot;make DESTDIR=<i>something</i> install&quot;, which would install the files descending from DESTDIR, even though the files are configured to run without the DESTDIR prefix. Unfortunately, many source packages don&#8217;t support the DESTDIR convention. </p>
@@ -29,26 +29,26 @@ description: "make-redir – run \"make\" but automatically redirect its results
 <p> The following configures, builds, and then &quot;installs&quot; a program. The &quot;installed&quot; files will descend from /tmp/stuff, e.g., directory /tmp/stuff/usr/bin will contain files that were intended to be installed in /usr/bin: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  ./configure --prefix=/usr
  make
  make-redir DESTDIR=/tmp/stuff install
 </pre>
-</dl>
+</dd></dl>
 <p> For example, if &quot;cp myprogram&nbsp;<wbr>/usr/bin&quot; is one of the instructions in the makefile for the &quot;install&quot; target, then (presuming /usr/bin exists) it will actually perform the equivalent of:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  /bin/mkdir -p /tmp/stuff/usr/bin
  /bin/cp myprogram /tmp/stuff/usr/bin
 </pre>
-</dl>
+</dd></dl>
 <p> You can use make-redir inside an RPM .spec file. Be sure to &quot;BuildRequires&quot; auto-destdir, and set the DESTDIR to be the RPM build root, as follows in the spec file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  ...
  BuildRequires: auto-destdir
@@ -57,7 +57,7 @@ description: "make-redir – run \"make\" but automatically redirect its results
  rm -rf &quot;$RPM_BUILD_ROOT&quot;
  make-redir DESTDIR=&quot;$RPM_BUILD_ROOT&quot; install
 </pre>
-</dl>
+</dd></dl>
 <p> Some RPM spec authors may prefer to use %{buildroot} instead of $RPM_BUILD_ROOT. </p>
 <h2>IMPLEMENTATION APPROACH</h2>
 <p> The auto-destdir tools (including run-redir and make-redir) work by modifying the PATH environment variable and providing a few &quot;wrappers&quot; that override typical installation commands like &quot;cp&quot; and &quot;install&quot;. These commands with wrappers, called &quot;wrapped commands&quot;, use the values of $REDIR_DESTDIR or $DESTDIR (with REDIR_DESTDIR taking precedence), and will redirect reads and writes of files under certain conditions. The &quot;redirection&quot; comes by simply changing the name of the file source or destination, and then calling the &quot;real&quot; program being wrapped. The internal function redir_name takes the original filename, and how it will be used (e.g., for reading or writing), and determines if it should be renamed (and if so, to what). In addition, make-redir redirects all shell commands (using SHELL and a special wrapper for shell commands); any command that begins with the prefix /usr/ or /usr/bin/, followed by a wrapped command&#8217;s name, will have that prefix removed. </p>
@@ -69,7 +69,7 @@ description: "make-redir – run \"make\" but automatically redirect its results
 <p> Only wrapped programs will be redirected to the new destination directory; any other program will not be redirected. Currently, the &quot;wrapped&quot; commands are (alphabetically): </p>
 <dl>
 <dt>
-<dd> <i>chmod</i>, <i>cp</i>, <i>install</i>, <i>ln</i>, <i>mkdir</i>, <i>mv</i>, and <i>touch</i>.</dl>
+</dt><dd> <i>chmod</i>, <i>cp</i>, <i>install</i>, <i>ln</i>, <i>mkdir</i>, <i>mv</i>, and <i>touch</i>.</dd></dl>
 <p> If the makefile invokes wrapped programs using absolute pathnames (e.g., calling &quot;/bin/cp&quot; instead of &quot;cp&quot;), then the command will be redirected anyway if it is the absolutely first command at the beginning of a line in a makefile and is invoked directly or via makefile variable expansions like $(CP). Absolute pathnames at the <i>beginning</i> of a line are handled because make-redir sets SHELL to a special shell wrapper that handles this particular case. However, absolute pathnames for wrapped programs are not handled in any other place (doing so would require the shell wrapper to re-implement shell parsing); e.g., program names stored in shell variable expansions will not be intercepted. Thus, makefile lines like &quot;cd X; /usr/bin/install myprogram /usr/bin&quot; will not be redirected. In these cases, you should change absolute pathname invocations like <i>/usr/bin/install</i> to unnamed-path invocations like <i>install</i>. </p>
 <p> Capabilities built into the shell are not redirected, including I/O redirection such as &quot;&lt;&quot;, &quot;&gt;&quot;, and &quot;&gt;&gt;&quot;. This means that &quot;cat x &gt; /usr/bin/program&quot; will not be redirected; use &quot;cp x /usr/bin/program&quot; or similar instead. Similarly, &quot;test&quot; and &quot;[&quot; (which are normally shell built-ins) aren&#8217;t redirected. Changing this would require auto-destdir to re-implement a full shell. </p>
 <p> The wrappers presume GNU command line options, and will not understand other options even if the underlying tool would. In practice, this is almost always irrelevant; &quot;make install&quot; typically only uses highly-portable commands to copy files and make directories, and does not use unusual options. </p>
@@ -78,12 +78,12 @@ description: "make-redir – run \"make\" but automatically redirect its results
 <h2>GUIDANCE FOR SOFTWARE CREATORS</h2>
 <p> When writing the commands for &quot;make install&quot;:</p>
 <dl>
-<dt>*</p>
-<dd> Only use the wrapped commands to install files and directories in their final positions (e.g., install, cp, ln, and mkdir).</p>
-<dt>*</p>
-<dd> Don&#8217;t use full pathnames of wrapped commands (e.g., &quot;/usr/bin/install&quot;); use their basename (e.g., &quot;install&quot;).</p>
-<dt>*</p>
-<dd> Don&#8217;t use redirection (e.g., &quot;&gt;&quot;) to write to files in privileged directories; use redirection to write to a &quot;local&quot; file (typically during the build process), and then use &quot;install&quot; or &quot;cp&quot; to install the result.</dl>
+<dt>*</dt>
+<dd> Only use the wrapped commands to install files and directories in their final positions (e.g., install, cp, ln, and mkdir).</dd>
+<dt>*</dt>
+<dd> Don&#8217;t use full pathnames of wrapped commands (e.g., &quot;/usr/bin/install&quot;); use their basename (e.g., &quot;install&quot;).</dd>
+<dt>*</dt>
+<dd> Don&#8217;t use redirection (e.g., &quot;&gt;&quot;) to write to files in privileged directories; use redirection to write to a &quot;local&quot; file (typically during the build process), and then use &quot;install&quot; or &quot;cp&quot; to install the result.</dd></dl>
 <p> Supporting DESTDIR is still a good idea. </p>
 <h2>BUGS</h2>
 <p> As noted above, only &quot;wrapped&quot; commands are redirected. Some commands that aren&#8217;t wrapped, and perhaps should be, include: install-info, ldconfig, rm, rmdir, chown, chgrp, and libtool. For permissions-related commands (like chmod, chown, and chgrp), consider also using fakeroot or make&#8217;s &quot;-k&quot; option. </p>

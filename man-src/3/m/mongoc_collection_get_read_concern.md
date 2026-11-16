@@ -13,8 +13,8 @@ description: "mongoc_collection_get_read_concern() – Fetches the default read 
 mongoc_collection_get_read_concern (const mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the default read concern to be used on read operations originating from <code>collection</code> \&amp;. </p>
 <h2>Returns</h2>

@@ -10,18 +10,18 @@ description: "USB_DEVICE_INTERFACE_NUMBER – describe a usb device with a speci
 <p>USB_DEVICE_INTERFACE_NUMBER &#8211; describe a usb device with a specific interface number</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>USB_DEVICE_INTERFACE_NUMBER(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>num</i><code>);</code></dl>
+<dt> <code>USB_DEVICE_INTERFACE_NUMBER(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>num</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>vend</i></p>
 <dl>
 <dd>
-<dd>the 16 bit USB Vendor ID</dl>
+</dd><dd>the 16 bit USB Vendor ID</dd></dl>
 <p> <i>prod</i></p>
 <dl>
-<dd>the 16 bit USB Product ID</dl>
+<dd>the 16 bit USB Product ID</dd></dl>
 <p> <i>num</i></p>
 <dl>
-<dd>bInterfaceNumber value</dl>
+<dd>bInterfaceNumber value</dd></dl>
 <h2>Description</h2>
 <p>This macro is used to create a struct usb_device_id that matches a specific interface number of devices.</p>
 <h2>Copyright</h2>

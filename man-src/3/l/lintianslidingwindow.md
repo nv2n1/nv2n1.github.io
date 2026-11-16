@@ -26,19 +26,19 @@ description: "Lintian::SlidingWindow – Lintian interface to sliding window mat
 <p>Lintian::SlidingWindow provides a way of matching some pattern, including multi line pattern, without needing to fully load the file in memory.</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new(HANDLE[, BLOCKSUB[, <font SIZE="-1">BLOCKSIZE</font>]])</p>
-<dd>Create a new sliding window by reading from a given <font SIZE="-1">HANDLE,</font> which must be open for reading. Optionally run <font SIZE="-1">BLOCKSUB</font> against each block. Note that <font SIZE="-1">BLOCKSUB</font> should apply transform byte by byte and does not depend of context. </p>
+<dt>new(HANDLE[, BLOCKSUB[, <font SIZE="-1">BLOCKSIZE</font>]])</dt>
+<dd>Create a new sliding window by reading from a given <font SIZE="-1">HANDLE,</font> which must be open for reading. Optionally run <font SIZE="-1">BLOCKSUB</font> against each block. Note that <font SIZE="-1">BLOCKSUB</font> should apply transform byte by byte and does not depend of context. </dd>
 <p> Each window consists of up to two blocks of <font SIZE="-1">BLOCKSIZE</font> characters.</dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>readwindow</p>
-<dd>Return a new block of sliding window. Return undef at end of file.</p>
-<dt>blocknumber</p>
-<dd>return the number of block read by the instance. Return undef if no block has been read.</dl>
+<dt>readwindow</dt>
+<dd>Return a new block of sliding window. Return undef at end of file.</dd>
+<dt>blocknumber</dt>
+<dd>return the number of block read by the instance. Return undef if no block has been read.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt>no data type specified</p>
-<dd></dl>
+<dt>no data type specified</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Bastien <font SIZE="-1">ROUCARIES</font> for Lintian.</p>
 <h2>See Also</h2>

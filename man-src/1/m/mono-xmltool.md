@@ -24,16 +24,16 @@ description: "mono-xmltool – Mono XML validation and transformation tool."
 <p> If invoked with the &#8211;validate argument, Mono will use the filename extension to guess the kind of validation required. The &#8211;validate-xxx flags would force a specific kind of validation. </p>
 <p> The following lists the flags and the actual class that implements them in Mono:</p>
 <dl>
-<dt><i>&#8211;validate-rng </i></p>
+<dt><i>&#8211;validate-rng </i></dt>
 <dd>
 <p> Commons.Xml.Relaxng.RelaxNgPattern as the schema, and Commons.Xml.Relaxng.RelaxngValidatingReader validator.</p>
-<dt><i>&#8211;validate-rnc</i></p>
-<dd> Commons.Xml.Relaxng.RncParser as the schema, and Commons.Xml.Relaxng.RelaxngValidatingReader validator.</p>
-<dt><i>&#8211;validate-nvdl </i></p>
+</dd><dt><i>&#8211;validate-rnc</i></dt>
+<dd> Commons.Xml.Relaxng.RncParser as the schema, and Commons.Xml.Relaxng.RelaxngValidatingReader validator.</dd>
+<dt><i>&#8211;validate-nvdl </i></dt>
 <dd>
 <p> Commons.Xml.Nvdl as the schema and Commons.Xml.NvdlValidatingReader validator.</p>
-<dt><i>&#8211;validate-xsd</i></p>
-<dd> System.Xml.Schema.XmlSchema as the schema and uses System.Xml.XmlValidatingReader as the validator.</dl>
+</dd><dt><i>&#8211;validate-xsd</i></dt>
+<dd> System.Xml.Schema.XmlSchema as the schema and uses System.Xml.XmlValidatingReader as the validator.</dd></dl>
 <h2>TRANSFORMATIONS</h2>
 <p> This does an XSLT transformation. The stylesheet must be an XSLT file, the instance-xml is the document to be processed. Output it sent to the standard output.</p>
 <h2>PRETTY PRINTING</h2>

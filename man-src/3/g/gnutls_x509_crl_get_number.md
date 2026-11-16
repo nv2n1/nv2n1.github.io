@@ -14,14 +14,14 @@ description: "gnutls_x509_crl_get_number – API function"
 <p> <code>int gnutls_x509_crl_get_number(gnutls_x509_crl_t </code><i>crl</i><code>, void * </code><i>ret</i><code>, size_t * </code><i>ret_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crl_t crl</p>
-<dd> should contain a <code>gnutls_x509_crl_t</code> structure</p>
-<dt>void * ret</p>
-<dd> The place where the number will be copied</p>
-<dt>size_t * ret_size</p>
-<dd> Holds the size of the result field.</p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical (may be null)</dl>
+<dt>gnutls_x509_crl_t crl</dt>
+<dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd>
+<dt>void * ret</dt>
+<dd> The place where the number will be copied</dd>
+<dt>size_t * ret_size</dt>
+<dd> Holds the size of the result field.</dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the CRL number extension. This is obtained by the CRL Number extension field (2.5.29.20).</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crl_get_number – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

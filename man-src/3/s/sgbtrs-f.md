@@ -22,10 +22,10 @@ description: "sgbtrs.f –"
  A * X = B or A**T * X = B
  with a general band matrix A using the LU factorization computed
  by SGBTRF.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  Specifies the form of the system of equations.
  = 'N': A * X = B (No transpose)
@@ -72,13 +72,13 @@ description: "sgbtrs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 138 of file sgbtrs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

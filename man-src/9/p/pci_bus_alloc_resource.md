@@ -15,35 +15,35 @@ pci_bus_alloc_resource - allocate a resource from a parent bus
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>PCI bus</dl>
+<dl><dd></dd><dd>PCI bus</dd></dl>
  
 
  <i>res</i>
-<dl><dd>resource to allocate</dl>
+<dl><dd>resource to allocate</dd></dl>
  
 
  <i>size</i>
-<dl><dd>size of resource to allocate</dl>
+<dl><dd>size of resource to allocate</dd></dl>
  
 
  <i>align</i>
-<dl><dd>alignment of resource to allocate</dl>
+<dl><dd>alignment of resource to allocate</dd></dl>
  
 
  <i>min</i>
-<dl><dd>minimum /proc/iomem address to allocate</dl>
+<dl><dd>minimum /proc/iomem address to allocate</dd></dl>
  
 
  <i>type_mask</i>
-<dl><dd>IORESOURCE_* type flags</dl>
+<dl><dd>IORESOURCE_* type flags</dd></dl>
  
 
  <i>alignf</i>
-<dl><dd>resource alignment function</dl>
+<dl><dd>resource alignment function</dd></dl>
  
 
  <i>alignf_data</i>
-<dl><dd>data argument for resource alignment function</dl>
+<dl><dd>data argument for resource alignment function</dd></dl>
 
 <h2>Description</h2>
 

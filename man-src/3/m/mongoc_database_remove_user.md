@@ -16,14 +16,14 @@ mongoc_database_remove_user (mongoc_database_t *database,
 <p>This function removes the user named <code>username</code> from <code>database</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>username</code></p>
-<dd>A string containing the username of the user to remove.</dl>
+<dt><code>username</code></dt>
+<dd>A string containing the username of the user to remove.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. This could include socket errors or others if the current user is not authorized to perform the command. </p>
 <h2>Returns</h2>

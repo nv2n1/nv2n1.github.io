@@ -14,17 +14,17 @@ description: "mrtg-nt-guide – The MRTG 2.17.4 Windows Installation Guide"
 <h2>PREREQUISITES</h2>
 <p> To get <font SIZE="-1">MRTG</font> to work on Windows you need the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd> A current copy of Perl. For Example ActivePerl 5.8.8 from ActiveState <a rel="nofollow" href="http://www.activestate.com/store/activeperl/download/">http://www.activestate.com/store/activeperl/download/</a></p>
-<dt>&bull;</p>
-<dd> The latest version of <font SIZE="-1">MRTG</font> from <a rel="nofollow" href="http://oss.oetiker.ch/mrtg/pub.">http://oss.oetiker.ch/mrtg/pub.</a> Look for mrtg-2.17.4.zip or better. The archive also contains a precompiled copy of rateup.exe for Win32.</dl>
+<dt>&bull;</dt>
+<dd> A current copy of Perl. For Example ActivePerl 5.8.8 from ActiveState <a rel="nofollow" href="http://www.activestate.com/store/activeperl/download/">http://www.activestate.com/store/activeperl/download/</a></dd>
+<dt>&bull;</dt>
+<dd> The latest version of <font SIZE="-1">MRTG</font> from <a rel="nofollow" href="http://oss.oetiker.ch/mrtg/pub.">http://oss.oetiker.ch/mrtg/pub.</a> Look for mrtg-2.17.4.zip or better. The archive also contains a precompiled copy of rateup.exe for Win32.</dd></dl>
 <h2>INSTALLING</h2>
 <p> I suggest you do the following from the machine that will be running <font SIZE="-1">MRTG</font>, which, in this case, is also a web server. All examples are for doing things to a <font SIZE="-1">LOCAL</font> machine.</p>
 <dl>
-<dt>First</p>
-<dd> Unzip <font SIZE="-1">MRTG</font> to C:\mrtg-2.17.4 on the Windows machine of your choice.</p>
-<dt>Next</p>
-<dd> Install Perl on the same Windows machine. You might want to make sure that the Perl binary directory is listed in your system path. </p>
+<dt>First</dt>
+<dd> Unzip <font SIZE="-1">MRTG</font> to C:\mrtg-2.17.4 on the Windows machine of your choice.</dd>
+<dt>Next</dt>
+<dd> Install Perl on the same Windows machine. You might want to make sure that the Perl binary directory is listed in your system path. </dd>
 <pre>
  C:\Perlin;%SystemRoot%\system32;%SystemRoot%;...
 </pre>
@@ -37,12 +37,12 @@ description: "mrtg-nt-guide – The MRTG 2.17.4 Windows Installation Guide"
 <h2>CONFIGURING MRTG</h2>
 <p> Now it is time to create a configuration for <font SIZE="-1">MRTG</font>. But before we begin you need to know a few things. Take an opportunity to gather the following information:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The <font SIZE="-1">IP</font> address or hostname and the <font SIZE="-1">SNMP</font> port number, (if non standard), of the device you want to monitor.</p>
-<dt>&bull;</p>
-<dd> If you want to monitor something other than bytes in and out, you must also know the <font SIZE="-1">SNMPOID</font> of what you want to monitor.</p>
-<dt>&bull;</p>
-<dd> Finally you need to know the read-only <font SIZE="-1">SNMP</font> community string for your device. If you don&#8217;t know it, try <code>public</code>, that is the default.</dl>
+<dt>&bull;</dt>
+<dd> The <font SIZE="-1">IP</font> address or hostname and the <font SIZE="-1">SNMP</font> port number, (if non standard), of the device you want to monitor.</dd>
+<dt>&bull;</dt>
+<dd> If you want to monitor something other than bytes in and out, you must also know the <font SIZE="-1">SNMPOID</font> of what you want to monitor.</dd>
+<dt>&bull;</dt>
+<dd> Finally you need to know the read-only <font SIZE="-1">SNMP</font> community string for your device. If you don&#8217;t know it, try <code>public</code>, that is the default.</dd></dl>
 <p> For the rest of this document we will be using device <code>10.10.10.1</code> ( a <font SIZE="-1">CISCO</font> Catalyst 5000) with Community string <code>public</code>. We are interested in monitoring traffic, and the <font SIZE="-1">CPU</font> load. Let&#8217;s begin. </p>
 <p> The first thing we do in setting up <font SIZE="-1">MRTG</font> is making a default config file. Get to a cmd prompt and change to the <i>c:\mrtg-2.17.4in</i> directory. Type the following command: </p>
 <pre><code>
@@ -121,19 +121,19 @@ perl cfgmaker public[at] 10.10.10.1 --global "WorkDir: c:\www\mrtg" --output mrt
 <h2>HOW TO SETUP MRTG AS A WINDOWS SERVICE</h2>
 <h3>Additional Prerequisites</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">MRTG</font> must be installed and fully configured on the target system. In the following exercise the assumption is that <font SIZE="-1">MRTG</font> is installed under c:\mrtg\ and all the sample files use this location.</p>
-<dt>&bull;</p>
-<dd> Microsoft Tools <font SIZE="-1"><code>SRVANY</code></font><code>.exe</code> (Applications as Services Utility) and <font SIZE="-1"><code>INSTSRV</code></font><code>.exe</code> (Service Installer) &#8211; Those files can be downloaded from Microsoft as a part of Windows 2000 Resource Kit at &lt;<a rel="nofollow" href="http://www.microsoft.com/windows2000/techinfo/reskit/tools/default.asp">http://www.microsoft.com/windows2000/techinfo/reskit/tools/default.asp</a>&gt;. They are also available from other locations such as &lt;<a rel="nofollow" href="http://www.electrasoft.com/srvany/srvany.htm">http://www.electrasoft.com/srvany/srvany.htm</a>&gt;, &lt;<a rel="nofollow" href="http://www.iopus.com/guides/srvany.htm">http://www.iopus.com/guides/srvany.htm</a>&gt;, etc. Detailed instructions on how to use this package are available at &lt;<a rel="nofollow" href="http://support.microsoft.com/kb/q137890/">http://support.microsoft.com/kb/q137890/</a>&gt;. In order to follow the steps in this HOW-TO you <font SIZE="-1"><code>MUST</code></font> obtain both executables.</p>
-<dt>&bull;</p>
-<dd> You must have administrative rights on the target system.</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">MRTG</font> must be installed and fully configured on the target system. In the following exercise the assumption is that <font SIZE="-1">MRTG</font> is installed under c:\mrtg\ and all the sample files use this location.</dd>
+<dt>&bull;</dt>
+<dd> Microsoft Tools <font SIZE="-1"><code>SRVANY</code></font><code>.exe</code> (Applications as Services Utility) and <font SIZE="-1"><code>INSTSRV</code></font><code>.exe</code> (Service Installer) &#8211; Those files can be downloaded from Microsoft as a part of Windows 2000 Resource Kit at &lt;<a rel="nofollow" href="http://www.microsoft.com/windows2000/techinfo/reskit/tools/default.asp">http://www.microsoft.com/windows2000/techinfo/reskit/tools/default.asp</a>&gt;. They are also available from other locations such as &lt;<a rel="nofollow" href="http://www.electrasoft.com/srvany/srvany.htm">http://www.electrasoft.com/srvany/srvany.htm</a>&gt;, &lt;<a rel="nofollow" href="http://www.iopus.com/guides/srvany.htm">http://www.iopus.com/guides/srvany.htm</a>&gt;, etc. Detailed instructions on how to use this package are available at &lt;<a rel="nofollow" href="http://support.microsoft.com/kb/q137890/">http://support.microsoft.com/kb/q137890/</a>&gt;. In order to follow the steps in this HOW-TO you <font SIZE="-1"><code>MUST</code></font> obtain both executables.</dd>
+<dt>&bull;</dt>
+<dd> You must have administrative rights on the target system.</dd></dl>
 <h3>Preparation</h3>
 <p> Please complete the following steps before starting the installation:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Copy <code>srvany.exe</code> and <code>instsrv.exe</code> to c:\mrtg-2.17.4in\ (your <font SIZE="-1">MRTG</font> bin directory).</p>
-<dt>&bull;</p>
-<dd> Create a file called <code>mrtg.reg</code> anywhere on your system and paste the following content into it: </p>
+<dt>&bull;</dt>
+<dd> Copy <code>srvany.exe</code> and <code>instsrv.exe</code> to c:\mrtg-2.17.4in\ (your <font SIZE="-1">MRTG</font> bin directory).</dd>
+<dt>&bull;</dt>
+<dd> Create a file called <code>mrtg.reg</code> anywhere on your system and paste the following content into it: </dd>
 <pre>
  Windows Registry Editor Version 5.00
  [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MRTG\Parameters]

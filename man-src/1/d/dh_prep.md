@@ -16,8 +16,8 @@ description: "dh_prep – perform cleanups in preparation for building a binary 
 <p> It is typically run at the top of the <code>binary-arch</code> and <code>binary-indep</code> targets, or at the top of a target such as install that they depend on.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-X</code><i>item</i> <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude files that contain <i>item</i> anywhere in their filename from being deleted, even if they would normally be deleted. You may use this option multiple times to build up a list of things to exclude.</dl>
+<dt><code>-X</code><i>item</i> <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from being deleted, even if they would normally be deleted. You may use this option multiple times to build up a list of things to exclude.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

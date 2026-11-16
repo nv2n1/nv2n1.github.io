@@ -18,16 +18,16 @@ description: "ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsi
 <p> ldns_status ldns_verify_rrsig_rsamd5(ldns_buffer *sig, ldns_buffer *rrset, ldns_buffer *key); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_verify_rrsig_dsa</i>()</p>
-<dd>verifies a buffer with signature data (DSA) for a buffer with rrset data with a buffer with key data. </p>
+<dt> <i>ldns_verify_rrsig_dsa</i>()</dt>
+<dd>verifies a buffer with signature data (DSA) for a buffer with rrset data with a buffer with key data. </dd>
 <p> .br <code>sig</code>: the signature data .br <code>rrset</code>: the rrset data, sorted and processed for verification .br <code>key</code>: the key data</dl>
 <dl>
-<dt> <i>ldns_verify_rrsig_rsasha1</i>()</p>
-<dd>verifies a buffer with signature data (RSASHA1) for a buffer with rrset data with a buffer with key data. </p>
+<dt> <i>ldns_verify_rrsig_rsasha1</i>()</dt>
+<dd>verifies a buffer with signature data (RSASHA1) for a buffer with rrset data with a buffer with key data. </dd>
 <p> .br <code>sig</code>: the signature data .br <code>rrset</code>: the rrset data, sorted and processed for verification .br <code>key</code>: the key data</dl>
 <dl>
-<dt> <i>ldns_verify_rrsig_rsamd5</i>()</p>
-<dd>verifies a buffer with signature data (RSAMD5) for a buffer with rrset data with a buffer with key data. </p>
+<dt> <i>ldns_verify_rrsig_rsamd5</i>()</dt>
+<dd>verifies a buffer with signature data (RSAMD5) for a buffer with rrset data with a buffer with key data. </dd>
 <p> .br <code>sig</code>: the signature data .br <code>rrset</code>: the rrset data, sorted and processed for verification .br <code>key</code>: the key data</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -41,3 +41,4 @@ description: "ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsi
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

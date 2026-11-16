@@ -37,5 +37,5 @@ description: "globus_gass_copy_glob_stat_t –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_copy from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

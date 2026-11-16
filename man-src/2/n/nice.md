@@ -25,8 +25,8 @@ description: "nice – change process priority"
 <p> A successful call can legitimately return -1. To detect an error, set <i>errno</i> to 0 before the call, and check whether it is nonzero after <code>nice</code>() returns -1.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> The calling process attempted to increase its priority by supplying a negative <i>inc</i> but has insufficient privileges. Under Linux, the <code>CAP_SYS_NICE</code> capability is required. (But see the discussion of the <code>RLIMIT_NICE</code> resource limit in <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2).)</dl>
+<dt><code>EPERM</code></dt>
+<dd> The calling process attempted to increase its priority by supplying a negative <i>inc</i> but has insufficient privileges. Under Linux, the <code>CAP_SYS_NICE</code> capability is required. (But see the discussion of the <code>RLIMIT_NICE</code> resource limit in <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2).)</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD. However, the raw system call and (g)libc (earlier than glibc 2.2.4) return value is nonstandard, see below.</p>
 <h2>NOTES</h2>

@@ -17,8 +17,8 @@ description: "slapo-unique – Attribute Uniqueness overlay to slapd"
 <h2>Configuration</h2>
 <p>These <code>slapd.conf</code> options apply to the Attribute Uniqueness overlay. They should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>unique_uri &lt;[strict ][ignore ]URI[URI&#8230;]&#8230;&gt;</code></p>
-<dd>Configure the base, attributes, scope, and filter for uniqueness checking. Multiple URIs may be specified within a domain, allowing complex selections of objects. Multiple <code>unique_uri</code> statements or <code>olcUniqueURI</code> attributes will create independent domains, each with their own independent lists of URIs and ignore/strict settings. </p>
+<dt><code>unique_uri &lt;[strict ][ignore ]URI[URI&#8230;]&#8230;&gt;</code></dt>
+<dd>Configure the base, attributes, scope, and filter for uniqueness checking. Multiple URIs may be specified within a domain, allowing complex selections of objects. Multiple <code>unique_uri</code> statements or <code>olcUniqueURI</code> attributes will create independent domains, each with their own independent lists of URIs and ignore/strict settings. </dd>
 <p> Keywords <code>strict</code> and <code>ignore</code> have to be enclosed in quotes (&quot;) together with the URI. </p>
 <p> The LDAP URI syntax is a subset of <code>RFC-4516,</code> and takes the form: </p>
 <p> <a href="ldap:///[base">ldap:///[base</a> dn]?[attributes&#8230;]?scope[?filter] </p>
@@ -30,21 +30,21 @@ description: "slapo-unique – Attribute Uniqueness overlay to slapd"
 <p> It is possible to set strict checking for the uniqueness domain by prepending the keyword <code>strict.</code> By default, uniqueness is not enforced for null values. Enabling <code>strict</code> mode extends the concept of uniqueness to include null values, such that only one attribute within a subtree will be allowed to have a null value. Strictness applies to all URIs within a uniqueness domain, but some domains may be strict while others are not.</dl>
 <p> It is not possible to set both URIs and legacy slapo-unique configuration parameters simultaneously. In general, the legacy configuration options control pieces of a single unfiltered subtree domain.</p>
 <dl>
-<dt><code>unique_base &lt;basedn&gt;</code></p>
-<dd>This legacy configuration parameter should be converted to the <code>base dn</code> component of the above <code>unique_uri</code> style of parameter.</p>
-<dt><code>unique_ignore &lt;attribute&#8230;&gt;</code></p>
-<dd>This legacy configuration parameter should be converted to a <code>unique_uri</code> parameter with <code>ignore</code> keyword as described above.</p>
-<dt><code>unique_attributes &lt;attribute&#8230;&gt;</code></p>
-<dd>This legacy configuration parameter should be converted to a <code>unique_uri</code> parameter, as described above.</p>
-<dt><code>unique_strict &lt;attribute&#8230;&gt;</code></p>
-<dd>This legacy configuration parameter should be converted to a <code>strict</code> keyword prepended to a <code>unique_uri</code> parameter, as described above.</dl>
+<dt><code>unique_base &lt;basedn&gt;</code></dt>
+<dd>This legacy configuration parameter should be converted to the <code>base dn</code> component of the above <code>unique_uri</code> style of parameter.</dd>
+<dt><code>unique_ignore &lt;attribute&#8230;&gt;</code></dt>
+<dd>This legacy configuration parameter should be converted to a <code>unique_uri</code> parameter with <code>ignore</code> keyword as described above.</dd>
+<dt><code>unique_attributes &lt;attribute&#8230;&gt;</code></dt>
+<dd>This legacy configuration parameter should be converted to a <code>unique_uri</code> parameter, as described above.</dd>
+<dt><code>unique_strict &lt;attribute&#8230;&gt;</code></dt>
+<dd>This legacy configuration parameter should be converted to a <code>strict</code> keyword prepended to a <code>unique_uri</code> parameter, as described above.</dd></dl>
 <h2>Caveats</h2>
 <p><code>unique_uri</code> cannot be used with the old-style of configuration, and vice versa. <code>unique_uri</code> can implement everything the older system can do, however. </p>
 <p> Typical attributes for the <code>ignore <a href="ldap:///...">ldap:///&#8230;</a></code> URIs are intentionally not hardcoded into the overlay to allow for maximum flexibility in meeting site-specific requirements. </p>
 <p> Replication and operations with <code>manageDsaIt</code> control are allowed to bypass this enforcement. It is therefore important that all servers accepting writes have this overlay configured in order to maintain uniqueness in a replicated DIT.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5). </p>

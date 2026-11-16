@@ -15,16 +15,16 @@ description: "DROP CAST – remove a cast"
 <p> To be able to drop a cast, you must own the source or the target data type. These are the same privileges that are required to create a cast.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the cast does not exist. A notice is issued in this case.</p>
-<dt><i>sourcetype</i></p>
-<dd>The name of the source data type of the cast.</p>
-<dt><i>targettype</i></p>
-<dd>The name of the target data type of the cast.</p>
-<dt><code>CASCADE</code></p>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the cast does not exist. A notice is issued in this case.</dd>
+<dt><i>sourcetype</i></dt>
+<dd>The name of the source data type of the cast.</dd>
+<dt><i>targettype</i></dt>
+<dd>The name of the target data type of the cast.</dd>
+<dt><code>CASCADE</code></dt>
 <dd>
-<dt><code>RESTRICT</code></p>
-<dd>These key words do not have any effect, since there are no dependencies on casts.</dl>
+</dd><dt><code>RESTRICT</code></dt>
+<dd>These key words do not have any effect, since there are no dependencies on casts.</dd></dl>
 <h2>Examples</h2>
 <p>To drop the cast from type <code>text</code> to type <code>int</code>: </p>
 <pre>DROP CAST (text AS int);</pre>

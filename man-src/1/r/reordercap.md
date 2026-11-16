@@ -18,8 +18,8 @@ description: "reordercap – Reorder input file by timestamp into output file"
 <p> <code>Reordercap</code> is able to detect, read and write the same capture files that are supported by <code>Wireshark</code>. The input file doesn&#8217;t need a specific filename extension; the file format and an optional gzip compression will be detected automatically. Near the beginning of the <font SIZE="-1">DESCRIPTION</font> section of <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1) or &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages/wireshark.html">http://www.wireshark.org/docs/man-pages/wireshark.html</a>&gt; is a detailed description of the way <code>Wireshark</code> handles this, which is the same way <code>reordercap</code> handles this.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-n</p>
-<dd> When the <code>-n</code> option is used, <code>reordercap</code> will not write out the output file if it finds that the input file is already in order.</dl>
+<dt>-n</dt>
+<dd> When the <code>-n</code> option is used, <code>reordercap</code> will not write out the output file if it finds that the input file is already in order.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>pcap</i>(3), <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1), <i><a href="/docs/linux/man/1-tshark/">tshark</a></i>(1), <i><a href="/docs/linux/man/1-dumpcap/">dumpcap</a></i>(1), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1), <i><a href="/docs/linux/man/1-mergecap/">mergecap</a></i>(1), <i><a href="/docs/linux/man/1-text2pcap/">text2pcap</a></i>(1), <i><a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a></i>(7) or <i><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></i>(8)</p>
 <h2>NOTES</h2>

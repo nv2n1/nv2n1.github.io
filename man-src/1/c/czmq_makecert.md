@@ -20,11 +20,11 @@ Please add @interface section in ../src/makecert.c.
 <p> <code>From makecert_test method</code>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Please add @selftest section in ../src/makecert.c.
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> The czmq manual was written by the authors in the AUTHORS file.</p>
 <h2>RESOURCES</h2>
@@ -34,10 +34,10 @@ Please add @selftest section in ../src/makecert.c.
 <p> Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd> zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
 <dt>
-<dd> mailto:zeromq-dev [at] lists.zeromq.org</dl>
+</dt><dd> mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
 </dl>
 <h2>Index</h2>

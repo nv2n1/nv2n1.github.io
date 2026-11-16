@@ -13,12 +13,12 @@ description: "samdump2 retrieves syskey and extract hashes from Windows 2k/NT/XP
 <p> samdump2 [-d] [-o file] &lt;system hive&gt; &lt;sam hive&gt;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> enable debugging</p>
-<dt><code>-h</code></p>
-<dd> display this help</p>
-<dt><code>-o file</code></p>
-<dd> write output to file</dl>
+<dt><code>-d</code></dt>
+<dd> enable debugging</dd>
+<dt><code>-h</code></dt>
+<dd> display this help</dd>
+<dt><code>-o file</code></dt>
+<dd> write output to file</dd></dl>
 <h2>EXAMPLE</h2>
 <p> samdump2 -o out /mnt/ntfs/WINDOWS/system32/config/SYSTEM /mnt/ntfs/WINDOWS/system32/config/sam</p>
 <h2>AUTHOR</h2>

@@ -11,10 +11,8 @@ std::experimental::erase_if(std::basic_string) - std::experimental::erase_if(std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / string&gt;
-
     template &lt;class CharT, class Traits, class Alloc, class Pred&gt;
     (library fundamentals TS v2)
-
         void erase_if(std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;c, Pred pred);
 Erases all elements that satisfy the predicate pred from the container.Equivalent to c.erase(std::remove_if(c.begin(), c.end(), pred), c.end());
 </code></pre>

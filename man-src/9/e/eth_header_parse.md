@@ -15,11 +15,11 @@ eth_header_parse - extract hardware address from packet
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>packet to extract header from</dl>
+<dl><dd></dd><dd>packet to extract header from</dd></dl>
  
 
  <i>haddr</i>
-<dl><dd>destination buffer</dl>
+<dl><dd>destination buffer</dd></dl>
 
 <h2>Copyright</h2>
 

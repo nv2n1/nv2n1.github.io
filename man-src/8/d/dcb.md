@@ -10,48 +10,45 @@ description: "dcb – show / manipulate DCB (Data Center Bridging) settings"
 <p>dcb &#8211; show / manipulate DCB (Data Center Bridging) settings</p>
 <h2>Synopsis</h2>
 <pre><code>dcb
-
 [ OPTIONS ]
-
 { app | buffer | ets | maxrate | pfc }
-
 { COMMAND | help }
 </code></pre>
 <p> <code>dcb</code> [ <code>-force</code> ] <code>-batch </code><i>filename</i><br />
  <code>dcb</code> [ <i>OPTIONS</i> ] <code>help</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code>,<code> &#8211;netns </code>&lt;NETNS&gt;</p>
-<dd>switches <code>dcb</code> to the specified network namespace <i>NETNS</i>. </p>
-<dt><code>-V</code>,<code> &#8211;Version</code></p>
-<dd>Print the version of the <code>dcb</code> utility and exit. </p>
-<dt><code>-b,</code> &#8211;batch <code>&lt;FILENAME&gt;</code></p>
-<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of dcb. </p>
-<dt><code>-f,</code> &#8211;force</p>
-<dd>Don&#8217;t terminate dcb on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </p>
-<dt><code>-i</code>,<code> &#8211;iec</code></p>
-<dd>When showing rates, use ISO/IEC 1024-based prefixes (Ki, Mi, Bi) instead of the 1000-based ones (K, M, B). </p>
-<dt><code>-j</code>,<code> &#8211;json</code></p>
-<dd>Generate JSON output. </p>
-<dt><code>-N</code>,<code> &#8211;Numeric</code></p>
-<dd>If the subtool in question translates numbers to symbolic names in some way, suppress this translation. </p>
-<dt><code>-p</code>,<code> &#8211;pretty</code></p>
-<dd>When combined with -j generate a pretty JSON output. </p>
-<dt><code>-s</code>,<code> &#8211;statistics</code></p>
-<dd>If the object in question contains any statistical counters, shown them as part of the &quot;show&quot; output. </p>
+<dt><code>-n</code>,<code> &#8211;netns </code>&lt;NETNS&gt;</dt>
+<dd>switches <code>dcb</code> to the specified network namespace <i>NETNS</i>. </dd>
+<dt><code>-V</code>,<code> &#8211;Version</code></dt>
+<dd>Print the version of the <code>dcb</code> utility and exit. </dd>
+<dt><code>-b,</code> &#8211;batch <code>&lt;FILENAME&gt;</code></dt>
+<dd>Read commands from provided file or standard input and invoke them. First failure will cause termination of dcb. </dd>
+<dt><code>-f,</code> &#8211;force</dt>
+<dd>Don&#8217;t terminate dcb on errors in batch mode. If there were any errors during execution of the commands, the application return code will be non zero. </dd>
+<dt><code>-i</code>,<code> &#8211;iec</code></dt>
+<dd>When showing rates, use ISO/IEC 1024-based prefixes (Ki, Mi, Bi) instead of the 1000-based ones (K, M, B). </dd>
+<dt><code>-j</code>,<code> &#8211;json</code></dt>
+<dd>Generate JSON output. </dd>
+<dt><code>-N</code>,<code> &#8211;Numeric</code></dt>
+<dd>If the subtool in question translates numbers to symbolic names in some way, suppress this translation. </dd>
+<dt><code>-p</code>,<code> &#8211;pretty</code></dt>
+<dd>When combined with -j generate a pretty JSON output. </dd>
+<dt><code>-s</code>,<code> &#8211;statistics</code></dt>
+<dd>If the object in question contains any statistical counters, shown them as part of the &quot;show&quot; output. </dd>
 </dl>
 <h2>Objects</h2>
 <dl>
-<dt><code>app</code></p>
-<dd>&#8211; Configuration of application priority table </p>
-<dt><code>buffer</code></p>
-<dd>&#8211; Configuration of port buffers </p>
-<dt><code>ets</code></p>
-<dd>&#8211; Configuration of ETS (Enhanced Transmission Selection) </p>
-<dt><code>maxrate</code></p>
-<dd>&#8211; Configuration of per-TC maximum transmit rate </p>
-<dt><code>pfc</code></p>
-<dd>&#8211; Configuration of PFC (Priority-based Flow Control) </p>
+<dt><code>app</code></dt>
+<dd>&#8211; Configuration of application priority table </dd>
+<dt><code>buffer</code></dt>
+<dd>&#8211; Configuration of port buffers </dd>
+<dt><code>ets</code></dt>
+<dd>&#8211; Configuration of ETS (Enhanced Transmission Selection) </dd>
+<dt><code>maxrate</code></dt>
+<dd>&#8211; Configuration of per-TC maximum transmit rate </dd>
+<dt><code>pfc</code></dt>
+<dd>&#8211; Configuration of PFC (Priority-based Flow Control) </dd>
 </dl>
 <h2>Commands</h2>
 <p>A <i>COMMAND</i> specifies the action to perform on the object. The set of possible actions depends on the object type. As a rule, it is possible to <code>show</code> objects and to invoke topical <code>help,</code> which prints a list of available commands and argument syntax conventions.</p>

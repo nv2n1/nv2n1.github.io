@@ -15,30 +15,30 @@ description: "watch-mimedefang – Keep an eye on mimedefang-multiplexor"
 <h2>Display</h2>
 <p><code>watch-mimedefang</code>&#8216;s display is divided into three main areas, from top to bottom: </p>
 <dl>
-<dt><code>o</code></p>
-<dd>The graph display shows six graphs representing various statistics about the multiplexor. </p>
-<dt><code>o</code></p>
-<dd>The control area shows the maximum number of slaves, number of busy slaves, and number of idle slaves. The &quot;Control Command&quot; text entry lets you monitor remote MIMEDefang servers; see &quot;REMOTE MONITORING&quot; for details. </p>
+<dt><code>o</code></dt>
+<dd>The graph display shows six graphs representing various statistics about the multiplexor. </dd>
+<dt><code>o</code></dt>
+<dd>The control area shows the maximum number of slaves, number of busy slaves, and number of idle slaves. The &quot;Control Command&quot; text entry lets you monitor remote MIMEDefang servers; see &quot;REMOTE MONITORING&quot; for details. </dd>
 <p> The &quot;10s&quot;, &quot;1m&quot;, &quot;5m&quot; and &quot;10m&quot; checkboxes allow you to enable or disable the graphing of statistics averaged over the last 10 seconds, 1 minute, 5 minutes and 10 minutes. </p>
 <p> The &quot;Reread Filters&quot; button forces the multiplexor to reread filter rules. The &quot;Quit&quot; button terminates <code>watch-mimedefang</code>. </p>
-<dt><code>o</code></p>
-<dd>The scale at the bottom lets you change the update interval (default 500ms). Be aware that frequent updating may make <code>watch-mimedefang</code> consume a significant fraction of CPU time. </p>
+<dt><code>o</code></dt>
+<dd>The scale at the bottom lets you change the update interval (default 500ms). Be aware that frequent updating may make <code>watch-mimedefang</code> consume a significant fraction of CPU time. </dd>
 </dl>
 <h2>The Graph Area</h2>
 <p>The graph area contains six graphs: </p>
 <dl>
-<dt><code>o Busy Slaves</code></p>
-<dd>This graph shows the number of busy slaves each time the statistics are sampled. </p>
-<dt><code>o Slaves/scan</code></p>
-<dd>This graph shows the average number of busy slaves each time a message was scanned. The red plot shows the average over the last ten seconds, the blue plot shows the average over the last minute, and the green and yellow plots show the average over the last five and ten minutes, respectively. </p>
-<dt><code>o Latency (ms)</code></p>
-<dd>This graph shows the average time taken by each SCAN command over the last ten seconds, one minute, five minutes and ten minutes. </p>
-<dt><code>o Messages/s</code></p>
-<dd>This graph shows the average number of messages per second that were scanned. </p>
-<dt><code>o Activations/s</code></p>
-<dd>This graph shows the average number of new slaves activated per second. </p>
-<dt><code>o Reaps/s</code></p>
-<dd>This graph shows the average number of slaves that have terminated per second. </p>
+<dt><code>o Busy Slaves</code></dt>
+<dd>This graph shows the number of busy slaves each time the statistics are sampled. </dd>
+<dt><code>o Slaves/scan</code></dt>
+<dd>This graph shows the average number of busy slaves each time a message was scanned. The red plot shows the average over the last ten seconds, the blue plot shows the average over the last minute, and the green and yellow plots show the average over the last five and ten minutes, respectively. </dd>
+<dt><code>o Latency (ms)</code></dt>
+<dd>This graph shows the average time taken by each SCAN command over the last ten seconds, one minute, five minutes and ten minutes. </dd>
+<dt><code>o Messages/s</code></dt>
+<dd>This graph shows the average number of messages per second that were scanned. </dd>
+<dt><code>o Activations/s</code></dt>
+<dd>This graph shows the average number of new slaves activated per second. </dd>
+<dt><code>o Reaps/s</code></dt>
+<dd>This graph shows the average number of slaves that have terminated per second. </dd>
 <p> If the Activations and Reaps increase significantly, it could indicate heavy load, or an error causing filters to terminate abnormally. </p>
 <p> If only Activations increase, then it probably indicates a sudden increase in e-mail volume. </p>
 <p> If only Reaps increase, then it probably indicates a quiet time just after a period of heavy mail volume. </p>
@@ -54,22 +54,22 @@ description: "watch-mimedefang – Keep an eye on mimedefang-multiplexor"
 <h2>Command-Line Options</h2>
 <p><code>watch-mimedefang</code> accepts the following command-line options: </p>
 <dl>
-<dt><code>-command </code><i>cmd</i></p>
-<dd>Use <i>cmd</i> as the control command. You may need to quote <i>cmd</i> </p>
-<dt><code>-interval </code><i>msec</i></p>
-<dd>Set the update interval to <i>msec</i> milliseconds. </p>
-<dt><code>-10s </code><i>flag</i></p>
-<dd>Enable the &quot;10s&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </p>
-<dt><code>-1m </code><i>flag</i></p>
-<dd>Enable the &quot;1m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </p>
-<dt><code>-5m </code><i>flag</i></p>
-<dd>Enable the &quot;5m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </p>
-<dt><code>-10m </code><i>flag</i></p>
-<dd>Enable the &quot;10m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </p>
-<dt><code>-title </code><i>string</i></p>
-<dd>Add <i>string</i> to the title of the main window. </p>
-<dt><code>-help</code></p>
-<dd>Print usage information. </p>
+<dt><code>-command </code><i>cmd</i></dt>
+<dd>Use <i>cmd</i> as the control command. You may need to quote <i>cmd</i> </dd>
+<dt><code>-interval </code><i>msec</i></dt>
+<dd>Set the update interval to <i>msec</i> milliseconds. </dd>
+<dt><code>-10s </code><i>flag</i></dt>
+<dd>Enable the &quot;10s&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </dd>
+<dt><code>-1m </code><i>flag</i></dt>
+<dd>Enable the &quot;1m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </dd>
+<dt><code>-5m </code><i>flag</i></dt>
+<dd>Enable the &quot;5m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </dd>
+<dt><code>-10m </code><i>flag</i></dt>
+<dd>Enable the &quot;10m&quot; graph plot if <i>flag</i> is 1, or disable it if <i>flag</i> is 0. </dd>
+<dt><code>-title </code><i>string</i></dt>
+<dd>Add <i>string</i> to the title of the main window. </dd>
+<dt><code>-help</code></dt>
+<dd>Print usage information. </dd>
 </dl>
 <h2>Example</h2>
 <p>As an example, to monitor MIMEDefang on the machine &quot;mail.mydomain.net&quot; updating once a second, with the 5m and 10m plots turned off, use: </p>

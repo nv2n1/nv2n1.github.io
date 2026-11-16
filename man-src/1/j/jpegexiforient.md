@@ -16,15 +16,15 @@ description: "jpegexiforient – reads or writes the Exif Orientation Tag"
 <p> The Exif orientation value gives the orientation of the camera relative to the scene when the image was captured. The relation of the &#8216;0th row&#8217; and &#8216;0th column&#8217; to visual position is shown as below.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Value | 0th Row | 0th Column-- -- --+-- -- -- -- -- -- -+-- -- -- -- -- -1 | top | left side 2 | top | right side 3 | bottom | right side 4 | bottom | left side 5 | left side | top 6 | right side | top 7 | right side | bottom 8 | left side | bottom
 </code></pre>
-</dl>
+</dd></dl>
 <p> For convenience, here is what the letter F would look like if it were tagged correctly and displayed by a program that ignores the orientation tag:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   1        2       3      4     
 888888  888888      88  88      
@@ -33,23 +33,22 @@ Value | 0th Row | 0th Column-- -- --+-- -- -- -- -- -- -+-- -- -- -- -- -1 | top
 88          88      88  88
 88          88  888888  888888
     5            6           7          8
-                                               
 8888888888  88                  88  8888888888
 88  88      88  88          88  88      88  88
 88          8888888888  8888888888          88
 </pre>
-</dl>
+</dd></dl>
 <p> jpegexiforient output the Exif Orientation Tag in a JPEG Exif file. With the options -1 .. -8, it can also be used to set the tag.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</p>
-<dt><code>-n</code></p>
-<dd> Do not output the trailing newline</p>
-<dt><code>-1</code> .. <code>-8</code></p>
-<dd> Set orientation value 1 .. 8</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd>
+<dt><code>-n</code></dt>
+<dd> Do not output the trailing newline</dd>
+<dt><code>-1</code> .. <code>-8</code></dt>
+<dd> Set orientation value 1 .. 8</dd></dl>
 <h2>AUTHOR</h2>
 <p>&nbsp;Guido Vollbeding&nbsp;&lt;guido [at] jpegclub.org&gt;</p>
 <h2>SEE ALSO</h2>

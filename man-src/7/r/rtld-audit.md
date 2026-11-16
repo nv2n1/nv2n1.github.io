@@ -21,44 +21,44 @@ description: "rtld-audit – auditing API for the dynamic linker"
 <code> unsigned int </code><i>flag</i><code>);</code></pre>
 <p>The dynamic linker invokes this function to inform the auditing library that it is about to search for a shared object. The <i>name</i> argument is the filename or pathname that is to be searched for. <i>cookie</i> identifies the shared object that initiated the search. <i>flag</i> is set to one of the following values:</p>
 <dl>
-<dt><code>LA_SER_ORIG</code></p>
-<dd>This is the original name that is being searched for. Typically, this name comes from an ELF <code>DT_NEEDED</code> entry, or is the <i>filename</i> argument given to <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3).</p>
-<dt><code>LA_SER_LIBPATH</code></p>
-<dd><i>name</i> was created using a directory specified in <code>LD_LIBRARY_PATH</code>.</p>
-<dt><code>LA_SER_RUNPATH</code></p>
-<dd><i>name</i> was created using a directory specified in an ELF <code>DT_RPATH</code> or <code>DT_RUNPATH</code> list.</p>
-<dt><code>LA_SER_CONFIG</code></p>
-<dd><i>name</i> was found via the <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8) cache (<i>/etc/ld.so.cache</i>).</p>
-<dt><code>LA_SER_DEFAULT</code></p>
-<dd><i>name</i> was found via a search of one of the default directories.</p>
-<dt><code>LA_SER_SECURE</code></p>
-<dd><i>name</i> is specific to a secure object (unused on Linux).</dl>
+<dt><code>LA_SER_ORIG</code></dt>
+<dd>This is the original name that is being searched for. Typically, this name comes from an ELF <code>DT_NEEDED</code> entry, or is the <i>filename</i> argument given to <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3).</dd>
+<dt><code>LA_SER_LIBPATH</code></dt>
+<dd><i>name</i> was created using a directory specified in <code>LD_LIBRARY_PATH</code>.</dd>
+<dt><code>LA_SER_RUNPATH</code></dt>
+<dd><i>name</i> was created using a directory specified in an ELF <code>DT_RPATH</code> or <code>DT_RUNPATH</code> list.</dd>
+<dt><code>LA_SER_CONFIG</code></dt>
+<dd><i>name</i> was found via the <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8) cache (<i>/etc/ld.so.cache</i>).</dd>
+<dt><code>LA_SER_DEFAULT</code></dt>
+<dd><i>name</i> was found via a search of one of the default directories.</dd>
+<dt><code>LA_SER_SECURE</code></dt>
+<dd><i>name</i> is specific to a secure object (unused on Linux).</dd></dl>
 <p> As its function result, <code>la_objsearch</code>() returns the pathname that the dynamic linker should use for further processing. If NULL is returned, then this pathname is ignored for further processing. If this audit library simply intends to monitor search paths, then <i>name</i> should be returned.</p>
 <h3>la_activity()</h3>
 <pre><code>void la_activity( uintptr_t *</code><i>cookie</i><code>, unsigned int flag</code><i>);</i></pre>
 <p>The dynamic linker calls this function to inform the auditing library that link-map activity is occurring. <i>cookie</i> identifies the object at the head of the link map. When the dynamic linker invokes this function, <i>flag</i> is set to one of the following values:</p>
 <dl>
-<dt><code>LA_ACT_ADD</code></p>
-<dd>New objects are being added to the link map.</p>
-<dt><code>LA_ACT_DELETE</code></p>
-<dd>Objects are being removed from the link map.</p>
-<dt><code>LA_ACT_CONSISTENT</code></p>
-<dd>Link-map activity has been completed: the map is once again consistent.</dl>
+<dt><code>LA_ACT_ADD</code></dt>
+<dd>New objects are being added to the link map.</dd>
+<dt><code>LA_ACT_DELETE</code></dt>
+<dd>Objects are being removed from the link map.</dd>
+<dt><code>LA_ACT_CONSISTENT</code></dt>
+<dd>Link-map activity has been completed: the map is once again consistent.</dd></dl>
 <h3>la_objopen()</h3>
 <pre><code>unsigned int la_objopen(struct link_map *</code><i>map</i><code>, Lmid_t </code><i>lmid</i><code>,</code>
 <code> uintptr_t *</code><i>cookie</i><code>);</code></pre>
 <p>The dynamic linker calls this function when a new shared object is loaded. The <i>map</i> argument is a pointer to a link-map structure that describes the object. The <i>lmid</i> field has one of the following values</p>
 <dl>
-<dt><code>LM_ID_BASE</code></p>
-<dd>Link map is part of the initial namespace.</p>
-<dt><code>LM_ID_NEWLM</code></p>
-<dd>Link map is part of a new namespace requested via <code><a href="/docs/linux/man/3-dlmopen/">dlmopen</a></code>(3).</dl>
+<dt><code>LM_ID_BASE</code></dt>
+<dd>Link map is part of the initial namespace.</dd>
+<dt><code>LM_ID_NEWLM</code></dt>
+<dd>Link map is part of a new namespace requested via <code><a href="/docs/linux/man/3-dlmopen/">dlmopen</a></code>(3).</dd></dl>
 <p> <i>cookie</i> is a pointer to an identifier for this object. The identifier is provided to later calls to functions in the auditing library in order to identify this object. This identifier is initialized to point to object&#8217;s link map, but the audit library can change the identifier to some other value that it may prefer to use to identify the object. As its return value, <code>la_objopen</code>() returns a bit mask created by ORing zero or more of the following constants, which allow the auditing library to select the objects to be monitored by <code>la_symbind*</code>():</p>
 <dl>
-<dt><code>LA_FLG_BINDTO</code></p>
-<dd>Audit symbol bindings to this object.</p>
-<dt><code>LA_FLG_BINDFROM</code></p>
-<dd>Audit symbol bindings from this object.</dl>
+<dt><code>LA_FLG_BINDTO</code></dt>
+<dd>Audit symbol bindings to this object.</dd>
+<dt><code>LA_FLG_BINDFROM</code></dt>
+<dd>Audit symbol bindings from this object.</dd></dl>
 <p> A return value of 0 from <code>la_objopen</code>() indicates that no symbol bindings should be audited for this object.</p>
 <h3>la_objclose()</h3>
 <pre><code>unsigned int la_objclose(uintptr_t *</code><i>cookie</i><code>);</code></pre>
@@ -75,16 +75,16 @@ description: "rtld-audit – auditing API for the dynamic linker"
 <code> unsigned int *</code><i>flags</i><code>, const char *</code><i>symname</i><code>);</code></pre>
 <p>The dynamic linker invokes one of these functions when a symbol binding occurs between two shared objects that have been marked for auditing notification by <code>la_objopen</code>(). The <code>la_symbind32</code>() function is employed on 32-bit platforms; the <code>la_symbind64</code>() function is employed on 64-bit platforms. The <i>sym</i> argument is a pointer to a structure that provides information about the symbol being bound. The structure definition is shown in <i>&lt;elf.h&gt;</i>. Among the fields of this structure, <i>st_value</i> indicates the address to which the symbol is bound. The <i>ndx</i> argument gives the index of the symbol in the symbol table of the bound shared object. The <i>refcook</i> argument identifies the shared object that is making the symbol reference; this is the same identifier that is provided to the <code>la_objopen</code>() function that returned <code>LA_FLG_BINDFROM</code>. The <i>defcook</i> argument identifies the shared object that defines the referenced symbol; this is the same identifier that is provided to the <code>la_objopen</code>() function that returned <code>LA_FLG_BINDTO</code>. The <i>symname</i> argument points a string containing the name of the symbol. The <i>flags</i> argument is a bit mask that both provides information about the symbol and can be used to modify further auditing of this PLT (Procedure Linkage Table) entry. The dynamic linker may supply the following bit values in this argument:</p>
 <dl>
-<dt><code>LA_SYMB_DLSYM</code></p>
-<dd>The binding resulted from a call to <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3).</p>
-<dt><code>LA_SYMB_ALTVALUE</code></p>
-<dd>A previous <code>la_symbind*</code>() call returned an alternate value for this symbol.</dl>
+<dt><code>LA_SYMB_DLSYM</code></dt>
+<dd>The binding resulted from a call to <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3).</dd>
+<dt><code>LA_SYMB_ALTVALUE</code></dt>
+<dd>A previous <code>la_symbind*</code>() call returned an alternate value for this symbol.</dd></dl>
 <p> By default, if the auditing library implements <code>la_pltenter</code>() and <code>la_pltexit</code>() functions (see below), then these functions are invoked, after <code>la_symbind</code>(), for PLT entries, each time the symbol is referenced. The following flags can be ORed into <i>*flags</i> to change this default behavior:</p>
 <dl>
-<dt><code>LA_SYMB_NOPLTENTER</code></p>
-<dd>Don&#8217;t call <code>la_pltenter</code>() for this symbol.</p>
-<dt><code>LA_SYMB_NOPLTEXIT</code></p>
-<dd>Don&#8217;t call <code>la_pltexit</code>() for this symbol.</dl>
+<dt><code>LA_SYMB_NOPLTENTER</code></dt>
+<dd>Don&#8217;t call <code>la_pltenter</code>() for this symbol.</dd>
+<dt><code>LA_SYMB_NOPLTEXIT</code></dt>
+<dd>Don&#8217;t call <code>la_pltexit</code>() for this symbol.</dd></dl>
 <p> The return value of <code>la_symbind32</code>() and <code>la_symbind64</code>() is the address to which control should be passed after the function returns. If the auditing library is simply monitoring symbol bindings, then it should return <i>sym-&gt;st_value</i>. A different value may be returned if the library wishes to direct control to an alternate location.</p>
 <h3>la_pltenter()</h3>
 <p>The precise name and argument types for this function depend on the hardware platform. (The appropriate definition is supplied by <i>&lt;link.h&gt;</i>.) Here is the definition for x86-32: </p>
@@ -103,12 +103,12 @@ description: "rtld-audit – auditing API for the dynamic linker"
 <h2>Notes</h2>
 <p>Note the following differences from the Solaris dynamic linker auditing API:</p>
 <dl>
-<dt>*</p>
-<dd>The Solaris <code>la_objfilter</code>() interface is not supported by the GNU implementation.</p>
-<dt>*</p>
-<dd>The Solaris <code>la_symbind32</code>() and <code>la_pltexit</code>() functions do not provide a <i>symname</i> argument.</p>
-<dt>*</p>
-<dd>The Solaris <code>la_pltexit</code>() function does not provide <i>inregs</i> and <i>outregs</i> arguments (but does provide a <i>retval</i> argument with the function return value).</dl>
+<dt>*</dt>
+<dd>The Solaris <code>la_objfilter</code>() interface is not supported by the GNU implementation.</dd>
+<dt>*</dt>
+<dd>The Solaris <code>la_symbind32</code>() and <code>la_pltexit</code>() functions do not provide a <i>symname</i> argument.</dd>
+<dt>*</dt>
+<dd>The Solaris <code>la_pltexit</code>() function does not provide <i>inregs</i> and <i>outregs</i> arguments (but does provide a <i>retval</i> argument with the function return value).</dd></dl>
 <h2>Bugs</h2>
 <p>In glibc versions up to and include 2.9, specifying more than one audit library in <code>LD_AUDIT</code> results in a run-time crash. This is reportedly fixed in glibc 2.10.</p>
 <h2>Examples</h2>

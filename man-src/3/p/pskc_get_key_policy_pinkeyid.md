@@ -13,8 +13,8 @@ description: "pskc_get_key_policy_pinkeyid – API function"
 const char *pskc_get_key_policy_pinkeyid(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Policy PINPolicy PINKeyId value. This attribute carries the unique &#8216;Id&#8217; attribute vale of the &quot;Key&quot; element held within this &quot;KeyContainer&quot; that contains the value of the PIN that protects the key.</p>
 <h2>Returns</h2>

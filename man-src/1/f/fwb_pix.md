@@ -16,16 +16,16 @@ description: "fwb_ipt – Policy compiler for Cisco PIX"
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f FILE</p>
-<dd> Specify the name of the data file to be processed. </p>
-<dt>-d wdir</p>
-<dd> Specify working directory. Compiler creates file with PIX configuration in this directory. If this parameter is missing, then PIX configuration will be placed in the current working directory. </p>
-<dt>-v</p>
-<dd> Be verbose: compiler prints diagnostic messages when it works. </p>
-<dt>-V</p>
-<dd> Print version number and quit. </p>
-<dt>-i</p>
-<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </p>
+<dt>-f FILE</dt>
+<dd> Specify the name of the data file to be processed. </dd>
+<dt>-d wdir</dt>
+<dd> Specify working directory. Compiler creates file with PIX configuration in this directory. If this parameter is missing, then PIX configuration will be placed in the current working directory. </dd>
+<dt>-v</dt>
+<dd> Be verbose: compiler prints diagnostic messages when it works. </dd>
+<dt>-V</dt>
+<dd> Print version number and quit. </dd>
+<dt>-i</dt>
+<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </dd>
 </dl>
 <h2>URL</h2>
 <p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>

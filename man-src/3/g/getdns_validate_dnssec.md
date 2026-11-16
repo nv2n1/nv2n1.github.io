@@ -17,21 +17,21 @@ description: "getdns_validate_dnssec — DNSSEC validate a given getdns record"
  <code>getdns_validate_dnssec</code> (getdns_list *record_to_validate, </p>
 <dl>
 <dt>
-<dd> getdns_list *bundle_of_support_records,<br />
- getdns_list *trust_anchor_records)</dl>
+</dt><dd> getdns_list *bundle_of_support_records,<br />
+ getdns_list *trust_anchor_records)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> If an application wants the API to perform DNSSEC validation without using the extensions, it can use the getdns_validate_dnssec() helper function. The API will use the resource records in bundle_of_support_records to construct the validation chain and the DNSKEY or DS records in trust_anchor_records as trust anchors. The default list of trust anchor records that is used by the library to validate DNSSEC can be retrieved by using the getdns_root_trust_anchor helper function. </p>
 <dl>
-<dt> <i>record_to_validate</i></p>
-<dd>the resource record being validated </p>
-<dt> <i>bundle_of_support_records</i></p>
-<dd>records used to construct the validation chain </p>
-<dt> <i>trust_anchor_records</i></p>
-<dd>trust anchor records to use for the validation </p>
-<dt></dl>
+<dt> <i>record_to_validate</i></dt>
+<dd>the resource record being validated </dd>
+<dt> <i>bundle_of_support_records</i></dt>
+<dd>records used to construct the validation chain </dd>
+<dt> <i>trust_anchor_records</i></dt>
+<dd>trust anchor records to use for the validation </dd>
+<dt></dt></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>GETDNS_DNSSEC_BOGUS</code></p>
-<dd>the DNSSEC signature is bogus </p>
+<dd>the DNSSEC signature is bogus </dd>
 <p> <code>GETDNS_DNSSEC_INDETERMINATE</code> validation could not be completed </p>
 <p> <code>GETDNS_DNSSEC_INSECURE</code> one or more pieces of the validation chain are demonstrably incorrect </p>
 <p> <code>GETDNS_DNSSEC_SECURE</code> validation succeeded </p>

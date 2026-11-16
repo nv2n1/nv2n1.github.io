@@ -14,14 +14,14 @@ description: "ax25ipd – AX.25 into IP Encapsulator"
 <p><code>ax25ipd</code> is an RFC1226 compliant daemon capable of providing the encapsualtion neccessary to send and receive AX.25 traffic across an IP transport. Normally invoked as part of the boot order network initialisation, <code>ax25ipd</code> is capable of talking directly to a serial port connected tnc, or over a pipe to a linux AX.25 port. KAM DE Dual Port Kiss is also supported. <code>ax25ipd</code> can be run as a pure encapsulator, or as a digital repeater with a functional callsign. Destination IP addresses are determined from a hardcoded map of callsign/IP Address pairs. <code>ax25ipd</code> defaults to using <code>/etc/ax25/ax25ipd.conf</code> as its config file. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v,&#8211;version</code></p>
-<dd>Display the version.</p>
-<dt><code>-h,&#8211;help</code></p>
-<dd>Display a summary of the command line options.</p>
-<dt><code>-l,&#8211;loglevel</code><i>NUM</i></p>
-<dd>Set the logging level to NUM.</p>
-<dt><code>-c,&#8211;configfile</code><i>FILE</i></p>
-<dd>Use the configuration file named by FILE instead of the default.</dl>
+<dt><code>-v,&#8211;version</code></dt>
+<dd>Display the version.</dd>
+<dt><code>-h,&#8211;help</code></dt>
+<dd>Display a summary of the command line options.</dd>
+<dt><code>-l,&#8211;loglevel</code><i>NUM</i></dt>
+<dd>Set the logging level to NUM.</dd>
+<dt><code>-c,&#8211;configfile</code><i>FILE</i></dt>
+<dd>Use the configuration file named by FILE instead of the default.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/ax25ipd.conf</p>
 <h2>See Also</h2>

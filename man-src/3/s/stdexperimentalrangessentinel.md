@@ -11,13 +11,9 @@ std::experimental::ranges::Sentinel - std::experimental::ranges::Sentinel
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt; class S, class I &gt;
-
 concept bool Sentinel =                           (ranges TS)
-
 Semiregular&lt;S&gt; &amp;&amp; Iterator&lt;I&gt; &amp;&amp;
-
 WeaklyEqualityComparableWith&lt;S, I&gt;;</code></pre> 
 The Sentinel concept specifies the relationship between an Iterator type and a Semiregular type whose values denote a range. 
 Let s and i be values of type S and I, respectively, such that [i, s) denotes a range. Sentinel&lt;S, I&gt; is satisfied only if: 

@@ -33,7 +33,7 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> This class wraps a somewhat generic statistic tool and adds a number of risk measures (e.g.: value-at-risk, expected shortfall, etc.) based on the data distribution as reported by the underlying statistic tool. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add historical annualized volatility</dl>
+<dd>add historical annualized volatility</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -59,12 +59,12 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p>potential upside (the reciprocal of VAR) at a given percentile </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>percentile must be in range [90-100%)</dl>
+<dd>percentile must be in range [90-100%)</dd></dl>
 <h3>Real valueAtRisk (Real centile) const</h3>
 <p>value-at-risk at a given percentile </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>percentile must be in range [90-100%)</dl>
+<dd>percentile must be in range [90-100%)</dd></dl>
 <h3>Real expectedShortfall (Real centile) const</h3>
 <p>expected shortfall at a given percentile </p>
 <p> returns the expected loss in case that the loss exceeded a VaR threshold, </p>
@@ -74,7 +74,7 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> See Artzner, Delbaen, Eber and Heath, &#8216;Coherent measures of risk&#8217;, Mathematical Finance 9 (1999) </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>percentile must be in range [90-100%)</dl>
+<dd>percentile must be in range [90-100%)</dd></dl>
 <h3>Real shortfall (Real target) const</h3>
 <p>probability of missing the given target, defined as [ mathrm{E}</p>
 <hr>

@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_bounded – std::numeric_limits<T>::is_
 <h2>Synopsis</h2>
 <pre><code>static const bool is_bounded;
 (until C++ 11)
-
     static constexpr bool is_bounded;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_bounded is true for all arithmetic types T that represent a finite set of values. While all fundamental types are bounded, this constant would be false in a specialization of std::numeric_limits for a library-provided arbitrary precision arithmetic type. </p>

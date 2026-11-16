@@ -18,15 +18,15 @@ description: "report – uploads FILEs to specified ticket on TARGET."
 <p> -T, &#8211;target</p>
 <dl>
 <dt>
-<dd> &quot;strata&quot; or &quot;bugzilla&quot;</dl>
+</dt><dd> &quot;strata&quot; or &quot;bugzilla&quot;</dd></dl>
 <p> -t, &#8211;ticket ID</p>
 <dl>
 <dt>
-<dd> Ticket/case ID</dl>
+</dt><dd> Ticket/case ID</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-reporter-bugzilla/">reporter-bugzilla</a></code>(1), <code><a href="/docs/linux/man/1-reporter-rhtsupport/">reporter-rhtsupport</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
 <h2>Index</h2>

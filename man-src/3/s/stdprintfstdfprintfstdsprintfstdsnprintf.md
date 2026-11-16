@@ -15,15 +15,10 @@ int fprintf( std::FILE* stream, const char* format, &#8230; ); <code>(2)</code><
 int sprintf( char* buffer, const char* format, &#8230; ); <code>(3)</code><br />
 int snprintf( char* buffer, std::size_t buf_size, const char* format, &#8230; ); <code>(4)</code> <i>(since C++11)</i> </p>
 <pre><code>Loads the data from the given locations, converts them to character string equivalents and writes the results to a variety of sinks.
-
 1) Writes the results to stdout.
-
 2) Writes the results to a file stream stream.
-
 3) Writes the results to a character string buffer.
-
 4) Writes the results to a character string buffer. At most buf_size - 1 characters are written. The resulting character string will be terminated with a null character, unless buf_size is zero. If buf_size is zero, nothing is written and buffer may be a null pointer, however the return value (number of bytes that would be written not including the null terminator) is still calculated and returned.
-
 If a call to sprintf or snprintf causes copying to take place between objects that overlap, the behavior is undefined (e.g. sprintf(buf, &quot;%s text&quot;, buf);)
 </code></pre>
 <h2>Parameters</h2>
@@ -111,14 +106,10 @@ Calling std::snprintf with zero buf_size and null pointer for buffer is useful t
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;cinttypes&gt;
 int main()
-
 {
     std::printf(&quot;Strings:
 &quot;);

@@ -14,13 +14,13 @@ description: "xdr_init_encode – Initialize a struct xdr_stream for sending dat
 <p><i>xdr</i></p>
 <dl>
 <dd>
-<dd>pointer to xdr_stream struct</dl>
+</dd><dd>pointer to xdr_stream struct</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>pointer to XDR buffer in which to encode data</dl>
+<dd>pointer to XDR buffer in which to encode data</dd></dl>
 <p> <i>p</i></p>
 <dl>
-<dd>current pointer inside XDR buffer</dl>
+<dd>current pointer inside XDR buffer</dd></dl>
 <h2>Note</h2>
 <p>at the moment the RPC client only passes the length of our scratch buffer in the xdr_buf&#8217;s header kvec. Previously this meant we needed to call <code>xdr_adjust_iovec</code> after encoding the data. With the new scheme, the xdr_stream manages the details of the buffer length, and takes care of adjusting the kvec length for us.</p>
 <h2>Copyright</h2>

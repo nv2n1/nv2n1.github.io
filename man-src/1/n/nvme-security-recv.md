@@ -42,43 +42,43 @@ nvme security - recv[&lt;device&gt;][--size = &lt;size&gt; | -x&lt;size&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Target a specific namespace for this security command.</dl>
+</dt><dd> Target a specific namespace for this security command.</dd></dl>
  
 
  -N &lt;nssf&gt;, --nssf=&lt;nssf&gt;
 <dl>
 <dt>
-<dd> NVMe Security Specific field. If using security protocol EAh assigned for NVMe use, the NVMe security specific field indicates which reply memory buffer target.</dl>
+</dt><dd> NVMe Security Specific field. If using security protocol EAh assigned for NVMe use, the NVMe security specific field indicates which reply memory buffer target.</dd></dl>
  
 
  -x &lt;size&gt;, --size=&lt;size&gt;
 <dl>
 <dt>
-<dd> Size of buffer to allocate. One success it will be printed to STDOUT.</dl>
+</dt><dd> Size of buffer to allocate. One success it will be printed to STDOUT.</dd></dl>
  
 
  -p &lt;security-protocol&gt;, --secp=&lt;security-protocol&gt;
 <dl>
 <dt>
-<dd> Security Protocol: This field specifies the security protocol as defined in SPC-4. The controller shall fail the command with Invalid Parameter indicated if a reserved value of the Security Protocol is specified.</dl>
+</dt><dd> Security Protocol: This field specifies the security protocol as defined in SPC-4. The controller shall fail the command with Invalid Parameter indicated if a reserved value of the Security Protocol is specified.</dd></dl>
  
 
  -s &lt;security-protocol-specific&gt;, --spsp=&lt;security-protocol-specific&gt;
 <dl>
 <dt>
-<dd> SP Specific: The value of this field is specific to the Security Protocol as defined in SPC-4.</dl>
+</dt><dd> SP Specific: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
  
 
  -a &lt;allocation-length&gt;, --al=&lt;allocation-length&gt;
 <dl>
 <dt>
-<dd> Allocation Length: The value of this field is specific to the Security Protocol as defined in SPC-4.</dl>
+</dt><dd> Allocation Length: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
  
 
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw buffer to stdout. Defaults to print in hex.</dl>
+</dt><dd> Print the raw buffer to stdout. Defaults to print in hex.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

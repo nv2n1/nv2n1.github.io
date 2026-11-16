@@ -35,6 +35,6 @@ description: "QuantLib::MCDiscreteAveragingAsianEngine – Pricing engine for di
 <p>Pricing engine for discrete average Asians using Monte Carlo simulation. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>control-variate calculation is disabled under VC++6.</dl>
+<dd>control-variate calculation is disabled under VC++6.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

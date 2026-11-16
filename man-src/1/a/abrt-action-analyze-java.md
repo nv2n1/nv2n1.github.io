@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-abrt-action-analyze-java/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=post-create analyzer=Java   abrt-action-analyze-java
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -42,25 +42,25 @@ EVENT=post-create analyzer=Java   abrt-action-analyze-java
  -d DIR
 <dl>
 <dt>
-<dd> Path to a problem directory. The tool reads the backtrace from stdin when neither this option nor -f is provided.</dl>
+</dt><dd> Path to a problem directory. The tool reads the backtrace from stdin when neither this option nor -f is provided.</dd></dl>
  
 
  -f FILE
 <dl>
 <dt>
-<dd> Path to a stack trace. The tool reads the backtrace from stdin when neither this option nor -d is provided.</dl>
+</dt><dd> Path to a stack trace. The tool reads the backtrace from stdin when neither this option nor -d is provided.</dd></dl>
  
 
  -o
 <dl>
 <dt>
-<dd> Print the result to stdout.</dl>
+</dt><dd> Print the result to stdout.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -68,7 +68,7 @@ EVENT=post-create analyzer=Java   abrt-action-analyze-java
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

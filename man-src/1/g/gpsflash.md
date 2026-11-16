@@ -11,9 +11,9 @@ description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 <p> gpsflash &#8211; 2-stage firmware loader for GPS chipsets </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gpsflash</code> [-n] [-l&nbsp;<wbr><i>loader-file</i>] -f&nbsp;<wbr><i>firmware-file</i> {<i>tty</i>}</dl>
+<dt> <code>gpsflash</code> [-n] [-l&nbsp;<wbr><i>loader-file</i>] -f&nbsp;<wbr><i>firmware-file</i> {<i>tty</i>}</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This program is a firmware loader for GPSes connected to your host computer via serial or USB port. Presently it supports only SiRF GPSes. Other GPSes may be supported in the future if the vendors cooperate. </p>
+<dd>This program is a firmware loader for GPSes connected to your host computer via serial or USB port. Presently it supports only SiRF GPSes. Other GPSes may be supported in the future if the vendors cooperate. </dd>
 <p> For operation, this program requires a flashloader binary (found by default in a file named <i>dlgsp2.bin</i>) and a firmware image. This program first ships a command that tells the GPS a flashloader image will follow, then gives the GPS time to reboot into the flashloader. The flashloader then accepts S-records from the serial or USB port until it sees a termination record, at which point it writes the new firmware into the GPS&#8217;s non-volatile memory and reboots the chip into the new firmware. </p>
 <p> There is one required argument, specifying the serial device to which the GPS is connected. </p>
 <p> The -l option specifies the flashloader binary. The -f option specifies the firmware image file, and is required unless you are just probing the GPS (-n option). </p>
@@ -33,10 +33,10 @@ description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 <p> Chris Kuethe &lt;chris.kuethe [at] gmail.com&gt;. There is a project page for gpsd <i>here</i>[1].</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> here</p>
+<dt> 1.</dt>
+<dd> here</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dd></dl>
 </dl>
 <h2>Index</h2>

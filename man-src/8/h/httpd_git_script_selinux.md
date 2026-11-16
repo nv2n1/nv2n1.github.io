@@ -76,8 +76,8 @@ description: "httpd_git_script_selinux – Security Enhanced Linux Policy for th
 <p> <code>httpd_git_script_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_git_script_exec_t type, if you want to transition an executable to the httpd_git_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/cgit, /var/www/git/gitweb.cgi, /var/www/gitweb-caching/gitweb.cgi </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/cgit, /var/www/git/gitweb.cgi, /var/www/gitweb-caching/gitweb.cgi </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

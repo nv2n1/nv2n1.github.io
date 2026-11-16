@@ -22,38 +22,38 @@ description: "charsets – character set standards and internationalization"
 <p> Console support for the other 8859 character sets is available under Linux through user-mode utilities (such as <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8)) that modify keyboard bindings and the EGA graphics table and employ the &quot;user mapping&quot; font table in the console driver. </p>
 <p> Here are brief descriptions of each set:</p>
 <dl>
-<dt>8859-1 (Latin-1)</p>
-<dd>Latin-1 covers many West European languages such as Albanian, Basque, Danish, English, Faroese, Galician, Icelandic, Irish, Italian, Norwegian, Portuguese, Spanish, and Swedish. The lack of the ligatures Dutch Ĳ/ĳ, French œ, and old-style „German“ quotation marks was considered tolerable.</p>
-<dt>8859-2 (Latin-2)</p>
-<dd>Latin-2 supports many Latin-written Central and East European languages such as Bosnian, Croatian, Czech, German, Hungarian, Polish, Slovak, and Slovene. Replacing Romanian ș/ț with ş/ţ was considered tolerable.</p>
-<dt>8859-3 (Latin-3)</p>
-<dd>Latin-3 was designed to cover of Esperanto, Maltese, and Turkish, but 8859-9 later superseded it for Turkish.</p>
-<dt>8859-4 (Latin-4)</p>
-<dd>Latin-4 introduced letters for North European languages such as Estonian, Latvian, and Lithuanian, but was superseded by 8859-10 and 8859-13.</p>
-<dt>8859-5</p>
-<dd>Cyrillic letters supporting Bulgarian, Byelorussian, Macedonian, Russian, Serbian, and (almost completely) Ukrainian. It was never widely used, see the discussion of KOI8-R/KOI8-U below.</p>
-<dt>8859-6</p>
-<dd>Was created for Arabic. The 8859-6 glyph table is a fixed font of separate letter forms, but a proper display engine should combine these using the proper initial, medial, and final forms.</p>
-<dt>8859-7</p>
-<dd>Was created for Modern Greek in 1987, updated in 2003.</p>
-<dt>8859-8</p>
-<dd>Supports Modern Hebrew without niqud (punctuation signs). Niqud and full-fledged Biblical Hebrew were outside the scope of this character set.</p>
-<dt>8859-9 (Latin-5)</p>
-<dd>This is a variant of Latin-1 that replaces Icelandic letters with Turkish ones.</p>
-<dt>8859-10 (Latin-6)</p>
-<dd>Latin-6 added the Inuit (Greenlandic) and Sami (Lappish) letters that were missing in Latin-4 to cover the entire Nordic area.</p>
-<dt>8859-11</p>
-<dd>Supports the Thai alphabet and is nearly identical to the TIS-620 standard.</p>
-<dt>8859-12</p>
-<dd>This set does not exist.</p>
-<dt>8859-13 (Latin-7)</p>
-<dd>Supports the Baltic Rim languages; in particular, it includes Latvian characters not found in Latin-4.</p>
-<dt>8859-14 (Latin-8)</p>
-<dd>This is the Celtic character set, covering Old Irish, Manx, Gaelic, Welsh, Cornish, and Breton.</p>
-<dt>8859-15 (Latin-9)</p>
-<dd>Latin-9 is similar to the widely used Latin-1 but replaces some less common symbols with the Euro sign and French and Finnish letters that were missing in Latin-1.</p>
-<dt>8859-16 (Latin-10)</p>
-<dd>This set covers many Southeast European languages, and most importantly supports Romanian more completely than Latin-2.</dl>
+<dt>8859-1 (Latin-1)</dt>
+<dd>Latin-1 covers many West European languages such as Albanian, Basque, Danish, English, Faroese, Galician, Icelandic, Irish, Italian, Norwegian, Portuguese, Spanish, and Swedish. The lack of the ligatures Dutch Ĳ/ĳ, French œ, and old-style „German“ quotation marks was considered tolerable.</dd>
+<dt>8859-2 (Latin-2)</dt>
+<dd>Latin-2 supports many Latin-written Central and East European languages such as Bosnian, Croatian, Czech, German, Hungarian, Polish, Slovak, and Slovene. Replacing Romanian ș/ț with ş/ţ was considered tolerable.</dd>
+<dt>8859-3 (Latin-3)</dt>
+<dd>Latin-3 was designed to cover of Esperanto, Maltese, and Turkish, but 8859-9 later superseded it for Turkish.</dd>
+<dt>8859-4 (Latin-4)</dt>
+<dd>Latin-4 introduced letters for North European languages such as Estonian, Latvian, and Lithuanian, but was superseded by 8859-10 and 8859-13.</dd>
+<dt>8859-5</dt>
+<dd>Cyrillic letters supporting Bulgarian, Byelorussian, Macedonian, Russian, Serbian, and (almost completely) Ukrainian. It was never widely used, see the discussion of KOI8-R/KOI8-U below.</dd>
+<dt>8859-6</dt>
+<dd>Was created for Arabic. The 8859-6 glyph table is a fixed font of separate letter forms, but a proper display engine should combine these using the proper initial, medial, and final forms.</dd>
+<dt>8859-7</dt>
+<dd>Was created for Modern Greek in 1987, updated in 2003.</dd>
+<dt>8859-8</dt>
+<dd>Supports Modern Hebrew without niqud (punctuation signs). Niqud and full-fledged Biblical Hebrew were outside the scope of this character set.</dd>
+<dt>8859-9 (Latin-5)</dt>
+<dd>This is a variant of Latin-1 that replaces Icelandic letters with Turkish ones.</dd>
+<dt>8859-10 (Latin-6)</dt>
+<dd>Latin-6 added the Inuit (Greenlandic) and Sami (Lappish) letters that were missing in Latin-4 to cover the entire Nordic area.</dd>
+<dt>8859-11</dt>
+<dd>Supports the Thai alphabet and is nearly identical to the TIS-620 standard.</dd>
+<dt>8859-12</dt>
+<dd>This set does not exist.</dd>
+<dt>8859-13 (Latin-7)</dt>
+<dd>Supports the Baltic Rim languages; in particular, it includes Latvian characters not found in Latin-4.</dd>
+<dt>8859-14 (Latin-8)</dt>
+<dd>This is the Celtic character set, covering Old Irish, Manx, Gaelic, Welsh, Cornish, and Breton.</dd>
+<dt>8859-15 (Latin-9)</dt>
+<dd>Latin-9 is similar to the widely used Latin-1 but replaces some less common symbols with the Euro sign and French and Finnish letters that were missing in Latin-1.</dd>
+<dt>8859-16 (Latin-10)</dt>
+<dd>This set covers many Southeast European languages, and most importantly supports Romanian more completely than Latin-2.</dd></dl>
 <h3>Koi8-R / Koi8-U</h3>
 <p>KOI8-R is a non-ISO character set popular in Russia before Unicode. The lower half is ASCII; the upper is a Cyrillic character set somewhat better designed than ISO 8859-5. KOI8-U, based on KOI8-R, has better support for Ukrainian. Neither of these sets are ISO-2022 compatible, unlike the ISO 8859 series. </p>
 <p> Console support for KOI8-R is available under Linux through user-mode utilities that modify keyboard bindings and the EGA graphics table, and employ the &quot;user mapping&quot; font table in the console driver.</p>
@@ -82,3 +82,4 @@ description: "charsets – character set standards and internationalization"
 <p> A byte 110xxxxx is the start of a 2-byte code, and 110xxxxx 10yyyyyy is assembled into 00000xxx xxyyyyyy. A byte 1110xxxx is the start of a 3-byte code, and 1110xxxx 10yyyyyy 10zzzzzz is assembled into xxxxyyyy yyzzzzzz. (When UTF-8 is used to code the 31-bit ISO 10646 then this progression continues up to 6-byte codes.) </p>
 <p> For most texts in ISO 8859 character sets, this means that the characters outside of ASCII are now coded with two bytes. This tends to expand ordinary text files by only one or two percent. For Russian or Greek texts, this expands ordinary text files by 100%, since text in those languages is mostly outside of ASCII. For Japanese users this means that the 16-bit codes now in common use will take three bytes. While there are algorithmic conversions from some character sets (especially ISO 8859-1) to Unicode, general conversion requires carrying around conversion tables, which can be quite large for 16-bit codes. </p>
 <p> Note that UTF-8 is self-synchronizing: 10xxxxxx is a tail, any other byte is the head of a code. Note that the only way ASCII bytes occur in a UTF-8 stream, is as themselves. In particular, there are no embedded NULs (&#8216;
+</p>

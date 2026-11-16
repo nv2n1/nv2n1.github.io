@@ -11,21 +11,21 @@ description: "ipsec_spi – manage IPSEC Security Associations"
 <h2>Synopsis</h2>
 <p>Note: In the following,</p>
 <dl>
-<dt> <code>&lt;SA&gt;</code> <i>means:</i> &#8211;af <i>(inet | inet6)</i> &#8211;edst <i>daddr</i> &#8211;spi <i>spi</i> &#8211;proto <i>proto</i> <i>OR</i> &#8211;said <i>said,</i></p>
-<dd><code>&lt;life&gt;</code> <i>means:</i> &#8211;life <i>(soft | hard)</i> allocations | <i>bytes</i> | <i>addtime</i> | <i>usetime</i> | <i>packets</i> | [value&#8230;] <code>&lt;SA&gt;</code> &#8211;src <i>src</i> &#8211;ah <i>(hmac-md5-96 | hmac-sha1-96)</i> [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;authkey <i>akey</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;esp <i>(3des | 3des-md5-96 | 3des-sha1-96)</i> [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;enckey <i>ekey</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;esp [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;enckey <i>ekey</i> &#8211;authkey <i>akey</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;comp <i>deflate</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;ip4 &#8211;src <i>encap-src</i> &#8211;dst <i>encap-dst</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;ip6 &#8211;src <i>encap-src</i> &#8211;dst <i>encap-dst</i></p>
-<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;del</p>
-<dd><i>ipsec</i> <i>spi</i> &#8211;help</p>
-<dd><i>ipsec</i> <i>spi</i> &#8211;version</p>
-<dd><i>ipsec</i> <i>spi</i> &#8211;clear</p>
+<dt> <code>&lt;SA&gt;</code> <i>means:</i> &#8211;af <i>(inet | inet6)</i> &#8211;edst <i>daddr</i> &#8211;spi <i>spi</i> &#8211;proto <i>proto</i> <i>OR</i> &#8211;said <i>said,</i></dt>
+<dd><code>&lt;life&gt;</code> <i>means:</i> &#8211;life <i>(soft | hard)</i> allocations | <i>bytes</i> | <i>addtime</i> | <i>usetime</i> | <i>packets</i> | [value&#8230;] <code>&lt;SA&gt;</code> &#8211;src <i>src</i> &#8211;ah <i>(hmac-md5-96 | hmac-sha1-96)</i> [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;authkey <i>akey</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;esp <i>(3des | 3des-md5-96 | 3des-sha1-96)</i> [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;enckey <i>ekey</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;esp [&#8211;replay_window&nbsp;<wbr><i>replayw</i>] [<i>&lt;life&gt;</i>] &#8211;enckey <i>ekey</i> &#8211;authkey <i>akey</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;src <i>src</i> &#8211;comp <i>deflate</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;ip4 &#8211;src <i>encap-src</i> &#8211;dst <i>encap-dst</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;ip6 &#8211;src <i>encap-src</i> &#8211;dst <i>encap-dst</i></dd>
+<dd><i>ipsec</i> <i>spi</i> <i>&lt;SA&gt;</i> &#8211;del</dd>
+<dd><i>ipsec</i> <i>spi</i> &#8211;help</dd>
+<dd><i>ipsec</i> <i>spi</i> &#8211;version</dd>
+<dd><i>ipsec</i> <i>spi</i> &#8211;clear</dd>
 <dd>
 <h2>Description</h2>
 <p><i>Spi</i></p>
-<dd>creates and deletes IPSEC Security Associations. A Security Association (SA) is a transform through which packet contents are to be processed before being forwarded. A transform can be an IPv4-in-IPv4 or an IPv6-in-IPv6 encapsulation, an IPSEC Authentication Header (authentication with no encryption), or an IPSEC Encapsulation Security Payload (encryption, possibly including authentication). </p>
+</dd><dd>creates and deletes IPSEC Security Associations. A Security Association (SA) is a transform through which packet contents are to be processed before being forwarded. A transform can be an IPv4-in-IPv4 or an IPv6-in-IPv6 encapsulation, an IPSEC Authentication Header (authentication with no encryption), or an IPSEC Encapsulation Security Payload (encryption, possibly including authentication). </dd>
 <p> When a packet is passed from a higher networking layer through an IPSEC virtual interface, a search in the extended routing table (see <code><a href="/docs/linux/man/8-ipsec_eroute/">ipsec_eroute</a></code>(8)) yields an effective destination address, a Security Parameters Index (SPI) and a IP protocol number. When an IPSEC packet arrives from the network, its ostensible destination, an SPI and an IP protocol specified by its outermost IPSEC header are used. The destination/SPI/protocol combination is used to select a relevant SA. (See <code><a href="/docs/linux/man/8-ipsec_spigrp/">ipsec_spigrp</a></code>(8) for discussion of how multiple transforms are combined.) </p>
 <p> The <i>af</i>, <i>daddr</i>, <i>spi</i> and <i>proto</i> arguments specify the SA to be created or deleted. <i>af</i> is the address family (inet for IPv4, inet6 for IPv6). <i>Daddr</i> is a destination address in dotted-decimal notation for IPv4 or in a coloned hex notation for IPv6. <i>Spi</i> is a number, preceded by &#8216;0x&#8217; for hexadecimal, between <code>0x100</code> and <code>0xffffffff</code>; values from <code>0x0</code> to <code>0xff</code> are reserved. <i>Proto</i> is an ASCII string, &quot;ah&quot;, &quot;esp&quot;, &quot;comp&quot; or &quot;tun&quot;, specifying the IP protocol. The protocol must agree with the algorithm selected. </p>
 <p> Alternatively, the <i>said</i> argument can also specify an SA to be created or deleted. <i>Said</i> combines the three parameters above, such as: &quot;tun.101 [at] 1.2.3.4&quot; or &quot;tun:101@1:2::3:4&quot;, where the address family is specified by &quot;.&quot; for IPv4 and &quot;:&quot; for IPv6. The address family indicators substitute the &quot;0x&quot; for hexadecimal. </p>
@@ -38,76 +38,76 @@ description: "ipsec_spi – manage IPSEC Security Associations"
 <h2>Options</h2>
 <p><code>&#8211;af</code></p>
 <dl>
-<dd>specifies the address family (inet for IPv4, inet6 for IPv6)</dl>
+<dd>specifies the address family (inet for IPv4, inet6 for IPv6)</dd></dl>
 <p> <code>&#8211;edst</code></p>
 <dl>
-<dd>specifies the effective destination <i>daddr</i> of the Security Association</dl>
+<dd>specifies the effective destination <i>daddr</i> of the Security Association</dd></dl>
 <p> <code>&#8211;spi</code></p>
 <dl>
-<dd>specifies the Security Parameters Index <i>spi</i> of the Security Association</dl>
+<dd>specifies the Security Parameters Index <i>spi</i> of the Security Association</dd></dl>
 <p> <code>&#8211;proto</code></p>
 <dl>
-<dd>specifies the IP protocol <i>proto</i> of the Security Association</dl>
+<dd>specifies the IP protocol <i>proto</i> of the Security Association</dd></dl>
 <p> <code>&#8211;said</code></p>
 <dl>
-<dd>specifies the Security Association in monolithic format</dl>
+<dd>specifies the Security Association in monolithic format</dd></dl>
 <p> <code>&#8211;ah</code></p>
 <dl>
-<dd>add an SA for an IPSEC Authentication Header, specified by the following transform identifier (<code>hmac-md5-96</code> or <code>hmac-sha1-96</code>) (RFC2402, obsoletes RFC1826)</dl>
+<dd>add an SA for an IPSEC Authentication Header, specified by the following transform identifier (<code>hmac-md5-96</code> or <code>hmac-sha1-96</code>) (RFC2402, obsoletes RFC1826)</dd></dl>
 <p> <code>hmac-md5-96</code></p>
 <dl>
-<dd>transform following the HMAC and MD5 standards, using a 128-bit <i>key</i> to produce a 96-bit authenticator (RFC2403)</dl>
+<dd>transform following the HMAC and MD5 standards, using a 128-bit <i>key</i> to produce a 96-bit authenticator (RFC2403)</dd></dl>
 <p> <code>hmac-sha1-96</code></p>
 <dl>
-<dd>transform following the HMAC and SHA1 standards, using a 160-bit <i>key</i> to produce a 96-bit authenticator (RFC2404)</dl>
+<dd>transform following the HMAC and SHA1 standards, using a 160-bit <i>key</i> to produce a 96-bit authenticator (RFC2404)</dd></dl>
 <p> <code>&#8211;esp</code></p>
 <dl>
-<dd>add an SA for an IPSEC Encapsulation Security Payload, specified by the following transform identifier (<code>3des</code>, or <code>3des-md5-96</code> (RFC2406, obsoletes RFC1827)</dl>
+<dd>add an SA for an IPSEC Encapsulation Security Payload, specified by the following transform identifier (<code>3des</code>, or <code>3des-md5-96</code> (RFC2406, obsoletes RFC1827)</dd></dl>
 <p> <code>3des</code></p>
 <dl>
-<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode using a 64-bit <i>iv</i> (internally generated) and a 192-bit 3DES <i>ekey</i> (RFC2451)</dl>
+<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode using a 64-bit <i>iv</i> (internally generated) and a 192-bit 3DES <i>ekey</i> (RFC2451)</dd></dl>
 <p> <code>3des-md5-96</code></p>
 <dl>
-<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode with authentication provided by HMAC and MD5 (96-bit authenticator), using a 64-bit <i>iv</i> (internally generated), a 192-bit 3DES <i>ekey</i> and a 128-bit HMAC-MD5 <i>akey</i> (RFC2451, RFC2403)</dl>
+<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode with authentication provided by HMAC and MD5 (96-bit authenticator), using a 64-bit <i>iv</i> (internally generated), a 192-bit 3DES <i>ekey</i> and a 128-bit HMAC-MD5 <i>akey</i> (RFC2451, RFC2403)</dd></dl>
 <p> <code>3des-sha1-96</code></p>
 <dl>
-<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode with authentication provided by HMAC and SHA1 (96-bit authenticator), using a 64-bit <i>iv</i> (internally generated), a 192-bit 3DES <i>ekey</i> and a 160-bit HMAC-SHA1 <i>akey</i> (RFC2451, RFC2404)</dl>
+<dd>encryption transform following the Triple-DES standard in Cipher-Block-Chaining mode with authentication provided by HMAC and SHA1 (96-bit authenticator), using a 64-bit <i>iv</i> (internally generated), a 192-bit 3DES <i>ekey</i> and a 160-bit HMAC-SHA1 <i>akey</i> (RFC2451, RFC2404)</dd></dl>
 <p> <code>&#8211;replay_window</code> replayw</p>
 <dl>
-<dd>sets the replay window size; valid values are decimal, 1 to 64</dl>
+<dd>sets the replay window size; valid values are decimal, 1 to 64</dd></dl>
 <p> <code>&#8211;life</code> life_param[,life_param]</p>
 <dl>
-<dd>sets the lifetime expiry; the format of <code>life_param</code> consists of a comma-separated list of lifetime specifications without spaces; a lifetime specification is comprised of a severity of <code>soft</code> or <code>hard</code> followed by a &#8216;-&#8216;, followed by a lifetime type of <code>allocations</code>, <code>bytes</code>, <code>addtime</code>, <code>usetime</code> or <code>packets</code> followed by an &#8216;=&#8217; and finally by a value</dl>
+<dd>sets the lifetime expiry; the format of <code>life_param</code> consists of a comma-separated list of lifetime specifications without spaces; a lifetime specification is comprised of a severity of <code>soft</code> or <code>hard</code> followed by a &#8216;-&#8216;, followed by a lifetime type of <code>allocations</code>, <code>bytes</code>, <code>addtime</code>, <code>usetime</code> or <code>packets</code> followed by an &#8216;=&#8217; and finally by a value</dd></dl>
 <p> <code>&#8211;comp</code></p>
 <dl>
-<dd>add an SA for IPSEC IP Compression, specified by the following transform identifier (<code>deflate</code>) (RFC2393)</dl>
+<dd>add an SA for IPSEC IP Compression, specified by the following transform identifier (<code>deflate</code>) (RFC2393)</dd></dl>
 <p> <code>deflate</code></p>
 <dl>
-<dd>compression transform following the patent-free Deflate compression algorithm (RFC2394)</dl>
+<dd>compression transform following the patent-free Deflate compression algorithm (RFC2394)</dd></dl>
 <p> <code>&#8211;ip4</code></p>
 <dl>
-<dd>add an SA for an IPv4-in-IPv4 tunnel from <i>encap-src</i> to <i>encap-dst</i></dl>
+<dd>add an SA for an IPv4-in-IPv4 tunnel from <i>encap-src</i> to <i>encap-dst</i></dd></dl>
 <p> <code>&#8211;ip6</code></p>
 <dl>
-<dd>add an SA for an IPv6-in-IPv6 tunnel from <i>encap-src</i> to <i>encap-dst</i></dl>
+<dd>add an SA for an IPv6-in-IPv6 tunnel from <i>encap-src</i> to <i>encap-dst</i></dd></dl>
 <p> <code>&#8211;src</code></p>
 <dl>
-<dd>specify the source end of an IP-in-IP tunnel from <i>encap-src</i> to <i>encap-dst</i> and also specifies the source address of the Security Association to be used in inbound policy checking and must be the same address family as <i>af</i> and <i>edst</i></dl>
+<dd>specify the source end of an IP-in-IP tunnel from <i>encap-src</i> to <i>encap-dst</i> and also specifies the source address of the Security Association to be used in inbound policy checking and must be the same address family as <i>af</i> and <i>edst</i></dd></dl>
 <p> <code>&#8211;dst</code></p>
 <dl>
-<dd>specify the destination end of an IP-in-IP tunnel from <i>encap-src</i> to <i>encap-dst</i></dl>
+<dd>specify the destination end of an IP-in-IP tunnel from <i>encap-src</i> to <i>encap-dst</i></dd></dl>
 <p> <code>&#8211;del</code></p>
 <dl>
-<dd>delete the specified SA</dl>
+<dd>delete the specified SA</dd></dl>
 <p> <code>&#8211;clear</code></p>
 <dl>
-<dd>clears the table of <code>SA</code>s</dl>
+<dd>clears the table of <code>SA</code>s</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
-<dd>display synopsis</dl>
+<dd>display synopsis</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>display version information</dl>
+<dd>display version information</dd></dl>
 <h2>Examples</h2>
 <p>To keep line lengths down and reduce clutter, some of the long keys in these examples have been abbreviated by replacing part of their text with &#8220;&#8230;&#8221;. Keys used when the programs are actually run must, of course, be the full length required for the particular algorithm. </p>
 <p> <code>ipsec spi &#8211;af inet &#8211;edst gw2 &#8211;spi 0x125 &#8211;proto esp \</code><code> &#8211;src gw1 \</code><code> &#8211;esp 3des-md5-96 \</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;enckey 0x6630</code>&#8230;<code>97ce&nbsp;<wbr>\</code><code> &#8211;authkey 0x9941</code>&#8230;<code>71df</code> </p>
@@ -129,4 +129,5 @@ description: "ipsec_spi – manage IPSEC Security Associations"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>
+</dl>

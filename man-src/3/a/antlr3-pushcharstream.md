@@ -91,19 +91,19 @@ description: "src/antlr3lexer.c –"
 <h3>static <code>ANTLR3_BOOLEAN</code> matchc (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> c) [static]</h3>
 <p>Implementation of matchc for the lexer, overrides any base implementation in the base recognizer. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dl>
+<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_FALSE, ANTLR3_TRUE, ANTLR3_RECOGNIZER_SHARED_STATE_struct::backtracking, ANTLR3_INT_STREAM_struct::consume, ANTLR3_BASE_RECOGNIZER_struct::exConstruct, ANTLR3_RECOGNIZER_SHARED_STATE_struct::failed, ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::recover, and ANTLR3_BASE_RECOGNIZER_struct::state. </p>
 <p> Referenced by antlr3LexerNew().</p>
 <h3>static <code>ANTLR3_BOOLEAN</code> matchRange (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> low, <code>ANTLR3_UCHAR</code> high) [static]</h3>
 <p>Implementation of match range for the lexer, overrides any base implementation in the base recognizer. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dl>
+<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_FALSE, ANTLR3_TRUE, ANTLR3_RECOGNIZER_SHARED_STATE_struct::backtracking, ANTLR3_INT_STREAM_struct::consume, ANTLR3_BASE_RECOGNIZER_struct::exConstruct, ANTLR3_RECOGNIZER_SHARED_STATE_struct::failed, ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::recover, and ANTLR3_BASE_RECOGNIZER_struct::state. </p>
 <p> Referenced by antlr3LexerNew().</p>
 <h3>static <code>ANTLR3_BOOLEAN</code> matchs (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> * string) [static]</h3>
 <p>Implementation of matchs for the lexer, overrides any base implementation in the base recognizer. <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dl>
+<dd>Note that the generated code lays down arrays of ints for constant strings so that they are int UTF32 form!</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_FALSE, ANTLR3_STRING_TERMINATOR, ANTLR3_TRUE, ANTLR3_RECOGNIZER_SHARED_STATE_struct::backtracking, ANTLR3_INT_STREAM_struct::consume, ANTLR3_BASE_RECOGNIZER_struct::exConstruct, ANTLR3_RECOGNIZER_SHARED_STATE_struct::failed, ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::recover, and ANTLR3_BASE_RECOGNIZER_struct::state. </p>
 <p> Referenced by antlr3LexerNew().</p>
 <h3>static void mTokens (<code>pANTLR3_LEXER</code> lexer) [static]</h3>
@@ -112,50 +112,50 @@ description: "src/antlr3lexer.c –"
 <h3>static <code>pANTLR3_COMMON_TOKEN</code> nextToken (<code>pANTLR3_TOKEN_SOURCE</code> toksource) [static]</h3>
 <p>Default implementation of the <code>nextToken()</code> call for a lexer. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>toksource</i> Points to the implementation of a token source. The lexer is addressed by the super structure pointer.</dl>
+<dd><i>toksource</i> Points to the implementation of a token source. The lexer is addressed by the super structure pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The next token in the current input stream or the EOF token if there are no more tokens in any input stream in the stack.</dl>
+<dd>The next token in the current input stream or the EOF token if there are no more tokens in any input stream in the stack.</dd></dl>
 <p> Write detailed description for nextToken here. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Write remarks for nextToken here.</dl>
+<dd>Write remarks for nextToken here.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>nextTokenStr</code></dl>
+<dd><code>nextTokenStr</code></dd></dl>
 <p> References ANTLR3_TOKEN_EOF, nextTokenStr(), ANTLR3_LEXER_struct::popCharStream, ANTLR3_LEXER_struct::rec, ANTLR3_STACK_struct::size, ANTLR3_BASE_RECOGNIZER_struct::state, ANTLR3_RECOGNIZER_SHARED_STATE_struct::streams, ANTLR3_TOKEN_SOURCE_struct::super, and ANTLR3_COMMON_TOKEN_struct::type. </p>
 <p> Referenced by antlr3LexerNew().</p>
 <h3>static ANTLR3_INLINE <code>pANTLR3_COMMON_TOKEN</code> nextTokenStr (<code>pANTLR3_TOKEN_SOURCE</code> toksource) [static]</h3>
 <p>Returns the next available token from the current input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>toksource</i> Points to the implementation of a token source. The lexer is addressed by the super structure pointer.</dl>
+<dd><i>toksource</i> Points to the implementation of a token source. The lexer is addressed by the super structure pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The next token in the current input stream or the EOF token if there are no more tokens.</dl>
+<dd>The next token in the current input stream or the EOF token if there are no more tokens.</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Write remarks for nextToken here.</dl>
+<dd>Write remarks for nextToken here.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>nextToken</code></dl>
+<dd><code>nextToken</code></dd></dl>
 <p> Loop until we get a non skipped token or EOF </p>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_CHARSTREAM_EOF, ANTLR3_FALSE, ANTLR3_TOKEN_DEFAULT_CHANNEL, ANTLR3_TRUE, ANTLR3_RECOGNIZER_SHARED_STATE_struct::channel, ANTLR3_LEXER_struct::ctx, emit(), ANTLR3_TOKEN_SOURCE_struct::eofToken, ANTLR3_RECOGNIZER_SHARED_STATE_struct::error, ANTLR3_COMMON_TOKEN_struct::factoryMade, ANTLR3_RECOGNIZER_SHARED_STATE_struct::failed, ANTLR3_LEXER_struct::getCharIndex, ANTLR3_INPUT_STREAM_struct::getCharPositionInLine, ANTLR3_LEXER_struct::getLine, ANTLR3_INPUT_STREAM_struct::getLine, ANTLR3_INT_STREAM_struct::index, ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_LEXER_struct::mTokens, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::recover, ANTLR3_BASE_RECOGNIZER_struct::reportError, ANTLR3_COMMON_TOKEN_struct::setLine, ANTLR3_COMMON_TOKEN_struct::setStartIndex, ANTLR3_COMMON_TOKEN_struct::setStopIndex, ANTLR3_TOKEN_SOURCE_struct::skipToken, ANTLR3_BASE_RECOGNIZER_struct::state, ANTLR3_TOKEN_SOURCE_struct::super, ANTLR3_RECOGNIZER_SHARED_STATE_struct::text, ANTLR3_RECOGNIZER_SHARED_STATE_struct::token, ANTLR3_RECOGNIZER_SHARED_STATE_struct::tokenStartCharIndex, ANTLR3_RECOGNIZER_SHARED_STATE_struct::tokenStartCharPositionInLine, and ANTLR3_RECOGNIZER_SHARED_STATE_struct::tokenStartLine. </p>
 <p> Referenced by nextToken().</p>
 <h3>static void popCharStream (<code>pANTLR3_LEXER</code> lexer) [static]</h3>
 <p>Stops using the current input stream and reverts to any prior input stream on the stack. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lexer</i> Description of parameter lexer.</dl>
+<dd><i>lexer</i> Description of parameter lexer.</dd></dl>
 <p> Pointer to a function that abandons the current input stream, whether it is empty or not and reverts to the previous stacked input stream. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>The function fails silently if there are no prior input streams.</dl>
+<dd>The function fails silently if there are no prior input streams.</dd></dl>
 <p> References ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_STACK_struct::pop, ANTLR3_LEXER_struct::rec, ANTLR3_INT_STREAM_struct::rewindLast, ANTLR3_LEXER_struct::setCharStream, ANTLR3_STACK_struct::size, ANTLR3_BASE_RECOGNIZER_struct::state, ANTLR3_RECOGNIZER_SHARED_STATE_struct::streams, and ANTLR3_STACK_struct::top. </p>
 <p> Referenced by antlr3LexerNew().</p>
 <h3>static void pushCharStream (<code>pANTLR3_LEXER</code> lexer, <code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Change to a new input stream, remembering the old one. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>lexer</i> Pointer to the lexer instance to switch input streams for.<br />
- <i>input</i> New input stream to install as the current one.</dl>
+ <i>input</i> New input stream to install as the current one.</dd></dl>
 <p> Switches the current character input stream to a new one, saving the old one, which we will revert to at the end of this new one. </p>
 <p> References antlr3StackNew(), ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_INT_STREAM_struct::mark, ANTLR3_STACK_struct::push, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::setCharStream, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_RECOGNIZER_SHARED_STATE_struct::streams. </p>
 <p> Referenced by antlr3LexerNew().</p>

@@ -38,17 +38,17 @@ long drmaa2_list_size(const drmaa2_list l);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>drmaa2_list_create</code>()</p>
-<dd> Creates a new list instance for the specified type of items. Returns a pointer to the list or NULL on error. Optional parameter <i>callback</i> allows the application to provide a callback pointer to a collection element cleanup function. <code>DRMAA2_UNSET_CALLBACK</code> may be supplied instead of a valid callback pointer.</p>
-<dt><code>drmaa2_list_free</code>()</p>
-<dd> Frees the list and the contained members. If a callback function was provided on list creation, it SHALL be called once per list item.</p>
-<dt><code>drmaa2_list_get</code>()</p>
-<dd> Gets the list element at the indicated position. The element index starts at zero. If the index is invalid, the function returns NULL.</p>
-<dt><code>drmaa2_list_add</code>()</p>
-<dd> Adds a new item at the end of the list and returns a success indication. The list MUST contain only the provided pointer, not a deep copy of the provided data structure.</p>
-<dt><code>drmaa2_list_del</code>()</p>
-<dd> Removes the list element at the indicated position and returns a success indication. If a callback function was provided on list creation, it SHALL be called before this function returns.</p>
-<dt><code>drmaa2_list_size</code>()</p>
-<dd> Returns the number of elements in the list. If the list is empty, then the function returns 0, which SHALL NOT be treated as an error case.</dl>
+<dt><code>drmaa2_list_create</code>()</dt>
+<dd> Creates a new list instance for the specified type of items. Returns a pointer to the list or NULL on error. Optional parameter <i>callback</i> allows the application to provide a callback pointer to a collection element cleanup function. <code>DRMAA2_UNSET_CALLBACK</code> may be supplied instead of a valid callback pointer.</dd>
+<dt><code>drmaa2_list_free</code>()</dt>
+<dd> Frees the list and the contained members. If a callback function was provided on list creation, it SHALL be called once per list item.</dd>
+<dt><code>drmaa2_list_get</code>()</dt>
+<dd> Gets the list element at the indicated position. The element index starts at zero. If the index is invalid, the function returns NULL.</dd>
+<dt><code>drmaa2_list_add</code>()</dt>
+<dd> Adds a new item at the end of the list and returns a success indication. The list MUST contain only the provided pointer, not a deep copy of the provided data structure.</dd>
+<dt><code>drmaa2_list_del</code>()</dt>
+<dd> Removes the list element at the indicated position and returns a success indication. If a callback function was provided on list creation, it SHALL be called before this function returns.</dd>
+<dt><code>drmaa2_list_size</code>()</dt>
+<dd> Returns the number of elements in the list. If the list is empty, then the function returns 0, which SHALL NOT be treated as an error case.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>Index</h2>

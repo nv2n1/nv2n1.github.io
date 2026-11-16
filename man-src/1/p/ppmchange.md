@@ -16,28 +16,28 @@ description: "ppmchange – change all pixels of one color to another in a porta
 <p> You can specify that colors similar, but not identical, to the ones you specify get replaced by specifying a &quot;closeness&quot; factor. </p>
 <p> The colors can be specified in five ways:</p>
 <dl>
-<dt>o</p>
-<dd> A name, assuming that a pointer to an X11-style color names file was compiled in.</p>
-<dt>o</p>
-<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</p>
-<dt>o</p>
-<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</p>
-<dt>o</p>
-<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</p>
-<dt>o</p>
-<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.) </p>
+<dt>o</dt>
+<dd> A name, assuming that a pointer to an X11-style color names file was compiled in.</dd>
+<dt>o</dt>
+<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</dd>
+<dt>o</dt>
+<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</dd>
+<dt>o</dt>
+<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</dd>
+<dt>o</dt>
+<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.) </dd>
 <p> If a pixel matches two different <i>oldcolor</i>s, <code>ppmchange</code> replaces it with the <i>newcolor</i> of the leftmost specified one. </p>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-closeness </code><i>closeness_percent</i></p>
-<dd> <i>closeness</i> is an integer per centage indicating how close to the color you specified a pixel must be to get replaced. By default, it is 0, which means the pixel must be the exact color you specified. </p>
+<dt><code>-closeness </code><i>closeness_percent</i></dt>
+<dd> <i>closeness</i> is an integer per centage indicating how close to the color you specified a pixel must be to get replaced. By default, it is 0, which means the pixel must be the exact color you specified. </dd>
 <p> A pixel gets replaced if the distance in color between it and the color you specified is less than or equal to <i>closeness</i>. </p>
 <p> The &quot;distance&quot; in color is defined as the cartesian sum of the individual differences in red, green, and blue intensities between the two pixels, normalized so that the difference between black and white is 100%. </p>
 <p> This is probably simpler than what you want most the time. You probably would like to change colors that have similar chrominance, regardless of their intensity. So if there&#8217;s a red barn that is variously shadowed, you want the entire barn changed. But because the shadowing significantly changes the color according to <code>ppmchange</code>&#8216;s distance formula, parts of the barn are probably about as distant in color from other parts of the barn as they are from green grass next to the barn. </p>
 <p> Maybe <code>ppmchange</code> will be enhanced some day to do chrominance analysis. </p>
-<dt><code>-remainder </code><i>color</i></p>
-<dd> <code>ppmchange</code> changes all pixels which are not of a color for which you specify an explicit replacement color on the command line to color <i>color</i>. </p>
+<dt><code>-remainder </code><i>color</i></dt>
+<dd> <code>ppmchange</code> changes all pixels which are not of a color for which you specify an explicit replacement color on the command line to color <i>color</i>. </dd>
 <p> An example application of this is </p>
 <p> <code>ppmchange -remainder=black red red</code> </p>
 <p> to lift only the red portions from an image, or </p>

@@ -14,14 +14,14 @@ description: "gnutls_certificate_set_openpgp_key_mem – API function"
 <p> <code>int gnutls_certificate_set_openpgp_key_mem(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> the destination context to save the data.</p>
-<dt>const gnutls_datum_t * cert</p>
-<dd> the datum that contains the public key.</p>
-<dt>const gnutls_datum_t * key</p>
-<dd> the datum that contains the secret key.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> the format of the keys</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> the destination context to save the data.</dd>
+<dt>const gnutls_datum_t * cert</dt>
+<dd> the datum that contains the public key.</dd>
+<dt>const gnutls_datum_t * key</dt>
+<dd> the datum that contains the secret key.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> the format of the keys</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This funtion is used to load OpenPGP keys into the GnuTLS credential structure. The datum should contain at least one valid non encrypted subkey.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_certificate_set_openpgp_key_mem – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

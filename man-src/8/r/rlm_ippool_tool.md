@@ -14,26 +14,23 @@ description: "rlm_ippool_tool – dump the contents of the FreeRadius ippool dat
 <p><code>rlm_ippool_tool</code> dumps the contents of the FreeRADIUS ippool databases for analyses or for removal of active (stuck?) entries. Or with the <code>-n</code> argument adds a usage entry to the FreeRADIUS ippool databases. </p>
 <h2>Options</h2>
 <dl>
-<dt>-a</p>
-<dd>Print all active entries.</p>
-<dt>-c</p>
-<dd>Report number of active entries.</p>
-<dt>-r</p>
-<dd>Remove active entries.</p>
-<dt>-v</p>
-<dd>Verbose report of all entries.</p>
-<dt>-o</p>
-<dd>Assume old database format (nas/port pair, not md5 output).</p>
-<dt>-n</p>
-<dd>Mark the entry nasIP/nasPort as having ipaddress.</p>
-<dt>-u</p>
-<dd>Update old format database to new. </p>
+<dt>-a</dt>
+<dd>Print all active entries.</dd>
+<dt>-c</dt>
+<dd>Report number of active entries.</dd>
+<dt>-r</dt>
+<dd>Remove active entries.</dd>
+<dt>-v</dt>
+<dd>Verbose report of all entries.</dd>
+<dt>-o</dt>
+<dd>Assume old database format (nas/port pair, not md5 output).</dd>
+<dt>-n</dt>
+<dd>Mark the entry nasIP/nasPort as having ipaddress.</dd>
+<dt>-u</dt>
+<dd>Update old format database to new. </dd>
 </dl>
 <h2>Examples</h2>
 <pre><code>Given the syntax in the FreeRadius radiusd.conf:
-
-
-
 ippool myippool {
     range-start = 192.0.2.0
     range-stop = 192.0.2.255
@@ -46,7 +43,7 @@ ippool myippool {
 <dd>
 <pre> $ rlm_ippool_tool -c ip-pool.db ip-index.db
  13</pre>
-</dl>
+</dd></dl>
 <p> To see all active entries in this pool, use:</p>
 <dl>
 <dd>
@@ -58,7 +55,7 @@ ippool myippool {
  192.0.2.120
  192.0.2.27
  [...]</pre>
-</dl>
+</dd></dl>
 <p> To see all information about the active entries in the use, use:</p>
 <dl>
 <dd>
@@ -70,13 +67,13 @@ ippool myippool {
  NAS:172.16.1.1 port:0x2d8 - ipaddr:192.0.2.120 active:1 cli:0 num:1
  NAS:172.16.1.1 port:0x162 - ipaddr:192.0.2.27 active:1 cli:0 num:1
  [...]</pre>
-</dl>
+</dd></dl>
 <p> To see only information of one entry, use:</p>
 <dl>
 <dd>
 <pre> $ rlm_ippool_tool -v ip-pool.db ip-index.db 192.0.2.1
  NAS:172.16.1.1 port:0x90 - ipaddr:192.0.2.1 active:0 cli:0 num:0</pre>
-</dl>
+</dd></dl>
 <p> To add an IP address usage entry, use:</p>
 <dl>
 <dd>
@@ -89,3 +86,4 @@ ippool myippool {
 <h2>Authors</h2>
 <p>Currently part of the FreeRADIUS Project (<a rel="nofollow" href="http://www.freeradius.org)">http://www.freeradius.org)</a> Originally by Edwin Groothuis, edwin [at] mavetju.org (<a rel="nofollow" href="http://www.mavetju.org)">http://www.mavetju.org)</a> </p>
 <p> Mailing list details are at <a rel="nofollow" href="http://www.freeradius.org/">http://www.freeradius.org/</a></p>
+</dd></dl>

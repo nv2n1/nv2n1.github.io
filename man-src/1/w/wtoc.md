@@ -15,8 +15,8 @@ description: "wtoc – Convert a Wnn text-form dictionary (or dictionaries) into
 <p> wtoc converts a Wnn text-form dictionary file into Canna text-form dictionary file. If all dictionary files are omitted, the Wnn dictionary data is input through the standard input. In this case, the dictionary of the Japanes Input System is output from the standard output. If one dictionary file is specified, it will be regarded as a Wnn dictionary. At this time, Canna dictionary output to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f <i>hinshidata</i></p>
-<dd> The user can add new information about word-type correspondence between Wnn and Canna. The following word-type correspondence information must be described in the <i>hinshidata</i> file. Within one line, describe the Wnn word type name and the Canna word type while delimiting by a space(s) or tab. </p>
+<dt>-f <i>hinshidata</i></dt>
+<dd> The user can add new information about word-type correspondence between Wnn and Canna. The following word-type correspondence information must be described in the <i>hinshidata</i> file. Within one line, describe the Wnn word type name and the Canna word type while delimiting by a space(s) or tab. </dd>
 <pre>
   Wnn word type       Canna word type
 <br>
@@ -34,7 +34,7 @@ description: "wtoc – Convert a Wnn text-form dictionary (or dictionaries) into
 <p> Converts Wnn text-form dictionary special.u into Canna text-form dictionary, then outputs the result to the line printer.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</p>
+<dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

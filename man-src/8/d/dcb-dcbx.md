@@ -10,11 +10,8 @@ description: "dcb-dcbx – show / manipulate port DCBX (Data Center Bridging eXc
 <p>dcb-dcbx &#8211; show / manipulate port DCBX (Data Center Bridging eXchange)</p>
 <h2>Synopsis</h2>
 <pre><code>dcb
-
 [ OPTIONS ]
-
 dcbx
-
 { COMMAND | help }
 </code></pre>
 <p> <code>dcb dcbx show dev</code> DEV<br />
@@ -24,12 +21,12 @@ dcbx
 <h2>Parameters</h2>
 <p>When used with <code>dcb dcbx set,</code> the following keywords enable the corresponding configuration. The keywords that are not mentioned on the command line are considered disabled. When used with <code>show,</code> each enabled feature is shown by its corresponding keyword. </p>
 <dl>
-<dt><code>host</code></p>
-<dd><code>lld-managed</code> The device is in the host mode of operation and, respectively, the lld-managed mode of operation, as described above. In principle these two keywords are mutually exclusive, but <code>dcb dcbx</code> allows setting both and lets the driver handle it as appropriate. </p>
-<dt><code>cee</code></p>
-<dd><code>ieee</code> The device supports CEE (Converged Enhanced Ethernet) and, respecively, IEEE version of the DCB specification. Typically only one of these will be set, but <code>dcb dcbx</code> does not mandate this. </p>
-<dt><code>static</code></p>
-<dd>indicates the engine supports static configuration. No actual negotiation is performed, negotiated parameters are always the initial configuration. </p>
+<dt><code>host</code></dt>
+<dd><code>lld-managed</code> The device is in the host mode of operation and, respectively, the lld-managed mode of operation, as described above. In principle these two keywords are mutually exclusive, but <code>dcb dcbx</code> allows setting both and lets the driver handle it as appropriate. </dd>
+<dt><code>cee</code></dt>
+<dd><code>ieee</code> The device supports CEE (Converged Enhanced Ethernet) and, respecively, IEEE version of the DCB specification. Typically only one of these will be set, but <code>dcb dcbx</code> does not mandate this. </dd>
+<dt><code>static</code></dt>
+<dd>indicates the engine supports static configuration. No actual negotiation is performed, negotiated parameters are always the initial configuration. </dd>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>Put the DCB engine into the &quot;host&quot; mode of operation, and use IEEE-standardized DCB interfaces: </p>

@@ -102,22 +102,22 @@ description: "zarafa_indexer_selinux – Security Enhanced Linux Policy for the 
 <p> <code>zarafa_indexer_exec_t</code> </p>
 <p> &#8211; Set files with the zarafa_indexer_exec_t type, if you want to transition an executable to the zarafa_indexer_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/zarafa-search, /usr/bin/zarafa-indexer </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/zarafa-search, /usr/bin/zarafa-indexer </dd>
 </dl>
 <p> <code>zarafa_indexer_log_t</code> </p>
 <p> &#8211; Set files with the zarafa_indexer_log_t type, if you want to treat the data as zarafa indexer log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/zarafa/search.log.*, /var/log/zarafa/indexer.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/zarafa/search.log.*, /var/log/zarafa/indexer.log.* </dd>
 </dl>
 <p> <code>zarafa_indexer_tmp_t</code> </p>
 <p> &#8211; Set files with the zarafa_indexer_tmp_t type, if you want to store zarafa indexer temporary files in the /tmp directories. </p>
 <p> <code>zarafa_indexer_var_run_t</code> </p>
 <p> &#8211; Set files with the zarafa_indexer_var_run_t type, if you want to store the zarafa indexer files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/zarafa-indexer, /var/run/zarafa-search.pid, /var/run/zarafa-indexer.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/zarafa-indexer, /var/run/zarafa-search.pid, /var/run/zarafa-indexer.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -18,16 +18,16 @@ description: "su – substitute user identity"
 <p> When using /etc/passwd authentication, <code>su</code> allows `root&#8217; access only to members of the group `wheel&#8217; , or to any user (with knowledge of the `root&#8217; password) if that group does not exist, or has no members. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-K</code></p>
-<dd> &#8211;<code>-no-kerberos</code> don&#8217;t use Kerberos.</p>
-<dt><code>-f</code></p>
-<dd> don&#8217;t read .cshrc.</p>
-<dt><code>-l</code></p>
-<dd> &#8211;<code>-full</code> simulate full login.</p>
-<dt><code>-m</code></p>
-<dd> leave environment unmodified.</p>
-<dt><code>-i </code><i>instance</i></p>
-<dd> &#8211;<code>-instance= </code><i>instance</i> root instance to use.</p>
-<dt><code>-c </code><i>command</i></p>
-<dd> &#8211;<code>-command= </code><i>command</i> command to execute.</dl>
+<dt><code>-K</code></dt>
+<dd> &#8211;<code>-no-kerberos</code> don&#8217;t use Kerberos.</dd>
+<dt><code>-f</code></dt>
+<dd> don&#8217;t read .cshrc.</dd>
+<dt><code>-l</code></dt>
+<dd> &#8211;<code>-full</code> simulate full login.</dd>
+<dt><code>-m</code></dt>
+<dd> leave environment unmodified.</dd>
+<dt><code>-i </code><i>instance</i></dt>
+<dd> &#8211;<code>-instance= </code><i>instance</i> root instance to use.</dd>
+<dt><code>-c </code><i>command</i></dt>
+<dd> &#8211;<code>-command= </code><i>command</i> command to execute.</dd></dl>
 <h2>Index</h2>

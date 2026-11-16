@@ -16,20 +16,20 @@ description: "xrdpfc_print – print content of ProxyFileCache meta data"
 <h2>Options</h2>
 <p><code>-c</code> | <code>&#8211;config</code></p>
 <dl>
-<dd>xrootd configuration file. Used to load non-default file system (directive ofs.osslib) and prefix for the location of cached files (directive oss.localroot) </p>
+<dd>xrootd configuration file. Used to load non-default file system (directive ofs.osslib) and prefix for the location of cached files (directive oss.localroot) </dd>
 </dl>
 <p> <code>-v</code> | <code>&#8211;verbose</code></p>
 <dl>
-<dd>prints additional info for each downloaded file block </p>
+<dd>prints additional info for each downloaded file block </dd>
 </dl>
 <p> <code>-h</code> | <code>&#8211;help</code></p>
 <dl>
-<dd>displays usage information. </p>
+<dd>displays usage information. </dd>
 </dl>
 <h2>Operands</h2>
 <p>path</p>
 <dl>
-<dd>Path to a file or directory for which the information is to be printed. Path can be relative or absoulte. If the path begins with root:/ the path is assumed to be a LFN and gets translated via the standard OSS rules (in the least, it gets prefixed by the oss.localroot). In this case &#8211;config option is mandatory. </p>
+<dd>Path to a file or directory for which the information is to be printed. Path can be relative or absoulte. If the path begins with root:/ the path is assumed to be a LFN and gets translated via the standard OSS rules (in the least, it gets prefixed by the oss.localroot). In this case &#8211;config option is mandatory. </dd>
 </dl>
 <h2>Notes</h2>
 <p>Documentation for all components associated with <code>xrdpfc_print</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>

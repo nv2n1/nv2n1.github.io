@@ -21,91 +21,58 @@ description: "procd_ctl command line interface to the condor_procd"
 <p> <code>TRACK_BY_ASSOCIATED_GID</code> <i>GID</i> [ <i>PID</i> ]</p>
 <dl>
 <dt>
-<dd> Use the specified <i>GID</i> to track the specified family rooted at <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Use the specified <i>GID</i> to track the specified family rooted at <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</dd>
+</dl>
 <p> <code>GET_USAGE</code> [ <i>PID</i> ]</p>
 <dl>
 <dt>
-<dd> Get the total usage information about the PID family at <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Get the total usage information about the PID family at <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</dd>
+</dl>
 <p> <code>DUMP</code> [ <i>PID</i> ]</p>
 <dl>
 <dt>
-<dd> Print out information about both the root <i>PID</i> being watched and the tree of processes under this root <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print out information about both the root <i>PID</i> being watched and the tree of processes under this root <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</dd>
+</dl>
 <p> <code>LIST</code> [ <i>PID</i> ]</p>
 <dl>
 <dt>
-<dd> With no <i>PID</i> given, print out information about all the watched processes. If the optional <i>PID</i> is specified, print out information about the process specified by <i>PID</i> and all its child processes.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> With no <i>PID</i> given, print out information about all the watched processes. If the optional <i>PID</i> is specified, print out information about the process specified by <i>PID</i> and all its child processes.</dd>
+</dl>
 <p> <code>SIGNAL_PROCESS</code> <i>signal</i> [ <i>PID</i> ]</p>
 <dl>
 <dt>
-<dd> Send the <i>signal</i> to the process specified by <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Send the <i>signal</i> to the process specified by <i>PID</i> . If the optional <i>PID</i> is not specified, then the PID used is the one given or assumed by <i>condor_procd</i> .</dd>
+</dl>
 <p> <code>SUSPEND_FAMILY</code> <i>PID</i></p>
 <dl>
 <dt>
-<dd> Suspend the process family rooted at <i>PID</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Suspend the process family rooted at <i>PID</i> .</dd>
+</dl>
 <p> <code>CONTINUE_FAMILY</code> <i>PID</i></p>
 <dl>
 <dt>
-<dd> Continue execution of the process family rooted at <i>PID</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Continue execution of the process family rooted at <i>PID</i> .</dd>
+</dl>
 <p> <code>KILL_FAMILY</code> <i>PID</i></p>
 <dl>
 <dt>
-<dd> Kill the process family rooted at <i>PID</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Kill the process family rooted at <i>PID</i> .</dd>
+</dl>
 <p> <code>UNREGISTER_FAMILY</code> <i>PID</i></p>
 <dl>
 <dt>
-<dd> Stop tracking the process family rooted at <i>PID</i> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Stop tracking the process family rooted at <i>PID</i> .</dd>
+</dl>
 <p> <code>SNAPSHOT</code></p>
 <dl>
 <dt>
-<dd> Perform a snapshot of the tracked family tree.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Perform a snapshot of the tracked family tree.</dd>
+</dl>
 <p> <code>QUIT</code></p>
 <dl>
 <dt>
-<dd> Disconnect from the <i>condor_procd</i> and exit.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Disconnect from the <i>condor_procd</i> and exit.</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> This program may be used in a standalone mode, independent of HTCondor, to track process families. The programs <i>procd_ctl</i> and <i>gidd_alloc</i> are used with the <i>condor_procd</i> in standalone mode to interact with the daemon and inquire about certain state of running processes on the machine, respectively. </p>
 <h2>Exit Status</h2>

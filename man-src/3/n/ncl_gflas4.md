@@ -13,9 +13,9 @@ GFLAS4 - Allows you to access a disk file of plotting instructions, generated wi
 
  void c_gflas4 (int ib, char *fname)
 <h2>Description</h2><dl COMPACT><dt>IB
-<dd>(INTEGER, input) Specifies the identifier to be used for subsequent GFLAS3 calls. This needs to be between 0 and 99 inclusive, just as with the argument IB to GFLAS1.
-<dt>FNAME
-<dd>(CHARACTER, input) Specifies the name of the file in which the plotting instructions are stored; FNAME is a FORTRAN character variable specifying the file name of the disk file.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(INTEGER, input) Specifies the identifier to be used for subsequent GFLAS3 calls. This needs to be between 0 and 99 inclusive, just as with the argument IB to GFLAS1.
+</dd><dt>FNAME
+</dt><dd>(CHARACTER, input) Specifies the name of the file in which the plotting instructions are stored; FNAME is a FORTRAN character variable specifying the file name of the disk file.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Access</h2>To use GFLAS4 or c_gflas4, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: gflash, gflas1, gflas2, gflas3, ncarg_cbind. 
 

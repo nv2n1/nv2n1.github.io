@@ -14,7 +14,7 @@ description: "ata_dev_set_xfermode – Issue SET FEATURES – XFER MODE command"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to which command will be sent</dl>
+</dd><dd>Device to which command will be sent</dd></dl>
 <h2>Description</h2>
 <p>Issue SET FEATURES &#8211; XFER MODE command to device <i>dev</i> on port <i>ap</i>. </p>
 <p> LOCKING: PCI/etc. bus probe sem.</p>
@@ -23,5 +23,5 @@ description: "ata_dev_set_xfermode – Issue SET FEATURES – XFER MODE command"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

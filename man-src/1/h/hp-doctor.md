@@ -15,16 +15,16 @@ description: "hp-doctor – Self Diagnse Utility and Healing Utility"
 <p> <code>hp-doctor [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>
-<dt>Run in interactive mode:</p>
-<dd> -i or &#8211;interactive (Default)</dl>
+<dt>Run in interactive mode:</dt>
+<dd> -i or &#8211;interactive (Default)</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</dl>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd></dl>
 <h2>AUTHOR</h2>
 <p> HPLIP (HP Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.</p>
 <h2>REPORTING BUGS</h2>

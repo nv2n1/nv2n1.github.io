@@ -20,12 +20,12 @@ description: "nisplus_table – Postfix NIS+ client"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>nisplus:[</code><i>name</i><code>=%s];</code><i>name.name.name</i><code>.:</code><i>column</i> </p>
 <p> Postfix NIS+ map names differ from what one normally would use with commands such as <code>niscat</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd>With each NIS+ table lookup, &quot;<code>%s</code>&quot; is replaced by a version of the lookup string. There can be only one &quot;<code>%s</code>&quot; instance in a Postfix NIS+ map name.</p>
-<dt>&bull;</p>
-<dd>Postfix NIS+ map names use &quot;<code>;</code>&quot; instead of &quot;<code>,</code>&quot;, because the latter character is special in the Postfix main.cf file. Postfix replaces &quot;<code>;</code>&quot; characters in the map name by &quot;<code>,</code>&quot; before making NIS+ queries.</p>
-<dt>&bull;</p>
-<dd>The &quot;:<i>column</i>&quot; part in the NIS+ map name is not part of the actual NIS+ query. Instead, it specifies the number of the table column that provides the lookup result. When no &quot;:<i>column</i>&quot; is specified the first column (1) is used.</dl>
+<dt>&bull;</dt>
+<dd>With each NIS+ table lookup, &quot;<code>%s</code>&quot; is replaced by a version of the lookup string. There can be only one &quot;<code>%s</code>&quot; instance in a Postfix NIS+ map name.</dd>
+<dt>&bull;</dt>
+<dd>Postfix NIS+ map names use &quot;<code>;</code>&quot; instead of &quot;<code>,</code>&quot;, because the latter character is special in the Postfix main.cf file. Postfix replaces &quot;<code>;</code>&quot; characters in the map name by &quot;<code>,</code>&quot; before making NIS+ queries.</dd>
+<dt>&bull;</dt>
+<dd>The &quot;:<i>column</i>&quot; part in the NIS+ map name is not part of the actual NIS+ query. Instead, it specifies the number of the table column that provides the lookup result. When no &quot;:<i>column</i>&quot; is specified the first column (1) is used.</dd></dl>
 <h2>Example</h2>
 <p>A NIS+ aliases map might be queried as follows: </p>
 <pre> alias_maps = dbm:/etc/mail/aliases,

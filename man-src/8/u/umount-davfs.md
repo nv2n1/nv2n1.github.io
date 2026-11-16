@@ -17,17 +17,17 @@ description: "umount.davfs – Umount-helper to unmount a davfs2 file system"
 <p><code>umount.davfs</code> is a umount helper program. It is called by the <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) command. Its purpose is to prevent the umount command from returning unless <code>mount.davfs</code> has synchronized all its cached files with the webdav server. <i>dir</i> is the mountpoint where the WebDAV resource is mounted on. It may be an absolute or relative path. While for local file systems <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) will only return when all cached data have been written to disk, this is not automatically true for a mounted <code>davfs2</code> file system. With this umount helper the user can rely on the familiar behaviour of <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8). To inform the operating system that the file system uses a network connection, you should always use the <code>_netdev</code> option, when mounting as <code>davfs2</code> file system. Depending on the amount of data and the quality of the connection, unmounting a <code>davfs2</code> file system may take some seconds up to some hours. If the <code>mount.davfs</code> daemon encountered serious errors, <code>umount.davfs</code> may return an error instead of unmounting the file system. In this case try <code>umount -i</code>. The <code>-i</code> option will prevent <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) from calling <code>umount.davfs</code>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-V &#8211;version</code></p>
-<dd>Output version. </p>
-<dt><code>-h &#8211;help</code></p>
-<dd>Print a help message. </p>
-<dt><code>-f -l -n -r -v</code></p>
-<dd>This options are <code>ignored</code>. They are only recognized for compatibility with <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8). </p>
+<dt><code>-V &#8211;version</code></dt>
+<dd>Output version. </dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd>Print a help message. </dd>
+<dt><code>-f -l -n -r -v</code></dt>
+<dd>This options are <code>ignored</code>. They are only recognized for compatibility with <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8). </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/run/mount.davfs</i></p>
-<dd>PID-files of running <code>umount.davfs</code> processes are looked up here. </p>
+<dt><i>/var/run/mount.davfs</i></dt>
+<dd>PID-files of running <code>umount.davfs</code> processes are looked up here. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>No known bugs. </p>

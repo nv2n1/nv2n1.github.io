@@ -19,10 +19,10 @@ description: "pacmd – Reconfigure a PulseAudio sound server during runtime"
 <p> If any arguments are passed on the command line, they will be passed into the live shell which will process the command and exit.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information.</dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>

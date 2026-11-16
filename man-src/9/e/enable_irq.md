@@ -14,7 +14,7 @@ description: "enable_irq – enable handling of an irq"
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Interrupt to enable</dl>
+</dd><dd>Interrupt to enable</dd></dl>
 <h2>Description</h2>
 <p>Undoes the effect of one call to <code>disable_irq</code>. If this matches the last disable, processing of interrupts on this IRQ line is re-enabled. </p>
 <p> This function may be called from IRQ context only when desc-&gt;irq_data.chip-&gt;bus_lock and desc-&gt;chip-&gt;bus_sync_unlock are NULL !</p>

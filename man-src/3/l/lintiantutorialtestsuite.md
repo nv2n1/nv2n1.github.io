@@ -22,15 +22,15 @@ description: "Lintian::Tutorial::TestSuite — Quick intro to running the Lintia
 <pre> $ rm -rf debian/test-out; t/bin/build-test-packages;</pre>
 <p>Then, the following options are available:</p>
 <dl COMPACT>
-<dt>Running a single test</p>
-<dd>To run a single test by its name, use: </p>
+<dt>Running a single test</dt>
+<dd>To run a single test by its name, use: </dd>
 <pre> $ t/bin/runtests --onlyrun=test:$name</pre>
-<dt>Running all tests for a check</p>
-<dd>To run all tests for a given check, use: </p>
+<dt>Running all tests for a check</dt>
+<dd>To run all tests for a given check, use: </dd>
 <pre> $ t/bin/runtests --onlyrun=check:$name</pre>
 <p><tt>$check</tt> must be the name of a check (it will test for checks/$check.desc) or &#8220;legacy&#8221;. This will run all tests that start with &#8220;$check-&#8221;.</p>
-<dt>Running all tests designed for a specific tag</p>
-<dd>To run all tests that have a &#8220;Test-For&#8221; or a &#8220;Test-Against&#8221; for a given tag, use: </p>
+<dt>Running all tests designed for a specific tag</dt>
+<dd>To run all tests that have a &#8220;Test-For&#8221; or a &#8220;Test-Against&#8221; for a given tag, use: </dd>
 <pre> $ t/bin/runtests --onlyrun=tag:$name</pre>
 </dl>
 <h3>Running tests under coverage</h3>

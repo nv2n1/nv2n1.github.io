@@ -11,14 +11,14 @@ description: "XkbKeyNumSyms – Returns the total number of keysyms for the key 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbKeyNumSyms</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description of interest</p>
-<dt><i>&#8211; keycode</i></p>
-<dd>keycode of interest</dl>
+</dd><dd>Xkb description of interest</dd>
+<dt><i>&#8211; keycode</i></dt>
+<dd>keycode of interest</dd></dl>
 <h2>Description</h2>
 <p>The key width and number of groups associated with a key are used to form a small two-dimensional array of KeySyms for a key. This array may be different sizes for different keys. The array for a single key is stored as a linear list, in row-major order. The arrays for all of the keys are stored in the <i>syms </i> field of the client map. There is one row for each group associated with a key and one column for each level. The index corresponding to a given group and shift level is computed as: </p>
 <pre> idx = group_index * key_width + shift_level</pre>

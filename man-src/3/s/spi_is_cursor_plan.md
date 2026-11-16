@@ -15,6 +15,6 @@ description: "SPI_is_cursor_plan – return true if a statement prepared by SPI_
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <h2>Return Value</h2>
 <p>true or false to indicate if the <i>plan</i> can produce a cursor or not, with <i>SPI_result</i> set to zero. If it is not possible to determine the answer (for example, if the <i>plan</i> is NULL or invalid, or if called when not connected to SPI), then <i>SPI_result</i> is set to a suitable error code and false is returned.</p>

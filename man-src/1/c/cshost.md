@@ -15,7 +15,7 @@ url: "/docs/linux/man/1-cshost/"
 <p> <i>cannaserver</i>(1M) allows network connections only from programs running on the same machine or machines listed in the file /etc/hosts.canna. If /etc/hosts.canna does not exist or the file is empty, access is granted to everyone.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</p>
-<dd> Specifies the name of the host under which the Kana-Kanji conversion server is in operation. </p>
+<dt>-cs <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</dt>
+<dd> Specifies the name of the host under which the Kana-Kanji conversion server is in operation. </dd>
 </dl>
 <h2>Index</h2>

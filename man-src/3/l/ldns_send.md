@@ -16,8 +16,8 @@ description: "ldns_send"
 <p> ldns_status ldns_send(ldns_pkt **pkt, ldns_resolver *r, const ldns_pkt *query_pkt); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_send</i>()</p>
-<dd>Sends ptk to the nameserver at the resolver object. Returns the data as a ldns_pkt </p>
+<dt> <i>ldns_send</i>()</dt>
+<dd>Sends ptk to the nameserver at the resolver object. Returns the data as a ldns_pkt </dd>
 <p> .br <code>pkt</code>: packet received from the nameserver .br <code>r</code>: the resolver to use .br <code>query_pkt</code>: the query to send .br Returns status</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -31,3 +31,4 @@ description: "ldns_send"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

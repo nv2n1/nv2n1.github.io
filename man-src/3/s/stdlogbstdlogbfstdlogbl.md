@@ -43,17 +43,11 @@ The value of the exponent returned by std::logb is always 1 less than the expone
 <p>Compares different floating-point decomposition functions<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     double f = 123.45;
     std::cout &lt;&lt; &quot;Given the number &quot; &lt;&lt; f &lt;&lt; &quot; or &quot; &lt;&lt; std::hexfloat

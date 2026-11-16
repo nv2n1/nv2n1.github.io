@@ -18,7 +18,7 @@ description: "slaqr4.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     SLAQR4 implements one level of recursion for SLAQR0.
     It is a complete implementation of the small bulge multi-shift
@@ -35,11 +35,11 @@ description: "slaqr4.f –"
     of a matrix A which has been reduced to the Hessenberg form H
     by the orthogonal matrix Q:  A = Q*H*Q**T = (QZ)*T*(QZ)**T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>WANTT</i> </p>
+</dt><dd> <i>WANTT</i> </dd>
 <pre>
           WANTT is LOGICAL
           = .TRUE. : the full Schur form T is required;
@@ -189,23 +189,24 @@ description: "slaqr4.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
 <dt>
-<dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+</dt><dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dt>
-<dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </p>
+</dt><dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </dd>
 <p>&nbsp;<wbr>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part II: Aggressive Early Deflation, SIAM Journal of Matrix Analysis, volume 23, pages 948&#8211;973, 2002.&nbsp;<wbr></dl>
 <p> Definition at line 265 of file slaqr4.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

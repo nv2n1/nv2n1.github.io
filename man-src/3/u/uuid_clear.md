@@ -10,7 +10,6 @@ description: "uuid_clear – reset value of UUID variable to the NULL value"
 <p>uuid_clear &#8211; reset value of UUID variable to the NULL value</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 void uuid_clear(uuid_t uu);</code></pre>
 <h2>Description</h2>
 <p>The <code>uuid_clear</code> function sets the value of the supplied uuid variable <i>uu</i> to the NULL value.</p>

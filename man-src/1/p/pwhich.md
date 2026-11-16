@@ -34,9 +34,9 @@ $ pwhich[-a][-v] programname[programname...]
 
 <dl>
 <dt>-a
-<dd> The option <i>-a</i> will make <tt>&quot;pwhich&quot;</tt> print all matches found in the <tt>&quot;PATH&quot;</tt> variable instead of just the first one. Each match is printed on a separate line.
-<dt>-v
-<dd> Prints version (of <tt>&quot;File::Which&quot;</tt>) and copyright notice and exits.</dl>
+</dt><dd> The option <i>-a</i> will make <tt>&quot;pwhich&quot;</tt> print all matches found in the <tt>&quot;PATH&quot;</tt> variable instead of just the first one. Each match is printed on a separate line.
+</dd><dt>-v
+</dt><dd> Prints version (of <tt>&quot;File::Which&quot;</tt>) and copyright notice and exits.</dd></dl>
 
 <h2>SUPPORT</h2>
 

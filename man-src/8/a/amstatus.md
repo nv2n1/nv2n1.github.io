@@ -10,55 +10,55 @@ description: "amstatus – display the state of an Amanda run"
 <p>amstatus &#8211; display the state of an Amanda run</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amstatus</code> [&#8211;file&nbsp;<wbr><i>amdumpfile</i>] [&#8211;summary] [&#8211;dumping] [&#8211;waitdumping] [&#8211;waittaper] [&#8211;dumpingtape] [&#8211;writingtape] [&#8211;finished] [&#8211;failed] [&#8211;estimate] [&#8211;gestimate] [&#8211;stats] [&#8211;locale-independent-date-format] [&#8211;config] <i>config</i></dl>
+<dt> <code>amstatus</code> [&#8211;file&nbsp;<wbr><i>amdumpfile</i>] [&#8211;summary] [&#8211;dumping] [&#8211;waitdumping] [&#8211;waittaper] [&#8211;dumpingtape] [&#8211;writingtape] [&#8211;finished] [&#8211;failed] [&#8211;estimate] [&#8211;gestimate] [&#8211;stats] [&#8211;locale-independent-date-format] [&#8211;config] <i>config</i></dt></dl>
 <h2>Description</h2>
 <p><code>Amstatus</code></p>
-<dd>gives the current state of the Amanda run specified by the <i>config</i> configuration. If there is no active Amanda running, it summarizes the result of the last run. It may also be used to summarize the results of a previous run. </p>
+<dd>gives the current state of the Amanda run specified by the <i>config</i> configuration. If there is no active Amanda running, it summarizes the result of the last run. It may also be used to summarize the results of a previous run. </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p>All options may be abbreviated to the shortest non-ambiguous sub-string. If no options are given, everything is displayed. </p>
 <p> <code>[&#8211;config] config</code></p>
 <dl>
-<dd>Specify the Amanda configuration you want to display the state for.</dl>
+<dd>Specify the Amanda configuration you want to display the state for.</dd></dl>
 <p> <code>&#8211;file amdumpfile</code></p>
 <dl>
-<dd>Specify an alternate file instead of the <i>amdump</i> or <i>amflush</i> file.</dl>
+<dd>Specify an alternate file instead of the <i>amdump</i> or <i>amflush</i> file.</dd></dl>
 <p> <code>&#8211;summary</code></p>
 <dl>
-<dd>Display a summary of the state of the run.</dl>
+<dd>Display a summary of the state of the run.</dd></dl>
 <p> <code>&#8211;dumping</code></p>
 <dl>
-<dd>Display all partitions that are dumping.</dl>
+<dd>Display all partitions that are dumping.</dd></dl>
 <p> <code>&#8211;waitdumping|wdumping</code></p>
 <dl>
-<dd>Display all partitions that are waiting to be dumped.</dl>
+<dd>Display all partitions that are waiting to be dumped.</dd></dl>
 <p> <code>&#8211;waittaper|wtaper</code></p>
 <dl>
-<dd>Display all partitions dumped that are waiting to be written to tape.</dl>
+<dd>Display all partitions dumped that are waiting to be written to tape.</dd></dl>
 <p> <code>&#8211;dumpingtape|dtape</code></p>
 <dl>
-<dd>Display all partitions that are dumping directly to tape.</dl>
+<dd>Display all partitions that are dumping directly to tape.</dd></dl>
 <p> <code>&#8211;writingtape|wtape</code></p>
 <dl>
-<dd>Display all partitions that are writing to tape.</dl>
+<dd>Display all partitions that are writing to tape.</dd></dl>
 <p> <code>&#8211;finished</code></p>
 <dl>
-<dd>Display all partitions that are dumped and written to tape.</dl>
+<dd>Display all partitions that are dumped and written to tape.</dd></dl>
 <p> <code>&#8211;failed|error</code></p>
 <dl>
-<dd>Display all partitions that failed.</dl>
+<dd>Display all partitions that failed.</dd></dl>
 <p> <code>&#8211;estimate</code></p>
 <dl>
-<dd>Display all partitions whose estimate is finished. Works only during the estimate phase.</dl>
+<dd>Display all partitions whose estimate is finished. Works only during the estimate phase.</dd></dl>
 <p> <code>&#8211;gestimate|gettingestimate</code></p>
 <dl>
-<dd>Display all partitions whose estimate is not finished. Works only during the estimate phase.</dl>
+<dd>Display all partitions whose estimate is not finished. Works only during the estimate phase.</dd></dl>
 <p> <code>&#8211;stats|statistics</code></p>
 <dl>
-<dd>Display statistics about active-time of taper and dumpers.</dl>
+<dd>Display statistics about active-time of taper and dumpers.</dd></dl>
 <p> <code>&#8211;locale-independent-date-format</code></p>
 <dl>
-<dd>Output the date in a locale independent format. The format is the same executing: date +&#8217;%Y-%m-%d %H:%M:%S %Z&#8217;</dl>
+<dd>Output the date in a locale independent format. The format is the same executing: date +&#8217;%Y-%m-%d %H:%M:%S %Z&#8217;</dd></dl>
 <h2>Exit Code</h2>
 <p>The exit code of <code>amstatus</code> is the ORed value of: </p>
 <pre> 0 = success

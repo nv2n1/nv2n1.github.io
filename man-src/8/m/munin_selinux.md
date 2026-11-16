@@ -55,9 +55,9 @@ description: "munin_selinux – Security Enhanced Linux Policy for the munin pro
 <p> Policy governs the access confined processes have to these ports. SELinux munin policy is very flexible allowing users to setup their munin processes in as secure a method as possible. </p>
 <p> The following port types are defined for munin: </p>
 <dl>
-<dt><code>munin_port_t</code></p>
+<dt><code>munin_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4949 udp 4949</dl>
+</dd><dd>Default Defined Ports: tcp 4949 udp 4949</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type munin_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -118,8 +118,8 @@ description: "munin_selinux – Security Enhanced Linux Policy for the munin pro
 <p> <code>munin_exec_t</code> </p>
 <p> &#8211; Set files with the munin_exec_t type, if you want to transition an executable to the munin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/munin-.*, /usr/sbin/munin-.*, /usr/share/munin/munin-.* </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/munin-.*, /usr/sbin/munin-.*, /usr/share/munin/munin-.* </dd>
 </dl>
 <p> <code>munin_htaccess_t</code> </p>
 <p> &#8211; Set files with the munin_htaccess_t type, if you want to treat the file as a munin access file. </p>
@@ -136,8 +136,8 @@ description: "munin_selinux – Security Enhanced Linux Policy for the munin pro
 <p> <code>munin_script_exec_t</code> </p>
 <p> &#8211; Set files with the munin_script_exec_t type, if you want to transition an executable to the munin_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/munin.*, /var/www/html/cgi/munin.*, /var/www/html/munin/cgi(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/munin.*, /var/www/html/cgi/munin.*, /var/www/html/munin/cgi(/.*)? </dd>
 </dl>
 <p> <code>munin_script_tmp_t</code> </p>
 <p> &#8211; Set files with the munin_script_tmp_t type, if you want to store munin script temporary files in the /tmp directories. </p>

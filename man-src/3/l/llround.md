@@ -24,7 +24,7 @@ long long llroundl(long double x);
 <p> All functions shown above:</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions round their argument to the nearest integer value, rounding halfway cases away from zero, regardless of the current rounding direction (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)). </p>
 <p> Note that unlike the <code><a href="/docs/linux/man/3-round/">round</a></code>(3) and <code><a href="/docs/linux/man/3-ceil/">ceil</a></code>(3), functions, the return type of these functions differs from that of their arguments.</p>
@@ -35,8 +35,8 @@ long long llroundl(long double x);
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is a NaN or infinite, or the rounded value is too large</p>
-<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> is a NaN or infinite, or the rounded value is too large</dt>
+<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dd></dl>
 <p> These functions do not set <i>errno</i>.</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

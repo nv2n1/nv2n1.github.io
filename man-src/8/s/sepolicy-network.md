@@ -14,18 +14,18 @@ description: "sepolicy-network – Examine the SELinux Policy and generate a net
 <p>Use sepolicy network to examine SELinux Policy and generate network reports. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-a, &#8211;application</i></p>
-<dd>Generate a report listing the ports to which the specified init application is allowed to connect and or bind.</p>
-<dt><i>-d, &#8211;domain </i></p>
-<dd>Generate a report listing the ports to which the specified domain is allowed to connect and or bind.</p>
-<dt><i>-l, &#8211;list </i></p>
-<dd>List all Network Port Types defined in SELinux Policy</p>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message</p>
-<dt><i>-t, &#8211;type</i></p>
-<dd>Generate a report listing the port numbers associate with the specified SELinux port type.</p>
-<dt><i>-p, &#8211;port</i></p>
-<dd>Generate a report listing the SELinux port types associate with the specified port number. </p>
+<dt><i>-a, &#8211;application</i></dt>
+<dd>Generate a report listing the ports to which the specified init application is allowed to connect and or bind.</dd>
+<dt><i>-d, &#8211;domain </i></dt>
+<dd>Generate a report listing the ports to which the specified domain is allowed to connect and or bind.</dd>
+<dt><i>-l, &#8211;list </i></dt>
+<dd>List all Network Port Types defined in SELinux Policy</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-t, &#8211;type</i></dt>
+<dd>Generate a report listing the port numbers associate with the specified SELinux port type.</dd>
+<dt><i>-p, &#8211;port</i></dt>
+<dd>Generate a report listing the SELinux port types associate with the specified port number. </dd>
 </dl>
 <h2>Examples</h2>
 <p><code>sepolicy network -p 22</code><br />

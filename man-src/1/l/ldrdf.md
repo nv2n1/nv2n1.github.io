@@ -16,12 +16,12 @@ description: "ldrdf – link RDOFF objects and libraries produced by rdflib(1)"
 <p> Libraries must be specified with their path as no search is performed. Modules in libraries are not linked to the program unless they are referred to.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-o <i>output-file</i></p>
-<dd> Specify an output file. The default output filename is &#8216;<i>aout.rdx</i>&#8216;.</p>
-<dt>-v</p>
-<dd> Increase verbosity level. Currently 4 verbosity levels are available: default (which only prints error information), normal (which prints information about the produced object, -v), medium (which prints information about what the program is doing, -v -v) and high (which prints all available information, -v -v -v).</p>
-<dt>-p</p>
-<dd> Change alignment value to which multiple segments combigned into a single segment should be aligned (must be either 1, 2, 4, 8, 16, 32 or 256; default is 16).</dl>
+<dt>-o <i>output-file</i></dt>
+<dd> Specify an output file. The default output filename is &#8216;<i>aout.rdx</i>&#8216;.</dd>
+<dt>-v</dt>
+<dd> Increase verbosity level. Currently 4 verbosity levels are available: default (which only prints error information), normal (which prints information about the produced object, -v), medium (which prints information about what the program is doing, -v -v) and high (which prints all available information, -v -v -v).</dd>
+<dt>-p</dt>
+<dd> Change alignment value to which multiple segments combigned into a single segment should be aligned (must be either 1, 2, 4, 8, 16, 32 or 256; default is 16).</dd></dl>
 <h2>AUTHORS</h2>
 <p> Julian Hall &lt;jules [at] earthcorp.com&gt;. </p>
 <p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;. </p>

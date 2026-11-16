@@ -23,29 +23,29 @@ description: "ldns_rr_dnskey_flags, ldns_rr_dnskey_set_flags, ldns_rr_dnskey_pro
 <p> bool ldns_rr_dnskey_set_key(ldns_rr *r, ldns_rdf *f); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_dnskey_flags</i>()</p>
-<dd>returns the flags of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the flags or NULL on failure</dl>
+<dt> <i>ldns_rr_dnskey_flags</i>()</dt>
+<dd>returns the flags of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the flags or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_set_flags</i>()</p>
-<dd>sets the flags of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the flags to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_dnskey_set_flags</i>()</dt>
+<dd>sets the flags of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the flags to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_protocol</i>()</p>
-<dd>returns the protocol of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the protocol or NULL on failure</dl>
+<dt> <i>ldns_rr_dnskey_protocol</i>()</dt>
+<dd>returns the protocol of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the protocol or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_set_protocol</i>()</p>
-<dd>sets the protocol of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the protocol to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_dnskey_set_protocol</i>()</dt>
+<dd>sets the protocol of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the protocol to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_algorithm</i>()</p>
-<dd>returns the algorithm of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the algorithm or NULL on failure</dl>
+<dt> <i>ldns_rr_dnskey_algorithm</i>()</dt>
+<dd>returns the algorithm of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the algorithm or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_set_algorithm</i>()</p>
-<dd>sets the algorithm of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the algorithm to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_dnskey_set_algorithm</i>()</dt>
+<dd>sets the algorithm of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the algorithm to set .br Returns true on success, false otherwise</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_key</i>()</p>
-<dd>returns the key data of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the key data or NULL on failure</dl>
+<dt> <i>ldns_rr_dnskey_key</i>()</dt>
+<dd>returns the key data of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the key data or NULL on failure</dd></dl>
 <dl>
-<dt> <i>ldns_rr_dnskey_set_key</i>()</p>
-<dd>sets the key data of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the key data to set .br Returns true on success, false otherwise</dl>
+<dt> <i>ldns_rr_dnskey_set_key</i>()</dt>
+<dd>sets the key data of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the rr to use .br <code>f</code>: the key data to set .br Returns true on success, false otherwise</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

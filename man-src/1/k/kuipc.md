@@ -16,12 +16,12 @@ description: "kuipc – the CERN KUIP compiler"
 <p> If no output file is specified, kuipc will output generated code to a file whose name is the same as the input file&#8217;s, with the ending &#8216;.cdf&#8217; replaced by &#8216;.f&#8217; or &#8216;.c&#8217; as appropriate. If neither input nor output file are given, kuipc will prompt for them. Be careful because kuipc overwrites existing files with no warning.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Generate C code.</p>
-<dt><code>-f</code></p>
-<dd> Generate FORTRAN code (the default).</p>
-<dt><code>-split</code></p>
-<dd> Output several files, one for each time the &gt;Name control line is used in the CDF input. The names of the output files will correspond to the arguments given on the &gt;Name control lines.</dl>
+<dt><code>-c</code></dt>
+<dd> Generate C code.</dd>
+<dt><code>-f</code></dt>
+<dd> Generate FORTRAN code (the default).</dd>
+<dt><code>-split</code></dt>
+<dd> Output several files, one for each time the &gt;Name control line is used in the CDF input. The names of the output files will correspond to the arguments given on the &gt;Name control lines.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The KUIP manual: <a rel="nofollow" href="http://wwwasdoc.web.cern.ch/wwwasdoc/psdir/kuip.ps.gz">http://wwwasdoc.web.cern.ch/wwwasdoc/psdir/kuip.ps.gz</a> </p>
 <h2>BUGS</h2>

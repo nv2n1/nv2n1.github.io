@@ -26,10 +26,8 @@ The maximum of the elements.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;valarray&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::valarray&lt;double&gt; a{1, 2, 3, 4, 5, 6, 7, 8};
     std::cout &lt;&lt; &quot;Maximum value : &quot; &lt;&lt; a.max() &lt;&lt; &quot;\n&quot;;

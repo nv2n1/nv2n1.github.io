@@ -16,15 +16,15 @@ description: "pwdhash – Generator of password hashes"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-H</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-s scheme</code></p>
-<dd> Password scheme to be used (e.g. MD5, SHA1, SHA256, SHA512, SSHA, SSHA256, SSHA512)</p>
-<dt><code>-c comparepassword</code></p>
-<dd> Password to be compared against</p>
-<dt><code>-D configdir</code></p>
+<dt><code>-H</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-s scheme</code></dt>
+<dd> Password scheme to be used (e.g. MD5, SHA1, SHA256, SHA512, SSHA, SSHA256, SSHA512)</dd>
+<dt><code>-c comparepassword</code></dt>
+<dd> Password to be compared against</dd>
+<dt><code>-D configdir</code></dt>
 <dd> Takes the password schema directly from the ns-slapd configuration
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> dbscan was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

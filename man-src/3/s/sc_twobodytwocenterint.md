@@ -11,123 +11,47 @@ description: "sc::TwoBodyTwoCenterInt –"
 <p> This is an abstract base type for classes that compute integrals involving two electrons in two Gaussian functions.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;tbint.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::TwoBodyTwoCenterIntV3</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum tbint_type { eri = 0, r12 = 1, r12t1 = 2, r12t2 = 3 }
-
-
 Types of two-body integrals that TwoBodyInt understands: eri stands for electron repulsion integral, r12 stands for integrals of r12 operator, r12t1 and r12t2 are integrals of [r12,T1] and [r12,T2] operators.
-
-
-
 Public Member Functions
 int nbasis () const
-
-
 Return the number of basis functions on center one.
-
-
 int nbasis1 () const
-
-
 Return the number of basis functions on center one.
-
-
 int nbasis2 () const
-
-
 Return the number of basis functions on center two.
-
-
 int nshell () const
-
-
 Return the number of shells on center one.
-
-
 int nshell1 () const
-
-
 Return the number of shells on center one.
-
-
 int nshell2 () const
-
-
 Return the number of shells on center two.
-
-
 Ref&lt; GaussianBasisSet &gt; basis ()
-
-
 Return the basis set on center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis1 ()
-
-
 Return the basis set on center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis2 ()
-
-
 Return the basis set on center two.
-
-
 virtual const double * buffer (tbint_type type=eri) const
-
-
 The computed shell integrals will be put in the buffer returned by this member.
-
-
 virtual void compute_shell (int, int)=0
-
-
 Given four shell indices, integrals will be computed and placed in the buffer.
-
-
 virtual int log2_shell_bound (int=-1, int=-1)=0
-
-
 Return log base 2 of the maximum magnitude of any integral in a shell block obtained from compute_shell.
-
-
 int redundant () const
-
-
 If redundant is true, then keep redundant integrals in the buffer.
-
-
 void set_redundant (int i)
-
-
 See redundant().
-
-
 virtual void set_integral_storage (size_t storage)
-
-
 This storage is used to cache computed integrals.
-
-
 Integral * integral () const
-
-
 Return the integral factory that was used to create this object.
-
-
-
 Static Public Attributes
 static const int num_tbint_types = 4
-
-
 The total number of such types.
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>TwoBodyTwoCenterInt</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs2)</p>
 <h3>Protected Attributes</h3>

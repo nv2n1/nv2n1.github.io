@@ -19,65 +19,65 @@ attribute must pass *all* the rules which affect it in order to
 make it past the filter. Order of the rules is important.
 The operators and their purpose in defining the rules are as
 follows:
-<dl><dt><code>= </code>
-<dd>THIS OPERATOR IS NOT ALLOWED. If used, and warning message is
+</dd><dl><dt><code>= </code>
+</dt><dd>THIS OPERATOR IS NOT ALLOWED. If used, and warning message is
 printed and it is treated as ==
-<dt><code>:= </code>
-<dd>Set, this attribute and value will always be placed in the
+</dd><dt><code>:= </code>
+</dt><dd>Set, this attribute and value will always be placed in the
 output A/V Pairs. If the attribute exists, it is overwritten.
-<dt><code>== </code>
-<dd>Equal, value must match exactly.
-<dt><code>=* </code>
-<dd>Always Equal, allow all values for the specified attribute.
-<dt><code>!* </code>
-<dd>Never Equal, disallow all values for the specified attribute.
+</dd><dt><code>== </code>
+</dt><dd>Equal, value must match exactly.
+</dd><dt><code>=* </code>
+</dt><dd>Always Equal, allow all values for the specified attribute.
+</dd><dt><code>!* </code>
+</dt><dd>Never Equal, disallow all values for the specified attribute.
 ( This is redundant, as any A/V Pair not explicitly permitted
 will be dropped ).
-<dt><code>!= </code>
-<dd>Not Equal, value must not match.
-<dt><code>&gt;= </code>
-<dd>Greater Than or Equal
-<dt><code>&lt;= </code>
-<dd>Less Than or Equal
-<dt><code>&gt; </code>
-<dd>Greater Than
-<dt><code>&lt; </code>
-<dd>Less Than
-</dl>
+</dd><dt><code>!= </code>
+</dt><dd>Not Equal, value must not match.
+</dd><dt><code>&gt;= </code>
+</dt><dd>Greater Than or Equal
+</dd><dt><code>&lt;= </code>
+</dt><dd>Less Than or Equal
+</dd><dt><code>&gt; </code>
+</dt><dd>Greater Than
+</dd><dt><code>&lt; </code>
+</dt><dd>Less Than
+</dd></dl>
 If regular expressions are enabled the following operators are
 also possible. ( Regular Expressions are included by default
 unless your system doesn't support them, which should be rare ).
 The value field uses standard regular expression syntax.
 <dl><dt><code>=~ </code>
-<dd>Regular Expression Equal
-<dt><code>!~ </code>
-<dd>Regular Expression Not Equal
-</dl>
+</dt><dd>Regular Expression Equal
+</dd><dt><code>!~ </code>
+</dt><dd>Regular Expression Not Equal
+</dd></dl>
 See the default <i>/etc/raddb/attrs</i> for working examples of
 sample rule ordering and how to use the different operators.</pre>
 </dl>
 <p> The configuration items are:</p>
 <dl>
-<dt>file</p>
-<dd>This specifies the location of the file used to load the filter rules. This file is used to filter the accounting response, packet before it is proxied, proxy response from the home server, or our response to the NAS.</p>
-<dt>key</p>
-<dd>Usually %{Realm} (the default). Can also be %{User-Name}, or other attribute that exists in the request. Note that the module always keys off of attributes in the request, and NOT in any other packet.</p>
-<dt>relaxed</p>
-<dd>If set to &#8216;yes&#8217;, then attributes which do not match any filter rules explicitly, will also be allowed. This behaviour may be overridden for an individual filter block using the Relax-Filter check item. The default for this configuration item is &#8216;no&#8217;.</dl>
+<dt>file</dt>
+<dd>This specifies the location of the file used to load the filter rules. This file is used to filter the accounting response, packet before it is proxied, proxy response from the home server, or our response to the NAS.</dd>
+<dt>key</dt>
+<dd>Usually %{Realm} (the default). Can also be %{User-Name}, or other attribute that exists in the request. Note that the module always keys off of attributes in the request, and NOT in any other packet.</dd>
+<dt>relaxed</dt>
+<dd>If set to &#8216;yes&#8217;, then attributes which do not match any filter rules explicitly, will also be allowed. This behaviour may be overridden for an individual filter block using the Relax-Filter check item. The default for this configuration item is &#8216;no&#8217;.</dd></dl>
 <h2>Sections</h2>
 <dl>
-<dt>preacct</p>
-<dd>Filters Accounting-Request packets.</p>
-<dt>accounting</p>
-<dd>Filters Accounting-Response packets.</p>
-<dt>pre-proxy</p>
-<dd>Filters Accounting-Request or Access-Request packets prior to proxying them.</p>
-<dt>post-proxy</p>
-<dd>Filters Accounting-Response, Access-Accept, Access-Reject, or Access-Challenge responses from a home server.</p>
-<dt>authorize</p>
-<dd>Filters Access-Request packets.</p>
-<dt>post-auth</p>
-<dd>Filters Access-Accept or Access-Reject packets.</dl>
+<dt>preacct</dt>
+<dd>Filters Accounting-Request packets.</dd>
+<dt>accounting</dt>
+<dd>Filters Accounting-Response packets.</dd>
+<dt>pre-proxy</dt>
+<dd>Filters Accounting-Request or Access-Request packets prior to proxying them.</dd>
+<dt>post-proxy</dt>
+<dd>Filters Accounting-Response, Access-Accept, Access-Reject, or Access-Challenge responses from a home server.</dd>
+<dt>authorize</dt>
+<dd>Filters Access-Request packets.</dd>
+<dt>post-auth</dt>
+<dd>Filters Access-Accept or Access-Reject packets.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/raddb/radiusd.conf</i> <i>/etc/raddb/filter/*</i></p>
 <h2>See Also</h2>

@@ -14,84 +14,84 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
 <p>The rcfile contains keyword-value pairs, one on every line (blank lines and lines starting with a #-sign are ignored).<br />
  The following keywords can be specified: </p>
 <dl>
-<dt><code>flags</code></p>
-<dd>A list of default flags for <code>pcp-atop</code> can be defined here. The flags which are allowed are &#8216;g&#8217;, &#8216;m&#8217;, &#8216;d&#8217;, &#8216;n&#8217;, &#8216;u&#8217;, &#8216;p&#8217;, &#8216;s&#8217;, &#8216;c&#8217;, &#8216;v&#8217;, &#8216;C&#8217;, &#8216;M&#8217;, &#8216;D&#8217;, &#8216;N&#8217;, &#8216;A&#8217;, &#8216;a&#8217;, &#8216;y&#8217;, &#8216;f&#8217;, &#8216;F&#8217;, &#8216;G&#8217;, &#8216;R&#8217;, &#8216;1&#8217; and &#8216;x&#8217;.</dl>
+<dt><code>flags</code></dt>
+<dd>A list of default flags for <code>pcp-atop</code> can be defined here. The flags which are allowed are &#8216;g&#8217;, &#8216;m&#8217;, &#8216;d&#8217;, &#8216;n&#8217;, &#8216;u&#8217;, &#8216;p&#8217;, &#8216;s&#8217;, &#8216;c&#8217;, &#8216;v&#8217;, &#8216;C&#8217;, &#8216;M&#8217;, &#8216;D&#8217;, &#8216;N&#8217;, &#8216;A&#8217;, &#8216;a&#8217;, &#8216;y&#8217;, &#8216;f&#8217;, &#8216;F&#8217;, &#8216;G&#8217;, &#8216;R&#8217;, &#8216;1&#8217; and &#8216;x&#8217;.</dd></dl>
 <dl>
-<dt><code>interval</code></p>
-<dd>The default interval value in seconds.</dl>
+<dt><code>interval</code></dt>
+<dd>The default interval value in seconds.</dd></dl>
 <dl>
-<dt><code>linelen</code></p>
-<dd>The length of a screen line when sending output to a file or pipe (default 80).</dl>
+<dt><code>linelen</code></dt>
+<dd>The length of a screen line when sending output to a file or pipe (default 80).</dd></dl>
 <dl>
-<dt><code>username</code></p>
-<dd>The default regular expression for the users for which active processes will be shown.</dl>
+<dt><code>username</code></dt>
+<dd>The default regular expression for the users for which active processes will be shown.</dd></dl>
 <dl>
-<dt><code>procname</code></p>
-<dd>The default regular expression for the process names to be shown.</dl>
+<dt><code>procname</code></dt>
+<dd>The default regular expression for the process names to be shown.</dd></dl>
 <dl>
-<dt><code>maxlinecpu</code></p>
-<dd>The maximum number of active CPU&#8217;s that will be shown.</dl>
+<dt><code>maxlinecpu</code></dt>
+<dd>The maximum number of active CPU&#8217;s that will be shown.</dd></dl>
 <dl>
-<dt><code>maxlinelvm</code></p>
-<dd>The maximum number of active logical volumes that will be shown.</dl>
+<dt><code>maxlinelvm</code></dt>
+<dd>The maximum number of active logical volumes that will be shown.</dd></dl>
 <dl>
-<dt><code>maxlinemdd</code></p>
-<dd>The maximum number of active multiple devices that will be shown.</dl>
+<dt><code>maxlinemdd</code></dt>
+<dd>The maximum number of active multiple devices that will be shown.</dd></dl>
 <dl>
-<dt><code>maxlinedisk</code></p>
-<dd>The maximum number of active disks that will be shown.</dl>
+<dt><code>maxlinedisk</code></dt>
+<dd>The maximum number of active disks that will be shown.</dd></dl>
 <dl>
-<dt><code>maxlinenfsm</code></p>
-<dd>The maximum number of NFS mounts that will be shown on an NFS client.</dl>
+<dt><code>maxlinenfsm</code></dt>
+<dd>The maximum number of NFS mounts that will be shown on an NFS client.</dd></dl>
 <dl>
-<dt><code>maxlineintf</code></p>
-<dd>The maximum number of active network interfaces that will be shown.</dl>
+<dt><code>maxlineintf</code></dt>
+<dd>The maximum number of active network interfaces that will be shown.</dd></dl>
 <dl>
-<dt><code>maxlinecont</code></p>
-<dd>The maximum number of active containers that will be shown.</dl>
+<dt><code>maxlinecont</code></dt>
+<dd>The maximum number of active containers that will be shown.</dd></dl>
 <dl>
-<dt><code>cpucritperc</code></p>
-<dd>The busy percentage considered critical for a processor (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>cpucritperc</code></dt>
+<dd>The busy percentage considered critical for a processor (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>dskcritperc</code></p>
-<dd>The busy percentage considered critical for a disk (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>dskcritperc</code></dt>
+<dd>The busy percentage considered critical for a disk (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>netcritperc</code></p>
-<dd>The busy percentage considered critical for a network interface (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>netcritperc</code></dt>
+<dd>The busy percentage considered critical for a network interface (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>memcritperc</code></p>
-<dd>The percentage considered critical for memory utilization (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>memcritperc</code></dt>
+<dd>The percentage considered critical for memory utilization (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>swpcritperc</code></p>
-<dd>The occupation percentage considered critical for swap space (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>swpcritperc</code></dt>
+<dd>The occupation percentage considered critical for swap space (see section COLORS in the man-page of the <i>pcp-atop</i> command). This percentage is used to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>swoutcritsec</code></p>
-<dd>The number of pages swapped out per second considered critical for for memory utilization (see section COLORS in the man-page of the <i>pcp-atop</i> command). This threshold is used in combination with &#8216;memcritperc&#8217; to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dl>
+<dt><code>swoutcritsec</code></dt>
+<dd>The number of pages swapped out per second considered critical for for memory utilization (see section COLORS in the man-page of the <i>pcp-atop</i> command). This threshold is used in combination with &#8216;memcritperc&#8217; to determine a weighted percentage for line coloring and sorting of active processes. When this value is zero, no line coloring or automatic sorting is performed for this resource.</dd></dl>
 <dl>
-<dt><code>almostcrit</code></p>
-<dd>A percentage of the critical percentage to determine if the resource is almost critical (see section COLORS in the man-page of the <i>pcp-atop</i> command). When this value is zero, no line coloring for `almost critical&#8217; is performed.</dl>
+<dt><code>almostcrit</code></dt>
+<dd>A percentage of the critical percentage to determine if the resource is almost critical (see section COLORS in the man-page of the <i>pcp-atop</i> command). When this value is zero, no line coloring for `almost critical&#8217; is performed.</dd></dl>
 <dl>
-<dt><code>colorinfo</code></p>
+<dt><code>colorinfo</code></dt>
 <dd>Definition of color name for information messages (default: green).<br />
- Allowed colors are: red green yellow blue magenta cyan black white.</dl>
+ Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
-<dt><code>colorthread</code></p>
+<dt><code>colorthread</code></dt>
 <dd>Definition of color name for thread-specific lines when using the &#8216;y&#8217; option (default: yellow).<br />
- Allowed colors are: red green yellow blue magenta cyan black white.</dl>
+ Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
-<dt><code>coloralmost</code></p>
+<dt><code>coloralmost</code></dt>
 <dd>Definition of color name for almost critical resources (default: cyan).<br />
- Allowed colors are: red green yellow blue magenta cyan black white.</dl>
+ Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
-<dt><code>colorcritical</code></p>
+<dt><code>colorcritical</code></dt>
 <dd>Definition of color name for critical resources (default: red).<br />
- Allowed colors are: red green yellow blue magenta cyan black white.</dl>
+ Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
-<dt><code>pcp-atopsarflags</code></p>
-<dd>A list of default flags for <code>pcp-atopsar</code> can be defined here. The flags that are allowed are &#8216;S&#8217;, &#8216;x&#8217;, &#8216;C&#8217;, &#8216;M&#8217;, &#8216;H&#8217;, &#8216;a&#8217;, &#8216;A&#8217; and the flags to select one or more specific reports.</dl>
+<dt><code>pcp-atopsarflags</code></dt>
+<dd>A list of default flags for <code>pcp-atopsar</code> can be defined here. The flags that are allowed are &#8216;S&#8217;, &#8216;x&#8217;, &#8216;C&#8217;, &#8216;M&#8217;, &#8216;H&#8217;, &#8216;a&#8217;, &#8216;A&#8217; and the flags to select one or more specific reports.</dd></dl>
 <p> An example of the <code>/etc/atoprc</code> or <code>~/.atoprc</code> file:</p>
 <dl>
-<dt>&nbsp;<wbr></p>
+<dt>&nbsp;<wbr></dt>
 <dd>flags&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Aaf<br />
  interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5<br />
  username<br />
@@ -103,7 +103,7 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
  almostcrit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>90<br />
  pcp-atopsarflags&nbsp;<wbr>&nbsp;<wbr>CMH<br />
  ownprocline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PID:50 VGROW:40 RGROW:45 COMMAND-LINE:50<br />
- ownpagline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PAGSCAN:3 BLANKBOX:0 PAGSWIN:3 PAGSWOUT:7</dl>
+ ownpagline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PAGSCAN:3 BLANKBOX:0 PAGSWIN:3 PAGSWOUT:7</dd></dl>
 <p> The keywords &#8216;ownprocline&#8217; and &#8216;ownpagline&#8217; are explained in the subsequent section.</p>
 <h2>Own Definition Of Output Line</h2>
 <p>Via the rcfile it is possible to define the layout of the output lines yourself, i.e. you can define the layout of one line with process information with the keyword &#8216;ownprocline&#8217; (to be selected with the key &#8216;o&#8217; or the flag -o) and you can redefine all lines with system information. </p>
@@ -115,79 +115,79 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
 <p> A special columnid for system lines is &#8216;BLANKBOX&#8217;. This indicates that an empty column is required at this position. Also this special columnid is followed by a priority (usually low). </p>
 <p> The following definition can be specified for process information: </p>
 <dl>
-<dt><code>ownprocline</code></p>
+<dt><code>ownprocline</code></dt>
 <dd>The columnid&#8217;s are the names of the columns that are shown in the normal output of the process-related lines that are shown by <i>pcp-atop</i> such as &#8216;PID&#8217;, &#8216;CMD&#8217;, &#8216;S&#8217;, &#8230;. The only exception is the special columnid &#8216;SORTITEM&#8217; that is used to show one of the columns CPU%/DSK%/MEM%/NET%, depending on the chosen sort-criterium.<br />
- An example of a user-defined process line:</dl>
+ An example of a user-defined process line:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownprocline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PID:20 PPID:10 SYSCPU:15 USRCPU:15 VGROW:14 VSIZE:12 RGROW:14 RSIZE:12 ST:8 EXC:7 S:11 SORTITEM:18 CMD:20</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownprocline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PID:20 PPID:10 SYSCPU:15 USRCPU:15 VGROW:14 VSIZE:12 RGROW:14 RSIZE:12 ST:8 EXC:7 S:11 SORTITEM:18 CMD:20</dd></dl>
 <p> The following definitions are used internally by <i>pcp-atop</i> as the default system lines (you can redefine each of them in the rcfile as one line): </p>
 <dl>
-<dt><code>ownsysprcline</code></p>
-<dd>Redefinition of line labeled with &#8216;PRC&#8217;:</dl>
+<dt><code>ownsysprcline</code></dt>
+<dd>Redefinition of line labeled with &#8216;PRC&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownsysprcline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PRCSYS:8 PRCUSER:8 BLANKBOX:0 PRCNPROC:7 PRCNZOMBIE:5 PRCCLONES:4 BLANKBOX:0 PRCNNEXIT:6</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownsysprcline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PRCSYS:8 PRCUSER:8 BLANKBOX:0 PRCNPROC:7 PRCNZOMBIE:5 PRCCLONES:4 BLANKBOX:0 PRCNNEXIT:6</dd></dl>
 <dl>
-<dt><code>ownallcpuline</code></p>
-<dd>Redefinition of line labeled with &#8216;CPU&#8217; for total CPU-utilization:</dl>
+<dt><code>ownallcpuline</code></dt>
+<dd>Redefinition of line labeled with &#8216;CPU&#8217; for total CPU-utilization:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownallcpuline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPUSYS:8 CPUUSER:7 CPUIRQ:4 BLANKBOX:0 CPUIDLE:5 CPUWAIT:6 BLANKBOX:0 CPUSTEAL:1 CPUGUEST:3</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownallcpuline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPUSYS:8 CPUUSER:7 CPUIRQ:4 BLANKBOX:0 CPUIDLE:5 CPUWAIT:6 BLANKBOX:0 CPUSTEAL:1 CPUGUEST:3</dd></dl>
 <dl>
-<dt><code>ownonecpuline</code></p>
-<dd>Redefinition of line labeled with &#8216;CPU&#8217; for utilization of one CPU:</dl>
+<dt><code>ownonecpuline</code></dt>
+<dd>Redefinition of line labeled with &#8216;CPU&#8217; for utilization of one CPU:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownonecpuline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPUISYS:8 CPUIUSER:7 CPUIIRQ:4 BLANKBOX:0 CPUIIDLE:5 CPUIWAIT:6 BLANKBOX:0 CPUISTEAL:1 CPUIGUEST:3</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownonecpuline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPUISYS:8 CPUIUSER:7 CPUIIRQ:4 BLANKBOX:0 CPUIIDLE:5 CPUIWAIT:6 BLANKBOX:0 CPUISTEAL:1 CPUIGUEST:3</dd></dl>
 <dl>
-<dt><code>owncplline</code></p>
-<dd>Redefinition of line labeled with &#8216;CPL&#8217;:</dl>
+<dt><code>owncplline</code></dt>
+<dd>Redefinition of line labeled with &#8216;CPL&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>owncplline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPLAVG1:4 CPLAVG5:3 CPLAVG15:2 BLANKBOX:0 CPLCSW:6 CPLINTR:5 BLANKBOX:0 CPLNUMCPU:1</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>owncplline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CPLAVG1:4 CPLAVG5:3 CPLAVG15:2 BLANKBOX:0 CPLCSW:6 CPLINTR:5 BLANKBOX:0 CPLNUMCPU:1</dd></dl>
 <dl>
-<dt><code>ownmemline</code></p>
-<dd>Redefinition of line labeled with &#8216;MEM&#8217;:</dl>
+<dt><code>ownmemline</code></dt>
+<dd>Redefinition of line labeled with &#8216;MEM&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownmemline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MEMTOT:2 MEMFREE:5 MEMCACHE:3 MEMDIRTY:1 MEMBUFFER:3 MEMSLAB:3 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownmemline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MEMTOT:2 MEMFREE:5 MEMCACHE:3 MEMDIRTY:1 MEMBUFFER:3 MEMSLAB:3 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0</dd></dl>
 <dl>
-<dt><code>ownswpline</code></p>
-<dd>Redefinition of line labeled with &#8216;SWP&#8217;:</dl>
+<dt><code>ownswpline</code></dt>
+<dd>Redefinition of line labeled with &#8216;SWP&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownswpline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SWPTOT:3 SWPFREE:4 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 SWPCOMMITTED:5 SWPCOMMITLIM:6</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownswpline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SWPTOT:3 SWPFREE:4 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 SWPCOMMITTED:5 SWPCOMMITLIM:6</dd></dl>
 <dl>
-<dt><code>ownpagline</code></p>
-<dd>Redefinition of line labeled with &#8216;PAG&#8217;:</dl>
+<dt><code>ownpagline</code></dt>
+<dd>Redefinition of line labeled with &#8216;PAG&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownpagline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PAGSCAN:3 PAGSTALL:1 BLANKBOX:0 PAGSWIN:4 PAGSWOUT:3</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownpagline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PAGSCAN:3 PAGSTALL:1 BLANKBOX:0 PAGSWIN:4 PAGSWOUT:3</dd></dl>
 <dl>
-<dt><code>owndskline</code></p>
-<dd>Redefinition of lines labeled with &#8216;LVM&#8217;, &#8216;MDD&#8217; and &#8216;DSK&#8217;:</dl>
+<dt><code>owndskline</code></dt>
+<dd>Redefinition of lines labeled with &#8216;LVM&#8217;, &#8216;MDD&#8217; and &#8216;DSK&#8217;:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>owndskline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DSKNAME:8 DSKBUSY:7 DSKNREAD:6 DSKNWRITE:6 DSKKBPERRD:4 DSKKBPERWR:4 DSKMBPERSECRD:5 DSKMBPERSECWR:5 DSKAVQUEUE:1 DSKAVIO:5</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>owndskline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DSKNAME:8 DSKBUSY:7 DSKNREAD:6 DSKNWRITE:6 DSKKBPERRD:4 DSKKBPERWR:4 DSKMBPERSECRD:5 DSKMBPERSECWR:5 DSKAVQUEUE:1 DSKAVIO:5</dd></dl>
 <dl>
-<dt><code>ownnettrline</code></p>
-<dd>Redefinition of line labeled with &#8216;NET&#8217; for transport:</dl>
+<dt><code>ownnettrline</code></dt>
+<dd>Redefinition of line labeled with &#8216;NET&#8217; for transport:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownnettrline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETTRANSPORT:9 NETTCPI:8 NETTCPO:8 NETUDPI:8 NETUDPO:8 NETTCPACTOPEN:6 NETTCPPASVOPEN:5 NETTCPRETRANS:4 NETTCPINERR:3 NETTCPORESET:20 NETUDPNOPORT:1 NETUDPINERR:3</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownnettrline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETTRANSPORT:9 NETTCPI:8 NETTCPO:8 NETUDPI:8 NETUDPO:8 NETTCPACTOPEN:6 NETTCPPASVOPEN:5 NETTCPRETRANS:4 NETTCPINERR:3 NETTCPORESET:20 NETUDPNOPORT:1 NETUDPINERR:3</dd></dl>
 <dl>
-<dt><code>ownnetnetline</code></p>
-<dd>Redefinition of line labeled with &#8216;NET&#8217; for network:</dl>
+<dt><code>ownnetnetline</code></dt>
+<dd>Redefinition of line labeled with &#8216;NET&#8217; for network:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownnetnetline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETNETWORK:5 NETIPI:4 NETIPO:4 NETIPFRW:4 NETIPDELIV:4 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 NETICMPIN:1 NETICMPOUT:1</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownnetnetline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETNETWORK:5 NETIPI:4 NETIPO:4 NETIPFRW:4 NETIPDELIV:4 BLANKBOX:0 BLANKBOX:0 BLANKBOX:0 NETICMPIN:1 NETICMPOUT:1</dd></dl>
 <dl>
-<dt><code>ownnetifline</code></p>
-<dd>Redefinition of line labeled with &#8216;NET&#8217; for interfaces:</dl>
+<dt><code>ownnetifline</code></dt>
+<dd>Redefinition of line labeled with &#8216;NET&#8217; for interfaces:</dd></dl>
 <dl>
-<dt>&nbsp;<wbr></p>
-<dd>ownnetifline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETNAME:8 NETPCKI:7 NETPCKO:7 NETSPEEDIN:6 NETSPEEDOUT:6 NETCOLLIS:3 NETMULTICASTIN:2 NETRCVERR:5 NETSNDERR:5 NETRCVDROP:4 NETSNDDROP:4</dl>
+<dt>&nbsp;<wbr></dt>
+<dd>ownnetifline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETNAME:8 NETPCKI:7 NETPCKO:7 NETSPEEDIN:6 NETSPEEDOUT:6 NETCOLLIS:3 NETMULTICASTIN:2 NETRCVERR:5 NETSNDERR:5 NETRCVDROP:4 NETSNDDROP:4</dd></dl>
 <p> The lines above are shown in the order as shown by <i>pcp-atop</i> in combination with the <code>-f</code> flag (in a very wide window you should be able to see all of the columns).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-pcp-atop/">pcp-atop</a></code>(1), <code><a href="/docs/linux/man/1-pcp-atopsar/">pcp-atopsar</a></code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>

@@ -17,8 +17,8 @@ description: "dh_fixperms – fix permissions of files in package build director
 <p> When the <i>Rules-Requires-Root</i> field has the (effective) value of <i>binary-targets</i>, <code>dh_fixperms</code> will also reset the ownership of all paths to &#8220;root:root&#8221;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-X</code><i>item</i>, <code>&#8211;exclude</code> <i>item</i></p>
-<dd> Exclude files that contain <i>item</i> anywhere in their filename from having their permissions changed. You may use this option multiple times to build up a list of things to exclude.</dl>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude</code> <i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from having their permissions changed. You may use this option multiple times to build up a list of things to exclude.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

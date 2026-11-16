@@ -15,16 +15,16 @@ description: "mtx-metapost – MetaPost to PDF processor"
 <p> <code>MetaPost to PDF processor</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;rawmp</code></p>
-<dd> raw metapost run</p>
-<dt><code>&#8211;metafun</code></p>
-<dd> use metafun instead of plain</p>
-<dt><code>&#8211;latex</code></p>
-<dd> force &#8211;tex=latex</p>
-<dt><code>&#8211;texexec</code></p>
-<dd> force texexec usage (mkii)</p>
-<dt><code>&#8211;split</code></p>
-<dd> split single result file into pages</dl>
+<dt><code>&#8211;rawmp</code></dt>
+<dd> raw metapost run</dd>
+<dt><code>&#8211;metafun</code></dt>
+<dd> use metafun instead of plain</dd>
+<dt><code>&#8211;latex</code></dt>
+<dd> force &#8211;tex=latex</dd>
+<dt><code>&#8211;texexec</code></dt>
+<dd> force texexec usage (mkii)</dd>
+<dt><code>&#8211;split</code></dt>
+<dd> split single result file into pages</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

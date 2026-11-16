@@ -14,16 +14,16 @@ description: "asn1_encode_simple_der – API function"
 <p> <code>int asn1_encode_simple_der(unsigned int </code><i>etype</i><code>, const unsigned char * </code><i>str</i><code>, unsigned int </code><i>str_len</i><code>, unsigned char * </code><i>tl</i><code>, unsigned int * </code><i>tl_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>unsigned int etype</p>
-<dd> The type of the string to be encoded (ASN1_ETYPE_)</p>
-<dt>const unsigned char * str</p>
-<dd> the string data.</p>
-<dt>unsigned int str_len</p>
-<dd> the string length</p>
-<dt>unsigned char * tl</p>
-<dd> the encoded tag and length</p>
-<dt>unsigned int * tl_len</p>
-<dd> the bytes of the <i>tl</i> field</dl>
+<dt>unsigned int etype</dt>
+<dd> The type of the string to be encoded (ASN1_ETYPE_)</dd>
+<dt>const unsigned char * str</dt>
+<dd> the string data.</dd>
+<dt>unsigned int str_len</dt>
+<dd> the string length</dd>
+<dt>unsigned char * tl</dt>
+<dd> the encoded tag and length</dd>
+<dt>unsigned int * tl_len</dt>
+<dd> the bytes of the <i>tl</i> field</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates the DER encoding for various simple ASN.1 types like strings etc. It stores the tag and length in <i>tl</i> , which should have space for at least <code>ASN1_MAX_TL_SIZE</code> bytes. Initially <i>tl_len</i> should contain the size of <i>tl</i> . </p>
 <p> The complete DER encoding should consist of the value in <i>tl</i> appended with the provided <i>str</i> .</p>
@@ -36,9 +36,9 @@ description: "asn1_encode_simple_der – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

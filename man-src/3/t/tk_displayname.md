@@ -68,7 +68,7 @@ Tcl_Interp *
 <code>Tk_Interp</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_WindowId</code> and the other names listed above are all macros that return fields from Tk&#8217;s local data structure for <i>tkwin</i>. None of these macros requires any interaction with the server; it is safe to assume that all are fast. </p>

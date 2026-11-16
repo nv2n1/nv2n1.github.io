@@ -14,11 +14,11 @@ description: "ata_pio_need_iordy – check if iordy needed"
 <p><i>adev</i></p>
 <dl>
 <dd>
-<dd>ATA device</dl>
+</dd><dd>ATA device</dd></dl>
 <h2>Description</h2>
 <p>Check if the current speed of the device requires IORDY. Used by various controllers for chip configuration.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

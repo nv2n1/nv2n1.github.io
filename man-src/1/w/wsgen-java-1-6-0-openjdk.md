@@ -9,7 +9,7 @@ description: "wsgen – JAX-WS 2.0 Beta"
 
 <p>wsgen &#8211; JAX-WS 2.0 Beta </p>
 <dl COMPACT>
-<dd>The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint implementation class (SEI) and generates all the required artifacts for web service deployment, and invocation. </p>
+<dd>The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint implementation class (SEI) and generates all the required artifacts for web service deployment, and invocation. </dd>
 </dl>
 <h2>Synopsis</h2>
 <pre><code>wsgen [options] &lt;SEI&gt;</code></pre>

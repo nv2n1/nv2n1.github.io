@@ -18,32 +18,32 @@ description: "gimp-remote – tells a running GIMP to open a (local or remote) i
 <h2>OPTIONS</h2>
 <p> <i>gimp-remote</i> accepts the following options:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a list of all commandline options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output the version info.</p>
-<dt><code>&#8211;display </code><i>display</i></p>
-<dd> Use the designated X display.</p>
-<dt><code>-e, &#8211;existing</code></p>
-<dd> If no running GIMP instance is found, don&#8217;t start a new one but exit.</p>
-<dt><code>-q, &#8211;query</code></p>
-<dd> Check if GIMP is running and exit. A status code of 0 indicates that a GIMP toolbox window has been found on this display.</p>
-<dt><code>-p, &#8211;print-xid</code></p>
-<dd> Like -q, but print the X Window ID of the toolbox window if GIMP is already running. If no such window exists nothing is printed.</p>
-<dt><code>-s, &#8211;no-splash</code></p>
-<dd> When starting GIMP, do not show the splash screen. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a list of all commandline options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output the version info.</dd>
+<dt><code>&#8211;display </code><i>display</i></dt>
+<dd> Use the designated X display.</dd>
+<dt><code>-e, &#8211;existing</code></dt>
+<dd> If no running GIMP instance is found, don&#8217;t start a new one but exit.</dd>
+<dt><code>-q, &#8211;query</code></dt>
+<dd> Check if GIMP is running and exit. A status code of 0 indicates that a GIMP toolbox window has been found on this display.</dd>
+<dt><code>-p, &#8211;print-xid</code></dt>
+<dd> Like -q, but print the X Window ID of the toolbox window if GIMP is already running. If no such window exists nothing is printed.</dd>
+<dt><code>-s, &#8211;no-splash</code></dt>
+<dd> When starting GIMP, do not show the splash screen. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>gimp-remote&nbsp;<wbr><a rel="nofollow" href="http://www.gimp.org/images/wilber_the_gimp.png">http://www.gimp.org/images/wilber_the_gimp.png</a></code></p>
-<dd> Loads the image from the GIMP website into a running GIMP or starts a new one.</p>
-<dt><code>gimp-remote wilber.xcf wilma.xcf</code></p>
-<dd> Loads the local files wilber.xcf and wilma.xcf into a running GIMP or starts a new one. </p>
+<dt><code>gimp-remote&nbsp;<wbr><a rel="nofollow" href="http://www.gimp.org/images/wilber_the_gimp.png">http://www.gimp.org/images/wilber_the_gimp.png</a></code></dt>
+<dd> Loads the image from the GIMP website into a running GIMP or starts a new one.</dd>
+<dt><code>gimp-remote wilber.xcf wilma.xcf</code></dt>
+<dd> Loads the local files wilber.xcf and wilma.xcf into a running GIMP or starts a new one. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display number. </p>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Sven Neumann and Simon Budig. </p>

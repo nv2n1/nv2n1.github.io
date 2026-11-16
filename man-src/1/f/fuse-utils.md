@@ -18,85 +18,85 @@ url: "/docs/linux/man/1-fuse-utils/"
  <i>audio2tape</i>
 <dl>
 <dt>
-<dd> Convert an audio file into a tape format.</dl>
+</dt><dd> Convert an audio file into a tape format.</dd></dl>
  
 
  <i>createhdf</i>
 <dl>
 <dt>
-<dd> Create a blank IDE hard disk image in .hdf format.</dl>
+</dt><dd> Create a blank IDE hard disk image in .hdf format.</dd></dl>
  
 
  <i>listbasic</i>
 <dl>
 <dt>
-<dd> Extract the BASIC program from a ZX Spectrum file.</dl>
+</dt><dd> Extract the BASIC program from a ZX Spectrum file.</dd></dl>
  
 
  <i>profile2map</i>
 <dl>
 <dt>
-<dd> Convert Fuse profiler output into Z80-style map format.</dl>
+</dt><dd> Convert Fuse profiler output into Z80-style map format.</dd></dl>
  
 
  <i>raw2hdf</i>
 <dl>
 <dt>
-<dd> Create an .hdf hard disk image from a raw data file.</dl>
+</dt><dd> Create an .hdf hard disk image from a raw data file.</dd></dl>
  
 
  <i>rzxcheck</i>
 <dl>
 <dt>
-<dd> Verify the `competition mode' signature in an RZX input recording file.</dl>
+</dt><dd> Verify the `competition mode' signature in an RZX input recording file.</dd></dl>
  
 
  <i>rzxdump</i>
 <dl>
 <dt>
-<dd> Display the contents of an RZX file.</dl>
+</dt><dd> Display the contents of an RZX file.</dd></dl>
  
 
  <i>rzxtool</i>
 <dl>
 <dt>
-<dd> Make simple modifications to an RZX file.</dl>
+</dt><dd> Make simple modifications to an RZX file.</dd></dl>
  
 
  <i>scl2trd</i>
 <dl>
 <dt>
-<dd> Convert .scl disk images into .trd format.</dl>
+</dt><dd> Convert .scl disk images into .trd format.</dd></dl>
  
 
  <i>snap2tzx</i>
 <dl>
 <dt>
-<dd> Convert a snapshot into a .tzx tape image.</dl>
+</dt><dd> Convert a snapshot into a .tzx tape image.</dd></dl>
  
 
  <i>snapconv</i>
 <dl>
 <dt>
-<dd> Convert between various snapshot formats.</dl>
+</dt><dd> Convert between various snapshot formats.</dd></dl>
  
 
  <i>tape2wav</i>
 <dl>
 <dt>
-<dd> Convert a tape file into .wav audio format.</dl>
+</dt><dd> Convert a tape file into .wav audio format.</dd></dl>
  
 
  <i>tapeconv</i>
 <dl>
 <dt>
-<dd> Convert between various tape formats.</dl>
+</dt><dd> Convert between various tape formats.</dd></dl>
  
 
  <i>tzxlist</i>
 <dl>
 <dt>
-<dd> Display the contents of a .tzx tape image.</dl>
+</dt><dd> Display the contents of a .tzx tape image.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

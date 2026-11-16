@@ -15,7 +15,7 @@ eventfd_ctx_fileget - Acquires a reference to the internal eventfd context.
 <h2>Arguments</h2>
 
 <i>file</i>
-<dl><dd>[in] Eventfd file pointer.</dl>
+<dl><dd>[in] Eventfd file pointer.</dd></dl>
 
 <h2>Description</h2>
 
@@ -26,3 +26,4 @@ eventfd_ctx_fileget - Acquires a reference to the internal eventfd context.
 <h2>Copyright</h2>
 
 
+</dd>

@@ -17,28 +17,28 @@ description: "pq2-cache – display or clear the local cache content of a remote
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ACTIONS</h2>
 <dl>
-<dt><i>show</i></p>
-<dd> Display cache content (default)</p>
-<dt><i>clear</i></p>
-<dd> Clear cache content</dl>
+<dt><i>show</i></dt>
+<dd> Display cache content (default)</dd>
+<dt><i>clear</i></dt>
+<dd> Clear cache content</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>datasets</i></p>
-<dd> Datasets to processed; wildcards are supported.</dl>
+<dt><i>datasets</i></dt>
+<dd> Datasets to processed; wildcards are supported.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</p>
-<dd> Alternative way to define the datasets to be removed.</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the data server providing the information; it must include the directory. Can also be specified via the environment variables PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>&#8211;dataset</code>=&lt;<i>dataset</i>&gt;</dt>
+<dd> Alternative way to define the datasets to be removed.</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the data server providing the information; it must include the directory. Can also be specified via the environment variables PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> See <i>setup-pq2</i>(1).</p>
 <h2>SEE ALSO</h2>

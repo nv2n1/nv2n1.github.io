@@ -14,12 +14,12 @@ description: "gnutls_x509_crq_set_key_purpose_oid – API function"
 <p> <code>int gnutls_x509_crq_set_key_purpose_oid(gnutls_x509_crq_t </code><i>crq</i><code>, const void * </code><i>oid</i><code>, unsigned int </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> a certificate of type <code>gnutls_x509_crq_t</code></p>
-<dt>const void * oid</p>
-<dd> a pointer to a (0)-terminated string that holds the OID</p>
-<dt>unsigned int critical</p>
-<dd> Whether this extension will be critical or not</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> a certificate of type <code>gnutls_x509_crq_t</code></dd>
+<dt>const void * oid</dt>
+<dd> a pointer to a (0)-terminated string that holds the OID</dd>
+<dt>unsigned int critical</dt>
+<dd> Whether this extension will be critical or not</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the key purpose OIDs of the Certificate. These are stored in the Extended Key Usage extension (2.5.29.37) See the GNUTLS_KP_* definitions for human readable names. </p>
 <p> Subsequent calls to this function will append OIDs to the OID list.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crq_set_key_purpose_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

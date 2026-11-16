@@ -12,29 +12,11 @@ description: "sc::SymmOneBodyIntIter –"
 <p> Inherits <code>sc::OneBodyIntIter</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SymmOneBodyIntIter (const Ref&lt; OneBodyInt &gt; &amp;, const Ref&lt; PetiteList &gt; &amp;)
-
-
-
 void start (int ist=0, int jst=0, int ien=0, int jen=0)
-
-
-
 void next ()
-
-
-
 double scale () const
-
-
-
 bool cloneable ()
-
-
-
 Ref&lt; OneBodyIntIter &gt; clone ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>PetiteList</code> &gt; <code>pl</code> </p>
 <h2>Author</h2>

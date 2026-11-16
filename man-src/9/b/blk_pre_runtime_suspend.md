@@ -15,7 +15,7 @@ blk_pre_runtime_suspend - Pre runtime suspend check
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue of the device</dl>
+<dl><dd></dd><dd>the queue of the device</dd></dl>
 
 <h2>Description</h2>
 

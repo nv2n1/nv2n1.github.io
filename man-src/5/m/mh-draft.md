@@ -21,18 +21,18 @@ description: "mh-draft – draft folder facility for nmh message system"
 <dl>
 <dd>
 <pre>send -draftfolder +drafts first</pre>
-</dl>
+</dd></dl>
 <p> is the same as </p>
 <dl>
 <dd>
 <pre>send -draftfolder +drafts -draftmessage first</pre>
-</dl>
+</dd></dl>
 <p> To make all this a bit more clear, here are some examples. Let&#8217;s assume that the following entries are in the <code>nmh</code> profile: </p>
 <dl>
 <dd>
 <pre>Draft-Folder: +drafts
 sendf: -draftfolder +drafts</pre>
-</dl>
+</dd></dl>
 <p> Furthermore, let&#8217;s assume that the program <code>sendf</code> is a (symbolic) link in the user&#8217;s <i>$HOME/bin/</i> directory to <code>send</code>. Then, any of the commands </p>
 <dl>
 <dd>
@@ -40,27 +40,27 @@ sendf: -draftfolder +drafts</pre>
 dist
 forw
 repl</pre>
-</dl>
+</dd></dl>
 <p> constructs the message draft in the `draft&#8217; folder using the `new&#8217; message number. Furthermore, they each define `cur&#8217; in this folder to be that message draft. If the user were to use the <code>quit</code> option at `What now?&#8217; level, then later on, if no other draft composition was done, the draft could be sent with simply </p>
 <dl>
 <dd>
 <pre>sendf</pre>
-</dl>
+</dd></dl>
 <p> Or, if more editing was required, the draft could be edited with </p>
 <dl>
 <dd>
 <pre>comp -use</pre>
-</dl>
+</dd></dl>
 <p> Instead, if other drafts had been composed in the meantime, so that this message draft was no longer known as `cur&#8217; in the `draft&#8217; folder, then the user could <code>scan</code> the folder to see which message draft in the folder should be used for editing or sending. Clever users could even employ a backquoted <code>pick</code> to do the work: </p>
 <dl>
 <dd>
 <pre>comp -use `pick +drafts -to nmh-workers`</pre>
-</dl>
+</dd></dl>
 <p> or </p>
 <dl>
 <dd>
 <pre>sendf `pick +drafts -to nmh-workers`</pre>
-</dl>
+</dd></dl>
 <p> Note that in the <code>comp</code> example, the output from <code>pick</code> must resolve to a single message draft (it makes no sense to talk about composing two or more drafts with one invocation of <code>comp</code>). In contrast, in the <code>send</code> example, as many message drafts as desired can appear, since <code>send</code> doesn&#8217;t mind sending more than one draft at a time. </p>
 <p> Note that the argument <code>-draftfolder</code> <i>+folder</i> is not included in the profile entry for <code>send</code>, since when <code>comp</code>, et. al., invoke <code>send</code> directly, they supply <code>send</code> with the UNIX pathname of the message draft, and <code>not</code> a <code>-draftmessage</code> <i>msg</i> argument. As far as <code>send</code> is concerned, a draft folder is not being used. </p>
 <p> It is important to realize that <code>nmh</code> treats the draft folder like a standard <code>nmh</code> folder in nearly all respects. There are two exceptions: </p>
@@ -69,7 +69,7 @@ repl</pre>
 <dl>
 <dd>
 <pre>scan +drafts</pre>
-</dl>
+</dd></dl>
 <p> it might become the current folder, depending on the context changes of the <code>nmh</code> program in question. </p>
 <p> Second, although conceptually <code>send</code> deletes the `msgs&#8217; named in the draft folder, it does not call <i>delete-prog</i> to perform the deletion.</p>
 <h3>What Happens if the Draft Exists</h3>
@@ -78,7 +78,7 @@ repl</pre>
 <dd>
 <pre>Draft ``/home/foobar/nmhbox/draft'' exists (xx bytes).
 Disposition?</pre>
-</dl>
+</dd></dl>
 <p> The appropriate responses and their meanings are: </p>
 <dl>
 <dd>
@@ -86,17 +86,17 @@ Disposition?</pre>
 <code>^list~^</code>- lists the draft
 <code>^refile~^</code>- files the draft into a folder and starts afresh
 <code>^quit~^</code>- leaves the draft intact and exits</pre>
-</dl>
+</dd></dl>
 <p> In addition, if you specified <code>-draftfolder</code> <i>folder</i> to the command, then one other response will be accepted: </p>
 <dl>
 <dd>
 <pre><code>^new~^</code>- finds a new draft</pre>
-</dl>
+</dd></dl>
 <p> just as if <code>-draftmessage</code> <i>new</i> had been given. Finally, the <code>comp</code> command will accept one more response: </p>
 <dl>
 <dd>
 <pre><code>^use~^</code>- re-uses the draft</pre>
-</dl>
+</dd></dl>
 <p> just as if <code>-use</code> had been given.</p>
 <h2>Context</h2>
 <p>None</p>

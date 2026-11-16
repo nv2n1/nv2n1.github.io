@@ -23,17 +23,17 @@ description: "myproxy-replicate – Stores data from the MyProxy master reposito
 <p> This utility will need to run at some specified interval in order to keep the slave repositories semi current with the Master repository. This can best be accomplished using cron, or some similar mechanism.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code>, <code>-verbose</code></p>
-<dd>Enables verbose debugging output to the terminal.</p>
-<dt><code>-h</code>, <code>-help</code></p>
-<dd>Displays command usage text and exits.</p>
-<dt><code>-u</code>, <code>-usage</code></p>
-<dd>Displays command usage text and exits.</p>
-<dt><code>-r</code> <i>dir</i>, <code>-storage</code> <i>dir</i></p>
-<dd>Specifies the location of the credential storage directory. The directory must be accessible only by the user running the <code>myproxy-server</code> process for security reasons. Default: /var/lib/myproxy or /var/myproxy or <tt>$GLOBUS_LOCATION</tt>/var/myproxyA</p>
-<dt><code>-c</code> <i>file</i>, <code>-config</code> <i>file</i></p>
+<dt><code>-v</code>, <code>-verbose</code></dt>
+<dd>Enables verbose debugging output to the terminal.</dd>
+<dt><code>-h</code>, <code>-help</code></dt>
+<dd>Displays command usage text and exits.</dd>
+<dt><code>-u</code>, <code>-usage</code></dt>
+<dd>Displays command usage text and exits.</dd>
+<dt><code>-r</code> <i>dir</i>, <code>-storage</code> <i>dir</i></dt>
+<dd>Specifies the location of the credential storage directory. The directory must be accessible only by the user running the <code>myproxy-server</code> process for security reasons. Default: /var/lib/myproxy or /var/myproxy or <tt>$GLOBUS_LOCATION</tt>/var/myproxyA</dd>
+<dt><code>-c</code> <i>file</i>, <code>-config</code> <i>file</i></dt>
 <dd>Specifies the location of the myproxy-server configuration file. Default: /etc/myproxy-server.config or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><tt>$GLOBUS_LOCA</tt>-TION/etc/myproxy-server.config</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><tt>$GLOBUS_LOCA</tt>-TION/etc/myproxy-server.config</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-retrieve/">myproxy-retrieve</a></i>(1) <i>myproxy-delegate</i>(1) <i><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></i>(8) <i><a href="/docs/linux/man/5-myproxy-server-config/">myproxy-server.config</a></i>(5)</p>
 <h2>Author</h2>

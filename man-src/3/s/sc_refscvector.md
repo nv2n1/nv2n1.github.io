@@ -11,7 +11,6 @@ description: "sc::RefSCVector –"
 <p> The <code>RefSCVector</code> class is a smart pointer to an <code>SCVector</code> specialization.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;matrix.h&gt;</code></pre>
 <p> Inherits <code>Ref&lt; SCVector &gt;</code>.</p>
 <h3>Public Member Functions</h3>

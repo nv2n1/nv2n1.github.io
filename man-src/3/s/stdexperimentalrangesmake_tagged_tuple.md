@@ -11,14 +11,10 @@ std::experimental::ranges::make_tagged_tuple - std::experimental::ranges::make_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / tuple&gt;
-
     template &lt;TagSpecifier... Tags, class... Types&gt;
-
 requires sizeof...(Tags) == sizeof...(Types)(ranges TS)
-
                                 constexpr ranges::tagged&lt;/*see below*/, Tags...&gt; make_tagged_tuple(Types &amp;&amp;...t);
 Convenience function for creating a tagged tuple, deducing the element types from the arguments (the tag specifiers must be explicitly specified).
-
 The see below portion of the return type is decltype(std::make_tuple(std::forward&lt;Types&gt;(t)...)).
 </code></pre>
 

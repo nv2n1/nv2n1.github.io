@@ -21,213 +21,213 @@ description: "colmux – multiplex communications to multiple systems running co
 <p> <code>-address list|pdsh|filename</code></p>
 <dl>
 <dt>
-<dd> Specify any combination of addresses as hostnames OR in pdsh -w format OR a filename containing a list of hostnames/addresses, 1 per line. You MUST have passwordless ssh access to these nodes. If a different username is required, be sure to specify addresses in username [at] host format noting you do not have to have the same username on each host. If specified, these usernames will override those specified with the -username switch. rsh access is not supported.</dl>
+</dt><dd> Specify any combination of addresses as hostnames OR in pdsh -w format OR a filename containing a list of hostnames/addresses, 1 per line. You MUST have passwordless ssh access to these nodes. If a different username is required, be sure to specify addresses in username [at] host format noting you do not have to have the same username on each host. If specified, these usernames will override those specified with the -username switch. rsh access is not supported.</dd></dl>
 <p> <code>-command switches</code></p>
 <dl>
 <dt>
-<dd> One can specify virtually any collectl command here, both in real-time or playback mode. Some switches may only be used during one mode or the other and colmux will usually let you know if you specify an invalid combination or an otherwise restricted switch. Only those directly affecting colmux are listed below: </p>
+</dt><dd> One can specify virtually any collectl command here, both in real-time or playback mode. Some switches may only be used during one mode or the other and colmux will usually let you know if you specify an invalid combination or an otherwise restricted switch. Only those directly affecting colmux are listed below: </dd>
 <p> <code>&#8211;from, &#8211;thru</code></p>
 <dl>
 <dt>
-<dd> Limit the timeframe for data being played back, noting you can include both the from and thru times with the &#8211;from switch if you separate then with a hyphen.</dl>
+</dt><dd> Limit the timeframe for data being played back, noting you can include both the from and thru times with the &#8211;from switch if you separate then with a hyphen.</dd></dl>
 <p> <code>-o time-format</code></p>
 <dl>
 <dt>
-<dd> This is a &quot;magic&quot; switch in that it not only tells collectl how to display dates/times (no other options are permitted using -o other than those from the set [dDTm]), it also tells colmux how to display dates/times too. </p>
+</dt><dd> This is a &quot;magic&quot; switch in that it not only tells collectl how to display dates/times (no other options are permitted using -o other than those from the set [dDTm]), it also tells colmux how to display dates/times too. </dd>
 <p> In single line mode, the timestamp will either come from the host system in real-time mode OR the first host when run in playback mode. This is the most common use/need for this switch. But be careful in choosing column numbers with -cols as the position of the data shifts by 1 when time is included and by 2 if date and time are. Using -test will correctly show the shifted positions but only if you include -o with the command at the same time you use -test. </p>
 <p> In real-time/top mode this switch is not allowed since colmux simply reports the current time of the system it is running on. </p>
 <p> When playing back data multi-line formatted data from one or more files, a timestamp for each interval is reported, consisting of the time of that interval. When this switch is included, each line will be tagged with an appropriate timestamp since on rare occasions they may not necessarily all be identical.</dl>
 <p> <code>-p playback-file</code></p>
 <dl>
 <dt>
-<dd> This switch tells colmux to run in playback mode. The filename should include the directory location and is usually specified with wild cards, limiting the selected file(s) to a specific date. When those files are on the same host (-address is not specified), they may be for multiple hosts, but when the files are on remote hosts they must all be for be that unique host. If the file specification includes the string TODAY or YESTERDAY they will be replaced with *yyyymmdd* for that date.</dl>
+</dt><dd> This switch tells colmux to run in playback mode. The filename should include the directory location and is usually specified with wild cards, limiting the selected file(s) to a specific date. When those files are on the same host (-address is not specified), they may be for multiple hosts, but when the files are on remote hosts they must all be for be that unique host. If the file specification includes the string TODAY or YESTERDAY they will be replaced with *yyyymmdd* for that date.</dd></dl>
 <p> <code>-P</code></p>
 <dl>
 <dt>
-<dd> Run collectl in plot-format. This allows one to specify just about any combination of subsystems since all data is always displayed on a single line. However, due to the lack of formatting, this also makes no sense for multi-line displays and is therefore only supported in single-line format.</dl>
+</dt><dd> Run collectl in plot-format. This allows one to specify just about any combination of subsystems since all data is always displayed on a single line. However, due to the lack of formatting, this also makes no sense for multi-line displays and is therefore only supported in single-line format.</dd></dl>
 </dl>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Show a brief help message and exit.</dl>
+</dt><dd> Show a brief help message and exit.</dd></dl>
 <p> <code>-hostwidth n</code></p>
 <dl>
 <dt>
-<dd> By default, colmux set the hostwidth to 8, unless it sees something wider and for most situations this is sufficient. However, if one specifies hostnames that are aliases of the longer hostname, colmux has no way of knowing the real hostlengths until after it starts receiving data from collectl and the formatting will be off if the hostnames are longer than the default. To overcome this problem, use this switch to force the hostname to be wider.</dl>
+</dt><dd> By default, colmux set the hostwidth to 8, unless it sees something wider and for most situations this is sufficient. However, if one specifies hostnames that are aliases of the longer hostname, colmux has no way of knowing the real hostlengths until after it starts receiving data from collectl and the formatting will be off if the hostnames are longer than the default. To overcome this problem, use this switch to force the hostname to be wider.</dd></dl>
 <p> <code>-lines</code></p>
 <dl>
 <dt>
-<dd> Change the number of lines that are displayed for each interval in multi-line mode. The default will be determined by the terminal size returned by the linux resize command if present. If that command is not present, the size will be initially set to 24. If -lines is greater than the terminal size or 0, top-like behavior will not be used when in real-time mode. </p>
+</dt><dd> Change the number of lines that are displayed for each interval in multi-line mode. The default will be determined by the terminal size returned by the linux resize command if present. If that command is not present, the size will be initially set to 24. If -lines is greater than the terminal size or 0, top-like behavior will not be used when in real-time mode. </dd>
 <p> Single-line format controls the number of lines displayed between headers. A value of 0 will only display the header one time.</dl>
 <p> <code>-noescape</code></p>
 <dl>
 <dt>
-<dd> Colmux uses brute-force screen formatting, that is it generates its own VT100 escape sequences to clear lines and/or move the cursor. On some occasions you may want to disable this sequences if you wish to recode the output and do your own post-processing of it. This switch will do just that.</dl>
+</dt><dd> Colmux uses brute-force screen formatting, that is it generates its own VT100 escape sequences to clear lines and/or move the cursor. On some occasions you may want to disable this sequences if you wish to recode the output and do your own post-processing of it. This switch will do just that.</dd></dl>
 <p> <code>-port</code></p>
 <dl>
 <dt>
-<dd> Sometimes a remote version of collectl is already using the default socket. This allows one to start another instance and override that value.</dl>
+</dt><dd> Sometimes a remote version of collectl is already using the default socket. This allows one to start another instance and override that value.</dd></dl>
 <p> <code>-test</code></p>
 <dl>
 <dt>
-<dd> This tells colmux to execute the specified collectl command either locally or on the first remote system specified by -address, print the associated header with the selected column(s) highlighted and also include each column name along with its ordinal number, making it fairly easy to make sure you&#8217;ve selected the right column(s).</dl>
+</dt><dd> This tells colmux to execute the specified collectl command either locally or on the first remote system specified by -address, print the associated header with the selected column(s) highlighted and also include each column name along with its ordinal number, making it fairly easy to make sure you&#8217;ve selected the right column(s).</dd></dl>
 <p> <code>-username name</code></p>
 <dl>
 <dt>
-<dd> Use this username for ALL ssh commands. It can be overridden for specific hosts by specifying them with the -address switch with the desired hostnames.</dl>
+</dt><dd> Use this username for ALL ssh commands. It can be overridden for specific hosts by specifying them with the -address switch with the desired hostnames.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the version and exit. It will also report if Term::ReadKey is installed and if so what its version number is.</dl>
+</dt><dd> Display the version and exit. It will also report if Term::ReadKey is installed and if so what its version number is.</dd></dl>
 <p> Playback Mode Specific </p>
 <p> The following additional switches only apply to playback mode. There are no real-time mode specific switches. </p>
 <p> <code>-delay seconds</code></p>
 <dl>
 <dt>
-<dd> Introduce a delay between intervals in seconds. You can specify fractional values. Not using this switch will cause the output to be displayed as fast as it can be rendered.</dl>
+</dt><dd> Introduce a delay between intervals in seconds. You can specify fractional values. Not using this switch will cause the output to be displayed as fast as it can be rendered.</dd></dl>
 <p> <code>-home</code></p>
 <dl>
 <dt>
-<dd> Move the cursor to the home position (upper left-hand corner) of the display to use a top-like display format. This ONLY applies to multi-line mode when in playback mode and provides a mechanism for displaying recorded data in a top-like fashion.</dl>
+</dt><dd> Move the cursor to the home position (upper left-hand corner) of the display to use a top-like display format. This ONLY applies to multi-line mode when in playback mode and provides a mechanism for displaying recorded data in a top-like fashion.</dd></dl>
 <p> <code>-hostfilter addr[,addr]</code></p>
 <dl>
 <dt>
-<dd> When playing back files for multiple hosts on the local system, sometimes you do not want to play back ALL the host files. This filter allows you to specify only those hosts which you want to process. The format of the list of addresses is specified in the same way as -address except that you cannot specify a filename.</dl>
+</dt><dd> When playing back files for multiple hosts on the local system, sometimes you do not want to play back ALL the host files. This filter allows you to specify only those hosts which you want to process. The format of the list of addresses is specified in the same way as -address except that you cannot specify a filename.</dd></dl>
 <p> <code>-nosort</code></p>
 <dl>
 <dt>
-<dd> Intended primarily for output that would be redirected to a file, do not sort or include any escape sequences in the output.</dl>
+</dt><dd> Intended primarily for output that would be redirected to a file, do not sort or include any escape sequences in the output.</dd></dl>
 <p> Multi-Line Format </p>
 <dl>
 <dt>
-<dd> When there is more output then will fit on the screen, colmux includes the text:</p>
+</dt><dd> When there is more output then will fit on the screen, colmux includes the text:</dd>
 <dl>
 <dt>
-<dd> Displaying: lines xx thru yy out of zz</dl>
+</dt><dd> Displaying: lines xx thru yy out of zz</dd></dl>
 <p> on the right-side of the top line of the display, where xx is typically 1. </p>
 <p> However, once colmux is running, one might want to look at subsequent lines, ie those below the bottom of the screen and therefore invisible. If the ReadKey module is installed, one can simply use the PageDown key to move down the display and the PageUp key to move in the other direction. If ReadKey is not installed, typing the multi-key sequences pd&lt;ENTER&gt; or pu&lt;ENTER&gt; will cause the same thing to happen.</dl>
 <p> <code>-colhelp</code></p>
 <dl>
 <dt>
-<dd> When you wish to change the sort column and the arrow keys aren&#8217;t available to you, it may be cumbersome to identify the number of the column to type in followed by RETURN. This tells colmux to display the numbers over each column eliminating the need to manually count them and find the one you want.</dl>
+</dt><dd> When you wish to change the sort column and the arrow keys aren&#8217;t available to you, it may be cumbersome to identify the number of the column to type in followed by RETURN. This tells colmux to display the numbers over each column eliminating the need to manually count them and find the one you want.</dd></dl>
 <p> <code>-column num</code></p>
 <dl>
 <dt>
-<dd> Set the sort column to this number. The column numbering is determined by the columns returned by collectl for the requested command. Since date/time columns are optional for non-plot data, their inclusion will change the numbering of the columns so if you are not sure you selected the correct column, you should first execute your command with -test included. </p>
+</dt><dd> Set the sort column to this number. The column numbering is determined by the columns returned by collectl for the requested command. Since date/time columns are optional for non-plot data, their inclusion will change the numbering of the columns so if you are not sure you selected the correct column, you should first execute your command with -test included. </dd>
 <p> You can also change the column number interactively with the RIGHT/LEFT arrow keys IF the ReadKey module is installed (see colmux -version) OR simply type it in followed by the &lt;ENTER&gt; key.</dl>
 <p> <code>-finalcr</code></p>
 <dl>
 <dt>
-<dd> There is a real odd case in which you might want to pipe colmux real-time output to a script for further processing. However, if you do this you can&#8217;t read the final line with a routine that expects a terminating CR, like python&#8217;s readline(). Rather, that last line and the one that follows will be returned as one long string. This switch tell colmux to insert that final CR, which WILL mess up the screen under normal operations, so be forewarned.</dl>
+</dt><dd> There is a real odd case in which you might want to pipe colmux real-time output to a script for further processing. However, if you do this you can&#8217;t read the final line with a routine that expects a terminating CR, like python&#8217;s readline(). Rather, that last line and the one that follows will be returned as one long string. This switch tell colmux to insert that final CR, which WILL mess up the screen under normal operations, so be forewarned.</dd></dl>
 <p> <code>-hostformat char:pos</code></p>
 <dl>
 <dt>
-<dd> There are times one has long hostnames which can either take up valuable screen real estate or are simply painful to look at. This switch may evolve over time and is currently targetted as hostnames that have repeating parts along with a unique part, separated by a character such as a hyphen. This switch allows you to specify a single character followed by the piece of the hostname you&#8217;d like to see displayed. For example, if you have a hostname like aaa-bbbb-cccc-dddd, -hostformat -:3 will cause the cccc piece to be displayed.</dl>
+</dt><dd> There are times one has long hostnames which can either take up valuable screen real estate or are simply painful to look at. This switch may evolve over time and is currently targetted as hostnames that have repeating parts along with a unique part, separated by a character such as a hyphen. This switch allows you to specify a single character followed by the piece of the hostname you&#8217;d like to see displayed. For example, if you have a hostname like aaa-bbbb-cccc-dddd, -hostformat -:3 will cause the cccc piece to be displayed.</dd></dl>
 <p> <code>-nobold</code></p>
 <dl>
 <dt>
-<dd> Do not highlight the selected column. This may be useful when redirecting output to a file and you do not want the associated escape sequences to be written to it.</dl>
+</dt><dd> Do not highlight the selected column. This may be useful when redirecting output to a file and you do not want the associated escape sequences to be written to it.</dd></dl>
 <p> <code>-reverse</code></p>
 <dl>
 <dt>
-<dd> Reverse the default sort order. You can also change the direction of the sort interactively with the UP/DOWN arrow keys IF the ReadKey module is installed (see colmux -version)<br />
-&nbsp;<wbr>OR simply type the r key and&nbsp;<wbr>&lt;ENTER&gt;.&nbsp;<wbr>&nbsp;<wbr></dl>
+</dt><dd> Reverse the default sort order. You can also change the direction of the sort interactively with the UP/DOWN arrow keys IF the ReadKey module is installed (see colmux -version)<br />
+&nbsp;<wbr>OR simply type the r key and&nbsp;<wbr>&lt;ENTER&gt;.&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <p> <code>-zero</code></p>
 <dl>
 <dt>
-<dd> Do not display any rows with 0 in the sort column. You can also type z&lt;ENTER&gt;interactively.</dl>
+</dt><dd> Do not display any rows with 0 in the sort column. You can also type z&lt;ENTER&gt;interactively.</dd></dl>
 <p> Single-Line Format </p>
 <p> <code>-col1000</code></p>
 <dl>
 <dt>
-<dd> Divide each column by 1000 before display</dl>
+</dt><dd> Divide each column by 1000 before display</dd></dl>
 <p> <code>-colk</code></p>
 <dl>
 <dt>
-<dd> Divide each column by 1024 before display</dl>
+</dt><dd> Divide each column by 1024 before display</dd></dl>
 <p> <code>-collog10</code></p>
 <dl>
 <dt>
-<dd> Remap large numbers to a smaller number of values by taking the log10 of them and further transforming by the followign mapping: 0,1 to 0, 10 to 10, 100 to 20, 1000 to 30, 10000 to 40, &#8230; 1e9 to 90.</dl>
+</dt><dd> Remap large numbers to a smaller number of values by taking the log10 of them and further transforming by the followign mapping: 0,1 to 0, 10 to 10, 100 to 20, 1000 to 30, 10000 to 40, &#8230; 1e9 to 90.</dd></dl>
 <p> <code>-cols num,&#8230;</code></p>
 <dl>
 <dt>
-<dd> Group all data together for each host by column number(s). As with -column, you can confirm the correct column(s) have been selected by first running with -test.</dl>
+</dt><dd> Group all data together for each host by column number(s). As with -column, you can confirm the correct column(s) have been selected by first running with -test.</dd></dl>
 <p> <code>-colnodet</code></p>
 <dl>
 <dt>
-<dd> Do not show data for individual hosts, just display the totals.</dl>
+</dt><dd> Do not show data for individual hosts, just display the totals.</dd></dl>
 <p> <code>-colnodiv num,&#8230;</code></p>
 <dl>
 <dt>
-<dd> Do not divide the specified column numbers by 1000 or 1024 when col1000 or colk or apply the colllog10 transformation when specified. A typical usage is if you want to look at cpu loads as well as network or disk stats in which case you may want to divide the latter by 1024 but not the cpu.</dl>
+</dt><dd> Do not divide the specified column numbers by 1000 or 1024 when col1000 or colk or apply the colllog10 transformation when specified. A typical usage is if you want to look at cpu loads as well as network or disk stats in which case you may want to divide the latter by 1024 but not the cpu.</dd></dl>
 <p> <code>-colnoinst</code></p>
 <dl>
 <dt>
-<dd> Do no include instance portion (and surrounding brackets) in totals column headers.</dl>
+</dt><dd> Do no include instance portion (and surrounding brackets) in totals column headers.</dd></dl>
 <p> <code>-coltotal</code></p>
 <dl>
 <dt>
-<dd> Include the totals for each column to the right.</dl>
+</dt><dd> Include the totals for each column to the right.</dd></dl>
 <p> <code>-colwidth</code></p>
 <dl>
 <dt>
-<dd> Set the output columns to this width, typically used in conjunction with -col1000 or colk to allow more hosts to fit onto the same line. It can also be used if the host names are too narrow for column headers and you have room to display wider names.</dl>
+</dt><dd> Set the output columns to this width, typically used in conjunction with -col1000 or colk to allow more hosts to fit onto the same line. It can also be used if the host names are too narrow for column headers and you have room to display wider names.</dd></dl>
 <p> Exception Reporting Specific </p>
 <p> In single-line format, rather than wait for all hosts to report their data, colmux simply reports the last data seen when the time to generate a line of output has come. In most cases, these do reflect the most recent data values but in times of load, the data may be late getting to colmux and so a previous value may be reported. If the age of that data exceeds a defined number of intervals, the default is currently 2, an exception value will be reported of -1. At other times it has been seen where kernel/driver bugs may cause incorrect values to be reported as negative numbers and those values are also reported as -1. Both the age and exception values can be changed with the following switches. </p>
 <p> <code>-age number</code></p>
 <dl>
 <dt>
-<dd> When initially starting up and all hosts have not yet reported any data, colmux will display a -1 to indicate no data has been seen yet. If during processing a host fails to report in -age intervals, the default is 2, colmux will also report a -1 indicating the data is stale.</dl>
+</dt><dd> When initially starting up and all hosts have not yet reported any data, colmux will display a -1 to indicate no data has been seen yet. If during processing a host fails to report in -age intervals, the default is 2, colmux will also report a -1 indicating the data is stale.</dd></dl>
 <p> <code>-negdataval val</code></p>
 <dl>
 <dt>
-<dd> In some cases, there could be erroneous data reported as negative numbers (though sometimes negative numbers are valid). When specified, replace any negative numbers with this value.</dl>
+</dt><dd> In some cases, there could be erroneous data reported as negative numbers (though sometimes negative numbers are valid). When specified, replace any negative numbers with this value.</dd></dl>
 <p> <code>-nodataval val</code></p>
 <dl>
 <dt>
-<dd> This switch allows you to change the -1 that is normally reported for missing or stale data to the specified value, most commonly 0.</dl>
+</dt><dd> This switch allows you to change the -1 that is normally reported for missing or stale data to the specified value, most commonly 0.</dd></dl>
 <p> Diagnostics </p>
 <p> The following switches are intended more for diagnostic purposes than normal operation, though are also worth using on appropriate occasions. </p>
 <p> <code>-debug val</code></p>
 <dl>
 <dt>
-<dd> This switch is for generating diagnostic information at various levels. It is actually a bit mask, whose values are listed in the beginning on colmux itself. Perhaps the most useful value is 1 as it will cause colmux to display all the remote commands issues to each host in the address list and can often reveal problems when things don&#8217;t seem to be working correctly</dl>
+</dt><dd> This switch is for generating diagnostic information at various levels. It is actually a bit mask, whose values are listed in the beginning on colmux itself. Perhaps the most useful value is 1 as it will cause colmux to display all the remote commands issues to each host in the address list and can often reveal problems when things don&#8217;t seem to be working correctly</dd></dl>
 <p> <code>-nocheck</code></p>
 <dl>
 <dt>
-<dd> This switch was initially included in an earlier version when remote host checking was causing problem in some cases and by skipping those checks, colmux would run more reliably. While it is felt that as of V3.2.0 these reachability checks are now reliable and should not be skipped, this switch has been left in place.</dl>
+</dt><dd> This switch was initially included in an earlier version when remote host checking was causing problem in some cases and by skipping those checks, colmux would run more reliably. While it is felt that as of V3.2.0 these reachability checks are now reliable and should not be skipped, this switch has been left in place.</dd></dl>
 <p> <code>-quiet</code></p>
 <dl>
 <dt>
-<dd> By default and when -nocheck not specified, colmux checks the versions of all collectl instances against that of the first node found to be running collectl and if different, reports the mismatch. This switch suppresses that warning. </p>
+</dt><dd> By default and when -nocheck not specified, colmux checks the versions of all collectl instances against that of the first node found to be running collectl and if different, reports the mismatch. This switch suppresses that warning. </dd>
 <p> When a connection is received from an unexpected address, a warning is also reported and the request promptly ignored. This switch also suppresses those messages as well. For more information on problems connecting, see CONNECTION PROBLEMS.</dl>
 <p> <code>-reachable</code></p>
 <dl>
 <dt>
-<dd> By default, when a node is found to not be reachable, colmux will remove it from its list of hosts and continue execution. This switch will tell colmux to exit when all hosts are not reachable.</dl>
+</dt><dd> By default, when a node is found to not be reachable, colmux will remove it from its list of hosts and continue execution. This switch will tell colmux to exit when all hosts are not reachable.</dd></dl>
 <p> Miscellaneous </p>
 <p> There are 2 switches whose descriptions don&#8217;t really fit anywhere else: </p>
 <p> <code>-colbin path</code></p>
 <dl>
 <dt>
-<dd> On rare occasions, such as testing a patch to collectl in a copy NOT in /usr/bin, you may want to tell colmux to use that copy instead of the standard one. Use this switch to point to that copy. Naturally that copy must exist in that location on all systems.</dl>
+</dt><dd> On rare occasions, such as testing a patch to collectl in a copy NOT in /usr/bin, you may want to tell colmux to use that copy instead of the standard one. Use this switch to point to that copy. Naturally that copy must exist in that location on all systems.</dd></dl>
 <p> <code>-keepalive secs</code></p>
 <dl>
 <dt>
-<dd> Colmux uses ssh to start collectl on each remote machine and then communications between collectl and colmux occur over a socket. Normally, ssh is configured to timeout after an interval of inactivity, such as 30 minutes, which means a long-running colmux session will begin to lose connections when this interval is reached. By specifying a keepalive interval, you&#8217;re telling the ssh to send a periodic keepalive to the other end so that connection doesn&#8217;t get dropped.</dl>
+</dt><dd> Colmux uses ssh to start collectl on each remote machine and then communications between collectl and colmux occur over a socket. Normally, ssh is configured to timeout after an interval of inactivity, such as 30 minutes, which means a long-running colmux session will begin to lose connections when this interval is reached. By specifying a keepalive interval, you&#8217;re telling the ssh to send a periodic keepalive to the other end so that connection doesn&#8217;t get dropped.</dd></dl>
 <p> <code>-retaddr addr</code></p>
 <dl>
 <dt>
-<dd> Tell remote collectls to open a socket on this address instead of the preselected one. For more details on this, see CONNECTION PROBLEMS.</dl>
+</dt><dd> Tell remote collectls to open a socket on this address instead of the preselected one. For more details on this, see CONNECTION PROBLEMS.</dd></dl>
 <p> <code>-timeout secs</code></p>
 <dl>
 <dt>
-<dd> By default, collectl waits up to 10 seconds for remote instances of collectl to connect back. On slower networks or when a very large number of instances have been started, they may fail to connect back in time. This switch will extend that timeout, but it also requires collectl V3.6.4 be used because earlier version do not support this feature.</dl>
+</dt><dd> By default, collectl waits up to 10 seconds for remote instances of collectl to connect back. On slower networks or when a very large number of instances have been started, they may fail to connect back in time. This switch will extend that timeout, but it also requires collectl V3.6.4 be used because earlier version do not support this feature.</dd></dl>
 <p> <code>-timerange secs</code></p>
 <dl>
 <dt>
-<dd> When colmux starts up and checks the connectivity to all the machines specified by -addr, it also gets their current date/time and using that computes the range of system times across all nodes. If that time is found to be more then -timerange seconds, colmux generates a warning as this difference could cause reporting probems. One can increase the range to get rid of the message (not recommended unless other factors are preventing nodes from responding quickly enough to the date command) OR suppress the warning with -quiet.</dl>
+</dt><dd> When colmux starts up and checks the connectivity to all the machines specified by -addr, it also gets their current date/time and using that computes the range of system times across all nodes. If that time is found to be more then -timerange seconds, colmux generates a warning as this difference could cause reporting probems. One can increase the range to get rid of the message (not recommended unless other factors are preventing nodes from responding quickly enough to the date command) OR suppress the warning with -quiet.</dd></dl>
 <h2>PLAYBACK MODE RESTRICTIONS</h2>
 <p> All logs being played back must have been collected using the same interval as colmux only looks at the first file/host to determine the appropriate value. </p>
 <p> It is assumed all clocks are reasonably well synchronized as colmux uses time to determine which data is to be displayed as a set. </p>

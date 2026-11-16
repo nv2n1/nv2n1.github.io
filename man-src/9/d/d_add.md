@@ -14,10 +14,10 @@ description: "d_add – add dentry to hash queues"
 <p><i>entry</i></p>
 <dl>
 <dd>
-<dd>dentry to add</dl>
+</dd><dd>dentry to add</dd></dl>
 <p> <i>inode</i></p>
 <dl>
-<dd>The inode to attach to this dentry</dl>
+<dd>The inode to attach to this dentry</dd></dl>
 <h2>Description</h2>
 <p>This adds the entry to the hash queues and initializes <i>inode</i>. The entry was actually filled in earlier during <code>d_alloc</code>.</p>
 <h2>Copyright</h2>

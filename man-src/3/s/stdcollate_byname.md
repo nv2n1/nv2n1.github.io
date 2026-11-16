@@ -10,9 +10,7 @@ description: "std::collate_byname – std::collate_byname"
 <p>std::collate_byname &#8211; std::collate_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class collate_byname : public std::collate&lt;CharT&gt;;</code></pre>
 <p>std::collate_byname is a std::collate facet which encapsulates locale-specific collation (comparison) and hashing of strings. Just like std::collate, it can be imbued in std::regex and applied, by means of std::locale::operator(), directly to all standard algorithms that expect a string comparison predicate.<br />
 Two specializations are provided by the standard library<br />

@@ -24,6 +24,6 @@ description: "QuantLib::FDDividendEngineBase – Abstract base class for dividen
 <p>Abstract base class for dividend engines. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>The dividend class really needs to be made more sophisticated to distinguish between fixed dividends and fractional dividends</dl>
+<dd>The dividend class really needs to be made more sophisticated to distinguish between fixed dividends and fractional dividends</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

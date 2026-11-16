@@ -16,10 +16,10 @@ description: "tfdocgen – Tilp Framework Doc Generator"
 <h2>OPTIONS</h2>
 <p> <code>tfdocgen</code> accepts the following options:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Romain LIEVIN &lt;roms [at] tilp.info&gt;. </p>
 <h2>Index</h2>

@@ -17,20 +17,20 @@ mongoc_socket_setsockopt (mongoc_socket_t *sock,
  socklen_t optlen);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>level</code></p>
-<dd>A sockopt level.</dl>
+<dt><code>level</code></dt>
+<dd>A sockopt level.</dd></dl>
 <dl COMPACT>
-<dt><code>optname</code></p>
-<dd>A sockopt name.</dl>
+<dt><code>optname</code></dt>
+<dd>A sockopt name.</dd></dl>
 <dl COMPACT>
-<dt><code>optval</code></p>
-<dd>A the value for the sockopt.</dl>
+<dt><code>optval</code></dt>
+<dd>A the value for the sockopt.</dd></dl>
 <dl COMPACT>
-<dt><code>optlen</code></p>
-<dd>A socklen_t that contains the length of optval.</dl>
+<dt><code>optlen</code></dt>
+<dd>A socklen_t that contains the length of optval.</dd></dl>
 <h2>Description</h2>
 <p>This is a helper function for <code>setsockopt(3)</code> \&amp;. </p>
 <h2>Returns</h2>

@@ -16,3 +16,4 @@ description: "lacheck – A consistency checker for LaTeX documents."
 <p> The things checked are: </p>
 <p> Mismatched groups (braces), environments and math mode delimiters. When a mismatch is found, line numbers for <i>both </i> start and end of the mismatch is given. The error messages comes in pairs, one for the end match and one for the beginning, marked with `&lt;-&#8216; and `-&gt;&#8217; respectively. </p>
 <p> Bad spacing including missing a `\ &#8216; after an abbreviation, missing an `\@&#8217; before a punctuation mark in a paragraph that is ended by an capital letter, double spaces like ` ~&#8217;, bad usage of ellipsis (like using &#8230; instead of \ldots, or using \ldots where 
+</p>

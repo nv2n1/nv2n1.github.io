@@ -19,8 +19,8 @@ description: "pamoil – turn a PAM image into an oil painting"
 <p> At the edges of the image, where the regular neighborhood would run off the edge of the image, <code>pamoil</code> uses a clipped neighborhood. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n </code><i>size</i></p>
-<dd> This is the size of the neighborhood used in the smearing. The neighborhood is this many pixels in all four directions. </p>
+<dt><code>-n </code><i>size</i></dt>
+<dd> This is the size of the neighborhood used in the smearing. The neighborhood is this many pixels in all four directions. </dd>
 <p> The default is 3. </p>
 </dl>
 <h2>SEE ALSO</h2>

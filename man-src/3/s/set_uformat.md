@@ -18,7 +18,6 @@ description: "set_uformat – Set the global current text encoding format. Alleg
    U_ASCII_CP  - alternative 8-bit codepage (see set_ucodepage())
    U_UNICODE   - fixed size, 16-bit Unicode characters
    U_UTF8      - variable size, UTF-8 format Unicode characters
-   
 </pre>
 <p> Although you can change the text format on the fly, this is not a good idea. Many strings, for example the names of your hardware drivers and any language translations, are loaded when you call allegro_init(), so if you change the encoding format after this, they will be in the wrong format, and things will not work properly. Generally you should only call set_uformat() once, before allegro_init(), and then leave it on the same setting for the duration of your program. </p>
 <h2>See Also</h2>

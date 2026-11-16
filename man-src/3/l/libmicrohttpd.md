@@ -21,10 +21,10 @@ description: "GNU libmicrohttpd – library for embedding HTTP servers"
 <p> libmicrohttpd is released under both the LGPL Version 2.1 or higher and the GNU GPL with eCos extension. For details on both licenses please read the respective appendix in the manual. </p>
 <h2>FILES</h2>
 <dl>
-<dt>microhttpd.h</p>
-<dd> libmicrohttpd include file</p>
-<dt>libmicrohttpd.so</p>
-<dd> libmicrohttpd library </p>
+<dt>microhttpd.h</dt>
+<dd> libmicrohttpd include file</dd>
+<dt>libmicrohttpd.so</dt>
+<dd> libmicrohttpd library </dd>
 </dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs by using mantis &lt;<a rel="nofollow" href="https://gnunet.org/bugs/">https://gnunet.org/bugs/</a>&gt;. </p>

@@ -14,16 +14,16 @@ description: "gnutls_x509_crq_set_subject_alt_name – API function"
 <p> <code>int gnutls_x509_crq_set_subject_alt_name(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_subject_alt_name_t </code><i>nt</i><code>, const void * </code><i>data</i><code>, unsigned int </code><i>data_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> a certificate request of type <code>gnutls_x509_crq_t</code></p>
-<dt>gnutls_x509_subject_alt_name_t nt</p>
-<dd> is one of the <code>gnutls_x509_subject_alt_name_t</code> enumerations</p>
-<dt>const void * data</p>
-<dd> The data to be set</p>
-<dt>unsigned int data_size</p>
-<dd> The size of data to be set</p>
-<dt>unsigned int flags</p>
-<dd> <code>GNUTLS_FSAN_SET</code> to clear previous data or <code>GNUTLS_FSAN_APPEND</code> to append.</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> a certificate request of type <code>gnutls_x509_crq_t</code></dd>
+<dt>gnutls_x509_subject_alt_name_t nt</dt>
+<dd> is one of the <code>gnutls_x509_subject_alt_name_t</code> enumerations</dd>
+<dt>const void * data</dt>
+<dd> The data to be set</dd>
+<dt>unsigned int data_size</dt>
+<dd> The size of data to be set</dd>
+<dt>unsigned int flags</dt>
+<dd> <code>GNUTLS_FSAN_SET</code> to clear previous data or <code>GNUTLS_FSAN_APPEND</code> to append.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the subject alternative name certificate extension. It can set the following types:</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crq_set_subject_alt_name – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

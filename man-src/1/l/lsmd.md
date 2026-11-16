@@ -14,14 +14,14 @@ description: "Daemon – lsmd"
 <h2>OPTIONS</h2>
 <p> <code>&#8211;plugindir</code> = The directory where the plugins are located</p>
 <dl>
-<dt> <code>&#8211;socketdir</code> = The directory for IPC sockets</p>
-<dt> <code>&#8211;confdir</code> = The directory where the config file are located</p>
-<dt> <code>-v</code> = Verbose logging</p>
-<dt><code>-d</code></p>
-<dd> = New style daemon (systemd) non-forking </p>
+<dt> <code>&#8211;socketdir</code> = The directory for IPC sockets</dt>
+<dt> <code>&#8211;confdir</code> = The directory where the config file are located</dt>
+<dt> <code>-v</code> = Verbose logging</dt>
+<dt><code>-d</code></dt>
+<dd> = New style daemon (systemd) non-forking </dd>
 </dl>
 <h2>BUGS</h2>
-<dd>Please report bugs to &lt;libstoragemgmt-devel [at] lists.fedorahosted.org&gt;</p>
+<dd>Please report bugs to &lt;libstoragemgmt-devel [at] lists.fedorahosted.org&gt;</dd>
 <h2>AUTHOR</h2>
 <p> Tony Asleson &lt;tasleson [at] redhat.com&gt; </p>
 <h2>Index</h2>

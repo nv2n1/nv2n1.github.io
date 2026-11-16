@@ -15,7 +15,7 @@ wait_for_stable_page - wait for writeback to finish, if necessary.
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>The page to wait on.</dl>
+<dl><dd></dd><dd>The page to wait on.</dd></dl>
 
 <h2>Description</h2>
 

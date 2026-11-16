@@ -10,29 +10,29 @@ c_shgrid - interpolate random data in 3-space using a modified Shepard's algorit
 <h2>Function Prototype</h2><pre>float *c_shgrid(int, float [], float [], float [], float [],
  int, int, int, float [], float [], float [], int*);</pre><h2>Synopsis</h2><pre>float *c_shgrid (n, x[], y[], z[], f[], nxo, nyo, nzo, 
  xo[], yo[], zo[], ier);</pre><h2>Description</h2><dl COMPACT><dt>n
-<dd>(integer,input) The number of input data points (n &gt; 9).
-<dt>xi
-<dd>(float, input) An array dimensioned for n containing the X coordinate values for the input function.
-<dt>yi
-<dd>(float, input) An array dimensioned for n containing the Y coordinate values for the input function.
-<dt>zi
-<dd>(float, input) An array dimensioned for n containing the Z coordinate values for the input function.
-<dt>f
-<dd>(float, input) An array containing the functional values of the input function -- f[k] is the functional value at (xi[k], yi[k], zi[k]) for k=0,n-1.
-<dt>nxo
-<dd>(integer, input) The number of X coordinate values to be calculated for the output grid.
-<dt>nyo
-<dd>(integer, input) The number of Y coordinate values to be calculated for the output grid.
-<dt>nzo
-<dd>The number of Z coordinate values to be calculated for the output grid.
-<dt>xo
-<dd>(float, input) An array dimensioned for nxo containing the X coordinates of the output grid.
-<dt>yo
-<dd>(float, output) An array dimensioned for nyo containing the Y coordinates of the output grid.
-<dt>zo
-<dd>(float, output) An array dimensioned for nzo containing the Z coordinates of the output grid.
-<dt>ier
-<dd>(pointer to integer, output) An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the error list in the error table for details.</dl><h2>Usage</h2>c_shgrid is called to interpolate randomly spaced data in 3-space. c_shgrid uses a modified Shepard's algorithm to construct an interpolatory surface. 
+</dt><dd>(integer,input) The number of input data points (n &gt; 9).
+</dd><dt>xi
+</dt><dd>(float, input) An array dimensioned for n containing the X coordinate values for the input function.
+</dd><dt>yi
+</dt><dd>(float, input) An array dimensioned for n containing the Y coordinate values for the input function.
+</dd><dt>zi
+</dt><dd>(float, input) An array dimensioned for n containing the Z coordinate values for the input function.
+</dd><dt>f
+</dt><dd>(float, input) An array containing the functional values of the input function -- f[k] is the functional value at (xi[k], yi[k], zi[k]) for k=0,n-1.
+</dd><dt>nxo
+</dt><dd>(integer, input) The number of X coordinate values to be calculated for the output grid.
+</dd><dt>nyo
+</dt><dd>(integer, input) The number of Y coordinate values to be calculated for the output grid.
+</dd><dt>nzo
+</dt><dd>The number of Z coordinate values to be calculated for the output grid.
+</dd><dt>xo
+</dt><dd>(float, input) An array dimensioned for nxo containing the X coordinates of the output grid.
+</dd><dt>yo
+</dt><dd>(float, output) An array dimensioned for nyo containing the Y coordinates of the output grid.
+</dd><dt>zo
+</dt><dd>(float, output) An array dimensioned for nzo containing the Z coordinates of the output grid.
+</dd><dt>ier
+</dt><dd>(pointer to integer, output) An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the error list in the error table for details.</dd></dl><h2>Usage</h2>c_shgrid is called to interpolate randomly spaced data in 3-space. c_shgrid uses a modified Shepard's algorithm to construct an interpolatory surface. 
 
  c_shgrid returns a pointer to a linear array of data that is the interpolation grid stored in row-major order. That is, if out is declared as 
 

@@ -15,15 +15,15 @@ description: "octave-config – GNU Octave component and library information ret
 <p> <code>octave-config</code> is a tool to obtain directory information for <code>.oct</code> and <code>.m</code> files for <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;m-site-dir</code></p>
-<dd> Display the main directory for local, or site-specific, <code>.m</code> script files.</p>
-<dt><code>&#8211;oct-site-dir</code></p>
-<dd> Display the main directory for local, or site-specific, <code>.oct</code> dynamic-link libraries.</p>
-<dt><code>-p </code><i>VAR</i>,<code> &#8211;print </code><i>VAR</i></p>
-<dd> Print the default value of the Octave configuration variable <i>VAR</i>. Recognized variables are:</p>
+<dt><code>&#8211;m-site-dir</code></dt>
+<dd> Display the main directory for local, or site-specific, <code>.m</code> script files.</dd>
+<dt><code>&#8211;oct-site-dir</code></dt>
+<dd> Display the main directory for local, or site-specific, <code>.oct</code> dynamic-link libraries.</dd>
+<dt><code>-p </code><i>VAR</i>,<code> &#8211;print </code><i>VAR</i></dt>
+<dd> Print the default value of the Octave configuration variable <i>VAR</i>. Recognized variables are:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    API_VERSION             LOCALAPIOCTFILEDIR
    ARCHLIBDIR              LOCALARCHLIBDIR
@@ -43,11 +43,11 @@ description: "octave-config – GNU Octave component and library information ret
    LOCALAPIARCHLIBDIR      STARTUPFILEDIR
    LOCALAPIFCNFILEDIR      VERSION
 </pre>
-</dl>
-<dt><code>-v</code>,<code> &#8211;version</code></p>
-<dd> Display the version number of <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</p>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help message.</dl>
+</dd></dl>
+<dt><code>-v</code>,<code> &#8211;version</code></dt>
+<dd> Display the version number of <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</dd>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help message.</dd></dl>
 <h2>AUTHOR</h2>
 <p> John W. Eaton &lt;jwe [at] octave.org&gt; </p>
 <p> This manual page was contributed by Dirk Eddelbuettel &lt;edd [at] debian.org&gt; for the Debian GNU/Linux distribution but may be used by others.</p>

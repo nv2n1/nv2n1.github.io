@@ -24,26 +24,26 @@ bool bson_validate(const bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>flags</code></p>
-<dd> A bitwise-or of all desired <code>bson_validate_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd> A bitwise-or of all desired <code>bson_validate_flags_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>offset</code></p>
-<dd> A location for the offset within <code>bson</code> where the error ocurred.</dl>
+<dt><code>offset</code></dt>
+<dd> A location for the offset within <code>bson</code> where the error ocurred.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Validates a BSON document by walking through the document and inspecting the fields for valid content. </p>
 <p> You can modify how the validation occurs through the use of the <code>flags</code> parameter. A description of their effect is below. </p>
 <dl>
-<dt>\[bu]</p>
-<dd> <code>BSON_VALIDATE_UTF8</code> will request that all UTF-8 strings are checked to contain valid UTF-8 sequences. This is expensive and disabled by default.</p>
-<dt>\[bu]</p>
-<dd> <code>BSON_VALIDATE_UTF8_ALLOW_NULL</code> will specify that UTF-8 strings are allowed to have embedded NULL bytes. Many UTF-8 implementations use a 2-byte squence for embedded NULLs so that they work with stanard libc functions. Libbson expects this by default.</p>
-<dt>\[bu]</p>
-<dd> <code>BSON_VALIDATE_DOLLAR_KEYS</code> will request that all key names are checked to ensure they do not start with the ASCII dollar character ( <code>$</code> ).</p>
-<dt>\[bu]</p>
-<dd> <code>BSON_VALIDATE_DOT_KEYS</code> will request that all key names are checked to ensure they do not contain an ASCII dot ( <code>.</code> ) character. </p>
+<dt>\[bu]</dt>
+<dd> <code>BSON_VALIDATE_UTF8</code> will request that all UTF-8 strings are checked to contain valid UTF-8 sequences. This is expensive and disabled by default.</dd>
+<dt>\[bu]</dt>
+<dd> <code>BSON_VALIDATE_UTF8_ALLOW_NULL</code> will specify that UTF-8 strings are allowed to have embedded NULL bytes. Many UTF-8 implementations use a 2-byte squence for embedded NULLs so that they work with stanard libc functions. Libbson expects this by default.</dd>
+<dt>\[bu]</dt>
+<dd> <code>BSON_VALIDATE_DOLLAR_KEYS</code> will request that all key names are checked to ensure they do not start with the ASCII dollar character ( <code>$</code> ).</dd>
+<dt>\[bu]</dt>
+<dd> <code>BSON_VALIDATE_DOT_KEYS</code> will request that all key names are checked to ensure they do not contain an ASCII dot ( <code>.</code> ) character. </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> Returns true if <code>bson</code> is valid; otherwise false and <code>offset</code> is set to the byte offset where the error was detected. </p>

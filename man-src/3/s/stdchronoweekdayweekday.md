@@ -12,13 +12,10 @@ std::chrono::weekday::weekday - std::chrono::weekday::weekday
 
 <pre><code>weekday() = default;
 (1)(since C++ 20)
-
     explicit constexpr weekday(unsigned wd) noexcept;
 (2)(since C++ 20)
-
     constexpr weekday(const std::chrono::sys_days &amp;dp) noexcept;
 (3)(since C++ 20)
-
     explicit constexpr weekday(const std::chrono::local_days &amp;dp) noexcept;
 (4)(since C++ 20)</code></pre> 
 Constructs a weekday object. 

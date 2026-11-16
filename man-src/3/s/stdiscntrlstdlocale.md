@@ -11,9 +11,7 @@ std::iscntrl(std::locale) - std::iscntrl(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     bool iscntrl(charT ch, const locale &amp;loc);</code></pre> 
 Checks if the given character is classified as a control character by the given locale's std::ctype facet. 
 
@@ -37,11 +35,8 @@ Returns true if the character is classified as a control character, false otherw
 
 Demonstrates the use of iscntrl() with different locales (OS-specific). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 int main()
-
 {
     const wchar_t CCH = L'\u0094'; // Destructive Backspace in Unicode
     std::locale loc1(&quot;C&quot;);

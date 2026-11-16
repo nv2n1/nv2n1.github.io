@@ -11,20 +11,20 @@ description: "XSetFontPath, XGetFontPath, XFreeFontPath – set, get, or free th
 <h2>Syntax</h2>
 <p>int XSetFontPath(Display *<i>display</i>, char **<i>directories</i>, int <i>ndirs</i>);</p>
 <dl COMPACT>
-<dd>char **XGetFontPath(Display *<i>display</i>, int *<i>npaths_return</i>);</p>
-<dd>int XFreeFontPath(char **<i>list</i>);</dl>
+<dd>char **XGetFontPath(Display *<i>display</i>, int *<i>npaths_return</i>);</dd>
+<dd>int XFreeFontPath(char **<i>list</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>directories</i></p>
-<dd>Specifies the directory path used to look for a font. Setting the path to the empty list restores the default path defined for the X server.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>list</i></p>
-<dd>Specifies the array of strings you want to free.</p>
-<dt><i>ndirs</i></p>
-<dd>Specifies the number of directories in the path.</p>
-<dt><i>npaths_return</i></p>
-<dd>Returns the number of strings in the font path array.</dl>
+<dt><i>directories</i></dt>
+<dd>Specifies the directory path used to look for a font. Setting the path to the empty list restores the default path defined for the X server.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>list</i></dt>
+<dd>Specifies the array of strings you want to free.</dd>
+<dt><i>ndirs</i></dt>
+<dd>Specifies the number of directories in the path.</dd>
+<dt><i>npaths_return</i></dt>
+<dd>Returns the number of strings in the font path array.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetFontPath</code> function defines the directory search path for font lookup. There is only one search path per X server, not one per client. The encoding and interpretation of the strings are implementation-dependent, but typically they specify directories or font servers to be searched in the order listed. An X server is permitted to cache font information internally; for example, it might cache an entire font from a file and not check on subsequent opens of that font to see if the underlying font file has changed. However, when the font path is changed, the X server is guaranteed to flush all cached information about fonts for which there currently are no explicit resource IDs allocated. The meaning of an error from this request is implementation-dependent. </p>
 <p> <code>XSetFontPath</code> can generate a <code>BadValue</code> error. </p>
@@ -32,8 +32,8 @@ description: "XSetFontPath, XGetFontPath, XFreeFontPath – set, get, or free th
 <p> The <code>XFreeFontPath</code> function frees the data allocated by <code>XGetFontPath</code>.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p>XListFont(3), XLoadFonts(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

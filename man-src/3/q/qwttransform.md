@@ -27,50 +27,50 @@ description: "QwtTransform –"
 <p> <code>QwtTransform</code> manipulates values, when being mapped between the scale and the paint device coordinate system. </p>
 <p> A transformation consists of 2 methods: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>transform</p>
-<dt>&bull;</p>
-<dd>invTransform</dl>
+<dt>&bull;</dt>
+<dd>transform</dd>
+<dt>&bull;</dt>
+<dd>invTransform</dd></dl>
 <p> where one is is the inverse function of the other. </p>
 <p> When p1, p2 are the boundaries of the paint device coordinates and s1, s2 the boundaries of the scale, <code>QwtScaleMap</code> uses the following calculations: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>p = p1 + ( p2 &#8211; p1 ) * ( T( s ) &#8211; T( s1 ) / ( T( s2 ) &#8211; T( s1 ) );</p>
-<dt>&bull;</p>
-<dd>s = invT ( T( s1 ) + ( T( s2 ) &#8211; T( s1 ) ) * ( p &#8211; p1 ) / ( p2 &#8211; p1 ) );</dl>
+<dt>&bull;</dt>
+<dd>p = p1 + ( p2 &#8211; p1 ) * ( T( s ) &#8211; T( s1 ) / ( T( s2 ) &#8211; T( s1 ) );</dd>
+<dt>&bull;</dt>
+<dd>s = invT ( T( s1 ) + ( T( s2 ) &#8211; T( s1 ) ) * ( p &#8211; p1 ) / ( p2 &#8211; p1 ) );</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtTransform::bounded (doublevalue) const [virtual]</h3>
 <p>Modify value to be a valid value for the transformation. The default implementation does nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be bounded</dl>
+<dd><i>value</i> Value to be bounded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>value unmodified</dl>
+<dd>value unmodified</dd></dl>
 <p> Reimplemented in <code>QwtLogTransform</code>.</p>
 <h3>virtual double QwtTransform::invTransform (doublevalue) const [pure virtual]</h3>
 <p>Inverse transformation function </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value</dl>
+<dd><i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Modified value</dl>
+<dd>Modified value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>transform()</code></dl>
+<dd><code>transform()</code></dd></dl>
 <p> Implemented in <code>QwtPowerTransform</code>, <code>QwtLogTransform</code>, and <code>QwtNullTransform</code>.</p>
 <h3>virtual double QwtTransform::transform (doublevalue) const [pure virtual]</h3>
 <p>Transformation function </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value</dl>
+<dd><i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Modified value</dl>
+<dd>Modified value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>invTransform()</code></dl>
+<dd><code>invTransform()</code></dd></dl>
 <p> Implemented in <code>QwtPowerTransform</code>, <code>QwtLogTransform</code>, and <code>QwtNullTransform</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -14,10 +14,10 @@ description: "usb_hcd_link_urb_to_ep – add an URB to its endpoint queue"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>host controller to which <i>urb</i> was submitted</dl>
+</dd><dd>host controller to which <i>urb</i> was submitted</dd></dl>
 <p> <i>urb</i></p>
 <dl>
-<dd>URB being submitted</dl>
+<dd>URB being submitted</dd></dl>
 <h2>Description</h2>
 <p>Host controller drivers should call this routine in their <code>enqueue</code> method. The HCD&#8217;s private spinlock must be held and interrupts must be disabled. The actions carried out here are required for URB submission, as well as for endpoint shutdown and for usb_kill_urb.</p>
 <h2>Return</h2>

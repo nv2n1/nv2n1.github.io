@@ -24,8 +24,8 @@ description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – ob
 <p> <code>avc_context_to_sid</code>() and <code>avc_sid_to_context</code>() return zero on success. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> An attempt to allocate memory failed.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> An attempt to allocate memory failed.</dd></dl>
 <h2>NOTES</h2>
 <p> As of libselinux version 2.0.86, SID&#8217;s are no longer reference counted. A SID will be valid from the time it is first obtained until the next call to <code><a href="/docs/linux/man/3-avc_destroy/">avc_destroy</a></code>(3). The <code><a href="/docs/linux/man/3-sidget/">sidget</a></code>(3) and <code><a href="/docs/linux/man/3-sidput/">sidput</a></code>(3) functions, formerly used to adjust the reference count, are no-ops and are deprecated.</p>
 <h2>AUTHOR</h2>

@@ -11,7 +11,6 @@ optionOnlyUsage - Print usage text for just the options
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;your-opts.h&gt;
-
 cc[...] - o outfile infile.c - lopts[...] void optionOnlyUsage(tOptions *pOpts, int ex_code);
 </code></pre>
 
@@ -19,9 +18,9 @@ cc[...] - o outfile infile.c - lopts[...] void optionOnlyUsage(tOptions *pOpts, 
 
 This routine will print only the usage for each option. This function may be used when the emitted usage must incorporate information not available to AutoOpts.
 <dl><dt><i>pOpts</i>
-<dd>program options descriptor
-<dt><i>ex_code</i>
-<dd>exit code for calling <a HREF="/docs/linux/man/3-exit/">exit</a>(3)</dl>
+</dt><dd>program options descriptor
+</dd><dt><i>ex_code</i>
+</dt><dd>exit code for calling <a HREF="/docs/linux/man/3-exit/">exit</a>(3)</dd></dl>
 
 <h2>See Also</h2>
 

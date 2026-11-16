@@ -17,36 +17,37 @@ description: "podofopdfinfo – provide information about a PDF file"
 <p> <code>D</code></p>
 <dl>
 <dt>
-<dd>
-<p> display Document Info.</dl>
+</dt><dd>
+<p> display Document Info.</dd></dl>
 <p> <code>C</code></p>
 <dl>
 <dt>
-<dd>
-<p> display Classic Metadata.</dl>
+</dt><dd>
+<p> display Classic Metadata.</dd></dl>
 <p> <code>P</code></p>
 <dl>
 <dt>
-<dd>
-<p> display Page Info.</dl>
+</dt><dd>
+<p> display Page Info.</dd></dl>
 <p> <code>O</code></p>
 <dl>
 <dt>
-<dd>
-<p> display Outlines.</dl>
+</dt><dd>
+<p> display Outlines.</dd></dl>
 <p> <code>N</code></p>
 <dl>
 <dt>
-<dd>
-<p> display Names.</dl>
+</dt><dd>
+<p> display Names.</dd></dl>
 <p> <code>[inputfile]</code></p>
 <dl>
 <dt>
-<dd>
-<p> Input PDF file.</dl>
+</dt><dd>
+<p> Input PDF file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-podofobox/">podofobox</a></code>(1), <code>podofocolor</code>(1), <code><a href="/docs/linux/man/1-podofocountpages/">podofocountpages</a></code>(1), <code><a href="/docs/linux/man/1-podofocrop/">podofocrop</a></code>(1), <code><a href="/docs/linux/man/1-podofoencrypt/">podofoencrypt</a></code>(1), <code>podofogc</code>(1), <code><a href="/docs/linux/man/1-podofoimg2pdf/">podofoimg2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofoimgextract/">podofoimgextract</a></code>(1), <code><a href="/docs/linux/man/1-podofoimpose/">podofoimpose</a></code>(1), <code><a href="/docs/linux/man/1-podofoincrementalupdates/">podofoincrementalupdates</a></code>(1), <code><a href="/docs/linux/man/1-podofomerge/">podofomerge</a></code>(1), <code><a href="/docs/linux/man/1-podofopages/">podofopages</a></code>(1), <code><a href="/docs/linux/man/1-podofotxt2pdf/">podofotxt2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofotxtextract/">podofotxtextract</a></code>(1), <code><a href="/docs/linux/man/1-podofouncompress/">podofouncompress</a></code>(1), <code><a href="/docs/linux/man/1-podofoxmp/">podofoxmp</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <p> PoDoFo is written by Dominik Seichter &lt;domseichter [at] web.de&gt; and others. </p>
 <p> This manual page was written by Oleksandr Moskalenko &lt;malex [at] debian.org&gt; for the Debian Project (but may be used by others). </p>
 <h2>Index</h2>
+</p>

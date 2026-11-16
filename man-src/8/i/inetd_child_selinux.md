@@ -63,9 +63,9 @@ description: "inetd_child_selinux – Security Enhanced Linux Policy for the ine
 <p> Policy governs the access confined processes have to these ports. SELinux inetd_child policy is very flexible allowing users to setup their inetd_child processes in as secure a method as possible. </p>
 <p> The following port types are defined for inetd_child: </p>
 <dl>
-<dt><code>inetd_child_port_t</code></p>
+<dt><code>inetd_child_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1,9,13,19,512,544,891,892,5666 udp 1,9,13,19,891,892</dl>
+</dd><dd>Default Defined Ports: tcp 1,9,13,19,512,544,891,892,5666 udp 1,9,13,19,891,892</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type inetd_child_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -82,8 +82,8 @@ description: "inetd_child_selinux – Security Enhanced Linux Policy for the ine
 <p> <code>inetd_child_exec_t</code> </p>
 <p> &#8211; Set files with the inetd_child_exec_t type, if you want to transition an executable to the inetd_child_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/in..*d, /usr/lib/pysieved/pysieved.*.py, /usr/local/lib/pysieved/pysieved.*.py, /usr/sbin/identd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/in..*d, /usr/lib/pysieved/pysieved.*.py, /usr/local/lib/pysieved/pysieved.*.py, /usr/sbin/identd </dd>
 </dl>
 <p> <code>inetd_child_tmp_t</code> </p>
 <p> &#8211; Set files with the inetd_child_tmp_t type, if you want to store inetd child temporary files in the /tmp directories. </p>

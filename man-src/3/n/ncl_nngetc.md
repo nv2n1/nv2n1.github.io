@@ -15,9 +15,9 @@ CALL NNGETC (PNAM,CVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be retrieved. The name must appear as the first three characters of the string.
-<dt>CVAL
-<dd>A character string that is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dl>
+</dt><dd>A character string that specifies the name of the parameter to be retrieved. The name must appear as the first three characters of the string.
+</dd><dt>CVAL
+</dt><dd>A character string that is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dd></dl>
 
 <h2>Usage</h2>
 

@@ -14,10 +14,10 @@ description: "filemap_fault – read in file data for page fault handling"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>vma in which the fault was taken</dl>
+</dd><dd>vma in which the fault was taken</dd></dl>
 <p> <i>vmf</i></p>
 <dl>
-<dd>struct vm_fault containing details of the fault</dl>
+<dd>struct vm_fault containing details of the fault</dd></dl>
 <h2>Description</h2>
 <p><code>filemap_fault</code> is invoked via the vma operations vector for a mapped memory region to read in file data during a page fault. </p>
 <p> The goto&#8217;s are kind of ugly, but this streamlines the normal case of having it in the page cache, and handles the special cases reasonably without having a lot of duplicated code. </p>

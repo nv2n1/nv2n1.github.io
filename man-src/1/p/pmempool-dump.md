@@ -20,50 +20,50 @@ description: "pmempool-dump – Dump user data from specified pool"
 <p> <code>-b, &#8211;binary</code></p>
 <dl>
 <dt>
-<dd> Dump data in binary format.</dl>
+</dt><dd> Dump data in binary format.</dd></dl>
 <p> <code>-r, &#8211;range</code> &lt;range&gt;</p>
 <dl>
 <dt>
-<dd> Range of pool file to dump. This may be number of blocks for <code>blk</code> pool type or either number of bytes or number of data chunks for <code>log</code> pool type.</dl>
+</dt><dd> Range of pool file to dump. This may be number of blocks for <code>blk</code> pool type or either number of bytes or number of data chunks for <code>log</code> pool type.</dd></dl>
 <p> <code>-c, &#8211;chunk</code> &lt;size&gt;</p>
 <dl>
 <dt>
-<dd> Size of chunk for <code>log</code> pool type. See <code>pmemlog_walk</code>() in <code>libpmemlog(3)</code> for details.</dl>
+</dt><dd> Size of chunk for <code>log</code> pool type. See <code>pmemlog_walk</code>() in <code>libpmemlog(3)</code> for details.</dd></dl>
 <p> <code>-o, &#8211;output</code> &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Name of output file.</dl>
+</dt><dd> Name of output file.</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help message and exit.</dl>
+</dt><dd> Display help message and exit.</dd></dl>
 <h2>RANGE</h2>
 <p> Using <code>-r, &#8211;range</code> option it is possible to dump only a range of user data. This section describes valid format of <i>&lt;range&gt;</i> string. </p>
 <p> You can specify multiple ranges separated by commas. </p>
 <p> <code>&lt;first&gt;-&lt;last&gt;</code></p>
 <dl>
 <dt>
-<dd> All blocks/bytes/data chunks from <code>&lt;first&gt;</code> to <code>&lt;last&gt;</code> will be dumped.</dl>
+</dt><dd> All blocks/bytes/data chunks from <code>&lt;first&gt;</code> to <code>&lt;last&gt;</code> will be dumped.</dd></dl>
 <p> <code>-&lt;last&gt;</code></p>
 <dl>
 <dt>
-<dd> All blocks/bytes/data chunks up to <code>&lt;last&gt;</code> will be dumped.</dl>
+</dt><dd> All blocks/bytes/data chunks up to <code>&lt;last&gt;</code> will be dumped.</dd></dl>
 <p> <code>&lt;first&gt;-</code></p>
 <dl>
 <dt>
-<dd> All blocks/bytes/data chunks starting from <code>&lt;first&gt;</code> will be dumped.</dl>
+</dt><dd> All blocks/bytes/data chunks starting from <code>&lt;first&gt;</code> will be dumped.</dd></dl>
 <p> <code>&lt;number&gt;</code></p>
 <dl>
 <dt>
-<dd> Only <code>&lt;number&gt;</code> block/byte/data chunk will be dumped.</dl>
+</dt><dd> Only <code>&lt;number&gt;</code> block/byte/data chunk will be dumped.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>pmempool dump pool.bin</p>
-<dd> # Dump user data from pool.bin file to standard output</p>
-<dt>pmempool dump -o output.bin -r1,10-100 pool_blk.bin</p>
-<dd> # Dump block number 1 and blocks from 10 to 100 from pool_blk.bin containing pmem blk pool to output.bin file</p>
-<dt>pmempool dump -r 1K-2K pool.bin</p>
-<dd> # Dump data form 1K to 2K from pool.bin file.</dl>
+<dt>pmempool dump pool.bin</dt>
+<dd> # Dump user data from pool.bin file to standard output</dd>
+<dt>pmempool dump -o output.bin -r1,10-100 pool_blk.bin</dt>
+<dd> # Dump block number 1 and blocks from 10 to 100 from pool_blk.bin containing pmem blk pool to output.bin file</dd>
+<dt>pmempool dump -r 1K-2K pool.bin</dt>
+<dd> # Dump data form 1K to 2K from pool.bin file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>

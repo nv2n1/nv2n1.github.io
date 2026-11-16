@@ -15,7 +15,7 @@ pci_bus_max_busnr - returns maximum PCI bus number of given bus' children
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>pointer to PCI bus structure to search</dl>
+<dl><dd></dd><dd>pointer to PCI bus structure to search</dd></dl>
 
 <h2>Description</h2>
 

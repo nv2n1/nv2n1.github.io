@@ -14,32 +14,24 @@ description: "m2gmetis – Converts a mesh into a graph that is compatible with 
 <h2>DESCRIPTION</h2>
 <dl>
 <dt>
-<dd> Required parameters</p>
-<dt>meshfile</p>
-<dd> Stores the input mesh.</p>
-<dt>graphfile</p>
-<dd> The filename of the output graph.</p>
+</dt><dd> Required parameters</dd>
+<dt>meshfile</dt>
+<dd> Stores the input mesh.</dd>
+<dt>graphfile</dt>
+<dd> The filename of the output graph.</dd>
 <dt>
-<dd> Optional parameters</p>
-<dt> <code>-gtype</code>=<i>string</i></p>
-<dt>
-<dd>
-<dd>Specifies the graph that will be generated. The possible values are:</p>
-<dt>dual</p>
-<dd> &#8211; Generate dual graph of the mesh [default]</p>
-<dt>nodal</p>
-<dd> &#8211; Generate the nodal graph of the mesh</p>
-<dt> <code>-ncommon</code>=<i>int</i> [applies when gtype=dual]</p>
-<dt>
-<dd>
-<dd>Specifies the common number of nodes that two elements must have in order to put an edge between them in the dual graph. Default is 1.</p>
-<dt> <code>-dbglvl</code>=<i>int</i></p>
-<dt>
-<dd>
-<dd>Selects the dbglvl.</p>
-<dt> <code>-help</code></p>
-<dt>
-<dd>
-<dd>Prints this message. </p>
+</dt><dd> Optional parameters</dd>
+<dt> <code>-gtype</code>=<i>string</i></dt>
+<dd>Specifies the graph that will be generated. The possible values are:</dd>
+<dt>dual</dt>
+<dd> &#8211; Generate dual graph of the mesh [default]</dd>
+<dt>nodal</dt>
+<dd> &#8211; Generate the nodal graph of the mesh</dd>
+<dt> <code>-ncommon</code>=<i>int</i> [applies when gtype=dual]</dt>
+<dd>Specifies the common number of nodes that two elements must have in order to put an edge between them in the dual graph. Default is 1.</dd>
+<dt> <code>-dbglvl</code>=<i>int</i></dt>
+<dd>Selects the dbglvl.</dd>
+<dt> <code>-help</code></dt>
+<dd>Prints this message. </dd>
 </dl>
 <h2>Index</h2>

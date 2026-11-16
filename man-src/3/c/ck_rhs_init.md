@@ -17,18 +17,18 @@ description: "ck_rhs_init – initialize a hash set"
 <p> The Fn ck_rhs_init function initializes the hash set pointed to by the Fa hs pointer. </p>
 <p> The argument Fa mode specifies the type of key-value pairs to be stored in the hash set as well as the expected concurrent access model. The value of Fa mode consists of a bitfield of one of the following:</p>
 <dl>
-<dt><code>CK_RHS_MODE_OBJECT</code></p>
-<dd> The hash set is meant to store pointers to objects. This provides a hint that only CK_MD_VMA_BITS are necessary to encode the key argument. Any unused pointer bits are leveraged for internal optimizations.</p>
-<dt><code>CK_RHS_MODE_DIRECT</code></p>
-<dd> The hash set is meant to directly store key values and that all bits of the key are used to encode values.</p>
-<dt><code>CK_RHS_MODE_READ_MOSTLY</code></p>
-<dd> Optimize read operations over put/delete.</dl>
+<dt><code>CK_RHS_MODE_OBJECT</code></dt>
+<dd> The hash set is meant to store pointers to objects. This provides a hint that only CK_MD_VMA_BITS are necessary to encode the key argument. Any unused pointer bits are leveraged for internal optimizations.</dd>
+<dt><code>CK_RHS_MODE_DIRECT</code></dt>
+<dd> The hash set is meant to directly store key values and that all bits of the key are used to encode values.</dd>
+<dt><code>CK_RHS_MODE_READ_MOSTLY</code></dt>
+<dd> Optimize read operations over put/delete.</dd></dl>
 <p> The concurrent access model is specified by:</p>
 <dl>
-<dt><code>CK_RHS_MODE_SPMC</code></p>
-<dd> The hash set should allow for concurrent readers in the presence of a single writer.</p>
-<dt><code>CK_RHS_MODE_MPMC</code></p>
-<dd> The hash set should allow for concurrent readers in the presence of concurrent writers. This is currently unsupported.</dl>
+<dt><code>CK_RHS_MODE_SPMC</code></dt>
+<dd> The hash set should allow for concurrent readers in the presence of a single writer.</dd>
+<dt><code>CK_RHS_MODE_MPMC</code></dt>
+<dd> The hash set should allow for concurrent readers in the presence of concurrent writers. This is currently unsupported.</dd></dl>
 <p> The developer is free to specify additional workload hints. These hints are one of:</p>
 <dl>
 </dl>
@@ -46,3 +46,4 @@ description: "ck_rhs_init – initialize a hash set"
 <p> ck_rhs_move3, ck_rhs_destroy3, CK_RHS_HASH3, ck_rhs_iterator_init3, ck_rhs_next3, ck_rhs_get3, ck_rhs_put3, ck_rhs_put_unique3, ck_rhs_set3, ck_rhs_fas3, ck_rhs_remove3, ck_rhs_grow3, ck_rhs_rebuild3, ck_rhs_gc3, ck_rhs_count3, ck_rhs_reset3, ck_rhs_reset_size3, ck_rhs_stat3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
 <h2>Index</h2>
+</p>

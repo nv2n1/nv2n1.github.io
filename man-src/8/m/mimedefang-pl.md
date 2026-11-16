@@ -14,8 +14,8 @@ description: "mimedefang.pl – Perl script to scan MIME messages."
 <p><code>mimedefang.pl</code> is a Perl script designed to work with <code><a href="/docs/linux/man/8-mimedefang/">mimedefang</a></code>(8). It takes a single argument which is a directory which should contain files laid out as described in <code><a href="/docs/linux/man/8-mimedefang/">mimedefang</a></code>(8). </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f </code><i>filter</i></p>
-<dd>Specifies the name of the file containing the filter. If this option is omitted, the default filter <code>/etc/mail/mimedefang-filter</code> is used. </p>
+<dt><code>-f </code><i>filter</i></dt>
+<dd>Specifies the name of the file containing the filter. If this option is omitted, the default filter <code>/etc/mail/mimedefang-filter</code> is used. </dd>
 </dl>
 <h2>Operation</h2>
 <p><code>mimedefang.pl</code> evaluates the file <code>/etc/mail/mimedefang-filter</code> as a Perl fragment. This file should define the <code>filter</code> procedure. For each part of a MIME message, <code>mimedefang.pl</code> calls <code>filter</code> and disposes of the part as instructed by the filter. The various modes of disposition are described in <code><a href="/docs/linux/man/5-mimedefang-filter/">mimedefang-filter</a></code>(5).</p>

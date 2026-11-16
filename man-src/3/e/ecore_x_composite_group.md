@@ -18,7 +18,7 @@ description: "X Composite Extension Functions – Functions related to the X Com
 <p>Return whether the Composite Extension is available. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the Composite Extension is available, 0 if not.</dl>
+<dd>1 if the Composite Extension is available, 0 if not.</dd></dl>
 <p> Return 1 if the X server supports the Composite Extension version 0.4 or greater, 0 otherwise.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -9,7 +9,7 @@ description: "rmiregistry – The Java Remote Object Registry"
 
 <p>rmiregistry &#8211; The Java Remote Object Registry </p>
 <dl COMPACT>
-<dd>The <code>rmiregistry</code> command starts a remote object registry on the specified port on the current host.</dl>
+<dd>The <code>rmiregistry</code> command starts a remote object registry on the specified port on the current host.</dd></dl>
 <h2>Synopsis</h2>
 <pre><code>rmiregistry [</code><tt>port</tt><code>]</code></pre>
 <h2>Description</h2>
@@ -22,9 +22,9 @@ description: "rmiregistry – The Java Remote Object Registry"
 <h2>Options</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-J</p>
-<dd>Used in conjunction with any <i>java</i> option, it passes the option following the <i>-J</i> (no spaces between the -J and the option) on to the <i>java</i> interpreter.</dl>
+</dd><dl COMPACT>
+<dt>-J</dt>
+<dd>Used in conjunction with any <i>java</i> option, it passes the option following the <i>-J</i> (no spaces between the -J and the option) on to the <i>java</i> interpreter.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-java/">java</a>(1), <i>java.rmi.registry.LocateRegistry</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/registry/LocateRegistry.html">http://docs.oracle.com/javase/7/docs/api/java/rmi/registry/LocateRegistry.html</a> and <i>java.rmi.Naming</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Naming.html">http://docs.oracle.com/javase/7/docs/api/java/rmi/Naming.html</a></p>

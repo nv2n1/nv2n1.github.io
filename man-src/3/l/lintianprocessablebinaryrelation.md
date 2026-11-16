@@ -19,25 +19,23 @@ description: "Lintian::Processable::Binary::Relation – Lintian interface to bi
 <p> Native heuristics are only available in source packages.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>relation (<font SIZE="-1">FIELD</font>)</p>
-<dd> Returns a Lintian::Relation object for the specified <font SIZE="-1">FIELD,</font> which should be one of the possible relationship fields of a Debian package or one of the following special values:</p>
+<dt>relation (<font SIZE="-1">FIELD</font>)</dt>
+<dd> Returns a Lintian::Relation object for the specified <font SIZE="-1">FIELD,</font> which should be one of the possible relationship fields of a Debian package or one of the following special values:</dd>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>all</p>
-<dd> The concatenation of Pre-Depends, Depends, Recommends, and Suggests.</p>
-<dt>strong</p>
-<dd> The concatenation of Pre-Depends and Depends.</p>
-<dt>weak</p>
-<dd> The concatenation of Recommends and Suggests.</dl>
+<dt>all</dt>
+<dd> The concatenation of Pre-Depends, Depends, Recommends, and Suggests.</dd>
+<dt>strong</dt>
+<dd> The concatenation of Pre-Depends and Depends.</dd>
+<dt>weak</dt>
+<dd> The concatenation of Recommends and Suggests.</dd></dl>
 </dl>
 <dl COMPACT>
 <dt>
-<dd>
-<p> If <font SIZE="-1">FIELD</font> isn&#8217;t present in the package, the returned Lintian::Relation object will be empty (always satisfied and implies nothing).</dl>
-<dt>saved_relations</p>
-<dd></dl>
+</dt><dd>
+<p> If <font SIZE="-1">FIELD</font> isn&#8217;t present in the package, the returned Lintian::Relation object will be empty (always satisfied and implies nothing).</dd></dl>
+<dt>saved_relations</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p> Originally written by Frank Lichtenheld &lt;djpig [at] debian.org&gt; for Lintian. Amended by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

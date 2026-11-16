@@ -11,10 +11,8 @@ std::this_thread::sleep_for - std::this_thread::sleep_for
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;thread&gt;
-
     template &lt;class Rep, class Period&gt;
     (since C++ 11)
-
         void sleep_for(const std::chrono::duration&lt;Rep, Period&gt; &amp;sleep_duration);</code></pre> 
 Blocks the execution of the current thread for at least the specified sleep_duration. 
 This function may block for longer than sleep_duration due to scheduling or resource contention delays. 
@@ -35,12 +33,9 @@ Any exception thrown by clock, time_point, or duration during the execution (clo
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     std::cout &lt;&lt; &quot;Hello waiter\n&quot;

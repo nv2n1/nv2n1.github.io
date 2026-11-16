@@ -11,76 +11,31 @@ description: "sc::CorrelationTable –"
 <p> The <code>CorrelationTable</code> class provides a correlation table between two <code>point</code> groups.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;corrtab.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>CorrelationTable (const Ref&lt; PointGroup &gt; &amp;group, const Ref&lt; PointGroup &gt; &amp;subgroup)
-
-
 Create a correlation table for the two groups.
-
-
 Ref&lt; PointGroup &gt; group () const
-
-
 Returns the higher order point group.
-
-
 Ref&lt; PointGroup &gt; subgroup () const
-
-
 Returns the lower order point group.
-
-
 int initialize_table (const Ref&lt; PointGroup &gt; &amp;group, const Ref&lt; PointGroup &gt; &amp;subgroup)
-
-
 Initalize the correlation table.
-
-
 const char * error (int errcod)
-
-
 Converts error codes from initialize_table into a text string.
-
-
 int n () const
-
-
 Returns the number of irreps in the high order group.
-
-
 int subn () const
-
-
 Returns the number of irreps in the subgroup.
-
-
 int degen (int igamma) const
-
-
 Returns the degeneracy of the irrep.
-
-
 int subdegen (int igamma) const
-
-
 Returns the degeneracy of the subgroup irrep.
-
-
 int ngamma (int igamma) const
-
-
 Returns the number of irreps in the low order group that an irrep.
-
-
 int gamma (int igamma, int i) const
-
-
 Returns the irreps in the low order group that an irrep from the high order group can be reduced to.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>CorrelationTable</code> class provides a correlation table between two <code>point</code> groups.</p>

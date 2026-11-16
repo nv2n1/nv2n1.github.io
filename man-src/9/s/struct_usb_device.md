@@ -71,169 +71,169 @@ description: "struct_usb_device – kernel’s representation of a USB device"
 <h2>Members</h2>
 <p>devnum</p>
 <dl>
-<dd>device number; address on a USB bus</dl>
+<dd>device number; address on a USB bus</dd></dl>
 <p> devpath[16]</p>
 <dl>
-<dd>device ID string for use in messages (e.g., /port/&#8230;)</dl>
+<dd>device ID string for use in messages (e.g., /port/&#8230;)</dd></dl>
 <p> route</p>
 <dl>
-<dd>tree topology hex string for use with xHCI</dl>
+<dd>tree topology hex string for use with xHCI</dd></dl>
 <p> state</p>
 <dl>
-<dd>device state: configured, not attached, etc.</dl>
+<dd>device state: configured, not attached, etc.</dd></dl>
 <p> speed</p>
 <dl>
-<dd>device speed: high/full/low (or error)</dl>
+<dd>device speed: high/full/low (or error)</dd></dl>
 <p> tt</p>
 <dl>
-<dd>Transaction Translator info; used with low/full speed dev, highspeed hub</dl>
+<dd>Transaction Translator info; used with low/full speed dev, highspeed hub</dd></dl>
 <p> ttport</p>
 <dl>
-<dd>device port on that tt hub</dl>
+<dd>device port on that tt hub</dd></dl>
 <p> toggle[2]</p>
 <dl>
-<dd>one bit for each endpoint, with ([0] = IN, [1] = OUT) endpoints</dl>
+<dd>one bit for each endpoint, with ([0] = IN, [1] = OUT) endpoints</dd></dl>
 <p> parent</p>
 <dl>
-<dd>our hub, unless we&#8217;re the root</dl>
+<dd>our hub, unless we&#8217;re the root</dd></dl>
 <p> bus</p>
 <dl>
-<dd>bus we&#8217;re part of</dl>
+<dd>bus we&#8217;re part of</dd></dl>
 <p> ep0</p>
 <dl>
-<dd>endpoint 0 data (default control pipe)</dl>
+<dd>endpoint 0 data (default control pipe)</dd></dl>
 <p> dev</p>
 <dl>
-<dd>generic device interface</dl>
+<dd>generic device interface</dd></dl>
 <p> descriptor</p>
 <dl>
-<dd>USB device descriptor</dl>
+<dd>USB device descriptor</dd></dl>
 <p> bos</p>
 <dl>
-<dd>USB device BOS descriptor set</dl>
+<dd>USB device BOS descriptor set</dd></dl>
 <p> config</p>
 <dl>
-<dd>all of the device&#8217;s configs</dl>
+<dd>all of the device&#8217;s configs</dd></dl>
 <p> actconfig</p>
 <dl>
-<dd>the active configuration</dl>
+<dd>the active configuration</dd></dl>
 <p> ep_in[16]</p>
 <dl>
-<dd>array of IN endpoints</dl>
+<dd>array of IN endpoints</dd></dl>
 <p> ep_out[16]</p>
 <dl>
-<dd>array of OUT endpoints</dl>
+<dd>array of OUT endpoints</dd></dl>
 <p> rawdescriptors</p>
 <dl>
-<dd>raw descriptors for each config</dl>
+<dd>raw descriptors for each config</dd></dl>
 <p> bus_mA</p>
 <dl>
-<dd>Current available from the bus</dl>
+<dd>Current available from the bus</dd></dl>
 <p> portnum</p>
 <dl>
-<dd>parent port number (origin 1)</dl>
+<dd>parent port number (origin 1)</dd></dl>
 <p> level</p>
 <dl>
-<dd>number of USB hub ancestors</dl>
+<dd>number of USB hub ancestors</dd></dl>
 <p> can_submit</p>
 <dl>
-<dd>URBs may be submitted</dl>
+<dd>URBs may be submitted</dd></dl>
 <p> persist_enabled</p>
 <dl>
-<dd>USB_PERSIST enabled for this device</dl>
+<dd>USB_PERSIST enabled for this device</dd></dl>
 <p> have_langid</p>
 <dl>
-<dd>whether string_langid is valid</dl>
+<dd>whether string_langid is valid</dd></dl>
 <p> authorized</p>
 <dl>
-<dd>policy has said we can use it; (user space) policy determines if we authorize this device to be used or not. By default, wired USB devices are authorized. WUSB devices are not, until we authorize them from user space. FIXME &#8212; complete doc</dl>
+<dd>policy has said we can use it; (user space) policy determines if we authorize this device to be used or not. By default, wired USB devices are authorized. WUSB devices are not, until we authorize them from user space. FIXME &#8212; complete doc</dd></dl>
 <p> authenticated</p>
 <dl>
-<dd>Crypto authentication passed</dl>
+<dd>Crypto authentication passed</dd></dl>
 <p> wusb</p>
 <dl>
-<dd>device is Wireless USB</dl>
+<dd>device is Wireless USB</dd></dl>
 <p> lpm_capable</p>
 <dl>
-<dd>device supports LPM</dl>
+<dd>device supports LPM</dd></dl>
 <p> usb2_hw_lpm_capable</p>
 <dl>
-<dd>device can perform USB2 hardware LPM</dl>
+<dd>device can perform USB2 hardware LPM</dd></dl>
 <p> usb2_hw_lpm_besl_capable</p>
 <dl>
-<dd>device can perform USB2 hardware BESL LPM</dl>
+<dd>device can perform USB2 hardware BESL LPM</dd></dl>
 <p> usb2_hw_lpm_enabled</p>
 <dl>
-<dd>USB2 hardware LPM is enabled</dl>
+<dd>USB2 hardware LPM is enabled</dd></dl>
 <p> usb2_hw_lpm_allowed</p>
 <dl>
-<dd>Userspace allows USB 2.0 LPM to be enabled</dl>
+<dd>Userspace allows USB 2.0 LPM to be enabled</dd></dl>
 <p> usb3_lpm_u1_enabled</p>
 <dl>
-<dd>USB3 hardware U1 LPM enabled</dl>
+<dd>USB3 hardware U1 LPM enabled</dd></dl>
 <p> usb3_lpm_u2_enabled</p>
 <dl>
-<dd>USB3 hardware U2 LPM enabled</dl>
+<dd>USB3 hardware U2 LPM enabled</dd></dl>
 <p> string_langid</p>
 <dl>
-<dd>language ID for strings</dl>
+<dd>language ID for strings</dd></dl>
 <p> product</p>
 <dl>
-<dd>iProduct string, if present (static)</dl>
+<dd>iProduct string, if present (static)</dd></dl>
 <p> manufacturer</p>
 <dl>
-<dd>iManufacturer string, if present (static)</dl>
+<dd>iManufacturer string, if present (static)</dd></dl>
 <p> serial</p>
 <dl>
-<dd>iSerialNumber string, if present (static)</dl>
+<dd>iSerialNumber string, if present (static)</dd></dl>
 <p> filelist</p>
 <dl>
-<dd>usbfs files that are open to this device</dl>
+<dd>usbfs files that are open to this device</dd></dl>
 <p> maxchild</p>
 <dl>
-<dd>number of ports if hub</dl>
+<dd>number of ports if hub</dd></dl>
 <p> quirks</p>
 <dl>
-<dd>quirks of the whole device</dl>
+<dd>quirks of the whole device</dd></dl>
 <p> urbnum</p>
 <dl>
-<dd>number of URBs submitted for the whole device</dl>
+<dd>number of URBs submitted for the whole device</dd></dl>
 <p> active_duration</p>
 <dl>
-<dd>total time device is not suspended</dl>
+<dd>total time device is not suspended</dd></dl>
 <p> connect_time</p>
 <dl>
-<dd>time device was first connected</dl>
+<dd>time device was first connected</dd></dl>
 <p> do_remote_wakeup</p>
 <dl>
-<dd>remote wakeup should be enabled</dl>
+<dd>remote wakeup should be enabled</dd></dl>
 <p> reset_resume</p>
 <dl>
-<dd>needs reset instead of resume</dl>
+<dd>needs reset instead of resume</dd></dl>
 <p> port_is_suspended</p>
 <dl>
-<dd>the upstream port is suspended (L2 or U3)</dl>
+<dd>the upstream port is suspended (L2 or U3)</dd></dl>
 <p> wusb_dev</p>
 <dl>
-<dd>if this is a Wireless USB device, link to the WUSB specific data for the device.</dl>
+<dd>if this is a Wireless USB device, link to the WUSB specific data for the device.</dd></dl>
 <p> slot_id</p>
 <dl>
-<dd>Slot ID assigned by xHCI</dl>
+<dd>Slot ID assigned by xHCI</dd></dl>
 <p> removable</p>
 <dl>
-<dd>Device can be physically removed from this port</dl>
+<dd>Device can be physically removed from this port</dd></dl>
 <p> l1_params</p>
 <dl>
-<dd>best effor service latency for USB2 L1 LPM state, and L1 timeout.</dl>
+<dd>best effor service latency for USB2 L1 LPM state, and L1 timeout.</dd></dl>
 <p> u1_params</p>
 <dl>
-<dd>exit latencies for USB3 U1 LPM state, and hub-initiated timeout.</dl>
+<dd>exit latencies for USB3 U1 LPM state, and hub-initiated timeout.</dd></dl>
 <p> u2_params</p>
 <dl>
-<dd>exit latencies for USB3 U2 LPM state, and hub-initiated timeout.</dl>
+<dd>exit latencies for USB3 U2 LPM state, and hub-initiated timeout.</dd></dl>
 <p> lpm_disable_count</p>
 <dl>
-<dd>Ref count used by <code>usb_disable_lpm</code> and <code>usb_enable_lpm</code> to keep track of the number of functions that require USB 3.0 Link Power Management to be disabled for this usb_device. This count should only be manipulated by those functions, with the bandwidth_mutex is held.</dl>
+<dd>Ref count used by <code>usb_disable_lpm</code> and <code>usb_enable_lpm</code> to keep track of the number of functions that require USB 3.0 Link Power Management to be disabled for this usb_device. This count should only be manipulated by those functions, with the bandwidth_mutex is held.</dd></dl>
 <h2>Notes</h2>
 <p>Usbcore drivers should not set usbdev-&gt;state directly. Instead use <code>usb_set_device_state</code>.</p>
 <h2>Copyright</h2>

@@ -55,9 +55,9 @@ description: "innd_selinux – Security Enhanced Linux Policy for the innd proce
 <p> Policy governs the access confined processes have to these ports. SELinux innd policy is very flexible allowing users to setup their innd processes in as secure a method as possible. </p>
 <p> The following port types are defined for innd: </p>
 <dl>
-<dt><code>innd_port_t</code></p>
+<dt><code>innd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 119</dl>
+</dd><dd>Default Defined Ports: tcp 119</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type innd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -118,8 +118,8 @@ description: "innd_selinux – Security Enhanced Linux Policy for the innd proce
 <p> <code>innd_exec_t</code> </p>
 <p> &#8211; Set files with the innd_exec_t type, if you want to transition an executable to the innd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/innd.*, /usr/libexec/news/rc.news, /usr/bin/suck, /etc/news/boot, /usr/bin/inews, /usr/bin/rnews, /usr/bin/rpost, /usr/sbin/in.nnrpd, /usr/libexec/news/sm, /usr/libexec/news/innd, /usr/libexec/news/inews, /usr/libexec/news/inndf, /usr/libexec/news/nnrpd, /usr/libexec/news/rnews, /usr/libexec/news/expire, /usr/libexec/news/fastrm, /usr/libexec/news/shlock, /usr/libexec/news/actsync, /usr/libexec/news/archive, /usr/libexec/news/batcher, /usr/libexec/news/ctlinnd, /usr/libexec/news/getlist, /usr/libexec/news/innfeed, /usr/libexec/news/innxmit, /usr/libexec/news/makedbz, /usr/libexec/news/nntpget, /usr/libexec/news/buffchan, /usr/libexec/news/convdate, /usr/libexec/news/cvtbatch, /usr/libexec/news/filechan, /usr/libexec/news/overchan, /usr/libexec/newsinnconfval, /usr/libexec/news/inndstart, /usr/libexec/news/innxbatch, /usr/libexec/news/expireover, /usr/libexec/news/shrinkfile, /usr/libexec/news/grephistory, /usr/libexec/news/makehistory, /usr/libexec/news/newsrequeue, /usr/libexec/news/ovdb_recover, /usr/libexec/news/prunehistory, /usr/libexec/news/startinnfeed </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/innd.*, /usr/libexec/news/rc.news, /usr/bin/suck, /etc/news/boot, /usr/bin/inews, /usr/bin/rnews, /usr/bin/rpost, /usr/sbin/in.nnrpd, /usr/libexec/news/sm, /usr/libexec/news/innd, /usr/libexec/news/inews, /usr/libexec/news/inndf, /usr/libexec/news/nnrpd, /usr/libexec/news/rnews, /usr/libexec/news/expire, /usr/libexec/news/fastrm, /usr/libexec/news/shlock, /usr/libexec/news/actsync, /usr/libexec/news/archive, /usr/libexec/news/batcher, /usr/libexec/news/ctlinnd, /usr/libexec/news/getlist, /usr/libexec/news/innfeed, /usr/libexec/news/innxmit, /usr/libexec/news/makedbz, /usr/libexec/news/nntpget, /usr/libexec/news/buffchan, /usr/libexec/news/convdate, /usr/libexec/news/cvtbatch, /usr/libexec/news/filechan, /usr/libexec/news/overchan, /usr/libexec/newsinnconfval, /usr/libexec/news/inndstart, /usr/libexec/news/innxbatch, /usr/libexec/news/expireover, /usr/libexec/news/shrinkfile, /usr/libexec/news/grephistory, /usr/libexec/news/makehistory, /usr/libexec/news/newsrequeue, /usr/libexec/news/ovdb_recover, /usr/libexec/news/prunehistory, /usr/libexec/news/startinnfeed </dd>
 </dl>
 <p> <code>innd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the innd_initrc_exec_t type, if you want to transition an executable to the innd_initrc_t domain. </p>
@@ -132,8 +132,8 @@ description: "innd_selinux – Security Enhanced Linux Policy for the innd proce
 <p> <code>innd_var_run_t</code> </p>
 <p> &#8211; Set files with the innd_var_run_t type, if you want to store the innd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/innd(/.*)?, /var/run/news(/.*)?, /var/run/innd.pid, /var/run/news.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/innd(/.*)?, /var/run/news(/.*)?, /var/run/innd.pid, /var/run/news.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

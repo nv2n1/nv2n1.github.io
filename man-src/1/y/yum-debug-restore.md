@@ -15,16 +15,16 @@ description: "yum-debug-restore – replay Yum transactions captured in a debug-
 <p> <code>yum-debug-restore</code> is a program which takes a gzipped file created by <code>yum-debug-dump</code> and acts on the information about installed packages contained within. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>&#8211;output</code></p>
-<dd> Output the commands that would be run to stdout.</p>
-<dt><code>&#8211;shell=&lt;file&gt;</code></p>
-<dd> Output the commands that would be run to a file.</p>
-<dt><code>&#8211;install-latest</code></p>
-<dd> Ask yum to install the latest version of the given packages, instead of the version that was installed in the debug-dump file.</p>
-<dt><code>&#8211;ignore-arch</code></p>
-<dd> Ignore the architecture of the packages, so you can &quot;restore&quot; an i386 debug-dump on an x86_64 machine.</p>
-<dt><code>&#8211;filter-types=[install,remove,update,downgrade]</code></p>
-<dd> Only perform the given types of commands, so you can filter to just upgrades and installs. </p>
+<dt><code>&#8211;output</code></dt>
+<dd> Output the commands that would be run to stdout.</dd>
+<dt><code>&#8211;shell=&lt;file&gt;</code></dt>
+<dd> Output the commands that would be run to a file.</dd>
+<dt><code>&#8211;install-latest</code></dt>
+<dd> Ask yum to install the latest version of the given packages, instead of the version that was installed in the debug-dump file.</dd>
+<dt><code>&#8211;ignore-arch</code></dt>
+<dd> Ignore the architecture of the packages, so you can &quot;restore&quot; an i386 debug-dump on an x86_64 machine.</dd>
+<dt><code>&#8211;filter-types=[install,remove,update,downgrade]</code></dt>
+<dd> Only perform the given types of commands, so you can filter to just upgrades and installs. </dd>
 </dl>
 <h2>FILES</h2>
 <p> As yum-debug-restore uses YUM libraries for retrieving all the information, it relies on YUM configuration for its default values like which repositories to use. Consult YUM documentation for details: </p>

@@ -15,14 +15,14 @@ description: "rdflib – manage a library file for use with ldrdf(1)"
 <p> <code>rdflib</code> manages a library file which can be used by <code><a href="/docs/linux/man/1-ldrdf/">ldrdf</a></code>(1). It is supplied with a shell script <code>makelib</code> which should probably be used to create libraries.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>c</code><i> library-file</i></p>
-<dd> Create (or truncate) a library.</p>
-<dt><code>a</code><i> library-file object-file module</i></p>
-<dd> Add the <i>object-file</i> to the library under the name <i>module</i>.</p>
-<dt><code>x</code><i> library-file module object-file</i></p>
-<dd> Extract a <i>module</i> from the library to the file <i>object-file</i>.</p>
-<dt><code>t library-file</code></p>
-<dd> Display a list of modules in the library.</dl>
+<dt><code>c</code><i> library-file</i></dt>
+<dd> Create (or truncate) a library.</dd>
+<dt><code>a</code><i> library-file object-file module</i></dt>
+<dd> Add the <i>object-file</i> to the library under the name <i>module</i>.</dd>
+<dt><code>x</code><i> library-file module object-file</i></dt>
+<dd> Extract a <i>module</i> from the library to the file <i>object-file</i>.</dd>
+<dt><code>t library-file</code></dt>
+<dd> Display a list of modules in the library.</dd></dl>
 <h2>NOTES</h2>
 <p> A remove command will be added soon.</p>
 <h2>AUTHORS</h2>

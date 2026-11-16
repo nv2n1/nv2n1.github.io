@@ -33,79 +33,79 @@ description: "c++filt – demangle C++ and Java symbols"
 <pre> .type _Z1fv, @function</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-_</code></p>
+<dt><code>-_</code></dt>
 <dd>
-<dt><code>&#8211;strip-underscore</code></p>
-<dd>On some systems, both the C and C<font SIZE="-2">++</font> compilers put an underscore in front of every name. For example, the C name <tt>&quot;foo&quot;</tt> gets the low-level name <tt>&quot;_foo&quot;</tt>. This option removes the initial underscore. Whether <code>c++filt</code> removes the underscore by default is target dependent.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;strip-underscore</code></dt>
+<dd>On some systems, both the C and C<font SIZE="-2">++</font> compilers put an underscore in front of every name. For example, the C name <tt>&quot;foo&quot;</tt> gets the low-level name <tt>&quot;_foo&quot;</tt>. This option removes the initial underscore. Whether <code>c++filt</code> removes the underscore by default is target dependent.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-strip-underscore</code></p>
-<dd>Do not remove the initial underscore.</p>
-<dt><code>-p</code></p>
+</dd><dt><code>&#8211;no-strip-underscore</code></dt>
+<dd>Do not remove the initial underscore.</dd>
+<dt><code>-p</code></dt>
 <dd>
-<dt><code>&#8211;no-params</code></p>
-<dd>When demangling the name of a function, do not display the types of the function&#8217;s parameters.</p>
-<dt><code>-t</code></p>
+</dd><dt><code>&#8211;no-params</code></dt>
+<dd>When demangling the name of a function, do not display the types of the function&#8217;s parameters.</dd>
+<dt><code>-t</code></dt>
 <dd>
-<dt><code>&#8211;types</code></p>
-<dd>Attempt to demangle types as well as function names. This is disabled by default since mangled types are normally only used internally in the compiler, and they can be confused with non-mangled names. For example, a function called &#8220;a&#8221; treated as a mangled type name would be demangled to &#8220;signed char&#8221;.</p>
-<dt><code>-i</code></p>
+</dd><dt><code>&#8211;types</code></dt>
+<dd>Attempt to demangle types as well as function names. This is disabled by default since mangled types are normally only used internally in the compiler, and they can be confused with non-mangled names. For example, a function called &#8220;a&#8221; treated as a mangled type name would be demangled to &#8220;signed char&#8221;.</dd>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;no-verbose</code></p>
-<dd>Do not include implementation details (if any) in the demangled output.</p>
-<dt><code>-r</code></p>
+</dd><dt><code>&#8211;no-verbose</code></dt>
+<dd>Do not include implementation details (if any) in the demangled output.</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>-R</code></p>
+</dd><dt><code>-R</code></dt>
 <dd>
-<dt><code>&#8211;recurse-limit</code></p>
+</dd><dt><code>&#8211;recurse-limit</code></dt>
 <dd>
-<dt><code>&#8211;no-recurse-limit</code></p>
+</dd><dt><code>&#8211;no-recurse-limit</code></dt>
 <dd>
-<dt><code>&#8211;recursion-limit</code></p>
+</dd><dt><code>&#8211;recursion-limit</code></dt>
 <dd>
-<dt><code>&#8211;no-recursion-limit</code></p>
-<dd>Enables or disables a limit on the amount of recursion performed whilst demangling strings. Since the name mangling formats allow for an infinite level of recursion it is possible to create strings whose decoding will exhaust the amount of stack space available on the host machine, triggering a memory fault. The limit tries to prevent this from happening by restricting recursion to 2048 levels of nesting. </p>
+</dd><dt><code>&#8211;no-recursion-limit</code></dt>
+<dd>Enables or disables a limit on the amount of recursion performed whilst demangling strings. Since the name mangling formats allow for an infinite level of recursion it is possible to create strings whose decoding will exhaust the amount of stack space available on the host machine, triggering a memory fault. The limit tries to prevent this from happening by restricting recursion to 2048 levels of nesting. </dd>
 <p> The default is for this limit to be enabled, but disabling it may be necessary in order to demangle truly complicated names. Note however that if the recursion limit is disabled then stack exhaustion is possible and any bug reports about such an event will be rejected. </p>
 <p> The <code>-r</code> option is a synonym for the <code>&#8211;no-recurse-limit</code> option. The <code>-R</code> option is a synonym for the <code>&#8211;recurse-limit</code> option.</p>
-<dt><code>-s</code> <i>format</i></p>
+<dt><code>-s</code> <i>format</i></dt>
 <dd>
-<dt><code>&#8211;format=</code><i>format</i></p>
-<dd><code>c++filt</code> can decode various methods of mangling, used by different compilers. The argument to this option selects which method it uses:</p>
+</dd><dt><code>&#8211;format=</code><i>format</i></dt>
+<dd><code>c++filt</code> can decode various methods of mangling, used by different compilers. The argument to this option selects which method it uses:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&quot;auto&quot;</p>
-<dd>Automatic selection based on executable (the default method)</p>
-<dt>&quot;gnu&quot;</p>
-<dd>the one used by the <font SIZE="-1">GNU C<font SIZE="-2">++</font></font> compiler (g++)</p>
-<dt>&quot;lucid&quot;</p>
-<dd>the one used by the Lucid compiler (lcc)</p>
-<dt>&quot;arm&quot;</p>
-<dd>the one specified by the C<font SIZE="-2">++</font> Annotated Reference Manual</p>
-<dt>&quot;hp&quot;</p>
-<dd>the one used by the <font SIZE="-1">HP</font> compiler (aCC)</p>
-<dt>&quot;edg&quot;</p>
-<dd>the one used by the <font SIZE="-1">EDG</font> compiler</p>
-<dt>&quot;gnu-v3&quot;</p>
-<dd>the one used by the <font SIZE="-1">GNU C<font SIZE="-2">++</font></font> compiler (g++) with the V3 <font SIZE="-1">ABI.</font></p>
-<dt>&quot;java&quot;</p>
-<dd>the one used by the <font SIZE="-1">GNU</font> Java compiler (gcj)</p>
-<dt>&quot;gnat&quot;</p>
-<dd>the one used by the <font SIZE="-1">GNU</font> Ada compiler (<font SIZE="-1">GNAT</font>).</dl>
+</dd><dl>
+<dt>&quot;auto&quot;</dt>
+<dd>Automatic selection based on executable (the default method)</dd>
+<dt>&quot;gnu&quot;</dt>
+<dd>the one used by the <font SIZE="-1">GNU C<font SIZE="-2">++</font></font> compiler (g++)</dd>
+<dt>&quot;lucid&quot;</dt>
+<dd>the one used by the Lucid compiler (lcc)</dd>
+<dt>&quot;arm&quot;</dt>
+<dd>the one specified by the C<font SIZE="-2">++</font> Annotated Reference Manual</dd>
+<dt>&quot;hp&quot;</dt>
+<dd>the one used by the <font SIZE="-1">HP</font> compiler (aCC)</dd>
+<dt>&quot;edg&quot;</dt>
+<dd>the one used by the <font SIZE="-1">EDG</font> compiler</dd>
+<dt>&quot;gnu-v3&quot;</dt>
+<dd>the one used by the <font SIZE="-1">GNU C<font SIZE="-2">++</font></font> compiler (g++) with the V3 <font SIZE="-1">ABI.</font></dd>
+<dt>&quot;java&quot;</dt>
+<dd>the one used by the <font SIZE="-1">GNU</font> Java compiler (gcj)</dd>
+<dt>&quot;gnat&quot;</dt>
+<dd>the one used by the <font SIZE="-1">GNU</font> Ada compiler (<font SIZE="-1">GNAT</font>).</dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print a summary of the options to <code>c++filt</code> and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print the version number of <code>c++filt</code> and exit.</p>
-<dt><code>@</code><i>file</i></p>
-<dd>Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </p>
+<dd></dd></dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Print a summary of the options to <code>c++filt</code> and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the version number of <code>c++filt</code> and exit.</dd>
+<dt><code>@</code><i>file</i></dt>
+<dd>Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
 <p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</dl>
 <h2>Footnotes</h2>
 <dl>
-<dt>1.</p>
-<dd>MS-DOS does not allow <tt>&quot;+&quot;</tt> characters in file names, so on MS-DOS this program is named <font SIZE="-1"><code>CXXFILT</code></font>.</dl>
+<dt>1.</dt>
+<dd>MS-DOS does not allow <tt>&quot;+&quot;</tt> characters in file names, so on MS-DOS this program is named <font SIZE="-1"><code>CXXFILT</code></font>.</dd></dl>
 <h2>See Also</h2>
 <p>the Info entries for <i>binutils</i>.</p>
 <h2>Copyright</h2>

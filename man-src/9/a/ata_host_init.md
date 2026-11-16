@@ -14,15 +14,15 @@ description: "ata_host_init – Initialize a host struct for sas (ipr, libsas)"
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>host to initialize</dl>
+</dd><dd>host to initialize</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>device host is attached to</dl>
+<dd>device host is attached to</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>port_ops</dl>
+<dd>port_ops</dd></dl>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

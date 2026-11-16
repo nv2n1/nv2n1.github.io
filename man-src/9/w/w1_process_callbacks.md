@@ -14,7 +14,7 @@ description: "w1_process_callbacks – execute each dev->async_list callback ent
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>w1_master device</dl>
+</dd><dd>w1_master device</dd></dl>
 <h2>Description</h2>
 <p>The w1 master list_mutex must be held.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "w1_process_callbacks – execute each dev->async_list callback ent
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

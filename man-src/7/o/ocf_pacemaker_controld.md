@@ -15,21 +15,21 @@ description: "ocf_pacemaker_controld – DLM Agent for cluster file systems"
 <h2>Supported Parameters</h2>
 <p><code>OCF_RESKEY_args</code> = string [-s 0]</p>
 <dl>
-<dd>DLM Options </p>
+<dd>DLM Options </dd>
 <p> Any additional options to start the dlm_controld service with</dl>
 <p> <code>OCF_RESKEY_configdir</code> = string [/sys/kernel/config]</p>
 <dl>
-<dd>Location of configfs </p>
+<dd>Location of configfs </dd>
 <p> The location where configfs is or should be mounted</dl>
 <p> <code>OCF_RESKEY_daemon</code> = string [dlm_controld.pcmk]</p>
 <dl>
-<dd>The daemon to start </p>
+<dd>The daemon to start </dd>
 <p> The daemon to start &#8211; supports gfs_controld(.pcmk) and dlm_controld(.pcmk)</dl>
 <p> <code>OCF_RESKEY_allow_stonith_disabled</code> = string [false]</p>
 <dl>
-<dd>Allow start-up even without STONITH/fencing </p>
+<dd>Allow start-up even without STONITH/fencing </dd>
 <p> Allow DLM start-up even if STONITH/fencing is disabled in the cluster. Setting this option to true will cause cluster malfunction and hangs on fail-over for DLM clients that require fencing (such as GFS2, OCFS2, and cLVM2). This option is advanced use only.</dl>
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

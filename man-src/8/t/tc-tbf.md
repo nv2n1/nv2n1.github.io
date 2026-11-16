@@ -23,22 +23,22 @@ description: "tbf – Token Bucket Filter"
 <h2>Parameters</h2>
 <p>See <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) for how to specify the units of these values.</p>
 <dl>
-<dt>limit or latency</p>
-<dd>Limit is the number of bytes that can be queued waiting for tokens to become available. You can also specify this the other way around by setting the latency parameter, which specifies the maximum amount of time a packet can sit in the TBF. The latter calculation takes into account the size of the bucket, the rate and possibly the peakrate (if set). These two parameters are mutually exclusive.</p>
-<dt>burst</p>
-<dd>Also known as buffer or maxburst. Size of the bucket, in bytes. This is the maximum amount of bytes that tokens can be available for instantaneously. In general, larger shaping rates require a larger buffer. For 10mbit/s on Intel, you need at least 10kbyte buffer if you want to reach your configured rate! </p>
+<dt>limit or latency</dt>
+<dd>Limit is the number of bytes that can be queued waiting for tokens to become available. You can also specify this the other way around by setting the latency parameter, which specifies the maximum amount of time a packet can sit in the TBF. The latter calculation takes into account the size of the bucket, the rate and possibly the peakrate (if set). These two parameters are mutually exclusive.</dd>
+<dt>burst</dt>
+<dd>Also known as buffer or maxburst. Size of the bucket, in bytes. This is the maximum amount of bytes that tokens can be available for instantaneously. In general, larger shaping rates require a larger buffer. For 10mbit/s on Intel, you need at least 10kbyte buffer if you want to reach your configured rate! </dd>
 <p> If your buffer is too small, packets may be dropped because more tokens arrive per timer tick than fit in your bucket. The minimum buffer size can be calculated by dividing the rate by HZ. </p>
 <p> Token usage calculations are performed using a table which by default has a resolution of 8 packets. This resolution can be changed by specifying the <code>cell</code> size with the burst. For example, to specify a 6000 byte buffer with a 16 byte cell size, set a burst of 6000/16. You will probably never have to set this. Must be an integral power of 2.</p>
-<dt>mpu</p>
-<dd>A zero-sized packet does not use zero bandwidth. For ethernet, no packet uses less than 64 bytes. The Minimum Packet Unit determines the minimal token usage (specified in bytes) for a packet. Defaults to zero.</p>
-<dt>rate</p>
-<dd>The speed knob. See remarks above about limits! See <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) for units.</dl>
+<dt>mpu</dt>
+<dd>A zero-sized packet does not use zero bandwidth. For ethernet, no packet uses less than 64 bytes. The Minimum Packet Unit determines the minimal token usage (specified in bytes) for a packet. Defaults to zero.</dd>
+<dt>rate</dt>
+<dd>The speed knob. See remarks above about limits! See <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) for units.</dd></dl>
 <p> Furthermore, if a peakrate is desired, the following parameters are available: </p>
 <dl>
-<dt>peakrate</p>
-<dd>Maximum depletion rate of the bucket. The peakrate does not need to be set, it is only necessary if perfect millisecond timescale shaping is required. </p>
-<dt>mtu/minburst</p>
-<dd>Specifies the size of the peakrate bucket. For perfect accuracy, should be set to the MTU of the interface. If a peakrate is needed, but some burstiness is acceptable, this size can be raised. A 3000 byte minburst allows around 3mbit/s of peakrate, given 1000 byte packets. </p>
+<dt>peakrate</dt>
+<dd>Maximum depletion rate of the bucket. The peakrate does not need to be set, it is only necessary if perfect millisecond timescale shaping is required. </dd>
+<dt>mtu/minburst</dt>
+<dd>Specifies the size of the peakrate bucket. For perfect accuracy, should be set to the MTU of the interface. If a peakrate is needed, but some burstiness is acceptable, this size can be raised. A 3000 byte minburst allows around 3mbit/s of peakrate, given 1000 byte packets. </dd>
 <p> Like the regular burstsize you can also specify a <code>cell</code> size.</dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>To attach a TBF with a sustained maximum rate of 0.5mbit/s, a peakrate of 1.0mbit/s, a 5kilobyte buffer, with a pre-bucket queue size limit calculated so the TBF causes at most 70ms of latency, with perfect peakrate behaviour, issue: </p>
@@ -52,3 +52,4 @@ description: "tbf – Token Bucket Filter"
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) </p>
 <h2>Author</h2>
 <p>Alexey N. Kuznetsov, &lt;kuznet [at] ms2.inr.ac.ru&gt;. This manpage maintained by bert hubert &lt;ahu [at] ds9a.nl&gt;</p>
+</p>

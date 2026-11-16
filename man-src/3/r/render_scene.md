@@ -10,7 +10,6 @@ description: "render_scene – Renders all the queued scene polygons. Allegro ga
 <p>render_scene &#8211; Renders all the queued scene polygons. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void render_scene();</code></pre>
 <h2>Description</h2>
 <p>Renders all the specified scene_polygon3d()&#8217;s on the bitmap passed to clear_scene(). Rendering is done one scanline at a time, with no pixel being processed more than once. Note that between clear_scene() and render_scene() you shouldn&#8217;t change the clip rectangle of the destination bitmap. For speed reasons, you should set the clip rectangle to the minimum. Note also that all the textures passed to scene_polygon3d() are stored as pointers only and actually used in render_scene(). </p>

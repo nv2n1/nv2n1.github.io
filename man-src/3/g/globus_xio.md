@@ -24,12 +24,12 @@ description: "Globus XIO –"
 <h2>Detailed Description</h2>
 <p> eXtensible Input Output library </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Globus XIO API</code></p>
-<dt>&bull;</p>
-<dd> <code>XIO Examples</code></p>
-<dt>&bull;</p>
-<dd> <code>Globus XIO Driver</code></dl>
+<dt>&bull;</dt>
+<dd> <code>Globus XIO API</code></dd>
+<dt>&bull;</dt>
+<dd> <code>XIO Examples</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Globus XIO Driver</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
 <h2>Index</h2>

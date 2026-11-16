@@ -14,29 +14,29 @@ description: "BACKUPNINJA.CONF – Configuration file(s) for backupninja (1)."
 <p><code>backupninja.conf</code> is the general configuration file. In this file you can set the log level and change the default directory locations. You can force a different general configuration file with &quot;backupninja -f /path/to/conf&quot;. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>loglevel</code></p>
+<dt><code>loglevel</code></dt>
 <dd>How verbose to make the logs.<br />
  5 = Debugging messages<br />
  4 = Informational messages<br />
  3 = Warnings<br />
  2 = Errors<br />
- 1 = Fatal errors </p>
-<dt><code>reportemail</code></p>
-<dd>Send a summary of the backup status to this email address </p>
-<dt><code>reportsuccess</code></p>
-<dd>If set to &#8216;yes&#8217;, a report email will be generated even if all modules reported success. </p>
-<dt><code>reportwarning</code></p>
-<dd>If set to &#8216;yes&#8217;, a report email will be generated even if there was no error. </p>
-<dt><code>logfile</code></p>
-<dd>The path of the logfile. </p>
-<dt><code>configdirectory</code></p>
-<dd>The directory where all the backup action configuration files live. </p>
-<dt><code>scriptdirectory </code></p>
-<dd>Where backupninja handler scripts are found </p>
-<dt><code>usecolors</code></p>
-<dd>If set to &#8216;yes&#8217;, use colors in the log file and debug output. </p>
-<dt><code>when</code></p>
-<dd>When to process each configuration file. The value used here will be applied for each configuration file. It is possibile to override this &quot;when&quot; in each each configuration file, see also section &quot;Scheduling&quot; in <a href="/docs/linux/man/5-backup-d/">backup.d</a>(5). </p>
+ 1 = Fatal errors </dd>
+<dt><code>reportemail</code></dt>
+<dd>Send a summary of the backup status to this email address </dd>
+<dt><code>reportsuccess</code></dt>
+<dd>If set to &#8216;yes&#8217;, a report email will be generated even if all modules reported success. </dd>
+<dt><code>reportwarning</code></dt>
+<dd>If set to &#8216;yes&#8217;, a report email will be generated even if there was no error. </dd>
+<dt><code>logfile</code></dt>
+<dd>The path of the logfile. </dd>
+<dt><code>configdirectory</code></dt>
+<dd>The directory where all the backup action configuration files live. </dd>
+<dt><code>scriptdirectory </code></dt>
+<dd>Where backupninja handler scripts are found </dd>
+<dt><code>usecolors</code></dt>
+<dd>If set to &#8216;yes&#8217;, use colors in the log file and debug output. </dd>
+<dt><code>when</code></dt>
+<dd>When to process each configuration file. The value used here will be applied for each configuration file. It is possibile to override this &quot;when&quot; in each each configuration file, see also section &quot;Scheduling&quot; in <a href="/docs/linux/man/5-backup-d/">backup.d</a>(5). </dd>
 <p> For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>when&nbsp;<wbr>=&nbsp;<wbr>sundays at 02:00<br />
 &nbsp;<wbr>&nbsp;<wbr>when&nbsp;<wbr>=&nbsp;<wbr>30th at 22<br />
@@ -51,8 +51,8 @@ description: "BACKUPNINJA.CONF – Configuration file(s) for backupninja (1)."
 &nbsp;<wbr>&nbsp;<wbr>when&nbsp;<wbr>=&nbsp;<wbr>tuesday at 2am<br />
 &nbsp;<wbr>&nbsp;<wbr>when&nbsp;<wbr>=&nbsp;<wbr>tuesday at 2<br />
 &nbsp;<wbr>&nbsp;<wbr>when&nbsp;<wbr>=&nbsp;<wbr>tues at 02 </p>
-<dt><code>vservers</code></p>
-<dd>If you are using Linux-Vservers (<a rel="nofollow" href="http://linux-vserver.org">http://linux-vserver.org</a>), there are some special capabilities that different handlers have to make vserver backups easier. See the example configuration files for each handler to configure the vserver specific variables. </p>
+<dt><code>vservers</code></dt>
+<dd>If you are using Linux-Vservers (<a rel="nofollow" href="http://linux-vserver.org">http://linux-vserver.org</a>), there are some special capabilities that different handlers have to make vserver backups easier. See the example configuration files for each handler to configure the vserver specific variables. </dd>
 </dl>
 <h2>Defaults</h2>
 <p>loglevel = 4<br />

@@ -15,11 +15,11 @@ CALL NNPNTS (X, Y, Z)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - The X coordinate of the point where interpolation is desired.
-<dt>Y
-<dd>(Real, Input) - The Y coordinate of the point where interpolation is desired.
-<dt>Z
-<dd>(Real, Output) - The interpolated functional value at the point (X,Y).</dl>
+</dt><dd>(Real, Input) - The X coordinate of the point where interpolation is desired.
+</dd><dt>Y
+</dt><dd>(Real, Input) - The Y coordinate of the point where interpolation is desired.
+</dd><dt>Z
+</dt><dd>(Real, Output) - The interpolated functional value at the point (X,Y).</dd></dl>
 
 <h2>Usage</h2>
 

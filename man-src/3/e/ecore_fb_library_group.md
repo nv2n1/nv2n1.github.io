@@ -20,16 +20,16 @@ description: "Framebuffer Library Functions – Functions used to set up and shu
 <p>Sets up the Ecore_Fb library. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> device target name</dl>
+<dd><i>name</i> device target name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on failure. Otherwise, the number of times the library has been initialised without being shut down.</dl>
+<dd>0 on failure. Otherwise, the number of times the library has been initialised without being shut down.</dd></dl>
 <p> References ecore_event_type_new(). </p>
 <p> Referenced by ecore_evas_fb_new().</p>
 <h3>EAPI int ecore_fb_shutdown (void)</h3>
 <p>Shuts down the Ecore_Fb library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the system has been initialised without being shut down.</dl>
+<dd>The number of times the system has been initialised without being shut down.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

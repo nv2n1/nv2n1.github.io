@@ -20,23 +20,23 @@ bool bson_append_binary(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> The key name.</dl>
+<dt><code>key</code></dt>
+<dd> The key name.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> in bytes or -1 to use strlen().</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes or -1 to use strlen().</dd></dl>
 <dl>
-<dt><code>subtype</code></p>
-<dd> A bson_subtype_t indicationg the binary subtype.</dl>
+<dt><code>subtype</code></dt>
+<dd> A bson_subtype_t indicationg the binary subtype.</dd></dl>
 <dl>
-<dt><code>binary</code></p>
-<dd> A buffer to embed as binary data.</dl>
+<dt><code>binary</code></dt>
+<dd> A buffer to embed as binary data.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> The length of <code>buffer</code> in bytes.</dl>
+<dt><code>length</code></dt>
+<dd> The length of <code>buffer</code> in bytes.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_binary/">bson_append_binary</a>(3)</code> function shall append a new element to <code>bson</code> containing the binary data provided. </p>
 <h2>RETURNS</h2>

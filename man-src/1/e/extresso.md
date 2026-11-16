@@ -17,20 +17,20 @@ description: "extresso – wrapper for wrestool and icotool"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;).</p>
 <dl>
-<dt><code>-o,</code>&#8211;output=DIR</p>
-<dd> Where to place extracted files (default `.&#8217;).</p>
-<dt><code>&#8211;format=FORMAT</code></p>
-<dd> Extraction format of icon resources, passed to icotool.</p>
-<dt><code>-b,</code>&#8211;base=DIR</p>
-<dd> Base directory of local files in scripts. (This will be appended to &#8220;file&#8221; lines in the scripts.)</p>
-<dt><code>-i,</code>&#8211;interactive</p>
-<dd> Prompt before extraction.</p>
-<dt><code>-v,</code>&#8211;verbose</p>
-<dd> Explain what is being done.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display a help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</dl>
+<dt><code>-o,</code>&#8211;output=DIR</dt>
+<dd> Where to place extracted files (default `.&#8217;).</dd>
+<dt><code>&#8211;format=FORMAT</code></dt>
+<dd> Extraction format of icon resources, passed to icotool.</dd>
+<dt><code>-b,</code>&#8211;base=DIR</dt>
+<dd> Base directory of local files in scripts. (This will be appended to &#8220;file&#8221; lines in the scripts.)</dd>
+<dt><code>-i,</code>&#8211;interactive</dt>
+<dd> Prompt before extraction.</dd>
+<dt><code>-v,</code>&#8211;verbose</dt>
+<dd> Explain what is being done.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Extract all resources from shell32.dll using the resource script &#8220;win98_shell32&#8221;, assuming it is available in &#8220;/windows/windows/system/shell32.dll&#8221;, and placing output in &#8220;out/&#8221;: </p>
 <p>&nbsp;<wbr>&nbsp;$&nbsp;extresso ../data/resscripts/win98_shell32 &#8211;base=/windows/windows &#8211;output=out/<br />

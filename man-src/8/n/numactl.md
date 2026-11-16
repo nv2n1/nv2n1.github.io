@@ -49,51 +49,51 @@ description: "numactl – Control NUMA policy for processes or shared memory"
 </table>
 <p> Note that block resolves the kernel block device names only for udev names in /dev use <i>file:</i></p>
 <dl>
-<dt>Policy settings are:</p>
+<dt>Policy settings are:</dt>
 <dd>
-<dt><code>&#8211;all, -a</code></p>
-<dd>Unset default cpuset awareness, so user can use all possible CPUs/nodes for following policy settings.</p>
-<dt><code>&#8211;interleave=nodes, -i nodes</code></p>
-<dd>Set a memory interleave policy. Memory will be allocated using round robin on <i>nodes.</i> When memory cannot be allocated on the current interleave target fall back to other nodes. Multiple nodes may be specified on &#8211;interleave, &#8211;membind and &#8211;cpunodebind.</p>
-<dt><code>&#8211;membind=nodes, -m nodes</code></p>
-<dd>Only allocate memory from nodes. Allocation will fail when there is not enough memory available on these nodes. <i>nodes</i> may be specified as noted above.</p>
-<dt><code>&#8211;cpunodebind=nodes, -N nodes</code></p>
-<dd>Only execute <i>command</i> on the CPUs of <i>nodes. </i> Note that nodes may consist of multiple CPUs. <i>nodes</i> may be specified as noted above.</p>
-<dt><code>&#8211;physcpubind=cpus, -C cpus</code></p>
-<dd>Only execute <i>process</i> on <i>cpus.</i> This accepts cpu numbers as shown in the <i>processor</i> fields of <i>/proc/cpuinfo,</i> or relative cpus as in relative to the current cpuset. You may specify &quot;all&quot;, which means all cpus in the current cpuset. Physical <i>cpus</i> may be specified as N,N,N or N-N or N,N-N or N-N,N-N and so forth. Relative <i>cpus</i> may be specifed as +N,N,N or +N-N or +N,N-N and so forth. The + indicates that the cpu numbers are relative to the process&#8217; set of allowed cpus in its current cpuset. A !N-N notation indicates the inverse of N-N, in other words all cpus except N-N. If used with + notation, specify !+N-N.</p>
-<dt><code>&#8211;localalloc, -l </code></p>
-<dd>Falls back to the system default which is local allocation by using <i>MPOL_DEFAULT</i> policy. See <i><a href="/docs/linux/man/2-mbind/">mbind</a>(2)</i> for details.</p>
-<dt><code>&#8211;preferred=node</code></p>
-<dd>Preferably allocate memory on <i>node,</i> but if memory cannot be allocated there fall back to other nodes. This option takes only a single node number. Relative notation may be used.</p>
-<dt><code>&#8211;show, -s</code></p>
-<dd>Show NUMA policy settings of the current process.</p>
-<dt><code>&#8211;hardware, -H</code></p>
-<dd>Show inventory of available nodes on the system.</p>
-<dt>Numactl can set up policy for a SYSV shared memory segment or a file in shmfs/hugetlbfs.</p>
-<dd>&nbsp;<wbr> This policy is persistent and will be used by all mappings from that shared memory. The order of options matters here. The specification must at least include either of <i>&#8211;shm, </i> <i>&#8211;shmid, </i> <i>&#8211;file</i> to specify the shared memory segment or file and a memory policy like described above ( <i>&#8211;interleave, </i> <i>&#8211;localalloc, </i> <i>&#8211;preferred,</i> <i>&#8211;membind</i> ).</p>
-<dt><code>&#8211;huge</code></p>
-<dd>When creating a SYSV shared memory segment use huge pages. Only valid before &#8211;shmid or &#8211;shm</p>
-<dt><code>&#8211;offset</code></p>
-<dd>Specify offset into the shared memory segment. Default 0. Valid units are <i>m</i> (for MB), <i>g </i> (for GB), <i>k </i> (for KB), otherwise it specifies bytes.</p>
-<dt><code>&#8211;strict</code></p>
-<dd>Give an error when a page in the policied area in the shared memory segment already was faulted in with a conflicting policy. Default is to silently ignore this.</p>
-<dt><code>&#8211;shmmode shmmode</code></p>
-<dd>Only valid before &#8211;shmid or &#8211;shm When creating a shared memory segment set it to numeric mode <i>shmmode.</i></p>
-<dt><code>&#8211;length length</code></p>
-<dd>Apply policy to <i>length </i> range in the shared memory segment or make the segment length long Default is to use the remaining length Required when a shared memory segment is created and specifies the length of the new segment then. Valid units are <i>m</i> (for MB), <i>g </i> (for GB), <i>k </i> (for KB), otherwise it specifies bytes.</p>
-<dt><code>&#8211;shmid id</code></p>
-<dd>Create or use an shared memory segment with numeric ID <i>id</i></p>
-<dt><code>&#8211;shm shmkeyfile</code></p>
-<dd>Create or use an shared memory segment, with the ID generated using <i><a href="/docs/linux/man/3-ftok/">ftok</a>(3) </i> from shmkeyfile</p>
-<dt><code>&#8211;file tmpfsfile</code></p>
-<dd>Set policy for a file in tmpfs or hugetlbfs</p>
-<dt><code>&#8211;touch</code></p>
-<dd>Touch pages to enforce policy early. Default is to not touch them, the policy is applied when an applications maps and accesses a page.</p>
-<dt><code>&#8211;dump</code></p>
-<dd>Dump policy in the specified range.</p>
-<dt><code>&#8211;dump-nodes</code></p>
-<dd>Dump all nodes of the specific range (very verbose!)</p>
-<dt>Valid node specifiers</p>
+</dd><dt><code>&#8211;all, -a</code></dt>
+<dd>Unset default cpuset awareness, so user can use all possible CPUs/nodes for following policy settings.</dd>
+<dt><code>&#8211;interleave=nodes, -i nodes</code></dt>
+<dd>Set a memory interleave policy. Memory will be allocated using round robin on <i>nodes.</i> When memory cannot be allocated on the current interleave target fall back to other nodes. Multiple nodes may be specified on &#8211;interleave, &#8211;membind and &#8211;cpunodebind.</dd>
+<dt><code>&#8211;membind=nodes, -m nodes</code></dt>
+<dd>Only allocate memory from nodes. Allocation will fail when there is not enough memory available on these nodes. <i>nodes</i> may be specified as noted above.</dd>
+<dt><code>&#8211;cpunodebind=nodes, -N nodes</code></dt>
+<dd>Only execute <i>command</i> on the CPUs of <i>nodes. </i> Note that nodes may consist of multiple CPUs. <i>nodes</i> may be specified as noted above.</dd>
+<dt><code>&#8211;physcpubind=cpus, -C cpus</code></dt>
+<dd>Only execute <i>process</i> on <i>cpus.</i> This accepts cpu numbers as shown in the <i>processor</i> fields of <i>/proc/cpuinfo,</i> or relative cpus as in relative to the current cpuset. You may specify &quot;all&quot;, which means all cpus in the current cpuset. Physical <i>cpus</i> may be specified as N,N,N or N-N or N,N-N or N-N,N-N and so forth. Relative <i>cpus</i> may be specifed as +N,N,N or +N-N or +N,N-N and so forth. The + indicates that the cpu numbers are relative to the process&#8217; set of allowed cpus in its current cpuset. A !N-N notation indicates the inverse of N-N, in other words all cpus except N-N. If used with + notation, specify !+N-N.</dd>
+<dt><code>&#8211;localalloc, -l </code></dt>
+<dd>Falls back to the system default which is local allocation by using <i>MPOL_DEFAULT</i> policy. See <i><a href="/docs/linux/man/2-mbind/">mbind</a>(2)</i> for details.</dd>
+<dt><code>&#8211;preferred=node</code></dt>
+<dd>Preferably allocate memory on <i>node,</i> but if memory cannot be allocated there fall back to other nodes. This option takes only a single node number. Relative notation may be used.</dd>
+<dt><code>&#8211;show, -s</code></dt>
+<dd>Show NUMA policy settings of the current process.</dd>
+<dt><code>&#8211;hardware, -H</code></dt>
+<dd>Show inventory of available nodes on the system.</dd>
+<dt>Numactl can set up policy for a SYSV shared memory segment or a file in shmfs/hugetlbfs.</dt>
+<dd>&nbsp;<wbr> This policy is persistent and will be used by all mappings from that shared memory. The order of options matters here. The specification must at least include either of <i>&#8211;shm, </i> <i>&#8211;shmid, </i> <i>&#8211;file</i> to specify the shared memory segment or file and a memory policy like described above ( <i>&#8211;interleave, </i> <i>&#8211;localalloc, </i> <i>&#8211;preferred,</i> <i>&#8211;membind</i> ).</dd>
+<dt><code>&#8211;huge</code></dt>
+<dd>When creating a SYSV shared memory segment use huge pages. Only valid before &#8211;shmid or &#8211;shm</dd>
+<dt><code>&#8211;offset</code></dt>
+<dd>Specify offset into the shared memory segment. Default 0. Valid units are <i>m</i> (for MB), <i>g </i> (for GB), <i>k </i> (for KB), otherwise it specifies bytes.</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>Give an error when a page in the policied area in the shared memory segment already was faulted in with a conflicting policy. Default is to silently ignore this.</dd>
+<dt><code>&#8211;shmmode shmmode</code></dt>
+<dd>Only valid before &#8211;shmid or &#8211;shm When creating a shared memory segment set it to numeric mode <i>shmmode.</i></dd>
+<dt><code>&#8211;length length</code></dt>
+<dd>Apply policy to <i>length </i> range in the shared memory segment or make the segment length long Default is to use the remaining length Required when a shared memory segment is created and specifies the length of the new segment then. Valid units are <i>m</i> (for MB), <i>g </i> (for GB), <i>k </i> (for KB), otherwise it specifies bytes.</dd>
+<dt><code>&#8211;shmid id</code></dt>
+<dd>Create or use an shared memory segment with numeric ID <i>id</i></dd>
+<dt><code>&#8211;shm shmkeyfile</code></dt>
+<dd>Create or use an shared memory segment, with the ID generated using <i><a href="/docs/linux/man/3-ftok/">ftok</a>(3) </i> from shmkeyfile</dd>
+<dt><code>&#8211;file tmpfsfile</code></dt>
+<dd>Set policy for a file in tmpfs or hugetlbfs</dd>
+<dt><code>&#8211;touch</code></dt>
+<dd>Touch pages to enforce policy early. Default is to not touch them, the policy is applied when an applications maps and accesses a page.</dd>
+<dt><code>&#8211;dump</code></dt>
+<dd>Dump policy in the specified range.</dd>
+<dt><code>&#8211;dump-nodes</code></dt>
+<dd>Dump all nodes of the specific range (very verbose!)</dd>
+<dt>Valid node specifiers</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -122,7 +122,7 @@ description: "numactl – Control NUMA policy for processes or shared memory"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>Examples</h2>
 <p>numactl &#8211;physcpubind=+0-4,8-12 myapplic arguments Run myapplic on cpus 0-4 and 8-12 of the current cpuset. </p>
 <p> numactl &#8211;interleave=all bigdatabase arguments Run big database with its memory interleaved on all CPUs. </p>

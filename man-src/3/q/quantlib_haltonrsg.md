@@ -23,11 +23,11 @@ description: "QuantLib::HaltonRsg – Halton low-discrepancy sequence generator.
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned values is tested by reproducing known good values.</p>
-<dt>*</p>
-<dd>the correctness of the returned values is tested by checking their discrepancy against known good values.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by reproducing known good values.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by checking their discrepancy against known good values.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -10,11 +10,9 @@ description: "pthread_attr_setstackaddr, pthread_attr_getstackaddr – set/get s
 <p>pthread_attr_setstackaddr, pthread_attr_getstackaddr &#8211; set/get stack address attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setstackaddr(pthread_attr_t *attr, void *stackaddr);
 int pthread_attr_getstackaddr(const pthread_attr_t *attr,
                               void **stackaddr);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>These functions are obsolete: <code>do not use them.</code> Use <code><a href="/docs/linux/man/3-pthread_attr_setstack/">pthread_attr_setstack</a></code>(3) and <code><a href="/docs/linux/man/3-pthread_attr_getstack/">pthread_attr_getstack</a></code>(3) instead. </p>

@@ -15,11 +15,11 @@ netdev_bonding_info_change - Dispatch event about slave change
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>bonding_info</i>
-<dl><dd>info to dispatch</dl>
+<dl><dd>info to dispatch</dd></dl>
 
 <h2>Description</h2>
 

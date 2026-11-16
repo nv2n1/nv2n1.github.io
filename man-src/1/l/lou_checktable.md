@@ -14,12 +14,12 @@ description: "lou_checktable – Test a liblouis Braille translation table"
 <h2>DESCRIPTION</h2>
 <p> Test a Braille translation table. If the table contains errors, appropriate messages are displayed. If there are no errors the message &quot;no errors found.&quot; is shown unless you specify the <code>&#8211;quiet</code> option.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> display version information and exit</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> do not write to standard error if there are no errors.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> display version information and exit</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> do not write to standard error if there are no errors.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by John J. Boyer.</p>
 <h2>REPORTING BUGS</h2>
@@ -31,6 +31,6 @@ description: "lou_checktable – Test a liblouis Braille translation table"
 <p> The full documentation for <code>lou_checktable</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lou_checktable</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info liblouis</code></dl>
+</dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -17,27 +17,27 @@ description: "nwfsinfo – Print some information about the file server"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> With -h nwfsinfo prints a little help text.</dl>
+</dt><dd> With -h nwfsinfo prints a little help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> is the name of the server you want to know something about.</dl>
+</dt><dd> is the name of the server you want to know something about.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> Print what the file server believes to be the current time.</dl>
+</dt><dd> Print what the file server believes to be the current time.</dd></dl>
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> Print the so-called file server description strings.</dl>
+</dt><dd> Print the so-called file server description strings.</dd></dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> Print the extended file server information such as NetWare version, maximum connections an others.</dl>
+</dt><dd> Print the extended file server information such as NetWare version, maximum connections an others.</dd></dl>
 <p> <code>-e</code></p>
 <dl>
 <dt>
-<dd> List informations about NCP extensions loaded on server.</dl>
+</dt><dd> List informations about NCP extensions loaded on server.</dd></dl>
 <h2>BUGS</h2>
 <p> Description strings contain garbage on some Netware versions. </p>
 <h2>AUTHOR</h2>

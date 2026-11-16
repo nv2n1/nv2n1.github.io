@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_obj_import_url – API function"
 <p> <code>int gnutls_pkcs11_obj_import_url(gnutls_pkcs11_obj_t </code><i>obj</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_obj_t obj</p>
-<dd> The structure to store the object</p>
-<dt>const char * url</p>
-<dd> a PKCS 11 url identifying the key</p>
-<dt>unsigned int flags</p>
-<dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dl>
+<dt>gnutls_pkcs11_obj_t obj</dt>
+<dd> The structure to store the object</dd>
+<dt>const char * url</dt>
+<dd> a PKCS 11 url identifying the key</dd>
+<dt>unsigned int flags</dt>
+<dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will &quot;import&quot; a PKCS 11 URL identifying an object (e.g. certificate) to the <code>gnutls_pkcs11_obj_t</code> structure. This does not involve any parsing (such as X.509 or OpenPGP) since the <code>gnutls_pkcs11_obj_t</code> is format agnostic. Only data are transferred.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pkcs11_obj_import_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

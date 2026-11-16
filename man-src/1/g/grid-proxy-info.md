@@ -21,77 +21,77 @@ description: "grid-proxy-info – Display information about a proxy certificate"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-proxy-info</code>.</dl>
+</dt><dd> Display the command-line options to <code>grid-proxy-info</code>.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-proxy-info</code> command.</dl>
+</dt><dd> Display the version number of the <code>grid-proxy-info</code> command.</dd></dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Display verbose error messages.</dl>
+</dt><dd> Display verbose error messages.</dd></dl>
 <p> <code>-file </code><i>PROXYFILE</i><code>, -f </code><i>PROXYFILE</i></p>
 <dl>
 <dt>
-<dd> Read the proxy located in the file <i>PROXYFILE</i> instead of using the default proxy.</dl>
+</dt><dd> Read the proxy located in the file <i>PROXYFILE</i> instead of using the default proxy.</dd></dl>
 <p> <code>-subject, -s</code></p>
 <dl>
 <dt>
-<dd> Display the proxy certificate&#8217;s subject distinguished name.</dl>
+</dt><dd> Display the proxy certificate&#8217;s subject distinguished name.</dd></dl>
 <p> <code>-issuer, -i</code></p>
 <dl>
 <dt>
-<dd> Display the proxy certificate issuer&#8217;s distinguished name.</dl>
+</dt><dd> Display the proxy certificate issuer&#8217;s distinguished name.</dd></dl>
 <p> <code>-identity</code></p>
 <dl>
 <dt>
-<dd> Display the proxy certificate&#8217;s identity. For non-independent proxies, the identity is the subject of the certificate which issued the first proxy in the proxy chain.</dl>
+</dt><dd> Display the proxy certificate&#8217;s identity. For non-independent proxies, the identity is the subject of the certificate which issued the first proxy in the proxy chain.</dd></dl>
 <p> <code>-type</code></p>
 <dl>
 <dt>
-<dd> Display the type of proxy certificate. The type string includes the format (&quot;legacy&quot;, &quot;draft&quot;, or RFC 3280 compliant), identity type (&quot;impersonation&quot; or &quot;independent&quot;), and policy (&quot;limited&quot; or &quot;full&quot;). See <code><a href="/docs/linux/man/1-grid-proxy-init/">grid-proxy-init</a>(1)</code> for information about how to create different types of proxies.</dl>
+</dt><dd> Display the type of proxy certificate. The type string includes the format (&quot;legacy&quot;, &quot;draft&quot;, or RFC 3280 compliant), identity type (&quot;impersonation&quot; or &quot;independent&quot;), and policy (&quot;limited&quot; or &quot;full&quot;). See <code><a href="/docs/linux/man/1-grid-proxy-init/">grid-proxy-init</a>(1)</code> for information about how to create different types of proxies.</dd></dl>
 <p> <code>-timeleft</code></p>
 <dl>
 <dt>
-<dd> Display the number of seconds remaining until the proxy certificate expires.</dl>
+</dt><dd> Display the number of seconds remaining until the proxy certificate expires.</dd></dl>
 <p> <code>-strength</code></p>
 <dl>
 <dt>
-<dd> Display the strength (in bits) of the key associated with the proxy certificate.</dl>
+</dt><dd> Display the strength (in bits) of the key associated with the proxy certificate.</dd></dl>
 <p> <code>-all</code></p>
 <dl>
 <dt>
-<dd> Display the default information for the proxy when also using the <i>-e</i> or <i>-exists</i> command-line option.</dl>
+</dt><dd> Display the default information for the proxy when also using the <i>-e</i> or <i>-exists</i> command-line option.</dd></dl>
 <p> <code>-text</code></p>
 <dl>
 <dt>
-<dd> Display the proxy certificate contents to standard output, including policy information, issuer, public key, and modulus.</dl>
+</dt><dd> Display the proxy certificate contents to standard output, including policy information, issuer, public key, and modulus.</dd></dl>
 <p> <code>-path</code></p>
 <dl>
 <dt>
-<dd> Display the path to the file containing the default proxy certificate.</dl>
+</dt><dd> Display the path to the file containing the default proxy certificate.</dd></dl>
 <p> <code>-rfc2253</code></p>
 <dl>
 <dt>
-<dd> Display distinguished names for the subject, issuer, and identity using the string representation described in RFC 2253, instead of the legacy format.</dl>
+</dt><dd> Display distinguished names for the subject, issuer, and identity using the string representation described in RFC 2253, instead of the legacy format.</dd></dl>
 <p> <code>-exists, -e</code></p>
 <dl>
 <dt>
-<dd> Perform an existence and validity check for the proxy. If a valid proxy exists and matches the criteria described by other command-line options (if any), exit with 0; otherwise, exit with 1. This option must be before other validity check predicate in the command-line options. If this option is specified, the output of the default facts about the proxy is disabled. Use the <i>-all</i> option to have the information displayed as well as the exit code set.</dl>
+</dt><dd> Perform an existence and validity check for the proxy. If a valid proxy exists and matches the criteria described by other command-line options (if any), exit with 0; otherwise, exit with 1. This option must be before other validity check predicate in the command-line options. If this option is specified, the output of the default facts about the proxy is disabled. Use the <i>-all</i> option to have the information displayed as well as the exit code set.</dd></dl>
 <p> <code>-valid </code><i>HOURS:MINUTES</i><code>, -v </code><i>HOURS:MINUTES</i><code>, -hours </code><i>HOURS</i><code>, -h </code><i>HOURS</i></p>
 <dl>
 <dt>
-<dd> Check that the proxy certificate is valid for at least <i>HOURS</i> hours and <i>MINUTES</i> minutes. If it is not, <code>grid-proxy-info</code> will exit with exit code 1.</dl>
+</dt><dd> Check that the proxy certificate is valid for at least <i>HOURS</i> hours and <i>MINUTES</i> minutes. If it is not, <code>grid-proxy-info</code> will exit with exit code 1.</dd></dl>
 <p> <code>-bits </code><i>BITS</i><code>, -b </code><i>BITS</i></p>
 <dl>
 <dt>
-<dd> Check that the proxy certificate key strength is at least <i>BITS</i> bits.</dl>
+</dt><dd> Check that the proxy certificate key strength is at least <i>BITS</i> bits.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-proxy-info</code>: </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to the default user proxy.</dl>
+</dt><dd> Path to the default user proxy.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grid-proxy-init/">grid-proxy-init</a>(1), <a href="/docs/linux/man/1-grid-proxy-destroy/">grid-proxy-destroy</a>(1)</p>
 <h2>AUTHOR</h2>

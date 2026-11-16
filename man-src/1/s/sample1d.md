@@ -18,48 +18,48 @@ description: "sample1d – Resample 1-D table data using splines"
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> This is one or more ASCII [of binary, see <code>-bi</code>] files with one column containing the independent variable (which must be monotonically in/de-creasing) and the remaining columns holding other data values. If no file is provided, <code>sample1d</code> reads from standard input.</p>
-<dt><code>-A</code><code>f</code>|<code>p</code>|<code>m</code>|<code>r</code>|<code>R</code></p>
-<dd> For track resampling (if <code>-T</code>&#8230;<i>unit</i> is set) we can select how this is to be performed. Append <code>f</code> to keep original points, but add intermediate points if needed; note this selection does not necessarily yield equidistant points [Default], <code>m</code> as <code>f</code>, but first follow meridian (along y) then parallel (along x), <code>p</code> as <code>f</code>, but first follow parallel (along y) then meridian (along x), <code>r</code> to resample at equidistant locations; input points are not necessarily included in the output, and <code>R</code> as <code>r</code>, but adjust given spacing to fit the track length exactly. Finally, append <code>+l</code> if distances should be measured along rhumb lines (loxodromes).</p>
-<dt><code>-Fl</code>|<code>a</code>|<code>c</code>|<code>n</code>[<code>+1</code>|<code>+2</code>]</p>
-<dd> Choose from <code>l</code> (Linear), <code>a</code> (Akima spline), <code>c</code> (natural cubic spline), and <code>n</code> (no interpolation: nearest point) [Default is <code>-Fa</code>]. You may change the default interpolant; see <i>GMT_INTERPOLANT</i> in your <code>gmt.conf</code> file. You may optionally evaluate the first or second derivative of the spline by appending <code>1</code> or <code>2</code>, respectively.</p>
-<dt><code>-I</code><i>inc</i>[<i>unit</i>]</p>
-<dd> <i>inc</i> defines the sampling interval [Default is the separation between the first and second abscissa point in the <i>table</i>]. Append a distance unit (see UNITS) to indicate that the first two columns contain longitude, latitude and you wish to resample this path with a spacing of <i>inc</i> in the chosen units. For sampling of (x, y) Cartesian tracks, specify the unit as c. Use <code>-A</code> to control how path resampling is performed.</p>
-<dt><code>-N</code><i>knotfile</i></p>
-<dd> <i>knotfile</i> is an optional ASCII file with the x locations where the data set will be resampled in the first column. Note: If <code>-H</code> is selected it applies to both <i>table</i> and <i>knotfile</i>. Also note that <code>-i</code> never applies to <i>knotfile</i> since we always consider the first column only.</p>
-<dt><code>-S</code><i>start</i>[<i>stop</i>]</p>
-<dd> For equidistant sampling, <i>start</i> indicates the location of the first output value. [Default is the smallest even multiple of <i>inc</i> inside the range of <i>table</i>]. Optionally, append /<i>stop</i> to indicate the location of the last output value [Default is the largest even multiple of <i>inc</i> inside the range of <i>table</i>].</p>
-<dt><code>-T</code><i>col</i></p>
-<dd> Sets the column number of the independent variable [Default is 0 (first)].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 (or at least the number of columns implied by <code>-T</code>)].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> This is one or more ASCII [of binary, see <code>-bi</code>] files with one column containing the independent variable (which must be monotonically in/de-creasing) and the remaining columns holding other data values. If no file is provided, <code>sample1d</code> reads from standard input.</dd>
+<dt><code>-A</code><code>f</code>|<code>p</code>|<code>m</code>|<code>r</code>|<code>R</code></dt>
+<dd> For track resampling (if <code>-T</code>&#8230;<i>unit</i> is set) we can select how this is to be performed. Append <code>f</code> to keep original points, but add intermediate points if needed; note this selection does not necessarily yield equidistant points [Default], <code>m</code> as <code>f</code>, but first follow meridian (along y) then parallel (along x), <code>p</code> as <code>f</code>, but first follow parallel (along y) then meridian (along x), <code>r</code> to resample at equidistant locations; input points are not necessarily included in the output, and <code>R</code> as <code>r</code>, but adjust given spacing to fit the track length exactly. Finally, append <code>+l</code> if distances should be measured along rhumb lines (loxodromes).</dd>
+<dt><code>-Fl</code>|<code>a</code>|<code>c</code>|<code>n</code>[<code>+1</code>|<code>+2</code>]</dt>
+<dd> Choose from <code>l</code> (Linear), <code>a</code> (Akima spline), <code>c</code> (natural cubic spline), and <code>n</code> (no interpolation: nearest point) [Default is <code>-Fa</code>]. You may change the default interpolant; see <i>GMT_INTERPOLANT</i> in your <code>gmt.conf</code> file. You may optionally evaluate the first or second derivative of the spline by appending <code>1</code> or <code>2</code>, respectively.</dd>
+<dt><code>-I</code><i>inc</i>[<i>unit</i>]</dt>
+<dd> <i>inc</i> defines the sampling interval [Default is the separation between the first and second abscissa point in the <i>table</i>]. Append a distance unit (see UNITS) to indicate that the first two columns contain longitude, latitude and you wish to resample this path with a spacing of <i>inc</i> in the chosen units. For sampling of (x, y) Cartesian tracks, specify the unit as c. Use <code>-A</code> to control how path resampling is performed.</dd>
+<dt><code>-N</code><i>knotfile</i></dt>
+<dd> <i>knotfile</i> is an optional ASCII file with the x locations where the data set will be resampled in the first column. Note: If <code>-H</code> is selected it applies to both <i>table</i> and <i>knotfile</i>. Also note that <code>-i</code> never applies to <i>knotfile</i> since we always consider the first column only.</dd>
+<dt><code>-S</code><i>start</i>[<i>stop</i>]</dt>
+<dd> For equidistant sampling, <i>start</i> indicates the location of the first output value. [Default is the smallest even multiple of <i>inc</i> inside the range of <i>table</i>]. Optionally, append /<i>stop</i> to indicate the location of the last output value [Default is the largest even multiple of <i>inc</i> inside the range of <i>table</i>].</dd>
+<dt><code>-T</code><i>col</i></dt>
+<dd> Sets the column number of the independent variable [Default is 0 (first)].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 (or at least the number of columns implied by <code>-T</code>)].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>UNITS</h2>
 <p> For map distance unit, append <i>unit</i> <code>d</code> for arc degree, <code>m</code> for arc minute, and <code>s</code> for arc second, or <code>e</code> for meter [Default], <code>f</code> for foot, <code>k</code> for km, <code>M</code> for statute mile, <code>n</code> for nautical mile, and <code>u</code> for US survey foot. By default we compute such distances using a spherical approximation with great circles. Prepend <code>&#8211;</code> to a distance (or the unit is no distance is given) to perform &quot;Flat Earth&quot; calculations (quicker but less accurate) or prepend <code>+</code> to perform exact geodesic calculations (slower but more accurate).</p>
 <h2>ASCII FORMAT PRECISION</h2>

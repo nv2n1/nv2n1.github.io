@@ -100,26 +100,26 @@ description: "ipsec_mgmt_selinux – Security Enhanced Linux Policy for the ipse
 <p> <code>ipsec_mgmt_exec_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_exec_t type, if you want to transition an executable to the ipsec_mgmt_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ipsec, /usr/sbin/swanctl, /usr/sbin/strongswan, /usr/sbin/strongimcv, /usr/lib/ipsec/_plutorun, /usr/lib/ipsec/_plutoload, /usr/libexec/ipsec/_plutorun, /usr/libexec/ipsec/_plutoload, /usr/libexec/nm-openswan-service, /usr/libexec/nm-libreswan-service </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ipsec, /usr/sbin/swanctl, /usr/sbin/strongswan, /usr/sbin/strongimcv, /usr/lib/ipsec/_plutorun, /usr/lib/ipsec/_plutoload, /usr/libexec/ipsec/_plutorun, /usr/libexec/ipsec/_plutoload, /usr/libexec/nm-openswan-service, /usr/libexec/nm-libreswan-service </dd>
 </dl>
 <p> <code>ipsec_mgmt_lock_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_lock_t type, if you want to treat the files as ipsec mgmt lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/subsys/ipsec, /var/lock/subsys/strongswan </p>
+<dt>Paths:</dt>
+<dd>/var/lock/subsys/ipsec, /var/lock/subsys/strongswan </dd>
 </dl>
 <p> <code>ipsec_mgmt_unit_file_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_unit_file_t type, if you want to treat the files as ipsec mgmt unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/ipsec.*, /usr/lib/systemd/system/strongswan.*, /usr/lib/systemd/system/strongimcv.*, /usr/lib/systemd/system/strongswan-swanctl.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/ipsec.*, /usr/lib/systemd/system/strongswan.*, /usr/lib/systemd/system/strongimcv.*, /usr/lib/systemd/system/strongswan-swanctl.* </dd>
 </dl>
 <p> <code>ipsec_mgmt_var_run_t</code> </p>
 <p> &#8211; Set files with the ipsec_mgmt_var_run_t type, if you want to store the ipsec mgmt files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/pluto/ipsec.info, /var/run/pluto/ipsec_setup.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/pluto/ipsec.info, /var/run/pluto/ipsec_setup.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

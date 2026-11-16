@@ -10,7 +10,6 @@ description: "umad_get_mad_addr – get the address of the ib_mad_addr from a um
 <p>umad_get_mad_addr &#8211; get the address of the ib_mad_addr from a umad buffer</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 ib_mad_addr_t *umad_get_mad_addr(void *umad);</code></pre>
 <h2>Description</h2>
 <p><code>umad_get_mad_addr()</code> returns a pointer to the ib_mad_addr struct within the specified <i>umad</i> buffer.</p>
@@ -31,5 +30,5 @@ uint32_t flow_label;
 } ib_mad_addr_t;</pre>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

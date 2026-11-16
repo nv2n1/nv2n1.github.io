@@ -18,20 +18,20 @@ description: "abxtest – double-blind ABX comparison testing script"
 <p> The <code>A</code> and <code>B</code> subjects for <code>abxtest</code> are actually arbitrary shell commands. The normal mode of use would be to give commands which play two slightly different sounds. The standard output and standard error from each command are suppressed so as not to reveal the identity of <code>X</code>. The listener may interrupt an executing command (usually by pressing <code>^C</code>) without terminating the test.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code> <i>min</i></p>
-<dd> Set the minimum number of trials. Trials will continue after this number if the statistical probability goal has not yet been met. The default is 10.</p>
-<dt><code>-m</code> <i>max</i></p>
-<dd> Set the maximum number of trials. Trials will end after this number even if the statistical probability goal has not been met. The default is 20.</p>
-<dt><code>-g</code> <i>goal</i></p>
-<dd> Set the minimum statistical probability goal. This is the probability that the number of correct identifications is the same as random guesses. In order to disprove the null hypothesis, the result of the test must be a probability less than or equal to this goal. The default is 0.05.</dl>
+<dt><code>-n</code> <i>min</i></dt>
+<dd> Set the minimum number of trials. Trials will continue after this number if the statistical probability goal has not yet been met. The default is 10.</dd>
+<dt><code>-m</code> <i>max</i></dt>
+<dd> Set the maximum number of trials. Trials will end after this number even if the statistical probability goal has not been met. The default is 20.</dd>
+<dt><code>-g</code> <i>goal</i></dt>
+<dd> Set the minimum statistical probability goal. This is the probability that the number of correct identifications is the same as random guesses. In order to disprove the null hypothesis, the result of the test must be a probability less than or equal to this goal. The default is 0.05.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/dev/random</i></p>
-<dd> By default this file is read to generate a random sequence of <code>X</code>.</dl>
+<dt><i>/dev/random</i></dt>
+<dd> By default this file is read to generate a random sequence of <code>X</code>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>RANDOM_FILE</p>
-<dd> If set, the file named by this variable will be read instead of <i>/dev/random</i> to generate a sequence of <code>X</code>.</dl>
+<dt>RANDOM_FILE</dt>
+<dd> If set, the file named by this variable will be read instead of <i>/dev/random</i> to generate a sequence of <code>X</code>.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>abxtest</code> uses the binomial distribution to accurately calculate the probability that the result is the same as random guesses.</p>
 <h2>AUTHOR</h2>

@@ -15,7 +15,7 @@ snd_soc_unregister_codec - Unregister a codec from the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>codec to unregister</dl>
+<dl><dd></dd><dd>codec to unregister</dd></dl>
 
 <h2>Copyright</h2>
 

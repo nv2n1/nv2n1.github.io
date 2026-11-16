@@ -11,13 +11,9 @@ std::copy_backward - std::copy_backward
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt1, class BidirIt2 &gt;                                           (until C++20)
-
 BidirIt2 copy_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );
-
 template&lt; class BidirIt1, class BidirIt2 &gt;                                           (since C++20)
-
 constexpr BidirIt2 copy_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );</code></pre> 
 Copies the elements from the range, defined by [first, last), to another range ending at d_last. The elements are copied in reverse order (the last element is copied first), but their relative order is preserved. 
 The behavior is undefined if d_last is within (first, last]. std::copy must be used instead of std::copy_backward in that case. 
@@ -58,12 +54,9 @@ When copying overlapping ranges, std::copy is appropriate when copying to the le
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; from_vector;
     for (int i = 0; i &lt; 10; i++) {

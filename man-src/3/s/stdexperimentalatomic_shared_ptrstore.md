@@ -28,7 +28,6 @@ All changes to the atomic_shared_ptr object itself, and all associated use_count
 <h2>See also</h2>
 
 <pre><code>stores a value into an atomic_shared_ptr object
-
 operator=                                                     (public member function)</code></pre> 
 std::atomic_is_lock_free(std::shared_ptr) 
 std::atomic_load(std::shared_ptr) 

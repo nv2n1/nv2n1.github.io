@@ -14,8 +14,8 @@ description: "killall5 — send a signal to all processes."
 <p><code>killall5</code> is the SystemV killall command. It sends a signal to all processes except kernel threads and the processes in its own session, so it won&#8217;t kill the shell that is running the script it was called from. Its primary (only) use is in the <code>rc</code> scripts found in the /etc/init.d directory.</p>
 <h2>Options</h2>
 <dl>
-<dt>-o <i>omitpid</i></p>
-<dd>Tells <i>killall5</i> to omit processes with that process id.</dl>
+<dt>-o <i>omitpid</i></dt>
+<dd>Tells <i>killall5</i> to omit processes with that process id.</dd></dl>
 <h2>Notes</h2>
 <p><i>killall5</i> can also be invoked as pidof, which is simply a (symbolic) link to the <i>killall5</i> program.</p>
 <h2>Exit Status</h2>

@@ -11,16 +11,16 @@ description: "FIPSCHECK_verify, FIPSCHECK_verify_ex, FIPSCHECK_verify_files, FIP
 <h2>Synopsis</h2>
 <pre>#include &lt;fipscheck.h&gt;</pre>
 <dl COMPACT>
-<dt> <code>int FIPSCHECK_verify(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_verify_ex(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>, int&nbsp;<wbr></code><i>fail_if_missing</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_verify_files(const char&nbsp;<wbr>*</code><i>files[]</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_verify_files_ex(const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>, int&nbsp;<wbr></code><i>fail_if_missing</i><code>, const char&nbsp;<wbr>*</code><i>files[]</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_fips_module_installed(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_get_binary_path(char&nbsp;<wbr>*</code><i>path</i><code>, size_t&nbsp;<wbr></code><i>pathlen</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_get_library_path(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, char&nbsp;<wbr>*</code><i>path</i><code>, size_t&nbsp;<wbr></code><i>pathlen</i><code>);</code></p>
-<dt> <code>int FIPSCHECK_kernel_fips_mode(void</code><i></i><code>);</code></dl>
+<dt> <code>int FIPSCHECK_verify(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_verify_ex(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>, int&nbsp;<wbr></code><i>fail_if_missing</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_verify_files(const char&nbsp;<wbr>*</code><i>files[]</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_verify_files_ex(const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>, int&nbsp;<wbr></code><i>fail_if_missing</i><code>, const char&nbsp;<wbr>*</code><i>files[]</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_fips_module_installed(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, const char&nbsp;<wbr>*</code><i>hmac_suffix</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_get_binary_path(char&nbsp;<wbr>*</code><i>path</i><code>, size_t&nbsp;<wbr></code><i>pathlen</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_get_library_path(const char&nbsp;<wbr>*</code><i>libname</i><code>, const char&nbsp;<wbr>*</code><i>symbolname</i><code>, char&nbsp;<wbr>*</code><i>path</i><code>, size_t&nbsp;<wbr></code><i>pathlen</i><code>);</code></dt>
+<dt> <code>int FIPSCHECK_kernel_fips_mode(void</code><i></i><code>);</code></dt></dl>
 <h2>Description</h2>
-<dd>The function <code>FIPSCHECK_kernel_fips_mode()</code> tests for the FIPS-140-2 mode in kernel. </p>
+<dd>The function <code>FIPSCHECK_kernel_fips_mode()</code> tests for the FIPS-140-2 mode in kernel. </dd>
 <p> The function <code>FIPSCHECK_verify()</code> computes and compares HMAC-SHA256 checksum by spawning the <code>fipscheck</code> command. The parameters <i>libname</i> and <i>symbolname</i> determine which shared library file loaded into the process space will be checksummed. If these parameters are set to NULL, the executable of the calling process is checksummed. </p>
 <p> The function <code>FIPSCHECK_verify_ex()</code> in addition to the functionality above also allows to specify the full <i>hmac_suffix</i> with the default value of .hmac. And will return success if the hmac file is missing and the <i>fail_if_missing</i> parameter is set to 0. </p>
 <p> The function <code>FIPSCHECK_verify_files()</code> can be used to explicitly specify NULL terminated array of file names in the parameter <i>files</i> to check. </p>

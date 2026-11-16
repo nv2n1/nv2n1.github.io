@@ -14,14 +14,14 @@ description: "irq_chip_retrigger_hierarchy – Retrigger an interrupt in hardwar
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>Pointer to interrupt specific data</dl>
+</dd><dd>Pointer to interrupt specific data</dd></dl>
 <h2>Description</h2>
 <p>Iterate through the domain hierarchy of the interrupt and check whether a hw retrigger function exists. If yes, invoke it.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -23,33 +23,33 @@ description: "struct_rio_net – RIO network info"
 <h2>Members</h2>
 <p>node</p>
 <dl>
-<dd>Node in global list of RIO networks</dl>
+<dd>Node in global list of RIO networks</dd></dl>
 <p> devices</p>
 <dl>
-<dd>List of devices in this network</dl>
+<dd>List of devices in this network</dd></dl>
 <p> switches</p>
 <dl>
-<dd>List of switches in this network</dl>
+<dd>List of switches in this network</dd></dl>
 <p> mports</p>
 <dl>
-<dd>List of master ports accessing this network</dl>
+<dd>List of master ports accessing this network</dd></dl>
 <p> hport</p>
 <dl>
-<dd>Default port for accessing this network</dl>
+<dd>Default port for accessing this network</dd></dl>
 <p> id</p>
 <dl>
-<dd>RIO network ID</dl>
+<dd>RIO network ID</dd></dl>
 <p> dev</p>
 <dl>
-<dd>Device object</dl>
+<dd>Device object</dd></dl>
 <p> enum_data</p>
 <dl>
-<dd>private data specific to a network enumerator</dl>
+<dd>private data specific to a network enumerator</dd></dl>
 <p> release</p>
 <dl>
-<dd>enumerator-specific release callback</dl>
+<dd>enumerator-specific release callback</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

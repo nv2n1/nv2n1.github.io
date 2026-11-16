@@ -11,17 +11,11 @@ std::experimental::ranges::Iterator - std::experimental::ranges::Iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt;class I&gt;
-
 concept bool Iterator =
-
 requires(I i) {                                      (ranges TS)
-
     { *i } -&gt; auto&amp;&amp;; // Requires: i is dereferenceable
-
 } &amp;&amp;
-
 WeaklyIncrementable&lt;I&gt;;</code></pre> 
 The Iterator concept forms the basis of the iterator concept taxonomy; every iterator satisfies the Iterator requirements. 
 Equality preservation 

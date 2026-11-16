@@ -48,6 +48,6 @@ description: "Atlas::Bridge – Atlas stream bridge."
 <p> Several classes are derived from <code>Bridge</code>, the most notable of which is <code>Codec</code>, which accepts an <code>Atlas</code> stream for encoding and transmission. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Codec</code></dl>
+<dd><code>Codec</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

@@ -23,48 +23,48 @@ description: "fpit – Fujitsu Stylistic input driver"
 <p> Under Linux the Fujitsu&#8217;s serial port is not, by default, detected. Therefore the port must be configured manually as described in the accompanying readme.txt file. </p>
 <p> For example, add the following to your startup scripts for Stylistic xx00 devices: </p>
 <dl>
-<dt><code>setserial /dev/ttyS3 autoconfig</code></p>
+<dt><code>setserial /dev/ttyS3 autoconfig</code></dt>
 <dd>
-<dt><code>setserial /dev/ttyS3 IRQ 15 baud_base 115200 port 0xfce8</code></p>
-<dd></dl>
+</dd><dt><code>setserial /dev/ttyS3 IRQ 15 baud_base 115200 port 0xfce8</code></dt>
+<dd></dd></dl>
 <p> This driver now supports Stylistic 3400 (and possibly other passive-pen systems) with a special <i>&quot;Passive&quot;</i> paramter. Try this serial configuration for the 3400: </p>
 <dl>
-<dt><code>setserial /dev/ttyS3 autoconfig</code></p>
+<dt><code>setserial /dev/ttyS3 autoconfig</code></dt>
 <dd>
-<dt><code>setserial /dev/ttyS3 uart 16450 irq 5 port 0xfd68</code></p>
-<dd></dl>
+</dd><dt><code>setserial /dev/ttyS3 uart 16450 irq 5 port 0xfd68</code></dt>
+<dd></dd></dl>
 <h2>Configuration Details</h2>
 <p>Please refer to xorg.conf(5x) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
 <p> The device supports the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Option </code><i>MaximumXPosition</i> <i>number</i></p>
-<dd>Sets the maximum X position, use this to calibrate your touchscreen&#8217;s right hand edge.</p>
-<dt><code>Option </code><i>MinimumXPosition</i> <i>number</i></p>
-<dd>Sets the minimum X position, use this to calibrate your touchscreen&#8217;s left hand edge.</p>
-<dt><code>Option </code><i>MaximumYPosition</i> <i>number</i></p>
+</dd><dl>
+<dt><code>Option </code><i>MaximumXPosition</i> <i>number</i></dt>
+<dd>Sets the maximum X position, use this to calibrate your touchscreen&#8217;s right hand edge.</dd>
+<dt><code>Option </code><i>MinimumXPosition</i> <i>number</i></dt>
+<dd>Sets the minimum X position, use this to calibrate your touchscreen&#8217;s left hand edge.</dd>
+<dt><code>Option </code><i>MaximumYPosition</i> <i>number</i></dt>
 <dd>
-<dt><code>Option </code><i>MinimumYPosition</i> <i>number</i></p>
-<dd>Same as for X axis, but for Y axis.</p>
-<dt><code>Option </code><i>InvertX</i></p>
+</dd><dt><code>Option </code><i>MinimumYPosition</i> <i>number</i></dt>
+<dd>Same as for X axis, but for Y axis.</dd>
+<dt><code>Option </code><i>InvertX</i></dt>
 <dd>
-<dt><code>Option </code><i>InvertY</i></p>
-<dd>Invert the specified axis.</p>
-<dt><code>Option </code><i>SwapXY</i></p>
-<dd>Swap the X and Y axis (after inversions).</p>
-<dt><code>Option </code><i>Rotate</i> <i>CW</i></p>
-<dd><code>Option </code><i>Rotate</i> <i>CWW</i> Manipulate the invert and swap options to match screen rotations. (Will behave strangely if combined with invert or swap options.) New users should consider the <i>&quot;TrackRandR&quot;</i> option instead.</p>
-<dt><code>Option </code><i>DeviceName</i> <i>name</i></p>
-<dd><code>Option </code><i>DeviceName</i> <i>name</i> sets the name of the X device.</p>
-<dt><code>Option </code><i>AlwaysCore</i> <i>on</i></p>
-<dd>enables the sharing of the core pointer. When this feature is enabled, the device will take control of the core pointer (and thus will emit core events) and at the same time will be able, when asked so, to report extended events. You can use the last available integer feedback to control this feature. When the value of the feedback is zero, the feature is disabled. The feature is enabled for any other value.</p>
-<dt><code>Option </code><i>DebugLevel</i> <i>number </i></p>
-<dd>sets the level of debugging info reported.</p>
-<dt><code>Option </code><i>BaudRate</i> <i>38400</i>, <i>19200</i> (default) or <i>9600</i></p>
-<dd>changes the serial link speed.</p>
-<dt><code>Option </code><i>Passive</i></p>
-<dd>decodes the passive pen. <code>Option </code><i>TrackRandR</i> automatically keeps the cursor synchronized with the pen&#8217;s position, even when the screen is resized or rotated. (Recommended for tablet PC&#8217;s.)</dl>
+</dd><dt><code>Option </code><i>InvertY</i></dt>
+<dd>Invert the specified axis.</dd>
+<dt><code>Option </code><i>SwapXY</i></dt>
+<dd>Swap the X and Y axis (after inversions).</dd>
+<dt><code>Option </code><i>Rotate</i> <i>CW</i></dt>
+<dd><code>Option </code><i>Rotate</i> <i>CWW</i> Manipulate the invert and swap options to match screen rotations. (Will behave strangely if combined with invert or swap options.) New users should consider the <i>&quot;TrackRandR&quot;</i> option instead.</dd>
+<dt><code>Option </code><i>DeviceName</i> <i>name</i></dt>
+<dd><code>Option </code><i>DeviceName</i> <i>name</i> sets the name of the X device.</dd>
+<dt><code>Option </code><i>AlwaysCore</i> <i>on</i></dt>
+<dd>enables the sharing of the core pointer. When this feature is enabled, the device will take control of the core pointer (and thus will emit core events) and at the same time will be able, when asked so, to report extended events. You can use the last available integer feedback to control this feature. When the value of the feedback is zero, the feature is disabled. The feature is enabled for any other value.</dd>
+<dt><code>Option </code><i>DebugLevel</i> <i>number </i></dt>
+<dd>sets the level of debugging info reported.</dd>
+<dt><code>Option </code><i>BaudRate</i> <i>38400</i>, <i>19200</i> (default) or <i>9600</i></dt>
+<dd>changes the serial link speed.</dd>
+<dt><code>Option </code><i>Passive</i></dt>
+<dd>decodes the passive pen. <code>Option </code><i>TrackRandR</i> automatically keeps the cursor synchronized with the pen&#8217;s position, even when the screen is resized or rotated. (Recommended for tablet PC&#8217;s.)</dd></dl>
 </dl>
 <p> Example, for Stylistic LT setup is: </p>
 <pre><code>Section N'34'InputDeviceN'34'</code>

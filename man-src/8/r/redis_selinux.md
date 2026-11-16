@@ -49,9 +49,9 @@ description: "redis_selinux – Security Enhanced Linux Policy for the redis pro
 <p> Policy governs the access confined processes have to these ports. SELinux redis policy is very flexible allowing users to setup their redis processes in as secure a method as possible. </p>
 <p> The following port types are defined for redis: </p>
 <dl>
-<dt><code>redis_port_t</code></p>
+<dt><code>redis_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6379,16379,26379</dl>
+</dd><dd>Default Defined Ports: tcp 6379,16379,26379</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type redis_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

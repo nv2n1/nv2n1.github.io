@@ -23,29 +23,29 @@ description: "CREATE_FOREIGN_TABLE – define a new foreign table"
 <h2>Parameters</h2>
 <p>IF NOT EXISTS</p>
 <dl>
-<dd>Do not throw an error if a relation with the same name already exists. A notice is issued in this case. Note that there is no guarantee that the existing relation is anything like the one that would have been created.</dl>
+<dd>Do not throw an error if a relation with the same name already exists. A notice is issued in this case. Note that there is no guarantee that the existing relation is anything like the one that would have been created.</dd></dl>
 <p> <i>table_name</i></p>
 <dl>
-<dd>The name (optionally schema-qualified) of the table to be created.</dl>
+<dd>The name (optionally schema-qualified) of the table to be created.</dd></dl>
 <p> <i>column_name</i></p>
 <dl>
-<dd>The name of a column to be created in the new table.</dl>
+<dd>The name of a column to be created in the new table.</dd></dl>
 <p> <i>data_type</i></p>
 <dl>
-<dd>The data type of the column. This can include array specifiers. For more information on the data types supported by PostgreSQL, refer to Chapter 8, Data Types, in the documentation.</dl>
+<dd>The data type of the column. This can include array specifiers. For more information on the data types supported by PostgreSQL, refer to Chapter 8, Data Types, in the documentation.</dd></dl>
 <p> NOT NULL</p>
 <dl>
-<dd>The column is not allowed to contain null values.</dl>
+<dd>The column is not allowed to contain null values.</dd></dl>
 <p> NULL</p>
 <dl>
-<dd>The column is allowed to contain null values. This is the default. </p>
+<dd>The column is allowed to contain null values. This is the default. </dd>
 <p> This clause is only provided for compatibility with non-standard SQL databases. Its use is discouraged in new applications.</dl>
 <p> <i>server_name</i></p>
 <dl>
-<dd>The name of an existing server for the foreign table.</dl>
+<dd>The name of an existing server for the foreign table.</dd></dl>
 <p> OPTIONS ( <i>option</i> &#8216;<i>value</i>&#8216; [, &#8230;] )</p>
 <dl>
-<dd>Options to be associated with the new foreign table or one of its columns. The allowed option names and values are specific to each foreign data wrapper and are validated using the foreign-data wrapper&#8217;s validator function. Duplicate option names are not allowed (although it&#8217;s OK for a table option and a column option to have the same name).</dl>
+<dd>Options to be associated with the new foreign table or one of its columns. The allowed option names and values are specific to each foreign data wrapper and are validated using the foreign-data wrapper&#8217;s validator function. Duplicate option names are not allowed (although it&#8217;s OK for a table option and a column option to have the same name).</dd></dl>
 <h2>Examples</h2>
 <p>Create foreign table films with film_server: </p>
 <dl>
@@ -59,7 +59,7 @@ description: "CREATE_FOREIGN_TABLE – define a new foreign table"
  len interval hour to minute
 )
 SERVER film_server;</pre>
-</dl>
+</dd></dl>
 <h2>Compatibility</h2>
 <p>The <code>CREATE FOREIGN TABLE</code> command largely conforms to the SQL standard; however, much as with <code>CREATE TABLE</code>, NULL constraints and zero-column foreign tables are permitted.</p>
 <h2>See Also</h2>

@@ -93,8 +93,8 @@ description: "pcp_pmproxy_selinux – Security Enhanced Linux Policy for the pcp
 <p> <code>pcp_pmproxy_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmproxy_exec_t type, if you want to transition an executable to the pcp_pmproxy_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmproxy, /usr/libexec/pcp/bin/pmproxy </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmproxy, /usr/libexec/pcp/bin/pmproxy </dd>
 </dl>
 <p> <code>pcp_pmproxy_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmproxy_initrc_exec_t type, if you want to transition an executable to the pcp_pmproxy_initrc_t domain. </p>

@@ -15,9 +15,9 @@ description: "xapian-inspect – Inspect the contents of a flint table for devel
 <p> xapian-inspect &#8211; Inspect the contents of a flint table for development or debugging</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit </p>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit </dd>
 </dl>
 <h2>Index</h2>

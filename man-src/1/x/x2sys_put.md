@@ -16,28 +16,28 @@ description: "x2sys_put – Update track index database from track bin file"
 <p> <code>x2sys_put</code> accepts a track bin-index file created by <code>x2sys_binlist</code> and adds this information about the data tracks to the relevant data base. You may chose to overwrite existing data with new information for older tracks (<code>-F</code>) and even completely remove information for certain tracks (<code>-D</code>). The x2sys <i>TAG</i> must match the tag encoded in the <i>info.tbf</i> file. To inquire about tracks in the data base, use <code>x2sys_get</code>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>info.tbf</i></p>
-<dd> Name of a single track bin file. If not given, <i>stdin</i> will be read.</p>
-<dt><code>-T</code><i>TAG</i></p>
-<dd> Specify the x2sys <i>TAG</i> which tracks the attributes of this data type.</dl>
+<dt><i>info.tbf</i></dt>
+<dd> Name of a single track bin file. If not given, <i>stdin</i> will be read.</dd>
+<dt><code>-T</code><i>TAG</i></dt>
+<dd> Specify the x2sys <i>TAG</i> which tracks the attributes of this data type.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd> Delete all tracks found in the track bin file [Default will try to add them as new track entries].</p>
-<dt><code>-F</code></p>
-<dd> Replace any existing database information for these tracks with the new information in the track bin file [Default refuses to process tracks already in the database].</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-D</code></dt>
+<dd> Delete all tracks found in the track bin file [Default will try to add them as new track entries].</dd>
+<dt><code>-F</code></dt>
+<dd> Replace any existing database information for these tracks with the new information in the track bin file [Default refuses to process tracks already in the database].</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To add the information stored in the track bin-index file latest.tbf to the track data bases associated with the tag MGD77, and replace any exiting information for these tracks, try </p>
 <pre>

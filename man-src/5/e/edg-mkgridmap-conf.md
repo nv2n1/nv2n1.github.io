@@ -14,16 +14,16 @@ description: "edg-mkgridmap.conf – edg-mkgridmap configuration file"
 <p> The <i>edg-mkgridmap.conf</i> file is a free-form <font SIZE="-1">ASCII</font> text file. It is parsed by the descent parser built into <code>edg-mkgridmap</code>. The file may contain extra tabs and white spaces for formatting purposes. Keywords in the file are case-insensitive. Comments may be placed anywhere within the file (except within quotes). Comments begin with the # character and end at the end of the line. </p>
 <p> The file essentially consists of a list of directives composed by a keyword and one or more arguments. Optional arguments are put in square brackets.</p>
 <dl>
-<dt>* <code>group</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i> <i>[lcluser]</i></p>
+<dt>* <code>group</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i> <i>[lcluser]</i></dt>
 <dd>
-<dt>* <code>default_lcluser</code> <i>default_lcluser</i></p>
+</dd><dt>* <code>default_lcluser</code> <i>default_lcluser</i></dt>
 <dd>
-<dt>* <code>auth</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></p>
+</dd><dt>* <code>auth</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
 <dd>
-<dt>* <code>allow</code>|<code>deny</code> <i>pattern_to_match</i></p>
+</dd><dt>* <code>allow</code>|<code>deny</code> <i>pattern_to_match</i></dt>
 <dd>
-<dt>* <code>gmf_local</code> <i>grid-mapfile-local</i></p>
-<dd></dl>
+</dd><dt>* <code>gmf_local</code> <i>grid-mapfile-local</i></dt>
+<dd></dd></dl>
 <h2>Example</h2>
 <pre> #### GROUP: group URI [lcluser]
  group <a href="ldaps://grid-vo.infn.it/ou=testbed1,o=infn,c=it">ldaps://grid-vo.infn.it/ou=testbed1,o=infn,c=it</a> .infngrid

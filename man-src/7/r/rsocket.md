@@ -54,29 +54,29 @@ Rsockets is a protocol over RDMA that supports a socket-level API for applicatio
 
  riomap, riounmap, riowrite
 <dl><dt>off_t riomap(int socket, void *buf, size_t len, int prot, int flags, off_t offset)
-<dd><dt>Riomap registers an application buffer with the RDMA hardware
-<dd>associated with an rsocket. The buffer is registered either for local only access (PROT_NONE) or for remote write access (PROT_WRITE). When registered for remote access, the buffer is mapped to a given offset. The offset is either provided by the user, or if the user selects -1 for the offset, rsockets selects one. The remote peer may access an iomapped buffer directly by specifying the correct offset. The mapping is not guaranteed to be available until after the remote peer receives a data transfer initiated after riomap has completed.</dl>
+</dt><dd></dd><dt>Riomap registers an application buffer with the RDMA hardware
+</dt><dd>associated with an rsocket. The buffer is registered either for local only access (PROT_NONE) or for remote write access (PROT_WRITE). When registered for remote access, the buffer is mapped to a given offset. The offset is either provided by the user, or if the user selects -1 for the offset, rsockets selects one. The remote peer may access an iomapped buffer directly by specifying the correct offset. The mapping is not guaranteed to be available until after the remote peer receives a data transfer initiated after riomap has completed.</dd></dl>
  
 
  In order to enable the use of remote IO mapping calls on an rsocket, an application must set the number of IO mappings that are available to the remote peer. This may be done using the rsetsockopt RDMA_IOMAPSIZE option. By default, an rsocket does not support remote IO mappings. riounmap
 <dl><dt>int riounmap(int socket, void *buf, size_t len)
-<dd><dt>Riounmap removes the mapping between a buffer and an rsocket.
-<dd></dl>
+</dt><dd></dd><dt>Riounmap removes the mapping between a buffer and an rsocket.
+</dt><dd></dd></dl>
  
 
  riowrite
 <dl><dt>size_t riowrite(int socket, const void *buf, size_t count, off_t offset, int flags)
-<dd><dt>Riowrite allows an application to transfer data over an rsocket
-<dd>directly into a remotely iomapped buffer. The remote buffer is specified through an offset parameter, which corresponds to a remote iomapped buffer. From the sender's perspective, riowrite behaves similar to rwrite. From a receiver's view, riowrite transfers are silently redirected into a pre- determined data buffer. Data is received automatically, and the receiver is not informed of the transfer. However, iowrite data is still considered part of the data stream, such that iowrite data will be written before a subsequent transfer is received. A message sent immediately after initiating an iowrite may be used to notify the receiver of the iowrite.</dl>
+</dt><dd></dd><dt>Riowrite allows an application to transfer data over an rsocket
+</dt><dd>directly into a remotely iomapped buffer. The remote buffer is specified through an offset parameter, which corresponds to a remote iomapped buffer. From the sender's perspective, riowrite behaves similar to rwrite. From a receiver's view, riowrite transfers are silently redirected into a pre- determined data buffer. Data is received automatically, and the receiver is not informed of the transfer. However, iowrite data is still considered part of the data stream, such that iowrite data will be written before a subsequent transfer is received. A message sent immediately after initiating an iowrite may be used to notify the receiver of the iowrite.</dd></dl>
  
 
  In addition to standard socket options, rsockets supports options specific to RDMA devices and protocols. These options are accessible through rsetsockopt using SOL_RDMA option level.
 <dl><dt>RDMA_SQSIZE - Integer size of the underlying send queue.
-<dd><dt>RDMA_RQSIZE - Integer size of the underlying receive queue.
-<dd><dt>RDMA_INLINE - Integer size of inline data.
-<dd><dt>RDMA_IOMAPSIZE - Integer number of remote IO mappings supported
-<dd><dt>RDMA_ROUTE - struct ibv_path_data of path record for connection.
-<dd></dl>
+</dt><dd></dd><dt>RDMA_RQSIZE - Integer size of the underlying receive queue.
+</dt><dd></dd><dt>RDMA_INLINE - Integer size of inline data.
+</dt><dd></dd><dt>RDMA_IOMAPSIZE - Integer number of remote IO mappings supported
+</dt><dd></dd><dt>RDMA_ROUTE - struct ibv_path_data of path record for connection.
+</dt><dd></dd></dl>
  
 
  Note that rsockets fd's cannot be passed into non-rsocket calls. For applications which must mix rsocket fd's with standard socket fd's or opened files, rpoll and rselect support polling both rsockets and normal fd's. 

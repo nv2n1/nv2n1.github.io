@@ -18,81 +18,81 @@ description: "sginfo – access mode page information for a SCSI (or ATAPI) devi
 <p> If no options are given that will cause mode page(s) or INQUIRY data to be printed out, then a brief INQUIRY response is output. This includes the vendor, product and revision level of the device.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-6</code></p>
-<dd>Perform 6 byte MODE SENSE and MODE SELECT commands; by default the 10 byte variants are used.</p>
-<dt><code>-a</code></p>
-<dd>Display some INQUIRY data and the unit serial number followed by all mode pages reported by the device. It is similar to the &#8216;-t 0x3f&#8217; option. If the mode page is known then it is output in decoded form otherwise it is output in hexadecimal.</p>
-<dt><code>-A</code></p>
-<dd>Display some INQUIRY data and the unit serial number followed by all mode pages and all mode subpages reported by the device. It is similar to the &#8216;-t 0x3f,0xff&#8217; option. If a mode (sub)page is known then it is output in decoded form otherwise it is output in hexadecimal.</p>
-<dt><code>-c</code></p>
-<dd>Access information in the Caching mode page.</p>
-<dt><code>-C</code></p>
-<dd>Access information in the Control mode Page.</p>
-<dt><code>-d</code></p>
-<dd>Display defect lists (default format: index).</p>
-<dt><code>-D</code></p>
-<dd>Access information in the Disconnect-Reconnect mode page.</p>
-<dt><code>-e</code></p>
-<dd>Access information in the Error Recovery mode page.</p>
-<dt><code>-E</code></p>
-<dd>Access information in the Control Extension mode page.</p>
-<dt><code>-f</code></p>
-<dd>Access information in the Format Device mode page.</p>
-<dt><code>-F</code><i>arg</i></p>
+<dt><code>-6</code></dt>
+<dd>Perform 6 byte MODE SENSE and MODE SELECT commands; by default the 10 byte variants are used.</dd>
+<dt><code>-a</code></dt>
+<dd>Display some INQUIRY data and the unit serial number followed by all mode pages reported by the device. It is similar to the &#8216;-t 0x3f&#8217; option. If the mode page is known then it is output in decoded form otherwise it is output in hexadecimal.</dd>
+<dt><code>-A</code></dt>
+<dd>Display some INQUIRY data and the unit serial number followed by all mode pages and all mode subpages reported by the device. It is similar to the &#8216;-t 0x3f,0xff&#8217; option. If a mode (sub)page is known then it is output in decoded form otherwise it is output in hexadecimal.</dd>
+<dt><code>-c</code></dt>
+<dd>Access information in the Caching mode page.</dd>
+<dt><code>-C</code></dt>
+<dd>Access information in the Control mode Page.</dd>
+<dt><code>-d</code></dt>
+<dd>Display defect lists (default format: index).</dd>
+<dt><code>-D</code></dt>
+<dd>Access information in the Disconnect-Reconnect mode page.</dd>
+<dt><code>-e</code></dt>
+<dd>Access information in the Error Recovery mode page.</dd>
+<dt><code>-E</code></dt>
+<dd>Access information in the Control Extension mode page.</dd>
+<dt><code>-f</code></dt>
+<dd>Access information in the Format Device mode page.</dd>
+<dt><code>-F</code><i>arg</i></dt>
 <dd>Format of the defect lists:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Flogical&nbsp;<wbr>&nbsp;<wbr>&#8211; logical block addresses&nbsp;<wbr>(32 bit)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Flba64&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; logical block addresses&nbsp;<wbr>(64 bit)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Fphysical &#8211; physical blocks<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Findex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; defect bytes from index<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Fhead&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sort by head<br />
- Used in conjunction with &quot;-d&quot; or &quot;-G&quot;. If a format is not given &quot;index&quot; is assumed.</p>
-<dt><code>-g</code></p>
-<dd>Access information in the Rigid Disk Drive Geometry mode page.</p>
-<dt><code>-G</code></p>
-<dd>Display grown defect list (default format: index).</p>
-<dt><code>-i</code></p>
-<dd>Display the response to a standard INQUIRY command.</p>
-<dt><code>-I</code></p>
-<dd>Access the Informational Exceptions mode page.</p>
-<dt><code>-l</code></p>
-<dd>Deprecated. Only use in old versions of Linux (e.g. 2.4 and earlier). Please use <a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8) in the Linux 2.6 series and later. List known SCSI devices on the system.</p>
-<dt><code>-n</code></p>
-<dd>Access information in the Notch and Partition mode page.</p>
-<dt><code>-N</code></p>
-<dd>Negate (i.e. stop) mode page changes being placed in the &quot;saved&quot; page (by default changes go to the current and the saved page). Only active when used together with &#8216;-R&#8217;.</p>
-<dt><code>-P</code></p>
-<dd>Access information in the Power Condition mode page.</p>
-<dt><code>-r</code></p>
-<dd>Display all raw (or primary) SCSI device names visible in the /dev directory. Examples are /dev/sda, /dev/st1 and /dev/scd2. Does not list sg device names so devices such as a SCSI enclosure which only have an sg device name are not listed.</p>
-<dt><code>-s</code></p>
-<dd>Display information in the unit serial number page which is a INQUIRY command variant.</p>
-<dt><code>-t</code> <i>PN</i>[,<i>SPN</i>]</p>
-<dd>Display information from mode page number <i>PN</i> (and optionally sub page number <i>SPN</i>) in decoded format (if known, otherwise in hex form). <i>PN</i> is a mode page number in a decimal number from 0 to 63 inclusive. <i>SPN</i> is the mode subpage number and is assumed to be 0 if not given. <i>SPN</i> is a decimal number from 1 to 255 inclusive. A page number of 63 returns all pages supported by the device in ascending order except for page 0 which, if present, is last. Page 0 is vendor specific and not necessarily in mode page format. Alternatively hex values can be given for both <i>PN</i> and <i>SPN</i> (both prefixed by &#8216;0x&#8217;).</p>
-<dt><code>-T</code></p>
-<dd>Trace commands to obtain more verbose output (for debugging). When used once SCSI commands are shown (in hex) and any errors from these SCSI commands are spelt out (i.e. with a decoded and raw sense buffer). When used twice, the additional data sent with mode select and the response from mode sense are shown (in hex).</p>
-<dt><code>-u</code> <i>PN</i>[,<i>SPN</i>]</p>
-<dd>Display information from mode page number <i>PN</i> (and optionally <i>SPN</i>) in hex form. <i>PN</i> is a mode page number in a decimal number from 0 to 63 inclusive. <i>SPN</i> is the mode subpage number and is assumed to be 0 if not given. <i>SPN</i> is a decimal number from 1 to 255 inclusive. A page number of 63 returns all pages supported by the device in ascending order except for page 0 which, if present, is last. Page 0 is vendor specific and not necessarily in mode page format. Alternatively hex values can be given for both <i>PN</i> and <i>SPN</i> (both prefixed by &#8216;0x&#8217;). For example 63 and 0x3f are equivalent.</p>
-<dt><code>-v</code></p>
-<dd>Display version string then exit. [N.B. This option increases verbosity for most other utilities in this package as outlined in &#8216;man 8 sg3_utils&#8217;. This odd usage is for backward compatibility with the scsiinfo utility.]</p>
-<dt><code>-V</code></p>
-<dd>Access information in the Verify Error Recovery mode page. [N.B. This option prints the version string then exits in most other utilities in this package as outlined in &#8216;man 8 sg3_utils&#8217;. This odd usage is for backward compatibility with the scsiinfo utility.]</p>
-<dt><code>-z</code></p>
-<dd>do a single fetch for mode pages (over-estimating the expected length of the returned response). The default action is to do a double fetch, the first fetch is to find the response length that could be returned. Devices that closely adhere to SCSI standards should not require this option, some real world devices do require it.</dl>
+ Used in conjunction with &quot;-d&quot; or &quot;-G&quot;. If a format is not given &quot;index&quot; is assumed.</dd>
+<dt><code>-g</code></dt>
+<dd>Access information in the Rigid Disk Drive Geometry mode page.</dd>
+<dt><code>-G</code></dt>
+<dd>Display grown defect list (default format: index).</dd>
+<dt><code>-i</code></dt>
+<dd>Display the response to a standard INQUIRY command.</dd>
+<dt><code>-I</code></dt>
+<dd>Access the Informational Exceptions mode page.</dd>
+<dt><code>-l</code></dt>
+<dd>Deprecated. Only use in old versions of Linux (e.g. 2.4 and earlier). Please use <a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8) in the Linux 2.6 series and later. List known SCSI devices on the system.</dd>
+<dt><code>-n</code></dt>
+<dd>Access information in the Notch and Partition mode page.</dd>
+<dt><code>-N</code></dt>
+<dd>Negate (i.e. stop) mode page changes being placed in the &quot;saved&quot; page (by default changes go to the current and the saved page). Only active when used together with &#8216;-R&#8217;.</dd>
+<dt><code>-P</code></dt>
+<dd>Access information in the Power Condition mode page.</dd>
+<dt><code>-r</code></dt>
+<dd>Display all raw (or primary) SCSI device names visible in the /dev directory. Examples are /dev/sda, /dev/st1 and /dev/scd2. Does not list sg device names so devices such as a SCSI enclosure which only have an sg device name are not listed.</dd>
+<dt><code>-s</code></dt>
+<dd>Display information in the unit serial number page which is a INQUIRY command variant.</dd>
+<dt><code>-t</code> <i>PN</i>[,<i>SPN</i>]</dt>
+<dd>Display information from mode page number <i>PN</i> (and optionally sub page number <i>SPN</i>) in decoded format (if known, otherwise in hex form). <i>PN</i> is a mode page number in a decimal number from 0 to 63 inclusive. <i>SPN</i> is the mode subpage number and is assumed to be 0 if not given. <i>SPN</i> is a decimal number from 1 to 255 inclusive. A page number of 63 returns all pages supported by the device in ascending order except for page 0 which, if present, is last. Page 0 is vendor specific and not necessarily in mode page format. Alternatively hex values can be given for both <i>PN</i> and <i>SPN</i> (both prefixed by &#8216;0x&#8217;).</dd>
+<dt><code>-T</code></dt>
+<dd>Trace commands to obtain more verbose output (for debugging). When used once SCSI commands are shown (in hex) and any errors from these SCSI commands are spelt out (i.e. with a decoded and raw sense buffer). When used twice, the additional data sent with mode select and the response from mode sense are shown (in hex).</dd>
+<dt><code>-u</code> <i>PN</i>[,<i>SPN</i>]</dt>
+<dd>Display information from mode page number <i>PN</i> (and optionally <i>SPN</i>) in hex form. <i>PN</i> is a mode page number in a decimal number from 0 to 63 inclusive. <i>SPN</i> is the mode subpage number and is assumed to be 0 if not given. <i>SPN</i> is a decimal number from 1 to 255 inclusive. A page number of 63 returns all pages supported by the device in ascending order except for page 0 which, if present, is last. Page 0 is vendor specific and not necessarily in mode page format. Alternatively hex values can be given for both <i>PN</i> and <i>SPN</i> (both prefixed by &#8216;0x&#8217;). For example 63 and 0x3f are equivalent.</dd>
+<dt><code>-v</code></dt>
+<dd>Display version string then exit. [N.B. This option increases verbosity for most other utilities in this package as outlined in &#8216;man 8 sg3_utils&#8217;. This odd usage is for backward compatibility with the scsiinfo utility.]</dd>
+<dt><code>-V</code></dt>
+<dd>Access information in the Verify Error Recovery mode page. [N.B. This option prints the version string then exits in most other utilities in this package as outlined in &#8216;man 8 sg3_utils&#8217;. This odd usage is for backward compatibility with the scsiinfo utility.]</dd>
+<dt><code>-z</code></dt>
+<dd>do a single fetch for mode pages (over-estimating the expected length of the returned response). The default action is to do a double fetch, the first fetch is to find the response length that could be returned. Devices that closely adhere to SCSI standards should not require this option, some real world devices do require it.</dd></dl>
 <h2>Advanced Options</h2>
 <p>Only one of the following three options can be specified. None of these three implies the current values are returned.</p>
 <dl>
-<dt><code>-m</code></p>
-<dd>Display modifiable fields instead of current values</p>
-<dt><code>-M</code></p>
-<dd>Display manufacturer&#8217;s defaults instead of current values</p>
-<dt><code>-S</code></p>
-<dd>Display saved defaults instead of current values</dl>
+<dt><code>-m</code></dt>
+<dd>Display modifiable fields instead of current values</dd>
+<dt><code>-M</code></dt>
+<dd>Display manufacturer&#8217;s defaults instead of current values</dd>
+<dt><code>-S</code></dt>
+<dd>Display saved defaults instead of current values</dd></dl>
 <p> The following are advanced options, not generally suited for most users:</p>
 <dl>
-<dt><code>-X</code></p>
-<dd>Display output values in a list. Make them suitable for editing and being given back to the &#8216;-R&#8217; (replace command).</p>
-<dt><code>\-R</code></p>
-<dd>Replace parameters &#8211; best used with -X (expert use only)</dl>
+<dt><code>-X</code></dt>
+<dd>Display output values in a list. Make them suitable for editing and being given back to the &#8216;-R&#8217; (replace command).</dd>
+<dt><code>\-R</code></dt>
+<dd>Replace parameters &#8211; best used with -X (expert use only)</dd></dl>
 <h2>Changing Mode Page Parameters</h2>
 <p>Firstly you should know what you are doing before changing existing parameters. Taking the control page as an example, first list it out normally (e.g. &quot;sginfo -C /dev/sda&quot;) and decide which parameter is to be changed (note its position relative to the other lines output). Then execute the same sginfo command with the &quot;-X&quot; option added; this will output the parameter values in a single row in the same relative positions as the previous command. Now execute &quot;sginfo -CXR /dev/sda &#8230;&quot; with the &quot;&#8230;&quot; replaced by the single row of values output by the previous command, with the relevant parameter changed. Here is a simplified example: </p>
 <p>$&nbsp;<wbr>sginfo -C&nbsp;<wbr>/dev/sda </p>

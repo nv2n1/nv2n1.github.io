@@ -98,14 +98,14 @@ description: "greylist_milter_selinux – Security Enhanced Linux Policy for the
 <p> <code>greylist_milter_data_t</code> </p>
 <p> &#8211; Set files with the greylist_milter_data_t type, if you want to treat the files as greylist milter content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/sqlgrey(/.*)?, /var/lib/milter-greylist(/.*)?, /var/run/milter-greylist(/.*)?, /var/run/sqlgrey.pid, /var/run/milter-greylist.pid </p>
+<dt>Paths:</dt>
+<dd>/var/lib/sqlgrey(/.*)?, /var/lib/milter-greylist(/.*)?, /var/run/milter-greylist(/.*)?, /var/run/sqlgrey.pid, /var/run/milter-greylist.pid </dd>
 </dl>
 <p> <code>greylist_milter_exec_t</code> </p>
 <p> &#8211; Set files with the greylist_milter_exec_t type, if you want to transition an executable to the greylist_milter_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/sqlgrey, /usr/sbin/milter-greylist </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/sqlgrey, /usr/sbin/milter-greylist </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

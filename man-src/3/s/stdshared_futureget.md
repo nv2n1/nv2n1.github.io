@@ -12,10 +12,8 @@ std::shared_future&lt;T&gt;::get - std::shared_future&lt;T&gt;::get
 
 <pre><code>const T &amp;get() const;
 (1)(member only of generic shared_future template)(since C++ 11)
-
     T &amp;get() const;
 (2)(member only of shared_future&lt;T &amp;&gt; template specialization)(since C++ 11)
-
     void get() const;
 (3)(member only of shared_future&lt;void&gt; template specialization)(since C++ 11)</code></pre> 
 The get method waits until the shared_future has a valid result and (depending on which template is used) retrieves it. It effectively calls wait() in order to wait for the result. 

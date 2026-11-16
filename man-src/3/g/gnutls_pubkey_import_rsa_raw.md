@@ -14,12 +14,12 @@ description: "gnutls_pubkey_import_rsa_raw – API function"
 <p> <code>int gnutls_pubkey_import_rsa_raw(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>m</i><code>, const gnutls_datum_t * </code><i>e</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> Is a structure will hold the parameters</p>
-<dt>const gnutls_datum_t * m</p>
-<dd> holds the modulus</p>
-<dt>const gnutls_datum_t * e</p>
-<dd> holds the public exponent</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> Is a structure will hold the parameters</dd>
+<dt>const gnutls_datum_t * m</dt>
+<dd> holds the modulus</dd>
+<dt>const gnutls_datum_t * e</dt>
+<dd> holds the public exponent</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will replace the parameters in the given structure. The new parameters should be stored in the appropriate gnutls_datum.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pubkey_import_rsa_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

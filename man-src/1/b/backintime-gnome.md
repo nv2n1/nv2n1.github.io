@@ -16,30 +16,30 @@ description: "backintime-gnome – a simple backup tool for Gnome."
 <p> If you want to run it as root you need to use &#8216;gksu&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>path</p>
-<dd> go directly to the specified file/folder</p>
-<dt>-s, &#8211;snapshots</p>
-<dd> show snapshots dialog for the specified path (only if there is no other dialog displayed)</p>
-<dt>-b, &#8211;backup</p>
-<dd> take a snapshot now (if needed)</p>
-<dt>&#8211;backup-job</p>
-<dd> take a snapshot (if needed) depending on schedule rules (used for cron jobs)</p>
-<dt>&#8211;snapshots-path</p>
-<dd> display path where is saves the snapshots (if configured)</p>
-<dt>&#8211;snapshots-list</p>
-<dd> display the list of snapshot IDs (if any)</p>
-<dt>&#8211;snapshots-list-path</p>
-<dd> display the paths to snapshots (if any)</p>
-<dt>&#8211;last-snapshot</p>
-<dd> display last snapshot ID (if any)</p>
-<dt>&#8211;last-snapshot-path</p>
-<dd> display the path to the last snapshot (if any)</p>
-<dt>-h, &#8211;help</p>
-<dd> display a short help</p>
-<dt>-v, &#8211;version</p>
-<dd> show version</p>
-<dt>&#8211;license</p>
-<dd> show license</dl>
+<dt>path</dt>
+<dd> go directly to the specified file/folder</dd>
+<dt>-s, &#8211;snapshots</dt>
+<dd> show snapshots dialog for the specified path (only if there is no other dialog displayed)</dd>
+<dt>-b, &#8211;backup</dt>
+<dd> take a snapshot now (if needed)</dd>
+<dt>&#8211;backup-job</dt>
+<dd> take a snapshot (if needed) depending on schedule rules (used for cron jobs)</dd>
+<dt>&#8211;snapshots-path</dt>
+<dd> display path where is saves the snapshots (if configured)</dd>
+<dt>&#8211;snapshots-list</dt>
+<dd> display the list of snapshot IDs (if any)</dd>
+<dt>&#8211;snapshots-list-path</dt>
+<dd> display the paths to snapshots (if any)</dd>
+<dt>&#8211;last-snapshot</dt>
+<dd> display last snapshot ID (if any)</dd>
+<dt>&#8211;last-snapshot-path</dt>
+<dd> display the path to the last snapshot (if any)</dd>
+<dt>-h, &#8211;help</dt>
+<dd> display a short help</dd>
+<dt>-v, &#8211;version</dt>
+<dd> show version</dd>
+<dt>&#8211;license</dt>
+<dd> show license</dd></dl>
 <h2>SEE ALSO</h2>
 <p> backintime, backintime-kde4. </p>
 <p> Back In Time also has a website: <a rel="nofollow" href="http://backintime.le-web.org">http://backintime.le-web.org</a></p>

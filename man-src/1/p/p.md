@@ -17,19 +17,19 @@ description: "r.out.vrml – Export a raster map to the Virtual Reality Modeling
  <code>r.out.vrml elev</code>=<i>string</i> [<code>color</code>=<i>string</i>] [<code>exag</code>=<i>float</i>] <code>output</code>=<i>string</i> [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>elev</code>=<i>string</i></p>
+<dt><code>elev</code>=<i>string</i></dt>
 <dd>
- Name of elevation map</p>
-<dt><code>color</code>=<i>string</i></p>
+ Name of elevation map</dd>
+<dt><code>color</code>=<i>string</i></dt>
 <dd>
- Name of color file</p>
-<dt><code>exag</code>=<i>float</i></p>
+ Name of color file</dd>
+<dt><code>exag</code>=<i>float</i></dt>
 <dd>
  Vertical exaggeration<br />
- Default: <i>1.0</i></p>
-<dt><code>output</code>=<i>string</i></p>
+ Default: <i>1.0</i></dd>
+<dt><code>output</code>=<i>string</i></dt>
 <dd>
- Name for new VRML file</dl>
+ Name for new VRML file</dd></dl>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
 <h2>Index</h2>

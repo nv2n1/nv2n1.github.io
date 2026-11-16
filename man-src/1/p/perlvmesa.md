@@ -42,13 +42,13 @@ url: "/docs/linux/man/1-perlvmesa/"
  There is a ``hints'' file for vmesa that specifies the correct values for most things. Some things to watch out for are:
 <dl>
 <dt>&bull;
-<dd> this port does support dynamic loading but it's not had much testing
-<dt>&bull;
-<dd> Don't turn on the compiler optimization flag ``-O''. There's a bug in the compiler (<font SIZE="-1">APAR</font> <font SIZE="-1">PQ18812</font>) that generates some bad code the optimizer is on.
-<dt>&bull;
-<dd> As <font SIZE="-1">VM/ESA</font> doesn't fully support the <i>fork()</i> <font SIZE="-1">API</font> programs relying on this call will not work. I've replaced <i>fork()</i>/<i>exec()</i> with <i>spawn()</i> and the standalone <i>exec()</i> with <i>spawn()</i>. This has a side effect when opening unnamed pipes in a shell script: there is no child process generated under.
-<dt>&bull;
-<dd> At the moment the hints file for <font SIZE="-1">VM/ESA</font> basically bypasses all of the automatic configuration process. This is because Configure relies on: 1. The header files living in the Byte File System (you could put the there if you want); 2. The C preprocessor including the #include statements in the preprocessor output (.i) file.</dl>
+</dt><dd> this port does support dynamic loading but it's not had much testing
+</dd><dt>&bull;
+</dt><dd> Don't turn on the compiler optimization flag ``-O''. There's a bug in the compiler (<font SIZE="-1">APAR</font> <font SIZE="-1">PQ18812</font>) that generates some bad code the optimizer is on.
+</dd><dt>&bull;
+</dt><dd> As <font SIZE="-1">VM/ESA</font> doesn't fully support the <i>fork()</i> <font SIZE="-1">API</font> programs relying on this call will not work. I've replaced <i>fork()</i>/<i>exec()</i> with <i>spawn()</i> and the standalone <i>exec()</i> with <i>spawn()</i>. This has a side effect when opening unnamed pipes in a shell script: there is no child process generated under.
+</dd><dt>&bull;
+</dt><dd> At the moment the hints file for <font SIZE="-1">VM/ESA</font> basically bypasses all of the automatic configuration process. This is because Configure relies on: 1. The header files living in the Byte File System (you could put the there if you want); 2. The C preprocessor including the #include statements in the preprocessor output (.i) file.</dd></dl>
 
 <h3>Testing Anomalies of Perl on <font SIZE="-1">VM/ESA</font></h3>
 
@@ -87,19 +87,18 @@ url: "/docs/linux/man/1-perlvmesa/"
  There are web archives of the mailing list at:
 <dl>
 <dt>&bull;
-<dd> <a rel="nofollow" HREF="http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/">http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/</a> &lt;<a HREF="http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/">http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/</a>&gt;
-<dt>&bull;
-<dd> <a rel="nofollow" HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a> &lt;<a HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a>&gt; 
-
-</dl>
+</dt><dd> <a rel="nofollow" HREF="http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/">http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/</a> &lt;<a HREF="http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/">http://www.xray.mpe.mpg.de/mailing-lists/perl-mvs/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> <a rel="nofollow" HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a> &lt;<a HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a>&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 
 
 
 <dt><a HREF="#lbAJ">AUTHORS</a>
-<dd>
-<dt><a HREF="#lbAK">SEE ALSO</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">SEE ALSO</a>
+</dt><dd>
 
-</dl>
+</dd></dl>

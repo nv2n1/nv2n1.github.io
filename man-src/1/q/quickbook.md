@@ -20,25 +20,25 @@ description: "Quickbook – WikiWiki style documentation tool geared towards C++
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;CSS support </p>
 <h3>Allowed options:</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> produce help message</p>
-<dt><code>&#8211;version</code></p>
-<dd> print version string</p>
-<dt><code>&#8211;no-pretty-print</code></p>
-<dd> disable XML pretty printing</p>
-<dt><code>&#8211;indent</code> arg</p>
-<dd> indent spaces</p>
-<dt><code>&#8211;linewidth</code> arg</p>
-<dd> line width</p>
-<dt><code>&#8211;input-file</code> arg</p>
-<dd> input file</p>
-<dt><code>&#8211;output-file</code> arg</p>
-<dd> output file</p>
-<dt><code>&#8211;debug</code></p>
-<dd> debug mode (for developers)</p>
-<dt><code>&#8211;ms-errors</code></p>
-<dd> use Microsoft Visual Studio style error &amp; warn message format</p>
-<dt> <code>-I</code> [ <code>&#8211;include-path</code> ] arg include path</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> produce help message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version string</dd>
+<dt><code>&#8211;no-pretty-print</code></dt>
+<dd> disable XML pretty printing</dd>
+<dt><code>&#8211;indent</code> arg</dt>
+<dd> indent spaces</dd>
+<dt><code>&#8211;linewidth</code> arg</dt>
+<dd> line width</dd>
+<dt><code>&#8211;input-file</code> arg</dt>
+<dd> input file</dd>
+<dt><code>&#8211;output-file</code> arg</dt>
+<dd> output file</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> debug mode (for developers)</dd>
+<dt><code>&#8211;ms-errors</code></dt>
+<dd> use Microsoft Visual Studio style error &amp; warn message format</dd>
+<dt> <code>-I</code> [ <code>&#8211;include-path</code> ] arg include path</dt></dl>
 <h2>SEE ALSO</h2>
-<dd>The full documentation for <code>Quickbook</code> is maintained in HTML; see /usr/share/doc/libboostX.Y-doc/HTML/doc/html/quickbook.html </p>
+<dd>The full documentation for <code>Quickbook</code> is maintained in HTML; see /usr/share/doc/libboostX.Y-doc/HTML/doc/html/quickbook.html </dd>
 <h2>Index</h2>

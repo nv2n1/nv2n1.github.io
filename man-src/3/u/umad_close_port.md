@@ -10,7 +10,6 @@ description: "umad_close_port – close InfiniBand device port for umad access"
 <p>umad_close_port &#8211; close InfiniBand device port for umad access</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_close_port(int portid);</code></pre>
 <h2>Description</h2>
 <p><code>umad_close_port()</code> closes the port specified by the handle <i>portid</i>.</p>
@@ -20,5 +19,5 @@ int umad_close_port(int portid);</code></pre>
 <p><code><a href="/docs/linux/man/3-umad_open_port/">umad_open_port</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

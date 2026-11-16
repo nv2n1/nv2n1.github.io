@@ -49,7 +49,7 @@ description: "QwtPlotScaleItem –"
 <p> The scale might be at a specific position (f.e 0.0) or it might be aligned to a canvas border. </p>
 <p> <code>Example</code></p>
 <dl COMPACT>
-<dd>The following example shows how to replace the left axis, by a scale item at the x position 0.0. </p>
+<dd>The following example shows how to replace the left axis, by a scale item at the x position 0.0. </dd>
 <pre>QwtPlotScaleItem *scaleItem =
  new QwtPlotScaleItem(QwtScaleDraw::RightScale, 0.0);
 scaleItem-&gt;setFont(plot-&gt;axisWidget(QwtPlot::yLeft)-&gt;font());
@@ -62,148 +62,148 @@ plot-&gt;enableAxis(QwtPlot::yLeft, false);</pre>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>alignment</i> In case of <code>QwtScaleDraw::BottomScale</code> or <code>QwtScaleDraw::TopScale</code> the scale item is corresponding to the <code>xAxis()</code>, otherwise it corresponds to the <code>yAxis()</code>.<br />
- <i>pos</i> x or y position, depending on the corresponding axis.</dl>
+ <i>pos</i> x or y position, depending on the corresponding axis.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPosition()</code>, <code>setAlignment()</code></dl>
+<dd><code>setPosition()</code>, <code>setAlignment()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtPlotScaleItem::borderDistance () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Distance from a canvas border</dl>
+<dd>Distance from a canvas border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderDistance()</code>, <code>setPosition()</code></dl>
+<dd><code>setBorderDistance()</code>, <code>setPosition()</code></dd></dl>
 <h3>QFont QwtPlotScaleItem::font () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>tick label font</dl>
+<dd>tick label font</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFont()</code></dl>
+<dd><code>setFont()</code></dd></dl>
 <h3>bool QwtPlotScaleItem::isScaleDivFromAxis () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, if the synchronization of the scale division with the corresponding axis is enabled.</dl>
+<dd>True, if the synchronization of the scale division with the corresponding axis is enabled.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDiv()</code>, <code>setScaleDivFromAxis()</code></dl>
+<dd><code>setScaleDiv()</code>, <code>setScaleDivFromAxis()</code></dd></dl>
 <h3>QPalette QwtPlotScaleItem::palette () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>palette</dl>
+<dd>palette</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPalette()</code></dl>
+<dd><code>setPalette()</code></dd></dl>
 <h3>double QwtPlotScaleItem::position () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Position of the scale</dl>
+<dd>Position of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPosition()</code>, <code>setAlignment()</code></dl>
+<dd><code>setPosition()</code>, <code>setAlignment()</code></dd></dl>
 <h3>int QwtPlotScaleItem::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotScale</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotScale</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>const <code>QwtScaleDiv</code> &amp; QwtPlotScaleItem::scaleDiv () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale division</dl>
+<dd>Scale division</dd></dl>
 <h3>const <code>QwtScaleDraw</code> * QwtPlotScaleItem::scaleDraw () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale draw</dl>
+<dd>Scale draw</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3><code>QwtScaleDraw</code> * QwtPlotScaleItem::scaleDraw ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale draw</dl>
+<dd>Scale draw</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setAlignment (<code>QwtScaleDraw::Alignment</code>alignment)</h3>
 <p>Change the alignment of the scale </p>
 <p> The alignment sets the orientation of the scale and the position of the ticks: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtScaleDraw::BottomScale</code>: horizontal, ticks below</p>
-<dt>&bull;</p>
-<dd><code>QwtScaleDraw::TopScale</code>: horizontal, ticks above</p>
-<dt>&bull;</p>
-<dd><code>QwtScaleDraw::LeftScale</code>: vertical, ticks left</p>
-<dt>&bull;</p>
-<dd><code>QwtScaleDraw::RightScale</code>: vertical, ticks right</dl>
+<dt>&bull;</dt>
+<dd><code>QwtScaleDraw::BottomScale</code>: horizontal, ticks below</dd>
+<dt>&bull;</dt>
+<dd><code>QwtScaleDraw::TopScale</code>: horizontal, ticks above</dd>
+<dt>&bull;</dt>
+<dd><code>QwtScaleDraw::LeftScale</code>: vertical, ticks left</dd>
+<dt>&bull;</dt>
+<dd><code>QwtScaleDraw::RightScale</code>: vertical, ticks right</dd></dl>
 <p> For horizontal scales the position corresponds to <code>QwtPlotItem::yAxis()</code>, otherwise to <code>QwtPlotItem::xAxis()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleDraw()</code>, <code>QwtScaleDraw::alignment()</code>, <code>setPosition()</code></dl>
+<dd><code>scaleDraw()</code>, <code>QwtScaleDraw::alignment()</code>, <code>setPosition()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setBorderDistance (intdistance)</h3>
 <p>Align the scale to the canvas. If distance is &gt;= 0 the scale will be aligned to a border of the contents rectangle of the canvas. If alignment() is <code>QwtScaleDraw::LeftScale</code>, the scale will be aligned to the right border, if it is <code>QwtScaleDraw::TopScale</code> it will be aligned to the bottom (and vice versa), </p>
 <p> If distance is &lt; 0 the scale will be at the <code>position()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>distance</i> Number of pixels between the canvas border and the backbone of the scale.</dl>
+<dd><i>distance</i> Number of pixels between the canvas border and the backbone of the scale.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPosition()</code>, <code>borderDistance()</code></dl>
+<dd><code>setPosition()</code>, <code>borderDistance()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setFont (const QFont &amp;font)</h3>
 <p>Change the tick label font </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>font()</code></dl>
+<dd><code>font()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setPalette (const QPalette &amp;palette)</h3>
 <p>Set the palette </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtAbstractScaleDraw::draw()</code>, <code>palette()</code></dl>
+<dd><code>QwtAbstractScaleDraw::draw()</code>, <code>palette()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setPosition (doublepos)</h3>
 <p>Change the position of the scale </p>
 <p> The position is interpreted as y value for horizontal axes and as x value for vertical axes. </p>
 <p> The border distance is set to -1. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> New position</dl>
+<dd><i>pos</i> New position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>position()</code>, <code>setAlignment()</code></dl>
+<dd><code>position()</code>, <code>setAlignment()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setScaleDiv (const <code>QwtScaleDiv</code> &amp;scaleDiv)</h3>
 <p>Assign a scale division. When assigning a scaleDiv the scale division won&#8217;t be synchronized with the corresponding axis anymore. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDiv</i> Scale division</dl>
+<dd><i>scaleDiv</i> Scale division</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleDiv()</code>, <code>setScaleDivFromAxis()</code>, <code>isScaleDivFromAxis()</code></dl>
+<dd><code>scaleDiv()</code>, <code>setScaleDivFromAxis()</code>, <code>isScaleDivFromAxis()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setScaleDivFromAxis (boolon)</h3>
 <p>Enable/Disable the synchronization of the scale division with the corresponding axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> true/false</dl>
+<dd><i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isScaleDivFromAxis()</code></dl>
+<dd><code>isScaleDivFromAxis()</code></dd></dl>
 <h3>void QwtPlotScaleItem::setScaleDraw (<code>QwtScaleDraw</code> *scaleDraw)</h3>
 <p>Set a scale draw. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDraw</i> object responsible for drawing scales.</dl>
+<dd><i>scaleDraw</i> object responsible for drawing scales.</dd></dl>
 <p> The main use case for replacing the default <code>QwtScaleDraw</code> is to overload <code>QwtAbstractScaleDraw::label</code>, to replace or swallow tick labels. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleDraw()</code></dl>
+<dd><code>scaleDraw()</code></dd></dl>
 <h3>void QwtPlotScaleItem::updateScaleDiv (const <code>QwtScaleDiv</code> &amp;xScaleDiv, const <code>QwtScaleDiv</code> &amp;yScaleDiv) [virtual]</h3>
 <p>Update the item to changes of the axes scale division. In case of <code>isScaleDivFromAxis()</code>, the scale draw is synchronized to the correspond axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xScaleDiv</i> Scale division of the x-axis<br />
- <i>yScaleDiv</i> Scale division of the y-axis</dl>
+ <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::updateAxes()</code></dl>
+<dd><code>QwtPlot::updateAxes()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

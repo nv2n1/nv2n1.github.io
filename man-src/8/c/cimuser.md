@@ -18,52 +18,53 @@ description: "cimuser – add, modify, remove, or list CIM users"
 <p>The <code>cimuser</code> command recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-a</code></p>
-<dd>Add a new CIM user.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Display command usage information.</p>
-<dt><code>-l</code></p>
-<dd>List the names of CIM users.</p>
-<dt><code>-m</code></p>
-<dd>Modify a CIM user password.</p>
-<dt><code>-n</code></p>
-<dd>Supply a new password for the specified user name. WARNING: Passwords should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If no password is provided on the command line, <code>cimuser </code> will prompt for one.</p>
-<dt><code>-r</code></p>
-<dd>Remove the specified CIM user.</p>
-<dt><code>-u</code></p>
-<dd>Specify a CIM user name.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display CIM Server version number.</p>
-<dt><code>-w</code></p>
-<dd>Supply a password for the specified user name. WARNING: Passwords should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If no password is provided on the command line, <code>cimuser </code> will prompt for one.</dl>
+</dd><dl>
+<dt><code>-a</code></dt>
+<dd>Add a new CIM user.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Display command usage information.</dd>
+<dt><code>-l</code></dt>
+<dd>List the names of CIM users.</dd>
+<dt><code>-m</code></dt>
+<dd>Modify a CIM user password.</dd>
+<dt><code>-n</code></dt>
+<dd>Supply a new password for the specified user name. WARNING: Passwords should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If no password is provided on the command line, <code>cimuser </code> will prompt for one.</dd>
+<dt><code>-r</code></dt>
+<dd>Remove the specified CIM user.</dd>
+<dt><code>-u</code></dt>
+<dd>Specify a CIM user name.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display CIM Server version number.</dd>
+<dt><code>-w</code></dt>
+<dd>Supply a password for the specified user name. WARNING: Passwords should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If no password is provided on the command line, <code>cimuser </code> will prompt for one.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>When an error occurs, an error message is written to stderr and an error value of 1 is returned. The following return values are returned:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>Successful completion</p>
-<dt><code>1</code></p>
-<dd>Error</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>Successful completion</dd>
+<dt><code>1</code></dt>
+<dd>Error</dd></dl>
 </dl>
 <h2>Usage Note</h2>
 <p>The <code>cimuser </code> command requires that the CIM Server is running.</p>
 <h2>Examples</h2>
 <p>The following command adds user &quot;guest&quot;, a new CIM user. The password for this user is &quot;guest&quot;.</p>
 <dl>
-<dd><code>cimuser -a -u guest -w guest</code></dl>
+<dd><code>cimuser -a -u guest -w guest</code></dd></dl>
 <p> The following command adds user &quot;guest&quot;, a new CIM user. Since the password is not specified on the command line, the user will be prompted for it.</p>
 <dl>
-<dd><code>cimuser -a -u guest </code> Please enter your password: Please re-enter your password:  The following command modifies the password for user &quot;guest&quot;, with the new password &quot;bar&quot;.</p>
+<dd><code>cimuser -a -u guest </code> Please enter your password: Please re-enter your password:  The following command modifies the password for user &quot;guest&quot;, with the new password &quot;bar&quot;.</dd>
 <dl>
-<dd><code>cimuser -m -u guest -w foo -n bar</code></dl>
+<dd><code>cimuser -m -u guest -w foo -n bar</code></dd></dl>
 <p> The following command removes the CIM user &quot;guest&quot;.</p>
 <dl>
-<dd><code>cimuser -r -u guest</code></dl>
+<dd><code>cimuser -r -u guest</code></dd></dl>
 <p> The following command displays the list of CIM user names.</p>
 <dl>
-<dd><code>cimuser -l</code></dl>
+<dd><code>cimuser -l</code></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-cimserver/">cimserver</a>(8), <a href="/docs/linux/man/8-cimconfig/">cimconfig</a>(8). </p>
+</dl>

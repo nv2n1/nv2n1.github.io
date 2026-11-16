@@ -14,7 +14,7 @@ description: "mutex_trylock – try to acquire the mutex, without waiting"
 <p><i>lock</i></p>
 <dl>
 <dd>
-<dd>the mutex to be acquired</dl>
+</dd><dd>the mutex to be acquired</dd></dl>
 <h2>Description</h2>
 <p>Try to acquire the mutex atomically. Returns 1 if the mutex has been acquired successfully, and 0 on contention.</p>
 <h2>Note</h2>
@@ -23,5 +23,5 @@ description: "mutex_trylock – try to acquire the mutex, without waiting"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

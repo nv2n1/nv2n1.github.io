@@ -11,11 +11,8 @@ std::filesystem::file_size - std::filesystem::file_size
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     std::uintmax_t file_size(const std::filesystem::path &amp;p);
-
 std::uintmax_t file_size(const std::filesystem::path &amp;p, (1)(since C++ 17)
-
                                                              std::error_code &amp;ec) noexcept;</code></pre> 
 If p does not exist, reports an error. 
 For a regular file p, returns the size determined as if by reading the st_size member of the structure obtained by POSIX stat (symlinks are followed) 
@@ -38,15 +35,10 @@ The overload that does not take a std::error_code&amp; parameter throws filesyst
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p).put('a'); // create file of size 1

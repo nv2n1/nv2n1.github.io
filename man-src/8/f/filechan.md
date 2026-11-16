@@ -17,21 +17,21 @@ description: "filechan – file-writing backend for InterNetNews"
 <p> Because the time window in which a file is open is very small, complicated flushing and locking protocols are not needed; a <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1) followed by a <i><a href="/docs/linux/man/1-sleep/">sleep</a></i>(1) for a couple of seconds is sufficient.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f num_fields</code></p>
-<dd>The &#8220;<code>-f</code>&#8221; flag may be used to specify a different number of initial fields.</p>
-<dt><code>-d directory</code></p>
-<dd>By default, <i>filechan</i> writes its output into the directory <i>&lt;pathoutgoing in inn.conf&gt;</i>. The &#8220;<code>-d</code>&#8221; flag may be used to specify a directory the program should change to before starting.</p>
-<dt><code>-p pidfile</code></p>
-<dd>If the &#8220;<code>-p</code>&#8221; flag is used, the program will write a line containing its process ID (in text) to the specified file.</p>
-<dt><code>-m mapfile</code></p>
-<dd>A map file may be specified by using the &#8220;<code>-m</code>&#8221; flag. Blank lines and lines starting with a number sign (&#8220;#&#8221;) are ignored. All other lines should have two host names separated by a colon. The first field is the name that may appear in the input stream; the second field names the file to be used when the name in the first field appears. For example, the following map file may be used to map the short names used in the example below to the full domain names:</dl>
+<dt><code>-f num_fields</code></dt>
+<dd>The &#8220;<code>-f</code>&#8221; flag may be used to specify a different number of initial fields.</dd>
+<dt><code>-d directory</code></dt>
+<dd>By default, <i>filechan</i> writes its output into the directory <i>&lt;pathoutgoing in inn.conf&gt;</i>. The &#8220;<code>-d</code>&#8221; flag may be used to specify a directory the program should change to before starting.</dd>
+<dt><code>-p pidfile</code></dt>
+<dd>If the &#8220;<code>-p</code>&#8221; flag is used, the program will write a line containing its process ID (in text) to the specified file.</dd>
+<dt><code>-m mapfile</code></dt>
+<dd>A map file may be specified by using the &#8220;<code>-m</code>&#8221; flag. Blank lines and lines starting with a number sign (&#8220;#&#8221;) are ignored. All other lines should have two host names separated by a colon. The first field is the name that may appear in the input stream; the second field names the file to be used when the name in the first field appears. For example, the following map file may be used to map the short names used in the example below to the full domain names:</dd></dl>
 <dl>
 <dd>
 <pre># This is a comment
 uunet:news.uu.net
 foo:foo.com
 munnari:munnari.oz.au</pre>
-</dl>
+</dd></dl>
 <h2>Examples</h2>
 <p>If <i>filechan</i> is invoked with &#8220;<code>-f 2</code>&#8221; and given the following input: </p>
 <dl>
@@ -39,26 +39,26 @@ munnari:munnari.oz.au</pre>
 <pre>news/software/b/132 &lt;1643 [at] munnari.oz.au&gt; foo uunet
 news/software/b/133 &lt;102060 [at] litchi.foo.com&gt; uunet munnari
 comp/sources/unix/2002 &lt;999 [at] news.foo.com&gt; foo uunet munnari</pre>
-</dl>
+</dd></dl>
 <p> Then the file <i>foo</i> will have these lines: </p>
 <dl>
 <dd>
 <pre>news/software/b/132 &lt;1643 [at] munnari.oz.au&gt;
 comp/sources/unix/2002 &lt;999 [at] news.foo.com&gt;</pre>
-</dl>
+</dd></dl>
 <p> the file <i>munnari</i> will have these lines: </p>
 <dl>
 <dd>
 <pre>news/software/b/133 &lt;102060 [at] litchi.foo.com&gt;
 comp/sources/unix/2002 &lt;999 [at] news.foo.com&gt;</pre>
-</dl>
+</dd></dl>
 <p> and the file <i>uunet</i> will have these lines: </p>
 <dl>
 <dd>
 <pre>news/software/b/132 &lt;1643 [at] munnari.oz.au&gt;
 news/software/b/133 &lt;102060 [at] litchi.foo.com&gt;
 comp/sources/unix/2002 &lt;999 [at] news.foo.com&gt;</pre>
-</dl>
+</dd></dl>
 <h2>History</h2>
 <p>Written by Robert Elz &lt;kre [at] munnari.oz.au&gt;, flags added by Rich $alz &lt;rsalz [at] uunet.uu.net&gt;. This is revision 5909, dated 2002-12-03.</p>
 <h2>See Also</h2>

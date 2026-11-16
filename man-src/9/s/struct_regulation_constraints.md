@@ -40,91 +40,91 @@ description: "struct_regulation_constraints – regulator operating constraints.
 <h2>Members</h2>
 <p>name</p>
 <dl>
-<dd>Descriptive name for the constraints, used for display purposes.</dl>
+<dd>Descriptive name for the constraints, used for display purposes.</dd></dl>
 <p> min_uV</p>
 <dl>
-<dd>Smallest voltage consumers may set.</dl>
+<dd>Smallest voltage consumers may set.</dd></dl>
 <p> max_uV</p>
 <dl>
-<dd>Largest voltage consumers may set.</dl>
+<dd>Largest voltage consumers may set.</dd></dl>
 <p> uV_offset</p>
 <dl>
-<dd>Offset applied to voltages from consumer to compensate for voltage drops.</dl>
+<dd>Offset applied to voltages from consumer to compensate for voltage drops.</dd></dl>
 <p> min_uA</p>
 <dl>
-<dd>Smallest current consumers may set.</dl>
+<dd>Smallest current consumers may set.</dd></dl>
 <p> max_uA</p>
 <dl>
-<dd>Largest current consumers may set.</dl>
+<dd>Largest current consumers may set.</dd></dl>
 <p> ilim_uA</p>
 <dl>
-<dd>Maximum input current.</dl>
+<dd>Maximum input current.</dd></dl>
 <p> system_load</p>
 <dl>
-<dd>Load that isn&#8217;t captured by any consumer requests.</dl>
+<dd>Load that isn&#8217;t captured by any consumer requests.</dd></dl>
 <p> valid_modes_mask</p>
 <dl>
-<dd>Mask of modes which may be configured by consumers.</dl>
+<dd>Mask of modes which may be configured by consumers.</dd></dl>
 <p> valid_ops_mask</p>
 <dl>
-<dd>Operations which may be performed by consumers.</dl>
+<dd>Operations which may be performed by consumers.</dd></dl>
 <p> input_uV</p>
 <dl>
-<dd>Input voltage for regulator when supplied by another regulator.</dl>
+<dd>Input voltage for regulator when supplied by another regulator.</dd></dl>
 <p> state_disk</p>
 <dl>
-<dd>State for regulator when system is suspended in disk mode.</dl>
+<dd>State for regulator when system is suspended in disk mode.</dd></dl>
 <p> state_mem</p>
 <dl>
-<dd>State for regulator when system is suspended in mem mode.</dl>
+<dd>State for regulator when system is suspended in mem mode.</dd></dl>
 <p> state_standby</p>
 <dl>
-<dd>State for regulator when system is suspended in standby mode.</dl>
+<dd>State for regulator when system is suspended in standby mode.</dd></dl>
 <p> initial_state</p>
 <dl>
-<dd>Suspend state to set by default.</dl>
+<dd>Suspend state to set by default.</dd></dl>
 <p> initial_mode</p>
 <dl>
-<dd>Mode to set at startup.</dl>
+<dd>Mode to set at startup.</dd></dl>
 <p> ramp_delay</p>
 <dl>
-<dd>Time to settle down after voltage change (unit: uV/us)</dl>
+<dd>Time to settle down after voltage change (unit: uV/us)</dd></dl>
 <p> enable_time</p>
 <dl>
-<dd>Turn-on time of the rails (unit: microseconds)</dl>
+<dd>Turn-on time of the rails (unit: microseconds)</dd></dl>
 <p> active_discharge</p>
 <dl>
-<dd>Enable/disable active discharge. The enum regulator_active_discharge values are used for initialisation.</dl>
+<dd>Enable/disable active discharge. The enum regulator_active_discharge values are used for initialisation.</dd></dl>
 <p> always_on</p>
 <dl>
-<dd>Set if the regulator should never be disabled.</dl>
+<dd>Set if the regulator should never be disabled.</dd></dl>
 <p> boot_on</p>
 <dl>
-<dd>Set if the regulator is enabled when the system is initially started. If the regulator is not enabled by the hardware or bootloader then it will be enabled when the constraints are applied.</dl>
+<dd>Set if the regulator is enabled when the system is initially started. If the regulator is not enabled by the hardware or bootloader then it will be enabled when the constraints are applied.</dd></dl>
 <p> apply_uV</p>
 <dl>
-<dd>Apply the voltage constraint when initialising.</dl>
+<dd>Apply the voltage constraint when initialising.</dd></dl>
 <p> ramp_disable</p>
 <dl>
-<dd>Disable ramp delay when initialising or when setting voltage.</dl>
+<dd>Disable ramp delay when initialising or when setting voltage.</dd></dl>
 <p> soft_start</p>
 <dl>
-<dd>Enable soft start so that voltage ramps slowly.</dl>
+<dd>Enable soft start so that voltage ramps slowly.</dd></dl>
 <p> pull_down</p>
 <dl>
-<dd>Enable pull down when regulator is disabled.</dl>
+<dd>Enable pull down when regulator is disabled.</dd></dl>
 <p> over_current_protection</p>
 <dl>
-<dd>Auto disable on over current event.</dl>
+<dd>Auto disable on over current event.</dd></dl>
 <h2>Description</h2>
 <p>This struct describes regulator and board/machine specific constraints.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

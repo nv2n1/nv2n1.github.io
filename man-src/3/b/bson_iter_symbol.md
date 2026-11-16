@@ -17,11 +17,11 @@ bson_iter_symbol(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>length</code></dt>
+<dd> A uint32_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The symbol element type is <code>DEPRECATED</code> in the bson specification at <a rel="nofollow" href="http://bsonspec.org.">http://bsonspec.org.</a> </p>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_symbol/">bson_iter_symbol</a>(3)</code> function shall return the contents of a BSON_TYPE_SYMBOL element. </p>

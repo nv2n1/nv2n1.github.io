@@ -29,16 +29,16 @@ description: "dracut.modules – dracut modules"
 <p>In the main loop of dracut loops until udev has settled and all scripts in <i>initqueue/finished</i> returned true. In this loop there are three hooks, where scripts can be inserted by calling /sbin/initqueue. </p>
 <p> <font SIZE="+1"> <code>Initqueue</code></p>
 <dl>
-<dd>This hook gets executed every time a script is inserted here, regardless of the udev state.</dl>
+<dd>This hook gets executed every time a script is inserted here, regardless of the udev state.</dd></dl>
 <p> </font><font SIZE="+2"> <code>Initqueue settled</code></p>
 <dl>
-<dd>This hooks (initqueue/settled) gets executed every time udev has settled.</dl>
+<dd>This hooks (initqueue/settled) gets executed every time udev has settled.</dd></dl>
 <p> </font><font SIZE="+3"> <code>Initqueue timeout</code></p>
 <dl>
-<dd>This hooks (initqueue/timeout) gets executed, when the main loop counter becomes half of the rd.retry counter.</dl>
+<dd>This hooks (initqueue/timeout) gets executed, when the main loop counter becomes half of the rd.retry counter.</dd></dl>
 <p> </font><font SIZE="+4"> <code>Initqueue finished</code></p>
 <dl>
-<dd>This hook (initqueue/finished) is called after udev has settled and if all scripts herein return 0 the main loop will be ended. Abritary scripts can be added here, to loop in the initqueue until something happens, which a dracut module wants to wait for.</dl>
+<dd>This hook (initqueue/finished) is called after udev has settled and if all scripts herein return 0 the main loop will be ended. Abritary scripts can be added here, to loop in the initqueue until something happens, which a dracut module wants to wait for.</dd></dl>
 <p> </font></p>
 <h3>Hook: pre-mount</h3>
 <p>Before the root device is mounted all scripts in the hook pre-mount are executed. In some cases (e.g. NFS) the real root device is already mounted, though.</p>
@@ -61,14 +61,14 @@ description: "dracut.modules – dracut modules"
 <dl>
 <dd>
 <pre>return 0</pre>
-</dl>
+</dd></dl>
 <p> The we create the install() function, which installs a cmdline hook with priority number 20 called <i>parse-insmodpost.sh</i>. It also installs the <i>insmodpost.sh</i> script in <i>/sbin</i>. </p>
 <p> install(): </p>
 <dl>
 <dd>
 <pre>inst_hook cmdline 20 &quot;$moddir/parse-insmodpost.sh&quot;
 inst_simple &quot;$moddir/insmodpost.sh&quot; /sbin/insmodpost.sh</pre>
-</dl>
+</dd></dl>
 <p> The <i>pase-instmodpost.sh</i> parses the kernel command line for a argument rd.driver.post, blacklists the module from being autoloaded and installs the hook <i>insmodpost.sh</i> in the <i>initqueue/settled</i>. </p>
 <p> <i>parse-insmodpost.sh</i>: </p>
 <dl>
@@ -79,7 +79,7 @@ inst_simple &quot;$moddir/insmodpost.sh&quot; /sbin/insmodpost.sh</pre>
 done
 [ -n &quot;$_do_insmodpost&quot; ] &amp;&amp; /sbin/initqueue --settled --unique --onetime /sbin/insmodpost.sh
 unset _do_insmodpost</pre>
-</dl>
+</dd></dl>
 <p> <i>insmodpost.sh</i>, which is called in the <i>initqueue/settled</i> hook will just modprobe the kernel modules specified in all rd.driver.post kernel command line parameters. It runs after udev has settled and is only called once (&#8211;onetime). </p>
 <p> <i>insmodpost.sh</i>: </p>
 <dl>
@@ -88,22 +88,22 @@ unset _do_insmodpost</pre>
 for p in $(getargs rd.driver.post=); do
  modprobe $p
 done</pre>
-</dl>
+</dd></dl>
 <h3>module-setup.sh: check()</h3>
 <p><i>check()</i> is called by dracut to evaluate the inclusion of a dracut module in the initramfs. </p>
 <p> $hostonly</p>
 <dl>
-<dd>If the $hostonly variable is set, then the module check() function should be in &quot;hostonly&quot; mode, which means, that the check() should only return 0, if the module is really needed to boot this specific host.</dl>
+<dd>If the $hostonly variable is set, then the module check() function should be in &quot;hostonly&quot; mode, which means, that the check() should only return 0, if the module is really needed to boot this specific host.</dd></dl>
 <p> check() should return with: </p>
 <p> 0</p>
 <dl>
-<dd>Include the dracut module in the initramfs.</dl>
+<dd>Include the dracut module in the initramfs.</dd></dl>
 <p> 1</p>
 <dl>
-<dd>Do not include the dracut module. The requirements are not fullfilled (missing tools, etc.)</dl>
+<dd>Do not include the dracut module. The requirements are not fullfilled (missing tools, etc.)</dd></dl>
 <p> 255</p>
 <dl>
-<dd>Only include the dracut module, if another module requires it or if explicitly specified in the config file or on the argument list.</dl>
+<dd>Only include the dracut module, if another module requires it or if explicitly specified in the config file or on the argument list.</dd></dl>
 <h3>module-setup.sh: depends()</h3>
 <p>The function depends() should echo all other dracut module names the module depends on.</p>
 <h3>module-setup.sh: cmdline()</h3>
@@ -116,23 +116,23 @@ done</pre>
 <h3>Creation Functions</h3>
 <p><font SIZE="+1"> <code>inst_multiple [-o] &lt;file&gt; [ &lt;file&gt; &#8230;]</code></p>
 <dl>
-<dd>installs multiple binaries and files. If executables are specified without a path, dracut will search the path PATH=/usr/sbin:/sbin:/usr/bin:/bin for the binary. If the option &quot;-o&quot; is given as the first parameter, a missing file does not lead to an error.</dl>
+<dd>installs multiple binaries and files. If executables are specified without a path, dracut will search the path PATH=/usr/sbin:/sbin:/usr/bin:/bin for the binary. If the option &quot;-o&quot; is given as the first parameter, a missing file does not lead to an error.</dd></dl>
 <p> </font><font SIZE="+2"> <code>inst &lt;src&gt; [&lt;dst&gt;]</code></p>
 <dl>
-<dd>installs <i>one</i> file &lt;src&gt; either to the same place in the initramfs or to an optional &lt;dst&gt;.</dl>
+<dd>installs <i>one</i> file &lt;src&gt; either to the same place in the initramfs or to an optional &lt;dst&gt;.</dd></dl>
 <p> </font><font SIZE="+3"> <code>inst_hook &lt;hookdir&gt; &lt;prio&gt; &lt;src&gt;</code></p>
 <dl>
-<dd>installs an executable/script &lt;src&gt; in the dracut hook &lt;hookdir&gt; with priority &lt;prio&gt;.</dl>
+<dd>installs an executable/script &lt;src&gt; in the dracut hook &lt;hookdir&gt; with priority &lt;prio&gt;.</dd></dl>
 <p> </font><font SIZE="+4"> <code>inst_rules &lt;udevrule&gt; [ &lt;udevrule&gt; &#8230;]</code></p>
 <dl>
-<dd>installs one ore more udev rules. Non-existant udev rules are reported, but do not let dracut fail.</dl>
+<dd>installs one ore more udev rules. Non-existant udev rules are reported, but do not let dracut fail.</dd></dl>
 <p> </font><font SIZE="+5"> <code>instmods &lt;kernelmodule&gt; [ &lt;kernelmodule&gt; &#8230; ]</code></p>
 <dl>
-<dd>instmods should be used only in the installkernel() function. </p>
+<dd>instmods should be used only in the installkernel() function. </dd>
 <p> instmods installs one or more kernel modules in the initramfs. &lt;kernelmodule&gt; can also be a whole subsystem, if prefixed with a &quot;=&quot;, like &quot;=drivers/net/team&quot;. </p>
 <p> instmods will not install the kernel module, if $hostonly is set and the kernel module is not currently needed by any /sys/<code>&#8230;</code>/uevent MODALIAS. To install a kernel module regardless of the hostonly mode use the form: </p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <pre>hostonly='' instmods &lt;kernelmodule&gt;</pre>
 </dl>
 </dl>

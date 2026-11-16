@@ -16,58 +16,58 @@ description: "blazer_ser, blazer_usb – Driver for Megatec/Q1 protocol serial/U
 <h2>Extra Arguments</h2>
 <p>You may need to override or provide defaults for some values, depending on the make and model of your UPS. The following are the ones that most likely will need changing (see <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5)): </p>
 <dl>
-<dt>default.battery.voltage.high = <i>value</i></p>
-<dd>Maximum battery voltage that is reached after about 12 to 24 hours charging. If you want the driver to report a guesstimated <code>battery.charge</code>, you need to specify this (see <code>BATTERY CHARGE</code>). </p>
-<dt>default.battery.voltage.low = <i>value</i></p>
-<dd>Minimum battery voltage just before the UPS automatically shuts down. If you want the driver to report a guesstimated <code>battery.charge</code>, you need to specify this (see <code>BATTERY CHARGE</code>). </p>
-<dt>default.battery.voltage.nominal = <i>value</i></p>
+<dt>default.battery.voltage.high = <i>value</i></dt>
+<dd>Maximum battery voltage that is reached after about 12 to 24 hours charging. If you want the driver to report a guesstimated <code>battery.charge</code>, you need to specify this (see <code>BATTERY CHARGE</code>). </dd>
+<dt>default.battery.voltage.low = <i>value</i></dt>
+<dd>Minimum battery voltage just before the UPS automatically shuts down. If you want the driver to report a guesstimated <code>battery.charge</code>, you need to specify this (see <code>BATTERY CHARGE</code>). </dd>
+<dt>default.battery.voltage.nominal = <i>value</i></dt>
 <dd>
-<dt>override.battery.voltage.nominal = <i>value</i></p>
-<dd>Some devices show a wrong nominal battery voltage (or none at all), so you may need to override or set a default value. </p>
-<dt>override.battery.packs = <i>value</i></p>
-<dd>Some devices report a part of the total battery voltage. For instance, if <code>battery.voltage.nominal</code> is 24 V, but it reports a <code>battery.voltage</code> of around 2 V, the number of <code>battery.packs</code> to correct this reading would be 12. The driver will attempt to detect this automatically, but if this fails somehow, you may want to override this value. </p>
-<dt>ondelay = <i>value</i></p>
-<dd>Time to wait before switching on the UPS (minutes). Note that a value below 3 minutes, may cause earlier firmware versions to not switch on automatically, so it defaults to 3 minutes. </p>
-<dt>offdelay = <i>value</i></p>
-<dd>Time to wait before shutting down the UPS (seconds). This value is truncated to units of 6 seconds (less than 60 seconds) or 60 seconds (more than 60 seconds). Defaults to 30 seconds. </p>
-<dt>norating</p>
-<dd>Some UPSes will lock up if you attempt to read rating information from them. Setting this flag will make the driver skip this step. </p>
-<dt>novendor</p>
-<dd>Some UPSes will lock up if you attempt to read vendor information from them. Setting this flag will make the driver skip this step. </p>
-<dt>runtimecal = <i>value,value,value,value</i></p>
-<dd>Parameter used in the (optional) runtime estimation. This takes two runtimes at different loads. Typically, this uses the runtime at full load and the runtime at half load. For instance, if your UPS has a rated runtime of 240 seconds at full load and 720 seconds at half load, you would enter </p>
+</dd><dt>override.battery.voltage.nominal = <i>value</i></dt>
+<dd>Some devices show a wrong nominal battery voltage (or none at all), so you may need to override or set a default value. </dd>
+<dt>override.battery.packs = <i>value</i></dt>
+<dd>Some devices report a part of the total battery voltage. For instance, if <code>battery.voltage.nominal</code> is 24 V, but it reports a <code>battery.voltage</code> of around 2 V, the number of <code>battery.packs</code> to correct this reading would be 12. The driver will attempt to detect this automatically, but if this fails somehow, you may want to override this value. </dd>
+<dt>ondelay = <i>value</i></dt>
+<dd>Time to wait before switching on the UPS (minutes). Note that a value below 3 minutes, may cause earlier firmware versions to not switch on automatically, so it defaults to 3 minutes. </dd>
+<dt>offdelay = <i>value</i></dt>
+<dd>Time to wait before shutting down the UPS (seconds). This value is truncated to units of 6 seconds (less than 60 seconds) or 60 seconds (more than 60 seconds). Defaults to 30 seconds. </dd>
+<dt>norating</dt>
+<dd>Some UPSes will lock up if you attempt to read rating information from them. Setting this flag will make the driver skip this step. </dd>
+<dt>novendor</dt>
+<dd>Some UPSes will lock up if you attempt to read vendor information from them. Setting this flag will make the driver skip this step. </dd>
+<dt>runtimecal = <i>value,value,value,value</i></dt>
+<dd>Parameter used in the (optional) runtime estimation. This takes two runtimes at different loads. Typically, this uses the runtime at full load and the runtime at half load. For instance, if your UPS has a rated runtime of 240 seconds at full load and 720 seconds at half load, you would enter </dd>
 <p>&nbsp;<wbr><code>runtimecal&nbsp;<wbr>=&nbsp;<wbr>270,100,720,50</code> </p>
 <p> The first load should always be higher than the second. If you have values available for loads other than 100 and 50 % respectively, you can use those too, but keep them spaced apart as far as reasonably possible. Just don&#8217;t get too close to no load (prediction of runtime depends more on idle load for the battery then). </p>
-<dt>chargetime = <i>value</i></p>
-<dd>The time needed to fully recharge the battery after being fully discharged. If not specified, the driver defaults to 43200 seconds (12 hours). Only used if <code>runtimecal</code> is also specified. </p>
-<dt>idleload= <i>value</i></p>
-<dd>Minimum battery load used by the driver to estimate the runtime. If not specified, the driver defaults to 10 %. Only used if <code>runtimecal</code> is also specified. </p>
+<dt>chargetime = <i>value</i></dt>
+<dd>The time needed to fully recharge the battery after being fully discharged. If not specified, the driver defaults to 43200 seconds (12 hours). Only used if <code>runtimecal</code> is also specified. </dd>
+<dt>idleload= <i>value</i></dt>
+<dd>Minimum battery load used by the driver to estimate the runtime. If not specified, the driver defaults to 10 %. Only used if <code>runtimecal</code> is also specified. </dd>
 </dl>
 <h2>Serial Interface Only</h2>
 <dl>
-<dt>cablepower = <i>string</i></p>
-<dd>By default the driver will set DTR and clear RTS (<i>normal</i>). If you find that your UPS isn&#8217;t detected or the communication with the UPS is unreliable, you may try if clear DTR and set RTS (<i>reverse</i>), set DTR and RTS (<i>both</i>) or clear DTR and RTS (<i>none</i>) improves this situation. </p>
+<dt>cablepower = <i>string</i></dt>
+<dd>By default the driver will set DTR and clear RTS (<i>normal</i>). If you find that your UPS isn&#8217;t detected or the communication with the UPS is unreliable, you may try if clear DTR and set RTS (<i>reverse</i>), set DTR and RTS (<i>both</i>) or clear DTR and RTS (<i>none</i>) improves this situation. </dd>
 </dl>
 <h2>Usb Interface Only</h2>
 <dl>
-<dt>vendorid = <i>regex</i></p>
+<dt>vendorid = <i>regex</i></dt>
 <dd>
-<dt>productid = <i>regex</i></p>
+</dd><dt>productid = <i>regex</i></dt>
 <dd>
-<dt>vendor = <i>regex</i></p>
+</dd><dt>vendor = <i>regex</i></dt>
 <dd>
-<dt>product = <i>regex</i></p>
+</dd><dt>product = <i>regex</i></dt>
 <dd>
-<dt>serial = <i>regex</i></p>
-<dd>Select a specific UPS, in case there is more than one connected via USB. Each option specifies an extended regular expression (see <code><a href="/docs/linux/man/7-regex/">regex</a>(7)</code>) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </p>
+</dd><dt>serial = <i>regex</i></dt>
+<dd>Select a specific UPS, in case there is more than one connected via USB. Each option specifies an extended regular expression (see <code><a href="/docs/linux/man/7-regex/">regex</a>(7)</code>) that must match the UPS&#8217;s entire vendor/product/serial string (minus any surrounding whitespace), or the whole 4-digit hexadecimal code for vendorid and productid. Try <code>-DD</code> for finding out the strings to match. </dd>
 <p> Examples: </p>
 <p>&nbsp;<wbr><code>-x vendor=&quot;Foo.Corporation.*&quot;</code> </p>
 <p>&nbsp;<wbr><code>-x vendorid=051d</code>&nbsp;<wbr>(APC) </p>
 <p>&nbsp;<wbr><code>-x product=&quot;.*(Smart|Back)-?UPS.*&quot;</code> </p>
-<dt>bus = <i>regex</i></p>
-<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;). </p>
-<dt>subdriver = <i>string</i></p>
-<dd>Select a serial-over-USB subdriver to use. You have a choice between <i>phoenix</i> <i>ippon</i>, <i>cypress</i> and <i>krauler</i>. When using this option, it is mandatory to also specify the vendorid and productid. Note that since nut-2.4.2 the <i>ippon</i> subdriver is used where previously the <i>phoenix</i> was selected. If this doesn&#8217;t work for you, add the following to the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5) entry for your UPS: </p>
+<dt>bus = <i>regex</i></dt>
+<dd>Select a UPS on a specific USB bus or group of busses. The argument is a regular expression that must match the bus name where the UPS is connected (e.g. bus=&quot;002&quot;, bus=&quot;00[2-3]&quot;). </dd>
+<dt>subdriver = <i>string</i></dt>
+<dd>Select a serial-over-USB subdriver to use. You have a choice between <i>phoenix</i> <i>ippon</i>, <i>cypress</i> and <i>krauler</i>. When using this option, it is mandatory to also specify the vendorid and productid. Note that since nut-2.4.2 the <i>ippon</i> subdriver is used where previously the <i>phoenix</i> was selected. If this doesn&#8217;t work for you, add the following to the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5) entry for your UPS: </dd>
 <pre> vendorid = 06da
  productid = 0003
  subdriver = phoenix</pre>
@@ -75,26 +75,26 @@ description: "blazer_ser, blazer_usb – Driver for Megatec/Q1 protocol serial/U
 <h2>Ups Commands</h2>
 <p>This driver supports some instant commands (see <code><a href="/docs/linux/man/8-upscmd/">upscmd</a></code>(8)): </p>
 <dl>
-<dt>beeper.toggle</p>
-<dd>Toggle the UPS beeper. (Not available on some hardware.) </p>
-<dt>load.on</p>
-<dd>Turn on the load immediately. </p>
-<dt>load.off</p>
-<dd>Turn off the load immediately (see <code>KNOWN PROBLEMS</code>). </p>
-<dt>shutdown.return [<i>value</i>]</p>
-<dd>Turn off the load and return when power is back. Uses the timers defined by <code>ondelay</code> and <code>offdelay</code>. </p>
-<dt>shutdown.stayoff [<i>value</i>]</p>
-<dd>Turn off the load and remain off (see <code>KNOWN PROBLEMS</code>). Uses the timer defined by <code>offdelay</code>. </p>
-<dt>shutdown.stop</p>
-<dd>Stop a shutdown in progress. </p>
-<dt>test.battery.start.deep</p>
-<dd>Perform a long battery test (Not available on some hardware.) </p>
-<dt>test.battery.start.quick</p>
-<dd>Perform a (10 second) battery test. </p>
-<dt>test.battery.start <i>value</i></p>
-<dd>Perform a battery test for the duration of <i>num</i> seconds (truncated to units of 60 seconds). </p>
-<dt>test.battery.stop</p>
-<dd>Stop a running battery test (not available on some hardware.) </p>
+<dt>beeper.toggle</dt>
+<dd>Toggle the UPS beeper. (Not available on some hardware.) </dd>
+<dt>load.on</dt>
+<dd>Turn on the load immediately. </dd>
+<dt>load.off</dt>
+<dd>Turn off the load immediately (see <code>KNOWN PROBLEMS</code>). </dd>
+<dt>shutdown.return [<i>value</i>]</dt>
+<dd>Turn off the load and return when power is back. Uses the timers defined by <code>ondelay</code> and <code>offdelay</code>. </dd>
+<dt>shutdown.stayoff [<i>value</i>]</dt>
+<dd>Turn off the load and remain off (see <code>KNOWN PROBLEMS</code>). Uses the timer defined by <code>offdelay</code>. </dd>
+<dt>shutdown.stop</dt>
+<dd>Stop a shutdown in progress. </dd>
+<dt>test.battery.start.deep</dt>
+<dd>Perform a long battery test (Not available on some hardware.) </dd>
+<dt>test.battery.start.quick</dt>
+<dd>Perform a (10 second) battery test. </dd>
+<dt>test.battery.start <i>value</i></dt>
+<dd>Perform a battery test for the duration of <i>num</i> seconds (truncated to units of 60 seconds). </dd>
+<dt>test.battery.stop</dt>
+<dd>Stop a running battery test (not available on some hardware.) </dd>
 </dl>
 <h2>Battery Charge</h2>
 <p>Due to popular demand, this driver will report a guesstimated <code>battery.charge</code> and optionally <code>battery.runtime</code>, provided you specified a couple of the <code>EXTRA PARAMETERS</code> listed above. </p>

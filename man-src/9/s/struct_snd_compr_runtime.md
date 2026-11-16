@@ -26,43 +26,43 @@ struct_snd_compr_runtime -
 <h2>Members</h2>
 
 state
-<dl><dd>stream state</dl>
+<dl><dd>stream state</dd></dl>
  
 
  ops
-<dl><dd>pointer to DSP callbacks</dl>
+<dl><dd>pointer to DSP callbacks</dd></dl>
  
 
  buffer
-<dl><dd>pointer to kernel buffer, valid only when not in mmap mode or DSP doesn't implement copy</dl>
+<dl><dd>pointer to kernel buffer, valid only when not in mmap mode or DSP doesn't implement copy</dd></dl>
  
 
  buffer_size
-<dl><dd>size of the above buffer</dl>
+<dl><dd>size of the above buffer</dd></dl>
  
 
  fragment_size
-<dl><dd>size of buffer fragment in bytes</dl>
+<dl><dd>size of buffer fragment in bytes</dd></dl>
  
 
  fragments
-<dl><dd>number of such fragments</dl>
+<dl><dd>number of such fragments</dd></dl>
  
 
  total_bytes_available
-<dl><dd>cumulative number of bytes made available in the ring buffer</dl>
+<dl><dd>cumulative number of bytes made available in the ring buffer</dd></dl>
  
 
  total_bytes_transferred
-<dl><dd>cumulative bytes transferred by offload DSP</dl>
+<dl><dd>cumulative bytes transferred by offload DSP</dd></dl>
  
 
  sleep
-<dl><dd>poll sleep</dl>
+<dl><dd>poll sleep</dd></dl>
  
 
  private_data
-<dl><dd>driver private data pointer</dl>
+<dl><dd>driver private data pointer</dd></dl>
 
 <h2>Copyright</h2>
 

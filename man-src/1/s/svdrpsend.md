@@ -15,10 +15,10 @@ description: "svdrpsend – sends commands to VDR"
 <p> This program sends commands to VDR (the Video Disk Recorder) and displays the result. A list of available commands can be shown by sending the HELP command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code> <i>hostname</i></p>
-<dd> Accesses the VDR at the specified <i>hostname</i> (default is localhost).</p>
-<dt><code>-p</code> <i>port</i></p>
-<dd> Uses the SVDRP port number <i>port</i> (default is 6419).</dl>
+<dt><code>-d</code> <i>hostname</i></dt>
+<dd> Accesses the VDR at the specified <i>hostname</i> (default is localhost).</dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd> Uses the SVDRP port number <i>port</i> (default is 6419).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To request the available commands from the VDR running on the local host: </p>
 <p> svdrpsend HELP</p>

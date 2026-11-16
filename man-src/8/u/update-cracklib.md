@@ -17,8 +17,8 @@ description: "update-cracklib – Regenerate cracklib dictionary"
 <p> 0 is returned on success, otherwise an error message is printed to standard error and -1 is returned.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/cracklib/cracklib.conf</code></p>
-<dd>shell script that sets <code>cracklib_dictpath_src</code> which must be a space separated list of source dictionary files. </p>
+<dt><code>/etc/cracklib/cracklib.conf</code></dt>
+<dd>shell script that sets <code>cracklib_dictpath_src</code> which must be a space separated list of source dictionary files. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>cracklib</code>(3), <code>crack_mkdict</code>(8) </p>

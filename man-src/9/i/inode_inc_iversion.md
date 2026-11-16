@@ -15,7 +15,7 @@ inode_inc_iversion - increments i_version
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode that need to be updated</dl>
+<dl><dd></dd><dd>inode that need to be updated</dd></dl>
 
 <h2>Description</h2>
 

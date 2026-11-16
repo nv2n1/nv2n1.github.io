@@ -14,31 +14,31 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 <p> usage: nvzoom [options] input [output]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code> scale</p>
-<dd> Scale factor (default = 0.5)</p>
-<dt><code>-g</code> gamma</p>
-<dd> Gamma correction (default = 2.2)</p>
-<dt><code>-f</code> filter</p>
-<dd> One of the following: (default = &#8216;box&#8217;)</p>
+<dt><code>-s</code> scale</dt>
+<dd> Scale factor (default = 0.5)</dd>
+<dt><code>-g</code> gamma</dt>
+<dd> Gamma correction (default = 2.2)</dd>
+<dt><code>-f</code> filter</dt>
+<dd> One of the following: (default = &#8216;box&#8217;)</dd>
 <dt>
-<dd> * box * triangle * quadratic * bspline * mitchell * lanczos * kaiser</p>
-<dt><code>-w</code> mode</p>
-<dd> One of the following: (default = &#8216;mirror&#8217;)</p>
+</dt><dd> * box * triangle * quadratic * bspline * mitchell * lanczos * kaiser</dd>
+<dt><code>-w</code> mode</dt>
+<dd> One of the following: (default = &#8216;mirror&#8217;)</dd>
 <dt>
-<dd> * mirror * repeat * clamp</dl>
+</dt><dd> * mirror * repeat * clamp</dd></dl>
 <p> usage: nvzoom [options] input [output]</p>
 <dl>
-<dt><code>-s</code> scale</p>
-<dd> Scale factor (default = 0.5)</p>
-<dt><code>-g</code> gamma</p>
-<dd> Gamma correction (default = 2.2)</p>
-<dt><code>-f</code> filter</p>
-<dd> One of the following: (default = &#8216;box&#8217;)</p>
+<dt><code>-s</code> scale</dt>
+<dd> Scale factor (default = 0.5)</dd>
+<dt><code>-g</code> gamma</dt>
+<dd> Gamma correction (default = 2.2)</dd>
+<dt><code>-f</code> filter</dt>
+<dd> One of the following: (default = &#8216;box&#8217;)</dd>
 <dt>
-<dd> * box * triangle * quadratic * bspline * mitchell * lanczos * kaiser</p>
-<dt><code>-w</code> mode</p>
-<dd> One of the following: (default = &#8216;mirror&#8217;)</p>
+</dt><dd> * box * triangle * quadratic * bspline * mitchell * lanczos * kaiser</dd>
+<dt><code>-w</code> mode</dt>
+<dd> One of the following: (default = &#8216;mirror&#8217;)</dd>
 <dt>
-<dd> * mirror * repeat * clamp </p>
+</dt><dd> * mirror * repeat * clamp </dd>
 </dl>
 <h2>Index</h2>

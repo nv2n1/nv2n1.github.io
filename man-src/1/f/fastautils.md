@@ -39,7 +39,7 @@ description: "fastautils – FASTA format file manipulation utilities"
 <p> <code>fastalength sequence.fasta</code></p>
 <dl>
 <dt>
-<dd> blah blah</dl>
+</dt><dd> blah blah</dd></dl>
 <h2>VERSION</h2>
 <p> This documentation accompanies version 2.2.0 of the exonerate package.</p>
 <h2>AUTHOR</h2>

@@ -21,107 +21,103 @@ description: "mcs – Mono C# Compiler"
 <p> The Mono C# compiler by default only references three assemblies: mscorlib.dll, System.dll and System.Xml.dll. If you want to reference extra libraries you must manually specify them using the -pkg: command line option or the -r: command line option. Alternatively if you want to get all of the System libraries, you can use the -pkg:dotnet command line option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;about</i></p>
-<dd> Displays information about the Mono C# compiler</p>
-<dt><i>&#8211;addmodule:MODULE1[,MODULE2]</i></p>
-<dd> Includes the specified modules in the resulting assembly. Modules are created by calling the compiler with the -target:module option</p>
-<dt><i>-checked, -checked+</i></p>
-<dd> Sets the default compilation mode to `checked&#8217;. This makes all the math operations checked (the default is unchecked).</p>
-<dt><i>-checked-</i></p>
-<dd> Sets the default compilation mode to `unchecked&#8217;. This makes all the math operations unchecked (this is the default).</p>
-<dt><i>-clscheck-, -clscheck+</i></p>
-<dd> Disables or enables the Common Language Specification (CLS) checks (it is enabled by default). </p>
+<dt><i>&#8211;about</i></dt>
+<dd> Displays information about the Mono C# compiler</dd>
+<dt><i>&#8211;addmodule:MODULE1[,MODULE2]</i></dt>
+<dd> Includes the specified modules in the resulting assembly. Modules are created by calling the compiler with the -target:module option</dd>
+<dt><i>-checked, -checked+</i></dt>
+<dd> Sets the default compilation mode to `checked&#8217;. This makes all the math operations checked (the default is unchecked).</dd>
+<dt><i>-checked-</i></dt>
+<dd> Sets the default compilation mode to `unchecked&#8217;. This makes all the math operations unchecked (this is the default).</dd>
+<dt><i>-clscheck-, -clscheck+</i></dt>
+<dd> Disables or enables the Common Language Specification (CLS) checks (it is enabled by default). </dd>
 <p> The Common Language Specification (CLS) defines an interoperable subset of types as well as conventions that compilers (CLS producers) and developers must follow to expose code to other programming languages (CLS consumers).</p>
-<dt><i>-codepage:ID</i></p>
-<dd> Specifies the code page used to process the input files from the point it is specified on. By default files will be processed in the environment-dependent native code page. The compiler will also automatically detect Unicode files that have an embedded byte mark at the beginning. </p>
+<dt><i>-codepage:ID</i></dt>
+<dd> Specifies the code page used to process the input files from the point it is specified on. By default files will be processed in the environment-dependent native code page. The compiler will also automatically detect Unicode files that have an embedded byte mark at the beginning. </dd>
 <p> Other popular encodings are 28591 (Latin1), 1252 (iso-8859-1) and 65001 (UTF-8). </p>
 <p> MCS supports a couple of shorthands: &quot;utf8&quot; can be used to specify utf-8 instead of using the cryptic 65001 and &quot;reset&quot; restores the automatic handling of code pages. These shorthands are not available on the Microsoft compiler.</p>
-<dt><i>-define:SYMLIST, -d:SYMLIST</i></p>
-<dd> Defines the symbol listed by the semi-colon separated list SYMLIST SYMBOL. This can be tested in the source code by the pre-processor, or can be used by methods that have been tagged with the Conditional attribute.</p>
-<dt><i>-debug, -debug+</i></p>
-<dd> Generate debugging information. To obtain stack traces with debugging information, you need to invoke the mono runtime with the `&#8211;debug&#8217; flag. The debugging information is stored in a MDB file located in same output folder as produced assembly.</p>
-<dt><i>-debug-</i></p>
-<dd> Do not generate debugging information.</p>
-<dt><i>-delaysign+</i></p>
-<dd> Only embed the strongname public key into the assembly. The actual signing must be done in a later stage using the SN tool. This is useful to protect the private key during development. Note that delay signing can only be done using a strongname key file (not a key container). The option is equivalent to including [assembly: AssemblyDelaySign (true)] in your source code. Compiler option takes precedence over the attributes.</p>
-<dt><i>-delaysign-</i></p>
-<dd> Default. Strongname (sign) the assembly using the strong name key file (or container). The option is equivalent to including [assembly: AssemblyDelaySign (false)] in your source code. Compiler option takes precedence over the attributes.</p>
-<dt><i>-doc:FILE</i></p>
-<dd> Extracts the C#/XML documentation from the source code and stores in in the given FILE.</p>
-<dt><i>-errorreport</i></p>
-<dd> This flag is ignored by Mono&#8217;s C# compiler and is present only to allow MCS to be used as a CSC replacement for msbuild/xbuild.</p>
-<dt><i>&#8211;fatal </i></p>
-<dd> This is used for debugging the compiler. This makes the error emission generate an exception that can be caught by a debugger.</p>
-<dt><i>-filealign</i></p>
-<dd> This flag is ignored by Mono&#8217;s C# compiler and is present only to allow MCS to be used as a CSC replacement for msbuild/xbuild.</p>
-<dt><i>-fullpaths</i></p>
-<dd> Any source code error or warning issued by the compiler includes file name only by default. This option causes compiler to issue absolute file path instead.</p>
-<dt><i>-keyfile:KEYFILE</i></p>
-<dd> Strongname (sign) the output assembly using the key pair present in the specified strong name key file (snk). A full key pair is required by default (or when using delaysign-). A file containing only the public key can be used with delaysign+. The option is equivalent to including [assembly: AssemblyKeyFile (&quot;KEYFILE&quot;)] in your source code. Compiler option takes precedence over the attributes.</p>
-<dt><i>-keycontainer:CONTAINER</i></p>
-<dd> Strongname (sign) the output assembly using the key pair present in the specified container. Note that delaysign+ is ignored when using key containers. The option is equivalent to including [assembly: AssemblyKeyName (&quot;CONTAINER&quot;)] in your source code. Compiler option takes precedence over the attributes.</p>
-<dt><i>-langversion:TEXT</i></p>
-<dd> The option specifies the version of the language to use. The feature set is different in each C# version. This switch can be used to force the compiler to allow only a subset of the features. The possible values are:</p>
+<dt><i>-define:SYMLIST, -d:SYMLIST</i></dt>
+<dd> Defines the symbol listed by the semi-colon separated list SYMLIST SYMBOL. This can be tested in the source code by the pre-processor, or can be used by methods that have been tagged with the Conditional attribute.</dd>
+<dt><i>-debug, -debug+</i></dt>
+<dd> Generate debugging information. To obtain stack traces with debugging information, you need to invoke the mono runtime with the `&#8211;debug&#8217; flag. The debugging information is stored in a MDB file located in same output folder as produced assembly.</dd>
+<dt><i>-debug-</i></dt>
+<dd> Do not generate debugging information.</dd>
+<dt><i>-delaysign+</i></dt>
+<dd> Only embed the strongname public key into the assembly. The actual signing must be done in a later stage using the SN tool. This is useful to protect the private key during development. Note that delay signing can only be done using a strongname key file (not a key container). The option is equivalent to including [assembly: AssemblyDelaySign (true)] in your source code. Compiler option takes precedence over the attributes.</dd>
+<dt><i>-delaysign-</i></dt>
+<dd> Default. Strongname (sign) the assembly using the strong name key file (or container). The option is equivalent to including [assembly: AssemblyDelaySign (false)] in your source code. Compiler option takes precedence over the attributes.</dd>
+<dt><i>-doc:FILE</i></dt>
+<dd> Extracts the C#/XML documentation from the source code and stores in in the given FILE.</dd>
+<dt><i>-errorreport</i></dt>
+<dd> This flag is ignored by Mono&#8217;s C# compiler and is present only to allow MCS to be used as a CSC replacement for msbuild/xbuild.</dd>
+<dt><i>&#8211;fatal </i></dt>
+<dd> This is used for debugging the compiler. This makes the error emission generate an exception that can be caught by a debugger.</dd>
+<dt><i>-filealign</i></dt>
+<dd> This flag is ignored by Mono&#8217;s C# compiler and is present only to allow MCS to be used as a CSC replacement for msbuild/xbuild.</dd>
+<dt><i>-fullpaths</i></dt>
+<dd> Any source code error or warning issued by the compiler includes file name only by default. This option causes compiler to issue absolute file path instead.</dd>
+<dt><i>-keyfile:KEYFILE</i></dt>
+<dd> Strongname (sign) the output assembly using the key pair present in the specified strong name key file (snk). A full key pair is required by default (or when using delaysign-). A file containing only the public key can be used with delaysign+. The option is equivalent to including [assembly: AssemblyKeyFile (&quot;KEYFILE&quot;)] in your source code. Compiler option takes precedence over the attributes.</dd>
+<dt><i>-keycontainer:CONTAINER</i></dt>
+<dd> Strongname (sign) the output assembly using the key pair present in the specified container. Note that delaysign+ is ignored when using key containers. The option is equivalent to including [assembly: AssemblyKeyName (&quot;CONTAINER&quot;)] in your source code. Compiler option takes precedence over the attributes.</dd>
+<dt><i>-langversion:TEXT</i></dt>
+<dd> The option specifies the version of the language to use. The feature set is different in each C# version. This switch can be used to force the compiler to allow only a subset of the features. The possible values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>Default</i></p>
-<dd> Instruct compiler to use the latest version. Equivalent is to omit the switch (this currently defaults to the C# 4.0 language specification).</p>
-<dt><i>ISO-1</i></p>
-<dd> Restrict compiler to use only first ISO standardized features. The usage of features such as generics, static classes, anonymous methods will lead to error.</p>
-<dt><i>ISO-2</i></p>
-<dd> Restrict compiler to use only the second ISO standardized features. This allows the use of generics, static classes, iterators and anonymous methods for example.</p>
-<dt><i>3</i></p>
-<dd> Restrict the compiler to use only the features available in C# 3.0 (a superset of ISO-1 and ISO-2).</p>
-<dt><i>4</i></p>
-<dd> Restrict the compiler to use only the features available in C# 4.0 specification.</p>
-<dt><i>experimental</i></p>
-<dd> Enables unstable features from upcoming versions of the language.</dl>
+<dt><i>Default</i></dt>
+<dd> Instruct compiler to use the latest version. Equivalent is to omit the switch (this currently defaults to the C# 4.0 language specification).</dd>
+<dt><i>ISO-1</i></dt>
+<dd> Restrict compiler to use only first ISO standardized features. The usage of features such as generics, static classes, anonymous methods will lead to error.</dd>
+<dt><i>ISO-2</i></dt>
+<dd> Restrict compiler to use only the second ISO standardized features. This allows the use of generics, static classes, iterators and anonymous methods for example.</dd>
+<dt><i>3</i></dt>
+<dd> Restrict the compiler to use only the features available in C# 3.0 (a superset of ISO-1 and ISO-2).</dd>
+<dt><i>4</i></dt>
+<dd> Restrict the compiler to use only the features available in C# 4.0 specification.</dd>
+<dt><i>experimental</i></dt>
+<dd> Enables unstable features from upcoming versions of the language.</dd></dl>
 <p> Notice that this flag only restricts the language features available to the programmer. A version of produced assemblies can be controlled using <i>SDK</i> option.</dl>
-<dt><i>-lib:PATHLIST</i></p>
-<dd> Each path specified in the comma-separated list will direct the compiler to look for libraries in that specified path.</p>
-<dt><i>-L PATH</i></p>
-<dd> Directs the compiler to look for libraries in the specified path. Multiple paths can be provided by using the option multiple times.</p>
-<dt><i>-main:CLASS</i></p>
-<dd> Tells the compiler which CLASS contains the entry point. Useful when you are compiling several classes with a Main method.</p>
-<dt><i>-nostdlib, -nostdlib+</i></p>
-<dd> Use this flag if you want to compile the core library. This makes the compiler load its internal types from the assembly being compiled.</p>
-<dt><i>-noconfig, -noconfig+</i></p>
-<dd> Disables the default compiler configuration to be loaded. The compiler by default has references to the system assemblies.</p>
-<dt><i>-nowarn:WARNLIST</i></p>
-<dd> Makes the compiler ignore warnings specified in the comma-separated list WARNLIST&gt;</p>
-<dt><i>-optimize, -optimize+, -optimize-</i></p>
-<dd> Controls compiler code generation optimizations on the code. Using -optimize or -optimize+ will turn on optimizations, -optimize- will turn it off. The default in mcs is to optimize-. The option can be mixed with -debug but for the best debugging experience it is recommended leave the options off.</p>
-<dt><i>-out:FNAME, -o FNAME</i></p>
-<dd> Names the output file to be generated.</p>
-<dt><i>&#8211;parse</i></p>
-<dd> Used for benchmarking. The compiler will only parse its input files.</p>
-<dt><i>-pkg:package1[,packageN]</i></p>
-<dd> Reference assemblies for the given packages. </p>
+<dt><i>-lib:PATHLIST</i></dt>
+<dd> Each path specified in the comma-separated list will direct the compiler to look for libraries in that specified path.</dd>
+<dt><i>-L PATH</i></dt>
+<dd> Directs the compiler to look for libraries in the specified path. Multiple paths can be provided by using the option multiple times.</dd>
+<dt><i>-main:CLASS</i></dt>
+<dd> Tells the compiler which CLASS contains the entry point. Useful when you are compiling several classes with a Main method.</dd>
+<dt><i>-nostdlib, -nostdlib+</i></dt>
+<dd> Use this flag if you want to compile the core library. This makes the compiler load its internal types from the assembly being compiled.</dd>
+<dt><i>-noconfig, -noconfig+</i></dt>
+<dd> Disables the default compiler configuration to be loaded. The compiler by default has references to the system assemblies.</dd>
+<dt><i>-nowarn:WARNLIST</i></dt>
+<dd> Makes the compiler ignore warnings specified in the comma-separated list WARNLIST&gt;</dd>
+<dt><i>-optimize, -optimize+, -optimize-</i></dt>
+<dd> Controls compiler code generation optimizations on the code. Using -optimize or -optimize+ will turn on optimizations, -optimize- will turn it off. The default in mcs is to optimize-. The option can be mixed with -debug but for the best debugging experience it is recommended leave the options off.</dd>
+<dt><i>-out:FNAME, -o FNAME</i></dt>
+<dd> Names the output file to be generated.</dd>
+<dt><i>&#8211;parse</i></dt>
+<dd> Used for benchmarking. The compiler will only parse its input files.</dd>
+<dt><i>-pkg:package1[,packageN]</i></dt>
+<dd> Reference assemblies for the given packages. </dd>
 <p> The compiler will invoke pkg-config &#8211;libs on the set of packages specified on the command line to obtain libraries and directories to compile the code. </p>
 <p> This is typically used with third party components, like this: </p>
 <pre>
                 $ mcs -pkg:gtk-sharp demo.cs
 </pre>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>-pkg:dotnet</i></p>
-<dd> This will instruct the compiler to reference the System.* libraries available on a typical dotnet framework installation, notice that this does not include all of the Mono libraries, only the System.* ones. This is a convenient shortcut for those porting code.</dl>
+<dt><i>-pkg:dotnet</i></dt>
+<dd> This will instruct the compiler to reference the System.* libraries available on a typical dotnet framework installation, notice that this does not include all of the Mono libraries, only the System.* ones. This is a convenient shortcut for those porting code.</dd></dl>
 </dl>
-<dt><i>-platform:ARCH</i></p>
-<dd> Used to specify the target platform. The possible values are: anycpu, anycpu32bitpreferred, arm, x86, x64 or itanium. The default option is anycpu.</p>
-<dt><i>-resource:RESOURCE[,ID]</i></p>
-<dd> Embeds to the given resource file. The optional ID can be used to give a different name to the resource. If not specified, the resource name will be the file name.</p>
-<dt><i>-linkresource:RESOURCE[,ID]</i></p>
-<dd> Links to the specified RESOURCE. The optional ID can be used to give a name to the linked resource.</p>
-<dt><i>-r:ASSEMBLY1[,ASSEMBLY2], -reference ASSEMBLY1[,ASSEMBLY2]</i></p>
-<dd> Reference the named assemblies. Use this to use classes from the named assembly in your program. The assembly will be loaded from either the system directory where all the assemblies live, or from the path explicitly given with the -L option. </p>
+<dt><i>-platform:ARCH</i></dt>
+<dd> Used to specify the target platform. The possible values are: anycpu, anycpu32bitpreferred, arm, x86, x64 or itanium. The default option is anycpu.</dd>
+<dt><i>-resource:RESOURCE[,ID]</i></dt>
+<dd> Embeds to the given resource file. The optional ID can be used to give a different name to the resource. If not specified, the resource name will be the file name.</dd>
+<dt><i>-linkresource:RESOURCE[,ID]</i></dt>
+<dd> Links to the specified RESOURCE. The optional ID can be used to give a name to the linked resource.</dd>
+<dt><i>-r:ASSEMBLY1[,ASSEMBLY2], -reference ASSEMBLY1[,ASSEMBLY2]</i></dt>
+<dd> Reference the named assemblies. Use this to use classes from the named assembly in your program. The assembly will be loaded from either the system directory where all the assemblies live, or from the path explicitly given with the -L option. </dd>
 <p> You can also use a semicolon to separate the assemblies instead of a comma.</p>
-<dt><i>-reference:ALIAS=ASSEMBLY</i></p>
-<dd> Extern alias reference support for C#. </p>
+<dt><i>-reference:ALIAS=ASSEMBLY</i></dt>
+<dd> Extern alias reference support for C#. </dd>
 <p> If you have different assemblies that provide the same types, the extern alias support allows you to provide names that your software can use to tell those appart. The types from ASSEMBLY will be exposed as ALIAS, then on the C# source code, you need to do: </p>
 <pre>
         extern alias ALIAS;
@@ -142,53 +138,53 @@ class X
     OpenGL.Point p = new OpenGL.Point();
 }
 </code></pre>
-<dt><i>-recurse:PATTERN, &#8211;recurse PATTERN</i></p>
-<dd> Does recursive compilation using the specified pattern. In Unix the shell will perform globbing, so you might want to use it like this:</dl>
+<dt><i>-recurse:PATTERN, &#8211;recurse PATTERN</i></dt>
+<dd> Does recursive compilation using the specified pattern. In Unix the shell will perform globbing, so you might want to use it like this:</dd></dl>
 <pre>
                 $ mcs -recurse:'*.cs' 
 </pre>
 <dl>
-<dt><i>-sdk:VERSION</i></p>
-<dd> Used to specify the version of Base Class Library assemblies used for compilation. Following predefined values are valid: 2, 4 (default) as well as any custom value. The predefined version number means which custom value is specified mcs will try to find Base Class Libraries in the mono installed location PREFIX/lib/mono/&lt;value&gt;.</p>
-<dt><i>&#8211;shell</i></p>
-<dd> Starts up the compiler in interactive mode, providing a C# shell for statements and expressions. A shortcut is to use the <i>csharp</i> command directly.</p>
-<dt><i>&#8211;stacktrace</i></p>
-<dd> Generates a stack trace at the time the error is reported, useful for debugging the compiler.</p>
-<dt><i>-target:KIND, -t:KIND</i></p>
-<dd> Used to specify the desired target. The possible values are: exe (plain executable), winexe (Windows.Forms executable), library (component libraries) and module (partial library).</p>
-<dt><i>&#8211;timestamp</i></p>
-<dd> Another debugging flag. Used to display the times at various points in the compilation process.</p>
-<dt><i>-unsafe, -unsafe+</i></p>
-<dd> Enables compilation of unsafe code.</p>
-<dt><i>-v </i></p>
-<dd> Debugging. Turns on verbose yacc parsing.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Shows the compiler version.</p>
-<dt><i>-warnaserror, -warnaserror+</i></p>
-<dd> All compilers warnings will be reported as errors.</p>
-<dt><i>-warnaserror:W1,[Wn], -warnaserror+:W1,[Wn]</i></p>
-<dd> Treats one or more compiler warnings as errors.</p>
-<dt><i>-warnaserror-:W1,[Wn]</i></p>
-<dd> Sets one or more compiler warnings to be always threated as warnings. Becomes useful when used together with -warnaserror.</p>
-<dt><i>-warn:LEVEL</i></p>
-<dd> Sets the warning level. 0 is the lowest warning level, and 4 is the highest. The default is 4.</p>
-<dt><i>-win32res:FILE</i></p>
-<dd> Specifies a Win32 resource file (.res) to be bundled into the resulting assembly.</p>
-<dt><i>-win32icon:FILE</i></p>
-<dd> Attaches the icon specified in FILE on the output into the resulting assembly.</p>
-<dt><i>&#8212;</i></p>
-<dd> Use this to stop option parsing, and allow option-looking parameters to be passed on the command line.</dl>
+<dt><i>-sdk:VERSION</i></dt>
+<dd> Used to specify the version of Base Class Library assemblies used for compilation. Following predefined values are valid: 2, 4 (default) as well as any custom value. The predefined version number means which custom value is specified mcs will try to find Base Class Libraries in the mono installed location PREFIX/lib/mono/&lt;value&gt;.</dd>
+<dt><i>&#8211;shell</i></dt>
+<dd> Starts up the compiler in interactive mode, providing a C# shell for statements and expressions. A shortcut is to use the <i>csharp</i> command directly.</dd>
+<dt><i>&#8211;stacktrace</i></dt>
+<dd> Generates a stack trace at the time the error is reported, useful for debugging the compiler.</dd>
+<dt><i>-target:KIND, -t:KIND</i></dt>
+<dd> Used to specify the desired target. The possible values are: exe (plain executable), winexe (Windows.Forms executable), library (component libraries) and module (partial library).</dd>
+<dt><i>&#8211;timestamp</i></dt>
+<dd> Another debugging flag. Used to display the times at various points in the compilation process.</dd>
+<dt><i>-unsafe, -unsafe+</i></dt>
+<dd> Enables compilation of unsafe code.</dd>
+<dt><i>-v </i></dt>
+<dd> Debugging. Turns on verbose yacc parsing.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Shows the compiler version.</dd>
+<dt><i>-warnaserror, -warnaserror+</i></dt>
+<dd> All compilers warnings will be reported as errors.</dd>
+<dt><i>-warnaserror:W1,[Wn], -warnaserror+:W1,[Wn]</i></dt>
+<dd> Treats one or more compiler warnings as errors.</dd>
+<dt><i>-warnaserror-:W1,[Wn]</i></dt>
+<dd> Sets one or more compiler warnings to be always threated as warnings. Becomes useful when used together with -warnaserror.</dd>
+<dt><i>-warn:LEVEL</i></dt>
+<dd> Sets the warning level. 0 is the lowest warning level, and 4 is the highest. The default is 4.</dd>
+<dt><i>-win32res:FILE</i></dt>
+<dd> Specifies a Win32 resource file (.res) to be bundled into the resulting assembly.</dd>
+<dt><i>-win32icon:FILE</i></dt>
+<dd> Attaches the icon specified in FILE on the output into the resulting assembly.</dd>
+<dt><i>&#8212;</i></dt>
+<dd> Use this to stop option parsing, and allow option-looking parameters to be passed on the command line.</dd></dl>
 <h2>PACKAGES AND LIBRARIES</h2>
 <p> When referencing an assembly, if the name of the assembly is a path, the compiler will try to load the assembly specified in the path. If it does not, then the compiler will try loading the assembly from the current directory, the compiler base directory and if the assembly is not found in any of those places in the directories specified as arguments to the -lib: command argument. </p>
 <p> The compiler uses the library path to locate libraries, and is able to reference libraries from a particular package if that directory is used. To simplify the use of packages, the C# compiler includes the -pkg: command line option that is used to load specific collections of libraries. </p>
 <p> Libraries visible to the compiler are stored relative to the installation prefix under PREFIX/lib/mono/ called the PACKAGEBASE and the defaults for mcs, gmcs and smcs are as follows:</p>
 <dl>
-<dt><i>mcs</i></p>
-<dd> References the PACKAGEBASE/1.0 directory</p>
-<dt><i>gmcs</i></p>
-<dd> References the PACKAGEBASE/2.0 directory</p>
-<dt><i>smcs</i></p>
-<dd> References the PACKAGEBASE/2.1 directory</dl>
+<dt><i>mcs</i></dt>
+<dd> References the PACKAGEBASE/1.0 directory</dd>
+<dt><i>gmcs</i></dt>
+<dd> References the PACKAGEBASE/2.0 directory</dd>
+<dt><i>smcs</i></dt>
+<dd> References the PACKAGEBASE/2.1 directory</dd></dl>
 <p> Those are the only runtime profiles that exist. Although other directories exist (like 3.0 and 3.5) those are not really runtime profiles, they are merely placeholders for extra libraries that build on the 2.0 foundation. </p>
 <p> Software providers will distribute software that is installed relative to the PACKAGEBASE directory. This is integrated into the <i>gacutil</i> tool that not only installs public assemblies into the Global Assembly Cache (GAC) but also installs them into the PACKAGEBASE/PKG directory (where PKG is the name passed to the -package flag to gacutil). </p>
 <p> As a developer, if you want to consume the Gtk# libraries, you would invoke the compiler like this: </p>
@@ -210,8 +206,8 @@ class X
 <p> When using the &quot;-debug&quot; flag, MCS will generate a file with the extension .mdb that contains the debugging information for the generated assembly. This file is consumed by the Mono debugger (mdb).</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><i>MCS_COLORS</i></p>
-<dd> If this variable is set, it contains a string in the form &quot;foreground,background&quot; that specifies which color to use to display errors on some terminals. </p>
+<dt><i>MCS_COLORS</i></dt>
+<dd> If this variable is set, it contains a string in the form &quot;foreground,background&quot; that specifies which color to use to display errors on some terminals. </dd>
 <p> The background is optional and defaults to your terminal current background. The possible colors for foreground are: <code>black, red, brightred, green, brightgreen, yellow, brightyellow,</code> blue, brightblue, magenta, brightmagenta, cyan, brightcyan, grey, white and brightwhite. </p>
 <p> The possible colors for background are: black, red, green, yellow, blue, magenta, cyan, grey and white. </p>
 <p> For example, you could set these variable from your shell: </p>
@@ -236,3 +232,4 @@ class X
 <p> The Mono C# compiler was developed by Novell, Inc (<a rel="nofollow" href="http://www.novell.com)">http://www.novell.com)</a> and Xamarin Inc (<a href="http://www.xamarin.com)">http://www.xamarin.com)</a> is based on the ECMA C# language standard available here: <a rel="nofollow" href="http://www.ecma.ch/ecma1/STAND/ecma-334.htm">http://www.ecma.ch/ecma1/STAND/ecma-334.htm</a> </p>
 <p> The home page for the Mono C# compiler is at <a rel="nofollow" href="http://www.mono-project.com/docs/about-mono/languages/csharp/">http://www.mono-project.com/docs/about-mono/languages/csharp/</a> </p>
 <h2>Index</h2>
+</p>

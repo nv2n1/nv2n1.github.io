@@ -15,15 +15,15 @@ snd_ac97_update_power - update the powerdown register
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the codec instance</dl>
+<dl><dd></dd><dd>the codec instance</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>the rate register, e.g. AC97_PCM_FRONT_DAC_RATE</dl>
+<dl><dd>the rate register, e.g. AC97_PCM_FRONT_DAC_RATE</dd></dl>
  
 
  <i>powerup</i>
-<dl><dd>non-zero when power up the part</dl>
+<dl><dd>non-zero when power up the part</dd></dl>
 
 <h2>Description</h2>
 

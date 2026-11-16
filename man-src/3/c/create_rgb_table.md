@@ -16,7 +16,6 @@ description: "create_rgb_table – Generates an RGB mapping table with lookup da
 <p> Fills the specified RGB mapping table with lookup data for the specified palette. If the callback function is not NULL, it will be called 256 times during the calculation, allowing you to display a progress indicator. Example: </p>
 <pre><code>
 RGB_MAP rgb_table;
-
 create_rgb_table(&amp;rgb_table, palette, NULL);
 rgb_map = &amp;rgb_table;
 </code></pre>

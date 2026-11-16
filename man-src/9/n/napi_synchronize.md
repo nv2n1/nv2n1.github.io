@@ -15,7 +15,7 @@ napi_synchronize - wait until NAPI is not running
 <h2>Arguments</h2>
 
 <i>n</i>
-<dl><dd><dd>NAPI context</dl>
+<dl><dd></dd><dd>NAPI context</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,10 +16,10 @@ description: "XmTextSetStringWcs — A Text function that sets a wide character 
 <h2>Description</h2>
 <p><code>XmTextSetStringWcs</code> sets the wide character string value of the Text widget. This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. This function also sets the insertion cursor position to the beginning of the string and calls the widget&#8217;s <code>XmNmotionVerifyCallback</code> callbacks.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</p>
-<dt><i>value</i></p>
-<dd>Specifies the wide character string value</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the wide character string value</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextsetstring/">XmTextSetString</a></code>(3).</p>

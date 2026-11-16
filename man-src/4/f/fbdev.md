@@ -25,12 +25,12 @@ description: "fbdev – video driver for framebuffer device"
 <p> For PCI boards you might have to add a BusID line to the Device section. See above for a sample line. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;fbdev&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>The framebuffer device to use. Default: /dev/fb0.</p>
-<dt><code>Option &#34;ShadowFB&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable use of the shadow framebuffer layer. Mandatory for 24bpp framebuffers on newer servers. Default: on.</p>
-<dt><code>Option &#34;Rotate&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Enable rotation of the display. The supported values are &quot;CW&quot; (clockwise, 90 degrees), &quot;UD&quot; (upside down, 180 degrees) and &quot;CCW&quot; (counter clockwise, 270 degrees). Implies use of the shadow framebuffer layer. Disabled for 24bpp framebuffers. Default: off.</dl>
+<dt><code>Option &#34;fbdev&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>The framebuffer device to use. Default: /dev/fb0.</dd>
+<dt><code>Option &#34;ShadowFB&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable use of the shadow framebuffer layer. Mandatory for 24bpp framebuffers on newer servers. Default: on.</dd>
+<dt><code>Option &#34;Rotate&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Enable rotation of the display. The supported values are &quot;CW&quot; (clockwise, 90 degrees), &quot;UD&quot; (upside down, 180 degrees) and &quot;CCW&quot; (counter clockwise, 270 degrees). Implies use of the shadow framebuffer layer. Disabled for 24bpp framebuffers. Default: off.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/4-fbdevhw/">fbdevhw</a>(4)</p>
 <h2>Authors</h2>

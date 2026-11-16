@@ -10,31 +10,26 @@ description: "xcb_shm_create_pixmap –"
 <p>xcb_shm_create_pixmap &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/shm.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_shm_create_pixmap(xcb_connection_t *conn, xcb_pixmap_t pid, xcb_drawable_t drawable, uint16_t width, uint16_t height, uint8_t depth, xcb_shm_seg_t shmseg, uint32_t offset);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>pid</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>depth</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>shmseg</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>offset</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>pid</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>depth</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>shmseg</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>offset</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

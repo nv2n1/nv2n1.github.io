@@ -10,13 +10,9 @@ description: "std::stable_partition – std::stable_partition"
 <p>std::stable_partition &#8211; std::stable_partition</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt, class UnaryPredicate &gt;                                                      (1)
-
 BidirIt stable_partition( BidirIt first, BidirIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class BidirIt, class UnaryPredicate &gt;                               (2) (since C++17)
-
 BidirIt stable_partition( ExecutionPolicy&amp;&amp; policy, BidirIt first, BidirIt last, UnaryPredicate p );</code></pre>
 <p>1) Reorders the elements in the range [first, last) in such a way that all elements for which the predicate p returns true precede the elements for which predicate p returns false. Relative order of the elements is preserved.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true. </p>
@@ -49,12 +45,9 @@ UnaryPredicate must meet the requirements of Predicate.</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{0, 0, 3, 0, 2, 4, 5, 0, 7};
     std::stable_partition(v.begin(), v.end(), [](int n) { return n &gt; 0; });

@@ -15,21 +15,9 @@ description: "sc::AccumEffectiveH –"
 <p> virtual void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;, <code>SCMatrixBlockIter</code> &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void init ()=0
-
-
-
 int index (int hindex, int shelli, int shellj)
-
-
-
 int shell (double)
-
-
-
 double &amp; coef (int i, int j, int k)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>SCF</code> * <code>scf_</code> </p>
 <p> double <code>coef_</code> [18] </p>

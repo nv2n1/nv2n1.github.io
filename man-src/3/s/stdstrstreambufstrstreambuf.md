@@ -25,22 +25,18 @@ If str() was called on a dynamic strstream and freeze(false) was not called afte
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 void *my_alloc(size_t n)
-
 {
     std::cout &lt;&lt; &quot;my_alloc(&quot; &lt;&lt; n &lt;&lt; &quot;) called\n&quot;;
     return new char[n];
 }
 void my_free(void *p)
-
 {
     std::cout &lt;&lt; &quot;my_free() called\n&quot;;
     delete[](char *) p;
 }
 int main()
-
 {
     {
         std::strstreambuf buf(my_alloc, my_free);
@@ -54,7 +50,6 @@ int main()
         std::ostream s(&amp;buf);
         s &lt;&lt; 1.23 &lt;&lt; std::ends;
         std::cout &lt;&lt; buf.str() &lt;&lt; '\n';
-
         //        buf.freeze(false);
     } // destructor called here, memory leak!
 }

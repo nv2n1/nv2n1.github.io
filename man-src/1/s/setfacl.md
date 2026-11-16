@@ -24,46 +24,46 @@ description: "setfacl – set file access control lists"
 <p> The file owner and processes capable of CAP_FOWNER are granted the right to modify ACLs of a file. This is analogous to the permissions required for accessing the file mode. (On current Linux systems, root is the only user with the CAP_FOWNER capability.) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-b, &#8211;remove-all</i></p>
-<dd> Remove all extended ACL entries. The base ACL entries of the owner, group and others are retained.</p>
-<dt><i>-k, &#8211;remove-default</i></p>
-<dd> Remove the Default ACL. If no Default ACL exists, no warnings are issued.</p>
-<dt><i>-n, &#8211;no-mask</i></p>
-<dd> Do not recalculate the effective rights mask. The default behavior of setfacl is to recalculate the ACL mask entry, unless a mask entry was explicitly given. The mask entry is set to the union of all permissions of the owning group, and all named user and group entries. (These are exactly the entries affected by the mask entry).</p>
-<dt><i>&#8211;mask</i></p>
-<dd> Do recalculate the effective rights mask, even if an ACL mask entry was explicitly given. (See the <i>-n </i>option.)</p>
-<dt><i>-d, &#8211;default</i></p>
-<dd> All operations apply to the Default ACL. Regular ACL entries in the input set are promoted to Default ACL entries. Default ACL entries in the input set are discarded. (A warning is issued if that happens).</p>
-<dt><i>&#8211;restore={file|-}</i></p>
-<dd> Restore a permission backup created by `getfacl -R&#8217; or similar. All permissions of a complete directory subtree are restored using this mechanism. If the input contains owner comments or group comments, setfacl attempts to restore the owner and owning group. If the input contains flags comments (which define the setuid, setgid, and sticky bits), setfacl sets those three bits accordingly; otherwise, it clears them. This option cannot be mixed with other options except `&#8211;test&#8217;. If the file specified is &#8216;<code>&#8211;</code>&#8216;, then it will be read from standard input.</p>
-<dt><i>&#8211;test</i></p>
-<dd> Test mode. Instead of changing the ACLs of any files, the resulting ACLs are listed.</p>
-<dt><i>-R, &#8211;recursive</i></p>
-<dd> Apply operations to all files and directories recursively. This option cannot be mixed with `&#8211;restore&#8217;.</p>
-<dt><i>-L, &#8211;logical</i></p>
-<dd> Logical walk, follow symbolic links to directories. The default behavior is to follow symbolic link arguments, and skip symbolic links encountered in subdirectories. Only effective in combination with -R. This option cannot be mixed with `&#8211;restore&#8217;.</p>
-<dt><i>-P, &#8211;physical</i></p>
-<dd> Physical walk, do not follow symbolic links to directories. This also skips symbolic link arguments. Only effective in combination with -R. This option cannot be mixed with `&#8211;restore&#8217;.</p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Print the version of setfacl and exit.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Print help explaining the command line options.</p>
-<dt><i>&#8212;</i></p>
-<dd> End of command line options. All remaining parameters are interpreted as file names, even if they start with a dash.</p>
-<dt><i>&#8211;</i></p>
-<dd> If the file name parameter is a single dash, setfacl reads a list of files from standard input. </p>
+<dt><i>-b, &#8211;remove-all</i></dt>
+<dd> Remove all extended ACL entries. The base ACL entries of the owner, group and others are retained.</dd>
+<dt><i>-k, &#8211;remove-default</i></dt>
+<dd> Remove the Default ACL. If no Default ACL exists, no warnings are issued.</dd>
+<dt><i>-n, &#8211;no-mask</i></dt>
+<dd> Do not recalculate the effective rights mask. The default behavior of setfacl is to recalculate the ACL mask entry, unless a mask entry was explicitly given. The mask entry is set to the union of all permissions of the owning group, and all named user and group entries. (These are exactly the entries affected by the mask entry).</dd>
+<dt><i>&#8211;mask</i></dt>
+<dd> Do recalculate the effective rights mask, even if an ACL mask entry was explicitly given. (See the <i>-n </i>option.)</dd>
+<dt><i>-d, &#8211;default</i></dt>
+<dd> All operations apply to the Default ACL. Regular ACL entries in the input set are promoted to Default ACL entries. Default ACL entries in the input set are discarded. (A warning is issued if that happens).</dd>
+<dt><i>&#8211;restore={file|-}</i></dt>
+<dd> Restore a permission backup created by `getfacl -R&#8217; or similar. All permissions of a complete directory subtree are restored using this mechanism. If the input contains owner comments or group comments, setfacl attempts to restore the owner and owning group. If the input contains flags comments (which define the setuid, setgid, and sticky bits), setfacl sets those three bits accordingly; otherwise, it clears them. This option cannot be mixed with other options except `&#8211;test&#8217;. If the file specified is &#8216;<code>&#8211;</code>&#8216;, then it will be read from standard input.</dd>
+<dt><i>&#8211;test</i></dt>
+<dd> Test mode. Instead of changing the ACLs of any files, the resulting ACLs are listed.</dd>
+<dt><i>-R, &#8211;recursive</i></dt>
+<dd> Apply operations to all files and directories recursively. This option cannot be mixed with `&#8211;restore&#8217;.</dd>
+<dt><i>-L, &#8211;logical</i></dt>
+<dd> Logical walk, follow symbolic links to directories. The default behavior is to follow symbolic link arguments, and skip symbolic links encountered in subdirectories. Only effective in combination with -R. This option cannot be mixed with `&#8211;restore&#8217;.</dd>
+<dt><i>-P, &#8211;physical</i></dt>
+<dd> Physical walk, do not follow symbolic links to directories. This also skips symbolic link arguments. Only effective in combination with -R. This option cannot be mixed with `&#8211;restore&#8217;.</dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Print the version of setfacl and exit.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Print help explaining the command line options.</dd>
+<dt><i>&#8212;</i></dt>
+<dd> End of command line options. All remaining parameters are interpreted as file names, even if they start with a dash.</dd>
+<dt><i>&#8211;</i></dt>
+<dd> If the file name parameter is a single dash, setfacl reads a list of files from standard input. </dd>
 </dl>
 <h3>ACL ENTRIES</h3>
 <p> The setfacl utility recognizes the following ACL entry formats (blanks inserted for clarity): </p>
 <dl>
-<dt>[d[efault]:] [u[ser]:]<i>uid </i>[:<i>perms</i>]</p>
-<dd> Permissions of a named user. Permissions of the file owner if <i>uid</i> is empty.</p>
-<dt>[d[efault]:] g[roup]:<i>gid </i>[:<i>perms</i>]</p>
-<dd> Permissions of a named group. Permissions of the owning group if <i>gid</i> is empty.</p>
-<dt>[d[efault]:] m[ask][:] [:<i>perms</i>]</p>
-<dd> Effective rights mask</p>
-<dt>[d[efault]:] o[ther][:] [:<i>perms</i>]</p>
-<dd> Permissions of others.</dl>
+<dt>[d[efault]:] [u[ser]:]<i>uid </i>[:<i>perms</i>]</dt>
+<dd> Permissions of a named user. Permissions of the file owner if <i>uid</i> is empty.</dd>
+<dt>[d[efault]:] g[roup]:<i>gid </i>[:<i>perms</i>]</dt>
+<dd> Permissions of a named group. Permissions of the owning group if <i>gid</i> is empty.</dd>
+<dt>[d[efault]:] m[ask][:] [:<i>perms</i>]</dt>
+<dd> Effective rights mask</dd>
+<dt>[d[efault]:] o[ther][:] [:<i>perms</i>]</dt>
+<dd> Permissions of others.</dd></dl>
 <p> Whitespace between delimiter characters and non-delimiter characters is ignored. </p>
 <p> Proper ACL entries including permissions are used in modify and set operations. (options <i>-m</i>, <i>-M</i>, <i>&#8211;set</i> and <i>&#8211;set-file</i>). Entries without the <i>perms</i> field are used for <i>deletion</i> of entries (options <i>-x</i> and <i>-X</i>). </p>
 <p> For <i>uid</i> and <i>gid</i> you can specify either a name or a number. Character literals may be specified with a backslash followed by the 3-digit octal digits corresponding to the ASCII code for the character (e.g., <i>\101</i> for &#8216;A&#8217;). If the name contains a literal backslash followed by 3 digits, the backslash must be escaped (i.e., <i>\</i>). </p>
@@ -71,43 +71,43 @@ description: "setfacl – set file access control lists"
 <h3>AUTOMATICALLY CREATED ENTRIES</h3>
 <p> Initially, files and directories contain only the three base ACL entries for the owner, the group, and others. There are some rules that need to be satisfied in order for an ACL to be valid:</p>
 <dl>
-<dt>*</p>
-<dd> The three base entries cannot be removed. There must be exactly one entry of each of these base entry types.</p>
-<dt>*</p>
-<dd> Whenever an ACL contains named user entries or named group objects, it must also contain an effective rights mask.</p>
-<dt>*</p>
-<dd> Whenever an ACL contains any Default ACL entries, the three Default ACL base entries (default owner, default group, and default others) must also exist.</p>
-<dt>*</p>
-<dd> Whenever a Default ACL contains named user entries or named group objects, it must also contain a default effective rights mask.</dl>
+<dt>*</dt>
+<dd> The three base entries cannot be removed. There must be exactly one entry of each of these base entry types.</dd>
+<dt>*</dt>
+<dd> Whenever an ACL contains named user entries or named group objects, it must also contain an effective rights mask.</dd>
+<dt>*</dt>
+<dd> Whenever an ACL contains any Default ACL entries, the three Default ACL base entries (default owner, default group, and default others) must also exist.</dd>
+<dt>*</dt>
+<dd> Whenever a Default ACL contains named user entries or named group objects, it must also contain a default effective rights mask.</dd></dl>
 <p> To help the user ensure these rules, setfacl creates entries from existing entries under the following conditions:</p>
 <dl>
-<dt>*</p>
-<dd> If an ACL contains named user or named group entries, and no mask entry exists, a mask entry containing the same permissions as the group entry is created. Unless the <i>-n</i> option is given, the permissions of the mask entry are further adjusted to include the union of all permissions affected by the mask entry. (See the <i>-n</i> option description).</p>
-<dt>*</p>
-<dd> If a Default ACL entry is created, and the Default ACL contains no owner, owning group, or others entry, a copy of the ACL owner, owning group, or others entry is added to the Default ACL.</p>
-<dt>*</p>
-<dd> If a Default ACL contains named user entries or named group entries, and no mask entry exists, a mask entry containing the same permissions as the default Default ACL&#8217;s group entry is added. Unless the <i>-n</i> option is given, the permissions of the mask entry are further adjusted to include the union of all permissions affected by the mask entry. (See the <i>-n</i> option description).</dl>
+<dt>*</dt>
+<dd> If an ACL contains named user or named group entries, and no mask entry exists, a mask entry containing the same permissions as the group entry is created. Unless the <i>-n</i> option is given, the permissions of the mask entry are further adjusted to include the union of all permissions affected by the mask entry. (See the <i>-n</i> option description).</dd>
+<dt>*</dt>
+<dd> If a Default ACL entry is created, and the Default ACL contains no owner, owning group, or others entry, a copy of the ACL owner, owning group, or others entry is added to the Default ACL.</dd>
+<dt>*</dt>
+<dd> If a Default ACL contains named user entries or named group entries, and no mask entry exists, a mask entry containing the same permissions as the default Default ACL&#8217;s group entry is added. Unless the <i>-n</i> option is given, the permissions of the mask entry are further adjusted to include the union of all permissions affected by the mask entry. (See the <i>-n</i> option description).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Granting an additional user read access</p>
 <dl>
 <dt>
-<dd> setfacl -m u:lisa:r file</dl>
+</dt><dd> setfacl -m u:lisa:r file</dd></dl>
 <p> Revoking write access from all groups and all named users (using the effective rights mask)</p>
 <dl>
 <dt>
-<dd> setfacl -m m::rx file</dl>
+</dt><dd> setfacl -m m::rx file</dd></dl>
 <p> Removing a named group entry from a file&#8217;s ACL</p>
 <dl>
 <dt>
-<dd> setfacl -x g:staff file</dl>
+</dt><dd> setfacl -x g:staff file</dd></dl>
 <p> Copying the ACL of one file to another</p>
 <dl>
 <dt>
-<dd> getfacl file1 | setfacl &#8211;set-file=- file2</dl>
+</dt><dd> getfacl file1 | setfacl &#8211;set-file=- file2</dd></dl>
 <p> Copying the access ACL into the Default ACL</p>
 <dl>
 <dt>
-<dd> getfacl &#8211;access dir | setfacl -d -M- dir</dl>
+</dt><dd> getfacl &#8211;access dir | setfacl -d -M- dir</dd></dl>
 <h2>CONFORMANCE TO POSIX 1003.1e DRAFT STANDARD 17</h2>
 <p> If the environment variable POSIXLY_CORRECT is defined, the default behavior of setfacl changes as follows: All non-standard options are disabled. The &#8220;default:&#8221; prefix is disabled. The <i>-x</i> and <i>-X</i> options also accept permission fields (and ignore them).</p>
 <h2>AUTHOR</h2>

@@ -17,41 +17,41 @@ description: "nviz – nviz – Visualization and animation tool for GRASS data"
  <code>nviz</code> [-<code>q</code>] [<code>elevation</code>=<i>string</i>] [<code>color</code>=<i>string</i>] [<code>vector</code>=<i>string</i>] [<code>points</code>=<i>string</i>] [<code>volume</code>=<i>string</i>] [<code>path</code>=<i>string</i>] [<code>script</code>=<i>string</i>] [<code>state</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
- Quickstart &#8211; Do not load any data</p>
-<dt><code>&#8211;verbose</code></p>
+ Quickstart &#8211; Do not load any data</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd>
- Verbose module output</p>
-<dt><code>&#8211;quiet</code></p>
+ Verbose module output</dd>
+<dt><code>&#8211;quiet</code></dt>
 <dd>
- Quiet module output</dl>
+ Quiet module output</dd></dl>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>elevation</code>=<i>string</i></p>
+<dt><code>elevation</code>=<i>string</i></dt>
 <dd>
- Raster file(s) for elevation</p>
-<dt><code>color</code>=<i>string</i></p>
+ Raster file(s) for elevation</dd>
+<dt><code>color</code>=<i>string</i></dt>
 <dd>
- Raster file(s) for color</p>
-<dt><code>vector</code>=<i>string</i></p>
+ Raster file(s) for color</dd>
+<dt><code>vector</code>=<i>string</i></dt>
 <dd>
- Vector lines/areas overlay file(s)</p>
-<dt><code>points</code>=<i>string</i></p>
+ Vector lines/areas overlay file(s)</dd>
+<dt><code>points</code>=<i>string</i></dt>
 <dd>
- Vector points overlay file(s)</p>
-<dt><code>volume</code>=<i>string</i></p>
+ Vector points overlay file(s)</dd>
+<dt><code>volume</code>=<i>string</i></dt>
 <dd>
- Name of existing 3d raster map</p>
-<dt><code>path</code>=<i>string</i></p>
+ Name of existing 3d raster map</dd>
+<dt><code>path</code>=<i>string</i></dt>
 <dd>
- Set alternative panel path</p>
-<dt><code>script</code>=<i>string</i></p>
+ Set alternative panel path</dd>
+<dt><code>script</code>=<i>string</i></dt>
 <dd>
- Execute script file at startup</p>
-<dt><code>state</code>=<i>string</i></p>
+ Execute script file at startup</dd>
+<dt><code>state</code>=<i>string</i></dt>
 <dd>
- Load previosly saved state file</dl>
+ Load previosly saved state file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please refer to the detailed manual inside NVIZ (HELP menu) or see the NVIZ Tutorial. </p>
 <p> Full index </p>

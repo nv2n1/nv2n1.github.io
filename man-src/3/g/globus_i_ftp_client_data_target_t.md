@@ -30,5 +30,5 @@ description: "globus_i_ftp_client_data_target_t –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

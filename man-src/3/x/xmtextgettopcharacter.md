@@ -16,8 +16,8 @@ description: "XmTextGetTopCharacter — A Text function that accesses the positi
 <p><code>XmTextGetTopCharacter</code> accesses the position of the text at the top of the Text widget. If there is no text in the Text widget (in other words, <code>XmNvalue</code> contains an empty string), then <code>XmTextGetTopCharacter</code> returns 0. </p>
 <p> Suppose that the <code>XmNtopCharacter</code> resource has been set to a value greater than the number of characters in the text widget. In this case, <code>XmTextGetTopCharacter</code> returns an <code>XmTextPosition</code> value identifying the position of the first character in the last line of text in a multiline case; otherwise, it identifies the position of the last character in the line.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns an <code>XmTextPosition</code> value that indicates the state of the <code>XmNtopCharacter</code> resource. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</p>

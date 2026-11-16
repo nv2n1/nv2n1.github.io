@@ -11,7 +11,6 @@ description: "pthread_sigqueue – queue a signal and data to a thread"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
 #include &lt;signal.h&gt;
-
 int pthread_sigqueue(pthread_t thread, int sig,
                      const union sigval value);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_sigqueue</code>(): _GNU_SOURCE</p>
@@ -22,14 +21,14 @@ int pthread_sigqueue(pthread_t thread, int sig,
 <p>On success, <code>pthread_sigqueue</code>() returns 0; on error, it returns an error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd>The limit of signals which may be queued has been reached. (See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further information.)</p>
-<dt><code>EINVAL</code></p>
-<dd><i>sig</i> was invalid.</p>
-<dt><code>ENOSYS</code></p>
-<dd><code>pthread_sigqueue</code>() is not supported on this system.</p>
-<dt><code>ESRCH</code></p>
-<dd><i>thread</i> is not valid.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>The limit of signals which may be queued has been reached. (See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further information.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>sig</i> was invalid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd><code>pthread_sigqueue</code>() is not supported on this system.</dd>
+<dt><code>ESRCH</code></dt>
+<dd><i>thread</i> is not valid.</dd></dl>
 <h2>Versions</h2>
 <p>The <code>pthread_sigqueue</code>() function first appeared in glibc 2.11.</p>
 <h2>Attributes</h2>

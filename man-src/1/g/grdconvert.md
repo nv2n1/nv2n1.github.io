@@ -16,32 +16,32 @@ description: "grdconvert – Convert between different grid formats"
 <p> <code>grdconvert</code> reads a grid file in one format and writes it out using another format. As an option the user may select a subset of the data to be written and to specify scaling, translation, and NaN-value.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>ingrdfile</i></p>
-<dd> The grid file to be read. Append format =<i>id</i> code if not a standard COARDS-compliant netCDF grid file. If =<i>id</i> is set (see below), you may optionally append <i>scale</i> and <i>offset</i>. These options will scale the data and then offset them with the specified amounts after reading. If <i>scale</i> and <i>offset</i> are supplied you may also append a value that represents &#8216;Not-a-Number&#8217; (for floating-point grids this is unnecessary since the IEEE NaN is used; however integers need a value which means no data available). The <i>scale</i> and <i>offset</i> modifiers may be left empty to select default values (scale = 1, offset = 0).</p>
-<dt><i>outgrdfile</i></p>
-<dd> The grid file to be written. Append format =<i>id</i> code if not a standard COARDS-compliant netCDF grid file. If =<i>id</i> is set (see below), you may optionally append <i>scale</i> and <i>offset</i>. These options are particularly practical when storing the data as integers, first removing an offset and then scaling down the values. Since the scale and offset are applied in reverse order when reading, this does not affect the data values (except for round-offs). </p>
+<dt><i>ingrdfile</i></dt>
+<dd> The grid file to be read. Append format =<i>id</i> code if not a standard COARDS-compliant netCDF grid file. If =<i>id</i> is set (see below), you may optionally append <i>scale</i> and <i>offset</i>. These options will scale the data and then offset them with the specified amounts after reading. If <i>scale</i> and <i>offset</i> are supplied you may also append a value that represents &#8216;Not-a-Number&#8217; (for floating-point grids this is unnecessary since the IEEE NaN is used; however integers need a value which means no data available). The <i>scale</i> and <i>offset</i> modifiers may be left empty to select default values (scale = 1, offset = 0).</dd>
+<dt><i>outgrdfile</i></dt>
+<dd> The grid file to be written. Append format =<i>id</i> code if not a standard COARDS-compliant netCDF grid file. If =<i>id</i> is set (see below), you may optionally append <i>scale</i> and <i>offset</i>. These options are particularly practical when storing the data as integers, first removing an offset and then scaling down the values. Since the scale and offset are applied in reverse order when reading, this does not affect the data values (except for round-offs). </dd>
 <p> If <i>scale</i> and <i>offset</i> are supplied you may also append a value that represents &#8216;Not-a-Number&#8217; (for floating-point grids this is unnecessary since the IEEE NaN is used; however integers need a value which means no data available). The <i>scale</i> and <i>offset</i> modifiers may be left empty to select default values (scale = 1, offset = 0), or you may specify <i>a</i> for auto-adjusting the scale and/or offset of packed integer grids (=<i>id/a</i> is a shorthand for =<i>id/a/a</i>). When <i>id</i>=<i>gd</i>, the file will be saved using the GDAL library. Append the format <i>:driver</i> and optionally the output <i>datatype</i>. The driver names are those used by GDAL itself (e.g., netCDF, GTiFF, etc.), and the data type is one of <i>u8</i>|<i>u16</i>|<i>i16</i>|<i>u32</i>|<i>i32</i>|<i>float32</i>, where &#8216;i&#8217; and &#8216;u&#8217; denote signed and unsigned integers respectively. The default type is <i>float32</i>. Note also that both driver names and data types are case insensitive. </p>
 <p> Consider setting <i>IO_NC4_DEFLATION_LEVEL</i> to reduce file size and to further increase read/write performance. Especially when working with subsets of global grids, masks, and grids with repeating grid values, the improvement is usually significant.</dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-N</code></p>
-<dd> Suppress the writing of the GMT header structure. This is useful when you want to write a native grid to be used by <code>grdraster</code>. It only applies to native grids and is ignored for netCDF output.</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-N</code></dt>
+<dd> Suppress the writing of the GMT header structure. This is useful when you want to write a native grid to be used by <code>grdraster</code>. It only applies to native grids and is ignored for netCDF output.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>FORMAT IDENTIFIER</h2>
 <p> By default, grids will be written as floating point data stored in binary files using the netCDF format and meta-data structure. This format is conform the COARDS conventions. GMT versions prior to 4.1 produced netCDF files that did not conform to these conventions. Although these files are still supported, their use is deprecated. To write other than floating point COARDS-compliant netCDF files, append the =<i>id</i> suffix to the filename <i>outgrdfile</i>. </p>
 <p> When reading files, <code>grdconvert</code> and other GMT programs will try to automatically recognize the type of the input grid file. If this fails you may append the =<i>id</i> suffix to the filename <i>ingrdfile</i>. <center></p>

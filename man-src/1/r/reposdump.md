@@ -11,54 +11,54 @@ description: "reposdump – utility for dumping SBLIM Data Gatherer online metri
 <p> reposdump &#8211; utility for dumping SBLIM Data Gatherer online metric repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>reposdump</code> [<i>age</i>] [<i>interval</i>] [<i>directory</i>]</dl>
+<dt> <code>reposdump</code> [<i>age</i>] [<i>interval</i>] [<i>directory</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>reposdump</code> program is used to dump the metrics from the <code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8) daemons online repository. The metric data is exported into a flat text file. The file contains sections seperated by lines with the following format. </p>
+<dd>The <code>reposdump</code> program is used to dump the metrics from the <code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8) daemons online repository. The metric data is exported into a flat text file. The file contains sections seperated by lines with the following format. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ===metricdefs &lt;pluginname&gt;===
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ===metricvals &lt;pluginname&gt;===
 </pre>
-</dl>
+</dd></dl>
 <p> Each section contains a list of comma seperated records containing the defined metric or metric values. A sample perl script /usr/share/reposd2csv.pl is included which demonstrates converting the dump data into a comma seperated value list (CSV) suitable for import into a spreadsheet.</p>
 <h2>OPTIONS</h2>
 <p> <i>age</i></p>
 <dl>
 <dt>
-<dd> Maximum sample age in seconds to be dumped.</dl>
+</dt><dd> Maximum sample age in seconds to be dumped.</dd></dl>
 <p> <i>interval</i></p>
 <dl>
 <dt>
-<dd> Sample interval granularity in seconds to be dumped.</dl>
+</dt><dd> Sample interval granularity in seconds to be dumped.</dd></dl>
 <p> <i>directory</i></p>
 <dl>
 <dt>
-<dd> Directory in which to dump metric file.</dl>
+</dt><dd> Directory in which to dump metric file.</dd></dl>
 <h2>BUGS</h2>
 <p> The SBLIM project maintains a mailing list to which you should direct all questions regarding sfcb, sfcc, wbemcli, the metric data gatherer, or any of the SBLIM providers. To subscribe to this list visit: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/sblim-issues">https://lists.sourceforge.net/lists/listinfo/sblim-issues</a>
 </pre>
-</dl>
+</dd></dl>
 <p> Please report bugs you discover to the bug tracker. The SBLIM project bug tracking page can be found at: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="https://sourceforge.net/tracker/?group_id=128809">https://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> Please refer to the AUTHORS file distributed with sblim-gather.</p>
 <h2>COPYRIGHT</h2>

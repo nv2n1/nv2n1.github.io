@@ -11,7 +11,6 @@ description: "sc::LineOpt –"
 <p> The <code>LineOpt</code> abstract class is used to perform one dimensional optimizations.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;opt.h&gt;</code></pre>
 <p> Inherits <code>sc::Optimize</code>. Inherited by <code>sc::Backtrack</code>, and <code>sc::MCSearch</code>.</p>
 <h3>Public Member Functions</h3>
@@ -31,30 +30,12 @@ description: "sc::LineOpt –"
  <i>Sets factor for sufficient decrease test. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>int sufficient_decrease (RefSCVector &amp;step)
-
-
-
 Protected Attributes
 double decrease_factor_
-
-
-
 RefSCVector initial_x_
-
-
-
 double initial_value_
-
-
-
 RefSCVector initial_grad_
-
-
-
 RefSCVector search_direction_
-
-
-
 Ref&lt; Function &gt; function_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>LineOpt</code> abstract class is used to perform one dimensional optimizations.</p>

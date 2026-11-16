@@ -17,20 +17,20 @@ description: "wmdocker – System tray for KDE3/GNOME2 docklet applications"
 <p> Docker was written and designed to work with Openbox 2, but it should work fine in any window manager that supports WindowMaker dock apps. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h-help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-display DISPLAY</code></p>
-<dd> The X display to connect to.</p>
-<dt><code>-border N</code></p>
-<dd> The width of the border to put around the system tray icons. Defaults to 1.</p>
-<dt><code>-vertical</code></p>
-<dd> Line up the icons vertically. Defaults to horizontally.</p>
-<dt><code>-wmaker</code></p>
-<dd> WindowMaker mode. This makes wmdocker a fixed size (64&#215;64) to appear nicely in in WindowMaker. Note: In this mode, you have a fixed number of icons that wmdocker can hold.</p>
-<dt><code>-iconsize SIZE</code></p>
-<dd> The size (width and height and height) to display icons as in the system tray. Defaults to 24.</p>
-<dt><code>-color COLOR</code></p>
-<dd> The background color to use for the tray. Defaults to whatever color the window manager specifies.</dl>
+<dt><code>-h-help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-display DISPLAY</code></dt>
+<dd> The X display to connect to.</dd>
+<dt><code>-border N</code></dt>
+<dd> The width of the border to put around the system tray icons. Defaults to 1.</dd>
+<dt><code>-vertical</code></dt>
+<dd> Line up the icons vertically. Defaults to horizontally.</dd>
+<dt><code>-wmaker</code></dt>
+<dd> WindowMaker mode. This makes wmdocker a fixed size (64&#215;64) to appear nicely in in WindowMaker. Note: In this mode, you have a fixed number of icons that wmdocker can hold.</dd>
+<dt><code>-iconsize SIZE</code></dt>
+<dd> The size (width and height and height) to display icons as in the system tray. Defaults to 24.</dd>
+<dt><code>-color COLOR</code></dt>
+<dd> The background color to use for the tray. Defaults to whatever color the window manager specifies.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ari Pollak &lt;ari [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>

@@ -43,6 +43,6 @@ d{array} ].PP 2.1 Log-Normal Jump Diffusion with Deterministic Jump Intensity Ba
 <p> A. Sepp, Pricing European-Style Options under Jump Diffusion Processes with Stochastic Volatility: Applications of Fourier Transform (&lt;<a rel="nofollow" href="http://math.ut.ee/~spartak/papers/stochjumpvols.pdf">http://math.ut.ee/~spartak/papers/stochjumpvols.pdf</a>&gt;) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature, testing against QuantLib&#8217;s jump diffusion engine and comparison with Black pricing.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature, testing against QuantLib&#8217;s jump diffusion engine and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

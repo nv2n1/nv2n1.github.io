@@ -32,14 +32,10 @@ Equivalent to *this = packaged_task(std::move(f)), where f is the stored task.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;future&gt;
 int main()
-
 {
     std::packaged_task&lt;int(int, int)&gt; task([](int a, int b) {
         return std::pow(a, b);

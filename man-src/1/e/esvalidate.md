@@ -13,12 +13,12 @@ description: "esvalidate – ECMAScript Validator using Esprima"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> esvalidate [options] file.js</dl>
+</dt><dd> esvalidate [options] file.js</dd></dl>
 <p> Available options:</p>
 <dl>
-<dt><code>&#8211;format</code>=<i>,type/</i></p>
-<dd> Set the report format, plain (default) or junit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print program version </p>
+<dt><code>&#8211;format</code>=<i>,type/</i></dt>
+<dd> Set the report format, plain (default) or junit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print program version </dd>
 </dl>
 <h2>Index</h2>

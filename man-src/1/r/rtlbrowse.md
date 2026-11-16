@@ -16,8 +16,8 @@ description: "rtlbrowse – Allows hierarchical browsing of Verilog HDL source c
 <h2>EXAMPLES</h2>
 <p> To run this program the standard way type:</p>
 <dl>
-<dt>rtlbrowse stemsfile</p>
-<dd> The RTL is then brought up in a GTK tree viewer. Stems must have been previously generated with <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) or some other tool capable of generating compatible stemsfiles. Note that <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) will bring up this program as a client application for source code annotation. It does that by bringing up the viewer with the shared memory ID of a segment of memory in the viewer rather than using a stems filename.</dl>
+<dt>rtlbrowse stemsfile</dt>
+<dd> The RTL is then brought up in a GTK tree viewer. Stems must have been previously generated with <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) or some other tool capable of generating compatible stemsfiles. Note that <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) will bring up this program as a client application for source code annotation. It does that by bringing up the viewer with the shared memory ID of a segment of memory in the viewer rather than using a stems filename.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>

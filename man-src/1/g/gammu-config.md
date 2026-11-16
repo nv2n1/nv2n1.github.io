@@ -15,12 +15,12 @@ description: "gammu-config – Gammu configurator"
 <p> Script to help configuring gammu. </p>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd> Force configuring even if config already exists.</p>
-<dt><code>-c, &#8211;config config</code></p>
-<dd> Define which configuration file to use. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> Force configuring even if config already exists.</dd>
+<dt><code>-c, &#8211;config config</code></dt>
+<dd> Define which configuration file to use. </dd>
 </dl>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;. </p>

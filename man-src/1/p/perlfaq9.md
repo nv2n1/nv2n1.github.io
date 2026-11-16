@@ -20,14 +20,14 @@ description: "perlfaq9 – Web, Email and Networking"
 <p> There is no simple answer to this question. Perl frameworks can run everything from basic file servers and small scale intranets to massive multinational multilingual websites that are the core to international businesses. </p>
 <p> Below is a list of a few frameworks with comments which might help you in making a decision, depending on your specific requirements. Start by reading the docs, then ask questions on the relevant mailing list or <font SIZE="-1">IRC</font> channel.</p>
 <dl>
-<dt>Catalyst</p>
-<dd> Strongly object-oriented and fully-featured with a long development history and a large community and addon ecosystem. It is excellent for large and complex applications, where you have full control over the server.</p>
-<dt>Dancer2</p>
-<dd> Free of legacy weight, providing a lightweight and easy to learn <font SIZE="-1">API.</font> Has a growing addon ecosystem. It is best used for smaller projects and very easy to learn for beginners.</p>
-<dt>Mojolicious</p>
-<dd> Self-contained and powerful for both small and larger projects, with a focus on <font SIZE="-1">HTML5</font> and real-time web technologies such as WebSockets.</p>
-<dt>Web::Simple</p>
-<dd> Strongly object-oriented and minimal, built for speed and intended as a toolkit for building micro web apps, custom frameworks or for tieing together existing Plack-compatible web applications with one central dispatcher.</dl>
+<dt>Catalyst</dt>
+<dd> Strongly object-oriented and fully-featured with a long development history and a large community and addon ecosystem. It is excellent for large and complex applications, where you have full control over the server.</dd>
+<dt>Dancer2</dt>
+<dd> Free of legacy weight, providing a lightweight and easy to learn <font SIZE="-1">API.</font> Has a growing addon ecosystem. It is best used for smaller projects and very easy to learn for beginners.</dd>
+<dt>Mojolicious</dt>
+<dd> Self-contained and powerful for both small and larger projects, with a focus on <font SIZE="-1">HTML5</font> and real-time web technologies such as WebSockets.</dd>
+<dt>Web::Simple</dt>
+<dd> Strongly object-oriented and minimal, built for speed and intended as a toolkit for building micro web apps, custom frameworks or for tieing together existing Plack-compatible web applications with one central dispatcher.</dd></dl>
 <p> All of these interact with or use Plack which is worth understanding the basics of when building a website in Perl (there is a lot of useful Plack::Middleware &lt;<a rel="nofollow" href="https://metacpan.org/search?q=plack%3A%3Amiddleware">https://metacpan.org/search?q=plack%3A%3Amiddleware</a>&gt;).</p>
 <h3>What is Plack and <font SIZE="-1">PSGI</font>?</h3>
 <p> <font SIZE="-1">PSGI</font> is the Perl Web Server Gateway Interface Specification, it is a standard that many Perl web frameworks use, you should not need to understand it to build a web site, the part you might want to use is Plack. </p>
@@ -137,10 +137,10 @@ use Email::Sender::Simple qw(sendmail);<br />
 sendmail($message);</p>
 <p> By default, Email::Sender::Simple will try `sendmail` first, if it exists in your <tt>$PATH</tt>. This generally isn&#8217;t the case. If there&#8217;s a remote mail server you use to send mail, consider investigating one of the Transport classes. At time of writing, the available transports include:</p>
 <dl>
-<dt>Email::Sender::Transport::Sendmail</p>
-<dd> This is the default. If you can use the <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1) or <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1) program to send mail from the machine where your code runs, you should be able to use this.</p>
-<dt>Email::Sender::Transport::SMTP</p>
-<dd> This transport contacts a remote <font SIZE="-1">SMTP</font> server over <font SIZE="-1">TCP.</font> It optionally uses <font SIZE="-1">TLS</font> or <font SIZE="-1">SSL</font> and can authenticate to the server via <font SIZE="-1">SASL.</font></dl>
+<dt>Email::Sender::Transport::Sendmail</dt>
+<dd> This is the default. If you can use the <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1) or <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1) program to send mail from the machine where your code runs, you should be able to use this.</dd>
+<dt>Email::Sender::Transport::SMTP</dt>
+<dd> This transport contacts a remote <font SIZE="-1">SMTP</font> server over <font SIZE="-1">TCP.</font> It optionally uses <font SIZE="-1">TLS</font> or <font SIZE="-1">SSL</font> and can authenticate to the server via <font SIZE="-1">SASL.</font></dd></dl>
 <p> Telling Email::Sender::Simple to use your transport is straightforward. </p>
 <p>sendmail(<br />
     $message,<br />
@@ -188,5 +188,5 @@ my $hostname = hostname_long();
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples in this file are hereby placed into the public domain. You are permitted and encouraged to use this code in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit would be courteous but is not required. </p>
 <h2>Index</h2>
-<dt><a href="#lbAZ">AUTHOR AND COPYRIGHT</a></p>
-<dd></dl>
+<dt><a href="#lbAZ">AUTHOR AND COPYRIGHT</a></dt>
+<dd></dd></dl>

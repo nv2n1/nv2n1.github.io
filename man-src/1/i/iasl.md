@@ -18,134 +18,134 @@ description: "iasl – ACPI Source Language compiler/decompiler"
 <h2>OPTIONS</h2>
 <h3>Global</h3>
 <dl>
-<dt><code>-@ &lt;file&gt;</code></p>
-<dd> Specify command file</p>
-<dt><code>-I &lt;dir&gt;</code></p>
-<dd> Specify additional include directory</p>
-<dt><code>-T &lt;sig&gt;|ALL|*</code></p>
-<dd> Create table template file for ACPI &lt;sig&gt;</p>
-<dt><code>-v</code></p>
-<dd> Display compiler version </p>
+<dt><code>-@ &lt;file&gt;</code></dt>
+<dd> Specify command file</dd>
+<dt><code>-I &lt;dir&gt;</code></dt>
+<dd> Specify additional include directory</dd>
+<dt><code>-T &lt;sig&gt;|ALL|*</code></dt>
+<dd> Create table template file for ACPI &lt;sig&gt;</dd>
+<dt><code>-v</code></dt>
+<dd> Display compiler version </dd>
 </dl>
 <h3>Preprocessor</h3>
 <dl>
-<dt><code>-D &lt;symbol&gt;</code></p>
-<dd> Define sybol for preprocessor use</p>
-<dt><code>-li</code></p>
-<dd> Create prepocessed output file (*.i)</p>
-<dt><code>-P</code></p>
-<dd> Preprocess only and create preprocessor output file (*.i)</p>
-<dt><code>-Pn</code></p>
-<dd> Disable preprocessor </p>
+<dt><code>-D &lt;symbol&gt;</code></dt>
+<dd> Define sybol for preprocessor use</dd>
+<dt><code>-li</code></dt>
+<dd> Create prepocessed output file (*.i)</dd>
+<dt><code>-P</code></dt>
+<dd> Preprocess only and create preprocessor output file (*.i)</dd>
+<dt><code>-Pn</code></dt>
+<dd> Disable preprocessor </dd>
 </dl>
 <h3>General Output</h3>
 <dl>
-<dt><code>-p &lt;prefix&gt;</code></p>
-<dd> Specify path/filename prefix for all output files</p>
-<dt><code>-va</code></p>
-<dd> Disable all errors and warnings (summary only)</p>
-<dt><code>-vi</code></p>
-<dd> Less verbose errors and warnings for use with IDEs</p>
-<dt><code>-vo</code></p>
-<dd> Enable optimization comments</p>
-<dt><code>-vr</code></p>
-<dd> Disable remarks</p>
-<dt><code>-vs</code></p>
-<dd> Disable signon</p>
-<dt><code>-w{1|2|3}</code></p>
-<dd> Set warning reporting level</p>
-<dt><code>-we</code></p>
-<dd> Report warnings as errors </p>
+<dt><code>-p &lt;prefix&gt;</code></dt>
+<dd> Specify path/filename prefix for all output files</dd>
+<dt><code>-va</code></dt>
+<dd> Disable all errors and warnings (summary only)</dd>
+<dt><code>-vi</code></dt>
+<dd> Less verbose errors and warnings for use with IDEs</dd>
+<dt><code>-vo</code></dt>
+<dd> Enable optimization comments</dd>
+<dt><code>-vr</code></dt>
+<dd> Disable remarks</dd>
+<dt><code>-vs</code></dt>
+<dd> Disable signon</dd>
+<dt><code>-w{1|2|3}</code></dt>
+<dd> Set warning reporting level</dd>
+<dt><code>-we</code></dt>
+<dd> Report warnings as errors </dd>
 </dl>
 <h3>AML and Data Output Files</h3>
 <dl>
-<dt><code>-s{a|c}</code></p>
-<dd> Create assembler or C source file (*.asm or *.c)</p>
-<dt><code>-i{a|c}</code></p>
-<dd> Create assembler or C include file (*.inc or *.h)</p>
-<dt><code>-t{a|c|s}</code></p>
-<dd> Create assembler, C, or ASL hex table (*.hex) </p>
+<dt><code>-s{a|c}</code></dt>
+<dd> Create assembler or C source file (*.asm or *.c)</dd>
+<dt><code>-i{a|c}</code></dt>
+<dd> Create assembler or C include file (*.inc or *.h)</dd>
+<dt><code>-t{a|c|s}</code></dt>
+<dd> Create assembler, C, or ASL hex table (*.hex) </dd>
 </dl>
 <h3>AML Code Generation</h3>
 <dl>
-<dt><code>-oa</code></p>
-<dd> Disable all optimizations (compatibility mode)</p>
-<dt><code>-of</code></p>
-<dd> Disable constant folding</p>
-<dt><code>-oi</code></p>
-<dd> Disable integer optimization to Zero/One/Ones</p>
-<dt><code>-on</code></p>
-<dd> Disable named reference string optimization</p>
-<dt><code>-cr</code></p>
-<dd> Disable Resource Descriptor error checking</p>
-<dt><code>-in</code></p>
-<dd> Ignore NoOp operators</p>
-<dt><code>-r &lt;revision&gt;</code></p>
-<dd> Override table header Revision (1-255) </p>
+<dt><code>-oa</code></dt>
+<dd> Disable all optimizations (compatibility mode)</dd>
+<dt><code>-of</code></dt>
+<dd> Disable constant folding</dd>
+<dt><code>-oi</code></dt>
+<dd> Disable integer optimization to Zero/One/Ones</dd>
+<dt><code>-on</code></dt>
+<dd> Disable named reference string optimization</dd>
+<dt><code>-cr</code></dt>
+<dd> Disable Resource Descriptor error checking</dd>
+<dt><code>-in</code></dt>
+<dd> Ignore NoOp operators</dd>
+<dt><code>-r &lt;revision&gt;</code></dt>
+<dd> Override table header Revision (1-255) </dd>
 </dl>
 <h3>ASL Listing Files</h3>
 <dl>
-<dt><code>-l</code></p>
-<dd> Create mixed listing file (ASL source and AML) (*.lst)</p>
-<dt><code>-ln</code></p>
-<dd> Create namespace file (*.nsp)</p>
-<dt><code>-ls</code></p>
-<dd> Create combined source file (expanded includes) (*.src) </p>
+<dt><code>-l</code></dt>
+<dd> Create mixed listing file (ASL source and AML) (*.lst)</dd>
+<dt><code>-ln</code></dt>
+<dd> Create namespace file (*.nsp)</dd>
+<dt><code>-ls</code></dt>
+<dd> Create combined source file (expanded includes) (*.src) </dd>
 </dl>
 <h3>ACPI Data Tables</h3>
 <dl>
-<dt><code>-G</code></p>
-<dd> Compile custom table containing generic operators</p>
-<dt><code>-vt</code></p>
-<dd> Create verbose templates (full disassembly) </p>
+<dt><code>-G</code></dt>
+<dd> Compile custom table containing generic operators</dd>
+<dt><code>-vt</code></dt>
+<dd> Create verbose templates (full disassembly) </dd>
 </dl>
 <h3>AML Disassembler</h3>
 <dl>
-<dt><code>-d [&lt;file&gt;]</code></p>
-<dd> Disassemble AML to ASL source code file (*.dsl)</p>
-<dt><code>-da [&lt;file1&gt;,&lt;file2&gt;]</code></p>
-<dd> Disassemble multiple tables from single namespace</p>
-<dt><code>-db</code></p>
-<dd> Do not translate Buffers to Resource Templates</p>
-<dt><code>-dc [&lt;file&gt;]</code></p>
+<dt><code>-d [&lt;file&gt;]</code></dt>
+<dd> Disassemble AML to ASL source code file (*.dsl)</dd>
+<dt><code>-da [&lt;file1&gt;,&lt;file2&gt;]</code></dt>
+<dd> Disassemble multiple tables from single namespace</dd>
+<dt><code>-db</code></dt>
+<dd> Do not translate Buffers to Resource Templates</dd>
+<dt><code>-dc [&lt;file&gt;]</code></dt>
 <dd> Disassemble AML and immediately compile it<br />
- (Obtain DSDT from current system if no input file)</p>
-<dt><code>-e [&lt;file1&gt;,&lt;file2&gt;]</code></p>
-<dd> Include ACPI table(s) for external symbol resolution</p>
-<dt><code>-g</code></p>
-<dd> Get ACPI tables and write to files (*.dat)</p>
-<dt><code>-in</code></p>
-<dd> Ignore NoOp opcodes</p>
-<dt><code>-vt</code></p>
-<dd> Dump binary table date in hex format within output file </p>
+ (Obtain DSDT from current system if no input file)</dd>
+<dt><code>-e [&lt;file1&gt;,&lt;file2&gt;]</code></dt>
+<dd> Include ACPI table(s) for external symbol resolution</dd>
+<dt><code>-g</code></dt>
+<dd> Get ACPI tables and write to files (*.dat)</dd>
+<dt><code>-in</code></dt>
+<dd> Ignore NoOp opcodes</dd>
+<dt><code>-vt</code></dt>
+<dd> Dump binary table date in hex format within output file </dd>
 </dl>
 <h3>Help</h3>
 <dl>
-<dt><code>-h</code></p>
-<dd> Additional help and compiler debug options</p>
-<dt><code>-hc</code></p>
-<dd> Display operators allowed in constant expressions</p>
-<dt><code>-hf</code></p>
-<dd> Display help for output file name generation</p>
-<dt><code>-hr</code></p>
-<dd> Display ACPI reserved method names</p>
-<dt><code>-ht</code></p>
-<dd> Display currently supported ACPI table names </p>
+<dt><code>-h</code></dt>
+<dd> Additional help and compiler debug options</dd>
+<dt><code>-hc</code></dt>
+<dd> Display operators allowed in constant expressions</dd>
+<dt><code>-hf</code></dt>
+<dd> Display help for output file name generation</dd>
+<dt><code>-hr</code></dt>
+<dd> Display ACPI reserved method names</dd>
+<dt><code>-ht</code></dt>
+<dd> Display currently supported ACPI table names </dd>
 </dl>
 <h3>Debug</h3>
 <dl>
-<dt><code>-b{f|t}</code></p>
-<dd> Create debug file (full or parse tree only) (*.txt)</p>
-<dt><code>-f</code></p>
-<dd> Ignore errors, force creation of AML output file(s)</p>
-<dt><code>-n</code></p>
-<dd> Parse only, no output generation</p>
-<dt><code>-ot</code></p>
-<dd> Display compiles times and statistics</p>
-<dt><code>-x &lt;level&gt;</code></p>
-<dd> Set debug level for trace output</p>
-<dt><code>-z</code></p>
-<dd> Do not insert new compiler ID for DataTables </p>
+<dt><code>-b{f|t}</code></dt>
+<dd> Create debug file (full or parse tree only) (*.txt)</dd>
+<dt><code>-f</code></dt>
+<dd> Ignore errors, force creation of AML output file(s)</dd>
+<dt><code>-n</code></dt>
+<dd> Parse only, no output generation</dd>
+<dt><code>-ot</code></dt>
+<dd> Display compiles times and statistics</dd>
+<dt><code>-x &lt;level&gt;</code></dt>
+<dd> Set debug level for trace output</dd>
+<dt><code>-z</code></dt>
+<dd> Do not insert new compiler ID for DataTables </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> iasl was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

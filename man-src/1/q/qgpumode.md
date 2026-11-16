@@ -16,24 +16,22 @@ description: "qgpumode – change GPU mode"
 <p> Changing the GPU mode requires PBS Operator or Manager privilege. It also requires that Torque be configured with &#8211;enable-nvidia-gpu. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-H host</p>
-<dd> Specifies the host within the cluster on which the GPU is located. The argument is the name of a host that is a member of the cluster of hosts managed by the server.</p>
-<dt>-g gpuid</p>
-<dd> Specifies the ID of the GPU.</p>
-<dt>-m mode</p>
-<dd> Specifies the new mode of the GPU. Valid Nvidia GPU modes are:</p>
+<dt>-H host</dt>
+<dd> Specifies the host within the cluster on which the GPU is located. The argument is the name of a host that is a member of the cluster of hosts managed by the server.</dd>
+<dt>-g gpuid</dt>
+<dd> Specifies the ID of the GPU.</dd>
+<dt>-m mode</dt>
+<dd> Specifies the new mode of the GPU. Valid Nvidia GPU modes are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0</p>
-<dd> &#8211; Normal mode.</p>
-<dt>1</p>
-<dd> &#8211; COMPUTE exclusive thread mode (only one COMPUTE thread is allowed to run on the GPU).</p>
-<dt>2</p>
-<dd> &#8211; COMPUTE prohibited mode (no COMPUTE contexts are allowed to run on the GPU).</p>
-<dt>3</p>
-<dd> &#8211; COMPUTE exclusive process mode (only one COMPUTE process is allowed to run on the GPU). This mode is new with Nvidia driver version 270.</dl>
+<dt>0</dt>
+<dd> &#8211; Normal mode.</dd>
+<dt>1</dt>
+<dd> &#8211; COMPUTE exclusive thread mode (only one COMPUTE thread is allowed to run on the GPU).</dd>
+<dt>2</dt>
+<dd> &#8211; COMPUTE prohibited mode (no COMPUTE contexts are allowed to run on the GPU).</dd>
+<dt>3</dt>
+<dd> &#8211; COMPUTE exclusive process mode (only one COMPUTE process is allowed to run on the GPU). This mode is new with Nvidia driver version 270.</dd></dl>
 </dl>
 </dl>
 <h2>OPERANDS</h2>

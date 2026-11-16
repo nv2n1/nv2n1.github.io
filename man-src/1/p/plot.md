@@ -18,101 +18,101 @@ description: "plot – translate GNU metafiles to other graphics formats"
 <h2>OPTIONS</h2>
 <h3>General Options</h3>
 <dl>
-<dt><code>-T</code><i> type</i></p>
+<dt><code>-T</code><i> type</i></dt>
 <dd>
-<dt><code>&#8211;output-format</code><i> type</i></p>
-<dd> Select <i>type</i> as the output format. It may be &quot;X&quot;, &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, &quot;fig&quot;, &quot;pcl&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, or &quot;meta&quot; (the default). These refer respectively to the X Window System, PNG (Portable Network Graphics) format, portable anymap format (PBM/PGM/PPM), a pseudo-GIF format that does not use LZW encoding, the new XML-based Scalable Vector Graphics format, the format used by Adobe Illustrator, Postscript or Encapsulated Postscript (EPS) that can be edited with <code>idraw</code>(1), CGM format (by default, confirming to the WebCGM profile), the format used by the <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) drawing editor, the Hewlett-Packard PCL 5 printer language, the Hewlett-Packard Graphics Language, ReGIS graphics format (which can be displayed by the <code>dxterm</code>(1) terminal emulator or by a VT330 or VT340 terminal), Tektronix format (which can be displayed by the <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) terminal emulator), and device-independent GNU metafile format itself. Unless <i>type</i> is &quot;X&quot;, an output file is produced and written to standard output.</p>
+</dd><dt><code>&#8211;output-format</code><i> type</i></dt>
+<dd> Select <i>type</i> as the output format. It may be &quot;X&quot;, &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, &quot;fig&quot;, &quot;pcl&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, or &quot;meta&quot; (the default). These refer respectively to the X Window System, PNG (Portable Network Graphics) format, portable anymap format (PBM/PGM/PPM), a pseudo-GIF format that does not use LZW encoding, the new XML-based Scalable Vector Graphics format, the format used by Adobe Illustrator, Postscript or Encapsulated Postscript (EPS) that can be edited with <code>idraw</code>(1), CGM format (by default, confirming to the WebCGM profile), the format used by the <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) drawing editor, the Hewlett-Packard PCL 5 printer language, the Hewlett-Packard Graphics Language, ReGIS graphics format (which can be displayed by the <code>dxterm</code>(1) terminal emulator or by a VT330 or VT340 terminal), Tektronix format (which can be displayed by the <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) terminal emulator), and device-independent GNU metafile format itself. Unless <i>type</i> is &quot;X&quot;, an output file is produced and written to standard output.</dd>
 <dt>
-<dd> Omitting the <code>-T</code> option is equivalent to specifying <code>-T meta</code>. Translating from metafile format to itself is occasionally useful, since there are two versions of metafile format (see the <code>-O</code> option below).</p>
+</dt><dd> Omitting the <code>-T</code> option is equivalent to specifying <code>-T meta</code>. Translating from metafile format to itself is occasionally useful, since there are two versions of metafile format (see the <code>-O</code> option below).</dd>
 <dt>
-<dd> A listing of the fonts available in any specified output format may be obtained with the <code>&#8211;help-fonts</code> option (see below). If a requested font is unavailable, a default font will be substituted. The default font is &quot;Helvetica&quot; for &quot;X&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, and &quot;fig&quot;, &quot;Univers&quot; for &quot;pcl&quot;, and &quot;HersheySerif&quot; for &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, and &quot;meta&quot;.</p>
-<dt><code>-p</code><i> n</i></p>
+</dt><dd> A listing of the fonts available in any specified output format may be obtained with the <code>&#8211;help-fonts</code> option (see below). If a requested font is unavailable, a default font will be substituted. The default font is &quot;Helvetica&quot; for &quot;X&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, and &quot;fig&quot;, &quot;Univers&quot; for &quot;pcl&quot;, and &quot;HersheySerif&quot; for &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, and &quot;meta&quot;.</dd>
+<dt><code>-p</code><i> n</i></dt>
 <dd>
-<dt><code>&#8211;page-number</code><i> n</i></p>
-<dd> Output only page number <i>n</i>, within the metafile or sequence of metafiles that is being translated.</p>
+</dd><dt><code>&#8211;page-number</code><i> n</i></dt>
+<dd> Output only page number <i>n</i>, within the metafile or sequence of metafiles that is being translated.</dd>
 <dt>
-<dd> Metafiles may consist of one or more pages, numbered beginning with 1. Also, each page may contain multiple `frames&#8217;. <code>plot -T X</code>, <code>plot -T regis</code>, and <code>plot -T tek</code>, which plot in real time, will separate successive frames by screen erasures. <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, <code>plot -T fig</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code>, which do not plot in real time, will output only the last frame of any multi-frame page.</p>
+</dt><dd> Metafiles may consist of one or more pages, numbered beginning with 1. Also, each page may contain multiple `frames&#8217;. <code>plot -T X</code>, <code>plot -T regis</code>, and <code>plot -T tek</code>, which plot in real time, will separate successive frames by screen erasures. <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, <code>plot -T fig</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code>, which do not plot in real time, will output only the last frame of any multi-frame page.</dd>
 <dt>
-<dd> The default behavior, if <code>-p</code> is not used, is to output all pages. For example, <code>plot -T X</code> displays each page in its own X window. If the <code>-T png</code>, <code>-T pnm</code>, <code>-T gif</code>, <code>-T ai</code>, or <code>-T fig</code> option is used, the default behavior is to output only the first nonempty page, since files in those output formats contain only a single page of graphics.</p>
+</dt><dd> The default behavior, if <code>-p</code> is not used, is to output all pages. For example, <code>plot -T X</code> displays each page in its own X window. If the <code>-T png</code>, <code>-T pnm</code>, <code>-T gif</code>, <code>-T ai</code>, or <code>-T fig</code> option is used, the default behavior is to output only the first nonempty page, since files in those output formats contain only a single page of graphics.</dd>
 <dt>
-<dd> Metafiles produced by <code>graph</code>(1) and <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1) contain only a single page (page #1), which consists of two frames: an empty frame to clear the display, and a second frame that contains the graphics.</p>
-<dt><code>-s</code></p>
+</dt><dd> Metafiles produced by <code>graph</code>(1) and <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1) contain only a single page (page #1), which consists of two frames: an empty frame to clear the display, and a second frame that contains the graphics.</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;merge-pages</code></p>
-<dd> Merge all displayed pages into a single page, and also merge all `frames&#8217;.</p>
+</dd><dt><code>&#8211;merge-pages</code></dt>
+<dd> Merge all displayed pages into a single page, and also merge all `frames&#8217;.</dd>
 <dt>
-<dd> This option is useful when merging together single-page plots from different sources. For example, it can be used to merge together plots obtained from separate invocations of <code>graph</code>(1).</p>
-<dt><code>&#8211;bitmap-size</code><i> bitmap_size</i></p>
-<dd> Set the size of the graphics display in which the plot will be drawn, in terms of pixels, to be <i>bitmap_size</i>. The default is &quot;570&#215;570&quot;. This is relevant only to <code>plot -T X</code>, <code>plot -T png</code>, <code>plot -T pnm</code>, and <code>plot -T gif</code>, all of which produce bitmaps. If you choose a rectangular (non-square) window size, the fonts in the plot will be scaled anisotropically, i.e., by different factors in the horizontal and vertical directions. For <code>plot -T X</code>, this requires an X11R6 display. Any font that cannot be scaled in this way will be replaced by a default scalable font, such as the vector font &quot;HersheySerif&quot;.</p>
+</dt><dd> This option is useful when merging together single-page plots from different sources. For example, it can be used to merge together plots obtained from separate invocations of <code>graph</code>(1).</dd>
+<dt><code>&#8211;bitmap-size</code><i> bitmap_size</i></dt>
+<dd> Set the size of the graphics display in which the plot will be drawn, in terms of pixels, to be <i>bitmap_size</i>. The default is &quot;570&#215;570&quot;. This is relevant only to <code>plot -T X</code>, <code>plot -T png</code>, <code>plot -T pnm</code>, and <code>plot -T gif</code>, all of which produce bitmaps. If you choose a rectangular (non-square) window size, the fonts in the plot will be scaled anisotropically, i.e., by different factors in the horizontal and vertical directions. For <code>plot -T X</code>, this requires an X11R6 display. Any font that cannot be scaled in this way will be replaced by a default scalable font, such as the vector font &quot;HersheySerif&quot;.</dd>
 <dt>
-<dd> The environment variable <font SIZE="-1"><code>BITMAPSIZE </code></font> can equally well be used to specify the window size. For backward compatibility, the X resource <code>Xplot.geometry</code> may be used instead.</p>
-<dt><code>&#8211;emulate-color</code><i> option</i></p>
-<dd> If <i>option</i> is <i>yes</i>, replace each color in the output by an appropriate shade of gray. This is seldom useful, except when using <code>plot -T pcl</code> to prepare output for a PCL 5 device. (Many monochrome PCL 5 devices, such as monochrome LaserJets, do a poor job of emulating color on their own.) You may equally well request color emulation by setting the environment variable <font SIZE="-1"><code>EMULATE_COLOR </code></font> to &quot;yes&quot;.</p>
-<dt><code>&#8211;max-line-length</code><i> max_line_length</i></p>
-<dd> Set the maximum number of points that a polygonal line may contain, before it is flushed out, to be <i>max_line_length</i>. If this flushing occurs, the polygonal line will be split into two or more sub-lines, though the splitting should not be noticeable. The default value of <i>max_line_length</i> is 500.</p>
+</dt><dd> The environment variable <font SIZE="-1"><code>BITMAPSIZE </code></font> can equally well be used to specify the window size. For backward compatibility, the X resource <code>Xplot.geometry</code> may be used instead.</dd>
+<dt><code>&#8211;emulate-color</code><i> option</i></dt>
+<dd> If <i>option</i> is <i>yes</i>, replace each color in the output by an appropriate shade of gray. This is seldom useful, except when using <code>plot -T pcl</code> to prepare output for a PCL 5 device. (Many monochrome PCL 5 devices, such as monochrome LaserJets, do a poor job of emulating color on their own.) You may equally well request color emulation by setting the environment variable <font SIZE="-1"><code>EMULATE_COLOR </code></font> to &quot;yes&quot;.</dd>
+<dt><code>&#8211;max-line-length</code><i> max_line_length</i></dt>
+<dd> Set the maximum number of points that a polygonal line may contain, before it is flushed out, to be <i>max_line_length</i>. If this flushing occurs, the polygonal line will be split into two or more sub-lines, though the splitting should not be noticeable. The default value of <i>max_line_length</i> is 500.</dd>
 <dt>
-<dd> The reason for splitting long polygonal lines is that some display devices (e.g., old Postscript printers and pen HP-GL plotters) have limited buffer sizes. The environment variable <font SIZE="-1"><code>MAX_LINE_LENGTH </code></font> can also be used to specify the maximum line length.</p>
-<dt><code>&#8211;page-size</code><i> pagesize</i></p>
-<dd> Set the size of the page on which the plot will be positioned. This is relevant only to <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, <code>plot -T fig</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code>. The default is &quot;letter&quot;, which means an 8.5 inch by 11 inch page. Any ISO page size in the range &quot;a0&quot;&#8230;&quot;a4&quot; or ANSI page size in the range &quot;a&quot;&#8230;&quot;e&quot; may be specified (&quot;letter&quot; is an alias for &quot;a&quot; and &quot;tabloid&quot; is an alias for &quot;b&quot;). &quot;legal&quot; and &quot;ledger&quot; are recognized page sizes also. The environment variable <font SIZE="-1"><code>PAGESIZE </code></font> can equally well be used to specify the page size.</p>
+</dt><dd> The reason for splitting long polygonal lines is that some display devices (e.g., old Postscript printers and pen HP-GL plotters) have limited buffer sizes. The environment variable <font SIZE="-1"><code>MAX_LINE_LENGTH </code></font> can also be used to specify the maximum line length.</dd>
+<dt><code>&#8211;page-size</code><i> pagesize</i></dt>
+<dd> Set the size of the page on which the plot will be positioned. This is relevant only to <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, <code>plot -T fig</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code>. The default is &quot;letter&quot;, which means an 8.5 inch by 11 inch page. Any ISO page size in the range &quot;a0&quot;&#8230;&quot;a4&quot; or ANSI page size in the range &quot;a&quot;&#8230;&quot;e&quot; may be specified (&quot;letter&quot; is an alias for &quot;a&quot; and &quot;tabloid&quot; is an alias for &quot;b&quot;). &quot;legal&quot; and &quot;ledger&quot; are recognized page sizes also. The environment variable <font SIZE="-1"><code>PAGESIZE </code></font> can equally well be used to specify the page size.</dd>
 <dt>
-<dd> The graphics display in which the plot is drawn will, by default, be a square region that occupies nearly the full width of the specified page. An alternative size for the graphics display can be specified. For example, the page size could be specified as &quot;letter,xsize=4in,ysize=6in&quot;, or &quot;a4,xsize=5.0cm,ysize=100mm&quot;. For all of the above except <code>plot -T hpgl</code>, the graphics display will, by default, be centered on the page. For all of the above except <code>plot -T svg</code> and <code>plot -T cgm</code>, the graphics display may be repositioned manually, by specifying the location of its lower left corner, relative to the lower left corner of the page. For example, the page size could be specified as &quot;letter,xorigin=2in,yorigin=3in&quot;, or &quot;a4,xorigin=0.5cm,yorigin=0.5cm&quot;. It is also possible to specify an offset vector. For example, the page size could be specified as &quot;letter,xoffset=1in&quot;, or &quot;letter,xoffset=1in,yoffset=1.2in&quot;, or &quot;a4,yoffset=-1cm&quot;. In SVG format and WebCGM format it is possible to specify the size of the graphics display, but not its position.</p>
-<dt><code>&#8211;rotation</code><i> angle</i></p>
-<dd> Rotate the graphics display by <i>angle</i> degrees. Recognized values are &quot;0&quot;, &quot;90&quot;, &quot;180&quot;, and &quot;270&quot;. &quot;no&quot; and &quot;yes&quot; are equivalent to &quot;0&quot; and &quot;90&quot;, respectively. The environment variable <font SIZE="-1"><code>ROTATION </code></font> can also be used to specify a rotation angle.</dl>
+</dt><dd> The graphics display in which the plot is drawn will, by default, be a square region that occupies nearly the full width of the specified page. An alternative size for the graphics display can be specified. For example, the page size could be specified as &quot;letter,xsize=4in,ysize=6in&quot;, or &quot;a4,xsize=5.0cm,ysize=100mm&quot;. For all of the above except <code>plot -T hpgl</code>, the graphics display will, by default, be centered on the page. For all of the above except <code>plot -T svg</code> and <code>plot -T cgm</code>, the graphics display may be repositioned manually, by specifying the location of its lower left corner, relative to the lower left corner of the page. For example, the page size could be specified as &quot;letter,xorigin=2in,yorigin=3in&quot;, or &quot;a4,xorigin=0.5cm,yorigin=0.5cm&quot;. It is also possible to specify an offset vector. For example, the page size could be specified as &quot;letter,xoffset=1in&quot;, or &quot;letter,xoffset=1in,yoffset=1.2in&quot;, or &quot;a4,yoffset=-1cm&quot;. In SVG format and WebCGM format it is possible to specify the size of the graphics display, but not its position.</dd>
+<dt><code>&#8211;rotation</code><i> angle</i></dt>
+<dd> Rotate the graphics display by <i>angle</i> degrees. Recognized values are &quot;0&quot;, &quot;90&quot;, &quot;180&quot;, and &quot;270&quot;. &quot;no&quot; and &quot;yes&quot; are equivalent to &quot;0&quot; and &quot;90&quot;, respectively. The environment variable <font SIZE="-1"><code>ROTATION </code></font> can also be used to specify a rotation angle.</dd></dl>
 <h3>Parameter Initialization Options</h3>
 <p> The following options set the initial values of drawing parameters. However, all of these may be overridden by directives in a metafile. In fact, these options are useful primarily when plotting old metafiles in the traditional (pre-GNU) <code>plot</code>(5) format, which did not support such directives.</p>
 <dl>
-<dt><code>&#8211;bg-color</code><i> name</i></p>
-<dd> Set the color initially used for the background to be <i>name</i>. This is relevant only to <code>plot -T X</code>, <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T svg</code>, <code>plot -T cgm</code>, and <code>plot -T regis</code>. An unrecognized name sets the color to the default, which is &quot;white&quot;. The environment variable <font SIZE="-1"><code>BG_COLOR </code></font> can equally well be used to specify the background color.</p>
+<dt><code>&#8211;bg-color</code><i> name</i></dt>
+<dd> Set the color initially used for the background to be <i>name</i>. This is relevant only to <code>plot -T X</code>, <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T svg</code>, <code>plot -T cgm</code>, and <code>plot -T regis</code>. An unrecognized name sets the color to the default, which is &quot;white&quot;. The environment variable <font SIZE="-1"><code>BG_COLOR </code></font> can equally well be used to specify the background color.</dd>
 <dt>
-<dd> If the <code>-T png</code> or <code>-T gif</code> option is used, a transparent PNG file or a transparent pseudo-GIF, respectively, may be produced by setting the <font SIZE="-1"><code>TRANSPARENT_COLOR </code></font> environment variable to the name of the background color. If the <code>-T svg</code> or <code>-T cgm</code> option is used, an output file without a background may be produced by setting the background color to &quot;none&quot;.</p>
-<dt><code>-f</code><i> size</i></p>
+</dt><dd> If the <code>-T png</code> or <code>-T gif</code> option is used, a transparent PNG file or a transparent pseudo-GIF, respectively, may be produced by setting the <font SIZE="-1"><code>TRANSPARENT_COLOR </code></font> environment variable to the name of the background color. If the <code>-T svg</code> or <code>-T cgm</code> option is used, an output file without a background may be produced by setting the background color to &quot;none&quot;.</dd>
+<dt><code>-f</code><i> size</i></dt>
 <dd>
-<dt><code>&#8211;font-size</code><i> size</i></p>
-<dd> Set the size of the font initially used for rendering text, as a fraction of the width of the graphics display, to be <i>size</i>. The default is 0.0525.</p>
-<dt><code>-F</code><i> name</i></p>
+</dd><dt><code>&#8211;font-size</code><i> size</i></dt>
+<dd> Set the size of the font initially used for rendering text, as a fraction of the width of the graphics display, to be <i>size</i>. The default is 0.0525.</dd>
+<dt><code>-F</code><i> name</i></dt>
 <dd>
-<dt><code>&#8211;font-name</code><i> name</i></p>
-<dd> Set the font initially used for text to be <i>name</i>. Font names are case-insensitive. If the specified font is not available, the default font will be used. Which fonts are available, and the default font, depend on which <code>-T</code> option is specified (see above). A list of available fonts can be obtained with the <code>&#8211;help-fonts</code> option (see below).</p>
-<dt><code>-W</code><i> line_width</i></p>
+</dd><dt><code>&#8211;font-name</code><i> name</i></dt>
+<dd> Set the font initially used for text to be <i>name</i>. Font names are case-insensitive. If the specified font is not available, the default font will be used. Which fonts are available, and the default font, depend on which <code>-T</code> option is specified (see above). A list of available fonts can be obtained with the <code>&#8211;help-fonts</code> option (see below).</dd>
+<dt><code>-W</code><i> line_width</i></dt>
 <dd>
-<dt><code>&#8211;line-width</code><i> line_width</i></p>
-<dd> Set the initial width of lines, as a fraction of the width of the display, to be <i>line_width</i>. A negative value means that a default value should be used. This value is format-dependent. The interpretation of zero line width is also format-dependent (in some output formats, a zero-width line is the thinnest line that can be drawn; in others, a zero-width line is invisible).</p>
-<dt><code>&#8211;pen-color</code><i> name</i></p>
-<dd> Set the initial pen color to be <i>name</i>. An unrecognized name sets the pen color to the default, which is &quot;black&quot;.</dl>
+</dd><dt><code>&#8211;line-width</code><i> line_width</i></dt>
+<dd> Set the initial width of lines, as a fraction of the width of the display, to be <i>line_width</i>. A negative value means that a default value should be used. This value is format-dependent. The interpretation of zero line width is also format-dependent (in some output formats, a zero-width line is the thinnest line that can be drawn; in others, a zero-width line is invisible).</dd>
+<dt><code>&#8211;pen-color</code><i> name</i></dt>
+<dd> Set the initial pen color to be <i>name</i>. An unrecognized name sets the pen color to the default, which is &quot;black&quot;.</dd></dl>
 <h3>Options for Metafile Output</h3>
 <p> The following option is relevant only if the <code>-T</code> option is omitted or if <code>-T meta</code> is used. In this case the output of <code>plot</code>, like the input, will be in GNU graphics metafile format.</p>
 <dl>
-<dt><code>-O</code></p>
+<dt><code>-O</code></dt>
 <dd>
-<dt><code>&#8211;portable-output</code></p>
-<dd> Output the portable (human-readable) version of GNU metafile format, rather than the binary version (the default). The format of the binary version is machine-dependent.</dl>
+</dd><dt><code>&#8211;portable-output</code></dt>
+<dd> Output the portable (human-readable) version of GNU metafile format, rather than the binary version (the default). The format of the binary version is machine-dependent.</dd></dl>
 <h3>Options for Backward Compatibility</h3>
 <p> By default, <code>plot</code> assumes that its input file(s) are in either the binary version or the portable version of GNU metafile format. You may specify that the input is, instead, in the traditional Unix (pre-GNU) graphics metafile format, which is documented in <code>plot</code>(5). The traditional graphics metafile format was produced by pre-GNU versions of <code>graph</code>(1).</p>
 <dl>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;high-byte-first-input</code></p>
-<dd> Input file(s) are assumed to be in the binary, `high byte first&#8217; version of traditional metafile format. This variant is uncommon.</p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8211;high-byte-first-input</code></dt>
+<dd> Input file(s) are assumed to be in the binary, `high byte first&#8217; version of traditional metafile format. This variant is uncommon.</dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;low-byte-first-input</code></p>
-<dd> Input file(s) are assumed to be in the binary, `low byte first&#8217; version of traditional metafile format. This variant is the most common.</p>
-<dt><code>-A</code></p>
+</dd><dt><code>&#8211;low-byte-first-input</code></dt>
+<dd> Input file(s) are assumed to be in the binary, `low byte first&#8217; version of traditional metafile format. This variant is the most common.</dd>
+<dt><code>-A</code></dt>
 <dd>
-<dt><code>&#8211;ascii-input</code></p>
-<dd> Input file(s) are assumed to be in the <font SIZE="-1">ASCII</font> (human-readable) variant of traditional metafile format. On some older Unix systems, this variant was produced by <code>plottoa</code>(1).</dl>
+</dd><dt><code>&#8211;ascii-input</code></dt>
+<dd> Input file(s) are assumed to be in the <font SIZE="-1">ASCII</font> (human-readable) variant of traditional metafile format. On some older Unix systems, this variant was produced by <code>plottoa</code>(1).</dd></dl>
 <h3>Informational Options</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print a list of command-line options, and exit.</p>
-<dt><code>&#8211;help-fonts</code></p>
-<dd> Print a table of available fonts, and exit. The table will depend on which output format is specified with the <code>-T </code> option. <code>plot -T X</code>, <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, and <code>plot -T fig</code> each support the 35 standard Postscript fonts. <code>plot -T svg</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code> support the 45 standard PCL 5 fonts, and the latter two support a number of Hewlett-Packard vector fonts. All seven support a set of 22 Hershey vector fonts, as do <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T regis</code>, and <code>plot -T tek</code>. <code>plot</code> without a <code>-T</code> option in principle supports any of these fonts, since its output must be translated to other formats by a further invocation of <code>plot</code>.</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a list of command-line options, and exit.</dd>
+<dt><code>&#8211;help-fonts</code></dt>
+<dd> Print a table of available fonts, and exit. The table will depend on which output format is specified with the <code>-T </code> option. <code>plot -T X</code>, <code>plot -T svg</code>, <code>plot -T ai</code>, <code>plot -T ps</code>, <code>plot -T cgm</code>, and <code>plot -T fig</code> each support the 35 standard Postscript fonts. <code>plot -T svg</code>, <code>plot -T pcl</code>, and <code>plot -T hpgl</code> support the 45 standard PCL 5 fonts, and the latter two support a number of Hewlett-Packard vector fonts. All seven support a set of 22 Hershey vector fonts, as do <code>plot -T png</code>, <code>plot -T pnm</code>, <code>plot -T gif</code>, <code>plot -T regis</code>, and <code>plot -T tek</code>. <code>plot</code> without a <code>-T</code> option in principle supports any of these fonts, since its output must be translated to other formats by a further invocation of <code>plot</code>.</dd>
 <dt>
-<dd> The <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1) utility may be used to obtain a character map of any supported font.</p>
-<dt><code>&#8211;list-fonts</code></p>
-<dd> Like <code>&#8211;help-fonts</code>, but lists the fonts in a single column to facilitate piping to other programs. If no output format is specified with the <code>-T</code> option, the full set of supported fonts is listed.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number of <code>plot</code> and the plotting utilities package, and exit.</dl>
+</dt><dd> The <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1) utility may be used to obtain a character map of any supported font.</dd>
+<dt><code>&#8211;list-fonts</code></dt>
+<dd> Like <code>&#8211;help-fonts</code>, but lists the fonts in a single column to facilitate piping to other programs. If no output format is specified with the <code>-T</code> option, the full set of supported fonts is listed.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number of <code>plot</code> and the plotting utilities package, and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variables <font SIZE="-1"><code>BITMAPSIZE, </code></font> <font SIZE="-1"><code>PAGESIZE, </code></font> <font SIZE="-1"><code>BG_COLOR, </code></font> <font SIZE="-1"><code>EMULATE_COLOR, </code></font> <font SIZE="-1"><code>MAX_LINE_LENGTH </code></font> and <font SIZE="-1"><code>ROTATION </code></font> serve as backups for the options <code>&#8211;bitmap-size</code>, <code>&#8211;page-size</code>, <code>&#8211;bg-color</code>, <code>&#8211;emulate-color</code>, <code>&#8211;max-line-length</code>, and <code>&#8211;rotation</code>, respectively. The remaining environment variables are specific to individual output formats. </p>
 <p> <code>plot -T X</code>, which pops up a window on an X Window System display and draws graphics in it, checks the <font SIZE="-1"><code>DISPLAY </code></font> environment variable. Its value determines the display that will be used. </p>

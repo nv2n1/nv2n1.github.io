@@ -110,13 +110,13 @@ is used(c) If @{} overloading exists on a blessed hashref, @{} is used
 <p> This is because Unicode is using that name for a different character. See &#8220;Unicode Version 6.0 is now supported (mostly)&#8221; for more explanation.</p>
 <h2>Performance Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> When an object has many weak references to it, freeing that object can under some some circumstances take O(N^2) time to free (where N is the number of references). The number of circumstances has been reduced. [perl #75254] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75254">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75254</a>&gt;.</dl>
+<dt>&bull;</dt>
+<dd> When an object has many weak references to it, freeing that object can under some some circumstances take O(N^2) time to free (where N is the number of references). The number of circumstances has been reduced. [perl #75254] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75254">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75254</a>&gt;.</dd></dl>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> The following modules were added by the <tt>&quot;Unicode::Collate&quot;</tt> upgrade from 0.63 to 0.67. See below for details. </p>
+<dt>&bull;</dt>
+<dd> The following modules were added by the <tt>&quot;Unicode::Collate&quot;</tt> upgrade from 0.63 to 0.67. See below for details. </dd>
 <p> <tt>&quot;Unicode::Collate::CJK::Big5&quot;</tt> </p>
 <p> <tt>&quot;Unicode::Collate::CJK::GB2312&quot;</tt> </p>
 <p> <tt>&quot;Unicode::Collate::CJK::JISX0208&quot;</tt> </p>
@@ -125,106 +125,106 @@ is used(c) If @{} overloading exists on a blessed hashref, @{} is used
 <p> <tt>&quot;Unicode::Collate::CJK::Stroke&quot;</tt></dl>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Archive::Extract&quot;</tt> has been upgraded from 0.44 to 0.46 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Archive::Extract&quot;</tt> has been upgraded from 0.44 to 0.46 </dd>
 <p> Resolves an issue with NetBSD-current and its new unzip executable.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Archive::Tar&quot;</tt> has been upgraded from 1.68 to 1.72 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Archive::Tar&quot;</tt> has been upgraded from 1.68 to 1.72 </dd>
 <p> This adds the ptargrep utility for using regular expressions against the contents of files in a tar archive.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B&quot;</tt> has been upgraded from 1.24 to 1.26. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B&quot;</tt> has been upgraded from 1.24 to 1.26. </dd>
 <p> It no longer crashes when taking apart a <tt>&quot;y///&quot;</tt> containing characters outside the octet range or compiled in a <tt>&quot;use utf8&quot;</tt> scope. </p>
 <p> The size of the shared object has been reduced by about 40%, with no reduction in functionality.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Deparse&quot;</tt> has been upgraded from 0.99 to 1.01. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Deparse&quot;</tt> has been upgraded from 0.99 to 1.01. </dd>
 <p> It fixes deparsing of <tt>&quot;our&quot;</tt> followed by a variable with funny characters (as permitted under the <tt>&quot;utf8&quot;</tt> pragma) [perl #33752] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=33752">http://rt.perl.org/rt3/Public/Bug/Display.html?id=33752</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CGI&quot;</tt> has been upgraded from 3.49 to 3.50 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CGI&quot;</tt> has been upgraded from 3.49 to 3.50 </dd>
 <p> This provides the following security fixes: the <font SIZE="-1">MIME</font> boundary in multipart_init is now random and improvements to the handling of newlines embedded in header values. </p>
 <p> The documentation for <i>param_fetch()</i> has been corrected and clarified.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CPAN&quot;</tt> has been upgraded from 1.94_61 to 1.94_62</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CPANPLUS&quot;</tt> has been upgraded from 0.9007 to 0.9010 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CPAN&quot;</tt> has been upgraded from 1.94_61 to 1.94_62</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CPANPLUS&quot;</tt> has been upgraded from 0.9007 to 0.9010 </dd>
 <p> Fixes for the SQLite source engine and resolving of issues with the testsuite when run under local::lib and/or cpanminus</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CPANPLUS::Dist::Build&quot;</tt> has been upgraded from 0.48 to 0.50</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Data::Dumper&quot;</tt> has been upgraded from 2.129 to 2.130_01.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;DynaLoader&quot;</tt> has been upgraded from 1.10 to 1.11. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CPANPLUS::Dist::Build&quot;</tt> has been upgraded from 0.48 to 0.50</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Data::Dumper&quot;</tt> has been upgraded from 2.129 to 2.130_01.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DynaLoader&quot;</tt> has been upgraded from 1.10 to 1.11. </dd>
 <p> It fixes a buffer overflow when passed a very long file name.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> has been upgraded from 0.22 to 0.23. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> has been upgraded from 0.22 to 0.23. </dd>
 <p> The <tt>&quot;AUTOLOAD&quot;</tt> helper code generated by <tt>&quot;ExtUtils::Constant::ProxySubs&quot;</tt> can now <tt>&quot;croak&quot;</tt> for missing constants, or generate a complete <tt>&quot;AUTOLOAD&quot;</tt> subroutine in <font SIZE="-1">XS</font>, allowing simplification of many modules that use it. (<tt>&quot;Fcntl&quot;</tt>, <tt>&quot;File::Glob&quot;</tt>, <tt>&quot;GDBM_File&quot;</tt>, <tt>&quot;I18N::Langinfo&quot;</tt>, <tt>&quot;POSIX&quot;</tt>, <tt>&quot;Socket&quot;</tt>) </p>
 <p> <tt>&quot;ExtUtils::Constant::ProxySubs&quot;</tt> can now optionally push the names of all constants onto the package&#8217;s C{@EXPORT_OK}. This has been used to replace less space-efficient code in <tt>&quot;B&quot;</tt>, helping considerably shrink the size of its shared object.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Fcntl&quot;</tt> has been upgraded from 1.09 to 1.10.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Fetch&quot;</tt> has been upgraded from 0.24 to 0.28 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Fcntl&quot;</tt> has been upgraded from 1.09 to 1.10.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Fetch&quot;</tt> has been upgraded from 0.24 to 0.28 </dd>
 <p> <tt>&quot;HTTP::Lite&quot;</tt> is now supported for &#8216;http&#8217; scheme. </p>
 <p> The <tt>&quot;fetch&quot;</tt> utility is supported on FreeBSD, NetBSD and Dragonfly <font SIZE="-1">BSD</font> for the <tt>&quot;http&quot;</tt> and <tt>&quot;ftp&quot;</tt> schemes.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Glob&quot;</tt> has been upgraded from 1.09 to 1.10.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::stat&quot;</tt> has been upgraded from 1.03 to 1.04. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Glob&quot;</tt> has been upgraded from 1.09 to 1.10.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::stat&quot;</tt> has been upgraded from 1.03 to 1.04. </dd>
 <p> The <tt>&quot;-x&quot;</tt> and <tt>&quot;-X&quot;</tt> file test operators now work correctly under the root user.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;GDBM_File&quot;</tt> has been upgraded from 1.11 to 1.12. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;GDBM_File&quot;</tt> has been upgraded from 1.11 to 1.12. </dd>
 <p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Hash::Util&quot;</tt> has been upgraded from 0.09 to 0.10.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Hash::Util::FieldHash&quot;</tt> has been upgraded from 1.05 to 1.06.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;I18N::Langinfo&quot;</tt> has been upgraded from 0.06 to 0.07.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Locale::Maketext&quot;</tt> has been upgraded from 1.16 to 1.17.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigInt&quot;</tt> has been upgraded from 1.97 to 1.99_01.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigRat&quot;</tt> has been upgraded from 0.26 to 0.26_01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigInt::FastCalc&quot;</tt> has been upgraded from 0.22 to 0.24_01.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;MIME::Base64&quot;</tt> has been upgraded from 3.09 to 3.10 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Hash::Util&quot;</tt> has been upgraded from 0.09 to 0.10.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Hash::Util::FieldHash&quot;</tt> has been upgraded from 1.05 to 1.06.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;I18N::Langinfo&quot;</tt> has been upgraded from 0.06 to 0.07.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Locale::Maketext&quot;</tt> has been upgraded from 1.16 to 1.17.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigInt&quot;</tt> has been upgraded from 1.97 to 1.99_01.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigRat&quot;</tt> has been upgraded from 0.26 to 0.26_01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigInt::FastCalc&quot;</tt> has been upgraded from 0.22 to 0.24_01.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;MIME::Base64&quot;</tt> has been upgraded from 3.09 to 3.10 </dd>
 <p> Includes new functions to calculate the length of encoded and decoded base64 strings.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;mro&quot;</tt> has been upgraded from 1.04 to 1.05.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;NDBM_File&quot;</tt> has been upgraded from 1.09 to 1.10. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;mro&quot;</tt> has been upgraded from 1.04 to 1.05.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;NDBM_File&quot;</tt> has been upgraded from 1.09 to 1.10. </dd>
 <p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ODBM_File&quot;</tt> has been upgraded from 1.08 to 1.09. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ODBM_File&quot;</tt> has been upgraded from 1.08 to 1.09. </dd>
 <p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Opcode&quot;</tt> has been upgraded from 1.16 to 1.17.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;parent&quot;</tt> has been upgraded from 0.223 to 0.224</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Simple&quot;</tt> has been upgraded from 3.14 to 3.15 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Opcode&quot;</tt> has been upgraded from 1.16 to 1.17.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;parent&quot;</tt> has been upgraded from 0.223 to 0.224</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Simple&quot;</tt> has been upgraded from 3.14 to 3.15 </dd>
 <p> Includes various fixes to <tt>&quot;HTML&quot;</tt> and <tt>&quot;XHTML&quot;</tt> handling.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX&quot;</tt> has been upgraded from 1.21 to 1.22.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;re&quot;</tt> has been upgraded from 0.13 to 0.14, for the sake of the new <tt>&quot;use re &quot;/flags&quot;&quot;</tt> pragma.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Safe&quot;</tt> has been upgraded from 2.28 to 2.29. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX&quot;</tt> has been upgraded from 1.21 to 1.22.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;re&quot;</tt> has been upgraded from 0.13 to 0.14, for the sake of the new <tt>&quot;use re &quot;/flags&quot;&quot;</tt> pragma.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Safe&quot;</tt> has been upgraded from 2.28 to 2.29. </dd>
 <p> It adds <tt>&amp;version::vxs::VCMP</tt> to the default share.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;SDBM_File&quot;</tt> has been upgraded from 1.07 to 1.08.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;SelfLoader&quot;</tt> has been upgraded from 1.17 to 1.18. </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;SDBM_File&quot;</tt> has been upgraded from 1.07 to 1.08.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;SelfLoader&quot;</tt> has been upgraded from 1.17 to 1.18. </dd>
 <p> It now works in taint mode [perl #72062] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72062">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72062</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Socket&quot;</tt> has been upgraded from 1.90 to 1.91.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Storable&quot;</tt> has been upgraded from 2.22 to 2.24 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Socket&quot;</tt> has been upgraded from 1.90 to 1.91.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Storable&quot;</tt> has been upgraded from 2.22 to 2.24 </dd>
 <p> Includes performance improvement for overloaded classes.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Sys::Hostname&quot;</tt> has been upgraded from 1.13 to 1.14.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::Collate&quot;</tt> has been upgraded from 0.63 to 0.67 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Sys::Hostname&quot;</tt> has been upgraded from 1.13 to 1.14.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::Collate&quot;</tt> has been upgraded from 0.63 to 0.67 </dd>
 <p> This release newly adds locales <tt>&quot;ja&quot;</tt> <tt>&quot;ko&quot;</tt> and <tt>&quot;zh&quot;</tt> and its variants ( <tt>&quot;zh__big5han&quot;</tt>, <tt>&quot;zh__gb2312han&quot;</tt>, <tt>&quot;zh__pinyin&quot;</tt>, <tt>&quot;zh__stroke&quot;</tt> ). </p>
 <p> Supported UCA_Version 22 for Unicode 6.0.0. </p>
 <p> The following modules have been added: </p>
@@ -242,99 +242,100 @@ is used(c) If @{} overloading exists on a blessed hashref, @{} is used
 <p> ( This was added to <tt>&quot;v5.13.6&quot;</tt> but was not documented with that release ).</p>
 <h3>Changes to Existing Documentation</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Array and hash slices in scalar context are now documented in perldata.</p>
-<dt>&bull;</p>
-<dd> perlform and perllocale have been corrected to state that <tt>&quot;use locale&quot;</tt> affects formats.</dl>
+<dt>&bull;</dt>
+<dd> Array and hash slices in scalar context are now documented in perldata.</dd>
+<dt>&bull;</dt>
+<dd> perlform and perllocale have been corrected to state that <tt>&quot;use locale&quot;</tt> affects formats.</dd></dl>
 <h2>Diagnostics</h2>
 <h3>New Diagnostics</h3>
 <dl>
-<dt>&bull;</p>
-<dd> &#8220;Using !~ with <tt>%s</tt> doesn&#8217;t make sense&#8221;: This message was actually added in 5.13.2, but was omitted from perldelta. It now applies also to the <tt>&quot;y///&quot;</tt> operator, and has been documented.</dl>
+<dt>&bull;</dt>
+<dd> &#8220;Using !~ with <tt>%s</tt> doesn&#8217;t make sense&#8221;: This message was actually added in 5.13.2, but was omitted from perldelta. It now applies also to the <tt>&quot;y///&quot;</tt> operator, and has been documented.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <i>ptargrep</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> ptargrep is a utility to apply pattern matching to the contents of files in a tar archive. It comes with <tt>&quot;Archive::Tar&quot;</tt>.</dl>
+<dt>&bull;</dt>
+<dd> ptargrep is a utility to apply pattern matching to the contents of files in a tar archive. It comes with <tt>&quot;Archive::Tar&quot;</tt>.</dd></dl>
 <h2>Testing</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The new <i>t/mro/isa_aliases.t</i> has been added, which tests that <tt>&quot;*Foo::ISA = *Bar::ISA&quot;</tt> works properly.</p>
-<dt>&bull;</p>
-<dd> <i>t/mro/isarev.t</i> has been added, which tests that <tt>&quot;PL_isarev&quot;</tt> (accessible at the Perl level via <tt>&quot;mro::get_isarev&quot;</tt>) is updated properly.</p>
-<dt>&bull;</p>
-<dd> <i>t/run/switchd-78586.t</i> has been added, which tests that [perl #78586] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78586">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78586</a>&gt; has been fixed (related to line numbers in the debugger).</dl>
+<dt>&bull;</dt>
+<dd> The new <i>t/mro/isa_aliases.t</i> has been added, which tests that <tt>&quot;*Foo::ISA = *Bar::ISA&quot;</tt> works properly.</dd>
+<dt>&bull;</dt>
+<dd> <i>t/mro/isarev.t</i> has been added, which tests that <tt>&quot;PL_isarev&quot;</tt> (accessible at the Perl level via <tt>&quot;mro::get_isarev&quot;</tt>) is updated properly.</dd>
+<dt>&bull;</dt>
+<dd> <i>t/run/switchd-78586.t</i> has been added, which tests that [perl #78586] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78586">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78586</a>&gt; has been fixed (related to line numbers in the debugger).</dd></dl>
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt>Windows</p>
-<dd> Directory handles are now properly cloned when threads are created. In perl 5.13.6, child threads simply stopped inheriting directory handles. In previous versions, threads would share handles, resulting in crashes. </p>
+<dt>Windows</dt>
+<dd> Directory handles are now properly cloned when threads are created. In perl 5.13.6, child threads simply stopped inheriting directory handles. In previous versions, threads would share handles, resulting in crashes. </dd>
 <p> Support for building with Visual C<font SIZE="-2">++</font> 2010 is now underway, but is not yet complete. See <i></i><font SIZE="-1"><i>README</i></font><i>.win32</i> for more details.</p>
-<dt><font SIZE="-1">VMS</font></p>
-<dd> Record-oriented files (record format variable or variable with fixed control) opened for write by the perlio layer will now be line buffered to prevent the introduction of spurious line breaks whenever the perlio buffer fills up.</dl>
+<dt><font SIZE="-1">VMS</font></dt>
+<dd> Record-oriented files (record format variable or variable with fixed control) opened for write by the perlio layer will now be line buffered to prevent the introduction of spurious line breaks whenever the perlio buffer fills up.</dd></dl>
 <h2>Internal Changes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;lex_start&quot;</tt> has been added to the <font SIZE="-1">API</font>, but is considered experimental.</p>
-<dt>&bull;</p>
-<dd> A new <tt>&quot;parse_block&quot;</tt> function has been added to the <font SIZE="-1">API</font> [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> A new, experimental <font SIZE="-1">API</font> has been added for accessing the internal structure that Perl uses for <tt>&quot;%^H&quot;</tt>. See the functions beginning with <tt>&quot;cophh_&quot;</tt> in perlapi.</p>
-<dt>&bull;</p>
-<dd> A stash can now have a list of effective names in addition to its usual name. The first effective name can be accessed via the <tt>&quot;HvENAME&quot;</tt> macro, which is now the recommended name to use in <font SIZE="-1">MRO</font> linearisations (<tt>&quot;HvNAME&quot;</tt> being a fallback if there is no <tt>&quot;HvENAME&quot;</tt>). </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;lex_start&quot;</tt> has been added to the <font SIZE="-1">API</font>, but is considered experimental.</dd>
+<dt>&bull;</dt>
+<dd> A new <tt>&quot;parse_block&quot;</tt> function has been added to the <font SIZE="-1">API</font> [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> A new, experimental <font SIZE="-1">API</font> has been added for accessing the internal structure that Perl uses for <tt>&quot;%^H&quot;</tt>. See the functions beginning with <tt>&quot;cophh_&quot;</tt> in perlapi.</dd>
+<dt>&bull;</dt>
+<dd> A stash can now have a list of effective names in addition to its usual name. The first effective name can be accessed via the <tt>&quot;HvENAME&quot;</tt> macro, which is now the recommended name to use in <font SIZE="-1">MRO</font> linearisations (<tt>&quot;HvNAME&quot;</tt> being a fallback if there is no <tt>&quot;HvENAME&quot;</tt>). </dd>
 <p> These names are added and deleted via <tt>&quot;hv_ename_add&quot;</tt> and <tt>&quot;hv_ename_delete&quot;</tt>. These two functions are <i>not</i> part of the <font SIZE="-1">API</font>.</p>
-<dt>&bull;</p>
-<dd> The way the parser handles labels has been cleaned up and refactored. As a result, the <tt>&quot;newFOROP()&quot;</tt> constructor function no longer takes a parameter stating what label is to go in the state op.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;newWHILEOP()&quot;</tt> and <tt>&quot;newFOROP()&quot;</tt> functions no longer accept a line number as a parameter.</p>
-<dt>&bull;</p>
-<dd> A new <tt>&quot;parse_barestmt()&quot;</tt> function has been added, for parsing a statement without a label.</p>
-<dt>&bull;</p>
-<dd> A new <tt>&quot;parse_label()&quot;</tt> function has been added, that parses a statement label, separate from statements.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;CvSTASH()&quot;</tt> macro can now only be used as an rvalue. <tt>&quot;CvSTASH_set()&quot;</tt> has been added to replace assignment to <tt>&quot;CvSTASH()&quot;</tt>. This is to ensure that backreferences are handled properly. These macros are not part of the <font SIZE="-1">API</font>.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;op_scope()&quot;</tt> and <tt>&quot;op_lvalue()&quot;</tt> functions have been added to the <font SIZE="-1">API</font>, but are considered experimental.</dl>
+<dt>&bull;</dt>
+<dd> The way the parser handles labels has been cleaned up and refactored. As a result, the <tt>&quot;newFOROP()&quot;</tt> constructor function no longer takes a parameter stating what label is to go in the state op.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;newWHILEOP()&quot;</tt> and <tt>&quot;newFOROP()&quot;</tt> functions no longer accept a line number as a parameter.</dd>
+<dt>&bull;</dt>
+<dd> A new <tt>&quot;parse_barestmt()&quot;</tt> function has been added, for parsing a statement without a label.</dd>
+<dt>&bull;</dt>
+<dd> A new <tt>&quot;parse_label()&quot;</tt> function has been added, that parses a statement label, separate from statements.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;CvSTASH()&quot;</tt> macro can now only be used as an rvalue. <tt>&quot;CvSTASH_set()&quot;</tt> has been added to replace assignment to <tt>&quot;CvSTASH()&quot;</tt>. This is to ensure that backreferences are handled properly. These macros are not part of the <font SIZE="-1">API</font>.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;op_scope()&quot;</tt> and <tt>&quot;op_lvalue()&quot;</tt> functions have been added to the <font SIZE="-1">API</font>, but are considered experimental.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;parse_stmt&quot;</tt> C function added in earlier in the 5.13.x series has been fixed to work with statements ending with <tt>&quot;}&quot;</tt> [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;parse_fullstmt&quot;</tt> C function added in 5.13.5 has been fixed to work when called while an expression is being parsed.</p>
-<dt>&bull;</p>
-<dd> Characters in the Latin-1 non-ASCII range (0x80 to 0xFF) used not to match themselves if the string happened to be UTF8-encoded internally, the regular expression was not, and the character in the regular expression was inside a repeated group (e.g., <tt>&quot;Encode::decode_utf8(&quot;\303\200&quot;) =~ /(�)+/&quot;</tt>) [perl #78464] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78464">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78464</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;(?d)&quot;</tt> regular expression construct now overrides a previous <tt>&quot;(?u)&quot;</tt> or <tt>&quot;use feature &quot;unicode_string&quot;&quot;</tt> [perl #78508] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78508">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78508</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> A memory leak in <tt>&quot;do &quot;file&quot;&quot;</tt>, introduced in perl 5.13.6, has been fixed [perl #78488] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78488">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78488</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> Various bugs related to typeglob dereferencing have been fixed. See &#8220;Dereferencing typeglobs&#8221;, above.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;SvPVbyte&quot;</tt> function available to <font SIZE="-1">XS</font> modules now calls magic before downgrading the <font SIZE="-1">SV</font>, to avoid warnings about wide characters [perl #72398] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;=&quot;</tt> operator used to ignore magic (e.g., tie methods) on its right-hand side if the scalar happened to hold a typeglob. This could happen if a typeglob was the last thing returned from or assigned to a tied scalar [perl #77498] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;sprintf&quot;</tt> was ignoring locales when called with constant arguments [perl #78632] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78632">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78632</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> A non-ASCII character in the Latin-1 range could match both a Posix class, such as <tt>&quot;[[:alnum:]]&quot;</tt>, and its inverse <tt>&quot;[[:^alnum:]]&quot;</tt>. This is now fixed for regular expressions compiled under the <tt>&quot;u&quot;</tt> modifier. See &quot;<tt>&quot;use feature &quot;unicode_strings&quot;&quot;</tt> now applies to more regex matching&quot;. [perl #18281] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=18281">http://rt.perl.org/rt3/Public/Bug/Display.html?id=18281</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> Concatenating long strings under <tt>&quot;use encoding&quot;</tt> no longer causes perl to crash [perl #78674] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> Typeglob assignments would crash if the glob&#8217;s stash no longer existed, so long as the glob assigned to was named &#8216;<font SIZE="-1">ISA</font>&#8216; or the glob on either side of the assignment contained a subroutine.</p>
-<dt>&bull;</p>
-<dd> Calling <tt>&quot;-&gt;import&quot;</tt> on a class lacking an import method could corrupt the stack, resulting in strange behaviour. For instance, </p>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;parse_stmt&quot;</tt> C function added in earlier in the 5.13.x series has been fixed to work with statements ending with <tt>&quot;}&quot;</tt> [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;parse_fullstmt&quot;</tt> C function added in 5.13.5 has been fixed to work when called while an expression is being parsed.</dd>
+<dt>&bull;</dt>
+<dd> Characters in the Latin-1 non-ASCII range (0x80 to 0xFF) used not to match themselves if the string happened to be UTF8-encoded internally, the regular expression was not, and the character in the regular expression was inside a repeated group (e.g., <tt>&quot;Encode::decode_utf8(&quot;\303\200&quot;) =~ /(�)+/&quot;</tt>) [perl #78464] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78464">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78464</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;(?d)&quot;</tt> regular expression construct now overrides a previous <tt>&quot;(?u)&quot;</tt> or <tt>&quot;use feature &quot;unicode_string&quot;&quot;</tt> [perl #78508] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78508">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78508</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> A memory leak in <tt>&quot;do &quot;file&quot;&quot;</tt>, introduced in perl 5.13.6, has been fixed [perl #78488] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78488">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78488</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> Various bugs related to typeglob dereferencing have been fixed. See &#8220;Dereferencing typeglobs&#8221;, above.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;SvPVbyte&quot;</tt> function available to <font SIZE="-1">XS</font> modules now calls magic before downgrading the <font SIZE="-1">SV</font>, to avoid warnings about wide characters [perl #72398] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;=&quot;</tt> operator used to ignore magic (e.g., tie methods) on its right-hand side if the scalar happened to hold a typeglob. This could happen if a typeglob was the last thing returned from or assigned to a tied scalar [perl #77498] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;sprintf&quot;</tt> was ignoring locales when called with constant arguments [perl #78632] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78632">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78632</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> A non-ASCII character in the Latin-1 range could match both a Posix class, such as <tt>&quot;[[:alnum:]]&quot;</tt>, and its inverse <tt>&quot;[[:^alnum:]]&quot;</tt>. This is now fixed for regular expressions compiled under the <tt>&quot;u&quot;</tt> modifier. See &quot;<tt>&quot;use feature &quot;unicode_strings&quot;&quot;</tt> now applies to more regex matching&quot;. [perl #18281] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=18281">http://rt.perl.org/rt3/Public/Bug/Display.html?id=18281</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> Concatenating long strings under <tt>&quot;use encoding&quot;</tt> no longer causes perl to crash [perl #78674] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> Typeglob assignments would crash if the glob&#8217;s stash no longer existed, so long as the glob assigned to was named &#8216;<font SIZE="-1">ISA</font>&#8216; or the glob on either side of the assignment contained a subroutine.</dd>
+<dt>&bull;</dt>
+<dd> Calling <tt>&quot;-&gt;import&quot;</tt> on a class lacking an import method could corrupt the stack, resulting in strange behaviour. For instance, </dd>
 <pre>
   push @a, &quot;foo&quot;, $b = bar-&gt;import;
 </pre>
 <p> would assign &#8216;foo&#8217; to <tt>$b</tt> [perl #63790] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=63790">http://rt.perl.org/rt3/Public/Bug/Display.html?id=63790</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> Creating an alias to a package when that package had been detached from the symbol table would result in corrupted isa caches [perl #77358] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;.=&quot;</tt> followed by <tt>&quot;&lt;&gt;&quot;</tt> or <tt>&quot;readline&quot;</tt> would leak memory if <tt>$/</tt> contained characters beyond the octet range and the scalar assigned to happened to be encoded as <font SIZE="-1">UTF8</font> internally [perl #72246] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;recv&quot;</tt> function could crash when called with the <font SIZE="-1">MSG_TRUNC</font> flag [perl #75082] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> Evaluating a simple glob (like <tt>*a</tt>) was calling get-magic on the glob, even when its contents were not being used [perl #78580] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580</a>&gt;. </p>
+<dt>&bull;</dt>
+<dd> Creating an alias to a package when that package had been detached from the symbol table would result in corrupted isa caches [perl #77358] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;.=&quot;</tt> followed by <tt>&quot;&lt;&gt;&quot;</tt> or <tt>&quot;readline&quot;</tt> would leak memory if <tt>$/</tt> contained characters beyond the octet range and the scalar assigned to happened to be encoded as <font SIZE="-1">UTF8</font> internally [perl #72246] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;recv&quot;</tt> function could crash when called with the <font SIZE="-1">MSG_TRUNC</font> flag [perl #75082] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> Evaluating a simple glob (like <tt>*a</tt>) was calling get-magic on the glob, even when its contents were not being used [perl #78580] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580</a>&gt;. </dd>
 <p> This bug was introduced in 5.13.2 and did not affect earlier perl versions.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> Matching a Unicode character against an alternation containing characters that happened to match continuation bytes in the former&#8217;s <font SIZE="-1">UTF8</font> representation (<tt>&quot;qq{
+</dd></dl>

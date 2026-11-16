@@ -15,21 +15,13 @@ description: "system-auth-ac, password-auth-ac, smartcard-auth-ac, fingerprint-a
 <h2>Example</h2>
 <p>Configure system to use pam_tally2 for configuration of maximum number of failed logins. Also call pam_access to verify if access is allowed. Make <code>system-auth</code> symlink point to system-auth-local which contains: </p>
 <pre><code>auth            requisite       pam_access.so
-
 auth            requisite       pam_tally2.so deny=3 lock_time=30 \
-
 unlock_time=3600
-
 auth            include         system-auth-ac
-
 account         required        pam_tally2.so
-
 account         include         system-auth-ac
-
 password        include         system-auth-ac
-
 session         include         system-auth-ac
-
 </code></pre>
 <h2>Bugs</h2>
 <p>None known. </p>

@@ -27,12 +27,12 @@ description: "pmdasamba – Samba performance metrics domain agent (PMDA)"
 <p> <code>pmdasamba</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$PCP_PMDAS_DIR/samba/Install</p>
-<dd> installation script for the <code>pmdasamba</code> agent</p>
-<dt>$PCP_PMDAS_DIR/samba/Remove</p>
-<dd> undo installation script for the <code>pmdasamba</code> agent</p>
-<dt>$PCP_LOG_DIR/pmcd/samba.log</p>
-<dd> default log file for error messages from <code>pmdasamba</code></dl>
+<dt>$PCP_PMDAS_DIR/samba/Install</dt>
+<dd> installation script for the <code>pmdasamba</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/samba/Remove</dt>
+<dd> undo installation script for the <code>pmdasamba</code> agent</dd>
+<dt>$PCP_LOG_DIR/pmcd/samba.log</dt>
+<dd> default log file for error messages from <code>pmdasamba</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1), <i><a href="/docs/linux/man/7-samba/">samba</a></i>(7) and <i><a href="/docs/linux/man/8-smbd/">smbd</a></i>(8). </p>
 <h2>Index</h2>

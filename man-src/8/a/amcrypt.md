@@ -10,10 +10,10 @@ description: "amcrypt – reference crypt program for Amanda symmetric data encr
 <p>amcrypt &#8211; reference crypt program for Amanda symmetric data encryption</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amcrypt</code></dl>
+<dt> <code>amcrypt</code></dt></dl>
 <h2>Description</h2>
 <p><code>amcrypt</code></p>
-<dd>requires <code>aespipe</code>, <code>uuencode</code> and <code>gpg</code> to work. Aespipe is available from : <a rel="nofollow" href="http://loop-aes.sourceforge.net">http://loop-aes.sourceforge.net</a> </p>
+<dd>requires <code>aespipe</code>, <code>uuencode</code> and <code>gpg</code> to work. Aespipe is available from : <a rel="nofollow" href="http://loop-aes.sourceforge.net">http://loop-aes.sourceforge.net</a> </dd>
 <p> <code>amcrypt</code> will search for the aespipe program in the following directories: /usr/bin:/usr/local/bin:/sbin:/usr/sbin. </p>
 <p> <code>amcrypt</code> calls <code>amaespipe</code> and pass the <code>passphrase</code> through file descriptor 3. The passphrase should be stored in ~amanda/.am_passphrase.</p>
 <h2>How To Create Encryption Keys For Amcrypt</h2>
@@ -33,4 +33,4 @@ chmod 700 ~amanda/.am_passphrase</pre>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

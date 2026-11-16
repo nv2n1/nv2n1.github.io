@@ -51,25 +51,25 @@ int
 <code>Tcl_UtfBackslash</code>(<i>src, readPtr, dst</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>char <i>*buf</i> (out) Buffer in which the UTF-8 representation of the Tcl_UniChar is stored. At most <code>TCL_UTF_MAX</code> bytes are stored in the buffer.</p>
-<dd>int <i>ch</i> (in) The Tcl_UniChar to be converted or examined.</p>
-<dd>Tcl_UniChar <i>*chPtr</i> (out) Filled with the Tcl_UniChar represented by the head of the UTF-8 string.</p>
-<dd>const char <i>*src</i> (in) Pointer to a UTF-8 string.</p>
-<dd>const char <i>*cs</i> (in) Pointer to a UTF-8 string.</p>
-<dd>const char <i>*ct</i> (in) Pointer to a UTF-8 string.</p>
-<dd>const Tcl_UniChar <i>*uniStr</i> (in) A null-terminated Unicode string.</p>
-<dd>const Tcl_UniChar <i>*ucs</i> (in) A null-terminated Unicode string.</p>
-<dd>const Tcl_UniChar <i>*uct</i> (in) A null-terminated Unicode string.</p>
-<dd>const Tcl_UniChar <i>*uniPattern</i> (in) A null-terminated Unicode string.</p>
-<dd>int <i>length</i> (in) The length of the UTF-8 string in bytes (not UTF-8 characters). If negative, all bytes up to the first null byte are used.</p>
-<dd>int <i>uniLength</i> (in) The length of the Unicode string in characters. Must be greater than or equal to 0.</p>
-<dd>Tcl_DString <i>*dsPtr</i> (in/out) A pointer to a previously initialized <code>Tcl_DString</code>.</p>
-<dd>unsigned long <i>numChars</i> (in) The number of characters to compare.</p>
-<dd>const char <i>*start</i> (in) Pointer to the beginning of a UTF-8 string.</p>
-<dd>int <i>index</i> (in) The index of a character (not byte) in the UTF-8 string.</p>
-<dd>int <i>*readPtr</i> (out) If non-NULL, filled with the number of bytes in the backslash sequence, including the backslash character.</p>
-<dd>char <i>*dst</i> (out) Buffer in which the bytes represented by the backslash sequence are stored. At most <code>TCL_UTF_MAX</code> bytes are stored in the buffer.</p>
-<dd>int <i>nocase</i> (in) Specifies whether the match should be done case-sensitive (0) or case-insensitive (1). </p>
+<dd>char <i>*buf</i> (out) Buffer in which the UTF-8 representation of the Tcl_UniChar is stored. At most <code>TCL_UTF_MAX</code> bytes are stored in the buffer.</dd>
+<dd>int <i>ch</i> (in) The Tcl_UniChar to be converted or examined.</dd>
+<dd>Tcl_UniChar <i>*chPtr</i> (out) Filled with the Tcl_UniChar represented by the head of the UTF-8 string.</dd>
+<dd>const char <i>*src</i> (in) Pointer to a UTF-8 string.</dd>
+<dd>const char <i>*cs</i> (in) Pointer to a UTF-8 string.</dd>
+<dd>const char <i>*ct</i> (in) Pointer to a UTF-8 string.</dd>
+<dd>const Tcl_UniChar <i>*uniStr</i> (in) A null-terminated Unicode string.</dd>
+<dd>const Tcl_UniChar <i>*ucs</i> (in) A null-terminated Unicode string.</dd>
+<dd>const Tcl_UniChar <i>*uct</i> (in) A null-terminated Unicode string.</dd>
+<dd>const Tcl_UniChar <i>*uniPattern</i> (in) A null-terminated Unicode string.</dd>
+<dd>int <i>length</i> (in) The length of the UTF-8 string in bytes (not UTF-8 characters). If negative, all bytes up to the first null byte are used.</dd>
+<dd>int <i>uniLength</i> (in) The length of the Unicode string in characters. Must be greater than or equal to 0.</dd>
+<dd>Tcl_DString <i>*dsPtr</i> (in/out) A pointer to a previously initialized <code>Tcl_DString</code>.</dd>
+<dd>unsigned long <i>numChars</i> (in) The number of characters to compare.</dd>
+<dd>const char <i>*start</i> (in) Pointer to the beginning of a UTF-8 string.</dd>
+<dd>int <i>index</i> (in) The index of a character (not byte) in the UTF-8 string.</dd>
+<dd>int <i>*readPtr</i> (out) If non-NULL, filled with the number of bytes in the backslash sequence, including the backslash character.</dd>
+<dd>char <i>*dst</i> (out) Buffer in which the bytes represented by the backslash sequence are stored. At most <code>TCL_UTF_MAX</code> bytes are stored in the buffer.</dd>
+<dd>int <i>nocase</i> (in) Specifies whether the match should be done case-sensitive (0) or case-insensitive (1). </dd>
 </dl>
 <h2>Description</h2>
 <p>These routines convert between UTF-8 strings and Tcl_UniChars. A Tcl_UniChar is a Unicode character represented as an unsigned, fixed-size quantity. A UTF-8 character is a Unicode character represented as a varying-length sequence of up to <code>TCL_UTF_MAX</code> bytes. A multibyte UTF-8 sequence consists of a lead byte followed by some number of trail bytes. </p>

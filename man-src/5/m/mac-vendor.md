@@ -33,12 +33,12 @@ B0C420 Bochs
 <p>Roy Hills &lt;Roy.Hills [at] nta-monitor.com&gt;</p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-get-oui/">get-oui</a></code>(1)</p>
+</dd><dt><code><a href="/docs/linux/man/1-get-oui/">get-oui</a></code>(1)</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-get-iab/">get-iab</a></code>(1)</p>
+</dd><dt><code><a href="/docs/linux/man/1-get-iab/">get-iab</a></code>(1)</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-arp-fingerprint/">arp-fingerprint</a></code>(1)</p>
-<dd></dl>
+</dd><dt><code><a href="/docs/linux/man/1-arp-fingerprint/">arp-fingerprint</a></code>(1)</dt>
+<dd></dd></dl>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>

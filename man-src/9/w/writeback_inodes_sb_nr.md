@@ -15,15 +15,15 @@ writeback_inodes_sb_nr - writeback dirty inodes from given super_block
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>the superblock</dl>
+<dl><dd></dd><dd>the superblock</dd></dl>
  
 
  <i>nr</i>
-<dl><dd>the number of pages to write</dl>
+<dl><dd>the number of pages to write</dd></dl>
  
 
  <i>reason</i>
-<dl><dd>reason why some writeback work initiated</dl>
+<dl><dd>reason why some writeback work initiated</dd></dl>
 
 <h2>Description</h2>
 

@@ -21,10 +21,10 @@ description: "IBNODES – show InfiniBand nodes in topology"
 <h3>Local port Selection</h3>
 <p>Multiple port/Multiple CA support: when no IB device or port is specified (see the &quot;local umad parameters&quot; below), the libibumad library selects the port to use by the following criteria:</p>
 <dl>
-<dt>1.</p>
-<dd>the first port that is ACTIVE.</p>
-<dt>2.</p>
-<dd>if not found, the first port that is UP (physical link up). </p>
+<dt>1.</dt>
+<dd>the first port that is ACTIVE.</dd>
+<dt>2.</dt>
+<dd>if not found, the first port that is UP (physical link up). </dd>
 <p> If a port and/or CA name is specified, the libibumad library attempts to fulfill the user request, and will fail if it is not possible. </p>
 <p> For example: </p>
 <pre>ibaddr # use the first port (criteria #1 above)
@@ -67,6 +67,6 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 <p>ibnetdiscover, ibnetdiscover format</p>
 <h2>Author</h2>
 <dl>
-<dt><code>Hal Rosenstock</code></p>
-<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </p>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </dd>
 </dl>

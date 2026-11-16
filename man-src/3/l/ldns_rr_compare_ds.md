@@ -17,11 +17,11 @@ description: "ldns_rr_compare, ldns_rr_compare_ds"
 <p> bool ldns_rr_compare_ds(const ldns_rr *rr1, const ldns_rr *rr2); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_compare</i>()</p>
-<dd>compares two rrs. The TTL is not looked at. .br <code>rr1</code>: the first one .br <code>rr2</code>: the second one .br Returns 0 if equal -1 if rr1 comes before rr2 +1 if rr2 comes before rr1</dl>
+<dt> <i>ldns_rr_compare</i>()</dt>
+<dd>compares two rrs. The TTL is not looked at. .br <code>rr1</code>: the first one .br <code>rr2</code>: the second one .br Returns 0 if equal -1 if rr1 comes before rr2 +1 if rr2 comes before rr1</dd></dl>
 <dl>
-<dt> <i>ldns_rr_compare_ds</i>()</p>
-<dd>returns true of the given rr&#8217;s are equal. Also returns true if one record is a DS that represents the same DNSKEY record as the other record .br <code>rr1</code>: the first rr .br <code>rr2</code>: the second rr .br Returns true if equal otherwise false</dl>
+<dt> <i>ldns_rr_compare_ds</i>()</dt>
+<dd>returns true of the given rr&#8217;s are equal. Also returns true if one record is a DS that represents the same DNSKEY record as the other record .br <code>rr1</code>: the first rr .br <code>rr2</code>: the second rr .br Returns true if equal otherwise false</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

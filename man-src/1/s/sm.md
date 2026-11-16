@@ -21,22 +21,22 @@ description: "sm – Command-line interface to the INN storage manager"
 <p> If <code>-s</code> is given, <code>sm</code> instead stores the article given on standard input (in native format, not wire format) using the standard rules of the storage subsystem. If the article is stored successfully, the token of the article is printed to standard output. Please note that this does not make any attempt to write a history entry or any overview data, and is therefore only useful under very specific circumstances.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Show a clear, decoded form of the storage <font SIZE="-1">API</font> token. Each part of the token is explained, in a human-readable string. Amongst other elements, this command gives the path to where the corresponding article is supposed to be stored.</p>
-<dt><code>-d</code>, <code>-r</code></p>
-<dd> Rather than retrieving the specified article, remove the article. This will delete the article out of the news spool and it will not subsequently be retrievable by any part of <font SIZE="-1">INN</font>. It&#8217;s equivalent to <tt>&quot;ctlinnd cancel&quot;</tt> except it takes a storage <font SIZE="-1">API</font> token instead of a message-ID.</p>
-<dt><code>-H</code></p>
-<dd> Retrieve only the headers of the article rather than the entire article. This option cannot be used with <code>-d</code>, <code>-r</code>, <code>-i</code>, or <code>-S</code>.</p>
-<dt><code>-i</code></p>
-<dd> Show the newsgroup name and article number associated with the token rather than the article itself. Note that for crossposted articles, only the first newsgroup and article number to which the article is associated will be returned.</p>
-<dt><code>-q</code></p>
-<dd> Suppress all error messages except usage errors.</p>
-<dt><code>-R</code></p>
-<dd> Display the raw article. This means that line endings won&#8217;t be converted to native line endings and will be left as <font SIZE="-1">CRLF</font> sequences; leading periods will still be escaped for sending over <font SIZE="-1">NNTP</font>, and the article will end in a <font SIZE="-1">CRLF</font>.CRLF sequence.</p>
-<dt><code>-S</code></p>
-<dd> Write the article to standard output in the format used by <code>rnews</code> spool files. Multiple articles can be written in this format, and the resulting output can be fed to <code>rnews</code> (on another system, for example) to inject those articles into <font SIZE="-1">INN</font>. This option cannot be used with <code>-d</code>, <code>-r</code>, <code>-H</code>, <code>-i</code>, or <code>-R</code>.</p>
-<dt><code>-s</code></p>
-<dd> Store the article given on standard input using the normal storage rules for articles as configured in <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). Print the new token for the message to standard output if it is stored successfully. If this option is given, no other options except possibly <code>-q</code> should be given.</dl>
+<dt><code>-c</code></dt>
+<dd> Show a clear, decoded form of the storage <font SIZE="-1">API</font> token. Each part of the token is explained, in a human-readable string. Amongst other elements, this command gives the path to where the corresponding article is supposed to be stored.</dd>
+<dt><code>-d</code>, <code>-r</code></dt>
+<dd> Rather than retrieving the specified article, remove the article. This will delete the article out of the news spool and it will not subsequently be retrievable by any part of <font SIZE="-1">INN</font>. It&#8217;s equivalent to <tt>&quot;ctlinnd cancel&quot;</tt> except it takes a storage <font SIZE="-1">API</font> token instead of a message-ID.</dd>
+<dt><code>-H</code></dt>
+<dd> Retrieve only the headers of the article rather than the entire article. This option cannot be used with <code>-d</code>, <code>-r</code>, <code>-i</code>, or <code>-S</code>.</dd>
+<dt><code>-i</code></dt>
+<dd> Show the newsgroup name and article number associated with the token rather than the article itself. Note that for crossposted articles, only the first newsgroup and article number to which the article is associated will be returned.</dd>
+<dt><code>-q</code></dt>
+<dd> Suppress all error messages except usage errors.</dd>
+<dt><code>-R</code></dt>
+<dd> Display the raw article. This means that line endings won&#8217;t be converted to native line endings and will be left as <font SIZE="-1">CRLF</font> sequences; leading periods will still be escaped for sending over <font SIZE="-1">NNTP</font>, and the article will end in a <font SIZE="-1">CRLF</font>.CRLF sequence.</dd>
+<dt><code>-S</code></dt>
+<dd> Write the article to standard output in the format used by <code>rnews</code> spool files. Multiple articles can be written in this format, and the resulting output can be fed to <code>rnews</code> (on another system, for example) to inject those articles into <font SIZE="-1">INN</font>. This option cannot be used with <code>-d</code>, <code>-r</code>, <code>-H</code>, <code>-i</code>, or <code>-R</code>.</dd>
+<dt><code>-s</code></dt>
+<dd> Store the article given on standard input using the normal storage rules for articles as configured in <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). Print the new token for the message to standard output if it is stored successfully. If this option is given, no other options except possibly <code>-q</code> should be given.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If all operations were successful, <code>sm</code> exits with status 0. If an operation on any of the provided tokens fails, <code>sm</code> will exit with status 1, even if the operations on other tokens were successful. In other words, if twenty tokens are fed to <tt>&quot;sm -r&quot;</tt> on stdin, 19 articles were successfully removed, but the sixth article couldn&#8217;t be found, <code>sm</code> will still exit with status 1. </p>
 <p> This means that if you need to be sure whether a particular operation succeeded, you should run <code>sm</code> on one token at a time.</p>

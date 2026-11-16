@@ -16,45 +16,42 @@ description: "virt-manager – display the virtual machine desktop management to
 <h2>OPTIONS</h2>
 <p> The following options are accepted when running <tt>&quot;virt-manager&quot;</tt>:</p>
 <dl>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Display command line help summary</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show virt-manager&#8217;s version number and exit</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Display command line help summary</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show virt-manager&#8217;s version number and exit</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code>=URI</p>
-<dd> Specify the hypervisor connection <tt>&quot;URI&quot;</tt></p>
-<dt><code>&#8211;debug</code></p>
-<dd> List debugging output to the console (normally this is only logged in ~/.cache/virt-manager/virt-manager.log). This function implies &#8211;no-fork.</p>
-<dt><code>&#8211;no-fork</code></p>
-<dd> Don&#8217;t fork <tt>&quot;virt-manager&quot;</tt> off into the background: run it blocking the current terminal. Useful for seeing possible errors dumped to stdout/stderr.</p>
-<dt><code>&#8211;no-conn-autostart</code></p>
-<dd> Don&#8217;t autostart any libvirt connections when launching <tt>&quot;virt-manager&quot;</tt>.</p>
-<dt><code>&#8211;show-DIALOG-WINDOW</code></p>
-<dd> Display the corresponding <tt>&quot;DIALOG-WINDOW&quot;</tt> when launching <tt>&quot;virt-manager&quot;</tt>. This function implies &#8211;no-conn-autostart and the manager window will not be shown at startup in this case. </p>
+</dd><dt><code>&#8211;connect</code>=URI</dt>
+<dd> Specify the hypervisor connection <tt>&quot;URI&quot;</tt></dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> List debugging output to the console (normally this is only logged in ~/.cache/virt-manager/virt-manager.log). This function implies &#8211;no-fork.</dd>
+<dt><code>&#8211;no-fork</code></dt>
+<dd> Don&#8217;t fork <tt>&quot;virt-manager&quot;</tt> off into the background: run it blocking the current terminal. Useful for seeing possible errors dumped to stdout/stderr.</dd>
+<dt><code>&#8211;no-conn-autostart</code></dt>
+<dd> Don&#8217;t autostart any libvirt connections when launching <tt>&quot;virt-manager&quot;</tt>.</dd>
+<dt><code>&#8211;show-DIALOG-WINDOW</code></dt>
+<dd> Display the corresponding <tt>&quot;DIALOG-WINDOW&quot;</tt> when launching <tt>&quot;virt-manager&quot;</tt>. This function implies &#8211;no-conn-autostart and the manager window will not be shown at startup in this case. </dd>
 <p> The following <tt>&quot;DIALOG-WINDOW&quot;</tt> options are currently available:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>&#8211;show-domain-creator</code></p>
-<dd> Display the wizard for creating new virtual machines</p>
-<dt><code>&#8211;show-domain-editor</code> NAME|ID|UUID</p>
-<dd> Display the dialog for editing properties of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></p>
-<dt><code>&#8211;show-domain-performance</code> NAME|ID|UUID</p>
-<dd> Display the dialog for monitoring performance of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></p>
-<dt><code>&#8211;show-domain-console</code> NAME|ID|UUID</p>
-<dd> Display the virtual console of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></p>
-<dt><code>&#8211;show-host-summary</code></p>
-<dd> Display the main window summarizing performance for all virtual machines on the host.</dl>
+<dt><code>&#8211;show-domain-creator</code></dt>
+<dd> Display the wizard for creating new virtual machines</dd>
+<dt><code>&#8211;show-domain-editor</code> NAME|ID|UUID</dt>
+<dd> Display the dialog for editing properties of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dt><code>&#8211;show-domain-performance</code> NAME|ID|UUID</dt>
+<dd> Display the dialog for monitoring performance of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dt><code>&#8211;show-domain-console</code> NAME|ID|UUID</dt>
+<dd> Display the virtual console of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dt><code>&#8211;show-host-summary</code></dt>
+<dd> Display the main window summarizing performance for all virtual machines on the host.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;spice-disable-auto-usbredir</code></p>
-<dd> Auto <font SIZE="-1">USB</font> redirection is supported by default. This option switches off it.</dl>
+</dl>
+<dt><code>&#8211;spice-disable-auto-usbredir</code></dt>
+<dd> Auto <font SIZE="-1">USB</font> redirection is supported by default. This option switches off it.</dd></dl>
 <p> Standard <font SIZE="-1">GTK</font> options like &#8211;g-fatal-warnings are also accepted.</p>
 <h2>BUGS</h2>
 <p> Please see &lt;<a rel="nofollow" href="http://virt-manager.org/bugs/">http://virt-manager.org/bugs/</a>&gt;</p>

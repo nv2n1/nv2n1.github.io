@@ -19,18 +19,18 @@ description: "remctl – Remote execution tool"
 <h2>OPTIONS</h2>
 <p> The start of each option description is annotated with the version of <code>remctl</code> in which that option was added with its current meaning.</p>
 <dl>
-<dt><code>-b</code> <i>source-ip</i></p>
-<dd> [3.0] When connecting to the remote remctl server, use <i>source-ip</i> as the source <font SIZE="-1">IP</font> address. This can be useful on multihomed systems where the remctl connections need to be made over a particular network. <i>source-ip</i> must be an <font SIZE="-1">IP</font> address, not a hostname, and can be either an IPv4 or IPv6 address (assuming IPv6 is supported).</p>
-<dt><code>-d</code></p>
-<dd> [1.10] Turn on extra debugging output of the client-server interaction.</p>
-<dt><code>-h</code></p>
-<dd> [1.10] Show a brief usage message and then exit.</p>
-<dt><code>-p</code> <i>port</i></p>
-<dd> [1.0] Connect to the server on <i>port</i>. If this option isn&#8217;t given, the client first tries the registered remctl port (4373) and then falls back on the legacy port (4444) if that fails.</p>
-<dt><code>-s</code> <i>service</i></p>
-<dd> [1.0] Authenticate to the server with a service ticket for <i>service</i> rather than the default server identity of host/<i>hostname</i>. This may be necessary with, for instance, a server where <code>remctld</code> is not running as root.</p>
-<dt><code>-v</code></p>
-<dd> [1.10] Print the version of <code>remctl</code> and exit.</dl>
+<dt><code>-b</code> <i>source-ip</i></dt>
+<dd> [3.0] When connecting to the remote remctl server, use <i>source-ip</i> as the source <font SIZE="-1">IP</font> address. This can be useful on multihomed systems where the remctl connections need to be made over a particular network. <i>source-ip</i> must be an <font SIZE="-1">IP</font> address, not a hostname, and can be either an IPv4 or IPv6 address (assuming IPv6 is supported).</dd>
+<dt><code>-d</code></dt>
+<dd> [1.10] Turn on extra debugging output of the client-server interaction.</dd>
+<dt><code>-h</code></dt>
+<dd> [1.10] Show a brief usage message and then exit.</dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd> [1.0] Connect to the server on <i>port</i>. If this option isn&#8217;t given, the client first tries the registered remctl port (4373) and then falls back on the legacy port (4444) if that fails.</dd>
+<dt><code>-s</code> <i>service</i></dt>
+<dd> [1.0] Authenticate to the server with a service ticket for <i>service</i> rather than the default server identity of host/<i>hostname</i>. This may be necessary with, for instance, a server where <code>remctld</code> is not running as root.</dd>
+<dt><code>-v</code></dt>
+<dd> [1.10] Print the version of <code>remctl</code> and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>remctl</code> will exit with the exit status returned by the remote command. If some network or authentication error occurred and <code>remctl</code> was unable to run the remote command or retrieve its exit status, or if <code>remctl</code> was called with invalid arguments, <code>remctl</code> will exit with status 1.</p>
 <h2>EXAMPLES</h2>

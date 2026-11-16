@@ -34,13 +34,13 @@ url: "/docs/linux/man/3-fstrcolli/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/3-fstrcmpi/">fstrcmpi</a>(3)
-<dd> fuzzy comparison of two strings
-<dt><a HREF="/docs/linux/man/3-fstrcoll/">fstrcoll</a>(3)
-<dd> fuzzy comparison of two strings using the current locale
-<dt><a HREF="/docs/linux/man/3-strcoll/">strcoll</a>(3)
-<dd> compare two strings using the current locale
-<dt><a HREF="/docs/linux/man/3-mbstowcs/">mbstowcs</a>(3)
-<dd> convert a multibyte string to a wide-character string</dl>
+</dt><dd> fuzzy comparison of two strings
+</dd><dt><a HREF="/docs/linux/man/3-fstrcoll/">fstrcoll</a>(3)
+</dt><dd> fuzzy comparison of two strings using the current locale
+</dd><dt><a HREF="/docs/linux/man/3-strcoll/">strcoll</a>(3)
+</dt><dd> compare two strings using the current locale
+</dd><dt><a HREF="/docs/linux/man/3-mbstowcs/">mbstowcs</a>(3)
+</dt><dd> convert a multibyte string to a wide-character string</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

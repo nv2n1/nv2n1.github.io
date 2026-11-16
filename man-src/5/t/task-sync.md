@@ -72,14 +72,15 @@ description: "task-sync – A discussion and tutorial for the various"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-task/">task</a>(1),</code> <code><a href="/docs/linux/man/5-taskrc/">taskrc</a>(5),</code> <code><a href="/docs/linux/man/5-task-color/">task-color</a>(5),</code> For more information regarding task, the following may be referenced:</p>
 <dl>
-<dt>The official site at</p>
-<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt;</p>
-<dt>The official code repository at</p>
-<dd>&lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt;</p>
-<dt>You can contact the project by writing an email to</p>
-<dd>&lt;support [at] taskwarrior.org&gt; </p>
+<dt>The official site at</dt>
+<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt;</dd>
+<dt>The official code repository at</dt>
+<dd>&lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt;</dd>
+<dt>You can contact the project by writing an email to</dt>
+<dd>&lt;support [at] taskwarrior.org&gt; </dd>
 <h2>Reporting Bugs</h2>
 <dl>
-<dt>Bugs in task may be reported to the issue-tracker at</p>
-<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </p>
+<dt>Bugs in task may be reported to the issue-tracker at</dt>
+<dd>&lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </dd>
+</dl>
 </dl>

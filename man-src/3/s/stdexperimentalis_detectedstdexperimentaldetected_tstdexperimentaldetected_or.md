@@ -11,17 +11,11 @@ std::experimental::is_detected,std::experimental::detected_t,std::experimental::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/type_traits&gt;
-
 template&lt; template&lt;class...&gt; class Op, class... Args &gt;                 (library fundamentals TS v2)
-
 using is_detected = /* see below */;
-
 template&lt; template&lt;class...&gt; class Op, class... Args &gt;                 (library fundamentals TS v2)
-
 using detected_t = /* see below */;
-
 template&lt; class Default, template&lt;class...&gt; class Op, class... Args &gt;  (library fundamentals TS v2)
-
 using detected_or = /* see below */;</code></pre> 
 The alias template detected_or is an alias for an unspecified class type with two public member typedefs value_t and type, which are defined as follows: 
 * If the template-id Op&lt;Args...&gt; denotes a valid type, then value_t is an alias for std::true_type, and type is an alias for Op&lt;Args...&gt;; 
@@ -90,40 +84,31 @@ The alias template is_detected_convertible checks whether detected_t&lt;Op, Args
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;experimental/type_traits&gt;
-
 #include &lt;cstddef&gt;
 template &lt;class T&gt;
-
 using copy_assign_t = decltype(std::declval&lt;T &amp;&gt;() = std::declval&lt;const T &amp;&gt;());
 struct Meow {
 };
-
 struct Purr {
     void operator=(const Purr &amp;) = delete;
 };
 static_assert(std::experimental::is_detected&lt;copy_assign_t, Meow&gt;::value,
               &quot;Meow should be copy assignable!&quot;);
-
 static_assert(!std::experimental::is_detected_v&lt;copy_assign_t, Purr&gt;,
               &quot;Purr should not be copy assignable!&quot;);
-
 static_assert(std::experimental::is_detected_exact_v&lt;Meow &amp;, copy_assign_t, Meow&gt;,
               &quot;Copy assignment of Meow should return Meow&amp;!&quot;);
 template &lt;class T&gt;
-
 using diff_t = typename T::difference_type;
 template &lt;class Ptr&gt;
-
 using difference_type = std::experimental::detected_or_t&lt;std::ptrdiff_t, diff_t, Ptr&gt;;
 struct Woof {
     using difference_type = int;
 };
-
 struct Bark {
 };
 static_assert(std::is_same&lt;difference_type&lt;Woof&gt;, int&gt;::value,
               &quot;Woof's difference_type should be int!&quot;);
-
 static_assert(std::is_same&lt;difference_type&lt;Bark&gt;, std::ptrdiff_t&gt;::value,
               &quot;Bark's difference_type should be ptrdiff_t!&quot;);
 int main()

@@ -16,70 +16,70 @@ description: "opusenc – encode audio into the Opus format"
 <p> Unless quieted <code>opusenc</code> displays fancy statistics about the encoding progress. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Show command help</p>
-<dt>-V, &#8211;version</p>
-<dd> Show the version number</p>
-<dt>&#8211;bitrate N.nnn</p>
+<dt>-h, &#8211;help</dt>
+<dd> Show command help</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Show the version number</dd>
+<dt>&#8211;bitrate N.nnn</dt>
 <dd> Encoding bitrate in kbit/sec (6-256 per channel)<br />
- Default for &gt;=44.1kHz input is 64kbps per mono stream, 96kbps per coupled pair.</p>
-<dt>&#8211;vbr</p>
-<dd> Use variable bitrate encoding (default)</p>
-<dt>&#8211;cvbr</p>
-<dd> Use constrained variable bitrate encoding</p>
-<dt>&#8211;hard-cbr</p>
-<dd> Use hard constant bitrate encoding</p>
-<dt>&#8211;comp N</p>
-<dd> Encoding computational complexity (0-10, default: 10). Zero gives the fastest encodes but lower quality, while 10 gives the highest quality but slower encoding.</p>
-<dt>&#8211;framesize N</p>
+ Default for &gt;=44.1kHz input is 64kbps per mono stream, 96kbps per coupled pair.</dd>
+<dt>&#8211;vbr</dt>
+<dd> Use variable bitrate encoding (default)</dd>
+<dt>&#8211;cvbr</dt>
+<dd> Use constrained variable bitrate encoding</dd>
+<dt>&#8211;hard-cbr</dt>
+<dd> Use hard constant bitrate encoding</dd>
+<dt>&#8211;comp N</dt>
+<dd> Encoding computational complexity (0-10, default: 10). Zero gives the fastest encodes but lower quality, while 10 gives the highest quality but slower encoding.</dd>
+<dt>&#8211;framesize N</dt>
 <dd> Maximum frame size in milliseconds (2.5, 5, 10, 20, 40, 60, default: 20)<br />
  Smaller framesizes achieve lower latency but less quality at a given bitrate.<br />
- Sizes greater than 20ms are only interesting at fairly low bitrates.</p>
-<dt>&#8211;expect-loss N</p>
-<dd> Percentage packet loss to expect (default: 0)</p>
-<dt>&#8211;downmix-mono</p>
-<dd> Downmix to mono</p>
-<dt>&#8211;downmix-stereo</p>
-<dd> Downmix to stereo (if &gt;2 channels input)</p>
-<dt>&#8211;max-delay N</p>
-<dd> Maximum container delay in milliseconds (0-1000, default: 1000)</p>
-<dt>&#8211;save-range file</p>
-<dd> Saves check values for every frame to a file</p>
-<dt>&#8211;set-ctl-int x=y</p>
+ Sizes greater than 20ms are only interesting at fairly low bitrates.</dd>
+<dt>&#8211;expect-loss N</dt>
+<dd> Percentage packet loss to expect (default: 0)</dd>
+<dt>&#8211;downmix-mono</dt>
+<dd> Downmix to mono</dd>
+<dt>&#8211;downmix-stereo</dt>
+<dd> Downmix to stereo (if &gt;2 channels input)</dd>
+<dt>&#8211;max-delay N</dt>
+<dd> Maximum container delay in milliseconds (0-1000, default: 1000)</dd>
+<dt>&#8211;save-range file</dt>
+<dd> Saves check values for every frame to a file</dd>
+<dt>&#8211;set-ctl-int x=y</dt>
 <dd> Pass the encoder control x with value y (advanced) Preface with s: to direct the ctl to multistream s<br />
- This may be used multiple times</p>
-<dt>&#8211;comment tag=value</p>
-<dd> Add an extra comment. This may be used multiple times, and all instances will be added to each of the input files specified. The argument should be in the form &quot;tag=value&quot;. See the vorbis-comment specification for well known tag names: <a rel="nofollow" href="http://www.xiph.org/vorbis/doc/v-comment.html">http://www.xiph.org/vorbis/doc/v-comment.html</a></p>
-<dt>&#8211;artist artist</p>
-<dd> Set the artist comment field in the comments to <i>artist</i></p>
-<dt>&#8211;title title</p>
-<dd> Set the track title comment field to <i>title</i></p>
-<dt>&#8211;raw</p>
-<dd> Raw (headerless) PCM input</p>
-<dt>&#8211;raw-bits N</p>
-<dd> Set bits/sample for raw input (default: 16)</p>
-<dt>&#8211;raw-rate N</p>
-<dd> Set sampling rate for raw input (default: 48000)</p>
-<dt>&#8211;raw-chan N</p>
-<dd> Set number of channels for raw input (default: 2)</p>
-<dt>&#8211;raw-endianness [0/1]</p>
-<dd> Set the endianness for raw input: 1 for bigendian, 0 for little (defaults to 0)</p>
-<dt>&#8211;ignorelength</p>
-<dd> Always ignore the datalength in Wave headers. Opusenc automatically ignores the length when its implausible (very small or very large) but some STDIN usage may still need this option to avoid truncation. </p>
+ This may be used multiple times</dd>
+<dt>&#8211;comment tag=value</dt>
+<dd> Add an extra comment. This may be used multiple times, and all instances will be added to each of the input files specified. The argument should be in the form &quot;tag=value&quot;. See the vorbis-comment specification for well known tag names: <a rel="nofollow" href="http://www.xiph.org/vorbis/doc/v-comment.html">http://www.xiph.org/vorbis/doc/v-comment.html</a></dd>
+<dt>&#8211;artist artist</dt>
+<dd> Set the artist comment field in the comments to <i>artist</i></dd>
+<dt>&#8211;title title</dt>
+<dd> Set the track title comment field to <i>title</i></dd>
+<dt>&#8211;raw</dt>
+<dd> Raw (headerless) PCM input</dd>
+<dt>&#8211;raw-bits N</dt>
+<dd> Set bits/sample for raw input (default: 16)</dd>
+<dt>&#8211;raw-rate N</dt>
+<dd> Set sampling rate for raw input (default: 48000)</dd>
+<dt>&#8211;raw-chan N</dt>
+<dd> Set number of channels for raw input (default: 2)</dd>
+<dt>&#8211;raw-endianness [0/1]</dt>
+<dd> Set the endianness for raw input: 1 for bigendian, 0 for little (defaults to 0)</dd>
+<dt>&#8211;ignorelength</dt>
+<dd> Always ignore the datalength in Wave headers. Opusenc automatically ignores the length when its implausible (very small or very large) but some STDIN usage may still need this option to avoid truncation. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Simplest usage. Take input as input.wav and produce output as output.opus:</p>
 <dl>
 <dt>
-<dd> opusenc input.wav output.opus</dl>
+</dt><dd> opusenc input.wav output.opus</dd></dl>
 <p> Produce a very high quality encode with a target rate of 160kbps:</p>
 <dl>
 <dt>
-<dd> opusenc &#8211;bitrate 160 input.wav output.opus</dl>
+</dt><dd> opusenc &#8211;bitrate 160 input.wav output.opus</dd></dl>
 <p> Record and send a live stream to an Icecast HTTP streaming server using oggfwd:</p>
 <dl>
 <dt>
-<dd> arecord -c 2 -r 48000 -twav &#8211; | opusenc &#8211;bitrate 96 &#8211; &#8211; | oggfwd icecast.somewhere.org 8000 password /stream.opus</dl>
+</dt><dd> arecord -c 2 -r 48000 -twav &#8211; | opusenc &#8211;bitrate 96 &#8211; &#8211; | oggfwd icecast.somewhere.org 8000 password /stream.opus</dd></dl>
 <h2>NOTES</h2>
 <p> While it is possible to use opusenc for low latency streaming (e.g. with &#8211;max-delay set to 0 and netcat instead of Icecast) it&#8217;s not really designed for this, and the Ogg container and TCP transport aren&#8217;t the best tools for that application. Shell pipelines themselves will often have high buffering. The ability to set framesizes as low as 2.5 ms in opusenc mostly exists to try out the quality of the format with low latency settings, but not really for actual low latency usage.<br />
  Interactive usage should use UDP/RTP directly. </p>

@@ -19,69 +19,61 @@ description: "condor_fetchlog Retrieve a daemon’s log file that is located on 
 <p> The <i>subsystem</i> argument is any value $(SUBSYSTEM) that has a defined configuration variable of $(SUBSYSTEM)_LOG , or any of</p>
 <dl>
 <dt>
-<dd> * NEGOTIATOR_MATCH</p>
+</dt><dd> * NEGOTIATOR_MATCH</dd>
 <dt>
-<dd> * HISTORY</p>
+</dt><dd> * HISTORY</dd>
 <dt>
-<dd> * STARTD_HISTORY</dl>
+</dt><dd> * STARTD_HISTORY</dd></dl>
 <p> A value for the optional <i>.extension</i> to the <i>subsystem</i> argument is typically one of the three strings:</p>
 <dl>
 <dt>
-<dd> 1. .old</p>
+</dt><dd> 1. .old</dd>
 <dt>
-<dd> 2. .slot&lt;X&gt;</p>
+</dt><dd> 2. .slot&lt;X&gt;</dd>
 <dt>
-<dd> 3. .slot&lt;X&gt;.old Within these strings, &lt;X&gt; is substituted with the slot number.</dl>
+</dt><dd> 3. .slot&lt;X&gt;.old Within these strings, &lt;X&gt; is substituted with the slot number.</dd></dl>
 <p> A <i>subsystem</i> argument of STARTD_HISTORY fetches all <i>condor_startd</i> history by concatenating all instances of log files resulting from rotation. </p>
 <h2>Options</h2>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-master</code></p>
 <dl>
 <dt>
-<dd> Send the command to the <i>condor_master</i> daemon (default)</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the <i>condor_master</i> daemon (default)</dd>
+</dl>
 <p> <code>-startd</code></p>
 <dl>
 <dt>
-<dd> Send the command to the <i>condor_startd</i> daemon</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the <i>condor_startd</i> daemon</dd>
+</dl>
 <p> <code>-schedd</code></p>
 <dl>
 <dt>
-<dd> Send the command to the <i>condor_schedd</i> daemon</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the <i>condor_schedd</i> daemon</dd>
+</dl>
 <p> <code>-collector</code></p>
 <dl>
 <dt>
-<dd> Send the command to the <i>condor_collector</i> daemon</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the <i>condor_collector</i> daemon</dd>
+</dl>
 <p> <code>-kbdd</code></p>
 <dl>
 <dt>
-<dd> Send the command to the <i>condor_kbdd</i> daemon</p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to the <i>condor_kbdd</i> daemon</dd>
+</dl>
 <h2>Examples</h2>
 <p> To get the <i>condor_negotiator</i> daemon&#8217;s log from a host named head.example.com from within the current pool: </p>
 <p> condor_fetchlog head.example.com NEGOTIATOR </p>

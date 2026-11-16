@@ -11,16 +11,11 @@ std::binary_function - std::binary_function
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;
-
         class Arg1, (deprecated in C++ 11)
-
                         class Arg2,
         (removed in C++ 17)
-
             class Result
-
         &gt;
     struct binary_function;</code></pre> 
 binary_function is a base class for creating function objects with two arguments. 
@@ -38,14 +33,10 @@ result_type Result
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 struct same : std::binary_function&lt;int, int, bool&gt;
-
 {
     bool operator()(int a, int b) const
     {
@@ -53,7 +44,6 @@ struct same : std::binary_function&lt;int, int, bool&gt;
     }
 };
 int main()
-
 {
     std::vector&lt;int&gt; v1{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::vector&lt;int&gt; v2{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};

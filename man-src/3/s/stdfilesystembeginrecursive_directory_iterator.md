@@ -22,14 +22,10 @@ These non-member functions enable the use of recursive_directory_iterators with 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/a/b&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;);

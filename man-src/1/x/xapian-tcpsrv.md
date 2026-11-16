@@ -15,25 +15,25 @@ description: "xapian-tcpsrv – TCP daemon for use with Xapian’s remote backen
 <p> xapian-tcpsrv &#8211; TCP daemon for use with Xapian&#8217;s remote backend</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;port</code> PORTNUM</p>
-<dd> listen on port PORTNUM for connections (no default)</p>
-<dt><code>&#8211;interface</code> ADDRESS</p>
-<dd> listen on the interface associated with name or address ADDRESS (default is all interfaces)</p>
-<dt><code>&#8211;idle-timeout</code> MSECS</p>
-<dd> set timeout for idle connections (default MSECS_IDLE_TIMEOUT_DEFAULTms)</p>
-<dt><code>&#8211;active-timeout</code> MSECS</p>
-<dd> set timeout for active connections (default MSECS_ACTIVE_TIMEOUT_DEFAULTms)</p>
-<dt><code>&#8211;timeout</code> MSECS</p>
-<dd> set both timeout values</p>
-<dt><code>&#8211;one-shot</code></p>
-<dd> serve a single connection and exit</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> disable information messages to stdout</p>
-<dt><code>&#8211;writable</code></p>
-<dd> allow updates (only one database directory allowed)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit </p>
+<dt><code>&#8211;port</code> PORTNUM</dt>
+<dd> listen on port PORTNUM for connections (no default)</dd>
+<dt><code>&#8211;interface</code> ADDRESS</dt>
+<dd> listen on the interface associated with name or address ADDRESS (default is all interfaces)</dd>
+<dt><code>&#8211;idle-timeout</code> MSECS</dt>
+<dd> set timeout for idle connections (default MSECS_IDLE_TIMEOUT_DEFAULTms)</dd>
+<dt><code>&#8211;active-timeout</code> MSECS</dt>
+<dd> set timeout for active connections (default MSECS_ACTIVE_TIMEOUT_DEFAULTms)</dd>
+<dt><code>&#8211;timeout</code> MSECS</dt>
+<dd> set both timeout values</dd>
+<dt><code>&#8211;one-shot</code></dt>
+<dd> serve a single connection and exit</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> disable information messages to stdout</dd>
+<dt><code>&#8211;writable</code></dt>
+<dd> allow updates (only one database directory allowed)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit </dd>
 </dl>
 <h2>Index</h2>

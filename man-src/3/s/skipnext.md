@@ -10,7 +10,6 @@ description: "skipNext – find next item."
 <p>skipNext &#8211; find next item.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/skiplist.h&gt;
-
 void *skipNext(skipList list, UINT32 *pkey, void **plock);
 </code></pre>
 <h2>Arguments</h2>

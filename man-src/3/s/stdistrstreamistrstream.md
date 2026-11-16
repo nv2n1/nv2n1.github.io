@@ -24,10 +24,8 @@ The constructors of std::istrstream do not create the underlying std::strstreamb
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     {
         std::istrstream s(&quot;1.234&quot;);

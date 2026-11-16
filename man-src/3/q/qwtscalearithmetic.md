@@ -25,43 +25,43 @@ description: "QwtScaleArithmetic –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>value</i> Value to be ceiled<br />
- <i>intervalSize</i> Interval size</dl>
+ <i>intervalSize</i> Interval size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rounded value</dl>
+<dd>Rounded value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>floorEps()</code></dl>
+<dd><code>floorEps()</code></dd></dl>
 <h3>double QwtScaleArithmetic::divideEps (doubleintervalSize, doublenumSteps) [static]</h3>
 <p>Divide an interval into steps. $stepSize = (intervalSize &#8211; intervalSize * 10e^{-6}) / numSteps$ </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>intervalSize</i> Interval size<br />
- <i>numSteps</i> Number of steps</dl>
+ <i>numSteps</i> Number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Step size</dl>
+<dd>Step size</dd></dl>
 <h3>double QwtScaleArithmetic::divideInterval (doubleintervalSize, intnumSteps, uintbase) [static]</h3>
 <p>Calculate a step size for a given interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>intervalSize</i> Interval size<br />
  <i>numSteps</i> Number of steps<br />
- <i>base</i> Base for the division ( usually 10 )</dl>
+ <i>base</i> Base for the division ( usually 10 )</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated step size</dl>
+<dd>Calculated step size</dd></dl>
 <h3>double QwtScaleArithmetic::floorEps (doublevalue, doubleintervalSize) [static]</h3>
 <p>Floor a value, relative to an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>value</i> Value to be floored<br />
- <i>intervalSize</i> Interval size</dl>
+ <i>intervalSize</i> Interval size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rounded value</dl>
+<dd>Rounded value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>floorEps()</code></dl>
+<dd><code>floorEps()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

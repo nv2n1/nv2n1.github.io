@@ -13,12 +13,12 @@ description: "pskc_verify_x509crt – API function"
 int pskc_verify_x509crt(pskc_t *container, const char *cert_file, int *valid_signature);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>const char * cert_file</p>
-<dd>filename of file containing trusted X.509 certificate.</p>
-<dt>int * valid_signature</p>
-<dd>output variable with result of verification.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>const char * cert_file</dt>
+<dd>filename of file containing trusted X.509 certificate.</dd>
+<dt>int * valid_signature</dt>
+<dd>output variable with result of verification.</dd></dl>
 <h2>Description</h2>
 <p>Verify signature in PSKC data against trusted X.509 certificate.</p>
 <h2>Returns</h2>

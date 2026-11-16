@@ -27,38 +27,38 @@ description: "ntfsresize – resize an NTFS filesystem without data loss"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsresize</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
-<dd>By using this option ntfsresize will only check the device to ensure that it is ready to be resized. If not, it will print any errors detected. If the device is fine, nothing will be printed.</p>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd>By using this option without <code>&#8211;expand</code>, ntfsresize will determine the theoretically smallest shrunken filesystem size supported. Most of the time the result is the space already used on the filesystem. Ntfsresize will refuse shrinking to a smaller size than what you got by this option and depending on several factors it might be unable to shrink very close to this theoretical size. Although the integrity of your data should be never in risk, it&#8217;s still strongly recommended to make a test run by using the <code>&#8211;no-action</code> option before real resizing. </p>
+<dt><code>-c</code>, <code>&#8211;check</code></dt>
+<dd>By using this option ntfsresize will only check the device to ensure that it is ready to be resized. If not, it will print any errors detected. If the device is fine, nothing will be printed.</dd>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd>By using this option without <code>&#8211;expand</code>, ntfsresize will determine the theoretically smallest shrunken filesystem size supported. Most of the time the result is the space already used on the filesystem. Ntfsresize will refuse shrinking to a smaller size than what you got by this option and depending on several factors it might be unable to shrink very close to this theoretical size. Although the integrity of your data should be never in risk, it&#8217;s still strongly recommended to make a test run by using the <code>&#8211;no-action</code> option before real resizing. </dd>
 <p> Practically the smallest shrunken size generally is at around &quot;used space&quot; + (20-200 MB). Please also take into account that Windows might need about 50-100 MB free space left to boot safely. </p>
 <p> If used in association with option <code>&#8211;expand</code>, ntfsresize will determine the smallest downwards expansion size and the possible increments to the size. These are exact byte counts which must not be rounded. This option may be used after the partition has been expanded provided the upper bound has not been changed. </p>
 <p> This option never causes any changes to the filesystem, the partition is opened read-only.</p>
-<dt><code>-m</code>, <code>&#8211;info-mb-only</code></p>
-<dd>Like the info option, only print out the shrinkable size in MB. Print nothing if the shrink size is the same as the original size (in MB). This option cannot be used in association with option <code>&#8211;expand</code>.</p>
-<dt><code>-s</code>, <code>&#8211;size</code> SIZE[<code>k</code>|<code>M</code>|<code>G</code>]</p>
-<dd>Resize filesystem to fit in a partition whose size is <i>SIZE</i>[<code>k</code>|<code>M</code>|<code>G</code>] bytes by shifting its end and keeping its beginning unchanged. The filesystem size is set to be at least one sector smaller than the partition. The optional modifiers <code>k</code>, <code>M</code>, <code>G</code> mean the <i>SIZE</i> parameter is given in kilo-, mega- or gigabytes respectively. Conforming to standards, k=10^3, M=10^6 and G=10^9. ki=2^10, Mi=2^20 and Gi=2^30 are also allowed. Use this option with <code>&#8211;no-action</code> first.</p>
-<dt><code>-x</code>, <code>&#8211;expand</code></p>
-<dd>Expand the filesystem to the current partition size, shifting down its beginning and keeping its end unchanged. The metadata is recreated in the expanded space and no user data is relocated. This is incompatible with option -s (or &#8211;size) and can only be made if the expanded space is an exact multiple of the cluster size. It must also be large enough to hold the new metadata. </p>
+<dt><code>-m</code>, <code>&#8211;info-mb-only</code></dt>
+<dd>Like the info option, only print out the shrinkable size in MB. Print nothing if the shrink size is the same as the original size (in MB). This option cannot be used in association with option <code>&#8211;expand</code>.</dd>
+<dt><code>-s</code>, <code>&#8211;size</code> SIZE[<code>k</code>|<code>M</code>|<code>G</code>]</dt>
+<dd>Resize filesystem to fit in a partition whose size is <i>SIZE</i>[<code>k</code>|<code>M</code>|<code>G</code>] bytes by shifting its end and keeping its beginning unchanged. The filesystem size is set to be at least one sector smaller than the partition. The optional modifiers <code>k</code>, <code>M</code>, <code>G</code> mean the <i>SIZE</i> parameter is given in kilo-, mega- or gigabytes respectively. Conforming to standards, k=10^3, M=10^6 and G=10^9. ki=2^10, Mi=2^20 and Gi=2^30 are also allowed. Use this option with <code>&#8211;no-action</code> first.</dd>
+<dt><code>-x</code>, <code>&#8211;expand</code></dt>
+<dd>Expand the filesystem to the current partition size, shifting down its beginning and keeping its end unchanged. The metadata is recreated in the expanded space and no user data is relocated. This is incompatible with option -s (or &#8211;size) and can only be made if the expanded space is an exact multiple of the cluster size. It must also be large enough to hold the new metadata. </dd>
 <p> If the expansion is interrupted for some reason (power outage, etc), you may restart the resizing, as the original data and metadata have been kept unchanged. </p>
 <p> Note : expanding a Windows system partition and filesystem downwards may lead to the registry or some files not matching the new system layout, or to some important files being located too far from the beginning of the partition, thus making Windows not bootable.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>Forces ntfsresize to proceed with the resize operation either without prompting for an explicit acceptance, or if the filesystem is marked for consistency check. Double the option (-ff, &#8211;force &#8211;force) to avoid prompting even if the file system is marked for check. </p>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>Forces ntfsresize to proceed with the resize operation either without prompting for an explicit acceptance, or if the filesystem is marked for consistency check. Double the option (-ff, &#8211;force &#8211;force) to avoid prompting even if the file system is marked for check. </dd>
 <p> Please note, ntfsresize always marks the filesystem for consistency check before a real resize operation and it leaves that way for extra safety. Thus if NTFS was marked by ntfsresize then it&#8217;s safe to use this option. If you need to resize several times without booting into Windows between each resizing steps then you must use this option.</p>
-<dt><code>-n, &#8211;no-action</code></p>
-<dd>Use this option to make a test run before doing the real resize operation. Volume will be opened read-only and <code>ntfsresize</code> displays what it would do if it were to resize the filesystem. Continue with the real resizing only if the test run passed.</p>
-<dt><code>-b</code>, <code>&#8211;bad-sectors</code></p>
-<dd>Support disks having hardware errors, bad sectors with those <code>ntfsresize</code> would refuse to work by default. </p>
+<dt><code>-n, &#8211;no-action</code></dt>
+<dd>Use this option to make a test run before doing the real resize operation. Volume will be opened read-only and <code>ntfsresize</code> displays what it would do if it were to resize the filesystem. Continue with the real resizing only if the test run passed.</dd>
+<dt><code>-b</code>, <code>&#8211;bad-sectors</code></dt>
+<dd>Support disks having hardware errors, bad sectors with those <code>ntfsresize</code> would refuse to work by default. </dd>
 <p> Prior using this option, it&#8217;s strongly recommended to make a backup by <code><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></code>(8) using the &#8211;rescue option, then running &#8216;chkdsk /f /r volume:&#8217; on Windows from the command line. If the disk guarantee is still valid then replace it. It&#8217;s defected. Please also note, that no software can repair these type of hardware errors. The most what they can do is to work around the permanent defects. </p>
 <p> This option doesn&#8217;t have any effect if the disk is flawless.</p>
-<dt><code>-P</code>, <code>&#8211;no-progress-bar</code></p>
-<dd>Don&#8217;t show progress bars.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>More output.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print the version number of <code>ntfsresize</code> and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display help and exit.</dl>
+<dt><code>-P</code>, <code>&#8211;no-progress-bar</code></dt>
+<dd>Don&#8217;t show progress bars.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>More output.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print the version number of <code>ntfsresize</code> and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
 <h2>Exit Codes</h2>
 <p>The exit code is 0 on success, non-zero otherwise.</p>
 <h2>Known Issues</h2>

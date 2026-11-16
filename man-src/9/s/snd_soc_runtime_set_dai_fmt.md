@@ -15,11 +15,11 @@ snd_soc_runtime_set_dai_fmt - Change DAI link format for a ASoC runtime
 <h2>Arguments</h2>
 
 <i>rtd</i>
-<dl><dd><dd>The runtime for which the DAI link format should be changed</dl>
+<dl><dd></dd><dd>The runtime for which the DAI link format should be changed</dd></dl>
  
 
  <i>dai_fmt</i>
-<dl><dd>The new DAI link format</dl>
+<dl><dd>The new DAI link format</dd></dl>
 
 <h2>Description</h2>
 

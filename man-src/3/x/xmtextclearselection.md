@@ -16,10 +16,10 @@ description: "XmTextClearSelection — A Text function that clears the primary s
 <h2>Description</h2>
 <p><code>XmTextClearSelection</code> clears the primary selection in the Text widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID.</p>
-<dt><i>time</i></p>
-<dd>Specifies the server time at which the selection value is desired. This should be the time of the event that triggered this request. One source of a valid time stamp is the function <code>XtLastTimestampProcessed()</code>.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the server time at which the selection value is desired. This should be the time of the event that triggered this request. One source of a valid time stamp is the function <code>XtLastTimestampProcessed()</code>.</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>

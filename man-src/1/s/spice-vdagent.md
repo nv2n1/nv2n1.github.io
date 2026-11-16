@@ -22,18 +22,18 @@ description: "spice-vdagent – Spice guest agent X11 session agent"
 <p> Support for transferring files from the client to the agent</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print a short description of all command line options</p>
-<dt><code>-d</code></p>
-<dd> Log debug messages</p>
-<dt><code>-s</code> <i>port</i></p>
-<dd> Set virtio serial <i>port</i> (default: /dev/virtio-ports/com.redhat.spice.0)</p>
-<dt><code>-x</code></p>
-<dd> Don&#8217;t daemonize</p>
-<dt><code>-f</code> <i>dir|xdg-desktop|xdg-download</i></p>
-<dd> Set directory where to save files send from the client, this can be either an arbitrary <i>dir</i> or one of the special values of <i>xdg-desktop</i> or <i>xdg-download</i> to select the default xdg Desktop resp. xdg Download directory. If no value is specified the default is <i>xdg-desktop</i> when running under a Desktop Environment which has icons on the desktop and <i>xdg-download</i> under other Desktop Environments</p>
-<dt><code>-o</code> <i>0|1</i></p>
-<dd> Disable/enable opening the file save directory with xdg-open (showing the directory in the file manager) when a file transfer from the client completes. If no value is specified the default is <i>0</i> when running under a Desktop Environment which has icons on the desktop and <i>1</i> under other Desktop Environments</dl>
+<dt><code>-h</code></dt>
+<dd> Print a short description of all command line options</dd>
+<dt><code>-d</code></dt>
+<dd> Log debug messages</dd>
+<dt><code>-s</code> <i>port</i></dt>
+<dd> Set virtio serial <i>port</i> (default: /dev/virtio-ports/com.redhat.spice.0)</dd>
+<dt><code>-x</code></dt>
+<dd> Don&#8217;t daemonize</dd>
+<dt><code>-f</code> <i>dir|xdg-desktop|xdg-download</i></dt>
+<dd> Set directory where to save files send from the client, this can be either an arbitrary <i>dir</i> or one of the special values of <i>xdg-desktop</i> or <i>xdg-download</i> to select the default xdg Desktop resp. xdg Download directory. If no value is specified the default is <i>xdg-desktop</i> when running under a Desktop Environment which has icons on the desktop and <i>xdg-download</i> under other Desktop Environments</dd>
+<dt><code>-o</code> <i>0|1</i></dt>
+<dd> Disable/enable opening the file save directory with xdg-open (showing the directory in the file manager) when a file transfer from the client completes. If no value is specified the default is <i>0</i> when running under a Desktop Environment which has icons on the desktop and <i>1</i> under other Desktop Environments</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-spice-vdagentd/">spice-vdagentd</a></code>(1)</p>
 <h2>COPYRIGHT</h2>

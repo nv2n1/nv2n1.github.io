@@ -14,23 +14,23 @@ description: "trace_block_bio_remap – map request for a logical device to the 
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue holding the operation</dl>
+</dd><dd>queue holding the operation</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>revised operation</dl>
+<dd>revised operation</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>device for the operation</dl>
+<dd>device for the operation</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>original sector for the operation</dl>
+<dd>original sector for the operation</dd></dl>
 <h2>Description</h2>
 <p>An operation for a logical device has been mapped to the raw block device.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

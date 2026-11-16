@@ -10,9 +10,7 @@ description: "std::ctype<char> – std::ctype<char>"
 <p>std::ctype&lt;char&gt; &#8211; std::ctype&lt;char&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;&gt;
-
     class ctype&lt;char&gt;;</code></pre>
 <p>This specialization of std::ctype encapsulates character classification features for type char. Unlike general-purpose std::ctype, which uses virtual functions, this specialization uses table lookup to classify characters (which is generally faster).<br />
 The base class std::ctype&lt;char&gt; implements character classification equivalent to the minimal &quot;C&quot; locale. The classification rules can be extended or modified if constructed with a non-default classification table argument, if constructed as std::ctype_byname&lt;char&gt; or as a user-defined derived facet. All std::istream formatted input functions are required to use std::ctype&lt;char&gt; for character classing during input parsing.<br />
@@ -110,14 +108,10 @@ mask unspecified bitmask type (enumeration, integer type, or bitset)</p>
 <p>The following example demonstrates modification of ctype&lt;char&gt; to tokenize comma-separated values<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;sstream&gt;
 // This ctype facet classifies commas and endlines as whitespace
-
 struct csv_whitespace : std::ctype&lt;char&gt; {
     static const mask *make_table()
     {
@@ -133,7 +127,6 @@ struct csv_whitespace : std::ctype&lt;char&gt; {
     }
 };
 int main()
-
 {
     std::string in = &quot;Column 1,Column 2,Column 3
 123,456,789&quot;;

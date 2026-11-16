@@ -20,7 +20,7 @@ description: "splitwd – Collect several text-form dictionary files into a sing
 <p> Reads text-form dictionaries user1.t and user2.t, then modifies them into the &lt;1 word type, 1 candidate on 1 line&gt; format. The contents are converted into the Wnn textform dictionary, then output to the standard output.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</p>
+<dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

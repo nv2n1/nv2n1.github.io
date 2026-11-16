@@ -25,74 +25,74 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <p> The default location is <i>/etc/edg-mkgridmap.conf</i>. </p>
 <p> The file essentially consists of a list of directives composed by a keyword and one or more arguments. Optional arguments are put in square brackets.</p>
 <dl>
-<dt>* <code>group</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i> <i>[lcluser]</i></p>
+<dt>* <code>group</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i> <i>[lcluser]</i></dt>
 <dd>
-<dt>* <code>default_lcluser</code> <i>default_lcluser</i></p>
+</dd><dt>* <code>default_lcluser</code> <i>default_lcluser</i></dt>
 <dd>
-<dt>* <code>auth</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></p>
+</dd><dt>* <code>auth</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
 <dd>
-<dt>* <code>allow</code>|<code>deny</code> <i>pattern_to_match</i></p>
+</dd><dt>* <code>allow</code>|<code>deny</code> <i>pattern_to_match</i></dt>
 <dd>
-<dt>* <code>gmf_local</code> <i>grid-mapfile-local</i></p>
-<dd></dl>
+</dd><dt>* <code>gmf_local</code> <i>grid-mapfile-local</i></dt>
+<dd></dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print a summary of the command line options end exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print the version of <code>edg-mkgridmap</code> end exit.</p>
-<dt><code>&#8211;conf</code>=<i>config_file</i></p>
-<dd>Specifies the configuration file that is used by <code>edg-mkgridmap</code>. If omitted, <code>edg-mkgridmap</code> checks <i>/var/lib/edg-mkgridmap/etc/edg-mkgridmap.conf</i> to see if a machine-specific configuration has been setup. If such a file is not present, <code>edg-mkgridmap</code> uses the default configuration file <i>/etc/edg-mkgridmap.conf</i>.</p>
-<dt><code>&#8211;output</code>[=<i>output_file</i>]</p>
-<dd>Specifies the output file. If omitted, <i>stdout</i> is used. If the optional argument <i>output_file</i> is omitted, the value of the environment variable <font SIZE="-1"><code>GRIDMAP</code></font> is used. If <font SIZE="-1"><code>GRIDMAP</code></font> is not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Turn off error messages.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Print lots of useful informations. Ignored if <code>&#8211;quiet</code> is specified.</p>
-<dt><code>&#8211;safe</code>, <code>&#8211;nosafe</code></p>
-<dd>Per <code>group</code> keep (<code>&#8211;safe</code>) or remove (<code>&#8211;nosafe</code>) the old grid-mapfile entries that are not found back, when at least one of the sources for that <code>group</code> directive had a problem. Default is remove (<code>&#8211;nosafe</code>).</p>
-<dt><code>&#8211;cache</code>, <code>&#8211;nocache</code></p>
-<dd>Disable (<code>&#8211;cache</code>) or enable (<code>&#8211;nocache</code>) the grid-mapfile update when its contents remain unchanged. Default is enable (<code>&#8211;nocache</code>).</p>
-<dt><code>&#8211;proxy</code>, <code>&#8211;noproxy</code></p>
-<dd>Enable (<code>&#8211;proxy</code>) or disable (<code>&#8211;noproxy</code>) proxy support for <font SIZE="-1">HTTP/HTTPS</font> and <font SIZE="-1">VOMS/VOMSS</font> connections. Default is disable (<code>&#8211;noproxy</code>). </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Print a summary of the command line options end exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the version of <code>edg-mkgridmap</code> end exit.</dd>
+<dt><code>&#8211;conf</code>=<i>config_file</i></dt>
+<dd>Specifies the configuration file that is used by <code>edg-mkgridmap</code>. If omitted, <code>edg-mkgridmap</code> checks <i>/var/lib/edg-mkgridmap/etc/edg-mkgridmap.conf</i> to see if a machine-specific configuration has been setup. If such a file is not present, <code>edg-mkgridmap</code> uses the default configuration file <i>/etc/edg-mkgridmap.conf</i>.</dd>
+<dt><code>&#8211;output</code>[=<i>output_file</i>]</dt>
+<dd>Specifies the output file. If omitted, <i>stdout</i> is used. If the optional argument <i>output_file</i> is omitted, the value of the environment variable <font SIZE="-1"><code>GRIDMAP</code></font> is used. If <font SIZE="-1"><code>GRIDMAP</code></font> is not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Turn off error messages.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Print lots of useful informations. Ignored if <code>&#8211;quiet</code> is specified.</dd>
+<dt><code>&#8211;safe</code>, <code>&#8211;nosafe</code></dt>
+<dd>Per <code>group</code> keep (<code>&#8211;safe</code>) or remove (<code>&#8211;nosafe</code>) the old grid-mapfile entries that are not found back, when at least one of the sources for that <code>group</code> directive had a problem. Default is remove (<code>&#8211;nosafe</code>).</dd>
+<dt><code>&#8211;cache</code>, <code>&#8211;nocache</code></dt>
+<dd>Disable (<code>&#8211;cache</code>) or enable (<code>&#8211;nocache</code>) the grid-mapfile update when its contents remain unchanged. Default is enable (<code>&#8211;nocache</code>).</dd>
+<dt><code>&#8211;proxy</code>, <code>&#8211;noproxy</code></dt>
+<dd>Enable (<code>&#8211;proxy</code>) or disable (<code>&#8211;noproxy</code>) proxy support for <font SIZE="-1">HTTP/HTTPS</font> and <font SIZE="-1">VOMS/VOMSS</font> connections. Default is disable (<code>&#8211;noproxy</code>). </dd>
 <p> The proxy support must be configured through appropriate environmental variables.</p>
-<dt><code>&#8211;usermode</code></p>
-<dd>Facilitate running the script as an ordinary user by having the relevant environment variables point to the user&#8217;s X509 proxy instead of using the personal certificate and key. The user&#8217;s proxy is taken from the <code>X509_USER_PROXY</code> environment variable, if defined, else from the default location <i>/tmp/x509up_u$UID</i>.</dl>
+<dt><code>&#8211;usermode</code></dt>
+<dd>Facilitate running the script as an ordinary user by having the relevant environment variables point to the user&#8217;s X509 proxy instead of using the personal certificate and key. The user&#8217;s proxy is taken from the <code>X509_USER_PROXY</code> environment variable, if defined, else from the default location <i>/tmp/x509up_u$UID</i>.</dd></dl>
 <h2>Errors</h2>
 <p>In case of one or more errors, <code>edg-mkgridmap</code> returns an exit code which is computed adding these possible values:</p>
 <dl>
-<dt>* <code>1</code></p>
-<dd>per <code>group</code> directive for which a server could not be contacted.</p>
-<dt>* <code>16</code></p>
-<dd>error reading the configuration file.</p>
-<dt>* <code>32</code></p>
-<dd>error writing the grid-mapfile.</p>
-<dt>* <code>64</code></p>
-<dd>error with a <code>group</code> directive.</p>
-<dt>* <code>128</code></p>
-<dd>error with an <code>auth</code> directive.</dl>
+<dt>* <code>1</code></dt>
+<dd>per <code>group</code> directive for which a server could not be contacted.</dd>
+<dt>* <code>16</code></dt>
+<dd>error reading the configuration file.</dd>
+<dt>* <code>32</code></dt>
+<dd>error writing the grid-mapfile.</dd>
+<dt>* <code>64</code></dt>
+<dd>error with a <code>group</code> directive.</dd>
+<dt>* <code>128</code></dt>
+<dd>error with an <code>auth</code> directive.</dd></dl>
 <h2>Diagnostics</h2>
 <p>The <code>&#8211;verbose</code> option produces some useful diagnostics. </p>
 <p> Any error message generated by <code>edg-mkgridmap</code> is logged to the <code>syslogd</code>.</p>
 <h2>Environment</h2>
 <dl>
-<dt><font SIZE="-1"><code>EDG_MKGRIDMAP_OPTIONS</code></font></p>
-<dd>Used to specify command line options.</p>
-<dt><font SIZE="-1"><code>GRIDMAP</code></font></p>
-<dd>Used to determine the location of the grid-mapfile. If not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</p>
-<dt><font SIZE="-1"><code>CERTDIR</code></font></p>
-<dd>Used to determine the directory containing <font SIZE="-1">CA</font> certificates. If not set, then the default value <i>/etc/grid-security/certificates</i> is used.</p>
-<dt><code>X509_USER_CERT</code></p>
-<dd>Used to determine the location of the host certificate. If not set, then the default value <i>/etc/grid-security/hostcert.pem</i> is used.</p>
-<dt><code>X509_USER_KEY</code></p>
-<dd>Used to determine the location of the host private key. If not set, then the default value <i>/etc/grid-security/hostkey.pem</i> is used.</p>
-<dt><code>X509_USER_PROXY</code></p>
-<dd>Used to determine the location of the user&#8217;s proxy when the <code>&#8211;usermode</code> option is given. If not set, the default value <i>/tmp/x509up_u$UID</i> is used.</p>
-<dt><code>http_proxy</code></p>
-<dd>Used to determine the proxy for <font SIZE="-1">HTTP</font> connections. The syntax is: </p>
+<dt><font SIZE="-1"><code>EDG_MKGRIDMAP_OPTIONS</code></font></dt>
+<dd>Used to specify command line options.</dd>
+<dt><font SIZE="-1"><code>GRIDMAP</code></font></dt>
+<dd>Used to determine the location of the grid-mapfile. If not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</dd>
+<dt><font SIZE="-1"><code>CERTDIR</code></font></dt>
+<dd>Used to determine the directory containing <font SIZE="-1">CA</font> certificates. If not set, then the default value <i>/etc/grid-security/certificates</i> is used.</dd>
+<dt><code>X509_USER_CERT</code></dt>
+<dd>Used to determine the location of the host certificate. If not set, then the default value <i>/etc/grid-security/hostcert.pem</i> is used.</dd>
+<dt><code>X509_USER_KEY</code></dt>
+<dd>Used to determine the location of the host private key. If not set, then the default value <i>/etc/grid-security/hostkey.pem</i> is used.</dd>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd>Used to determine the location of the user&#8217;s proxy when the <code>&#8211;usermode</code> option is given. If not set, the default value <i>/tmp/x509up_u$UID</i> is used.</dd>
+<dt><code>http_proxy</code></dt>
+<dd>Used to determine the proxy for <font SIZE="-1">HTTP</font> connections. The syntax is: </dd>
 <pre> http_proxy=&quot;[<a rel="nofollow" href="http://]">http://]</a>&lt;host&gt;:&lt;port&gt;&quot;</pre>
-<dt><code>https_proxy</code></p>
-<dd>Used to determine the proxy for <font SIZE="-1">HTTPS</font> connections. The syntax is: </p>
+<dt><code>https_proxy</code></dt>
+<dd>Used to determine the proxy for <font SIZE="-1">HTTPS</font> connections. The syntax is: </dd>
 <pre> https_proxy=&quot;[<a rel="nofollow" href="http://]">http://]</a>&lt;host&gt;:&lt;port&gt;&quot;</pre>
 </dl>
 <h2>Examples</h2>

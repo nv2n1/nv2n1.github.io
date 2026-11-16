@@ -14,16 +14,16 @@ description: "rlogind – remote login server"
 <p>] <code>Rlogind</code> is the server for the <a href="/docs/linux/man/1-rlogin/">rlogin</a>(1) program. The server provides a remote login facility with authentication based on privileged port numbers from trusted hosts. </p>
 <p> Options supported by <code>rlogind</code></p>
 <dl>
-<dt><code>-a</code></p>
-<dd>Ask hostname for verification.</p>
-<dt><code>-h</code></p>
-<dd>Permit use of superuser &#8220;.rhosts &#8221; files.</p>
-<dt><code>-l</code></p>
-<dd>Prevent any authentication based on the user&#8217;s &#8220;.rhosts &#8221; file. If the user is logging in as the superuser and the -h option is used, &#8220;.rhosts &#8221; processing is still enabled.</p>
-<dt><code>-L</code></p>
-<dd>Prevent any authentication based on &#8220;.rhosts &#8221; or &#8220;hosts.equiv &#8221; information.</p>
-<dt><code>-n</code></p>
-<dd>Disable keep-alive messages.</dl>
+<dt><code>-a</code></dt>
+<dd>Ask hostname for verification.</dd>
+<dt><code>-h</code></dt>
+<dd>Permit use of superuser &#8220;.rhosts &#8221; files.</dd>
+<dt><code>-l</code></dt>
+<dd>Prevent any authentication based on the user&#8217;s &#8220;.rhosts &#8221; file. If the user is logging in as the superuser and the -h option is used, &#8220;.rhosts &#8221; processing is still enabled.</dd>
+<dt><code>-L</code></dt>
+<dd>Prevent any authentication based on &#8220;.rhosts &#8221; or &#8220;hosts.equiv &#8221; information.</dd>
+<dt><code>-n</code></dt>
+<dd>Disable keep-alive messages.</dd></dl>
 <p> The -h, -l, and -L flags are not used if PAM (Pluggable Authentication Module) support is in use. In this case the same effects can be achieved by editing /etc/pam.conf </p>
 <p> The &#8211;<code>h</code> and &#8211;<code>l</code> options should also not be trusted without verifying that they work as expected with the particular version of libc installed on your system (and should be tested again after any libc update) because some versions of libc may not honor the internal flags used by <code>rlogind</code> As the &#8211;<code>L</code> option bypasses the libc functions entirely, it is not subject to this problem. </p>
 <p> Also note that the design of the .rhosts system is COMPLETELY INSECURE except on a carefully firewalled private network. Always use the &#8211;<code>L</code> option under all other circumstances. Also, since <code>rlogind</code> does not encrypt communications, it should not, in general, be used at all. Consider ssh(8). </p>
@@ -37,8 +37,8 @@ description: "rlogind – remote login server"
 <h2>Diagnostics</h2>
 <p>All initial diagnostic messages are indicated by a leading byte with a value of 1, after which any network connections are closed. If there are no errors before login is invoked, a null byte is returned as in indication of success.</p>
 <dl>
-<dt><code>Try again.</code></p>
-<dd>A fork by the server failed.</dl>
+<dt><code>Try again.</code></dt>
+<dd>A fork by the server failed.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-login/">login</a>(1), <a href="/docs/linux/man/3-ruserok/">ruserok</a>(3), rshd(8)</p>
 <h2>Bugs</h2>

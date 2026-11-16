@@ -15,11 +15,11 @@ dev_set_group - Change group this device belongs to
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>new_group</i>
-<dl><dd>group this device should belong to</dl>
+<dl><dd>group this device should belong to</dd></dl>
 
 <h2>Copyright</h2>
 

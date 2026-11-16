@@ -15,24 +15,24 @@ description: "mongoperf – MongoDB Performance Utility"
 <p> Specify options to <code>mongoperf</code> using a JavaScript document. </p>
 <p> <code>SEE ALSO:</code></p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>bonnie</i></p>
-<dt>&bull;</p>
-<dd> <i>bonnie++</i></p>
-<dt>&bull;</p>
-<dd> <i>Output from an example run</i></p>
-<dt>&bull;</p>
-<dd> <i>Checking Disk Performance with the mongoperf Utility</i></dl>
+<dt>&bull;</dt>
+<dd> <i>bonnie</i></dd>
+<dt>&bull;</dt>
+<dd> <i>bonnie++</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Output from an example run</i></dd>
+<dt>&bull;</dt>
+<dd> <i>Checking Disk Performance with the mongoperf Utility</i></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>mongoperf</code></p>
+<dt><code>mongoperf</code></dt>
 <dd>
-<dt><code>mongoperf</code></p>
+</dd><dt><code>mongoperf</code></dt>
 <dd>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Returns information on <code>mongoperf</code> options and usage.</p>
-<dt><code>&lt;jsonconfig&gt;</code></p>
-<dd> <code>mongoperf</code> accepts configuration options in the form of a file that holds a <i>JSON</i> document. You must stream the content of this file into <code>mongoperf</code>, as in the following operation: </p>
+</dd><dt><code>&#8211;help, -h</code></dt>
+<dd> Returns information on <code>mongoperf</code> options and usage.</dd>
+<dt><code>&lt;jsonconfig&gt;</code></dt>
+<dd> <code>mongoperf</code> accepts configuration options in the form of a file that holds a <i>JSON</i> document. You must stream the content of this file into <code>mongoperf</code>, as in the following operation: </dd>
 <pre>
 mongoperf &lt; config
 </pre>
@@ -52,44 +52,44 @@ mongoperf &lt; config
 <p> See the <i>Configuration Fields</i> section for documentation of each of these fields.</dl>
 <h2>CONFIGURATION FIELDS</h2>
 <dl>
-<dt><code>mongoperf.nThreads</code></p>
-<dd> <i>Type:</i> Integer. </p>
+<dt><code>mongoperf.nThreads</code></dt>
+<dd> <i>Type:</i> Integer. </dd>
 <p> <i>Default:</i> 1 </p>
 <p> Defines the number of threads <code>mongoperf</code> will use in the test. To saturate your system&#8217;s storage system you will need multiple threads. Consider setting <code>nThreads</code> to <code>16</code>.</p>
-<dt><code>mongoperf.fileSizeMB</code></p>
-<dd> <i>Type:</i> Integer. </p>
+<dt><code>mongoperf.fileSizeMB</code></dt>
+<dd> <i>Type:</i> Integer. </dd>
 <p> <i>Default:</i> 1 megabyte (i.e. 1024<font SIZE="-2">2</font> bytes) </p>
 <p> Test file size.</p>
-<dt><code>mongoperf.sleepMicros</code></p>
-<dd> <i>Type:</i> Integer. </p>
+<dt><code>mongoperf.sleepMicros</code></dt>
+<dd> <i>Type:</i> Integer. </dd>
 <p> <i>Default:</i> 0 </p>
 <p> <code>mongoperf</code> will pause for the number of specified <code>sleepMicros</code> divided by the <code>nThreads</code> between each operation.</p>
-<dt><code>mongoperf.mmf</code></p>
-<dd> <i>Type:</i> Boolean. </p>
+<dt><code>mongoperf.mmf</code></dt>
+<dd> <i>Type:</i> Boolean. </dd>
 <p> <i>Default:</i> <code>false</code> </p>
 <p> Set <code>mmf</code> to <code>true</code> to use memory mapped files for the tests. </p>
 <p> Generally:</p>
-<dt>&bull;</p>
-<dd> when <code>mmf</code> is <code>false</code>, <code>mongoperf</code> tests direct, physical, I/O, without caching. Use a large file size to test heavy random I/O load and to avoid I/O coalescing.</p>
-<dt>&bull;</p>
-<dd> when <code>mmf</code> is <code>true</code>, <code>mongoperf</code> runs tests of the caching system, and can use normal file system cache. Use <code>mmf</code> in this mode to test file system cache behavior with memory mapped files.</p>
-<dt><code>mongoperf.r</code></p>
-<dd> <i>Type:</i> Boolean. </p>
+<dt>&bull;</dt>
+<dd> when <code>mmf</code> is <code>false</code>, <code>mongoperf</code> tests direct, physical, I/O, without caching. Use a large file size to test heavy random I/O load and to avoid I/O coalescing.</dd>
+<dt>&bull;</dt>
+<dd> when <code>mmf</code> is <code>true</code>, <code>mongoperf</code> runs tests of the caching system, and can use normal file system cache. Use <code>mmf</code> in this mode to test file system cache behavior with memory mapped files.</dd>
+<dt><code>mongoperf.r</code></dt>
+<dd> <i>Type:</i> Boolean. </dd>
 <p> <i>Default:</i> <code>false</code> </p>
 <p> Set <code>r</code> to <code>true</code> to perform reads as part of the tests. </p>
 <p> Either <code>r</code> or <code>w</code> must be <code>true</code>.</p>
-<dt><code>mongoperf.w</code></p>
-<dd> <i>Type:</i> Boolean. </p>
+<dt><code>mongoperf.w</code></dt>
+<dd> <i>Type:</i> Boolean. </dd>
 <p> <i>Default:</i> <code>false</code> </p>
 <p> Set <code>w</code> to <code>true</code> to perform writes as part of the tests. </p>
 <p> Either <code>r</code> or <code>w</code> must be <code>true</code>.</p>
-<dt><code>mongoperf.recSizeKB</code></p>
-<dd> New in version 2.4. </p>
+<dt><code>mongoperf.recSizeKB</code></dt>
+<dd> New in version 2.4. </dd>
 <p> <i>Type:</i> Integer. </p>
 <p> <i>Default:</i> 4 kb </p>
 <p> The size of each write operation.</p>
-<dt><code>mongoperf.syncDelay</code></p>
-<dd> <i>Type:</i> Integer. </p>
+<dt><code>mongoperf.syncDelay</code></dt>
+<dd> <i>Type:</i> Integer. </dd>
 <p> <i>Default:</i> 0 </p>
 <p> Seconds between disk flushes. <code>mongoperf.syncDelay</code> is similar to <i>&#8211;syncdelay</i> for <code>mongod</code>. </p>
 <p> The <code>syncDelay</code> controls how frequently <code>mongoperf</code> performs an asynchronous disk flush of the memory mapped file used for testing. By default, <code>mongod</code> performs this operation every 60 seconds. Use <code>syncDelay</code> to test basic system performance of this type of operation. </p>
@@ -105,10 +105,10 @@ echo &quot;{nThreads:16,fileSizeMB:1000,r:true}&quot; | ./mongoperf
 </pre>
 <p> In this operation:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>mongoperf</code> tests direct physical random read io&#8217;s, using 16 concurrent reader threads.</p>
-<dt>&bull;</p>
-<dd> <code>mongoperf</code> uses a 1 gigabyte test file. </p>
+<dt>&bull;</dt>
+<dd> <code>mongoperf</code> tests direct physical random read io&#8217;s, using 16 concurrent reader threads.</dd>
+<dt>&bull;</dt>
+<dd> <code>mongoperf</code> uses a 1 gigabyte test file. </dd>
 <p> Consider using <code>iostat</code>, as invoked in the following example to monitor I/O performance during the test. </p>
 <pre>
 iostat -xm 2

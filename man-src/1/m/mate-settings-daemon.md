@@ -16,16 +16,16 @@ description: "mate-settings-daemon – Handles the MATE session settings"
 <h2>OPTIONS</h2>
 <p> Help options</p>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Show this help message</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Show this help message</dd></dl>
 <p> Application options</p>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable debugging code</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replaces the current running daemon</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable debugging code</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replaces the current running daemon</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>mate-settings-daemon</code> was written by Jonathan Blandford &lt;jrb [at] redhat.com&gt; and William Jon McCann &lt;mccann [at] jhu.edu&gt;. </p>
 <p> This manual page was originally written by Joshua Cummings &lt;jrac [at] internode.on.net&gt;. </p>

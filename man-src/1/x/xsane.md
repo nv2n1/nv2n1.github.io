@@ -18,15 +18,15 @@ description: "xsane – scanner frontend for SANE"
 <p> To run <code>xsane</code> under the <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), you should at first make sure that xsane is compiled with gimp support by entering &quot;xsane -v&quot; on a shell. If xsane is compiled with gimp support then simply set a symbolic link from the xsane-binary to one of the <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) plug-ins directories. For example, for gimp-1.0.x the command </p>
 <dl>
 <dt>
-<dd> ln -s /usr/bin/xsane ~/.gimp/plug-ins/</dl>
+</dt><dd> ln -s /usr/bin/xsane ~/.gimp/plug-ins/</dd></dl>
 <p> for gimp 1.2.x the command: </p>
 <dl>
 <dt>
-<dd> ln -s /usr/bin/xsane ~/.gimp-1.2/plug-ins/</dl>
+</dt><dd> ln -s /usr/bin/xsane ~/.gimp-1.2/plug-ins/</dd></dl>
 <p> and for gimp 2.0.x the command: </p>
 <dl>
 <dt>
-<dd> ln -s /usr/bin/xsane ~/.gimp-2.0/plug-ins/</dl>
+</dt><dd> ln -s /usr/bin/xsane ~/.gimp-2.0/plug-ins/</dd></dl>
 <p> adds a symlink for the <code>xsane</code> binary to the user&#8217;s plug-ins directory. After creating this symlink, <code>xsane</code> will be queried by <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) the next time it&#8217;s invoked. From then on, <code>xsane</code> can be invoked through &quot;Xtns-&gt;XSane-&gt;Device dialog&#8230;&quot; (gimp-1.0.x) or through &quot;File-&gt;Acquire-&gt;XSane-&gt;Device dialog&#8230;&quot; (gimp-1.2.x and 2.0.x) menu entry. </p>
 <p> You&#8217;ll also find that the &quot;Xtns-&gt;XSane&quot; or &quot;File-&gt;Acquire-&gt;XSane&quot; menu contains short-cuts to the SANE devices that were available at the time the <code>xsane</code> was queried. Note that <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) caches these short-cuts in ~/.gimp/pluginrc. Thus, when the list of available devices changes (e.g., a new scanner is installed or the device of the scanner has changed), then it is typically desirable to rebuild this cache. To do this, you can either <code><a href="/docs/linux/man/1-touch/">touch</a></code>(1) the <code>xsane</code> binary (e.g., &quot;touch /usr/bin/xsane&quot;) or delete the plugin cache (e.g., &quot;rm ~/.gimp/pluginrc&quot;). Either way, invoking <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) afterwards will cause the pluginrc to be rebuilt. </p>
 <p> When <code>xsane</code> is started from the <code>gimp</code> then it is not possible to add a devicename explicitly. You have to make the devices known to the system by configuring <code>sane-dll, sane-net</code> and <code>saned.</code> </p>
@@ -48,19 +48,19 @@ description: "xsane – scanner frontend for SANE"
 <p> The <code>&#8211;sync</code> flag requests a synchronous connection with the X11 server. This is for debugging purposes only.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>SANE_DEFAULT_DEVICE</i></p>
-<dd> is used to preselect the device in the device dialog. This way you only have to accept the device (&lt;ENTER&gt; or OK-Button). </p>
+<dt><i>SANE_DEFAULT_DEVICE</i></dt>
+<dd> is used to preselect the device in the device dialog. This way you only have to accept the device (&lt;ENTER&gt; or OK-Button). </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$HOME/.sane/xsane/xsane.rc</i></p>
-<dd> This files holds the user preferences. Normally, this file should not be manipulated directly. Instead, the user should customize the program through the &quot;Preferences&quot; menu.</p>
-<dt><i>$HOME/.sane/xsane/devicename.rc</i></p>
-<dd> For each device, there is one rc-file that holds the saved settings for that particular device. Normally, this file should not be manipulated directly. Instead, the user should use the <code>xsane</code> interface to select appropriate values and then save the device settings using the &quot;Preferences-&gt;Save Device Settings&quot; menubar entry.</p>
-<dt><i>/usr/share/sane/xsane/xsane-style.rc</i></p>
-<dd> This system-wide file controls the aspects of the user-interface such as colors and fonts. It is a GTK style file and provides fine control over the visual aspects of the user-interface.</p>
-<dt><i>$HOME/.sane/xsane/xsane-style.rc</i></p>
-<dd> This file serves the same purpose as the system-wide style file. If present, it takes precedence over the system wide style file.</dl>
+<dt><i>$HOME/.sane/xsane/xsane.rc</i></dt>
+<dd> This files holds the user preferences. Normally, this file should not be manipulated directly. Instead, the user should customize the program through the &quot;Preferences&quot; menu.</dd>
+<dt><i>$HOME/.sane/xsane/devicename.rc</i></dt>
+<dd> For each device, there is one rc-file that holds the saved settings for that particular device. Normally, this file should not be manipulated directly. Instead, the user should use the <code>xsane</code> interface to select appropriate values and then save the device settings using the &quot;Preferences-&gt;Save Device Settings&quot; menubar entry.</dd>
+<dt><i>/usr/share/sane/xsane/xsane-style.rc</i></dt>
+<dd> This system-wide file controls the aspects of the user-interface such as colors and fonts. It is a GTK style file and provides fine control over the visual aspects of the user-interface.</dd>
+<dt><i>$HOME/.sane/xsane/xsane-style.rc</i></dt>
+<dd> This file serves the same purpose as the system-wide style file. If present, it takes precedence over the system wide style file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), xscanimage(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5), <a href="/docs/linux/man/5-sane-net/">sane-net</a>(5), saned(1), <a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5), <a href="/docs/linux/man/5-sane-usb/">sane-usb</a>(5), sane-&quot;backendname&quot;(5)</p>
 <h2>AUTHOR</h2>

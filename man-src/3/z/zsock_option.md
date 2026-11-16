@@ -54,7 +54,6 @@ CZMQ_EXPORT int zsock_rcvmore(void *self);
 CZMQ_EXPORT SOCKET zsock_fd(void *self);
 CZMQ_EXPORT int zsock_events(void *self);
 CZMQ_EXPORT char *zsock_last_endpoint(void *self);
-
 //  Set socket options
 CZMQ_EXPORT void zsock_set_tos(void *self, int tos);
 CZMQ_EXPORT void zsock_set_router_handover(void *self, int router_handover);
@@ -108,7 +107,6 @@ CZMQ_EXPORT void zsock_set_tcp_keepalive_cnt(void *self, int tcp_keepalive_cnt);
 CZMQ_EXPORT void zsock_set_tcp_keepalive_intvl(void *self, int tcp_keepalive_intvl);
 CZMQ_EXPORT void zsock_set_tcp_accept_filter(void *self, const char *tcp_accept_filter);
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 3)
 //  Get socket options
 CZMQ_EXPORT int zsock_ipv4only(void *self);
@@ -138,7 +136,6 @@ CZMQ_EXPORT int zsock_rcvmore(void *self);
 CZMQ_EXPORT SOCKET zsock_fd(void *self);
 CZMQ_EXPORT int zsock_events(void *self);
 CZMQ_EXPORT char *zsock_last_endpoint(void *self);
-
 //  Set socket options
 CZMQ_EXPORT void zsock_set_router_raw(void *self, int router_raw);
 CZMQ_EXPORT void zsock_set_ipv4only(void *self, int ipv4only);
@@ -168,7 +165,6 @@ CZMQ_EXPORT void zsock_set_tcp_keepalive_cnt(void *self, int tcp_keepalive_cnt);
 CZMQ_EXPORT void zsock_set_tcp_keepalive_intvl(void *self, int tcp_keepalive_intvl);
 CZMQ_EXPORT void zsock_set_tcp_accept_filter(void *self, const char *tcp_accept_filter);
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 2)
 //  Get socket options
 CZMQ_EXPORT int zsock_hwm(void *self);
@@ -195,7 +191,6 @@ CZMQ_EXPORT int zsock_type(void *self);
 CZMQ_EXPORT int zsock_rcvmore(void *self);
 CZMQ_EXPORT SOCKET zsock_fd(void *self);
 CZMQ_EXPORT int zsock_events(void *self);
-
 //  Set socket options
 CZMQ_EXPORT void zsock_set_hwm(void *self, int hwm);
 CZMQ_EXPORT void zsock_set_swap(void *self, int swap);
@@ -220,7 +215,6 @@ CZMQ_EXPORT void zsock_set_backlog(void *self, int backlog);
 CZMQ_EXPORT void zsock_set_subscribe(void *self, const char *subscribe);
 CZMQ_EXPORT void zsock_set_unsubscribe(void *self, const char *unsubscribe);
 #endif
-
 //  Self test of this class
 CZMQ_EXPORT void zsock_option_test(bool verbose);</code></pre>
 <h2>Description</h2>
@@ -572,7 +566,6 @@ free(last_endpoint);
 zsock_destroy(&amp;self);
 #endif
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 3)
 #if defined(ZMQ_ROUTER_RAW)
 self = zsock_new(ZMQ_ROUTER);
@@ -815,7 +808,6 @@ free(last_endpoint);
 zsock_destroy(&amp;self);
 #endif
 #endif
-
 #if (ZMQ_VERSION_MAJOR == 2)
 #if defined(ZMQ_HWM)
 self = zsock_new(ZMQ_SUB);
@@ -997,7 +989,8 @@ zsock_destroy(&amp;self);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

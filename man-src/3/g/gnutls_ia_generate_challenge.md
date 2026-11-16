@@ -14,12 +14,12 @@ description: "gnutls_ia_generate_challenge – API function"
 <p> <code>int gnutls_ia_generate_challenge(gnutls_session_t </code><i>session</i><code>, size_t </code><i>buffer_size</i><code>, char * </code><i>buffer</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t buffer_size</p>
-<dd> size of output buffer.</p>
-<dt>char * buffer</p>
-<dd> pre-allocated buffer to contain <i>buffer_size</i> bytes of output.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t buffer_size</dt>
+<dd> size of output buffer.</dd>
+<dt>char * buffer</dt>
+<dd> pre-allocated buffer to contain <i>buffer_size</i> bytes of output.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Generate an application challenge that the client cannot control or predict, based on the TLS/IA inner secret.</p>
 <h2>RETURN VALUE</h2>
@@ -33,6 +33,6 @@ description: "gnutls_ia_generate_challenge – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

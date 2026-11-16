@@ -16,26 +16,26 @@ ALTER INDEX <i>name</i> RESET ( <i>storage_parameter</i> [, ... ] )</pre>
 <h2>Description</h2>
 <p><code>ALTER INDEX</code> changes the definition of an existing index. There are several subforms:</p>
 <dl>
-<dt><code>RENAME</code></p>
-<dd>The RENAME form changes the name of the index. There is no effect on the stored data.</p>
-<dt><code>SET TABLESPACE</code></p>
-<dd>This form changes the index&#8217;s tablespace to the specified tablespace and moves the data file(s) associated with the index to the new tablespace. See also CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)].</p>
-<dt><code>SET ( </code><i>storage_parameter</i><code> = </code><i>value</i><code> [, &#8230; ] )</code></p>
-<dd>This form changes one or more index-method-specific storage parameters for the index. See CREATE INDEX [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)] for details on the available parameters. Note that the index contents will not be modified immediately by this command; depending on the parameter you might need to rebuild the index with REINDEX [<code><a href="/docs/linux/man/7-reindex/">reindex</a></code>(7)] to get the desired effects.</p>
-<dt><code>RESET ( </code><i>storage_parameter</i><code> [, &#8230; ] )</code></p>
-<dd>This form resets one or more index-method-specific storage parameters to their defaults. As with SET, a REINDEX might be needed to update the index entirely.</dl>
+<dt><code>RENAME</code></dt>
+<dd>The RENAME form changes the name of the index. There is no effect on the stored data.</dd>
+<dt><code>SET TABLESPACE</code></dt>
+<dd>This form changes the index&#8217;s tablespace to the specified tablespace and moves the data file(s) associated with the index to the new tablespace. See also CREATE TABLESPACE [<code><a href="/docs/linux/man/7-create_tablespace/">create_tablespace</a></code>(7)].</dd>
+<dt><code>SET ( </code><i>storage_parameter</i><code> = </code><i>value</i><code> [, &#8230; ] )</code></dt>
+<dd>This form changes one or more index-method-specific storage parameters for the index. See CREATE INDEX [<code><a href="/docs/linux/man/7-create_index/">create_index</a></code>(7)] for details on the available parameters. Note that the index contents will not be modified immediately by this command; depending on the parameter you might need to rebuild the index with REINDEX [<code><a href="/docs/linux/man/7-reindex/">reindex</a></code>(7)] to get the desired effects.</dd>
+<dt><code>RESET ( </code><i>storage_parameter</i><code> [, &#8230; ] )</code></dt>
+<dd>This form resets one or more index-method-specific storage parameters to their defaults. As with SET, a REINDEX might be needed to update the index entirely.</dd></dl>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (possibly schema-qualified) of an existing index to alter.</p>
-<dt><i>new_name</i></p>
-<dd>The new name for the index.</p>
-<dt><i>tablespace_name</i></p>
-<dd>The tablespace to which the index will be moved.</p>
-<dt><i>storage_parameter</i></p>
-<dd>The name of an index-method-specific storage parameter.</p>
-<dt><i>value</i></p>
-<dd>The new value for an index-method-specific storage parameter. This might be a number or a word depending on the parameter.</dl>
+<dt><i>name</i></dt>
+<dd>The name (possibly schema-qualified) of an existing index to alter.</dd>
+<dt><i>new_name</i></dt>
+<dd>The new name for the index.</dd>
+<dt><i>tablespace_name</i></dt>
+<dd>The tablespace to which the index will be moved.</dd>
+<dt><i>storage_parameter</i></dt>
+<dd>The name of an index-method-specific storage parameter.</dd>
+<dt><i>value</i></dt>
+<dd>The new value for an index-method-specific storage parameter. This might be a number or a word depending on the parameter.</dd></dl>
 <h2>Notes</h2>
 <p>These operations are also possible using ALTER TABLE [<code><a href="/docs/linux/man/7-alter_table/">alter_table</a></code>(7)]. <code>ALTER INDEX</code> is in fact just an alias for the forms of <code>ALTER TABLE</code> that apply to indexes. </p>
 <p> There was formerly an <code>ALTER INDEX OWNER</code> variant, but this is now ignored (with a warning). An index cannot have an owner different from its table&#8217;s owner. Changing the table&#8217;s owner automatically changes the index as well. </p>

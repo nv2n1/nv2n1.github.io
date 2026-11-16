@@ -33,10 +33,10 @@ description: "krb5kdc – Kerberos V5 KDC"
 <h2>Environment</h2>
 <p>krb5kdc uses the following environment variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>KRB5_CONFIG</code></p>
-<dt>&bull;</p>
-<dd><code>KRB5_KDC_PROFILE</code></dl>
+<dt>&bull;</dt>
+<dd><code>KRB5_CONFIG</code></dd>
+<dt>&bull;</dt>
+<dd><code>KRB5_KDC_PROFILE</code></dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8)</i>, <i><a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5)</i>, <i><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5)</i>, <i><a href="/docs/linux/man/8-kdb5_ldap_util/">kdb5_ldap_util</a>(8)</i></p>
 <h2>Author</h2>

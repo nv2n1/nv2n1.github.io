@@ -10,7 +10,6 @@ description: "pbs_statque – obtain status of pbs batch queues"
 <p>pbs_statque &#8211; obtain status of pbs batch queues</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>struct batch_status *pbs_statque(int connect, char&nbsp;<wbr>*id,
 struct attrl&nbsp;<wbr>*attrib, 
@@ -19,7 +18,7 @@ void pbs_statfree(struct batch_status *psj)</pre>
 <h2>Description</h2>
 <p>Issue a batch request to obtain the status of a batch queue. A <i>Status Queue</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). The <i> is the name of a queue, in the form:</p>
 <dl>
-<dd></i><code></dl>
+<dd></i><code></dd></dl>
 <p> or the null string. If is specified, the status of the queue named at the server will be returned. If the </code><i> is a null string or null pointer, the status of all queues at the server will be returned. The parameter, is a pointer to an attrl </i> structure which is defined in pbs_ifl.h as:  The <i> </i> list is terminated by the first entry where <code> is a null pointer. If </code><i> is given, then only the attributes in the list are returned by the server. Otherwise, all the attributes of a job are returned. When an list is specified, the </i><code> member is a pointer to a attribute name as listed in pbs_alter(3) and <a href="/docs/linux/man/3-pbs_submit/">pbs_submit</a>(3). The member is only used if the name member is ATTR_l, otherwise it should be a pointer to a null string. The member should aways be a pointer to a null string. The parameter, </code><i> is reserved for implementation defined extensions. The return value is a pointer to a list of batch_status</i> structures, which is defined in pbs_ifl.h as:  It is up the user to free the structure when no longer needed, by calling <code>pbs_statfree</code>(). </p>
 <h2>See Also</h2>
 <p>qstat(1B) and pbs_connect(3B)</p>

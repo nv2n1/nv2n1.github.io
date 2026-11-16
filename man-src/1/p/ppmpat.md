@@ -17,22 +17,22 @@ description: "ppmpat – make a pretty pixmap"
 <h2>OPTIONS</h2>
 <p> The different flags specify various different pattern types:</p>
 <dl>
-<dt><code>-gingham2</code></p>
-<dd> A gingham check pattern. Can be tiled.</p>
-<dt><code>-gingham3</code></p>
-<dd> A slightly more complicated gingham. Can be tiled.</p>
-<dt><code>-madras</code></p>
-<dd> A madras plaid. Can be tiled.</p>
-<dt><code>-tartan</code></p>
-<dd> A tartan plaid. Can be tiled.</p>
-<dt><code>-poles</code></p>
-<dd> Color gradients centered on randomly-placed poles. May need to be run through <i>ppmquant</i>.</p>
-<dt><code>-squig</code></p>
-<dd> Squiggley tubular pattern. Can be tiled. May need to be run through <i>ppmquant</i>.</p>
-<dt><code>-camo</code></p>
-<dd> Camouflage pattern. May need to be run through <i>ppmquant</i>.</p>
-<dt><code>-anticamo</code></p>
-<dd> Anti-camouflage pattern &#8211; like -camo, but ultra-bright colors. May need to be run through <i>ppmquant</i>.</dl>
+<dt><code>-gingham2</code></dt>
+<dd> A gingham check pattern. Can be tiled.</dd>
+<dt><code>-gingham3</code></dt>
+<dd> A slightly more complicated gingham. Can be tiled.</dd>
+<dt><code>-madras</code></dt>
+<dd> A madras plaid. Can be tiled.</dd>
+<dt><code>-tartan</code></dt>
+<dd> A tartan plaid. Can be tiled.</dd>
+<dt><code>-poles</code></dt>
+<dd> Color gradients centered on randomly-placed poles. May need to be run through <i>ppmquant</i>.</dd>
+<dt><code>-squig</code></dt>
+<dd> Squiggley tubular pattern. Can be tiled. May need to be run through <i>ppmquant</i>.</dd>
+<dt><code>-camo</code></dt>
+<dd> Camouflage pattern. May need to be run through <i>ppmquant</i>.</dd>
+<dt><code>-anticamo</code></dt>
+<dd> Anti-camouflage pattern &#8211; like -camo, but ultra-bright colors. May need to be run through <i>ppmquant</i>.</dd></dl>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <h2>REFERENCES</h2>
 <p> Some of the patterns are from &quot;Designer&#8217;s Guide to Color 3&quot; by Jeanne Allen.</p>

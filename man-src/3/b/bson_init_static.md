@@ -18,14 +18,14 @@ bson_init_static (bson_t        *b,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>b</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>b</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> A buffer to initialize with.</dl>
+<dt><code>data</code></dt>
+<dd> A buffer to initialize with.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> The length of <code>data</code> in bytes.</dl>
+<dt><code>length</code></dt>
+<dd> The length of <code>data</code> in bytes.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> function shall shall initialize a read-only <code>bson_t</code> on the stack using the data provided. No copies of the data will be made and therefore must remain valid for the lifetime of the <code>bson_t</code> \&amp;. </p>
 <h2>RETURNS</h2>

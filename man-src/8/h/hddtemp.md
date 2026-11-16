@@ -15,50 +15,50 @@ description: "hddtemp – Utility to monitor hard drive temperature"
 <h2>Options</h2>
 <p>The program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-b, &#8211;drivebase</code></p>
-<dd>Display the database file that allows hddtemp to recognize a supported drive.</p>
-<dt><code>-D, &#8211;debug</code></p>
-<dd>Display various S.M.A.R.T. fields and their values. Useful for finding a value that seems to match the temperature and/or to send a report. (done for every drive supplied)</p>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd>Execute hddtemp in TCP/IP daemon mode (port 7634 by default).</p>
-<dt><code>-f, &#8211;file=</code><i>file</i></p>
-<dd>Specify the database file to use.</p>
-<dt><code>-F, &#8211;foreground</code></p>
-<dd>Don&#8217;t fork into the background even in daemon mode. This is useful when running under a process supervisor.</p>
-<dt><code>-l, &#8211;listen=</code><i>addr</i></p>
-<dd>Listen on a specific address. <i>addr</i> is a string containing a host name or a numeric host address string. The numeric host address string is a dotted-decimal IPv4 address or an IPv6 hex address.</p>
-<dt><code>-n, &#8211;numeric</code></p>
-<dd>Print only the temperature (without the unit).</p>
-<dt><code>-p, &#8211;port=</code><i>#</i></p>
-<dd>Port number to listen to (in TCP/IP daemon mode).</p>
-<dt><code>-s, &#8211;separator=</code><i>char</i></p>
-<dd>Separator to use between fields (in TCP/IP daemon mode). The default separator is `|&#8217;.</p>
-<dt><code>-S, &#8211;syslog=</code><i>s</i></p>
-<dd>Switch to daemon mode and log temperatures to syslog every <i>s</i> seconds.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Don&#8217;t check if the drive is supported.</p>
-<dt><code>-u, &#8211;unit=</code><i>C|F</i></p>
-<dd>Force output temperature either in Celsius or Fahrenheit.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Display hddtemp version number.</p>
-<dt><code>-w, &#8211;wake-up</code></p>
-<dd>Wake-up the drive if needed (ATA drives only).</p>
-<dt><code>-4</code></p>
-<dd>Listen on IPv4 sockets only.</p>
-<dt><code>-6</code></p>
-<dd>Listen on IPv6 sockets only. </p>
+<dt><code>-b, &#8211;drivebase</code></dt>
+<dd>Display the database file that allows hddtemp to recognize a supported drive.</dd>
+<dt><code>-D, &#8211;debug</code></dt>
+<dd>Display various S.M.A.R.T. fields and their values. Useful for finding a value that seems to match the temperature and/or to send a report. (done for every drive supplied)</dd>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd>Execute hddtemp in TCP/IP daemon mode (port 7634 by default).</dd>
+<dt><code>-f, &#8211;file=</code><i>file</i></dt>
+<dd>Specify the database file to use.</dd>
+<dt><code>-F, &#8211;foreground</code></dt>
+<dd>Don&#8217;t fork into the background even in daemon mode. This is useful when running under a process supervisor.</dd>
+<dt><code>-l, &#8211;listen=</code><i>addr</i></dt>
+<dd>Listen on a specific address. <i>addr</i> is a string containing a host name or a numeric host address string. The numeric host address string is a dotted-decimal IPv4 address or an IPv6 hex address.</dd>
+<dt><code>-n, &#8211;numeric</code></dt>
+<dd>Print only the temperature (without the unit).</dd>
+<dt><code>-p, &#8211;port=</code><i>#</i></dt>
+<dd>Port number to listen to (in TCP/IP daemon mode).</dd>
+<dt><code>-s, &#8211;separator=</code><i>char</i></dt>
+<dd>Separator to use between fields (in TCP/IP daemon mode). The default separator is `|&#8217;.</dd>
+<dt><code>-S, &#8211;syslog=</code><i>s</i></dt>
+<dd>Switch to daemon mode and log temperatures to syslog every <i>s</i> seconds.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Don&#8217;t check if the drive is supported.</dd>
+<dt><code>-u, &#8211;unit=</code><i>C|F</i></dt>
+<dd>Force output temperature either in Celsius or Fahrenheit.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Display hddtemp version number.</dd>
+<dt><code>-w, &#8211;wake-up</code></dt>
+<dd>Wake-up the drive if needed (ATA drives only).</dd>
+<dt><code>-4</code></dt>
+<dd>Listen on IPv4 sockets only.</dd>
+<dt><code>-6</code></dt>
+<dd>Listen on IPv6 sockets only. </dd>
 </dl>
 <h2>Drive Database</h2>
 <p>If you know your drive has a temperature sensor but it is being reported unsupported, tell me which model and which manufacturer it is, and/or just add a new entry in /etc/hddtemp.db. Each line of hddtemp.db is either a comment, a blank line or a line containing:</p>
 <dl>
-<dt>&#8211; a regular expression that allow hddtemp to recognize a drive or a</p>
-<dd>set of drives from its model name or from a generic model name,</p>
-<dt>&#8211; a value (ATTRIBUTE_ID from S.M.A.R.T.),</p>
+<dt>&#8211; a regular expression that allow hddtemp to recognize a drive or a</dt>
+<dd>set of drives from its model name or from a generic model name,</dd>
+<dt>&#8211; a value (ATTRIBUTE_ID from S.M.A.R.T.),</dt>
 <dd>
-<dt>&#8211; a C or an F to set the unit to Celsius or Fahrenheit,</p>
+</dd><dt>&#8211; a C or an F to set the unit to Celsius or Fahrenheit,</dt>
 <dd>
-<dt>&#8211; a description.</p>
-<dd></dl>
+</dd><dt>&#8211; a description.</dt>
+<dd></dd></dl>
 <p> Feedback is welcome (see the REPORT section below).</p>
 <h2>Tcp/Ip Daemon Mode</h2>
 <p>Example of type forcing: </p>
@@ -73,17 +73,17 @@ description: "hddtemp – Utility to monitor hard drive temperature"
 <p> So, you can try to guess which field by is the good one by running hddtemp at regular intervals:</p>
 <dl>
 <dt>
-&nbsp;&#8211; just after starting up your PC/server/station,</p>
+&nbsp;&#8211; just after starting up your PC/server/station,</dt>
 <dd>
-<dt>
-&nbsp;&#8211; after opening a window&nbsp;(a physical window :),</p>
+</dd><dt>
+&nbsp;&#8211; after opening a window&nbsp;(a physical window :),</dt>
 <dd>
-<dt>
-&nbsp;&#8211; after opening the case,</p>
+</dd><dt>
+&nbsp;&#8211; after opening the case,</dt>
 <dd>
-<dt>
-&nbsp;&#8211; whatever you can think of&#8230;</p>
-<dd></dl>
+</dd><dt>
+&nbsp;&#8211; whatever you can think of&#8230;</dt>
+<dd></dd></dl>
 <p> and looking for a field&#8217;s value that would increase or decrease depending on what effect you want to induce. Be careful, fields 4, 9, and 12 are often reported to match a temperature field but after some investigation they do not. But fields 194 (which is the standard field for temperature) and 231 are good candidates. </p>
 <p> Then, you can send me a report with outputs from `hddtemp &#8211;debug &#8230;&#8217;, `smartctl&#8217; or `hdparm -i &#8230;&#8217;, and/or add an entry in hddtemp.db yourself.</p>
 <h2>Bugs</h2>

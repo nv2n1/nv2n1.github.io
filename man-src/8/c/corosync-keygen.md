@@ -20,16 +20,16 @@ description: "corosync-keygen – Generate an authentication key for Corosync."
 <p> <code>Note: corosync-keygen</code> will ask for user input to assist in generating entropy unless the -l option is used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-k &lt;filename&gt;</code></p>
+<dt><code>-k &lt;filename&gt;</code></dt>
 <dd>This specifies the fully qualified path to the shared key to create.<br />
- The default is /etc/corosync/authkey.</p>
-<dt><code>-l</code></p>
-<dd>Use a less secure random data source that will not require user input to help generate entropy. This may be useful when this utility is used from a script or hardware random number generator is not available (f.e. in virtual machine). </p>
+ The default is /etc/corosync/authkey.</dd>
+<dt><code>-l</code></dt>
+<dd>Use a less secure random data source that will not require user input to help generate entropy. This may be useful when this utility is used from a script or hardware random number generator is not available (f.e. in virtual machine). </dd>
 </dl>
 <h2>Examples</h2>
 <dl>
-<dt>Generate the key.</p>
-<dd></dl>
+<dt>Generate the key.</dt>
+<dd></dd></dl>
 <p> # corosync-keygen<br />
  Corosync Cluster Engine Authentication key generator.<br />
  Gathering 1024 bits for key from /dev/random.<br />

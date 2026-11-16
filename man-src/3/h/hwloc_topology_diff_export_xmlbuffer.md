@@ -51,26 +51,26 @@ description: "hwlocality_diff – Topology differences"
 <p> Flags to be given to <code>hwloc_topology_diff_apply()</code>. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_DIFF_APPLY_REVERSE </i></p>
-<dd> Apply topology diff in reverse direction.</dl>
+<dt><i>HWLOC_TOPOLOGY_DIFF_APPLY_REVERSE </i></dt>
+<dd> Apply topology diff in reverse direction.</dd></dl>
 <h3>enum <code>hwloc_topology_diff_obj_attr_type_e</code></h3>
 <p> Type of one object attribute difference. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_SIZE </i></p>
-<dd> The object local memory is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_uint64_s</code> (and the index field is ignored).</p>
-<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_NAME </i></p>
-<dd> The object name is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_string_s</code> (and the name field is ignored).</p>
-<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_INFO </i></p>
-<dd> the value of an info attribute is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_string_s</code>.</dl>
+<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_SIZE </i></dt>
+<dd> The object local memory is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_uint64_s</code> (and the index field is ignored).</dd>
+<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_NAME </i></dt>
+<dd> The object name is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_string_s</code> (and the name field is ignored).</dd>
+<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR_INFO </i></dt>
+<dd> the value of an info attribute is modified. The union is a <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_string_s</code>.</dd></dl>
 <h3>enum <code>hwloc_topology_diff_type_e</code></h3>
 <p> Type of one element of a difference list. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR </i></p>
-<dd> An object attribute was changed. The union is a hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_s.</p>
-<dt><i>HWLOC_TOPOLOGY_DIFF_TOO_COMPLEX </i></p>
-<dd> The difference is too complex, it cannot be represented. The difference below this object has not been checked. <code>hwloc_topology_diff_build()</code> will return 1. The union is a hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_too_complex_s.</dl>
+<dt><i>HWLOC_TOPOLOGY_DIFF_OBJ_ATTR </i></dt>
+<dd> An object attribute was changed. The union is a hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_s.</dd>
+<dt><i>HWLOC_TOPOLOGY_DIFF_TOO_COMPLEX </i></dt>
+<dd> The difference is too complex, it cannot be represented. The difference below this object has not been checked. <code>hwloc_topology_diff_build()</code> will return 1. The union is a hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_too_complex_s.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int hwloc_topology_diff_apply (<code>hwloc_topology_t</code> topology, <code>hwloc_topology_diff_t</code> diff, unsigned long flags)</h3>
 <p> Apply a topology diff to an existing topology. flags is an OR&#8217;ed set of <code>hwloc_topology_diff_apply_flags_e</code>. </p>
@@ -79,7 +79,7 @@ description: "hwlocality_diff – Topology differences"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success. </p>
+</dt><dd> 0 on success. </dd>
 <p> -N if applying the difference failed while trying to apply the N-th part of the difference. For instance -1 is returned if the very first difference element could not be applied.</dl>
 <h3>int hwloc_topology_diff_build (<code>hwloc_topology_t</code> topology, <code>hwloc_topology_t</code> newtopology, unsigned long flags, <code>hwloc_topology_diff_t</code> * diff)</h3>
 <p> Compute the difference between 2 topologies. The difference is stored as a list of <code>hwloc_topology_diff_t</code> entries starting at diff. It is computed by doing a depth-first traversal of both topology trees simultaneously. </p>
@@ -87,14 +87,14 @@ description: "hwlocality_diff – Topology differences"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 if the difference can be represented properly. </p>
+</dt><dd> 0 if the difference can be represented properly. </dd>
 <p> 0 with diff pointing to NULL if there is no difference between the topologies. </p>
 <p> 1 if the difference is too complex (see above). Some entries in the list will be of type <code>HWLOC_TOPOLOGY_DIFF_TOO_COMPLEX</code>. </p>
 <p> -1 on any other error.</dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> flags is currently not used. It should be 0. </p>
+</dt><dd> flags is currently not used. It should be 0. </dd>
 <p> The output diff has to be freed with <code>hwloc_topology_diff_destroy()</code>. </p>
 <p> The output diff can only be exported to XML or passed to <code>hwloc_topology_diff_apply()</code> if 0 was returned, i.e. if no entry of type <code>HWLOC_TOPOLOGY_DIFF_TOO_COMPLEX</code> is listed. </p>
 <p> The output diff may be modified by removing some entries from the list. The removed entries should be freed by passing them to to <code>hwloc_topology_diff_destroy()</code> (possible as another list).</dl>
@@ -103,40 +103,40 @@ description: "hwlocality_diff – Topology differences"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The topology parameter must be a valid topology but it is not required that it is related to diff.</dl>
+</dt><dd> The topology parameter must be a valid topology but it is not required that it is related to diff.</dd></dl>
 <h3>int hwloc_topology_diff_export_xml (<code>hwloc_topology_t</code> topology, <code>hwloc_topology_diff_t</code> diff, const char * refname, const char * xmlpath)</h3>
 <p> Export a list of topology differences to a XML file. If not NULL, refname defines an identifier string for the reference topology which was used as a base when computing this difference. This identifier is usually the name of the other XML file that contains the reference topology. This attribute is given back when reading the diff from XML. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The topology parameter must be a valid topology but it is not required that it is related to diff.</dl>
+</dt><dd> The topology parameter must be a valid topology but it is not required that it is related to diff.</dd></dl>
 <h3>int hwloc_topology_diff_export_xmlbuffer (<code>hwloc_topology_t</code> topology, <code>hwloc_topology_diff_t</code> diff, const char * refname, char ** xmlbuffer, int * buflen)</h3>
 <p> Export a list of topology differences to a XML buffer. If not NULL, refname defines an identifier string for the reference topology which was used as a base when computing this difference. This identifier is usually the name of the other XML file that contains the reference topology. This attribute is given back when reading the diff from XML. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The XML buffer should later be freed with <code>hwloc_free_xmlbuffer()</code>. </p>
+</dt><dd> The XML buffer should later be freed with <code>hwloc_free_xmlbuffer()</code>. </dd>
 <p> The topology parameter must be a valid topology but it is not required that it is related to diff.</dl>
 <h3>int hwloc_topology_diff_load_xml (<code>hwloc_topology_t</code> topology, const char * xmlpath, <code>hwloc_topology_diff_t</code> * diff, char ** refname)</h3>
 <p> Load a list of topology differences from a XML file. If not NULL, refname will be filled with the identifier string of the reference topology for the difference file, if any was specified in the XML file. This identifier is usually the name of the other XML file that contains the reference topology. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The topology parameter must be a valid topology but it is not required that it is related to diff. </p>
+</dt><dd> The topology parameter must be a valid topology but it is not required that it is related to diff. </dd>
 <p> the pointer returned in refname should later be freed by the caller.</dl>
 <h3>int hwloc_topology_diff_load_xmlbuffer (<code>hwloc_topology_t</code> topology, const char * xmlbuffer, int buflen, <code>hwloc_topology_diff_t</code> * diff, char ** refname)</h3>
 <p> Load a list of topology differences from a XML buffer. If not NULL, refname will be filled with the identifier string of the reference topology for the difference file, if any was specified in the XML file. This identifier is usually the name of the other XML file that contains the reference topology. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The topology parameter must be a valid topology but it is not required that it is related to diff. </p>
+</dt><dd> The topology parameter must be a valid topology but it is not required that it is related to diff. </dd>
 <p> the pointer returned in refname should later be freed by the caller.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Enumeration Type Documentation</a></p>
+<dt><a href="#lbAL">Enumeration Type Documentation</a></dt>
 <dd>
-<dt><a href="#lbAP">Function Documentation</a></p>
+</dd><dt><a href="#lbAP">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAX">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAX">Author</a></dt>
+<dd></dd></dl>

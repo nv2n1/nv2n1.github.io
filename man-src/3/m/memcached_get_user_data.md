@@ -15,11 +15,11 @@ description: "memcached_get_user_data – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>void *memcached_get_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</p>
+<dt><code>void *memcached_get_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><code>void *memcached_set_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, void<i>&nbsp;<wbr>*data</i>)</p>
+</dd><dt><code>void *memcached_set_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, void<i>&nbsp;<wbr>*data</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) allows you to store a pointer to a user specific data inside the memcached_st structure. </p>
 <p> <i>memcached_set_user_data()</i> is used to set the user specific data in the <code>memcached_st</code> structure. </p>
@@ -36,3 +36,4 @@ description: "memcached_get_user_data – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

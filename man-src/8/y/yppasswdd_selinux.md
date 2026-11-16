@@ -102,8 +102,8 @@ description: "yppasswdd_selinux – Security Enhanced Linux Policy for the yppas
 <p> <code>yppasswdd_exec_t</code> </p>
 <p> &#8211; Set files with the yppasswdd_exec_t type, if you want to transition an executable to the yppasswdd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rpc.yppasswdd, /usr/sbin/rpc.yppasswdd.env </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rpc.yppasswdd, /usr/sbin/rpc.yppasswdd.env </dd>
 </dl>
 <p> <code>yppasswdd_var_run_t</code> </p>
 <p> &#8211; Set files with the yppasswdd_var_run_t type, if you want to store the yppasswdd files under the /run or /var/run directory. </p>

@@ -24,22 +24,22 @@ description: "ezstream-file.sh – script to stream files from the command line"
 <p> Lastly, the <code>EZSTREAM</code> environment variable allows to specify an alternate <code>ezstream</code> binary.</p>
 <h3>Command line parameters</h3>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print a summary of available command line parameters with short descriptions and exit.</p>
-<dt><code>-n</code></p>
-<dd> Po Passed to <code>ezstream</code> Pc Normalize metadata strings by removing excess whitespaces.</p>
-<dt><code>-q</code></p>
-<dd> Po Passed to <code>ezstream</code> Pc Be more quiet. Suppress the output that external programs send to standard error.</p>
-<dt><code>-T </code><i>cfg_template</i></p>
-<dd> Use the configuration in <i>cfg_template</i> overriding the default set in the <code>EZSTREAM_TEMPLATE</code> environment variable.</p>
-<dt><code>-V</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>-v</code></p>
-<dd> Po Passed to <code>ezstream</code> Pc Produce more verbose output from <code>ezstream</code> Use twice for even more verbose output.</dl>
+<dt><code>-h</code></dt>
+<dd> Print a summary of available command line parameters with short descriptions and exit.</dd>
+<dt><code>-n</code></dt>
+<dd> Po Passed to <code>ezstream</code> Pc Normalize metadata strings by removing excess whitespaces.</dd>
+<dt><code>-q</code></dt>
+<dd> Po Passed to <code>ezstream</code> Pc Be more quiet. Suppress the output that external programs send to standard error.</dd>
+<dt><code>-T </code><i>cfg_template</i></dt>
+<dd> Use the configuration in <i>cfg_template</i> overriding the default set in the <code>EZSTREAM_TEMPLATE</code> environment variable.</dd>
+<dt><code>-V</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Po Passed to <code>ezstream</code> Pc Produce more verbose output from <code>ezstream</code> Use twice for even more verbose output.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/share/examples/ezstream </code></p>
-<dd> Directory containing example configuration files for various uses of <code>ezstream</code> as well as example playlist and metadata scripts.</dl>
+<dt><code>/usr/share/examples/ezstream </code></dt>
+<dd> Directory containing example configuration files for various uses of <code>ezstream</code> as well as example playlist and metadata scripts.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ezstream/">ezstream</a>(1)</p>
 <h2>AUTHORS</h2>

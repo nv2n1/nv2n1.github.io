@@ -12,9 +12,9 @@ GUWK (Update workstation) - Insures that the workstation is current and reflects
 
  void gupd_ws(Gint ws_id, Gupd_regen_flag upd_regen_flag);
 <h2>Description</h2><dl COMPACT><dt>WKID
-<dd>(Integer, Input) - A number identifying the workstation to be updated. WKID must be the same as that used in some previous GOPWK call.
-<dt>REGFL
-<dd>(Integer, Input) - A flag to specify if the current picture should be regenerated. The possible values for this are &quot;0&quot; for postpone, and &quot;1&quot; for perform. For the workstation types supported in NCAR GKS, this flag should always be set to &quot;0&quot;.</dl><h2>Usage</h2>A call to GUWK flushes all GKS buffers to bring the workstation up to date. GUWK does not flush any NCAR Graphics buffers that sit above GKS such as the pen-move buffer in SPPS (see the man page for plotif).
+</dt><dd>(Integer, Input) - A number identifying the workstation to be updated. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>REGFL
+</dt><dd>(Integer, Input) - A flag to specify if the current picture should be regenerated. The possible values for this are &quot;0&quot; for postpone, and &quot;1&quot; for perform. For the workstation types supported in NCAR GKS, this flag should always be set to &quot;0&quot;.</dd></dl><h2>Usage</h2>A call to GUWK flushes all GKS buffers to bring the workstation up to date. GUWK does not flush any NCAR Graphics buffers that sit above GKS such as the pen-move buffer in SPPS (see the man page for plotif).
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: sflush, plotif, gupd_ws 
 

@@ -15,11 +15,11 @@ snd_dmaengine_pcm_open - Open a dmaengine based PCM substream
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>chan</i>
-<dl><dd>DMA channel to use for data transfers</dl>
+<dl><dd>DMA channel to use for data transfers</dd></dl>
 
 <h2>Description</h2>
 

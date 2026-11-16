@@ -12,7 +12,6 @@ std::filesystem::directory_iterator::operator= - std::filesystem::directory_iter
 
 <pre><code>directory_iterator &amp;operator=(const directory_iterator &amp;) = default;
 (since C++ 17)
-
     directory_iterator &amp;
     operator=(directory_iterator &amp;&amp;) = default;
 </code></pre> 

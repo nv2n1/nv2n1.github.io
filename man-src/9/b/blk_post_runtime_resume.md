@@ -15,11 +15,11 @@ blk_post_runtime_resume - Post runtime resume processing
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue of the device</dl>
+<dl><dd></dd><dd>the queue of the device</dd></dl>
  
 
  <i>err</i>
-<dl><dd>return value of the device's runtime_resume function</dl>
+<dl><dd>return value of the device's runtime_resume function</dd></dl>
 
 <h2>Description</h2>
 

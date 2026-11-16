@@ -11,9 +11,7 @@ std::experimental::gcd - std::experimental::gcd
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/numeric&gt;
-
 template&lt; class M, class N&gt;                        (library fundamentals TS v2)
-
 constexpr std::common_type_t&lt;M, N&gt; gcd(M m, N n);</code></pre> 
 Computes the greatest common divisor of the integers m and n. 
 

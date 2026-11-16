@@ -14,7 +14,7 @@ description: "dget_dlock – get a reference to a dentry"
 <p><i>dentry</i></p>
 <dl>
 <dd>
-<dd>dentry to get a reference to</dl>
+</dd><dd>dentry to get a reference to</dd></dl>
 <h2>Description</h2>
 <p>Given a dentry or <code>NULL</code> pointer increment the reference count if appropriate and return the dentry. A dentry will not be destroyed when it has references.</p>
 <h2>Copyright</h2>

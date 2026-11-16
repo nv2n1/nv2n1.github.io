@@ -31,40 +31,40 @@ description: "gforth, gforth-fast, gforthmi – a fast and portable Forth system
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> </p>
 <dl>
-<dt><code>-h</code><i></p>
-<dd> Lists the available options, including some not described here (see also the manual).</p>
-<dt></i><code>&#8211;image-file </code><i>file</i></p>
+<dt><code>-h</code><i></dt>
+<dd> Lists the available options, including some not described here (see also the manual).</dd>
+<dt></i><code>&#8211;image-file </code><i>file</i></dt>
 <dd>
-<dt><code>-i </code><i>file</p>
-<dd> Loads the Forth image file</i> instead of the default gforth.fi.</p>
-<dt><code>&#8211;path </code><i>path</i></p>
+</dd><dt><code>-i </code><i>file</dt>
+<dd> Loads the Forth image file</i> instead of the default gforth.fi.</dd>
+<dt><code>&#8211;path </code><i>path</i></dt>
 <dd>
-<dt><code>-p </code><i>path</p>
-<dd> Uses path</i> for searching the image file and Forth source code files instead of the default in the environment variable GFORTHPATH or the path specified at installation time (typically /usr/local/lib/gforth:.. A path is given as a <code>:</code>-separated list.</p>
-<dt><code>&#8211;dictionary-size </code><i>size</i></p>
+</dd><dt><code>-p </code><i>path</dt>
+<dd> Uses path</i> for searching the image file and Forth source code files instead of the default in the environment variable GFORTHPATH or the path specified at installation time (typically /usr/local/lib/gforth:.. A path is given as a <code>:</code>-separated list.</dd>
+<dt><code>&#8211;dictionary-size </code><i>size</i></dt>
 <dd>
-<dt><code>-m </code><i>size</p>
-<dd> Allocate size</i> space for the Forth dictionary space instead of using the default specified in the image (typically 256K). The <i>size</i> specification consists of an integer and a unit (e.g., 4M). The unit can be one of b (bytes), e (element size, in this case Cells), k (kilobytes), and M (Megabytes). If no unit is specified, e is used.</p>
-<dt><code>&#8211;data-stack-size </code><i>size</i></p>
+</dd><dt><code>-m </code><i>size</dt>
+<dd> Allocate size</i> space for the Forth dictionary space instead of using the default specified in the image (typically 256K). The <i>size</i> specification consists of an integer and a unit (e.g., 4M). The unit can be one of b (bytes), e (element size, in this case Cells), k (kilobytes), and M (Megabytes). If no unit is specified, e is used.</dd>
+<dt><code>&#8211;data-stack-size </code><i>size</i></dt>
 <dd>
-<dt><code>-d </code><i>size</p>
-<dd> Allocate size</i> space for the data stack instead of using the default specified in the image (typically 16K).</p>
-<dt><code>&#8211;return-stack-size </code><i>size</i></p>
+</dd><dt><code>-d </code><i>size</dt>
+<dd> Allocate size</i> space for the data stack instead of using the default specified in the image (typically 16K).</dd>
+<dt><code>&#8211;return-stack-size </code><i>size</i></dt>
 <dd>
-<dt><code>-r </code><i>size</p>
-<dd> Allocate size</i> space for the return stack instead of using the default specified in the image (typically 16K).</p>
-<dt><code>&#8211;fp-stack-size </code><i>size</i></p>
+</dd><dt><code>-r </code><i>size</dt>
+<dd> Allocate size</i> space for the return stack instead of using the default specified in the image (typically 16K).</dd>
+<dt><code>&#8211;fp-stack-size </code><i>size</i></dt>
 <dd>
-<dt><code>-f </code><i>size</p>
-<dd> Allocate size</i> space for the floating point stack instead of using the default specified in the image (typically 16K). In this case the unit specifier e refers to floating point numbers.</p>
-<dt><code>&#8211;locals-stack-size </code><i>size</i></p>
+</dd><dt><code>-f </code><i>size</dt>
+<dd> Allocate size</i> space for the floating point stack instead of using the default specified in the image (typically 16K). In this case the unit specifier e refers to floating point numbers.</dd>
+<dt><code>&#8211;locals-stack-size </code><i>size</i></dt>
 <dd>
-<dt><code>-l </code><i>size</p>
-<dd> Allocate size</i> space for the locals stack instead of using the default specified in the image (typically 16K). </p>
-<dt><code>&#8211;evaluate </code><i>forth</i></p>
+</dd><dt><code>-l </code><i>size</dt>
+<dd> Allocate size</i> space for the locals stack instead of using the default specified in the image (typically 16K). </dd>
+<dt><code>&#8211;evaluate </code><i>forth</i></dt>
 <dd>
-<dt><code>-e </code><i>forth</p>
-<dd> Evaluates the forth</i> code. This option takes only one argument; if you want to evaluate more Forth words, you have to quote them or use several -es. To exit after processing the command line (instead of entering interactive mode) append -e bye to the command line. This is an image-specific option of the default image.</dl>
+</dd><dt><code>-e </code><i>forth</dt>
+<dd> Evaluates the forth</i> code. This option takes only one argument; if you want to evaluate more Forth words, you have to quote them or use several -es. To exit after processing the command line (instead of entering interactive mode) append -e bye to the command line. This is an image-specific option of the default image.</dd></dl>
 <h2>FILES</h2>
 <pre>
 .../gforth.fi    default Forth image

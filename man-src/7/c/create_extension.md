@@ -20,20 +20,20 @@ description: "CREATE_EXTENSION – install an extension"
 <h2>Parameters</h2>
 <p>IF NOT EXISTS</p>
 <dl>
-<dd>Do not throw an error if an extension with the same name already exists. A notice is issued in this case. Note that there is no guarantee that the existing extension is anything like the one that would have been created from the currently-available script file.</dl>
+<dd>Do not throw an error if an extension with the same name already exists. A notice is issued in this case. Note that there is no guarantee that the existing extension is anything like the one that would have been created from the currently-available script file.</dd></dl>
 <p> <i>extension_name</i></p>
 <dl>
-<dd>The name of the extension to be installed. PostgreSQL will create the extension using details from the file SHAREDIR/extension/<i>extension_name</i>.control.</dl>
+<dd>The name of the extension to be installed. PostgreSQL will create the extension using details from the file SHAREDIR/extension/<i>extension_name</i>.control.</dd></dl>
 <p> <i>schema_name</i></p>
 <dl>
-<dd>The name of the schema in which to install the extension&#8217;s objects, given that the extension allows its contents to be relocated. The named schema must already exist. If not specified, and the extension&#8217;s control file does not specify a schema either, the current default object creation schema is used. </p>
+<dd>The name of the schema in which to install the extension&#8217;s objects, given that the extension allows its contents to be relocated. The named schema must already exist. If not specified, and the extension&#8217;s control file does not specify a schema either, the current default object creation schema is used. </dd>
 <p> Remember that the extension itself is not considered to be within any schema: extensions have unqualified names that must be unique database-wide. But objects belonging to the extension can be within schemas.</dl>
 <p> <i>version</i></p>
 <dl>
-<dd>The version of the extension to install. This can be written as either an identifier or a string literal. The default version is whatever is specified in the extension&#8217;s control file.</dl>
+<dd>The version of the extension to install. This can be written as either an identifier or a string literal. The default version is whatever is specified in the extension&#8217;s control file.</dd></dl>
 <p> <i>old_version</i></p>
 <dl>
-<dd>FROM<i>old_version</i> must be specified when, and only when, you are attempting to install an extension that replaces an &#8220;old style&#8221; module that is just a collection of objects not packaged into an extension. This option causes <code>CREATE EXTENSION</code> to run an alternative installation script that absorbs the existing objects into the extension, instead of creating new objects. Be careful that SCHEMA specifies the schema containing these pre-existing objects. </p>
+<dd>FROM<i>old_version</i> must be specified when, and only when, you are attempting to install an extension that replaces an &#8220;old style&#8221; module that is just a collection of objects not packaged into an extension. This option causes <code>CREATE EXTENSION</code> to run an alternative installation script that absorbs the existing objects into the extension, instead of creating new objects. Be careful that SCHEMA specifies the schema containing these pre-existing objects. </dd>
 <p> The value to use for <i>old_version</i> is determined by the extension&#8217;s author, and might vary if there is more than one version of the old-style module that can be upgraded into an extension. For the standard additional modules supplied with pre-9.1 PostgreSQL, use unpackaged for <i>old_version</i> when updating a module to extension style.</dl>
 <h2>Notes</h2>
 <p>Before you can use <code>CREATE EXTENSION</code> to load an extension into a database, the extension&#8217;s supporting files must be installed. Information about installing the extensions supplied with PostgreSQL can be found in Additional Supplied Modules. </p>
@@ -44,12 +44,12 @@ description: "CREATE_EXTENSION – install an extension"
 <dl>
 <dd>
 <pre>CREATE EXTENSION hstore;</pre>
-</dl>
+</dd></dl>
 <p> Update a pre-9.1 installation of hstore into extension style: </p>
 <dl>
 <dd>
 <pre>CREATE EXTENSION hstore SCHEMA public FROM unpackaged;</pre>
-</dl>
+</dd></dl>
 <p> Be careful to specify the schema in which you installed the existing hstore objects.</p>
 <h2>Compatibility</h2>
 <p><code>CREATE EXTENSION</code> is a PostgreSQL extension.</p>

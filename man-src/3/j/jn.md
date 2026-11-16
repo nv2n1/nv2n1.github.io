@@ -27,16 +27,16 @@ long double jnl(int n, long double x);
 <p> <code>j0</code>(), <code>j1</code>(), <code>jn</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>j0f</code>(), <code>j0l</code>(), <code>j1f</code>(), <code>j1l</code>(), <code>jnf</code>(), <code>jnl</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br />
+</dt><dd> _XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>j0</code>() and <code>j1</code>() functions return Bessel functions of <i>x</i> of the first kind of orders 0 and 1, respectively. The <code>jn</code>() function returns the Bessel function of <i>x</i> of the first kind of order <i>n</i>. </p>
 <p> The <code>j0f</code>(), <code>j1f</code>(), and <code>jnf</code>(), functions are versions that take and return <i>float</i> values. The <code>j0l</code>(), <code>j1l</code>(), and <code>jnl</code>() functions are versions that take and return <i>long double</i> values.</p>
@@ -48,8 +48,8 @@ long double jnl(int n, long double x);
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Range error: result underflow, or <i>x</i> is too large in magnitude</p>
-<dd> <i>errno</i> is set to <code>ERANGE</code>.</dl>
+<dt>Range error: result underflow, or <i>x</i> is too large in magnitude</dt>
+<dd> <i>errno</i> is set to <code>ERANGE</code>.</dd></dl>
 <p> These functions do not raise exceptions for <code><a href="/docs/linux/man/3-fetestexcept/">fetestexcept</a></code>(3).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

@@ -25,10 +25,10 @@ description: "news2mail – Channel script to gateway news into e-mails"
  list-big-red-ants big-red-ants [at] lists.ucsd.edu news+big-red-ants [at] local.news.server.org</pre>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/news2mail</p>
-<dd>The Perl program itself used to gateway news into e-mails.</p>
-<dt><i>pathetc</i>/news2mail.cf</p>
-<dd>The configuration file which specifies the mapping to use for gatewaying.</dl>
+<dt><i>pathbin</i>/news2mail</dt>
+<dd>The Perl program itself used to gateway news into e-mails.</dd>
+<dt><i>pathetc</i>/news2mail.cf</dt>
+<dd>The configuration file which specifies the mapping to use for gatewaying.</dd></dl>
 <h2>Bugs</h2>
 <p>The <code>news2mail</code> program is set up as a funneled channel in <i>newsfeeds</i>, implying multiple matches should be handled as one &#8211; and multiple matching funneled feeds will result in a single call to the script. Therefore, since only one mail is sent, crossposts are not currently properly handled as for the envelope-from address (which then defaults to the <tt>&quot;news&quot;</tt> user).</p>
 <h2>History</h2>

@@ -17,7 +17,6 @@ description: "fixcos – Fixed point cosine of binary angles. Allegro game progr
 <pre><code>
 fixed angle;
 float result;
-
 /* Set the binary angle to 45 degrees. */
 angle = itofix(32);
 /* The cosine of 45 degrees is about 0.7071. */

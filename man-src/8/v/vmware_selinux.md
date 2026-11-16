@@ -79,42 +79,42 @@ description: "vmware_selinux – Security Enhanced Linux Policy for the vmware p
 <p> <code>vmware_exec_t</code> </p>
 <p> &#8211; Set files with the vmware_exec_t type, if you want to transition an executable to the vmware_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/vmware/(workstation|player)/bin/vmware, /opt/vmware/(workstation|player)/bin/vmware-ping, /opt/vmware/(workstation|player)/bin/vmware-wizard, /usr/bin/vmware, /usr/bin/vmware-ping, /usr/bin/vmware-wizard, /usr/sbin/vmware-serverd, /usr/lib/vmware/bin/vmplayer, /usr/lib/vmware/bin/vmware-ui, /usr/lib/vmware/bin/vmware-mks </p>
+<dt>Paths:</dt>
+<dd>/opt/vmware/(workstation|player)/bin/vmware, /opt/vmware/(workstation|player)/bin/vmware-ping, /opt/vmware/(workstation|player)/bin/vmware-wizard, /usr/bin/vmware, /usr/bin/vmware-ping, /usr/bin/vmware-wizard, /usr/sbin/vmware-serverd, /usr/lib/vmware/bin/vmplayer, /usr/lib/vmware/bin/vmware-ui, /usr/lib/vmware/bin/vmware-mks </dd>
 </dl>
 <p> <code>vmware_file_t</code> </p>
 <p> &#8211; Set files with the vmware_file_t type, if you want to treat the files as vmware content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/vmware(/.*)?, /home/[^/]+/.vmware(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/vmware(/.*)?, /home/[^/]+/.vmware(/.*)? </dd>
 </dl>
 <p> <code>vmware_host_exec_t</code> </p>
 <p> &#8211; Set files with the vmware_host_exec_t type, if you want to transition an executable to the vmware_host_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/vmware/(workstation|player)/bin/vmnet-natd, /opt/vmware/(workstation|player)/bin/vmnet-dhcpd, /opt/vmware/(workstation|player)/bin/vmware-nmbd, /opt/vmware/(workstation|player)/bin/vmware-smbd, /opt/vmware/(workstation|player)/bin/vmnet-bridge, /opt/vmware/(workstation|player)/bin/vmnet-netifup, /opt/vmware/(workstation|player)/bin/vmnet-sniffer, /opt/vmware/(workstation|player)/bin/vmware-smbpasswd, /opt/vmware/(workstation|player)/bin/vmware-smbpasswd.bin, /usr/sbin/vmware-guest.*, /usr/lib/vmware-tools/sbin32/vmware.*, /usr/lib/vmware-tools/sbin64/vmware.*, /usr/bin/vmnet-natd, /usr/bin/vmware-vmx, /usr/bin/vmnet-dhcpd, /usr/bin/vmware-nmbd, /usr/bin/vmware-smbd, /usr/bin/vmnet-bridge, /usr/bin/vmnet-netifup, /usr/bin/vmnet-sniffer, /usr/bin/vmware-network, /usr/bin/vmware-smbpasswd, /usr/bin/vmware-smbpasswd.bin, /usr/lib/vmware/bin/vmware-vmx </p>
+<dt>Paths:</dt>
+<dd>/opt/vmware/(workstation|player)/bin/vmnet-natd, /opt/vmware/(workstation|player)/bin/vmnet-dhcpd, /opt/vmware/(workstation|player)/bin/vmware-nmbd, /opt/vmware/(workstation|player)/bin/vmware-smbd, /opt/vmware/(workstation|player)/bin/vmnet-bridge, /opt/vmware/(workstation|player)/bin/vmnet-netifup, /opt/vmware/(workstation|player)/bin/vmnet-sniffer, /opt/vmware/(workstation|player)/bin/vmware-smbpasswd, /opt/vmware/(workstation|player)/bin/vmware-smbpasswd.bin, /usr/sbin/vmware-guest.*, /usr/lib/vmware-tools/sbin32/vmware.*, /usr/lib/vmware-tools/sbin64/vmware.*, /usr/bin/vmnet-natd, /usr/bin/vmware-vmx, /usr/bin/vmnet-dhcpd, /usr/bin/vmware-nmbd, /usr/bin/vmware-smbd, /usr/bin/vmnet-bridge, /usr/bin/vmnet-netifup, /usr/bin/vmnet-sniffer, /usr/bin/vmware-network, /usr/bin/vmware-smbpasswd, /usr/bin/vmware-smbpasswd.bin, /usr/lib/vmware/bin/vmware-vmx </dd>
 </dl>
 <p> <code>vmware_host_pid_t</code> </p>
 <p> &#8211; Set files with the vmware_host_pid_t type, if you want to store the vmware host files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/vmnat.*, /var/run/vmnet.*, /var/run/vmware.* </p>
+<dt>Paths:</dt>
+<dd>/var/run/vmnat.*, /var/run/vmnet.*, /var/run/vmware.* </dd>
 </dl>
 <p> <code>vmware_host_tmp_t</code> </p>
 <p> &#8211; Set files with the vmware_host_tmp_t type, if you want to store vmware host temporary files in the /tmp directories. </p>
 <p> <code>vmware_log_t</code> </p>
 <p> &#8211; Set files with the vmware_log_t type, if you want to treat the data as vmware log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/vmware.*, /var/log/vnetlib.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/vmware.*, /var/log/vnetlib.* </dd>
 </dl>
 <p> <code>vmware_pid_t</code> </p>
 <p> &#8211; Set files with the vmware_pid_t type, if you want to store the vmware files under the /run directory. </p>
 <p> <code>vmware_sys_conf_t</code> </p>
 <p> &#8211; Set files with the vmware_sys_conf_t type, if you want to treat the files as vmware sys configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/vmware.*(/.*)?, /usr/lib/vmware/config </p>
+<dt>Paths:</dt>
+<dd>/etc/vmware.*(/.*)?, /usr/lib/vmware/config </dd>
 </dl>
 <p> <code>vmware_tmp_t</code> </p>
 <p> &#8211; Set files with the vmware_tmp_t type, if you want to store vmware temporary files in the /tmp directories. </p>

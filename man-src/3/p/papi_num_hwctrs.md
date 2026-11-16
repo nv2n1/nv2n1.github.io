@@ -13,6 +13,6 @@ description: "PAPI_num_hwctrs –"
 <h2>Detailed Description</h2>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_num_cmp_hwctrs</code></dl>
+<dd><code>PAPI_num_cmp_hwctrs</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

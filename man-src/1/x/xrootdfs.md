@@ -20,16 +20,16 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 <p> run from command line with debugging output</p>
 <dl>
 <dt>
-<dd> xrootdfs -d -o rdr=<a href="root://rdr:port//data,uid=daemon">root://rdr:port//data,uid=daemon</a> /mnt</dl>
+</dt><dd> xrootdfs -d -o rdr=<a href="root://rdr:port//data,uid=daemon">root://rdr:port//data,uid=daemon</a> /mnt</dd></dl>
 <p> use in /etc/fstab</p>
 <dl>
 <dt>
-<dd> xrootdfs /mnt fuse rdr=<a href="root://rdr:port//data,uid=daemon">root://rdr:port//data,uid=daemon</a> 1 2</dl>
+</dt><dd> xrootdfs /mnt fuse rdr=<a href="root://rdr:port//data,uid=daemon">root://rdr:port//data,uid=daemon</a> 1 2</dd></dl>
 <p> use with autofs</p>
 <dl>
 <dt>
-<dd> 1. add a line to /etc/auto.master<br />
- /- /etc/auto.fuse </p>
+</dt><dd> 1. add a line to /etc/auto.master<br />
+ /- /etc/auto.fuse </dd>
 <p> 2. create /etc/auto.fuse with the following one line<br />
  /mnt -fstype=fuse,uid=2,rdr=<a href="root://rdr\:port//data">root://rdr\:port//data</a> :xrootdfs.sh </p>
 <p> 3. create script /usr/bin/xrootdfs.sh (make sure +x bit is set)<br />
@@ -44,9 +44,9 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 <p> attribute_name:</p>
 <dl>
 <dt>
-<dd> <code>xroot.url:</code> query the actual ROOT url of the file (this is an old one)<br />
+</dt><dd> <code>xroot.url:</code> query the actual ROOT url of the file (this is an old one)<br />
  <code>xrootdfs.fs.nworkers:</code> query or change the number of threads working in parallel on operations such as stat(), unlink()/rmdir(), readdir(), statvfs(), etc.<br />
- <code>xrootdfs.fs.dataserverlist: </code> query or refresh the list of all data servers known to this xrootdfs instance (or &quot;kill -USR1 pid&quot; to refresh) </p>
+ <code>xrootdfs.fs.dataserverlist: </code> query or refresh the list of all data servers known to this xrootdfs instance (or &quot;kill -USR1 pid&quot; to refresh) </dd>
 </dl>
 <h2>SECURITY</h2>
 <p> By default, XrootdFS does not send individual user identity to the Xrootd storage servers. So Xrootd storage thinks that all operations from an XrootdFS instance come from the user that runs the XrootdFS instance. When the Xrootd &quot;sss&quot; security module (Simple Shared Security) is enabled at both XrootdFS and Xrootd storage system, XrootdFS will send individual user identity infomation to the Xrootd storage servers. This info can be used along with the Xrootd ACL to control file/directory access. </p>
@@ -57,8 +57,8 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 <p> The following example shows how to use both unix and sss security modules with the Xrootd data servers. </p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>xrootd.seclib&nbsp;<wbr>/usr/lib64/libXrdSec.so </p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>xrootd.seclib&nbsp;<wbr>/usr/lib64/libXrdSec.so </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>sec.protocol&nbsp;<wbr>/usr/lib64 sss -s&nbsp;<wbr>/keyfile </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>sec.protocol&nbsp;<wbr>/usr/lib64 unix </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>acc.authdb&nbsp;<wbr>/your_xrootd_ACL_auth_db_file </p>

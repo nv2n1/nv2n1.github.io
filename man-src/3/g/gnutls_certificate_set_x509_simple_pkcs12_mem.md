@@ -14,14 +14,14 @@ description: "gnutls_certificate_set_x509_simple_pkcs12_mem – API function"
 <p> <code>int gnutls_certificate_set_x509_simple_pkcs12_mem(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>p12blob</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, const char * </code><i>password</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>const gnutls_datum_t * p12blob</p>
-<dd> the PKCS<code>12</code> blob.</p>
-<dt>gnutls_x509_crt_fmt_t type</p>
-<dd> is PEM or DER of the <i>pkcs12file</i> .</p>
-<dt>const char * password</p>
-<dd> optional password used to decrypt PKCS<code>12</code> file, bags and keys.</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>const gnutls_datum_t * p12blob</dt>
+<dd> the PKCS<code>12</code> blob.</dd>
+<dt>gnutls_x509_crt_fmt_t type</dt>
+<dd> is PEM or DER of the <i>pkcs12file</i> .</dd>
+<dt>const char * password</dt>
+<dd> optional password used to decrypt PKCS<code>12</code> file, bags and keys.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair and/or a CRL in the gnutls_certificate_credentials_t structure. This function may be called more than once (in case multiple keys/certificates exist for the server). </p>
 <p> Encrypted PKCS<code>12</code> bags and PKCS<code>8</code> private keys are supported. However, only password based security, and the same password for all operations, are supported. </p>
@@ -41,6 +41,6 @@ description: "gnutls_certificate_set_x509_simple_pkcs12_mem – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

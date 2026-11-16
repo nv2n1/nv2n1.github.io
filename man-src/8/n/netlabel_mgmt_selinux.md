@@ -80,8 +80,8 @@ description: "netlabel_mgmt_selinux – Security Enhanced Linux Policy for the n
 <p> <code>netlabel_mgmt_exec_t</code> </p>
 <p> &#8211; Set files with the netlabel_mgmt_exec_t type, if you want to transition an executable to the netlabel_mgmt_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/netlabelctl, /usr/sbin/netlabelctl, /usr/sbin/netlabel-config </p>
+<dt>Paths:</dt>
+<dd>/sbin/netlabelctl, /usr/sbin/netlabelctl, /usr/sbin/netlabel-config </dd>
 </dl>
 <p> <code>netlabel_mgmt_unit_file_t</code> </p>
 <p> &#8211; Set files with the netlabel_mgmt_unit_file_t type, if you want to treat the files as netlabel mgmt unit content. </p>

@@ -19,19 +19,19 @@ description: "PRIO – Priority qdisc"
 <h2>Classification</h2>
 <p>Three methods are available to PRIO to determine in which band a packet will be enqueued.</p>
 <dl>
-<dt>From userspace</p>
-<dd>A process with sufficient privileges can encode the destination class directly with SO_PRIORITY, see <code><a href="/docs/linux/man/7-socket/">socket</a>(7).</code></p>
-<dt>with a tc filter</p>
-<dd>A tc filter attached to the root qdisc can point traffic directly to a class</p>
-<dt>with the priomap</p>
-<dd>Based on the packet priority, which in turn is derived from the Type of Service assigned to the packet.</dl>
+<dt>From userspace</dt>
+<dd>A process with sufficient privileges can encode the destination class directly with SO_PRIORITY, see <code><a href="/docs/linux/man/7-socket/">socket</a>(7).</code></dd>
+<dt>with a tc filter</dt>
+<dd>A tc filter attached to the root qdisc can point traffic directly to a class</dd>
+<dt>with the priomap</dt>
+<dd>Based on the packet priority, which in turn is derived from the Type of Service assigned to the packet.</dd></dl>
 <p> Only the priomap is specific to this qdisc.</p>
 <h2>Qdisc Parameters</h2>
 <dl>
-<dt>bands</p>
-<dd>Number of bands. If changed from the default of 3, <code>priomap</code> must be updated as well.</p>
-<dt>priomap</p>
-<dd>The priomap maps the priority of a packet to a class. The priority can either be set directly from userspace, or be derived from the Type of Service of the packet. </p>
+<dt>bands</dt>
+<dd>Number of bands. If changed from the default of 3, <code>priomap</code> must be updated as well.</dd>
+<dt>priomap</dt>
+<dd>The priomap maps the priority of a packet to a class. The priority can either be set directly from userspace, or be derived from the Type of Service of the packet. </dd>
 <p> Determines how packet priorities, as assigned by the kernel, map to bands. Mapping occurs based on the TOS octet of the packet, which looks like this: </p>
 <pre>0 1 2 3 4 5 6 7
 +---+---+---+---+---+---+---+---+

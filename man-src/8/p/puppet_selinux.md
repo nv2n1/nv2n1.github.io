@@ -80,9 +80,9 @@ description: "puppet_selinux – Security Enhanced Linux Policy for the puppet p
 <p> Policy governs the access confined processes have to these ports. SELinux puppet policy is very flexible allowing users to setup their puppet processes in as secure a method as possible. </p>
 <p> The following port types are defined for puppet: </p>
 <dl>
-<dt><code>puppet_port_t</code></p>
+<dt><code>puppet_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8140</dl>
+</dd><dd>Default Defined Ports: tcp 8140</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type puppet_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>

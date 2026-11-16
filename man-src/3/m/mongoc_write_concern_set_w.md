@@ -14,11 +14,11 @@ mongoc_write_concern_set_w (mongoc_write_concern_t *write_concern,
  int32_t w);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>w</code></p>
-<dd>A positive <code>int32_t</code> or zero.</dl>
+<dt><code>w</code></dt>
+<dd>A positive <code>int32_t</code> or zero.</dd></dl>
 <h2>Description</h2>
 <p>Sets the <code>w</code> value for the write concern. See <code>mongoc_write_concern_t</code> for more information on this setting. </p>
 <h2>Colophon</h2>

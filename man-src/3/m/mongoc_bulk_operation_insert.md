@@ -17,11 +17,11 @@ mongoc_bulk_operation_insert (mongoc_bulk_operation_t *bulk,
 <p> Queue an insert of a single document into a bulk operation. The insert is not performed until <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> is called. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>document</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>document</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>Colophon</h2>

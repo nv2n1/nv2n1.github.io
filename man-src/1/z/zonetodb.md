@@ -16,19 +16,19 @@ description: "zonetodb – Generate a PostgreSQL table from a zone."
 <p> <code>zone</code></p>
 <dl>
 <dt>
-<dd> Zone origin, eg &quot;pgdb.net.&quot;</dl>
+</dt><dd> Zone origin, eg &quot;pgdb.net.&quot;</dd></dl>
 <p> <code>file</code></p>
 <dl>
 <dt>
-<dd> Master zone database file, eg. pgdb.net.db</dl>
+</dt><dd> Master zone database file, eg. pgdb.net.db</dd></dl>
 <p> <code>dbname</code></p>
 <dl>
 <dt>
-<dd> Name of PostgreSQL database (database must exist)</dl>
+</dt><dd> Name of PostgreSQL database (database must exist)</dd></dl>
 <p> <code>dbtable</code></p>
 <dl>
 <dt>
-<dd> Name of table in database</dl>
+</dt><dd> Name of table in database</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Exits with 0 on success or 1 on failure.</p>
 <h2>SEE ALSO</h2>

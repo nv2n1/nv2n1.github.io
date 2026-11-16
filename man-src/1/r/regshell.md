@@ -11,68 +11,68 @@ description: "regshell – Windows registry file browser using readline"
 <p> regshell &#8211; Windows registry file browser using readline </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>regshell</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location]</dl>
+<dt> <code>regshell</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>regshell is a utility that lets you browse thru a Windows registry file as if you were using a regular unix shell to browse thru a file system.</p>
+<dd>regshell is a utility that lets you browse thru a Windows registry file as if you were using a regular unix shell to browse thru a file system.</dd>
 <h2>OPTIONS</h2>
 <p> &#8211;help</p>
 <dl>
 <dt>
-<dd> Show list of available options.</dl>
+</dt><dd> Show list of available options.</dd></dl>
 <p> &#8211;backend BACKEND</p>
 <dl>
 <dt>
-<dd> Name of backend to load. Possible values are: creg, regf, dir and rpc. The default is <i>dir</i>.</dl>
+</dt><dd> Name of backend to load. Possible values are: creg, regf, dir and rpc. The default is <i>dir</i>.</dd></dl>
 <p> &#8211;credentials=CREDENTIALS</p>
 <dl>
 <dt>
-<dd> Credentials to use, if any. Password should be separated from user name by a percent sign.</dl>
+</dt><dd> Credentials to use, if any. Password should be separated from user name by a percent sign.</dd></dl>
 <h2>COMMANDS</h2>
 <p> ck|cd &lt;keyname&gt;</p>
 <dl>
 <dt>
-<dd> Go to the specified subkey.</dl>
+</dt><dd> Go to the specified subkey.</dd></dl>
 <p> ch|predef [predefined-key-name]</p>
 <dl>
 <dt>
-<dd> Go to the specified predefined key.</dl>
+</dt><dd> Go to the specified predefined key.</dd></dl>
 <p> list|ls</p>
 <dl>
 <dt>
-<dd> List subkeys and values of the current key.</dl>
+</dt><dd> List subkeys and values of the current key.</dd></dl>
 <p> mkkey|mkdir &lt;keyname&gt;</p>
 <dl>
 <dt>
-<dd> Create a key with the specified <i>keyname</i> as a subkey of the current key.</dl>
+</dt><dd> Create a key with the specified <i>keyname</i> as a subkey of the current key.</dd></dl>
 <p> rmval|rm &lt;valname&gt;</p>
 <dl>
 <dt>
-<dd> Delete the specified value.</dl>
+</dt><dd> Delete the specified value.</dd></dl>
 <p> rmkey|rmdir &lt;keyname&gt;</p>
 <dl>
 <dt>
-<dd> Delete the specified subkey recursively.</dl>
+</dt><dd> Delete the specified subkey recursively.</dd></dl>
 <p> pwd|pwk</p>
 <dl>
 <dt>
-<dd> Print the full name of the current key.</dl>
+</dt><dd> Print the full name of the current key.</dd></dl>
 <p> set|update</p>
 <dl>
 <dt>
-<dd> Update the value of a key value. Not implemented at the moment.</dl>
+</dt><dd> Update the value of a key value. Not implemented at the moment.</dd></dl>
 <p> help|?</p>
 <dl>
 <dt>
-<dd> Print a list of available commands.</dl>
+</dt><dd> Print a list of available commands.</dd></dl>
 <p> exit|quit</p>
 <dl>
 <dt>
-<dd> Leave regshell.</dl>
+</dt><dd> Leave regshell.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Browsing thru a nt4 registry file </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>regshell -b nt4 NTUSER.DAT</code>
 $$$PROTO.HIV&gt; <code>ls</code>
@@ -89,11 +89,11 @@ K UNICODE Program Groups
 K Windows 3.1 Migration Status
 $$$PROTO.HIV&gt; <code>exit</code>
 </pre>
-</dl>
+</dd></dl>
 <p> Listing the subkeys of HKEY_CURRENT_USER\AppEvents on a remote computer: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>regshell --remote=ncacn_np:aurelia -c &quot;jelmer%secret&quot;</code>
 HKEY_CURRENT_MACHINE&gt; <code>predef HKEY_CURRENT_USER</code>
@@ -104,7 +104,7 @@ K EventLabels
 K Schemes
 HKEY_CURRENT_USER\AppEvents&gt; <code>exit</code>
 </pre>
-</dl>
+</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 4.0 of the Samba suite.</p>
 <h2>SEE ALSO</h2>
@@ -114,15 +114,15 @@ HKEY_CURRENT_USER\AppEvents&gt; <code>exit</code>
 <p> This manpage and regshell were written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Samba</p>
+<dt> 1.</dt>
+<dd> Samba</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dl>
-<dt> 2.</p>
-<dd> Samba Team</p>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd> Samba Team</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
 <h2>Index</h2>

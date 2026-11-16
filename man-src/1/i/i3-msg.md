@@ -29,9 +29,9 @@ url: "/docs/linux/man/1-i3-msg/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 i3-msg &quot;bp&quot; # Use 1-px border for current client
-</pre></dl>
+</pre></dd></dl>
 
 <h2>SEE ALSO</h2>
 

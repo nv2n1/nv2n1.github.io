@@ -10,7 +10,6 @@ description: "pbs_holdjob – place a hold on a pbs batch job"
 <p>pbs_holdjob &#8211; place a hold on a pbs batch job</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_holdjob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*hold_type,
 char&nbsp;<wbr>*extend)</pre>
@@ -21,13 +20,13 @@ char&nbsp;<wbr>*extend)</pre>
 <p> The parameter, </code><i> contains the type of hold to be applied. The possible values are defined in pbs_ifl.h as:</p>
 <dl>
 <dd>
-<dl>
-<dt>#define USER_HOLD u</p>
-<dd>Available to the owner of the job, the batch operator, and the batch administrator.</p>
-<dt>#define OTHER_HOLD o</p>
-<dd>Available to the batch operator and the batch administrator.</p>
-<dt>#define SYSTEM_HOLD s</p>
-<dd>Available only to the batch administrator.</dl>
+</dd><dl>
+<dt>#define USER_HOLD u</dt>
+<dd>Available to the owner of the job, the batch operator, and the batch administrator.</dd>
+<dt>#define OTHER_HOLD o</dt>
+<dd>Available to the batch operator and the batch administrator.</dd>
+<dt>#define SYSTEM_HOLD s</dt>
+<dd>Available only to the batch administrator.</dd></dl>
 </dl>
 <p> If is either a null pointer or points to a null string, USER_HOLD will be applied. </p>
 <p> The parameter, is reserved for implementation defined extensions. </i></p>

@@ -11,10 +11,8 @@ std::filesystem::absolute - std::filesystem::absolute
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     path absolute(const std::filesystem::path &amp;p);
 (since C++ 17)
-
     path absolute(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre> 
 Returns a path referencing the same file system location as p, for which is_absolute() is true. The non-throwing overload returns default-constructed path if an error occurs. 
 
@@ -40,18 +38,13 @@ For Windows, absolute may be implemented as a call to GetFullPathNameW.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = &quot;C:cl.exe&quot;;
     std::cout &lt;&lt; &quot;Current path is &quot; &lt;&lt; fs::current_path() &lt;&lt; '\n'
               &lt;&lt; &quot;Absolute path for &quot; &lt;&lt; p &lt;&lt; &quot; is &quot; &lt;&lt; fs::absolute(p) &lt;&lt; '\n';
-
     // actual location: &quot;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe&quot;
 }
 </code></pre>

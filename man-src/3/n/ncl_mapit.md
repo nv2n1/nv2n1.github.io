@@ -31,22 +31,22 @@ RLON must be
 
  Keep in mind the following:
 <dl COMPACT><dt>&bull;
-<dd>The projection of the line segment joining two points on the globe is considered to be the straight-line segment joining the projections of the points; no attempt is made to project it as if it were a portion of a great circle.
-<dt>&bull;
-<dd>If both endpoints of a line segment are visible, the segment is considered to be entirely visible.
-<dt>&bull;
-<dd>If both endpoints are invisible, the segment is considered to be entirely invisible.
-<dt>&bull;
-<dd>If one endpoint is visible and the other is not, a new point is interpolated at the boundary between the visible and invisible portions. Only visible portions of the line are drawn.</dl>
+</dt><dd>The projection of the line segment joining two points on the globe is considered to be the straight-line segment joining the projections of the points; no attempt is made to project it as if it were a portion of a great circle.
+</dd><dt>&bull;
+</dt><dd>If both endpoints of a line segment are visible, the segment is considered to be entirely visible.
+</dd><dt>&bull;
+</dt><dd>If both endpoints are invisible, the segment is considered to be entirely invisible.
+</dd><dt>&bull;
+</dt><dd>If one endpoint is visible and the other is not, a new point is interpolated at the boundary between the visible and invisible portions. Only visible portions of the line are drawn.</dd></dl>
  
 
  Because of these considerations, points defining a line should not be too far apart on the globe. 
 
  There are two types of boundaries between visible and invisible regions:
 <dl COMPACT><dt>&bull;
-<dd>The limb is a boundary between a projectable region and an unprojectable one. The limb may be circular, elliptical, or some other shape, depending on the projection being used. For example, an orthographic projection has as its limb a circle, centered at (0,0), with a radius of 1.
-<dt>&bull;
-<dd>The perimeter is a rectangular or elliptical boundary defined by EZMAP parameters set by you to specify the region you wish to view.</dl><h2>Examples</h2>Use the ncargex command to see the following relevant examples: cmpgci, cmptra, mpexfi.
+</dt><dd>The limb is a boundary between a projectable region and an unprojectable one. The limb may be circular, elliptical, or some other shape, depending on the projection being used. For example, an orthographic projection has as its limb a circle, centered at (0,0), with a radius of 1.
+</dd><dt>&bull;
+</dt><dd>The perimeter is a rectangular or elliptical boundary defined by EZMAP parameters set by you to specify the region you wish to view.</dd></dl><h2>Examples</h2>Use the ncargex command to see the following relevant examples: cmpgci, cmptra, mpexfi.
 <h2>Access</h2>To use MAPIT or c_mapit, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: ezmap, ezmap_params, mapaci, mapbla, mapblm, mapdrw, mapeod, mapfst, mapgci, mapgrd, mapgrm, mapgtc, mapgti, mapgtl, mapgtr, mapint, mapiq, mapiqa, mapiqd, mapiqm, mapita, mapitd, mapitm, maplbl, maplmb, maplot, mappos, maproj, maprs, maprst, mapsav, mapset, mapstc, mapsti, mapstl, mapstr, maptra, maptri, maptrn, mapusr, mapvec, mpchln, mpfnme, mpgetc, mpgeti, mpgetl, mpgetr, mpglty, mpiaty, mpifnb, mpilnb, mpiola, mpiosa, mpipai, mpipan, mpipar, mpisci, mplnam, mplndm, mplndr, mplnri, mpname, mprset, mpsetc, mpseti, mpsetl, mpsetr, supmap, supcon, ncarg_cbind 
 

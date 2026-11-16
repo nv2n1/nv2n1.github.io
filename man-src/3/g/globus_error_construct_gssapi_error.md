@@ -28,28 +28,28 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>base_source</i> Pointer to the originating module.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
  <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br />
  <i>major_status</i> The GSSAPI major status<br />
- <i>minor_status</i> The GSSAPI minor status</dl>
+ <i>minor_status</i> The GSSAPI minor status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dl>
+</dt><dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dd></dl>
 <h3>globus_object_t* globus_error_initialize_gssapi_error (globus_object_t *error, globus_module_descriptor_t *base_source, globus_object_t *base_cause, const OM_uint32major_status, const OM_uint32minor_status)</h3>
 <p> Initialize Error. Initialize a previously allocated error of type GLOBUS_ERROR_TYPE_GSSAPI </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The previously allocated error object.<br />
+</dt><dd> <i>error</i> The previously allocated error object.<br />
  <i>base_source</i> Pointer to the originating module.<br />
  <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
  <i>major_status</i> The GSSAPI major status<br />
- <i>minor_status</i> The GSSAPI minor status</dl>
+ <i>minor_status</i> The GSSAPI minor status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dl>
+</dt><dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_error from the source code. </p>
 <h2>Index</h2>

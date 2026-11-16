@@ -13,20 +13,20 @@ description: "oath_totp_generate – API function"
 <p> <code>int oath_totp_generate(const char * </code><i>secret</i><code>, size_t </code><i>secret_length</i><code>, time_t </code><i>now</i><code>, unsigned </code><i>time_step_size</i><code>, time_t </code><i>start_offset</i><code>, unsigned </code><i>digits</i><code>, char * </code><i>output_otp</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>const char * secret</p>
-<dd> the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd> length of <i>secret</i></p>
-<dt>time_t now</p>
-<dd> Unix time value to compute TOTP for</p>
-<dt>unsigned time_step_size</p>
-<dd> time step system parameter (typically 30)</p>
-<dt>time_t start_offset</p>
-<dd> Unix time of when to start counting time steps (typically 0)</p>
-<dt>unsigned digits</p>
-<dd> number of requested digits in the OTP, excluding checksum</p>
-<dt>char * output_otp</p>
-<dd> output buffer, must have room for the output OTP plus zero</dl>
+<dt>const char * secret</dt>
+<dd> the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd> length of <i>secret</i></dd>
+<dt>time_t now</dt>
+<dd> Unix time value to compute TOTP for</dd>
+<dt>unsigned time_step_size</dt>
+<dd> time step system parameter (typically 30)</dd>
+<dt>time_t start_offset</dt>
+<dd> Unix time of when to start counting time steps (typically 0)</dd>
+<dt>unsigned digits</dt>
+<dd> number of requested digits in the OTP, excluding checksum</dd>
+<dt>char * output_otp</dt>
+<dd> output buffer, must have room for the output OTP plus zero</dd></dl>
 <h2>Description</h2>
 <p> Generate a one-time-password using the time-variant TOTP algorithm described in RFC 6238. The input parameters are taken as time values. </p>
 <p> The system parameter <i>time_step_size</i> describes how long the time window for each OTP is. The recommended value is 30 seconds, and you can use the value 0 or the symbol <code>OATH_TOTP_DEFAULT_TIME_STEP_SIZE</code> to indicate this. </p>

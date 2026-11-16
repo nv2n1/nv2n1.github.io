@@ -18,9 +18,9 @@ void
 <code>Tcl_ValidateAllMemory</code>(<i>fileName, line</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter in which to add commands.</p>
-<dd>const char <i>*fileName</i> (in) For <code>Tcl_DumpActiveMemory</code>, name of the file to which memory information will be written. For <code>Tcl_ValidateAllMemory</code>, name of the file from which the call is being made (normally <code>__FILE__</code>).</p>
-<dd>int <i>line</i> (in) Line number at which the call to <code>Tcl_ValidateAllMemory</code> is made (normally <code>__LINE__</code>). </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter in which to add commands.</dd>
+<dd>const char <i>*fileName</i> (in) For <code>Tcl_DumpActiveMemory</code>, name of the file to which memory information will be written. For <code>Tcl_ValidateAllMemory</code>, name of the file from which the call is being made (normally <code>__FILE__</code>).</dd>
+<dd>int <i>line</i> (in) Line number at which the call to <code>Tcl_ValidateAllMemory</code> is made (normally <code>__LINE__</code>). </dd>
 </dl>
 <h2>Description</h2>
 <p>These functions provide access to Tcl memory debugging information. They are only functional when Tcl has been compiled with <code>TCL_MEM_DEBUG</code> defined at compile-time. When <code>TCL_MEM_DEBUG</code> is not defined, these functions are all no-ops. </p>

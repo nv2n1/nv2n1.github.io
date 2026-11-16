@@ -19,21 +19,21 @@ dblink_get_pkey(text relname) returns setof dblink_pkey_results
 <p> <i>relname</i></p>
 <dl>
 <dt>
-<dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dl>
+</dt><dd> Name of a local relation, for example foo or myschema.mytab. Include double quotes if the name is mixed-case or contains special characters, for example &quot;FooBar&quot;; without quotes, the string will be folded to lower case.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns one row for each primary key field, or no rows if the relation has no primary key. The result row type is defined as </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CREATE TYPE dblink_pkey_results AS(position int, colname text);
 </code></pre>
-</dl>
+</dd></dl>
 <p> The position column simply runs from 1 to <i>N</i>; it is the number of the field within the primary key, not the number within the table&#8217;s columns.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CREATE TABLE foobar(
     f1 int,
@@ -44,5 +44,5 @@ CREATE TABLE
     SELECT *FROM dblink_get_pkey('foobar');
 position | colname-- -- -- -- --+-- -- -- -- -1 | f1 2 | f2 3 | f3(3 rows)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

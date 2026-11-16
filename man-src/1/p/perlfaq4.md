@@ -81,8 +81,8 @@ my $ceil = ceil(3.5);<br />
 <p> As always with Perl there is more than one way to do it. Below are a few examples of approaches to making common conversions between number representations. This is intended to be representational rather than exhaustive. </p>
 <p> Some of the examples later in perlfaq4 use the Bit::Vector module from <font SIZE="-1">CPAN.</font> The reason you might choose Bit::Vector over the perl built-in functions is that it works with numbers of <font SIZE="-1">ANY</font> size, that it is optimized for speed on some operations, and for at least some programmers the notation might be familiar.</p>
 <dl>
-<dt>How do I convert hexadecimal into decimal</p>
-<dd> Using perl&#8217;s built in conversion of <tt>&quot;0x&quot;</tt> notation: </p>
+<dt>How do I convert hexadecimal into decimal</dt>
+<dd> Using perl&#8217;s built in conversion of <tt>&quot;0x&quot;</tt> notation: </dd>
 <pre>
     my $dec = 0xDEADBEEF;
 </pre>
@@ -98,8 +98,8 @@ my $ceil = ceil(3.5);<br />
 <p>use Bit::Vector;<br />
 my $vec = Bit::Vector-&gt;new_Hex(32, &#8220;DEADBEEF&#8221;);<br />
 my $dec = $vec-&gt;to_Dec();</p>
-<dt>How do I convert from decimal to hexadecimal</p>
-<dd> Using <tt>&quot;sprintf&quot;</tt>: </p>
+<dt>How do I convert from decimal to hexadecimal</dt>
+<dd> Using <tt>&quot;sprintf&quot;</tt>: </dd>
 <p>my $hex = sprintf(&#8220;%X&#8221;, 3735928559);<br />
 #upper case A &#8211; F<br />
                     my $hex = sprintf(&#8220;%x&#8221;, 3735928559);<br />
@@ -118,8 +118,8 @@ my $vec = Bit::Vector-&gt;new_Dec(33, 3735928559);<br />
 $vec-&gt;Resize(32);<br />
 #suppress leading 0 if unwanted<br />
     my $hex = $vec-&gt;to_Hex();</p>
-<dt>How do I convert from octal to decimal</p>
-<dd> Using Perl&#8217;s built in conversion of numbers with leading zeros: </p>
+<dt>How do I convert from octal to decimal</dt>
+<dd> Using Perl&#8217;s built in conversion of numbers with leading zeros: </dd>
 <pre>
     my $dec = 033653337357; # note the leading 0!
 </pre>
@@ -132,8 +132,8 @@ $vec-&gt;Resize(32);<br />
 my $vec = Bit::Vector-&gt;new (32);<br />
     $vec-&gt;Chunk_List_Store(3, split(//, reverse &#8220;33653337357&#8221;));<br />
     my $dec = $vec-&gt;to_Dec();</p>
-<dt>How do I convert from decimal to octal</p>
-<dd> Using <tt>&quot;sprintf&quot;</tt>: </p>
+<dt>How do I convert from decimal to octal</dt>
+<dd> Using <tt>&quot;sprintf&quot;</tt>: </dd>
 <pre>
     my $oct = sprintf(&quot;%o&quot;, 3735928559);
 </pre>
@@ -141,8 +141,8 @@ my $vec = Bit::Vector-&gt;new (32);<br />
 <p>use Bit::Vector;<br />
 my $vec = Bit::Vector-&gt;new_Dec(32, -559038737);<br />
 my $oct = reverse join(&#8221;, $vec-&gt;Chunk_List_Read(3));</p>
-<dt>How do I convert from binary to decimal</p>
-<dd> Perl 5.6 lets you write binary numbers directly with the <tt>&quot;0b&quot;</tt> notation: </p>
+<dt>How do I convert from binary to decimal</dt>
+<dd> Perl 5.6 lets you write binary numbers directly with the <tt>&quot;0b&quot;</tt> notation: </dd>
 <pre>
     my $number = 0b10110110;
 </pre>
@@ -161,8 +161,8 @@ my $dec = sprintf(&#8220;%d&#8221;, $int);<br />
 <p> Using Bit::Vector: </p>
 <p>my $vec = Bit::Vector-&gt;new_Bin(32, &#8220;11011110101011011011111011101111&#8221;);<br />
 my $dec = $vec-&gt;to_Dec();</p>
-<dt>How do I convert from decimal to binary</p>
-<dd> Using <tt>&quot;sprintf&quot;</tt> (perl 5.6+): </p>
+<dt>How do I convert from decimal to binary</dt>
+<dd> Using <tt>&quot;sprintf&quot;</tt> (perl 5.6+): </dd>
 <pre>
     my $bin = sprintf(&quot;%b&quot;, 3735928559);
 </pre>
@@ -186,3 +186,4 @@ my $bin = $vec-&gt;to_Bin();</p>
 </pre>
 <p> but a string consisting of two null bytes (the result of <tt>&quot;&quot; &amp; &quot;\101\101&quot;</tt>) is not a false value in Perl. You need: </p>
 <p>if ((&#8220;&#8221; &amp; &#8220;\101\101&#8221;) !~ / [^
+</p></p>

@@ -26,44 +26,44 @@ description: "mount.fedfs – mount a FedFS domain root"
 <p> Network file system clients follow file system referrals as applications encounter them, which is similar to how an automounter works. Consider the initial mount of the domain root as if you are mounting a single whole file system, even though underneath, additional NFS mounts come and go as needed.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-f, &#8211;fake</p>
-<dd>Fake mount. This option is ignored by <a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print the <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) usage message and exit.</p>
-<dt><code>-n, &#8211;no-mtab</code></p>
-<dd>Do not update <i>/etc/mtab</i>. This option is ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</p>
-<dt><code>-o, &#8211;options </code><i>options</i></p>
-<dd>Specify mount options for this mount point and all submounts. These are ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but are passed to the underlying file system mount subcommand. For further details, refer to <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8).</p>
-<dt><code>-r, &#8211;ro, &#8211;read-only</code></p>
-<dd>Mount the domain root and all submounts read-only.</p>
-<dt><code>-s, &#8211;sloppy</code></p>
-<dd>Tolerate unrecognized mount options. This is ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Report more information during the mount process. This affects <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) and is also passed to the underlying file system mount subcommand.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print version information for <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a>(8)</code> and exit.</p>
-<dt><code>-w, &#8211;rw, &#8211;read-write</code></p>
-<dd>Mount the domain root and all submounts read-write. This is the default behavior.</dl>
+<dt><code>-f, &#8211;fake</dt>
+<dd>Fake mount. This option is ignored by <a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print the <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) usage message and exit.</dd>
+<dt><code>-n, &#8211;no-mtab</code></dt>
+<dd>Do not update <i>/etc/mtab</i>. This option is ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</dd>
+<dt><code>-o, &#8211;options </code><i>options</i></dt>
+<dd>Specify mount options for this mount point and all submounts. These are ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but are passed to the underlying file system mount subcommand. For further details, refer to <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8).</dd>
+<dt><code>-r, &#8211;ro, &#8211;read-only</code></dt>
+<dd>Mount the domain root and all submounts read-only.</dd>
+<dt><code>-s, &#8211;sloppy</code></dt>
+<dd>Tolerate unrecognized mount options. This is ignored by <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) but is passed to the underlying file system mount subcommand.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Report more information during the mount process. This affects <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a></code>(8) and is also passed to the underlying file system mount subcommand.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print version information for <code><a href="/docs/linux/man/8-mount-fedfs/">mount.fedfs</a>(8)</code> and exit.</dd>
+<dt><code>-w, &#8211;rw, &#8211;read-write</code></dt>
+<dd>Mount the domain root and all submounts read-write. This is the default behavior.</dd></dl>
 <h2>Examples</h2>
 <p>To mount the domain root of the <i>example.net</i> FedFS domain via NFS version 4 automatically, you might add this to your <i>/etc/fstab</i>:</p>
 <dl>
-<dd>/nfs4/example.net /nfs4/example.net fedfs defaults 0 0 </p>
+<dd>/nfs4/example.net /nfs4/example.net fedfs defaults 0 0 </dd>
 </dl>
 <p> A FedFS domain root can also be mounted with a stand-alone invocation of <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8):</p>
 <dl>
-<dd># mount -t fedfs /nfs4/example.net /mnt/fedfs </p>
+<dd># mount -t fedfs /nfs4/example.net /mnt/fedfs </dd>
 </dl>
 <p> This mounts the FedFS domain root for the <i>example.net</i> domain on the client&#8217;s <i>/mnt/fedfs</i> directory. A simple</p>
 <dl>
-<dd># umount /mnt/fedfs </p>
+<dd># umount /mnt/fedfs </dd>
 </dl>
 <p> unmounts it when you are finished with it.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/fstab</i></p>
-<dd>filesystem table</p>
-<dt><i>/etc/mtab</i></p>
-<dd>table of mounted file systems</dl>
+<dt><i>/etc/fstab</i></dt>
+<dd>filesystem table</dd>
+<dt><i>/etc/mtab</i></dt>
+<dd>table of mounted file systems</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-mount-nfs/">mount.nfs</a></code>(8) </p>
 <p> RFC 2782 for a discussion of DNS SRV records </p>

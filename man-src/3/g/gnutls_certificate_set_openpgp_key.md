@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_openpgp_key – API function"
 <p> <code>int gnutls_certificate_set_openpgp_key(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_openpgp_crt_t </code><i>crt</i><code>, gnutls_openpgp_privkey_t </code><i>pkey</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_openpgp_crt_t crt</p>
-<dd> contains an openpgp public key</p>
-<dt>gnutls_openpgp_privkey_t pkey</p>
-<dd> is an openpgp private key</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_openpgp_crt_t crt</dt>
+<dd> contains an openpgp public key</dd>
+<dt>gnutls_openpgp_privkey_t pkey</dt>
+<dd> is an openpgp private key</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once (in case multiple keys/certificates exist for the server). </p>
 <p> Note that this function requires that the preferred key ids have been set and be used. See <code>gnutls_openpgp_crt_set_preferred_key_id()</code>. Otherwise the master key will be used.</p>
@@ -34,6 +34,6 @@ description: "gnutls_certificate_set_openpgp_key – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

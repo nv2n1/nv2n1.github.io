@@ -57,11 +57,11 @@ description: "sc::IntCoor –"
 <h3>sc::IntCoor::IntCoor (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p> The <code>KeyVal</code> constructor. .IP &quot;label&quot; 1c A label for the coordinate using only to identify the coordinate to the user in printouts. The default is no label. </p>
 <dl COMPACT>
-<dt>value</p>
-<dd> A value for the coordinate. In the way that coordinates are usually used, the default is to compute a value from the cartesian coordinates in a <code>Molecule</code> object.</dl>
+<dt>value</dt>
+<dd> A value for the coordinate. In the way that coordinates are usually used, the default is to compute a value from the cartesian coordinates in a <code>Molecule</code> object.</dd></dl>
 <dl COMPACT>
-<dt>unit</p>
-<dd> The unit in which the value is given. This can be bohr, anstrom, radian, and degree. The default is bohr for lengths and radian for angles.</dl>
+<dt>unit</dt>
+<dd> The unit in which the value is given. This can be bohr, anstrom, radian, and degree. The default is bohr for lengths and radian for angles.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual int sc::IntCoor::equivalent (<code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;) [pure virtual]</h3>
 <p> Test to see if this internal coordinate is equivalent to that one. The definition of equivalence is left up to the individual coordinates.</p>

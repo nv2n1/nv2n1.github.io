@@ -11,11 +11,8 @@ description: "ql/methods/finitedifferences/parallelevolver.hpp – Parallel evol
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/methods/finitedifferences/finitedifferencemodel.hpp&gt;
-
 #include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;
-
 #include &lt;ql/numericalmethod.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>StepConditionSet&lt; array_type &gt;</code><br />

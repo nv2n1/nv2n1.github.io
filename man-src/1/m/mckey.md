@@ -26,21 +26,21 @@ mckey - m multicast_address[-s][-b bind_address][-c connections][-C message_coun
 
 <dl>
 <dt>-m multicast_address
-<dd> IP multicast address to join.
-<dt>-M unmapped_multicast_address
-<dd> RDMA transport specific multicast address to join.
-<dt>-s
-<dd> Send datagrams to the multicast group.
-<dt>-b bind_address
-<dd> The local network address to bind to.
-<dt>-c connections
-<dd> The number of QPs to join the multicast group. (default 1)
-<dt>-C message_count
-<dd> The number of messages to transfer over each connection. (default 10)
-<dt>-S message_size
-<dd> The size of each message transferred, in bytes. This value must be smaller than the MTU of the underlying RDMA transport, or an error will occur. (default 100)
-<dt>-p port_space
-<dd> The port space of the datagram communication. May be either the RDMA UDP (0x0111) or IPoIB (0x0002) port space. (default RDMA_PS_UDP)</dl>
+</dt><dd> IP multicast address to join.
+</dd><dt>-M unmapped_multicast_address
+</dt><dd> RDMA transport specific multicast address to join.
+</dd><dt>-s
+</dt><dd> Send datagrams to the multicast group.
+</dd><dt>-b bind_address
+</dt><dd> The local network address to bind to.
+</dd><dt>-c connections
+</dt><dd> The number of QPs to join the multicast group. (default 1)
+</dd><dt>-C message_count
+</dt><dd> The number of messages to transfer over each connection. (default 10)
+</dd><dt>-S message_size
+</dt><dd> The size of each message transferred, in bytes. This value must be smaller than the MTU of the underlying RDMA transport, or an error will occur. (default 100)
+</dd><dt>-p port_space
+</dt><dd> The port space of the datagram communication. May be either the RDMA UDP (0x0111) or IPoIB (0x0002) port space. (default RDMA_PS_UDP)</dd></dl>
 
 <h2>NOTES</h2>
 

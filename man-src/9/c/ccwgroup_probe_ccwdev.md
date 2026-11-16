@@ -14,7 +14,7 @@ description: "ccwgroup_probe_ccwdev – probe function for slave devices"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device to be probed</dl>
+</dd><dd>ccw device to be probed</dd></dl>
 <h2>Description</h2>
 <p>This is a dummy probe function for ccw devices that are slave devices in a ccw group device.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ccwgroup_probe_ccwdev – probe function for slave devices"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -45,32 +45,32 @@ description: "Image Object Functions – Functions used to create and manipulate
 <p>Creates a new image object on the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.</dl>
+<dd><i>e</i> The given evas.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The created image object.</dl>
+<dd>The created image object.</dd></dl>
 <h3>EAPI int evas_object_image_load_error_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves a number representing any error that occurred during the last load of the given image object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A value giving the last error that occurred. It should be one of the EVAS_LOAD_ERROR_* values. EVAS_LOAD_ERROR_NONE is returned if there was no error.</dl>
+<dd>A value giving the last error that occurred. It should be one of the EVAS_LOAD_ERROR_* values. EVAS_LOAD_ERROR_NONE is returned if there was no error.</dd></dl>
 <h3>EAPI Evas_Bool evas_object_image_pixels_dirty_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves whether the given image object is dirty (needs to be redrawn). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the image is dirty.</dl>
+<dd>Whether the image is dirty.</dd></dl>
 <h3>EAPI void evas_object_image_pixels_dirty_set (<code>Evas_Object</code> * obj, Evas_Bool dirty)</h3>
 <p>Mark whether the given image object is dirty (needs to be redrawn). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>dirty</i> Whether the image is dirty.</dl>
+ <i>dirty</i> Whether the image is dirty.</dd></dl>
 <h3>EAPI Evas_Bool evas_object_image_save (const <code>Evas_Object</code> * obj, const char * file, const char * key, const char * flags)</h3>
 <p>Save the given image object to a file. </p>
 <p> Note that you should pass the filename extension when saving. If the file supports multiple data stored in it as eet, you can specify the key to be used as the index of the image in this file. </p>
@@ -80,7 +80,7 @@ description: "Image Object Functions – Functions used to create and manipulate
 <dd><i>obj</i> The given image object.<br />
  <i>file</i> The filename to be used to save the image.<br />
  <i>key</i> The image key in file, or NULL.<br />
- <i>flags</i> String containing the flags to be used.</dl>
+ <i>flags</i> String containing the flags to be used.</dd></dl>
 <p> References EVAS_COLORSPACE_ARGB8888.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

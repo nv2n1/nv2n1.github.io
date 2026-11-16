@@ -26,89 +26,89 @@ description: "libreoffice – LibreOffice office suite"
 <p> sbase, scalc, sdraw, simpress, smath, sofficerc, swriter </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;accept=</code><i>accept-string</i></p>
-<dd> Specifies a UNO-URL connect-string to create a UNO acceptor through which other programs can connect to access the API. Note that API access allows execution of arbitrary commands. The syntax of a UNO-URL connect-string is: <i>uno:connection-type,params;protocol-name,params;ObjectName</i> </p>
-<dt><code>&#8211;base</code></p>
-<dd> Starts the wizard for a new Base document. </p>
-<dt><code>&#8211;calc</code></p>
-<dd> Starts with a new Calc document. </p>
-<dt><code>&#8211;convert-to</code> output_file_extension[:output_filter_name] [&#8211;outdir output_dir] <i>file</i>&#8230;</p>
-<dd> Batch converts files. If <i>&#8211;outdir</i> is not specified then the current working directory is used as the output directory for the converted files. It implies <i>&#8211;headless</i>. </p>
+<dt><code>&#8211;accept=</code><i>accept-string</i></dt>
+<dd> Specifies a UNO-URL connect-string to create a UNO acceptor through which other programs can connect to access the API. Note that API access allows execution of arbitrary commands. The syntax of a UNO-URL connect-string is: <i>uno:connection-type,params;protocol-name,params;ObjectName</i> </dd>
+<dt><code>&#8211;base</code></dt>
+<dd> Starts the wizard for a new Base document. </dd>
+<dt><code>&#8211;calc</code></dt>
+<dd> Starts with a new Calc document. </dd>
+<dt><code>&#8211;convert-to</code> output_file_extension[:output_filter_name] [&#8211;outdir output_dir] <i>file</i>&#8230;</dt>
+<dd> Batch converts files. If <i>&#8211;outdir</i> is not specified then the current working directory is used as the output directory for the converted files. It implies <i>&#8211;headless</i>. </dd>
 <p> Examples: </p>
 <p> <code>&#8211;convert-to</code> pdf *.doc </p>
 <p> Converts all .doc files to PDFs. </p>
 <p> <code>&#8211;convert-to</code> pdf:writer_pdf_Export &#8211;outdir /home/user *.doc </p>
 <p> Converts all .doc files to PDFs using the settings in the Writer PDF export dialog and saving them in /home/user. </p>
-<dt><code>&#8211;display </code><i>display</i></p>
-<dd> This option specifies the X server to use; see <code><a href="/docs/linux/man/7-x/">X</a></code>(7) </p>
-<dt><code>&#8211;draw</code></p>
-<dd> Starts with a new Draw document. </p>
-<dt><code>&#8211;global</code></p>
-<dd> Starts with a new Global document. </p>
-<dt><code>&#8211;headless</code></p>
-<dd> Starts in &quot;headless mode&quot;, which allows using the application without user a interface. </p>
+<dt><code>&#8211;display </code><i>display</i></dt>
+<dd> This option specifies the X server to use; see <code><a href="/docs/linux/man/7-x/">X</a></code>(7) </dd>
+<dt><code>&#8211;draw</code></dt>
+<dd> Starts with a new Draw document. </dd>
+<dt><code>&#8211;global</code></dt>
+<dd> Starts with a new Global document. </dd>
+<dt><code>&#8211;headless</code></dt>
+<dd> Starts in &quot;headless mode&quot;, which allows using the application without user a interface. </dd>
 <p> This special mode can be used when the application is controlled by external clients via the API. </p>
 <p> It implies &#8211;invisible and strictly ignores any GUI environment. &#8211;quickstart does not work with this parameter. </p>
-<dt><code>&#8211;help</code>|<code>-h</code>|<code>-?</code></p>
-<dd> Lists LibreOffice command line parameters. </p>
-<dt><code>&#8211;impress</code></p>
-<dd> Starts with a new Impress document. </p>
-<dt><code>&#8211;invisible</code></p>
-<dd> Starts in invisible mode. </p>
+<dt><code>&#8211;help</code>|<code>-h</code>|<code>-?</code></dt>
+<dd> Lists LibreOffice command line parameters. </dd>
+<dt><code>&#8211;impress</code></dt>
+<dd> Starts with a new Impress document. </dd>
+<dt><code>&#8211;invisible</code></dt>
+<dd> Starts in invisible mode. </dd>
 <p> Neither the start-up logo nor the initial program window will be visible. LO can be controlled and documents and dialogs can be opened via the API. </p>
 <p> When started with this parameter, it can only be quit using the taskmanager (Windows) or the kill command (UNIX based systems). </p>
 <p> &#8211;quickstart does not work with this parameter. </p>
-<dt><code>&#8211;infilter=&quot;&lt;filter&gt;&quot;</code></p>
-<dd> Force an input filter type if possible. For example &#8211;infilter=&quot;Calc Office Open XML&quot; only </p>
-<dt><code>&#8211;math</code></p>
-<dd> Starts with a new Math document. </p>
-<dt><code>&#8211;minimized</code></p>
-<dd> Keeps the splash screen minimized. </p>
-<dt><code>-n </code><i>template</i>&#8230;</p>
-<dd> Creates the a new document from the given templates. </p>
-<dt><code>&#8211;nodefault</code></p>
-<dd> Starts LO without creating a new document. The next time you start LO, the welcome screen is shown. </p>
+<dt><code>&#8211;infilter=&quot;&lt;filter&gt;&quot;</code></dt>
+<dd> Force an input filter type if possible. For example &#8211;infilter=&quot;Calc Office Open XML&quot; only </dd>
+<dt><code>&#8211;math</code></dt>
+<dd> Starts with a new Math document. </dd>
+<dt><code>&#8211;minimized</code></dt>
+<dd> Keeps the splash screen minimized. </dd>
+<dt><code>-n </code><i>template</i>&#8230;</dt>
+<dd> Creates the a new document from the given templates. </dd>
+<dt><code>&#8211;nodefault</code></dt>
+<dd> Starts LO without creating a new document. The next time you start LO, the welcome screen is shown. </dd>
 <p> It&#8217;s used together with <code>&#8211;nologo</code> by quick starters. Note that <code>&#8211;quickstart</code> has no longer been supported since OpenOffice.org 2.0.0. </p>
-<dt><code>&#8211;nolockcheck</code></p>
-<dd> Disables the check for remote instances using the installation. </p>
-<dt><code>&#8211;nologo</code></p>
-<dd> Disables the splash screen at program start. </p>
-<dt><code>&#8211;norestore</code></p>
-<dd> Disables restart and file recovery after a system crash. It is possible that LO will try to restore a file it keeps crashing on, if that happens <code>&#8211;norestore</code> is the only way to start LO. </p>
-<dt><code>&#8211;nosplash</code></p>
-<dd> Disables the splash screen at program start. </p>
-<dt><code>-o </code><i>file</i>&#8230;</p>
-<dd> Opens the given files for editing, even templates. </p>
+<dt><code>&#8211;nolockcheck</code></dt>
+<dd> Disables the check for remote instances using the installation. </dd>
+<dt><code>&#8211;nologo</code></dt>
+<dd> Disables the splash screen at program start. </dd>
+<dt><code>&#8211;norestore</code></dt>
+<dd> Disables restart and file recovery after a system crash. It is possible that LO will try to restore a file it keeps crashing on, if that happens <code>&#8211;norestore</code> is the only way to start LO. </dd>
+<dt><code>&#8211;nosplash</code></dt>
+<dd> Disables the splash screen at program start. </dd>
+<dt><code>-o </code><i>file</i>&#8230;</dt>
+<dd> Opens the given files for editing, even templates. </dd>
 <p> Without <code>-o</code> a template file would create a new document derived from that template. </p>
-<dt><code>-p </code><i>file</i>&#8230;</p>
-<dd> Prints the given files to the default printer and ends. The splash screen does not appear. </p>
+<dt><code>-p </code><i>file</i>&#8230;</dt>
+<dd> Prints the given files to the default printer and ends. The splash screen does not appear. </dd>
 <p> If the file name contains spaces, then it must be enclosed in quotation marks. </p>
-<dt><code>&#8211;print-to-file [&#8211;printer-name printer_name] [&#8211;outdir output_dir] file&#8230;</p>
-<dd> Batch print files to file. If &#8211;printer-name is not specified the default printer is used. If &#8211;outdir is not specified then the current working directory is used as the output directory for the converted files. </p>
+<dt><code>&#8211;print-to-file [&#8211;printer-name printer_name] [&#8211;outdir output_dir] file&#8230;</dt>
+<dd> Batch print files to file. If &#8211;printer-name is not specified the default printer is used. If &#8211;outdir is not specified then the current working directory is used as the output directory for the converted files. </dd>
 <p> Examples: </p>
 <p> &#8211;print-to-file *.doc </p>
 <p> Prints all .doc files to the current working directory using the default printer. </p>
 <p> &#8211;print-to-file &#8211;printer-name nasty_lowres_printer &#8211;outdir /home/user *.doc </p>
 <p> Prints all .doc files to /home/user directory using the nasty_lowres_printer. </p>
-<dt>&#8211;pt </code><i>printername</i> <i>file</i>&#8230;</p>
-<dd> Prints the given files to the printer <i>printername</i> and ends. The splash screen does not appear. </p>
+<dt>&#8211;pt </code><i>printername</i> <i>file</i>&#8230;</dt>
+<dd> Prints the given files to the printer <i>printername</i> and ends. The splash screen does not appear. </dd>
 <p> If a file name contains spaces, then it must be enclosed in quotation marks. </p>
-<dt><code>&#8211;quickstart &#8211;quickstart=no</p>
-<dd> Starts LO with its quick starter. &#8211;quickstart disable the quick starter. </p>
+<dt><code>&#8211;quickstart &#8211;quickstart=no</dt>
+<dd> Starts LO with its quick starter. &#8211;quickstart disable the quick starter. </dd>
 <p> Does not work with &#8211;invisible or &#8211;headless. </p>
-<dt>&#8211;show </code><i>Impress file</i>&#8230;</p>
-<dd> Opens the given Impress files, starts the presentation and quits after they have finished. </p>
-<dt><code>&#8211;unaccept=</code><i>accept-string</i></p>
-<dd> Closes an acceptor that was created with <code>&#8211;accept</code> option. </p>
+<dt>&#8211;show </code><i>Impress file</i>&#8230;</dt>
+<dd> Opens the given Impress files, starts the presentation and quits after they have finished. </dd>
+<dt><code>&#8211;unaccept=</code><i>accept-string</i></dt>
+<dd> Closes an acceptor that was created with <code>&#8211;accept</code> option. </dd>
 <p> Use <code>&#8211;unaccept</code>=<i>all</i> to close all open acceptors. </p>
-<dt><code>&#8211;terminate_after_init</code></p>
-<dd> Starts LO and terminates after it registers some UNO services. Doesn&#8217;t show the splash during startup. </p>
-<dt><code>&#8211;view </code><i>file</i>&#8230;</p>
-<dd> Opens the given files read-only creating a temporary copy of them at $TMPDIR. </p>
-<dt><code>&#8211;web</code></p>
-<dd> Starts with a new HTML document. </p>
-<dt><code>&#8211;writer</code></p>
-<dd> Starts with a new Writer document. </p>
+<dt><code>&#8211;terminate_after_init</code></dt>
+<dd> Starts LO and terminates after it registers some UNO services. Doesn&#8217;t show the splash during startup. </dd>
+<dt><code>&#8211;view </code><i>file</i>&#8230;</dt>
+<dd> Opens the given files read-only creating a temporary copy of them at $TMPDIR. </dd>
+<dt><code>&#8211;web</code></dt>
+<dd> Starts with a new HTML document. </dd>
+<dt><code>&#8211;writer</code></dt>
+<dd> Starts with a new Writer document. </dd>
 </dl>
 <h2>TROUBLESHOOTING PROBLEMS</h2>
 <p> See <code><a rel="nofollow" href="http://wiki.documentfoundation.org/BugReport">http://wiki.documentfoundation.org/BugReport</a></code> for more details on how to report bugs in LibreOffice.</p>

@@ -70,8 +70,8 @@ description: "mailman_cgi_selinux – Security Enhanced Linux Policy for the mai
 <p> <code>mailman_cgi_exec_t</code> </p>
 <p> &#8211; Set files with the mailman_cgi_exec_t type, if you want to transition an executable to the mailman_cgi_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/mailman.*/cgi-bin/.*, /usr/lib/cgi-bin/mailman.*/.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/mailman.*/cgi-bin/.*, /usr/lib/cgi-bin/mailman.*/.* </dd>
 </dl>
 <p> <code>mailman_cgi_tmp_t</code> </p>
 <p> &#8211; Set files with the mailman_cgi_tmp_t type, if you want to store mailman cgi temporary files in the /tmp directories. </p>

@@ -17,11 +17,11 @@ bson_reader_set_destroy_func (bson_reader_t             *reader,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_reader_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>func</code></p>
-<dd> A <code>bson_reader_destroy_func_t</code> \&amp;.</dl>
+<dt><code>func</code></dt>
+<dd> A <code>bson_reader_destroy_func_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks. </p>
 <h2>COLOPHON</h2>

@@ -14,10 +14,10 @@ description: "gnutls_x509_aki_set_id – API function"
 <p> <code>int gnutls_x509_aki_set_id(gnutls_x509_aki_t </code><i>aki</i><code>, const gnutls_datum_t * </code><i>id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_aki_t aki</p>
-<dd> The authority key ID structure</p>
-<dt>const gnutls_datum_t * id</p>
-<dd> the key identifier</dl>
+<dt>gnutls_x509_aki_t aki</dt>
+<dd> The authority key ID structure</dd>
+<dt>const gnutls_datum_t * id</dt>
+<dd> the key identifier</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the keyIdentifier to be stored in the <i>aki</i> structure.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_aki_set_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

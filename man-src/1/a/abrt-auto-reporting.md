@@ -28,13 +28,13 @@ url: "/docs/linux/man/1-abrt-auto-reporting/"
  <i>disabled</i>
 <dl>
 <dt>
-<dd> User have to report the detect problems manually</dl>
+</dt><dd> User have to report the detect problems manually</dd></dl>
  
 
  <i>enabled</i>
 <dl>
 <dt>
-<dd> ABRT uploads an uReport which was generated for a detected problem immediately after the detection phase.</dl>
+</dt><dd> ABRT uploads an uReport which was generated for a detected problem immediately after the detection phase.</dd></dl>
 
 <h3>uReport description</h3>
 
@@ -51,19 +51,19 @@ url: "/docs/linux/man/1-abrt-auto-reporting/"
  C/C++ crashes
 <dl>
 <dt>
-<dd> these are path to the executable and signal delivered to the program,</dl>
+</dt><dd> these are path to the executable and signal delivered to the program,</dd></dl>
  
 
  Python exceptions
 <dl>
 <dt>
-<dd> there is the type of the exception (without the error message, which may contain sensitive data),</dl>
+</dt><dd> there is the type of the exception (without the error message, which may contain sensitive data),</dd></dl>
  
 
  for kernel oopses
 <dl>
 <dt>
-<dd> these are list of loaded kernel modules, list of taint flags, and full text of the kernel oops.</dl>
+</dt><dd> these are list of loaded kernel modules, list of taint flags, and full text of the kernel oops.</dd></dl>
  
 
  <i>Warning</i>: The full text of a kernel oops might contain information like the identification of the host hardware type. You should disable the autoreporting feature if you do not want to share this information with Red Hat.
@@ -75,7 +75,7 @@ url: "/docs/linux/man/1-abrt-auto-reporting/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -89,7 +89,7 @@ url: "/docs/linux/man/1-abrt-auto-reporting/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

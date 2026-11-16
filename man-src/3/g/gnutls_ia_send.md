@@ -14,12 +14,12 @@ description: "gnutls_ia_send – API function"
 <p> <code>ssize_t gnutls_ia_send(gnutls_session_t </code><i>session</i><code>, const char * </code><i>data</i><code>, size_t </code><i>sizeofdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>const char * data</p>
-<dd> contains the data to send</p>
-<dt>size_t sizeofdata</p>
-<dd> is the length of the data</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>const char * data</dt>
+<dd> contains the data to send</dd>
+<dt>size_t sizeofdata</dt>
+<dd> is the length of the data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Send TLS/IA application payload data. This function has the similar semantics with <code>send()</code>. The only difference is that it accepts a GnuTLS session, and uses different error codes. </p>
 <p> The TLS/IA protocol is synchronous, so you cannot send more than one packet at a time. The client always send the first packet. </p>
@@ -36,6 +36,6 @@ description: "gnutls_ia_send – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

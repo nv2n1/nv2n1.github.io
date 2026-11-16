@@ -10,9 +10,7 @@ description: "pthread_self – obtain ID of the calling thread"
 <p>pthread_self &#8211; obtain ID of the calling thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 pthread_t pthread_self(void);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_self</code>() function returns the ID of the calling thread. This is the same value that is returned in <i>*thread</i> in the <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) call that created this thread.</p>

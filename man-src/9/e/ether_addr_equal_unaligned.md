@@ -10,15 +10,15 @@ description: "ether_addr_equal_unaligned – Compare two not u16 aligned Etherne
 <p>ether_addr_equal_unaligned &#8211; Compare two not u16 aligned Ethernet addresses</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool ether_addr_equal_unaligned(const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr1</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr2</i><code>);</code></dl>
+<dt> <code>bool ether_addr_equal_unaligned(const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr1</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>addr2</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>addr1</i></p>
 <dl>
 <dd>
-<dd>Pointer to a six-byte array containing the Ethernet address</dl>
+</dd><dd>Pointer to a six-byte array containing the Ethernet address</dd></dl>
 <p> <i>addr2</i></p>
 <dl>
-<dd>Pointer other six-byte array containing the Ethernet address</dl>
+<dd>Pointer other six-byte array containing the Ethernet address</dd></dl>
 <h2>Description</h2>
 <p>Compare two Ethernet addresses, returns true if equal </p>
 <p> Please note: Use only when any Ethernet address may not be u16 aligned.</p>

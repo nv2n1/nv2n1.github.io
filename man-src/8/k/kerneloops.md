@@ -16,12 +16,12 @@ description: "kerneloops – program to collect and submit kernel oopses to oops
 <h2>Options</h2>
 <p>&nbsp;</p>
 <dl>
-<dt><code>&#8211;file filename</code></p>
-<dd>Parse the file denoted with filename as if it were /var/log/messages</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Enable debug mode</p>
-<dt><code>&#8211;nodaemon</code></p>
-<dd>Do not daemonize</dl>
+<dt><code>&#8211;file filename</code></dt>
+<dd>Parse the file denoted with filename as if it were /var/log/messages</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Enable debug mode</dd>
+<dt><code>&#8211;nodaemon</code></dt>
+<dd>Do not daemonize</dd></dl>
 <h2>Files</h2>
 <p>/etc/kerneloops.conf</p>
 <h2>Author</h2>

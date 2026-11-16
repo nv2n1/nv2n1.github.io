@@ -15,11 +15,11 @@ kernel_to_ipc64_perm - convert kernel ipc permissions to user
 <h2>Arguments</h2>
 
 <i>in</i>
-<dl><dd><dd>kernel permissions</dl>
+<dl><dd></dd><dd>kernel permissions</dd></dl>
  
 
  <i>out</i>
-<dl><dd>new style ipc permissions</dl>
+<dl><dd>new style ipc permissions</dd></dl>
 
 <h2>Description</h2>
 

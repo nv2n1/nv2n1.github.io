@@ -79,38 +79,38 @@ Print a help text</p>
 <h3>Arguments</h3>
 <p> Once you have Monit running as a daemon process, you can call Monit with one of the following arguments. Monit will then connect to the Monit daemon (on <font SIZE="-1">TCP</font> port 127.0.0.1:2812 by default) and ask the Monit daemon to perform the requested action. In other words; calling monit without arguments starts the Monit daemon, and calling monit <i>with</i> arguments enables you to communicate with the Monit daemon process.</p>
 <dl>
-<dt>start all</p>
-<dd> Start all services listed in the control file and enable monitoring for them. If the group option is set (<i>-g</i>), only start and enable monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</p>
-<dt>start name</p>
-<dd> Start the named service and enable monitoring for it. The name is a service entry name from the monitrc file.</p>
-<dt>stop all</p>
-<dd> Stop all services listed in the control file and disable their monitoring. If the group option is set, only stop and disable monitoring of the services in the named group (all&quot; is not required in this case).</p>
-<dt>stop name</p>
-<dd> Stop the named service and disable its monitoring. The name is a service entry name from the monitrc file.</p>
-<dt>restart all</p>
-<dd> Stop and start <i>all</i> services. If the group option is set, only restart the services in the named group (&#8220;all&#8221; is not required in this case).</p>
-<dt>restart name</p>
-<dd> Restart the named service. The name is a service entry name from the monitrc file.</p>
-<dt>monitor all</p>
-<dd> Enable monitoring of all services listed in the control file. If the group option is set, only start monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</p>
-<dt>monitor name</p>
-<dd> Enable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also enable monitoring of all services this service depends on.</p>
-<dt>unmonitor all</p>
-<dd> Disable monitoring of all services listed in the control file. If the group option is set, only disable monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</p>
-<dt>unmonitor name</p>
-<dd> Disable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also disable monitoring of all services that depends on this service.</p>
-<dt>status [name]</p>
-<dd> Print service status information.</p>
-<dt>summary [name]</p>
-<dd> Print a short status summary.</p>
-<dt>reload</p>
-<dd> Reinitialize a running Monit daemon, the daemon will reread its configuration, close and reopen log files.</p>
-<dt>quit</p>
-<dd> Kill the Monit daemon process</p>
-<dt>validate</p>
-<dd> Check all services listed in the control file. This action is also the default behavior when Monit runs in daemon mode.</p>
-<dt>procmatch regex</p>
-<dd> Allows for easy testing of pattern for process match check. The command takes regular expression as an argument and displays all running processes matching the pattern.</dl>
+<dt>start all</dt>
+<dd> Start all services listed in the control file and enable monitoring for them. If the group option is set (<i>-g</i>), only start and enable monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</dd>
+<dt>start name</dt>
+<dd> Start the named service and enable monitoring for it. The name is a service entry name from the monitrc file.</dd>
+<dt>stop all</dt>
+<dd> Stop all services listed in the control file and disable their monitoring. If the group option is set, only stop and disable monitoring of the services in the named group (all&quot; is not required in this case).</dd>
+<dt>stop name</dt>
+<dd> Stop the named service and disable its monitoring. The name is a service entry name from the monitrc file.</dd>
+<dt>restart all</dt>
+<dd> Stop and start <i>all</i> services. If the group option is set, only restart the services in the named group (&#8220;all&#8221; is not required in this case).</dd>
+<dt>restart name</dt>
+<dd> Restart the named service. The name is a service entry name from the monitrc file.</dd>
+<dt>monitor all</dt>
+<dd> Enable monitoring of all services listed in the control file. If the group option is set, only start monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</dd>
+<dt>monitor name</dt>
+<dd> Enable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also enable monitoring of all services this service depends on.</dd>
+<dt>unmonitor all</dt>
+<dd> Disable monitoring of all services listed in the control file. If the group option is set, only disable monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</dd>
+<dt>unmonitor name</dt>
+<dd> Disable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also disable monitoring of all services that depends on this service.</dd>
+<dt>status [name]</dt>
+<dd> Print service status information.</dd>
+<dt>summary [name]</dt>
+<dd> Print a short status summary.</dd>
+<dt>reload</dt>
+<dd> Reinitialize a running Monit daemon, the daemon will reread its configuration, close and reopen log files.</dd>
+<dt>quit</dt>
+<dd> Kill the Monit daemon process</dd>
+<dt>validate</dt>
+<dd> Check all services listed in the control file. This action is also the default behavior when Monit runs in daemon mode.</dd>
+<dt>procmatch regex</dt>
+<dd> Allows for easy testing of pattern for process match check. The command takes regular expression as an argument and displays all running processes matching the pattern.</dd></dl>
 <h2>THE MONIT CONTROL FILE</h2>
 <p> Monit is configured and controlled via a control file called <i>monitrc</i>. The default location for this file is ~/.monitrc. If this file does not exist, Monit will try /etc/monitrc, then <tt>@sysconfdir</tt>@/monitrc and finally ./monitrc. If you build Monit from source, the value of <tt>@sysconfdir</tt>@ can be given at configure time as ./configure &#8211;sysconfdir. For instance, using <i>./configure &#8211;sysconfdir /var/monit/etc</i> will make Monit search for <i>monitrc</i> in <i>/var/monit/etc</i> </p>
 <p> To protect the security of your control file and passwords the control file must have read-write permissions <i>no more than 0700</i> (u=xrw,g=,o=); Monit will complain and exit otherwise. </p>
@@ -121,34 +121,34 @@ Print a help text</p>
 <p> There are three kinds of tokens: <i>grammar</i>, <i>numbers</i> (i.e. decimal digit sequences) and <i>strings</i>. Strings can be either quoted or unquoted. A quoted string is bounded by double quotes and may contain whitespace (and quoted digits are treated as a string). An unquoted string is any whitespace-delimited token, containing characters and/or numbers. </p>
 <p> On a semantic level, the control file consists of three types of entries:</p>
 <dl>
-<dt>1. Global set-statements</p>
-<dd> A global set-statement starts with the keyword <tt>&quot;set&quot;</tt> and the item to configure.</p>
-<dt>2. Global include-statement</p>
-<dd> The include statement consists of the keyword <tt>&quot;include&quot;</tt> and a glob string. This statement is used to include configure directives from separate files.</p>
-<dt>3. One or more service entry statements.</p>
-<dd> Each service entry consists of the keywords <tt>&quot;check&quot;</tt>, followed by the service type. Each entry requires a <code>unique</code> descriptive name, which may be freely chosen. This name is used by Monit to refer to the service internally and in all interactions with the user.</dl>
+<dt>1. Global set-statements</dt>
+<dd> A global set-statement starts with the keyword <tt>&quot;set&quot;</tt> and the item to configure.</dd>
+<dt>2. Global include-statement</dt>
+<dd> The include statement consists of the keyword <tt>&quot;include&quot;</tt> and a glob string. This statement is used to include configure directives from separate files.</dd>
+<dt>3. One or more service entry statements.</dt>
+<dd> Each service entry consists of the keywords <tt>&quot;check&quot;</tt>, followed by the service type. Each entry requires a <code>unique</code> descriptive name, which may be freely chosen. This name is used by Monit to refer to the service internally and in all interactions with the user.</dd></dl>
 <p> Currently, nine types of check statements are supported:</p>
 <dl>
-<dt>1. <font SIZE="-1">CHECK PROCESS</font> &lt;unique name&gt; &lt;<font SIZE="-1">PIDFILE</font> &lt;path&gt; | <font SIZE="-1">MATCHING</font> &lt;regex&gt;&gt;</p>
-<dd> &lt;path&gt; is the absolute path to the program&#8217;s pid-file. A pid-file is a file, containing a Process&#8217;s unique <font SIZE="-1">ID.</font> If the pid-file does not exist or does not contain the <font SIZE="-1">PID</font> number of a running process, Monit will call the entry&#8217;s start method if defined. </p>
+<dt>1. <font SIZE="-1">CHECK PROCESS</font> &lt;unique name&gt; &lt;<font SIZE="-1">PIDFILE</font> &lt;path&gt; | <font SIZE="-1">MATCHING</font> &lt;regex&gt;&gt;</dt>
+<dd> &lt;path&gt; is the absolute path to the program&#8217;s pid-file. A pid-file is a file, containing a Process&#8217;s unique <font SIZE="-1">ID.</font> If the pid-file does not exist or does not contain the <font SIZE="-1">PID</font> number of a running process, Monit will call the entry&#8217;s start method if defined. </dd>
 <p> &lt;regex&gt; is an alternative to using <font SIZE="-1">PID</font> files and uses process name pattern matching to find the process to monitor. The first match is used so this form of check is most useful if the process name is unique. Pid-file should be used where possible as it defines expected pid exactly (pattern matching won&#8217;t be useful for processes which start a child process using fork/clone as the child will match the same pattern temporarily). You can test if a process match a pattern from the command-line using <tt>&quot;monit procmatch &quot;regex-pattern&quot;&quot;</tt>. This will lists all processes matching or not, the regex-pattern.</p>
-<dt>2. <font SIZE="-1">CHECK FILE</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</p>
-<dd> &lt;path&gt; is the absolute path to the file. If the file does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a regular file type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</p>
-<dt>3. <font SIZE="-1">CHECK FIFO</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</p>
-<dd> &lt;path&gt; is the absolute path to the fifo. If the fifo does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a fifo type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</p>
-<dt>4. <font SIZE="-1">CHECK FILESYSTEM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</p>
-<dd> &lt;path&gt; is the path to the device/disk, mount point, file or a directory which is part of a filesystem. It is recommended to use a block special file directly (for example /dev/hda1 on Linux or /dev/dsk/c0t0d0s1 on Solaris, etc.) If you use a mount point (for example /data), note if the filesystem is unmounted the test will still be true because the mount point exist. </p>
+<dt>2. <font SIZE="-1">CHECK FILE</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dd> &lt;path&gt; is the absolute path to the file. If the file does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a regular file type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
+<dt>3. <font SIZE="-1">CHECK FIFO</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dd> &lt;path&gt; is the absolute path to the fifo. If the fifo does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a fifo type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
+<dt>4. <font SIZE="-1">CHECK FILESYSTEM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dd> &lt;path&gt; is the path to the device/disk, mount point, file or a directory which is part of a filesystem. It is recommended to use a block special file directly (for example /dev/hda1 on Linux or /dev/dsk/c0t0d0s1 on Solaris, etc.) If you use a mount point (for example /data), note if the filesystem is unmounted the test will still be true because the mount point exist. </dd>
 <p> If the filesystem becomes unavailable, Monit will call the entry&#8217;s start method if defined. if &lt;path&gt; does not point to a filesystem, Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</p>
-<dt>5. <font SIZE="-1">CHECK DIRECTORY</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</p>
-<dd> &lt;path&gt; is the absolute path to the directory. If the directory does not exist, Monit will call the entry&#8217;s start method if defined. If &lt;path&gt; does not point to a directory, monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</p>
-<dt>6. <font SIZE="-1">CHECK HOST</font> &lt;unique name&gt; <font SIZE="-1">ADDRESS</font> &lt;host address&gt;</p>
-<dd> The host address can be specified as a hostname string or as an IP-address string on a dotted decimal format. Such as, tildeslash.com or &#8220;64.87.72.95&#8221;.</p>
-<dt>7. <font SIZE="-1">CHECK SYSTEM</font> &lt;unique name&gt;</p>
-<dd> The <i>unique name</i> is usually the local host name, but any descriptive name can be used. If you use the variable <tt>$HOST</tt> as the name, it will expand to the hostname. This check allows one to monitor general system resources such as <font SIZE="-1">CPU</font> usage, total memory usage or load average. The <i>unique name</i> is used as the system hostname in mail alerts and as the initial name of the host entry in M/Monit.</p>
-<dt>8. <font SIZE="-1">CHECK PROGRAM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;executable file&gt; [<font SIZE="-1">TIMEOUT</font> &lt;number&gt; <font SIZE="-1">SECONDS</font>]</p>
-<dd> &lt;path&gt; is the absolute path to the executable program or script. The status test allows one to check the program&#8217;s exit status. If the program does not finish executing within &lt;number&gt; seconds, Monit will terminate it. The default program timeout is 300 seconds (5 minutes). The output of the program is recorded and made available in the User Interface and in alerts (up to 1kB).</p>
-<dt>9. <font SIZE="-1">CHECK NETWORK</font> &lt;unique name&gt; &lt;<font SIZE="-1">ADDRESS</font> &lt;ipaddress&gt; | <font SIZE="-1">INTERFACE</font> &lt;name&gt;&gt;</p>
-<dd> &lt;ipaddress&gt; is the IPv4 or IPv6 address of the monitored network interface. It is also possible to use interface name, such as &#8220;eth0&#8221; on Linux.</dl>
+<dt>5. <font SIZE="-1">CHECK DIRECTORY</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dd> &lt;path&gt; is the absolute path to the directory. If the directory does not exist, Monit will call the entry&#8217;s start method if defined. If &lt;path&gt; does not point to a directory, monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
+<dt>6. <font SIZE="-1">CHECK HOST</font> &lt;unique name&gt; <font SIZE="-1">ADDRESS</font> &lt;host address&gt;</dt>
+<dd> The host address can be specified as a hostname string or as an IP-address string on a dotted decimal format. Such as, tildeslash.com or &#8220;64.87.72.95&#8221;.</dd>
+<dt>7. <font SIZE="-1">CHECK SYSTEM</font> &lt;unique name&gt;</dt>
+<dd> The <i>unique name</i> is usually the local host name, but any descriptive name can be used. If you use the variable <tt>$HOST</tt> as the name, it will expand to the hostname. This check allows one to monitor general system resources such as <font SIZE="-1">CPU</font> usage, total memory usage or load average. The <i>unique name</i> is used as the system hostname in mail alerts and as the initial name of the host entry in M/Monit.</dd>
+<dt>8. <font SIZE="-1">CHECK PROGRAM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;executable file&gt; [<font SIZE="-1">TIMEOUT</font> &lt;number&gt; <font SIZE="-1">SECONDS</font>]</dt>
+<dd> &lt;path&gt; is the absolute path to the executable program or script. The status test allows one to check the program&#8217;s exit status. If the program does not finish executing within &lt;number&gt; seconds, Monit will terminate it. The default program timeout is 300 seconds (5 minutes). The output of the program is recorded and made available in the User Interface and in alerts (up to 1kB).</dd>
+<dt>9. <font SIZE="-1">CHECK NETWORK</font> &lt;unique name&gt; &lt;<font SIZE="-1">ADDRESS</font> &lt;ipaddress&gt; | <font SIZE="-1">INTERFACE</font> &lt;name&gt;&gt;</dt>
+<dd> &lt;ipaddress&gt; is the IPv4 or IPv6 address of the monitored network interface. It is also possible to use interface name, such as &#8220;eth0&#8221; on Linux.</dd></dl>
 <h2>LOGGING</h2>
 <p> Monit will log status and error messages to a log file. Use the <i>set logfile</i> statement in the monitrc control file. To setup Monit to log to its own logfile, use e.g. <i>set logfile /var/log/monit.log</i>. If <code>syslog</code> is given as a value for the <tt>&quot;-l&quot;</tt> command-line switch (or the keyword <i>set logfile syslog</i> is found in the control file) Monit will use the <code>syslog</code> system daemon to log messages with a priority assigned to each message based on the context. To turn off logging, simply do not set the logfile in the control file (and of course, do not use the -l switch) </p>
 <p> The format for logfile is: </p>
@@ -460,23 +460,23 @@ from:<br />
 }</p>
 <p> The subject and body may contain <tt>$NAME</tt> variables, which are expanded by Monit. Here is a list of variables that can be used when composing an alert message.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i></i>$EVENT<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$EVENT<i></i> </dd>
 <p> A string describing the event that occurred.</p>
-<dt>&bull;</p>
-<dd> <i></i>$SERVICE<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$SERVICE<i></i> </dd>
 <p> The service name</p>
-<dt>&bull;</p>
-<dd> <i></i>$DATE<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$DATE<i></i> </dd>
 <p> The current time and date (<font SIZE="-1">RFC 822</font> date style).</p>
-<dt>&bull;</p>
-<dd> <i></i>$HOST<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$HOST<i></i> </dd>
 <p> The name of the host Monit is running on</p>
-<dt>&bull;</p>
-<dd> <i></i>$ACTION<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$ACTION<i></i> </dd>
 <p> The name of the action which was done by Monit.</p>
-<dt>&bull;</p>
-<dd> <i></i>$DESCRIPTION<i></i> </p>
+<dt>&bull;</dt>
+<dd> <i></i>$DESCRIPTION<i></i> </dd>
 <p> The description of the error condition</dl>
 <h3>Setting a mail server for alert delivery</h3>
 <p> The mail server Monit should use to send alert messages is defined with a <tt>&quot;set mailserver&quot;</tt> statement: </p>
@@ -544,22 +544,22 @@ from:<br />
 <p> It is possible to modify a service check schedule by using the <tt>&quot;every&quot;</tt> statement. </p>
 <p> There are three variants:</p>
 <dl>
-<dt>1. custom interval based on a poll cycle multiple</p>
+<dt>1. custom interval based on a poll cycle multiple</dt>
 <dd>
 <pre>
  EVERY [number] CYCLES
 </pre>
-<dt>2. check is schedule based on a cron-style string</p>
+</dd><dt>2. check is schedule based on a cron-style string</dt>
 <dd>
 <pre>
  EVERY [cron]
 </pre>
-<dt>3. do-not-check schedule based on a cron-style string</p>
+</dd><dt>3. do-not-check schedule based on a cron-style string</dt>
 <dd>
 <pre>
  NOT EVERY [cron]
 </pre>
-</dl>
+</dd></dl>
 <p> A cron-style string, consist of 5 fields separated with white-space. All fields are required: </p>
 <p>Name : | Allowed values : | Special characters : &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -Minutes | 0 &#8211; 59 | *-,<br />
     Hours | 0 &#8211; 23 | *-,<br />
@@ -685,20 +685,20 @@ from:<br />
 <p> You can set dependencies so that the web-server depends on the application server to run before the web-server starts and the application server depends on the database server and the database depends on the file-system to be mounted before it starts. See also the example section below for examples using the depend statement. </p>
 <p> Here we describe how Monit will function with the above dependencies:</p>
 <dl>
-<dt>If no servers are running</p>
-<dd> Monit will start the servers in the following order: <i>d</i>, <i>c</i>, <i>b</i>, <i>a</i></p>
-<dt>If all servers are running</p>
-<dd> When you run &#8216;Monit stop all&#8217; this is the stop order: <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>. If you run &#8216;Monit stop d&#8217; then <i>a</i>, <i>b</i> and <i>c</i> are also stopped because they depend on <i>d</i> and finally <i>d</i> is stopped.</p>
-<dt>If <i>a</i> does not run</p>
-<dd> When Monit runs it will start <i>a</i></p>
-<dt>If <i>b</i> does not run</p>
-<dd> When Monit runs it will first stop <i>a</i> then start <i>b</i> and finally start <i>a</i> again.</p>
-<dt>If <i>c</i> does not run</p>
-<dd> When Monit runs it will first stop <i>a</i> and <i>b</i> then start <i>c</i> and finally start <i>b</i> then <i>a</i>.</p>
-<dt>If <i>d</i> does not run</p>
-<dd> When Monit runs it will first stop <i>a</i>, <i>b</i> and <i>c</i> then start <i>d</i> and finally start <i>c</i>, <i>b</i> then <i>a</i>.</p>
-<dt>If the control file contains a depend loop.</p>
-<dd> A depend loop is for example; a-&gt;b and b-&gt;a or a-&gt;b-&gt;c-&gt;a. </p>
+<dt>If no servers are running</dt>
+<dd> Monit will start the servers in the following order: <i>d</i>, <i>c</i>, <i>b</i>, <i>a</i></dd>
+<dt>If all servers are running</dt>
+<dd> When you run &#8216;Monit stop all&#8217; this is the stop order: <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>. If you run &#8216;Monit stop d&#8217; then <i>a</i>, <i>b</i> and <i>c</i> are also stopped because they depend on <i>d</i> and finally <i>d</i> is stopped.</dd>
+<dt>If <i>a</i> does not run</dt>
+<dd> When Monit runs it will start <i>a</i></dd>
+<dt>If <i>b</i> does not run</dt>
+<dd> When Monit runs it will first stop <i>a</i> then start <i>b</i> and finally start <i>a</i> again.</dd>
+<dt>If <i>c</i> does not run</dt>
+<dd> When Monit runs it will first stop <i>a</i> and <i>b</i> then start <i>c</i> and finally start <i>b</i> then <i>a</i>.</dd>
+<dt>If <i>d</i> does not run</dt>
+<dd> When Monit runs it will first stop <i>a</i>, <i>b</i> and <i>c</i> then start <i>d</i> and finally start <i>c</i>, <i>b</i> then <i>a</i>.</dd>
+<dt>If the control file contains a depend loop.</dt>
+<dd> A depend loop is for example; a-&gt;b and b-&gt;a or a-&gt;b-&gt;c-&gt;a. </dd>
 <p> When Monit starts it will check for such loops and complain and exit if a loop was found. It will also exit with a complaint if a depend statement was used that does not point to a service in the control file.</dl>
 <h2>SERVICE TESTS</h2>
 <p> <i></i><font SIZE="-1"><i>GENERAL SYNTAX</i></font><i></i> </p>
@@ -717,23 +717,23 @@ from:<br />
 <p> <i></i><font SIZE="-1"><i>ACTION</i></font><i></i> </p>
 <p> In each test you must select the action to be executed from this list:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>ALERT</code></font> sends the user an alert event on each state change.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>RESTART</code></font> restarts the service <code>and</code> send an alert. Restart is performed by calling the service&#8217;s registered restart method or by first calling the stop method followed by the start method if restart is not set.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>START</code></font> starts the service by calling the service&#8217;s registered start method <code>and</code> send an alert.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>STOP</code></font> stops the service by calling the service&#8217;s registered stop method <code>and</code> send an alert. If Monit stops a service it will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service again you must explicitly enable monitoring from the web interface or from the console.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>EXEC</code></font> can be used to execute an arbitrary program <code>and</code> send an alert. If you choose this action you must state the program to be executed and if the program require arguments you must enclose the program and its arguments in a quoted string. You may optionally specify the uid and gid the executed program should switch to upon start. For instance: </p>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>ALERT</code></font> sends the user an alert event on each state change.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>RESTART</code></font> restarts the service <code>and</code> send an alert. Restart is performed by calling the service&#8217;s registered restart method or by first calling the stop method followed by the start method if restart is not set.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>START</code></font> starts the service by calling the service&#8217;s registered start method <code>and</code> send an alert.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>STOP</code></font> stops the service by calling the service&#8217;s registered stop method <code>and</code> send an alert. If Monit stops a service it will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service again you must explicitly enable monitoring from the web interface or from the console.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>EXEC</code></font> can be used to execute an arbitrary program <code>and</code> send an alert. If you choose this action you must state the program to be executed and if the program require arguments you must enclose the program and its arguments in a quoted string. You may optionally specify the uid and gid the executed program should switch to upon start. For instance: </dd>
 <pre>
  exec &quot;/usr/local/tomcat/bin/startup.sh&quot;
       as uid nobody and gid nobody
 </pre>
 <p> Remember, if Monit is run by root, then all programs executed by Monit will be started with superuser privileges unless the uid and gid extension is used.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1"><code>UNMONITOR</code></font> will disable monitoring of the service <code>and</code> send an alert. The service will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service you must explicitly enable monitoring from the web interface or from the console.</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1"><code>UNMONITOR</code></font> will disable monitoring of the service <code>and</code> send an alert. The service will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service you must explicitly enable monitoring from the web interface or from the console.</dd></dl>
 <p> <i></i><font SIZE="-1"><i>FAILURE TOLERANCE</i></font><i></i> </p>
 <p> By default the action is executed if it matches and the service set in an error state. However, you can require a test to fail more than once before the error event is triggered and the service state changed to failed. This is useful to avoid getting alerts on spurious errors, which can happen, especially with network tests. </p>
 <p> Syntax: </p>
@@ -1284,3 +1284,4 @@ from:<br />
  set expectbuffer 10 kb
 </pre>
 <p> You can use non-printable characters in a <font SIZE="-1">SEND</font> string if needed. Use the hex notation, 
+</p>

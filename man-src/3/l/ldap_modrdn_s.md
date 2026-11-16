@@ -17,7 +17,6 @@ description: "ldap_modrdn, ldap_modrdn_s, ldap_modrdn2, ldap_modrdn2_s – Perfo
 int ldap_modrdn(ld, dn, newrdn)
 LDAP *ld;
 char *dn, *newrdn;
-
 int ldap_modrdn_s(ld, dn, newrdn)
 LDAP *ld;
 char *dn, *newrdn;

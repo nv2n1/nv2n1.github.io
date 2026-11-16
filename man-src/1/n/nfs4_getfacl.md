@@ -17,7 +17,7 @@ description: "nfs4_getfacl – get NFSv4 file/directory access control lists"
 <p> The output format for an NFSv4 file ACL, e.g., is:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 A::OWNER @ : rwatTnNcCy
                  A::alice[at] nfsdomain.org : rxtncy
@@ -27,7 +27,7 @@ A::OWNER @ : rwatTnNcCy
                                                                                                                              A::EVERYONE @ : rtncy
                                                                                                                                                  D::EVERYONE @ : waxTC
 </code></pre>
-</dl>
+</dd></dl>
 <p> In the example output above, the user `alice [at] nfsdomain.org&#8217; has the equivalent of &quot;read&quot; and &quot;execute&quot; permissions, `bob [at] nfsdomain.org&#8217; has &quot;read&quot; and &quot;write&quot;, and both `GROUP@&#8217; and `EVERYONE@&#8217; have &quot;read&quot;. </p>
 <p> Refer to the <code><a href="/docs/linux/man/5-nfs4_acl/">nfs4_acl</a></code>(5) manpage for detailed information about NFSv4 ACL terminology and syntax.</p>
 <h2>AUTHORS</h2>

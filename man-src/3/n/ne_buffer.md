@@ -10,7 +10,6 @@ description: "ne_buffer – string buffer handling"
 <p>ne_buffer &#8211; string buffer handling</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ne_string.h&gt;
-
 typedef struct {
     char *data;
     size_t used;
@@ -23,5 +22,5 @@ typedef struct {
 <h2>Author</h2>
 <p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

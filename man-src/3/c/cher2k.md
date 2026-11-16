@@ -18,7 +18,7 @@ description: "cher2k.f –"
 <p> <code>CHER2K</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHER2K  performs one of the hermitian rank 2k operations
     C := alpha*A*B**H + conjg( alpha )*B*A**H + beta*C,
@@ -28,11 +28,11 @@ description: "cher2k.f –"
  hermitian matrix and  A and B  are  n by k matrices in the first case
  and  k by n  matrices in the second case.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
            On  entry,   UPLO  specifies  whether  the  upper  or  lower
@@ -143,18 +143,18 @@ description: "cher2k.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 3 Blas routine.
   -- Written on 8-February-1989.
@@ -165,8 +165,9 @@ description: "cher2k.f –"
   -- Modified 8-Nov-93 to set C(J,J) to REAL( C(J,J) ) when BETA = 1.
      Ed Anderson, Cray Research Inc.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 198 of file cher2k.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

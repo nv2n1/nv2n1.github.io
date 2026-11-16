@@ -21,13 +21,13 @@ description: "groff_trace – groff macro package trace.tmac"
 <h3>Command line option</h3>
 <p>Example:</p>
 <dl>
-<dd><i>sh#</i> echo &#8216;. &gt; .de test_macro &gt; .. &gt; .test_macro &gt; .test_macro some dummy arguments &gt; &#8216; | groff -m trace &gt; /dev/null </p>
+<dd><i>sh#</i> echo &#8216;. &gt; .de test_macro &gt; .. &gt; .test_macro &gt; .test_macro some dummy arguments &gt; &#8216; | groff -m trace &gt; /dev/null </dd>
 <p> *** .de test_macro *** de trace enter: .test_macro *** trace exit: .test_macro *** de trace enter: .test_macro &quot;some&quot; &quot;dummy&quot; &quot;arguments&quot; *** trace exit: .test_macro &quot;some&quot; &quot;dummy&quot; &quot;arguments&quot;</dl>
 <p> The entry and the exit of each macro call is displayed on the terminal (standard output) &#8212; together with the arguments (if any).</p>
 <h3>Nested macro calls</h3>
 <p>Example:</p>
 <dl>
-<dd><i>sh#</i> echo &#8216;. &gt; .de child &gt; .. &gt; .de parent &gt; .child &gt; .. &gt; .parent &gt; &#8216; | groff -m trace &gt; /dev/null </p>
+<dd><i>sh#</i> echo &#8216;. &gt; .de child &gt; .. &gt; .de parent &gt; .child &gt; .. &gt; .parent &gt; &#8216; | groff -m trace &gt; /dev/null </dd>
 <p> *** .de child *** .de parent *** de trace enter: .parent<br />
 &nbsp;***&nbsp;de trace enter: .child<br />
 &nbsp;***&nbsp;trace exit: .child *** trace exit: .parent</dl>
@@ -35,36 +35,37 @@ description: "groff_trace – groff macro package trace.tmac"
 <h3>Activating with .mso</h3>
 <p>Example:</p>
 <dl>
-<dd><i>sh#</i> echo &#8216;. &gt; .de before &gt; .. &gt; .mso trace.tmac &gt; .de after &gt; .. &gt; .before &gt; .after &gt; .before &gt; &#8216; | groff &gt; /dev/null </p>
+<dd><i>sh#</i> echo &#8216;. &gt; .de before &gt; .. &gt; .mso trace.tmac &gt; .de after &gt; .. &gt; .before &gt; .after &gt; .before &gt; &#8216; | groff &gt; /dev/null </dd>
 <p> *** de trace enter: .after *** trace exit: .after</dl>
 <p> Here, the tracing is activated within the document, not by a command-line option. As tracing was not active when macro <i>before</i> was defined, no call of this macro is protocolled; on the other hand, the macro <i>after</i> is fully protocolled.</p>
 <h2>Problems</h2>
 <p>Because <code>trace.tmac</code> wraps the <code>.de</code> request (and its cousins), macro arguments are expanded one level more. This causes problems if an argument contains four backslashes or more to prevent too early expansion of the backslash. For example, this macro call</p>
 <dl>
-<dd>.foo \\n[bar]</dl>
+<dd>.foo \\n[bar]</dd></dl>
 <p> normally passes &#8216;\n[bar]&#8217; to macro &#8216;.foo&#8217;, but with the redefined <code>.de</code> request it passes &#8216;
 [bar]&#8217; instead. </p>
 <p> The solution to this problem is to use groff&#8217;s <code>\E</code> escape which is an escape character not interpreted in copy mode, for example</p>
 <dl>
-<dd>.foo \En[bar]</dl>
+<dd>.foo \En[bar]</dd></dl>
 <h2>Files</h2>
 <p>The <i>trace</i> macros are kept in the file <code>trace.tmac</code> located in the <i>tmac directory</i>; see <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5) for details.</p>
 <h2>Environment</h2>
 <dl>
-<dt><i>GROFF_TMAC_PATH</i></p>
-<dd>A colon-separated list of additional tmac directories in which to search for macro files; see <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5) for details.</dl>
+<dt><i>GROFF_TMAC_PATH</i></dt>
+<dd>A colon-separated list of additional tmac directories in which to search for macro files; see <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5) for details.</dd></dl>
 <h2>Authors</h2>
 <p>The <i>trace</i> macro packages was written by James Clark. This document was written by Bernd Warken</p>
 <h2>See Also</h2>
 <p><i>Groff: The GNU Implementation of troff</i>, by Trent A. Fisher and Werner Lemberg, is the primary <i>groff</i> manual. You can browse it interactively with &#8220;info groff&#8221;.</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)</p>
-<dd>An overview of the groff system.</p>
-<dt><code><a href="/docs/linux/man/1-troff/">troff</a></code>(1)</p>
-<dd>For details on option <code>-m</code>.</p>
-<dt><code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1)</p>
-<dd>A viewer program for all kinds of roff documents.</p>
-<dt><code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5)</p>
-<dd>A general description of groff macro packages.</p>
-<dt><code><a href="/docs/linux/man/7-groff/">groff</a></code>(7)</p>
-<dd>A short reference for the groff formatting language. </p>
+<dt><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)</dt>
+<dd>An overview of the groff system.</dd>
+<dt><code><a href="/docs/linux/man/1-troff/">troff</a></code>(1)</dt>
+<dd>For details on option <code>-m</code>.</dd>
+<dt><code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1)</dt>
+<dd>A viewer program for all kinds of roff documents.</dd>
+<dt><code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5)</dt>
+<dd>A general description of groff macro packages.</dd>
+<dt><code><a href="/docs/linux/man/7-groff/">groff</a></code>(7)</dt>
+<dd>A short reference for the groff formatting language. </dd>
+</dl>

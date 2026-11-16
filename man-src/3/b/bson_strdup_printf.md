@@ -17,8 +17,8 @@ bson_strdup_printf(const char *format,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>format</code></p>
-<dd> A printf style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A printf style format string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function performs a printf style format but into a newly allocated string. </p>
 <h2>RETURNS</h2>

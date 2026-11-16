@@ -15,18 +15,18 @@ description: "bcfg2-remote – Connect to a bcfg2 agent and trigger client execu
 <h2>Options</h2>
 <p><code>-d debuglevel</code></p>
 <dl>
-<dd>Set debug level (0-40).</dl>
+<dd>Set debug level (0-40).</dd></dl>
 <p> <code>-H hostname</code></p>
 <dl>
-<dd>Connect to the agent on the specified host.</dl>
+<dd>Connect to the agent on the specified host.</dd></dl>
 <p> <code>-C configfile</code></p>
 <dl>
-<dd>Use the specified bcfg2.conf.</dl>
+<dd>Use the specified bcfg2.conf.</dd></dl>
 <p> <code>-k sslkey</code></p>
 <dl>
-<dd>Use the ssl certificate at the following path.</dl>
+<dd>Use the ssl certificate at the following path.</dd></dl>
 <p> <code>-p port</code></p>
 <dl>
-<dd>Connect to the agent on the specified TCP port.</dl>
+<dd>Connect to the agent on the specified TCP port.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-bcfg2/">bcfg2</a>(1)</code> </p>

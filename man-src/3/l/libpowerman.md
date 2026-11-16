@@ -31,61 +31,61 @@ cc... - lpowerman
 <h2>DESCRIPTION</h2>
 <p> The <code>pm_connect</code>() function establishes a connection with <i>server</i>, a string containing <i>host[:port]</i> or NULL for defaults; and returns a handle in <i>hp</i>. The <i>arg</i> parameter is currently unused. The <i>flags</i> parameter should be zero or one or more logically-OR&#8217;ed flags:</p>
 <dl>
-<dt><code>PM_CONN_INET6</code></p>
-<dd> Establish connection to the powerman server using (only) IPv6 protocol. Without this flag, any available address family will be used.</dl>
+<dt><code>PM_CONN_INET6</code></dt>
+<dd> Establish connection to the powerman server using (only) IPv6 protocol. Without this flag, any available address family will be used.</dd></dl>
 <p> The <code>pm_disconnect</code>() function tears down the server connection and frees storage associated with handle <i>h</i>. </p>
 <p> The <code>pm_node_on</code>(), <code>pm_node_off</code>(), and <code>pm_node_cycle</code>() functions issue on, off, and cycle commands acting on <i>node</i> to the server on handle <i>h</i>. </p>
 <p> The <code>pm_node_status</code>() function issues a status query acting on <i>node</i> to the server on handle <i>h</i>. The result is resturned in <i>sp</i> which will be one of the values:</p>
 <dl>
-<dt><code>PM_ON</code></p>
-<dd> Node is powered on.</p>
-<dt><code>PM_OFF</code></p>
-<dd> Node is powered off.</p>
-<dt><code>PM_UNKNOWN</code></p>
-<dd> Node state is unknown. Some devices may return this even when the query is successful, for example X10 devices controlled by <code>plmpower</code>.</dl>
+<dt><code>PM_ON</code></dt>
+<dd> Node is powered on.</dd>
+<dt><code>PM_OFF</code></dt>
+<dd> Node is powered off.</dd>
+<dt><code>PM_UNKNOWN</code></dt>
+<dd> Node state is unknown. Some devices may return this even when the query is successful, for example X10 devices controlled by <code>plmpower</code>.</dd></dl>
 <p> To use the above functions you must know the name of the node you wish to control. Calling <code>pm_node_iterator_create</code>() on handle <i>h</i> returns an iterator <i>ip</i> which can be used to walk the list of valid node names. <code>pm_node_next</code>() returns the next node in the list, or NULL when the end of the list is reached. <code>pm_node_iterator_reset</code>() rewinds iterator <i>i</i> to the beginning of the list. Finally, <code>pm_node_iterator_destroy</code>() destroys an iterator and reclaims its storage. </p>
 <h2>RETURN VALUE</h2>
 <p> Most functions have a return type of <i>pm_err_t</i>. <code>pm_strerror</code>() is available to convert an error code <i>err</i> to a human-readable string using storage <i>str</i> of length <i>len</i> passed in by the caller. </p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>PM_ESUCCESS</code></p>
-<dd> Success.</p>
-<dt><code>PM_ERRNOVALID</code></p>
-<dd> System call failed, see system errno.</p>
-<dt><code>PM_ENOADDR</code></p>
-<dd> Failed to get address info for server.</p>
-<dt><code>PM_ECONNECT</code></p>
-<dd> Connect failed.</p>
-<dt><code>PM_ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>PM_EBADHAND</code></p>
-<dd> Bad server handle.</p>
-<dt><code>PM_EBADARG</code></p>
-<dd> Bad argument.</p>
-<dt><code>PM_ESERVEREOF</code></p>
-<dd> Received unexpected EOF from server.</p>
-<dt><code>PM_ESERVERPARSE</code></p>
-<dd> Received unexpected response from server.</p>
-<dt><code>PM_EUNKNOWN</code></p>
-<dd> Server responded with &#8220;unknown command&#8221;.</p>
-<dt><code>PM_EPARSE</code></p>
-<dd> Server responded with &#8220;parse error&#8221;.</p>
-<dt><code>PM_ETOOLONG</code></p>
-<dd> Server responded with &#8220;command too long&#8221;.</p>
-<dt><code>PM_EINTERNAL</code></p>
-<dd> Server responed with &#8220;internal error&#8221;.</p>
-<dt><code>PM_EHOSTLIST</code></p>
-<dd> Server responded with &#8220;hostlist error&#8221;.</p>
-<dt><code>PM_EINPROGRESS</code></p>
-<dd> Server responded with &#8220;command in progress&#8221;.</p>
-<dt><code>PM_ENOSUCHNODES</code></p>
-<dd> Server responded with &#8220;no such nodes&#8221;.</p>
-<dt><code>PM_ECOMMAND</code></p>
-<dd> Server responded with &#8220;command completed with errors&#8221;.</p>
-<dt><code>PM_EQUERY</code></p>
-<dd> Server responded with &#8220;query completed with errors&#8221;.</p>
-<dt><code>PM_EUNIMPL</code></p>
-<dd> Server responded with &#8220;not implemented by device&#8221;. </p>
+<dt><code>PM_ESUCCESS</code></dt>
+<dd> Success.</dd>
+<dt><code>PM_ERRNOVALID</code></dt>
+<dd> System call failed, see system errno.</dd>
+<dt><code>PM_ENOADDR</code></dt>
+<dd> Failed to get address info for server.</dd>
+<dt><code>PM_ECONNECT</code></dt>
+<dd> Connect failed.</dd>
+<dt><code>PM_ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>PM_EBADHAND</code></dt>
+<dd> Bad server handle.</dd>
+<dt><code>PM_EBADARG</code></dt>
+<dd> Bad argument.</dd>
+<dt><code>PM_ESERVEREOF</code></dt>
+<dd> Received unexpected EOF from server.</dd>
+<dt><code>PM_ESERVERPARSE</code></dt>
+<dd> Received unexpected response from server.</dd>
+<dt><code>PM_EUNKNOWN</code></dt>
+<dd> Server responded with &#8220;unknown command&#8221;.</dd>
+<dt><code>PM_EPARSE</code></dt>
+<dd> Server responded with &#8220;parse error&#8221;.</dd>
+<dt><code>PM_ETOOLONG</code></dt>
+<dd> Server responded with &#8220;command too long&#8221;.</dd>
+<dt><code>PM_EINTERNAL</code></dt>
+<dd> Server responed with &#8220;internal error&#8221;.</dd>
+<dt><code>PM_EHOSTLIST</code></dt>
+<dd> Server responded with &#8220;hostlist error&#8221;.</dd>
+<dt><code>PM_EINPROGRESS</code></dt>
+<dd> Server responded with &#8220;command in progress&#8221;.</dd>
+<dt><code>PM_ENOSUCHNODES</code></dt>
+<dd> Server responded with &#8220;no such nodes&#8221;.</dd>
+<dt><code>PM_ECOMMAND</code></dt>
+<dd> Server responded with &#8220;command completed with errors&#8221;.</dd>
+<dt><code>PM_EQUERY</code></dt>
+<dd> Server responded with &#8220;query completed with errors&#8221;.</dd>
+<dt><code>PM_EUNIMPL</code></dt>
+<dd> Server responded with &#8220;not implemented by device&#8221;. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> This example program queries the list of valid nodes and turns them all on. </p>

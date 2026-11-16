@@ -17,26 +17,26 @@ description: "upsstats.html – HTML template for Network UPS Tools upsstats"
 <h3>Block Control &#8211; Iteration</h3>
 <p><code>@FOREACHUPS@</code></p>
 <dl>
-<dd>Starts a block that will be repeated for each MONITOR directive in the <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). This is how you can generate pages that monitor all of your systems simultaneously.</dl>
+<dd>Starts a block that will be repeated for each MONITOR directive in the <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). This is how you can generate pages that monitor all of your systems simultaneously.</dd></dl>
 <p> <code>@ENDFOR@</code></p>
 <dl>
-<dd>Ends a FOREACHUPS block.</dl>
+<dd>Ends a FOREACHUPS block.</dd></dl>
 <h3>Block Control &#8211; Matching Specific Cases</h3>
 <p><code>@IFSUPP </code><i>var</i>@*</p>
 <dl>
-<dd>Starts a block that will only be printed if the variable var is supported by the current UPS. This is generally used to suppress &quot;not supported&quot; messages by avoiding the label and variable call entirely.</dl>
+<dd>Starts a block that will only be printed if the variable var is supported by the current UPS. This is generally used to suppress &quot;not supported&quot; messages by avoiding the label and variable call entirely.</dd></dl>
 <p> <code>@IFEQ</code> <i>var</i> <i>value</i><code>@</code></p>
 <dl>
-<dd>Starts a block if the value returned from the variable <i>var</i> matches <i>value</i>.</dl>
+<dd>Starts a block if the value returned from the variable <i>var</i> matches <i>value</i>.</dd></dl>
 <p> <code>@IFBETWEEN</code> <i>varlow</i> <i>varhigh</i> <i>varvalue</i><code>@</code></p>
 <dl>
-<dd>Starts a block if the value returned by the variable <i>varvalue</i> is between the values returned by the variables <i>varlow</i> and <i>varhigh</i>.</dl>
+<dd>Starts a block if the value returned by the variable <i>varvalue</i> is between the values returned by the variables <i>varlow</i> and <i>varhigh</i>.</dd></dl>
 <p> <code>@ELSE@</code></p>
 <dl>
-<dd>If the previous IF-command did not match, perform this instead.</dl>
+<dd>If the previous IF-command did not match, perform this instead.</dd></dl>
 <p> <code>@ENDIF@</code></p>
 <dl>
-<dd>Ends an IF/ELSE-block.</dl>
+<dd>Ends an IF/ELSE-block.</dd></dl>
 <h3>Block Control &#8211; Advanced Expressions</h3>
 <p>Even though the parser is pretty limited, it&#8217;s still possible to create rather advanced expressions. The key to this is the fact that multiple block control commands are AND:ed. This is illustrated with an example (more examples are available in upsstats.html). </p>
 <dl>
@@ -53,112 +53,112 @@ This UPS only knows ambient temperature.
 @ELSE@
 This UPS knows nothing, how annoying.
 @ENDIF@</pre>
-</dl>
+</dd></dl>
 <h2>Other Commands</h2>
 <p><code>@AMBTEMP@</code></p>
 <dl>
-<dd>Insert the ambient temperature in the current temperature scale.</dl>
+<dd>Insert the ambient temperature in the current temperature scale.</dd></dl>
 <p> <code>@DATE</code> <i>format</i><code>@</code></p>
 <dl>
-<dd>Insert the current date and time. The format string is passed to strftime, so almost anything is possible. See <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible values.</dl>
+<dd>Insert the current date and time. The format string is passed to strftime, so almost anything is possible. See <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible values.</dd></dl>
 <p> <code>@DEGREES@</code></p>
 <dl>
-<dd>Insert the entity for degrees (&#176;) and either C or F depending on the current temperature scale.</dl>
+<dd>Insert the entity for degrees (&#176;) and either C or F depending on the current temperature scale.</dd></dl>
 <p> <code>@HOST@</code></p>
 <dl>
-<dd>Insert the designation of the host being monitored, like myups [at] localhost.</dl>
+<dd>Insert the designation of the host being monitored, like myups [at] localhost.</dd></dl>
 <p> <code>@HOSTDESC@</code></p>
 <dl>
-<dd>Insert the hout&#8217;s description from <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5).</dl>
+<dd>Insert the hout&#8217;s description from <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5).</dd></dl>
 <p> <code>@HOSTLINK@</code></p>
 <dl>
-<dd>Insert a link to upsstats.cgi with the &quot;host&quot; variable set to the current UPS. This is only useful within a FOREACHUPS block.</dl>
+<dd>Insert a link to upsstats.cgi with the &quot;host&quot; variable set to the current UPS. This is only useful within a FOREACHUPS block.</dd></dl>
 <p> <code>@IMG</code> <i>varname</i> <code>@</code></p>
 <dl>
-<dd>Insert an IMG SRC to <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8) for one of these status variables: </p>
+<dd>Insert an IMG SRC to <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8) for one of these status variables: </dd>
 <p> battery.charge</p>
 <dl>
-<dd>Battery charge &#8211; a percentage</dl>
+<dd>Battery charge &#8211; a percentage</dd></dl>
 <p> battery.voltage</p>
 <dl>
-<dd>The charge on the battery in volts</dl>
+<dd>The charge on the battery in volts</dd></dl>
 <p> input.frequency</p>
 <dl>
-<dd>Incoming utility frequency (Hz)</dl>
+<dd>Incoming utility frequency (Hz)</dd></dl>
 <p> input.voltage</p>
 <dl>
-<dd>Incoming utility voltage</dl>
+<dd>Incoming utility voltage</dd></dl>
 <p> input.L1-L2.voltage</p>
 <dl>
-<dd>Incoming voltage, L1-L2 (3phase)</dl>
+<dd>Incoming voltage, L1-L2 (3phase)</dd></dl>
 <p> input.L2-L3.voltage</p>
 <dl>
-<dd>Incoming voltage, L2-L3 (3phase)</dl>
+<dd>Incoming voltage, L2-L3 (3phase)</dd></dl>
 <p> input.L3-L1.voltage</p>
 <dl>
-<dd>Incoming voltage, L3-L1 (3phase)</dl>
+<dd>Incoming voltage, L3-L1 (3phase)</dd></dl>
 <p> output.frequency</p>
 <dl>
-<dd>Outgoing utility frequency (Hz)</dl>
+<dd>Outgoing utility frequency (Hz)</dd></dl>
 <p> output.voltage</p>
 <dl>
-<dd>Outgoing voltage (from the UPS)</dl>
+<dd>Outgoing voltage (from the UPS)</dd></dl>
 <p> output.L1-L2.voltage</p>
 <dl>
-<dd>Outgoing voltage, L1-L2 (3phase)</dl>
+<dd>Outgoing voltage, L1-L2 (3phase)</dd></dl>
 <p> output.L2-L3.voltage</p>
 <dl>
-<dd>Outgoing voltage, L2-L3 (3phase)</dl>
+<dd>Outgoing voltage, L2-L3 (3phase)</dd></dl>
 <p> output.L3-L1.voltage</p>
 <dl>
-<dd>Outgoing voltage, L3-L1 (3phase)</dl>
+<dd>Outgoing voltage, L3-L1 (3phase)</dd></dl>
 <p> output.L1.power.percent</p>
 <dl>
-<dd>UPS load, L1 (3phase)</dl>
+<dd>UPS load, L1 (3phase)</dd></dl>
 <p> output.L2.power.percent</p>
 <dl>
-<dd>UPS load, L2 (3phase)</dl>
+<dd>UPS load, L2 (3phase)</dd></dl>
 <p> output.L3.power.percent</p>
 <dl>
-<dd>UPS load, L3 (3phase)</dl>
+<dd>UPS load, L3 (3phase)</dd></dl>
 <p> ups.load</p>
 <dl>
-<dd>UPS load &#8211; percentage</dl>
+<dd>UPS load &#8211; percentage</dd></dl>
 <p> ups.temperature</p>
 <dl>
-<dd>UPS temperature</dl>
+<dd>UPS temperature</dd></dl>
 </dl>
 <p> <i>extra</i> is where you can put additional definitions. Right now the valid definitions are colors for various parts of the bars drawn by upsimage.cgi. Possible color names are: </p>
 <p> back_col</p>
 <dl>
-<dd>background color</dl>
+<dd>background color</dd></dl>
 <p> scale_num_col</p>
 <dl>
-<dd>scale number color</dl>
+<dd>scale number color</dd></dl>
 <p> summary_col</p>
 <dl>
-<dd>summary color (number at the bottom)</dl>
+<dd>summary color (number at the bottom)</dd></dl>
 <p> ok_zone_maj_col</p>
 <dl>
-<dd>major scale color for the normal (&quot;ok&quot;) zone</dl>
+<dd>major scale color for the normal (&quot;ok&quot;) zone</dd></dl>
 <p> ok_zone_min_col</p>
 <dl>
-<dd>minor scale color for the normal (&quot;ok&quot;) zone</dl>
+<dd>minor scale color for the normal (&quot;ok&quot;) zone</dd></dl>
 <p> neutral_zone_maj_col</p>
 <dl>
-<dd>major scale color for the neutral zone</dl>
+<dd>major scale color for the neutral zone</dd></dl>
 <p> neutral_zone_min_col</p>
 <dl>
-<dd>minor scale color for the neutral zone</dl>
+<dd>minor scale color for the neutral zone</dd></dl>
 <p> warn_zone_maj_col</p>
 <dl>
-<dd>major scale color for the warning zone</dl>
+<dd>major scale color for the warning zone</dd></dl>
 <p> warn_zone_min_col</p>
 <dl>
-<dd>minor scale color for the warning zone</dl>
+<dd>minor scale color for the warning zone</dd></dl>
 <p> bar_col</p>
 <dl>
-<dd>the color of the bar in the middle</dl>
+<dd>the color of the bar in the middle</dd></dl>
 <p> All colors are hex triplets &#8211; 0xff0000 is red, 0x00ff00 is green, and 0x0000ff is blue. </p>
 <p> Examples: </p>
 <dl>
@@ -166,40 +166,40 @@ This UPS knows nothing, how annoying.
 <pre>@IMG battery.charge@
 @IMG battery.charge back_col=0xff00ff bar_col=0xaabbcc@
 @IMG input.voltage ok_zone_maj_col=0x123456@</pre>
-</dl>
+</dd></dl>
 <p> <code>@REFRESH@</code></p>
 <dl>
-<dd>Insert the META header magic for refreshing the page if that variable has been set by the browser. This needs to be in the HEAD section of the page.</dl>
+<dd>Insert the META header magic for refreshing the page if that variable has been set by the browser. This needs to be in the HEAD section of the page.</dd></dl>
 <p> <code>@STATUS@</code></p>
 <dl>
-<dd>Expand the abbreviations in the ups.status variable &#8211; OL becomes &quot;On line&quot;, OB becomes &quot;On battery&quot;, and so on.</dl>
+<dd>Expand the abbreviations in the ups.status variable &#8211; OL becomes &quot;On line&quot;, OB becomes &quot;On battery&quot;, and so on.</dd></dl>
 <p> <code>@STATUSCOLOR@</code></p>
 <dl>
-<dd>Insert red, green, or yellow color triplets depending on the severity of the current UPS status. Normal operations are green, warnings like voltage trim/boost or &quot;off&quot; are yellow, and other events like being on battery or having a low battery are red.</dl>
+<dd>Insert red, green, or yellow color triplets depending on the severity of the current UPS status. Normal operations are green, warnings like voltage trim/boost or &quot;off&quot; are yellow, and other events like being on battery or having a low battery are red.</dd></dl>
 <p> <code>@VAR</code> <i>varname</i><code>@</code></p>
 <dl>
-<dd>Insert the current value of the status variable varname on the host being monitored, or &quot;Not supported&quot;.</dl>
+<dd>Insert the current value of the status variable varname on the host being monitored, or &quot;Not supported&quot;.</dd></dl>
 <p> <code>@RUNTIME@</code></p>
 <dl>
-<dd>Inserts the current runtime, in hh:mm:ss format.</dl>
+<dd>Inserts the current runtime, in hh:mm:ss format.</dd></dl>
 <p> <code>@TEMPC@</code></p>
 <dl>
-<dd>Use the Celsius scale for temperature data (default).</dl>
+<dd>Use the Celsius scale for temperature data (default).</dd></dl>
 <p> <code>@TEMPF@</code></p>
 <dl>
-<dd>Use the Fahrenheit scale for temperature data.</dl>
+<dd>Use the Fahrenheit scale for temperature data.</dd></dl>
 <p> <code>@UPSTEMP@</code></p>
 <dl>
-<dd>Insert the UPS temperature in the current scale.</dl>
+<dd>Insert the UPS temperature in the current scale.</dd></dl>
 <p> <code>@BATTTEMP@</code></p>
 <dl>
-<dd>Insert the battery temperature in the current scale.</dl>
+<dd>Insert the battery temperature in the current scale.</dd></dl>
 <p> <code>@UTILITYCOLOR@</code></p>
 <dl>
-<dd>Obsoleted. Use IFBETWEEN instead (see example in upsstats.html).</dl>
+<dd>Obsoleted. Use IFBETWEEN instead (see example in upsstats.html).</dd></dl>
 <p> <code>@VERSION@</code></p>
 <dl>
-<dd>Insert the version number of the software.</dl>
+<dd>Insert the version number of the software.</dd></dl>
 <h2>Other Templates</h2>
 <p><code><a href="/docs/linux/man/8-upsstats-cgi/">upsstats.cgi</a></code>(8) will also open a file called upsstats-single.html if you call it with &quot;host=&quot; set in the URL. That file uses the same rules and techniques documented here.</p>
 <h2>See Also</h2>

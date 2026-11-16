@@ -14,16 +14,16 @@ description: "restorecond – daemon that watches for file creation and then set
 <p>This manual page describes the <code>restorecond</code> program. This daemon uses inotify to watch files listed in the /etc/selinux/restorecond.conf, when they are created, this daemon will make sure they have the correct file context associated with the policy. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Turns on debugging mode. Application will stay in the foreground and lots of debugs messages start printing.</p>
-<dt><code>-h</code></p>
-<dd>Print usage statement.</p>
-<dt><code>-f restorecond_file</code></p>
-<dd>Use alternative restorecond.conf file.</p>
-<dt><code>-u</code></p>
-<dd>Turns on user mode. Runs restorecond in the user session and reads /etc/selinux/restorecond_user.conf. Uses dbus to make sure only one restorecond is running per user session.</p>
-<dt><code>-v</code></p>
-<dd>Turns on verbose debugging. (Report missing files) </p>
+<dt><code>-d</code></dt>
+<dd>Turns on debugging mode. Application will stay in the foreground and lots of debugs messages start printing.</dd>
+<dt><code>-h</code></dt>
+<dd>Print usage statement.</dd>
+<dt><code>-f restorecond_file</code></dt>
+<dd>Use alternative restorecond.conf file.</dd>
+<dt><code>-u</code></dt>
+<dd>Turns on user mode. Runs restorecond in the user session and reads /etc/selinux/restorecond_user.conf. Uses dbus to make sure only one restorecond is running per user session.</dd>
+<dt><code>-v</code></dt>
+<dd>Turns on verbose debugging. (Report missing files) </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page and program was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>

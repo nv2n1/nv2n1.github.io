@@ -15,13 +15,13 @@ description: "bcfg2-build-reports – Generate state reports for bcfg2 clients"
 <h2>Options</h2>
 <p><code>-c &lt;configuration file&gt;</code></p>
 <dl>
-<dd>Specify an alternate report configuration path. The default is repo/etc/reports-configuration.xml</dl>
+<dd>Specify an alternate report configuration path. The default is repo/etc/reports-configuration.xml</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Produce a help message</dl>
+<dd>Produce a help message</dd></dl>
 <p> <code>-s &lt;statistics Path&gt;</code></p>
 <dl>
-<dd>Use an alternative path for the statistics file. The default is repo/etc/statistics.xml</dl>
+<dd>Use an alternative path for the statistics file. The default is repo/etc/statistics.xml</dd></dl>
 <h2>See Also</h2>
 <p><code>bcfg(1),</code> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8)</code></p>
 <h2>Bugs</h2>

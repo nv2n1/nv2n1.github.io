@@ -14,7 +14,7 @@ description: "ata_scsi_flush_xlat – Translate SCSI SYNCHRONIZE CACHE command"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Sets up an ATA taskfile to issue FLUSH CACHE or FLUSH CACHE EXT. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -23,5 +23,5 @@ description: "ata_scsi_flush_xlat – Translate SCSI SYNCHRONIZE CACHE command"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

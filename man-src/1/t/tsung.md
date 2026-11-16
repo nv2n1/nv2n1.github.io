@@ -17,74 +17,74 @@ description: "tsung – A distributed multi-protocol load testing tool."
 <p> For HTTP, it supports 1.0 and 1.1, has a proxy mode to record sessions, supports GET and POST methods, Cookies, and Basic WWW-authentication. It also has support for SSL. </p>
 <p> Several config examples can be found in <i>/usr/share/doc/tsung/examples/</i>.</p>
 <dl>
-<dt><code>start</code></p>
-<dd> start tsung load testing</p>
-<dt><code>debug</code></p>
-<dd> start tsung with an interactive erlang shell</p>
-<dt><code>stop</code></p>
-<dd> stop tsung</p>
-<dt><code>status</code></p>
-<dd> print current status of a running instance of tsung (must be run on the controller host)</dl>
+<dt><code>start</code></dt>
+<dd> start tsung load testing</dd>
+<dt><code>debug</code></dt>
+<dd> start tsung with an interactive erlang shell</dd>
+<dt><code>stop</code></dt>
+<dd> stop tsung</dd>
+<dt><code>status</code></dt>
+<dd> print current status of a running instance of tsung (must be run on the controller host)</dd></dl>
 <h2>MANUAL</h2>
 <p> A manual should be available at <i>/usr/share/doc/tsung/user_manual.html</i>. It is also available online at </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="http://tsung.erlang-projects.org/user_manual.html">http://tsung.erlang-projects.org/user_manual.html</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f filename</code></p>
-<dd> specifies the configuration file to use. The default file name is <i>~/.tsung/tsung.xml</i>. Use &#8211; for standard input</p>
-<dt><code>-l logdir</code></p>
-<dd> Specifies the log directory to use. The default log dir name is <i>~/.tsung/log/YYYYMMDD-HHMM/</i></p>
-<dt><code>-m monitoring_file</code></p>
-<dd> Specifies the monitoring log file name to use. The default log file name is <i>tsung.log</i>. Use &#8211; for standard output</p>
-<dt><code>-r command</code></p>
-<dd> Specifies an alternative to ssh (rsh for ex.) for starting a slave node on a remote host</p>
-<dt><code>-i id</code></p>
-<dd> set controller id (default is empty). Needed to start several controllers on the same host.</p>
-<dt><code>-F</code></p>
-<dd> Use long names for erlang nodes (FQDN)</p>
-<dt><code>-s</code></p>
-<dd> Enable erlang smp on client nodes</p>
-<dt><code>-p</code></p>
-<dd> set maximum erlang processes per vm (default is 250000)</p>
-<dt><code>-X directory</code></p>
-<dd> add additional erlang load paths (multiple -X arguments allowed)</p>
-<dt><code>-L lifetime</code></p>
-<dd> SSL session lifetime in seconds (600 sec by default)</p>
-<dt><code>-w delay</code></p>
-<dd> warmup delay in seconds (1 sec by default)</p>
-<dt><code>-v</code></p>
-<dd> Show version</p>
-<dt><code>-n</code></p>
-<dd> disable web GUI</p>
-<dt><code>-k</code></p>
-<dd> keep web GUI (and controller) alive after the test has finished</p>
-<dt><code>-6</code></p>
-<dd> Use IPv6 for tsung internal communications</p>
-<dt><code>-h</code></p>
-<dd> Show usage</dl>
+<dt><code>-f filename</code></dt>
+<dd> specifies the configuration file to use. The default file name is <i>~/.tsung/tsung.xml</i>. Use &#8211; for standard input</dd>
+<dt><code>-l logdir</code></dt>
+<dd> Specifies the log directory to use. The default log dir name is <i>~/.tsung/log/YYYYMMDD-HHMM/</i></dd>
+<dt><code>-m monitoring_file</code></dt>
+<dd> Specifies the monitoring log file name to use. The default log file name is <i>tsung.log</i>. Use &#8211; for standard output</dd>
+<dt><code>-r command</code></dt>
+<dd> Specifies an alternative to ssh (rsh for ex.) for starting a slave node on a remote host</dd>
+<dt><code>-i id</code></dt>
+<dd> set controller id (default is empty). Needed to start several controllers on the same host.</dd>
+<dt><code>-F</code></dt>
+<dd> Use long names for erlang nodes (FQDN)</dd>
+<dt><code>-s</code></dt>
+<dd> Enable erlang smp on client nodes</dd>
+<dt><code>-p</code></dt>
+<dd> set maximum erlang processes per vm (default is 250000)</dd>
+<dt><code>-X directory</code></dt>
+<dd> add additional erlang load paths (multiple -X arguments allowed)</dd>
+<dt><code>-L lifetime</code></dt>
+<dd> SSL session lifetime in seconds (600 sec by default)</dd>
+<dt><code>-w delay</code></dt>
+<dd> warmup delay in seconds (1 sec by default)</dd>
+<dt><code>-v</code></dt>
+<dd> Show version</dd>
+<dt><code>-n</code></dt>
+<dd> disable web GUI</dd>
+<dt><code>-k</code></dt>
+<dd> keep web GUI (and controller) alive after the test has finished</dd>
+<dt><code>-6</code></dt>
+<dd> Use IPv6 for tsung internal communications</dd>
+<dt><code>-h</code></dt>
+<dd> Show usage</dd></dl>
 <h2>BUGS</h2>
 <p> Please reports bugs to the mailing list &lt;tsung-users [at] process-one.net&gt;, see </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="https://lists.process-one.net/mailman/listinfo/tsung-users">https://lists.process-one.net/mailman/listinfo/tsung-users</a>
 </pre>
-</dl>
+</dd></dl>
 <p> for archives. You can also use the issue tracker </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="https://github.com/processone/tsung/issues">https://github.com/processone/tsung/issues</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>erlang</code>(3)</p>
 <h2>AUTHORS</h2>

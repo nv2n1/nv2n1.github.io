@@ -15,6 +15,6 @@ description: "SPI_freeplan – free a previously saved prepared statement"
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>pointer to statement to free</dl>
+<dd>pointer to statement to free</dd></dl>
 <h2>Return Value</h2>
 <p>0 on success; SPI_ERROR_ARGUMENT if <i>plan</i> is NULL or invalid</p>

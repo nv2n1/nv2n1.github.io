@@ -32,36 +32,36 @@ description: "greylistd – simple greylisting system for mail transport agents"
 <h3>Others</h3>
 <p>What others? :-) A prerequisite to greylisting in general is the ability to perform custom filtering throughout the various stages in the SMTP transaction, most notably after the <code>RCPT TO:</code> SMTP command. In particular, <code><a href="/docs/linux/man/8-greylistd/">greylistd</a></code>(8) can be invoked either over a UNIX domain socket or via the supplied <code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1) utility. Although <code><a href="/docs/linux/man/8-greylistd/">greylistd</a></code>(8) is written mainly with Exim in mind, it should be possible to use it with any MTA that:</p>
 <dl>
-<dt> &#8211;</p>
-<dd>Allows arbitrary strings to be passed on via a UNIX domain socket (<code>/var/run/greylistd/socket</code>) or supplied to external programs (<code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1)).</p>
-<dt> &#8211;</p>
-<dd>Can defer the incoming delivery, based on the response.</dl>
+<dt> &#8211;</dt>
+<dd>Allows arbitrary strings to be passed on via a UNIX domain socket (<code>/var/run/greylistd/socket</code>) or supplied to external programs (<code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1)).</dd>
+<dt> &#8211;</dt>
+<dd>Can defer the incoming delivery, based on the response.</dd></dl>
 <p> Some MTAs either have limited or no support for such external filters in the SMTP transaction (e.g. Sendmail), or define a very custom interface for such filters (e.g. Postifx &quot;Policy Servers&quot;). That said, solutions exist for these other MTAs as well. For Postfix, check into &quot;postgrey&quot;, and for Sendmail there is &quot;relaydelay&quot;. For other MTAs, check the links on Evan Harris&#8217; greylisting project page:<br />
 &nbsp;<wbr><a rel="nofollow" href="http://projects.puremagic.com/greylisting/links.html">http://projects.puremagic.com/greylisting/links.html</a> </p>
 <h2>Files</h2>
 <h3>/etc/greylistd/config</h3>
 <p>Configuration settings. Currently, this file consists of three sections:</p>
 <dl>
-<dt>[timeout]</p>
-<dd>Lists various timeouts used to determine how long to keep a new <i>triplet</i> greylisted, and when to expire previosly known <i>triplet</i>s.</p>
-<dt>[socket]</p>
-<dd>Specifies path and permissions of the UNIX domain socket on which <code>greylistd</code> will listen.</p>
-<dt>[data]</p>
-<dd>Specifies the paths to the data files, containing the data items and statistics, as well as an <i>update interval</i> specifying how often data will be written to these files.</dl>
+<dt>[timeout]</dt>
+<dd>Lists various timeouts used to determine how long to keep a new <i>triplet</i> greylisted, and when to expire previosly known <i>triplet</i>s.</dd>
+<dt>[socket]</dt>
+<dd>Specifies path and permissions of the UNIX domain socket on which <code>greylistd</code> will listen.</dd>
+<dt>[data]</dt>
+<dd>Specifies the paths to the data files, containing the data items and statistics, as well as an <i>update interval</i> specifying how often data will be written to these files.</dd></dl>
 <h3>/var/lib/greylistd/states</h3>
 <p>(default path, can be modified in the configuration file) </p>
 <p> Runtime data. Theare are four sections: <code>[white]</code>, <code>[grey]</code>, <code>[black]</code> and <code>[statistics]</code>. The first three sections consist of lines of the form: </p>
 <p>&nbsp;<wbr><i>hash</i>&nbsp;<wbr>=&nbsp;<wbr><i>lastseen firstseen count</i> </p>
 <p> where:</p>
 <dl>
-<dt> &#8211;</p>
-<dd><i>hash</i> is a 32-bit value representing a given <i>triplet</i>,</p>
-<dt> &#8211;</p>
-<dd><i>lastseen</i> is a 32-bit value representing the timestamp of last delivery attempt for this triplet,</p>
-<dt> &#8211;</p>
-<dd><i>firstseen</i> is a 32-bit value representing the timestamp of first known delivery attempt for this triplet,</p>
-<dt> &#8211;</p>
-<dd><i>count</i> is a 32-bit value representing the number of delivery attempts that have been made for this triplet in this time period.</dl>
+<dt> &#8211;</dt>
+<dd><i>hash</i> is a 32-bit value representing a given <i>triplet</i>,</dd>
+<dt> &#8211;</dt>
+<dd><i>lastseen</i> is a 32-bit value representing the timestamp of last delivery attempt for this triplet,</dd>
+<dt> &#8211;</dt>
+<dd><i>firstseen</i> is a 32-bit value representing the timestamp of first known delivery attempt for this triplet,</dd>
+<dt> &#8211;</dt>
+<dd><i>count</i> is a 32-bit value representing the number of delivery attempts that have been made for this triplet in this time period.</dd></dl>
 <p> The <code>[statistics]</code> section contains a counter for each of the three lists, indicating how many items that has ever made its way into these lists by way of the <code>update</code> protocol.</p>
 <h3>/var/lib/greylistd/triplets</h3>
 <p>(default path, can be modified in the configuration file) </p>
@@ -84,9 +84,10 @@ description: "greylistd – simple greylisting system for mail transport agents"
 <p>&nbsp;<wbr><a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></p>
 <h2>See Also</h2>
 <dl>
-<dt><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></p>
-<dd>Evan Harris&#8217; greylisting whitepaper</p>
-<dt><code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1)</p>
-<dd>Command-line interface to the greylist daemon.</p>
-<dt><code><a href="/docs/linux/man/8-greylistd-setup-exim4/">greylistd-setup-exim4</a></code>(8)</p>
-<dd>Utility to add/remove support for greylistd in Exim 4 configuration files. </p>
+<dt><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></dt>
+<dd>Evan Harris&#8217; greylisting whitepaper</dd>
+<dt><code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1)</dt>
+<dd>Command-line interface to the greylist daemon.</dd>
+<dt><code><a href="/docs/linux/man/8-greylistd-setup-exim4/">greylistd-setup-exim4</a></code>(8)</dt>
+<dd>Utility to add/remove support for greylistd in Exim 4 configuration files. </dd>
+</dl>

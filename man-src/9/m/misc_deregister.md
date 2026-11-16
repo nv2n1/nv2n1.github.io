@@ -14,7 +14,7 @@ description: "misc_deregister – unregister a miscellaneous device"
 <p><i>misc</i></p>
 <dl>
 <dd>
-<dd>device to unregister</dl>
+</dd><dd>device to unregister</dd></dl>
 <h2>Description</h2>
 <p>Unregister a miscellaneous device that was previously successfully registered with <code>misc_register</code>.</p>
 <h2>Copyright</h2>

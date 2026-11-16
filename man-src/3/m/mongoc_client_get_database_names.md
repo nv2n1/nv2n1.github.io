@@ -15,11 +15,11 @@ mongoc_client_get_database_names (mongoc_client_t *client,
 <p>This function queries the MongoDB server for a list of known databases. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

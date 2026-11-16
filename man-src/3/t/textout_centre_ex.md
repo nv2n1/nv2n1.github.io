@@ -10,9 +10,7 @@ description: "textout_centre_ex – Writes a centered string on a bitmap. Allegr
 <p>textout_centre_ex &#8211; Writes a centered string on a bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void textout_centre_ex(BITMAP *bmp, const FONT *f, const char *s,
-
                        int x, y, int color, int bg);</code></pre>
 <h2>Description</h2>
 <p>Like textout_ex(), but interprets the x coordinate as the centre rather than the left edge of the string. Example: </p>

@@ -25,7 +25,7 @@ ssize_t mq_timedreceive(mqd_t mqdes, char *msg_ptr,
 <p> <code>mq_timedreceive</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mq_receive</code>() removes the oldest message with the highest priority from the message queue referred to by the message queue descriptor <i>mqdes</i>, and places it in the buffer pointed to by <i>msg_ptr</i>. The <i>msg_len</i> argument specifies the size of the buffer pointed to by <i>msg_ptr</i>; this must be greater than or equal to the <i>mq_msgsize</i> attribute of the queue (see <code><a href="/docs/linux/man/3-mq_getattr/">mq_getattr</a></code>(3)). If <i>msg_prio</i> is not NULL, then the buffer to which it points is used to return the priority associated with the received message. </p>
 <p> If the queue is empty, then, by default, <code>mq_receive</code>() blocks until a message becomes available, or the call is interrupted by a signal handler. If the <code>O_NONBLOCK</code> flag is enabled for the message queue description, then the call instead fails immediately with the error <code>EAGAIN</code>. </p>
@@ -38,18 +38,18 @@ ssize_t mq_timedreceive(mqd_t mqdes, char *msg_ptr,
 <p> On success, <code>mq_receive</code>() and <code>mq_timedreceive</code>() return the number of bytes in the received message; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The queue was empty, and the <code>O_NONBLOCK</code> flag was set for the message queue description referred to by <i>mqdes</i>.</p>
-<dt><code>EBADF</code></p>
-<dd> The descriptor specified in <i>mqdes</i> was invalid or not opened for reading.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> The call would have blocked, and <i>abs_timeout</i> was invalid, either because <i>tv_sec</i> was less than zero, or because <i>tv_nsec</i> was less than zero or greater than 1000 million.</p>
-<dt><code>EMSGSIZE</code></p>
-<dd> <i>msg_len</i> was less than the <i>mq_msgsize</i> attribute of the message queue.</p>
-<dt><code>ETIMEDOUT</code></p>
-<dd> The call timed out before a message could be transferred.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The queue was empty, and the <code>O_NONBLOCK</code> flag was set for the message queue description referred to by <i>mqdes</i>.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The descriptor specified in <i>mqdes</i> was invalid or not opened for reading.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The call would have blocked, and <i>abs_timeout</i> was invalid, either because <i>tv_sec</i> was less than zero, or because <i>tv_nsec</i> was less than zero or greater than 1000 million.</dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd> <i>msg_len</i> was less than the <i>mq_msgsize</i> attribute of the message queue.</dd>
+<dt><code>ETIMEDOUT</code></dt>
+<dd> The call timed out before a message could be transferred.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

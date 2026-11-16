@@ -11,9 +11,7 @@ description: "ql/termstructures/yield/piecewisezerospreadedtermstructure.hpp –
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/yield/zeroyieldstructure.hpp&gt;
-
 #include &lt;ql/quote.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PiecewiseZeroSpreadedTermStructure</code><br />

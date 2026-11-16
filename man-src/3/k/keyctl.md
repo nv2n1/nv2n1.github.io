@@ -14,13 +14,13 @@ description: "keyctl_*() – Key management function wrappers"
 <p> The functions can be compiled in by including the keyutils header file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>#include &lt;keyutils.h&gt;</code>
-</dl>
+</dd></dl>
 and then telling the linker it should link in the library:
-<dl><dt><dd><code>-lkeyutils</code>
-</dl>
+<dl><dt></dt><dd><code>-lkeyutils</code>
+</dd></dl>
 </pre>
 <h2>KEYCTL FUNCTIONS</h2>
 <p> <code>keyctl_assume_authority</code>(3)<br />

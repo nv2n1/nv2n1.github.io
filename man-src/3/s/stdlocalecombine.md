@@ -11,9 +11,7 @@ std::locale::combine - std::locale::combine
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class Facet&gt;
-
     locale combine(const locale &amp;other) const;</code></pre> 
 Constructs a locale object which is a copy of *this except for the facet of type Facet, which is copied from other. 
 
@@ -28,10 +26,8 @@ std::runtime_error if other does not implement Facet
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     const double number = 1000.25;
     std::cout &lt;&lt; &quot;\&quot;C\&quot; locale: &quot; &lt;&lt; number &lt;&lt; '\n';

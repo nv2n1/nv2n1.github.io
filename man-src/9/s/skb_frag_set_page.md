@@ -15,15 +15,15 @@ skb_frag_set_page - sets the page contained in a paged fragment of an skb
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the buffer</dl>
+<dl><dd></dd><dd>the buffer</dd></dl>
  
 
  <i>f</i>
-<dl><dd>the fragment offset</dl>
+<dl><dd>the fragment offset</dd></dl>
  
 
  <i>page</i>
-<dl><dd>the page to set</dl>
+<dl><dd>the page to set</dd></dl>
 
 <h2>Description</h2>
 

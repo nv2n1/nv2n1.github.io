@@ -15,7 +15,7 @@ blk_rq_err_bytes - determine number of bytes till the next failure boundary
 <h2>Arguments</h2>
 
 <i>rq</i>
-<dl><dd><dd>request to examine</dl>
+<dl><dd></dd><dd>request to examine</dd></dl>
 
 <h2>Description</h2>
 

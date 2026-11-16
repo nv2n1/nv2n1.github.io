@@ -11,53 +11,22 @@ description: "sc::SCMatrixBlock –"
 <p> <code>SCMatrixBlock</code> is the base clase for all types of blocks that comprise matrices and vectors.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::SCMatrixDiagBlock</code>, <code>sc::SCMatrixDiagSubBlock</code>, <code>sc::SCMatrixLTriBlock</code>, <code>sc::SCMatrixLTriSubBlock</code>, <code>sc::SCMatrixRectBlock</code>, <code>sc::SCMatrixRectSubBlock</code>, <code>sc::SCVectorSimpleBlock</code>, and <code>sc::SCVectorSimpleSubBlock</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>SCMatrixBlock (StateIn &amp;s)
-
-
-
 void save_data_state (StateOut &amp;s)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual SCMatrixBlock * deepcopy () const
-
-
 Return of copy of this.
-
-
 virtual double * dat ()
-
-
 Return a pointer to the block's data and the number of elements in the block.
-
-
 virtual int ndat () const
-
-
-
 virtual void process (SCElementOp *)=0
-
-
-
 virtual void process (SCElementOp2 *, SCMatrixBlock *)=0
-
-
-
 virtual void process (SCElementOp3 *, SCMatrixBlock *, SCMatrixBlock *)=0
-
-
-
 Public Attributes
 int blocki
-
-
-
 int blockj</code></pre>
 <h2>Detailed Description</h2>
 <p><code>SCMatrixBlock</code> is the base clase for all types of blocks that comprise matrices and vectors.</p>

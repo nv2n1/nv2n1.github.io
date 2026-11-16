@@ -10,23 +10,14 @@ description: "std::swap_ranges – std::swap_ranges"
 <p>std::swap_ranges &#8211; std::swap_ranges</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt2 swap_ranges( ForwardIt1 first1, ForwardIt1 last1,                   (until C++20)
-
 ForwardIt2 first2 );
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;
-
 constexpr ForwardIt2 swap_ranges( ForwardIt1 first1, ForwardIt1 last1, (1)     (since C++20)
-
 ForwardIt2 first2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt2 swap_ranges( ExecutionPolicy&amp;&amp; policy,                          (2) (since C++17)
-
 ForwardIt1 first1, ForwardIt1 last1, ForwardIt2 first2 );</code></pre>
 <p>1) Exchanges elements between range [first1, last1) and another range starting at first2.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -60,15 +51,10 @@ The types of dereferenced ForwardIt1 and ForwardIt2 must meet the requirements o
 <p>Demonstrates swapping of subranges from different containers<br />
  // Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;list&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
     std::list&lt;int&gt; l = {-1, -2, -3, -4, -5};

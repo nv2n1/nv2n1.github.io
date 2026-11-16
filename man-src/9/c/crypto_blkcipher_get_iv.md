@@ -14,20 +14,20 @@ description: "crypto_blkcipher_get_iv – obtain IV from cipher"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>buffer filled with the IV</dl>
+<dd>buffer filled with the IV</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of the buffer dst</dl>
+<dd>length of the buffer dst</dd></dl>
 <h2>Description</h2>
 <p>The caller can obtain the IV set for the block cipher referenced by the cipher handle and store it into the user-provided buffer. If the buffer has an insufficient space, the IV is truncated to fit the buffer.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

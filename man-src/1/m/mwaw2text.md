@@ -13,13 +13,13 @@ description: "mwaw2text – convert Mac text document into plain text"
 <p> <code>mwaw2text</code> [<i>OPTION</i>] <i>&lt;Mac Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd> Display document metadata instead of the text</p>
-<dt><code>-h</code></p>
-<dd> Shows this help message</p>
-<dt><code>-o</code> file.txt</p>
-<dd> Define the output[default stdout]</p>
-<dt><code>-v</code>:</p>
-<dd> Output mwaw2text version </p>
+<dt><code>-i</code></dt>
+<dd> Display document metadata instead of the text</dd>
+<dt><code>-h</code></dt>
+<dd> Shows this help message</dd>
+<dt><code>-o</code> file.txt</dt>
+<dd> Define the output[default stdout]</dd>
+<dt><code>-v</code>:</dt>
+<dd> Output mwaw2text version </dd>
 </dl>
 <h2>Index</h2>

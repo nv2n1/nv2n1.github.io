@@ -15,12 +15,12 @@ description: "usb-creator-gtk – Ubuntu startup disk creation tool for Gtk+"
 <p><code>usb-creator-gtk</code> takes an Ubuntu CD image file as input and writes it out in a usable form to a removable disk.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i, &#8211;iso &lt;img&gt;</code></p>
-<dd>Provide a source image to pre- populate the UI.</p>
-<dt><code>-h,</code>&#8211;help</p>
-<dd>Print a summary of command line options and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print the current version and exit.</dl>
+<dt><code>-i, &#8211;iso &lt;img&gt;</code></dt>
+<dd>Provide a source image to pre- populate the UI.</dd>
+<dt><code>-h,</code>&#8211;help</dt>
+<dd>Print a summary of command line options and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the current version and exit.</dd></dl>
 <h2>Author</h2>
 <p><code>usb-creator-gtk</code> was written by Evan Dandrea &lt;evand [at] ubuntu.com&gt;. </p>
 <p> This manual page was written by Evan Dandrea &lt;evand [at] ubuntu.com&gt;, for the Ubuntu project (and may be used by others).<br />

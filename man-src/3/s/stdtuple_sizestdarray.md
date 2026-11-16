@@ -10,13 +10,9 @@ description: "std::tuple_size(std::array) – std::tuple_size(std::array)"
 <p>std::tuple_size(std::array) &#8211; std::tuple_size(std::array)</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;array&gt;
-
 template&lt; class T, size_t N &gt;
-
 class tuple_size&lt; array&lt;T, N&gt; &gt; :   (1) (since C++11)
-
 public integral_constant&lt;size_t, N&gt;
-
 { };</code></pre>
 <p>Provides access to the number of elements in an std::array as a compile-time constant expression.<br />
 Inherited from std::integral_constant </p>
@@ -37,19 +33,15 @@ type std::integral_constant&lt;std::size_t, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;array&gt;
 template &lt;class T&gt;
-
 void test(T t)
-
 {
     int a[std::tuple_size&lt;T&gt;::value]; // can be used at compile time
     std::cout &lt;&lt; std::tuple_size&lt;T&gt;::value &lt;&lt; '
 ';
 }
 int main()
-
 {
     std::array&lt;float, 3&gt; arr;
     test(arr);

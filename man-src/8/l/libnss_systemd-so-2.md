@@ -25,7 +25,7 @@ description: "nss-systemd, libnss_systemd.so.2 – UNIX user and group name reso
 -rw-------. 1 root root 123 May 10 foobar.user-privileged
 lrwxrwxrwx. 1 root root 19 May 10 4711.user -&gt; foobar.user
 lrwxrwxrwx. 1 root root 19 May 10 4711.user-privileged -&gt; foobar.user-privileged</pre>
-</dl>
+</dd></dl>
 <p> Similarly, group records following the format described in m[blue]<code>JSON Group Record</code>m[]<font SIZE="-2">[3]</font> may be defined, using the file suffixes .group and .group-privileged. </p>
 <p> The primary user/group record files (i.e. those with the .user and .group suffixes) should not contain the &quot;privileged&quot; section as described in the specifications. The privileged user/group record files (i.e. those with the .user-privileged and .group-privileged suffixes) should contain this section, exclusively. </p>
 <p> Note that static user/group records generally do not override conflicting records in /etc/passwd or /etc/group or other account databases. In fact, before dropping in these files a reasonable level of care should be taken to avoid user/group name and UID/GID conflicts.</p>
@@ -44,7 +44,7 @@ services: db files
 ethers: db files
 rpc: db files
 netgroup: nis</pre>
-</dl>
+</dd></dl>
 <h2>Example: Mappings Provided By Systemd-Machined.Service</h2>
 <p>The container &quot;rawhide&quot; is spawned using <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1): </p>
 <dl>
@@ -76,20 +76,21 @@ vu-rawhide-0 1628 ? login -- zbyszek
 vu-rawhide-1000 1630 ? /lib/systemd/systemd --user
 vu-rawhide-1000 1631 ? (sd-pam)
 vu-rawhide-1000 1637 pts/8 -zsh</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5), <code>nss-resolve</code>(8), <code><a href="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></code>(8), <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8), <code>systemd-userdbd.service</code>(8), <code>systemd-homed.service</code>(8), <code><a href="/docs/linux/man/8-systemd-machined-service/">systemd-machined.service</a></code>(8), <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>User/Group Record Lookup API via Varlink</p>
+<dt> 1.</dt>
+<dd>User/Group Record Lookup API via Varlink</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/USER_GROUP_API">https://systemd.io/USER_GROUP_API</a></dl>
-<dt> 2.</p>
-<dd>JSON User Records</p>
+<dd><a rel="nofollow" href="https://systemd.io/USER_GROUP_API">https://systemd.io/USER_GROUP_API</a></dd></dl>
+<dt> 2.</dt>
+<dd>JSON User Records</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/USER_RECORD">https://systemd.io/USER_RECORD</a></dl>
-<dt> 3.</p>
-<dd>JSON Group Record</p>
+<dd><a rel="nofollow" href="https://systemd.io/USER_RECORD">https://systemd.io/USER_RECORD</a></dd></dl>
+<dt> 3.</dt>
+<dd>JSON Group Record</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/GROUP_RECORD">https://systemd.io/GROUP_RECORD</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/GROUP_RECORD">https://systemd.io/GROUP_RECORD</a></dd></dl>
+</dl>

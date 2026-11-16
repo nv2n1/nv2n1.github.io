@@ -22,20 +22,18 @@ description: "megaraid_lsmplugin — LibstorageMgmt MegaRAID plugin"
     <code>megaraid://?storcli=&lt;path_of_storcli&gt;</code>
 </pre>
 <dl>
-<dt><code>URI parameters</code></p>
-<dd> These URI parameters are supported by this plugin: </p>
+<dt><code>URI parameters</code></dt>
+<dd> These URI parameters are supported by this plugin: </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>storcli</code></p>
+<dt><code>storcli</code></dt>
 <dd>
 <p> The &#8216;storcli&#8217; URI parameter is used to specified the path of storcli/perccli tool. By default, this plugin will try these paths: </p>
 <p> storcli rpm: </p>
 <p> <code>/opt/MegaRAID/storcli/storcli64</code>, <code>/opt/MegaRAID/storcli/storcli</code> </p>
 <p> perccli rpm: </p>
 <p> <code>/opt/MegaRAID/perccli/perccli64</code>, <code>/opt/MegaRAID/perccli/perccli</code> </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>ROOT PRIVILEGE</h2>

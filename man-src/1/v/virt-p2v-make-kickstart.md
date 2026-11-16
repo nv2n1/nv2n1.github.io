@@ -35,24 +35,24 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 </pre>
 <p> Before running this note that you should probably run <tt>&quot;livecd-creator&quot;</tt> in a disposable virtual machine for these reasons:</p>
 <dl>
-<dt>&bull;</p>
-<dd> You have to disable SELinux when running the tool.</p>
-<dt>&bull;</p>
-<dd> This tool has to be run as root, and has some nasty failure modes.</p>
-<dt>&bull;</p>
-<dd> You can only create the exact same Live <font SIZE="-1">CD</font> distro as the host distro. Cross-builds will fail in strange ways (eg. RHBZ#1092327).</dl>
+<dt>&bull;</dt>
+<dd> You have to disable SELinux when running the tool.</dd>
+<dt>&bull;</dt>
+<dd> This tool has to be run as root, and has some nasty failure modes.</dd>
+<dt>&bull;</dt>
+<dd> You can only create the exact same Live <font SIZE="-1">CD</font> distro as the host distro. Cross-builds will fail in strange ways (eg. RHBZ#1092327).</dd></dl>
 <h2>BUILDING A FEDORA SPIN USING KOJI</h2>
 <p> This requires <tt>&quot;spin-livecd&quot;</tt> permissions on Koji, which are not given out usually, even to Fedora packagers. However assuming you have been given these permissions (or have your own Koji instance, I guess), then you can do: </p>
 <pre>
  koji spin-livecd [--scratch] virt-p2v 1.XX.YY rawhide x86_64 p2v.ks
 </pre>
 <dl>
-<dt>&bull;</p>
-<dd> Add the <tt>&quot;--scratch&quot;</tt> option to do a scratch build (recommended for testing).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;1.XX.YY&quot;</tt> should match the libguestfs version</p>
-<dt>&bull;</p>
-<dd> Instead of <tt>&quot;rawhide&quot;</tt> you can use any Koji target.</dl>
+<dt>&bull;</dt>
+<dd> Add the <tt>&quot;--scratch&quot;</tt> option to do a scratch build (recommended for testing).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;1.XX.YY&quot;</tt> should match the libguestfs version</dd>
+<dt>&bull;</dt>
+<dd> Instead of <tt>&quot;rawhide&quot;</tt> you can use any Koji target.</dd></dl>
 <h2>BUILDING A BOOTABLE USB KEY</h2>
 <p> Use the <i><a href="/docs/linux/man/8-livecd-iso-to-disk/">livecd-iso-to-disk</a></i>(8) program to convert the <font SIZE="-1">ISO</font> created above to a <font SIZE="-1">USB</font> key: </p>
 <pre>
@@ -71,7 +71,6 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
  pxelinux.0
  pxelinux.cfg/
  vmlinuz0
- 
  tftpboot/pxelinux.cfg:
  default
 </pre>
@@ -89,14 +88,14 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 <p> Note that <tt>&quot;-hda&quot;</tt> is the (virtual) system that you want to convert (for test purposes). It could be any guest type supported by <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), including Windows or Red Hat Enterprise Linux.</p>
 <h3><font SIZE="-1">TESTING PXE SUPPORT USING QEMU</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> Unpack the tftpboot directory into <i>/tmp</i> (so it appears as <i>/tmp/tftpboot</i>).</p>
-<dt>&bull;</p>
-<dd> Copy <i>pxelinux.0</i> and <i>ldlinux.c32</i> from syslinux (usually from <i>/usr/share/syslinux</i>) into <i>/tmp/tftpboot</i>.</p>
-<dt>&bull;</p>
-<dd> Adjust the <tt>&quot;APPEND&quot;</tt> line in <i>/tmp/tftpboot/pxelinux.cfg/default</i> if required. See &#8220;<font SIZE="-1">KERNEL COMMAND LINE CONFIGURATION&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1).</p>
-<dt>&bull;</p>
-<dd> Run qemu like this so that it acts as a <font SIZE="-1">TFTP</font> and <font SIZE="-1">BOOTP</font> server, emulating a netboot: </p>
+<dt>&bull;</dt>
+<dd> Unpack the tftpboot directory into <i>/tmp</i> (so it appears as <i>/tmp/tftpboot</i>).</dd>
+<dt>&bull;</dt>
+<dd> Copy <i>pxelinux.0</i> and <i>ldlinux.c32</i> from syslinux (usually from <i>/usr/share/syslinux</i>) into <i>/tmp/tftpboot</i>.</dd>
+<dt>&bull;</dt>
+<dd> Adjust the <tt>&quot;APPEND&quot;</tt> line in <i>/tmp/tftpboot/pxelinux.cfg/default</i> if required. See &#8220;<font SIZE="-1">KERNEL COMMAND LINE CONFIGURATION&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1).</dd>
+<dt>&bull;</dt>
+<dd> Run qemu like this so that it acts as a <font SIZE="-1">TFTP</font> and <font SIZE="-1">BOOTP</font> server, emulating a netboot: </dd>
 <pre>
  qemu-kvm \
      -m 4096 -hda /tmp/guest.img \
@@ -139,44 +138,44 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 <p> For more information, see &#8220;<font SIZE="-1">SSH IDENTITIES&#8221;</font> in <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>&#8211;inject-ssh-identity</code> id_rsa</p>
-<dd> Add an <font SIZE="-1">SSH</font> identity (private key) file into the kickstart. See &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> above.</p>
-<dt><code>&#8211;install</code> pkg,pkg,&#8230;</p>
-<dd> Add extra packages to the kickstart <tt>%packages</tt> section. See &#8220;<font SIZE="-1">ADDING EXTRA PACKAGES&#8221;</font> above.</p>
-<dt><code>-o</code> <font SIZE="-1">OUTPUT</font></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>&#8211;inject-ssh-identity</code> id_rsa</dt>
+<dd> Add an <font SIZE="-1">SSH</font> identity (private key) file into the kickstart. See &#8220;<font SIZE="-1">ADDING AN SSH IDENTITY&#8221;</font> above.</dd>
+<dt><code>&#8211;install</code> pkg,pkg,&#8230;</dt>
+<dd> Add extra packages to the kickstart <tt>%packages</tt> section. See &#8220;<font SIZE="-1">ADDING EXTRA PACKAGES&#8221;</font> above.</dd>
+<dt><code>-o</code> <font SIZE="-1">OUTPUT</font></dt>
 <dd>
-<dt><code>&#8211;output</code> <font SIZE="-1">OUTPUT</font></p>
-<dd> Write kickstart to <tt>&quot;OUTPUT&quot;</tt>. If not specified, the default is <i>p2v.ks</i> in the current directory.</p>
-<dt><code>&#8211;proxy</code> <font SIZE="-1">URL</font></p>
-<dd> Tell the kickstart to use a proxy server or web cache for downloads.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;output</code> <font SIZE="-1">OUTPUT</font></dt>
+<dd> Write kickstart to <tt>&quot;OUTPUT&quot;</tt>. If not specified, the default is <i>p2v.ks</i> in the current directory.</dd>
+<dt><code>&#8211;proxy</code> <font SIZE="-1">URL</font></dt>
+<dd> Tell the kickstart to use a proxy server or web cache for downloads.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose output. Use this if you need to debug problems with the script or if you are filing a bug.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose output. Use this if you need to debug problems with the script or if you are filing a bug.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$libexecdir/virt-p2v</i></p>
-<dd> The <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) binary which is copied into the kickstart file. </p>
+<dt><i>$libexecdir/virt-p2v</i></dt>
+<dd> The <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) binary which is copied into the kickstart file. </dd>
 <p> The location of the binary can be changed by setting the <tt>&quot;VIRT_P2V_DATA_DIR&quot;</tt> environment variable.</p>
-<dt><i>$datadir/virt-p2v/issue</i></p>
+<dt><i>$datadir/virt-p2v/issue</i></dt>
 <dd>
-<dt><i>$datadir/virt-p2v/launch-virt-p2v.in</i></p>
+</dd><dt><i>$datadir/virt-p2v/launch-virt-p2v.in</i></dt>
 <dd>
-<dt><i>$datadir/virt-p2v/p2v.ks.in</i></p>
+</dd><dt><i>$datadir/virt-p2v/p2v.ks.in</i></dt>
 <dd>
-<dt><i>$datadir/virt-p2v/p2v.service</i></p>
-<dd> Various data files that are used to make the kickstart. </p>
+</dd><dt><i>$datadir/virt-p2v/p2v.service</i></dt>
+<dd> Various data files that are used to make the kickstart. </dd>
 <p> The location of these files can be changed by setting the <tt>&quot;VIRT_P2V_DATA_DIR&quot;</tt> environment variable.</dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>&quot;VIRT_P2V_DATA_DIR&quot;</p>
-<dd> The directory where virt-p2v-make-kickstart looks for data files and the virt-p2v binary (see &#8220;<font SIZE="-1">FILES&#8221;</font> above). If not set, a compiled-in location is used.</dl>
+<dt>&quot;VIRT_P2V_DATA_DIR&quot;</dt>
+<dd> The directory where virt-p2v-make-kickstart looks for data files and the virt-p2v binary (see &#8220;<font SIZE="-1">FILES&#8221;</font> above). If not set, a compiled-in location is used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1), <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1), <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), <i><a href="/docs/linux/man/8-livecd-creator/">livecd-creator</a></i>(8), <i><a href="/docs/linux/man/8-livecd-iso-to-disk/">livecd-iso-to-disk</a></i>(8), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
@@ -192,33 +191,33 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAN">ADDING EXTRA PACKAGES</a></p>
+<dt><a href="#lbAN">ADDING EXTRA PACKAGES</a></dt>
 <dd>
-<dt><a href="#lbAO">ADDING AN SSH IDENTITY</a></p>
+</dd><dt><a href="#lbAO">ADDING AN SSH IDENTITY</a></dt>
 <dd>
-<dt><a href="#lbAP">OPTIONS</a></p>
+</dd><dt><a href="#lbAP">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAQ">FILES</a></p>
+</dd><dt><a href="#lbAQ">FILES</a></dt>
 <dd>
-<dt><a href="#lbAR">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAR">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAS">SEE ALSO</a></p>
+</dd><dt><a href="#lbAS">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAT">AUTHORS</a></p>
+</dd><dt><a href="#lbAT">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAU">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAU">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAV">LICENSE</a></p>
+</dd><dt><a href="#lbAV">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAW">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAW">BUGS</a></dt>
+<dd></dd></dl>

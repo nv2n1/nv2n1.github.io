@@ -25,7 +25,7 @@ description: "QuantLib::ContinuousAveragingAsianOption – Continuous-averaging 
 <p>Continuous-averaging Asian option. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add running average</dl>
+<dd>add running average</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing <code>engine</code> is used. </p>

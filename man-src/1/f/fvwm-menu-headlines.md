@@ -16,22 +16,22 @@ description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 <p> It is possible to specify a customized menu item format, change a command (usually launching a browser) and add menu icons (there is a support for the wm-icons package).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> show the help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> show the version and exit</p>
-<dt><code>&#8211;info</code> [site]</p>
-<dd> if site name is given print the site specific info, otherwise print all site names</p>
-<dt><code>&#8211;site</code> site</p>
-<dd> defile a web site, headlines of which to show, this option also can be used together with &#8211;help to get new defaults. Default site: freshmeat.</p>
-<dt><code>&#8211;name</code> name</p>
-<dd> define menu name (default is &#8220;MenuHeadlinesFreshmeat&#8221;)</p>
-<dt><code>&#8211;title</code> title</p>
-<dd> define menu title (default is &#8220;Freshmeat Headlines&#8221;).</p>
-<dt><code>&#8211;item</code> label-format</p>
+<dt><code>&#8211;help</code></dt>
+<dd> show the help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the version and exit</dd>
+<dt><code>&#8211;info</code> [site]</dt>
+<dd> if site name is given print the site specific info, otherwise print all site names</dd>
+<dt><code>&#8211;site</code> site</dt>
+<dd> defile a web site, headlines of which to show, this option also can be used together with &#8211;help to get new defaults. Default site: freshmeat.</dd>
+<dt><code>&#8211;name</code> name</dt>
+<dd> define menu name (default is &#8220;MenuHeadlinesFreshmeat&#8221;)</dd>
+<dt><code>&#8211;title</code> title</dt>
+<dd> define menu title (default is &#8220;Freshmeat Headlines&#8221;).</dd>
+<dt><code>&#8211;item</code> label-format</dt>
 <dd>
-<dt><code>&#8211;exec</code> command-format</p>
-<dd> define format for menu item or command (what is shown and what is executed when the item is chosen). Default label is &#8216;%h	%[(%Y-%m-%d <tt>%H:</tt>%M)]&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </p>
+</dd><dt><code>&#8211;exec</code> command-format</dt>
+<dd> define format for menu item or command (what is shown and what is executed when the item is chosen). Default label is &#8216;%h	%[(%Y-%m-%d <tt>%H:</tt>%M)]&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </dd>
 <p> Format specifiers for a headline format: </p>
 <pre><code>
 % h - headline % u - url % d - date in the native format(that site backend supplied) % [strftime - argument - string] - date / time, see strftime(3)
@@ -49,29 +49,29 @@ description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 <pre>
   --exec &quot;iceweasel -remote 'openURL(%u, new-window)' || iceweasel '%u'&quot;
 </pre>
-<dt><code>&#8211;command</code> command-format</p>
-<dd> like <code>&#8211;exec</code> above, but enables to specify any fvwm command, for example, &#8220;Function FuncFvwmShowURL &#8216;%u&#8221;&#8217; not only Exec. </p>
+<dt><code>&#8211;command</code> command-format</dt>
+<dd> like <code>&#8211;exec</code> above, but enables to specify any fvwm command, for example, &#8220;Function FuncFvwmShowURL &#8216;%u&#8221;&#8217; not only Exec. </dd>
 <p> In fact, &#8211;exec=&#8220;mozilla &#8216;%u&#8221;&#8217; is equivalent to &#8211;command=&#8220;Exec mozilla &#8216;%u&#8221;&#8217;</p>
-<dt><code>&#8211;icon-title</code> icon</p>
+<dt><code>&#8211;icon-title</code> icon</dt>
 <dd>
-<dt><code>&#8211;icon-item</code> icon</p>
+</dd><dt><code>&#8211;icon-item</code> icon</dt>
 <dd>
-<dt><code>&#8211;icon-home</code> icon</p>
+</dd><dt><code>&#8211;icon-home</code> icon</dt>
 <dd>
-<dt><code>&#8211;icon-error</code> icon</p>
-<dd> define menu icon for title, regular item, frontpage item and error item respectively. Default is no menu icons (equivalent to an empty icon argument).</p>
-<dt><code>&#8211;wm-icons</code></p>
-<dd> define icon names suitable for use with wm-icons package. Currently this is equivalent to: &#8211;icon-title &#8221; &#8211;icon-item menu/information.xpm &#8211;icon-home menu/home.xpm &#8211;icon-error menu/choice-no.xpm.</p>
-<dt><code>&#8211;frontpage</code> [where]</p>
-<dd> add the site frontpage item to the menu. Optional value can be used to specify where this item will be placed in the menu &#8211; &#8216;top&#8217; or &#8216;t&#8217;, &#8216;bottom&#8217; or &#8216;b&#8217;.</p>
-<dt><code>&#8211;proxy</code> host[:port]</p>
-<dd> define a proxy to use. Example: &#8211;proxy proxy.inter.net:3128</p>
-<dt><code>&#8211;file</code> [file]</p>
-<dd> write the menu output to specified file. If no filename is given with this option (or empty filename), the default filename <font SIZE="-1">WORK_HOME/SITE</font>.menu is used. Without this option or with &#8216;-&#8216; filename, the menu output is written to standard output.</p>
-<dt><code>&#8211;fake</code> [file]</p>
-<dd> don&#8217;t connect to the host using <font SIZE="-1">HTTP</font> protocol, instead, read from <font SIZE="-1">WORK_HOME/SITE</font>.in file. The following reads input from freshmeat.in (downloaded <a rel="nofollow" href="http://freshmeat.net/backend/recentnews.txt)">http://freshmeat.net/backend/recentnews.txt)</a> and saves output to segfault.menu (both files are in <font SIZE="-1">WORK_HOME</font>): fvwm-menu-headlines &#8211;site freshmeat &#8211;fake &#8211;file</p>
-<dt><code>&#8211;timeout</code> seconds</p>
-<dd> limit a line reading from a socket to this timeout, the default timeout is 20 seconds.</dl>
+</dd><dt><code>&#8211;icon-error</code> icon</dt>
+<dd> define menu icon for title, regular item, frontpage item and error item respectively. Default is no menu icons (equivalent to an empty icon argument).</dd>
+<dt><code>&#8211;wm-icons</code></dt>
+<dd> define icon names suitable for use with wm-icons package. Currently this is equivalent to: &#8211;icon-title &#8221; &#8211;icon-item menu/information.xpm &#8211;icon-home menu/home.xpm &#8211;icon-error menu/choice-no.xpm.</dd>
+<dt><code>&#8211;frontpage</code> [where]</dt>
+<dd> add the site frontpage item to the menu. Optional value can be used to specify where this item will be placed in the menu &#8211; &#8216;top&#8217; or &#8216;t&#8217;, &#8216;bottom&#8217; or &#8216;b&#8217;.</dd>
+<dt><code>&#8211;proxy</code> host[:port]</dt>
+<dd> define a proxy to use. Example: &#8211;proxy proxy.inter.net:3128</dd>
+<dt><code>&#8211;file</code> [file]</dt>
+<dd> write the menu output to specified file. If no filename is given with this option (or empty filename), the default filename <font SIZE="-1">WORK_HOME/SITE</font>.menu is used. Without this option or with &#8216;-&#8216; filename, the menu output is written to standard output.</dd>
+<dt><code>&#8211;fake</code> [file]</dt>
+<dd> don&#8217;t connect to the host using <font SIZE="-1">HTTP</font> protocol, instead, read from <font SIZE="-1">WORK_HOME/SITE</font>.in file. The following reads input from freshmeat.in (downloaded <a rel="nofollow" href="http://freshmeat.net/backend/recentnews.txt)">http://freshmeat.net/backend/recentnews.txt)</a> and saves output to segfault.menu (both files are in <font SIZE="-1">WORK_HOME</font>): fvwm-menu-headlines &#8211;site freshmeat &#8211;fake &#8211;file</dd>
+<dt><code>&#8211;timeout</code> seconds</dt>
+<dd> limit a line reading from a socket to this timeout, the default timeout is 20 seconds.</dd></dl>
 <p> <font SIZE="-1">WORK_HOME</font> of this script is ~/.fvwm/.fvwm-menu-headlines. It is created if needed. </p>
 <p> Option parameters can be specified either using &#8216;=&#8217; or in the next argument. Short options are ok if not ambiguous: <tt>&quot;-h&quot;</tt>, <tt>&quot;-t&quot;</tt>; but be careful with short options, what is now unambiguous, can become ambiguous in the next versions.</p>
 <h2>USAGE</h2>

@@ -24,20 +24,20 @@ description: "xcb_xkb_indicator_state_notify_event_t –"
 } <code>xcb_xkb_indicator_state_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_XKB_INDICATOR_STATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>xkbType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>time</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>deviceID</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>state</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>stateChanged</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_XKB_INDICATOR_STATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>xkbType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>deviceID</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>state</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>stateChanged</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

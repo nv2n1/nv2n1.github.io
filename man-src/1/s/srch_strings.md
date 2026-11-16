@@ -15,22 +15,22 @@ srch_strings[options][files]
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Scan the entire file, not just the data section.</p>
-<dt><code>-f</code></p>
-<dd> Print the name of the file before each string.</p>
-<dt><code>-n</code> number, <code>-number</code></p>
-<dd> Locate and print any NUL-terminated sequence of at least number characters (default 4).</p>
-<dt><code>-t</code> {o,x,d}</p>
-<dd> Print the location of the string in base 8, 10 or 16.</p>
-<dt><code>-o</code></p>
-<dd> An alias for <code>&#8211;radix</code>=o.</p>
-<dt><code>-e</code> {s,S,b,l,B,L}</p>
-<dd> Select character size and endianness: s = 7-bit, S = 8-bit, {b,l} = 16-bit, {B,L} = 32-bit.</p>
-<dt><code>-h</code></p>
-<dd> Display command line help.</p>
-<dt><code>-v</code></p>
-<dd> Print the program&#8217;s version number.</dl>
+<dt><code>-a</code></dt>
+<dd> Scan the entire file, not just the data section.</dd>
+<dt><code>-f</code></dt>
+<dd> Print the name of the file before each string.</dd>
+<dt><code>-n</code> number, <code>-number</code></dt>
+<dd> Locate and print any NUL-terminated sequence of at least number characters (default 4).</dd>
+<dt><code>-t</code> {o,x,d}</dt>
+<dd> Print the location of the string in base 8, 10 or 16.</dd>
+<dt><code>-o</code></dt>
+<dd> An alias for <code>&#8211;radix</code>=o.</dd>
+<dt><code>-e</code> {s,S,b,l,B,L}</dt>
+<dd> Select character size and endianness: s = 7-bit, S = 8-bit, {b,l} = 16-bit, {B,L} = 32-bit.</dd>
+<dt><code>-h</code></dt>
+<dd> Display command line help.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the program&#8217;s version number.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1)</p>
 <h2>AUTHOR</h2>

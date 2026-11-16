@@ -17,7 +17,7 @@ description: "gethostid, sethostid – get or set the unique identifier of the c
 <p> <code>gethostid</code>():</p>
 <dl>
 <dt>
-<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dt><dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <p> <code>sethostid</code>(): </p>
 <pre><code>
 Since glibc 2.21 : _DEFAULT_SOURCE
@@ -37,10 +37,10 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 <h2>ERRORS</h2>
 <p> <code>sethostid</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The caller did not have permission to write to the file used to store the host ID.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process&#8217;s effective user or group ID is not the same as its corresponding real ID.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The caller did not have permission to write to the file used to store the host ID.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process&#8217;s effective user or group ID is not the same as its corresponding real ID.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

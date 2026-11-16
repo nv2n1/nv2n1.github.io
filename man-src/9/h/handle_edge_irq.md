@@ -14,14 +14,14 @@ description: "handle_edge_irq – edge type IRQ handler"
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>the interrupt description structure for this irq</dl>
+</dd><dd>the interrupt description structure for this irq</dd></dl>
 <h2>Description</h2>
 <p>Interrupt occures on the falling and/or rising edge of a hardware signal. The occurrence is latched into the irq controller hardware and must be acked in order to be reenabled. After the ack another interrupt can happen on the same source even before the first one is handled by the associated event handler. If this happens it might be necessary to disable (mask) the interrupt depending on the controller hardware. This requires to reenable the interrupt inside of the loop which handles the interrupts which have arrived while the handler was running. If all pending interrupts are handled, the loop is left.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

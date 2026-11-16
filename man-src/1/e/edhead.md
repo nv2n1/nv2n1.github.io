@@ -15,12 +15,12 @@ description: "edhead – Edit header of FITS or IRAF image file"
 <p> Edit the header of the specified image file using the editor defined by the EDITOR environment variable. <i>edhead</i> takes care of trailing spaces so they can be ignored while using the editor.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-e &lt;editor path&gt;</code></p>
-<dd> Set editor, overiding environment EDITOR</p>
-<dt><code>-n</code></p>
-<dd> Write a new file with .e before the file type extension. The default is to overwrite the input file</p>
-<dt><code>-v</code></p>
-<dd> List processing steps</dl>
+<dt><code>-e &lt;editor path&gt;</code></dt>
+<dd> Set editor, overiding environment EDITOR</dd>
+<dt><code>-n</code></dt>
+<dd> Write a new file with .e before the file type extension. The default is to overwrite the input file</dd>
+<dt><code>-v</code></dt>
+<dd> List processing steps</dd></dl>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
 <h2>Index</h2>

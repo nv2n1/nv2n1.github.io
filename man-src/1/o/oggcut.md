@@ -20,14 +20,14 @@ description: "oggCut – extracts parts of an ogg file (.ogv, .ogg and .oga)"
 <p> There is another tool called oggCut out in the internet with a different synopis. This one has not been written by the author of this tool you are actually using. </p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-s</p>
-<dd>Cut start position in ms. If the input file is a video file, the cut area starts with the next keyframe found. Default: 0 </p>
+<dt>-s</dt>
+<dd>Cut start position in ms. If the input file is a video file, the cut area starts with the next keyframe found. Default: 0 </dd>
 <p> <i>Example: -s 5000 </i> </p>
-<dt>-l</p>
-<dd>Length of the cut area in ms. If -e is also given, the length is ignored. </p>
+<dt>-l</dt>
+<dd>Length of the cut area in ms. If -e is also given, the length is ignored. </dd>
 <p> <i>Example: -l 10000</i> </p>
-<dt>-e</p>
-<dd>Cut end position in ms. If -l is also used, the end position is prefered. If the end position is set to -1, the end of the stream is assumed. </p>
+<dt>-e</dt>
+<dd>Cut end position in ms. If -l is also used, the end position is prefered. If the end position is set to -1, the end of the stream is assumed. </dd>
 <p> Default: -1 </p>
 <p> <i>Example: -e 20000</i> </p>
 </dl>

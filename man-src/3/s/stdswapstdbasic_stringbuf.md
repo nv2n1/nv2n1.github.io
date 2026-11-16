@@ -11,9 +11,7 @@ std::swap(std::basic_stringbuf) - std::swap(std::basic_stringbuf)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc&gt;
-
 void swap(std::basic_stringbuf&lt;CharT, Traits, Alloc&gt; &amp;lhs, (since C++ 11)
-
                                                                std::basic_stringbuf&lt;CharT, Traits, Alloc&gt; &amp;rhs);</code></pre> 
 Overloads the std::swap algorithm for std::basic_stringbuf. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

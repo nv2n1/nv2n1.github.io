@@ -12,13 +12,12 @@ rdma_ack_cm_event - Free a communication event.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_ack_cm_event
-
     (struct rdma_cm_event *event);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>event
-<dd>Event to be released.</dl>
+</dt><dd>Event to be released.</dd></dl>
 
 <h2>Description</h2>
 

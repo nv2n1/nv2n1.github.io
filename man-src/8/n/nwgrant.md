@@ -15,31 +15,31 @@ description: "nwgrant – Add Trustee Rights to a directory"
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd><code>-h</code> is used to print out a short help text.</dl>
+<dd><code>-h</code> is used to print out a short help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
-<dd><code>server</code> is the name of the server you want to use.</dl>
+<dd><code>server</code> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user</i></p>
 <dl>
-<dd><code>user</code> is the user name to use for login.</dl>
+<dd><code>user</code> is the user name to use for login.</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
-<dd><code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwgrant prompts for a password.</dl>
+<dd><code>password</code> is the password to use for login. If neither <code>-n</code> nor <code>-P</code> are given, and the user has no open connection to the server, nwgrant prompts for a password.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
-<dd><code>-n</code> should be given if no password is required for the login.</dl>
+<dd><code>-n</code> should be given if no password is required for the login.</dd></dl>
 <p> <code>-C</code></p>
 <dl>
-<dd>By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dl>
+<dd>By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <p> <code>-o</code> <i>object name</i></p>
 <dl>
-<dd>The name of the object to be added as trustee.</dl>
+<dd>The name of the object to be added as trustee.</dd></dl>
 <p> <code>-t</code> <i>object type</i></p>
 <dl>
-<dd>The type of the object. <i>Object type</i> must be specified as a decimal value. Common values are 1 for user objects, 2 for group objects and 3 for print queues. Other values are allowed, but are usually used for specialized applications. If you do not specify <i>object type</i>, <i>object name</i> is taken as NDS name.</dl>
+<dd>The type of the object. <i>Object type</i> must be specified as a decimal value. Common values are 1 for user objects, 2 for group objects and 3 for print queues. Other values are allowed, but are usually used for specialized applications. If you do not specify <i>object type</i>, <i>object name</i> is taken as NDS name.</dd></dl>
 <p> <code>-r</code> <i>rights</i></p>
 <dl>
-<dd>You must tell <code>nwgrant</code> which rights it should grant to the bindery object. The new rights for the object is specified by <i>rights,</i> which can be either a hexadecimal number representing the sum of all the individual rights to be granted or a string containing characters representing each right. If rights are represented in string format then the string must be bounded with square brackets. Characters within the brackets may be in any order and in either case. Spaces are allowed between the brackets &#8211; in which case the entire string should be quoted. Hexadecimal and character values for the rights are shown in this table: </p>
+<dd>You must tell <code>nwgrant</code> which rights it should grant to the bindery object. The new rights for the object is specified by <i>rights,</i> which can be either a hexadecimal number representing the sum of all the individual rights to be granted or a string containing characters representing each right. If rights are represented in string format then the string must be bounded with square brackets. Characters within the brackets may be in any order and in either case. Spaces are allowed between the brackets &#8211; in which case the entire string should be quoted. Hexadecimal and character values for the rights are shown in this table: </dd>
 <p>&nbsp;<wbr>00&nbsp;<wbr>=&nbsp;<wbr>no access<br />
 &nbsp;<wbr>01&nbsp;<wbr>=&nbsp;<wbr>read access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>R<br />
 &nbsp;<wbr>02&nbsp;<wbr>=&nbsp;<wbr>write access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>W<br />
@@ -52,7 +52,7 @@ description: "nwgrant – Add Trustee Rights to a directory"
 <p> for a possible total of &quot;1fb&quot; or &quot;[SRWCEMFA]&quot; for all rights.</dl>
 <p> <code>file/directory</code></p>
 <dl>
-<dd>You must specify the directory to which to add the object as trustee. This has to be done in fully qualified NetWare notation. </p>
+<dd>You must specify the directory to which to add the object as trustee. This has to be done in fully qualified NetWare notation. </dd>
 <p> Example: </p>
 <p> nwgrant -S NWSERVER -o linus -t 1 -r fb &#8216;data:home\linus&#8217; </p>
 <p> With this example, user linus is given all rights except supervisory to his home directory on the data volume. This example assumes the existence of the file $HOME/.nwclient. </p>

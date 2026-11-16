@@ -10,20 +10,20 @@ description: "odf2xhtml – Convert ODF to HTML"
 <p>odf2xhtml &#8211; Convert ODF to HTML</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>odf2xhtml</code> [-e] <i>path</i></dl>
+<dt> <code>odf2xhtml</code> [-e] <i>path</i></dt></dl>
 <h2>Description</h2>
 <p> <code>odf2xhtml</code></p>
-<dd>is a program that will create a webpage (.html) from the input file and will write the webpage to stdout. </p>
+<dd>is a program that will create a webpage (.html) from the input file and will write the webpage to stdout. </dd>
 <p> &quot;Path&quot; is assumed to be an OpenDocument file of text, spreadsheet or presentation type.</p>
 <h2>Options</h2>
 <p> -p, &#8211;plain</p>
 <dl>
 <dt>
-<dd> The -p flag will generate HTML without CSS.</dl>
+</dt><dd> The -p flag will generate HTML without CSS.</dd></dl>
 <h2>Example</h2>
 <dl>
 <dt>
-<dd> <font SIZE="-1"> </font></p>
+</dt><dd> <font SIZE="-1"> </font></dd>
 <pre>
 odf2xhtml odf-file
 </pre>
@@ -35,5 +35,5 @@ odf2xhtml odf-file
 <p> <code>S&oslash;ren Roug</code></p>
 <dl>
 <dt>
-<dd> Original author</dl>
+</dt><dd> Original author</dd></dl>
 <h2>Index</h2>

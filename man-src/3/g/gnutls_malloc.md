@@ -14,8 +14,8 @@ description: "gnutls_malloc – Allocates and returns data"
 <p> <code>void * gnutls_malloc(size_t </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>size_t s</p>
-<dd></dl>
+<dt>size_t s</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will allocate &#8216;s&#8217; bytes data, and return a pointer to memory. This function is supposed to be used by callbacks. </p>
 <p> The allocation function used is the one set by <code>gnutls_global_set_mem_functions()</code>.</p>
@@ -28,6 +28,6 @@ description: "gnutls_malloc – Allocates and returns data"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

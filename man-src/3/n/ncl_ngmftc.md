@@ -21,7 +21,7 @@ CALL NGMFTC(WKID)
 <h2>Description</h2>
 
 <dl><dt>WKID
-<dd>(an input variable of type INTEGER) that specifies the GKS workstation ID to be temporarily closed.</dl>
+</dt><dd>(an input variable of type INTEGER) that specifies the GKS workstation ID to be temporarily closed.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

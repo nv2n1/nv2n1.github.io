@@ -14,14 +14,14 @@ description: "fzdefaults.xml – Default options for FileZilla"
 <h2>Description</h2>
 <p>This configuration file can be used to specify some system-wide default options for FileZilla:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Location of user&#8217;s settings directory</p>
-<dt>&bull;</p>
-<dd>Predefined list of Sitemanager entries</p>
-<dt>&bull;</p>
-<dd>Kiosk mode to prevent FileZilla from saving any passwords</p>
-<dt>&bull;</p>
-<dd>Disabling of update check capablity</dl>
+<dt>&bull;</dt>
+<dd>Location of user&#8217;s settings directory</dd>
+<dt>&bull;</dt>
+<dd>Predefined list of Sitemanager entries</dd>
+<dt>&bull;</dt>
+<dd>Kiosk mode to prevent FileZilla from saving any passwords</dd>
+<dt>&bull;</dt>
+<dd>Disabling of update check capablity</dd></dl>
 <p> Please search for the file <code>fzdefaults.xml.example</code> for further information. It is often found in the /usr/share/filezilla/docs directory.</p>
 <h2>Support</h2>
 <p>Please visit <a rel="nofollow" href="https://filezilla-project.org/">https://filezilla-project.org/</a> for further information. Report bugs only if you are using the latest version available from the FileZilla website.</p>

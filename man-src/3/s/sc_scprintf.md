@@ -11,9 +11,7 @@ description: "sc::scprintf –"
 <p> This class allows printf like output to put sent to an ostream.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;formio.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>scprintf</code> (const char *,&#8230;)</p>
 <h3>Friends</h3>

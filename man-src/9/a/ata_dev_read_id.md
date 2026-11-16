@@ -14,16 +14,16 @@ description: "ata_dev_read_id – Read ID data from the specified device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>target device</dl>
+</dd><dd>target device</dd></dl>
 <p> <i>p_class</i></p>
 <dl>
-<dd>pointer to class of the target device (may be changed)</dl>
+<dd>pointer to class of the target device (may be changed)</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>ATA_READID_* flags</dl>
+<dd>ATA_READID_* flags</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>buffer to read IDENTIFY data into</dl>
+<dd>buffer to read IDENTIFY data into</dd></dl>
 <h2>Description</h2>
 <p>Read ID data from the specified device. ATA_CMD_ID_ATA is performed on ATA devices and ATA_CMD_ID_ATAPI on ATAPI devices. This function also issues ATA_CMD_INIT_DEV_PARAMS for pre-ATA4 drives. </p>
 <p> FIXME: ATA_CMD_ID_ATA is optional for early drives and right now we abort if we hit that case. </p>
@@ -33,5 +33,5 @@ description: "ata_dev_read_id – Read ID data from the specified device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

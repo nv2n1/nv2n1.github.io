@@ -42,14 +42,14 @@ description: "log4cpp::IdsaAppender –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> The name of the <code>Appender</code><br />
- <i>idsaName</i> The service parameter of idsa</dl>
+ <i>idsaName</i> The service parameter of idsa</dd></dl>
 <h3>virtual log4cpp::IdsaAppender::~IdsaAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
 <h3>virtual void log4cpp::IdsaAppender::_append (const <code>LoggingEvent</code> &amp;event) [protected], [virtual]</h3>
 <p>Sends a <code>LoggingEvent</code> to idsa. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> the <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>virtual void log4cpp::IdsaAppender::close () [virtual]</h3>
 <p>Calls idsa_close() </p>
@@ -63,13 +63,13 @@ description: "log4cpp::IdsaAppender –"
 <p>The <code>IdsaAppender</code> does its own <code>Layout</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false</dl>
+<dd>false</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>virtual void log4cpp::IdsaAppender::setLayout (<code>Layout</code> *layout) [virtual]</h3>
 <p>Set the <code>Layout</code> for this appender. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>layout</i> The layout to use.</dl>
+<dd><i>layout</i> The layout to use.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h2>Member Data Documentation</h2>
 <h3>IDSA_CONNECTION* log4cpp::IdsaAppender::_idsaConnection [protected]</h3>

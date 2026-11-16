@@ -26,8 +26,8 @@ char *bindtextdomain(const char *domainname, const char *dirname);
 <h2>ERRORS</h2>
 <p> The following error can occur, among others:</p>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Not enough memory available.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Not enough memory available.</dd></dl>
 <h2>BUGS</h2>
 <p> The return type ought to be <code>const char *</code>, but is <code>char *</code> to avoid warnings in C code predating ANSI C.</p>
 <h2>SEE ALSO</h2>

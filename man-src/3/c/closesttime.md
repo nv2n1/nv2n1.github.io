@@ -45,7 +45,7 @@ description: "QuantLib::TimeGrid – time grid class"
 <p>time grid class </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>what was the rationale for limiting the grid to positive times? Investigate and see whether we can use it for negative ones as well.</dl>
+<dd>what was the rationale for limiting the grid to positive times? Investigate and see whether we can use it for negative ones as well.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>

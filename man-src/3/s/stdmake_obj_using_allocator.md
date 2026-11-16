@@ -16,7 +16,6 @@ T make_obj_using_allocator( const Alloc&amp; alloc, Args&amp;&amp;... args )
 Creates an object of the given type T by means of uses-allocator_construction 
 Equivalent to <pre><code>return std::make_from_tuple&lt;T&gt;(
     std::uses_allocator_construction_args&lt;T&gt;(alloc, std::forward&lt;Args&gt;(args)...)
-
 );
 </code></pre>
 

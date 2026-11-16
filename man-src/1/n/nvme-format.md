@@ -41,52 +41,50 @@ nvme format&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Send the format command for the specified nsid. This can be used to override the default value for either character device (0xffffffff) or the block device (result from NVME_IOCTL_ID).</dl>
+</dt><dd> Send the format command for the specified nsid. This can be used to override the default value for either character device (0xffffffff) or the block device (result from NVME_IOCTL_ID).</dd></dl>
  
 
  -l &lt;lbaf&gt;, --lbaf=&lt;lbaf&gt;
 <dl>
 <dt>
-<dd> LBA Format: This field specifies the LBA format to apply to the NVM media. This corresponds to the LBA formats indicated in the Identify Namespace command. Defaults to 0.</dl>
+</dt><dd> LBA Format: This field specifies the LBA format to apply to the NVM media. This corresponds to the LBA formats indicated in the Identify Namespace command. Defaults to 0.</dd></dl>
  
 
  -s &lt;ses&gt;, --ses=&lt;ses&gt;
 <dl>
 <dt>
-<dd> Secure Erase Settings: This field specifies whether a secure erase should be performed as part of the format and the type of the secure erase operation. The erase applies to all user data, regardless of location (e.g., within an exposed LBA, within a cache, within deallocated LBAs, etc). Defaults to 0. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
+</dt><dd> Secure Erase Settings: This field specifies whether a secure erase should be performed as part of the format and the type of the secure erase operation. The erase applies to all user data, regardless of location (e.g., within an exposed LBA, within a cache, within deallocated LBAs, etc). Defaults to 0. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> No secure erase operation requested 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> User Data Erase: All user data shall be erased, contents of the user data after the erase is indeterminate (e.g., the user data may be zero filled, one filled, etc). The controller may perform a cryptographic erase when a User Data Erase is requested if all user data is encrypted. 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> Cryptographic Erase: All user data shall be erased cryptographically. This is accomplished by deleting the encryption key. 
 </td></tr> <tr VALIGN=top><td> 3-7 </td><td> Reserved 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -p &lt;pil&gt;, --pil=&lt;pil&gt;
 <dl>
 <dt>
-<dd> Protection Information Location: If set to '1' and protection information is enabled, then protection information is transferred as the first eight bytes of metadata. If cleared to '0' and protection information is enabled, then protection information is transferred as the last eight bytes of metadata. Defaults to 0.</dl>
+</dt><dd> Protection Information Location: If set to '1' and protection information is enabled, then protection information is transferred as the first eight bytes of metadata. If cleared to '0' and protection information is enabled, then protection information is transferred as the last eight bytes of metadata. Defaults to 0.</dd></dl>
  
 
  -i &lt;pi&gt;, --pi=&lt;pi&gt;
 <dl>
 <dt>
-<dd> Protection Information: This field specifies whether end-to-end data protection is enabled and the type of protection information. Defaults to 0. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
+</dt><dd> Protection Information: This field specifies whether end-to-end data protection is enabled and the type of protection information. Defaults to 0. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> Protection information is not enabled 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> Protection information is enabled, Type 1 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> Protection information is enabled, Type 2 
 </td></tr> <tr VALIGN=top><td> 3 </td><td> Protection information is enabled, Type 3 
 </td></tr> <tr VALIGN=top><td> 4-7 </td><td> Reserved 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -m &lt;ms&gt;, --ms=&lt;ms&gt;
 <dl>
 <dt>
-<dd> Metadata Settings: This field is set to '1' if the metadata is transferred as part of an extended data LBA. This field is cleared to '0' if the metadata is transferred as part of a separate buffer. The metadata may include protection information, based on the Protection Information (PI) field. Defaults to 0.</dl>
+</dt><dd> Metadata Settings: This field is set to '1' if the metadata is transferred as part of an extended data LBA. This field is cleared to '0' if the metadata is transferred as part of a separate buffer. The metadata may include protection information, based on the Protection Information (PI) field. Defaults to 0.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -94,25 +92,23 @@ nvme format&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
 
 <dl>
 <dt>
-<dd> &bull; Format the device using all defaults: 
-
-<dl>
+</dt><dd> &bull; Format the device using all defaults: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme format /dev/nvme0n1
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; Format namespace 1 with user data secure erase settings and protection information: 
-
-<dl>
+</dt><dd> &bull; Format namespace 1 with user data secure erase settings and protection information: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme format /dev/nvme0 --namespace-id=1 --ses=1 --pi=1
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

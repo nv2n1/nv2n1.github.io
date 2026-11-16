@@ -19,21 +19,21 @@ description: "struct_esw1 – Format 1 Extended Status Word (ESW)"
 <h2>Members</h2>
 <p>zero0</p>
 <dl>
-<dd>reserved zeros</dl>
+<dd>reserved zeros</dd></dl>
 <p> lpum</p>
 <dl>
-<dd>last path used mask</dl>
+<dd>last path used mask</dd></dl>
 <p> zero16</p>
 <dl>
-<dd>reserved zeros</dl>
+<dd>reserved zeros</dd></dl>
 <p> erw</p>
 <dl>
-<dd>extended report word</dl>
+<dd>extended report word</dd></dl>
 <p> zeros[3]</p>
 <dl>
-<dd>three fullwords of zeros</dl>
+<dd>three fullwords of zeros</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -37,12 +37,10 @@ Converts a numeric value to std::wstring.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
 {
     double f = 23.43;
-
     std::wstring f_str = std::to_wstring(f);
     std::wcout &lt;&lt; f_str;
 }</code></pre>

@@ -16,20 +16,20 @@ description: "sg_rtpg – send SCSI REPORT TARGET PORT GROUPS command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;decode</code></p>
-<dd>decodes the status code and asymmetric access state from each target port group descriptor returned. The default action is not to decode these values.</p>
-<dt><code>-e</code>, <code>&#8211;extended</code></p>
-<dd>use extended header format for parameter data.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output response in hex (rather than partially or fully decode it).</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>output response in binary to stdout.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-d</code>, <code>&#8211;decode</code></dt>
+<dd>decodes the status code and asymmetric access state from each target port group descriptor returned. The default action is not to decode these values.</dd>
+<dt><code>-e</code>, <code>&#8211;extended</code></dt>
+<dd>use extended header format for parameter data.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output response in hex (rather than partially or fully decode it).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output response in binary to stdout.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>The Report Target Port Groups command should be supported whenever the TPGS bits in a standard INQUIRY response are greater than zero. [View with sg_inq utility.]</p>
 <h2>Exit Status</h2>

@@ -36,14 +36,14 @@ information about a 32bit DLL or PE format image file.When used in this way wine
 <h2>MODES</h2>
 <p> <code>winedump</code> can be used in several different modes. The first argument to the program determines the mode <code>winedump</code> will run in.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Help mode. Basic usage help is printed.</p>
-<dt><code>dump</code></p>
-<dd> To dump the contents of a file.</p>
-<dt><code>spec</code></p>
-<dd> For generating .spec files and stub DLLs.</p>
-<dt><code>sym</code></p>
-<dd> Symbol mode. Used to demangle C++ symbols.</dl>
+<dt><code>-h</code></dt>
+<dd> Help mode. Basic usage help is printed.</dd>
+<dt><code>dump</code></dt>
+<dd> To dump the contents of a file.</dd>
+<dt><code>spec</code></dt>
+<dd> For generating .spec files and stub DLLs.</dd>
+<dt><code>sym</code></dt>
+<dd> Symbol mode. Used to demangle C++ symbols.</dd></dl>
 <h2>OPTIONS</h2>
 <p> Mode options depend on the mode given as the first argument. </p>
 <p> <code>Help mode:</code> </p>
@@ -51,7 +51,6 @@ information about a 32bit DLL or PE format image file.When used in this way wine
 No options are used.
 The program prints the help info and then exits.
 Dump mode:
-
 fileDumps the contents of file. Various file formats are supported
 (PE, NE, LE, Minidumps, .lnk).
 -CTurns on symbol demangling.
@@ -71,9 +70,7 @@ wish to pipe the output through more/less or into a file, since
 a lot of output will be produced.
 -GDumps contents of debug section if any (for now, only stabs
 information is supported).
-
 Spec mode:
-
 dllUse dll for input file and generate implementation code.
 -I dirLook for prototypes in dir (implies -c). In the case of
 Windows DLLs, this could be either the standard include
@@ -150,34 +147,31 @@ the name of each function as it is processed, and a status
 indication of whether it was processed OK.  With -v given, a
 lot of information is dumped while winedump works: this is
 intended to help debug any problems.
-
 Sym mode:
-
 symDemangles C++ symbol sym and then exits.
-
 </code></pre>
 <h2>FILES</h2>
 <p> <i>function_grep.pl</i></p>
 <dl>
 <dt>
-<dd> Perl script used to retrieve a function prototype.</dl>
+</dt><dd> Perl script used to retrieve a function prototype.</dd></dl>
 <p> Files output in <code>spec</code> mode for <i>foo.dll</i>: </p>
 <pre>
 <i>foo.spec</i>
-<dl><dt><dd>This is the <i>.spec</i> file.
-</dl>
+<dl><dt></dt><dd>This is the <i>.spec</i> file.
+</dd></dl>
 <i>foo_dll.h</i>
 <i>foo_main.c</i>
-<dl><dt><dd>These are the source code files containing the minimum set
+<dl><dt></dt><dd>These are the source code files containing the minimum set
 of code to build a stub DLL. The C file contains one
 function, <i>FOO_Init</i>, which does nothing (but must be
 present).
-</dl>
+</dd></dl>
 <i>Makefile.in</i>
-<dl><dt><dd>This is a template for <code>configure</code> to produce a makefile. It
+<dl><dt></dt><dd>This is a template for <code>configure</code> to produce a makefile. It
 is designed for a DLL that will be inserted into the Wine
 source tree.
-</dl>
+</dd></dl>
 </pre>
 <h2>BUGS</h2>
 <p> C++ name demangling is not fully in sync with the implementation in msvcrt. It might be useful to submit your C++ name to the testsuite for msvcrt. </p>

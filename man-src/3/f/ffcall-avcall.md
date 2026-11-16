@@ -20,19 +20,17 @@ description: "avcall – build a C argument list incrementally and call a C func
 <p> Function calling conventions differ considerably on different machines and <i>avcall</i> attempts to provide some degree of isolation from such architecture dependencies. </p>
 <p> The interface is like <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3) in reverse. All of the macros return 0 for success, &lt; 0 for failure (e.g., argument list overflow or type-not-supported).</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>(1)</p>
-<dd> <code>#include &lt;avcall.h&gt;</code> </p>
+<dt>(1)</dt>
+<dd> <code>#include &lt;avcall.h&gt;</code> </dd>
 <pre>
 and declare the argument list structure
 <code>av_alist </code><i>alist</i><code>;</code>
 </pre>
-<dt>(2)</p>
-<dd> Set any special flags. This is architecture and compiler dependent. Compiler options that affect passing conventions may need to be flagged by <code>#define</code>s before the <code>#include &lt;avcall.h&gt;</code> statement. However, the <i>configure</i> script should have determined which <code>#define</code>s are needed and put them at the top of <code>avcall.h</code>.</p>
-<dt>(3)</p>
-<dd> Initialize the alist with the function address and return value pointer (if any). There is a separate macro for each simple return type ([u]char, [u]short, [u]int, [u]long, [u]longlong, float, double, where `u&#8217; indicates `unsigned&#8217;). The macros for functions returning structures or pointers require an explicit type argument.</dl>
+<dt>(2)</dt>
+<dd> Set any special flags. This is architecture and compiler dependent. Compiler options that affect passing conventions may need to be flagged by <code>#define</code>s before the <code>#include &lt;avcall.h&gt;</code> statement. However, the <i>configure</i> script should have determined which <code>#define</code>s are needed and put them at the top of <code>avcall.h</code>.</dd>
+<dt>(3)</dt>
+<dd> Initialize the alist with the function address and return value pointer (if any). There is a separate macro for each simple return type ([u]char, [u]short, [u]int, [u]long, [u]longlong, float, double, where `u&#8217; indicates `unsigned&#8217;). The macros for functions returning structures or pointers require an explicit type argument.</dd></dl>
 <p> E.g., </p>
 <p> <code>av_start_int (</code><i>alist</i><code>, </code><i>&amp;func</i><code>, </code><i>&amp;int_return</i><code>);</code> </p>
 <p> <code>av_start_double (</code><i>alist</i><code>, </code><i>&amp;func</i><code>, </code><i>&amp;double_return</i><code>);</code> </p>
@@ -62,15 +60,15 @@ struct {
 </code></pre>
 <p> you can specify <i>splittable</i> as <code>av_word_splittable_3 (</code><i>type1</i><code>, </code><i>type2</i><code>, </code><i>type3</i><code>)</code> .</p>
 <dl>
-<dt>(4)</p>
-<dd> Push the arguments on to the list in order. Again there is a macro for each simple built-in type, and the macros for structure and pointer arguments require an extra type argument:</dl>
+<dt>(4)</dt>
+<dd> Push the arguments on to the list in order. Again there is a macro for each simple built-in type, and the macros for structure and pointer arguments require an extra type argument:</dd></dl>
 <p> <code>av_int (</code><i>alist</i><code>, </code><i>int_value</i><code>);</code> </p>
 <p> <code>av_double (</code><i>alist</i><code>, </code><i>double_value</i><code>);</code> </p>
 <p> <code>av_struct (</code><i>alist</i><code>, </code><i>struct_or_union_type</i><code>, </code><i>struct_value</i><code>);</code> </p>
 <p> <code>av_ptr (</code><i>alist</i><code>, </code><i>pointer_type</i><code>, </code><i>pointer_value</i><code>);</code></p>
 <dl>
-<dt>(5)</p>
-<dd> Call the function, set the return value, and tidy up:</dl>
+<dt>(5)</dt>
+<dd> Call the function, set the return value, and tidy up:</dd></dl>
 <p> <code>av_call (</code><i>alist</i><code>);</code></dl>
 <h2>NOTES</h2>
 <p> (1) Functions whose first declaration is in Kernighan &amp; Ritchie style (i.e., without a typed argument list) MUST use default K&amp;R C expression promotions (char and short to int, float to double) whether they are compiled by a K&amp;R or an ANSI compiler, because the true argument types may not be known at the call point. Such functions typically back-convert their arguments to the declared types on function entry. (In fact, the only way to pass a true char, short or float in K&amp;R C is by an explicit cast: <code>func((char)c,(float)f)</code> ). Similarly, some K&amp;R compilers (such as Sun cc on the sparc) actually return a float as a double. </p>
@@ -97,3 +95,4 @@ struct {
 <p> Some initial ideas were stolen from the C interface to the Zelk extensions to Oliver Laumann&#8217;s Elk scheme interpreter by J.P.Lewis, NEC C&amp;C Research, &lt;zilla [at] ccrl.nj.nec.com&gt; (for Sun4 &amp; SGI), and Roy Featherstone&#8217;s &lt;roy [at] robots.oxford.ac.uk&gt; personal C interface library for Sun[34] &amp; SGI. I also looked at the machine-dependent parts of the GCC and GDB distributions, and put the gcc asm() extensions to good use. Thanks guys! </p>
 <p> This work was partly supported by EC-ESPRIT Basic Research Action SECOND. </p>
 <h2>Index</h2>
+</p>

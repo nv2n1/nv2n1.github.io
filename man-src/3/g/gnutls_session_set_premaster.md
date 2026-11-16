@@ -14,24 +14,24 @@ description: "gnutls_session_set_premaster – API function"
 <p> <code>int gnutls_session_set_premaster(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>entity</i><code>, gnutls_protocol_t </code><i>version</i><code>, gnutls_kx_algorithm_t </code><i>kx</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>, gnutls_mac_algorithm_t </code><i>mac</i><code>, gnutls_compression_method_t </code><i>comp</i><code>, const gnutls_datum_t * </code><i>master</i><code>, const gnutls_datum_t * </code><i>session_id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>unsigned int entity</p>
-<dd> GNUTLS_SERVER or GNUTLS_CLIENT</p>
-<dt>gnutls_protocol_t version</p>
-<dd> the TLS protocol version</p>
-<dt>gnutls_kx_algorithm_t kx</p>
-<dd> the key exchange method</p>
-<dt>gnutls_cipher_algorithm_t cipher</p>
-<dd> the cipher</p>
-<dt>gnutls_mac_algorithm_t mac</p>
-<dd> the MAC algorithm</p>
-<dt>gnutls_compression_method_t comp</p>
-<dd> the compression method</p>
-<dt>const gnutls_datum_t * master</p>
-<dd> the master key to use</p>
-<dt>const gnutls_datum_t * session_id</p>
-<dd> the session identifier</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>unsigned int entity</dt>
+<dd> GNUTLS_SERVER or GNUTLS_CLIENT</dd>
+<dt>gnutls_protocol_t version</dt>
+<dd> the TLS protocol version</dd>
+<dt>gnutls_kx_algorithm_t kx</dt>
+<dd> the key exchange method</dd>
+<dt>gnutls_cipher_algorithm_t cipher</dt>
+<dd> the cipher</dd>
+<dt>gnutls_mac_algorithm_t mac</dt>
+<dd> the MAC algorithm</dd>
+<dt>gnutls_compression_method_t comp</dt>
+<dd> the compression method</dd>
+<dt>const gnutls_datum_t * master</dt>
+<dd> the master key to use</dd>
+<dt>const gnutls_datum_t * session_id</dt>
+<dd> the session identifier</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the premaster secret in a session. This is a function intended for exceptional uses. Do not use this function unless you are implementing a legacy protocol. Use <code>gnutls_session_set_data()</code> instead.</p>
 <h2>RETURNS</h2>
@@ -45,6 +45,6 @@ description: "gnutls_session_set_premaster – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

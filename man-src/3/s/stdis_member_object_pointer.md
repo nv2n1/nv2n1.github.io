@@ -10,10 +10,8 @@ description: "std::is_member_object_pointer – std::is_member_object_pointer"
 <p>std::is_member_object_pointer &#8211; std::is_member_object_pointer</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_member_object_pointer;</code></pre>
 <p>Checks whether T is a non-static member object. Provides the member constant value which is equal to true, if T is a non-static member object type. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -48,7 +46,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 &nbsp;Reason: simplify<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

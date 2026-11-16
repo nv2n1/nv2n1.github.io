@@ -35,34 +35,34 @@ description: "QwtIntervalData – Series of samples of a value and an interval."
 <p> The x coordinates of the rectangle are built from the intervals, the y coordinates from the values. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <h3>const <code>QwtDoubleInterval</code> &amp; QwtIntervalData::interval (size_t i) const [inline]</h3>
 <p>Interval of a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Sample index</dl>
+<dd><i>i</i> Sample index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Interval</dl>
+<dd>Interval</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>value()</code>, <code>size()</code></dl>
+<dd><code>value()</code>, <code>size()</code></dd></dl>
 <h3>void QwtIntervalData::setData (const QwtArray&lt; <code>QwtDoubleInterval</code> &gt; &amp; intervals, const QwtArray&lt; double &gt; &amp; values)</h3>
 <p>Assign samples. </p>
 <h3>size_t QwtIntervalData::size () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of samples</dl>
+<dd>Number of samples</dd></dl>
 <h3>double QwtIntervalData::value (size_t i) const [inline]</h3>
 <p>Value of a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Sample index</dl>
+<dd><i>i</i> Sample index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value</dl>
+<dd>Value</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>interval()</code>, <code>size()</code></dl>
+<dd><code>interval()</code>, <code>size()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

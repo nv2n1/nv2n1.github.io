@@ -14,12 +14,12 @@ description: "ata_sas_port_stop – Undo ata_sas_port_start"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Port to shut down</dl>
+</dd><dd>Port to shut down</dd></dl>
 <h2>Description</h2>
 <p>May be used as the <code>port_stop</code> entry in ata_port_operations. </p>
 <p> LOCKING: Inherited from caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

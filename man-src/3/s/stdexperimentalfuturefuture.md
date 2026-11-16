@@ -12,13 +12,10 @@ std::experimental::future&lt;T&gt;::future - std::experimental::future&lt;T&gt;:
 
 <pre><code>future() noexcept;
 (1)
-
     future(std::experimental::future&lt;T&gt; &amp;&amp;f) noexcept;
 (2)
-
     future(const std::experimental::future&lt;T&gt; &amp;) = delete;
 (3)
-
     future(std::experimental::future&lt;std::experimental::future&lt;T&gt;&gt; &amp;&amp;other) noexcept;
 (4)</code></pre> 
 1) Default constructor. Constructs an empty future object that does not refer to a shared state. 

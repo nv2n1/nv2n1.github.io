@@ -21,10 +21,10 @@ description: "cgbtf2.f –"
 <pre> CGBTF2 computes an LU factorization of a complex m-by-n band matrix
  A using partial pivoting with row interchanges.
  This is the unblocked version of the algorithm, calling Level 2 BLAS.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -66,13 +66,13 @@ description: "cgbtf2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -89,7 +89,8 @@ description: "cgbtf2.f –"
  + need not be set on entry, but are required by the routine to store
  elements of U, because of fill-in resulting from the row
  interchanges.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 146 of file cgbtf2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

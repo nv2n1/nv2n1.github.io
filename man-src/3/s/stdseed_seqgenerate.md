@@ -12,7 +12,6 @@ std::seed_seq::generate - std::seed_seq::generate
 
 <pre><code>template &lt;class RandomIt&gt;
 (since C++ 11)
-
     void generate(RandomIt begin, RandomIt end);</code></pre> 
 Fills the range [begin, end) with unsigned integer values i, 0 ≤ i &lt; 232 
 , based on the data originally provided in the constructor of this seed_seq. The produced values are distributed over the entire 32-bit range even if the initial values were strongly biased. 
@@ -65,97 +64,53 @@ Only throws if the operations on begin and end throw.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::seed_seq seq({1, 2, 3, 4, 5});
     std::vector&lt;std::uint32_t&gt; seeds(10);
     seq.generate(seeds.begin(), seeds.end());
-
     // Step 1: fill with 0x8b8b8b8b
-
     // seeds = {2341178251, 2341178251, 2341178251, 2341178251, 2341178251,
-
     //          2341178251, 2341178251, 2341178251, 2341178251, 2341178251 }
-
     //
-
     // Step 2:
-
     // n = 10, s = 5, t = 3, p = 3, q = 6, m = 10
-
     //
-
     // First iteration, k = 0; r1 = 1371501266, r2 = 1371501271
-
     //
-
     // seeds = {1371501271, 2341178251, 2341178251, 3712679517, 2341178251,
-
     //          2341178251, 3712679522, 2341178251, 2341178251, 2341178251 }
-
     //
-
     // Iterations from k = 1 to k = 5 (r2 = r1 + k%n + v[k-1])
-
     //
-
     // r1 = 2786190137, 3204727651, 4173325571, 1979226628, 401983366
-
     // r2 = 2786190139, 3204727655, 4173325577, 1979226636, 401983376
-
     //
-
     // seeds = {3350727907, 3188173515, 3204727655, 4173325577, 1979226636,
-
     //           401983376, 3591037797, 2811627722, 1652921976, 2219536532 }
-
     //
-
     // Iterations from k = 6 to k = 9 (r2 = r1 + k%n)
-
     //
-
     // r1 = 2718637909, 1378394210, 2297813071, 1608643617
-
     // r2 = 2718637915, 1378394217, 2297813079, 1608643626
-
     //
-
     // seeds = { 434154821, 1191019290, 3237041891, 1256752498, 4277039715,
-
     //          2010627002, 2718637915, 1378394217, 2297813079, 1608643626 }
-
     //
-
     // Step 3
-
     // iterations from k = 10 to k = 19, using ^= to modify the output
-
     //
-
     // r1 = 1615303485, 3210438310, 893477041, 2884072672, 1918321961,
-
     // r2 = 1615303485, 3210438309, 893477039, 2884072669, 1918321957
-
     //
-
     // seeds = { 303093272, 3210438309,  893477039, 2884072669, 1918321957,
-
     //          1117182731, 1772877958, 2669970405, 3182737656, 4094066935 }
-
     //
-
     // r1 =  423054846, 46783064, 3904109085, 1534123446, 1495905687
-
     // r2 =  423054841, 46783058, 3904109078, 1534123438, 1495905678
-
     //
-
     // seeds = { 4204997637, 4246533866, 1856049002, 1129615051, 690460811,
-
     //           1075771511,   46783058, 3904109078, 1534123438, 1495905678 }
     for (std::uint32_t n : seeds)
         std::cout &lt;&lt; n &lt;&lt; '\n';

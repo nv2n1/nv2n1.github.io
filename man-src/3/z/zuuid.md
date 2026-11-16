@@ -63,14 +63,12 @@ CZMQ_EXPORT void
 <pre><code>//  Simple create/destroy test
 assert(ZUUID_LEN == 16);
 assert(ZUUID_STR_LEN == 32);
-
 zuuid_t *uuid = zuuid_new();
 assert(uuid);
 assert(zuuid_size(uuid) == ZUUID_LEN);
 assert(strlen(zuuid_str(uuid)) == ZUUID_STR_LEN);
 zuuid_t *copy = zuuid_dup(uuid);
 assert(streq(zuuid_str(uuid), zuuid_str(copy)));
-
 //  Check set/set_str/export methods
 const char *myuuid = &quot;8CB3E9A9649B4BEF8DE225E9C2CEBB38&quot;;
 const char *myuuid2 = &quot;8CB3E9A9-649B-4BEF-8DE2-25E9C2CEBB38&quot;;
@@ -91,11 +89,9 @@ byte copy_uuid[ZUUID_LEN];
 zuuid_export(uuid, copy_uuid);
 zuuid_set(uuid, copy_uuid);
 assert(streq(zuuid_str(uuid), myuuid));
-
 //  Check the canonical string format
 assert(streq(zuuid_str_canonical(uuid),
              &quot;8cb3e9a9-649b-4bef-8de2-25e9c2cebb38&quot;));
-
 zuuid_destroy(&amp;uuid);
 zuuid_destroy(&amp;copy);
 </code></pre>
@@ -108,7 +104,8 @@ zuuid_destroy(&amp;copy);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

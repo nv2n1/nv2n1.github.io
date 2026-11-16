@@ -37,18 +37,18 @@ description: "QwtScaleTransformation – Operations for linear or logarithmic (b
  <i>p1</i> first border of linear interval<br />
  <i>p2</i> first border of linear interval<br />
  <i>s1</i> first border of logarithmic interval<br />
- <i>s2</i> first border of logarithmic interval</dl>
+ <i>s2</i> first border of logarithmic interval</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>exp((x &#8211; p1) / (p2 &#8211; p1) * log(s2 / s1)) * s1; </code></p>
-<dd></dl>
+</dd><dl COMPACT>
+<dt><code>exp((x &#8211; p1) / (p2 &#8211; p1) * log(s2 / s1)) * s1; </code></dt>
+<dd></dd></dl>
 </dl>
 <h3>Type QwtScaleTransformation::type () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Transformation type</dl>
+<dd>Transformation type</dd></dl>
 <h3>double QwtScaleTransformation::xForm (double s, double s1, double s2, double p1, double p2) const [virtual]</h3>
 <p>Transform a value between 2 linear intervals. </p>
 <p> <code>Parameters:</code></p>
@@ -57,16 +57,16 @@ description: "QwtScaleTransformation – Operations for linear or logarithmic (b
  <i>x1</i> first border of source interval<br />
  <i>x2</i> first border of source interval<br />
  <i>y1</i> first border of target interval<br />
- <i>y2</i> first border of target interval</dl>
+ <i>y2</i> first border of target interval</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
+</dd><dl COMPACT>
+<dt><code>linear mapping:</code></dt>
+<dd>y1 + (y2 &#8211; y1) / (x2 &#8211; x1) * (x &#8211; x1)</dd></dl>
 <dl COMPACT>
-<dt><code>linear mapping:</code></p>
-<dd>y1 + (y2 &#8211; y1) / (x2 &#8211; x1) * (x &#8211; x1)</dl>
-<dl COMPACT>
-<dt><code>log10 mapping: </code></p>
-<dd>p1 + (p2 &#8211; p1) / log(s2 / s1) * log(x / s1)</dl>
+<dt><code>log10 mapping: </code></dt>
+<dd>p1 + (p2 &#8211; p1) / log(s2 / s1) * log(x / s1)</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

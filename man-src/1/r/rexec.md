@@ -19,40 +19,40 @@ description: "rexec — remote execution client for an exec server"
 <p> <code>-l username</code></p>
 <dl>
 <dt>
-<dd> Set the log-in name on the remote host to username.</dl>
+</dt><dd> Set the log-in name on the remote host to username.</dd></dl>
 <p> <code>-p password</code></p>
 <dl>
 <dt>
-<dd> Provide the password for the remote account. The command line argument will be blanked after being parsed, to prevent it from being seen with <code><a href="/docs/linux/man/1-ps/">ps</a>(1).</code> However, it is still not very secure to type the password on the command line. In particular, be sure that the shell&#8217;s history file is protected.</p>
-<dt><code>-n</code></p>
-<dd> Explicitly prompt for name and password, even if provided in the environment, in the $HOME/.netrc file, or in the environmental variables REXEC_USER and REXEC_PASS.</dl>
+</dt><dd> Provide the password for the remote account. The command line argument will be blanked after being parsed, to prevent it from being seen with <code><a href="/docs/linux/man/1-ps/">ps</a>(1).</code> However, it is still not very secure to type the password on the command line. In particular, be sure that the shell&#8217;s history file is protected.</dd>
+<dt><code>-n</code></dt>
+<dd> Explicitly prompt for name and password, even if provided in the environment, in the $HOME/.netrc file, or in the environmental variables REXEC_USER and REXEC_PASS.</dd></dl>
 <p> Other options that might be useful with non-standard remote exec daemons, or to debug connections:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Do not set up an auxiliary channel for standard error from command; the remote standard error and output are then both returned on the local standard output. By default, <code>rexec</code> asks that a separate channel be set up for diagnostic output from the remote command.</p>
-<dt><code>-b</code></p>
-<dd> Use signal handling as in BSD <a href="/docs/linux/man/1-rsh/">rsh</a>(1). Only the signals SIGINT, SIGQUIT, and SIGTERM are echoed to the remote process. They do not remain raised locally, so rexec waits for the remote command to shutdown its side of the socket. Also, CNTRL-Z will only suspend execution locally&#8211;the remote command may continue to run.</p>
-<dt><code>-c</code></p>
-<dd> Do not close remote standard input when local standard input closes. Normally the standard input to the remote command is closed when the local standard input is closed.</p>
-<dt><code>-d</code></p>
-<dd> Turn on debugging information. In particular the command sent to the remote host will be echoed.</p>
-<dt><code>-h</code></p>
-<dd> Print a usage message.</p>
-<dt><code>-s</code></p>
-<dd> Do not echo signals received by the rexec onto the remote process. Normally, signals which can be trapped are passed on to the remote process; then, when you type CNTRL-C, the remote process terminates as well.</dl>
+<dt><code>-a</code></dt>
+<dd> Do not set up an auxiliary channel for standard error from command; the remote standard error and output are then both returned on the local standard output. By default, <code>rexec</code> asks that a separate channel be set up for diagnostic output from the remote command.</dd>
+<dt><code>-b</code></dt>
+<dd> Use signal handling as in BSD <a href="/docs/linux/man/1-rsh/">rsh</a>(1). Only the signals SIGINT, SIGQUIT, and SIGTERM are echoed to the remote process. They do not remain raised locally, so rexec waits for the remote command to shutdown its side of the socket. Also, CNTRL-Z will only suspend execution locally&#8211;the remote command may continue to run.</dd>
+<dt><code>-c</code></dt>
+<dd> Do not close remote standard input when local standard input closes. Normally the standard input to the remote command is closed when the local standard input is closed.</dd>
+<dt><code>-d</code></dt>
+<dd> Turn on debugging information. In particular the command sent to the remote host will be echoed.</dd>
+<dt><code>-h</code></dt>
+<dd> Print a usage message.</dd>
+<dt><code>-s</code></dt>
+<dd> Do not echo signals received by the rexec onto the remote process. Normally, signals which can be trapped are passed on to the remote process; then, when you type CNTRL-C, the remote process terminates as well.</dd></dl>
 <h2>USERNAME AND PASSWORD</h2>
 <p> <code><a href="/docs/linux/man/1-rexec/">Rexec</a>(1)</code> searches for the username and password in the following order:</p>
 <dl>
 <dt>
-<dd> 1. If -n is given on the command line, the user will always be prompted for both, even if they are also given on the command line.</p>
+</dt><dd> 1. If -n is given on the command line, the user will always be prompted for both, even if they are also given on the command line.</dd>
 <dt>
-<dd> 2. The command line will be parsed</p>
+</dt><dd> 2. The command line will be parsed</dd>
 <dt>
-<dd> 3. If the environmental variables REXEC_USER or REXEC_PASS are defined, they will define the username or password.</p>
+</dt><dd> 3. If the environmental variables REXEC_USER or REXEC_PASS are defined, they will define the username or password.</dd>
 <dt>
-<dd> 4. The $HOME/.netrc file will be searched. See <code><a href="/docs/linux/man/1-ftp/">ftp</a>(1)</code> for a description of this file&#8217;s format.</p>
+</dt><dd> 4. The $HOME/.netrc file will be searched. See <code><a href="/docs/linux/man/1-ftp/">ftp</a>(1)</code> for a description of this file&#8217;s format.</dd>
 <dt>
-<dd> 5. Finally, the user will be prompted if either the username or password remains undefined. </p>
+</dt><dd> 5. Finally, the user will be prompted if either the username or password remains undefined. </dd>
 </dl>
 <h2>SECURITY</h2>
 <p> Users of this command should be aware that <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> transmits their password to the remote host clear text, not encrypted. If the network is not secure to the remote host, the password can be comprimised. </p>

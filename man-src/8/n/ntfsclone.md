@@ -18,7 +18,7 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 <p> <code>ntfsclone</code> can be useful to make backups, an exact snapshot of an NTFS filesystem and restore it later on, or for developers to test NTFS read/write functionality, troubleshoot/investigate users&#8217; issues using the clone without the risk of destroying the original filesystem. </p>
 <p> The clone, if not using the special image format, is an exact copy of the original NTFS filesystem from sector to sector thus it can be also mounted just like the original NTFS filesystem. For example if you clone to a file and the kernel has loopback device and NTFS support then the file can be mounted as</p>
 <dl>
-<dd><code>mount -t ntfs -o loop ntfsclone.img /mnt/ntfsclone</code> </p>
+<dd><code>mount -t ntfs -o loop ntfsclone.img /mnt/ntfsclone</code> </dd>
 </dl>
 <h3>Windows Cloning</h3>
 <p>If you want to copy, move or restore a system or boot partition to another computer, or to a different disk or partition (e.g. hda1-&gt;hda2, hda1-&gt;hdb1 or to a different disk sector offset) then you will need to take extra care. </p>
@@ -41,15 +41,16 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsclone</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212; .</code> Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v .</code> Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-o</code>, <code>&#8211;output</code> FILE</p>
-<dd>Clone NTFS to the non-existent <i>FILE</i>. If <i>FILE</i> is &#8216;-&#8216; then clone to the standard output. This option cannot be used for creating a partition, use <code>&#8211;overwrite</code> for an existing partition.</p>
-<dt><code>-O</code>, <code>&#8211;overwrite</code> FILE</p>
-<dd>Clone NTFS to <i>FILE</i>, which can be an existing partition or a regular file which will be overwritten if it exists.</p>
-<dt><code>-s</code>, <code>&#8211;save-image</code></p>
-<dd>Save to the special image format. This is the most efficient way space and speed-wise if imaging is done to the standard output, e.g. for image compression, encryption or streaming through a network.</p>
-<dt><code>-r</code>, <code>&#8211;restore-image</code></p>
-<dd>Restore from the special image format specified by <i>SOURCE</i> argument. If the <i>SOURCE</i> is &#8216;-&#8216; then the image is read from the standard input.</p>
-<dt><code>-n</code>, <code>&#8211;no-action</code></p>
-<dd>Test the consistency of a saved image by simulating its restoring without writing anything. The NTFS data contained in the image is not tested. The option <code>&#8211;restore-image</code> must also be present, and the options <code>&#8211;output</code> and <code>&#8211;overwrite</code> must be omitted.</p>
-<dt><code>&#8211;rescue</code></p>
+<dt><code>-o</code>, <code>&#8211;output</code> FILE</dt>
+<dd>Clone NTFS to the non-existent <i>FILE</i>. If <i>FILE</i> is &#8216;-&#8216; then clone to the standard output. This option cannot be used for creating a partition, use <code>&#8211;overwrite</code> for an existing partition.</dd>
+<dt><code>-O</code>, <code>&#8211;overwrite</code> FILE</dt>
+<dd>Clone NTFS to <i>FILE</i>, which can be an existing partition or a regular file which will be overwritten if it exists.</dd>
+<dt><code>-s</code>, <code>&#8211;save-image</code></dt>
+<dd>Save to the special image format. This is the most efficient way space and speed-wise if imaging is done to the standard output, e.g. for image compression, encryption or streaming through a network.</dd>
+<dt><code>-r</code>, <code>&#8211;restore-image</code></dt>
+<dd>Restore from the special image format specified by <i>SOURCE</i> argument. If the <i>SOURCE</i> is &#8216;-&#8216; then the image is read from the standard input.</dd>
+<dt><code>-n</code>, <code>&#8211;no-action</code></dt>
+<dd>Test the consistency of a saved image by simulating its restoring without writing anything. The NTFS data contained in the image is not tested. The option <code>&#8211;restore-image</code> must also be present, and the options <code>&#8211;output</code> and <code>&#8211;overwrite</code> must be omitted.</dd>
+<dt><code>&#8211;rescue</code></dt>
 <dd>Ignore disk read errors so disks having bad sectors, e.g. dying disks, can be rescued the most efficiently way, with minimal stress on them. Ntfsclone works at the lowest, sector level in this mode too thus more data can be rescued. The contents of the unreadable sectors are filled by character &#8216;?&#8217; and the beginning of such sectors are marked by &quot;BadSectoR
+</dd></dl>

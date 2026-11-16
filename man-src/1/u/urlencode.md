@@ -17,10 +17,10 @@ description: "urlencode – convert strings to or from URL-encoded form"
 <p> <code>urlencode</code> converts each character in all the strings given on the command line. If multiple strings are given, they are concatenated with separating spaces before conversion. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-m</p>
-<dd> Instead of full conversion, do GridSite &quot;mild URL encoding&quot; in which A-Z a-z 0-9 . = &#8211; _ @ and / are passed through unmodified. This results in slightly more human-readable strings but the application must be prepared to create or simulate the directories implied by any slashes. </p>
-<dt>-d</p>
-<dd> Do URL-decoding rather than encoding, according to RFC 1738. %HH and %hh strings are converted and other characters are passed through unmodified, with the exception that + is converted to space. </p>
+<dt>-m</dt>
+<dd> Instead of full conversion, do GridSite &quot;mild URL encoding&quot; in which A-Z a-z 0-9 . = &#8211; _ @ and / are passed through unmodified. This results in slightly more human-readable strings but the application must be prepared to create or simulate the directories implied by any slashes. </dd>
+<dt>-d</dt>
+<dd> Do URL-decoding rather than encoding, according to RFC 1738. %HH and %hh strings are converted and other characters are passed through unmodified, with the exception that + is converted to space. </dd>
 </dl>
 <h2>EXIT CODES</h2>
 <p> 0 is always returned. </p>

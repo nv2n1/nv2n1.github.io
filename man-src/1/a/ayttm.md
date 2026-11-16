@@ -15,20 +15,20 @@ description: "Ayttm – Universal Instant Messaging client"
 <p> Ayttm is an instant messaging (aka chat) client that provides all-in-one chat functionality for several major instant messaging services from one simple program. Ayttm &quot;Contacts&quot; allow you to refer to several accounts of the same person from a single contact name, making it one of the cleanest and simplest clients to use.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Output version information and exit</p>
-<dt><code>-g</code>, <code>&#8211;geometry</code></p>
-<dd> Set position of main window</p>
-<dt><code>-d, &#8211;config-dir</code></p>
-<dd> Specify configuration directory</p>
-<dt><code>-D, &#8211;disable-server</code></p>
-<dd> Disable console message server</p>
-<dt><code>-c, &#8211;contact</code></p>
-<dd> Specify contact to send a message to via console server</p>
-<dt><code>-m</code>, <code>&#8211;message</code></p>
-<dd> Specify the message to send via console server (Note: -c and -m must be used together)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Output version information and exit</dd>
+<dt><code>-g</code>, <code>&#8211;geometry</code></dt>
+<dd> Set position of main window</dd>
+<dt><code>-d, &#8211;config-dir</code></dt>
+<dd> Specify configuration directory</dd>
+<dt><code>-D, &#8211;disable-server</code></dt>
+<dd> Disable console message server</dd>
+<dt><code>-c, &#8211;contact</code></dt>
+<dd> Specify contact to send a message to via console server</dd>
+<dt><code>-m</code>, <code>&#8211;message</code></dt>
+<dd> Specify the message to send via console server (Note: -c and -m must be used together)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Ayttm</code> is a unified multi-protocol Instant Messaging client that allows you to stay in touch with your contacts across multiple protocols through one conventient interface. </p>
 <p> Currently <code>Ayttm</code> supports AIM, ICQ, IRC, Jabber, MSN and Yahoo!. A detailed list of features is available at:<br />

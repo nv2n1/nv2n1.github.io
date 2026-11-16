@@ -66,22 +66,22 @@ int code;
 <p> These routines are used to parse schema definitions in the syntax defined in RFC 4512 into structs and handle these structs. These routines handle four kinds of definitions: syntaxes, matching rules, attribute types and object classes. For each definition kind, four routines are provided. </p>
 <p> <code>ldap_str2xxx()</code> takes a definition in RFC 4512 format in argument <i>s</i> as a NUL-terminated string and returns, if possible, a pointer to a newly allocated struct of the appropriate kind. The caller is responsible for freeing the struct by calling <code>ldap_xxx_free()</code> when not needed any longer. The routine returns NULL if some problem happened. In this case, the integer pointed at by argument <i>code</i> will receive an error code (see below the description of <code>ldap_scherr2str()</code> for an explanation of the values) and a pointer to a NUL-terminated string will be placed where requested by argument <i>errp</i> , indicating where in argument <i>s</i> the error happened, so it must not be freed by the caller. Argument <i>flags</i> is a bit mask of parsing options controlling the relaxation of the syntax recognized. The following values are defined:</p>
 <dl>
-<dt><code>LDAP_SCHEMA_ALLOW_NONE</code></p>
-<dd> strict parsing according to RFC 4512.</p>
-<dt><code>LDAP_SCHEMA_ALLOW_NO_OID</code></p>
-<dd> permit definitions that do not contain an initial OID.</p>
-<dt><code>LDAP_SCHEMA_ALLOW_QUOTED</code></p>
-<dd> permit quotes around some items that should not have them.</p>
-<dt><code>LDAP_SCHEMA_ALLOW_DESCR</code></p>
-<dd> permit a <code>descr</code> instead of a numeric OID in places where the syntax expect the latter.</p>
-<dt><code>LDAP_SCHEMA_ALLOW_DESCR_PREFIX</code></p>
-<dd> permit that the initial numeric OID contains a prefix in <code>descr</code> format.</p>
-<dt><code>LDAP_SCHEMA_ALLOW_ALL</code></p>
-<dd> be very liberal, include all options.</dl>
+<dt><code>LDAP_SCHEMA_ALLOW_NONE</code></dt>
+<dd> strict parsing according to RFC 4512.</dd>
+<dt><code>LDAP_SCHEMA_ALLOW_NO_OID</code></dt>
+<dd> permit definitions that do not contain an initial OID.</dd>
+<dt><code>LDAP_SCHEMA_ALLOW_QUOTED</code></dt>
+<dd> permit quotes around some items that should not have them.</dd>
+<dt><code>LDAP_SCHEMA_ALLOW_DESCR</code></dt>
+<dd> permit a <code>descr</code> instead of a numeric OID in places where the syntax expect the latter.</dd>
+<dt><code>LDAP_SCHEMA_ALLOW_DESCR_PREFIX</code></dt>
+<dd> permit that the initial numeric OID contains a prefix in <code>descr</code> format.</dd>
+<dt><code>LDAP_SCHEMA_ALLOW_ALL</code></dt>
+<dd> be very liberal, include all options.</dd></dl>
 <p> The structures returned are as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef struct ldap_schema_extension_item {
     char *lsei_name;    /* Extension name */
@@ -130,55 +130,55 @@ typedef struct ldap_objectclass {
     LDAPSchemaExtensionItem **oc_extensions; /* Extensions */
 } LDAPObjectClass;
 </code></pre>
-</dl>
+</dd></dl>
 <p> Some integer fields (those described with a question mark) have a truth value, for these fields the possible values are:</p>
 <dl>
-<dt><code>LDAP_SCHEMA_NO</code></p>
-<dd> The answer to the question is no.</p>
-<dt><code>LDAP_SCHEMA_YES</code></p>
-<dd> The answer to the question is yes.</dl>
+<dt><code>LDAP_SCHEMA_NO</code></dt>
+<dd> The answer to the question is no.</dd>
+<dt><code>LDAP_SCHEMA_YES</code></dt>
+<dd> The answer to the question is yes.</dd></dl>
 <p> For attribute types, the following usages are possible:</p>
 <dl>
-<dt><code>LDAP_SCHEMA_USER_APPLICATIONS</code></p>
-<dd> the attribute type is non-operational.</p>
-<dt><code>LDAP_SCHEMA_DIRECTORY_OPERATION</code></p>
-<dd> the attribute type is operational and is pertinent to the directory itself, i.e. it has the same value on all servers that master the entry containing this attribute type.</p>
-<dt><code>LDAP_SCHEMA_DISTRIBUTED_OPERATION</code></p>
-<dd> the attribute type is operational and is pertinent to replication, shadowing or other distributed directory aspect. TBC.</p>
-<dt><code>LDAP_SCHEMA_DSA_OPERATION</code></p>
-<dd> the attribute type is operational and is pertinent to the directory server itself, i.e. it may have different values for the same entry when retrieved from different servers that master the entry.</dl>
+<dt><code>LDAP_SCHEMA_USER_APPLICATIONS</code></dt>
+<dd> the attribute type is non-operational.</dd>
+<dt><code>LDAP_SCHEMA_DIRECTORY_OPERATION</code></dt>
+<dd> the attribute type is operational and is pertinent to the directory itself, i.e. it has the same value on all servers that master the entry containing this attribute type.</dd>
+<dt><code>LDAP_SCHEMA_DISTRIBUTED_OPERATION</code></dt>
+<dd> the attribute type is operational and is pertinent to replication, shadowing or other distributed directory aspect. TBC.</dd>
+<dt><code>LDAP_SCHEMA_DSA_OPERATION</code></dt>
+<dd> the attribute type is operational and is pertinent to the directory server itself, i.e. it may have different values for the same entry when retrieved from different servers that master the entry.</dd></dl>
 <p> Object classes can be of three kinds:</p>
 <dl>
-<dt><code>LDAP_SCHEMA_ABSTRACT</code></p>
-<dd> the object class is abstract, i.e. there cannot be entries of this class alone.</p>
-<dt><code>LDAP_SCHEMA_STRUCTURAL</code></p>
-<dd> the object class is structural, i.e. it describes the main role of the entry. On some servers, once the entry is created the set of structural object classes assigned cannot be changed: none of those present can be removed and none other can be added.</p>
-<dt><code>LDAP_SCHEMA_AUXILIARY</code></p>
-<dd> the object class is auxiliary, i.e. it is intended to go with other, structural, object classes. These can be added or removed at any time if attribute types are added or removed at the same time as needed by the set of object classes resulting from the operation.</dl>
+<dt><code>LDAP_SCHEMA_ABSTRACT</code></dt>
+<dd> the object class is abstract, i.e. there cannot be entries of this class alone.</dd>
+<dt><code>LDAP_SCHEMA_STRUCTURAL</code></dt>
+<dd> the object class is structural, i.e. it describes the main role of the entry. On some servers, once the entry is created the set of structural object classes assigned cannot be changed: none of those present can be removed and none other can be added.</dd>
+<dt><code>LDAP_SCHEMA_AUXILIARY</code></dt>
+<dd> the object class is auxiliary, i.e. it is intended to go with other, structural, object classes. These can be added or removed at any time if attribute types are added or removed at the same time as needed by the set of object classes resulting from the operation.</dd></dl>
 <p> Routines <code>ldap_xxx2name()</code> return a canonical name for the definition. </p>
 <p> Routines <code>ldap_xxx2str()</code> return a string representation in the format described by RFC 4512 of the struct passed in the argument. The string is a newly allocated string that must be freed by the caller. These routines may return NULL if no memory can be allocated for the string. </p>
 <p> <code>ldap_scherr2str()</code> returns a NUL-terminated string with a text description of the error found. This is a pointer to a static area, so it must not be freed by the caller. The argument <i>code</i> comes from one of the parsing routines and can adopt the following values:</p>
 <dl>
-<dt><code>LDAP_SCHERR_OUTOFMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>LDAP_SCHERR_UNEXPTOKEN</code></p>
-<dd> Unexpected token.</p>
-<dt><code>LDAP_SCHERR_NOLEFTPAREN</code></p>
-<dd> Missing opening parenthesis.</p>
-<dt><code>LDAP_SCHERR_NORIGHTPAREN</code></p>
-<dd> Missing closing parenthesis.</p>
-<dt><code>LDAP_SCHERR_NODIGIT</code></p>
-<dd> Expecting digit.</p>
-<dt><code>LDAP_SCHERR_BADNAME</code></p>
-<dd> Expecting a name.</p>
-<dt><code>LDAP_SCHERR_BADDESC</code></p>
-<dd> Bad description.</p>
-<dt><code>LDAP_SCHERR_BADSUP</code></p>
-<dd> Bad superiors.</p>
-<dt><code>LDAP_SCHERR_DUPOPT</code></p>
-<dd> Duplicate option.</p>
-<dt><code>LDAP_SCHERR_EMPTY</code></p>
-<dd> Unexpected end of data. </p>
+<dt><code>LDAP_SCHERR_OUTOFMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>LDAP_SCHERR_UNEXPTOKEN</code></dt>
+<dd> Unexpected token.</dd>
+<dt><code>LDAP_SCHERR_NOLEFTPAREN</code></dt>
+<dd> Missing opening parenthesis.</dd>
+<dt><code>LDAP_SCHERR_NORIGHTPAREN</code></dt>
+<dd> Missing closing parenthesis.</dd>
+<dt><code>LDAP_SCHERR_NODIGIT</code></dt>
+<dd> Expecting digit.</dd>
+<dt><code>LDAP_SCHERR_BADNAME</code></dt>
+<dd> Expecting a name.</dd>
+<dt><code>LDAP_SCHERR_BADDESC</code></dt>
+<dd> Bad description.</dd>
+<dt><code>LDAP_SCHERR_BADSUP</code></dt>
+<dd> Bad superiors.</dd>
+<dt><code>LDAP_SCHERR_DUPOPT</code></dt>
+<dd> Duplicate option.</dd>
+<dt><code>LDAP_SCHERR_EMPTY</code></dt>
+<dd> Unexpected end of data. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3)</p>

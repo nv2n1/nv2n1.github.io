@@ -18,12 +18,12 @@ description: "startfluxbox – start a fluxbox session"
 <p> <code>~/.fluxbox/startup</code></p>
 <dl>
 <dt>
-<dd> This file contains all commands that should be executed before fluxbox is started. The initial file contains helpful comments for beginners. It also starts fluxbox.</dl>
+</dt><dd> This file contains all commands that should be executed before fluxbox is started. The initial file contains helpful comments for beginners. It also starts fluxbox.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The default <code>~/.fluxbox/startup</code> is as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #!/bin/sh
 #
@@ -45,11 +45,11 @@ exec fluxbox
 # or if you want to keep a log:
 # exec fluxbox -log &quot;$fluxdir/log&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> If you need to start applications after fluxbox, you can change the <code>exec fluxbox</code> line above to something like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 exec fluxbox &amp;
 fbpid=$!
@@ -61,7 +61,7 @@ sleep 1
 } &amp;
 wait $fbpid
 </pre>
-</dl>
+</dd></dl>
 <p> So xsetroot, ipager, and gkrellm2 will all be started after fluxbox, after giving fluxbox 1 second to startup. </p>
 <p> For more details on what else you can do in this script, see <code><a href="/docs/linux/man/1-sh/">sh</a>(1)</code>, or the documentation for your shell.</p>
 <h2>AUTHORS</h2>
@@ -73,5 +73,5 @@ wait $fbpid
 <p> <code>Jim Ramsay</code> &lt;i.am [at] jimramsay.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

@@ -17,24 +17,24 @@ description: "sg_decode_sense – decode SCSI sense data"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;binary</code>=<i>FN</i></p>
-<dd>the sense data is read in binary from a file called <i>FN</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>this option is used in conjunction with <i>&#8211;write=WFN</i> in order to change the output written to <i>WFN</i> to lines of ASCII hex bytes suitable for a C language compiler. Each line contains up to 16 bytes (e.g. a line starting with &quot;0x3b,0x07,0x00,0xff&quot;).</p>
-<dt><code>-f</code>, <code>&#8211;file</code>=<i>FN</i></p>
-<dd>the sense data is read in ASCII hexadecimal from a file called <i>FN</i>. The sense data should appear as a sequence of bytes separated by space, comma, tab or newline. Everything from and including a hash symbol to the end of that line is ignored. If <i>&#8211;nospace</i> is set then no separator is required between the ASCII hexadecimal digits in <i>FN</i> with bytes decoded from pairs of ASCII hexadecimal digits.</p>
-<dt><code>-n</code>, <code>&#8211;nospace</code></p>
-<dd>expect ASCII hexadecimal to be a string of hexadecimal digits with no spaces between them. Bytes are decoded by taking two hexadecimal digits at a time, so an even number of digits is expected. The string of hexadecimal digits may be on the command line (replacing &quot;H1 H2 H3&quot;) or spread across multiple lines the <i>FN</i> given to <i>&#8211;file=</i>.</p>
-<dt><code>-s</code>, <code>&#8211;status</code>=<i>SS</i></p>
-<dd>where <i>SS</i> is a SCSI status byte value, given in hexadecimal. The SCSI status byte is related to but distinct from sense data.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the degree of verbosity (debug messages).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>output version string then exit.</p>
-<dt><code>-w</code>, <code>&#8211;write</code>=<i>WFN</i></p>
-<dd>writes the sense data out to a file called <i>WFN</i>. If necessary <i>WFN</i> is created. If <i>WFN</i> exists then it is truncated prior to writing the sense data to it. If the <i>&#8211;hex</i> option is also given then ASCII hex is written to <i>WFN</i> (see the <i>&#8211;hex</i> option description); otherwise binary is written to <i>WFN</i>. This option is a convenience and may be helpful in converting the ASCII hexadecimal representation of sense data (or anything else) into the equivalent binary or a compilable ASCII hex form.</dl>
+<dt><code>-b</code>, <code>&#8211;binary</code>=<i>FN</i></dt>
+<dd>the sense data is read in binary from a file called <i>FN</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>this option is used in conjunction with <i>&#8211;write=WFN</i> in order to change the output written to <i>WFN</i> to lines of ASCII hex bytes suitable for a C language compiler. Each line contains up to 16 bytes (e.g. a line starting with &quot;0x3b,0x07,0x00,0xff&quot;).</dd>
+<dt><code>-f</code>, <code>&#8211;file</code>=<i>FN</i></dt>
+<dd>the sense data is read in ASCII hexadecimal from a file called <i>FN</i>. The sense data should appear as a sequence of bytes separated by space, comma, tab or newline. Everything from and including a hash symbol to the end of that line is ignored. If <i>&#8211;nospace</i> is set then no separator is required between the ASCII hexadecimal digits in <i>FN</i> with bytes decoded from pairs of ASCII hexadecimal digits.</dd>
+<dt><code>-n</code>, <code>&#8211;nospace</code></dt>
+<dd>expect ASCII hexadecimal to be a string of hexadecimal digits with no spaces between them. Bytes are decoded by taking two hexadecimal digits at a time, so an even number of digits is expected. The string of hexadecimal digits may be on the command line (replacing &quot;H1 H2 H3&quot;) or spread across multiple lines the <i>FN</i> given to <i>&#8211;file=</i>.</dd>
+<dt><code>-s</code>, <code>&#8211;status</code>=<i>SS</i></dt>
+<dd>where <i>SS</i> is a SCSI status byte value, given in hexadecimal. The SCSI status byte is related to but distinct from sense data.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the degree of verbosity (debug messages).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>output version string then exit.</dd>
+<dt><code>-w</code>, <code>&#8211;write</code>=<i>WFN</i></dt>
+<dd>writes the sense data out to a file called <i>WFN</i>. If necessary <i>WFN</i> is created. If <i>WFN</i> exists then it is truncated prior to writing the sense data to it. If the <i>&#8211;hex</i> option is also given then ASCII hex is written to <i>WFN</i> (see the <i>&#8211;hex</i> option description); otherwise binary is written to <i>WFN</i>. This option is a convenience and may be helpful in converting the ASCII hexadecimal representation of sense data (or anything else) into the equivalent binary or a compilable ASCII hex form.</dd></dl>
 <h2>Notes</h2>
 <p>Unlike most utilities in this package, this utility does not access a SCSI device (logical unit). This utility accesses a library associated with this package. Amongst other things the library decodes SCSI sense data.</p>
 <h2>Examples</h2>
@@ -42,10 +42,7 @@ description: "sg_decode_sense – decode SCSI sense data"
  00 00 Cut and paste it after the sg_decode_sense command:<br />
 &nbsp;<wbr>&nbsp;<wbr>sg_decode_sense f0 00 03 00 00 12 34 0a 00 00 00 00 11 00 00 00 00 00 and for this sense data the output should look like this: </p>
 <pre><code>Fixed format, current;  Sense key: Medium Error
-
-
 Additional sense: Unrecovered read error
-
 Info fld=0x1234 [4660]</code></pre>
 <p> For a medium error the Info field is the logical block address (LBA) of the lowest numbered block that the associated SCSI command was not able to read (verify or write).</p>
 <h2>Exit Status</h2>

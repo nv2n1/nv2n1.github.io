@@ -15,12 +15,12 @@ description: "llvm-stress – generate random .ll files"
 <p> The <code>llvm-stress</code> tool is used to generate random <code>.ll</code> files that can be used to test different components of LLVM.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o filename</code></p>
-<dd> Specify the output filename.</p>
-<dt><code>-size size</code></p>
-<dd> Specify the size of the generated <code>.ll</code> file.</p>
-<dt><code>-seed seed</code></p>
-<dd> Specify the seed to be used for the randomly generated instructions.</dl>
+<dt><code>-o filename</code></dt>
+<dd> Specify the output filename.</dd>
+<dt><code>-size size</code></dt>
+<dd> Specify the size of the generated <code>.ll</code> file.</dd>
+<dt><code>-seed seed</code></dt>
+<dd> Specify the seed to be used for the randomly generated instructions.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-stress</code> returns 0.</p>
 <h2>AUTHOR</h2>

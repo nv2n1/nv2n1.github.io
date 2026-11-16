@@ -15,7 +15,7 @@ make_bad_inode - mark an inode bad due to an I/O error
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>Inode to mark bad</dl>
+<dl><dd></dd><dd>Inode to mark bad</dd></dl>
 
 <h2>Description</h2>
 

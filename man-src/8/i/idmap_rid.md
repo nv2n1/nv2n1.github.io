@@ -19,24 +19,23 @@ The idmap_rid backend provides a way to use an algorithmic mapping scheme to map
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative. Note that the range acts as a filter. If algorithmically determined UID or GID fall outside the range, they are ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dl>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative. Note that the range acts as a filter. If algorithmically determined UID or GID fall outside the range, they are ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dd></dl>
  
 
  base_rid = INTEGER
 <dl><dd>Defines the base integer used to build SIDs out of a UID or a GID, and to rebase the UID or GID to be obtained from a SID. This means SIDs with a RID less than the base rid are filtered. The default is not to restrict the allowed rids at all, i.e. a base_rid value of 0. 
-
- Use of this parameter is deprecated.</dl>
+ Use of this parameter is deprecated.</dd></dl>
 
 <h2>The Mapping Formulas</h2>
 
 The Unix ID for a RID is calculated this way: 
 
-<dl><dd><pre> ID = RID - BASE_RID + LOW_RANGE_ID.</pre></dl>
+<dl><dd><pre> ID = RID - BASE_RID + LOW_RANGE_ID.</pre></dd></dl>
  
 
  Correspondingly, the formula for calculating the RID for a given Unix ID is this: 
 
-<dl><dd><pre> RID = ID + BASE_RID - LOW_RANGE_ID.</pre></dl>
+<dl><dd><pre> RID = ID + BASE_RID - LOW_RANGE_ID.</pre></dd></dl>
 
 <h2>Examples</h2>
 
@@ -50,7 +49,7 @@ This example shows how to configure two domains with idmap_rid, the principal do
  idmap config MAIN : backend = rid
  idmap config MAIN : range = 10000 - 49999
  idmap config TRUSTED : backend = rid
- idmap config TRUSTED : range = 50000 - 99999</pre></dl>
+ idmap config TRUSTED : range = 50000 - 99999</pre></dd></dl>
 
 <h2>Author</h2>
 

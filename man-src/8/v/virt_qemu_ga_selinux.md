@@ -117,28 +117,28 @@ description: "virt_qemu_ga_selinux – Security Enhanced Linux Policy for the vi
 <p> <code>virt_qemu_ga_exec_t</code> </p>
 <p> &#8211; Set files with the virt_qemu_ga_exec_t type, if you want to transition an executable to the virt_qemu_ga_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/qemu-ga(/.*)?, /usr/bin/qemu-ga </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/qemu-ga(/.*)?, /usr/bin/qemu-ga </dd>
 </dl>
 <p> <code>virt_qemu_ga_log_t</code> </p>
 <p> &#8211; Set files with the virt_qemu_ga_log_t type, if you want to treat the data as virt qemu ga log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/qemu-ga(/.*)?, /var/log/qemu-ga.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/qemu-ga(/.*)?, /var/log/qemu-ga.log.* </dd>
 </dl>
 <p> <code>virt_qemu_ga_tmp_t</code> </p>
 <p> &#8211; Set files with the virt_qemu_ga_tmp_t type, if you want to store virt qemu ga temporary files in the /tmp directories. </p>
 <p> <code>virt_qemu_ga_unconfined_exec_t</code> </p>
 <p> &#8211; Set files with the virt_qemu_ga_unconfined_exec_t type, if you want to transition an executable to the virt_qemu_ga_unconfined_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/qemu-ga/fsfreeze-hook.d(/.*)?, /var/run/qemu-ga/fsfreeze-hook.d(/.*)?, /usr/libexec/qemu-ga/fsfreeze-hook.d(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/qemu-ga/fsfreeze-hook.d(/.*)?, /var/run/qemu-ga/fsfreeze-hook.d(/.*)?, /usr/libexec/qemu-ga/fsfreeze-hook.d(/.*)? </dd>
 </dl>
 <p> <code>virt_qemu_ga_var_run_t</code> </p>
 <p> &#8211; Set files with the virt_qemu_ga_var_run_t type, if you want to store the virt qemu ga files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/qga.state, /var/run/qemu-ga.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/qga.state, /var/run/qemu-ga.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

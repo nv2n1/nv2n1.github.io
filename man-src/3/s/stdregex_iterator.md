@@ -12,24 +12,15 @@ std::regex_iterator&lt;BidirIt,CharT,Traits&gt;::regex_iterator - std::regex_ite
 
 <pre><code>regex_iterator();
 (1)(since C++ 11)
-
     regex_iterator(BidirIt a, BidirIt b,
-
                    const regex_type &amp;re, (2)(since C++ 11)
-
                                              std::regex_constants::match_flag_type m =
-
                                                  std::regex_constants::match_default);
-
 regex_iterator(const regex_iterator &amp;);
 (3)(since C++ 11)
-
     regex_iterator(BidirIt, BidirIt,
-
                    const regex_type &amp;&amp;, (4)(since C++ 14)
-
                                             std::regex_constants::match_flag_type =
-
                                                 std::regex_constants::match_default) = delete;</code></pre> 
 Constructs a new regex_iterator: 
 1) Default constructor. Constructs an end-of-sequence iterator. 

@@ -18,8 +18,8 @@ description: "XmStringCreateSimple — A compound string function that creates a
 <p> The function will allocate space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>. </p>
 <p> <code>NOTE:</code> This routine is obsolete and exists for compatibility with previous releases. It has been replaced by <code>XmStringCreateLocalized</code>.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a NULL-terminated string to be used as the text component of the compound string.</dd></dl>
 <h2>Return</h2>
 <p>Returns a new compound string.</p>
 <h2>Related</h2>

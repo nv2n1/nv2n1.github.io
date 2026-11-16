@@ -16,11 +16,11 @@ description: "WildMidi_OpenBuffer – Open a midi file buffer for processing"
 <h2>Description</h2>
 <p>Open a midi file, that you have buffered in memory, for processing. </p>
 <dl COMPACT>
-<dt><i>midibuffer</i></p>
-<dd>The memory location of the buffered midi file. This buffer needs to be in standard midi file format. Once this function is called, any changes to the buffer will have no effect.</dl>
+<dt><i>midibuffer</i></dt>
+<dd>The memory location of the buffered midi file. This buffer needs to be in standard midi file format. Once this function is called, any changes to the buffer will have no effect.</dd></dl>
 <dl COMPACT>
-<dt><i>size</i></p>
-<dd>This is the size of the midi file in bytes that is stored in memory.</dl>
+<dt><i>size</i></dt>
+<dd>This is the size of the midi file in bytes that is stored in memory.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns NULL on error, otherwise returns a handle for the midi buffer opened. </p>
 <h2>See Also</h2>

@@ -34,8 +34,8 @@ description: "pmConvScale – rescale a performance metric value"
 <h2>Diagnostics</h2>
 <p><code>PM_ERR_CONV</code></p>
 <dl>
-<dd><i>iunit</i> and <i>ounit</i> have different dimensionality, or have inappropriate <i>type</i></dl>
+<dd><i>iunit</i> and <i>ounit</i> have different dimensionality, or have inappropriate <i>type</i></dd></dl>
 <p> <code>PM_ERR_UNIT</code></p>
 <dl>
-<dd>Inappropriate <i>iunit</i> or <i>ounit</i> parameter </p>
+<dd>Inappropriate <i>iunit</i> or <i>ounit</i> parameter </dd>
 </dl>

@@ -56,87 +56,87 @@ description: "Inkscape – editor SVG (Scalable Vector Graphics)."
 <p> <code>Inkscape</code> používa <font SIZE="-1">SVG</font> ako svoj natívny formát dokumentu a jeho cieľom je stať sa kresliacim programom plne konformným <font SIZE="-1">SVG</font> súborom, dostupným open source komunite.</p>
 <h2>Voľby</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Zobrazí správu s pomocou</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Zobrazí verziu a dátum zostavenia Inkscape.</p>
-<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></p>
-<dd>Pri exporte <font SIZE="-1">PNG,</font> nastaví exportovanú oblasť v používateľských jednotkách <font SIZE="-1">SVG </font>(anonymné jednotky dĺžky bežne používané v Inkscape <font SIZE="-1">SVG</font>). Štandardne sa exportuje celé kresliace plátno dokumentu. Bod (0,0) je spodný dolný roh.</p>
-<dt><code>-C</code>, <code>&#8211;export-area-canvas</code></p>
-<dd>Pri exporte <font SIZE="-1">NG, PDF, PS</font> a <font SIZE="-1">EPS</font> je exportovaná oblasť celé kresliace plátno dokumentu (stránka). Toto je štandardné nastavenie pre <font SIZE="-1">PNG, PDF</font> a <font SIZE="-1">PS,</font> takže ju nemusíte uvádzať ak nepoužívate &#8211;export-id na exportovanie konkrétneho objektu. Pri exporte <font SIZE="-1">EPS</font> to však nie je štandardné nastavenie. Naviac pri <font SIZE="-1">EPS</font> neumožňuje špecifikácia formátu aby bolo ohraničenie väčšie ako obsah dokumentu. To znamená, že ak pri exporte <font SIZE="-1">EPS</font> použijete &#8211;export-area-canvas, ohraničenie plátna sa oreže dnu na ohraničenie objektu ak je menšie.</p>
-<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></p>
-<dd>Pri exporte <font SIZE="-1">PNG, PDF, PS</font> a <font SIZE="-1">EPS</font> je exportovaná oblasť celá kresba (nie plátno), t.j. ohraničenie všetkých objektov dokumentu (alebo exportovaného objektu ak je použité &#8211;export-id). S touto voľbou budú na exportovanom obrázku iba viditeľné objekty dokumentu bez okrajov alebo orezania. Toto je štandardná exportná oblasť pre <font SIZE="-1">EPS.</font> Pri <font SIZE="-1">PNG</font> je možné použiť túto voľbu v kombinácii s &#8211;export-use-hints.</p>
-<dt><code>&#8211;export-area-snap</code></p>
-<dd>Pri exporte png prichytí oblasť exportu smerom von na najbližšiu celočíselnú používateľskú jednotku <font SIZE="-1">SVG </font>(px). Ak používate štandardné rozlíšenie na export 90 dpi a vaša grafika je zarovnaná na pixle aby sa minimalizoval antialiasing, tento prepínač vám umožní zachovať toto zarovnanie aj ak exportujete ohraničenie nejakého objektu (pmocou &#8211;export-id alebo &#8211;export-area-drawing), ktoré samotné nie je zarovnané na pixle.</p>
-<dt><code>-b</code> <i></i><font SIZE="-1"><i>FARBA</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>FARBA</i></font><i></i></p>
-<dd>Farba pozadia exportovaného <font SIZE="-1">PNG.</font> Toto môže byť akýkoľvek reťazec špecifikujúci farbu, ktorý <font SIZE="-1">SVG</font> podporuje, napr. „#ff007f“ alebo „rgb(255, 0, 128)“. Ak nie je nastavená, použije sa farba nastavená v Inkscape v dialógu Možnosti dokumentu (uložená v atribúte pagecolor= v sodipodi:namedview).</p>
-<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></p>
-<dd>Použité rozlíšenie na export <font SIZE="-1">PNG.</font> Tiež sa používa pri rasterizácii filtrovaných objektov pri exporte do <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF </font>(ak neuvediete &#8211;export-ignore-filters na potlačenie rasterizácie). Štandardne 90, čo zodpovedá 1 používateľskej jednotke <font SIZE="-1">SVG. </font>(px, tiež nazývaná „používateľská jednotka“) exportovanej na 1 pixel bitmapy. Táto hodnota má precedenciu pred odporúčaným <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints.</p>
-<dt><code>-e</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-png</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Názov súboru pre export <font SIZE="-1">PNG.</font> Ak už existuje, bude prepísaní bez pýtania sa.</p>
-<dt><code>-f</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;file</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Otvorí zadané dokumenty. Je možné vynechať reťazec voľby, t.j. môžete uviesť zoznam súborov bez -f.</p>
-<dt><code>-g</code>, <code>&#8211;with-gui</code></p>
-<dd>Pokúsiť sa použiť <font SIZE="-1">GUI </font>(na unixových systémoch, použiť X server aj keď nie je nastavená premenná <tt>$DISPLAY</tt>).</p>
-<dt><code>-h</code> <i>VÝŠKA</i>, <code>&#8211;export-height</code>=<i>VÝŠKA</i></p>
-<dd>Výška generovaných bitmáp v pixloch. Táto hodnota má precedenciu pred nastavením &#8211;export-dpi (alebo odporúčaním <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints).</p>
-<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></p>
-<dd>Pri exporte <font SIZE="-1">PNG, PS, EPS</font> a <font SIZE="-1">PDF</font> hodnota atribútu id objektu, ktorý chcete exportovať z dokumentu. Žiadne iné objekty sa neexportujú. Štandardne sa exportuje ohraničenie objektu. To môžete zmeniť použitím voľby &#8211;export-area (iba pri <font SIZE="-1">PNG</font>) alebo &#8211;export-area-canvas.</p>
-<dt><code>-j</code>, <code>&#8211;export-id-only</code></p>
-<dd>Exportovať do <font SIZE="-1">PNG</font> iba objekt s id zadaným v &#8211;export-id. Všetky ostatné objekty sa skryjú a nezobrazia sa v exporte ani keď prekrývajú exportovaný objekt. Ak nie je uvedené &#8211;export-id, táto voľba sa ignoruje. Pri exporte <font SIZE="-1">PDF</font> je toto štandardná voľba, takže jej uvedenie nemá žiadny vplyv.</p>
-<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Exportovať dokumenty do formátu čisté <font SIZE="-1">SVG,</font> bez menných priestorov sodipodi: alebo inkscape: namespaces a bez metadát <font SIZE="-1">RDF.</font></p>
-<dt><code>-x</code>, <code>&#8211;extension-directory</code></p>
-<dd>Vypíše aktuálny adresár rozšírení, ktorý bol nastavený pre Inkscape a potom skončí. Využívajú to externé rozšírenia aby použili rovnakú konfiguráciu ako pôvodná inštalácia Inkscape.</p>
-<dt><code>&#8211;verb-list</code></p>
-<dd>Vypíše všetky slovesá dostupné v Inkscape podľa <font SIZE="-1">ID.</font> Tieto <font SIZE="-1">ID</font> možno použiť pri definovaní klávesových máp alebo menu. Tiež ich možno použiť na príkazovom riadku s voľbou &#8211;verb.</p>
-<dt><code>&#8211;verb</code>=<i>VERB-ID</i>, <code>&#8211;select</code>=<i>OBJECT-ID</i></p>
-<dd>Tieto dve voľby spolu poskytujú základné možnosti skriptovania v Inkscape z príkazového riadka. Obe sa môžu na príkazovom riadku vyskytovať ľubovoľný počet krát a vykonajú sa v tomto poradí na každom určenom dokumente. </p>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Zobrazí správu s pomocou</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Zobrazí verziu a dátum zostavenia Inkscape.</dd>
+<dt><code>-a</code> <i>x0:y0:x1:y1</i>, <code>&#8211;export-area</code>=<i>x0:y0:x1:y1</i></dt>
+<dd>Pri exporte <font SIZE="-1">PNG,</font> nastaví exportovanú oblasť v používateľských jednotkách <font SIZE="-1">SVG </font>(anonymné jednotky dĺžky bežne používané v Inkscape <font SIZE="-1">SVG</font>). Štandardne sa exportuje celé kresliace plátno dokumentu. Bod (0,0) je spodný dolný roh.</dd>
+<dt><code>-C</code>, <code>&#8211;export-area-canvas</code></dt>
+<dd>Pri exporte <font SIZE="-1">NG, PDF, PS</font> a <font SIZE="-1">EPS</font> je exportovaná oblasť celé kresliace plátno dokumentu (stránka). Toto je štandardné nastavenie pre <font SIZE="-1">PNG, PDF</font> a <font SIZE="-1">PS,</font> takže ju nemusíte uvádzať ak nepoužívate &#8211;export-id na exportovanie konkrétneho objektu. Pri exporte <font SIZE="-1">EPS</font> to však nie je štandardné nastavenie. Naviac pri <font SIZE="-1">EPS</font> neumožňuje špecifikácia formátu aby bolo ohraničenie väčšie ako obsah dokumentu. To znamená, že ak pri exporte <font SIZE="-1">EPS</font> použijete &#8211;export-area-canvas, ohraničenie plátna sa oreže dnu na ohraničenie objektu ak je menšie.</dd>
+<dt><code>-D</code>, <code>&#8211;export-area-drawing</code></dt>
+<dd>Pri exporte <font SIZE="-1">PNG, PDF, PS</font> a <font SIZE="-1">EPS</font> je exportovaná oblasť celá kresba (nie plátno), t.j. ohraničenie všetkých objektov dokumentu (alebo exportovaného objektu ak je použité &#8211;export-id). S touto voľbou budú na exportovanom obrázku iba viditeľné objekty dokumentu bez okrajov alebo orezania. Toto je štandardná exportná oblasť pre <font SIZE="-1">EPS.</font> Pri <font SIZE="-1">PNG</font> je možné použiť túto voľbu v kombinácii s &#8211;export-use-hints.</dd>
+<dt><code>&#8211;export-area-snap</code></dt>
+<dd>Pri exporte png prichytí oblasť exportu smerom von na najbližšiu celočíselnú používateľskú jednotku <font SIZE="-1">SVG </font>(px). Ak používate štandardné rozlíšenie na export 90 dpi a vaša grafika je zarovnaná na pixle aby sa minimalizoval antialiasing, tento prepínač vám umožní zachovať toto zarovnanie aj ak exportujete ohraničenie nejakého objektu (pmocou &#8211;export-id alebo &#8211;export-area-drawing), ktoré samotné nie je zarovnané na pixle.</dd>
+<dt><code>-b</code> <i></i><font SIZE="-1"><i>FARBA</i></font><i></i>, <code>&#8211;export-background</code>=<i></i><font SIZE="-1"><i>FARBA</i></font><i></i></dt>
+<dd>Farba pozadia exportovaného <font SIZE="-1">PNG.</font> Toto môže byť akýkoľvek reťazec špecifikujúci farbu, ktorý <font SIZE="-1">SVG</font> podporuje, napr. „#ff007f“ alebo „rgb(255, 0, 128)“. Ak nie je nastavená, použije sa farba nastavená v Inkscape v dialógu Možnosti dokumentu (uložená v atribúte pagecolor= v sodipodi:namedview).</dd>
+<dt><code>-d</code> <i></i><font SIZE="-1"><i>DPI</i></font><i></i>, <code>&#8211;export-dpi</code>=<i></i><font SIZE="-1"><i>DPI</i></font><i></i></dt>
+<dd>Použité rozlíšenie na export <font SIZE="-1">PNG.</font> Tiež sa používa pri rasterizácii filtrovaných objektov pri exporte do <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF </font>(ak neuvediete &#8211;export-ignore-filters na potlačenie rasterizácie). Štandardne 90, čo zodpovedá 1 používateľskej jednotke <font SIZE="-1">SVG. </font>(px, tiež nazývaná „používateľská jednotka“) exportovanej na 1 pixel bitmapy. Táto hodnota má precedenciu pred odporúčaným <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints.</dd>
+<dt><code>-e</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-png</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Názov súboru pre export <font SIZE="-1">PNG.</font> Ak už existuje, bude prepísaní bez pýtania sa.</dd>
+<dt><code>-f</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;file</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Otvorí zadané dokumenty. Je možné vynechať reťazec voľby, t.j. môžete uviesť zoznam súborov bez -f.</dd>
+<dt><code>-g</code>, <code>&#8211;with-gui</code></dt>
+<dd>Pokúsiť sa použiť <font SIZE="-1">GUI </font>(na unixových systémoch, použiť X server aj keď nie je nastavená premenná <tt>$DISPLAY</tt>).</dd>
+<dt><code>-h</code> <i>VÝŠKA</i>, <code>&#8211;export-height</code>=<i>VÝŠKA</i></dt>
+<dd>Výška generovaných bitmáp v pixloch. Táto hodnota má precedenciu pred nastavením &#8211;export-dpi (alebo odporúčaním <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints).</dd>
+<dt><code>-i</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>, <code>&#8211;export-id</code>=<i></i><font SIZE="-1"><i>ID</i></font><i></i></dt>
+<dd>Pri exporte <font SIZE="-1">PNG, PS, EPS</font> a <font SIZE="-1">PDF</font> hodnota atribútu id objektu, ktorý chcete exportovať z dokumentu. Žiadne iné objekty sa neexportujú. Štandardne sa exportuje ohraničenie objektu. To môžete zmeniť použitím voľby &#8211;export-area (iba pri <font SIZE="-1">PNG</font>) alebo &#8211;export-area-canvas.</dd>
+<dt><code>-j</code>, <code>&#8211;export-id-only</code></dt>
+<dd>Exportovať do <font SIZE="-1">PNG</font> iba objekt s id zadaným v &#8211;export-id. Všetky ostatné objekty sa skryjú a nezobrazia sa v exporte ani keď prekrývajú exportovaný objekt. Ak nie je uvedené &#8211;export-id, táto voľba sa ignoruje. Pri exporte <font SIZE="-1">PDF</font> je toto štandardná voľba, takže jej uvedenie nemá žiadny vplyv.</dd>
+<dt><code>-l</code>, <code>&#8211;export-plain-svg</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Exportovať dokumenty do formátu čisté <font SIZE="-1">SVG,</font> bez menných priestorov sodipodi: alebo inkscape: namespaces a bez metadát <font SIZE="-1">RDF.</font></dd>
+<dt><code>-x</code>, <code>&#8211;extension-directory</code></dt>
+<dd>Vypíše aktuálny adresár rozšírení, ktorý bol nastavený pre Inkscape a potom skončí. Využívajú to externé rozšírenia aby použili rovnakú konfiguráciu ako pôvodná inštalácia Inkscape.</dd>
+<dt><code>&#8211;verb-list</code></dt>
+<dd>Vypíše všetky slovesá dostupné v Inkscape podľa <font SIZE="-1">ID.</font> Tieto <font SIZE="-1">ID</font> možno použiť pri definovaní klávesových máp alebo menu. Tiež ich možno použiť na príkazovom riadku s voľbou &#8211;verb.</dd>
+<dt><code>&#8211;verb</code>=<i>VERB-ID</i>, <code>&#8211;select</code>=<i>OBJECT-ID</i></dt>
+<dd>Tieto dve voľby spolu poskytujú základné možnosti skriptovania v Inkscape z príkazového riadka. Obe sa môžu na príkazovom riadku vyskytovať ľubovoľný počet krát a vykonajú sa v tomto poradí na každom určenom dokumente. </dd>
 <p> Príkaz &#8211;verb vykoná uvedené sloveso ako keby bolo zavolané z menu alebo klávesovou skratkou. Dialógy sa objavia ak sú súčasťou slovesa. Ak chcete vypísať zoznam dostupných <font SIZE="-1">ID,</font> použite voľby príkazového riadka &#8211;verb-list. </p>
 <p> Príkaz &#8211;select spôsobí výber objektov s uvedeným <font SIZE="-1">ID.</font> To umožňuje vykonávanie slovies na nich. Ak chcete zrušiť všetky výbery, použite &#8211;verb=EditDeselect. <font SIZE="-1">ID</font> objektov sú dostupné v závislosti na dokumente, ktorý sa má načítať.</p>
-<dt><code>-p</code> <i>TLAČIAREŇ</i>, <code>&#8211;print</code>=<i>TLAČIAREŇ</i></p>
-<dd>Vytlačí dokumenty na určenej tlačiarni pomocou „lpr -P TLAČIAREŇ“. Ak chcete výstup poslať rúrou inému príkazu, môžete použiť „| PRÍKAZ“ alebo „&gt; NÁZOVSÚBORU“ ak chcete namiesto tlačenia zapísať výstup v PostScripte do súboru. Pamätajte na to, že musíte použiť vhodné úvodzovky pre váš shell, napr. </p>
+<dt><code>-p</code> <i>TLAČIAREŇ</i>, <code>&#8211;print</code>=<i>TLAČIAREŇ</i></dt>
+<dd>Vytlačí dokumenty na určenej tlačiarni pomocou „lpr -P TLAČIAREŇ“. Ak chcete výstup poslať rúrou inému príkazu, môžete použiť „| PRÍKAZ“ alebo „&gt; NÁZOVSÚBORU“ ak chcete namiesto tlačenia zapísať výstup v PostScripte do súboru. Pamätajte na to, že musíte použiť vhodné úvodzovky pre váš shell, napr. </dd>
 <p> inkscape &#8211;print=&#8217;| ps2pdf &#8211; mydoc.pdf&#8217; mydoc.svg</p>
-<dt><code>-t</code>, <code>&#8211;export-use-hints</code></p>
-<dd>Použiť názov exportovaného súboru a atribút <font SIZE="-1">DPI</font> uložené v exportovanom objekte (iba s voľbou &#8211;export-id). Tieto údaje sa nastavujú automaticky keď exportujete výber z grafického rozhrania Inkscape. Takže napr. ak exportujete útvar s id=&#8220;path231&#8221; ako /home/me/shape.png pri 300 dpi z dokument.svg z grafického rozhrania Inkscape a uložíte dokument, neskôr budete môcť exportovať útvar do rovnakého súboru s rovnakým rozlíšením jednoducho spustením </p>
+<dt><code>-t</code>, <code>&#8211;export-use-hints</code></dt>
+<dd>Použiť názov exportovaného súboru a atribút <font SIZE="-1">DPI</font> uložené v exportovanom objekte (iba s voľbou &#8211;export-id). Tieto údaje sa nastavujú automaticky keď exportujete výber z grafického rozhrania Inkscape. Takže napr. ak exportujete útvar s id=&#8220;path231&#8221; ako /home/me/shape.png pri 300 dpi z dokument.svg z grafického rozhrania Inkscape a uložíte dokument, neskôr budete môcť exportovať útvar do rovnakého súboru s rovnakým rozlíšením jednoducho spustením </dd>
 <p> inkscape -i path231 -t document.svg </p>
 <p> Ak spolu s touto voľbou použijete &#8211;export-dpi, &#8211;export-width alebo &#8211;export-height bude sa atribút <font SIZE="-1">DPI</font> ignorovať a použije sa hodnota zadaná na príkazovom riadku. Ak spolu s touto voľbou použijete &#8211;export-png, bude sa atribút názvov súboru ignorovať a použije sa hodnota zadaná na príkazovom riadku.</p>
-<dt><code>-w</code> <i>ŠÍRKA</i>, <code>&#8211;export-width</code>=<i>ŠÍRKA</i></p>
-<dd>Výška generovaných bitmáp v pixeloch. Táto hodnota má precedenciu pred nastavením &#8211;export-dpi (alebo odporúčaním <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints).</p>
-<dt><code>-y</code> <i></i><font SIZE="-1"><i>HODNOTA</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>HODNOTA</i></font><i></i></p>
-<dd>Krytie pozadia exportovaných súborov <font SIZE="-1">PNG.</font> Toto môže byť hodnota buď medzi 0.0 a 1.0 (kde 0.0 znamená celkom priehľadné a 1.0 plné krytie) alebo väčšia ako 1 do 255 (kde 255 znamená plné krytie). Ak nie je hodnota nastavená a nepoužije sa voľba -b, použije sa krytie stránky nastavené v Inkscape v dialógu Vlastnosti dokumentu (uložené v atribúte inkscape:pageopacity= sodipodi:namedview). Ak nie je hodnota nastavená a použije sa voľba -b použije sa hodnota 255 (plné krytie).</p>
-<dt><code>-P</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-ps</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Exportovať dokumenty do formátu PostScript. Pamätajte, že PostScript nepodporuje priesvitnosť, takže akékoľvek priesvitné objekty v pôvodnom <font SIZE="-1">SVG</font> sa automaticky rasterizujú. Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je plátno a môžete ju nastaviť na kresbu pomocou &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú); v tom prípade bude oblasťou exportu ohraničenie uvedeného objektu, ale možno ho nastaviť na plátno voľbou &#8211;export-area-canvas.</p>
-<dt><code>-E</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-eps</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Exportovať dokumenty do formátu Encapsulated PostScript. Pamätajte, že PostScript nepodporuje priesvitnosť, takže akékoľvek priesvitné objekty v pôvodnom <font SIZE="-1">SVG</font> sa automaticky rasterizujú. Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je kresba a môžete ju však nastaviť na plátno, pozrite si však obmedzenia v popise voľby &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú).</p>
-<dt><code>-A</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-pdf</code>=<i>NÁZOVSÚBORU</i></p>
-<dd>Exportovať dokumenty do formátu <font SIZE="-1">PDF</font> format. Tento formát zachováva priesvitnosť z pôvodného <font SIZE="-1">SVG.</font> Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je plátno a môžete ju nastaviť na kresbu pomocou &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú); v tom prípade bude oblasťou exportu ohraničenie uvedeného objektu, ale možno ho nastaviť na plátno voľbou &#8211;export-area-canvas.</p>
-<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></p>
-<dd>Konvertovať pri exporte textové objekty na cesty kde sa dá (pri exporte <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF</font>).</p>
-<dt><code>&#8211;export-ignore-filters</code></p>
-<dd>Exportovať objekty s filtrami (napr. s rozostrením) ako vektorovú grafiku a ignorovať filtre (pri exporte <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF</font>). Štandardne sa všetky objekty s filtrami rasterizujú s rozlíšením &#8211;export-dpi (štandardne 90 dpi) čím sa zachová ich vzhľad.</p>
-<dt><code>-I</code>, <code>&#8211;query-id</code></p>
-<dd>Nastaviť <font SIZE="-1">ID</font> objektu, ktoré rozmery zisťujeme. Ak nie je nastavené, voľby požiadavky vrátia rozmer kresby (t.j. všetkých objektov dokumentu), nie stránky či zobrazenia.</p>
-<dt><code>-X</code>, <code>&#8211;query-x</code></p>
-<dd>Zistiť súradnicu X kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</p>
-<dt><code>-Y</code>, <code>&#8211;query-y</code></p>
-<dd>Zistiť súradnicu Y kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</p>
-<dt><code>-W</code>, <code>&#8211;query-width</code></p>
-<dd>Zistiť šírku kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</p>
-<dt><code>-H</code>, <code>&#8211;query-height</code></p>
-<dd>Zistiť výšku kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</p>
-<dt><code>-S</code>, <code>&#8211;query-all</code></p>
-<dd>Vypíše zoznam všetkých objektov v dokumente <font SIZE="-1">SVG</font> s definovaným id spolu s ich súradnicou x,y, šírkou a výškou vo formáte s hodnotami oddelenom čiarkami.</p>
-<dt><code>&#8211;shell</code></p>
-<dd>Ak je zadaný tento parameter, Inkscape vstúpi do interaktívneho režimu príkazového riadka. V tomto režime píšete príkazy na príkazovom riadku a Inkscape ich vykonáva bez toho aby ste museli pri každom príkaze spúšťať novú inštanciu Inkscape. Táto vlastnosť je najužitočnejšia v skriptoch a pri použití na serveri: nepridáva nové schopnosti, ale umožňuje vám zlepšovať nároky na rýchlosť a pamäť akéhokoľvek skriptu, ktorý opakovane volá Inkscape aby vykonal úlohy z príkazového riadka (ako export alebo konverzie). Každý príkaz v režime shellu musí byť úplný platný príkaz Inkscape ale bez názvu programu Inkscape, napr. „subor.svg &#8211;export-pdf=subor.pdf“.</p>
-<dt><code>&#8211;vacuum-defs</code></p>
-<dd>Odstráni všetky nepoužité položky zo sekcie &lt;lt&gt;defs&lt;gt&gt; <font SIZE="-1">SVG</font> súboru. Ak túto voľbu zadáte spolu s &#8211;export-plain-svg, bude mať vplyv iba na exportovaný súbor. Ak ju použijete samostatne, zmení sa existujúci súbor.</p>
-<dt><code>-z</code>, <code>&#8211;without-gui</code></p>
-<dd>Neotvírať grafické rozhranie (na unixových systémoch nepoužívať X server), iba spracovať súbory z konzoly. Táto voľba sa predpokladá pri voľbách -p, -e, -l a &#8211;vacuum-defs.</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd>Táto štandardná voľba <font SIZE="-1">GTK</font> vynucuje, že akékoľvek upozornenia, ktoré sú zvyčajne neškodné, spôsobia ukončenie Inkscape (čo je užitočné pri ladení).</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Zobrazí stručnú správu o tom ako používať Inkscape.</dl>
+<dt><code>-w</code> <i>ŠÍRKA</i>, <code>&#8211;export-width</code>=<i>ŠÍRKA</i></dt>
+<dd>Výška generovaných bitmáp v pixeloch. Táto hodnota má precedenciu pred nastavením &#8211;export-dpi (alebo odporúčaním <font SIZE="-1">DPI</font> pri použití s prepínačom &#8211;export-use-hints).</dd>
+<dt><code>-y</code> <i></i><font SIZE="-1"><i>HODNOTA</i></font><i></i>, <code>&#8211;export-background-opacity</code>=<i></i><font SIZE="-1"><i>HODNOTA</i></font><i></i></dt>
+<dd>Krytie pozadia exportovaných súborov <font SIZE="-1">PNG.</font> Toto môže byť hodnota buď medzi 0.0 a 1.0 (kde 0.0 znamená celkom priehľadné a 1.0 plné krytie) alebo väčšia ako 1 do 255 (kde 255 znamená plné krytie). Ak nie je hodnota nastavená a nepoužije sa voľba -b, použije sa krytie stránky nastavené v Inkscape v dialógu Vlastnosti dokumentu (uložené v atribúte inkscape:pageopacity= sodipodi:namedview). Ak nie je hodnota nastavená a použije sa voľba -b použije sa hodnota 255 (plné krytie).</dd>
+<dt><code>-P</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-ps</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Exportovať dokumenty do formátu PostScript. Pamätajte, že PostScript nepodporuje priesvitnosť, takže akékoľvek priesvitné objekty v pôvodnom <font SIZE="-1">SVG</font> sa automaticky rasterizujú. Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je plátno a môžete ju nastaviť na kresbu pomocou &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú); v tom prípade bude oblasťou exportu ohraničenie uvedeného objektu, ale možno ho nastaviť na plátno voľbou &#8211;export-area-canvas.</dd>
+<dt><code>-E</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-eps</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Exportovať dokumenty do formátu Encapsulated PostScript. Pamätajte, že PostScript nepodporuje priesvitnosť, takže akékoľvek priesvitné objekty v pôvodnom <font SIZE="-1">SVG</font> sa automaticky rasterizujú. Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je kresba a môžete ju však nastaviť na plátno, pozrite si však obmedzenia v popise voľby &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú).</dd>
+<dt><code>-A</code> <i>NÁZOVSÚBORU</i>, <code>&#8211;export-pdf</code>=<i>NÁZOVSÚBORU</i></dt>
+<dd>Exportovať dokumenty do formátu <font SIZE="-1">PDF</font> format. Tento formát zachováva priesvitnosť z pôvodného <font SIZE="-1">SVG.</font> Priložia sa použité písma alebo podmnožina použitých znakov. Štandardná oblasť exportu je plátno a môžete ju nastaviť na kresbu pomocou &#8211;export-area-drawing. Ak chcete exportovať jediný objekt, môžete použiť &#8211;export-id (všetky ostatné sa skryjú); v tom prípade bude oblasťou exportu ohraničenie uvedeného objektu, ale možno ho nastaviť na plátno voľbou &#8211;export-area-canvas.</dd>
+<dt><code>-T</code>, <code>&#8211;export-text-to-path</code></dt>
+<dd>Konvertovať pri exporte textové objekty na cesty kde sa dá (pri exporte <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF</font>).</dd>
+<dt><code>&#8211;export-ignore-filters</code></dt>
+<dd>Exportovať objekty s filtrami (napr. s rozostrením) ako vektorovú grafiku a ignorovať filtre (pri exporte <font SIZE="-1">PS, EPS</font> a <font SIZE="-1">PDF</font>). Štandardne sa všetky objekty s filtrami rasterizujú s rozlíšením &#8211;export-dpi (štandardne 90 dpi) čím sa zachová ich vzhľad.</dd>
+<dt><code>-I</code>, <code>&#8211;query-id</code></dt>
+<dd>Nastaviť <font SIZE="-1">ID</font> objektu, ktoré rozmery zisťujeme. Ak nie je nastavené, voľby požiadavky vrátia rozmer kresby (t.j. všetkých objektov dokumentu), nie stránky či zobrazenia.</dd>
+<dt><code>-X</code>, <code>&#8211;query-x</code></dt>
+<dd>Zistiť súradnicu X kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</dd>
+<dt><code>-Y</code>, <code>&#8211;query-y</code></dt>
+<dd>Zistiť súradnicu Y kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</dd>
+<dt><code>-W</code>, <code>&#8211;query-width</code></dt>
+<dd>Zistiť šírku kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</dd>
+<dt><code>-H</code>, <code>&#8211;query-height</code></dt>
+<dd>Zistiť výšku kresby alebo, ak je určený, objektu s &#8211;query-id. Vrátená hodnota je v px (používateľské jednotky <font SIZE="-1">SVG</font>).</dd>
+<dt><code>-S</code>, <code>&#8211;query-all</code></dt>
+<dd>Vypíše zoznam všetkých objektov v dokumente <font SIZE="-1">SVG</font> s definovaným id spolu s ich súradnicou x,y, šírkou a výškou vo formáte s hodnotami oddelenom čiarkami.</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd>Ak je zadaný tento parameter, Inkscape vstúpi do interaktívneho režimu príkazového riadka. V tomto režime píšete príkazy na príkazovom riadku a Inkscape ich vykonáva bez toho aby ste museli pri každom príkaze spúšťať novú inštanciu Inkscape. Táto vlastnosť je najužitočnejšia v skriptoch a pri použití na serveri: nepridáva nové schopnosti, ale umožňuje vám zlepšovať nároky na rýchlosť a pamäť akéhokoľvek skriptu, ktorý opakovane volá Inkscape aby vykonal úlohy z príkazového riadka (ako export alebo konverzie). Každý príkaz v režime shellu musí byť úplný platný príkaz Inkscape ale bez názvu programu Inkscape, napr. „subor.svg &#8211;export-pdf=subor.pdf“.</dd>
+<dt><code>&#8211;vacuum-defs</code></dt>
+<dd>Odstráni všetky nepoužité položky zo sekcie &lt;lt&gt;defs&lt;gt&gt; <font SIZE="-1">SVG</font> súboru. Ak túto voľbu zadáte spolu s &#8211;export-plain-svg, bude mať vplyv iba na exportovaný súbor. Ak ju použijete samostatne, zmení sa existujúci súbor.</dd>
+<dt><code>-z</code>, <code>&#8211;without-gui</code></dt>
+<dd>Neotvírať grafické rozhranie (na unixových systémoch nepoužívať X server), iba spracovať súbory z konzoly. Táto voľba sa predpokladá pri voľbách -p, -e, -l a &#8211;vacuum-defs.</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd>Táto štandardná voľba <font SIZE="-1">GTK</font> vynucuje, že akékoľvek upozornenia, ktoré sú zvyčajne neškodné, spôsobia ukončenie Inkscape (čo je užitočné pri ladení).</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Zobrazí stručnú správu o tom ako používať Inkscape.</dd></dl>
 <h2>Konfigurácia</h2>
 <p>Hlavný konfiguračný súboor je ~/.config/Inkscape/preferences.xml. Ukladá rozličné nastavenia, ktoré môžete zmeniť v Inkscape (prevažne v dialógu Nastavenia Inkscape). Do podadresárov tohto adresára tiež môžete umiestniť vlastné: </p>
 <p> $HOME/.config/Inkscape/extensions/ &#8211; rozširujúce efekty. </p>

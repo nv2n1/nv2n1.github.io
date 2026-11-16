@@ -16,19 +16,19 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p>All of the common configuration options that apply to SSSD domains also apply to LDAP domains. Refer to the &#8220;DOMAIN SECTIONS&#8221; section of the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page for full details. </p>
 <p> ldap_uri, ldap_backup_uri (string)</p>
 <dl>
-<dd>Specifies the comma-separated list of URIs of the LDAP servers to which SSSD should connect in the order of preference. Refer to the &#8220;FAILOVER&#8221; section for more information on failover and server redundancy. If neither option is specified, service discovery is enabled. For more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </p>
+<dd>Specifies the comma-separated list of URIs of the LDAP servers to which SSSD should connect in the order of preference. Refer to the &#8220;FAILOVER&#8221; section for more information on failover and server redundancy. If neither option is specified, service discovery is enabled. For more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </dd>
 <p> The format of the URI must match the format defined in RFC 2732: </p>
 <p> ldap[s]://&lt;host&gt;[:port] </p>
 <p> For explicit IPv6 addresses, &lt;host&gt; must be enclosed in brackets [] </p>
 <p> example: <a href="ldap://[fc00::126:25]:389">ldap://[fc00::126:25]:389</a></dl>
 <p> ldap_chpass_uri, ldap_chpass_backup_uri (string)</p>
 <dl>
-<dd>Specifies the comma-separated list of URIs of the LDAP servers to which SSSD should connect in the order of preference to change the password of a user. Refer to the &#8220;FAILOVER&#8221; section for more information on failover and server redundancy. </p>
+<dd>Specifies the comma-separated list of URIs of the LDAP servers to which SSSD should connect in the order of preference to change the password of a user. Refer to the &#8220;FAILOVER&#8221; section for more information on failover and server redundancy. </dd>
 <p> To enable service discovery ldap_chpass_dns_service_name must be set. </p>
 <p> Default: empty, i.e. ldap_uri is used.</dl>
 <p> ldap_search_base (string)</p>
 <dl>
-<dd>The default base DN to use for performing LDAP user operations. </p>
+<dd>The default base DN to use for performing LDAP user operations. </dd>
 <p> Starting with SSSD 1.7.0, SSSD supports multiple search bases using the syntax: </p>
 <p> search_base[?scope?[filter][?search_base?scope?[filter]]*] </p>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. </p>
@@ -40,138 +40,138 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p> Default: If not set, the value of the defaultNamingContext or namingContexts attribute from the RootDSE of the LDAP server is used. If defaultNamingContext does not exist or has an empty value namingContexts is used. The namingContexts attribute must have a single value with the DN of the search base of the LDAP server to make this work. Multiple values are are not supported.</dl>
 <p> ldap_schema (string)</p>
 <dl>
-<dd>Specifies the Schema Type in use on the target LDAP server. Depending on the selected schema, the default attribute names retrieved from the servers may vary. The way that some attributes are handled may also differ. </p>
+<dd>Specifies the Schema Type in use on the target LDAP server. Depending on the selected schema, the default attribute names retrieved from the servers may vary. The way that some attributes are handled may also differ. </dd>
 <p> Four schema types are currently supported: </p>
 <dl>
-<dd>&bull; rfc2307</dl>
+<dd>&bull; rfc2307</dd></dl>
 <dl>
-<dd>&bull; rfc2307bis</dl>
+<dd>&bull; rfc2307bis</dd></dl>
 <dl>
-<dd>&bull; IPA</dl>
+<dd>&bull; IPA</dd></dl>
 <dl>
-<dd>&bull; AD</dl>
+<dd>&bull; AD</dd></dl>
 <p> The main difference between these schema types is how group memberships are recorded in the server. With rfc2307, group members are listed by name in the <i>memberUid</i> attribute. With rfc2307bis and IPA, group members are listed by DN and stored in the <i>member</i> attribute. The AD schema type sets the attributes to correspond with Active Directory 2008r2 values. </p>
 <p> Default: rfc2307</dl>
 <p> ldap_default_bind_dn (string)</p>
 <dl>
-<dd>The default bind DN to use for performing LDAP operations.</dl>
+<dd>The default bind DN to use for performing LDAP operations.</dd></dl>
 <p> ldap_default_authtok_type (string)</p>
 <dl>
-<dd>The type of the authentication token of the default bind DN. </p>
+<dd>The type of the authentication token of the default bind DN. </dd>
 <p> The two mechanisms currently supported are: </p>
 <p> password </p>
 <p> obfuscated_password </p>
 <p> Default: password</dl>
 <p> ldap_default_authtok (string)</p>
 <dl>
-<dd>The authentication token of the default bind DN. Only clear text passwords are currently supported.</dl>
+<dd>The authentication token of the default bind DN. Only clear text passwords are currently supported.</dd></dl>
 <p> ldap_user_object_class (string)</p>
 <dl>
-<dd>The object class of a user entry in LDAP. </p>
+<dd>The object class of a user entry in LDAP. </dd>
 <p> Default: posixAccount</dl>
 <p> ldap_user_name (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user&#8217;s login name. </p>
+<dd>The LDAP attribute that corresponds to the user&#8217;s login name. </dd>
 <p> Default: uid (rfc2307, rfc2307bis and IPA), sAMAccountName (AD)</dl>
 <p> ldap_user_uid_number (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user&#8217;s id. </p>
+<dd>The LDAP attribute that corresponds to the user&#8217;s id. </dd>
 <p> Default: uidNumber</dl>
 <p> ldap_user_gid_number (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user&#8217;s primary group id. </p>
+<dd>The LDAP attribute that corresponds to the user&#8217;s primary group id. </dd>
 <p> Default: gidNumber</dl>
 <p> ldap_user_primary_group (string)</p>
 <dl>
-<dd>Active Directory primary group attribute for ID-mapping. Note that this attribute should only be set manually if you are running the &#8220;ldap&#8221; provider with ID mapping. </p>
+<dd>Active Directory primary group attribute for ID-mapping. Note that this attribute should only be set manually if you are running the &#8220;ldap&#8221; provider with ID mapping. </dd>
 <p> Default: unset (LDAP), primaryGroupID (AD)</dl>
 <p> ldap_user_gecos (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user&#8217;s gecos field. </p>
+<dd>The LDAP attribute that corresponds to the user&#8217;s gecos field. </dd>
 <p> Default: gecos</dl>
 <p> ldap_user_home_directory (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the name of the user&#8217;s home directory. </p>
+<dd>The LDAP attribute that contains the name of the user&#8217;s home directory. </dd>
 <p> Default: homeDirectory</dl>
 <p> ldap_user_shell (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the path to the user&#8217;s default shell. </p>
+<dd>The LDAP attribute that contains the path to the user&#8217;s default shell. </dd>
 <p> Default: loginShell</dl>
 <p> ldap_user_uuid (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the UUID/GUID of an LDAP user object. </p>
+<dd>The LDAP attribute that contains the UUID/GUID of an LDAP user object. </dd>
 <p> Default: not set in the general case, objectGUID for AD and ipaUniqueID for IPA</dl>
 <p> ldap_user_objectsid (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the objectSID of an LDAP user object. This is usually only necessary for ActiveDirectory servers. </p>
+<dd>The LDAP attribute that contains the objectSID of an LDAP user object. This is usually only necessary for ActiveDirectory servers. </dd>
 <p> Default: objectSid for ActiveDirectory, not set for other servers.</dl>
 <p> ldap_user_modify_timestamp (string)</p>
 <dl>
-<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </p>
+<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </dd>
 <p> Default: modifyTimestamp</dl>
 <p> ldap_user_shadow_last_change (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (date of the last password change). </p>
+<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (date of the last password change). </dd>
 <p> Default: shadowLastChange</dl>
 <p> ldap_user_shadow_min (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (minimum password age). </p>
+<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (minimum password age). </dd>
 <p> Default: shadowMin</dl>
 <p> ldap_user_shadow_max (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (maximum password age). </p>
+<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (maximum password age). </dd>
 <p> Default: shadowMax</dl>
 <p> ldap_user_shadow_warning (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (password warning period). </p>
+<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (password warning period). </dd>
 <p> Default: shadowWarning</dl>
 <p> ldap_user_shadow_inactive (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (password inactivity period). </p>
+<dd>When using ldap_pwd_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (password inactivity period). </dd>
 <p> Default: shadowInactive</dl>
 <p> ldap_user_shadow_expire (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=shadow or ldap_account_expire_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (account expiration date). </p>
+<dd>When using ldap_pwd_policy=shadow or ldap_account_expire_policy=shadow, this parameter contains the name of an LDAP attribute corresponding to its <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) counterpart (account expiration date). </dd>
 <p> Default: shadowExpire</dl>
 <p> ldap_user_krb_last_pwd_change (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=mit_kerberos, this parameter contains the name of an LDAP attribute storing the date and time of last password change in kerberos. </p>
+<dd>When using ldap_pwd_policy=mit_kerberos, this parameter contains the name of an LDAP attribute storing the date and time of last password change in kerberos. </dd>
 <p> Default: krbLastPwdChange</dl>
 <p> ldap_user_krb_password_expiration (string)</p>
 <dl>
-<dd>When using ldap_pwd_policy=mit_kerberos, this parameter contains the name of an LDAP attribute storing the date and time when current password expires. </p>
+<dd>When using ldap_pwd_policy=mit_kerberos, this parameter contains the name of an LDAP attribute storing the date and time when current password expires. </dd>
 <p> Default: krbPasswordExpiration</dl>
 <p> ldap_user_ad_account_expires (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=ad, this parameter contains the name of an LDAP attribute storing the expiration time of the account. </p>
+<dd>When using ldap_account_expire_policy=ad, this parameter contains the name of an LDAP attribute storing the expiration time of the account. </dd>
 <p> Default: accountExpires</dl>
 <p> ldap_user_ad_user_account_control (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=ad, this parameter contains the name of an LDAP attribute storing the user account control bit field. </p>
+<dd>When using ldap_account_expire_policy=ad, this parameter contains the name of an LDAP attribute storing the user account control bit field. </dd>
 <p> Default: userAccountControl</dl>
 <p> ldap_ns_account_lock (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=rhds or equivalent, this parameter determines if access is allowed or not. </p>
+<dd>When using ldap_account_expire_policy=rhds or equivalent, this parameter determines if access is allowed or not. </dd>
 <p> Default: nsAccountLock</dl>
 <p> ldap_user_nds_login_disabled (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=nds, this attribute determines if access is allowed or not. </p>
+<dd>When using ldap_account_expire_policy=nds, this attribute determines if access is allowed or not. </dd>
 <p> Default: loginDisabled</dl>
 <p> ldap_user_nds_login_expiration_time (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=nds, this attribute determines until which date access is granted. </p>
+<dd>When using ldap_account_expire_policy=nds, this attribute determines until which date access is granted. </dd>
 <p> Default: loginDisabled</dl>
 <p> ldap_user_nds_login_allowed_time_map (string)</p>
 <dl>
-<dd>When using ldap_account_expire_policy=nds, this attribute determines the hours of a day in a week when access is granted. </p>
+<dd>When using ldap_account_expire_policy=nds, this attribute determines the hours of a day in a week when access is granted. </dd>
 <p> Default: loginAllowedTimeMap</dl>
 <p> ldap_user_principal (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the user&#8217;s Kerberos User Principal Name (UPN). </p>
+<dd>The LDAP attribute that contains the user&#8217;s Kerberos User Principal Name (UPN). </dd>
 <p> Default: krbPrincipalName</dl>
 <p> ldap_user_extra_attrs (string)</p>
 <dl>
-<dd>Comma-separated list of LDAP attributes that SSSD would fetch along with the usual set of user attributes. </p>
+<dd>Comma-separated list of LDAP attributes that SSSD would fetch along with the usual set of user attributes. </dd>
 <p> The list can either contain LDAP attribute names only, or colon-separated tuples of SSSD cache attribute name and LDAP attribute name. In case only LDAP attribute name is specified, the attribute is saved to the cache verbatim. Using a custom SSSD attribute name might be required by environments that configure several SSSD domains with different LDAP schemas. </p>
 <p> Please note that several attribute names are reserved by SSSD, notably the &#8220;name&#8221; attribute. SSSD would report an error if any of the reserved attribute names is used as an extra attribute name. </p>
 <p> Examples: </p>
@@ -182,158 +182,158 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p> Default: not set</dl>
 <p> ldap_user_ssh_public_key (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the user&#8217;s SSH public keys. </p>
+<dd>The LDAP attribute that contains the user&#8217;s SSH public keys. </dd>
 <p> Default: sshPublicKey</dl>
 <p> ldap_force_upper_case_realm (boolean)</p>
 <dl>
-<dd>Some directory servers, for example Active Directory, might deliver the realm part of the UPN in lower case, which might cause the authentication to fail. Set this option to a non-zero value if you want to use an upper-case realm. </p>
+<dd>Some directory servers, for example Active Directory, might deliver the realm part of the UPN in lower case, which might cause the authentication to fail. Set this option to a non-zero value if you want to use an upper-case realm. </dd>
 <p> Default: false</dl>
 <p> ldap_enumeration_refresh_timeout (integer)</p>
 <dl>
-<dd>Specifies how many seconds SSSD has to wait before refreshing its cache of enumerated records. </p>
+<dd>Specifies how many seconds SSSD has to wait before refreshing its cache of enumerated records. </dd>
 <p> Default: 300</dl>
 <p> ldap_purge_cache_timeout (integer)</p>
 <dl>
-<dd>Determine how often to check the cache for inactive entries (such as groups with no members and users who have never logged in) and remove them to save space. </p>
+<dd>Determine how often to check the cache for inactive entries (such as groups with no members and users who have never logged in) and remove them to save space. </dd>
 <p> Setting this option to zero will disable the cache cleanup operation. Please note that if enumeration is enabled, the cleanup task is required in order to detect entries removed from the server and can&#8217;t be disabled. By default, the cleanup task will run every 3 hours with enumeration enabled. </p>
 <p> Default: 0 (disabled)</dl>
 <p> ldap_user_fullname (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user&#8217;s full name. </p>
+<dd>The LDAP attribute that corresponds to the user&#8217;s full name. </dd>
 <p> Default: cn</dl>
 <p> ldap_user_member_of (string)</p>
 <dl>
-<dd>The LDAP attribute that lists the user&#8217;s group memberships. </p>
+<dd>The LDAP attribute that lists the user&#8217;s group memberships. </dd>
 <p> Default: memberOf</dl>
 <p> ldap_user_authorized_service (string)</p>
 <dl>
-<dd>If access_provider=ldap and ldap_access_order=authorized_service, SSSD will use the presence of the authorizedService attribute in the user&#8217;s LDAP entry to determine access privilege. </p>
+<dd>If access_provider=ldap and ldap_access_order=authorized_service, SSSD will use the presence of the authorizedService attribute in the user&#8217;s LDAP entry to determine access privilege. </dd>
 <p> An explicit deny (!svc) is resolved first. Second, SSSD searches for explicit allow (svc) and finally for allow_all (*). </p>
 <p> Please note that the ldap_access_order configuration option <i>must</i> include &#8220;authorized_service&#8221; in order for the ldap_user_authorized_service option to work. </p>
 <p> Default: authorizedService</dl>
 <p> ldap_user_authorized_host (string)</p>
 <dl>
-<dd>If access_provider=ldap and ldap_access_order=host, SSSD will use the presence of the host attribute in the user&#8217;s LDAP entry to determine access privilege. </p>
+<dd>If access_provider=ldap and ldap_access_order=host, SSSD will use the presence of the host attribute in the user&#8217;s LDAP entry to determine access privilege. </dd>
 <p> An explicit deny (!host) is resolved first. Second, SSSD searches for explicit allow (host) and finally for allow_all (*). </p>
 <p> Please note that the ldap_access_order configuration option <i>must</i> include &#8220;host&#8221; in order for the ldap_user_authorized_host option to work. </p>
 <p> Default: host</dl>
 <p> ldap_user_certificate (string)</p>
 <dl>
-<dd>Name of the LDAP attribute containing the X509 certificate of the user. </p>
+<dd>Name of the LDAP attribute containing the X509 certificate of the user. </dd>
 <p> Default: no set in the general case, userCertificate;binary for IPA</dl>
 <p> ldap_user_email (string)</p>
 <dl>
-<dd>Name of the LDAP attribute containing the email address of the user. </p>
+<dd>Name of the LDAP attribute containing the email address of the user. </dd>
 <p> Default: mail</dl>
 <p> ldap_group_object_class (string)</p>
 <dl>
-<dd>The object class of a group entry in LDAP. </p>
+<dd>The object class of a group entry in LDAP. </dd>
 <p> Default: posixGroup</dl>
 <p> ldap_group_name (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the group name. </p>
+<dd>The LDAP attribute that corresponds to the group name. </dd>
 <p> Default: cn (rfc2307, rfc2307bis and IPA), sAMAccountName (AD)</dl>
 <p> ldap_group_gid_number (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the group&#8217;s id. </p>
+<dd>The LDAP attribute that corresponds to the group&#8217;s id. </dd>
 <p> Default: gidNumber</dl>
 <p> ldap_group_member (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the names of the group&#8217;s members. </p>
+<dd>The LDAP attribute that contains the names of the group&#8217;s members. </dd>
 <p> Default: memberuid (rfc2307) / member (rfc2307bis)</dl>
 <p> ldap_group_uuid (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the UUID/GUID of an LDAP group object. </p>
+<dd>The LDAP attribute that contains the UUID/GUID of an LDAP group object. </dd>
 <p> Default: not set in the general case, objectGUID for AD and ipaUniqueID for IPA</dl>
 <p> ldap_group_objectsid (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the objectSID of an LDAP group object. This is usually only necessary for ActiveDirectory servers. </p>
+<dd>The LDAP attribute that contains the objectSID of an LDAP group object. This is usually only necessary for ActiveDirectory servers. </dd>
 <p> Default: objectSid for ActiveDirectory, not set for other servers.</dl>
 <p> ldap_group_modify_timestamp (string)</p>
 <dl>
-<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </p>
+<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </dd>
 <p> Default: modifyTimestamp</dl>
 <p> ldap_group_type (integer)</p>
 <dl>
-<dd>The LDAP attribute that contains an integer value indicating the type of the group and maybe other flags. </p>
+<dd>The LDAP attribute that contains an integer value indicating the type of the group and maybe other flags. </dd>
 <p> This attribute is currently only used by the AD provider to determine if a group is a domain local groups and has to be filtered out for trusted domains. </p>
 <p> Default: groupType in the AD provider, othewise not set</dl>
 <p> ldap_group_external_member (string)</p>
 <dl>
-<dd>The LDAP attribute that references group members that are defined in an external domain. At the moment, only IPA&#8217;s external members are supported. </p>
+<dd>The LDAP attribute that references group members that are defined in an external domain. At the moment, only IPA&#8217;s external members are supported. </dd>
 <p> Default: ipaExternalMember in the IPA provider, otherwise unset.</dl>
 <p> ldap_group_nesting_level (integer)</p>
 <dl>
-<dd>If ldap_schema is set to a schema format that supports nested groups (e.g. RFC2307bis), then this option controls how many levels of nesting SSSD will follow. This option has no effect on the RFC2307 schema. </p>
+<dd>If ldap_schema is set to a schema format that supports nested groups (e.g. RFC2307bis), then this option controls how many levels of nesting SSSD will follow. This option has no effect on the RFC2307 schema. </dd>
 <p> Note: This option specifies the guaranteed level of nested groups to be processed for any lookup. However, nested groups beyond this limit <i>may be</i> returned if previous lookups already resolved the deeper nesting levels. Also, subsequent lookups for other groups may enlarge the result set for original lookup if re-queried. </p>
 <p> If ldap_group_nesting_level is set to 0 then no nested groups are processed at all. However, when connected to Active-Directory Server 2008 and later using &#8220;id_provider=ad&#8221; it is furthermore required to disable usage of Token-Groups by setting ldap_use_tokengroups to false in order to restrict group nesting. </p>
 <p> Default: 2</dl>
 <p> ldap_groups_use_matching_rule_in_chain</p>
 <dl>
-<dd>This option tells SSSD to take advantage of an Active Directory-specific feature which may speed up group lookup operations on deployments with complex or deep nested groups. </p>
+<dd>This option tells SSSD to take advantage of an Active Directory-specific feature which may speed up group lookup operations on deployments with complex or deep nested groups. </dd>
 <p> In most common cases, it is best to leave this option disabled. It generally only provides a performance increase on very complex nestings. </p>
 <p> If this option is enabled, SSSD will use it if it detects that the server supports it during initial connection. So &quot;True&quot; here essentially means &quot;auto-detect&quot;. </p>
 <p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[]<font SIZE="-2">[1]</font> for more details. </p>
 <p> Default: False</dl>
 <p> ldap_initgroups_use_matching_rule_in_chain</p>
 <dl>
-<dd>This option tells SSSD to take advantage of an Active Directory-specific feature which might speed up initgroups operations (most notably when dealing with complex or deep nested groups). </p>
+<dd>This option tells SSSD to take advantage of an Active Directory-specific feature which might speed up initgroups operations (most notably when dealing with complex or deep nested groups). </dd>
 <p> If this option is enabled, SSSD will use it if it detects that the server supports it during initial connection. So &quot;True&quot; here essentially means &quot;auto-detect&quot;. </p>
 <p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[]<font SIZE="-2">[1]</font> for more details. </p>
 <p> Default: False</dl>
 <p> ldap_use_tokengroups</p>
 <dl>
-<dd>This options enables or disables use of Token-Groups attribute when performing initgroup for users from Active Directory Server 2008 and later. </p>
+<dd>This options enables or disables use of Token-Groups attribute when performing initgroup for users from Active Directory Server 2008 and later. </dd>
 <p> Default: True for AD and IPA otherwise False.</dl>
 <p> ldap_netgroup_object_class (string)</p>
 <dl>
-<dd>The object class of a netgroup entry in LDAP. </p>
+<dd>The object class of a netgroup entry in LDAP. </dd>
 <p> In IPA provider, ipa_netgroup_object_class should be used instead. </p>
 <p> Default: nisNetgroup</dl>
 <p> ldap_netgroup_name (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the netgroup name. </p>
+<dd>The LDAP attribute that corresponds to the netgroup name. </dd>
 <p> In IPA provider, ipa_netgroup_name should be used instead. </p>
 <p> Default: cn</dl>
 <p> ldap_netgroup_member (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the names of the netgroup&#8217;s members. </p>
+<dd>The LDAP attribute that contains the names of the netgroup&#8217;s members. </dd>
 <p> In IPA provider, ipa_netgroup_member should be used instead. </p>
 <p> Default: memberNisNetgroup</dl>
 <p> ldap_netgroup_triple (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the (host, user, domain) netgroup triples. </p>
+<dd>The LDAP attribute that contains the (host, user, domain) netgroup triples. </dd>
 <p> This option is not available in IPA provider. </p>
 <p> Default: nisNetgroupTriple</dl>
 <p> ldap_netgroup_modify_timestamp (string)</p>
 <dl>
-<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </p>
+<dd>The LDAP attribute that contains timestamp of the last modification of the parent object. </dd>
 <p> This option is not available in IPA provider. </p>
 <p> Default: modifyTimestamp</dl>
 <p> ldap_service_object_class (string)</p>
 <dl>
-<dd>The object class of a service entry in LDAP. </p>
+<dd>The object class of a service entry in LDAP. </dd>
 <p> Default: ipService</dl>
 <p> ldap_service_name (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the name of service attributes and their aliases. </p>
+<dd>The LDAP attribute that contains the name of service attributes and their aliases. </dd>
 <p> Default: cn</dl>
 <p> ldap_service_port (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the port managed by this service. </p>
+<dd>The LDAP attribute that contains the port managed by this service. </dd>
 <p> Default: ipServicePort</dl>
 <p> ldap_service_proto (string)</p>
 <dl>
-<dd>The LDAP attribute that contains the protocols understood by this service. </p>
+<dd>The LDAP attribute that contains the protocols understood by this service. </dd>
 <p> Default: ipServiceProtocol</dl>
 <p> ldap_service_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
@@ -341,54 +341,54 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <p> ldap_search_timeout (integer)</p>
 <dl>
-<dd>Specifies the timeout (in seconds) that ldap searches are allowed to run before they are cancelled and cached results are returned (and offline mode is entered) </p>
+<dd>Specifies the timeout (in seconds) that ldap searches are allowed to run before they are cancelled and cached results are returned (and offline mode is entered) </dd>
 <p> Note: this option is subject to change in future versions of the SSSD. It will likely be replaced at some point by a series of timeouts for specific lookup types. </p>
 <p> Default: 6</dl>
 <p> ldap_enumeration_search_timeout (integer)</p>
 <dl>
-<dd>Specifies the timeout (in seconds) that ldap searches for user and group enumerations are allowed to run before they are cancelled and cached results are returned (and offline mode is entered) </p>
+<dd>Specifies the timeout (in seconds) that ldap searches for user and group enumerations are allowed to run before they are cancelled and cached results are returned (and offline mode is entered) </dd>
 <p> Default: 60</dl>
 <p> ldap_network_timeout (integer)</p>
 <dl>
-<dd>Specifies the timeout (in seconds) after which the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2)/<code><a href="/docs/linux/man/2-select/">select</a></code>(2) following a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) returns in case of no activity. </p>
+<dd>Specifies the timeout (in seconds) after which the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2)/<code><a href="/docs/linux/man/2-select/">select</a></code>(2) following a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) returns in case of no activity. </dd>
 <p> Default: 6</dl>
 <p> ldap_opt_timeout (integer)</p>
 <dl>
-<dd>Specifies a timeout (in seconds) after which calls to synchronous LDAP APIs will abort if no response is received. Also controls the timeout when communicating with the KDC in case of SASL bind, the timeout of an LDAP bind operation, password change extended operation and the StartTLS operation. </p>
+<dd>Specifies a timeout (in seconds) after which calls to synchronous LDAP APIs will abort if no response is received. Also controls the timeout when communicating with the KDC in case of SASL bind, the timeout of an LDAP bind operation, password change extended operation and the StartTLS operation. </dd>
 <p> Default: 6</dl>
 <p> ldap_connection_expire_timeout (integer)</p>
 <dl>
-<dd>Specifies a timeout (in seconds) that a connection to an LDAP server will be maintained. After this time, the connection will be re-established. If used in parallel with SASL/GSSAPI, the sooner of the two values (this value vs. the TGT lifetime) will be used. </p>
+<dd>Specifies a timeout (in seconds) that a connection to an LDAP server will be maintained. After this time, the connection will be re-established. If used in parallel with SASL/GSSAPI, the sooner of the two values (this value vs. the TGT lifetime) will be used. </dd>
 <p> Default: 900 (15 minutes)</dl>
 <p> ldap_page_size (integer)</p>
 <dl>
-<dd>Specify the number of records to retrieve from LDAP in a single request. Some LDAP servers enforce a maximum limit per-request. </p>
+<dd>Specify the number of records to retrieve from LDAP in a single request. Some LDAP servers enforce a maximum limit per-request. </dd>
 <p> Default: 1000</dl>
 <p> ldap_disable_paging (boolean)</p>
 <dl>
-<dd>Disable the LDAP paging control. This option should be used if the LDAP server reports that it supports the LDAP paging control in its RootDSE but it is not enabled or does not behave properly. </p>
+<dd>Disable the LDAP paging control. This option should be used if the LDAP server reports that it supports the LDAP paging control in its RootDSE but it is not enabled or does not behave properly. </dd>
 <p> Example: OpenLDAP servers with the paging control module installed on the server but not enabled will report it in the RootDSE but be unable to use it. </p>
 <p> Example: 389 DS has a bug where it can only support a one paging control at a time on a single connection. On busy clients, this can result in some requests being denied. </p>
 <p> Default: False</dl>
 <p> ldap_disable_range_retrieval (boolean)</p>
 <dl>
-<dd>Disable Active Directory range retrieval. </p>
+<dd>Disable Active Directory range retrieval. </dd>
 <p> Active Directory limits the number of members to be retrieved in a single lookup using the MaxValRange policy (which defaults to 1500 members). If a group contains more members, the reply would include an AD-specific range extension. This option disables parsing of the range extension, therefore large groups will appear as having no members. </p>
 <p> Default: False</dl>
 <p> ldap_sasl_minssf (integer)</p>
 <dl>
-<dd>When communicating with an LDAP server using SASL, specify the minimum security level necessary to establish the connection. The values of this option are defined by OpenLDAP. </p>
+<dd>When communicating with an LDAP server using SASL, specify the minimum security level necessary to establish the connection. The values of this option are defined by OpenLDAP. </dd>
 <p> Default: Use the system default (usually specified by ldap.conf)</dl>
 <p> ldap_deref_threshold (integer)</p>
 <dl>
-<dd>Specify the number of group members that must be missing from the internal cache in order to trigger a dereference lookup. If less members are missing, they are looked up individually. </p>
+<dd>Specify the number of group members that must be missing from the internal cache in order to trigger a dereference lookup. If less members are missing, they are looked up individually. </dd>
 <p> You can turn off dereference lookups completely by setting the value to 0. </p>
 <p> A dereference lookup is a means of fetching all group members in a single LDAP call. Different LDAP servers may implement different dereference methods. The currently supported servers are 389/RHDS, OpenLDAP and Active Directory. </p>
 <p> <i>Note:</i> If any of the search bases specifies a search filter, then the dereference lookup performance enhancement will be disabled regardless of this setting. </p>
 <p> Default: 10</dl>
 <p> ldap_tls_reqcert (string)</p>
 <dl>
-<dd>Specifies what checks to perform on server certificates in a TLS session, if any. It can be specified as one of the following values: </p>
+<dd>Specifies what checks to perform on server certificates in a TLS session, if any. It can be specified as one of the following values: </dd>
 <p> <i>never</i> = The client will not request or check any server certificate. </p>
 <p> <i>allow</i> = The server certificate is requested. If no certificate is provided, the session proceeds normally. If a bad certificate is provided, it will be ignored and the session proceeds normally. </p>
 <p> <i>try</i> = The server certificate is requested. If no certificate is provided, the session proceeds normally. If a bad certificate is provided, the session is immediately terminated. </p>
@@ -397,86 +397,86 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p> Default: hard</dl>
 <p> ldap_tls_cacert (string)</p>
 <dl>
-<dd>Specifies the file that contains certificates for all of the Certificate Authorities that <code>sssd</code> will recognize. </p>
+<dd>Specifies the file that contains certificates for all of the Certificate Authorities that <code>sssd</code> will recognize. </dd>
 <p> Default: use OpenLDAP defaults, typically in /etc/openldap/ldap.conf</dl>
 <p> ldap_tls_cacertdir (string)</p>
 <dl>
-<dd>Specifies the path of a directory that contains Certificate Authority certificates in separate individual files. Typically the file names need to be the hash of the certificate followed by &#8216;.0&#8217;. If available, <code>cacertdir_rehash</code> can be used to create the correct names. </p>
+<dd>Specifies the path of a directory that contains Certificate Authority certificates in separate individual files. Typically the file names need to be the hash of the certificate followed by &#8216;.0&#8217;. If available, <code>cacertdir_rehash</code> can be used to create the correct names. </dd>
 <p> Default: use OpenLDAP defaults, typically in /etc/openldap/ldap.conf</dl>
 <p> ldap_tls_cert (string)</p>
 <dl>
-<dd>Specifies the file that contains the certificate for the client&#8217;s key. </p>
+<dd>Specifies the file that contains the certificate for the client&#8217;s key. </dd>
 <p> Default: not set</dl>
 <p> ldap_tls_key (string)</p>
 <dl>
-<dd>Specifies the file that contains the client&#8217;s key. </p>
+<dd>Specifies the file that contains the client&#8217;s key. </dd>
 <p> Default: not set</dl>
 <p> ldap_tls_cipher_suite (string)</p>
 <dl>
-<dd>Specifies acceptable cipher suites. Typically this is a colon separated list. See <code><a href="/docs/linux/man/5-ldap-conf/">ldap.conf</a></code>(5) for format. </p>
+<dd>Specifies acceptable cipher suites. Typically this is a colon separated list. See <code><a href="/docs/linux/man/5-ldap-conf/">ldap.conf</a></code>(5) for format. </dd>
 <p> Default: use OpenLDAP defaults, typically in /etc/openldap/ldap.conf</dl>
 <p> ldap_id_use_start_tls (boolean)</p>
 <dl>
-<dd>Specifies that the id_provider connection must also use tls to protect the channel. </p>
+<dd>Specifies that the id_provider connection must also use tls to protect the channel. </dd>
 <p> Default: false</dl>
 <p> ldap_id_mapping (boolean)</p>
 <dl>
-<dd>Specifies that SSSD should attempt to map user and group IDs from the ldap_user_objectsid and ldap_group_objectsid attributes instead of relying on ldap_user_uid_number and ldap_group_gid_number. </p>
+<dd>Specifies that SSSD should attempt to map user and group IDs from the ldap_user_objectsid and ldap_group_objectsid attributes instead of relying on ldap_user_uid_number and ldap_group_gid_number. </dd>
 <p> Currently this feature supports only ActiveDirectory objectSID mapping. </p>
 <p> Default: false</dl>
 <p> ldap_min_id, ldap_max_id (interger)</p>
 <dl>
-<dd>In contrast to the SID based ID mapping which is used if ldap_id_mapping is set to true the allowed ID range for ldap_user_uid_number and ldap_group_gid_number is unbound. In a setup with sub/trusted-domains this might lead to ID collisions. To avoid collisions ldap_min_id and ldap_max_id can be set to restrict the allowed range for the IDs which are read directly from the server. Sub-domains can then pick other ranges to map IDs. </p>
+<dd>In contrast to the SID based ID mapping which is used if ldap_id_mapping is set to true the allowed ID range for ldap_user_uid_number and ldap_group_gid_number is unbound. In a setup with sub/trusted-domains this might lead to ID collisions. To avoid collisions ldap_min_id and ldap_max_id can be set to restrict the allowed range for the IDs which are read directly from the server. Sub-domains can then pick other ranges to map IDs. </dd>
 <p> Default: not set (both options are set to 0)</dl>
 <p> ldap_sasl_mech (string)</p>
 <dl>
-<dd>Specify the SASL mechanism to use. Currently only GSSAPI is tested and supported. </p>
+<dd>Specify the SASL mechanism to use. Currently only GSSAPI is tested and supported. </dd>
 <p> Default: not set</dl>
 <p> ldap_sasl_authid (string)</p>
 <dl>
-<dd>Specify the SASL authorization id to use. When GSSAPI is used, this represents the Kerberos principal used for authentication to the directory. This option can either contain the full principal (for example host/myhost [at] EXAMPLE.COM) or just the principal name (for example host/myhost). </p>
+<dd>Specify the SASL authorization id to use. When GSSAPI is used, this represents the Kerberos principal used for authentication to the directory. This option can either contain the full principal (for example host/myhost [at] EXAMPLE.COM) or just the principal name (for example host/myhost). </dd>
 <p> Default: host/hostname [at] REALM</dl>
 <p> ldap_sasl_realm (string)</p>
 <dl>
-<dd>Specify the SASL realm to use. When not specified, this option defaults to the value of krb5_realm. If the ldap_sasl_authid contains the realm as well, this option is ignored. </p>
+<dd>Specify the SASL realm to use. When not specified, this option defaults to the value of krb5_realm. If the ldap_sasl_authid contains the realm as well, this option is ignored. </dd>
 <p> Default: the value of krb5_realm.</dl>
 <p> ldap_sasl_canonicalize (boolean)</p>
 <dl>
-<dd>If set to true, the LDAP library would perform a reverse lookup to canonicalize the host name during a SASL bind. </p>
+<dd>If set to true, the LDAP library would perform a reverse lookup to canonicalize the host name during a SASL bind. </dd>
 <p> Default: false;</dl>
 <p> ldap_krb5_keytab (string)</p>
 <dl>
-<dd>Specify the keytab to use when using SASL/GSSAPI. </p>
+<dd>Specify the keytab to use when using SASL/GSSAPI. </dd>
 <p> Default: System keytab, normally /etc/krb5.keytab</dl>
 <p> ldap_krb5_init_creds (boolean)</p>
 <dl>
-<dd>Specifies that the id_provider should init Kerberos credentials (TGT). This action is performed only if SASL is used and the mechanism selected is GSSAPI. </p>
+<dd>Specifies that the id_provider should init Kerberos credentials (TGT). This action is performed only if SASL is used and the mechanism selected is GSSAPI. </dd>
 <p> Default: true</dl>
 <p> ldap_krb5_ticket_lifetime (integer)</p>
 <dl>
-<dd>Specifies the lifetime in seconds of the TGT if GSSAPI is used. </p>
+<dd>Specifies the lifetime in seconds of the TGT if GSSAPI is used. </dd>
 <p> Default: 86400 (24 hours)</dl>
 <p> krb5_server, krb5_backup_server (string)</p>
 <dl>
-<dd>Specifies the comma-separated list of IP addresses or hostnames of the Kerberos servers to which SSSD should connect in the order of preference. For more information on failover and server redundancy, see the &#8220;FAILOVER&#8221; section. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. If empty, service discovery is enabled &#8211; for more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </p>
+<dd>Specifies the comma-separated list of IP addresses or hostnames of the Kerberos servers to which SSSD should connect in the order of preference. For more information on failover and server redundancy, see the &#8220;FAILOVER&#8221; section. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. If empty, service discovery is enabled &#8211; for more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </dd>
 <p> When using service discovery for KDC or kpasswd servers, SSSD first searches for DNS entries that specify _udp as the protocol and falls back to _tcp if none are found. </p>
 <p> This option was named &#8220;krb5_kdcip&#8221; in earlier releases of SSSD. While the legacy name is recognized for the time being, users are advised to migrate their config files to use &#8220;krb5_server&#8221; instead.</dl>
 <p> krb5_realm (string)</p>
 <dl>
-<dd>Specify the Kerberos REALM (for SASL/GSSAPI auth). </p>
+<dd>Specify the Kerberos REALM (for SASL/GSSAPI auth). </dd>
 <p> Default: System defaults, see /etc/krb5.conf</dl>
 <p> krb5_canonicalize (boolean)</p>
 <dl>
-<dd>Specifies if the host principal should be canonicalized when connecting to LDAP server. This feature is available with MIT Kerberos &gt;= 1.7 </p>
+<dd>Specifies if the host principal should be canonicalized when connecting to LDAP server. This feature is available with MIT Kerberos &gt;= 1.7 </dd>
 <p> Default: false</dl>
 <p> krb5_use_kdcinfo (boolean)</p>
 <dl>
-<dd>Specifies if the SSSD should instruct the Kerberos libraries what realm and which KDCs to use. This option is on by default, if you disable it, you need to configure the Kerberos library using the <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) configuration file. </p>
+<dd>Specifies if the SSSD should instruct the Kerberos libraries what realm and which KDCs to use. This option is on by default, if you disable it, you need to configure the Kerberos library using the <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) configuration file. </dd>
 <p> See the <code><a href="/docs/linux/man/8-sssd_krb5_locator_plugin/">sssd_krb5_locator_plugin</a></code>(8) manual page for more information on the locator plugin. </p>
 <p> Default: true</dl>
 <p> ldap_pwd_policy (string)</p>
 <dl>
-<dd>Select the policy to evaluate the password expiration on the client side. The following values are allowed: </p>
+<dd>Select the policy to evaluate the password expiration on the client side. The following values are allowed: </dd>
 <p> <i>none</i> &#8211; No evaluation on the client side. This option cannot disable server-side password policies. </p>
 <p> <i>shadow</i> &#8211; Use <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) style attributes to evaluate if the password has expired. </p>
 <p> <i>mit_kerberos</i> &#8211; Use the attributes used by MIT Kerberos to determine if the password has expired. Use chpass_provider=krb5 to update these attributes when the password is changed. </p>
@@ -484,37 +484,37 @@ description: "sssd-ldap – SSSD LDAP provider"
 <p> <i>Note</i>: if a password policy is configured on server side, it always takes precedence over policy set with this option.</dl>
 <p> ldap_referrals (boolean)</p>
 <dl>
-<dd>Specifies whether automatic referral chasing should be enabled. </p>
+<dd>Specifies whether automatic referral chasing should be enabled. </dd>
 <p> Please note that sssd only supports referral chasing when it is compiled with OpenLDAP version 2.4.13 or higher. </p>
 <p> Chasing referrals may incur a performance penalty in environments that use them heavily, a notable example is Microsoft Active Directory. If your setup does not in fact require the use of referrals, setting this option to false might bring a noticeable performance improvement. </p>
 <p> Default: true</dl>
 <p> ldap_dns_service_name (string)</p>
 <dl>
-<dd>Specifies the service name to use when service discovery is enabled. </p>
+<dd>Specifies the service name to use when service discovery is enabled. </dd>
 <p> Default: ldap</dl>
 <p> ldap_chpass_dns_service_name (string)</p>
 <dl>
-<dd>Specifies the service name to use to find an LDAP server which allows password changes when service discovery is enabled. </p>
+<dd>Specifies the service name to use to find an LDAP server which allows password changes when service discovery is enabled. </dd>
 <p> Default: not set, i.e. service discovery is disabled</dl>
 <p> ldap_chpass_update_last_change (bool)</p>
 <dl>
-<dd>Specifies whether to update the ldap_user_shadow_last_change attribute with days since the Epoch after a password change operation. </p>
+<dd>Specifies whether to update the ldap_user_shadow_last_change attribute with days since the Epoch after a password change operation. </dd>
 <p> Default: False</dl>
 <p> ldap_access_filter (string)</p>
 <dl>
-<dd>If using access_provider = ldap and ldap_access_order = filter (default), this option is mandatory. It specifies an LDAP search filter criteria that must be met for the user to be granted access on this host. If access_provider = ldap, ldap_access_order = filter and this option is not set, it will result in all users being denied access. Use access_provider = permit to change this default behavior. Please note that this filter is applied on the LDAP user entry only and thus filtering based on nested groups may not work (e.g. memberOf attribute on AD entries points only to direct parents). If filtering based on nested groups is required, please see <code><a href="/docs/linux/man/5-sssd-simple/">sssd-simple</a></code>(5). </p>
+<dd>If using access_provider = ldap and ldap_access_order = filter (default), this option is mandatory. It specifies an LDAP search filter criteria that must be met for the user to be granted access on this host. If access_provider = ldap, ldap_access_order = filter and this option is not set, it will result in all users being denied access. Use access_provider = permit to change this default behavior. Please note that this filter is applied on the LDAP user entry only and thus filtering based on nested groups may not work (e.g. memberOf attribute on AD entries points only to direct parents). If filtering based on nested groups is required, please see <code><a href="/docs/linux/man/5-sssd-simple/">sssd-simple</a></code>(5). </dd>
 <p> Example: </p>
 <dl>
 <dd>
 <pre>access_provider = ldap
 ldap_access_filter = (employeeType=admin)</pre>
-</dl>
+</dd></dl>
 <p> This example means that access to this host is restricted to users whose employeeType attribute is set to &quot;admin&quot;. </p>
 <p> Offline caching for this feature is limited to determining whether the user&#8217;s last online login was granted access permission. If they were granted access during their last login, they will continue to be granted access while offline and vice-versa. </p>
 <p> Default: Empty</dl>
 <p> ldap_account_expire_policy (string)</p>
 <dl>
-<dd>With this option a client side evaluation of access control attributes can be enabled. </p>
+<dd>With this option a client side evaluation of access control attributes can be enabled. </dd>
 <p> Please note that it is always recommended to use server side access control, i.e. the LDAP server should deny the bind request with a suitable error code even if the password is correct. </p>
 <p> The following values are allowed: </p>
 <p> <i>shadow</i>: use the value of ldap_user_shadow_expire to determine if the account is expired. </p>
@@ -525,7 +525,7 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Default: Empty</dl>
 <p> ldap_access_order (string)</p>
 <dl>
-<dd>Comma separated list of access control options. Allowed values are: </p>
+<dd>Comma separated list of access control options. Allowed values are: </dd>
 <p> <i>filter</i>: use ldap_access_filter </p>
 <p> <i>lockout</i>: use account locking. If set, this option denies access in case that ldap attribute &#8216;pwdAccountLockedTime&#8217; is present and has value of &#8216;000001010000Z&#8217;. Please see the option ldap_pwdlockout_dn. Please note that &#8216;access_provider = ldap&#8217; must be set for this feature to work. </p>
 <p> <i> Please note that this option is superseded by the </i><i>&#8220;ppolicy&#8221;</i><i> option and might be removed in a future release. </i> </p>
@@ -541,12 +541,12 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Please note that it is a configuration error if a value is used more than once.</dl>
 <p> ldap_pwdlockout_dn (string)</p>
 <dl>
-<dd>This option specifies the DN of password policy entry on LDAP server. Please note that absence of this option in sssd.conf in case of enabled account lockout checking will yield access denied as ppolicy attributes on LDAP server cannot be checked properly. </p>
+<dd>This option specifies the DN of password policy entry on LDAP server. Please note that absence of this option in sssd.conf in case of enabled account lockout checking will yield access denied as ppolicy attributes on LDAP server cannot be checked properly. </dd>
 <p> Example: cn=ppolicy,ou=policies,dc=example,dc=com </p>
 <p> Default: cn=ppolicy,ou=policies,$ldap_search_base</dl>
 <p> ldap_deref (string)</p>
 <dl>
-<dd>Specifies how alias dereferencing is done when performing a search. The following options are allowed: </p>
+<dd>Specifies how alias dereferencing is done when performing a search. The following options are allowed: </dd>
 <p> <i>never</i>: Aliases are never dereferenced. </p>
 <p> <i>searching</i>: Aliases are dereferenced in subordinates of the base object, but not in locating the base object of the search. </p>
 <p> <i>finding</i>: Aliases are only dereferenced when locating the base object of the search. </p>
@@ -554,95 +554,95 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Default: Empty (this is handled as <i>never</i> by the LDAP client libraries)</dl>
 <p> ldap_rfc2307_fallback_to_local_users (boolean)</p>
 <dl>
-<dd>Allows to retain local users as members of an LDAP group for servers that use the RFC2307 schema. </p>
+<dd>Allows to retain local users as members of an LDAP group for servers that use the RFC2307 schema. </dd>
 <p> In some environments where the RFC2307 schema is used, local users are made members of LDAP groups by adding their names to the memberUid attribute. The self-consistency of the domain is compromised when this is done, so SSSD would normally remove the &quot;missing&quot; users from the cached group memberships as soon as nsswitch tries to fetch information about the user via getpw*() or initgroups() calls. </p>
 <p> This option falls back to checking if local users are referenced, and caches them so that later initgroups() calls will augment the local users with the additional LDAP groups. </p>
 <p> Default: false</dl>
 <p> wildcart_limit (integer)</p>
 <dl>
-<dd>Specifies an upper limit on the number of entries that are downloaded during a wildcard lookup. </p>
+<dd>Specifies an upper limit on the number of entries that are downloaded during a wildcard lookup. </dd>
 <p> At the moment, only the InfoPipe responder supports wildcard lookups. </p>
 <p> Default: 1000 (often the size of one page)</dl>
 <h2>Sudo Options</h2>
 <p>The detailed instructions for configuration of sudo_provider are in the manual page <code><a href="/docs/linux/man/5-sssd-sudo/">sssd-sudo</a></code>(5). </p>
 <p> ldap_sudorule_object_class (string)</p>
 <dl>
-<dd>The object class of a sudo rule entry in LDAP. </p>
+<dd>The object class of a sudo rule entry in LDAP. </dd>
 <p> Default: sudoRole</dl>
 <p> ldap_sudorule_name (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the sudo rule name. </p>
+<dd>The LDAP attribute that corresponds to the sudo rule name. </dd>
 <p> Default: cn</dl>
 <p> ldap_sudorule_command (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the command name. </p>
+<dd>The LDAP attribute that corresponds to the command name. </dd>
 <p> Default: sudoCommand</dl>
 <p> ldap_sudorule_host (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the host name (or host IP address, host IP network, or host netgroup) </p>
+<dd>The LDAP attribute that corresponds to the host name (or host IP address, host IP network, or host netgroup) </dd>
 <p> Default: sudoHost</dl>
 <p> ldap_sudorule_user (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user name (or UID, group name or user&#8217;s netgroup) </p>
+<dd>The LDAP attribute that corresponds to the user name (or UID, group name or user&#8217;s netgroup) </dd>
 <p> Default: sudoUser</dl>
 <p> ldap_sudorule_option (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the sudo options. </p>
+<dd>The LDAP attribute that corresponds to the sudo options. </dd>
 <p> Default: sudoOption</dl>
 <p> ldap_sudorule_runasuser (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the user name that commands may be run as. </p>
+<dd>The LDAP attribute that corresponds to the user name that commands may be run as. </dd>
 <p> Default: sudoRunAsUser</dl>
 <p> ldap_sudorule_runasgroup (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the group name or group GID that commands may be run as. </p>
+<dd>The LDAP attribute that corresponds to the group name or group GID that commands may be run as. </dd>
 <p> Default: sudoRunAsGroup</dl>
 <p> ldap_sudorule_notbefore (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the start date/time for when the sudo rule is valid. </p>
+<dd>The LDAP attribute that corresponds to the start date/time for when the sudo rule is valid. </dd>
 <p> Default: sudoNotBefore</dl>
 <p> ldap_sudorule_notafter (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the expiration date/time, after which the sudo rule will no longer be valid. </p>
+<dd>The LDAP attribute that corresponds to the expiration date/time, after which the sudo rule will no longer be valid. </dd>
 <p> Default: sudoNotAfter</dl>
 <p> ldap_sudorule_order (string)</p>
 <dl>
-<dd>The LDAP attribute that corresponds to the ordering index of the rule. </p>
+<dd>The LDAP attribute that corresponds to the ordering index of the rule. </dd>
 <p> Default: sudoOrder</dl>
 <p> ldap_sudo_full_refresh_interval (integer)</p>
 <dl>
-<dd>How many seconds SSSD will wait between executing a full refresh of sudo rules (which downloads all rules that are stored on the server). </p>
+<dd>How many seconds SSSD will wait between executing a full refresh of sudo rules (which downloads all rules that are stored on the server). </dd>
 <p> The value must be greater than <i>ldap_sudo_smart_refresh_interval </i> </p>
 <p> Default: 21600 (6 hours)</dl>
 <p> ldap_sudo_smart_refresh_interval (integer)</p>
 <dl>
-<dd>How many seconds SSSD has to wait before executing a smart refresh of sudo rules (which downloads all rules that have USN higher than the highest USN of cached rules). </p>
+<dd>How many seconds SSSD has to wait before executing a smart refresh of sudo rules (which downloads all rules that have USN higher than the highest USN of cached rules). </dd>
 <p> If USN attributes are not supported by the server, the modifyTimestamp attribute is used instead. </p>
 <p> Default: 900 (15 minutes)</dl>
 <p> ldap_sudo_use_host_filter (boolean)</p>
 <dl>
-<dd>If true, SSSD will download only rules that are applicable to this machine (using the IPv4 or IPv6 host/network addresses and hostnames). </p>
+<dd>If true, SSSD will download only rules that are applicable to this machine (using the IPv4 or IPv6 host/network addresses and hostnames). </dd>
 <p> Default: true</dl>
 <p> ldap_sudo_hostnames (string)</p>
 <dl>
-<dd>Space separated list of hostnames or fully qualified domain names that should be used to filter the rules. </p>
+<dd>Space separated list of hostnames or fully qualified domain names that should be used to filter the rules. </dd>
 <p> If this option is empty, SSSD will try to discover the hostname and the fully qualified domain name automatically. </p>
 <p> If <i>ldap_sudo_use_host_filter</i> is <i>false</i> then this option has no effect. </p>
 <p> Default: not specified</dl>
 <p> ldap_sudo_ip (string)</p>
 <dl>
-<dd>Space separated list of IPv4 or IPv6 host/network addresses that should be used to filter the rules. </p>
+<dd>Space separated list of IPv4 or IPv6 host/network addresses that should be used to filter the rules. </dd>
 <p> If this option is empty, SSSD will try to discover the addresses automatically. </p>
 <p> If <i>ldap_sudo_use_host_filter</i> is <i>false</i> then this option has no effect. </p>
 <p> Default: not specified</dl>
 <p> ldap_sudo_include_netgroups (boolean)</p>
 <dl>
-<dd>If true then SSSD will download every rule that contains a netgroup in sudoHost attribute. </p>
+<dd>If true then SSSD will download every rule that contains a netgroup in sudoHost attribute. </dd>
 <p> If <i>ldap_sudo_use_host_filter</i> is <i>false</i> then this option has no effect. </p>
 <p> Default: true</dl>
 <p> ldap_sudo_include_regexp (boolean)</p>
 <dl>
-<dd>If true then SSSD will download every rule that contains a wildcard in sudoHost attribute. </p>
+<dd>If true then SSSD will download every rule that contains a wildcard in sudoHost attribute. </dd>
 <p> If <i>ldap_sudo_use_host_filter</i> is <i>false</i> then this option has no effect. </p>
 <p> Default: true</dl>
 <p> This manual page only describes attribute name mapping. For detailed explanation of sudo related attribute semantics, see <code><a href="/docs/linux/man/5-sudoers-ldap/">sudoers.ldap</a></code>(5)</p>
@@ -650,39 +650,39 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p>Some of the defaults for the parameters below are dependent on the LDAP schema. </p>
 <p> ldap_autofs_map_master_name (string)</p>
 <dl>
-<dd>The name of the automount master map in LDAP. </p>
+<dd>The name of the automount master map in LDAP. </dd>
 <p> Default: auto.master</dl>
 <p> ldap_autofs_map_object_class (string)</p>
 <dl>
-<dd>The object class of an automount map entry in LDAP. </p>
+<dd>The object class of an automount map entry in LDAP. </dd>
 <p> Default: nisMap (rfc2307, autofs_provider=ad), otherwise automountMap</dl>
 <p> ldap_autofs_map_name (string)</p>
 <dl>
-<dd>The name of an automount map entry in LDAP. </p>
+<dd>The name of an automount map entry in LDAP. </dd>
 <p> Default: nisMapName (rfc2307, autofs_provider=ad), otherwise automountMapName</dl>
 <p> ldap_autofs_entry_object_class (string)</p>
 <dl>
-<dd>The object class of an automount entry in LDAP. The entry usually corresponds to a mount point. </p>
+<dd>The object class of an automount entry in LDAP. The entry usually corresponds to a mount point. </dd>
 <p> Default: nisObject (rfc2307, autofs_provider=ad), otherwise automount</dl>
 <p> ldap_autofs_entry_key (string)</p>
 <dl>
-<dd>The key of an automount entry in LDAP. The entry usually corresponds to a mount point. </p>
+<dd>The key of an automount entry in LDAP. The entry usually corresponds to a mount point. </dd>
 <p> Default: cn (rfc2307, autofs_provider=ad), otherwise automountKey</dl>
 <p> ldap_autofs_entry_value (string)</p>
 <dl>
-<dd>The key of an automount entry in LDAP. The entry usually corresponds to a mount point. </p>
+<dd>The key of an automount entry in LDAP. The entry usually corresponds to a mount point. </dd>
 <p> Default: nisMapEntry (rfc2307, autofs_provider=ad), otherwise automountInformation</dl>
 <p> Please note that the automounter only reads the master map on startup, so if any autofs-related changes are made to the sssd.conf, you typically also need to restart the automounter daemon after restarting the SSSD.</p>
 <h2>Advanced Options</h2>
 <p>These options are supported by LDAP domains, but they should be used with caution. Please include them in your configuration only if you know what you are doing. </p>
 <p> ldap_netgroup_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
@@ -690,12 +690,12 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <p> ldap_user_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
@@ -703,29 +703,29 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <p> ldap_group_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
 <p> Default: the value of <i>ldap_search_base</i> </p>
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> If the option &#8220;ldap_use_tokengroups&#8221; is enabled. The searches against Active Directory will not be restricted and return all groups memberships, even with no gid mapping. It is recommended to disable this feature, if group names are not being displayed correctly. </p>
 </dl>
 <p> ldap_sudo_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
@@ -733,12 +733,12 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <p> ldap_autofs_search_base (string)</p>
 <dl>
-<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </p>
+<dd>An optional base DN, search scope and LDAP filter to restrict LDAP searches for this attribute type. </dd>
 <p> syntax: </p>
 <dl>
 <dd>
 <pre>search_base[?scope?[filter][?search_base?scope?[filter]]*]</pre>
-</dl>
+</dd></dl>
 <p> The scope can be one of &quot;base&quot;, &quot;onelevel&quot; or &quot;subtree&quot;. The scope functions as specified in section 4.5.1.2 of <a rel="nofollow" href="http://tools.ietf.org/html/rfc4511">http://tools.ietf.org/html/rfc4511</a> </p>
 <p> The filter must be a valid LDAP search filter as specified by <a rel="nofollow" href="http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a> </p>
 <p> For examples of this syntax, please refer to the &#8220;ldap_search_base&#8221; examples section. </p>
@@ -768,13 +768,13 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> NOTE: When ID-mapping is enabled, the uidNumber and gidNumber attributes are ignored. This is to avoid the possibility of conflicts between automatically-assigned and manually-assigned values. If you need to use manually-assigned values, ALL values must be manually-assigned. </p>
 <p> Please note that changing the ID mapping related configuration options will cause user and group IDs to change. At the moment, SSSD does not support changing IDs, so the SSSD database must be removed. Because cached passwords are also stored in the database, removing the database should only be performed while the authentication servers are reachable, otherwise users might get locked out. In order to cache the password, an authentication must be performed. It is not sufficient to use <code><a href="/docs/linux/man/8-sss_cache/">sss_cache</a></code>(8) to remove the database, rather the process consists of: </p>
 <dl>
-<dd>&bull; Making sure the remote servers are reachable</dl>
+<dd>&bull; Making sure the remote servers are reachable</dd></dl>
 <dl>
-<dd>&bull; Stopping the SSSD service</dl>
+<dd>&bull; Stopping the SSSD service</dd></dl>
 <dl>
-<dd>&bull; Removing the database</dl>
+<dd>&bull; Removing the database</dd></dl>
 <dl>
-<dd>&bull; Starting the SSSD service</dl>
+<dd>&bull; Starting the SSSD service</dd></dl>
 <p> Moreover, as the change of IDs might necessitate the adjustment of other system properties such as file and directory ownership, it&#8217;s advisable to plan ahead and test the ID mapping configuration thoroughly.</p>
 <h3>Mapping Algorithm</h3>
 <p>Active Directory provides an objectSID for every user and group object in the directory. This objectSID can be broken up into components that represent the Active Directory domain identity and the relative identifier (RID) of the user or group object. </p>
@@ -788,44 +788,44 @@ ldap_access_filter = (employeeType=admin)</pre>
 <dd>
 <pre>ldap_id_mapping = True
 ldap_schema = ad</pre>
-</dl>
+</dd></dl>
 <p> The default configuration results in configuring 10,000 slices, each capable of holding up to 200,000 IDs, starting from 200,000 and going up to 2,000,200,000. This should be sufficient for most deployments. </p>
 <p> <font SIZE="+1"> <code>Advanced Configuration</code></p>
 <dl>
-<dd>ldap_idmap_range_min (integer)</p>
+<dd>ldap_idmap_range_min (integer)</dd>
 <dl>
-<dd>Specifies the lower bound of the range of POSIX IDs to use for mapping Active Directory user and group SIDs. </p>
+<dd>Specifies the lower bound of the range of POSIX IDs to use for mapping Active Directory user and group SIDs. </dd>
 <p> NOTE: This option is different from &#8220;min_id&#8221; in that &#8220;min_id&#8221; acts to filter the output of requests to this domain, whereas this option controls the range of ID assignment. This is a subtle distinction, but the good general advice would be to have &#8220;min_id&#8221; be less-than or equal to &#8220;ldap_idmap_range_min&#8221; </p>
 <p> Default: 200000</dl>
 <p> ldap_idmap_range_max (integer)</p>
 <dl>
-<dd>Specifies the upper bound of the range of POSIX IDs to use for mapping Active Directory user and group SIDs. </p>
+<dd>Specifies the upper bound of the range of POSIX IDs to use for mapping Active Directory user and group SIDs. </dd>
 <p> NOTE: This option is different from &#8220;max_id&#8221; in that &#8220;max_id&#8221; acts to filter the output of requests to this domain, whereas this option controls the range of ID assignment. This is a subtle distinction, but the good general advice would be to have &#8220;max_id&#8221; be greater-than or equal to &#8220;ldap_idmap_range_max&#8221; </p>
 <p> Default: 2000200000</dl>
 <p> ldap_idmap_range_size (integer)</p>
 <dl>
-<dd>Specifies the number of IDs available for each slice. If the range size does not divide evenly into the min and max values, it will create as many complete slices as it can. </p>
+<dd>Specifies the number of IDs available for each slice. If the range size does not divide evenly into the min and max values, it will create as many complete slices as it can. </dd>
 <p> NOTE: The value of this option must be at least as large as the highest user RID planned for use on the Active Directory server. User lookups and login will fail for any user whose RID is greater than this value. </p>
 <p> For example, if your most recently-added Active Directory user has objectSid=S-1-5-21-2153326666-2176343378-3404031434-1107, &#8220;ldap_idmap_range_size&#8221; must be at least 1108 as range size is equal to maximal SID minus minimal SID plus one (e.g. 1108 = 1107 &#8211; 0 + 1). </p>
 <p> It is important to plan ahead for future expansion, as changing this value will result in changing all of the ID mappings on the system, leading to users with different local IDs than they previously had. </p>
 <p> Default: 200000</dl>
 <p> ldap_idmap_default_domain_sid (string)</p>
 <dl>
-<dd>Specify the domain SID of the default domain. This will guarantee that this domain will always be assigned to slice zero in the ID map, bypassing the murmurhash algorithm described above. </p>
+<dd>Specify the domain SID of the default domain. This will guarantee that this domain will always be assigned to slice zero in the ID map, bypassing the murmurhash algorithm described above. </dd>
 <p> Default: not set</dl>
 <p> ldap_idmap_default_domain (string)</p>
 <dl>
-<dd>Specify the name of the default domain. </p>
+<dd>Specify the name of the default domain. </dd>
 <p> Default: not set</dl>
 <p> ldap_idmap_autorid_compat (boolean)</p>
 <dl>
-<dd>Changes the behavior of the ID-mapping algorithm to behave more similarly to winbind&#8217;s &#8220;idmap_autorid&#8221; algorithm. </p>
+<dd>Changes the behavior of the ID-mapping algorithm to behave more similarly to winbind&#8217;s &#8220;idmap_autorid&#8221; algorithm. </dd>
 <p> When this option is configured, domains will be allocated starting with slice zero and increasing monatomically with each additional domain. </p>
 <p> NOTE: This algorithm is non-deterministic (it depends on the order that users and groups are requested). If this mode is required for compatibility with machines running winbind, it is recommended to also use the &#8220;ldap_idmap_default_domain_sid&#8221; option to guarantee that at least one domain is consistently allocated to slice zero. </p>
 <p> Default: False</dl>
 <p> ldap_idmap_helper_table_size (integer)</p>
 <dl>
-<dd>Maximal number of secondary slices that is tried when performing mapping from UNIX id to SID. </p>
+<dd>Maximal number of secondary slices that is tried when performing mapping from UNIX id to SID. </dd>
 <p> Note: Additional secondary slices might be generated when SID is being mapped to UNIX id and RID part of SID is out of range for secondary slices generated so far. If value of ldap_idmap_helper_table_size is equal to 0 then no additional secondary slices are generated. </p>
 <p> Default: 10</dl>
 </dl>
@@ -834,17 +834,17 @@ ldap_schema = ad</pre>
 <p>SSSD supports to look up the names of Well-Known SIDs, i.e. SIDs with a special hardcoded meaning. Since the generic users and groups related to those Well-Known SIDs have no equivalent in a Linux/UNIX environment no POSIX IDs are available for those objects. </p>
 <p> The SID name space is organized in authorities which can be seen as different domains. The authorities for the Well-Known SIDs are </p>
 <dl>
-<dd>&bull; Null Authority</dl>
+<dd>&bull; Null Authority</dd></dl>
 <dl>
-<dd>&bull; World Authority</dl>
+<dd>&bull; World Authority</dd></dl>
 <dl>
-<dd>&bull; Local Authority</dl>
+<dd>&bull; Local Authority</dd></dl>
 <dl>
-<dd>&bull; Creator Authority</dl>
+<dd>&bull; Creator Authority</dd></dl>
 <dl>
-<dd>&bull; NT Authority</dl>
+<dd>&bull; NT Authority</dd></dl>
 <dl>
-<dd>&bull; Built-in</dl>
+<dd>&bull; Built-in</dd></dl>
 <p> The capitalized version of these names are used as domain names when returning the fully qualified name of a Well-Known SID. </p>
 <p> Since some utilities allow to modify SID based access control information with the help of a name instead of using the SID directly SSSD supports to look up the SID by the name as well. To avoid collisions only the fully qualified names can be used to look up Well-Known SIDs. As a result the domain names &#8220;NULL AUTHORITY&#8221;, &#8220;WORLD AUTHORITY&#8221;, &#8221; LOCAL AUTHORITY&#8221;, &#8220;CREATOR AUTHORITY&#8221;, &#8220;NT AUTHORITY&#8221; and &#8220;BUILTIN&#8221; should not be used as domain names in sssd.conf.</p>
 <h2>Example</h2>
@@ -858,7 +858,7 @@ ldap_uri = <a href="ldap://ldap.mydomain.org">ldap://ldap.mydomain.org</a>
 ldap_search_base = dc=mydomain,dc=org
 ldap_tls_reqcert = demand
 cache_credentials = true</pre>
-</dl>
+</dd></dl>
 <h2>Ldap Access Filter Example</h2>
 <p>The following example assumes that SSSD is correctly configured and to use the ldap_access_order=lockout. </p>
 <dl>
@@ -873,7 +873,7 @@ ldap_uri = <a href="ldap://ldap.mydomain.org">ldap://ldap.mydomain.org</a>
 ldap_search_base = dc=mydomain,dc=org
 ldap_tls_reqcert = demand
 cache_credentials = true</pre>
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>The descriptions of some of the configuration options in this manual page are based on the <code><a href="/docs/linux/man/5-ldap-conf/">ldap.conf</a></code>(5) manual page from the OpenLDAP 2.4 distribution.</p>
 <h2>See Also</h2>
@@ -882,7 +882,8 @@ cache_credentials = true</pre>
 <p><code>The SSSD upstream &#8211; <a rel="nofollow" href="https://pagure.io/SSSD/sssd/">https://pagure.io/SSSD/sssd/</a></code></p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>MSDN(TM) documentation</p>
+<dt> 1.</dt>
+<dd>MSDN(TM) documentation</dd>
 <dl>
-<dd><a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa746475%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/aa746475%28v=vs.85%29.aspx</a></dl>
+<dd><a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa746475%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/aa746475%28v=vs.85%29.aspx</a></dd></dl>
+</dl>

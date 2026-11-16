@@ -18,7 +18,7 @@ description: "dggesx.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGESX computes for a pair of N-by-N real nonsymmetric matrices
  (A,B), the generalized eigenvalues, the real Schur form (S,T), and,
@@ -49,11 +49,11 @@ description: "dggesx.f –"
  and the pair of corresponding 2-by-2 blocks in S and T will have a
  complex conjugate pair of generalized eigenvalues.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>JOBVSL</i> </p>
+</dt><dd> <i>JOBVSL</i> </dd>
 <pre>
           JOBVSL is CHARACTER*1
           = 'N':  do not compute the left Schur vectors;
@@ -271,18 +271,18 @@ description: "dggesx.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   An approximate (asymptotic) bound on the average absolute error of
   the selected eigenvalues is
@@ -292,7 +292,8 @@ description: "dggesx.f –"
        EPS * norm((A, B)) / RCONDV( 2 ).
   See LAPACK User's Guide, section 4.11 for more information.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 363 of file dggesx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

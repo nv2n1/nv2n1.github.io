@@ -57,14 +57,14 @@ description: "quota_selinux – Security Enhanced Linux Policy for the quota pro
 <p> <code>quota_db_t</code> </p>
 <p> &#8211; Set files with the quota_db_t type, if you want to treat the files as quota database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/a?quota.(user|group), /etc/a?quota.(user|group), /var/a?quota.(user|group), /boot/a?quota.(user|group), /var/spool/(.*/)?a?quota.(user|group), /var/spool/cron/a?quota.(user|group), /var/lib/openshift/a?quota.(user|group), /var/lib/stickshift/a?quota.(user|group), /home/[^/]+/a?quota.(user|group), /home/a?quota.(user|group) </p>
+<dt>Paths:</dt>
+<dd>/a?quota.(user|group), /etc/a?quota.(user|group), /var/a?quota.(user|group), /boot/a?quota.(user|group), /var/spool/(.*/)?a?quota.(user|group), /var/spool/cron/a?quota.(user|group), /var/lib/openshift/a?quota.(user|group), /var/lib/stickshift/a?quota.(user|group), /home/[^/]+/a?quota.(user|group), /home/a?quota.(user|group) </dd>
 </dl>
 <p> <code>quota_exec_t</code> </p>
 <p> &#8211; Set files with the quota_exec_t type, if you want to transition an executable to the quota_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/quota(check|on), /usr/sbin/quota(check|on), /usr/sbin/convertquota </p>
+<dt>Paths:</dt>
+<dd>/sbin/quota(check|on), /usr/sbin/quota(check|on), /usr/sbin/convertquota </dd>
 </dl>
 <p> <code>quota_flag_t</code> </p>
 <p> &#8211; Set files with the quota_flag_t type, if you want to treat the files as quota flag data. </p>

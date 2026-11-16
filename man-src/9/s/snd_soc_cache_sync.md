@@ -14,7 +14,7 @@ description: "snd_soc_cache_sync – Sync the register cache with the hardware"
 <p><i>codec</i></p>
 <dl>
 <dd>
-<dd>CODEC to sync</dl>
+</dd><dd>CODEC to sync</dd></dl>
 <h2>Note</h2>
 <p>This function will call <code>regcache_sync</code></p>
 <h2>Copyright</h2>

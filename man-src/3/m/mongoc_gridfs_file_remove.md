@@ -14,11 +14,11 @@ mongoc_gridfs_file_remove (mongoc_gridfs_file_t *file,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Removes <code>file</code> and its data chunks from the MongoDB server. </p>
 <h2>Returns</h2>

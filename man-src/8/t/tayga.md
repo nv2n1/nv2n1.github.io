@@ -18,20 +18,20 @@ description: "tayga – stateless NAT64 daemon"
 <p> Persistent TUN devices remain present on the host system even when TAYGA is not running. This allows host-side network parameters and firewall rules to be configured prior to commencement of packet translation. This may simplify network configuration on the host; for example, systems which use a Debian-style /etc/network/interfaces file may configure TAYGA&#8217;s TUN device at boot by running `tayga &#8211;mktun` as a &quot;pre-up&quot; command and then configuring the TUN device as any other network interface.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c </code><i>configfile</i><code> | &#8211;config </code><i>configfile</i></p>
-<dd>Read configuration options from <i>configfile</i></p>
-<dt><code>-d</code></p>
-<dd>Enable debug messages (enables <code>&#8211;nodetach</code> as well)</p>
-<dt><code>-n | &#8211;nodetach</code></p>
-<dd>Do not detach from terminal</p>
-<dt><code>-u </code><i>userid</i><code> | &#8211;user </code><i>userid</i></p>
-<dd>Set uid to <i>userid</i> after initialization</p>
-<dt><code>-g </code><i>groupid</i><code> | &#8211;group </code><i>groupid</i></p>
-<dd>Set gid to <i>groupid</i> after initialization</p>
-<dt><code>-r | &#8211;chroot</code></p>
-<dd>chroot() to data-dir (specified in config file)</p>
-<dt><code>-p </code><i>pidfile</i><code> | &#8211;pidfile </code><i>pidfile</i></p>
-<dd>Write process ID of daemon to <i>pidfile</i></dl>
+<dt><code>-c </code><i>configfile</i><code> | &#8211;config </code><i>configfile</i></dt>
+<dd>Read configuration options from <i>configfile</i></dd>
+<dt><code>-d</code></dt>
+<dd>Enable debug messages (enables <code>&#8211;nodetach</code> as well)</dd>
+<dt><code>-n | &#8211;nodetach</code></dt>
+<dd>Do not detach from terminal</dd>
+<dt><code>-u </code><i>userid</i><code> | &#8211;user </code><i>userid</i></dt>
+<dd>Set uid to <i>userid</i> after initialization</dd>
+<dt><code>-g </code><i>groupid</i><code> | &#8211;group </code><i>groupid</i></dt>
+<dd>Set gid to <i>groupid</i> after initialization</dd>
+<dt><code>-r | &#8211;chroot</code></dt>
+<dd>chroot() to data-dir (specified in config file)</dd>
+<dt><code>-p </code><i>pidfile</i><code> | &#8211;pidfile </code><i>pidfile</i></dt>
+<dd>Write process ID of daemon to <i>pidfile</i></dd></dl>
 <h2>Author</h2>
 <p>Written by Nathan Lutchansky &lt;lutchann [at] litech.org&gt;</p>
 <h2>Copyright</h2>

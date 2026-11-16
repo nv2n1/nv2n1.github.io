@@ -12,7 +12,6 @@ std::chrono::duration_cast - std::chrono::duration_cast
 
 <pre><code>template &lt;class ToDuration, class Rep, class Period&gt;
 (since C++ 11)
-
     constexpr ToDuration duration_cast(const duration&lt;Rep, Period&gt; &amp;d);</code></pre> 
 Converts a std::chrono::duration to a duration of different type ToDuration. 
 No implicit conversions are used. Multiplications and divisions are avoided where possible, if it is known at compile time that one or more parameters are 1. Computations are done in the widest type available and converted, as if by static_cast, to the result type only when finished. 
@@ -35,19 +34,14 @@ Casting from a floating-point duration to an integer duration is subject_to_unde
 
 This example measures the execution time of a function 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;ratio&gt;
-
 #include &lt;thread&gt;
 void f()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
-
 {
     auto t1 = std::chrono::high_resolution_clock::now();
     f();

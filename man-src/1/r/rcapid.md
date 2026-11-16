@@ -31,7 +31,7 @@ url: "/docs/linux/man/1-rcapid/"
 
 <dl>
 <dt>-l loglevel
-<dd> the level of verbosity in the logging. This is logged in /tmp/rcapid.log</dl>
+</dt><dd> the level of verbosity in the logging. This is logged in /tmp/rcapid.log</dd></dl>
 
 <h2>AUTHOR</h2>
 

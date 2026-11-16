@@ -15,10 +15,10 @@ description: "sleep – delay for a specified amount of time"
 <h2>DESCRIPTION</h2>
 <p> Pause for NUMBER seconds. SUFFIX may be &#8216;s&#8217; for seconds (the default), &#8216;m&#8217; for minutes, &#8216;h&#8217; for hours or &#8216;d&#8217; for days. NUMBER need not be an integer. Given two or more arguments, pause for the amount of time specified by the sum of their values.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Jim Meyering and Paul Eggert.</p>
 <h2>REPORTING BUGS</h2>

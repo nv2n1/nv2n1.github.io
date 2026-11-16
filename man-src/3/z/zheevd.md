@@ -32,23 +32,19 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  digit in add/subtract, or on those binary machines without guard
  digits which subtract like the Cray X-MP, Cray Y-MP, Cray C-90, or
  Cray-2. It could conceivably fail on hexadecimal or decimal machines
- without guard digits, but we know of none.</pre>&nbsp;<wbr></dl>
+ without guard digits, but we know of none.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl><dd><i>JOBZ</i> 
-
  <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre><i>UPLO</i> 
-
  <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre><i>N</i> 
-
  <pre> N is INTEGER
  The order of the matrix A. N &gt;= 0.</pre><i>A</i> 
-
  <pre> A is COMPLEX*16 array, dimension (LDA, N)
  On entry, the Hermitian matrix A. If UPLO = 'U', the
  leading N-by-N upper triangular part of A contains the
@@ -60,16 +56,12 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  If JOBZ = 'N', then on exit the lower triangle (if UPLO='L')
  or the upper triangle (if UPLO='U') of A, including the
  diagonal, is destroyed.</pre><i>LDA</i> 
-
  <pre> LDA is INTEGER
  The leading dimension of the array A. LDA &gt;= max(1,N).</pre><i>W</i> 
-
  <pre> W is DOUBLE PRECISION array, dimension (N)
  If INFO = 0, the eigenvalues in ascending order.</pre><i>WORK</i> 
-
  <pre> WORK is COMPLEX*16 array, dimension (MAX(1,LWORK))
  On exit, if INFO = 0, WORK(1) returns the optimal LWORK.</pre><i>LWORK</i> 
-
  <pre> LWORK is INTEGER
  The length of the array WORK.
  If N &lt;= 1, LWORK must be at least 1.
@@ -80,11 +72,9 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  IWORK arrays, returns these values as the first entries of
  the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>RWORK</i> 
-
  <pre> RWORK is DOUBLE PRECISION array,
  dimension (LRWORK)
  On exit, if INFO = 0, RWORK(1) returns the optimal LRWORK.</pre><i>LRWORK</i> 
-
  <pre> LRWORK is INTEGER
  The dimension of the array RWORK.
  If N &lt;= 1, LRWORK must be at least 1.
@@ -96,10 +86,8 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  and IWORK arrays, returns these values as the first entries
  of the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>IWORK</i> 
-
  <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
  On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.</pre><i>LIWORK</i> 
-
  <pre> LIWORK is INTEGER
  The dimension of the array IWORK.
  If N &lt;= 1, LIWORK must be at least 1.
@@ -110,7 +98,6 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  and IWORK arrays, returns these values as the first entries
  of the WORK, RWORK and IWORK arrays, and no error message
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>INFO</i> 
-
  <pre> INFO is INTEGER
  = 0: successful exit
  &lt; 0: if INFO = -i, the i-th argument had an illegal value
@@ -120,29 +107,26 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  if INFO = i and JOBZ = 'V', then the algorithm failed
  to compute an eigenvalue while working on the submatrix
  lying in rows and columns INFO/(N+1) through
- mod(INFO,N+1).</pre>&nbsp;<wbr></dl>
+ mod(INFO,N+1).</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl><dd>November 2011</dl>
+<dl><dd>November 2011</dd></dl>
  
 
  <b>Further Details: </b>
-<dl><dd>Modified description of INFO. Sven, 16 Feb 05.</dl>
+<dl><dd>Modified description of INFO. Sven, 16 Feb 05.</dd></dl>
  
 
  <b>Contributors: </b>
-<dl><dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+<dl><dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
  
 
  

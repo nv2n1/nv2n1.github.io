@@ -24,28 +24,28 @@ description: "mongoc_query_flags_t – Flags for deletion operations"
 <p>These flags correspond to the MongoDB wire protocol. They may be bitwise or&#8217;d together. They may modify how a query is performed in the MongoDB server. </p>
 <h2>Flag Values</h2>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_NONE</code></p>
-<dd>Specify no query flags.</dl>
+<dt><code>MONGOC_QUERY_NONE</code></dt>
+<dd>Specify no query flags.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_TAILABLE_CURSOR</code></p>
-<dd>Cursor will not be closed when the last data is retrieved. You can resume this cursor later.</dl>
+<dt><code>MONGOC_QUERY_TAILABLE_CURSOR</code></dt>
+<dd>Cursor will not be closed when the last data is retrieved. You can resume this cursor later.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_SLAVE_OK</code></p>
-<dd>Allow query of replica set secondaries.</dl>
+<dt><code>MONGOC_QUERY_SLAVE_OK</code></dt>
+<dd>Allow query of replica set secondaries.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_OPLOG_REPLAY</code></p>
-<dd>Used internally by MongoDB.</dl>
+<dt><code>MONGOC_QUERY_OPLOG_REPLAY</code></dt>
+<dd>Used internally by MongoDB.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_NO_CURSOR_TIMEOUT</code></p>
-<dd>The server normally times out an idle cursor after an inactivity period (10 minutes). This prevents that.</dl>
+<dt><code>MONGOC_QUERY_NO_CURSOR_TIMEOUT</code></dt>
+<dd>The server normally times out an idle cursor after an inactivity period (10 minutes). This prevents that.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_AWAIT_DATA</code></p>
-<dd>Use with MONGOC_QUERY_TAILABLE_CURSOR. Block rather than returning no data. After a period, time out.</dl>
+<dt><code>MONGOC_QUERY_AWAIT_DATA</code></dt>
+<dd>Use with MONGOC_QUERY_TAILABLE_CURSOR. Block rather than returning no data. After a period, time out.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_EXHAUST</code></p>
-<dd>Stream the data down full blast in multiple &quot;reply&quot; packets. Faster when you are pulling down a lot of data and you know you want to retrieve it all.</dl>
+<dt><code>MONGOC_QUERY_EXHAUST</code></dt>
+<dd>Stream the data down full blast in multiple &quot;reply&quot; packets. Faster when you are pulling down a lot of data and you know you want to retrieve it all.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_QUERY_PARTIAL</code></p>
-<dd>Get partial results from mongos if some shards are down (instead of throwing an error).</dl>
+<dt><code>MONGOC_QUERY_PARTIAL</code></dt>
+<dd>Get partial results from mongos if some shards are down (instead of throwing an error).</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

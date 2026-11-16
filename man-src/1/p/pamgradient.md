@@ -20,12 +20,12 @@ description: "pamgradient – create a four-corner gradient PAM image"
 <p> If all four colors are gray values, <code>pamgradient</code> creates a grayscale image (PAM tuple type GRAYSCALE). Otherwise, it creates a color image (PAM tuple type RGB). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-maxval=</code><i>maxval</i></p>
+<dt><code>-maxval=</code><i>maxval</i></dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr> maxval of the generated image. (See <code>PAM</code>(1)<br />
 &nbsp;<wbr>and <code>PNM</code>(1)<br />
 &nbsp;<wbr>specifications). </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamgradient/">pamgradient</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1) , <code><a href="/docs/linux/man/1-pgmramp/">pgmramp</a></code>(1) , <code><a href="/docs/linux/man/1-ppmpat/">ppmpat</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
 <h2>NOTE</h2>

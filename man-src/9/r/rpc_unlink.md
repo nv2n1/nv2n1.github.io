@@ -15,7 +15,7 @@ rpc_unlink - remove a pipe
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>dentry for the pipe, as returned from rpc_mkpipe</dl>
+<dl><dd></dd><dd>dentry for the pipe, as returned from rpc_mkpipe</dd></dl>
 
 <h2>Description</h2>
 

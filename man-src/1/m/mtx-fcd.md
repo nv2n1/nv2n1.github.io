@@ -15,26 +15,26 @@ description: "mtx-fcd – Fast Directory Change"
 <p> <code>Fast Directory Change</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;clear</code></p>
-<dd> clear the cache</p>
-<dt><code>&#8211;clear</code></p>
-<dd> &#8211;history [entry] clear the history</p>
-<dt><code>&#8211;scan</code></p>
-<dd> clear the cache and add given path(s)</p>
-<dt><code>&#8211;add</code></p>
-<dd> add given path(s)</p>
-<dt><code>&#8211;find</code></p>
-<dd> find given path (can be substring)</p>
-<dt><code>&#8211;find</code></p>
-<dd> &#8211;nohistory find given path (can be substring) but don&amp;apos;t use history</p>
-<dt><code>&#8211;stub</code></p>
-<dd> print platform stub file</p>
-<dt><code>&#8211;list</code></p>
-<dd> show roots of cached dirs</p>
-<dt><code>&#8211;list</code></p>
-<dd> &#8211;history show history of chosen dirs</p>
-<dt><code>&#8211;help</code></p>
-<dd> show this help</dl>
+<dt><code>&#8211;clear</code></dt>
+<dd> clear the cache</dd>
+<dt><code>&#8211;clear</code></dt>
+<dd> &#8211;history [entry] clear the history</dd>
+<dt><code>&#8211;scan</code></dt>
+<dd> clear the cache and add given path(s)</dd>
+<dt><code>&#8211;add</code></dt>
+<dd> add given path(s)</dd>
+<dt><code>&#8211;find</code></dt>
+<dd> find given path (can be substring)</dd>
+<dt><code>&#8211;find</code></dt>
+<dd> &#8211;nohistory find given path (can be substring) but don&amp;apos;t use history</dd>
+<dt><code>&#8211;stub</code></dt>
+<dd> print platform stub file</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> show roots of cached dirs</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> &#8211;history show history of chosen dirs</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> show this help</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

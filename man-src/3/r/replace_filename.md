@@ -10,9 +10,7 @@ description: "replace_filename – Replaces path+filename with a new filename ta
 <p>replace_filename &#8211; Replaces path+filename with a new filename tail. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *replace_filename(char *dest, const char *path,
-
                        const char *filename, int size);</code></pre>
 <h2>Description</h2>
 <p>Replaces the specified path+filename with a new filename tail, storing at most `size&#8217; bytes into the `dest&#8217; buffer. You can use the same buffer both as input and output because Allegro internally works on a copy of the input before touching `dest&#8217;. Example: </p>

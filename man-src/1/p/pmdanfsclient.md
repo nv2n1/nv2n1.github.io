@@ -21,12 +21,12 @@ description: "pmdanfsclient – NFS client statistics performance metrics domain
 <p> <code>pmdanfsclient</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMDAS_DIR/nfsclient/Install</code></p>
-<dd> installation script for the <code>pmdanfsclient</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/nfsclient/Remove</code></p>
-<dd> undo installation script for the <code>pmdanfsclient</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/nfsclient.log</code></p>
-<dd> default log file for error messages from <code>pmdanfsclient</code></dl>
+<dt><code>$PCP_PMDAS_DIR/nfsclient/Install</code></dt>
+<dd> installation script for the <code>pmdanfsclient</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/nfsclient/Remove</code></dt>
+<dd> undo installation script for the <code>pmdanfsclient</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/nfsclient.log</code></dt>
+<dd> default log file for error messages from <code>pmdanfsclient</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

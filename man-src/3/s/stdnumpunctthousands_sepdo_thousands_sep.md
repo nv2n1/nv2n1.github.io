@@ -10,14 +10,10 @@ description: "std::numpunct<CharT>::thousands_sep,do_thousands_sep – std::nump
 <p>std::numpunct&lt;CharT&gt;::thousands_sep,do_thousands_sep &#8211; std::numpunct&lt;CharT&gt;::thousands_sep,do_thousands_sep</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  char_type thousands_sep() const;
-
 protected:
 (2)
-
     virtual char_type do_thousands_sep() const;</code></pre>
 <p>1) Public member function, calls the member function do_thousands_sep of the most derived class.<br />
 2) Returns the character to be used as the separator between digit groups when parsing or formatting integers and integral parts of floating-point values. </p>
@@ -26,7 +22,6 @@ protected:
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 struct space_out : std::numpunct&lt;char&gt; {
     char do_thousands_sep() const
@@ -39,7 +34,6 @@ struct space_out : std::numpunct&lt;char&gt; {
     } // groups of 1 digit
 };
 int main()
-
 {
     std::cout &lt;&lt; &quot;default locale: &quot; &lt;&lt; 12345678 &lt;&lt; '
 ';

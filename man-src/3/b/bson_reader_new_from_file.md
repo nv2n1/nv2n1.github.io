@@ -17,11 +17,11 @@ bson_reader_new_from_file(const char *path,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>path</code></p>
-<dd> A filename in the host filename encoding.</dl>
+<dt><code>path</code></dt>
+<dd> A filename in the host filename encoding.</dd></dl>
 <dl>
-<dt><code>error</code></p>
-<dd> A <code>bson_error_t</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new <code>bson_reader_t</code> using the file denoted by <code>filename</code> \&amp;. </p>
 <h2>ERRORS</h2>

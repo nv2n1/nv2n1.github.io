@@ -18,14 +18,14 @@ description: "update-updmap – generate updmap.cfg files for all the system tre
 <p> In order to configure (enable additional entries, disable system provided entries, etc), the normal <a href="/docs/linux/man/1-updmap/">updmap</a>(1) mechanism should be used. Please see the man page details.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd>Executes additional checks that all necessary files are present in the kpathsea database. Don&#8217;t use this in maintainer scripts.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>don&#8217;t write anything to the standard output during normal operation</p>
-<dt><code>&#8211;help</code></p>
-<dd>print a summary of the command-line usage of <code>update-updmap</code> and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+<dt><code>&#8211;check</code></dt>
+<dd>Executes additional checks that all necessary files are present in the kpathsea database. Don&#8217;t use this in maintainer scripts.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>don&#8217;t write anything to the standard output during normal operation</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print a summary of the command-line usage of <code>update-updmap</code> and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <p> Note that the &#8211;<code>v</code> option, which turns on verbose mode, is deprecated. We are currently in a transition phase where quiet mode is still the default (therefore, &#8211;<code>-quiet</code> has no effect), but <code>update-updmap</code> will be verbose by default as soon as enough packages use &#8211;<code>-quiet</code> in their maintainer scripts.</p>
 <h2>Syntax For The .Cfg Files</h2>
 <p>The `.cfg&#8217; files under /var/lib/tex-common/fontmap-cfg/ should contain valid configuration lines for <a href="/docs/linux/man/1-updmap/">updmap</a>(1). Usually, they will consist of lines of following one of these forms: </p>

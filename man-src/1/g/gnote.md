@@ -21,42 +21,42 @@ description: "gnote – A simple note-taking application for Gnome"
 <h2>OPTIONS</h2>
 <p> The program follows the usual GNU command line syntax, with options starting with two dashes (`&#8211;&#8216;). A summary of options are included below.</p>
 <dl>
-<dt><code>&#8211;background</code></p>
-<dd> Run Gnote in background.</p>
-<dt><code>&#8211;note-path PATH</code></p>
-<dd> Specify the path of the directory containing the notes.</p>
-<dt><code>&#8211;new-note</code></p>
-<dd> Create and display a new note.</p>
-<dt><code>&#8211;new-note TITLE</code></p>
-<dd> Create and display a new note with the title given.</p>
-<dt><code>&#8211;open-note TITLE/URL</code></p>
-<dd> Display the existing note matching TITLE or URL.</p>
-<dt><code>&#8211;search</code></p>
-<dd> Open the search all notes window with the search text.</p>
-<dt><code>&#8211;start-here</code></p>
-<dd> Display the &quot;Start Here&quot; note.</p>
-<dt><code>&#8211;highlight-search TEXT</code></p>
-<dd> Search and highlight TEXT in the opened note.</p>
-<dt><code>&#8211;help<tt>&nbsp;<wbr>&nbsp;<wbr></tt></code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program. </p>
+<dt><code>&#8211;background</code></dt>
+<dd> Run Gnote in background.</dd>
+<dt><code>&#8211;note-path PATH</code></dt>
+<dd> Specify the path of the directory containing the notes.</dd>
+<dt><code>&#8211;new-note</code></dt>
+<dd> Create and display a new note.</dd>
+<dt><code>&#8211;new-note TITLE</code></dt>
+<dd> Create and display a new note with the title given.</dd>
+<dt><code>&#8211;open-note TITLE/URL</code></dt>
+<dd> Display the existing note matching TITLE or URL.</dd>
+<dt><code>&#8211;search</code></dt>
+<dd> Open the search all notes window with the search text.</dd>
+<dt><code>&#8211;start-here</code></dt>
+<dd> Display the &quot;Start Here&quot; note.</dd>
+<dt><code>&#8211;highlight-search TEXT</code></dt>
+<dd> Search and highlight TEXT in the opened note.</dd>
+<dt><code>&#8211;help<tt>&nbsp;<wbr>&nbsp;<wbr></tt></code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>GSETTINGS SETTINGS</h2>
 <p> Gnote has several preference settings stored in GSettings. Changes to Settings are applied instantly to any running Gnote instance. A summary of the GConf settings and their purpose are described below.</p>
 <dl>
-<dt><code>org.gnome.gnote.global-keybindings</code></p>
-<dd> A GSettings schema for key bindings. Keys are listed below.</p>
-<dt><code>open-start-here</code></p>
-<dd> Global X keybinding for displaying the &quot;Start Here&quot; note. The default keybinding is &lt;Alt&gt;F11.</p>
-<dt><code>show-note-menu</code></p>
-<dd> Global X keybinding for displaying the Gnote applet&#8217;s note menu. The default keybinding is &lt;Alt&gt;F12.</p>
-<dt><code>create-new-note</code></p>
-<dd> Global X keybinding for creating and displaying a new note.</p>
-<dt><code>open-recent-changes</code></p>
-<dd> Global X keybinding for opening the recent changes dialog.</p>
-<dt><code>open-search</code></p>
-<dd> Global X keybinding for opening the note search dialog. </p>
+<dt><code>org.gnome.gnote.global-keybindings</code></dt>
+<dd> A GSettings schema for key bindings. Keys are listed below.</dd>
+<dt><code>open-start-here</code></dt>
+<dd> Global X keybinding for displaying the &quot;Start Here&quot; note. The default keybinding is &lt;Alt&gt;F11.</dd>
+<dt><code>show-note-menu</code></dt>
+<dd> Global X keybinding for displaying the Gnote applet&#8217;s note menu. The default keybinding is &lt;Alt&gt;F12.</dd>
+<dt><code>create-new-note</code></dt>
+<dd> Global X keybinding for creating and displaying a new note.</dd>
+<dt><code>open-recent-changes</code></dt>
+<dd> Global X keybinding for opening the recent changes dialog.</dd>
+<dt><code>open-search</code></dt>
+<dd> Global X keybinding for opening the note search dialog. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://live.gnome.org/Gnote/">http://live.gnome.org/Gnote/</a></i> </p>
@@ -65,10 +65,10 @@ description: "gnote – A simple note-taking application for Gnome"
 <h2>AUTHORS</h2>
 <p> Hubert Figuiere &lt;hub [at] figuiere.net&gt;</p>
 <dl>
-<dt>Debarshi Ray &lt;debarshir [at] src.gnome.org&gt;</p>
+<dt>Debarshi Ray &lt;debarshir [at] src.gnome.org&gt;</dt>
 <dd>
-<dt>Aurimas Cernius &lt;aurisc4 [at] gmail.com&gt;</p>
+</dd><dt>Aurimas Cernius &lt;aurisc4 [at] gmail.com&gt;</dt>
 <dd>
 <p> This manual page was originally written by Luca Capello &lt;luca [at] pca.it&gt;. Adapted to Gnote by Hubert Figuiere and Aurimas Cernius </p>
-</dl>
+</dd></dl>
 <h2>Index</h2>

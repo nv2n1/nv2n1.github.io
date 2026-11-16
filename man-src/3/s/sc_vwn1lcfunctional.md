@@ -11,7 +11,6 @@ description: "sc::VWN1LCFunctional –"
 <p> The <code>VWN1LCFunctional</code> computes energies and densities using the VWN1 local correlation term (from Vosko, Wilk, and Nusair).</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::VWNLCFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -27,25 +26,10 @@ description: "sc::VWN1LCFunctional –"
  void <code>point_lc</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;, double &amp;, double &amp;, double &amp;)</p>
 <h3>Protected Attributes</h3>
 <pre><code>double x0p_
-
-
-
 double bp_
-
-
-
 double cp_
-
-
-
 double x0f_
-
-
-
 double bf_
-
-
-
 double cf_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>VWN1LCFunctional</code> computes energies and densities using the VWN1 local correlation term (from Vosko, Wilk, and Nusair).</p>

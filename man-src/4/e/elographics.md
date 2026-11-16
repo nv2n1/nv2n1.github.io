@@ -24,30 +24,30 @@ description: "elographics – Elographics input driver"
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
 <p> The following driver options are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;DeviceN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></p>
-<dd>The device that is attached to the touchscreen interface. Default is &quot;/dev/ttyS1&quot;.</p>
-<dt><code>Option N&#8217;34&#8217;DeviceNameN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the X11 device name for the touchscreen. Default is &quot;TOUCHSCREEN&quot;.</p>
-<dt><code>Option N&#8217;34&#8217;MinXN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the minimum value for the touchscreen X axis. Default is 600.</p>
-<dt><code>Option N&#8217;34&#8217;MaxXN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the maximum value for the touchscreen X axis. Default is 3000.</p>
-<dt><code>Option N&#8217;34&#8217;MinYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the minimum value for the touchscreen Y axis. Default is 600.</p>
-<dt><code>Option N&#8217;34&#8217;MaxYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the maximum value for the touchscreen Y axis. Default is 3000.</p>
-<dt><code>Option N&#8217;34&#8217;ScreenNoN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>The screen to attach to the touchscreen when running with multiple screens. Default is screen 0.</p>
-<dt><code>Option N&#8217;34&#8217;PortraitModeN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></p>
-<dd>Set the X/Y axis orientation. The default is &quot;Landscape&quot; but you can rotate clockwise (&quot;Portrait&quot;) or counter-clockwise (&quot;PortraitCCW&quot;).</p>
-<dt><code>Option N&#8217;34&#8217;SwapXYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></p>
-<dd>Swap the X and Y axis on the display. Default is false.</p>
-<dt><code>Option N&#8217;34&#8217;UntouchDelayN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>The period that finger must be released for an untouch event to occur. Default: 5 (50ms).</p>
-<dt><code>Option N&#8217;34&#8217;ReportDelayN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>Delay between report packets. Default: 1 (10ms).</p>
-<dt><code>Option N&#8217;34&#8217;ModelN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></p>
-<dd>The touchscreen model. Default: unset. Supported models: &quot;Sunit dSeries&quot;.</dl>
+<dt><code>Option N&#8217;34&#8217;DeviceN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></dt>
+<dd>The device that is attached to the touchscreen interface. Default is &quot;/dev/ttyS1&quot;.</dd>
+<dt><code>Option N&#8217;34&#8217;DeviceNameN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the X11 device name for the touchscreen. Default is &quot;TOUCHSCREEN&quot;.</dd>
+<dt><code>Option N&#8217;34&#8217;MinXN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the minimum value for the touchscreen X axis. Default is 600.</dd>
+<dt><code>Option N&#8217;34&#8217;MaxXN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the maximum value for the touchscreen X axis. Default is 3000.</dd>
+<dt><code>Option N&#8217;34&#8217;MinYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the minimum value for the touchscreen Y axis. Default is 600.</dd>
+<dt><code>Option N&#8217;34&#8217;MaxYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the maximum value for the touchscreen Y axis. Default is 3000.</dd>
+<dt><code>Option N&#8217;34&#8217;ScreenNoN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>The screen to attach to the touchscreen when running with multiple screens. Default is screen 0.</dd>
+<dt><code>Option N&#8217;34&#8217;PortraitModeN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Set the X/Y axis orientation. The default is &quot;Landscape&quot; but you can rotate clockwise (&quot;Portrait&quot;) or counter-clockwise (&quot;PortraitCCW&quot;).</dd>
+<dt><code>Option N&#8217;34&#8217;SwapXYN&#8217;34&#8217; N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Swap the X and Y axis on the display. Default is false.</dd>
+<dt><code>Option N&#8217;34&#8217;UntouchDelayN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>The period that finger must be released for an untouch event to occur. Default: 5 (50ms).</dd>
+<dt><code>Option N&#8217;34&#8217;ReportDelayN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>Delay between report packets. Default: 1 (10ms).</dd>
+<dt><code>Option N&#8217;34&#8217;ModelN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></dt>
+<dd>The touchscreen model. Default: unset. Supported models: &quot;Sunit dSeries&quot;.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), xorgconfig(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>Authors</h2>

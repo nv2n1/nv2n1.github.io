@@ -18,34 +18,34 @@ description: "anytermd – A terminal-emulating HTTP daemon"
 <h2>OPTIONS</h2>
 <p> Default values are indicated in parentheses ().</p>
 <dl>
-<dt><code>-c | &#8211;command</code> <i>arg</i> (=/bin/bash)</p>
-<dd> Command to run in terminal</p>
-<dt><code>-d | &#8211;device</code> <i>arg</i></p>
-<dd> Device to connect to (e.g. serial port)</p>
-<dt><code>-p | &#8211;port</code> <i>arg</i> (=8080)</p>
-<dd> Port number to listen on</p>
-<dt><code>-u | &#8211;user</code> <i>arg</i></p>
-<dd> User to run as</p>
-<dt><code>-a | &#8211;auth</code> <i>arg</i> (=none)</p>
-<dd> Authorisation: none|null|trivial</p>
-<dt><code>-s | &#8211;charset</code> <i>arg</i> (=ascii)</p>
-<dd> Character set</p>
-<dt><code>-f | &#8211;foreground</code></p>
-<dd> run in foreground</p>
-<dt><code>&#8211;diff</code></p>
-<dd> Send only differences to browser</p>
-<dt><code>-n | &#8211;nodiff</code></p>
-<dd> Send whole screen to browser each time</p>
-<dt><code>-m | &#8211;max-sessions</code> <i>arg</i> (=20)</p>
-<dd> Maximum number of simultaneous sessions</p>
-<dt><code>&#8211;max-http-connections</code> <i>arg</i> (=unlimited)</p>
-<dd> Maximum number of simultaneous HTTP connections</p>
-<dt><code>&#8211;local-only</code></p>
-<dd> Accept connections only from localhost</p>
-<dt><code>&#8211;name</code> <i>arg</i> (=anyterm)</p>
-<dd> Name used for logging and pid file</p>
-<dt><code>&#8211;help</code></p>
-<dd> show help message</dl>
+<dt><code>-c | &#8211;command</code> <i>arg</i> (=/bin/bash)</dt>
+<dd> Command to run in terminal</dd>
+<dt><code>-d | &#8211;device</code> <i>arg</i></dt>
+<dd> Device to connect to (e.g. serial port)</dd>
+<dt><code>-p | &#8211;port</code> <i>arg</i> (=8080)</dt>
+<dd> Port number to listen on</dd>
+<dt><code>-u | &#8211;user</code> <i>arg</i></dt>
+<dd> User to run as</dd>
+<dt><code>-a | &#8211;auth</code> <i>arg</i> (=none)</dt>
+<dd> Authorisation: none|null|trivial</dd>
+<dt><code>-s | &#8211;charset</code> <i>arg</i> (=ascii)</dt>
+<dd> Character set</dd>
+<dt><code>-f | &#8211;foreground</code></dt>
+<dd> run in foreground</dd>
+<dt><code>&#8211;diff</code></dt>
+<dd> Send only differences to browser</dd>
+<dt><code>-n | &#8211;nodiff</code></dt>
+<dd> Send whole screen to browser each time</dd>
+<dt><code>-m | &#8211;max-sessions</code> <i>arg</i> (=20)</dt>
+<dd> Maximum number of simultaneous sessions</dd>
+<dt><code>&#8211;max-http-connections</code> <i>arg</i> (=unlimited)</dt>
+<dd> Maximum number of simultaneous HTTP connections</dd>
+<dt><code>&#8211;local-only</code></dt>
+<dd> Accept connections only from localhost</dd>
+<dt><code>&#8211;name</code> <i>arg</i> (=anyterm)</dt>
+<dd> Name used for logging and pid file</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> show help message</dd></dl>
 <h2>SECURITY</h2>
 <p> <i>Do not run anytermd as root.</i> </p>
 <p> Anyterm&#8217;s code has not been audited for security. It is almost certainly possible to cause it to crash by sending it invalid input, and experience suggests that this sort of weakness can also be exploited to allow arbitary code execution. </p>

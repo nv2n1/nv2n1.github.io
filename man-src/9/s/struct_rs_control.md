@@ -27,45 +27,45 @@ description: "struct_rs_control – rs control structure"
 <h2>Members</h2>
 <p>mm</p>
 <dl>
-<dd>Bits per symbol</dl>
+<dd>Bits per symbol</dd></dl>
 <p> nn</p>
 <dl>
-<dd>Symbols per block (= (1&lt;&lt;mm)-1)</dl>
+<dd>Symbols per block (= (1&lt;&lt;mm)-1)</dd></dl>
 <p> alpha_to</p>
 <dl>
-<dd>log lookup table</dl>
+<dd>log lookup table</dd></dl>
 <p> index_of</p>
 <dl>
-<dd>Antilog lookup table</dl>
+<dd>Antilog lookup table</dd></dl>
 <p> genpoly</p>
 <dl>
-<dd>Generator polynomial</dl>
+<dd>Generator polynomial</dd></dl>
 <p> nroots</p>
 <dl>
-<dd>Number of generator roots = number of parity symbols</dl>
+<dd>Number of generator roots = number of parity symbols</dd></dl>
 <p> fcr</p>
 <dl>
-<dd>First consecutive root, index form</dl>
+<dd>First consecutive root, index form</dd></dl>
 <p> prim</p>
 <dl>
-<dd>Primitive element, index form</dl>
+<dd>Primitive element, index form</dd></dl>
 <p> iprim</p>
 <dl>
-<dd>prim-th root of 1, index form</dl>
+<dd>prim-th root of 1, index form</dd></dl>
 <p> gfpoly</p>
 <dl>
-<dd>The primitive generator polynominal</dl>
+<dd>The primitive generator polynominal</dd></dl>
 <p> gffunc</p>
 <dl>
-<dd>Function to generate the field, if non-canonical representation</dl>
+<dd>Function to generate the field, if non-canonical representation</dd></dl>
 <p> users</p>
 <dl>
-<dd>Users of this structure</dl>
+<dd>Users of this structure</dd></dl>
 <p> list</p>
 <dl>
-<dd>List entry for the rs control list</dl>
+<dd>List entry for the rs control list</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

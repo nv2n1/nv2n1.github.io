@@ -35,86 +35,83 @@ description: "tv_grab_fi – Grab TV listings for Finland"
 <p> You need to run <tt>&quot;tv_grab_fi --configure&quot;</tt> first to create the channel configuration for your setup. Subsequently runs of <tt>&quot;tv_grab_fi&quot;</tt> will grab the latest data, process them and produce <font SIZE="-1">XML</font> data on the standard output.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><font SIZE="-1"><code>NONE</code></font></p>
-<dd> Grab mode.</p>
-<dt><code>&#8211;capabilities</code></p>
-<dd> Show the capabilities this grabber supports. See also &lt;<a rel="nofollow" href="http://wiki.xmltv.org/index.php/XmltvCapabilities">http://wiki.xmltv.org/index.php/XmltvCapabilities</a>&gt;.</p>
-<dt><code>&#8211;configure</code></p>
-<dd> Generate the configuration file by asking the users which channels to grab.</p>
-<dt><code>&#8211;description</code></p>
-<dd> Print the description for this grabber.</p>
-<dt><code>&#8211;help|-h|-?</code></p>
-<dd> Show this help page.</p>
-<dt><code>&#8211;list-channels</code></p>
-<dd> Fetch all available channels from the various sources and write them to the standard output.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version of this grabber.</dl>
+<dt><font SIZE="-1"><code>NONE</code></font></dt>
+<dd> Grab mode.</dd>
+<dt><code>&#8211;capabilities</code></dt>
+<dd> Show the capabilities this grabber supports. See also &lt;<a rel="nofollow" href="http://wiki.xmltv.org/index.php/XmltvCapabilities">http://wiki.xmltv.org/index.php/XmltvCapabilities</a>&gt;.</dd>
+<dt><code>&#8211;configure</code></dt>
+<dd> Generate the configuration file by asking the users which channels to grab.</dd>
+<dt><code>&#8211;description</code></dt>
+<dd> Print the description for this grabber.</dd>
+<dt><code>&#8211;help|-h|-?</code></dt>
+<dd> Show this help page.</dd>
+<dt><code>&#8211;list-channels</code></dt>
+<dd> Fetch all available channels from the various sources and write them to the standard output.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version of this grabber.</dd></dl>
 <h2>GENERIC OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cache </code><font SIZE="-1">FILE</font></p>
-<dd> File name to cache the fetched <font SIZE="-1">HTML</font> data in. This speeds up subsequent runs using the same data.</p>
-<dt><code>&#8211;gui [</code><font SIZE="-1"><code>OPTION</code></font><code>]</code></p>
-<dd> Enable the graphical user interface. If you don&#8217;t specify <font SIZE="-1"><code>OPTION</code></font> then <font SIZE="-1">XMLTV</font> will automatically choose the best available <font SIZE="-1">GUI.</font> Allowed values are:</p>
+<dt><code>&#8211;cache </code><font SIZE="-1">FILE</font></dt>
+<dd> File name to cache the fetched <font SIZE="-1">HTML</font> data in. This speeds up subsequent runs using the same data.</dd>
+<dt><code>&#8211;gui [</code><font SIZE="-1"><code>OPTION</code></font><code>]</code></dt>
+<dd> Enable the graphical user interface. If you don&#8217;t specify <font SIZE="-1"><code>OPTION</code></font> then <font SIZE="-1">XMLTV</font> will automatically choose the best available <font SIZE="-1">GUI.</font> Allowed values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>Term</code></p>
-<dd> Terminal output with a progress bar</p>
-<dt><code>TermNoProgressBar</code></p>
-<dd> Terminal output without progress bar</p>
-<dt><code>Tk</code></p>
-<dd> Tk-based <font SIZE="-1">GUI</font></dl>
+<dt><code>Term</code></dt>
+<dd> Terminal output with a progress bar</dd>
+<dt><code>TermNoProgressBar</code></dt>
+<dd> Terminal output without progress bar</dd>
+<dt><code>Tk</code></dt>
+<dd> Tk-based <font SIZE="-1">GUI</font></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;quiet</code></p>
-<dd> Suppress any progress messages to the standard output.</dl>
+</dl>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Suppress any progress messages to the standard output.</dd></dl>
 <h2>CONFIGURE MODE OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config-file </code><font SIZE="-1">FILE</font></p>
-<dd> File name to write the configuration to. </p>
+<dt><code>&#8211;config-file </code><font SIZE="-1">FILE</font></dt>
+<dd> File name to write the configuration to. </dd>
 <p> Default is <i></i>$HOME<i>/.xmltv/tv_grab_fi.conf</i>.</dl>
 <h2>GRAB MODE OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config-file </code><font SIZE="-1">FILE</font></p>
-<dd> File name to read the configuration from. </p>
+<dt><code>&#8211;config-file </code><font SIZE="-1">FILE</font></dt>
+<dd> File name to read the configuration from. </dd>
 <p> Default is <i></i>$HOME<i>/.xmltv/tv_grab_fi.conf</i>.</p>
-<dt><code>&#8211;days &quot;N&quot;</code></p>
-<dd> Grab <tt>&quot;N&quot;</tt> days of <font SIZE="-1">TV</font> data. </p>
+<dt><code>&#8211;days &quot;N&quot;</code></dt>
+<dd> Grab <tt>&quot;N&quot;</tt> days of <font SIZE="-1">TV</font> data. </dd>
 <p> Default is 14 days.</p>
-<dt><code>&#8211;offset &quot;N&quot;</code></p>
-<dd> Grab <font SIZE="-1">TV</font> data starting at <tt>&quot;N&quot;</tt> days in the future. </p>
+<dt><code>&#8211;offset &quot;N&quot;</code></dt>
+<dd> Grab <font SIZE="-1">TV</font> data starting at <tt>&quot;N&quot;</tt> days in the future. </dd>
 <p> Default is 0, i.e. today.</p>
-<dt><code>&#8211;output </code><font SIZE="-1">FILE</font></p>
-<dd> Write the <font SIZE="-1">XML</font> data to <i></i><font SIZE="-1"><i>FILE</i></font><i></i> instead of the standard output.</dl>
+<dt><code>&#8211;output </code><font SIZE="-1">FILE</font></dt>
+<dd> Write the <font SIZE="-1">XML</font> data to <i></i><font SIZE="-1"><i>FILE</i></font><i></i> instead of the standard output.</dd></dl>
 <h2>CONFIGURATION FILE SYNTAX</h2>
 <p> The configuration file is line oriented, each line can contain one command. Empty lines and everything after the <tt>&quot;#&quot;</tt> comment character is ignored. Supported commands are:</p>
 <dl>
-<dt><code>channel </code><font SIZE="-1"><code>ID NAME</code></font></p>
-<dd> Grab information for this channel. <tt>&quot;ID&quot;</tt> depends on the source, <tt>&quot;NAME&quot;</tt> is ignored and forwarded as is to the <font SIZE="-1">XMLTV</font> output file. This information can be automatically generated using the grabber in the configuration mode.</p>
-<dt><code>series description </code><font SIZE="-1"><code>NAME</code></font></p>
-<dd> If a programme title matches <tt>&quot;NAME&quot;</tt> then the first sentence of the description, i.e. everything up to the first period (<tt>&quot;.&quot;</tt>), question mark (<tt>&quot;?&quot;</tt>) or exclamation mark (<tt>&quot;!&quot;</tt>), is removed from the description and is used as the name of the episode.</p>
-<dt><code>series title </code><font SIZE="-1"><code>NAME</code></font></p>
-<dd> If a programme title contains a colon (<tt>&quot;:&quot;</tt>) then the grabber checks if the left-hand side of the colon matches <tt>&quot;NAME&quot;</tt>. If it does then the left-hand side is used as programme title and the right-hand side as the name of the episode.</p>
-<dt><code>title map &quot;</code><font SIZE="-1"><code>FROM&quot; </code></font><code>&#8216;</code><font SIZE="-1"><code>TO</code></font><code>&#8216;</code></p>
-<dd> If the programme title starts with the string <tt>&quot;FROM&quot;</tt> then replace this part with the string <tt>&quot;TO&quot;</tt>. The strings must be enclosed in single quotes (<tt>&quot;'&quot;</tt>) or double quotes (<tt>&quot;&quot;&quot;</tt>). The title mapping occurs before the <tt>&quot;series&quot;</tt> command processing.</p>
-<dt><code>title strip parental level</code></p>
-<dd> At the beginning of 2012 some programme descriptions started to include parental levels at the end of the title, e.g. <tt>&quot;(S)&quot;</tt>. With this command all parental levels will be removed from the titles automatically. This removal occurs before the title mapping.</dl>
+<dt><code>channel </code><font SIZE="-1"><code>ID NAME</code></font></dt>
+<dd> Grab information for this channel. <tt>&quot;ID&quot;</tt> depends on the source, <tt>&quot;NAME&quot;</tt> is ignored and forwarded as is to the <font SIZE="-1">XMLTV</font> output file. This information can be automatically generated using the grabber in the configuration mode.</dd>
+<dt><code>series description </code><font SIZE="-1"><code>NAME</code></font></dt>
+<dd> If a programme title matches <tt>&quot;NAME&quot;</tt> then the first sentence of the description, i.e. everything up to the first period (<tt>&quot;.&quot;</tt>), question mark (<tt>&quot;?&quot;</tt>) or exclamation mark (<tt>&quot;!&quot;</tt>), is removed from the description and is used as the name of the episode.</dd>
+<dt><code>series title </code><font SIZE="-1"><code>NAME</code></font></dt>
+<dd> If a programme title contains a colon (<tt>&quot;:&quot;</tt>) then the grabber checks if the left-hand side of the colon matches <tt>&quot;NAME&quot;</tt>. If it does then the left-hand side is used as programme title and the right-hand side as the name of the episode.</dd>
+<dt><code>title map &quot;</code><font SIZE="-1"><code>FROM&quot; </code></font><code>&#8216;</code><font SIZE="-1"><code>TO</code></font><code>&#8216;</code></dt>
+<dd> If the programme title starts with the string <tt>&quot;FROM&quot;</tt> then replace this part with the string <tt>&quot;TO&quot;</tt>. The strings must be enclosed in single quotes (<tt>&quot;'&quot;</tt>) or double quotes (<tt>&quot;&quot;&quot;</tt>). The title mapping occurs before the <tt>&quot;series&quot;</tt> command processing.</dd>
+<dt><code>title strip parental level</code></dt>
+<dd> At the beginning of 2012 some programme descriptions started to include parental levels at the end of the title, e.g. <tt>&quot;(S)&quot;</tt>. With this command all parental levels will be removed from the titles automatically. This removal occurs before the title mapping.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> xmltv.</p>
 <h2>AUTHORS</h2>
 <h3>Current</h3>
 <dl>
-<dt>Stefan Becker &quot;stefan dot becker at nokia dot com&quot;</p>
+<dt>Stefan Becker &quot;stefan dot becker at nokia dot com&quot;</dt>
 <dd>
-<dt>Ville Ahonen &quot;ville dot ahonen at iki dot fi&quot;</p>
-<dd></dl>
+</dd><dt>Ville Ahonen &quot;ville dot ahonen at iki dot fi&quot;</dt>
+<dd></dd></dl>
 <h3>Retired</h3>
 <dl>
-<dt>Matti Airas</p>
-<dd></dl>
+<dt>Matti Airas</dt>
+<dd></dd></dl>
 <h2>BUGS</h2>
 <p> The channels are identified by channel number rather than the <font SIZE="-1">RFC2838</font> form recommended by the <font SIZE="-1">XMLTV DTD.</font> </p>
 <h2>Index</h2>

@@ -14,10 +14,10 @@ description: "crypto_aead_setauthsize – set authentication data size"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>authsize</i></p>
 <dl>
-<dd>size of the authentication data / tag in bytes</dl>
+<dd>size of the authentication data / tag in bytes</dd></dl>
 <h2>Description</h2>
 <p>Set the authentication data size / tag size. AEAD requires an authentication tag (or MAC) in addition to the associated data.</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "crypto_aead_setauthsize – set authentication data size"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

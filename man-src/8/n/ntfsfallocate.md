@@ -15,26 +15,26 @@ description: "ntfsfallocate – preallocate space to a file on an NTFS volume"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsfallocate</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-l</code>, <code>&#8211;length</code> LENGTH</p>
-<dd>This is a mandatory option to specify the number of bytes to preallocate. It will be rounded up to a multiple of the cluster size. A suffix of K, M, G, T, P or E may be appended to mean a multiplicative factor of a power of 1000. Similarly a suffix of Ki, Mi, Gi, Ti, Pi or Ei may be appended to mean a multiplicative factor of a power of 1024.</p>
-<dt><code>-n</code>, <code>&#8211;no-size-change</code></p>
-<dd>Do not change the apparent size of the file. The space allocated beyond the apparent size is not zeroed, but subsequent writing beyond the apparent end of file will force zeroing the inner allocated space as it cannot be considered as a hole any more, and this may take significant time.</p>
-<dt><code>-N</code>, <code>&#8211;no-action</code></p>
-<dd>Simulate the allocation without actually write to device.</p>
-<dt><code>-o</code>, <code>&#8211;offset</code> OFFSET</p>
-<dd>Specify the offset in the file where preallocation starts. By default, the preallocation is counted from the beginning of the file. Space already allocated in the area defined by offset and length is preserved.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress some debug/warning/error messages.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license of <code>ntfsfallocate</code>.</p>
-<dt><code>attr-type</code></p>
-<dd>Define a particular attribute type to be preallocated (advanced use only). By default, the unnamed $DATA attribute (the contents of a plain file) will be preallocated. The attribute has to be specified by a number in decimal or hexadecimal : </p>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-l</code>, <code>&#8211;length</code> LENGTH</dt>
+<dd>This is a mandatory option to specify the number of bytes to preallocate. It will be rounded up to a multiple of the cluster size. A suffix of K, M, G, T, P or E may be appended to mean a multiplicative factor of a power of 1000. Similarly a suffix of Ki, Mi, Gi, Ti, Pi or Ei may be appended to mean a multiplicative factor of a power of 1024.</dd>
+<dt><code>-n</code>, <code>&#8211;no-size-change</code></dt>
+<dd>Do not change the apparent size of the file. The space allocated beyond the apparent size is not zeroed, but subsequent writing beyond the apparent end of file will force zeroing the inner allocated space as it cannot be considered as a hole any more, and this may take significant time.</dd>
+<dt><code>-N</code>, <code>&#8211;no-action</code></dt>
+<dd>Simulate the allocation without actually write to device.</dd>
+<dt><code>-o</code>, <code>&#8211;offset</code> OFFSET</dt>
+<dd>Specify the offset in the file where preallocation starts. By default, the preallocation is counted from the beginning of the file. Space already allocated in the area defined by offset and length is preserved.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress some debug/warning/error messages.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license of <code>ntfsfallocate</code>.</dd>
+<dt><code>attr-type</code></dt>
+<dd>Define a particular attribute type to be preallocated (advanced use only). By default, the unnamed $DATA attribute (the contents of a plain file) will be preallocated. The attribute has to be specified by a number in decimal or hexadecimal : </dd>
 <table BORDER>
 <tr>
 <td>
@@ -143,12 +143,12 @@ description: "ntfsfallocate – preallocate space to a file on an NTFS volume"
 </tr>
 </table>
 </table>
-<dt><code>attr-name</code></p>
-<dd>Define the name of the particular attribute type to be preallocated (advanced use only).</dl>
+<dt><code>attr-name</code></dt>
+<dd>Define the name of the particular attribute type to be preallocated (advanced use only).</dd></dl>
 <h2>Examples</h2>
 <p>Preallocate 100MB to the file database.db located in the Data directory which is at the root of an NTFS file system.</p>
 <dl>
-<dd><code>ntfsfallocate -l 100M /dev/sda1 Data/database.db</code> </p>
+<dd><code>ntfsfallocate -l 100M /dev/sda1 Data/database.db</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfsfallocate</code>, however it can lead to configurations not supported by Windows and Windows may crash (BSOD) when writing to preallocated clusters which were not written to earlier. Files with preallocated space should be fully be written to before they are updated by Windows. </p>
 <p> If you find a bug in <code>ntfsfallocate</code> proper, please send an email describing the problem to the development team:<br />
@@ -160,3 +160,4 @@ description: "ntfsfallocate – preallocate space to a file on an NTFS volume"
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfstruncate/">ntfstruncate</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8), <code><a href="/docs/linux/man/1-fallocate/">fallocate</a></code>(1) </p>
+</dl>

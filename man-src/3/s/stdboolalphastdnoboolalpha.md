@@ -22,13 +22,9 @@ std::boolalpha is an I/O manipulator, so it may be called with an expression suc
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;sstream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     // boolalpha output
     std::cout &lt;&lt; std::boolalpha

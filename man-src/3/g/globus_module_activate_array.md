@@ -26,16 +26,16 @@ description: "Module Activation Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>module_descriptor</i> Module to activate</dl>
+</dt><dd> <i>module_descriptor</i> Module to activate</dd></dl>
 <h3>int globus_module_activate_array (<code>globus_module_descriptor_t</code> *module_array[], <code>globus_module_descriptor_t</code> **failed_module)</h3>
 <p> Activate a group of modules. Activate an NULL-terminated array of modules. If any fail to activate, all are deactivated and the error from the failed activation is returned. If nonzero is returned, and failed_module is non-NULL, it will be set to point to the 1st module which failed to activate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>module_array</i> NULL-terminated array of module descriptors to activate.<br />
- <i>failed_module</i> Pointer to set to the first module whose activation function failed.</dl>
+</dt><dd> <i>module_array</i> NULL-terminated array of module descriptors to activate.<br />
+ <i>failed_module</i> Pointer to set to the first module whose activation function failed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

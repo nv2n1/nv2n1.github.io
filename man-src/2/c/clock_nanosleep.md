@@ -21,7 +21,7 @@ int clock_nanosleep(clockid_t clockid, int flags,
 <p> <code>clock_nanosleep</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Like <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), <code>clock_nanosleep</code>() allows the calling thread to sleep for an interval specified with nanosecond precision. It differs in allowing the caller to select the clock against which the sleep interval is to be measured, and in allowing the sleep interval to be specified as either an absolute or a relative value. </p>
 <p> The time values passed to and returned by this call are specified using <i>timespec</i> structures, defined as follows: </p>
@@ -30,16 +30,16 @@ int clock_nanosleep(clockid_t clockid, int flags,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;[0 .. 999999999]&nbsp;*/ }; </p>
 <p> The <i>clockid</i> argument specifies the clock against which the sleep interval is to be measured. This argument can have one of the following values:</p>
 <dl>
-<dt><code>CLOCK_REALTIME</code></p>
-<dd> A settable system-wide real-time clock.</p>
-<dt><code>CLOCK_TAI</code> (since Linux 3.10)</p>
-<dd> A system-wide clock derived from wall-clock time but ignoring leap seconds.</p>
-<dt><code>CLOCK_MONOTONIC</code></p>
-<dd> A nonsettable, monotonically increasing clock that measures time since some unspecified point in the past that does not change after system startup.</p>
-<dt><code>CLOCK_BOOTIME</code> (since Linux 2.6.39)</p>
-<dd> Identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended.</p>
-<dt><code>CLOCK_PROCESS_CPUTIME_ID</code></p>
-<dd> A settable per-process clock that measures CPU time consumed by all threads in the process.</dl>
+<dt><code>CLOCK_REALTIME</code></dt>
+<dd> A settable system-wide real-time clock.</dd>
+<dt><code>CLOCK_TAI</code> (since Linux 3.10)</dt>
+<dd> A system-wide clock derived from wall-clock time but ignoring leap seconds.</dd>
+<dt><code>CLOCK_MONOTONIC</code></dt>
+<dd> A nonsettable, monotonically increasing clock that measures time since some unspecified point in the past that does not change after system startup.</dd>
+<dt><code>CLOCK_BOOTIME</code> (since Linux 2.6.39)</dt>
+<dd> Identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended.</dd>
+<dt><code>CLOCK_PROCESS_CPUTIME_ID</code></dt>
+<dd> A settable per-process clock that measures CPU time consumed by all threads in the process.</dd></dl>
 <p> See <code><a href="/docs/linux/man/2-clock_getres/">clock_getres</a></code>(2) for further details on these clocks. In addition, the CPU clock IDs returned by <code><a href="/docs/linux/man/3-clock_getcpuclockid/">clock_getcpuclockid</a></code>(3) and <code><a href="/docs/linux/man/3-pthread_getcpuclockid/">pthread_getcpuclockid</a></code>(3) can also be passed in <i>clockid</i>. </p>
 <p> If <i>flags</i> is 0, then the value specified in <i>request</i> is interpreted as an interval relative to the current value of the clock specified by <i>clockid</i>. </p>
 <p> If <i>flags</i> is <code>TIMER_ABSTIME</code>, then <i>request</i> is interpreted as an absolute time as measured by the clock, <i>clockid</i>. If <i>request</i> is less than or equal to the current value of the clock, then <code>clock_nanosleep</code>() returns immediately without suspending the calling thread. </p>
@@ -49,16 +49,16 @@ int clock_nanosleep(clockid_t clockid, int flags,
 <p> On successfully sleeping for the requested interval, <code>clock_nanosleep</code>() returns 0. If the call is interrupted by a signal handler or encounters an error, then it returns one of the positive error number listed in ERRORS.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>request</i> or <i>remain</i> specified an invalid address.</p>
-<dt><code>EINTR</code></p>
-<dd> The sleep was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> The value in the <i>tv_nsec</i> field was not in the range 0 to 999999999 or <i>tv_sec</i> was negative.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>clockid</i> was invalid. (<code>CLOCK_THREAD_CPUTIME_ID</code> is not a permitted value for <i>clockid</i>.)</p>
-<dt><code>ENOTSUP</code></p>
-<dd> The kernel does not support sleeping against this <i>clockid</i>.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>request</i> or <i>remain</i> specified an invalid address.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The sleep was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value in the <i>tv_nsec</i> field was not in the range 0 to 999999999 or <i>tv_sec</i> was negative.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>clockid</i> was invalid. (<code>CLOCK_THREAD_CPUTIME_ID</code> is not a permitted value for <i>clockid</i>.)</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> The kernel does not support sleeping against this <i>clockid</i>.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>clock_nanosleep</code>() system call first appeared in Linux 2.6. Support is available in glibc since version 2.1.</p>
 <h2>CONFORMING TO</h2>

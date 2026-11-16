@@ -14,33 +14,12 @@ description: "std::__detail::_RangeMatcher< _InIterT, _TraitsT > –"
 <p> typedef <code>std::basic_string</code>&lt; _CharT &gt; <code>_StringT</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>void _M_add_char (_CharT __c)
-
-
-
 void _M_add_character_class (const _StringT &amp;__s)
-
-
-
 void _M_add_collating_element (const _StringT &amp;__s)
-
-
-
 void _M_add_equivalence_class (const _StringT &amp;__s)
-
-
-
 _M_is_non_matching (__is_non_matching)
-
-
-
 void _M_make_range ()
-
-
-
 bool operator() (const _PatternCursor &amp;__pc) const
-
-
-
 Public Attributes</code></pre>
 <p> <code>__pad0__</code>: _M_traits(__t) </p>
 <p> bool <code>_M_is_non_matching</code> </p>

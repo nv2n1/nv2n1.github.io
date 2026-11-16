@@ -15,19 +15,19 @@ bio_map_kern - map kernel address into bio
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the struct request_queue for the bio</dl>
+<dl><dd></dd><dd>the struct request_queue for the bio</dd></dl>
  
 
  <i>data</i>
-<dl><dd>pointer to buffer to map</dl>
+<dl><dd>pointer to buffer to map</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length in bytes</dl>
+<dl><dd>length in bytes</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation flags for bio allocation</dl>
+<dl><dd>allocation flags for bio allocation</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,59 +17,59 @@ description: "westcos-tool – utility for manipulating data structure on westco
 <p> <code>-G</code></p>
 <dl>
 <dt>
-<dd> Generate a private key on smart card. The smart card must be not finalized and pin installed (ig. file for pin must be created, see option -i). By default key length is 1536 bits. User authentication is required for this operation.</dl>
+</dt><dd> Generate a private key on smart card. The smart card must be not finalized and pin installed (ig. file for pin must be created, see option -i). By default key length is 1536 bits. User authentication is required for this operation.</dd></dl>
 <p> <code>-L</code> <i>length</i></p>
 <dl>
 <dt>
-<dd> Change the length of private key, use with <code>-G</code>.</dl>
+</dt><dd> Change the length of private key, use with <code>-G</code>.</dd></dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> Install pin file in token, you must provide pin value with <code>-pin</code>.</dl>
+</dt><dd> Install pin file in token, you must provide pin value with <code>-pin</code>.</dd></dl>
 <p> <code>-pin</code> <i>value</i></p>
 <dl>
 <dt>
-<dd> set value of pin.</dl>
+</dt><dd> set value of pin.</dd></dl>
 <p> <code>-puk</code> <i>value</i></p>
 <dl>
 <dt>
-<dd> set value of puk (or value of new pin for change pin command see <code>-n</code>).</dl>
+</dt><dd> set value of puk (or value of new pin for change pin command see <code>-n</code>).</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> Changes a PIN stored on the token. User authentication is required for this operation.</dl>
+</dt><dd> Changes a PIN stored on the token. User authentication is required for this operation.</dd></dl>
 <p> <code>-u</code></p>
 <dl>
 <dt>
-<dd> Unblocks a PIN stored on the token. Knowledge of the Pin Unblock Key (PUK) is required for this operation.</dl>
+</dt><dd> Unblocks a PIN stored on the token. Knowledge of the Pin Unblock Key (PUK) is required for this operation.</dd></dl>
 <p> <code>-cert</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Write certificate <i>file</i> in pem format on the card. User authentication is required for this operation.</dl>
+</dt><dd> Write certificate <i>file</i> in pem format on the card. User authentication is required for this operation.</dd></dl>
 <p> <code>-F</code></p>
 <dl>
 <dt>
-<dd> Finalize the card, once finalize default key is invalidate so pin and puk can&#8217;be changed anymore without user authentification. Warning, smart cards not finalized are unsecure because pin can be changed without user authentification (knowledge of default key is enougth).</dl>
+</dt><dd> Finalize the card, once finalize default key is invalidate so pin and puk can&#8217;be changed anymore without user authentification. Warning, smart cards not finalized are unsecure because pin can be changed without user authentification (knowledge of default key is enougth).</dd></dl>
 <p> <code>-r</code> <i>n</i></p>
 <dl>
 <dt>
-<dd> Forces <code>westcos-tool</code> to use reader number <i>n</i> for operations.</dl>
+</dt><dd> Forces <code>westcos-tool</code> to use reader number <i>n</i> for operations.</dd></dl>
 <p> <code>-gf</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Get the file <i>path</i> the file is written on disk with <i>path</i> name. User authentication is required for this operation.</dl>
+</dt><dd> Get the file <i>path</i> the file is written on disk with <i>path</i> name. User authentication is required for this operation.</dd></dl>
 <p> <code>-pf</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Put the file with name <i>path</i> from disk to card the file is written in <i>path</i>. User authentication is required for this operation.</dl>
+</dt><dd> Put the file with name <i>path</i> from disk to card the file is written in <i>path</i>. User authentication is required for this operation.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Causes <code>westcos-tool</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dl>
+</dt><dd> Causes <code>westcos-tool</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Print help message on screen.</dl>
+</dt><dd> Print help message on screen.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7)</p>
 <h2>AUTHORS</h2>

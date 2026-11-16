@@ -17,23 +17,23 @@ description: "gsf – archiving utility using the G Structured File library"
 <h2>OPTIONS</h2>
 <h3>Options</h3>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display gsf&#8217;s version </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display gsf&#8217;s version </dd>
 </dl>
 <h3>Subcommands</h3>
 <dl>
-<dt><code>cat</code></p>
-<dd> Output one or more files in archive</p>
-<dt><code>dump</code></p>
-<dd> Dump one or more files in archive as formatted hexadecimal</p>
-<dt><code>help</code></p>
-<dd> List subcommands</p>
-<dt><code>list</code></p>
-<dd> List files in archive</p>
-<dt><code>props</code></p>
-<dd> Archive list of property names </p>
+<dt><code>cat</code></dt>
+<dd> Output one or more files in archive</dd>
+<dt><code>dump</code></dt>
+<dd> Dump one or more files in archive as formatted hexadecimal</dd>
+<dt><code>help</code></dt>
+<dd> List subcommands</dd>
+<dt><code>list</code></dt>
+<dd> List files in archive</dd>
+<dt><code>props</code></dt>
+<dd> Archive list of property names </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To list the content structure of a Microsoft Excel(TM) file <i>arrays.xls</i>: </p>

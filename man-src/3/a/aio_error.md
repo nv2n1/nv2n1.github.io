@@ -18,20 +18,20 @@ description: "aio_error – get error status of asynchronous I/O operation"
 <h2>RETURN VALUE</h2>
 <p> This function returns one of the following:</p>
 <dl>
-<dt>*</p>
-<dd> <code>EINPROGRESS</code>, if the request has not been completed yet.</p>
-<dt>*</p>
-<dd> <code>ECANCELED</code>, if the request was canceled.</p>
-<dt>*</p>
-<dd> 0, if the request completed successfully.</p>
-<dt>*</p>
-<dd> A positive error number, if the asynchronous I/O operation failed. This is the same value that would have been stored in the <i>errno</i> variable in the case of a synchronous <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), or <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2) call.</dl>
+<dt>*</dt>
+<dd> <code>EINPROGRESS</code>, if the request has not been completed yet.</dd>
+<dt>*</dt>
+<dd> <code>ECANCELED</code>, if the request was canceled.</dd>
+<dt>*</dt>
+<dd> 0, if the request completed successfully.</dd>
+<dt>*</dt>
+<dd> A positive error number, if the asynchronous I/O operation failed. This is the same value that would have been stored in the <i>errno</i> variable in the case of a synchronous <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), or <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2) call.</dd></dl>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>aiocbp</i> does not point at a control block for an asynchronous I/O request of which the return status (see <code><a href="/docs/linux/man/3-aio_return/">aio_return</a></code>(3)) has not been retrieved yet.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_error</code>() is not implemented.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>aiocbp</i> does not point at a control block for an asynchronous I/O request of which the return status (see <code><a href="/docs/linux/man/3-aio_return/">aio_return</a></code>(3)) has not been retrieved yet.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_error</code>() is not implemented.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_error</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

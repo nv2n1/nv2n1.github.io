@@ -18,7 +18,7 @@ description: "dsdot.f –"
 <p> <code>DSDOT</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  Compute the inner product of two vectors with extended
  precision accumulation and result.
@@ -27,11 +27,11 @@ description: "dsdot.f –"
  where LX = 1 if INCX .GE. 0, else LX = 1+(1-N)*INCX, and LY is
  defined in a similar way using INCY.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
          number of elements in input vector(s)
@@ -60,7 +60,7 @@ description: "dsdot.f –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> DSDOT </p>
+</dt><dd> DSDOT </dd>
 <pre>
           DSDOT is DOUBLE PRECISION
          DSDOT  double precision dot product (zero if N.LE.0)
@@ -69,23 +69,23 @@ description: "dsdot.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
-<p>&nbsp;<wbr></dl>
+</dt><dd>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   C. L. Lawson, R. J. Hanson, D. R. Kincaid and F. T.
   Krogh, Basic linear algebra subprograms for Fortran
@@ -100,8 +100,9 @@ description: "dsdot.f –"
   920501  Reformatted the REFERENCES section.  (WRB)
   070118  Reformat to LAPACK style (JL)
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 120 of file dsdot.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

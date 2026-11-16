@@ -10,17 +10,11 @@ description: "rdma-dev – RDMA device configuration"
 <p>rdma-dev &#8211; RDMA device configuration</p>
 <h2>Synopsis</h2>
 <pre><code>rdma
-
 [ OPTIONS ]
-
 dev
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -d[etails] }</code></pre>
 <p> <code>rdma dev show</code> [ <i>DEV</i> ]<br />
@@ -35,21 +29,21 @@ OPTIONS := {
 <h2>Examples</h2>
 <p>rdma dev</p>
 <dl>
-<dd>Shows the state of all RDMA devices on the system.</dl>
+<dd>Shows the state of all RDMA devices on the system.</dd></dl>
 <p> rdma dev show mlx5_3</p>
 <dl>
-<dd>Shows the state of specified RDMA device.</dl>
+<dd>Shows the state of specified RDMA device.</dd></dl>
 <p> rdma dev set mlx5_3 name rdma_0</p>
 <dl>
-<dd>Renames the mlx5_3 device to rdma_0.</dl>
+<dd>Renames the mlx5_3 device to rdma_0.</dd></dl>
 <p> rdma dev set mlx5_3 netns foo</p>
 <dl>
-<dd>Changes the network namespace of RDMA device to foo where foo is previously created using iproute2 ip command.</dl>
+<dd>Changes the network namespace of RDMA device to foo where foo is previously created using iproute2 ip command.</dd></dl>
 <p> rdma dev set mlx5_3 adaptive-moderation [on/off]</p>
 <dl>
-<dd>Sets the state of adaptive interrupt moderation for the RDMA device.</dl>
+<dd>Sets the state of adaptive interrupt moderation for the RDMA device.</dd></dl>
 <dl>
-<dd>This is a global setting for the RDMA device but the value is printed for each CQ individually because the state is constant from CQ allocation.</dl>
+<dd>This is a global setting for the RDMA device but the value is printed for each CQ individually because the state is constant from CQ allocation.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8), <code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-link/">rdma-link</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), <code><a href="/docs/linux/man/8-rdma-system/">rdma-system</a></code>(8), <code><a href="/docs/linux/man/8-rdma-statistic/">rdma-statistic</a></code>(8), </p>
 <h2>Author</h2>

@@ -11,10 +11,8 @@ std::modulus&lt;void&gt; - std::modulus&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class modulus&lt;void&gt;;</code></pre> 
 std::modulus&lt;&gt; is a specialization of std::modulus with parameter and return type deduced. 
 

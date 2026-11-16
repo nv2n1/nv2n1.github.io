@@ -22,24 +22,24 @@ pki[CLI options] ca - kraconnector pki[CLI options] ca - kraconnector - show pki
 <p> <code>pki</code> [CLI options] <code>ca-kraconnector</code></p>
 <dl>
 <dt>
-<dd> This command is to list available KRA connector commands.</dl>
+</dt><dd> This command is to list available KRA connector commands.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-kraconnector-show</code></p>
 <dl>
 <dt>
-<dd> This command is to view the configuration settings for the CA-KRA connector configured on the CA. These details can be redirected to a file, modified as needed, and used as the input file for the <code>ca-kraconnector-add</code> command.</dl>
+</dt><dd> This command is to view the configuration settings for the CA-KRA connector configured on the CA. These details can be redirected to a file, modified as needed, and used as the input file for the <code>ca-kraconnector-add</code> command.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-kraconnector-add</code> &#8211;input-file &lt;input_file&gt;</p>
 <dl>
 <dt>
-<dd> This command is to configure the CA-KRA connector on the CA subsystem. The input file is an XML document as provided by the <code>ca-kraconnector-show</code> command. </p>
+</dt><dd> This command is to configure the CA-KRA connector on the CA subsystem. The input file is an XML document as provided by the <code>ca-kraconnector-show</code> command. </dd>
 <p> A CA-KRA connector can only be created from an input file only if a connector does not already exist. If one already exists, it should be removed first.</dl>
 <p> <code>pki</code> [CLI options] <code>ca-kraconnector-add</code> &#8211;host &lt;KRA host&gt; &#8211;port &lt;KRA Port&gt;</p>
 <dl>
 <dt>
-<dd> This command is to add a host to an existing CA-KRA connector.</dl>
+</dt><dd> This command is to add a host to an existing CA-KRA connector.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>ca-kraconnector-del</code> &#8211;host &lt;KRA Host&gt; &#8211;port &lt;KRA Port&gt;</p>
 <dl>
 <dt>
-<dd> This command is to delete a host from the CA-KRA connector on a CA. If the last KRA host is removed, the connector configuration is removed from the CA.</dl>
+</dt><dd> This command is to delete a host from the CA-KRA connector on a CA. If the last KRA host is removed, the connector configuration is removed from the CA.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

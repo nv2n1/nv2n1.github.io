@@ -18,14 +18,12 @@ description: "rdist – remote file distribution client program"
 <p> <i>Rdist</i> is a program to maintain identical copies of files over multiple hosts. It preserves the owner, group, mode, and mtime of files if possible and can update programs that are executing. <i>Rdist</i> reads commands from <i>distfile</i> to direct the updating of files and/or directories. If <i>distfile</i> is `-&#8216;, the standard input is used. If no <code>-f</code> option is present, the program looks first for `distfile&#8217;, then `Distfile&#8217; to use as the input. If no names are specified on the command line, <i>rdist</i> will update all of the files and directories listed in <i>distfile</i>. Otherwise, the argument is taken to be the name of a file to be updated or the label of a command to execute. If label and file names conflict, it is assumed to be a label. These may be used together to update specific files using specific commands. </p>
 <p> The <code>-c</code> option forces <i>rdist</i> to interpret the remaining arguments as a small <i>distfile</i>. The equivalent distfile is as follows. </p>
 <pre><code>
-
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 (name...)-&gt;[login @] host
-
     &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -41,158 +39,152 @@ install[dest];
 <p> The <code>-Server</code> option is recognized to provide partial backward compatible support for older versions of <i>rdist</i> which used this option to put <i>rdist</i> into server mode. If <i>rdist</i> is started with the <code>-Server</code> command line option, it will attempt to exec (run) the old version of <i>rdist.</i> This option will only work if <i>rdist</i> was compiled with the location of the old rdist (the path <i>/usr/bin/oldrdist</i> is used on Red Hat linux) and that program is available at run time. </p>
 <p> <i>Rdist</i> can use either the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</i> function call or run an arbitrary transport program such as <i>rsh(1c)</i> to access each target host. The method used is selected at compile-time. However, if the later method is used, the transport program can be specified at run-time on the command line with the default being <i>rsh(1c).</i> If the <i>rsh(1c)</i> method is used and the target host is the string <code>localhost</code> and the remote user name is the same as the local user name, <i>rdist</i> will run the command </p>
 <pre>
-<dl><dt><dd><code>/bin/sh -c rdistd -S</code>
-</dl>
+<dl><dt></dt><dd><code>/bin/sh -c rdistd -S</code>
+</dd></dl>
 </pre>
 <p> Otherwise <i>rdist</i> run will run the command </p>
 <pre>
-<dl><dt><dd><code>rsh </code><i>host</i><code> -l </code><i>remuser </i><code>rdistd -S</code>
-</dl>
+<dl><dt></dt><dd><code>rsh </code><i>host</i><code> -l </code><i>remuser </i><code>rdistd -S</code>
+</dd></dl>
 </pre>
 <p> where <i>host</i> is the name of the target host, <i>remuser</i> is the name of the user to make the connection as and, <i>rdistd</i> is the rdist server command on the target host as shown below. To use a transport program other than <i>rsh(1c)</i> use the <code>-P</code> option. Whatever transport program is used, must be compatible with the above specified syntax for <i>rsh(1c).</i> If the transport program is not, it should be <i>wrapped</i> in a shell script which does understand this command line syntax and which then executes the real transport program. </p>
 <p> Here&#8217;s an example which uses <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1)</i> as the transport: </p>
 <pre>
-<dl><dt><dd><code>rdist -P /usr/local/bin/ssh -f myDistfile</code>
-</dl>
+<dl><dt></dt><dd><code>rdist -P /usr/local/bin/ssh -f myDistfile</code>
+</dd></dl>
 </pre>
 <p> If the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3) </i> method is used, then <i>rdist</i> makes the connection to the target host itself and runs the <i>rdistd</i> server program as shown below. The default, and preferred method, is to use <i>rsh(1c)</i> to make the connection to target hosts. This allows <i>rdist</i> to be run without being setuid to &#8220;root&#8221;. </p>
 <p> On each target host <i>Rdist</i> will attempt to run the command </p>
 <pre>
-<dl><dt><dd><i>rdistd -S</i>
-</dl>
+<dl><dt></dt><dd><i>rdistd -S</i>
+</dd></dl>
 </pre>
 <p> or </p>
 <pre>
-<dl><dt><dd><i>&lt;rdistd path&gt; -S</i>
-</dl>
+<dl><dt></dt><dd><i>&lt;rdistd path&gt; -S</i>
+</dd></dl>
 </pre>
 <p> if the <i>-p</i> option was specified. If no <code>-p </code> option is included, or the <i>&lt;rdistd path&gt;</i> is a simple filename, <i>rdistd</i> or <i>&lt;rdistd path&gt;</i> must be somewhere in the <code>$PATH</code> of the user running <code>rdist</code> on the remote (target) host.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A </code><i>num</i></p>
-<dd> Set the minimum number of free files (inodes) on a filesystem that must exist for <i>rdist</i> to update or install a file.</p>
-<dt><code>-a </code><i>num</i></p>
-<dd> Set the minimum amount of free space (in bytes) on a filesystem that must exist for <i>rdist</i> to update or install a file.</p>
-<dt><code>-D</code></p>
-<dd> Enable copious debugging messages.</p>
-<dt><code>-d </code><i>var=value</i></p>
-<dd> Define <i>var</i> to have <i>value</i>. This option is used to define or override variable definitions in the <i>distfile</i>. <i>Value</i> can be the empty string, one name, or a list of names surrounded by parentheses and separated by tabs and/or spaces.</p>
-<dt><code>-F</code></p>
-<dd> Do not fork any child <i>rdist</i> processes. All clients are updated sequentially.</p>
-<dt><code>-f </code><i>distfile</i></p>
-<dd> Set the name of the distfile to use to be <i>distfile .</i> If <i>distfile</i> is specified as &#8220;-&#8221; (dash) then read from standard input (stdin).</p>
-<dt><code>-l </code><i>logopts</i></p>
-<dd> Set local logging options. See the section <code>MESSAGE LOGGING</code> for details on the syntax for <i>logopts.</i></p>
-<dt><code>-L </code><i>logopts</i></p>
-<dd> Set remote logging options. <i>logopts</i> is the same as for local logging except the values are passed to the remote server (<i>rdistd</i>). See the section <code>MESSAGE LOGGING</code> for details on the syntax for <i>logopts.</i></p>
-<dt><code>-M </code><i>num</i></p>
-<dd> Set the maximum number of simultaneously running child <i>rdist</i> processes to <i>num.</i> The default is 4.</p>
-<dt><code>-m </code><i>machine</i></p>
-<dd> Limit which machines are to be updated. Multiple <code>-m</code> arguments can be given to limit updates to a subset of the hosts listed in the <i>distfile</i>.</p>
-<dt><code>-n</code></p>
-<dd> Print the commands without executing them. This option is useful for debugging <i>distfile</i>.</p>
-<dt><code>-o</code><i>distopts</i></p>
-<dd> Specify the dist options to enable. <i>distopts</i> is a comma separated list of options which are listed below. The valid values for <i>distopts</i> are:</p>
+<dt><code>-A </code><i>num</i></dt>
+<dd> Set the minimum number of free files (inodes) on a filesystem that must exist for <i>rdist</i> to update or install a file.</dd>
+<dt><code>-a </code><i>num</i></dt>
+<dd> Set the minimum amount of free space (in bytes) on a filesystem that must exist for <i>rdist</i> to update or install a file.</dd>
+<dt><code>-D</code></dt>
+<dd> Enable copious debugging messages.</dd>
+<dt><code>-d </code><i>var=value</i></dt>
+<dd> Define <i>var</i> to have <i>value</i>. This option is used to define or override variable definitions in the <i>distfile</i>. <i>Value</i> can be the empty string, one name, or a list of names surrounded by parentheses and separated by tabs and/or spaces.</dd>
+<dt><code>-F</code></dt>
+<dd> Do not fork any child <i>rdist</i> processes. All clients are updated sequentially.</dd>
+<dt><code>-f </code><i>distfile</i></dt>
+<dd> Set the name of the distfile to use to be <i>distfile .</i> If <i>distfile</i> is specified as &#8220;-&#8221; (dash) then read from standard input (stdin).</dd>
+<dt><code>-l </code><i>logopts</i></dt>
+<dd> Set local logging options. See the section <code>MESSAGE LOGGING</code> for details on the syntax for <i>logopts.</i></dd>
+<dt><code>-L </code><i>logopts</i></dt>
+<dd> Set remote logging options. <i>logopts</i> is the same as for local logging except the values are passed to the remote server (<i>rdistd</i>). See the section <code>MESSAGE LOGGING</code> for details on the syntax for <i>logopts.</i></dd>
+<dt><code>-M </code><i>num</i></dt>
+<dd> Set the maximum number of simultaneously running child <i>rdist</i> processes to <i>num.</i> The default is 4.</dd>
+<dt><code>-m </code><i>machine</i></dt>
+<dd> Limit which machines are to be updated. Multiple <code>-m</code> arguments can be given to limit updates to a subset of the hosts listed in the <i>distfile</i>.</dd>
+<dt><code>-n</code></dt>
+<dd> Print the commands without executing them. This option is useful for debugging <i>distfile</i>.</dd>
+<dt><code>-o</code><i>distopts</i></dt>
+<dd> Specify the dist options to enable. <i>distopts</i> is a comma separated list of options which are listed below. The valid values for <i>distopts</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>verify</code></p>
-<dd> Verify that the files are up to date on all the hosts. Any files that are out of date will be displayed but no files will be changed nor any mail sent.</p>
-<dt><code>whole</code></p>
-<dd> Whole mode. The whole file name is appended to the destination directory name. Normally, only the last component of a name is used when renaming files. This will preserve the directory structure of the files being copied instead of flattening the directory structure. For example, rdisting a list of files such as <i>/path/dir1/f1 </i> and <i>/path/dir2/f2 </i> to <i>/tmp/dir </i> would create files <i>/tmp/dir/path/dir1/f1 </i> and <i>/tmp/dir/path/dir2/f2 </i> instead of <i>/tmp/dir/dir1/f1 </i> and <i>/tmp/dir/dir2/f2.</i></p>
-<dt><code>noexec</code></p>
-<dd> Automatically exclude executable files that are in <i>a.out(5)</i> format from being checked or updated.</p>
-<dt><code>younger</code></p>
-<dd> Younger mode. Files are normally updated if their <i>mtime</i> and <i>size</i> (see <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)) disagree. This option causes <i>rdist</i> not to update files that are younger than the master copy. This can be used to prevent newer copies on other hosts from being replaced. A warning message is printed for files which are newer than the master copy.</p>
-<dt><code>compare</code></p>
-<dd> Binary comparison. Perform a binary comparison and update files if they differ rather than comparing dates and sizes.</p>
-<dt><code>follow</code></p>
-<dd> Follow symbolic links. Copy the file that the link points to rather than the link itself.</p>
-<dt><code>ignlnks</code></p>
-<dd> Ignore unresolved links. <i>Rdist</i> will normally try to maintain the link structure of files being transferred and warn the user if all the links cannot be found.</p>
-<dt><code>chknfs</code></p>
-<dd> Do not check or update files on target host that reside on NFS filesystems.</p>
-<dt><code>chkreadonly</code></p>
-<dd> Enable check on target host to see if a file resides on a read-only filesystem. If a file does, then no checking or updating of the file is attempted.</p>
-<dt><code>chksym</code></p>
-<dd> If the target on the remote host is a symbolic link, but is not on the master host, the remote target will be left a symbolic link. This behavior is generally considered a bug in the original version of <i>rdist,</i> but is present to allow compatibility with older versions.</p>
-<dt><code>quiet</code></p>
-<dd> Quiet mode. Files that are being modified are normally printed on standard output. This option suppresses this.</p>
-<dt><code>remove</code></p>
-<dd> Remove extraneous files. If a directory is being updated, any files that exist on the remote host that do not exist in the master directory are removed. This is useful for maintaining truly identical copies of directories.</p>
-<dt><code>nochkowner</code></p>
-<dd> Do not check user ownership of files that already exist. The file ownership is only set when the file is updated.</p>
-<dt><code>nochkgroup</code></p>
-<dd> Do not check group ownership of files that already exist. The file ownership is only set when the file is updated.</p>
-<dt><code>nochkmode</code></p>
-<dd> Do not check file and directory permission modes. The permission mode is only set when the file is updated.</p>
-<dt><code>nodescend</code></p>
-<dd> Do not descend into a directory. Normally <i>rdist</i> will recursively check directories. If this option is enabled, then any files listed in the file list in the distfile that are directories are not recursively scanned. Only the existence, ownership, and mode of the directory are checked.</p>
-<dt><code>numchkgroup</code></p>
-<dd> Use the numeric group id (gid) to check group ownership instead of the group name.</p>
-<dt><code>numchkowner</code></p>
-<dd> Use the numeric user id (uid) to check user ownership instead of the user name.</p>
-<dt><code>savetargets</code></p>
-<dd> Save files that are updated instead of removing them. Any target file that is updates is first rename from <code>file</code> to <code>file.OLD.</code></p>
-<dt><code>sparse</code></p>
-<dd> Enable checking for sparse (aka <i>wholely</i>) files. One of the most common types of sparse files are those produced by <code>ndbm(3).</code> This option adds some additional processing overhead so it should only be enabled for targets likely to contain sparse files.</dl>
+<dt><code>verify</code></dt>
+<dd> Verify that the files are up to date on all the hosts. Any files that are out of date will be displayed but no files will be changed nor any mail sent.</dd>
+<dt><code>whole</code></dt>
+<dd> Whole mode. The whole file name is appended to the destination directory name. Normally, only the last component of a name is used when renaming files. This will preserve the directory structure of the files being copied instead of flattening the directory structure. For example, rdisting a list of files such as <i>/path/dir1/f1 </i> and <i>/path/dir2/f2 </i> to <i>/tmp/dir </i> would create files <i>/tmp/dir/path/dir1/f1 </i> and <i>/tmp/dir/path/dir2/f2 </i> instead of <i>/tmp/dir/dir1/f1 </i> and <i>/tmp/dir/dir2/f2.</i></dd>
+<dt><code>noexec</code></dt>
+<dd> Automatically exclude executable files that are in <i>a.out(5)</i> format from being checked or updated.</dd>
+<dt><code>younger</code></dt>
+<dd> Younger mode. Files are normally updated if their <i>mtime</i> and <i>size</i> (see <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)) disagree. This option causes <i>rdist</i> not to update files that are younger than the master copy. This can be used to prevent newer copies on other hosts from being replaced. A warning message is printed for files which are newer than the master copy.</dd>
+<dt><code>compare</code></dt>
+<dd> Binary comparison. Perform a binary comparison and update files if they differ rather than comparing dates and sizes.</dd>
+<dt><code>follow</code></dt>
+<dd> Follow symbolic links. Copy the file that the link points to rather than the link itself.</dd>
+<dt><code>ignlnks</code></dt>
+<dd> Ignore unresolved links. <i>Rdist</i> will normally try to maintain the link structure of files being transferred and warn the user if all the links cannot be found.</dd>
+<dt><code>chknfs</code></dt>
+<dd> Do not check or update files on target host that reside on NFS filesystems.</dd>
+<dt><code>chkreadonly</code></dt>
+<dd> Enable check on target host to see if a file resides on a read-only filesystem. If a file does, then no checking or updating of the file is attempted.</dd>
+<dt><code>chksym</code></dt>
+<dd> If the target on the remote host is a symbolic link, but is not on the master host, the remote target will be left a symbolic link. This behavior is generally considered a bug in the original version of <i>rdist,</i> but is present to allow compatibility with older versions.</dd>
+<dt><code>quiet</code></dt>
+<dd> Quiet mode. Files that are being modified are normally printed on standard output. This option suppresses this.</dd>
+<dt><code>remove</code></dt>
+<dd> Remove extraneous files. If a directory is being updated, any files that exist on the remote host that do not exist in the master directory are removed. This is useful for maintaining truly identical copies of directories.</dd>
+<dt><code>nochkowner</code></dt>
+<dd> Do not check user ownership of files that already exist. The file ownership is only set when the file is updated.</dd>
+<dt><code>nochkgroup</code></dt>
+<dd> Do not check group ownership of files that already exist. The file ownership is only set when the file is updated.</dd>
+<dt><code>nochkmode</code></dt>
+<dd> Do not check file and directory permission modes. The permission mode is only set when the file is updated.</dd>
+<dt><code>nodescend</code></dt>
+<dd> Do not descend into a directory. Normally <i>rdist</i> will recursively check directories. If this option is enabled, then any files listed in the file list in the distfile that are directories are not recursively scanned. Only the existence, ownership, and mode of the directory are checked.</dd>
+<dt><code>numchkgroup</code></dt>
+<dd> Use the numeric group id (gid) to check group ownership instead of the group name.</dd>
+<dt><code>numchkowner</code></dt>
+<dd> Use the numeric user id (uid) to check user ownership instead of the user name.</dd>
+<dt><code>savetargets</code></dt>
+<dd> Save files that are updated instead of removing them. Any target file that is updates is first rename from <code>file</code> to <code>file.OLD.</code></dd>
+<dt><code>sparse</code></dt>
+<dd> Enable checking for sparse (aka <i>wholely</i>) files. One of the most common types of sparse files are those produced by <code>ndbm(3).</code> This option adds some additional processing overhead so it should only be enabled for targets likely to contain sparse files.</dd></dl>
 </dl>
-<dt><code>-p </code><i>&lt;rdistd-path&gt;</i></p>
-<dd> Set the path where the rdistd server is searched for on the target host.</p>
-<dt><code>-P </code><i>&lt;transport-path&gt;</i></p>
-<dd> Set the path to the transport command to be used. This is normally <i>rsh(1c)</i> but can be any other program &#8211; such as <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1) &#8211;</i> which understands <i>rsh(1c)</i> command line syntax and which provides an appropriate connection to the remote host. The <i>transport-path</i> may be a colon seperated list of possible pathnames. In this case, the first component of the path to exist is used. i.e. <code>/usr/ucb/rsh:/usr/bin/remsh,</code> <code>/usr/bsd/rsh.</code></p>
-<dt><code>-t </code><i>timeout</i></p>
-<dd> Set the timeout period (in seconds) for waiting for responses from the remote <i>rdist</i> server. The default is 900 seconds.</p>
-<dt><code>-V</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-p </code><i>&lt;rdistd-path&gt;</i></dt>
+<dd> Set the path where the rdistd server is searched for on the target host.</dd>
+<dt><code>-P </code><i>&lt;transport-path&gt;</i></dt>
+<dd> Set the path to the transport command to be used. This is normally <i>rsh(1c)</i> but can be any other program &#8211; such as <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1) &#8211;</i> which understands <i>rsh(1c)</i> command line syntax and which provides an appropriate connection to the remote host. The <i>transport-path</i> may be a colon seperated list of possible pathnames. In this case, the first component of the path to exist is used. i.e. <code>/usr/ucb/rsh:/usr/bin/remsh,</code> <code>/usr/bsd/rsh.</code></dd>
+<dt><code>-t </code><i>timeout</i></dt>
+<dd> Set the timeout period (in seconds) for waiting for responses from the remote <i>rdist</i> server. The default is 900 seconds.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>MESSAGE LOGGING</h2>
 <p> <i>Rdist</i> uses a collection of predefined message <code>facilities</code> that each contain a list of message <code>types</code> specifying which types of messages to send to that <i>facility.</i> The local client (<i>rdist</i>) and the remote server (<i>rdistd</i>) each maintain their own copy of what types of messages to log to what facilities. </p>
 <p> The <code>-l</code> <i>logopts</i> option to <i>rdist</i> tells <i>rdist</i> what logging options to use locally. The <code>-L</code> <i>logopts</i> option to <i>rdist</i> tells <i>rdist</i> what logging options to pass to the remote <i>rdistd</i> server. </p>
 <p> The form of <i>logopts</i> should be of form </p>
 <dl>
 <dt>
-<dd> <i>facility</i><code>=</code><i>types</i><code>:</code><i>facility</i><code>=</code><i>types&#8230;</i></dl>
+</dt><dd> <i>facility</i><code>=</code><i>types</i><code>:</code><i>facility</i><code>=</code><i>types&#8230;</i></dd></dl>
 <p> The valid facility names are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>stdout</code></p>
-<dd> Messages to standard output.</p>
-<dt><code>file</code></p>
-<dd> Log to a file. To specify the file name, use the format &#8220;<code>file=</code><i>filename</i><code>=</code><i>types</i>&#8221;. e.g. <code>&#8220;file=/tmp/rdist.log=all,debug&#8221;.</code></p>
-<dt><code>syslog</code></p>
-<dd> Use the <i>syslogd(8)</i> facility.</p>
-<dt><code>notify</code></p>
-<dd> Use the internal <i>rdist</i> <code>notify</code> facility. This facility is used in conjunction with the <code>notify</code> keyword in a <i>distfile</i> to specify what messages are mailed to the <code>notify</code> address.</dl>
+<dt><code>stdout</code></dt>
+<dd> Messages to standard output.</dd>
+<dt><code>file</code></dt>
+<dd> Log to a file. To specify the file name, use the format &#8220;<code>file=</code><i>filename</i><code>=</code><i>types</i>&#8221;. e.g. <code>&#8220;file=/tmp/rdist.log=all,debug&#8221;.</code></dd>
+<dt><code>syslog</code></dt>
+<dd> Use the <i>syslogd(8)</i> facility.</dd>
+<dt><code>notify</code></dt>
+<dd> Use the internal <i>rdist</i> <code>notify</code> facility. This facility is used in conjunction with the <code>notify</code> keyword in a <i>distfile</i> to specify what messages are mailed to the <code>notify</code> address.</dd></dl>
 </dl>
 <p> <i>types</i> should be a comma separated list of message types. Each message type specified enables that message level. This is unlike the <i><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</i> system facility which uses an ascending order scheme. The following are the valid <i>types:</i></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>change</code></p>
-<dd> Things that change. This includes files that are installed or updated in some way.</p>
-<dt><code>info</code></p>
-<dd> General information.</p>
-<dt><code>notice</code></p>
-<dd> General info about things that change. This includes things like making directories which are needed in order to install a specific target, but which are not explicitly specified in the <i>distfile.</i></p>
-<dt><code>nerror</code></p>
-<dd> Normal errors that are not fatal.</p>
-<dt><code>ferror</code></p>
-<dd> Fatal errors.</p>
-<dt><code>warning</code></p>
-<dd> Warnings about errors which are not as serious as <code>nerror</code> type messages.</p>
-<dt><code>debug</code></p>
-<dd> Debugging information.</p>
-<dt><code>all</code></p>
-<dd> All but debug messages.</dl>
+<dt><code>change</code></dt>
+<dd> Things that change. This includes files that are installed or updated in some way.</dd>
+<dt><code>info</code></dt>
+<dd> General information.</dd>
+<dt><code>notice</code></dt>
+<dd> General info about things that change. This includes things like making directories which are needed in order to install a specific target, but which are not explicitly specified in the <i>distfile.</i></dd>
+<dt><code>nerror</code></dt>
+<dd> Normal errors that are not fatal.</dd>
+<dt><code>ferror</code></dt>
+<dd> Fatal errors.</dd>
+<dt><code>warning</code></dt>
+<dd> Warnings about errors which are not as serious as <code>nerror</code> type messages.</dd>
+<dt><code>debug</code></dt>
+<dd> Debugging information.</dd>
+<dt><code>all</code></dt>
+<dd> All but debug messages.</dd></dl>
 </dl>
 <p> Here is a sample command line option: </p>
 <pre>
-<dl><dt><dd>-l stdout=all:syslog=change,notice:file=/tmp/rdist.log=all
-</dl>
+<dl><dt></dt><dd>-l stdout=all:syslog=change,notice:file=/tmp/rdist.log=all
+</dd></dl>
 </pre>
 <p> This entry will set local message logging to have all but debug messages sent to standard output, change and notice messages will be sent to <i><a href="/docs/linux/man/3-syslog/">syslog</a>(3),</i> and all messages will be written to the file <code>/tmp/rdist.log.</code></p>
 <h2>DISTFILES</h2>
@@ -250,12 +242,12 @@ list &#8216;&amp;&#8217; list<br />
 <p> The <i>except_pat</i> command is like the <i>except</i> command except that <i>pattern list</i> is a list of regular expressions (see <i><a href="/docs/linux/man/1-ed/">ed</a></i>(1) for details). If one of the patterns matches some string within a file name, that file will be ignored. Note that since `\&#8217; is a quote character, it must be doubled to become part of the regular expression. Variables are expanded in <i>pattern list</i> but not shell file pattern matching characters. To include a `$&#8217;, it must be escaped with `\&#8217;. </p>
 <p> The <i>special</i> command is used to specify <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1) commands that are to be executed on the remote host after the file in <i>name list</i> is updated or installed. If the <i>name list</i> is omitted then the shell commands will be executed for every file updated or installed. <i>String</i> starts and ends with `&quot;&#8217; and can cross multiple lines in <i>distfile.</i> Multiple commands to the shell should be separated by `;&#8217;. Commands are executed in the user&#8217;s home directory on the host being updated. The <i>special</i> command can be used to rebuild private databases, etc. after a program has been updated. The following environment variables are set for each <i>special</i> command:</p>
 <dl>
-<dt><code>FILE</code></p>
-<dd> The full pathname of the local file that was just updated.</p>
-<dt><code>REMFILE</code></p>
-<dd> The full pathname of the remote file that was just updated.</p>
-<dt><code>BASEFILE</code></p>
-<dd> The basename of the remote file that was just updated.</dl>
+<dt><code>FILE</code></dt>
+<dd> The full pathname of the local file that was just updated.</dd>
+<dt><code>REMFILE</code></dt>
+<dd> The full pathname of the remote file that was just updated.</dd>
+<dt><code>BASEFILE</code></dt>
+<dd> The basename of the remote file that was just updated.</dd></dl>
 <p> The <i>cmdspecial</i> command is similar to the <i>special</i> command, except it is executed only when the entire command is completed instead of after each file is updated. The list of files is placed in the environment variable <code>$FILES.</code> Each file name in <code>$FILES</code> is separated by a `:&#8217; (colon). </p>
 <p> If a hostname ends in a &#8220;+&#8221; (plus sign), then the plus is stripped off and NFS checks are disabled. This is equivalent to disabling the <code>-o</code><i>chknfs</i> option just for this one host. </p>
 <p> The following is a small example. </p>
@@ -286,12 +278,11 @@ imagen:
               notify ralph ;
 ${FILES} :: stamp.cory
               notify root [at] cory ;
-
 </code></pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>TMPDIR</p>
-<dd> Name of temporary directory to use. Default is <code>/tmp.</code></dl>
+<dt>TMPDIR</dt>
+<dd> Name of temporary directory to use. Default is <code>/tmp.</code></dd></dl>
 <h2>FILES</h2>
 <pre>
 distfile       - input command file
@@ -305,7 +296,7 @@ $TMPDIR/rdist* - temporary file for update lists
 <p> The following options are still recognized for backwards compatibility: </p>
 <dl>
 <dt>
-<dd> -v -N -O -q -b -r -R -s -w -y -h -i -x</dl>
+</dt><dd> -v -N -O -q -b -r -R -s -w -y -h -i -x</dd></dl>
 <h2>BUGS</h2>
 <p> Source files must reside on the local host where rdist is executed. </p>
 <p> Variable expansion only works for name lists; there should be a general macro facility. </p>

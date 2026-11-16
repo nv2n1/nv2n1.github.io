@@ -15,11 +15,11 @@ d_alloc_pseudo - allocate a dentry (for lookup-less filesystems)
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>the superblock</dl>
+<dl><dd></dd><dd>the superblock</dd></dl>
  
 
  <i>name</i>
-<dl><dd>qstr of the name</dl>
+<dl><dd>qstr of the name</dd></dl>
 
 <h2>Description</h2>
 

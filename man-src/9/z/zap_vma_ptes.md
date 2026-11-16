@@ -14,13 +14,13 @@ description: "zap_vma_ptes – remove ptes mapping the vma"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>vm_area_struct holding ptes to be zapped</dl>
+</dd><dd>vm_area_struct holding ptes to be zapped</dd></dl>
 <p> <i>address</i></p>
 <dl>
-<dd>starting address of pages to zap</dl>
+<dd>starting address of pages to zap</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>number of bytes to zap</dl>
+<dd>number of bytes to zap</dd></dl>
 <h2>Description</h2>
 <p>This function only unmaps ptes assigned to VM_PFNMAP vmas. </p>
 <p> The entire address range must be fully contained within the vma. </p>

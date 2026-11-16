@@ -15,10 +15,10 @@ description: "DROP DATABASE – remove a database"
 <p> <code>DROP DATABASE</code> cannot be undone. Use it with care!</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the database does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of the database to remove.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the database does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the database to remove.</dd></dl>
 <h2>Notes</h2>
 <p><code>DROP DATABASE</code> cannot be executed inside a transaction block. </p>
 <p> This command cannot be executed while connected to the target database. Thus, it might be more convenient to use the program dropdb [<code><a href="/docs/linux/man/1-dropdb/">dropdb</a></code>(1)] instead, which is a wrapper around this command.</p>

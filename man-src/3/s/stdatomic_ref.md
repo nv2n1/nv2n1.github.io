@@ -10,15 +10,11 @@ description: "std::atomic_ref – std::atomic_ref"
 <p>std::atomic_ref &#8211; std::atomic_ref</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 20)
-
         struct atomic_ref;
-
 template &lt;class T&gt;
 (2)(since C++ 20)
-
     struct atomic_ref&lt;T *&gt;;</code></pre>
 <p>The std::atomic_ref class template applies atomic operations to the object it references. For the lifetime of the atomic_ref object, the object it references is considered an atomic object. If one thread writes to an atomic object while another thread reads from it, the behavior is well-defined (see memory_model for details on data races). In addition, accesses to atomic objects may establish inter-thread synchronization and order non-atomic memory accesses as specified by std::memory_order.<br />
 The lifetime of an object must exceed the lifetime of all atomic_refs that references the object. While any atomic_ref instances referencing an object exists, the object must be exclusively accessed through these atomic_ref instances. No subobject of an object referenced by an atomic_ref object may be concurrently referenced by any other atomic_ref object.<br />

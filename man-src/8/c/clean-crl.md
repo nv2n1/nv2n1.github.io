@@ -14,16 +14,16 @@ description: "clean-crl – remove orphaned CRL like files from a certificate di
 <p>The <i>clean-crl</i> utility will remove CRL like files named <i>hash</i>.r<i>n</i> from the directory specified with the <code>-l</code> option if there is no corresponding .<i>n</i> file in the same. In effect, if the directory is solely used to hold CA certificates in the common OpenSSL format, it will thus remove CRL files for which the corresponding CA does not or no longer exists in the directory. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd>Show help text.</p>
-<dt><code>-l &#8211;cadir metadata-directory</code></p>
-<dd>The script will search this directory for files with the suffix .r<i>i</i>. There is no default &#8211; a common choice is /etc/pki/tls/certs, /etc/openldap/cacerts, or /etc/grid-security/certificates. </p>
-<dt><code>-V &#8211;version </code></p>
-<dd>Display version number (same as corresponding fetch-crl) </p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd>Verbose mode </p>
-<dt><code>-n &#8211;dryrun</code></p>
-<dd>Do not actually remove any files (useful primarily with -v) </p>
+<dt><code>-h &#8211;help</code></dt>
+<dd>Show help text.</dd>
+<dt><code>-l &#8211;cadir metadata-directory</code></dt>
+<dd>The script will search this directory for files with the suffix .r<i>i</i>. There is no default &#8211; a common choice is /etc/pki/tls/certs, /etc/openldap/cacerts, or /etc/grid-security/certificates. </dd>
+<dt><code>-V &#8211;version </code></dt>
+<dd>Display version number (same as corresponding fetch-crl) </dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd>Verbose mode </dd>
+<dt><code>-n &#8211;dryrun</code></dt>
+<dd>Do not actually remove any files (useful primarily with -v) </dd>
 </dl>
 <h2>Configuration</h2>
 <p>None.</p>

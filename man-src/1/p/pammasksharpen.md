@@ -29,14 +29,14 @@ description: "pammasksharpen – Sharpen an image via an unsharp mask"
 <p> Radius is a very important parameter; you can ruin an image with a radius too large. You can safely use the highest radius with an inanimate object, while a human face demands the least. Landscapes fall in between. But it really depends on the size of the details. Fine detail needs a smaller radius, or else you may obliterate tiny detail of the same size as the Radius width. A large image often has larger detail (more pixels involved), so can use a larger radius. Radius and sharpness (see <code>-sharpness</code> option) interact: reducing one allows you to increase the other. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-sharpness=</code><i>realnum</i></p>
-<dd> This specifies the magnitude of the sharpening. It is the multiple of edgeness that gets added to each sample as described above. </p>
+<dt><code>-sharpness=</code><i>realnum</i></dt>
+<dd> This specifies the magnitude of the sharpening. It is the multiple of edgeness that gets added to each sample as described above. </dd>
 <p> <i>realnum</i> is a nonnegative real decimal number. Zero means no sharpening at all. </p>
 <p> This parameter is known as &#8216;amount&#8217; in ImageMagick. </p>
 <p> The default is 1.0. </p>
 <p> This option was new in Netpbm 10.30 (October 2005). Before that, the sharpness was always 1.0. </p>
-<dt><code>-threshold=</code><i>realnum</i></p>
-<dd> This minimum amount of edgeness that will be considered edgeness at all. i.e. if the magnitude of the edgeness is less than this, <code>pammasksharpen</code> will treat the edgeness as zero. </p>
+<dt><code>-threshold=</code><i>realnum</i></dt>
+<dd> This minimum amount of edgeness that will be considered edgeness at all. i.e. if the magnitude of the edgeness is less than this, <code>pammasksharpen</code> will treat the edgeness as zero. </dd>
 <p> A nonzero value may be necessary here to avoid speckling in smooth areas. </p>
 <p> This is a fraction of the maxval (so it is in the range [0, 1.0]). </p>
 <p> The default is 0. </p>

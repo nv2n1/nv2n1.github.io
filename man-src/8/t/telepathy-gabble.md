@@ -17,15 +17,15 @@ description: "telepathy-gabble – Telepathy connection manager for XMPP (Jabber
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>GABBLE_LOGFILE</code>=<i>filename</i></p>
-<dd>If set, debug output will go to the given file rather than to stderr. If <code>+</code> is prepended to the <i>filename</i> (e.g. <code>GABBLE_LOGFILE=+gabble.log</code>), debug output will be appended to the file; otherwise, any existing file will be replaced.</p>
-<dt><code>GABBLE_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</p>
-<dt><code>WOCKY_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output from the Wocky XMPP library used by Gabble, or various undocumented options (which may change from release to release) to filter the output. For general Gabble debugging, &quot;net&quot; is recommended.</p>
-<dt><code>GABBLE_PERSIST</code>=<i>1</i></p>
-<dd>If set (to any value), Gabble will continue running until killed, rather than timing out if it has no open connections for a few seconds.</p>
-<dt><code>GABBLE_PLUGIN_DIR</code>=<i>directory</i></p>
-<dd>If set, and Gabble was compiled with plugin support, plugins will be loaded from <i>directory</i> rather than from the default directory.</dl>
+<dt><code>GABBLE_LOGFILE</code>=<i>filename</i></dt>
+<dd>If set, debug output will go to the given file rather than to stderr. If <code>+</code> is prepended to the <i>filename</i> (e.g. <code>GABBLE_LOGFILE=+gabble.log</code>), debug output will be appended to the file; otherwise, any existing file will be replaced.</dd>
+<dt><code>GABBLE_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dd>
+<dt><code>WOCKY_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output from the Wocky XMPP library used by Gabble, or various undocumented options (which may change from release to release) to filter the output. For general Gabble debugging, &quot;net&quot; is recommended.</dd>
+<dt><code>GABBLE_PERSIST</code>=<i>1</i></dt>
+<dd>If set (to any value), Gabble will continue running until killed, rather than timing out if it has no open connections for a few seconds.</dd>
+<dt><code>GABBLE_PLUGIN_DIR</code>=<i>directory</i></dt>
+<dd>If set, and Gabble was compiled with plugin support, plugins will be loaded from <i>directory</i> rather than from the default directory.</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i>, <i><a rel="nofollow" href="http://telepathy.freedesktop.org/wiki/CategoryGabble">http://telepathy.freedesktop.org/wiki/CategoryGabble</a></i>, <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1) </p>

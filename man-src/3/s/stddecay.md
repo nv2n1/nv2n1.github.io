@@ -11,10 +11,8 @@ std::decay - std::decay
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct decay;</code></pre> 
 Applies lvalue-to-rvalue, array-to-pointer, and function-to-pointer implicit conversions to the type T, removes cv-qualifiers, and defines the resulting type as the member typedef type. Formally: 
 * If T names the type &quot;array of U&quot; or &quot;reference to array of U&quot;, the member typedef type is U*. 
@@ -53,16 +51,12 @@ using decay_t = typename decay&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 template &lt;typename T, typename U&gt;
-
 struct decay_equiv : std::is_same&lt;typename std::decay&lt;T&gt;::type, U&gt;::type
-
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; decay_equiv&lt;int, int&gt;::value &lt;&lt; '\n'

@@ -17,14 +17,14 @@ description: "cupsaccept/cupsreject – accept/reject jobs sent to a destination
 <h2>Options</h2>
 <p>The following options are supported by both <code>cupsaccept</code> and <code>cupsreject</code>:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd>Forces encryption when connecting to the server.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd>Sets the username that is sent when connecting to the server.</p>
-<dt><code>-h </code><i>hostname[:port]</i></p>
-<dd>Chooses an alternate server.</p>
-<dt><code>-r </code>&quot;<i>reason</i>&quot;</p>
-<dd>Sets the reason string that is shown for a printer that is rejecting jobs.</dl>
+<dt><code>-E</code></dt>
+<dd>Forces encryption when connecting to the server.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd>Sets the username that is sent when connecting to the server.</dd>
+<dt><code>-h </code><i>hostname[:port]</i></dt>
+<dd>Chooses an alternate server.</dd>
+<dt><code>-r </code>&quot;<i>reason</i>&quot;</dt>
+<dd>Sets the reason string that is shown for a printer that is rejecting jobs.</dd></dl>
 <h2>Conforming To</h2>
 <p>The <code>cupsaccept</code> and <code>cupsreject</code> commands correspond to the System V printing system commands &quot;accept&quot; and &quot;reject&quot;, respectively. Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive. </p>
 <p> Finally, the CUPS versions may ask the user for an access password depending on the printing system configuration.</p>

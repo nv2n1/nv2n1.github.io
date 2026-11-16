@@ -11,10 +11,8 @@ std::destroy_at - std::destroy_at
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T&gt;
     (since C++ 17)
-
         void destroy_at(T *p);</code></pre> 
 Calls the destructor of the object pointed to by p, as if by p-&gt;~T(). 
 
@@ -38,9 +36,7 @@ p - a pointer to the object to be destroyed
 
 The following example demonstrates how to use destroy_at to destroy a contiguous sequence of elements. 
  // Run this code <pre><code>#include &lt;memory&gt;
-
 #include &lt;new&gt;
-
 #include &lt;iostream&gt;
 struct Tracer {
     int value;
@@ -50,7 +46,6 @@ struct Tracer {
     }
 };
 int main()
-
 {
     alignas(Tracer) unsigned char buffer[sizeof(Tracer) * 8];
     for (int i = 0; i &lt; 8; ++i)

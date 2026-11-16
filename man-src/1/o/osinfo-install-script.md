@@ -16,39 +16,39 @@ description: "osinfo-install-script – generate a script for automated installa
 <p> By default a script will be generated for a <tt>&quot;JEOS&quot;</tt> style install.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;profile=NAME</code></p>
-<dd> Choose the installation script profile. Defaults to <tt>&quot;jeos&quot;</tt>, but can also be <tt>&quot;desktop&quot;</tt>, or a site specific profile name</p>
-<dt><code>&#8211;config=key=value</code></p>
-<dd> Set the configuration parameter <tt>&quot;key&quot;</tt> to <tt>&quot;value&quot;</tt>.</dl>
+<dt><code>&#8211;profile=NAME</code></dt>
+<dd> Choose the installation script profile. Defaults to <tt>&quot;jeos&quot;</tt>, but can also be <tt>&quot;desktop&quot;</tt>, or a site specific profile name</dd>
+<dt><code>&#8211;config=key=value</code></dt>
+<dd> Set the configuration parameter <tt>&quot;key&quot;</tt> to <tt>&quot;value&quot;</tt>.</dd></dl>
 <h2>CONFIGURATION KEYS</h2>
 <p> The following configuration keys are available</p>
 <dl>
-<dt>&quot;hardware-arch&quot;</p>
-<dd> The hardware architecture</p>
-<dt>&quot;l10n-timezone&quot;</p>
-<dd> The local timezone</p>
-<dt>&quot;l10n-keyboard&quot;</p>
-<dd> The local keyboard layout</p>
-<dt>&quot;l10n-language&quot;</p>
-<dd> The local language</p>
-<dt>&quot;admin-password&quot;</p>
-<dd> The administrator password</p>
-<dt>&quot;user-password&quot;</p>
-<dd> The user password</p>
-<dt>&quot;user-login&quot;</p>
-<dd> The user login name</p>
-<dt>&quot;user-realname&quot;</p>
-<dd> The user real name</p>
-<dt>&quot;user-autologin&quot;</p>
-<dd> Whether to automatically login the user</p>
-<dt>&quot;user-admin&quot;</p>
-<dd> Whether to give the user administrative privileges</p>
-<dt>&quot;reg-product-key&quot;</p>
-<dd> The software registration key</p>
-<dt>&quot;reg-login&quot;</p>
-<dd> The software registration user login</p>
-<dt>&quot;reg-password&quot;</p>
-<dd> The software registration user password</dl>
+<dt>&quot;hardware-arch&quot;</dt>
+<dd> The hardware architecture</dd>
+<dt>&quot;l10n-timezone&quot;</dt>
+<dd> The local timezone</dd>
+<dt>&quot;l10n-keyboard&quot;</dt>
+<dd> The local keyboard layout</dd>
+<dt>&quot;l10n-language&quot;</dt>
+<dd> The local language</dd>
+<dt>&quot;admin-password&quot;</dt>
+<dd> The administrator password</dd>
+<dt>&quot;user-password&quot;</dt>
+<dd> The user password</dd>
+<dt>&quot;user-login&quot;</dt>
+<dd> The user login name</dd>
+<dt>&quot;user-realname&quot;</dt>
+<dd> The user real name</dd>
+<dt>&quot;user-autologin&quot;</dt>
+<dd> Whether to automatically login the user</dd>
+<dt>&quot;user-admin&quot;</dt>
+<dd> Whether to give the user administrative privileges</dd>
+<dt>&quot;reg-product-key&quot;</dt>
+<dd> The software registration key</dd>
+<dt>&quot;reg-login&quot;</dt>
+<dd> The software registration user login</dd>
+<dt>&quot;reg-password&quot;</dt>
+<dd> The software registration user password</dd></dl>
 <h2>EXAMPLE USAGE</h2>
 <p> The following usage generates a Fedora 16 kickstart script </p>
 <pre><code>

@@ -11,221 +11,77 @@ description: "sc::R12IntsAcc –"
 <p> <code>R12IntsAcc</code> accumulates transformed (MO) integrals stored as (ijxy) where i, j, x, and, y lie in spaces I, J, <code>X</code>, and <code>Y</code>, respectively.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;r12ia.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::R12IntsAcc_MemoryGrp</code>, <code>sc::R12IntsAcc_MPIIOFile</code>, and <code>sc::R12IntsAcc_Node0File</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum tbint_type { eri = 0, r12 = 1, r12t1 = 2, r12t2 = 3 }
-
-
 Types of two-body operators that R12IntsAcc understands.
-
-
-
 Public Member Functions
 R12IntsAcc (int num_te_types, int ni, int nj, int nx, int ny)
-
-
-
 R12IntsAcc (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 int num_te_types () const
-
-
 The number of types of integrals that are being handled together.
-
-
 int ni () const
-
-
 Rank of index space i.
-
-
 int nj () const
-
-
 Rank of index space j.
-
-
 int nx () const
-
-
 Rank of index space x.
-
-
 int ny () const
-
-
 Rank of index space y.
-
-
 size_t blocksize () const
-
-
 Size of each block of the integrals of one type, in double words.
-
-
 int next_orbital () const
-
-
 The index of the first orbital in the next integrals batch to be stored.
-
-
 virtual void store_memorygrp (Ref&lt; MemoryGrp &gt; &amp;mem, int ni, const size_t blksize=0)=0
-
-
 Stores all pair block of integrals held in mem in a layout assumed throughout MBPT2_R12.
-
-
 virtual void store_pair_block (int i, int j, double *ints)=0
-
-
 All member functions of this class and its children indices i and j don't include frozen orbitals Stores an ij pair block of integrals (assumes the block resides locally).
-
-
 virtual void commit ()
-
-
 Commit the content of the accumulator for reading.
-
-
 bool is_committed ()
-
-
 Has the content of the accumulator been commited for reading?
-
-
 virtual void activate ()
-
-
 Call before starting to read content.
-
-
 virtual void deactivate ()
-
-
 Call when done reading content.
-
-
 const bool is_active ()
-
-
 Check if can read content.
-
-
 virtual double * retrieve_pair_block (int i, int j, tbint_type oper_type)=0
-
-
 Retrieves an ij pair block of integrals.
-
-
 virtual void release_pair_block (int i, int j, tbint_type oper_type)=0
-
-
 Releases an ij pair block of integrals (if needed).
-
-
 virtual bool is_local (int i, int j) const =0
-
-
 Is this block stored locally?
-
-
 virtual bool is_avail (int i, int j) const =0
-
-
 Is this block available to this task?
-
-
 virtual bool has_access (int proc) const =0
-
-
 Does this task have access to all the integrals?
-
-
 int tasks_with_access (vector&lt; int &gt; &amp;twa_map) const
-
-
 Returns the total number of tasks with access to integrals.
-
-
 virtual bool can_restart () const =0
-
-
 Can this specialization be used in restarts?
-
-
-
 Static Public Attributes
 static const int max_num_te_types_ = 4
-
-
-
 Protected Member Functions
 virtual int ntasks () const =0
-
-
 total number of tasks
-
-
 virtual int taskid () const =0
-
-
 ID of this task.
-
-
 void inc_next_orbital (int ni)
-
-
 The index of the first orbital in the next integrals batch to be stored.
-
-
-
 Protected Attributes
 int ni_
-
-
-
 int nj_
-
-
-
 int nx_
-
-
-
 int ny_
-
-
-
 size_t nxy_
-
-
-
 size_t blksize_
-
-
-
 size_t blocksize_
-
-
-
 int next_orbital_
-
-
-
 bool committed_
-
-
-
 bool active_</code></pre>
 <h2>Detailed Description</h2>
 <p><code>R12IntsAcc</code> accumulates transformed (MO) integrals stored as (ijxy) where i, j, x, and, y lie in spaces I, J, <code>X</code>, and <code>Y</code>, respectively. </p>

@@ -23,26 +23,26 @@ description: "txt2regex – a Regular Expression Wizard, written with bash2 buil
 <p> Please visit the program homepage at <i><a rel="nofollow" href="http://txt2regex.sf.net">http://txt2regex.sf.net</a></i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;all</code></p>
-<dd> works with all registered programs </p>
-<dt><code>&#8211;help</code></p>
-<dd> prints the help message and quit </p>
-<dt><code>&#8211;history &lt;value&gt;</code></p>
-<dd> prints to STDOUT a regex from a history data </p>
-<dt><code>&#8211;make &lt;target&gt;</code></p>
-<dd> prints a ready regex for a common pattern </p>
-<dt><code>&#8211;nocolor</code></p>
-<dd> self-explanatory </p>
-<dt><code>&#8211;prog &lt;p1,p2,&#8230;&gt;</code></p>
-<dd> choose which programs to use (separated by commas) </p>
-<dt><code>&#8211;showinfo &lt;program&gt;</code></p>
-<dd> prints regex info about the program </p>
-<dt><code>&#8211;showmeta</code></p>
-<dd> prints a complete metachar table for all programs </p>
-<dt><code>&#8211;version</code></p>
-<dd> prints the program version and quit </p>
-<dt><code>&#8211;whitebg</code></p>
-<dd> colors adjusted to white background terminals </p>
+<dt><code>&#8211;all</code></dt>
+<dd> works with all registered programs </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> prints the help message and quit </dd>
+<dt><code>&#8211;history &lt;value&gt;</code></dt>
+<dd> prints to STDOUT a regex from a history data </dd>
+<dt><code>&#8211;make &lt;target&gt;</code></dt>
+<dd> prints a ready regex for a common pattern </dd>
+<dt><code>&#8211;nocolor</code></dt>
+<dd> self-explanatory </dd>
+<dt><code>&#8211;prog &lt;p1,p2,&#8230;&gt;</code></dt>
+<dd> choose which programs to use (separated by commas) </dd>
+<dt><code>&#8211;showinfo &lt;program&gt;</code></dt>
+<dd> prints regex info about the program </dd>
+<dt><code>&#8211;showmeta</code></dt>
+<dd> prints a complete metachar table for all programs </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> prints the program version and quit </dd>
+<dt><code>&#8211;whitebg</code></dt>
+<dd> colors adjusted to white background terminals </dd>
 </dl>
 <p> By default, all options are turned OFF. Just call it with no options to launch the default interactive interface. </p>
 <h2>DETAILS</h2>
@@ -55,44 +55,44 @@ description: "txt2regex – a Regular Expression Wizard, written with bash2 buil
 <p> <code>&#8211;prog</code> is nice to use your favorite programs, mix it with &#8211;make and &#8211;history </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Calling the program on the default interactive interface</p>
+<dt>Calling the program on the default interactive interface</dt>
 <dd>
 <pre>
   $ txt2regex
 </pre>
-<dt>Calling the program on a white terminal</p>
+</dd><dt>Calling the program on a white terminal</dt>
 <dd>
 <pre>
   $ xterm -fg black -bg white ; txt2regex --whitebg
 </pre>
-<dt>Getting information</p>
+</dd><dt>Getting information</dt>
 <dd>
 <pre>
   $ txt2regex --showmeta
 </pre>
-<dt>Getting specific information</p>
+</dd><dt>Getting specific information</dt>
 <dd>
 <pre>
   $ txt2regex --showinfo sed
 </pre>
-<dt>Calling it for specific programs</p>
+</dd><dt>Calling it for specific programs</dt>
 <dd>
 <pre>
   $ txt2regex --prog vim,sed,grep,python
 </pre>
-<dt>Applying a history data</p>
+</dd><dt>Applying a history data</dt>
 <dd>
 <pre>
   $ txt2regex --history '16421¤:01¤:'
 </pre>
-<dt>Getting ready regexes!</p>
+</dd><dt>Getting ready regexes!</dt>
 <dd>
 <pre><code>
 $ txt2regex-- make hour
     $ txt2regex-- make number3-- prog perl
         $ txt2regex-- make date2-- all
 </code></pre>
-</dl>
+</dd></dl>
 <h2>INTERFACE</h2>
 <p> The program interface is simple and easy to use. This is its contents: </p>
 <pre><code>

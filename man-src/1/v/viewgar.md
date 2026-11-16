@@ -15,16 +15,16 @@ description: "viewgar – GiNaC archive file viewer"
 <p> <code>viewgar</code> displays the contents of GiNaC archive files. By default it will print the archived expressions in standard mathematical notation. If given the <code>-d</code> option it will output a raw dump of the archive contents).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> print raw dump of archive instead of formatted expressions</dl>
+<dt><code>-d</code></dt>
+<dd> print raw dump of archive instead of formatted expressions</dd></dl>
 <h2>AUTHOR</h2>
 <dl>
-<dt>The GiNaC Group:</p>
+<dt>The GiNaC Group:</dt>
 <dd>
  Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br />
  Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br />
  Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br />
- Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dl>
+ Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> GiNaC Tutorial &#8211; An open framework for symbolic computation within the C++ programming language</p>
 <h2>COPYRIGHT</h2>

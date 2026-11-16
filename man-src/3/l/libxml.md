@@ -16,12 +16,12 @@ description: "libxml – library used to parse XML files"
 <p> The <i>libxml </i> library exports Push and Pull type parser interfaces for both XML and <i>html</i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/depot/lib/libxml_2.0.0/libxml.a</code></p>
-<dd> static library</p>
-<dt><code>/depot/lib/libxml_2.0.0/libxml.so</code></p>
-<dd> shared library</p>
-<dt><code>/depot/package/libxml_2.0.0/bin/xmllint</code></p>
-<dd> binary application for parsing XML files</dl>
+<dt><code>/depot/lib/libxml_2.0.0/libxml.a</code></dt>
+<dd> static library</dd>
+<dt><code>/depot/lib/libxml_2.0.0/libxml.so</code></dt>
+<dd> shared library</dd>
+<dt><code>/depot/package/libxml_2.0.0/bin/xmllint</code></dt>
+<dd> binary application for parsing XML files</dd></dl>
 <h2>AUTHORS</h2>
 <p> Daniel Veillard (daniel [at] veillard.com). Red Hat Inc. Manual page by Ziying Sherwin (sherwin [at] nlm.nih.gov), Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine.</p>
 <h2>SEE ALSO</h2>

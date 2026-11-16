@@ -11,59 +11,59 @@ description: "ndb_show_tables – display list of NDB tables"
 <p> ndb_show_tables &#8211; display list of NDB tables </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_show_tables [</code><i>options</i><code>]</code></dl>
+<dt> <code>ndb_show_tables [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_show_tables</code></p>
-<dd>displays a list of all NDB database objects in the cluster. By default, this includes not only both user-created tables and NDB system tables, but NDB-specific indexes, internal triggers, and MySQL Cluster Disk Data objects as well. </p>
+<dd>displays a list of all NDB database objects in the cluster. By default, this includes not only both user-created tables and NDB system tables, but NDB-specific indexes, internal triggers, and MySQL Cluster Disk Data objects as well. </dd>
 <p> The following table includes options that are specific to the MySQL Cluster program <code>ndb_show_tables</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndb_show_tables [-c <i>connect_string</i>]
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;database</code>, <code>-d</code> </p>
+</dt><dd> * <code>&#8211;database</code>, <code>-d</code> </dd>
 <p> Specifies the name of the database in which the tables are found.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;loops</code>, <code>-l</code> </p>
+</dt><dd> * <code>&#8211;loops</code>, <code>-l</code> </dd>
 <p> Specifies the number of times the utility should execute. This is 1 when this option is not specified, but if you do use the option, you must supply an integer argument for it.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;parsable</code>, <code>-p</code> </p>
+</dt><dd> * <code>&#8211;parsable</code>, <code>-p</code> </dd>
 <p> Using this option causes the output to be in a format suitable for use with LOAD DATA INFILE.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;show-temp-status</code> </p>
+</dt><dd> * <code>&#8211;show-temp-status</code> </dd>
 <p> If specified, this causes temporary tables to be displayed.</dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;type</code>, <code>-t</code> </p>
+</dt><dd> * <code>&#8211;type</code>, <code>-t</code> </dd>
 <p> Can be used to restrict the output to one type of object, specified by an integer type code as shown here: </p>
 <dl>
 <dt>
-<dd> * <code>1</code>: System table</dl>
+</dt><dd> * <code>1</code>: System table</dd></dl>
 <dl>
 <dt>
-<dd> * <code>2</code>: User-created table</dl>
+</dt><dd> * <code>2</code>: User-created table</dd></dl>
 <dl>
 <dt>
-<dd> * <code>3</code>: Unique hash index</dl>
+</dt><dd> * <code>3</code>: Unique hash index</dd></dl>
 <dl>
 <dt>
-<dd> Any other value causes all NDB database objects to be listed (the default).</dl>
+</dt><dd> Any other value causes all NDB database objects to be listed (the default).</dd></dl>
 <dl>
 <dt>
-<dd> * <code>&#8211;unqualified</code>, <code>-u</code> </p>
+</dt><dd> * <code>&#8211;unqualified</code>, <code>-u</code> </dd>
 <p> If specified, this causes unqualified object names to be displayed.</dl>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Only user-created Cluster tables may be accessed from MySQL; system tables such as SYSTAB_0 are not visible to <code>mysqld</code>. However, you can examine the contents of system tables using NDB API applications such as <code>ndb_select_all</code> (see <code><a href="/docs/linux/man/1-ndb_select_all/">ndb_select_all</a></code>(1)). </p>
 </dl>
 </dl>

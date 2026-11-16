@@ -14,10 +14,10 @@ description: "usb_altnum_to_altsetting – get the altsetting structure with a g
 <p><i>intf</i></p>
 <dl>
 <dd>
-<dd>the interface containing the altsetting in question</dl>
+</dd><dd>the interface containing the altsetting in question</dd></dl>
 <p> <i>altnum</i></p>
 <dl>
-<dd>the desired alternate setting number</dl>
+<dd>the desired alternate setting number</dd></dl>
 <h2>Description</h2>
 <p>This searches the altsetting array of the specified interface for an entry with the correct bAlternateSetting value. </p>
 <p> Note that altsettings need not be stored sequentially by number, so it would be incorrect to assume that the first altsetting entry in the array corresponds to altsetting zero. This routine helps device drivers avoid such mistakes. </p>

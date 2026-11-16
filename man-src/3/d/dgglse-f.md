@@ -18,7 +18,7 @@ description: "dgglse.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGLSE solves the linear equality-constrained least squares (LSE)
  problem:
@@ -33,11 +33,11 @@ description: "dgglse.f –"
  matrices (B, A) given by
     B = (0 R)*Q,   A = Z*T*Q.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -134,14 +134,14 @@ description: "dgglse.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 180 of file dgglse.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

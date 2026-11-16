@@ -22,32 +22,32 @@ description: "rancid-run – run rancid for each of the groups"
 </pre>
 <p> The command-line options are as follows:</p>
 <dl>
-<dt><code>-V</code></p>
-<dd> Prints package name and version strings.</p>
-<dt><code>-f rancid.conf</code></p>
-<dd> Specify an alternate configuration file.</p>
-<dt><code>-m mail_rcpt</code></p>
-<dd> Specify the recipient of diff mail, which is normally rancid-&lt;group&gt;. The argument may be a single address, multiple comma separated addresses, or <code>-m</code> may be specified multiple times.</p>
-<dt><code>-r device_name</code></p>
-<dd> Run rancid for a single device, <i>device_name</i>. <i>device_name</i> should be name, as it appears in a group&#8217;s router.db. The device must be marked &quot;up&quot;. If a group is not specified on the command-line, rancid will be run against any group in which the device_name appears. </p>
+<dt><code>-V</code></dt>
+<dd> Prints package name and version strings.</dd>
+<dt><code>-f rancid.conf</code></dt>
+<dd> Specify an alternate configuration file.</dd>
+<dt><code>-m mail_rcpt</code></dt>
+<dd> Specify the recipient of diff mail, which is normally rancid-&lt;group&gt;. The argument may be a single address, multiple comma separated addresses, or <code>-m</code> may be specified multiple times.</dd>
+<dt><code>-r device_name</code></dt>
+<dd> Run rancid for a single device, <i>device_name</i>. <i>device_name</i> should be name, as it appears in a group&#8217;s router.db. The device must be marked &quot;up&quot;. If a group is not specified on the command-line, rancid will be run against any group in which the device_name appears. </dd>
 <p> The <code>-r</code> option alters the subject line of the diff mail. It will begin with &lt;group name&gt;/&lt;device name&gt; rather than just the group name alone.</dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>rancid-run</code> utilizes the following environment variables from <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5).</p>
 <dl>
-<dt><code>BASEDIR</code></p>
-<dd> Location of group directories, etc. This is set to the &quot;localstatedir&quot; by the configure script at installation time.</p>
-<dt><code>LIST_OF_GROUPS</code></p>
-<dd> List of rancid groups to collect.</p>
-<dt><code>PATH</code></p>
-<dd> Search path for utilities.</p>
-<dt><code>TMPDIR</code></p>
-<dd> Directory to hold temporary and lock files.</dl>
+<dt><code>BASEDIR</code></dt>
+<dd> Location of group directories, etc. This is set to the &quot;localstatedir&quot; by the configure script at installation time.</dd>
+<dt><code>LIST_OF_GROUPS</code></dt>
+<dd> List of rancid groups to collect.</dd>
+<dt><code>PATH</code></dt>
+<dd> Search path for utilities.</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> Directory to hold temporary and lock files.</dd></dl>
 <h2>ERRORS</h2>
 <p> If rancid fails to run or collect a device&#8217;s configuration, the particular group&#8217;s log file (mentioned above) should be consulted. Any errors produced by the revision control system (CVS, Subversion, or git) or any of the rancid scripts should be included there, whether they be a botched cvs tree, login authentication failure, rancid configuration error, etc. If the log file produces no clues, the next debugging step should be run the commands manually. For example, can the user who runs rancid login to the device with &#8216;clogin hostname&#8217;, and so on.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$BASEDIR/etc/rancid.conf</code></p>
-<dd> <code>rancid-run</code> configuration file. </p>
+<dt><code>$BASEDIR/etc/rancid.conf</code></dt>
+<dd> <code>rancid-run</code> configuration file. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5)</p>

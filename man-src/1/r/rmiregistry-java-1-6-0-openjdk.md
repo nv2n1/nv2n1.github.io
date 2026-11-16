@@ -20,8 +20,8 @@ description: "rmiregistry – The Java Remote Object Registry"
 <p> The URL-based methods of the <i>java.rmi.Naming</i> class operate on a registry and can be used to look up a remote object on any host, and on the local host: bind a simple (string) name to a remote object, rebind a new name to a remote object (overriding the old binding), unbind a remote object, and list the URLs bound in the registry. </p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-J</p>
-<dd>Used in conjunction with any <i>java</i> option, it passes the option following the <i>-J</i> (no spaces between the -J and the option) on to the <i>java</i> interpreter.</dl>
+<dt>-J</dt>
+<dd>Used in conjunction with any <i>java</i> option, it passes the option following the <i>-J</i> (no spaces between the -J and the option) on to the <i>java</i> interpreter.</dd></dl>
 <h2>See Also</h2>
 <p>java, <i>java.rmi.registry.LocateRegistry</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/api/java/rmi/registry/locateregistry.html">http://java.sun.com/javase/6/docs/api/java/rmi/registry/locateregistry.html</a> and <i>java.rmi.Naming</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/api/java/rmi/naming.html">http://java.sun.com/javase/6/docs/api/java/rmi/naming.html</a> </p>
 <p>&nbsp;<wbr></p>

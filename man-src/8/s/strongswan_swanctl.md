@@ -14,53 +14,53 @@ description: "swanctl – strongSwan configuration, control and monitoring comma
 <p>swanctl is a cross-platform command line utility to configure, control and monitor the strongSwan IKE daemon. It is a replacement for the aging <code>starter</code>, <code>ipsec</code> and <code>stroke</code> tools. swanctl uses a configuration file called <code>swanctl.conf</code>(5) to parse configurations and credentials. Private keys, certificates and other PKI related credentials are read from specific directories. To communicate with the IKE daemon, swanctl uses the VICI protocol, the Versatile IKE Configuration Interface. This stable interface is usable by other tools and is often preferable than scripting swanctl and parsing its output. </p>
 <h2>Commands</h2>
 <dl>
-<dt><code>-i, &#8211;initiate</code></p>
-<dd>initiate a connection</p>
-<dt><code>-t, &#8211;terminate</code></p>
-<dd>terminate a connection</p>
-<dt><code>-R, &#8211;rekey</code></p>
-<dd>rekey an SA</p>
-<dt><code>-d, &#8211;redirect</code></p>
-<dd>redirect an IKE_SA</p>
-<dt><code>-p, &#8211;install</code></p>
-<dd>install a trap or shunt policy</p>
-<dt><code>-u, &#8211;uninstall</code></p>
-<dd>uninstall a trap or shunt policy</p>
-<dt><code>-l, &#8211;list-sas</code></p>
-<dd>list currently active IKE_SAs</p>
-<dt><code>-P, &#8211;list-pols</code></p>
-<dd>list currently installed policies</p>
-<dt><code>-b, &#8211;load-authorities</code></p>
-<dd>(re-)load certification authorities information</p>
-<dt><code>-L, &#8211;list-conns</code></p>
-<dd>list loaded configurations</p>
-<dt><code>-B, &#8211;list-authorities</code></p>
-<dd>list loaded certification authorities information</p>
-<dt><code>-x, &#8211;list-certs</code></p>
-<dd>list stored certificates</p>
-<dt><code>-A, &#8211;list-pools</code></p>
-<dd>list loaded pool configurations</p>
-<dt><code>-g, &#8211;list-algs</code></p>
-<dd>list loaded algorithms and their implementation</p>
-<dt><code>-q, &#8211;load-all</code></p>
-<dd>(re-)load credentials, pools, authorities and connections</p>
-<dt><code>-c, &#8211;load-conns</code></p>
-<dd>(re-)load connection configuration</p>
-<dt><code>-s, &#8211;load-creds</code></p>
-<dd>(re-)load credentials</p>
-<dt><code>-a, &#8211;load-pools</code></p>
-<dd>(re-)load pool configuration</p>
-<dt><code>-T, &#8211;log</code></p>
-<dd>trace logging output</p>
-<dt><code>-S, &#8211;stats</code></p>
-<dd>show daemon infos and statistics</p>
-<dt><code>-f, &#8211;flush-certs</code></p>
-<dd>flush cached certificates</p>
-<dt><code>-r, &#8211;reload-settings</code></p>
-<dd>reload <a href="/docs/linux/man/5-strongswan-conf/">strongswan.conf</a>(5) configuration</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>show daemon version information</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>show usage information</dl>
+<dt><code>-i, &#8211;initiate</code></dt>
+<dd>initiate a connection</dd>
+<dt><code>-t, &#8211;terminate</code></dt>
+<dd>terminate a connection</dd>
+<dt><code>-R, &#8211;rekey</code></dt>
+<dd>rekey an SA</dd>
+<dt><code>-d, &#8211;redirect</code></dt>
+<dd>redirect an IKE_SA</dd>
+<dt><code>-p, &#8211;install</code></dt>
+<dd>install a trap or shunt policy</dd>
+<dt><code>-u, &#8211;uninstall</code></dt>
+<dd>uninstall a trap or shunt policy</dd>
+<dt><code>-l, &#8211;list-sas</code></dt>
+<dd>list currently active IKE_SAs</dd>
+<dt><code>-P, &#8211;list-pols</code></dt>
+<dd>list currently installed policies</dd>
+<dt><code>-b, &#8211;load-authorities</code></dt>
+<dd>(re-)load certification authorities information</dd>
+<dt><code>-L, &#8211;list-conns</code></dt>
+<dd>list loaded configurations</dd>
+<dt><code>-B, &#8211;list-authorities</code></dt>
+<dd>list loaded certification authorities information</dd>
+<dt><code>-x, &#8211;list-certs</code></dt>
+<dd>list stored certificates</dd>
+<dt><code>-A, &#8211;list-pools</code></dt>
+<dd>list loaded pool configurations</dd>
+<dt><code>-g, &#8211;list-algs</code></dt>
+<dd>list loaded algorithms and their implementation</dd>
+<dt><code>-q, &#8211;load-all</code></dt>
+<dd>(re-)load credentials, pools, authorities and connections</dd>
+<dt><code>-c, &#8211;load-conns</code></dt>
+<dd>(re-)load connection configuration</dd>
+<dt><code>-s, &#8211;load-creds</code></dt>
+<dd>(re-)load credentials</dd>
+<dt><code>-a, &#8211;load-pools</code></dt>
+<dd>(re-)load pool configuration</dd>
+<dt><code>-T, &#8211;log</code></dt>
+<dd>trace logging output</dd>
+<dt><code>-S, &#8211;stats</code></dt>
+<dd>show daemon infos and statistics</dd>
+<dt><code>-f, &#8211;flush-certs</code></dt>
+<dd>flush cached certificates</dd>
+<dt><code>-r, &#8211;reload-settings</code></dt>
+<dd>reload <a href="/docs/linux/man/5-strongswan-conf/">strongswan.conf</a>(5) configuration</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>show daemon version information</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>show usage information</dd></dl>
 <h2>See Also</h2>
 <p><code>swanctl.conf</code>(5) </p>

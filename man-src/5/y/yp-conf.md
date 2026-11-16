@@ -12,19 +12,19 @@ description: "yp.conf – NIS binding configuration file"
 <p>The file /etc/yp.conf is read from <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8) at startup or when receiving signal SIGHUP. The entries are used for the initial binding. Valid entries are </p>
 <p> <code>domain</code> <i>nisdomain</i> <code>server</code> <i>hostname</i></p>
 <dl>
-<dd>Use server <i>hostname</i> for the domain <i>nisdomain</i>. You could have more then one entry of this type for a single domain.</dl>
+<dd>Use server <i>hostname</i> for the domain <i>nisdomain</i>. You could have more then one entry of this type for a single domain.</dd></dl>
 <p> <code>domain</code> <i>nisdomain</i> <code>broadcast</code></p>
 <dl>
-<dd>Use broadcast on the local net for domain <i>nisdomain</i>.</dl>
+<dd>Use broadcast on the local net for domain <i>nisdomain</i>.</dd></dl>
 <p> <code>domain</code> <i>nisdomain</i> <code>slp</code></p>
 <dl>
-<dd>Query the local running SLP server for hosts running ypserv and distributing <i>nisdomain</i>. This option is only available, if <code>ypbind</code> was compiled with SLP support.</dl>
+<dd>Query the local running SLP server for hosts running ypserv and distributing <i>nisdomain</i>. This option is only available, if <code>ypbind</code> was compiled with SLP support.</dd></dl>
 <p> <code>ypserver</code> <i>hostname</i></p>
 <dl>
-<dd>Use server <i>hostname</i> for the local domain.</dl>
+<dd>Use server <i>hostname</i> for the local domain.</dd></dl>
 <p> <code>broadcast</code></p>
 <dl>
-<dd>If no other server is given or all of them are not reachable, try a broadcast call for the default domain to find a server.</dl>
+<dd>If no other server is given or all of them are not reachable, try a broadcast call for the default domain to find a server.</dd></dl>
 <p> If for a specific domain the broadcast option and fixed server are given, <code>ypbind-mt</code> tries at first the given servers before falling back to broadcasting for a running server.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8)</p>

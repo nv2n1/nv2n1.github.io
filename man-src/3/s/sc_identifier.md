@@ -13,76 +13,30 @@ sc::Identifier -
 <h2>Synopsis</h2>
 
 <pre><code>
-
 #include &lt;identity.h&gt;
-
 Public Member Functions
 Identifier ()
-
-
 Create an Identifier for a null object.
-
-
 Identifier (const Identity *i)
-
-
 Create an Identifier for the given object.
-
-
 Identifier (const Identifier &amp;i)
-
-
 Create an Identifier for the given object.
-
-
 ~Identifier ()
-
-
 The destructor does nothing.
-
-
 void operator= (const Identifier &amp;i)
-
-
 Assign to the given Identifier.
-
-
 int operator&lt; (const Identifier &amp;i) const
-
-
 Less than.
-
-
 int operator&gt; (const Identifier &amp;i) const
-
-
 Greater than.
-
-
 int operator== (const Identifier &amp;i) const
-
-
 Equal.
-
-
 int operator&lt;= (const Identifier &amp;i) const
-
-
 Less than or equal.
-
-
 int operator&gt;= (const Identifier &amp;i) const
-
-
 Greater than or equal.
-
-
 int operator!= (const Identifier &amp;i) const
-
-
 Not equal.
-
-
 void print (std::ostream &amp;) const</code></pre>
 
 <h2>Detailed Description</h2>

@@ -19,18 +19,18 @@ description: "dlasrt.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  Sort the numbers in D in increasing order (if ID = 'I') or
  in decreasing order (if ID = 'D' ).
  Use Quick Sort, reverting to Insertion sort on arrays of
  size &lt;= 20. Dimension of STACK limits N to about 2**32.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ID</i> </p>
+</dt><dd> <i>ID</i> </dd>
 <pre>
           ID is CHARACTER*1
           = 'I': sort D in increasing order;
@@ -55,14 +55,14 @@ D is DOUBLE PRECISION array, dimension(N) On entry, the array to be sorted.On ex
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 89 of file dlasrt.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

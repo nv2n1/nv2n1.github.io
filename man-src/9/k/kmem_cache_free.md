@@ -15,11 +15,11 @@ kmem_cache_free - Deallocate an object
 <h2>Arguments</h2>
 
 <i>cachep</i>
-<dl><dd><dd>The cache the allocation was from.</dl>
+<dl><dd></dd><dd>The cache the allocation was from.</dd></dl>
  
 
  <i>objp</i>
-<dl><dd>The previously allocated object.</dl>
+<dl><dd>The previously allocated object.</dd></dl>
 
 <h2>Description</h2>
 

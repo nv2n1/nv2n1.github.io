@@ -15,27 +15,27 @@ alloc_netdev_mqs - allocate network device
 <h2>Arguments</h2>
 
 <i>sizeof_priv</i>
-<dl><dd><dd>size of private data to allocate space for</dl>
+<dl><dd></dd><dd>size of private data to allocate space for</dd></dl>
  
 
  <i>name</i>
-<dl><dd>device name format string</dl>
+<dl><dd>device name format string</dd></dl>
  
 
  <i>name_assign_type</i>
-<dl><dd>origin of device name</dl>
+<dl><dd>origin of device name</dd></dl>
  
 
  <i>setup</i>
-<dl><dd>callback to initialize device</dl>
+<dl><dd>callback to initialize device</dd></dl>
  
 
  <i>txqs</i>
-<dl><dd>the number of TX subqueues to allocate</dl>
+<dl><dd>the number of TX subqueues to allocate</dd></dl>
  
 
  <i>rxqs</i>
-<dl><dd>the number of RX subqueues to allocate</dl>
+<dl><dd>the number of RX subqueues to allocate</dd></dl>
 
 <h2>Description</h2>
 

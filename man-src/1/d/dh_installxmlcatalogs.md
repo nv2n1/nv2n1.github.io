@@ -23,8 +23,8 @@ description: "dh_installxmlcatalogs – install and register XML catalog files"
  <code>xml-core</code> package will be added to <tt>&quot;${misc:Depends}&quot;</tt>, so be sure to use that variable in the file <i>debian/control</i>. See <code><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></code>(1) for an explanation of Debhelper maintainer script snippets.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;noscripts</code></p>
-<dd> Do not modify <i>postinst</i>/<i>postrm</i>/<i>prerm</i> scripts.</dl>
+<dt><code>-n</code>, <code>&#8211;noscripts</code></dt>
+<dd> Do not modify <i>postinst</i>/<i>postrm</i>/<i>prerm</i> scripts.</dd></dl>
 <h2>NOTES</h2>
 <p> Note that this command is not idempotent. &#8220;dh_clean -k&#8221; should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
 <h2>SEE ALSO</h2>

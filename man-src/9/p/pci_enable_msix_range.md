@@ -15,19 +15,19 @@ pci_enable_msix_range - configure device's MSI-X capability structure
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>pointer to the pci_dev data structure of MSI-X device function</dl>
+<dl><dd></dd><dd>pointer to the pci_dev data structure of MSI-X device function</dd></dl>
  
 
  <i>entries</i>
-<dl><dd>pointer to an array of MSI-X entries</dl>
+<dl><dd>pointer to an array of MSI-X entries</dd></dl>
  
 
  <i>minvec</i>
-<dl><dd>minimum number of MSI-X irqs requested</dl>
+<dl><dd>minimum number of MSI-X irqs requested</dd></dl>
  
 
  <i>maxvec</i>
-<dl><dd>maximum number of MSI-X irqs requested</dl>
+<dl><dd>maximum number of MSI-X irqs requested</dd></dl>
 
 <h2>Description</h2>
 

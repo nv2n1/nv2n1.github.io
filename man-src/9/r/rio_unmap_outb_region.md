@@ -14,15 +14,15 @@ description: "rio_unmap_outb_region – – Unmap the inbound memory region"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port</dl>
+</dd><dd>Master port</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>destination id mapping points to</dl>
+<dd>destination id mapping points to</dd></dl>
 <p> <i>rstart</i></p>
 <dl>
-<dd>RIO base address window translates to</dl>
+<dd>RIO base address window translates to</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,11 +15,11 @@ snd_component_add - add a component string
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>soundcard structure</dl>
+<dl><dd></dd><dd>soundcard structure</dd></dl>
  
 
  <i>component</i>
-<dl><dd>the component id string</dl>
+<dl><dd>the component id string</dd></dl>
 
 <h2>Description</h2>
 

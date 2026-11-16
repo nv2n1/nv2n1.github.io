@@ -17,20 +17,20 @@ description: "mkdiskimage – Create a blank MS-DOS formatted hard disk image"
 <p> Additional settings include ZIP type disks, FAT32 formatting, and the inclusion of an emulation header. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd> Use the fourth partition table entry. This is the standard for ZIP-disks.</p>
-<dt><code>-F</code></p>
-<dd> Format the partition using a FAT32 file system.</p>
-<dt><code>-M</code></p>
-<dd> The argument <i>cyl</i> is given in Megabytes. Recalculate this to get the count in cylinders.</p>
-<dt><code>-d</code></p>
-<dd> Add a DOSEMU header.</p>
-<dt><code>-i</code> <i>id</i></p>
-<dd> Specify the MBR identity field as <i>id</i>.</p>
-<dt><code>-o</code></p>
-<dd> Print to stdout the file system offset.</p>
-<dt><code>-z</code></p>
-<dd> Use a ZIP-disk geometry. This needs <i>heads</i>=64 and <i>sect</i>=32. </p>
+<dt><code>-4</code></dt>
+<dd> Use the fourth partition table entry. This is the standard for ZIP-disks.</dd>
+<dt><code>-F</code></dt>
+<dd> Format the partition using a FAT32 file system.</dd>
+<dt><code>-M</code></dt>
+<dd> The argument <i>cyl</i> is given in Megabytes. Recalculate this to get the count in cylinders.</dd>
+<dt><code>-d</code></dt>
+<dd> Add a DOSEMU header.</dd>
+<dt><code>-i</code> <i>id</i></dt>
+<dd> Specify the MBR identity field as <i>id</i>.</dd>
+<dt><code>-o</code></dt>
+<dd> Print to stdout the file system offset.</dd>
+<dt><code>-z</code></dt>
+<dd> Use a ZIP-disk geometry. This needs <i>heads</i>=64 and <i>sect</i>=32. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1) </p>

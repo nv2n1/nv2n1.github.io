@@ -24,11 +24,11 @@ url: "/docs/linux/man/1-perlobj/"
  There are a few basic principles which define object oriented Perl:
 <dl>
 <dt>1.
-<dd> An object is simply a data structure that knows to which class it belongs.
-<dt>2.
-<dd> A class is simply a package. A class provides methods that expect to operate on objects.
-<dt>3.
-<dd> A method is simply a subroutine that expects a reference to an object (or a package name, for class methods) as the first argument.</dl>
+</dt><dd> An object is simply a data structure that knows to which class it belongs.
+</dd><dt>2.
+</dt><dd> A class is simply a package. A class provides methods that expect to operate on objects.
+</dd><dt>3.
+</dt><dd> A method is simply a subroutine that expects a reference to an object (or a package name, for class methods) as the first argument.</dd></dl>
  
 
  Let's look at each of these principles in depth.
@@ -583,33 +583,23 @@ if (defined blessed($thing)) {
  All classes automatically inherit from the <font SIZE="-1">UNIVERSAL</font> class, which is built-in to the Perl core. This class provides a number of methods, all of which can be called on either a class or an object. You can also choose to override some of these methods in your class. If you do so, we recommend that you follow the built-in semantics described below.
 <dl>
 <dt>isa($class)
-<dd> The <tt>&quot;isa&quot;</tt> method returns <i>true</i> if the object is a member of the class in <tt>$class</tt>, or a member of a subclass of <tt>$class</tt>. 
-
+</dt><dd> The <tt>&quot;isa&quot;</tt> method returns <i>true</i> if the object is a member of the class in <tt>$class</tt>, or a member of a subclass of <tt>$class</tt>. 
  If you override this method, it should never throw an exception.
-<dt><font SIZE="-1">DOES</font>($role)
-<dd> The <tt>&quot;DOES&quot;</tt> method returns <i>true</i> if its object claims to perform the role <tt>$role</tt>. By default, this is equivalent to <tt>&quot;isa&quot;</tt>. This method is provided for use by object system extensions that implement roles, like <tt>&quot;Moose&quot;</tt> and <tt>&quot;Role::Tiny&quot;</tt>. 
-
+</dd><dt><font SIZE="-1">DOES</font>($role)
+</dt><dd> The <tt>&quot;DOES&quot;</tt> method returns <i>true</i> if its object claims to perform the role <tt>$role</tt>. By default, this is equivalent to <tt>&quot;isa&quot;</tt>. This method is provided for use by object system extensions that implement roles, like <tt>&quot;Moose&quot;</tt> and <tt>&quot;Role::Tiny&quot;</tt>. 
  You can also override <tt>&quot;DOES&quot;</tt> directly in your own classes. If you override this method, it should never throw an exception.
-<dt>can($method)
-<dd> The <tt>&quot;can&quot;</tt> method checks to see if the class or object it was called on has a method named <tt>$method</tt>. This checks for the method in the class and all of its parents. If the method exists, then a reference to the subroutine is returned. If it does not then <tt>&quot;undef&quot;</tt> is returned. 
-
+</dd><dt>can($method)
+</dt><dd> The <tt>&quot;can&quot;</tt> method checks to see if the class or object it was called on has a method named <tt>$method</tt>. This checks for the method in the class and all of its parents. If the method exists, then a reference to the subroutine is returned. If it does not then <tt>&quot;undef&quot;</tt> is returned. 
  If your class responds to method calls via <tt>&quot;AUTOLOAD&quot;</tt>, you may want to overload <tt>&quot;can&quot;</tt> to return a subroutine reference for methods which your <tt>&quot;AUTOLOAD&quot;</tt> method handles. 
-
  If you override this method, it should never throw an exception.
-<dt><font SIZE="-1">VERSION</font>($need)
-<dd> The <tt>&quot;VERSION&quot;</tt> method returns the version number of the class (package). 
-
+</dd><dt><font SIZE="-1">VERSION</font>($need)
+</dt><dd> The <tt>&quot;VERSION&quot;</tt> method returns the version number of the class (package). 
  If the <tt>$need</tt> argument is given then it will check that the current version (as defined by the <tt>$VERSION</tt> variable in the package) is greater than or equal to <tt>$need</tt>; it will die if this is not the case. This method is called automatically by the <tt>&quot;VERSION&quot;</tt> form of <tt>&quot;use&quot;</tt>. 
-
- 
 use Package 1.2 qw(some imported subs);
 #implies:
 Package-&gt;VERSION(1.2);
- 
-
  We recommend that you use this method to access another package's version, rather than looking directly at <tt>$Package::VERSION</tt>. The package you are looking at could have overridden the <tt>&quot;VERSION&quot;</tt> method. 
-
- We also recommend using this method to check whether a module has a sufficient version. The internal implementation uses the version module to make sure that different types of version numbers are compared correctly.</dl>
+ We also recommend using this method to check whether a module has a sufficient version. The internal implementation uses the version module to make sure that different types of version numbers are compared correctly.</dd></dl>
 
 <h3><font SIZE="-1">AUTOLOAD</font></h3>
 
@@ -771,4 +761,4 @@ print $time-&gt;epoch;
 
 
 <dt><a HREF="#lbAU">SEE ALSO</a>
-<dd></dl>
+</dt><dd></dd></dl>

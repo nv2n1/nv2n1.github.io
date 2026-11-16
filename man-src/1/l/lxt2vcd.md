@@ -15,24 +15,24 @@ description: "lxt2vcd – Converts LXT2 files to VCD"
 <p> Converts LXT2 files to VCD files on stdout. If an output filename is not specified, the VCD is emitted to stdout. Note that &quot;regular&quot; LXT2 files will convert to VCD files with monotonically increasing time values. LXT2 files which are dumped with the &quot;partial&quot; option (to speed up access in wave viewers) will dump with monotonically increasing time values per 2k block of nets. This may be fixed in later versions of <i>lxt2vcd</i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l,&#8211;lxtname</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify LXT2 input filename.</p>
-<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify optional VCD output filename.</p>
-<dt><code>-f,&#8211;flatearth</code></p>
-<dd> Emit flattened hierarchies.</p>
+<dt><code>-l,&#8211;lxtname</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify LXT2 input filename.</dd>
+<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify optional VCD output filename.</dd>
+<dt><code>-f,&#8211;flatearth</code></dt>
+<dd> Emit flattened hierarchies.</dd>
 <dt>
-<dt><code>-n,&#8211;notruncate</code></p>
+</dt><dt><code>-n,&#8211;notruncate</code></dt>
 <dd>
-<dd> Do not shorten bitvectors. This disables binary value compression as described in the IEEE-1364 specification. (i.e., all values except for &#8216;1&#8217; left propagate as a sign bit on vectors which do not fill up their entire declared width)</p>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Display help then exit. </p>
+</dd><dd> Do not shorten bitvectors. This disables binary value compression as described in the IEEE-1364 specification. (i.e., all values except for &#8216;1&#8217; left propagate as a sign bit on vectors which do not fill up their entire declared width)</dd>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display help then exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To run this program the standard way type:</p>
 <dl>
-<dt>lxt2vcd filename.lxt</p>
-<dd> The VCD conversion is emitted to stdout.</dl>
+<dt>lxt2vcd filename.lxt</dt>
+<dd> The VCD conversion is emitted to stdout.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> <i>lxt2vcd</i> does not re-create glitches as these are coalesced together into one value change during the writing of the LXT2 file. </p>
 <h2>AUTHORS</h2>

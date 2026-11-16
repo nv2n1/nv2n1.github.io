@@ -14,10 +14,10 @@ description: "inode_permission – Check for access rights to a given inode"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>Inode to check permission on</dl>
+</dd><dd>Inode to check permission on</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>Right to check for (<code>MAY_READ</code>, <code>MAY_WRITE</code>, <code>MAY_EXEC</code>)</dl>
+<dd>Right to check for (<code>MAY_READ</code>, <code>MAY_WRITE</code>, <code>MAY_EXEC</code>)</dd></dl>
 <h2>Description</h2>
 <p>Check for read/write/execute permissions on an inode. We use fs[ug]id for this, letting us set arbitrary permissions for filesystem access without changing the &#8220;normal&#8221; UIDs which are used for other things. </p>
 <p> When checking for MAY_APPEND, MAY_WRITE must also be set in <i>mask</i>.</p>

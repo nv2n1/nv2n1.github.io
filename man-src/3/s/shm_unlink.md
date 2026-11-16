@@ -10,9 +10,7 @@ description: "shm_open, shm_unlink – create/open or unlink POSIX shared memory
 <p>shm_open, shm_unlink &#8211; create/open or unlink POSIX shared memory objects</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/mman.h&gt;
-
 #include &lt;sys/stat.h&gt; /* For mode constants */
-
 #include &lt;fcntl.h&gt; /* For O_* constants */
 int shm_open(const char *name, int oflag, mode_t mode);
 int shm_unlink(const char *name);</code></pre>
@@ -22,17 +20,17 @@ int shm_unlink(const char *name);</code></pre>
 <p> The operation of <code>shm_open</code>() is analogous to that of <code><a href="/docs/linux/man/2-open/">open</a></code>(2). <i>name</i> specifies the shared memory object to be created or opened. For portable use, a shared memory object should be identified by a name of the form <i>/somename</i>; that is, a null-terminated string of up to <code>NAME_MAX</code> (i.e., 255) characters consisting of an initial slash, followed by one or more characters, none of which are slashes. </p>
 <p> <i>oflag</i> is a bit mask created by ORing together exactly one of <code>O_RDONLY</code> or <code>O_RDWR</code> and any of the other flags listed here:</p>
 <dl>
-<dt><code>O_RDONLY</code></p>
-<dd>Open the object for read access. A shared memory object opened in this way can be <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)ed only for read (<code>PROT_READ</code>) access.</p>
-<dt><code>O_RDWR</code></p>
-<dd>Open the object for read-write access.</p>
-<dt><code>O_CREAT</code></p>
-<dd>Create the shared memory object if it does not exist. The user and group ownership of the object are taken from the corresponding effective IDs of the calling process, and the object&#8217;s permission bits are set according to the low-order 9 bits of <i>mode</i>, except that those bits set in the process file mode creation mask (see <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2)) are cleared for the new object. A set of macro constants which can be used to define <i>mode</i> is listed in <code><a href="/docs/linux/man/2-open/">open</a></code>(2). (Symbolic definitions of these constants can be obtained by including <i>&lt;sys/stat.h&gt;</i>.)</p>
-<dd>A new shared memory object initially has zero length&#8212;the size of the object can be set using <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2). The newly allocated bytes of a shared memory object are automatically initialized to 0.</p>
-<dt><code>O_EXCL</code></p>
-<dd>If <code>O_CREAT</code> was also specified, and a shared memory object with the given <i>name</i> already exists, return an error. The check for the existence of the object, and its creation if it does not exist, are performed atomically.</p>
-<dt><code>O_TRUNC</code></p>
-<dd>If the shared memory object already exists, truncate it to zero bytes.</dl>
+<dt><code>O_RDONLY</code></dt>
+<dd>Open the object for read access. A shared memory object opened in this way can be <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)ed only for read (<code>PROT_READ</code>) access.</dd>
+<dt><code>O_RDWR</code></dt>
+<dd>Open the object for read-write access.</dd>
+<dt><code>O_CREAT</code></dt>
+<dd>Create the shared memory object if it does not exist. The user and group ownership of the object are taken from the corresponding effective IDs of the calling process, and the object&#8217;s permission bits are set according to the low-order 9 bits of <i>mode</i>, except that those bits set in the process file mode creation mask (see <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2)) are cleared for the new object. A set of macro constants which can be used to define <i>mode</i> is listed in <code><a href="/docs/linux/man/2-open/">open</a></code>(2). (Symbolic definitions of these constants can be obtained by including <i>&lt;sys/stat.h&gt;</i>.)</dd>
+<dd>A new shared memory object initially has zero length&#8212;the size of the object can be set using <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2). The newly allocated bytes of a shared memory object are automatically initialized to 0.</dd>
+<dt><code>O_EXCL</code></dt>
+<dd>If <code>O_CREAT</code> was also specified, and a shared memory object with the given <i>name</i> already exists, return an error. The check for the existence of the object, and its creation if it does not exist, are performed atomically.</dd>
+<dt><code>O_TRUNC</code></dt>
+<dd>If the shared memory object already exists, truncate it to zero bytes.</dd></dl>
 <p> Definitions of these flag values can be obtained by including <i>&lt;fcntl.h&gt;</i>. </p>
 <p> On successful completion <code>shm_open</code>() returns a new file descriptor referring to the shared memory object. This file descriptor is guaranteed to be the lowest-numbered file descriptor not previously opened within the process. The <code>FD_CLOEXEC</code> flag (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)) is set for the file descriptor. </p>
 <p> The file descriptor is normally used in subsequent calls to <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2) (for a newly created object) and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). After a call to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) the file descriptor may be closed without affecting the memory mapping. </p>
@@ -42,24 +40,24 @@ int shm_unlink(const char *name);</code></pre>
 <h2>Errors</h2>
 <p>On failure, <i>errno</i> is set to indicate the cause of the error. Values which may appear in <i>errno</i> include the following:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>Permission to <code>shm_unlink</code>() the shared memory object was denied.</p>
-<dt><code>EACCES</code></p>
-<dd>Permission was denied to <code>shm_open</code>() <i>name</i> in the specified <i>mode</i>, or <code>O_TRUNC</code> was specified and the caller does not have write permission on the object.</p>
-<dt><code>EEXIST</code></p>
-<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified to <code>shm_open</code>() and the shared memory object specified by <i>name</i> already exists.</p>
-<dt><code>EINVAL</code></p>
-<dd>The <i>name</i> argument to <code>shm_open</code>() was invalid.</p>
-<dt><code>EMFILE</code></p>
-<dd>The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd>The length of <i>name</i> exceeds <code>PATH_MAX</code>.</p>
-<dt><code>ENFILE</code></p>
-<dd>The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOENT</code></p>
-<dd>An attempt was made to <code>shm_open</code>() a <i>name</i> that did not exist, and <code>O_CREAT</code> was not specified.</p>
-<dt><code>ENOENT</code></p>
-<dd>An attempt was to made to <code>shm_unlink</code>() a <i>name</i> that does not exist.</dl>
+<dt><code>EACCES</code></dt>
+<dd>Permission to <code>shm_unlink</code>() the shared memory object was denied.</dd>
+<dt><code>EACCES</code></dt>
+<dd>Permission was denied to <code>shm_open</code>() <i>name</i> in the specified <i>mode</i>, or <code>O_TRUNC</code> was specified and the caller does not have write permission on the object.</dd>
+<dt><code>EEXIST</code></dt>
+<dd>Both <code>O_CREAT</code> and <code>O_EXCL</code> were specified to <code>shm_open</code>() and the shared memory object specified by <i>name</i> already exists.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>name</i> argument to <code>shm_open</code>() was invalid.</dd>
+<dt><code>EMFILE</code></dt>
+<dd>The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd>The length of <i>name</i> exceeds <code>PATH_MAX</code>.</dd>
+<dt><code>ENFILE</code></dt>
+<dd>The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>An attempt was made to <code>shm_open</code>() a <i>name</i> that did not exist, and <code>O_CREAT</code> was not specified.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>An attempt was to made to <code>shm_unlink</code>() a <i>name</i> that does not exist.</dd></dl>
 <h2>Versions</h2>
 <p>These functions are provided in glibc 2.2 and later.</p>
 <h2>Attributes</h2>

@@ -76,8 +76,8 @@ description: "tomcat_selinux – Security Enhanced Linux Policy for the tomcat p
 <p> <code>tomcat_exec_t</code> </p>
 <p> &#8211; Set files with the tomcat_exec_t type, if you want to transition an executable to the tomcat_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/tomcat(6)?, /usr/libexec/tomcat/server </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/tomcat(6)?, /usr/libexec/tomcat/server </dd>
 </dl>
 <p> <code>tomcat_log_t</code> </p>
 <p> &#8211; Set files with the tomcat_log_t type, if you want to treat the data as tomcat log data, usually stored under the /var/log directory. </p>

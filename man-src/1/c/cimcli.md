@@ -18,19 +18,19 @@ description: "cimcli – command line WBEM Client"
 &nbsp;<wbr> Effective OpenPegasus 2.14 <code>cimcli</code> incorporates the pull operations defined by DMTF into its operations list . See the section on Pull Client Operations </p>
 <p> In addition to the CIM Operations defined in the DMTF specification DMTF DSP0200, <code>cimcli</code> implements a number of other operations that support testing and querying CIM servers (ex. operation to query for namespaces and another to get all instances in a namespace) which require multiple CIM Operations. The additional operations include: </p>
 <dl>
-<dt>1.</p>
-<dd> Enumerate namespaces (ns) &#8211; Returns a list of the namespaces available from the CIMOM.</p>
-<dt>2.</p>
-<dd> Enumerate all instance names (niall) &#8211; Returns a list of all instance names in a single defined namespace.</p>
-<dt>3.</p>
-<dd> Turn CIM Server statistics on and off (DEPRECATED) &#8211; Turns the statistics flag in the Server CIMObjectManager Class on or off for the OpenPegasus server. This enables and disables execution of statistics gathering in the server. This command is retained for compatibility but is DEPRECATED and will be removed when a real alternative is included in the Pegasus release. </p>
+<dt>1.</dt>
+<dd> Enumerate namespaces (ns) &#8211; Returns a list of the namespaces available from the CIMOM.</dd>
+<dt>2.</dt>
+<dd> Enumerate all instance names (niall) &#8211; Returns a list of all instance names in a single defined namespace.</dd>
+<dt>3.</dt>
+<dd> Turn CIM Server statistics on and off (DEPRECATED) &#8211; Turns the statistics flag in the Server CIMObjectManager Class on or off for the OpenPegasus server. This enables and disables execution of statistics gathering in the server. This command is retained for compatibility but is DEPRECATED and will be removed when a real alternative is included in the Pegasus release. </dd>
 <p> <code>NOTE:</code> This operation may be CIMServer type specific since not all CIM servers implement the statistics functions.</p>
-<dt>4.</p>
-<dd> Test instances (ti) &#8211; Executes tests of the characteristics of an instance requested from the CIM Server. This operation extends the capabilities of <code>cimcli</code> to actually compare information from the server with information in the command line input.</p>
-<dt>5.</p>
-<dd> classtree (ct) &#8211; Display a tree of either superclasses or subclasses of defined classes in the repository.</p>
-<dt>6.</p>
-<dd> countinstance (cci) &#8211; Count the number of instances by class in a namespace. </p>
+<dt>4.</dt>
+<dd> Test instances (ti) &#8211; Executes tests of the characteristics of an instance requested from the CIM Server. This operation extends the capabilities of <code>cimcli</code> to actually compare information from the server with information in the command line input.</dd>
+<dt>5.</dt>
+<dd> classtree (ct) &#8211; Display a tree of either superclasses or subclasses of defined classes in the repository.</dd>
+<dt>6.</dt>
+<dd> countinstance (cci) &#8211; Count the number of instances by class in a namespace. </dd>
 <p> <code>WARNING:</code> This operation could cause problems if executed against a server which returns very large numbers of instances since it retrieves all of the instances and counts them in cimcli.</dl>
 <p> The format of the <code>cimcli</code> command is: </p>
 <p> <code>cimcli [Operation] [OperationTarget] [options] [ValueParameters]</code> </p>
@@ -48,40 +48,40 @@ description: "cimcli – command line WBEM Client"
 <p> where: </p>
 <dl>
 <dt>
-<dd> <code>&lt;keyPropertyName&gt;</code> is the name of a property in <code>&lt;className&gt;</code></p>
+</dt><dd> <code>&lt;keyPropertyName&gt;</code> is the name of a property in <code>&lt;className&gt;</code></dd>
 <dt>
-<dd> <code>&lt;value&gt;</code> is a string that represents either a numeric value or a string value (enveloped in quotes). Quote marks surrounding string values are required.</dl>
+</dt><dd> <code>&lt;value&gt;</code> is a string that represents either a numeric value or a string value (enveloped in quotes). Quote marks surrounding string values are required.</dd></dl>
 <p> To simplify inputting command line object names, <code>cimcli</code> offers a second option for defining the object name as [OperationTarget]. In this second form, the [OperationTarget] object is the class name and zero or more &lt;value parameter&gt;s are used to define each feature/value. In this case, the quotation marks around string property values are optional and are required only in the case where quotation marks would be required to define a value such as a string that includes quotation marks or spaces. </p>
 <p> The syntax for this form is: </p>
 <p> <code>&lt;classname&gt; &lt;keyPropertyName&gt;=&lt;value&gt; [,&lt;keypropertyName&gt;=&lt;value&gt;]*</code> </p>
 <p> where:</p>
 <dl>
 <dt>
-<dd> <code>&lt;keyPropertyName&gt;</code> is the name of a property in <code>&lt;className&gt;</code></p>
+</dt><dd> <code>&lt;keyPropertyName&gt;</code> is the name of a property in <code>&lt;className&gt;</code></dd>
 <dt>
-<dd> <code>&lt;value&gt;</code> is either a numeric value or a string value (enveloped in quotes only if there are spaces in the string).</dl>
+</dt><dd> <code>&lt;value&gt;</code> is either a numeric value or a string value (enveloped in quotes only if there are spaces in the string).</dd></dl>
 <p> Note that each name/value definition is treated as a single command line parameter so that MUST not include spaces between the name and value components. (ex. name=fred, not name = fred and name=\&quot;freds name\&quot;) </p>
 <p> As an example, the input for a getInstance might be: </p>
 <dl>
 <dt>
-<dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer.first=\&quot;Patrick\&quot;,last=\&quot;Rafter\&quot;<br />
+</dt><dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer.first=\&quot;Patrick\&quot;,last=\&quot;Rafter\&quot;<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi &#8216;TennisPlayer.first=&quot;Patrick&quot;,last=&quot;Rafter&quot;&#8217;<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or the simplified form:<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer first=Patrick last=Rafter
-</dl>
+</dd></dl>
 <p> In the second case, <code>cimcli</code> gets the class from the CIM Server and uses the parameters to form a correct CIMObjectPath. In the first case, generally <code>cimcli</code> uses the input path directly without getting the class from the server. The quotation marks in the first case are required by the CIMObjectPath format defined by the DMTF. </p>
 <h3>[options&#8230;]</h3>
 <p> Options are identified on the command line with the &#8211; or &#8212; notation. They are identified in a <code>cimcli</code> config file with the form &lt;name&gt;=value where name is a long name for the option. Each <code>cimcli</code> option has both a short name for command line use and a long name for configuration file use. There are several types of options: </p>
 <dl>
-<dt>1.</p>
-<dd> Execution Modification Options &#8211; Options that are universal and modify or define the execution of the command or the form of the return. This includes options like setting the output format for object responses or requesting only summary operation. </p>
-<dt>2.</p>
-<dd> Connection Options &#8211; Options that define the connection for the operation. This includes options for defining the CIM server address, namespace, and security options such as user name, password and SSL settings. </p>
-<dt>3.</p>
-<dd> Operation Parameter Options &#8211; Options that represent the optional input parameters for operations. The [operation] defines the CIM Operation that will be executed and the options define the optional request parameters. Typical context options might be -n namespace (used on most but not all operations) or -niq which sets includequalifiers to false for operations that use the includeQualifiers optional parameter. </p>
-<dt>4.</p>
-<dd> Help Options &#8211; Options to display help (-h, &#8211;help, &#8211;ho to get a list of all options, and -hc to get a list of all operations). When these options are requested, no server request is executed. </p>
+<dt>1.</dt>
+<dd> Execution Modification Options &#8211; Options that are universal and modify or define the execution of the command or the form of the return. This includes options like setting the output format for object responses or requesting only summary operation. </dd>
+<dt>2.</dt>
+<dd> Connection Options &#8211; Options that define the connection for the operation. This includes options for defining the CIM server address, namespace, and security options such as user name, password and SSL settings. </dd>
+<dt>3.</dt>
+<dd> Operation Parameter Options &#8211; Options that represent the optional input parameters for operations. The [operation] defines the CIM Operation that will be executed and the options define the optional request parameters. Typical context options might be -n namespace (used on most but not all operations) or -niq which sets includequalifiers to false for operations that use the includeQualifiers optional parameter. </dd>
+<dt>4.</dt>
+<dd> Help Options &#8211; Options to display help (-h, &#8211;help, &#8211;ho to get a list of all options, and -hc to get a list of all operations). When these options are requested, no server request is executed. </dd>
 </dl>
 <h3>[value-parameter]</h3>
 <p> Some of the operations allow or require extra parameters, for example to supply property value definitions for create and modify instance. These are typically keywords or keyword/value pairs and are defined as part of the particular operation that use them. </p>
@@ -90,79 +90,79 @@ description: "cimcli – command line WBEM Client"
 <h2>OPTIONS</h2>
 <p> There are 4 types of options</p>
 <dl>
-<dt><code>Boolean</code></p>
-<dd> where the option sets some condition (ex. -verbose).</p>
-<dt><code>String</code></p>
-<dd> requires a string parameter following the option (ex. -n root/test).</p>
-<dt><code>Integer</code></p>
-<dd> requires an integer following the option (ex. &#8211;delay 4).</p>
-<dt><code>Keyword</code></p>
-<dd> requires a defined keyword following the option. </p>
+<dt><code>Boolean</code></dt>
+<dd> where the option sets some condition (ex. -verbose).</dd>
+<dt><code>String</code></dt>
+<dd> requires a string parameter following the option (ex. -n root/test).</dd>
+<dt><code>Integer</code></dt>
+<dd> requires an integer following the option (ex. &#8211;delay 4).</dd>
+<dt><code>Keyword</code></dt>
+<dd> requires a defined keyword following the option. </dd>
 </dl>
 <h3>CONNECTION OPTIONS</h3>
 <p> The following set of options re general to all of the CIM Operations and most of the compound operations They provide parameters for the initiation or execution of the operations (ie. identify the target server and namespace and set connection security parameters).<br />
 &nbsp;<wbr>&nbsp;<wbr> These include:</p>
 <dl>
-<dt><code>-n [namespace]</code></p>
-<dd> String option where [namespace] defines the namespace name for this operation (ex. -n root). The default namespace is root/cimv2 if this parameter is not entered</p>
-<dt><code>-l [location]</code></p>
-<dd> String option where [location] defines the host name or IP address and optionally port for this operation. The default for this command if the -n option is not used is to use the OpenPegasus connectLocal() function to connect to the server. Note that this means that a command like cimcli gc CIM_Door may not work when trying to connect to a server other than Pegasus on the same system. If <code>cimcli</code> is to be used to connect to a CIM Server other than Pegasus on the same system use -l localhost or -l 127.0.0.1 or the actual name or IP address. This will force <code>cimcli</code> to make the connection in the normal way, not using connectLocal().</p>
-<dt><code>-u [user-name]</code></p>
-<dd> String option where [user-name] defines he user name to be used in the connection to the CIM server for the command.</p>
-<dt><code>-p [password]</code></p>
-<dd> String option where [password] defines the password to be used in the connection to the CIM server for the command.</p>
-<dt><code>-s</code></p>
-<dd> Connect with SSL &#8211; Specifies that <code>cimcli</code> should attempt to connect over a secure connection using SSL. This option causes <code>cimcli</code> to modify the client connect call to set the SSLContext option to the certificate defined with the &#8211;cert and &#8211;key options. If this option is set but neither the &#8211;cert or &#8211;key options are included, the SSLContext for the connect call is submitted with the Cert and key marked NULL. </p>
+<dt><code>-n [namespace]</code></dt>
+<dd> String option where [namespace] defines the namespace name for this operation (ex. -n root). The default namespace is root/cimv2 if this parameter is not entered</dd>
+<dt><code>-l [location]</code></dt>
+<dd> String option where [location] defines the host name or IP address and optionally port for this operation. The default for this command if the -n option is not used is to use the OpenPegasus connectLocal() function to connect to the server. Note that this means that a command like cimcli gc CIM_Door may not work when trying to connect to a server other than Pegasus on the same system. If <code>cimcli</code> is to be used to connect to a CIM Server other than Pegasus on the same system use -l localhost or -l 127.0.0.1 or the actual name or IP address. This will force <code>cimcli</code> to make the connection in the normal way, not using connectLocal().</dd>
+<dt><code>-u [user-name]</code></dt>
+<dd> String option where [user-name] defines he user name to be used in the connection to the CIM server for the command.</dd>
+<dt><code>-p [password]</code></dt>
+<dd> String option where [password] defines the password to be used in the connection to the CIM server for the command.</dd>
+<dt><code>-s</code></dt>
+<dd> Connect with SSL &#8211; Specifies that <code>cimcli</code> should attempt to connect over a secure connection using SSL. This option causes <code>cimcli</code> to modify the client connect call to set the SSLContext option to the certificate defined with the &#8211;cert and &#8211;key options. If this option is set but neither the &#8211;cert or &#8211;key options are included, the SSLContext for the connect call is submitted with the Cert and key marked NULL. </dd>
 <p> <code>NOTE</code> Since SSL is a compile <code>cimcli</code> compile option, the -s options and following options will not even exist in a <code>cimcli</code> that was compiled with the SSL capabilities disabled.</p>
-<dt><code>&#8211;cert [certificate file path]</code></p>
-<dd> String options. [certificate-file path defines the file name of a certificate to be used with the client connect if the -s option is set. This is optional and used only with the -s and &#8211;key options. If exits, the client key (&#8211;key option) must also exist</p>
-<dt><code>&#8211;key [client key file path]</code></p>
-<dd> Defines the file name of a Client private key. This is optional and only has an effect on connections made over HTTPS using the -s option. If exists the client certificate (&#8211;cert option) must also exist. </p>
-<dt><code>&#8211;truststore [clientTrustStorePath]</code></p>
-<dd> Defines a file or directory containing a truststore that the client uses to verify server certificates. Default is that no trust store exists </p>
+<dt><code>&#8211;cert [certificate file path]</code></dt>
+<dd> String options. [certificate-file path defines the file name of a certificate to be used with the client connect if the -s option is set. This is optional and used only with the -s and &#8211;key options. If exits, the client key (&#8211;key option) must also exist</dd>
+<dt><code>&#8211;key [client key file path]</code></dt>
+<dd> Defines the file name of a Client private key. This is optional and only has an effect on connections made over HTTPS using the -s option. If exists the client certificate (&#8211;cert option) must also exist. </dd>
+<dt><code>&#8211;truststore [clientTrustStorePath]</code></dt>
+<dd> Defines a file or directory containing a truststore that the client uses to verify server certificates. Default is that no trust store exists </dd>
 </dl>
 <h3>CIMCLI OPERATION MODIFICATION OPTIONS</h3>
 <p> A set of options that modifies the manner in which the command is executed or the display of information on response including the following:</p>
 <dl>
-<dt><code>&#8211;t</code></p>
-<dd> When set measures time for the operation to be completed and report it upon command completion. If this option is set, the time for the operation is recorded upon completion of the operation. In addition, the client infrastructure is queried to determine if the operation execution times optionally measured in the infrastructure and at the server are available. If so, they are displayed also. This would allow the user to see a) time spent in the server, b) round trip time for the operation, c) application round trip time for the operation. Note that when combined with the repeat option, the output includes maximum, minimum, and average times for the operation. There are a specific operations in <code>cimcli</code> to turn control statistics generation (See son and soff operations) at least for the Pegasus CIM server.</p>
-<dt><code>&#8211;sort</code></p>
-<dd> Requests <code>cimcli</code> to sort the returned entities for multi-entity operations (ex. enumerate, reference, associator). Normally the order of returned entities is random from most CIM Servers; setting this option outputs the objects in a defined order. The order is based on the name element for classes and qualifier declarations and on the object path returned for CIM instances and CIM objects.</p>
-<dt><code>&#8211;r [repeat_count]</code></p>
-<dd> Repeat the operation [repeat_count] times. This repeats the operation without disconnecting. This option is useful for defining tests that load the server with repeated calls and also for getting average times for an operation by taking the average of a number of calls (when used with the summary information option (&#8211;sum) and the measure time option (&#8211;t)).</p>
-<dt><code>-delay [seconds]</code></p>
-<dd> Delay [seconds] seconds between connect and issuing the operation request.</p>
-<dt><code>&#8211;sum</code></p>
-<dd> When set, <code>cimcli</code> presents only summary information, not full output. Generally <code>cimcli</code> presents counts of objects returned in place of the names or objects themselves when this option is set. See also the repeat (&#8211;r) and measure time (&#8211;t) options.</p>
-<dt><code>&#8211;count [object_count]</code></p>
-<dd> Defines an expected count of objects to be returned in the response. <code>cimcli</code> is terminated with an error exit if the number of objects returned does not match the object_count supplied with the option. This can be used in batch files to test for number of objects returned by an operation. In addition to the error status code, a message of the general form:</p>
+<dt><code>&#8211;t</code></dt>
+<dd> When set measures time for the operation to be completed and report it upon command completion. If this option is set, the time for the operation is recorded upon completion of the operation. In addition, the client infrastructure is queried to determine if the operation execution times optionally measured in the infrastructure and at the server are available. If so, they are displayed also. This would allow the user to see a) time spent in the server, b) round trip time for the operation, c) application round trip time for the operation. Note that when combined with the repeat option, the output includes maximum, minimum, and average times for the operation. There are a specific operations in <code>cimcli</code> to turn control statistics generation (See son and soff operations) at least for the Pegasus CIM server.</dd>
+<dt><code>&#8211;sort</code></dt>
+<dd> Requests <code>cimcli</code> to sort the returned entities for multi-entity operations (ex. enumerate, reference, associator). Normally the order of returned entities is random from most CIM Servers; setting this option outputs the objects in a defined order. The order is based on the name element for classes and qualifier declarations and on the object path returned for CIM instances and CIM objects.</dd>
+<dt><code>&#8211;r [repeat_count]</code></dt>
+<dd> Repeat the operation [repeat_count] times. This repeats the operation without disconnecting. This option is useful for defining tests that load the server with repeated calls and also for getting average times for an operation by taking the average of a number of calls (when used with the summary information option (&#8211;sum) and the measure time option (&#8211;t)).</dd>
+<dt><code>-delay [seconds]</code></dt>
+<dd> Delay [seconds] seconds between connect and issuing the operation request.</dd>
+<dt><code>&#8211;sum</code></dt>
+<dd> When set, <code>cimcli</code> presents only summary information, not full output. Generally <code>cimcli</code> presents counts of objects returned in place of the names or objects themselves when this option is set. See also the repeat (&#8211;r) and measure time (&#8211;t) options.</dd>
+<dt><code>&#8211;count [object_count]</code></dt>
+<dd> Defines an expected count of objects to be returned in the response. <code>cimcli</code> is terminated with an error exit if the number of objects returned does not match the object_count supplied with the option. This can be used in batch files to test for number of objects returned by an operation. In addition to the error status code, a message of the general form:</dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot;&nbsp;<wbr>is output to cerr.</dl>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot;&nbsp;<wbr>is output to cerr.</dd></dl>
 <p> <code>Example:</code><br />
 cimcli en CIM_ManagedElement -count 100 </p>
 <p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br />
 &nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br />
 &nbsp;<wbr>error message.</p>
-<dt><code>&#8211;timeout [seconds]</code></p>
-<dd> When defined, set the connect timeout [seconds] seconds rather than the default timeout.</p>
-<dt><code>-o [ xml | mof | table]</code></p>
-<dd> KeyWord option. Output type for commands that output objects. Used with commands that present CIM objects in their response. Presents the output in the form of xml corresponding to DMTF CIM/XML specification, mof, or for instances a table of the data in each property.</p>
-<dt><code>-verbose</code></p>
-<dd> When set <code>cimcli</code> displays details on the input options and execution of <code>cimcli</code> for the operation.</p>
-<dt><code>&#8211;setRtnHostNames [SubstituteHostName]</code></p>
-<dd> String option with a required parameter that set a substitute host name which <code>cimcli</code> will insert into returned objects to replace host names returned from the server. This option was defined because the object paths/references returned by the CIM Server may include the host name as part of the returned object path which makes it difficult to compare the returned paths to a defined path. Using this option forces any returned host names to be changed to the string parameter supplied with the option.</p>
-<dt><code>&#8211;expExit [exitCode]</code></p>
-<dd> Integer option that defines an exit code that is expected when <code>cimcli</code> terminates. If <code>cimcli</code> tries to exit with the defined code, the code is changed to 0 (OK). Any other exit code generates an error exit code. </p>
+<dt><code>&#8211;timeout [seconds]</code></dt>
+<dd> When defined, set the connect timeout [seconds] seconds rather than the default timeout.</dd>
+<dt><code>-o [ xml | mof | table]</code></dt>
+<dd> KeyWord option. Output type for commands that output objects. Used with commands that present CIM objects in their response. Presents the output in the form of xml corresponding to DMTF CIM/XML specification, mof, or for instances a table of the data in each property.</dd>
+<dt><code>-verbose</code></dt>
+<dd> When set <code>cimcli</code> displays details on the input options and execution of <code>cimcli</code> for the operation.</dd>
+<dt><code>&#8211;setRtnHostNames [SubstituteHostName]</code></dt>
+<dd> String option with a required parameter that set a substitute host name which <code>cimcli</code> will insert into returned objects to replace host names returned from the server. This option was defined because the object paths/references returned by the CIM Server may include the host name as part of the returned object path which makes it difficult to compare the returned paths to a defined path. Using this option forces any returned host names to be changed to the string parameter supplied with the option.</dd>
+<dt><code>&#8211;expExit [exitCode]</code></dt>
+<dd> Integer option that defines an exit code that is expected when <code>cimcli</code> terminates. If <code>cimcli</code> tries to exit with the defined code, the code is changed to 0 (OK). Any other exit code generates an error exit code. </dd>
 </dl>
 <h3>OPERATION PARAMETER OPTIONS</h3>
 <p> Options that define request parameters for specific <code>cimcli</code> Operation requests. These are typically optional parameters on the CIM operation request that modify the behavior of the server to the request. This includes things like requesting localonly, deep inheritance, etc. Note that the actual behavior may be dependent on the particular operation request type. The full definition of these options is below here and their use with each specific <code>cimcli</code> operation is defined with the operations.</p>
 <dl>
-<dt><code>-pl [propertylist]</code></p>
+<dt><code>-pl [propertylist]</code></dt>
 <dd> String Option. Set the propertylist parameter for those operations that allow this parameter. The propertylist value for this parameter is a comma-separated list of class properties (without spaces between items). This sets the optionsl propertylist parameter on those CIM operations that allow this parameter including: getClass, getInstance, modifyInstance, enumerateInstances, associators, references, OpenEnumerateInstances, OpenReferenceInstances, and OpenAssociatorInstances. If this option is not defined on the execution of one of these operations, <code>cimcli</code> sets the propertylist parameter to NULL indicating that all properties should be returned.<br />
 &nbsp;<wbr> If a comma-separated list of one or more properties is defined as the value for this option, a propertylist with these values is set on the CIM request operation.<br />
-&nbsp;<wbr> Since this CIM request parameter specifically allows 3 options: 1) list of properties, 2) NULL which is the indicator that all properties are to be returned, and 3) Empty which is the indicator that no properties are to be include in the response, the <code>cimcli</code> options specifically allows defining the empty option by setting propertylist to either &quot;&quot; or \&quot;\&quot;. <code>cimcli</code> accepts either an input that the command processor interprets as an empty string or as a string consisting of two quotation marks. </p>
+&nbsp;<wbr> Since this CIM request parameter specifically allows 3 options: 1) list of properties, 2) NULL which is the indicator that all properties are to be returned, and 3) Empty which is the indicator that no properties are to be include in the response, the <code>cimcli</code> options specifically allows defining the empty option by setting propertylist to either &quot;&quot; or \&quot;\&quot;. <code>cimcli</code> accepts either an input that the command processor interprets as an empty string or as a string consisting of two quotation marks. </dd>
 <p> The syntax of propertylist is: </p>
 <p> <code>&lt;propertyName&gt;[,&lt;propertyName&gt;]* | </code> </p>
 <p> <code>Examples:</code><br />
@@ -172,22 +172,22 @@ cimcli en CIM_ManagedElement -count 100 </p>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>getClass with a propertylist with two properties </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl&nbsp;<wbr>\&quot;\&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gc operation with empty property list&nbsp;<wbr>(return no <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> properties)</p>
-<dt><code>-niq</code></p>
-<dd> Boolean (not_include_Qualifiers) that sets the operation parameter for include_qualifiers to false. Note that this form is required because the default for this option in the DMTF CIM Operations is true (include qualifiers). Not including this option sets the request to include qualifiers on those commands to which this option applies.</p>
-<dt><code>-nlo</code></p>
-<dd> Boolean that defines whether properties from superclasses are included in the response. the -nlo option turns this parameter off. The default if this parameter is not included is to request that the server return only local properties and ignore those from superclasses.</p>
-<dt><code>-di</code></p>
-<dd> Boolean to set the deep inheritance CIM operation parameter to true.</p>
-<dt><code>-ic</code></p>
-<dd> Boolean parameter sets the CIM operation parameter classOrigin in the operation request to true. the CIMServer is expected to return classOrigin information as part of the response.</p>
-<dt><code>-ac [assocatonClassName]</code></p>
-<dd> String defining the association Class parameter for the CIM Operation. Used with reference and association operations.</p>
-<dt><code>-rc [resultClassName]</code></p>
-<dd> String defining the resultClass parameter for the CIM associator and reference operations.</p>
-<dt><code>-r [role]</code></p>
-<dd> String defining the role parameter for the CIM associator and reference operations.</p>
-<dt><code>-rr [resultrole]</code></p>
-<dd> String defining the resultrole parameter for the CIM associator and reference operations. </p>
+<dt><code>-niq</code></dt>
+<dd> Boolean (not_include_Qualifiers) that sets the operation parameter for include_qualifiers to false. Note that this form is required because the default for this option in the DMTF CIM Operations is true (include qualifiers). Not including this option sets the request to include qualifiers on those commands to which this option applies.</dd>
+<dt><code>-nlo</code></dt>
+<dd> Boolean that defines whether properties from superclasses are included in the response. the -nlo option turns this parameter off. The default if this parameter is not included is to request that the server return only local properties and ignore those from superclasses.</dd>
+<dt><code>-di</code></dt>
+<dd> Boolean to set the deep inheritance CIM operation parameter to true.</dd>
+<dt><code>-ic</code></dt>
+<dd> Boolean parameter sets the CIM operation parameter classOrigin in the operation request to true. the CIMServer is expected to return classOrigin information as part of the response.</dd>
+<dt><code>-ac [assocatonClassName]</code></dt>
+<dd> String defining the association Class parameter for the CIM Operation. Used with reference and association operations.</dd>
+<dt><code>-rc [resultClassName]</code></dt>
+<dd> String defining the resultClass parameter for the CIM associator and reference operations.</dd>
+<dt><code>-r [role]</code></dt>
+<dd> String defining the role parameter for the CIM associator and reference operations.</dd>
+<dt><code>-rr [resultrole]</code></dt>
+<dd> String defining the resultrole parameter for the CIM associator and reference operations. </dd>
 </dl>
 <h2>OPERATIONS</h2>
 <p> This section defines the individual operations supported by <code>cimcli</code>. Note that either the names (ex. EnumerateInstances) or the shortcut (ei) may be used in defining an [Operation] on the command line and they are case independent. </p>
@@ -219,14 +219,14 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>equality comparison&nbsp;<wbr>&quot;=&quot;&nbsp;<wbr>&quot;&lt;&gt;&quot;&nbsp;<wbr>&quot;LIKE&quot;&nbsp;<wbr>&quot;NOT LIKE&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * ordering &quot;&gt;=&quot; &quot;&lt;=&quot; &quot;&gt;&quot; &quot;&lt;&quot;<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * arrayOps &quot;ANY&quot;, &quot;EVERY&quot;</p>
 <dl>
-<dt><code>-pt [pullTimeout]</code></p>
-<dd> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence.</p>
-<dt><code>-mr [maxObjectsToReceive]</code></p>
-<dd> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation.</p>
-<dt><code>-pullDelay [pullDelayinSec]</code></p>
-<dd> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues.</p>
-<dt><code>-mo [maxObjectCount]</code></p>
-<dd> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths </p>
+<dt><code>-pt [pullTimeout]</code></dt>
+<dd> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence.</dd>
+<dt><code>-mr [maxObjectsToReceive]</code></dt>
+<dd> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation.</dd>
+<dt><code>-pullDelay [pullDelayinSec]</code></dt>
+<dd> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues.</dd>
+<dt><code>-mo [maxObjectCount]</code></dt>
+<dd> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths </dd>
 </dl>
 <h3>ci CreateInstance Operation</h3>
 <p> The CreateInstance operation executes the DMTF CIM/XML createInstance operation request. It builds an instance of the class defined on the command line building the properties of the instance from a combination of the class retrieved from the CIM server and value parameters provided with the input. <code>cimcli</code> issues the CIM operation createInstance with the created instance It requires the [OperationTarget] parameter defining the class for which the instance is to be created and optional set of property definition (name=value) parameters that define properties and their values for the created instance. </p>
@@ -235,22 +235,22 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p> The syntax for createInstance is: </p>
 <dl>
 <dt>
-<dd> <code>cimcli ci &lt;className&gt; &lt;propertyDef[,&lt;propertyDef&gt;]*</code><br />
-&nbsp;<wbr> where &lt;propertyDef&gt; is defined as follows: </p>
+</dt><dd> <code>cimcli ci &lt;className&gt; &lt;propertyDef[,&lt;propertyDef&gt;]*</code><br />
+&nbsp;<wbr> where &lt;propertyDef&gt; is defined as follows: </dd>
 <dl>
-<dt>&lt;propertyName&gt;=&lt;scalarValueString&gt;</p>
-<dd> Defines a value for a property where propertyName is a scalar property of any type except the types representing embedded instances or embedded objects (i.e. String with EmbeddedInstance or EmbeddedObject qualifier). The scalalValueString may represent any CIM Data type (string, integer, datatime, real)with the same syntax as MOF input. Strings with embedded spaces must be enclosed in quotation marks.</p>
-<dt>&lt;propertyName&gt;=&lt;scalarValueString&gt;[,&lt;scalarValueString&gt;]*</p>
-<dd> Defines an array of values for a property which is an array property and each valueString is one value in the array.</p>
-<dt>&lt;propertyName&gt;!</p>
-<dd> Defines a value of NULL for a String property.</p>
-<dt>&lt;propertyName]&gt;=</p>
-<dd> Defines a property with NULL value.</p>
-<dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* }</p>
+<dt>&lt;propertyName&gt;=&lt;scalarValueString&gt;</dt>
+<dd> Defines a value for a property where propertyName is a scalar property of any type except the types representing embedded instances or embedded objects (i.e. String with EmbeddedInstance or EmbeddedObject qualifier). The scalalValueString may represent any CIM Data type (string, integer, datatime, real)with the same syntax as MOF input. Strings with embedded spaces must be enclosed in quotation marks.</dd>
+<dt>&lt;propertyName&gt;=&lt;scalarValueString&gt;[,&lt;scalarValueString&gt;]*</dt>
+<dd> Defines an array of values for a property which is an array property and each valueString is one value in the array.</dd>
+<dt>&lt;propertyName&gt;!</dt>
+<dd> Defines a value of NULL for a String property.</dd>
+<dt>&lt;propertyName]&gt;=</dt>
+<dd> Defines a property with NULL value.</dd>
+<dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* }</dt>
 <dd> Defines a property that is an embedded instance, embedded object, or reference(CIMObjectPath) where &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;.<br />
-&nbsp;<wbr>This syntax is recursive so that instances of embedded classes can be embedded in properties that are themselves embedded instance types.</p>
-<dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* [}.{ [&lt;propertyDef&gt;]*]*</p>
-<dd> Defines a property that is an array of embedded instances or embedded objects &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;</dl>
+&nbsp;<wbr>This syntax is recursive so that instances of embedded classes can be embedded in properties that are themselves embedded instance types.</dd>
+<dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* [}.{ [&lt;propertyDef&gt;]*]*</dt>
+<dd> Defines a property that is an array of embedded instances or embedded objects &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;</dd></dl>
 </dl>
 <p> NOTE: The value of array properties may also be defined by repeating the property multiple times with the different values. <code>cimcli</code> will consolidate these multiple property definitions into an array </p>
 <p> The use of the value parameters is further defined in the following paragraphs. Note that the syntax for value parameters for DMTF data types differes from the syntax for value parameters for embedded instances and objects. </p>
@@ -258,8 +258,8 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p> <code>2.</code> Array property values &#8211; Array property values are defined by defining a string that is comma-separated scalar value entities. of the form : </p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;scalarvalueString&gt;[,&lt;scalarvalueString&gt;]*</dl>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&lt;scalarvalueString&gt;[,&lt;scalarvalueString&gt;]*</dd></dl>
 <p> The array MUST NOT include any spaces between the scalar value entities. It must appear to <code>cimcli</code> as a single input parameter. In addition, array value can be input by repeating the complete parameter so that values input will be appended to an already created array. </p>
 <p> <code>3.</code> If the propertyName parameter is provided with no value, the default value or NULL if there is no default value is inserted. </p>
 <p> <code>4.</code> String property values are special because there are two concepts that must be covered when there is no value, 1) Empty String or 2. NULL/default value. These are different for CIM Strings. </p>
@@ -273,15 +273,15 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p> An embedded instance definition is delineated by either &quot;{&quot; or &quot;={&quot; separating the property name and value definition &quot;}&quot; to end the embedded instance definition as shown below: </p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&lt;propertyName&gt;={&lt;embeddedClassName&gt;&nbsp;<wbr>[&lt;propertyDef&gt;]*&nbsp;<wbr>}</dl>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&lt;propertyName&gt;={&lt;embeddedClassName&gt;&nbsp;<wbr>[&lt;propertyDef&gt;]*&nbsp;<wbr>}</dd></dl>
 <p> The embedded instance termination marker &quot;}&quot; must be separated by spaces from other parameters. </p>
 <p> Arrays of embedded instances can also be created following the pattern for arrays of properties of other CIM types as follows: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Define the property multiple times. Each time the property is defined for an embedded instance (with the same property name and same class name) the new definition is appended to the array. </p>
-<dt>&bull;</p>
-<dd> Use the special terminator &quot;},{&quot; which allows <code>cimcli</code> to start a new instance definition (in effect using the comma separated values as in the arrays of other CIM types. </p>
+<dt>&bull;</dt>
+<dd> Define the property multiple times. Each time the property is defined for an embedded instance (with the same property name and same class name) the new definition is appended to the array. </dd>
+<dt>&bull;</dt>
+<dd> Use the special terminator &quot;},{&quot; which allows <code>cimcli</code> to start a new instance definition (in effect using the comma separated values as in the arrays of other CIM types. </dd>
 <p> <code>Examples:</code><br />
 &nbsp;<wbr>cimcli ci CIM_xxxx ID=abc size=32 age=O12<br />
 &nbsp;<wbr>&nbsp;<wbr>Creates an instance of CIM_xxxx with&nbsp;<wbr><br />
@@ -334,19 +334,19 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p> The syntax for the modifyInstance operation is as follows: </p>
 <dl>
 <dt>
-<dd> <code>cimcli mi &lt;className&gt; [&lt;propertyDef&gt;]* [-pl &lt;propertyList]</code></p>
+</dt><dd> <code>cimcli mi &lt;className&gt; [&lt;propertyDef&gt;]* [-pl &lt;propertyList]</code></dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>where the properties defined MUST include the key<br />
-&nbsp;<wbr>&nbsp;<wbr>properties</dl>
+&nbsp;<wbr>&nbsp;<wbr>properties</dd></dl>
 <p>&nbsp;<wbr>or </p>
 <p> <code>cimcli mi &lt;objectPath&gt; [&lt;propertyDef&gt;]* [-pl &lt;propertyList]</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>where the properties defined do not include the key<br />
-&nbsp;<wbr>&nbsp;<wbr>properties</dl>
+&nbsp;<wbr>&nbsp;<wbr>properties</dd></dl>
 </dl>
 <p> See createInstance operation for detailed definition of &lt;propertyDef&gt; and more examples: </p>
 <p> <code>Examples:</code><br />
@@ -379,8 +379,8 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 &nbsp;<wbr>&nbsp;<wbr>cimcli nc CIM_door<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Issue getClass CIM Operation for the class CIM_Door. </p>
 <dl>
-<dt><code>ni EnumerateInstanceNames Operation</code></p>
-<dd> Execute the enumerateInstanceNames CIM Operation. The syntax for this operation is: </p>
+<dt><code>ni EnumerateInstanceNames Operation</code></dt>
+<dd> Execute the enumerateInstanceNames CIM Operation. The syntax for this operation is: </dd>
 <p> <code>cimcli ni &lt;classname&gt; [&lt;option&gt;]*</code> </p>
 <p> Where: </p>
 <p> <code>&lt;classname&gt;</code> &#8211; classname for which instance names are to be enumerated. </p>
@@ -534,18 +534,18 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> The syntax of the command is: <code>cimcli im [objectname] [methodname] [&lt;parameDef&gt;]* [&lt;option&gt;]*</code> Note that there are two required parameters to this command, the [objectname] and the [methodname]. Parameter definitions &lt;paramDef&gt; are optional. </p>
 <p> NOTE: Earlier versions of <code>cimcli</code> allowed only String values and used the -ip option. This option has been removed. Parameters are input in the form:</p>
 <dl>
-<dt>&lt;paramName&gt;=&lt;scalarValueString&gt;</p>
-<dd> Defines a value for a parameter where paramName is a scalar parameter of any type except the types representing embedded instances or embedded objects (i.e. String with EmbeddedInstance or EmbeddedObject qualifier).</p>
-<dt>&lt;paramName&gt;=&lt;scalarValueString&gt;[,&lt;scalarValueString&gt;]*</p>
-<dd> Defines an array of values for a parameter which is an array parameter and each valueString is one value in the array.</p>
-<dt>&lt;paramName&gt;!</p>
-<dd> Defines a value of NULL for a String parameter</p>
-<dt>&lt;paramName&gt;=</p>
-<dd> Defines a parameter with NULL value</p>
-<dt>&lt;paramName&gt;={&lt;className&gt; [&lt;paramDef&gt;]* }</p>
-<dd> Defines a parameter that is an embedded instance or embedded object where &lt;className&gt; is the class name for the embedded object or instance and &lt;paramDef&gt;. This syntax is recursive so that instances of embedded classes can be embedded in properties that are themselves embedded instance types.</p>
-<dt>&lt;paramName&gt;={&lt;className&gt; [&lt;paramDef&gt;]*[}.{ [&lt;paramDef&gt;]*]*</p>
-<dd> Defines a parameter that is an array of embedded instances or embedded objects &lt;className&gt; is the class name for the embedded object or instance and &lt;paramDefinition&gt; </p>
+<dt>&lt;paramName&gt;=&lt;scalarValueString&gt;</dt>
+<dd> Defines a value for a parameter where paramName is a scalar parameter of any type except the types representing embedded instances or embedded objects (i.e. String with EmbeddedInstance or EmbeddedObject qualifier).</dd>
+<dt>&lt;paramName&gt;=&lt;scalarValueString&gt;[,&lt;scalarValueString&gt;]*</dt>
+<dd> Defines an array of values for a parameter which is an array parameter and each valueString is one value in the array.</dd>
+<dt>&lt;paramName&gt;!</dt>
+<dd> Defines a value of NULL for a String parameter</dd>
+<dt>&lt;paramName&gt;=</dt>
+<dd> Defines a parameter with NULL value</dd>
+<dt>&lt;paramName&gt;={&lt;className&gt; [&lt;paramDef&gt;]* }</dt>
+<dd> Defines a parameter that is an embedded instance or embedded object where &lt;className&gt; is the class name for the embedded object or instance and &lt;paramDef&gt;. This syntax is recursive so that instances of embedded classes can be embedded in properties that are themselves embedded instance types.</dd>
+<dt>&lt;paramName&gt;={&lt;className&gt; [&lt;paramDef&gt;]*[}.{ [&lt;paramDef&gt;]*]*</dt>
+<dd> Defines a parameter that is an array of embedded instances or embedded objects &lt;className&gt; is the class name for the embedded object or instance and &lt;paramDefinition&gt; </dd>
 <p> NOTE: The value of array prammeters may also be defined by simply repeating the prameter definition multiple times with the different values. <code>cimcli</code> will consolidate these multiple property definitions into an array </p>
 <p> The completed operations displays the return code from the command and any returned parameters that are qualified as OUT parameters. </p>
 <p> <code>Example:</code><br />
@@ -566,13 +566,13 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> The syntax of this operation is:</p>
 <dl>
 <dt>
-<dd> <code>gp &lt;objectPath&gt; &lt;propertyName&gt;</code></dl>
+</dt><dd> <code>gp &lt;objectPath&gt; &lt;propertyName&gt;</code></dd></dl>
 <h3>sp setProperty Operation</h3>
 <p> The setProperty executes the setProperty operation which attempts to set a single property on an instance in the CIM Server.<br />
  The syntax of this operation is: </p>
 <dl>
 <dt>
-<dd> <code>sp &lt;objectPath&gt; &lt;propertyName=&lt;&lt;value&gt;</code></dl>
+</dt><dd> <code>sp &lt;objectPath&gt; &lt;propertyName=&lt;&lt;value&gt;</code></dd></dl>
 <h3>xq execQuery Operation</h3>
 <p> The execQuery operation directly executes the CIM Operation execQuery with the input parameter supplied either by direct parameter input or the options for filter and querylanguage. The syntax of the operation is </p>
 <p>cimcli xq&nbsp;<wbr>&lt;query_filter&gt;&nbsp;<wbr>&lt;query_language&gt;&nbsp;<wbr>[&lt;option&gt;]* The query_filter and the query_language may be supplied directly on the command line as parameter or as options (-f for the query filter and -ql for query language. </p>
@@ -740,7 +740,7 @@ cimcli ns<br />
 <p> The syntax for this operation is:</p>
 <dl>
 <dt>
-<dd> <code>cimcli cci &lt;[targetClass]&gt; [option]&#8230;</code></dl>
+</dt><dd> <code>cimcli cci &lt;[targetClass]&gt; [option]&#8230;</code></dd></dl>
 <p> The output option does not apply. The output is always a text display of classes with instances and count of number of instances. All association class instances are suffixed with an asterick(*). </p>
 <p> <code>Examples</code><br />
 &nbsp;<wbr>cimcli cci </p>
@@ -752,7 +752,7 @@ cimcli ns<br />
 <p> The syntax is as follows:</p>
 <dl>
 <dt>
-<dd> <code>cimcli ct &lt;classname&gt; [&lt;option&gt;]*</code></dl>
+</dt><dd> <code>cimcli ct &lt;classname&gt; [&lt;option&gt;]*</code></dd></dl>
 <p> <code>Examples</code><br />
 &nbsp;<wbr>cimcli ct<br />
 &nbsp;<wbr>&nbsp;<wbr>displays class tree for one namespace<br />
@@ -768,115 +768,115 @@ cimcli ns<br />
 <p> There are a significant number of options to this utility, some if which provide specific information for one or more commands and some of which are universal across all of the commands. In general, the program does not check for spurious options so that if you input an option that is not used by a particular operation, it is simply ignored. Note that some of the options require parameters. </p>
 <p> The following is an alphabetic list of the options:</p>
 <dl>
-<dt><code>-ac [assocatonClassName]</code></p>
-<dd> The association class name parameter defines an assocClass string for Associator calls (associators and associatornames). Default(). </p>
+<dt><code>-ac [assocatonClassName]</code></dt>
+<dd> The association class name parameter defines an assocClass string for Associator calls (associators and associatornames). Default(). </dd>
 <p> <code>Example:</code><br />
 -ac CIM_ManagedElement</p>
-<dt><code>-ar association_role_name</code></p>
-<dd> Defines an association role for associator operations. Example: -ar dependent. This optional parameter is used only with the association CIM Operations. </p>
-<dt><code>&#8211;cert [certificateFilePath]</code></p>
-<dd> Defines a certificate to be used with the client connect if the -s option is set. This is optional and used only with the -s and &#8211;key options. The parameter value certificateFilePath is required with the parameter and defined the file containing the certificate. If this parameter exists the &#8211;key parameter must also exist to be a valid SSL request. This represents the X509 certificate of the client that will be sent to the server during an SLL handshake if the server requests it. </p>
-<dt><code>&#8211;count [object_count]</code></p>
+<dt><code>-ar association_role_name</code></dt>
+<dd> Defines an association role for associator operations. Example: -ar dependent. This optional parameter is used only with the association CIM Operations. </dd>
+<dt><code>&#8211;cert [certificateFilePath]</code></dt>
+<dd> Defines a certificate to be used with the client connect if the -s option is set. This is optional and used only with the -s and &#8211;key options. The parameter value certificateFilePath is required with the parameter and defined the file containing the certificate. If this parameter exists the &#8211;key parameter must also exist to be a valid SSL request. This represents the X509 certificate of the client that will be sent to the server during an SLL handshake if the server requests it. </dd>
+<dt><code>&#8211;count [object_count]</code></dt>
 <dd> Defines an expected count of objects to be returned in the response. <code>cimcli</code> is terminated with an error exit if the number of objects returned does not match the object_count supplied with the option. This test can be used in batch files to test for number of objects returned by an operation. In addition to the error status code, a message of the general form:<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot; is output to cerr. </p>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot; is output to cerr. </dd>
 <p> <code>Example:</code><br />
 cimcli en CIM_ManagedElement -count 100 </p>
 <p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br />
 &nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br />
 &nbsp;<wbr>error message.</p>
-<dt><code>-delay [time in seconds]</code></p>
-<dd> Delay between connection and request . Default(0). example -delay 3 delays 3 seconds between the call and the transmission of the actual CIM operation. This is used only in some testing environments.</p>
-<dt><code>-di</code></p>
-<dd> Specifies the boolean parameter deepInheritance parameter for selected commands. Setting this options causes the deepinheritance=true to be transmitted for the operation. Note that this means different things to different commands and is used only with the enumerate commands. </p>
-<dt><code>-d</code></p>
-<dd> More detailed debug messages from <code>cimcli</code>. This can be useful in the case where the user is debugging CIM functionality. </p>
-<dt><code>-h &lt;command-name&gt;</code></p>
-<dd> Prints the help for a particular operation including the definition of the operation, applicable options, and examples of usage.</p>
+<dt><code>-delay [time in seconds]</code></dt>
+<dd> Delay between connection and request . Default(0). example -delay 3 delays 3 seconds between the call and the transmission of the actual CIM operation. This is used only in some testing environments.</dd>
+<dt><code>-di</code></dt>
+<dd> Specifies the boolean parameter deepInheritance parameter for selected commands. Setting this options causes the deepinheritance=true to be transmitted for the operation. Note that this means different things to different commands and is used only with the enumerate commands. </dd>
+<dt><code>-d</code></dt>
+<dd> More detailed debug messages from <code>cimcli</code>. This can be useful in the case where the user is debugging CIM functionality. </dd>
+<dt><code>-h &lt;command-name&gt;</code></dt>
+<dd> Prints the help for a particular operation including the definition of the operation, applicable options, and examples of usage.</dd>
 <dl>
 <dt>
-<dd> cimcli -h gc </p>
+</dt><dd> cimcli -h gc </dd>
 <p>&nbsp;<wbr>show information on the getclass operation</dl>
-<dt><code>&#8211;help</code></p>
-<dd> Prints full help message with commands, options, examples. </p>
-<dt><code>-ho</code></p>
-<dd> Prints list of <code>cimcli</code> options with definitions. </p>
-<dt><code>-hc</code></p>
-<dd> Print <code>cimcli</code> Operation command list. This list includes the CIM Operatons defined by the CIM Operations specification and other operations that were felt to be useful in testing CIM environments. It includes defintion and examples of each operation. </p>
-<dt><code>-ic</code></p>
-<dd> Boolean to set include class origin operation parameter to true. </p>
-<dt><code>-f [filter]</code></p>
-<dd> Defines a filter to use for query. One String input . Default() </p>
-<dt><code>-o [ xml | mof | table ]</code></p>
-<dd> Output in xml, mof, or table format. Default(mof) if the -o options is not included. Note that the output formatting is only for CIM objects (classes and instances). Object paths are always displayed as strings. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints full help message with commands, options, examples. </dd>
+<dt><code>-ho</code></dt>
+<dd> Prints list of <code>cimcli</code> options with definitions. </dd>
+<dt><code>-hc</code></dt>
+<dd> Print <code>cimcli</code> Operation command list. This list includes the CIM Operatons defined by the CIM Operations specification and other operations that were felt to be useful in testing CIM environments. It includes defintion and examples of each operation. </dd>
+<dt><code>-ic</code></dt>
+<dd> Boolean to set include class origin operation parameter to true. </dd>
+<dt><code>-f [filter]</code></dt>
+<dd> Defines a filter to use for query. One String input . Default() </dd>
+<dt><code>-o [ xml | mof | table ]</code></dt>
+<dd> Output in xml, mof, or table format. Default(mof) if the -o options is not included. Note that the output formatting is only for CIM objects (classes and instances). Object paths are always displayed as strings. </dd>
 <p> The meaning of the keywords is:</p>
 <dt>
-<dd> /fBxml.fR Display class or instance in CIM-XML format /fBmof/fR Display class or instance as MOF /fBtable/fR Display instance as a table with one column per property an a row for each instance returned. This format does NOT wrap at 80 columns or wrap long strings. </p>
+</dt><dd> /fBxml.fR Display class or instance in CIM-XML format /fBmof/fR Display class or instance as MOF /fBtable/fR Display instance as a table with one column per property an a row for each instance returned. This format does NOT wrap at 80 columns or wrap long strings. </dd>
 <p>&nbsp;<wbr>-o xml<br />
 &nbsp;<wbr>display the output in xml </p>
-<dt><code>-iq</code></p>
-<dd> Specifies the includeQualifiers operation input parameter for selected commands.Since the CIM/XML default for this parameter is true for some operations (class operations) and false for others (instance operations), the option is useful only for instance operations. Also the includeQualifiers parameter has been deprecated in the CIM/XML specification so the results for instance operations is undetermined. See also -niq for the includeQualifiers parameter for class operations. </p>
-<dt><code>&#8211;key [client key file path]</code></p>
-<dd> Defines a Client private key. This is optional and only has an effect on connections made over HTTPS using the -ssl option. If this parameter exists the client certificate parameter (&#8211;cert) must also exist to be usable. </p>
-<dt><code>-l [location]</code></p>
-<dd> Define CIM Server host address for the operation. This includes either name or IP address and optional port number(HostName:port). The default is localhost:5988. If name is used without port, port 5988 is assumed. Examples include -l fred, -l fred:9999, -l 10.1.134.66 -l 10.1.134.123:5977 </p>
-<dt><code>-lo</code></p>
-<dd> Specifies the localOnly operation parameter for selected commands if the option is set. See the commands for more information. This option is Deprecated in favor of the -nlo because the default for local only is on so that generally the -lo is simply the default. We recommend using -nlo to turn off local only. </p>
-<dt><code>-n [namespace]</code></p>
-<dd> Defines the namespace for the operation.host name. The default is root/cimv2. Example -n root/PG_Interop sets the root/PG_Interop namespace as the namespace for the current operation. </p>
-<dt><code>-p [password]</code></p>
-<dd> Allows input of a password for server authentication of the command. ( ex. -p 12345678). The default is that the command is submitted with no password. </p>
-<dt><code>-u [User]</code></p>
-<dd> Defines user name for CIM Server authentication. Default is no user name and no authentication. ( ex -u john) Default is no user name and no authentication from the client. </p>
-<dt><code>-lo </code></p>
-<dd> DEPRECATED. This was used to set LocalOnly. However, default should be true and we cannot use True as default. See -nlo. Default(true). </p>
-<dt><code>-nlo</code></p>
-<dd> When set, sets LocalOnly = false on the CIM operation . Default(false) meaning that the operation sets LocalOnly = true.. </p>
-<dt><code>-ic</code></p>
-<dd> Sets includeClassOrigin = true for operation that support this parameter (i.e. get and enumerate classes and instances, associators, and references operations). Note that the class origin information is only output for the -o xml output operation since class origin is not part of the MOF format.</p>
-<dt><code>-niq</code></p>
-<dd> Sets includeQualifiers = false on operations. Default(false). </p>
-<dt><code>-pl [propertyList]</code></p>
-<dd> Defines a propertyName List which is an optional parameter for some CIM Operations. Format is p1,p2,p3 (without spaces). Default is that the property list is set to NULL indicating normally that the operation should return all properties. The property list typically has 3 possibilities 1) empty which means return no properties, 2) list of properties to be returned, 3) NULL which means return all properties. Since the default is NULL, not applying the option means that all properties are being requested. To set this parameter to empty use the form -pl &quot;&quot;. </p>
-<dt><code>-r [role]</code></p>
-<dd> Defines a role string for reference role parameter. Default() </p>
-<dt><code>-rc [resultClassName]</code></p>
-<dd> Defines a resultClass string for References and Associators. Default() </p>
-<dt><code>-rr [resultRole]</code></p>
+<dt><code>-iq</code></dt>
+<dd> Specifies the includeQualifiers operation input parameter for selected commands.Since the CIM/XML default for this parameter is true for some operations (class operations) and false for others (instance operations), the option is useful only for instance operations. Also the includeQualifiers parameter has been deprecated in the CIM/XML specification so the results for instance operations is undetermined. See also -niq for the includeQualifiers parameter for class operations. </dd>
+<dt><code>&#8211;key [client key file path]</code></dt>
+<dd> Defines a Client private key. This is optional and only has an effect on connections made over HTTPS using the -ssl option. If this parameter exists the client certificate parameter (&#8211;cert) must also exist to be usable. </dd>
+<dt><code>-l [location]</code></dt>
+<dd> Define CIM Server host address for the operation. This includes either name or IP address and optional port number(HostName:port). The default is localhost:5988. If name is used without port, port 5988 is assumed. Examples include -l fred, -l fred:9999, -l 10.1.134.66 -l 10.1.134.123:5977 </dd>
+<dt><code>-lo</code></dt>
+<dd> Specifies the localOnly operation parameter for selected commands if the option is set. See the commands for more information. This option is Deprecated in favor of the -nlo because the default for local only is on so that generally the -lo is simply the default. We recommend using -nlo to turn off local only. </dd>
+<dt><code>-n [namespace]</code></dt>
+<dd> Defines the namespace for the operation.host name. The default is root/cimv2. Example -n root/PG_Interop sets the root/PG_Interop namespace as the namespace for the current operation. </dd>
+<dt><code>-p [password]</code></dt>
+<dd> Allows input of a password for server authentication of the command. ( ex. -p 12345678). The default is that the command is submitted with no password. </dd>
+<dt><code>-u [User]</code></dt>
+<dd> Defines user name for CIM Server authentication. Default is no user name and no authentication. ( ex -u john) Default is no user name and no authentication from the client. </dd>
+<dt><code>-lo </code></dt>
+<dd> DEPRECATED. This was used to set LocalOnly. However, default should be true and we cannot use True as default. See -nlo. Default(true). </dd>
+<dt><code>-nlo</code></dt>
+<dd> When set, sets LocalOnly = false on the CIM operation . Default(false) meaning that the operation sets LocalOnly = true.. </dd>
+<dt><code>-ic</code></dt>
+<dd> Sets includeClassOrigin = true for operation that support this parameter (i.e. get and enumerate classes and instances, associators, and references operations). Note that the class origin information is only output for the -o xml output operation since class origin is not part of the MOF format.</dd>
+<dt><code>-niq</code></dt>
+<dd> Sets includeQualifiers = false on operations. Default(false). </dd>
+<dt><code>-pl [propertyList]</code></dt>
+<dd> Defines a propertyName List which is an optional parameter for some CIM Operations. Format is p1,p2,p3 (without spaces). Default is that the property list is set to NULL indicating normally that the operation should return all properties. The property list typically has 3 possibilities 1) empty which means return no properties, 2) list of properties to be returned, 3) NULL which means return all properties. Since the default is NULL, not applying the option means that all properties are being requested. To set this parameter to empty use the form -pl &quot;&quot;. </dd>
+<dt><code>-r [role]</code></dt>
+<dd> Defines a role string for reference role parameter. Default() </dd>
+<dt><code>-rc [resultClassName]</code></dt>
+<dd> Defines a resultClass string for References and Associators. Default() </dd>
+<dt><code>-rr [resultRole]</code></dt>
 <dd> Defines a role string for associators operation resultRole parameter.<br />
-&nbsp;<wbr></p>
-<dt><code>&#8211;setRtnHostNames [SubstituteHostName]</code></p>
-<dd> String option with a required parameter that set a substitute host name which <code>cimcli</code> will insert into returned objects to replace host names returned from the server. This option was defined because the object paths/references returned by the CIM Server may include the host name as part of the returned object path which makes it difficult to compare the returned paths to a defined path. Using this option forces any returned host names to be changed to the string parameter supplied with the option. </p>
-<dt><code>&#8211;sum</code></p>
-<dd> Displays only summary counts for enumerations, associators, etc.This option is used to with the repeat option to repeat an operation without getting the full return display. It reduces the display to summary information. It is often used with the time option &#8211;t to generate time for execution information on many repetitions of a command. </p>
-<dt><code>&#8211;timeout [seconds]</code></p>
-<dd> Set the connection timeout in seconds. If not set, the timeout is the default Pegasus client timeout which for Pegasus is normally to about 30 seconds. This option executes the client call to set timeout. </p>
-<dt><code>-trace [trace_level]</code></p>
-<dd> Set Pegasus Common Components Trace. Sets the Trace level. 0 is off. Default(0). The trace level can be set to 0 &#8211; 5. Note that since mose trace definitions have been removed from <code>cimcli</code>, this is of little value. </p>
-<dt><code>&#8211;truststore [clientTrustStorePath]</code></p>
-<dd> The value of this parameter specifies a file or directory that is the truststore that the client uses to verify server certificates. The default is that no truststore is defined so the client does not verify certificates from the server. This parameter is used only if cimcli is compiled with SSL enabled and the -s option (use SSL) is specified for the request. </p>
-<dt><code>&#8211;v</code></p>
-<dd> Displays <code>cimcli</code> and Pegasus software Version. </p>
-<dt><code>-v</code></p>
-<dd> Verbose Display. Includes Detailed parameter Input display and display of each operation in an enumeration sequence (open, pull, close). Default(false). Outputs extra information about the parameters actually used in the request and the return from the operation. This is primarily a debugging tool. for enumeration context it outputs information on each request/response in the sequence including timing information. </p>
-<dt><code>&#8211;r [repeat_count]</code></p>
-<dd> Number of times to repeat the function. Zero means one time. The option can be used to repeat an operation within a single call to <code>cimcli</code>. It simply repeats the operation defined the number of times defined by the repeat_count within the same connection. Thus, it establishes the connection executes the operation repeat_count times and then terminates. It can be used with the &#8211;time option to measure execution times for many repetitions of an operation. </p>
-<dt><code>-s</code></p>
-<dd> Boolean option that specifies that the Client should attempt to connect over the secure connection using SSL. This option causes <code>cimcli</code> to modify the client connect call to set the SSLContext option to the certificate defined with the &#8211;cert and &#8211;key options. If this option is set but neither the &#8211;cert or &#8211;key options are included, the SSLContext for the connect call is submitted with the Cert and key marked NULL. </p>
+&nbsp;<wbr></dd>
+<dt><code>&#8211;setRtnHostNames [SubstituteHostName]</code></dt>
+<dd> String option with a required parameter that set a substitute host name which <code>cimcli</code> will insert into returned objects to replace host names returned from the server. This option was defined because the object paths/references returned by the CIM Server may include the host name as part of the returned object path which makes it difficult to compare the returned paths to a defined path. Using this option forces any returned host names to be changed to the string parameter supplied with the option. </dd>
+<dt><code>&#8211;sum</code></dt>
+<dd> Displays only summary counts for enumerations, associators, etc.This option is used to with the repeat option to repeat an operation without getting the full return display. It reduces the display to summary information. It is often used with the time option &#8211;t to generate time for execution information on many repetitions of a command. </dd>
+<dt><code>&#8211;timeout [seconds]</code></dt>
+<dd> Set the connection timeout in seconds. If not set, the timeout is the default Pegasus client timeout which for Pegasus is normally to about 30 seconds. This option executes the client call to set timeout. </dd>
+<dt><code>-trace [trace_level]</code></dt>
+<dd> Set Pegasus Common Components Trace. Sets the Trace level. 0 is off. Default(0). The trace level can be set to 0 &#8211; 5. Note that since mose trace definitions have been removed from <code>cimcli</code>, this is of little value. </dd>
+<dt><code>&#8211;truststore [clientTrustStorePath]</code></dt>
+<dd> The value of this parameter specifies a file or directory that is the truststore that the client uses to verify server certificates. The default is that no truststore is defined so the client does not verify certificates from the server. This parameter is used only if cimcli is compiled with SSL enabled and the -s option (use SSL) is specified for the request. </dd>
+<dt><code>&#8211;v</code></dt>
+<dd> Displays <code>cimcli</code> and Pegasus software Version. </dd>
+<dt><code>-v</code></dt>
+<dd> Verbose Display. Includes Detailed parameter Input display and display of each operation in an enumeration sequence (open, pull, close). Default(false). Outputs extra information about the parameters actually used in the request and the return from the operation. This is primarily a debugging tool. for enumeration context it outputs information on each request/response in the sequence including timing information. </dd>
+<dt><code>&#8211;r [repeat_count]</code></dt>
+<dd> Number of times to repeat the function. Zero means one time. The option can be used to repeat an operation within a single call to <code>cimcli</code>. It simply repeats the operation defined the number of times defined by the repeat_count within the same connection. Thus, it establishes the connection executes the operation repeat_count times and then terminates. It can be used with the &#8211;time option to measure execution times for many repetitions of an operation. </dd>
+<dt><code>-s</code></dt>
+<dd> Boolean option that specifies that the Client should attempt to connect over the secure connection using SSL. This option causes <code>cimcli</code> to modify the client connect call to set the SSLContext option to the certificate defined with the &#8211;cert and &#8211;key options. If this option is set but neither the &#8211;cert or &#8211;key options are included, the SSLContext for the connect call is submitted with the Cert and key marked NULL. </dd>
 <p> NOTE: since SSL is considered a compilable option with <code>cimcli</code>, these options may not even exist in a Pegasus environment that was compiled with the SSL capabilities disabled. </p>
-<dt><code>&#8211;sort</code></p>
-<dd> Sort the output objects before display for multi-object outputs such as enumerates, references, associations, and their corrsponding &#8230;names operations and for the enumerateQualifierDecls. Whereever <code>cimcli</code> delivers multiple entities in the response, the use of this option tells <code>cimcli</code> to attempt to sort the output entities. Generally the sort order is assending order using a) class name for operations that return classes and b) CIM Object Path for operations that return instances. </p>
-<dt><code>&#8211;t</code></p>
-<dd> Measure time for the operation and present results. When set the response time for the operation is presented with the command output. If the &#8211;r (repeat) option is set, minimum, maximum, and average times are presented. Note that the time for the operation itself is presented in addition to the overall time for connect, operation, and disconnect. If statistics are being gathered by the server, setting this option also presents the server time, and the client round trip time which are calculated by the server and client infrastructure. </p>
-<dt><code>-x</code></p>
-<dd> Output objects in xml instead of mof format. Default(false) </p>
-<dt><code>-pt [pullTimeout]</code></p>
-<dd> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence. </p>
-<dt><code>-mr [maxObjectsToReceive]</code></p>
-<dd> The maximum number of instances or paths that will be accepted by <code>cimcli</code> before issuing a close operation. </p>
-<dt><code>-pullDelay [pullDelayinSec]</code></p>
-<dd> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pull sequence. The primary use for this is testing delay issues. </p>
-<dt><code>-mo [maxObjectCount]</code></p>
-<dd> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context (one of the pull&#8230; operations. The server returns no more than this number of instances or paths </p>
+<dt><code>&#8211;sort</code></dt>
+<dd> Sort the output objects before display for multi-object outputs such as enumerates, references, associations, and their corrsponding &#8230;names operations and for the enumerateQualifierDecls. Whereever <code>cimcli</code> delivers multiple entities in the response, the use of this option tells <code>cimcli</code> to attempt to sort the output entities. Generally the sort order is assending order using a) class name for operations that return classes and b) CIM Object Path for operations that return instances. </dd>
+<dt><code>&#8211;t</code></dt>
+<dd> Measure time for the operation and present results. When set the response time for the operation is presented with the command output. If the &#8211;r (repeat) option is set, minimum, maximum, and average times are presented. Note that the time for the operation itself is presented in addition to the overall time for connect, operation, and disconnect. If statistics are being gathered by the server, setting this option also presents the server time, and the client round trip time which are calculated by the server and client infrastructure. </dd>
+<dt><code>-x</code></dt>
+<dd> Output objects in xml instead of mof format. Default(false) </dd>
+<dt><code>-pt [pullTimeout]</code></dt>
+<dd> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence. </dd>
+<dt><code>-mr [maxObjectsToReceive]</code></dt>
+<dd> The maximum number of instances or paths that will be accepted by <code>cimcli</code> before issuing a close operation. </dd>
+<dt><code>-pullDelay [pullDelayinSec]</code></dt>
+<dd> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pull sequence. The primary use for this is testing delay issues. </dd>
+<dt><code>-mo [maxObjectCount]</code></dt>
+<dd> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context (one of the pull&#8230; operations. The server returns no more than this number of instances or paths </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> NOTE: Many examples are available for each operation through the -h command line options. </p>

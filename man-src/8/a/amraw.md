@@ -18,7 +18,7 @@ description: "amraw – Amanda Application open and read data"
 <p>This section lists the properties that control amgtar&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7) for information on application properties and how they are configured. </p>
 <p> DIRECTORY</p>
 <dl>
-<dd>Used only for restore command, can be a device name or file, the data will be restored to it.</dl>
+<dd>Used only for restore command, can be a device name or file, the data will be restored to it.</dd></dl>
 <h2>Example</h2>
 <pre> define application-tool app_amraw {
  plugin &quot;amraw&quot;
@@ -36,4 +36,4 @@ description: "amraw – Amanda Application open and read data"
 <h2>Author</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

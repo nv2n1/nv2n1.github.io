@@ -21,14 +21,14 @@ description: "lndir – create a shadow directory of symbolic links to another d
 <p> If a file in <i>fromdir</i> is a symbolic link, <i>lndir</i> will make the same link in <i>todir</i> rather than making a link back to the (symbolic link) entry in <i>fromdir.</i> The <code>-ignorelinks</code> flag changes this behavior.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-silent</p>
-<dd> Normally <i>lndir</i> outputs the name of each subdirectory as it descends into it. The <code>-silent</code> option suppresses these status messages.</p>
-<dt>-ignorelinks</p>
-<dd> Causes the program to not treat symbolic links in <i>fromdir</i> specially. The link created in <i>todir</i> will point back to the corresponding (symbolic link) file in <i>fromdir</i>. If the link is to a directory, this is almost certainly the wrong thing.</p>
+<dt>-silent</dt>
+<dd> Normally <i>lndir</i> outputs the name of each subdirectory as it descends into it. The <code>-silent</code> option suppresses these status messages.</dd>
+<dt>-ignorelinks</dt>
+<dd> Causes the program to not treat symbolic links in <i>fromdir</i> specially. The link created in <i>todir</i> will point back to the corresponding (symbolic link) file in <i>fromdir</i>. If the link is to a directory, this is almost certainly the wrong thing.</dd>
 <dt>
-<dd> This option exists mostly to emulate the behavior the C version of <i>lndir</i> had in X11R6. Its use is not recommended.</p>
-<dt>-withrevinfo</p>
-<dd> Causes any source control manager subdirectories (those named BitKeeper, CVS, CVS.adm, .git, .hg, RCS, SCCS, or .svn) to be treated as any other directory, rather than ignored.</dl>
+</dt><dd> This option exists mostly to emulate the behavior the C version of <i>lndir</i> had in X11R6. Its use is not recommended.</dd>
+<dt>-withrevinfo</dt>
+<dd> Causes any source control manager subdirectories (those named BitKeeper, CVS, CVS.adm, .git, .hg, RCS, SCCS, or .svn) to be treated as any other directory, rather than ignored.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> The program displays the name of each subdirectory it enters, followed by a colon. The <code>-silent</code> option suppresses these messages. </p>
 <p> A warning message is displayed if the symbolic link cannot be created. The usual problem is that a regular file of the same name already exists. </p>

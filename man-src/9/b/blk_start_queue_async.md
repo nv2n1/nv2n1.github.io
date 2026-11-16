@@ -14,7 +14,7 @@ description: "blk_start_queue_async – asynchronously restart a previously stop
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>The struct request_queue in question</dl>
+</dd><dd>The struct request_queue in question</dd></dl>
 <h2>Description</h2>
 <p><code>blk_start_queue_async</code> will clear the stop flag on the queue, and ensure that the request_fn for the queue is run from an async context.</p>
 <h2>Copyright</h2>

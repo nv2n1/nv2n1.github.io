@@ -19,23 +19,23 @@ description: "wall – write a message to all users"
 <p> <code>-n</code>, <code>&#8211;nobanner</code></p>
 <dl>
 <dt>
-<dd> Suppress the banner.</dl>
+</dt><dd> Suppress the banner.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;timeout</code> <i>timeout</i></p>
 <dl>
 <dt>
-<dd> Abandon the write attempt to the terminals after <i>timeout</i> seconds. This <i>timeout</i> must be a positive integer. The default value is 300 seconds, which is a legacy from the time when people ran terminals over modem lines.</dl>
+</dt><dd> Abandon the write attempt to the terminals after <i>timeout</i> seconds. This <i>timeout</i> must be a positive integer. The default value is 300 seconds, which is a legacy from the time when people ran terminals over modem lines.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;group</code> <i>group</i></p>
 <dl>
 <dt>
-<dd> Limit printing message to members of group defined as a <i>group</i> argument. The argument can be group name or GID.</dl>
+</dt><dd> Limit printing message to members of group defined as a <i>group</i> argument. The argument can be group name or GID.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> Some sessions, such as <code>wdm</code>(1x), that have in the beginning of <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5) ut_type data a &#8216;:&#8217; character will not get the message from <code>wall</code>. This is done to avoid write errors.</p>
 <h2>HISTORY</h2>

@@ -14,17 +14,17 @@ description: "rio_unlock_device – Releases host device lock for specified devi
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>Master port to send transaction</dl>
+</dd><dd>Master port to send transaction</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>Destination ID for device/switch</dl>
+<dd>Destination ID for device/switch</dd></dl>
 <p> <i>hopcount</i></p>
 <dl>
-<dd>Hopcount to reach switch</dl>
+<dd>Hopcount to reach switch</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 if device lock released or EINVAL if fails.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

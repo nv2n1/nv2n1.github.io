@@ -22,10 +22,10 @@ description: "pam_get_items – A PAM test module to retrieve module-specific PA
 <dd>
 <pre>auth required pam_unix.so
 auth required pam_get_items.so</pre>
-</dl>
+</dd></dl>
 <p> Then the test would run the PAM conversation and afterwards call:</p>
 <dl>
 <dd>
 <pre>pam_getenv(pamh, &quot;PAM_AUTHTOK&quot;);</pre>
-</dl>
+</dd></dl>
 <p> To retrieve the password. </p>

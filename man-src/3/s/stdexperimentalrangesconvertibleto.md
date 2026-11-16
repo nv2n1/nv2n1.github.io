@@ -11,17 +11,11 @@ std::experimental::ranges::ConvertibleTo - std::experimental::ranges::Convertibl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt;class From, class To&gt;
-
 concept bool ConvertibleTo =
-
 std::is_convertible&lt;From, To&gt;::value &amp;&amp;           (ranges TS)
-
 requires(From (&amp;f)()) {
-
     static_cast&lt;To&gt;(f());
-
 };</code></pre> 
 The concept ConvertibleTo&lt;From, To&gt; specifies that an expression of the type and value category specified by From can be implicitly and explicitly converted to the type To, and the two forms of conversion are equivalent. 
 Specifically, ConvertibleTo&lt;From, To&gt; is satisfied only if, given the invented function To test(From (&amp;f)()) { return f(); } and a function f of type From () such that the expression f() is equality-preserving (see below), 

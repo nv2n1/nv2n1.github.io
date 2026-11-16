@@ -15,11 +15,11 @@ truncate_pagecache - unmap and remove pagecache that has been truncated
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode</dl>
+<dl><dd></dd><dd>inode</dd></dl>
  
 
  <i>newsize</i>
-<dl><dd>new file size</dl>
+<dl><dd>new file size</dd></dl>
 
 <h2>Description</h2>
 

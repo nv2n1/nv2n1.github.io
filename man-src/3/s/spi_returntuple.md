@@ -16,9 +16,9 @@ description: "SPI_returntuple – prepare to return a tuple as a Datum"
 <h2>Arguments</h2>
 <p>HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>row to be copied</dl>
+<dd>row to be copied</dd></dl>
 <p> TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>descriptor for row (pass the same descriptor each time for most effective caching)</dl>
+<dd>descriptor for row (pass the same descriptor each time for most effective caching)</dd></dl>
 <h2>Return Value</h2>
 <p>HeapTupleHeader pointing to copied row; NULL only if <i>row</i> or <i>rowdesc</i> is NULL</p>

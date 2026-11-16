@@ -15,11 +15,11 @@ mongoc_client_get_max_message_size (mongoc_client_t *client);</pre>
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>This function is deprecated and should not be used in new code.</dl>
+<dd>This function is deprecated and should not be used in new code.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>The server provided max message size, or 40Mb if no connection has been established. </p>
 <h2>Colophon</h2>

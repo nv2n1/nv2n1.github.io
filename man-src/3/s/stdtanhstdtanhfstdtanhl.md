@@ -39,10 +39,8 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;tanh(1) = &quot; &lt;&lt; std::tanh(1) &lt;&lt; '
 '

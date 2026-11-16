@@ -11,10 +11,10 @@ description: "globaltime – International multiclock timeconverter for the Xfce
 <p> globaltime &#8211; International multiclock timeconverter for the Xfce Desktop Environment. It is part of Orage </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>globaltime</code></dl>
+<dt> <code>globaltime</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>globaltime</code></p>
-<dd>is a fast and easy to use graphical clock for the Xfce Desktop Environment. It can show several clocks in different timezones at the same time. It is also possible to change time, so that it is easier to see when certain time is in other timezones. <code>globaltime</code> is not able to change your operating system time.</p>
+<dd>is a fast and easy to use graphical clock for the Xfce Desktop Environment. It can show several clocks in different timezones at the same time. It is also possible to change time, so that it is easier to see when certain time is in other timezones. <code>globaltime</code> is not able to change your operating system time.</dd>
 <h2>FILES</h2>
 <p> All <code>globaltime</code> datafiles are by default in in <i>~/.config/globaltime</i>.</p>
 <h2>BUGS</h2>

@@ -11,7 +11,6 @@ fi_direct - Direct fabric provider access
 <h2>Synopsis</h2>
 
 <pre><code>-DFABRIC_DIRECT
-
 #define FABRIC_DIRECT</code></pre> Fabric direct provides a mechanism for applications to compile against a specific fabric providers without going through the libfabric framework or function vector tables. This allows for extreme optimization via function inlining at the cost of supporting multiple providers or different versions of the same provider.
 
 <h2>Description</h2>

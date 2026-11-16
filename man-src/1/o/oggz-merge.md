@@ -27,19 +27,19 @@ description: "oggz-merge — Merge Ogg files together, interleaving pages in ord
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
 <dd> Write output to the specified <code>filename</code> instead of printing it to standard output.<br />
-&nbsp;<wbr></p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit. </p>
+&nbsp;<wbr></dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Merge pages of audio.oga and video.ogv: </p>
 <dl>
 <dt>
-<dd> <tt>oggz merge -o output.ogv audio.oga video.ogv</tt></dl>
+</dt><dd> <tt>oggz merge -o output.ogv audio.oga video.ogv</tt></dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker September 21, 2004;</p>
 <h2>COPYRIGHT</h2>

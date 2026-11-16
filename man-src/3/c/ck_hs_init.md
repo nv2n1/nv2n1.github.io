@@ -17,20 +17,20 @@ description: "ck_hs_init – initialize a hash set"
 <p> The Fn ck_hs_init function initializes the hash set pointed to by the Fa hs pointer. </p>
 <p> The argument Fa mode specifies the type of key-value pairs to be stored in the hash set as well as the expected concurrent access model. The value of Fa mode consists of a bitfield of one of the following:</p>
 <dl>
-<dt><code>CK_HS_MODE_OBJECT</code></p>
-<dd> The hash set is meant to store pointers to objects. This provides a hint that only CK_MD_VMA_BITS are necessary to encode the key argument. Any unused pointer bits are leveraged for internal optimizations.</p>
-<dt><code>CK_HS_MODE_DIRECT</code></p>
-<dd> The hash set is meant to directly store key values and that all bits of the key are used to encode values.</dl>
+<dt><code>CK_HS_MODE_OBJECT</code></dt>
+<dd> The hash set is meant to store pointers to objects. This provides a hint that only CK_MD_VMA_BITS are necessary to encode the key argument. Any unused pointer bits are leveraged for internal optimizations.</dd>
+<dt><code>CK_HS_MODE_DIRECT</code></dt>
+<dd> The hash set is meant to directly store key values and that all bits of the key are used to encode values.</dd></dl>
 <p> The concurrent access model is specified by:</p>
 <dl>
-<dt><code>CK_HS_MODE_SPMC</code></p>
-<dd> The hash set should allow for concurrent readers in the presence of a single writer.</p>
-<dt><code>CK_HS_MODE_MPMC</code></p>
-<dd> The hash set should allow for concurrent readers in the presence of concurrent writers. This is currently unsupported.</dl>
+<dt><code>CK_HS_MODE_SPMC</code></dt>
+<dd> The hash set should allow for concurrent readers in the presence of a single writer.</dd>
+<dt><code>CK_HS_MODE_MPMC</code></dt>
+<dd> The hash set should allow for concurrent readers in the presence of concurrent writers. This is currently unsupported.</dd></dl>
 <p> The developer is free to specify additional workload hints. These hints are one of:</p>
 <dl>
-<dt><code>CK_HS_MODE_DELETE</code></p>
-<dd> The hash set is expected to have a delete-heavy workload. At the cost of approximately 13% increased memory usage, allow for stronger per-slot probe bounds to combat the effects of tombstone accumulation.</dl>
+<dt><code>CK_HS_MODE_DELETE</code></dt>
+<dd> The hash set is expected to have a delete-heavy workload. At the cost of approximately 13% increased memory usage, allow for stronger per-slot probe bounds to combat the effects of tombstone accumulation.</dd></dl>
 <p> The argument Fa hash_function is a mandatory pointer to a user-specified hash function. A user-specified hash function takes two arguments. The Fa key argument is a pointer to a key. The Fa seed argument is the initial seed associated with the hash set. This initial seed is specified by the user in ck_hs_init3. </p>
 <p> The Fa compare argument is an optional pointer to a user-specified key comparison function. If NULL is specified in this argument, then pointer equality will be used to determine key equality. A user-specified comparison function takes two arguments representing pointers to the objects being compared for equality. It is expected to return true if the keys are of equal value and false otherwise. </p>
 <p> The Fa allocator argument is a pointer to a structure containing Fa malloc and Fa free function pointers which respectively define the memory allocation and destruction functions to be used by the hash set being initialized. </p>
@@ -45,3 +45,4 @@ description: "ck_hs_init – initialize a hash set"
 <p> ck_hs_move3, ck_hs_destroy3, CK_HS_HASH3, ck_hs_iterator_init3, ck_hs_next3, ck_hs_get3, ck_hs_put3, ck_hs_put_unique3, ck_hs_set3, ck_hs_fas3, ck_hs_remove3, ck_hs_grow3, ck_hs_rebuild3, ck_hs_gc3, ck_hs_count3, ck_hs_reset3, ck_hs_reset_size3, ck_hs_stat3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
 <h2>Index</h2>
+</p>

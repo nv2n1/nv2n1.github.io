@@ -111,8 +111,8 @@ description: "sendmail_selinux – Security Enhanced Linux Policy for the sendma
 <p> <code>sendmail_exec_t</code> </p>
 <p> &#8211; Set files with the sendmail_exec_t type, if you want to transition an executable to the sendmail_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/sendmail(.sendmail)?, /usr/bin/esmtp, /usr/sbin/rmail, /usr/sbin/ssmtp, /usr/lib/sendmail, /var/qmail/bin/sendmail, /usr/sbin/sendmail.postfix </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/sendmail(.sendmail)?, /usr/bin/esmtp, /usr/sbin/rmail, /usr/sbin/ssmtp, /usr/lib/sendmail, /var/qmail/bin/sendmail, /usr/sbin/sendmail.postfix </dd>
 </dl>
 <p> <code>sendmail_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the sendmail_initrc_exec_t type, if you want to transition an executable to the sendmail_initrc_t domain. </p>
@@ -121,16 +121,16 @@ description: "sendmail_selinux – Security Enhanced Linux Policy for the sendma
 <p> <code>sendmail_log_t</code> </p>
 <p> &#8211; Set files with the sendmail_log_t type, if you want to treat the data as sendmail log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/mail(/.*)?, /var/log/sendmail.st.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/mail(/.*)?, /var/log/sendmail.st.* </dd>
 </dl>
 <p> <code>sendmail_tmp_t</code> </p>
 <p> &#8211; Set files with the sendmail_tmp_t type, if you want to store sendmail temporary files in the /tmp directories. </p>
 <p> <code>sendmail_var_run_t</code> </p>
 <p> &#8211; Set files with the sendmail_var_run_t type, if you want to store the sendmail files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/sendmail.pid, /var/run/sm-client.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/sendmail.pid, /var/run/sm-client.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

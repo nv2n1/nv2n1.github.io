@@ -16,14 +16,14 @@ description: "lilypond-invoke-editor – manual page for lilypond-invoke-editor 
 <p> Visit a file and position the cursor.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> show version</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> show version</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>lilypond-invoke-editor</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lilypond-invoke-editor</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info lilypond-invoke-editor</code></dl>
+</dt><dd> <code>info lilypond-invoke-editor</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

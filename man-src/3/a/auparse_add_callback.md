@@ -22,23 +22,23 @@ void auparse_add_callback(auparse_state_t *au, auparse_callback_ptr callback,
                       void *user_data);</p>
 <p> When the callback is invoked it is passed: </p>
 <dl>
-<dt><i>au</i></p>
+<dt><i>au</i></dt>
 <dd>
-&nbsp;<wbr>a pointer to the parse_state</p>
-<dt><i>cb_event_type</i></p>
-<dd> enumerated value indicating the reason why the callback was invoked</p>
-<dt><i>user_data</i></p>
-<dd> pointer to user supplied private data. May be NULL.</p>
-<dt><i>user_destroy_func</i></p>
-<dd> pointer to function called when user_data is destroyed. May be NULL. The signature is: </p>
+&nbsp;<wbr>a pointer to the parse_state</dd>
+<dt><i>cb_event_type</i></dt>
+<dd> enumerated value indicating the reason why the callback was invoked</dd>
+<dt><i>user_data</i></dt>
+<dd> pointer to user supplied private data. May be NULL.</dd>
+<dt><i>user_destroy_func</i></dt>
+<dd> pointer to function called when user_data is destroyed. May be NULL. The signature is: </dd>
 <pre><code>
 void destroy(void *user_data);
 </code></pre>
 <p> The destroy() function should be prepared to accept user_data possibly being NULL.</dl>
 <p> The <i>cb_event_type</i> argument indicates why the callback was invoked. It&#8217;s possible values are: </p>
 <dl>
-<dt><code>AUPARSE_CB_EVENT_READY</code></p>
-<dd> A complete event has been parsed and is ready to be examined. This is logically equivalent to the parse state immediately following <i>auparse_next_event()</i></dl>
+<dt><code>AUPARSE_CB_EVENT_READY</code></dt>
+<dd> A complete event has been parsed and is ready to be examined. This is logically equivalent to the parse state immediately following <i>auparse_next_event()</i></dd></dl>
 <p> See <a href="/docs/linux/man/3-auparse_feed/">auparse_feed</a>(3) for a complete code example.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns the previous callback pointer. </p>

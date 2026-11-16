@@ -19,23 +19,23 @@ pki[CLI options]&lt;subsystem&gt; - user - cert pki[CLI options]&lt;subsystem&gt
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-cert</code></p>
 <dl>
 <dt>
-<dd> This command is to list available user certificate commands for the subsystem.</dl>
+</dt><dd> This command is to list available user certificate commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-cert-find</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list certificates owned by the subsystem user.</dl>
+</dt><dd> This command is to list certificates owned by the subsystem user.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-cert-show</code> &lt;user ID&gt; &lt;cert ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view the details of a certificate owned to the subsystem user.</dl>
+</dt><dd> This command is to view the details of a certificate owned to the subsystem user.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-cert-add</code> &lt;user ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add a certificate to the subsystem user.</dl>
+</dt><dd> This command is to add a certificate to the subsystem user.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user-cert-del</code> &lt;user ID&gt; &lt;cert ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a certificate from the subsystem user.</dl>
+</dt><dd> This command is to delete a certificate from the subsystem user.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

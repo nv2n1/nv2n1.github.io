@@ -11,7 +11,6 @@ description: "sc::QNewtonOpt –"
 <p> The <code>QNewtonOpt</code> implements a quasi-Newton optimization scheme.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;qnewton.h&gt;</code></pre>
 <p> Inherits <code>sc::Optimize</code>.</p>
 <h3>Public Member Functions</h3>
@@ -27,57 +26,18 @@ description: "sc::QNewtonOpt –"
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>double maxabs_gradient
-
-
-
 double accuracy_
-
-
-
 RefSymmSCMatrix ihessian_
-
-
-
 Ref&lt; HessianUpdate &gt; update_
-
-
-
 Ref&lt; LineOpt &gt; lineopt_
-
-
-
 int take_newton_step_
-
-
-
 int print_hessian_
-
-
-
 int print_x_
-
-
-
 int print_gradient_
-
-
-
 int linear_
-
-
-
 int restrict_
-
-
-
 int dynamic_grad_acc_
-
-
-
 int force_search_
-
-
-
 int restart_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>QNewtonOpt</code> implements a quasi-Newton optimization scheme.</p>
@@ -85,29 +45,29 @@ int restart_</code></pre>
 <h3>sc::QNewtonOpt::QNewtonOpt (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. The <code>KeyVal</code> constructor reads the following keywords:</p>
 <dl>
-<dt>update</p>
-<dd>This gives a <code>HessianUpdate</code> object. The default is to not update the hessian.</dl>
+<dt>update</dt>
+<dd>This gives a <code>HessianUpdate</code> object. The default is to not update the hessian.</dd></dl>
 <dl>
-<dt>hessian</p>
-<dd>By default, the guess hessian is obtained from the <code>Function</code> object. This keyword specifies an lower triangle array (the second index must be less than or equal to than the first) that replaces the guess hessian. If some of the elements are not given, elements from the guess hessian will be used.</dl>
+<dt>hessian</dt>
+<dd>By default, the guess hessian is obtained from the <code>Function</code> object. This keyword specifies an lower triangle array (the second index must be less than or equal to than the first) that replaces the guess hessian. If some of the elements are not given, elements from the guess hessian will be used.</dd></dl>
 <dl>
-<dt>lineopt</p>
-<dd>This gives a <code>LineOpt</code> object for doing line optimizations in the Newton direction. The default is to skip the line optimizations.</dl>
+<dt>lineopt</dt>
+<dd>This gives a <code>LineOpt</code> object for doing line optimizations in the Newton direction. The default is to skip the line optimizations.</dd></dl>
 <dl>
-<dt>accuracy</p>
-<dd>The accuracy with which the first gradient will be computed. If this is too large, it may be necessary to evaluate the first gradient <code>point</code> twice. If it is too small, it may take longer to evaluate the first <code>point</code>. The default is 0.0001.</dl>
+<dt>accuracy</dt>
+<dd>The accuracy with which the first gradient will be computed. If this is too large, it may be necessary to evaluate the first gradient <code>point</code> twice. If it is too small, it may take longer to evaluate the first <code>point</code>. The default is 0.0001.</dd></dl>
 <dl>
-<dt>print_x</p>
-<dd>If true, print the coordinates each iteration. The default is false.</dl>
+<dt>print_x</dt>
+<dd>If true, print the coordinates each iteration. The default is false.</dd></dl>
 <dl>
-<dt>print_gradient</p>
-<dd>If true, print the gradient each iteration. The default is false.</dl>
+<dt>print_gradient</dt>
+<dd>If true, print the gradient each iteration. The default is false.</dd></dl>
 <dl>
-<dt>print_hessian</p>
-<dd>If true, print the approximate hessian each iteration. The default is false.</dl>
+<dt>print_hessian</dt>
+<dd>If true, print the approximate hessian each iteration. The default is false.</dd></dl>
 <dl>
-<dt>restrict</p>
-<dd>Use step size restriction when not using a line search. The default is true.</dl>
+<dt>restrict</dt>
+<dd>Use step size restriction when not using a line search. The default is true.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::QNewtonOpt::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

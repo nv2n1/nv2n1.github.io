@@ -16,24 +16,24 @@ description: "eruby – Embedded Ruby Language"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-d, &#8211;debug</code> set debugging flags (set $DEBUG to true)</p>
+</dt><dd> <code>-d, &#8211;debug</code> set debugging flags (set $DEBUG to true)</dd>
 <dt>
-<dd> <code>-Kkcode</code> specifies KANJI (Japanese) code-set</p>
+</dt><dd> <code>-Kkcode</code> specifies KANJI (Japanese) code-set</dd>
 <dt>
-<dd> <code>-Mmode</code> specifies runtime mode </p>
+</dt><dd> <code>-Mmode</code> specifies runtime mode </dd>
 <pre>
     f: filter mode
     c: CGI mode
     n: NPH-CGI mode
 </pre>
 <dt>
-<dd> <code>-C charset</code> specifies charset parameter for Content-Type</p>
+</dt><dd> <code>-C charset</code> specifies charset parameter for Content-Type</dd>
 <dt>
-<dd> <code>-n, &#8211;noheader</code> disables CGI header output</p>
+</dt><dd> <code>-n, &#8211;noheader</code> disables CGI header output</dd>
 <dt>
-<dd> <code>-v, &#8211;verbose</code> enables verbose mode</p>
+</dt><dd> <code>-v, &#8211;verbose</code> enables verbose mode</dd>
 <dt>
-<dd> <code>&#8211;version </code> print version information and exit</dl>
+</dt><dd> <code>&#8211;version </code> print version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Shugo Maeda &lt;shugo [at] ruby-lang.org&gt; </p>
 <h2>Index</h2>

@@ -19,7 +19,7 @@ description: "clalsd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLALSD uses the singular value decomposition of A to solve the least
  squares problem of finding X to minimize the Euclidean norm of each
@@ -36,11 +36,11 @@ description: "clalsd.f –"
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
          = 'U': D and E define an upper bidiagonal matrix.
@@ -134,21 +134,22 @@ description: "clalsd.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </p>
+</dt><dd> Ming Gu and Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 186 of file clalsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

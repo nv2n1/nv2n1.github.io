@@ -23,16 +23,16 @@ int tgkill(int tgid, int tid, int sig);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The <code>RLIMIT_SIGPENDING</code> resource limit was reached and <i>sig</i> is a real-time signal.</p>
-<dt><code>EAGAIN</code></p>
-<dd> Insufficient kernel memory was available and <i>sig</i> is a real-time signal.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid thread ID, thread group ID, or signal was specified.</p>
-<dt><code>EPERM</code></p>
-<dd> Permission denied. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>
-<dt><code>ESRCH</code></p>
-<dd> No process with the specified thread ID (and thread group ID) exists.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The <code>RLIMIT_SIGPENDING</code> resource limit was reached and <i>sig</i> is a real-time signal.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd> Insufficient kernel memory was available and <i>sig</i> is a real-time signal.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid thread ID, thread group ID, or signal was specified.</dd>
+<dt><code>EPERM</code></dt>
+<dd> Permission denied. For the required permissions, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process with the specified thread ID (and thread group ID) exists.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>tkill</code>() is supported since Linux 2.4.19 / 2.5.4. <code>tgkill</code>() was added in Linux 2.5.75. </p>
 <p> Library support for <code>tgkill</code>() was added to glibc in version 2.30.</p>

@@ -14,17 +14,17 @@ description: "nand_write_buf16 – [DEFAULT] write buffer to chip"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>data buffer</dl>
+<dd>data buffer</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to write</dl>
+<dd>number of bytes to write</dd></dl>
 <h2>Description</h2>
 <p>Default write function for 16bit buswidth.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

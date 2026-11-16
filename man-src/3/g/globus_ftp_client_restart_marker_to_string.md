@@ -33,60 +33,58 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>new_marker</i> A pointer to a new restart marker.<br />
- <i>marker</i> The marker to copy.</dl>
+</dt><dd> <i>new_marker</i> A pointer to a new restart marker.<br />
+ <i>marker</i> The marker to copy.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_init()</code>, <code>globus_ftp_client_restart_marker_destroy()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_init()</code>, <code>globus_ftp_client_restart_marker_destroy()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_destroy (<code>globus_ftp_client_restart_marker_t</code> *marker)</h3>
 <p> Destroy a restart marker. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> Restart marker. This marker must be initialized by either calling <code>globus_ftp_client_restart_marker_init()</code> or <code>globus_ftp_client_restart_marker_copy()</code></dl>
+</dt><dd> <i>marker</i> Restart marker. This marker must be initialized by either calling <code>globus_ftp_client_restart_marker_init()</code> or <code>globus_ftp_client_restart_marker_copy()</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_t</code>, <code>globus_ftp_client_restart_marker_init()</code>, <code>globus_ftp_client_restart_marker_copy()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_t</code>, <code>globus_ftp_client_restart_marker_init()</code>, <code>globus_ftp_client_restart_marker_copy()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_from_string (<code>globus_ftp_client_restart_marker_t</code> *marker, const char *marker_string)</h3>
 <p> Initialize a restart marker from a string. </p>
 <p> This function initializes a new restart, <i>marker</i>, based on the <i>marker_string</i> parameter. The string may be either a single offset for a stream-mode restart marker, or a comma-separated list of start-end ranges. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> The restart marker to be unitialized.<br />
- <i>marker_string</i> The string containing a textual representation of a restart marker.</dl>
+</dt><dd> <i>marker</i> The restart marker to be unitialized.<br />
+ <i>marker_string</i> The string containing a textual representation of a restart marker.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>Restart Markers</code></dl>
+</dt><dd> <code>Restart Markers</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_get_total (<code>globus_ftp_client_restart_marker_t</code> *marker, globus_off_t *total_bytes)</h3>
 <p> Get total bytes accounted for in restart marker </p>
 <p> This funtion will return the sum of all bytes accounted for in a restart marker. If this restart marker contains a stream offset then this value is the same as the offset (not the ascii offset) that it was set with. If it is a range list, it a sum of all the bytes in the ranges. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> A previously initialized or copied restart marker<br />
- <i>total_bytes</i> pointer to storage for total bytes in marker</dl>
+</dt><dd> <i>marker</i> A previously initialized or copied restart marker<br />
+ <i>total_bytes</i> pointer to storage for total bytes in marker</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Error on NULL marker or total bytes</dl>
+<dt>&bull;</dt>
+<dd> Error on NULL marker or total bytes</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_init (<code>globus_ftp_client_restart_marker_t</code> *marker)</h3>
 <p> Initialize a restart marker. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> New restart marker.</dl>
+</dt><dd> <i>marker</i> New restart marker.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_t</code>, <code>globus_ftp_client_restart_marker_destroy()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_t</code>, <code>globus_ftp_client_restart_marker_destroy()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_insert_range (<code>globus_ftp_client_restart_marker_t</code> *marker, globus_off_toffset, globus_off_tend_offset)</h3>
 <p> Insert a range into a restart marker </p>
 <p> This function updates a restart marker with a new byte range, suitable for using to restart an extended block mode transfer. Adjacent ranges within the marker will be combined into a single entry in the marker. </p>
@@ -95,13 +93,13 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> A restart marker<br />
+</dt><dd> <i>marker</i> A restart marker<br />
  <i>offset</i> The starting offset of the range.<br />
- <i>end_offset</i> The ending offset of the range.</dl>
+ <i>end_offset</i> The ending offset of the range.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_set_offset()</code> <code>globus_ftp_client_operationattr_set_mode()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_set_offset()</code> <code>globus_ftp_client_operationattr_set_mode()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_set_ascii_offset (<code>globus_ftp_client_restart_marker_t</code> *marker, globus_off_toffset, globus_off_tascii_offset)</h3>
 <p> Set the offset for a restart marker. </p>
 <p> This function modifies a restart marker to contain a stream offset, suitable for using to restart a steam mode transfer. </p>
@@ -111,13 +109,13 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> A restart marker<br />
+</dt><dd> <i>marker</i> A restart marker<br />
  <i>offset</i> The local stream offset.<br />
- <i>ascii_offset</i> The network ascii representation of the offset.</dl>
+ <i>ascii_offset</i> The network ascii representation of the offset.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_insert_range()</code>, <code>globus_ftp_client_restart_marker_set_offset()</code>, <code>globus_ftp_client_operationattr_set_mode()</code>, <code>globus_ftp_client_operationattr_set_type()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_insert_range()</code>, <code>globus_ftp_client_restart_marker_set_offset()</code>, <code>globus_ftp_client_operationattr_set_mode()</code>, <code>globus_ftp_client_operationattr_set_type()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_set_offset (<code>globus_ftp_client_restart_marker_t</code> *marker, globus_off_toffset)</h3>
 <p> Set the offset for a restart marker. </p>
 <p> This function modifies a restart marker to contain a stream offset, suitable for using to restart a steam mode transfer. </p>
@@ -127,12 +125,12 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> A restart marker<br />
- <i>offset</i> The stream offset</dl>
+</dt><dd> <i>marker</i> A restart marker<br />
+ <i>offset</i> The stream offset</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_restart_marker_insert_range()</code>, <code>globus_ftp_client_operationattr_set_mode()</code>, <code>globus_ftp_client_operationattr_set_type()</code></dl>
+</dt><dd> <code>globus_ftp_client_restart_marker_insert_range()</code>, <code>globus_ftp_client_operationattr_set_mode()</code>, <code>globus_ftp_client_operationattr_set_type()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_restart_marker_to_string (<code>globus_ftp_client_restart_marker_t</code> *marker, char **marker_string)</h3>
 <p> Create a string representation of a restart marker. </p>
 <p> This function sets the <i>marker_string</i> parameter to point to a freshly allocated string suitable for sending as an argument to the FTP REST command, or for a later call to <code>globus_ftp_client_restart_marker_from_string()</code>. </p>
@@ -140,14 +138,14 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>marker</i> An initialized FTP client restart marker.<br />
- <i>marker_string</i> A pointer to a char * to be set to a freshly allocated marker string.</dl>
+</dt><dd> <i>marker</i> An initialized FTP client restart marker.<br />
+ <i>marker_string</i> A pointer to a char * to be set to a freshly allocated marker string.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>Restart Markers</code></dl>
+</dt><dd> <code>Restart Markers</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAP">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAP">Author</a></dt>
+<dd></dd></dl>

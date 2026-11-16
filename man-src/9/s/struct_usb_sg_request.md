@@ -16,10 +16,10 @@ description: "struct_usb_sg_request – support for scatter/gather I/O"
 <h2>Members</h2>
 <p>status</p>
 <dl>
-<dd>zero indicates success, else negative errno</dl>
+<dd>zero indicates success, else negative errno</dd></dl>
 <p> bytes</p>
 <dl>
-<dd>counts bytes transferred.</dl>
+<dd>counts bytes transferred.</dd></dl>
 <h2>Description</h2>
 <p>These requests are initialized using <code>usb_sg_init</code>, and then are used as request handles passed to <code>usb_sg_wait</code> or <code>usb_sg_cancel</code>. Most members of the request object aren&#8217;t for driver access. </p>
 <p> The status and bytecount values are valid only after <code>usb_sg_wait</code> returns. If the status is zero, then the bytecount matches the total from the request. </p>

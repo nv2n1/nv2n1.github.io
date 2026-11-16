@@ -16,16 +16,16 @@ dblink_open(text connname, text cursorname, text sql [, bool fail_on_error]) ret
 <h2>Arguments</h2>
 <p><i>connname</i></p>
 <dl COMPACT>
-<dd>Name of the connection to use; omit this parameter to use the unnamed connection.</dl>
+<dd>Name of the connection to use; omit this parameter to use the unnamed connection.</dd></dl>
 <p> <i>cursorname</i></p>
 <dl COMPACT>
-<dd>The name to assign to this cursor.</dl>
+<dd>The name to assign to this cursor.</dd></dl>
 <p> <i>sql</i></p>
 <dl COMPACT>
-<dd>The <code>SELECT</code> statement that you wish to execute in the remote database, for example select * from pg_class.</dl>
+<dd>The <code>SELECT</code> statement that you wish to execute in the remote database, for example select * from pg_class.</dd></dl>
 <p> <i>fail_on_error</i></p>
 <dl COMPACT>
-<dd>If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function&#8217;s return value is set to ERROR.</dl>
+<dd>If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function&#8217;s return value is set to ERROR.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns status, either OK or ERROR.</p>
 <h2>Notes</h2>
@@ -43,4 +43,4 @@ SELECT dblink_open('foo', 'select proname, prosrc from pg_proc');
 -------------
  OK
 (1 row)</pre>
-</dl>
+</dd></dl>

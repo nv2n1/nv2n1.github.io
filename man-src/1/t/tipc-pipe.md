@@ -24,48 +24,34 @@ url: "/docs/linux/man/1-tipc-pipe/"
 
 <dl>
 <dt>-h | --help
-<dd> show this help 
-
-<dt>-l
-<dd> run in server mode, accept multiple connections 
-
-<dt>-s
-<dd> run in single connection server mode, exit on connection close default mode is client mode 
-
-<dt>--sock_type *SOCK_STREAM | SOCK_DGRAM | SOCK_RDM | SOCK_SEQPACKET
-<dd> 
-
-<dt>--server_type *1000|&lt;n&gt;
-<dd> 
-
-<dt>--addr_type TIPC_ADDR_NAMESEQ | TIPC_ADDR_MCAST | *TIPC_ADDR_NAME
-<dd> For TIPC_ADDR_NAME only address 1 is used. For TIPC_ADDR_NAMESEQ or TIPC_ADDR_MCAST address 1 and address 2 are used. 
-
-<dt>--delay *0|&lt;ms&gt;
-<dd> Defines data reading and writing delay in ms. 
-
-<dt>--data_num *0|&lt;count&gt;
-<dd> Generates defined number of sample data and sends is. 
-
-<dt>--data_size *0
-<dd> Generates packets of defined size when data_num is defined. 
-
-<dt>--data_check
-<dd> Check sequence numbers in received data, generated with option data_num. 
-
-<dt>--buf_size *66000|&lt;n&gt;
-<dd> I/O buffer size (see TIPC_MAX_USER_MSG_SIZE). 
-
-<dt>--wait_peer *0
-<dd> Wait for peer published state before communication. 
-
-<dt>--top
-<dd> run topology client 
-
-<dt>--replay
-<dd> force connectionless server send input to last connected client 
-
-</dl>
+</dt><dd> show this help 
+</dd><dt>-l
+</dt><dd> run in server mode, accept multiple connections 
+</dd><dt>-s
+</dt><dd> run in single connection server mode, exit on connection close default mode is client mode 
+</dd><dt>--sock_type *SOCK_STREAM | SOCK_DGRAM | SOCK_RDM | SOCK_SEQPACKET
+</dt><dd> 
+</dd><dt>--server_type *1000|&lt;n&gt;
+</dt><dd> 
+</dd><dt>--addr_type TIPC_ADDR_NAMESEQ | TIPC_ADDR_MCAST | *TIPC_ADDR_NAME
+</dt><dd> For TIPC_ADDR_NAME only address 1 is used. For TIPC_ADDR_NAMESEQ or TIPC_ADDR_MCAST address 1 and address 2 are used. 
+</dd><dt>--delay *0|&lt;ms&gt;
+</dt><dd> Defines data reading and writing delay in ms. 
+</dd><dt>--data_num *0|&lt;count&gt;
+</dt><dd> Generates defined number of sample data and sends is. 
+</dd><dt>--data_size *0
+</dt><dd> Generates packets of defined size when data_num is defined. 
+</dd><dt>--data_check
+</dt><dd> Check sequence numbers in received data, generated with option data_num. 
+</dd><dt>--buf_size *66000|&lt;n&gt;
+</dt><dd> I/O buffer size (see TIPC_MAX_USER_MSG_SIZE). 
+</dd><dt>--wait_peer *0
+</dt><dd> Wait for peer published state before communication. 
+</dd><dt>--top
+</dt><dd> run topology client 
+</dd><dt>--replay
+</dt><dd> force connectionless server send input to last connected client 
+</dd></dl>
 
 <h3>Short Options</h3>
 
@@ -73,27 +59,20 @@ url: "/docs/linux/man/1-tipc-pipe/"
 
 <dl>
 <dt>--rdm
-<dd> sock_type = SOCK_RDM 
-
-<dt>--pct
-<dd> sock_type = SOCK_PACKET 
-
-<dt>--stm
-<dd> * sock_type = SOCK_STREAM 
-
-<dt>--sqp
-<dd> sock_type = SOCK_SEQPACKET 
-
-<dt>--nam
-<dd> * addr_type = TIPC_ADDR_NAME 
-
-<dt>--mc
-<dd> addr_type = TIPC_ADDR_MCAST or TIPC_ADDR_NAMESEQ 
-
-<dt>--id
-<dd> addr_type = TIPC_ADDR_ID 
-
-</dl>
+</dt><dd> sock_type = SOCK_RDM 
+</dd><dt>--pct
+</dt><dd> sock_type = SOCK_PACKET 
+</dd><dt>--stm
+</dt><dd> * sock_type = SOCK_STREAM 
+</dd><dt>--sqp
+</dt><dd> sock_type = SOCK_SEQPACKET 
+</dd><dt>--nam
+</dt><dd> * addr_type = TIPC_ADDR_NAME 
+</dd><dt>--mc
+</dt><dd> addr_type = TIPC_ADDR_MCAST or TIPC_ADDR_NAMESEQ 
+</dd><dt>--id
+</dt><dd> addr_type = TIPC_ADDR_ID 
+</dd></dl>
 
 <h2>EXAMPLES</h2>
 

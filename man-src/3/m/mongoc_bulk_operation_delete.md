@@ -19,15 +19,15 @@ mongoc_bulk_operation_delete (mongoc_bulk_operation_t *bulk,
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> This function is deprecated and should not be used in new code.</dl>
+</dt><dd> This function is deprecated and should not be used in new code.</dd></dl>
 <p> Please use <code><a href="/docs/linux/man/3-mongoc_bulk_operation_remove/">mongoc_bulk_operation_remove</a>(3)</code> instead. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>selector</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>selector</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>Colophon</h2>

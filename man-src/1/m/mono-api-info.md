@@ -16,8 +16,8 @@ description: "mono-api-info – Expose IL structure of CLR assemblies as XML."
 <p> By default this tool gives information about just the public API of the assemblies to scan. So it&#8217;s good for comparing API compatibility between versions of libraries.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;abi</i></p>
-<dd> Show the ABI instead of the API, that is, non-static fields (even the non-public ones) that are not marked as [NonSerialized()].</dl>
+<dt><i>&#8211;abi</i></dt>
+<dd> Show the ABI instead of the API, that is, non-static fields (even the non-public ones) that are not marked as [NonSerialized()].</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Andrés G. Aragoneses</p>
 <h2>COPYRIGHT</h2>

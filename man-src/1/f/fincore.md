@@ -18,16 +18,17 @@ description: "fincore – count pages of file contents in core"
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
 <dt>
-<dd> Do not print a header line in status output.</dl>
+</dt><dd> Do not print a header line in status output.</dd></dl>
 <p> <code>-b</code>, <code>&#8211;bytes</code></p>
 <dl>
 <dt>
-<dd> Print the SIZE column in bytes rather than in a human-readable format.</dl>
+</dt><dd> Print the SIZE column in bytes rather than in a human-readable format.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
 <dt>
-<dd> Define output columns. See the <code>&#8211;help</code> output to get a list of the currently supported columns. The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i>.</dl>
+</dt><dd> Define output columns. See the <code>&#8211;help</code> output to get a list of the currently supported columns. The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i>.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
 <dt>
-<dd> Produce output in raw format. All potentially unsafe characters are hex-escaped (
+</dt><dd> Produce output in raw format. All potentially unsafe characters are hex-escaped (
+</dd></dl>

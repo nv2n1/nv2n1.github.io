@@ -193,110 +193,110 @@ time = n*i + t + o
 <h2>OPTIONS</h2>
 <p> Where an option takes a value, that value is specified as a letter in angle brackets. The letter indicates the type of data that is expected:</p>
 <dl>
-<dt><code>&lt;s&gt;</code></p>
-<dd> A character string, e.g. &#8211;file=hostlist.txt.</p>
-<dt><code>&lt;i&gt;</code></p>
-<dd> An integer, which can be specified as a decimal number or as a hexadecimal number if preceeded with 0x, e.g. &#8211;arppro=2048 or &#8211;arpro=0x0800.</p>
-<dt><code>&lt;f&gt;</code></p>
-<dd> A floating point decimal number, e.g. &#8211;backoff=1.5.</p>
-<dt><code>&lt;m&gt;</code></p>
-<dd> An Ethernet MAC address, which can be specified either in the format 01:23:45:67:89:ab, or as 01-23-45-67-89-ab. The alphabetic hex characters may be either upper or lower case. E.g. &#8211;arpsha=01:23:45:67:89:ab.</p>
-<dt><code>&lt;a&gt;</code></p>
-<dd> An IPv4 address, e.g. &#8211;arpspa=10.0.0.1</p>
-<dt><code>&lt;h&gt;</code></p>
-<dd> Binary data specified as a hexadecimal string, which should not include a leading 0x. The alphabetic hex characters may be either upper or lower case. E.g. &#8211;padding=aaaaaaaaaaaa</p>
-<dt><code>&lt;x&gt;</code></p>
-<dd> Something else. See the description of the option for details.</p>
-<dt><code>&#8211;help or -h</code></p>
-<dd> Display this usage message and exit.</p>
-<dt><code>&#8211;file=&lt;s&gt; or -f &lt;s&gt;</code></p>
-<dd> Read hostnames or addresses from the specified file instead of from the command line. One name or IP address per line. Use &quot;-&quot; for standard input.</p>
-<dt><code>&#8211;localnet or -l</code></p>
-<dd> Generate addresses from network interface configuration. Use the network interface IP address and network mask to generate the list of target host addresses. The list will include the network and broadcast addresses, so an interface address of 10.0.0.1 with netmask 255.255.255.0 would generate 256 target hosts from 10.0.0.0 to 10.0.0.255 inclusive. If you use this option, you cannot specify the &#8211;file option or specify any target hosts on the command line. The interface specifications are taken from the interface that arp-scan will use, which can be changed with the &#8211;interface option.</p>
-<dt><code>&#8211;retry=&lt;i&gt; or -r &lt;i&gt;</code></p>
-<dd> Set total number of attempts per host to &lt;i&gt;, default=2.</p>
-<dt><code>&#8211;timeout=&lt;i&gt; or -t &lt;i&gt;</code></p>
-<dd> Set initial per host timeout to &lt;i&gt; ms, default=500. This timeout is for the first packet sent to each host. subsequent timeouts are multiplied by the backoff factor which is set with &#8211;backoff.</p>
-<dt><code>&#8211;interval=&lt;x&gt; or -i &lt;x&gt;</code></p>
-<dd> Set minimum packet interval to &lt;x&gt;. This controls the outgoing bandwidth usage by limiting the rate at which packets can be sent. The packet interval will be no smaller than this number. If you want to use up to a given bandwidth, then it is easier to use the &#8211;bandwidth option instead. The interval specified is in milliseconds by default, or in microseconds if &quot;u&quot; is appended to the value.</p>
-<dt><code>&#8211;bandwidth=&lt;x&gt; or -B &lt;x&gt;</code></p>
-<dd> Set desired outbound bandwidth to &lt;x&gt;, default=256000. The value is in bits per second by default. If you append &quot;K&quot; to the value, then the units are kilobits per sec; and if you append &quot;M&quot; to the value, the units are megabits per second. The &quot;K&quot; and &quot;M&quot; suffixes represent the decimal, not binary, multiples. So 64K is 64000, not 65536. You cannot specify both &#8211;interval and &#8211;bandwidth because they are just different ways to change the same underlying parameter.</p>
-<dt><code>&#8211;backoff=&lt;f&gt; or -b &lt;f&gt;</code></p>
-<dd> Set timeout backoff factor to &lt;f&gt;, default=1.50. The per-host timeout is multiplied by this factor after each timeout. So, if the number of retries is 3, the initial per-host timeout is 500ms and the backoff factor is 1.5, then the first timeout will be 500ms, the second 750ms and the third 1125ms.</p>
-<dt><code>&#8211;verbose or -v</code></p>
-<dd> Display verbose progress messages. Use more than once for greater effect:</p>
+<dt><code>&lt;s&gt;</code></dt>
+<dd> A character string, e.g. &#8211;file=hostlist.txt.</dd>
+<dt><code>&lt;i&gt;</code></dt>
+<dd> An integer, which can be specified as a decimal number or as a hexadecimal number if preceeded with 0x, e.g. &#8211;arppro=2048 or &#8211;arpro=0x0800.</dd>
+<dt><code>&lt;f&gt;</code></dt>
+<dd> A floating point decimal number, e.g. &#8211;backoff=1.5.</dd>
+<dt><code>&lt;m&gt;</code></dt>
+<dd> An Ethernet MAC address, which can be specified either in the format 01:23:45:67:89:ab, or as 01-23-45-67-89-ab. The alphabetic hex characters may be either upper or lower case. E.g. &#8211;arpsha=01:23:45:67:89:ab.</dd>
+<dt><code>&lt;a&gt;</code></dt>
+<dd> An IPv4 address, e.g. &#8211;arpspa=10.0.0.1</dd>
+<dt><code>&lt;h&gt;</code></dt>
+<dd> Binary data specified as a hexadecimal string, which should not include a leading 0x. The alphabetic hex characters may be either upper or lower case. E.g. &#8211;padding=aaaaaaaaaaaa</dd>
+<dt><code>&lt;x&gt;</code></dt>
+<dd> Something else. See the description of the option for details.</dd>
+<dt><code>&#8211;help or -h</code></dt>
+<dd> Display this usage message and exit.</dd>
+<dt><code>&#8211;file=&lt;s&gt; or -f &lt;s&gt;</code></dt>
+<dd> Read hostnames or addresses from the specified file instead of from the command line. One name or IP address per line. Use &quot;-&quot; for standard input.</dd>
+<dt><code>&#8211;localnet or -l</code></dt>
+<dd> Generate addresses from network interface configuration. Use the network interface IP address and network mask to generate the list of target host addresses. The list will include the network and broadcast addresses, so an interface address of 10.0.0.1 with netmask 255.255.255.0 would generate 256 target hosts from 10.0.0.0 to 10.0.0.255 inclusive. If you use this option, you cannot specify the &#8211;file option or specify any target hosts on the command line. The interface specifications are taken from the interface that arp-scan will use, which can be changed with the &#8211;interface option.</dd>
+<dt><code>&#8211;retry=&lt;i&gt; or -r &lt;i&gt;</code></dt>
+<dd> Set total number of attempts per host to &lt;i&gt;, default=2.</dd>
+<dt><code>&#8211;timeout=&lt;i&gt; or -t &lt;i&gt;</code></dt>
+<dd> Set initial per host timeout to &lt;i&gt; ms, default=500. This timeout is for the first packet sent to each host. subsequent timeouts are multiplied by the backoff factor which is set with &#8211;backoff.</dd>
+<dt><code>&#8211;interval=&lt;x&gt; or -i &lt;x&gt;</code></dt>
+<dd> Set minimum packet interval to &lt;x&gt;. This controls the outgoing bandwidth usage by limiting the rate at which packets can be sent. The packet interval will be no smaller than this number. If you want to use up to a given bandwidth, then it is easier to use the &#8211;bandwidth option instead. The interval specified is in milliseconds by default, or in microseconds if &quot;u&quot; is appended to the value.</dd>
+<dt><code>&#8211;bandwidth=&lt;x&gt; or -B &lt;x&gt;</code></dt>
+<dd> Set desired outbound bandwidth to &lt;x&gt;, default=256000. The value is in bits per second by default. If you append &quot;K&quot; to the value, then the units are kilobits per sec; and if you append &quot;M&quot; to the value, the units are megabits per second. The &quot;K&quot; and &quot;M&quot; suffixes represent the decimal, not binary, multiples. So 64K is 64000, not 65536. You cannot specify both &#8211;interval and &#8211;bandwidth because they are just different ways to change the same underlying parameter.</dd>
+<dt><code>&#8211;backoff=&lt;f&gt; or -b &lt;f&gt;</code></dt>
+<dd> Set timeout backoff factor to &lt;f&gt;, default=1.50. The per-host timeout is multiplied by this factor after each timeout. So, if the number of retries is 3, the initial per-host timeout is 500ms and the backoff factor is 1.5, then the first timeout will be 500ms, the second 750ms and the third 1125ms.</dd>
+<dt><code>&#8211;verbose or -v</code></dt>
+<dd> Display verbose progress messages. Use more than once for greater effect:</dd>
 <dt>
-<dd> 1 &#8211; Display the network address and mask used when the &#8211;localnet option is specified, display any nonzero packet padding, display packets received from unknown hosts, and show when each pass through the list completes.</p>
+</dt><dd> 1 &#8211; Display the network address and mask used when the &#8211;localnet option is specified, display any nonzero packet padding, display packets received from unknown hosts, and show when each pass through the list completes.</dd>
 <dt>
-<dd> 2 &#8211; Show each packet sent and received, when entries are removed from the list, the pcap filter string, and counts of MAC/Vendor mapping entries.</p>
+</dt><dd> 2 &#8211; Show each packet sent and received, when entries are removed from the list, the pcap filter string, and counts of MAC/Vendor mapping entries.</dd>
 <dt>
-<dd> 3 &#8211; Display the host list before scanning starts.</p>
-<dt><code>&#8211;version or -V</code></p>
-<dd> Display program version and exit.</p>
-<dt><code>&#8211;random or -R</code></p>
-<dd> Randomise the host list. This option randomises the order of the hosts in the host list, so the ARP packets are sent to the hosts in a random order. It uses the Knuth shuffle algorithm.</p>
-<dt><code>&#8211;randomseed=&lt;i&gt;</code></p>
-<dd> Use &lt;i&gt; to seed the pseudo random number generator. This option seeds the PRNG with the specified number, which can be useful if you want to ensure that the random host list is reproducable. By default, the PRNG is seeded with an unpredictable value. This option is only effective in conjunction with the &#8211;random (-R) option.</p>
-<dt><code>&#8211;numeric or -N</code></p>
-<dd> IP addresses only, no hostnames. With this option, all hosts must be specified as IP addresses. Hostnames are not permitted. No DNS lookups will be performed.</p>
-<dt><code>&#8211;snap=&lt;i&gt; or -n &lt;i&gt;</code></p>
-<dd> Set the pcap snap length to &lt;i&gt;. Default=64. This specifies the frame capture length. This length includes the data-link header. The default is normally sufficient.</p>
-<dt><code>&#8211;interface=&lt;s&gt; or -I &lt;s&gt;</code></p>
-<dd> Use network interface &lt;s&gt;. If this option is not specified, arp-scan will search the system interface list for the lowest numbered, configured up interface (excluding loopback). The interface specified must support ARP.</p>
-<dt><code>&#8211;quiet or -q</code></p>
-<dd> Only display minimal output. No protocol decoding. If this option is specified, then only the IP address and MAC address are displayed for each responding host. No protocol decoding is performed and the OUI mapping files are not used.</p>
-<dt><code>&#8211;plain or -x</code></p>
-<dd> Display plain output showing only responding hosts. This option supresses the printing of the header and footer text, and only displays one line for each responding host. Useful if the output will be parsed by a script.</p>
-<dt><code>&#8211;ignoredups or -g</code></p>
-<dd> Don&#8217;t display duplicate packets. By default, duplicate packets are displayed and are flagged with &quot;(DUP: n)&quot;.</p>
-<dt><code>&#8211;ouifile=&lt;s&gt; or -O &lt;s&gt;</code></p>
-<dd> Use IEEE Ethernet OUI to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is ieee-oui.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/ieee-oui.txt is used.</p>
-<dt><code>&#8211;iabfile=&lt;s&gt; or -O &lt;s&gt;</code></p>
-<dd> Use IEEE Ethernet IAB to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is ieee-iab.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/ieee-iab.txt is used.</p>
-<dt><code>&#8211;macfile=&lt;s&gt; or -O &lt;s&gt;</code></p>
-<dd> Use custom Ethernet MAC to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is mac-vendor.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/mac-vendor.txt is used.</p>
-<dt><code>&#8211;srcaddr=&lt;m&gt; or -S &lt;m&gt;</code></p>
-<dd> Set the source Ethernet MAC address to &lt;m&gt;. This sets the 48-bit hardware address in the Ethernet frame header for outgoing ARP packets. It does not change the hardware address in the ARP packet, see &#8211;arpsha for details on how to change that address. The default is the Ethernet address of the outgoing interface.</p>
-<dt><code>&#8211;destaddr=&lt;m&gt; or -T &lt;m&gt;</code></p>
-<dd> Send the packets to Ethernet MAC address &lt;m&gt; This sets the 48-bit destination address in the Ethernet frame header. The default is the broadcast address ff:ff:ff:ff:ff:ff. Most operating systems will also respond if the ARP request is sent to their MAC address, or to a multicast address that they are listening on.</p>
-<dt><code>&#8211;arpsha=&lt;m&gt; or -u &lt;m&gt;</code></p>
-<dd> Use &lt;m&gt; as the ARP source Ethernet address This sets the 48-bit ar$sha field in the ARP packet It does not change the hardware address in the frame header, see &#8211;srcaddr for details on how to change that address. The default is the Ethernet address of the outgoing interface.</p>
-<dt><code>&#8211;arptha=&lt;m&gt; or -w &lt;m&gt;</code></p>
-<dd> Use &lt;m&gt; as the ARP target Ethernet address This sets the 48-bit ar$tha field in the ARP packet The default is zero, because this field is not used for ARP request packets.</p>
-<dt><code>&#8211;prototype=&lt;i&gt; or -y &lt;i&gt;</code></p>
-<dd> Set the Ethernet protocol type to &lt;i&gt;, default=0x0806. This sets the 16-bit protocol type field in the Ethernet frame header. Setting this to a non-default value will result in the packet being ignored by the target, or sent to the wrong protocol stack.</p>
-<dt><code>&#8211;arphrd=&lt;i&gt; or -H &lt;i&gt;</code></p>
-<dd> Use &lt;i&gt; for the ARP hardware type, default=1. This sets the 16-bit ar$hrd field in the ARP packet. The normal value is 1 (ARPHRD_ETHER). Most, but not all, operating systems will also respond to 6 (ARPHRD_IEEE802). A few systems respond to any value.</p>
-<dt><code>&#8211;arppro=&lt;i&gt; or -p &lt;i&gt;</code></p>
-<dd> Use &lt;i&gt; for the ARP protocol type, default=0x0800. This sets the 16-bit ar$pro field in the ARP packet. Most operating systems only respond to 0x0800 (IPv4) but some will respond to other values as well.</p>
-<dt><code>&#8211;arphln=&lt;i&gt; or -a &lt;i&gt;</code></p>
-<dd> Set the hardware address length to &lt;i&gt;, default=6. This sets the 8-bit ar$hln field in the ARP packet. It sets the claimed length of the hardware address in the ARP packet. Setting it to any value other than the default will make the packet non RFC compliant. Some operating systems may still respond to it though. Note that the actual lengths of the ar$sha and ar$tha fields in the ARP packet are not changed by this option; it only changes the ar$hln field.</p>
-<dt><code>&#8211;arppln=&lt;i&gt; or -P &lt;i&gt;</code></p>
-<dd> Set the protocol address length to &lt;i&gt;, default=4. This sets the 8-bit ar$pln field in the ARP packet. It sets the claimed length of the protocol address in the ARP packet. Setting it to any value other than the default will make the packet non RFC compliant. Some operating systems may still respond to it though. Note that the actual lengths of the ar$spa and ar$tpa fields in the ARP packet are not changed by this option; it only changes the ar$pln field.</p>
-<dt><code>&#8211;arpop=&lt;i&gt; or -o &lt;i&gt;</code></p>
-<dd> Use &lt;i&gt; for the ARP operation, default=1. This sets the 16-bit ar$op field in the ARP packet. Most operating systems will only respond to the value 1 (ARPOP_REQUEST). However, some systems will respond to other values as well.</p>
-<dt><code>&#8211;arpspa=&lt;a&gt; or -s &lt;a&gt;</code></p>
-<dd> Use &lt;a&gt; as the source IP address. The address should be specified in dotted quad format; or the literal string &quot;dest&quot;, which sets the source address to be the same as the target host address. This sets the 32-bit ar$spa field in the ARP packet. Some operating systems check this, and will only respond if the source address is within the network of the receiving interface. Others don&#8217;t care, and will respond to any source address. By default, the outgoing interface address is used.</p>
+</dt><dd> 3 &#8211; Display the host list before scanning starts.</dd>
+<dt><code>&#8211;version or -V</code></dt>
+<dd> Display program version and exit.</dd>
+<dt><code>&#8211;random or -R</code></dt>
+<dd> Randomise the host list. This option randomises the order of the hosts in the host list, so the ARP packets are sent to the hosts in a random order. It uses the Knuth shuffle algorithm.</dd>
+<dt><code>&#8211;randomseed=&lt;i&gt;</code></dt>
+<dd> Use &lt;i&gt; to seed the pseudo random number generator. This option seeds the PRNG with the specified number, which can be useful if you want to ensure that the random host list is reproducable. By default, the PRNG is seeded with an unpredictable value. This option is only effective in conjunction with the &#8211;random (-R) option.</dd>
+<dt><code>&#8211;numeric or -N</code></dt>
+<dd> IP addresses only, no hostnames. With this option, all hosts must be specified as IP addresses. Hostnames are not permitted. No DNS lookups will be performed.</dd>
+<dt><code>&#8211;snap=&lt;i&gt; or -n &lt;i&gt;</code></dt>
+<dd> Set the pcap snap length to &lt;i&gt;. Default=64. This specifies the frame capture length. This length includes the data-link header. The default is normally sufficient.</dd>
+<dt><code>&#8211;interface=&lt;s&gt; or -I &lt;s&gt;</code></dt>
+<dd> Use network interface &lt;s&gt;. If this option is not specified, arp-scan will search the system interface list for the lowest numbered, configured up interface (excluding loopback). The interface specified must support ARP.</dd>
+<dt><code>&#8211;quiet or -q</code></dt>
+<dd> Only display minimal output. No protocol decoding. If this option is specified, then only the IP address and MAC address are displayed for each responding host. No protocol decoding is performed and the OUI mapping files are not used.</dd>
+<dt><code>&#8211;plain or -x</code></dt>
+<dd> Display plain output showing only responding hosts. This option supresses the printing of the header and footer text, and only displays one line for each responding host. Useful if the output will be parsed by a script.</dd>
+<dt><code>&#8211;ignoredups or -g</code></dt>
+<dd> Don&#8217;t display duplicate packets. By default, duplicate packets are displayed and are flagged with &quot;(DUP: n)&quot;.</dd>
+<dt><code>&#8211;ouifile=&lt;s&gt; or -O &lt;s&gt;</code></dt>
+<dd> Use IEEE Ethernet OUI to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is ieee-oui.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/ieee-oui.txt is used.</dd>
+<dt><code>&#8211;iabfile=&lt;s&gt; or -O &lt;s&gt;</code></dt>
+<dd> Use IEEE Ethernet IAB to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is ieee-iab.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/ieee-iab.txt is used.</dd>
+<dt><code>&#8211;macfile=&lt;s&gt; or -O &lt;s&gt;</code></dt>
+<dd> Use custom Ethernet MAC to vendor mapping file &lt;s&gt;. If this option is not specified, the default filename is mac-vendor.txt in the current directory. If that is not found, then the file /usr/local/share/arp-scan/mac-vendor.txt is used.</dd>
+<dt><code>&#8211;srcaddr=&lt;m&gt; or -S &lt;m&gt;</code></dt>
+<dd> Set the source Ethernet MAC address to &lt;m&gt;. This sets the 48-bit hardware address in the Ethernet frame header for outgoing ARP packets. It does not change the hardware address in the ARP packet, see &#8211;arpsha for details on how to change that address. The default is the Ethernet address of the outgoing interface.</dd>
+<dt><code>&#8211;destaddr=&lt;m&gt; or -T &lt;m&gt;</code></dt>
+<dd> Send the packets to Ethernet MAC address &lt;m&gt; This sets the 48-bit destination address in the Ethernet frame header. The default is the broadcast address ff:ff:ff:ff:ff:ff. Most operating systems will also respond if the ARP request is sent to their MAC address, or to a multicast address that they are listening on.</dd>
+<dt><code>&#8211;arpsha=&lt;m&gt; or -u &lt;m&gt;</code></dt>
+<dd> Use &lt;m&gt; as the ARP source Ethernet address This sets the 48-bit ar$sha field in the ARP packet It does not change the hardware address in the frame header, see &#8211;srcaddr for details on how to change that address. The default is the Ethernet address of the outgoing interface.</dd>
+<dt><code>&#8211;arptha=&lt;m&gt; or -w &lt;m&gt;</code></dt>
+<dd> Use &lt;m&gt; as the ARP target Ethernet address This sets the 48-bit ar$tha field in the ARP packet The default is zero, because this field is not used for ARP request packets.</dd>
+<dt><code>&#8211;prototype=&lt;i&gt; or -y &lt;i&gt;</code></dt>
+<dd> Set the Ethernet protocol type to &lt;i&gt;, default=0x0806. This sets the 16-bit protocol type field in the Ethernet frame header. Setting this to a non-default value will result in the packet being ignored by the target, or sent to the wrong protocol stack.</dd>
+<dt><code>&#8211;arphrd=&lt;i&gt; or -H &lt;i&gt;</code></dt>
+<dd> Use &lt;i&gt; for the ARP hardware type, default=1. This sets the 16-bit ar$hrd field in the ARP packet. The normal value is 1 (ARPHRD_ETHER). Most, but not all, operating systems will also respond to 6 (ARPHRD_IEEE802). A few systems respond to any value.</dd>
+<dt><code>&#8211;arppro=&lt;i&gt; or -p &lt;i&gt;</code></dt>
+<dd> Use &lt;i&gt; for the ARP protocol type, default=0x0800. This sets the 16-bit ar$pro field in the ARP packet. Most operating systems only respond to 0x0800 (IPv4) but some will respond to other values as well.</dd>
+<dt><code>&#8211;arphln=&lt;i&gt; or -a &lt;i&gt;</code></dt>
+<dd> Set the hardware address length to &lt;i&gt;, default=6. This sets the 8-bit ar$hln field in the ARP packet. It sets the claimed length of the hardware address in the ARP packet. Setting it to any value other than the default will make the packet non RFC compliant. Some operating systems may still respond to it though. Note that the actual lengths of the ar$sha and ar$tha fields in the ARP packet are not changed by this option; it only changes the ar$hln field.</dd>
+<dt><code>&#8211;arppln=&lt;i&gt; or -P &lt;i&gt;</code></dt>
+<dd> Set the protocol address length to &lt;i&gt;, default=4. This sets the 8-bit ar$pln field in the ARP packet. It sets the claimed length of the protocol address in the ARP packet. Setting it to any value other than the default will make the packet non RFC compliant. Some operating systems may still respond to it though. Note that the actual lengths of the ar$spa and ar$tpa fields in the ARP packet are not changed by this option; it only changes the ar$pln field.</dd>
+<dt><code>&#8211;arpop=&lt;i&gt; or -o &lt;i&gt;</code></dt>
+<dd> Use &lt;i&gt; for the ARP operation, default=1. This sets the 16-bit ar$op field in the ARP packet. Most operating systems will only respond to the value 1 (ARPOP_REQUEST). However, some systems will respond to other values as well.</dd>
+<dt><code>&#8211;arpspa=&lt;a&gt; or -s &lt;a&gt;</code></dt>
+<dd> Use &lt;a&gt; as the source IP address. The address should be specified in dotted quad format; or the literal string &quot;dest&quot;, which sets the source address to be the same as the target host address. This sets the 32-bit ar$spa field in the ARP packet. Some operating systems check this, and will only respond if the source address is within the network of the receiving interface. Others don&#8217;t care, and will respond to any source address. By default, the outgoing interface address is used.</dd>
 <dt>
-<dd> WARNING: Setting ar$spa to the destination IP address can disrupt some operating systems, as they assume there is an IP address clash if they receive an ARP request for their own address.</p>
-<dt><code>&#8211;padding=&lt;h&gt; or -A &lt;h&gt;</code></p>
-<dd> Specify padding after packet data. Set the padding data to hex value &lt;h&gt;. This data is appended to the end of the ARP packet, after the data. Most, if not all, operating systems will ignore any padding. The default is no padding, although the Ethernet driver on the sending system may pad the packet to the minimum Ethernet frame length.</p>
-<dt><code>&#8211;llc or -L</code></p>
-<dd> Use RFC 1042 LLC framing with SNAP. This option causes the outgoing ARP packets to use IEEE 802.2 framing with a SNAP header as described in RFC 1042. The default is to use Ethernet-II framing. arp-scan will decode and display received ARP packets in either Ethernet-II or IEEE 802.2 formats irrespective of this option.</p>
-<dt><code>&#8211;vlan=&lt;i&gt; or -Q &lt;i&gt;</code></p>
-<dd> Use 802.1Q tagging with VLAN id &lt;i&gt;. This option causes the outgoing ARP packets to use 802.1Q VLAN tagging with a VLAN ID of &lt;i&gt;, which should be in the range 0 to 4095 inclusive. arp-scan will always decode and display received ARP packets in 802.1Q format irrespective of this option.</p>
-<dt><code>&#8211;pcapsavefile=&lt;s&gt; or -W &lt;s&gt;</code></p>
-<dd> Write received packets to pcap savefile &lt;s&gt;. This option causes received ARP responses to be written to the specified pcap savefile as well as being decoded and displayed. This savefile can be analysed with programs that understand the pcap file format, such as &quot;tcpdump&quot; and &quot;wireshark&quot;.</p>
-<dt><code>&#8211;rtt or -D</code></p>
-<dd> Display the packet round-trip time.</dl>
+</dt><dd> WARNING: Setting ar$spa to the destination IP address can disrupt some operating systems, as they assume there is an IP address clash if they receive an ARP request for their own address.</dd>
+<dt><code>&#8211;padding=&lt;h&gt; or -A &lt;h&gt;</code></dt>
+<dd> Specify padding after packet data. Set the padding data to hex value &lt;h&gt;. This data is appended to the end of the ARP packet, after the data. Most, if not all, operating systems will ignore any padding. The default is no padding, although the Ethernet driver on the sending system may pad the packet to the minimum Ethernet frame length.</dd>
+<dt><code>&#8211;llc or -L</code></dt>
+<dd> Use RFC 1042 LLC framing with SNAP. This option causes the outgoing ARP packets to use IEEE 802.2 framing with a SNAP header as described in RFC 1042. The default is to use Ethernet-II framing. arp-scan will decode and display received ARP packets in either Ethernet-II or IEEE 802.2 formats irrespective of this option.</dd>
+<dt><code>&#8211;vlan=&lt;i&gt; or -Q &lt;i&gt;</code></dt>
+<dd> Use 802.1Q tagging with VLAN id &lt;i&gt;. This option causes the outgoing ARP packets to use 802.1Q VLAN tagging with a VLAN ID of &lt;i&gt;, which should be in the range 0 to 4095 inclusive. arp-scan will always decode and display received ARP packets in 802.1Q format irrespective of this option.</dd>
+<dt><code>&#8211;pcapsavefile=&lt;s&gt; or -W &lt;s&gt;</code></dt>
+<dd> Write received packets to pcap savefile &lt;s&gt;. This option causes received ARP responses to be written to the specified pcap savefile as well as being decoded and displayed. This savefile can be analysed with programs that understand the pcap file format, such as &quot;tcpdump&quot; and &quot;wireshark&quot;.</dd>
+<dt><code>&#8211;rtt or -D</code></dt>
+<dd> Display the packet round-trip time.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/local/share/arp-scan/ieee-oui.txt</i></p>
-<dd> List of IEEE OUI (Organisationally Unique Identifier) to vendor mappings.</p>
-<dt><i>/usr/local/share/arp-scan/ieee-iab.txt</i></p>
-<dd> List of IEEE IAB (Individual Address Block) to vendor mappings.</p>
-<dt><i>/usr/local/share/arp-scan/mac-vendor.txt</i></p>
-<dd> List of other Ethernet MAC to vendor mappings.</dl>
+<dt><i>/usr/local/share/arp-scan/ieee-oui.txt</i></dt>
+<dd> List of IEEE OUI (Organisationally Unique Identifier) to vendor mappings.</dd>
+<dt><i>/usr/local/share/arp-scan/ieee-iab.txt</i></dt>
+<dd> List of IEEE IAB (Individual Address Block) to vendor mappings.</dd>
+<dt><i>/usr/local/share/arp-scan/mac-vendor.txt</i></dt>
+<dd> List of other Ethernet MAC to vendor mappings.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The example below shows <code>arp-scan</code> being used to scan the network <i>192.168.0.0/24</i> using the network interface <i>eth0</i>. </p>
 <pre>

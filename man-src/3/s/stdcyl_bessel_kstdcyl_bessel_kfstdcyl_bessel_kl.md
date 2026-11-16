@@ -10,11 +10,8 @@ description: "std::cyl_bessel_k,std::cyl_bessel_kf,std::cyl_bessel_kl – std::c
 <p>std::cyl_bessel_k,std::cyl_bessel_kf,std::cyl_bessel_kl &#8211; std::cyl_bessel_k,std::cyl_bessel_kf,std::cyl_bessel_kl</p>
 <h2>Synopsis</h2>
 <pre><code>double cyl_bessel_k( double ν, double x );
-
 float cyl_bessel_kf( float ν, float x );                  (1) (since C++17)
-
 long double cyl_bessel_kl( long double ν, long double x );
-
 Promoted cyl_bessel_k( Arithmetic ν, Arithmetic x );      (2) (since C++17)</code></pre>
 <p>1) Computes the irregular_modified_cylindrical_Bessel_function (also known as modified Bessel function of the second kind) of ν and x.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -43,11 +40,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     double pi = std::acos(-1);
     double x = 1.2345;

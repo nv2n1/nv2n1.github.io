@@ -12,15 +12,15 @@ GSFAIS (Set fill area interior style) - sets the fill style of polygons drawn wi
 
  void gset_fill_int_style(Gfill_int_style fill_int_style);
 <h2>Description</h2><dl COMPACT><dt>INTS
-<dd>(Integer, Input) - Gives the style of fill to be used in subsequent calls to the GFA output primitive. Options are:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Hollow fill (the default)
-<dt>1
-<dd>Solid fill
-<dt>2
-<dd>Pattern fill (not implemented in NCAR GKS).
-<dt>3
-<dd>Hatch fill</dl></dl>
+</dt><dd>(Integer, Input) - Gives the style of fill to be used in subsequent calls to the GFA output primitive. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Hollow fill (the default)
+</dd><dt>1
+</dt><dd>Solid fill
+</dd><dt>2
+</dt><dd>Pattern fill (not implemented in NCAR GKS).
+</dd><dt>3
+</dt><dd>Hatch fill</dd></dl></dl>
 </dl><h2>Usage</h2>For fill style &quot;Hatch&quot;, GSFASI should be used to specify the type of hatch pattern used (horizontal lines, vertical lines, etc.) 
 
  Note: If you call GFA and generate an output graphic only to find that you have a closed curve with no fill, you probably have allowed the fill choice to default to hollow fill (no fill).

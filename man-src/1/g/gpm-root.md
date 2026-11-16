@@ -17,14 +17,14 @@ description: "gpm-root – a default handler for gpm, used to draw menus on the 
 <p> The program uses the files /dev/vcs* to draw to the console screen. These are available only from kernel 1.1.81 onward. If you miss those device nodes, you should create them using create_vcs in the distribution directory. The tool won&#8217;t run with kernels older than 1.1.81, because they lacked a full screen dump/restore capability. </p>
 <p> Available command line options are the following:</p>
 <dl>
-<dt>-m <code>number</code></p>
-<dd> Choose the modifier to use (by default: control). The modifier can be provided either as a number or as a symbolic string. Allowed strings are shift, anyAlt, leftAlt, rightAlt, control.</p>
-<dt>-u</p>
-<dd> Deny using user-specific configuration files. With this option on, only /etc/gpm-root.conf will be used as a source of configuration information. This option is intended for those system administrators who fear security could be broken by this daemon. Things should be sufficiently secure, but if you find a hole please tell me about it.</p>
-<dt>-D</p>
-<dd> Do not automatically enter background operation when started, and log messages to the standard error stream, not the syslog mechanism. This is useful for debugging; in previous releases it was done with a compile-time option.</p>
-<dt>-V <code>verbosity increment</code></p>
-<dd> Raise the maximum level of messages that will be logged. Thus a positive argument has the effect of making the program more verbose. One can also give a negative argument to hush the program; however, note that due to <code><a href="/docs/linux/man/3-getopt/">getopt</a>(3)</code> rules a negative argument must follow the option with no space betwixt (that is, -V-1 but not -V -1). Program Arguments,,,libc. The argument is optional and its default value is 1. </p>
+<dt>-m <code>number</code></dt>
+<dd> Choose the modifier to use (by default: control). The modifier can be provided either as a number or as a symbolic string. Allowed strings are shift, anyAlt, leftAlt, rightAlt, control.</dd>
+<dt>-u</dt>
+<dd> Deny using user-specific configuration files. With this option on, only /etc/gpm-root.conf will be used as a source of configuration information. This option is intended for those system administrators who fear security could be broken by this daemon. Things should be sufficiently secure, but if you find a hole please tell me about it.</dd>
+<dt>-D</dt>
+<dd> Do not automatically enter background operation when started, and log messages to the standard error stream, not the syslog mechanism. This is useful for debugging; in previous releases it was done with a compile-time option.</dd>
+<dt>-V <code>verbosity increment</code></dt>
+<dd> Raise the maximum level of messages that will be logged. Thus a positive argument has the effect of making the program more verbose. One can also give a negative argument to hush the program; however, note that due to <code><a href="/docs/linux/man/3-getopt/">getopt</a>(3)</code> rules a negative argument must follow the option with no space betwixt (that is, -V-1 but not -V -1). Program Arguments,,,libc. The argument is optional and its default value is 1. </dd>
 </dl>
 <p> Each time a menu is drawn, the configuration file is reparsed if it has changed. This allows modification of personal setup without reinvoking the daemon. </p>
 <p> The actual configuration file is better introduced by looking at your /etc/gpm-root.conf. </p>
@@ -32,46 +32,46 @@ description: "gpm-root – a default handler for gpm, used to draw menus on the 
 <p> Note that recursive menus are allowed, to any level of recursion. </p>
 <p> Keywords belong to three groups: the button keyword, the cfg keywords and the action keywords. They are all described in the table below:</p>
 <dl>
-<dt>button <code>number</code> <code>menu</code></p>
-<dd> The button keyword is used to introduce a menu. It is followed by the number of the relevant button (1=left, 2=middle, 3=right), an open brace, a menu and a closed brace. A menu is made up of cfg statements, followed by action statements. Cfg statements can come in any order, while the order of action statements tells the actual order in which actions will appear on the screen, top to bottom. </p>
+<dt>button <code>number</code> <code>menu</code></dt>
+<dd> The button keyword is used to introduce a menu. It is followed by the number of the relevant button (1=left, 2=middle, 3=right), an open brace, a menu and a closed brace. A menu is made up of cfg statements, followed by action statements. Cfg statements can come in any order, while the order of action statements tells the actual order in which actions will appear on the screen, top to bottom. </dd>
 </dl>
 <p> The following statements belong to the cfg set.</p>
 <dl>
-<dt>name <code>string</code></p>
-<dd> If the name keyword is present, the specified <code>string</code> will be used as the name for the current menu.</p>
-<dt>background <code>color</code></p>
-<dd> This statements is used to specify the background color to be used in the current menu. The <code>color</code> can be specified with one of the eight canonical strings black, red, cyan etc. The background defaults to black.</p>
-<dt>foreground <code>color</code></p>
-<dd> This statements is used to specify the foreground color for menu items. Its value defaults to white. An optional bright keyword can appear before the actual color.</p>
-<dt>border <code>color</code></p>
-<dd> border is used to specify the border color for the menu. Its value defaults to white. An optional bright keyword can appear before the actual color.</p>
-<dt>head <code>color</code></p>
-<dd> head is used to specify the foreground color for the title of the menu. Its value defaults to white. An optional bright keyword can appear before the actual color. </p>
+<dt>name <code>string</code></dt>
+<dd> If the name keyword is present, the specified <code>string</code> will be used as the name for the current menu.</dd>
+<dt>background <code>color</code></dt>
+<dd> This statements is used to specify the background color to be used in the current menu. The <code>color</code> can be specified with one of the eight canonical strings black, red, cyan etc. The background defaults to black.</dd>
+<dt>foreground <code>color</code></dt>
+<dd> This statements is used to specify the foreground color for menu items. Its value defaults to white. An optional bright keyword can appear before the actual color.</dd>
+<dt>border <code>color</code></dt>
+<dd> border is used to specify the border color for the menu. Its value defaults to white. An optional bright keyword can appear before the actual color.</dd>
+<dt>head <code>color</code></dt>
+<dd> head is used to specify the foreground color for the title of the menu. Its value defaults to white. An optional bright keyword can appear before the actual color. </dd>
 </dl>
 <p> The following statements belong to the action set.</p>
 <dl>
-<dt><code>string</code> f.fgcmd <code>cmdstring</code></p>
-<dd> When the mouse button is released above the corresponding menu item, the <code>cmdstring</code> is pasted in the keyboard queue of the current console. This is not yet implemented.</p>
-<dt><code>string</code> f.bgcmd <code>cmdstring</code></p>
-<dd> When the mouse button is released above the corresponding menu item, a shell (/bin/sh) is forked to execute the specified command, with stdin connected to /dev/null, and stdout, stderr connected to the active console.</p>
-<dt><code>string</code> f.jptty <code>ttynumber</code></p>
-<dd> When the mouse button is released above the corresponding menu item, the console is switched to the one specified. The <code>ttynumber</code> must be specified as a string. Any tty can be reached this way, even those which are not accessible via the keyboard.</p>
-<dt><code>string</code> f.mktty <code>ttynumber</code></p>
-<dd> When the mouse button is released above the corresponding menu item, an unused console is selected, and /sbin/mingetty is executed in it. The current console is switched to the newly opened console. I use this command to save kernel memory by opening a single console through /etc/inittab and requesting the others only when i need to login.</p>
-<dt><code>string</code> <code>Whole-menu</code></p>
-<dd> A menu can directly follow the label string. When the mouse pointer leaves the menu frame at the level of <code>string</code>, a second menu is posted on screen.</p>
-<dt><code>string</code> f.lock</p>
-<dd> When the mouse button is released above the corresponding menu item, the keyboard and the screen are locked, and only the locking user or the superuser can unlock them. This is not yet implemented.</p>
-<dt><code>string</code> f.load</p>
-<dd> The current loadavg when the menu is posted is concatenated to <code>string</code> to build the actual message displayed on screen. Nothing happens at button release.</p>
-<dt><code>string</code> f.free</p>
-<dd> The free memory and swap when the menu is posted is concatenated to <code>string</code> to build the actual message displayed on screen. Nothing happens at button release.</p>
-<dt><code>string</code> f.time</p>
-<dd> The current time is formatted with <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code>, according to <code>string</code>. The resulting string is the actual message displayed on screen. Nothing happens at button release.</p>
-<dt><code>string</code> f.pipe <code>cmdline</code></p>
-<dd> When the mouse pointer leaves the menu frame at the level of <code>string</code>, a message box is posted on screen showing the last ten lines of the output of <code>cmdline</code>. <code>cmdline</code> is executed by /bin/sh. This is not yet implemented. </p>
-<dt><code>string</code> f.nop</p>
-<dd> This does nothing, it only displays <code>string</code> on the menu. </p>
+<dt><code>string</code> f.fgcmd <code>cmdstring</code></dt>
+<dd> When the mouse button is released above the corresponding menu item, the <code>cmdstring</code> is pasted in the keyboard queue of the current console. This is not yet implemented.</dd>
+<dt><code>string</code> f.bgcmd <code>cmdstring</code></dt>
+<dd> When the mouse button is released above the corresponding menu item, a shell (/bin/sh) is forked to execute the specified command, with stdin connected to /dev/null, and stdout, stderr connected to the active console.</dd>
+<dt><code>string</code> f.jptty <code>ttynumber</code></dt>
+<dd> When the mouse button is released above the corresponding menu item, the console is switched to the one specified. The <code>ttynumber</code> must be specified as a string. Any tty can be reached this way, even those which are not accessible via the keyboard.</dd>
+<dt><code>string</code> f.mktty <code>ttynumber</code></dt>
+<dd> When the mouse button is released above the corresponding menu item, an unused console is selected, and /sbin/mingetty is executed in it. The current console is switched to the newly opened console. I use this command to save kernel memory by opening a single console through /etc/inittab and requesting the others only when i need to login.</dd>
+<dt><code>string</code> <code>Whole-menu</code></dt>
+<dd> A menu can directly follow the label string. When the mouse pointer leaves the menu frame at the level of <code>string</code>, a second menu is posted on screen.</dd>
+<dt><code>string</code> f.lock</dt>
+<dd> When the mouse button is released above the corresponding menu item, the keyboard and the screen are locked, and only the locking user or the superuser can unlock them. This is not yet implemented.</dd>
+<dt><code>string</code> f.load</dt>
+<dd> The current loadavg when the menu is posted is concatenated to <code>string</code> to build the actual message displayed on screen. Nothing happens at button release.</dd>
+<dt><code>string</code> f.free</dt>
+<dd> The free memory and swap when the menu is posted is concatenated to <code>string</code> to build the actual message displayed on screen. Nothing happens at button release.</dd>
+<dt><code>string</code> f.time</dt>
+<dd> The current time is formatted with <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code>, according to <code>string</code>. The resulting string is the actual message displayed on screen. Nothing happens at button release.</dd>
+<dt><code>string</code> f.pipe <code>cmdline</code></dt>
+<dd> When the mouse pointer leaves the menu frame at the level of <code>string</code>, a message box is posted on screen showing the last ten lines of the output of <code>cmdline</code>. <code>cmdline</code> is executed by /bin/sh. This is not yet implemented. </dd>
+<dt><code>string</code> f.nop</dt>
+<dd> This does nothing, it only displays <code>string</code> on the menu. </dd>
 </dl>
 <p> The HOME, LOGNAME and USER environment variables are setup to the values for the invoking user before spawning an external process (f.bgcmd, f.pipe). The current directory is always /. </p>
 <h2>BUGS</h2>

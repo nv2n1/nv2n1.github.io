@@ -15,7 +15,7 @@ eth_skb_pad - Pad buffer to mininum number of octets for Ethernet frame
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>Buffer to pad</dl>
+<dl><dd></dd><dd>Buffer to pad</dd></dl>
 
 <h2>Description</h2>
 

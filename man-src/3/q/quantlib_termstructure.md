@@ -54,7 +54,7 @@ description: "QuantLib::TermStructure – Basic term-structure functionality."
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

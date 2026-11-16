@@ -30,44 +30,43 @@ git ls - files[-z][-t][-v][-f](--[cached | deleted | others | ignored | stage | 
 <p> -c, &#8211;cached</p>
 <dl>
 <dt>
-<dd> Show cached files in the output (default)</dl>
+</dt><dd> Show cached files in the output (default)</dd></dl>
 <p> -d, &#8211;deleted</p>
 <dl>
 <dt>
-<dd> Show deleted files in the output</dl>
+</dt><dd> Show deleted files in the output</dd></dl>
 <p> -m, &#8211;modified</p>
 <dl>
 <dt>
-<dd> Show modified files in the output</dl>
+</dt><dd> Show modified files in the output</dd></dl>
 <p> -o, &#8211;others</p>
 <dl>
 <dt>
-<dd> Show other (i.e. untracked) files in the output</dl>
+</dt><dd> Show other (i.e. untracked) files in the output</dd></dl>
 <p> -i, &#8211;ignored</p>
 <dl>
 <dt>
-<dd> Show only ignored files in the output. When showing files in the index, print only those matched by an exclude pattern. When showing &quot;other&quot; files, show only those matched by an exclude pattern. Standard ignore rules are not automatically activated, therefore at least one of the <code>&#8211;exclude*</code> options is required.</dl>
+</dt><dd> Show only ignored files in the output. When showing files in the index, print only those matched by an exclude pattern. When showing &quot;other&quot; files, show only those matched by an exclude pattern. Standard ignore rules are not automatically activated, therefore at least one of the <code>&#8211;exclude*</code> options is required.</dd></dl>
 <p> -s, &#8211;stage</p>
 <dl>
 <dt>
-<dd> Show staged contents&#8217; mode bits, object name and stage number in the output.</dl>
+</dt><dd> Show staged contents&#8217; mode bits, object name and stage number in the output.</dd></dl>
 <p> &#8211;directory</p>
 <dl>
 <dt>
-<dd> If a whole directory is classified as &quot;other&quot;, show just its name (with a trailing slash) and not its whole contents.</dl>
+</dt><dd> If a whole directory is classified as &quot;other&quot;, show just its name (with a trailing slash) and not its whole contents.</dd></dl>
 <p> &#8211;no-empty-directory</p>
 <dl>
 <dt>
-<dd> Do not list empty directories. Has no effect without &#8211;directory.</dl>
+</dt><dd> Do not list empty directories. Has no effect without &#8211;directory.</dd></dl>
 <p> -u, &#8211;unmerged</p>
 <dl>
 <dt>
-<dd> Show unmerged files in the output (forces &#8211;stage)</dl>
+</dt><dd> Show unmerged files in the output (forces &#8211;stage)</dd></dl>
 <p> -k, &#8211;killed</p>
 <dl>
 <dt>
-<dd> Show files on the filesystem that need to be removed due to file/directory conflicts for checkout-index to succeed.</dl>
+</dt><dd> Show files on the filesystem that need to be removed due to file/directory conflicts for checkout-index to succeed.</dd></dl>
 <p> -z</p>
 <dl>
-<dt>
-<dd> 
+</dl>

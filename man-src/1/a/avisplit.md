@@ -18,26 +18,26 @@ description: "avisplit – split AVI-files into chunks of a maximum size"
  Each of the created chunks will be an independent file, i.e. it can be played without needing any other of the chunk.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code> <i>file</i></p>
-<dd> Specify the filename of the file to split into chunks.</p>
-<dt><code>-o</code> <i>base</i></p>
-<dd> Specify the base of the output filename(s) <code>avisplit</code> will then split to <code>base-%04d.avi</code></p>
-<dt><code>-s</code> <i>size</i></p>
-<dd> Use this option to specify the maximum size (in units of MB) of the chunks <code>avisplit</code> should create. <i>0</i> means dechunk, create as many files as possible.</p>
-<dt><code>-H</code> <i>num</i></p>
-<dd> Create only the first <i>num</i> chunks then exit.</p>
-<dt><code>-t</code> <i>s1-s2[,s3-s4,..]</i></p>
-<dd> Split the input file based on time/framecode (hh:mm:ss.ms)</p>
-<dt><code>-c</code></p>
-<dd> Together with <code>-t</code>. Merge all segments into one AVI-File again instead generating seperate files.</p>
-<dt><code>-m</code></p>
-<dd> Together with <code>-t</code>. Force split at upper bondary instead of lower border.</p>
-<dt><code>-b</code> <i>num</i></p>
-<dd> Specify if avisplit should write an VBR mp3 header into the AVI file. Default is 1 because it does not hurt. <i>num</i> is either 1 or 0.</p>
-<dt><code>-f</code> <i>commentfile</i></p>
-<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</p>
-<dt><code>-v</code></p>
-<dd> Print only version information and exit.</dl>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Specify the filename of the file to split into chunks.</dd>
+<dt><code>-o</code> <i>base</i></dt>
+<dd> Specify the base of the output filename(s) <code>avisplit</code> will then split to <code>base-%04d.avi</code></dd>
+<dt><code>-s</code> <i>size</i></dt>
+<dd> Use this option to specify the maximum size (in units of MB) of the chunks <code>avisplit</code> should create. <i>0</i> means dechunk, create as many files as possible.</dd>
+<dt><code>-H</code> <i>num</i></dt>
+<dd> Create only the first <i>num</i> chunks then exit.</dd>
+<dt><code>-t</code> <i>s1-s2[,s3-s4,..]</i></dt>
+<dd> Split the input file based on time/framecode (hh:mm:ss.ms)</dd>
+<dt><code>-c</code></dt>
+<dd> Together with <code>-t</code>. Merge all segments into one AVI-File again instead generating seperate files.</dd>
+<dt><code>-m</code></dt>
+<dd> Together with <code>-t</code>. Force split at upper bondary instead of lower border.</dd>
+<dt><code>-b</code> <i>num</i></dt>
+<dd> Specify if avisplit should write an VBR mp3 header into the AVI file. Default is 1 because it does not hurt. <i>num</i> is either 1 or 0.</dd>
+<dt><code>-f</code> <i>commentfile</i></dt>
+<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</dd>
+<dt><code>-v</code></dt>
+<dd> Print only version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <p> <code>avisplit -s 700 -i my_file.avi</code> </p>
@@ -53,7 +53,7 @@ description: "avisplit – split AVI-files into chunks of a maximum size"
 <p> The solution is to remux the AVI file with</p>
 <dl>
 <dt>
-<dd> <code>transcode -i in.avi -P1 -N 0x1 -y raw -o out.avi</code></dl>
+</dt><dd> <code>transcode -i in.avi -P1 -N 0x1 -y raw -o out.avi</code></dd></dl>
 <p> (of course -N 0x1 is not correct for all AVI files). Now look at tcprobe again </p>
 <p>&nbsp;<wbr>| V: 25.000 fps, codec=dvsd, frames=250, width=720, height=576 </p>
 <p>&nbsp;<wbr>| A: 48000 Hz, format=0x01, bits=16, channels=2, bitrate=1536 kbps, </p>

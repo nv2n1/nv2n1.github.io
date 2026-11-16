@@ -12,18 +12,13 @@ std::chrono::year_month_weekday::year,std::chrono::year_month_weekday::month, - 
 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::chrono::year_month_weekday::weekday_indexed <pre><code>constexpr std::chrono::year year() const noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::month month() const noexcept;
 (2)(since C++ 20)
-
     constexpr std::chrono::weekday weekday() const noexcept;
 (3)(since C++ 20)
-
     constexpr unsigned index() const noexcept;
 (4)(since C++ 20)
-
     constexpr std::chrono::weekday_indexed weekday_indexed() const(5)(since C++ 20)
-
         noexcept;</code></pre> 
 Retrieves the field values stored in this year_month_weekday object. 
 

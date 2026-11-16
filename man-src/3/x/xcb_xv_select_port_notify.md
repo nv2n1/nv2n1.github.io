@@ -10,21 +10,16 @@ description: "xcb_xv_select_port_notify –"
 <p>xcb_xv_select_port_notify &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xv.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_xv_select_port_notify(xcb_connection_t *conn, xcb_xv_port_t port, uint8_t onoff);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>port</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>onoff</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>port</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>onoff</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

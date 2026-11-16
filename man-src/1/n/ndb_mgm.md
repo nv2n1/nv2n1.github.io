@@ -11,30 +11,30 @@ description: "ndb_mgm – the MySQL Cluster management client"
 <p> ndb_mgm &#8211; the MySQL Cluster management client </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_mgm </code><i>options</i></dl>
+<dt> <code>ndb_mgm </code><i>options</i></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>ndb_mgm</code> management client process is actually not needed to run the cluster. Its value lies in providing a set of commands for checking the cluster&#8217;s status, starting backups, and performing other administrative functions. The management client accesses the management server using a C API. Advanced users can also employ this API for programming dedicated management processes to perform tasks similar to those performed by <code>ndb_mgm</code>. </p>
+<dd>The <code>ndb_mgm</code> management client process is actually not needed to run the cluster. Its value lies in providing a set of commands for checking the cluster&#8217;s status, starting backups, and performing other administrative functions. The management client accesses the management server using a C API. Advanced users can also employ this API for programming dedicated management processes to perform tasks similar to those performed by <code>ndb_mgm</code>. </dd>
 <p> To start the management client, it is necessary to supply the host name and port number of the management server: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; ndb_mgm[host_name[port_num]]
 </code></pre>
-</dl>
+</dd></dl>
 <p> For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>ndb_mgm ndb_mgmd.mysql.com 1186</code>
 </pre>
-</dl>
+</dd></dl>
 <p> The default host name and port number are localhost and 1186, respectively. </p>
 <p> The following table includes options that are specific to the MySQL Cluster management client program <code>ndb_mgm</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>
 <dl>
 <dt>
-<dd> * <code>&#8211;try-reconnect=</code><i>number</i> </p>
+</dt><dd> * <code>&#8211;try-reconnect=</code><i>number</i> </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td> <code>Command-Line Format</code> </td>
@@ -67,3 +67,4 @@ shell&gt; <code>ndb_mgm ndb_mgmd.mysql.com 1186</code>
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
 <h2>Index</h2>
+</p>

@@ -215,41 +215,41 @@ description: "Types and Defines fore BrlAPI Key Codes –"
 <h2>Detailed Description</h2>
 <p>Key codes are unsigned 64 bit integers. This 64-bit space is split into 3 parts: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>bits 63-32 (BRLAPI_KEY_FLAGS_MASK), flags: bits 39-32 are standard X modifiers (shift, control, meta, &#8230;). Other flags are used for some commands, see documentation of BRLAPI_KEY_FLG_* for their respective uses.</p>
-<dt>&bull;</p>
-<dd>bits 31-29 (BRLAPI_KEY_TYPE_MASK), key type: either BRLAPI_KEY_TYPE_CMD for braille commands, or BRLAPI_KEY_TYPE_SYM for standard X keysyms.</p>
-<dt>&bull;</p>
-<dd>bits 28-0 (BRLAPI_KEY_CODE_MASK), key code: for braille commands, see BRLAPI_KEY_CMD_* ; for standard X keysyms, this is the keysym value, see X11 documentation, a complete list is probably available on your system in /usr/include/X11/keysymdef.h</dl>
+<dt>&bull;</dt>
+<dd>bits 63-32 (BRLAPI_KEY_FLAGS_MASK), flags: bits 39-32 are standard X modifiers (shift, control, meta, &#8230;). Other flags are used for some commands, see documentation of BRLAPI_KEY_FLG_* for their respective uses.</dd>
+<dt>&bull;</dt>
+<dd>bits 31-29 (BRLAPI_KEY_TYPE_MASK), key type: either BRLAPI_KEY_TYPE_CMD for braille commands, or BRLAPI_KEY_TYPE_SYM for standard X keysyms.</dd>
+<dt>&bull;</dt>
+<dd>bits 28-0 (BRLAPI_KEY_CODE_MASK), key code: for braille commands, see BRLAPI_KEY_CMD_* ; for standard X keysyms, this is the keysym value, see X11 documentation, a complete list is probably available on your system in /usr/include/X11/keysymdef.h</dd></dl>
 <p> The third part is itself split into two parts: a command number and a command value. The relative sizes of these parts vary according to the key type. </p>
 <p> For a braille command, bits 28-16 (BRLAPI_KEY_CMD_BLK_MASK) hold the braille command number, while bits 15-0 (BRLAPI_KEY_CMD_ARG_MASK) hold the command value. </p>
 <p> For a X keysym, if it is a unicode keysym (0x1uvwxyz), then the command number part is 0x1000000 and the value part is 0xuvwxyz. Else, the command part is held by bits 28-8 and the value part is held by bits 7-0. This permits to easily handle usual cases like 0x00xy (latin1), 0x01xy (latin2), XK_Backspace (0xff08, backspace), XK_Tab (0xff09, tab), &#8230; </p>
 <p> For instance, if key == 0x0000000020010008,</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_CMD, so it&#8217;s a braille command</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_CMD_BLK_MASK) == BRLAPI_KEY_CMD_ROUTE, so it&#8217;s the braille route command.</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_CMD_ARG_MASK) == 8, so the highlighted cell is the 9th one (cells are numbered from 0)</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == 0, so no modifier key was pressed during the command, and no particular flag applies to the command.</dl>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_CMD, so it&#8217;s a braille command</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_CMD_BLK_MASK) == BRLAPI_KEY_CMD_ROUTE, so it&#8217;s the braille route command.</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_CMD_ARG_MASK) == 8, so the highlighted cell is the 9th one (cells are numbered from 0)</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == 0, so no modifier key was pressed during the command, and no particular flag applies to the command.</dd></dl>
 <p> if key == 0x000000010000FF09,</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_SYM, so it&#8217;s a keysym</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_CODE_MASK) == XK_Tab, so it&#8217;s the tab key. BRLAPI_KEY_SYM_TAB can also be used here, as well as a few other BRLAPI_KEY_SYM_* constants which are provided to avoid having to include X11/keysymdef.h</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == BRLAPI_KEY_FLG_SHIFT, so the shift modifier was pressed during the command.</dl>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_SYM, so it&#8217;s a keysym</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_CODE_MASK) == XK_Tab, so it&#8217;s the tab key. BRLAPI_KEY_SYM_TAB can also be used here, as well as a few other BRLAPI_KEY_SYM_* constants which are provided to avoid having to include X11/keysymdef.h</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == BRLAPI_KEY_FLG_SHIFT, so the shift modifier was pressed during the command.</dd></dl>
 <p> in the X11 standard some keysyms are directly unicode, for instance if key == 0x0000000001001EA0,</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_SYM, so it&#8217;s a keysym</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_SYM_UNICODE) != 0 so it&#8217;s a unicode keysym, whose value is key &amp; (BRLAPI_KEY_SYM_UNICODE-1). Of course, one can also consider (key &amp; BRLAPI_KEY_CODE_MASK) == XK_Abelowdot</p>
-<dt>&bull;</p>
-<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == 0, so no modifier key was pressed during the command, and no particular flag applies to the command.</dl>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_TYPE_MASK) == BRLAPI_KEY_TYPE_SYM, so it&#8217;s a keysym</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_SYM_UNICODE) != 0 so it&#8217;s a unicode keysym, whose value is key &amp; (BRLAPI_KEY_SYM_UNICODE-1). Of course, one can also consider (key &amp; BRLAPI_KEY_CODE_MASK) == XK_Abelowdot</dd>
+<dt>&bull;</dt>
+<dd>(key &amp; BRLAPI_KEY_FLAGS_MASK) == 0, so no modifier key was pressed during the command, and no particular flag applies to the command.</dd></dl>
 <p> The <code>brlapi_expandKeyCode()</code> function may be used for splitting key codes into these parts.</p>
 <h2>Macro Definition Documentation</h2>
 <h3>#define BRLAPI_DOT1 0001</h3>

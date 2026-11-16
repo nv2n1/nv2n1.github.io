@@ -15,11 +15,11 @@ CALL NNPNTD (X, Y, Z)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Double precision, Input) - The X coordinate of the point where interpolation is desired.
-<dt>Y
-<dd>(Double precision, Input) - The Y coordinate of the point where interpolation is desired.
-<dt>Z
-<dd>(Double precision, Output) - The interpolated functional value at the point (X,Y).</dl>
+</dt><dd>(Double precision, Input) - The X coordinate of the point where interpolation is desired.
+</dd><dt>Y
+</dt><dd>(Double precision, Input) - The Y coordinate of the point where interpolation is desired.
+</dd><dt>Z
+</dt><dd>(Double precision, Output) - The interpolated functional value at the point (X,Y).</dd></dl>
 
 <h2>Usage</h2>
 

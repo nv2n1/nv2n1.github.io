@@ -13,15 +13,15 @@ description: "gsel_norm_tran (Select normalization transformation) – selects a
 <p> void gsel_norm_tran(Gint tran_num);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>tran_num</p>
-<dd>(Input) &#8211; A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided: </p>
+<dt>tran_num</dt>
+<dd>(Input) &#8211; A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided: </dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>0</p>
-<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default. </p>
-<dt>1</p>
-<dd>Selects a normalization transformation in which the window and viewport have been defined by calls to gset_win and gset_vp.</dl>
+</dd><dl COMPACT>
+<dt>0</dt>
+<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default. </dd>
+<dt>1</dt>
+<dd>Selects a normalization transformation in which the window and viewport have been defined by calls to gset_win and gset_vp.</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

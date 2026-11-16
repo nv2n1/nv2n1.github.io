@@ -15,11 +15,11 @@ snd_pcm_hw_rule_noresample - add a rule to allow disabling hw resampling
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>base_rate</i>
-<dl><dd>the rate at which the hardware does not resample</dl>
+<dl><dd>the rate at which the hardware does not resample</dd></dl>
 
 <h2>Return</h2>
 

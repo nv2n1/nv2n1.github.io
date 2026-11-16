@@ -17,12 +17,12 @@ description: "openbox-session — Runs an Openbox session without any session ma
 &nbsp;<wbr> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xsetroot -solid grey &amp; 
 gnome-settings-daemon &amp; 
 </pre>
-</dl>
+</dd></dl>
 <p> Make sure that each line is followed by a &quot;&amp;&quot; or else the script will stop there and further commands will not be executed. You can use the /etc/xdg/openbox/autostart.sh file as an example for creating your own.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-openbox/">openbox</a>(1), <a href="/docs/linux/man/1-openbox-session/">openbox-session</a>(1), <a href="/docs/linux/man/1-openbox-gnome-session/">openbox-gnome-session</a>(1).<br />

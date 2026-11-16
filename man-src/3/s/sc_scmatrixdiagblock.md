@@ -11,7 +11,6 @@ description: "sc::SCMatrixDiagBlock –"
 <p> The <code>SCMatrixDiagBlock</code> describes a diagonal piece of a matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixBlock</code>.</p>
 <h3>Public Member Functions</h3>
@@ -30,17 +29,8 @@ description: "sc::SCMatrixDiagBlock –"
  int <code>ndat</code> () const</p>
 <h3>Public Attributes</h3>
 <pre><code>int istart
-
-
-
 int jstart
-
-
-
 int iend
-
-
-
 double * data</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SCMatrixDiagBlock</code> describes a diagonal piece of a matrix. </p>

@@ -20,40 +20,40 @@ description: "anxgrep — Search for PATTERN in each annodex FILE or standard in
 &nbsp;<wbr></p>
 <h3>Regexp selection and interpretation</h3>
 <dl>
-<dt>-E, &#8211;extended-regexp</p>
-<dd> PATTERN is an extended regular expression</p>
-<dt>-G, &#8211;basic-regexp</p>
-<dd> PATTERN is a basic regular expression</p>
-<dt>-i, &#8211;ignore-case</p>
-<dd> Ignore case distinctions</p>
-<dt>-v, &#8211;invert-match</p>
-<dd> Select non-matching elements</dl>
+<dt>-E, &#8211;extended-regexp</dt>
+<dd> PATTERN is an extended regular expression</dd>
+<dt>-G, &#8211;basic-regexp</dt>
+<dd> PATTERN is a basic regular expression</dd>
+<dt>-i, &#8211;ignore-case</dt>
+<dd> Ignore case distinctions</dd>
+<dt>-v, &#8211;invert-match</dt>
+<dd> Select non-matching elements</dd></dl>
 <h3>CMML options</h3>
 <dl>
-<dt>&#8211;head</p>
-<dd> Search only the CMML head element of each file (ignore clips)</p>
-<dt>&#8211;meta</p>
-<dd> Search only meta elements (ignore clip descriptions)</dl>
+<dt>&#8211;head</dt>
+<dd> Search only the CMML head element of each file (ignore clips)</dd>
+<dt>&#8211;meta</dt>
+<dd> Search only meta elements (ignore clip descriptions)</dd></dl>
 <h3>Output options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
-<dd> Write output to the specified <code>filename</code> instead of printing it to standard output.</p>
-<dt>&#8211;label <code>LABEL</code></p>
-<dd> Print <code>LABEL</code> as the filename for standard input.</p>
-<dt>-q, &#8211;quiet, &#8211;silent</p>
-<dd> Suppress all normal output</p>
-<dt>-L, &#8211;files-without-match</p>
-<dd> Only print FILE names containing no match</p>
-<dt>-l, &#8211;files-with-matches</p>
-<dd> Only print FILE names containing matches</p>
-<dt>-c, &#8211;count</p>
-<dd> Only print a count of matching lines per FILE</dl>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
+<dd> Write output to the specified <code>filename</code> instead of printing it to standard output.</dd>
+<dt>&#8211;label <code>LABEL</code></dt>
+<dd> Print <code>LABEL</code> as the filename for standard input.</dd>
+<dt>-q, &#8211;quiet, &#8211;silent</dt>
+<dd> Suppress all normal output</dd>
+<dt>-L, &#8211;files-without-match</dt>
+<dd> Only print FILE names containing no match</dd>
+<dt>-l, &#8211;files-with-matches</dt>
+<dd> Only print FILE names containing matches</dd>
+<dt>-c, &#8211;count</dt>
+<dd> Only print a count of matching lines per FILE</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>&#8211;version</p>
-<dd> Output version information and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>&#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker March 2, 2005;</p>
 <h2>COPYRIGHT</h2>

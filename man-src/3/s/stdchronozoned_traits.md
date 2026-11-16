@@ -11,16 +11,12 @@ std::chrono::zoned_traits - std::chrono::zoned_traits
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class TimeZonePtr&gt;
     (1)(since C++ 20)
-
         struct zoned_traits {
 };
-
 template &lt;&gt;
 (2)(since C++ 20)
-
     struct zoned_traits&lt;const std::chrono::time_zone *&gt;;</code></pre> 
 The class zoned_traits provides a way to customize the behavior of the constructors of std::chrono::zoned_time with custom time zone pointer types. In particular, it allows such types to specify the default time zone to use and the mapping of a time zone's name to the corresponding time zone pointer. It is acceptable for custom time zone pointer types to not support either operation, in which case the corresponding constructors of zoned_time will not participate in overload resolution. 
 The primary template is empty. A specialization is provided for const std::chrono::time_zone*, the default time zone pointer type. 

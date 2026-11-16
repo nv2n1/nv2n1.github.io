@@ -28,14 +28,14 @@ include(KDECMakeSettings)</pre>
 <h3>Organization</h3>
 <p>ECM provides four different types of modules.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Core modules provide helpful macros for use in project CMake scripts. See <code><a href="/docs/linux/man/7-ecm-modules/">ecm-modules</a>(7)</code> for more information.</p>
-<dt>&bull;</p>
-<dd>Find modules extend the functionality of CMake&#8217;s <code>find_package()</code> command. See <code><a href="/docs/linux/man/7-ecm-find-modules/">ecm-find-modules</a>(7)</code> for more information.</p>
-<dt>&bull;</p>
-<dd>KDE modules provide common settings for software produced by KDE; much of this may also be useful to other projects. See <code><a href="/docs/linux/man/7-ecm-kde-modules/">ecm-kde-modules</a>(7)</code> for more information.</p>
-<dt>&bull;</p>
-<dd>Toolchain files change the build tools and targets used by CMake. See <code><a href="/docs/linux/man/7-ecm-toolchains/">ecm-toolchains</a>(7)</code> for more information. </p>
+<dt>&bull;</dt>
+<dd>Core modules provide helpful macros for use in project CMake scripts. See <code><a href="/docs/linux/man/7-ecm-modules/">ecm-modules</a>(7)</code> for more information.</dd>
+<dt>&bull;</dt>
+<dd>Find modules extend the functionality of CMake&#8217;s <code>find_package()</code> command. See <code><a href="/docs/linux/man/7-ecm-find-modules/">ecm-find-modules</a>(7)</code> for more information.</dd>
+<dt>&bull;</dt>
+<dd>KDE modules provide common settings for software produced by KDE; much of this may also be useful to other projects. See <code><a href="/docs/linux/man/7-ecm-kde-modules/">ecm-kde-modules</a>(7)</code> for more information.</dd>
+<dt>&bull;</dt>
+<dd>Toolchain files change the build tools and targets used by CMake. See <code><a href="/docs/linux/man/7-ecm-toolchains/">ecm-toolchains</a>(7)</code> for more information. </dd>
 <p> The <code>${ECM_MODULE_DIR}</code>, <code>${ECM_FIND_MODULE_DIR}</code> and <code>${ECM_KDE_MODULE_DIR}</code> variables may be used instead of <code>${ECM_MODULE_PATH}</code> if you only need some of this functionality.</dl>
 <h2>Development</h2>
 <p>The <code><a href="/docs/linux/man/7-ecm-developer/">ecm-developer</a>(7)</code> manual contains more information about developing for Extra CMake Modules.</p>
@@ -43,15 +43,15 @@ include(KDECMakeSettings)</pre>
 <p>All code is licensed under the <i>BSD 3-Clause license</i>.</p>
 <h2>Links</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Home page: <i><a rel="nofollow" href="https://commits.kde.org/extra-cmake-modules">https://commits.kde.org/extra-cmake-modules</a></i></p>
-<dt>&bull;</p>
-<dd>Documentation: <i><a rel="nofollow" href="https://api.kde.org/ecm/">https://api.kde.org/ecm/</a></i></p>
-<dt>&bull;</p>
-<dd>Mailing list: <i><a rel="nofollow" href="https://mail.kde.org/mailman/listinfo/kde-buildsystem">https://mail.kde.org/mailman/listinfo/kde-buildsystem</a></i></p>
-<dt>&bull;</p>
-<dd>IRC channel: #kde-devel on Freenode</p>
-<dt>&bull;</p>
-<dd>Git repository: <i><a rel="nofollow" href="https://commits.kde.org/extra-cmake-modules">https://commits.kde.org/extra-cmake-modules</a></i></dl>
+<dt>&bull;</dt>
+<dd>Home page: <i><a rel="nofollow" href="https://commits.kde.org/extra-cmake-modules">https://commits.kde.org/extra-cmake-modules</a></i></dd>
+<dt>&bull;</dt>
+<dd>Documentation: <i><a rel="nofollow" href="https://api.kde.org/ecm/">https://api.kde.org/ecm/</a></i></dd>
+<dt>&bull;</dt>
+<dd>Mailing list: <i><a rel="nofollow" href="https://mail.kde.org/mailman/listinfo/kde-buildsystem">https://mail.kde.org/mailman/listinfo/kde-buildsystem</a></i></dd>
+<dt>&bull;</dt>
+<dd>IRC channel: #kde-devel on Freenode</dd>
+<dt>&bull;</dt>
+<dd>Git repository: <i><a rel="nofollow" href="https://commits.kde.org/extra-cmake-modules">https://commits.kde.org/extra-cmake-modules</a></i></dd></dl>
 <h2>Copyright</h2>
 <p>KDE Developers</p>

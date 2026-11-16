@@ -15,7 +15,7 @@ description: "XmTabFree — A convenience function that frees a tab"
 <h2>Description</h2>
 <p><code>XmTabFree</code> frees the memory associated with the specified tab.</p>
 <dl COMPACT>
-<dt><i>tab</i></p>
-<dd>Specifies the tab to be freed.</dl>
+<dt><i>tab</i></dt>
+<dd>Specifies the tab to be freed.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtab/">XmTab</a></code>(3).</p>

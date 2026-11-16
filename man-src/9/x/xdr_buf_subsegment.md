@@ -15,19 +15,19 @@ xdr_buf_subsegment - set subbuf to a portion of buf
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>an xdr buffer</dl>
+<dl><dd></dd><dd>an xdr buffer</dd></dl>
  
 
  <i>subbuf</i>
-<dl><dd>the result buffer</dl>
+<dl><dd>the result buffer</dd></dl>
  
 
  <i>base</i>
-<dl><dd>beginning of range in bytes</dl>
+<dl><dd>beginning of range in bytes</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of range in bytes</dl>
+<dl><dd>length of range in bytes</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,12 +15,12 @@ description: "bs11nread – Barry Project’s program to read database serializa
 <p> <code>bs11nread</code> reads Boost serialization files that were saved with the btool program, and dumps the database records in human readable format to stdout. This program is only available if Barry is compiled with Boost support enabled.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f file</code></p>
-<dd> Filename of Boost serialization file, written by btool.</p>
-<dt><code>-S</code></p>
-<dd> Show list of supported databases.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options. </p>
+<dt><code>-f file</code></dt>
+<dd> Filename of Boost serialization file, written by btool.</dd>
+<dt><code>-S</code></dt>
+<dd> Show list of supported databases.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>bs11nread</code> is part of the Barry project.</p>

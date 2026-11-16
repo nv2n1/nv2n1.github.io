@@ -19,42 +19,42 @@ description: "vlc, qvlc, svlc, nvlc, rvlc, cvlc – the VLC media player"
 <h2>ITEMS</h2>
 <p> <code>VLC</code> recognizes several URL-style items:</p>
 <dl>
-<dt><code>*.mpg, *.vob, *.avi, *.mp3, *.ogg, *.opus</code></p>
-<dd> Various multimedia file formats</p>
-<dt><code><a href="dvd://[">dvd://[</a>&lt;device&gt;][@&lt;raw device&gt;][#[&lt;title&gt;][:[&lt;chapter&gt;][:&lt;angle&gt;]]]</code></p>
-<dd> DVD device (for instance <a href="dvd:///dev/dvd">dvd:///dev/dvd</a>). The raw device is optional and must have been prepared beforehand.</p>
-<dt><code><a href="vcd://[">vcd://[</a>&lt;device&gt;][@{E|P|E|T|S}[&lt;number&gt;]]</code></p>
-<dd> VCD device (for instance <a href="vcd:///dev/cdrom">vcd:///dev/cdrom</a>).</p>
-<dt><code><a href="udp://[@[">udp://[@[</a>&lt;multicast address&gt;][:&lt;local port&gt;]]</code></p>
-<dd> UDP stream, such as one sent by VLS or another VLC. Usually &quot;udp://&quot; is enough.</p>
-<dt><code>http://&lt;server address&gt;[:&lt;server port&gt;]/[&lt;file&gt;]</code></p>
-<dd> HTTP stream</p>
-<dt><code>rtsp://&lt;server address&gt;[:&lt;server port&gt;]/&lt;stream name&gt;</code></p>
-<dd> RTSP Video On Demand stream</p>
-<dt><code>vlc://&lt;command&gt;</code></p>
-<dd> Execute a playlist command. Commands are: <code>pause</code> (pause execution of other items), and <code>quit</code> (close VLC). </p>
+<dt><code>*.mpg, *.vob, *.avi, *.mp3, *.ogg, *.opus</code></dt>
+<dd> Various multimedia file formats</dd>
+<dt><code><a href="dvd://[">dvd://[</a>&lt;device&gt;][@&lt;raw device&gt;][#[&lt;title&gt;][:[&lt;chapter&gt;][:&lt;angle&gt;]]]</code></dt>
+<dd> DVD device (for instance <a href="dvd:///dev/dvd">dvd:///dev/dvd</a>). The raw device is optional and must have been prepared beforehand.</dd>
+<dt><code><a href="vcd://[">vcd://[</a>&lt;device&gt;][@{E|P|E|T|S}[&lt;number&gt;]]</code></dt>
+<dd> VCD device (for instance <a href="vcd:///dev/cdrom">vcd:///dev/cdrom</a>).</dd>
+<dt><code><a href="udp://[@[">udp://[@[</a>&lt;multicast address&gt;][:&lt;local port&gt;]]</code></dt>
+<dd> UDP stream, such as one sent by VLS or another VLC. Usually &quot;udp://&quot; is enough.</dd>
+<dt><code>http://&lt;server address&gt;[:&lt;server port&gt;]/[&lt;file&gt;]</code></dt>
+<dd> HTTP stream</dd>
+<dt><code>rtsp://&lt;server address&gt;[:&lt;server port&gt;]/&lt;stream name&gt;</code></dt>
+<dd> RTSP Video On Demand stream</dd>
+<dt><code>vlc://&lt;command&gt;</code></dt>
+<dd> Execute a playlist command. Commands are: <code>pause</code> (pause execution of other items), and <code>quit</code> (close VLC). </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may affect VLC: </p>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> The X11 display server address. </p>
-<dt><code>http_proxy</code></p>
-<dd> The HTTP proxy server URL. </p>
-<dt><code>OSSAUDIO_DEV</code></p>
-<dd> The default audio output device, used by the OSSv4 output plugin. </p>
-<dt><code>VLC_DATA_PATH</code></p>
-<dd> The directory containing VLC run-time data files (e.g. /usr/share/vlc). </p>
-<dt><code>VLC_PLUGIN_PATH</code></p>
-<dd> An extra directory to load VLC plugins from. </p>
-<dt><code>VLC_VERBOSE</code></p>
-<dd> The level of verbosity for log messages (0: silent, 1: error/info, 2: warning, 3: debug). </p>
-<dt><code>XDG_CACHE_DIR XDG_CONFIG_DIR XDG_DATA_DIR</code></p>
-<dd> The directories to store user cached data, user configuration files and user data files respectively. </p>
-<dt><code>XDG_DOCUMENTS_DIR XDG_DOWNLOAD_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEO_DIR</code></p>
-<dd> The directories to fetch or store user text files, downloads, music, pictures (i.e. snapshots), and video respectively. </p>
-<dt><code>XDG_SESSION_COOKIE</code></p>
-<dd> The unique identifier of the desktop session, used by the PulseAudio output plugin. </p>
+<dt><code>DISPLAY</code></dt>
+<dd> The X11 display server address. </dd>
+<dt><code>http_proxy</code></dt>
+<dd> The HTTP proxy server URL. </dd>
+<dt><code>OSSAUDIO_DEV</code></dt>
+<dd> The default audio output device, used by the OSSv4 output plugin. </dd>
+<dt><code>VLC_DATA_PATH</code></dt>
+<dd> The directory containing VLC run-time data files (e.g. /usr/share/vlc). </dd>
+<dt><code>VLC_PLUGIN_PATH</code></dt>
+<dd> An extra directory to load VLC plugins from. </dd>
+<dt><code>VLC_VERBOSE</code></dt>
+<dd> The level of verbosity for log messages (0: silent, 1: error/info, 2: warning, 3: debug). </dd>
+<dt><code>XDG_CACHE_DIR XDG_CONFIG_DIR XDG_DATA_DIR</code></dt>
+<dd> The directories to store user cached data, user configuration files and user data files respectively. </dd>
+<dt><code>XDG_DOCUMENTS_DIR XDG_DOWNLOAD_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEO_DIR</code></dt>
+<dd> The directories to fetch or store user text files, downloads, music, pictures (i.e. snapshots), and video respectively. </dd>
+<dt><code>XDG_SESSION_COOKIE</code></dt>
+<dd> The unique identifier of the desktop session, used by the PulseAudio output plugin. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Online documentation: <a rel="nofollow" href="http://www.videolan.org/doc/">http://www.videolan.org/doc/</a> </p>

@@ -27,48 +27,48 @@ description: "gpsdrive – displays GPS position on a map"
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (GPL) for more details. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Displays a short help message.</p>
-<dt><code>-e, &#8211;embedded</code></p>
-<dd> Don&#8217;t show the GUI; for use in external GTK apps.</p>
-<dt><code>-f, &#8211;force-position</code></p>
-<dd> Force display of position even if the GPS fix is invalid. Before a GPS has a fix it often reports its position as 0,0. And if it has lost a fix some makes of GPS will repeat the last known position together with a fix-is-bad indicator. Normally (without this flag) <code>GpsDrive</code> skips plotting these points. Useful for debugging.</p>
-<dt><code>-i, &#8211;ignore-checksum</code></p>
-<dd> Ignore NMEA checksum. (risky, only for broken GPS receivers)</p>
-<dt><code>-p, &#8211;explore-mode</code></p>
-<dd> Start in Explore Mode. This will let you explore around your maps independently of your GPS position (or lack thereof).</p>
-<dt><code>-s, &#8211;nosplash</code></p>
-<dd> Don&#8217;t show the startup splash screen.</p>
-<dt><code>-t, &#8211;touchscreen</code></p>
-<dd> Set this special mode if you only have a single mouse button, for example when using <code>GpsDrive</code> on a touchscreen display.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Displays some basic debug information to the terminal as the program runs.</p>
-<dt><code>-x, &#8211;use-DBUS</code></p>
-<dd> Use DBUS for communication with <code>gpsd</code>; this disables socket communication.</p>
-<dt><code>-A, &#8211;alt-offset=</code><i>&lt;OFFSET&gt;</i></p>
-<dd> Adjust the displayed altitude by adding this value.</p>
-<dt><code>-B, &#8211;gpsd-server=</code><i>&lt;SERVER&gt;</i></p>
-<dd> Server name of the NMEA server. You can connect your GPS receiver to a remote <i>host</i> which is running <code>gpsd</code> and display the position on your local machine.</p>
-<dt><code>-C, &#8211;config-file=</code><i>&lt;FILE&gt;</i></p>
-<dd> Set this if you wish to use an alternative configuration file.</p>
-<dt><code>-D, &#8211;debug=</code><i>&lt;LEVEL&gt;</i></p>
-<dd> Set the debugging level. A level of 0 will show no debug information, while a level of 100 will show <code>a lot</code> of debugging information. If you have problems or program crashes, set this high enough to display relevant information send this output to the authors. See also the <code>BUGS</code> section below.</p>
-<dt><code>-F, &#8211;friends-server=</code><i>&lt;SERVERFILE&gt;</i></p>
-<dd> Select a friends server to exchange position information with other people, e.g. <i>friendsd.gpsdrive.de</i>. You can also set this from the Preferences/Friends menu. You can start your own friends server with the included <code>friendsd</code> program. More details are in the <code>FRIENDSD</code> section below.</p>
-<dt><code>-G, &#8211;geometry=</code><i>&lt;GEOMETRY&gt;</i></p>
-<dd> Specify the window geometry, e.g. 800&#215;600.</p>
-<dt><code>-M, &#8211;gui-mode=</code>[<i>car</i>|<i>pda</i>|<i>desktop</i>]</p>
-<dd> Set GUI mode. The default layout is &#8216;<i>desktop</i>&#8216;. <i>Car</i> modes sets up the display in a fullscreen mode suitable for use with a small LCD touchscreen. <i>PDA</i> mode dedicates even more screen real-estate to the map, controls are hidden behind tabs.</p>
-<dt><code>-N, &#8211;nmeaout=</code><i>&lt;FILE&gt;</i></p>
-<dd> Set a serial device, PTY master, or file to send NMEA sentences to. This is useful if you use <code>GpsDrive</code> in simulation mode to provide other GPS applications with test data.</p>
-<dt><code>-S, &#8211;screenshot=</code><i>&lt;PATH&gt;</i></p>
-<dd> Take auto-screenshots of different GUI windows then exit. Image files will be saved to the specified <i>path</i>. Don&#8217;t touch gpsdrive while this is running!</p>
-<dt><code>-T, &#8211;run-test</code></p>
-<dd> Run some internal unit tests and then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the program version together with the SVN revision of the main gpsdrive.c source. If you send a bug report, also include this output.</p>
-<dt><code>&#8211;display=</code><i>&lt;DISPLAY&gt;</i></p>
-<dd> The X-Window display to use. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Displays a short help message.</dd>
+<dt><code>-e, &#8211;embedded</code></dt>
+<dd> Don&#8217;t show the GUI; for use in external GTK apps.</dd>
+<dt><code>-f, &#8211;force-position</code></dt>
+<dd> Force display of position even if the GPS fix is invalid. Before a GPS has a fix it often reports its position as 0,0. And if it has lost a fix some makes of GPS will repeat the last known position together with a fix-is-bad indicator. Normally (without this flag) <code>GpsDrive</code> skips plotting these points. Useful for debugging.</dd>
+<dt><code>-i, &#8211;ignore-checksum</code></dt>
+<dd> Ignore NMEA checksum. (risky, only for broken GPS receivers)</dd>
+<dt><code>-p, &#8211;explore-mode</code></dt>
+<dd> Start in Explore Mode. This will let you explore around your maps independently of your GPS position (or lack thereof).</dd>
+<dt><code>-s, &#8211;nosplash</code></dt>
+<dd> Don&#8217;t show the startup splash screen.</dd>
+<dt><code>-t, &#8211;touchscreen</code></dt>
+<dd> Set this special mode if you only have a single mouse button, for example when using <code>GpsDrive</code> on a touchscreen display.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Displays some basic debug information to the terminal as the program runs.</dd>
+<dt><code>-x, &#8211;use-DBUS</code></dt>
+<dd> Use DBUS for communication with <code>gpsd</code>; this disables socket communication.</dd>
+<dt><code>-A, &#8211;alt-offset=</code><i>&lt;OFFSET&gt;</i></dt>
+<dd> Adjust the displayed altitude by adding this value.</dd>
+<dt><code>-B, &#8211;gpsd-server=</code><i>&lt;SERVER&gt;</i></dt>
+<dd> Server name of the NMEA server. You can connect your GPS receiver to a remote <i>host</i> which is running <code>gpsd</code> and display the position on your local machine.</dd>
+<dt><code>-C, &#8211;config-file=</code><i>&lt;FILE&gt;</i></dt>
+<dd> Set this if you wish to use an alternative configuration file.</dd>
+<dt><code>-D, &#8211;debug=</code><i>&lt;LEVEL&gt;</i></dt>
+<dd> Set the debugging level. A level of 0 will show no debug information, while a level of 100 will show <code>a lot</code> of debugging information. If you have problems or program crashes, set this high enough to display relevant information send this output to the authors. See also the <code>BUGS</code> section below.</dd>
+<dt><code>-F, &#8211;friends-server=</code><i>&lt;SERVERFILE&gt;</i></dt>
+<dd> Select a friends server to exchange position information with other people, e.g. <i>friendsd.gpsdrive.de</i>. You can also set this from the Preferences/Friends menu. You can start your own friends server with the included <code>friendsd</code> program. More details are in the <code>FRIENDSD</code> section below.</dd>
+<dt><code>-G, &#8211;geometry=</code><i>&lt;GEOMETRY&gt;</i></dt>
+<dd> Specify the window geometry, e.g. 800&#215;600.</dd>
+<dt><code>-M, &#8211;gui-mode=</code>[<i>car</i>|<i>pda</i>|<i>desktop</i>]</dt>
+<dd> Set GUI mode. The default layout is &#8216;<i>desktop</i>&#8216;. <i>Car</i> modes sets up the display in a fullscreen mode suitable for use with a small LCD touchscreen. <i>PDA</i> mode dedicates even more screen real-estate to the map, controls are hidden behind tabs.</dd>
+<dt><code>-N, &#8211;nmeaout=</code><i>&lt;FILE&gt;</i></dt>
+<dd> Set a serial device, PTY master, or file to send NMEA sentences to. This is useful if you use <code>GpsDrive</code> in simulation mode to provide other GPS applications with test data.</dd>
+<dt><code>-S, &#8211;screenshot=</code><i>&lt;PATH&gt;</i></dt>
+<dd> Take auto-screenshots of different GUI windows then exit. Image files will be saved to the specified <i>path</i>. Don&#8217;t touch gpsdrive while this is running!</dd>
+<dt><code>-T, &#8211;run-test</code></dt>
+<dd> Run some internal unit tests and then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the program version together with the SVN revision of the main gpsdrive.c source. If you send a bug report, also include this output.</dd>
+<dt><code>&#8211;display=</code><i>&lt;DISPLAY&gt;</i></dt>
+<dd> The X-Window display to use. </dd>
 </dl>
 <h2>CONNECTING A GPS RECEIVER</h2>
 <p> <code>Start GPSD</code><br />

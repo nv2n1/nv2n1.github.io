@@ -13,33 +13,33 @@ description: "gaccum_tran_matrix (Accumulate transformation matrix) – Construc
 <p> void gaccum_tran_matrix(const Gtran_matrix t_matrix, const Gpoint *point, const Gvec *shift, Gdouble angle, const Gvec *scale, Gcoord_switch coord_switch, Gtran_matrix tran_matrix);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>t_matrix</p>
-<dd>(Gfloat, Input) &#8211; A 2&#215;3 GKS transformation matrix.</p>
-<dt>point.x</p>
-<dd>(Gfloat, Input) &#8211; X coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</p>
-<dt>point.y</p>
-<dd>(Gfloat, Input) &#8211; Y coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</p>
-<dt>shift.delta_x</p>
-<dd>(Gfloat, Input) &#8211; The X component of a shift vector to be used for the scaling part of the output transformation. shift.delta_x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</p>
-<dt>shift.delta_y</p>
-<dd>(Gfloat, Input) &#8211; The Y component of a shift vector to be used for the scaling part of the output transformation. shift.delta_y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</p>
-<dt>angle</p>
-<dd>(Input) &#8211; The rotation angle, in radians, to be used for the rotation part of the output transformation.</p>
-<dt>scale.delta_x</p>
-<dd>(Gfloat, Input) &#8211; X coordinate scale factor to be used in the scaling part of the output transformation.</p>
-<dt>scale.delta_y</p>
-<dd>(Gfloat, Input) &#8211; Y coordinate scale factor to be used in the scaling part of the output transformation.</p>
-<dt>coord_switch</p>
-<dd>(Input) &#8211; A coordinate switch to indicate whether the values for the arguments point and shift (described above) are in world coordinates or normalized device coordinates. Possible values include:</p>
+<dt>t_matrix</dt>
+<dd>(Gfloat, Input) &#8211; A 2&#215;3 GKS transformation matrix.</dd>
+<dt>point.x</dt>
+<dd>(Gfloat, Input) &#8211; X coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>point.y</dt>
+<dd>(Gfloat, Input) &#8211; Y coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>shift.delta_x</dt>
+<dd>(Gfloat, Input) &#8211; The X component of a shift vector to be used for the scaling part of the output transformation. shift.delta_x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>shift.delta_y</dt>
+<dd>(Gfloat, Input) &#8211; The Y component of a shift vector to be used for the scaling part of the output transformation. shift.delta_y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>angle</dt>
+<dd>(Input) &#8211; The rotation angle, in radians, to be used for the rotation part of the output transformation.</dd>
+<dt>scale.delta_x</dt>
+<dd>(Gfloat, Input) &#8211; X coordinate scale factor to be used in the scaling part of the output transformation.</dd>
+<dt>scale.delta_y</dt>
+<dd>(Gfloat, Input) &#8211; Y coordinate scale factor to be used in the scaling part of the output transformation.</dd>
+<dt>coord_switch</dt>
+<dd>(Input) &#8211; A coordinate switch to indicate whether the values for the arguments point and shift (described above) are in world coordinates or normalized device coordinates. Possible values include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GCOORD_WC</p>
-<dd>World coordinates</p>
-<dt>GCOORD_NDC</p>
-<dd>Normalized device coordinates</p>
-<dt>tran_matrix</p>
-<dd>(Gfloat, Output) &#8211; A 2&#215;3 array that contains the GKS transformation matrix in a form that can be used as input to other GKS functions such as gset_seg_tran. This matrix is constructed by composing the scale, rotate, and shift input, described above, with the original input matrix t_matrix.</dl>
+</dd><dl COMPACT>
+<dt>GCOORD_WC</dt>
+<dd>World coordinates</dd>
+<dt>GCOORD_NDC</dt>
+<dd>Normalized device coordinates</dd>
+<dt>tran_matrix</dt>
+<dd>(Gfloat, Output) &#8211; A 2&#215;3 array that contains the GKS transformation matrix in a form that can be used as input to other GKS functions such as gset_seg_tran. This matrix is constructed by composing the scale, rotate, and shift input, described above, with the original input matrix t_matrix.</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

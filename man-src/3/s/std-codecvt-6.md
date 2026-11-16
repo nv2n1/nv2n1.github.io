@@ -43,7 +43,6 @@ description: "std::wcsrtombs – std::wcsrtombs"
 #include &lt;clocale&gt;
 #include &lt;string&gt;
 #include &lt;cwchar&gt;
-
 void print_wide(const wchar_t* wstr)
 {
     std::mbstate_t state = std::mbstate_t();
@@ -53,7 +52,6 @@ void print_wide(const wchar_t* wstr)
     std::cout &lt;&lt; "multibyte string: " &lt;&lt; &amp;mbstr[0] &lt;&lt; '\n';
     std::cout &lt;&lt; "Length, including '\\0': " &lt;&lt; mbstr.size() &lt;&lt; '\n';
 }
-
 int main()
 {
     std::setlocale(LC_ALL, "en_US.utf8");

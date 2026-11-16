@@ -16,14 +16,14 @@ mongoc_matcher_new (const bson_t *query,
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dl>
+<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

@@ -14,7 +14,7 @@ description: "SDL_PushEvent – Pushes an event onto the event queue"
 <h2>Description</h2>
 <p>The event queue can actually be used as a two way communication channel. Not only can events be read from the queue, but the user can also push their own events onto it. <code>event</code> is a pointer to the event structure you wish to push onto the queue. </p>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> Pushing device input events onto the queue doesn&#8217;t modify the state of the device within SDL.</dl>
 <p> </code></p>
 <h2>Return Value</h2>
@@ -23,3 +23,4 @@ description: "SDL_PushEvent – Pushes an event onto the event queue"
 <p>See <i></i><code>SDL_Event</code>.</p>
 <h2>See Also</h2>
 <p><i></i><code>SDL_PollEvent</code>, <i></i><code>SDL_PeepEvents</code>, <i></i><code>SDL_Event</code></p>
+</p>

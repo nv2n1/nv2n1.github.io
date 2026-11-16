@@ -16,30 +16,30 @@ description: "vbetool – run real-mode video BIOS code to alter hardware state"
 <h2>OPTIONS</h2>
 <p> <code>vbetool</code> takes the following options:</p>
 <dl>
-<dt>vbestate</p>
-<dd> <code>vbetool</code> will use the VESA 0x4f0f extensions to save or restore hardware state. This will be sent to or read from stdin. This information is highly hardware specific &#8211; do not attempt to restore state saved from a different machine. This command will not work unless you are at a text console, as it interferes badly with X. </p>
-<dt>dpms</p>
-<dd> <code>vbetool</code> will use the VESA 0x4f10 extensions to alter the power management state of your screen. &quot;On&quot;, &quot;off&quot;, &quot;standby&quot;, &quot;suspend&quot; and &quot;reduced&quot; are acceptable further options and determine which state will be activated. </p>
-<dt>vbemode</p>
-<dd> <code>vbetool</code> will get or set the current VESA mode. &quot;get&quot; will return the current mode number on stdout &#8211; &quot;set&quot; will set the mode to the next argument. </p>
-<dt>vgamode</p>
-<dd> <code>vbetool</code> will set the legacy VGA mode to the following numeric argument. </p>
-<dt>post</p>
-<dd> <code>vbetool</code> will attempt to run BIOS code located at c000:0003. This is the code run by the system BIOS at boot in order to intialise the video hardware. Note that on some machines (especially laptops), not all of this code is present after system boot &#8211; as a result, executing this command may result in undefined behaviour. This command must be run from a text console, as it will otherwise interfere with the operation of X. This command takes an optional argument which is the location of a file containing a ROM image. If provided, this image will be mapped to the c000 segment and used instead of the system&#8217;s video BIOS. </p>
-<dt>vgastate</p>
-<dd> <code>vbetool</code> will enable or disable the current video card. On most hardware, disabling will cause the hardware to stop responding until it is reenabled. You probably don&#8217;t want to do this if you&#8217;re using a framebuffer. </p>
-<dt>vbefp</p>
-<dd> <code>vbetool</code> will execute a VESA flat panel interface call.</p>
+<dt>vbestate</dt>
+<dd> <code>vbetool</code> will use the VESA 0x4f0f extensions to save or restore hardware state. This will be sent to or read from stdin. This information is highly hardware specific &#8211; do not attempt to restore state saved from a different machine. This command will not work unless you are at a text console, as it interferes badly with X. </dd>
+<dt>dpms</dt>
+<dd> <code>vbetool</code> will use the VESA 0x4f10 extensions to alter the power management state of your screen. &quot;On&quot;, &quot;off&quot;, &quot;standby&quot;, &quot;suspend&quot; and &quot;reduced&quot; are acceptable further options and determine which state will be activated. </dd>
+<dt>vbemode</dt>
+<dd> <code>vbetool</code> will get or set the current VESA mode. &quot;get&quot; will return the current mode number on stdout &#8211; &quot;set&quot; will set the mode to the next argument. </dd>
+<dt>vgamode</dt>
+<dd> <code>vbetool</code> will set the legacy VGA mode to the following numeric argument. </dd>
+<dt>post</dt>
+<dd> <code>vbetool</code> will attempt to run BIOS code located at c000:0003. This is the code run by the system BIOS at boot in order to intialise the video hardware. Note that on some machines (especially laptops), not all of this code is present after system boot &#8211; as a result, executing this command may result in undefined behaviour. This command must be run from a text console, as it will otherwise interfere with the operation of X. This command takes an optional argument which is the location of a file containing a ROM image. If provided, this image will be mapped to the c000 segment and used instead of the system&#8217;s video BIOS. </dd>
+<dt>vgastate</dt>
+<dd> <code>vbetool</code> will enable or disable the current video card. On most hardware, disabling will cause the hardware to stop responding until it is reenabled. You probably don&#8217;t want to do this if you&#8217;re using a framebuffer. </dd>
+<dt>vbefp</dt>
+<dd> <code>vbetool</code> will execute a VESA flat panel interface call.</dd>
 <dt>
-<dd> panelid will provide information about the panel</p>
+</dt><dd> panelid will provide information about the panel</dd>
 <dt>
-<dd> panelsize will provide the size of the panel</p>
+</dt><dd> panelsize will provide the size of the panel</dd>
 <dt>
-<dd> getbrightness will provide the current screen brightness as an integer</p>
+</dt><dd> getbrightness will provide the current screen brightness as an integer</dd>
 <dt>
-<dd> setbrightness accepts an integer as an argument and will set the screen brightness to that</p>
+</dt><dd> setbrightness accepts an integer as an argument and will set the screen brightness to that</dd>
 <dt>
-<dd> invert will invert the colours of the screen </p>
+</dt><dd> invert will invert the colours of the screen </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Switching dpms modes may interact badly with X on some systems. </p>

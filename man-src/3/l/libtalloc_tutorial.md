@@ -14,20 +14,20 @@ description: "libtalloc_tutorial – The Tutorial"
 <p> The main goals of this library are: removing the needs for creating a cleanup function for every complex structure, providing a logical organization of allocated memory blocks and reducing the likelihood of creating memory leaks in long-running applications. All of this is achieved by allocating memory in a hierarchical structure of talloc contexts such that deallocating one context recursively frees all of its descendants as well.</p>
 <h2>Main features</h2>
 <dl>
-<dt>&bull;</p>
-<dd> An open source project</p>
-<dt>&bull;</p>
-<dd> A hierarchical memory model</p>
-<dt>&bull;</p>
-<dd> Natural projection of data structures into the memory space</p>
-<dt>&bull;</p>
-<dd> Simplifies memory management of large data structures</p>
-<dt>&bull;</p>
-<dd> Automatic execution of a destructor before the memory is freed</p>
-<dt>&bull;</p>
-<dd> Simulates a dynamic type system</p>
-<dt>&bull;</p>
-<dd> Implements a transparent memory pool</dl>
+<dt>&bull;</dt>
+<dd> An open source project</dd>
+<dt>&bull;</dt>
+<dd> A hierarchical memory model</dd>
+<dt>&bull;</dt>
+<dd> Natural projection of data structures into the memory space</dd>
+<dt>&bull;</dt>
+<dd> Simplifies memory management of large data structures</dd>
+<dt>&bull;</dt>
+<dd> Automatic execution of a destructor before the memory is freed</dd>
+<dt>&bull;</dt>
+<dd> Simulates a dynamic type system</dd>
+<dt>&bull;</dt>
+<dd> Implements a transparent memory pool</dd></dl>
 <h2>Table of contents:</h2>
 <p> <code>Chapter 1: Talloc context</code> </p>
 <p> <code>Chapter 2: Stealing a context</code> </p>

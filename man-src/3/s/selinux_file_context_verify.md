@@ -21,31 +21,31 @@ int selinux_file_context_verify(const char *path, mode_t mode);</code></pre>
 <p> On failure -1 is returned and <i>errno</i> set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOTSUP</code></p>
-<dd>if extended attributes are not supported by the file system.</p>
-<dt><code>ENOENT</code></p>
-<dd>if there is no entry in the file contexts series of files or <i>path</i> does not exist.</p>
-<dt><code>EINVAL</code></p>
-<dd>if the entry in the file contexts series of files or <i>path</i> are invalid, or the returned context fails validation.</p>
-<dt><code>ENOMEM</code></p>
-<dd>if attempt to allocate memory failed.</dl>
+<dt><code>ENOTSUP</code></dt>
+<dd>if extended attributes are not supported by the file system.</dd>
+<dt><code>ENOENT</code></dt>
+<dd>if there is no entry in the file contexts series of files or <i>path</i> does not exist.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>if the entry in the file contexts series of files or <i>path</i> are invalid, or the returned context fails validation.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>if attempt to allocate memory failed.</dd></dl>
 <h2>Files</h2>
 <p>The following configuration files (the file contexts series of files) supporting the active policy will be used (should they exist) to determine the <i>path</i> default context: </p>
 <dl>
-<dd><i>contexts/files/file_contexts</i> &#8211; This file must exist. </p>
+<dd><i>contexts/files/file_contexts</i> &#8211; This file must exist. </dd>
 <p> <i>contexts/files/file_contexts.local</i> &#8211; If exists has local customizations. </p>
 <p> <i>contexts/files/file_contexts.homedirs</i> &#8211; If exists has users home directory customizations. </p>
 <p> <i>contexts/files/file_contexts.subs</i> &#8211; If exists has substitutions that are then applied to the &#8216;in memory&#8217; version of the file contexts files.</dl>
 <h2>Example</h2>
 <p>If the files context is:</p>
 <dl>
-<dd>unconfined_u:object_r:admin_home_t:s0</dl>
+<dd>unconfined_u:object_r:admin_home_t:s0</dd></dl>
 <p> and the default context defined in the file contexts file is:</p>
 <dl>
-<dd>system_u:object_r:admin_home_t:s0</dl>
+<dd>system_u:object_r:admin_home_t:s0</dd></dl>
 <p> then the actual strings compared are:</p>
 <dl>
-<dd>:object_r:admin_home_t:s0 and :object_r:admin_home_t:s0</dl>
+<dd>:object_r:admin_home_t:s0 and :object_r:admin_home_t:s0</dd></dl>
 <p> Therefore they will match and <code>selinux_file_context_verify</code>() will return 1.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>

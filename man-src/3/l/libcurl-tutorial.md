@@ -16,19 +16,19 @@ description: "libcurl-tutorial – libcurl programming tutorial"
 <h2>Building</h2>
 <p> There are many different ways to build C programs. This chapter will assume a UNIX-style build process. If you use a different build system, you can still read this to get general information that may apply to your environment as well.</p>
 <dl>
-<dt>Compiling the Program</p>
-<dd> Your compiler needs to know where the libcurl headers are located. Therefore you must set your compiler&#8217;s include path to point to the directory where you installed them. The &#8216;curl-config'[3] tool can be used to get this information: </p>
+<dt>Compiling the Program</dt>
+<dd> Your compiler needs to know where the libcurl headers are located. Therefore you must set your compiler&#8217;s include path to point to the directory where you installed them. The &#8216;curl-config'[3] tool can be used to get this information: </dd>
 <p> $ curl-config &#8211;cflags </p>
-<dt>Linking the Program with libcurl</p>
-<dd> When having compiled the program, you need to link your object files to create a single executable. For that to succeed, you need to link with libcurl and possibly also with other libraries that libcurl itself depends on. Like the OpenSSL libraries, but even some standard OS libraries may be needed on the command line. To figure out which flags to use, once again the &#8216;curl-config&#8217; tool comes to the rescue: </p>
+<dt>Linking the Program with libcurl</dt>
+<dd> When having compiled the program, you need to link your object files to create a single executable. For that to succeed, you need to link with libcurl and possibly also with other libraries that libcurl itself depends on. Like the OpenSSL libraries, but even some standard OS libraries may be needed on the command line. To figure out which flags to use, once again the &#8216;curl-config&#8217; tool comes to the rescue: </dd>
 <p> $ curl-config &#8211;libs </p>
-<dt>SSL or Not</p>
-<dd> libcurl can be built and customized in many ways. One of the things that varies from different libraries and builds is the support for SSL-based transfers, like HTTPS and FTPS. If a supported SSL library was detected properly at build-time, libcurl will be built with SSL support. To figure out if an installed libcurl has been built with SSL support enabled, use &#8216;curl-config&#8217; like this: </p>
+<dt>SSL or Not</dt>
+<dd> libcurl can be built and customized in many ways. One of the things that varies from different libraries and builds is the support for SSL-based transfers, like HTTPS and FTPS. If a supported SSL library was detected properly at build-time, libcurl will be built with SSL support. To figure out if an installed libcurl has been built with SSL support enabled, use &#8216;curl-config&#8217; like this: </dd>
 <p> $ curl-config &#8211;feature </p>
 <p> And if SSL is supported, the keyword &#8216;SSL&#8217; will be written to stdout, possibly together with a few other features that could be either on or off on for different libcurls. </p>
 <p> See also the &quot;Features libcurl Provides&quot; further down.</p>
-<dt>autoconf macro</p>
-<dd> When you write your configure script to detect libcurl and setup variables accordingly, we offer a prewritten macro that probably does everything you need in this area. See docs/libcurl/libcurl.m4 file &#8211; it includes docs on how to use it. </p>
+<dt>autoconf macro</dt>
+<dd> When you write your configure script to detect libcurl and setup variables accordingly, we offer a prewritten macro that probably does everything you need in this area. See docs/libcurl/libcurl.m4 file &#8211; it includes docs on how to use it. </dd>
 </dl>
 <h2>Portable Code in a Portable World</h2>
 <p> The people behind libcurl have put a considerable effort to make libcurl work on a large amount of different operating systems and environments. </p>
@@ -38,13 +38,11 @@ description: "libcurl-tutorial – libcurl programming tutorial"
 <p>&nbsp;<wbr>curl_global_init() </p>
 <p> and it takes one parameter which is a bit pattern that tells libcurl what to initialize. Using <i>CURL_GLOBAL_ALL</i> will make it initialize all known internal sub modules, and might be a good default option. The current two bits that are specified are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>CURL_GLOBAL_WIN32</p>
-<dd> which only does anything on Windows machines. When used on a Windows machine, it&#8217;ll make libcurl initialize the win32 socket stuff. Without having that initialized properly, your program cannot use sockets properly. You should only do this once for each application, so if your program already does this or of another library in use does it, you should not tell libcurl to do this as well.</p>
-<dt>CURL_GLOBAL_SSL</p>
-<dd> which only does anything on libcurls compiled and built SSL-enabled. On these systems, this will make libcurl initialize the SSL library properly for this application. This only needs to be done once for each application so if your program or another library already does this, this bit should not be needed.</dl>
+<dt>CURL_GLOBAL_WIN32</dt>
+<dd> which only does anything on Windows machines. When used on a Windows machine, it&#8217;ll make libcurl initialize the win32 socket stuff. Without having that initialized properly, your program cannot use sockets properly. You should only do this once for each application, so if your program already does this or of another library in use does it, you should not tell libcurl to do this as well.</dd>
+<dt>CURL_GLOBAL_SSL</dt>
+<dd> which only does anything on libcurls compiled and built SSL-enabled. On these systems, this will make libcurl initialize the SSL library properly for this application. This only needs to be done once for each application so if your program or another library already does this, this bit should not be needed.</dd></dl>
 </dl>
 <p> libcurl has a default protection mechanism that detects if <i><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a>(3)</i> hasn&#8217;t been called by the time <i><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i> is called and if that is the case, libcurl runs the function itself with a guessed bit pattern. Please note that depending solely on this is not considered nice nor very good. </p>
 <p> When the program no longer uses libcurl, it should call <i><a href="/docs/linux/man/3-curl_global_cleanup/">curl_global_cleanup</a>(3)</i>, which is the opposite of the init call. It will then do the reversed operations to cleanup the resources the <i><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a>(3)</i> call initialized. </p>
@@ -235,7 +233,7 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> If you&#8217;re using a SOCKS proxy, you may find that libcurl doesn&#8217;t quite support all operations through it. </p>
 <p> For HTTP proxies: the fact that the proxy is a HTTP proxy puts certain restrictions on what can actually happen. A requested URL that might not be a HTTP URL will be still be passed to the HTTP proxy to deliver back to libcurl. This happens transparently, and an application may not need to know. I say &quot;may&quot;, because at times it is very important to understand that all operations over a HTTP proxy use the HTTP protocol. For example, you can&#8217;t invoke your own custom FTP commands or even proper FTP directory listings. </p>
 <dl>
-<dt>Proxy Options</p>
+<dt>Proxy Options</dt>
 <dd>
 <p> To tell libcurl to use a proxy at a given port number: </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_PROXY,&nbsp;<wbr>&quot;proxy-host.com:8080&quot;); </p>
@@ -244,26 +242,26 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> If you want to, you can specify the host name only in the CURLOPT_PROXY option, and set the port number separately with CURLOPT_PROXYPORT. </p>
 <p> Tell libcurl what kind of proxy it is with CURLOPT_PROXYTYPE (if not, it will default to assume a HTTP proxy): </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS4); </p>
-<dt>Environment Variables</p>
+</dd><dt>Environment Variables</dt>
 <dd>
 <p> libcurl automatically checks and uses a set of environment variables to know what proxies to use for certain protocols. The names of the variables are following an ancient de facto standard and are built up as &quot;[protocol]_proxy&quot; (note the lower casing). Which makes the variable &#8216;http_proxy&#8217; checked for a name of a proxy to use when the input URL is HTTP. Following the same rule, the variable named &#8216;ftp_proxy&#8217; is checked for FTP URLs. Again, the proxies are always HTTP proxies, the different names of the variables simply allows different HTTP proxies to be used. </p>
 <p> The proxy environment variable contents should be in the format &quot;[protocol://][user:password@]machine[:port]&quot;. Where the protocol:// part is simply ignored if present (so <a rel="nofollow" href="http://proxy">http://proxy</a> and <a href="bluerk://proxy">bluerk://proxy</a> will do the same) and the optional port number specifies on which port the proxy operates on the host. If not specified, the internal default port number will be used and that is most likely *not* the one you would like it to be. </p>
 <p> There are two special environment variables. &#8216;all_proxy&#8217; is what sets proxy for any URL in case the protocol specific variable wasn&#8217;t set, and &#8216;no_proxy&#8217; defines a list of hosts that should not use a proxy even though a variable may say so. If &#8216;no_proxy&#8217; is a plain asterisk (&quot;*&quot;) it matches all hosts. </p>
 <p> To explicitly disable libcurl&#8217;s checking for and using the proxy environment variables, set the proxy name to &quot;&quot; &#8211; an empty string &#8211; with CURLOPT_PROXY.</p>
-<dt>SSL and Proxies</p>
+</dd><dt>SSL and Proxies</dt>
 <dd>
 <p> SSL is for secure point-to-point connections. This involves strong encryption and similar things, which effectively makes it impossible for a proxy to operate as a &quot;man in between&quot; which the proxy&#8217;s task is, as previously discussed. Instead, the only way to have SSL work over a HTTP proxy is to ask the proxy to tunnel trough everything without being able to check or fiddle with the traffic. </p>
 <p> Opening an SSL connection over a HTTP proxy is therefor a matter of asking the proxy for a straight connection to the target host on a specified port. This is made with the HTTP request CONNECT. (&quot;please mr proxy, connect me to that remote host&quot;). </p>
 <p> Because of the nature of this operation, where the proxy has no idea what kind of data that is passed in and out through this tunnel, this breaks some of the very few advantages that come from using a proxy, such as caching. Many organizations prevent this kind of tunneling to other destination port numbers than 443 (which is the default HTTPS port number). </p>
-<dt>Tunneling Through Proxy</p>
-<dd> As explained above, tunneling is required for SSL to work and often even restricted to the operation intended for SSL; HTTPS. </p>
+</dd><dt>Tunneling Through Proxy</dt>
+<dd> As explained above, tunneling is required for SSL to work and often even restricted to the operation intended for SSL; HTTPS. </dd>
 <p> This is however not the only time proxy-tunneling might offer benefits to you or your application. </p>
 <p> As tunneling opens a direct connection from your application to the remote machine, it suddenly also re-introduces the ability to do non-HTTP operations over a HTTP proxy. You can in fact use things such as FTP upload or FTP custom commands this way. </p>
 <p> Again, this is often prevented by the administrators of proxies and is rarely allowed. </p>
 <p> Tell libcurl to use proxy tunneling like this: </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_HTTPPROXYTUNNEL, 1L); </p>
 <p> In fact, there might even be times when you want to do plain HTTP operations using a tunnel like this, as it then enables you to operate on the remote server instead of asking the proxy to do so. libcurl will not stand in the way for such innovative actions either! </p>
-<dt>Proxy Auto-Config</p>
+<dt>Proxy Auto-Config</dt>
 <dd>
 <p> Netscape first came up with this. It is basically a web page (usually using a .pac extension) with a Javascript that when executed by the browser with the requested URL as input, returns information to the browser on how to connect to the URL. The returned information might be &quot;DIRECT&quot; (which means no proxy should be used), &quot;PROXY host:port&quot; (to tell the browser where the proxy for this particular URL is) or &quot;SOCKS host:port&quot; (to direct the browser to a SOCKS proxy). </p>
 <p> libcurl has no means to interpret or evaluate Javascript and thus it doesn&#8217;t support this. If you get yourself in a position where you face this nasty invention, the following advice have been mentioned and used in the past: </p>
@@ -271,7 +269,7 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> &#8211; Read the Javascript code and rewrite the same logic in another language. </p>
 <p> &#8211; Implement a Javascript interpreter; people have successfully used the Mozilla Javascript engine in the past. </p>
 <p> &#8211; Ask your admins to stop this, for a static proxy setup or similar. </p>
-</dl>
+</dd></dl>
 <h2>Persistence Is The Way to Happiness</h2>
 <p> Re-cycling the same easy handle several times when doing multiple requests is the way to go. </p>
 <p> After each single <i><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i> operation, libcurl will keep the connection alive and open. A subsequent request using the same easy handle to the same host might just be able to use the already open connection! This reduces network impact a lot. </p>
@@ -284,24 +282,24 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <h2>HTTP Headers Used by libcurl</h2>
 <p> When you use libcurl to do HTTP requests, it&#8217;ll pass along a series of headers automatically. It might be good for you to know and understand these. You can replace or remove them by using the CURLOPT_HTTPHEADER option. </p>
 <dl>
-<dt>Host</p>
-<dd> This header is required by HTTP 1.1 and even many 1.0 servers and should be the name of the server we want to talk to. This includes the port number if anything but default. </p>
-<dt>Accept</p>
-<dd> &quot;*/*&quot;. </p>
-<dt>Expect</p>
-<dd> When doing POST requests, libcurl sets this header to &quot;100-continue&quot; to ask the server for an &quot;OK&quot; message before it proceeds with sending the data part of the post. If the POSTed data amount is deemed &quot;small&quot;, libcurl will not use this header. </p>
+<dt>Host</dt>
+<dd> This header is required by HTTP 1.1 and even many 1.0 servers and should be the name of the server we want to talk to. This includes the port number if anything but default. </dd>
+<dt>Accept</dt>
+<dd> &quot;*/*&quot;. </dd>
+<dt>Expect</dt>
+<dd> When doing POST requests, libcurl sets this header to &quot;100-continue&quot; to ask the server for an &quot;OK&quot; message before it proceeds with sending the data part of the post. If the POSTed data amount is deemed &quot;small&quot;, libcurl will not use this header. </dd>
 </dl>
 <h2>Customizing Operations</h2>
 <p> There is an ongoing development today where more and more protocols are built upon HTTP for transport. This has obvious benefits as HTTP is a tested and reliable protocol that is widely deployed and has excellent proxy-support. </p>
 <p> When you use one of these protocols, and even when doing other kinds of programming you may need to change the traditional HTTP (or FTP or&#8230;) manners. You may need to change words, headers or various data. </p>
 <p> libcurl is your friend here too. </p>
 <dl>
-<dt>CUSTOMREQUEST</p>
-<dd> If just changing the actual HTTP request keyword is what you want, like when GET, HEAD or POST is not good enough for you, CURLOPT_CUSTOMREQUEST is there for you. It is very simple to use: </p>
+<dt>CUSTOMREQUEST</dt>
+<dd> If just changing the actual HTTP request keyword is what you want, like when GET, HEAD or POST is not good enough for you, CURLOPT_CUSTOMREQUEST is there for you. It is very simple to use: </dd>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_CUSTOMREQUEST,&nbsp;<wbr>&quot;MYOWNREQUEST&quot;); </p>
 <p> When using the custom request, you change the request keyword of the actual request you are performing. Thus, by default you make a GET request but you can also make a POST operation (as described before) and then replace the POST keyword if you want to. You&#8217;re the boss. </p>
-<dt>Modify Headers</p>
-<dd> HTTP-like protocols pass a series of headers to the server when doing the request, and you&#8217;re free to pass any amount of extra headers that you think fit. Adding headers is this easy: </p>
+<dt>Modify Headers</dt>
+<dd> HTTP-like protocols pass a series of headers to the server when doing the request, and you&#8217;re free to pass any amount of extra headers that you think fit. Adding headers is this easy: </dd>
 <p>struct curl_slist *headers = NULL; /* init to NULL is important */<br />
 headers = curl_slist_append(headers, &#8220;Hey-server-hey: how are you?&#8221;);<br />
 headers = curl_slist_append(headers, &#8220;X-silly-content: yes&#8221;);<br />
@@ -312,18 +310,18 @@ curl_slist_free_all(headers);  /* free the header list */</p>
 <p> &#8230; and if you think some of the internally generated headers, such as Accept: or Host: don&#8217;t contain the data you want them to contain, you can replace them by simply setting them too: </p>
 <p>headers = curl_slist_append(headers, &#8220;Accept: Agent-007&#8221;);<br />
 headers = curl_slist_append(headers, &#8220;Host: munged.host.line&#8221;);</p>
-<dt>Delete Headers</p>
-<dd> If you replace an existing header with one with no contents, you will prevent the header from being sent. For instance, if you want to completely prevent the &quot;Accept:&quot; header from being sent, you can disable it with code similar to this: </p>
+<dt>Delete Headers</dt>
+<dd> If you replace an existing header with one with no contents, you will prevent the header from being sent. For instance, if you want to completely prevent the &quot;Accept:&quot; header from being sent, you can disable it with code similar to this: </dd>
 <p>&nbsp;<wbr>headers&nbsp;<wbr>=&nbsp;<wbr>curl_slist_append(headers,&nbsp;<wbr>&quot;Accept:&quot;); </p>
 <p> Both replacing and canceling internal headers should be done with careful consideration and you should be aware that you may violate the HTTP protocol when doing so. </p>
-<dt>Enforcing chunked transfer-encoding</p>
+<dt>Enforcing chunked transfer-encoding</dt>
 <dd>
 <p> By making sure a request uses the custom header &quot;Transfer-Encoding: chunked&quot; when doing a non-GET HTTP operation, libcurl will switch over to &quot;chunked&quot; upload, even though the size of the data to upload might be known. By default, libcurl usually switches over to chunked upload automatically if the upload data size is unknown. </p>
-<dt>HTTP Version</p>
+</dd><dt>HTTP Version</dt>
 <dd>
 <p> All HTTP requests includes the version number to tell the server which version we support. libcurl speaks HTTP 1.1 by default. Some very old servers don&#8217;t like getting 1.1-requests and when dealing with stubborn old things like that, you can tell libcurl to use 1.0 instead by doing something like this: </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0); </p>
-<dt>FTP Custom Commands</p>
+</dd><dt>FTP Custom Commands</dt>
 <dd>
 <p> Not all protocols are HTTP-like, and thus the above may not help you when you want to make, for example, your FTP transfers to behave differently. </p>
 <p> Sending custom commands to a FTP server means that you need to send the commands exactly as the FTP server expects them (RFC959 is a good guide here), and you can only use commands that work on the control-connection alone. All kinds of commands that require data interchange and thus need a data-connection must be left to libcurl&#8217;s own judgement. Also be aware that libcurl will do its very best to change directory to the target directory before doing any transfer, so if you change directory (with CWD or similar) you might confuse libcurl and then it might not attempt to transfer the file in the correct remote directory. </p>
@@ -339,8 +337,8 @@ curl_slist_free_all(headers);  /* free the header list */
 <p> The custom FTP command will be issued to the server in the same order they are added to the list, and if a command gets an error code returned back from the server, no more commands will be issued and libcurl will bail out with an error code (CURLE_QUOTE_ERROR). Note that if you use CURLOPT_QUOTE to send commands before a transfer, no transfer will actually take place when a quote command has failed. </p>
 <p> If you set the CURLOPT_HEADER to 1, you will tell libcurl to get information about the target file and output &quot;headers&quot; about it. The headers will be in &quot;HTTP-style&quot;, looking like they do in HTTP. </p>
 <p> The option to enable headers or to run custom FTP commands may be useful to combine with CURLOPT_NOBODY. If this option is set, no actual file content transfer will be performed. </p>
-<dt>FTP Custom CUSTOMREQUEST</p>
-<dd> If you do want to list the contents of a FTP directory using your own defined FTP command, CURLOPT_CUSTOMREQUEST will do just that. &quot;NLST&quot; is the default one for listing directories but you&#8217;re free to pass in your idea of a good alternative. </p>
+</dd><dt>FTP Custom CUSTOMREQUEST</dt>
+<dd> If you do want to list the contents of a FTP directory using your own defined FTP command, CURLOPT_CUSTOMREQUEST will do just that. &quot;NLST&quot; is the default one for listing directories but you&#8217;re free to pass in your idea of a good alternative. </dd>
 </dl>
 <h2>Cookies Without Chocolate Chips</h2>
 <p> In the HTTP sense, a cookie is a name with an associated value. A server sends the name and value to the client, and expects it to get sent back on every subsequent request to the server that matches the particular conditions set. The conditions include that the domain name and path match and that the cookie hasn&#8217;t become too old. </p>
@@ -371,49 +369,49 @@ curl_slist_free_all(headers);  /* free the header list */
 <p> The libcurl project takes security seriously. The library is written with caution and precautions are taken to mitigate many kinds of risks encountered while operating with potentially malicious servers on the Internet. It is a powerful library, however, which allows application writers to make trade offs between ease of writing and exposure to potential risky operations. If used the right way, you can use libcurl to transfer data pretty safely. </p>
 <p> Many applications are used in closed networks where users and servers can be trusted, but many others are used on arbitrary servers and are fed input from potentially untrusted users. Following is a discussion about some risks in the ways in which applications commonly use libcurl and potential mitigations of those risks. It is by no means comprehensive, but shows classes of attacks that robust applications should consider. The Common Weakness Enumeration project at <a rel="nofollow" href="http://cwe.mitre.org/">http://cwe.mitre.org/</a> is a good reference for many of these and similar types of weaknesses of which application writers should be aware. </p>
 <dl>
-<dt>Command Lines</p>
-<dd> If you use a command line tool (such as curl) that uses libcurl, and you give options to the tool on the command line those options can very likely get read by other users of your system when they use &#8216;ps&#8217; or other tools to list currently running processes. </p>
+<dt>Command Lines</dt>
+<dd> If you use a command line tool (such as curl) that uses libcurl, and you give options to the tool on the command line those options can very likely get read by other users of your system when they use &#8216;ps&#8217; or other tools to list currently running processes. </dd>
 <p> To avoid this problem, never feed sensitive things to programs using command line options. Write them to a protected file and use the -K option to avoid this. </p>
-<dt>.netrc</p>
-<dd> .netrc is a pretty handy file/feature that allows you to login quickly and automatically to frequently visited sites. The file contains passwords in clear text and is a real security risk. In some cases, your .netrc is also stored in a home directory that is NFS mounted or used on another network based file system, so the clear text password will fly through your network every time anyone reads that file! </p>
+<dt>.netrc</dt>
+<dd> .netrc is a pretty handy file/feature that allows you to login quickly and automatically to frequently visited sites. The file contains passwords in clear text and is a real security risk. In some cases, your .netrc is also stored in a home directory that is NFS mounted or used on another network based file system, so the clear text password will fly through your network every time anyone reads that file! </dd>
 <p> To avoid this problem, don&#8217;t use .netrc files and never store passwords in plain text anywhere. </p>
-<dt>Clear Text Passwords</p>
-<dd> Many of the protocols libcurl supports send name and password unencrypted as clear text (HTTP Basic authentication, FTP, TELNET etc). It is very easy for anyone on your network or a network nearby yours to just fire up a network analyzer tool and eavesdrop on your passwords. Don&#8217;t let the fact that HTTP Basic uses base64 encoded passwords fool you. They may not look readable at a first glance, but they very easily &quot;deciphered&quot; by anyone within seconds. </p>
+<dt>Clear Text Passwords</dt>
+<dd> Many of the protocols libcurl supports send name and password unencrypted as clear text (HTTP Basic authentication, FTP, TELNET etc). It is very easy for anyone on your network or a network nearby yours to just fire up a network analyzer tool and eavesdrop on your passwords. Don&#8217;t let the fact that HTTP Basic uses base64 encoded passwords fool you. They may not look readable at a first glance, but they very easily &quot;deciphered&quot; by anyone within seconds. </dd>
 <p> To avoid this problem, use HTTP authentication methods or other protocols that don&#8217;t let snoopers see your password: HTTP with Digest, NTLM or GSS authentication, HTTPS, FTPS, SCP, SFTP and FTP-Kerberos are a few examples. </p>
-<dt>Redirects</p>
-<dd> The CURLOPT_FOLLOWLOCATION option automatically follows HTTP redirects sent by a remote server. These redirects can refer to any kind of URL, not just HTTP. A redirect to a file: URL would cause the libcurl to read (or write) arbitrary files from the local filesystem. If the application returns the data back to the user (as would happen in some kinds of CGI scripts), an attacker could leverage this to read otherwise forbidden data (e.g. file://localhost/etc/passwd). </p>
+<dt>Redirects</dt>
+<dd> The CURLOPT_FOLLOWLOCATION option automatically follows HTTP redirects sent by a remote server. These redirects can refer to any kind of URL, not just HTTP. A redirect to a file: URL would cause the libcurl to read (or write) arbitrary files from the local filesystem. If the application returns the data back to the user (as would happen in some kinds of CGI scripts), an attacker could leverage this to read otherwise forbidden data (e.g. file://localhost/etc/passwd). </dd>
 <p> If authentication credentials are stored in the ~/.netrc file, or Kerberos is in use, any other URL type (not just file:) that requires authentication is also at risk. A redirect such as <a href="ftp://some-internal-server/private-file">ftp://some-internal-server/private-file</a> would then return data even when the server is password protected. </p>
 <p> In the same way, if an unencrypted SSH private key has been configured for the user running the libcurl application, SCP: or SFTP: URLs could access password or private-key protected resources, e.g. <a href="sftp://user@some-internal-server/etc/passwd">sftp://user@some-internal-server/etc/passwd</a> </p>
 <p> The CURLOPT_REDIR_PROTOCOLS and CURLOPT_NETRC options can be used to mitigate against this kind of attack. </p>
 <p> A redirect can also specify a location available only on the machine running libcurl, including servers hidden behind a firewall from the attacker. e.g. <a rel="nofollow" href="http://127.0.0.1/">http://127.0.0.1/</a> or <a href="http://intranet/delete-stuff.cgi?delete=all">http://intranet/delete-stuff.cgi?delete=all</a> or <a href="tftp://bootp-server/pc-config-data">tftp://bootp-server/pc-config-data</a> </p>
 <p> Apps can mitigate against this by disabling CURLOPT_FOLLOWLOCATION and handling redirects itself, sanitizing URLs as necessary. Alternately, an app could leave CURLOPT_FOLLOWLOCATION enabled but set CURLOPT_REDIR_PROTOCOLS and install a CURLOPT_OPENSOCKETFUNCTION callback function in which addresses are sanitized before use. </p>
-<dt>Private Resources</p>
-<dd> A user who can control the DNS server of a domain being passed in within a URL can change the address of the host to a local, private address which the libcurl application will then use. e.g. The innocuous URL <a rel="nofollow" href="http://fuzzybunnies.example.com/">http://fuzzybunnies.example.com/</a> could actually resolve to the IP address of a server behind a firewall, such as 127.0.0.1 or 10.1.2.3 Apps can mitigate against this by setting a CURLOPT_OPENSOCKETFUNCTION and checking the address before a connection. </p>
+<dt>Private Resources</dt>
+<dd> A user who can control the DNS server of a domain being passed in within a URL can change the address of the host to a local, private address which the libcurl application will then use. e.g. The innocuous URL <a rel="nofollow" href="http://fuzzybunnies.example.com/">http://fuzzybunnies.example.com/</a> could actually resolve to the IP address of a server behind a firewall, such as 127.0.0.1 or 10.1.2.3 Apps can mitigate against this by setting a CURLOPT_OPENSOCKETFUNCTION and checking the address before a connection. </dd>
 <p> All the malicious scenarios regarding redirected URLs apply just as well to non-redirected URLs, if the user is allowed to specify an arbitrary URL that could point to a private resource. For example, a web app providing a translation service might happily translate file://localhost/etc/passwd and display the result. Apps can mitigate against this with the CURLOPT_PROTOCOLS option as well as by similar mitigation techniques for redirections. </p>
 <p> A malicious FTP server could in response to the PASV command return an IP address and port number for a server local to the app running libcurl but behind a firewall. Apps can mitigate against this by using the CURLOPT_FTP_SKIP_PASV_IP option or CURLOPT_FTPPORT. </p>
-<dt>Uploads</p>
-<dd> When uploading, a redirect can cause a local (or remote) file to be overwritten. Apps must not allow any unsanitized URL to be passed in for uploads. Also, CURLOPT_FOLLOWLOCATION should not be used on uploads. Instead, the app should handle redirects itself, sanitizing each URL first. </p>
-<dt>Authentication</p>
-<dd> Use of CURLOPT_UNRESTRICTED_AUTH could cause authentication information to be sent to an unknown second server. Apps can mitigate against this by disabling CURLOPT_FOLLOWLOCATION and handling redirects itself, sanitizing where necessary. </p>
+<dt>Uploads</dt>
+<dd> When uploading, a redirect can cause a local (or remote) file to be overwritten. Apps must not allow any unsanitized URL to be passed in for uploads. Also, CURLOPT_FOLLOWLOCATION should not be used on uploads. Instead, the app should handle redirects itself, sanitizing each URL first. </dd>
+<dt>Authentication</dt>
+<dd> Use of CURLOPT_UNRESTRICTED_AUTH could cause authentication information to be sent to an unknown second server. Apps can mitigate against this by disabling CURLOPT_FOLLOWLOCATION and handling redirects itself, sanitizing where necessary. </dd>
 <p> Use of the CURLAUTH_ANY option to CURLOPT_HTTPAUTH could result in user name and password being sent in clear text to an HTTP server. Instead, use CURLAUTH_ANYSAFE which ensures that the password is encrypted over the network, or else fail the request. </p>
 <p> Use of the CURLUSESSL_TRY option to CURLOPT_USE_SSL could result in user name and password being sent in clear text to an FTP server. Instead, use CURLUSESSL_CONTROL to ensure that an encrypted connection is used or else fail the request. </p>
-<dt>Cookies</p>
-<dd> If cookies are enabled and cached, then a user could craft a URL which performs some malicious action to a site whose authentication is already stored in a cookie. e.g. <a rel="nofollow" href="http://mail.example.com/delete-stuff.cgi?delete=all">http://mail.example.com/delete-stuff.cgi?delete=all</a> Apps can mitigate against this by disabling cookies or clearing them between requests. </p>
-<dt>Dangerous URLs</p>
-<dd> SCP URLs can contain raw commands within the scp: URL, which is a side effect of how the SCP protocol is designed. e.g. <a href="scp://user:pass@host/a;date">scp://user:pass@host/a;date</a> &gt;/tmp/test; Apps must not allow unsanitized SCP: URLs to be passed in for downloads. </p>
-<dt>Denial of Service</p>
-<dd> A malicious server could cause libcurl to effectively hang by sending a trickle of data through, or even no data at all but just keeping the TCP connection open. This could result in a denial-of-service attack. The CURLOPT_TIMEOUT and/or CURLOPT_LOW_SPEED_LIMIT options can be used to mitigate against this. </p>
+<dt>Cookies</dt>
+<dd> If cookies are enabled and cached, then a user could craft a URL which performs some malicious action to a site whose authentication is already stored in a cookie. e.g. <a rel="nofollow" href="http://mail.example.com/delete-stuff.cgi?delete=all">http://mail.example.com/delete-stuff.cgi?delete=all</a> Apps can mitigate against this by disabling cookies or clearing them between requests. </dd>
+<dt>Dangerous URLs</dt>
+<dd> SCP URLs can contain raw commands within the scp: URL, which is a side effect of how the SCP protocol is designed. e.g. <a href="scp://user:pass@host/a;date">scp://user:pass@host/a;date</a> &gt;/tmp/test; Apps must not allow unsanitized SCP: URLs to be passed in for downloads. </dd>
+<dt>Denial of Service</dt>
+<dd> A malicious server could cause libcurl to effectively hang by sending a trickle of data through, or even no data at all but just keeping the TCP connection open. This could result in a denial-of-service attack. The CURLOPT_TIMEOUT and/or CURLOPT_LOW_SPEED_LIMIT options can be used to mitigate against this. </dd>
 <p> A malicious server could cause libcurl to effectively hang by starting to send data, then severing the connection without cleanly closing the TCP connection. The app could install a CURLOPT_SOCKOPTFUNCTION callback function and set the TCP SO_KEEPALIVE option to mitigate against this. Setting one of the timeout options would also work against this attack. </p>
 <p> A malicious server could cause libcurl to download an infinite amount of data, potentially causing all of memory or disk to be filled. Setting the CURLOPT_MAXFILESIZE_LARGE option is not sufficient to guard against this. Instead, the app should monitor the amount of data received within the write or progress callback and abort once the limit is reached. </p>
 <p> A malicious HTTP server could cause an infinite redirection loop, causing a denial-of-service. This can be mitigated by using the CURLOPT_MAXREDIRS option. </p>
-<dt>Arbitrary Headers</p>
-<dd> User-supplied data must be sanitized when used in options like CURLOPT_USERAGENT, CURLOPT_HTTPHEADER, CURLOPT_POSTFIELDS and others that are used to generate structured data. Characters like embedded carriage returns or ampersands could allow the user to create additional headers or fields that could cause malicious transactions. </p>
-<dt>Server-supplied Names</p>
-<dd> A server can supply data which the application may, in some cases, use as a file name. The curl command-line tool does this with &#8211;remote-header-name, using the Content-disposition: header to generate a file name. An application could also use CURLINFO_EFFECTIVE_URL to generate a file name from a server-supplied redirect URL. Special care must be taken to sanitize such names to avoid the possibility of a malicious server supplying one like &quot;/etc/passwd&quot;, &quot;utoexec.bat&quot; or even &quot;.bashrc&quot;. </p>
-<dt>Server Certificates</p>
-<dd> A secure application should never use the CURLOPT_SSL_VERIFYPEER option to disable certificate validation. There are numerous attacks that are enabled by apps that fail to properly validate server TLS/SSL certificates, thus enabling a malicious server to spoof a legitimate one. HTTPS without validated certificates is potentially as insecure as a plain HTTP connection. </p>
-<dt>Showing What You Do</p>
-<dd> On a related issue, be aware that even in situations like when you have problems with libcurl and ask someone for help, everything you reveal in order to get best possible help might also impose certain security related risks. Host names, user names, paths, operating system specifics, etc (not to mention passwords of course) may in fact be used by intruders to gain additional information of a potential target. </p>
+<dt>Arbitrary Headers</dt>
+<dd> User-supplied data must be sanitized when used in options like CURLOPT_USERAGENT, CURLOPT_HTTPHEADER, CURLOPT_POSTFIELDS and others that are used to generate structured data. Characters like embedded carriage returns or ampersands could allow the user to create additional headers or fields that could cause malicious transactions. </dd>
+<dt>Server-supplied Names</dt>
+<dd> A server can supply data which the application may, in some cases, use as a file name. The curl command-line tool does this with &#8211;remote-header-name, using the Content-disposition: header to generate a file name. An application could also use CURLINFO_EFFECTIVE_URL to generate a file name from a server-supplied redirect URL. Special care must be taken to sanitize such names to avoid the possibility of a malicious server supplying one like &quot;/etc/passwd&quot;, &quot;utoexec.bat&quot; or even &quot;.bashrc&quot;. </dd>
+<dt>Server Certificates</dt>
+<dd> A secure application should never use the CURLOPT_SSL_VERIFYPEER option to disable certificate validation. There are numerous attacks that are enabled by apps that fail to properly validate server TLS/SSL certificates, thus enabling a malicious server to spoof a legitimate one. HTTPS without validated certificates is potentially as insecure as a plain HTTP connection. </dd>
+<dt>Showing What You Do</dt>
+<dd> On a related issue, be aware that even in situations like when you have problems with libcurl and ask someone for help, everything you reveal in order to get best possible help might also impose certain security related risks. Host names, user names, paths, operating system specifics, etc (not to mention passwords of course) may in fact be used by intruders to gain additional information of a potential target. </dd>
 <p> To avoid this problem, you must of course use your common sense. Often, you can just edit out the sensitive data or just search/replace your true information with faked data. </p>
 </dl>
 <h2>Multiple Transfers Using the multi Interface</h2>
@@ -437,13 +435,13 @@ curl_slist_free_all(headers);  /* free the header list */
 <p> Some things are never shared automatically, not within multi handles, like for example cookies so the only way to share that is with the share interface.</p>
 <h2>Footnotes</h2>
 <dl>
-<dt>[1]</p>
-<dd> libcurl 7.10.3 and later have the ability to switch over to chunked Transfer-Encoding in cases where HTTP uploads are done with data of an unknown size.</p>
-<dt>[2]</p>
-<dd> This happens on Windows machines when libcurl is built and used as a DLL. However, you can still do this on Windows if you link with a static library.</p>
-<dt>[3]</p>
-<dd> The curl-config tool is generated at build-time (on UNIX-like systems) and should be installed with the &#8216;make install&#8217; or similar instruction that installs the library, header files, man pages etc.</p>
-<dt>[4]</p>
-<dd> This behavior was different in versions before 7.17.0, where strings had to remain valid past the end of the <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> call. </p>
+<dt>[1]</dt>
+<dd> libcurl 7.10.3 and later have the ability to switch over to chunked Transfer-Encoding in cases where HTTP uploads are done with data of an unknown size.</dd>
+<dt>[2]</dt>
+<dd> This happens on Windows machines when libcurl is built and used as a DLL. However, you can still do this on Windows if you link with a static library.</dd>
+<dt>[3]</dt>
+<dd> The curl-config tool is generated at build-time (on UNIX-like systems) and should be installed with the &#8216;make install&#8217; or similar instruction that installs the library, header files, man pages etc.</dd>
+<dt>[4]</dt>
+<dd> This behavior was different in versions before 7.17.0, where strings had to remain valid past the end of the <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> call. </dd>
 </dl>
 <h2>Index</h2>

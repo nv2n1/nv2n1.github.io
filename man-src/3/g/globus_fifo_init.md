@@ -64,7 +64,7 @@ description: "FIFO Queue –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAV">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAV">Author</a></dt>
+<dd></dd></dl>

@@ -16,8 +16,8 @@ bson_copy(const bson_t *bson);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_copy/">bson_copy</a>(3)</code> function shall copy the contents of a bson document into a new <code>bson_t</code> \&amp;. </p>
 <p> The resulting <code>bson_t</code> should be freed with <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> \&amp;. </p>

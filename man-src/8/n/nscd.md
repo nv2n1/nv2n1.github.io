@@ -14,8 +14,8 @@ description: "nscd – name service cache daemon"
 <p> There are two caches for each database: a positive one for items found, and a negative one for items not found. Each cache has a separate TTL (time-to-live) period for its data. Note that the shadow file is specifically not cached. <code><a href="/docs/linux/man/3-getspnam/">getspnam</a></code>(3) calls remain uncached as a result.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>will give you a list with all options and what they do.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>will give you a list with all options and what they do.</dd></dl>
 <h2>Notes</h2>
 <p>The daemon will try to watch for changes in configuration files appropriate for each database (e.g., <i>/etc/passwd</i> for the <i>passwd</i> database or <i>/etc/hosts</i> and <i>/etc/resolv.conf</i> for the <i>hosts</i> database), and flush the cache when these are changed. However, this will happen only after a short delay (unless the <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) mechanism is available and glibc 2.9 or later is available), and this auto-detection does not cover configuration files required by nonstandard NSS modules, if any are specified in <i>/etc/nsswitch.conf</i>. In that case, you need to run the following command after changing the configuration file of the database so that <code>nscd</code> invalidates its cache: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr><code>nscd -i</code>&nbsp;<wbr><i>&lt;database&gt;</i></p>

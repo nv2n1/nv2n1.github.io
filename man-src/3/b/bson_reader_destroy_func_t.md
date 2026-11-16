@@ -15,8 +15,8 @@ typedef void (*bson_reader_destroy_func_t)(void *handle);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>handle</code></p>
-<dd> The opaque handle provided to <code>bson_reader_new_from_handle</code> \&amp;.</dl>
+<dt><code>handle</code></dt>
+<dd> The opaque handle provided to <code>bson_reader_new_from_handle</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> An optional callback function that will be called when a <code>bson_reader_t</code> created with <code>bson_reader_new_from_handle</code> is destroyed with <code><a href="/docs/linux/man/3-bson_reader_destroy/">bson_reader_destroy</a>(3)</code> \&amp;. </p>
 <p> The handle used when creating the reader is passed to this callback. </p>

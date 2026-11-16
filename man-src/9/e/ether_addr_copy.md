@@ -15,11 +15,11 @@ ether_addr_copy - Copy an Ethernet address
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>Pointer to a six-byte array Ethernet address destination</dl>
+<dl><dd></dd><dd>Pointer to a six-byte array Ethernet address destination</dd></dl>
  
 
  <i>src</i>
-<dl><dd>Pointer to a six-byte array Ethernet address source</dl>
+<dl><dd>Pointer to a six-byte array Ethernet address source</dd></dl>
 
 <h2>Description</h2>
 

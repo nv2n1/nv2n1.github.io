@@ -23,60 +23,58 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <h2>OPTIONS</h2>
 <p> The tool recognizes the following options:</p>
 <dl>
-<dt>&#8211;help</p>
-<dd> Prints a short summary of the options.</p>
-<dt>&#8211;name=STRING</p>
-<dd> Specifies the published name of the method being encoded. This is the name by which it will be visible to clients of the server.</p>
-<dt>&#8211;namespace=STRING</p>
-<dd> Specifies a namespace that the code of the method will be evaluated in, when the <font SIZE="-1">XPL</font> file is loaded by a server instance.</p>
-<dt>&#8211;type=STRING</p>
-<dd> Specify the type for the resulting file. &#8220;Type&#8221; here refers to whether the container tag used in the resulting <font SIZE="-1">XML</font> will specify a <code>procedure</code> or a <code>method</code>. The default is <code>method</code>. The string is treated case-independant, and only the first character (<tt>&quot;m&quot;</tt> or <tt>&quot;p&quot;</tt>) is actually regarded.</p>
-<dt>&#8211;version=STRING</p>
-<dd> Specify a version stamp for the code routine.</p>
-<dt>&#8211;hidden</p>
-<dd> If this is passe, the resulting file will include a tag that tells the server daemon to not make the routine visible through any introspection interfaces.</p>
-<dt>&#8211;signature=STRING [ &#8211;signature=STRING &#8230; ]</p>
-<dd> Specify one or more signatures for the method. Signatures should be the type names as laid out in the documentation in <font SIZE="-1">RPC::XML</font>, with the elements separated by a colon. You may also separate them with spaces, if you quote the argument. This option may be specified more than once, as some methods may have several signatures.</p>
-<dt>&#8211;helptext=STRING</p>
-<dd> Specify the help text for the method as a simple string on the command line. Not suited for terribly long help strings.</p>
-<dt>&#8211;helpfile=FILE</p>
-<dd> Read the help text for the method from the file specified.</p>
-<dt>&#8211;code=FILE</p>
-<dd> Read the actual code for the routine from the file specified. If this option is not given, the code is read from the standard input file descriptor.</p>
-<dt>&#8211;output=FILE</p>
-<dd> Write the resulting <font SIZE="-1">XML</font> representation to the specified file. If this option is not given, then the output goes to the standard output file descriptor.</p>
-<dt>&#8211;base=NAME</p>
-<dd> This is a special, &#8220;all-in-one&#8221; option. If passed, all other options are ignored. </p>
+<dt>&#8211;help</dt>
+<dd> Prints a short summary of the options.</dd>
+<dt>&#8211;name=STRING</dt>
+<dd> Specifies the published name of the method being encoded. This is the name by which it will be visible to clients of the server.</dd>
+<dt>&#8211;namespace=STRING</dt>
+<dd> Specifies a namespace that the code of the method will be evaluated in, when the <font SIZE="-1">XPL</font> file is loaded by a server instance.</dd>
+<dt>&#8211;type=STRING</dt>
+<dd> Specify the type for the resulting file. &#8220;Type&#8221; here refers to whether the container tag used in the resulting <font SIZE="-1">XML</font> will specify a <code>procedure</code> or a <code>method</code>. The default is <code>method</code>. The string is treated case-independant, and only the first character (<tt>&quot;m&quot;</tt> or <tt>&quot;p&quot;</tt>) is actually regarded.</dd>
+<dt>&#8211;version=STRING</dt>
+<dd> Specify a version stamp for the code routine.</dd>
+<dt>&#8211;hidden</dt>
+<dd> If this is passe, the resulting file will include a tag that tells the server daemon to not make the routine visible through any introspection interfaces.</dd>
+<dt>&#8211;signature=STRING [ &#8211;signature=STRING &#8230; ]</dt>
+<dd> Specify one or more signatures for the method. Signatures should be the type names as laid out in the documentation in <font SIZE="-1">RPC::XML</font>, with the elements separated by a colon. You may also separate them with spaces, if you quote the argument. This option may be specified more than once, as some methods may have several signatures.</dd>
+<dt>&#8211;helptext=STRING</dt>
+<dd> Specify the help text for the method as a simple string on the command line. Not suited for terribly long help strings.</dd>
+<dt>&#8211;helpfile=FILE</dt>
+<dd> Read the help text for the method from the file specified.</dd>
+<dt>&#8211;code=FILE</dt>
+<dd> Read the actual code for the routine from the file specified. If this option is not given, the code is read from the standard input file descriptor.</dd>
+<dt>&#8211;output=FILE</dt>
+<dd> Write the resulting <font SIZE="-1">XML</font> representation to the specified file. If this option is not given, then the output goes to the standard output file descriptor.</dd>
+<dt>&#8211;base=NAME</dt>
+<dd> This is a special, &#8220;all-in-one&#8221; option. If passed, all other options are ignored. </dd>
 <p> The value is used as the base element for reading information from a file named <font SIZE="-1"><code>BASE</code></font>.base. This file will contain specification of the name, version, hidden status, signatures and other method information. Each line of the file should look like one of the following:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>Name: </code><font SIZE="-1">STRING</font></p>
-<dd> Specify the name of the routine being published. If this line does not appear, then the value of the <code>&#8211;base</code> argument with all directory elements removed will be used.</p>
-<dt><code>Version: </code><font SIZE="-1">STRING</font></p>
-<dd> Provide a version stamp for the function. If no line matching this pattern is present, no version tag will be written.</p>
-<dt><code>Hidden: </code><font SIZE="-1">STRING</font></p>
-<dd> If present, <i></i><font SIZE="-1"><i>STRING</i></font><i></i> should be either <tt>&quot;yes&quot;</tt> or <tt>&quot;no&quot;</tt> (case not important). If it is <tt>&quot;yes&quot;</tt>, then the method is marked to be hidden from any introspection <font SIZE="-1">API.</font></p>
-<dt><code>Signature: </code><font SIZE="-1">STRING</font></p>
-<dd> This line may appear more than once, and is treated cumulatively. Other options override previous values if they appear more than once. The portion following the <tt>&quot;Signature:&quot;</tt> part is taken to be a published signature for the method, with elements separated by whitespace. Each method must have at least one signature, so a lack of any will cause an error.</p>
-<dt><code>Helpfile: </code><font SIZE="-1">STRING</font></p>
-<dd> Specifies the file from which to read the help text. It is not an error if no help text is specified.</p>
-<dt><code>Codefile: </code><font SIZE="-1">STRING</font></p>
-<dd> Specifies the file from which to read the code. Code is assumed to be Perl, and will be tagged as such in the resulting file.</p>
-<dt><code>Codefile[lang]: </code>string</p>
-<dd> Specifies the file from which to read code, while also identifying the language that the code is in. This allows for the creation of a <font SIZE="-1"><code>XPL</code></font> file that includes multiple language implementations of the given method or procedure.</dl>
+<dt><code>Name: </code><font SIZE="-1">STRING</font></dt>
+<dd> Specify the name of the routine being published. If this line does not appear, then the value of the <code>&#8211;base</code> argument with all directory elements removed will be used.</dd>
+<dt><code>Version: </code><font SIZE="-1">STRING</font></dt>
+<dd> Provide a version stamp for the function. If no line matching this pattern is present, no version tag will be written.</dd>
+<dt><code>Hidden: </code><font SIZE="-1">STRING</font></dt>
+<dd> If present, <i></i><font SIZE="-1"><i>STRING</i></font><i></i> should be either <tt>&quot;yes&quot;</tt> or <tt>&quot;no&quot;</tt> (case not important). If it is <tt>&quot;yes&quot;</tt>, then the method is marked to be hidden from any introspection <font SIZE="-1">API.</font></dd>
+<dt><code>Signature: </code><font SIZE="-1">STRING</font></dt>
+<dd> This line may appear more than once, and is treated cumulatively. Other options override previous values if they appear more than once. The portion following the <tt>&quot;Signature:&quot;</tt> part is taken to be a published signature for the method, with elements separated by whitespace. Each method must have at least one signature, so a lack of any will cause an error.</dd>
+<dt><code>Helpfile: </code><font SIZE="-1">STRING</font></dt>
+<dd> Specifies the file from which to read the help text. It is not an error if no help text is specified.</dd>
+<dt><code>Codefile: </code><font SIZE="-1">STRING</font></dt>
+<dd> Specifies the file from which to read the code. Code is assumed to be Perl, and will be tagged as such in the resulting file.</dd>
+<dt><code>Codefile[lang]: </code>string</dt>
+<dd> Specifies the file from which to read code, while also identifying the language that the code is in. This allows for the creation of a <font SIZE="-1"><code>XPL</code></font> file that includes multiple language implementations of the given method or procedure.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Any other lines than the above patterns are ignored. </p>
 <p> If no code has been read, then the tool will exit with an error message. </p>
 <p> The output is written to <font SIZE="-1"><code>BASE</code></font>.xpl, preserving the path information so that the resulting file is right alongside the source files. This allows constructs such as: </p>
 <pre>
     make_method --base=methods/introspection
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>FILE FORMAT AND DTD</h2>
 <p> The file format for these published routines is a very simple <font SIZE="-1">XML</font> dialect. This is less due to <font SIZE="-1">XML</font> being an ideal format than it is the availability of the parser, given that the <code>RPC::XML::Server</code> class will already have the parser code in core. Writing a completely new format would not have gained anything. </p>
@@ -125,20 +123,20 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <p> Please report any bugs or feature requests to <tt>&quot;bug-rpc-xml at rt.cpan.org&quot;</tt>, or through the web interface at &lt;<a rel="nofollow" href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=RPC-XML">http://rt.cpan.org/NoAuth/ReportBug.html?Queue=RPC-XML</a>&gt;. I will be notified, and then you&#8217;ll automatically be notified of progress on your bug as I make changes.</p>
 <h2>SUPPORT</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">RT: CPAN</font>&#8216;s request tracker </p>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">RT: CPAN</font>&#8216;s request tracker </dd>
 <p> &lt;<a rel="nofollow" href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=RPC-XML">http://rt.cpan.org/NoAuth/Bugs.html?Dist=RPC-XML</a>&gt;</p>
-<dt>&bull;</p>
-<dd> AnnoCPAN: Annotated <font SIZE="-1">CPAN</font> documentation </p>
+<dt>&bull;</dt>
+<dd> AnnoCPAN: Annotated <font SIZE="-1">CPAN</font> documentation </dd>
 <p> &lt;<a rel="nofollow" href="http://annocpan.org/dist/RPC-XML">http://annocpan.org/dist/RPC-XML</a>&gt;</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">CPAN</font> Ratings </p>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">CPAN</font> Ratings </dd>
 <p> &lt;<a rel="nofollow" href="http://cpanratings.perl.org/d/RPC-XML">http://cpanratings.perl.org/d/RPC-XML</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Search <font SIZE="-1">CPAN</font> </p>
+<dt>&bull;</dt>
+<dd> Search <font SIZE="-1">CPAN</font> </dd>
 <p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/RPC-XML">http://search.cpan.org/dist/RPC-XML</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Source code on GitHub </p>
+<dt>&bull;</dt>
+<dd> Source code on GitHub </dd>
 <p> &lt;<a rel="nofollow" href="http://github.com/rjray/rpc-xml">http://github.com/rjray/rpc-xml</a>&gt;</dl>
 <h2>LICENSE AND COPYRIGHT</h2>
 <p> This module and the code within are released under the terms of the Artistic License 2.0 (<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license-2.0.php">http://www.opensource.org/licenses/artistic-license-2.0.php</a>). This code may be redistributed under either the Artistic License or the <font SIZE="-1">GNU</font> Lesser General Public License (<font SIZE="-1">LGPL</font>) version 2.1 (<a rel="nofollow" href="http://www.opensource.org/licenses/lgpl-2.1.php">http://www.opensource.org/licenses/lgpl-2.1.php</a>).</p>
@@ -149,3 +147,4 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <h2>AUTHOR</h2>
 <p> Randy J. Ray &lt;rjray [at] blackperl.com&gt; </p>
 <h2>Index</h2>
+</p>

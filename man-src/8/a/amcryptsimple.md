@@ -10,10 +10,10 @@ description: "amcryptsimple – reference simple crypt program for Amanda symmet
 <p>amcryptsimple &#8211; reference simple crypt program for Amanda symmetric data encryption</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amcryptsimple</code> to be called by Amanda only</dl>
+<dt> <code>amcryptsimple</code> to be called by Amanda only</dt></dl>
 <h2>Description</h2>
 <p><code>amcryptsimple</code></p>
-<dd>calls <code>gpg</code> to perform symmetric data encryption on Amanda backup. <code>amcryptsimple</code> will search for the gpg program in the following directories: /usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin </p>
+<dd>calls <code>gpg</code> to perform symmetric data encryption on Amanda backup. <code>amcryptsimple</code> will search for the gpg program in the following directories: /usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin </dd>
 <p> <code>amcryptsimple</code> uses one passphrase to encrypt the Amanda data and uses the same passphrase to decrypt the Amanda backup data. <code>amcryptsimple</code> uses AES256 as the symmetric cipher.</p>
 <h2>How To Create Passphrase</h2>
 <p>Store the passphrase inside the home-directory of the Amanda user ($amanda_user) and protect it with proper permissions: </p>
@@ -29,4 +29,4 @@ chmod 700 ~$amanda_user/.am_passphrase</pre>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

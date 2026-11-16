@@ -27,49 +27,49 @@ description: "KDB :: Low Level Methods –"
 <p> The kdb*() class of methods are used to access the storage, to get and set <code>Keys </code> or <code>KeySets </code>. </p>
 <p> The most important functions are:</p>
 <dl>
-<dt>*</p>
-<dd> <code>kdbOpen()</code></p>
-<dt>*</p>
-<dd> <code>kdbClose()</code></p>
-<dt>*</p>
-<dd> <code>kdbGet()</code></p>
-<dt>*</p>
-<dd> <code>kdbSet()</code></dl>
+<dt>*</dt>
+<dd> <code>kdbOpen()</code></dd>
+<dt>*</dt>
+<dd> <code>kdbClose()</code></dd>
+<dt>*</dt>
+<dd> <code>kdbGet()</code></dd>
+<dt>*</dt>
+<dd> <code>kdbSet()</code></dd></dl>
 <p> The two essential functions for dynamic information about backends are:</p>
 <dl>
-<dt>*</p>
-<dd> <code>kdbGetMountpoint()</code></p>
-<dt>*</p>
-<dd> kdbGetCapability()</dl>
+<dt>*</dt>
+<dd> <code>kdbGetMountpoint()</code></dd>
+<dt>*</dt>
+<dd> kdbGetCapability()</dd></dl>
 <p> They use some backend implementation to know the details about how to access the storage. Currently we have this backends:</p>
 <dl>
-<dt>*</p>
-<dd> berkeleydb: the keys are stored in a Berkeley DB database, providing very small footprint, speed, and other advantages.</p>
-<dt>*</p>
-<dd> filesys: the key hierarchy and data are saved as plain text files in the filesystem.</p>
-<dt>*</p>
-<dd> ini: the key hierarchy are saved into configuration files.</dl>
+<dt>*</dt>
+<dd> berkeleydb: the keys are stored in a Berkeley DB database, providing very small footprint, speed, and other advantages.</dd>
+<dt>*</dt>
+<dd> filesys: the key hierarchy and data are saved as plain text files in the filesystem.</dd>
+<dt>*</dt>
+<dd> ini: the key hierarchy are saved into configuration files.</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.libelektra.org/Ini">http://www.libelektra.org/Ini</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.libelektra.org/Ini">http://www.libelektra.org/Ini</a></dd></dl>
 <dl>
-<dt>*</p>
-<dd> fstab: a reference backend used to interpret the /etc/fstab file as a set of keys under system/filesystems .</p>
-<dt>*</p>
-<dd> gconf: makes Elektra use the GConf daemon to access keys. Only the user/ tree is available since GConf is not system wide.</dl>
+<dt>*</dt>
+<dd> fstab: a reference backend used to interpret the /etc/fstab file as a set of keys under system/filesystems .</dd>
+<dt>*</dt>
+<dd> gconf: makes Elektra use the GConf daemon to access keys. Only the user/ tree is available since GConf is not system wide.</dd></dl>
 <p> Backends are physically a library named /lib/libelektra-{NAME}.so. </p>
 <p> See <code>writing a new backend </code> for information about how to write a backend. </p>
 <p> Language binding writers should follow the same rules:</p>
 <dl>
-<dt>*</p>
-<dd> You must relay completely on the backend-dependent methods.</p>
-<dt>*</p>
-<dd> You may use or reimplement the second set of methods.</p>
-<dt>*</p>
-<dd> You should completely reimplement in your language the higher lever methods.</p>
-<dt>*</p>
-<dd> Many methods are just for comfort in C. These methods are marked and need not to be implemented if the binding language has e.g. string operators which can do the operation easily.</dl>
+<dt>*</dt>
+<dd> You must relay completely on the backend-dependent methods.</dd>
+<dt>*</dt>
+<dd> You may use or reimplement the second set of methods.</dd>
+<dt>*</dt>
+<dd> You should completely reimplement in your language the higher lever methods.</dd>
+<dt>*</dt>
+<dd> Many methods are just for comfort in C. These methods are marked and need not to be implemented if the binding language has e.g. string operators which can do the operation easily.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int kdbClose (KDB * handle)Closes the session with the Key database.</h3>
 <p> You should call this method when you finished your affairs with the key database. You can manipulate Key and KeySet objects also after <code>kdbClose()</code>. You must not use any kdb* call afterwards. You can implement <code>kdbClose()</code> in the atexit() handler. </p>
@@ -78,15 +78,15 @@ description: "KDB :: Low Level Methods –"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbOpen()</code></dl>
+</dt><dd> <code>kdbOpen()</code></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database</dl>
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on NULL pointer</dl>
 <h3>ssize_t kdbGet (KDB * handle, KeySet * returned, Key * parentKey, option_t options)Retrieve keys in an atomic and universal way, all other kdbGet Functions rely on that one.</h3>
 <p> The returned KeySet must be initialized or may already contain some keys. The new retrieved keys will be appended using <code>ksAppendKey()</code>. </p>
@@ -96,32 +96,32 @@ description: "KDB :: Low Level Methods –"
 <h2>Options</h2>
 <p> The option is an array of the following ORed flags: </p>
 <dl>
-<dt>*</p>
-<dd> option_t::KDB_O_DEL </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_DEL </dd>
 <p>&nbsp;<wbr>Its often useful to&nbsp;<wbr><code>keyDel()</code>&nbsp;<wbr>the parentKey in the line after&nbsp;<wbr><code>kdbGet()</code>. Using this flag, you can just pass a key allocated with&nbsp;<wbr><code>keyNew()</code>,&nbsp;<wbr><code>kdbGet()</code>&nbsp;<wbr>will free it for you in the end.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_POP </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_POP </dd>
 <p>&nbsp;<wbr>The parentKey itself will always be added to returned. If you only want the children of the parentKey in returned, but not the parentKey itself, use this flag. This is only valid for the first parentKey, the one you passed. The other recursive parentKeys will stay in the keyset. To get only the leaves of the tree, without any parentKey, see&nbsp;<wbr><code>option_t::KDB_O_NODIR</code>&nbsp;<wbr>below.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_NODIR </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_NODIR </dd>
 <p>&nbsp;<wbr>Don&#8217;t include folders in the returned KeySet, so only keys without subkeys. You can picture it best that you only get the leaves of the tree of keys.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_DIRONLY </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_DIRONLY </dd>
 <p>&nbsp;<wbr>Put in returned only the folder keys. The resulting KeySet will be only the skeleton of the tree. This option must not be ORed together with KDB_O_DIR.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_NOSTAT </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_NOSTAT </dd>
 <p>&nbsp;<wbr>Don&#8217;t stat they keys, whatever&nbsp;<wbr><code>keyNeedStat()</code>&nbsp;<wbr>says. That means that also the key value and comment will be retrieved. The flag will result in that all keys in returned don&#8217;t have&nbsp;<wbr><code>keyNeedStat()</code>&nbsp;<wbr>set.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_STATONLY </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_STATONLY </dd>
 <p>&nbsp;<wbr>Only stat the keys. It means that key value and comment will not be retrieved. The resulting keys will contain only meta info such as user and group IDs, owner, mode permissions and modification times. You don&#8217;t need that flag if the keys already have&nbsp;<wbr><code>keyNeedStat()</code>&nbsp;<wbr>set. The flag will result in that all keys in returned have&nbsp;<wbr><code>keyNeedStat()</code>&nbsp;<wbr>set.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_INACTIVE </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_INACTIVE </dd>
 <p>&nbsp;<wbr>Will make it not ignore inactive keys, so returned will contain also inactive keys. Inactive keys are those that have names begining with&nbsp;<wbr>&#8216;.&#8217;&nbsp;<wbr>(dot). Please be sure that you know what you are doing, inactive keys must not have any semantics to the application. This flag should only be set in key browsers after explicit user request. You might also get inactive keys when you plan to remove a whole hierarchy.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_SORT </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_SORT </dd>
 <p>&nbsp;<wbr>Force returned to be&nbsp;<wbr><code>ksSort()</code>ed. Normally you don&#8217;t want that the returned is sorted immediately because you might add other keys or go for another&nbsp;<wbr><code>kdbGet()</code>. Sorting will take place automatically when needed by&nbsp;<wbr><code>ksLookup()</code>&nbsp;<wbr>or&nbsp;<wbr><code>kdbSet()</code>, also without this option set. But you need to sort the keyset for yourself, when you just iterate over it. If you want to do that, pass this flag at the last&nbsp;<wbr><code>kdbGet()</code>.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_NORECURSIVE </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_NORECURSIVE </dd>
 <p>&nbsp;<wbr>Dont get the keys recursive. Only receive keys from one folder. This might not work if the backend does not support it. Be prepared for more keys and use&nbsp;<wbr><code>ksLookup()</code>&nbsp;<wbr>and avoid static assumptions on how many keys you get.</dl>
 <p> <code>Example:</code>.RS 4 </p>
 <p>KDB *handle;<br />
@@ -150,14 +150,14 @@ kdbClose(handle); // no more affairs with the key database.</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
  <i>parentKey</i> parent key or NULL to get the root keys<br />
  <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br />
- <i>options</i> ORed options to control approaches</dl>
+ <i>options</i> ORed options to control approaches</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> option_t </p>
+</dt><dd> option_t </dd>
 <p> <code>kdb higher level Methods </code> that rely on <code>kdbGet()</code> </p>
 <p> <code>ksLookupByName()</code>, ksLookupByString() for powerful lookups after the KeySet was retrieved </p>
 <p> commandList() code in <code>KDB :: Low Level Methods</code> command for usage example </p>
@@ -166,7 +166,7 @@ kdbClose(handle); // no more affairs with the key database.</p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> number of keys contained by returned </p>
+</dt><dd> number of keys contained by returned </dd>
 <p> -1 on failure</dl>
 <h3>Key* kdbGetMountpoint (KDB * handle, const Key * where)Lookup a mountpoint in a handle for a specific key.</h3>
 <p> Will return a key representing the mountpoint or null if there is no appropriate mountpoint e.g. its the root mountpoint. </p>
@@ -183,12 +183,12 @@ keyDel(key);</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> is the data structure, where the mounted directories are saved.<br />
- <i>where</i> the key, that should be looked up.</dl>
+</dt><dd> <i>handle</i> is the data structure, where the mounted directories are saved.<br />
+ <i>where</i> the key, that should be looked up.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the mountpoint associated with the key</dl>
+</dt><dd> the mountpoint associated with the key</dd></dl>
 <h3>int kdbMount (KDB * handle, const Key * mountpoint, const KeySet * config)Dynamically mount a single backend.</h3>
 <p> Maps the mountpoint, defined through its name and value, into the global elektra hierachy. If successfull, under the mountpoint another backend will reside. </p>
 <p> This only works for a single KDB, that means a single thread in a single process. You may want statically mounting by editing system/elektra/mountpoints. </p>
@@ -196,13 +196,13 @@ keyDel(key);</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> handle to the kdb data structure<br />
+</dt><dd> <i>handle</i> handle to the kdb data structure<br />
  <i>mountpoint</i> the <code>keyName()</code> of this key is the mountpoint, <code>keyValue()</code> the backend<br />
- <i>config</i> the configuration passed for that backend</dl>
+ <i>config</i> the configuration passed for that backend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 if an error occurred</dl>
+</dt><dd> 0 on success, -1 if an error occurred</dd></dl>
 <h3>KDB* kdbOpen (void)Opens the session with the Key database.</h3>
 <p> The first step is to open the default backend. With it system/elektra/mountpoints will be loaded and all needed libraries and mountpoints will be determined. These libraries for backends will be loaded and with it the KDB datastructure will be initialized. </p>
 <p> You must always call this method before retrieving or commiting any keys to the database. In the end of the program, after using the key database, you must not forget to <code>kdbClose()</code>. You can use the atexit () handler for it. </p>
@@ -226,11 +226,11 @@ thread2<br />
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>kdbClose()</code> to end all affairs to the <code>Key :: Basic Methods</code> database.</dl>
+</dt><dd> <code>kdbClose()</code> to end all affairs to the <code>Key :: Basic Methods</code> database.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a KDB pointer on success </p>
+</dt><dd> a KDB pointer on success </dd>
 <p> NULL on failure</dl>
 <h3>ssize_t kdbSet (KDB * handle, KeySet * ks, Key * parentKey, option_t options)Set keys in an atomic and universal way, all other kdbSet Functions rely on that one.</h3>
 <p> The given handle and keyset are the objects to work with. </p>
@@ -271,17 +271,17 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 <h2>Options</h2>
 <p> There are some options changing the behaviour of <code>kdbSet()</code>: </p>
 <dl>
-<dt>*</p>
-<dd> option_t::KDB_O_DEL </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_DEL </dd>
 <p>&nbsp;<wbr>Its often useful to&nbsp;<wbr><code>keyDel()</code>&nbsp;<wbr>the parentKey in the line after&nbsp;<wbr><code>kdbGet()</code>. Using this flag, you can just pass a key allocated with&nbsp;<wbr><code>keyNew()</code>,&nbsp;<wbr><code>kdbGet()</code>&nbsp;<wbr>will free it for you in the end.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_SYNC </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_SYNC </dd>
 <p>&nbsp;<wbr>Will force to save all keys, independent of their sync state.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_NOREMOVE </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_NOREMOVE </dd>
 <p>&nbsp;<wbr>Don&#8217;t remove any key from disk, even if&nbsp;<wbr><code>keyRemove()</code>&nbsp;<wbr>was set. With that flag removing keys can&#8217;t happen unintentional. The flag will result in that all keys in returned don&#8217;t have&nbsp;<wbr><code>keyNeedRemove()</code>&nbsp;<wbr>set.</p>
-<dt>*</p>
-<dd> option_t::KDB_O_REMOVEONLY </p>
+<dt>*</dt>
+<dd> option_t::KDB_O_REMOVEONLY </dd>
 <p>&nbsp;<wbr>Remove all keys instead of setting them. All keys in returned will have&nbsp;<wbr><code>keyNeedRemove()</code>&nbsp;<wbr>set, but not&nbsp;<wbr><code>keyNeedStat()</code>&nbsp;<wbr>saying to you that the key was deleted permanently. This option implicit also activates option_t::KDB_O_SYNC because the sync state will be changed when they are marked remove. You might need&nbsp;<wbr><code>option_t::KDB_O_INACTIVE</code>&nbsp;<wbr>set for the previous call of&nbsp;<wbr><code>kdbGet()</code>&nbsp;<wbr>if there are any. Otherwise the recursive remove will fail, because removing directories is only possible when all subkeys are removed.</dl>
 <h2>Details</h2>
 <p> When you dont have a parentKey or its name empty, then all keys will be set. </p>
@@ -289,19 +289,19 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
  <i>ks</i> a KeySet which should contain changed keys, otherwise nothing is done<br />
  <i>parentKey</i> holds the information below which key keys should be set<br />
- <i>options</i> see in <code>kdbSet()</code> documentation</dl>
+ <i>options</i> see in <code>kdbSet()</code> documentation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success </p>
+</dt><dd> 0 on success </dd>
 <p> -1 on failure</dl>
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>keyNeedSync()</code>, <code>ksNext()</code>, <code>ksCurrent()</code> </p>
+</dt><dd> <code>keyNeedSync()</code>, <code>ksNext()</code>, <code>ksCurrent()</code> </dd>
 <p> <code>keyRemove()</code>, <code>keyNeedRemove()</code> </p>
 <p> commandEdit(), commandImport() code in <code>KDB :: Low Level Methods</code> command for usage and error handling example</dl>
 <h3>int kdbUnmount (KDB * handle, const Key * mountpoint)Dynamically unmount a single backend.</h3>
@@ -309,12 +309,12 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> handle to the kdb data structure<br />
- <i>mountpoint</i> directory where backend is mounted to, that should be unmounted</dl>
+</dt><dd> <i>handle</i> handle to the kdb data structure<br />
+ <i>mountpoint</i> directory where backend is mounted to, that should be unmounted</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 if an error ocurred.</dl>
+</dt><dd> 0 on success, -1 if an error ocurred.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
 <h2>Index</h2>

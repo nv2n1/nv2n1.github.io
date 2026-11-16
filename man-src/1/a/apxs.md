@@ -29,7 +29,6 @@ description: "apxs – APache eXtenSion tool"
 &nbsp;<wbr> </p>
 <pre>
       $ httpd -l
-    
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> The module mod_so should be part of the displayed list. If these requirements are fulfilled you can easily extend your Apache server&#8217;s functionality by installing your own modules with the DSO mechanism by the help of this apxs tool:<br />
@@ -58,66 +57,66 @@ description: "apxs – APache eXtenSion tool"
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-n <i>modname</i></p>
+<dt>-n <i>modname</i></dt>
 <dd> This explicitly sets the module name for the -i (install) and -g (template generation) option. Use this to explicitly specify the module name. For option -g this is required, for option -i the apxs tool tries to determine the name from the source or (as a fallback) at least by guessing it from the filename.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Query Options</h3>
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-q</p>
+<dt>-q</dt>
 <dd> Performs a query for variables and environment settings used to build httpd. When invoked without <i>query</i> parameters, it prints all known variables and their values. The optional -v parameter formats the list output. .PP Use this to manually determine settings used to build the httpd that will load your module. For instance use INC=-I`apxs -q INCLUDEDIR` .PP inside your own Makefiles if you need manual access to Apache&#8217;s C header files.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Configuration Options</h3>
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-S <i>name</i>=<i>value</i></p>
+<dt>-S <i>name</i>=<i>value</i></dt>
 <dd> This option changes the apxs settings described above.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Template Generation Options</h3>
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-g</p>
+<dt>-g</dt>
 <dd> This generates a subdirectory <i>name</i> (see option -n) and there two files: A sample module source file named mod_<i>name</i>.c which can be used as a template for creating your own modules or as a quick start for playing with the apxs mechanism. And a corresponding Makefile for even easier build and installing of this module.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>DSO Compilation Options</h3>
 <p>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-c</p>
-<dd> This indicates the compilation operation. It first compiles the C source files (.c) of <i>files</i> into corresponding object files (.o) and then builds a dynamically shared object in <i>dsofile</i> by linking these object files plus the remaining object files (.o and .a) of <i>files</i>. If no -o option is specified the output file is guessed from the first filename in <i>files</i> and thus usually defaults to mod_<i>name</i>.so.</p>
-<dt>-o <i>dsofile</i></p>
-<dd> Explicitly specifies the filename of the created dynamically shared object. If not specified and the name cannot be guessed from the <i>files</i> list, the fallback name mod_unknown.so is used.</p>
-<dt>-D <i>name</i>=<i>value</i></p>
-<dd> This option is directly passed through to the compilation command(s). Use this to add your own defines to the build process.</p>
-<dt>-I <i>incdir</i></p>
-<dd> This option is directly passed through to the compilation command(s). Use this to add your own include directories to search to the build process.</p>
-<dt>-L <i>libdir</i></p>
-<dd> This option is directly passed through to the linker command. Use this to add your own library directories to search to the build process.</p>
-<dt>-l <i>libname</i></p>
-<dd> This option is directly passed through to the linker command. Use this to add your own libraries to search to the build process.</p>
-<dt>-Wc,<i>compiler-flags</i></p>
-<dd> This option passes <i>compiler-flags</i> as additional flags to the libtool &#8211;mode=compile command. Use this to add local compiler-specific options.</p>
-<dt>-Wl,<i>linker-flags</i></p>
-<dd> This option passes <i>linker-flags</i> as additional flags to the libtool &#8211;mode=link command. Use this to add local linker-specific options.</p>
-<dt>-p</p>
+<dt>-c</dt>
+<dd> This indicates the compilation operation. It first compiles the C source files (.c) of <i>files</i> into corresponding object files (.o) and then builds a dynamically shared object in <i>dsofile</i> by linking these object files plus the remaining object files (.o and .a) of <i>files</i>. If no -o option is specified the output file is guessed from the first filename in <i>files</i> and thus usually defaults to mod_<i>name</i>.so.</dd>
+<dt>-o <i>dsofile</i></dt>
+<dd> Explicitly specifies the filename of the created dynamically shared object. If not specified and the name cannot be guessed from the <i>files</i> list, the fallback name mod_unknown.so is used.</dd>
+<dt>-D <i>name</i>=<i>value</i></dt>
+<dd> This option is directly passed through to the compilation command(s). Use this to add your own defines to the build process.</dd>
+<dt>-I <i>incdir</i></dt>
+<dd> This option is directly passed through to the compilation command(s). Use this to add your own include directories to search to the build process.</dd>
+<dt>-L <i>libdir</i></dt>
+<dd> This option is directly passed through to the linker command. Use this to add your own library directories to search to the build process.</dd>
+<dt>-l <i>libname</i></dt>
+<dd> This option is directly passed through to the linker command. Use this to add your own libraries to search to the build process.</dd>
+<dt>-Wc,<i>compiler-flags</i></dt>
+<dd> This option passes <i>compiler-flags</i> as additional flags to the libtool &#8211;mode=compile command. Use this to add local compiler-specific options.</dd>
+<dt>-Wl,<i>linker-flags</i></dt>
+<dd> This option passes <i>linker-flags</i> as additional flags to the libtool &#8211;mode=link command. Use this to add local linker-specific options.</dd>
+<dt>-p</dt>
 <dd> This option causes apxs to link against the apr/apr-util libraries. This is useful when compiling helper programs that use the apr/apr-util libraries.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>DSO Installation and Configuration Options</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr><br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-i</p>
-<dd> This indicates the installation operation and installs one or more dynamically shared objects into the server&#8217;s <i>modules</i> directory.</p>
-<dt>-a</p>
-<dd> This activates the module by automatically adding a corresponding LoadModule line to Apache&#8217;s httpd.conf configuration file, or by enabling it if it already exists.</p>
-<dt>-A</p>
-<dd> Same as option -a but the created LoadModule directive is prefixed with a hash sign (#), <i>i.e.</i>, the module is just prepared for later activation but initially disabled.</p>
-<dt>-e</p>
+<dt>-i</dt>
+<dd> This indicates the installation operation and installs one or more dynamically shared objects into the server&#8217;s <i>modules</i> directory.</dd>
+<dt>-a</dt>
+<dd> This activates the module by automatically adding a corresponding LoadModule line to Apache&#8217;s httpd.conf configuration file, or by enabling it if it already exists.</dd>
+<dt>-A</dt>
+<dd> Same as option -a but the created LoadModule directive is prefixed with a hash sign (#), <i>i.e.</i>, the module is just prepared for later activation but initially disabled.</dd>
+<dt>-e</dt>
 <dd> This indicates the editing operation, which can be used with the -a and -A options similarly to the -i operation to edit Apache&#8217;s httpd.conf configuration file without attempting to install the module.<br />
-&nbsp;<wbr>&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr> </p>
 <p> Assume you have an Apache module named mod_foo.c available which should extend Apache&#8217;s server functionality. To accomplish this you first have to compile the C source into a shared object suitable for loading into the Apache server under runtime via the following command:<br />
@@ -127,7 +126,6 @@ description: "apxs – APache eXtenSion tool"
       /path/to/libtool --mode=compile gcc ... -c mod_foo.c
       /path/to/libtool --mode=link gcc ... -o mod_foo.la mod_foo.slo
       $ _
-    
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> Then you have to update the Apache configuration by making sure a LoadModule directive is present to load this shared object. To simplify this step apxs provides an automatic way to install the shared object in its &quot;modules&quot; directory and updating the httpd.conf file accordingly. This can be achieved by running:<br />
@@ -140,21 +138,18 @@ description: "apxs – APache eXtenSion tool"
       chmod 755 /path/to/apache/modules/mod_foo.so
       [activating module `foo' in /path/to/apache/conf/httpd.conf]
       $ _
-    
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> This way a line named<br />
 &nbsp;<wbr> </p>
 <pre>
       LoadModule foo_module modules/mod_foo.so
-    
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> is added to the configuration file if still not present. If you want to have this disabled per default use the -A option, <i>i.e.</i><br />
 &nbsp;<wbr> </p>
 <pre>
       $ apxs -i -A mod_foo.c
-    
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> For a quick test of the apxs mechanism you can create a sample Apache module template plus a corresponding Makefile via:<br />

@@ -29,6 +29,6 @@ description: "globus_callout.h – Globus Callout Infrastructure."
 <p>Globus Callout Infrastructure. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Meder</dl>
+<dd>Sam Meder</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_callout from the source code.</p>

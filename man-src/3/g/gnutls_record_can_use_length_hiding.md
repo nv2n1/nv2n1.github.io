@@ -14,8 +14,8 @@ description: "gnutls_record_can_use_length_hiding – API function"
 <p> <code>int gnutls_record_can_use_length_hiding(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> If the session supports length-hiding padding, you can invoke <code>gnutls_range_send_message()</code> to send a message whose length is hidden in the given range. If the session does not support length hiding padding, you can use the standard <code>gnutls_record_send()</code> function, or <code>gnutls_range_send_message()</code> making sure that the range is the same as the length of the message you are trying to send.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_record_can_use_length_hiding – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -14,10 +14,10 @@ description: "usb_lock_device_for_reset – cautiously acquire the lock for a us
 <p><i>udev</i></p>
 <dl>
 <dd>
-<dd>device that&#8217;s being locked</dl>
+</dd><dd>device that&#8217;s being locked</dd></dl>
 <p> <i>iface</i></p>
 <dl>
-<dd>interface bound to the driver making the request (optional)</dl>
+<dd>interface bound to the driver making the request (optional)</dd></dl>
 <h2>Description</h2>
 <p>Attempts to acquire the device lock, but fails if the device is NOTATTACHED or SUSPENDED, or if iface is specified and the interface is neither BINDING nor BOUND. Rather than sleeping to wait for the lock, the routine polls repeatedly. This is to prevent deadlock with disconnect; in some drivers (such as usb-storage) the <code>disconnect</code> or <code>suspend</code> method will block waiting for a device reset to complete.</p>
 <h2>Return</h2>

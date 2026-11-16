@@ -27,43 +27,43 @@ description: "pdftosrc – extract source file or stream from PDF file"
 <p> All messages go to stderr. At program invocation, <code>pdftosrc</code> issues the current version number of the program <code>xpdf</code>, on which <code>pdftosrc</code> is based: </p>
 <dl>
 <dt>
-<dd> pdftosrc version 3.01 </p>
+</dt><dd> pdftosrc version 3.01 </dd>
 </dl>
 <p> When <code>pdftosrc</code> was successful with the output file writing, one of the following messages will be issued: </p>
 <dl>
 <dt>
-<dd> Source file extracted to <i>source-file-name</i> </p>
+</dt><dd> Source file extracted to <i>source-file-name</i> </dd>
 </dl>
 <p> or </p>
 <dl>
 <dt>
-<dd> Stream object extracted to <i>PDF-file</i>.<i>stream-object-number</i> </p>
+</dt><dd> Stream object extracted to <i>PDF-file</i>.<i>stream-object-number</i> </dd>
 </dl>
 <p> or </p>
 <dl>
 <dt>
-<dd> Cross-reference table extracted to <i>PDF-file</i>.xref </p>
+</dt><dd> Cross-reference table extracted to <i>PDF-file</i>.xref </dd>
 </dl>
 <p> When the object given by the <i>stream-object-number</i> does not contain a stream, <code>pdftosrc</code> issues the following error message: </p>
 <dl>
 <dt>
-<dd> Not a Stream object </p>
+</dt><dd> Not a Stream object </dd>
 </dl>
 <p> When the <i>PDF-file</i> can&#8217;t be opened, the error message is: </p>
 <dl>
 <dt>
-<dd> Error: Couldn&#8217;t open file &#8216;<i>PDF-file</i>&#8216;. </p>
+</dt><dd> Error: Couldn&#8217;t open file &#8216;<i>PDF-file</i>&#8216;. </dd>
 </dl>
 <p> When <code>pdftosrc</code> encounters an invalid PDF file, the error message (several lines) is: </p>
 <dl>
 <dt>
-<dd> Error: May not be a PDF file (continuing anyway)</dl>
+</dt><dd> Error: May not be a PDF file (continuing anyway)</dd></dl>
 <dl>
 <dt>
-<dd> (more lines)</dl>
+</dt><dd> (more lines)</dd></dl>
 <dl>
 <dt>
-<dd> Invalid PDF file </p>
+</dt><dd> Invalid PDF file </dd>
 </dl>
 <p> There are also more error messages from <code>pdftosrc</code> for various kinds of broken PDF files.</p>
 <h2>NOTES</h2>
@@ -78,12 +78,10 @@ description: "pdftosrc – extract source file or stream from PDF file"
 <p> \immediate\pdfobj<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stream attr&nbsp;{/Type&nbsp;/SourceFile&nbsp;/SourceName&nbsp;(myfile.zip)}</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;file{myfile.zip}</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> \pdfcatalog{/SourceObject 	he\pdflastobj\space 0 R} </p>
 <p> Then this zip file can be extracted from the <i>PDF-file</i> by calling <code>pdftosrc</code> <i>PDF-file</i>.</p>
 <h2>BUGS</h2>

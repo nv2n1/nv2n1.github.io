@@ -17,107 +17,83 @@ description: "docker-container-cp – Copy files/folders between a container and
 <p> The cp command behaves like the Unix cp -a command in that directories are copied recursively with permissions preserved if possible. Ownership is set to the user and primary group at the destination. For example, files copied to a container are created with UID:GID of the root user. Files copied to the local machine are created with the UID:GID of the user which invoked the docker container cp command. If you specify the -L option, docker container cp follows any symbolic link in the SRC_PATH. docker container cp does <i>not</i> create parent directories for DEST_PATH if they do not exist. </p>
 <p> Assuming a path separator of /, a first argument of SRC_PATH and second argument of DEST_PATH, the behavior is as follows: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> SRC_PATH specifies a file</p>
+<dt>&bull;</dt>
+<dd> SRC_PATH specifies a file</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> DEST_PATH does not exist</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH does not exist</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the file is saved to a file created at DEST_PATH </p>
+<dt>&bull;</dt>
+<dd> the file is saved to a file created at DEST_PATH </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> DEST_PATH does not exist and ends with /</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH does not exist and ends with /</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Error condition: the destination directory must exist. </p>
+<dt>&bull;</dt>
+<dd> Error condition: the destination directory must exist. </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> DEST_PATH exists and is a file</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH exists and is a file</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the destination is overwritten with the source file&#8217;s contents </p>
+<dt>&bull;</dt>
+<dd> the destination is overwritten with the source file&#8217;s contents </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> DEST_PATH exists and is a directory</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH exists and is a directory</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the file is copied into this directory using the basename from SRC_PATH </p>
+<dt>&bull;</dt>
+<dd> the file is copied into this directory using the basename from SRC_PATH </dd>
 </dl>
 </dl>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> SRC_PATH specifies a directory</p>
+<dt>&bull;</dt>
+<dd> SRC_PATH specifies a directory</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> DEST_PATH does not exist</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH does not exist</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> DEST_PATH is created as a directory and the <i>contents</i> of the source directory are copied into this directory </p>
+<dt>&bull;</dt>
+<dd> DEST_PATH is created as a directory and the <i>contents</i> of the source directory are copied into this directory </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> DEST_PATH exists and is a file</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH exists and is a file</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Error condition: cannot copy a directory to a file </p>
+<dt>&bull;</dt>
+<dd> Error condition: cannot copy a directory to a file </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> DEST_PATH exists and is a directory</p>
+<dt>&bull;</dt>
+<dd> DEST_PATH exists and is a directory</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> SRC_PATH does not end with /. (that is: <i>slash</i> followed by <i>dot</i>)</p>
+<dt>&bull;</dt>
+<dd> SRC_PATH does not end with /. (that is: <i>slash</i> followed by <i>dot</i>)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the source directory is copied into this directory </p>
+<dt>&bull;</dt>
+<dd> the source directory is copied into this directory </dd>
 </dl>
 </dl>
-<dt>&bull;</p>
-<dd> SRC_PATH does end with /. (that is: <i>slash</i> followed by <i>dot</i>)</p>
+<dt>&bull;</dt>
+<dd> SRC_PATH does end with /. (that is: <i>slash</i> followed by <i>dot</i>)</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> the <i>content</i> of the source directory is copied into this directory </p>
+<dt>&bull;</dt>
+<dd> the <i>content</i> of the source directory is copied into this directory </dd>
 </dl>
 </dl>
 </dl>
@@ -130,83 +106,83 @@ description: "docker-container-cp – Copy files/folders between a container and
 <p> A colon (:) is used as a delimiter between CONTAINER and its path. You can also use : when specifying paths to a SRC_PATH or DEST_PATH on a local machine, for example file:name.txt. If you use a : in a local machine path, you must be explicit with a relative or absolute path, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 `/path/to/file:name.txt` or `./file:name.txt`
 </pre>
-</dl>
+</dd></dl>
 <p> It is not possible to copy certain system files such as resources under /proc, /sys, /dev, tmpfs, and mounts created by the user in the container. However, you can still copy such files by manually running tar in docker exec. For example (consider SRC_PATH and DEST_PATH are directories): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker exec foo tar Ccf $(dirname SRC_PATH) - $(basename SRC_PATH) | tar Cxf DEST_PATH -
 </pre>
-</dl>
+</dd></dl>
 <p> or </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tar Ccf $(dirname SRC_PATH) - $(basename SRC_PATH) | docker exec -i foo tar Cxf DEST_PATH -
 </pre>
-</dl>
+</dd></dl>
 <p> Using &#8211; as the SRC_PATH streams the contents of STDIN as a tar archive. The command extracts the content of the tar to the DEST_PATH in container&#8217;s filesystem. In this case, DEST_PATH must specify a directory. Using &#8211; as the DEST_PATH streams the contents of the resource as a tar archive to STDOUT. </p>
 <h2>EXAMPLES</h2>
 <p> Suppose a container has finished producing some output as a file it saves to somewhere in its filesystem. This could be the output of a build job or some other computation. You can copy these outputs from the container to a location on your local host. </p>
 <p> If you want to copy the /tmp/foo directory from a container to the existing /tmp directory on your host. If you run docker container cp in your ~ (home) directory on the local host: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container cp compassionate_darwin:tmp/foo /tmp
 </pre>
-</dl>
+</dd></dl>
 <p> Docker creates a /tmp/foo directory on your host. Alternatively, you can omit the leading slash in the command. If you execute this command from your home directory: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container cp compassionate_darwin:tmp/foo tmp
 </pre>
-</dl>
+</dd></dl>
 <p> If ~/tmp does not exist, Docker will create it and copy the contents of /tmp/foo from the container into this new directory. If ~/tmp already exists as a directory, then Docker will copy the contents of /tmp/foo from the container into a directory at ~/tmp/foo. </p>
 <p> When copying a single file to an existing LOCALPATH, the docker container cp command will either overwrite the contents of LOCALPATH if it is a file or place it into LOCALPATH if it is a directory, overwriting an existing file of the same name if one exists. For example, this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container cp sharp_ptolemy:/tmp/foo/myfile.txt /test
 </pre>
-</dl>
+</dd></dl>
 <p> If /test does not exist on the local machine, it will be created as a file with the contents of /tmp/foo/myfile.txt from the container. If /test exists as a file, it will be overwritten. Lastly, if /test exists as a directory, the file will be copied to /test/myfile.txt. </p>
 <p> Next, suppose you want to copy a file or folder into a container. For example, this could be a configuration file or some other input to a long running computation that you would like to place into a created container before it starts. This is useful because it does not require the configuration file or other input to exist in the container image. </p>
 <p> If you have a file, config.yml, in the current directory on your local host and wish to copy it to an existing directory at /etc/my-app.d in a container, this command can be used: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container cp config.yml myappcontainer:/etc/my-app.d
 </pre>
-</dl>
+</dd></dl>
 <p> If you have several files in a local directory /config which you need to copy to a directory /etc/my-app.d in a container: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container cp /config/. myappcontainer:/etc/my-app.d
 </pre>
-</dl>
+</dd></dl>
 <p> The above command will copy the contents of the local /config directory into the directory /etc/my-app.d in the container. </p>
 <p> Finally, if you want to copy a symbolic link into a container, you typically want to copy the linked target and not the link itself. To copy the target, use the -L option, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ln -s /tmp/somefile /tmp/somefile.ln
 $ docker container cp -L /tmp/somefile.ln myappcontainer:/tmp/
 </pre>
-</dl>
+</dd></dl>
 <p> This command copies content of the local /tmp/somefile into the file /tmp/somefile.ln in the container. Without -L option, the /tmp/somefile.ln preserves its symbolic link but not its content. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;archive</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Archive mode (copy all uid/gid information)</p>

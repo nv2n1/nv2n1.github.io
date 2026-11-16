@@ -16,10 +16,10 @@ description: "dahdi_monitor – checks the rx/tx levels of DAHDI channels"
 <p>The first (mandatory) parameter is the number of the channel to monitor. </p>
 <p> <code>-v</code></p>
 <dl>
-<dd>Display visual audio levels.</dl>
+<dd>Display visual audio levels.</dd></dl>
 <p> <code>-f </code><i>FILE</i></p>
 <dl>
-<dd>Write output to FILE</dl>
+<dd>Write output to FILE</dd></dl>
 <p> Some extra, yet undocumented, options.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dahdi_tool/">dahdi_tool</a>(8), <a href="/docs/linux/man/8-dahdi_cfg/">dahdi_cfg</a>(8), <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8). </p>

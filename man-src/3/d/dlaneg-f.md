@@ -33,10 +33,10 @@ description: "dlaneg.f –"
  Modern Symmetric Tridiagonal Eigensolvers,&quot; SIAM Journal on
  Scientific Computing, v28, n5, 2006. DOI 10.1137/050641624
  (Tech report version in LAWN 172 with the same title.)</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix.</pre>
 <p><i>D</i> </p>
@@ -60,19 +60,20 @@ description: "dlaneg.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Osni Marques, LBNL/NERSC, USA </p>
+<dd>Osni Marques, LBNL/NERSC, USA </dd>
 <p>&nbsp;<wbr>Christof Voemel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Jason Riedy, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 119 of file dlaneg.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

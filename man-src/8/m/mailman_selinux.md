@@ -30,8 +30,8 @@ description: "mailman_selinux – Security Enhanced Linux Policy for the mailman
 <p> <code>mailman_data_t </code> </p>
 <p> &#8211; Set files with the mailman_data_t type, if you want to treat the files as mailman content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/mailman.*, /var/spool/mailman.*, /var/lib/mailman.* </p>
+<dt>Paths:</dt>
+<dd>/etc/mailman.*, /var/spool/mailman.*, /var/lib/mailman.* </dd>
 </dl>
 <p> <code>mailman_lock_t </code> </p>
 <p> &#8211; Set files with the mailman_lock_t type, if you want to treat the files as mailman lock data, stored under the /var/lock directory </p>
@@ -40,16 +40,16 @@ description: "mailman_selinux – Security Enhanced Linux Policy for the mailman
 <p> <code>mailman_mail_exec_t </code> </p>
 <p> &#8211; Set files with the mailman_mail_exec_t type, if you want to transition an executable to the mailman_mail_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/mailman.*/mail/mailman, /usr/lib/mailman.*/bin/mm-handler.*, /usr/share/doc/mailman.*/mm-handler.*, /usr/lib/mailman.*/bin/mailmanctl, /usr/lib/mailman.*/scripts/mailman </dd>
 </dl>
 <p> <code>mailman_mail_tmp_t </code> </p>
 <p> &#8211; Set files with the mailman_mail_tmp_t type, if you want to store mailman mail temporary files in the /tmp directories. </p>
 <p> <code>mailman_queue_exec_t </code> </p>
 <p> &#8211; Set files with the mailman_queue_exec_t type, if you want to transition an executable to the mailman_queue_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </dd>
 </dl>
 <p> <code>mailman_queue_tmp_t </code> </p>
 <p> &#8211; Set files with the mailman_queue_tmp_t type, if you want to store mailman queue temporary files in the /tmp directories. </p>

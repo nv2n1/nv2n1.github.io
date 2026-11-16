@@ -15,19 +15,19 @@ reallocate_resource - allocate a slot in the resource tree given range &amp; ali
 <h2>Arguments</h2>
 
 <i>root</i>
-<dl><dd><dd>root resource descriptor</dl>
+<dl><dd></dd><dd>root resource descriptor</dd></dl>
  
 
  <i>old</i>
-<dl><dd>resource descriptor desired by caller</dl>
+<dl><dd>resource descriptor desired by caller</dd></dl>
  
 
  <i>newsize</i>
-<dl><dd>new size of the resource descriptor</dl>
+<dl><dd>new size of the resource descriptor</dd></dl>
  
 
  <i>constraint</i>
-<dl><dd>the size and alignment constraints to be met.</dl>
+<dl><dd>the size and alignment constraints to be met.</dd></dl>
 
 <h2>Copyright</h2>
 

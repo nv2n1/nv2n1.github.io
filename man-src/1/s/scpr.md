@@ -21,25 +21,25 @@ url: "/docs/linux/man/1-scpr/"
 
 <dl>
 <dt>-o <i>val</i>
-<dd> Print the object with the name val. Object names take the form '&lt;classname&gt;:&lt;ordinal_number&gt;'. At least one file and object name must be given.
-<dt>-memorygrp <i>val</i>
-<dd> Which memory group to use.
-<dt>-threadgrp <i>val</i>
-<dd> Which thread group to use.
-<dt>-messagegrp <i>val</i>
-<dd> Which message group to use.
-<dt>-W <i>val</i>
-<dd> Set the working directory.
-<dt>-d
-<dd> Turn on debugging.
-<dt>-v
-<dd> Print the version.
-<dt>-w
-<dd> Print the warranty.
-<dt>-L
-<dd> Print the license.
-<dt>-h
-<dd> Print this help.</dl>
+</dt><dd> Print the object with the name val. Object names take the form '&lt;classname&gt;:&lt;ordinal_number&gt;'. At least one file and object name must be given.
+</dd><dt>-memorygrp <i>val</i>
+</dt><dd> Which memory group to use.
+</dd><dt>-threadgrp <i>val</i>
+</dt><dd> Which thread group to use.
+</dd><dt>-messagegrp <i>val</i>
+</dt><dd> Which message group to use.
+</dd><dt>-W <i>val</i>
+</dt><dd> Set the working directory.
+</dd><dt>-d
+</dt><dd> Turn on debugging.
+</dd><dt>-v
+</dt><dd> Print the version.
+</dd><dt>-w
+</dt><dd> Print the warranty.
+</dd><dt>-L
+</dt><dd> Print the license.
+</dd><dt>-h
+</dt><dd> Print this help.</dd></dl>
  
 
  

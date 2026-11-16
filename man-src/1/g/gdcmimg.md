@@ -17,10 +17,10 @@ gdcmimg [options] file-in file-out
 <h2>DESCRIPTION</h2>
 <p> The <code>gdcmimg</code> command line tool can be used in two fashions: </p>
 <dl>
-<dt>*</p>
-<dd> 1. Converting a recognized file format into its encapsulated DICOM counterpart,</p>
-<dt>*</p>
-<dd> 2. Anonymizing a rectangular portion of a DICOM file.</dl>
+<dt>*</dt>
+<dd> 1. Converting a recognized file format into its encapsulated DICOM counterpart,</dd>
+<dt>*</dt>
+<dd> 2. Anonymizing a rectangular portion of a DICOM file.</dd></dl>
 <h2>PARAMETERS</h2>
 <pre>
 file-in   input filename

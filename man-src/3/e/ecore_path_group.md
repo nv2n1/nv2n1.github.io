@@ -25,55 +25,55 @@ description: "Path Group Functions – Functions that make it easier to find a f
 <p>Functions that make it easier to find a file in a set of search paths. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Give this a better description.</dl>
+<dd>Give this a better description.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI void ecore_path_group_add (Ecore_Path_Group * group, const char * path)</h3>
 <p>Adds a directory to be searched for files. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>group</i> The group to add the path.<br />
- <i>path</i> The new path to be added to the group.</dl>
+ <i>path</i> The new path to be added to the group.</dd></dl>
 <p> References ecore_list_append(), ecore_list_free_cb_set(), and ecore_list_new().</p>
 <h3>EAPI Ecore_List* ecore_path_group_available (Ecore_Path_Group * group)</h3>
 <p>Retrieves a list of all available files in the given path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>group_id</i> The identifier for the given path.</dl>
+<dd><i>group_id</i> The identifier for the given path.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to a newly allocated list of all files found in the paths identified by group_id. NULL otherwise.</dl>
+<dd>A pointer to a newly allocated list of all files found in the paths identified by group_id. NULL otherwise.</dd></dl>
 <p> References ecore_list_append(), ecore_list_empty_is(), ecore_list_first_goto(), ecore_list_new(), and ecore_list_next().</p>
 <h3>EAPI void ecore_path_group_del (Ecore_Path_Group * group)</h3>
 <p>Destroys a previously created path group. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>group</i> The group to delete.</dl>
+<dd><i>group</i> The group to delete.</dd></dl>
 <p> References ecore_list_destroy().</p>
 <h3>EAPI char* ecore_path_group_find (Ecore_Path_Group * group, const char * name)</h3>
 <p>Finds a file in a group of paths. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>group</i> The group to search.<br />
- <i>name</i> The name of the file to find.</dl>
+ <i>name</i> The name of the file to find.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to a newly allocated path location of the found file on success. NULL on failure.</dl>
+<dd>A pointer to a newly allocated path location of the found file on success. NULL on failure.</dd></dl>
 <p> References ecore_list_first_goto(), and ecore_list_next(). </p>
 <p> Referenced by ecore_plugin_load().</p>
 <h3>EAPI Ecore_Path_Group* ecore_path_group_new (void)</h3>
 <p>Creates a new path group. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>group_name</i> The name of the new group.</dl>
+<dd><i>group_name</i> The name of the new group.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on error, the handle of the new group on success.</dl>
+<dd>NULL on error, the handle of the new group on success.</dd></dl>
 <h3>EAPI void ecore_path_group_remove (Ecore_Path_Group * group, const char * path)</h3>
 <p>Removes the given directory from the given group. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>group</i> The group to remove the path from.<br />
- <i>path</i> The path of the directory to be removed.</dl>
+ <i>path</i> The path of the directory to be removed.</dd></dl>
 <p> References ecore_list_current(), ecore_list_first_goto(), ecore_list_next(), and ecore_list_remove_destroy().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -16,23 +16,23 @@ description: "mgd77manage – Manage the content of MGD77+ files"
 <p> <code>mgd77manage</code> deals with maintaining extra custom columns in MGD77+ netCDF files. You can either delete one or more columns, add a new column, update an existing column with new data, or supply error correction information (*.e77 files). New data may come from a table (ASCII unless <code>-bi</code> is used), be based on existing columns and certain theoretical expressions, or they may be obtained by sampling a grid (choose between GMT grid or a Sandwell/Smith Mercator *.img grid) along track. The new data will be appended to the MGD77+ file in the form of an extra data column of specified type. The data file will be modified; no new file will be created. For the big issues, see the DISCUSSION section below.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>NGDC-ids</i></p>
-<dd> Can be one or more of five kinds of specifiers:</p>
-<dt>1.</p>
-<dd> 8-character NGDC IDs, e.g., 01010083, JA010010etc., etc.</p>
-<dt>2.</p>
-<dd> 2-character &lt;agency&gt; codes which will return all cruises from each agency.</p>
-<dt>3.</p>
-<dd> 4-character &lt;agency&gt;&lt;vessel&gt; codes, which will return all cruises from those vessels.</p>
-<dt>4.</p>
-<dd> =&lt;list&gt;, where &lt;list&gt; is a table with NGDC IDs, one per line.</p>
-<dt>5.</p>
-<dd> If nothing is specified we return all cruises in the data base. </p>
+<dt><i>NGDC-ids</i></dt>
+<dd> Can be one or more of five kinds of specifiers:</dd>
+<dt>1.</dt>
+<dd> 8-character NGDC IDs, e.g., 01010083, JA010010etc., etc.</dd>
+<dt>2.</dt>
+<dd> 2-character &lt;agency&gt; codes which will return all cruises from each agency.</dd>
+<dt>3.</dt>
+<dd> 4-character &lt;agency&gt;&lt;vessel&gt; codes, which will return all cruises from those vessels.</dd>
+<dt>4.</dt>
+<dd> =&lt;list&gt;, where &lt;list&gt; is a table with NGDC IDs, one per line.</dd>
+<dt>5.</dt>
+<dd> If nothing is specified we return all cruises in the data base. </dd>
 <p> (See mgd77info <code>-L</code> for agency and vessel codes). The &quot;.mgd77&quot; or &quot;.nc&quot; extensions will automatically be appended, if needed (use <code>-I</code> to ignore certain file types). Cruise files will be looked for first in the current directory and second in all directories listed in <code>$MGD77_HOME</code>/mgd77_paths.txt [If <code>$MGD77_HOME</code> is not set it will default to <code>$GMT_SHAREDIR</code>/mgd77].</dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code>[<code>+</code>]<code>a</code>|<code>c</code>|<code>d</code>|<code>D</code>|<code>e</code>|<code>E</code>|<code>g</code>|<code>i</code>|<code>n</code>|<code>t</code>|<code>T</code><i>fileinfo</i></p>
-<dd> Add a new data column. If an existing column with the same abbreviation already exists in the file we will cowardly refuse to update the file. Specifying <code>-A+</code> overcomes this reluctance (However, sometimes an existing column cannot be upgraded without first deleting it; if so you will be warned). Select a column source code among <code>a</code>, <code>c</code>, <code>d</code>, <code>D</code>, <code>e</code>, <code>g</code>, <code>i</code>, <code>n</code>, <code>t</code>, or <code>T</code>; detailed descriptions for each choice follow: </p>
+<dt><code>-A</code>[<code>+</code>]<code>a</code>|<code>c</code>|<code>d</code>|<code>D</code>|<code>e</code>|<code>E</code>|<code>g</code>|<code>i</code>|<code>n</code>|<code>t</code>|<code>T</code><i>fileinfo</i></dt>
+<dd> Add a new data column. If an existing column with the same abbreviation already exists in the file we will cowardly refuse to update the file. Specifying <code>-A+</code> overcomes this reluctance (However, sometimes an existing column cannot be upgraded without first deleting it; if so you will be warned). Select a column source code among <code>a</code>, <code>c</code>, <code>d</code>, <code>D</code>, <code>e</code>, <code>g</code>, <code>i</code>, <code>n</code>, <code>t</code>, or <code>T</code>; detailed descriptions for each choice follow: </dd>
 <p> <code>a</code> Append filename of a single column table to add. File must have the same number of rows as the MGD77+ file. If no file is given we read from stdin instead. </p>
 <p> <code>c</code> Create a new column that derives from existing data or formulas for corrections and reference fields. Append <code>c</code> for the Carter corrections subtracted from uncorrected depths, <code>g</code> for the IGF gravity reference field (a.k.a &quot;normal gravity&quot;), <code>m</code> for the IGRF total field magnetic reference field, and <code>r</code> for recomputed magnetic anomaly (append 1 or 2 to specify which total field column to use [1]). For gravity we choose the reference field based on the parameter Gravity Theoretical Formula Code in the cruise&#8217;s MGD77 header. If this is not set or is invalid we default to the IGF 1980. You can override this behavior by appending the desired code: 1 = Heiskanen 1924, 2 = International 1930, 3 = IGF1967, or 4 = IGF1980. </p>
 <p> <code>d</code> Append filename of a two-column table with the first column holding distances along track and the second column holding data values. If no file is given we read from stdin instead. Records with matching distances in the MGD77+ file will be assigned the new values; at other distances we set them to NaN. Alternatively, give upper case <code>D</code> instead and we will interpolate the column at all record distances. See <code>-N</code> for choosing distance units and <code>-C</code> for choosing how distances are calculated. </p>
@@ -41,41 +41,41 @@ description: "mgd77manage – Manage the content of MGD77+ files"
 <p> <code>i</code> Sample a Sandwell/Smith Mercator *.img grid along the track given by the MGD77+ file using bicubic interpolation (however, see <code>-n</code>). Append the img grid filename, followed by the comma-separated data scale (typically 1 or 0.1), the IMG file mode (0-3), and optionally the img grid max latitude [80.738]. The modes stand for the following: (0) Img files with no constraint code, returns data at all points, (1) Img file with constraints coded, return data at all points, (2) Img file with constraints coded, return data only at constrained points and NaN elsewhere, and (3) Img file with constraints coded, return 1 at constraints and 0 elsewhere. </p>
 <p> <code>n</code> Append filename of a two-column table with the first column holding the record number (0 to nrows &#8211; 1) and the second column holding data values. If no file is given we read from stdin instead. Records with matching record numbers in the MGD77+ file will be assigned the new values; at other records we set them to NaN. </p>
 <p> <code>t</code> Append filename of a two-column table with the first column holding absolute times along track and the second column holding data values. If no file is given we read from stdin instead. Records with matching times in the MGD77+ file will be assigned the new values; at other times we set them to NaN. Alternatively, give upper case <code>T</code> instead and we will interpolate the column at all record times.</p>
-<dt><code>-C</code><code>f</code>|<code>g</code>|<code>e</code></p>
-<dd> Append a one-letter code to select the procedure for along-track distance calculation when using <code>-Ad</code>|<code>D</code> (see <code>-N</code> for selecting distance units): </p>
+<dt><code>-C</code><code>f</code>|<code>g</code>|<code>e</code></dt>
+<dd> Append a one-letter code to select the procedure for along-track distance calculation when using <code>-Ad</code>|<code>D</code> (see <code>-N</code> for selecting distance units): </dd>
 <p> <code>f</code> Flat Earth distances. </p>
 <p> <code>g</code> Great circle distances [Default]. </p>
 <p> <code>e</code> Geodesic distances on current GMT ellipsoid.</p>
-<dt><code>-D</code><i>abbrev1</i>,<i>abbrev2</i>,&#8230;)</p>
-<dd> Give a comma-separated list of column abbreviations that you want to delete from the MGD77+ files. Do NOT use this option to remove columns that you are replacing with new data (use <code>-A+</code> instead). Because we cannot remove variables from netCDF files we must create a new file without the columns to be deleted. Once the file is successfully created we temporarily rename the old file, change the new filename to the old filename, and finally remove the old, renamed file.</p>
-<dt><code>-E</code><i>empty</i></p>
-<dd> Give a single character that will be repeated to fill empty string values, e.g., &quot;9&quot; will yield a string like &quot;99999&#8230;&quot; [9].</p>
-<dt><code>-F</code></p>
-<dd> Force mode. When this mode is active you are empowered to delete or replace even the standard MGD77 set of columns. You better know what you are doing!</p>
-<dt><code>-I</code><i>abbrev</i>/<i>name</i>/<i>unit</i>/<code>t</code>/<i>scale</i>/<i>offset</i>/<i>comment</i></p>
-<dd> In addition to file information we must specify additional information about the extra column. Specify a short (16 char or less, using lower case letters, digits, or underscores only) abbreviation for the selected data, its more descriptive name, the data unit, the data type 1-character code (<code>b</code>yte, <code>s</code>hort, <code>f</code>loat, <code>i</code>nt, <code>d</code>ouble, or <code>t</code>ext) you want used for storage in the netCDF file, any scale and offset we should apply to the data to make them fit inside the range implied by the chosen storage type, and a general comment (&lt; 128 characters) regarding what these data represent. Note: If text data type is selected then the terms &quot;values&quot; in the <code>-A</code> discussion refer to your text data. Furthermore, the discussion on interpolation does not apply and the NaN value becomes a &quot;no string&quot; value (see <code>-E</code> for what this is). Place quotes around terms with more than one word (e.g., &quot;Corrected Depth&quot;).</p>
-<dt><code>-N</code><i>unit</i></p>
-<dd> Append the distance unit (see UNITS). [Default is <code>-Nk</code> (km)]. Only relevant when <code>-Ag</code>|<code>i</code> is selected.</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. Only relevant when <code>-Ag</code>|<code>i</code> is selected.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. This applies to the input 1- or 2-column data files specified under some of the <code>-A</code> options. The binary input option is only available for numerical data columns.</p>
-<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN.</p>
-<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></p>
-<dd> Select interpolation mode for grids.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-D</code><i>abbrev1</i>,<i>abbrev2</i>,&#8230;)</dt>
+<dd> Give a comma-separated list of column abbreviations that you want to delete from the MGD77+ files. Do NOT use this option to remove columns that you are replacing with new data (use <code>-A+</code> instead). Because we cannot remove variables from netCDF files we must create a new file without the columns to be deleted. Once the file is successfully created we temporarily rename the old file, change the new filename to the old filename, and finally remove the old, renamed file.</dd>
+<dt><code>-E</code><i>empty</i></dt>
+<dd> Give a single character that will be repeated to fill empty string values, e.g., &quot;9&quot; will yield a string like &quot;99999&#8230;&quot; [9].</dd>
+<dt><code>-F</code></dt>
+<dd> Force mode. When this mode is active you are empowered to delete or replace even the standard MGD77 set of columns. You better know what you are doing!</dd>
+<dt><code>-I</code><i>abbrev</i>/<i>name</i>/<i>unit</i>/<code>t</code>/<i>scale</i>/<i>offset</i>/<i>comment</i></dt>
+<dd> In addition to file information we must specify additional information about the extra column. Specify a short (16 char or less, using lower case letters, digits, or underscores only) abbreviation for the selected data, its more descriptive name, the data unit, the data type 1-character code (<code>b</code>yte, <code>s</code>hort, <code>f</code>loat, <code>i</code>nt, <code>d</code>ouble, or <code>t</code>ext) you want used for storage in the netCDF file, any scale and offset we should apply to the data to make them fit inside the range implied by the chosen storage type, and a general comment (&lt; 128 characters) regarding what these data represent. Note: If text data type is selected then the terms &quot;values&quot; in the <code>-A</code> discussion refer to your text data. Furthermore, the discussion on interpolation does not apply and the NaN value becomes a &quot;no string&quot; value (see <code>-E</code> for what this is). Place quotes around terms with more than one word (e.g., &quot;Corrected Depth&quot;).</dd>
+<dt><code>-N</code><i>unit</i></dt>
+<dd> Append the distance unit (see UNITS). [Default is <code>-Nk</code> (km)]. Only relevant when <code>-Ag</code>|<code>i</code> is selected.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. Only relevant when <code>-Ag</code>|<code>i</code> is selected.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. This applies to the input 1- or 2-column data files specified under some of the <code>-A</code> options. The binary input option is only available for numerical data columns.</dd>
+<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN.</dd>
+<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></dt>
+<dd> Select interpolation mode for grids.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>UNITS</h2>
 <p> For map distance unit, append <i>unit</i> <code>d</code> for arc degree, <code>m</code> for arc minute, and <code>s</code> for arc second, or <code>e</code> for meter [Default], <code>f</code> for foot, <code>k</code> for km, <code>M</code> for statute mile, <code>n</code> for nautical mile, and <code>u</code> for US survey foot. By default we compute such distances using a spherical approximation with great circles. Prepend <code>&#8211;</code> to a distance (or the unit is no distance is given) to perform &quot;Flat Earth&quot; calculations (quicker but less accurate) or prepend <code>+</code> to perform exact geodesic calculations (slower but more accurate).</p>
 <h2>CONSEQUENCES OF GRID RESAMPLING</h2>

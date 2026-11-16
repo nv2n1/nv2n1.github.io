@@ -14,7 +14,7 @@ description: "ata_xfer_mode2shift – Find matching xfer_shift for XFER_*"
 <p><i>xfer_mode</i></p>
 <dl>
 <dd>
-<dd>XFER_* of interest</dl>
+</dd><dd>XFER_* of interest</dd></dl>
 <h2>Description</h2>
 <p>Return matching xfer_shift for <i>xfer_mode</i>. </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "ata_xfer_mode2shift – Find matching xfer_shift for XFER_*"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

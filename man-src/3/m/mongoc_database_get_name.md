@@ -14,8 +14,8 @@ mongoc_database_get_name (mongoc_database_t *database);</pre>
 <p>Fetches the name of the database. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p>A string which should not be modified or freed. </p>
 <h2>Colophon</h2>

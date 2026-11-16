@@ -49,9 +49,9 @@ description: "l2tpd_selinux – Security Enhanced Linux Policy for the l2tpd pro
 <p> Policy governs the access confined processes have to these ports. SELinux l2tpd policy is very flexible allowing users to setup their l2tpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for l2tpd: </p>
 <dl>
-<dt><code>l2tp_port_t</code></p>
+<dt><code>l2tp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1701 udp 1701</dl>
+</dd><dd>Default Defined Ports: tcp 1701 udp 1701</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type l2tpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>NetworkManager_var_run_t</code> </p>
@@ -118,8 +118,8 @@ description: "l2tpd_selinux – Security Enhanced Linux Policy for the l2tpd pro
 <p> <code>l2tpd_exec_t</code> </p>
 <p> &#8211; Set files with the l2tpd_exec_t type, if you want to transition an executable to the l2tpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/.*l2tpd, /usr/libexec/nm-l2tp-service </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/.*l2tpd, /usr/libexec/nm-l2tp-service </dd>
 </dl>
 <p> <code>l2tpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the l2tpd_initrc_exec_t type, if you want to transition an executable to the l2tpd_initrc_t domain. </p>
@@ -128,8 +128,8 @@ description: "l2tpd_selinux – Security Enhanced Linux Policy for the l2tpd pro
 <p> <code>l2tpd_var_run_t</code> </p>
 <p> &#8211; Set files with the l2tpd_var_run_t type, if you want to store the l2tpd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/*.xl2tpd.*, /var/run/.*l2tpd.pid, /var/run/.*l2tpd(/.*)?, /var/run/prol2tpd.ctl </p>
+<dt>Paths:</dt>
+<dd>/var/run/*.xl2tpd.*, /var/run/.*l2tpd.pid, /var/run/.*l2tpd(/.*)?, /var/run/prol2tpd.ctl </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

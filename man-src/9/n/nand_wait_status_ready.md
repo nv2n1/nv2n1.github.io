@@ -14,14 +14,14 @@ description: "nand_wait_status_ready – [GENERIC] Wait for the ready status aft
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>timeo</i></p>
 <dl>
-<dd>Timeout in ms</dl>
+<dd>Timeout in ms</dd></dl>
 <h2>Description</h2>
 <p>Wait for status ready (i.e. command done) or timeout.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

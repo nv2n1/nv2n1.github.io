@@ -11,61 +11,36 @@ std::to_chars - std::to_chars
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;charconv&gt;
-
     std::to_chars_result to_chars(char *first, char *last, (1)(since C++ 17)
-
                                   /*see below*/ value,
                                   int base = 10);
-
 std::to_chars_result to_chars(char *first, char *last, float value);
-
 std::to_chars_result to_chars(char *first, char *last, double value);
 (2)(since C++ 17)
-
     std::to_chars_result to_chars(char *first, char *last, long double value);
-
 std::to_chars_result to_chars(char *first, char *last, float value,
-
                               std::chars_format fmt);
-
 std::to_chars_result to_chars(char *first, char *last, double value, (3)(since C++ 17)
-
                                                                          std::chars_format fmt);
-
 std::to_chars_result to_chars(char *first, char *last, long double value,
-
                               std::chars_format fmt);
-
 std::to_chars_result to_chars(char *first, char *last, float value,
-
                               std::chars_format fmt, int precision);
-
 std::to_chars_result to_chars(char *first, char *last, double value, (4)(since C++ 17)
-
                                                                          std::chars_format fmt,
                               int precision);
-
 std::to_chars_result to_chars(char *first, char *last, long double value,
-
                               std::chars_format fmt, int precision);
-
 struct to_chars_result {
-
     char *ptr;
     (5)(since C++ 17)
-
         std::errc ec;
 };
 Converts value into a character string by successively filling the range [first, last), where [first, last) is required to be a valid range.
-
 1) Integer formatters: value is converted to a string of digits in the given base (with no redundant leading zeroes). Digits in the range 10..35 (inclusive) are represented as lowercase characters a..z. If value is less than zero, the representation starts with a minus sign. The library provides overloads for all signed and unsigned integer types and for the type char as the type of the parameter value.
-
 2) value is converted to a string as if by std::printf in the default (&quot;C&quot;) locale. The conversion specifier is f or e (resolving in favor of f in case of a tie), chosen according to the requirement for a shortest representation: the string representation consists of the smallest number of characters such that there is at least one digit before the radix point (if present) and parsing the representation using the corresponding std::from_chars function recovers value exactly. If there are several such representations, one with the smallest difference to value is chosen, resolving any remaining ties using rounding according to std::round_to_nearest
-
 3) same as (2), but the conversion specified for the as-if printf is f if fmt is std::chars_format::fixed, e if fmt is std::chars_format::scientific, a (but without leading &quot;0x&quot; in the result) if fmt is std::chars_format::hex, and g if fmt is chars_format::general.
-
 4) same as (3), except the precision is specified by the parameter precision rather than by the shortest representation requirement.
-
 5) The return type (see Return value below)
 </code></pre>
 
@@ -94,16 +69,11 @@ The guarantee that std::from_chars can recover every floating-point value format
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;charconv&gt;
-
 #include &lt;system_error&gt;
-
 #include &lt;string_view&gt;
-
 #include &lt;array&gt;
 int main()
-
 {
     std::array&lt;char, 10&gt; str;
     if (auto [p, ec] = std::to_chars(str.data(), str.data() + str.size(), 42);

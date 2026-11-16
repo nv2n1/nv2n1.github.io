@@ -14,16 +14,16 @@ description: "usb_string – returns UTF-8 version of a string descriptor"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device whose string descriptor is being retrieved</dl>
+</dd><dd>the device whose string descriptor is being retrieved</dd></dl>
 <p> <i>index</i></p>
 <dl>
-<dd>the number of the descriptor</dl>
+<dd>the number of the descriptor</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>where to put the string</dl>
+<dd>where to put the string</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>how big is &#8220;buf&#8221;?</dl>
+<dd>how big is &#8220;buf&#8221;?</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

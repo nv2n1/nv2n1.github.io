@@ -166,43 +166,43 @@ include &quot;/etc/dhcpd.master&quot;;</pre>
 <p>The statements in the peer declaration are as follows: </p>
 <p> The <i>primary</i> and <i>secondary</i> statements</p>
 <dl>
-<dd>[ <code>primary</code> | <code>secondary</code> ]<code>;</code> </p>
+<dd>[ <code>primary</code> | <code>secondary</code> ]<code>;</code> </dd>
 <p> This determines whether the server is primary or secondary, as described earlier under DHCP FAILOVER.</dl>
 <p> The <i>address</i> statement</p>
 <dl>
-<dd><code>address </code><i>address</i><code>;</code> </p>
+<dd><code>address </code><i>address</i><code>;</code> </dd>
 <p> The <code>address</code> statement declares the IP address or DNS name on which the server should listen for connections from its failover peer, and also the value to use for the DHCP Failover Protocol server identifier. Because this value is used as an identifier, it may not be omitted.</dl>
 <p> The <i>peer address</i> statement</p>
 <dl>
-<dd><code>peer address </code><i>address</i><code>;</code> </p>
+<dd><code>peer address </code><i>address</i><code>;</code> </dd>
 <p> The <code>peer address</code> statement declares the IP address or DNS name to which the server should connect to reach its failover peer for failover messages.</dl>
 <p> The <i>port</i> statement</p>
 <dl>
-<dd><code>port </code><i>port-number</i><code>;</code> </p>
+<dd><code>port </code><i>port-number</i><code>;</code> </dd>
 <p> The <code>port</code> statement declares the TCP port on which the server should listen for connections from its failover peer. This statement may be omitted, in which case the IANA assigned port number 647 will be used by default.</dl>
 <p> The <i>peer port</i> statement</p>
 <dl>
-<dd><code>peer port </code><i>port-number</i><code>;</code> </p>
+<dd><code>peer port </code><i>port-number</i><code>;</code> </dd>
 <p> The <code>peer port</code> statement declares the TCP port to which the server should connect to reach its failover peer for failover messages. This statement may be omitted, in which case the IANA assigned port number 647 will be used by default.</dl>
 <p> The <i>max-response-delay</i> statement</p>
 <dl>
-<dd><code>max-response-delay </code><i>seconds</i><code>;</code> </p>
+<dd><code>max-response-delay </code><i>seconds</i><code>;</code> </dd>
 <p> The <code>max-response-delay</code> statement tells the DHCP server how many seconds may pass without receiving a message from its failover peer before it assumes that connection has failed. This number should be small enough that a transient network failure that breaks the connection will not result in the servers being out of communication for a long time, but large enough that the server isn&#8217;t constantly making and breaking connections. This parameter must be specified.</dl>
 <p> The <i>max-unacked-updates</i> statement</p>
 <dl>
-<dd><code>max-unacked-updates </code><i>count</i><code>;</code> </p>
+<dd><code>max-unacked-updates </code><i>count</i><code>;</code> </dd>
 <p> The <code>max-unacked-updates</code> statement tells the remote DHCP server how many BNDUPD messages it can send before it receives a BNDACK from the local system. We don&#8217;t have enough operational experience to say what a good value for this is, but 10 seems to work. This parameter must be specified.</dl>
 <p> The <i>mclt</i> statement</p>
 <dl>
-<dd><code>mclt </code><i>seconds</i><code>;</code> </p>
+<dd><code>mclt </code><i>seconds</i><code>;</code> </dd>
 <p> The <code>mclt</code> statement defines the Maximum Client Lead Time. It must be specified on the primary, and may not be specified on the secondary. This is the length of time for which a lease may be renewed by either failover peer without contacting the other. The longer you set this, the longer it will take for the running server to recover IP addresses after moving into PARTNER-DOWN state. The shorter you set it, the more load your servers will experience when they are not communicating. A value of something like 3600 is probably reasonable, but again bear in mind that we have no real operational experience with this.</dl>
 <p> The <i>split</i> statement</p>
 <dl>
-<dd><code>split </code><i>index</i><code>;</code> </p>
+<dd><code>split </code><i>index</i><code>;</code> </dd>
 <p> The split statement specifies the split between the primary and secondary for the purposes of load balancing. Whenever a client makes a DHCP request, the DHCP server runs a hash on the client identification, resulting in value from 0 to 255. This is used as an index into a 256 bit field. If the bit at that index is set, the primary is responsible. If the bit at that index is not set, the secondary is responsible. The <code>split</code> value determines how many of the leading bits are set to one. So, in practice, higher split values will cause the primary to serve more clients than the secondary. Lower split values, the converse. Legal values are between 0 and 255, of which the most reasonable is 128.</dl>
 <p> The <i>hba</i> statement</p>
 <dl>
-<dd><code>hba </code><i>colon-separated-hex-list</i><code>;</code> </p>
+<dd><code>hba </code><i>colon-separated-hex-list</i><code>;</code> </dd>
 <p> The hba statement specifies the split between the primary and secondary as a bitmap rather than a cutoff, which theoretically allows for finer-grained control. In practice, there is probably no need for such fine-grained control, however. An example hba statement: </p>
 <pre> hba ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
  00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00;</pre>
@@ -215,11 +215,11 @@ include &quot;/etc/dhcpd.master&quot;;</pre>
 <p> You must only have <code>split</code> or <code>hba</code> defined, never both. For most cases, the fine-grained control that <code>hba</code> offers isn&#8217;t necessary, and <code>split</code> should be used.</dl>
 <p> The <i>load balance max seconds</i> statement</p>
 <dl>
-<dd><code>load balance max seconds </code><i>seconds</i><code>;</code> </p>
+<dd><code>load balance max seconds </code><i>seconds</i><code>;</code> </dd>
 <p> This statement allows you to configure a cutoff after which load balancing is disabled. The cutoff is based on the number of seconds since the client sent its first DHCPDISCOVER or DHCPREQUEST message, and only works with clients that correctly implement the <i>secs</i> field &#8211; fortunately most clients do. We recommend setting this to something like 3 or 5. The effect of this is that if one of the failover peers gets into a state where it is responding to failover messages but not responding to some client requests, the other failover peer will take over its client load automatically as the clients retry.</dl>
 <p> The <i>auto-partner-down</i> statement</p>
 <dl>
-<dd><code>auto-partner-down </code><i>seconds</i><code>;</code> </p>
+<dd><code>auto-partner-down </code><i>seconds</i><code>;</code> </dd>
 <p> This statement instructs the server to initiate a timed delay upon entering the communications-interrupted state (any situation of being out-of-contact with the remote failover peer). At the conclusion of the timer, the server will automatically enter the partner-down state. This permits the server to allocate leases from the partner&#8217;s free lease pool after an STOS+MCLT timer expires, which can be dangerous if the partner is in fact operating at the time (the two servers will give conflicting bindings). </p>
 <p> Think very carefully before enabling this feature. The partner-down and communications-interrupted states are intentionally segregated because there do exist situations where a failover server can fail to communicate with its peer, but still has the ability to receive and reply to requests from DHCP clients. In general, this feature should only be used in those deployments where the failover servers are directly connected to one another, such as by a dedicated hardwired link (&quot;a heartbeat cable&quot;). </p>
 <p> A zero value disables the auto-partner-down feature (also the default), and any positive value indicates the time in seconds to wait before automatically entering partner-down.</dl>
@@ -228,7 +228,7 @@ include &quot;/etc/dhcpd.master&quot;;</pre>
 <dd>&nbsp;<wbr><code>max-lease-misbalance&nbsp;<wbr></code><i>percentage</i><code>;</code><br />
 &nbsp;<wbr><code>max-lease-ownership&nbsp;<wbr></code><i>percentage</i><code>;</code><br />
 &nbsp;<wbr><code>min-balance&nbsp;<wbr></code><i>seconds</i><code>;</code><br />
-&nbsp;<wbr><code>max-balance&nbsp;<wbr></code><i>seconds</i><code>;</code> </p>
+&nbsp;<wbr><code>max-balance&nbsp;<wbr></code><i>seconds</i><code>;</code> </dd>
 <p> This version of the DHCP Server evaluates pool balance on a schedule, rather than on demand as leases are allocated. The latter approach proved to be slightly klunky when pool misbalanced reach total saturation&#8230;when any server ran out of leases to assign, it also lost its ability to notice it had run dry. </p>
 <p> In order to understand pool balance, some elements of its operation first need to be defined. First, there are &#8216;free&#8217; and &#8216;backup&#8217; leases. Both of these are referred to as &#8216;free state leases&#8217;. &#8216;free&#8217; and &#8216;backup&#8217; are &#8216;the free states&#8217; for the purpose of this document. The difference is that only the primary may allocate from &#8216;free&#8217; leases unless under special circumstances, and only the secondary may allocate &#8216;backup&#8217; leases. </p>
 <p> When pool balance is performed, the only plausible expectation is to provide a 50/50 split of the free state leases between the two servers. This is because no one can predict which server will fail, regardless of the relative load placed upon the two servers, so giving each server half the leases gives both servers the same amount of &#8216;failure endurance&#8217;. Therefore, there is no way to configure any different behaviour, outside of some very small windows we will describe shortly. </p>
@@ -532,20 +532,20 @@ zone 17.127.10.in-addr.arpa. {
 <h2>Reference: Parameters</h2>
 <p>The <i>adaptive-lease-time-threshold</i> statement</p>
 <dl>
-<dd><code>adaptive-lease-time-threshold </code><i>percentage</i><code>;</code> </p>
+<dd><code>adaptive-lease-time-threshold </code><i>percentage</i><code>;</code> </dd>
 <p> When the number of allocated leases within a pool rises above the <i>percentage</i> given in this statement, the DHCP server decreases the lease length for new clients within this pool to <i>min-lease-time</i> seconds. Clients renewing an already valid (long) leases get at least the remaining time from the current lease. Since the leases expire faster, the server may either recover more quickly or avoid pool exhaustion entirely. Once the number of allocated leases drop below the threshold, the server reverts back to normal lease times. Valid percentages are between 1 and 99.</dl>
 <p> The <i>always-broadcast</i> statement</p>
 <dl>
-<dd><code>always-broadcast </code><i>flag</i><code>;</code> </p>
+<dd><code>always-broadcast </code><i>flag</i><code>;</code> </dd>
 <p> The DHCP and BOOTP protocols both require DHCP and BOOTP clients to set the broadcast bit in the flags field of the BOOTP message header. Unfortunately, some DHCP and BOOTP clients do not do this, and therefore may not receive responses from the DHCP server. The DHCP server can be made to always broadcast its responses to clients by setting this flag to &#8216;on&#8217; for the relevant scope; relevant scopes would be inside a conditional statement, as a parameter for a class, or as a parameter for a host declaration. To avoid creating excess broadcast traffic on your network, we recommend that you restrict the use of this option to as few clients as possible. For example, the Microsoft DHCP client is known not to have this problem, as are the OpenTransport and ISC DHCP clients.</dl>
 <p> The <i>always-reply-rfc1048</i> statement</p>
 <dl>
-<dd><code>always-reply-rfc1048 </code><i>flag</i><code>;</code> </p>
+<dd><code>always-reply-rfc1048 </code><i>flag</i><code>;</code> </dd>
 <p> Some BOOTP clients expect RFC1048-style responses, but do not follow RFC1048 when sending their requests. You can tell that a client is having this problem if it is not getting the options you have configured for it and if you see in the server log the message &quot;(non-rfc1048)&quot; printed with each BOOTREQUEST that is logged. </p>
 <p> If you want to send rfc1048 options to such a client, you can set the <code>always-reply-rfc1048</code> option in that client&#8217;s host declaration, and the DHCP server will respond with an RFC-1048-style vendor options field. This flag can be set in any scope, and will affect all clients covered by that scope.</dl>
 <p> The <i>authoritative</i> statement</p>
 <dl>
-<dd><code>authoritative;</code> </p>
+<dd><code>authoritative;</code> </dd>
 <p> <code>not authoritative;</code> </p>
 <p> The DHCP server will normally assume that the configuration information about a given network segment is not known to be correct and is not authoritative. This is so that if a naive user installs a DHCP server not fully understanding how to configure it, it does not send spurious DHCPNAK messages to clients that have obtained addresses from a legitimate DHCP server on the network. </p>
 <p> Network administrators setting up authoritative DHCP servers for their networks should always write <code>authoritative;</code> at the top of their configuration file to indicate that the DHCP server <i>should</i> send DHCPNAK messages to misconfigured clients. If this is not done, clients will be unable to get a correct IP address after changing subnets until their old lease has expired, which could take quite a long time. </p>
@@ -553,49 +553,49 @@ zone 17.127.10.in-addr.arpa. {
 <p> Note that the most specific scope for which the concept of authority makes any sense is the physical network segment &#8211; either a shared-network statement or a subnet statement that is not contained within a shared-network statement. It is not meaningful to specify that the server is authoritative for some subnets within a shared network, but not authoritative for others, nor is it meaningful to specify that the server is authoritative for some host declarations and not others.</dl>
 <p> The <i>boot-unknown-clients</i> statement</p>
 <dl>
-<dd><code>boot-unknown-clients </code><i>flag</i><code>;</code> </p>
+<dd><code>boot-unknown-clients </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>boot-unknown-clients</i> statement is present and has a value of <i>false</i> or <i>off</i>, then clients for which there is no <i>host</i> declaration will not be allowed to obtain IP addresses. If this statement is not present or has a value of <i>true</i> or <i>on</i>, then clients without host declarations will be allowed to obtain IP addresses, as long as those addresses are not restricted by <i>allow</i> and <i>deny</i> statements within their <i>pool</i> declarations.</dl>
 <p> The <i>db-time-format</i> statement</p>
 <dl>
-<dd><code>db-time-format </code>[ <i>default</i> | <i>local</i> ] <code>;</code> </p>
+<dd><code>db-time-format </code>[ <i>default</i> | <i>local</i> ] <code>;</code> </dd>
 <p> The DHCP server software outputs several timestamps when writing leases to persistent storage. This configuration parameter selects one of two output formats. The <i>default</i> format prints the day, date, and time in UTC, while the <i>local</i> format prints the system seconds-since-epoch, and helpfully provides the day and time in the system timezone in a comment. The time formats are described in detail in the <a href="/docs/linux/man/5-dhcpd-leases/">dhcpd.leases</a>(5) manpage.</dl>
 <p> The <i>ddns-hostname</i> statement</p>
 <dl>
-<dd><code>ddns-hostname </code><i>name</i><code>;</code> </p>
+<dd><code>ddns-hostname </code><i>name</i><code>;</code> </dd>
 <p> The <i>name</i> parameter should be the hostname that will be used in setting up the client&#8217;s A and PTR records. If no ddns-hostname is specified in scope, then the server will derive the hostname automatically, using an algorithm that varies for each of the different update methods.</dl>
 <p> The <i>ddns-domainname</i> statement</p>
 <dl>
-<dd><code>ddns-domainname </code><i>name</i><code>;</code> </p>
+<dd><code>ddns-domainname </code><i>name</i><code>;</code> </dd>
 <p> The <i>name</i> parameter should be the domain name that will be appended to the client&#8217;s hostname to form a fully-qualified domain-name (FQDN).</dl>
 <p> The <i>ddns-rev-domainname</i> statement</p>
 <dl>
-<dd><code>ddns-rev-domainname </code><i>name</i><code>;</code> The <i>name</i> parameter should be the domain name that will be appended to the client&#8217;s reversed IP address to produce a name for use in the client&#8217;s PTR record. By default, this is &quot;in-addr.arpa.&quot;, but the default can be overridden here. </p>
+<dd><code>ddns-rev-domainname </code><i>name</i><code>;</code> The <i>name</i> parameter should be the domain name that will be appended to the client&#8217;s reversed IP address to produce a name for use in the client&#8217;s PTR record. By default, this is &quot;in-addr.arpa.&quot;, but the default can be overridden here. </dd>
 <p> The reversed IP address to which this domain name is appended is always the IP address of the client, in dotted quad notation, reversed &#8211; for example, if the IP address assigned to the client is 10.17.92.74, then the reversed IP address is 74.92.17.10. So a client with that IP address would, by default, be given a PTR record of 10.17.92.74.in-addr.arpa.</dl>
 <p> The <i>ddns-update-style</i> parameter</p>
 <dl>
-<dd><code>ddns-update-style </code><i>style</i><code>;</code> </p>
+<dd><code>ddns-update-style </code><i>style</i><code>;</code> </dd>
 <p> The <i>style</i> parameter must be one of <code>ad-hoc</code>, <code>interim</code> or <code>none</code>. The <i>ddns-update-style</i> statement is only meaningful in the outer scope &#8211; it is evaluated once after reading the dhcpd.conf file, rather than each time a client is assigned an IP address, so there is no way to use different DNS update styles for different clients. The default is <code>none</code>.</dl>
 <p> <code>The </code> <i>ddns-updates</i> <code>statement</code></p>
 <dl>
-<dd>&nbsp;<wbr><code>ddns-updates&nbsp;<wbr></code><i>flag</i><code>;</code> </p>
+<dd>&nbsp;<wbr><code>ddns-updates&nbsp;<wbr></code><i>flag</i><code>;</code> </dd>
 <p> The <i>ddns-updates</i> parameter controls whether or not the server will attempt to do a DNS update when a lease is confirmed. Set this to <i>off</i> if the server should not attempt to do updates within a certain scope. The <i>ddns-updates</i> parameter is on by default. To disable DNS updates in all scopes, it is preferable to use the <i>ddns-update-style</i> statement, setting the style to <i>none</i>.</dl>
 <p> The <i>default-lease-time</i> statement</p>
 <dl>
-<dd><code>default-lease-time </code><i>time</i><code>;</code> </p>
+<dd><code>default-lease-time </code><i>time</i><code>;</code> </dd>
 <p> <i>Time</i> should be the length in seconds that will be assigned to a lease if the client requesting the lease does not ask for a specific expiration time. This is used for both DHCPv4 and DHCPv6 leases (it is also known as the &quot;valid lifetime&quot; in DHCPv6). The default is 43200 seconds.</dl>
 <p> The <i>delayed-ack</i> and <i>max-ack-delay</i> statements</p>
 <dl>
-<dd><code>delayed-ack </code><i>count</i><code>;</code> <code>max-ack-delay </code><i>microseconds</i><code>;</code> </p>
+<dd><code>delayed-ack </code><i>count</i><code>;</code> <code>max-ack-delay </code><i>microseconds</i><code>;</code> </dd>
 <p> <i>Count</i> should be an integer value from zero to 2^16-1, and defaults to 28. The count represents how many DHCPv4 replies maximum will be queued pending transmission until after a database commit event. If this number is reached, a database commit event (commonly resulting in fsync() and representing a performance penalty) will be made, and the reply packets will be transmitted in a batch afterwards. This preserves the RFC2131 direction that &quot;stable storage&quot; be updated prior to replying to clients. Should the DHCPv4 sockets &quot;go dry&quot; (select() returns immediately with no read sockets), the commit is made and any queued packets are transmitted. </p>
 <p> Similarly, <i>microseconds</i> indicates how many microseconds are permitted to pass inbetween queuing a packet pending an fsync, and performing the fsync. Valid values range from 0 to 2^32-1, and defaults to 250,000 (1/4 of a second). </p>
 <p> Please note that as delayed-ack is currently experimental, the delayed-ack feature is not compiled in by default, but must be enabled at compile time with &#8216;./configure &#8211;enable-delayed-ack&#8217;.</dl>
 <p> The <i>do-forward-updates</i> statement</p>
 <dl>
-<dd><code>do-forward-updates </code><i>flag</i><code>;</code> </p>
+<dd><code>do-forward-updates </code><i>flag</i><code>;</code> </dd>
 <p> The <i>do-forward-updates</i> statement instructs the DHCP server as to whether it should attempt to update a DHCP client&#8217;s A record when the client acquires or renews a lease. This statement has no effect unless DNS updates are enabled and <code>ddns-update-style</code> is set to <code>interim</code>. Forward updates are enabled by default. If this statement is used to disable forward updates, the DHCP server will never attempt to update the client&#8217;s A record, and will only ever attempt to update the client&#8217;s PTR record if the client supplies an FQDN that should be placed in the PTR record using the fqdn option. If forward updates are enabled, the DHCP server will still honor the setting of the <code>client-updates</code> flag.</dl>
 <p> The <i>dynamic-bootp-lease-cutoff</i> statement</p>
 <dl>
-<dd><code>dynamic-bootp-lease-cutoff </code><i>date</i><code>;</code> </p>
+<dd><code>dynamic-bootp-lease-cutoff </code><i>date</i><code>;</code> </dd>
 <p> The <i>dynamic-bootp-lease-cutoff</i> statement sets the ending time for all leases assigned dynamically to BOOTP clients. Because BOOTP clients do not have any way of renewing leases, and don&#8217;t know that their leases could expire, by default dhcpd assigns infinite leases to all BOOTP clients. However, it may make sense in some situations to set a cutoff date for all BOOTP leases &#8211; for example, the end of a school term, or the time at night when a facility is closed and all machines are required to be powered off. </p>
 <p> <i>Date</i> should be the date on which all assigned BOOTP leases will end. The date is specified in the form: </p>
 <p> <center> W YYYY/MM/DD HH:MM:SS<br />
@@ -603,64 +603,64 @@ zone 17.127.10.in-addr.arpa. {
 <p> W is the day of the week expressed as a number from zero (Sunday) to six (Saturday). YYYY is the year, including the century. MM is the month expressed as a number from 1 to 12. DD is the day of the month, counting from 1. HH is the hour, from zero to 23. MM is the minute and SS is the second. The time is always in Coordinated Universal Time (UTC), not local time.</dl>
 <p> The <i>dynamic-bootp-lease-length</i> statement</p>
 <dl>
-<dd><code>dynamic-bootp-lease-length</code> <i>length</i><code>;</code> </p>
+<dd><code>dynamic-bootp-lease-length</code> <i>length</i><code>;</code> </dd>
 <p> The <i>dynamic-bootp-lease-length</i> statement is used to set the length of leases dynamically assigned to BOOTP clients. At some sites, it may be possible to assume that a lease is no longer in use if its holder has not used BOOTP or DHCP to get its address within a certain time period. The period is specified in <i>length</i> as a number of seconds. If a client reboots using BOOTP during the timeout period, the lease duration is reset to <i>length</i>, so a BOOTP client that boots frequently enough will never lose its lease. Needless to say, this parameter should be adjusted with extreme caution.</dl>
 <p> The <i>filename</i> statement</p>
 <dl>
-<dd><code>filename</code> <i>filename</i><code>;</code> </p>
+<dd><code>filename</code> <i>filename</i><code>;</code> </dd>
 <p> The <i>filename</i> statement can be used to specify the name of the initial boot file which is to be loaded by a client. The <i>filename</i> should be a filename recognizable to whatever file transfer protocol the client can be expected to use to load the file.</dl>
 <p> The <i>fixed-address</i> declaration</p>
 <dl>
-<dd><code>fixed-address address</code> [<code>,</code> <i>address</i> &#8230; ]<code>;</code> </p>
+<dd><code>fixed-address address</code> [<code>,</code> <i>address</i> &#8230; ]<code>;</code> </dd>
 <p> The <i>fixed-address</i> declaration is used to assign one or more fixed IP addresses to a client. It should only appear in a <i>host</i> declaration. If more than one address is supplied, then when the client boots, it will be assigned the address that corresponds to the network on which it is booting. If none of the addresses in the <i>fixed-address</i> statement are valid for the network to which the client is connected, that client will not match the <i>host</i> declaration containing that <i>fixed-address</i> declaration. Each <i>address</i> in the <i>fixed-address</i> declaration should be either an IP address or a domain name that resolves to one or more IP addresses.</dl>
 <p> The <i>fixed-address6</i> declaration</p>
 <dl>
-<dd><code>fixed-address6 ip6-address</code> ; </p>
+<dd><code>fixed-address6 ip6-address</code> ; </dd>
 <p> The <i>fixed-address6</i> declaration is used to assign a fixed IPv6 addresses to a client. It should only appear in a <i>host</i> declaration.</dl>
 <p> The <i>get-lease-hostnames</i> statement</p>
 <dl>
-<dd><code>get-lease-hostnames</code> <i>flag</i><code>;</code> </p>
+<dd><code>get-lease-hostnames</code> <i>flag</i><code>;</code> </dd>
 <p> The <i>get-lease-hostnames</i> statement is used to tell dhcpd whether or not to look up the domain name corresponding to the IP address of each address in the lease pool and use that address for the DHCP <i>hostname</i> option. If <i>flag</i> is true, then this lookup is done for all addresses in the current scope. By default, or if <i>flag</i> is false, no lookups are done.</dl>
 <p> The <i>hardware</i> statement</p>
 <dl>
-<dd><code>hardware </code><i>hardware-type hardware-address</i><code>;</code> </p>
+<dd><code>hardware </code><i>hardware-type hardware-address</i><code>;</code> </dd>
 <p> In order for a BOOTP client to be recognized, its network hardware address must be declared using a <i>hardware</i> clause in the <i>host</i> statement. <i>hardware-type</i> must be the name of a physical hardware interface type. Currently, only the <code>ethernet</code> and <code>token-ring</code> types are recognized, although support for a <code>fddi</code> hardware type (and others) would also be desirable. The <i>hardware-address</i> should be a set of hexadecimal octets (numbers from 0 through ff) separated by colons. The <i>hardware</i> statement may also be used for DHCP clients.</dl>
 <p> The <i>host-identifier option</i> statement</p>
 <dl>
-<dd><code>host-identifier option </code><i>option-name option-data</i><code>;</code> </p>
+<dd><code>host-identifier option </code><i>option-name option-data</i><code>;</code> </dd>
 <p> This identifies a DHCPv6 client in a <i>host</i> statement. <i>option-name</i> is any option, and <i>option-data</i> is the value for the option that the client will send. The <i>option-data</i> must be a constant value.</dl>
 <p> The <i>infinite-is-reserved</i> statement</p>
 <dl>
-<dd><code>infinite-is-reserved </code><i>flag</i><code>;</code> </p>
+<dd><code>infinite-is-reserved </code><i>flag</i><code>;</code> </dd>
 <p> ISC DHCP now supports &#8216;reserved&#8217; leases. See the section on RESERVED LEASES below. If this <i>flag</i> is on, the server will automatically reserve leases allocated to clients which requested an infinite (0xffffffff) lease-time. </p>
 <p> The default is off.</dl>
 <p> The <i>lease-file-name</i> statement</p>
 <dl>
-<dd><code>lease-file-name </code><i>name</i><code>;</code> </p>
+<dd><code>lease-file-name </code><i>name</i><code>;</code> </dd>
 <p> <i>Name</i> should be the name of the DHCP server&#8217;s lease file. By default, this is /var/lib/dhcpd/dhcpd.leases. This statement <code>must</code> appear in the outer scope of the configuration file &#8211; if it appears in some other scope, it will have no effect. Furthermore, it has no effect if overridden by the <code>-lf</code> flag or the <code>PATH_DHCPD_DB</code> environment variable.</dl>
 <p> The <i>limit-addrs-per-ia</i> statement</p>
 <dl>
-<dd><code>limit-addrs-per-ia </code><i>number</i><code>;</code> </p>
+<dd><code>limit-addrs-per-ia </code><i>number</i><code>;</code> </dd>
 <p> By default, the DHCPv6 server will limit clients to one IAADDR per IA option, meaning one address. If you wish to permit clients to hang onto multiple addresses at a time, configure a larger <i>number</i> here. </p>
 <p> Note that there is no present method to configure the server to forcibly configure the client with one IP address per each subnet on a shared network. This is left to future work.</dl>
 <p> The <i>dhcpv6-lease-file-name</i> statement</p>
 <dl>
-<dd><code>dhcpv6-lease-file-name </code><i>name</i><code>;</code> </p>
+<dd><code>dhcpv6-lease-file-name </code><i>name</i><code>;</code> </dd>
 <p> <i>Name</i> is the name of the lease file to use if and only if the server is running in DHCPv6 mode. By default, this is /var/lib/dhcpd/dhcpd6.leases. This statement, like <i>lease-file-name,</i> <code>must</code> appear in the outer scope of the configuration file. It has no effect if overridden by the <code>-lf</code> flag or the <code>PATH_DHCPD6_DB</code> environment variable. If <i>dhcpv6-lease-file-name</i> is not specified, but <i>lease-file-name</i> is, the latter value will be used.</dl>
 <p> The <i>local-port</i> statement</p>
 <dl>
-<dd><code>local-port </code><i>port</i><code>;</code> </p>
+<dd><code>local-port </code><i>port</i><code>;</code> </dd>
 <p> This statement causes the DHCP server to listen for DHCP requests on the UDP port specified in <i>port</i>, rather than on port 67.</dl>
 <p> The <i>local-address</i> statement</p>
 <dl>
-<dd><code>local-address </code><i>address</i><code>;</code> </p>
+<dd><code>local-address </code><i>address</i><code>;</code> </dd>
 <p> This statement causes the DHCP server to listen for DHCP requests sent to the specified <i>address</i>, rather than requests sent to all addresses. Since serving directly attached DHCP clients implies that the server must respond to requests sent to the all-ones IP address, this option cannot be used if clients are on directly attached networks&#8230;it is only realistically useful for a server whose only clients are reached via unicasts, such as via DHCP relay agents. </p>
 <p> Note: This statement is only effective if the server was compiled using the USE_SOCKETS #define statement, which is default on a small number of operating systems, and must be explicitly chosen at compile-time for all others. You can be sure if your server is compiled with USE_SOCKETS if you see lines of this format at startup: </p>
 <p>&nbsp;<wbr>Listening on Socket/eth0 </p>
 <p> Note also that since this bind()s all DHCP sockets to the specified address, that only one address may be supported in a daemon at a given time.</dl>
 <p> The <i>log-facility</i> statement</p>
 <dl>
-<dd><code>log-facility </code><i>facility</i><code>;</code> </p>
+<dd><code>log-facility </code><i>facility</i><code>;</code> </dd>
 <p> This statement causes the DHCP server to do all of its logging on the specified log facility once the dhcpd.conf file has been read. By default the DHCP server logs to the daemon facility. Possible log facilities include auth, authpriv, cron, daemon, ftp, kern, lpr, mail, mark, news, ntp, security, syslog, user, uucp, and local0 through local7. Not all of these facilities are available on all systems, and there may be other facilities available on other systems. </p>
 <p> In addition to setting this value, you may need to modify your <i>syslog.conf</i> file to configure logging of the DHCP server. For example, you might add a line like this: </p>
 <pre> local7.debug /var/log/dhcpd.log</pre>
@@ -668,65 +668,65 @@ zone 17.127.10.in-addr.arpa. {
 <p> Because the <i>log-facility</i> setting is controlled by the dhcpd.conf file, log messages printed while parsing the dhcpd.conf file or before parsing it are logged to the default log facility. To prevent this, see the README file included with this distribution, which describes how to change the default log facility. When this parameter is used, the DHCP server prints its startup message a second time after parsing the configuration file, so that the log will be as complete as possible.</dl>
 <p> The <i>max-lease-time</i> statement</p>
 <dl>
-<dd><code>max-lease-time </code><i>time</i><code>;</code> </p>
+<dd><code>max-lease-time </code><i>time</i><code>;</code> </dd>
 <p> <i>Time</i> should be the maximum length in seconds that will be assigned to a lease. If not defined, the default maximum lease time is 86400. The only exception to this is that Dynamic BOOTP lease lengths, which are not specified by the client, are not limited by this maximum.</dl>
 <p> The <i>min-lease-time</i> statement</p>
 <dl>
-<dd><code>min-lease-time </code><i>time</i><code>;</code> </p>
+<dd><code>min-lease-time </code><i>time</i><code>;</code> </dd>
 <p> <i>Time</i> should be the minimum length in seconds that will be assigned to a lease. The default is the minimum of 300 seconds or <code>max-lease-time</code>.</dl>
 <p> The <i>min-secs</i> statement</p>
 <dl>
-<dd><code>min-secs </code><i>seconds</i><code>;</code> </p>
+<dd><code>min-secs </code><i>seconds</i><code>;</code> </dd>
 <p> <i>Seconds</i> should be the minimum number of seconds since a client began trying to acquire a new lease before the DHCP server will respond to its request. The number of seconds is based on what the client reports, and the maximum value that the client can report is 255 seconds. Generally, setting this to one will result in the DHCP server not responding to the client&#8217;s first request, but always responding to its second request. </p>
 <p> This can be used to set up a secondary DHCP server which never offers an address to a client until the primary server has been given a chance to do so. If the primary server is down, the client will bind to the secondary server, but otherwise clients should always bind to the primary. Note that this does not, by itself, permit a primary server and a secondary server to share a pool of dynamically-allocatable addresses.</dl>
 <p> The <i>next-server</i> statement</p>
 <dl>
-<dd><code>next-server</code> <i>server-name</i><code>;</code> </p>
+<dd><code>next-server</code> <i>server-name</i><code>;</code> </dd>
 <p> The <i>next-server</i> statement is used to specify the host address of the server from which the initial boot file (specified in the <i>filename</i> statement) is to be loaded. <i>Server-name</i> should be a numeric IP address or a domain name. If no <i>next-server</i> statement applies to a given client, the address 0.0.0.0 is used.</dl>
 <p> The <i>omapi-port</i> statement</p>
 <dl>
-<dd><code>omapi-port</code> <i>port</i><code>;</code> </p>
+<dd><code>omapi-port</code> <i>port</i><code>;</code> </dd>
 <p> The <i>omapi-port</i> statement causes the DHCP server to listen for OMAPI connections on the specified port. This statement is required to enable the OMAPI protocol, which is used to examine and modify the state of the DHCP server as it is running.</dl>
 <p> The <i>one-lease-per-client</i> statement</p>
 <dl>
-<dd><code>one-lease-per-client </code><i>flag</i><code>;</code> </p>
+<dd><code>one-lease-per-client </code><i>flag</i><code>;</code> </dd>
 <p> If this flag is enabled, whenever a client sends a DHCPREQUEST for a particular lease, the server will automatically free any other leases the client holds. This presumes that when the client sends a DHCPREQUEST, it has forgotten any lease not mentioned in the DHCPREQUEST &#8211; i.e., the client has only a single network interface <i>and</i> it does not remember leases it&#8217;s holding on networks to which it is not currently attached. Neither of these assumptions are guaranteed or provable, so we urge caution in the use of this statement.</dl>
 <p> The <i>pid-file-name</i> statement</p>
 <dl>
-<dd><code>pid-file-name</code> <i>name</i><code>;</code> </p>
+<dd><code>pid-file-name</code> <i>name</i><code>;</code> </dd>
 <p> <i>Name</i> should be the name of the DHCP server&#8217;s process ID file. This is the file in which the DHCP server&#8217;s process ID is stored when the server starts. By default, this is /var/run/dhcpd.pid. Like the <i>lease-file-name</i> statement, this statement must appear in the outer scope of the configuration file. It has no effect if overridden by the <code>-pf</code> flag or the <code>PATH_DHCPD_PID</code> environment variable. </p>
 <p> The <i>dhcpv6-pid-file-name</i> statement</p>
 <dl>
-<dd><code>dhcpv6-pid-file-name </code><i>name</i><code>;</code> </p>
+<dd><code>dhcpv6-pid-file-name </code><i>name</i><code>;</code> </dd>
 <p> <i>Name</i> is the name of the pid file to use if and only if the server is running in DHCPv6 mode. By default, this is /var/lib/dhcpd/dhcpd6.pid. This statement, like <i>pid-file-name,</i> <code>must</code> appear in the outer scope of the configuration file. It has no effect if overridden by the <code>-pf</code> flag or the <code>PATH_DHCPD6_PID</code> environment variable. If <i>dhcpv6-pid-file-name</i> is not specified, but <i>pid-file-name</i> is, the latter value will be used.</dl>
 <p> The <i>ping-check</i> statement</p>
 <dl>
-<dd><code>ping-check</code> <i>flag</i><code>;</code> </p>
+<dd><code>ping-check</code> <i>flag</i><code>;</code> </dd>
 <p> When the DHCP server is considering dynamically allocating an IP address to a client, it first sends an ICMP Echo request (a <i>ping</i>) to the address being assigned. It waits for a second, and if no ICMP Echo response has been heard, it assigns the address. If a response <i>is</i> heard, the lease is abandoned, and the server does not respond to the client. </p>
 <p> This <i>ping check</i> introduces a default one-second delay in responding to DHCPDISCOVER messages, which can be a problem for some clients. The default delay of one second may be configured using the ping-timeout parameter. The ping-check configuration parameter can be used to control checking &#8211; if its value is false, no ping check is done.</dl>
 <p> The <i>ping-timeout</i> statement</p>
 <dl>
-<dd><code>ping-timeout</code> <i>seconds</i><code>;</code> </p>
+<dd><code>ping-timeout</code> <i>seconds</i><code>;</code> </dd>
 <p> If the DHCP server determined it should send an ICMP echo request (a <i>ping</i>) because the ping-check statement is true, ping-timeout allows you to configure how many seconds the DHCP server should wait for an ICMP Echo response to be heard, if no ICMP Echo response has been received before the timeout expires, it assigns the address. If a response <i>is</i> heard, the lease is abandoned, and the server does not respond to the client. If no value is set, ping-timeout defaults to 1 second.</dl>
 <p> The <i>preferred-lifetime</i> statement</p>
 <dl>
-<dd><code>preferred-lifetime</code> <i>seconds</i><code>;</code> </p>
+<dd><code>preferred-lifetime</code> <i>seconds</i><code>;</code> </dd>
 <p> IPv6 addresses have &#8216;valid&#8217; and &#8216;preferred&#8217; lifetimes. The valid lifetime determines at what point at lease might be said to have expired, and is no longer useable. A preferred lifetime is an advisory condition to help applications move off of the address and onto currently valid addresses (should there still be any open TCP sockets or similar). </p>
 <p> The preferred lifetime defaults to the renew+rebind timers, or 3/4 the default lease time if none were specified.</dl>
 <p> The <i>remote-port</i> statement</p>
 <dl>
-<dd><code>remote-port </code><i>port</i><code>;</code> </p>
+<dd><code>remote-port </code><i>port</i><code>;</code> </dd>
 <p> This statement causes the DHCP server to transmit DHCP responses to DHCP clients upon the UDP port specified in <i>port</i>, rather than on port 68. In the event that the UDP response is transmitted to a DHCP Relay, the server generally uses the <code>local-port</code> configuration value. Should the DHCP Relay happen to be addressed as 127.0.0.1, however, the DHCP Server transmits its response to the <code>remote-port</code> configuration value. This is generally only useful for testing purposes, and this configuration value should generally not be used.</dl>
 <p> The <i>server-identifier</i> statement</p>
 <dl>
-<dd><code>server-identifier </code><i>hostname</i><code>;</code> </p>
+<dd><code>server-identifier </code><i>hostname</i><code>;</code> </dd>
 <p> The server-identifier statement can be used to define the value that is sent in the DHCP Server Identifier option for a given scope. The value specified <code>must</code> be an IP address for the DHCP server, and must be reachable by all clients served by a particular scope. </p>
 <p> The use of the server-identifier statement is not recommended &#8211; the only reason to use it is to force a value other than the default value to be sent on occasions where the default value would be incorrect. The default value is the first IP address associated with the physical network interface on which the request arrived. </p>
 <p> The usual case where the <i>server-identifier</i> statement needs to be sent is when a physical interface has more than one IP address, and the one being sent by default isn&#8217;t appropriate for some or all clients served by that interface. Another common case is when an alias is defined for the purpose of having a consistent IP address for the DHCP server, and it is desired that the clients use this IP address when contacting the server. </p>
 <p> Supplying a value for the dhcp-server-identifier option is equivalent to using the server-identifier statement.</dl>
 <p> The <i>server-duid</i> statement</p>
 <dl>
-<dd><code>server-duid </code><i>LLT</i> [ <i>hardware-type</i> <i>timestamp</i> <i>hardware-address</i> ] <code>;</code> </p>
+<dd><code>server-duid </code><i>LLT</i> [ <i>hardware-type</i> <i>timestamp</i> <i>hardware-address</i> ] <code>;</code> </dd>
 <p> <code>server-duid </code><i>EN</i> <i>enterprise-number</i> <i>enterprise-identifier</i> <code>;</code> </p>
 <p> <code>server-duid </code><i>LL</i> [ <i>hardware-type</i> <i>hardware-address</i> ] <code>;</code> </p>
 <p> The server-duid statement configures the server DUID. You may pick either LLT (link local address plus time), EN (enterprise), or LL (link local). </p>
@@ -735,31 +735,31 @@ zone 17.127.10.in-addr.arpa. {
 <p> The default server-duid type is LLT.</dl>
 <p> The <i>server-name</i> statement</p>
 <dl>
-<dd><code>server-name </code><i>name</i><code>;</code> </p>
+<dd><code>server-name </code><i>name</i><code>;</code> </dd>
 <p> The <i>server-name</i> statement can be used to inform the client of the name of the server from which it is booting. <i>Name</i> should be the name that will be provided to the client.</dl>
 <p> The <i>site-option-space</i> statement</p>
 <dl>
-<dd><code>site-option-space </code><i>name</i><code>;</code> </p>
+<dd><code>site-option-space </code><i>name</i><code>;</code> </dd>
 <p> The <i>site-option-space</i> statement can be used to determine from what option space site-local options will be taken. This can be used in much the same way as the <i>vendor-option-space</i> statement. Site-local options in DHCP are those options whose numeric codes are greater than 224. These options are intended for site-specific uses, but are frequently used by vendors of embedded hardware that contains DHCP clients. Because site-specific options are allocated on an ad hoc basis, it is quite possible that one vendor&#8217;s DHCP client might use the same option code that another vendor&#8217;s client uses, for different purposes. The <i>site-option-space</i> option can be used to assign a different set of site-specific options for each such vendor, using conditional evaluation (see <code>dhcp-eval (5)</code> for details).</dl>
 <p> The <i>stash-agent-options</i> statement</p>
 <dl>
-<dd><code>stash-agent-options </code><i>flag</i><code>;</code> </p>
+<dd><code>stash-agent-options </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>stash-agent-options</i> parameter is true for a given client, the server will record the relay agent information options sent during the client&#8217;s initial DHCPREQUEST message when the client was in the SELECTING state and behave as if those options are included in all subsequent DHCPREQUEST messages sent in the RENEWING state. This works around a problem with relay agent information options, which is that they usually not appear in DHCPREQUEST messages sent by the client in the RENEWING state, because such messages are unicast directly to the server and not sent through a relay agent.</dl>
 <p> The <i>update-conflict-detection</i> statement</p>
 <dl>
-<dd><code>update-conflict-detection </code><i>flag</i><code>;</code> </p>
+<dd><code>update-conflict-detection </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>update-conflict-detection</i> parameter is true, the server will perform standard DHCID multiple-client, one-name conflict detection. If the parameter has been set false, the server will skip this check and instead simply tear down any previous bindings to install the new binding without question. The default is true.</dl>
 <p> The <i>update-optimization</i> statement</p>
 <dl>
-<dd><code>update-optimization </code><i>flag</i><code>;</code> </p>
+<dd><code>update-optimization </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>update-optimization</i> parameter is false for a given client, the server will attempt a DNS update for that client each time the client renews its lease, rather than only attempting an update when it appears to be necessary. This will allow the DNS to heal from database inconsistencies more easily, but the cost is that the DHCP server must do many more DNS updates. We recommend leaving this option enabled, which is the default. This option only affects the behavior of the interim DNS update scheme, and has no effect on the ad-hoc DNS update scheme. If this parameter is not specified, or is true, the DHCP server will only update when the client information changes, the client gets a different lease, or the client&#8217;s lease expires.</dl>
 <p> The <i>update-static-leases</i> statement</p>
 <dl>
-<dd><code>update-static-leases </code><i>flag</i><code>;</code> </p>
+<dd><code>update-static-leases </code><i>flag</i><code>;</code> </dd>
 <p> The <i>update-static-leases</i> flag, if enabled, causes the DHCP server to do DNS updates for clients even if those clients are being assigned their IP address using a <i>fixed-address</i> statement &#8211; that is, the client is being given a static assignment. This can only work with the <i>interim</i> DNS update scheme. It is not recommended because the DHCP server has no way to tell that the update has been done, and therefore will not delete the record when it is not in use. Also, the server must attempt the update each time the client renews its lease, which could have a significant performance impact in environments that place heavy demands on the DHCP server.</dl>
 <p> The <i>use-host-decl-names</i> statement</p>
 <dl>
-<dd><code>use-host-decl-names </code><i>flag</i><code>;</code> </p>
+<dd><code>use-host-decl-names </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>use-host-decl-names</i> parameter is true in a given scope, then for every host declaration within that scope, the name provided for the host declaration will be supplied to the client as its hostname. So, for example, </p>
 <pre> group {
  use-host-decl-names on;
@@ -778,11 +778,11 @@ is equivalent to
 <p> It should be noted here that most DHCP clients completely ignore the host-name option sent by the DHCP server, and there is no way to configure them not to do this. So you generally have a choice of either not having any hostname to client IP address mapping that the client will recognize, or doing DNS updates. It is beyond the scope of this document to describe how to make this determination.</dl>
 <p> The <i>use-lease-addr-for-default-route</i> statement</p>
 <dl>
-<dd><code>use-lease-addr-for-default-route </code><i>flag</i><code>;</code> </p>
+<dd><code>use-lease-addr-for-default-route </code><i>flag</i><code>;</code> </dd>
 <p> If the <i>use-lease-addr-for-default-route</i> parameter is true in a given scope, then instead of sending the value specified in the routers option (or sending no value at all), the IP address of the lease being assigned is sent to the client. This supposedly causes Win95 machines to ARP for all IP addresses, which can be helpful if your router is configured for proxy ARP. The use of this feature is not recommended, because it won&#8217;t work for many DHCP clients.</dl>
 <p> The <i>vendor-option-space</i> statement</p>
 <dl>
-<dd><code>vendor-option-space </code><i>string</i><code>;</code> </p>
+<dd><code>vendor-option-space </code><i>string</i><code>;</code> </dd>
 <p> The <i>vendor-option-space</i> parameter determines from what option space vendor options are taken. The use of this configuration parameter is illustrated in the <code><a href="/docs/linux/man/5-dhcp-options/">dhcp-options</a>(5)</code> manual page, in the <i>VENDOR ENCAPSULATED OPTIONS</i> section.</dl>
 </dl>
 <h2>Setting Parameter Values Using Expressions</h2>
@@ -806,3 +806,4 @@ is equivalent to
 <p><a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/5-dhcpd-leases/">dhcpd.leases</a>(5), <a href="/docs/linux/man/5-dhcp-options/">dhcp-options</a>(5), <a href="/docs/linux/man/5-dhcp-eval/">dhcp-eval</a>(5), RFC2132, RFC2131.</p>
 <h2>Author</h2>
 <p><code><a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5)</code> was written by Ted Lemon under a contract with Vixie Labs. Funding for this project was provided by Internet Systems Consortium. Information about Internet Systems Consortium can be found at <code><a rel="nofollow" href="https://www.isc.org.">https://www.isc.org.</a></code></p>
+</p>

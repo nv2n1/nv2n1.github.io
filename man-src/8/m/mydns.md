@@ -14,36 +14,36 @@ description: "mydns – SQL-based Internet name daemon."
 <p><code>mydns</code> is a SQL-based DNS server.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;background</code></p>
-<dd>Run in the background, as a daemon.</p>
-<dt><code>-c</code>, <code>&#8211;conf</code>=<i>filename</i></p>
-<dd>Read configuration from <i>filename</i> instead of the default (<code>/etc/mydns.conf</code>). Consult <code>mydns.conf</code>(5) for information about configuring <code>mydns</code>.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Output huge amounts of diagnostic text while running. This option is only available if MyDNS was configured with the <code>&#8211;enable-debug</code> option.</p>
-<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></p>
-<dd>Use the database called <i>dbname</i>.</p>
-<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></p>
-<dd>Connect to database server at <i>hostname</i>.</p>
-<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></p>
-<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</p>
-<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></p>
-<dd>Use <i>username</i> when connecting to the database server.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Enable verbose output while running.</p>
-<dt><code>&#8211;create-tables</code></p>
-<dd>Write CREATE TABLE statements suitable for creating the tables used by <code>mydns</code> to the standard output and exit.</p>
-<dt><code>&#8211;dump-config</code></p>
-<dd>Read the current configuration (if any). Dump all possible configuration options to the standard output, with current values filled in. For options not presently configured, the internal defaults will be used. Output is in <code>mydns.conf</code> format, which is handy for creating a <code>mydns.conf</code> template.</p>
-<dt><code>&#8211;debug-&lt;module&gt;</code>[=<i>&lt;debug-level&gt;</i></p>
-<dd>Switch on debug for a particular module and set the debug level if given.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display program help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Output version number and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;background</code></dt>
+<dd>Run in the background, as a daemon.</dd>
+<dt><code>-c</code>, <code>&#8211;conf</code>=<i>filename</i></dt>
+<dd>Read configuration from <i>filename</i> instead of the default (<code>/etc/mydns.conf</code>). Consult <code>mydns.conf</code>(5) for information about configuring <code>mydns</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Output huge amounts of diagnostic text while running. This option is only available if MyDNS was configured with the <code>&#8211;enable-debug</code> option.</dd>
+<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></dt>
+<dd>Use the database called <i>dbname</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></dt>
+<dd>Connect to database server at <i>hostname</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></dt>
+<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></dt>
+<dd>Use <i>username</i> when connecting to the database server.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Enable verbose output while running.</dd>
+<dt><code>&#8211;create-tables</code></dt>
+<dd>Write CREATE TABLE statements suitable for creating the tables used by <code>mydns</code> to the standard output and exit.</dd>
+<dt><code>&#8211;dump-config</code></dt>
+<dd>Read the current configuration (if any). Dump all possible configuration options to the standard output, with current values filled in. For options not presently configured, the internal defaults will be used. Output is in <code>mydns.conf</code> format, which is handy for creating a <code>mydns.conf</code> template.</dd>
+<dt><code>&#8211;debug-&lt;module&gt;</code>[=<i>&lt;debug-level&gt;</i></dt>
+<dd>Switch on debug for a particular module and set the debug level if given.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display program help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output version number and exit.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/mydns.conf</i></p>
 <dl>
-<dd>The default location of the configuration file. (See <code>mydns.conf</code>(5))</dl>
+<dd>The default location of the configuration file. (See <code>mydns.conf</code>(5))</dd></dl>
 <h2>Author</h2>
 <p>Don Moore &lt;bboy [at] bboy.net&gt; Howard Wilkinson &lt;howard [at] cohtech.com&gt;</p>
 <h2>Homepage</h2>

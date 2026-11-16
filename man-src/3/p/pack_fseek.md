@@ -10,7 +10,6 @@ description: "pack_fseek – Seeks inside a stream. Allegro game programming lib
 <p>pack_fseek &#8211; Seeks inside a stream. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int pack_fseek(PACKFILE *f, int offset);</code></pre>
 <h2>Description</h2>
 <p>Moves the position indicator of the stream `f&#8217;. Unlike the standard fseek() function, this only supports forward movements relative to the current position and in read-only streams, so don&#8217;t use negative offsets. Note that seeking is very slow when reading compressed files, and so should be avoided unless you are sure that the file is not compressed. Example: </p>

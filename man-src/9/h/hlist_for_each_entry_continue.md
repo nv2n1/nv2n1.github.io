@@ -10,13 +10,13 @@ description: "hlist_for_each_entry_continue – iterate over a hlist continuing 
 <p>hlist_for_each_entry_continue &#8211; iterate over a hlist continuing after current point</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>hlist_for_each_entry_continue(</code><i>pos</i><code>, </code><i>member</i><code>);</code></dl>
+<dt> <code>hlist_for_each_entry_continue(</code><i>pos</i><code>, </code><i>member</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>pos</i></p>
 <dl>
 <dd>
-<dd>the type * to use as a loop cursor.</dl>
+</dd><dd>the type * to use as a loop cursor.</dd></dl>
 <p> <i>member</i></p>
 <dl>
-<dd>the name of the hlist_node within the struct.</dl>
+<dd>the name of the hlist_node within the struct.</dd></dl>
 <h2>Copyright</h2>

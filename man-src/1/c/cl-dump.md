@@ -18,26 +18,26 @@ description: "cl-dump – Dump and decode Directory Server replication change lo
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-c </code></p>
-<dd> Dump and interpret CSN only. This option can be used with or without -i option.</p>
-<dt><code>-D bind-dn</code></p>
-<dd> Directory server&#8217;s bind DN. Default to &quot;cn=Directory Manager&quot; if the option is omitted.</p>
-<dt><code>-h host</code></p>
-<dd> Directory server&#8217;s host. Default to the server where the script is running.</p>
-<dt><code>-i changelog-ldif-file-with-base64encoding</code></p>
-<dd> If you already have a ldif-like changelog, but the changes in that file are encoded, you may use this option to decode that ldif-like changelog.</p>
-<dt><code>-o output-file</code></p>
-<dd> Path name for the final result. Default to STDOUT if omitted.</p>
-<dt><code>-p port</code></p>
-<dd> Directory server&#8217;s port. Default to 389.</p>
-<dt><code>-P bind-cert</code></p>
-<dd> Pathname of binding certificate DB</p>
-<dt><code>-r replica-roots</code></p>
-<dd> Specify replica roots whose changelog you want to dump. The replica roots may be separated by comma. All the replica roots would be dumped if the option is omitted.</p>
-<dt><code>-v </code></p>
-<dd> Print the version of this script.</p>
-<dt><code>-w bind-password</code></p>
-<dd> Password for the bind DN</dl>
+<dt><code>-c </code></dt>
+<dd> Dump and interpret CSN only. This option can be used with or without -i option.</dd>
+<dt><code>-D bind-dn</code></dt>
+<dd> Directory server&#8217;s bind DN. Default to &quot;cn=Directory Manager&quot; if the option is omitted.</dd>
+<dt><code>-h host</code></dt>
+<dd> Directory server&#8217;s host. Default to the server where the script is running.</dd>
+<dt><code>-i changelog-ldif-file-with-base64encoding</code></dt>
+<dd> If you already have a ldif-like changelog, but the changes in that file are encoded, you may use this option to decode that ldif-like changelog.</dd>
+<dt><code>-o output-file</code></dt>
+<dd> Path name for the final result. Default to STDOUT if omitted.</dd>
+<dt><code>-p port</code></dt>
+<dd> Directory server&#8217;s port. Default to 389.</dd>
+<dt><code>-P bind-cert</code></dt>
+<dd> Pathname of binding certificate DB</dd>
+<dt><code>-r replica-roots</code></dt>
+<dd> Specify replica roots whose changelog you want to dump. The replica roots may be separated by comma. All the replica roots would be dumped if the option is omitted.</dd>
+<dt><code>-v </code></dt>
+<dd> Print the version of this script.</dd>
+<dt><code>-w bind-password</code></dt>
+<dd> Password for the bind DN</dd></dl>
 <h2>RESTRICTIONS</h2>
 <p> If you are not using -i option, the script should be run when the server is running, and from where the server&#8217;s changelog directory is accessible. </p>
 <h2>SEE ALSO</h2>

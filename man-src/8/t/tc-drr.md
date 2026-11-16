@@ -17,8 +17,8 @@ description: "drr – deficit round robin scheduler"
 <p> DRR maintains an (internal) &#8221;active&#8221; list of classes whose qdiscs are non-empty. This list is used for dequeuing. A packet is dequeued from the class at the head of the list if the packet size is smaller or equal to the deficit counter. If the counter is too small, it is increased by <code>quantum</code> and the scheduler moves on to the next class in the active list.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>quantum</p>
-<dd>Amount of bytes a flow is allowed to dequeue before the scheduler moves to the next class. Defaults to the MTU of the interface. The minimum value is 1. </p>
+<dt>quantum</dt>
+<dd>Amount of bytes a flow is allowed to dequeue before the scheduler moves to the next class. Defaults to the MTU of the interface. The minimum value is 1. </dd>
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>To attach to device eth0, using the interface MTU as its quantum: </p>
@@ -38,8 +38,8 @@ description: "drr – deficit round robin scheduler"
 <p> <code>tc filter add .. protocol ip .. $handle flow hash keys src,dst,proto,proto-src,proto-dst divisor 1024 perturb 10</code></p>
 <h2>Source</h2>
 <dl>
-<dt>o</p>
-<dd>M. Shreedhar and George Varghese &quot;Efficient Fair Queuing using Deficit Round Robin&quot;, Proc. SIGCOMM 95. </p>
+<dt>o</dt>
+<dd>M. Shreedhar and George Varghese &quot;Efficient Fair Queuing using Deficit Round Robin&quot;, Proc. SIGCOMM 95. </dd>
 </dl>
 <h2>Notes</h2>
 <p>This implementation does not drop packets from the longest queue on overrun, as limits are handled by the individual child qdiscs. </p>

@@ -14,10 +14,10 @@ description: "seq_hlist_start_head_rcu – start an iteration of a hlist protect
 <p><i>head</i></p>
 <dl>
 <dd>
-<dd>the head of the hlist</dl>
+</dd><dd>the head of the hlist</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>the start position of the sequence</dl>
+<dd>the start position of the sequence</dd></dl>
 <h2>Description</h2>
 <p>Called at seq_file-&gt;op-&gt;<code>start</code>. Call this function if you want to print a header at the top of the output. </p>
 <p> This list-traversal primitive may safely run concurrently with the _rcu list-mutation primitives such as <code>hlist_add_head_rcu</code> as long as the traversal is guarded by <code>rcu_read_lock</code>.</p>

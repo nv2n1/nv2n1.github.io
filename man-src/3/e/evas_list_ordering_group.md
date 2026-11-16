@@ -20,10 +20,10 @@ description: "Linked List Ordering Functions – Functions that change the order
 <p>Reverse all the elements in the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to reverse</dl>
+<dd><i>list</i> The list to reverse</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The list after it has been reversed</dl>
+<dd>The list after it has been reversed</dd></dl>
 <p> This takes a list list, and reverses the order of all elements in the list, so the last member is now first, and so on. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -36,10 +36,10 @@ description: "Linked List Ordering Functions – Functions that change the order
 <dl COMPACT>
 <dd><i>list</i> The list handle to sort<br />
  <i>size</i> The length of the list to sort<br />
- <i>func</i> A function pointer that can handle comparing the list data nodes</dl>
+ <i>func</i> A function pointer that can handle comparing the list data nodes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new sorted list</dl>
+<dd>A new sorted list</dd></dl>
 <p> This function sorts your list. The data in your nodes can be arbitrary, you just have to be smart enough to know what kind of data is in your lists </p>
 <p> Example: </p>
 <pre> int

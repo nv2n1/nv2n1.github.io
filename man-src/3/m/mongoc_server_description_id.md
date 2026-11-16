@@ -13,8 +13,8 @@ description: "mongoc_server_description_id() – This functionr returns the serv
 mongoc_server_description_id (const mongoc_server_description_t *description);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>description</code></p>
-<dd>A <code>The server description whose id we want</code> \&amp;.</dl>
+<dt><code>description</code></dt>
+<dd>A <code>The server description whose id we want</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This functionr returns the server id for the given server description. </p>
 <h2>Returns</h2>

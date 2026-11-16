@@ -15,32 +15,32 @@ description: "oclock – round X clock"
 <p> <i>Oclock</i> simply displays the current time on an analog display.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-fg </code><i>color</i></p>
-<dd> choose a different color for the both hands and the jewel of the clock</p>
-<dt><code>-bg </code><i>color</i></p>
-<dd> choose a different color for the background.</p>
-<dt><code>-jewel </code><i>color</i></p>
-<dd> choose a different color for the jewel on the clock.</p>
-<dt><code>-minute </code><i>color</i></p>
-<dd> choose a different color for the minute hand of the clock.</p>
-<dt><code>-hour </code><i>color</i></p>
-<dd> choose a different color for the hour hand of the clock.</p>
-<dt><code>-backing </code><i>{ WhenMapped Always NotUseful }</i></p>
-<dd> selects an appropriate level of backing store.</p>
-<dt><code>-geometry </code><i>geometry</i></p>
-<dd> define the initial window geometry; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</p>
-<dt><code>-display </code><i>display</i></p>
-<dd> specify the display to use; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</p>
-<dt><code>-bd </code><i>color</i></p>
-<dd> choose a different color for the window border.</p>
-<dt><code>-bw </code><i>width</i></p>
-<dd> choose a different width for the window border. As the Clock widget changes its border around quite a bit, this is most usefully set to zero.</p>
-<dt><code>-shape</code></p>
-<dd> causes the clock to use the Shape extension to create an oval window. This is the default unless the shapeWindow resource is set to false.</p>
-<dt><code>-noshape</code></p>
-<dd> causes the clock to not reshape itself and ancestors to exactly fit the outline of the clock.</p>
-<dt><code>-transparent</code></p>
-<dd> causes the clock to consist only of the jewel, the hands, and the border.</dl>
+<dt><code>-fg </code><i>color</i></dt>
+<dd> choose a different color for the both hands and the jewel of the clock</dd>
+<dt><code>-bg </code><i>color</i></dt>
+<dd> choose a different color for the background.</dd>
+<dt><code>-jewel </code><i>color</i></dt>
+<dd> choose a different color for the jewel on the clock.</dd>
+<dt><code>-minute </code><i>color</i></dt>
+<dd> choose a different color for the minute hand of the clock.</dd>
+<dt><code>-hour </code><i>color</i></dt>
+<dd> choose a different color for the hour hand of the clock.</dd>
+<dt><code>-backing </code><i>{ WhenMapped Always NotUseful }</i></dt>
+<dd> selects an appropriate level of backing store.</dd>
+<dt><code>-geometry </code><i>geometry</i></dt>
+<dd> define the initial window geometry; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd>
+<dt><code>-display </code><i>display</i></dt>
+<dd> specify the display to use; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd>
+<dt><code>-bd </code><i>color</i></dt>
+<dd> choose a different color for the window border.</dd>
+<dt><code>-bw </code><i>width</i></dt>
+<dd> choose a different width for the window border. As the Clock widget changes its border around quite a bit, this is most usefully set to zero.</dd>
+<dt><code>-shape</code></dt>
+<dd> causes the clock to use the Shape extension to create an oval window. This is the default unless the shapeWindow resource is set to false.</dd>
+<dt><code>-noshape</code></dt>
+<dd> causes the clock to not reshape itself and ancestors to exactly fit the outline of the clock.</dd>
+<dt><code>-transparent</code></dt>
+<dd> causes the clock to consist only of the jewel, the hands, and the border.</dd></dl>
 <h2>COLORS</h2>
 <p> If you would like your clock to be viewable in color, include the following in the #ifdef COLOR section you read with xrdb: </p>
 <p> *customization: -color </p>

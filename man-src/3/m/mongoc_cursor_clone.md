@@ -14,14 +14,14 @@ mongoc_cursor_clone (const mongoc_cursor_t *cursor)
  BSON_GNUC_WARN_UNUSED_RESULT;</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall create a copy of a <code>mongoc_cursor_t</code> \&amp;. The cloned cursor will be reset to the beginning of the query, and therefore the query will be re-executed on the MongoDB server when <code><a href="/docs/linux/man/3-mongoc_cursor_next/">mongoc_cursor_next</a>(3)</code> is called. </p>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_cursor_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_cursor_destroy/">mongoc_cursor_destroy</a>(3)</code> when no longer in use. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Failure to handle the result of this function is a programming error.</dl>
+<dd>Failure to handle the result of this function is a programming error.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

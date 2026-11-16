@@ -24,10 +24,10 @@ description: "shsein.f –"
  corresponding to an eigenvalue w are defined by:
  H * x = w * x, y**h * H = w * y**h
  where y**h denotes the conjugate transpose of the vector y.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'R': compute right eigenvectors only;
  = 'L': compute left eigenvectors only;
@@ -154,20 +154,21 @@ description: "shsein.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
 <pre> Each eigenvector is normalized so that the element of largest
  magnitude has magnitude 1; here the magnitude of a complex number
  (x,y) is taken to be |x|+|y|.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 261 of file shsein.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

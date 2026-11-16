@@ -10,37 +10,35 @@ description: "pthread_setcancelstate, pthread_setcanceltype – set cancelabilit
 <p>pthread_setcancelstate, pthread_setcanceltype &#8211; set cancelability state and type</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_setcancelstate(int state, int *oldstate);
 int pthread_setcanceltype(int type, int *oldtype);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setcancelstate</code>() sets the cancelability state of the calling thread to the value given in <i>state</i>. The previous cancelability state of the thread is returned in the buffer pointed to by <i>oldstate</i>. The <i>state</i> argument must have one of the following values:</p>
 <dl>
-<dt><code>PTHREAD_CANCEL_ENABLE</code></p>
-<dd>The thread is cancelable. This is the default cancelability state in all new threads, including the initial thread. The thread&#8217;s cancelability type determines when a cancelable thread will respond to a cancellation request.</p>
-<dt><code>PTHREAD_CANCEL_DISABLE</code></p>
-<dd>The thread is not cancelable. If a cancellation request is received, it is blocked until cancelability is enabled.</dl>
+<dt><code>PTHREAD_CANCEL_ENABLE</code></dt>
+<dd>The thread is cancelable. This is the default cancelability state in all new threads, including the initial thread. The thread&#8217;s cancelability type determines when a cancelable thread will respond to a cancellation request.</dd>
+<dt><code>PTHREAD_CANCEL_DISABLE</code></dt>
+<dd>The thread is not cancelable. If a cancellation request is received, it is blocked until cancelability is enabled.</dd></dl>
 <p> The <code>pthread_setcanceltype</code>() sets the cancelability type of the calling thread to the value given in <i>type</i>. The previous cancelability type of the thread is returned in the buffer pointed to by <i>oldtype</i>. The <i>type</i> argument must have one of the following values:</p>
 <dl>
-<dt><code>PTHREAD_CANCEL_DEFERRED</code></p>
-<dd>A cancellation request is deferred until the thread next calls a function that is a cancellation point (see <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)). This is the default cancelability type in all new threads, including the initial thread.</p>
-<dd>Even with deferred cancellation, a cancellation point in an asynchronous signal handler may still be acted upon and the effect is as if it was an asynchronous cancellation.</p>
-<dt><code>PTHREAD_CANCEL_ASYNCHRONOUS</code></p>
-<dd>The thread can be canceled at any time. (Typically, it will be canceled immediately upon receiving a cancellation request, but the system doesn&#8217;t guarantee this.)</dl>
+<dt><code>PTHREAD_CANCEL_DEFERRED</code></dt>
+<dd>A cancellation request is deferred until the thread next calls a function that is a cancellation point (see <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)). This is the default cancelability type in all new threads, including the initial thread.</dd>
+<dd>Even with deferred cancellation, a cancellation point in an asynchronous signal handler may still be acted upon and the effect is as if it was an asynchronous cancellation.</dd>
+<dt><code>PTHREAD_CANCEL_ASYNCHRONOUS</code></dt>
+<dd>The thread can be canceled at any time. (Typically, it will be canceled immediately upon receiving a cancellation request, but the system doesn&#8217;t guarantee this.)</dd></dl>
 <p> The set-and-get operation performed by each of these functions is atomic with respect to other threads in the process calling the same function.</p>
 <h2>Return Value</h2>
 <p>On success, these functions return 0; on error, they return a nonzero error number.</p>
 <h2>Errors</h2>
 <p>The <code>pthread_setcancelstate</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>Invalid value for <i>state</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid value for <i>state</i>.</dd></dl>
 <p> The <code>pthread_setcanceltype</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>Invalid value for <i>type</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid value for <i>type</i>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

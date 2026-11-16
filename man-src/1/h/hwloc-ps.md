@@ -13,22 +13,22 @@ description: "hwloc-ps – List currently-running processes or threads that are 
 <p> <code>hwloc-ps</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> list all processes, even those that are not bound to any specific part of the machine.</p>
-<dt><code>-p</code> <code>&#8211;physical</code></p>
-<dd> report OS/physical indexes instead of logical indexes</p>
-<dt><code>-l</code> <code>&#8211;logical</code></p>
-<dd> report logical indexes instead of physical/OS indexes (default)</p>
-<dt><code>-c</code> <code>&#8211;cpuset</code></p>
-<dd> show process bindings as cpusets instead of objects.</p>
-<dt><code>-t</code> <code>&#8211;threads</code></p>
-<dd> show threads inside processes. If <code>-a</code> is given as well, list all threads within each process. Otherwise, show all threads inside each process where at least one thread is bound.</p>
-<dt><code>-e</code> <code>&#8211;get-last-cpu-location</code></p>
-<dd> Report the last processors where the process/thread ran. Note that the result may already be outdated when reported since the operating system may move the tasks to other processors at any time according to the binding.</p>
-<dt><code>&#8211;whole-system</code></p>
-<dd> Do not consider administration limitations.</p>
-<dt><code>&#8211;pid-cmd &lt;cmd&gt;</code></p>
-<dd> Append the output of the given command to each PID line. For each displayed process ID, execute the command <i>&lt;cmd&gt; &lt;pid&gt;</i> and append <code>the first line</code> of its output to the regular hwloc-ps line.</dl>
+<dt><code>-a</code></dt>
+<dd> list all processes, even those that are not bound to any specific part of the machine.</dd>
+<dt><code>-p</code> <code>&#8211;physical</code></dt>
+<dd> report OS/physical indexes instead of logical indexes</dd>
+<dt><code>-l</code> <code>&#8211;logical</code></dt>
+<dd> report logical indexes instead of physical/OS indexes (default)</dd>
+<dt><code>-c</code> <code>&#8211;cpuset</code></dt>
+<dd> show process bindings as cpusets instead of objects.</dd>
+<dt><code>-t</code> <code>&#8211;threads</code></dt>
+<dd> show threads inside processes. If <code>-a</code> is given as well, list all threads within each process. Otherwise, show all threads inside each process where at least one thread is bound.</dd>
+<dt><code>-e</code> <code>&#8211;get-last-cpu-location</code></dt>
+<dd> Report the last processors where the process/thread ran. Note that the result may already be outdated when reported since the operating system may move the tasks to other processors at any time according to the binding.</dd>
+<dt><code>&#8211;whole-system</code></dt>
+<dd> Do not consider administration limitations.</dd>
+<dt><code>&#8211;pid-cmd &lt;cmd&gt;</code></dt>
+<dd> Append the output of the given command to each PID line. For each displayed process ID, execute the command <i>&lt;cmd&gt; &lt;pid&gt;</i> and append <code>the first line</code> of its output to the regular hwloc-ps line.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> By default, hwloc-ps lists only those currently-running processes that are bound. If <code>-t</code> is given, processes that are not bound but contain at least one bound thread are also displayed, as well as all their threads. </p>
 <p> hwloc-ps displays process identifier, command-line and binding. The binding may be reported as objects or cpusets. </p>

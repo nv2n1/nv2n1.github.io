@@ -15,11 +15,11 @@ d_exact_alias - find and hash an exact unhashed alias
 <h2>Arguments</h2>
 
 <i>entry</i>
-<dl><dd><dd>dentry to add</dl>
+<dl><dd></dd><dd>dentry to add</dd></dl>
  
 
  <i>inode</i>
-<dl><dd>The inode to go with this dentry</dl>
+<dl><dd>The inode to go with this dentry</dd></dl>
 
 <h2>Description</h2>
 

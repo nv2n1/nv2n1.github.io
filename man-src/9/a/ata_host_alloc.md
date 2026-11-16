@@ -14,10 +14,10 @@ description: "ata_host_alloc – allocate and init basic ATA host resources"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>generic device this host is associated with</dl>
+</dd><dd>generic device this host is associated with</dd></dl>
 <p> <i>max_ports</i></p>
 <dl>
-<dd>maximum number of ATA ports associated with this host</dl>
+<dd>maximum number of ATA ports associated with this host</dd></dl>
 <h2>Description</h2>
 <p>Allocate and initialize basic ATA host resources. LLD calls this function to allocate a host, initializes it fully and attaches it using <code>ata_host_register</code>. </p>
 <p> <i>max_ports</i> ports are allocated and host-&gt;n_ports is initialized to <i>max_ports</i>. The caller is allowed to decrease host-&gt;n_ports before calling <code>ata_host_register</code>. The unused ports will be automatically freed on registration.</p>
@@ -27,5 +27,5 @@ description: "ata_host_alloc – allocate and init basic ATA host resources"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

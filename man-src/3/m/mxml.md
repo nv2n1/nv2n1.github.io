@@ -16,18 +16,18 @@ description: "mxml – Mini-XML API"
 <p>Mini-XML is a small XML parsing library that you can use to read XML and XML-like data files in your application without requiring large non-standard libraries. Mini-XML only requires an ANSI C compatible compiler (GCC works, as do most vendors&#8217; ANSI C compilers) and a &quot;make&quot; program. </p>
 <p> Mini-XML provides the following functionality:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Reading of UTF-8 and UTF-16 and writing of UTF-8 encoded XML files and strings.</p>
-<dt>&bull;</p>
-<dd>Data is stored in a linked-list tree structure, preserving the XML data hierarchy.</p>
-<dt>&bull;</p>
-<dd>Supports arbitrary element names, attributes, and attribute values with no preset limits, just available memory.</p>
-<dt>&bull;</p>
-<dd>Supports integer, real, opaque (&quot;CDATA&quot;), and text data types in &quot;leaf&quot; nodes.</p>
-<dt>&bull;</p>
-<dd>Functions for creating, indexing, and managing trees of data.</p>
-<dt>&bull;</p>
-<dd>&quot;Find&quot; and &quot;walk&quot; functions for easily locating and navigating trees of data.</dl>
+<dt>&bull;</dt>
+<dd>Reading of UTF-8 and UTF-16 and writing of UTF-8 encoded XML files and strings.</dd>
+<dt>&bull;</dt>
+<dd>Data is stored in a linked-list tree structure, preserving the XML data hierarchy.</dd>
+<dt>&bull;</dt>
+<dd>Supports arbitrary element names, attributes, and attribute values with no preset limits, just available memory.</dd>
+<dt>&bull;</dt>
+<dd>Supports integer, real, opaque (&quot;CDATA&quot;), and text data types in &quot;leaf&quot; nodes.</dd>
+<dt>&bull;</dt>
+<dd>Functions for creating, indexing, and managing trees of data.</dd>
+<dt>&bull;</dt>
+<dd>&quot;Find&quot; and &quot;walk&quot; functions for easily locating and navigating trees of data.</dd></dl>
 <p> Mini-XML doesn&#8217;t do validation or other types of processing on the data based upon schema files or other sources of definition information, nor does it support character entities other than those required by the XML specification.</p>
 <h2>Using Mini-Xml</h2>
 <p>Mini-XML provides a single header file which you include: </p>
@@ -102,35 +102,35 @@ description: "mxml – Mini-XML API"
 <h3>mxml_sax_event_e</h3>
 <p>SAX event type.</p>
 <dl COMPACT>
-<dt>MXML_SAX_CDATA</p>
-<dd>CDATA node</p>
-<dt>MXML_SAX_COMMENT</p>
-<dd>Comment node</p>
-<dt>MXML_SAX_DATA</p>
-<dd>Data node</p>
-<dt>MXML_SAX_DIRECTIVE</p>
-<dd>Processing directive node</p>
-<dt>MXML_SAX_ELEMENT_CLOSE</p>
-<dd>Element closed</p>
-<dt>MXML_SAX_ELEMENT_OPEN</p>
-<dd>Element opened</dl>
+<dt>MXML_SAX_CDATA</dt>
+<dd>CDATA node</dd>
+<dt>MXML_SAX_COMMENT</dt>
+<dd>Comment node</dd>
+<dt>MXML_SAX_DATA</dt>
+<dd>Data node</dd>
+<dt>MXML_SAX_DIRECTIVE</dt>
+<dd>Processing directive node</dd>
+<dt>MXML_SAX_ELEMENT_CLOSE</dt>
+<dd>Element closed</dd>
+<dt>MXML_SAX_ELEMENT_OPEN</dt>
+<dd>Element opened</dd></dl>
 <h3>mxml_type_e</h3>
 <p>The XML node type.</p>
 <dl COMPACT>
-<dt>MXML_CUSTOM</p>
-<dd>Custom data</p>
-<dt>MXML_ELEMENT</p>
-<dd>XML element with attributes</p>
-<dt>MXML_IGNORE</p>
-<dd>Ignore/throw away node</p>
-<dt>MXML_INTEGER</p>
-<dd>Integer value</p>
-<dt>MXML_OPAQUE</p>
-<dd>Opaque string</p>
-<dt>MXML_REAL</p>
-<dd>Real value</p>
-<dt>MXML_TEXT</p>
-<dd>Text fragment</dl>
+<dt>MXML_CUSTOM</dt>
+<dd>Custom data</dd>
+<dt>MXML_ELEMENT</dt>
+<dd>XML element with attributes</dd>
+<dt>MXML_IGNORE</dt>
+<dd>Ignore/throw away node</dd>
+<dt>MXML_INTEGER</dt>
+<dd>Integer value</dd>
+<dt>MXML_OPAQUE</dt>
+<dd>Opaque string</dd>
+<dt>MXML_REAL</dt>
+<dd>Real value</dd>
+<dt>MXML_TEXT</dt>
+<dd>Text fragment</dd></dl>
 <h2>Functions</h2>
 <h3>mxmlAdd</h3>
 <p>Add a node to a tree. </p>

@@ -15,12 +15,12 @@ description: "mdoc validate – Validate XML documents against a schema"
 <p> <code>mdoc validate</code> validates the specified <i>PATHS</i> against a specified format schema.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;format</code>=<i>FORMAT</i></p>
-<dd> The documentation format to validate <i>PATHS</i> against. Supported formats include: <i>ecma</i>. </p>
+<dt><code>&#8211;format</code>=<i>FORMAT</i></dt>
+<dd> The documentation format to validate <i>PATHS</i> against. Supported formats include: <i>ecma</i>. </dd>
 <p> See the <i>FORMATS</i> section below for more information about these formats. </p>
 <p> The default format (if none is specified) is <i>ecma</i>.</p>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd></dl>
 <h2>FORMATS</h2>
 <p> The following documentation formats are supported:</p>
 <h3>ecma</h3>
@@ -33,8 +33,8 @@ description: "mdoc validate – Validate XML documents against a schema"
 </pre>
 <h2>MAILING LISTS</h2>
 <dl>
-<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>
-<dd></dl>
+<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</dt>
+<dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdoc/">http://www.mono-project.com/docs/tools+libraries/tools/mdoc/</a> for details </p>
 <h2>Index</h2>

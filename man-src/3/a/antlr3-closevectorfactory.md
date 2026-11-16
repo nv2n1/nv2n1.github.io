@@ -116,55 +116,51 @@ description: "src/antlr3collections.c –"
 <p> Frees up the memory structures that represent a hash table enumeration. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>enum</i> Pointer to ANTLR3 enumeration structure returned by <code>antlr3EnumNew()</code></dl>
+</dt><dd> <i>enum</i> Pointer to ANTLR3 enumeration structure returned by <code>antlr3EnumNew()</code></dd></dl>
 <p> References ANTLR3_FREE. </p>
 <p> Referenced by antlr3EnumNew().</p>
 <h3><code>pANTLR3_HASH_ENUM</code> antlr3EnumNew (<code>pANTLR3_HASH_TABLE</code> table)</h3>
 <p> Creates an enumeration structure to traverse the hash table. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>table</i> Table to enumerate</dl>
+</dt><dd> <i>table</i> Table to enumerate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Pointer to enumeration structure.</dl>
+</dt><dd> Pointer to enumeration structure.</dd></dl>
 <p> References ANTLR3_ERR_NOMEM, ANTLR3_FUNC_PTR, ANTLR3_MALLOC, antlr3EnumFree(), antlr3EnumNext(), antlr3EnumNextEntry(), ANTLR3_HASH_ENUM_struct::bucket, ANTLR3_HASH_TABLE_struct::buckets, ANTLR3_HASH_BUCKET_struct::entries, ANTLR3_HASH_ENUM_struct::entry, ANTLR3_HASH_ENUM_struct::free, ANTLR3_HASH_ENUM_struct::next, and ANTLR3_HASH_ENUM_struct::table. </p>
 <p> Referenced by antlr3BitsetList().</p>
 <h3>static int antlr3EnumNext (<code>pANTLR3_HASH_ENUM</code> en, <code>pANTLR3_HASH_KEY</code> * key, void ** data) [static]</h3>
 <p> Return the next entry in the hashtable being traversed by the supplied enumeration. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>en</i> Pointer to the enumeration tracking structure<br />
+</dt><dd> <i>en</i> Pointer to the enumeration tracking structure<br />
  <i>key</i> Pointer to void pointer, where the key pointer is returned.<br />
- <i>data</i> Pointer to void pointer where the data pointer is returned.</dl>
+ <i>data</i> Pointer to void pointer where the data pointer is returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> ANTLR3_SUCCESS if there was a next key</p>
-<dt>*</p>
-<dd> ANTLR3_FAIL if there were no more keys</dl>
+<dt>*</dt>
+<dd> ANTLR3_SUCCESS if there was a next key</dd>
+<dt>*</dt>
+<dd> ANTLR3_FAIL if there were no more keys</dd></dl>
 </dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dt>
-<dd> No checking of input structure is performed!</dl>
+</dt><dd> No checking of input structure is performed!</dd></dl>
 <p> References ANTLR3_FAIL, ANTLR3_SUCCESS, antlr3EnumNextEntry(), ANTLR3_HASH_ENUM_struct::bucket, ANTLR3_HASH_ENTRY_struct::data, ANTLR3_HASH_ENUM_struct::entry, ANTLR3_HASH_ENTRY_struct::keybase, ANTLR3_HASH_TABLE_struct::modulo, and ANTLR3_HASH_ENUM_struct::table. </p>
 <p> Referenced by antlr3EnumNew().</p>
 <h3>static void antlr3EnumNextEntry (<code>pANTLR3_HASH_ENUM</code> en) [static]</h3>
 <p> Local function to advance the entry pointer of an enumeration structure to the next valid entry (if there is one). <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>enum</i> Pointer to ANTLR3 enumeration structure returned by <code>antlr3EnumNew()</code></dl>
+</dt><dd> <i>enum</i> Pointer to ANTLR3 enumeration structure returned by <code>antlr3EnumNew()</code></dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> The function always leaves the pointers pointing at a valid entry if there is one, so if the entry pointer is NULL when this function exits, there were no more entries in the table.</dl>
+<dt>*</dt>
+<dd> The function always leaves the pointers pointing at a valid entry if there is one, so if the entry pointer is NULL when this function exits, there were no more entries in the table.</dd></dl>
 </dl>
 <p> References ANTLR3_HASH_ENUM_struct::bucket, ANTLR3_HASH_TABLE_struct::buckets, ANTLR3_HASH_BUCKET_struct::entries, ANTLR3_HASH_ENUM_struct::entry, ANTLR3_HASH_TABLE_struct::modulo, ANTLR3_HASH_ENTRY_struct::nextEntry, and ANTLR3_HASH_ENUM_struct::table. </p>
 <p> Referenced by antlr3EnumNew(), and antlr3EnumNext().</p>
@@ -362,7 +358,6 @@ description: "src/antlr3collections.c –"
 <h2>Variable Documentation</h2>
 <h3><code>ANTLR3_UINT8</code> <code>bitIndex</code>[256] [static]<code>Initial value:</code></h3>
 <pre>
- 
 { 
     0,                                                  
     0,                                                  
@@ -390,7 +385,6 @@ description: "src/antlr3collections.c –"
 <p> The table is probably obvious but it is just the number 0..7 of the MSB in each integer value 0..256</p>
 <h3><code>ANTLR3_UINT64</code> bitMask[64] [static]<code>Initial value:</code></h3>
 <pre>
- 
 {
     0x0000000000000001ULL, 0x0000000000000002ULL, 0x0000000000000004ULL, 0x0000000000000008ULL,
     0x0000000000000010ULL, 0x0000000000000020ULL, 0x0000000000000040ULL, 0x0000000000000080ULL,

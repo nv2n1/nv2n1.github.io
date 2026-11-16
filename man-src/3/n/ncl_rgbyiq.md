@@ -22,17 +22,17 @@ CALL RGBYIQ (R, G, B, Y, I, Q)
 <h2>Description</h2>
 
 <dl><dt>R
-<dd>(REAL, input, range [0.,1.]) represents the red intensity component of the input point in RGB color space.
-<dt>G
-<dd>(REAL, input, range [0.,1.]) represents the green intensity component of the input point in RGB color space.
-<dt>B
-<dd>(REAL, input, range [0.,1.]) represents the blue intensity component of the input point in RGB color space.
-<dt>Y
-<dd>(REAL, output, range [0.,1.]) This is the color component of a television signal that is shown on black-and-white televisions; Y minimizes the effect of two colors appearing different to the human eye but mapping to similar monochrome intensities.
-<dt>I
-<dd>(REAL, output, range [-.6,.6]) attains its maximum when the input triple is (1.,0.,0.); I attains its minimum when the input triple is (0.,1.,1.).
-<dt>Q
-<dd>(REAL, output, range [-.52,.52]) attains its maximum when the input triple is (1.,0.,1.); Q attains its minimum when the input triple is (0.,1.,0.).</dl>
+</dt><dd>(REAL, input, range [0.,1.]) represents the red intensity component of the input point in RGB color space.
+</dd><dt>G
+</dt><dd>(REAL, input, range [0.,1.]) represents the green intensity component of the input point in RGB color space.
+</dd><dt>B
+</dt><dd>(REAL, input, range [0.,1.]) represents the blue intensity component of the input point in RGB color space.
+</dd><dt>Y
+</dt><dd>(REAL, output, range [0.,1.]) This is the color component of a television signal that is shown on black-and-white televisions; Y minimizes the effect of two colors appearing different to the human eye but mapping to similar monochrome intensities.
+</dd><dt>I
+</dt><dd>(REAL, output, range [-.6,.6]) attains its maximum when the input triple is (1.,0.,0.); I attains its minimum when the input triple is (0.,1.,1.).
+</dd><dt>Q
+</dt><dd>(REAL, output, range [-.52,.52]) attains its maximum when the input triple is (1.,0.,1.); Q attains its minimum when the input triple is (0.,1.,0.).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

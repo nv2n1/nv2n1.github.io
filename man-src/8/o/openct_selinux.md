@@ -83,8 +83,8 @@ description: "openct_selinux – Security Enhanced Linux Policy for the openct p
 <p> <code>openct_exec_t</code> </p>
 <p> &#8211; Set files with the openct_exec_t type, if you want to transition an executable to the openct_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ifdhandler, /usr/sbin/openct-control </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ifdhandler, /usr/sbin/openct-control </dd>
 </dl>
 <p> <code>openct_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the openct_initrc_exec_t type, if you want to transition an executable to the openct_initrc_t domain. </p>

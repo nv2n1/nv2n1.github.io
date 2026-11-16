@@ -10,7 +10,7 @@ description: "vfs_preopen – Hide read latencies for applications reading numbe
 <p>vfs_preopen &#8211; Hide read latencies for applications reading numbered files</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = preopen</dl>
+<dd>vfs objects = preopen</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> This module assists applications that want to read numbered files in sequence with very strict latency requirements. One area where this happens in video streaming applications that want to read one file per frame. </p>
@@ -19,16 +19,16 @@ description: "vfs_preopen – Hide read latencies for applications reading numbe
 <h2>Options</h2>
 <p>preopen:names = /pattern/</p>
 <dl>
-<dd>preopen:names specifies the file name pattern which should trigger the preopen helpers to do their work. We assume that the files are numbered incrementally. So if your file names are numbered FRAME00000.frm FRAME00001.frm and so on you would list them as preopen:names=/FRAME*.frm/</dl>
+<dd>preopen:names specifies the file name pattern which should trigger the preopen helpers to do their work. We assume that the files are numbered incrementally. So if your file names are numbered FRAME00000.frm FRAME00001.frm and so on you would list them as preopen:names=/FRAME*.frm/</dd></dl>
 <p> preopen:num_bytes = BYTES</p>
 <dl>
-<dd>Specifies the number of bytes the helpers should speculatively read, defaults to 1.</dl>
+<dd>Specifies the number of bytes the helpers should speculatively read, defaults to 1.</dd></dl>
 <p> preopen:helpers = NUM-PROCS</p>
 <dl>
-<dd>Number of forked helper processes, defaults to 1.</dl>
+<dd>Number of forked helper processes, defaults to 1.</dd></dl>
 <p> preopen:queuelen = NUM-FILES</p>
 <dl>
-<dd>Number of files that should be speculatively opened. Defaults to the 10 subsequent files.</dl>
+<dd>Number of files that should be speculatively opened. Defaults to the 10 subsequent files.</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 3.3 of the Samba suite.</p>
 <h2>Author</h2>

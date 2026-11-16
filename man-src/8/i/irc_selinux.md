@@ -57,9 +57,9 @@ description: "irc_selinux – Security Enhanced Linux Policy for the irc process
 <p> Policy governs the access confined processes have to these ports. SELinux irc policy is very flexible allowing users to setup their irc processes in as secure a method as possible. </p>
 <p> The following port types are defined for irc: </p>
 <dl>
-<dt><code>ircd_port_t</code></p>
+<dt><code>ircd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6667,6697</dl>
+</dd><dd>Default Defined Ports: tcp 6667,6697</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type irc_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cifs_t</code> </p>
@@ -90,14 +90,14 @@ description: "irc_selinux – Security Enhanced Linux Policy for the irc process
 <p> <code>irc_exec_t</code> </p>
 <p> &#8211; Set files with the irc_exec_t type, if you want to transition an executable to the irc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/[st]irc, /usr/bin/ircII, /usr/bin/irssi, /usr/bin/tinyirc </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/[st]irc, /usr/bin/ircII, /usr/bin/irssi, /usr/bin/tinyirc </dd>
 </dl>
 <p> <code>irc_home_t</code> </p>
 <p> &#8211; Set files with the irc_home_t type, if you want to store irc files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.irssi(/.*)?, /home/[^/]+/irclog(/.*)?, /home/[^/]+/.ircmotd </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.irssi(/.*)?, /home/[^/]+/irclog(/.*)?, /home/[^/]+/.ircmotd </dd>
 </dl>
 <p> <code>irc_tmp_t</code> </p>
 <p> &#8211; Set files with the irc_tmp_t type, if you want to store irc temporary files in the /tmp directories. </p>

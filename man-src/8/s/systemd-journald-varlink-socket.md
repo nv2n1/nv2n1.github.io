@@ -20,15 +20,15 @@ description: "systemd-journald.service, systemd-journald.socket, systemd-journal
 <h2>Description</h2>
 <p>systemd-journald is a system service that collects and stores logging data. It creates and maintains structured, indexed journals based on logging information that is received from a variety of sources: </p>
 <dl>
-<dd>&bull; Kernel log messages, via kmsg</dl>
+<dd>&bull; Kernel log messages, via kmsg</dd></dl>
 <dl>
-<dd>&bull; Simple system log messages, via the libc <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) call</dl>
+<dd>&bull; Simple system log messages, via the libc <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) call</dd></dl>
 <dl>
-<dd>&bull; Structured system log messages via the native Journal API, see <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) and m[blue]<code>Native Journal Protocol</code>m[]<font SIZE="-2">[1]</font></dl>
+<dd>&bull; Structured system log messages via the native Journal API, see <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) and m[blue]<code>Native Journal Protocol</code>m[]<font SIZE="-2">[1]</font></dd></dl>
 <dl>
-<dd>&bull; Standard output and standard error of service units. For further details see below.</dl>
+<dd>&bull; Standard output and standard error of service units. For further details see below.</dd></dl>
 <dl>
-<dd>&bull; Audit records, originating from the kernel audit subsystem</dl>
+<dd>&bull; Audit records, originating from the kernel audit subsystem</dd></dl>
 <p> The daemon will implicitly collect numerous metadata fields for each log messages in a secure and unfakeable way. See <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7) for more information about the collected metadata. </p>
 <p> Log data collected by the journal is primarily text-based but can also include binary data where necessary. Individual fields making up a log record stored in the journal may be up to 2^64-1 bytes in size. </p>
 <p> The journal service stores log data either persistently below /var/log/journal or in a volatile way below /run/log/journal/ (in the latter case it is lost at reboot). By default, log data is stored persistently if /var/log/journal/ exists during boot, with an implicit fallback to volatile storage otherwise. Use <i>Storage=</i> in <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) to configure where log data is placed, independently of the existence of /var/log/journal/. </p>
@@ -38,7 +38,7 @@ description: "systemd-journald.service, systemd-journald.socket, systemd-journal
 <dd>
 <pre>mkdir -p /var/log/journal
 systemd-tmpfiles --create --prefix /var/log/journal</pre>
-</dl>
+</dd></dl>
 <p> See <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) for information about the configuration of this service.</p>
 <h2>Stream Logging</h2>
 <p>The systemd service manager invokes all service processes with standard output and standard error connected to the journal by default. This behaviour may be altered via the <i>StandardOutput=</i>/<i>StandardError=</i> unit file settings, see <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5) for details. The journal converts the log byte stream received this way into individual log records, splitting the stream at newline (&quot;
@@ -55,18 +55,18 @@ systemd-tmpfiles --create --prefix /var/log/journal</pre>
 <h2>Signals</h2>
 <p>SIGUSR1</p>
 <dl>
-<dd>Request that journal data from /run/ is flushed to /var/ in order to make it persistent (if this is enabled). This must be used after /var/ is mounted, as otherwise log data from /run/ is never flushed to /var/ regardless of the configuration. Use the <code>journalctl &#8211;flush</code> command to request flushing of the journal files, and wait for the operation to complete. See <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1) for details.</dl>
+<dd>Request that journal data from /run/ is flushed to /var/ in order to make it persistent (if this is enabled). This must be used after /var/ is mounted, as otherwise log data from /run/ is never flushed to /var/ regardless of the configuration. Use the <code>journalctl &#8211;flush</code> command to request flushing of the journal files, and wait for the operation to complete. See <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1) for details.</dd></dl>
 <p> SIGUSR2</p>
 <dl>
-<dd>Request immediate rotation of the journal files. Use the <code>journalctl &#8211;rotate</code> command to request journal file rotation, and wait for the operation to complete.</dl>
+<dd>Request immediate rotation of the journal files. Use the <code>journalctl &#8211;rotate</code> command to request journal file rotation, and wait for the operation to complete.</dd></dl>
 <p> SIGRTMIN+1</p>
 <dl>
-<dd>Request that all unwritten log data is written to disk. Use the <code>journalctl &#8211;sync</code> command to trigger journal synchronization, and wait for the operation to complete.</dl>
+<dd>Request that all unwritten log data is written to disk. Use the <code>journalctl &#8211;sync</code> command to trigger journal synchronization, and wait for the operation to complete.</dd></dl>
 <h2>Kernel Command Line</h2>
 <p>A few configuration parameters from journald.conf may be overridden on the kernel command line: </p>
 <p> <i>systemd.journald.forward_to_syslog=</i>, <i>systemd.journald.forward_to_kmsg=</i>, <i>systemd.journald.forward_to_console=</i>, <i>systemd.journald.forward_to_wall=</i></p>
 <dl>
-<dd>Enables/disables forwarding of collected log messages to syslog, the kernel log buffer, the system console or wall. </p>
+<dd>Enables/disables forwarding of collected log messages to syslog, the kernel log buffer, the system console or wall. </dd>
 <p> See <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) for information about these settings.</dl>
 <p> Note that these kernel command line options are only honoured by the default namespace, see above.</p>
 <h2>Access Control</h2>
@@ -76,31 +76,32 @@ systemd-tmpfiles --create --prefix /var/log/journal</pre>
 <dl>
 <dd>
 <pre># setfacl -Rnm g:wheel:rx,d:g:wheel:rx,g:adm:rx,d:g:adm:rx /var/log/journal/</pre>
-</dl>
+</dd></dl>
 <p> Note that this command will update the ACLs both for existing journal files and for future journal files created in the /var/log/journal/ directory.</p>
 <h2>Files</h2>
 <p>/etc/systemd/journald.conf</p>
 <dl>
-<dd>Configure <code>systemd-journald</code> behavior. See <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5).</dl>
+<dd>Configure <code>systemd-journald</code> behavior. See <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5).</dd></dl>
 <p> /run/log/journal/<i>machine-id</i>/*.journal, /run/log/journal/<i>machine-id</i>/*.journal~, /var/log/journal/<i>machine-id</i>/*.journal, /var/log/journal/<i>machine-id</i>/*.journal~</p>
 <dl>
-<dd><code>systemd-journald</code> writes entries to files in /run/log/journal/<i>machine-id</i>/ or /var/log/journal/<i>machine-id</i>/ with the &quot;.journal&quot; suffix. If the daemon is stopped uncleanly, or if the files are found to be corrupted, they are renamed using the &quot;.journal~&quot; suffix, and <code>systemd-journald</code> starts writing to a new file. /run/ is used when /var/log/journal is not available, or when <code>Storage=volatile</code> is set in the <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) configuration file. </p>
+<dd><code>systemd-journald</code> writes entries to files in /run/log/journal/<i>machine-id</i>/ or /var/log/journal/<i>machine-id</i>/ with the &quot;.journal&quot; suffix. If the daemon is stopped uncleanly, or if the files are found to be corrupted, they are renamed using the &quot;.journal~&quot; suffix, and <code>systemd-journald</code> starts writing to a new file. /run/ is used when /var/log/journal is not available, or when <code>Storage=volatile</code> is set in the <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) configuration file. </dd>
 <p> When systemd-journald ceases writing to a journal file, it will be renamed to &quot;<i>original-name</i>@<i>suffix.journal</i>&quot; (or &quot;<i>original-name</i>@<i>suffix.journal~</i>&quot;). Such files are &quot;archived&quot; and will not be written to any more. </p>
 <p> In general, it is safe to read or copy any journal file (active or archived). <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1) and the functions in the <code><a href="/docs/linux/man/3-sd-journal/">sd-journal</a></code>(3) library should be able to read all entries that have been fully written. </p>
 <p> systemd-journald will automatically remove the oldest archived journal files to limit disk use. See <i>SystemMaxUse=</i> and related settings in <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5).</dl>
 <p> /dev/kmsg, /dev/log, /run/systemd/journal/dev-log, /run/systemd/journal/socket, /run/systemd/journal/stdout</p>
 <dl>
-<dd>Sockets and other file node paths that <code>systemd-journald</code> will listen on and are visible in the file system. In addition to these, <code>systemd-journald</code> can listen for audit events using <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7).</dl>
+<dd>Sockets and other file node paths that <code>systemd-journald</code> will listen on and are visible in the file system. In addition to these, <code>systemd-journald</code> can listen for audit events using <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7).</dd></dl>
 <p> If journal namespacing is used these paths are slightly altered to include a namespace identifier, see above.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code><a href="/docs/linux/man/3-sd-journal/">sd-journal</a></code>(3), <code><a href="/docs/linux/man/8-systemd-coredump/">systemd-coredump</a></code>(8), <code><a href="/docs/linux/man/1-setfacl/">setfacl</a></code>(1), <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3), <code>pydoc systemd.journal</code></p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Native Journal Protocol</p>
+<dt> 1.</dt>
+<dd>Native Journal Protocol</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/JOURNAL_NATIVE_PROTOCOL">https://systemd.io/JOURNAL_NATIVE_PROTOCOL</a></dl>
-<dt> 2.</p>
-<dd>Users, Groups, UIDs and GIDs on systemd systems</p>
+<dd><a rel="nofollow" href="https://systemd.io/JOURNAL_NATIVE_PROTOCOL">https://systemd.io/JOURNAL_NATIVE_PROTOCOL</a></dd></dl>
+<dt> 2.</dt>
+<dd>Users, Groups, UIDs and GIDs on systemd systems</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/UIDS-GIDS">https://systemd.io/UIDS-GIDS</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/UIDS-GIDS">https://systemd.io/UIDS-GIDS</a></dd></dl>
+</dl>

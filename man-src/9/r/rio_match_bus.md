@@ -14,14 +14,14 @@ description: "rio_match_bus – Tell if a RIO device structure has a matching RI
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the standard device structure to match against</dl>
+</dd><dd>the standard device structure to match against</dd></dl>
 <p> <i>drv</i></p>
 <dl>
-<dd>the standard driver structure containing the ids to match against</dl>
+<dd>the standard driver structure containing the ids to match against</dd></dl>
 <h2>Description</h2>
 <p>Used by a driver to check whether a RIO device present in the system is in its list of supported devices. Returns 1 if there is a matching struct rio_device_id or 0 if there is no match.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

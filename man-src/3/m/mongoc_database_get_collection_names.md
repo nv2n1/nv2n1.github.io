@@ -15,11 +15,11 @@ mongoc_database_get_collection_names (mongoc_database_t *database,
 <p>Fetches a <code>NULL</code> terminated array of <code>NULL-byte</code> terminated <code>char*</code> strings containing the names of all of the collections in <code>database</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

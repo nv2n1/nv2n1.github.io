@@ -33,7 +33,7 @@ description: "QuantLib::ZciisInflationHelper – Zero-coupon inflation-swap boot
 <p>sets the term structure to be used for pricing </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself.</dl>
+<dd>Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself.</dd></dl>
 <p> Reimplemented from <code>BootstrapHelper&lt; ZeroInflationTermStructure &gt;</code>.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

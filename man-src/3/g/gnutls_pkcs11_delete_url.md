@@ -14,10 +14,10 @@ description: "gnutls_pkcs11_delete_url – API function"
 <p> <code>int gnutls_pkcs11_delete_url(const char * </code><i>object_url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * object_url</p>
-<dd> The URL of the object to delete.</p>
-<dt>unsigned int flags</p>
-<dd> One of GNUTLS_PKCS11_OBJ_* flags</dl>
+<dt>const char * object_url</dt>
+<dd> The URL of the object to delete.</dd>
+<dt>unsigned int flags</dt>
+<dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will delete objects matching the given URL. Note that not all tokens support the delete operation.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_pkcs11_delete_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -14,13 +14,13 @@ description: "strlcpy – Copy a C-string into a sized buffer"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>Where to copy the string to</dl>
+</dd><dd>Where to copy the string to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>Where to copy the string from</dl>
+<dd>Where to copy the string from</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of destination buffer</dl>
+<dd>size of destination buffer</dd></dl>
 <h2>Description</h2>
 <p>Compatible with *BSD: the result is always a valid NUL-terminated string that fits in the buffer (unless, of course, the buffer size is zero). It does not pad out the result like <code>strncpy</code> does.</p>
 <h2>Copyright</h2>

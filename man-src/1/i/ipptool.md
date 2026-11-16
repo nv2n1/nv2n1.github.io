@@ -16,58 +16,58 @@ description: "ipptool – perform internet printing protocol requests"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>ipptool:</code></p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Shows program help.</p>
-<dt><code>&#8211;ippserver </code><i>filename</i></p>
-<dd> Specifies that the test results should be written to the named <code>ippserver</code> attributes file.</p>
-<dt><code>&#8211;stop-after-include-error</code></p>
-<dd> Tells <code>ipptool</code> to stop if an error occurs in an included file. Normally <code>ipptool</code> will continue with subsequent tests after the INCLUDE directive.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the version of <code>ipptool</code> being used.</p>
-<dt><code>-4</code></p>
-<dd> Specifies that <code>ipptool</code> must connect to the printer or server using IPv4.</p>
-<dt><code>-6</code></p>
-<dd> Specifies that <code>ipptool</code> must connect to the printer or server using IPv6.</p>
-<dt><code>-C</code></p>
-<dd> Specifies that requests should be sent using the HTTP/1.1 &quot;Transfer-Encoding: chunked&quot; header, which is required for conformance by all versions of IPP. The default is to use &quot;Transfer-Encoding: chunked&quot; for requests with attached files and &quot;Content-Length:&quot; for requests without attached files.</p>
-<dt><code>-E</code></p>
-<dd> Forces TLS encryption when connecting to the server using the HTTP &quot;Upgrade&quot; header.</p>
-<dt><code>-I</code></p>
-<dd> Specifies that <code>ipptool</code> will continue past errors.</p>
-<dt><code>-L</code></p>
-<dd> Specifies that requests should be sent using the HTTP/1.0 &quot;Content-Length:&quot; header, which is required for conformance by all versions of IPP. The default is to use &quot;Transfer-Encoding: chunked&quot; for requests with attached files and &quot;Content-Length:&quot; for requests without attached files.</p>
-<dt><code>-P</code><i>&nbsp;filename.plist</i></p>
-<dd> Specifies that the test results should be written to the named XML (Apple plist) file in addition to the regular test report (<code>-t</code>). This option is incompatible with the <code>-i</code> (interval) and <code>-n</code> (repeat-count) options.</p>
-<dt><code>-S</code></p>
-<dd> Forces (dedicated) TLS encryption when connecting to the server.</p>
-<dt><code>-T</code><i>&nbsp;seconds</i></p>
-<dd> Specifies a timeout for IPP requests in seconds.</p>
-<dt><code>-V</code><i>&nbsp;version</i></p>
-<dd> Specifies the default IPP version to use: 1.0, 1.1, 2.0, 2.1, or 2.2. If not specified, version 1.1 is used.</p>
-<dt><code>-X</code></p>
-<dd> Specifies that XML (Apple plist) output is desired instead of the plain text report. This option is incompatible with the <code>-i</code> (interval) and <code>-n</code> (repeat-count) options.</p>
-<dt><code>-c</code></p>
-<dd> Specifies that CSV (comma-separated values) output is desired instead of the plain text output.</p>
-<dt><code>-d</code><i>&nbsp;name=value</i></p>
-<dd> Defines the named variable.</p>
-<dt><code>-f</code><i>&nbsp;filename</i></p>
-<dd> Defines the default request filename for tests.</p>
-<dt><code>-h</code></p>
-<dd> Validate HTTP response headers.</p>
-<dt><code>-i</code><i>&nbsp;seconds</i></p>
-<dd> Specifies that the (last) <i>testfile</i> should be repeated at the specified interval. This option is incompatible with the <code>-X</code> (XML plist output) option.</p>
-<dt><code>-j</code></p>
-<dd> Specifies that <code>ipptool</code> will produce JSON output.</p>
-<dt><code>-l</code></p>
-<dd> Specifies that plain text output is desired.</p>
-<dt><code>-n</code><i>&nbsp;repeat-count</i></p>
-<dd> Specifies that the (last) <i>testfile</i> should be repeated the specified number of times. This option is incompatible with the <i>-X</i> (XML plist output) option.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet and produce no output.</p>
-<dt><code>-t</code></p>
-<dd> Specifies that CUPS test report output is desired instead of the plain text output.</p>
-<dt><code>-v</code></p>
-<dd> Specifies that all request and response attributes should be output in CUPS test mode (<code>-t</code>). This is the default for XML output.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Shows program help.</dd>
+<dt><code>&#8211;ippserver </code><i>filename</i></dt>
+<dd> Specifies that the test results should be written to the named <code>ippserver</code> attributes file.</dd>
+<dt><code>&#8211;stop-after-include-error</code></dt>
+<dd> Tells <code>ipptool</code> to stop if an error occurs in an included file. Normally <code>ipptool</code> will continue with subsequent tests after the INCLUDE directive.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the version of <code>ipptool</code> being used.</dd>
+<dt><code>-4</code></dt>
+<dd> Specifies that <code>ipptool</code> must connect to the printer or server using IPv4.</dd>
+<dt><code>-6</code></dt>
+<dd> Specifies that <code>ipptool</code> must connect to the printer or server using IPv6.</dd>
+<dt><code>-C</code></dt>
+<dd> Specifies that requests should be sent using the HTTP/1.1 &quot;Transfer-Encoding: chunked&quot; header, which is required for conformance by all versions of IPP. The default is to use &quot;Transfer-Encoding: chunked&quot; for requests with attached files and &quot;Content-Length:&quot; for requests without attached files.</dd>
+<dt><code>-E</code></dt>
+<dd> Forces TLS encryption when connecting to the server using the HTTP &quot;Upgrade&quot; header.</dd>
+<dt><code>-I</code></dt>
+<dd> Specifies that <code>ipptool</code> will continue past errors.</dd>
+<dt><code>-L</code></dt>
+<dd> Specifies that requests should be sent using the HTTP/1.0 &quot;Content-Length:&quot; header, which is required for conformance by all versions of IPP. The default is to use &quot;Transfer-Encoding: chunked&quot; for requests with attached files and &quot;Content-Length:&quot; for requests without attached files.</dd>
+<dt><code>-P</code><i>&nbsp;filename.plist</i></dt>
+<dd> Specifies that the test results should be written to the named XML (Apple plist) file in addition to the regular test report (<code>-t</code>). This option is incompatible with the <code>-i</code> (interval) and <code>-n</code> (repeat-count) options.</dd>
+<dt><code>-S</code></dt>
+<dd> Forces (dedicated) TLS encryption when connecting to the server.</dd>
+<dt><code>-T</code><i>&nbsp;seconds</i></dt>
+<dd> Specifies a timeout for IPP requests in seconds.</dd>
+<dt><code>-V</code><i>&nbsp;version</i></dt>
+<dd> Specifies the default IPP version to use: 1.0, 1.1, 2.0, 2.1, or 2.2. If not specified, version 1.1 is used.</dd>
+<dt><code>-X</code></dt>
+<dd> Specifies that XML (Apple plist) output is desired instead of the plain text report. This option is incompatible with the <code>-i</code> (interval) and <code>-n</code> (repeat-count) options.</dd>
+<dt><code>-c</code></dt>
+<dd> Specifies that CSV (comma-separated values) output is desired instead of the plain text output.</dd>
+<dt><code>-d</code><i>&nbsp;name=value</i></dt>
+<dd> Defines the named variable.</dd>
+<dt><code>-f</code><i>&nbsp;filename</i></dt>
+<dd> Defines the default request filename for tests.</dd>
+<dt><code>-h</code></dt>
+<dd> Validate HTTP response headers.</dd>
+<dt><code>-i</code><i>&nbsp;seconds</i></dt>
+<dd> Specifies that the (last) <i>testfile</i> should be repeated at the specified interval. This option is incompatible with the <code>-X</code> (XML plist output) option.</dd>
+<dt><code>-j</code></dt>
+<dd> Specifies that <code>ipptool</code> will produce JSON output.</dd>
+<dt><code>-l</code></dt>
+<dd> Specifies that plain text output is desired.</dd>
+<dt><code>-n</code><i>&nbsp;repeat-count</i></dt>
+<dd> Specifies that the (last) <i>testfile</i> should be repeated the specified number of times. This option is incompatible with the <i>-X</i> (XML plist output) option.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet and produce no output.</dd>
+<dt><code>-t</code></dt>
+<dd> Specifies that CUPS test report output is desired instead of the plain text output.</dd>
+<dt><code>-v</code></dt>
+<dd> Specifies that all request and response attributes should be output in CUPS test mode (<code>-t</code>). This is the default for XML output.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>ipptool</code> program returns 0 if all tests were successful and 1 otherwise.</p>
 <h2>FILES</h2>

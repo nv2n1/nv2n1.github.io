@@ -24,10 +24,10 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <p>Returns a bitmask with the mouse buttons currently pressed, set to 1. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas</dl>
+<dd><i>e</i> The pointer to the Evas Canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A bitmask of the currently depressed buttons on the cavas</dl>
+<dd>A bitmask of the currently depressed buttons on the cavas</dd></dl>
 <p> Calling this function will return a 32-bit integer with the appropriate bits set to 1 that correspond to a mouse button being depressed. This limits Evas to a mouse devices with a maximum of 32 buttons, but that is generally in excess of any host system&#8217;s pointing device abilities. </p>
 <p> A canvas by default begins with no mouse buttons being pressed and only calls to <code>evas_event_feed_mouse_down()</code>, evas_event_feed_mouse_down_data(), <code>evas_event_feed_mouse_up()</code> and evas_event_feed_mouse_up_data() will alter that. </p>
 <p> The least significant bit corresponds to the first mouse button (button 1) and the most significant bit corresponds to the last mouse button (button 32). </p>
@@ -48,7 +48,7 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
  <i>x</i> The pointer to a Evas_Coord to be filled in<br />
- <i>y</i> The pointer to a Evas_Coord to be filled in</dl>
+ <i>y</i> The pointer to a Evas_Coord to be filled in</dd></dl>
 <p> This function returns the current known canvas unit co-ordinates of the mouse pointer and sets the contents of the Evas_Coords pointed to by x and y to contain these co-ordinates. If e is not a valid canvas the results of this function are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -60,10 +60,10 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <p>Returns whether the mouse pointer is logically inside the canvas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas</dl>
+<dd><i>e</i> The pointer to the Evas Canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An integer that is 1 if the mouse is inside the canvas, 0 otherwise</dl>
+<dd>An integer that is 1 if the mouse is inside the canvas, 0 otherwise</dd></dl>
 <p> When this function is called it will return a value of either 0 or 1, depending on if <code>evas_event_feed_mouse_in()</code>, evas_event_feed_mouse_in_data(), or <code>evas_event_feed_mouse_out()</code>, evas_event_feed_mouse_out_data() have been called to feed in a mouse enter event into the canvas. </p>
 <p> A return value of 1 indicates the mouse is logically inside the canvas, and 0 implies it is logically outside the canvas. </p>
 <p> A canvas begins with the mouse being assumed outside (0). </p>
@@ -79,7 +79,7 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <dl COMPACT>
 <dd><i>e</i> The pointer to the Evas Canvas<br />
  <i>x</i> The pointer to an integer to be filled in<br />
- <i>y</i> The pointer to an integer to be filled in</dl>
+ <i>y</i> The pointer to an integer to be filled in</dd></dl>
 <p> This function returns the current known screen/output co-ordinates of the mouse pointer and sets the contents of the integers pointed to by x and y to contain these co-ordinates. If e is not a valid canvas the results of this function are undefined. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;

@@ -14,17 +14,15 @@ description: "xkibitz – allow multiple people to interact in an xterm"
 <h2>INTRODUCTION</h2>
 <p> <code>xkibitz</code> allows users in separate xterms to share one shell (or any program that runs in an xterm). Uses include:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A novice user can ask an expert user for help. Using <code>xkibitz</code>, the expert can see what the user is doing, and offer advice or show how to do it right.</p>
-<dt>&bull;</p>
-<dd> By running <code>xkibitz</code> and then starting a full-screen editor, people may carry out a conversation, retaining the ability to scroll backwards, save the entire conversation, or even edit it while in progress.</p>
-<dt>&bull;</p>
-<dd> People can team up on games, document editing, or other cooperative tasks where each person has strengths and weaknesses that complement one another.</p>
-<dt>&bull;</p>
-<dd> If you want to have a large number of people do an on-line code walk-through, you can sit two in front of each workstation, and then connect them all together while you everyone looks at code together in the editor.</dl>
+<dt>&bull;</dt>
+<dd> A novice user can ask an expert user for help. Using <code>xkibitz</code>, the expert can see what the user is doing, and offer advice or show how to do it right.</dd>
+<dt>&bull;</dt>
+<dd> By running <code>xkibitz</code> and then starting a full-screen editor, people may carry out a conversation, retaining the ability to scroll backwards, save the entire conversation, or even edit it while in progress.</dd>
+<dt>&bull;</dt>
+<dd> People can team up on games, document editing, or other cooperative tasks where each person has strengths and weaknesses that complement one another.</dd>
+<dt>&bull;</dt>
+<dd> If you want to have a large number of people do an on-line code walk-through, you can sit two in front of each workstation, and then connect them all together while you everyone looks at code together in the editor.</dd></dl>
 </dl>
 <h2>USAGE</h2>
 <p> To start <code>xkibitz</code>, one user (the master) runs xkibitz with no arguments. </p>

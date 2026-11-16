@@ -21,9 +21,9 @@ CALL SFGETR (CNP, RVP)
 <h2>Description</h2>
 
 <dl><dt>CNP
-<dd>(an input expression of type CHARACTER) is one of the character strings 'AN', 'CH', 'DO', 'SP', or 'TY' (or a longer string beginning with one of these strings), meaning &quot;ANgle&quot;, &quot;CHaracter&quot;, &quot;DOts&quot;, &quot;SPacing&quot;, and &quot;TYpe&quot;, respectively.
-<dt>RVP
-<dd>(an output variable of type REAL) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved. If the internal parameter is inherently an integer value &quot;i&quot;, &quot;REAL(i)&quot; will be returned as the value of RVP.</dl>
+</dt><dd>(an input expression of type CHARACTER) is one of the character strings 'AN', 'CH', 'DO', 'SP', or 'TY' (or a longer string beginning with one of these strings), meaning &quot;ANgle&quot;, &quot;CHaracter&quot;, &quot;DOts&quot;, &quot;SPacing&quot;, and &quot;TYpe&quot;, respectively.
+</dd><dt>RVP
+</dt><dd>(an output variable of type REAL) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved. If the internal parameter is inherently an integer value &quot;i&quot;, &quot;REAL(i)&quot; will be returned as the value of RVP.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

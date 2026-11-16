@@ -16,8 +16,8 @@ description: "rdjpgcom – display text comments from a JPEG file"
 <p> The JPEG standard allows &quot;comment&quot; (COM) blocks to occur within a JPEG file. Although the standard doesn&#8217;t actually define what COM blocks are for, they are widely used to hold user-supplied text strings. This lets you add annotations, titles, index terms, etc to your JPEG files, and later retrieve them as text. COM blocks do not interfere with the image stored in the JPEG file. The maximum size of a COM block is 64K, but you can have as many of them as you like in one JPEG file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-raw</code></p>
-<dd> Normally <code>rdjpgcom</code> escapes non-printable characters in comments, for security reasons. This option avoids that.</dl>
+<dt><code>-raw</code></dt>
+<dd> Normally <code>rdjpgcom</code> escapes non-printable characters in comments, for security reasons. This option avoids that.</dd></dl>
 <p> <code>-verbose</code> Causes <code>rdjpgcom</code> to also display the JPEG image dimensions. </p>
 <p> Switch names may be abbreviated, and are not case sensitive.</p>
 <h2>HINTS</h2>

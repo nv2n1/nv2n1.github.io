@@ -46,16 +46,16 @@ description: "cupsaddsmb – export printers to samba for windows clients"
 <h2>Options</h2>
 <p><code>cupsaddsmb</code> supports the following options:</p>
 <dl>
-<dt><code>-H </code><i>samba-server</i></p>
-<dd>Specifies the SAMBA server which defaults to the CUPS server.</p>
-<dt><code>-U </code><i>samba-user</i>[<code>%</code><i>samba-password</i>]</p>
-<dd>Specifies the SAMBA print admin username which defaults to your current username. If the username contains a percent (%) character, then the text following the percent is treated as the SAMBA password to use.</p>
-<dt><code>-a</code></p>
-<dd>Exports all known printers. Otherwise only the named printers are exported.</p>
-<dt><code>-h </code><i>cups-server</i>[<code>:</code><i>port</i>]</p>
-<dd>Specifies a different CUPS server to use.</p>
-<dt><code>-v</code></p>
-<dd>Specifies that verbose information should be shown. This is useful for debugging SAMBA configuration problems.</dl>
+<dt><code>-H </code><i>samba-server</i></dt>
+<dd>Specifies the SAMBA server which defaults to the CUPS server.</dd>
+<dt><code>-U </code><i>samba-user</i>[<code>%</code><i>samba-password</i>]</dt>
+<dd>Specifies the SAMBA print admin username which defaults to your current username. If the username contains a percent (%) character, then the text following the percent is treated as the SAMBA password to use.</dd>
+<dt><code>-a</code></dt>
+<dd>Exports all known printers. Otherwise only the named printers are exported.</dd>
+<dt><code>-h </code><i>cups-server</i>[<code>:</code><i>port</i>]</dt>
+<dd>Specifies a different CUPS server to use.</dd>
+<dt><code>-v</code></dt>
+<dd>Specifies that verbose information should be shown. This is useful for debugging SAMBA configuration problems.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-rpcclient/">rpcclient</a></code>(1), <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1), <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8), <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>

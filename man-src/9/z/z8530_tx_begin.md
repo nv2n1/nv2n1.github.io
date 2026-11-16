@@ -14,7 +14,7 @@ description: "z8530_tx_begin – Begin packet transmission"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>The Z8530 channel to kick</dl>
+</dd><dd>The Z8530 channel to kick</dd></dl>
 <h2>Description</h2>
 <p>This is the speed sensitive side of transmission. If we are called and no buffer is being transmitted we commence the next buffer. If nothing is queued we idle the sync.</p>
 <h2>Note</h2>
@@ -23,5 +23,5 @@ description: "z8530_tx_begin – Begin packet transmission"
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

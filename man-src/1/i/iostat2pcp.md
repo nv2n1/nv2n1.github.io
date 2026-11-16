@@ -19,12 +19,12 @@ description: "iostat2pcp – import iostat data and create a PCP archive"
 <p> The best results are obtained when <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1) was run with its own <code>-t</code> flag, so each output sample is prefixed with a timestamp. Even better is <code>-t</code> with $<code>S_TIME_FORMAT=ISO</code> set in environment when <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1) is run, in which case the timestamp includes the timezone. </p>
 <p> Note that if $<code>S_TIME_FORMAT=ISO</code> is <code>not</code> used with the <code>-t</code> option then <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1) may produce a timestamp controlled by <font SIZE="-1"><code>LC_TIME</code></font> from the locale that is in a format <i>iostat2pcp</i> cannot parse. The formats for the timestamp that <i>iostat2pcp</i> accepts are illustrated by these examples:</p>
 <dl>
-<dt><code>2013-07-06T21:34:39+1000</code></p>
-<dd> (for the $<code>S_TIME_FORMAT=ISO</code>).</p>
-<dt><code>2013-07-06 21:34:39</code></p>
-<dd> (for some of the European formats, e.g. de_AT, de_BE, de_LU and en_DK.utf8).</p>
-<dt><code>06/07/13 21:34:39</code></p>
-<dd> (for all of the $<font SIZE="-1"><code>LC_TIME</code></font> settings for English locales outside North America, e.g. en_AU, en_GB, en_IE, en_NZ, en_SG and en_ZA, and all the Spanish locales, e.g. es_ES, es_MX and es_AR).</dl>
+<dt><code>2013-07-06T21:34:39+1000</code></dt>
+<dd> (for the $<code>S_TIME_FORMAT=ISO</code>).</dd>
+<dt><code>2013-07-06 21:34:39</code></dt>
+<dd> (for some of the European formats, e.g. de_AT, de_BE, de_LU and en_DK.utf8).</dd>
+<dt><code>06/07/13 21:34:39</code></dt>
+<dd> (for all of the $<font SIZE="-1"><code>LC_TIME</code></font> settings for English locales outside North America, e.g. en_AU, en_GB, en_IE, en_NZ, en_SG and en_ZA, and all the Spanish locales, e.g. es_ES, es_MX and es_AR).</dd></dl>
 <p> In particular, note that some common North American $<font SIZE="-1"><code>LC_TIME</code></font> settings will <code>not</code> work with <i>iostat2pcp</i> (namely, en_US, <font SIZE="-1">POSIX</font> and C) because they use the <font SIZE="-1">MM/DD</font> format which may be incorrectly converted with the assumed <font SIZE="-1">DD/MM</font> format. This is another reason to recommend setting $<code>S_TIME_FORMAT=ISO</code>. </p>
 <p> If there are no timestamps in the input stream, <i>iostat2pcp</i> will try and deduce the sample interval if basic Disk data (<code>-d</code> option for <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1)) is found. If this fails, then the <code>-t</code> option may be used to specify the sample <i>interval</i> in seconds. This option is ignored if timestamps are found in the input stream. </p>
 <p> The <code>-S</code> option may be used to specify as start time for the first real sample in <i>infile</i>, where <i>start</i> must have the format <font SIZE="-1">HH:MM:SS</font>. This option is ignored if timestamps are found in the input stream. </p>

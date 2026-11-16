@@ -35,10 +35,8 @@ std::string also defines operator&quot;&quot;s, to represent literal objects of 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     using namespace std::chrono_literals;
     auto halfmin = 30s;

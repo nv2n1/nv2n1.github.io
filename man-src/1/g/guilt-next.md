@@ -17,7 +17,7 @@ description: "guilt-next – Output the name of next patch to be pushed"
 <p> -p, &#8211;path</p>
 <dl>
 <dt>
-<dd> Output full path instead of just patch name.</dl>
+</dt><dd> Output full path instead of just patch name.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -26,10 +26,10 @@ description: "guilt-next – Output the name of next patch to be pushed"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

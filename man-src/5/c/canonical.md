@@ -26,24 +26,24 @@ description: "canonical – Postfix canonical table format"
 <h2>Table Format</h2>
 <p>The input format for the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command is as follows:</p>
 <dl>
-<dt><i>pattern address</i></p>
-<dd>When <i>pattern</i> matches a mail address, replace it by the corresponding <i>address</i>.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt><i>pattern address</i></dt>
+<dd>When <i>pattern</i> matches a mail address, replace it by the corresponding <i>address</i>.</dd>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <h2>Table Search Order</h2>
 <p>With lookups from indexed files such as DB or DBM, or from networked tables such as NIS, LDAP or SQL, each <i>user</i>@<i>domain</i> query produces a sequence of query patterns as described below. </p>
 <p> Each query pattern is sent to each specified lookup table before trying the next query pattern, until a match is found.</p>
 <dl>
-<dt><i>user</i>@<i>domain address</i></p>
-<dd>Replace <i>user</i>@<i>domain</i> by <i>address</i>. This form has the highest precedence. </p>
+<dt><i>user</i>@<i>domain address</i></dt>
+<dd>Replace <i>user</i>@<i>domain</i> by <i>address</i>. This form has the highest precedence. </dd>
 <p> This is useful to clean up addresses produced by legacy mail systems. It can also be used to produce <i>Firstname.Lastname</i> style addresses, but see below for a simpler solution.</p>
-<dt><i>user address</i></p>
-<dd>Replace <i>user</i>@<i>site</i> by <i>address</i> when <i>site</i> is equal to $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when it is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>. </p>
+<dt><i>user address</i></dt>
+<dd>Replace <i>user</i>@<i>site</i> by <i>address</i> when <i>site</i> is equal to $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when it is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>. </dd>
 <p> This form is useful for replacing login names by <i>Firstname.Lastname</i>.</p>
-<dt>@<i>domain address</i></p>
-<dd>Replace other addresses in <i>domain</i> by <i>address</i>. This form has the lowest precedence. </p>
+<dt>@<i>domain address</i></dt>
+<dd>Replace other addresses in <i>domain</i> by <i>address</i>. This form has the lowest precedence. </dd>
 <p> Note: @<i>domain</i> is a wild-card. When this form is applied to recipient addresses, the Postfix SMTP server accepts mail for any recipient in <i>domain</i>, regardless of whether that recipient exists. This may turn your mail system into a backscatter source: Postfix first accepts mail for non-existent recipients and then tries to return that mail as &quot;undeliverable&quot; to the often forged sender address. </p>
 <p> To avoid backscatter with mail for a wild-card domain, replace the wild-card mapping with explicit 1:1 mappings, or add a reject_unverified_recipient restriction for that domain: </p>
 <pre> smtpd_recipient_restrictions =
@@ -56,12 +56,12 @@ description: "canonical – Postfix canonical table format"
 <h2>Result Address Rewriting</h2>
 <p>The lookup result is subject to address rewriting:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When the result has the form @<i>otherdomain</i>, the result becomes the same <i>user</i> in <i>otherdomain</i>.</p>
-<dt>&bull;</p>
-<dd>When &quot;<code>append_at_myorigin=yes</code>&quot;, append &quot;<code>@$myorigin</code>&quot; to addresses without &quot;@domain&quot;.</p>
-<dt>&bull;</p>
-<dd>When &quot;<code>append_dot_mydomain=yes</code>&quot;, append &quot;<code>.$mydomain</code>&quot; to addresses without &quot;.domain&quot;.</dl>
+<dt>&bull;</dt>
+<dd>When the result has the form @<i>otherdomain</i>, the result becomes the same <i>user</i> in <i>otherdomain</i>.</dd>
+<dt>&bull;</dt>
+<dd>When &quot;<code>append_at_myorigin=yes</code>&quot;, append &quot;<code>@$myorigin</code>&quot; to addresses without &quot;@domain&quot;.</dd>
+<dt>&bull;</dt>
+<dd>When &quot;<code>append_dot_mydomain=yes</code>&quot;, append &quot;<code>.$mydomain</code>&quot; to addresses without &quot;.domain&quot;.</dd></dl>
 <h2>Address Extension</h2>
 <p>When a mail address localpart contains the optional recipient delimiter (e.g., <i>user+foo</i>@<i>domain</i>), the lookup order becomes: <i>user+foo</i>@<i>domain</i>, <i>user</i>@<i>domain</i>, <i>user+foo</i>, <i>user</i>, and @<i>domain</i>. </p>
 <p> The <code>propagate_unmatched_extensions</code> parameter controls whether an unmatched address extension (<i>+foo</i>) is propagated to the result of table lookup.</p>
@@ -79,38 +79,38 @@ description: "canonical – Postfix canonical table format"
 <h2>Configuration Parameters</h2>
 <p>The following <code>main.cf</code> parameters are especially relevant. The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>canonical_classes (envelope_sender, envelope_recipient, header_sender, header_recipient)</code></p>
-<dd>What addresses are subject to canonical_maps address mapping.</p>
-<dt><code>canonical_maps (empty)</code></p>
-<dd>Optional address mapping lookup tables for message headers and envelopes.</p>
-<dt><code>recipient_canonical_maps (empty)</code></p>
-<dd>Optional address mapping lookup tables for envelope and header recipient addresses.</p>
-<dt><code>sender_canonical_maps (empty)</code></p>
-<dd>Optional address mapping lookup tables for envelope and header sender addresses.</p>
-<dt><code>propagate_unmatched_extensions (canonical, virtual)</code></p>
-<dd>What address lookup tables copy an address extension from the lookup key to the lookup result.</dl>
+<dt><code>canonical_classes (envelope_sender, envelope_recipient, header_sender, header_recipient)</code></dt>
+<dd>What addresses are subject to canonical_maps address mapping.</dd>
+<dt><code>canonical_maps (empty)</code></dt>
+<dd>Optional address mapping lookup tables for message headers and envelopes.</dd>
+<dt><code>recipient_canonical_maps (empty)</code></dt>
+<dd>Optional address mapping lookup tables for envelope and header recipient addresses.</dd>
+<dt><code>sender_canonical_maps (empty)</code></dt>
+<dd>Optional address mapping lookup tables for envelope and header sender addresses.</dd>
+<dt><code>propagate_unmatched_extensions (canonical, virtual)</code></dt>
+<dd>What address lookup tables copy an address extension from the lookup key to the lookup result.</dd></dl>
 <p> Other parameters of interest:</p>
 <dl>
-<dt><code>inet_interfaces (all)</code></p>
-<dd>The network interface addresses that this mail system receives mail on.</p>
-<dt><code>local_header_rewrite_clients (permit_inet_interfaces)</code></p>
-<dd>Rewrite message header addresses in mail from these clients and update incomplete addresses with the domain name in $myorigin or $mydomain; either don&#8217;t rewrite message headers from other clients at all, or rewrite message headers and update incomplete addresses with the domain specified in the remote_header_rewrite_domain parameter.</p>
-<dt><code>proxy_interfaces (empty)</code></p>
-<dd>The network interface addresses that this mail system receives mail on by way of a proxy or network address translation unit.</p>
-<dt><code>masquerade_classes (envelope_sender, header_sender, header_recipient)</code></p>
-<dd>What addresses are subject to address masquerading.</p>
-<dt><code>masquerade_domains (empty)</code></p>
-<dd>Optional list of domains whose subdomain structure will be stripped off in email addresses.</p>
-<dt><code>masquerade_exceptions (empty)</code></p>
-<dd>Optional list of user names that are not subjected to address masquerading, even when their address matches $masquerade_domains.</p>
-<dt><code>mydestination ($myhostname, localhost.$mydomain, localhost)</code></p>
-<dd>The list of domains that are delivered via the $local_transport mail delivery transport.</p>
-<dt><code>myorigin ($myhostname)</code></p>
-<dd>The domain name that locally-posted mail appears to come from, and that locally posted mail is delivered to.</p>
-<dt><code>owner_request_special (yes)</code></p>
-<dd>Enable special treatment for owner-<i>listname</i> entries in the <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5) file, and don&#8217;t split owner-<i>listname</i> and <i>listname</i>-request address localparts when the recipient_delimiter is set to &quot;-&quot;.</p>
-<dt><code>remote_header_rewrite_domain (empty)</code></p>
-<dd>Don&#8217;t rewrite message headers from remote clients at all when this parameter is empty; otherwise, rewrite message headers and append the specified domain name to incomplete addresses.</dl>
+<dt><code>inet_interfaces (all)</code></dt>
+<dd>The network interface addresses that this mail system receives mail on.</dd>
+<dt><code>local_header_rewrite_clients (permit_inet_interfaces)</code></dt>
+<dd>Rewrite message header addresses in mail from these clients and update incomplete addresses with the domain name in $myorigin or $mydomain; either don&#8217;t rewrite message headers from other clients at all, or rewrite message headers and update incomplete addresses with the domain specified in the remote_header_rewrite_domain parameter.</dd>
+<dt><code>proxy_interfaces (empty)</code></dt>
+<dd>The network interface addresses that this mail system receives mail on by way of a proxy or network address translation unit.</dd>
+<dt><code>masquerade_classes (envelope_sender, header_sender, header_recipient)</code></dt>
+<dd>What addresses are subject to address masquerading.</dd>
+<dt><code>masquerade_domains (empty)</code></dt>
+<dd>Optional list of domains whose subdomain structure will be stripped off in email addresses.</dd>
+<dt><code>masquerade_exceptions (empty)</code></dt>
+<dd>Optional list of user names that are not subjected to address masquerading, even when their address matches $masquerade_domains.</dd>
+<dt><code>mydestination ($myhostname, localhost.$mydomain, localhost)</code></dt>
+<dd>The list of domains that are delivered via the $local_transport mail delivery transport.</dd>
+<dt><code>myorigin ($myhostname)</code></dt>
+<dd>The domain name that locally-posted mail appears to come from, and that locally posted mail is delivered to.</dd>
+<dt><code>owner_request_special (yes)</code></dt>
+<dd>Enable special treatment for owner-<i>listname</i> entries in the <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5) file, and don&#8217;t split owner-<i>listname</i> and <i>listname</i>-request address localparts when the recipient_delimiter is set to &quot;-&quot;.</dd>
+<dt><code>remote_header_rewrite_domain (empty)</code></dt>
+<dd>Don&#8217;t rewrite message headers from remote clients at all when this parameter is empty; otherwise, rewrite message headers and append the specified domain name to incomplete addresses.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), canonicalize and enqueue mail
 <a href="//www.systutorials.com/docs/linux/man/1-postmap/">postmap</a>(1), Postfix lookup table manager

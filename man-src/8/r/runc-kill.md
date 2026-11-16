@@ -14,8 +14,8 @@ description: "runc-kill – send a specified signal to container"
 <p>By default, <code>runc kill</code> sends <code>SIGTERM</code> to the container&#8217;s initial process only. A different signal can be specified either by its name (with or without the <code>SIG</code> prefix), or its numeric value. Use <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1) with <code>-l</code> option to list available signals. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;all</code>|<code>-a</code></p>
-<dd>Send the signal to all processes inside the container. </p>
+<dt><code>&#8211;all</code>|<code>-a</code></dt>
+<dd>Send the signal to all processes inside the container. </dd>
 </dl>
 <h2>Examples</h2>
 <p>The following will send a <code>KILL</code> signal to the init process of the <code>ubuntu01</code> container:  </p>

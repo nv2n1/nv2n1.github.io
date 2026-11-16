@@ -10,7 +10,6 @@ description: "std::btowc – std::btowc"
 <p>std::btowc &#8211; std::btowc</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cwchar&gt;
-
     std::wint_t btowc(int c);</code></pre>
 <p>Widens a single-byte character c to its wide character equivalent.<br />
 Most multibyte character encodings use single-byte codes to represent the characters from the ASCII character set. This function may be used to convert such characters to wchar_t. </p>
@@ -22,12 +21,9 @@ Wide character representation of c if (unsigned char)c is a valid single-byte ch
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
 void try_widen(char c)
-
 {
     std::wint_t w = std::btowc(c);
     if (w != WEOF)
@@ -40,7 +36,6 @@ void try_widen(char c)
 &quot;;
 }
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;lt_LT.iso88594&quot;);
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; &quot;In Lithuanian ISO-8859-4 locale:

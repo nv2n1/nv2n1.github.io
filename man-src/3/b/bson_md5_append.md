@@ -17,14 +17,14 @@ void bson_md5_append(bson_md5_t *pms,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>pms</code></p>
-<dd> A <code>bson_md5_t</code> \&amp;.</dl>
+<dt><code>pms</code></dt>
+<dd> A <code>bson_md5_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> A memory region to feed to the md5 algorithm.</dl>
+<dt><code>data</code></dt>
+<dd> A memory region to feed to the md5 algorithm.</dd></dl>
 <dl>
-<dt><code>nbytes</code></p>
-<dd> The length of <code>data</code> in bytes.</dl>
+<dt><code>nbytes</code></dt>
+<dd> The length of <code>data</code> in bytes.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Feeds more data into the MD5 algorithm. </p>
 <h2>COLOPHON</h2>

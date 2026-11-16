@@ -26,14 +26,14 @@ int
 <code>Tcl_PkgProvideEx</code>(<i>interp, name, version, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter where package is needed or available.</p>
-<dd>const char <i>*name</i> (in) Name of package.</p>
-<dd>const char <i>*version</i> (in) A version string consisting of one or more decimal numbers separated by dots.</p>
-<dd>int <i>exact</i> (in) Non-zero means that only the particular version specified by <i>version</i> is acceptable. Zero means that newer versions than <i>version</i> are also acceptable as long as they have the same major version number as <i>version</i>.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary value to be associated with the package.</p>
-<dd>ClientData <i>*clientDataPtr</i> (out) Pointer to place to store the value associated with the matching package. It is only changed if the pointer is not NULL and the function completed successfully.</p>
-<dd>int <i>objc</i> (in) Number of requirements.</p>
-<dd>Tcl_Obj* <i>objv[]</i> (in) Array of requirements. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter where package is needed or available.</dd>
+<dd>const char <i>*name</i> (in) Name of package.</dd>
+<dd>const char <i>*version</i> (in) A version string consisting of one or more decimal numbers separated by dots.</dd>
+<dd>int <i>exact</i> (in) Non-zero means that only the particular version specified by <i>version</i> is acceptable. Zero means that newer versions than <i>version</i> are also acceptable as long as they have the same major version number as <i>version</i>.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary value to be associated with the package.</dd>
+<dd>ClientData <i>*clientDataPtr</i> (out) Pointer to place to store the value associated with the matching package. It is only changed if the pointer is not NULL and the function completed successfully.</dd>
+<dd>int <i>objc</i> (in) Number of requirements.</dd>
+<dd>Tcl_Obj* <i>objv[]</i> (in) Array of requirements. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures provide C-level interfaces to Tcl&#8217;s package and version management facilities. </p>

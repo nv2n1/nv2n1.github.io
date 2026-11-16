@@ -18,8 +18,8 @@ description: "xfce4-popup-windowlist – shows the Xfce window list applet popup
 <p> If you want to pop up the window list without using the window list applet on your panel(s), see the manual page for <code><a href="/docs/linux/man/1-xfdesktop/">xfdesktop</a></code>(1). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-pointer</code></p>
-<dd> The window list appears at your current mouse position instead of its default position. </p>
+<dt><code>-pointer</code></dt>
+<dd> The window list appears at your current mouse position instead of its default position. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xfce4-popup-menu/">xfce4-popup-menu</a></code>(1), <code><a href="/docs/linux/man/1-xfdesktop/">xfdesktop</a></code>(1) </p>

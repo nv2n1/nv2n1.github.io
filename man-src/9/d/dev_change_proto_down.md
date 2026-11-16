@@ -15,11 +15,11 @@ dev_change_proto_down - update protocol port state information
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>proto_down</i>
-<dl><dd>new value</dl>
+<dl><dd>new value</dd></dl>
 
 <h2>Description</h2>
 

@@ -27,56 +27,56 @@ int munlockall(void);
 <p> <code>mlock2</code>() also locks pages in the specified range starting at <i>addr</i> and continuing for <i>len</i> bytes. However, the state of the pages contained in that range after the call returns successfully will depend on the value in the <i>flags</i> argument. </p>
 <p> The <i>flags</i> argument can be either 0 or the following constant:</p>
 <dl>
-<dt><code>MLOCK_ONFAULT</code></p>
-<dd> Lock pages that are currently resident and mark the entire range so that the remaining nonresident pages are locked when they are populated by a page fault.</dl>
+<dt><code>MLOCK_ONFAULT</code></dt>
+<dd> Lock pages that are currently resident and mark the entire range so that the remaining nonresident pages are locked when they are populated by a page fault.</dd></dl>
 <p> If <i>flags</i> is 0, <code>mlock2</code>() behaves exactly the same as <code>mlock</code>(). </p>
 <p> <code>munlock</code>() unlocks pages in the address range starting at <i>addr</i> and continuing for <i>len</i> bytes. After this call, all pages that contain a part of the specified memory range can be moved to external swap space again by the kernel.</p>
 <h3>mlockall() and munlockall()</h3>
 <p> <code>mlockall</code>() locks all pages mapped into the address space of the calling process. This includes the pages of the code, data and stack segment, as well as shared libraries, user space kernel data, shared memory, and memory-mapped files. All mapped pages are guaranteed to be resident in RAM when the call returns successfully; the pages are guaranteed to stay in RAM until later unlocked. </p>
 <p> The <i>flags</i> argument is constructed as the bitwise OR of one or more of the following constants:</p>
 <dl>
-<dt><code>MCL_CURRENT</code></p>
-<dd> Lock all pages which are currently mapped into the address space of the process.</p>
-<dt><code>MCL_FUTURE</code></p>
-<dd> Lock all pages which will become mapped into the address space of the process in the future. These could be, for instance, new pages required by a growing heap and stack as well as new memory-mapped files or shared memory regions.</p>
-<dt><code>MCL_ONFAULT</code> (since Linux 4.4)</p>
-<dd> Used together with <code>MCL_CURRENT</code>, <code>MCL_FUTURE</code>, or both. Mark all current (with <code>MCL_CURRENT</code>) or future (with <code>MCL_FUTURE</code>) mappings to lock pages when they are faulted in. When used with <code>MCL_CURRENT</code>, all present pages are locked, but <code>mlockall</code>() will not fault in non-present pages. When used with <code>MCL_FUTURE</code>, all future mappings will be marked to lock pages when they are faulted in, but they will not be populated by the lock when the mapping is created. <code>MCL_ONFAULT</code> must be used with either <code>MCL_CURRENT</code> or <code>MCL_FUTURE</code> or both.</dl>
+<dt><code>MCL_CURRENT</code></dt>
+<dd> Lock all pages which are currently mapped into the address space of the process.</dd>
+<dt><code>MCL_FUTURE</code></dt>
+<dd> Lock all pages which will become mapped into the address space of the process in the future. These could be, for instance, new pages required by a growing heap and stack as well as new memory-mapped files or shared memory regions.</dd>
+<dt><code>MCL_ONFAULT</code> (since Linux 4.4)</dt>
+<dd> Used together with <code>MCL_CURRENT</code>, <code>MCL_FUTURE</code>, or both. Mark all current (with <code>MCL_CURRENT</code>) or future (with <code>MCL_FUTURE</code>) mappings to lock pages when they are faulted in. When used with <code>MCL_CURRENT</code>, all present pages are locked, but <code>mlockall</code>() will not fault in non-present pages. When used with <code>MCL_FUTURE</code>, all future mappings will be marked to lock pages when they are faulted in, but they will not be populated by the lock when the mapping is created. <code>MCL_ONFAULT</code> must be used with either <code>MCL_CURRENT</code> or <code>MCL_FUTURE</code> or both.</dd></dl>
 <p> If <code>MCL_FUTURE</code> has been specified, then a later system call (e.g., <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)), may fail if it would cause the number of locked bytes to exceed the permitted maximum (see below). In the same circumstances, stack growth may likewise fail: the kernel will deny stack expansion and deliver a <code>SIGSEGV</code> signal to the process. </p>
 <p> <code>munlockall</code>() unlocks all pages mapped into the address space of the calling process.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these system calls return 0. On error, -1 is returned, <i>errno</i> is set appropriately, and no changes are made to any locks in the address space of the process.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> (Linux 2.6.9 and later) the caller had a nonzero <code>RLIMIT_MEMLOCK</code> soft resource limit, but tried to lock more memory than the limit permitted. This limit is not enforced if the process is privileged (<code>CAP_IPC_LOCK</code>).</p>
-<dt><code>ENOMEM</code></p>
-<dd> (Linux 2.4 and earlier) the calling process tried to lock more than half of RAM.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller is not privileged, but needs privilege (<code>CAP_IPC_LOCK</code>) to perform the requested operation.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> (Linux 2.6.9 and later) the caller had a nonzero <code>RLIMIT_MEMLOCK</code> soft resource limit, but tried to lock more memory than the limit permitted. This limit is not enforced if the process is privileged (<code>CAP_IPC_LOCK</code>).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> (Linux 2.4 and earlier) the calling process tried to lock more than half of RAM.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller is not privileged, but needs privilege (<code>CAP_IPC_LOCK</code>) to perform the requested operation.</dd></dl>
 <p> For <code>mlock</code>(), <code>mlock2</code>(), and <code>munlock</code>():</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Some or all of the specified address range could not be locked.</p>
-<dt><code>EINVAL</code></p>
-<dd> The result of the addition <i>addr</i>+<i>len</i> was less than <i>addr</i> (e.g., the addition may have resulted in an overflow).</p>
-<dt><code>EINVAL</code></p>
-<dd> (Not on Linux) <i>addr</i> was not a multiple of the page size.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Some of the specified address range does not correspond to mapped pages in the address space of the process.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Locking or unlocking a region would result in the total number of mappings with distinct attributes (e.g., locked versus unlocked) exceeding the allowed maximum. (For example, unlocking a range in the middle of a currently locked mapping would result in three mappings: two locked mappings at each end and an unlocked mapping in the middle.)</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Some or all of the specified address range could not be locked.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The result of the addition <i>addr</i>+<i>len</i> was less than <i>addr</i> (e.g., the addition may have resulted in an overflow).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (Not on Linux) <i>addr</i> was not a multiple of the page size.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Some of the specified address range does not correspond to mapped pages in the address space of the process.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Locking or unlocking a region would result in the total number of mappings with distinct attributes (e.g., locked versus unlocked) exceeding the allowed maximum. (For example, unlocking a range in the middle of a currently locked mapping would result in three mappings: two locked mappings at each end and an unlocked mapping in the middle.)</dd></dl>
 <p> For <code>mlock2</code>():</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Unknown <i>flags</i> were specified.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Unknown <i>flags</i> were specified.</dd></dl>
 <p> For <code>mlockall</code>():</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Unknown <i>flags</i> were specified or <code>MCL_ONFAULT</code> was specified without either <code>MCL_FUTURE</code> or <code>MCL_CURRENT</code>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Unknown <i>flags</i> were specified or <code>MCL_ONFAULT</code> was specified without either <code>MCL_FUTURE</code> or <code>MCL_CURRENT</code>.</dd></dl>
 <p> For <code>munlockall</code>():</p>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> (Linux 2.6.8 and earlier) The caller was not privileged (<code>CAP_IPC_LOCK</code>).</dl>
+<dt><code>EPERM</code></dt>
+<dd> (Linux 2.6.8 and earlier) The caller was not privileged (<code>CAP_IPC_LOCK</code>).</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>mlock2</code>() is available since Linux 4.4; glibc support was added in version 2.27.</p>
 <h2>CONFORMING TO</h2>

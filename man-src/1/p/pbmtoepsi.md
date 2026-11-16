@@ -16,8 +16,8 @@ description: "pbmtoepsi – convert a portable bitmap into an encapsulated PostS
 <p> This utility is a part of the pstoepsi tool by Doug Crabill (dgc [at] cs.purdue.edu).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-bbonly</code></p>
-<dd> Only create a boundary box, don&#8217;t fill it with the image.</dl>
+<dt><code>-bbonly</code></dt>
+<dd> Only create a boundary box, don&#8217;t fill it with the image.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1)</p>
 <h2>AUTHOR</h2>

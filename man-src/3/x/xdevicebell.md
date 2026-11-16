@@ -30,12 +30,12 @@ values returned by an XGetFeedbackControl request and uniquely
 identify the bell to ring. If a feedbackclass is specified that
 does not support a bell, or if a nonexistent feedbackid is
 specified, or a percent value is specified that is not in the
-range -100 to 100, a BadValue error will be returned.</pre></dl><dl COMPACT><dd><pre>The volume at which the bell is rung when the percent argument
-is nonnegative is: base - [(base * percent) / 100] + percent</pre></dl><dl COMPACT><dd><pre>The volume at which the bell rings when the percent argument is
-negative is: base + [(base * percent) / 100]</pre></dl><dl COMPACT><dd><pre>To change the base volume of the bell, use
-XChangeFeedbackControl.</pre></dl><dl COMPACT><dd><pre>XDeviceBell can generate a BadDevice or a BadValue error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+range -100 to 100, a BadValue error will be returned.</pre></dd></dl><dl COMPACT><dd><pre>The volume at which the bell is rung when the percent argument
+is nonnegative is: base - [(base * percent) / 100] + percent</pre></dd></dl><dl COMPACT><dd><pre>The volume at which the bell rings when the percent argument is
+negative is: base + [(base * percent) / 100]</pre></dd></dl><dl COMPACT><dd><pre>To change the base volume of the bell, use
+XChangeFeedbackControl.</pre></dd></dl><dl COMPACT><dd><pre>XDeviceBell can generate a BadDevice or a BadValue error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist, or has not been opened by this client
- via XOpenInputDevice.</pre></dl><dl COMPACT><dd><pre>BadValue
+ via XOpenInputDevice.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  An invalid feedbackclass, feedbackid, or percent value
- was specified.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeFeedbackControl(3), XBell(3)</pre></dl>
+ was specified.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeFeedbackControl(3), XBell(3)</pre></dd></dl>

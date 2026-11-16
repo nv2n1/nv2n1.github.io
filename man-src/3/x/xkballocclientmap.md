@@ -11,16 +11,16 @@ description: "XkbAllocClientMap – Allocate and initialize an empty client map 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocClientMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>type_count</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description in which to allocate client map</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask selecting map components to allocate</p>
-<dt><i>&#8211; type_count</i></p>
-<dd>value of num_types field in map to be allocated</dl>
+</dd><dd>keyboard description in which to allocate client map</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask selecting map components to allocate</dd>
+<dt><i>&#8211; type_count</i></dt>
+<dd>value of num_types field in map to be allocated</dd></dl>
 <h2>Description</h2>
 <p>Calling <i>XkbGetMap </i> should be sufficient for most applications to get client and server maps. As a result, most applications do not need to directly allocate client and server maps. </p>
 <p> If you change the number of key types or construct map components without loading the necessary components from the X server, do not allocate any map components directly using <i>malloc </i> or <i>Xmalloc. </i> Instead, use the Xkb allocators, <i>XkbAllocClientMap, </i> and <i>XkbAllocServerMap.</i> </p>
@@ -67,11 +67,11 @@ description: "XkbAllocClientMap – Allocate and initialize an empty client map 
 <p> If <i>XkbAllocClientMap </i> is successful, it returns Success. Otherwise, it can return either BadMatch, BadAlloc, or BadValue errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkballocclientmap/">XkbAllocClientMap</a></code>(3), <code><a href="/docs/linux/man/3-xkballocservermap/">XkbAllocServerMap</a></code>(3), <code>XkbFreeClientMap,</code>(3), <code><a href="/docs/linux/man/3-xkbfreeservermap/">XkbFreeServerMap</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a></code>(3)</p>

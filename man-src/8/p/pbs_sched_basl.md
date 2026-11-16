@@ -16,18 +16,18 @@ description: "pbs_sched_basl – pbs BASL scheduler"
 <p> pbs_sched must be executed with root permission.</p>
 <h2>Options</h2>
 <dl>
-<dt>-d home</p>
-<dd>Specifies the name of the PBS home directory, PBS_HOME. If not specified, the value of $PBS_SERVER_HOME as defined at compile time is used. Also see the -L option.</p>
-<dt>-L logfile</p>
-<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory. See the -d option.</p>
-<dt>-p print_file</p>
-<dd>This specifies the &quot;print&quot; file. Any output from the scheduler code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be $PBS_HOME/sched_priv/sched_out. See the -d option.</p>
-<dt>-a alarm</p>
-<dd>This specifies the time in seconds to wait for a schedule run to finish. If a scheduling iteration takes too long to finish, an alarm signal is sent, and the scheduler is restarted. If a core file does not exist in the current directory, abort() is called and a core file is generated. The default for alarm is 180 seconds.</p>
-<dt>-S port</p>
-<dd>Specifies a port on which to talk to the server. This option is not required. It merely overides the default PBS scheduler port.</p>
-<dt>-c configfile</p>
-<dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file. In BASL, this config file is almost always needed because it is where the list of servers, nodes, and host resource queries are specified by the administrator.</dl>
+<dt>-d home</dt>
+<dd>Specifies the name of the PBS home directory, PBS_HOME. If not specified, the value of $PBS_SERVER_HOME as defined at compile time is used. Also see the -L option.</dd>
+<dt>-L logfile</dt>
+<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory. See the -d option.</dd>
+<dt>-p print_file</dt>
+<dd>This specifies the &quot;print&quot; file. Any output from the scheduler code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be $PBS_HOME/sched_priv/sched_out. See the -d option.</dd>
+<dt>-a alarm</dt>
+<dd>This specifies the time in seconds to wait for a schedule run to finish. If a scheduling iteration takes too long to finish, an alarm signal is sent, and the scheduler is restarted. If a core file does not exist in the current directory, abort() is called and a core file is generated. The default for alarm is 180 seconds.</dd>
+<dt>-S port</dt>
+<dd>Specifies a port on which to talk to the server. This option is not required. It merely overides the default PBS scheduler port.</dd>
+<dt>-c configfile</dt>
+<dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file. In BASL, this config file is almost always needed because it is where the list of servers, nodes, and host resource queries are specified by the administrator.</dd></dl>
 <h2>Usage</h2>
 <p>This version of the scheduler requires knowledge of the BASL language. The site must first write a function called <i>sched_main()</i> (and all functions supporting it) using BASL constructs, and then translate the functions into C using the BASL compiler <i>basl2c,</i> which would also attach a main program to the resulting code. This main program performs general initialization and housekeeping chores such as setting up local socket to communicate with the server running on the same machine, cd-ing to the priv directory, opening log files, opening configuration file (if any), setting up locks, forking the child to become a daemon, initializing a scheduling cycle (i.e. get node attributes that are static in nature), setting up the signal handlers, executing global initialization assignment statements specified by the scheduler writer, and finally sitting on a loop waiting for a scheduling command from the server. When the server sends the scheduler an appropriate scheduling command <font SIZE="-1"><code>{SCH_SCHEDULE_NEW, SCH_SCHEDULE_TERM, SCH_SCHEDULE_TIME, SCH_SCHEDULE_RECYC, SCH_SCHEDULE_CMD, SCH_SCHEDULE_FIRST,}</code></font> information about server(s), jobs, queues, and execution host(s) are obtained, and then <i>sched_main()</i> is called.</p>
 <h2>Scheduling Language</h2>
@@ -50,31 +50,30 @@ description: "pbs_sched_basl – pbs BASL scheduler"
  JobAction(j, SYNCRUN, NULLSTR);
  }
  }
- 
 }</pre>
-</dl>
+</dd></dl>
 <p> For a more complete discussion of the Batch Scheduler Language, see <code>basl2c(1B).</code></p>
 <h2>Configuration File</h2>
 <p>A configuration file may be specified with the -c option. This file is used to specify the (1) hosts which are allowed to connect to pbs_sched, (2) the list of server hosts for which the scheduler writer wishes the system to periodically check for status, queues, and jobs info, (3) list of execution hosts for which the scheduler writer wants the system to periodically check for information like state, property, and so on, and (4) various queries to send to each execution host.</p>
 <dl>
-<dt>(1) specifying client hosts:</p>
-<dd>The hosts allowed to connect to pbs_sched are specified in the configuration file in a manner identical to that used in pbs_mom. There is one line per host using the syntax: </p>
+<dt>(1) specifying client hosts:</dt>
+<dd>The hosts allowed to connect to pbs_sched are specified in the configuration file in a manner identical to that used in pbs_mom. There is one line per host using the syntax: </dd>
 <p> <code> </p>
 <p> where and are separated by white space. Two host names are always allowed to connection to pbs_sched: &quot;localhost&quot; and the name returned to pbs_sched by the system call gethostname(). These names need not be specified in the configuration file.</p>
-<dt>(2) specifying list of servers:</p>
-<dd>The list of servers is specified in a one host per line manner, using the syntax: </p>
+<dt>(2) specifying list of servers:</dt>
+<dd>The list of servers is specified in a one host per line manner, using the syntax: </dd>
 <p> or where and are separated by white space. </p>
 <p> If is 0, then the default PBS server port will be used. </p>
 <p> Regardless of what has been specified in the file, the list of servers will always include the local server &#8211; one running on the same host where the scheduler is running. </p>
 <p> Within the BASL code, access to data of the list of servers is done by calling </code><i>AllServersGet(),</i> or <i>AllServersLocalHostGet()</i> which returns the local server on the list.</p>
-<dt>(3) specifying the list of execution hosts:</p>
-<dd>The list of execution hosts (nodes), whose MOMs are to be queried from the scheduler, is specified in a one host per line manner, using the syntax: </p>
+<dt>(3) specifying the list of execution hosts:</dt>
+<dd>The list of execution hosts (nodes), whose MOMs are to be queried from the scheduler, is specified in a one host per line manner, using the syntax: </dd>
 <p> <code> </p>
 <p> where and are separated by white space. </p>
 <p> If is 0, then the default PBS MOM port will be used. </p>
 <p> The BASL function </code><i>AllNodesGet()</i> , or <i>ServerNodesGet(AllServersLocalHostGet())</i> is available for getting the list of nodes known to the local system.</p>
-<dt>(4) specifying the list of host resources:</p>
-<dd>For specifying the list of host resource queries to send to each execution host&#8217;s MOM, the following syntax is used: </p>
+<dt>(4) specifying the list of host resources:</dt>
+<dd>For specifying the list of host resource queries to send to each execution host&#8217;s MOM, the following syntax is used: </dd>
 <p> <code> </p>
 <p> should be the same hostname string that was specified in a line. A value of &quot;*&quot; (wildcard) means to match any node. </p>
 <p> Please consult section 9 of the PBS ERS (Resource Monitor/Resources) for a list of possible values to parameter. </p>
@@ -183,17 +182,17 @@ $node * CNodeIdletimeGet idletime</pre>
 <p> </code></p>
 <h2>Files</h2>
 <dl>
-<dt>$PBS_SERVER_HOME/sched_priv</p>
-<dd>the default directory for configuration files, typically (/usr/spool/pbs)/sched_priv.</dl>
+<dt>$PBS_SERVER_HOME/sched_priv</dt>
+<dd>the default directory for configuration files, typically (/usr/spool/pbs)/sched_priv.</dd></dl>
 <h2>Signal Handling</h2>
 <p>A C based scheduler will handle the following signals:</p>
 <dl>
-<dt>SIGHUP</p>
-<dd>The server will close and reopen its log file and reread the config file if one exists.</p>
-<dt>SIGALRM</p>
-<dd>If the site supplied scheduling module exceeds the time limit, the Alarm will cause the scheduler to attempt to core dump and restart itself.</p>
-<dt>SIGINT and SIGTERM</p>
-<dd>Will result in an orderly shutdown of the scheduler.</dl>
+<dt>SIGHUP</dt>
+<dd>The server will close and reopen its log file and reread the config file if one exists.</dd>
+<dt>SIGALRM</dt>
+<dd>If the site supplied scheduling module exceeds the time limit, the Alarm will cause the scheduler to attempt to core dump and restart itself.</dd>
+<dt>SIGINT and SIGTERM</dt>
+<dd>Will result in an orderly shutdown of the scheduler.</dd></dl>
 <p> All other signals have the default action installed.</p>
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>

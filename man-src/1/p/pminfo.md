@@ -21,34 +21,34 @@ description: "pminfo – display information about performance metrics"
 <p> The <code>-b</code> option may be used to define the maximum size of the group of metrics to be fetched in a single request for the <code>-f</code> and <code>-v</code> options. The default value for <i>batchsize</i> is 20. </p>
 <p> Other options control the specific information to be reported.</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> The <i>dmfile</i> argument specifies a file that contains derived metric definitions in the format described for <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3). The <code>-c</code> option provides a way to load derived metric definitions that is an alternative to the more generic use of the <code>PCP_DERIVED_CONFIG</code> environment variable as described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). Using the <code>-c</code> option and the <code>PCP_DERIVED_CONFIG</code> environment variable to specify the <code>same</code> configuration is a bad idea, so choose one or the other method.</p>
-<dt><code>-d</code></p>
-<dd> Metric descriptions detailing the PMID, data type, data semantics, units, scale and associated instance domain.</p>
-<dt><code>-f</code></p>
-<dd> Fetch and print values for all instances. When fetching from a set if archives, only those instances present in the first archive record for a metric will be displayed; see also the <code>-O</code> option, else use <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1) which may be a better tool for examining archives.</p>
-<dt><code>-F</code></p>
-<dd> Same as <code>-f</code> but try harder to fetch instances for metrics which have non-enumerable instance domains (e.g. metrics in the &#8220;proc&#8221; subtree of the default PMNS).</p>
-<dt><code>-K</code></p>
-<dd> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</p>
-<dt><code>-m</code></p>
-<dd> Print the PMID in terse mode.</p>
-<dt><code>-M</code></p>
-<dd> Print the PMID in verbose mode.</p>
-<dt><code>-O</code></p>
-<dd> When used in conjunction with an archive source of metrics and the options <code>-f</code> or <code>-F</code>, the <i>time</i> argument defines a time origin at which the metrics should be fetched from the set of archives. Refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for a complete description of this option, and the syntax for the <i>time</i> argument.</p>
-<dt><code>-t</code></p>
-<dd> Print the &#8220;one line&#8221; help summary, if available.</p>
-<dt><code>-T</code></p>
-<dd> Print the help text, if available.</p>
-<dt><code>-v</code></p>
-<dd> Verify mode in which descriptions and values are retrieved, but only error conditions are reported. This option silently disables any output from the options <code>-f</code>, <code>-M</code>, <code>-m</code>, <code>-t</code> and <code>-T</code>.</p>
-<dt><code>-x</code></p>
-<dd> Like the <code>-f</code> option, but with the additional functionality that if a value is processed that is of type PM_TYPE_EVENT, then the event records will be unpacked and the details of each event record reported.</dl>
+<dt><code>-c</code></dt>
+<dd> The <i>dmfile</i> argument specifies a file that contains derived metric definitions in the format described for <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3). The <code>-c</code> option provides a way to load derived metric definitions that is an alternative to the more generic use of the <code>PCP_DERIVED_CONFIG</code> environment variable as described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). Using the <code>-c</code> option and the <code>PCP_DERIVED_CONFIG</code> environment variable to specify the <code>same</code> configuration is a bad idea, so choose one or the other method.</dd>
+<dt><code>-d</code></dt>
+<dd> Metric descriptions detailing the PMID, data type, data semantics, units, scale and associated instance domain.</dd>
+<dt><code>-f</code></dt>
+<dd> Fetch and print values for all instances. When fetching from a set if archives, only those instances present in the first archive record for a metric will be displayed; see also the <code>-O</code> option, else use <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1) which may be a better tool for examining archives.</dd>
+<dt><code>-F</code></dt>
+<dd> Same as <code>-f</code> but try harder to fetch instances for metrics which have non-enumerable instance domains (e.g. metrics in the &#8220;proc&#8221; subtree of the default PMNS).</dd>
+<dt><code>-K</code></dt>
+<dd> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</dd>
+<dt><code>-m</code></dt>
+<dd> Print the PMID in terse mode.</dd>
+<dt><code>-M</code></dt>
+<dd> Print the PMID in verbose mode.</dd>
+<dt><code>-O</code></dt>
+<dd> When used in conjunction with an archive source of metrics and the options <code>-f</code> or <code>-F</code>, the <i>time</i> argument defines a time origin at which the metrics should be fetched from the set of archives. Refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for a complete description of this option, and the syntax for the <i>time</i> argument.</dd>
+<dt><code>-t</code></dt>
+<dd> Print the &#8220;one line&#8221; help summary, if available.</dd>
+<dt><code>-T</code></dt>
+<dd> Print the help text, if available.</dd>
+<dt><code>-v</code></dt>
+<dd> Verify mode in which descriptions and values are retrieved, but only error conditions are reported. This option silently disables any output from the options <code>-f</code>, <code>-M</code>, <code>-m</code>, <code>-t</code> and <code>-T</code>.</dd>
+<dt><code>-x</code></dt>
+<dd> Like the <code>-f</code> option, but with the additional functionality that if a value is processed that is of type PM_TYPE_EVENT, then the event records will be unpacked and the details of each event record reported.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default local PMNS specification files</dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default local PMNS specification files</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

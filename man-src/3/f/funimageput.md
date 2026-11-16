@@ -19,16 +19,16 @@ description: "FunImagePut – put an image to a Funtools file"
 <p> The FunImagePut() routine outputs an image array to a <font SIZE="-1">FITS</font> file. The image is written either as a primary header/data unit or as an image extension, depending on whether other data have already been written to the file. That is, if the current file position is at the beginning of the file, a primary <font SIZE="-1">HDU</font> is written. Otherwise, an image extension is written. </p>
 <p> The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to a data buffer to write. The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions of the image, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument specifies the data type of the image and can have the following FITS-standard values:</p>
 <dl>
-<dt>*</p>
-<dd> 8 unsigned char</p>
-<dt>*</p>
-<dd> 16 short</p>
-<dt>*</p>
-<dd> 32 int</p>
-<dt>*</p>
-<dd> -32 float</p>
-<dt>*</p>
-<dd> -64 double</dl>
+<dt>*</dt>
+<dd> 8 unsigned char</dd>
+<dt>*</dt>
+<dd> 16 short</dd>
+<dt>*</dt>
+<dd> 32 int</dd>
+<dt>*</dt>
+<dd> -32 float</dd>
+<dt>*</dt>
+<dd> -64 double</dd></dl>
 <p> When <i>FunTableRowPut()</i> is first called for a given image, Funtools checks to see if the primary header has already been written (by having previously written an image or a binary table.) If not, this image is written to the primary <font SIZE="-1">HDU</font>. Otherwise, it is written to an image extension. </p>
 <p> Thus, a simple program to generate a <font SIZE="-1">FITS</font> image might look like this: </p>
 <pre><code>

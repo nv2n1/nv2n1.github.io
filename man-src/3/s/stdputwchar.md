@@ -11,7 +11,6 @@ std::putwchar - std::putwchar
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wint_t putwchar( wchar_t ch );</code></pre> 
 Writes a wide character ch to stdout 
 

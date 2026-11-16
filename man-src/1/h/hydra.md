@@ -31,56 +31,56 @@ description: "hydra – a very fast network logon cracker which support many dif
 &nbsp;<wbr>available services will be less. Type&nbsp;<wbr>&quot;hydra&quot;&nbsp;<wbr>to see what is available.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>target</code></p>
-<dd> a target to attack, can be an IPv4 address, IPv6 address or DNS name.</p>
-<dt><code>service</code></p>
-<dd> a service to attack, see the list of protocols available</p>
-<dt><code>OPTIONAL SERVICE PARAMETER</code></p>
+<dt><code>target</code></dt>
+<dd> a target to attack, can be an IPv4 address, IPv6 address or DNS name.</dd>
+<dt><code>service</code></dt>
+<dd> a service to attack, see the list of protocols available</dd>
+<dt><code>OPTIONAL SERVICE PARAMETER</code></dt>
 <dd> Some modules have optional or mandatory options. type &quot;hydra -U &lt;servicename&gt;&quot;<br />
-&nbsp;<wbr>to get help on on the options of a service.</p>
-<dt><code>-R </code></p>
-<dd> restore a previously aborted session. Requires a hydra.restore file was written. No other options are allowed when using -R</p>
-<dt><code>-S</code></p>
-<dd> connect via SSL</p>
-<dt><code>-s PORT</code></p>
-<dd> if the service is on a different default port, define it here</p>
-<dt><code>-l LOGIN</code></p>
-<dd> or -L FILE login with LOGIN name, or load several logins from FILE</p>
-<dt><code>-p PASS</code></p>
-<dd> or -P FILE try password PASS, or load several passwords from FILE</p>
-<dt><code>-x min:max:charset</code></p>
+&nbsp;<wbr>to get help on on the options of a service.</dd>
+<dt><code>-R </code></dt>
+<dd> restore a previously aborted session. Requires a hydra.restore file was written. No other options are allowed when using -R</dd>
+<dt><code>-S</code></dt>
+<dd> connect via SSL</dd>
+<dt><code>-s PORT</code></dt>
+<dd> if the service is on a different default port, define it here</dd>
+<dt><code>-l LOGIN</code></dt>
+<dd> or -L FILE login with LOGIN name, or load several logins from FILE</dd>
+<dt><code>-p PASS</code></dt>
+<dd> or -P FILE try password PASS, or load several passwords from FILE</dd>
+<dt><code>-x min:max:charset</code></dt>
 <dd> generate passwords from min to max length. charset can contain 1<br />
 &nbsp;<wbr>for numbers, a for lowcase and A for upcase characters.<br />
 &nbsp;<wbr>Any other character is added is put to the list.&nbsp;<wbr><br />
 Example: 1:2:a1%.<br />
 The generated passwords will be of length 1 to 2 and contain<br />
-lowcase letters, numbers and/or percent signs and dots.</p>
-<dt><code>-e nsr</code></p>
-<dd> additional checks, &quot;n&quot; for null password, &quot;s&quot; try login as pass, &quot;r&quot; try the reverse login as pass</p>
-<dt><code>-C FILE</code></p>
-<dd> colon separated &quot;login:pass&quot; format, instead of -L/-P options</p>
-<dt><code>-u</code></p>
-<dd> by default Hydra checks all passwords for one login and then tries the next login. This option loops around the passwords, so the first password is tried on all logins, then the next password.</p>
-<dt><code>-f</code></p>
-<dd> exit after the first found login/password pair (per host if -M)</p>
-<dt><code>-F</code></p>
-<dd> exit after the first found login/password pair for any host (for usage with -M)</p>
-<dt><code>-M FILE</code></p>
-<dd> server list for parallel attacks, one entry per line</p>
-<dt><code>-o FILE</code></p>
-<dd> write found login/password pairs to FILE instead of stdout</p>
-<dt><code>-t TASKS</code></p>
-<dd> run TASKS number of connects in parallel (default: 16)</p>
-<dt><code>-w TIME</code></p>
-<dd> defines the max wait time in seconds for responses (default: 32)</p>
-<dt><code>-W TIME</code></p>
-<dd> defines a wait time between each connection a task performs. This usually only makes sense if a low task number is used, .e.g -t 1</p>
-<dt><code>-4 / -6 </code></p>
-<dd> prefer IPv4 (default) or IPv6 addresses</p>
-<dt><code>-v / -V </code></p>
-<dd> verbose mode / show login+pass combination for each attempt <code>-d</code> debug mode</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</dl>
+lowcase letters, numbers and/or percent signs and dots.</dd>
+<dt><code>-e nsr</code></dt>
+<dd> additional checks, &quot;n&quot; for null password, &quot;s&quot; try login as pass, &quot;r&quot; try the reverse login as pass</dd>
+<dt><code>-C FILE</code></dt>
+<dd> colon separated &quot;login:pass&quot; format, instead of -L/-P options</dd>
+<dt><code>-u</code></dt>
+<dd> by default Hydra checks all passwords for one login and then tries the next login. This option loops around the passwords, so the first password is tried on all logins, then the next password.</dd>
+<dt><code>-f</code></dt>
+<dd> exit after the first found login/password pair (per host if -M)</dd>
+<dt><code>-F</code></dt>
+<dd> exit after the first found login/password pair for any host (for usage with -M)</dd>
+<dt><code>-M FILE</code></dt>
+<dd> server list for parallel attacks, one entry per line</dd>
+<dt><code>-o FILE</code></dt>
+<dd> write found login/password pairs to FILE instead of stdout</dd>
+<dt><code>-t TASKS</code></dt>
+<dd> run TASKS number of connects in parallel (default: 16)</dd>
+<dt><code>-w TIME</code></dt>
+<dd> defines the max wait time in seconds for responses (default: 32)</dd>
+<dt><code>-W TIME</code></dt>
+<dd> defines a wait time between each connection a task performs. This usually only makes sense if a low task number is used, .e.g -t 1</dd>
+<dt><code>-4 / -6 </code></dt>
+<dd> prefer IPv4 (default) or IPv6 addresses</dd>
+<dt><code>-v / -V </code></dt>
+<dd> verbose mode / show login+pass combination for each attempt <code>-d</code> debug mode</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xhydra/">xhydra</a></code>(1), <code><a href="/docs/linux/man/1-pw-inspector/">pw-inspector</a></code>(1).<br />
  The programs are documented fully by van Hauser &lt;vh [at] thc.org&gt;</p>

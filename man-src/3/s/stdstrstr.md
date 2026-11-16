@@ -11,9 +11,7 @@ std::strstr - std::strstr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     const char *strstr(const char *str, const char *target);
-
 char *strstr(char *str, const char *target);</code></pre> 
 Finds the first occurrence of the byte string target in the byte string pointed to by str. The terminating null characters are not compared. 
 
@@ -29,10 +27,8 @@ Pointer to the first character of the found substring in str, or NULL if no such
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     const char *str = &quot;Try not. Do, or do not. There is no try.&quot;;
     const char *target = &quot;not&quot;;

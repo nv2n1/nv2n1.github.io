@@ -20,32 +20,32 @@ description: "foomatic-printjob – manage printer jobs in a spooler-independent
 <p> <code>foomatic-printjob</code> provides a spooler-independent interface to creating and managing printer jobs and print queues. Note that the first argument changes the mode of the command, as it combines the functionality of several System V-style printing commands. </p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>-s</code><i>spooler</i></p>
-<dd> Explicit spooler type. </p>
-<dt><code>-P</code><i>queuename</i></p>
-<dd> Any commands specified should apply to this queue instead of the default. </p>
-<dt><code>-o</code><i>option=value</i></p>
-<dd> Set option to value </p>
-<dt><code>-o</code><i>option</i></p>
-<dd> Set the switch option </p>
-<dt><code>-#</code><i>n</i></p>
-<dd> Print n copies </p>
-<dt><code>file1&nbsp;<wbr>&nbsp;<wbr>file2&nbsp;<wbr>&nbsp;<wbr>&#8230;</code></p>
-<dd> Files to be printed, when no file is given, standard input will be printed </p>
-<dt><code>-Q</code></p>
-<dd> Query the jobs in a queue. If a list of users is specified, only those users&#8217; jobs will be queried. </p>
-<dt><code>-Q -a</code></p>
-<dd> Query the jobs in all queues. If a list of users is specified, only those users&#8217; jobs will be queried. </p>
-<dt><code>-R&nbsp;<wbr>[&nbsp;<wbr>&#8211; | jobid1 jobid2 &#8230;&nbsp;<wbr>]</code></p>
-<dd> Remove a job from a queue. Using <i>&#8211;</i> will remove all jobs. </p>
-<dt><code>-C command&nbsp;<wbr>[&nbsp;<wbr>arguments&nbsp;<wbr>]</code></p>
-<dd> Execute control commands for queue/job manipulation. The commands are the ones of the BSD &quot;lpc&quot; utility. Use the control command &quot;help&quot; to get a list of supported commands. Note: the amount of commands varies with the spooler, but the same commands given under different spoolers do the same thing. </p>
-<dt><code>-i</code></p>
-<dd> Interactive mode: You will be asked if foomatic-printjob is in doubt about something. Otherwise foomatic-printjob uses auto-detection or quits with an error. </p>
-<dt><code>-S</code></p>
-<dd> Save the chosen spooler as the default spooler </p>
-<dt><code>-h</code></p>
-<dd> Show this message or show a list of available options if a queue is specified </p>
+<dt><code>-s</code><i>spooler</i></dt>
+<dd> Explicit spooler type. </dd>
+<dt><code>-P</code><i>queuename</i></dt>
+<dd> Any commands specified should apply to this queue instead of the default. </dd>
+<dt><code>-o</code><i>option=value</i></dt>
+<dd> Set option to value </dd>
+<dt><code>-o</code><i>option</i></dt>
+<dd> Set the switch option </dd>
+<dt><code>-#</code><i>n</i></dt>
+<dd> Print n copies </dd>
+<dt><code>file1&nbsp;<wbr>&nbsp;<wbr>file2&nbsp;<wbr>&nbsp;<wbr>&#8230;</code></dt>
+<dd> Files to be printed, when no file is given, standard input will be printed </dd>
+<dt><code>-Q</code></dt>
+<dd> Query the jobs in a queue. If a list of users is specified, only those users&#8217; jobs will be queried. </dd>
+<dt><code>-Q -a</code></dt>
+<dd> Query the jobs in all queues. If a list of users is specified, only those users&#8217; jobs will be queried. </dd>
+<dt><code>-R&nbsp;<wbr>[&nbsp;<wbr>&#8211; | jobid1 jobid2 &#8230;&nbsp;<wbr>]</code></dt>
+<dd> Remove a job from a queue. Using <i>&#8211;</i> will remove all jobs. </dd>
+<dt><code>-C command&nbsp;<wbr>[&nbsp;<wbr>arguments&nbsp;<wbr>]</code></dt>
+<dd> Execute control commands for queue/job manipulation. The commands are the ones of the BSD &quot;lpc&quot; utility. Use the control command &quot;help&quot; to get a list of supported commands. Note: the amount of commands varies with the spooler, but the same commands given under different spoolers do the same thing. </dd>
+<dt><code>-i</code></dt>
+<dd> Interactive mode: You will be asked if foomatic-printjob is in doubt about something. Otherwise foomatic-printjob uses auto-detection or quits with an error. </dd>
+<dt><code>-S</code></dt>
+<dd> Save the chosen spooler as the default spooler </dd>
+<dt><code>-h</code></dt>
+<dd> Show this message or show a list of available options if a queue is specified </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-foomatic-configure/">foomatic-configure</a>(1) and the documentation for your print spooler. </p>

@@ -26,43 +26,43 @@ struct_usb_host_endpoint - host-side endpoint descriptor and queue
 <h2>Members</h2>
 
 desc
-<dl><dd>descriptor for this endpoint, wMaxPacketSize in native byteorder</dl>
+<dl><dd>descriptor for this endpoint, wMaxPacketSize in native byteorder</dd></dl>
  
 
  ss_ep_comp
-<dl><dd>SuperSpeed companion descriptor for this endpoint</dl>
+<dl><dd>SuperSpeed companion descriptor for this endpoint</dd></dl>
  
 
  ssp_isoc_ep_comp
-<dl><dd>SuperSpeedPlus isoc companion descriptor for this endpoint</dl>
+<dl><dd>SuperSpeedPlus isoc companion descriptor for this endpoint</dd></dl>
  
 
  urb_list
-<dl><dd>urbs queued to this endpoint; maintained by usbcore</dl>
+<dl><dd>urbs queued to this endpoint; maintained by usbcore</dd></dl>
  
 
  hcpriv
-<dl><dd>for use by HCD; typically holds hardware dma queue head (QH) with one or more transfer descriptors (TDs) per urb</dl>
+<dl><dd>for use by HCD; typically holds hardware dma queue head (QH) with one or more transfer descriptors (TDs) per urb</dd></dl>
  
 
  ep_dev
-<dl><dd>ep_device for sysfs info</dl>
+<dl><dd>ep_device for sysfs info</dd></dl>
  
 
  extra
-<dl><dd>descriptors following this endpoint in the configuration</dl>
+<dl><dd>descriptors following this endpoint in the configuration</dd></dl>
  
 
  extralen
-<dl><dd>how many bytes of "extra" are valid</dl>
+<dl><dd>how many bytes of "extra" are valid</dd></dl>
  
 
  enabled
-<dl><dd>URBs may be submitted to this endpoint</dl>
+<dl><dd>URBs may be submitted to this endpoint</dd></dl>
  
 
  streams
-<dl><dd>number of USB-3 streams allocated on the endpoint</dl>
+<dl><dd>number of USB-3 streams allocated on the endpoint</dd></dl>
 
 <h2>Description</h2>
 

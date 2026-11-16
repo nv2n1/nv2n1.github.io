@@ -17,16 +17,16 @@ description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 <p> Reads a Palm pixmap as input, from stdin or <i>pnmfile</i>. Produces either a portable pixmap as output, or writes the value of the transparent color in the Palm pixmap to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Display various interesting information about the input file and process.</p>
-<dt><code>-transparent</code></p>
-<dd> If the Palm pixmap has a transparent color set, the RGB value for that color will be written to stdout as in the form #RRGGBB, where RR, GG, and BB are two-digit hexadecimal numbers indicating a value between 0 and 255. If no transparent color is set in the bitmap, nothing will be output. No additional output will be generated; no anymap will be output.</p>
-<dt><code>-rendition N</code></p>
-<dd> Palm pixmaps may contain several different renditions of the same pixmap, with different depths. By default, <code>palmtopnm </code> operates on the first rendition (rendition number 1) in the pixmap. This switch allows you to operate on a different rendition. The value must be between 1 and the number of renditions in the pixmap, inclusive.</p>
-<dt><code>-showhist</code></p>
-<dd> Writes a histogram of colors in the input file to stderr.</p>
-<dt><code>-forceplain</code></p>
-<dd> Force the output anymap to be in ASCII &#8216;plain&#8217; netpbm format. </p>
+<dt><code>-verbose</code></dt>
+<dd> Display various interesting information about the input file and process.</dd>
+<dt><code>-transparent</code></dt>
+<dd> If the Palm pixmap has a transparent color set, the RGB value for that color will be written to stdout as in the form #RRGGBB, where RR, GG, and BB are two-digit hexadecimal numbers indicating a value between 0 and 255. If no transparent color is set in the bitmap, nothing will be output. No additional output will be generated; no anymap will be output.</dd>
+<dt><code>-rendition N</code></dt>
+<dd> Palm pixmaps may contain several different renditions of the same pixmap, with different depths. By default, <code>palmtopnm </code> operates on the first rendition (rendition number 1) in the pixmap. This switch allows you to operate on a different rendition. The value must be between 1 and the number of renditions in the pixmap, inclusive.</dd>
+<dt><code>-showhist</code></dt>
+<dd> Writes a histogram of colors in the input file to stderr.</dd>
+<dt><code>-forceplain</code></dt>
+<dd> Force the output anymap to be in ASCII &#8216;plain&#8217; netpbm format. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtopalm/">pnmtopalm</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a>(5)</code> </p>

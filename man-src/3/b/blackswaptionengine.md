@@ -22,6 +22,6 @@ description: "QuantLib::BlackSwaptionEngine – Black-formula swaption engine."
 <p>Black-formula swaption engine. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dl>
+<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

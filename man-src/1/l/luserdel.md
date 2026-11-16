@@ -15,12 +15,12 @@ description: "luserdel – Delete an user"
 <p> Deletes the user with name <i>user</i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-G</code>, <code>&#8211;dontremovegroup</code></p>
-<dd> By default the user&#8217;s primary group is removed if it has group name <i>user</i> (user&#8217;s private group). This option disables this behavior. </p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </p>
-<dt><code>-r</code>, <code>&#8211;removehome</code></p>
-<dd> Remove user&#8217;s home directory and mail spool after deleting the user. </p>
+<dt><code>-G</code>, <code>&#8211;dontremovegroup</code></dt>
+<dd> By default the user&#8217;s primary group is removed if it has group name <i>user</i> (user&#8217;s private group). This option disables this behavior. </dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
+<dt><code>-r</code>, <code>&#8211;removehome</code></dt>
+<dd> Remove user&#8217;s home directory and mail spool after deleting the user. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>

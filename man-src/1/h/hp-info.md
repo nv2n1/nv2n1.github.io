@@ -15,26 +15,26 @@ description: "hp-info – Device Information Utility"
 <p> <code>hp-info [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>
-<dt>To specify a device-URI:</p>
-<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</p>
-<dt>To specify a CUPS printer:</p>
-<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dl>
+<dt>To specify a device-URI:</dt>
+<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</dd>
+<dt>To specify a CUPS printer:</dt>
+<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dd></dl>
 <h2>MODE</h2>
 <dl>
-<dt>Run in interactive mode:</p>
-<dd> -i or &#8211;interactive</dl>
+<dt>Run in interactive mode:</dt>
+<dd> -i or &#8211;interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Device ID mode:</p>
-<dd> &#8211;id (prints device ID only and exits.) (interactive (-i) mode only.)</p>
-<dt>Allow device URIs of uninstalled printers:</p>
-<dd> -x (interactive (-i) mode only.)</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Device ID mode:</dt>
+<dd> &#8211;id (prints device ID only and exits.) (interactive (-i) mode only.)</dd>
+<dt>Allow device URIs of uninstalled printers:</dt>
+<dd> -x (interactive (-i) mode only.)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-toolbox</p>
 <h2>AUTHOR</h2>

@@ -15,7 +15,7 @@ snd_ctl_register_ioctl - register the device-specific control-ioctls
 <h2>Arguments</h2>
 
 <i>fcn</i>
-<dl><dd><dd>ioctl callback function</dl>
+<dl><dd></dd><dd>ioctl callback function</dd></dl>
 
 <h2>Description</h2>
 

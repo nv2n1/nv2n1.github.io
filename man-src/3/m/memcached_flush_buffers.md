@@ -13,9 +13,9 @@ description: "memcached_flush_buffers – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_return_t memcached_flush_buffers(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</p>
+<dt><code>memcached_return_t memcached_flush_buffers(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_flush_buffers()</i> is used in conjunction with <code>MEMCACHED_BEHAVIOR_BUFFER_REQUESTS</code> (see memcached_behavior(3)) to flush all buffers by sending the buffered commands to the server for processing.</p>
 <h2>RETURN</h2>
@@ -32,3 +32,4 @@ description: "memcached_flush_buffers – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

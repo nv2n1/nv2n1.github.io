@@ -17,12 +17,12 @@ description: "XmTabListCopy — A convenience function that creates a new tab li
 <h2>Description</h2>
 <p><code>XmTabListCopy</code> creates a new tab list consisting of a copy of a portion of the contents of the <i>tablist</i> argument. This function starts copying at the specified offset value of the tab list and copies <i>count</i> values.</p>
 <dl COMPACT>
-<dt><i>tablist</i></p>
-<dd>Specifies a tab list to be copied.</p>
-<dt><i>offset</i></p>
-<dd>Specifies where to start copying. A value of 0 (zero) indicates begin at the beginning, a value of 1 indicates to skip the first tab, and so on. A negative indicates to begin counting backwards from the end. A value of -1 indicates to start copying from the last tab.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of tabs to copy. A value of 0 (zero) indicates to copy all elements from the starting point to the end (beginning if <i>offset</i> is negative) of the tab list.</dl>
+<dt><i>tablist</i></dt>
+<dd>Specifies a tab list to be copied.</dd>
+<dt><i>offset</i></dt>
+<dd>Specifies where to start copying. A value of 0 (zero) indicates begin at the beginning, a value of 1 indicates to skip the first tab, and so on. A negative indicates to begin counting backwards from the end. A value of -1 indicates to start copying from the last tab.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of tabs to copy. A value of 0 (zero) indicates to copy all elements from the starting point to the end (beginning if <i>offset</i> is negative) of the tab list.</dd></dl>
 <h2>Return</h2>
 <p>If <i>tablist</i> is NULL, this function returns NULL. Otherwise, this function returns a newly allocated <code>XmTabList</code>. If the function does allocate an <code>XmTabList</code>, then the application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmTabListFree</code>.</p>
 <h2>Related</h2>

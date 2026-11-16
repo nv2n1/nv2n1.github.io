@@ -10,16 +10,16 @@ description: "oLschema2ldif – Converts LDAP schema’s to LDB-compatible LDIF"
 <p>oLschema2ldif &#8211; Converts LDAP schema&#8217;s to LDB-compatible LDIF </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>oLschema2ldif</code> [-I INPUT-FILE] [-O OUTPUT-FILE]</dl>
+<dt> <code>oLschema2ldif</code> [-I INPUT-FILE] [-O OUTPUT-FILE]</dt></dl>
 <h2>Description</h2>
-<dd>oLschema2ldif is a simple tool that converts standard OpenLDAP schema files to a LDIF format that is understood by LDB.</p>
+<dd>oLschema2ldif is a simple tool that converts standard OpenLDAP schema files to a LDIF format that is understood by LDB.</dd>
 <h2>Options</h2>
 <p>-I input-file</p>
 <dl COMPACT>
-<dd>OpenLDAP schema to read. If none are specified, the schema file will be read from standard input.</dl>
+<dd>OpenLDAP schema to read. If none are specified, the schema file will be read from standard input.</dd></dl>
 <p> -O output-file</p>
 <dl COMPACT>
-<dd>File to write ldif version of schema to.</dl>
+<dd>File to write ldif version of schema to.</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.0 of the Samba suite.</p>
 <h2>See Also</h2>
@@ -29,12 +29,12 @@ description: "oLschema2ldif – Converts LDAP schema’s to LDB-compatible LDIF"
 <p> If you wish to report a problem or make a suggestion then please see the m[blue]<code><a rel="nofollow" href="http://ldb.samba.org/">http://ldb.samba.org/</a></code>m[] web site for current contact and maintainer information.</p>
 <h2>Notes</h2>
 <dl COMPACT>
-<dt> 1.</p>
-<dd>Andrew Tridgell</p>
+<dt> 1.</dt>
+<dd>Andrew Tridgell</dd>
 <dl COMPACT>
-<dd><a rel="nofollow" href="https://www.samba.org/~tridge/">https://www.samba.org/~tridge/</a></dl>
-<dt> 2.</p>
-<dd>Simo Sorce</p>
+<dd><a rel="nofollow" href="https://www.samba.org/~tridge/">https://www.samba.org/~tridge/</a></dd></dl>
+<dt> 2.</dt>
+<dd>Simo Sorce</dd>
 <dl COMPACT>
-<dd>mailto:idra [at] samba.org</dl>
+<dd>mailto:idra [at] samba.org</dd></dl>
 </dl>

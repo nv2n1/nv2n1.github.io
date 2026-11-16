@@ -15,33 +15,33 @@ description: "pam_ssh – authentication and session management with SSH private
 <h3>SSH Authentication Module</h3>
 <p>The SSH authentication component provides a function to verify the identity of a user (Fn pam_sm_authenticate ) by prompting the user for a passphrase and verifying that it can decrypt the target user&#8217;s SSH key using that passphrase. The following options may be passed to the authentication module:</p>
 <dl>
-<dt><code>debug</code></p>
-<dd><a href="/docs/linux/man/3-syslog/">syslog</a>(3) debugging information at <code>LOG_DEBUG</code> level.</p>
-<dt><code>use_first_pass</code></p>
-<dd>If the authentication module is not the first in the stack, and a previous module obtained the user&#8217;s password, that password is used to authenticate the user. If this fails, the authentication module returns failure without prompting the user for a password. This option has no effect if the authentication module is the first in the stack, or if no previous modules obtained the user&#8217;s password.</p>
-<dt><code>try_first_pass</code></p>
-<dd>This option is similar to the <code>use_first_pass</code> option, except that if the previously obtained password fails, the user is prompted for another password.</p>
-<dt><code>keyfiles</code></p>
-<dd>Specify the comma-separated list of files in $HOME/.ssh to check for SSH keys. The default is &#8220;id_dsa,id_rsa,identity&#8221;</p>
-<dt><code>nullok</code></p>
-<dd>Allow empty passphrases.</dl>
+<dt><code>debug</code></dt>
+<dd><a href="/docs/linux/man/3-syslog/">syslog</a>(3) debugging information at <code>LOG_DEBUG</code> level.</dd>
+<dt><code>use_first_pass</code></dt>
+<dd>If the authentication module is not the first in the stack, and a previous module obtained the user&#8217;s password, that password is used to authenticate the user. If this fails, the authentication module returns failure without prompting the user for a password. This option has no effect if the authentication module is the first in the stack, or if no previous modules obtained the user&#8217;s password.</dd>
+<dt><code>try_first_pass</code></dt>
+<dd>This option is similar to the <code>use_first_pass</code> option, except that if the previously obtained password fails, the user is prompted for another password.</dd>
+<dt><code>keyfiles</code></dt>
+<dd>Specify the comma-separated list of files in $HOME/.ssh to check for SSH keys. The default is &#8220;id_dsa,id_rsa,identity&#8221;</dd>
+<dt><code>nullok</code></dt>
+<dd>Allow empty passphrases.</dd></dl>
 <h3>SSH Session Management Module</h3>
 <p>The SSH session management component provides functions to initiate (Fn pam_sm_open_session ) and terminate (Fn pam_sm_close_session ) sessions. The Fn pam_sm_open_session function starts an SSH agent, passing it any private keys it decrypted during the authentication phase, and sets the environment variables the agent specifies. The Fn pam_sm_close_session function kills the previously started SSH agent by sending it a <code>SIGTERM</code> The following options may be passed to the session management module:</p>
 <dl>
-<dt><code>debug</code></p>
-<dd><a href="/docs/linux/man/3-syslog/">syslog</a>(3) debugging information at <code>LOG_DEBUG</code> level.</dl>
+<dt><code>debug</code></dt>
+<dd><a href="/docs/linux/man/3-syslog/">syslog</a>(3) debugging information at <code>LOG_DEBUG</code> level.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>$HOME/.ssh/identity </code></p>
-<dd>SSH1/OpenSSH RSA key</p>
-<dt><code>$HOME/.ssh/id_dsa </code></p>
-<dd>OpenSSH DSA key</p>
-<dt><code>$HOME/.ssh2/id_rsa_* </code></p>
-<dd>SSH2 RSA keys</p>
-<dt><code>$HOME/.ssh2/id_dsa_* </code></p>
-<dd>SSH2 DSA keys</p>
-<dt><code>/var/run/pam_ssh/&lt;user&gt;* </code></p>
-<dd>ssh-agent environment information. The files are owned by the superuser but readable by the users. The location is Fedora specific, in the original package these files are in $HOME/.ssh/agent-*</dl>
+<dt><code>$HOME/.ssh/identity </code></dt>
+<dd>SSH1/OpenSSH RSA key</dd>
+<dt><code>$HOME/.ssh/id_dsa </code></dt>
+<dd>OpenSSH DSA key</dd>
+<dt><code>$HOME/.ssh2/id_rsa_* </code></dt>
+<dd>SSH2 RSA keys</dd>
+<dt><code>$HOME/.ssh2/id_dsa_* </code></dt>
+<dd>SSH2 DSA keys</dd>
+<dt><code>/var/run/pam_ssh/&lt;user&gt;* </code></dt>
+<dd>ssh-agent environment information. The files are owned by the superuser but readable by the users. The location is Fedora specific, in the original package these files are in $HOME/.ssh/agent-*</dd></dl>
 <h2>See Also</h2>
 <p>ssh-agent1, <a href="/docs/linux/man/3-syslog/">syslog</a>(3), pam.conf5, <a href="/docs/linux/man/8-pam/">pam</a>(8)</p>
 <h2>Authors</h2>

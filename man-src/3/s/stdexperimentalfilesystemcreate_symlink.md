@@ -10,15 +10,11 @@ description: "std::experimental::filesystem::create_symlink,std::experimental::f
 <p>std::experimental::filesystem::create_symlink,std::experimental::filesystem::create_directory_symlink &#8211; std::experimental::filesystem::create_symlink,std::experimental::filesystem::create_directory_symlink</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void create_symlink(const path &amp;target, const path &amp;link);
 (1)(filesystem TS)
-
     void create_symlink(const path &amp;target, const path &amp;link, error_code &amp;ec);
-
 void create_directory_symlink(const path &amp;target, const path &amp;link);
 (2)(filesystem TS)
-
     void create_directory_symlink(const path &amp;target, const path &amp;link, error_code &amp;ec);</code></pre>
 <p>Creates a symbolic link link with its target set to target as if by POSIX symlink(): the pathname target may be invalid or non-existing.<br />
 Some operating systems require symlink creation to identify that the link is to a directory. Portable code should use <code>(2)</code> to create directory symlinks rather than <code>(1)</code>, even though there is no distinction on POSIX systems. </p>
@@ -39,12 +35,9 @@ Like a hard link, a symbolic link allows a file to have multiple logical names. 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/subdir&quot;);
     fs::create_symlink(&quot;target&quot;, &quot;sandbox/sym1&quot;);

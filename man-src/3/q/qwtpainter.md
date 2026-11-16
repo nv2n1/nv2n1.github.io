@@ -94,21 +94,21 @@ description: "QwtPainter –"
 <h3>QPixmap QwtPainter::backingStore (QWidget *widget, const QSize &amp;size) [static]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pixmap that can be used as backing store</dl>
+<dd>A pixmap that can be used as backing store</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>widget</i> Widget, for which the backinstore is intended<br />
- <i>size</i> Size of the pixmap</dl>
+ <i>size</i> Size of the pixmap</dd></dl>
 <h3>void QwtPainter::drawBackgound (QPainter *painter, const QRectF &amp;rect, const QWidget *widget) [static]</h3>
 <p>Fill rect with the background of a widget </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Rectangle to be filled<br />
- <i>widget</i> Widget</dl>
+ <i>widget</i> Widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QStyle::PE_Widget, QWidget::backgroundRole()</dl>
+<dd>QStyle::PE_Widget, QWidget::backgroundRole()</dd></dl>
 <h3>void QwtPainter::drawColorBar (QPainter *painter, const <code>QwtColorMap</code> &amp;colorMap, const <code>QwtInterval</code> &amp;interval, const <code>QwtScaleMap</code> &amp;scaleMap, Qt::Orientationorientation, const QRectF &amp;rect) [static]</h3>
 <p>Draw a color bar into a rectangle </p>
 <p> <code>Parameters:</code></p>
@@ -118,7 +118,7 @@ description: "QwtPainter –"
  <i>interval</i> Value range<br />
  <i>scaleMap</i> Scale map<br />
  <i>orientation</i> Orientation<br />
- <i>rect</i> Traget rectangle</dl>
+ <i>rect</i> Traget rectangle</dd></dl>
 <h3>void QwtPainter::drawFrame (QPainter *painter, const QRectF &amp;rect, const QPalette &amp;palette, QPalette::ColorRoleforegroundRole, intframeWidth, intmidLineWidth, intframeStyle) [static]</h3>
 <p>Draw a rectangular frame </p>
 <p> <code>Parameters:</code></p>
@@ -129,7 +129,7 @@ description: "QwtPainter –"
  <i>foregroundRole</i> Foreground role used for QFrame::Plain<br />
  <i>frameWidth</i> Frame width<br />
  <i>midLineWidth</i> Used for QFrame::Box<br />
- <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dl>
+ <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawRoundedFrame (QPainter *painter, const QRectF &amp;rect, doublexRadius, doubleyRadius, const QPalette &amp;palette, intlineWidth, intframeStyle) [static]</h3>
 <p>Draw a rectangular frame with rounded borders </p>
 <p> <code>Parameters:</code></p>
@@ -140,7 +140,7 @@ description: "QwtPainter –"
  <i>yRadius</i> y-radius of the ellipses defining the corners<br />
  <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br />
  <i>lineWidth</i> Line width<br />
- <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dl>
+ <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawRoundFrame (QPainter *painter, const QRectF &amp;rect, const QPalette &amp;palette, intlineWidth, intframeStyle) [static]</h3>
 <p>Draw a round frame </p>
 <p> <code>Parameters:</code></p>
@@ -149,7 +149,7 @@ description: "QwtPainter –"
  <i>rect</i> Frame rectangle<br />
  <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br />
  <i>lineWidth</i> Line width<br />
- <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dl>
+ <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawSimpleRichText (QPainter *painter, const QRectF &amp;rect, intflags, const QTextDocument &amp;text) [static]</h3>
 <p>Draw a text document into a rectangle </p>
 <p> <code>Parameters:</code></p>
@@ -157,7 +157,7 @@ description: "QwtPainter –"
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Traget rectangle<br />
  <i>flags</i> Alignments/Text flags, see QPainter::drawText()<br />
- <i>text</i> Text document</dl>
+ <i>text</i> Text document</dd></dl>
 <h3>void QwtPainter::fillPixmap (const QWidget *widget, QPixmap &amp;pixmap, const QPoint &amp;offset = QPoint()) [static]</h3>
 <p>Fill a pixmap with the content of a widget </p>
 <p> In Qt &gt;= 5.0 QPixmap::fill() is a nop, in Qt 4.x it is buggy for backgrounds with gradients. Thus <code>fillPixmap()</code> offers an alternative implementation. </p>
@@ -165,60 +165,60 @@ description: "QwtPainter –"
 <dl COMPACT>
 <dd><i>widget</i> Widget<br />
  <i>pixmap</i> Pixmap to be filled<br />
- <i>offset</i> Offset</dl>
+ <i>offset</i> Offset</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPixmap::fill()</dl>
+<dd>QPixmap::fill()</dd></dl>
 <h3>bool QwtPainter::isAligning (QPainter *painter) [static]</h3>
 <p>Check if the painter is using a paint engine, that aligns coordinates to integers. Today these are all paint engines beside QPaintEngine::Pdf and QPaintEngine::SVG. </p>
 <p> If we have an integer based paint engine it is also checked if the painter has a transformation matrix, that rotates or scales. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, when the painter is aligning</dl>
+<dd>true, when the painter is aligning</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRoundingAlignment()</code></dl>
+<dd><code>setRoundingAlignment()</code></dd></dl>
 <h3>bool QwtPainter::isX11GraphicsSystem () [static]</h3>
 <p>Check is the application is running with the X11 graphics system that has some special capabilities that can be used for incremental painting to a widget. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the graphics system is X11</dl>
+<dd>True, when the graphics system is X11</dd></dl>
 <h3>bool QwtPainter::polylineSplitting () [inline], [static]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when line splitting for the raster paint engine is enabled.</dl>
+<dd>True, when line splitting for the raster paint engine is enabled.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPolylineSplitting()</code></dl>
+<dd><code>setPolylineSplitting()</code></dd></dl>
 <h3>bool QwtPainter::roundingAlignment () [inline], [static]</h3>
 <p>Check whether coordinates should be rounded, before they are painted to a paint engine that rounds to integer values. For other paint engines ( PDF, SVG ), this flag has no effect. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when rounding is enabled</dl>
+<dd>True, when rounding is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRoundingAlignment()</code>, <code>isAligning()</code></dl>
+<dd><code>setRoundingAlignment()</code>, <code>isAligning()</code></dd></dl>
 <h3>bool QwtPainter::roundingAlignment (QPainter *painter) [inline], [static]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>roundingAlignment()</code> &amp;&amp; isAligning(painter);</dl>
+<dd><code>roundingAlignment()</code> &amp;&amp; isAligning(painter);</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>void QwtPainter::setPolylineSplitting (boolenable) [static]</h3>
 <p>En/Disable line splitting for the raster paint engine. In some Qt versions the raster paint engine paints polylines of many points much faster when they are split in smaller chunks: f.e all supported Qt versions &gt;= Qt 5.0 when drawing an antialiased polyline with a pen width &gt;=2. </p>
 <p> The default setting is true. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>polylineSplitting()</code></dl>
+<dd><code>polylineSplitting()</code></dd></dl>
 <h3>void QwtPainter::setRoundingAlignment (boolenable) [static]</h3>
 <p>Enable whether coordinates should be rounded, before they are painted to a paint engine that floors to integer values. For other paint engines this ( PDF, SVG ), this flag has no effect. <code>QwtPainter</code> stores this flag only, the rounding itself is done in the painting code ( f.e the plot items ). </p>
 <p> The default setting is true. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>roundingAlignment()</code>, <code>isAligning()</code></dl>
+<dd><code>roundingAlignment()</code>, <code>isAligning()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

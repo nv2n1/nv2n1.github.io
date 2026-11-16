@@ -43,7 +43,7 @@ into an integer PAPI event code.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_event_code_to_name</code> </p>
+<dd><code>PAPI_event_code_to_name</code> </dd>
 <p> <code>PAPI_remove_event</code> </p>
 <p> <code>PAPI_get_event_info</code> </p>
 <p> <code>PAPI_enum_event</code> </p>
@@ -53,3 +53,4 @@ into an integer PAPI event code.
 <p> PAPI_native</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

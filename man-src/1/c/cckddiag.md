@@ -48,12 +48,12 @@ description: "cckddiag – Hercules CCKD DASD diagnostic tool"
 <p> hex display data at offset <code>oo</code> of length <code>ll</code>. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><a href="/docs/linux/man/4-cckd/">cckd</a>(4)</p>
+<dt><a href="/docs/linux/man/4-cckd/">cckd</a>(4)</dt>
 <dd>
-<dt><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a> the Hercules emulator homepage.</p>
+</dd><dt><a rel="nofollow" href="http://www.hercules-390.org/">http://www.hercules-390.org/</a> the Hercules emulator homepage.</dt>
 <dd>
-<dt><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a> which describes</p>
-<dd> the Hercules CCKD DASD facility. </p>
+</dd><dt><a rel="nofollow" href="http://www.hercules-390.org/cckddasd.html">http://www.hercules-390.org/cckddasd.html</a> which describes</dt>
+<dd> the Hercules CCKD DASD facility. </dd>
 </dl>
 <h2>HISTORY</h2>
 <p> 2003-02-07 originally written by James M. Morrison </p>

@@ -30,147 +30,147 @@ description: "gxemul – an experimental framework for full-system machine emula
 <p> Gzipped kernels are automatically unzipped, by calling the external gunzip program, both when specifying a gzipped file directly on the command line and when loading such a file using the &#8211;<code>j</code> option. </p>
 <p> Machine selection options:</p>
 <dl>
-<dt><code>-E </code><i>t</i></p>
-<dd> Try to emulate machine type <i>t.</i> This option is not always needed, if the &#8211;<code>e</code> option uniquely selects a machine. (Use &#8211;<code>H</code> to get a list of types.)</p>
-<dt><code>-e </code><i>st</i></p>
-<dd> Try to emulate machine subtype <i>st.</i> Use this together with &#8211;<code>E</code> (This option is not always needed, if a machine type has no subtypes.)</dl>
+<dt><code>-E </code><i>t</i></dt>
+<dd> Try to emulate machine type <i>t.</i> This option is not always needed, if the &#8211;<code>e</code> option uniquely selects a machine. (Use &#8211;<code>H</code> to get a list of types.)</dd>
+<dt><code>-e </code><i>st</i></dt>
+<dd> Try to emulate machine subtype <i>st.</i> Use this together with &#8211;<code>E</code> (This option is not always needed, if a machine type has no subtypes.)</dd></dl>
 <p> Other options:</p>
 <dl>
-<dt><code>-C </code><i>x</i></p>
-<dd> Try to emulate a specific CPU type, <i>x.</i> This overrides the default CPU type for the machine being emulated. (Use &#8211;<code>H</code> to get a list of available CPU types.)</p>
-<dt><code>-d </code><i>[modifiers:]filename</i></p>
-<dd> Add <i>filename</i> as a disk image. By adding one or more modifier characters and then a colon (&quot;:&quot;) as a prefix to <i>filename,</i> you can modify the way the disk image is treated. Available modifiers are:</p>
+<dt><code>-C </code><i>x</i></dt>
+<dd> Try to emulate a specific CPU type, <i>x.</i> This overrides the default CPU type for the machine being emulated. (Use &#8211;<code>H</code> to get a list of available CPU types.)</dd>
+<dt><code>-d </code><i>[modifiers:]filename</i></dt>
+<dd> Add <i>filename</i> as a disk image. By adding one or more modifier characters and then a colon (&quot;:&quot;) as a prefix to <i>filename,</i> you can modify the way the disk image is treated. Available modifiers are:</dd>
 <dl>
-<dt><code>b</code></p>
-<dd> Specifies that this is a boot device.</p>
-<dt><code>c</code></p>
-<dd> CD-ROM.</p>
-<dt><code>d</code></p>
-<dd> DISK (this is the default).</p>
-<dt><code>f</code></p>
-<dd> FLOPPY.</p>
-<dt><code>gH;S;</code></p>
-<dd> Override the default geometry; use H heads and S sectors-per-track. (The number of cylinders is calculated automatically.)</p>
-<dt><code>i</code></p>
-<dd> IDE. (This is the default for most machine types.)</p>
-<dt><code>oOFS;</code></p>
-<dd> Set the base offset for an ISO9660 filesystem on a disk image. The default is 0. A suitable offset when booting from Dreamcast ISO9660 filesystem images, which are offset by 11702 sectors, is 23965696.</p>
-<dt><code>r</code></p>
-<dd> Read-only (don&#8217;t allow changes to be written to the file).</p>
-<dt><code>s</code></p>
-<dd> SCSI.</p>
-<dt><code>t</code></p>
-<dd> Tape.</p>
-<dt><code>V</code></p>
-<dd> Add an overlay filename to an already defined disk image. (A ID number must also be specified when this flag is used. See the documentation for an example of how to use overlays.)</p>
-<dt><code>0-7</code></p>
-<dd> Force a specific ID number.</dl>
+<dt><code>b</code></dt>
+<dd> Specifies that this is a boot device.</dd>
+<dt><code>c</code></dt>
+<dd> CD-ROM.</dd>
+<dt><code>d</code></dt>
+<dd> DISK (this is the default).</dd>
+<dt><code>f</code></dt>
+<dd> FLOPPY.</dd>
+<dt><code>gH;S;</code></dt>
+<dd> Override the default geometry; use H heads and S sectors-per-track. (The number of cylinders is calculated automatically.)</dd>
+<dt><code>i</code></dt>
+<dd> IDE. (This is the default for most machine types.)</dd>
+<dt><code>oOFS;</code></dt>
+<dd> Set the base offset for an ISO9660 filesystem on a disk image. The default is 0. A suitable offset when booting from Dreamcast ISO9660 filesystem images, which are offset by 11702 sectors, is 23965696.</dd>
+<dt><code>r</code></dt>
+<dd> Read-only (don&#8217;t allow changes to be written to the file).</dd>
+<dt><code>s</code></dt>
+<dd> SCSI.</dd>
+<dt><code>t</code></dt>
+<dd> Tape.</dd>
+<dt><code>V</code></dt>
+<dd> Add an overlay filename to an already defined disk image. (A ID number must also be specified when this flag is used. See the documentation for an example of how to use overlays.)</dd>
+<dt><code>0-7</code></dt>
+<dd> Force a specific ID number.</dd></dl>
 <p> For SCSI devices, the ID number is the SCSI ID. For IDE harddisks, the ID number has the following meaning:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Primary master.</p>
-<dt><code>1</code></p>
-<dd> Primary slave.</p>
-<dt><code>2</code></p>
-<dd> Secondary master.</p>
-<dt><code>3</code></p>
-<dd> Secondary slave.</dl>
+<dt><code>0</code></dt>
+<dd> Primary master.</dd>
+<dt><code>1</code></dt>
+<dd> Primary slave.</dd>
+<dt><code>2</code></dt>
+<dd> Secondary master.</dd>
+<dt><code>3</code></dt>
+<dd> Secondary slave.</dd></dl>
 <p> Unless otherwise specified, filenames ending with &quot;.iso&quot; or &quot;.cdr&quot; are assumed to be CDROM images. Most others are assumed to be disks. Depending on which machine is being emulated, the default for disks can be either SCSI or IDE. Some disk images that are very small are assumed to be floppy disks. (If you are not happy with the way a disk image is detected, then you need to use explicit prefixes to force a specific type.) </p>
 <p> For floppies, the gH;S; prefix is ignored. Instead, the number of heads and cylinders are assumed to be 2 and 80, respectively, and the number of sectors per track is calculated automatically. (This works for 720KB, 1.2MB, 1.44MB, and 2.88MB floppies.)</p>
-<dt><code>-I </code><i>hz</i></p>
-<dd> Set the main CPU&#8217;s frequency to <i>hz</i> Hz. This option does not work for all emulated machine modes. It affects the way count/compare interrupts are faked to simulate emulated time = real world time. If the guest operating system relies on RTC interrupts instead of count/compare interrupts, then this option has no effect. </p>
+<dt><code>-I </code><i>hz</i></dt>
+<dd> Set the main CPU&#8217;s frequency to <i>hz</i> Hz. This option does not work for all emulated machine modes. It affects the way count/compare interrupts are faked to simulate emulated time = real world time. If the guest operating system relies on RTC interrupts instead of count/compare interrupts, then this option has no effect. </dd>
 <p> Setting the frequency to zero disables automatic synchronization of emulated time vs real world time, and the count/compare system runs at a fixed rate.</p>
-<dt><code>-i</code></p>
-<dd> Enable instruction trace, i.e. display disassembly of each instruction as it is being executed.</p>
-<dt><code>-J</code></p>
-<dd> Disable instruction combinations in the dynamic translator.</p>
-<dt><code>-j </code><i>n</i></p>
-<dd> Set the name of the kernel to <i>n.</i> When booting from an ISO9660 filesystem, the emulator will try to boot using this file. (In some emulation modes, eg. DECstation, this name is passed along to the boot program. Useful names are &quot;bsd&quot; for OpenBSD/pmax, &quot;vmunix&quot; for Ultrix, or &quot;vmsprite&quot; for Sprite.)</p>
-<dt><code>-M </code><i>m</i></p>
-<dd> Emulate <i>m</i> MBs of physical RAM. This overrides the default amount of RAM for the selected machine type.</p>
-<dt><code>-N</code></p>
-<dd> Display the number of executed instructions per second on average, at regular intervals.</p>
-<dt><code>-n </code><i>nr</i></p>
-<dd> Set the number of processors in the machine, for SMP experiments. </p>
+<dt><code>-i</code></dt>
+<dd> Enable instruction trace, i.e. display disassembly of each instruction as it is being executed.</dd>
+<dt><code>-J</code></dt>
+<dd> Disable instruction combinations in the dynamic translator.</dd>
+<dt><code>-j </code><i>n</i></dt>
+<dd> Set the name of the kernel to <i>n.</i> When booting from an ISO9660 filesystem, the emulator will try to boot using this file. (In some emulation modes, eg. DECstation, this name is passed along to the boot program. Useful names are &quot;bsd&quot; for OpenBSD/pmax, &quot;vmunix&quot; for Ultrix, or &quot;vmsprite&quot; for Sprite.)</dd>
+<dt><code>-M </code><i>m</i></dt>
+<dd> Emulate <i>m</i> MBs of physical RAM. This overrides the default amount of RAM for the selected machine type.</dd>
+<dt><code>-N</code></dt>
+<dd> Display the number of executed instructions per second on average, at regular intervals.</dd>
+<dt><code>-n </code><i>nr</i></dt>
+<dd> Set the number of processors in the machine, for SMP experiments. </dd>
 <p> Note 1: The emulator allocates quite a lot of virtual memory for per-CPU translation tables. On 64-bit hosts, this is normally not a problem. On 32-bit hosts, this can use up all available virtual userspace memory. The solution is to either run the emulator on a 64-bit host, or limit the number of emulated CPUs to a reasonably low number. </p>
 <p> Note 2: SMP simulation is not working very well yet; multiple processors are simulated, but synchronization between the processors does not map very well to how real-world SMP systems work.</p>
-<dt><code>-O</code></p>
-<dd> Force a &quot;netboot&quot; (tftp instead of disk), even when a disk image is present (for DECstation, SGI, and ARC emulation).</p>
-<dt><code>-o </code><i>arg</i></p>
-<dd> Set the boot argument (mostly useful for DEC, ARC, or SGI emulation). Default <i>arg</i> for DEC is &quot;-a&quot;, for ARC/SGI it is &quot;-aN&quot;, and for CATS it is &quot;-A&quot;.</p>
-<dt><code>-p </code><i>pc</i></p>
-<dd> Add a breakpoint. <i>pc</i> can be a symbol, or a numeric value. (Remember to use the &quot;0x&quot; prefix for hexadecimal values.)</p>
-<dt><code>-Q</code></p>
-<dd> Disable the built-in (software-only) PROM emulation. This option is useful for experimenting with running raw ROM images from real machines. The default behaviour of the emulator is to &quot;fake&quot; certain PROM calls used by guest operating systems (e.g. NetBSD), so that no real PROM image is needed.</p>
-<dt><code>-R</code></p>
-<dd> Use a random bootstrap cpu, instead of CPU nr 0. (This option is only meaningful together with the &#8211;<code>n</code> option.)</p>
-<dt><code>-r</code></p>
-<dd> Dump register contents for every executed instruction.</p>
-<dt><code>-S</code></p>
-<dd> Initialize emulated RAM to random data, instead of zeroes. This option is useful when trying to trigger bugs in a program that occur because the program assumed that uninitialized memory contains zeros. (Use with care.)</p>
-<dt><code>-s </code><i>flags:filename</i></p>
-<dd> Gather statistics based on the current emulated program counter value, while the program executes. The statistics is actually just a raw dump of all program counter values in sequence, suitable for post-analysis with separate tools. Output is appended to <i>filename.</i> </p>
+<dt><code>-O</code></dt>
+<dd> Force a &quot;netboot&quot; (tftp instead of disk), even when a disk image is present (for DECstation, SGI, and ARC emulation).</dd>
+<dt><code>-o </code><i>arg</i></dt>
+<dd> Set the boot argument (mostly useful for DEC, ARC, or SGI emulation). Default <i>arg</i> for DEC is &quot;-a&quot;, for ARC/SGI it is &quot;-aN&quot;, and for CATS it is &quot;-A&quot;.</dd>
+<dt><code>-p </code><i>pc</i></dt>
+<dd> Add a breakpoint. <i>pc</i> can be a symbol, or a numeric value. (Remember to use the &quot;0x&quot; prefix for hexadecimal values.)</dd>
+<dt><code>-Q</code></dt>
+<dd> Disable the built-in (software-only) PROM emulation. This option is useful for experimenting with running raw ROM images from real machines. The default behaviour of the emulator is to &quot;fake&quot; certain PROM calls used by guest operating systems (e.g. NetBSD), so that no real PROM image is needed.</dd>
+<dt><code>-R</code></dt>
+<dd> Use a random bootstrap cpu, instead of CPU nr 0. (This option is only meaningful together with the &#8211;<code>n</code> option.)</dd>
+<dt><code>-r</code></dt>
+<dd> Dump register contents for every executed instruction.</dd>
+<dt><code>-S</code></dt>
+<dd> Initialize emulated RAM to random data, instead of zeroes. This option is useful when trying to trigger bugs in a program that occur because the program assumed that uninitialized memory contains zeros. (Use with care.)</dd>
+<dt><code>-s </code><i>flags:filename</i></dt>
+<dd> Gather statistics based on the current emulated program counter value, while the program executes. The statistics is actually just a raw dump of all program counter values in sequence, suitable for post-analysis with separate tools. Output is appended to <i>filename.</i> </dd>
 <p> The <i>flags</i> should include one or more of the following type specifiers:</p>
 <dl>
-<dt><code>v</code></p>
-<dd> Virtual. This means that the program counter value is used.</p>
-<dt><code>p</code></p>
-<dd> Physical. This means that the physical address of where the program is actually running is used.</p>
-<dt><code>i</code></p>
-<dd> Instruction call. This type of statistics gathering is practically only useful during development of the emulator itself. The output is a list of addresses of instruction call functions (ic-&gt;f), which after some post-processing can be used as a basis for deciding when to implement instruction combinations.</dl>
+<dt><code>v</code></dt>
+<dd> Virtual. This means that the program counter value is used.</dd>
+<dt><code>p</code></dt>
+<dd> Physical. This means that the physical address of where the program is actually running is used.</dd>
+<dt><code>i</code></dt>
+<dd> Instruction call. This type of statistics gathering is practically only useful during development of the emulator itself. The output is a list of addresses of instruction call functions (ic-&gt;f), which after some post-processing can be used as a basis for deciding when to implement instruction combinations.</dd></dl>
 <p> The <i>flags</i> may also include the following optional modifiers:</p>
 <dl>
-<dt><code>d</code></p>
-<dd> Disabled at startup.</p>
-<dt><code>o</code></p>
-<dd> Overwrite the file, instead of appending to it.</dl>
+<dt><code>d</code></dt>
+<dd> Disabled at startup.</dd>
+<dt><code>o</code></dt>
+<dd> Overwrite the file, instead of appending to it.</dd></dl>
 <p> Statistics gathering can be enabled/disabled at runtime by using the &quot;statistics_enabled = yes&quot; and &quot;statistics_enabled = no&quot; debugger commands. </p>
 <p> When gathering instruction statistics using the &#8211;<code>s</code> option, instruction combinations are always disabled (i.e. an implicit &#8211;<code>J</code> flag is added to the command line).</p>
-<dt><code>-T</code></p>
-<dd> Halt if the emulated program attempts to access non-existing memory.</p>
-<dt><code>-t</code></p>
-<dd> Show a trace tree of all function calls being made.</p>
-<dt><code>-U</code></p>
-<dd> Enable slow_serial_interrupts_hack_for_linux.</p>
-<dt><code>-X</code></p>
-<dd> Use X11. This option enables graphical framebuffers.</p>
-<dt><code>-x</code></p>
-<dd> Open up new xterms for emulated serial ports. The default behaviour is to open up xterms when using configuration files, or if X11 is enabled. When starting up a simple emulation session with settings directly on the command line, and neither &#8211;<code>X</code> nor &#8211;<code>x</code> is used, then all output is confined to the terminal that started in.</p>
-<dt><code>-Y </code><i>n</i></p>
-<dd> Scale down framebuffer windows by <i>n</i> x <i>n</i> times. This option is useful when emulating a very large framebuffer, and the actual display is of lower resolution. If <i>n</i> is negative, then there will be no scaledown, but emulation of certain graphic controllers will be scaled up by <i>-n</i> times instead. E.g. Using <i>-2</i> with VGA text mode emulation will result in 80&#215;25 character cells rendered in a 1280&#215;800 window, instead of the normal resolution of 640&#215;400.</p>
-<dt><code>-Z </code><i>n</i></p>
-<dd> Set the number of graphics cards, for emulating a dual-head or tripple-head environment. (Only for DECstation emulation so far.)</p>
-<dt><code>-z </code><i>disp</i></p>
-<dd> Add <i>disp</i> as an X11 display to use for framebuffers.</dl>
+<dt><code>-T</code></dt>
+<dd> Halt if the emulated program attempts to access non-existing memory.</dd>
+<dt><code>-t</code></dt>
+<dd> Show a trace tree of all function calls being made.</dd>
+<dt><code>-U</code></dt>
+<dd> Enable slow_serial_interrupts_hack_for_linux.</dd>
+<dt><code>-X</code></dt>
+<dd> Use X11. This option enables graphical framebuffers.</dd>
+<dt><code>-x</code></dt>
+<dd> Open up new xterms for emulated serial ports. The default behaviour is to open up xterms when using configuration files, or if X11 is enabled. When starting up a simple emulation session with settings directly on the command line, and neither &#8211;<code>X</code> nor &#8211;<code>x</code> is used, then all output is confined to the terminal that started in.</dd>
+<dt><code>-Y </code><i>n</i></dt>
+<dd> Scale down framebuffer windows by <i>n</i> x <i>n</i> times. This option is useful when emulating a very large framebuffer, and the actual display is of lower resolution. If <i>n</i> is negative, then there will be no scaledown, but emulation of certain graphic controllers will be scaled up by <i>-n</i> times instead. E.g. Using <i>-2</i> with VGA text mode emulation will result in 80&#215;25 character cells rendered in a 1280&#215;800 window, instead of the normal resolution of 640&#215;400.</dd>
+<dt><code>-Z </code><i>n</i></dt>
+<dd> Set the number of graphics cards, for emulating a dual-head or tripple-head environment. (Only for DECstation emulation so far.)</dd>
+<dt><code>-z </code><i>disp</i></dt>
+<dd> Add <i>disp</i> as an X11 display to use for framebuffers.</dd></dl>
 <p> Userland options:</p>
 <dl>
-<dt><code>-u </code><i>emul-mode</i></p>
-<dd> Userland-only (syscall) emulation. (Use &#8211;<code>H</code> to get a list of available emulation modes.) Some (but not all) of the options listed under Other options above can also be used with userland emulation. </p>
+<dt><code>-u </code><i>emul-mode</i></dt>
+<dd> Userland-only (syscall) emulation. (Use &#8211;<code>H</code> to get a list of available emulation modes.) Some (but not all) of the options listed under Other options above can also be used with userland emulation. </dd>
 <p> Note: Userland (syscall) emulation does not really work yet.</dl>
 <p> General options:</p>
 <dl>
-<dt><code>-c </code><i>cmd</i></p>
-<dd> Add <i>cmd</i> as a command to run before starting the simulation. A similar effect can be achieved by using the &#8211;<code>V</code> option, and entering the commands manually.</p>
-<dt><code>-D</code></p>
-<dd> Causes the emulator to skip a call to srandom(). This leads to somewhat more deterministic behaviour than running without this option. However, if the emulated machine has clocks or timer interrupt sources, or if user interaction is taking place (e.g. keyboard input at irregular intervals), then this option is meaningless.</p>
-<dt><code>-H</code></p>
-<dd> Display a list of available CPU types, machine types, and userland emulation modes. (Most of these don&#8217;t work. Please read the documentation included in the distribution for details on which modes that actually work. Userland emulation is not included in stable release builds, since it doesn&#8217;t work yet.)</p>
-<dt><code>-h</code></p>
-<dd> Display a list of all available command line options.</p>
-<dt><code>-k </code><i>n</i></p>
-<dd> Set the size of the dyntrans cache (per emulated CPU) to <i>n</i> MB. The default size is 48 MB.</p>
-<dt><code>-K</code></p>
-<dd> Force the single-step debugger to be entered at the end of a simulation.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode; this suppresses startup messages.</p>
-<dt><code>-V</code></p>
-<dd> Start up in the single-step debugger, paused.</p>
-<dt><code>-v</code></p>
-<dd> Increase verbosity (show more debug messages). This option can be used multiple times.</dl>
+<dt><code>-c </code><i>cmd</i></dt>
+<dd> Add <i>cmd</i> as a command to run before starting the simulation. A similar effect can be achieved by using the &#8211;<code>V</code> option, and entering the commands manually.</dd>
+<dt><code>-D</code></dt>
+<dd> Causes the emulator to skip a call to srandom(). This leads to somewhat more deterministic behaviour than running without this option. However, if the emulated machine has clocks or timer interrupt sources, or if user interaction is taking place (e.g. keyboard input at irregular intervals), then this option is meaningless.</dd>
+<dt><code>-H</code></dt>
+<dd> Display a list of available CPU types, machine types, and userland emulation modes. (Most of these don&#8217;t work. Please read the documentation included in the distribution for details on which modes that actually work. Userland emulation is not included in stable release builds, since it doesn&#8217;t work yet.)</dd>
+<dt><code>-h</code></dt>
+<dd> Display a list of all available command line options.</dd>
+<dt><code>-k </code><i>n</i></dt>
+<dd> Set the size of the dyntrans cache (per emulated CPU) to <i>n</i> MB. The default size is 48 MB.</dd>
+<dt><code>-K</code></dt>
+<dd> Force the single-step debugger to be entered at the end of a simulation.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode; this suppresses startup messages.</dd>
+<dt><code>-V</code></dt>
+<dd> Start up in the single-step debugger, paused.</dd>
+<dt><code>-v</code></dt>
+<dd> Increase verbosity (show more debug messages). This option can be used multiple times.</dd></dl>
 <p> Configuration file startup:</p>
 <dl>
-<dt><code>@ </code><i>configfile</i></p>
-<dd> Start an emulation based on the contents of <i>configfile.</i></dl>
+<dt><code>@ </code><i>configfile</i></dt>
+<dd> Start an emulation based on the contents of <i>configfile.</i></dd></dl>
 <p> For more information, please read the documentation in the doc/ subdirectory of the distribution.</p>
 <h2>EXAMPLES</h2>
 <p> The following command will start NetBSD/pmax on an emulated DECstation 5000/200 (3MAX): </p>

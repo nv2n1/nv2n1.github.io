@@ -25,23 +25,23 @@ description: "Referrals –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>referral</i> The referral to destroy.</dl>
+</dt><dd> <i>referral</i> The referral to destroy.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The referral was successfully destroyed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The referral parameter was GLOBUS_NULL. It could not be destroyed.</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> The referral was successfully destroyed.<br />
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The referral parameter was GLOBUS_NULL. It could not be destroyed.</dd></dl>
 <h3>globus_size_t globus_gass_transfer_referral_get_count (globus_gass_transfer_referral_t *referral)</h3>
 <p> Get the number of URLs in this referral. </p>
 <p> This function examines the referral to determine if the number of URLs which are contained in it. Each of these URLs should either point to another referral, or to a URL containing the equivalent file as the original URL request which caused this referral. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>referral</i> The referral structure to query.</dl>
+</dt><dd> <i>referral</i> The referral structure to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns the number of URL entries in the referral, or 0, if there are none.</dl>
+</dt><dd> This function returns the number of URL entries in the referral, or 0, if there are none.</dd></dl>
 <h3>char* globus_gass_transfer_referral_get_url (globus_gass_transfer_referral_t *referral, globus_size_tindex)</h3>
 <p> Get a URL string from a referral. </p>
 <p> This function examines the referral to retrieve a URL string from it. A valid referal will contain one or more strings. They are indexed from 0 to the value returned by <code>globus_gass_transfer_referral_get_count()</code> &#8211; 1. </p>
@@ -49,12 +49,12 @@ description: "Referrals –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>referral</i> The referral structure to query.<br />
- <i>index</i> The URL to extract from the referral.</dl>
+</dt><dd> <i>referral</i> The referral structure to query.<br />
+ <i>index</i> The URL to extract from the referral.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns a string pointer containing the URL, or NULL if the index or referral were invalid.</dl>
+</dt><dd> This function returns a string pointer containing the URL, or NULL if the index or referral were invalid.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>

@@ -11,7 +11,6 @@ std::new_handler - std::new_handler
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;new&gt;
-
     typedef void (*new_handler)();</code></pre> 
 std::new_handler is the function pointer type (pointer to function that takes no arguments and returns void), which is used by the functions std::set_new_handler and std::get_new_handler 
 

@@ -89,110 +89,110 @@ description: "QwtPlotCurve –"
 <p> <code>Usage</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>a) Assign curve properties </code></p>
-<dd>When a curve is created, it is configured to draw black solid lines with in <code>QwtPlotCurve::Lines</code> style and no symbols. You can change this by calling <code>setPen()</code>, <code>setStyle()</code> and <code>setSymbol()</code>.</p>
-<dt><code>b) Connect/Assign data. </code></p>
-<dd><code>QwtPlotCurve</code> gets its points using a <code>QwtSeriesData</code> object offering a bridge to the real storage of the points ( like QAbstractItemModel ). There are several convenience classes derived from <code>QwtSeriesData</code>, that also store the points inside ( like QStandardItemModel ). <code>QwtPlotCurve</code> also offers a couple of variations of <code>setSamples()</code>, that build <code>QwtSeriesData</code> objects from arrays internally.</p>
-<dt><code>c) Attach the curve to a plot </code></p>
-<dd>See <code>QwtPlotItem::attach()</code></dl>
+</dd><dl COMPACT>
+<dt><code>a) Assign curve properties </code></dt>
+<dd>When a curve is created, it is configured to draw black solid lines with in <code>QwtPlotCurve::Lines</code> style and no symbols. You can change this by calling <code>setPen()</code>, <code>setStyle()</code> and <code>setSymbol()</code>.</dd>
+<dt><code>b) Connect/Assign data. </code></dt>
+<dd><code>QwtPlotCurve</code> gets its points using a <code>QwtSeriesData</code> object offering a bridge to the real storage of the points ( like QAbstractItemModel ). There are several convenience classes derived from <code>QwtSeriesData</code>, that also store the points inside ( like QStandardItemModel ). <code>QwtPlotCurve</code> also offers a couple of variations of <code>setSamples()</code>, that build <code>QwtSeriesData</code> objects from arrays internally.</dd>
+<dt><code>c) Attach the curve to a plot </code></dt>
+<dd>See <code>QwtPlotItem::attach()</code></dd></dl>
 </dl>
 <p> <code>Example:</code></p>
 <dl COMPACT>
-<dd>see examples/bode</dl>
+<dd>see examples/bode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPointSeriesData</code>, <code>QwtSymbol</code>, <code>QwtScaleMap</code></dl>
+<dd><code>QwtPointSeriesData</code>, <code>QwtSymbol</code>, <code>QwtScaleMap</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotCurve::CurveAttribute</code></h3>
 <p>Attribute for drawing the curve </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCurveAttribute()</code>, <code>testCurveAttribute()</code>, <code>curveFitter()</code></dl>
+<dd><code>setCurveAttribute()</code>, <code>testCurveAttribute()</code>, <code>curveFitter()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Inverted </i></p>
-<dd>For <code>QwtPlotCurve::Steps</code> only. Draws a step function from the right to the left.</p>
-<dt><i>Fitted </i></p>
-<dd>Only in combination with <code>QwtPlotCurve::Lines</code> A <code>QwtCurveFitter</code> tries to interpolate/smooth the curve, before it is painted.</dl>
+<dt><i>Inverted </i></dt>
+<dd>For <code>QwtPlotCurve::Steps</code> only. Draws a step function from the right to the left.</dd>
+<dt><i>Fitted </i></dt>
+<dd>Only in combination with <code>QwtPlotCurve::Lines</code> A <code>QwtCurveFitter</code> tries to interpolate/smooth the curve, before it is painted.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Curve fitting requires temporary memory for calculating coefficients and additional points. If painting in <code>QwtPlotCurve::Fitted</code> mode is slow it might be better to fit the points, before they are passed to <code>QwtPlotCurve</code>.</dl>
+<dd>Curve fitting requires temporary memory for calculating coefficients and additional points. If painting in <code>QwtPlotCurve::Fitted</code> mode is slow it might be better to fit the points, before they are passed to <code>QwtPlotCurve</code>.</dd></dl>
 <h3>enum <code>QwtPlotCurve::CurveStyle</code></h3>
 <p>Curve styles. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code>, <code>style()</code></dl>
+<dd><code>setStyle()</code>, <code>style()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoCurve </i></p>
-<dd>Don&#8217;t draw a curve. Note: This doesn&#8217;t affect the symbols.</p>
-<dt><i>Lines </i></p>
-<dd>Connect the points with straight lines. The lines might be interpolated depending on the &#8216;Fitted&#8217; attribute. Curve fitting can be configured using <code>setCurveFitter()</code>.</p>
-<dt><i>Sticks </i></p>
-<dd>Draw vertical or horizontal sticks ( depending on the <code>orientation()</code> ) from a baseline which is defined by <code>setBaseline()</code>.</p>
-<dt><i>Steps </i></p>
-<dd>Connect the points with a step function. The step function is drawn from the left to the right or vice versa, depending on the <code>QwtPlotCurve::Inverted</code> attribute.</p>
-<dt><i>Dots </i></p>
-<dd>Draw dots at the locations of the data points. Note: This is different from a dotted line (see <code>setPen()</code>), and faster as a curve in QwtPlotCurve::NoStyle style and a symbol painting a point.</p>
-<dt><i>UserCurve </i></p>
-<dd>Styles &gt;= <code>QwtPlotCurve::UserCurve</code> are reserved for derived classes of <code>QwtPlotCurve</code> that overload <code>drawCurve()</code> with additional application specific curve types.</dl>
+<dt><i>NoCurve </i></dt>
+<dd>Don&#8217;t draw a curve. Note: This doesn&#8217;t affect the symbols.</dd>
+<dt><i>Lines </i></dt>
+<dd>Connect the points with straight lines. The lines might be interpolated depending on the &#8216;Fitted&#8217; attribute. Curve fitting can be configured using <code>setCurveFitter()</code>.</dd>
+<dt><i>Sticks </i></dt>
+<dd>Draw vertical or horizontal sticks ( depending on the <code>orientation()</code> ) from a baseline which is defined by <code>setBaseline()</code>.</dd>
+<dt><i>Steps </i></dt>
+<dd>Connect the points with a step function. The step function is drawn from the left to the right or vice versa, depending on the <code>QwtPlotCurve::Inverted</code> attribute.</dd>
+<dt><i>Dots </i></dt>
+<dd>Draw dots at the locations of the data points. Note: This is different from a dotted line (see <code>setPen()</code>), and faster as a curve in QwtPlotCurve::NoStyle style and a symbol painting a point.</dd>
+<dt><i>UserCurve </i></dt>
+<dd>Styles &gt;= <code>QwtPlotCurve::UserCurve</code> are reserved for derived classes of <code>QwtPlotCurve</code> that overload <code>drawCurve()</code> with additional application specific curve types.</dd></dl>
 <h3>enum <code>QwtPlotCurve::LegendAttribute</code></h3>
 <p>Attributes how to represent the curve on the legend </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendAttribute()</code>, <code>testLegendAttribute()</code>, <code>QwtPlotItem::legendData()</code>, <code>legendIcon()</code></dl>
+<dd><code>setLegendAttribute()</code>, <code>testLegendAttribute()</code>, <code>QwtPlotItem::legendData()</code>, <code>legendIcon()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>LegendNoAttribute </i></p>
-<dd><code>QwtPlotCurve</code> tries to find a color representing the curve and paints a rectangle with it.</p>
-<dt><i>LegendShowLine </i></p>
-<dd>If the <code>style()</code> is not <code>QwtPlotCurve::NoCurve</code> a line is painted with the curve <code>pen()</code>.</p>
-<dt><i>LegendShowSymbol </i></p>
-<dd>If the curve has a valid symbol it is painted.</p>
-<dt><i>LegendShowBrush </i></p>
-<dd>If the curve has a brush a rectangle filled with the curve <code>brush()</code> is painted.</dl>
+<dt><i>LegendNoAttribute </i></dt>
+<dd><code>QwtPlotCurve</code> tries to find a color representing the curve and paints a rectangle with it.</dd>
+<dt><i>LegendShowLine </i></dt>
+<dd>If the <code>style()</code> is not <code>QwtPlotCurve::NoCurve</code> a line is painted with the curve <code>pen()</code>.</dd>
+<dt><i>LegendShowSymbol </i></dt>
+<dd>If the curve has a valid symbol it is painted.</dd>
+<dt><i>LegendShowBrush </i></dt>
+<dd>If the curve has a brush a rectangle filled with the curve <code>brush()</code> is painted.</dd></dl>
 <h3>enum <code>QwtPlotCurve::PaintAttribute</code></h3>
 <p>Attributes to modify the drawing algorithm. The default setting enables ClipPolygons | FilterPoints </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>ClipPolygons </i></p>
-<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance</p>
-<dt><i>FilterPoints </i></p>
-<dd>Tries to reduce the data that has to be painted, by sorting out duplicates, or paintings outside the visible area. Might have a notable impact on curves with many close points. Only a couple of very basic filtering algorithms are implemented.</p>
-<dt><i>MinimizeMemory </i></p>
-<dd>Minimize memory usage that is temporarily needed for the translated points, before they get painted. This might slow down the performance of painting</p>
-<dt><i>ImageBuffer </i></p>
-<dd>Render the points to a temporary image and paint the image. This is a very special optimization for Dots style, when having a huge amount of points. With a reasonable number of points QPainter::drawPoints() will be faster.</dl>
+<dt><i>ClipPolygons </i></dt>
+<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance</dd>
+<dt><i>FilterPoints </i></dt>
+<dd>Tries to reduce the data that has to be painted, by sorting out duplicates, or paintings outside the visible area. Might have a notable impact on curves with many close points. Only a couple of very basic filtering algorithms are implemented.</dd>
+<dt><i>MinimizeMemory </i></dt>
+<dd>Minimize memory usage that is temporarily needed for the translated points, before they get painted. This might slow down the performance of painting</dd>
+<dt><i>ImageBuffer </i></dt>
+<dd>Render the points to a temporary image and paint the image. This is a very special optimization for Dots style, when having a huge amount of points. With a reasonable number of points QPainter::drawPoints() will be faster.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotCurve::QwtPlotCurve (const QString &amp;title = QString::null) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h3>QwtPlotCurve::QwtPlotCurve (const <code>QwtText</code> &amp;title) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtPlotCurve::baseline () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value of the baseline</dl>
+<dd>Value of the baseline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBaseline()</code></dl>
+<dd><code>setBaseline()</code></dd></dl>
 <h3>const QBrush &amp; QwtPlotCurve::brush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush used to fill the area between lines and the baseline</dl>
+<dd>Brush used to fill the area between lines and the baseline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code>, <code>setBaseline()</code>, <code>baseline()</code></dl>
+<dd><code>setBrush()</code>, <code>setBaseline()</code>, <code>baseline()</code></dd></dl>
 <h3>void QwtPlotCurve::closePolyline (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, QPolygonF &amp;polygon) const [protected]</h3>
 <p>Complete a polygon to be a closed polygon including the area between the original polygon and the baseline. </p>
 <p> <code>Parameters:</code></p>
@@ -200,27 +200,27 @@ description: "QwtPlotCurve –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> X map<br />
  <i>yMap</i> Y map<br />
- <i>polygon</i> Polygon to be completed</dl>
+ <i>polygon</i> Polygon to be completed</dd></dl>
 <h3>int QwtPlotCurve::closestPoint (const QPoint &amp;pos, double *dist = NULL) const</h3>
 <p>Find the closest curve point for a specific position </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>pos</i> Position, where to look for the closest curve point<br />
- <i>dist</i> If dist != NULL, <code>closestPoint()</code> returns the distance between the position and the closest curve point</dl>
+ <i>dist</i> If dist != NULL, <code>closestPoint()</code> returns the distance between the position and the closest curve point</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Index of the closest curve point, or -1 if none can be found ( f.e when the curve has no points )</dl>
+<dd>Index of the closest curve point, or -1 if none can be found ( f.e when the curve has no points )</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd><code>closestPoint()</code> implements a dumb algorithm, that iterates over all points</dl>
+<dd><code>closestPoint()</code> implements a dumb algorithm, that iterates over all points</dd></dl>
 <h3><code>QwtCurveFitter</code> * QwtPlotCurve::curveFitter () const</h3>
 <p>Get the curve fitter. If curve fitting is disabled NULL is returned. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Curve fitter</dl>
+<dd>Curve fitter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCurveFitter()</code>, <code>Fitted</code></dl>
+<dd><code>setCurveFitter()</code>, <code>Fitted</code></dd></dl>
 <h3>void QwtPlotCurve::drawCurve (QPainter *painter, intstyle, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw the line part (without symbols) of a curve interval. </p>
 <p> <code>Parameters:</code></p>
@@ -231,10 +231,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> index of the first point to be painted<br />
- <i>to</i> index of the last point to be painted</dl>
+ <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>draw()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSteps()</code>, <code>drawSticks()</code></dl>
+<dd><code>draw()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSteps()</code>, <code>drawSticks()</code></dd></dl>
 <h3>void QwtPlotCurve::drawDots (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw dots </p>
 <p> <code>Parameters:</code></p>
@@ -244,10 +244,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> index of the first point to be painted<br />
- <i>to</i> index of the last point to be painted</dl>
+ <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>draw()</code>, <code>drawCurve()</code>, <code>drawSticks()</code>, <code>drawLines()</code>, <code>drawSteps()</code></dl>
+<dd><code>draw()</code>, <code>drawCurve()</code>, <code>drawSticks()</code>, <code>drawLines()</code>, <code>drawSteps()</code></dd></dl>
 <h3>void QwtPlotCurve::drawLines (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw lines. If the CurveAttribute Fitted is enabled a <code>QwtCurveFitter</code> tries to interpolate/smooth the curve, before it is painted. </p>
 <p> <code>Parameters:</code></p>
@@ -257,10 +257,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> index of the first point to be painted<br />
- <i>to</i> index of the last point to be painted</dl>
+ <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCurveAttribute()</code>, <code>setCurveFitter()</code>, <code>draw()</code>, <code>drawLines()</code>, <code>drawDots()</code>, <code>drawSteps()</code>, <code>drawSticks()</code></dl>
+<dd><code>setCurveAttribute()</code>, <code>setCurveFitter()</code>, <code>draw()</code>, <code>drawLines()</code>, <code>drawDots()</code>, <code>drawSteps()</code>, <code>drawSticks()</code></dd></dl>
 <h3>void QwtPlotCurve::drawSeries (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [virtual]</h3>
 <p>Draw an interval of the curve </p>
 <p> <code>Parameters:</code></p>
@@ -270,10 +270,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first point to be painted<br />
- <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dl>
+ <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawCurve()</code>, <code>drawSymbols()</code>,</dl>
+<dd><code>drawCurve()</code>, <code>drawSymbols()</code>,</dd></dl>
 <p> Implements <code>QwtPlotSeriesItem</code>.</p>
 <h3>void QwtPlotCurve::drawSteps (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw step function </p>
@@ -285,10 +285,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> index of the first point to be painted<br />
- <i>to</i> index of the last point to be painted</dl>
+ <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CurveAttribute</code>, <code>setCurveAttribute()</code>, <code>draw()</code>, <code>drawCurve()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSticks()</code></dl>
+<dd><code>CurveAttribute</code>, <code>setCurveAttribute()</code>, <code>draw()</code>, <code>drawCurve()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSticks()</code></dd></dl>
 <h3>void QwtPlotCurve::drawSticks (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw sticks </p>
 <p> <code>Parameters:</code></p>
@@ -298,10 +298,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> index of the first point to be painted<br />
- <i>to</i> index of the last point to be painted</dl>
+ <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>draw()</code>, <code>drawCurve()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSteps()</code></dl>
+<dd><code>draw()</code>, <code>drawCurve()</code>, <code>drawDots()</code>, <code>drawLines()</code>, <code>drawSteps()</code></dd></dl>
 <h3>void QwtPlotCurve::drawSymbols (QPainter *painter, const <code>QwtSymbol</code> &amp;symbol, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw symbols </p>
 <p> <code>Parameters:</code></p>
@@ -312,10 +312,10 @@ description: "QwtPlotCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first point to be painted<br />
- <i>to</i> Index of the last point to be painted</dl>
+ <i>to</i> Index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code>, <code>drawSeries()</code>, <code>drawCurve()</code></dl>
+<dd><code>setSymbol()</code>, <code>drawSeries()</code>, <code>drawCurve()</code></dd></dl>
 <h3>void QwtPlotCurve::fillCurve (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, QPolygonF &amp;polygon) const [protected], [virtual]</h3>
 <p>Fill the area between the curve and the baseline with the curve brush </p>
 <p> <code>Parameters:</code></p>
@@ -324,33 +324,33 @@ description: "QwtPlotCurve –"
  <i>xMap</i> x map<br />
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>polygon</i> Polygon &#8211; will be modified !</dl>
+ <i>polygon</i> Polygon &#8211; will be modified !</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code>, <code>setBaseline()</code>, <code>setStyle()</code></dl>
+<dd><code>setBrush()</code>, <code>setBaseline()</code>, <code>setStyle()</code></dd></dl>
 <h3><code>QwtGraphic</code> QwtPlotCurve::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Icon representing the curve on the legend</dl>
+<dd>Icon representing the curve on the legend</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br />
- <i>size</i> Icon size</dl>
+ <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::setLegendIconSize()</code>, <code>QwtPlotItem::legendData()</code></dl>
+<dd><code>QwtPlotItem::setLegendIconSize()</code>, <code>QwtPlotItem::legendData()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>const QPen &amp; QwtPlotCurve::pen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen used to draw the lines</dl>
+<dd>Pen used to draw the lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPen()</code>, <code>brush()</code></dl>
+<dd><code>setPen()</code>, <code>brush()</code></dd></dl>
 <h3>int QwtPlotCurve::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotCurve</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotCurve</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotCurve::setBaseline (doublevalue)</h3>
 <p>Set the value of the baseline. The baseline is needed for filling the curve with a brush or the Sticks drawing style. </p>
@@ -358,25 +358,25 @@ description: "QwtPlotCurve –"
 <p> The default value is 0.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value of the baseline</dl>
+<dd><i>value</i> Value of the baseline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>baseline()</code>, <code>setBrush()</code>, <code>setStyle()</code>, QwtPlotAbstractSeriesItem::orientation()</dl>
+<dd><code>baseline()</code>, <code>setBrush()</code>, <code>setStyle()</code>, QwtPlotAbstractSeriesItem::orientation()</dd></dl>
 <h3>void QwtPlotCurve::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. In case of brush.style() != QBrush::NoBrush and <code>style()</code> != <code>QwtPlotCurve::Sticks</code> the area between the curve and the baseline will be filled. </p>
 <p> In case !brush.color().isValid() the area will be filled by pen.color(). The fill algorithm simply connects the first and the last curve point to the baseline. So the curve data has to be sorted (ascending or descending). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> New brush</dl>
+<dd><i>brush</i> New brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brush()</code>, <code>setBaseline()</code>, <code>baseline()</code></dl>
+<dd><code>brush()</code>, <code>setBaseline()</code>, <code>baseline()</code></dd></dl>
 <h3>void QwtPlotCurve::setCurveAttribute (<code>CurveAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute for drawing the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Curve attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> /sa <code>testCurveAttribute()</code>, <code>setCurveFitter()</code></p>
 <h3>void QwtPlotCurve::setCurveFitter (<code>QwtCurveFitter</code> *curveFitter)</h3>
 <p>Assign a curve fitter </p>
@@ -385,25 +385,25 @@ description: "QwtPlotCurve –"
 <p> For situations, where curve fitting is used to improve the performance of painting huge series of points it might be better to execute the fitter on the curve points once and to cache the result in the <code>QwtSeriesData</code> object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i></i><code>curveFitter()</code> Curve fitter</dl>
+<dd><i></i><code>curveFitter()</code> Curve fitter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Fitted</code></dl>
+<dd><code>Fitted</code></dd></dl>
 <h3>void QwtPlotCurve::setLegendAttribute (<code>LegendAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the legend icon </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Attribute<br />
- <i>on</i> On/Off /sa <code>testLegendAttribute()</code>. <code>legendIcon()</code></dl>
+ <i>on</i> On/Off /sa <code>testLegendAttribute()</code>. <code>legendIcon()</code></dd></dl>
 <h3>void QwtPlotCurve::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testPaintAttribute()</code></dl>
+<dd><code>testPaintAttribute()</code></dd></dl>
 <h3>void QwtPlotCurve::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -411,115 +411,115 @@ description: "QwtPlotCurve –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotCurve::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> New pen</dl>
+<dd><i>pen</i> New pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotCurve::setRawSamples (const double *xData, const double *yData, intsize)</h3>
 <p>Initialize the data by pointing to memory blocks which are not managed by <code>QwtPlotCurve</code>. setRawSamples is provided for efficiency. It is important to keep the pointers during the lifetime of the underlying <code>QwtCPointerData</code> class. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xData</i> pointer to x data<br />
  <i>yData</i> pointer to y data<br />
- <i>size</i> size of x and y</dl>
+ <i>size</i> size of x and y</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtCPointerData</code></dl>
+<dd><code>QwtCPointerData</code></dd></dl>
 <h3>void QwtPlotCurve::setSamples (const double *xData, const double *yData, intsize)</h3>
 <p>Set data by copying x- and y-values from specified memory blocks. Contrary to <code>setRawSamples()</code>, this function makes a &#8216;deep copy&#8217; of the data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xData</i> pointer to x values<br />
  <i>yData</i> pointer to y values<br />
- <i>size</i> size of xData and yData</dl>
+ <i>size</i> size of xData and yData</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPointArrayData</code></dl>
+<dd><code>QwtPointArrayData</code></dd></dl>
 <h3>void QwtPlotCurve::setSamples (const QVector&lt; double &gt; &amp;xData, const QVector&lt; double &gt; &amp;yData)</h3>
 <p>Initialize data with x- and y-arrays (explicitly shared) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>xData</i> x data<br />
- <i>yData</i> y data</dl>
+ <i>yData</i> y data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPointArrayData</code></dl>
+<dd><code>QwtPointArrayData</code></dd></dl>
 <h3>void QwtPlotCurve::setSamples (const QVector&lt; QPointF &gt; &amp;samples)</h3>
 <p>Initialize data with an array of points. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Vector of points</dl>
+<dd><i>samples</i> Vector of points</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>QVector is implicitly shared </p>
+<dd>QVector is implicitly shared </dd>
 <p> QPolygonF is derived from QVector&lt;QPointF&gt;</dl>
 <h3>void QwtPlotCurve::setSamples (<code>QwtSeriesData</code>&lt; QPointF &gt; *data)</h3>
 <p>Assign a series of points </p>
 <p> <code>setSamples()</code> is just a wrapper for <code>setData()</code> without any additional value &#8211; beside that it is easier to find for the developer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Data</dl>
+<dd><i>data</i> Data</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dl>
+<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dd></dl>
 <h3>void QwtPlotCurve::setStyle (<code>CurveStyle</code>style)</h3>
 <p>Set the curve&#8217;s drawing style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Curve style</dl>
+<dd><i>style</i> Curve style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>style()</code></dl>
+<dd><code>style()</code></dd></dl>
 <h3>void QwtPlotCurve::setSymbol (<code>QwtSymbol</code> *symbol)</h3>
 <p>Assign a symbol. The curve will take the ownership of the symbol, hence the previously set symbol will be delete by setting a new one. If symbol is NULL no symbol will be drawn. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>symbol</i> Symbol</dl>
+<dd><i>symbol</i> Symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbol()</code></dl>
+<dd><code>symbol()</code></dd></dl>
 <h3><code>QwtPlotCurve::CurveStyle</code> QwtPlotCurve::style () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Style of the curve</dl>
+<dd>Style of the curve</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code></dl>
+<dd><code>setStyle()</code></dd></dl>
 <h3>const <code>QwtSymbol</code> * QwtPlotCurve::symbol () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current symbol or NULL, when no symbol has been assigned</dl>
+<dd>Current symbol or NULL, when no symbol has been assigned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code></dl>
+<dd><code>setSymbol()</code></dd></dl>
 <h3>bool QwtPlotCurve::testCurveAttribute (<code>CurveAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, if attribute is enabled</dl>
+<dd>true, if attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCurveAttribute()</code></dl>
+<dd><code>setCurveAttribute()</code></dd></dl>
 <h3>bool QwtPlotCurve::testLegendAttribute (<code>LegendAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendAttribute()</code></dl>
+<dd><code>setLegendAttribute()</code></dd></dl>
 <h3>bool QwtPlotCurve::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

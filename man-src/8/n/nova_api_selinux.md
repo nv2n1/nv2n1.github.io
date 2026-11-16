@@ -93,16 +93,16 @@ description: "nova_api_selinux – Security Enhanced Linux Policy for the nova_a
 <p> <code>nova_api_exec_t</code> </p>
 <p> &#8211; Set files with the nova_api_exec_t type, if you want to transition an executable to the nova_api_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nova-api, /usr//bin/nova-api-metadata </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nova-api, /usr//bin/nova-api-metadata </dd>
 </dl>
 <p> <code>nova_api_tmp_t</code> </p>
 <p> &#8211; Set files with the nova_api_tmp_t type, if you want to store nova api temporary files in the /tmp directories. </p>
 <p> <code>nova_api_unit_file_t</code> </p>
 <p> &#8211; Set files with the nova_api_unit_file_t type, if you want to treat the files as nova api unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/openstack-nova-api.*, /usr/lib/systemd/system/openstack-nova-metadata-api.service.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/openstack-nova-api.*, /usr/lib/systemd/system/openstack-nova-metadata-api.service.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

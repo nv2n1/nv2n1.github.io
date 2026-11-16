@@ -56,8 +56,8 @@ description: "kdump_selinux – Security Enhanced Linux Policy for the kdump pro
 <p> <code>kdump_exec_t</code> </p>
 <p> &#8211; Set files with the kdump_exec_t type, if you want to transition an executable to the kdump_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/kdump, /sbin/kexec, /usr/sbin/kdump, /usr/sbin/kexec </p>
+<dt>Paths:</dt>
+<dd>/sbin/kdump, /sbin/kexec, /usr/sbin/kdump, /usr/sbin/kexec </dd>
 </dl>
 <p> <code>kdump_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the kdump_initrc_exec_t type, if you want to transition an executable to the kdump_initrc_t domain. </p>

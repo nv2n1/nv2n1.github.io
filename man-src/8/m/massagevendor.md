@@ -21,20 +21,20 @@ ethercodes.dat - file containing the list of ethernet vendor codes</pre>
 <p><code><a href="/docs/linux/man/8-arpwatch/">arpwatch</a>(8),</code> <code><a href="/docs/linux/man/8-arpsnmp/">arpsnmp</a>(8)</code></p>
 <h2>Notes</h2>
 <p>Sources for ethernet vendor codes seen in the wild are </p>
-<pre><dl><dt><dd><i><a rel="nofollow" href="http://map-ne.com/Ethernet/vendor.html">http://map-ne.com/Ethernet/vendor.html</a></i>
+<pre><dl><dt></dt><dd><i><a rel="nofollow" href="http://map-ne.com/Ethernet/vendor.html">http://map-ne.com/Ethernet/vendor.html</a></i>
 <i><a href="ftp://ftp.cavebear.com/pub/Ethernet.txt">ftp://ftp.cavebear.com/pub/Ethernet.txt</a></i>
 <i><a rel="nofollow" href="http://www.cavebear.com/CaveBear/Ethernet/vendor.html">http://www.cavebear.com/CaveBear/Ethernet/vendor.html</a></i>
-</dl>
+</dd></dl>
 Useful for comparison or completeness are the
 ethernet vendor codes as assigned
 by the IEEE which can be found at
-<dl><dt><dd><i><a rel="nofollow" href="http://standards.ieee.org/regauth/oui/oui.txt">http://standards.ieee.org/regauth/oui/oui.txt</a></i>
-</dl></pre>
+<dl><dt></dt><dd><i><a rel="nofollow" href="http://standards.ieee.org/regauth/oui/oui.txt">http://standards.ieee.org/regauth/oui/oui.txt</a></i>
+</dd></dl></pre>
 <h2>Bugs</h2>
 <p>Please send bug reports to arpwatch [at] ee.lbl.gov.</p>
 <h2>Authors</h2>
 <p>Craig Leres of the Lawrence Berkeley National Laboratory Network Research Group, University of California, Berkeley, CA. </p>
 <p> The current version is available via anonymous ftp: </p>
 <dl>
-<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dl>
+<dd><i><a href="ftp://ftp.ee.lbl.gov/arpwatch.tar.gz">ftp://ftp.ee.lbl.gov/arpwatch.tar.gz</a></i></dd></dl>
 <p> This manual page was contributed by Hugo Graumann.</p>

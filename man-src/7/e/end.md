@@ -14,10 +14,10 @@ description: "END – commit the current transaction"
 <p><code>END</code> commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs. This command is a PostgreSQL extension that is equivalent to COMMIT [<code><a href="/docs/linux/man/7-commit/">commit</a></code>(7)].</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>WORK</code></p>
+<dt><code>WORK</code></dt>
 <dd>
-<dt><code>TRANSACTION</code></p>
-<dd>Optional key words. They have no effect.</dl>
+</dd><dt><code>TRANSACTION</code></dt>
+<dd>Optional key words. They have no effect.</dd></dl>
 <h2>Notes</h2>
 <p>Use ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)] to abort a transaction. </p>
 <p> Issuing <code>END</code> when not inside a transaction does no harm, but it will provoke a warning message.</p>

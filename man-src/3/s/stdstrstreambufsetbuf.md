@@ -23,10 +23,8 @@ n &#8211; the number of bytes in the user-provided buffer</p>
 <p>Implementation test to check if setbuf() is supported on a dynamic strstream (output obtained with Sun Studio)<br />
  // Run this code </p>
 <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     char a[100] = {};
     std::strstream str;

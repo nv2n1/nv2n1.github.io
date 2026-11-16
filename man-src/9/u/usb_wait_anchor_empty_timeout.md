@@ -15,11 +15,11 @@ usb_wait_anchor_empty_timeout - wait for an anchor to be unused
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>the anchor you want to become unused</dl>
+<dl><dd></dd><dd>the anchor you want to become unused</dd></dl>
  
 
  <i>timeout</i>
-<dl><dd>how long you are willing to wait in milliseconds</dl>
+<dl><dd>how long you are willing to wait in milliseconds</dd></dl>
 
 <h2>Description</h2>
 

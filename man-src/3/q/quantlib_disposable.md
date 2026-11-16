@@ -25,7 +25,7 @@ description: "QuantLib::Disposable – generic disposable object with move seman
  }</pre>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>In order to avoid copies in code such as shown above, the conversion from T to <code>Disposable</code>&lt;T&gt; is destructive, i.e., it does <code>not</code> preserve the state of the original object. Therefore, it is necessary for the developer to avoid code such as</dl>
+<dd>In order to avoid copies in code such as shown above, the conversion from T to <code>Disposable</code>&lt;T&gt; is destructive, i.e., it does <code>not</code> preserve the state of the original object. Therefore, it is necessary for the developer to avoid code such as</dd></dl>
 <pre> Disposable&lt;Foo&gt; bar(Foo&amp; f) {
  return f;
  }</pre>

@@ -39,7 +39,7 @@ description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability 
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dl>
+</dt><dd> The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CDS.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

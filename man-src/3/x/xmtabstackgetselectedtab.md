@@ -15,8 +15,8 @@ description: "XmTabStackGetSelectedTab — A TabStack function that returns the 
 <h2>Description</h2>
 <p><code>XmTabStackGetSelectedTab</code> returns the widget ID of the currently selected tab.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TabStack widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TabStack widget ID</dd></dl>
 <h2>Return</h2>
 <p>Returns the widget ID of the currently selected tab.</p>
 <h2>Related</h2>

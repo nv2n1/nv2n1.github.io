@@ -35,10 +35,10 @@ yet - another = baz
 <p> doxygen varargs filter stuff Network driver specific cntls </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID </i></p>
-<dd> See usage for: <code>globus_xio_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID </i></p>
-<dd> See usage for: <code>globus_xio_attr_cntl </code></dl>
+<dt><i>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID</code>, const char *task_id)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the task id associated with this XIO handle.</p>
@@ -47,7 +47,7 @@ yet - another = baz
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

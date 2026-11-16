@@ -14,11 +14,11 @@ description: "nand_wait_ready – [GENERIC] Wait for the ready pin after command
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <h2>Description</h2>
 <p>Wait for the ready pin after a command, and warn if a timeout occurs.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

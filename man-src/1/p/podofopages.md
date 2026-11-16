@@ -17,16 +17,17 @@ description: "podofopages – move and delete pages in a PDF document"
 <p> <code>&#8211;delete NUMBER</code></p>
 <dl>
 <dt>
-<dd>
-<p> Deletes the page NUMBER (number is 0-based). The page will not really be deleted from the PDF. It is only removed from the so called pagestree and therefore becomes hidden. The content of the page can still be retrieved from the document though.</dl>
+</dt><dd>
+<p> Deletes the page NUMBER (number is 0-based). The page will not really be deleted from the PDF. It is only removed from the so called pagestree and therefore becomes hidden. The content of the page can still be retrieved from the document though.</dd></dl>
 <p> <code>&#8211;move FROM TO</code></p>
 <dl>
 <dt>
-<dd>
-<p> Moves a page FROM TO in the document (FROM and TO are 0-based).</dl>
+</dt><dd>
+<p> Moves a page FROM TO in the document (FROM and TO are 0-based).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-podofobox/">podofobox</a></code>(1), <code>podofocolor</code>(1), <code><a href="/docs/linux/man/1-podofocountpages/">podofocountpages</a></code>(1), <code><a href="/docs/linux/man/1-podofocrop/">podofocrop</a></code>(1), <code><a href="/docs/linux/man/1-podofoencrypt/">podofoencrypt</a></code>(1), <code>podofogc</code>(1), <code><a href="/docs/linux/man/1-podofoimg2pdf/">podofoimg2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofoimgextract/">podofoimgextract</a></code>(1), <code><a href="/docs/linux/man/1-podofoimpose/">podofoimpose</a></code>(1), <code><a href="/docs/linux/man/1-podofoincrementalupdates/">podofoincrementalupdates</a></code>(1), <code><a href="/docs/linux/man/1-podofomerge/">podofomerge</a></code>(1), <code><a href="/docs/linux/man/1-podofopdfinfo/">podofopdfinfo</a></code>(1), <code><a href="/docs/linux/man/1-podofotxt2pdf/">podofotxt2pdf</a></code>(1), <code><a href="/docs/linux/man/1-podofotxtextract/">podofotxtextract</a></code>(1), <code><a href="/docs/linux/man/1-podofouncompress/">podofouncompress</a></code>(1), <code><a href="/docs/linux/man/1-podofoxmp/">podofoxmp</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <p> PoDoFo is written by Dominik Seichter &lt;domseichter [at] web.de&gt; and others. </p>
 <p> This manual page was written by Oleksandr Moskalenko &lt;malex [at] debian.org&gt; for the Debian Project (but may be used by others). </p>
 <h2>Index</h2>
+</p>

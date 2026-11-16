@@ -14,16 +14,16 @@ description: "ilookup5 – search for an inode in the inode cache"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>super block of file system to search</dl>
+</dd><dd>super block of file system to search</dd></dl>
 <p> <i>hashval</i></p>
 <dl>
-<dd>hash value (usually inode number) to search for</dl>
+<dd>hash value (usually inode number) to search for</dd></dl>
 <p> <i>test</i></p>
 <dl>
-<dd>callback used for comparisons between inodes</dl>
+<dd>callback used for comparisons between inodes</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>opaque data pointer to pass to <i>test</i></dl>
+<dd>opaque data pointer to pass to <i>test</i></dd></dl>
 <h2>Description</h2>
 <p>Search for the inode specified by <i>hashval</i> and <i>data</i> in the inode cache, and if the inode is in the cache, return the inode with an incremented reference count. Waits on I_NEW before returning the inode. returned with an incremented reference count. </p>
 <p> This is a generalized version of <code>ilookup</code> for file systems where the inode number is not sufficient for unique identification of an inode.</p>

@@ -14,16 +14,16 @@ description: "gnutls_x509_crt_set_issuer_dn_by_oid – API function"
 <p> <code>int gnutls_x509_crt_set_issuer_dn_by_oid(gnutls_x509_crt_t </code><i>crt</i><code>, const char * </code><i>oid</i><code>, unsigned int </code><i>raw_flag</i><code>, const void * </code><i>name</i><code>, unsigned int </code><i>sizeof_name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>const char * oid</p>
-<dd> holds an Object Identifier in a null terminated string</p>
-<dt>unsigned int raw_flag</p>
-<dd> must be 0, or 1 if the data are DER encoded</p>
-<dt>const void * name</p>
-<dd> a pointer to the name</p>
-<dt>unsigned int sizeof_name</p>
-<dd> holds the size of <i>name</i></dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>const char * oid</dt>
+<dd> holds an Object Identifier in a null terminated string</dd>
+<dt>unsigned int raw_flag</dt>
+<dd> must be 0, or 1 if the data are DER encoded</dd>
+<dt>const void * name</dt>
+<dd> a pointer to the name</dd>
+<dt>unsigned int sizeof_name</dt>
+<dd> holds the size of <i>name</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the part of the name of the Certificate issuer, specified by the given OID. The input string should be ASCII or UTF-8 encoded. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h With this function you can only set the known OIDs. You can test for known OIDs using <code>gnutls_x509_dn_oid_known()</code>. For OIDs that are not known (by gnutls) you should properly DER encode your data, and call this function with <i>raw_flag</i> set. </p>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crt_set_issuer_dn_by_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

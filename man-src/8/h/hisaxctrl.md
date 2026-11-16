@@ -15,17 +15,17 @@ description: "hisaxctrl – configure HiSax-Module"
  <code>NOTE:</code> for <i>devfs</i> systems, the program will automatically use /dev/isdn/isdnctrl if available. The use of <i>hisaxctrl</i> only makes sense if you are using the HiSax driver. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>DriverId</i></p>
-<dd>is used to identify the card when using more than one passive card. While loading the hisax module with <i>insmod</i>, or <i>modprobe</i> the DriverId is set by appending <code>id=</code><i>idstring1</i><code>%</code><i>idstring2</i><code>%&#8230;</code> to the commandline.</dl>
+<dt><i>DriverId</i></dt>
+<dd>is used to identify the card when using more than one passive card. While loading the hisax module with <i>insmod</i>, or <i>modprobe</i> the DriverId is set by appending <code>id=</code><i>idstring1</i><code>%</code><i>idstring2</i><code>%&#8230;</code> to the commandline.</dd></dl>
 <dl>
-<dt><i>command</i></p>
-<dd>is an integer selecting the setup category. The following values are defined for setting the logging-level of the HiSax-ISDN device driver:</dl>
+<dt><i>command</i></dt>
+<dd>is an integer selecting the setup category. The following values are defined for setting the logging-level of the HiSax-ISDN device driver:</dd></dl>
 <dl>
 <dd><code> 0</code> reports card status infos.<br />
  <code> 1</code> selects generic debugging.<br />
  <code>11</code> selects layer 1 development debugging.<br />
  <code>13</code> selects layer 3 development debugging.
-</dl>
+</dd></dl>
 <p> the following commands are used to enable special features during runtime of the HiSax-ISDN device driver. </p>
 <dl>
 <dd><code> 2</code> set B-channel ON delay to parameter (in ms)<br />
@@ -37,14 +37,14 @@ description: "hisaxctrl – configure HiSax-Module"
  <code>10</code> set B-channel usage limit to 1 or 2 channels<br />
  <code>12</code> set echo logging mode (only for some cards)<br />
  B-channel usage limit needs to be 1 if enabled
-</dl>
+</dd></dl>
 <dl>
-<dt><i>parameter</i></p>
-<dd>If the command is <code>9</code> then the parameter is the full pathname to the file containing the firmware. </p>
+<dt><i>parameter</i></dt>
+<dd>If the command is <code>9</code> then the parameter is the full pathname to the file containing the firmware. </dd>
 <p> For debug settings this is an integer representing a bitmask. Every bit in this mask switches a debug facility on or off. Depending on the selected category, the following values are defined:</dl>
 <dl>
 <dd>With<code> generic debugging </code>selected<br />
- (command <code>1</code>): </p>
+ (command <code>1</code>): </dd>
 <p> <code>0x001</code> Link-level &lt;&#8211;&gt; hardware-level communication<br />
  <code>0x002</code> Top state machine<br />
  <code>0x004</code> D-Channel Q.931 (call control messages)<br />
@@ -75,8 +75,8 @@ description: "hisaxctrl – configure HiSax-Module"
 </dl>
 <h2>Example</h2>
 <dl>
-<dt><code>hisaxctrl</code><i> HiSax 1 0x3ff</i></p>
-<dd>enables full generic debugging.</dl>
+<dt><code>hisaxctrl</code><i> HiSax 1 0x3ff</i></dt>
+<dd>enables full generic debugging.</dd></dl>
 <h2>Author</h2>
 <p>&#169; 2000 by Karsten Keil &lt;kkeil [at] suse.de&gt;</p>
 <h2>See Also</h2>

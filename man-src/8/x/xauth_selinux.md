@@ -114,14 +114,14 @@ description: "xauth_selinux – Security Enhanced Linux Policy for the xauth pro
 <p> <code>xauth_exec_t</code> </p>
 <p> &#8211; Set files with the xauth_exec_t type, if you want to transition an executable to the xauth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/xauth, /usr/X11R6/bin/xauth </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/xauth, /usr/X11R6/bin/xauth </dd>
 </dl>
 <p> <code>xauth_home_t</code> </p>
 <p> &#8211; Set files with the xauth_home_t type, if you want to store xauth files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.xauth.*, /root/.Xauth.*, /root/.serverauth.*, /root/.Xauthority.*, /var/lib/pqsql/.xauth.*, /var/lib/pqsql/.Xauthority.*, /var/lib/nxserver/home/.xauth.*, /var/lib/nxserver/home/.Xauthority.*, /home/[^/]+/.xauth.*, /home/[^/]+/.Xauth.*, /home/[^/]+/.serverauth.*, /home/[^/]+/.Xauthority.* </p>
+<dt>Paths:</dt>
+<dd>/root/.xauth.*, /root/.Xauth.*, /root/.serverauth.*, /root/.Xauthority.*, /var/lib/pqsql/.xauth.*, /var/lib/pqsql/.Xauthority.*, /var/lib/nxserver/home/.xauth.*, /var/lib/nxserver/home/.Xauthority.*, /home/[^/]+/.xauth.*, /home/[^/]+/.Xauth.*, /home/[^/]+/.serverauth.*, /home/[^/]+/.Xauthority.* </dd>
 </dl>
 <p> <code>xauth_tmp_t</code> </p>
 <p> &#8211; Set files with the xauth_tmp_t type, if you want to store xauth temporary files in the /tmp directories. </p>

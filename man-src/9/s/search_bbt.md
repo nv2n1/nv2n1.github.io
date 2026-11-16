@@ -14,18 +14,18 @@ description: "search_bbt – [GENERIC] scan the device for a specific bad block 
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>temporary buffer</dl>
+<dd>temporary buffer</dd></dl>
 <p> <i>td</i></p>
 <dl>
-<dd>descriptor for the bad block table</dl>
+<dd>descriptor for the bad block table</dd></dl>
 <h2>Description</h2>
 <p>Read the bad block table by searching for a given ident pattern. Search is preformed either from the beginning up or from the end of the device downwards. The search starts always at the start of a block. If the option NAND_BBT_PERCHIP is given, each chip is searched for a bbt, which contains the bad block information of this chip. This is necessary to provide support for certain DOC devices. </p>
 <p> The bbt ident pattern resides in the oob area of the first page in a block.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

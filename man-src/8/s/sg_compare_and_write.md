@@ -21,34 +21,34 @@ description: "sg_compare_and_write – send the SCSI COMPARE AND WRITE command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dpo</code></p>
-<dd>Set the DPO bit in the COMPARE AND WRITE CDB</p>
-<dt><code>-f</code>, <code>&#8211;fua</code></p>
-<dd>Set the FUA bit in the COMPARE AND WRITE CDB</p>
-<dt><code>-F</code>, <code>&#8211;fua_nv</code></p>
-<dd>Set the FUA_NV bit in the COMPARE AND WRITE CDB. This bit was removed in SBC-3 revision 35d and its position marked as &quot;reserved&quot;.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></p>
-<dd>read data (binary) from file named <i>IF</i>. This will either be the combined compare and write buffers (when the <i>&#8211;inw=WF</i> option is not given) or just the compare buffer (when the <i>&#8211;inw=WF</i> option is given). If <i>IF</i> is &#8216;-&#8216; then stdin (e.g. a pipe) is read.</p>
-<dt><code>-D</code>, <code>&#8211;inw</code>=<i>WF</i></p>
-<dd>read data (binary) from file named <i>WF</i>. This will the write buffer that will become the second half of the data-out buffer sent to the <i>DEVICE</i> associated with the COMPARE AND WRITE command. Note that when this option is given then the <i>&#8211;in=IF</i> is expected to hold the associated compare buffer.</p>
-<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></p>
-<dd>where <i>LBA</i> is the logical block address to start the COMPARE AND WRITE command. Assumed to be in decimal unless prefixed with &#8216;0x&#8217; or has a trailing &#8216;h&#8217;.</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>where <i>NUM</i> is the number of blocks, starting at <i>LBA</i>, to read and compare with the verify instance. And given a match, the <i>NUM</i> of blocks to write starting <i>LBA</i>. The default value for <i>NUM</i> is 1.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>suppress the sense buffer messages associated with a MISCOMPARE sense key that would otherwise be sent to stderr. Still set the exit status to 14 which is the sense key value indicating a MISCOMPARE.</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>TO</i></p>
-<dd>where <i>TO</i> is the command timeout value in seconds. The default value is 60 seconds. If <i>NUM</i> is large (or zero) a WRITE SAME command may require considerably more time than 60 seconds to complete.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the degree of verbosity (debug messages).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>output version string then exit.</p>
-<dt><code>-w</code>, <code>&#8211;wrprotect</code>=<i>WP</i></p>
-<dd>set the WRPROTECT field in the cdb to <i>WP</i>. The default value is 0 which implies no protection information is sent (along with the user data) by this utility.</p>
-<dt><code>-x</code>, <code>&#8211;xferlen</code>=<i>LEN</i></p>
-<dd>where <i>LEN</i> is the data out buffer length in byte. It defaults to (2 * <i>NUM</i> * 512) bytes. If the <i>DEVICE</i> block size is other than 512 bytes or <i>WP</i> is non-zero (implying additional protection information) then this default will be incorrect; the use must supply the correct value for <i>LEN</i></dl>
+<dt><code>-d</code>, <code>&#8211;dpo</code></dt>
+<dd>Set the DPO bit in the COMPARE AND WRITE CDB</dd>
+<dt><code>-f</code>, <code>&#8211;fua</code></dt>
+<dd>Set the FUA bit in the COMPARE AND WRITE CDB</dd>
+<dt><code>-F</code>, <code>&#8211;fua_nv</code></dt>
+<dd>Set the FUA_NV bit in the COMPARE AND WRITE CDB. This bit was removed in SBC-3 revision 35d and its position marked as &quot;reserved&quot;.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-i</code>, <code>&#8211;in</code>=<i>IF</i></dt>
+<dd>read data (binary) from file named <i>IF</i>. This will either be the combined compare and write buffers (when the <i>&#8211;inw=WF</i> option is not given) or just the compare buffer (when the <i>&#8211;inw=WF</i> option is given). If <i>IF</i> is &#8216;-&#8216; then stdin (e.g. a pipe) is read.</dd>
+<dt><code>-D</code>, <code>&#8211;inw</code>=<i>WF</i></dt>
+<dd>read data (binary) from file named <i>WF</i>. This will the write buffer that will become the second half of the data-out buffer sent to the <i>DEVICE</i> associated with the COMPARE AND WRITE command. Note that when this option is given then the <i>&#8211;in=IF</i> is expected to hold the associated compare buffer.</dd>
+<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA</i></dt>
+<dd>where <i>LBA</i> is the logical block address to start the COMPARE AND WRITE command. Assumed to be in decimal unless prefixed with &#8216;0x&#8217; or has a trailing &#8216;h&#8217;.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>where <i>NUM</i> is the number of blocks, starting at <i>LBA</i>, to read and compare with the verify instance. And given a match, the <i>NUM</i> of blocks to write starting <i>LBA</i>. The default value for <i>NUM</i> is 1.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>suppress the sense buffer messages associated with a MISCOMPARE sense key that would otherwise be sent to stderr. Still set the exit status to 14 which is the sense key value indicating a MISCOMPARE.</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>TO</i></dt>
+<dd>where <i>TO</i> is the command timeout value in seconds. The default value is 60 seconds. If <i>NUM</i> is large (or zero) a WRITE SAME command may require considerably more time than 60 seconds to complete.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the degree of verbosity (debug messages).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>output version string then exit.</dd>
+<dt><code>-w</code>, <code>&#8211;wrprotect</code>=<i>WP</i></dt>
+<dd>set the WRPROTECT field in the cdb to <i>WP</i>. The default value is 0 which implies no protection information is sent (along with the user data) by this utility.</dd>
+<dt><code>-x</code>, <code>&#8211;xferlen</code>=<i>LEN</i></dt>
+<dd>where <i>LEN</i> is the data out buffer length in byte. It defaults to (2 * <i>NUM</i> * 512) bytes. If the <i>DEVICE</i> block size is other than 512 bytes or <i>WP</i> is non-zero (implying additional protection information) then this default will be incorrect; the use must supply the correct value for <i>LEN</i></dd></dl>
 <h2>Notes</h2>
 <p>Various numeric arguments (e.g. <i>LBA</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Exit Status</h2>

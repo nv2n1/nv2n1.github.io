@@ -18,15 +18,15 @@ Tcl_Channel
 <code>Tcl_OpenTcpServer</code>(<i>interp, port, myaddr, proc, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter to use for error reporting. If non-NULL and an error occurs, an error message is left in the interpreter&#8217;s result.</p>
-<dd>int <i>port</i> (in) A port number to connect to as a client or to listen on as a server.</p>
-<dd>const char <i>*host</i> (in) A string specifying a host name or address for the remote end of the connection.</p>
-<dd>int <i>myport</i> (in) A port number for the client&#8217;s end of the socket. If 0, a port number is allocated at random.</p>
-<dd>const char <i>*myaddr</i> (in) A string specifying the host name or address for network interface to use for the local end of the connection. If NULL, a default interface is chosen.</p>
-<dd>int <i>async</i> (in) If nonzero, the client socket is connected asynchronously to the server.</p>
-<dd>ClientData <i>sock</i> (in) Platform-specific handle for client TCP socket.</p>
-<dd>Tcl_TcpAcceptProc <i>*proc</i> (in) Pointer to a procedure to invoke each time a new connection is accepted via the socket.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter to use for error reporting. If non-NULL and an error occurs, an error message is left in the interpreter&#8217;s result.</dd>
+<dd>int <i>port</i> (in) A port number to connect to as a client or to listen on as a server.</dd>
+<dd>const char <i>*host</i> (in) A string specifying a host name or address for the remote end of the connection.</dd>
+<dd>int <i>myport</i> (in) A port number for the client&#8217;s end of the socket. If 0, a port number is allocated at random.</dd>
+<dd>const char <i>*myaddr</i> (in) A string specifying the host name or address for network interface to use for the local end of the connection. If NULL, a default interface is chosen.</dd>
+<dd>int <i>async</i> (in) If nonzero, the client socket is connected asynchronously to the server.</dd>
+<dd>ClientData <i>sock</i> (in) Platform-specific handle for client TCP socket.</dd>
+<dd>Tcl_TcpAcceptProc <i>*proc</i> (in) Pointer to a procedure to invoke each time a new connection is accepted via the socket.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>These functions are convenience procedures for creating channels that communicate over TCP sockets. The operations on a channel are described in the manual entry for <code>Tcl_OpenFileChannel</code>. </p>
@@ -48,7 +48,7 @@ Tcl_Channel
  Tcl_Channel <i>channel</i>,
  char *<i>hostName</i>,
  int <i>port</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> argument will be the same as the <i>clientData</i> argument to <code>Tcl_OpenTcpServer</code>, <i>channel</i> will be the handle for the new channel, <i>hostName</i> points to a string containing the name of the client host making the connection, and <i>port</i> will contain the client&#8217;s port number. The new channel is opened for both input and output. If <i>proc</i> raises an error, the connection is closed automatically. <i>Proc</i> has no return value, but if it wishes to reject the connection it can close <i>channel</i>. </p>
 <p> <code>Tcl_OpenTcpServer</code> normally returns a pointer to a channel representing the server socket. If an error occurs, <code>Tcl_OpenTcpServer</code> returns NULL and records a POSIX error code that can be retrieved with <code>Tcl_GetErrno</code>. In addition, if the interpreter is non-NULL, an error message is left in the interpreter&#8217;s result. </p>
 <p> The channel returned by <code>Tcl_OpenTcpServer</code> cannot be used for either input or output. It is simply a handle for the socket used to accept connections. The caller can close the channel to shut down the server and disallow further connections from new clients. </p>

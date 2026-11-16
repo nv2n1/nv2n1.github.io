@@ -33,10 +33,10 @@ url: "/docs/linux/man/1-abrt-action-generate-backtrace/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=analyze analyzer=CCpp
         abrt-action-generate-backtrace
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -45,25 +45,25 @@ EVENT=analyze analyzer=CCpp
  -d DIR
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -i DIR1[:DIR2]
 <dl>
 <dt>
-<dd> Additional debuginfo directories</dl>
+</dt><dd> Additional debuginfo directories</dd></dl>
  
 
  -t NUM
 <dl>
 <dt>
-<dd> Kill gdb if it runs for more than NUM seconds</dl>
+</dt><dd> Kill gdb if it runs for more than NUM seconds</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -71,7 +71,7 @@ EVENT=analyze analyzer=CCpp
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

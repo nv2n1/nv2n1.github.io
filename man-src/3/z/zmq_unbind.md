@@ -20,13 +20,13 @@ description: "zmq_unbind – Stop accepting connections on a socket"
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
 <dl>
-<dd>The endpoint supplied is invalid.</dl>
+<dd>The endpoint supplied is invalid.</dd></dl>
 <p> <code>ETERM</code></p>
 <dl>
-<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dl>
+<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dd></dl>
 <p> <code>ENOTSOCK</code></p>
 <dl>
-<dd>The provided <i>socket</i> was invalid.</dl>
+<dd>The provided <i>socket</i> was invalid.</dd></dl>
 <h2>Examples</h2>
 <p><code>Unbind a subscriber socket from a TCP transport</code>. /* Create a ZMQ_SUB socket */<br />
 void *socket = zmq_socket(context, ZMQ_SUB);<br />

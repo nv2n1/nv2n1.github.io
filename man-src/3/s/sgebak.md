@@ -39,25 +39,19 @@ url: "/docs/linux/man/3-sgebak/"
  <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
  SGEBAK forms the right or left eigenvectors of a real general matrix
  by backward transformation on the computed eigenvectors of the
  balanced matrix output by SGEBAL.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>JOB</i> 
-
+</dt><dd> <i>JOB</i> 
  <pre><code>
 JOB is CHARACTER * 1 Specifies the type of backward transformation required : = 'N', do nothing, return immediately;
           = 'P', do backward transformation for permutation only;
@@ -66,105 +60,73 @@ JOB is CHARACTER * 1 Specifies the type of backward transformation required : = 
                  scaling.
           JOB must be the same as the argument JOB supplied to SGEBAL.
 </code></pre> 
-
- 
  <i>SIDE</i> 
-
  <pre>
           SIDE is CHARACTER*1
           = 'R':  V contains right eigenvectors;
           = 'L':  V contains left eigenvectors.
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
           The number of rows of the matrix V.  N &gt;= 0.
 </pre> 
-
- 
  <i>ILO</i> 
-
  <pre>
           ILO is INTEGER
 </pre> 
-
- 
  <i>IHI</i> 
-
  <pre><code>
 IHI is INTEGER
         The integers ILO and IHI determined by SGEBAL.1 &lt;= ILO &lt;= IHI &lt;= N,
     if N &gt; 0;
 ILO = 1 and IHI = 0, if N = 0.
 </code></pre> 
-
- 
  <i>SCALE</i> 
-
  <pre>
           SCALE is REAL array, dimension (N)
           Details of the permutation and scaling factors, as returned
           by SGEBAL.
 </pre> 
-
- 
  <i>M</i> 
-
  <pre>
           M is INTEGER
           The number of columns of the matrix V.  M &gt;= 0.
 </pre> 
-
- 
  <i>V</i> 
-
  <pre>
           V is REAL array, dimension (LDV,M)
           On entry, the matrix of right or left eigenvectors to be
           transformed, as returned by SHSEIN or STREVC.
           On exit, V is overwritten by the transformed eigenvectors.
 </pre> 
-
- 
  <i>LDV</i> 
-
  <pre>
           LDV is INTEGER
           The leading dimension of the array V. LDV &gt;= max(1,N).
 </pre> 
-
- 
  <i>INFO</i> 
-
  <pre>
           INFO is INTEGER
           = 0:  successful exit
           &lt; 0:  if INFO = -i, the i-th argument had an illegal value.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  

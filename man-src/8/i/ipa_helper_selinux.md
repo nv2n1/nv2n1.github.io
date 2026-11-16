@@ -60,8 +60,8 @@ description: "ipa_helper_selinux – Security Enhanced Linux Policy for the ipa_
 <p> <code>ipa_helper_exec_t</code> </p>
 <p> &#8211; Set files with the ipa_helper_exec_t type, if you want to transition an executable to the ipa_helper_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/ipa/com.redhat.idm.trust-fetch-domains, /usr/libexec/ipa/oddjob/org.freeipa.server.conncheck, /usr/libexec/ipa/oddjob/com.redhat.idm.trust-fetch-domains </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/ipa/com.redhat.idm.trust-fetch-domains, /usr/libexec/ipa/oddjob/org.freeipa.server.conncheck, /usr/libexec/ipa/oddjob/com.redhat.idm.trust-fetch-domains </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

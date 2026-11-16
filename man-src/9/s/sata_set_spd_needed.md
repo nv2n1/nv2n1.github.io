@@ -14,7 +14,7 @@ description: "sata_set_spd_needed – is SATA spd configuration needed"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>Link in question</dl>
+</dd><dd>Link in question</dd></dl>
 <h2>Description</h2>
 <p>Test whether the spd limit in SControl matches <i>link</i>-&gt;sata_spd_limit. This function is used to determine whether hardreset is necessary to apply SATA spd configuration. </p>
 <p> LOCKING: Inherited from caller.</p>
@@ -23,5 +23,5 @@ description: "sata_set_spd_needed – is SATA spd configuration needed"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

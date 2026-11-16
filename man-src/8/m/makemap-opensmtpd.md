@@ -16,23 +16,23 @@ description: "makemap – create database maps for smtpd"
 <p> The options are as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-d</code> <i>dbtype</i></p>
-<dd>Specify the format of the database. Available formats are <i>hash</i> and <i>btree</i>. The default value is <i>hash</i>.</p>
-<dt><code>-o</code> <i>dbfile</i></p>
-<dd>Write the generated database to <i>dbfile</i>.</p>
-<dt><code>-t</code> <i>type</i></p>
-<dd>Specify the format of the resulting map file. The default map format is suitable for storing simple, unstructured, key-to-value string associations. However, if the mapped value has special meaning, as in the case of the virtual domains file, a suitable <i>type</i> must be provided. The available output types are:</p>
+</dd><dl>
+<dt><code>-d</code> <i>dbtype</i></dt>
+<dd>Specify the format of the database. Available formats are <i>hash</i> and <i>btree</i>. The default value is <i>hash</i>.</dd>
+<dt><code>-o</code> <i>dbfile</i></dt>
+<dd>Write the generated database to <i>dbfile</i>.</dd>
+<dt><code>-t</code> <i>type</i></dt>
+<dd>Specify the format of the resulting map file. The default map format is suitable for storing simple, unstructured, key-to-value string associations. However, if the mapped value has special meaning, as in the case of the virtual domains file, a suitable <i>type</i> must be provided. The available output types are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>aliases</code></p>
-<dd>The mapped value is a comma-separated list of mail destinations. This format can be used for building user aliases and user mappings for virtual domain files.</p>
-<dt><code>set</code></p>
-<dd>There is no mapped value &#8211; a map of this type will only allow for the lookup of keys. This format can be used for building primary domain maps.</dl>
+</dd><dl>
+<dt><code>aliases</code></dt>
+<dd>The mapped value is a comma-separated list of mail destinations. This format can be used for building user aliases and user mappings for virtual domain files.</dd>
+<dt><code>set</code></dt>
+<dd>There is no mapped value &#8211; a map of this type will only allow for the lookup of keys. This format can be used for building primary domain maps.</dd></dl>
 </dl>
-<dt><code>-U</code></p>
-<dd>Instead of generating a database map from text input, dump the contents of a database map as text with the key and value separated with a tab.</dl>
+<dt><code>-U</code></dt>
+<dd>Instead of generating a database map from text input, dump the contents of a database map as text with the key and value separated with a tab.</dd></dl>
 </dl>
 <h2>Primary Domains</h2>
 <p>Primary domains can be kept in tables. To create a primary domain table, add each primary domain on a single line by itself. </p>
@@ -41,7 +41,7 @@ description: "makemap – create database maps for smtpd"
 <dd>
 <pre>table domains &quot;/etc/opensmtpd/domains&quot;
 accept for domain &lt;domains&gt; deliver to mbox
-</dl></pre>
+</dd></dl></pre>
 <h2>Virtual Domains</h2>
 <p>Virtual domains may also be kept in tables. To create a virtual domain table, add each virtual domain on a single line by itself. </p>
 <p> Virtual domains expect a mapping of virtual users to real users in order to determine if a recipient is accepted or not. The mapping format is an extension to <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), which allows the use of &#8220;user [at] domain.tld&#8221; to accept user only on the specified domain, &#8220;user&#8221; to accept the user for any of the virtual domains, &#8220;@domain.tld&#8221; to provide a catch-all for the specified domain and &#8220;@&#8221; to provide a global catch-all for all domains. <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) will perform the lookups in that specific order. </p>
@@ -53,15 +53,15 @@ accept for domain &lt;domains&gt; deliver to mbox
 table vusers &quot;/etc/opensmtpd/users&quot;
 accept for domain &lt;vdomains&gt; virtual &lt;vusers&gt; deliver to mbox
 accept for domain example.org virtual &lt;vusers&gt; deliver to mbox
-</dl></pre>
+</dd></dl></pre>
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>/etc/opensmtpd/aliases</code></p>
-<dd>List of user mail aliases.</p>
-<dt><code>/etc/opensmtpd/secrets</code></p>
-<dd>List of remote host credentials.</dl>
+</dd><dl>
+<dt><code>/etc/opensmtpd/aliases</code></dt>
+<dd>List of user mail aliases.</dd>
+<dt><code>/etc/opensmtpd/secrets</code></dt>
+<dd>List of remote host credentials.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>The <code>makemap</code> utility exits 0 on success, and &gt;0 if an error occurs. makemap</p>

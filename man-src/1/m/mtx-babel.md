@@ -15,12 +15,12 @@ description: "mtx-babel – Babel Input To UTF Conversion"
 <p> <code>Babel Input To UTF Conversion</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;language=string</code></p>
-<dd> conversion language (e.g. greek)</p>
-<dt><code>&#8211;structure=string</code></p>
-<dd> obey given structure (e.g. &#8216;document&#8217;, default: &#8216;context&#8217;)</p>
-<dt><code>&#8211;convert</code></p>
-<dd> convert babel codes into utf</dl>
+<dt><code>&#8211;language=string</code></dt>
+<dd> conversion language (e.g. greek)</dd>
+<dt><code>&#8211;structure=string</code></dt>
+<dd> obey given structure (e.g. &#8216;document&#8217;, default: &#8216;context&#8217;)</dd>
+<dt><code>&#8211;convert</code></dt>
+<dd> convert babel codes into utf</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

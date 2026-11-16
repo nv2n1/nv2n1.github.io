@@ -19,26 +19,26 @@ description: "rahosts – report network addresses in argus(8) data."
 <p> See the <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> man page for details on <i>ra-options</i> and <i>expression</i> syntax. </p>
 <h2>RAHOSTS SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>-M mode</code></p>
-<dd> Specify mode of operation. Supported address modes are <code>ip</code>, <code>ether</code> and <code>all</code> address types. The default is to output <i>IP</i> addresses. When IP Addresses are being processed, the network address can be specified with the additional <i>modes</i> <code>class</code>, <code>classA</code>, <code>classB</code> and <code>classC</code>. </p>
+<dt><code>-M mode</code></dt>
+<dd> Specify mode of operation. Supported address modes are <code>ip</code>, <code>ether</code> and <code>all</code> address types. The default is to output <i>IP</i> addresses. When IP Addresses are being processed, the network address can be specified with the additional <i>modes</i> <code>class</code>, <code>classA</code>, <code>classB</code> and <code>classC</code>. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> By default, <code>rahosts</code> will output the unique IP addresses seen in an argus data stream. Using the -M mode options you can output all unique class B network addresses that access the server narly.wave.com:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>rahosts -r argus.data -M classB host narly.wave.com</code>
 </pre>
-</dl>
+</dd></dl>
 <p> Print the <i>ethernet</i> addresses used to support the HTTP service.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>rahosts -r argus.data -M ether dst port http
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <pre>
 Carter Bullard (carter [at] qosient.com).

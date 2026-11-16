@@ -22,40 +22,27 @@ AddToFunc StartFunction &quot;I&quot; Module FvwmCommandS</pre>Then, in script f
  
 
  <pre>FvwmCommand 'popup Utilities'</pre><h2>Options</h2><dl><dt><i>-c</i>
-<dd>Informs FvwmCommand to read multiple commands from the standard input instead of the one command specified in the command line arguments. This disables <i>-m</i> or <i>-i</i>. 
+</dt><dd>Informs FvwmCommand to read multiple commands from the standard input instead of the one command specified in the command line arguments. This disables <i>-m</i> or <i>-i</i>. 
+ <pre>(echo &quot;Exec xload&quot;; echo &quot;Beep&quot;) | FvwmCommand -c</pre></dd><dt><i>-F &lt;level&gt;</i>
+</dt><dd>Specifies the level of fvwm window flags FvwmCommand outputs. 
+</dd><dl><dd></dd><dl><dt>0
+</dt><dd>No window flags will be printed.</dd></dl></dl><dl><dd></dd><dl><dt>2
+</dt><dd>Full window flags will be printed if information level, -i option, is 2 or 3. 
+</dd></dl></dl><dt><i>-f &lt;name&gt;</i>
+</dt><dd>Specifies an alternative FIFO set to communicate with a server. The default FIFO set is /var/tmp/FvwmCommand-${DISPLAY}C, in which FvwmCommand..C is used to send commands and FvwmCommand..M is to receive messages. If that path is unusable ${FVWM_USERDIR}/FvwmCommand-${DISPLAY} will be used instead. FvwmCommandS must have been invoked with the same &lt;name&gt; as its first argument prior to FvwmCommand invocation. Alternatively, option -S can be used. Refer option -S. This option -f is useful when a dedicated connection is necessary to run a background job while another connection is kept for interactive use. 
 
- 
+</dd><dt><i>-i &lt;level&gt;</i>
+</dt><dd>Specifies the level of information that FvwmCommand outputs. 
 
- <pre>(echo &quot;Exec xload&quot;; echo &quot;Beep&quot;) | FvwmCommand -c</pre><dt><i>-F &lt;level&gt;</i>
-<dd>Specifies the level of fvwm window flags FvwmCommand outputs. 
-
-<dl><dd><dl><dt>0
-<dd>No window flags will be printed.</dl></dl><dl><dd><dl><dt>2
-<dd>Full window flags will be printed if information level, -i option, is 2 or 3. 
-
-</dl></dl><dt><i>-f &lt;name&gt;</i>
-<dd>Specifies an alternative FIFO set to communicate with a server. The default FIFO set is /var/tmp/FvwmCommand-${DISPLAY}C, in which FvwmCommand..C is used to send commands and FvwmCommand..M is to receive messages. If that path is unusable ${FVWM_USERDIR}/FvwmCommand-${DISPLAY} will be used instead. FvwmCommandS must have been invoked with the same &lt;name&gt; as its first argument prior to FvwmCommand invocation. Alternatively, option -S can be used. Refer option -S. This option -f is useful when a dedicated connection is necessary to run a background job while another connection is kept for interactive use. 
-
-<dt><i>-i &lt;level&gt;</i>
-<dd>Specifies the level of information that FvwmCommand outputs. 
-
-<dl><dd><dl><dt>0
-<dd>Error messages only. 
-
+</dd><dl><dd></dd><dl><dt>0
+</dt><dd>Error messages only. 
  <pre>FvwmCommand -i0 FvwmBanner</pre>will show a banner without any output. On the other hand, 
-
  <pre>FvwmCommand -i 0 foobar</pre>will return, 
-
  <pre>[fvwm][executeModule]: &lt;&lt;ERROR&gt;&gt; No such module
 'foobar' in ModulePath '/usr/lib/X11/fvwm'</pre>Note that Fvwm doesn't return any error messages in cases like below since 'windowid' itself is a valid command. 
-
- 
-
- <pre>FvwmCommand -i 0 'windowid foo bar'</pre><dt>1
-<dd>Errors, replies and window configuration information. This is the default. 
-
+ <pre>FvwmCommand -i 0 'windowid foo bar'</pre></dd><dt>1
+</dt><dd>Errors, replies and window configuration information. This is the default. 
  <pre>FvwmCommand send_windowlist</pre>Information like below will show up. 
-
  <pre>0x02000014 window FvwmConsole
 0x02000014 icon FvwmConsole
 0x02000014 class XTerm
@@ -74,11 +61,9 @@ AddToFunc StartFunction &quot;I&quot; Module FvwmCommandS</pre>Then, in script f
 0x00c0002c class Emacs
 0x00c0002c resource emacs
 end windowlist</pre>The first column shows the window ID number, which can be used in 'windowid' command. The second column shows the information types. The last column shows the information contents. If no information is returned, add -w &lt;time&gt; or -r option. This might be needed in heavily loaded systems.
-<dt>2
-<dd>Above and static window information. 
-
+</dd><dt>2
+</dt><dd>Above and static window information. 
  <pre>FvwmCommand -i2 'FvwmPager 0 1'</pre>The below is its output. 
-
  <pre>0x03c00003 frame x 962, y 743, width 187, height 114
 0x03c00003 desktop 0
 0x03c00003 StartIconic no
@@ -124,14 +109,12 @@ end windowlist</pre>The first column shows the window ID number, which can be us
 0x03c00003 window Fvwm Pager
 0x03c00003 icon Fvwm Pager
 0x03c00003 class FvwmModule
-0x03c00003 resource FvwmPager</pre><dt>3
-<dd>All information available. 
-
+0x03c00003 resource FvwmPager</pre></dd><dt>3
+</dt><dd>All information available. 
  <pre>FvwmCommand -i3 'Killmodule Fvwm*'</pre>This will report which windows are closed. 
-
  <pre>0x03400003 destroy
-0x02400002 destroy</pre></dl></dl><dt><i>-m</i>
-<dd>Monitors fvwm window information transaction. FvwmCommand continuously outputs information that it receives without exiting. This option can be used in a background job often combined with -i3 option in order to control windows dynamically. 
+0x02400002 destroy</pre></dd></dl></dl><dt><i>-m</i>
+</dt><dd>Monitors fvwm window information transaction. FvwmCommand continuously outputs information that it receives without exiting. This option can be used in a background job often combined with -i3 option in order to control windows dynamically. 
 
  <pre>FvwmCommand -mi3 | grep 'iconify'</pre>It will report when windows are iconified or de-iconified. 
 
@@ -143,24 +126,24 @@ sed 's/\(0x[0-9a-f]*\).*/windowid \1 move 0 0/'</pre>Instead, use tools with buf
  <pre>Fvwm -mi3 | perl -ne '
 $|=1;
 print &quot;windowid $1 iconify\n&quot; if /^(0x\S+) add/;
-' &gt; ~/.FvwmCommandC</pre><dt><i>-r</i>
-<dd>Waits for a reply before it exits. FvwmCommand exits if no information or error is returned in a fixed amount of time period. (Refer option -w.) The option -r overrides this time limit and wait for at least one message back. After the initial message, it will wait for another message for the time limit. This option is useful when the system is too loaded to make any prediction when the system is responding AND the command causes some message to be sent back. 
+' &gt; ~/.FvwmCommandC</pre></dd><dt><i>-r</i>
+</dt><dd>Waits for a reply before it exits. FvwmCommand exits if no information or error is returned in a fixed amount of time period. (Refer option -w.) The option -r overrides this time limit and wait for at least one message back. After the initial message, it will wait for another message for the time limit. This option is useful when the system is too loaded to make any prediction when the system is responding AND the command causes some message to be sent back. 
 
-<dt><i>-S &lt;name&gt;</i>
-<dd>Invokes another server, FvwmCommandS, with FIFO set &lt;name&gt;. 
+</dd><dt><i>-S &lt;name&gt;</i>
+</dt><dd>Invokes another server, FvwmCommandS, with FIFO set &lt;name&gt;. 
  If -f option is not used with this option, the invoking FvwmCommand uses the default FIFO to communicate the default server to invoke a new server. 
  If -f option is used with this option, the invoking FvwmCommand uses the default FIFO to communicate the default server to invoke a new server. Then, switch the FIFO set and start communicating the new server. 
  This option -S is useful when a dedicated connection is necessary to run a background job while another connection is kept for interactive use. 
 
  If the &lt;name&gt; is a relative path name, that is relative from where fvwm is running, not from where FvwmCommand is invoked. 
 
-<dt><i>-v</i>
-<dd>Returns FvwmCommand version number and exits. 
+</dd><dt><i>-v</i>
+</dt><dd>Returns FvwmCommand version number and exits. 
 
-<dt><i>-w &lt;time&gt;</i>
-<dd>Waits for &lt;time&gt; micro seconds for a message. FvwmCommand exits if no information or error is returned in a fixed amount of time period unless option -m is used. The default is 500 ms. This option overrides this default value. 
+</dd><dt><i>-w &lt;time&gt;</i>
+</dt><dd>Waits for &lt;time&gt; micro seconds for a message. FvwmCommand exits if no information or error is returned in a fixed amount of time period unless option -m is used. The default is 500 ms. This option overrides this default value. 
 
-</dl><h2>Wrapper</h2>FvwmCommand.sh has bourne shell function definitions to keep the syntax similar to fvwm configuration file. This file is to be sourced: 
+</dd></dl><h2>Wrapper</h2>FvwmCommand.sh has bourne shell function definitions to keep the syntax similar to fvwm configuration file. This file is to be sourced: 
 
  <pre>. FvwmCommand.sh
 <br>

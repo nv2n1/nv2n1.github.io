@@ -16,14 +16,14 @@ description: "e2scrub – check the contents of a mounted ext[234] file system"
 <p> If no errors are found, <code>fstrim</code> can be called on the file system if it is mounted. If errors are found, the file system will be marked as having errors. The file system should be taken offline and <code>e2fsck</code> run as soon as possible, because <code>e2scrub</code> does not fix corruptions. If the file system is not repaired, <code>e2fsck</code> will be run before the next mount.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd>Print what commands <code>e2scrub</code> would execute to check the file system. (Note: the commands will not actually be executed; however, since <code>e2scrub</code> needs to run some commands to query the system to determine what commands would be executed, it still needs to be run as root.)</p>
-<dt><code>-r</code></p>
-<dd>Remove the e2scrub snapshot and exit without checking anything.</p>
-<dt><code>-t</code></p>
-<dd>Run <code>fstrim(1)</code> on the mounted file system if no errors are found.</p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit.</dl>
+<dt><code>-n</code></dt>
+<dd>Print what commands <code>e2scrub</code> would execute to check the file system. (Note: the commands will not actually be executed; however, since <code>e2scrub</code> needs to run some commands to query the system to determine what commands would be executed, it still needs to be run as root.)</dd>
+<dt><code>-r</code></dt>
+<dd>Remove the e2scrub snapshot and exit without checking anything.</dd>
+<dt><code>-t</code></dt>
+<dd>Run <code>fstrim(1)</code> on the mounted file system if no errors are found.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd></dl>
 <h2>Exit Code</h2>
 <p>The exit codes are the same as in <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8)</p>
 <h2>See Also</h2>

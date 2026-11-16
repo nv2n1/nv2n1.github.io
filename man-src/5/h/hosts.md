@@ -13,17 +13,17 @@ description: "hosts – static table lookup for hostnames"
 <h2>Description</h2>
 <p>This manual page describes the format of the <i>/etc/hosts</i> file. This file is a simple text file that associates IP addresses with hostnames, one line per IP address. For each host a single line should be present with the following information:</p>
 <dl>
-<dd>IP_address canonical_hostname [aliases&#8230;]</dl>
+<dd>IP_address canonical_hostname [aliases&#8230;]</dd></dl>
 <p> The IP address can conform to either IPv4 or IPv6. Fields of the entry are separated by any number of blanks and/or tab characters. Text from a &quot;#&quot; character until the end of the line is a comment, and is ignored. Host names may contain only alphanumeric characters, minus signs (&quot;-&quot;), and periods (&quot;.&quot;). They must begin with an alphabetic character and end with an alphanumeric character. Optional aliases provide for name changes, alternate spellings, shorter hostnames, or generic hostnames (for example, <i>localhost</i>). If required, a host may have two separate entries in this file; one for each version of the Internet Protocol (IPv4 and IPv6). </p>
 <p> The Berkeley Internet Name Domain (BIND) Server implements the Internet name server for UNIX systems. It augments or replaces the <i>/etc/hosts</i> file or hostname lookup, and frees a host from relying on <i>/etc/hosts</i> being up to date and complete. </p>
 <p> In modern systems, even though the host table has been superseded by DNS, it is still widely used for:</p>
 <dl>
-<dt><code>bootstrapping</code></p>
-<dd>Most systems have a small host table containing the name and address information for important hosts on the local network. This is useful when DNS is not running, for example during system bootup.</p>
-<dt><code>NIS</code></p>
-<dd>Sites that use NIS use the host table as input to the NIS host database. Even though NIS can be used with DNS, most NIS sites still use the host table with an entry for all local hosts as a backup.</p>
-<dt><code>isolated nodes</code></p>
-<dd>Very small sites that are isolated from the network use the host table instead of DNS. If the local information rarely changes, and the network is not connected to the Internet, DNS offers little advantage.</dl>
+<dt><code>bootstrapping</code></dt>
+<dd>Most systems have a small host table containing the name and address information for important hosts on the local network. This is useful when DNS is not running, for example during system bootup.</dd>
+<dt><code>NIS</code></dt>
+<dd>Sites that use NIS use the host table as input to the NIS host database. Even though NIS can be used with DNS, most NIS sites still use the host table with an entry for all local hosts as a backup.</dd>
+<dt><code>isolated nodes</code></dt>
+<dd>Very small sites that are isolated from the network use the host table instead of DNS. If the local information rarely changes, and the network is not connected to the Internet, DNS offers little advantage.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/hosts</i></p>
 <h2>Notes</h2>

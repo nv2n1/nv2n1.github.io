@@ -17,30 +17,30 @@ int upscli_list_start(UPSCONN_t *ups, int numq, const char **query)</code></pre>
 <h2>Uses</h2>
 <p>This function implements the &quot;LIST&quot; command in the protocol. As a result, you can use it to request many different things from the server. Some examples are: </p>
 <dl>
-<dd>&bull; LIST UPS</dl>
+<dd>&bull; LIST UPS</dd></dl>
 <dl>
-<dd>&bull; LIST VAR &lt;ups&gt;</dl>
+<dd>&bull; LIST VAR &lt;ups&gt;</dd></dl>
 <dl>
-<dd>&bull; LIST RW &lt;ups&gt;</dl>
+<dd>&bull; LIST RW &lt;ups&gt;</dd></dl>
 <dl>
-<dd>&bull; LIST CMD &lt;ups&gt;</dl>
+<dd>&bull; LIST CMD &lt;ups&gt;</dd></dl>
 <dl>
-<dd>&bull; LIST ENUM &lt;ups&gt; &lt;var&gt;</dl>
+<dd>&bull; LIST ENUM &lt;ups&gt; &lt;var&gt;</dd></dl>
 <dl>
-<dd>&bull; LIST RANGE &lt;ups&gt; &lt;var&gt;</dl>
+<dd>&bull; LIST RANGE &lt;ups&gt; &lt;var&gt;</dd></dl>
 <h2>Query Formatting</h2>
 <p>To see the list of variables on a UPS called <i>su700</i>, the protocol command would be LIST VAR su700. To start that list with this function, you would populate query and numq as follows: </p>
 <dl>
 <dd>
 <pre>int numq;
 const char *query[2];</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>query[0] = &quot;VAR&quot;;
 query[1] = &quot;su700&quot;;
 numq = 2;</pre>
-</dl>
+</dd></dl>
 <p> All escaping of special characters and quoting of elements with spaces are handled for you inside this function.</p>
 <h2>Error Checking</h2>
 <p>This function checks the response from <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) against your query. If it is not starting a list, or is starting the wrong type of list, it will return an error code. </p>

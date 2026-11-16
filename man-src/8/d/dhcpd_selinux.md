@@ -57,9 +57,9 @@ description: "dhcpd_selinux – Security Enhanced Linux Policy for the dhcpd pro
 <p> Policy governs the access confined processes have to these ports. SELinux dhcpd policy is very flexible allowing users to setup their dhcpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for dhcpd: </p>
 <dl>
-<dt><code>dhcpd_port_t</code></p>
+<dt><code>dhcpd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 547,548,647,847,7911 udp 67,547,548,647,847</dl>
+</dd><dd>Default Defined Ports: tcp 547,548,647,847,7911 udp 67,547,548,647,847</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dhcpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -106,28 +106,28 @@ description: "dhcpd_selinux – Security Enhanced Linux Policy for the dhcpd pro
 <p> <code>dhcpd_exec_t</code> </p>
 <p> &#8211; Set files with the dhcpd_exec_t type, if you want to transition an executable to the dhcpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dhcpd(6)?, /usr/sbin/dhcrelay(6)? </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dhcpd(6)?, /usr/sbin/dhcrelay(6)? </dd>
 </dl>
 <p> <code>dhcpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the dhcpd_initrc_exec_t type, if you want to transition an executable to the dhcpd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/dhcpd(6)?, /etc/rc.d/init.d/dhcrelay(6)? </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/dhcpd(6)?, /etc/rc.d/init.d/dhcrelay(6)? </dd>
 </dl>
 <p> <code>dhcpd_state_t</code> </p>
 <p> &#8211; Set files with the dhcpd_state_t type, if you want to treat the files as dhcpd state data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dhcp(3)?/dhcpd.leases.*, /var/lib/dhcpd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dhcp(3)?/dhcpd.leases.*, /var/lib/dhcpd(/.*)? </dd>
 </dl>
 <p> <code>dhcpd_tmp_t</code> </p>
 <p> &#8211; Set files with the dhcpd_tmp_t type, if you want to store dhcpd temporary files in the /tmp directories. </p>
 <p> <code>dhcpd_unit_file_t</code> </p>
 <p> &#8211; Set files with the dhcpd_unit_file_t type, if you want to treat the files as dhcpd unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/dhcpd.*, /usr/lib/systemd/system/dhcpcd.*, /usr/lib/systemd/system/dhcpd6.*, /usr/lib/systemd/system/dhcrelay.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/dhcpd.*, /usr/lib/systemd/system/dhcpcd.*, /usr/lib/systemd/system/dhcpd6.*, /usr/lib/systemd/system/dhcrelay.* </dd>
 </dl>
 <p> <code>dhcpd_var_run_t</code> </p>
 <p> &#8211; Set files with the dhcpd_var_run_t type, if you want to store the dhcpd files under the /run or /var/run directory. </p>

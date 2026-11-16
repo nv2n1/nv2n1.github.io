@@ -10,15 +10,11 @@ description: "std::experimental::ranges::all_of,std::experimental::ranges::any_o
 <p>std::experimental::ranges::all_of,std::experimental::ranges::any_of, &#8211; std::experimental::ranges::all_of,std::experimental::ranges::any_of,</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class Proj =
-
 ranges::identity,
 (1) (ranges TS)
-
 IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred &gt;
 bool all_of( I first, S last, Pred pred, Proj proj = Proj{} );
-
 template&lt; InputRange R, class Proj = ranges::identity,</code></pre>
 <p>IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt;&nbsp;<wbr>Pred&nbsp;<wbr>&nbsp;<wbr><code>(2)</code>&nbsp;<wbr>(ranges TS)<br />
 &gt; bool all_of( R&amp;&amp; r, Pred pred, Proj proj = Proj{} );</p>
@@ -86,21 +82,14 @@ return ranges::none_of(ranges::begin(r), ranges::end(r), std::ref(pred), std::re
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;experimental/ranges/algorithm&gt;
-
 #include &lt;experimental/ranges/iterator&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
 namespace ranges = std::experimental::ranges;
 int main()
-
 {
     std::vector&lt;int&gt; v(10, 2);
     std::partial_sum(v.cbegin(), v.cend(), v.begin());
@@ -109,31 +98,25 @@ int main()
     std::cout &lt;&lt; '
 ';
     if (ranges::all_of(v.cbegin(), v.cend(), [](int i) { return i % 2 == 0; })) {
-
         std::cout &lt;&lt; &quot;All numbers are even
 &quot;;
     }
     if (ranges::none_of(v, std::bind(std::modulus&lt;int&gt;(), std::placeholders::_1, 2))) {
-
         std::cout &lt;&lt; &quot;None of them are odd
 &quot;;
     }
     struct DivisibleBy {
-
         const int d;
-
         DivisibleBy(int n)
             : d(n)
         {
         }
-
         bool operator()(int n) const
         {
             return n % d == 0;
         }
     };
     if (ranges::any_of(v, DivisibleBy(7))) {
-
         std::cout &lt;&lt; &quot;At least one number is divisible by 7
 &quot;;
     }

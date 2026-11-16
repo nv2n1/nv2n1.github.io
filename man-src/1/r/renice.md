@@ -17,32 +17,32 @@ description: "renice – alter priority of running processes"
 <p> <code>-n</code>, <code>&#8211;priority</code> <i>priority</i></p>
 <dl>
 <dt>
-<dd> Specify the scheduling <i>priority</i> to be used for the process, process group, or user. Use of the option <code>-n</code> or <code>&#8211;priority</code> is optional, but when used it must be the first argument.</dl>
+</dt><dd> Specify the scheduling <i>priority</i> to be used for the process, process group, or user. Use of the option <code>-n</code> or <code>&#8211;priority</code> is optional, but when used it must be the first argument.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;pgrp</code></p>
 <dl>
 <dt>
-<dd> Interpret the succeeding arguments as process group IDs.</dl>
+</dt><dd> Interpret the succeeding arguments as process group IDs.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pid</code></p>
 <dl>
 <dt>
-<dd> Interpret the succeeding arguments as process IDs (the default).</dl>
+</dt><dd> Interpret the succeeding arguments as process IDs (the default).</dd></dl>
 <p> <code>-u</code>, <code>&#8211;user</code></p>
 <dl>
 <dt>
-<dd> Interpret the succeeding arguments as usernames or UIDs.</dl>
+</dt><dd> Interpret the succeeding arguments as usernames or UIDs.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/passwd</i></p>
 <dl>
 <dt>
-<dd> to map user names to user IDs</dl>
+</dt><dd> to map user names to user IDs</dd></dl>
 <h2>NOTES</h2>
 <p> Users other than the superuser may only alter the priority of processes they own. Furthermore, an unprivileged user can only <i>increase</i> the &quot;nice value&quot; (i.e., choose a lower priority) and such changes are irreversible unless (since Linux 2.6.12) the user has a suitable &quot;nice&quot; resource limit (see <code>ulimit</code>(1p) and <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)). </p>
 <p> The superuser may alter the priority of any process and set the priority to any value in the range -20 to 19. Useful priorities are: 19 (the affected processes will run only when nothing else in the system wants to), 0 (the &quot;base&quot; scheduling priority), anything negative (to make things go very fast).</p>

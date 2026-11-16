@@ -13,9 +13,6 @@ description: "std::_Maybe_wrap_member_pointer< _Tp > –"
 <p>typedef _Tp <code>type</code></p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static const _Tp &amp; __do_wrap (const _Tp &amp;__x)
-
-
-
 static _Tp &amp;&amp; __do_wrap (_Tp &amp;&amp;__x)</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Tp&gt;struct std::_Maybe_wrap_member_pointer&lt; _Tp &gt;</h3>

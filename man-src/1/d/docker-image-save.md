@@ -18,7 +18,7 @@ description: "docker-image-save – Save one or more images to a tar archive (st
 <p> Save all fedora repository images to a fedora-all.tar and save the latest fedora image to a fedora-latest.tar: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker image save fedora &gt; fedora-all.tar
 $ docker image save --output=fedora-latest.tar fedora:latest
@@ -27,7 +27,7 @@ $ ls -sh fedora-all.tar
 $ ls -sh fedora-latest.tar
 367M fedora-latest.tar
 </pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-image-load/">docker-image-load</a>(1)</code> to load an image from a tar archive on STDIN. </p>
 <h2>OPTIONS</h2>

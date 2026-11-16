@@ -40,7 +40,7 @@ struct ibv_srq_attr {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_srq</code>(3), <code>ibv_query_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

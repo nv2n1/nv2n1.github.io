@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_metadata() – Fetches a bson document cont
 mongoc_gridfs_file_get_metadata (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches a bson document containing the metadata for the gridfs file. </p>
 <h2>Returns</h2>

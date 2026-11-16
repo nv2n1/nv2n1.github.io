@@ -18,31 +18,31 @@ description: "resize2fs – ext2/ext3/ext4 file system resizer"
 <p> The <code>-b</code> and <code>-s</code> options enable and disable the 64bit feature, respectively. The resize2fs program will, of course, take care of resizing the block group descriptors and moving other data blocks out of the way, as needed. It is not possible to resize the file system concurrent with changing the 64bit status.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd>Turns on the 64bit feature, resizes the group descriptors as necessary, and moves other metadata out of the way.</p>
-<dt><code>-d </code><i>debug-flags</i></p>
+<dt><code>-b</code></dt>
+<dd>Turns on the 64bit feature, resizes the group descriptors as necessary, and moves other metadata out of the way.</dd>
+<dt><code>-d </code><i>debug-flags</i></dt>
 <dd>Turns on various resize2fs debugging features, if they have been compiled into the binary. <i>debug-flags</i> should be computed by adding the numbers of the desired features from the following list:<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug block relocations</p>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug block relocations</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>4<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug inode relocations</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>8<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug moving the inode table</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>16<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Print timing information</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>32<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug minimum file system size (-M) calculation</p>
-<dt><code>-f</code></p>
-<dd>Forces resize2fs to proceed with the file system resize operation, overriding some safety checks which resize2fs normally enforces.</p>
-<dt><code>-F</code></p>
-<dd>Flush the file system device&#8217;s buffer caches before beginning. Only really useful for doing <code>resize2fs</code> time trials.</p>
-<dt><code>-M</code></p>
-<dd>Shrink the file system to minimize its size as much as possible, given the files stored in the file system.</p>
-<dt><code>-p</code></p>
-<dd>Print out percentage completion bars for each <code>resize2fs</code> phase during an offline (non-trivial) resize operation, so that the user can keep track of what the program is doing. (For very fast resize operations, no progress bars may be displayed.)</p>
-<dt><code>-P</code></p>
-<dd>Print an estimate of the number of file system blocks in the file system if it is shrunk using <code>resize2fs</code>&#8216;s <code>-M</code> option and then exit.</p>
-<dt><code>-s</code></p>
-<dd>Turns off the 64bit feature and frees blocks that are no longer in use.</p>
-<dt><code>-S </code><i>RAID-stride</i></p>
-<dd>The <code>resize2fs</code> program will heuristically determine the RAID stride that was specified when the file system was created. This option allows the user to explicitly specify a RAID stride setting to be used by resize2fs instead.</p>
-<dt><code>-z</code><i> undo_file</i></p>
-<dd>Before overwriting a file system block, write the old contents of the block to an undo file. This undo file can be used with <a href="/docs/linux/man/8-e2undo/">e2undo</a>(8) to restore the old contents of the file system should something go wrong. If the empty string is passed as the undo_file argument, the undo file will be written to a file named resize2fs-<i>device</i>.e2undo in the directory specified via the <i>E2FSPROGS_UNDO_DIR</i> environment variable. </p>
+<dt><code>-f</code></dt>
+<dd>Forces resize2fs to proceed with the file system resize operation, overriding some safety checks which resize2fs normally enforces.</dd>
+<dt><code>-F</code></dt>
+<dd>Flush the file system device&#8217;s buffer caches before beginning. Only really useful for doing <code>resize2fs</code> time trials.</dd>
+<dt><code>-M</code></dt>
+<dd>Shrink the file system to minimize its size as much as possible, given the files stored in the file system.</dd>
+<dt><code>-p</code></dt>
+<dd>Print out percentage completion bars for each <code>resize2fs</code> phase during an offline (non-trivial) resize operation, so that the user can keep track of what the program is doing. (For very fast resize operations, no progress bars may be displayed.)</dd>
+<dt><code>-P</code></dt>
+<dd>Print an estimate of the number of file system blocks in the file system if it is shrunk using <code>resize2fs</code>&#8216;s <code>-M</code> option and then exit.</dd>
+<dt><code>-s</code></dt>
+<dd>Turns off the 64bit feature and frees blocks that are no longer in use.</dd>
+<dt><code>-S </code><i>RAID-stride</i></dt>
+<dd>The <code>resize2fs</code> program will heuristically determine the RAID stride that was specified when the file system was created. This option allows the user to explicitly specify a RAID stride setting to be used by resize2fs instead.</dd>
+<dt><code>-z</code><i> undo_file</i></dt>
+<dd>Before overwriting a file system block, write the old contents of the block to an undo file. This undo file can be used with <a href="/docs/linux/man/8-e2undo/">e2undo</a>(8) to restore the old contents of the file system should something go wrong. If the empty string is passed as the undo_file argument, the undo file will be written to a file named resize2fs-<i>device</i>.e2undo in the directory specified via the <i>E2FSPROGS_UNDO_DIR</i> environment variable. </dd>
 <p> WARNING: The undo file cannot be used to recover from a power or system crash.</dl>
 <h2>Known Bugs</h2>
 <p>The minimum size of the file system as estimated by resize2fs may be incorrect, especially for file systems with 1k and 2k blocksizes.</p>
@@ -52,3 +52,4 @@ description: "resize2fs – ext2/ext3/ext4 file system resizer"
 <p>Resize2fs is Copyright 1998 by Theodore Ts&#8217;o and PowerQuest, Inc. All rights reserved. As of April, 2000 <code>Resize2fs</code> may be redistributed under the terms of the GPL.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8), <code><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) </p>
+</p>

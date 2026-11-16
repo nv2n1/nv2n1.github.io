@@ -31,14 +31,14 @@ int io_getevents(aio_context_t ctx_id, long min_nr, long nr,
 <p> For the failure return, see NOTES.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Either <i>events</i> or <i>timeout</i> is an invalid pointer.</p>
-<dt><code>EINTR</code></p>
-<dd> Interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>ctx_id</i> is invalid. <i>min_nr</i> is out of range or <i>nr</i> is out of range.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>io_getevents</code>() is not implemented on this architecture.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Either <i>events</i> or <i>timeout</i> is an invalid pointer.</dd>
+<dt><code>EINTR</code></dt>
+<dd> Interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>ctx_id</i> is invalid. <i>min_nr</i> is out of range or <i>nr</i> is out of range.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>io_getevents</code>() is not implemented on this architecture.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The asynchronous I/O system calls first appeared in Linux 2.5.</p>
 <h2>CONFORMING TO</h2>

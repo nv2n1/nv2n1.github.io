@@ -24,20 +24,13 @@ The exact effects this modifier has on the input and output vary between the ind
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;array&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     auto str_time = [](int year, int mon, int day) {
         constexpr std::array&lt;const char *, 7&gt; week_day&#123;&#123;&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;}};

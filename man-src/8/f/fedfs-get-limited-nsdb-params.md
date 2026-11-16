@@ -19,26 +19,26 @@ description: "fedfs-get-limited-nsdb-params – send a FEDFS_GET_LIMITED_NSDB_PA
 <p> An NSDB hostname and port number (see below) are are used as the primary key to identify an entry in the remote server&#8217;s NSDB connection parameter database. The NSDB connection parameter database matches NSDB hostnames and ports by exact value. In other words, if two unique hostnames point to the IP address of the same physical NSDB, they are still considered separate entries in the local NSDB connection parameter database.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;debug</p>
-<dd>Enables debugging messages during operation.</p>
-<dt>-?, &#8211;help</p>
-<dd>Displays <a href="/docs/linux/man/8-fedfs-get-limited-nsdb-params/">fedfs-get-limited-nsdb-params</a></code>(8) version information and a usage message on <i>stderr</i>.</p>
-<dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
-<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
-<dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
-<dt><code>-l, &#8211;nsdbname=</code><i>NSDB-hostname</i></p>
-<dd>Specifies the hostname of the NSDB to insert into the new FedFS junction. If this option is not specified, the value of the FEDFS_NSDB_HOST environment variable is consulted. If the variable is not set and the <code>&#8211;nsdbname</code> option is not specified, the <code><a href="/docs/linux/man/8-fedfs-get-limited-nsdb-params/">fedfs-get-limited-nsdb-params</a></code>(8) command fails.</p>
-<dt><code>-r, &#8211;nsdbport=</code><i>NSDB-port</i></p>
-<dd>Specifies the IP port of the NSDB to insert into the new FedFS junction. If this option is not specified, the value of the FEDFS_NSDB_PORT environment variable is consulted. The default value if the variable is not set is 389.</p>
-<dt><code>-s, &#8211;security=</code><i>flavor</i></p>
-<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dl>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Enables debugging messages during operation.</dd>
+<dt>-?, &#8211;help</dt>
+<dd>Displays <a href="/docs/linux/man/8-fedfs-get-limited-nsdb-params/">fedfs-get-limited-nsdb-params</a></code>(8) version information and a usage message on <i>stderr</i>.</dd>
+<dt><code>-h, &#8211;hostname=</code><i>hostname</i></dt>
+<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</dd>
+<dt><code>-n, &#8211;nettype=</code><i>nettype</i></dt>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</dd>
+<dt><code>-l, &#8211;nsdbname=</code><i>NSDB-hostname</i></dt>
+<dd>Specifies the hostname of the NSDB to insert into the new FedFS junction. If this option is not specified, the value of the FEDFS_NSDB_HOST environment variable is consulted. If the variable is not set and the <code>&#8211;nsdbname</code> option is not specified, the <code><a href="/docs/linux/man/8-fedfs-get-limited-nsdb-params/">fedfs-get-limited-nsdb-params</a></code>(8) command fails.</dd>
+<dt><code>-r, &#8211;nsdbport=</code><i>NSDB-port</i></dt>
+<dd>Specifies the IP port of the NSDB to insert into the new FedFS junction. If this option is not specified, the value of the FEDFS_NSDB_PORT environment variable is consulted. The default value if the variable is not set is 389.</dd>
+<dt><code>-s, &#8211;security=</code><i>flavor</i></dt>
+<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. If the file server <i>fs.example.net</i> already knows about your domain&#8217;s NSDB, you can query it with:</p>
 <dl>
 <dd>$ fedfs-get-limited-nsdb-params -h fs.example.net -l nsdb.example.net<br />
  Call completed successfully<br />
- ConnectionSec: FEDFS_SEC_NONE </p>
+ ConnectionSec: FEDFS_SEC_NONE </dd>
 </dl>
 <p> The remote server knows about <i>nsdb.example.net</i> and does not use TLS when querying it to resolve junctions.</p>
 <h2>Security</h2>

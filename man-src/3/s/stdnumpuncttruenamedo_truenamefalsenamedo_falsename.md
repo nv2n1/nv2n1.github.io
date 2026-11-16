@@ -11,24 +11,16 @@ std::numpunct&lt;CharT&gt;::truename,do_truename,falsename,do_falsename - std::n
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  string_type truename() const;
-
 public:
 (2)
-
     string_type falsename() const;
-
 protected:
 (3)
-
     virtual string_type do_truename() const;
-
 protected:
 (4)
-
     virtual string_type do_falsename() const;</code></pre> 
 1-2) Public member function, calls the member function do_truename and do_falsename of the most derived class respectively. 
 3) Returns the string to be used as the representation of the boolean value true. 
@@ -44,9 +36,7 @@ protected:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;iomanip&gt;
 struct custom_tf : std::numpunct&lt;char&gt; {
     std::string do_truename() const
@@ -59,7 +49,6 @@ struct custom_tf : std::numpunct&lt;char&gt; {
     }
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; &quot;default locale: &quot; &lt;&lt; true &lt;&lt; true &lt;&lt; false &lt;&lt; false &lt;&lt; '\n';

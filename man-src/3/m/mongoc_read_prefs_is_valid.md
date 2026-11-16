@@ -13,8 +13,8 @@ description: "mongoc_read_prefs_is_valid() – Performs a consistency check of r
 mongoc_read_prefs_is_valid (const mongoc_read_prefs_t *read_prefs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Performs a consistency check of <code>read_prefs</code> to ensure it makes sense and can be satisfied. </p>
 <p> This only performs local consistency checks. </p>

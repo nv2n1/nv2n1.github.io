@@ -15,11 +15,11 @@ compare_ether_header - Compare two Ethernet headers
 <h2>Arguments</h2>
 
 <i>a</i>
-<dl><dd><dd>Pointer to Ethernet header</dl>
+<dl><dd></dd><dd>Pointer to Ethernet header</dd></dl>
  
 
  <i>b</i>
-<dl><dd>Pointer to Ethernet header</dl>
+<dl><dd>Pointer to Ethernet header</dd></dl>
 
 <h2>Description</h2>
 

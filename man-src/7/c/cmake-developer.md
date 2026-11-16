@@ -31,49 +31,49 @@ description: "cmake-developer – CMake Developer Reference"
 <h3>Standard Variable Names</h3>
 <p>For a <code>FindXxx.cmake</code> module that takes the approach of setting variables (either instead of or in addition to creating imported targets), the following variable names should be used to keep things consistent between Find modules. Note that all variables start with <code>Xxx_</code>, which (unless otherwise noted) must match exactly the name of the <code>FindXxx.cmake</code> file, including upper/lowercase. This prefix on the variable names ensures that they do not conflict with variables of other Find modules. The same pattern should also be followed for any macros, functions and imported targets defined by the Find module.</p>
 <dl>
-<dt><code>Xxx_INCLUDE_DIRS</code></p>
-<dd>The final set of include directories listed in one variable for use by client code. This should not be a cache entry (note that this also means this variable should not be used as the result variable of a <code>find_path()</code> command &#8211; see <code>Xxx_INCLUDE_DIR</code> below for that).</p>
-<dt><code>Xxx_LIBRARIES</code></p>
-<dd>The libraries to use with the module. These may be CMake targets, full absolute paths to a library binary or the name of a library that the linker must find in its search path. This should not be a cache entry (note that this also means this variable should not be used as the result variable of a <code>find_library()</code> command &#8211; see <code>Xxx_LIBRARY</code> below for that).</p>
-<dt><code>Xxx_DEFINITIONS</code></p>
-<dd>The compile definitions to use when compiling code that uses the module. This really shouldn&#8217;t include options such as <code>-DHAS_JPEG</code> that a client source-code file uses to decide whether to <code>#include &lt;jpeg.h&gt;</code></p>
-<dt><code>Xxx_EXECUTABLE</code></p>
-<dd>The full absolute path to an executable. In this case, <code>Xxx</code> might not be the name of the module, it might be the name of the tool (usually converted to all uppercase), assuming that tool has such a well-known name that it is unlikely that another tool with the same name exists. It would be appropriate to use this as the result variable of a <code>find_program()</code> command.</p>
-<dt><code>Xxx_YYY_EXECUTABLE</code></p>
-<dd>Similar to <code>Xxx_EXECUTABLE</code> except here the <code>Xxx</code> is always the module name and <code>YYY</code> is the tool name (again, usually fully uppercase). Prefer this form if the tool name is not very widely known or has the potential to clash with another tool. For greater consistency, also prefer this form if the module provides more than one executable.</p>
-<dt><code>Xxx_LIBRARY_DIRS</code></p>
-<dd>Optionally, the final set of library directories listed in one variable for use by client code. This should not be a cache entry.</p>
-<dt><code>Xxx_ROOT_DIR</code></p>
-<dd>Where to find the base directory of the module.</p>
-<dt><code>Xxx_VERSION_VV</code></p>
-<dd>Variables of this form specify whether the <code>Xxx</code> module being provided is version <code>VV</code> of the module. There should not be more than one variable of this form set to true for a given module. For example, a module <code>Barry</code> might have evolved over many years and gone through a number of different major versions. Version 3 of the <code>Barry</code> module might set the variable <code>Barry_VERSION_3</code> to true, whereas an older version of the module might set <code>Barry_VERSION_2</code> to true instead. It would be an error for both <code>Barry_VERSION_3</code> and <code>Barry_VERSION_2</code> to both be set to true.</p>
-<dt><code>Xxx_WRAP_YY</code></p>
-<dd>When a variable of this form is set to false, it indicates that the relevant wrapping command should not be used. The wrapping command depends on the module, it may be implied by the module name or it might be specified by the <code>YY</code> part of the variable.</p>
-<dt><code>Xxx_Yy_FOUND</code></p>
-<dd>For variables of this form, <code>Yy</code> is the name of a component for the module. It should match exactly one of the valid component names that may be passed to the <code>find_package()</code> command for the module. If a variable of this form is set to false, it means that the <code>Yy</code> component of module <code>Xxx</code> was not found or is not available. Variables of this form would typically be used for optional components so that the caller can check whether an optional component is available.</p>
-<dt><code>Xxx_FOUND</code></p>
-<dd>When the <code>find_package()</code> command returns to the caller, this variable will be set to true if the module was deemed to have been found successfully.</p>
-<dt><code>Xxx_NOT_FOUND_MESSAGE</code></p>
-<dd>Should be set by config-files in the case that it has set <code>Xxx_FOUND</code> to FALSE. The contained message will be printed by the <code>find_package()</code> command and by <code>find_package_handle_standard_args()</code> to inform the user about the problem. Use this instead of calling <code>message()</code> directly to report a reason for failing to find the module or package.</p>
-<dt><code>Xxx_RUNTIME_LIBRARY_DIRS</code></p>
-<dd>Optionally, the runtime library search path for use when running an executable linked to shared libraries. The list should be used by user code to create the <code>PATH</code> on windows or <code>LD_LIBRARY_PATH</code> on UNIX. This should not be a cache entry.</p>
-<dt><code>Xxx_VERSION</code></p>
-<dd>The full version string of the package found, if any. Note that many existing modules provide <code>Xxx_VERSION_STRING</code> instead.</p>
-<dt><code>Xxx_VERSION_MAJOR</code></p>
-<dd>The major version of the package found, if any.</p>
-<dt><code>Xxx_VERSION_MINOR</code></p>
-<dd>The minor version of the package found, if any.</p>
-<dt><code>Xxx_VERSION_PATCH</code></p>
-<dd>The patch version of the package found, if any. </p>
+<dt><code>Xxx_INCLUDE_DIRS</code></dt>
+<dd>The final set of include directories listed in one variable for use by client code. This should not be a cache entry (note that this also means this variable should not be used as the result variable of a <code>find_path()</code> command &#8211; see <code>Xxx_INCLUDE_DIR</code> below for that).</dd>
+<dt><code>Xxx_LIBRARIES</code></dt>
+<dd>The libraries to use with the module. These may be CMake targets, full absolute paths to a library binary or the name of a library that the linker must find in its search path. This should not be a cache entry (note that this also means this variable should not be used as the result variable of a <code>find_library()</code> command &#8211; see <code>Xxx_LIBRARY</code> below for that).</dd>
+<dt><code>Xxx_DEFINITIONS</code></dt>
+<dd>The compile definitions to use when compiling code that uses the module. This really shouldn&#8217;t include options such as <code>-DHAS_JPEG</code> that a client source-code file uses to decide whether to <code>#include &lt;jpeg.h&gt;</code></dd>
+<dt><code>Xxx_EXECUTABLE</code></dt>
+<dd>The full absolute path to an executable. In this case, <code>Xxx</code> might not be the name of the module, it might be the name of the tool (usually converted to all uppercase), assuming that tool has such a well-known name that it is unlikely that another tool with the same name exists. It would be appropriate to use this as the result variable of a <code>find_program()</code> command.</dd>
+<dt><code>Xxx_YYY_EXECUTABLE</code></dt>
+<dd>Similar to <code>Xxx_EXECUTABLE</code> except here the <code>Xxx</code> is always the module name and <code>YYY</code> is the tool name (again, usually fully uppercase). Prefer this form if the tool name is not very widely known or has the potential to clash with another tool. For greater consistency, also prefer this form if the module provides more than one executable.</dd>
+<dt><code>Xxx_LIBRARY_DIRS</code></dt>
+<dd>Optionally, the final set of library directories listed in one variable for use by client code. This should not be a cache entry.</dd>
+<dt><code>Xxx_ROOT_DIR</code></dt>
+<dd>Where to find the base directory of the module.</dd>
+<dt><code>Xxx_VERSION_VV</code></dt>
+<dd>Variables of this form specify whether the <code>Xxx</code> module being provided is version <code>VV</code> of the module. There should not be more than one variable of this form set to true for a given module. For example, a module <code>Barry</code> might have evolved over many years and gone through a number of different major versions. Version 3 of the <code>Barry</code> module might set the variable <code>Barry_VERSION_3</code> to true, whereas an older version of the module might set <code>Barry_VERSION_2</code> to true instead. It would be an error for both <code>Barry_VERSION_3</code> and <code>Barry_VERSION_2</code> to both be set to true.</dd>
+<dt><code>Xxx_WRAP_YY</code></dt>
+<dd>When a variable of this form is set to false, it indicates that the relevant wrapping command should not be used. The wrapping command depends on the module, it may be implied by the module name or it might be specified by the <code>YY</code> part of the variable.</dd>
+<dt><code>Xxx_Yy_FOUND</code></dt>
+<dd>For variables of this form, <code>Yy</code> is the name of a component for the module. It should match exactly one of the valid component names that may be passed to the <code>find_package()</code> command for the module. If a variable of this form is set to false, it means that the <code>Yy</code> component of module <code>Xxx</code> was not found or is not available. Variables of this form would typically be used for optional components so that the caller can check whether an optional component is available.</dd>
+<dt><code>Xxx_FOUND</code></dt>
+<dd>When the <code>find_package()</code> command returns to the caller, this variable will be set to true if the module was deemed to have been found successfully.</dd>
+<dt><code>Xxx_NOT_FOUND_MESSAGE</code></dt>
+<dd>Should be set by config-files in the case that it has set <code>Xxx_FOUND</code> to FALSE. The contained message will be printed by the <code>find_package()</code> command and by <code>find_package_handle_standard_args()</code> to inform the user about the problem. Use this instead of calling <code>message()</code> directly to report a reason for failing to find the module or package.</dd>
+<dt><code>Xxx_RUNTIME_LIBRARY_DIRS</code></dt>
+<dd>Optionally, the runtime library search path for use when running an executable linked to shared libraries. The list should be used by user code to create the <code>PATH</code> on windows or <code>LD_LIBRARY_PATH</code> on UNIX. This should not be a cache entry.</dd>
+<dt><code>Xxx_VERSION</code></dt>
+<dd>The full version string of the package found, if any. Note that many existing modules provide <code>Xxx_VERSION_STRING</code> instead.</dd>
+<dt><code>Xxx_VERSION_MAJOR</code></dt>
+<dd>The major version of the package found, if any.</dd>
+<dt><code>Xxx_VERSION_MINOR</code></dt>
+<dd>The minor version of the package found, if any.</dd>
+<dt><code>Xxx_VERSION_PATCH</code></dt>
+<dd>The patch version of the package found, if any. </dd>
 <p> The following names should not usually be used in <code>CMakeLists.txt</code> files. They are intended for use by Find modules to specify and cache the locations of specific files or directories. Users are typically able to set and edit these variables to control the behavior of Find modules (like entering the path to a library manually):</p>
-<dt><code>Xxx_LIBRARY</code></p>
-<dd>The path of the library. Use this form only when the module provides a single library. It is appropriate to use this as the result variable in a <code>find_library()</code> command.</p>
-<dt><code>Xxx_Yy_LIBRARY</code></p>
-<dd>The path of library <code>Yy</code> provided by the module <code>Xxx</code>. Use this form when the module provides more than one library or where other modules may also provide a library of the same name. It is also appropriate to use this form as the result variable in a <code>find_library()</code> command.</p>
-<dt><code>Xxx_INCLUDE_DIR</code></p>
-<dd>When the module provides only a single library, this variable can be used to specify where to find headers for using the library (or more accurately, the path that consumers of the library should add to their header search path). It would be appropriate to use this as the result variable in a <code>find_path()</code> command.</p>
-<dt><code>Xxx_Yy_INCLUDE_DIR</code></p>
-<dd>If the module provides more than one library or where other modules may also provide a library of the same name, this form is recommended for specifying where to find headers for using library <code>Yy</code> provided by the module. Again, it would be appropriate to use this as the result variable in a <code>find_path()</code> command. </p>
+<dt><code>Xxx_LIBRARY</code></dt>
+<dd>The path of the library. Use this form only when the module provides a single library. It is appropriate to use this as the result variable in a <code>find_library()</code> command.</dd>
+<dt><code>Xxx_Yy_LIBRARY</code></dt>
+<dd>The path of library <code>Yy</code> provided by the module <code>Xxx</code>. Use this form when the module provides more than one library or where other modules may also provide a library of the same name. It is also appropriate to use this form as the result variable in a <code>find_library()</code> command.</dd>
+<dt><code>Xxx_INCLUDE_DIR</code></dt>
+<dd>When the module provides only a single library, this variable can be used to specify where to find headers for using the library (or more accurately, the path that consumers of the library should add to their header search path). It would be appropriate to use this as the result variable in a <code>find_path()</code> command.</dd>
+<dt><code>Xxx_Yy_INCLUDE_DIR</code></dt>
+<dd>If the module provides more than one library or where other modules may also provide a library of the same name, this form is recommended for specifying where to find headers for using library <code>Yy</code> provided by the module. Again, it would be appropriate to use this as the result variable in a <code>find_path()</code> command. </dd>
 <p> To prevent users being overwhelmed with settings to configure, try to keep as many options as possible out of the cache, leaving at least one option which can be used to disable use of the module, or locate a not-found library (e.g. <code>Xxx_ROOT_DIR</code>). For the same reason, mark most cache options as advanced. For packages which provide both debug and release binaries, it is common to create cache variables with a <code>_LIBRARY_&lt;CONFIG&gt;</code> suffix, such as <code>Foo_LIBRARY_RELEASE</code> and <code>Foo_LIBRARY_DEBUG</code>. The <code>SelectLibraryConfigurations</code> module can be helpful for such cases. </p>
 <p> While these are the standard variable names, you should provide backwards compatibility for any old names that were actually in use. Make sure you comment them as deprecated, so that no-one starts using them.</dl>
 <h3>A Sample Find Module</h3>
@@ -111,16 +111,16 @@ The following cache variables may also be set:
 #]=======================================================================]</pre>
 <p>The module documentation consists of:</p>
 <dl>
-<dt>&bull;</p>
-<dd>An underlined heading specifying the module name.</p>
-<dt>&bull;</p>
-<dd>A simple description of what the module finds. More description may be required for some packages. If there are caveats or other details users of the module should be aware of, specify them here.</p>
-<dt>&bull;</p>
-<dd>A section listing imported targets provided by the module, if any.</p>
-<dt>&bull;</p>
-<dd>A section listing result variables provided by the module.</p>
-<dt>&bull;</p>
-<dd>Optionally a section listing cache variables used by the module, if any. </p>
+<dt>&bull;</dt>
+<dd>An underlined heading specifying the module name.</dd>
+<dt>&bull;</dt>
+<dd>A simple description of what the module finds. More description may be required for some packages. If there are caveats or other details users of the module should be aware of, specify them here.</dd>
+<dt>&bull;</dt>
+<dd>A section listing imported targets provided by the module, if any.</dd>
+<dt>&bull;</dt>
+<dd>A section listing result variables provided by the module.</dd>
+<dt>&bull;</dt>
+<dd>Optionally a section listing cache variables used by the module, if any. </dd>
 <p> If the package provides any macros or functions, they should be listed in an additional section, but can be documented by additional <code>.rst:</code> comment blocks immediately above where those macros or functions are defined. </p>
 <p> The find module implementation may begin below the documentation block. Now the actual libraries and so on have to be found. The code here will obviously vary from module to module (dealing with that, after all, is the point of find modules), but there tends to be a common pattern for libraries. </p>
 <p> First, we try to use <code>pkg-config</code> to find the library. Note that we cannot rely on this, as it may not be available, but it provides a good starting point. </p>

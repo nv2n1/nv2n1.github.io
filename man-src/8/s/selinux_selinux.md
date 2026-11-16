@@ -18,8 +18,8 @@ description: "selinux_selinux – Security Enhanced Linux Policy for the selinux
 <p> selinux_config_t </code> </p>
 <p> &#8211; Set files with the selinux_config_t type, if you want to treat the files as selinux configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/selinux/([^/]*/)?users(/.*)?, /etc/selinux/([^/]*/)?setrans.conf, /etc/selinux(/.*)?, /etc/selinux/([^/]*/)?seusers </p>
+<dt>Paths:</dt>
+<dd>/etc/selinux/([^/]*/)?users(/.*)?, /etc/selinux/([^/]*/)?setrans.conf, /etc/selinux(/.*)?, /etc/selinux/([^/]*/)?seusers </dd>
 </dl>
 <p> <code>selinux_munin_plugin_exec_t </code> </p>
 <p> &#8211; Set files with the selinux_munin_plugin_exec_t type, if you want to transition an executable to the selinux_munin_plugin_t domain. </p>

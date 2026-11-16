@@ -14,14 +14,14 @@ description: "gnutls_x509_privkey_generate – API function"
 <p> <code>int gnutls_x509_privkey_generate(gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_pk_algorithm_t </code><i>algo</i><code>, unsigned int </code><i>bits</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> should contain a <code>gnutls_x509_privkey_t</code> structure</p>
-<dt>gnutls_pk_algorithm_t algo</p>
-<dd> is one of the algorithms in <code>gnutls_pk_algorithm_t</code>.</p>
-<dt>unsigned int bits</p>
-<dd> the size of the modulus</p>
-<dt>unsigned int flags</p>
-<dd> unused for now. Must be 0.</dl>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> should contain a <code>gnutls_x509_privkey_t</code> structure</dd>
+<dt>gnutls_pk_algorithm_t algo</dt>
+<dd> is one of the algorithms in <code>gnutls_pk_algorithm_t</code>.</dd>
+<dt>unsigned int bits</dt>
+<dd> the size of the modulus</dd>
+<dt>unsigned int flags</dt>
+<dd> unused for now. Must be 0.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will generate a random private key. Note that this function must be called on an empty private key. </p>
 <p> Note that when generating an elliptic curve key, the curve can be substituted in the place of the bits parameter using the <code>GNUTLS_CURVE_TO_BITS()</code> macro. </p>
@@ -38,6 +38,6 @@ description: "gnutls_x509_privkey_generate – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

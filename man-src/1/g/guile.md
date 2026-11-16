@@ -19,65 +19,65 @@ description: "guile – The GNU Project Extension Language"
 <p> This manual page provides only brief instruction in invoking <code>guile</code> from the command line. Please consult the Guile info documentation for more information, (type <code> info &quot;(guile)Invoking Guile&quot;</code> at a command prompt).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-L</code><i>&nbsp;<wbr>DIRECTORY</i></p>
-<dd> Add <i>DIRECTORY</i> to the front of Guile&#8217;s module load path.</p>
-<dt><code>-l</code><i>&nbsp;<wbr>FILE</i></p>
-<dd> Load Scheme source code from <i>FILE</i>.</p>
-<dt><code>-e</code><i>&nbsp;<wbr>FUNCTION</i></p>
-<dd> After reading <i>SCRIPT</i>, apply <i>FUNCTION</i> to command-line arguments. Note that <i>FUNCTION</i> is evaluated, so, for example, <code>(@ (my-module) my-proc)</code> is valid here.</p>
-<dt><code>\</code></p>
-<dd> The &quot;meta switch&quot;, used to work around limitations in #! scripts. See &quot;The Meta Switch&quot; in the texinfo documentation for more details.</p>
-<dt><code>&#8212;</code></p>
-<dd> Stop argument processing, and start <code>guile</code> in interactive mode.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>EXPR</i></p>
-<dd> Stop argument processing, and evaluate <i>EXPR</i> as a Scheme expression.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>SCRIPT-FILE</i></p>
-<dd> Load Scheme source from <i>SCRIPT-FILE</i> and execute as a script. Note that in many cases it is not necessary to use <code>-s</code>; one may invoke <code>guile</code> simply as <code>guile</code> <i>SCRIPT-FILE ARG&#8230;</i></p>
-<dt><code>-ds</code></p>
-<dd> Carry out <code>-s </code><i>SCRIPT</i> at this point in the option sequence. Note that this argument must be used in conjunction with <code>-s</code>.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Start <code>guile</code> with the debugging VM. By default, debugging is on when <code>guile</code> is invoked interactively; it is off otherwise.</p>
-<dt><code>&#8211;no-debug</code></p>
-<dd> Start <code>guile</code> without the debugging VM, even if <code>guile</code> is being run interactively.</p>
-<dt><code>&#8211;auto-compile</code></p>
-<dd> Compile source files automatically (default behavior).</p>
-<dt><code>&#8211;no-autocompile</code></p>
-<dd> Disable automatic source file compilation.</p>
-<dt><code>&#8211;listen</code>[=<i>P</i>]</p>
-<dd> Listen on a port or socket for remote REPL connections. See the manual for more details.</p>
-<dt><code>&#8211;use-srfi</code>=<i>N,M</i>&#8230;</p>
-<dd> Load SRFI extensions <i>N</i>, <i>M</i>, etc. For example, <code> &#8211;use-srfi</code>=<i>8,13</i>.</p>
-<dt><code>-x</code><i>&nbsp;<wbr>EXTENSION</i></p>
-<dd> Add <i>EXTENSION</i> to the <code>guile</code> load extension list.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Describe command-line options and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display guile version and exit.</p>
-<dt><code>-q</code></p>
-<dd> In interactive mode, suppress loading the user&#8217;s initialization file, <i>~/.guile.</i></dl>
+<dt><code>-L</code><i>&nbsp;<wbr>DIRECTORY</i></dt>
+<dd> Add <i>DIRECTORY</i> to the front of Guile&#8217;s module load path.</dd>
+<dt><code>-l</code><i>&nbsp;<wbr>FILE</i></dt>
+<dd> Load Scheme source code from <i>FILE</i>.</dd>
+<dt><code>-e</code><i>&nbsp;<wbr>FUNCTION</i></dt>
+<dd> After reading <i>SCRIPT</i>, apply <i>FUNCTION</i> to command-line arguments. Note that <i>FUNCTION</i> is evaluated, so, for example, <code>(@ (my-module) my-proc)</code> is valid here.</dd>
+<dt><code>\</code></dt>
+<dd> The &quot;meta switch&quot;, used to work around limitations in #! scripts. See &quot;The Meta Switch&quot; in the texinfo documentation for more details.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Stop argument processing, and start <code>guile</code> in interactive mode.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>EXPR</i></dt>
+<dd> Stop argument processing, and evaluate <i>EXPR</i> as a Scheme expression.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>SCRIPT-FILE</i></dt>
+<dd> Load Scheme source from <i>SCRIPT-FILE</i> and execute as a script. Note that in many cases it is not necessary to use <code>-s</code>; one may invoke <code>guile</code> simply as <code>guile</code> <i>SCRIPT-FILE ARG&#8230;</i></dd>
+<dt><code>-ds</code></dt>
+<dd> Carry out <code>-s </code><i>SCRIPT</i> at this point in the option sequence. Note that this argument must be used in conjunction with <code>-s</code>.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Start <code>guile</code> with the debugging VM. By default, debugging is on when <code>guile</code> is invoked interactively; it is off otherwise.</dd>
+<dt><code>&#8211;no-debug</code></dt>
+<dd> Start <code>guile</code> without the debugging VM, even if <code>guile</code> is being run interactively.</dd>
+<dt><code>&#8211;auto-compile</code></dt>
+<dd> Compile source files automatically (default behavior).</dd>
+<dt><code>&#8211;no-autocompile</code></dt>
+<dd> Disable automatic source file compilation.</dd>
+<dt><code>&#8211;listen</code>[=<i>P</i>]</dt>
+<dd> Listen on a port or socket for remote REPL connections. See the manual for more details.</dd>
+<dt><code>&#8211;use-srfi</code>=<i>N,M</i>&#8230;</dt>
+<dd> Load SRFI extensions <i>N</i>, <i>M</i>, etc. For example, <code> &#8211;use-srfi</code>=<i>8,13</i>.</dd>
+<dt><code>-x</code><i>&nbsp;<wbr>EXTENSION</i></dt>
+<dd> Add <i>EXTENSION</i> to the <code>guile</code> load extension list.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Describe command-line options and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display guile version and exit.</dd>
+<dt><code>-q</code></dt>
+<dd> In interactive mode, suppress loading the user&#8217;s initialization file, <i>~/.guile.</i></dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>GUILE_LOAD_PATH</code></p>
-<dd> If $<code>GUILE_LOAD_PATH</code> is set before <code>guile</code> is started, its value is used to augment the path to search for Scheme files when loading. It should be a colon-separated list of directories, which will be prefixed to the default <code>%load-path.</code></p>
-<dt><code>GUILE_LOAD_COMPILED_PATH</code></p>
-<dd> If $<code>GUILE_LOAD_COMPILED_PATH</code> is set before <code>guile</code> is started, its value is used to augment the path to search for compiled Scheme files (.go files) when loading. It should be a colon-separated list of directories, which will be prefixed to the default <code>%load-compiled-path.</code></dl>
+<dt><code>GUILE_LOAD_PATH</code></dt>
+<dd> If $<code>GUILE_LOAD_PATH</code> is set before <code>guile</code> is started, its value is used to augment the path to search for Scheme files when loading. It should be a colon-separated list of directories, which will be prefixed to the default <code>%load-path.</code></dd>
+<dt><code>GUILE_LOAD_COMPILED_PATH</code></dt>
+<dd> If $<code>GUILE_LOAD_COMPILED_PATH</code> is set before <code>guile</code> is started, its value is used to augment the path to search for compiled Scheme files (.go files) when loading. It should be a colon-separated list of directories, which will be prefixed to the default <code>%load-compiled-path.</code></dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.guile</i></p>
-<dd> A Guile script that is executed before any other processing occurs. For example, the following <i>.guile</i> activates guile&#8217;s readline interface: </p>
+<dt><i>~/.guile</i></dt>
+<dd> A Guile script that is executed before any other processing occurs. For example, the following <i>.guile</i> activates guile&#8217;s readline interface: </dd>
 <dl>
 <dt>
-<dd> <code>(use-modules (ice-9 readline))</code></p>
+</dt><dd> <code>(use-modules (ice-9 readline))</code></dd>
 <dl>
 <dt>
-<dd> <code>(activate-readline)</code></dl>
+</dt><dd> <code>(activate-readline)</code></dd></dl>
 </dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for Guile is maintained as a Texinfo manual. If the <code>info</code> and <code>guile</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info guile</code></dl>
+</dt><dd> <code>info guile</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <p> <a rel="nofollow" href="http://www.schemers.org">http://www.schemers.org</a> provides a general introduction to the Scheme language.</p>
 <h2>REPORTING BUGS</h2>

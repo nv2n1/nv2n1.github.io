@@ -11,43 +11,26 @@ std::nth_element - std::nth_element
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void nth_element(RandomIt first, RandomIt nth, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void nth_element(RandomIt first, RandomIt nth, RandomIt last);
-
 template &lt;class ExecutionPolicy, class RandomIt&gt;
-
 void nth_element(ExecutionPolicy &amp;&amp;policy, (2)(since C++ 17)
-
                                                RandomIt first,
                  RandomIt nth, RandomIt last);
-
 template &lt;class RandomIt, class Compare&gt;
-
 void nth_element(RandomIt first, RandomIt nth, RandomIt last, (1)(until C++ 20)
-
                                                                   Compare comp);
-
 template &lt;class RandomIt, class Compare&gt;
-
 constexpr void nth_element(RandomIt first, RandomIt nth, RandomIt last, (3)(since C++ 20)
-
                                                                             Compare comp);
-
 template &lt;class ExecutionPolicy, class RandomIt, class Compare&gt;
-
 void nth_element(ExecutionPolicy &amp;&amp;policy, (4)(since C++ 17)
-
                                                RandomIt first,
                  RandomIt nth, RandomIt last,
-
                  Compare comp);</code></pre> 
 nth_element is a partial sorting algorithm that rearranges elements in [first, last) such that: 
 * The element pointed at by nth is changed to whatever element would occur in that position if [first, last) were sorted. 
@@ -102,14 +85,10 @@ The algorithm used is typically introselect although other selection_algorithms 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{5, 6, 4, 3, 2, 6, 7, 9, 3};
     std::nth_element(v.begin(), v.begin() + v.size() / 2, v.end());

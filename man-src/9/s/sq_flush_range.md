@@ -14,14 +14,14 @@ description: "sq_flush_range – Flush (prefetch) a specific SQ range"
 <p><i>start</i></p>
 <dl>
 <dd>
-<dd>the store queue address to start flushing from</dl>
+</dd><dd>the store queue address to start flushing from</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>the length to flush</dl>
+<dd>the length to flush</dd></dl>
 <h2>Description</h2>
 <p>Flushes the store queue cache from <i>start</i> to <i>start</i> + <i>len</i> in a linear fashion.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

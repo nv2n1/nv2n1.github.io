@@ -12,17 +12,17 @@ description: "rsports – Rose port configuration file."
 <p><code>Rsports</code> is an ASCII file that contains information about each of the Rose ports that are to be used. When dealing with a Rose utility such as <code>call,</code> it takes an optional argument that is the port name. This port name is a reference to the line within <code>rsports,</code> which has the same name. The information on each line contains enough information to bind the command to a particular Rose interface, this binding is done by matching the address on the line in <code>rsports</code> with the address of the port set by <code>ifconfig</code> or <code>rsattach.</code> </p>
 <p> The <code>rsports</code> file may contain comments that begin with a # in the first column, or a port description in the following format, each field being delimited by white space: </p>
 <dl>
-<dd>name address description</dl>
+<dd>name address description</dd></dl>
 <p> The field descriptions are: </p>
 <dl>
 <dd>
-<dl>
-<dt><code>name</code></p>
-<dd>this is the unique Rose port identifier.</p>
-<dt><code>address</code></p>
-<dd>the address of the Rose interface to bind to.</p>
-<dt><code>description</code></p>
-<dd>a free format description of this interface, this field extends to the end of the line. It may contain spaces.</dl>
+</dd><dl>
+<dt><code>name</code></dt>
+<dd>this is the unique Rose port identifier.</dd>
+<dt><code>address</code></dt>
+<dd>the address of the Rose interface to bind to.</dd>
+<dt><code>description</code></dt>
+<dd>a free format description of this interface, this field extends to the end of the line. It may contain spaces.</dd></dl>
 </dl>
 <h2>Files</h2>
 <p>/etc/ax25/rsports</p>

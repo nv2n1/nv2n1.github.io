@@ -13,26 +13,26 @@ description: "oath_totp_validate2_callback – API function"
 <p> <code>int oath_totp_validate2_callback(const char * </code><i>secret</i><code>, size_t </code><i>secret_length</i><code>, time_t </code><i>now</i><code>, unsigned </code><i>time_step_size</i><code>, time_t </code><i>start_offset</i><code>, unsigned </code><i>digits</i><code>, size_t </code><i>window</i><code>, int * </code><i>otp_pos</i><code>, oath_validate_strcmp_function </code><i>strcmp_otp</i><code>, void * </code><i>strcmp_handle</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>const char * secret</p>
-<dd> the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd> length of <i>secret</i></p>
-<dt>time_t now</p>
-<dd> Unix time value to compute TOTP for</p>
-<dt>unsigned time_step_size</p>
-<dd> time step system parameter (typically 30)</p>
-<dt>time_t start_offset</p>
-<dd> Unix time of when to start counting time steps (typically 0)</p>
-<dt>unsigned digits</p>
-<dd> number of requested digits in the OTP</p>
-<dt>size_t window</p>
-<dd> how many OTPs after start counter to test</p>
-<dt>int * otp_pos</p>
-<dd> output search position in search window (may be NULL).</p>
-<dt>oath_validate_strcmp_function strcmp_otp</p>
-<dd> function pointer to a strcmp-like function.</p>
-<dt>void * strcmp_handle</p>
-<dd> caller handle to be passed on to <i>strcmp_otp</i>.</dl>
+<dt>const char * secret</dt>
+<dd> the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd> length of <i>secret</i></dd>
+<dt>time_t now</dt>
+<dd> Unix time value to compute TOTP for</dd>
+<dt>unsigned time_step_size</dt>
+<dd> time step system parameter (typically 30)</dd>
+<dt>time_t start_offset</dt>
+<dd> Unix time of when to start counting time steps (typically 0)</dd>
+<dt>unsigned digits</dt>
+<dd> number of requested digits in the OTP</dd>
+<dt>size_t window</dt>
+<dd> how many OTPs after start counter to test</dd>
+<dt>int * otp_pos</dt>
+<dd> output search position in search window (may be NULL).</dd>
+<dt>oath_validate_strcmp_function strcmp_otp</dt>
+<dd> function pointer to a strcmp-like function.</dd>
+<dt>void * strcmp_handle</dt>
+<dd> caller handle to be passed on to <i>strcmp_otp</i>.</dd></dl>
 <h2>Description</h2>
 <p> Validate an OTP according to OATH TOTP algorithm per RFC 6238. </p>
 <p> Validation is implemented by generating a number of potential OTPs and performing a call to the <i>strcmp_otp</i> function, to compare the potential OTP against the given <i>otp</i>. It has the following prototype: </p>

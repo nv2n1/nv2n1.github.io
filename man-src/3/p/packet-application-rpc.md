@@ -98,14 +98,14 @@ RPC(
 <code>__init__(self, pktt, proto, state=True)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>pktt:</code>
-<dd>Packet trace object (packet.pktt.Pktt) so this layer has
+<dl><dl><dt><code>pktt:</code>
+</dt><dd>Packet trace object (packet.pktt.Pktt) so this layer has
 access to the parent layers.
-<dt><code>proto:</code>
-<dd>Transport layer protocol.
-<dt><code>state:</code>
-<dd>Save call state. [default: True]
-</dl></dl>
+</dd><dt><code>proto:</code>
+</dt><dd>Transport layer protocol.
+</dd><dt><code>state:</code>
+</dt><dd>Save call state. [default: True]
+</dd></dl></dl>
 <code>__nonzero__(self)</code>
 Truth value testing for the built-in operation bool()
 <code>__str__(self)</code>

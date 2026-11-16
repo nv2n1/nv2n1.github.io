@@ -15,7 +15,7 @@ pci_sriov_get_totalvfs - - get total VFs supported on this device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI PF device</dl>
+<dl><dd></dd><dd>the PCI PF device</dd></dl>
 
 <h2>Description</h2>
 

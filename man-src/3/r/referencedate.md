@@ -10,9 +10,6 @@ description: "QuantLib::SabrVolSurface – SABR volatility (smile) surface."
 <p>QuantLib::SabrVolSurface &#8211; <code>SABR</code> volatility (smile) surface. </p>
 <h2>Synopsis</h2>
 <pre><code>void performCalculations () const
-
-
-
 virtual void update ()</code></pre>
 <p> Inherits <code>QuantLib::InterestRateVolSurface</code>.</p>
 <h3>Public Member Functions</h3>
@@ -34,9 +31,6 @@ virtual void update ()</code></pre>
 <p>boost::array&lt; <code>Real</code>, 4 &gt; <code>sabrGuesses</code> (const <code>Date</code> &amp;) const<br />
  <code>LazyObject interface</code> </p>
 <pre><code>void performCalculations () const
-
-
-
 virtual void update ()</code></pre>
 <h2>Detailed Description</h2>
 <p><code>SABR</code> volatility (smile) surface. </p>

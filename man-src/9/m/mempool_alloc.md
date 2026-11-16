@@ -14,10 +14,10 @@ description: "mempool_alloc – allocate an element from a specific memory pool"
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dl>
+</dd><dd>pointer to the memory pool which was allocated via <code>mempool_create</code>.</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>the usual allocation bitmask.</dl>
+<dd>the usual allocation bitmask.</dd></dl>
 <h2>Description</h2>
 <p>this function only sleeps if the <code>alloc_fn</code> function sleeps or returns NULL. Note that due to preallocation, this function *never* fails when called from process contexts. (it might fail if called from an IRQ context.)</p>
 <h2>Note</h2>

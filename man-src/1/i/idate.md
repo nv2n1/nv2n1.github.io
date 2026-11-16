@@ -18,16 +18,16 @@ description: "idate – A Gregorian/Meladi to/from Hijri/Islamic date converter"
 <h2>OPTIONS</h2>
 <p> <code>idate</code> follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of all options is noted below:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options</p>
-<dt><code>-g, &#8211;gregorian </code><i>yyyymmdd</i></p>
-<dd> Specify the Gregorian date to be converted where &#8216;y&#8217; stands for year, &#8216;m&#8217; for month and &#8216;d&#8217; for day</p>
-<dt><code>-hi, &#8211;hijri </code><i>yyyymmdd</i></p>
-<dd> Specify the Hijri date to be converted where &#8216;y&#8217; stands for year, &#8216;m&#8217; for month and &#8216;d&#8217; for day</p>
-<dt><code>-s, &#8211;simple</code></p>
-<dd> Specify a simplified output mode</p>
-<dt><code>-u, &#8211;umm_alqura</code></p>
-<dd> Specify to use the Umm Al-Qura calculation method (used mostly in Saudi Arabia)</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options</dd>
+<dt><code>-g, &#8211;gregorian </code><i>yyyymmdd</i></dt>
+<dd> Specify the Gregorian date to be converted where &#8216;y&#8217; stands for year, &#8216;m&#8217; for month and &#8216;d&#8217; for day</dd>
+<dt><code>-hi, &#8211;hijri </code><i>yyyymmdd</i></dt>
+<dd> Specify the Hijri date to be converted where &#8216;y&#8217; stands for year, &#8216;m&#8217; for month and &#8216;d&#8217; for day</dd>
+<dt><code>-s, &#8211;simple</code></dt>
+<dd> Specify a simplified output mode</dd>
+<dt><code>-u, &#8211;umm_alqura</code></dt>
+<dd> Specify to use the Umm Al-Qura calculation method (used mostly in Saudi Arabia)</dd></dl>
 <h2>BACKGROUND</h2>
 <p> The Hijri calendar is used in most of the Arab world and is the symbolic calendar of the Islamic faithed worldwide. This calendar is known as the &quot;Hijri&quot; (based on the word &quot;Hijrah&quot; &#8211; denoting migration in Arabic) to signal Prophet Mohammed&#8217;s (PBUH) migration from Makkah to Medinah on Thursday, July 15, 622 AD (Julian) or July 19, 622 AD (Gregorian). </p>
 <p> The Islamic Hijri calendar is strictly lunar (ie. moon-based) with twelve lunar months which do not correspond or track their solar counterparts (the Gregorian calendar is a solar or sun-based calendar). Lunar years and thus Hijri years are, on average, about 354 days long resulting in a Hijri year being roughly about 11 days shorter than its Gregorian counterpart. </p>

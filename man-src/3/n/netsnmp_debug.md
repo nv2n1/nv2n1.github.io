@@ -10,40 +10,16 @@ description: "debug – Print out debugging information about the handler chain 
 <p>debug &#8211; Print out debugging information about the handler chain being called.</p>
 <h3>handler</h3>
 <pre><code>void netsnmp_init_serialize (void)
-
-
 initializes the serialize helper which then registers a serialize handler as a run-time injectable handler for configuration file use.
-
-
 void netsnmp_init_read_only_helper (void)
-
-
 initializes the read_only helper which then registers a read_only handler as a run-time injectable handler for configuration file use.
-
-
 void netsnmp_init_bulk_to_next_helper (void)
-
-
 initializes the bulk_to_next helper which then registers a bulk_to_next handler as a run-time injectable handler for configuration file use.
-
-
 void netsnmp_init_table_dataset (void)
-
-
-
 void netsnmp_init_stash_cache_helper (void)
-
-
 initializes the stash_cache helper which then registers a stash_cache handler as a run-time injectable handler for configuration file use.
-
-
 void netsnmp_init_helpers (void)
-
-
 call the initialization sequence for all handlers with init_ routines.
-
-
-
 Functions</code></pre>
 <p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_debug_handler</code> (void)<br />
  <i>returns a debug handler that can be injected into a given handler chain. </i><br />

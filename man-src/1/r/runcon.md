@@ -19,22 +19,22 @@ description: "runcon – run command with specified security context"
 <p> Run a program in a different SELinux security context. With neither CONTEXT nor COMMAND, print the current security context. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt>CONTEXT</p>
-<dd> Complete security context</p>
-<dt><code>-c</code>, <code>&#8211;compute</code></p>
-<dd> compute process transition context before modifying</p>
-<dt><code>-t</code>, <code>&#8211;type</code>=<i>,TYPE/</i></p>
-<dd> type (for same role as parent)</p>
-<dt><code>-u</code>, <code>&#8211;user</code>=<i>,USER/</i></p>
-<dd> user identity</p>
-<dt><code>-r</code>, <code>&#8211;role</code>=<i>,ROLE/</i></p>
-<dd> role</p>
-<dt><code>-l</code>, <code>&#8211;range</code>=<i>,RANGE/</i></p>
-<dd> levelrange</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt>CONTEXT</dt>
+<dd> Complete security context</dd>
+<dt><code>-c</code>, <code>&#8211;compute</code></dt>
+<dd> compute process transition context before modifying</dd>
+<dt><code>-t</code>, <code>&#8211;type</code>=<i>,TYPE/</i></dt>
+<dd> type (for same role as parent)</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>,USER/</i></dt>
+<dd> user identity</dd>
+<dt><code>-r</code>, <code>&#8211;role</code>=<i>,ROLE/</i></dt>
+<dd> role</dd>
+<dt><code>-l</code>, <code>&#8211;range</code>=<i>,RANGE/</i></dt>
+<dd> levelrange</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Russell Coker.</p>
 <h2>REPORTING BUGS</h2>

@@ -14,7 +14,7 @@ void
 <code>Tcl_SourceRCFile</code>(<i>interp</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter to source rc file into. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter to source rc file into. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_SourceRCFile</code> is used to source the Tcl rc file at startup. It is typically invoked by Tcl_Main or Tk_Main. The name of the file sourced is obtained from the global variable <code>tcl_rcFileName</code> in the interpreter given by <i>interp</i>. If this variable is not defined, or if the file it indicates cannot be found, no action is taken. </p>

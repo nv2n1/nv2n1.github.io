@@ -10,20 +10,14 @@ description: "std::is_destructible,std::is_trivially_destructible,std::is_nothro
 <p>std::is_destructible,std::is_trivially_destructible,std::is_nothrow_destructible &#8211; std::is_destructible,std::is_trivially_destructible,std::is_nothrow_destructible</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct is_destructible;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct is_trivially_destructible;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_destructible;
 </code></pre>
 <p>1) If an imaginary struct containing a member object of type T has a non-deleted destructor, provides the member constant value equal true. For any other type, value is false. <i>(until C++14)</i><br />
@@ -61,20 +55,15 @@ Storage occupied by trivially destructible objects may_be_reused without calling
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;type_traits&gt;
-
 struct Foo {
     std::string str;
     ~Foo() noexcept {};
 };
-
 struct Bar {
     ~Bar() = default;
 };
-
 int main()
 {
     std::cout &lt;&lt; std::boolalpha

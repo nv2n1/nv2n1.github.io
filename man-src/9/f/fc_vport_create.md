@@ -14,20 +14,20 @@ description: "fc_vport_create – Admin App or LLDD requests creation of a vport
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>scsi host the virtual port is connected to.</dl>
+</dd><dd>scsi host the virtual port is connected to.</dd></dl>
 <p> <i>channel</i></p>
 <dl>
-<dd>channel on shost port connected to.</dl>
+<dd>channel on shost port connected to.</dd></dl>
 <p> <i>ids</i></p>
 <dl>
-<dd>The world wide names, FC4 port roles, etc for the virtual port.</dl>
+<dd>The world wide names, FC4 port roles, etc for the virtual port.</dd></dl>
 <h2>Notes</h2>
 <p>This routine assumes no locks are held on entry.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -1276,73 +1276,73 @@ source -e echo help
 <p> There is also a system-wide startup file in <i>/etc/l<a href="ftp://ftp.conf">ftp.conf</a></i>. It can be in different directory, see FILES section. </p>
 <p> <code>lftp</code> has the following settable variables (you can also use `set -a&#8217; to see all variables and their values):</p>
 <dl>
-<dt><code>bmk:save-passwords</code>&nbsp;(boolean)</p>
-<dd> save plain text passwords in <i>~/.local/share/lftp/bookmarks</i> or <i>~/.lftp/bookmarks</i> on `bookmark add&#8217; command. Off by default.</p>
-<dt><code>cache:cache-empty-listings</code>&nbsp;(boolean)</p>
-<dd> When false, empty listings are not cached.</p>
-<dt><code>cache:enable</code>&nbsp;(boolean)</p>
-<dd> When false, cache is disabled.</p>
-<dt><code>cache:expire</code> (time interval)</p>
-<dd> Positive cache entries expire in this time interval.</p>
-<dt><code>cache:expire-negative</code> (time interval)</p>
-<dd> Negative cache entries expire in this time interval.</p>
-<dt><code>cache:size</code> (number)</p>
-<dd> Maximum cache size. When exceeded, oldest cache entries will be removed from cache.</p>
-<dt><code>cmd:at-exit</code>&nbsp;(string)</p>
-<dd> the commands in string are executed before lftp exits or moves to background.</p>
-<dt><code>cmd:at-exit-bg</code>&nbsp;(string)</p>
-<dd> the commands in string are executed before backgrounded lftp exits.</p>
-<dt><code>cmd:at-exit-fg</code>&nbsp;(string)</p>
-<dd> the commands in string are executed before foreground lftp exits.</p>
-<dt><code>cmd:at-background</code>&nbsp;(string)</p>
-<dd> the commands in string are executed before lftp moves to background.</p>
-<dt><code>cmd:at-terminate</code>&nbsp;(string)</p>
-<dd> the commands in string are executed before lftp terminates (either backgrounded or foreground).</p>
-<dt><code>cmd:at-finish</code>&nbsp;(string)</p>
-<dd> the commands in string are executed once when all jobs are done.</p>
-<dt><code>cmd:at-queue-finish</code>&nbsp;(string)</p>
-<dd> the commands in string are executed once when all jobs in a queue are done.</p>
-<dt><code>cmd:cls-completion-default</code>&nbsp;(string)</p>
-<dd> default <code>cls</code> options for displaying completion choices. For example, to make completion listings show file sizes, set cmd:cls-completion-default to `-s&#8217;.</p>
-<dt><code>cmd:cls-default</code>&nbsp;(string)</p>
-<dd> default <code>cls</code> command options. They can be overridden by explicitly given options.</p>
-<dt><code>cmd:cls-exact-time</code>&nbsp;(boolean)</p>
-<dd> when true, <code>cls</code> would try to get exact file modification time even if it means more requests to the server.</p>
-<dt><code>cmd:csh-history</code>&nbsp;(boolean)</p>
-<dd> enables csh-like history expansion.</p>
-<dt><code>cmd:default-protocol</code>&nbsp;(string)</p>
-<dd> The value is used when `open&#8217; is used with just host name without protocol. Default is `ftp&#8217;.</p>
-<dt><code>cmd:fail-exit</code>&nbsp;(boolean)</p>
-<dd> if true, exit when a command fails and the following command is unconditional (i.e. does not begin with || or &amp;&amp;). lftp exits after the unconditional command is issued without executing it.</p>
-<dt><code>cmd:interactive</code>&nbsp;(tri-boolean)</p>
-<dd> when true, lftp acts interactively, handles terminal signals and outputs some extra messages. Default is auto and depends on stdin being a terminal.</p>
-<dt><code>cmd:long-running</code>&nbsp;(seconds)</p>
-<dd> time of command execution, which is considered as `long&#8217; and a beep is done before next prompt. 0 means off.</p>
-<dt><code>cmd:ls-default</code>&nbsp;(string)</p>
-<dd> default ls argument</p>
-<dt><code>cmd:move-background</code> (boolean)</p>
-<dd> when false, lftp refuses to go to background when exiting. To force it, use `exit bg&#8217;.</p>
-<dt><code>cmd:move-background-detach</code> (boolean)</p>
-<dd> when true (default), lftp detaches itself from the control terminal when moving to background, it is possible to attach back using `attach&#8217; command; when false, lftp tricks the shell to move lftp to background process group and continues to run, then fg shell command brings lftp back to foreground unless it has done all jobs and terminated.</p>
-<dt><code>cmd:prompt</code>&nbsp;(string)</p>
-<dd> The prompt. lftp recognizes the following backslash-escaped special characters that are decoded as follows:</p>
+<dt><code>bmk:save-passwords</code>&nbsp;(boolean)</dt>
+<dd> save plain text passwords in <i>~/.local/share/lftp/bookmarks</i> or <i>~/.lftp/bookmarks</i> on `bookmark add&#8217; command. Off by default.</dd>
+<dt><code>cache:cache-empty-listings</code>&nbsp;(boolean)</dt>
+<dd> When false, empty listings are not cached.</dd>
+<dt><code>cache:enable</code>&nbsp;(boolean)</dt>
+<dd> When false, cache is disabled.</dd>
+<dt><code>cache:expire</code> (time interval)</dt>
+<dd> Positive cache entries expire in this time interval.</dd>
+<dt><code>cache:expire-negative</code> (time interval)</dt>
+<dd> Negative cache entries expire in this time interval.</dd>
+<dt><code>cache:size</code> (number)</dt>
+<dd> Maximum cache size. When exceeded, oldest cache entries will be removed from cache.</dd>
+<dt><code>cmd:at-exit</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed before lftp exits or moves to background.</dd>
+<dt><code>cmd:at-exit-bg</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed before backgrounded lftp exits.</dd>
+<dt><code>cmd:at-exit-fg</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed before foreground lftp exits.</dd>
+<dt><code>cmd:at-background</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed before lftp moves to background.</dd>
+<dt><code>cmd:at-terminate</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed before lftp terminates (either backgrounded or foreground).</dd>
+<dt><code>cmd:at-finish</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed once when all jobs are done.</dd>
+<dt><code>cmd:at-queue-finish</code>&nbsp;(string)</dt>
+<dd> the commands in string are executed once when all jobs in a queue are done.</dd>
+<dt><code>cmd:cls-completion-default</code>&nbsp;(string)</dt>
+<dd> default <code>cls</code> options for displaying completion choices. For example, to make completion listings show file sizes, set cmd:cls-completion-default to `-s&#8217;.</dd>
+<dt><code>cmd:cls-default</code>&nbsp;(string)</dt>
+<dd> default <code>cls</code> command options. They can be overridden by explicitly given options.</dd>
+<dt><code>cmd:cls-exact-time</code>&nbsp;(boolean)</dt>
+<dd> when true, <code>cls</code> would try to get exact file modification time even if it means more requests to the server.</dd>
+<dt><code>cmd:csh-history</code>&nbsp;(boolean)</dt>
+<dd> enables csh-like history expansion.</dd>
+<dt><code>cmd:default-protocol</code>&nbsp;(string)</dt>
+<dd> The value is used when `open&#8217; is used with just host name without protocol. Default is `ftp&#8217;.</dd>
+<dt><code>cmd:fail-exit</code>&nbsp;(boolean)</dt>
+<dd> if true, exit when a command fails and the following command is unconditional (i.e. does not begin with || or &amp;&amp;). lftp exits after the unconditional command is issued without executing it.</dd>
+<dt><code>cmd:interactive</code>&nbsp;(tri-boolean)</dt>
+<dd> when true, lftp acts interactively, handles terminal signals and outputs some extra messages. Default is auto and depends on stdin being a terminal.</dd>
+<dt><code>cmd:long-running</code>&nbsp;(seconds)</dt>
+<dd> time of command execution, which is considered as `long&#8217; and a beep is done before next prompt. 0 means off.</dd>
+<dt><code>cmd:ls-default</code>&nbsp;(string)</dt>
+<dd> default ls argument</dd>
+<dt><code>cmd:move-background</code> (boolean)</dt>
+<dd> when false, lftp refuses to go to background when exiting. To force it, use `exit bg&#8217;.</dd>
+<dt><code>cmd:move-background-detach</code> (boolean)</dt>
+<dd> when true (default), lftp detaches itself from the control terminal when moving to background, it is possible to attach back using `attach&#8217; command; when false, lftp tricks the shell to move lftp to background process group and continues to run, then fg shell command brings lftp back to foreground unless it has done all jobs and terminated.</dd>
+<dt><code>cmd:prompt</code>&nbsp;(string)</dt>
+<dd> The prompt. lftp recognizes the following backslash-escaped special characters that are decoded as follows:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>\@</code></p>
-<dd> insert @ if the current remote site user is not default</p>
-<dt><code></code></p>
-<dd> an ASCII bell character (07)</p>
-<dt><code></code></p>
-<dd> an ASCII escape character (033)</p>
-<dt><code>\h</code></p>
-<dd> the remote hostname you are connected to</p>
+<dt><code>\@</code></dt>
+<dd> insert @ if the current remote site user is not default</dd>
+<dt><code></code></dt>
+<dd> an ASCII bell character (07)</dd>
+<dt><code></code></dt>
+<dd> an ASCII escape character (033)</dd>
+<dt><code>\h</code></dt>
+<dd> the remote hostname you are connected to</dd>
 <dt><code>
-</code></p>
-<dd> newline</p>
-<dt><code>\s</code></p>
-<dd> the name of the client (lftp)</p>
-<dt><code>\S</code></p>
-<dd> current slot name</p>
+</code></dt>
+<dd> newline</dd>
+<dt><code>\s</code></dt>
+<dd> the name of the client (lftp)</dd>
+<dt><code>\S</code></dt>
+<dd> current slot name</dd>
 <dt><code>
+</dt></dl></dl></dl>
+</code>

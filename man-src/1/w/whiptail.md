@@ -16,68 +16,68 @@ description: "whiptail – display dialog boxes from shell scripts"
 <p> <code>yes/no</code> box,<code> menu</code> box,<code> input</code> box, <code>message</code> box,<code> text</code> box,<code> info</code> box, <code>checklist</code> box,<code> radiolist</code> box<code>, gauge</code> box, and <code>password</code> box.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;clear</code></p>
-<dd> The screen will be cleared to the <code>screen attribute</code> on exit. This doesn&#8217;t work in an xterm (and descendants) if alternate screen switching is enabled, because in that case slang writes to (and clears) an alternate screen.</p>
-<dt><code>&#8211;defaultno</code></p>
-<dd> The dialog box will open with the cursor over the <code>No</code> button.</p>
-<dt><code>&#8211;default-item</code><i> string</i></p>
-<dd> Set the default item in a menu box. Normally the first item in the box is the default.</p>
-<dt><code>&#8211;fb</code>, <code>&#8211;fullbuttons</code></p>
-<dd> Use full buttons. (By default, <code>whiptail</code> uses compact buttons).</p>
-<dt><code>&#8211;nocancel</code></p>
-<dd> The dialog box won&#8217;t have a <code>Cancel</code> button.</p>
-<dt><code>&#8211;yes-button</code><i> text</i></p>
-<dd> Set the text of the <code>Yes</code> button.</p>
-<dt><code>&#8211;no-button</code><i> text</i></p>
-<dd> Set the text of the <code>No</code> button.</p>
-<dt><code>&#8211;ok-button</code><i> text</i></p>
-<dd> Set the text of the <code>Ok</code> button.</p>
-<dt><code>&#8211;cancel-button</code><i> text</i></p>
-<dd> Set the text of the <code>Cancel</code> button.</p>
-<dt><code>&#8211;noitem</code></p>
-<dd> The menu, checklist and radiolist widgets will display tags only, not the item strings. The menu widget still needs some items specified, but checklist and radiolist expect only tag and status.</p>
-<dt><code>&#8211;notags</code></p>
-<dd> Don&#8217;t display tags in the menu, checklist and radiolist widgets.</p>
-<dt><code>&#8211;separate-output</code></p>
-<dd> For checklist widgets, output result one line at a time, with no quoting. This facilitates parsing by another program.</p>
-<dt><code>&#8211;output-fd</code><i> fd</i></p>
-<dd> Direct output to the given file descriptor. Most <code>whiptail</code> scripts write to standard error, but error messages may also be written there, depending on your script.</p>
-<dt><code>&#8211;title</code><i> title</i></p>
-<dd> Specifies a <i>title</i> string to be displayed at the top of the dialog box.</p>
-<dt><code>&#8211;backtitle</code><i> backtitle</i></p>
-<dd> Specifies a <i>backtitle</i> string to be displayed on the backdrop, at the top of the screen.</p>
-<dt><code>&#8211;scrolltext</code></p>
-<dd> Force the display of a vertical scrollbar.</p>
-<dt><code>&#8211;topleft</code></p>
-<dd> Put window in top-left corner.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>Box Options</code></p>
+<dt><code>&#8211;clear</code></dt>
+<dd> The screen will be cleared to the <code>screen attribute</code> on exit. This doesn&#8217;t work in an xterm (and descendants) if alternate screen switching is enabled, because in that case slang writes to (and clears) an alternate screen.</dd>
+<dt><code>&#8211;defaultno</code></dt>
+<dd> The dialog box will open with the cursor over the <code>No</code> button.</dd>
+<dt><code>&#8211;default-item</code><i> string</i></dt>
+<dd> Set the default item in a menu box. Normally the first item in the box is the default.</dd>
+<dt><code>&#8211;fb</code>, <code>&#8211;fullbuttons</code></dt>
+<dd> Use full buttons. (By default, <code>whiptail</code> uses compact buttons).</dd>
+<dt><code>&#8211;nocancel</code></dt>
+<dd> The dialog box won&#8217;t have a <code>Cancel</code> button.</dd>
+<dt><code>&#8211;yes-button</code><i> text</i></dt>
+<dd> Set the text of the <code>Yes</code> button.</dd>
+<dt><code>&#8211;no-button</code><i> text</i></dt>
+<dd> Set the text of the <code>No</code> button.</dd>
+<dt><code>&#8211;ok-button</code><i> text</i></dt>
+<dd> Set the text of the <code>Ok</code> button.</dd>
+<dt><code>&#8211;cancel-button</code><i> text</i></dt>
+<dd> Set the text of the <code>Cancel</code> button.</dd>
+<dt><code>&#8211;noitem</code></dt>
+<dd> The menu, checklist and radiolist widgets will display tags only, not the item strings. The menu widget still needs some items specified, but checklist and radiolist expect only tag and status.</dd>
+<dt><code>&#8211;notags</code></dt>
+<dd> Don&#8217;t display tags in the menu, checklist and radiolist widgets.</dd>
+<dt><code>&#8211;separate-output</code></dt>
+<dd> For checklist widgets, output result one line at a time, with no quoting. This facilitates parsing by another program.</dd>
+<dt><code>&#8211;output-fd</code><i> fd</i></dt>
+<dd> Direct output to the given file descriptor. Most <code>whiptail</code> scripts write to standard error, but error messages may also be written there, depending on your script.</dd>
+<dt><code>&#8211;title</code><i> title</i></dt>
+<dd> Specifies a <i>title</i> string to be displayed at the top of the dialog box.</dd>
+<dt><code>&#8211;backtitle</code><i> backtitle</i></dt>
+<dd> Specifies a <i>backtitle</i> string to be displayed on the backdrop, at the top of the screen.</dd>
+<dt><code>&#8211;scrolltext</code></dt>
+<dd> Force the display of a vertical scrollbar.</dd>
+<dt><code>&#8211;topleft</code></dt>
+<dd> Put window in top-left corner.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>Box Options</code></dt>
 <dd>
-<dt><code>&#8211;yesno</code><i> text height width</i></p>
+</dd><dt><code>&#8211;yesno</code><i> text height width</i></dt>
 <dd> A<code> yes/no</code> dialog box of size <i>height</i> rows by <i>width</i> columns will be displayed. The string specified by <i>text</i> is displayed inside the dialog box. If this string is too long to be fit in one line, it will be automatically divided into multiple lines at appropriate places. The <i>text</i> string may also contain the sub-string <i>&quot;
 &quot;</i> or newline characters <i>`
-&#8217;</i> to control line breaking explicitly. This dialog box is useful for asking questions that require the user to answer either yes or no. The dialog box has a<code> Yes</code> button and a <code>No</code> button, in which the user can switch between by pressing the <i>TAB</i> key.</p>
-<dt><code>&#8211;msgbox</code><i> text height width</i></p>
-<dd> A<code> message</code> box is very similar to a<code> yes/no</code> box. The only difference between a <code>message</code> box and a <code>yes/no</code> box is that a <code>message</code> box has only a single <code>OK</code> button. You can use this dialog box to display any message you like. After reading the message, the user can press the <i>ENTER</i> key so that <code>whiptail</code> will exit and the calling shell script can continue its operation.</p>
-<dt><code>&#8211;infobox</code><i> text height width</i></p>
-<dd> An<code> info</code> box is basically a<code> message</code> box. However, in this case, <code>whiptail</code> will exit immediately after displaying the message to the user. The screen is not cleared when <code>whiptail</code> exits, so that the message will remain on the screen until the calling shell script clears it later. This is useful when you want to inform the user that some operations are carrying on that may require some time to finish.</p>
-<dt><code>&#8211;inputbox</code><i> text height width [init]</i></p>
-<dd> An <code>input</code> box is useful when you want to ask questions that require the user to input a string as the answer. If init is supplied it is used to initialize the input string. When inputing the string, the <i>BACKSPACE</i> key can be used to correct typing errors. If the input string is longer than the width of the dialog box, the input field will be scrolled. On exit, the input string will be printed on <i>stderr</i>.</p>
-<dt><code>&#8211;passwordbox</code><i> text height width [init]</i></p>
-<dd> A <code>password</code> box is similar to an input box, except the text the user enters is not displayed. This is useful when prompting for passwords or other sensitive information. Be aware that if anything is passed in &quot;init&quot;, it will be visible in the system&#8217;s process table to casual snoopers. Also, it is very confusing to the user to provide them with a default password they cannot see. For these reasons, using &quot;init&quot; is highly discouraged.</p>
-<dt><code>&#8211;textbox</code><i> file height width</i></p>
-<dd> A<code> text</code> box lets you display the contents of a text file in a dialog box. It is like a simple text file viewer. The user can move through the file by using the <i>UP/DOWN</i>, <i>PGUP/PGDN</i> and<i> HOME/END</i> keys available on most keyboards. If the lines are too long to be displayed in the box, the <i>LEFT/RIGHT</i> keys can be used to scroll the text region horizontally. For more convenience, forward and backward searching functions are also provided.</p>
-<dt><code>&#8211;menu </code><i>text height width menu-height </i>[ <i>tag item </i>] <i>&#8230;</p>
-<dd> As its name suggests, a </i><code>menu</code> box is a dialog box that can be used to present a list of choices in the form of a menu for the user to choose. Each menu entry consists of a <i>tag</i> string and an <i>item</i> string. The <i>tag</i> gives the entry a name to distinguish it from the other entries in the menu. The <i>item</i> is a short description of the option that the entry represents. The user can move between the menu entries by pressing the <i>UP/DOWN</i> keys, the first letter of the <i>tag</i> as a hot-key. There are <i>menu-height</i> entries displayed in the menu at one time, but the menu will be scrolled if there are more entries than that. When <code>whiptail</code> exits, the <i>tag</i> of the chosen menu entry will be printed on <i>stderr</i>.</p>
-<dt><code>&#8211;checklist </code><i>text height width list-height </i>[ <i>tag item status </i>] <i>&#8230;</p>
-<dd> </i>A <code>checklist</code> box is similar to a <code>menu</code> box in that there are multiple entries presented in the form of a menu. You can select and deselect items using the SPACE key. The initial on/off state of each entry is specified by <i>status</i>. On exit, a list of the <i>tag</i> strings of those entries that are turned on will be printed on <i>stderr</i>. </p>
-<dt><code>&#8211;radiolist </code><i>text height width list-height </i> [ <i>tag item status </i>] <i>&#8230;</p>
-<dd> </i>A <code>radiolist</code> box is similar to a <code>menu</code> box. The only difference is that you can indicate which entry is currently selected, by setting its <i>status</i> to <i>on</i>. </p>
-<dt><code>&#8211;gauge </code><i>text height width percent</i></p>
-<dd> A <code>gauge</code> box displays a meter along the bottom of the box. The meter indicates a percentage. New percentages are read from standard input, one integer per line. The meter is updated to reflect each new percentage. If stdin is XXX, the first following line is a percentage and subsequent lines up to another XXX are used for a new prompt. The gauge exits when EOF is reached on stdin. </p>
+&#8217;</i> to control line breaking explicitly. This dialog box is useful for asking questions that require the user to answer either yes or no. The dialog box has a<code> Yes</code> button and a <code>No</code> button, in which the user can switch between by pressing the <i>TAB</i> key.</dd>
+<dt><code>&#8211;msgbox</code><i> text height width</i></dt>
+<dd> A<code> message</code> box is very similar to a<code> yes/no</code> box. The only difference between a <code>message</code> box and a <code>yes/no</code> box is that a <code>message</code> box has only a single <code>OK</code> button. You can use this dialog box to display any message you like. After reading the message, the user can press the <i>ENTER</i> key so that <code>whiptail</code> will exit and the calling shell script can continue its operation.</dd>
+<dt><code>&#8211;infobox</code><i> text height width</i></dt>
+<dd> An<code> info</code> box is basically a<code> message</code> box. However, in this case, <code>whiptail</code> will exit immediately after displaying the message to the user. The screen is not cleared when <code>whiptail</code> exits, so that the message will remain on the screen until the calling shell script clears it later. This is useful when you want to inform the user that some operations are carrying on that may require some time to finish.</dd>
+<dt><code>&#8211;inputbox</code><i> text height width [init]</i></dt>
+<dd> An <code>input</code> box is useful when you want to ask questions that require the user to input a string as the answer. If init is supplied it is used to initialize the input string. When inputing the string, the <i>BACKSPACE</i> key can be used to correct typing errors. If the input string is longer than the width of the dialog box, the input field will be scrolled. On exit, the input string will be printed on <i>stderr</i>.</dd>
+<dt><code>&#8211;passwordbox</code><i> text height width [init]</i></dt>
+<dd> A <code>password</code> box is similar to an input box, except the text the user enters is not displayed. This is useful when prompting for passwords or other sensitive information. Be aware that if anything is passed in &quot;init&quot;, it will be visible in the system&#8217;s process table to casual snoopers. Also, it is very confusing to the user to provide them with a default password they cannot see. For these reasons, using &quot;init&quot; is highly discouraged.</dd>
+<dt><code>&#8211;textbox</code><i> file height width</i></dt>
+<dd> A<code> text</code> box lets you display the contents of a text file in a dialog box. It is like a simple text file viewer. The user can move through the file by using the <i>UP/DOWN</i>, <i>PGUP/PGDN</i> and<i> HOME/END</i> keys available on most keyboards. If the lines are too long to be displayed in the box, the <i>LEFT/RIGHT</i> keys can be used to scroll the text region horizontally. For more convenience, forward and backward searching functions are also provided.</dd>
+<dt><code>&#8211;menu </code><i>text height width menu-height </i>[ <i>tag item </i>] <i>&#8230;</dt>
+<dd> As its name suggests, a </i><code>menu</code> box is a dialog box that can be used to present a list of choices in the form of a menu for the user to choose. Each menu entry consists of a <i>tag</i> string and an <i>item</i> string. The <i>tag</i> gives the entry a name to distinguish it from the other entries in the menu. The <i>item</i> is a short description of the option that the entry represents. The user can move between the menu entries by pressing the <i>UP/DOWN</i> keys, the first letter of the <i>tag</i> as a hot-key. There are <i>menu-height</i> entries displayed in the menu at one time, but the menu will be scrolled if there are more entries than that. When <code>whiptail</code> exits, the <i>tag</i> of the chosen menu entry will be printed on <i>stderr</i>.</dd>
+<dt><code>&#8211;checklist </code><i>text height width list-height </i>[ <i>tag item status </i>] <i>&#8230;</dt>
+<dd> </i>A <code>checklist</code> box is similar to a <code>menu</code> box in that there are multiple entries presented in the form of a menu. You can select and deselect items using the SPACE key. The initial on/off state of each entry is specified by <i>status</i>. On exit, a list of the <i>tag</i> strings of those entries that are turned on will be printed on <i>stderr</i>. </dd>
+<dt><code>&#8211;radiolist </code><i>text height width list-height </i> [ <i>tag item status </i>] <i>&#8230;</dt>
+<dd> </i>A <code>radiolist</code> box is similar to a <code>menu</code> box. The only difference is that you can indicate which entry is currently selected, by setting its <i>status</i> to <i>on</i>. </dd>
+<dt><code>&#8211;gauge </code><i>text height width percent</i></dt>
+<dd> A <code>gauge</code> box displays a meter along the bottom of the box. The meter indicates a percentage. New percentages are read from standard input, one integer per line. The meter is updated to reflect each new percentage. If stdin is XXX, the first following line is a percentage and subsequent lines up to another XXX are used for a new prompt. The gauge exits when EOF is reached on stdin. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> whiptail interprets arguments starting with a dash &quot;-&quot; as being arguments. To avoid this, and start some text in, for example, a menubox item, with a dash, whiptail honours the getopt convention of accepting the special argument &quot;&#8211;&quot; which means that all following arguments with dashes are to be treated verbatim and not parsed as options.</p>

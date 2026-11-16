@@ -27,57 +27,57 @@ description: "glite-lb-notify – Register and receive notification from L&B"
 <h2>USAGE</h2>
 <p> Common options (mostly)</p>
 <dl>
-<dt><code>-t</code></p>
-<dd> specifies a requested validity of the notification (in seconds of UNIX Epoch), the server can truncate the value according to its policy.</p>
-<dt><code>-a</code></p>
-<dd> allows to specify a fake listener address to register with the notification, i.e. to overcome firewalls etc. When notifications are delivered, the server tries to connect to this address rather than the true address of the listening socket. Requires re-binding therefore it can&#8217;t be used in conjunction with <code>-s</code></p>
-<dt><code>-s</code></p>
-<dd> allows to pass a opened listening socket (filedescriptor number), see EXAMPLE bellow. In this case there is no need to re-bind the notification (it is assumed the socket is recycled) This is critical for a real usage, as the re-bind operation is rather expensive. </p>
+<dt><code>-t</code></dt>
+<dd> specifies a requested validity of the notification (in seconds of UNIX Epoch), the server can truncate the value according to its policy.</dd>
+<dt><code>-a</code></dt>
+<dd> allows to specify a fake listener address to register with the notification, i.e. to overcome firewalls etc. When notifications are delivered, the server tries to connect to this address rather than the true address of the listening socket. Requires re-binding therefore it can&#8217;t be used in conjunction with <code>-s</code></dd>
+<dt><code>-s</code></dt>
+<dd> allows to pass a opened listening socket (filedescriptor number), see EXAMPLE bellow. In this case there is no need to re-bind the notification (it is assumed the socket is recycled) This is critical for a real usage, as the re-bind operation is rather expensive. </dd>
 </dl>
 <h2>&nbsp;<wbr></h2>
 <p> Subcommands:</p>
 <dl>
-<dt><code>new</code></p>
-<dd> Create a new notification. Conditions on matching jobs are specified with exacltly one of <code>-j</code>, <code>-o</code>, <code>-n,</code> <code>-v</code> options. If the option <code>-O</code> is used, credentials are retrieved from environment. The <code>-c</code> set matching only on state change. Prints ID of the created notification. </p>
-<dt><code>bind</code></p>
+<dt><code>new</code></dt>
+<dd> Create a new notification. Conditions on matching jobs are specified with exacltly one of <code>-j</code>, <code>-o</code>, <code>-n,</code> <code>-v</code> options. If the option <code>-O</code> is used, credentials are retrieved from environment. The <code>-c</code> set matching only on state change. Prints ID of the created notification. </dd>
+<dt><code>bind</code></dt>
 <dd>
 <p> Binds to an existing notification, changing its listener eventually. Useful for debugging purposes mostly. </p>
-<dt><code>change</code></p>
+</dd><dt><code>change</code></dt>
 <dd>
 <p> Connect notification with another job. </p>
-<dt><code>refresh</code></p>
+</dd><dt><code>refresh</code></dt>
 <dd>
 <p> Extend validity of an existing notification. </p>
-<dt><code>receive</code></p>
+</dd><dt><code>receive</code></dt>
 <dd>
 <p> Bind to an existing notification, and start waiting for an incoming event, at most the time specified with <code>-i</code> (seconds). <code>-r</code> attempts to refresh the notification handle in 1/2 of current validity. <code>-f</code> allows to specify a custom list of fields of the job status to display. Run <code>glite-lb-notify</code> to get list of available fields. </p>
-<dt><code>drop</code></p>
+</dd><dt><code>drop</code></dt>
 <dd>
 <p> Drop the notification from the server, removing all messages on the way eventually. </p>
-</dl>
+</dd></dl>
 <h2>&nbsp;<wbr></h2>
 <p> Options for the <code>new</code> subcommand:</p>
 <dl>
-<dt><code>-o</code></p>
-<dd> match on events for jobs belonging to the given <i>DN</i>.</p>
-<dt><code>-O</code></p>
-<dd> match on events for jobs belonging to the current user.</p>
-<dt><code>-v</code></p>
-<dd> match on events for jobs belonging to users from the given <i>VO</i>.</p>
-<dt><code>-c</code></p>
-<dd> match only if job state has actually changed. Notification messages won&#8217;t be sent for events that do not trigger job state change.</p>
-<dt><code>-S</code></p>
-<dd> match only on jobs in certain <i>states</i> listed in a comma-separated list.</p>
-<dt><code>-J</code></p>
-<dd> pack JDL with the job status structure.</p>
-<dt><code>-B</code></p>
-<dd> bootstrap &#8212; send past events matching conditions.</p>
-<dt><code>-T</code></p>
-<dd> match only on reaching a terminal state.</p>
-<dt><code>-H</code></p>
-<dd> match only on reaching a terminal state and pack all events for that job.</p>
-<dt><code>-N</code></p>
-<dd> anonymize all owner data in all messages under this registration. </p>
+<dt><code>-o</code></dt>
+<dd> match on events for jobs belonging to the given <i>DN</i>.</dd>
+<dt><code>-O</code></dt>
+<dd> match on events for jobs belonging to the current user.</dd>
+<dt><code>-v</code></dt>
+<dd> match on events for jobs belonging to users from the given <i>VO</i>.</dd>
+<dt><code>-c</code></dt>
+<dd> match only if job state has actually changed. Notification messages won&#8217;t be sent for events that do not trigger job state change.</dd>
+<dt><code>-S</code></dt>
+<dd> match only on jobs in certain <i>states</i> listed in a comma-separated list.</dd>
+<dt><code>-J</code></dt>
+<dd> pack JDL with the job status structure.</dd>
+<dt><code>-B</code></dt>
+<dd> bootstrap &#8212; send past events matching conditions.</dd>
+<dt><code>-T</code></dt>
+<dd> match only on reaching a terminal state.</dd>
+<dt><code>-H</code></dt>
+<dd> match only on reaching a terminal state and pack all events for that job.</dd>
+<dt><code>-N</code></dt>
+<dd> anonymize all owner data in all messages under this registration. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Installed with the package as share/examples/glite-lb-notify.pl. Demontstrates using the non-trivial <code>-s</code> option. </p>

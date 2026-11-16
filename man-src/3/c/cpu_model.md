@@ -17,19 +17,15 @@ description: "cpu_model – Contains the Intel CPU submodel. Allegro game progra
 <pre>
    CPU_FAMILY_I586:
       CPU_MODEL_PENTIUM, CPU_MODEL_K5, CPU_MODEL_K6
-   
    CPU_FAMILY_I686:
       CPU_MODEL_PENTIUMPRO, CPU_MODEL_PENTIUMII,
       CPU_MODEL_PENTIUMIIIKATMAI, CPU_MODEL_PENTIUMIIICOPPERMINE,
       CPU_MODEL_ATHLON, CPU_MODEL_DURON
-   
    CPU_FAMILY_EXTENDED:
       CPU_MODEL_PENTIUMIV, CPU_MODEL_XEON,
       CPU_MODEL_ATHLON64, CPU_MODEL_OPTERON
-   
    CPU_FAMILY_POWERPC:
       CPU_MODEL_POWERPC_x, for x=601-604, 620, 750, 7400, 7450
-   
 </pre>
 <p> You can read this variable after you have called check_cpu() (which is automatically called by allegro_init()). Make sure you check the cpu_family and cpu_vendor so you know which models make sense to check. </p>
 <h2>SEE ALSO</h2>

@@ -14,7 +14,7 @@ description: "ata_qc_complete – Complete an active ATA command"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command to complete</dl>
+</dd><dd>Command to complete</dd></dl>
 <h2>Description</h2>
 <p>Indicate to the mid and upper layers that an ATA command has completed, with either an ok or not-ok status. </p>
 <p> Refrain from calling this function multiple times when successfully completing multiple NCQ commands. <code>ata_qc_complete_multiple</code> should be used instead, which will properly update IRQ expect state. </p>
@@ -22,5 +22,5 @@ description: "ata_qc_complete – Complete an active ATA command"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

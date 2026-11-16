@@ -21,18 +21,18 @@ description: "grab_vcsa – Linux console vcsa grabber"
 <h2>RETURN CODES</h2>
 <p> <code>grab_vcsa</code> has the following return codes:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Success</p>
-<dt><code>1</code></p>
-<dd> You are not running on the Linux console</p>
-<dt><code>2</code></p>
-<dd> Error while statting tty.</p>
-<dt><code>3</code></p>
-<dd> Error while executing chown.</p>
-<dt><code>4</code></p>
-<dd> Error while executing chmod.</p>
-<dt><code>4</code></p>
-<dd> You do not own your own tty. </p>
+<dt><code>0</code></dt>
+<dd> Success</dd>
+<dt><code>1</code></dt>
+<dd> You are not running on the Linux console</dd>
+<dt><code>2</code></dt>
+<dd> Error while statting tty.</dd>
+<dt><code>3</code></dt>
+<dd> Error while executing chown.</dd>
+<dt><code>4</code></dt>
+<dd> Error while executing chmod.</dd>
+<dt><code>4</code></dt>
+<dd> You do not own your own tty. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Daniel Mantione &lt;daniel.mantione [at] freepascal.org&gt; </p>

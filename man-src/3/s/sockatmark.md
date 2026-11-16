@@ -18,10 +18,10 @@ int sockatmark(int sockfd);</code></pre>
 <p>A successful call to <code>sockatmark</code>() returns 1 if the socket is at the out-of-band mark, or 0 if it is not. On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd><i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>sockfd</i> is not a file descriptor to which <code>sockatmark</code>() can be applied.</dl>
+<dt><code>EBADF</code></dt>
+<dd><i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>sockfd</i> is not a file descriptor to which <code>sockatmark</code>() can be applied.</dd></dl>
 <h2>Versions</h2>
 <p><code>sockatmark</code>() was added to glibc in version 2.2.4.</p>
 <h2>Attributes</h2>

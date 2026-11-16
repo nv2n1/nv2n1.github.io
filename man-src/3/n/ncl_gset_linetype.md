@@ -13,23 +13,23 @@ description: "gset_linetype (Set line type) – sets the line type to solid or v
 <p> void gset_linetype(Gint linetype);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>linetype</p>
-<dd>(Input) &#8211; The type of polyline to be drawn. Options are:</p>
+<dt>linetype</dt>
+<dd>(Input) &#8211; The type of polyline to be drawn. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&lt; 0</p>
-<dd>Implementation dependent (not used in NCAR GKS-0A)</p>
-<dt>1</p>
-<dd>Solid line (default)</p>
-<dt>2</p>
-<dd>Dashed line</p>
-<dt>3</p>
-<dd>Dotted line</p>
-<dt>4</p>
-<dd>Dashed dotted line</p>
-<dt>&ge; 5</p>
-<dd>Reserved for registration or future standardization (not used in NCAR GKS-0A)</dl>
+</dd><dl COMPACT>
+<dt>&lt; 0</dt>
+<dd>Implementation dependent (not used in NCAR GKS-0A)</dd>
+<dt>1</dt>
+<dd>Solid line (default)</dd>
+<dt>2</dt>
+<dd>Dashed line</dd>
+<dt>3</dt>
+<dd>Dotted line</dd>
+<dt>4</dt>
+<dd>Dashed dotted line</dd>
+<dt>&ge; 5</dt>
+<dd>Reserved for registration or future standardization (not used in NCAR GKS-0A)</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

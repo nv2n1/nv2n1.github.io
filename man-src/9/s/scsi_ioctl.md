@@ -14,20 +14,20 @@ description: "scsi_ioctl – Dispatch ioctl to scsi device"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device receiving ioctl</dl>
+</dd><dd>scsi device receiving ioctl</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>which ioctl is it</dl>
+<dd>which ioctl is it</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>data associated with ioctl</dl>
+<dd>data associated with ioctl</dd></dl>
 <h2>Description</h2>
 <p>The <code>scsi_ioctl</code> function differs from most ioctls in that it does not take a major/minor number as the dev field. Rather, it takes a pointer to a struct scsi_device.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -19,29 +19,29 @@ description: "xml-xparse – A simple command-line XML parsing application"
 <p> <code>-c</code> catalogfile</p>
 <dl>
 <dt>
-<dd> Load a particular catalog file</dl>
+</dt><dd> Load a particular catalog file</dd></dl>
 <p> <code>-w</code></p>
 <dl>
 <dt>
-<dd> Perform a well-formed parse, not a validating parse</dl>
+</dt><dd> Perform a well-formed parse, not a validating parse</dd></dl>
 <p> <code>-v</code> (default)</p>
 <dl>
 <dt>
-<dd> Perform a validating parse</dl>
+</dt><dd> Perform a validating parse</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> Perform a namespace-ignorant parse</dl>
+</dt><dd> Perform a namespace-ignorant parse</dd></dl>
 <p> <code>-N</code> (default)</p>
 <dl>
 <dt>
-<dd> Perform a namespace-aware parse</dl>
+</dt><dd> Perform a namespace-aware parse</dd></dl>
 <p> <code>-d</code> integer</p>
 <dl>
 <dt>
-<dd> Set the debug level. Warnings are shown if the debug level is &gt; 2</dl>
+</dt><dd> Set the debug level. Warnings are shown if the debug level is &gt; 2</dd></dl>
 <p> <code>-E</code> integer</p>
 <dl>
 <dt>
-<dd> Set the maximum number of errors to display</dl>
+</dt><dd> Set the maximum number of errors to display</dd></dl>
 <h2>Index</h2>

@@ -11,10 +11,8 @@ std::swap(std::promise) - std::swap(std::promise)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;future&gt;
-
     template &lt;class R&gt;
     (since C++ 11)
-
         void swap(promise&lt;R&gt; &amp;lhs, promise&lt;R&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::promise. Exchanges the shared state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

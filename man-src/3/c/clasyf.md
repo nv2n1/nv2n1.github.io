@@ -19,7 +19,7 @@ description: "clasyf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CLASYF computes a partial factorization of a complex symmetric matrix
         A using the Bunch -
@@ -32,11 +32,11 @@ CLASYF computes a partial factorization of a complex symmetric matrix
                                      and is either NB or NB - 1, or N if N &lt;= NB.Note that U **T denotes the transpose of U.CLASYF is an auxiliary routine called by CSYTRF.It uses blocked code(calling Level 3 BLAS) to update the submatrix A11(if UPLO = 'U') or
                                                                      A22(if UPLO = 'L').
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -119,25 +119,26 @@ CLASYF computes a partial factorization of a complex symmetric matrix
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   November 2013,  Igor Kozachenko,
                   Computer Science Division,
                   University of California, Berkeley
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 178 of file clasyf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

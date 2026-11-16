@@ -31,10 +31,10 @@ url: "/docs/linux/man/1-abrt-action-analyze-ccpp-local/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=analyze_LocalGDB analyzer=CCpp
     abrt-action-analyze-ccpp-local
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -43,19 +43,19 @@ EVENT=analyze_LocalGDB analyzer=CCpp
  --without-di
 <dl>
 <dt>
-<dd> Don't install debuginfo packages</dl>
+</dt><dd> Don't install debuginfo packages</dd></dl>
  
 
  --without-bz
 <dl>
 <dt>
-<dd> Don't search bugzilla for existing duplicates</dl>
+</dt><dd> Don't search bugzilla for existing duplicates</dd></dl>
  
 
  --without-bodhi
 <dl>
 <dt>
-<dd> Don't search bodhi for existing updates</dl>
+</dt><dd> Don't search bodhi for existing updates</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -63,7 +63,7 @@ EVENT=analyze_LocalGDB analyzer=CCpp
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

@@ -15,24 +15,24 @@ description: "munin-run – A program to run Munin plugins from the command line
 <p> munin-run is a script to run Munin plugins from the command-line. It&#8217;s useful when debugging plugins, as they are run in the same conditions as they are under munin-node.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config &lt;configfile&gt;</code></p>
-<dd> Use &lt;file&gt; as configuration file. [/etc/munin/munin-node.conf]</p>
-<dt><code>&#8211;servicedir &lt;dir&gt;</code></p>
-<dd> Use &lt;dir&gt; as plugin dir. [/etc/munin/plugins/]</p>
-<dt><code>&#8211;sconfdir &lt;dir&gt;</code></p>
-<dd> Use &lt;dir&gt; as plugin configuration dir. [/etc/munin/plugin-conf.d/]</p>
-<dt><code>&#8211;sconffile &lt;file&gt;</code></p>
-<dd> Use &lt;file&gt; as plugin configuration. Overrides sconfdir. [undefined]</p>
-<dt><code>&#8211;paranoia </code></p>
-<dd> Only run plugins owned by root and check permissions. [disabled]</p>
-<dt><code>&#8211;help </code></p>
-<dd> View this help message.</p>
-<dt><code>&#8211;debug </code></p>
-<dd> Print debug messages. Debug messages are sent to <font SIZE="-1">STDOUT</font> and are prefixed with &#8220;#&#8221; (this makes it easier for other parts of munin to use munin-run and still have &#8211;debug on). Only errors go to <font SIZE="-1">STDERR.</font></p>
-<dt><code>&#8211;pidebug </code></p>
-<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [disabled]</p>
-<dt><code>&#8211;version </code></p>
-<dd> Show version information.</dl>
+<dt><code>&#8211;config &lt;configfile&gt;</code></dt>
+<dd> Use &lt;file&gt; as configuration file. [/etc/munin/munin-node.conf]</dd>
+<dt><code>&#8211;servicedir &lt;dir&gt;</code></dt>
+<dd> Use &lt;dir&gt; as plugin dir. [/etc/munin/plugins/]</dd>
+<dt><code>&#8211;sconfdir &lt;dir&gt;</code></dt>
+<dd> Use &lt;dir&gt; as plugin configuration dir. [/etc/munin/plugin-conf.d/]</dd>
+<dt><code>&#8211;sconffile &lt;file&gt;</code></dt>
+<dd> Use &lt;file&gt; as plugin configuration. Overrides sconfdir. [undefined]</dd>
+<dt><code>&#8211;paranoia </code></dt>
+<dd> Only run plugins owned by root and check permissions. [disabled]</dd>
+<dt><code>&#8211;help </code></dt>
+<dd> View this help message.</dd>
+<dt><code>&#8211;debug </code></dt>
+<dd> Print debug messages. Debug messages are sent to <font SIZE="-1">STDOUT</font> and are prefixed with &#8220;#&#8221; (this makes it easier for other parts of munin to use munin-run and still have &#8211;debug on). Only errors go to <font SIZE="-1">STDERR.</font></dd>
+<dt><code>&#8211;pidebug </code></dt>
+<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [disabled]</dd>
+<dt><code>&#8211;version </code></dt>
+<dd> Show version information.</dd></dl>
 <h2>FILES</h2>
 <pre>
     /etc/munin/munin-node.conf

@@ -16,18 +16,18 @@ description: "gammu-smsd-monitor – Monitor state of SMS daemon for Gammu"
 <p> <code>gammu-smsd-monitor</code> is a program that monitors state of Gammu SMS daemon. It periodically displays information about phone and number of processed messages. </p>
 <p> Program accepts following options (please note that long options might be not accepted on some platforms):</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Shows help.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Shows version information and compiled in features.</p>
-<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></p>
-<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</p>
-<dt><code>-l</code>, <code>&#8211;loops</code>=<i>count</i></p>
-<dd> Number of loops, by default monitor loops infinitely.</p>
-<dt><code>-d</code>, <code>&#8211;delay</code>=<i>seconds</i></p>
-<dd> Delay betwen polling SMSD state, default is 20 seconds.</p>
-<dt><code>-C</code>, <code>&#8211;csv</code></p>
-<dd> Print output in comma separated values format: </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Shows help.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Shows version information and compiled in features.</dd>
+<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></dt>
+<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</dd>
+<dt><code>-l</code>, <code>&#8211;loops</code>=<i>count</i></dt>
+<dd> Number of loops, by default monitor loops infinitely.</dd>
+<dt><code>-d</code>, <code>&#8211;delay</code>=<i>seconds</i></dt>
+<dd> Delay betwen polling SMSD state, default is 20 seconds.</dd>
+<dt><code>-C</code>, <code>&#8211;csv</code></dt>
+<dd> Print output in comma separated values format: </dd>
 <p> client;phone ID;IMEI;sent;received;failed;battery;signal </p>
 </dl>
 <h2>SEE ALSO</h2>

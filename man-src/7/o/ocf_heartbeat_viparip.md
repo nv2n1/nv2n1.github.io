@@ -10,39 +10,39 @@ description: "ocf_heartbeat_VIPArip – Manages a virtual IP address through RIP
 <p>ocf_heartbeat_VIPArip &#8211; Manages a virtual IP address through RIP2</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>VIPArip</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>VIPArip</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Virtual IP Address by RIP2 protocol. This script manages IP alias in different subnet with quagga/ripd. It can add an IP alias, or remove one.</p>
+<dd>Virtual IP Address by RIP2 protocol. This script manages IP alias in different subnet with quagga/ripd. It can add an IP alias, or remove one.</dd>
 <h2>Supported Parameters</h2>
 <p><code>ip</code></p>
 <dl>
-<dd>The IPv4 address in different subnet, for example &quot;192.168.1.1&quot;. (required, string, no default)</dl>
+<dd>The IPv4 address in different subnet, for example &quot;192.168.1.1&quot;. (required, string, no default)</dd></dl>
 <p> <code>nic</code></p>
 <dl>
-<dd>The nic for broadcast the route information. The ripd uses this nic to broadcast the route informaton to others (optional, string, default eth0)</dl>
+<dd>The nic for broadcast the route information. The ripd uses this nic to broadcast the route informaton to others (optional, string, default eth0)</dd></dl>
 <p> <code>zebra_binary</code></p>
 <dl>
-<dd>Absolute path to the zebra binary. (optional, string, default /usr/sbin/zebra)</dl>
+<dd>Absolute path to the zebra binary. (optional, string, default /usr/sbin/zebra)</dd></dl>
 <p> <code>ripd_binary</code></p>
 <dl>
-<dd>Absolute path to the ripd binary. (optional, string, default /usr/sbin/ripd)</dl>
+<dd>Absolute path to the ripd binary. (optional, string, default /usr/sbin/ripd)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 5s.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 5s.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20s.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a VIPArip resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_VIPArip ocf:heartbeat:VIPArip \

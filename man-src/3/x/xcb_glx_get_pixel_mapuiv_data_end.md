@@ -10,12 +10,7 @@ description: "xcb_glx_get_pixel_mapuiv –"
 <p>xcb_glx_get_pixel_mapuiv &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/glx.h&gt;
-
-
 Request function
-
-
-
 xcb_glx_get_pixel_mapuiv_cookie_t xcb_glx_get_pixel_mapuiv(xcb_connection_t *conn, xcb_glx_context_tag_t context_tag, uint32_t map);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_glx_get_pixel_mapuiv_reply_t {
@@ -30,33 +25,33 @@ xcb_glx_get_pixel_mapuiv_cookie_t xcb_glx_get_pixel_mapuiv(xcb_connection_t *con
 } <code>xcb_glx_get_pixel_mapuiv_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_glx_get_pixel_mapuiv_reply_t *<code>xcb_glx_get_pixel_mapuiv_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_glx_get_pixel_mapuiv_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_glx_get_pixel_mapuiv_reply_t *<code>xcb_glx_get_pixel_mapuiv_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_glx_get_pixel_mapuiv_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>uint32_t *<code>xcb_glx_get_pixel_mapuiv_data</code>(const xcb_glx_get_pixel_mapuiv_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_glx_get_pixel_mapuiv_data_length</code>(const xcb_glx_get_pixel_mapuiv_reply_t *<i>reply</i>);</p>
+<dd>uint32_t *<code>xcb_glx_get_pixel_mapuiv_data</code>(const xcb_glx_get_pixel_mapuiv_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_glx_get_pixel_mapuiv_data_length</code>(const xcb_glx_get_pixel_mapuiv_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_glx_get_pixel_mapuiv_data_end</code>(const xcb_glx_get_pixel_mapuiv_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>context_tag</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>map</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>context_tag</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>map</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_GLX_GET_PIXEL_MAPUIV</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>n</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>datum</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_GLX_GET_PIXEL_MAPUIV</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>n</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>datum</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_glx_get_pixel_mapuiv_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_glx_get_pixel_mapuiv_reply</i>. </p>

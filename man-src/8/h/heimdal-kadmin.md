@@ -14,22 +14,22 @@ description: "kadmin – Kerberos administration utility"
 <p>The program is used to make modifications to the Kerberos database, either remotely via the <a href="/docs/linux/man/8-kadmind/">kadmind</a>(8) daemon, or locally (with the &#8211;<code>l</code> option). </p>
 <p> Supported options:</p>
 <dl>
-<dt><code>-p </code><i>string , &#8211;</i><code>-principal= </code><i>string</i></p>
-<dd>principal to authenticate as</p>
-<dt><code>-K </code><i>string , &#8211;</i><code>-keytab= </code><i>string</i></p>
-<dd>keytab for authentication principal</p>
-<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></p>
-<dd>location of config file</p>
-<dt><code>-k </code><i>file , &#8211;</i><code>-key-file= </code><i>file</i></p>
-<dd>location of master key file</p>
-<dt><code>-r </code><i>realm , &#8211;</i><code>-realm= </code><i>realm</i></p>
-<dd>realm to use</p>
-<dt><code>-a </code><i>host , &#8211;</i><code>-admin-server= </code><i>host</i></p>
-<dd>server to contact</p>
-<dt><code>-s </code><i>port number , &#8211;</i><code>-server-port= </code><i>port number</i></p>
-<dd>port to use</p>
-<dt><code>-l , &#8211;local</code></p>
-<dd>local admin mode</dl>
+<dt><code>-p </code><i>string , &#8211;</i><code>-principal= </code><i>string</i></dt>
+<dd>principal to authenticate as</dd>
+<dt><code>-K </code><i>string , &#8211;</i><code>-keytab= </code><i>string</i></dt>
+<dd>keytab for authentication principal</dd>
+<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></dt>
+<dd>location of config file</dd>
+<dt><code>-k </code><i>file , &#8211;</i><code>-key-file= </code><i>file</i></dt>
+<dd>location of master key file</dd>
+<dt><code>-r </code><i>realm , &#8211;</i><code>-realm= </code><i>realm</i></dt>
+<dd>realm to use</dd>
+<dt><code>-a </code><i>host , &#8211;</i><code>-admin-server= </code><i>host</i></dt>
+<dd>server to contact</dd>
+<dt><code>-s </code><i>port number , &#8211;</i><code>-server-port= </code><i>port number</i></dt>
+<dd>port to use</dd>
+<dt><code>-l , &#8211;local</code></dt>
+<dd>local admin mode</dd></dl>
 <p> If no <i>command</i> is given on the command line, will prompt for commands to process. Some of the commands that take one or more principals as argument <code>( delete</code> <code>ext_keytab</code> <code>get</code> <code>modify</code> and <code>passwd</code> will accept a glob style wildcard, and perform the operation on all matching principals. </p>
 <p> Commands include: </p>
 <p> <code>add</code> [-<code>r | &#8211;random-key</code> ] [-<code>-random-password</code> ] [-<code>p </code><i>string | &#8211;</i><code>-password= </code><i>string</i> ] [-<code>-key= </code><i>string</i> ] [-<code>-max-ticket-life= </code><i>lifetime</i> ] [-<code>-max-renewable-life= </code><i>lifetime</i> ] [-<code>-attributes= </code><i>attributes</i> ] [-<code>-expiration-time= </code><i>time</i> ] [-<code>-pw-expiration-time= </code><i>time</i> ] [-<code>-policy= </code><i>policy-name</i> ] <i>principal&#8230;</i> </p>

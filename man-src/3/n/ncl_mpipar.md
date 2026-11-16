@@ -13,7 +13,7 @@ MPIPAR - Given the area identifier of one of the areas defined by whatever datab
 
  int c_mpipar (int iain)
 <h2>Description</h2><dl COMPACT><dt>IAIN
-<dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>is an input expression of type INTEGER, specifying the area identifier of a particular area of interest.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>The statement &quot;IPAR=MPIPAR(IAIN)&quot; retrieves in IPAR the area identifier of the parent of the area with area identifier IAIN. For example, if IMAD is the area identifier of the little island in Lake Superior called &quot;Lake Madeline&quot;, then MPIPAR(IMAD) is the area identifier of the area called &quot;Wisconsin&quot;.
 <h2>Examples</h2>Use the ncargex command to see the following relevant example: mpex12.
 <h2>Access</h2>To use MPIPAR or c_mpipar, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

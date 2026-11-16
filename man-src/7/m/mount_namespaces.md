@@ -14,61 +14,61 @@ description: "mount_namespaces – overview of Linux mount namespaces"
 <p> The views provided by the <i>/proc/[pid]/mounts</i>, <i>/proc/[pid]/mountinfo</i>, and <i>/proc/[pid]/mountstats</i> files (all described in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)) correspond to the mount namespace in which the process with the PID <i>[pid]</i> resides. (All of the processes that reside in the same mount namespace will see the same view in these files.) </p>
 <p> A new mount namespace is created using either <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) or <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) with the <code>CLONE_NEWNS</code> flag. When a new mount namespace is created, its mount point list is initialized as follows:</p>
 <dl>
-<dt>*</p>
-<dd>If the namespace is created using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), the mount point list of the child&#8217;s namespace is a copy of the mount point list in the parent&#8217;s namespace.</p>
-<dt>*</p>
-<dd>If the namespace is created using <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), the mount point list of the new namespace is a copy of the mount point list in the caller&#8217;s previous mount namespace.</dl>
+<dt>*</dt>
+<dd>If the namespace is created using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), the mount point list of the child&#8217;s namespace is a copy of the mount point list in the parent&#8217;s namespace.</dd>
+<dt>*</dt>
+<dd>If the namespace is created using <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), the mount point list of the new namespace is a copy of the mount point list in the caller&#8217;s previous mount namespace.</dd></dl>
 <p> Subsequent modifications to the mount point list (<code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) and <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2)) in either mount namespace will not (by default) affect the mount point list seen in the other namespace (but see the following discussion of shared subtrees).</p>
 <h3>Restrictions on mount namespaces</h3>
 <p>Note the following points with respect to mount namespaces:</p>
 <dl>
-<dt>*</p>
-<dd>Each mount namespace has an owner user namespace. As explained above, when a new mount namespace is created, its mount point list is initialized as a copy of the mount point list of another mount namespace. If the new namespace and the namespace from which the mount point list was copied are owned by different user namespaces, then the new mount namespace is considered <i>less privileged</i>.</p>
-<dt>*</p>
-<dd>When creating a less privileged mount namespace, shared mounts are reduced to slave mounts. (Shared and slave mounts are discussed below.) This ensures that mappings performed in less privileged mount namespaces will not propagate to more privileged mount namespaces.</p>
-<dt>*</p>
-<dd>Mounts that come as a single unit from a more privileged mount namespace are locked together and may not be separated in a less privileged mount namespace. (The <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) <code>CLONE_NEWNS</code> operation brings across all of the mounts from the original mount namespace as a single unit, and recursive mounts that propagate between mount namespaces propagate as a single unit.)</p>
-<dt>*</p>
-<dd>The <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) flags <code>MS_RDONLY</code>, <code>MS_NOSUID</code>, <code>MS_NOEXEC</code>, and the &quot;atime&quot; flags (<code>MS_NOATIME</code>, <code>MS_NODIRATIME</code>, <code>MS_RELATIME</code>) settings become locked when propagated from a more privileged to a less privileged mount namespace, and may not be changed in the less privileged mount namespace.</p>
-<dt>*</p>
-<dd>A file or directory that is a mount point in one namespace that is not a mount point in another namespace, may be renamed, unlinked, or removed (<code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2)) in the mount namespace in which it is not a mount point (subject to the usual permission checks). Consequently, the mount point is removed in the mount namespace where it was a mount point.</p>
-<dd>Previously (before Linux 3.18), attempting to unlink, rename, or remove a file or directory that was a mount point in another mount namespace would result in the error <code>EBUSY</code>. That behavior had technical problems of enforcement (e.g., for NFS) and permitted denial-of-service attacks against more privileged users. (i.e., preventing individual files from being updated by bind mounting on top of them).</dl>
+<dt>*</dt>
+<dd>Each mount namespace has an owner user namespace. As explained above, when a new mount namespace is created, its mount point list is initialized as a copy of the mount point list of another mount namespace. If the new namespace and the namespace from which the mount point list was copied are owned by different user namespaces, then the new mount namespace is considered <i>less privileged</i>.</dd>
+<dt>*</dt>
+<dd>When creating a less privileged mount namespace, shared mounts are reduced to slave mounts. (Shared and slave mounts are discussed below.) This ensures that mappings performed in less privileged mount namespaces will not propagate to more privileged mount namespaces.</dd>
+<dt>*</dt>
+<dd>Mounts that come as a single unit from a more privileged mount namespace are locked together and may not be separated in a less privileged mount namespace. (The <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) <code>CLONE_NEWNS</code> operation brings across all of the mounts from the original mount namespace as a single unit, and recursive mounts that propagate between mount namespaces propagate as a single unit.)</dd>
+<dt>*</dt>
+<dd>The <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) flags <code>MS_RDONLY</code>, <code>MS_NOSUID</code>, <code>MS_NOEXEC</code>, and the &quot;atime&quot; flags (<code>MS_NOATIME</code>, <code>MS_NODIRATIME</code>, <code>MS_RELATIME</code>) settings become locked when propagated from a more privileged to a less privileged mount namespace, and may not be changed in the less privileged mount namespace.</dd>
+<dt>*</dt>
+<dd>A file or directory that is a mount point in one namespace that is not a mount point in another namespace, may be renamed, unlinked, or removed (<code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2)) in the mount namespace in which it is not a mount point (subject to the usual permission checks). Consequently, the mount point is removed in the mount namespace where it was a mount point.</dd>
+<dd>Previously (before Linux 3.18), attempting to unlink, rename, or remove a file or directory that was a mount point in another mount namespace would result in the error <code>EBUSY</code>. That behavior had technical problems of enforcement (e.g., for NFS) and permitted denial-of-service attacks against more privileged users. (i.e., preventing individual files from being updated by bind mounting on top of them).</dd></dl>
 <h2>Shared Subtrees</h2>
 <p>After the implementation of mount namespaces was completed, experience showed that the isolation that they provided was, in some cases, too great. For example, in order to make a newly loaded optical disk available in all mount namespaces, a mount operation was required in each namespace. For this use case, and others, the shared subtree feature was introduced in Linux 2.6.15. This feature allows for automatic, controlled propagation of mount and unmount <i>events</i> between namespaces (or, more precisely, between the members of a <i>peer group</i> that are propagating events to one another). </p>
 <p> Each mount point is marked (via <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2)) as having one of the following <i>propagation types</i>:</p>
 <dl>
-<dt><code>MS_SHARED</code></p>
-<dd>This mount point shares events with members of a peer group. Mount and unmount events immediately under this mount point will propagate to the other mount points that are members of the peer group. <i>Propagation</i> here means that the same mount or unmount will automatically occur under all of the other mount points in the peer group. Conversely, mount and unmount events that take place under peer mount points will propagate to this mount point.</p>
-<dt><code>MS_PRIVATE</code></p>
-<dd>This mount point is private; it does not have a peer group. Mount and unmount events do not propagate into or out of this mount point.</p>
-<dt><code>MS_SLAVE</code></p>
-<dd>Mount and unmount events propagate into this mount point from a (master) shared peer group. Mount and unmount events under this mount point do not propagate to any peer.</p>
-<dd>Note that a mount point can be the slave of another peer group while at the same time sharing mount and unmount events with a peer group of which it is a member. (More precisely, one peer group can be the slave of another peer group.)</p>
-<dt><code>MS_UNBINDABLE</code></p>
-<dd>This is like a private mount, and in addition this mount can&#8217;t be bind mounted. Attempts to bind mount this mount (<code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) with the <code>MS_BIND</code> flag) will fail.</p>
-<dd>When a recursive bind mount (<code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) with the <code>MS_BIND</code> and <code>MS_REC</code> flags) is performed on a directory subtree, any bind mounts within the subtree are automatically pruned (i.e., not replicated) when replicating that subtree to produce the target subtree.</dl>
+<dt><code>MS_SHARED</code></dt>
+<dd>This mount point shares events with members of a peer group. Mount and unmount events immediately under this mount point will propagate to the other mount points that are members of the peer group. <i>Propagation</i> here means that the same mount or unmount will automatically occur under all of the other mount points in the peer group. Conversely, mount and unmount events that take place under peer mount points will propagate to this mount point.</dd>
+<dt><code>MS_PRIVATE</code></dt>
+<dd>This mount point is private; it does not have a peer group. Mount and unmount events do not propagate into or out of this mount point.</dd>
+<dt><code>MS_SLAVE</code></dt>
+<dd>Mount and unmount events propagate into this mount point from a (master) shared peer group. Mount and unmount events under this mount point do not propagate to any peer.</dd>
+<dd>Note that a mount point can be the slave of another peer group while at the same time sharing mount and unmount events with a peer group of which it is a member. (More precisely, one peer group can be the slave of another peer group.)</dd>
+<dt><code>MS_UNBINDABLE</code></dt>
+<dd>This is like a private mount, and in addition this mount can&#8217;t be bind mounted. Attempts to bind mount this mount (<code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) with the <code>MS_BIND</code> flag) will fail.</dd>
+<dd>When a recursive bind mount (<code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) with the <code>MS_BIND</code> and <code>MS_REC</code> flags) is performed on a directory subtree, any bind mounts within the subtree are automatically pruned (i.e., not replicated) when replicating that subtree to produce the target subtree.</dd></dl>
 <p> For a discussion of the propagation type assigned to a new mount, see NOTES. </p>
 <p> The propagation type is a per-mount-point setting; some mount points may be marked as shared (with each shared mount point being a member of a distinct peer group), while others are private (or slaved or unbindable). </p>
 <p> Note that a mount&#8217;s propagation type determines whether mounts and unmounts of mount points <i>immediately under</i> the mount point are propagated. Thus, the propagation type does not affect propagation of events for grandchildren and further removed descendant mount points. What happens if the mount point itself is unmounted is determined by the propagation type that is in effect for the <i>parent</i> of the mount point. </p>
 <p> Members are added to a <i>peer group</i> when a mount point is marked as shared and either:</p>
 <dl>
-<dt>*</p>
-<dd>the mount point is replicated during the creation of a new mount namespace; or</p>
-<dt>*</p>
-<dd>a new bind mount is created from the mount point.</dl>
+<dt>*</dt>
+<dd>the mount point is replicated during the creation of a new mount namespace; or</dd>
+<dt>*</dt>
+<dd>a new bind mount is created from the mount point.</dd></dl>
 <p> In both of these cases, the new mount point joins the peer group of which the existing mount point is a member. </p>
 <p> A new peer group is also created when a child mount point is created under an existing mount point that is marked as shared. In this case, the new child mount point is also marked as shared and the resulting peer group consists of all the mount points that are replicated under the peers of parent mount. </p>
 <p> A mount ceases to be a member of a peer group when either the mount is explicitly unmounted, or when the mount is implicitly unmounted because a mount namespace is removed (because it has no more member processes). </p>
 <p> The propagation type of the mount points in a mount namespace can be discovered via the &quot;optional fields&quot; exposed in <i>/proc/[pid]/mountinfo</i>. (See <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5) for details of this file.) The following tags can appear in the optional fields for a record in that file:</p>
 <dl>
-<dt><i>shared:X</i></p>
-<dd>This mount point is shared in peer group <i>X</i>. Each peer group has a unique ID that is automatically generated by the kernel, and all mount points in the same peer group will show the same ID. (These IDs are assigned starting from the value 1, and may be recycled when a peer group ceases to have any members.)</p>
-<dt><i>master:X</i></p>
-<dd>This mount is a slave to shared peer group <i>X</i>.</p>
-<dt><i>propagate_from:X</i> (since Linux 2.6.26)</p>
-<dd>This mount is a slave and receives propagation from shared peer group <i>X</i>. This tag will always appear in conjunction with a <i>master:X</i> tag. Here, <i>X</i> is the closest dominant peer group under the process&#8217;s root directory. If <i>X</i> is the immediate master of the mount, or if there is no dominant peer group under the same root, then only the <i>master:X</i> field is present and not the <i>propagate_from:X</i> field. For further details, see below.</p>
-<dt><i>unbindable</i></p>
-<dd>This is an unbindable mount.</dl>
+<dt><i>shared:X</i></dt>
+<dd>This mount point is shared in peer group <i>X</i>. Each peer group has a unique ID that is automatically generated by the kernel, and all mount points in the same peer group will show the same ID. (These IDs are assigned starting from the value 1, and may be recycled when a peer group ceases to have any members.)</dd>
+<dt><i>master:X</i></dt>
+<dd>This mount is a slave to shared peer group <i>X</i>.</dd>
+<dt><i>propagate_from:X</i> (since Linux 2.6.26)</dt>
+<dd>This mount is a slave and receives propagation from shared peer group <i>X</i>. This tag will always appear in conjunction with a <i>master:X</i> tag. Here, <i>X</i> is the closest dominant peer group under the process&#8217;s root directory. If <i>X</i> is the immediate master of the mount, or if there is no dominant peer group under the same root, then only the <i>master:X</i> field is present and not the <i>propagate_from:X</i> field. For further details, see below.</dd>
+<dt><i>unbindable</i></dt>
+<dd>This is an unbindable mount.</dd></dl>
 <p> If none of the above tags is present, then this is a private mount.</p>
 <h3>MS_SHARED and MS_PRIVATE example</h3>
 <p>Suppose that on a terminal in the initial mount namespace, we mark one mount point as shared and another as private, and then view the mounts in <i>/proc/self/mountinfo</i>: </p>
@@ -192,10 +192,10 @@ description: "mount_namespaces – overview of Linux mount namespaces"
 </table>
 <p> Note the following details to the table:</p>
 <dl>
-<dt>[1]</p>
-<dd>If a shared mount is the only mount in its peer group, making it a slave automatically makes it private.</p>
-<dt>[2]</p>
-<dd>Slaving a nonshared mount has no effect on the mount.</dl>
+<dt>[1]</dt>
+<dd>If a shared mount is the only mount in its peer group, making it a slave automatically makes it private.</dd>
+<dt>[2]</dt>
+<dd>Slaving a nonshared mount has no effect on the mount.</dd></dl>
 <h3>Bind (MS_BIND) semantics</h3>
 <p>Suppose that the following command is performed: </p>
 <p> mount &#8211;bind A/a B/b </p>

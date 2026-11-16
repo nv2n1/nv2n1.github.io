@@ -19,7 +19,7 @@ description: "claqps.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLAQPS computes a step of QR factorization with column pivoting
  of a complex M-by-N matrix A by using Blas-3.  It tries to factorize
@@ -30,11 +30,11 @@ description: "claqps.f –"
  columns is returned in KB.
  Block A(1:OFFSET,1:N) is accordingly pivoted, but not factorized.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A. M &gt;= 0.
@@ -115,23 +115,23 @@ description: "claqps.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain X. Sun, Computer Science Dept., Duke University, USA</dl>
+</dt><dd> G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain X. Sun, Computer Science Dept., Duke University, USA</dd></dl>
 <p>&nbsp;<wbr>Partial column norm updating strategy modified on April 2011 Z. Drmac and Z. Bujanovic, Dept. of Mathematics, University of Zagreb, Croatia.&nbsp;<wbr> </p>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> LAPACK Working Note 176</dl>
+</dt><dd> LAPACK Working Note 176</dd></dl>
 <p> Definition at line 178 of file claqps.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

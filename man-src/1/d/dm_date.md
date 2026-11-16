@@ -24,21 +24,19 @@ dm_date[OPTION]...[+FORMAT]
  This displays information about the current system time, or some other time. Options are:
 <dl>
 <dt>-h, --help
-<dd> Print online help.
-<dt>-d <font SIZE="-1">STRING,</font> --date=STRING
-<dd> Display time described by <font SIZE="-1">STRING. STRING</font> can be any string which can be parsed by Date::Manip. Please refer to the Date::Manip::Date documentation for details.
-<dt>-f <font SIZE="-1">DATEFILE,</font> --file=DATEFILE
-<dd> This reads each line in <font SIZE="-1">DATEFILE,</font> and extracts a date from it and prints out the information. 
-
+</dt><dd> Print online help.
+</dd><dt>-d <font SIZE="-1">STRING,</font> --date=STRING
+</dt><dd> Display time described by <font SIZE="-1">STRING. STRING</font> can be any string which can be parsed by Date::Manip. Please refer to the Date::Manip::Date documentation for details.
+</dd><dt>-f <font SIZE="-1">DATEFILE,</font> --file=DATEFILE
+</dt><dd> This reads each line in <font SIZE="-1">DATEFILE,</font> and extracts a date from it and prints out the information. 
  Blank lines and lines starting with a pound (#) are ignored. Lines not containing a valid date are also ignored.
-<dt>-r <font SIZE="-1">FILE,</font> --reference=FILE
-<dd> Displays the last modification time of <font SIZE="-1">FILE.</font>
-<dt>-R, --rfc-2822
-<dd> Displayc the date and time in <font SIZE="-1">RFC 2822</font> format. 
-
+</dd><dt>-r <font SIZE="-1">FILE,</font> --reference=FILE
+</dt><dd> Displays the last modification time of <font SIZE="-1">FILE.</font>
+</dd><dt>-R, --rfc-2822
+</dt><dd> Displayc the date and time in <font SIZE="-1">RFC 2822</font> format. 
  Example: Mon, 07 Aug 2006 12:34:56 -0600
-<dt>-u, --utc, --universal
-<dd> Converts the date to <font SIZE="-1">UT </font>(<font SIZE="-1">GMT</font>) and prints out the information.</dl>
+</dd><dt>-u, --utc, --universal
+</dt><dd> Converts the date to <font SIZE="-1">UT </font>(<font SIZE="-1">GMT</font>) and prints out the information.</dd></dl>
  
 
  Only one of -d, -f, or -r should be included. If more than one is included, the first one from the list (-d, -f, -r) is used and any other is ignored. 

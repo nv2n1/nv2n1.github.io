@@ -14,10 +14,10 @@ description: "wpa_passphrase – Generate a WPA PSK from an ASCII passphrase for
 <p><code>wpa_passphrase</code> pre-computes PSK entries for network configuration blocks of a <i>wpa_supplicant.conf</i> file. An ASCII passphrase and SSID are used to generate a 256-bit PSK.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>ssid</code></p>
-<dd>The SSID whose passphrase should be derived.</p>
-<dt><code>passphrase</code></p>
-<dd>The passphrase to use. If not included on the command line, passphrase will be read from standard input.</dl>
+<dt><code>ssid</code></dt>
+<dd>The SSID whose passphrase should be derived.</dd>
+<dt><code>passphrase</code></dt>
+<dd>The passphrase to use. If not included on the command line, passphrase will be read from standard input.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-wpa_supplicant-conf/">wpa_supplicant.conf</a></code>(5) <code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8)</p>
 <h2>Legal</h2>

@@ -12,10 +12,10 @@ description: "nm-settings-dbus – Description of settings and properties of Net
 <p>NetworkManager is based on a concept of connection profiles, sometimes referred to as connections only. These connection profiles contain a network configuration. When NetworkManager activates a connection profile on a network device the configuration will be applied and an active network connection will be established. Users are free to create as many connection profiles as they see fit. Thus they are flexible in having various network configurations for different networking needs. The connection profiles are handled by NetworkManager via <i>settings service</i> and are exported on D-Bus (<i>/org/freedesktop/NetworkManager/Settings/&lt;num&gt;</i> objects). The conceptual objects can be described as follows: </p>
 <p> Connection (profile)</p>
 <dl>
-<dd>A specific, encapsulated, independent group of settings describing all the configuration required to connect to a specific network. It is referred to by a unique identifier called the UUID. A connection is tied to a one specific device type, but not necessarily a specific hardware device. It is composed of one or more <i>Settings</i> objects.</dl>
+<dd>A specific, encapsulated, independent group of settings describing all the configuration required to connect to a specific network. It is referred to by a unique identifier called the UUID. A connection is tied to a one specific device type, but not necessarily a specific hardware device. It is composed of one or more <i>Settings</i> objects.</dd></dl>
 <p> Setting</p>
 <dl>
-<dd>A group of related key/value pairs describing a specific piece of a <i>Connection (profile)</i>. Settings keys and allowed values are described in the tables below. Keys are also referred to as properties. Developers can find the setting objects and their properties in the libnm-core sources. Look for the <code>*_class_init</code> functions near the bottom of each setting source file.</dl>
+<dd>A group of related key/value pairs describing a specific piece of a <i>Connection (profile)</i>. Settings keys and allowed values are described in the tables below. Keys are also referred to as properties. Developers can find the setting objects and their properties in the libnm-core sources. Look for the <code>*_class_init</code> functions near the bottom of each setting source file.</dd></dl>
 <p> The settings and properties shown in tables below list all available connection configuration options. However, note that not all settings are applicable to all connection types. NetworkManager provides a command-line tool <i>nmcli</i> that allows direct configuration of the settings and properties according to a connection profile type. <i>nmcli</i> connection editor has also a built-in <i>describe</i> command that can display description of particular settings and properties of this page.</p>
 <h3>connection setting</h3>
 <p>General Connection Profile Settings. </p>
@@ -3665,13 +3665,13 @@ description: "nm-settings-dbus – Description of settings and properties of Net
 <h3>Secret flag types:</h3>
 <p>Each password or secret property in a setting has an associated <i>flags</i> property that describes how to handle that secret. The <i>flags</i> property is a bitfield that contains zero or more of the following values logically OR-ed together. </p>
 <dl>
-<dd>&bull; 0x0 (none) &#8211; the system is responsible for providing and storing this secret. This may be required so that secrets are already available before the user logs in. It also commonly means that the secret will be stored in plain text on disk, accessible to root only. For example via the keyfile settings plugin as described in the &quot;PLUGINS&quot; section in <code><a href="/docs/linux/man/5-networkmanager-conf/">NetworkManager.conf</a></code>(5).</dl>
+<dd>&bull; 0x0 (none) &#8211; the system is responsible for providing and storing this secret. This may be required so that secrets are already available before the user logs in. It also commonly means that the secret will be stored in plain text on disk, accessible to root only. For example via the keyfile settings plugin as described in the &quot;PLUGINS&quot; section in <code><a href="/docs/linux/man/5-networkmanager-conf/">NetworkManager.conf</a></code>(5).</dd></dl>
 <dl>
-<dd>&bull; 0x1 (agent-owned) &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dl>
+<dd>&bull; 0x1 (agent-owned) &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dd></dl>
 <dl>
-<dd>&bull; 0x2 (not-saved) &#8211; this secret should not be saved but should be requested from the user each time it is required. This flag should be used for One-Time-Pad secrets, PIN codes from hardware tokens, or if the user simply does not want to save the secret.</dl>
+<dd>&bull; 0x2 (not-saved) &#8211; this secret should not be saved but should be requested from the user each time it is required. This flag should be used for One-Time-Pad secrets, PIN codes from hardware tokens, or if the user simply does not want to save the secret.</dd></dl>
 <dl>
-<dd>&bull; 0x4 (not-required) &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dl>
+<dd>&bull; 0x4 (not-required) &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dd></dl>
 <h2>Files</h2>
 <p>/etc/NetworkManager/system-connections or distro plugin-specific location</p>
 <h2>See Also</h2>

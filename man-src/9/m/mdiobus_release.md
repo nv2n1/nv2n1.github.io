@@ -15,7 +15,7 @@ mdiobus_release - mii_bus device release callback
 <h2>Arguments</h2>
 
 <i>d</i>
-<dl><dd><dd>the target struct device that contains the mii_bus</dl>
+<dl><dd></dd><dd>the target struct device that contains the mii_bus</dd></dl>
 
 <h2>Description</h2>
 

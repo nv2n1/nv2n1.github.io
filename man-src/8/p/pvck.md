@@ -51,7 +51,7 @@ description: "pvck – Check metadata on physical volumes"
 <p>Check for metadata on a device </p>
 <p> <code>pvck</code> <i>PV</i> &#8230; </p>
 <dl>
-<dd>[ COMMON_OPTIONS ]</dl>
+<dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Check and print LVM headers and metadata on a device </p>
 <p> <code>pvck</code> <code>&#8211;dump</code> <i>String</i> <i>PV</i> </p>
@@ -59,24 +59,24 @@ description: "pvck – Check metadata on physical volumes"
 <dd>[ <code>-f</code>|<code>&#8211;file</code> <i>String</i> ]<br />
  [ <code>&#8211;settings</code> <i>String</i> ]<br />
  [ <code>&#8211;[pv]metadatacopies</code> <code>0</code>|<code>1</code>|<code>2</code> ]<br />
- [ COMMON_OPTIONS ]</dl>
+ [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Repair LVM headers or metadata on a device </p>
 <p> <code>pvck</code> <code>&#8211;repairtype</code> <code>pv_header</code>|<code>metadata</code>|<code>label_header</code> <i>PV</i> </p>
 <dl>
 <dd>[ <code>-f</code>|<code>&#8211;file</code> <i>String</i> ]<br />
  [ <code>&#8211;settings</code> <i>String</i> ]<br />
- [ COMMON_OPTIONS ]</dl>
+ [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Repair LVM headers and metadata on a device </p>
 <p> <code>pvck</code> <code>&#8211;repair</code> <code>-f</code>|<code>&#8211;file</code> <i>String</i> <i>PV</i> </p>
 <dl>
 <dd>[ <code>&#8211;settings</code> <i>String</i> ]<br />
- [ COMMON_OPTIONS ]</dl>
+ [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>&#8211;labelsector</code> <i>Number</i> ]</dl>
+<dd>[ <code>&#8211;labelsector</code> <i>Number</i> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
 <dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
@@ -92,83 +92,83 @@ description: "pvck – Check metadata on physical volumes"
  [ <code>&#8211;longhelp</code> ]<br />
  [ <code>&#8211;nolocking</code> ]<br />
  [ <code>&#8211;profile</code> <i>String</i> ]<br />
- [ <code>&#8211;version</code> ]</dl>
+ [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt> <code>&#8211;commandprofile</code> <i>String</i></p>
+<dt> <code>&#8211;commandprofile</code> <i>String</i></dt>
 <dd>
-<dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</p>
-<dt> <code>&#8211;config</code> <i>String</i></p>
+</dd><dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</dd>
+<dt> <code>&#8211;config</code> <i>String</i></dt>
 <dd>
-<dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</p>
-<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</p>
+</dd><dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</dd>
+<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</dt>
 <dd>
-<dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</p>
-<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></p>
+</dd><dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</dd>
+<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></dt>
 <dd>
-<dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</p>
-<dt> <code>&#8211;dump</code> <i>String</i></p>
+</dd><dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</dd>
+<dt> <code>&#8211;dump</code> <i>String</i></dt>
 <dd>
-<dd>Dump headers and metadata from a PV for debugging and repair. Option values include: <code>headers</code> to print and check LVM headers, <code>metadata</code> to print or save the current text metadata, <code>metadata_all</code> to list or save all versions of metadata, <code>metadata_search</code> to list or save all versions of metadata, searching standard locations in case of damaged headers, <code>metadata_area</code> to save an entire text metadata area to a file.</p>
-<dt> <code>-f</code>|<code>&#8211;file</code> <i>String</i></p>
+</dd><dd>Dump headers and metadata from a PV for debugging and repair. Option values include: <code>headers</code> to print and check LVM headers, <code>metadata</code> to print or save the current text metadata, <code>metadata_all</code> to list or save all versions of metadata, <code>metadata_search</code> to list or save all versions of metadata, searching standard locations in case of damaged headers, <code>metadata_area</code> to save an entire text metadata area to a file.</dd>
+<dt> <code>-f</code>|<code>&#8211;file</code> <i>String</i></dt>
 <dd>
-<dd>Metadata file to read or write.</p>
-<dt> <code>-h</code>|<code>&#8211;help</code></p>
+</dd><dd>Metadata file to read or write.</dd>
+<dt> <code>-h</code>|<code>&#8211;help</code></dt>
 <dd>
-<dd>Display help text.</p>
-<dt> <code>&#8211;labelsector</code> <i>Number</i></p>
+</dd><dd>Display help text.</dd>
+<dt> <code>&#8211;labelsector</code> <i>Number</i></dt>
 <dd>
-<dd>By default the PV is labelled with an LVM2 identifier in its second sector (sector 1). This lets you use a different sector near the start of the disk (between 0 and 3 inclusive &#8211; see LABEL_SCAN_SECTORS in the source). Use with care.</p>
-<dt> <code>&#8211;lockopt</code> <i>String</i></p>
+</dd><dd>By default the PV is labelled with an LVM2 identifier in its second sector (sector 1). This lets you use a different sector near the start of the disk (between 0 and 3 inclusive &#8211; see LABEL_SCAN_SECTORS in the source). Use with care.</dd>
+<dt> <code>&#8211;lockopt</code> <i>String</i></dt>
 <dd>
-<dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</p>
-<dt> <code>&#8211;longhelp</code></p>
+</dd><dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</dd>
+<dt> <code>&#8211;longhelp</code></dt>
 <dd>
-<dd>Display long help text.</p>
-<dt> <code>&#8211;nolocking</code></p>
+</dd><dd>Display long help text.</dd>
+<dt> <code>&#8211;nolocking</code></dt>
 <dd>
-<dd>Disable locking.</p>
-<dt> <code>&#8211;profile</code> <i>String</i></p>
+</dd><dd>Disable locking.</dd>
+<dt> <code>&#8211;profile</code> <i>String</i></dt>
 <dd>
-<dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</p>
-<dt> <code>&#8211;[pv]metadatacopies</code> <code>0</code>|<code>1</code>|<code>2</code></p>
+</dd><dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</dd>
+<dt> <code>&#8211;[pv]metadatacopies</code> <code>0</code>|<code>1</code>|<code>2</code></dt>
 <dd>
-<dd>The number of metadata areas to set aside on a PV for storing VG metadata. When 2, one copy of the VG metadata is stored at the front of the PV and a second copy is stored at the end. When 1, one copy of the VG metadata is stored at the front of the PV. When 0, no copies of the VG metadata are stored on the given PV. This may be useful in VGs containing many PVs (this places limitations on the ability to use vgsplit later.)</p>
-<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</p>
+</dd><dd>The number of metadata areas to set aside on a PV for storing VG metadata. When 2, one copy of the VG metadata is stored at the front of the PV and a second copy is stored at the end. When 1, one copy of the VG metadata is stored at the front of the PV. When 0, no copies of the VG metadata are stored on the given PV. This may be useful in VGs containing many PVs (this places limitations on the ability to use vgsplit later.)</dd>
+<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</dt>
 <dd>
-<dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</p>
-<dt> <code>&#8211;repair</code></p>
+</dd><dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</dd>
+<dt> <code>&#8211;repair</code></dt>
 <dd>
-<dd>Repair headers and metadata on a PV.</p>
-<dt> <code>&#8211;repairtype</code> <code>pv_header</code>|<code>metadata</code>|<code>label_header</code></p>
+</dd><dd>Repair headers and metadata on a PV.</dd>
+<dt> <code>&#8211;repairtype</code> <code>pv_header</code>|<code>metadata</code>|<code>label_header</code></dt>
 <dd>
-<dd>Repair headers and metadata on a PV. See command description.</p>
-<dt> <code>&#8211;settings</code> <i>String</i></p>
+</dd><dd>Repair headers and metadata on a PV. See command description.</dd>
+<dt> <code>&#8211;settings</code> <i>String</i></dt>
 <dd>
-<dd>Specifies command specific settings in &quot;Key = Value&quot; form. Repeat this option to specify multiple values.</p>
-<dt> <code>-t</code>|<code>&#8211;test</code></p>
+</dd><dd>Specifies command specific settings in &quot;Key = Value&quot; form. Repeat this option to specify multiple values.</dd>
+<dt> <code>-t</code>|<code>&#8211;test</code></dt>
 <dd>
-<dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</p>
-<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</p>
+</dd><dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</dd>
+<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</dt>
 <dd>
-<dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</p>
-<dt> <code>&#8211;version</code></p>
+</dd><dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</dd>
+<dt> <code>&#8211;version</code></dt>
 <dd>
-<dd>Display version information.</p>
-<dt> <code>-y</code>|<code>&#8211;yes</code></p>
+</dd><dd>Display version information.</dd>
+<dt> <code>-y</code>|<code>&#8211;yes</code></dt>
 <dd>
-<dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dl>
+</dd><dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dd></dl>
 <h2>Variables</h2>
 <dl>
-<dt> <i>PV</i></p>
+<dt> <i>PV</i></dt>
 <dd>
-<dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</p>
-<dt> <i>String</i></p>
+</dd><dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</dd>
+<dt> <i>String</i></dt>
 <dd>
-<dd>See the option description for information about the string content.</p>
-<dt> <i>Size</i>[UNIT]</p>
+</dd><dd>See the option description for information about the string content.</dd>
+<dt> <i>Size</i>[UNIT]</dt>
 <dd>
-<dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dl>
+</dd><dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dd></dl>
 <h2>Environment Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for information about environment variables used by lvm. For example, LVM_VG_NAME can generally be substituted for a required VG parameter.</p>
 <h2>Examples</h2>

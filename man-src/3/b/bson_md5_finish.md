@@ -16,11 +16,11 @@ void bson_md5_finish(bson_md5_t *pms,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>pms</code></p>
-<dd> A <code>bson_md5_t</code> \&amp;.</dl>
+<dt><code>pms</code></dt>
+<dd> A <code>bson_md5_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>digest</code></p>
-<dd> A location for the digest.</dl>
+<dt><code>digest</code></dt>
+<dd> A location for the digest.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Completes the MD5 algorithm and stores the digest in <code>digest</code> \&amp;. </p>
 <h2>COLOPHON</h2>

@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_socket - std::filesystem::directory_entry::
 
 <pre><code>bool is_socket() const;
 (since C++ 17)
-
     bool is_socket(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a named socket. Effectively returns std::filesystem::is_socket(status()) or std::filesystem::is_socket(status(ec)), respectively 
 

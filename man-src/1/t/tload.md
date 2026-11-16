@@ -15,14 +15,14 @@ description: "tload – graphic representation of system load average"
 <p> <code>tload</code> prints a graph of the current system load average to the specified <i>tty</i> (or the tty of the <code>tload</code> process if none is specified).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code>, <code>&#8211;scale</code> <i>number</i></p>
-<dd> The scale option allows a vertical scale to be specified for the display (in characters between graph ticks); thus, a smaller value represents a larger scale, and vice versa.</p>
-<dt><code>-d</code>, <code>&#8211;delay</code> <i>seconds</i></p>
-<dd> The delay sets the delay between graph updates in <i>seconds</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display this help text.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-s</code>, <code>&#8211;scale</code> <i>number</i></dt>
+<dd> The scale option allows a vertical scale to be specified for the display (in characters between graph ticks); thus, a smaller value represents a larger scale, and vice versa.</dd>
+<dt><code>-d</code>, <code>&#8211;delay</code> <i>seconds</i></dt>
+<dd> The delay sets the delay between graph updates in <i>seconds</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display this help text.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/proc/loadavg</i> load average information</p>
 <h2>SEE ALSO</h2>

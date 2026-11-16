@@ -23,24 +23,24 @@ description: "pbmtoppa – convert PBM image to HP Printer Performance Architect
 <p> Sometimes, <code>pbmtoppa</code> generates a file which the printer will not print (because <code>pbmtoppa</code>&#8216;s input is unprintable). When this happens, all three lights blink to signal the error. This is usually because there is material outside of the printer&#8217;s printable area. To make the file print, increase the margins via <code>pbmtoppa</code> options or a configuration file. See the CALIBRATION section below. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v </code><i>version</i></p>
-<dd> printer version (720, 820, or 1000)</p>
-<dt><code>-x </code><i>xoff</i></p>
-<dd> vertical offset adjustment in 1&quot;/600</p>
-<dt><code>-y </code><i>yoff</i></p>
-<dd> horizontal offset adjustment in 1&quot;/600</p>
-<dt><code>-t </code><i>topmarg</i></p>
-<dd> top margin in 1&quot;/600 (default: 150 = 0.25&quot;)</p>
-<dt><code>-l </code><i>leftmarg</i></p>
-<dd> left margin in 1&quot;/600 (default: 150 = 0.25&quot;)</p>
-<dt><code>-r </code><i>rightmarg</i></p>
-<dd> right margin in 1&quot;/600 (default: 150 = 0.25&quot;)</p>
-<dt><code>-b </code><i>botmarg</i></p>
-<dd> bottom margin in 1&quot;/600 (default: 150 = 0.25&quot;)</p>
-<dt><code>-s </code><i>paper</i></p>
-<dd> paper size: <code>us </code> or <code>a4</code>. Default is <code>us</code>.</p>
-<dt><code>-f </code><i>cfgfile</i></p>
-<dd> read parameters from configuration file <i>cfgfile </i> </p>
+<dt><code>-v </code><i>version</i></dt>
+<dd> printer version (720, 820, or 1000)</dd>
+<dt><code>-x </code><i>xoff</i></dt>
+<dd> vertical offset adjustment in 1&quot;/600</dd>
+<dt><code>-y </code><i>yoff</i></dt>
+<dd> horizontal offset adjustment in 1&quot;/600</dd>
+<dt><code>-t </code><i>topmarg</i></dt>
+<dd> top margin in 1&quot;/600 (default: 150 = 0.25&quot;)</dd>
+<dt><code>-l </code><i>leftmarg</i></dt>
+<dd> left margin in 1&quot;/600 (default: 150 = 0.25&quot;)</dd>
+<dt><code>-r </code><i>rightmarg</i></dt>
+<dd> right margin in 1&quot;/600 (default: 150 = 0.25&quot;)</dd>
+<dt><code>-b </code><i>botmarg</i></dt>
+<dd> bottom margin in 1&quot;/600 (default: 150 = 0.25&quot;)</dd>
+<dt><code>-s </code><i>paper</i></dt>
+<dd> paper size: <code>us </code> or <code>a4</code>. Default is <code>us</code>.</dd>
+<dt><code>-f </code><i>cfgfile</i></dt>
+<dd> read parameters from configuration file <i>cfgfile </i> </dd>
 </dl>
 <p> The <code>-x </code> and <code>-y </code> options accumulate. </p>
 <p> The <code>-v </code> option resets the horizontal and vertical adjustments to an internal default. </p>

@@ -23,21 +23,18 @@ description: "cgegs.f –"
  left and or/right Schur vectors of a complex matrix pair (A,B).
  Given two square matrices A and B, the generalized Schur
  factorization has the form
- 
  A = Q*S*Z**H, B = Q*T*Z**H
- 
  where Q and Z are unitary matrices and S and T are upper triangular.
  The columns of Q are the left Schur vectors
  and the columns of Z are the right Schur vectors.
- 
  If only the eigenvalues of (A,B) are needed, the driver routine
  CGEGV should be used instead. See CGEGV for a description of the
  eigenvalues of the generalized nonsymmetric eigenvalue problem
  (GNEP).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBVSL</i> </p>
+<dd><i>JOBVSL</i> </dd>
 <pre> JOBVSL is CHARACTER*1
  = 'N': do not compute the left Schur vectors;
  = 'V': compute the left Schur vectors (returned in VSL).</pre>
@@ -134,13 +131,13 @@ description: "cgegs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 224 of file cgegs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

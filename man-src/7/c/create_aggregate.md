@@ -44,22 +44,22 @@ CREATE AGGREGATE <i>name</i> (
 <p>Further assumptions are that the aggregate ignores null inputs, and that it delivers a null result if and only if there were no non-null inputs. Ordinarily, a data type&#8217;s &lt; operator is the proper sort operator for <code>MIN</code>, and &gt; is the proper sort operator for <code>MAX</code>. Note that the optimization will never actually take effect unless the specified operator is the &#8220;less than&#8221; or &#8220;greater than&#8221; strategy member of a B-tree index operator class.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of the aggregate function to create.</p>
-<dt><i>input_data_type</i></p>
-<dd>An input data type on which this aggregate function operates. To create a zero-argument aggregate function, write * in place of the list of input data types. (An example of such an aggregate is <code>count(*)</code>.)</p>
-<dt><i>base_type</i></p>
-<dd>In the old syntax for <code>CREATE AGGREGATE</code>, the input data type is specified by a basetype parameter rather than being written next to the aggregate name. Note that this syntax allows only one input parameter. To define a zero-argument aggregate function, specify the basetype as &quot;ANY&quot; (not *).</p>
-<dt><i>sfunc</i></p>
-<dd>The name of the state transition function to be called for each input row. For an <i>N</i>-argument aggregate function, the <i>sfunc</i> must take <i>N</i>+1 arguments, the first being of type <i>state_data_type</i> and the rest matching the declared input data type(s) of the aggregate. The function must return a value of type <i>state_data_type</i>. This function takes the current state value and the current input data value(s), and returns the next state value.</p>
-<dt><i>state_data_type</i></p>
-<dd>The data type for the aggregate&#8217;s state value.</p>
-<dt><i>ffunc</i></p>
-<dd>The name of the final function called to compute the aggregate&#8217;s result after all input rows have been traversed. The function must take a single argument of type <i>state_data_type</i>. The return data type of the aggregate is defined as the return type of this function. If <i>ffunc</i> is not specified, then the ending state value is used as the aggregate&#8217;s result, and the return type is <i>state_data_type</i>.</p>
-<dt><i>initial_condition</i></p>
-<dd>The initial setting for the state value. This must be a string constant in the form accepted for the data type <i>state_data_type</i>. If not specified, the state value starts out null.</p>
-<dt><i>sort_operator</i></p>
-<dd>The associated sort operator for a <code>MIN</code>&#8211; or <code>MAX</code>-like aggregate. This is just an operator name (possibly schema-qualified). The operator is assumed to have the same input data types as the aggregate (which must be a single-argument aggregate).</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of the aggregate function to create.</dd>
+<dt><i>input_data_type</i></dt>
+<dd>An input data type on which this aggregate function operates. To create a zero-argument aggregate function, write * in place of the list of input data types. (An example of such an aggregate is <code>count(*)</code>.)</dd>
+<dt><i>base_type</i></dt>
+<dd>In the old syntax for <code>CREATE AGGREGATE</code>, the input data type is specified by a basetype parameter rather than being written next to the aggregate name. Note that this syntax allows only one input parameter. To define a zero-argument aggregate function, specify the basetype as &quot;ANY&quot; (not *).</dd>
+<dt><i>sfunc</i></dt>
+<dd>The name of the state transition function to be called for each input row. For an <i>N</i>-argument aggregate function, the <i>sfunc</i> must take <i>N</i>+1 arguments, the first being of type <i>state_data_type</i> and the rest matching the declared input data type(s) of the aggregate. The function must return a value of type <i>state_data_type</i>. This function takes the current state value and the current input data value(s), and returns the next state value.</dd>
+<dt><i>state_data_type</i></dt>
+<dd>The data type for the aggregate&#8217;s state value.</dd>
+<dt><i>ffunc</i></dt>
+<dd>The name of the final function called to compute the aggregate&#8217;s result after all input rows have been traversed. The function must take a single argument of type <i>state_data_type</i>. The return data type of the aggregate is defined as the return type of this function. If <i>ffunc</i> is not specified, then the ending state value is used as the aggregate&#8217;s result, and the return type is <i>state_data_type</i>.</dd>
+<dt><i>initial_condition</i></dt>
+<dd>The initial setting for the state value. This must be a string constant in the form accepted for the data type <i>state_data_type</i>. If not specified, the state value starts out null.</dd>
+<dt><i>sort_operator</i></dt>
+<dd>The associated sort operator for a <code>MIN</code>&#8211; or <code>MAX</code>-like aggregate. This is just an operator name (possibly schema-qualified). The operator is assumed to have the same input data types as the aggregate (which must be a single-argument aggregate).</dd></dl>
 <p> The parameters of <code>CREATE AGGREGATE</code> can be written in any order, not just the order illustrated above.</p>
 <h2>Examples</h2>
 <p>See in the documentation.</p>

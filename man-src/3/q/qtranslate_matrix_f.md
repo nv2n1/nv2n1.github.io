@@ -10,7 +10,6 @@ description: "qtranslate_matrix, qtranslate_matrix_f – Optimised routine for t
 <p>qtranslate_matrix, qtranslate_matrix_f &#8211; Optimised routine for translating an already generated matrix. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void qtranslate_matrix(MATRIX *m, fixed x, fixed y, fixed z);
 void qtranslate_matrix_f(MATRIX_f *m, float x, float y, float z);</code></pre>
 <h2>Description</h2>

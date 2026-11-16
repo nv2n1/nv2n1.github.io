@@ -12,23 +12,23 @@ GEVTM (Evaluate transformation matrix) - Constructs a GKS segment transformation
 
  void geval_tran_matrix(const Gpoint *point, const Gvec *shift, Gdouble angle, const Gvec *scale, Gcoord_switch coord_switch, Gtran_matrix tran_matrix);
 <h2>Description</h2><dl COMPACT><dt>X0
-<dd>(Real, Input) - An X coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. X is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
-<dt>Y0
-<dd>(Real, Input) - A Y coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. Y is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
-<dt>DX
-<dd>(Real, Input) - The X component of a shift vector to be used for the scaling part of the output transformation. DX is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
-<dt>DY
-<dd>(Real, Input) - The Y component of a shift vector to be used for the scaling part of the output transformation. DY is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
-<dt>PHI
-<dd>(Real, Input) - The rotation angle, in radians, to be used for the rotation part of the output transformation.
-<dt>FX
-<dd>(Real, Input) - An X coordinate scale factor to be used in the scaling part of the output transformation.
-<dt>FY
-<dd>(Real, Input) - A Y coordinate scale factor to be used in the scaling part of the output transformation.
-<dt>SW
-<dd>(Integer, Input) - A coordinate switch to indicate whether the values for the arguments X0, Y0, DX, and DY (described above) are in world coordinates or normalized device coordinates. SW=0 indicates world coordinates and SW=1 indicates normalized device coordinates.
-<dt>MOUT
-<dd>(Real, Output) - A 2x3 array that contains the GKS transformation matrix in a form that can be used as input to other GKS functions such as GSSGT.</dl><h2>Usage</h2>If world coordinates are used, the shift vector and the fixed point are transformed by the current normalization transformation. 
+</dt><dd>(Real, Input) - An X coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. X is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
+</dd><dt>Y0
+</dt><dd>(Real, Input) - A Y coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. Y is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
+</dd><dt>DX
+</dt><dd>(Real, Input) - The X component of a shift vector to be used for the scaling part of the output transformation. DX is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
+</dd><dt>DY
+</dt><dd>(Real, Input) - The Y component of a shift vector to be used for the scaling part of the output transformation. DY is either in world coordinates or normalized device coordinates depending on the setting of the argument SW described below.
+</dd><dt>PHI
+</dt><dd>(Real, Input) - The rotation angle, in radians, to be used for the rotation part of the output transformation.
+</dd><dt>FX
+</dt><dd>(Real, Input) - An X coordinate scale factor to be used in the scaling part of the output transformation.
+</dd><dt>FY
+</dt><dd>(Real, Input) - A Y coordinate scale factor to be used in the scaling part of the output transformation.
+</dd><dt>SW
+</dt><dd>(Integer, Input) - A coordinate switch to indicate whether the values for the arguments X0, Y0, DX, and DY (described above) are in world coordinates or normalized device coordinates. SW=0 indicates world coordinates and SW=1 indicates normalized device coordinates.
+</dd><dt>MOUT
+</dt><dd>(Real, Output) - A 2x3 array that contains the GKS transformation matrix in a form that can be used as input to other GKS functions such as GSSGT.</dd></dl><h2>Usage</h2>If world coordinates are used, the shift vector and the fixed point are transformed by the current normalization transformation. 
 
  The order of the transformation operations as built into the output matrix is: scale (relative to the fixed point); rotate (relative to the fixed point; shift. 
 

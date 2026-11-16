@@ -17,11 +17,9 @@ description: "cpg_initialize – Create a new connection to the CPG service"
 <p> Each application may have several connections to the CPG API. Each application uses the <i>handle</i> argument to uniquely identify the connection. The <i>handle</i> argument is then used in other function calls to identify the connection to be used for communication with the CPG service. </p>
 <p> Every time an CPG event occurs within the joined group, one of the callbacks specified by the argument <i>callbacks</i> is called. The callback functions are described by the following type definitions: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef void (*cpg_deliver_fn_t)(
     cpg_handle_t handle,
@@ -37,31 +35,25 @@ typedef void (*cpg_confchg_fn_t)(
     const struct cpg_address *left_list, size_t left_list_entries,
     const struct cpg_address *joined_list, size_t joined_list_entries);
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> The <i>callbacks</i> argument is of the type:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 typedef struct {<br />
     cpg_deliver_fn_t cpg_deliver_fn;<br />
     cpg_confchg_fn_t cpg_confchg_fn;<br />
 } cpg_callbacks_t;
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> When a configuration change occurs or a message is to be delivered one of the callbacks is called from the <code>cpg_dispatch()</code> function. If a configuration change occurs, <i>cpg_confchg_fn</i> is called. If a delivery of a message occurs, <i>cpg_deliver_fn</i> is called. </p>
 <p> The <i>cpg_address</i> structure is defined</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct cpg_address {
     unsigned int nodeid;
@@ -69,16 +61,13 @@ struct cpg_address {
     unsigned int reason;
 };
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> where nodeid is a 32 bit unique node identifier, pid is the process ID of the process that has joined/left the group or sent the message, and reason is an integer code indicating why the node joined/left the group. </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 CPG_REASON_JOIN     - the process joined a group using cpg_join().
 CPG_REASON_LEAVE    - the process left a group using cpg_leave()
@@ -86,9 +75,8 @@ CPG_REASON_NODEDOWN - the process left a group because the node left the cluster
 CPG_REASON_NODEUP   - the process joined a group because it was already a member of a group on a node that has just joined the cluster
 CPG_REASON_PROCDOWN - the process left a group without calling cpg_leave()
 </pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>
 <h2>ERRORS</h2>

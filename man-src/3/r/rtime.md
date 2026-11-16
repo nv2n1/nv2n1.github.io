@@ -10,7 +10,6 @@ description: "rtime – get time from a remote machine"
 <p>rtime &#8211; get time from a remote machine</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;rpc/auth_des.h&gt;
-
 int rtime(struct sockaddr_in *addrp, struct rpc_timeval *timep,
           struct rpc_timeval *timeout);</code></pre>
 <h2>Description</h2>
@@ -22,10 +21,10 @@ int rtime(struct sockaddr_in *addrp, struct rpc_timeval *timep,
 <h2>Errors</h2>
 <p>All errors for underlying functions (<code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-read/">read</a></code>(2)) can occur. Moreover:</p>
 <dl>
-<dt><code>EIO</code></p>
-<dd>The number of returned bytes is not 4.</p>
-<dt><code>ETIMEDOUT</code></p>
-<dd>The waiting time as defined in timeout has expired.</dl>
+<dt><code>EIO</code></dt>
+<dd>The number of returned bytes is not 4.</dd>
+<dt><code>ETIMEDOUT</code></dt>
+<dd>The waiting time as defined in timeout has expired.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

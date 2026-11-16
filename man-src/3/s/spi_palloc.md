@@ -15,6 +15,6 @@ description: "SPI_palloc – allocate memory in the upper executor context"
 <h2>Arguments</h2>
 <p>Size <i>size</i></p>
 <dl COMPACT>
-<dd>size in bytes of storage to allocate</dl>
+<dd>size in bytes of storage to allocate</dd></dl>
 <h2>Return Value</h2>
 <p>pointer to new storage space of the specified size</p>

@@ -21,14 +21,14 @@ description: "ipa-rmkeytab – Remove a kerberos principal from a keytab"
 <p> <code>NOTE:</code> removing a principal from the keytab does not affect the Kerberos principal stored in the IPA server. It merely removes the entry from the local keytab.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p principal-name</code></p>
-<dd> The non-realm part of the full principal name.</p>
-<dt><code>-k keytab-file</code></p>
-<dd> The keytab file to remove the principal(s) from.</p>
-<dt><code>-r realm</code></p>
-<dd> A realm to remove all principals for.</p>
-<dt><code>-d</code></p>
-<dd> Debug mode. Additional information is displayed.</dl>
+<dt><code>-p principal-name</code></dt>
+<dd> The non-realm part of the full principal name.</dd>
+<dt><code>-k keytab-file</code></dt>
+<dd> The keytab file to remove the principal(s) from.</dd>
+<dt><code>-r realm</code></dt>
+<dd> A realm to remove all principals for.</dd>
+<dt><code>-d</code></dt>
+<dd> Debug mode. Additional information is displayed.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Remove the NFS service principal on the host foo.example.com from /tmp/nfs.keytab. </p>
 <p>#&nbsp;<wbr>ipa-rmkeytab -p nfs/foo.example.com -k&nbsp;<wbr>/tmp/nfs.keytab </p>

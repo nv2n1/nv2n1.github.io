@@ -15,32 +15,32 @@ description: "dracut-catimages – creates initial ramdisk image by concatenatin
 <h2>Options</h2>
 <p><code>-f, &#8211;force</code></p>
 <dl>
-<dd>overwrite existing initramfs file.</dl>
+<dd>overwrite existing initramfs file.</dd></dl>
 <p> <code>-i, &#8211;imagedir</code></p>
 <dl>
-<dd>Directory with additional images to add (default: /boot/dracut/)</dl>
+<dd>Directory with additional images to add (default: /boot/dracut/)</dd></dl>
 <p> <code>-o, &#8211;overlaydir</code></p>
 <dl>
-<dd>Overlay directory, which contains additional files that will be used to create an additional image</dl>
+<dd>Overlay directory, which contains additional files that will be used to create an additional image</dd></dl>
 <p> <code>&#8211;nooverlay</code></p>
 <dl>
-<dd>Do not use the overlay directory</dl>
+<dd>Do not use the overlay directory</dd></dl>
 <p> <code>&#8211;noimagedir</code></p>
 <dl>
-<dd>Do not use the additional image directory</dl>
+<dd>Do not use the additional image directory</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
-<dd>display help text and exit.</dl>
+<dd>display help text and exit.</dd></dl>
 <p> <code>&#8211;debug</code></p>
 <dl>
-<dd>output debug information of the build process</dl>
+<dd>output debug information of the build process</dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
-<dd>verbose output during the build process</dl>
+<dd>verbose output during the build process</dd></dl>
 <h2>Files</h2>
 <p><i>/boot/dracut/*.img</i></p>
 <dl>
-<dd>images to work with</dl>
+<dd>images to work with</dd></dl>
 <h2>Authors</h2>
 <p>Harald Hoyer</p>
 <h2>Availability</h2>

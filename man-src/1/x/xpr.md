@@ -15,77 +15,75 @@ description: "xpr – print an X window dump"
 <p> <i>xpr</i> takes as input a window dump file produced by <i><a href="/docs/linux/man/1-xwd/">xwd</a>(1)</i> and formats it for output on PostScript printers, the Digital LN03 or LA100, the IBM PP3812 page printer, the HP LaserJet (or other PCL printers), or the HP PaintJet. If no file argument is given, the standard input is used. By default, <i>xpr</i> prints the largest possible representation of the window on the output page. Options allow the user to add headers and trailers, specify margins, adjust the scale and orientation, and append multiple window dumps to a single output file. Output is to standard output unless <code>-output</code> is specified. </p>
 <p> <code>Command Options</code> </p>
 <dl>
-<dt><code>-device</code> <i>devtype</i></p>
-<dd> Specifies the device on which the file will be printed. Currently supported:</p>
+<dt><code>-device</code> <i>devtype</i></dt>
+<dd> Specifies the device on which the file will be printed. Currently supported:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>la100</code></p>
-<dd> Digital LA100</p>
-<dt><code>ljet</code></p>
-<dd> <font SIZE="-1">HP</font> LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, <font SIZE="-1">HP</font>2560 series, and <font SIZE="-1">HP</font>2930 series printers</p>
-<dt><code>ln03</code></p>
-<dd> Digital LN03</p>
-<dt><code>pjet</code></p>
-<dd> HP PaintJet (color mode)</p>
-<dt><code>pjetxl</code></p>
-<dd> HP HP PaintJet XL Color Graphics Printer (color mode)</p>
-<dt><code>pp</code></p>
-<dd> IBM PP3812</p>
-<dt><code>ps</code></p>
-<dd> PostScript printer</dl>
+<dt><code>la100</code></dt>
+<dd> Digital LA100</dd>
+<dt><code>ljet</code></dt>
+<dd> <font SIZE="-1">HP</font> LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, <font SIZE="-1">HP</font>2560 series, and <font SIZE="-1">HP</font>2930 series printers</dd>
+<dt><code>ln03</code></dt>
+<dd> Digital LN03</dd>
+<dt><code>pjet</code></dt>
+<dd> HP PaintJet (color mode)</dd>
+<dt><code>pjetxl</code></dt>
+<dd> HP HP PaintJet XL Color Graphics Printer (color mode)</dd>
+<dt><code>pp</code></dt>
+<dd> IBM PP3812</dd>
+<dt><code>ps</code></dt>
+<dd> PostScript printer</dd></dl>
 </dl>
 <dt>
-<dd> The default is PostScript. <code>-device lw</code> (LaserWriter) is equivalent to -device ps and is provided only for backwards compatibility.</p>
-<dt><code>-scale</code> <i>scale</i></p>
-<dd> Affects the size of the window on the page. The PostScript, LN03, and HP printers are able to translate each bit in a window pixel map into a grid of a specified size. For example each bit might translate into a 3&#215;3 grid. This would be specified by <code>-scale</code> <i>3</i>. By default a window is printed with the largest scale that will fit onto the page for the specified orientation.</p>
-<dt><code>-height</code> <i>inches</i></p>
-<dd> Specifies the maximum height of the page.</p>
-<dt><code>-width</code> <i>inches</i></p>
-<dd> Specifies the maximum width of the page.</p>
-<dt><code>-left</code> <i>inches</i></p>
-<dd> Specifies the left margin in inches. Fractions are allowed. By default the window is centered in the page.</p>
-<dt><code>-top</code> <i>inches</i></p>
-<dd> Specifies the top margin for the picture in inches. Fractions are allowed.</p>
-<dt><code>-header</code> <i>string</i></p>
-<dd> Specifies a header string to be printed above the window.</p>
-<dt><code>-trailer</code> <i>string</i></p>
-<dd> Specifies a trailer string to be printed below the window.</p>
-<dt><code>-landscape</code></p>
-<dd> Forces the window to printed in landscape mode. By default a window is printed such that its longest side follows the long side of the paper.</p>
-<dt><code>-plane</code> <i>number</i></p>
-<dd> Specifies which bit plane to use in an image. The default is to use the entire image and map values into black and white based on color intensities.</p>
-<dt><code>-gray</code> <i> 2 | 3 | 4</i></p>
-<dd> Uses a simple 2&#215;2, 3&#215;3, or 4&#215;4 gray scale conversion on a color image, rather than mapping to strictly black and white. This doubles, triples, or quadruples the effective width and height of the image.</p>
-<dt><code>-portrait</code></p>
-<dd> Forces the window to be printed in portrait mode. By default a window is printed such that its longest side follows the long side of the paper.</p>
-<dt><code>-rv</code></p>
-<dd> Forces the window to be printed in reverse video.</p>
-<dt><code>-compact</code></p>
-<dd> Uses simple run-length encoding for compact representation of windows with lots of white pixels.</p>
-<dt><code>-output</code> <i>filename</i></p>
-<dd> Specifies an output file name. If this option is not specified, standard output is used.</p>
-<dt><code>-append</code> <i>filename</i></p>
-<dd> Specifies a filename previously produced by <i>xpr</i> to which the window is to be appended.</p>
-<dt><code>-noff</code></p>
-<dd> When specified in conjunction with <code>-append</code>, the window will appear on the same page as the previous window.</p>
-<dt><code>-split</code> <i>n</i></p>
-<dd> This option allows the user to split a window onto several pages. This might be necessary for very large windows that would otherwise cause the printer to overload and print the page in an obscure manner.</p>
-<dt><code>-psfig</code></p>
-<dd> Suppress translation of the PostScript picture to the center of the page.</p>
-<dt><code>-density</code> <i>dpi</i></p>
-<dd> Indicates what dot-per-inch density should be used by the HP printer.</p>
-<dt><code>-cutoff</code> <i>level</i></p>
-<dd> Changes the intensity level where colors are mapped to either black or white for monochrome output on a LaserJet printer. The <i>level</i> is expressed as percentage of full brightness. Fractions are allowed.</p>
-<dt><code>-noposition</code></p>
-<dd> This option causes header, trailer, and image positioning command generation to be bypassed for LaserJet, PaintJet and PaintJet XL printers.</p>
-<dt><code>-gamma</code> <i>correction</i></p>
-<dd> This changes the intensity of the colors printed by PaintJet XL printer. The <i>correction</i> is a floating point value in the range 0.00 to 3.00. Consult the operator&#8217;s manual to determine the correct value for the specific printer.</p>
-<dt><code>-render</code> <i>algorithm</i></p>
-<dd> This allows PaintJet XL printer to render the image with the best quality versus performance tradeoff. Consult the operator&#8217;s manual to determine which <i>algorithm</i>s are available.</p>
-<dt><code>-slide</code></p>
-<dd> This option allows overhead transparencies to be printed using the PaintJet and PaintJet XL printers. </p>
+</dt><dd> The default is PostScript. <code>-device lw</code> (LaserWriter) is equivalent to -device ps and is provided only for backwards compatibility.</dd>
+<dt><code>-scale</code> <i>scale</i></dt>
+<dd> Affects the size of the window on the page. The PostScript, LN03, and HP printers are able to translate each bit in a window pixel map into a grid of a specified size. For example each bit might translate into a 3&#215;3 grid. This would be specified by <code>-scale</code> <i>3</i>. By default a window is printed with the largest scale that will fit onto the page for the specified orientation.</dd>
+<dt><code>-height</code> <i>inches</i></dt>
+<dd> Specifies the maximum height of the page.</dd>
+<dt><code>-width</code> <i>inches</i></dt>
+<dd> Specifies the maximum width of the page.</dd>
+<dt><code>-left</code> <i>inches</i></dt>
+<dd> Specifies the left margin in inches. Fractions are allowed. By default the window is centered in the page.</dd>
+<dt><code>-top</code> <i>inches</i></dt>
+<dd> Specifies the top margin for the picture in inches. Fractions are allowed.</dd>
+<dt><code>-header</code> <i>string</i></dt>
+<dd> Specifies a header string to be printed above the window.</dd>
+<dt><code>-trailer</code> <i>string</i></dt>
+<dd> Specifies a trailer string to be printed below the window.</dd>
+<dt><code>-landscape</code></dt>
+<dd> Forces the window to printed in landscape mode. By default a window is printed such that its longest side follows the long side of the paper.</dd>
+<dt><code>-plane</code> <i>number</i></dt>
+<dd> Specifies which bit plane to use in an image. The default is to use the entire image and map values into black and white based on color intensities.</dd>
+<dt><code>-gray</code> <i> 2 | 3 | 4</i></dt>
+<dd> Uses a simple 2&#215;2, 3&#215;3, or 4&#215;4 gray scale conversion on a color image, rather than mapping to strictly black and white. This doubles, triples, or quadruples the effective width and height of the image.</dd>
+<dt><code>-portrait</code></dt>
+<dd> Forces the window to be printed in portrait mode. By default a window is printed such that its longest side follows the long side of the paper.</dd>
+<dt><code>-rv</code></dt>
+<dd> Forces the window to be printed in reverse video.</dd>
+<dt><code>-compact</code></dt>
+<dd> Uses simple run-length encoding for compact representation of windows with lots of white pixels.</dd>
+<dt><code>-output</code> <i>filename</i></dt>
+<dd> Specifies an output file name. If this option is not specified, standard output is used.</dd>
+<dt><code>-append</code> <i>filename</i></dt>
+<dd> Specifies a filename previously produced by <i>xpr</i> to which the window is to be appended.</dd>
+<dt><code>-noff</code></dt>
+<dd> When specified in conjunction with <code>-append</code>, the window will appear on the same page as the previous window.</dd>
+<dt><code>-split</code> <i>n</i></dt>
+<dd> This option allows the user to split a window onto several pages. This might be necessary for very large windows that would otherwise cause the printer to overload and print the page in an obscure manner.</dd>
+<dt><code>-psfig</code></dt>
+<dd> Suppress translation of the PostScript picture to the center of the page.</dd>
+<dt><code>-density</code> <i>dpi</i></dt>
+<dd> Indicates what dot-per-inch density should be used by the HP printer.</dd>
+<dt><code>-cutoff</code> <i>level</i></dt>
+<dd> Changes the intensity level where colors are mapped to either black or white for monochrome output on a LaserJet printer. The <i>level</i> is expressed as percentage of full brightness. Fractions are allowed.</dd>
+<dt><code>-noposition</code></dt>
+<dd> This option causes header, trailer, and image positioning command generation to be bypassed for LaserJet, PaintJet and PaintJet XL printers.</dd>
+<dt><code>-gamma</code> <i>correction</i></dt>
+<dd> This changes the intensity of the colors printed by PaintJet XL printer. The <i>correction</i> is a floating point value in the range 0.00 to 3.00. Consult the operator&#8217;s manual to determine the correct value for the specific printer.</dd>
+<dt><code>-render</code> <i>algorithm</i></dt>
+<dd> This allows PaintJet XL printer to render the image with the best quality versus performance tradeoff. Consult the operator&#8217;s manual to determine which <i>algorithm</i>s are available.</dd>
+<dt><code>-slide</code></dt>
+<dd> This option allows overhead transparencies to be printed using the PaintJet and PaintJet XL printers. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xwd/">xwd</a>(1), <a href="/docs/linux/man/1-xwud/">xwud</a>(1), X(1)</p>
@@ -103,11 +101,11 @@ description: "xpr – print an X window dump"
 <p> <i>xpr</i> may be tailored for use with monochrome PCL printers other than the LaserJet. To print on a ThinkJet (<font SIZE="-1">HP</font>2225A) <i>xpr</i> could be invoked as: </p>
 <dl>
 <dt>
-<dd> xpr -density 96 -width 6.667 <i>filename</i></dl>
+</dt><dd> xpr -density 96 -width 6.667 <i>filename</i></dd></dl>
 <p> or for black-and-white output to a PaintJet: </p>
 <dl>
 <dt>
-<dd> xpr -density 180 <i>filename</i></dl>
+</dt><dd> xpr -density 180 <i>filename</i></dd></dl>
 <p> The monochrome intensity of a pixel is computed as 0.30*R + 0.59*G + 0.11*B. If a pixel&#8217;s computed intensity is less than the <code>-cutoff</code> level it will print as white. This maps light-on-dark display images to black-on-white hardcopy. The default cutoff intensity is 50% of full brightness. Example: specifying <code>-cutoff 87.5</code> moves the white/black intensity point to 87.5% of full brightness. </p>
 <p> A LaserJet printer must be configured with sufficient memory to handle the image. For a full page at 300 dots per inch approximately 2MB of printer memory is required. </p>
 <p> Color images are produced on the PaintJet at 90 dots per inch. The PaintJet is limited to sixteen colors from its 330 color palette on each horizontal print line. <i>xpr</i> will issue a warning message if more than sixteen colors are encountered on a line. <i>xpr</i> will program the PaintJet for the first sixteen colors encountered on each line and use the nearest matching programmed value for other colors present on the line. </p>

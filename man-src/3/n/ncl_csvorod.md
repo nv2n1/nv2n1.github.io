@@ -13,35 +13,35 @@ CSVOROD - calculate Voronoi polygons for data on a sphere.
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NCA, NUMV, NV, IER)
 <h2>Description</h2><dl COMPACT><dt>NPTS
-<dd>(integer,input) The number of input data points (NPTS &gt; 3).
-<dt>RLATI
-<dd>(double precision, input) An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
-<dt>RLONI
-<dd>(double precision, input) An array containing the longitudes of the input data, expressed in degrees.
-<dt>NI
-<dd>(integer, input) The index of the input coordinate for which you want to determine the Voronoi polygon (1 .LE. NI .LE. NPTS).
-<dt>NF
-<dd>(integer, input) Flag indicating if this is the first call to CSVOROD to retrieve Voronoi polygons for this dataset (1=yes, 0=no). Calls subsequent to the first call for a given dataset are much faster than the first call.
-<dt>IWK
-<dd>(integer, input) Integer work space dimensioned for 27*NPTS.
-<dt>RWK
-<dd>(double precision, input) A work space dimensioned for 9*NPTS. Note that RWK must be typed DOUBLE PRECISION.
-<dt>NC
-<dd>(integer, input) The maximum size of the output arrays RLATO, RLONO, and RC. NC should be 2*NPTS.
-<dt>RLATO
-<dd>(double precision, output) The latitudes for the vertices of the Voronoi polygons. These are circumcenters of circles passing through the Delaunay triangles. If a coordinate is a boundary point, then the circle may pass through certain &quot;pseudo points&quot; that have been added to the original dataset in order to complete the Voronoi polygon.
-<dt>RLONO
-<dd>(double precision, output) The longitudes for the vertices of the Voronoi polygons.
-<dt>RC
-<dd>(double precision, output) Array containing circumradii (arc lengths in degrees of the angle between a circumcenter and its associated triangle vertices).
-<dt>NCA
-<dd>(integer, output) The actual number of circumcenters returned in RLATO and RLONO. This number may be larger than NPTS if the input dataset has boundary points since certain &quot;pseudo points&quot; may have been added to the original dataset in order to complete the Voronoi polygon set.
-<dt>NUMV
-<dd>(integer, output) The number of vertices in the Voronoi polygon enclosing the coordinate (RLATI(NI),RLONI(NI)).
-<dt>NV
-<dd>(integer, output) An array (dimensioned for NPTS) containing NUMV indices for the Voronoi polygon enclosing the coordinate (RLATI(NI),RLONI(NI)). The indices returned in this array refer to the coordinates returned in RLATO, RLONO, and RC. For example, if the integer &quot;J&quot; is an element of the NV array, then (RLATO(J),RLONO(J)) is a vertex of the Voronoi polygon enclosing (RLATI(NI),RLONI(NI)). The indices in NV list out the vertices of the Voronoi polygon in counter-clockwise order.
-<dt>IER
-<dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for cssgrid_errors for details.</dl><h2>Usage</h2>CSVOROD is called if you want to determine the Voronoi polygons for data randomly positioned on a sphere. Each call to CSVOROD calculates the vertices for the Voronoi polygon surrounding a specified input point. CSVOROD is a double precision version of CSVORO.
+</dt><dd>(integer,input) The number of input data points (NPTS &gt; 3).
+</dd><dt>RLATI
+</dt><dd>(double precision, input) An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
+</dd><dt>RLONI
+</dt><dd>(double precision, input) An array containing the longitudes of the input data, expressed in degrees.
+</dd><dt>NI
+</dt><dd>(integer, input) The index of the input coordinate for which you want to determine the Voronoi polygon (1 .LE. NI .LE. NPTS).
+</dd><dt>NF
+</dt><dd>(integer, input) Flag indicating if this is the first call to CSVOROD to retrieve Voronoi polygons for this dataset (1=yes, 0=no). Calls subsequent to the first call for a given dataset are much faster than the first call.
+</dd><dt>IWK
+</dt><dd>(integer, input) Integer work space dimensioned for 27*NPTS.
+</dd><dt>RWK
+</dt><dd>(double precision, input) A work space dimensioned for 9*NPTS. Note that RWK must be typed DOUBLE PRECISION.
+</dd><dt>NC
+</dt><dd>(integer, input) The maximum size of the output arrays RLATO, RLONO, and RC. NC should be 2*NPTS.
+</dd><dt>RLATO
+</dt><dd>(double precision, output) The latitudes for the vertices of the Voronoi polygons. These are circumcenters of circles passing through the Delaunay triangles. If a coordinate is a boundary point, then the circle may pass through certain &quot;pseudo points&quot; that have been added to the original dataset in order to complete the Voronoi polygon.
+</dd><dt>RLONO
+</dt><dd>(double precision, output) The longitudes for the vertices of the Voronoi polygons.
+</dd><dt>RC
+</dt><dd>(double precision, output) Array containing circumradii (arc lengths in degrees of the angle between a circumcenter and its associated triangle vertices).
+</dd><dt>NCA
+</dt><dd>(integer, output) The actual number of circumcenters returned in RLATO and RLONO. This number may be larger than NPTS if the input dataset has boundary points since certain &quot;pseudo points&quot; may have been added to the original dataset in order to complete the Voronoi polygon set.
+</dd><dt>NUMV
+</dt><dd>(integer, output) The number of vertices in the Voronoi polygon enclosing the coordinate (RLATI(NI),RLONI(NI)).
+</dd><dt>NV
+</dt><dd>(integer, output) An array (dimensioned for NPTS) containing NUMV indices for the Voronoi polygon enclosing the coordinate (RLATI(NI),RLONI(NI)). The indices returned in this array refer to the coordinates returned in RLATO, RLONO, and RC. For example, if the integer &quot;J&quot; is an element of the NV array, then (RLATO(J),RLONO(J)) is a vertex of the Voronoi polygon enclosing (RLATI(NI),RLONI(NI)). The indices in NV list out the vertices of the Voronoi polygon in counter-clockwise order.
+</dd><dt>IER
+</dt><dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for cssgrid_errors for details.</dd></dl><h2>Usage</h2>CSVOROD is called if you want to determine the Voronoi polygons for data randomly positioned on a sphere. Each call to CSVOROD calculates the vertices for the Voronoi polygon surrounding a specified input point. CSVOROD is a double precision version of CSVORO.
 <h2>Access</h2>To use CSVOROD, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>css_overview, csstrid, cssgridd. 
 

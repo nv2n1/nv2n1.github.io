@@ -14,7 +14,7 @@ description: "atapi_cmd_type – Determine ATAPI command type from SCSI opcode"
 <p><i>opcode</i></p>
 <dl>
 <dd>
-<dd>SCSI opcode</dl>
+</dd><dd>SCSI opcode</dd></dl>
 <h2>Description</h2>
 <p>Determine ATAPI command type from <i>opcode</i>. </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "atapi_cmd_type – Determine ATAPI command type from SCSI opcode"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

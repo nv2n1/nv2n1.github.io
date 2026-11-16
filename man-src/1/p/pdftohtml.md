@@ -17,54 +17,54 @@ description: "pdftohtml – program to convert PDF files into HTML, XML and PNG 
 <h2>OPTIONS</h2>
 <p> A summary of options are included below.</p>
 <dl>
-<dt><code>-h, -help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-f &lt;int&gt;</code></p>
-<dd> first page to print</p>
-<dt><code>-l &lt;int&gt;</code></p>
-<dd> last page to print</p>
-<dt><code>-q</code></p>
-<dd> do not print any messages or errors</p>
-<dt><code>-v</code></p>
-<dd> print copyright and version info</p>
-<dt><code>-p</code></p>
-<dd> exchange .pdf links with .html</p>
-<dt><code>-c</code></p>
-<dd> generate complex output</p>
-<dt><code>-s</code></p>
-<dd> generate single HTML that includes all pages</p>
-<dt><code>-dataurls</code></p>
-<dd> use data URLs instead of external images in HTML. No available in all platforms</p>
-<dt><code>-i</code></p>
-<dd> ignore images</p>
-<dt><code>-noframes</code></p>
-<dd> generate no frames. Not supported in complex output mode.</p>
-<dt><code>-stdout</code></p>
-<dd> use standard output</p>
-<dt><code>-zoom &lt;fp&gt;</code></p>
-<dd> zoom the PDF document (default 1.5) (1 means 72 DPI)</p>
-<dt><code>-xml</code></p>
-<dd> output for XML post-processing</p>
-<dt><code>-noroundcoord</code></p>
-<dd> do not round coordinates (with XML output only)</p>
-<dt><code>-enc &lt;string&gt;</code></p>
-<dd> output text encoding name</p>
-<dt><code>-opw &lt;string&gt;</code></p>
-<dd> owner password (for encrypted files)</p>
-<dt><code>-upw &lt;string&gt;</code></p>
-<dd> user password (for encrypted files)</p>
-<dt><code>-hidden</code></p>
-<dd> force hidden text extraction</p>
-<dt><code>-fmt</code></p>
-<dd> image file format for Splash output (png or jpg). If complex is selected, but -fmt is not specified, -fmt png will be assumed</p>
-<dt><code>-nomerge</code></p>
-<dd> do not merge paragraphs</p>
-<dt><code>-nodrm</code></p>
-<dd> override document DRM settings</p>
-<dt><code>-wbt &lt;fp&gt;</code></p>
-<dd> adjust the word break threshold percent. Default is 10. Word break occurs when distance between two adjacent characters is greater than this percent of character height.</p>
-<dt><code>-fontfullname</code></p>
-<dd> outputs the font name without any substitutions. </p>
+<dt><code>-h, -help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-f &lt;int&gt;</code></dt>
+<dd> first page to print</dd>
+<dt><code>-l &lt;int&gt;</code></dt>
+<dd> last page to print</dd>
+<dt><code>-q</code></dt>
+<dd> do not print any messages or errors</dd>
+<dt><code>-v</code></dt>
+<dd> print copyright and version info</dd>
+<dt><code>-p</code></dt>
+<dd> exchange .pdf links with .html</dd>
+<dt><code>-c</code></dt>
+<dd> generate complex output</dd>
+<dt><code>-s</code></dt>
+<dd> generate single HTML that includes all pages</dd>
+<dt><code>-dataurls</code></dt>
+<dd> use data URLs instead of external images in HTML. No available in all platforms</dd>
+<dt><code>-i</code></dt>
+<dd> ignore images</dd>
+<dt><code>-noframes</code></dt>
+<dd> generate no frames. Not supported in complex output mode.</dd>
+<dt><code>-stdout</code></dt>
+<dd> use standard output</dd>
+<dt><code>-zoom &lt;fp&gt;</code></dt>
+<dd> zoom the PDF document (default 1.5) (1 means 72 DPI)</dd>
+<dt><code>-xml</code></dt>
+<dd> output for XML post-processing</dd>
+<dt><code>-noroundcoord</code></dt>
+<dd> do not round coordinates (with XML output only)</dd>
+<dt><code>-enc &lt;string&gt;</code></dt>
+<dd> output text encoding name</dd>
+<dt><code>-opw &lt;string&gt;</code></dt>
+<dd> owner password (for encrypted files)</dd>
+<dt><code>-upw &lt;string&gt;</code></dt>
+<dd> user password (for encrypted files)</dd>
+<dt><code>-hidden</code></dt>
+<dd> force hidden text extraction</dd>
+<dt><code>-fmt</code></dt>
+<dd> image file format for Splash output (png or jpg). If complex is selected, but -fmt is not specified, -fmt png will be assumed</dd>
+<dt><code>-nomerge</code></dt>
+<dd> do not merge paragraphs</dd>
+<dt><code>-nodrm</code></dt>
+<dd> override document DRM settings</dd>
+<dt><code>-wbt &lt;fp&gt;</code></dt>
+<dd> adjust the word break threshold percent. Default is 10. Word break occurs when distance between two adjacent characters is greater than this percent of character height.</dd>
+<dt><code>-fontfullname</code></dt>
+<dd> outputs the font name without any substitutions. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Pdftohtml was developed by Gueorgui Ovtcharov and Rainer Dorsch. It is based and benefits a lot from Derek Noonburg&#8217;s xpdf package. </p>

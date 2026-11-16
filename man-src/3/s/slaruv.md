@@ -19,17 +19,17 @@ description: "slaruv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLARUV returns a vector of n random real numbers from a uniform (0,1)
  distribution (n &lt;= 128).
  This is an auxiliary routine called by SLARNV and CLARNV.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ISEED</i> </p>
+</dt><dd> <i>ISEED</i> </dd>
 <pre>
           ISEED is INTEGER array, dimension (4)
           On entry, the seed of the random number generator; the array
@@ -51,18 +51,18 @@ description: "slaruv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   This routine uses a multiplicative congruential method with modulus
   2**48 and multiplier 33952834046453 (see G.S.Fishman,
@@ -73,8 +73,9 @@ description: "slaruv.f –"
   per element. Hence the routine is portable across machines with
   integers of 32 bits or more.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 96 of file slaruv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -14,16 +14,16 @@ description: "snd_soc_component_update_bits_async – Perform asynchronous read/
 <p><i>component</i></p>
 <dl>
 <dd>
-<dd>Component to update</dl>
+</dd><dd>Component to update</dd></dl>
 <p> <i>reg</i></p>
 <dl>
-<dd>Register to update</dl>
+<dd>Register to update</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>Mask that specifies which bits to update</dl>
+<dd>Mask that specifies which bits to update</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>New value for the bits specified by mask</dl>
+<dd>New value for the bits specified by mask</dd></dl>
 <h2>Description</h2>
 <p>This function is similar to <code>snd_soc_component_update_bits</code>, but the update operation is scheduled asynchronously. This means it may not be completed when the function returns. To make sure that all scheduled updates have been completed <code>snd_soc_component_async_complete</code> must be called.</p>
 <h2>Return</h2>

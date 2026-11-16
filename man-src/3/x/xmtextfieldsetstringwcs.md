@@ -16,10 +16,10 @@ description: "XmTextFieldSetStringWcs — A TextField function that sets a wide 
 <h2>Description</h2>
 <p><code>XmTextFieldSetStringWcs</code> sets the wide character string value of the TextField widget. This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. It also sets the insertion cursor position to the beginning of the string and calls the widget&#8217;s <code>XmNmotionVerifyCallback</code> callbacks.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>wcstring</i></p>
-<dd>Specifies the wide character string value</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>wcstring</i></dt>
+<dd>Specifies the wide character string value</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextfieldsetstring/">XmTextFieldSetString</a></code>(3).</p>

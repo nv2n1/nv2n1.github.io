@@ -10,14 +10,10 @@ description: "std::numpunct<CharT>::grouping,std::numpunct<CharT>::do_grouping â
 <p>std::numpunct&lt;CharT&gt;::grouping,std::numpunct&lt;CharT&gt;::do_grouping &#8211; std::numpunct&lt;CharT&gt;::grouping,std::numpunct&lt;CharT&gt;::do_grouping</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  std::string grouping() const;
-
 protected:
 (2)
-
     virtual std::string do_grouping() const;</code></pre>
 <p>1) Public member function, calls the member function do_grouping of the most derived class.<br />
 2) Returns an std::string holding, in each char element, the number of digits in each group of the numeric output formatted by num_put::put() (and, therefore, basic_ostream::operator&lt;&lt;)<br />
@@ -27,12 +23,9 @@ The groups are stored as binary values: three-digit group is &#8216;\3&#8217;, a
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;locale&gt;
 struct space_out : std::numpunct&lt;char&gt;
-
 {
     char do_thousands_sep() const
     {
@@ -44,7 +37,6 @@ struct space_out : std::numpunct&lt;char&gt;
     } // groups of 1 digit
 };
 struct g123 : std::numpunct&lt;char&gt;
-
 {
     std::string do_grouping() const
     {
@@ -52,7 +44,6 @@ struct g123 : std::numpunct&lt;char&gt;
     }
 };
 int main()
-
 {
     std::cout &lt;&lt; &quot;default locale: &quot; &lt;&lt; 12345678 &lt;&lt; '
 ';

@@ -25,18 +25,15 @@ status &#8211; the value to return from setjmp. If it is equal to 0, 1 is used i
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;csetjmp&gt;
 std::jmp_buf jump_buffer;
 [[noreturn]] void a(int count)
-
 {
     std::cout &lt;&lt; &quot;a(&quot; &lt;&lt; count &lt;&lt; &quot;) called
 &quot;;
     std::longjmp(jump_buffer, count + 1); // setjmp() will return count+1
 }
 int main()
-
 {
     volatile int count = 0; // local variables must be volatile for setjmp
     if (setjmp(jump_buffer) != 9) {

@@ -13,8 +13,8 @@ description: "mongoc_uri_get_read_prefs_t() – Fetches a read preference that i
 mongoc_uri_get_read_prefs_t (const mongoc_uri_t *uri);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri</code></p>
-<dd>A <code>mongoc_uri_t</code> \&amp;.</dl>
+<dt><code>uri</code></dt>
+<dd>A <code>mongoc_uri_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches a read preference that is owned by the URI instance. This read preference concern is configured based on URI parameters. </p>
 <h2>Returns</h2>

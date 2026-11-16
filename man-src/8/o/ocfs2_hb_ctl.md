@@ -22,20 +22,20 @@ description: "ocfs2_hb_ctl – Starts and stops the OCFS2 heartbeat on a given d
 <p><code>ocfs2_hb_ctl</code> starts and stops the heartbeat on a <i>OCFS2</i> device. <code>Users are strongly urged not to use this tool directly</code>. It is automatically invoked by <i>mount.ocfs2</i> and other tools that require heartbeat notifications. The tools accepts devices to be specified by its name or its uuid. Service denotes the application that is requesting the heartbeat notification. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-S</code></p>
-<dd>Starts the heartbeat. </p>
-<dt><code>-K</code></p>
-<dd>Stops the heartbeat. </p>
-<dt><code>-I</code></p>
-<dd>Prints the heartbeat reference counts for that heartbeat region. </p>
-<dt><code>-d</code></p>
-<dd>Specify region by device name. </p>
-<dt><code>-u</code></p>
-<dd>Specify region by device uuid. </p>
-<dt><code>-n</code></p>
-<dd>Adjust IO priority for the heartbeat thread. This option calls the <code>ionice</code> tool to set its IO scheduling class to realtime with scheduling class data as provided. This option is usable only with the <code>O2CB</code> cluster stack. </p>
-<dt><code>-h</code></p>
-<dd>Displays help and exit. </p>
+<dt><code>-S</code></dt>
+<dd>Starts the heartbeat. </dd>
+<dt><code>-K</code></dt>
+<dd>Stops the heartbeat. </dd>
+<dt><code>-I</code></dt>
+<dd>Prints the heartbeat reference counts for that heartbeat region. </dd>
+<dt><code>-d</code></dt>
+<dd>Specify region by device name. </dd>
+<dt><code>-u</code></dt>
+<dd>Specify region by device uuid. </dd>
+<dt><code>-n</code></dt>
+<dd>Adjust IO priority for the heartbeat thread. This option calls the <code>ionice</code> tool to set its IO scheduling class to realtime with scheduling class data as provided. This option is usable only with the <code>O2CB</code> cluster stack. </dd>
+<dt><code>-h</code></dt>
+<dd>Displays help and exit. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>tunefs.ocfs2(8)</code> <code>mounted.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> <code>debugfs.ocfs2(8)</code> </p>

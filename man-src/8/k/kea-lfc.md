@@ -10,47 +10,47 @@ description: "kea-lfc – Lease File Cleanup process in Kea"
 <p>kea-lfc &#8211; Lease File Cleanup process in Kea</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kea-lfc</code> [<code>-4|-6</code>] [<code>-c&nbsp;<wbr></code><i>config-file</i>] [<code>-p&nbsp;<wbr></code><i>pid-file</i>] [<code>-x&nbsp;<wbr></code><i>previous-file</i>] [<code>-i&nbsp;<wbr></code><i>copy-file</i>] [<code>-o&nbsp;<wbr></code><i>output-file</i>] [<code>-f&nbsp;<wbr></code><i>finish-file</i>] [<code>-v</code>] [<code>-V</code>] [<code>-W</code>] [<code>-d</code>] [<code>-h</code>]</dl>
+<dt> <code>kea-lfc</code> [<code>-4|-6</code>] [<code>-c&nbsp;<wbr></code><i>config-file</i>] [<code>-p&nbsp;<wbr></code><i>pid-file</i>] [<code>-x&nbsp;<wbr></code><i>previous-file</i>] [<code>-i&nbsp;<wbr></code><i>copy-file</i>] [<code>-o&nbsp;<wbr></code><i>output-file</i>] [<code>-f&nbsp;<wbr></code><i>finish-file</i>] [<code>-v</code>] [<code>-V</code>] [<code>-W</code>] [<code>-d</code>] [<code>-h</code>]</dt></dl>
 <h2>Description</h2>
-<dd>The <code>kea-lfc</code> service process removes redundant information from the files used to provide persistent storage for the memfile data base backend. The service is written to run as a stand alone process. While it can be started externally, there is usually no need to do this. It will be run on a periodic basis by the Kea DHCP servers.</p>
+<dd>The <code>kea-lfc</code> service process removes redundant information from the files used to provide persistent storage for the memfile data base backend. The service is written to run as a stand alone process. While it can be started externally, there is usually no need to do this. It will be run on a periodic basis by the Kea DHCP servers.</dd>
 <h2>Arguments</h2>
 <p>The arguments are as follows: </p>
 <p> <code>-d</code></p>
 <dl>
-<dd>Verbose mode sets the logging level to debug. This is primarily for development purposes in stand-alone mode.</dl>
+<dd>Verbose mode sets the logging level to debug. This is primarily for development purposes in stand-alone mode.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>version causes the version stamp to be printed.</dl>
+<dd>version causes the version stamp to be printed.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
-<dd>Version causes a longer form of the version stamp to be printed.</dl>
+<dd>Version causes a longer form of the version stamp to be printed.</dd></dl>
 <p> <code>-W</code></p>
 <dl>
-<dd>Display the configuration report.</dl>
+<dd>Display the configuration report.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Help causes the usage string to be printed.</dl>
+<dd>Help causes the usage string to be printed.</dd></dl>
 <p> <code>-4 | -6</code></p>
 <dl>
-<dd>The protocol version of the lease files, must be one of 4 or 6.</dl>
+<dd>The protocol version of the lease files, must be one of 4 or 6.</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>Configuration file including the configuration for <code>kea-lfc</code> process. It may also contain configuration entries for other Kea services. Currently <code>kea-lfc</code> gets all of its arguments from the command line, in the future it will be extended to get some arguments from the config file.</dl>
+<dd>Configuration file including the configuration for <code>kea-lfc</code> process. It may also contain configuration entries for other Kea services. Currently <code>kea-lfc</code> gets all of its arguments from the command line, in the future it will be extended to get some arguments from the config file.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>PID file &#8211; When the <code>kea-lfc</code> process starts it attempts to determine if another instance of the process is already running by examining the pid file. If one is already running the new process is terminated. If one isn&#8217;t running it writes its pid into the pid file.</dl>
+<dd>PID file &#8211; When the <code>kea-lfc</code> process starts it attempts to determine if another instance of the process is already running by examining the pid file. If one is already running the new process is terminated. If one isn&#8217;t running it writes its pid into the pid file.</dd></dl>
 <p> <code>-x</code></p>
 <dl>
-<dd>Previous or ex lease file &#8211; When <code>kea-lfc</code> starts this is the result of any previous run of <code>kea-lfc</code>. When <code>kea-lfc</code> finishes it is the result of this run. If <code>kea-lfc</code> is interrupted before completing, this file may not exist.</dl>
+<dd>Previous or ex lease file &#8211; When <code>kea-lfc</code> starts this is the result of any previous run of <code>kea-lfc</code>. When <code>kea-lfc</code> finishes it is the result of this run. If <code>kea-lfc</code> is interrupted before completing, this file may not exist.</dd></dl>
 <p> <code>-i</code></p>
 <dl>
-<dd>Input or copy of lease file &#8211; Before the DHCP server invokes <code>kea-lfc</code> it will move the current lease file here and then call <code>kea-lfc</code> with this file.</dl>
+<dd>Input or copy of lease file &#8211; Before the DHCP server invokes <code>kea-lfc</code> it will move the current lease file here and then call <code>kea-lfc</code> with this file.</dd></dl>
 <p> <code>-o</code></p>
 <dl>
-<dd>Output lease file &#8211; The temporary file <code>kea-lfc</code> should use to write the leases. Upon completion of writing this this file it will be moved to the finish file (see below).</dl>
+<dd>Output lease file &#8211; The temporary file <code>kea-lfc</code> should use to write the leases. Upon completion of writing this this file it will be moved to the finish file (see below).</dd></dl>
 <p> <code>-f</code></p>
 <dl>
-<dd>Finish or completion file &#8211; Another temporary file <code>kea-lfc</code> uses for bookkeeping. When <code>kea-lfc</code> completes writing the output file it moves it to this file name. After <code>kea-lfc</code> finishes deleting the other files (previous and input) it moves this file to previous lease file. By moving the files in this fashion the <code>kea-lfc</code> and the DHCP server processes can determine the correct file to use even if one of the processes was interrupted before completing its task.</dl>
+<dd>Finish or completion file &#8211; Another temporary file <code>kea-lfc</code> uses for bookkeeping. When <code>kea-lfc</code> completes writing the output file it moves it to this file name. After <code>kea-lfc</code> finishes deleting the other files (previous and input) it moves this file to previous lease file. By moving the files in this fashion the <code>kea-lfc</code> and the DHCP server processes can determine the correct file to use even if one of the processes was interrupted before completing its task.</dd></dl>
 <h2>Documentation</h2>
 <p>Kea comes with an extensive Kea User&#8217;s Guide documentation that covers all aspects of running the Kea software &#8211; compilation, installation, configuration, configuration examples and many more. Kea also features a Kea Messages Manual, which lists all possible messages Kea can print with a brief description for each of them. Both documents are typically available in various formats (txt, html, pdf) with your Kea distribution. The on-line version is available at <a rel="nofollow" href="http://kea.isc.org/docs/.">http://kea.isc.org/docs/.</a> </p>
 <p> Kea source code is documented in the Kea Developer&#8217;s Guide. It&#8217;s on-line version is available at <a rel="nofollow" href="http://kea.isc.org.">http://kea.isc.org.</a> Please follow Developer&#8217;s Guide link. </p>

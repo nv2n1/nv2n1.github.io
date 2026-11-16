@@ -15,15 +15,15 @@ snd_ac97_tune_hardware - tune up the hardware
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the ac97 instance</dl>
+<dl><dd></dd><dd>the ac97 instance</dd></dl>
  
 
  <i>quirk</i>
-<dl><dd>quirk list</dl>
+<dl><dd>quirk list</dd></dl>
  
 
  <i>override</i>
-<dl><dd>explicit quirk value (overrides the list if non-NULL)</dl>
+<dl><dd>explicit quirk value (overrides the list if non-NULL)</dd></dl>
 
 <h2>Description</h2>
 

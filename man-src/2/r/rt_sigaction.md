@@ -33,50 +33,50 @@ int sigaction(int signum, const struct sigaction *act,
 <p> The <i>sa_restorer</i> field is not intended for application use. (POSIX does not specify a <i>sa_restorer</i> field.) Some further details of the purpose of this field can be found in <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2). </p>
 <p> <i>sa_handler</i> specifies the action to be associated with <i>signum</i> and is be one of the following:</p>
 <dl>
-<dt>*</p>
-<dd> <code>SIG_DFL</code> for the default action.</p>
-<dt>*</p>
-<dd> <code>SIG_IGN</code> to ignore this signal.</p>
-<dt>*</p>
-<dd> A pointer to a signal handling function. This function receives the signal number as its only argument.</dl>
+<dt>*</dt>
+<dd> <code>SIG_DFL</code> for the default action.</dd>
+<dt>*</dt>
+<dd> <code>SIG_IGN</code> to ignore this signal.</dd>
+<dt>*</dt>
+<dd> A pointer to a signal handling function. This function receives the signal number as its only argument.</dd></dl>
 <p> If <code>SA_SIGINFO</code> is specified in <i>sa_flags</i>, then <i>sa_sigaction</i> (instead of <i>sa_handler</i>) specifies the signal-handling function for <i>signum</i>. This function receives three arguments, as described below. </p>
 <p> <i>sa_mask</i> specifies a mask of signals which should be blocked (i.e., added to the signal mask of the thread in which the signal handler is invoked) during execution of the signal handler. In addition, the signal which triggered the handler will be blocked, unless the <code>SA_NODEFER</code> flag is used. </p>
 <p> <i>sa_flags</i> specifies a set of flags which modify the behavior of the signal. It is formed by the bitwise OR of zero or more of the following:</p>
 <dl>
-<dt><code>SA_NOCLDSTOP</code></p>
-<dd> If <i>signum</i> is <code>SIGCHLD</code>, do not receive notification when child processes stop (i.e., when they receive one of <code>SIGSTOP</code>, <code>SIGTSTP</code>, <code>SIGTTIN</code>, or <code>SIGTTOU</code>) or resume (i.e., they receive <code>SIGCONT</code>) (see <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2)). This flag is meaningful only when establishing a handler for <code>SIGCHLD</code>.</p>
-<dt><code>SA_NOCLDWAIT</code> (since Linux 2.6)</p>
-<dd> If <i>signum</i> is <code>SIGCHLD</code>, do not transform children into zombies when they terminate. See also <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2). This flag is meaningful only when establishing a handler for <code>SIGCHLD</code>, or when setting that signal&#8217;s disposition to <code>SIG_DFL</code>.</p>
+<dt><code>SA_NOCLDSTOP</code></dt>
+<dd> If <i>signum</i> is <code>SIGCHLD</code>, do not receive notification when child processes stop (i.e., when they receive one of <code>SIGSTOP</code>, <code>SIGTSTP</code>, <code>SIGTTIN</code>, or <code>SIGTTOU</code>) or resume (i.e., they receive <code>SIGCONT</code>) (see <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2)). This flag is meaningful only when establishing a handler for <code>SIGCHLD</code>.</dd>
+<dt><code>SA_NOCLDWAIT</code> (since Linux 2.6)</dt>
+<dd> If <i>signum</i> is <code>SIGCHLD</code>, do not transform children into zombies when they terminate. See also <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2). This flag is meaningful only when establishing a handler for <code>SIGCHLD</code>, or when setting that signal&#8217;s disposition to <code>SIG_DFL</code>.</dd>
 <dt>
-<dd> If the <code>SA_NOCLDWAIT</code> flag is set when establishing a handler for <code>SIGCHLD</code>, POSIX.1 leaves it unspecified whether a <code>SIGCHLD</code> signal is generated when a child process terminates. On Linux, a <code>SIGCHLD</code> signal is generated in this case; on some other implementations, it is not.</p>
-<dt><code>SA_NODEFER</code></p>
-<dd> Do not add the signal to the thread&#8217;s signal mask while the handler is executing, unless the signal is specified in <i>act.sa_mask</i>. Consequently, a further instance of the signal may be delivered to the thread while it is executing the handler. This flag is meaningful only when establishing a signal handler.</p>
+</dt><dd> If the <code>SA_NOCLDWAIT</code> flag is set when establishing a handler for <code>SIGCHLD</code>, POSIX.1 leaves it unspecified whether a <code>SIGCHLD</code> signal is generated when a child process terminates. On Linux, a <code>SIGCHLD</code> signal is generated in this case; on some other implementations, it is not.</dd>
+<dt><code>SA_NODEFER</code></dt>
+<dd> Do not add the signal to the thread&#8217;s signal mask while the handler is executing, unless the signal is specified in <i>act.sa_mask</i>. Consequently, a further instance of the signal may be delivered to the thread while it is executing the handler. This flag is meaningful only when establishing a signal handler.</dd>
 <dt>
-<dd> <code>SA_NOMASK</code> is an obsolete, nonstandard synonym for this flag.</p>
-<dt><code>SA_ONSTACK</code></p>
-<dd> Call the signal handler on an alternate signal stack provided by <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2). If an alternate stack is not available, the default stack will be used. This flag is meaningful only when establishing a signal handler.</p>
-<dt><code>SA_RESETHAND</code></p>
-<dd> Restore the signal action to the default upon entry to the signal handler. This flag is meaningful only when establishing a signal handler.</p>
+</dt><dd> <code>SA_NOMASK</code> is an obsolete, nonstandard synonym for this flag.</dd>
+<dt><code>SA_ONSTACK</code></dt>
+<dd> Call the signal handler on an alternate signal stack provided by <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2). If an alternate stack is not available, the default stack will be used. This flag is meaningful only when establishing a signal handler.</dd>
+<dt><code>SA_RESETHAND</code></dt>
+<dd> Restore the signal action to the default upon entry to the signal handler. This flag is meaningful only when establishing a signal handler.</dd>
 <dt>
-<dd> <code>SA_ONESHOT</code> is an obsolete, nonstandard synonym for this flag.</p>
-<dt><code>SA_RESTART</code></p>
-<dd> Provide behavior compatible with BSD signal semantics by making certain system calls restartable across signals. This flag is meaningful only when establishing a signal handler. See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for a discussion of system call restarting.</p>
-<dt><code>SA_RESTORER</code></p>
-<dd> <i>Not intended for application use</i>. This flag is used by C libraries to indicate that the <i>sa_restorer</i> field contains the address of a &quot;signal trampoline&quot;. See <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2) for more details.</p>
-<dt><code>SA_SIGINFO</code> (since Linux 2.2)</p>
-<dd> The signal handler takes three arguments, not one. In this case, <i>sa_sigaction</i> should be set instead of <i>sa_handler</i>. This flag is meaningful only when establishing a signal handler.</dl>
+</dt><dd> <code>SA_ONESHOT</code> is an obsolete, nonstandard synonym for this flag.</dd>
+<dt><code>SA_RESTART</code></dt>
+<dd> Provide behavior compatible with BSD signal semantics by making certain system calls restartable across signals. This flag is meaningful only when establishing a signal handler. See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for a discussion of system call restarting.</dd>
+<dt><code>SA_RESTORER</code></dt>
+<dd> <i>Not intended for application use</i>. This flag is used by C libraries to indicate that the <i>sa_restorer</i> field contains the address of a &quot;signal trampoline&quot;. See <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2) for more details.</dd>
+<dt><code>SA_SIGINFO</code> (since Linux 2.2)</dt>
+<dd> The signal handler takes three arguments, not one. In this case, <i>sa_sigaction</i> should be set instead of <i>sa_handler</i>. This flag is meaningful only when establishing a signal handler.</dd></dl>
 <h3>The siginfo_t argument to a SA_SIGINFO handler</h3>
 <p> When the <code>SA_SIGINFO</code> flag is specified in <i>act.sa_flags</i>, the signal handler address is passed via the <i>act.sa_sigaction</i> field. This handler takes three arguments, as follows: </p>
 <p> void handler(int sig, siginfo_t *info, void *ucontext) {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230; } </p>
 <p> These three arguments are as follows</p>
 <dl>
-<dt><i>sig</i></p>
-<dd> The number of the signal that caused invocation of the handler.</p>
-<dt><i>info</i></p>
-<dd> A pointer to a <i>siginfo_t</i>, which is a structure containing further information about the signal, as described below.</p>
-<dt><i>ucontext</i></p>
-<dd> This is a pointer to a <i>ucontext_t</i> structure, cast to <i>void&nbsp;*</i>. The structure pointed to by this field contains signal context information that was saved on the user-space stack by the kernel; for details, see <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2). Further information about the <i>ucontext_t</i> structure can be found in <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3) and <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). Commonly, the handler function doesn&#8217;t make any use of the third argument.</dl>
+<dt><i>sig</i></dt>
+<dd> The number of the signal that caused invocation of the handler.</dd>
+<dt><i>info</i></dt>
+<dd> A pointer to a <i>siginfo_t</i>, which is a structure containing further information about the signal, as described below.</dd>
+<dt><i>ucontext</i></dt>
+<dd> This is a pointer to a <i>ucontext_t</i> structure, cast to <i>void&nbsp;*</i>. The structure pointed to by this field contains signal context information that was saved on the user-space stack by the kernel; for details, see <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2). Further information about the <i>ucontext_t</i> structure can be found in <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3) and <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7). Commonly, the handler function doesn&#8217;t make any use of the third argument.</dd></dl>
 <p> The <i>siginfo_t</i> data type is a structure with the following fields: </p>
 <p> siginfo_t {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_signo;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Signal number&nbsp;*/<br />
@@ -116,200 +116,182 @@ int sigaction(int signum, const struct sigaction *act,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 3.5)&nbsp;*/ } </p>
 <p> <i>si_signo</i>, <i>si_errno</i> and <i>si_code</i> are defined for all signals. (<i>si_errno</i> is generally unused on Linux.) The rest of the struct may be a union, so that one should read only the fields that are meaningful for the given signal:</p>
 <dl>
-<dt>*</p>
-<dd> Signals sent with <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) and <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) fill in <i>si_pid</i> and <i>si_uid</i>. In addition, signals sent with <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) fill in <i>si_int</i> and <i>si_ptr</i> with the values specified by the sender of the signal; see <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) for more details.</p>
-<dt>*</p>
-<dd> Signals sent by POSIX.1b timers (since Linux 2.6) fill in <i>si_overrun</i> and <i>si_timerid</i>. The <i>si_timerid</i> field is an internal ID used by the kernel to identify the timer; it is not the same as the timer ID returned by <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2). The <i>si_overrun</i> field is the timer overrun count; this is the same information as is obtained by a call to <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2). These fields are nonstandard Linux extensions.</p>
-<dt>*</p>
-<dd> Signals sent for message queue notification (see the description of <code>SIGEV_SIGNAL</code> in <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3)) fill in <i>si_int</i>/<i>si_ptr</i>, with the <i>sigev_value</i> supplied to <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3); <i>si_pid</i>, with the process ID of the message sender; and <i>si_uid</i>, with the real user ID of the message sender.</p>
-<dt>*</p>
-<dd> <code>SIGCHLD</code> fills in <i>si_pid</i>, <i>si_uid</i>, <i>si_status</i>, <i>si_utime</i>, and <i>si_stime</i>, providing information about the child. The <i>si_pid</i> field is the process ID of the child; <i>si_uid</i> is the child&#8217;s real user ID. The <i>si_status</i> field contains the exit status of the child (if <i>si_code</i> is <code>CLD_EXITED</code>), or the signal number that caused the process to change state. The <i>si_utime</i> and <i>si_stime</i> contain the user and system CPU time used by the child process; these fields do not include the times used by waited-for children (unlike <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) and <code><a href="/docs/linux/man/2-times/">times</a></code>(2)). In kernels up to 2.6, and since 2.6.27, these fields report CPU time in units of <i>sysconf(_SC_CLK_TCK)</i>. In 2.6 kernels before 2.6.27, a bug meant that these fields reported time in units of the (configurable) system jiffy (see <code><a href="/docs/linux/man/7-time/">time</a></code>(7)).</p>
-<dt>*</p>
-<dd> <code>SIGILL</code>, <code>SIGFPE</code>, <code>SIGSEGV</code>, <code>SIGBUS</code>, and <code>SIGTRAP</code> fill in <i>si_addr</i> with the address of the fault. On some architectures, these signals also fill in the <i>si_trapno</i> field.</p>
+<dt>*</dt>
+<dd> Signals sent with <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) and <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) fill in <i>si_pid</i> and <i>si_uid</i>. In addition, signals sent with <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) fill in <i>si_int</i> and <i>si_ptr</i> with the values specified by the sender of the signal; see <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) for more details.</dd>
+<dt>*</dt>
+<dd> Signals sent by POSIX.1b timers (since Linux 2.6) fill in <i>si_overrun</i> and <i>si_timerid</i>. The <i>si_timerid</i> field is an internal ID used by the kernel to identify the timer; it is not the same as the timer ID returned by <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2). The <i>si_overrun</i> field is the timer overrun count; this is the same information as is obtained by a call to <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2). These fields are nonstandard Linux extensions.</dd>
+<dt>*</dt>
+<dd> Signals sent for message queue notification (see the description of <code>SIGEV_SIGNAL</code> in <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3)) fill in <i>si_int</i>/<i>si_ptr</i>, with the <i>sigev_value</i> supplied to <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3); <i>si_pid</i>, with the process ID of the message sender; and <i>si_uid</i>, with the real user ID of the message sender.</dd>
+<dt>*</dt>
+<dd> <code>SIGCHLD</code> fills in <i>si_pid</i>, <i>si_uid</i>, <i>si_status</i>, <i>si_utime</i>, and <i>si_stime</i>, providing information about the child. The <i>si_pid</i> field is the process ID of the child; <i>si_uid</i> is the child&#8217;s real user ID. The <i>si_status</i> field contains the exit status of the child (if <i>si_code</i> is <code>CLD_EXITED</code>), or the signal number that caused the process to change state. The <i>si_utime</i> and <i>si_stime</i> contain the user and system CPU time used by the child process; these fields do not include the times used by waited-for children (unlike <code><a href="/docs/linux/man/2-getrusage/">getrusage</a></code>(2) and <code><a href="/docs/linux/man/2-times/">times</a></code>(2)). In kernels up to 2.6, and since 2.6.27, these fields report CPU time in units of <i>sysconf(_SC_CLK_TCK)</i>. In 2.6 kernels before 2.6.27, a bug meant that these fields reported time in units of the (configurable) system jiffy (see <code><a href="/docs/linux/man/7-time/">time</a></code>(7)).</dd>
+<dt>*</dt>
+<dd> <code>SIGILL</code>, <code>SIGFPE</code>, <code>SIGSEGV</code>, <code>SIGBUS</code>, and <code>SIGTRAP</code> fill in <i>si_addr</i> with the address of the fault. On some architectures, these signals also fill in the <i>si_trapno</i> field.</dd>
 <dt>
-<dd> Some suberrors of <code>SIGBUS</code>, in particular <code>BUS_MCEERR_AO</code> and <code>BUS_MCEERR_AR</code>, also fill in <i>si_addr_lsb</i>. This field indicates the least significant bit of the reported address and therefore the extent of the corruption. For example, if a full page was corrupted, <i>si_addr_lsb</i> contains <i>log2(sysconf(_SC_PAGESIZE))</i>. When <code>SIGTRAP</code> is delivered in response to a <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2) event (PTRACE_EVENT_foo), <i>si_addr</i> is not populated, but <i>si_pid</i> and <i>si_uid</i> are populated with the respective process ID and user ID responsible for delivering the trap. In the case of <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2), the tracee will be shown as delivering the event. <code>BUS_MCEERR_*</code> and <i>si_addr_lsb</i> are Linux-specific extensions.</p>
+</dt><dd> Some suberrors of <code>SIGBUS</code>, in particular <code>BUS_MCEERR_AO</code> and <code>BUS_MCEERR_AR</code>, also fill in <i>si_addr_lsb</i>. This field indicates the least significant bit of the reported address and therefore the extent of the corruption. For example, if a full page was corrupted, <i>si_addr_lsb</i> contains <i>log2(sysconf(_SC_PAGESIZE))</i>. When <code>SIGTRAP</code> is delivered in response to a <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2) event (PTRACE_EVENT_foo), <i>si_addr</i> is not populated, but <i>si_pid</i> and <i>si_uid</i> are populated with the respective process ID and user ID responsible for delivering the trap. In the case of <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2), the tracee will be shown as delivering the event. <code>BUS_MCEERR_*</code> and <i>si_addr_lsb</i> are Linux-specific extensions.</dd>
 <dt>
-<dd> The <code>SEGV_BNDERR</code> suberror of <code>SIGSEGV</code> populates <i>si_lower</i> and <i>si_upper</i>.</p>
+</dt><dd> The <code>SEGV_BNDERR</code> suberror of <code>SIGSEGV</code> populates <i>si_lower</i> and <i>si_upper</i>.</dd>
 <dt>
-<dd> The <code>SEGV_PKUERR</code> suberror of <code>SIGSEGV</code> populates <i>si_pkey</i>.</p>
-<dt>*</p>
-<dd> <code>SIGIO</code>/<code>SIGPOLL</code> (the two names are synonyms on Linux) fills in <i>si_band</i> and <i>si_fd</i>. The <i>si_band</i> event is a bit mask containing the same values as are filled in the <i>revents</i> field by <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2). The <i>si_fd</i> field indicates the file descriptor for which the I/O event occurred; for further details, see the description of <code>F_SETSIG</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</p>
-<dt>*</p>
-<dd> <code>SIGSYS</code>, generated (since Linux 3.5) when a seccomp filter returns <code>SECCOMP_RET_TRAP</code>, fills in <i>si_call_addr</i>, <i>si_syscall</i>, <i>si_arch</i>, <i>si_errno</i>, and other fields as described in <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2).</dl>
+</dt><dd> The <code>SEGV_PKUERR</code> suberror of <code>SIGSEGV</code> populates <i>si_pkey</i>.</dd>
+<dt>*</dt>
+<dd> <code>SIGIO</code>/<code>SIGPOLL</code> (the two names are synonyms on Linux) fills in <i>si_band</i> and <i>si_fd</i>. The <i>si_band</i> event is a bit mask containing the same values as are filled in the <i>revents</i> field by <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2). The <i>si_fd</i> field indicates the file descriptor for which the I/O event occurred; for further details, see the description of <code>F_SETSIG</code> in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</dd>
+<dt>*</dt>
+<dd> <code>SIGSYS</code>, generated (since Linux 3.5) when a seccomp filter returns <code>SECCOMP_RET_TRAP</code>, fills in <i>si_call_addr</i>, <i>si_syscall</i>, <i>si_arch</i>, <i>si_errno</i>, and other fields as described in <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2).</dd></dl>
 <h3>The si_code field</h3>
 <p> The <i>si_code</i> field inside the <i>siginfo_t</i> argument that is passed to a <code>SA_SIGINFO</code> signal handler is a value (not a bit mask) indicating why this signal was sent. For a <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2) event, <i>si_code</i> will contain <code>SIGTRAP</code> and have the ptrace event in the high byte: </p>
 <p> (SIGTRAP | PTRACE_EVENT_foo &lt;&lt; 8). </p>
 <p> For a non-<code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2) event, the values that can appear in <i>si_code</i> are described in the remainder of this section. Since glibc 2.20, the definitions of most of these symbols are obtained from <i>&lt;signal.h&gt;</i> by defining feature test macros (before including <i>any</i> header file) as follows:</p>
 <dl>
-<dt>*</p>
-<dd> <code>_XOPEN_SOURCE</code> with the value 500 or greater;</p>
-<dt>*</p>
-<dd> <code>_XOPEN_SOURCE</code> and <code>_XOPEN_SOURCE_EXTENDED</code>; or</p>
-<dt>*</p>
-<dd> <code>_POSIX_C_SOURCE</code> with the value 200809L or greater.</dl>
+<dt>*</dt>
+<dd> <code>_XOPEN_SOURCE</code> with the value 500 or greater;</dd>
+<dt>*</dt>
+<dd> <code>_XOPEN_SOURCE</code> and <code>_XOPEN_SOURCE_EXTENDED</code>; or</dd>
+<dt>*</dt>
+<dd> <code>_POSIX_C_SOURCE</code> with the value 200809L or greater.</dd></dl>
 <p> For the <code>TRAP_*</code> constants, the symbol definitions are provided only in the first two cases. Before glibc 2.20, no feature test macros were required to obtain these symbols. </p>
 <p> For a regular signal, the following list shows the values which can be placed in <i>si_code</i> for any signal, along with the reason that the signal was generated.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>SI_USER</code></p>
-<dd> <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>
-<dt><code>SI_KERNEL</code></p>
-<dd> Sent by the kernel.</p>
-<dt><code>SI_QUEUE</code></p>
-<dd> <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3).</p>
-<dt><code>SI_TIMER</code></p>
-<dd> POSIX timer expired.</p>
-<dt><code>SI_MESGQ</code> (since Linux 2.6.6)</p>
-<dd> POSIX message queue state changed; see <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3).</p>
-<dt><code>SI_ASYNCIO</code></p>
-<dd> AIO completed.</p>
-<dt><code>SI_SIGIO</code></p>
-<dd> Queued <code>SIGIO</code> (only in kernels up to Linux 2.2; from Linux 2.4 onward <code>SIGIO</code>/<code>SIGPOLL</code> fills in <i>si_code</i> as described below).</p>
-<dt><code>SI_TKILL</code> (since Linux 2.4.19)</p>
-<dd> <code><a href="/docs/linux/man/2-tkill/">tkill</a></code>(2) or <code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2).</dl>
+<dt><code>SI_USER</code></dt>
+<dd> <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</dd>
+<dt><code>SI_KERNEL</code></dt>
+<dd> Sent by the kernel.</dd>
+<dt><code>SI_QUEUE</code></dt>
+<dd> <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3).</dd>
+<dt><code>SI_TIMER</code></dt>
+<dd> POSIX timer expired.</dd>
+<dt><code>SI_MESGQ</code> (since Linux 2.6.6)</dt>
+<dd> POSIX message queue state changed; see <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3).</dd>
+<dt><code>SI_ASYNCIO</code></dt>
+<dd> AIO completed.</dd>
+<dt><code>SI_SIGIO</code></dt>
+<dd> Queued <code>SIGIO</code> (only in kernels up to Linux 2.2; from Linux 2.4 onward <code>SIGIO</code>/<code>SIGPOLL</code> fills in <i>si_code</i> as described below).</dd>
+<dt><code>SI_TKILL</code> (since Linux 2.4.19)</dt>
+<dd> <code><a href="/docs/linux/man/2-tkill/">tkill</a></code>(2) or <code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2).</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGILL</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>ILL_ILLOPC</code></p>
-<dd> Illegal opcode.</p>
-<dt><code>ILL_ILLOPN</code></p>
-<dd> Illegal operand.</p>
-<dt><code>ILL_ILLADR</code></p>
-<dd> Illegal addressing mode.</p>
-<dt><code>ILL_ILLTRP</code></p>
-<dd> Illegal trap.</p>
-<dt><code>ILL_PRVOPC</code></p>
-<dd> Privileged opcode.</p>
-<dt><code>ILL_PRVREG</code></p>
-<dd> Privileged register.</p>
-<dt><code>ILL_COPROC</code></p>
-<dd> Coprocessor error.</p>
-<dt><code>ILL_BADSTK</code></p>
-<dd> Internal stack error.</dl>
+<dt><code>ILL_ILLOPC</code></dt>
+<dd> Illegal opcode.</dd>
+<dt><code>ILL_ILLOPN</code></dt>
+<dd> Illegal operand.</dd>
+<dt><code>ILL_ILLADR</code></dt>
+<dd> Illegal addressing mode.</dd>
+<dt><code>ILL_ILLTRP</code></dt>
+<dd> Illegal trap.</dd>
+<dt><code>ILL_PRVOPC</code></dt>
+<dd> Privileged opcode.</dd>
+<dt><code>ILL_PRVREG</code></dt>
+<dd> Privileged register.</dd>
+<dt><code>ILL_COPROC</code></dt>
+<dd> Coprocessor error.</dd>
+<dt><code>ILL_BADSTK</code></dt>
+<dd> Internal stack error.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGFPE</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>FPE_INTDIV</code></p>
-<dd> Integer divide by zero.</p>
-<dt><code>FPE_INTOVF</code></p>
-<dd> Integer overflow.</p>
-<dt><code>FPE_FLTDIV</code></p>
-<dd> Floating-point divide by zero.</p>
-<dt><code>FPE_FLTOVF</code></p>
-<dd> Floating-point overflow.</p>
-<dt><code>FPE_FLTUND</code></p>
-<dd> Floating-point underflow.</p>
-<dt><code>FPE_FLTRES</code></p>
-<dd> Floating-point inexact result.</p>
-<dt><code>FPE_FLTINV</code></p>
-<dd> Floating-point invalid operation.</p>
-<dt><code>FPE_FLTSUB</code></p>
-<dd> Subscript out of range.</dl>
+<dt><code>FPE_INTDIV</code></dt>
+<dd> Integer divide by zero.</dd>
+<dt><code>FPE_INTOVF</code></dt>
+<dd> Integer overflow.</dd>
+<dt><code>FPE_FLTDIV</code></dt>
+<dd> Floating-point divide by zero.</dd>
+<dt><code>FPE_FLTOVF</code></dt>
+<dd> Floating-point overflow.</dd>
+<dt><code>FPE_FLTUND</code></dt>
+<dd> Floating-point underflow.</dd>
+<dt><code>FPE_FLTRES</code></dt>
+<dd> Floating-point inexact result.</dd>
+<dt><code>FPE_FLTINV</code></dt>
+<dd> Floating-point invalid operation.</dd>
+<dt><code>FPE_FLTSUB</code></dt>
+<dd> Subscript out of range.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGSEGV</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>SEGV_MAPERR</code></p>
-<dd> Address not mapped to object.</p>
-<dt><code>SEGV_ACCERR</code></p>
-<dd> Invalid permissions for mapped object.</p>
-<dt><code>SEGV_BNDERR</code> (since Linux 3.19)</p>
-<dd> Failed address bound checks.</p>
-<dt><code>SEGV_PKUERR</code> (since Linux 4.6)</p>
-<dd> Access was denied by memory protection keys. See <code><a href="/docs/linux/man/7-pkeys/">pkeys</a></code>(7). The protection key which applied to this access is available via <i>si_pkey</i>.</dl>
+<dt><code>SEGV_MAPERR</code></dt>
+<dd> Address not mapped to object.</dd>
+<dt><code>SEGV_ACCERR</code></dt>
+<dd> Invalid permissions for mapped object.</dd>
+<dt><code>SEGV_BNDERR</code> (since Linux 3.19)</dt>
+<dd> Failed address bound checks.</dd>
+<dt><code>SEGV_PKUERR</code> (since Linux 4.6)</dt>
+<dd> Access was denied by memory protection keys. See <code><a href="/docs/linux/man/7-pkeys/">pkeys</a></code>(7). The protection key which applied to this access is available via <i>si_pkey</i>.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGBUS</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>BUS_ADRALN</code></p>
-<dd> Invalid address alignment.</p>
-<dt><code>BUS_ADRERR</code></p>
-<dd> Nonexistent physical address.</p>
-<dt><code>BUS_OBJERR</code></p>
-<dd> Object-specific hardware error.</p>
-<dt><code>BUS_MCEERR_AR</code> (since Linux 2.6.32)</p>
-<dd> Hardware memory error consumed on a machine check; action required.</p>
-<dt><code>BUS_MCEERR_AO</code> (since Linux 2.6.32)</p>
-<dd> Hardware memory error detected in process but not consumed; action optional.</dl>
+<dt><code>BUS_ADRALN</code></dt>
+<dd> Invalid address alignment.</dd>
+<dt><code>BUS_ADRERR</code></dt>
+<dd> Nonexistent physical address.</dd>
+<dt><code>BUS_OBJERR</code></dt>
+<dd> Object-specific hardware error.</dd>
+<dt><code>BUS_MCEERR_AR</code> (since Linux 2.6.32)</dt>
+<dd> Hardware memory error consumed on a machine check; action required.</dd>
+<dt><code>BUS_MCEERR_AO</code> (since Linux 2.6.32)</dt>
+<dd> Hardware memory error detected in process but not consumed; action optional.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGTRAP</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>TRAP_BRKPT</code></p>
-<dd> Process breakpoint.</p>
-<dt><code>TRAP_TRACE</code></p>
-<dd> Process trace trap.</p>
-<dt><code>TRAP_BRANCH</code> (since Linux 2.4, IA64 only)</p>
-<dd> Process taken branch trap.</p>
-<dt><code>TRAP_HWBKPT</code> (since Linux 2.4, IA64 only)</p>
-<dd> Hardware breakpoint/watchpoint.</dl>
+<dt><code>TRAP_BRKPT</code></dt>
+<dd> Process breakpoint.</dd>
+<dt><code>TRAP_TRACE</code></dt>
+<dd> Process trace trap.</dd>
+<dt><code>TRAP_BRANCH</code> (since Linux 2.4, IA64 only)</dt>
+<dd> Process taken branch trap.</dd>
+<dt><code>TRAP_HWBKPT</code> (since Linux 2.4, IA64 only)</dt>
+<dd> Hardware breakpoint/watchpoint.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGCHLD</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>CLD_EXITED</code></p>
-<dd> Child has exited.</p>
-<dt><code>CLD_KILLED</code></p>
-<dd> Child was killed.</p>
-<dt><code>CLD_DUMPED</code></p>
-<dd> Child terminated abnormally.</p>
-<dt><code>CLD_TRAPPED</code></p>
-<dd> Traced child has trapped.</p>
-<dt><code>CLD_STOPPED</code></p>
-<dd> Child has stopped.</p>
-<dt><code>CLD_CONTINUED</code> (since Linux 2.6.9)</p>
-<dd> Stopped child has continued.</dl>
+<dt><code>CLD_EXITED</code></dt>
+<dd> Child has exited.</dd>
+<dt><code>CLD_KILLED</code></dt>
+<dd> Child was killed.</dd>
+<dt><code>CLD_DUMPED</code></dt>
+<dd> Child terminated abnormally.</dd>
+<dt><code>CLD_TRAPPED</code></dt>
+<dd> Traced child has trapped.</dd>
+<dt><code>CLD_STOPPED</code></dt>
+<dd> Child has stopped.</dd>
+<dt><code>CLD_CONTINUED</code> (since Linux 2.6.9)</dt>
+<dd> Stopped child has continued.</dd></dl>
 </dl>
 <p> The following values can be placed in <i>si_code</i> for a <code>SIGIO</code>/<code>SIGPOLL</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>POLL_IN</code></p>
-<dd> Data input available.</p>
-<dt><code>POLL_OUT</code></p>
-<dd> Output buffers available.</p>
-<dt><code>POLL_MSG</code></p>
-<dd> Input message available.</p>
-<dt><code>POLL_ERR</code></p>
-<dd> I/O error.</p>
-<dt><code>POLL_PRI</code></p>
-<dd> High priority input available.</p>
-<dt><code>POLL_HUP</code></p>
-<dd> Device disconnected.</dl>
+<dt><code>POLL_IN</code></dt>
+<dd> Data input available.</dd>
+<dt><code>POLL_OUT</code></dt>
+<dd> Output buffers available.</dd>
+<dt><code>POLL_MSG</code></dt>
+<dd> Input message available.</dd>
+<dt><code>POLL_ERR</code></dt>
+<dd> I/O error.</dd>
+<dt><code>POLL_PRI</code></dt>
+<dd> High priority input available.</dd>
+<dt><code>POLL_HUP</code></dt>
+<dd> Device disconnected.</dd></dl>
 </dl>
 <p> The following value can be placed in <i>si_code</i> for a <code>SIGSYS</code> signal:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>SYS_SECCOMP</code> (since Linux 3.5)</p>
-<dd> Triggered by a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) filter rule.</dl>
+<dt><code>SYS_SECCOMP</code> (since Linux 3.5)</dt>
+<dd> Triggered by a <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) filter rule.</dd></dl>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> <code>sigaction</code>() returns 0 on success; on error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>act</i> or <i>oldact</i> points to memory which is not a valid part of the process address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> An invalid signal was specified. This will also be generated if an attempt is made to change the action for <code>SIGKILL</code> or <code>SIGSTOP</code>, which cannot be caught or ignored.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>act</i> or <i>oldact</i> points to memory which is not a valid part of the process address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid signal was specified. This will also be generated if an attempt is made to change the action for <code>SIGKILL</code> or <code>SIGSTOP</code>, which cannot be caught or ignored.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4.</p>
 <h2>NOTES</h2>

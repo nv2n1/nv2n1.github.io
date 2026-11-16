@@ -10,7 +10,6 @@ description: "update_dialog – Low level function to update a dialog player. Al
 <p>update_dialog &#8211; Low level function to update a dialog player. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int update_dialog(DIALOG_PLAYER *player);</code></pre>
 <h2>Description</h2>
 <p>Updates the status of a dialog object returned by init_dialog(). Returns TRUE if the dialog is still active, or FALSE if it has terminated. Upon a return value of FALSE, it is up to you whether to call shutdown_dialog() or to continue execution. The object that requested the exit can be determined from the player-&gt;obj field. </p>

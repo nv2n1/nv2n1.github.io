@@ -17,168 +17,168 @@ zathura[OPTION]... zathura[OPTION]... FILE[FILE...] zathura-- syntex - forward I
 <p> zathura is a highly customizable and functional document viewer. It provides a minimalistic and space saving interface as well as an easy usage that mainly focuses on keyboard interaction.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e [xid], &#8211;reparent [xid]</code></p>
-<dd> Reparents to window specified by xid</p>
-<dt><code>-c [path], &#8211;config-dir [path]</code></p>
-<dd> Path to the config directory</p>
-<dt><code>-d [path], &#8211;data-dir [path]</code></p>
-<dd> Path to the data directory</p>
-<dt><code>-p [path], &#8211;plugins-dir [path]</code></p>
-<dd> Path to the directory containing plugins</p>
-<dt><code>-w [password], &#8211;password [password]</code></p>
-<dd> The documents password. If multiple documents are opened at once, the password will be used for the first one and zathura will ask for the passwords of the remaining files if needed.</p>
-<dt><code>-P [number], &#8211;page [number]</code></p>
-<dd> Open the document at the given page number. Pages are numbered starting with 1, and negative numbers indicate page numbers starting from the end of the document, -1 being the last page.</p>
-<dt><code>&#8211;fork</code></p>
-<dd> Fork into the background</p>
-<dt><code>-l [level], &#8211;debug [level]</code></p>
-<dd> Set log debug level (debug, info, warning, error)</p>
-<dt><code>-s</code>,<code> &#8211;synctex</code></p>
-<dd> Enable synctex support for backwards synchronization.</p>
-<dt><code>-x [cmd], &#8211;synctex-editor-command [cmd]</code></p>
-<dd> Set the synctex editor command for backwards synchronization.</p>
-<dt><code>&#8211;synctex-forward [input]</code></p>
-<dd> Jump to the given position. The switch expcects the same format as specified for syntex&#8217;s view -i.</p>
-<dt><code>&#8211;synctex-pid [pid]</code></p>
-<dd> If not -1, forward synctex input to process with the given pid. Otherwise, try all zathura process to find the correct one.</p>
-<dt><code>&#8211;mode [mode]</code></p>
-<dd> Switch to mode (presentation, fullscreen) after opening a document.</dl>
+<dt><code>-e [xid], &#8211;reparent [xid]</code></dt>
+<dd> Reparents to window specified by xid</dd>
+<dt><code>-c [path], &#8211;config-dir [path]</code></dt>
+<dd> Path to the config directory</dd>
+<dt><code>-d [path], &#8211;data-dir [path]</code></dt>
+<dd> Path to the data directory</dd>
+<dt><code>-p [path], &#8211;plugins-dir [path]</code></dt>
+<dd> Path to the directory containing plugins</dd>
+<dt><code>-w [password], &#8211;password [password]</code></dt>
+<dd> The documents password. If multiple documents are opened at once, the password will be used for the first one and zathura will ask for the passwords of the remaining files if needed.</dd>
+<dt><code>-P [number], &#8211;page [number]</code></dt>
+<dd> Open the document at the given page number. Pages are numbered starting with 1, and negative numbers indicate page numbers starting from the end of the document, -1 being the last page.</dd>
+<dt><code>&#8211;fork</code></dt>
+<dd> Fork into the background</dd>
+<dt><code>-l [level], &#8211;debug [level]</code></dt>
+<dd> Set log debug level (debug, info, warning, error)</dd>
+<dt><code>-s</code>,<code> &#8211;synctex</code></dt>
+<dd> Enable synctex support for backwards synchronization.</dd>
+<dt><code>-x [cmd], &#8211;synctex-editor-command [cmd]</code></dt>
+<dd> Set the synctex editor command for backwards synchronization.</dd>
+<dt><code>&#8211;synctex-forward [input]</code></dt>
+<dd> Jump to the given position. The switch expcects the same format as specified for syntex&#8217;s view -i.</dd>
+<dt><code>&#8211;synctex-pid [pid]</code></dt>
+<dd> If not -1, forward synctex input to process with the given pid. Otherwise, try all zathura process to find the correct one.</dd>
+<dt><code>&#8211;mode [mode]</code></dt>
+<dd> Switch to mode (presentation, fullscreen) after opening a document.</dd></dl>
 <h2>MOUSE AND KEY BINDINGS</h2>
 <dl>
-<dt><code>J, PgDn</code></p>
-<dd> Go to the next page</p>
-<dt><code>K, PgUp</code></p>
-<dd> Go to the previous page</p>
-<dt><code>h, k, j, l</code></p>
-<dd> Scroll to the left, down, up or right direction</p>
-<dt><code>Left, Down, Up, Right</code></p>
-<dd> Scroll to the left, down, up or right direction</p>
-<dt><code>^t, ^d, ^u, ^y</code></p>
-<dd> Scroll a half page left, down, up or right</p>
-<dt><code>t, ^f, ^b, space, &lt;S-space&gt;, y</code></p>
-<dd> Scroll a full page left, down, up or right</p>
-<dt><code>gg, G, nG</code></p>
-<dd> Goto to the first, the last or to the nth page</p>
-<dt><code>H, L</code></p>
-<dd> Goto top or bottom of the current page</p>
-<dt><code>^o, ^i</code></p>
-<dd> Move backward and forward through the jump list</p>
-<dt><code>^j, ^k</code></p>
-<dd> Bisect forward and backward between the last two jump points</p>
-<dt><code>^c, Escape</code></p>
-<dd> Abort</p>
-<dt><code>a, s</code></p>
-<dd> Adjust window in best-fit or width mode</p>
-<dt><code>/, ?</code></p>
-<dd> Search for text</p>
-<dt><code>n, N</code></p>
-<dd> Search for the next or previous result</p>
-<dt><code>o, O</code></p>
-<dd> Open document</p>
-<dt><code>f</code></p>
-<dd> Follow links</p>
-<dt><code>F</code></p>
-<dd> Display link target</p>
-<dt><code>:</code></p>
-<dd> Enter command</p>
-<dt><code>r</code></p>
-<dd> Rotate by 90 degrees</p>
-<dt><code>^r</code></p>
-<dd> Recolor</p>
-<dt><code>R</code></p>
-<dd> Reload document</p>
-<dt><code>Tab</code></p>
-<dd> Show index and switch to <code>Index mode</code></p>
-<dt><code>d</code></p>
-<dd> Toggle dual page view</p>
-<dt><code>F5</code></p>
-<dd> Switch to fullscreen mode</p>
-<dt><code>^m</code></p>
-<dd> Toggle inputbar</p>
-<dt><code>^n</code></p>
-<dd> Toggle statusbar</p>
-<dt><code>+, -, =</code></p>
-<dd> Zoom in, out or to the original size</p>
-<dt><code>zI, zO, z0</code></p>
-<dd> Zoom in, out or to the original size</p>
-<dt><code>n=</code></p>
-<dd> Zoom to size n</p>
-<dt><code>mX</code></p>
-<dd> Set a quickmark to a letter or number X</p>
-<dt><code>&#8216;X</code></p>
-<dd> Goto quickmark saved at letter or number X</p>
-<dt><code>q</code></p>
-<dd> Quit</dl>
+<dt><code>J, PgDn</code></dt>
+<dd> Go to the next page</dd>
+<dt><code>K, PgUp</code></dt>
+<dd> Go to the previous page</dd>
+<dt><code>h, k, j, l</code></dt>
+<dd> Scroll to the left, down, up or right direction</dd>
+<dt><code>Left, Down, Up, Right</code></dt>
+<dd> Scroll to the left, down, up or right direction</dd>
+<dt><code>^t, ^d, ^u, ^y</code></dt>
+<dd> Scroll a half page left, down, up or right</dd>
+<dt><code>t, ^f, ^b, space, &lt;S-space&gt;, y</code></dt>
+<dd> Scroll a full page left, down, up or right</dd>
+<dt><code>gg, G, nG</code></dt>
+<dd> Goto to the first, the last or to the nth page</dd>
+<dt><code>H, L</code></dt>
+<dd> Goto top or bottom of the current page</dd>
+<dt><code>^o, ^i</code></dt>
+<dd> Move backward and forward through the jump list</dd>
+<dt><code>^j, ^k</code></dt>
+<dd> Bisect forward and backward between the last two jump points</dd>
+<dt><code>^c, Escape</code></dt>
+<dd> Abort</dd>
+<dt><code>a, s</code></dt>
+<dd> Adjust window in best-fit or width mode</dd>
+<dt><code>/, ?</code></dt>
+<dd> Search for text</dd>
+<dt><code>n, N</code></dt>
+<dd> Search for the next or previous result</dd>
+<dt><code>o, O</code></dt>
+<dd> Open document</dd>
+<dt><code>f</code></dt>
+<dd> Follow links</dd>
+<dt><code>F</code></dt>
+<dd> Display link target</dd>
+<dt><code>:</code></dt>
+<dd> Enter command</dd>
+<dt><code>r</code></dt>
+<dd> Rotate by 90 degrees</dd>
+<dt><code>^r</code></dt>
+<dd> Recolor</dd>
+<dt><code>R</code></dt>
+<dd> Reload document</dd>
+<dt><code>Tab</code></dt>
+<dd> Show index and switch to <code>Index mode</code></dd>
+<dt><code>d</code></dt>
+<dd> Toggle dual page view</dd>
+<dt><code>F5</code></dt>
+<dd> Switch to fullscreen mode</dd>
+<dt><code>^m</code></dt>
+<dd> Toggle inputbar</dd>
+<dt><code>^n</code></dt>
+<dd> Toggle statusbar</dd>
+<dt><code>+, -, =</code></dt>
+<dd> Zoom in, out or to the original size</dd>
+<dt><code>zI, zO, z0</code></dt>
+<dd> Zoom in, out or to the original size</dd>
+<dt><code>n=</code></dt>
+<dd> Zoom to size n</dd>
+<dt><code>mX</code></dt>
+<dd> Set a quickmark to a letter or number X</dd>
+<dt><code>&#8216;X</code></dt>
+<dd> Goto quickmark saved at letter or number X</dd>
+<dt><code>q</code></dt>
+<dd> Quit</dd></dl>
 <h3>Fullscreen mode</h3>
 <dl>
-<dt><code>J, K</code></p>
-<dd> Go to the next or previous page</p>
-<dt><code>space, &lt;S-space&gt;, &lt;BackSpace&gt;</code></p>
-<dd> Scroll a full page down or up</p>
-<dt><code>gg, G, nG</code></p>
-<dd> Goto to the first, the last or to the nth page</p>
-<dt><code>^c, Escape</code></p>
-<dd> Abort</p>
-<dt><code>F5</code></p>
-<dd> Switch to normal mode</p>
-<dt><code>+, -, =</code></p>
-<dd> Zoom in, out or to the original size</p>
-<dt><code>zI, zO, z0</code></p>
-<dd> Zoom in, out or to the original size</p>
-<dt><code>n=</code></p>
-<dd> Zoom to size n</p>
-<dt><code>q</code></p>
-<dd> Quit</dl>
+<dt><code>J, K</code></dt>
+<dd> Go to the next or previous page</dd>
+<dt><code>space, &lt;S-space&gt;, &lt;BackSpace&gt;</code></dt>
+<dd> Scroll a full page down or up</dd>
+<dt><code>gg, G, nG</code></dt>
+<dd> Goto to the first, the last or to the nth page</dd>
+<dt><code>^c, Escape</code></dt>
+<dd> Abort</dd>
+<dt><code>F5</code></dt>
+<dd> Switch to normal mode</dd>
+<dt><code>+, -, =</code></dt>
+<dd> Zoom in, out or to the original size</dd>
+<dt><code>zI, zO, z0</code></dt>
+<dd> Zoom in, out or to the original size</dd>
+<dt><code>n=</code></dt>
+<dd> Zoom to size n</dd>
+<dt><code>q</code></dt>
+<dd> Quit</dd></dl>
 <h3>Index mode</h3>
 <dl>
-<dt><code>k, j</code></p>
-<dd> Move to upper or lower entry</p>
-<dt><code>l</code></p>
-<dd> Expand entry</p>
-<dt><code>L</code></p>
-<dd> Expand all entries</p>
-<dt><code>h</code></p>
-<dd> Collapse entry</p>
-<dt><code>H</code></p>
-<dd> Collapse all entries</p>
-<dt><code>space, Return</code></p>
-<dd> Select and open entry</dl>
+<dt><code>k, j</code></dt>
+<dd> Move to upper or lower entry</dd>
+<dt><code>l</code></dt>
+<dd> Expand entry</dd>
+<dt><code>L</code></dt>
+<dd> Expand all entries</dd>
+<dt><code>h</code></dt>
+<dd> Collapse entry</dd>
+<dt><code>H</code></dt>
+<dd> Collapse all entries</dd>
+<dt><code>space, Return</code></dt>
+<dd> Select and open entry</dd></dl>
 <h3>Mouse bindings</h3>
 <dl>
-<dt><code>Scroll</code></p>
-<dd> Scroll up or down</p>
-<dt><code>^Scroll</code></p>
-<dd> Zoom in or out</p>
-<dt><code>Hold Button2</code></p>
-<dd> Pan the document</p>
-<dt><code>Button1</code></p>
-<dd> Follow link</dl>
+<dt><code>Scroll</code></dt>
+<dd> Scroll up or down</dd>
+<dt><code>^Scroll</code></dt>
+<dd> Zoom in or out</dd>
+<dt><code>Hold Button2</code></dt>
+<dd> Pan the document</dd>
+<dt><code>Button1</code></dt>
+<dd> Follow link</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>bmark</code></p>
-<dd> Save a bookmark</p>
-<dt><code>bdelete</code></p>
-<dd> Delete a bookmark</p>
-<dt><code>blist</code></p>
-<dd> List bookmarks</p>
-<dt><code>close</code></p>
-<dd> Close document</p>
-<dt><code>exec</code></p>
-<dd> Execute an external command</p>
-<dt><code>info</code></p>
-<dd> Show document information</p>
-<dt><code>help</code></p>
-<dd> Show help page</p>
-<dt><code>open, o</code></p>
-<dd> Open a document</p>
-<dt><code>offset</code></p>
-<dd> Set page offset</p>
-<dt><code>print</code></p>
-<dd> Print document</p>
-<dt><code>write, write!</code></p>
-<dd> Save document (and force overwriting)</p>
-<dt><code>export</code></p>
-<dd> Export attachments</dl>
+<dt><code>bmark</code></dt>
+<dd> Save a bookmark</dd>
+<dt><code>bdelete</code></dt>
+<dd> Delete a bookmark</dd>
+<dt><code>blist</code></dt>
+<dd> List bookmarks</dd>
+<dt><code>close</code></dt>
+<dd> Close document</dd>
+<dt><code>exec</code></dt>
+<dd> Execute an external command</dd>
+<dt><code>info</code></dt>
+<dd> Show document information</dd>
+<dt><code>help</code></dt>
+<dd> Show help page</dd>
+<dt><code>open, o</code></dt>
+<dd> Open a document</dd>
+<dt><code>offset</code></dt>
+<dd> Set page offset</dd>
+<dt><code>print</code></dt>
+<dd> Print document</dd>
+<dt><code>write, write!</code></dt>
+<dd> Save document (and force overwriting)</dd>
+<dt><code>export</code></dt>
+<dd> Export attachments</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> The default appearance and behaviour of zathura can be overwritten by modifying the <i>zathurarc</i> file (default path: ~/.config/zathura/zathurarc). For a detailed description please consult <a href="/docs/linux/man/5-zathurarc/">zathurarc</a>(5).</p>
 <h2>SYNCTEX SUPPORT</h2>

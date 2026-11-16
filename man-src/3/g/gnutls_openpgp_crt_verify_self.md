@@ -14,12 +14,12 @@ description: "gnutls_openpgp_crt_verify_self – API function"
 <p> <code>int gnutls_openpgp_crt_verify_self(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> the structure that holds the key.</p>
-<dt>unsigned int flags</p>
-<dd> unused (should be 0)</p>
-<dt>unsigned int * verify</p>
-<dd> will hold the key verification output.</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> the structure that holds the key.</dd>
+<dt>unsigned int flags</dt>
+<dd> unused (should be 0)</dd>
+<dt>unsigned int * verify</dt>
+<dd> will hold the key verification output.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Verifies the self signature in the key. The key verification output will be put in <i>verify</i> and will be one or more of the gnutls_certificate_status_t enumerated elements bitwise or&#8217;d.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_openpgp_crt_verify_self – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

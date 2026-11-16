@@ -27,19 +27,19 @@ description: "oggz-sort — Sort the pages of an Ogg file in order of presentati
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
 <dd> Write output to the specified <code>filename</code> instead of printing it to standard output.<br />
-&nbsp;<wbr></p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit. </p>
+&nbsp;<wbr></dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Correct the page ordering in broken.ogv: </p>
 <dl>
 <dt>
-<dd> <tt>oggz sort -o fixed.ogv broken.ogv</tt></dl>
+</dt><dd> <tt>oggz sort -o fixed.ogv broken.ogv</tt></dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker January 25, 2008;</p>
 <h2>COPYRIGHT</h2>

@@ -26,46 +26,46 @@ description: "List Traversal Functions – Functions that can be used to travers
 <p>Make the current item the first item in the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.</dl>
+<dd><i>list</i> The list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the first item on success, NULL on failure</dl>
+<dd>A pointer to the first item on success, NULL on failure</dd></dl>
 <p> Referenced by ecore_file_app_installed(), ecore_file_app_list(), ecore_file_ls(), ecore_file_path_dir_exists(), ecore_hash_keys(), ecore_path_group_available(), ecore_path_group_find(), ecore_path_group_remove(), and ecore_plugin_available_get().</p>
 <h3>EAPI int ecore_list_for_each (Ecore_List * list, Ecore_For_Each function, void * user_data)</h3>
 <p>Execute function for each node in list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>function</i> The function to pass each node from list to.</dl>
+ <i>function</i> The function to pass each node from list to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns TRUE on success, FALSE on failure.</dl>
+<dd>Returns TRUE on success, FALSE on failure.</dd></dl>
 <h3>EAPI void* ecore_list_goto (Ecore_List * list, const void * data) [inline]</h3>
 <p>Make the current item the node that contains data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>data</i> The data to find.</dl>
+ <i>data</i> The data to find.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to data on success, NULL on failure.</dl>
+<dd>A pointer to data on success, NULL on failure.</dd></dl>
 <p> Referenced by ecore_con_client_del(), ecore_con_server_del(), and ecore_plugin_unload().</p>
 <h3>EAPI void* ecore_list_index_goto (Ecore_List * list, int index) [inline]</h3>
 <p>Make the current item the item with the given index number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The list.<br />
- <i>index</i> The position to move the current item.</dl>
+ <i>index</i> The position to move the current item.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to new current item on success, NULL on failure.</dl>
+<dd>A pointer to new current item on success, NULL on failure.</dd></dl>
 <h3>EAPI void* ecore_list_last_goto (Ecore_List * list) [inline]</h3>
 <p>Make the current item the last item in the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.</dl>
+<dd><i>list</i> The list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the last item on success, NULL on failure.</dl>
+<dd>A pointer to the last item on success, NULL on failure.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

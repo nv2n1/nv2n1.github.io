@@ -2712,21 +2712,21 @@ PNG Development Group </p>
 <p> <i>libpng</i>:</p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://libpng.sourceforge.net">http://libpng.sourceforge.net</a> (follow the [DOWNLOAD] link) <a rel="nofollow" href="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a> </p>
+</dt><dd> <a rel="nofollow" href="http://libpng.sourceforge.net">http://libpng.sourceforge.net</a> (follow the [DOWNLOAD] link) <a rel="nofollow" href="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a> </dd>
 </dl>
 <p> <i>zlib</i>:</p>
 <dl>
 <dt>
-<dd> (generally) at the same location as <i>libpng</i> or at<br />
- <a href="ftp://ftp.info-zip.org/pub/infozip/zlib">ftp://ftp.info-zip.org/pub/infozip/zlib</a> </p>
+</dt><dd> (generally) at the same location as <i>libpng</i> or at<br />
+ <a href="ftp://ftp.info-zip.org/pub/infozip/zlib">ftp://ftp.info-zip.org/pub/infozip/zlib</a> </dd>
 </dl>
 <p> <i>PNG</i>specification:<i>RFC</i>2083</p>
 <dl>
 <dt>
-<dd> (generally) at the same location as <i>libpng</i> or at<br />
+</dt><dd> (generally) at the same location as <i>libpng</i> or at<br />
  <a href="ftp://ds.internic.net/rfc/rfc2083.txt">ftp://ds.internic.net/rfc/rfc2083.txt</a><br />
  or (as a W3C Recommendation) at<br />
- <a rel="nofollow" href="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a> </p>
+ <a rel="nofollow" href="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a> </dd>
 </dl>
 <p> In the case of any inconsistency between the PNG specification and this library, the specification takes precedence. </p>
 <h2>AUTHORS</h2>

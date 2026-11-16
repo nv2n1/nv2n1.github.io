@@ -10,9 +10,9 @@ description: "pam_deny – The locking-out PAM module"
 <p>pam_deny &#8211; The locking-out PAM module</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_deny.so</code></dl>
+<dt> <code>pam_deny.so</code></dt></dl>
 <h2>Description</h2>
-<dd>This module can be used to deny access. It always indicates a failure to the application through the PAM framework. It might be suitable for using for default (the <i>OTHER</i>) entries.</p>
+<dd>This module can be used to deny access. It always indicates a failure to the application through the PAM framework. It might be suitable for using for default (the <i>OTHER</i>) entries.</dd>
 <h2>Options</h2>
 <p>This module does not recognise any options.</p>
 <h2>Module Types Provided</h2>
@@ -20,16 +20,16 @@ description: "pam_deny – The locking-out PAM module"
 <h2>Return Values</h2>
 <p>PAM_AUTH_ERR</p>
 <dl>
-<dd>This is returned by the account and auth services.</dl>
+<dd>This is returned by the account and auth services.</dd></dl>
 <p> PAM_CRED_ERR</p>
 <dl>
-<dd>This is returned by the setcred function.</dl>
+<dd>This is returned by the setcred function.</dd></dl>
 <p> PAM_AUTHTOK_ERR</p>
 <dl>
-<dd>This is returned by the password service.</dl>
+<dd>This is returned by the password service.</dd></dl>
 <p> PAM_SESSION_ERR</p>
 <dl>
-<dd>This is returned by the session service.</dl>
+<dd>This is returned by the session service.</dd></dl>
 <h2>Examples</h2>
 <dl>
 <dd>
@@ -46,7 +46,7 @@ other password required pam_warn.so
 other password required pam_deny.so
 other session required pam_warn.so
 other session required pam_deny.so</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>

@@ -11,30 +11,30 @@ description: "regtree – Text-mode registry viewer"
 <p> regtree &#8211; Text-mode registry viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>regtree</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;fullpath] [&#8211;no-values] [&#8211;credentials=CREDENTIALS] [location]</dl>
+<dt> <code>regtree</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;fullpath] [&#8211;no-values] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The regtree utility prints out all the contents of a Windows registry file. Subkeys are printed with one level more indentation than their parents.</p>
+<dd>The regtree utility prints out all the contents of a Windows registry file. Subkeys are printed with one level more indentation than their parents.</dd>
 <h2>OPTIONS</h2>
 <p> &#8211;help</p>
 <dl>
 <dt>
-<dd> Show list of available options.</dl>
+</dt><dd> Show list of available options.</dd></dl>
 <p> &#8211;backend BACKEND</p>
 <dl>
 <dt>
-<dd> Name of backend to load. Possible values are: creg, regf, dir and rpc. The default is <i>dir</i>.</dl>
+</dt><dd> Name of backend to load. Possible values are: creg, regf, dir and rpc. The default is <i>dir</i>.</dd></dl>
 <p> &#8211;credentials=CREDENTIALS</p>
 <dl>
 <dt>
-<dd> Credentials to use, if any. Password should be separated from user name by a percent sign.</dl>
+</dt><dd> Credentials to use, if any. Password should be separated from user name by a percent sign.</dd></dl>
 <p> &#8211;fullpath</p>
 <dl>
 <dt>
-<dd> Print the full path to each key instead of only its name.</dl>
+</dt><dd> Print the full path to each key instead of only its name.</dd></dl>
 <p> &#8211;no-values</p>
 <dl>
 <dt>
-<dd> Don&#8217;t print values, just keys.</dl>
+</dt><dd> Don&#8217;t print values, just keys.</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 4.0 of the Samba suite.</p>
 <h2>SEE ALSO</h2>
@@ -44,15 +44,15 @@ description: "regtree – Text-mode registry viewer"
 <p> This manpage and regtree were written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Samba</p>
+<dt> 1.</dt>
+<dd> Samba</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dl>
-<dt> 2.</p>
-<dd> Samba Team</p>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd> Samba Team</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
 <h2>Index</h2>

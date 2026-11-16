@@ -23,9 +23,9 @@ url: "/docs/linux/man/1-qstail/"
 
 <dl>
 <dt>-i &lt;path&gt;
-<dd> Input file to read the data from.
-<dt>-p &lt;pattern&gt;
-<dd> Search pattern (literal string).</dl>
+</dt><dd> Input file to read the data from.
+</dd><dt>-p &lt;pattern&gt;
+</dt><dd> Search pattern (literal string).</dd></dl>
 
 <h2>SEE ALSO</h2>
 

@@ -97,8 +97,8 @@ description: "thin_selinux – Security Enhanced Linux Policy for the thin proce
 <p> <code>thin_var_run_t</code> </p>
 <p> &#8211; Set files with the thin_var_run_t type, if you want to store the thin files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/thin(/.*)?, /var/run/aeolus/thin.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/thin(/.*)?, /var/run/aeolus/thin.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

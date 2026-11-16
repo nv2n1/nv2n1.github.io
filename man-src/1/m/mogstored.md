@@ -29,7 +29,7 @@ url: "/docs/linux/man/1-mogstored/"
 
 <dl>
 <dt><font SIZE="-1">PERLBAL_XS_HEADERS</font>
-<dd> If defined and 0, Perlbal::XS::HTTPHeaders will not be used, if present. Otherwise, it will be enabled by default, if installed and loadable.</dl>
+</dt><dd> If defined and 0, Perlbal::XS::HTTPHeaders will not be used, if present. Otherwise, it will be enabled by default, if installed and loadable.</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

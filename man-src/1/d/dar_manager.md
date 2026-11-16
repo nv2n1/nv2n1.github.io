@@ -33,94 +33,92 @@ description: "dar_manager – compiles several archives contents in a database t
 <p> you can restore any file by hand without <code>dar_manager</code> , but if you make a lot of differential backup, you may spend many time to find the archive that contains the last version of your file, as dar will not save it if it has not changed since previous backup. <code>dar_manager</code> simplify the process by looking in its internal database, built from archive &quot;catalogues&quot;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-C, &#8211;create [&lt;path&gt;/]&lt;database&gt;</p>
-<dd> creates an empty database that will collect information about several archives. The &lt;database&gt; is a filename that is required for -B option. To destroy a &lt;database&gt; just remove the file.</p>
-<dt>-B, &#8211;base [&lt;path&gt;/]&lt;database&gt;</p>
-<dd> specify the database to read or modify. The &lt;database&gt; file must exist, and have a database structure (see -C option).</p>
-<dt>-i, &#8211;interactive</p>
-<dd> use a keyboard interactive text menu to do operations on the given database. So you may avoid reading the other options described in this manual page, if you wish, and just use the interactive option. You will however always have to create an empty database (-C option) and restore files manually (-r option).</p>
-<dt>-A, &#8211;add [&lt;path&gt;/]&lt;basename&gt; [ [&lt;path&gt;/]&lt;archive_basename&gt;]</p>
-<dd> add an archive to the database. An isolated catalogue can also be used only if it has been produced by dar version 1.2.0 or above. Why ? Because, an isolated catalogue produced by older version will always tell that no files are saved in the archive of reference, in that case the solution is to provide the archive itself as argument. An optional second argument is the basename of the archive if it is different from the first argument (need for extraction of files). For example you could have an isolated catalogue in first argument and the basename of the original archive (where is stored the data) as second argument. By default,</p>
-<dt>-9, &#8211;min-digits &lt;num&gt;</p>
-<dd> the slice number zeroed padding to use to get the slices filename (for more details see dar man page at this same option) <code>dar_manager</code> will look for an archive of reference in the command line used to create each archive, but in some cases, it may be necessary to specify the archive name (for example if you&#8217;ve changed its name).</p>
-<dt>-l, &#8211;list</p>
-<dd> displays the information about the archives compiled in the database. In particular, a number is given to each archive, which is required to some other option to design a particular archive within the database. Nothing avoids you to feed the database with several archive of the same basename ! You will just have to guess which one is asked under this name. :-)</p>
-<dt>-D, &#8211;delete &lt;number&gt;[-&lt;number&gt;]</p>
-<dd> removes an archive (or a range of archive) from the database. The number of the archive (or the min and max number or the archive range) is correspond to those given by the -l option. Note that all archive number greater than the one(s) to be delete will be decremented to keep continuous numbering of the archive inside the database. If a single number is given (not a range), it may be also a negative number, by which it means counting from the end. For example, -1 means the last archive of the base, -2 the penultimate, etc.</p>
-<dt>-b, &#8211;base &lt;number&gt; &lt;new_archive_basename&gt;</p>
-<dd> this option allows you to rename the archive basename (used when restoring files from it). Here too, the number may be also a negative number.</p>
-<dt>-p, &#8211;path &lt;number&gt; &lt;path&gt;</p>
-<dd> this option allows you to change the location of a given archive (used when restoring files from it). Here too, a negative number is allowed.</p>
-<dt>-o, &#8211;options [list of option to pass to dar]</p>
-<dd> Specify the option to use when calling dar. Each call erases the previous setting. Possible <code>dar</code> options are all the available ones except &quot;-x&quot; and simple arguments (the [list of path]) which will be added by <code>dar_manager</code> itself.</p>
-<dt>-d, &#8211;dar [&lt;path&gt;]</p>
-<dd> Set the path to dar. If no argument is given, dar is expected to be located in the PATH</p>
-<dt>-r, &#8211;restore [list of files or directories to restore]</p>
-<dd> <code>dar_manager</code> will restore all (an only) the given files or directories, in their latest recorded status, or before the date give thanks to the -e option. If a directory is given all subfiles and subdirectories are restored recursively in it. You can filter out some files from this recursion thanks to dar usual filtering option (see dar man page) you can provide beside -r using the -e option (see below). Dar_manager lead dar to remove any file, if a file is stored as having been removed at date requested for restoration, it is simply not restored. Thus if you restore in an empty directory you will get all the files and directories you provided to dar_manager in the state they have at the date you asked. File that did not existed at that time will not be restored. However you can restore over an existing installation, dar will then warn you before overwriting files (see -w and -n options for dar) but will still not remove files that were recorded removed from a previous archive of reference. Note that files listed after -r option, must never have an absolute path. They will be restored under the directory specified with -R option of dar (passed to dar using -o or -e options), or by default, under the current directory.</p>
-<dt>-w, &#8211;when &lt;date&gt;</p>
-<dd> alters the -r option behavior: still restores the files in the most recent version available but only before the given date (versions of more recent dates are ignored). The &lt;date&gt; must respect the following format [ [ [year/]month/]day-]hour:minute[:second]. For example &quot;22:10&quot; for 10 PM past 10 or the current day, &quot;7-22:10&quot; for 10 PM past 10 the 7th of the current month, &quot;3/07-22:10&quot; for the 7th of march at 22:10 of the current year, &quot;2002/03/31-14:00:00&quot; the date of the first dar&#8217;s release ;-). The given date must be in the past, of course, and is compared to the &quot;last modification&quot; date of the saved files and not to the date at which archives have been done. Thus if a file has been changed long ago but saved in a recent (full) archive, it will be elected for restoration even for dates older than the creation of the archive. In the other way, a file saved long time ago with a mtime that was set to a date in the future will not be elected for restoration when giving the date at which was done the archive.</p>
-<dt>-e, &#8211;extra &lt;options&gt;</p>
-<dd> pass some more options to dar. While the -o options takes all that follows on the command line as argument to pass to dar and write these in the database, the -e option does not alter the database and has only one argument. In other words, if you need to pass several options to dar through the use of the -e option, you need to use quotes (simple quotes &#8216; or double quotes &quot;) to enclose these options. Example:</dl>
+<dt>-C, &#8211;create [&lt;path&gt;/]&lt;database&gt;</dt>
+<dd> creates an empty database that will collect information about several archives. The &lt;database&gt; is a filename that is required for -B option. To destroy a &lt;database&gt; just remove the file.</dd>
+<dt>-B, &#8211;base [&lt;path&gt;/]&lt;database&gt;</dt>
+<dd> specify the database to read or modify. The &lt;database&gt; file must exist, and have a database structure (see -C option).</dd>
+<dt>-i, &#8211;interactive</dt>
+<dd> use a keyboard interactive text menu to do operations on the given database. So you may avoid reading the other options described in this manual page, if you wish, and just use the interactive option. You will however always have to create an empty database (-C option) and restore files manually (-r option).</dd>
+<dt>-A, &#8211;add [&lt;path&gt;/]&lt;basename&gt; [ [&lt;path&gt;/]&lt;archive_basename&gt;]</dt>
+<dd> add an archive to the database. An isolated catalogue can also be used only if it has been produced by dar version 1.2.0 or above. Why ? Because, an isolated catalogue produced by older version will always tell that no files are saved in the archive of reference, in that case the solution is to provide the archive itself as argument. An optional second argument is the basename of the archive if it is different from the first argument (need for extraction of files). For example you could have an isolated catalogue in first argument and the basename of the original archive (where is stored the data) as second argument. By default,</dd>
+<dt>-9, &#8211;min-digits &lt;num&gt;</dt>
+<dd> the slice number zeroed padding to use to get the slices filename (for more details see dar man page at this same option) <code>dar_manager</code> will look for an archive of reference in the command line used to create each archive, but in some cases, it may be necessary to specify the archive name (for example if you&#8217;ve changed its name).</dd>
+<dt>-l, &#8211;list</dt>
+<dd> displays the information about the archives compiled in the database. In particular, a number is given to each archive, which is required to some other option to design a particular archive within the database. Nothing avoids you to feed the database with several archive of the same basename ! You will just have to guess which one is asked under this name. :-)</dd>
+<dt>-D, &#8211;delete &lt;number&gt;[-&lt;number&gt;]</dt>
+<dd> removes an archive (or a range of archive) from the database. The number of the archive (or the min and max number or the archive range) is correspond to those given by the -l option. Note that all archive number greater than the one(s) to be delete will be decremented to keep continuous numbering of the archive inside the database. If a single number is given (not a range), it may be also a negative number, by which it means counting from the end. For example, -1 means the last archive of the base, -2 the penultimate, etc.</dd>
+<dt>-b, &#8211;base &lt;number&gt; &lt;new_archive_basename&gt;</dt>
+<dd> this option allows you to rename the archive basename (used when restoring files from it). Here too, the number may be also a negative number.</dd>
+<dt>-p, &#8211;path &lt;number&gt; &lt;path&gt;</dt>
+<dd> this option allows you to change the location of a given archive (used when restoring files from it). Here too, a negative number is allowed.</dd>
+<dt>-o, &#8211;options [list of option to pass to dar]</dt>
+<dd> Specify the option to use when calling dar. Each call erases the previous setting. Possible <code>dar</code> options are all the available ones except &quot;-x&quot; and simple arguments (the [list of path]) which will be added by <code>dar_manager</code> itself.</dd>
+<dt>-d, &#8211;dar [&lt;path&gt;]</dt>
+<dd> Set the path to dar. If no argument is given, dar is expected to be located in the PATH</dd>
+<dt>-r, &#8211;restore [list of files or directories to restore]</dt>
+<dd> <code>dar_manager</code> will restore all (an only) the given files or directories, in their latest recorded status, or before the date give thanks to the -e option. If a directory is given all subfiles and subdirectories are restored recursively in it. You can filter out some files from this recursion thanks to dar usual filtering option (see dar man page) you can provide beside -r using the -e option (see below). Dar_manager lead dar to remove any file, if a file is stored as having been removed at date requested for restoration, it is simply not restored. Thus if you restore in an empty directory you will get all the files and directories you provided to dar_manager in the state they have at the date you asked. File that did not existed at that time will not be restored. However you can restore over an existing installation, dar will then warn you before overwriting files (see -w and -n options for dar) but will still not remove files that were recorded removed from a previous archive of reference. Note that files listed after -r option, must never have an absolute path. They will be restored under the directory specified with -R option of dar (passed to dar using -o or -e options), or by default, under the current directory.</dd>
+<dt>-w, &#8211;when &lt;date&gt;</dt>
+<dd> alters the -r option behavior: still restores the files in the most recent version available but only before the given date (versions of more recent dates are ignored). The &lt;date&gt; must respect the following format [ [ [year/]month/]day-]hour:minute[:second]. For example &quot;22:10&quot; for 10 PM past 10 or the current day, &quot;7-22:10&quot; for 10 PM past 10 the 7th of the current month, &quot;3/07-22:10&quot; for the 7th of march at 22:10 of the current year, &quot;2002/03/31-14:00:00&quot; the date of the first dar&#8217;s release ;-). The given date must be in the past, of course, and is compared to the &quot;last modification&quot; date of the saved files and not to the date at which archives have been done. Thus if a file has been changed long ago but saved in a recent (full) archive, it will be elected for restoration even for dates older than the creation of the archive. In the other way, a file saved long time ago with a mtime that was set to a date in the future will not be elected for restoration when giving the date at which was done the archive.</dd>
+<dt>-e, &#8211;extra &lt;options&gt;</dt>
+<dd> pass some more options to dar. While the -o options takes all that follows on the command line as argument to pass to dar and write these in the database, the -e option does not alter the database and has only one argument. In other words, if you need to pass several options to dar through the use of the -e option, you need to use quotes (simple quotes &#8216; or double quotes &quot;) to enclose these options. Example:</dd></dl>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> dar_manager -B database.dmd -e &quot;-w -v -p -b -r -H 1&quot; -r some/files</dl>
+</dt><dd> dar_manager -B database.dmd -e &quot;-w -v -p -b -r -H 1&quot; -r some/files</dd></dl>
 <p> while using -o option you must not use quotes: </p>
 <dl>
 <dt>
-<dd> dar_manager -B database.dmd -o -w -v -p -b -r -H 1</dl>
+</dt><dd> dar_manager -B database.dmd -o -w -v -p -b -r -H 1</dd></dl>
 </dl>
 <dl>
-<dt>-u, &#8211;used &lt;number&gt;</p>
-<dd> list the files that the given archive owns as last version available. Thus when no file is listed, the given archive is no more useful in database, and can be removed safely (-D option). If &lt;number&gt; is zero, all available file are listed, the status provided for each file present in the database is the most recent status. A negative number is allowed for this option (see -D option for details).</p>
-<dt>-f, &#8211;file &lt;file&gt;</p>
-<dd> displays in which archive the given file is saved, and what are the modification date (mtime) and change date (ctime).</p>
-<dt>-s, &#8211;stats</p>
-<dd> show the number of most recent files by archive. This helps to determine which archive can be safely removed from the database.</p>
-<dt>-m, &#8211;move &lt;number&gt; &lt;number&gt;</p>
-<dd> changes the order of archives in the database. The first number is the number of the archive to move, while the second is the place where it must be shifted to. </p>
+<dt>-u, &#8211;used &lt;number&gt;</dt>
+<dd> list the files that the given archive owns as last version available. Thus when no file is listed, the given archive is no more useful in database, and can be removed safely (-D option). If &lt;number&gt; is zero, all available file are listed, the status provided for each file present in the database is the most recent status. A negative number is allowed for this option (see -D option for details).</dd>
+<dt>-f, &#8211;file &lt;file&gt;</dt>
+<dd> displays in which archive the given file is saved, and what are the modification date (mtime) and change date (ctime).</dd>
+<dt>-s, &#8211;stats</dt>
+<dd> show the number of most recent files by archive. This helps to determine which archive can be safely removed from the database.</dd>
+<dt>-m, &#8211;move &lt;number&gt; &lt;number&gt;</dt>
+<dd> changes the order of archives in the database. The first number is the number of the archive to move, while the second is the place where it must be shifted to. </dd>
 <p> Archive order is important: An old archive must have a smaller index than a recent archive. If you add archive to a database in the order they have been created all should be fine. Else if a file has a more recent version in an archive which index is smaller, a warning will be issued (unless -ai option is used). This can occur if by mistake you added an archive to the database in the wrong order (old archive added after a recent one), in that case simply using the -m option will let you fix this mistake. If instead the problem is relative to a single file (or a small set of file), you should wonder why this file has its modification date altered in a way that it pretends to be older than its really is. Checking for the signs of a rootkit may be a good idea.</p>
-<dt>-c, &#8211;check</p>
-<dd> check the database consistency, in particular the date ordering is verified and warning are issued for each file having more recent version located in an archive with a smaller index inside the database. -ai option makes -c option useless.</p>
-<dt>-N, &#8211;ignore-options-in-base</p>
-<dd> Do not use the options stored in database when calling dar for restoration. This option is only useful while restoring files from dar_manager, either directly (-r option) or using a batch file (-@ option, see below).</p>
-<dt>-k, &#8211;ignore-when-removed</p>
-<dd> By default, dar_manager does not ask dar to restore file that have been removed at the requested date (or in the latest state available). This is useful for example to restore a directory in the state it has at a given date (only files that existed at that time are restored). However when you want to restore a file that has been destroyed by accident, you need to use -k option so you don&#8217;t have to determine at which date that file existed to be be able to ask dar_manager to restore that file in the state it had before that date. In other words, -k option gives a behavior of dar_manager backward compatible with dar_manager released beside version 2.3.x of dar.</p>
-<dt>-ai, &#8211;alter=ignore-order</p>
-<dd> avoid dar_manager to issue a warning for each file not following a chronological order of modification date when the archive number in the database is growing.</p>
-<dt>-@, &#8211;batch &lt;filename&gt;</p>
-<dd> allows you to do several operations on a given database. All operations are defined in the provided &lt;filename&gt; and refer to the same database as defined by the -B switch on command line. This batch file, must thus not contain neither -B, -C, -i or -ai option (-ai are global to the batch operation). The batch file expected layout is one command per line, thus several arguments (like -l -v for example) may take place on a given line of the file (-v can be found both on command line for verbose output about the batch operation steps, as well as inside the batch file for verbose output of a particular batched command). Arguments are separated by spaces or tabs, other characters are passed as-is. In consequence, you should only need to use quotes (using &quot; or &#8216;) if you intend to use an argument containing space. Last, comments may be placed on any line beginning by a hash character (#).</p>
-<dt>-Q</p>
-<dd> Do not display any message on stderr when not launched from a terminal (for example when launched from an at job or crontab). Remains that any question to the user will be assumed a &#8216;no&#8217; answer, which most of the time will abort the program.</p>
-<dt>-v, &#8211;verbose</p>
-<dd> displays additional information about what it is doing.</p>
-<dt>-h, &#8211;help</p>
-<dd> display help usage</p>
-<dt>-V, &#8211;version</p>
-<dd> display software version </p>
+<dt>-c, &#8211;check</dt>
+<dd> check the database consistency, in particular the date ordering is verified and warning are issued for each file having more recent version located in an archive with a smaller index inside the database. -ai option makes -c option useless.</dd>
+<dt>-N, &#8211;ignore-options-in-base</dt>
+<dd> Do not use the options stored in database when calling dar for restoration. This option is only useful while restoring files from dar_manager, either directly (-r option) or using a batch file (-@ option, see below).</dd>
+<dt>-k, &#8211;ignore-when-removed</dt>
+<dd> By default, dar_manager does not ask dar to restore file that have been removed at the requested date (or in the latest state available). This is useful for example to restore a directory in the state it has at a given date (only files that existed at that time are restored). However when you want to restore a file that has been destroyed by accident, you need to use -k option so you don&#8217;t have to determine at which date that file existed to be be able to ask dar_manager to restore that file in the state it had before that date. In other words, -k option gives a behavior of dar_manager backward compatible with dar_manager released beside version 2.3.x of dar.</dd>
+<dt>-ai, &#8211;alter=ignore-order</dt>
+<dd> avoid dar_manager to issue a warning for each file not following a chronological order of modification date when the archive number in the database is growing.</dd>
+<dt>-@, &#8211;batch &lt;filename&gt;</dt>
+<dd> allows you to do several operations on a given database. All operations are defined in the provided &lt;filename&gt; and refer to the same database as defined by the -B switch on command line. This batch file, must thus not contain neither -B, -C, -i or -ai option (-ai are global to the batch operation). The batch file expected layout is one command per line, thus several arguments (like -l -v for example) may take place on a given line of the file (-v can be found both on command line for verbose output about the batch operation steps, as well as inside the batch file for verbose output of a particular batched command). Arguments are separated by spaces or tabs, other characters are passed as-is. In consequence, you should only need to use quotes (using &quot; or &#8216;) if you intend to use an argument containing space. Last, comments may be placed on any line beginning by a hash character (#).</dd>
+<dt>-Q</dt>
+<dd> Do not display any message on stderr when not launched from a terminal (for example when launched from an at job or crontab). Remains that any question to the user will be assumed a &#8216;no&#8217; answer, which most of the time will abort the program.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> displays additional information about what it is doing.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> display help usage</dd>
+<dt>-V, &#8211;version</dt>
+<dd> display software version </dd>
 </dl>
 <h2>EXIT CODES</h2>
 <p> <code>dar_manager</code> exits with the following code:</p>
 <dl>
-<dt>0</p>
-<dd> Operation successful.</p>
-<dt>1</p>
-<dd> see dar manual page for signification</p>
-<dt>2</p>
-<dd> see dar manual page for signification</p>
-<dt>3</p>
-<dd> see dar manual page for signification</p>
-<dt>5</p>
-<dd> see dar manual page for signification</p>
-<dt>7</p>
-<dd> see dar manual page for signification</p>
-<dt>8</p>
-<dd> see dar manual page for signification</p>
-<dt>11 and above</p>
+<dt>0</dt>
+<dd> Operation successful.</dd>
+<dt>1</dt>
+<dd> see dar manual page for signification</dd>
+<dt>2</dt>
+<dd> see dar manual page for signification</dd>
+<dt>3</dt>
+<dd> see dar manual page for signification</dd>
+<dt>5</dt>
+<dd> see dar manual page for signification</dd>
+<dt>7</dt>
+<dd> see dar manual page for signification</dd>
+<dt>8</dt>
+<dd> see dar manual page for signification</dd>
+<dt>11 and above</dt>
 <dd> <code>dar</code><br />
-&nbsp;<wbr>called from dar_manager has exited with non zero status. Subtract 10 to this exit code to get dar&#8217;s exit code. </p>
+&nbsp;<wbr>called from dar_manager has exited with non zero status. Subtract 10 to this exit code to get dar&#8217;s exit code. </dd>
 </dl>
 <h2>SIGNALS</h2>
 <p> dar_manager acts like dar (see dar man page for list of signals), upon certain signal reception dar aborts cleanly </p>

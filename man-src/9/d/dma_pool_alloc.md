@@ -14,13 +14,13 @@ description: "dma_pool_alloc – get a block of consistent memory"
 <p><i>pool</i></p>
 <dl>
 <dd>
-<dd>dma pool that will produce the block</dl>
+</dd><dd>dma pool that will produce the block</dd></dl>
 <p> <i>mem_flags</i></p>
 <dl>
-<dd>GFP_* bitmask</dl>
+<dd>GFP_* bitmask</dd></dl>
 <p> <i>handle</i></p>
 <dl>
-<dd>pointer to dma address of block</dl>
+<dd>pointer to dma address of block</dd></dl>
 <h2>Description</h2>
 <p>This returns the kernel virtual address of a currently unused block, and reports its dma address through the handle. If such a memory block can&#8217;t be allocated, <code>NULL</code> is returned.</p>
 <h2>Copyright</h2>

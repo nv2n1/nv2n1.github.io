@@ -24,9 +24,9 @@ int mknodat(int dirfd, const char *pathname, mode_t mode, dev_t dev);
 <p> <code>mknod</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The system call <code>mknod</code>() creates a filesystem node (file, device special file, or named pipe) named <i>pathname</i>, with attributes specified by <i>mode</i> and <i>dev</i>. </p>
 <p> The <i>mode</i> argument specifies both the file mode to use and the type of node to be created. It should be a combination (using bitwise OR) of one of the file types listed below and zero or more of the file mode bits listed in <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7). </p>
@@ -45,38 +45,38 @@ int mknodat(int dirfd, const char *pathname, mode_t mode, dev_t dev);
 <p> <code>mknod</code>() and <code>mknodat</code>() return zero on success, or -1 if an error occurred (in which case, <i>errno</i> is set appropriately).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The parent directory does not allow write permission to the process, or one of the directories in the path prefix of <i>pathname</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EDQUOT</code></p>
-<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</p>
-<dt><code>EEXIST</code></p>
-<dd> <i>pathname</i> already exists. This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>mode</i> requested creation of something other than a regular file, device special file, FIFO or socket.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> was too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The device containing <i>pathname</i> has no room for the new node.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>mode</i> requested creation of something other than a regular file, FIFO (named pipe), or UNIX domain socket, and the caller is not privileged (Linux: does not have the <code>CAP_MKNOD</code> capability); also returned if the filesystem containing <i>pathname</i> does not support the type of node requested.</p>
-<dt><code>EROFS</code></p>
-<dd> <i>pathname</i> refers to a file on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The parent directory does not allow write permission to the process, or one of the directories in the path prefix of <i>pathname</i> did not allow search permission. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <i>pathname</i> already exists. This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>mode</i> requested creation of something other than a regular file, device special file, FIFO or socket.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> was too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The device containing <i>pathname</i> has no room for the new node.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>mode</i> requested creation of something other than a regular file, FIFO (named pipe), or UNIX domain socket, and the caller is not privileged (Linux: does not have the <code>CAP_MKNOD</code> capability); also returned if the filesystem containing <i>pathname</i> does not support the type of node requested.</dd>
+<dt><code>EROFS</code></dt>
+<dd> <i>pathname</i> refers to a file on a read-only filesystem.</dd></dl>
 <p> The following additional errors can occur for <code>mknodat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>mknodat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>

@@ -24,10 +24,10 @@ description: "ctrexc.f –"
  The Schur form T is reordered by a unitary similarity transformation
  Z**H*T*Z, and optionally the matrix Q of Schur vectors is updated by
  postmultplying it with Z.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>COMPQ</i> </p>
+<dd><i>COMPQ</i> </dd>
 <pre> COMPQ is CHARACTER*1
  = 'V': update the matrix Q of Schur vectors;
  = 'N': do not update Q.</pre>
@@ -65,13 +65,13 @@ description: "ctrexc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 125 of file ctrexc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

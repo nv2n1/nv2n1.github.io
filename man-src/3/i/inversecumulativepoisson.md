@@ -18,6 +18,6 @@ description: "QuantLib::InverseCumulativePoisson – Inverse cumulative Poisson 
 <p>Inverse cumulative Poisson distribution function. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against known good results.</dl>
+<dd>the correctness of the returned value is tested by checking it against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

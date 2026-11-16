@@ -14,11 +14,11 @@ mongoc_write_concern_set_wmajority (mongoc_write_concern_t *write_concern,
  int32_t wtimeout_msec);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>wtimeout_msec</code></p>
-<dd>A positive <code>int32_t</code> or zero.</dl>
+<dt><code>wtimeout_msec</code></dt>
+<dd>A positive <code>int32_t</code> or zero.</dd></dl>
 <h2>Description</h2>
 <p>Sets if the write must have been propagated to a majority of nodes before indicating write success. </p>
 <p> The timeout specifies how long, in milliseconds, the server should wait before indicating that the write has failed. This is not the same as a socket timeout. A value of zero may be used to indicate no timeout. </p>

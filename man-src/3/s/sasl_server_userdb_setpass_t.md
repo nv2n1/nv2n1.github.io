@@ -10,8 +10,6 @@ description: "sasl_server_userdb_setpass_t – UserDB Plaintext Password Setting
 <p>sasl_server_userdb_setpass_t &#8211; UserDB Plaintext Password Setting Callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_server_userdb_setpass_t(sasl_conn_t *conn,
 void *context,
 const char *user,

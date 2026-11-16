@@ -17,14 +17,14 @@ description: "shtool move – GNU shtool enhanced"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</p>
-<dt><code>-e</code>, <code>&#8211;expand</code></p>
-<dd> Expand asterisk in <i>src</i> to be used as &quot;<tt>&quot;%&quot;</tt><i>n</i>&quot; (where <i>n</i> is <tt>1</tt>,<tt>2</tt>,&#8230;) in <i>dst-file</i>. This is useful for renaming multiple files at once.</p>
-<dt><code>-p</code>, <code>&#8211;preserve</code></p>
-<dd> Detect <i>src-file</i> and <i>dst-file</i> having equal content and not touch existing destination files, thus perserving timestamps. This is useful for applications that monitor timestamps, i.e. suppress make(1L) repeating actions for unchanged files.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-e</code>, <code>&#8211;expand</code></dt>
+<dd> Expand asterisk in <i>src</i> to be used as &quot;<tt>&quot;%&quot;</tt><i>n</i>&quot; (where <i>n</i> is <tt>1</tt>,<tt>2</tt>,&#8230;) in <i>dst-file</i>. This is useful for renaming multiple files at once.</dd>
+<dt><code>-p</code>, <code>&#8211;preserve</code></dt>
+<dd> Detect <i>src-file</i> and <i>dst-file</i> having equal content and not touch existing destination files, thus perserving timestamps. This is useful for applications that monitor timestamps, i.e. suppress make(1L) repeating actions for unchanged files.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

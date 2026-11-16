@@ -20,16 +20,16 @@ description: "ioctl – control device"
 <p> Usually, on success zero is returned. A few <code>ioctl</code>() requests use the return value as an output parameter and return a nonnegative value on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>argp</i> references an inaccessible memory area.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>request</i> or <i>argp</i> is not valid.</p>
-<dt><code>ENOTTY</code></p>
-<dd> <i>fd</i> is not associated with a character special device.</p>
-<dt><code>ENOTTY</code></p>
-<dd> The specified request does not apply to the kind of object that the file descriptor <i>fd</i> references.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>argp</i> references an inaccessible memory area.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>request</i> or <i>argp</i> is not valid.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> <i>fd</i> is not associated with a character special device.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> The specified request does not apply to the kind of object that the file descriptor <i>fd</i> references.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> No single standard. Arguments, returns, and semantics of <code>ioctl</code>() vary according to the device driver in question (the call is used as a catch-all for operations that don&#8217;t cleanly fit the UNIX stream I/O model). </p>
 <p> The <code>ioctl</code>() system call appeared in Version 7 AT&amp;T UNIX.</p>

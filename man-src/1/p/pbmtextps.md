@@ -16,18 +16,18 @@ description: "pbmtextps – render text into a bitmap via postscript"
 <p> The image is cropped at the top and the right. It is not cropped at the left or bottom so that the text begins at the same position relative to the origin. You can use <code>pnmcrop</code> to crop it all the way. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-font</code></p>
-<dd> By default, <code>pbmtextps</code> uses TimesRoman. You can specify the font to use with the <code>-font</code> option. This is the name of any valid postscript font which is installed on your system. </p>
-<dt><code>-fontsize</code></p>
-<dd> Size of font in points. See the <code>-resolution</code> option for information on how to interpret this size. </p>
+<dt><code>-font</code></dt>
+<dd> By default, <code>pbmtextps</code> uses TimesRoman. You can specify the font to use with the <code>-font</code> option. This is the name of any valid postscript font which is installed on your system. </dd>
+<dt><code>-fontsize</code></dt>
+<dd> Size of font in points. See the <code>-resolution</code> option for information on how to interpret this size. </dd>
 <p> Default is 24 points. </p>
-<dt><code>-resolution</code></p>
-<dd> Resolution in dots per inch of distance measurements pertaining to generation of the image. PBM images don&#8217;t have any inherent resolution, so a distance such as &quot;1 inch&quot; doesn&#8217;t mean anything unless you separately specify what resolution you&#8217;re talking about. That&#8217;s what this option does. </p>
+<dt><code>-resolution</code></dt>
+<dd> Resolution in dots per inch of distance measurements pertaining to generation of the image. PBM images don&#8217;t have any inherent resolution, so a distance such as &quot;1 inch&quot; doesn&#8217;t mean anything unless you separately specify what resolution you&#8217;re talking about. That&#8217;s what this option does. </dd>
 <p> In particular, the meaning of the font size is determined by this resolution. If the font size is 24 points and the resolution is 150 dpi, then the font size is 50 pixels. </p>
 <p> Default is 150 dpi. </p>
-<dt><code>-stroke</code></p>
+<dt><code>-stroke</code></dt>
 <dd> Width of line to use for stroke font. There is no default stroke width because the letters are solid by default.<br />
-&nbsp; </p>
+&nbsp; </dd>
 </dl>
 <h2>USAGE</h2>
 <p> See <code>pbmtext</code> for usage examples. </p>

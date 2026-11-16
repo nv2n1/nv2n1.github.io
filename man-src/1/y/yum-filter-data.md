@@ -16,55 +16,55 @@ description: "yum filter data plugin"
 <h2>GENERAL OPTIONS</h2>
 <p> These are the options added to yum that are available in the &quot;list updates&quot;, &quot;info updates&quot;, &quot;check-update&quot; and &quot;update&quot; commands. They are: </p>
 <dl>
-<dt><code>&#8211;filter-vendors</code></p>
-<dd> This option includes packages which have a vendor which matches one of the passed vendor wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple vendors as one option argument.</p>
-<dt><code>&#8211;filter-rpm-groups</code></p>
-<dd> This option includes packages which have a group which matches one of the passed rpm group wildcard strings, or is unknown. Note that rpm groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple rpm groups as one option argument.</p>
-<dt><code>&#8211;filter-packagers</code></p>
-<dd> This option includes packages which have a packager which matches one of the passed packager wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple packagers as one option argument.</p>
-<dt><code>&#8211;filter-licenses</code></p>
-<dd> This option includes packages which have a license which matches one of the passed license wildcard strings, or is unknown. Note that licenses can have spaces in their value, so &quot;,&quot; is the only way to specify multiple licenses as one option argument.</p>
-<dt><code>&#8211;filter-arches</code></p>
-<dd> This option includes packages which have a arch which matches one of the passed arch wildcard strings, or is unknown.</p>
-<dt><code>&#8211;filter-committers</code></p>
-<dd> This option includes packages which have a committer which matches one of the passed committer wildcard strings, or is unknown. Note that committers can have spaces in their value, so &quot;,&quot; is the only way to specify multiple committers as one option argument. Also, committer values are so loosely formed that they could contain commas too, it is recommended to not do that but you can work around it by using &quot;?&quot;.</p>
-<dt><code>&#8211;filter-buildhosts</code></p>
-<dd> This option includes packages which have a buildhost which matches one of the passed buildhost wildcard strings, or is unknown.</p>
-<dt><code>&#8211;filter-urls</code></p>
-<dd> This option includes packages which have a url which matches one of the passed url wildcard strings, or is unknown.</p>
-<dt><code>&#8211;filter-package-sizes</code></p>
-<dd> This option includes packages which have a packagesize which is within one of the passed packagesize ranges, or is unknown.</p>
-<dt><code>&#8211;filter-archive-sizes</code></p>
-<dd> This option includes packages which have a archivesize which is within one of the passed archivesize ranges, or is unknown.</p>
-<dt><code>&#8211;filter-installed-sizes</code></p>
-<dd> This option includes packages which have a installedsize which is within one of the passed installedsize ranges, or is unknown.</p>
-<dt><code>&#8211;filter-groups</code></p>
-<dd> This option includes packages which are in a yum group which matches one of the passed yum group id strings, or is unknown. Note that yum groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple yum groups as one option argument.</dl>
+<dt><code>&#8211;filter-vendors</code></dt>
+<dd> This option includes packages which have a vendor which matches one of the passed vendor wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple vendors as one option argument.</dd>
+<dt><code>&#8211;filter-rpm-groups</code></dt>
+<dd> This option includes packages which have a group which matches one of the passed rpm group wildcard strings, or is unknown. Note that rpm groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple rpm groups as one option argument.</dd>
+<dt><code>&#8211;filter-packagers</code></dt>
+<dd> This option includes packages which have a packager which matches one of the passed packager wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple packagers as one option argument.</dd>
+<dt><code>&#8211;filter-licenses</code></dt>
+<dd> This option includes packages which have a license which matches one of the passed license wildcard strings, or is unknown. Note that licenses can have spaces in their value, so &quot;,&quot; is the only way to specify multiple licenses as one option argument.</dd>
+<dt><code>&#8211;filter-arches</code></dt>
+<dd> This option includes packages which have a arch which matches one of the passed arch wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-committers</code></dt>
+<dd> This option includes packages which have a committer which matches one of the passed committer wildcard strings, or is unknown. Note that committers can have spaces in their value, so &quot;,&quot; is the only way to specify multiple committers as one option argument. Also, committer values are so loosely formed that they could contain commas too, it is recommended to not do that but you can work around it by using &quot;?&quot;.</dd>
+<dt><code>&#8211;filter-buildhosts</code></dt>
+<dd> This option includes packages which have a buildhost which matches one of the passed buildhost wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-urls</code></dt>
+<dd> This option includes packages which have a url which matches one of the passed url wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-package-sizes</code></dt>
+<dd> This option includes packages which have a packagesize which is within one of the passed packagesize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-archive-sizes</code></dt>
+<dd> This option includes packages which have a archivesize which is within one of the passed archivesize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-installed-sizes</code></dt>
+<dd> This option includes packages which have a installedsize which is within one of the passed installedsize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-groups</code></dt>
+<dd> This option includes packages which are in a yum group which matches one of the passed yum group id strings, or is unknown. Note that yum groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple yum groups as one option argument.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To list all updates that are 1 MB or less use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-package-sizes=-1m check-update</dl>
+</dt><dd> yum &#8211;filter-package-sizes=-1m check-update</dd></dl>
 <p> To apply updates that Dan Walsh has committed use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-committers=&#8217;Dan Walsh *&#8217; update</dl>
+</dt><dd> yum &#8211;filter-committers=&#8217;Dan Walsh *&#8217; update</dd></dl>
 <p> To list updates for a specific group use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-rpm-groups=&#8217;App*/Sys*&#8217; list updates</dl>
+</dt><dd> yum &#8211;filter-rpm-groups=&#8217;App*/Sys*&#8217; list updates</dd></dl>
 <p> To apply updates to a specific set of groups use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-rpm-groups=&#8217;App*/System,Devel*/Lib*,System Environment/Base&#8217; update</dl>
+</dt><dd> yum &#8211;filter-rpm-groups=&#8217;App*/System,Devel*/Lib*,System Environment/Base&#8217; update</dd></dl>
 <p> To list updates for a set of yum groups use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-groups=&#8217;PostgreSQL Database,Web Server&#8217; list updates</dl>
+</dt><dd> yum &#8211;filter-groups=&#8217;PostgreSQL Database,Web Server&#8217; list updates</dd></dl>
 <p> To apply updates to a specific set of yum groups use:</p>
 <dl>
 <dt>
-<dd> yum &#8211;filter-groups=&#8217;KDE,Core,Printing Support&#8217; update </p>
+</dt><dd> yum &#8211;filter-groups=&#8217;KDE,Core,Printing Support&#8217; update </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

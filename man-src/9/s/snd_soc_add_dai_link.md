@@ -15,11 +15,11 @@ snd_soc_add_dai_link - Add a DAI link dynamically
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>The ASoC card to which the DAI link is added</dl>
+<dl><dd></dd><dd>The ASoC card to which the DAI link is added</dd></dl>
  
 
  <i>dai_link</i>
-<dl><dd>The new DAI link to add</dl>
+<dl><dd>The new DAI link to add</dd></dl>
 
 <h2>Description</h2>
 

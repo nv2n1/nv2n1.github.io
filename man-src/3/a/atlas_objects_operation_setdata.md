@@ -50,14 +50,14 @@ description: "Atlas::Objects::Operation::SetData – Sets attributes for existin
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::AffectData</code>, <code>Atlas::Objects::Operation::MoveData</code>, and <code>Atlas::Objects::Operation::WieldData</code>.</p>
 <h3>static <code>SetData</code>* Atlas::Objects::Operation::SetData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::AffectData</code>, <code>Atlas::Objects::Operation::MoveData</code>, and <code>Atlas::Objects::Operation::WieldData</code>. </p>
 <h2>Author</h2>

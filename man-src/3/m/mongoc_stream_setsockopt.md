@@ -17,20 +17,20 @@ mongoc_stream_setsockopt (mongoc_stream_t *stream,
  socklen_t optlen);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>level</code></p>
-<dd>The level to pass to <code>setsockopt(3)</code> \&amp;.</dl>
+<dt><code>level</code></dt>
+<dd>The level to pass to <code>setsockopt(3)</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>optname</code></p>
-<dd>The optname to pass to <code>setsockopt(3)</code> \&amp;.</dl>
+<dt><code>optname</code></dt>
+<dd>The optname to pass to <code>setsockopt(3)</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>optval</code></p>
-<dd>The optval to pass to <code>setsockopt(3)</code> \&amp;.</dl>
+<dt><code>optval</code></dt>
+<dd>The optval to pass to <code>setsockopt(3)</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>optlen</code></p>
-<dd>The optlen to pass to <code>setsockopt(3)</code> \&amp;.</dl>
+<dt><code>optlen</code></dt>
+<dd>The optlen to pass to <code>setsockopt(3)</code> \&amp;.</dd></dl>
 <p> This function is a wrapper around <code>setsockopt(3)</code> for streams that wrap sockets. </p>
 <h2>Returns</h2>
 <p><code>0</code> on success, otherwise <code>-1</code> and <code>errno</code> is set. </p>

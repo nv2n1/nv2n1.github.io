@@ -14,11 +14,11 @@ description: "z8530_dma_rx – Handle a DMA RX event"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>Channel to handle</dl>
+</dd><dd>Channel to handle</dd></dl>
 <h2>Description</h2>
 <p>Non bus mastering DMA interfaces for the Z8x30 devices. This is really pretty PC specific. The DMA mode means that most receive events are handled by the DMA hardware. We get a kick here only if a frame ended.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

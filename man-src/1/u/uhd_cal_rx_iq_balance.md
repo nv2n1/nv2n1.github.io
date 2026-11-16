@@ -14,26 +14,26 @@ description: "uhd_cal_rx_iq_balance – Generate RX IQ Balance Calibration Table
 <p> NOTE: This application can only be used with the WBX, SBX, XCVR2450, and RFX daughterboards.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> help message</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> enable some verbose</p>
-<dt><code>&#8211;args</code> arg</p>
-<dd> device address args [default = &quot;&quot;]</p>
-<dt><code>&#8211;tx_wave_freq</code> arg (=507123)</p>
-<dd> Transmit wave frequency in Hz</p>
-<dt><code>&#8211;tx_wave_ampl</code> arg (=0.69999999999999996)</p>
-<dd> Transmit wave amplitude in counts</p>
-<dt><code>&#8211;tx_offset</code> arg (=934400)</p>
-<dd> TX LO offset from the RX LO in Hz</p>
-<dt><code>&#8211;freq_start</code> arg</p>
-<dd> Frequency start in Hz (will use beginning of frequency range if unspecified)</p>
-<dt><code>&#8211;freq_stop</code> arg</p>
-<dd> Frequency stop in Hz (will use end of frequency range if unspecified)</p>
-<dt><code>&#8211;freq_step</code> arg (=7300000)</p>
-<dd> Step size for LO sweep in Hz</p>
-<dt><code>&#8211;nsamps</code> arg (=10000)</p>
-<dd> Samples per data capture</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> help message</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> enable some verbose</dd>
+<dt><code>&#8211;args</code> arg</dt>
+<dd> device address args [default = &quot;&quot;]</dd>
+<dt><code>&#8211;tx_wave_freq</code> arg (=507123)</dt>
+<dd> Transmit wave frequency in Hz</dd>
+<dt><code>&#8211;tx_wave_ampl</code> arg (=0.69999999999999996)</dt>
+<dd> Transmit wave amplitude in counts</dd>
+<dt><code>&#8211;tx_offset</code> arg (=934400)</dt>
+<dd> TX LO offset from the RX LO in Hz</dd>
+<dt><code>&#8211;freq_start</code> arg</dt>
+<dd> Frequency start in Hz (will use beginning of frequency range if unspecified)</dd>
+<dt><code>&#8211;freq_stop</code> arg</dt>
+<dd> Frequency stop in Hz (will use end of frequency range if unspecified)</dd>
+<dt><code>&#8211;freq_step</code> arg (=7300000)</dt>
+<dd> Step size for LO sweep in Hz</dd>
+<dt><code>&#8211;nsamps</code> arg (=10000)</dt>
+<dd> Samples per data capture</dd></dl>
 <h2>SEE ALSO</h2>
 <p> UHD documentation: <code><a rel="nofollow" href="http://files.ettus.com/uhd_docs/manual/html/index.html">http://files.ettus.com/uhd_docs/manual/html/index.html</a></code> </p>
 <p> GR-UHD documentation: <code><a rel="nofollow" href="http://gnuradio.org/doc/doxygen/page_uhd.html">http://gnuradio.org/doc/doxygen/page_uhd.html</a></code> </p>

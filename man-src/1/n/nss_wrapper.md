@@ -16,61 +16,61 @@ description: "nss_wrapper – A wrapper for the user, group and hosts NSS API"
 <p> If you have a client and server under test they normally use functions to resolve network names to addresses (dns) or vice versa. The nss_wrappers allow you to create a hosts file to setup name resolution for the addresses you use with socket_wrapper. </p>
 <dl>
 <dt>
-<dd> &bull; Provides information for user and group accounts.</dl>
+</dt><dd> &bull; Provides information for user and group accounts.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Network name resolution using a hosts file.</dl>
+</dt><dd> &bull; Network name resolution using a hosts file.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Loading and testing of NSS modules.</dl>
+</dt><dd> &bull; Loading and testing of NSS modules.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> Some calls in nss_wrapper will only work if uid_wrapper is loaded and active. One of this functions is initgroups() which needs to run setgroups() to set the groups for the user. setgroups() is wrapped by uid_wrapper.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>NSS_WRAPPER_PASSWD</code>, <code>NSS_WRAPPER_GROUP</code></p>
 <dl>
 <dt>
-<dd> For user and group accounts you need to create two files: <i>passwd</i> and <i>group</i>. The format of the passwd file is described in <i>man 5 passwd</i> and the group file in <i>man 5 group</i>. So you can fill these files with made up accounts. You point nss_wrapper to them using the two variables NSS_WRAPPER_PASSWD=/path/to/your/passwd and NSS_WRAPPER_GROUP=/path/to/your/group.</dl>
+</dt><dd> For user and group accounts you need to create two files: <i>passwd</i> and <i>group</i>. The format of the passwd file is described in <i>man 5 passwd</i> and the group file in <i>man 5 group</i>. So you can fill these files with made up accounts. You point nss_wrapper to them using the two variables NSS_WRAPPER_PASSWD=/path/to/your/passwd and NSS_WRAPPER_GROUP=/path/to/your/group.</dd></dl>
 <p> <code>NSS_WRAPPER_HOSTS</code></p>
 <dl>
 <dt>
-<dd> If you also need to emulate network name resolution in your enviornment, especially with socket_wrapper, you can write a hosts file. The format is described in <i>man 5 hosts</i>. Then you can point nss_wrapper to your hosts file using: NSS_WRAPPER_HOSTS=/path/to/your/hosts</dl>
+</dt><dd> If you also need to emulate network name resolution in your enviornment, especially with socket_wrapper, you can write a hosts file. The format is described in <i>man 5 hosts</i>. Then you can point nss_wrapper to your hosts file using: NSS_WRAPPER_HOSTS=/path/to/your/hosts</dd></dl>
 <p> <code>NSS_WRAPPER_HOSTNAME</code></p>
 <dl>
 <dt>
-<dd> If you need to return a hostname which is different from the one of your machine is using you can use: NSS_WRAPPER_HOSTNAME=test.example.org</dl>
+</dt><dd> If you need to return a hostname which is different from the one of your machine is using you can use: NSS_WRAPPER_HOSTNAME=test.example.org</dd></dl>
 <p> <code>NSS_WRAPPER_MODULE_SO_PATH</code>, <code>NSS_WRAPPER_MODULE_FN_PREFIX</code></p>
 <dl>
 <dt>
-<dd> If you have a project which also provides user and group information out of a database, you normally write your own nss modules. nss_wrapper is able to load nss modules and ask them first before looking into the faked passwd and group file. To point nss_wrapper to the module you can do that using NSS_WRAPPER_MODULE_SO_PATH=/path/to/libnss_yourmodule.so. As each nss module has a special prefix like _nss_winbind_getpwnam() you need to set the prefix too so nss_wrapper can load the functions with NSS_WRAPPER_MODULE_FN_PREFIX=&lt;prefix&gt;.</dl>
+</dt><dd> If you have a project which also provides user and group information out of a database, you normally write your own nss modules. nss_wrapper is able to load nss modules and ask them first before looking into the faked passwd and group file. To point nss_wrapper to the module you can do that using NSS_WRAPPER_MODULE_SO_PATH=/path/to/libnss_yourmodule.so. As each nss module has a special prefix like _nss_winbind_getpwnam() you need to set the prefix too so nss_wrapper can load the functions with NSS_WRAPPER_MODULE_FN_PREFIX=&lt;prefix&gt;.</dd></dl>
 <p> For _nss_winbind_getpwnam() this would be: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 NSS_WRAPPER_MODULE_FN_PREFIX=winbind
 </pre>
-</dl>
+</dd></dl>
 <p> <code>NSS_WRAPPER_DEBUGLEVEL</code></p>
 <dl>
 <dt>
-<dd> If you need to see what is going on in nss_wrapper itself or try to find a bug, you can enable logging support in nss_wrapper if you built it with debug symbols. </p>
+</dt><dd> If you need to see what is going on in nss_wrapper itself or try to find a bug, you can enable logging support in nss_wrapper if you built it with debug symbols. </dd>
 <dl>
 <dt>
-<dd> &bull; 0 = ERROR</dl>
+</dt><dd> &bull; 0 = ERROR</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 1 = WARNING</dl>
+</dt><dd> &bull; 1 = WARNING</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 2 = DEBUG</dl>
+</dt><dd> &bull; 2 = DEBUG</dd></dl>
 <dl>
 <dt>
-<dd> &bull; 3 = TRACE</dl>
+</dt><dd> &bull; 3 = TRACE</dd></dl>
 </dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ echo &quot;bob:x:1000:1000:bob gecos:/home/test/bob:/bin/false&quot; &gt; passwd
 $ echo &quot;root:x:65534:65532:root gecos:/home/test/root:/bin/false&quot; &gt;&gt; passwd
@@ -82,5 +82,5 @@ bob:x:1000:1000:bob gecos:/home/test/bob:/bin/false
 $ LD_PRELOAD=libnss_wrapper.so NSS_WRAPPER_HOSTNAME=test.example.org hostname
 test.example.org
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

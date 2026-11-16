@@ -21,12 +21,12 @@ description: "acl_copy_ext – copy an ACL from internal to external representat
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_copy_ext function returns a value of <code>(ssize_t)-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The <i>size</i> parameter is zero or negative. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The <i>size</i> parameter is zero or negative. </dd>
 <p> The argument <i>acl</i> is not a valid pointer to an ACL. </p>
 <p> The ACL referenced by <i>acl</i> contains one or more improperly formed ACL entries, or for some other reason cannot be translated into the external form of an ACL.</p>
-<dt><code>Bq </code>Er ERANGE</p>
-<dd> The <i>size</i> parameter is greater than zero but smaller than the length of the contiguous, persistent form of the ACL.</dl>
+<dt><code>Bq </code>Er ERANGE</dt>
+<dd> The <i>size</i> parameter is greater than zero but smaller than the length of the contiguous, persistent form of the ACL.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

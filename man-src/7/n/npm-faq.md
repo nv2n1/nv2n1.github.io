@@ -13,7 +13,7 @@ description: "npm-faq – Frequently Asked Questions"
 <dl>
 <dd>
 <pre>npm config set viewer browser</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> This command will set the npm docs to open in your default web browser rather than <code>man</code>.</p>
 <h2>It didn&#8217;t work.</h2>
 <p>Please provide a little more detail, search for the error via Google <i><a rel="nofollow" href="https://google.com">https://google.com</a></i> or StackOverflow npm <i><a rel="nofollow" href="http://stackoverflow.com/search?q=npm">http://stackoverflow.com/search?q=npm</a></i> to see if another developer has encountered a similar problem.</p>
@@ -25,11 +25,11 @@ description: "npm-faq – Frequently Asked Questions"
 <p>See npm help 5 <code>npm-folders</code> </p>
 <p> tl;dr:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Use the <code>npm root</code> command to see where modules go, and the <code>npm bin</code> command to see where executables go</p>
-<dt>&bull;</p>
-<dd>Global installs are different from local installs. If you install something with the <code>-g</code> flag, then its executables go in <code>npm bin -g</code> and its modules go in <code>npm root -g</code>.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Use the <code>npm root</code> command to see where modules go, and the <code>npm bin</code> command to see where executables go</dd>
+<dt>&bull;</dt>
+<dd>Global installs are different from local installs. If you install something with the <code>-g</code> flag, then its executables go in <code>npm bin -g</code> and its modules go in <code>npm root -g</code>.</dd>
+<dd></dd></dl>
 <h2>How do I install something on my computer in a central location?</h2>
 <p>Install it globally by tacking <code>-g</code> or <code>&#8211;global</code> to the command. (This is especially important for command line utilities that need to add their bins to the global system <code>PATH</code>.)</p>
 <h2>I installed something globally, but I can&#8217;t &lt;code&gt;require()&lt;/code&gt; it</h2>
@@ -70,25 +70,25 @@ description: "npm-faq – Frequently Asked Questions"
 <dl>
 <dd>
 <pre>curl <a rel="nofollow" href="https://www.npmjs.com/install.sh">https://www.npmjs.com/install.sh</a> | sh</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>What is a &lt;code&gt;package&lt;/code&gt;?</h2>
 <p>A package is any of:</p>
 <dl>
-<dt>&bull;</p>
-<dd>a) a folder containing a program described by a package.json file</p>
-<dt>&bull;</p>
-<dd>b) a gzipped tarball containing (a)</p>
-<dt>&bull;</p>
-<dd>c) a url that resolves to (b)</p>
-<dt>&bull;</p>
-<dd>d) a <code>&lt;name&gt;@&lt;version&gt;</code> that is published on the registry with (c)</p>
-<dt>&bull;</p>
-<dd>e) a <code>&lt;name&gt;@&lt;tag&gt;</code> that points to (d)</p>
-<dt>&bull;</p>
-<dd>f) a <code>&lt;name&gt;</code> that has a &quot;latest&quot; tag satisfying (e)</p>
-<dt>&bull;</p>
-<dd>g) a <code>git</code> url that, when cloned, results in (a).</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>a) a folder containing a program described by a package.json file</dd>
+<dt>&bull;</dt>
+<dd>b) a gzipped tarball containing (a)</dd>
+<dt>&bull;</dt>
+<dd>c) a url that resolves to (b)</dd>
+<dt>&bull;</dt>
+<dd>d) a <code>&lt;name&gt;@&lt;version&gt;</code> that is published on the registry with (c)</dd>
+<dt>&bull;</dt>
+<dd>e) a <code>&lt;name&gt;@&lt;tag&gt;</code> that points to (d)</dd>
+<dt>&bull;</dt>
+<dd>f) a <code>&lt;name&gt;</code> that has a &quot;latest&quot; tag satisfying (e)</dd>
+<dt>&bull;</dt>
+<dd>g) a <code>git</code> url that, when cloned, results in (a).</dd>
+<dd></dd></dl>
 <p> Even if you never publish your package, you can still get a lot of benefits of using npm if you just want to write a node program (a), and perhaps if you also want to be able to easily install it elsewhere after packing it up into a tarball (b). </p>
 <p> Git urls can be of the form:</p>
 <dl>
@@ -97,25 +97,25 @@ description: "npm-faq – Frequently Asked Questions"
 git+<a href="ssh://user@hostname:project.git#commit-ish">ssh://user@hostname:project.git#commit-ish</a>
 git+<a rel="nofollow" href="http://user@hostname/project/blah.git#commit-ish">http://user@hostname/project/blah.git#commit-ish</a>
 git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">https://user@hostname/project/blah.git#commit-ish</a></pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The <code>commit-ish</code> can be any tag, sha, or branch which can be supplied as an argument to <code>git checkout</code>. The default is <code>master</code>.</p>
 <h2>What is a &lt;code&gt;module&lt;/code&gt;?</h2>
 <p>A module is anything that can be loaded with <code>require()</code> in a Node.js program. The following things are all examples of things that can be loaded as modules:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A folder with a <code>package.json</code> file containing a <code>main</code> field.</p>
-<dt>&bull;</p>
-<dd>A folder with an <code>index.js</code> file in it.</p>
-<dt>&bull;</p>
-<dd>A JavaScript file.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>A folder with a <code>package.json</code> file containing a <code>main</code> field.</dd>
+<dt>&bull;</dt>
+<dd>A folder with an <code>index.js</code> file in it.</dd>
+<dt>&bull;</dt>
+<dd>A JavaScript file.</dd>
+<dd></dd></dl>
 <p> Most npm packages are modules, because they are libraries that you load with <code>require</code>. However, there&#8217;s no requirement that an npm package be a module! Some only contain an executable command-line interface, and don&#8217;t provide a <code>main</code> field for use in Node programs. </p>
 <p> Almost all npm packages (at least, those that are Node programs) <i>contain</i> many modules within them (because every file they load with <code>require()</code> is a module). </p>
 <p> In the context of a Node program, the <code>module</code> is also the thing that was loaded <i>from</i> a file. For example, in the following program:</p>
 <dl>
 <dd>
 <pre>var req = require('request')</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> we might say that &quot;The variable <code>req</code> refers to the <code>request</code> module&quot;.</p>
 <h2>So, why is it the The <code>package.json</code> file defines the package. (See &quot;What is a package?&quot; above.)</h2>
 <p>The <code>node_modules</code> folder is the place Node.js looks for modules. (See &quot;What is a module?&quot; above.) </p>
@@ -132,24 +132,24 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
 <p>You don&#8217;t. Try one of these node version managers: </p>
 <p> Unix:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="http://github.com/isaacs/nave">http://github.com/isaacs/nave</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="http://github.com/visionmedia/n">http://github.com/visionmedia/n</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="http://github.com/creationix/nvm">http://github.com/creationix/nvm</a></i></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="http://github.com/isaacs/nave">http://github.com/isaacs/nave</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="http://github.com/visionmedia/n">http://github.com/visionmedia/n</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="http://github.com/creationix/nvm">http://github.com/creationix/nvm</a></i></dd>
+<dd></dd></dl>
 <p> Windows:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="http://github.com/marcelklehr/nodist">http://github.com/marcelklehr/nodist</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://github.com/coreybutler/nvm-windows">https://github.com/coreybutler/nvm-windows</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://github.com/hakobera/nvmw">https://github.com/hakobera/nvmw</a></i></p>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://github.com/nanjingboy/nvmw">https://github.com/nanjingboy/nvmw</a></i></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="http://github.com/marcelklehr/nodist">http://github.com/marcelklehr/nodist</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://github.com/coreybutler/nvm-windows">https://github.com/coreybutler/nvm-windows</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://github.com/hakobera/nvmw">https://github.com/hakobera/nvmw</a></i></dd>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://github.com/nanjingboy/nvmw">https://github.com/nanjingboy/nvmw</a></i></dd>
+<dd></dd></dl>
 <h2>How can I use npm for development?</h2>
 <p>See npm help 7 <code>npm-developers</code> and npm help 5 <code>package.json</code>. </p>
 <p> You&#8217;ll most likely want to <code>npm link</code> your development folder. That&#8217;s awesomely handy. </p>
@@ -176,38 +176,39 @@ git+<a rel="nofollow" href="https://user@hostname/project/blah.git#commit-ish">h
 <p> For the current documentation of scoped packages, see <i><a rel="nofollow" href="https://docs.npmjs.com/misc/scope">https://docs.npmjs.com/misc/scope</a></i> </p>
 <p> References:</p>
 <dl>
-<dt>1.</p>
-<dd>For the reasoning behind the &quot;one global namespace&quot;, please see this discussion: <i><a rel="nofollow" href="https://github.com/npm/npm/issues/798">https://github.com/npm/npm/issues/798</a></i> (TL;DR: It doesn&#8217;t actually make things better, and can make them worse.)</p>
-<dt>2.</p>
-<dd>For the pre-implementation discussion of the scoped package feature, see this discussion: <i><a rel="nofollow" href="https://github.com/npm/npm/issues/5239">https://github.com/npm/npm/issues/5239</a></i></p>
-<dd></dl>
+<dt>1.</dt>
+<dd>For the reasoning behind the &quot;one global namespace&quot;, please see this discussion: <i><a rel="nofollow" href="https://github.com/npm/npm/issues/798">https://github.com/npm/npm/issues/798</a></i> (TL;DR: It doesn&#8217;t actually make things better, and can make them worse.)</dd>
+<dt>2.</dt>
+<dd>For the pre-implementation discussion of the scoped package feature, see this discussion: <i><a rel="nofollow" href="https://github.com/npm/npm/issues/5239">https://github.com/npm/npm/issues/5239</a></i></dd>
+<dd></dd></dl>
 <h2>Who does npm?</h2>
 <p>npm was originally written by Isaac Z. Schlueter, and many others have contributed to it, some of them quite substantially. </p>
 <p> The npm open source project, The npm Registry, and the community website <i><a rel="nofollow" href="https://www.npmjs.com">https://www.npmjs.com</a></i> are maintained and operated by the good folks at npm, Inc. <i><a rel="nofollow" href="http://www.npmjs.com">http://www.npmjs.com</a></i></p>
 <h2>I have a question or request not addressed here. Where should I put it?</h2>
 <p>Post an issue on the github project:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i><a rel="nofollow" href="https://github.com/npm/npm/issues">https://github.com/npm/npm/issues</a></i></p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><i><a rel="nofollow" href="https://github.com/npm/npm/issues">https://github.com/npm/npm/issues</a></i></dd>
+<dd></dd></dl>
 <h2>Why does npm hate me?</h2>
 <p>npm is not capable of hatred. It loves everyone, especially you.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help npm</p>
-<dt>&bull;</p>
-<dd>npm help 7 developers</p>
-<dt>&bull;</p>
-<dd>npm help 5 package.json</p>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help 7 config</p>
-<dt>&bull;</p>
-<dd>npm help 5 npmrc</p>
-<dt>&bull;</p>
-<dd>npm help 7 config</p>
-<dt>&bull;</p>
-<dd>npm help 5 folders</p>
+<dt>&bull;</dt>
+<dd>npm help npm</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 developers</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 package.json</dd>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 npmrc</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 folders</dd>
 <dd>
+</dd></dl>

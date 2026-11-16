@@ -11,7 +11,6 @@ description: "sc::StateOutBin –"
 <p> Save state to a binary file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_bin.h&gt;</code></pre>
 <p> Inherits <code>sc::StateOutFile</code>.</p>
 <h3>Public Member Functions</h3>

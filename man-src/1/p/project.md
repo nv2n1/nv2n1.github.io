@@ -28,62 +28,62 @@ description: "project – Project table data onto lines or great circles, genera
 <p> <code>project</code> is CASE SENSITIVE. Use UPPER CASE for all one-letter designators which begin optional arguments. Use lower case for the xyzpqrs letters in <code>-flags</code>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-C</code><i>cx</i>/<i>cy</i></p>
-<dd> <i>cx/cy</i> sets the origin of the projection, in Definition 1 or 2. If Definition 3 is used (<code>-T</code>), then <i>cx/cy</i> are the coordinates of a point through which the oblique zero meridian (<i>p</i> = 0) should pass. The <i>cx/cy</i> is not required to be 90 degrees from the pole.</dl>
+<dt><code>-C</code><i>cx</i>/<i>cy</i></dt>
+<dd> <i>cx/cy</i> sets the origin of the projection, in Definition 1 or 2. If Definition 3 is used (<code>-T</code>), then <i>cx/cy</i> are the coordinates of a point through which the oblique zero meridian (<i>p</i> = 0) should pass. The <i>cx/cy</i> is not required to be 90 degrees from the pole.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-A</code><i>azimuth</i></p>
-<dd> <i>azimuth</i> defines the azimuth of the projection (Definition 1).</p>
-<dt><code>-E</code><i>bx</i>/<i>by</i></p>
-<dd> <i>bx/by</i> defines the end point of the projection path (Definition 2).</p>
-<dt><code>-F</code><i>flags</i></p>
-<dd> Specify your desired output using any combination of <i>xyzpqrs</i>, in any order. Do not space between the letters. Use lower case. The output will be ASCII (or binary, see <code>-bo</code>) columns of values corresponding to <i>xyzpqrs</i> [Default]. If both input and output are using ASCII format then the <i>z</i> data are treated as textstring(s). If the <code>-G</code> option is selected, the output will be <i>rsp</i>.</p>
-<dt><code>-G</code><i>dist</i>[/<i>colat</i>]</p>
-<dd> Generate mode. No input is read. Create (<i>r</i>, <i>s</i>, <i>p</i>) output points every <i>dist</i> units of <i>p</i>. See <code>-Q</code> option. Alternatively, append <code>/</code><i>colat</i> for a small circle instead [Default is a colatitude of 90, i.e., a great circle]. Use <code>-C</code> and <code>-E</code> to generate a circle that goes through the center and end point. Note, in this case the center and end point cannot be farther apart than 2*|<i>colat</i>|. Finally, if you append <code>+</code> the we will report the position of the pole as part of the segment header [no header].</p>
-<dt><code>-L</code>[<code>w</code>][<i>l_min</i>/<i>l_max</i>]</p>
-<dd> Length controls. Project only those points whose <i>p</i> coordinate is within <i>l_min</i> &lt; <i>p</i> &lt; <i>l_max</i>. If <code>-E</code> has been set, then you may use <code>-Lw</code> to stay within the distance from <code>C</code> to <code>E</code>.</p>
-<dt><code>-N</code></p>
-<dd> Flat Earth. Make a Cartesian coordinate transformation in the plane. [Default uses spherical trigonometry.]</p>
-<dt><code>-Q</code></p>
-<dd> Map type units, i.e., project assumes <i>x</i>, <i>y</i>, <i>r</i>, <i>s</i> are in degrees while <i>p</i>, <i>q</i>, <i>dist</i>, <i>l_min</i>, <i>l_max</i>, <i>w_min</i>, <i>w_max</i> are in km. If <code>-Q</code> is not set, then all these are assumed to be in the same units.</p>
-<dt><code>-S</code></p>
-<dd> Sort the output into increasing <i>p</i> order. Useful when projecting random data into a sequential profile.</p>
-<dt><code>-T</code><i>px</i>/<i>py</i></p>
-<dd> <i>px/py</i> sets the position of the rotation pole of the projection. (Definition 3).</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-W</code><i>w_min</i>/<i>w_max</i></p>
-<dd> Width controls. Project only those points whose <i>q</i> coordinate is within <i>w_min</i> &lt; <i>q</i> &lt; <i>w_max</i>.</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is given by <code>-F</code> or <code>-G</code>].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Set handling of NaN records.</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-A</code><i>azimuth</i></dt>
+<dd> <i>azimuth</i> defines the azimuth of the projection (Definition 1).</dd>
+<dt><code>-E</code><i>bx</i>/<i>by</i></dt>
+<dd> <i>bx/by</i> defines the end point of the projection path (Definition 2).</dd>
+<dt><code>-F</code><i>flags</i></dt>
+<dd> Specify your desired output using any combination of <i>xyzpqrs</i>, in any order. Do not space between the letters. Use lower case. The output will be ASCII (or binary, see <code>-bo</code>) columns of values corresponding to <i>xyzpqrs</i> [Default]. If both input and output are using ASCII format then the <i>z</i> data are treated as textstring(s). If the <code>-G</code> option is selected, the output will be <i>rsp</i>.</dd>
+<dt><code>-G</code><i>dist</i>[/<i>colat</i>]</dt>
+<dd> Generate mode. No input is read. Create (<i>r</i>, <i>s</i>, <i>p</i>) output points every <i>dist</i> units of <i>p</i>. See <code>-Q</code> option. Alternatively, append <code>/</code><i>colat</i> for a small circle instead [Default is a colatitude of 90, i.e., a great circle]. Use <code>-C</code> and <code>-E</code> to generate a circle that goes through the center and end point. Note, in this case the center and end point cannot be farther apart than 2*|<i>colat</i>|. Finally, if you append <code>+</code> the we will report the position of the pole as part of the segment header [no header].</dd>
+<dt><code>-L</code>[<code>w</code>][<i>l_min</i>/<i>l_max</i>]</dt>
+<dd> Length controls. Project only those points whose <i>p</i> coordinate is within <i>l_min</i> &lt; <i>p</i> &lt; <i>l_max</i>. If <code>-E</code> has been set, then you may use <code>-Lw</code> to stay within the distance from <code>C</code> to <code>E</code>.</dd>
+<dt><code>-N</code></dt>
+<dd> Flat Earth. Make a Cartesian coordinate transformation in the plane. [Default uses spherical trigonometry.]</dd>
+<dt><code>-Q</code></dt>
+<dd> Map type units, i.e., project assumes <i>x</i>, <i>y</i>, <i>r</i>, <i>s</i> are in degrees while <i>p</i>, <i>q</i>, <i>dist</i>, <i>l_min</i>, <i>l_max</i>, <i>w_min</i>, <i>w_max</i> are in km. If <code>-Q</code> is not set, then all these are assumed to be in the same units.</dd>
+<dt><code>-S</code></dt>
+<dd> Sort the output into increasing <i>p</i> order. Useful when projecting random data into a sequential profile.</dd>
+<dt><code>-T</code><i>px</i>/<i>py</i></dt>
+<dd> <i>px/py</i> sets the position of the rotation pole of the projection. (Definition 3).</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code><i>w_min</i>/<i>w_max</i></dt>
+<dd> Width controls. Project only those points whose <i>q</i> coordinate is within <i>w_min</i> &lt; <i>q</i> &lt; <i>w_max</i>.</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is given by <code>-F</code> or <code>-G</code>].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Set handling of NaN records.</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>EXAMPLES</h2>

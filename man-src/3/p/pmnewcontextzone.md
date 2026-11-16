@@ -21,8 +21,8 @@ description: "pmNewContextZone – establish a reporting timezone based on a PMA
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmctime/">pmCtime</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmlocaltime/">pmLocaltime</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmnewzone/">pmNewZone</a></code>(3), <code><a href="/docs/linux/man/3-pmusezone/">pmUseZone</a></code>(3), <code><a href="/docs/linux/man/3-pmwhichzone/">pmWhichZone</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5) and <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOCONTEXT</code></p>
-<dd>the current PMAPI context is not valid</p>
-<dt>other</p>
-<dd>a return value less than zero indicates a fatal error from a system call, most likely <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) </p>
+<dt><code>PM_ERR_NOCONTEXT</code></dt>
+<dd>the current PMAPI context is not valid</dd>
+<dt>other</dt>
+<dd>a return value less than zero indicates a fatal error from a system call, most likely <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) </dd>
 </dl>

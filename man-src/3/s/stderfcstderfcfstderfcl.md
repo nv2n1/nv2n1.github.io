@@ -40,19 +40,13 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;iomanip&gt;
-
 double normalCDF(double x) // Phi(-∞, x) aka N(x)
-
 {
     return std::erfc(-x / std::sqrt(2)) / 2;
 }
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;normal cumulative distribution function:
 &quot;

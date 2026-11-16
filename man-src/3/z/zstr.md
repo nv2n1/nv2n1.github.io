@@ -62,14 +62,14 @@ CZMQ_EXPORT void
  +-------------+---+ +---+-------------+
 Send | S t r i n g | 0 | ----&gt; | 6 | S t r i n g |
  +-------------+---+ +---+-------------+</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre> Wire Heap
  +---+-------------+ +-------------+---+
 Recv | 6 | S t r i n g | ----&gt; | S t r i n g | 0 |
  +---+-------------+ +-------------+---+</pre>
-</dl>
+</dd></dl>
 <h2>Example</h2>
 <p><code>From zstr_test method</code>. </p>
 <pre><code>//  Create two PAIR sockets and connect over inproc
@@ -77,13 +77,11 @@ zsock_t *output = zsock_new_pair(&quot;@inproc://zstr.test&quot;);
 assert(output);
 zsock_t *input = zsock_new_pair(&quot;&gt;inproc://zstr.test&quot;);
 assert(input);
-
 //  Send ten strings, five strings with MORE flag and then END
 int string_nbr;
 for (string_nbr = 0; string_nbr &lt; 10; string_nbr++)
     zstr_sendf(output, &quot;this is string %d&quot;, string_nbr);
 zstr_sendx(output, &quot;This&quot;, &quot;is&quot;, &quot;almost&quot;, &quot;the&quot;, &quot;very&quot;, &quot;END&quot;, NULL);
-
 //  Read and count until we receive END
 string_nbr = 0;
 for (string_nbr = 0;; string_nbr++) {
@@ -96,7 +94,6 @@ for (string_nbr = 0;; string_nbr++) {
     zstr_free(&amp;string);
 }
 assert(string_nbr == 15);
-
 zsock_destroy(&amp;input);
 zsock_destroy(&amp;output);
 </code></pre>
@@ -109,7 +106,8 @@ zsock_destroy(&amp;output);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

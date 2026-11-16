@@ -16,50 +16,50 @@ description: "powerpanel – Driver for PowerPanel Plus compatible UPS equipment
 <p>This driver supports the following optional settings in <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>protocol=</code>[<i>text,binary</i>]</p>
 <dl>
-<dd>Override the default autodetection of the protocol.</dl>
+<dd>Override the default autodetection of the protocol.</dd></dl>
 <p> <code>manufacturer=</code><i>value</i></p>
 <dl>
-<dd>If you don&#8217;t like the autodetected value, you can override this by setting it here.</dl>
+<dd>If you don&#8217;t like the autodetected value, you can override this by setting it here.</dd></dl>
 <p> <code>model=</code><i>value</i></p>
 <dl>
-<dd>Like manufacturer above.</dl>
+<dd>Like manufacturer above.</dd></dl>
 <p> <code>serial=</code><i>value</i></p>
 <dl>
-<dd>Like manufacturer above.</dl>
+<dd>Like manufacturer above.</dd></dl>
 <p> <code>ondelay=</code><i>value</i></p>
 <dl>
-<dd>Time to wait before switching on the UPS (1 &#8211; 9999 minutes, 0=indefinite). Only available with the text protocol driver (see Support Status).</dl>
+<dd>Time to wait before switching on the UPS (1 &#8211; 9999 minutes, 0=indefinite). Only available with the text protocol driver (see Support Status).</dd></dl>
 <p> <code>offdelay=</code><i>value</i></p>
 <dl>
-<dd>Time to wait before shutting down the UPS (6 &#8211; 600 seconds). Values below 60 seconds will be truncated to 6 seconds intervals, values above 60 seconds to 60 seconds intervals. Only available with the text protocol driver (see Support Status).</dl>
+<dd>Time to wait before shutting down the UPS (6 &#8211; 600 seconds). Values below 60 seconds will be truncated to 6 seconds intervals, values above 60 seconds to 60 seconds intervals. Only available with the text protocol driver (see Support Status).</dd></dl>
 <h2>Variables</h2>
 <p>Depending on the type of your UPS unit, some of the following variables may be changed with <code><a href="/docs/linux/man/8-upsrw/">upsrw</a></code>(8). If the driver can&#8217;t read a variable from the UPS, it will not be made available. </p>
 <p> <code>input.transfer.high</code></p>
 <dl>
-<dd>writable: high transfer voltage point in V</dl>
+<dd>writable: high transfer voltage point in V</dd></dl>
 <p> <code>input.transfer.low</code></p>
 <dl>
-<dd>writable: low transfer voltage point in V</dl>
+<dd>writable: low transfer voltage point in V</dd></dl>
 <p> <code>battery.charge.low</code></p>
 <dl>
-<dd>writable: remaining battery charge percentage for low battery warning</dl>
+<dd>writable: remaining battery charge percentage for low battery warning</dd></dl>
 <p> <code>output.voltage.nominal</code></p>
 <dl>
-<dd>writable: nominal output voltage in V</dl>
+<dd>writable: nominal output voltage in V</dd></dl>
 <p> <code>ups.start.battery</code></p>
 <dl>
-<dd>writable: allow cold start from battery</dl>
+<dd>writable: allow cold start from battery</dd></dl>
 <h2>Commands</h2>
 <p>Depending on the type of your UPS unit, some of the following commands may be available. </p>
 <dl>
-<dd>&bull; test.battery.start.quick, test.battery.stop</dl>
+<dd>&bull; test.battery.start.quick, test.battery.stop</dd></dl>
 <dl>
-<dd>&bull; beeper.enable, beeper.disable, beeper.toggle</dl>
+<dd>&bull; beeper.enable, beeper.disable, beeper.toggle</dd></dl>
 <dl>
-<dd>&bull; shutdown.return, shutdown.reboot, shutdown.stayoff</dl>
+<dd>&bull; shutdown.return, shutdown.reboot, shutdown.stayoff</dd></dl>
 <p> On many devices, these commands are unreliable, so before using them you must verify that these work as expected (see Shutdown Issues). </p>
 <dl>
-<dd>&bull; shutdown.stop</dl>
+<dd>&bull; shutdown.stop</dd></dl>
 <h2>Support Status</h2>
 <p>Vendor support is absent for this driver, so if you need some features that are currently not available, provide ample documentation on what the driver should sent to the UPS in order to make this work. If more information would be available on the binary protocol, it would probably be possible to make <i>ondelay</i> and <i>offdelay</i> configurable. So far, nobody has taken the time to investigate what we should tell the UPS to make this work, and CyberPower isn&#8217;t willing to share this with us.</p>
 <h2>Shutdown Issues</h2>

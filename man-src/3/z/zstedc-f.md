@@ -29,10 +29,10 @@ description: "zstedc.f –"
  which subtract like the Cray X-MP, Cray Y-MP, Cray C-90, or Cray-2.
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none. See DLAED3 for details.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>COMPZ</i> </p>
+<dd><i>COMPZ</i> </dd>
 <pre> COMPZ is CHARACTER*1
  = 'N': Compute eigenvalues only.
  = 'I': Compute eigenvectors of tridiagonal matrix also.
@@ -130,16 +130,16 @@ description: "zstedc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 213 of file zstedc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

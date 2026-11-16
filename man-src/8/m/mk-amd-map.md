@@ -13,8 +13,8 @@ description: "mk-amd-map – create database maps for Amd"
 <h2>Description</h2>
 <p><code>mk-amd-map</code> creates the database maps used by the keyed map lookups in <a href="/docs/linux/man/8-amd/">amd</a>(8). It reads input from the named file and outputs them to a correspondingly named hashed database.</p>
 <dl>
-<dt><code>-p</code></p>
-<dd>This option prints the map on standard output instead of generating a database. This is usually used to merge continuation lines into one physical line.</dl>
+<dt><code>-p</code></dt>
+<dd>This option prints the map on standard output instead of generating a database. This is usually used to merge continuation lines into one physical line.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-amd/">amd</a></code>(8). </p>
 <p> &#8220;am-utils&#8221; <code><a href="/docs/linux/man/1-info/">info</a></code>(1) entry. </p>

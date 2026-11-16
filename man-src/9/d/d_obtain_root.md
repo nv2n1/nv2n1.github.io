@@ -14,7 +14,7 @@ description: "d_obtain_root – find or allocate a dentry for a given inode"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode to allocate the dentry for</dl>
+</dd><dd>inode to allocate the dentry for</dd></dl>
 <h2>Description</h2>
 <p>Obtain an IS_ROOT dentry for the root of a filesystem. </p>
 <p> We must ensure that directory inodes only ever have one dentry. If a dentry is found, that is returned instead of allocating a new one. </p>

@@ -15,15 +15,15 @@ snd_pcm_hw_constraint_single - Constrain parameter to a single value
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>var</i>
-<dl><dd>The hw_params variable to constrain</dl>
+<dl><dd>The hw_params variable to constrain</dd></dl>
  
 
  <i>val</i>
-<dl><dd>The value to constrain to</dl>
+<dl><dd>The value to constrain to</dd></dl>
 
 <h2>Return</h2>
 

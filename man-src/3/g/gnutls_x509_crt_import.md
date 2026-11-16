@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_import – API function"
 <p> <code>int gnutls_x509_crt_import(gnutls_x509_crt_t </code><i>cert</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> The structure to store the parsed certificate.</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> The DER or PEM encoded certificate.</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> One of DER or PEM</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> The structure to store the parsed certificate.</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The DER or PEM encoded certificate.</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> One of DER or PEM</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given DER or PEM encoded Certificate to the native gnutls_x509_crt_t format. The output will be stored in <i>cert</i> . </p>
 <p> If the Certificate is PEM encoded it should have a header of &quot;X509 CERTIFICATE&quot;, or &quot;CERTIFICATE&quot;.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crt_import – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -39,92 +39,92 @@ description: "readelf – Displays information about ELF files."
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent. At least one option besides <code>-v</code> or <code>-H</code> must be given.</p>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;all</code></p>
-<dd> Equivalent to specifiying <code>&#8211;file-header</code>, <code>&#8211;program-headers</code>, <code>&#8211;sections</code>, <code>&#8211;symbols</code>, <code>&#8211;relocs</code>, <code>&#8211;dynamic</code>, <code>&#8211;notes</code> and <code>&#8211;version-info</code>.</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;all</code></dt>
+<dd> Equivalent to specifiying <code>&#8211;file-header</code>, <code>&#8211;program-headers</code>, <code>&#8211;sections</code>, <code>&#8211;symbols</code>, <code>&#8211;relocs</code>, <code>&#8211;dynamic</code>, <code>&#8211;notes</code> and <code>&#8211;version-info</code>.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;file-header</code></p>
-<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8211;file-header</code></dt>
+<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;program-headers</code></p>
+</dd><dt><code>&#8211;program-headers</code></dt>
 <dd>
-<dt><code>&#8211;segments</code></p>
-<dd> Displays the information contained in the file&#8217;s segment headers, if it has any.</p>
-<dt><code>-S</code></p>
+</dd><dt><code>&#8211;segments</code></dt>
+<dd> Displays the information contained in the file&#8217;s segment headers, if it has any.</dd>
+<dt><code>-S</code></dt>
 <dd>
-<dt><code>&#8211;sections</code></p>
+</dd><dt><code>&#8211;sections</code></dt>
 <dd>
-<dt><code>&#8211;section-headers</code></p>
-<dd> Displays the information contained in the file&#8217;s section headers, if it has any.</p>
-<dt><code>-g</code></p>
+</dd><dt><code>&#8211;section-headers</code></dt>
+<dd> Displays the information contained in the file&#8217;s section headers, if it has any.</dd>
+<dt><code>-g</code></dt>
 <dd>
-<dt><code>&#8211;section-groups</code></p>
-<dd> Displays the information contained in the file&#8217;s section groups, if it has any.</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;section-groups</code></dt>
+<dd> Displays the information contained in the file&#8217;s section groups, if it has any.</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;symbols</code></p>
+</dd><dt><code>&#8211;symbols</code></dt>
 <dd>
-<dt><code>&#8211;syms</code></p>
-<dd> Displays the entries in symbol table section of the file, if it has one.</p>
-<dt><code>-e</code></p>
+</dd><dt><code>&#8211;syms</code></dt>
+<dd> Displays the entries in symbol table section of the file, if it has one.</dd>
+<dt><code>-e</code></dt>
 <dd>
-<dt><code>&#8211;headers</code></p>
-<dd> Display all the headers in the file. Equivalent to <code>-h -l -S</code>.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;headers</code></dt>
+<dd> Display all the headers in the file. Equivalent to <code>-h -l -S</code>.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;notes</code></p>
-<dd> Displays the contents of the <font SIZE="-1">NOTE</font> segments and/or sections, if any.</p>
-<dt><code>-r</code></p>
+</dd><dt><code>&#8211;notes</code></dt>
+<dd> Displays the contents of the <font SIZE="-1">NOTE</font> segments and/or sections, if any.</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>&#8211;relocs</code></p>
-<dd> Displays the contents of the file&#8217;s relocation section, if it has one.</p>
-<dt><code>-u</code></p>
+</dd><dt><code>&#8211;relocs</code></dt>
+<dd> Displays the contents of the file&#8217;s relocation section, if it has one.</dd>
+<dt><code>-u</code></dt>
 <dd>
-<dt><code>&#8211;unwind</code></p>
-<dd> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for <font SIZE="-1">IA64</font> <font SIZE="-1">ELF</font> files are currently supported.</p>
-<dt><code>-d</code></p>
+</dd><dt><code>&#8211;unwind</code></dt>
+<dd> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for <font SIZE="-1">IA64</font> <font SIZE="-1">ELF</font> files are currently supported.</dd>
+<dt><code>-d</code></dt>
 <dd>
-<dt><code>&#8211;dynamic</code></p>
-<dd> Displays the contents of the file&#8217;s dynamic section, if it has one.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;dynamic</code></dt>
+<dd> Displays the contents of the file&#8217;s dynamic section, if it has one.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version-info</code></p>
-<dd> Displays the contents of the version sections in the file, it they exist.</p>
-<dt><code>-A</code></p>
+</dd><dt><code>&#8211;version-info</code></dt>
+<dd> Displays the contents of the version sections in the file, it they exist.</dd>
+<dt><code>-A</code></dt>
 <dd>
-<dt><code>&#8211;arch-specific</code></p>
-<dd> Displays architecture-specific information in the file, if there is any.</p>
-<dt><code>-D</code></p>
+</dd><dt><code>&#8211;arch-specific</code></dt>
+<dd> Displays architecture-specific information in the file, if there is any.</dd>
+<dt><code>-D</code></dt>
 <dd>
-<dt><code>&#8211;use-dynamic</code></p>
-<dd> When displaying symbols, this option makes <code>readelf</code> use the symbol table in the file&#8217;s dynamic section, rather than the one in the symbols section.</p>
-<dt><code>-x &lt;number&gt;</code></p>
+</dd><dt><code>&#8211;use-dynamic</code></dt>
+<dd> When displaying symbols, this option makes <code>readelf</code> use the symbol table in the file&#8217;s dynamic section, rather than the one in the symbols section.</dd>
+<dt><code>-x &lt;number&gt;</code></dt>
 <dd>
-<dt><code>&#8211;hex-dump=&lt;number&gt;</code></p>
-<dd> Displays the contents of the indicated section as a hexadecimal dump.</p>
-<dt><code>-w[liaprmfFsoR]</code></p>
+</dd><dt><code>&#8211;hex-dump=&lt;number&gt;</code></dt>
+<dd> Displays the contents of the indicated section as a hexadecimal dump.</dd>
+<dt><code>-w[liaprmfFsoR]</code></dt>
 <dd>
-<dt><code>&#8211;debug-dump[=line,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges]</code></p>
-<dd> Displays the contents of the debug sections in the file, if any are present. If one of the optional letters or words follows the switch then only data found in those specific sections will be dumped.</p>
-<dt><code>-I</code></p>
+</dd><dt><code>&#8211;debug-dump[=line,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges]</code></dt>
+<dd> Displays the contents of the debug sections in the file, if any are present. If one of the optional letters or words follows the switch then only data found in those specific sections will be dumped.</dd>
+<dt><code>-I</code></dt>
 <dd>
-<dt><code>&#8211;histogram</code></p>
-<dd> Display a histogram of bucket list lengths when displaying the contents of the symbol tables.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;histogram</code></dt>
+<dd> Display a histogram of bucket list lengths when displaying the contents of the symbol tables.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the version number of readelf.</p>
-<dt><code>-W</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the version number of readelf.</dd>
+<dt><code>-W</code></dt>
 <dd>
-<dt><code>&#8211;wide</code></p>
-<dd> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit <font SIZE="-1">ELF</font> files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns.</p>
-<dt><code>-H</code></p>
+</dd><dt><code>&#8211;wide</code></dt>
+<dd> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit <font SIZE="-1">ELF</font> files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns.</dd>
+<dt><code>-H</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Display the command line options understood by <code>readelf</code>.</dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Display the command line options understood by <code>readelf</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>

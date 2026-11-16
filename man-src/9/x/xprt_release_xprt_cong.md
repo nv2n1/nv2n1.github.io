@@ -15,11 +15,11 @@ xprt_release_xprt_cong - allow other requests to use a transport
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>transport with other tasks potentially waiting</dl>
+<dl><dd></dd><dd>transport with other tasks potentially waiting</dd></dl>
  
 
  <i>task</i>
-<dl><dd>task that is releasing access to the transport</dl>
+<dl><dd>task that is releasing access to the transport</dd></dl>
 
 <h2>Description</h2>
 

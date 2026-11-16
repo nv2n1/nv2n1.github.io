@@ -10,25 +10,25 @@ description: "XmbDrawText, XwcDrawText, Xutf8DrawText – draw text using multip
 <p>XmbDrawText, XwcDrawText, Xutf8DrawText &#8211; draw text using multiple font sets </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>void XmbDrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XmbTextItem *<i>items</i>, int <i>nitems</i>);</p>
-<dd>void XwcDrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XwcTextItem *<i>items</i>, int <i>nitems</i>);</p>
-<dd>void Xutf8DrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XmbTextItem *<i>items</i>, int <i>nitems</i>);</dl>
+<dd>void XmbDrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XmbTextItem *<i>items</i>, int <i>nitems</i>);</dd>
+<dd>void XwcDrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XwcTextItem *<i>items</i>, int <i>nitems</i>);</dd>
+<dd>void Xutf8DrawText(Display *<i>display</i>, Drawable <i>d</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, XmbTextItem *<i>items</i>, int <i>nitems</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>d</i></p>
-<dd>Specifies the drawable.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>items</i></p>
-<dd>Specifies an array of text items.</p>
-<dt><i>nitems</i></p>
-<dd>Specifies the number of text items in the array.</p>
-<dt><i>x</i></p>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>items</i></dt>
+<dd>Specifies an array of text items.</dd>
+<dt><i>nitems</i></dt>
+<dd>Specifies the number of text items in the array.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XmbDrawText</code>, <code>XwcDrawText</code> and <code>Xutf8DrawText</code> functions allow complex spacing and font set shifts between text strings. Each text item is processed in turn, with the origin of a text element advanced in the primary draw direction by the escapement of the previous text item. A text item delta specifies an additional escapement of the text item drawing origin in the primary draw direction. A font_set member other than <code>None</code> in an item causes the font set to be used for this and subsequent text items in the text_items list. Leading text items with a font_set member set to <code>None</code> will not be drawn. </p>
 <p> <code>XmbDrawText</code>, <code>XwcDrawText</code> and <code>Xutf8DrawText</code> do not perform any context-dependent rendering between text segments. Clients may compute the drawing metrics by passing each text segment to <code>XmbTextExtents</code>, <code>XwcTextExtents</code>, <code>Xutf8TextExtents</code> or <code>XmbTextPerCharExtents</code>, <code>XwcTextPerCharExtents</code>. <code>Xutf8TextPerCharExtents</code>. When the <code>XFontSet</code> has missing charsets, each unavailable character is drawn with the default string returned by <code>XCreateFontSet</code>. The behavior for an invalid codepoint is undefined. </p>

@@ -11,47 +11,47 @@ description: "uniconv – convert Netatalk volume encoding"
 <p> uniconv &#8211; convert Netatalk volume encoding </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>uniconv</code> [-ndv] -c&nbsp;<wbr><i>cnidbackend</i> -f&nbsp;<wbr><i>fromcode</i> -t&nbsp;<wbr><i>tocode</i> [-m&nbsp;<wbr><i>maccode</i>] <i>volumepath</i></dl>
+<dt> <code>uniconv</code> [-ndv] -c&nbsp;<wbr><i>cnidbackend</i> -f&nbsp;<wbr><i>fromcode</i> -t&nbsp;<wbr><i>tocode</i> [-m&nbsp;<wbr><i>maccode</i>] <i>volumepath</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>uniconv</code></p>
-<dd>converts the volume encoding of <i>volumepath</i> from the <i>fromcode</i> to the <i>tocode</i> encoding.</p>
+<dd>converts the volume encoding of <i>volumepath</i> from the <i>fromcode</i> to the <i>tocode</i> encoding.</dd>
 <h2>OPTIONS</h2>
 <p> -c</p>
 <dl>
 <dt>
-<dd> CNID backend used on this volume, usually cdb or dbd. Should match the backend selected with afpd for this volume. If not specified, the default CNID backend `cdb&#8217; is used</dl>
+</dt><dd> CNID backend used on this volume, usually cdb or dbd. Should match the backend selected with afpd for this volume. If not specified, the default CNID backend `cdb&#8217; is used</dd></dl>
 <p> -d</p>
 <dl>
 <dt>
-<dd> don&#8217;t CAP encode leading dots (:2e), equivalent to <code>usedots</code> in <code>AppleVolumes.default</code>(5)</dl>
+</dt><dd> don&#8217;t CAP encode leading dots (:2e), equivalent to <code>usedots</code> in <code>AppleVolumes.default</code>(5)</dd></dl>
 <p> -f</p>
 <dl>
 <dt>
-<dd> encoding to convert from, use ASCII for CAP encoded volumes</dl>
+</dt><dd> encoding to convert from, use ASCII for CAP encoded volumes</dd></dl>
 <p> -h</p>
 <dl>
 <dt>
-<dd> display help</dl>
+</dt><dd> display help</dd></dl>
 <p> -m</p>
 <dl>
 <dt>
-<dd> Macintosh client codepage, required for CAP encoded volumes. Defaults to `MAC_ROMAN&#8217;</dl>
+</dt><dd> Macintosh client codepage, required for CAP encoded volumes. Defaults to `MAC_ROMAN&#8217;</dd></dl>
 <p> -n</p>
 <dl>
 <dt>
-<dd> `dry run&#8217;, don&#8217;t do any real changes</dl>
+</dt><dd> `dry run&#8217;, don&#8217;t do any real changes</dd></dl>
 <p> -t</p>
 <dl>
 <dt>
-<dd> volume encoding to convert to, e.g. UTF8</dl>
+</dt><dd> volume encoding to convert to, e.g. UTF8</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> verbose output, use twice for maximum logging.</dl>
+</dt><dd> verbose output, use twice for maximum logging.</dd></dl>
 <p> -V</p>
 <dl>
 <dt>
-<dd> print version and exit</dl>
+</dt><dd> print version and exit</dd></dl>
 <h2>WARNING</h2>
 <p> Setting the wrong options might render your data unusable!!! Make sure you know what you are doing. Always backup your data first. </p>
 <p> It is <code>*strongly*</code> recommended to do a `dry run&#8217; first and to check the output for conversion errors. </p>
@@ -69,35 +69,35 @@ description: "uniconv – convert Netatalk volume encoding"
 <p> convert 1.x CAP encoded volume to UTF-8, clients used MacRoman codepage, cnidscheme is dbd: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 example%<code> uniconv -c dbd -f ASCII -t UTF8 -m MAC_ROMAN /path/to/share</code>
 </pre>
-</dl>
+</dd></dl>
 <p> convert iso8859-1 volume to UTF-8, cnidscheme is cdb: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 example%<code> uniconv -c cdb -f ISO-8859-1 -t UTF8 -m MAC_ROMAN /path/to/share</code>
 </pre>
-</dl>
+</dd></dl>
 <p> convert 1.x volume using iso8859-1 adapted NLS to CAP encoding: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 example%<code> uniconv -f ISO-8859-ADAPTED -t ASCII -m MAC_ROMAN/path/to/share</code>
 </pre>
-</dl>
+</dd></dl>
 <p> convert UTF-8 volume to CAP, for MacCyrillic clients: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 example%<code> uniconv -f UTF8 -t ASCII -m MAC_CYRILLIC /path/to/share</code>
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>AppleVolumes.default</code>(5),<code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8),<code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1),<code><a href="/docs/linux/man/8-cnid_metad/">cnid_metad</a></code>(8),<code><a href="/docs/linux/man/8-cnid_dbd/">cnid_dbd</a></code>(8) </p>
 <h2>Index</h2>

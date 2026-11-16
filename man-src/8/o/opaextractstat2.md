@@ -21,14 +21,12 @@ opaextractstat2 topology_file [ <i>opareport options</i>]
 <h2>Options</h2>
 
 <dl><dt>--help
-<dd>Produces full help text. 
-
-<dt>topology_file
-<dd>Specifies topology_file to use. 
-
-<dt>
+</dt><dd>Produces full help text. 
+</dd><dt>topology_file
+</dt><dd>Specifies topology_file to use. 
+</dd><dt>
 &nbsp;<wbr><i>opareport options</i>&nbsp;<wbr>
-<dd>&nbsp;<wbr><i>options</i>&nbsp;<wbr>are passed to opareport. See&nbsp;<wbr> <i>opareport</i> for the full set of options.</dl>
+</dt><dd>&nbsp;<wbr><i>options</i>&nbsp;<wbr>are passed to opareport. See&nbsp;<wbr> <i>opareport</i> for the full set of options.</dd></dl>
  
 
  The portion of the script that calls opareport and opaxmlextract follows:opareport -x -d 10 -s -o errors -T $@ | opaxmlextract -d ; 

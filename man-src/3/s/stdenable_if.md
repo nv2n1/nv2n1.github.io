@@ -11,10 +11,8 @@ std::enable_if - std::enable_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;bool B, class T = void&gt;
     (since C++ 11)
-
         struct enable_if;</code></pre> 
 If B is true, std::enable_if has a public member typedef type, equal to T; otherwise, there is no member typedef. 
 This metafunction is a convenient way to leverage SFINAE to conditionally remove functions from overload_resolution based on type traits and to provide separate function overloads and specializations for different type traits. std::enable_if can be used as an additional function argument (not applicable to operator overloads), as a return type (not applicable to constructors and destructors), or as a class template or function template parameter. 
@@ -158,7 +156,6 @@ void destroy(T* t){} // error: has the same signature with #5
 &nbsp;<wbr>&nbsp;template&lt;class T&gt; 
 &nbsp;<wbr>&nbsp;class A&lt;T, typename std::enable_if&lt;std::is_floating_point&lt;T&gt;::value&gt;::type&gt; { 
 &nbsp;<wbr>&nbsp;}; // specialization for floating point types <pre><code>int main()
-
 {
     std::aligned_union_t&lt;0, int, std::string&gt; u;
     construct(reinterpret_cast&lt;int *&gt;(&amp;u));

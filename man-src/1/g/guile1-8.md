@@ -16,44 +16,44 @@ description: "guile – a Scheme interpreter"
 <p> This manpage provides only brief instruction in invoking <code>guile</code> from the command line. Please consult the guile info documentation (type <code>info guile</code> at a command prompt) for more information. There is also a tutorial <code>(info guile-tut) </code> available. </p>
 <h2>Options</h2>
 <dl>
-<dt>-l</p>
-<dd>Load scheme source code from file.</p>
-<dt>-e</p>
-<dd>After reading script, apply FUNCTION to command-line arguments</p>
-<dt>-ds</p>
-<dd>do -s SCRIPT at this point (note that this argument must be used in conjuction with -s)</p>
-<dt>&#8211;help</p>
-<dd>Describe command line options and exit</p>
-<dt>&#8211;debug</p>
-<dd>Start guile with debugging evaluator and backtraces enabled (useful for debugging guile scripts)</p>
-<dt>&#8211;version</p>
-<dd>Display guile version and exit.</p>
-<dt>&#8211;emacs</p>
-<dd>Enable emacs protocol for use from within emacs (experimental)</p>
-<dt>&#8212;</p>
-<dd>Stop argument processing, start guile in interactive mode.</p>
-<dt>-c</p>
-<dd>Stop argument processing, evaluate EXPR as a scheme expression.</p>
-<dt>-s</p>
-<dd>Load Scheme source from SCRIPT-FILE and execute as a script. </p>
+<dt>-l</dt>
+<dd>Load scheme source code from file.</dd>
+<dt>-e</dt>
+<dd>After reading script, apply FUNCTION to command-line arguments</dd>
+<dt>-ds</dt>
+<dd>do -s SCRIPT at this point (note that this argument must be used in conjuction with -s)</dd>
+<dt>&#8211;help</dt>
+<dd>Describe command line options and exit</dd>
+<dt>&#8211;debug</dt>
+<dd>Start guile with debugging evaluator and backtraces enabled (useful for debugging guile scripts)</dd>
+<dt>&#8211;version</dt>
+<dd>Display guile version and exit.</dd>
+<dt>&#8211;emacs</dt>
+<dd>Enable emacs protocol for use from within emacs (experimental)</dd>
+<dt>&#8212;</dt>
+<dd>Stop argument processing, start guile in interactive mode.</dd>
+<dt>-c</dt>
+<dd>Stop argument processing, evaluate EXPR as a scheme expression.</dd>
+<dt>-s</dt>
+<dd>Load Scheme source from SCRIPT-FILE and execute as a script. </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>GUILE_LOAD_PATH</code></p>
-<dd>If $<code>GUILE_LOAD_PATH</code> is set, its value is used to agument the path to search for scheme files when loading. It should be a colon separated list of directories which will be prepended to the default %load-path. </p>
+<dt><code>GUILE_LOAD_PATH</code></dt>
+<dd>If $<code>GUILE_LOAD_PATH</code> is set, its value is used to agument the path to search for scheme files when loading. It should be a colon separated list of directories which will be prepended to the default %load-path. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>~/.guile</i> is a guile script that is executed before any other processing occurs. For example, the following .guile activates guile&#8217;s readline interface: </p>
 <dl>
-<dd>(use-modules (ice-9 readline))</p>
+<dd>(use-modules (ice-9 readline))</dd>
 <dl>
-<dd>(activate-readline) </p>
+<dd>(activate-readline) </dd>
 </dl>
 </dl>
 <h2>See Also</h2>
 <p>The full documentation for guile is maintained as a Texinfo manual. If the info and guile programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info guile</code></dl>
+<dd><code>info guile</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <p> <a rel="nofollow" href="http://www.schemers.org">http://www.schemers.org</a> provides a general introduction to the Scheme language. </p>
 <h2>Authors</h2>

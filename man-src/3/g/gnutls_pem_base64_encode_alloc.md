@@ -14,12 +14,12 @@ description: "gnutls_pem_base64_encode_alloc – API function"
 <p> <code>int gnutls_pem_base64_encode_alloc(const char * </code><i>msg</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>result</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * msg</p>
-<dd> is a message to be put in the encoded header</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> contains the raw data</p>
-<dt>gnutls_datum_t * result</p>
-<dd> will hold the newly allocated encoded data</dl>
+<dt>const char * msg</dt>
+<dd> is a message to be put in the encoded header</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> contains the raw data</dd>
+<dt>gnutls_datum_t * result</dt>
+<dd> will hold the newly allocated encoded data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given data to printable data, using the base64 encoding. This is the encoding used in PEM messages. This function will allocate the required memory to hold the encoded data. </p>
 <p> You should use <code>gnutls_free()</code> to free the returned data.</p>
@@ -34,6 +34,6 @@ description: "gnutls_pem_base64_encode_alloc – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

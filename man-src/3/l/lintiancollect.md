@@ -17,39 +17,28 @@ Lintian::Collect - Lintian interface to package data collection
 
  This module is in its infancy. Most of Lintian still reads all data from files in the laboratory whenever that data is needed and generates that data via collect scripts. The goal is to eventually access all data via this module and its subclasses so that the module can cache data where appropriate and possibly retire collect scripts in favor of caching that data in memory.
 <h2>Class Methods</h2><dl COMPACT><dt>new (<font SIZE="-1">PACKAGE, TYPE,</font> BASEDIR[, <font SIZE="-1">FIELDS</font>]))
-<dd>Creates a new object appropriate to the package type. <font SIZE="-1">TYPE</font> can be retrieved later with the ``type'' method. Croaks if given an unknown <font SIZE="-1">TYPE.</font> 
-
+</dt><dd>Creates a new object appropriate to the package type. <font SIZE="-1">TYPE</font> can be retrieved later with the ``type'' method. Croaks if given an unknown <font SIZE="-1">TYPE.</font> 
  <font SIZE="-1">PACKAGE</font> is the name of the package and is stored in the collect object. It can be retrieved with the ``name'' method. 
-
  <font SIZE="-1">BASEDIR</font> is the base directory for the data and should be absolute. 
-
- If <font SIZE="-1">FIELDS</font> is given it is assumed to be the fields from the underlying control file. This is only used to avoid an unnecessary read operation (possibly incl. an ar | gzip pipeline) when the fields are already known.</dl><h2>Instance Methods</h2>In addition to the instance methods documented here, see the documentation of Lintian::Collect::Source, Lintian::Collect::Binary and Lintian::Collect::Changes for instance methods specific to source and binary / udeb packages and .changes files.
+ If <font SIZE="-1">FIELDS</font> is given it is assumed to be the fields from the underlying control file. This is only used to avoid an unnecessary read operation (possibly incl. an ar | gzip pipeline) when the fields are already known.</dd></dl><h2>Instance Methods</h2>In addition to the instance methods documented here, see the documentation of Lintian::Collect::Source, Lintian::Collect::Binary and Lintian::Collect::Changes for instance methods specific to source and binary / udeb packages and .changes files.
 <dl COMPACT><dt>name
-<dd>Returns the name of the package. 
-
+</dt><dd>Returns the name of the package. 
  Needs-Info requirements for using <i>name</i>: none
-<dt>type
-<dd>Returns the type of the package. 
-
+</dd><dt>type
+</dt><dd>Returns the type of the package. 
  Needs-Info requirements for using <i>type</i>: none
-<dt>base_dir
-<dd>Returns the base_dir where all the package information is stored. 
-
+</dd><dt>base_dir
+</dt><dd>Returns the base_dir where all the package information is stored. 
  Needs-Info requirements for using <i>base_dir</i>: none
-<dt>lab_data_path ([<font SIZE="-1">ENTRY</font>])
-<dd>Return the path to the <font SIZE="-1">ENTRY</font> in the lab. This is a convenience method around base_dir. If <font SIZE="-1">ENTRY</font> is not given, this method behaves like base_dir. 
-
+</dd><dt>lab_data_path ([<font SIZE="-1">ENTRY</font>])
+</dt><dd>Return the path to the <font SIZE="-1">ENTRY</font> in the lab. This is a convenience method around base_dir. If <font SIZE="-1">ENTRY</font> is not given, this method behaves like base_dir. 
  Needs-Info requirements for using <i>lab_data_path</i>: ``base_dir''
-<dt>field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])
-<dd>If <font SIZE="-1">FIELD</font> is given, this method returns the value of the control field <font SIZE="-1">FIELD</font> in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. 
-
+</dd><dt>field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])
+</dt><dd>If <font SIZE="-1">FIELD</font> is given, this method returns the value of the control field <font SIZE="-1">FIELD</font> in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. 
  If <font SIZE="-1">FIELD</font> is passed but not present, then this method will return <font SIZE="-1">DEFAULT</font> (if given) or undef. 
-
  Otherwise this will return a hash of fields, where the key is the field name (in all lowercase). 
-
  Needs-Info requirements for using <i>field</i>: none
-<dt>is_non_free
-<dd>Returns a truth value if the package appears to be non-free (based on the section field; ``non-free/*'' and ``restricted/*'') 
-
- Needs-Info requirements for using <i>is_non_free</i>: ``field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])''</dl><h2>Author</h2>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.
+</dd><dt>is_non_free
+</dt><dd>Returns a truth value if the package appears to be non-free (based on the section field; ``non-free/*'' and ``restricted/*'') 
+ Needs-Info requirements for using <i>is_non_free</i>: ``field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])''</dd></dl><h2>Author</h2>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.
 <h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), Lintian::Collect::Binary, Lintian::Collect::Changes, Lintian::Collect::Source

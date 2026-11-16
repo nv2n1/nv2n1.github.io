@@ -13,44 +13,44 @@ description: "tcutest – test cases of the utility API"
 <p> The command `<code>tcutest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>anum</i>&#8216; specifies the initial number of elements of array. `<i>bnum</i>&#8216; specifies the number of buckets. </p>
 <dl>
 <dt>
-<dd>
- <code>tcutest xstr </code><i>rnum</i></p>
+</dt><dd>
+ <code>tcutest xstr </code><i>rnum</i></dd>
 <dl>
 <dt>
-<dd> Perform test of extensible string.</dl>
+</dt><dd> Perform test of extensible string.</dd></dl>
 <p> <code>tcutest list </code>[<code>-rd</code>]<i>rnum</i>[<i>anum</i>]</p>
 <dl>
 <dt>
-<dd> Perform test of array list.</dl>
+</dt><dd> Perform test of array list.</dd></dl>
 <p> <code>tcutest map </code>[<code>-rd</code>][<code>-tr</code>][<code>-rnd</code>][<code>-dk</code>|<code>-dc</code>|<code>-dai</code>|<code>-dad</code>|<code>-dpr</code>]<i>rnum</i>[<i>bnum</i>]</p>
 <dl>
 <dt>
-<dd> Perform test of hash map.</dl>
+</dt><dd> Perform test of hash map.</dd></dl>
 <p> <code>tcutest tree </code>[<code>-rd</code>][<code>-tr</code>][<code>-rnd</code>][<code>-dk</code>|<code>-dc</code>|<code>-dai</code>|<code>-dad</code>|<code>-dpr</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform test of ordered tree.</dl>
+</dt><dd> Perform test of ordered tree.</dd></dl>
 <p> <code>tcutest mdb </code>[<code>-rd</code>][<code>-tr</code>][<code>-rnd</code>][<code>-dk</code>|<code>-dc</code>|<code>-dai</code>|<code>-dad</code>|<code>-dpr</code>]<i>rnum</i>[<i>bnum</i>]</p>
 <dl>
 <dt>
-<dd> Perform test of on-memory hash database.</dl>
+</dt><dd> Perform test of on-memory hash database.</dd></dl>
 <p> <code>tcutest ndb </code>[<code>-rd</code>][<code>-tr</code>][<code>-rnd</code>][<code>-dk</code>|<code>-dc</code>|<code>-dai</code>|<code>-dad</code>|<code>-dpr</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform test of on-memory tree database.</dl>
+</dt><dd> Perform test of on-memory tree database.</dd></dl>
 <p> <code>tcutest misc </code><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform test of miscellaneous routines.</dl>
+</dt><dd> Perform test of miscellaneous routines.</dd></dl>
 <p> <code>tcutest wicked </code><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Perform updating operations of list and map selected at random.</dl>
+</dt><dd> Perform updating operations of list and map selected at random.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-rd</code> : perform the reading test also.<br />
+</dt><dd> <code>-rd</code> : perform the reading test also.<br />
  <code>-tr</code> : perform the iterator test also.<br />
  <code>-rnd</code> : select keys at random.<br />
  <code>-dk</code> : use the function `tcxxxputkeep&#8217; instead of `tcxxxput&#8217;.<br />
@@ -58,7 +58,7 @@ description: "tcutest – test cases of the utility API"
  <code>-dai</code> : use the function `tcxxxaddint&#8217; instead of `tcxxxput&#8217;.<br />
  <code>-dad</code> : use the function `tcxxxadddouble&#8217; instead of `tcxxxput&#8217;.<br />
  <code>-dpr</code> : use the function `tcxxxputproc&#8217; instead of `tcxxxput&#8217;.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tcumttest/">tcumttest</a></code>(1), <code><a href="/docs/linux/man/1-tcucodec/">tcucodec</a></code>(1), <code><a href="/docs/linux/man/3-tcutil/">tcutil</a></code>(3), <code><a href="/docs/linux/man/3-tokyocabinet/">tokyocabinet</a></code>(3) </p>

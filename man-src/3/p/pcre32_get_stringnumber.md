@@ -13,10 +13,8 @@ PCRE - Perl-compatible regular expressions
 <pre><code>#include &lt;pcre.h&gt;
 int pcre_get_stringnumber(const pcre *code,
                           const char *name);
-
 int pcre16_get_stringnumber(const pcre16 *code,
                             PCRE_SPTR16 name);
-
 int pcre32_get_stringnumber(const pcre32 *code,
                             PCRE_SPTR32 name);</code></pre>
 

@@ -11,25 +11,17 @@ std::stable_sort - std::stable_sort
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (1)
-
         void stable_sort(RandomIt first, RandomIt last);
-
 template &lt;class ExecutionPolicy, class RandomIt&gt;
 (2)(since C++ 17)
-
     void stable_sort(ExecutionPolicy &amp;&amp;policy, RandomIt first, RandomIt last);
-
 template &lt;class RandomIt, class Compare&gt;
 (3)
-
     void stable_sort(RandomIt first, RandomIt last, Compare comp);
-
 template &lt;class ExecutionPolicy, class RandomIt, class Compare&gt;
 (4)(since C++ 17)
-
     void stable_sort(ExecutionPolicy &amp;&amp;policy, RandomIt first, RandomIt last, Compare comp);</code></pre> 
 Sorts the elements in the range [first, last) in ascending order. The order of equivalent elements is guaranteed to be preserved. 
 1) Elements are compared using operator&lt;. 
@@ -78,25 +70,19 @@ This function attempts to allocate a temporary buffer equal in size to the seque
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;vector&gt;
 struct Employee
-
 {
     int age;
     std::string name; // Does not participate in comparisons
 };
 bool operator&lt;(const Employee &amp;lhs, const Employee &amp;rhs)
-
 {
     return lhs.age &lt; rhs.age;
 }
 int main()
-
 {
     std::vector&lt;Employee&gt; v =
         {

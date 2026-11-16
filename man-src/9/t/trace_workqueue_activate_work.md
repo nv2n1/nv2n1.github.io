@@ -14,14 +14,14 @@ description: "trace_workqueue_activate_work – called when a work gets activate
 <p><i>work</i></p>
 <dl>
 <dd>
-<dd>pointer to struct work_struct</dl>
+</dd><dd>pointer to struct work_struct</dd></dl>
 <h2>Description</h2>
 <p>This event occurs when a queued work is put on the active queue, which happens immediately after queueing unless <i>max_active</i> limit is reached.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

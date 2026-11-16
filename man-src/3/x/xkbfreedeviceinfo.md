@@ -11,16 +11,16 @@ description: "XkbFreeDeviceInfo – Free an XkbDeviceInfoRec structure"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeDeviceInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; device_info</i></p>
+<dt><i>&#8211; device_info</i></dt>
 <dd>
-<dd>pointer to XkbDeviceInfoRec in which to free items</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of components of device_info to free</p>
-<dt><i>&#8211; free_all</i></p>
-<dd>True =&gt; free everything, including device_info</dl>
+</dd><dd>pointer to XkbDeviceInfoRec in which to free items</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of components of device_info to free</dd>
+<dt><i>&#8211; free_all</i></dt>
+<dd>True =&gt; free everything, including device_info</dd></dl>
 <h2>Description</h2>
 <p>If <i>free_all </i> is True, the <i>XkbFreeDeviceInfo </i> frees all components of <i>device_info </i> and the XkbDeviceInfoRec structure pointed to by <i>device_info </i> itself. If <i>free_all </i> is False, the value of <i>which </i> determines which subcomponents are freed. <i>which </i> is an inclusive OR of one or more of the values from Table 1. If <i>which </i> contains XkbXI_ButtonActionsMask, all button actions associated with <i>device_info </i> are freed, <i>device_info-&gt;btn_acts </i> is set to NULL, and <i>device_info-&gt;num_btns </i> is set to zero. If <i>which </i> contains all bits in XkbXI_IndicatorsMask, all XkbDeviceLedInfoRec structures associated with <i>device_info </i> are freed, <i>device_info-&gt;leds </i> is set to NULL, and <i>device_info-&gt;sz_leds </i> and <i>device_info-&gt;num_leds </i> are set to zero. If <i>which </i> contains XkbXI_IndicatorMapsMask, all indicator maps associated with <i>device_info </i> are cleared, but the number of LEDs and the leds structures themselves is preserved. If <i>which </i> contains XkbXI_IndicatorNamesMask, all indicator names associated with <i>device_info </i> are cleared, but the number of LEDs and the leds structures themselves is preserved. If <i>which </i> contains XkbXI_IndicatorStateMask, the indicator state associated with the <i>device_info </i> leds are set to zeros but the number of LEDs and the leds structures themselves is preserved. </p>
 <pre> Table 1 XkbDeviceInfoRec Mask Bits 
@@ -37,12 +37,10 @@ XkbXI_ButtonActionsMask num_btns (1L &lt;&lt;1) Clients can assign key
  btn_acts actions to buttons 
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorNamesMask leds-&gt;names (1L &lt;&lt;2) Clients can assign
  names to indicators on
  non-KeyClass input
  extension devices.
- 
 XkbXI_IndicatorMapsMask leds-&gt;maps (1L &lt;&lt;3) Clients can assign
  indicator maps to
  indicators on 
@@ -82,7 +80,6 @@ XkbXI_AllDetailsMask Those selected (0x801f) XkbXI_AllFeaturesMask |
  unsigned short dflt_led_fb; /* input extension ID of default indicator feedback */
  XkbDeviceLedInfoPtr leds; /* LED descriptions */
 } XkbDeviceInfoRec, *XkbDeviceInfoPtr;
- 
 typedef struct {
  unsigned short led_class; /* class for this LED device*/
  unsigned short led_id; /* ID for this LED device */

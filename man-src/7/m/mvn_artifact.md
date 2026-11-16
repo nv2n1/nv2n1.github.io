@@ -15,13 +15,13 @@ description: "mvn_artifact – request installation of Maven artifact"
 <h2>Operands</h2>
 <p><code>model</code></p>
 <dl>
-<dd>Path to raw project object model (POM) file to be associated and installed with artifact.</dl>
+<dd>Path to raw project object model (POM) file to be associated and installed with artifact.</dd></dl>
 <p> <code>artifact-file</code></p>
 <dl>
-<dd>Path to file to be used as artifact file. If omitted then no artifact file is installed.</dl>
+<dd>Path to file to be used as artifact file. If omitted then no artifact file is installed.</dd></dl>
 <p> <code>artifact-coordinates</code></p>
 <dl>
-<dd>Artifact coordinates specify artifact to be installed. If specified then no model file is installed with artifact. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]]:version</code>. If extension is omitted then &quot;jar&quot; is used. If classifier is omitted then empty classifier is used. For more information see XMvn Configuration Reference.</dl>
+<dd>Artifact coordinates specify artifact to be installed. If specified then no model file is installed with artifact. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]]:version</code>. If extension is omitted then &quot;jar&quot; is used. If classifier is omitted then empty classifier is used. For more information see XMvn Configuration Reference.</dd></dl>
 <h2>Author</h2>
 <p>Written by Michal Srb.</p>
 <h2>Reporting Bugs</h2>

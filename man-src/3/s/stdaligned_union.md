@@ -10,10 +10,8 @@ description: "std::aligned_union – std::aligned_union"
 <p>std::aligned_union &#8211; std::aligned_union</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;std::size_t Len, class... Types&gt;
     (since C++ 11)
-
         struct aligned_union;</code></pre>
 <p>Provides the nested type type, which is a trivial standard-layout type of a size and alignment suitable for use as uninitialized storage for an object of any of the types listed in Types. The size of the storage is at least Len. std::aligned_union also determines the strictest (largest) alignment requirement among all Types and makes it available as the constant alignment_value.<br />
 If sizeof&#8230;(Types) == 0 or if any of the types in Types is not a complete object type, the behavior is undefined.<br />

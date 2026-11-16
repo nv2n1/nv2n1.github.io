@@ -14,20 +14,20 @@ description: "trace_block_getrq – get a free request entry in queue for block 
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>queue for operations</dl>
+</dd><dd>queue for operations</dd></dl>
 <p> <i>bio</i></p>
 <dl>
-<dd>pending block IO operation</dl>
+<dd>pending block IO operation</dd></dl>
 <p> <i>rw</i></p>
 <dl>
-<dd>low bit indicates a read (<code>0</code>) or a write (<code>1</code>)</dl>
+<dd>low bit indicates a read (<code>0</code>) or a write (<code>1</code>)</dd></dl>
 <h2>Description</h2>
 <p>A request struct for queue <i>q</i> has been allocated to handle the block IO operation <i>bio</i>.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

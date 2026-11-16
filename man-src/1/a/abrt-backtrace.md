@@ -17,34 +17,34 @@ description: "abrt-backtrace – a backtrace analyzer for abrt"
 <h2>OPTIONS</h2>
 <p> <code>Basic startup options</code></p>
 <dl>
-<dt>-V, &#8211;version</p>
-<dd> Displays version of abrt-backtrace.</p>
-<dt>-?, &#8211;help</p>
-<dd> Print a help message describing all of abrt-backtrace’s command-line options. </p>
+<dt>-V, &#8211;version</dt>
+<dd> Displays version of abrt-backtrace.</dd>
+<dt>-?, &#8211;help</dt>
+<dd> Print a help message describing all of abrt-backtrace’s command-line options. </dd>
 </dl>
 <p> <code>Actions</code></p>
 <dl>
-<dt>-i, &#8211;independent</p>
-<dd> Prints independent backtrace fallback. The &quot;independent backtrace&quot; is used as a fallback internal representation of backtrace when the internal parser fails to process the input due to unsupported format. </p>
+<dt>-i, &#8211;independent</dt>
+<dd> Prints independent backtrace fallback. The &quot;independent backtrace&quot; is used as a fallback internal representation of backtrace when the internal parser fails to process the input due to unsupported format. </dd>
 </dl>
 <p> <code>Various options</code></p>
 <dl>
-<dt>-n, &#8211;single-thread</p>
-<dd> Removes all threads except the one that caused the crash from the internal representation of the backtrace.</p>
-<dt>-d=N, &#8211;frame-depth=N</p>
-<dd> Display only the top N frames in every thread. Frames that are a part of system error handling do not count to the N. So more than N frames can be displayed, but N of them are useful for examination. N must be larger than 1.</p>
-<dt>-r, &#8211;remove-exit-handlers</p>
-<dd> Do not display exit handlers and frames that comes after them in the backtrace.</p>
-<dt>-m, &#8211;remove-noncrash-frames</p>
-<dd> Do not display frames known as not causing the crash, but which are a common part of backtraces.</p>
-<dt>-a, &#8211;rate</p>
-<dd> Print backtrace rating from 0 to 4.</p>
-<dt>-c, &#8211;crash-function</p>
-<dd> Print crash function if it&#8217;s successfully detected.</p>
-<dt>-p, &#8211;debug-parser</p>
-<dd> Prints debug information when parsing the backtrace.</p>
-<dt>-s, &#8211;debug-scanner</p>
-<dd> Prints debug information when scanning the input file for the parser. </p>
+<dt>-n, &#8211;single-thread</dt>
+<dd> Removes all threads except the one that caused the crash from the internal representation of the backtrace.</dd>
+<dt>-d=N, &#8211;frame-depth=N</dt>
+<dd> Display only the top N frames in every thread. Frames that are a part of system error handling do not count to the N. So more than N frames can be displayed, but N of them are useful for examination. N must be larger than 1.</dd>
+<dt>-r, &#8211;remove-exit-handlers</dt>
+<dd> Do not display exit handlers and frames that comes after them in the backtrace.</dd>
+<dt>-m, &#8211;remove-noncrash-frames</dt>
+<dd> Do not display frames known as not causing the crash, but which are a common part of backtraces.</dd>
+<dt>-a, &#8211;rate</dt>
+<dd> Print backtrace rating from 0 to 4.</dd>
+<dt>-c, &#8211;crash-function</dt>
+<dd> Print crash function if it&#8217;s successfully detected.</dd>
+<dt>-p, &#8211;debug-parser</dt>
+<dd> Prints debug information when parsing the backtrace.</dd>
+<dt>-s, &#8211;debug-scanner</dt>
+<dd> Prints debug information when scanning the input file for the parser. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-abrtd/">abrtd</a></i>(8), <i><a href="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a href="/docs/linux/man/1-abrt-cli/">abrt-cli</a></i>(1), <i><a href="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7) </p>

@@ -23,6 +23,6 @@ description: "PAPI_get_event_component –"
 <p>&nbsp;<wbr><code>PAPI_get_event_component()</code>&nbsp;<wbr>returns the component an event belongs to.&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_event_info</code></dl>
+<dd><code>PAPI_get_event_info</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

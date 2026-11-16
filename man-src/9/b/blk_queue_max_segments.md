@@ -15,11 +15,11 @@ blk_queue_max_segments - set max hw segments for a request for this queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>max_segments</i>
-<dl><dd>max number of segments</dl>
+<dl><dd>max number of segments</dd></dl>
 
 <h2>Description</h2>
 

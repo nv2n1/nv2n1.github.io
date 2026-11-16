@@ -103,14 +103,14 @@ data set trailing padding (not with --write-dataset):
 <h2>NOTES</h2>
 <p> The following preferred interpolation algorithms can be selected using the <i>&#8211;interpolate</i> option: </p>
 <dl>
-<dt>&bull;</p>
-<dd> 1 = free scaling algorithm with interpolation from pbmplus toolkit</p>
-<dt>&bull;</p>
-<dd> 2 = free scaling algorithm with interpolation from c&#8217;t magazine</p>
-<dt>&bull;</p>
-<dd> 3 = magnification algorithm with bilinear interpolation from Eduard Stanescu</p>
-<dt>&bull;</p>
-<dd> 4 = magnification algorithm with bicubic interpolation from Eduard Stanescu</dl>
+<dt>&bull;</dt>
+<dd> 1 = free scaling algorithm with interpolation from pbmplus toolkit</dd>
+<dt>&bull;</dt>
+<dd> 2 = free scaling algorithm with interpolation from c&#8217;t magazine</dd>
+<dt>&bull;</dt>
+<dd> 3 = magnification algorithm with bilinear interpolation from Eduard Stanescu</dd>
+<dt>&bull;</dt>
+<dd> 4 = magnification algorithm with bicubic interpolation from Eduard Stanescu</dd></dl>
 <h2>LOGGING</h2>
 <p> The level of logging output of the various command line tools and underlying libraries can be specified by the user. By default, only errors and warnings are written to the standard error stream. Using option <i>&#8211;verbose</i> also informational messages like processing details are reported. Option <i>&#8211;debug</i> can be used to get more details on the internal activity, e.g. for debugging purposes. Other logging levels can be selected using option <i>&#8211;log-level</i>. In <i>&#8211;quiet</i> mode only fatal errors are reported. In such very severe error events, the application will usually terminate. For more details on the different logging levels, see documentation of module &#8216;oflog&#8217;. </p>
 <p> In case the logging output should be written to file (optionally with logfile rotation), to syslog (Unix) or the event log (Windows) option <i>&#8211;log-config</i> can be used. This configuration file also allows for directing only certain messages to a particular output stream and for filtering certain messages based on the module or application where they are generated. An example configuration file is provided in <i>&lt;etcdir&gt;/logger.cfg</i>).</p>

@@ -16,16 +16,16 @@ description: "exfatfsck – check an exFAT file system"
 <h2>Command Line Options</h2>
 <p>Command line options available:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd>Automatically repair the file system. No user intervention required.</p>
-<dt><code>-n</code></p>
-<dd>No-operation mode: non-interactively check for errors, but don&#8217;t write anything to the file system.</p>
-<dt><code>-p</code></p>
-<dd>Same as <code>-a</code> for compatibility with other *fsck.</p>
-<dt><code>-V</code></p>
-<dd>Print version and copyright.</p>
-<dt><code>-y</code></p>
-<dd>Same as <code>-a</code> for compatibility with other *fsck. </p>
+<dt><code>-a</code></dt>
+<dd>Automatically repair the file system. No user intervention required.</dd>
+<dt><code>-n</code></dt>
+<dd>No-operation mode: non-interactively check for errors, but don&#8217;t write anything to the file system.</dd>
+<dt><code>-p</code></dt>
+<dd>Same as <code>-a</code> for compatibility with other *fsck.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright.</dd>
+<dt><code>-y</code></dt>
+<dd>Same as <code>-a</code> for compatibility with other *fsck. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <p>Zero is returned if errors were not found. Any other code means an error.</p>

@@ -34,56 +34,57 @@ description: "mcrypt, mdecrypt – encrypt or decrypt files"
 <p> <i>mdecrypt</i> takes a list of files on its command line and creates a new file for each file whose name ends with .nc by removing the &quot;.nc&quot; or by adding &quot;.dc&quot; to the end of the file name if .nc is not in the encrypted file&#8217;s name. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-F &#8211;force</code></p>
-<dd> Force output on standard output or input from stdin if that is a terminal. By default mcrypt will not output encrypted data to terminal, nor read encrypted data from it.</p>
-<dt><code>-z &#8211;gzip</code></p>
-<dd> Use gzip (if it exists in your system) to compress files before encryption. If specified at decryption time it will decompress these files.</p>
-<dt><code>-p &#8211;bzip2</code></p>
-<dd> Use bzip2 (if it exists in your system) to compress files before encryption. If specified at decryption time it will decompress these files.</p>
-<dt><code>&nbsp;<wbr>&#8211;openpgp-z INT</code></p>
-<dd> This option will enable compression in OpenPGP (RFC2440) encrypted files.</p>
-<dt><code>-d &#8211;decrypt</code></p>
-<dd> Decrypt.</p>
-<dt><code>&nbsp;<wbr>&#8211;help</code></p>
-<dd> Display a help screen and quit.</p>
-<dt><code>-v &#8211;version</code></p>
-<dd> Version. Display the version number and quit.</p>
-<dt><code>-L &#8211;license</code></p>
-<dd> Display the <i>mcrypt&#8217;s</i> license and quit.</p>
-<dt><code>-o &#8211;keymode MODE</code></p>
-<dd> MODE may be one of the keymodes listed by the &#8211;list-keymodes parameter. It actually is the conversion to the key before it is fed to the algorithm. It is recommended to leave it as is, if you do not know what it is. However if you still want to use this option, you might want to use the &#8216;hex&#8217; mode which allows you to specify the key in hex (and no conversion will be applied).</p>
-<dt><code>-h &#8211;hash HASH_ALGORITHM</code></p>
-<dd> HASH_ALGORITHM may be one of the algorithms listed by the &#8211;list-hash parameter. This is the digest that will be appended to the file to be encrypted, in order to detect file corruption. The default is the CRC32 checksum.</p>
-<dt><code>-s &#8211;keysize SIZE</code></p>
-<dd> SIZE is the algorithm&#8217;s key size in bytes (not the size of the passphrase). It defaults to the maximum key supported by the algorithm. The maximum key sizes of the algorithms may be obtained by the &#8211;list parameter. It is safe not to touch this.</p>
-<dt><code>-g &#8211;openpgp</code></p>
-<dd> This option will make mcrypt to use the OpenPGP (RFC2440) file format for encrypted files. This will make files encrypted by mcrypt accessible from any OpenPGP compliant application.</p>
-<dt><code>-b &#8211;bare</code></p>
-<dd> No important information like the algorithm, mode, the bit mode and the crc32 of the original file are written in the encrypted file. The security lies on the algorithm not on obscurity so this is NOT the default. This flag must also be specified when decrypting a bare encrypted file. When the bare flag is specified decryption and encryption are faster. This may be useful when using mcrypt to encrypt a link or something like that.</p>
-<dt><code>&#8211;flush</code></p>
-<dd> Flushes the output (ciphertext or plaintext) immediately. Useful if mcrypt is used with pipes.</p>
-<dt><code>&#8211;time</code></p>
-<dd> Prints some timing information (encryption speed etc.)</p>
-<dt><code>&#8211;nodelete</code></p>
-<dd> When this option is specified mcrypt does not delete the output file, even if decryption failed. This is useful if you want to decrypt a corrupted file.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Suppress some not critical warnings.</p>
-<dt><code>-u &#8211;unlink</code></p>
-<dd> Unlink (delete) the input file if the whole process of encryption/decryption succeeds. This is not the default in order to use an external program to remove sensitive data.</p>
-<dt><code>&nbsp;<wbr>&#8211;list</code></p>
-<dd> Lists all the algorithms current supported.</p>
-<dt><code>&nbsp;<wbr>&#8211;list-keymodes</code></p>
-<dd> Lists all the key modes current supported.</p>
-<dt><code>&nbsp;<wbr>&#8211;list-hash</code></p>
-<dd> Lists all the hash algorithms current supported.</p>
-<dt><code>-r &#8211;random</code></p>
-<dd> Use /dev/(s)random instead of /dev/urandom. This may need some key input or mouse move to proceed. If your system does not support /dev/random or /dev/urandom, a random gatherer will be used.</p>
-<dt><code>-k &#8211;key KEY1 KEY2 &#8230;</code></p>
-<dd> Enter the keyword(s) via the command line. The KEY(s) is/are then used as keyword instead of prompting for them. Keep in mind that someone may see the command you are executing and so your keyword(s).</p>
-<dt><code>-c &#8211;config FILE</code></p>
+<dt><code>-F &#8211;force</code></dt>
+<dd> Force output on standard output or input from stdin if that is a terminal. By default mcrypt will not output encrypted data to terminal, nor read encrypted data from it.</dd>
+<dt><code>-z &#8211;gzip</code></dt>
+<dd> Use gzip (if it exists in your system) to compress files before encryption. If specified at decryption time it will decompress these files.</dd>
+<dt><code>-p &#8211;bzip2</code></dt>
+<dd> Use bzip2 (if it exists in your system) to compress files before encryption. If specified at decryption time it will decompress these files.</dd>
+<dt><code>&nbsp;<wbr>&#8211;openpgp-z INT</code></dt>
+<dd> This option will enable compression in OpenPGP (RFC2440) encrypted files.</dd>
+<dt><code>-d &#8211;decrypt</code></dt>
+<dd> Decrypt.</dd>
+<dt><code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> Display a help screen and quit.</dd>
+<dt><code>-v &#8211;version</code></dt>
+<dd> Version. Display the version number and quit.</dd>
+<dt><code>-L &#8211;license</code></dt>
+<dd> Display the <i>mcrypt&#8217;s</i> license and quit.</dd>
+<dt><code>-o &#8211;keymode MODE</code></dt>
+<dd> MODE may be one of the keymodes listed by the &#8211;list-keymodes parameter. It actually is the conversion to the key before it is fed to the algorithm. It is recommended to leave it as is, if you do not know what it is. However if you still want to use this option, you might want to use the &#8216;hex&#8217; mode which allows you to specify the key in hex (and no conversion will be applied).</dd>
+<dt><code>-h &#8211;hash HASH_ALGORITHM</code></dt>
+<dd> HASH_ALGORITHM may be one of the algorithms listed by the &#8211;list-hash parameter. This is the digest that will be appended to the file to be encrypted, in order to detect file corruption. The default is the CRC32 checksum.</dd>
+<dt><code>-s &#8211;keysize SIZE</code></dt>
+<dd> SIZE is the algorithm&#8217;s key size in bytes (not the size of the passphrase). It defaults to the maximum key supported by the algorithm. The maximum key sizes of the algorithms may be obtained by the &#8211;list parameter. It is safe not to touch this.</dd>
+<dt><code>-g &#8211;openpgp</code></dt>
+<dd> This option will make mcrypt to use the OpenPGP (RFC2440) file format for encrypted files. This will make files encrypted by mcrypt accessible from any OpenPGP compliant application.</dd>
+<dt><code>-b &#8211;bare</code></dt>
+<dd> No important information like the algorithm, mode, the bit mode and the crc32 of the original file are written in the encrypted file. The security lies on the algorithm not on obscurity so this is NOT the default. This flag must also be specified when decrypting a bare encrypted file. When the bare flag is specified decryption and encryption are faster. This may be useful when using mcrypt to encrypt a link or something like that.</dd>
+<dt><code>&#8211;flush</code></dt>
+<dd> Flushes the output (ciphertext or plaintext) immediately. Useful if mcrypt is used with pipes.</dd>
+<dt><code>&#8211;time</code></dt>
+<dd> Prints some timing information (encryption speed etc.)</dd>
+<dt><code>&#8211;nodelete</code></dt>
+<dd> When this option is specified mcrypt does not delete the output file, even if decryption failed. This is useful if you want to decrypt a corrupted file.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Suppress some not critical warnings.</dd>
+<dt><code>-u &#8211;unlink</code></dt>
+<dd> Unlink (delete) the input file if the whole process of encryption/decryption succeeds. This is not the default in order to use an external program to remove sensitive data.</dd>
+<dt><code>&nbsp;<wbr>&#8211;list</code></dt>
+<dd> Lists all the algorithms current supported.</dd>
+<dt><code>&nbsp;<wbr>&#8211;list-keymodes</code></dt>
+<dd> Lists all the key modes current supported.</dd>
+<dt><code>&nbsp;<wbr>&#8211;list-hash</code></dt>
+<dd> Lists all the hash algorithms current supported.</dd>
+<dt><code>-r &#8211;random</code></dt>
+<dd> Use /dev/(s)random instead of /dev/urandom. This may need some key input or mouse move to proceed. If your system does not support /dev/random or /dev/urandom, a random gatherer will be used.</dd>
+<dt><code>-k &#8211;key KEY1 KEY2 &#8230;</code></dt>
+<dd> Enter the keyword(s) via the command line. The KEY(s) is/are then used as keyword instead of prompting for them. Keep in mind that someone may see the command you are executing and so your keyword(s).</dd>
+<dt><code>-c &#8211;config FILE</code></dt>
 <dd> Use the specified configuration file. The default is .mcryptrc in your home directory. The format of the configuration file is the same as the parameters. An example file is:<br />
 &nbsp;<wbr>algorithm safer+<br />
 &nbsp;<wbr>mode cbc<br />
-&nbsp;<wbr>key a_very_secret_one </p>
-<dt><code>-f &#8211;keyfile FILE</code></p>
+&nbsp;<wbr>key a_very_secret_one </dd>
+<dt><code>-f &#8211;keyfile FILE</code></dt>
 <dd> Enter the keyword(s) via a file. One keyword is read per line. The first keyword read is used for the first file, the second for the second file etc. If the keywords are less than the files then the last keyword is used for the remaining. A limitation is that you cannot use the NULL (
+</dd></dl>

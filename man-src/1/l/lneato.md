@@ -19,12 +19,12 @@ description: "lneato – A Customizable Graph Editor"
 <p> The file name is optional. If present, the graph contained in that file is displayed in the <code>lneato</code> window.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Prints the version.</p>
-<dt><code>-lm</code><i>mode</i></p>
-<dd> Sets the layout mode. The <i>mode</i> can be <code>sync</code> or <code>async</code>. The default is <code>async</code>.</p>
-<dt><code>-el</code><i>lev</i></p>
-<dd> Sets the mesage level. The <i>lev</i> can be <code>0</code> or <code>1</code>. The default is <code>0</code>.</dl>
+<dt><code>-V</code></dt>
+<dd> Prints the version.</dd>
+<dt><code>-lm</code><i>mode</i></dt>
+<dd> Sets the layout mode. The <i>mode</i> can be <code>sync</code> or <code>async</code>. The default is <code>async</code>.</dd>
+<dt><code>-el</code><i>lev</i></dt>
+<dd> Sets the mesage level. The <i>lev</i> can be <code>0</code> or <code>1</code>. The default is <code>0</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-lefty/">lefty</a>(1), <a href="/docs/linux/man/1-dotty/">dotty</a>(1), <a href="/docs/linux/man/3-xdot/">xdot</a>(3),<br />
  <i>dotty</i> user guide. </p>

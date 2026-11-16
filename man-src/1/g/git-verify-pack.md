@@ -19,36 +19,36 @@ git verify - pack[-v | --verbose][-s | --stat - only][--]&lt;pack&gt;.idx...
 <p> &lt;pack&gt;.idx &#8230;</p>
 <dl>
 <dt>
-<dd> The idx files to verify.</dl>
+</dt><dd> The idx files to verify.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> After verifying the pack, show list of objects contained in the pack and a histogram of delta chain length.</dl>
+</dt><dd> After verifying the pack, show list of objects contained in the pack and a histogram of delta chain length.</dd></dl>
 <p> -s, &#8211;stat-only</p>
 <dl>
 <dt>
-<dd> Do not verify the pack contents; only show the histogram of delta chain length. With <code>&#8211;verbose</code>, list of objects is also shown.</dl>
+</dt><dd> Do not verify the pack contents; only show the histogram of delta chain length. With <code>&#8211;verbose</code>, list of objects is also shown.</dd></dl>
 <p> &#8212;</p>
 <dl>
 <dt>
-<dd> Do not interpret any more arguments as options.</dl>
+</dt><dd> Do not interpret any more arguments as options.</dd></dl>
 <h2>OUTPUT FORMAT</h2>
 <p> When specifying the -v option the format used is: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SHA-1 type size size-in-packfile offset-in-packfile
 </pre>
-</dl>
+</dd></dl>
 <p> for objects that are not deltified in the pack, and </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SHA-1 type size size-in-packfile offset-in-packfile depth base-SHA-1
 </pre>
-</dl>
+</dd></dl>
 <p> for objects that are deltified.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>

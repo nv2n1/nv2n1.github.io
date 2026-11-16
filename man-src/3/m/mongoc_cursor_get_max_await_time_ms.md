@@ -13,8 +13,8 @@ description: "mongoc_cursor_get_max_await_time_ms() – Retrieve the value set w
 mongoc_cursor_get_max_await_time_ms (mongoc_cursor_t *cursor);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Retrieve the value set with <code>mongoc_cursor_set_max_await_time_ms</code> \&amp;. </p>
 <h2>Colophon</h2>

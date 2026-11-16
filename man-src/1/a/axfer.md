@@ -19,21 +19,21 @@ description: "axfer – command-line sound recorder and player for sound devices
 <h2>OPTIONS</h2>
 <h3>Subcommand</h3>
 <dl>
-<dt><code>transfer</code></p>
-<dd> Performs transmission of audio data frame. Its detail is described in <code><a href="/docs/linux/man/1-axfer-transfer/">axfer-transfer</a>(1)</code> manual. </p>
-<dt><code>list</code></p>
-<dd> Dumps lists of available sound devices and nodes. Its detail is described in <code><a href="/docs/linux/man/1-axfer-list/">axfer-list</a>(1)</code> manual. </p>
-<dt><code>version</code></p>
-<dd> Prints version of this application (as the same version as alsa-utils package). </p>
-<dt><code>help</code></p>
-<dd> Prints a short message about subcommands for users to enter this application. </p>
+<dt><code>transfer</code></dt>
+<dd> Performs transmission of audio data frame. Its detail is described in <code><a href="/docs/linux/man/1-axfer-transfer/">axfer-transfer</a>(1)</code> manual. </dd>
+<dt><code>list</code></dt>
+<dd> Dumps lists of available sound devices and nodes. Its detail is described in <code><a href="/docs/linux/man/1-axfer-list/">axfer-list</a>(1)</code> manual. </dd>
+<dt><code>version</code></dt>
+<dd> Prints version of this application (as the same version as alsa-utils package). </dd>
+<dt><code>help</code></dt>
+<dd> Prints a short message about subcommands for users to enter this application. </dd>
 </dl>
 <h3>Direction</h3>
 <dl>
-<dt><code>capture</code></p>
-<dd> Operates for capture transmission. </p>
-<dt><code>playback</code></p>
-<dd> Operates for playback transmission. </p>
+<dt><code>capture</code></dt>
+<dd> Operates for capture transmission. </dd>
+<dt><code>playback</code></dt>
+<dd> Operates for playback transmission. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <i>EXIT_SUCCESS</i> (0) if run time successfully finished, else <i>EXIT_FAILURE</i> (1). </p>

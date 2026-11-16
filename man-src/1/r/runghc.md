@@ -15,22 +15,22 @@ description: "runghc – program to run Haskell programs without first having to
 <p> <code>runghc </code> is considered a non-interactive interpreter and part of The Glasgow Haskell Compiler. <code>runghc</code> is a compiler that automatically runs its results at the end. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>the flags are:</p>
+<dt>the flags are:</dt>
 <dd>
-<dt><code>-f</code></p>
-<dd> it tells runghc which GHC to use to run the program. If it is not given then runghc will search for GHC in the directories in the system search path. runghc -f /path/to/ghc</p>
-<dt><code>&#8212; </code></p>
-<dd> runghc will try to work out where the boundaries between [runghc flags] and [GHC flags], and [GHC flags] and module are, but you can use a &#8212; flag if it doesn&#8217;t get it right. For example, runghc &#8212; -fglasgow-exts Foo means runghc won&#8217;t try to use glasgow-exts as the path to GHC, but instead will pass the flag to GHC. </p>
+</dd><dt><code>-f</code></dt>
+<dd> it tells runghc which GHC to use to run the program. If it is not given then runghc will search for GHC in the directories in the system search path. runghc -f /path/to/ghc</dd>
+<dt><code>&#8212; </code></dt>
+<dd> runghc will try to work out where the boundaries between [runghc flags] and [GHC flags], and [GHC flags] and module are, but you can use a &#8212; flag if it doesn&#8217;t get it right. For example, runghc &#8212; -fglasgow-exts Foo means runghc won&#8217;t try to use glasgow-exts as the path to GHC, but instead will pass the flag to GHC. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>runghc foo</code></p>
-<dd></dl>
+<dt><code>runghc foo</code></dt>
+<dd></dd></dl>
 <p> <code>runghc -f /path/to/ghc foo</code></p>
 <dl>
-<dt><code>runghc &#8212; -fglasgow-exts Foo</code></p>
+<dt><code>runghc &#8212; -fglasgow-exts Foo</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ghc/">ghc</a></code>(1), <code>ghci</code>(1). </p>
 <h2>COPYRIGHT</h2>

@@ -10,52 +10,48 @@ description: "stonith – extensible interface for remotely powering down a node
 <p>stonith &#8211; extensible interface for remotely powering down a node in the cluster</p>
 <h2>Synopsis</h2>
 <pre><code>stonith -h
-
 stonith [-svh] -L
-
 stonith [-svh] -t stonith-device-type -n
-
 stonith [-svh] -t stonith-device-type {-p stonith-device-parameters | -F stonith-device-parameters-file | name=value...} [-c count] -lS
-
 stonith [-svh] -t stonith-device-type {-p stonith-device-parameters | -F stonith-device-parameters-file | name=value...} [-c count] [-lS] [-T {reset|on|off}] nodename</code></pre>
 <h2>Description</h2>
 <p>The STONITH module (a.k.a. STOMITH) provides an extensible interface for remotely powering down a node in the cluster. (STONITH = Shoot The Other Node In The Head). The idea is quite simple: when the software running on one machine wants to make sure another machine in the cluster is not using a resource, pull the plug on the other machine. It&#8217;s simple and reliable, albeit admittedly brutal.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c count</code></p>
-<dd>Perform any actions identified by the -l, -S and -T options <code>count</code> times.</p>
-<dt><code>-F stonith-device-parameters-file</code></p>
-<dd>Path of file specifying parameters for a stonith device. To determine the syntax of the parameters file for a given device type run: </p>
+<dt><code>-c count</code></dt>
+<dd>Perform any actions identified by the -l, -S and -T options <code>count</code> times.</dd>
+<dt><code>-F stonith-device-parameters-file</code></dt>
+<dd>Path of file specifying parameters for a stonith device. To determine the syntax of the parameters file for a given device type run: </dd>
 <pre><code>stonith</code> -t stonith-device-type -n</pre>
 <p>All of the listed parameters need to appear in order on a single line in the parameters file and be delimited by whitespace.</p>
-<dt><code>-h </code></p>
-<dd>Display detailed information about a stonith device including description, configuration information, parameters and any other related information. When specified without a stonith-device-type, detailed information on all stonith devices is displayed. </p>
+<dt><code>-h </code></dt>
+<dd>Display detailed information about a stonith device including description, configuration information, parameters and any other related information. When specified without a stonith-device-type, detailed information on all stonith devices is displayed. </dd>
 <p> If you don&#8217;t yet own a stonith device and want to know more about the ones we support, this information is likely to be helpful.</p>
-<dt><code>-L</code></p>
-<dd>List the valid stonith device types, suitable for passing as an argument to the -t option.</p>
-<dt><code>-l</code></p>
-<dd>List the hosts controlled by the stonith device.</p>
-<dt><code>-n</code></p>
-<dd>Output the parameter names of the stonith device.</p>
-<dt><code>name=value</code></p>
-<dd>Parameter, in the form of a name/value pair, to pass directly to the stonith device. To determine the syntax of the parameters for a given device type run: </p>
+<dt><code>-L</code></dt>
+<dd>List the valid stonith device types, suitable for passing as an argument to the -t option.</dd>
+<dt><code>-l</code></dt>
+<dd>List the hosts controlled by the stonith device.</dd>
+<dt><code>-n</code></dt>
+<dd>Output the parameter names of the stonith device.</dd>
+<dt><code>name=value</code></dt>
+<dd>Parameter, in the form of a name/value pair, to pass directly to the stonith device. To determine the syntax of the parameters for a given device type run: </dd>
 <pre><code>stonith</code> -t stonith-device-type -n</pre>
 <p>All of the listed parameter names need to be passed with their corresponding values.</p>
-<dt><code>-p stonith-device-parameters</code></p>
-<dd>Parameters to pass directly to the stonith device. To determine the syntax of the parameters for a given device type run: </p>
+<dt><code>-p stonith-device-parameters</code></dt>
+<dd>Parameters to pass directly to the stonith device. To determine the syntax of the parameters for a given device type run: </dd>
 <pre><code>stonith</code> -t stonith-device-type -n</pre>
 <p>All of the listed parameter names need to appear in order and be delimited by whitespace.</p>
-<dt><code>-S</code></p>
-<dd>Show the status of the stonith device.</p>
-<dt><code>-s</code></p>
-<dd>Silent operation. Suppress logging of error messages to standard error.</p>
-<dt><code>-T action</code></p>
-<dd>The stonith action to perform on the node identified by nodename. Chosen from <code>reset</code>, <code>on</code>, and <code>off</code>. </p>
+<dt><code>-S</code></dt>
+<dd>Show the status of the stonith device.</dd>
+<dt><code>-s</code></dt>
+<dd>Silent operation. Suppress logging of error messages to standard error.</dd>
+<dt><code>-T action</code></dt>
+<dd>The stonith action to perform on the node identified by nodename. Chosen from <code>reset</code>, <code>on</code>, and <code>off</code>. </dd>
 <p> <code>NOTE:</code> If a nodename is specified without the -T option, the stonith action defaults to <code>reset</code>.</p>
-<dt><code>-t stonith-device-type</code></p>
-<dd>The type of the stonith device to be used to effect stonith. A list of supported devices for an installation may be obtained using the -L option.</p>
-<dt><code>-v</code></p>
-<dd>Ignored.</dl>
+<dt><code>-t stonith-device-type</code></dt>
+<dd>The type of the stonith device to be used to effect stonith. A list of supported devices for an installation may be obtained using the -L option.</dd>
+<dt><code>-v</code></dt>
+<dd>Ignored.</dd></dl>
 <h2>Examples</h2>
 <p>To determine which stonith devices are available on your installation, use the -L option: </p>
 <pre><code>stonith</code> -L</pre>

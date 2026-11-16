@@ -29,37 +29,37 @@ description: "mib2c — generate template code for extending the agent"
 <p> The generated *.c and *.h files will be created in the current working directory.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a help message.</p>
-<dt><code>-c</code><i> CONFIGFILE</i></p>
-<dd> Use CONFIGFILE when generating code. These files will be searched for first in the current directory and then in the /usr/share directory (which is where the default mib2c configuration files can be found). Running mib2c without the -c CONFIGFILE option will display a description of the valid values for CONFIGFILE, that is, the available config files, including new ones that you might author.</p>
+<dt><code>-h</code></dt>
+<dd> Display a help message.</dd>
+<dt><code>-c</code><i> CONFIGFILE</i></dt>
+<dd> Use CONFIGFILE when generating code. These files will be searched for first in the current directory and then in the /usr/share directory (which is where the default mib2c configuration files can be found). Running mib2c without the -c CONFIGFILE option will display a description of the valid values for CONFIGFILE, that is, the available config files, including new ones that you might author.</dd>
 <dt>
-<dd> For example,</p>
+</dt><dd> For example,</dd>
 <dt>
-<dd> % mib2c ifTable</p>
+</dt><dd> % mib2c ifTable</dd>
 <dt>
-<dd> will display a description of the currently available values for CONFIGFILE.</p>
+</dt><dd> will display a description of the currently available values for CONFIGFILE.</dd>
 <dt>
-<dd> The following values are supported for CONFIGFILE:</p>
+</dt><dd> The following values are supported for CONFIGFILE:</dd>
 <dt>
-<dd> mib2c.mfd.conf<br />
+</dt><dd> mib2c.mfd.conf<br />
  mib2c.scalar.conf<br />
  mib2c.int_watch.conf<br />
  mib2c.iterate.conf<br />
  mib2c.create-dataset.conf<br />
  mib2c.array-user.conf<br />
  mib2c.column_defines.conf<br />
- mib2c.column_enums.conf</p>
+ mib2c.column_enums.conf</dd>
 <dt>
-<dd> GENERATING CODE FOR SCALAR OBJECTS:</p>
+</dt><dd> GENERATING CODE FOR SCALAR OBJECTS:</dd>
 <dt>
-<dd> If you&#8217;re writing code for some scalars, run: </p>
+</dt><dd> If you&#8217;re writing code for some scalars, run: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mib2c -c mib2c.scalar.conf MIBNODE</p>
 <dt>
-<dd> If you want to magically &quot;tie&quot; integer variables to integer scalars, use: </p>
+</dt><dd> If you want to magically &quot;tie&quot; integer variables to integer scalars, use: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mib2c -c mib2c.int_watch.conf MIBNODE</p>
 <dt>
-<dd> GENERATING CODE FOR TABLES: </p>
+</dt><dd> GENERATING CODE FOR TABLES: </dd>
 <p> The recommended configuration file for tables is the MIBs for Dummies, or MFD, configuration file. It hides as much of the SNMP details as possible, generating small, easy to understand functions. It is also the most flexible and well documented configuration file. See the agent/mibgroup/if-mib/ifTable/ifTable*.c files for an example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>mib2c -c mib2c.mfd.conf MIBNODE </p>
 <p> If your table data is kept somewhere else (e.g. it&#8217;s in the kernel and not in the memory of the agent itself) and you need to &quot;iterate&quot; over it to find the right data for the SNMP row being accessed. See the agent/mibgroup/mibII/vacm_context.c file for an example: </p>
@@ -75,36 +75,36 @@ description: "mib2c — generate template code for extending the agent"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mib2c -c mib2c.column_enums.conf MIBNODE</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>GENERATING CODE FOR THE 4.X LINE OF CODE (THE OLDER API)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mib2c -c mib2c.old-api.conf MIBNODE</p>
-<dt><code>-I</code><i>PATH</i></p>
-<dd> Search for configuration files in PATH. Multiple paths can be specified using multiple -I switches or by using one with a comma separated list of paths in it.</p>
-<dt><code>-f</code><i> OUTNAME</i></p>
-<dd> Places the output code into OUTNAME.c and OUTNAME.h. Normally, mib2c will place the output code into files which correspond to the table names it is generating code for, which is probably what you want anyway.</p>
-<dt><code>-i</code></p>
-<dd> Do not run indent on the resulting code.</p>
-<dt><code>-s</code></p>
-<dd> Do not look for MIBNODE.sed and run sed on the resulting code. This is useful to shorten long mib variable names in the code.</p>
-<dt><code>-q</code></p>
-<dd> Run in &quot;quiet&quot; mode, which minimizes the status messages mib2c generates.</p>
-<dt><code>-S</code><i>VAR=VAL</i></p>
-<dd> Preset a variable VAR, in the mib2c.*.conf file, to the value VAL. None of the existing mib2c configuration files (mib2c.*.conf) currently makes use of this feature, however, so this option should be considered available only for future use.</dl>
+<dt><code>-I</code><i>PATH</i></dt>
+<dd> Search for configuration files in PATH. Multiple paths can be specified using multiple -I switches or by using one with a comma separated list of paths in it.</dd>
+<dt><code>-f</code><i> OUTNAME</i></dt>
+<dd> Places the output code into OUTNAME.c and OUTNAME.h. Normally, mib2c will place the output code into files which correspond to the table names it is generating code for, which is probably what you want anyway.</dd>
+<dt><code>-i</code></dt>
+<dd> Do not run indent on the resulting code.</dd>
+<dt><code>-s</code></dt>
+<dd> Do not look for MIBNODE.sed and run sed on the resulting code. This is useful to shorten long mib variable names in the code.</dd>
+<dt><code>-q</code></dt>
+<dd> Run in &quot;quiet&quot; mode, which minimizes the status messages mib2c generates.</dd>
+<dt><code>-S</code><i>VAR=VAL</i></dt>
+<dd> Preset a variable VAR, in the mib2c.*.conf file, to the value VAL. None of the existing mib2c configuration files (mib2c.*.conf) currently makes use of this feature, however, so this option should be considered available only for future use.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following generates C template code for the header and implementation files to implement UCD-DEMO-MIB::ucdDemoPublic.</p>
 <dl>
 <dt>
-<dd> % mib2c -c mib2c.scalar.conf ucdDemoPublic<br />
+</dt><dd> % mib2c -c mib2c.scalar.conf ucdDemoPublic<br />
  writing to ucdDemoPublic.h<br />
  writing to ucdDemoPublic.c<br />
  running indent on ucdDemoPublic.h<br />
- running indent on ucdDemoPublic.c</dl>
+ running indent on ucdDemoPublic.c</dd></dl>
 <p> The resulting ucdDemoPublic.c and ucdDemoPublic.h files are generated the current working directory. </p>
 <p> The following generates C template code for the header and implementation files for the module to implement TCP-MIB::tcpConnTable.</p>
 <dl>
 <dt>
-<dd> % mib2c -c mib2c.iterate.conf tcpConnTable<br />
+</dt><dd> % mib2c -c mib2c.iterate.conf tcpConnTable<br />
  writing to tcpConnTable.h<br />
  writing to tcpConnTable.c<br />
  running indent on tcpConnTable.h<br />
- running indent on tcpConnTable.c</dl>
+ running indent on tcpConnTable.c</dd></dl>
 <p> The resulting tcpConnTable.c and tcpConnTable.h files are generated in the current working directory. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-snmp-conf/">snmp.conf</a>(5) </p>

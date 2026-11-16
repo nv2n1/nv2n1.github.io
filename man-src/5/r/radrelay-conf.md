@@ -51,7 +51,7 @@ description: "radrelay.conf – configuration file for the FreeRADIUS server \"r
 <br>
  }
 <br></pre>
-</dl>
+</dd></dl>
 <p> This configuration will cause accounting packets to be logged to the <i>${radacctdir}/radrelay/detail</i> file. This file should not be rotated by standard log rotation scripts, as the <code>radrelay</code> program will read and rotate it.</p>
 <h2>Radrelay.Conf Example</h2>
 <p>See the <code>radrelay.conf</code> file for detailed instructions on configuration entries, what they mean, and how to use them. </p>
@@ -71,7 +71,7 @@ description: "radrelay.conf – configuration file for the FreeRADIUS server \"r
 <br>
  }
 <br></pre>
-</dl>
+</dd></dl>
 <p> The server will read the accounting packets from the detail file, and process them just as if it had received them from the NAS. Therefore, you should configure the &quot;accounting&quot; section of <code>radrelay.conf</code> to write the accounting records to an &quot;sql&quot; module, or to proxy them to another RADIUS server. </p>
 <p> Then, start the server via the following command: </p>
 <p> $ radiusd -n radrelay </p>

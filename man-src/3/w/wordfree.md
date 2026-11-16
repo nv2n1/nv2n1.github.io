@@ -28,31 +28,31 @@ void wordfree(wordexp_t *p);</code></pre>
 <h3>The flags argument</h3>
 <p>The <i>flag</i> argument is a bitwise inclusive OR of the following values:</p>
 <dl>
-<dt><code>WRDE_APPEND</code></p>
-<dd>Append the words found to the array resulting from a previous call.</p>
-<dt><code>WRDE_DOOFFS</code></p>
-<dd>Insert <i>we_offs</i> initial NULLs in the array <i>we_wordv</i>. (These are not counted in the returned <i>we_wordc</i>.)</p>
-<dt><code>WRDE_NOCMD</code></p>
-<dd>Don&#8217;t do command substitution.</p>
-<dt><code>WRDE_REUSE</code></p>
-<dd>The argument <i>p</i> resulted from a previous call to <code>wordexp</code>(), and <code>wordfree</code>() was not called. Reuse the allocated storage.</p>
-<dt><code>WRDE_SHOWERR</code></p>
-<dd>Normally during command substitution <i>stderr</i> is redirected to <i>/dev/null</i>. This flag specifies that <i>stderr</i> is not to be redirected.</p>
-<dt><code>WRDE_UNDEF</code></p>
-<dd>Consider it an error if an undefined shell variable is expanded.</dl>
+<dt><code>WRDE_APPEND</code></dt>
+<dd>Append the words found to the array resulting from a previous call.</dd>
+<dt><code>WRDE_DOOFFS</code></dt>
+<dd>Insert <i>we_offs</i> initial NULLs in the array <i>we_wordv</i>. (These are not counted in the returned <i>we_wordc</i>.)</dd>
+<dt><code>WRDE_NOCMD</code></dt>
+<dd>Don&#8217;t do command substitution.</dd>
+<dt><code>WRDE_REUSE</code></dt>
+<dd>The argument <i>p</i> resulted from a previous call to <code>wordexp</code>(), and <code>wordfree</code>() was not called. Reuse the allocated storage.</dd>
+<dt><code>WRDE_SHOWERR</code></dt>
+<dd>Normally during command substitution <i>stderr</i> is redirected to <i>/dev/null</i>. This flag specifies that <i>stderr</i> is not to be redirected.</dd>
+<dt><code>WRDE_UNDEF</code></dt>
+<dd>Consider it an error if an undefined shell variable is expanded.</dd></dl>
 <h2>Return Value</h2>
 <p>In case of success 0 is returned. In case of error one of the following five values is returned.</p>
 <dl>
-<dt><code>WRDE_BADCHAR</code></p>
-<dd>Illegal occurrence of newline or one of |, &amp;, ;, &lt;, &gt;, (, ), {, }.</p>
-<dt><code>WRDE_BADVAL</code></p>
-<dd>An undefined shell variable was referenced, and the <code>WRDE_UNDEF</code> flag told us to consider this an error.</p>
-<dt><code>WRDE_CMDSUB</code></p>
-<dd>Command substitution requested, but the <code>WRDE_NOCMD</code> flag told us to consider this an error.</p>
-<dt><code>WRDE_NOSPACE</code></p>
-<dd>Out of memory.</p>
-<dt><code>WRDE_SYNTAX</code></p>
-<dd>Shell syntax error, such as unbalanced parentheses or unmatched quotes.</dl>
+<dt><code>WRDE_BADCHAR</code></dt>
+<dd>Illegal occurrence of newline or one of |, &amp;, ;, &lt;, &gt;, (, ), {, }.</dd>
+<dt><code>WRDE_BADVAL</code></dt>
+<dd>An undefined shell variable was referenced, and the <code>WRDE_UNDEF</code> flag told us to consider this an error.</dd>
+<dt><code>WRDE_CMDSUB</code></dt>
+<dd>Command substitution requested, but the <code>WRDE_NOCMD</code> flag told us to consider this an error.</dd>
+<dt><code>WRDE_NOSPACE</code></dt>
+<dd>Out of memory.</dd>
+<dt><code>WRDE_SYNTAX</code></dt>
+<dd>Shell syntax error, such as unbalanced parentheses or unmatched quotes.</dd></dl>
 <h2>Versions</h2>
 <p><code>wordexp</code>() and <code>wordfree</code>() are provided in glibc since version 2.1.</p>
 <h2>Attributes</h2>

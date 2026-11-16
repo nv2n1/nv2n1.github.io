@@ -15,7 +15,7 @@ revalidate_disk - wrapper for lower-level driver's revalidate_disk call-back
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>struct gendisk to be revalidated</dl>
+<dl><dd></dd><dd>struct gendisk to be revalidated</dd></dl>
 
 <h2>Description</h2>
 

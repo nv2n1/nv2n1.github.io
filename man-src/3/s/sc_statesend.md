@@ -11,7 +11,6 @@ description: "sc::StateSend –"
 <p> <code>StateSend</code> is a concrete specialization of <code>MsgStateSend</code> that does the send part of <code>point</code> to <code>point</code> communication in a <code>MessageGrp</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateSend</code>.</p>
 <h3>Public Member Functions</h3>

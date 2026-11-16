@@ -19,21 +19,19 @@ description: "multixterm – drive multiple xterms separately or together"
 <p> Typing in the stdin window while holding down the alt or meta keys sends an escape character before the typed characters. This provides support for programs such as emacs. </p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-xa</p>
-<dd> The optional -xa argument indicates arguments to pass to xterm. </p>
-<dt>-xc</p>
-<dd> The optional -xc argument indicates a command to be run in each named xterm (see -xn). With no -xc argument, the command is the current shell. </p>
-<dt>-xd</p>
-<dd> The optional -xd argument indicates a directory to search for files that will appear in the Files menu. By default, the directory is: ~/lib/multixterm </p>
-<dt>-xf</p>
-<dd> The optional -xf argument indicates a file to be read at startup. See FILES below for more info. </p>
-<dt>-xn</p>
-<dd> The optional -xn argument indicates a name for each xterm. This name will also be substituted for any %n in the command argument (see -xc). </p>
-<dt>-xv</p>
-<dd> The optional -xv flag puts multixterm into a verbose mode where it will describe some of the things it is doing internally. The verbose output is not intended to be understandable to anyone but the author. </p>
+<dt>-xa</dt>
+<dd> The optional -xa argument indicates arguments to pass to xterm. </dd>
+<dt>-xc</dt>
+<dd> The optional -xc argument indicates a command to be run in each named xterm (see -xn). With no -xc argument, the command is the current shell. </dd>
+<dt>-xd</dt>
+<dd> The optional -xd argument indicates a directory to search for files that will appear in the Files menu. By default, the directory is: ~/lib/multixterm </dd>
+<dt>-xf</dt>
+<dd> The optional -xf argument indicates a file to be read at startup. See FILES below for more info. </dd>
+<dt>-xn</dt>
+<dd> The optional -xn argument indicates a name for each xterm. This name will also be substituted for any %n in the command argument (see -xc). </dd>
+<dt>-xv</dt>
+<dd> The optional -xv flag puts multixterm into a verbose mode where it will describe some of the things it is doing internally. The verbose output is not intended to be understandable to anyone but the author. </dd>
 </dl>
 </dl>
 <p> Less common options may be changed by the startup file (see FILES below). </p>

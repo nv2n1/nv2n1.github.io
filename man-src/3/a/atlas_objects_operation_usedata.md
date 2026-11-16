@@ -47,13 +47,13 @@ description: "Atlas::Objects::Operation::UseData – Use a currently wielded too
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>.</p>
 <h3>static <code>UseData</code>* Atlas::Objects::Operation::UseData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

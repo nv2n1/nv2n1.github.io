@@ -28,32 +28,32 @@ description: "term – conventions for naming terminal types"
 <p> The root name for a terminal emulator (assuming it does not fit one of the standard ANSI or vt100 types) should be the program name or a readily recognizable abbreviation of it (i.e., <code>versaterm</code>, <code>ctrm</code>). </p>
 <p> Following the root name, you may add any reasonable number of hyphen-separated feature suffixes.</p>
 <dl>
-<dt>2p</p>
-<dd>Has two pages of memory. Likewise 4p, 8p, etc.</p>
-<dt>mc</p>
-<dd>Magic-cookie. Some terminals (notably older Wyses) can only support one attribute without magic-cookie lossage. Their base entry is usually paired with another that has this suffix and uses magic cookies to support multiple attributes.</p>
-<dt>-am</p>
-<dd>Enable auto-margin (right-margin wraparound).</p>
-<dt>-m</p>
-<dd>Mono mode &#8211; suppress color support.</p>
-<dt>-na</p>
-<dd>No arrow keys &#8211; termcap ignores arrow keys which are actually there on the terminal, so the user can use the arrow keys locally.</p>
-<dt>-nam</p>
-<dd>No auto-margin &#8211; suppress am capability.</p>
-<dt>-nl</p>
-<dd>No labels &#8211; suppress soft labels.</p>
-<dt>-nsl</p>
-<dd>No status line &#8211; suppress status line.</p>
-<dt>-pp</p>
-<dd>Has a printer port which is used.</p>
-<dt>-rv</p>
-<dd>Terminal in reverse video mode (black on white).</p>
-<dt>-s</p>
-<dd>Enable status line.</p>
-<dt>-vb</p>
-<dd>Use visible bell (flash) rather than beep.</p>
-<dt>-w</p>
-<dd>Wide; terminal is in 132-column mode.</dl>
+<dt>2p</dt>
+<dd>Has two pages of memory. Likewise 4p, 8p, etc.</dd>
+<dt>mc</dt>
+<dd>Magic-cookie. Some terminals (notably older Wyses) can only support one attribute without magic-cookie lossage. Their base entry is usually paired with another that has this suffix and uses magic cookies to support multiple attributes.</dd>
+<dt>-am</dt>
+<dd>Enable auto-margin (right-margin wraparound).</dd>
+<dt>-m</dt>
+<dd>Mono mode &#8211; suppress color support.</dd>
+<dt>-na</dt>
+<dd>No arrow keys &#8211; termcap ignores arrow keys which are actually there on the terminal, so the user can use the arrow keys locally.</dd>
+<dt>-nam</dt>
+<dd>No auto-margin &#8211; suppress am capability.</dd>
+<dt>-nl</dt>
+<dd>No labels &#8211; suppress soft labels.</dd>
+<dt>-nsl</dt>
+<dd>No status line &#8211; suppress status line.</dd>
+<dt>-pp</dt>
+<dd>Has a printer port which is used.</dd>
+<dt>-rv</dt>
+<dd>Terminal in reverse video mode (black on white).</dd>
+<dt>-s</dt>
+<dd>Enable status line.</dd>
+<dt>-vb</dt>
+<dd>Use visible bell (flash) rather than beep.</dd>
+<dt>-w</dt>
+<dd>Wide; terminal is in 132-column mode.</dd></dl>
 <p> Conventionally, if your terminal type is a variant intended to specify a line height, that suffix should go first. So, for a hypothetical FuBarCo model 2317 terminal in 30-line mode with reverse video, best form would be <code>fubar-30-rv</code> (rather than, say, &#8220;fubar-rv-30&#8221;). </p>
 <p> Terminal types that are written not as standalone entries, but rather as components to be plugged into other entries via <code>use</code> capabilities, are distinguished by using embedded plus signs rather than dashes. </p>
 <p> Commands which use a terminal type to control display often accept a -T option that accepts a terminal name argument. Such programs should fall back on the <code>TERM</code> environment variable when no -T option is specified.</p>
@@ -61,11 +61,11 @@ description: "term – conventions for naming terminal types"
 <p>For maximum compatibility with older System V UNIXes, names and aliases should be unique within the first 14 characters.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/terminfo/?/*</p>
-<dd>compiled terminal capability database</p>
-<dt>/etc/inittab</p>
-<dd>tty line initialization (AT&amp;T-like UNIXes)</p>
-<dt>/etc/ttys</p>
-<dd>tty line initialization (BSD-like UNIXes)</dl>
+<dt>/etc/terminfo/?/*</dt>
+<dd>compiled terminal capability database</dd>
+<dt>/etc/inittab</dt>
+<dd>tty line initialization (AT&amp;T-like UNIXes)</dd>
+<dt>/etc/ttys</dt>
+<dd>tty line initialization (BSD-like UNIXes)</dd></dl>
 <h2>See Also</h2>
 <p><code>ncurses</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5), <code><a href="/docs/linux/man/5-term/">term</a></code>(5). </p>

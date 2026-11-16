@@ -10,10 +10,8 @@ description: "std::is_scalar – std::is_scalar"
 <p>std::is_scalar &#8211; std::is_scalar</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_scalar;</code></pre>
 <p>If T is a scalar_type (that is a possibly cv-qualified arithmetic, pointer, pointer_to_member, enumeration, or std::nullptr_t type), provides the member constant value equal true. For any other type, value is false. </p>
 <h2>Template parameters</h2>
@@ -49,7 +47,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
 {

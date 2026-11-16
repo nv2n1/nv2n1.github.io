@@ -13,12 +13,12 @@ description: "mongoc_stream_file_get_fd() – This function shall return the und
 mongoc_stream_file_get_fd (mongoc_stream_file_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_file_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_file_t</code> \&amp;.</dd></dl>
 <p> This function shall return the underlying file-descriptor of a <code>mongoc_stream_file_t</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Performing operations on the underlying file-descriptor may not be safe if used in conjunction with buffering. Avoid reading or writing from this file-descriptor.</dl>
+<dd>Performing operations on the underlying file-descriptor may not be safe if used in conjunction with buffering. Avoid reading or writing from this file-descriptor.</dd></dl>
 <h2>Returns</h2>
 <p>A file-descriptor that should not be modified by the caller. </p>
 <h2>Colophon</h2>

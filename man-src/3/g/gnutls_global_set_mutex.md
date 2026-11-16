@@ -14,14 +14,14 @@ description: "gnutls_global_set_mutex – API function"
 <p> <code>void gnutls_global_set_mutex(mutex_init_func </code><i>init</i><code>, mutex_deinit_func </code><i>deinit</i><code>, mutex_lock_func </code><i>lock</i><code>, mutex_unlock_func </code><i>unlock</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>mutex_init_func init</p>
-<dd> mutex initialization function</p>
-<dt>mutex_deinit_func deinit</p>
-<dd> mutex deinitialization function</p>
-<dt>mutex_lock_func lock</p>
-<dd> mutex locking function</p>
-<dt>mutex_unlock_func unlock</p>
-<dd> mutex unlocking function</dl>
+<dt>mutex_init_func init</dt>
+<dd> mutex initialization function</dd>
+<dt>mutex_deinit_func deinit</dt>
+<dd> mutex deinitialization function</dd>
+<dt>mutex_lock_func lock</dt>
+<dd> mutex locking function</dd>
+<dt>mutex_unlock_func unlock</dt>
+<dd> mutex unlocking function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> With this function you are allowed to override the default mutex locks used in some parts of gnutls and dependent libraries. This function should be used if you have complete control of your program and libraries. Do not call this function from a library, or preferrably from any application unless really needed to. GnuTLS will use the appropriate locks for the running system. </p>
 <p> This function must be called prior to any other gnutls function.</p>
@@ -36,6 +36,6 @@ description: "gnutls_global_set_mutex – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

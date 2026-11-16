@@ -18,15 +18,15 @@ description: "shtool slo – GNU shtool separate linker options by library class
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-p</code>, <code>&#8211;prefix</code> <i>str</i></p>
+<dt><code>-p</code>, <code>&#8211;prefix</code> <i>str</i></dt>
 <dd>
 <pre>
     FIXME
 </pre>
-<dt><code>-L</code><i>dir</i></p>
-<dd> Directory where libraries are searched in.</p>
-<dt><code>-l</code><i>lib</i></p>
-<dd> Library to search for.</dl>
+</dd><dt><code>-L</code><i>dir</i></dt>
+<dd> Directory where libraries are searched in.</dd>
+<dt><code>-l</code><i>lib</i></dt>
+<dd> Library to search for.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   configure.in

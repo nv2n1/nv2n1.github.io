@@ -14,24 +14,24 @@ description: "rio_map_inb_region – – Map inbound memory region."
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port.</dl>
+</dd><dd>Master port.</dd></dl>
 <p> <i>local</i></p>
 <dl>
-<dd>physical address of memory region to be mapped</dl>
+<dd>physical address of memory region to be mapped</dd></dl>
 <p> <i>rbase</i></p>
 <dl>
-<dd>RIO base address assigned to this window</dl>
+<dd>RIO base address assigned to this window</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>Size of the memory region</dl>
+<dd>Size of the memory region</dd></dl>
 <p> <i>rflags</i></p>
 <dl>
-<dd>Flags for mapping.</dl>
+<dd>Flags for mapping.</dd></dl>
 <h2>Return</h2>
 <p>0 &#8212; Success. </p>
 <p> This function will create the mapping from RIO space to local memory.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -10,45 +10,29 @@ description: "std::static_pointer_cast,std::dynamic_pointer_cast,std::const_poin
 <p>std::static_pointer_cast,std::dynamic_pointer_cast,std::const_pointer_cast,std::reinterpret_pointer_cast &#8211; std::static_pointer_cast,std::dynamic_pointer_cast,std::const_pointer_cast,std::reinterpret_pointer_cast</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T, class U&gt;
     (1)(since C++ 11)
-
         std::shared_ptr&lt;T&gt; static_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (2)(since C++ 20)
-
     std::shared_ptr&lt;T&gt; static_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (3)(since C++ 11)
-
     std::shared_ptr&lt;T&gt; dynamic_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (4)(since C++ 20)
-
     std::shared_ptr&lt;T&gt; dynamic_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (5)(since C++ 11)
-
     std::shared_ptr&lt;T&gt; const_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (6)(since C++ 20)
-
     std::shared_ptr&lt;T&gt; const_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (7)(since C++ 17)
-
     std::shared_ptr&lt;T&gt; reinterpret_pointer_cast(const std::shared_ptr&lt;U&gt; &amp;r) noexcept;
-
 template &lt;class T, class U&gt;
 (8)(since C++ 20)
-
     std::shared_ptr&lt;T&gt; reinterpret_pointer_cast(std::shared_ptr&lt;U&gt; &amp;&amp;r) noexcept;</code></pre>
 <p>Creates a new instance of std::shared_ptr whose stored pointer is obtained from r&#8217;s stored pointer using a cast expression.<br />
 If r is empty, so is the new shared_ptr (but its stored pointer is not necessarily null). Otherwise, the new shared_ptr will share ownership with the initial value of r, except that it is empty if the dynamic_cast performed by dynamic_pointer_cast returns a null pointer.<br />
@@ -102,10 +86,8 @@ After calling the rvalue overloads (2,4,6,8), r is empty and r.get() == nullptr,
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Base
-
 {
     int a;
     virtual void f() const
@@ -118,7 +100,6 @@ struct Base
     }
 };
 struct Derived : Base
-
 {
     void f() const override
     {

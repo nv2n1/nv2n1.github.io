@@ -25,61 +25,61 @@ description: "aiptek – Aiptek USB Digital Tablet Input Driver for Linux"
 <p> Multiple instances of the Aiptek devices can cohabit. It can be useful to define multiple devices with different active zones. Each device supports the following entries:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Option </code><i>Type</i> <i>stylus|eraser|cursor</i></p>
-<dd>sets the type of tool the device represent. This option is mandatory.</p>
-<dt><code>Option </code><i>Device</i> <i>path</i></p>
-<dd>sets the path to the special file which represents serial line where the tablet is plugged. You have to specify it for each subsection with the same value if you want to have multiple devices with the same tablet. This option is mandatory.</p>
-<dt><code>Option </code><i>USB</i> <i>on</i></p>
-<dd>specifies that you are using the USB bus to communicate with your tablet. This setting is mandatory, as USB is the only protocol supported by this driver.</p>
-<dt><code>Option </code><i>DeviceName</i> <i>name</i></p>
-<dd>sets the name of the X device.</p>
-<dt><code>Option </code><i>Mode</i> <i>Relative|Absolute</i></p>
-<dd>sets the mode of the device.</p>
-<dt><code>Option </code><i>HistorySize</i> <i>number</i></p>
-<dd>sets the motion history size. By default the value is zero.</p>
-<dt><code>Option </code><i>AlwaysCore</i> <i>on</i></p>
-<dd>enables the sharing of the core pointer. When this feature is enabled, the device will take control of the core pointer (and thus will emit core events) and at the same time will be able, when asked so, to report extended events. You can use the last available integer feedback to control this feature. When the value of the feedback is zero, the feature is disabled. The feature is enabled for any other value.</p>
-<dt><code>Option </code><i>XTop</i> <i>number</i></p>
-<dd>First of three sets of parameters to set the active zone. This sets the X coordinate of the top corner of the active zone. <i>&quot;TopX&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YTop</i> <i>number</i></p>
-<dd>First of three sets of parameters to set the active zone. This sets the Y coordinate of the top corner of the active zone. <i>&quot;TopY&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>XBottom</i> <i>Inumber</i></p>
-<dd>First of three sets of parameters to set the active zone. This sets the X coordinate of the bottom corner of the active zone. <i>&quot;BottomX&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YBottom</i> <i>number</i></p>
-<dd>First of three sets of parameters to set the active zone. This sets the Y coordinate of the bottom corner of the active zone. <i>&quot;BottomY&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>XMax</i> <i>number</i></p>
-<dd>Second of three sets of parameters to set the active zone. This sets the the X coordinate of the bottom corner of the active zone. The Top X corner&#8217;s coordinate is fixed at 0. <i>&quot;MaxX&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YMax</i> <i>number</i></p>
-<dd>Second of three sets of parameters to set the active zone. This sets the the Y coordinate of the bottom corner of the active zone. The Top Y corner&#8217;s coordinate is fixed at 0. <i>&quot;MaxY&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>XOffset</i> <i>number</i></p>
-<dd>Third of three sets of parameters to set the active zone. This sets the X coordinate of the top corner of the active zone. <i>&quot;OffsetX&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YOffset</i> <i>number</i></p>
-<dd>Third of three sets of parameters to set the active zone. This sets the Y coordinate of the top corner of the active zone. <i>&quot;OffsetY&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>XSize</i> <i>number</i></p>
-<dd>Third of three sets of parameters to set the active zone. This sets the X coordinate of the bottom corner of the active zone. Unlike others, this parameter is expressed in <i>relative</i> coordinates from the <i>&quot;XOffset&quot;</i> parameter. <i>&quot;XSize&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YSize</i> <i>number</i></p>
-<dd>Third of three sets of parameters to set the active zone. This sets the Y coordinate of the bottom corner of the active zone. Unlike others, this parameter is expressed in <i>relative</i> coordinates from the <i>&quot;YOffset&quot;</i> parameter. <i>&quot;YSize&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>ZMin</i> <i>number</i></p>
-<dd>Minimum pressure reading that will be accepted from the Stylus tool. <i>&quot;MinZ</i>&quot; is a synonym.</p>
-<dt><code>Option </code><i>ZMax</i> <i>number</i></p>
-<dd>Maximum pressure reading that will be accepted from the Stylus tool. <i>&quot;MaxZ</i>&quot; is a synonym.</p>
-<dt><code>Option </code><i>XThreshold</i> <i>number</i></p>
-<dd>Minimal change in X coordinate position that will be accepted as data input. <i>&quot;ThresholdX&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>YThreshold</i> <i>number</i></p>
-<dd>Minimal change in Y coordinate position that will be accepted as data input. <i>&quot;ThresholdY&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>ZThreshold</i> <i>number</i></p>
-<dd>Minimal change in pressure reading that will be accepted as data input. <i>&quot;ThresholdZ&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>InvX</i> <i>on</i></p>
-<dd>Inverts X coordinate reports. <i>&quot;XInv&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>InvY</i> <i>on</i></p>
-<dd>Inverts Y coordinate reports. <i>&quot;YInv&quot;</i> is a synonym.</p>
-<dt><code>Option </code><i>Pressure</i> <i>soft|hard|linear</i></p>
-<dd>Pressure reports either delivered in linearly incremental values (default), or perturbed by one of two log-linear algorithms (<i>&quot;soft&quot;</i> or <i>&quot;hard&quot;</i>.)</p>
-<dt><code>Option </code><i>KeepShape</i> <i>on</i></p>
-<dd>When this option is enabled, the active zone begins according to TopX and TopY. The bottom corner is adjusted to keep the ratio width/height of the active zone the same as the screen while maximizing the area described by the active area set of parameters, XTop/YTop/XBottom/YBottom, XMax/YMax, or XOffset/YOffset/XSize/YSize.</p>
-<dt><code>Option </code><i>DebugLevel</i> <i>number </i></p>
-<dd>sets the level of debugging info reported.</dl>
+</dd><dl>
+<dt><code>Option </code><i>Type</i> <i>stylus|eraser|cursor</i></dt>
+<dd>sets the type of tool the device represent. This option is mandatory.</dd>
+<dt><code>Option </code><i>Device</i> <i>path</i></dt>
+<dd>sets the path to the special file which represents serial line where the tablet is plugged. You have to specify it for each subsection with the same value if you want to have multiple devices with the same tablet. This option is mandatory.</dd>
+<dt><code>Option </code><i>USB</i> <i>on</i></dt>
+<dd>specifies that you are using the USB bus to communicate with your tablet. This setting is mandatory, as USB is the only protocol supported by this driver.</dd>
+<dt><code>Option </code><i>DeviceName</i> <i>name</i></dt>
+<dd>sets the name of the X device.</dd>
+<dt><code>Option </code><i>Mode</i> <i>Relative|Absolute</i></dt>
+<dd>sets the mode of the device.</dd>
+<dt><code>Option </code><i>HistorySize</i> <i>number</i></dt>
+<dd>sets the motion history size. By default the value is zero.</dd>
+<dt><code>Option </code><i>AlwaysCore</i> <i>on</i></dt>
+<dd>enables the sharing of the core pointer. When this feature is enabled, the device will take control of the core pointer (and thus will emit core events) and at the same time will be able, when asked so, to report extended events. You can use the last available integer feedback to control this feature. When the value of the feedback is zero, the feature is disabled. The feature is enabled for any other value.</dd>
+<dt><code>Option </code><i>XTop</i> <i>number</i></dt>
+<dd>First of three sets of parameters to set the active zone. This sets the X coordinate of the top corner of the active zone. <i>&quot;TopX&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YTop</i> <i>number</i></dt>
+<dd>First of three sets of parameters to set the active zone. This sets the Y coordinate of the top corner of the active zone. <i>&quot;TopY&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>XBottom</i> <i>Inumber</i></dt>
+<dd>First of three sets of parameters to set the active zone. This sets the X coordinate of the bottom corner of the active zone. <i>&quot;BottomX&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YBottom</i> <i>number</i></dt>
+<dd>First of three sets of parameters to set the active zone. This sets the Y coordinate of the bottom corner of the active zone. <i>&quot;BottomY&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>XMax</i> <i>number</i></dt>
+<dd>Second of three sets of parameters to set the active zone. This sets the the X coordinate of the bottom corner of the active zone. The Top X corner&#8217;s coordinate is fixed at 0. <i>&quot;MaxX&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YMax</i> <i>number</i></dt>
+<dd>Second of three sets of parameters to set the active zone. This sets the the Y coordinate of the bottom corner of the active zone. The Top Y corner&#8217;s coordinate is fixed at 0. <i>&quot;MaxY&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>XOffset</i> <i>number</i></dt>
+<dd>Third of three sets of parameters to set the active zone. This sets the X coordinate of the top corner of the active zone. <i>&quot;OffsetX&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YOffset</i> <i>number</i></dt>
+<dd>Third of three sets of parameters to set the active zone. This sets the Y coordinate of the top corner of the active zone. <i>&quot;OffsetY&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>XSize</i> <i>number</i></dt>
+<dd>Third of three sets of parameters to set the active zone. This sets the X coordinate of the bottom corner of the active zone. Unlike others, this parameter is expressed in <i>relative</i> coordinates from the <i>&quot;XOffset&quot;</i> parameter. <i>&quot;XSize&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YSize</i> <i>number</i></dt>
+<dd>Third of three sets of parameters to set the active zone. This sets the Y coordinate of the bottom corner of the active zone. Unlike others, this parameter is expressed in <i>relative</i> coordinates from the <i>&quot;YOffset&quot;</i> parameter. <i>&quot;YSize&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>ZMin</i> <i>number</i></dt>
+<dd>Minimum pressure reading that will be accepted from the Stylus tool. <i>&quot;MinZ</i>&quot; is a synonym.</dd>
+<dt><code>Option </code><i>ZMax</i> <i>number</i></dt>
+<dd>Maximum pressure reading that will be accepted from the Stylus tool. <i>&quot;MaxZ</i>&quot; is a synonym.</dd>
+<dt><code>Option </code><i>XThreshold</i> <i>number</i></dt>
+<dd>Minimal change in X coordinate position that will be accepted as data input. <i>&quot;ThresholdX&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>YThreshold</i> <i>number</i></dt>
+<dd>Minimal change in Y coordinate position that will be accepted as data input. <i>&quot;ThresholdY&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>ZThreshold</i> <i>number</i></dt>
+<dd>Minimal change in pressure reading that will be accepted as data input. <i>&quot;ThresholdZ&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>InvX</i> <i>on</i></dt>
+<dd>Inverts X coordinate reports. <i>&quot;XInv&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>InvY</i> <i>on</i></dt>
+<dd>Inverts Y coordinate reports. <i>&quot;YInv&quot;</i> is a synonym.</dd>
+<dt><code>Option </code><i>Pressure</i> <i>soft|hard|linear</i></dt>
+<dd>Pressure reports either delivered in linearly incremental values (default), or perturbed by one of two log-linear algorithms (<i>&quot;soft&quot;</i> or <i>&quot;hard&quot;</i>.)</dd>
+<dt><code>Option </code><i>KeepShape</i> <i>on</i></dt>
+<dd>When this option is enabled, the active zone begins according to TopX and TopY. The bottom corner is adjusted to keep the ratio width/height of the active zone the same as the screen while maximizing the area described by the active area set of parameters, XTop/YTop/XBottom/YBottom, XMax/YMax, or XOffset/YOffset/XSize/YSize.</dd>
+<dt><code>Option </code><i>DebugLevel</i> <i>number </i></dt>
+<dd>sets the level of debugging info reported.</dd></dl>
 </dl>
 <p> This driver is currently Linux specific.</p>
 <h2>See Also</h2>

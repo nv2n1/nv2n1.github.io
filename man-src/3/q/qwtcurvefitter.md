@@ -26,10 +26,10 @@ description: "QwtCurveFitter –"
 <p>Find a curve which has the best fit to a series of data points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>polygon</i> Series of data points</dl>
+<dd><i>polygon</i> Series of data points</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Curve points</dl>
+<dd>Curve points</dd></dl>
 <p> Implemented in <code>QwtWeedingCurveFitter</code>, and <code>QwtSplineCurveFitter</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

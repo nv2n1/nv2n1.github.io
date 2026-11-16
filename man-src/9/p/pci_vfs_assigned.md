@@ -15,7 +15,7 @@ pci_vfs_assigned - returns number of VFs are assigned to a guest
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device</dl>
+<dl><dd></dd><dd>the PCI device</dd></dl>
 
 <h2>Description</h2>
 

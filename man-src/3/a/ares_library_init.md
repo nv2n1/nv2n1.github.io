@@ -25,12 +25,12 @@ int ares_library_init(int flags)
 <p> Win32/64 application DLLs shall not call <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i> from the DllMain function. Doing so will produce deadlocks and other problems.</p>
 <h2>FLAGS</h2>
 <dl>
-<dt><code>ARES_LIB_INIT_ALL</code></p>
-<dd> Initialize everything possible. This sets all known bits.</p>
-<dt><code>ARES_LIB_INIT_WIN32</code></p>
-<dd> Initialize Win32/64 specific libraries.</p>
-<dt><code>ARES_LIB_INIT_NONE</code></p>
-<dd> Initialize nothing extra. This sets no bit.</dl>
+<dt><code>ARES_LIB_INIT_ALL</code></dt>
+<dd> Initialize everything possible. This sets all known bits.</dd>
+<dt><code>ARES_LIB_INIT_WIN32</code></dt>
+<dd> Initialize Win32/64 specific libraries.</dd>
+<dt><code>ARES_LIB_INIT_NONE</code></dt>
+<dd> Initialize nothing extra. This sets no bit.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, ares_library_init() will return 0. Otherwise, a non-zero error number will be returned to indicate the error. Except for <i><a href="/docs/linux/man/3-ares_strerror/">ares_strerror</a>(3)</i>, you shall not call any other c-ares function upon <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i> failure.</p>
 <h2>AVAILABILITY</h2>

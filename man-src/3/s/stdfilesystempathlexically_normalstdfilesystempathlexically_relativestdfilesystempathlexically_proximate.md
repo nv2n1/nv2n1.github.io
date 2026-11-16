@@ -15,7 +15,6 @@ path lexically_proximate(const path&amp; base) const; <code>(3)</code> <i>(since
 1) Returns *this converted to normal_form in its generic format<br />
 2) Returns *this made relative to base. </p>
 <pre><code>*First, if root_name () != base.root_name() || is_absolute() != base.is_absolute() || (!has_root_directory() &amp;&amp; base.has_root_directory()), returns a default - constructed path.*Otherwise, first determines the first mismatched element of *this and base as if by auto [a, b] = mismatch(begin(), end(), base.begin(), base.end()), then
-
                                                                                                                                                                                                                                                                                                                                                     *if a
                                                                                                                                                                                                                                                                                                                                                 == end() and
                                                                                                                                                                                                                                                                                                                                             b == base.end(),
@@ -23,8 +22,6 @@ path lexically_proximate(const path&amp; base) const; <code>(3)</code> <i>(since
             * otherwise, define N as the number of nonempty filename elements that are neither dot nor dot-dot in [b, base.end()), minus the number of dot-dot filename elements, If N &lt; 0, returns a default-constructed path.
             * otherwise, if N = 0 and a == end() || a-&gt;empty(), returns path(&quot;.&quot;).
             * otherwise returns an object composed from
-
-
 * a default-constructed path() followed by
                   * N applications of operator/=(path(&quot;..&quot;)), followed by
                   * one application of operator/= for each element in the half-open range [a, end())
@@ -44,14 +41,10 @@ On Windows, the returned path has backslashes (the preferred separators), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 #include &lt;cassert&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     assert(fs::path(&quot;foo/./bar/..&quot;).lexically_normal() == &quot;foo/&quot;);
     assert(fs::path(&quot;foo/.///bar/../&quot;).lexically_normal() == &quot;foo/&quot;);

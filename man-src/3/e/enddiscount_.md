@@ -32,7 +32,7 @@ description: "QuantLib::HybridHestonHullWhiteProcess – Hybrid Heston Hull-Whit
 <p> This class implements a three factor Heston Hull-White model </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>This class was not tested enough to guarantee its functionality&#8230; work in progress</dl>
+<dd>This class was not tested enough to guarantee its functionality&#8230; work in progress</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

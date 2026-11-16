@@ -20,10 +20,10 @@ description: "XmPrintPopupPDM — Send a notification for the PDM to be popped u
 <p> In order to know if the PDM is up, or not running, the application must register a <code>XmNpdmNotificationCallback</code> with the Print Shell. </p>
 <p> <code>XmPrintPopupPDM</code> puts up an <code>InputOnly</code> window on top of the dialog, so that the end user doesn&#8217;t use the print setup dialog while the PDM is trying to come up. This window is automatically removed when the shell is about to call the callback for the first time.</p>
 <dl COMPACT>
-<dt><i>print_shell</i></p>
-<dd>The Print Shell used for this print job and context.</p>
-<dt><i>video_transient_for</i></p>
-<dd>The video widget dealing with application print setup.</dl>
+<dt><i>print_shell</i></dt>
+<dd>The Print Shell used for this print job and context.</dd>
+<dt><i>video_transient_for</i></dt>
+<dd>The video widget dealing with application print setup.</dd></dl>
 <h2>Return Value</h2>
 <p>Returns <code>XmPDM_NOTIFY_SUCCESS</code> if the function was able to send the notification out to the PDM process, <code>XmPDM_NOTIFY_FAIL</code> otherwise.</p>
 <h2>Errors/Warnings</h2>

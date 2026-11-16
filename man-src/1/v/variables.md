@@ -9,27 +9,23 @@ url: "/docs/linux/man/1-variables/"
 <h2>GRASS variables and environment variables</h2>
 <p> There are two types of variables:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> shell environment variables,</p>
+</dt><dd> shell environment variables,</dd>
 <dt>
-<dd> GRASS gisenv variables.</dl>
+</dt><dd> GRASS gisenv variables.</dd></dl>
 </dl>
 <p> There are a number of shell environment variable groups:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> PNG driver</p>
+</dt><dd> PNG driver</dd>
 <dt>
-<dd> PS driver (PostScript)</p>
+</dt><dd> PS driver (PostScript)</dd>
 <dt>
-<dd> variables for direct rendering</p>
+</dt><dd> variables for direct rendering</dd>
 <dt>
-<dd> variables for internal use</dl>
+</dt><dd> variables for internal use</dd></dl>
 </dl>
 <p> Any setting which needs to be modifiable by a GRASS program (e.g. MONITOR) has to be a GRASS <i>gisenv</i> variable.</p>
 <h2>GRASS-related Files</h2>
@@ -43,15 +39,13 @@ url: "/docs/linux/man/1-variables/"
 <p>&nbsp;<wbr>&nbsp;<wbr>Cmd.exe&nbsp;<wbr>(Windows): set VARIABLE=value</p>
 <h2>Setting environment variables permanently</h2>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> To get personal BASH shell definitions (aliases, color listing option, &#8230;) into GRASS, store them in:<br />
- $HOME/.grass.bashrc</p>
+</dt><dd> To get personal BASH shell definitions (aliases, color listing option, &#8230;) into GRASS, store them in:<br />
+ $HOME/.grass.bashrc</dd>
 <dt>
-<dd> To get personal CSH shell definitions (aliases, color listing option, &#8230;) into GRASS, store them in:<br />
- $HOME/.grass.cshrc</dl>
+</dt><dd> To get personal CSH shell definitions (aliases, color listing option, &#8230;) into GRASS, store them in:<br />
+ $HOME/.grass.cshrc</dd></dl>
 </dl>
 <h2>Setting GRASS variables</h2>
 <p> Use &quot;g.gisenv&quot; within GRASS. This permanently predefines GRASS variables in the .grassrc6 file. </p>
@@ -193,36 +187,32 @@ url: "/docs/linux/man/1-variables/"
  [all modules] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>toggles map overwrite.</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>0 &#8211; maps are protected&nbsp;<wbr>(default),</p>
+</dt><dd>
+&nbsp;<wbr>0 &#8211; maps are protected&nbsp;<wbr>(default),</dd>
 <dt>
-<dd>
-&nbsp;<wbr>1 &#8211; maps with identical names will be overwritten.</dl>
+</dt><dd>
+&nbsp;<wbr>1 &#8211; maps with identical names will be overwritten.</dd></dl>
 </dl>
 <p> This variable is automatically created by g.parser so that the dq&#8211;overwrite&quot; option will be inherited by dependant modules as the script runs. Setting either the GRASS_OVERWRITE environment variable or the OVERWRITE gisenv variable detailed below will cause maps with identical names to be overwritten. </p>
 <p> GRASS_VERBOSE<br />
  [all modules] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>toggles verbosity level</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>0 &#8211; only errors and warnings are printed</p>
+</dt><dd>
+&nbsp;<wbr>0 &#8211; only errors and warnings are printed</dd>
 <dt>
-<dd>
-&nbsp;<wbr>1 &#8211; progress messages are printed&nbsp;<wbr>(percent complete)</p>
+</dt><dd>
+&nbsp;<wbr>1 &#8211; progress messages are printed&nbsp;<wbr>(percent complete)</dd>
 <dt>
-<dd>
-&nbsp;<wbr>2 &#8211; all module messages are printed</p>
+</dt><dd>
+&nbsp;<wbr>2 &#8211; all module messages are printed</dd>
 <dt>
-<dd>
-&nbsp;<wbr>3 &#8211; additional verbose messages are printed</dl>
+</dt><dd>
+&nbsp;<wbr>3 &#8211; additional verbose messages are printed</dd></dl>
 </dl>
 <p> This variable is automatically created by <i>g.parser</i> so that the &quot;&#8211;verbose&quot; or &quot;&#8211;quiet&quot; flags will be inherited by dependant modules as the script runs. </p>
 <p> GRASS_REGION<br />

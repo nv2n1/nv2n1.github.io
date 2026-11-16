@@ -25,16 +25,16 @@ description: "afWriteFrames – write sample frames to a track in an audio file"
 <p>afWriteFrames can produce these errors: </p>
 <p> AF_BAD_FILEHANDLE</p>
 <dl COMPACT>
-<dd>the file handle was invalid</dl>
+<dd>the file handle was invalid</dd></dl>
 <p> AF_BAD_TRACKID</p>
 <dl COMPACT>
-<dd>the track is not AF_DEFAULT_TRACK</dl>
+<dd>the track is not AF_DEFAULT_TRACK</dd></dl>
 <p> AF_BAD_WRITE</p>
 <dl COMPACT>
-<dd>writing audio data to the file failed</dl>
+<dd>writing audio data to the file failed</dd></dl>
 <p> AF_BAD_LSEEK</p>
 <dl COMPACT>
-<dd>seeking within the file failed</dl>
+<dd>seeking within the file failed</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afreadframes/">afReadFrames</a></code>(3)</p>
 <h2>Author</h2>

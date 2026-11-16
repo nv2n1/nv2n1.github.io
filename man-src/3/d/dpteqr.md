@@ -19,7 +19,7 @@ description: "dpteqr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DPTEQR computes all eigenvalues and, optionally, eigenvectors of a
  symmetric positive definite tridiagonal matrix by first factoring the
@@ -37,11 +37,11 @@ description: "dpteqr.f –"
  relative accuracy in the small eigenvalues of the original matrix, if
  these eigenvalues range over many orders of magnitude.)
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>COMPZ</i> </p>
+</dt><dd> <i>COMPZ</i> </dd>
 <pre>
           COMPZ is CHARACTER*1
           = 'N':  Compute eigenvalues only.
@@ -96,14 +96,14 @@ if INFO
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 146 of file dpteqr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

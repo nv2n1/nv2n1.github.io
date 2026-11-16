@@ -21,12 +21,12 @@ description: "Callout Configuration –"
 <p> Read callout configuration from file. </p>
 <p> This function read a configuration file with the following format:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Anything after a <i>#</i> is assumed to be a comment</p>
-<dt>&bull;</p>
-<dd> Blanks lines are ignored</p>
-<dt>&bull;</p>
-<dd> Lines specifying callouts have the format</dl>
+<dt>&bull;</dt>
+<dd> Anything after a <i>#</i> is assumed to be a comment</dd>
+<dt>&bull;</dt>
+<dd> Blanks lines are ignored</dd>
+<dt>&bull;</dt>
+<dd> Lines specifying callouts have the format</dd></dl>
 <pre>
        abstract type           library         symbol
 </pre>
@@ -34,38 +34,38 @@ description: "Callout Configuration –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle that is to be configured<br />
- <i>filename</i> The file to read configuration from</dl>
+</dt><dd> <i>handle</i> The handle that is to be configured<br />
+ <i>filename</i> The file to read configuration from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dl>
+</dt><dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE</i> Error opening filename<br />
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE</i> Error opening filename<br />
  <i>GLOBUS_CALLOUT_ERROR_PARSING_CONF_FILE</i> Error parsing file<br />
- <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dl>
+ <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h3>globus_result_t globus_callout_register (<code>globus_callout_handle_t</code>handle, char *type, char *library, char *symbol)</h3>
 <p> Register callout configuration </p>
 <p> This function registers a callout type in the given handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle that is to be configured<br />
+</dt><dd> <i>handle</i> The handle that is to be configured<br />
  <i>type</i> The abstract type of the callout<br />
  <i>library</i> The location of the library containing the callout<br />
- <i>symbol</i> The symbol (ie function name) for the callout</dl>
+ <i>symbol</i> The symbol (ie function name) for the callout</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dl>
+</dt><dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dl>
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

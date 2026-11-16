@@ -10,35 +10,33 @@ description: "xcb_poly_point –"
 <p>xcb_poly_point &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_poly_point(xcb_connection_t *conn, uint8_t coordinate_mode, xcb_drawable_t drawable, xcb_gcontext_t gc, uint32_t points_len, const xcb_point_t *points);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>coordinate_mode</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>coordinate_mode</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_COORD_MODE_ORIGIN</i></p>
-<dd>Treats all coordinates as relative to the origin.</p>
-<dt><i>XCB_COORD_MODE_PREVIOUS</i></p>
-<dd>Treats all coordinates after the first as relative to the previous coordinate.</dl>
+</dd><dl>
+<dt><i>XCB_COORD_MODE_ORIGIN</i></dt>
+<dd>Treats all coordinates as relative to the origin.</dd>
+<dt><i>XCB_COORD_MODE_PREVIOUS</i></dt>
+<dd>Treats all coordinates after the first as relative to the previous coordinate.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>gc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>points_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>points</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>gc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>points_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>points</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

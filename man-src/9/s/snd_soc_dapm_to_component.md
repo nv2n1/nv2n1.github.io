@@ -15,7 +15,7 @@ snd_soc_dapm_to_component - Casts a DAPM context to the component it is embedded
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>The DAPM context to cast to the component</dl>
+<dl><dd></dd><dd>The DAPM context to cast to the component</dd></dl>
 
 <h2>Description</h2>
 

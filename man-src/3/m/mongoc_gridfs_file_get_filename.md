@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_filename() – Fetches the filename for the
 mongoc_gridfs_file_get_filename (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the filename for the given gridfs file. </p>
 <h2>Returns</h2>

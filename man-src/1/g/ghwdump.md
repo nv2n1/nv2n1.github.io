@@ -16,17 +16,17 @@ description: "ghwdump – Dumps info contained in GHW files"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-t</code> Display types</p>
-<dt><code>-h</code></p>
-<dd> Display hierarchy</p>
-<dt><code>-T</code></p>
-<dd> Display time</p>
-<dt><code>-s</code></p>
-<dd> Display signals (and time)</p>
-<dt><code>-l</code></p>
-<dd> Display list of sections</p>
-<dt><code>-v</code></p>
-<dd> Verbose </p>
+</dt><dd> <code>-t</code> Display types</dd>
+<dt><code>-h</code></dt>
+<dd> Display hierarchy</dd>
+<dt><code>-T</code></dt>
+<dd> Display time</dd>
+<dt><code>-s</code></dt>
+<dd> Display signals (and time)</dd>
+<dt><code>-l</code></dt>
+<dd> Display list of sections</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Tristan Gingold</p>

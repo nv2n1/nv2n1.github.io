@@ -19,7 +19,7 @@ description: "clahrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLAHRD reduces the first NB columns of a complex general n-by-(n-k+1)
  matrix A so that elements below the k-th subdiagonal are zero. The
@@ -30,11 +30,11 @@ description: "clahrd.f –"
  This routine will be 'deprecated' in a  future release.
  Please use the new routine CLAHR2 instead.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the matrix A.
@@ -96,18 +96,18 @@ description: "clahrd.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The matrix Q is represented as a product of nb elementary reflectors
      Q = H(1) H(2) . . . H(nb).
@@ -133,8 +133,9 @@ description: "clahrd.f –"
   modified element of the upper Hessenberg matrix H, and vi denotes an
   element of the vector defining H(i).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 170 of file clahrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -14,10 +14,10 @@ description: "crypto_shash_export – extract operational state for message dige
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>reference to the operational state handle whose state is exported</dl>
+</dd><dd>reference to the operational state handle whose state is exported</dd></dl>
 <p> <i>out</i></p>
 <dl>
-<dd>output buffer of sufficient size that can hold the hash state</dl>
+<dd>output buffer of sufficient size that can hold the hash state</dd></dl>
 <h2>Description</h2>
 <p>This function exports the hash state of the operational state handle into the caller-allocated output buffer out which must have sufficient size (e.g. by calling crypto_shash_descsize).</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "crypto_shash_export – extract operational state for message dige
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

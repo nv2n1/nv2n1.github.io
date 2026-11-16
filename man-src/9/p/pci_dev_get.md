@@ -14,7 +14,7 @@ description: "pci_dev_get – increments the reference count of the pci device s
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device being referenced</dl>
+</dd><dd>the device being referenced</dd></dl>
 <h2>Description</h2>
 <p>Each live reference to a device should be refcounted. </p>
 <p> Drivers for PCI devices should normally record such references in their <code>probe</code> methods, when they bind to a device, and release them by calling <code>pci_dev_put</code>, in their <code>disconnect</code> methods. </p>

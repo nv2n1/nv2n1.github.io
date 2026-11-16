@@ -17,93 +17,76 @@ description: "knot.conf – Configuration file manual for Knot DNS server."
 #There are 8 main sections of this config file:
 #system, interfaces, keys, remotes, groups, zones, control and log
 #
-
 #This is a comment.
-
 #Section 'system' contains general options for the server
 system
 {
-
 #Identity of the server(see RFC 4892).
 #Used for answer to CH TXT 'id.server' or 'hostname.bind'
 #Use string format &quot;text&quot;
 #Or on | off.When 'on', FQDN hostname will be used as default.
     identity off;
-
 #Version of the server(see RFC 4892).
 #Used for answer to CH TXT 'version.server' or 'version.bind'
 #Use string format &quot;text&quot;
 #Or on | off.When 'on', current server version will be used as default.
     version off;
-
 #Server identifier
 #Use string format &quot;text&quot;
 #Or hexstring 0x01ab00
 #Or on | off.When 'on', FQDN hostname will be used as default.
     nsid off;
-
 #Directory for storing run - time data
 #e.g.PID file and control sockets
 #default : ${localstatedir } / run / knot, configured with-- with - rundir
     rundir &quot;/var/run/knot&quot;;
-
 #Number of workers per interface
 #This option is used to force number of threads used per interface
 #Default : unset(auto - estimates optimal value from the number of online CPUs)
 #workers 3;
-
 #Number of background workers
 #This option is used to set number of threads used to execute background
 #operations(e.g., zone loading, zone signing, XFR zone updates, ...)
 #Default : unset(auto - estimates optimal value from the number of online CPUs)
 #background - workers 4;
-
 #Start server asynchronously
 #When asynchronous startup is enabled, server doesn't wait for the zones to be loaded, and
 #starts responding immediately lame answers until the zone loads.This may be useful in
 #some scenarios, but it is disabled by default.
 #Default : disabled(wait for zones to be loaded before answering)
     asynchronous - start off;
-
 #User for running server
 #May also specify user.group(e.g.knot.users)
 #user knot.users;
-
 #Maximum idle time between requests on a TCP connection
 #It is also possible to suffix with unit size[s / m / h / d]
 #f.e.1s = 1 second, 1m = 1 minute, 1h = 1 hour, 1d = 1 day
 #Default : 20s
     max - conn - idle 20s;
-
 #Maximum time between newly accepted TCP connection and first query
 #This is useful to disconnect inactive connections faster
 #It is also possible to suffix with unit size[s / m / h / d]
 #f.e.1s = 1 second, 1m = 1 minute, 1h = 1 hour, 1d = 1 day
 #Default : 5s
     max - conn - handshake 5s;
-
 #Maximum time to wait for a reply to SOA query
 #It is also possible to suffix with unit size[s / m / h / d]
 #f.e.1s = 1 second, 1m = 1 minute, 1h = 1 hour, 1d = 1 day
 #Default : 10s
     max - conn - reply 10s;
-
 #Number of parallel TCP clients
 #Set this below the descriptor limit to avoid resource exhaustion
 #Default : 100
     max - tcp - clients 100;
-
 #Number of parallel transfers
 #This number also includes pending SOA queries
 #Minimal value is number of CPUs
 #Default : 10
     transfers 10;
-
 #Rate limit
 #in queries / second
 #Default : off(= 0)
     rate - limit 0;
-
 #Rate limit bucket size
 #Number of hashtable buckets, set to reasonable value as default.
 #We chose a reasonably large prime number as it's used for hashtable size,
@@ -112,24 +95,20 @@ system
 #Memory cost is approx.32B per bucket
 #Default : 393241
     rate - limit - size 393241;
-
 #Rate limit SLIP
 #Each Nth blocked response will be sent as truncated, this is a way to allow
 #legitimate requests to get a chance to reconnect using TCP
 #Default : 1
     rate - limit - slip 1;
-
 #Maximum EDNS0 UDP payload size
 #Default value : 4096
     max - udp - payload 4096;
 }
-
 #Includes can be placed anywhere at any level in the configuration file.The
 #file name can be relative to current file or absolute.
 #
 #This include includes keys which are commented out in next section.
 include &quot;knot.keys.conf&quot;;
-
 #Section 'keys' contains list of TSIG keys
 #keys {
 #
@@ -149,11 +128,9 @@ include &quot;knot.keys.conf&quot;;
 # #TSIG key for zone
 #key0.example.com hmac - md5 &quot;==gW&quot;;
 #}
-
 #Section 'interfaces' contains definitions of listening interfaces.
 interfaces
 {
-
 #Interface entry
 #
 #Format 1 : &lt; name&gt; { address &lt; address&gt;;[port &lt; port&gt;;] }
@@ -163,28 +140,23 @@ interfaces
 # &lt;address&gt; may be ither IPv4 or IPv6 address port 53531;
 #port is required for XFR / IN and NOTIFY / OUT
     }
-
 #Format 2 : &lt; name&gt; { address &lt; address&gt; @ &lt; port&gt;; }
 #shortipv4 {
 #address 127.0.0.1 [at] 53532;
 #}
-
 #Format 1(IPv6 interface)
 #ipv6 {
 #address ::1 @53533;
 #}
-
 #Format 2(IPv6 interface)
 #ipv6b {
 #address[::1] @53534;
 #}
 }
-
 #Section 'remotes' contains symbolic names for remote servers.
 #Syntax for 'remotes' is the same as for 'interfaces'.
 remotes
 {
-
 #Remote entry
 #
 #Format 1 : &lt; name&gt; { address &lt; address&gt;;[port &lt; port&gt;;] }
@@ -199,24 +171,20 @@ remotes
 #(optional) source interface for queries, direct IPv4 via[::cafe];
 #(optional) source interface for queries, direct IPv6
     }
-
 #Format 2 : &lt; name&gt; { address &lt; address&gt; @ &lt; port&gt;; }
     server1
     {
         address 127.0.0.1 [at] 53001;
     }
-
     admin - alice
     {
         address 192.168.100.1;
     }
-
     admin - bob
     {
         address 192.168.100.2;
     }
 }
-
 groups
 {
     admins
@@ -224,65 +192,51 @@ groups
         admin - alice, admin - bob
     }
 }
-
 #Section 'control' specifies on which interface to listen for RC commands
 control
 {
-
 #Default : $(run_dir) / knot.sock
     listen - on &quot;knot.sock&quot;;
-
 #As an alternative, you can use an IPv4 / v6 address and port
 #Same syntax as for 'interfaces' items
 #listen - on { address 127.0.0.1 [at] 5533; }
-
 #Specifies ACL list for remote control
 #Same syntax as for ACLs in zones
 #List of remotes or groups delimited by comma
 #Notice : keep in mind that ACLs bear no effect with UNIX sockets
 #allow server0, admins;
 }
-
 #Section 'zones' contains information about zones to be served.
 zones
 {
-
 #Shared options for all listed zones
 #
-
 #This is a default directory to place slave zone files, journals etc.
 #default : ${localstatedir } / lib / knot, configured with-- with - storage
     storage &quot;/var/lib/knot&quot;;
-
 #Location of persistent zone timers.The path can be specified as
 #a relative path to the global storage directory.
     timer - db &quot;timers&quot;;
-
 #Build differences from zone file changes.EXPERIMENTAL feature.
 #Possible values : on | off
 #Default value : off
     ixfr - from - differences off;
-
 #Enable semantic checks for all zones(if 'on')
 #Possible values : on | off
 #Default value : off
     semantic - checks off;
-
 #Disable ANY type queries for authoritative answers(if 'on')
 #Possible values : on | off
 #Default value : off
     disable - any off;
-
 #NOTIFY response timeout
 #Possible values : &lt; 1, ...&gt;(seconds)
 #Default value : 60
     notify - timeout 60;
-
 #Number of retries for NOTIFY
 #Possible values : &lt; 1, ...&gt;
 #Default value : 5
     notify - retries 5;
-
 #Timeout for syncing changes from zone database to zonefile
 #Possible values : &lt; 1..INT_MAX&gt;(seconds)
 #Default value : 0s - immediate sync
@@ -291,23 +245,19 @@ zones
 #Warning : If serving a large zone, set this to a larger value
 #to keep disk load down.
     zonefile - sync 1h;
-
 #File size limit for IXFR journal
 #Possible values : &lt; 1..INT_MAX&gt;
 #Default value : N / A(infinite)
 #It is also possible to suffix with unit size[k / M / G]
 #f.e.1k, 100M, 2G
     ixfr - fslimit 1G;
-
 #Enable DNSSEC online signing(EXPERIMENTAL)
 #Possible values : on | off;
 #Default value : off
 #dnssec - enable off;
-
 #Location of DNSSEC signing keys(relative to storage dir).
 #Default value : not set
 #dnssec - keydir &quot;keys&quot;;
-
 #Validity period for DNSSEC signatures
 #Possible values : &lt; 10801..INT_MAX&gt;(seconds)
 #Default value : 30d(30 days or 2592000 seconds)
@@ -316,12 +266,10 @@ zones
 #The signatures are refreshed one tenth of the signature lifetime before
 #the signature expiration(i.e., 3 days before by default)
 #signature - lifetime 30d;
-
 #Serial policy after DDNS and automatic DNSSEC signing.
 #Possible values : increment | unixtime
 #Default value : increment
 #serial - policy increment;
-
 #Query modules are dynamically loaded modules that can alter query plan processing
 #Configuration is always module - specific, but passed as a simple string here
 #Query modules listed here are effective for all queries(even those without assigned zone)
@@ -329,7 +277,6 @@ zones
     {
         module_name &quot;configuration string&quot;;
     }
-
 #Zone entry
 #
 #Format : &lt; zone - name&gt; { file &quot;&lt;path-to-zone-file&gt;&quot;; }
@@ -339,60 +286,49 @@ zones
 #Zone specific storage directory(relative to storage in zones section).
 #default : inherited from zones section
             storage &quot;example.com&quot;;
-
 # &lt;path - to - zone - file&gt; may be either absolute or relative, in which case
 #it is considered relative to the current directory from which the server
 #was started.
         file &quot;samples/example.com.zone&quot;;
-
 #Build differences from zone file changes
 #Possible values : on | off
 #Default value : off
         ixfr - from - differences off;
-
 #Disable ANY type queries for authoritative answers(if 'on')
 #Possible values : on | off
 #Default value : off
         disable - any off;
-
 #Enable zone semantic checks
 #Possible values : on | off
 #Default value : off
         semantic - checks on;
-
 #NOTIFY response timeout(specific for current zone)
 #Possible values : &lt; 1, ...&gt;(seconds)
 #Default value : 60
         notify - timeout 60;
-
 #Number of retries for NOTIFY(specific for current zone)
 #Possible values : &lt; 1, ...&gt;
 #Default value : 5
         notify - retries 5;
-
 #Timeout for syncing changes from zone database to zonefile
 #Possible values : &lt; 1..INT_MAX&gt;(seconds)
 #Default value : inherited from zones.zonefile - sync
 #It is also possible to suffix with unit size[s / m / h / d]
 #f.e.1s = 1 second, 1m = 1 minute, 1h = 1 hour, 1d = 1 day
         zonefile - sync 1h;
-
 #File size limit for IXFR journal
 #Possible values : &lt; 1..INT_MAX&gt;
 #Default value : N / A(infinite)
 #It is also possible to suffix with unit size[k / M / G]
 #f.e.1k, 100M, 2G
         ixfr - fslimit 1G;
-
 #Location of DNSSEC signing keys(relative to storage directory in zone).
 #Default value : inherited from zones section
         dnssec - keydir &quot;keys&quot;;
-
 #Enable DNSSEC online signing(EXPERIMENTAL)
 #Possible values : on | off;
 #Default value : inherited from zones section
         dnssec - enable off;
-
 #Validity period for DNSSEC signatures
 #Possible values : &lt; 10801..INT_MAX&gt;(seconds)
 #Default value : 30d(30 days or 2592000 seconds)
@@ -402,27 +338,20 @@ zones
 #signatures expires in 7200 seconds or less and it was chosen as a
 #reasonable value with regard to signing overhead.
 #signature - lifetime 30d;
-
 #Serial policy after DDNS and automatic DNSSEC signing.
 #Possible values : increment | unixtime
 #Default value : increment
 #serial - policy increment;
-
 #XFR master server
         xfr - in server0;
-
 #ACL list of XFR slaves
         xfr - out server0, server1;
-
 #ACL list of servers allowed to send NOTIFY queries
         notify - in server0;
-
 #List of servers to send NOTIFY to
         notify - out server0, server1;
-
 #List of servers to allow UPDATE queries
         update - in server0, admins;
-
 #Query modules are dynamically loaded modules that can alter query plan processing
 #Configuration is always module - specific, but passed as a simple string here
         query_module
@@ -432,7 +361,6 @@ zones
         }
     }
 }
-
 #Section 'log' configures logging of server messages.
 #
 #Logging recognizes 3 symbolic names of log devices:
@@ -466,14 +394,12 @@ zones
 #syslog{any error; }
 log
 {
-
 #Format 1:
 # &lt;log&gt; {
 # &lt;category1&gt; &lt;severity1&gt;;
 # &lt;category2&gt; &lt;severity2&gt;;
 #...
 #}
-
     syslog
     {
 #Log any error or critical to syslog
@@ -481,19 +407,16 @@ log
 #Log all(excluding debug) from server to syslog
         server info;
     }
-
 #Log any warning, error or critical to stderr
     stderr
     {
         any warning;
     }
-
 #Format 2:
 #file &lt; path&gt; { # &lt; path&gt; is absolute or relative path to log file
 # &lt;category1&gt; &lt;severity1&gt;;
 # &lt;category2&gt; &lt;severity2&gt;;
 #}
-
     file &quot;/tmp/knot-sample/knotd.debug&quot;
     {
         server debug;

@@ -16,15 +16,15 @@ description: "dssi_analyse_plugin – describe a DSSI plugin"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-v</code></p>
+</dt><dd> <code>-v</code></dd>
 <dt>
-<dd> <code>&#8211;verbose</code> Causes <code>dssi_analyse_plugin</code> to be more verbose in its reporting. In particular, it will list the default program names for each plugin, if any.</dl>
+</dt><dd> <code>&#8211;verbose</code> Causes <code>dssi_analyse_plugin</code> to be more verbose in its reporting. In particular, it will list the default program names for each plugin, if any.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following command will show information about all of the plugins in the shared library /usr/local/lib/dssi/calf.so, including default program names: $ dssi_analyse_plugin -v /usr/local/lib/dssi/calf.so The following command will look for the shared library trivial_sampler.so using <code>DSSI_PATH</code>, and display information about the mono_sampler plugin: $ dssi_analyse_plugin trivial_sampler.so:mono_sampler</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DSSI_PATH</code></p>
-<dd> A colon-separated list of directories to scan for DSSI plugins.</dl>
+<dt><code>DSSI_PATH</code></dt>
+<dd> A colon-separated list of directories to scan for DSSI plugins.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> DSSI RFC version 1.0.</p>
 <h2>SEE ALSO</h2>

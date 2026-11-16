@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_keyusages – API function"
 void pskc_set_key_policy_keyusages(pskc_key_t *key, int keyusages);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int keyusages</p>
-<dd>integer with <code>pskc_keyusage</code> values ORed together.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int keyusages</dt>
+<dd>integer with <code>pskc_keyusage</code> values ORed together.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy KeyUsage values. The element puts constraints on the intended usage of the key. The recipient of the PSKC document MUST enforce the key usage.</p>
 <h2>Since</h2>

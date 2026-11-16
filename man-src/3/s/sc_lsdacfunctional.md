@@ -11,28 +11,14 @@ description: "sc::LSDACFunctional –"
 <p> An abstract base class for local correlation functionals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>. Inherited by <code>sc::PW92LCFunctional</code>, <code>sc::PZ81LCFunctional</code>, and <code>sc::VWNLCFunctional</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LSDACFunctional (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 LSDACFunctional (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void point (const PointInputData &amp;, PointOutputData &amp;)
-
-
-
 virtual void point_lc (const PointInputData &amp;, PointOutputData &amp;, double &amp;ec_local, double &amp;decrs, double &amp;deczeta)=0</code></pre>
 <h2>Detailed Description</h2>
 <p>An abstract base class for local correlation functionals.</p>

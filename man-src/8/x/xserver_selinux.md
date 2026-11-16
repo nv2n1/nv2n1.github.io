@@ -77,9 +77,9 @@ description: "xserver_selinux – Security Enhanced Linux Policy for the xserver
 <p> Policy governs the access confined processes have to these ports. SELinux xserver policy is very flexible allowing users to setup their xserver processes in as secure a method as possible. </p>
 <p> The following port types are defined for xserver: </p>
 <dl>
-<dt><code>xserver_port_t</code></p>
+<dt><code>xserver_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6000-6020</dl>
+</dd><dd>Default Defined Ports: tcp 6000-6020</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type xserver_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>file_type</code> </p>
@@ -98,14 +98,14 @@ description: "xserver_selinux – Security Enhanced Linux Policy for the xserver
 <p> <code>xserver_exec_t</code> </p>
 <p> &#8211; Set files with the xserver_exec_t type, if you want to transition an executable to the xserver_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nvidia.*, /usr/bin/Xair, /usr/bin/Xorg, /usr/bin/Xvnc, /usr/bin/Xephyr, /usr/bin/x11vnc, /usr/X11R6/bin/X, /usr/X11R6/bin/Xorg, /usr/X11R6/bin/Xipaq, /usr/libexec/Xorg.bin, /usr/libexec/Xorg.wrap, /usr/X11R6/bin/XFree86, /usr/X11R6/bin/Xwrapper </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nvidia.*, /usr/bin/Xair, /usr/bin/Xorg, /usr/bin/Xvnc, /usr/bin/Xephyr, /usr/bin/x11vnc, /usr/X11R6/bin/X, /usr/X11R6/bin/Xorg, /usr/X11R6/bin/Xipaq, /usr/libexec/Xorg.bin, /usr/libexec/Xorg.wrap, /usr/X11R6/bin/XFree86, /usr/X11R6/bin/Xwrapper </dd>
 </dl>
 <p> <code>xserver_log_t</code> </p>
 <p> &#8211; Set files with the xserver_log_t type, if you want to treat the data as xserver log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/[xgkw]dm(/.*)?, /usr/var/[xgkw]dm(/.*)?, /var/log/gdm(3)?(/.*)?, /var/log/Xorg.*, /var/log/XFree86.*, /var/log/lightdm(/.*)?, /var/log/nvidia-installer.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/[xgkw]dm(/.*)?, /usr/var/[xgkw]dm(/.*)?, /var/log/gdm(3)?(/.*)?, /var/log/Xorg.*, /var/log/XFree86.*, /var/log/lightdm(/.*)?, /var/log/nvidia-installer.log.* </dd>
 </dl>
 <p> <code>xserver_tmpfs_t</code> </p>
 <p> &#8211; Set files with the xserver_tmpfs_t type, if you want to store xserver files on a tmpfs file system. </p>
@@ -114,8 +114,8 @@ description: "xserver_selinux – Security Enhanced Linux Policy for the xserver
 <p> <code>xserver_var_run_t</code> </p>
 <p> &#8211; Set files with the xserver_var_run_t type, if you want to store the xserver files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/xorg(/.*)?, /var/run/video.rom </p>
+<dt>Paths:</dt>
+<dd>/var/run/xorg(/.*)?, /var/run/video.rom </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

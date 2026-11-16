@@ -17,28 +17,28 @@ description: "genrb – compile a resource bundle"
 <p> The binary files can be read directly by ICU, or used by <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) for incorporation into a larger archive or library.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version of <code>genrb</code> and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display extra informative messages during execution.</p>
-<dt><code>-e</code>, <code>&#8211;encoding</code><i> encoding</i></p>
-<dd> Set the encoding used to read input files to <i>encoding</i>. The default encoding is the invariant (subset of ASCII or EBCDIC) codepage for the system (see section <code>INVARIANT CHARACTERS</code>). The encodings UTF-8, UTF-16BE, and UTF-16LE are automatically detected if a byte order mark (BOM) is present.</p>
-<dt><code>-j</code>, <code>&#8211;write-java</code><i> </i>[ encoding ]</p>
-<dd> Generate a Java source code for use with ICU4J. An optional <i>encoding</i> for the Java file can be given.</p>
-<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></p>
-<dd> Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>, or the location set when ICU was built if <code>ICU_DATA</code> is not set.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></p>
-<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code> or is the location set when ICU was built if <code>ICU_DATA</code> is not set.</p>
-<dt><code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i></p>
-<dd> Look for any necessary ICU data files in <i>directory</i>. For example, when processing collation overrides, the file <code>ucadata.dat</code> must be located. The default ICU data directory is specified by the environment variable <code>ICU_DATA</code>.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version of <code>genrb</code> and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display extra informative messages during execution.</dd>
+<dt><code>-e</code>, <code>&#8211;encoding</code><i> encoding</i></dt>
+<dd> Set the encoding used to read input files to <i>encoding</i>. The default encoding is the invariant (subset of ASCII or EBCDIC) codepage for the system (see section <code>INVARIANT CHARACTERS</code>). The encodings UTF-8, UTF-16BE, and UTF-16LE are automatically detected if a byte order mark (BOM) is present.</dd>
+<dt><code>-j</code>, <code>&#8211;write-java</code><i> </i>[ encoding ]</dt>
+<dd> Generate a Java source code for use with ICU4J. An optional <i>encoding</i> for the Java file can be given.</dd>
+<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></dt>
+<dd> Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>, or the location set when ICU was built if <code>ICU_DATA</code> is not set.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code> or is the location set when ICU was built if <code>ICU_DATA</code> is not set.</dd>
+<dt><code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i></dt>
+<dd> Look for any necessary ICU data files in <i>directory</i>. For example, when processing collation overrides, the file <code>ucadata.dat</code> must be located. The default ICU data directory is specified by the environment variable <code>ICU_DATA</code>.</dd></dl>
 <h2>INVARIANT CHARACTERS</h2>
 <p> The <code>invariant character set</code> consists of the following set of characters, expressed as a standard POSIX regular expression: <code>[a-z]|[A-Z]|[0-9]|_| |+|-|*|/</code>. This is the set which is guaranteed to be available regardless of code page.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>ICU_DATA</code></p>
-<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dl>
+<dt><code>ICU_DATA</code></dt>
+<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
 <h2>VERSION</h2>
 <p> 70.1</p>
 <h2>COPYRIGHT</h2>

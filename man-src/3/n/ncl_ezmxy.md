@@ -14,26 +14,26 @@ EZMXY - Draws, in a manner determined by the current values of the control param
  void c_ezmxy(float *xdra, float *ydra, int idxy, int many, \ 
  int npts, char *glab)
 <h2>Description</h2><dl COMPACT><dt>XDRA
-<dd>(an input array of type REAL, dimensioned NPTS or IDXY x MANY or IDXY x NPTS, depending on the current value of 'ROW.') contains curve-point X coordinates. The current value of 'NULL/1.' (default value &quot;1.E36&quot;) may be used in XDRA to signal missing points; curve segments on either side of a missing point are not drawn. Note: Because all non-missing coordinates are used in figuring the minimum and maximum user values along a given axis, it is safest to mark both coordinates as &quot;missing&quot;.
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>If 'ROW.' has the absolute value &quot;1.&quot; (the default), XDRA is singly-dimensioned. It is subscripted by point number.
-<dt>&bull;
-<dd>If 'ROW.' has the absolute value &quot;2.&quot; or greater, XDRA is doubly-dimensioned. It is subscripted by point number and curve number, in that order if 'ROW.' is positive (the default), and in the reverse order if 'ROW.' is negative.</dl></dl><dt>YDRA
-<dd>(an input array of type REAL, dimensioned IDXY x MANY or IDXY x NPTS, depending on the current value of 'ROW.') contains curve-point Y coordinates. The current value of 'NULL/1.' (default value &quot;1.E36&quot;) may be used in YDRA to signal missing points; curve segments on either side of a missing point are not drawn. Note: Because all non-missing coordinates are used in figuring the minimum and maximum user values along a given axis, it is safest to mark both coordinates as &quot;missing&quot;.
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>If 'ROW.' is positive (the default), YDRA is subscripted by point number and curve number, in that order.
-<dt>&bull;
-<dd>If 'ROW.' is negative, YDRA is subscripted by curve number and point number, in that order.</dl></dl><dt>IDXY
-<dd>(an input expression of type INTEGER) is the first dimension of the arrays XDRA (if it is doubly-dimensioned) and YDRA (unconditionally), required by EZMXY in order to index these arrays properly.
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>If 'ROW.' is positive (the default), IDXY must be greater than or equal to NPTS.
-<dt>&bull;
-<dd>If 'ROW.' is negative, IDXY must be greater than or equal to MANY.</dl></dl><dt>MANY
-<dd>(an input expression of type INTEGER) is the number of curves to be drawn by EZMXY.
-<dt>NPTS
-<dd>(an input expression of type INTEGER) is the number of points defining each curve to be drawn by EZMXY.
-<dt>GLAB
-<dd>(an input expression of type CHARACTER) defines a new &quot;graph label&quot;. (If the first character of this expression is &quot;CHAR(0)&quot;, no new &quot;graph label&quot; is defined; the current one will continue to be used.) A character string defining a new graph label must either be of the exact length specified by the current value of 'LINE/MAXIMUM.' (default: 40 characters), or shorter; if shorter, it must be terminated by the character defined by the current value of 'LINE/END.' (default: a '$'). The string becomes the new text of line number 100 of the label named 'T'.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input array of type REAL, dimensioned NPTS or IDXY x MANY or IDXY x NPTS, depending on the current value of 'ROW.') contains curve-point X coordinates. The current value of 'NULL/1.' (default value &quot;1.E36&quot;) may be used in XDRA to signal missing points; curve segments on either side of a missing point are not drawn. Note: Because all non-missing coordinates are used in figuring the minimum and maximum user values along a given axis, it is safest to mark both coordinates as &quot;missing&quot;.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>If 'ROW.' has the absolute value &quot;1.&quot; (the default), XDRA is singly-dimensioned. It is subscripted by point number.
+</dd><dt>&bull;
+</dt><dd>If 'ROW.' has the absolute value &quot;2.&quot; or greater, XDRA is doubly-dimensioned. It is subscripted by point number and curve number, in that order if 'ROW.' is positive (the default), and in the reverse order if 'ROW.' is negative.</dd></dl></dl><dt>YDRA
+</dt><dd>(an input array of type REAL, dimensioned IDXY x MANY or IDXY x NPTS, depending on the current value of 'ROW.') contains curve-point Y coordinates. The current value of 'NULL/1.' (default value &quot;1.E36&quot;) may be used in YDRA to signal missing points; curve segments on either side of a missing point are not drawn. Note: Because all non-missing coordinates are used in figuring the minimum and maximum user values along a given axis, it is safest to mark both coordinates as &quot;missing&quot;.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>If 'ROW.' is positive (the default), YDRA is subscripted by point number and curve number, in that order.
+</dd><dt>&bull;
+</dt><dd>If 'ROW.' is negative, YDRA is subscripted by curve number and point number, in that order.</dd></dl></dl><dt>IDXY
+</dt><dd>(an input expression of type INTEGER) is the first dimension of the arrays XDRA (if it is doubly-dimensioned) and YDRA (unconditionally), required by EZMXY in order to index these arrays properly.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>If 'ROW.' is positive (the default), IDXY must be greater than or equal to NPTS.
+</dd><dt>&bull;
+</dt><dd>If 'ROW.' is negative, IDXY must be greater than or equal to MANY.</dd></dl></dl><dt>MANY
+</dt><dd>(an input expression of type INTEGER) is the number of curves to be drawn by EZMXY.
+</dd><dt>NPTS
+</dt><dd>(an input expression of type INTEGER) is the number of points defining each curve to be drawn by EZMXY.
+</dd><dt>GLAB
+</dt><dd>(an input expression of type CHARACTER) defines a new &quot;graph label&quot;. (If the first character of this expression is &quot;CHAR(0)&quot;, no new &quot;graph label&quot; is defined; the current one will continue to be used.) A character string defining a new graph label must either be of the exact length specified by the current value of 'LINE/MAXIMUM.' (default: 40 characters), or shorter; if shorter, it must be terminated by the character defined by the current value of 'LINE/END.' (default: a '$'). The string becomes the new text of line number 100 of the label named 'T'.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: agex04, agex05, agex07, agex08, tagupw, tautog, fagaxclr, fagaxlbl, fagaxmax, fagcuclr, fagcudsh, fagezmxy, fagilclr, fagovrvw.
 <h2>Access</h2>To use EZMXY or c_ezmxy, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order. To get smoother curves, drawn using spline interpolation, also load libdashsmth.o. Or, you can use the ncargf77 command to compile your program and load the above libraries, then, to get smoother curves, use the -dashsmth option.
 <h2>See Also</h2>Online: autograph, autograph_params, agback, agbnch, agchax, agchcu, agchil, agchnl, agcurv, agdshn, aggetc, aggetf, aggeti, aggetp, aggetr, agpwrt, agrstr, agsave, agsetc, agsetf, agseti, agsetp, agsetr, agstup, agutol, anotat, displa, ezmy, ezxy, ezy 

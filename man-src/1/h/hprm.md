@@ -17,12 +17,12 @@ description: "hprm — remove a file or directory on an HFS+ volume"
 <p> <code>hprm</code> accepts the following options:<br />
 &nbsp;</p>
 <dl>
-<dt><code>-R</code></p>
+<dt><code>-R</code></dt>
 <dd> recursively remove the contents of a directory.<br />
-&nbsp;</p>
-<dt><code>-f</code></p>
+&nbsp;</dd>
+<dt><code>-f</code></dt>
 <dd> one day, this option will probably disable prompting. For the time being, prompting is always enabled.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>See also</h2>
 <p> <a href="/docs/linux/man/7-hfsplus/">hfsplus</a>(7), <a href="/docs/linux/man/1-hpmount/">hpmount</a>(1), <a href="/docs/linux/man/1-hpls/">hpls</a>(1), <a href="/docs/linux/man/1-hppwd/">hppwd</a>(1), <a href="/docs/linux/man/1-hpmkdir/">hpmkdir</a>(1), <a href="/docs/linux/man/1-hpcd/">hpcd</a>(1), <a href="/docs/linux/man/1-hpcopy/">hpcopy</a>(1), <a href="/docs/linux/man/1-hpumount/">hpumount</a>(1), <a href="/docs/linux/man/1-hpfsck/">hpfsck</a>(1).<br />
 &nbsp;</p>

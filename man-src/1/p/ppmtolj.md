@@ -15,16 +15,16 @@ description: "ppmtolj – convert a portable pixmap to an HP LaserJet PCL 5 Colo
 <p> Reads a portable pixmap as input and converts it into a color file suitable to be printed by an HP color PCL 5 printer. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-delta</code></p>
-<dd> Apply delta row compression to reduce the size of the pcl file.</p>
-<dt><code>-gamma</code><i> int</i></p>
-<dd> Gamma correct the image using the integet parameter as a gamma (default 0).</p>
-<dt><code>-float</code></p>
-<dd> Suppresses positioning information. The default is to write the sequence ESC&amp;l0E to the output.</p>
-<dt><code>-noreset</code></p>
-<dd> Prevents writing of the reset sequence to the begining and end of the output.</p>
-<dt><code>-resolution</code></p>
-<dd> Set the required output resolution 75|100|150|300|600</dl>
+<dt><code>-delta</code></dt>
+<dd> Apply delta row compression to reduce the size of the pcl file.</dd>
+<dt><code>-gamma</code><i> int</i></dt>
+<dd> Gamma correct the image using the integet parameter as a gamma (default 0).</dd>
+<dt><code>-float</code></dt>
+<dd> Suppresses positioning information. The default is to write the sequence ESC&amp;l0E to the output.</dd>
+<dt><code>-noreset</code></dt>
+<dd> Prevents writing of the reset sequence to the begining and end of the output.</dd>
+<dt><code>-resolution</code></dt>
+<dd> Set the required output resolution 75|100|150|300|600</dd></dl>
 <h2>REFERENCES</h2>
 <p> HP PCL 5 &amp; Color Reference Guide</p>
 <h2>BUGS</h2>

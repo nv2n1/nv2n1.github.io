@@ -12,16 +12,12 @@ std::experimental::filesystem::directory_iterator::directory_iterator - std::exp
 
 <pre><code>directory_iterator();
 (1)(filesystem TS)
-
     explicit directory_iterator(const path &amp;p);
 (2)(filesystem TS)
-
     directory_iterator(const path &amp;p, error_code &amp;ec);
 (3)(filesystem TS)
-
     directory_iterator(const directory_iterator &amp;) = default;
 (4)(filesystem TS)
-
     directory_iterator(directory_iterator &amp;&amp;) = default;
 (5)(filesystem TS)</code></pre> 
 Constructs a new directory iterator. 

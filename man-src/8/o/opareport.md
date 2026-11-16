@@ -17,260 +17,260 @@ description: "opareport"
  [-F <i>point</i>] [-S <i>point</i>] [-D <i>point</i>] [-Q]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-v/&#8211;verbose</p>
-<dd>Returns verbose output. </p>
-<dt>-q/&#8211;quiet</p>
-<dd>Disables progress reports. </p>
-<dt>-h/&#8211;hfi <i>hfi</i></p>
-<dd>HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </p>
-<dt>-p/&#8211;port <i>port</i></p>
-<dd>Port, numbered 1..n. If -h <i>hfi</i> is 0 then <i>port</i> is a system-wide port number. Default is 1. </p>
-<dt>-o/&#8211;output <i>report</i></p>
-<dd>Report type for output. Refer to <i>Report Types</i> for details. </p>
-<dt>-d/&#8211;detail <i>detail</i></p>
-<dd>Level of detail 0-n for output. Default is 2. </p>
-<dt>-P/&#8211;persist</p>
-<dd>Includes data persistent across reboots. </p>
-<dt>-H/&#8211;hard</p>
-<dd>Includes permanent hardware data. </p>
-<dt>-N/&#8211;noname</p>
-<dd>Omits node and IOC names. </p>
-<dt>-x/&#8211;xml</p>
-<dd>Produces output in XML. </p>
-<dt>-X/&#8211;infile <i>snapshot_input</i></p>
-<dd>Generates a report using the data in the snapshot_input file. snapshot_input must have been generated during a previous -o <i>snapshot</i> run. When used, the -s, -i, -C, and -a options are ignored. Not permitted with -o <i>route</i> and -F <i>route</i>. &#8216;-&#8216; may be used as the snapshot_input to specify stdin. </p>
-<dt>-T/&#8211;topology <i>topology_input</i></p>
-<dd>Uses topology_input file to augment and verify fabric information. When used, various reports can be augmented with information not available electronically (such as cable labels and lengths). &#8216;-&#8216; may be used to specify stdin. </p>
-<dt>-s/&#8211;stats</p>
-<dd>Gets performance statistics for all ports. </p>
-<dt>-i/&#8211;interval <i>seconds</i></p>
-<dd>Obtains performance statistics over interval <i>seconds</i>, clears all statistics, waits interval <i>seconds</i>, then generates report. Implies -s option. </p>
-<dt>-C/&#8211;clear</p>
-<dd>Clears performance statistics for all ports. Only statistics with error thresholds are cleared. A clear occurs after generating the report. </p>
-<dt>-a/&#8211;clearall</p>
-<dd>Clears all performance statistics for all ports. </p>
-<dt>-m/&#8211;smadirect</p>
-<dd>Accesses fabric information directly from SMA. </p>
-<dt>-K/&#8211;mkey <i>mkey</i></p>
-<dd>SMA M_Key for direct SMA query. Default is 0. </p>
-<dt>-M/&#8211;pmadirect</p>
-<dd>Accesses performance statistics using direct PMA. </p>
-<dt>-A/&#8211;allports</p>
-<dd>Gets PortInfo for down switch ports. Uses direct SMA to get this data. If used with -M, also gets PMA stats for down-switch ports. </p>
-<dt>-c/&#8211;config <i>file</i></p>
-<dd>Error thresholds configuration file. Default is /etc/sysconfig/opa/opamon.conf file. </p>
-<dt>-L/&#8211;limit</p>
-<dd>Limits operation to exact specified focus with -F for port error counters check (-o <i>errors</i>) and port counters clear (-C or -i). Normally, the neighbor of each selected port is also checked/cleared. Does not affect other reports. </p>
-<dt>-F/&#8211;focus <i>point</i></p>
-<dd>Focus area for report. Used for all reports except route to limit scope of report. Refer to <i>Point Syntax</i> for details. </p>
-<dt>-S/&#8211;src <i>point</i></p>
-<dd>Source for trace route, default is local port. Refer to <i>Point Syntax</i> for details. </p>
-<dt>-D/&#8211;dest <i>point</i></p>
-<dd>Destination for trace route. Refer to <i>Point Syntax</i> for details. </p>
-<dt>-Q/&#8211;quietfocus</p>
-<dd>Excludes focus description from report. </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-v/&#8211;verbose</dt>
+<dd>Returns verbose output. </dd>
+<dt>-q/&#8211;quiet</dt>
+<dd>Disables progress reports. </dd>
+<dt>-h/&#8211;hfi <i>hfi</i></dt>
+<dd>HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </dd>
+<dt>-p/&#8211;port <i>port</i></dt>
+<dd>Port, numbered 1..n. If -h <i>hfi</i> is 0 then <i>port</i> is a system-wide port number. Default is 1. </dd>
+<dt>-o/&#8211;output <i>report</i></dt>
+<dd>Report type for output. Refer to <i>Report Types</i> for details. </dd>
+<dt>-d/&#8211;detail <i>detail</i></dt>
+<dd>Level of detail 0-n for output. Default is 2. </dd>
+<dt>-P/&#8211;persist</dt>
+<dd>Includes data persistent across reboots. </dd>
+<dt>-H/&#8211;hard</dt>
+<dd>Includes permanent hardware data. </dd>
+<dt>-N/&#8211;noname</dt>
+<dd>Omits node and IOC names. </dd>
+<dt>-x/&#8211;xml</dt>
+<dd>Produces output in XML. </dd>
+<dt>-X/&#8211;infile <i>snapshot_input</i></dt>
+<dd>Generates a report using the data in the snapshot_input file. snapshot_input must have been generated during a previous -o <i>snapshot</i> run. When used, the -s, -i, -C, and -a options are ignored. Not permitted with -o <i>route</i> and -F <i>route</i>. &#8216;-&#8216; may be used as the snapshot_input to specify stdin. </dd>
+<dt>-T/&#8211;topology <i>topology_input</i></dt>
+<dd>Uses topology_input file to augment and verify fabric information. When used, various reports can be augmented with information not available electronically (such as cable labels and lengths). &#8216;-&#8216; may be used to specify stdin. </dd>
+<dt>-s/&#8211;stats</dt>
+<dd>Gets performance statistics for all ports. </dd>
+<dt>-i/&#8211;interval <i>seconds</i></dt>
+<dd>Obtains performance statistics over interval <i>seconds</i>, clears all statistics, waits interval <i>seconds</i>, then generates report. Implies -s option. </dd>
+<dt>-C/&#8211;clear</dt>
+<dd>Clears performance statistics for all ports. Only statistics with error thresholds are cleared. A clear occurs after generating the report. </dd>
+<dt>-a/&#8211;clearall</dt>
+<dd>Clears all performance statistics for all ports. </dd>
+<dt>-m/&#8211;smadirect</dt>
+<dd>Accesses fabric information directly from SMA. </dd>
+<dt>-K/&#8211;mkey <i>mkey</i></dt>
+<dd>SMA M_Key for direct SMA query. Default is 0. </dd>
+<dt>-M/&#8211;pmadirect</dt>
+<dd>Accesses performance statistics using direct PMA. </dd>
+<dt>-A/&#8211;allports</dt>
+<dd>Gets PortInfo for down switch ports. Uses direct SMA to get this data. If used with -M, also gets PMA stats for down-switch ports. </dd>
+<dt>-c/&#8211;config <i>file</i></dt>
+<dd>Error thresholds configuration file. Default is /etc/sysconfig/opa/opamon.conf file. </dd>
+<dt>-L/&#8211;limit</dt>
+<dd>Limits operation to exact specified focus with -F for port error counters check (-o <i>errors</i>) and port counters clear (-C or -i). Normally, the neighbor of each selected port is also checked/cleared. Does not affect other reports. </dd>
+<dt>-F/&#8211;focus <i>point</i></dt>
+<dd>Focus area for report. Used for all reports except route to limit scope of report. Refer to <i>Point Syntax</i> for details. </dd>
+<dt>-S/&#8211;src <i>point</i></dt>
+<dd>Source for trace route, default is local port. Refer to <i>Point Syntax</i> for details. </dd>
+<dt>-D/&#8211;dest <i>point</i></dt>
+<dd>Destination for trace route. Refer to <i>Point Syntax</i> for details. </dd>
+<dt>-Q/&#8211;quietfocus</dt>
+<dd>Excludes focus description from report. </dd>
 </dl>
 <h2>-h and -p options permit a variety of selections:</h2>
 <dl>
-<dt>-h 0</p>
-<dd>First active port in system (default). </p>
-<dt>-h 0 -p 0</p>
-<dd>First active port in system. </p>
-<dt>-h <i>x</i></p>
-<dd>First active port on HFI <i>x</i>. </p>
-<dt>-h <i>x</i>#8217#160;-p 0</p>
-<dd>First active port on HFI <i>x</i>. </p>
-<dt>-h 0 -p <i>y</i></p>
-<dd>Port <i>y</i>#8217#160;within system (no matter which ports are active). </p>
-<dt>-h <i>x</i>#8217#160;-p <i>y</i></p>
-<dd>HFI <i>x</i>, port <i>y</i>. </p>
+<dt>-h 0</dt>
+<dd>First active port in system (default). </dd>
+<dt>-h 0 -p 0</dt>
+<dd>First active port in system. </dd>
+<dt>-h <i>x</i></dt>
+<dd>First active port on HFI <i>x</i>. </dd>
+<dt>-h <i>x</i>#8217#160;-p 0</dt>
+<dd>First active port on HFI <i>x</i>. </dd>
+<dt>-h 0 -p <i>y</i></dt>
+<dd>Port <i>y</i>#8217#160;within system (no matter which ports are active). </dd>
+<dt>-h <i>x</i>#8217#160;-p <i>y</i></dt>
+<dd>HFI <i>x</i>, port <i>y</i>. </dd>
 </dl>
 <h2>Snapshot-Specific Options</h2>
 <dl>
-<dt>-r/&#8211;routes</p>
-<dd>Gets routing tables for all switches. </p>
-<dt>-V/&#8211;vltables</p>
-<dd>Gets QOS VL-related tables for all ports. </p>
+<dt>-r/&#8211;routes</dt>
+<dd>Gets routing tables for all switches. </dd>
+<dt>-V/&#8211;vltables</dt>
+<dd>Gets QOS VL-related tables for all ports. </dd>
 </dl>
 <h2>Report Types</h2>
 <dl>
-<dt>comps</p>
-<dd>Summary of all systems and SMs in fabric. </p>
-<dt>brcomps</p>
-<dd>Brief summary of all systems and SMs in fabric. </p>
-<dt>nodes</p>
-<dd>Summary of all node types and SMs in fabric. </p>
-<dt>brnodes</p>
-<dd>Brief summary of all node types and SMs in fabric. </p>
-<dt>ious</p>
-<dd>Summary of all IO units in the fabric. </p>
-<dt>lids</p>
-<dd>Summary of all LIDs in the fabric. </p>
-<dt>links</p>
-<dd>Summary of all links. </p>
-<dt>extlinks</p>
-<dd>Summary of links external to systems. </p>
-<dt>slowlinks</p>
-<dd>Summary of links running slower than expected. </p>
-<dt>slowconfiglinks</p>
-<dd>Summary of links configured to run slower than supported, includes slowlinks. </p>
-<dt>slowconnlinks</p>
-<dd>Summary of links connected with mismatched speed potential, includes slowconfiglinks. </p>
-<dt>misconfiglinks</p>
-<dd>Summary of links configured to run slower than supported. </p>
-<dt>misconnlinks</p>
-<dd>Summary of links connected with mismatched speed potential. </p>
-<dt>errors</p>
-<dd>Summary of links whose errors exceed counts in the configuration file. </p>
-<dt>otherports</p>
-<dd>Summary of ports not connected to the fabric. </p>
-<dt>linear</p>
-<dd>Summary of linear forwarding data base (FDB) for each switch. </p>
-<dt>mcast</p>
-<dd>Summary of multicast FDB for each switch in the fabric. </p>
-<dt>portusage</p>
-<dd>Summary of ports referenced in linear FDB for each switch, broken down by NodeType of DLID. </p>
-<dt>pathusage</p>
-<dd>Summary of number of FI to FI paths routed through each switch port. </p>
-<dt>treepathusage</p>
-<dd>Analysis of number of FI to FI paths routed through each switch port for a FAT tree. </p>
-<dt>portgroups</p>
-<dd>Summary of adaptive routing port groups for each switch. </p>
-<dt>quarantinednodes</p>
-<dd>Summary of quarantined nodes. </p>
-<dt>validateroutes</p>
-<dd>Validates all routes in the fabric. </p>
-<dt>validatepgs</p>
-<dd>Validates all port groups in the fabric. </p>
-<dt>validatecreditloops</p>
-<dd>Validates topology configuration of the fabric to identify any existing credit loops. </p>
-<dt>vfinfo</p>
-<dd>Summary of virtual fabric (vFabric) information. </p>
-<dt>vfmember</p>
-<dd>Summary of vFabric membership information. </p>
-<dt>verifyfis</p>
-<dd>Compares fabric (or snapshot) FIs to supplied topology and identifies differences and omissions. </p>
-<dt>verifysws</p>
-<dd>Compares fabric (or snapshot) switches to supplied topology and identifies differences and omissions. </p>
-<dt>verifynodes</p>
-<dd>Returns verifyfis and verifysws reports. </p>
-<dt>verifysms</p>
-<dd>Compares fabric (or snapshot) SMs to supplied topology and identifies differences and omissions. </p>
-<dt>verifylinks</p>
-<dd>Compares fabric (or snapshot) links to supplied topology and identifies differences and omissions. </p>
-<dt>verifyextlinks</p>
-<dd>Compares fabric (or snapshot) links to supplied topology and identifies differences and omissions. Limits analysis to links external to systems. </p>
-<dt>verifyall</p>
-<dd>Returns verifyfis, verifysws, verifysms, and verifylinks reports. </p>
-<dt>all</p>
-<dd>Returns comps, nodes, ious, links, extlinks, slowconnlinks, and errors reports. </p>
-<dt>route</p>
-<dd>Traces route between -S and -D points. </p>
-<dt>bfrctrl</p>
-<dd>Reports Buffer Control Tables for all ports. </p>
-<dt>snapshot</p>
-<dd>Outputs snapshot of the fabric state for later use as <i>snapshot_input</i>. This implies -x. May not be combined with other reports. When selected, -F, -P, -H, and -N options are ignored. </p>
-<dt>topology</p>
-<dd>Outputs the topology of the fabric for later use as <i>topology_input</i>. This implies -x. May not be combined with other reports.</p>
-<dt>none</p>
-<dd>No report, useful to clear statistics. </p>
+<dt>comps</dt>
+<dd>Summary of all systems and SMs in fabric. </dd>
+<dt>brcomps</dt>
+<dd>Brief summary of all systems and SMs in fabric. </dd>
+<dt>nodes</dt>
+<dd>Summary of all node types and SMs in fabric. </dd>
+<dt>brnodes</dt>
+<dd>Brief summary of all node types and SMs in fabric. </dd>
+<dt>ious</dt>
+<dd>Summary of all IO units in the fabric. </dd>
+<dt>lids</dt>
+<dd>Summary of all LIDs in the fabric. </dd>
+<dt>links</dt>
+<dd>Summary of all links. </dd>
+<dt>extlinks</dt>
+<dd>Summary of links external to systems. </dd>
+<dt>slowlinks</dt>
+<dd>Summary of links running slower than expected. </dd>
+<dt>slowconfiglinks</dt>
+<dd>Summary of links configured to run slower than supported, includes slowlinks. </dd>
+<dt>slowconnlinks</dt>
+<dd>Summary of links connected with mismatched speed potential, includes slowconfiglinks. </dd>
+<dt>misconfiglinks</dt>
+<dd>Summary of links configured to run slower than supported. </dd>
+<dt>misconnlinks</dt>
+<dd>Summary of links connected with mismatched speed potential. </dd>
+<dt>errors</dt>
+<dd>Summary of links whose errors exceed counts in the configuration file. </dd>
+<dt>otherports</dt>
+<dd>Summary of ports not connected to the fabric. </dd>
+<dt>linear</dt>
+<dd>Summary of linear forwarding data base (FDB) for each switch. </dd>
+<dt>mcast</dt>
+<dd>Summary of multicast FDB for each switch in the fabric. </dd>
+<dt>portusage</dt>
+<dd>Summary of ports referenced in linear FDB for each switch, broken down by NodeType of DLID. </dd>
+<dt>pathusage</dt>
+<dd>Summary of number of FI to FI paths routed through each switch port. </dd>
+<dt>treepathusage</dt>
+<dd>Analysis of number of FI to FI paths routed through each switch port for a FAT tree. </dd>
+<dt>portgroups</dt>
+<dd>Summary of adaptive routing port groups for each switch. </dd>
+<dt>quarantinednodes</dt>
+<dd>Summary of quarantined nodes. </dd>
+<dt>validateroutes</dt>
+<dd>Validates all routes in the fabric. </dd>
+<dt>validatepgs</dt>
+<dd>Validates all port groups in the fabric. </dd>
+<dt>validatecreditloops</dt>
+<dd>Validates topology configuration of the fabric to identify any existing credit loops. </dd>
+<dt>vfinfo</dt>
+<dd>Summary of virtual fabric (vFabric) information. </dd>
+<dt>vfmember</dt>
+<dd>Summary of vFabric membership information. </dd>
+<dt>verifyfis</dt>
+<dd>Compares fabric (or snapshot) FIs to supplied topology and identifies differences and omissions. </dd>
+<dt>verifysws</dt>
+<dd>Compares fabric (or snapshot) switches to supplied topology and identifies differences and omissions. </dd>
+<dt>verifynodes</dt>
+<dd>Returns verifyfis and verifysws reports. </dd>
+<dt>verifysms</dt>
+<dd>Compares fabric (or snapshot) SMs to supplied topology and identifies differences and omissions. </dd>
+<dt>verifylinks</dt>
+<dd>Compares fabric (or snapshot) links to supplied topology and identifies differences and omissions. </dd>
+<dt>verifyextlinks</dt>
+<dd>Compares fabric (or snapshot) links to supplied topology and identifies differences and omissions. Limits analysis to links external to systems. </dd>
+<dt>verifyall</dt>
+<dd>Returns verifyfis, verifysws, verifysms, and verifylinks reports. </dd>
+<dt>all</dt>
+<dd>Returns comps, nodes, ious, links, extlinks, slowconnlinks, and errors reports. </dd>
+<dt>route</dt>
+<dd>Traces route between -S and -D points. </dd>
+<dt>bfrctrl</dt>
+<dd>Reports Buffer Control Tables for all ports. </dd>
+<dt>snapshot</dt>
+<dd>Outputs snapshot of the fabric state for later use as <i>snapshot_input</i>. This implies -x. May not be combined with other reports. When selected, -F, -P, -H, and -N options are ignored. </dd>
+<dt>topology</dt>
+<dd>Outputs the topology of the fabric for later use as <i>topology_input</i>. This implies -x. May not be combined with other reports.</dd>
+<dt>none</dt>
+<dd>No report, useful to clear statistics. </dd>
 </dl>
 <h2>Point Syntax</h2>
 <dl>
-<dt>gid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric port GID of form: subnet:guid. </p>
-<dt>lid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID. </p>
-<dt>lid: <i>value</i>:node</p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID, selects entire node with given LID. </p>
-<dt>lid: <i>value</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID of node,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>portguid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric port GUID. </p>
-<dt>nodeguid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric node GUID. </p>
-<dt>nodeguid: <i>value1</i>: <i>port</i>: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is numeric node GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>iocguid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric IOC GUID. </p>
-<dt>iocguid: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is numeric IOC GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>systemguid: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric system image GUID. </p>
-<dt>systemguid: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the numeric system image GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>ioc: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is IOC Profile ID String&nbsp;<wbr>(IOC Name). </p>
-<dt>ioc: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is IOC Profile ID String&nbsp;<wbr>(IOC Name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>iocpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for IOC Profile ID String&nbsp;<wbr>(IOC Name). </p>
-<dt>iocpat: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is glob pattern for IOC Profile ID String&nbsp;<wbr>(IOC Name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>ioctype: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is IOC type&nbsp;<wbr>(VNIC or SRP). </p>
-<dt>ioctype: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is IOC type&nbsp;<wbr>(VNIC or SRP),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>node: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is node description&nbsp;<wbr>(node name). </p>
-<dt>node: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is node description&nbsp;<wbr>(node name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>nodepat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>#8217gt;value</i>&nbsp;<wbr>is glob pattern for node description&nbsp;<wbr>(node name). </p>
-<dt>nodepat: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the glob pattern for the node description&nbsp;<wbr>(node name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>nodedetpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for node details. </p>
-<dt>nodedetpat: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the glob pattern for the node details,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>nodetype: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is node type&nbsp;<wbr>(SW, FI, or RT). </p>
-<dt>nodetype: <i>value1</i>:port: <i>value2</i></p>
-<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is node type&nbsp;<wbr>(SW, FI, or RT),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </p>
-<dt>rate: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is string for rate&nbsp;<wbr>(25g, 50g, 75g, 100g), omits switch mgmt port 0. </p>
-<dt>portstate: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is a string for state&nbsp;<wbr>(init, armed, active). </p>
-<dt>portphysstate: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is a string for PHYs state&nbsp;<wbr>(polling, disabled, training, linkup, recovery, offline, test) </p>
-<dt>mtucap: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is MTU size&nbsp;<wbr>(2048, 4096, 8192, 10240), omits switch mgmt port 0. </p>
-<dt>labelpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable label. </p>
-<dt>lengthpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable length. </p>
-<dt>cabledetpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable details. </p>
-<dt>cabinflenpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info length. </p>
-<dt>cabinfvendnamepat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor name. </p>
-<dt>cabinfvendpnpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor part number. </p>
-<dt>cabinfvendrevpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor revision. </p>
-<dt>cabinftype: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is either optical, passive_copper, active_copper, or unknown. </p>
-<dt>cabinfvendsnpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor serial number. </p>
-<dt>linkdetpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for link details. </p>
-<dt>portdetpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for port details. </p>
-<dt>sm</p>
-<dd>Master subnet manager (SM). </p>
-<dt>smdetpat: <i>value</i></p>
-<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for SM details. </p>
-<dt>route: <i>point1</i>: <i>point2</i></p>
-<dd>All ports along the routes between the two given points. </p>
-<dt>linkqual: <i>value</i></p>
-<dd>Ports with a link quality equal to <i>value</i>. </p>
-<dt>linkqualLE: <i>value</i></p>
-<dd>Ports with a link quality less than or equal to <i>value</i>. </p>
-<dt>linkqualGE: <i>value</i></p>
-<dd>Ports with a link quality greater than or equal to <i>value</i>. </p>
+<dt>gid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric port GID of form: subnet:guid. </dd>
+<dt>lid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID. </dd>
+<dt>lid: <i>value</i>:node</dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID, selects entire node with given LID. </dd>
+<dt>lid: <i>value</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric LID of node,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>portguid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric port GUID. </dd>
+<dt>nodeguid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric node GUID. </dd>
+<dt>nodeguid: <i>value1</i>: <i>port</i>: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is numeric node GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>iocguid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric IOC GUID. </dd>
+<dt>iocguid: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is numeric IOC GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>systemguid: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is numeric system image GUID. </dd>
+<dt>systemguid: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the numeric system image GUID,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>ioc: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is IOC Profile ID String&nbsp;<wbr>(IOC Name). </dd>
+<dt>ioc: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is IOC Profile ID String&nbsp;<wbr>(IOC Name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>iocpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for IOC Profile ID String&nbsp;<wbr>(IOC Name). </dd>
+<dt>iocpat: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is glob pattern for IOC Profile ID String&nbsp;<wbr>(IOC Name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>ioctype: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is IOC type&nbsp;<wbr>(VNIC or SRP). </dd>
+<dt>ioctype: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is IOC type&nbsp;<wbr>(VNIC or SRP),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>node: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is node description&nbsp;<wbr>(node name). </dd>
+<dt>node: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is node description&nbsp;<wbr>(node name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>nodepat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>#8217gt;value</i>&nbsp;<wbr>is glob pattern for node description&nbsp;<wbr>(node name). </dd>
+<dt>nodepat: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the glob pattern for the node description&nbsp;<wbr>(node name),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>nodedetpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for node details. </dd>
+<dt>nodedetpat: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is the glob pattern for the node details,&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>nodetype: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is node type&nbsp;<wbr>(SW, FI, or RT). </dd>
+<dt>nodetype: <i>value1</i>:port: <i>value2</i></dt>
+<dd>&nbsp;<wbr><i>value1</i>&nbsp;<wbr>is node type&nbsp;<wbr>(SW, FI, or RT),&nbsp;<wbr>&nbsp;<wbr><i>value2</i>&nbsp;<wbr>is port number. </dd>
+<dt>rate: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is string for rate&nbsp;<wbr>(25g, 50g, 75g, 100g), omits switch mgmt port 0. </dd>
+<dt>portstate: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is a string for state&nbsp;<wbr>(init, armed, active). </dd>
+<dt>portphysstate: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is a string for PHYs state&nbsp;<wbr>(polling, disabled, training, linkup, recovery, offline, test) </dd>
+<dt>mtucap: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is MTU size&nbsp;<wbr>(2048, 4096, 8192, 10240), omits switch mgmt port 0. </dd>
+<dt>labelpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable label. </dd>
+<dt>lengthpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable length. </dd>
+<dt>cabledetpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable details. </dd>
+<dt>cabinflenpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info length. </dd>
+<dt>cabinfvendnamepat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor name. </dd>
+<dt>cabinfvendpnpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor part number. </dd>
+<dt>cabinfvendrevpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor revision. </dd>
+<dt>cabinftype: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is either optical, passive_copper, active_copper, or unknown. </dd>
+<dt>cabinfvendsnpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for cable info vendor serial number. </dd>
+<dt>linkdetpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for link details. </dd>
+<dt>portdetpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for port details. </dd>
+<dt>sm</dt>
+<dd>Master subnet manager (SM). </dd>
+<dt>smdetpat: <i>value</i></dt>
+<dd>&nbsp;<wbr><i>value</i>&nbsp;<wbr>is glob pattern for SM details. </dd>
+<dt>route: <i>point1</i>: <i>point2</i></dt>
+<dd>All ports along the routes between the two given points. </dd>
+<dt>linkqual: <i>value</i></dt>
+<dd>Ports with a link quality equal to <i>value</i>. </dd>
+<dt>linkqualLE: <i>value</i></dt>
+<dd>Ports with a link quality less than or equal to <i>value</i>. </dd>
+<dt>linkqualGE: <i>value</i></dt>
+<dd>Ports with a link quality greater than or equal to <i>value</i>. </dd>
 </dl>
 <h2>Examples</h2>
 <p>opareport can generate hundreds of different reports. Commonly generated reports include the following:opareport -o comps -d 3<br />

@@ -10,9 +10,9 @@ c_ftgeti - retrieve an int valued parameter
 <h2>Function Prototype</h2>void c_ftgeti(char *, int *);
 <h2>Synopsis</h2>void c_ftgeti (pnam, ival);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>The name of the control parameter whose value is to be retrieved.
-<dt>ival
-<dd>*ival will be the value currently assigned to the control parameter whose nam.</dl><h2>Usage</h2>c_ftgeti is a called to obtain current values for any of the int valued control parameters.
+</dt><dd>The name of the control parameter whose value is to be retrieved.
+</dd><dt>ival
+</dt><dd>*ival will be the value currently assigned to the control parameter whose nam.</dd></dl><h2>Usage</h2>c_ftgeti is a called to obtain current values for any of the int valued control parameters.
 <h2>Access</h2>To use c_ftgeti, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>fitgrid_params, c_ftseti 
 

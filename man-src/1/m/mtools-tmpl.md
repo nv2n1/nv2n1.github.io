@@ -69,14 +69,14 @@ hot+cold HOT_CO~1 illegal character
 <p>&nbsp; </p>
 <p>&nbsp;As you see, the following transformations happen to derive a short name:</p>
 <dl COMPACT>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>Illegal characters are replaced by underscores. The illegal characters are <tt>;+=[]',\&quot;*\&lt;&gt;/?:|</tt>.</p>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>Extra dots, which cannot be interpreted as a main name/extension separator are removed</p>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>A <tt>~</tt><i>n</i> number is generated,</p>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>The name is shortened so as to fit in the 8+3 limitation</dl>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>Illegal characters are replaced by underscores. The illegal characters are <tt>;+=[]',\&quot;*\&lt;&gt;/?:|</tt>.</dd>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>Extra dots, which cannot be interpreted as a main name/extension separator are removed</dd>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>A <tt>~</tt><i>n</i> number is generated,</dd>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>The name is shortened so as to fit in the 8+3 limitation</dd></dl>
 <p>&nbsp;The initial Unix-style file name&nbsp;(whether long or short)&nbsp;is also called the <i>primary</i> name, and the derived short name is also called the <i>secondary</i> name. </p>
 <p>&nbsp;Example:<br />
 &nbsp; </p>
@@ -98,44 +98,44 @@ ab:c ab_c-1 illegal character
 <p>&nbsp; </p>
 <p>&nbsp;As you see, the following transformations happen if a long name is illegal:</p>
 <dl COMPACT>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>Illegal characters are replaces by underscores,</p>
-<dt>* &nbsp;<wbr>&nbsp;</p>
-<dd>A <tt>-</tt><i>n</i> number is generated,</dl>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>Illegal characters are replaces by underscores,</dd>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
+<dd>A <tt>-</tt><i>n</i> number is generated,</dd></dl>
 <h3>Name clashes</h3>
 <p>When writing a file to disk, its long name or short name may collide with an already existing file or directory. This may happen for all commands which create new directory entries, such as <tt>mcopy</tt>, <tt>mmd</tt>, <tt>mren</tt>, <tt>mmove</tt>. When a name clash happens, mtools asks you what it should do. It offers several choices:</p>
 <dl COMPACT>
-<dt><tt>overwrite</tt>&nbsp;</p>
-<dd>Overwrites the existing file. It is not possible to overwrite a directory with a file.</p>
-<dt><tt>rename</tt>&nbsp;</p>
-<dd>Renames the newly created file. Mtools prompts for the new filename</p>
-<dt><tt>autorename</tt>&nbsp;</p>
-<dd>Renames the newly created file. Mtools chooses a name by itself, without prompting</p>
-<dt><tt>skip</tt>&nbsp;</p>
-<dd>Gives up on this file, and moves on to the next (if any)</dl>
+<dt><tt>overwrite</tt>&nbsp;</dt>
+<dd>Overwrites the existing file. It is not possible to overwrite a directory with a file.</dd>
+<dt><tt>rename</tt>&nbsp;</dt>
+<dd>Renames the newly created file. Mtools prompts for the new filename</dd>
+<dt><tt>autorename</tt>&nbsp;</dt>
+<dd>Renames the newly created file. Mtools chooses a name by itself, without prompting</dd>
+<dt><tt>skip</tt>&nbsp;</dt>
+<dd>Gives up on this file, and moves on to the next (if any)</dd></dl>
 <p> To chose one of these actions, type its first letter at the prompt. If you use a lower case letter, the action only applies for this file only, if you use an upper case letter, the action applies to all files, and you won&#8217;t be prompted again. </p>
 <p> You may also chose actions (for all files) on the command line, when invoking mtools:</p>
 <dl COMPACT>
-<dt><tt>-D o</tt>&nbsp;</p>
-<dd>Overwrites primary names by default.</p>
-<dt><tt>-D O</tt>&nbsp;</p>
-<dd>Overwrites secondary names by default.</p>
-<dt><tt>-D r</tt>&nbsp;</p>
-<dd>Renames primary name by default.</p>
-<dt><tt>-D R</tt>&nbsp;</p>
-<dd>Renames secondary name by default.</p>
-<dt><tt>-D a</tt>&nbsp;</p>
-<dd>Autorenames primary name by default.</p>
-<dt><tt>-D A</tt>&nbsp;</p>
-<dd>Autorenames secondary name by default.</p>
-<dt><tt>-D s</tt>&nbsp;</p>
-<dd>Skip primary name by default.</p>
-<dt><tt>-D S</tt>&nbsp;</p>
-<dd>Skip secondary name by default.</p>
-<dt><tt>-D m</tt>&nbsp;</p>
-<dd>Ask user what to do with primary name.</p>
-<dt><tt>-D M</tt>&nbsp;</p>
-<dd>Ask user what to do with secondary name.</dl>
+<dt><tt>-D o</tt>&nbsp;</dt>
+<dd>Overwrites primary names by default.</dd>
+<dt><tt>-D O</tt>&nbsp;</dt>
+<dd>Overwrites secondary names by default.</dd>
+<dt><tt>-D r</tt>&nbsp;</dt>
+<dd>Renames primary name by default.</dd>
+<dt><tt>-D R</tt>&nbsp;</dt>
+<dd>Renames secondary name by default.</dd>
+<dt><tt>-D a</tt>&nbsp;</dt>
+<dd>Autorenames primary name by default.</dd>
+<dt><tt>-D A</tt>&nbsp;</dt>
+<dd>Autorenames secondary name by default.</dd>
+<dt><tt>-D s</tt>&nbsp;</dt>
+<dd>Skip primary name by default.</dd>
+<dt><tt>-D S</tt>&nbsp;</dt>
+<dd>Skip secondary name by default.</dd>
+<dt><tt>-D m</tt>&nbsp;</dt>
+<dd>Ask user what to do with primary name.</dd>
+<dt><tt>-D M</tt>&nbsp;</dt>
+<dd>Ask user what to do with secondary name.</dd></dl>
 <p> Note that for command line switches lower/upper differentiates between primary/secondary name whereas for interactive choices, lower/upper differentiates between just-this-time/always. </p>
 <p> The primary name is the name as displayed in Windows 95 or Windows NT: i.e. the long name if it exists, and the short name otherwise. The secondary name is the &quot;hidden&quot; name, i.e. the short name if a long name exists. </p>
 <p> By default, the user is prompted if the primary name clashes, and the secondary name is autorenamed. </p>

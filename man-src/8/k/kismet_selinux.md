@@ -62,8 +62,8 @@ description: "kismet_selinux – Security Enhanced Linux Policy for the kismet p
 <p> <code>kismet_exec_t</code> </p>
 <p> &#8211; Set files with the kismet_exec_t type, if you want to transition an executable to the kismet_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/kismet, /usr/bin/kismet_drone, /usr/bin/kismet_server </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/kismet, /usr/bin/kismet_drone, /usr/bin/kismet_server </dd>
 </dl>
 <p> <code>kismet_home_t</code> </p>
 <p> &#8211; Set files with the kismet_home_t type, if you want to store kismet files in the users home directory. </p>

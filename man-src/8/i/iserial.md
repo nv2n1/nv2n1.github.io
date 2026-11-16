@@ -15,70 +15,70 @@ description: "ipmiutil_serial – configure a system for Serial/EMP management f
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-b</p>
-<dd>Set up and enable the Serial Port EMP parameters for Basic Mode management functions. This does not set a username or password.</p>
-<dt>-c</p>
-<dd>Configure and enable the Serial Port EMP parameters for Terminal Mode management functions, shared with BIOS Console Redirection. Setting a new username and password for serial access via -u and -p is recommended for security.</p>
-<dt>-d</p>
-<dd>Disable the serial port access for IPMI commands. The serial port is then only available for BIOS console and OS functions. A side-effect of this option is that it sets the default user (1) back to admin access.</p>
-<dt>-e</p>
-<dd>Enable EMP Terminal Mode without shared BIOS console. The serial port is then only available for EMP Terminal Mode functions.</p>
-<dt>-f</p>
-<dd>Specifies the Flow Control for the Serial EMP. 0 means no flow control, and 1 means RTS/CTS flow control (default). This must match the BIOS Serial Console setting.</p>
-<dt>-l</p>
-<dd>Show LAN Parameters. This option reads and displays the LAN Parameter configuration also.</p>
-<dt>-m0</p>
-<dd>Switch the Serial Port MUX to Baseboard/BIOS Console operation. Set no other configuration parameters.</p>
-<dt>-m1</p>
-<dd>Switch the Serial Port MUX to Terminal Mode management. Set no other configuration parameters.</p>
-<dt>-n ser_chan</p>
-<dd>Sets the IPMI channel number to use for the EMP serial channel (often 4). Note that the IPMI channels for LAN, Serial, etc. are numbered differently on each platform type. The default is to detect the first available IPMI serial channel.</p>
-<dt>-#</p>
-<dd>Same as -q below.</p>
-<dt>-q</p>
-<dd>Specify an alternate user number for the EMP Username from the -u option. This is normally user number 2, 3, or 4, where 3 is the default. The maximum number of users is 15.</p>
-<dt>-r</p>
-<dd>Read Only. This option just reads the Serial Parameter configuration without writing any values.</p>
-<dt>-s</p>
-<dd>Set up and enable the Serial Port EMP parameters for Shared operation between Basic Mode management functions and Baseboard (BIOS) Remote Console. This option switches the Serial Port MUX to Baseboard Console operation.</p>
-<dt>-t</p>
-<dd>Configure and enable the Serial Port EMP parameters for Terminal Mode management functions, shared with BIOS Console Redirection. Same as -c, but easier to remember.</p>
-<dt>-u username</p>
-<dd>This specifies a username for the EMP Terminal Mode login. It can be any string, up to 15 characters. If -u is not used, the default user 1 (null) will be assumed. The username, if specified, will be set for user 3, unless option -q is specified.</p>
-<dt>-p password</p>
-<dd>This specifies a password for the EMP Terminal Mode login. It can be any string, up to 15 characters. A null password is used if none is specified. This password applies to user 3 if -u is used, to user 1 otherwise.</p>
-<dt>-v priv</p>
-<dd>Set a specific access priVilege for this user, where priv can be: 1=Callback, 2=User, 3=Operator, 4=Admin, 5=OEM, 15=NoAccess The default if not specified or specified in error, is to use 4=Admin.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-B</p>
-<dd>Set the Baud rate of the serial port to one of the following: 9600, 19,2K, 38.4K, 57.6K, or 115.2K. The default is 19.2K bps. </p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-b</dt>
+<dd>Set up and enable the Serial Port EMP parameters for Basic Mode management functions. This does not set a username or password.</dd>
+<dt>-c</dt>
+<dd>Configure and enable the Serial Port EMP parameters for Terminal Mode management functions, shared with BIOS Console Redirection. Setting a new username and password for serial access via -u and -p is recommended for security.</dd>
+<dt>-d</dt>
+<dd>Disable the serial port access for IPMI commands. The serial port is then only available for BIOS console and OS functions. A side-effect of this option is that it sets the default user (1) back to admin access.</dd>
+<dt>-e</dt>
+<dd>Enable EMP Terminal Mode without shared BIOS console. The serial port is then only available for EMP Terminal Mode functions.</dd>
+<dt>-f</dt>
+<dd>Specifies the Flow Control for the Serial EMP. 0 means no flow control, and 1 means RTS/CTS flow control (default). This must match the BIOS Serial Console setting.</dd>
+<dt>-l</dt>
+<dd>Show LAN Parameters. This option reads and displays the LAN Parameter configuration also.</dd>
+<dt>-m0</dt>
+<dd>Switch the Serial Port MUX to Baseboard/BIOS Console operation. Set no other configuration parameters.</dd>
+<dt>-m1</dt>
+<dd>Switch the Serial Port MUX to Terminal Mode management. Set no other configuration parameters.</dd>
+<dt>-n ser_chan</dt>
+<dd>Sets the IPMI channel number to use for the EMP serial channel (often 4). Note that the IPMI channels for LAN, Serial, etc. are numbered differently on each platform type. The default is to detect the first available IPMI serial channel.</dd>
+<dt>-#</dt>
+<dd>Same as -q below.</dd>
+<dt>-q</dt>
+<dd>Specify an alternate user number for the EMP Username from the -u option. This is normally user number 2, 3, or 4, where 3 is the default. The maximum number of users is 15.</dd>
+<dt>-r</dt>
+<dd>Read Only. This option just reads the Serial Parameter configuration without writing any values.</dd>
+<dt>-s</dt>
+<dd>Set up and enable the Serial Port EMP parameters for Shared operation between Basic Mode management functions and Baseboard (BIOS) Remote Console. This option switches the Serial Port MUX to Baseboard Console operation.</dd>
+<dt>-t</dt>
+<dd>Configure and enable the Serial Port EMP parameters for Terminal Mode management functions, shared with BIOS Console Redirection. Same as -c, but easier to remember.</dd>
+<dt>-u username</dt>
+<dd>This specifies a username for the EMP Terminal Mode login. It can be any string, up to 15 characters. If -u is not used, the default user 1 (null) will be assumed. The username, if specified, will be set for user 3, unless option -q is specified.</dd>
+<dt>-p password</dt>
+<dd>This specifies a password for the EMP Terminal Mode login. It can be any string, up to 15 characters. A null password is used if none is specified. This password applies to user 3 if -u is used, to user 1 otherwise.</dd>
+<dt>-v priv</dt>
+<dd>Set a specific access priVilege for this user, where priv can be: 1=Callback, 2=User, 3=Operator, 4=Admin, 5=OEM, 15=NoAccess The default if not specified or specified in error, is to use 4=Admin.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-B</dt>
+<dd>Set the Baud rate of the serial port to one of the following: 9600, 19,2K, 38.4K, 57.6K, or 115.2K. The default is 19.2K bps. </dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
 <dl>
-<dt>ipmiutil serial -t (or -c)</p>
-<dd>Enables Terminal Mode management functions, shared with BIOS Serial Console redirection. The user can switch between serial console operations and IPMI Terminal Mode commands by typing ESC &#8216;)&#8217; and ESC &#8216;Q&#8217;.</p>
-<dt>ipmiutil serial -s</p>
-<dd>Enables Basic Mode management functions shared with BIOS Serial Console redirection. The user can switch between serial console operations and IPMI Basic Mode management programs on the same serial port.</p>
-<dt>ipmiutil serial -d</p>
+<dt>ipmiutil serial -t (or -c)</dt>
+<dd>Enables Terminal Mode management functions, shared with BIOS Serial Console redirection. The user can switch between serial console operations and IPMI Terminal Mode commands by typing ESC &#8216;)&#8217; and ESC &#8216;Q&#8217;.</dd>
+<dt>ipmiutil serial -s</dt>
+<dd>Enables Basic Mode management functions shared with BIOS Serial Console redirection. The user can switch between serial console operations and IPMI Basic Mode management programs on the same serial port.</dd>
+<dt>ipmiutil serial -d</dt>
 <dd>Disables the serial port management functions. This would be used if only the BIOS Serial Console were used and no BMC serial management functions.  How to login to a Terminal Mode console:<br />
  ESC ( (switch to Terminal mode)<br />
  [SYS PWD -N ] (login for default user, null psw)<br />
@@ -88,7 +88,7 @@ description: "ipmiutil_serial – configure a system for Serial/EMP management f
  [SYS HELP]<br />
  [SYS PWD] (logoff)<br />
  ESC Q (switch to BIOS console)<br />
- See IPMI 1.5 Spec, Appendix E, and Intel TIGPR2U TPS for more information. </p>
+ See IPMI 1.5 Spec, Appendix E, and Intel TIGPR2U TPS for more information. </dd>
 <h2>Dependencies</h2>
 <p>The ipmiutil serial utility is intended to configure the EMP serial port on the server for shared access between BMC/IPMI functions and BIOS Console Redirection. Some platforms only support only Basic Mode for BMC/IPMI functions. Basic Mode requires a remote client application to utilize it (Windows ISC Console/DPC, or a special modified Linux telnet). There are some platforms which implement Terminal Mode via IPMI v1.5 Appendix E to make remote management with character commands available on the serial port without a special remote client application. </p>
 <p> For example, Intel TSRLT2 systems would use &quot;ipmiutil serial -s&quot; for Basic Mode shared functions, but Intel TIGPR2U systems could use &quot;ipmiutil serial -c&quot; to configure Terminal Mode functions. On your system, run &quot;ipmiutil serial -r&quot; to check whether Serial Param(29): &quot;Terminal Mode Config&quot; is supported. If not, configure Basic Mode via &quot;ipmiutil serial -s&quot;.</p>
@@ -131,3 +131,4 @@ description: "ipmiutil_serial – configure a system for Serial/EMP management f
 <p> This utility is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.</p>
 <h2>Author</h2>
 <p>Andy Cress &lt;arcress at users.sourceforge.net&gt;</p>
+</dl>

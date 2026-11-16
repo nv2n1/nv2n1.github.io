@@ -16,16 +16,16 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
 <h2>Description</h2>
 <p>The Lintian test suite is divided into several parts. These are:</p>
 <dl COMPACT>
-<dt>&#8211;</p>
-<dd>scripts </p>
+<dt>&#8211;</dt>
+<dd>scripts </dd>
 <p> Small (Perl) &#8220;prove&#8221; tests. These assert that code style, data files and/or self-contained code units (i.e. unit tests) work as intended. They are <code>not</code> used for testing Lintian tags.</p>
-<dt>&#8211;</p>
-<dd>tags </p>
+<dt>&#8211;</dt>
+<dd>tags </dd>
 <p> These tests all test for the presence of tags after building test packages using skeletons. For most cases, we recommend </p>
 <pre> Skeleton: upload-non-native</pre>
 <p>suites are small test suites that test some particular tags for <i>.changes</i>, <i>.deb</i> or <i>.dsc</i> files. Typically, you will find the more exotic tags here, which require some special fiddling and cannot be built by a &#8220;standard&#8221; dh7 + dpkg build.</p>
-<dt>&#8211;</p>
-<dd>literal </p>
+<dt>&#8211;</dt>
+<dd>literal </dd>
 <p> These tests look to match the literal output of Lintian. These tests are useful as general false positives. They also catch Lintian messages unrelated to tags.</dl>
 <p> With this in mind, let us move on to the scope.</p>
 <h3>Scope of the tutorial</h3>
@@ -54,11 +54,11 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
 <p> Note that the value of the Testname field (as Source field), Version field and Description field (as the synopsis) <i>will</i> be used in the package. As such, they must obey the normal requirements for these purposes. </p>
 <p> Please keep the following conventions in mind:</p>
 <dl COMPACT>
-<dt>&#8211;</p>
-<dd>The Testname should be &#8220;&lt;check-name&gt;-&lt;test-name&gt;&#8221; </p>
+<dt>&#8211;</dt>
+<dd>The Testname should be &#8220;&lt;check-name&gt;-&lt;test-name&gt;&#8221; </dd>
 <p> Note that regular Lintian checks do <i>not</i> have a &#8220;/&#8221;, so the naming convention works slightly better there.</p>
-<dt>&#8211;</p>
-<dd>The Version should always be &#8220;1.0&#8221; unless the test requires anything else. </p>
+<dt>&#8211;</dt>
+<dd>The Version should always be &#8220;1.0&#8221; unless the test requires anything else. </dd>
 <p> For non-native packages, the default would be &#8220;1.0-1&#8221;.</dl>
 <p> <i>The &#8220;tags&#8221; file (mandatory, but may be empty)</i> </p>
 <p> This file contains the <i>sorted</i> &#8220;expected&#8221; output of lintian. Assuming all of the tags are &#8220;I&#8221; tags, the file should look something like: </p>
@@ -74,7 +74,6 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
  Maintainer: {$author}
  Standards-Version: {$standards_version}
  Build-Depends: {$build_depends}
- 
  Package: {$source}-missing-ma
  Architecture: {$architecture}
  Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
@@ -85,7 +84,6 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
  be an empty package.
  .
  Missing M-A field.
- 
  Package: {$source}-missing-pred
  Architecture: any
  Depends: $\{shlibs:Depends\}, $\{misc:Depends\}
@@ -110,93 +108,93 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
 <p> <i>A test in the &#8220;tests&#8221; suite</i> </p>
 <p> The basic process of a lintian test in the &#8220;tests&#8221; suite.</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Copy the &#8220;upstream&#8221; skeleton dir into the build dir (non-native only)</p>
-<dt>2.</p>
-<dd>Copy the &#8220;upstream&#8221; dir from the test into the build dir (if present, non-native only)</p>
-<dt>3.</p>
-<dd>Run the &#8220;pre_upstream&#8221; hook (if present, non-native only)</p>
-<dt>4.</p>
-<dd>Assemble the upstream tarball (non-native only)</p>
-<dt>5.</p>
-<dd>Copy the &#8220;debian&#8221; skeleton dir into the build dir</p>
-<dt>6.</p>
-<dd>Copy the &#8220;debian&#8221; directory from the test into the build dir (if present)</p>
-<dt>7.</p>
-<dd>Create debian/control and debian/changelog from &quot;<i>&lt;file&gt;</i>.in&quot; if they do not exist.</p>
-<dt>8.</p>
-<dd>Create an empty watch file (if missing, non-native only)</p>
-<dt>9.</p>
-<dd>Run the &#8220;pre_build&#8221; hook (if present)</p>
-<dt>10.</p>
-<dd>Run dpkg-buildpackage</p>
-<dt>11.</p>
-<dd>Run lintian on the build result</p>
-<dt>12.</p>
-<dd>Run the &#8220;post_test&#8221; hook (if present)</p>
-<dt>13.</p>
-<dd>Run the &#8220;test_calibration&#8221; hook (if present), which may produce a new &#8220;expected output file&#8221;.</p>
-<dt>14.</p>
-<dd>Compare the result with the expected output.</dl>
+<dt>1.</dt>
+<dd>Copy the &#8220;upstream&#8221; skeleton dir into the build dir (non-native only)</dd>
+<dt>2.</dt>
+<dd>Copy the &#8220;upstream&#8221; dir from the test into the build dir (if present, non-native only)</dd>
+<dt>3.</dt>
+<dd>Run the &#8220;pre_upstream&#8221; hook (if present, non-native only)</dd>
+<dt>4.</dt>
+<dd>Assemble the upstream tarball (non-native only)</dd>
+<dt>5.</dt>
+<dd>Copy the &#8220;debian&#8221; skeleton dir into the build dir</dd>
+<dt>6.</dt>
+<dd>Copy the &#8220;debian&#8221; directory from the test into the build dir (if present)</dd>
+<dt>7.</dt>
+<dd>Create debian/control and debian/changelog from &quot;<i>&lt;file&gt;</i>.in&quot; if they do not exist.</dd>
+<dt>8.</dt>
+<dd>Create an empty watch file (if missing, non-native only)</dd>
+<dt>9.</dt>
+<dd>Run the &#8220;pre_build&#8221; hook (if present)</dd>
+<dt>10.</dt>
+<dd>Run dpkg-buildpackage</dd>
+<dt>11.</dt>
+<dd>Run lintian on the build result</dd>
+<dt>12.</dt>
+<dd>Run the &#8220;post_test&#8221; hook (if present)</dd>
+<dt>13.</dt>
+<dd>Run the &#8220;test_calibration&#8221; hook (if present), which may produce a new &#8220;expected output file&#8221;.</dd>
+<dt>14.</dt>
+<dd>Compare the result with the expected output.</dd></dl>
 <p> Note that the majority of the steps are conditional on native/non-native packages or presence of hooks. </p>
 <p> <i>A test in the &#8220;debs&#8221; and the &#8220;source&#8221; suite</i> </p>
 <p> The &#8220;debs&#8221; and the &#8220;source&#8221; suite share the same basic steps, which are:</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Copy the skeleton dir into the build dir</p>
-<dt>2.</p>
-<dd>Copy the test directory files into the build dir</p>
-<dt>3.</p>
-<dd>Create changelog, control, and (debs-only) Makefile from &quot;<i>&lt;file&gt;</i>.in&quot; if they do not exist.</p>
-<dt>4.</p>
-<dd>Run make in the build dir</p>
-<dt>5.</p>
-<dd>Run lintian on the produced artifact (there must be exactly one)</p>
-<dt>6.</p>
-<dd>Compare the result with the expected output.</dl>
+<dt>1.</dt>
+<dd>Copy the skeleton dir into the build dir</dd>
+<dt>2.</dt>
+<dd>Copy the test directory files into the build dir</dd>
+<dt>3.</dt>
+<dd>Create changelog, control, and (debs-only) Makefile from &quot;<i>&lt;file&gt;</i>.in&quot; if they do not exist.</dd>
+<dt>4.</dt>
+<dd>Run make in the build dir</dd>
+<dt>5.</dt>
+<dd>Run lintian on the produced artifact (there must be exactly one)</dd>
+<dt>6.</dt>
+<dd>Compare the result with the expected output.</dd></dl>
 <p> <i>A test in the &#8220;changes&#8221; suite</i> </p>
 <p> The changes test is fairly simple as there is not much building. The steps are as the following:</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Find or compute the test artifact as the following:</p>
+<dt>1.</dt>
+<dd>Find or compute the test artifact as the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&#8211;</p>
-<dd>If <i>&lt;test-dir&gt;/&lt;test-name&gt;.changes</i> exists, it is used as the artifact.</p>
-<dt>&#8211;</p>
-<dd>Otherwise, copy <i>&lt;test-dir&gt;/&lt;test-name&gt;.changes.in</i> into the build dir and use it as a template to create <i>&lt;build-dir&gt;/&lt;test-name&gt;.changes</i>. The result is then used as the artifact to test.</dl>
+</dd><dl COMPACT>
+<dt>&#8211;</dt>
+<dd>If <i>&lt;test-dir&gt;/&lt;test-name&gt;.changes</i> exists, it is used as the artifact.</dd>
+<dt>&#8211;</dt>
+<dd>Otherwise, copy <i>&lt;test-dir&gt;/&lt;test-name&gt;.changes.in</i> into the build dir and use it as a template to create <i>&lt;build-dir&gt;/&lt;test-name&gt;.changes</i>. The result is then used as the artifact to test.</dd></dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
-<dt>2.</p>
-<dd>Run lintian run on the artifact</p>
-<dt>3.</p>
-<dd>Compare the result with the expected output</dl>
+<dd></dd></dl>
+<dt>2.</dt>
+<dd>Run lintian run on the artifact</dd>
+<dt>3.</dt>
+<dd>Compare the result with the expected output</dd></dl>
 <h3>The full layout of a test in the tests suite</h3>
 <p>Each test in the &#8220;tests&#8221; suite is placed in <i>t/tests/&lt;check&gt;-&lt;name&gt;</i>. In these you will find some of the following files:</p>
 <dl COMPACT>
-<dt>&#8211;</p>
-<dd>desc (mandatory) </p>
+<dt>&#8211;</dt>
+<dd>desc (mandatory) </dd>
 <p> This is the test description file. It is a deb822 file (i.e. same syntax as <i>debian/control</i>), which contains a number of fields.</p>
-<dt>&#8211;</p>
-<dd>tags (mandatory, but may be empty) </p>
+<dt>&#8211;</dt>
+<dd>tags (mandatory, but may be empty) </dd>
 <p> This file contains the &#8220;expected&#8221; output of lintian. </p>
 <p> This is generally sorted, though a few tests rely on the order of the output. This can be controlled via the &#8220;Sort&#8221; field in the &#8220;desc&#8221; file.</p>
-<dt>&#8211;</p>
-<dd>debian/ (optional, but usually what you need) </p>
+<dt>&#8211;</dt>
+<dd>debian/ (optional, but usually what you need) </dd>
 <p> The unpacked debian package. For &#8220;native&#8221; package tests, this is <i>also</i> the &#8220;upstream&#8221; part. For &#8220;non-native&#8221; package tests, this can be used to override files in the &#8220;upstream&#8221; part (rarely needed). </p>
 <p> The actual packaging files (e.g. <i>debian/rules</i>) would be in </p>
 <pre> I&lt;&lt; t/tests/&lt;test-name&gt;/debian/debian/rules &gt;&gt;</pre>
 <p>Note the double &#8220;debian&#8221;. </p>
 <p> This part is seeded from <i>t/templates/tests/&lt;skeleton&gt;/</i>, where <i>skeleton</i> is the value of the &#8220;Skeleton&#8221; field from the &#8220;desc&#8221; file.</p>
-<dt>&#8211;</p>
-<dd>upstream/ (optional, rarely needed) </p>
+<dt>&#8211;</dt>
+<dd>upstream/ (optional, rarely needed) </dd>
 <p> This directory is the used to create the &#8220;upstream&#8221; tarball for &#8220;non-native&#8221; package tests. Since most tags are emitted for both &#8220;native&#8221; and &#8220;non-native&#8221; tests, it is simpler (and slightly faster) to use &#8220;native&#8221; packages for most tests. </p>
 <p> The files here should also be present with the same contents in the debian directory unless you&#8217;re intentionally creating a diff. However, as normal with a Debian package, you can omit files entirely from the debian directory and the deletions will be ignored by dpkg-buildpackage. </p>
 <p> The directory will be seeded from <i>t/templates/tests/&lt;skeleton&gt;.upstream/</i>, where <i>skeleton</i> is the value of the &#8220;Skeleton&#8221; field from the &#8220;desc&#8221; file.</p>
-<dt>&#8211;</p>
-<dd>post_test (optional, rarely needed) </p>
+<dt>&#8211;</dt>
+<dd>post_test (optional, rarely needed) </dd>
 <p> This script (if present) is a sed script that can be used to &#8220;massage&#8221; the output of lintian before comparing it with the &#8220;expected output&#8221;. </p>
 <p> The most common use for this script is to remove the architecture name, multi-arch path, drop hardening tags or exact standards-version number from tags output. Here are some examples files used: </p>
 <pre> # Remove the exact standards version, so the tags file will not need
@@ -207,43 +205,43 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
  # Massage e.g. usr/lib/i386-linux-gnu/pkgconfig into a generic path
  s, usr/lib/[^/]+/pkgconfig/, usr/lib/ARCH/pkgconfig/,</pre>
 <p>It may be useful for other cases where the output of Lintian may change on different systems.</p>
-<dt>&#8211;</p>
-<dd>pre_build / pre_upstream (optional, special case usage) </p>
+<dt>&#8211;</dt>
+<dd>pre_build / pre_upstream (optional, special case usage) </dd>
 <p> If present and executable, these scripts can be used to mess with the package directory and (what will become) the upstream tarball. </p>
 <p> Their common use case is to create files in the tarballs that cannot (or preferably should not) be included in the revision control system. Common cases include &#8220;binary&#8221;, &#8220;minimized&#8221; files or files with &#8220;weird&#8221; names such as backslashes or non <font SIZE="-1">UTF-8</font> characters. </p>
 <p> Both scripts receive a directory as first argument, which is the directory they should work on. For:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&#8211;</p>
-<dd>pre_upstream </p>
+</dd><dl COMPACT>
+<dt>&#8211;</dt>
+<dd>pre_upstream </dd>
 <p> The script will be run before the upstream tarball is compiled. The first argument is the directory that will be included in the upstream tarball.</p>
-<dt>&#8211;</p>
-<dd>pre_build </p>
+<dt>&#8211;</dt>
+<dd>pre_build </dd>
 <p> The script will be run before dpkg-buildpackage is invoked. The first argument is the directory of the unpacked debian source package.</dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
-<dt>&#8211;</p>
-<dd>test_calibration (optional, special case usage) </p>
+<dd></dd></dl>
+<dt>&#8211;</dt>
+<dd>test_calibration (optional, special case usage) </dd>
 <p> If present and executable, this script will be invoked <code>after</code> lintian <i>and</i> post_test (if present) have been run. The script can then modify the expected output <i>and</i> the actual output. </p>
 <p> This is useful for those extremely rare cases where post_test is insufficient to handle the requirements. So far, this has only been needed for the hardening checks, where the output differs between architectures. </p>
 <p> The script will be passed 3 arguments:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&#8211;</p>
-<dd>Path to the &#8220;expected output&#8221; file (read-only) </p>
+</dd><dl COMPACT>
+<dt>&#8211;</dt>
+<dd>Path to the &#8220;expected output&#8221; file (read-only) </dd>
 <p> This is the &#8220;tags&#8221; file from the test suite and <code>must not</code> be modified.</p>
-<dt>&#8211;</p>
-<dd>Path to the &#8220;actual output&#8221; file (read-write) </p>
+<dt>&#8211;</dt>
+<dd>Path to the &#8220;actual output&#8221; file (read-write) </dd>
 <p> This is the file as lintian and post_test created it.</p>
-<dt>&#8211;</p>
-<dd>Path to the &#8220;calibrated expected output&#8221; (create+write) </p>
+<dt>&#8211;</dt>
+<dd>Path to the &#8220;calibrated expected output&#8221; (create+write) </dd>
 <p> This file does not exist and should be created by the script, if it wishes to change the &#8220;expected output&#8221;. If this file exists when the script terminates, this file will be used instead of the original &#8220;expected output&#8221; file.</dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p>The READMEs in the suites: <i>t/tests/README</i>, <i>t/changes/README</i>, <i>t/debs/README</i> and <i>t/source/README</i>. </p>

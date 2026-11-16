@@ -11,7 +11,6 @@ std::remove - std::remove
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int remove(const char *fname);</code></pre> 
 Deletes the file identified by character string pointed to by fname. 
 If the file is currently open by the current or another process, the behavior of this function is implementation-defined (in particular, POSIX systems unlink the file name, although the file system space is not reclaimed even if this was the last hardlink to the file until the last running process closes the file, Windows does not allow the file to be deleted) 
@@ -32,13 +31,9 @@ The standard library also defines a function template std::remove taking a pair 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 int main()
-
 {
     bool ok = static_cast&lt;bool&gt;(std::ofstream(&quot;file1.txt&quot;).put('a')); // create file
     if (!ok) {

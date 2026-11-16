@@ -16,26 +16,26 @@ description: "atasm – assembler targeted for the 6502 CPU with Atari-specific 
 <p> The syntax used is compatible with the Atari 8-bit assembler MAC/65, with a few extensions (notably 6502 illegal opcode support)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code><i>filename</i></p>
-<dd> saves the object file to <i>filename</i> instead of <i>sourcefile</i> [.65o] </p>
-<dt><code>-D</code><i>symbol=value</i></p>
-<dd> Defines <i>symbol</i> to <i>value</i> before assembly begins. This is equivalent to inserting a line like <code>symbol=value</code> before the first line of the source file. </p>
-<dt><code>-I</code><i>directory</i></p>
-<dd> specifies a search directory for .INCLUDE directives </p>
-<dt><code>-v</code></p>
-<dd> prints assembly trace. </p>
-<dt><code>-s</code></p>
-<dd> prints symbol table when assembly is completed. </p>
-<dt><code>-u</code></p>
-<dd> enables undocumented opcodes. This is equivalent to using the <code>.OPT</code>ILL in the source file. Notice that this command-line paramter is overriden by any directives in the source files. </p>
-<dt><code>-m</code><i>filename</i></p>
-<dd> defines the template emulator state file. </p>
-<dt><code>-x</code><i>filename</i></p>
-<dd> saves object file to .XFD image <i>filename</i> </p>
-<dt><code>-r</code></p>
-<dd> saves object code as a raw binary image </p>
-<dt><code>-f</code><i>value</i></p>
-<dd> set the raw binary fill byte to <i>value</i> <code>te that if you specify this value in hex, it will probably need to be escaped.</code> </p>
+<dt><code>-o</code><i>filename</i></dt>
+<dd> saves the object file to <i>filename</i> instead of <i>sourcefile</i> [.65o] </dd>
+<dt><code>-D</code><i>symbol=value</i></dt>
+<dd> Defines <i>symbol</i> to <i>value</i> before assembly begins. This is equivalent to inserting a line like <code>symbol=value</code> before the first line of the source file. </dd>
+<dt><code>-I</code><i>directory</i></dt>
+<dd> specifies a search directory for .INCLUDE directives </dd>
+<dt><code>-v</code></dt>
+<dd> prints assembly trace. </dd>
+<dt><code>-s</code></dt>
+<dd> prints symbol table when assembly is completed. </dd>
+<dt><code>-u</code></dt>
+<dd> enables undocumented opcodes. This is equivalent to using the <code>.OPT</code>ILL in the source file. Notice that this command-line paramter is overriden by any directives in the source files. </dd>
+<dt><code>-m</code><i>filename</i></dt>
+<dd> defines the template emulator state file. </dd>
+<dt><code>-x</code><i>filename</i></dt>
+<dd> saves object file to .XFD image <i>filename</i> </dd>
+<dt><code>-r</code></dt>
+<dd> saves object code as a raw binary image </dd>
+<dt><code>-f</code><i>value</i></dt>
+<dd> set the raw binary fill byte to <i>value</i> <code>te that if you specify this value in hex, it will probably need to be escaped.</code> </dd>
 </dl>
 <h2>NOTES</h2>
 <p> This man page is nowhere near complete. For full documentation, see <code>%/usr/share/doc/atasm-1.07d%/atasm.txt</code> </p>

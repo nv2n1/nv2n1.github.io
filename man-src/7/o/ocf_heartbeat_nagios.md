@@ -10,76 +10,76 @@ description: "ocf_heartbeat_nagios – Nagios resource agent"
 <p>ocf_heartbeat_nagios &#8211; Nagios resource agent</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>nagios</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>nagios</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>OCF Resource script for Nagios 3.x or 4.x. It manages a Nagios instance as a HA resource.</p>
+<dd>OCF Resource script for Nagios 3.x or 4.x. It manages a Nagios instance as a HA resource.</dd>
 <h2>Supported Parameters</h2>
 <p><code>user</code></p>
 <dl>
-<dd>User running Nagios daemon (for file permissions) </p>
+<dd>User running Nagios daemon (for file permissions) </dd>
 <p> (optional, string, default &quot;nagios&quot;)</dl>
 <p> <code>group</code></p>
 <dl>
-<dd>Group running Nagios daemon (for file permissions) </p>
+<dd>Group running Nagios daemon (for file permissions) </dd>
 <p> (optional, string, default &quot;nagios&quot;)</dl>
 <p> <code>binary</code></p>
 <dl>
-<dd>Location of the Nagios binary </p>
+<dd>Location of the Nagios binary </dd>
 <p> (optional, string, default &quot;/usr/sbin/nagios&quot;)</dl>
 <p> <code>config</code></p>
 <dl>
-<dd>Configuration file </p>
+<dd>Configuration file </dd>
 <p> (optional, string, default &quot;/etc/nagios/nagios.cfg&quot;)</dl>
 <p> <code>log</code></p>
 <dl>
-<dd>Location of the Nagios log </p>
+<dd>Location of the Nagios log </dd>
 <p> (optional, string, default &quot;/var/log/nagios/nagios.log&quot;)</dl>
 <p> <code>retention</code></p>
 <dl>
-<dd>Location of the Nagios retention file </p>
+<dd>Location of the Nagios retention file </dd>
 <p> (optional, string, default &quot;/var/log/nagios/retention.dat&quot;)</dl>
 <p> <code>command</code></p>
 <dl>
-<dd>Location of the Nagios external command file </p>
+<dd>Location of the Nagios external command file </dd>
 <p> (optional, string, default &quot;/var/log/nagios/rw/nagios.cmd&quot;)</dl>
 <p> <code>pid</code></p>
 <dl>
-<dd>Location of the Nagios pid/lock </p>
+<dd>Location of the Nagios pid/lock </dd>
 <p> (optional, string, default &quot;/var/run/nagios.pid&quot;)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 20.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 20.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 20.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a nagios resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_nagios ocf:heartbeat:nagios \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot; start-delay=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a nagios resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
 <dd>
 <pre>pcs resource create p_nagios ocf:heartbeat:nagios \
  op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot; start-delay=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/nagios_(resource_agent)">http://www.linux-ha.org/wiki/nagios_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

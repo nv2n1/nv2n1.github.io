@@ -20,20 +20,20 @@ description: "ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr
 <p> ldns_rr_class ldns_rr_get_class(const ldns_rr *rr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_rdf</i>()</p>
-<dd>returns the rdata field member counter. .br <code>*rr</code>: rr to operate on .br <code>nr</code>: the number of the rdf to return .br Returns ldns_rdf *</dl>
+<dt> <i>ldns_rr_rdf</i>()</dt>
+<dd>returns the rdata field member counter. .br <code>*rr</code>: rr to operate on .br <code>nr</code>: the number of the rdf to return .br Returns ldns_rdf *</dd></dl>
 <dl>
-<dt> <i>ldns_rr_owner</i>()</p>
-<dd>returns the owner name of an rr structure. .br <code>*rr</code>: rr to operate on .br Returns ldns_rdf *</dl>
+<dt> <i>ldns_rr_owner</i>()</dt>
+<dd>returns the owner name of an rr structure. .br <code>*rr</code>: rr to operate on .br Returns ldns_rdf *</dd></dl>
 <dl>
-<dt> <i>ldns_rr_rd_count</i>()</p>
-<dd>returns the rd_count of an rr structure. .br <code>*rr</code>: the rr to read from .br Returns the rd count of the rr</dl>
+<dt> <i>ldns_rr_rd_count</i>()</dt>
+<dd>returns the rd_count of an rr structure. .br <code>*rr</code>: the rr to read from .br Returns the rd count of the rr</dd></dl>
 <dl>
-<dt> <i>ldns_rr_ttl</i>()</p>
-<dd>returns the ttl of an rr structure. .br <code>*rr</code>: the rr to read from .br Returns the ttl of the rr</dl>
+<dt> <i>ldns_rr_ttl</i>()</dt>
+<dd>returns the ttl of an rr structure. .br <code>*rr</code>: the rr to read from .br Returns the ttl of the rr</dd></dl>
 <dl>
-<dt> <i>ldns_rr_get_class</i>()</p>
-<dd>returns the class of the rr. .br <code>*rr</code>: the rr to read from .br Returns the class of the rr</dl>
+<dt> <i>ldns_rr_get_class</i>()</dt>
+<dd>returns the class of the rr. .br <code>*rr</code>: the rr to read from .br Returns the class of the rr</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

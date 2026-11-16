@@ -10,7 +10,6 @@ description: "set_gfx_mode – Sets a graphic video mode. Allegro game programmi
 <p>set_gfx_mode &#8211; Sets a graphic video mode. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int set_gfx_mode(int card, int w, int h, int v_w, int v_h);</code></pre>
 <h2>Description</h2>
 <p>Switches into graphics mode. The card parameter should usually be one of the Allegro magic drivers (read introduction of chapter &quot;Graphics modes&quot;) or see the platform specific documentation for a list of the available drivers. The w and h parameters specify what screen resolution you want. The color depth of the graphic mode has to be specified before calling this function with set_color_depth(). </p>

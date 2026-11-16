@@ -15,74 +15,74 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 <p> <code>icedax</code> stands for InCrEdible Digital Audio eXtractor. It can retrieve audio tracks (<code>CDDA</code>) from CDROM drives that are capable of reading audio data digitally to the host (see README for a list of drives). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>dev=</code><i>device</i></p>
+<dt><code>dev=</code><i>device</i></dt>
 <dd>
-<dt><code>-D</code><i> device</i></p>
+</dd><dt><code>-D</code><i> device</i></dt>
 <dd>
-<dt><code>-device</code><i> device</i></p>
-<dd> uses <code>device</code> as the source for CDDA reading. For example <code>/dev/cdrom</code> or <code>Bus,ID,Lun.</code> The device specification can also have influence on the selection of the driver interface (eg. on Linux). See the <code>-I</code> option for details. </p>
+</dd><dt><code>-device</code><i> device</i></dt>
+<dd> uses <code>device</code> as the source for CDDA reading. For example <code>/dev/cdrom</code> or <code>Bus,ID,Lun.</code> The device specification can also have influence on the selection of the driver interface (eg. on Linux). See the <code>-I</code> option for details. </dd>
 <p> The setting of the environment variable <code>CDDA_DEVICE</code> is overridden by this option.</p>
-<dt><code>-A</code><i> auxdevice</i></p>
+<dt><code>-A</code><i> auxdevice</i></dt>
 <dd>
-<dt><code>-auxdevice</code><i> auxdevice</i></p>
-<dd> uses <code>auxdevice</code> as CDROM drive for ioctl usage.</p>
-<dt><code>-I</code><i> interface</i></p>
+</dd><dt><code>-auxdevice</code><i> auxdevice</i></dt>
+<dd> uses <code>auxdevice</code> as CDROM drive for ioctl usage.</dd>
+<dt><code>-I</code><i> interface</i></dt>
 <dd>
-<dt><code>-interface</code><i> interface</i></p>
-<dd> specifies the interface for CDROM access: <code>generic_scsi</code> or (on Linux, and FreeBSD systems) <code>cooked_ioctl</code>. </p>
+</dd><dt><code>-interface</code><i> interface</i></dt>
+<dd> specifies the interface for CDROM access: <code>generic_scsi</code> or (on Linux, and FreeBSD systems) <code>cooked_ioctl</code>. </dd>
 <p> Using the <code>cooked_ioctl</code> is not recommended as this makes <code>icedax</code> mainly depend on the audio extraction quality of the operating system which is usually extremely bad.</p>
-<dt><code>-c</code><i> channels &#8211;channels</i></p>
-<dd> uses <code>1</code> for mono, or <code>2</code> for stereo recording, or <code>s</code> for stereo recording with both channels swapped.</p>
-<dt><code>-s &#8211;stereo</code></p>
-<dd> sets to stereo recording.</p>
-<dt><code>-m &#8211;mono</code></p>
-<dd> sets to mono recording.</p>
-<dt><code>-x &#8211;max</code></p>
-<dd> sets maximum (CD) quality.</p>
-<dt><code>-b</code><i> bits &#8211;bits-per-sample</i></p>
-<dd> sets bits per sample per channel: <code>8</code>, <code>12</code> or <code>16</code>.</p>
-<dt><code>-r</code><i> rate &#8211;rate</i></p>
-<dd> sets rate in samples per second. Possible values are listed with the <code>-R</code> option.</p>
-<dt><code>-a</code><i> divider &#8211;divider</i></p>
-<dd> sets rate to 44100Hz / divider. Possible values are listed with the <code>-R</code> option.</p>
-<dt><code>-R &#8211;dump-rates</code></p>
-<dd> shows a list of all sample rates and their dividers.</p>
-<dt><code>-P sectors &#8211;set-overlap</code></p>
-<dd> sets the initial number of overlap <i>sectors</i> for jitter correction.</p>
-<dt><code>-n</code><i> sectors &#8211;sectors-per-request</i></p>
-<dd> reads <i>sectors</i> per request.</p>
-<dt><code>-l</code><i> buffers &#8211;buffers-in-ring</i></p>
-<dd> uses a ring buffer with <i>buffers</i> total.</p>
-<dt><code>-t</code><i> track+endtrack &#8211;track</i></p>
-<dd> selects the start track and optionally the end track.</p>
-<dt><code>-i</code><i> index &#8211;index</i></p>
-<dd> selects the start index.</p>
-<dt><code>-o</code><i> offset &#8211;offset</i></p>
-<dd> starts <i>offset</i> sectors behind start track (one sector equivalents 1/75 seconds).</p>
-<dt><code>-O audiotype &#8211;output-format</code></p>
-<dd> can be <i>wav</i> (for wav files) or <i>aiff</i> (for apple/sgi aiff files) or <i>aifc</i> (for apple/sgi aifc files) or <i>au</i> or <i>sun</i> (for sun .au PCM files) or <i>cdr</i> or <i>raw</i> (for headerless files to be used for cd writers).</p>
-<dt><code>-C</code><i> endianess &#8211;cdrom-endianess</i></p>
-<dd> sets endianess of the input samples to &#8216;little&#8217;, &#8216;big&#8217; or &#8216;guess&#8217; to override defaults.</p>
-<dt><code>-E</code><i> endianess &#8211;output-endianess</i></p>
-<dd> sets endianess of the output samples to &#8216;little&#8217; or &#8216;big&#8217; to override defaults.</p>
-<dt><code>-d</code><i> duration &#8211;duration</i></p>
-<dd> sets recording time in seconds or frames. Frames (sectors) are indicated by a &#8216;f&#8217; suffix (like 75f for 75 sectors). <code>0</code> sets the time for whole track.</p>
-<dt><code>-B &#8211;bulk &#8211;alltracks</code></p>
-<dd> copies each track into a separate file.</p>
-<dt><code>-w &#8211;wait</code></p>
-<dd> waits for signal, then start recording.</p>
-<dt><code>-F &#8211;find-extremes</code></p>
-<dd> finds extreme amplitudes in samples.</p>
-<dt><code>-G &#8211;find-mono</code></p>
-<dd> finds if input samples are in mono.</p>
-<dt><code>-T &#8211;deemphasize</code></p>
-<dd> undo the effect of pre-emphasis in the input samples.</p>
-<dt><code>-e &#8211;echo</code></p>
-<dd> copies audio data to sound device e.g. <code>/dev/dsp</code>.</p>
-<dt><code>-p percentage &#8211;set-pitch</code></p>
-<dd> changes pitch of audio data copied to sound device.</p>
-<dt><code>-v itemlist &#8211;verbose-level</code></p>
-<dd> prints verbose information about the CD. <code>Level</code> is a list of comma separated suboptions. Each suboption controls the type of information to be reported. </p>
+<dt><code>-c</code><i> channels &#8211;channels</i></dt>
+<dd> uses <code>1</code> for mono, or <code>2</code> for stereo recording, or <code>s</code> for stereo recording with both channels swapped.</dd>
+<dt><code>-s &#8211;stereo</code></dt>
+<dd> sets to stereo recording.</dd>
+<dt><code>-m &#8211;mono</code></dt>
+<dd> sets to mono recording.</dd>
+<dt><code>-x &#8211;max</code></dt>
+<dd> sets maximum (CD) quality.</dd>
+<dt><code>-b</code><i> bits &#8211;bits-per-sample</i></dt>
+<dd> sets bits per sample per channel: <code>8</code>, <code>12</code> or <code>16</code>.</dd>
+<dt><code>-r</code><i> rate &#8211;rate</i></dt>
+<dd> sets rate in samples per second. Possible values are listed with the <code>-R</code> option.</dd>
+<dt><code>-a</code><i> divider &#8211;divider</i></dt>
+<dd> sets rate to 44100Hz / divider. Possible values are listed with the <code>-R</code> option.</dd>
+<dt><code>-R &#8211;dump-rates</code></dt>
+<dd> shows a list of all sample rates and their dividers.</dd>
+<dt><code>-P sectors &#8211;set-overlap</code></dt>
+<dd> sets the initial number of overlap <i>sectors</i> for jitter correction.</dd>
+<dt><code>-n</code><i> sectors &#8211;sectors-per-request</i></dt>
+<dd> reads <i>sectors</i> per request.</dd>
+<dt><code>-l</code><i> buffers &#8211;buffers-in-ring</i></dt>
+<dd> uses a ring buffer with <i>buffers</i> total.</dd>
+<dt><code>-t</code><i> track+endtrack &#8211;track</i></dt>
+<dd> selects the start track and optionally the end track.</dd>
+<dt><code>-i</code><i> index &#8211;index</i></dt>
+<dd> selects the start index.</dd>
+<dt><code>-o</code><i> offset &#8211;offset</i></dt>
+<dd> starts <i>offset</i> sectors behind start track (one sector equivalents 1/75 seconds).</dd>
+<dt><code>-O audiotype &#8211;output-format</code></dt>
+<dd> can be <i>wav</i> (for wav files) or <i>aiff</i> (for apple/sgi aiff files) or <i>aifc</i> (for apple/sgi aifc files) or <i>au</i> or <i>sun</i> (for sun .au PCM files) or <i>cdr</i> or <i>raw</i> (for headerless files to be used for cd writers).</dd>
+<dt><code>-C</code><i> endianess &#8211;cdrom-endianess</i></dt>
+<dd> sets endianess of the input samples to &#8216;little&#8217;, &#8216;big&#8217; or &#8216;guess&#8217; to override defaults.</dd>
+<dt><code>-E</code><i> endianess &#8211;output-endianess</i></dt>
+<dd> sets endianess of the output samples to &#8216;little&#8217; or &#8216;big&#8217; to override defaults.</dd>
+<dt><code>-d</code><i> duration &#8211;duration</i></dt>
+<dd> sets recording time in seconds or frames. Frames (sectors) are indicated by a &#8216;f&#8217; suffix (like 75f for 75 sectors). <code>0</code> sets the time for whole track.</dd>
+<dt><code>-B &#8211;bulk &#8211;alltracks</code></dt>
+<dd> copies each track into a separate file.</dd>
+<dt><code>-w &#8211;wait</code></dt>
+<dd> waits for signal, then start recording.</dd>
+<dt><code>-F &#8211;find-extremes</code></dt>
+<dd> finds extreme amplitudes in samples.</dd>
+<dt><code>-G &#8211;find-mono</code></dt>
+<dd> finds if input samples are in mono.</dd>
+<dt><code>-T &#8211;deemphasize</code></dt>
+<dd> undo the effect of pre-emphasis in the input samples.</dd>
+<dt><code>-e &#8211;echo</code></dt>
+<dd> copies audio data to sound device e.g. <code>/dev/dsp</code>.</dd>
+<dt><code>-p percentage &#8211;set-pitch</code></dt>
+<dd> changes pitch of audio data copied to sound device.</dd>
+<dt><code>-v itemlist &#8211;verbose-level</code></dt>
+<dd> prints verbose information about the CD. <code>Level</code> is a list of comma separated suboptions. Each suboption controls the type of information to be reported. </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center>Suboption</td>
@@ -135,12 +135,12 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 </td>
 </tr>
 </table>
-<dt><code>-N &#8211;no-write</code></p>
-<dd> does not write to a file, it just reads (for debugging purposes).</p>
-<dt><code>-J &#8211;info-only</code></p>
-<dd> does not write to a file, it just gives information about the disc.</p>
-<dt><code>-L cddb mode &#8211;cddb</code></p>
-<dd> does a cddbp album- and track title lookup based on the cddb id. The parameter cddb mode defines how multiple entries shall be handled. </p>
+<dt><code>-N &#8211;no-write</code></dt>
+<dd> does not write to a file, it just reads (for debugging purposes).</dd>
+<dt><code>-J &#8211;info-only</code></dt>
+<dd> does not write to a file, it just gives information about the disc.</dd>
+<dt><code>-L cddb mode &#8211;cddb</code></dt>
+<dd> does a cddbp album- and track title lookup based on the cddb id. The parameter cddb mode defines how multiple entries shall be handled. </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center>Parameter</td>
@@ -158,46 +158,46 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 </td>
 </tr>
 </table>
-<dt><code> cddbp-server=servername</code></p>
-<dd> sets the server to be contacted for title lookups.</p>
-<dt><code> cddbp-port=portnumber</code></p>
-<dd> sets the port number to be used for title lookups.</p>
-<dt><code>-H &#8211;no-infofile</code></p>
-<dd> does not write an info file and a cddb file.</p>
-<dt><code>-g &#8211;gui</code></p>
-<dd> formats the output to be better parsable by gui frontends.</p>
-<dt><code>-M count &#8211;md5</code></p>
-<dd> enables calculation of MD-5 checksum for &#8216;count&#8217; bytes from a beginning of a track.</p>
-<dt><code>-S speed &#8211;speed</code></p>
-<dd> sets the cdrom device to one of the selectable speeds for reading.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> quiet operation, no screen output.</p>
-<dt><code>-V &#8211;verbose-SCSI</code></p>
-<dd> enable SCSI command logging to the console. This is mainly used for debugging.</p>
-<dt><code>-Q &#8211;silent-SCSI</code></p>
-<dd> suppress SCSI command error reports to the console. This is mainly used for guis.</p>
-<dt><code>-scanbus</code></p>
-<dd> Scan all SCSI devices on all SCSI busses and print the inquiry strings. This option may be used to find SCSI address of the CD/DVD-Recorder on a system. The numbers printed out as labels are computed by: <code>bus * 100 + target</code></p>
-<dt><code>&#8211;devices</code></p>
-<dd> Like -scanbus but works in a more native way, respecting the device name specification on the current operating system. See <code><a href="/docs/linux/man/1-wodim/">wodim</a>(1)</code> for details.</p>
-<dt><code>-paranoia</code></p>
-<dd> use the paranoia library instead of icedax&#8217;s routines for reading.</p>
-<dt><code>-h &#8211;help</code></p>
-<dd> display version of icedax on standard output.</p>
-<dt>Defaults depend on the</p>
-<dd> <code>Makefile</code> and <code>environment variable</code> settings (currently <code>CDDA_DEVICE</code> ).</dl>
+<dt><code> cddbp-server=servername</code></dt>
+<dd> sets the server to be contacted for title lookups.</dd>
+<dt><code> cddbp-port=portnumber</code></dt>
+<dd> sets the port number to be used for title lookups.</dd>
+<dt><code>-H &#8211;no-infofile</code></dt>
+<dd> does not write an info file and a cddb file.</dd>
+<dt><code>-g &#8211;gui</code></dt>
+<dd> formats the output to be better parsable by gui frontends.</dd>
+<dt><code>-M count &#8211;md5</code></dt>
+<dd> enables calculation of MD-5 checksum for &#8216;count&#8217; bytes from a beginning of a track.</dd>
+<dt><code>-S speed &#8211;speed</code></dt>
+<dd> sets the cdrom device to one of the selectable speeds for reading.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> quiet operation, no screen output.</dd>
+<dt><code>-V &#8211;verbose-SCSI</code></dt>
+<dd> enable SCSI command logging to the console. This is mainly used for debugging.</dd>
+<dt><code>-Q &#8211;silent-SCSI</code></dt>
+<dd> suppress SCSI command error reports to the console. This is mainly used for guis.</dd>
+<dt><code>-scanbus</code></dt>
+<dd> Scan all SCSI devices on all SCSI busses and print the inquiry strings. This option may be used to find SCSI address of the CD/DVD-Recorder on a system. The numbers printed out as labels are computed by: <code>bus * 100 + target</code></dd>
+<dt><code>&#8211;devices</code></dt>
+<dd> Like -scanbus but works in a more native way, respecting the device name specification on the current operating system. See <code><a href="/docs/linux/man/1-wodim/">wodim</a>(1)</code> for details.</dd>
+<dt><code>-paranoia</code></dt>
+<dd> use the paranoia library instead of icedax&#8217;s routines for reading.</dd>
+<dt><code>-h &#8211;help</code></dt>
+<dd> display version of icedax on standard output.</dd>
+<dt>Defaults depend on the</dt>
+<dd> <code>Makefile</code> and <code>environment variable</code> settings (currently <code>CDDA_DEVICE</code> ).</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>CDDA_DEVICE</code> is used to set the device name. The device naming is compatible with the one used by the wodim tool.</p>
 <dl>
-<dt><code>CDDBP_SERVER</code></p>
-<dd> is used for cddbp title lookups when supplied.</p>
-<dt><code>CDDBP_PORT</code></p>
-<dd> is used for cddbp title lookups when supplied.</p>
-<dt><code>RSH</code></p>
-<dd> If the <code>RSH</code> environment variable is present, the remote connection will not be created via <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3) but by calling the program pointed to by <code>RSH</code>. Use e.g. <code>RSH=</code>/usr/bin/ssh to create a secure shell connection. </p>
+<dt><code>CDDBP_SERVER</code></dt>
+<dd> is used for cddbp title lookups when supplied.</dd>
+<dt><code>CDDBP_PORT</code></dt>
+<dd> is used for cddbp title lookups when supplied.</dd>
+<dt><code>RSH</code></dt>
+<dd> If the <code>RSH</code> environment variable is present, the remote connection will not be created via <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3) but by calling the program pointed to by <code>RSH</code>. Use e.g. <code>RSH=</code>/usr/bin/ssh to create a secure shell connection. </dd>
 <p> Note that this forces <code>icedax</code> to create a pipe to the <code><a href="/docs/linux/man/1-rsh/">rsh</a>(1)</code> program and disallows <code>icedax</code> to directly access the network socket to the remote server. This makes it impossible to set up performance parameters and slows down the connection compared to a <code>root</code> initiated <code><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</code> connection.</p>
-<dt><code>RSCSI</code></p>
-<dd> If the <code>RSCSI</code> environment variable is present, the remote SCSI server will not be the program <code>/opt/schily/sbin/rscsi</code> but the program pointed to by <code>RSCSI</code>. Note that the remote SCSI server program name will be ignored if you log in using an account that has been created with a remote SCSI server program as login shell.</dl>
+<dt><code>RSCSI</code></dt>
+<dd> If the <code>RSCSI</code> environment variable is present, the remote SCSI server will not be the program <code>/opt/schily/sbin/rscsi</code> but the program pointed to by <code>RSCSI</code>. Note that the remote SCSI server program name will be ignored if you log in using an account that has been created with a remote SCSI server program as login shell.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>icedax</code> uses the following exit codes to indicate various degrees of success: </p>
 <table BORDER>
@@ -309,73 +309,73 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 <p> If your CDROM is on device <code>DEV</code> and it is loaded with an audio CD, you may simply invoke <code>icedax dev=DEV</code> and it will create the sound file <code>audio.wav</code> recording the whole track beginning with track 1 in stereo at 16 bit at 44100 Hz sample rate, if your file system has enough space free. Otherwise recording time will be limited. For details see files <code>README</code> and <code>README.INSTALL</code></p>
 <h2>HINTS ON OPTIONS</h2>
 <dl>
-<dt>Options</p>
-<dd> Most of the options are used to control the format of the WAV file. In the following text all of them are described.</p>
-<dt>Select Device</p>
-<dd> <code>-D</code><i> device</i> selects the CDROM drive device to be used. The specifier given should correspond to the selected interface (see below). <code>CHANGE!</code> For the cooked_ioctl interface this is the cdrom device descriptor as before. <code>The SCSI devices used with the generic SCSI interface however are now</code> <code>addressed with their SCSI-Bus, SCSI-Id, and SCSI-Lun instead of the generic</code> <code>SCSI device descriptor!!!</code> One example for a SCSI CDROM drive on bus 0 with SCSI ID 3 and lun 0 is -D0,3,0.</p>
-<dt>Select Auxiliary device</p>
-<dd> <code>-A</code><i> auxdevice</i> is necessary for CD-Extra handling. For Non-SCSI-CDROM drives this is the same device as given by -D (see above). For SCSI-CDROM drives it is the CDROM drive (SCSI) device (i.e. <code>/dev/sr0</code> ) corresponding to the SCSI device (i.e. <code>0,3,0</code> ). It has to match the device used for sampling.</p>
-<dt>Select Interface</p>
-<dd> <code>-I</code><i> interface</i> selects the CDROM drive interface. For SCSI drives use generic_scsi (cooked_ioctl may not yet be available for all devices): <code>generic_scsi</code> and <code>cooked_ioctl</code>. The first uses the generic SCSI interface, the latter uses the ioctl of the CDROM driver. The latter variant works only when the kernel driver supports <code>CDDA</code> reading. This entry has to match the selected CDROM device (see above).</p>
-<dt>Enable echo to soundcard</p>
-<dd> <code>-e</code> copies audio data to the sound card while recording, so you hear it nearly simultaneously. The soundcard gets the same data that is recorded. This is time critical, so it works best with the <code>-q</code> option. To use <code>icedax</code> as a pseudo CD player without recording in a file you could use <code>icedax -q -e -t2 -d0 -N</code> to play the whole second track. This feature reduces the recording speed to at most onefold speed. You cannot make better recordings than your sound card can play (since the same data is used).</p>
-<dt>Change pitch of echoed audio</p>
-<dd> <code>-p percentage</code> changes the pitch of all audio echoed to a sound card. Only the copy to the soundcard is affected, the recorded audio samples in a file remain the same. Normal pitch, which is the default, is given by 100%. Lower percentages correspond to lower pitches, i.e. -p 50 transposes the audio output one octave lower. See also the script <code>pitchplay</code> as an example. This option was contributed by Raul Sobon.</p>
-<dt>Select mono or stereo recording</p>
-<dd> <code>-m</code> or <code>-c 1</code> selects mono recording (both stereo channels are mixed), <code>-s</code> or <code>-c 2</code> or <code>-c s</code> selects stereo recording. Parameter s will swap both sound channels.</p>
-<dt>Select maximum quality</p>
-<dd> <code>-x</code> will set stereo, 16 bits per sample at 44.1 KHz (full CD quality). Note that other format options given later can change this setting.</p>
-<dt>Select sample quality</p>
-<dd> <code>-b 8</code> specifies 8 bit (1 Byte) for each sample in each channel; <code>-b 12</code> specifies 12 bit (2 Byte) for each sample in each channel; <code>-b 16</code> specifies 16 bit (2 Byte) for each sample in each channel (Ensure that your sample player or sound card is capable of playing 12-bit or 16-bit samples). Selecting 12 or 16 bits doubles file size. 12-bit samples are aligned to 16-bit samples, so they waste some disk space.</p>
-<dt>Select sample rate</p>
-<dd> <code>-r</code><i> samplerate</i> selects a sample rate. <i>samplerate</i> can be in a range between 44100 and 900. Option <code>-R</code> lists all available rates.</p>
-<dt>Select sample rate divider</p>
-<dd> <code>-a</code><i> divider</i> selects a sample rate divider. <i>divider</i> can be minimally 1 and maximally 50.5 and everything between in steps of 0.5. Option <code>-R</code> lists all available rates.</p>
+<dt>Options</dt>
+<dd> Most of the options are used to control the format of the WAV file. In the following text all of them are described.</dd>
+<dt>Select Device</dt>
+<dd> <code>-D</code><i> device</i> selects the CDROM drive device to be used. The specifier given should correspond to the selected interface (see below). <code>CHANGE!</code> For the cooked_ioctl interface this is the cdrom device descriptor as before. <code>The SCSI devices used with the generic SCSI interface however are now</code> <code>addressed with their SCSI-Bus, SCSI-Id, and SCSI-Lun instead of the generic</code> <code>SCSI device descriptor!!!</code> One example for a SCSI CDROM drive on bus 0 with SCSI ID 3 and lun 0 is -D0,3,0.</dd>
+<dt>Select Auxiliary device</dt>
+<dd> <code>-A</code><i> auxdevice</i> is necessary for CD-Extra handling. For Non-SCSI-CDROM drives this is the same device as given by -D (see above). For SCSI-CDROM drives it is the CDROM drive (SCSI) device (i.e. <code>/dev/sr0</code> ) corresponding to the SCSI device (i.e. <code>0,3,0</code> ). It has to match the device used for sampling.</dd>
+<dt>Select Interface</dt>
+<dd> <code>-I</code><i> interface</i> selects the CDROM drive interface. For SCSI drives use generic_scsi (cooked_ioctl may not yet be available for all devices): <code>generic_scsi</code> and <code>cooked_ioctl</code>. The first uses the generic SCSI interface, the latter uses the ioctl of the CDROM driver. The latter variant works only when the kernel driver supports <code>CDDA</code> reading. This entry has to match the selected CDROM device (see above).</dd>
+<dt>Enable echo to soundcard</dt>
+<dd> <code>-e</code> copies audio data to the sound card while recording, so you hear it nearly simultaneously. The soundcard gets the same data that is recorded. This is time critical, so it works best with the <code>-q</code> option. To use <code>icedax</code> as a pseudo CD player without recording in a file you could use <code>icedax -q -e -t2 -d0 -N</code> to play the whole second track. This feature reduces the recording speed to at most onefold speed. You cannot make better recordings than your sound card can play (since the same data is used).</dd>
+<dt>Change pitch of echoed audio</dt>
+<dd> <code>-p percentage</code> changes the pitch of all audio echoed to a sound card. Only the copy to the soundcard is affected, the recorded audio samples in a file remain the same. Normal pitch, which is the default, is given by 100%. Lower percentages correspond to lower pitches, i.e. -p 50 transposes the audio output one octave lower. See also the script <code>pitchplay</code> as an example. This option was contributed by Raul Sobon.</dd>
+<dt>Select mono or stereo recording</dt>
+<dd> <code>-m</code> or <code>-c 1</code> selects mono recording (both stereo channels are mixed), <code>-s</code> or <code>-c 2</code> or <code>-c s</code> selects stereo recording. Parameter s will swap both sound channels.</dd>
+<dt>Select maximum quality</dt>
+<dd> <code>-x</code> will set stereo, 16 bits per sample at 44.1 KHz (full CD quality). Note that other format options given later can change this setting.</dd>
+<dt>Select sample quality</dt>
+<dd> <code>-b 8</code> specifies 8 bit (1 Byte) for each sample in each channel; <code>-b 12</code> specifies 12 bit (2 Byte) for each sample in each channel; <code>-b 16</code> specifies 16 bit (2 Byte) for each sample in each channel (Ensure that your sample player or sound card is capable of playing 12-bit or 16-bit samples). Selecting 12 or 16 bits doubles file size. 12-bit samples are aligned to 16-bit samples, so they waste some disk space.</dd>
+<dt>Select sample rate</dt>
+<dd> <code>-r</code><i> samplerate</i> selects a sample rate. <i>samplerate</i> can be in a range between 44100 and 900. Option <code>-R</code> lists all available rates.</dd>
+<dt>Select sample rate divider</dt>
+<dd> <code>-a</code><i> divider</i> selects a sample rate divider. <i>divider</i> can be minimally 1 and maximally 50.5 and everything between in steps of 0.5. Option <code>-R</code> lists all available rates.</dd>
 <dt>
-<dd> To make the sound smoother at lower sampling rates, <code>icedax</code> sums over <i>n</i> samples (where <i>n</i> is the specific dividend). So for 22050 Hertz output we have to sum over 2 samples, for 900 Hertz we have to sum over 49 samples. This cancels higher frequencies. Standard sector size of an audio CD (ignoring additional information) is 2352 Bytes. In order to finish summing for an output sample at sector boundaries the rates above have to be chosen. Arbitrary sampling rates in high quality would require some interpolation scheme, which needs much more sophisticated programming.</p>
-<dt>List a table of all sampling rates</p>
-<dd> <code>-R</code> shows a list of all sample rates and their dividers. Dividers can range from 1 to 50.5 in steps of 0.5.</p>
-<dt>Select start track and optionally end track</p>
-<dd> <code>-t</code><i> n+m</i> selects <code>n</code> as the start track and optionally <code>m</code> as the last track of a range to be recorded. These tracks must be from the table of contents. This sets the track where recording begins. Recording can advance through the following tracks as well (limited by the optional end track or otherwise depending on recording time). Whether one file or different files are then created depends on the <code>-B</code> option (see below).</p>
-<dt>Select start index</p>
-<dd> <code>-i</code><i> n</i> selects the index to start recording with. Indices other than 1 will invoke the index scanner, which will take some time to find the correct start position. An offset may be given additionally (see below).</p>
-<dt>Set recording time</p>
-<dd> <code>-d n</code> sets recording time to <i>n</i> seconds or set recording time for whole track if <i>n</i> is zero. In order to specify the duration in frames (sectors) also, the argument can have an appended &#8216;f&#8217;. Then the numerical argument is to be taken as frames (sectors) rather than seconds. Please note that if track ranges are being used they define the recording time as well thus overriding any <code>-d</code> option specified times.</p>
+</dt><dd> To make the sound smoother at lower sampling rates, <code>icedax</code> sums over <i>n</i> samples (where <i>n</i> is the specific dividend). So for 22050 Hertz output we have to sum over 2 samples, for 900 Hertz we have to sum over 49 samples. This cancels higher frequencies. Standard sector size of an audio CD (ignoring additional information) is 2352 Bytes. In order to finish summing for an output sample at sector boundaries the rates above have to be chosen. Arbitrary sampling rates in high quality would require some interpolation scheme, which needs much more sophisticated programming.</dd>
+<dt>List a table of all sampling rates</dt>
+<dd> <code>-R</code> shows a list of all sample rates and their dividers. Dividers can range from 1 to 50.5 in steps of 0.5.</dd>
+<dt>Select start track and optionally end track</dt>
+<dd> <code>-t</code><i> n+m</i> selects <code>n</code> as the start track and optionally <code>m</code> as the last track of a range to be recorded. These tracks must be from the table of contents. This sets the track where recording begins. Recording can advance through the following tracks as well (limited by the optional end track or otherwise depending on recording time). Whether one file or different files are then created depends on the <code>-B</code> option (see below).</dd>
+<dt>Select start index</dt>
+<dd> <code>-i</code><i> n</i> selects the index to start recording with. Indices other than 1 will invoke the index scanner, which will take some time to find the correct start position. An offset may be given additionally (see below).</dd>
+<dt>Set recording time</dt>
+<dd> <code>-d n</code> sets recording time to <i>n</i> seconds or set recording time for whole track if <i>n</i> is zero. In order to specify the duration in frames (sectors) also, the argument can have an appended &#8216;f&#8217;. Then the numerical argument is to be taken as frames (sectors) rather than seconds. Please note that if track ranges are being used they define the recording time as well thus overriding any <code>-d</code> option specified times.</dd>
 <dt>
-<dd> Recording time is defined as the time the generated sample will play (at the defined sample rate). Since it&#8217;s related to the amount of generated samples, it&#8217;s not the time of the sampling process itself (which can be less or more). It&#8217;s neither strictly coupled with the time information on the audio CD (shown by your hifi CD player). Differences can occur by the usage of the <code>-o</code> option (see below). Notice that recording time will be shortened, unless enough disk space exists. Recording can be aborted at anytime by pressing the break character (signal SIGQUIT).<br />
-.IP&nbsp;<wbr>&quot;Record all tracks of a complete audio CD in separate files&quot; <code>-B</code> copies each track into a separate file. A base name can be given. File names have an appended track number and an extension corresponding to the audio format. To record all audio tracks of a CD, use a sufficient high duration (i.e. -d99999).</p>
-<dt>Set start sector offset</p>
-<dd> <code>-o</code><i> sectors</i> increments start sector of the track by <i>sectors</i>. By this option you are able to skip a certain amount at the beginning of a track so you can pick exactly the part you want. Each sector runs for 1/75 seconds, so you have very fine control. If your offset is so high that it would not fit into the current track, a warning message is issued and the offset is ignored. Recording time is not reduced. (To skip introductory quiet passages automagically, use the <code>-w</code> option see below.)</p>
-<dt>Wait for signal option</p>
-<dd> <code>-w</code> Turning on this option will suppress all silent output at startup, reducing possibly file size. <code>icedax</code> will watch for any signal in the output signal and switches on writing to file.</p>
-<dt>Find extreme samples</p>
-<dd> <code>-F</code> Turning on this option will display the most negative and the most positive sample value found during recording for both channels. This can be useful for readjusting the volume. The values shown are not reset at track boundaries, they cover the complete sampling process. They are taken from the original samples and have the same format (i.e. they are independent of the selected output format).</p>
-<dt>Find if input samples are in mono</p>
-<dd> <code>-G</code> If this option is given, input samples for both channels will be compared. At the end of the program the result is printed. Differences in the channels indicate stereo, otherwise when both channels are equal it will indicate mono.</p>
-<dt>Undo the pre-emphasis in the input samples</p>
-<dd> <code>-T</code> Some older audio CDs are recorded with a modified frequency response called pre-emphasis. This is found mostly in classical recordings. The correction can be seen in the flags of the Table Of Contents often. But there are recordings, that show this setting only in the subchannels. If this option is given, the index scanner will be started, which reads the q-subchannel of each track. If pre-emphasis is indicated in the q-subchannel of a track, but not in the TOC, pre-emphasis will be assumed to be present, and subsequently a reverse filtering is done for this track before the samples are written into the audio file.</p>
-<dt>Set audio format</p>
-<dd> <code>-O audiotype</code> can be <i>wav</i> (for wav files) or <i>au</i> or <i>sun</i> (for sun PCM files) or <i>cdr</i> or <i>raw</i> (for headerless files to be used for cd writers). All file samples are coded in linear pulse code modulation (as done in the audio compact disc format). This holds for all audio formats. Wav files are compatible to Wind*ws sound files, they have lsb,msb byte order as being used on the audio cd. The default filename extension is &#8216;.wav&#8217;. Sun type files are not like the older common logarithmically coded .au files, but instead as mentioned above linear PCM is used. The byte order is msb,lsb to be compatible. The default filename extension is &#8216;.au&#8217;. The AIFF and the newer variant AIFC from the Apple/SGI world store their samples in bigendian format (msb,lsb). In AIFC no compression is used. Finally the easiest &#8216;format&#8217;, the cdr aka raw format. It is done per default in msb,lsb byte order to satisfy the order wanted by most cd writers. Since there is no header information in this format, the sample parameters can only be identified by playing the samples on a soundcard or similar. The default filename extension is &#8216;.cdr&#8217; or &#8216;.raw&#8217;.</p>
-<dt>Select cdrom drive reading speed</p>
-<dd> <code>-S speed</code> allows to switch the cdrom drive to a certain level of speed in order to reduce read errors. The argument is transfered verbatim to the drive. Details depend very much on the cdrom drives. An argument of 0 for example is often the default speed of the drive, a value of 1 often selects single speed.</p>
-<dt>Enable MD5 checksums</p>
-<dd> <code>-M count</code> enables calculation of MD-5 checksum for &#8216;count&#8217; bytes from the beginning of a track. This was introduced for quick comparisons of tracks.</p>
-<dt>Use Monty&#8217;s libparanoia for reading of sectors</p>
-<dd> <code>-paranoia</code> selects an alternate way of extracting audio sectors. Monty&#8217;s library is used with the following default options: </p>
+</dt><dd> Recording time is defined as the time the generated sample will play (at the defined sample rate). Since it&#8217;s related to the amount of generated samples, it&#8217;s not the time of the sampling process itself (which can be less or more). It&#8217;s neither strictly coupled with the time information on the audio CD (shown by your hifi CD player). Differences can occur by the usage of the <code>-o</code> option (see below). Notice that recording time will be shortened, unless enough disk space exists. Recording can be aborted at anytime by pressing the break character (signal SIGQUIT).<br />
+.IP&nbsp;<wbr>&quot;Record all tracks of a complete audio CD in separate files&quot; <code>-B</code> copies each track into a separate file. A base name can be given. File names have an appended track number and an extension corresponding to the audio format. To record all audio tracks of a CD, use a sufficient high duration (i.e. -d99999).</dd>
+<dt>Set start sector offset</dt>
+<dd> <code>-o</code><i> sectors</i> increments start sector of the track by <i>sectors</i>. By this option you are able to skip a certain amount at the beginning of a track so you can pick exactly the part you want. Each sector runs for 1/75 seconds, so you have very fine control. If your offset is so high that it would not fit into the current track, a warning message is issued and the offset is ignored. Recording time is not reduced. (To skip introductory quiet passages automagically, use the <code>-w</code> option see below.)</dd>
+<dt>Wait for signal option</dt>
+<dd> <code>-w</code> Turning on this option will suppress all silent output at startup, reducing possibly file size. <code>icedax</code> will watch for any signal in the output signal and switches on writing to file.</dd>
+<dt>Find extreme samples</dt>
+<dd> <code>-F</code> Turning on this option will display the most negative and the most positive sample value found during recording for both channels. This can be useful for readjusting the volume. The values shown are not reset at track boundaries, they cover the complete sampling process. They are taken from the original samples and have the same format (i.e. they are independent of the selected output format).</dd>
+<dt>Find if input samples are in mono</dt>
+<dd> <code>-G</code> If this option is given, input samples for both channels will be compared. At the end of the program the result is printed. Differences in the channels indicate stereo, otherwise when both channels are equal it will indicate mono.</dd>
+<dt>Undo the pre-emphasis in the input samples</dt>
+<dd> <code>-T</code> Some older audio CDs are recorded with a modified frequency response called pre-emphasis. This is found mostly in classical recordings. The correction can be seen in the flags of the Table Of Contents often. But there are recordings, that show this setting only in the subchannels. If this option is given, the index scanner will be started, which reads the q-subchannel of each track. If pre-emphasis is indicated in the q-subchannel of a track, but not in the TOC, pre-emphasis will be assumed to be present, and subsequently a reverse filtering is done for this track before the samples are written into the audio file.</dd>
+<dt>Set audio format</dt>
+<dd> <code>-O audiotype</code> can be <i>wav</i> (for wav files) or <i>au</i> or <i>sun</i> (for sun PCM files) or <i>cdr</i> or <i>raw</i> (for headerless files to be used for cd writers). All file samples are coded in linear pulse code modulation (as done in the audio compact disc format). This holds for all audio formats. Wav files are compatible to Wind*ws sound files, they have lsb,msb byte order as being used on the audio cd. The default filename extension is &#8216;.wav&#8217;. Sun type files are not like the older common logarithmically coded .au files, but instead as mentioned above linear PCM is used. The byte order is msb,lsb to be compatible. The default filename extension is &#8216;.au&#8217;. The AIFF and the newer variant AIFC from the Apple/SGI world store their samples in bigendian format (msb,lsb). In AIFC no compression is used. Finally the easiest &#8216;format&#8217;, the cdr aka raw format. It is done per default in msb,lsb byte order to satisfy the order wanted by most cd writers. Since there is no header information in this format, the sample parameters can only be identified by playing the samples on a soundcard or similar. The default filename extension is &#8216;.cdr&#8217; or &#8216;.raw&#8217;.</dd>
+<dt>Select cdrom drive reading speed</dt>
+<dd> <code>-S speed</code> allows to switch the cdrom drive to a certain level of speed in order to reduce read errors. The argument is transfered verbatim to the drive. Details depend very much on the cdrom drives. An argument of 0 for example is often the default speed of the drive, a value of 1 often selects single speed.</dd>
+<dt>Enable MD5 checksums</dt>
+<dd> <code>-M count</code> enables calculation of MD-5 checksum for &#8216;count&#8217; bytes from the beginning of a track. This was introduced for quick comparisons of tracks.</dd>
+<dt>Use Monty&#8217;s libparanoia for reading of sectors</dt>
+<dd> <code>-paranoia</code> selects an alternate way of extracting audio sectors. Monty&#8217;s library is used with the following default options: </dd>
 <p> PARANOIA_MODE_FULL, but without PARANOIA_MODE_NEVERSKIP </p>
 <p> for details see Monty&#8217;s libparanoia documentation. In this case the option <code>-P</code> has no effect.</p>
-<dt>Do linear or overlapping reading of sectors</p>
-<dd> (This applies unless option <code>-paranoia</code> is used.) <code>-P sectors</code> sets the given number of sectors for initial overlap sampling for jitter correction. Two cases are to be distinguished. For nonzero values, some sectors are read twice to enable icedax&#8217;s jitter correction. If an argument of zero is given, no overlap sampling will be used. For nonzero overlap sectors icedax dynamically adjusts the setting during sampling (like cdparanoia does). If no match can be found, icedax retries the read with an increased overlap. If the amount of jitter is lower than the current overlapped samples, icedax reduces the overlap setting, resulting in a higher reading speed. The argument given has to be lower than the total number of sectors per request (see option <i>-n</i> below). Icedax will check this setting and issues a error message otherwise. The case of zero sectors is nice on low load situations or errorfree (perfect) cdrom drives and perfect (not scratched) audio cds.</p>
-<dt>Set the transfer size</p>
-<dd> <code>-n sectors</code> will set the transfer size to the specified sectors per request.</p>
-<dt>Set number of ring buffer elements</p>
-<dd> <code>-l buffers</code> will allocate the specified number of ring buffer elements.</p>
-<dt>Set endianess of input samples</p>
-<dd> <code>-C endianess</code> will override the default settings of the input format. Endianess can be set explicitly to &quot;little&quot; or &quot;big&quot; or to the automatic endianess detection based on voting with &quot;guess&quot;.</p>
-<dt>Set endianess of output samples</p>
-<dd> <code>-E endianess</code> (endianess can be &quot;little&quot; or &quot;big&quot;) will override the default settings of the output format.</p>
-<dt>Verbose option</p>
-<dd> <code>-v itemlist</code> prints more information. A list allows selection of different information items. </p>
+<dt>Do linear or overlapping reading of sectors</dt>
+<dd> (This applies unless option <code>-paranoia</code> is used.) <code>-P sectors</code> sets the given number of sectors for initial overlap sampling for jitter correction. Two cases are to be distinguished. For nonzero values, some sectors are read twice to enable icedax&#8217;s jitter correction. If an argument of zero is given, no overlap sampling will be used. For nonzero overlap sectors icedax dynamically adjusts the setting during sampling (like cdparanoia does). If no match can be found, icedax retries the read with an increased overlap. If the amount of jitter is lower than the current overlapped samples, icedax reduces the overlap setting, resulting in a higher reading speed. The argument given has to be lower than the total number of sectors per request (see option <i>-n</i> below). Icedax will check this setting and issues a error message otherwise. The case of zero sectors is nice on low load situations or errorfree (perfect) cdrom drives and perfect (not scratched) audio cds.</dd>
+<dt>Set the transfer size</dt>
+<dd> <code>-n sectors</code> will set the transfer size to the specified sectors per request.</dd>
+<dt>Set number of ring buffer elements</dt>
+<dd> <code>-l buffers</code> will allocate the specified number of ring buffer elements.</dd>
+<dt>Set endianess of input samples</dt>
+<dd> <code>-C endianess</code> will override the default settings of the input format. Endianess can be set explicitly to &quot;little&quot; or &quot;big&quot; or to the automatic endianess detection based on voting with &quot;guess&quot;.</dd>
+<dt>Set endianess of output samples</dt>
+<dd> <code>-E endianess</code> (endianess can be &quot;little&quot; or &quot;big&quot;) will override the default settings of the output format.</dd>
+<dt>Verbose option</dt>
+<dd> <code>-v itemlist</code> prints more information. A list allows selection of different information items. </dd>
 <p> <code>disable</code> keeps quiet </p>
 <p> <code>toc</code> displays the table of contents </p>
 <p> <code>summary</code> displays a summary of recording parameters </p>
@@ -384,34 +384,34 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 <p> <code>trackid</code> retrieves and displays international standard recording codes </p>
 <p> <code>sectors</code> displays track start positions in absolute sector notation </p>
 <p> To combine several requests just list the suboptions separated with commas.</p>
-<dt>The table of contents</p>
-<dd> The display will show the table of contents with number of tracks and total time (displayed in <i>mm</i>:<i>ss</i>.<i>hh</i> format, <i>mm</i>=minutes, <i>ss</i>=seconds, <i>hh</i>=rounded 1/100 seconds). The following list displays track number and track time for each entry. The summary gives a line per track describing the type of the track. </p>
+<dt>The table of contents</dt>
+<dd> The display will show the table of contents with number of tracks and total time (displayed in <i>mm</i>:<i>ss</i>.<i>hh</i> format, <i>mm</i>=minutes, <i>ss</i>=seconds, <i>hh</i>=rounded 1/100 seconds). The following list displays track number and track time for each entry. The summary gives a line per track describing the type of the track. </dd>
 <p> <center> <code>track preemphasis copypermitted tracktype chans</code><br />
  </center> </p>
 <p> The <code>track</code> column holds the track number. <code>preemphasis</code> shows if that track has been given a non linear frequency response. NOTE: You can undo this effect with the <code>-T</code> option. <code>copy-permitted</code> indicates if this track is allowed to copy. <code>tracktype</code> can be data or audio. On multimedia CDs (except hidden track CDs) both of them should be present. <code>channels</code> is defined for audio tracks only. There can be two or four channels.</p>
-<dt>No file output</p>
-<dd> <code>-N</code> this debugging option switches off writing to a file.</p>
-<dt>No infofile generation</p>
-<dd> <code>-H</code> this option switches off creation of an info file and a cddb file.</p>
-<dt>Generation of simple output for gui frontends</p>
-<dd> <code>-g</code> this option switches on simple line formatting, which is needed to support gui frontends (like xcd-roast).</p>
-<dt>Verbose SCSI logging</p>
-<dd> <code>-V</code> this option switches on logging of SCSI commands. This will produce a lot of output (when SCSI devices are being used). This is needed for debugging purposes. The format is the same as being used with the cdrecord program from Joerg Schilling or the wodim tool. See there for details.</p>
-<dt>Quiet option</p>
-<dd> <code>-q</code> suppresses all screen output except error messages. That reduces cpu time resources.</p>
-<dt>Just show information option</p>
-<dd> <code>-J</code> does not write a file, it only prints information about the disc (depending on the <code>-v</code> option). This is just for information purposes.</dl>
+<dt>No file output</dt>
+<dd> <code>-N</code> this debugging option switches off writing to a file.</dd>
+<dt>No infofile generation</dt>
+<dd> <code>-H</code> this option switches off creation of an info file and a cddb file.</dd>
+<dt>Generation of simple output for gui frontends</dt>
+<dd> <code>-g</code> this option switches on simple line formatting, which is needed to support gui frontends (like xcd-roast).</dd>
+<dt>Verbose SCSI logging</dt>
+<dd> <code>-V</code> this option switches on logging of SCSI commands. This will produce a lot of output (when SCSI devices are being used). This is needed for debugging purposes. The format is the same as being used with the cdrecord program from Joerg Schilling or the wodim tool. See there for details.</dd>
+<dt>Quiet option</dt>
+<dd> <code>-q</code> suppresses all screen output except error messages. That reduces cpu time resources.</dd>
+<dt>Just show information option</dt>
+<dd> <code>-J</code> does not write a file, it only prints information about the disc (depending on the <code>-v</code> option). This is just for information purposes.</dd></dl>
 <h2>CDDBP support</h2>
 <dl>
-<dt>Lookup album and track titles option</p>
-<dd> <code>-L cddbp mode</code> Icedax tries to retrieve performer, album-, and track titles from a cddbp server. The default server right now is &#8216;freedb.freedb.org&#8217;. It is planned to have more control over the server handling later. The parameter defines how multiple entries are handled:</dl>
+<dt>Lookup album and track titles option</dt>
+<dd> <code>-L cddbp mode</code> Icedax tries to retrieve performer, album-, and track titles from a cddbp server. The default server right now is &#8216;freedb.freedb.org&#8217;. It is planned to have more control over the server handling later. The parameter defines how multiple entries are handled:</dd></dl>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>interactive mode, the user chooses one of the entries.</p>
 <p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>take the first entry without asking.</p>
 <dl>
-<dt>Set server for title lookups</p>
-<dd> <code>cddbp-server servername</code> When using -L or &#8211;cddb, the server being contacted can be set with this option.</p>
-<dt>Set portnumber for title lookups</p>
-<dd> <code>cddbp-port portnumber</code> When using -L or &#8211;cddb, the server port being contacted can be set with this option.</dl>
+<dt>Set server for title lookups</dt>
+<dd> <code>cddbp-server servername</code> When using -L or &#8211;cddb, the server being contacted can be set with this option.</dd>
+<dt>Set portnumber for title lookups</dt>
+<dd> <code>cddbp-port portnumber</code> When using -L or &#8211;cddb, the server port being contacted can be set with this option.</dd></dl>
 <h2>HINTS ON USAGE</h2>
 <p> Don&#8217;t create samples you cannot read. First check your sample player software and sound card hardware. I experienced problems with very low sample rates (stereo &lt;= 1575 Hz, mono &lt;= 3675 Hz) when trying to play them with standard WAV players for sound blaster (maybe they are not legal in <code>WAV</code> format). Most CD-Writers insist on audio samples in a bigendian format. Now icedax supports the <code>-E endianess</code> option to control the endianess of the written samples. </p>
 <p> If your hardware is fast enough to run icedax uninterrupted and your CD drive is one of the &#8216;perfect&#8217; ones, you will gain speed when switching all overlap sampling off with the <code>-P 0</code> option. Further fine tuning can be done with the <code>-n sectors</code> option. You can specify how much sectors should be requested in one go. </p>

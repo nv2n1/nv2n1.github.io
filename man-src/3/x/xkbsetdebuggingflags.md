@@ -11,26 +11,26 @@ description: "XkbSetDebuggingFlags – Change the values of any of the debug con
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetDebuggingFlags</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>flags</i><code>,</code> <code>char *</code><i>msg</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls</i><code>,</code> <code>unsigned int *</code><i>ret_flags</i><code>,</code> <code>unsigned int *</code><i>ret_ctrls</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; mask</i></p>
-<dd>mask selecting debug output flags to change</p>
-<dt><i>&#8211; flags</i></p>
-<dd>values for debug output flags selected by mask</p>
-<dt><i>&#8211; msg</i></p>
-<dd>message to print right now</p>
-<dt><i>&#8211; ctrls_mask</i></p>
-<dd>mask selecting debug controls to change</p>
-<dt><i>&#8211; ctrls</i></p>
-<dd>values for debug controls selected by ctrls_mask</p>
-<dt><i>&#8211; ret_flags</i></p>
-<dd>resulting state of all debug output flags</p>
-<dt><i>&#8211; ret_ctrls</i></p>
-<dd>resulting state of all debug controls</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; mask</i></dt>
+<dd>mask selecting debug output flags to change</dd>
+<dt><i>&#8211; flags</i></dt>
+<dd>values for debug output flags selected by mask</dd>
+<dt><i>&#8211; msg</i></dt>
+<dd>message to print right now</dd>
+<dt><i>&#8211; ctrls_mask</i></dt>
+<dd>mask selecting debug controls to change</dd>
+<dt><i>&#8211; ctrls</i></dt>
+<dd>values for debug controls selected by ctrls_mask</dd>
+<dt><i>&#8211; ret_flags</i></dt>
+<dd>resulting state of all debug output flags</dd>
+<dt><i>&#8211; ret_ctrls</i></dt>
+<dd>resulting state of all debug controls</dd></dl>
 <h2>Description</h2>
 <p>The debugging aids are intended for use primarily by Xkb implementors and are optional in any implementation. </p>
 <p> There are two bitmasks that may be used to control debugging. One bitmask controls the output of debugging information, and the other controls behavior. Both bitmasks are initially all zeros. </p>
@@ -71,12 +71,12 @@ description: "XkbSetDebuggingFlags – Change the values of any of the debug con
 <p> The message in <i>msg </i> is written immediately. The device to which it is written is implementation dependent but is normally the same device where X server error messages are directed.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetDebuggingFlags </i> function returns True when successful.</p>
-<dt>False</p>
-<dd>The <i>XkbSetDebuggingFlags </i> function returns False when not successful.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetDebuggingFlags </i> function returns True when successful.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetDebuggingFlags </i> function returns False when not successful.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage </p>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage </dd>
 </dl>

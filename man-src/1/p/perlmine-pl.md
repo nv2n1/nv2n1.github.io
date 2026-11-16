@@ -23,6 +23,5 @@ perlmine - A game to clear hidden mines from a minefield
  name =&gt; 'XXX',
  );</pre><h2>Pod Errors</h2>Hey! <b>The above document had some coding errors, which are explained below:</b>
 <dl COMPACT><dt>Around line 941:
-<dd>Non-ASCII character seen before =encoding in ''<font SIZE="-1">XXX</font>','. Assuming <font SIZE="-1">UTF-8</font> 
-
-</dl>
+</dt><dd>Non-ASCII character seen before =encoding in ''<font SIZE="-1">XXX</font>','. Assuming <font SIZE="-1">UTF-8</font> 
+</dd></dl>

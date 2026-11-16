@@ -22,180 +22,124 @@ description: "ftop – show progress of open files and file systems"
 <p> Non-boolean options accept values of the type shown next to their option characters. <i>List</i> values accept one or more values, separated by comma characters (with no spaces). Values of type <i>num</i> are numeric, and values of type <i>user</i> can be specified as either a valid login or numeric UID. </p>
 <p> Please refer to the additional details following the list of options. </p>
 <dl>
-<dt><code>-a</code><i> list</i></p>
-<dd> Additional files/fs</p>
+<dt><code>-a</code><i> list</i></dt>
+<dd> Additional files/fs</dd>
 <dt>
-<dd> Manually specify files or file systems to monitor. These are in addition to all currently open files. If any directories are specified, their file system usage is displayed. This option is useful for monitoring files written by NFS clients, or for observing the addition of a large number of files to a file system (for example, while extracting a large archive or restoring from a backup).</p>
+</dt><dd> Manually specify files or file systems to monitor. These are in addition to all currently open files. If any directories are specified, their file system usage is displayed. This option is useful for monitoring files written by NFS clients, or for observing the addition of a large number of files to a file system (for example, while extracting a large archive or restoring from a backup).</dd>
+<dt><code>-A</code></dt>
+<dd> Addl. files/fs only</dd>
 <dt>
-<dd>
-<dt><code>-A</code></p>
-<dd> Addl. files/fs only</p>
+</dt><dd> Only show the files and file systems specified in &#8216;Additional files/fs&#8217; (see above) and &#8216;File system types&#8217; (see below).</dd>
+<dt><code>-B</code></dt>
+<dd> Expand at-beginning</dd>
 <dt>
-<dd> Only show the files and file systems specified in &#8216;Additional files/fs&#8217; (see above) and &#8216;File system types&#8217; (see below).</p>
+</dt><dd> Show the progress bar for files that are still at the beginning. When this option is disabled, a file&#8217;s progress bar doesn&#8217;t appear until there has been some activity. Often, there are processes that hold log files open for append, but haven&#8217;t yet written anything new. Leaving this disabled reduces the clutter in the presence of those (and similar) situations.</dd>
+<dt><code>-c</code><i> num</i></dt>
+<dd> Closed files count</dd>
 <dt>
-<dd>
-<dt><code>-B</code></p>
-<dd> Expand at-beginning</p>
+</dt><dd> Additionally show the specified number of most recently closed files for each displayed process.</dd>
+<dt><code>-d</code><i> num</i></dt>
+<dd> Delay</dd>
 <dt>
-<dd> Show the progress bar for files that are still at the beginning. When this option is disabled, a file&#8217;s progress bar doesn&#8217;t appear until there has been some activity. Often, there are processes that hold log files open for append, but haven&#8217;t yet written anything new. Leaving this disabled reduces the clutter in the presence of those (and similar) situations.</p>
+</dt><dd> Change the time between updates. The value is specified in seconds, with optional tenths or hundredths (for example: 1 or 0.5 or 1.25 are all valid).</dd>
+<dt><code>-D</code></dt>
+<dd> Hide path directories</dd>
 <dt>
-<dd>
-<dt><code>-c</code><i> num</i></p>
-<dd> Closed files count</p>
+</dt><dd> Hide all leading directory components of each file path. If the file path refers to an unnamed pipe or socket, or otherwise is not valid, then the full path will still be displayed.</dd>
+<dt><code>-E</code></dt>
+<dd> Expand at-end</dd>
 <dt>
-<dd> Additionally show the specified number of most recently closed files for each displayed process.</p>
+</dt><dd> Show the progress bar for files that are at the end. When this option is disabled, a file&#8217;s progress bar disappears once the process reaches the end of the file. Whenever a process writes to a file, the resulting position is at the end. Processes that write to log files tend to have several files open in this state. Leaving this disabled &quot;reduces the clutter in the presence of those (and similar) situations. See also &#8216;File keywords &amp; sizes&#8217; below.</dd>
+<dt><code>-f</code><i> list</i></dt>
+<dd> File keywords</dd>
 <dt>
-<dd>
-<dt><code>-d</code><i> num</i></p>
-<dd> Delay</p>
+</dt><dd> Only show files whose path contains, anywhere within, one of the specified keywords. For instance, if a file /tmp/live-cd.iso is open, and the keyword list contains cd.i, then that file will be shown.</dd>
+<dt><code>-F</code></dt>
+<dd> Show un-expanded files</dd>
 <dt>
-<dd> Change the time between updates. The value is specified in seconds, with optional tenths or hundredths (for example: 1 or 0.5 or 1.25 are all valid).</p>
-<dt>
-<dd>
-<dt><code>-D</code></p>
-<dd> Hide path directories</p>
-<dt>
-<dd> Hide all leading directory components of each file path. If the file path refers to an unnamed pipe or socket, or otherwise is not valid, then the full path will still be displayed.</p>
-<dt>
-<dd>
-<dt><code>-E</code></p>
-<dd> Expand at-end</p>
-<dt>
-<dd> Show the progress bar for files that are at the end. When this option is disabled, a file&#8217;s progress bar disappears once the process reaches the end of the file. Whenever a process writes to a file, the resulting position is at the end. Processes that write to log files tend to have several files open in this state. Leaving this disabled &quot;reduces the clutter in the presence of those (and similar) situations. See also &#8216;File keywords &amp; sizes&#8217; below.</p>
-<dt>
-<dd>
-<dt><code>-f</code><i> list</i></p>
-<dd> File keywords</p>
-<dt>
-<dd> Only show files whose path contains, anywhere within, one of the specified keywords. For instance, if a file /tmp/live-cd.iso is open, and the keyword list contains cd.i, then that file will be shown.</p>
-<dt>
-<dd>
-<dt><code>-F</code></p>
-<dd> Show un-expanded files</p>
-<dt>
-<dd> Show all files that are open within the displayed processes. See also</dl>
+</dt><dd> Show all files that are open within the displayed processes. See also</dd></dl>
 <h2>ow un-expanded procs&#8217; below.</h2>
 <dl>
+<dt><code>-h</code></dt>
+<dd> Help</dd>
 <dt>
-<dd>
-<dt><code>-h</code></p>
-<dd> Help</p>
+</dt><dd> Toggle the help screen.</dd>
+<dt><code>-l</code><i> list</i></dt>
+<dd> Log types</dd>
 <dt>
-<dd> Toggle the help screen.</p>
+</dt><dd> Specify the type(s) of messages to log. Valid types are none, all, or one or more of the following: err, warn, info, debug. The value none disables logging. If logging is enabled, and &#8216;Limited output mode&#8217; (see below) is enabled, the log is output on stderr. See also &#8216;View log&#8217; below.</dd>
+<dt><code>-L</code></dt>
+<dd> View log</dd>
 <dt>
-<dd>
-<dt><code>-l</code><i> list</i></p>
-<dd> Log types</p>
+</dt><dd> Toggle the log screen, if logging is enabled.</dd>
+<dt><code>-m</code><i> list</i></dt>
+<dd> Access modes</dd>
 <dt>
-<dd> Specify the type(s) of messages to log. Valid types are none, all, or one or more of the following: err, warn, info, debug. The value none disables logging. If logging is enabled, and &#8216;Limited output mode&#8217; (see below) is enabled, the log is output on stderr. See also &#8216;View log&#8217; below.</p>
+</dt><dd> Specify the access mode(s) of files to show. Valid modes are one or more of the following: r, w, rw. If r is specified, files open for read-only access will be shown. If w is specified, files open for write-only access will be shown. If rw is specified, then files open for read and write will be shown. Note, rw does not include read-only or write-only files.</dd>
+<dt><code>-n</code><i> num</i></dt>
+<dd> Iterations</dd>
 <dt>
-<dd>
-<dt><code>-L</code></p>
-<dd> View log</p>
+</dt><dd> Specify the total number of update iterations to run, after which ftop will exit.</dd>
+<dt><code>-N</code></dt>
+<dd> Show all FDs numeric</dd>
 <dt>
-<dd> Toggle the log screen, if logging is enabled.</p>
+</dt><dd> Display all file descriptors as their numeric values. When this option is disabled, file descriptors 0, 1, and 2 are given the symbolic names in, out, and err, respectively, to reflect stdin, stdout, and stderr.</dd>
+<dt><code>-o</code></dt>
+<dd> View options</dd>
 <dt>
-<dd>
-<dt><code>-m</code><i> list</i></p>
-<dd> Access modes</p>
+</dt><dd> Toggle the options summary screen.</dd>
+<dt><code>-O</code></dt>
+<dd> Limited output mode</dd>
 <dt>
-<dd> Specify the access mode(s) of files to show. Valid modes are one or more of the following: r, w, rw. If r is specified, files open for read-only access will be shown. If w is specified, files open for write-only access will be shown. If rw is specified, then files open for read and write will be shown. Note, rw does not include read-only or write-only files.</p>
+</dt><dd> Toggle between full output mode and limited output mode. By default, full mode is selected if the ncurses library is available and stdout is a terminal (e.g. not redirected or piped). If neither of the above is true, then only limited mode will be available. If this option is specified on the command line, limited mode will be used initially. In limited mode, all control keys can still be used, but scrolling is not available.</dd>
+<dt><code>-p</code><i> list</i></dt>
+<dd> Process keywords/PIDs</dd>
 <dt>
-<dd>
-<dt><code>-n</code><i> num</i></p>
-<dd> Iterations</p>
+</dt><dd> Show only processes whose command line contains, anywhere within, one the specified keywords, or whose PID equals a specified value. For instance, the list 1,bash,X will show the init process, all instances of bash, and any running X servers (if X is within their command line). Note, processes with no open files that match any of the other criteria will still not be shown. See also &#8216;Show un-expanded procs&#8217; below.</dd>
+<dt><code>-P</code></dt>
+<dd> Show un-expanded procs</dd>
 <dt>
-<dd> Specify the total number of update iterations to run, after which ftop will exit.</p>
+</dt><dd> Show all processes. See also &#8216;Show un-expanded files&#8217; and &#8216;Process keywords/PIDs&#8217; above.</dd>
+<dt><code>-q</code></dt>
+<dd> Quit</dd>
 <dt>
-<dd>
-<dt><code>-N</code></p>
-<dd> Show all FDs numeric</p>
+</dt><dd> Exit from ftop.</dd>
+<dt><code>-Q</code></dt>
+<dd> Hide tput &amp; est. time</dd>
 <dt>
-<dd> Display all file descriptors as their numeric values. When this option is disabled, file descriptors 0, 1, and 2 are given the symbolic names in, out, and err, respectively, to reflect stdin, stdout, and stderr.</p>
+</dt><dd> Do not show any throughput or estimated time remaining calculations. This is useful when simply monitoring how far into files the processes are, especially if used with a very small delay (see &#8216;Delay&#8217; above).</dd>
+<dt><code>-r</code></dt>
+<dd> Refresh display</dd>
 <dt>
-<dd>
-<dt><code>-o</code></p>
-<dd> View options</p>
+</dt><dd> Force a refresh of the display.</dd>
+<dt><code>-t</code><i> list</i></dt>
+<dd> File types</dd>
 <dt>
-<dd> Toggle the options summary screen.</p>
+</dt><dd> Specify the type(s) of files to show. Valid types are all, or one or more of the following: f, d, c, b, p, s, x. Also allowed is r, an alias for f. The meaning of each is: f (regular file), d (directory), c (character device), b (block device), p (pipe/FIFO), s (socket), and x (miscellaneous &#8211; unknown or unclassifiable).</dd>
+<dt><code>-u</code><i> user</i></dt>
+<dd> User name/UID</dd>
 <dt>
-<dd>
-<dt><code>-O</code></p>
-<dd> Limited output mode</p>
+</dt><dd> Only show processes with the given real user id. The user can be specified either as a name or as a UID.</dd>
+<dt><code>-U</code></dt>
+<dd> Units in base 10</dd>
 <dt>
-<dd> Toggle between full output mode and limited output mode. By default, full mode is selected if the ncurses library is available and stdout is a terminal (e.g. not redirected or piped). If neither of the above is true, then only limited mode will be available. If this option is specified on the command line, limited mode will be used initially. In limited mode, all control keys can still be used, but scrolling is not available.</p>
+</dt><dd> If this option is disabled, sizes and throughputs will be reported in units based on powers of 2. Specifically, M (megabyte) corresponds to 2 to the 20th power and G (gigabyte) corresponds to 2 to the 30th. If this option is enabled, the units e6 (million bytes) and e9 (billion bytes) will be used instead. Note, either form is always acceptable when entering size values, regardless of this setting.</dd>
+<dt><code>-v</code></dt>
+<dd> Version and license</dd>
 <dt>
-<dd>
-<dt><code>-p</code><i> list</i></p>
-<dd> Process keywords/PIDs</p>
+</dt><dd> Toggle the version and license screen.</dd>
+<dt><code>-x</code><i> num</i></dt>
+<dd> Max no-match iterations</dd>
 <dt>
-<dd> Show only processes whose command line contains, anywhere within, one the specified keywords, or whose PID equals a specified value. For instance, the list 1,bash,X will show the init process, all instances of bash, and any running X servers (if X is within their command line). Note, processes with no open files that match any of the other criteria will still not be shown. See also &#8216;Show un-expanded procs&#8217; below.</p>
+</dt><dd> Specify the number of iterations to remain running when there are no open files matching any of the other criteria. At least one match has to have been shown, and subsequently been closed, before the remaining iterations are counted. If during those iterations, another matching file is shown, the counter is reset. See also &#8216;Iterations&#8217; above.</dd>
+<dt><code>-y</code><i> list</i></dt>
+<dd> File system types</dd>
 <dt>
-<dd>
-<dt><code>-P</code></p>
-<dd> Show un-expanded procs</p>
+</dt><dd> Show all mounted filesystems of the specified types. Valid types are all, or one or more of the types supported by the kernel (refer to /proc/filesystems). The display is updated to reflect the mounting or unmounting of matching file systems.</dd>
+<dt><code>-z</code><i> list</i></dt>
+<dd> File keywords &amp; sizes</dd>
 <dt>
-<dd> Show all processes. See also &#8216;Show un-expanded files&#8217; and &#8216;Process keywords/PIDs&#8217; above.</p>
-<dt>
-<dd>
-<dt><code>-q</code></p>
-<dd> Quit</p>
-<dt>
-<dd> Exit from ftop.</p>
-<dt>
-<dd>
-<dt><code>-Q</code></p>
-<dd> Hide tput &amp; est. time</p>
-<dt>
-<dd> Do not show any throughput or estimated time remaining calculations. This is useful when simply monitoring how far into files the processes are, especially if used with a very small delay (see &#8216;Delay&#8217; above).</p>
-<dt>
-<dd>
-<dt><code>-r</code></p>
-<dd> Refresh display</p>
-<dt>
-<dd> Force a refresh of the display.</p>
-<dt>
-<dd>
-<dt><code>-t</code><i> list</i></p>
-<dd> File types</p>
-<dt>
-<dd> Specify the type(s) of files to show. Valid types are all, or one or more of the following: f, d, c, b, p, s, x. Also allowed is r, an alias for f. The meaning of each is: f (regular file), d (directory), c (character device), b (block device), p (pipe/FIFO), s (socket), and x (miscellaneous &#8211; unknown or unclassifiable).</p>
-<dt>
-<dd>
-<dt><code>-u</code><i> user</i></p>
-<dd> User name/UID</p>
-<dt>
-<dd> Only show processes with the given real user id. The user can be specified either as a name or as a UID.</p>
-<dt>
-<dd>
-<dt><code>-U</code></p>
-<dd> Units in base 10</p>
-<dt>
-<dd> If this option is disabled, sizes and throughputs will be reported in units based on powers of 2. Specifically, M (megabyte) corresponds to 2 to the 20th power and G (gigabyte) corresponds to 2 to the 30th. If this option is enabled, the units e6 (million bytes) and e9 (billion bytes) will be used instead. Note, either form is always acceptable when entering size values, regardless of this setting.</p>
-<dt>
-<dd>
-<dt><code>-v</code></p>
-<dd> Version and license</p>
-<dt>
-<dd> Toggle the version and license screen.</p>
-<dt>
-<dd>
-<dt><code>-x</code><i> num</i></p>
-<dd> Max no-match iterations</p>
-<dt>
-<dd> Specify the number of iterations to remain running when there are no open files matching any of the other criteria. At least one match has to have been shown, and subsequently been closed, before the remaining iterations are counted. If during those iterations, another matching file is shown, the counter is reset. See also &#8216;Iterations&#8217; above.</p>
-<dt>
-<dd>
-<dt><code>-y</code><i> list</i></p>
-<dd> File system types</p>
-<dt>
-<dd> Show all mounted filesystems of the specified types. Valid types are all, or one or more of the types supported by the kernel (refer to /proc/filesystems). The display is updated to reflect the mounting or unmounting of matching file systems.</p>
-<dt>
-<dd>
-<dt><code>-z</code><i> list</i></p>
-<dd> File keywords &amp; sizes</p>
-<dt>
-<dd> Specify pre-determined final sizes to use for files opened for write access and for file systems (see &#8216;Additional files/fs&#8217; above). The values in the list must be of the form keyword=size, where keyword is applied as in &#8216;File keywords&#8217; (see above) and size is given in bytes, megabytes (or million bytes), or gigabytes (or billion bytes) with optional tenths value. See &#8216;Units in base 10&#8217; above. The following is an example of a valid list: data_out.bin=1.5G,/tmp/=700e6,some_file.copy=120000</dl>
+</dt><dd> Specify pre-determined final sizes to use for files opened for write access and for file systems (see &#8216;Additional files/fs&#8217; above). The values in the list must be of the form keyword=size, where keyword is applied as in &#8216;File keywords&#8217; (see above) and size is given in bytes, megabytes (or million bytes), or gigabytes (or billion bytes) with optional tenths value. See &#8216;Units in base 10&#8217; above. The following is an example of a valid list: data_out.bin=1.5G,/tmp/=700e6,some_file.copy=120000</dd></dl>
 <h2>NOTES</h2>
 <p> The three characters displayed after a file&#8217;s descriptor represent the type of file and the access mode. See &#8216;File types&#8217; and &#8216;Access modes&#8217; for details on each. In the case of a file system, FS- will be displayed. If a file is opened in append mode, an uppercase W will be displayed instead of a lowercase w. </p>
 <p> The two characters following the access mode represent activity. If &#8212; is displayed, there is no activity. If the position is advancing in a forward direction, then -&gt;, &gt;&gt;, or &gt;- will be displayed depending on how much progress is occurring. If the position is moving backward, then -&lt;, &lt;&lt;, or &lt;- will be displayed. If the position is moving in a somewhat random fashion, then &lt;&gt; will be displayed. Finally, any time a different file is open for the given descriptor, ** is displayed. </p>

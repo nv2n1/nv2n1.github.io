@@ -43,7 +43,6 @@ page for natgrid_errors for details.
 <h2>Usage</h2>NATGRIDS is the single precision gridding function in the Natgrid package. The behavior of NATGRIDS is controlled by values set for the various parameters described in natgrid_params. Values for these parameters can be set using the subroutines NNSETI, NNSETR, and NNSETC.
 <h2>Access</h2>To use NATGRIDS, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>natgrid, natgrid_params, nnseti, nngeti, nnsetr, nngetr, nnsetc, nngetc. <pre><code>Complete documentation for Natgrid is available at URL
-
 http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html</code></pre>
 <h2>Copyright</h2>Copyright (C) 2000 
  University Corporation for Atmospheric Research 

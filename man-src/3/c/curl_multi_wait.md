@@ -33,12 +33,12 @@ struct curl_waitfd {
 };
 </code></pre>
 <dl>
-<dt>CURL_WAIT_POLLIN</p>
-<dd> Bit flag to curl_waitfd.events indicating the socket should poll on read events such as new data received.</p>
-<dt>CURL_WAIT_POLLPRI</p>
-<dd> Bit flag to curl_waitfd.events indicating the socket should poll on high priority read events such as out of band data.</p>
-<dt>CURL_WAIT_POLLOUT</p>
-<dd> Bit flag to curl_waitfd.events indicating the socket should poll on write events such as the socket being clear to write without blocking.</dl>
+<dt>CURL_WAIT_POLLIN</dt>
+<dd> Bit flag to curl_waitfd.events indicating the socket should poll on read events such as new data received.</dd>
+<dt>CURL_WAIT_POLLPRI</dt>
+<dd> Bit flag to curl_waitfd.events indicating the socket should poll on high priority read events such as out of band data.</dd>
+<dt>CURL_WAIT_POLLOUT</dt>
+<dd> Bit flag to curl_waitfd.events indicating the socket should poll on write events such as the socket being clear to write without blocking.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> CURLMcode type, general libcurl multi interface error code. See <i><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</i></p>
 <h2>AVAILABILITY</h2>

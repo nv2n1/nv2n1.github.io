@@ -11,9 +11,7 @@ description: "ql/indexes/region.hpp – Region, i.e. geographical area, specific
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/qldefines.hpp&gt;
-
 #include &lt;boost/shared_ptr.hpp&gt;
-
 #include &lt;string&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>Region</code><br />

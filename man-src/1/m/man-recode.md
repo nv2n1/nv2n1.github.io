@@ -17,35 +17,35 @@ description: "man-recode – convert manual pages to another encoding"
 <p> Encoding declarations have the following form: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 '\&quot; -*- coding: UTF-8 -*-
 </pre>
-</dl>
+</dd></dl>
 <p> or (if manual page preprocessors are also to be declared): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 '\&quot; t -*- coding: ISO-8859-1 -*-
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code> <i>encoding/</i>, <code>&#8211;to-code=</code><i>encoding</i></p>
-<dd> Convert manual pages to <i>encoding</i>.</p>
-<dt><code>&#8211;suffix=</code><i>suffix</i></p>
-<dd> Form each output file name by appending <i>suffix</i> to the input file name, after removing any compression extension.</p>
-<dt><code>&#8211;in-place</code></p>
-<dd> Overwrite each input file with the output, after removing any compression extension.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Do not issue error messages when the page cannot be converted.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Print debugging information.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information.</dl>
+<dt><code>-t</code> <i>encoding/</i>, <code>&#8211;to-code=</code><i>encoding</i></dt>
+<dd> Convert manual pages to <i>encoding</i>.</dd>
+<dt><code>&#8211;suffix=</code><i>suffix</i></dt>
+<dd> Form each output file name by appending <i>suffix</i> to the input file name, after removing any compression extension.</dd>
+<dt><code>&#8211;in-place</code></dt>
+<dd> Overwrite each input file with the output, after removing any compression extension.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not issue error messages when the page cannot be converted.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-manconv/">manconv</a></i>(1)</p>
 <h2>BUGS</h2>

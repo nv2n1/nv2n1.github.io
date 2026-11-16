@@ -15,8 +15,8 @@ description: "dmevent_tool – A utility used to load a DSO into dmeventd and (u
 <p>dmevent_tool is a userspace utility used to register/unregister DSOs with the daemon dmeventd. If used with the <code>-m</code> command line parameter users can display all of the actively dmeventd monitored devices. </p>
 <h2>Options</h2>
 <dl>
-<dt>-V Show version of dmevent_tool</p>
-<dd></dl>
+<dt>-V Show version of dmevent_tool</dt>
+<dd></dd></dl>
 <p> -{h/?} Show this help information </p>
 <p> -m[r|u] List all currently active device mapper devices<br />
 &nbsp;<wbr>&nbsp;<wbr>and their current status with dmeventd<br />

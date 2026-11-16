@@ -13,124 +13,40 @@ description: "QuantLib::Period –"
 #include &lt;ql/time/period.hpp&gt;</code></pre>
 <h3>Public Member Functions</h3>
 <pre><code>Period (Integer n, TimeUnit units)
-
-
-
 Period (Frequency f)
-
-
-
 Integer length () const
-
-
-
 TimeUnit units () const
-
-
-
 Frequency frequency () const
-
-
-
 Period &amp; operator+= (const Period &amp;)
-
-
-
 Period &amp; operator-= (const Period &amp;)
-
-
-
 Period &amp; operator/= (Integer)
-
-
-
 void normalize ()
-
-
-
 Related Functions
-
 (Note that these are not member functions.)
-
-
 Real years (const Period &amp;)
-
-
-
 Real months (const Period &amp;)
-
-
-
 Real weeks (const Period &amp;)
-
-
-
 Real days (const Period &amp;)
-
-
-
 template&lt;typename T &gt; Period operator* (T n, TimeUnit units)
-
-
-
 template&lt;typename T &gt; Period operator* (TimeUnit units, T n)
-
-
-
 Period operator- (const Period &amp;)
-
-
-
 Period operator* (Integer n, const Period &amp;)
-
-
-
 Period operator* (const Period &amp;, Integer n)
-
-
-
 Period operator/ (const Period &amp;, Integer n)
-
-
-
 Period operator+ (const Period &amp;, const Period &amp;)
-
-
-
 Period operator- (const Period &amp;, const Period &amp;)
-
-
-
 bool operator&lt; (const Period &amp;, const Period &amp;)
-
-
-
 bool operator== (const Period &amp;, const Period &amp;)
-
-
-
 bool operator!= (const Period &amp;, const Period &amp;)
-
-
-
 bool operator&gt; (const Period &amp;, const Period &amp;)
-
-
-
 bool operator&lt;= (const Period &amp;, const Period &amp;)
-
-
-
 bool operator&gt;= (const Period &amp;, const Period &amp;)
-
-
-
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Period &amp;)</code></pre>
 <h2>Detailed Description</h2>
 <p>This class provides a <code>Period</code> (length + TimeUnit) class and implements a limited algebra. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>self-consistency of algebra is checked.</dl>
+<dd>self-consistency of algebra is checked.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Friends And Related Function Documentation</h2>

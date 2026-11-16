@@ -14,10 +14,10 @@ description: "ablkcipher_request_alloc – allocate request data structure"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle to be registered with the request</dl>
+</dd><dd>cipher handle to be registered with the request</dd></dl>
 <p> <i>gfp</i></p>
 <dl>
-<dd>memory allocation flag that is handed to kmalloc by the API call.</dl>
+<dd>memory allocation flag that is handed to kmalloc by the API call.</dd></dl>
 <h2>Description</h2>
 <p>Allocate the request data structure that must be used with the ablkcipher encrypt and decrypt API calls. During the allocation, the provided ablkcipher handle is registered in the request data structure.</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "ablkcipher_request_alloc – allocate request data structure"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

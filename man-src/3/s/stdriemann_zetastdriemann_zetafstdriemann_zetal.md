@@ -10,15 +10,10 @@ description: "std::riemann_zeta,std::riemann_zetaf,std::riemann_zetal – std::r
 <p>std::riemann_zeta,std::riemann_zetaf,std::riemann_zetal &#8211; std::riemann_zeta,std::riemann_zetaf,std::riemann_zetal</p>
 <h2>Synopsis</h2>
 <pre><code>double riemann_zeta( double arg );
-
 float riemann_zeta( float arg );
-
 long double riemann_zeta( long double arg );  (1) (since C++17)
-
 float riemann_zetaf( float arg );
-
 long double riemann_zetal( long double arg );
-
 double riemann_zeta( IntegralType arg );      (2) (since C++17)</code></pre>
 <p>1) Computes the Riemann_zeta_function of arg.<br />
 2) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(1)</code> after casting the argument to double. </p>
@@ -46,11 +41,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     // spot checks for well-known values
     std::cout &lt;&lt; &quot;ζ(-1) = &quot; &lt;&lt; std::riemann_zeta(-1) &lt;&lt; '

@@ -16,21 +16,21 @@ description: "unhide — forensic tool to find hidden processes"
 <h2>Options</h2>
 <p>Options are only available for <code>unhide-linux</code> not for <code>unhide-posix</code>.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Do a double check in brute test to avoid false positive.</p>
-<dt><code>-f</code></p>
-<dd>Write a log file (unhide-linux.log) in the current directory.</p>
-<dt><code>-h</code></p>
-<dd>Display help</p>
-<dt><code>-m</code></p>
+<dt><code>-d</code></dt>
+<dd>Do a double check in brute test to avoid false positive.</dd>
+<dt><code>-f</code></dt>
+<dd>Write a log file (unhide-linux.log) in the current directory.</dd>
+<dt><code>-h</code></dt>
+<dd>Display help</dd>
+<dt><code>-m</code></dt>
 <dd>Do more checks. As of 2012-03-17 version, this option has only effect for the procfs, procall, checkopendir and checkchdir tests.<br />
- Implies -v</p>
-<dt><code>-r</code></p>
-<dd>Use alternate version of sysinfo check in standard tests</p>
-<dt><code>-V</code></p>
-<dd>Show version and exit</p>
-<dt><code>-v</code></p>
-<dd>Be verbose, display warning message (default : don&#8217;t display). This option may be repeated more than once.</dl>
+ Implies -v</dd>
+<dt><code>-r</code></dt>
+<dd>Use alternate version of sysinfo check in standard tests</dd>
+<dt><code>-V</code></dt>
+<dd>Show version and exit</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose, display warning message (default : don&#8217;t display). This option may be repeated more than once.</dd></dl>
 <h2>Test_List</h2>
 <p>The checks to do consist of one or more of the following tests.<br />
  The standard tests are the aggregation of one or more elementary test(s). </p>
@@ -90,20 +90,20 @@ description: "unhide — forensic tool to find hidden processes"
  This technique is only available with version unhide-linux.</p>
 <h3>Exit status:</h3>
 <dl>
-<dt>0</p>
-<dd>if OK,</p>
-<dt>1</p>
-<dd>if a hidden or fake thread is found.</dl>
+<dt>0</dt>
+<dd>if OK,</dd>
+<dt>1</dt>
+<dd>if a hidden or fake thread is found.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt>Quicker test:</p>
-<dd>unhide quick</p>
-<dt>Quick test:</p>
-<dd>unhide quick reverse</p>
-<dt>Standard test:</p>
-<dd>unhide sys proc</p>
-<dt>Deeper test:</p>
-<dd>unhide -m -d sys procall brute reverse</dl>
+<dt>Quicker test:</dt>
+<dd>unhide quick</dd>
+<dt>Quick test:</dt>
+<dd>unhide quick reverse</dd>
+<dt>Standard test:</dt>
+<dd>unhide sys proc</dd>
+<dt>Deeper test:</dt>
+<dd>unhide -m -d sys procall brute reverse</dd></dl>
 <h2>Bugs</h2>
 <p>Report <code>unhide</code> bugs on the bug tracker on sourceforge (<a rel="nofollow" href="http://sourceforge.net/projects/unhide/)">http://sourceforge.net/projects/unhide/)</a><br />
  With recent versions of Linux kernel (&gt; 2.6.33), the sysinfo test may report false positives. It may be due to optimization in the scheduler, the use of cgroup or even the use of systemd. The use of the PREEMPT-RT patch amplifies the occurence of the problem. This is currently under investigation.</p>

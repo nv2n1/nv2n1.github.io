@@ -14,12 +14,12 @@ description: "ata_scsi_mode_select_xlat – Simulate MODE SELECT 6, 10 commands"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <h2>Description</h2>
 <p>Converts a MODE SELECT command to an ATA SET FEATURES taskfile. Assume this is invoked for direct access devices (e.g. disks) only. There should be no block descriptor for other device types. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

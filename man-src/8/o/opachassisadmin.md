@@ -13,196 +13,196 @@ description: "opachassisadmin"
 <p>opachassisadmin [-c] [-F <i>chassisfile</i>] [-H &#8216;<i>chassis</i>&#8216;] [-P <i>packages</i>] [-a <i>action</i>] [-I <i>fm_bootstate</i>] [-S] [-d <i>upload_dir</i>] [-s <i>securityfiles</i>] <i>operation</i>&#8230;</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-c</p>
-<dd>Clobbers result files from any previous run before starting this run. </p>
-<dt>-F <i>chassisfile</i></p>
-<dd>File with chassis in cluster. The default is /etc/sysconfig/opa/chassis. </p>
-<dt>-H <i>chassis</i></p>
-<dd>List of chassis to execute the operation against. </p>
-<dt>-P <i>packages</i></p>
-<dd>Filenames and directories of firmware images to install. For directories specified, all .pkg files in directory tree are used. shell wild cards may also be used within quotes, or for fmconfig, filename of FM config file to use, or for fmgetconfig, filename to upload to (default opafm.xml). </p>
-<dt>-a <i>action</i></p>
-<dd>Action for supplied file. The default is push.</p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-c</dt>
+<dd>Clobbers result files from any previous run before starting this run. </dd>
+<dt>-F <i>chassisfile</i></dt>
+<dd>File with chassis in cluster. The default is /etc/sysconfig/opa/chassis. </dd>
+<dt>-H <i>chassis</i></dt>
+<dd>List of chassis to execute the operation against. </dd>
+<dt>-P <i>packages</i></dt>
+<dd>Filenames and directories of firmware images to install. For directories specified, all .pkg files in directory tree are used. shell wild cards may also be used within quotes, or for fmconfig, filename of FM config file to use, or for fmgetconfig, filename to upload to (default opafm.xml). </dd>
+<dt>-a <i>action</i></dt>
+<dd>Action for supplied file. The default is push.</dd>
 <dl>
 <dd>
-<dl>
-<dd>For chassis upgrade: </p>
-<dl>
-<dd>
-<dl>
-<dd>push Ensures firmware is in primary or alternate. </p>
-</dl>
-</dl>
+</dd><dl>
+<dd>For chassis upgrade: </dd>
 <dl>
 <dd>
-<dl>
-<dd>select Ensures firmware is in primary. </p>
+</dd><dl>
+<dd>push Ensures firmware is in primary or alternate. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>run Ensures firmware is in primary and running. </p>
-</dl>
-</dl>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>For chassis fmconfig : </p>
-<dl>
-<dd>
-<dl>
-<dd>push Ensures the configuration file is in chassis. </p>
+</dd><dl>
+<dd>select Ensures firmware is in primary. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>run After push, restarts FM on master, stops on secondary. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>runall After push, restarts FM on all management modules. </p>
+</dd><dl>
+<dd>run Ensures firmware is in primary and running. </dd>
 </dl>
 </dl>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>For chassis fmcontrol : </p>
-<dl>
-<dd>
-<dl>
-<dd>stop Stops FM on all management modules. </p>
-</dl>
-</dl>
+</dd><dl>
+<dd>For chassis fmconfig : </dd>
 <dl>
 <dd>
-<dl>
-<dd>run Ensures FM running on master, stopped on secondary. </p>
+</dd><dl>
+<dd>push Ensures the configuration file is in chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>runall Ensures FM running on all management modules. </p>
+</dd><dl>
+<dd>run After push, restarts FM on master, stops on secondary. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>restart Restarts FM on master, stops on secondary. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>restartall Restarts FM on all MM. </p>
+</dd><dl>
+<dd>runall After push, restarts FM on all management modules. </dd>
 </dl>
 </dl>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>For chassis fmsecurityfiles : </p>
-<dl>
-<dd>
-<dl>
-<dd>push Ensures FM security files are in chassis. </p>
-</dl>
-</dl>
-</dl>
-</dl>
-<dt>-I <i>fm_bootstate</i></p>
-<dd>fmconfig and fmcontrol install options.</p>
+</dd><dl>
+<dd>For chassis fmcontrol : </dd>
 <dl>
 <dd>
-<dl>
-<dd>disable Disables FM start at chassis boot. </p>
+</dd><dl>
+<dd>stop Stops FM on all management modules. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>enable Enables FM start on master at chassis boot. </p>
+</dd><dl>
+<dd>run Ensures FM running on master, stopped on secondary. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>runall Ensures FM running on all management modules. </dd>
+</dl>
+</dl>
 <dl>
-<dd>enableall Enables FM start on all MM at chassis boot. </p>
+<dd>
+</dd><dl>
+<dd>restart Restarts FM on master, stops on secondary. </dd>
 </dl>
 </dl>
-<dt>-d <i>upload_dir</i></p>
-<dd>Directory to upload FM configuration files to; default is uploads. </p>
-<dt>-S</p>
-<dd>Securely prompts for password for user on chassis. </p>
-<dt>-s <i>securityFiles</i></p>
-<dd>Security files to install. Default is *.pem. For Chassis <i>fmsecurityfiles</i>, filenames/directories of security files to install. For directories specified, all security files in directory tree are used. Shell wildcards may also be used within quotes. </p>
-<dd>For Chassis <i>fmgetsecurityfiles</i>, filename to upload to. Default is *.pem</p>
+<dl>
+<dd>
+</dd><dl>
+<dd>restartall Restarts FM on all MM. </dd>
+</dl>
+</dl>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>For chassis fmsecurityfiles : </dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>push Ensures FM security files are in chassis. </dd>
+</dl>
+</dl>
+</dl>
+</dl>
+<dt>-I <i>fm_bootstate</i></dt>
+<dd>fmconfig and fmcontrol install options.</dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>disable Disables FM start at chassis boot. </dd>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>enable Enables FM start on master at chassis boot. </dd>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>enableall Enables FM start on all MM at chassis boot. </dd>
+</dl>
+</dl>
+<dt>-d <i>upload_dir</i></dt>
+<dd>Directory to upload FM configuration files to; default is uploads. </dd>
+<dt>-S</dt>
+<dd>Securely prompts for password for user on chassis. </dd>
+<dt>-s <i>securityFiles</i></dt>
+<dd>Security files to install. Default is *.pem. For Chassis <i>fmsecurityfiles</i>, filenames/directories of security files to install. For directories specified, all security files in directory tree are used. Shell wildcards may also be used within quotes. </dd>
+<dd>For Chassis <i>fmgetsecurityfiles</i>, filename to upload to. Default is *.pem</dd>
 <dt>
-&nbsp;<wbr><i>operation</i>&nbsp;<wbr></p>
-<dd>Operation to perform. Can be one or more of:</p>
+&nbsp;<wbr><i>operation</i>&nbsp;<wbr></dt>
+<dd>Operation to perform. Can be one or more of:</dd>
 <dl>
 <dd>
-<dl>
-<dd>reboot Reboots chassis, ensures they go down and come back. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>configure Runs wizard to perform chassis configuration. </p>
+</dd><dl>
+<dd>reboot Reboots chassis, ensures they go down and come back. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>upgrade Upgrades install of all chassis. </p>
+</dd><dl>
+<dd>configure Runs wizard to perform chassis configuration. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>getconfig Gets basic configuration of chassis. </p>
+</dd><dl>
+<dd>upgrade Upgrades install of all chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>fmconfig FM configuration operation on all chassis. </p>
+</dd><dl>
+<dd>getconfig Gets basic configuration of chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>fmgetconfig Fetches FM configuration from all chassis. </p>
+</dd><dl>
+<dd>fmconfig FM configuration operation on all chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>fmcontrol Controls FM on all chassis. </p>
+</dd><dl>
+<dd>fmgetconfig Fetches FM configuration from all chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>fmsecurityfiles FM security files operation on all chassis. </p>
+</dd><dl>
+<dd>fmcontrol Controls FM on all chassis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>fmsecurityfiles FM security files operation on all chassis. </dd>
+</dl>
+</dl>
 <dl>
-<dd>fmgetsecurityfiles Fetches FM security files from all chassis. </p>
+<dd>
+</dd><dl>
+<dd>fmgetsecurityfiles Fetches FM security files from all chassis. </dd>
 </dl>
 </dl>
 <p> For more information on the operations that can be performed, see <i>Operation Details</i> </p>
@@ -216,83 +216,83 @@ description: "opachassisadmin"
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>CHASSIS</code></p>
-<dd>List of chassis, used if -H and -F option not supplied. </p>
-<dt><code>CHASSIS_FILE</code></p>
-<dd>File containing list of chassis, used in absence of -F and -H. </p>
-<dt><code>FF_MAX_PARALLEL</code></p>
-<dd>Maximum concurrent operations. </p>
-<dt><code>FF_SERIALIZE_OUTPUT</code></p>
-<dd>Serializes output of parallel operations (yes or no). </p>
-<dt><code>UPLOADS_DIR</code></p>
-<dd>Directory to upload to, used in absence of -d. </p>
+<dt><code>CHASSIS</code></dt>
+<dd>List of chassis, used if -H and -F option not supplied. </dd>
+<dt><code>CHASSIS_FILE</code></dt>
+<dd>File containing list of chassis, used in absence of -F and -H. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>Maximum concurrent operations. </dd>
+<dt><code>FF_SERIALIZE_OUTPUT</code></dt>
+<dd>Serializes output of parallel operations (yes or no). </dd>
+<dt><code>UPLOADS_DIR</code></dt>
+<dd>Directory to upload to, used in absence of -d. </dd>
 </dl>
 <h2>Operation Details</h2>
 <p><code>(Switch)</code> All chassis operations log into the chassis as chassis user admin. Intel recommends using the -S option to securely prompt for a password, in which case the same password is used for all chassis. Alternately, the password may be put in the environment or the opafastfabric.conf file using <code>FF_CHASSIS_ADMIN_PASSWORD</code>. </p>
 <p> All versions of Intel(R) Omni-Path Switch 100 Series firmware permit SSH keys to be configured within the chassis for secure password-less login. In this case, there is no need to configure a <code>FF_CHASSIS_ADMIN_PASSWORD</code> and <code>FF_CHASSIS_LOGIN_METHOD</code> can be SSH. Refer to the <i>Intel(R) Omni-Path Fabric Switches Command Line Interface Reference Guide</i> </p>
 <p> for more information.</p>
 <dl>
-<dt>upgrade</p>
-<dd>Upgrades the firmware on each chassis or slot specified. The -P option selects a directory containing .pkg files or provides an explicit list of .pkg files for the chassis and/or slots. The -a option selects the desired minimal state for the new firmware. For each chassis and/or slot selected for upgrade, the .pkg file applicable to that slot is selected and used. If more than one .pkg file is specified of a given card type, the operation is undefined. </p>
-<dd>The upgrade is intelligent and does not upgrade chassis that already have the desired firmware in the desired state (as specified by -a).</p>
-<dd>When the -a option specifies run, chassis that are not already running the desired firmware are rebooted. By selecting the proper <code>FF_MAX_PARALLEL</code> value, a rolling upgrade or a parallel upgrade may be accomplished. In most cases, a parallel upgrade is recommended for expediency.</p>
-<dd>For more information about chassis firmware, refer to the <i>Intel(R) Omni-Path Fabric Switches GUI User Guide</i> </p>
+<dt>upgrade</dt>
+<dd>Upgrades the firmware on each chassis or slot specified. The -P option selects a directory containing .pkg files or provides an explicit list of .pkg files for the chassis and/or slots. The -a option selects the desired minimal state for the new firmware. For each chassis and/or slot selected for upgrade, the .pkg file applicable to that slot is selected and used. If more than one .pkg file is specified of a given card type, the operation is undefined. </dd>
+<dd>The upgrade is intelligent and does not upgrade chassis that already have the desired firmware in the desired state (as specified by -a).</dd>
+<dd>When the -a option specifies run, chassis that are not already running the desired firmware are rebooted. By selecting the proper <code>FF_MAX_PARALLEL</code> value, a rolling upgrade or a parallel upgrade may be accomplished. In most cases, a parallel upgrade is recommended for expediency.</dd>
+<dd>For more information about chassis firmware, refer to the <i>Intel(R) Omni-Path Fabric Switches GUI User Guide</i> </dd>
 <p> and <i>Intel(R) Omni-Path Fabric Externally-Managed Switches Release Notes</i> </p>
-<dt>configure</p>
-<dd>Runs the chassis setup wizard, which asks a series of questions. Once the wizard has finished prompting for configuration information, all the selected chassis are configured through the CLI interface according to the responses. The following options may be configured for all chassis: </p>
+<dt>configure</dt>
+<dd>Runs the chassis setup wizard, which asks a series of questions. Once the wizard has finished prompting for configuration information, all the selected chassis are configured through the CLI interface according to the responses. The following options may be configured for all chassis: </dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>syslog server IP address, TCP/UDP port number, syslog facility code, and the chassis LogMode. </p>
-<dt>&bull;</p>
-<dd>NTP server </p>
-<dt>&bull;</p>
-<dd>local time zone </p>
-<dt>&bull;</p>
-<dd>maximum packet MTU </p>
-<dt>&bull;</p>
-<dd>VL capability </p>
-<dt>&bull;</p>
-<dd>VL credit distribution </p>
-<dt>&bull;</p>
-<dd>link width supported </p>
-<dt>&bull;</p>
-<dd>IB node description </p>
-<dt>&bull;</p>
-<dd>IB node description format </p>
-<dt>&bull;</p>
-<dd>disable chassis auto clear of port counters </p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>syslog server IP address, TCP/UDP port number, syslog facility code, and the chassis LogMode. </dd>
+<dt>&bull;</dt>
+<dd>NTP server </dd>
+<dt>&bull;</dt>
+<dd>local time zone </dd>
+<dt>&bull;</dt>
+<dd>maximum packet MTU </dd>
+<dt>&bull;</dt>
+<dd>VL capability </dd>
+<dt>&bull;</dt>
+<dd>VL credit distribution </dd>
+<dt>&bull;</dt>
+<dd>link width supported </dd>
+<dt>&bull;</dt>
+<dd>IB node description </dd>
+<dt>&bull;</dt>
+<dd>IB node description format </dd>
+<dt>&bull;</dt>
+<dd>disable chassis auto clear of port counters </dd>
 </dl>
 </dl>
-<dt>reboot</p>
-<dd>Reboots the given chassis and ensures they go down and come back up by pinging them during the reboot process. </p>
-<dd>By selecting the proper <code>FF_MAX_PARALLEL</code> value, a rolling reboot or a parallel reboot may be accomplished. In most cases, a parallel upgrade is recommended for expediency.</p>
-<dt>getconfig</p>
-<dd>Retrieves basic information from a chassis such as syslog, NTP configuration, timezone info, MTU Capability, VL Capability, VL Credit Distribution, Link Width, and node description. </p>
-<dt>fmconfig</p>
-<dd>Updates the Fabric Manager configuration file on each chassis specified. The -P option selects a file to transfer to the chassis. The -a option selects the desired minimal state for the new configuration and controls whether the FM is started/restarted after the file is updated. The -I option can be used to configure the FM start at boot for the selected chassis. </p>
-<dt>fmgetconfig</p>
-<dd>Uploads the FM configuration file from all selected chassis. The file is uploaded to the selected uploads directory. The -P option specifies the desired destination filename within the uploads directory. </p>
-<dt>fmcontrol</p>
-<dd>Allows the FM to be controlled on each chassis specified. The -a option selects the desired state for the FM. </p>
-<dd>The -I option configures the FM start at boot for the selected chassis.</p>
-<dt>fmsecurityfiles</p>
-<dd>Updates the FM security files on each chassis specified. The -s option selects file(s) to transfer to the chassis. The -a option selects the desired minimal state for the new security files. In this release, push is the only supported action. </p>
-<dt>fmgetsecurityfiles</p>
-<dd>Uploads the FM security files from all selected chassis. The files are uploaded to the selected uploads directory. The -s option specifies the desired destination filename within the uploads directory. </p>
+<dt>reboot</dt>
+<dd>Reboots the given chassis and ensures they go down and come back up by pinging them during the reboot process. </dd>
+<dd>By selecting the proper <code>FF_MAX_PARALLEL</code> value, a rolling reboot or a parallel reboot may be accomplished. In most cases, a parallel upgrade is recommended for expediency.</dd>
+<dt>getconfig</dt>
+<dd>Retrieves basic information from a chassis such as syslog, NTP configuration, timezone info, MTU Capability, VL Capability, VL Credit Distribution, Link Width, and node description. </dd>
+<dt>fmconfig</dt>
+<dd>Updates the Fabric Manager configuration file on each chassis specified. The -P option selects a file to transfer to the chassis. The -a option selects the desired minimal state for the new configuration and controls whether the FM is started/restarted after the file is updated. The -I option can be used to configure the FM start at boot for the selected chassis. </dd>
+<dt>fmgetconfig</dt>
+<dd>Uploads the FM configuration file from all selected chassis. The file is uploaded to the selected uploads directory. The -P option specifies the desired destination filename within the uploads directory. </dd>
+<dt>fmcontrol</dt>
+<dd>Allows the FM to be controlled on each chassis specified. The -a option selects the desired state for the FM. </dd>
+<dd>The -I option configures the FM start at boot for the selected chassis.</dd>
+<dt>fmsecurityfiles</dt>
+<dd>Updates the FM security files on each chassis specified. The -s option selects file(s) to transfer to the chassis. The -a option selects the desired minimal state for the new security files. In this release, push is the only supported action. </dd>
+<dt>fmgetsecurityfiles</dt>
+<dd>Uploads the FM security files from all selected chassis. The files are uploaded to the selected uploads directory. The -s option specifies the desired destination filename within the uploads directory. </dd>
 </dl>
 <h2>Logging</h2>
 <p>opachassisadmin provides detailed logging of its results. During each run, the following files are produced:</p>
 <dl>
-<dt>test.res</p>
-<dd>Appended with summary results of run. </p>
-<dt>test.log</p>
-<dd>Appended with detailed results of run. </p>
-<dt>save_tmp/</p>
-<dd>Contains a directory per failed test with detailed logs. </p>
-<dt>test_tmp*/</p>
-<dd>Intermediate result files while test is running. </p>
+<dt>test.res</dt>
+<dd>Appended with summary results of run. </dd>
+<dt>test.log</dt>
+<dd>Appended with detailed results of run. </dd>
+<dt>save_tmp/</dt>
+<dd>Contains a directory per failed test with detailed logs. </dd>
+<dt>test_tmp*/</dt>
+<dd>Intermediate result files while test is running. </dd>
 </dl>
 <p> The -c option removes all log files.</p>
 <h2>ssh Keys</h2>

@@ -11,20 +11,20 @@ description: "XcupStoreColors – initialize shareable colormap entries at speci
 <h2>Synopsis</h2>
 <pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
 #include &lt;X11/extensions/Xcup.h&gt;
-<dl COMPACT><dt><dd>Status <code>XcupStoreColors</code>(Display *<i>display</i>, Colormap <i>colormap</i>,
+<dl COMPACT><dt></dt><dd>Status <code>XcupStoreColors</code>(Display *<i>display</i>, Colormap <i>colormap</i>,
 XColor *<i>colors_in_out</i>, int <i>ncolors</i>);
 <br>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl></pre>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server</p>
-<dt><i>colormap</i></p>
-<dd>Specifies the colormap</p>
-<dt><i>colors_in_out</i></p>
-<dd>Specifies and returns the values actually used in the colormap</p>
-<dt><i>ncolors</i></p>
-<dd>Specifies the number of items in colors_in_out</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server</dd>
+<dt><i>colormap</i></dt>
+<dd>Specifies the colormap</dd>
+<dt><i>colors_in_out</i></dt>
+<dd>Specifies and returns the values actually used in the colormap</dd>
+<dt><i>ncolors</i></dt>
+<dd>Specifies the number of items in colors_in_out</dd></dl>
 <h2>Description</h2>
 <p>The <i>XcupStoreColors</i> function changes the colormap entries of the pixel values in the pixel members of the XColor structures. The colormap entries are allocated as if an AllocColor has been used instead, i.e. the colors are read-only (shareable). <i>XcupStoreColors</i> returns the number of colors that were successfully allocated in the colormap. </p>
 <p> A <i>Value</i> error is generated if a pixel is not a valid index into the colormap. A <i>BadMatch</i> error is generated if the colormap does not belong to a GrayScale, PseudoColor, or DirectColor visual. </p>

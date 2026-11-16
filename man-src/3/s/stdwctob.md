@@ -11,7 +11,6 @@ std::wctob - std::wctob
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int wctob(std::wint_t c);</code></pre> 
 Narrows a wide character c if its multibyte character equivalent in the initial shift state is a single byte. 
 This is typically possible for the characters from the ASCII character set, since most multibyte encodings (such as UTF-8) use single bytes to encode those characters. 
@@ -28,12 +27,9 @@ Otherwise, the single-byte representation of c as unsigned char converted to int
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;iostream&gt;
 void try_narrowing(wchar_t c)
-
 {
     int cn = std::wctob(c);
     if (cn != EOF)
@@ -42,7 +38,6 @@ void try_narrowing(wchar_t c)
         std::cout &lt;&lt; '\'' &lt;&lt; c &lt;&lt; &quot;' could not be narrowed\n&quot;;
 }
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;th_TH.utf8&quot;);
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; &quot;In Thai UTF-8 locale:\n&quot;;

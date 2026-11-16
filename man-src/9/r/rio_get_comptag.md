@@ -14,14 +14,14 @@ description: "rio_get_comptag – Begin or continue searching for a RIO device b
 <p><i>comp_tag</i></p>
 <dl>
 <dd>
-<dd>RIO component tag to match</dl>
+</dd><dd>RIO component tag to match</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>Previous RIO device found in search, or <code>NULL</code> for new search</dl>
+<dd>Previous RIO device found in search, or <code>NULL</code> for new search</dd></dl>
 <h2>Description</h2>
 <p>Iterates through the list of known RIO devices. If a RIO device is found with a matching <i>comp_tag</i>, a pointer to its device structure is returned. Otherwise, <code>NULL</code> is returned. A new search is initiated by passing <code>NULL</code> to the <i>from</i> argument. Otherwise, if <i>from</i> is not <code>NULL</code>, searches continue from next device on the global list.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

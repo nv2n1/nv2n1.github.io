@@ -11,16 +11,16 @@ description: "XkbFreeControls – Frees memory used by the ctrls member of an Xk
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeControls</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description in which to free controls components</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of components of ctrls to free</p>
-<dt><i>&#8211; free_all</i></p>
-<dd>True =&gt; free everything + ctrls itself</dl>
+</dd><dd>Xkb description in which to free controls components</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of components of ctrls to free</dd>
+<dt><i>&#8211; free_all</i></dt>
+<dd>True =&gt; free everything + ctrls itself</dd></dl>
 <h2>Description</h2>
 <p><i>XkbFreeControls </i> frees the specified components of the <i>ctrls </i> field in the <i>xkb </i> keyboard description and sets the corresponding structure component values to NULL or zero. The <i>which </i> mask specifies the fields of <i>ctrls </i> to be freed and can contain any of the controls components specified in Table 1. </p>
 <p> Table 1 shows the actual values for the individual mask bits used to select controls for modification and to enable and disable the control. Note that the same mask bit is used to specify general modifications to the parameters used to configure the control (which), and to enable and disable the control (enabled_ctrls). The anomalies in the table (no &quot;ok&quot; in column) are for controls that have no configurable attributes; and for controls that are not boolean controls and therefore cannot be enabled or disabled. </p>

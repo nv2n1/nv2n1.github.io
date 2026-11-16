@@ -15,12 +15,12 @@ description: "ircat – print strings when pressing buttons"
 <p> This program prints config strings to standard output. It can be used to provide remote control input to scripts and to debug your .lircrc file. </p>
 <p> The argument to the program is the program name, as it appears in the prog entries in .lircrc.</p>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> display usage summary</p>
-<dt><code>-v</code> <code>&#8211;version</code></p>
-<dd> display version</p>
-<dt><code>-c</code> <code>&#8211;config=</code>&lt;file&gt;</p>
-<dd> set config file</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> display usage summary</dd>
+<dt><code>-v</code> <code>&#8211;version</code></dt>
+<dd> display version</dd>
+<dt><code>-c</code> <code>&#8211;config=</code>&lt;file&gt;</dt>
+<dd> set config file</dd></dl>
 <h2>EXAMPLES</h2>
 <p> If .lircrc contains: </p>
 <pre>

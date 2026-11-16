@@ -27,15 +27,15 @@ description: "X Pixmap Functions – Functions that operate on pixmaps."
 <p> If no other clients have a reference to the given pixmap, the server will destroy it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pmap</i> The given pixmap.</dl>
+<dd><i>pmap</i> The given pixmap.</dd></dl>
 <h3>EAPI int ecore_x_pixmap_depth_get (Ecore_X_Pixmap pmap)</h3>
 <p>Retrieves the depth of the given pixmap. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pmap</i> The given pixmap.</dl>
+<dd><i>pmap</i> The given pixmap.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The depth of the pixmap.</dl>
+<dd>The depth of the pixmap.</dd></dl>
 <p> References ecore_x_drawable_depth_get().</p>
 <h3>EAPI void ecore_x_pixmap_geometry_get (Ecore_X_Pixmap pmap, int * x, int * y, int * w, int * h)</h3>
 <p>Retrieves the size of the given pixmap. </p>
@@ -45,7 +45,7 @@ description: "X Pixmap Functions – Functions that operate on pixmaps."
  <i>x</i> Pointer to an integer in which to store the X position.<br />
  <i>y</i> Pointer to an integer in which to store the Y position.<br />
  <i>w</i> Pointer to an integer in which to store the width.<br />
- <i>h</i> Pointer to an integer in which to store the height.</dl>
+ <i>h</i> Pointer to an integer in which to store the height.</dd></dl>
 <p> References ecore_x_drawable_geometry_get().</p>
 <h3>EAPI Ecore_X_Pixmap ecore_x_pixmap_new (Ecore_X_Window win, int w, int h, int dep)</h3>
 <p>Creates a new pixmap. </p>
@@ -54,10 +54,10 @@ description: "X Pixmap Functions – Functions that operate on pixmaps."
 <dd><i>win</i> Window used to determine which screen of the display the pixmap should be created on. If 0, the default root window is used.<br />
  <i>w</i> Width of the new pixmap.<br />
  <i>h</i> Height of the new pixmap.<br />
- <i>dep</i> Depth of the pixmap. If 0, the default depth of the default screen is used.</dl>
+ <i>dep</i> Depth of the pixmap. If 0, the default depth of the default screen is used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>New pixmap.</dl>
+<dd>New pixmap.</dd></dl>
 <h3>EAPI void ecore_x_pixmap_paste (Ecore_X_Pixmap pmap, Ecore_X_Drawable dest, Ecore_X_GC gc, int sx, int sy, int w, int h, int dx, int dy)</h3>
 <p>Pastes a rectangular area of the given pixmap onto the given drawable. </p>
 <p> <code>Parameters:</code></p>
@@ -70,6 +70,6 @@ description: "X Pixmap Functions – Functions that operate on pixmaps."
  <i>w</i> The width of the area.<br />
  <i>h</i> The height of the area.<br />
  <i>dx</i> The X position at which to paste the area on dest.<br />
- <i>dy</i> The Y position at which to paste the area on dest.</dl>
+ <i>dy</i> The Y position at which to paste the area on dest.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

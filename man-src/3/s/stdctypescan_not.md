@@ -12,7 +12,6 @@ description: "std::ctype<char>::scan_not – std::ctype<char>::scan_not"
 <p>Defined in header &lt;locale&gt;<br />
 const char* scan_not (mask m, const char* beg, const char* end) const; <code>(1)</code> </p>
 <pre><code>Locates the first character in the character array [beg, end) that does not satisfy the classification mask m, that is, the first character c such that table()[(unsigned char)c] &amp; m would return false.
-
 If (unsigned char)c &gt;= std::ctype&lt;char&gt;::table_size, then an implementation-defined value is substituted instead of table()[(unsigned char)c], possibly different for different values of c.
 </code></pre>
 <h2>Parameters</h2>
@@ -26,12 +25,9 @@ end &#8211; one past the end pointer for the array of characters to search</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     auto &amp;f = std::use_facet&lt;std::ctype&lt;char&gt;&gt;(std::locale());
     // skip leading whitespace

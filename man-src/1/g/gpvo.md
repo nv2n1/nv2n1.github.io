@@ -17,26 +17,26 @@ description: "gpvo – GNU PIC object file viewer"
 <p> <code>gpvo</code> is an COFF object file viewer for Microchip (TM) PIC (TM) micro-controllers. COFF files are relocatable objects output from gpasm. <code>gpvo</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, &#8211;binary</p>
-<dd> Display binary data.</p>
-<dt><code>-c</code>, &#8211;mnemonics</p>
-<dd> Decode special mnemonics.</p>
-<dt><code>-f</code>, &#8211;file</p>
-<dd> Display file header.</p>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Show the usage message and exit.</p>
-<dt><code>-n</code>, &#8211;no-names</p>
-<dd> Suppress filenames.</p>
-<dt><code>-s</code>, &#8211;section</p>
-<dd> Display sections.</p>
-<dt><code>-t</code>, &#8211;symbol</p>
-<dd> Display symbol table.</p>
-<dt><code>-v</code>, &#8211;version</p>
-<dd> Show the version information and exit.</p>
-<dt><code>-x FILE</code>,<code> &#8211;export FILE</code></p>
-<dd> Export the external symbols.</p>
-<dt><code>-y</code>, &#8211;extended</p>
-<dd> Enable 18xx extended mode.</dl>
+<dt><code>-b</code>, &#8211;binary</dt>
+<dd> Display binary data.</dd>
+<dt><code>-c</code>, &#8211;mnemonics</dt>
+<dd> Decode special mnemonics.</dd>
+<dt><code>-f</code>, &#8211;file</dt>
+<dd> Display file header.</dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>-n</code>, &#8211;no-names</dt>
+<dd> Suppress filenames.</dd>
+<dt><code>-s</code>, &#8211;section</dt>
+<dd> Display sections.</dd>
+<dt><code>-t</code>, &#8211;symbol</dt>
+<dd> Display symbol table.</dd>
+<dt><code>-v</code>, &#8211;version</dt>
+<dd> Show the version information and exit.</dd>
+<dt><code>-x FILE</code>,<code> &#8211;export FILE</code></dt>
+<dd> Export the external symbols.</dd>
+<dt><code>-y</code>, &#8211;extended</dt>
+<dd> Enable 18xx extended mode.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1)</p>
 <h2>AUTHOR</h2>

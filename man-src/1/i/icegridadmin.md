@@ -16,33 +16,33 @@ description: "icegridadmin – The IceGrid command-line administrative utility."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridadmin+Command+Line+Tool">http://doc.zeroc.com/display/Ice/icegridadmin+Command+Line+Tool</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Show program help. </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
+ Show program help. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd>
- Display the Ice version. </p>
-<dt><code>-e</code> <code>COMMANDS</code></p>
+ Display the Ice version. </dd>
+<dt><code>-e</code> <code>COMMANDS</code></dt>
 <dd>
- Execute COMMANDS. </p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
+ Execute COMMANDS. </dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
 <dd>
- Print debug messages. </p>
-<dt><code>-s</code>, <code>&#8211;server</code></p>
+ Print debug messages. </dd>
+<dt><code>-s</code>, <code>&#8211;server</code></dt>
 <dd>
- Start icegridadmin as a server (to parse XML files). </p>
-<dt><code>-u</code>, <code>&#8211;username</code></p>
+ Start icegridadmin as a server (to parse XML files). </dd>
+<dt><code>-u</code>, <code>&#8211;username</code></dt>
 <dd>
- Login with the given username. </p>
-<dt><code>-p</code>, <code>&#8211;password</code></p>
+ Login with the given username. </dd>
+<dt><code>-p</code>, <code>&#8211;password</code></dt>
 <dd>
- Login with the given password. </p>
-<dt><code>-S</code>, <code>&#8211;ssl</code></p>
+ Login with the given password. </dd>
+<dt><code>-S</code>, <code>&#8211;ssl</code></dt>
 <dd>
- Authenticate through SSL. </p>
-<dt><code>-r</code>, <code>&#8211;replica</code> <code>NAME</code></p>
+ Authenticate through SSL. </dd>
+<dt><code>-r</code>, <code>&#8211;replica</code> <code>NAME</code></dt>
 <dd>
- Connect to the replica NAME. </p>
+ Connect to the replica NAME. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icegridnode/">icegridnode</a></code>(1), <code><a href="/docs/linux/man/1-icegridregistry/">icegridregistry</a></code>(1), </p>

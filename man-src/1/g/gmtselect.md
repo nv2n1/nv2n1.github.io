@@ -18,71 +18,71 @@ description: "gmtselect – Select data table subsets based on multiple spatial 
 <p> None</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-A</code><i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>+p</code><i>percent</i>]</p>
-<dd> Features with an area smaller than <i>min_area</i> in km^2 or of hierarchical level that is lower than <i>min_level</i> or higher than <i>max_level</i> will not be plotted [Default is 0/0/4 (all features)]. Level 2 (lakes) contains regular lakes and wide river bodies which we normally include as lakes; append <code>+r</code> to just get river-lakes or <code>+l</code> to just get regular lakes. By default (<code>+ai</code>) we select the ice shelf boundary as the coastline for Antarctica; append <code>+ag</code> to instead select the ice grounding line as coastline. For expert users who wish to print their own Antarctica coastline and islands via <i>psxy</i> you can use <code>+as</code> to skip all GSHHG features below 60S or <code>+aS</code> to instead skip all features north of 60S. Finally, append <code>+p</code><i>percent</i> to exclude polygons whose percentage area of the corresponding full-resolution feature is less than <i>percent</i>. See GSHHG INFORMATION below for more details. Ignored unless <code>-N</code> is set.</p>
-<dt><code>-C</code><i>dist</i>[<i>unit</i>]/<i>ptfile</i></p>
-<dd> Pass all records whose location is within <i>dist</i> of any of the points in the ASCII file <i>ptfile</i>. If <i>dist</i> is zero then the 3rd column of <i>ptfile</i> must have each point&#8217;s individual radius of influence. Distances are Cartesian and in user units; specify <code>-fg</code> to indicate spherical distances and append a distance unit (see UNITS). Alternatively, if <code>-R</code> and <code>-J</code> are used then geographic coordinates are projected to map coordinates (in cm, inch, or points, as determined by <i>PROJ_LENGTH_UNIT</i>) before Cartesian distances are compared to <i>dist</i>.</p>
-<dt><code>-D</code><i>resolution</i>[<code>+</code>]</p>
-<dd> Ignored unless <code>-N</code> is set. Selects the resolution of the coastline data set to use ((<code>f</code>)ull, (<code>h</code>)igh, (<code>i</code>)ntermediate, (<code>l</code>)ow, or (<code>c</code>)rude). The resolution drops off by ~80% between data sets. [Default is <code>l</code>]. Append (+) to automatically select a lower resolution should the one requested not be available [abort if not found]. Note that because the coastlines differ in details it is not guaranteed that a point will remain inside [or outside] when a different resolution is selected.</p>
-<dt><code>-E</code>[<code>fn</code>]</p>
-<dd> Specify how points exactly on a polygon boundary should be considered. By default, such points are considered to be inside the polygon. Append <code>n</code> and/or <code>f</code> to change this behavior for the <code>-F</code> and <code>-N</code> options, respectively, so that boundary points are considered to be outside.</p>
-<dt><code>-F</code><i>polygonfile</i></p>
-<dd> Pass all records whose location is within one of the closed polygons in the multiple-segment file <i>polygonfile</i>. For spherical polygons (lon, lat), make sure no consecutive points are separated by 180 degrees or more in longitude. Note that <i>polygonfile</i> must be in ASCII regardless of whether <code>-bi</code> is used.</p>
-<dt><code>-I</code>[<code>cflrsz</code>]</p>
-<dd> Reverses the sense of the test for each of the criteria specified: </p>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-A</code><i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>+p</code><i>percent</i>]</dt>
+<dd> Features with an area smaller than <i>min_area</i> in km^2 or of hierarchical level that is lower than <i>min_level</i> or higher than <i>max_level</i> will not be plotted [Default is 0/0/4 (all features)]. Level 2 (lakes) contains regular lakes and wide river bodies which we normally include as lakes; append <code>+r</code> to just get river-lakes or <code>+l</code> to just get regular lakes. By default (<code>+ai</code>) we select the ice shelf boundary as the coastline for Antarctica; append <code>+ag</code> to instead select the ice grounding line as coastline. For expert users who wish to print their own Antarctica coastline and islands via <i>psxy</i> you can use <code>+as</code> to skip all GSHHG features below 60S or <code>+aS</code> to instead skip all features north of 60S. Finally, append <code>+p</code><i>percent</i> to exclude polygons whose percentage area of the corresponding full-resolution feature is less than <i>percent</i>. See GSHHG INFORMATION below for more details. Ignored unless <code>-N</code> is set.</dd>
+<dt><code>-C</code><i>dist</i>[<i>unit</i>]/<i>ptfile</i></dt>
+<dd> Pass all records whose location is within <i>dist</i> of any of the points in the ASCII file <i>ptfile</i>. If <i>dist</i> is zero then the 3rd column of <i>ptfile</i> must have each point&#8217;s individual radius of influence. Distances are Cartesian and in user units; specify <code>-fg</code> to indicate spherical distances and append a distance unit (see UNITS). Alternatively, if <code>-R</code> and <code>-J</code> are used then geographic coordinates are projected to map coordinates (in cm, inch, or points, as determined by <i>PROJ_LENGTH_UNIT</i>) before Cartesian distances are compared to <i>dist</i>.</dd>
+<dt><code>-D</code><i>resolution</i>[<code>+</code>]</dt>
+<dd> Ignored unless <code>-N</code> is set. Selects the resolution of the coastline data set to use ((<code>f</code>)ull, (<code>h</code>)igh, (<code>i</code>)ntermediate, (<code>l</code>)ow, or (<code>c</code>)rude). The resolution drops off by ~80% between data sets. [Default is <code>l</code>]. Append (+) to automatically select a lower resolution should the one requested not be available [abort if not found]. Note that because the coastlines differ in details it is not guaranteed that a point will remain inside [or outside] when a different resolution is selected.</dd>
+<dt><code>-E</code>[<code>fn</code>]</dt>
+<dd> Specify how points exactly on a polygon boundary should be considered. By default, such points are considered to be inside the polygon. Append <code>n</code> and/or <code>f</code> to change this behavior for the <code>-F</code> and <code>-N</code> options, respectively, so that boundary points are considered to be outside.</dd>
+<dt><code>-F</code><i>polygonfile</i></dt>
+<dd> Pass all records whose location is within one of the closed polygons in the multiple-segment file <i>polygonfile</i>. For spherical polygons (lon, lat), make sure no consecutive points are separated by 180 degrees or more in longitude. Note that <i>polygonfile</i> must be in ASCII regardless of whether <code>-bi</code> is used.</dd>
+<dt><code>-I</code>[<code>cflrsz</code>]</dt>
+<dd> Reverses the sense of the test for each of the criteria specified: </dd>
 <p> <code>c</code> select records NOT inside any point&#8217;s circle of influence. </p>
 <p> <code>f</code> select records NOT inside any of the polygons. </p>
 <p> <code>l</code> select records NOT within the specified distance of any line. </p>
 <p> <code>r</code> select records NOT inside the specified rectangular region. </p>
 <p> <code>s</code> select records NOT considered inside as specified by <code>-N</code> (and <code>-A</code>, <code>-D</code>). </p>
 <p> <code>z</code> select records NOT within the range specified by <code>-Z</code>.</p>
-<dt><code>-J</code><i>parameters</i> <i>(more &#8230;)</i></p>
-<dd> Select map projection.</p>
-<dt><code>-L</code>[<code>p</code>]<i>dist</i>[<i>unit</i>]/<i>linefile</i></p>
-<dd> Pass all records whose location is within <i>dist</i> of any of the line segments in the ASCII multiple-segment file <i>linefile</i>. If <i>dist</i> is zero then we will scan each sub-header in the <i>ptfile</i> for an embedded <code>-D</code><i>dist</i> setting that sets each line&#8217;s individual distance value. Distances are Cartesian and in user units; specify <code>-fg</code> to indicate spherical distances append a distance unit (see UNITS). Alternatively, if <code>-R</code> and <code>-J</code> are used then geographic coordinates are projected to map coordinates (in cm, inch, m, or points, as determined by <i>PROJ_LENGTH_UNIT</i>) before Cartesian distances are compared to <i>dist</i>. Use <code>-Lp</code> to ensure only points whose orthogonal projections onto the nearest line-segment fall within the segments endpoints [Default considers points &quot;beyond&quot; the line&#8217;s endpoints.</p>
-<dt><code>-N</code><i>maskvalues</i></p>
-<dd> Pass all records whose location is inside specified geographical features. Specify if records should be skipped (s) or kept (k) using 1 of 2 formats: </p>
+<dt><code>-J</code><i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Select map projection.</dd>
+<dt><code>-L</code>[<code>p</code>]<i>dist</i>[<i>unit</i>]/<i>linefile</i></dt>
+<dd> Pass all records whose location is within <i>dist</i> of any of the line segments in the ASCII multiple-segment file <i>linefile</i>. If <i>dist</i> is zero then we will scan each sub-header in the <i>ptfile</i> for an embedded <code>-D</code><i>dist</i> setting that sets each line&#8217;s individual distance value. Distances are Cartesian and in user units; specify <code>-fg</code> to indicate spherical distances append a distance unit (see UNITS). Alternatively, if <code>-R</code> and <code>-J</code> are used then geographic coordinates are projected to map coordinates (in cm, inch, m, or points, as determined by <i>PROJ_LENGTH_UNIT</i>) before Cartesian distances are compared to <i>dist</i>. Use <code>-Lp</code> to ensure only points whose orthogonal projections onto the nearest line-segment fall within the segments endpoints [Default considers points &quot;beyond&quot; the line&#8217;s endpoints.</dd>
+<dt><code>-N</code><i>maskvalues</i></dt>
+<dd> Pass all records whose location is inside specified geographical features. Specify if records should be skipped (s) or kept (k) using 1 of 2 formats: </dd>
 <p> <code>-N</code><i>wet/dry</i>. </p>
 <p> <code>-N</code><i>ocean/land/lake/island/pond</i>. </p>
 <p> [Default is s/k/s/k/s (i.e., s/k), which passes all points on dry land].</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. If no map projection is supplied we implicitly set <code>-Jx</code>1.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-Z</code><i>min</i>[/<i>max</i>][<code>+c</code><i>col</i>]</p>
-<dd> Pass all records whose 3rd column (<i>z</i>; <i>col</i> = 2) lies within the given range or is NaN (use <code>-s</code> to skip NaN records). If <i>max</i> is omitted then we test if <i>z</i> equals <i>min</i> instead. Input file must have at least three columns. To indicate no limit on min or max, specify a hyphen (-). If your 3rd column is absolute time then remember to supply <code>-f</code>2T. To specify another column, append <code>+c</code><i>col</i>, and to specify several tests just repeat the <code>Z</code> option as many times has you have columns to test. Note: when more than one <code>Z</code> option is given then the <code>Iz</code> option cannot be used.</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</p>
-<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Set handling of NaN records.</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. If no map projection is supplied we implicitly set <code>-Jx</code>1.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-Z</code><i>min</i>[/<i>max</i>][<code>+c</code><i>col</i>]</dt>
+<dd> Pass all records whose 3rd column (<i>z</i>; <i>col</i> = 2) lies within the given range or is NaN (use <code>-s</code> to skip NaN records). If <i>max</i> is omitted then we test if <i>z</i> equals <i>min</i> instead. Input file must have at least three columns. To indicate no limit on min or max, specify a hyphen (-). If your 3rd column is absolute time then remember to supply <code>-f</code>2T. To specify another column, append <code>+c</code><i>col</i>, and to specify several tests just repeat the <code>Z</code> option as many times has you have columns to test. Note: when more than one <code>Z</code> option is given then the <code>Iz</code> option cannot be used.</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd>
+<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Set handling of NaN records.</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>UNITS</h2>
 <p> For map distance unit, append <i>unit</i> <code>d</code> for arc degree, <code>m</code> for arc minute, and <code>s</code> for arc second, or <code>e</code> for meter [Default], <code>f</code> for foot, <code>k</code> for km, <code>M</code> for statute mile, <code>n</code> for nautical mile, and <code>u</code> for US survey foot. By default we compute such distances using a spherical approximation with great circles. Prepend <code>&#8211;</code> to a distance (or the unit is no distance is given) to perform &quot;Flat Earth&quot; calculations (quicker but less accurate) or prepend <code>+</code> to perform exact geodesic calculations (slower but more accurate).</p>
 <h2>ASCII FORMAT PRECISION</h2>

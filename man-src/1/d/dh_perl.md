@@ -17,13 +17,13 @@ description: "dh_perl – calculates Perl dependencies and cleans up after MakeM
 <p> <code>dh_perl</code> also cleans up empty directories that MakeMaker can generate when installing Perl modules.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> In some specific cases you may want to depend on <code>perl-base</code> rather than the full <code>perl</code> package. If so, you can pass the -d option to make <code>dh_perl</code> generate a dependency on the correct base package. This is only necessary for some packages that are included in the base system. </p>
+<dt><code>-d</code></dt>
+<dd> In some specific cases you may want to depend on <code>perl-base</code> rather than the full <code>perl</code> package. If so, you can pass the -d option to make <code>dh_perl</code> generate a dependency on the correct base package. This is only necessary for some packages that are included in the base system. </dd>
 <p> Note that this flag may cause no dependency on <code>perl-base</code> to be generated at all. <code>perl-base</code> is Essential, so its dependency can be left out, unless a versioned dependency is needed.</p>
-<dt><code>-V</code></p>
-<dd> By default, scripts and architecture independent modules don&#8217;t depend on any specific version of <code>perl</code>. The <code>-V</code> option causes the current version of the <code>perl</code> (or <code>perl-base</code> with <code>-d</code>) package to be specified.</p>
-<dt><i>library dirs</i></p>
-<dd> If your package installs Perl modules in non-standard directories, you can make <code>dh_perl</code> check those directories by passing their names on the command line. It will only check the <i>vendorlib</i> and <i>vendorarch</i> directories by default.</dl>
+<dt><code>-V</code></dt>
+<dd> By default, scripts and architecture independent modules don&#8217;t depend on any specific version of <code>perl</code>. The <code>-V</code> option causes the current version of the <code>perl</code> (or <code>perl-base</code> with <code>-d</code>) package to be specified.</dd>
+<dt><i>library dirs</i></dt>
+<dd> If your package installs Perl modules in non-standard directories, you can make <code>dh_perl</code> check those directories by passing their names on the command line. It will only check the <i>vendorlib</i> and <i>vendorarch</i> directories by default.</dd></dl>
 <h2>CONFORMS TO</h2>
 <p> Debian policy, version 3.8.3 </p>
 <p> Perl policy, version 1.20</p>

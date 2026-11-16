@@ -33,7 +33,7 @@ struct mlx4dv_context {
 <p> <code><a href="/docs/linux/man/7-mlx4dv/">mlx4dv</a></code>(7), <code>ibv_query_device</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</p>
+<dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

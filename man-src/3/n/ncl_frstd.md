@@ -13,9 +13,9 @@ FRSTD - Defines the first of a sequence of points through which a curve is to be
 
  void c_frstd (float x, float y)
 <h2>Description</h2><dl COMPACT><dt>X
-<dd>(an input expression of type REAL) defines the X user coordinate of the starting point of the curve.
-<dt>Y
-<dd>(an input expression of type REAL) defines the Y user coordinate of the starting point of the curve.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) defines the X user coordinate of the starting point of the curve.
+</dd><dt>Y
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate of the starting point of the curve.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>One way to draw a curve with Dashline is to call FRSTD once to define the first point of the curve and then to call VECTD repeatedly to define the second and all following points of the curve. 
 
  If three or more distinct points are given, and if one of the smoothing versions of Dashline is being used, and if the internal parameter that suppresses smoothing is not set, then splines under tension are used to generate a smooth curve; the number of points actually used to draw the curve will depend on its length. In all other cases, the &quot;curve&quot; will be approximated by just connecting the user-given points in the specified order. 

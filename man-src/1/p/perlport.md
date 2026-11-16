@@ -24,9 +24,9 @@ url: "/docs/linux/man/1-perlport/"
  Be aware of two important points:
 <dl>
 <dt>Not all Perl programs have to be portable
-<dd> There is no reason you should not use Perl as a language to glue Unix tools together, or to prototype a Macintosh application, or to manage the Windows registry. If it makes no sense to aim for portability for one reason or another in a given program, then don't bother.
-<dt>Nearly all of Perl already <i>is</i> portable
-<dd> Don't be fooled into thinking that it is hard to create portable Perl code. It isn't. Perl tries its level-best to bridge the gaps between what's available on different platforms, and all the means available to use those features. Thus almost all Perl code runs on any machine without modification. But there are some significant issues in writing portable code, and this document is entirely about those issues.</dl>
+</dt><dd> There is no reason you should not use Perl as a language to glue Unix tools together, or to prototype a Macintosh application, or to manage the Windows registry. If it makes no sense to aim for portability for one reason or another in a given program, then don't bother.
+</dd><dt>Nearly all of Perl already <i>is</i> portable
+</dt><dd> Don't be fooled into thinking that it is hard to create portable Perl code. It isn't. Perl tries its level-best to bridge the gaps between what's available on different platforms, and all the means available to use those features. Thus almost all Perl code runs on any machine without modification. But there are some significant issues in writing portable code, and this document is entirely about those issues.</dd></dl>
  
 
  Here's the general rule: When you approach a task commonly done using a whole range of platforms, think about writing portable code. That way, you don't sacrifice much by way of the implementation choices you can avail yourself of, and at the same time you can give your users lots of platform choices. On the other hand, when you have to take advantage of some unique feature of a particular platform, as is often the case with systems programming (whether for Unix, Windows, <font SIZE="-1">VMS,</font> etc.), consider writing platform-specific code. 
@@ -436,9 +436,9 @@ if ($ ^ O eq 'MSWin32') {
  Also see:
 <dl>
 <dt>&bull;
-<dd> Mailing list: cpan-testers-discuss [at] perl.org
-<dt>&bull;
-<dd> Testing results: &lt;<a rel="nofollow" HREF="http://www.cpantesters.org/">http://www.cpantesters.org/</a>&gt;</dl>
+</dt><dd> Mailing list: cpan-testers-discuss [at] perl.org
+</dd><dt>&bull;
+</dt><dd> Testing results: &lt;<a rel="nofollow" HREF="http://www.cpantesters.org/">http://www.cpantesters.org/</a>&gt;</dd></dl>
 
 <h2>PLATFORMS</h2>
 
@@ -537,21 +537,21 @@ if ($ ^ O eq 'MSWin32') {
  Also see:
 <dl>
 <dt>&bull;
-<dd> The djgpp environment for <font SIZE="-1">DOS,</font> &lt;<a rel="nofollow" HREF="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a>&gt; and perldos.
-<dt>&bull;
-<dd> The <font SIZE="-1">EMX</font> environment for <font SIZE="-1">DOS, OS/2,</font> etc. emx [at] iaehv.nl, &lt;<a HREF="ftp://hobbes.nmsu.edu/pub/os2/dev/emx/">ftp://hobbes.nmsu.edu/pub/os2/dev/emx/</a>&gt; Also perlos2.
-<dt>&bull;
-<dd> Build instructions for Win32 in perlwin32, or under the Cygnus environment in perlcygwin.
-<dt>&bull;
-<dd> The <tt>&quot;Win32::*&quot;</tt> modules in Win32.
-<dt>&bull;
-<dd> The ActiveState Pages, &lt;<a rel="nofollow" HREF="http://www.activestate.com/">http://www.activestate.com/</a>&gt;
-<dt>&bull;
-<dd> The Cygwin environment for Win32; <i></i><font SIZE="-1"><i>README</i></font><i>.cygwin</i> (installed as perlcygwin), &lt;<a rel="nofollow" HREF="http://www.cygwin.com/">http://www.cygwin.com/</a>&gt;
-<dt>&bull;
-<dd> The U/WIN environment for Win32, &lt;<a rel="nofollow" HREF="http://www.research.att.com/sw/tools/uwin/">http://www.research.att.com/sw/tools/uwin/</a>&gt;
-<dt>&bull;
-<dd> Build instructions for <font SIZE="-1">OS/2,</font> perlos2</dl>
+</dt><dd> The djgpp environment for <font SIZE="-1">DOS,</font> &lt;<a rel="nofollow" HREF="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a>&gt; and perldos.
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">EMX</font> environment for <font SIZE="-1">DOS, OS/2,</font> etc. emx [at] iaehv.nl, &lt;<a HREF="ftp://hobbes.nmsu.edu/pub/os2/dev/emx/">ftp://hobbes.nmsu.edu/pub/os2/dev/emx/</a>&gt; Also perlos2.
+</dd><dt>&bull;
+</dt><dd> Build instructions for Win32 in perlwin32, or under the Cygnus environment in perlcygwin.
+</dd><dt>&bull;
+</dt><dd> The <tt>&quot;Win32::*&quot;</tt> modules in Win32.
+</dd><dt>&bull;
+</dt><dd> The ActiveState Pages, &lt;<a rel="nofollow" HREF="http://www.activestate.com/">http://www.activestate.com/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> The Cygwin environment for Win32; <i></i><font SIZE="-1"><i>README</i></font><i>.cygwin</i> (installed as perlcygwin), &lt;<a rel="nofollow" HREF="http://www.cygwin.com/">http://www.cygwin.com/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> The U/WIN environment for Win32, &lt;<a rel="nofollow" HREF="http://www.research.att.com/sw/tools/uwin/">http://www.research.att.com/sw/tools/uwin/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> Build instructions for <font SIZE="-1">OS/2,</font> perlos2</dd></dl>
 
 <h3><font SIZE="-1">VMS</font></h3>
 
@@ -607,13 +607,13 @@ $ endif
  Also see:
 <dl>
 <dt>&bull;
-<dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vms</i> (installed as <i>README_vms</i>), perlvms
-<dt>&bull;
-<dd> vmsperl list, vmsperl-subscribe [at] perl.org
-<dt>&bull;
-<dd> vmsperl on the web, &lt;<a rel="nofollow" HREF="http://www.sidhe.org/vmsperl/index.html">http://www.sidhe.org/vmsperl/index.html</a>&gt;
-<dt>&bull;
-<dd> <font SIZE="-1">VMS</font> Software Inc. web site, &lt;<a rel="nofollow" HREF="http://www.vmssoftware.com">http://www.vmssoftware.com</a>&gt;</dl>
+</dt><dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vms</i> (installed as <i>README_vms</i>), perlvms
+</dd><dt>&bull;
+</dt><dd> vmsperl list, vmsperl-subscribe [at] perl.org
+</dd><dt>&bull;
+</dt><dd> vmsperl on the web, &lt;<a rel="nofollow" HREF="http://www.sidhe.org/vmsperl/index.html">http://www.sidhe.org/vmsperl/index.html</a>&gt;
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">VMS</font> Software Inc. web site, &lt;<a rel="nofollow" HREF="http://www.vmssoftware.com">http://www.vmssoftware.com</a>&gt;</dd></dl>
 
 <h3><font SIZE="-1">VOS</font></h3>
 
@@ -641,15 +641,14 @@ $ endif
  Also see:
 <dl>
 <dt>&bull;
-<dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vos</i> (installed as perlvos)
-<dt>&bull;
-<dd> The <font SIZE="-1">VOS</font> mailing list. 
-
+</dt><dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vos</i> (installed as perlvos)
+</dd><dt>&bull;
+</dt><dd> The <font SIZE="-1">VOS</font> mailing list. 
  There is no specific mailing list for Perl on <font SIZE="-1">VOS.</font> You can contact the Stratus Technologies Customer Assistance Center (<font SIZE="-1">CAC</font>) for your region, or you can use the contact information located in the distribution files on the Stratus Anonymous <font SIZE="-1">FTP</font> site.
-<dt>&bull;
-<dd> Stratus Technologies on the web at &lt;<a rel="nofollow" HREF="http://www.stratus.com">http://www.stratus.com</a>&gt;
-<dt>&bull;
-<dd> <font SIZE="-1">VOS</font> Open-Source Software on the web at &lt;<a rel="nofollow" HREF="http://ftp.stratus.com/pub/vos/vos.html">http://ftp.stratus.com/pub/vos/vos.html</a>&gt;</dl>
+</dd><dt>&bull;
+</dt><dd> Stratus Technologies on the web at &lt;<a rel="nofollow" HREF="http://www.stratus.com">http://www.stratus.com</a>&gt;
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">VOS</font> Open-Source Software on the web at &lt;<a rel="nofollow" HREF="http://ftp.stratus.com/pub/vos/vos.html">http://ftp.stratus.com/pub/vos/vos.html</a>&gt;</dd></dl>
 
 <h3><font SIZE="-1">EBCDIC</font> Platforms</h3>
 
@@ -721,11 +720,11 @@ if (chr(169) eq 'z') {
  Also see:
 <dl>
 <dt>&bull;
-<dd> perlos390, perlos400, perlbs2000, perlebcdic.
-<dt>&bull;
-<dd> The perl-mvs [at] perl.org list is for discussion of porting issues as well as general usage issues for all <font SIZE="-1">EBCDIC</font> Perls. Send a message body of ``subscribe perl-mvs'' to majordomo [at] perl.org.
-<dt>&bull;
-<dd> <font SIZE="-1">AS/400</font> Perl information at &lt;<a rel="nofollow" HREF="http://as400.rochester.ibm.com/">http://as400.rochester.ibm.com/</a>&gt; as well as on <font SIZE="-1">CPAN</font> in the <i>ports/</i> directory.</dl>
+</dt><dd> perlos390, perlos400, perlbs2000, perlebcdic.
+</dd><dt>&bull;
+</dt><dd> The perl-mvs [at] perl.org list is for discussion of porting issues as well as general usage issues for all <font SIZE="-1">EBCDIC</font> Perls. Send a message body of ``subscribe perl-mvs'' to majordomo [at] perl.org.
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">AS/400</font> Perl information at &lt;<a rel="nofollow" HREF="http://as400.rochester.ibm.com/">http://as400.rochester.ibm.com/</a>&gt; as well as on <font SIZE="-1">CPAN</font> in the <i>ports/</i> directory.</dd></dl>
 
 <h3>Acorn <font SIZE="-1">RISC OS</font></h3>
 
@@ -796,11 +795,11 @@ OS $ ^ O $Config
  See also:
 <dl>
 <dt>&bull;
-<dd> Amiga, <i></i><font SIZE="-1"><i>README</i></font><i>.amiga</i> (installed as perlamiga).
-<dt>&bull;
-<dd> A free perl5-based <font SIZE="-1">PERL.NLM</font> for Novell Netware is available in precompiled binary and source code form from &lt;<a rel="nofollow" HREF="http://www.novell.com/">http://www.novell.com/</a>&gt; as well as from <font SIZE="-1">CPAN.</font>
-<dt>&bull;
-<dd> Plan 9, <i></i><font SIZE="-1"><i>README</i></font><i>.plan9</i></dl>
+</dt><dd> Amiga, <i></i><font SIZE="-1"><i>README</i></font><i>.amiga</i> (installed as perlamiga).
+</dd><dt>&bull;
+</dt><dd> A free perl5-based <font SIZE="-1">PERL.NLM</font> for Novell Netware is available in precompiled binary and source code form from &lt;<a rel="nofollow" HREF="http://www.novell.com/">http://www.novell.com/</a>&gt; as well as from <font SIZE="-1">CPAN.</font>
+</dd><dt>&bull;
+</dt><dd> Plan 9, <i></i><font SIZE="-1"><i>README</i></font><i>.plan9</i></dd></dl>
 
 <h2>FUNCTION IMPLEMENTATIONS</h2>
 
@@ -816,438 +815,359 @@ OS $ ^ O $Config
 
 <dl>
 <dt>-X
-<dd> (Win32) <tt>&quot;-w&quot;</tt> only inspects the read-only file attribute (<font SIZE="-1">FILE_ATTRIBUTE_READONLY</font>), which determines whether the directory can be deleted, not whether it can be written to. Directories always have read and write access unless denied by discretionary access control lists (DACLs). 
-
+</dt><dd> (Win32) <tt>&quot;-w&quot;</tt> only inspects the read-only file attribute (<font SIZE="-1">FILE_ATTRIBUTE_READONLY</font>), which determines whether the directory can be deleted, not whether it can be written to. Directories always have read and write access unless denied by discretionary access control lists (DACLs). 
  (<font SIZE="-1">VMS</font>) <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, and <tt>&quot;-o&quot;</tt> tell whether the file is accessible, which may not reflect UIC-based file protections. 
-
  (RISC OS) <tt>&quot;-s&quot;</tt> by name on an open file will return the space reserved on disk, rather than the current extent. <tt>&quot;-s&quot;</tt> on an open filehandle returns the current size. 
-
  (Win32, <font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-R&quot;</tt>, <tt>&quot;-W&quot;</tt>, <tt>&quot;-X&quot;</tt>, <tt>&quot;-O&quot;</tt> are indistinguishable from <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, <tt>&quot;-o&quot;</tt>. 
-
  (Win32, <font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-g&quot;</tt>, <tt>&quot;-k&quot;</tt>, <tt>&quot;-l&quot;</tt>, <tt>&quot;-u&quot;</tt>, <tt>&quot;-A&quot;</tt> are not particularly meaningful. 
-
  (<font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-p&quot;</tt> is not particularly meaningful. 
-
  (<font SIZE="-1">VMS</font>) <tt>&quot;-d&quot;</tt> is true if passed a device spec without an explicit directory. 
-
  (Win32) <tt>&quot;-x&quot;</tt> (or <tt>&quot;-X&quot;</tt>) determine if a file ends in one of the executable suffixes. <tt>&quot;-S&quot;</tt> is meaningless. 
-
  (RISC OS) <tt>&quot;-x&quot;</tt> (or <tt>&quot;-X&quot;</tt>) determine if a file has an executable file type.
-<dt>alarm
-<dd> (Win32) Emulated using timers that must be explicitly polled whenever Perl wants to dispatch ``safe signals'' and therefore cannot interrupt blocking system calls.
-<dt>atan2
-<dd> (Tru64, HP-UX 10.20) Due to issues with various CPUs, math libraries, compilers, and standards, results for <tt>&quot;atan2&quot;</tt> may vary depending on any combination of the above. Perl attempts to conform to the Open Group/IEEE standards for the results returned from <tt>&quot;atan2&quot;</tt>, but cannot force the issue if the system Perl is run on does not allow it. 
-
+</dd><dt>alarm
+</dt><dd> (Win32) Emulated using timers that must be explicitly polled whenever Perl wants to dispatch ``safe signals'' and therefore cannot interrupt blocking system calls.
+</dd><dt>atan2
+</dt><dd> (Tru64, HP-UX 10.20) Due to issues with various CPUs, math libraries, compilers, and standards, results for <tt>&quot;atan2&quot;</tt> may vary depending on any combination of the above. Perl attempts to conform to the Open Group/IEEE standards for the results returned from <tt>&quot;atan2&quot;</tt>, but cannot force the issue if the system Perl is run on does not allow it. 
  The current version of the standards for <tt>&quot;atan2&quot;</tt> is available at &lt;<a rel="nofollow" HREF="http://www.opengroup.org/onlinepubs/009695399/functions/atan2.html">http://www.opengroup.org/onlinepubs/009695399/functions/atan2.html</a>&gt;.
-<dt>binmode
-<dd> (RISC OS) Meaningless. 
-
+</dd><dt>binmode
+</dt><dd> (RISC OS) Meaningless. 
  (<font SIZE="-1">VMS</font>) Reopens file and restores pointer; if function fails, underlying filehandle may be closed, or pointer may be in a different position. 
-
  (Win32) The value returned by <tt>&quot;tell&quot;</tt> may be affected after the call, and the filehandle may be flushed.
-<dt>chmod
-<dd> (Win32) Only good for changing ``owner'' read-write access; ``group'' and ``other'' bits are meaningless. 
-
+</dd><dt>chmod
+</dt><dd> (Win32) Only good for changing ``owner'' read-write access; ``group'' and ``other'' bits are meaningless. 
  (RISC OS) Only good for changing ``owner'' and ``other'' read-write access. 
-
  (<font SIZE="-1">VOS</font>) Access permissions are mapped onto <font SIZE="-1">VOS</font> access-control list changes. 
-
  (Cygwin) The actual permissions set depend on the value of the <tt>&quot;CYGWIN&quot;</tt> variable in the <font SIZE="-1">SYSTEM</font> environment settings. 
-
  (Android) Setting the exec bit on some locations (generally <i>/sdcard</i>) will return true but not actually set the bit. 
-
  (<font SIZE="-1">VMS</font>) A mode argument of zero sets permissions to the user's default permission mask rather than disabling all permissions.
-<dt>chown
-<dd> (Plan 9, RISC OS) Not implemented. 
-
+</dd><dt>chown
+</dt><dd> (Plan 9, RISC OS) Not implemented. 
  (Win32) Does nothing, but won't fail. 
-
  (<font SIZE="-1">VOS</font>) A little funky, because <font SIZE="-1">VOS</font>'s notion of ownership is a little funky.
-<dt>chroot
-<dd> (Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>crypt
-<dd> (Win32) May not be available if library or source was not provided when building perl. 
-
+</dd><dt>chroot
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>crypt
+</dt><dd> (Win32) May not be available if library or source was not provided when building perl. 
  (Android) Not implemented.
-<dt>dbmclose
-<dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>dbmopen
-<dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>dump
-<dd> (RISC OS) Not useful. 
-
+</dd><dt>dbmclose
+</dt><dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>dbmopen
+</dt><dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>dump
+</dt><dd> (RISC OS) Not useful. 
  (Cygwin, Win32) Not supported. 
-
  (<font SIZE="-1">VMS</font>) Invokes <font SIZE="-1">VMS</font> debugger.
-<dt>exec
-<dd> (Win32) <tt>&quot;exec LIST&quot;</tt> without the use of indirect object syntax (<tt>&quot;exec PROGRAM LIST&quot;</tt>) may fall back to trying the shell if the first <tt>&quot;spawn()&quot;</tt> fails. 
-
+</dd><dt>exec
+</dt><dd> (Win32) <tt>&quot;exec LIST&quot;</tt> without the use of indirect object syntax (<tt>&quot;exec PROGRAM LIST&quot;</tt>) may fall back to trying the shell if the first <tt>&quot;spawn()&quot;</tt> fails. 
  Note that the list form of <b>exec()</b> is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
-
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms. 
-
  (Symbian <font SIZE="-1">OS</font>) Not supported.
-<dt>exit
-<dd> (<font SIZE="-1">VMS</font>) Emulates Unix <tt>&quot;exit&quot;</tt> (which considers <tt>&quot;exit 1&quot;</tt> to indicate an error) by mapping the <tt>1</tt> to <tt>&quot;SS$_ABORT&quot;</tt> (<tt>44</tt>). This behavior may be overridden with the pragma <tt>&quot;use vmsish 'exit'&quot;</tt>. As with the <font SIZE="-1">CRTL</font>'s <tt>&quot;exit()&quot;</tt> function, <tt>&quot;exit 0&quot;</tt> is also mapped to an exit status of <tt>&quot;SS$_NORMAL&quot;</tt> (<tt>1</tt>); this mapping cannot be overridden. Any other argument to <tt>&quot;exit&quot;</tt> is used directly as Perl's exit status. On <font SIZE="-1">VMS,</font> unless the future <font SIZE="-1">POSIX_EXIT</font> mode is enabled, the exit code should always be a valid <font SIZE="-1">VMS</font> exit code and not a generic number. When the <font SIZE="-1">POSIX_EXIT</font> mode is enabled, a generic number will be encoded in a method compatible with the C library _POSIX_EXIT macro so that it can be decoded by other programs, particularly ones written in C, like the <font SIZE="-1">GNV</font> package. 
-
+</dd><dt>exit
+</dt><dd> (<font SIZE="-1">VMS</font>) Emulates Unix <tt>&quot;exit&quot;</tt> (which considers <tt>&quot;exit 1&quot;</tt> to indicate an error) by mapping the <tt>1</tt> to <tt>&quot;SS$_ABORT&quot;</tt> (<tt>44</tt>). This behavior may be overridden with the pragma <tt>&quot;use vmsish 'exit'&quot;</tt>. As with the <font SIZE="-1">CRTL</font>'s <tt>&quot;exit()&quot;</tt> function, <tt>&quot;exit 0&quot;</tt> is also mapped to an exit status of <tt>&quot;SS$_NORMAL&quot;</tt> (<tt>1</tt>); this mapping cannot be overridden. Any other argument to <tt>&quot;exit&quot;</tt> is used directly as Perl's exit status. On <font SIZE="-1">VMS,</font> unless the future <font SIZE="-1">POSIX_EXIT</font> mode is enabled, the exit code should always be a valid <font SIZE="-1">VMS</font> exit code and not a generic number. When the <font SIZE="-1">POSIX_EXIT</font> mode is enabled, a generic number will be encoded in a method compatible with the C library _POSIX_EXIT macro so that it can be decoded by other programs, particularly ones written in C, like the <font SIZE="-1">GNV</font> package. 
  (Solaris) <tt>&quot;exit&quot;</tt> resets file pointers, which is a problem when called from a child process (created by <tt>&quot;fork&quot;</tt>) in <tt>&quot;BEGIN&quot;</tt>. A workaround is to use <tt>&quot;POSIX::_exit&quot;</tt>. 
-
  <pre><code>
 exit unless $Config{archname} = ~ /\bsolaris\b / ;
 require POSIX;
 POSIX::_exit(0);
 </code></pre>
-<dt>fcntl
-<dd> (Win32) Not implemented. 
-
+</dd><dt>fcntl
+</dt><dd> (Win32) Not implemented. 
  (<font SIZE="-1">VMS</font>) Some functions available based on the version of <font SIZE="-1">VMS.</font>
-<dt>flock
-<dd> (<font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>fork
-<dd> (AmigaOS, RISC OS, <font SIZE="-1">VMS</font>) Not implemented. 
-
+</dd><dt>flock
+</dt><dd> (<font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>fork
+</dt><dd> (AmigaOS, RISC OS, <font SIZE="-1">VMS</font>) Not implemented. 
  (Win32) Emulated using multiple interpreters. See perlfork. 
-
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms.
-<dt>getlogin
-<dd> (RISC OS) Not implemented.
-<dt>getpgrp
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>getppid
-<dd> (Win32, RISC OS) Not implemented.
-<dt>getpriority
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>getpwnam
-<dd> (Win32) Not implemented. 
-
+</dd><dt>getlogin
+</dt><dd> (RISC OS) Not implemented.
+</dd><dt>getpgrp
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>getppid
+</dt><dd> (Win32, RISC OS) Not implemented.
+</dd><dt>getpriority
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>getpwnam
+</dt><dd> (Win32) Not implemented. 
  (RISC OS) Not useful.
-<dt>getgrnam
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>getnetbyname
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>getpwuid
-<dd> (Win32) Not implemented. 
-
+</dd><dt>getgrnam
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>getnetbyname
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>getpwuid
+</dt><dd> (Win32) Not implemented. 
  (RISC OS) Not useful.
-<dt>getgrgid
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>getnetbyaddr
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>getprotobynumber
-<dd> (Android) Not implemented.
-<dt>getpwent
-<dd> (Android, Win32) Not implemented.
-<dt>getgrent
-<dd> (Android, Win32, <font SIZE="-1">VMS</font>) Not implemented.
-<dt>gethostbyname
-<dd> (Irix 5) <tt>&quot;gethostbyname('localhost')&quot;</tt> does not work everywhere: you may have to use <tt>&quot;gethostbyname('127.0.0.1')&quot;</tt>.
-<dt>gethostent
-<dd> (Win32) Not implemented.
-<dt>getnetent
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>getprotoent
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>getservent
-<dd> (Win32, Plan 9) Not implemented.
-<dt>seekdir
-<dd> (Android) Not implemented.
-<dt>sethostent
-<dd> (Android, Win32, Plan 9, RISC OS) Not implemented.
-<dt>setnetent
-<dd> (Win32, Plan 9, RISC OS) Not implemented.
-<dt>setprotoent
-<dd> (Android, Win32, Plan 9, RISC OS) Not implemented.
-<dt>setservent
-<dd> (Plan 9, Win32, RISC OS) Not implemented.
-<dt>endpwent
-<dd> (Win32) Not implemented. 
-
+</dd><dt>getgrgid
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>getnetbyaddr
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>getprotobynumber
+</dt><dd> (Android) Not implemented.
+</dd><dt>getpwent
+</dt><dd> (Android, Win32) Not implemented.
+</dd><dt>getgrent
+</dt><dd> (Android, Win32, <font SIZE="-1">VMS</font>) Not implemented.
+</dd><dt>gethostbyname
+</dt><dd> (Irix 5) <tt>&quot;gethostbyname('localhost')&quot;</tt> does not work everywhere: you may have to use <tt>&quot;gethostbyname('127.0.0.1')&quot;</tt>.
+</dd><dt>gethostent
+</dt><dd> (Win32) Not implemented.
+</dd><dt>getnetent
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>getprotoent
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>getservent
+</dt><dd> (Win32, Plan 9) Not implemented.
+</dd><dt>seekdir
+</dt><dd> (Android) Not implemented.
+</dd><dt>sethostent
+</dt><dd> (Android, Win32, Plan 9, RISC OS) Not implemented.
+</dd><dt>setnetent
+</dt><dd> (Win32, Plan 9, RISC OS) Not implemented.
+</dd><dt>setprotoent
+</dt><dd> (Android, Win32, Plan 9, RISC OS) Not implemented.
+</dd><dt>setservent
+</dt><dd> (Plan 9, Win32, RISC OS) Not implemented.
+</dd><dt>endpwent
+</dt><dd> (Win32) Not implemented. 
  (Android) Either not implemented or a no-op.
-<dt>endgrent
-<dd> (Android, RISC OS, <font SIZE="-1">VMS,</font> Win32) Not implemented.
-<dt>endhostent
-<dd> (Android, Win32) Not implemented.
-<dt>endnetent
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>endprotoent
-<dd> (Android, Win32, Plan 9) Not implemented.
-<dt>endservent
-<dd> (Plan 9, Win32) Not implemented.
-<dt>getsockopt
-<dd> (Plan 9) Not implemented.
-<dt>glob
-<dd> This operator is implemented via the <tt>&quot;File::Glob&quot;</tt> extension on most platforms. See File::Glob for portability information.
-<dt>gmtime
-<dd> In theory, <tt>&quot;gmtime&quot;</tt> is reliable from -2**63 to 2**63-1. However, because work-arounds in the implementation use floating point numbers, it will become inaccurate as the time gets larger. This is a bug and will be fixed in the future. 
-
+</dd><dt>endgrent
+</dt><dd> (Android, RISC OS, <font SIZE="-1">VMS,</font> Win32) Not implemented.
+</dd><dt>endhostent
+</dt><dd> (Android, Win32) Not implemented.
+</dd><dt>endnetent
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>endprotoent
+</dt><dd> (Android, Win32, Plan 9) Not implemented.
+</dd><dt>endservent
+</dt><dd> (Plan 9, Win32) Not implemented.
+</dd><dt>getsockopt
+</dt><dd> (Plan 9) Not implemented.
+</dd><dt>glob
+</dt><dd> This operator is implemented via the <tt>&quot;File::Glob&quot;</tt> extension on most platforms. See File::Glob for portability information.
+</dd><dt>gmtime
+</dt><dd> In theory, <tt>&quot;gmtime&quot;</tt> is reliable from -2**63 to 2**63-1. However, because work-arounds in the implementation use floating point numbers, it will become inaccurate as the time gets larger. This is a bug and will be fixed in the future. 
  (<font SIZE="-1">VOS</font>) Time values are 32-bit quantities.
-<dt>ioctl
-<dd> (<font SIZE="-1">VMS</font>) Not implemented. 
-
+</dd><dt>ioctl
+</dt><dd> (<font SIZE="-1">VMS</font>) Not implemented. 
  (Win32) Available only for socket handles, and it does what the <tt>&quot;ioctlsocket()&quot;</tt> call in the Winsock <font SIZE="-1">API</font> does. 
-
  (RISC OS) Available only for socket handles.
-<dt>kill
-<dd> (RISC OS) Not implemented, hence not useful for taint checking. 
-
+</dd><dt>kill
+</dt><dd> (RISC OS) Not implemented, hence not useful for taint checking. 
  (Win32) <tt>&quot;kill&quot;</tt> doesn't send a signal to the identified process like it does on Unix platforms. Instead <tt>&quot;kill($sig, $pid)&quot;</tt> terminates the process identified by <tt>$pid</tt>, and makes it exit immediately with exit status <tt>$sig</tt>. As in Unix, if <tt>$sig</tt> is 0 and the specified process exists, it returns true without actually terminating it. 
-
  (Win32) <tt>&quot;kill(-9, $pid)&quot;</tt> will terminate the process specified by <tt>$pid</tt> and recursively all child processes owned by it. This is different from the Unix semantics, where the signal will be delivered to all processes in the same process group as the process specified by <tt>$pid</tt>. 
-
  (<font SIZE="-1">VMS</font>) A pid of -1 indicating all processes on the system is not currently supported.
-<dt>link
-<dd> (RISC OS, <font SIZE="-1">VOS</font>) Not implemented. 
-
+</dd><dt>link
+</dt><dd> (RISC OS, <font SIZE="-1">VOS</font>) Not implemented. 
  (AmigaOS) Link count not updated because hard links are not quite that hard (They are sort of half-way between hard and soft links). 
-
  (Win32) Hard links are implemented on Win32 under <font SIZE="-1">NTFS</font> only. They are natively supported on Windows 2000 and later. On Windows <font SIZE="-1">NT</font> they are implemented using the Windows <font SIZE="-1">POSIX</font> subsystem support and the Perl process will need Administrator or Backup Operator privileges to create hard links. 
-
  (<font SIZE="-1">VMS</font>) Available on 64 bit OpenVMS 8.2 and later.
-<dt>localtime
-<dd> <tt>&quot;localtime&quot;</tt> has the same range as ``gmtime'', but because time zone rules change, its accuracy for historical and future times may degrade but usually by no more than an hour.
-<dt>lstat
-<dd> (RISC OS) Not implemented. 
-
+</dd><dt>localtime
+</dt><dd> <tt>&quot;localtime&quot;</tt> has the same range as ``gmtime'', but because time zone rules change, its accuracy for historical and future times may degrade but usually by no more than an hour.
+</dd><dt>lstat
+</dt><dd> (RISC OS) Not implemented. 
  (Win32) Return values (especially for device and inode) may be bogus.
-<dt>msgctl
-<dd>
-<dt>msgget
-<dd>
-<dt>msgsnd
-<dd>
-<dt>msgrcv
-<dd> (Android, Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>open
-<dd> (RISC OS) Open modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are unsupported. 
-
+</dd><dt>msgctl
+</dt><dd>
+</dd><dt>msgget
+</dt><dd>
+</dd><dt>msgsnd
+</dt><dd>
+</dd><dt>msgrcv
+</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>open
+</dt><dd> (RISC OS) Open modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are unsupported. 
  (SunOS, Solaris, HP-UX) Opening a process does not automatically flush output handles on some platforms. 
-
  (Win32) Both of modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are supported, but the list form is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of arguments. This may have security implications for your code.
-<dt>readlink
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>rename
-<dd> (Win32) Can't move directories between directories on different logical volumes.
-<dt>rewinddir
-<dd> (Win32) Will not cause <tt>&quot;readdir&quot;</tt> to re-read the directory stream. The entries already read before the <tt>&quot;rewinddir&quot;</tt> call will just be returned again from a cache buffer.
-<dt>select
-<dd> (Win32, <font SIZE="-1">VMS</font>) Only implemented on sockets. 
-
+</dd><dt>readlink
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>rename
+</dt><dd> (Win32) Can't move directories between directories on different logical volumes.
+</dd><dt>rewinddir
+</dt><dd> (Win32) Will not cause <tt>&quot;readdir&quot;</tt> to re-read the directory stream. The entries already read before the <tt>&quot;rewinddir&quot;</tt> call will just be returned again from a cache buffer.
+</dd><dt>select
+</dt><dd> (Win32, <font SIZE="-1">VMS</font>) Only implemented on sockets. 
  (RISC OS) Only reliable on sockets. 
-
  Note that the <tt>&quot;select FILEHANDLE&quot;</tt> form is generally portable.
-<dt>semctl
-<dd>
-<dt>semget
-<dd>
-<dt>semop
-<dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>setgrent
-<dd> (Android, <font SIZE="-1">VMS,</font> Win32, RISC OS) Not implemented.
-<dt>setpgrp
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>setpriority
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>setpwent
-<dd> (Android, Win32, RISC OS) Not implemented.
-<dt>setsockopt
-<dd> (Plan 9) Not implemented.
-<dt>shmctl
-<dd>
-<dt>shmget
-<dd>
-<dt>shmread
-<dd>
-<dt>shmwrite
-<dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
-<dt>sleep
-<dd> (Win32) Emulated using synchronization functions such that it can be interrupted by <tt>&quot;alarm&quot;</tt>, and limited to a maximum of 4294967 seconds, approximately 49 days.
-<dt>socketpair
-<dd> (RISC OS) Not implemented. 
-
+</dd><dt>semctl
+</dt><dd>
+</dd><dt>semget
+</dt><dd>
+</dd><dt>semop
+</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>setgrent
+</dt><dd> (Android, <font SIZE="-1">VMS,</font> Win32, RISC OS) Not implemented.
+</dd><dt>setpgrp
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>setpriority
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>setpwent
+</dt><dd> (Android, Win32, RISC OS) Not implemented.
+</dd><dt>setsockopt
+</dt><dd> (Plan 9) Not implemented.
+</dd><dt>shmctl
+</dt><dd>
+</dd><dt>shmget
+</dt><dd>
+</dd><dt>shmread
+</dt><dd>
+</dd><dt>shmwrite
+</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dd><dt>sleep
+</dt><dd> (Win32) Emulated using synchronization functions such that it can be interrupted by <tt>&quot;alarm&quot;</tt>, and limited to a maximum of 4294967 seconds, approximately 49 days.
+</dd><dt>socketpair
+</dt><dd> (RISC OS) Not implemented. 
  (<font SIZE="-1">VMS</font>) Available on 64 bit OpenVMS 8.2 and later.
-<dt>stat
-<dd> Platforms that do not have <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, or <tt>&quot;blocks&quot;</tt> will return these as <tt>''</tt>, so numeric comparison or manipulation of these fields may cause 'not numeric' warnings. 
-
+</dd><dt>stat
+</dt><dd> Platforms that do not have <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, or <tt>&quot;blocks&quot;</tt> will return these as <tt>''</tt>, so numeric comparison or manipulation of these fields may cause 'not numeric' warnings. 
  (Mac OS X) <tt>&quot;ctime&quot;</tt> not supported on <font SIZE="-1">UFS.</font> 
-
  (Win32) <tt>&quot;ctime&quot;</tt> is creation time instead of inode change time. 
-
  (Win32) <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not meaningful. 
-
  (<font SIZE="-1">VMS</font>) <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not necessarily reliable. 
-
  (RISC OS) <tt>&quot;mtime&quot;</tt>, <tt>&quot;atime&quot;</tt> and <tt>&quot;ctime&quot;</tt> all return the last modification time. <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not necessarily reliable. 
-
  (<font SIZE="-1">OS/2</font>) <tt>&quot;dev&quot;</tt>, <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, and <tt>&quot;blocks&quot;</tt> are not available. <tt>&quot;ino&quot;</tt> is not meaningful and will differ between stat calls on the same file. 
-
  (Cygwin) Some versions of cygwin when doing a <tt>&quot;stat(&quot;foo&quot;)&quot;</tt> and not finding it may then attempt to <tt>&quot;stat(&quot;foo.exe&quot;)&quot;</tt>. 
-
  (Win32) <tt>&quot;stat&quot;</tt> needs to open the file to determine the link count and update attributes that may have been changed through hard links. Setting <tt>&quot;${^WIN32_SLOPPY_STAT}&quot;</tt> to a true value speeds up <tt>&quot;stat&quot;</tt> by not performing this operation.
-<dt>symlink
-<dd> (Win32, RISC OS) Not implemented. 
-
+</dd><dt>symlink
+</dt><dd> (Win32, RISC OS) Not implemented. 
  (<font SIZE="-1">VMS</font>) Implemented on 64 bit <font SIZE="-1">VMS 8.3.</font> <font SIZE="-1">VMS</font> requires the symbolic link to be in Unix syntax if it is intended to resolve to a valid path.
-<dt>syscall
-<dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
-<dt>sysopen
-<dd> (Mac OS, <font SIZE="-1">OS/390</font>) The traditional <tt>0</tt>, <tt>1</tt>, and <tt>2</tt> MODEs are implemented with different numeric values on some systems. The flags exported by <tt>&quot;Fcntl&quot;</tt> (<tt>&quot;O_RDONLY&quot;</tt>, <tt>&quot;O_WRONLY&quot;</tt>, <tt>&quot;O_RDWR&quot;</tt>) should work everywhere though.
-<dt>system
-<dd> (Win32) As an optimization, may not call the command shell specified in <tt>$ENV{PERL5SHELL}</tt>. <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator, without waiting for it to terminate. Return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Failure to <tt>&quot;spawn()&quot;</tt> a subprocess is indicated by setting <tt>$?</tt> to <tt>&quot;255 &lt;&lt; 8&quot;</tt>. <tt>$?</tt> is set in a way compatible with Unix (i.e. the exit status of the subprocess is obtained by <tt>&quot;$? &gt;&gt; 8&quot;</tt>, as described in the documentation). 
-
+</dd><dt>syscall
+</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dd><dt>sysopen
+</dt><dd> (Mac OS, <font SIZE="-1">OS/390</font>) The traditional <tt>0</tt>, <tt>1</tt>, and <tt>2</tt> MODEs are implemented with different numeric values on some systems. The flags exported by <tt>&quot;Fcntl&quot;</tt> (<tt>&quot;O_RDONLY&quot;</tt>, <tt>&quot;O_WRONLY&quot;</tt>, <tt>&quot;O_RDWR&quot;</tt>) should work everywhere though.
+</dd><dt>system
+</dt><dd> (Win32) As an optimization, may not call the command shell specified in <tt>$ENV{PERL5SHELL}</tt>. <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator, without waiting for it to terminate. Return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Failure to <tt>&quot;spawn()&quot;</tt> a subprocess is indicated by setting <tt>$?</tt> to <tt>&quot;255 &lt;&lt; 8&quot;</tt>. <tt>$?</tt> is set in a way compatible with Unix (i.e. the exit status of the subprocess is obtained by <tt>&quot;$? &gt;&gt; 8&quot;</tt>, as described in the documentation). 
  Note that the list form of <b>system()</b> is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
-
  (RISC OS) There is no shell to process metacharacters, and the native standard is to pass a command line terminated by ``\n'' ``\r'' or ``\0'' to the spawned program. Redirection such as <tt>&quot;&gt; foo&quot;</tt> is performed (if at all) by the run time library of the spawned program. <tt>&quot;system LIST&quot;</tt> will call the Unix emulation library's <tt>&quot;exec&quot;</tt> emulation, which attempts to provide emulation of the stdin, stdout, stderr in force in the parent, provided the child program uses a compatible version of the emulation library. <tt>&quot;system SCALAR&quot;</tt> will call the native command line directly and no such emulation of a child Unix program will occur. Mileage <b>will</b> vary. 
-
  (Win32) <tt>&quot;system LIST&quot;</tt> without the use of indirect object syntax (<tt>&quot;system PROGRAM LIST&quot;</tt>) may fall back to trying the shell if the first <tt>&quot;spawn()&quot;</tt> fails. 
-
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms. 
-
  (<font SIZE="-1">VMS</font>) As with Win32, <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator without waiting for the process to terminate. In this case the return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Otherwise the return value is POSIX-like (shifted up by 8 bits), which only allows room for a made-up value derived from the severity bits of the native 32-bit condition code (unless overridden by <tt>&quot;use vmsish 'status'&quot;</tt>). If the native condition code is one that has a <font SIZE="-1">POSIX</font> value encoded, the <font SIZE="-1">POSIX</font> value will be decoded to extract the expected exit value. For more details see ``$?'' in perlvms.
-<dt>telldir
-<dd> (Android) Not implemented.
-<dt>times
-<dd> (Win32) ``Cumulative'' times will be bogus. On anything other than Windows <font SIZE="-1">NT</font> or Windows 2000, ``system'' time will be bogus, and ``user'' time is actually the time returned by the <tt>&quot;clock()&quot;</tt> function in the C runtime library. 
-
+</dd><dt>telldir
+</dt><dd> (Android) Not implemented.
+</dd><dt>times
+</dt><dd> (Win32) ``Cumulative'' times will be bogus. On anything other than Windows <font SIZE="-1">NT</font> or Windows 2000, ``system'' time will be bogus, and ``user'' time is actually the time returned by the <tt>&quot;clock()&quot;</tt> function in the C runtime library. 
  (RISC OS) Not useful.
-<dt>truncate
-<dd> (Older versions of <font SIZE="-1">VMS</font>) Not implemented. 
-
+</dd><dt>truncate
+</dt><dd> (Older versions of <font SIZE="-1">VMS</font>) Not implemented. 
  (<font SIZE="-1">VOS</font>) Truncation to same-or-shorter lengths only. 
-
  (Win32) If a <font SIZE="-1">FILEHANDLE</font> is supplied, it must be writable and opened in append mode (i.e., use <tt>&quot;open(my $fh, '&gt;&gt;', 'filename')&quot;</tt> or <tt>&quot;sysopen(my $fh, ..., O_APPEND|O_RDWR)&quot;</tt>. If a filename is supplied, it should not be held open elsewhere.
-<dt>umask
-<dd> Returns <tt>&quot;undef&quot;</tt> where unavailable. 
-
+</dd><dt>umask
+</dt><dd> Returns <tt>&quot;undef&quot;</tt> where unavailable. 
  (AmigaOS) <tt>&quot;umask&quot;</tt> works but the correct permissions are set only when the file is finally closed.
-<dt>utime
-<dd> (<font SIZE="-1">VMS,</font> RISC OS) Only the modification time is updated. 
-
+</dd><dt>utime
+</dt><dd> (<font SIZE="-1">VMS,</font> RISC OS) Only the modification time is updated. 
  (Win32) May not behave as expected. Behavior depends on the C runtime library's implementation of <tt>&quot;utime()&quot;</tt>, and the filesystem being used. The <font SIZE="-1">FAT</font> filesystem typically does not support an ``access time'' field, and it may limit timestamps to a granularity of two seconds.
-<dt>wait
-<dd>
-<dt>waitpid
-<dd> (Win32) Can only be applied to process handles returned for processes spawned using <tt>&quot;system(1, ...)&quot;</tt> or pseudo processes created with <tt>&quot;fork&quot;</tt>. 
-
- (RISC OS) Not useful.</dl>
+</dd><dt>wait
+</dt><dd>
+</dd><dt>waitpid
+</dt><dd> (Win32) Can only be applied to process handles returned for processes spawned using <tt>&quot;system(1, ...)&quot;</tt> or pseudo processes created with <tt>&quot;fork&quot;</tt>. 
+ (RISC OS) Not useful.</dd></dl>
 
 <h2>Supported Platforms</h2>
 
  The following platforms are known to build Perl 5.12 (as of April 2010, its release date) from the standard source code distribution available at &lt;<a rel="nofollow" HREF="http://www.cpan.org/src">http://www.cpan.org/src</a>&gt;
 <dl>
 <dt>Linux (x86, <font SIZE="-1">ARM, IA64</font>)
-<dd>
-<dt>HP-UX
-<dd>
-<dt><font SIZE="-1">AIX</font>
-<dd>
-<dt>Win32
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dt>HP-UX
+</dt><dd>
+</dd><dt><font SIZE="-1">AIX</font>
+</dt><dd>
+</dd><dt>Win32
+</dt><dd>
+</dd><dl>
 <dl>
 <dt>Windows 2000
-<dd>
-<dt>Windows <font SIZE="-1">XP</font>
-<dd>
-<dt>Windows Server 2003
-<dd>
-<dt>Windows Vista
-<dd>
-<dt>Windows Server 2008
-<dd>
-<dt>Windows 7
-<dd></dl>
+</dt><dd>
+</dd><dt>Windows <font SIZE="-1">XP</font>
+</dt><dd>
+</dd><dt>Windows Server 2003
+</dt><dd>
+</dd><dt>Windows Vista
+</dt><dd>
+</dd><dt>Windows Server 2008
+</dt><dd>
+</dd><dt>Windows 7
+</dt><dd></dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>Cygwin
-<dd> Some tests are known to fail:
-<dl>
-<dt>
-<dd>
+</dt><dd> Some tests are known to fail:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> <i>ext/XS-APItest/t/call_checker.t</i> - see &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=78502">https://rt.perl.org/Ticket/Display.html?id=78502</a>&gt;
-<dt>&bull;
-<dd> <i>dist/I18N-Collate/t/I18N-Collate.t</i>
-<dt>&bull;
-<dd> <i>ext/Win32CORE/t/win32core.t</i> - may fail on recent cygwin installs.</dl>
+</dt><dd> <i>ext/XS-APItest/t/call_checker.t</i> - see &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=78502">https://rt.perl.org/Ticket/Display.html?id=78502</a>&gt;
+</dd><dt>&bull;
+</dt><dd> <i>dist/I18N-Collate/t/I18N-Collate.t</i>
+</dd><dt>&bull;
+</dt><dd> <i>ext/Win32CORE/t/win32core.t</i> - may fail on recent cygwin installs.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>Solaris (x86, <font SIZE="-1">SPARC</font>)
-<dd>
-<dt>OpenVMS
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dt>OpenVMS
+</dt><dd>
+</dd><dl>
 <dl>
 <dt>Alpha (7.2 and later)
-<dd>
-<dt>I64 (8.2 and later)
-<dd></dl>
+</dt><dd>
+</dd><dt>I64 (8.2 and later)
+</dt><dd></dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>Symbian
-<dd>
-<dt>NetBSD
-<dd>
-<dt>FreeBSD
-<dd>
-<dt>Debian GNU/kFreeBSD
-<dd>
-<dt>Haiku
-<dd>
-<dt>Irix (6.5. What else?)
-<dd>
-<dt>OpenBSD
-<dd>
-<dt>Dragonfly <font SIZE="-1">BSD</font>
-<dd>
-<dt>Midnight <font SIZE="-1">BSD</font>
-<dd>
-<dt><font SIZE="-1">QNX</font> Neutrino <font SIZE="-1">RTOS</font> (6.5.0)
-<dd>
-<dt>MirOS <font SIZE="-1">BSD</font>
-<dd>
-<dt>Stratus OpenVOS (17.0 or later)
-<dd> Caveats:
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dt>NetBSD
+</dt><dd>
+</dd><dt>FreeBSD
+</dt><dd>
+</dd><dt>Debian GNU/kFreeBSD
+</dt><dd>
+</dd><dt>Haiku
+</dt><dd>
+</dd><dt>Irix (6.5. What else?)
+</dt><dd>
+</dd><dt>OpenBSD
+</dt><dd>
+</dd><dt>Dragonfly <font SIZE="-1">BSD</font>
+</dt><dd>
+</dd><dt>Midnight <font SIZE="-1">BSD</font>
+</dt><dd>
+</dd><dt><font SIZE="-1">QNX</font> Neutrino <font SIZE="-1">RTOS</font> (6.5.0)
+</dt><dd>
+</dd><dt>MirOS <font SIZE="-1">BSD</font>
+</dt><dd>
+</dd><dt>Stratus OpenVOS (17.0 or later)
+</dt><dd> Caveats:
+</dd><dl>
 <dl>
 <dt>time_t issues that may or may not be fixed
-<dd></dl>
+</dt><dd></dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>Symbian (Series 60 v3, 3.2 and 5 - what else?)
-<dd>
-<dt>Stratus <font SIZE="-1">VOS /</font> OpenVOS
-<dd>
-<dt><font SIZE="-1">AIX</font>
-<dd>
-<dt>Android
-<dd>
-<dt>FreeMINT
-<dd> Perl now builds with FreeMiNT/Atari. It fails a few tests, that needs some investigation. 
+</dt><dd>
+</dd><dt>Stratus <font SIZE="-1">VOS /</font> OpenVOS
+</dt><dd>
+</dd><dt><font SIZE="-1">AIX</font>
+</dt><dd>
+</dd><dt>Android
+</dt><dd>
+</dd><dt>FreeMINT
+</dt><dd> Perl now builds with FreeMiNT/Atari. It fails a few tests, that needs some investigation. 
 
- The FreeMiNT port uses <font SIZE="-1">GNU</font> dld for loadable module capabilities. So ensure you have that library installed when building perl.</dl>
+ The FreeMiNT port uses <font SIZE="-1">GNU</font> dld for loadable module capabilities. So ensure you have that library installed when building perl.</dd></dl>
 
 <h2>EOL Platforms</h2>
 
@@ -1256,33 +1176,33 @@ POSIX::_exit(0);
  The following platforms were supported by a previous version of Perl but have been officially removed from Perl's source code as of 5.20:
 <dl>
 <dt><font SIZE="-1">AT&amp;T</font> 3b1
-<dd></dl>
+</dt><dd></dd></dl>
 
 <h3>(Perl 5.14)</h3>
 
  The following platforms were supported up to 5.10. They may still have worked in 5.12, but supporting code has been removed for 5.14:
 <dl>
 <dt>Windows 95
-<dd>
-<dt>Windows 98
-<dd>
-<dt>Windows <font SIZE="-1">ME</font>
-<dd>
-<dt>Windows <font SIZE="-1">NT4</font>
-<dd></dl>
+</dt><dd>
+</dd><dt>Windows 98
+</dt><dd>
+</dd><dt>Windows <font SIZE="-1">ME</font>
+</dt><dd>
+</dd><dt>Windows <font SIZE="-1">NT4</font>
+</dt><dd></dd></dl>
 
 <h3>(Perl 5.12)</h3>
 
  The following platforms were supported by a previous version of Perl but have been officially removed from Perl's source code as of 5.12:
 <dl>
 <dt>Atari MiNT
-<dd>
-<dt>Apollo Domain/OS
-<dd>
-<dt>Apple Mac <font SIZE="-1">OS 8/9</font>
-<dd>
-<dt>Tenon Machten
-<dd></dl>
+</dt><dd>
+</dd><dt>Apollo Domain/OS
+</dt><dd>
+</dd><dt>Apple Mac <font SIZE="-1">OS 8/9</font>
+</dt><dd>
+</dd><dt>Tenon Machten
+</dt><dd></dd></dl>
 
 <h2>Supported Platforms (Perl 5.8)</h2>
 
@@ -1419,24 +1339,24 @@ POSIX::_exit(0);
 
 
 <dt><a HREF="#lbAT">CPAN Testers</a>
-<dd>
-<dt><a HREF="#lbAU">PLATFORMS</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAU">PLATFORMS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBC">FUNCTION IMPLEMENTATIONS</a>
-<dd>
+</dd><dt><a HREF="#lbBC">FUNCTION IMPLEMENTATIONS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBE">Supported Platforms</a>
-<dd>
-<dt><a HREF="#lbBF">EOL Platforms</a>
-<dd>
+</dd><dt><a HREF="#lbBE">Supported Platforms</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBF">EOL Platforms</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBJ">Supported Platforms (Perl 5.8)</a>
-<dd>
-<dt><a HREF="#lbBK">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbBL">AUTHORS / CONTRIBUTORS</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBJ">Supported Platforms (Perl 5.8)</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBK">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBL">AUTHORS / CONTRIBUTORS</a>
+</dt><dd></dd></dl>

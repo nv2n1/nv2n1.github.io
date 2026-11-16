@@ -17,35 +17,35 @@ description: "Dislocker find – Find BitLocker-encrypted volumes."
 <h2>OPTIONS</h2>
 <p> Program&#8217;s options are described below: </p>
 <dl>
-<dt><code>-h</code></p>
-<dd> print the help and exit</dl>
+<dt><code>-h</code></dt>
+<dd> print the help and exit</dd></dl>
 <dl>
-<dt><code>files</code></p>
-<dd> check for BitLocker-encrypted partitions among these files instead of trying to find them alone</dl>
+<dt><code>files</code></dt>
+<dd> check for BitLocker-encrypted partitions among these files instead of trying to find them alone</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> -1 means an error occurred, other numbers are the number of BitLocker-encrypted volumes found. For example, 0 means no volume has been found, 42 means 42 volumes have been found.</p>
 <h2>EXAMPLES</h2>
 <p> No volume is found automatically, the program returns 0 volume found (the last line comes from the echo):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # dislocker-find.rb ; echo $?
 No BitLocker volume found.
 0
 </pre>
-</dl>
+</dd></dl>
 <p> Two volumes are found, the program returns this number (the last line comes from the echo):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # dislocker-find.rb ; echo $?
 /dev/sda3
 /dev/sda7
 2
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This tool is developed by Romain Coltel on behalf of HSC (<code><a rel="nofollow" href="http://www.hsc.fr/">http://www.hsc.fr/</a></code>) </p>
 <p> Feel free to send bugs report to &lt;dislocker __AT__ hsc __DOT__ fr&gt; </p>

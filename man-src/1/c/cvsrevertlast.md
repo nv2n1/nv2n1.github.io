@@ -11,9 +11,9 @@ description: "cvsrevertlast – Revert files in CVS by one version"
 <p> cvsrevertlast &#8211; Revert files in CVS by one version </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>cvsrevertlast</code> [<i>filename</i>]</dl>
+<dt> <code>cvsrevertlast</code> [<i>filename</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>cvsrevertlast is used to revert all the files on the command line by one version in CVS. The files will not be committed. </p>
+<dd>cvsrevertlast is used to revert all the files on the command line by one version in CVS. The files will not be committed. </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>
 <h2>SEE ALSO</h2>
 <p> cvsblame(1)</p>
@@ -21,5 +21,5 @@ description: "cvsrevertlast – Revert files in CVS by one version"
 <p> <code>Ben Burton</code> &lt;&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

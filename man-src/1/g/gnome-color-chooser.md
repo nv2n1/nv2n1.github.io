@@ -23,16 +23,16 @@ description: "gnome-color-chooser – GTK+/GNOME desktop appearance customizatio
 <h2>OPTIONS</h2>
 <p> GNOME Color Chooser follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
+<dt><code>-?</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show GNOME Color Chooser&#8217;s version.</p>
-<dt><code>&#8211;validator-only</code></p>
-<dd> Start Engine Schema validator only.</p>
-<dt>Other standard GTK+/GNOME options not listed here are also supported.</p>
-<dd></dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Show a summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show GNOME Color Chooser&#8217;s version.</dd>
+<dt><code>&#8211;validator-only</code></dt>
+<dd> Start Engine Schema validator only.</dd>
+<dt>Other standard GTK+/GNOME options not listed here are also supported.</dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://gnomecc.sourceforge.net/">http://gnomecc.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>

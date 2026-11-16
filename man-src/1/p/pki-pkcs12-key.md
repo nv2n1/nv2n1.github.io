@@ -18,11 +18,11 @@ pki[CLI options] pkcs12 - key pki[CLI options] pkcs12 - key - find[command optio
 <p> <code>pki</code> [CLI options] <code>pkcs12-key-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list keys in a PKCS #12 file.</dl>
+</dt><dd> This command is to list keys in a PKCS #12 file.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>pkcs12-key-del &lt;key ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a key from a PKCS #12 file.</dl>
+</dt><dd> This command is to delete a key from a PKCS #12 file.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

@@ -11,10 +11,8 @@ std::chrono::floor(std::chrono::time_point) - std::chrono::floor(std::chrono::ti
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Clock, class Duration&gt;
     (since C++ 17)
-
         constexpr time_point&lt;Clock, ToDuration&gt; floor(const time_point&lt;Clock, Duration&gt; &amp;tp);</code></pre> 
 Returns the largest time point t representable in ToDuration that is smaller or equal to tp. 
 The function does not participate in the overload resolution unless ToDuration is an specialization of std::chrono::duration. 

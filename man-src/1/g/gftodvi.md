@@ -31,10 +31,10 @@ description: "gftodvi – make proof sheets from generic font files"
 <p> See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>{gray.tfm,&#8230;}</i></p>
-<dd> The default fonts.</p>
-<dt><i>{gray.mf,&#8230;}</i></p>
-<dd> The Metafont sources.</dl>
+<dt><i>{gray.tfm,&#8230;}</i></dt>
+<dd> The default fonts.</dd>
+<dt><i>{gray.mf,&#8230;}</i></dt>
+<dd> The Metafont sources.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1).<br />
  Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br />

@@ -14,23 +14,23 @@ description: "rio_enable_rx_tx_port – enable input receiver and output transmi
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>Master port associated with the RIO network</dl>
+</dd><dd>Master port associated with the RIO network</dd></dl>
 <p> <i>local</i></p>
 <dl>
-<dd>local=1 select local port otherwise a far device is reached</dl>
+<dd>local=1 select local port otherwise a far device is reached</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>Destination ID of the device to check host bit</dl>
+<dd>Destination ID of the device to check host bit</dd></dl>
 <p> <i>hopcount</i></p>
 <dl>
-<dd>Number of hops to reach the target</dl>
+<dd>Number of hops to reach the target</dd></dl>
 <p> <i>port_num</i></p>
 <dl>
-<dd>Port (-number on switch) to enable on a far end device</dl>
+<dd>Port (-number on switch) to enable on a far end device</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 or 1 from on General Control Command and Status Register (EXT_PTR+0x3C)</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

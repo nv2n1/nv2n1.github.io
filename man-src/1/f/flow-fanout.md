@@ -17,26 +17,26 @@ description: "flow-fanout – Fanout (replicate) flow exports to many destinatio
 <p> A SIGQUIT or SIGTERM signal will cause <code>flow-fanout</code> to exit.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code><i> AS0_substitution</i></p>
-<dd> Cisco&#8217;s NetFlow exports represent the local autonomous system as 0 instead of the real value. This option can be used to replace the 0 in the export with the a configured value. Unfortunately under certain configurations AS 0 can also represent a cache miss or non forwarded traffic so use with caution.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-f</code><i> filter_fname</i></p>
-<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</p>
-<dt><code>-F</code><i> filter_definition</i></p>
-<dd> Select the active definition. Defaults to default.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-m</code><i> privacy_mask</i></p>
-<dd> Apply <i>privacy_mask</i> to the source and destination IP address of flows. For example a privacy_mask of 255.255.255.0 would convert flows with source/destination IP addresses 10.1.1.1 and 10.2.2.2 to 10.1.1.0 and 10.2.2.0 respectively.</p>
-<dt><code>-p</code><i> pidfile</i></p>
-<dd> Configure the process ID file. Use &#8211; to disable pid file creation.</p>
-<dt><code>-s</code></p>
-<dd> Spoof the source IP address. If the IP address is 0 then it is replaced with the exporter source IP.</p>
-<dt><code>-S</code><i> stat_interval</i></p>
-<dd> When configured <code>flow-fanout</code> will emit a timestamped message on stderr every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</p>
-<dt><code>-V</code><i> pdu_version</i></p>
-<dd> Use <i>pdu_version</i> format output. </p>
+<dt><code>-A</code><i> AS0_substitution</i></dt>
+<dd> Cisco&#8217;s NetFlow exports represent the local autonomous system as 0 instead of the real value. This option can be used to replace the 0 in the export with the a configured value. Unfortunately under certain configurations AS 0 can also represent a cache miss or non forwarded traffic so use with caution.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-f</code><i> filter_fname</i></dt>
+<dd> Filter list filename. Defaults to <i>/etc/flow-tools/cfg/filter</i>.</dd>
+<dt><code>-F</code><i> filter_definition</i></dt>
+<dd> Select the active definition. Defaults to default.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-m</code><i> privacy_mask</i></dt>
+<dd> Apply <i>privacy_mask</i> to the source and destination IP address of flows. For example a privacy_mask of 255.255.255.0 would convert flows with source/destination IP addresses 10.1.1.1 and 10.2.2.2 to 10.1.1.0 and 10.2.2.0 respectively.</dd>
+<dt><code>-p</code><i> pidfile</i></dt>
+<dd> Configure the process ID file. Use &#8211; to disable pid file creation.</dd>
+<dt><code>-s</code></dt>
+<dd> Spoof the source IP address. If the IP address is 0 then it is replaced with the exporter source IP.</dd>
+<dt><code>-S</code><i> stat_interval</i></dt>
+<dd> When configured <code>flow-fanout</code> will emit a timestamped message on stderr every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</dd>
+<dt><code>-V</code><i> pdu_version</i></dt>
+<dd> Use <i>pdu_version</i> format output. </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -58,8 +58,8 @@ description: "flow-fanout – Fanout (replicate) flow exports to many destinatio
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-x</code><i> xmit_delay</i></p>
-<dd> Configure a microsecond transmit delay between packets. This may be necessary in some configurations to prevent a transmit buffer overrun.</dl>
+<dt><code>-x</code><i> xmit_delay</i></dt>
+<dd> Configure a microsecond transmit delay between packets. This may be necessary in some configurations to prevent a transmit buffer overrun.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Replicate flows arriving to local IP address 10.0.0.1 from the router exporting with IP address 10.1.1.1 on port 9500 to localhost port 9500 and 10.5.5.5 port 9200. The exports sent to 10.5.5.5 will be sent with a source IP address of 10.0.0.5 which must be a valid local IP address. </p>
 <p> <code>flow-fanout 10.0.0.1/10.1.1.1/9500 0/0/9500 10.0.0.5/10.5.5.5/9200</code></p>

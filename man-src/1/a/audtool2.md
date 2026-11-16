@@ -17,172 +17,172 @@ description: "audtool2 – a small tool to modify behavior of a running audaciou
 <h2>OPTIONS</h2>
 <p> <code>Now playing information:</code></p>
 <dl>
-<dt><i>&#8211;current-song</i></p>
-<dd> Returns current song title.</p>
-<dt><i>&#8211;current-song-filename</i></p>
-<dd> Returns current song filename.</p>
-<dt><i>&#8211;current-song-length</i></p>
-<dd> Returns current song length.</p>
-<dt><i>&#8211;current-song-length-seconds</i></p>
-<dd> Returns current song length in seconds.</p>
-<dt><i>&#8211;current-song-length-frames</i></p>
-<dd> Returns current song length in frames.</p>
-<dt><i>&#8211;current-song-output-length</i></p>
-<dd> Returns current song output length.</p>
-<dt><i>&#8211;current-song-output-length-seconds</i></p>
-<dd> Returns current song output length in seconds.</p>
-<dt><i>&#8211;current-song-output-length-frames</i></p>
-<dd> Returns current song output length in frames.</p>
-<dt><i>&#8211;current-song-bitrate</i></p>
-<dd> Returns current song bitrate in bits per second.</p>
-<dt><i>&#8211;current-song-bitrate-kbps</i></p>
-<dd> Returns current song bitrate in kilobits per second.</p>
-<dt><i>&#8211;current-song-frequency</i></p>
-<dd> Returns current song frequency in hertz.</p>
-<dt><i>&#8211;current-song-frequency-khz</i></p>
-<dd> Returns current song frequency in kilohertz.</p>
-<dt><i>&#8211;current-song-channels</i></p>
-<dd> Returns current song channels.</p>
-<dt><i>&#8211;current-song-tuple-data &lt;fieldname&gt;</i></p>
-<dd> Returns the value of a tuple field for the current song.</p>
-<dt><i>&#8211;current-song-info</i></p>
-<dd> Returns current song bitrate, frequency and channels.</dl>
+<dt><i>&#8211;current-song</i></dt>
+<dd> Returns current song title.</dd>
+<dt><i>&#8211;current-song-filename</i></dt>
+<dd> Returns current song filename.</dd>
+<dt><i>&#8211;current-song-length</i></dt>
+<dd> Returns current song length.</dd>
+<dt><i>&#8211;current-song-length-seconds</i></dt>
+<dd> Returns current song length in seconds.</dd>
+<dt><i>&#8211;current-song-length-frames</i></dt>
+<dd> Returns current song length in frames.</dd>
+<dt><i>&#8211;current-song-output-length</i></dt>
+<dd> Returns current song output length.</dd>
+<dt><i>&#8211;current-song-output-length-seconds</i></dt>
+<dd> Returns current song output length in seconds.</dd>
+<dt><i>&#8211;current-song-output-length-frames</i></dt>
+<dd> Returns current song output length in frames.</dd>
+<dt><i>&#8211;current-song-bitrate</i></dt>
+<dd> Returns current song bitrate in bits per second.</dd>
+<dt><i>&#8211;current-song-bitrate-kbps</i></dt>
+<dd> Returns current song bitrate in kilobits per second.</dd>
+<dt><i>&#8211;current-song-frequency</i></dt>
+<dd> Returns current song frequency in hertz.</dd>
+<dt><i>&#8211;current-song-frequency-khz</i></dt>
+<dd> Returns current song frequency in kilohertz.</dd>
+<dt><i>&#8211;current-song-channels</i></dt>
+<dd> Returns current song channels.</dd>
+<dt><i>&#8211;current-song-tuple-data &lt;fieldname&gt;</i></dt>
+<dd> Returns the value of a tuple field for the current song.</dd>
+<dt><i>&#8211;current-song-info</i></dt>
+<dd> Returns current song bitrate, frequency and channels.</dd></dl>
 <p> <code>Playlist manipulation:</code></p>
 <dl>
-<dt><i>&#8211;playlist-advance</i></p>
-<dd> Go to the next song in the playlist.</p>
-<dt><i>&#8211;playlist-reverse</i></p>
-<dd> Go to the previous song in the playlist.</p>
-<dt><i>&#8211;playlist-addurl &lt;uri&gt;</i></p>
-<dd> Adds a uri to the playlist.</p>
-<dt><i>&#8211;playlist-insurl &lt;uri&gt; &lt;position&gt;</i></p>
-<dd> Inserts a url at specified position in the playlist.</p>
-<dt><i>&#8211;playlist-delete &lt;position&gt;</i></p>
-<dd> Deletes the song at &lt;position&gt; from the playlist.</p>
-<dt><i>&#8211;playlist-length</i></p>
-<dd> Returns the total length of the playlist.</p>
-<dt><i>&#8211;playlist-song &lt;position&gt;</i></p>
-<dd> Returns the title of the song at &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playlist-song-filename &lt;position&gt;</i></p>
-<dd> Returns the filename of the song at &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playlist-song-length &lt;position&gt;</i></p>
-<dd> Returns the length of the song at &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playlist-song-length-seconds &lt;position&gt;</i></p>
-<dd> Returns the length of the song at &lt;position&gt; in the playlist in seconds.</p>
-<dt><i>&#8211;playlist-song-length-frames &lt;position&gt;</i></p>
-<dd> Returns the length of the song at &lt;position&gt; in the playlist in frames.</p>
-<dt><i>&#8211;playlist-display</i></p>
-<dd> Returns the entire playlist.</p>
-<dt><i>&#8211;playlist-position</i></p>
-<dd> Returns the current position in the playlist.</p>
-<dt><i>&#8211;playlist-jump &lt;position&gt;</i></p>
-<dd> Jumps to &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playlist-clear</i></p>
-<dd> Clears the playlist.</p>
-<dt><i>&#8211;playlist-repeat-status</i></p>
-<dd> Returns the status of playlist repeat.</p>
-<dt><i>&#8211;playlist-repeat-toggle</i></p>
-<dd> Toggles playlist repeat.</p>
-<dt><i>&#8211;playlist-shuffle-status</i></p>
-<dd> Returns the status of playlist shuffle.</p>
-<dt><i>&#8211;playlist-shuffle-toggle</i></p>
-<dd> Toggles playlist shuffle.</p>
-<dt><i>&#8211;playlist-tuple-data &lt;fieldname&gt; &lt;position&gt;</i></p>
-<dd> Returns the value of a tuple field for a song in the playlist.</dl>
+<dt><i>&#8211;playlist-advance</i></dt>
+<dd> Go to the next song in the playlist.</dd>
+<dt><i>&#8211;playlist-reverse</i></dt>
+<dd> Go to the previous song in the playlist.</dd>
+<dt><i>&#8211;playlist-addurl &lt;uri&gt;</i></dt>
+<dd> Adds a uri to the playlist.</dd>
+<dt><i>&#8211;playlist-insurl &lt;uri&gt; &lt;position&gt;</i></dt>
+<dd> Inserts a url at specified position in the playlist.</dd>
+<dt><i>&#8211;playlist-delete &lt;position&gt;</i></dt>
+<dd> Deletes the song at &lt;position&gt; from the playlist.</dd>
+<dt><i>&#8211;playlist-length</i></dt>
+<dd> Returns the total length of the playlist.</dd>
+<dt><i>&#8211;playlist-song &lt;position&gt;</i></dt>
+<dd> Returns the title of the song at &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playlist-song-filename &lt;position&gt;</i></dt>
+<dd> Returns the filename of the song at &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playlist-song-length &lt;position&gt;</i></dt>
+<dd> Returns the length of the song at &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playlist-song-length-seconds &lt;position&gt;</i></dt>
+<dd> Returns the length of the song at &lt;position&gt; in the playlist in seconds.</dd>
+<dt><i>&#8211;playlist-song-length-frames &lt;position&gt;</i></dt>
+<dd> Returns the length of the song at &lt;position&gt; in the playlist in frames.</dd>
+<dt><i>&#8211;playlist-display</i></dt>
+<dd> Returns the entire playlist.</dd>
+<dt><i>&#8211;playlist-position</i></dt>
+<dd> Returns the current position in the playlist.</dd>
+<dt><i>&#8211;playlist-jump &lt;position&gt;</i></dt>
+<dd> Jumps to &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playlist-clear</i></dt>
+<dd> Clears the playlist.</dd>
+<dt><i>&#8211;playlist-repeat-status</i></dt>
+<dd> Returns the status of playlist repeat.</dd>
+<dt><i>&#8211;playlist-repeat-toggle</i></dt>
+<dd> Toggles playlist repeat.</dd>
+<dt><i>&#8211;playlist-shuffle-status</i></dt>
+<dd> Returns the status of playlist shuffle.</dd>
+<dt><i>&#8211;playlist-shuffle-toggle</i></dt>
+<dd> Toggles playlist shuffle.</dd>
+<dt><i>&#8211;playlist-tuple-data &lt;fieldname&gt; &lt;position&gt;</i></dt>
+<dd> Returns the value of a tuple field for a song in the playlist.</dd></dl>
 <p> <code>Playqueue manipulation:</code></p>
 <dl>
-<dt><i>&#8211;playqueue-add &lt;position&gt;</i></p>
-<dd> Adds the song at &lt;position&gt; in the playlist to the playqueue.</p>
-<dt><i>&#8211;playqueue-remove &lt;position&gt;</i></p>
-<dd> Removes the song at &lt;position&gt; in the playlist from the playqueue.</p>
-<dt><i>&#8211;playqueue-is-queued &lt;position&gt;</i></p>
-<dd> Returns OK if the song at &lt;postion&gt; in the playtlist is queued.</p>
-<dt><i>&#8211;playqueue-get-position &lt;position&gt;</i></p>
-<dd> Returns the playqueue position of the song at &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playqueue-get-queue-position &lt;position&gt;</i></p>
-<dd> Returns the playqueue position of a song in the given &lt;position&gt; in the playlist.</p>
-<dt><i>&#8211;playqueue-get-list-position &lt;position&gt;</i></p>
-<dd> Returns the playlist position of a song in the given position in the playqueue.</p>
-<dt><i>&#8211;playqueue-length</i></p>
-<dd> Returns the length of the playqueue.</p>
-<dt><i>&#8211;playqueue-display</i></p>
-<dd> Returns a list of currently-queued songs.</p>
-<dt><i>&#8211;playqueue-clear</i></p>
-<dd> Clears the playqueue.</dl>
+<dt><i>&#8211;playqueue-add &lt;position&gt;</i></dt>
+<dd> Adds the song at &lt;position&gt; in the playlist to the playqueue.</dd>
+<dt><i>&#8211;playqueue-remove &lt;position&gt;</i></dt>
+<dd> Removes the song at &lt;position&gt; in the playlist from the playqueue.</dd>
+<dt><i>&#8211;playqueue-is-queued &lt;position&gt;</i></dt>
+<dd> Returns OK if the song at &lt;postion&gt; in the playtlist is queued.</dd>
+<dt><i>&#8211;playqueue-get-position &lt;position&gt;</i></dt>
+<dd> Returns the playqueue position of the song at &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playqueue-get-queue-position &lt;position&gt;</i></dt>
+<dd> Returns the playqueue position of a song in the given &lt;position&gt; in the playlist.</dd>
+<dt><i>&#8211;playqueue-get-list-position &lt;position&gt;</i></dt>
+<dd> Returns the playlist position of a song in the given position in the playqueue.</dd>
+<dt><i>&#8211;playqueue-length</i></dt>
+<dd> Returns the length of the playqueue.</dd>
+<dt><i>&#8211;playqueue-display</i></dt>
+<dd> Returns a list of currently-queued songs.</dd>
+<dt><i>&#8211;playqueue-clear</i></dt>
+<dd> Clears the playqueue.</dd></dl>
 <p> <code>Playback manipulation:</code></p>
 <dl>
-<dt><i>&#8211;playback-play</i></p>
-<dd> Starts/unpauses song playback.</p>
-<dt><i>&#8211;playback-pause</i></p>
-<dd> (Un)pauses song playback.</p>
-<dt><i>&#8211;playback-playpause</i></p>
-<dd> Plays/(un)pauses song playback.</p>
-<dt><i>&#8211;playback-stop</i></p>
-<dd> Stops song playback.</p>
-<dt><i>&#8211;playback-playing</i></p>
-<dd> Returns OK if audacious is playing.</p>
-<dt><i>&#8211;playback-paused</i></p>
-<dd> Returns OK if audacious is paused.</p>
-<dt><i>&#8211;playback-stopped</i></p>
-<dd> Returns OK if audacious is stopped.</p>
-<dt><i>&#8211;playback-status</i></p>
-<dd> Returns the playback status.</p>
-<dt><i>&#8211;playback-seek</i></p>
-<dd> Performs an absolute seek in milliseconds.</p>
-<dt><i>&#8211;playback-seek-relative</i></p>
-<dd> Performs a seek relative to the current position in milliseconds.</dl>
+<dt><i>&#8211;playback-play</i></dt>
+<dd> Starts/unpauses song playback.</dd>
+<dt><i>&#8211;playback-pause</i></dt>
+<dd> (Un)pauses song playback.</dd>
+<dt><i>&#8211;playback-playpause</i></dt>
+<dd> Plays/(un)pauses song playback.</dd>
+<dt><i>&#8211;playback-stop</i></dt>
+<dd> Stops song playback.</dd>
+<dt><i>&#8211;playback-playing</i></dt>
+<dd> Returns OK if audacious is playing.</dd>
+<dt><i>&#8211;playback-paused</i></dt>
+<dd> Returns OK if audacious is paused.</dd>
+<dt><i>&#8211;playback-stopped</i></dt>
+<dd> Returns OK if audacious is stopped.</dd>
+<dt><i>&#8211;playback-status</i></dt>
+<dd> Returns the playback status.</dd>
+<dt><i>&#8211;playback-seek</i></dt>
+<dd> Performs an absolute seek in milliseconds.</dd>
+<dt><i>&#8211;playback-seek-relative</i></dt>
+<dd> Performs a seek relative to the current position in milliseconds.</dd></dl>
 <p> <code>Volume control:</code></p>
 <dl>
-<dt><i>&#8211;get-volume</i></p>
-<dd> Returns the current volume level in percent.</p>
-<dt><i>&#8211;set-volume &lt;level&gt;</i></p>
-<dd> Sets the current volume level in percent.</dl>
+<dt><i>&#8211;get-volume</i></dt>
+<dd> Returns the current volume level in percent.</dd>
+<dt><i>&#8211;set-volume &lt;level&gt;</i></dt>
+<dd> Sets the current volume level in percent.</dd></dl>
 <p> <code>Equalizer manipulation:</code></p>
 <dl>
-<dt><i>&#8211;equalizer-activate &lt;on/off&gt;</i></p>
-<dd> Activates/deactivates the equalizer.</p>
-<dt><i>&#8211;equalizer-get</i></p>
-<dd> Gets the equalizer settings.</p>
-<dt><i>&#8211;equalizer-set &lt;preamp&gt; &lt;band0&gt; &lt;band1&gt; &lt;band2&gt; &lt;band3&gt; &lt;band4&gt; &lt;band5&gt; &lt;band6&gt; &lt;band7&gt; &lt;band8&gt; &lt;band9&gt;</i></p>
-<dd> Sets the equalizer settings.</p>
-<dt><i>&#8211;equalizer-get-preamp</i></p>
-<dd> Gets the equalizer pre-amplification.</p>
-<dt><i>&#8211;equalizer-set-preamp &lt;preamp&gt;</i></p>
-<dd> Gets the equalizer pre-amplification.</p>
-<dt><i>&#8211;equalizer-get-band &lt;band&gt;</i></p>
-<dd> Gets the equalizer value in specified band.</p>
-<dt><i>&#8211;equalizer-set-band &lt;band&gt; &lt;value&gt;</i></p>
-<dd> Sets the equalizer value in specified band.</dl>
+<dt><i>&#8211;equalizer-activate &lt;on/off&gt;</i></dt>
+<dd> Activates/deactivates the equalizer.</dd>
+<dt><i>&#8211;equalizer-get</i></dt>
+<dd> Gets the equalizer settings.</dd>
+<dt><i>&#8211;equalizer-set &lt;preamp&gt; &lt;band0&gt; &lt;band1&gt; &lt;band2&gt; &lt;band3&gt; &lt;band4&gt; &lt;band5&gt; &lt;band6&gt; &lt;band7&gt; &lt;band8&gt; &lt;band9&gt;</i></dt>
+<dd> Sets the equalizer settings.</dd>
+<dt><i>&#8211;equalizer-get-preamp</i></dt>
+<dd> Gets the equalizer pre-amplification.</dd>
+<dt><i>&#8211;equalizer-set-preamp &lt;preamp&gt;</i></dt>
+<dd> Gets the equalizer pre-amplification.</dd>
+<dt><i>&#8211;equalizer-get-band &lt;band&gt;</i></dt>
+<dd> Gets the equalizer value in specified band.</dd>
+<dt><i>&#8211;equalizer-set-band &lt;band&gt; &lt;value&gt;</i></dt>
+<dd> Sets the equalizer value in specified band.</dd></dl>
 <p> <code>Miscellaneous:</code></p>
 <dl>
-<dt><i>&#8211;mainwin-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the main window.</p>
-<dt><i>&#8211;playlist-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the playlist window.</p>
-<dt><i>&#8211;equalizer-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the equalizer window.</p>
-<dt><i>&#8211;filebrowser-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the filebrowser.</p>
-<dt><i>&#8211;jumptofile-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the jump to file window.</p>
-<dt><i>&#8211;preferences-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the preferences window.</p>
-<dt><i>&#8211;about-show &lt;on/off&gt;</i></p>
-<dd> Shows/hides the about window.</p>
-<dt><i>&#8211;activate</i></p>
-<dd> Activates and raises audacious.</p>
-<dt><i>&#8211;always-on-top &lt;on/off&gt;</i></p>
-<dd> Enables/disables always on top setting.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Displays version information for the Audacious2 core.</p>
-<dt><i>&#8211;shutdown</i></p>
-<dd> Shuts down audacious.</dl>
+<dt><i>&#8211;mainwin-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the main window.</dd>
+<dt><i>&#8211;playlist-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the playlist window.</dd>
+<dt><i>&#8211;equalizer-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the equalizer window.</dd>
+<dt><i>&#8211;filebrowser-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the filebrowser.</dd>
+<dt><i>&#8211;jumptofile-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the jump to file window.</dd>
+<dt><i>&#8211;preferences-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the preferences window.</dd>
+<dt><i>&#8211;about-show &lt;on/off&gt;</i></dt>
+<dd> Shows/hides the about window.</dd>
+<dt><i>&#8211;activate</i></dt>
+<dd> Activates and raises audacious.</dd>
+<dt><i>&#8211;always-on-top &lt;on/off&gt;</i></dt>
+<dd> Enables/disables always on top setting.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Displays version information for the Audacious2 core.</dd>
+<dt><i>&#8211;shutdown</i></dt>
+<dd> Shuts down audacious.</dd></dl>
 <p> <code>Help system:</code></p>
 <dl>
-<dt><i>&#8211;list-handlers</i></p>
-<dd> Shows handlers list.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Shows handlers list.</dl>
+<dt><i>&#8211;list-handlers</i></dt>
+<dd> Shows handlers list.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Shows handlers list.</dd></dl>
 <p> Handlers may be prefixed with `&#8211;&#8216; (GNU-style long-options) or not, your choice.</p>
 <h2>BUGS</h2>
 <p> There are no known bugs in audtool2 at this time; if you find any please report them on <a rel="nofollow" href="http://www.atheme.org">www.atheme.org</a> in the Audacious issue tracker.</p>

@@ -41,44 +41,44 @@ description: "QwtArrowButton –"
 <dl COMPACT>
 <dd><i>num</i> Number of arrows<br />
  <i>arrowType</i> see Qt::ArrowType in the Qt docs.<br />
- <i>parent</i> Parent widget</dl>
+ <i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QSize QwtArrowButton::arrowSize (Qt::ArrowTypearrowType, const QSize &amp;boundingSize) const [protected], [virtual]</h3>
 <p>Calculate the size for a arrow that fits into a rectangle of a given size </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>arrowType</i> Arrow type<br />
- <i>boundingSize</i> Bounding size</dl>
+ <i>boundingSize</i> Bounding size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the arrow</dl>
+<dd>Size of the arrow</dd></dl>
 <h3>void QwtArrowButton::drawArrow (QPainter *painter, const QRect &amp;r, Qt::ArrowTypearrowType) const [protected], [virtual]</h3>
 <p>Draw an arrow int a bounding rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>r</i> Rectangle where to paint the arrow<br />
- <i>arrowType</i> Arrow type</dl>
+ <i>arrowType</i> Arrow type</dd></dl>
 <h3>void QwtArrowButton::drawButtonLabel (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the button label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>The Qt Manual for QPushButton</dl>
+<dd>The Qt Manual for QPushButton</dd></dl>
 <h3>QRect QwtArrowButton::labelRect () const [protected], [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the bounding rectangle for the label</dl>
+<dd>the bounding rectangle for the label</dd></dl>
 <h3>void QwtArrowButton::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>QSize QwtArrowButton::sizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>a size hint</dl>
+<dd>a size hint</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

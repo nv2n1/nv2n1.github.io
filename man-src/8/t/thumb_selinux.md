@@ -105,14 +105,14 @@ description: "thumb_selinux – Security Enhanced Linux Policy for the thumb pro
 <p> <code>thumb_exec_t</code> </p>
 <p> &#8211; Set files with the thumb_exec_t type, if you want to transition an executable to the thumb_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/[^/]*thumbnailer, /usr/bin/gnome-[^/]*-thumbnailer(.sh)?, /usr/lib/tumbler-?[^/]*/tumblerd, /usr/bin/raw-thumbnailer, /usr/bin/whaaw-thumbnailer, /usr/bin/ffmpegthumbnailer, /usr/bin/evince-thumbnailer, /usr/bin/mate-thumbnail-font, /usr/bin/gnome-thumbnail-font, /usr/bin/gsf-office-thumbnailer, /usr/bin/totem-video-thumbnailer, /usr/bin/shotwell-video-thumbnailer </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/[^/]*thumbnailer, /usr/bin/gnome-[^/]*-thumbnailer(.sh)?, /usr/lib/tumbler-?[^/]*/tumblerd, /usr/bin/raw-thumbnailer, /usr/bin/whaaw-thumbnailer, /usr/bin/ffmpegthumbnailer, /usr/bin/evince-thumbnailer, /usr/bin/mate-thumbnail-font, /usr/bin/gnome-thumbnail-font, /usr/bin/gsf-office-thumbnailer, /usr/bin/totem-video-thumbnailer, /usr/bin/shotwell-video-thumbnailer </dd>
 </dl>
 <p> <code>thumb_home_t</code> </p>
 <p> &#8211; Set files with the thumb_home_t type, if you want to store thumb files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.thumbnails(/.*)?, /home/[^/]+/missfont.log.*, /home/[^/]+/.cache/thumbnails(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.thumbnails(/.*)?, /home/[^/]+/missfont.log.*, /home/[^/]+/.cache/thumbnails(/.*)? </dd>
 </dl>
 <p> <code>thumb_tmp_t</code> </p>
 <p> &#8211; Set files with the thumb_tmp_t type, if you want to store thumb temporary files in the /tmp directories. </p>

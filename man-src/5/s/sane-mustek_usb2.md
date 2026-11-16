@@ -14,14 +14,14 @@ description: "sane-mustek_usb2 – SANE backend for SQ113 based USB flatbed scan
 <p>Please use libusb-0.1.8 or later. Without libusb or with older libusb versions all kinds of trouble can be expected. The scanner should be found by <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) without further actions. For setting permissions and general USB information, look at <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5).</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb2.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb2.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb2.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-mustek_usb2.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_MUSTEK_USB2</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_MUSTEK_USB2</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_MUSTEK_USB2=4 </p>
 </dl>
 <h2>See Also</h2>

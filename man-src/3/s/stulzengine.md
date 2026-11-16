@@ -19,6 +19,6 @@ description: "QuantLib::StulzEngine – Pricing engine for 2D European Baskets."
 <p> This class implements formulae from &#8216;Options on the Minimum or the Maximum of Two Risky Assets&#8217;, Rene Stulz, Journal of Financial Ecomomics (1982) 10, 161-185. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

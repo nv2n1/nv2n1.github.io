@@ -15,7 +15,7 @@ skb_orphan - orphan a buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to orphan</dl>
+<dl><dd></dd><dd>buffer to orphan</dd></dl>
 
 <h2>Description</h2>
 

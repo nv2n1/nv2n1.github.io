@@ -15,14 +15,14 @@ mongoc_socket_bind (mongoc_socket_t *sock,
  socklen_t addrlen);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>addr</code></p>
-<dd>A struct sockaddr.</dl>
+<dt><code>addr</code></dt>
+<dd>A struct sockaddr.</dd></dl>
 <dl COMPACT>
-<dt><code>addrlen</code></p>
-<dd>A socklen_t.</dl>
+<dt><code>addrlen</code></dt>
+<dd>A socklen_t.</dd></dl>
 <h2>Description</h2>
 <p>This function is a wrapper around the BSD socket <code>bind(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
 <h2>Returns</h2>

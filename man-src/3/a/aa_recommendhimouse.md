@@ -14,8 +14,8 @@ description: "aa_recommendhimouse – insert the given driver on beggining of th
 <p> void aa_recommendhimouse(const char *name); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>const char *name</code></p>
-<dd> Name of the driver (ought to match the &quot;shortname&quot; field of the driver definition structure).</dl>
+<dt><code>const char *name</code></dt>
+<dd> Name of the driver (ought to match the &quot;shortname&quot; field of the driver definition structure).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Insert the given driver on beggining of the list of recommended mouse drivers.</p>
 <h2>SEE ALSO</h2>

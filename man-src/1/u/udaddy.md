@@ -29,19 +29,19 @@ udaddy[-s server_address][-b bind_address][-c connections]
 
 <dl>
 <dt>-s server_address
-<dd> The network name or IP address of the server system listening for communication. The used name or address must route over an RDMA device. This option must be specified by the client.
-<dt>-b bind_address
-<dd> The local network address to bind to. To bind to any address with IPv6 use -b ::0 .
-<dt>-c connections
-<dd> The number of communication paths to establish between the client and server. The test uses unreliable datagram communication, so no actual connections are formed. (default 1)
-<dt>-C message_count
-<dd> The number of messages to transfer over each connection. (default 10)
-<dt>-S message_size
-<dd> The size of each message transferred, in bytes. This value must be smaller than the MTU of the underlying RDMA transport, or an error will occur. (default 100)
-<dt>-t tos
-<dd> Indicates the type of service used for the communication. Type of service is implementation dependent based on subnet configuration.
-<dt>-p port_space
-<dd> The port space of the datagram communication. May be either the RDMA UDP (0x0111) or IPoIB (0x0002) port space. (default RDMA_PS_UDP)</dl>
+</dt><dd> The network name or IP address of the server system listening for communication. The used name or address must route over an RDMA device. This option must be specified by the client.
+</dd><dt>-b bind_address
+</dt><dd> The local network address to bind to. To bind to any address with IPv6 use -b ::0 .
+</dd><dt>-c connections
+</dt><dd> The number of communication paths to establish between the client and server. The test uses unreliable datagram communication, so no actual connections are formed. (default 1)
+</dd><dt>-C message_count
+</dt><dd> The number of messages to transfer over each connection. (default 10)
+</dd><dt>-S message_size
+</dt><dd> The size of each message transferred, in bytes. This value must be smaller than the MTU of the underlying RDMA transport, or an error will occur. (default 100)
+</dd><dt>-t tos
+</dt><dd> Indicates the type of service used for the communication. Type of service is implementation dependent based on subnet configuration.
+</dd><dt>-p port_space
+</dt><dd> The port space of the datagram communication. May be either the RDMA UDP (0x0111) or IPoIB (0x0002) port space. (default RDMA_PS_UDP)</dd></dl>
 
 <h2>NOTES</h2>
 

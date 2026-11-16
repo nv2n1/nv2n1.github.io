@@ -14,19 +14,19 @@ description: "sata_link_hardreset – reset link via SATA phy reset"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link to reset</dl>
+</dd><dd>link to reset</dd></dl>
 <p> <i>timing</i></p>
 <dl>
-<dd>timing parameters { interval, duration, timeout } in msec</dl>
+<dd>timing parameters { interval, duration, timeout } in msec</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <p> <i>online</i></p>
 <dl>
-<dd>optional out parameter indicating link onlineness</dl>
+<dd>optional out parameter indicating link onlineness</dd></dl>
 <p> <i>check_ready</i></p>
 <dl>
-<dd>optional callback to check link readiness</dl>
+<dd>optional callback to check link readiness</dd></dl>
 <h2>Description</h2>
 <p>SATA phy-reset <i>link</i> using DET bits of SControl register. After hardreset, link readiness is waited upon using <code>ata_wait_ready</code> if <i>check_ready</i> is specified. LLDs are allowed to not specify <i>check_ready</i> and wait itself after this function returns. Device classification is LLD&#8217;s responsibility. </p>
 <p> *<i>online</i> is set to one iff reset succeeded and <i>link</i> is online after reset. </p>
@@ -36,5 +36,5 @@ description: "sata_link_hardreset – reset link via SATA phy reset"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

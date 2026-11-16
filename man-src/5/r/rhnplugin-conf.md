@@ -12,17 +12,17 @@ description: "rhnplugin.conf – Configuration file for the rhnplugin(8) yum(8) 
 <p><code>rhnplugin.conf</code> contains configuration options which are specific to <code><a href="/docs/linux/man/8-rhnplugin/">rhnplugin</a></code>(8). The configuration file is located at <i>/etc/yum/pluginconf.d/rhnplugin.conf</i>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>enabled</code></p>
-<dd>Either `0&#8242; or `1&#8242;. Determines whether the plugin will be used by yum or not. Default value is `1&#8242;. </p>
-<dt><code>gpgcheck</code></p>
-<dd>Either `0&#8242; or `1&#8242;. Determines whether gpg signature checking will be performed on packages coming from Spacewalk/Red Hat Satellite. Default value is `1&#8242;. If this option is not set, the value from <code>yum.conf</code>(5) will be used. </p>
-<dt><code>timeout</code></p>
-<dd>The amount of time (in seconds) that you want to wait for a response before timing out. If this option is not set, the value from <code>yum.conf</code>(5) will be used. </p>
+<dt><code>enabled</code></dt>
+<dd>Either `0&#8242; or `1&#8242;. Determines whether the plugin will be used by yum or not. Default value is `1&#8242;. </dd>
+<dt><code>gpgcheck</code></dt>
+<dd>Either `0&#8242; or `1&#8242;. Determines whether gpg signature checking will be performed on packages coming from Spacewalk/Red Hat Satellite. Default value is `1&#8242;. If this option is not set, the value from <code>yum.conf</code>(5) will be used. </dd>
+<dt><code>timeout</code></dt>
+<dd>The amount of time (in seconds) that you want to wait for a response before timing out. If this option is not set, the value from <code>yum.conf</code>(5) will be used. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/yum/pluginconf.d/rhnplugin.conf</i></p>
-<dd>The location of this configuration file. </p>
+<dt><i>/etc/yum/pluginconf.d/rhnplugin.conf</i></dt>
+<dd>The location of this configuration file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rhnplugin/">rhnplugin</a></code>(8), <code><a href="/docs/linux/man/8-yum/">yum</a></code>(8), <code><a href="/docs/linux/man/5-up2date/">up2date</a></code>(5), <code>yum.conf</code>(5). </p>

@@ -85,8 +85,8 @@ description: "cachefilesd_selinux – Security Enhanced Linux Policy for the cac
 <p> <code>cachefilesd_exec_t</code> </p>
 <p> &#8211; Set files with the cachefilesd_exec_t type, if you want to transition an executable to the cachefilesd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/cachefilesd, /usr/sbin/cachefilesd </p>
+<dt>Paths:</dt>
+<dd>/sbin/cachefilesd, /usr/sbin/cachefilesd </dd>
 </dl>
 <p> <code>cachefilesd_var_run_t</code> </p>
 <p> &#8211; Set files with the cachefilesd_var_run_t type, if you want to store the cachefilesd files under the /run or /var/run directory. </p>

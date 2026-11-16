@@ -14,8 +14,8 @@ description: "gnutls_free – Returns a free() like function"
 <p> <code>void gnutls_free(void * </code><i>ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>void * ptr</p>
-<dd></dl>
+<dt>void * ptr</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will free data pointed by ptr. </p>
 <p> The deallocation function used is the one set by <code>gnutls_global_set_mem_functions()</code>.</p>
@@ -28,6 +28,6 @@ description: "gnutls_free – Returns a free() like function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

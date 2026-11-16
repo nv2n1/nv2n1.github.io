@@ -14,10 +14,10 @@ description: "snd_ctl_add_slave – Add a virtual slave control"
 <p><i>master</i></p>
 <dl>
 <dd>
-<dd>vmaster element</dl>
+</dd><dd>vmaster element</dd></dl>
 <p> <i>slave</i></p>
 <dl>
-<dd>slave element to add</dl>
+<dd>slave element to add</dd></dl>
 <h2>Description</h2>
 <p>Add a virtual slave control to the given master element created via <code>snd_ctl_create_virtual_master</code> beforehand. </p>
 <p> All slaves must be the same type (returning the same information via info callback). The function doesn&#8217;t check it, so it&#8217;s your responsibility. </p>

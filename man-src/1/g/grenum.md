@@ -15,12 +15,12 @@ description: "grenum – An advanced refdes renumber utility"
 <p> The <code>grenum</code> program will renumber the refdes definitions read from <i>infile.</i> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-p, &#8211;pagejump</p>
-<dd> This will switch on the page jump mode. It means that refdes&#8217;s from each <i>inputfile</i> gets renumbered from 100,200&#8230; etc.</p>
-<dt>-v, &#8211;version</p>
-<dd> prints version information</p>
-<dt>-h, &#8211;help</p>
-<dd> prints help message </p>
+<dt>-p, &#8211;pagejump</dt>
+<dd> This will switch on the page jump mode. It means that refdes&#8217;s from each <i>inputfile</i> gets renumbered from 100,200&#8230; etc.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> prints version information</dd>
+<dt>-h, &#8211;help</dt>
+<dd> prints help message </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> <code>grenum</code> will return <code>0</code> if all files processed successfully, <code>1</code> if there was no input file specified, <code>2</code> if I/O files can&#8217;t be opened/written, <code>3</code> if there is parse error in input file, <code>4</code> if there is not enough memory to store refdes prefixes.</p>

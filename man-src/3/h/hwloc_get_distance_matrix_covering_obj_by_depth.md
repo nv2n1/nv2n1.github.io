@@ -27,41 +27,41 @@ description: "hwlocality_distances – Manipulating Distances"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 if no ancestor contains a matching latency matrix.</dl>
+</dt><dd> -1 if no ancestor contains a matching latency matrix.</dd></dl>
 <h3>static const struct <code>hwloc_distances_s</code>* hwloc_get_whole_distance_matrix_by_depth (<code>hwloc_topology_t</code> topology, unsigned depth) [static]</h3>
 <p> Get the distances between all objects at the given depth. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a distances structure containing a matrix with all distances between all objects at the given depth.</dl>
+</dt><dd> a distances structure containing a matrix with all distances between all objects at the given depth.</dd></dl>
 <p> Slot i+nbobjs*j contains the distance from the object of logical index i the object of logical index j. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function only returns matrices covering the whole topology, without any unknown distance value. Those matrices are available in top-level object of the hierarchy. Matrices of lower objects are not reported here since they cover only part of the machine.</dl>
+</dt><dd> This function only returns matrices covering the whole topology, without any unknown distance value. Those matrices are available in top-level object of the hierarchy. Matrices of lower objects are not reported here since they cover only part of the machine.</dd></dl>
 <p> The returned structure belongs to the hwloc library. The caller should not modify or free it. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> NULL if no such distance matrix exists.</dl>
+</dt><dd> NULL if no such distance matrix exists.</dd></dl>
 <h3>static const struct <code>hwloc_distances_s</code>* hwloc_get_whole_distance_matrix_by_type (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_type_t</code> type) [static]</h3>
 <p> Get the distances between all objects of a given type. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> a distances structure containing a matrix with all distances between all objects of the given type.</dl>
+</dt><dd> a distances structure containing a matrix with all distances between all objects of the given type.</dd></dl>
 <p> Slot i+nbobjs*j contains the distance from the object of logical index i the object of logical index j. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function only returns matrices covering the whole topology, without any unknown distance value. Those matrices are available in top-level object of the hierarchy. Matrices of lower objects are not reported here since they cover only part of the machine.</dl>
+</dt><dd> This function only returns matrices covering the whole topology, without any unknown distance value. Those matrices are available in top-level object of the hierarchy. Matrices of lower objects are not reported here since they cover only part of the machine.</dd></dl>
 <p> The returned structure belongs to the hwloc library. The caller should not modify or free it. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> NULL if no such distance matrix exists.</dl>
+</dt><dd> NULL if no such distance matrix exists.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

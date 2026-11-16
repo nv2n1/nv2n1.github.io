@@ -23,9 +23,9 @@ description: "QuantLib::BlackCallableFixedRateBondEngine – Black-formula calla
 <p> Callable fixed rate bond Black engine. The embedded (European) option follows the Black &#8216;European bond option&#8217; treatment in Hull, Fourth Edition, Chapter 20. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>set additionalResults (e.g. vega, fairStrike, etc.)</dl>
+<dd>set additionalResults (e.g. vega, fairStrike, etc.)</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class has yet to be tested</dl>
+<dd>This class has yet to be tested</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

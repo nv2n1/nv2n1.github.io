@@ -17,15 +17,15 @@ description: "struct_rio_scan – RIO enumeration and discovery operations"
 <h2>Members</h2>
 <p>owner</p>
 <dl>
-<dd>The module owner of this structure</dl>
+<dd>The module owner of this structure</dd></dl>
 <p> enumerate</p>
 <dl>
-<dd>Callback to perform RapidIO fabric enumeration.</dl>
+<dd>Callback to perform RapidIO fabric enumeration.</dd></dl>
 <p> discover</p>
 <dl>
-<dd>Callback to perform RapidIO fabric discovery.</dl>
+<dd>Callback to perform RapidIO fabric discovery.</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -10,30 +10,30 @@ description: "pkcs11-destroy – destroy PKCS#11 objects"
 <p>pkcs11-destroy &#8211; destroy PKCS#11 objects</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pkcs11-destroy</code> [<code>-m&nbsp;<wbr></code><i>module</i>] [<code>-s&nbsp;<wbr></code><i>slot</i>] {-i&nbsp;<wbr><i>ID</i> | -l&nbsp;<wbr><i>label</i>} [<code>-p&nbsp;<wbr></code><i>PIN</i>] [<code>-w&nbsp;<wbr></code><i>seconds</i>]</dl>
+<dt> <code>pkcs11-destroy</code> [<code>-m&nbsp;<wbr></code><i>module</i>] [<code>-s&nbsp;<wbr></code><i>slot</i>] {-i&nbsp;<wbr><i>ID</i> | -l&nbsp;<wbr><i>label</i>} [<code>-p&nbsp;<wbr></code><i>PIN</i>] [<code>-w&nbsp;<wbr></code><i>seconds</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>pkcs11-destroy</code></p>
-<dd>destroys keys stored in a PKCS#11 device, identified by their <code>ID</code> or <code>label</code>. </p>
+<dd>destroys keys stored in a PKCS#11 device, identified by their <code>ID</code> or <code>label</code>. </dd>
 <p> Matching keys are displayed before being destroyed. By default, there is a five second delay to allow the user to interrupt the process before the destruction takes place.</p>
 <h2>Arguments</h2>
 <p>-m <i>module</i></p>
 <dl>
-<dd>Specify the PKCS#11 provider module. This must be the full path to a shared library object implementing the PKCS#11 API for the device.</dl>
+<dd>Specify the PKCS#11 provider module. This must be the full path to a shared library object implementing the PKCS#11 API for the device.</dd></dl>
 <p> -s <i>slot</i></p>
 <dl>
-<dd>Open the session with the given PKCS#11 slot. The default is slot 0.</dl>
+<dd>Open the session with the given PKCS#11 slot. The default is slot 0.</dd></dl>
 <p> -i <i>ID</i></p>
 <dl>
-<dd>Destroy keys with the given object ID.</dl>
+<dd>Destroy keys with the given object ID.</dd></dl>
 <p> -l <i>label</i></p>
 <dl>
-<dd>Destroy keys with the given label.</dl>
+<dd>Destroy keys with the given label.</dd></dl>
 <p> -p <i>PIN</i></p>
 <dl>
-<dd>Specify the PIN for the device. If no PIN is provided on the command line, <code>pkcs11-destroy</code> will prompt for it.</dl>
+<dd>Specify the PIN for the device. If no PIN is provided on the command line, <code>pkcs11-destroy</code> will prompt for it.</dd></dl>
 <p> -w <i>seconds</i></p>
 <dl>
-<dd>Specify how long to pause before carrying out key destruction. The default is five seconds. If set to 0, destruction will be immediate.</dl>
+<dd>Specify how long to pause before carrying out key destruction. The default is five seconds. If set to 0, destruction will be immediate.</dd></dl>
 <h2>See Also</h2>
 <p><code>pkcs11-list</code>(3), <code>pkcs11-keygen</code>(3)</p>
 <h2>Author</h2>

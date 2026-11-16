@@ -31,17 +31,17 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
  The argument <i>mode</i> points to a string beginning with one of the following sequences (possibly followed by additional characters, as described below):
 <dl>
 <dt><b>r</b>
-<dd> Open text file for reading. The stream is positioned at the beginning of the file.
-<dt><b>r+</b>
-<dd> Open for reading and writing. The stream is positioned at the beginning of the file.
-<dt><b>w</b>
-<dd> Truncate file to zero length or create text file for writing. The stream is positioned at the beginning of the file.
-<dt><b>w+</b>
-<dd> Open for reading and writing. The file is created if it does not exist, otherwise it is truncated. The stream is positioned at the beginning of the file.
-<dt><b>a</b>
-<dd> Open for appending (writing at end of file). The file is created if it does not exist. The stream is positioned at the end of the file.
-<dt><b>a+</b>
-<dd> Open for reading and appending (writing at end of file). The file is created if it does not exist. Output is always appended to the end of the file. POSIX is silent on what the initial read position is when using this mode. For glibc, the initial file position for reading is at the beginning of the file, but for Android/BSD/MacOS, the initial file position for reading is at the end of the file.</dl>
+</dt><dd> Open text file for reading. The stream is positioned at the beginning of the file.
+</dd><dt><b>r+</b>
+</dt><dd> Open for reading and writing. The stream is positioned at the beginning of the file.
+</dd><dt><b>w</b>
+</dt><dd> Truncate file to zero length or create text file for writing. The stream is positioned at the beginning of the file.
+</dd><dt><b>w+</b>
+</dt><dd> Open for reading and writing. The file is created if it does not exist, otherwise it is truncated. The stream is positioned at the beginning of the file.
+</dd><dt><b>a</b>
+</dt><dd> Open for appending (writing at end of file). The file is created if it does not exist. The stream is positioned at the end of the file.
+</dd><dt><b>a+</b>
+</dt><dd> Open for reading and appending (writing at end of file). The file is created if it does not exist. Output is always appended to the end of the file. POSIX is silent on what the initial read position is when using this mode. For glibc, the initial file position for reading is at the beginning of the file, but for Android/BSD/MacOS, the initial file position for reading is at the end of the file.</dd></dl>
  
 
  The <i>mode</i> string can also include the letter 'b' either as a last character or as a character between the characters in any of the two-character strings described above. This is strictly for compatibility with C89 and has no effect; the 'b' is ignored on all POSIX conforming systems, including Linux. (Other systems may treat text files and binary files differently, and adding the 'b' may be a good idea if you do I/O to a binary file and expect that your program may be ported to non-UNIX environments.) 
@@ -59,14 +59,14 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
  The file descriptor associated with the stream is opened as if by a call to <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2) with the following flags:
 <dl>
 <dt>
-<dd> <table BORDER> <tr VALIGN=top><td><b>fopen() mode</b></td><td><b>open() flags</b>
+</dt><dd> <table BORDER> <tr VALIGN=top><td><b>fopen() mode</b></td><td><b>open() flags</b>
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>r</i></td><td>O_RDONLY
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>w</i></td><td>O_WRONLY | O_CREAT | O_TRUNC
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>a</i></td><td>O_WRONLY | O_CREAT | O_APPEND
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>r+</i></td><td>O_RDWR
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>w+</i></td><td>O_RDWR | O_CREAT | O_TRUNC
 </td></tr> <tr VALIGN=top><td ALIGN=center><i>a+</i></td><td>O_RDWR | O_CREAT | O_APPEND
-</td></tr> </table></dl>
+</td></tr> </table></dd></dl>
 
 <h3>fdopen()</h3>
 
@@ -80,7 +80,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 
 <dl>
 <dt>
-<dd> In this case, the file descriptor associated with the stream need not be closed if the call to <b>freopen</b>() succeeds. It is implementation-defined which changes of mode are permitted (if any), and under what circumstances.</dl>
+</dt><dd> In this case, the file descriptor associated with the stream need not be closed if the call to <b>freopen</b>() succeeds. It is implementation-defined which changes of mode are permitted (if any), and under what circumstances.</dd></dl>
  
 
  The primary use of the <b>freopen</b>() function is to change the file associated with a standard text stream (<i>stderr</i>, <i>stdin</i>, or <i>stdout</i>).
@@ -93,7 +93,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 
 <dl>
 <dt><b>EINVAL</b>
-<dd> The <i>mode</i> provided to <b>fopen</b>(), <b>fdopen</b>(), or <b>freopen</b>() was invalid.</dl>
+</dt><dd> The <i>mode</i> provided to <b>fopen</b>(), <b>fdopen</b>(), or <b>freopen</b>() was invalid.</dd></dl>
  
 
  The <b>fopen</b>(), <b>fdopen</b>(), and <b>freopen</b>() functions may also fail and set <i>errno</i> for any of the errors specified for the routine <b><a HREF="/docs/linux/man/3-malloc/">malloc</a></b>(3). 
@@ -123,13 +123,13 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
  The GNU C library allows the following extensions for the string specified in <i>mode</i>:
 <dl>
 <dt><b>c</b> (since glibc 2.3.3)
-<dd> Do not make the open operation, or subsequent read and write operations, thread cancellation points. This flag is ignored for <b>fdopen</b>().
-<dt><b>e</b> (since glibc 2.7)
-<dd> Open the file with the <b>O_CLOEXEC</b> flag. See <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2) for more information. This flag is ignored for <b>fdopen</b>().
-<dt><b>m</b> (since glibc 2.3)
-<dd> Attempt to access the file using <b><a HREF="/docs/linux/man/2-mmap/">mmap</a></b>(2), rather than I/O system calls (<b><a HREF="/docs/linux/man/2-read/">read</a></b>(2), <b><a HREF="/docs/linux/man/2-write/">write</a></b>(2)). Currently, use of <b><a HREF="/docs/linux/man/2-mmap/">mmap</a></b>(2) is attempted only for a file opened for reading.
-<dt><b>x</b>
-<dd> Open the file exclusively (like the <b>O_EXCL</b> flag of <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2)). If the file already exists, <b>fopen</b>() fails, and sets <i>errno</i> to <b>EEXIST</b>. This flag is ignored for <b>fdopen</b>().</dl>
+</dt><dd> Do not make the open operation, or subsequent read and write operations, thread cancellation points. This flag is ignored for <b>fdopen</b>().
+</dd><dt><b>e</b> (since glibc 2.7)
+</dt><dd> Open the file with the <b>O_CLOEXEC</b> flag. See <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2) for more information. This flag is ignored for <b>fdopen</b>().
+</dd><dt><b>m</b> (since glibc 2.3)
+</dt><dd> Attempt to access the file using <b><a HREF="/docs/linux/man/2-mmap/">mmap</a></b>(2), rather than I/O system calls (<b><a HREF="/docs/linux/man/2-read/">read</a></b>(2), <b><a HREF="/docs/linux/man/2-write/">write</a></b>(2)). Currently, use of <b><a HREF="/docs/linux/man/2-mmap/">mmap</a></b>(2) is attempted only for a file opened for reading.
+</dd><dt><b>x</b>
+</dt><dd> Open the file exclusively (like the <b>O_EXCL</b> flag of <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2)). If the file already exists, <b>fopen</b>() fails, and sets <i>errno</i> to <b>EEXIST</b>. This flag is ignored for <b>fdopen</b>().</dd></dl>
  
 
  In addition to the above characters, <b>fopen</b>() and <b>freopen</b>() support the following syntax in <i>mode</i>: 

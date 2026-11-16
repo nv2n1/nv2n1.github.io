@@ -11,7 +11,6 @@ std::ftell - std::ftell
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cstdio&gt;
-
 long ftell( std::FILE* stream );</code></pre> 
 Returns the current value of the file position indicator for the file stream stream. 
 If the stream is open in binary mode, the value obtained by this function is the number of bytes from the beginning of the file. 

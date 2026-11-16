@@ -11,13 +11,9 @@ std::back_inserter - std::back_inserter
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class Container &gt;                                                    (until C++20)
-
 std::back_insert_iterator&lt;Container&gt; back_inserter( Container&amp; c );
-
 template&lt; class Container &gt;                                                    (since C++20)
-
 constexpr std::back_insert_iterator&lt;Container&gt; back_inserter( Container&amp; c );</code></pre> 
 back_inserter is a convenience function template that constructs a std::back_insert_iterator for the container c with the type deduced from the type of the argument. 
 
@@ -40,14 +36,10 @@ A std::back_insert_iterator which can be used to add elements to the end of the 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::fill_n(std::back_inserter(v), 3, -1);

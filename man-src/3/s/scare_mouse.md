@@ -10,7 +10,6 @@ description: "scare_mouse – Helper for hiding the mouse pointer before drawing
 <p>scare_mouse &#8211; Helper for hiding the mouse pointer before drawing. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void scare_mouse();</code></pre>
 <h2>Description</h2>
 <p>Helper for hiding the mouse pointer prior to a drawing operation. This will temporarily get rid of the pointer, but only if that is really required (ie. the mouse is visible, and is displayed on the physical screen rather than some other memory surface, and it is not a hardware or OS cursor). The previous mouse state is stored for subsequent calls to unscare_mouse(). </p>

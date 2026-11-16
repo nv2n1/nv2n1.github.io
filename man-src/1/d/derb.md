@@ -16,13 +16,15 @@ description: "derb – disassemble a resource bundle"
 <p> It is customary to name the resource bundles by their locale name, i.e. to use a local identifier for the <i>bundle</i> filename, e.g. <code>ja_JP.res</code> for Japanese (Japan) data, or <code>root.res</code> for the root bundle. This is especially important for <code>derb</code> since the locale name is not accessible directly from the compiled resource bundle, and to know which locale to ask for when opening the bundle. <code>derb</code> will produce a file whose base name is the base name of the compiled resource file itself. If the <code>&#8211;to-stdout</code>, <code>-c</code> option is used, however, the text will be written on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version of <code>derb</code> and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display extra informative messages during execution.</p>
-<dt><code>-A</code>, <code>&#8211;suppressAliases</code></p>
-<dd> Don&#8217;t follow aliases when producing output.</p>
-<dt><code>-e</code>, <code>&#8211;encoding</code><i> encoding</i></p>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version of <code>derb</code> and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display extra informative messages during execution.</dd>
+<dt><code>-A</code>, <code>&#8211;suppressAliases</code></dt>
+<dd> Don&#8217;t follow aliases when producing output.</dd>
+<dt><code>-e</code>, <code>&#8211;encoding</code><i> encoding</i></dt>
 <dd> Set the encoding used to write output files to <i>encoding</i>. The default encoding is the invariant (subset of ASCII or EBCDIC) codepage for the system (see section <code>INVARIANT CHARACTERS</code>). The choice of the encoding does not affect the data, just their representation. Characters that cannot be represented in the <i>encoding</i> will be represented using <code>
+</dd></dl>
+</code>

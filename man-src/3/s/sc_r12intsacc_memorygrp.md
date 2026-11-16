@@ -12,9 +12,6 @@ description: "sc::R12IntsAcc_MemoryGrp –"
 <p> Inherits <code>sc::R12IntsAcc</code>.</p>
 <h3>Classes</h3>
 <pre><code>struct PairBlkInfo
-
-
-
 Public Member Functions</code></pre>
 <p> <code>R12IntsAcc_MemoryGrp</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;, int num_te_types, int ni, int nj, int nx, int ny) </p>
 <p> <code>R12IntsAcc_MemoryGrp</code> (<code>StateIn</code> &amp;) </p>

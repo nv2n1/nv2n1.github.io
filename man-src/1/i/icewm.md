@@ -25,96 +25,96 @@ description: "icewm – lightweight X11 window manager"
 <p> For most of the parts use option</p>
 <dl>
 <dt>
-<dd> <code>-h, &#8211;help</code> to see all of the options.</dl>
+</dt><dd> <code>-h, &#8211;help</code> to see all of the options.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <i>ICEWM_PRIVCFG=PATH </i></p>
 <dl>
 <dt>
-<dd> Directory to use for user private configuration files, &quot;$HOME/.icewm/&quot; by default.</dl>
+</dt><dd> Directory to use for user private configuration files, &quot;$HOME/.icewm/&quot; by default.</dd></dl>
 <p> <i>DISPLAY=NAME</i></p>
 <dl>
 <dt>
-<dd> Name of the X server to use, depends on Xlib by default. See X(1).</dl>
+</dt><dd> Name of the X server to use, depends on Xlib by default. See X(1).</dd></dl>
 <p> <i>MAIL=URL</i></p>
 <dl>
 <dt>
-<dd> Location of your mailbox. If the schema is omitted the local &quot;file&quot; schema is assumed.</dl>
+</dt><dd> Location of your mailbox. If the schema is omitted the local &quot;file&quot; schema is assumed.</dd></dl>
 <h2>FILES</h2>
 <p> IceWM looks for its configuration files in the following directories, in the following order: </p>
 <p> <i>$(HOME)/.icewm/</i></p>
 <dl>
 <dt>
-<dd> User-specific configurations</dl>
+</dt><dd> User-specific configurations</dd></dl>
 <p> <i>/etc/X11/icewm/</i></p>
 <dl>
 <dt>
-<dd> System-wide customized defaults</dl>
+</dt><dd> System-wide customized defaults</dd></dl>
 <p> <i>/usr/local/share/icewm/</i></p>
 <dl>
 <dt>
-<dd> Default installation settings</dl>
+</dt><dd> Default installation settings</dd></dl>
 <p> <code>Configuration files</code> </p>
 <p> <i>keys</i></p>
 <dl>
 <dt>
-<dd> global keybindings to launch applications (not window manager related)</dl>
+</dt><dd> global keybindings to launch applications (not window manager related)</dd></dl>
 <p> <i>menu</i></p>
 <dl>
 <dt>
-<dd> menu of startable applications; usually customized by the user</dl>
+</dt><dd> menu of startable applications; usually customized by the user</dd></dl>
 <p> <i>preferences</i></p>
 <dl>
 <dt>
-<dd> general settings &#8211; paths, colors, fonts&#8230;</dl>
+</dt><dd> general settings &#8211; paths, colors, fonts&#8230;</dd></dl>
 <p> <i>prefoverride</i></p>
 <dl>
 <dt>
-<dd> settings that should override the themes</dl>
+</dt><dd> settings that should override the themes</dd></dl>
 <p> <i>programs</i></p>
 <dl>
 <dt>
-<dd> automatically generated menu of startable applications (this should be used for wmconfig, menu or similar packages, perhaps as a part of the login or X startup sequence)</dl>
+</dt><dd> automatically generated menu of startable applications (this should be used for wmconfig, menu or similar packages, perhaps as a part of the login or X startup sequence)</dd></dl>
 <p> <i>theme</i></p>
 <dl>
 <dt>
-<dd> currently selected theme</dl>
+</dt><dd> currently selected theme</dd></dl>
 <p> <i>toolbar</i></p>
 <dl>
 <dt>
-<dd> quick launch application icons on the taskbar</dl>
+</dt><dd> quick launch application icons on the taskbar</dd></dl>
 <p> <i>winoptions</i></p>
 <dl>
 <dt>
-<dd> application window options</dl>
+</dt><dd> application window options</dd></dl>
 <p> <i>startup</i></p>
 <dl>
 <dt>
-<dd> commands to execute on IceWM startup</dl>
+</dt><dd> commands to execute on IceWM startup</dd></dl>
 <p> <i>shutdown</i></p>
 <dl>
 <dt>
-<dd> commands to execute on IceWM shutdown</dl>
+</dt><dd> commands to execute on IceWM shutdown</dd></dl>
 <p> <code>Configuration directories</code> </p>
 <p> <i>icons</i></p>
 <dl>
 <dt>
-<dd> icons used for applications (usually XPM files *_16x16.xpm and *_32x32.xpm)</dl>
+</dt><dd> icons used for applications (usually XPM files *_16x16.xpm and *_32x32.xpm)</dd></dl>
 <p> <i>ledclock</i></p>
 <dl>
 <dt>
-<dd> pictures of digits for clocks displayed in taskbar</dl>
+</dt><dd> pictures of digits for clocks displayed in taskbar</dd></dl>
 <p> <i>mailbox</i></p>
 <dl>
 <dt>
-<dd> icons used for different states of mailbox</dl>
+</dt><dd> icons used for different states of mailbox</dd></dl>
 <p> <i>taskbar</i></p>
 <dl>
 <dt>
-<dd> pictures to customize look of the taskbar</dl>
+</dt><dd> pictures to customize look of the taskbar</dd></dl>
 <p> <i>themes</i></p>
 <dl>
 <dt>
-<dd> directory to store themes</dl>
+</dt><dd> directory to store themes</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Examples of above configuration files you can find in default instalation path or in system-wide customizable defaults.</p>
 <h2>SEE ALSO</h2>

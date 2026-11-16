@@ -16,61 +16,61 @@ description: "ipv6calc – format and calculate IPv6/IPv4/MAC"
 <p>If no data is presented as command-line arguments, data is read from standard input. </p>
 <p> General options:</p>
 <dl>
-<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></p>
-<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</p>
-<dt><code>[-v|&#8211;version [-v [-v]]]</code></p>
-<dd>version information (2 optional detail levels)</p>
-<dt><code>[-v|&#8211;version -h]</code></p>
-<dd>explanation of feature tokens</p>
-<dt><code>[-V|&#8211;verbose]</code></p>
-<dd>be more verbose</p>
-<dt><code>[-h|&#8211;help|-?]</code></p>
-<dd>this online help</dl>
+<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></dt>
+<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</dd>
+<dt><code>[-v|&#8211;version [-v [-v]]]</code></dt>
+<dd>version information (2 optional detail levels)</dd>
+<dt><code>[-v|&#8211;version -h]</code></dt>
+<dd>explanation of feature tokens</dd>
+<dt><code>[-V|&#8211;verbose]</code></dt>
+<dd>be more verbose</dd>
+<dt><code>[-h|&#8211;help|-?]</code></dt>
+<dd>this online help</dd></dl>
 <p> External database options (depending on compiled-in suppport):</p>
 <dl>
-<dt><code>[&#8211;db-ip2location-disable]</code></p>
-<dd>IP2Location support disabled</p>
-<dt><code>[&#8211;db-ip2location-dir</code> <i>DIRECTORY</i><code>]</code></p>
-<dd>IP2Location database directory (default: /usr/share/IP2Location)</p>
-<dt><code>[&#8211;db-geoip-disable]</code></p>
-<dd>GeoIP support disabled</p>
-<dt><code>[&#8211;db-geoip-dir</code> <i>DIRECTORY</i><code>]</code></p>
-<dd>GeoIP database directory (default: /usr/share/GeoIP)</dl>
+<dt><code>[&#8211;db-ip2location-disable]</code></dt>
+<dd>IP2Location support disabled</dd>
+<dt><code>[&#8211;db-ip2location-dir</code> <i>DIRECTORY</i><code>]</code></dt>
+<dd>IP2Location database directory (default: /usr/share/IP2Location)</dd>
+<dt><code>[&#8211;db-geoip-disable]</code></dt>
+<dd>GeoIP support disabled</dd>
+<dt><code>[&#8211;db-geoip-dir</code> <i>DIRECTORY</i><code>]</code></dt>
+<dd>GeoIP database directory (default: /usr/share/GeoIP)</dd></dl>
 <p> Special options:</p>
 <dl>
-<dt><code>[-q|&#8211;quiet]</code></p>
-<dd>be more quiet (auto-enabled in pipe mode)</p>
-<dt><code>[-f|&#8211;flush]</code></p>
-<dd>flush each line in pipe mode</dl>
+<dt><code>[-q|&#8211;quiet]</code></dt>
+<dd>be more quiet (auto-enabled in pipe mode)</dd>
+<dt><code>[-f|&#8211;flush]</code></dt>
+<dd>flush each line in pipe mode</dd></dl>
 <p> Usage with new style options:</p>
 <dl>
-<dt><code>[&#8211;in|-I</code> <i>INPUT-TYPE</i><code>]</code></p>
-<dd>specify input type (default: autodetect)</p>
-<dt><code>[&#8211;out|-O</code> <i>OUTPUT-TYPE</i><code>]</code></p>
-<dd>specify output type (sometimes: autodetect)</p>
-<dt><code>[&#8211;action|-A</code> <i>ACTION</i><code>]</code></p>
-<dd>specify action (default: format conversion, sometimes: autodetect)</p>
-<dt><code>[&lt;format option&gt; &#8230;]</code></p>
-<dd>specify format options</p>
-<dt><code>&lt;input data&gt; [&#8230;]</code></p>
-<dd>input data</p>
+<dt><code>[&#8211;in|-I</code> <i>INPUT-TYPE</i><code>]</code></dt>
+<dd>specify input type (default: autodetect)</dd>
+<dt><code>[&#8211;out|-O</code> <i>OUTPUT-TYPE</i><code>]</code></dt>
+<dd>specify output type (sometimes: autodetect)</dd>
+<dt><code>[&#8211;action|-A</code> <i>ACTION</i><code>]</code></dt>
+<dd>specify action (default: format conversion, sometimes: autodetect)</dd>
+<dt><code>[&lt;format option&gt; &#8230;]</code></dt>
+<dd>specify format options</dd>
+<dt><code>&lt;input data&gt; [&#8230;]</code></dt>
+<dd>input data</dd>
 <dl>
 <dd>
-<dl>
-<dt>Available input types:</p>
-<dd><code>[-m] -I|&#8211;in -?|-h|&#8211;help</code></p>
-<dt>Available output types:</p>
-<dd><code>[-m] -O|&#8211;out -?|-h|&#8211;help</code></p>
-<dt>Available action types:</p>
-<dd><code>[-m] -A|&#8211;action -?|-h|&#8211;help</code></dl>
+</dd><dl>
+<dt>Available input types:</dt>
+<dd><code>[-m] -I|&#8211;in -?|-h|&#8211;help</code></dd>
+<dt>Available output types:</dt>
+<dd><code>[-m] -O|&#8211;out -?|-h|&#8211;help</code></dd>
+<dt>Available action types:</dt>
+<dd><code>[-m] -A|&#8211;action -?|-h|&#8211;help</code></dd></dl>
 </dl>
 </dl>
 <p>&nbsp;<wbr>Other usage:</p>
 <dl>
-<dt><code>&#8211;showinfo|-i [&#8211;machine_readable|-m]</code></p>
-<dd>show information about input data</p>
-<dt><code>&#8211;showinfo|-i &#8211;show_types</code></p>
-<dd>show available types on &#8216;-m&#8217;</dl>
+<dt><code>&#8211;showinfo|-i [&#8211;machine_readable|-m]</code></dt>
+<dd>show information about input data</dd>
+<dt><code>&#8211;showinfo|-i &#8211;show_types</code></dt>
+<dd>show available types on &#8216;-m&#8217;</dd></dl>
 <p> Usage with shortcut options: &lt;shortcut option&gt; [&lt;format option&gt; &#8230;] &lt;input data&gt; </p>
 <p> For more information and available format options use: &lt;shortcut option&gt; -?|-h|&#8211;help </p>
 <p> <code>-r|&#8211;addr2ip6_int</code> (-O revnibbles.int) </p>
@@ -106,7 +106,7 @@ description: "ipv6calc – format and calculate IPv6/IPv4/MAC"
 <p> ipv6calc &#8211;addr_to_uncompressed ::1 </p>
 <p> Usage of filters in pipe mode:</p>
 <dl>
-<dd>cat &lt;Apache-Logfile&gt; | ipv6calc -E ipv6.db.cc=US,iid-random</dl>
+<dd>cat &lt;Apache-Logfile&gt; | ipv6calc -E ipv6.db.cc=US,iid-random</dd></dl>
 <h2>Copyright</h2>
 <p>GPLv2</p>
 <h2>Authors</h2>

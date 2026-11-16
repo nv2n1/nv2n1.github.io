@@ -15,11 +15,11 @@ description: "guilt-fold – Fold a specified patch into the topmost applied pat
 <p> -k</p>
 <dl>
 <dt>
-<dd> Do not remove the patch file.</dl>
+</dt><dd> Do not remove the patch file.</dd></dl>
 <p> &lt;patchname&gt;</p>
 <dl>
 <dt>
-<dd> Fold this patch into the topmost applied patch. <i>patchname</i> is removed from the series, as well as from the patches directory. (A backup file is created.)</dl>
+</dt><dd> Fold this patch into the topmost applied patch. <i>patchname</i> is removed from the series, as well as from the patches directory. (A backup file is created.)</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -28,10 +28,10 @@ description: "guilt-fold – Fold a specified patch into the topmost applied pat
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

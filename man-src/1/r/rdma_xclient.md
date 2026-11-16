@@ -26,11 +26,11 @@ rdma_xclient[-s server_address][-p server_port][-c comm_type]
 
 <dl>
 <dt>-s server_address
-<dd> Specifies the address of the system that the rdma_server is running on. By default, the client will attempt to connect to the server using 127.0.0.1.
-<dt>-p server_port
-<dd> Specifies the port number that the server listens on. By default the server listens on port 7471.
-<dt>-c communication type
-<dd> Specifies the type of communication established with the server program. 'r' results in using a reliable-connected QP (the default). 'x' uses extended reliable-connected XRC QPs.</dl>
+</dt><dd> Specifies the address of the system that the rdma_server is running on. By default, the client will attempt to connect to the server using 127.0.0.1.
+</dd><dt>-p server_port
+</dt><dd> Specifies the port number that the server listens on. By default the server listens on port 7471.
+</dd><dt>-c communication type
+</dt><dd> Specifies the type of communication established with the server program. 'r' results in using a reliable-connected QP (the default). 'x' uses extended reliable-connected XRC QPs.</dd></dl>
 
 <h2>NOTES</h2>
 

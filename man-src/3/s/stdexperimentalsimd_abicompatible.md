@@ -11,13 +11,9 @@ std::experimental::simd_abi::compatible - std::experimental::simd_abi::compatibl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/simd&gt;
-
 namespace simd_abi {
-
     template &lt; class T &gt;
-
     using compatible = /*implementation-defined*/;
-
 }</code></pre> 
 compatible&lt;T&gt; is an implementation-defined alias for an ABI tag. 
 

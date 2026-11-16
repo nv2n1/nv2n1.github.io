@@ -10,10 +10,8 @@ description: "std::is_empty – std::is_empty"
 <p>std::is_empty &#8211; std::is_empty</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_empty;</code></pre>
 <p>If T is an empty type (that is, a non-union class type with no non-static data members other than bit-fields of size 0, no virtual functions, no virtual base classes, and no non-empty base classes), provides the member constant value equal true. For any other type, value is false.<br />
 If T is a non-union class type, T shall be a complete type; otherwise, the behavior is undefined. </p>
@@ -43,7 +41,6 @@ std::is_empty&lt;T&gt; and all other type traits are empty classes. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
 };
@@ -62,7 +59,6 @@ struct F {
     [[no_unique_address]] E e;
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; &quot;A &quot; &lt;&lt; std::is_empty&lt;A&gt;::value &lt;&lt; '

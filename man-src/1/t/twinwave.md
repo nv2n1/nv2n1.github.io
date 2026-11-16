@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-twinwave/"
  To run this program the standard way type:
 <dl>
 <dt>twinwave filename1.vcd filename1.sav + filename2.vcd filename2.sav
-<dd> Two synchronized viewers are then opened in one window.
-<dt>twinwave filename1.vcd filename1.sav ++ filename2.vcd filename2.sav
-<dd> Two synchronized viewers are then opened in two windows.</dl>
+</dt><dd> Two synchronized viewers are then opened in one window.
+</dd><dt>twinwave filename1.vcd filename1.sav ++ filename2.vcd filename2.sav
+</dt><dd> Two synchronized viewers are then opened in two windows.</dd></dl>
 
 <h2>LIMITATIONS</h2>
 

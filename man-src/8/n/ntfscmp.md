@@ -17,12 +17,12 @@ description: "ntfscmp – compare two NTFS filesystems and tell the differences"
 <h2>Options</h2>
 <p>Below is a summary of the options that <code>ntfscmp</code> accepts.</p>
 <dl>
-<dt><code>-P</code>, <code>&#8211;no-progress-bar</code></p>
-<dd>Don&#8217;t show progress bars.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>More informational output.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display help and exit.</dl>
+<dt><code>-P</code>, <code>&#8211;no-progress-bar</code></dt>
+<dd>Don&#8217;t show progress bars.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>More informational output.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
 <h2>Exit Codes</h2>
 <p>The exit code is 0 on success, non-zero otherwise.</p>
 <h2>Known Issues</h2>

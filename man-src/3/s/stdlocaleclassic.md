@@ -10,7 +10,6 @@ description: "std::locale::classic – std::locale::classic"
 <p>std::locale::classic &#8211; std::locale::classic</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;locale&gt;
-
     static const locale &amp;classic();</code></pre>
 <p>Obtains a reference to the C++ locale that implements the classic &quot;C&quot; locale semantics. This locale, unlike the global locale, cannot be altered. </p>
 <h2>Parameters</h2>

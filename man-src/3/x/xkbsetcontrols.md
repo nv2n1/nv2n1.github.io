@@ -11,16 +11,16 @@ description: "XkbSetControls – Copies changes to the X server based on a modif
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of controls requested</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description for controls information</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of controls requested</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description for controls information</dd></dl>
 <h2>Description</h2>
 <p>For each bit that is set in the <i>which </i> parameter, <i>XkbSetControls </i> sends the corresponding values from the <i>xkb-&gt;ctrls </i> field to the server. Valid values for <i>which </i> are any combination of the masks listed in Table 1 that have &quot;ok&quot; in the <i>which </i> column. </p>
 <p> Table 1 shows the actual values for the individual mask bits used to select controls for modification and to enable and disable the control. Note that the same mask bit is used to specify general modifications to the parameters used to configure the control (which), and to enable and disable the control (enabled_ctrls). The anomalies in the table (no &quot;ok&quot; in column) are for controls that have no configurable attributes; and for controls that are not boolean controls and therefore cannot be enabled or disabled. </p>
@@ -214,15 +214,15 @@ description: "XkbSetControls – Copies changes to the X server based on a modif
 <p> Because this is somewhat awkward if all you want to do is enable and disable controls, and not modify any of their attributes, a convenience function is also provided for this purpose, <i>XkbChangeEnabledControls.</i></p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetControls </i> function returns True when it sends the request to the X server.</p>
-<dt>False</p>
-<dd>The <i>XkbSetControls </i> function returns False when <i>xkb-&gt;ctrls </i> is NULL, the server does not support a compatible version of Xkb, or the Xkb extension has not been properly initialized.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetControls </i> function returns True when it sends the request to the X server.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetControls </i> function returns False when <i>xkb-&gt;ctrls </i> is NULL, the server does not support a compatible version of Xkb, or the Xkb extension has not been properly initialized.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbchangeenabledcontrols/">XkbChangeEnabledControls</a></code>(3), <code><a href="/docs/linux/man/3-xkbfreecontrols/">XkbFreeControls</a></code>(3)</p>

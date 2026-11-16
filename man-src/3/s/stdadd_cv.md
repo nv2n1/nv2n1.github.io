@@ -15,10 +15,7 @@ std::add_cv&lt; _Tp &gt; -
 <h3>Public Types</h3>
 
 <pre><code>typedef add_const&lt; typename
-
-
 add_volatile&lt; _Tp &gt;::type &gt;
-
 ::type type&quot;</code></pre>
 
 <h2>Detailed Description</h2>

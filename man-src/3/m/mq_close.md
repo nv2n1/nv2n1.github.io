@@ -19,8 +19,8 @@ description: "mq_close – close a message queue descriptor"
 <p>On success <code>mq_close</code>() returns 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EBADF</code></p>
-<dd>The message queue descriptor specified in <i>mqdes</i> is invalid.</dl>
+<dt><code>EBADF</code></dt>
+<dd>The message queue descriptor specified in <i>mqdes</i> is invalid.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -13,39 +13,39 @@ description: "netxml-ups – Driver for Eaton / MGE Network Management Card / Pr
 <h2>Supported Hardware</h2>
 <p>netxml-ups support all recent Eaton / MGE models which use a Network Management Card or Proxy (MGE XML/HTTP protocol based). This applies to both Eaton (previously MGE Office Protection Systems) and to MGE UPS SYSTEMS. Supported card and proxy models are: </p>
 <dl>
-<dd>&bull; NMC Minislot (Ref 66102, firmware EA or newer),</dl>
+<dd>&bull; NMC Minislot (Ref 66102, firmware EA or newer),</dd></dl>
 <dl>
-<dd>&bull; SNMP/Web Minislot card (Ref 66244)</dl>
+<dd>&bull; SNMP/Web Minislot card (Ref 66244)</dd></dl>
 <dl>
-<dd>&bull; NMC Transverse (Ref 66074),</dl>
+<dd>&bull; NMC Transverse (Ref 66074),</dd></dl>
 <dl>
-<dd>&bull; NMC &amp; Modbus/JBus (Ref 66103),</dl>
+<dd>&bull; NMC &amp; Modbus/JBus (Ref 66103),</dd></dl>
 <dl>
-<dd>&bull; Network Management Proxy,</dl>
+<dd>&bull; Network Management Proxy,</dd></dl>
 <dl>
-<dd>&bull; ePDU Monitored (newer version).</dl>
+<dd>&bull; ePDU Monitored (newer version).</dd></dl>
 <p> Older models, such as SNMP card (Ref 66062 and Ref 66045), use the SNMP protocol and should use the <code><a href="/docs/linux/man/8-snmp-ups/">snmp-ups</a></code>(8) driver with the &quot;mibs=mge&quot; parameter.</p>
 <h2>Extra Arguments</h2>
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>timeout</code>=<i>value</i></p>
 <dl>
-<dd>The timeout for connecting to and reading from the UPS. Defaults to 5 seconds. Don&#8217;t change this value unless you know exactly what you&#8217;re doing.</dl>
+<dd>The timeout for connecting to and reading from the UPS. Defaults to 5 seconds. Don&#8217;t change this value unless you know exactly what you&#8217;re doing.</dd></dl>
 <p> This value <code>must never</code> be higher than half the MAXAGE value specified in <code><a href="/docs/linux/man/5-upsd-conf/">upsd.conf</a></code>(5), otherwise you run the risk that <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) declares the driver stale while it is waiting for a connection to timeout. </p>
 <p> <code>subscribe</code></p>
 <dl>
-<dd>Connect to the NMC in subscribed mode. This allows to receive notifications and alarms more quickly, beside from the standard polling requests.</dl>
+<dd>Connect to the NMC in subscribed mode. This allows to receive notifications and alarms more quickly, beside from the standard polling requests.</dd></dl>
 <p> <code>login</code>=<i>value</i></p>
 <dl>
-<dd>Set the login value for authenticated mode. This feature also needs the <code>password</code> argument, and allows value settings in the card. This feature is not used yet.</dl>
+<dd>Set the login value for authenticated mode. This feature also needs the <code>password</code> argument, and allows value settings in the card. This feature is not used yet.</dd></dl>
 <p> <code>password</code>=<i>value</i></p>
 <dl>
-<dd>Set the password value, needed with the login for authenticated mode. This feature is not used yet.</dl>
+<dd>Set the password value, needed with the login for authenticated mode. This feature is not used yet.</dd></dl>
 <p> <code>shutdown_duration</code>=<i>value</i></p>
 <dl>
-<dd>Set the shutdown duration of the operating system, in seconds. This represents the amount of time needed by the system to operate a clean shutdown. Defaults to 120 seconds.</dl>
+<dd>Set the shutdown duration of the operating system, in seconds. This represents the amount of time needed by the system to operate a clean shutdown. Defaults to 120 seconds.</dd></dl>
 <p> <code>shutdown_timer</code>=<i>value</i></p>
 <dl>
-<dd>Set the shutdown timer, in seconds. After <i>value</i> seconds running on battery, the local system will receive a notification to shutdown. Defaults to &quot;none&quot; (disabled).</dl>
+<dd>Set the shutdown timer, in seconds. After <i>value</i> seconds running on battery, the local system will receive a notification to shutdown. Defaults to &quot;none&quot; (disabled).</dd></dl>
 <h2>Implementation</h2>
 <p>The hostname of the UPS is specified with the &quot;port&quot; value in <code>ups.conf</code>, i.e.: </p>
 <dl>
@@ -53,7 +53,7 @@ description: "netxml-ups – Driver for Eaton / MGE Network Management Card / Pr
 <pre>[mgexml]
  driver = netxml-ups
  port = <a rel="nofollow" href="http://netxml-ups.example.com:80">http://netxml-ups.example.com:80</a></pre>
-</dl>
+</dd></dl>
 <p> Specifying the method to connect to the UPS (http, https) is mandatory. If the port is equal to the default for the method specified (80 for http, 443 for https) it may be omitted. </p>
 <p> In order not to overload older NMCs by polling them too frequently, it is recommended to increase the &quot;pollinterval&quot; (see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)) and <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5)) to at least 5 seconds.</p>
 <h2>Known Issues</h2>

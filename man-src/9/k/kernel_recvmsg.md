@@ -15,27 +15,27 @@ kernel_recvmsg - Receive a message from a socket (kernel space)
 <h2>Arguments</h2>
 
 <i>sock</i>
-<dl><dd><dd>The socket to receive the message from</dl>
+<dl><dd></dd><dd>The socket to receive the message from</dd></dl>
  
 
  <i>msg</i>
-<dl><dd>Received message</dl>
+<dl><dd>Received message</dd></dl>
  
 
  <i>vec</i>
-<dl><dd>Input s/g array for message data</dl>
+<dl><dd>Input s/g array for message data</dd></dl>
  
 
  <i>num</i>
-<dl><dd>Size of input s/g array</dl>
+<dl><dd>Size of input s/g array</dd></dl>
  
 
  <i>size</i>
-<dl><dd>Number of bytes to read</dl>
+<dl><dd>Number of bytes to read</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>Message flags (MSG_DONTWAIT, etc...)</dl>
+<dl><dd>Message flags (MSG_DONTWAIT, etc...)</dd></dl>
 
 <h2>Description</h2>
 

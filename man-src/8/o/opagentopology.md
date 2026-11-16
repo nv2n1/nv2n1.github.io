@@ -33,167 +33,85 @@ description: "opagentopology Generates sample topology verification XML. Provide
 <h2>Example</h2>
 <p>When run against the supplied topology input files, opagentopology produces: </p>
 <pre><code>#8217lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-
 #8217lt;Topology&gt;
-
 #8217lt;LinkSummary&gt;
-
 #8217lt;Link&gt;
-
 #8217lt;Rate&gt;25g&lt;/Rate&gt;
-
 #8217lt;MTU&gt;2048&lt;/MTU&gt;
-
 #8217lt;Internal&gt;0&lt;/Internal&gt;
-
 #8217lt;LinkDetails&gt;IO Server Link&lt;/LinkDetails&gt;
-
 #8217lt;Cable&gt;
-
 #8217lt;CableLength&gt;11m&lt;/CableLength&gt;
-
 #8217lt;CableLabel&gt;S4567&lt;/CableLabel&gt;
-
 #8217lt;CableDetails&gt;cable model 456&lt;/CableDetails&gt;
-
 #8217lt;/Cable&gt;
-
 #8217lt;Port&gt;
-
 #8217lt;NodeGUID&gt;0x0002c9020020e004&lt;/NodeGUID&gt;
-
 #8217lt;PortNum&gt;1&lt;/PortNum&gt;
-
 #8217lt;NodeDesc&gt;bender HFI-1&lt;/NodeDesc&gt;
-
 #8217lt;PortGUID&gt;0x0002c9020020e004&lt;/PortGUID&gt;
-
 #8217lt;NodeType&gt;FI&lt;/NodeType&gt;
-
 #8217lt;PortDetails&gt;Some info about port&lt;/PortDetails&gt;
-
 #8217lt;/Port&gt;
-
 #8217lt;Port&gt;
-
 #8217lt;NodeGUID&gt;0x0011750007000df6&lt;/NodeGUID&gt;
-
 #8217lt;PortNum&gt;7&lt;/PortNum&gt;
-
 #8217lt;NodeDesc&gt;Switch 1234 Leaf 4&lt;/NodeDesc&gt;
-
 #8217lt;NodeType&gt;SW&lt;/NodeType&gt;
-
 #8217lt;/Port&gt;
-
 #8217lt;/Link&gt;
-
 #8217lt;Link&gt;
-
 #8217lt;Rate&gt;25g&lt;/Rate&gt;
-
 #8217lt;Internal&gt;0&lt;/Internal&gt;
-
 #8217lt;Cable&gt;
-
 #8217lt;/Cable&gt;
-
 #8217lt;Port&gt;
-
 #8217lt;NodeGUID&gt;0x0002c9020025a678&lt;/NodeGUID&gt;
-
 #8217lt;PortNum&gt;1&lt;/PortNum&gt;
-
 #8217lt;NodeDesc&gt;mindy2 HFI-1&lt;/NodeDesc&gt;
-
 #8217lt;NodeType&gt;FI&lt;/NodeType&gt;
-
 #8217lt;/Port&gt;
-
 #8217lt;Port&gt;
-
 #8217lt;NodeGUID&gt;0x0011750007000e6d&lt;/NodeGUID&gt;
-
 #8217lt;PortNum&gt;4&lt;/PortNum&gt;
-
 #8217lt;NodeDesc&gt;Switch 2345 Leaf 5&lt;/NodeDesc&gt;
-
 #8217lt;NodeType&gt;SW&lt;/NodeType&gt;
-
 #8217lt;/Port&gt;
-
 #8217lt;/Link&gt;
-
 #8217lt;/LinkSummary&gt;
-
 #8217lt;Nodes&gt;
-
 #8217lt;FIs&gt;
-
 #8217lt;Node&gt;
-
 #8217lt;NodeGUID&gt;0x0002c9020020e004&lt;/NodeGUID&gt;
-
 #8217lt;NodeDesc&gt;bender HFI-1&lt;/NodeDesc&gt;
-
 #8217lt;NodeDetails&gt;More details about node&lt;/NodeDetails&gt;
-
 #8217lt;/Node&gt;
-
 #8217lt;Node&gt;
-
 #8217lt;NodeGUID&gt;0x0002c9020025a678&lt;/NodeGUID&gt;
-
 #8217lt;NodeDesc&gt;mindy2 HFI-1&lt;/NodeDesc&gt;
-
 #8217lt;NodeDetails&gt;Node details&lt;/NodeDetails&gt;
-
 #8217lt;/Node&gt;
-
 #8217lt;/FIs&gt;
-
 #8217lt;Switches&gt;
-
 #8217lt;Node&gt;
-
 #8217lt;NodeGUID&gt;0x0011750007000df6&lt;/NodeGUID&gt;
-
 #8217lt;NodeDesc&gt;Switch 1234 Leaf 4&lt;/NodeDesc&gt;
-
 #8217lt;/Node&gt;
-
 #8217lt;Node&gt;
-
 #8217lt;NodeGUID&gt;0x0011750007000e6d&lt;/NodeGUID&gt;
-
 #8217lt;NodeDesc&gt;Switch 2345 Leaf 5&lt;/NodeDesc&gt;
-
 #8217lt;/Node&gt;
-
 #8217lt;/Switches&gt;
-
 #8217lt;SMs&gt;
-
 #8217lt;SM&gt;
-
 #8217lt;NodeGUID&gt;0x0002c9020025a678&lt;/NodeGUID&gt;
-
 #8217lt;PortNum&gt;1&lt;/PortNum&gt;
-
 #8217lt;NodeDesc&gt;mindy2 HFI-1&lt;/NodeDesc&gt;
-
 #8217lt;PortGUID&gt;0x0011750007000e6d&lt;/PortGUID&gt;
-
 #8217lt;NodeType&gt;FI&lt;/NodeType&gt;
-
 #8217lt;SMDetails&gt;details about SM&lt;/SMDetails&gt;
-
 #8217lt;/SM&gt;
-
 #8217lt;/SMs&gt;
-
 #8217lt;/Nodes&gt;
-
 #8217lt;/Topology&gt;
-
 </code></pre>

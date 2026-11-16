@@ -12,28 +12,28 @@ description: "rlm_always – FreeRADIUS Module"
 <p>The <i>rlm_always</i> module provides a simple way to &quot;always&quot; return a value during the processing of a configuration section. The module does nothing other than return a configured value. </p>
 <p> The main configuration item to be aware of is:</p>
 <dl>
-<dt>rcode</p>
-<dd>This module will always return with the rcode specified. The default, if none specified is: fail (RLM_MODULE_FAIL).</dl>
+<dt>rcode</dt>
+<dd>This module will always return with the rcode specified. The default, if none specified is: fail (RLM_MODULE_FAIL).</dd></dl>
 <p> The valid options are:</p>
 <dl>
-<dt>reject</p>
-<dd>RLM_MODULE_REJECT</p>
-<dt>fail</p>
-<dd>RLM_MODULE_FAIL</p>
-<dt>ok</p>
-<dd>RLM_MODULE_OK</p>
-<dt>handled</p>
-<dd>RLM_MODULE_HANDLED</p>
-<dt>invalid</p>
-<dd>RLM_MODULE_INVALID</p>
-<dt>userlock</p>
-<dd>RLM_MODULE_USERLOCK</p>
-<dt>notfound</p>
-<dd>RLM_MODULE_NOTFOUND</p>
-<dt>noop</p>
-<dd>RLM_MODULE_NOOP</p>
-<dt>updated</p>
-<dd>RLM_MODULE_UPDATED</dl>
+<dt>reject</dt>
+<dd>RLM_MODULE_REJECT</dd>
+<dt>fail</dt>
+<dd>RLM_MODULE_FAIL</dd>
+<dt>ok</dt>
+<dd>RLM_MODULE_OK</dd>
+<dt>handled</dt>
+<dd>RLM_MODULE_HANDLED</dd>
+<dt>invalid</dt>
+<dd>RLM_MODULE_INVALID</dd>
+<dt>userlock</dt>
+<dd>RLM_MODULE_USERLOCK</dd>
+<dt>notfound</dt>
+<dd>RLM_MODULE_NOTFOUND</dd>
+<dt>noop</dt>
+<dd>RLM_MODULE_NOOP</dd>
+<dt>updated</dt>
+<dd>RLM_MODULE_UPDATED</dd></dl>
 <h2>Configuration</h2>
 <dl>
 <dd>
@@ -66,7 +66,7 @@ authorize {
  ...
 <br>
 }</pre>
-</dl>
+</dd></dl>
 <h2>Sections</h2>
 <p><code>authorization,</code> <code>authentication,</code> <code>postauthentication,</code> <code>preaccounting,</code> <code>accounting,</code> <code>preproxy,</code> <code>postproxy</code></p>
 <h2>Files</h2>

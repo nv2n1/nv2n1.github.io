@@ -120,40 +120,40 @@ description: "pamscale – scale a Netpbm image"
 <p> <code>The filter functions</code> </p>
 <p> Here is a list of the function names you can specify for the <code>-filter</code> option. For most of them, you&#8217;re on your own to figure out just what the function is and what kind of scaling it does. These are common functions from mathematics. </p>
 <dl>
-<dt>point</p>
-<dd> The graph of this is a single point at X=0, Y=1. </p>
-<dt>box</p>
-<dd> The graph of this is a rectangle sitting on the X axis and centered on the Y axis with height 1 and base 1. </p>
-<dt>triangle</p>
-<dd> The graph of this is an isosceles triangle sitting on the X axis and centered on the Y axis with height 1 and base 2. </p>
-<dt>quadratic</p>
+<dt>point</dt>
+<dd> The graph of this is a single point at X=0, Y=1. </dd>
+<dt>box</dt>
+<dd> The graph of this is a rectangle sitting on the X axis and centered on the Y axis with height 1 and base 1. </dd>
+<dt>triangle</dt>
+<dd> The graph of this is an isosceles triangle sitting on the X axis and centered on the Y axis with height 1 and base 2. </dd>
+<dt>quadratic</dt>
 <dd>
-<dt>cubic</p>
+</dd><dt>cubic</dt>
 <dd>
-<dt>catrom</p>
+</dd><dt>catrom</dt>
 <dd>
-<dt>mitchell</p>
+</dd><dt>mitchell</dt>
 <dd>
-<dt>gauss</p>
+</dd><dt>gauss</dt>
 <dd>
-<dt>sinc</p>
+</dd><dt>sinc</dt>
 <dd>
-<dt>bessel</p>
+</dd><dt>bessel</dt>
 <dd>
-<dt>hanning</p>
+</dd><dt>hanning</dt>
 <dd>
-<dt>hamming</p>
+</dd><dt>hamming</dt>
 <dd>
-<dt>blackman</p>
+</dd><dt>blackman</dt>
 <dd>
-<dt>kaiser</p>
+</dd><dt>kaiser</dt>
 <dd>
-<dt>normal</p>
+</dd><dt>normal</dt>
 <dd>
-<dt>hermite</p>
+</dd><dt>hermite</dt>
 <dd>
-<dt>lanczos</p>
-<dd> Not documented </p>
+</dd><dt>lanczos</dt>
+<dd> Not documented </dd>
 </dl>
 <h3>Linear vs Gamma-adjusted</h3>
 <p> The pixel mixing scaling method described above involves intensities of pixels (more precisely, it involves individual intensities of primary color components of pixels). But the PNM and PNM-equivalent PAM image formats represent intensities with gamma-adjusted numbers that are not linearly proportional to intensity. So <code>pamscale</code>, by default, performs a calculation on each sample read from its input and each sample written to its output to convert between these gamma-adjusted numbers and internal intensity-proportional numbers. </p>

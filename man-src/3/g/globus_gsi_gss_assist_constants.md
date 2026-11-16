@@ -16,46 +16,46 @@ description: "GSI GSS Assist Constants –"
 <p> GSI GSS Assist Error codes. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_SUCCESS </i></p>
-<dd> Success.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_ARGUMENTS </i></p>
-<dd> No user entry in gridmap file.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_USER_ID_DOESNT_MATCH </i></p>
-<dd> Error user ID doesn&#8217;t match.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_IN_GRIDMAP_NO_USER_ENTRY </i></p>
-<dd> Error with arguments passed to function.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_GRIDMAP </i></p>
-<dd> Error querying gridmap file.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_INVALID_GRIDMAP_FORMAT </i></p>
-<dd> Invalid gridmap file format.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_ERRNO </i></p>
-<dd> System Error.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_INIT </i></p>
-<dd> Error during context initialization.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_WRAP </i></p>
-<dd> Error during message wrap.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_TOKEN </i></p>
-<dd> Error with token.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_EXPORTING_CONTEXT </i></p>
-<dd> Error exporting context.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_IMPORTING_CONTEXT </i></p>
-<dd> Error importing context.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_INITIALIZING_CALLOUT_HANDLE </i></p>
-<dd> Error initializing callout handle.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_CALLOUT_CONFIG </i></p>
-<dd> Error reading callout configuration.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_CALLOUT_ERROR </i></p>
-<dd> Error invoking callout.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_GSSAPI_ERROR </i></p>
-<dd> A GSSAPI returned an error.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_GRIDMAP_LOOKUP_FAILED </i></p>
-<dd> Gridmap lookup failure.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_BUFFER_TOO_SMALL </i></p>
-<dd> Caller provided insufficient buffer space for local identity.</p>
-<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_CANONICALIZING_HOSTNAME </i></p>
-<dd> Failed to obtain canonical host name.</dl>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_SUCCESS </i></dt>
+<dd> Success.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_ARGUMENTS </i></dt>
+<dd> No user entry in gridmap file.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_USER_ID_DOESNT_MATCH </i></dt>
+<dd> Error user ID doesn&#8217;t match.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_IN_GRIDMAP_NO_USER_ENTRY </i></dt>
+<dd> Error with arguments passed to function.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_GRIDMAP </i></dt>
+<dd> Error querying gridmap file.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_INVALID_GRIDMAP_FORMAT </i></dt>
+<dd> Invalid gridmap file format.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_ERRNO </i></dt>
+<dd> System Error.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_INIT </i></dt>
+<dd> Error during context initialization.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_WRAP </i></dt>
+<dd> Error during message wrap.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_TOKEN </i></dt>
+<dd> Error with token.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_EXPORTING_CONTEXT </i></dt>
+<dd> Error exporting context.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_IMPORTING_CONTEXT </i></dt>
+<dd> Error importing context.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_INITIALIZING_CALLOUT_HANDLE </i></dt>
+<dd> Error initializing callout handle.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_CALLOUT_CONFIG </i></dt>
+<dd> Error reading callout configuration.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_CALLOUT_ERROR </i></dt>
+<dd> Error invoking callout.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_GSSAPI_ERROR </i></dt>
+<dd> A GSSAPI returned an error.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_GRIDMAP_LOOKUP_FAILED </i></dt>
+<dd> Gridmap lookup failure.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_BUFFER_TOO_SMALL </i></dt>
+<dd> Caller provided insufficient buffer space for local identity.</dd>
+<dt><i>GLOBUS_GSI_GSS_ASSIST_ERROR_CANONICALIZING_HOSTNAME </i></dt>
+<dd> Failed to obtain canonical host name.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus gss assist from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAF">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAF">Author</a></dt>
+<dd></dd></dl>

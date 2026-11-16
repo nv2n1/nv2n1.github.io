@@ -11,7 +11,6 @@ std::fsetpos - std::fsetpos
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fsetpos(std::FILE *stream, const std::fpos_t *pos);</code></pre> 
 Sets the file position indicator and the multibyte parsing state (if any) for the C file stream stream according to the value pointed to by pos. 
 Besides establishing new parse state and position, a call to this function undoes the effects of std::ungetc and clears the end-of-file state, if it is set. 

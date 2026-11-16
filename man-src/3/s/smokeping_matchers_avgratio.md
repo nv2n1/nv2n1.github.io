@@ -13,13 +13,13 @@ Smokeping::matchers::Avgratio - detect changes in average median latency
 
  <pre> type = matcher
  pattern = Avgratio(historic=&gt;a,current=&gt;b,comparator=&gt;o,percentage=&gt;p)</pre><dl COMPACT><dt>historic
-<dd>The number of median values to use for building the 'historic' average.
-<dt>current
-<dd>The number of median values to use for building the 'current' average.
-<dt>comparator
-<dd>Which comparison operator should be used to compare current/historic with percentage.
-<dt>percentage
-<dd>Right hand side of the comparison.</dl>
+</dt><dd>The number of median values to use for building the 'historic' average.
+</dd><dt>current
+</dt><dd>The number of median values to use for building the 'current' average.
+</dd><dt>comparator
+</dt><dd>Which comparison operator should be used to compare current/historic with percentage.
+</dd><dt>percentage
+</dt><dd>Right hand side of the comparison.</dd></dl>
  
 
  <pre> old &lt;--- historic ---&gt;&lt;--- current ---&gt; now</pre><h2>Example</h2>Take build the average median latency over 10 samples, use this to divide the current average latency built over 2 samples and check if it is bigger than 150%. 

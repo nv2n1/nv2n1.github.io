@@ -33,10 +33,10 @@ description: "debconf-set-selections – insert new values into the debconf data
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;verbose</code>, <code>-v</code></p>
-<dd> verbose output</p>
-<dt><code>&#8211;checkonly</code>, <code>-c</code></p>
-<dd> only check the input file format, do not save changes to database</dl>
+<dt><code>&#8211;verbose</code>, <code>-v</code></dt>
+<dd> verbose output</dd>
+<dt><code>&#8211;checkonly</code>, <code>-c</code></dt>
+<dd> only check the input file format, do not save changes to database</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-debconf-get-selections/">debconf-get-selections</a></code>(1) (available in the debconf-utils package)</p>
 <h2>AUTHOR</h2>

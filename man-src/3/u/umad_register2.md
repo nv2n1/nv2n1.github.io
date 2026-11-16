@@ -10,7 +10,6 @@ description: "umad_register2 – register the specified management class and ver
 <p>umad_register2 &#8211; register the specified management class and version for port</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_register2(int port_fd, struct umad_reg_attr *attr, uint32_t *agent_id);</code></pre>
 <h2>Description</h2>
 <p><code>umad_register2()</code> registers for a MAD agent using the provided registration attributes <i>port_fd</i> the port on which to register the agent <i>attr</i> The registration attributes as defined by the structure passed. See below for details of this structure. <i>agent_id</i> returned on success. agent_id identifies the kernel MAD agent a MAD is received by or to be sent by. agent_id is returned in the umad header &quot;struct ib_user_mad&quot; on recv and specified in umad_send when sending. </p>
@@ -51,5 +50,5 @@ indicate which rmpp_version to use.</pre>
 <p><code><a href="/docs/linux/man/3-umad_unregister/">umad_unregister</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Ira Weiny &lt;ira.weiny [at] intel.com&gt;</p>
-<dd></dl>
+<dt>Ira Weiny &lt;ira.weiny [at] intel.com&gt;</dt>
+<dd></dd></dl>

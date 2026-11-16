@@ -15,15 +15,15 @@ inode_init_owner - Init uid,gid,mode for new inode according to posix standards
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>New inode</dl>
+<dl><dd></dd><dd>New inode</dd></dl>
  
 
  <i>dir</i>
-<dl><dd>Directory inode</dl>
+<dl><dd>Directory inode</dd></dl>
  
 
  <i>mode</i>
-<dl><dd>mode of the new inode</dl>
+<dl><dd>mode of the new inode</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -13,16 +13,16 @@ description: "vpMultMatrix – multiply the current transformation matrix by ano
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpMultMatrix(</code><i>vpc, m</i><code>)</code></p>
+<dt> <code>vpMultMatrix(</code><i>vpc, m</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>vpMatrix4 <i>m;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>vpMatrix4 <i>m;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>m</i></p>
-<dd>Input matrix.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>m</i></dt>
+<dd>Input matrix.</dd></dl>
 <h2>Description</h2>
 <p><code>vpMultMatrix</code> is used to multiply the current transformation matrix by an arbitrary 4-by-4 transformation matrix. Use <code>vpCurrentMatrix</code> to set the current transformation matrix. By default, the matrix is post-multiplied (N = N*<i>m</i> where N is the current matrix and <i>m</i> is the argument to <code>vpMultMatrix</code>). The VP_CONCAT_MODE option to <code>vpSeti</code> can be used to select pre-multiplication.</p>
 <h2>State Variables</h2>

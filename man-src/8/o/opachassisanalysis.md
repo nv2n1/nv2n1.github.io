@@ -11,40 +11,40 @@ description: "opachassisanalysis"
 <p> <code>(Switch)</code> Performs analysis of the chassis. </p>
 <p> The opachassisanalysis tool checks the following for the Intel(R) Omni-Path Fabric Chassis:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Chassis configuration (as reported by the chassis commands specified in <code>FF_CHASSIS_CMDS</code> in opafastfabric.conf).</p>
-<dt>&bull;</p>
-<dd>Chassis health (as reported by the chassis command specified in <code>FF_CHASSIS_HEALTH</code> in opafastfabric.conf).</dl>
+<dt>&bull;</dt>
+<dd>Chassis configuration (as reported by the chassis commands specified in <code>FF_CHASSIS_CMDS</code> in opafastfabric.conf).</dd>
+<dt>&bull;</dt>
+<dd>Chassis health (as reported by the chassis command specified in <code>FF_CHASSIS_HEALTH</code> in opafastfabric.conf).</dd></dl>
 <h2>Syntax</h2>
 <p>opachassisanalysis [-b|-e] [-s] [-d <i>dir</i>]<br />
  [-F <i>chassisfile</i>] [-H#8217#160;&#8217;<i>chassis</i>&#8216;]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text.</p>
-<dt>-b</p>
-<dd>Baseline mode. Default is the compare/check mode.</p>
-<dt>-e</p>
-<dd>Evaluates health only. Default is the compare/check mode.</p>
-<dt>-s</p>
-<dd>Saves history of failures (errors/differences).</p>
-<dt>-d <i>dir</i></p>
-<dd>Top-level directory for saving baseline and history of failed checks. Default = /var/lib/opa-ff/analysis</p>
-<dt>-F <i>chassisfile</i></p>
-<dd>File with the chassis in the cluster. Default = /etc/sysconfig/opa/chassis</p>
-<dt>-H &#8216;<i>chassis</i>&#8216;</p>
-<dd>List of chassis on which to execute the command.</dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text.</dd>
+<dt>-b</dt>
+<dd>Baseline mode. Default is the compare/check mode.</dd>
+<dt>-e</dt>
+<dd>Evaluates health only. Default is the compare/check mode.</dd>
+<dt>-s</dt>
+<dd>Saves history of failures (errors/differences).</dd>
+<dt>-d <i>dir</i></dt>
+<dd>Top-level directory for saving baseline and history of failed checks. Default = /var/lib/opa-ff/analysis</dd>
+<dt>-F <i>chassisfile</i></dt>
+<dd>File with the chassis in the cluster. Default = /etc/sysconfig/opa/chassis</dd>
+<dt>-H &#8216;<i>chassis</i>&#8216;</dt>
+<dd>List of chassis on which to execute the command.</dd></dl>
 <h2>Example</h2>
 <p>opachassisanalysis</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>CHASSIS</code></p>
-<dd>List of chassis, used if -F and -H options are not supplied.</p>
-<dt><code>CHASSIS_FILE</code></p>
-<dd>File containing list of chassis, used if -F and -H options are not supplied.</p>
-<dt><code>FF_ANALYSIS_DIR</code></p>
-<dd>Top-level directory for baselines and failed health checks.</dl>
+<dt><code>CHASSIS</code></dt>
+<dd>List of chassis, used if -F and -H options are not supplied.</dd>
+<dt><code>CHASSIS_FILE</code></dt>
+<dd>File containing list of chassis, used if -F and -H options are not supplied.</dd>
+<dt><code>FF_ANALYSIS_DIR</code></dt>
+<dd>Top-level directory for baselines and failed health checks.</dd></dl>
 <h2>Details</h2>
 <p>Intel recommends that you set up SSH keys for chassis (see <i>opasetupssh</i> ). If SSH keys are not set up, all chassis must be configured with the same admin password and the password must be kept in the /etc/sysconfig/opa/opafastfabric.conf configuration file. </p>
 <p> The default set of <code>FF_CHASSIS_CMDS</code> is:showInventory fwVersion showNodeDesc timeZoneConf timeDSTConf<br />
@@ -56,114 +56,114 @@ description: "opachassisanalysis"
 <p> The opachassisanalysis tool generates files such as the following within FF_ANALYSIS_DIR. The actual file names reflect the individual chassis commands that have been configured through the FF_CHASSIS_HEALTH and FF_CHASSIS_CMDS parameters: </p>
 <p> <code>Health Check</code> </p>
 <dl>
-<dt>&bull;</p>
-<dd>latest/chassis.hwCheck Output of hwCheck command for all selected chassis </p>
+<dt>&bull;</dt>
+<dd>latest/chassis.hwCheck Output of hwCheck command for all selected chassis </dd>
 </dl>
 <p> <code>Baseline:</code> During a baseline run, the following files are also created in <i>FF_ANALYSIS_DIR</i> /latest.</p>
 <dl>
-<dt>&bull;</p>
-<dd>baseline/chassis.fwVersion Output of fwVersion command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.showChassisIpAddr Output of the showChassisIpAddr. command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.showDefaultRoute Output of the showDefaultRoute command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.showNodeDesc Output of the showNodeDesc command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.showInventory Output of the showInventory command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.snmpCommunityConf Output of the snmpCommunityConf command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.snmpTargetAddr Output of the snmpTargetAddr command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.timeDSTConf Output of the timeDSTConf command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>baseline/chassis.timeZoneConf Output of the timeZoneConf command for all selected chassis. </p>
+<dt>&bull;</dt>
+<dd>baseline/chassis.fwVersion Output of fwVersion command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.showChassisIpAddr Output of the showChassisIpAddr. command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.showDefaultRoute Output of the showDefaultRoute command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.showNodeDesc Output of the showNodeDesc command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.showInventory Output of the showInventory command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.snmpCommunityConf Output of the snmpCommunityConf command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.snmpTargetAddr Output of the snmpTargetAddr command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.timeDSTConf Output of the timeDSTConf command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>baseline/chassis.timeZoneConf Output of the timeZoneConf command for all selected chassis. </dd>
 </dl>
 <p> <code>Full Analysis:</code> The following .diff files are only created if differences are detected.</p>
 <dl>
-<dt>&bull;</p>
-<dd>latest/chassis.hwCheck Output of the hwCheck command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.fwVersion Output of the fwVersion command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.fwVersion.diff diff of the baseline and latest fwVersion. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showChassisIpAddr Output of the showChassisIpAddr command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showChassisIpAddr.diff diff of baseline and latest showChassisIpAddr. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showDefaultRoute Output of the showDefaultRoute command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showDefaultRoute.diff diff of the baseline and the latest showDefaultRoute. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showNodeDesc Output of the showNodeDesc command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showNodeDesc.diff diff of the baseline and latest showNodeDesc. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showInventory Output of the showInventory command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.showInventory.diff diff of the baseline and latest showInventory. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.snmpCommunityConf Output of the snmpCommunityConf command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.snmpCommunityConf.diff diff of the baseline and latest snmpCommunityConf. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.snmpTargetAddr Output of the snmpTargetAddr command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.snmpTargetAddr.diff diff of the baseline and latest snmpTargetAddr. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.timeDSTConf Output of the timeDSTConf command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.timeDSTConf.diff diff of the baseline and latest timeDSTConf. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.timeZoneConf Output of the timeZoneConf command for all selected chassis. </p>
-<dt>&bull;</p>
-<dd>latest/chassis.timeZoneConf.diff diff of the baseline and latest timeZonfConf. </p>
+<dt>&bull;</dt>
+<dd>latest/chassis.hwCheck Output of the hwCheck command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.fwVersion Output of the fwVersion command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.fwVersion.diff diff of the baseline and latest fwVersion. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showChassisIpAddr Output of the showChassisIpAddr command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showChassisIpAddr.diff diff of baseline and latest showChassisIpAddr. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showDefaultRoute Output of the showDefaultRoute command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showDefaultRoute.diff diff of the baseline and the latest showDefaultRoute. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showNodeDesc Output of the showNodeDesc command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showNodeDesc.diff diff of the baseline and latest showNodeDesc. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showInventory Output of the showInventory command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.showInventory.diff diff of the baseline and latest showInventory. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.snmpCommunityConf Output of the snmpCommunityConf command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.snmpCommunityConf.diff diff of the baseline and latest snmpCommunityConf. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.snmpTargetAddr Output of the snmpTargetAddr command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.snmpTargetAddr.diff diff of the baseline and latest snmpTargetAddr. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.timeDSTConf Output of the timeDSTConf command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.timeDSTConf.diff diff of the baseline and latest timeDSTConf. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.timeZoneConf Output of the timeZoneConf command for all selected chassis. </dd>
+<dt>&bull;</dt>
+<dd>latest/chassis.timeZoneConf.diff diff of the baseline and latest timeZonfConf. </dd>
 </dl>
 <p> If the -s option is used and failures are detected, files related to the checks that failed are also copied to a time-stamped directory name under FF_ANALYSIS_DIR.</p>
 <h2>Chassis Items Checked Against the Baseline</h2>
 <p>Based upon showInventory :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Addition/removal of Chassis FRUsReplacement is only checked for FRUs that showInventory displays the serial number. </p>
-<dt>&bull;</p>
-<dd>Removal of redundant FRUs (spines, power supply, fan)</dl>
+<dt>&bull;</dt>
+<dd>Addition/removal of Chassis FRUsReplacement is only checked for FRUs that showInventory displays the serial number. </dd>
+<dt>&bull;</dt>
+<dd>Removal of redundant FRUs (spines, power supply, fan)</dd></dl>
 <p> Based upon fwVersion :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Changes to primary or alternate FW versions installed in cards in chassis.</dl>
+<dt>&bull;</dt>
+<dd>Changes to primary or alternate FW versions installed in cards in chassis.</dd></dl>
 <p> Based upon showNodeDesc :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Changes to configured node description for chassis. Note changes detected here would also be detected in fabric level analysis.</dl>
+<dt>&bull;</dt>
+<dd>Changes to configured node description for chassis. Note changes detected here would also be detected in fabric level analysis.</dd></dl>
 <p> Based upon timeZoneConf and timeDSTConf :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Changes to the chassis time zone and daylight savings time configuration.</dl>
+<dt>&bull;</dt>
+<dd>Changes to the chassis time zone and daylight savings time configuration.</dd></dl>
 <p> Based upon snmpCommunityConf and snmpTargetAddr :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Changes to SNMP persistent configuration within the chassis.</dl>
+<dt>&bull;</dt>
+<dd>Changes to SNMP persistent configuration within the chassis.</dd></dl>
 <p> The following Chassis items are not checked against baseline:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Changes to the chassis configuration on the management LAN (for example, showChassisIpAddr, showDefaultRoute). Such changes typically result in the chassis not responding on the LAN at the expected address that is detected by failures that perform other chassis checks.</dl>
+<dt>&bull;</dt>
+<dd>Changes to the chassis configuration on the management LAN (for example, showChassisIpAddr, showDefaultRoute). Such changes typically result in the chassis not responding on the LAN at the expected address that is detected by failures that perform other chassis checks.</dd></dl>
 <h2>Chassis Items Also Checked During Health Check</h2>
 <p>Based upon hwCheck :</p>
 <dl>
-<dt>&bull;</p>
-<dd>Overall health of FRUs in chassis:</p>
-<dt>&bull;</p>
-<dd>Status of Fans in chassis</p>
-<dt>&bull;</p>
-<dd>Status of Power Supplies in chassis</p>
-<dt>&bull;</p>
-<dd>Temp/Voltage for each card</p>
-<dt>&bull;</p>
-<dd>Presence of adequate power/cooling of FRUs</p>
-<dt>&bull;</p>
-<dd>Presence of N+1 power/cooling of FRUs</p>
-<dt>&bull;</p>
-<dd>Presence of Redundant AC input </p>
+<dt>&bull;</dt>
+<dd>Overall health of FRUs in chassis:</dd>
+<dt>&bull;</dt>
+<dd>Status of Fans in chassis</dd>
+<dt>&bull;</dt>
+<dd>Status of Power Supplies in chassis</dd>
+<dt>&bull;</dt>
+<dd>Temp/Voltage for each card</dd>
+<dt>&bull;</dt>
+<dd>Presence of adequate power/cooling of FRUs</dd>
+<dt>&bull;</dt>
+<dd>Presence of N+1 power/cooling of FRUs</dd>
+<dt>&bull;</dt>
+<dd>Presence of Redundant AC input </dd>
 </dl>

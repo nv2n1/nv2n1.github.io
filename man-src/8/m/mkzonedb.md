@@ -16,19 +16,19 @@ description: "mkzonedb – Utility create a zone file for isdnlog"
 <p> This utility is really only used during the building of the isdnlog-data package, but it may be useful for those who want to create their own custom tables.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r</code><i> zonefile</i></p>
-<dd>the text file with the zone information. Use &quot;-&quot; for standard input. </p>
-<dt><code>-d</code><i> database</i></p>
-<dd>the output database filename </p>
-<dt><code>-v</code></p>
-<dd>verbose mode </p>
-<dt><code>-V</code></p>
-<dd>show version information, and quit (don&#8217;t do anything) </p>
-<dt><code>-o</code><i> Oz</i></p>
-<dd>Use &quot;Oz&quot; area zone. Default is 1. (What does this mean, exactly?) </p>
-<dt><code>-l</code><i> len</i></p>
+<dt><code>-r</code><i> zonefile</i></dt>
+<dd>the text file with the zone information. Use &quot;-&quot; for standard input. </dd>
+<dt><code>-d</code><i> database</i></dt>
+<dd>the output database filename </dd>
+<dt><code>-v</code></dt>
+<dd>verbose mode </dd>
+<dt><code>-V</code></dt>
+<dd>show version information, and quit (don&#8217;t do anything) </dd>
+<dt><code>-o</code><i> Oz</i></dt>
+<dd>Use &quot;Oz&quot; area zone. Default is 1. (What does this mean, exactly?) </dd>
+<dt><code>-l</code><i> len</i></dt>
 <dd>&quot;len&quot; is the length of areacodes.<br />
- If 5 or more is given, then more space is allocated for the internal tables (40000 instead of 10000 numbers allowed). Other values aren&#8217;t really used. </p>
+ If 5 or more is given, then more space is allocated for the internal tables (40000 instead of 10000 numbers allowed). Other values aren&#8217;t really used. </dd>
 </dl>
 <h2>Author</h2>
 <p>manpage written from C source by Paul Slootman &lt;paul [at] debian.org&gt;.</p>

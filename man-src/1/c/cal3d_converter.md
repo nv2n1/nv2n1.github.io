@@ -16,8 +16,8 @@ description: "cal3d_converter – convert cal3d files from / to binary and XML (
 <p> If the <i>source</i> is a file of a given type, the <i>destination </i> is expected to be a file of the same type. </p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>cal3d_converter skeleton.csf skeleton.xsf</code></p>
-<dd> Convert the skeleton.csf skeleton file from binary format to XML format. </p>
+<dt><code>cal3d_converter skeleton.csf skeleton.xsf</code></dt>
+<dd> Convert the skeleton.csf skeleton file from binary format to XML format. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Loic Dachary &lt;loic [at] gnu.org&gt; </p>

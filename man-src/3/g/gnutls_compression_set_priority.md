@@ -14,10 +14,10 @@ description: "gnutls_compression_set_priority – API function"
 <p> <code>int gnutls_compression_set_priority(gnutls_session_t </code><i>session</i><code>, const int * </code><i>list</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>const int * list</p>
-<dd> is a 0 terminated list of gnutls_compression_method_t elements.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>const int * list</dt>
+<dd> is a 0 terminated list of gnutls_compression_method_t elements.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Sets the priority on the compression algorithms supported by gnutls. Priority is higher for elements specified before others. After specifying the algorithms you want, you must append a 0. Note that the priority is set on the client. The server does not use the algorithm&#8217;s priority except for disabling algorithms that were not specified. </p>
 <p> TLS 1.0 does not define any compression algorithms except NULL. Other compression algorithms are to be considered as gnutls extensions.</p>
@@ -32,6 +32,6 @@ description: "gnutls_compression_set_priority – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

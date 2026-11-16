@@ -15,8 +15,8 @@ description: "exfatlabel – get or set an exFAT file system label"
 <h2>Command Line Options</h2>
 <p>Command line options available:</p>
 <dl>
-<dt><code>-V</code></p>
-<dd>Print version and copyright. </p>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <p>Zero is returned on success. Any other code means an error.</p>

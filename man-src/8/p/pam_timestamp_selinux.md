@@ -55,8 +55,8 @@ description: "pam_timestamp_selinux – Security Enhanced Linux Policy for the p
 <p> <code>pam_timestamp_exec_t</code> </p>
 <p> &#8211; Set files with the pam_timestamp_exec_t type, if you want to transition an executable to the pam_timestamp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/pam_timestamp_check, /usr/sbin/pam_timestamp_check </p>
+<dt>Paths:</dt>
+<dd>/sbin/pam_timestamp_check, /usr/sbin/pam_timestamp_check </dd>
 </dl>
 <p> <code>pam_timestamp_tmp_t</code> </p>
 <p> &#8211; Set files with the pam_timestamp_tmp_t type, if you want to store pam timestamp temporary files in the /tmp directories. </p>

@@ -16,14 +16,14 @@ dcmpschk[options][dcmfile - in...]
 <h2>DESCRIPTION</h2>
 <p> The <code>dcmpschk</code> utility checks DICOM Grayscale Softcopy Presentation State objects for conformance with the standard. The test is performed in three phases: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Phase 1 checks the Meta-header of the DICOM file. It is tested whether all required attributes are present, whether the SOP class and instance UIDs match the UIDs in the main object and whether the group length attribute contains a correct value. The Transfer Syntax of the Meta header is also checked.</dl>
+<dt>&bull;</dt>
+<dd> Phase 1 checks the Meta-header of the DICOM file. It is tested whether all required attributes are present, whether the SOP class and instance UIDs match the UIDs in the main object and whether the group length attribute contains a correct value. The Transfer Syntax of the Meta header is also checked.</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> Phase 2 performs a syntactic check of the values, value representations and value multiplicities for each attribute in the object. The values present in the object under test are compared with the definitions of the DICOM data dictionary.</dl>
+<dt>&bull;</dt>
+<dd> Phase 2 performs a syntactic check of the values, value representations and value multiplicities for each attribute in the object. The values present in the object under test are compared with the definitions of the DICOM data dictionary.</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> Phase 3 performs a semantic check of the integrity of the Presentation State. This phase is omitted when objects of other SOP Classes are encountered. Phase 1 and 2 can also be applied to other DICOM objects of arbitrary SOP class. It should be noted that <code>dcmpschk</code> does not support Presentation States which contain the Mask Module. These will be rejected with a message that the Mask Module is not supported.</dl>
+<dt>&bull;</dt>
+<dd> Phase 3 performs a semantic check of the integrity of the Presentation State. This phase is omitted when objects of other SOP Classes are encountered. Phase 1 and 2 can also be applied to other DICOM objects of arbitrary SOP class. It should be noted that <code>dcmpschk</code> does not support Presentation States which contain the Mask Module. These will be rejected with a message that the Mask Module is not supported.</dd></dl>
 <h2>PARAMETERS</h2>
 <pre>
 dcmfile-in  presentation state file(s) to be checked

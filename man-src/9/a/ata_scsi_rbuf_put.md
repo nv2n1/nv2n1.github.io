@@ -14,18 +14,18 @@ description: "ata_scsi_rbuf_put – Unmap response buffer."
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command containing buffer to be unmapped.</dl>
+</dd><dd>SCSI command containing buffer to be unmapped.</dd></dl>
 <p> <i>copy_out</i></p>
 <dl>
-<dd>copy out result</dl>
+<dd>copy out result</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd><i>flags</i> passed to <code>ata_scsi_rbuf_get</code></dl>
+<dd><i>flags</i> passed to <code>ata_scsi_rbuf_get</code></dd></dl>
 <h2>Description</h2>
 <p>Returns rbuf buffer. The result is copied to <i>cmd</i>&#8216;s buffer if <i>copy_back</i> is true. </p>
 <p> LOCKING: Unlocks ata_scsi_rbuf_lock.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

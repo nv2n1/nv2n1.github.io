@@ -16,7 +16,7 @@ description: "SDL_GetModState – Get the state of modifier keys."
 <h2>Return Value</h2>
 <p>The return value can be an OR&#8217;d combination of the SDLMod enum. </p>
 <dl COMPACT>
-<dd><code>SDLMod</code> </p>
+<dd><code>SDLMod</code> </dd>
 <pre><tt>typedef enum {
  KMOD_NONE = 0x0000,
  KMOD_LSHIFT= 0x0001,
@@ -39,6 +39,6 @@ description: "SDL_GetModState – Get the state of modifier keys."
 #define KMOD_SHIFT (KMOD_LSHIFT|KMOD_RSHIFT)
 #define KMOD_ALT (KMOD_LALT|KMOD_RALT)
 #define KMOD_META (KMOD_LMETA|KMOD_RMETA)</tt></pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_GetKeyState</code></p>

@@ -18,45 +18,45 @@ description: "radeontop – tool to show GPU utilization"
 <p> <code>-b, &#8211;bus </code><i>bus</i></p>
 <dl>
 <dt>
-<dd> If you have multiple cards, use this parameter to select a specific one. For lspci output <i>01:00.0 VGA compatible controller</i>, bus would be <i>1</i>.</dl>
+</dt><dd> If you have multiple cards, use this parameter to select a specific one. For lspci output <i>01:00.0 VGA compatible controller</i>, bus would be <i>1</i>.</dd></dl>
 <p> <code>-c, &#8211;color</code></p>
 <dl>
 <dt>
-<dd> Enables colorized output.</dl>
+</dt><dd> Enables colorized output.</dd></dl>
 <p> <code>-d, &#8211;dump </code><i>file</i></p>
 <dl>
 <dt>
-<dd> Instead of displaying the data, dump it to <i>file</i>. Use <i>&#8211;</i> for stdout. The file is appended to, so it&#8217;s safe to specify the same filename for consecutive runs. </p>
+</dt><dd> Instead of displaying the data, dump it to <i>file</i>. Use <i>&#8211;</i> for stdout. The file is appended to, so it&#8217;s safe to specify the same filename for consecutive runs. </dd>
 <p> Use <i>SIGTERM</i> or <i>SIGINT</i> for graceful termination.</dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Displays help.</dl>
+</dt><dd> Displays help.</dd></dl>
 <p> <code>-l, &#8211;limit </code><i>limit</i></p>
 <dl>
 <dt>
-<dd> Quit after dumping <i>limit</i> lines. Only valid in dump mode. Default is to dump until terminated; use <i>SIGTERM</i> or <i>SIGINT</i> for graceful termination.</dl>
+</dt><dd> Quit after dumping <i>limit</i> lines. Only valid in dump mode. Default is to dump until terminated; use <i>SIGTERM</i> or <i>SIGINT</i> for graceful termination.</dd></dl>
 <p> <code>-m, &#8211;mem</code></p>
 <dl>
 <dt>
-<dd> Forces the use of the /dev/mem path, in case autodetection fails. Useful for the proprietary driver.</dl>
+</dt><dd> Forces the use of the /dev/mem path, in case autodetection fails. Useful for the proprietary driver.</dd></dl>
 <p> <code>-t, &#8211;ticks </code><i>ticks</i></p>
 <dl>
 <dt>
-<dd> How many times per second to sample the data. The default is 120. Higher numbers mean more accurate output and more overhead.</dl>
+</dt><dd> How many times per second to sample the data. The default is 120. Higher numbers mean more accurate output and more overhead.</dd></dl>
 <p> <code>-v, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Displays the program version.</dl>
+</dt><dd> Displays the program version.</dd></dl>
 <h2>INTERACTIVE COMMANDS</h2>
 <p> <code>C, c</code></p>
 <dl>
 <dt>
-<dd> Toggle colorized output.</dl>
+</dt><dd> Toggle colorized output.</dd></dl>
 <p> <code>Q, q</code></p>
 <dl>
 <dt>
-<dd> Quit.</dl>
+</dt><dd> Quit.</dd></dl>
 <h2>RESOURCES</h2>
 <p> See <a rel="nofollow" href="http://github.com/clbr/radeontop">http://github.com/clbr/radeontop</a> </p>
 <h2>Index</h2>

@@ -13,13 +13,13 @@ description: "PAPIF_get_clockrate –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Prototype:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_set_domain(&nbsp;<wbr>C_INT cr&nbsp;<wbr>)</code></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This is a Fortran only interface that returns a value from the <code>PAPI_get_opt</code> call.</dl>
+<dd>This is a Fortran only interface that returns a value from the <code>PAPI_get_opt</code> call.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_opt</code></dl>
+<dd><code>PAPI_get_opt</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

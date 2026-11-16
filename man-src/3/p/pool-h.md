@@ -12,41 +12,19 @@ description: "pool.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include 'dmlite.h'
-
 #include 'any.h'
-
 #include 'inode.h'
-
 #include 'utils.h'</code></pre>
 <h3>Data Structures</h3>
 <pre><code>struct dmlite_pool
-
-
 Pool data.
-
-
 struct dmlite_chunk
-
-
 Chunk of data.
-
-
 struct dmlite_location
-
-
 Collection of chunks that form a replica.
-
-
-
 Macros
 #define POOL_TYPE_MAX   16
-
-
-
 #define POOL_MAX   16
-
-
-
 Typedefs</code></pre>
 <p> typedef struct <code>dmlite_pool</code> <code>dmlite_pool</code><br />
  <i>Pool data. </i><br />
@@ -77,7 +55,7 @@ Typedefs</code></pre>
 <p>C wrapper for DMLite Pool API. </p>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dl>
+<dd>Alejandro Álvarez Ayllon aalvarez [at] cern.ch</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define POOL_MAX 16</h3>
 <h3>#define POOL_TYPE_MAX 16</h3>
@@ -94,82 +72,82 @@ Typedefs</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
- <i>path</i> The logical file name.</dl>
+ <i>path</i> The logical file name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dl>
+<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dd></dl>
 <h3>int dmlite_getdirspaces (<code>dmlite_context</code> *context, const char *logicaldir, int64_t *freespace, int64_t *used)</h3>
 <p>Get the estimation of the free/used space for writing into a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>path</i> The path of the directory to query<br />
  <i>totalfree</i> The total number of free bytes (may not be contiguous)<br />
- <i>used</i> The total number of used bytes</dl>
+ <i>used</i> The total number of used bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_location</code>* dmlite_getlocation (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)</h3>
 <p>Gets the location of a replica. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
- <i>replica</i> The replica to translate.</dl>
+ <i>replica</i> The replica to translate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dl>
+<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dd></dl>
 <h3>int dmlite_getpools (<code>dmlite_context</code> *context, unsigned *nPools, <code>dmlite_pool</code> **pools)</h3>
 <p>Gets the list of pools. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
  <i>nPools</i> The number of pools.<br />
- <i>pools</i> An array with the pools. <code>Use dmlite_freepools to free</code>.</dl>
+ <i>pools</i> An array with the pools. <code>Use dmlite_freepools to free</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_location</code>* dmlite_iget (<code>dmlite_context</code> *context, ino_tinode)</h3>
 <p>Gets a single replica (synchronous). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
- <i>inode</i> The file inode.</dl>
+ <i>inode</i> The file inode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dl>
+<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dd></dl>
 <h3>int dmlite_location_free (<code>dmlite_location</code> *loc)</h3>
 <p>Frees a location struct. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>loc</i> The struct to free.</dl>
+<dd><i>loc</i> The struct to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3>int dmlite_pools_free (unsignednPools, <code>dmlite_pool</code> *pools)</h3>
 <p>Frees an array of pools. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>nPools</i> The number of pools in the array.<br />
- <i>pools</i> The array to free.</dl>
+ <i>pools</i> The array to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h3><code>dmlite_location</code>* dmlite_put (<code>dmlite_context</code> *context, const char *path)</h3>
 <p>Puts a file (synchronous). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
- <i>path</i> The logical file name to put.</dl>
+ <i>path</i> The logical file name to put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dl>
+<dd>A pointer to a <code>dmlite_location</code> struct, or NULL on error.</dd></dl>
 <h3>int dmlite_put_abort (<code>dmlite_context</code> *context, const <code>dmlite_location</code> *loc)</h3>
 <p>Aborts a put request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The DM context.<br />
- <i>loc</i> As returned by dmlite_put.</dl>
+ <i>loc</i> As returned by dmlite_put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, error code otherwise.</dl>
+<dd>0 on success, error code otherwise.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for dmlite from the source code.</p>

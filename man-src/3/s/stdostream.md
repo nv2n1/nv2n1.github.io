@@ -10,13 +10,9 @@ description: "std::basic_ostream – std::basic_ostream"
 <p>std::basic_ostream &#8211; std::basic_ostream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;ostream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_ostream : virtual public std::basic_ios&lt;CharT, Traits&gt;</code></pre>
 <p>The class template basic_ostream provides support for high level output operations on character streams. The supported operations include formatted output (e.g. integer values) and unformatted output (e.g. raw characters and character arrays). This functionality is implemented in terms of the interface provided by the basic_streambuf class, accessed through the basic_ios base class. In typical implementations, basic_ostream has no non-inherited data members.<br />
 &nbsp;std-basic ostream-inheritance.svg<br />

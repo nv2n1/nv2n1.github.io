@@ -14,26 +14,26 @@ description: "akcipher_request_set_crypt – Sets request parameters"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>public key request</dl>
+</dd><dd>public key request</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>ptr to input scatter list</dl>
+<dd>ptr to input scatter list</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>ptr to output scatter list</dl>
+<dd>ptr to output scatter list</dd></dl>
 <p> <i>src_len</i></p>
 <dl>
-<dd>size of the src input scatter list to be processed</dl>
+<dd>size of the src input scatter list to be processed</dd></dl>
 <p> <i>dst_len</i></p>
 <dl>
-<dd>size of the dst output scatter list</dl>
+<dd>size of the dst output scatter list</dd></dl>
 <h2>Description</h2>
 <p>Sets parameters required by crypto operation</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

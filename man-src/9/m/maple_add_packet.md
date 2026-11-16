@@ -14,21 +14,21 @@ description: "maple_add_packet – add a single instruction to the maple bus que
 <p><i>mdev</i></p>
 <dl>
 <dd>
-<dd>maple device</dl>
+</dd><dd>maple device</dd></dl>
 <p> <i>function</i></p>
 <dl>
-<dd>function on device being queried</dl>
+<dd>function on device being queried</dd></dl>
 <p> <i>command</i></p>
 <dl>
-<dd>maple command to add</dl>
+<dd>maple command to add</dd></dl>
 <p> <i>length</i></p>
 <dl>
-<dd>length of command string (in 32 bit words)</dl>
+<dd>length of command string (in 32 bit words)</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>remainder of command string</dl>
+<dd>remainder of command string</dd></dl>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

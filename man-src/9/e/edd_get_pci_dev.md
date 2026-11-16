@@ -15,7 +15,7 @@ edd_get_pci_dev - finds pci_dev that matches edev
 <h2>Arguments</h2>
 
 <i>edev</i>
-<dl><dd><dd>edd_device</dl>
+<dl><dd></dd><dd>edd_device</dd></dl>
 
 <h2>Description</h2>
 

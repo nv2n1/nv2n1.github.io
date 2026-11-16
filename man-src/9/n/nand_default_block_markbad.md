@@ -14,14 +14,14 @@ description: "nand_default_block_markbad – [DEFAULT] mark a block bad via bad 
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>ofs</i></p>
 <dl>
-<dd>offset from device start</dl>
+<dd>offset from device start</dd></dl>
 <h2>Description</h2>
 <p>This is the default implementation, which can be overridden by a hardware specific driver. It provides the details for writing a bad block marker to a block.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

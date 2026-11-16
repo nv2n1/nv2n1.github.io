@@ -21,25 +21,10 @@ description: "sc::SteepestDescentOpt –"
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>double maxabs_gradient
-
-
-
 double accuracy_
-
-
-
 Ref&lt; LineOpt &gt; lineopt_
-
-
-
 int take_newton_step_
-
-
-
 int print_x_
-
-
-
 int print_gradient_</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SteepestDescentOpt::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

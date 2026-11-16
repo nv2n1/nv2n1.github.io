@@ -11,8 +11,8 @@ description: "svnmucc – Multiple URL Command Client for Subversion"
 <p> svnmucc &#8211; Multiple URL Command Client for Subversion</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>svnmucc</code> [<i>options</i>]</p>
-<dd></dl>
+<dt><code>svnmucc</code> [<i>options</i>]</dt>
+<dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> Subversion is a version control system, which allows you to keep old versions of files and directories (usually source code), keep a log of who, when, and why changes occurred, etc., like CVS, RCS or SCCS. <code>Subversion</code> keeps a single copy of the master sources. This copy is called the source &#8220;repository&#8221;; it contains all the information to permit extracting previous versions of those files at any time. </p>
 <p> For more information about the Subversion project, visit <a rel="nofollow" href="http://subversion.apache.org.">http://subversion.apache.org.</a> </p>

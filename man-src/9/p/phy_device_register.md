@@ -15,7 +15,7 @@ phy_device_register - Register the phy device on the MDIO bus
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>phy_device structure to be added to the MDIO bus</dl>
+<dl><dd></dd><dd>phy_device structure to be added to the MDIO bus</dd></dl>
 
 <h2>Copyright</h2>
 

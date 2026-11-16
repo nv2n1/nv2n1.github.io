@@ -10,12 +10,12 @@ description: "rpc.yppasswdd – NIS password update daemon"
 <p>rpc.yppasswdd &#8211; NIS password update daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>rpc.yppasswdd</code> [-D&nbsp;<wbr><i>directory</i>] -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</p>
-<dt> <code>rpc.yppasswdd</code> [-s&nbsp;<wbr><i>shadow</i>] [-p&nbsp;<wbr><i>passwd</i>] -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</p>
-<dt> <code>rpc.yppasswdd</code> -x&nbsp;<wbr><i>program</i> | -E&nbsp;<wbr><i>program</i> -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</dl>
+<dt> <code>rpc.yppasswdd</code> [-D&nbsp;<wbr><i>directory</i>] -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</dt>
+<dt> <code>rpc.yppasswdd</code> [-s&nbsp;<wbr><i>shadow</i>] [-p&nbsp;<wbr><i>passwd</i>] -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</dt>
+<dt> <code>rpc.yppasswdd</code> -x&nbsp;<wbr><i>program</i> | -E&nbsp;<wbr><i>program</i> -e&nbsp;<wbr><i>chsh</i>|<i>chfn</i> [&#8211;port&nbsp;<wbr><i>number</i>] [-f|&#8211;foreground]</dt></dl>
 <h2>Description</h2>
 <p><code>rpc.yppasswdd</code></p>
-<dd>is the RPC server that lets users change their passwords in the presence of NIS (a.k.a. YP). It must be run on the NIS master server for that NIS domain. </p>
+<dd>is the RPC server that lets users change their passwords in the presence of NIS (a.k.a. YP). It must be run on the NIS master server for that NIS domain. </dd>
 <p> When a <code><a href="/docs/linux/man/1-yppasswd/">yppasswd</a></code>(1) client contacts the server, it sends the old user password along with the new one. <code>rpc.yppasswdd</code> will search the system&#8217;s <code>passwd</code> file for the specified user name, verify that the given (old) password matches, and update the entry. If the user specified does not exist, or if the password, UID or GID doesn&#8217;t match the information in the password file, the update request is rejected, and an error returned to the client. </p>
 <p> If this version of the server is compiled with the CHECKROOT=1 option, the password given is also checked against the systems root password. </p>
 <p> After updating the <code>passwd</code> file and returning a success notification to the client, <code>rpc.yppasswdd</code> executes the <code>pwupdate</code> script that updates the NIS server&#8217;s <code>passwd.*</code> and <code>shadow.byname</code> maps. This script assumes all NIS maps are kept in directories named <i>/var/yp/</i><i>nisdomain</i> that each contain a <code>Makefile</code> customized for that NIS domain. If no such <code>Makefile</code> is found, the scripts uses the generic one in <i>/var/yp</i>. </p>
@@ -24,34 +24,34 @@ description: "rpc.yppasswdd – NIS password update daemon"
 <p>The following options are available: </p>
 <p> <code>-D</code><i> directory</i></p>
 <dl>
-<dd>The <code>passwd</code> and <code>shadow</code> files are located under the specified directory path. <code>rpc.yppasswdd</code> will use this files, not <i>/etc/passwd</i> and <i>/etc/shadow.</i> This is useful if you do not want to give all users in the NIS database automatic access to your NIS server.</dl>
+<dd>The <code>passwd</code> and <code>shadow</code> files are located under the specified directory path. <code>rpc.yppasswdd</code> will use this files, not <i>/etc/passwd</i> and <i>/etc/shadow.</i> This is useful if you do not want to give all users in the NIS database automatic access to your NIS server.</dd></dl>
 <p> <code>-E</code><i> program</i></p>
 <dl>
-<dd>Instead of rpc.yppasswdd editing the passwd &amp; shadow files, the specified program will be run to do the editing. The following environment variables will be set for the program: YP_PASSWD_OLD, YP_PASSWD_NEW, YP_USER, YP_GECOS, YP_SHELL. The program should return an exit status of 0 if the change completes successfully, 1 if the change completes successfully but pwupdate should not be run, and otherwise if the change fails.</dl>
+<dd>Instead of rpc.yppasswdd editing the passwd &amp; shadow files, the specified program will be run to do the editing. The following environment variables will be set for the program: YP_PASSWD_OLD, YP_PASSWD_NEW, YP_USER, YP_GECOS, YP_SHELL. The program should return an exit status of 0 if the change completes successfully, 1 if the change completes successfully but pwupdate should not be run, and otherwise if the change fails.</dd></dl>
 <p> <code>-p</code><i> passwdfile</i></p>
 <dl>
-<dd>This options tells <code>rpc.yppasswdd</code> to use a different source file instead of <i>/etc/passwd</i> This is useful if you do not want to give all users in the NIS database automatic access to your NIS server.</dl>
+<dd>This options tells <code>rpc.yppasswdd</code> to use a different source file instead of <i>/etc/passwd</i> This is useful if you do not want to give all users in the NIS database automatic access to your NIS server.</dd></dl>
 <p> <code>-s</code><i> shadowfile</i></p>
 <dl>
-<dd>This options tells <code>rpc.yppasswdd</code> to use a different source file instead of <i>/etc/passwd</i>. See below for a brief discussion of shadow support.</dl>
+<dd>This options tells <code>rpc.yppasswdd</code> to use a different source file instead of <i>/etc/passwd</i>. See below for a brief discussion of shadow support.</dd></dl>
 <p> <code>-e [chsh|chfn]</code></p>
 <dl>
-<dd>By default, <code>rpc.yppasswdd</code> will not allow users to change the shell or GECOS field of their <code>passwd</code> entry. Using the <code>-e</code> option, you can enable either of these. Note that when enabling support for <code><a href="/docs/linux/man/1-ypchsh/">ypchsh</a></code>(1), you have to list all shells users are allowed to select in <i>/etc/shells</i>.</dl>
+<dd>By default, <code>rpc.yppasswdd</code> will not allow users to change the shell or GECOS field of their <code>passwd</code> entry. Using the <code>-e</code> option, you can enable either of these. Note that when enabling support for <code><a href="/docs/linux/man/1-ypchsh/">ypchsh</a></code>(1), you have to list all shells users are allowed to select in <i>/etc/shells</i>.</dd></dl>
 <p> <code>-x program</code></p>
 <dl>
-<dd>When the -x option is used, rpc.yppasswdd will not attempt to modify any files itself, but will instead run the specified program, passing to its stdin information about the requested operation(s). There is a defined protocol used to communicate with this external program, which has total freedom in how it propagates the change request. See below for more details on this.</dl>
+<dd>When the -x option is used, rpc.yppasswdd will not attempt to modify any files itself, but will instead run the specified program, passing to its stdin information about the requested operation(s). There is a defined protocol used to communicate with this external program, which has total freedom in how it propagates the change request. See below for more details on this.</dd></dl>
 <p> <code>-m</code></p>
 <dl>
-<dd>Will be ignored, for compatibility with Solaris only.</dl>
+<dd>Will be ignored, for compatibility with Solaris only.</dd></dl>
 <p> <code>&#8211;port number</code></p>
 <dl>
-<dd>rpc.yppasswdd will try to register itself to this port. This makes it possible to have a router filter packets to the NIS ports.</dl>
+<dd>rpc.yppasswdd will try to register itself to this port. This makes it possible to have a router filter packets to the NIS ports.</dd></dl>
 <p> <code>-v &#8211;version</code></p>
 <dl>
-<dd>Prints the version number and if this package is compiled with the CHECKROOT option.</dl>
+<dd>Prints the version number and if this package is compiled with the CHECKROOT option.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;foreground</code></p>
 <dl>
-<dd>will not put itself into background.</dl>
+<dd>will not put itself into background.</dd></dl>
 <h2>Miscellaneous</h2>
 <h3>Shadow Passwords</h3>
 <p>Using Shadow passwords alongside NIS does not make too much sense, because the supposedly inaccesible passwords now become readable through a simple invocation of <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1). </p>

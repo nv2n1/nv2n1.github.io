@@ -14,14 +14,14 @@ description: "gnutls_cipher_init – API function"
 <p> <code>int gnutls_cipher_init(gnutls_cipher_hd_t * </code><i>handle</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>, const gnutls_datum_t * </code><i>key</i><code>, const gnutls_datum_t * </code><i>iv</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_cipher_hd_t * handle</p>
-<dd> is a <code>gnutls_cipher_hd_t</code> structure.</p>
-<dt>gnutls_cipher_algorithm_t cipher</p>
-<dd> the encryption algorithm to use</p>
-<dt>const gnutls_datum_t * key</p>
-<dd> The key to be used for encryption</p>
-<dt>const gnutls_datum_t * iv</p>
-<dd> The IV to use (if not applicable set NULL)</dl>
+<dt>gnutls_cipher_hd_t * handle</dt>
+<dd> is a <code>gnutls_cipher_hd_t</code> structure.</dd>
+<dt>gnutls_cipher_algorithm_t cipher</dt>
+<dd> the encryption algorithm to use</dd>
+<dt>const gnutls_datum_t * key</dt>
+<dd> The key to be used for encryption</dd>
+<dt>const gnutls_datum_t * iv</dt>
+<dd> The IV to use (if not applicable set NULL)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will initialize an context that can be used for encryption/decryption of data. This will effectively use the current crypto backend in use by gnutls or the cryptographic accelerator in use.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_cipher_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -19,7 +19,7 @@ description: "cgels.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CGELS solves overdetermined or underdetermined complex linear systems
                                        involving an M -
@@ -29,11 +29,11 @@ they are stored as the columns of the
         M -
     by - NRHS right hand side matrix B and the N - by - NRHS solution matrix X.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER*1
           = 'N': the linear system involves A;
@@ -124,14 +124,14 @@ if TRANS
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 182 of file cgels.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

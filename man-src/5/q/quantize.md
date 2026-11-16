@@ -15,20 +15,18 @@ description: "Quantize – ImageMagick’s color reduction algorithm."
 <pre> <FONT SIZE="+6">&Sigma;</FONT><FONT SIZE="-3"> ki=1</FONT> 8k</pre>
 <p>A complete tree would require 19,173,961 nodes for <i>k = 8, c</i><font SIZE="-3"><i>max</i></font><i> = 255</i>. Therefore, to avoid building a fully populated tree, <code>ImageMagick</code>: (1) Initializes data structures for nodes only as they are needed; (2) Chooses a maximum depth for the tree as a function of the desired number of colors in the output image (currently <i>log</i><font SIZE="-3"><i>4</i></font><i>(colormap size)+2</i>). A tree of this depth generally allows the best representation of the source image with the fastest computational speed and the least amount of memory. However, the default depth is inappropriate for some images. Therefore, the caller can request a specific tree depth. For each pixel in the input image, classification scans downward from the root of the color description tree. At each level of the tree, it identifies the single node which represents a cube in RGB space containing the pixel&#8217;s color. It updates the following data for each such node:</p>
 <dl>
-<dt><code>n</code><font SIZE="-3"><code>1</code></font><code>:</code></p>
-<dd>Number of pixels whose color is contained in the RGB cube which this node represents;</p>
-<dt><code>n</code><font SIZE="-3"><code>2</code></font><code>:</code></p>
-<dd>Number of pixels whose color is not represented in a node at lower depth in the tree; initially, <i>n</i><font SIZE="-3"><i>2</i></font><i> = 0</i> for all nodes except leaves of the tree.</p>
-<dt><code>S</code><font SIZE="-3"><code>r</code></font><code>, S</code><font SIZE="-3"><code>g</code></font><code>, S</code><font SIZE="-3"><code>b</code></font><code>:</code></p>
-<dd>Sums of the red, green, and blue component values for all pixels not classified at a lower depth. The combination of these sums and <i>n</i><font SIZE="-3"><i>2</i></font><i></i> will ultimately characterize the mean color of a set of pixels represented by this node.</p>
-<dt><code>E:</code></p>
-<dd>The distance squared in RGB space between each pixel contained within a node and the nodes&#8217; center. This represents the quantization error for a node.</dl>
+<dt><code>n</code><font SIZE="-3"><code>1</code></font><code>:</code></dt>
+<dd>Number of pixels whose color is contained in the RGB cube which this node represents;</dd>
+<dt><code>n</code><font SIZE="-3"><code>2</code></font><code>:</code></dt>
+<dd>Number of pixels whose color is not represented in a node at lower depth in the tree; initially, <i>n</i><font SIZE="-3"><i>2</i></font><i> = 0</i> for all nodes except leaves of the tree.</dd>
+<dt><code>S</code><font SIZE="-3"><code>r</code></font><code>, S</code><font SIZE="-3"><code>g</code></font><code>, S</code><font SIZE="-3"><code>b</code></font><code>:</code></dt>
+<dd>Sums of the red, green, and blue component values for all pixels not classified at a lower depth. The combination of these sums and <i>n</i><font SIZE="-3"><i>2</i></font><i></i> will ultimately characterize the mean color of a set of pixels represented by this node.</dd>
+<dt><code>E:</code></dt>
+<dd>The distance squared in RGB space between each pixel contained within a node and the nodes&#8217; center. This represents the quantization error for a node.</dd></dl>
 <p> <code>Reduction</code> repeatedly prunes the tree until the number of nodes with <i>n</i><font SIZE="-3"><i>2</i></font><i> &gt; 0</i> is less than or equal to the maximum number of colors allowed in the output image. On any given iteration over the tree, it selects those nodes whose <i>E</i> value is minimal for pruning and merges their color statistics upward. It uses a pruning threshold, <i>E</i><font SIZE="-3"><i>p</i></font><i></i>, to govern node selection as follows: </p>
 <pre><code>Ep = 0
 while number of nodes with (n2 &gt; 0) &gt; required maximum number of colors
-
 prune all nodes such that E &lt;= Ep
-
 Set Ep  to minimum E in remaining nodes</code></pre>
 <p> This has the effect of minimizing any quantization error when merging two nodes together. When a node to be pruned has offspring, the pruning procedure invokes itself recursively in order to prune the tree from the leaves upward. The values of <i>n</i><font SIZE="-3"><i>2</i></font><i> S</i><font SIZE="-3"><i>r</i></font><i>, S</i><font SIZE="-3"><i>g</i></font><i>,</i> and <i>S</i><font SIZE="-3"><i>b</i></font><i></i> in a node being pruned are always added to the corresponding data in that node&#8217;s parent. This retains the pruned node&#8217;s color characteristics for later averaging. For each node, <i>n</i><font SIZE="-3"><i>2</i></font><i></i> pixels exist for which that node represents the smallest volume in RGB space containing those pixel&#8217;s colors. When <i>n</i><font SIZE="-3"><i>2</i></font><i> &gt; 0</i> the node will uniquely define a color in the output image. At the beginning of reduction, <i>n</i><font SIZE="-3"><i>2</i></font><i> = 0</i> for all nodes except the leaves of the tree which represent colors present in the input image. The other pixel count, <i>n</i><font SIZE="-3"><i>1</i></font><i></i>, indicates the total number of colors within the cubic volume which the node represents. This includes <i>n</i><font SIZE="-3"><i>1</i></font><i> &#8211; n</i><font SIZE="-3"><i>2</i></font><i></i> pixels whose colors should be defined by nodes at a lower level in the tree. <code>Assignment</code> generates the output image from the pruned tree. The output image consists of two parts: (1) A color map, which is an array of color descriptions (RGB triples) for each color present in the output image; (2) A pixel array, which represents each pixel as an index into the color map array. First, the assignment phase makes one pass over the pruned color description tree to establish the image&#8217;s color map. For each node with <i>n</i><font SIZE="-3"><i>2</i></font><i> &gt; 0</i>, it divides <i>S</i><font SIZE="-3"><i>r</i></font><i>, S</i><font SIZE="-3"><i>g</i></font><i></i>, and S<font SIZE="-3">b</font> by <i>n</i><font SIZE="-3"><i>2</i></font><i></i>. This produces the mean color of all pixels that classify no lower than this node. Each of these colors becomes an entry in the color map. Finally, the assignment phase reclassifies each pixel in the pruned tree to identify the deepest node containing the pixel&#8217;s color. The pixel&#8217;s value in the pixel array becomes the index of this node&#8217;s mean color in the color map. Empirical evidence suggests that distances in color spaces such as YUV, or YIQ correspond to perceptual color differences more closely than do distances in RGB space. These color spaces may give better results when color reducing an image. Here the algorithm is as described except each pixel is a point in the alternate color space. For convenience, the color components are normalized to the range 0 to a maximum value, <i>c</i><font SIZE="-3"><i>max</i></font><i></i>. The color reduction can then proceed as described.</p>
 <h2>Measuring Color Reduction Error</h2>
@@ -37,13 +35,13 @@ Set Ep  to minimum E in remaining nodes</code></pre>
 <p> The normalized error measurement can be used to compare images. In general, the closer the mean error is to zero the more the quantized image resembles the source image. Ideally, the error should be perceptually-based, since the human eye is the final judge of quantization quality. </p>
 <p> These errors are measured and printed when <code>-verbose</code> and <code>-colors</code><i> are specified on the command line:</p>
 <dl>
-<dt></i><code>mean error per pixel:</code></p>
-<dd>is the mean error for any single pixel in the image.</p>
-<dt><code>normalized mean square error:</code></p>
-<dd>is the normalized mean square quantization error for any single pixel in the image. </p>
+<dt></i><code>mean error per pixel:</code></dt>
+<dd>is the mean error for any single pixel in the image.</dd>
+<dt><code>normalized mean square error:</code></dt>
+<dd>is the normalized mean square quantization error for any single pixel in the image. </dd>
 <p> This distance measure is normalized to a range between 0 and 1. It is independent of the range of red, green, and blue values in the image.</p>
-<dt><code>normalized maximum square error:</code></p>
-<dd>is the largest normalized square quantization error for any single pixel in the image. </p>
+<dt><code>normalized maximum square error:</code></dt>
+<dd>is the largest normalized square quantization error for any single pixel in the image. </dd>
 <p> This distance measure is normalized to a range between 0 and 1. It is independent of the range of red, green, and blue values in the image.</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-display/">display</a>(1), <a href="/docs/linux/man/1-animate/">animate</a>(1), <a href="/docs/linux/man/1-mogrify/">mogrify</a>(1), <a href="/docs/linux/man/1-import/">import</a>(1), miff(5)</code></p>
@@ -57,3 +55,4 @@ Set Ep  to minimum E in remaining nodes</code></pre>
 <p>Paul Raveling, USC Information Sciences Institute, for the original idea of using space subdivision for the color reduction algorithm. With Paul&#8217;s permission, this document is an adaptation from a document he wrote.</p>
 <h2>Authors</h2>
 <p>John Cristy, ImageMagick Studio</p>
+</p>

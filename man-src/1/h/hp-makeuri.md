@@ -15,53 +15,53 @@ description: "hp-makeuri – Device URI Creation Utility"
 <p> <code>hp-makeuri [OPTIONS] [SERIAL NO.|USB ID|IP|DEVNODE]</code></p>
 <h2>SERIAL NO.|USB ID|IP|DEVNODE</h2>
 <dl>
-<dt>USB IDs (usb only):</p>
-<dd> &quot;xxx:yyy&quot; where xxx is the USB bus ID and yyy is the USB device ID. The &#8216;:&#8217; and all leading zeroes must be present. (Use the &#8216;lsusb&#8217; command to obtain this information. See Note 1.)</p>
-<dt>IPs (network only):</p>
-<dd> IPv4 address &quot;a.b.c.d&quot; or &quot;hostname&quot;</p>
-<dt>DEVNODE (parallel only):</p>
-<dd> &quot;/dev/parportX&quot;, X=0,1,2,&#8230;</p>
-<dt>SERIAL NO. (usb and parallel only):</p>
-<dd> &quot;serial no.&quot;</dl>
+<dt>USB IDs (usb only):</dt>
+<dd> &quot;xxx:yyy&quot; where xxx is the USB bus ID and yyy is the USB device ID. The &#8216;:&#8217; and all leading zeroes must be present. (Use the &#8216;lsusb&#8217; command to obtain this information. See Note 1.)</dd>
+<dt>IPs (network only):</dt>
+<dd> IPv4 address &quot;a.b.c.d&quot; or &quot;hostname&quot;</dd>
+<dt>DEVNODE (parallel only):</dt>
+<dd> &quot;/dev/parportX&quot;, X=0,1,2,&#8230;</dd>
+<dt>SERIAL NO. (usb and parallel only):</dt>
+<dd> &quot;serial no.&quot;</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>To specify the port on a multi-port JetDirect:</p>
-<dd> -p&lt;port&gt; or &#8211;port=&lt;port&gt; (Valid values are 1*, 2, and 3. *default)</p>
-<dt>Show the CUPS URI only (quiet mode):</p>
-<dd> -c or &#8211;cups</p>
-<dt>Show the SANE URI only (quiet mode):</p>
-<dd> -s or &#8211;sane</p>
-<dt>Show the HP Fax URI only (quiet mode):</p>
-<dd> -f or &#8211;fax</p>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</dl>
+<dt>To specify the port on a multi-port JetDirect:</dt>
+<dd> -p&lt;port&gt; or &#8211;port=&lt;port&gt; (Valid values are 1*, 2, and 3. *default)</dd>
+<dt>Show the CUPS URI only (quiet mode):</dt>
+<dd> -c or &#8211;cups</dd>
+<dt>Show the SANE URI only (quiet mode):</dt>
+<dd> -s or &#8211;sane</dd>
+<dt>Show the HP Fax URI only (quiet mode):</dt>
+<dd> -f or &#8211;fax</dd>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>USB:</p>
-<dd> $ hp-makeuri 001:002</p>
-<dt>Network:</p>
-<dd> $ hp-makeuri 66.35.250.209</p>
-<dt>Parallel:</p>
-<dd> $ hp-makeuri /dev/parport0</p>
-<dt>USB or parallel (using serial number):</p>
-<dd> $ hp-makeuri US123456789</dl>
+<dt>USB:</dt>
+<dd> $ hp-makeuri 001:002</dd>
+<dt>Network:</dt>
+<dd> $ hp-makeuri 66.35.250.209</dd>
+<dt>Parallel:</dt>
+<dd> $ hp-makeuri /dev/parport0</dd>
+<dt>USB or parallel (using serial number):</dt>
+<dd> $ hp-makeuri US123456789</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt>1. Example using &#8216;lsusb&#8217; to obtain USB bus ID and USB device ID (example only, the values you obtain will differ) :</p>
+<dt>1. Example using &#8216;lsusb&#8217; to obtain USB bus ID and USB device ID (example only, the values you obtain will differ) :</dt>
 <dd>
-<dt> $ lsusb</p>
+</dd><dt> $ lsusb</dt>
 <dd>
-<dt> Bus 003 Device 011: ID 03f0:c202 Hewlett-Packard</p>
+</dd><dt> Bus 003 Device 011: ID 03f0:c202 Hewlett-Packard</dt>
 <dd>
-<dt> $ hp-makeuri 003:011</p>
+</dd><dt> $ hp-makeuri 003:011</dt>
 <dd>
-<dt> (Note: You may have to run &#8216;lsusb&#8217; from /sbin or another location. Use &#8216;$ locate lsusb&#8217; to determine this.)</p>
+</dd><dt> (Note: You may have to run &#8216;lsusb&#8217; from /sbin or another location. Use &#8216;$ locate lsusb&#8217; to determine this.)</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-setup</p>
 <h2>AUTHOR</h2>

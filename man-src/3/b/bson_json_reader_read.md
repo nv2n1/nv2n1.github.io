@@ -18,14 +18,14 @@ bson_json_reader_read (bson_json_reader_t *reader,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_json_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_json_reader_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>error</code></p>
-<dd> A <code>bson_error_t</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Reads the next BSON document from the underlying JSON source. </p>
 <h2>ERRORS</h2>

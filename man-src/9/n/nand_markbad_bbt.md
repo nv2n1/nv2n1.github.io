@@ -14,12 +14,12 @@ description: "nand_markbad_bbt – [NAND Interface] Mark a block bad in the BBT"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>offs</i></p>
 <dl>
-<dd>offset of the bad block</dl>
+<dd>offset of the bad block</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

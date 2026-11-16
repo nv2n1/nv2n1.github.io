@@ -15,15 +15,15 @@ mdiobus_read - Convenience function for reading a given MII mgmt register
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the mii_bus struct</dl>
+<dl><dd></dd><dd>the mii_bus struct</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>the phy address</dl>
+<dl><dd>the phy address</dd></dl>
  
 
  <i>regnum</i>
-<dl><dd>register number to read</dl>
+<dl><dd>register number to read</dd></dl>
 
 <h2>Note</h2>
 

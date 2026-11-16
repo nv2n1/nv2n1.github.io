@@ -19,60 +19,60 @@ description: "QuantLib::India – Indian calendars."
 <p>Indian calendars. </p>
 <p> Holidays for the National <code>Stock</code> Exchange (data from &lt;<a rel="nofollow" href="http://www.nse-india.com/">http://www.nse-india.com/</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>Republic Day, January 26th</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Ambedkar Jayanti, April 14th</p>
-<dt>*</p>
-<dd>Independence Day, August 15th</p>
-<dt>*</p>
-<dd>Gandhi Jayanti, October 2nd</p>
-<dt>*</p>
-<dd>Christmas, December 25th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>Republic Day, January 26th</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Ambedkar Jayanti, April 14th</dd>
+<dt>*</dt>
+<dd>Independence Day, August 15th</dd>
+<dt>*</dt>
+<dd>Gandhi Jayanti, October 2nd</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd></dl>
 <p> Other holidays for which no rule is given (data available for 2005-2008 only:) </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Bakri Id</p>
-<dt>*</p>
-<dd>Moharram</p>
-<dt>*</p>
-<dd>Mahashivratri</p>
-<dt>*</p>
-<dd>Holi</p>
-<dt>*</p>
-<dd>Ram Navami</p>
-<dt>*</p>
-<dd>Mahavir Jayanti</p>
-<dt>*</p>
-<dd>Id-E-Milad</p>
-<dt>*</p>
-<dd>Maharashtra Day</p>
-<dt>*</p>
-<dd>Buddha Pournima</p>
-<dt>*</p>
-<dd>Ganesh Chaturthi</p>
-<dt>*</p>
-<dd>Dasara</p>
-<dt>*</p>
-<dd>Laxmi Puja</p>
-<dt>*</p>
-<dd>Bhaubeej</p>
-<dt>*</p>
-<dd>Ramzan Id</p>
-<dt>*</p>
-<dd>Guru Nanak Jayanti</dl>
+<dt>*</dt>
+<dd>Bakri Id</dd>
+<dt>*</dt>
+<dd>Moharram</dd>
+<dt>*</dt>
+<dd>Mahashivratri</dd>
+<dt>*</dt>
+<dd>Holi</dd>
+<dt>*</dt>
+<dd>Ram Navami</dd>
+<dt>*</dt>
+<dd>Mahavir Jayanti</dd>
+<dt>*</dt>
+<dd>Id-E-Milad</dd>
+<dt>*</dt>
+<dd>Maharashtra Day</dd>
+<dt>*</dt>
+<dd>Buddha Pournima</dd>
+<dt>*</dt>
+<dd>Ganesh Chaturthi</dd>
+<dt>*</dt>
+<dd>Dasara</dd>
+<dt>*</dt>
+<dd>Laxmi Puja</dd>
+<dt>*</dt>
+<dd>Bhaubeej</dd>
+<dt>*</dt>
+<dd>Ramzan Id</dd>
+<dt>*</dt>
+<dd>Guru Nanak Jayanti</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>NSE </i></p>
-<dd>National <code>Stock</code> Exchange. </p>
+<dt><i>NSE </i></dt>
+<dd>National <code>Stock</code> Exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

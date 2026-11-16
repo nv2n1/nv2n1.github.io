@@ -20,6 +20,6 @@ description: "QuantLib::DPlusDMinus – $ D_{+}D_{-} $ matricial representation"
  artial x^2} pprox ac{u_{i+1}-2u_{i}+u_{i-1}}{h^2} = D_{+}D_{-} u_{i} ] </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dl>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -25,10 +25,8 @@ excepts - bitmask listing the exception flags to raise
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cfenv&gt;</code></pre> 
 &nbsp;<wbr>&nbsp;#pragma STDC FENV_ACCESS ON <pre><code>int main()
-
 {
     std::feclearexcept(FE_ALL_EXCEPT);
     int r = std::feraiseexcept(FE_UNDERFLOW | FE_DIVBYZERO);

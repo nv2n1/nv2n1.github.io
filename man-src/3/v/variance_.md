@@ -10,9 +10,6 @@ description: "QuantLib::VarianceSwap – Variance swap."
 <p>QuantLib::VarianceSwap &#8211; Variance swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Classes</h3>
@@ -37,9 +34,6 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>variance</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Position::Type <code>position_</code> </p>
 <p> <code>Real</code> <code>strike_</code> </p>
@@ -51,7 +45,7 @@ Protected Attributes</code></pre>
 <p>Variance swap. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>This class does not manage seasoned variance swaps.</dl>
+<dd>This class does not manage seasoned variance swaps.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing <code>engine</code> is used. </p>

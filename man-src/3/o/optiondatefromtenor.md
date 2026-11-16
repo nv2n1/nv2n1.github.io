@@ -10,52 +10,20 @@ description: "QuantLib::CallableBondVolatilityStructure – Callable-bond volati
 <p>QuantLib::CallableBondVolatilityStructure &#8211; Callable-bond volatility structure. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual const Period &amp; maxBondTenor () const =0
-
-
 the largest length for which the term structure can return vols
-
-
 virtual Time maxBondLength () const
-
-
 the largest bondLength for which the term structure can return vols
-
-
 virtual Rate minStrike () const =0
-
-
 the minimum strike for which the term structure can return vols
-
-
 virtual Rate maxStrike () const =0
-
-
 the maximum strike for which the term structure can return vols
-
-
-
-
 Protected Member Functions
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time bondLength) const =0
-
-
 return smile section
-
-
 virtual Volatility volatilityImpl (Time optionTime, Time bondLength, Rate strike) const =0
-
-
 implements the actual volatility calculation in derived classes
-
-
 virtual Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike) const
-
-
-
 void checkRange (Time, Time, Rate strike, bool extrapolate) const
-
-
-
 void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>CallableBondConstantVolatility</code>.</p>
 <h3>Public Member Functions</h3>
@@ -98,52 +66,20 @@ virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTim
 <p>void checkRange (Time, Time, Rate strike, bool extrapolate) const</p>
 <p>void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const <code>Limits</code> </p>
 <pre><code>virtual const Period &amp; maxBondTenor () const =0
-
-
 the largest length for which the term structure can return vols
-
-
 virtual Time maxBondLength () const
-
-
 the largest bondLength for which the term structure can return vols
-
-
 virtual Rate minStrike () const =0
-
-
 the minimum strike for which the term structure can return vols
-
-
 virtual Rate maxStrike () const =0
-
-
 the maximum strike for which the term structure can return vols
-
-
-
-
 Protected Member Functions
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time bondLength) const =0
-
-
 return smile section
-
-
 virtual Volatility volatilityImpl (Time optionTime, Time bondLength, Rate strike) const =0
-
-
 implements the actual volatility calculation in derived classes
-
-
 virtual Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike) const
-
-
-
 void checkRange (Time, Time, Rate strike, bool extrapolate) const
-
-
-
 void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const</code></pre>
 <h2>Detailed Description</h2>
 <p>Callable-bond volatility structure. </p>
@@ -153,6 +89,6 @@ void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate s
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

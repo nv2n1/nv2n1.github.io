@@ -15,7 +15,7 @@ iget_failed - Mark an under-construction inode as dead and release it
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>The inode to discard</dl>
+<dl><dd></dd><dd>The inode to discard</dd></dl>
 
 <h2>Description</h2>
 

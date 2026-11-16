@@ -19,7 +19,7 @@ description: "slaqr0.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     SLAQR0 computes the eigenvalues of a Hessenberg matrix H
     and, optionally, the matrices T and Z from the Schur decomposition
@@ -30,11 +30,11 @@ description: "slaqr0.f –"
     of a matrix A which has been reduced to the Hessenberg form H
     by the orthogonal matrix Q:  A = Q*H*Q**T = (QZ)*T*(QZ)**T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>WANTT</i> </p>
+</dt><dd> <i>WANTT</i> </dd>
 <pre>
           WANTT is LOGICAL
           = .TRUE. : the full Schur form T is required;
@@ -180,24 +180,25 @@ H is REAL array, dimension(LDH, N) On entry, the upper Hessenberg matrix H.On ex
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+</dt><dd> Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </p>
+</dt><dd> K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </dd>
 <p>&nbsp;<wbr>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part II: Aggressive Early Deflation, SIAM Journal of Matrix Analysis, volume 23, pages 948&#8211;973, 2002.&nbsp;<wbr></dl>
 <p> Definition at line 256 of file slaqr0.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

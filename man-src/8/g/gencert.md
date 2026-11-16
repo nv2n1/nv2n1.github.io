@@ -32,9 +32,9 @@ description: "gencert – Generate a test NSS database for mod_nss"
 </tr>
 </table>
 <h2>Options</h2>
-<dl>
-<dt><code>&lt;destdir&gt;</code></p>
-<dd>Specifies the destination directory where the NSS databases will be created. </p>
+</dd><dl>
+<dt><code>&lt;destdir&gt;</code></dt>
+<dd>Specifies the destination directory where the NSS databases will be created. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a> </p>
@@ -43,3 +43,4 @@ description: "gencert – Generate a test NSS database for mod_nss"
 <h2>Copyright</h2>
 <p>Copyright (c) 2011 Red Hat, Inc. This is licensed under the Apache License, Version 2.0 (the &quot;License&quot;); no one may use this file except in compliance with the License. A copy of this license is available at <a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0.">http://www.apache.org/licenses/LICENSE-2.0.</a> </p>
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+</dl>

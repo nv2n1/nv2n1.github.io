@@ -11,7 +11,6 @@ std::regex_traits&lt;CharT&gt;::lookup_collatename - std::regex_traits&lt;CharT&
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class ForwardIt&gt;
-
 string_type lookup_collatename(ForwardIt first, ForwardIt last) const;</code></pre> 
 If the character sequence [first, last) represents the name of a valid collating element in the currently imbued locale, returns the name of that collating element. Otherwise, returns an empty string. 
 Collating elements are the symbols found in POSIX regular expressions between [. and .]. For example, [.a.] matches the character a in the C locale. [.tilde.] matches the character ~ in the C locale as well. [.ch.] matches the digraph ch in Czech locale, but generates std::regex_error with error code std::regex_constants::error_collate in most other locales. 
@@ -32,9 +31,7 @@ The representation of the named collating element as a character string.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;regex&gt;
 struct noisy_traits : std::regex_traits&lt;char&gt; {
     template &lt;class Iter&gt;
@@ -48,7 +45,6 @@ struct noisy_traits : std::regex_traits&lt;char&gt; {
     }
 };
 int main()
-
 {
     std::string str = &quot;z|}a&quot;; // C locale collation order: x,y,z,{,|,},~
     std::basic_regex&lt;char, noisy_traits&gt; re(&quot;[x-[.tilde.]]*a&quot;, std::regex::basic);

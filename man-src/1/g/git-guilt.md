@@ -28,48 +28,44 @@ description: "git-guilt – calculate change between two revisions"
 <p> Find blame on unstaged modified files:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git guilt      (1)
 spacewander                   ++++
 (1) There is only one modified file and it is not staged. The four
 plusses means that the file has four lines, all contributed by spacewander.
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Find blame delta between two commits:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git guilt HEAD ~3 HEAD ^
     spacewander++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(115)
             Jesse Sipprell
         -
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Find blame delta over the last three weeks:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ git guilt `git log&#8211; until = &#8220;3 weeks ago&#8221; &#8211;format = &#8220;%H&#8221; &#8211; n 1` Paul Schreiber++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(349)spacewander++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(113)Mark Eissler++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++CJ++ ++ +nickl &#8211; -Jesse Sipprell &#8211;<br />
                                                         Evan Grim &#8211;<br />
                                                         Ben Parnell &#8211;<br />
-                                                        hemanth.hm&#8211;</p>
-<dt>
-<dd></dl>
+                                                        hemanth.hm&#8211;</dd>
+</dl>
 <p> Since git 1.8.5, the above can also be written as: </p>
 <p> $ git guilt @{3.weeks.ago} </p>
 <p> Find blame delta for a topic branch:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git guilt `git merge - base master git - guilt` git - guilt spacewander++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(112)
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by spacewander &lt;<i>spacewanderlzx [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

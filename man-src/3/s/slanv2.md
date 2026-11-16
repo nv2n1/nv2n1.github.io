@@ -19,7 +19,7 @@ description: "slanv2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SLANV2 computes the Schur factorization of a real 2-by-2 nonsymmetric
  matrix in standard form:
@@ -30,11 +30,11 @@ description: "slanv2.f –"
  2) AA = DD and BB*CC &lt; 0, so that AA + or - sqrt(BB*CC) are complex
  conjugate eigenvalues.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is REAL
 </pre>
@@ -84,26 +84,27 @@ description: "slanv2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Modified by V. Sima, Research Institute for Informatics, Bucharest,
   Romania, to reduce the risk of cancellation errors,
   when computing real eigenvalues, and to ensure, if possible, that
   abs(RT1R) &gt;= abs(RT2R).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 128 of file slanv2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

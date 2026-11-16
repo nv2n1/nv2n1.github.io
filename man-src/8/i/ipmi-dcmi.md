@@ -16,40 +16,40 @@ description: "ipmi-dcmi – IPMI DCMI utility"
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands.</p>
 <dl>
-<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></p>
-<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</p>
-<dt><code>&#8211;disable-auto-probe</code></p>
-<dd>Do not probe in-band IPMI devices for default settings.</p>
-<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></p>
-<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</p>
-<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></p>
-<dd>Specify the in-band driver device path to be used instead of the probed path.</p>
-<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></p>
-<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</p>
-<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</p>
-<dd>Specify the in-band driver target channel number to send IPMI requests to.</p>
-<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</p>
-<dd>Specify the in-band driver target slave number to send IPMI requests to.</p>
-<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></p>
-<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</p>
-<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></p>
-<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast ADMIN privileges in order for this tool to operate fully.</p>
-<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></p>
-<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</p>
-<dt><code>-P</code>, <code>&#8211;password-prompt</code></p>
-<dd>Prompt for password to avoid possibility of listing it in process lists.</p>
-<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></p>
-<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</p>
-<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></p>
-<dd>Prompt for k-g to avoid possibility of listing it in process lists.</p>
-<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</p>
-<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</p>
-<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></p>
-<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</p>
-<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </p>
+<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></dt>
+<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</dd>
+<dt><code>&#8211;disable-auto-probe</code></dt>
+<dd>Do not probe in-band IPMI devices for default settings.</dd>
+<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></dt>
+<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</dd>
+<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></dt>
+<dd>Specify the in-band driver device path to be used instead of the probed path.</dd>
+<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></dt>
+<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</dd>
+<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</dt>
+<dd>Specify the in-band driver target channel number to send IPMI requests to.</dd>
+<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</dt>
+<dd>Specify the in-band driver target slave number to send IPMI requests to.</dd>
+<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></dt>
+<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</dd>
+<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></dt>
+<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast ADMIN privileges in order for this tool to operate fully.</dd>
+<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</dd>
+<dt><code>-P</code>, <code>&#8211;password-prompt</code></dt>
+<dd>Prompt for password to avoid possibility of listing it in process lists.</dd>
+<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></dt>
+<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</dd>
+<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></dt>
+<dd>Prompt for k-g to avoid possibility of listing it in process lists.</dd>
+<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</dd>
+<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</dd>
+<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></dt>
+<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</dd>
+<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </dd>
 <p> 0 &#8211; Authentication Algorithm = None; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 1 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 2 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = HMAC-SHA1-96; Confidentiality Algorithm = None </p>
@@ -62,68 +62,68 @@ description: "ipmi-dcmi – IPMI DCMI utility"
 <p> 15 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 16 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = None </p>
 <p> 17 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = AES-CBC-128</p>
-<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Ipmi-Dcmi Options</h2>
 <p>The following options are specific to <code>Ipmi-dcmi.</code></p>
 <dl>
-<dt><code>&#8211;get-dcmi-capability-info</code></p>
-<dd>Get DCMI capability information.</p>
-<dt><code>&#8211;get-asset-tag</code></p>
-<dd>Get asset tag.</p>
-<dt><code>&#8211;set-asset-tag</code>=<i>STRING</i></p>
-<dd>Set asset tag.</p>
-<dt><code>&#8211;get-management-controller-identifier-string</code></p>
-<dd>Get management controller identifier string tag.</p>
-<dt><code>&#8211;set-management-controller-identifier-string</code>=<i>STRING</i></p>
-<dd>Set management controller identifier string tag.</p>
-<dt><code>&#8211;get-dcmi-sensor-info</code></p>
-<dd>Get DCMI sensor information.</p>
-<dt><code>&#8211;get-system-power-statistics</code></p>
-<dd>Get system power statistics.</p>
-<dt><code>&#8211;get-enhanced-system-power-statistics</code></p>
-<dd>Get enhanced system power statistics.</p>
-<dt><code>&#8211;get-power-limit</code></p>
-<dd>Get power limit information.</p>
-<dt><code>&#8211;set-power-limit</code></p>
-<dd>Set power limit configuration. Can specify configuration via the <code>&#8211;exception-actions</code>, <code>&#8211;power-limit-requested</code>, <code>&#8211;correction-time-limit</code>, and <code>&#8211;correction-time-limit</code> options listed below. If one or more options below are not specified, current configuration will be utilized.</p>
-<dt><code>&#8211;exception-actions</code>=<i>BITMASK</i></p>
-<dd>Specify exception actions for set power limit configuration. Special case allowable values: NO_ACTION, HARD_POWER_OFF_SYSTEM, LOG_EVENT_TO_SEL_ONLY. Other values (e.g. 0x02 through 0x10) are OEM dependent. Used with the <code>&#8211;set-power-limit</code> option.</p>
-<dt><code>&#8211;power-limit-requested</code>=<i>WATTS</i></p>
-<dd>Specify power limit for set power limit configuration. Input is specified in watts. Used with the <code>&#8211;set-power-limit</code> option.</p>
-<dt><code>&#8211;correction-time-limit</code>=<i>MILLISECONDS</i></p>
-<dd>Specify correction time limit for set power limit configuration. Input is specified in milliseconds. Used with the <code>&#8211;set-power-limit</code> option.</p>
-<dt><code>&#8211;statistics-sampling-period</code>=<i>SECONDS</i></p>
-<dd>Specify management application statistics sampling period for set power limit configuration. Input is specified in seconds. Used with the <code>&#8211;set-power-limit</code> option.</p>
-<dt><code>&#8211;activate-deactivate-power-limit</code>=<i>OPERATION</i></p>
-<dd>Activate or deactivate power limit. Allowed values: ACTIVATE, DEACTIVATE.</p>
-<dt><code>&#8211;interpret-oem-data</code></p>
-<dd>Attempt to interpret OEM data, such as event data, sensor readings, or general extra info, etc. If an OEM interpretation is not available, the default output will be generated. Correctness of OEM interpretations cannot be guaranteed due to potential changes OEM vendors may make in products, firmware, etc. See OEM INTERPRETATION below for confirmed supported motherboard interpretations.</dl>
+<dt><code>&#8211;get-dcmi-capability-info</code></dt>
+<dd>Get DCMI capability information.</dd>
+<dt><code>&#8211;get-asset-tag</code></dt>
+<dd>Get asset tag.</dd>
+<dt><code>&#8211;set-asset-tag</code>=<i>STRING</i></dt>
+<dd>Set asset tag.</dd>
+<dt><code>&#8211;get-management-controller-identifier-string</code></dt>
+<dd>Get management controller identifier string tag.</dd>
+<dt><code>&#8211;set-management-controller-identifier-string</code>=<i>STRING</i></dt>
+<dd>Set management controller identifier string tag.</dd>
+<dt><code>&#8211;get-dcmi-sensor-info</code></dt>
+<dd>Get DCMI sensor information.</dd>
+<dt><code>&#8211;get-system-power-statistics</code></dt>
+<dd>Get system power statistics.</dd>
+<dt><code>&#8211;get-enhanced-system-power-statistics</code></dt>
+<dd>Get enhanced system power statistics.</dd>
+<dt><code>&#8211;get-power-limit</code></dt>
+<dd>Get power limit information.</dd>
+<dt><code>&#8211;set-power-limit</code></dt>
+<dd>Set power limit configuration. Can specify configuration via the <code>&#8211;exception-actions</code>, <code>&#8211;power-limit-requested</code>, <code>&#8211;correction-time-limit</code>, and <code>&#8211;correction-time-limit</code> options listed below. If one or more options below are not specified, current configuration will be utilized.</dd>
+<dt><code>&#8211;exception-actions</code>=<i>BITMASK</i></dt>
+<dd>Specify exception actions for set power limit configuration. Special case allowable values: NO_ACTION, HARD_POWER_OFF_SYSTEM, LOG_EVENT_TO_SEL_ONLY. Other values (e.g. 0x02 through 0x10) are OEM dependent. Used with the <code>&#8211;set-power-limit</code> option.</dd>
+<dt><code>&#8211;power-limit-requested</code>=<i>WATTS</i></dt>
+<dd>Specify power limit for set power limit configuration. Input is specified in watts. Used with the <code>&#8211;set-power-limit</code> option.</dd>
+<dt><code>&#8211;correction-time-limit</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify correction time limit for set power limit configuration. Input is specified in milliseconds. Used with the <code>&#8211;set-power-limit</code> option.</dd>
+<dt><code>&#8211;statistics-sampling-period</code>=<i>SECONDS</i></dt>
+<dd>Specify management application statistics sampling period for set power limit configuration. Input is specified in seconds. Used with the <code>&#8211;set-power-limit</code> option.</dd>
+<dt><code>&#8211;activate-deactivate-power-limit</code>=<i>OPERATION</i></dt>
+<dd>Activate or deactivate power limit. Allowed values: ACTIVATE, DEACTIVATE.</dd>
+<dt><code>&#8211;interpret-oem-data</code></dt>
+<dd>Attempt to interpret OEM data, such as event data, sensor readings, or general extra info, etc. If an OEM interpretation is not available, the default output will be generated. Correctness of OEM interpretations cannot be guaranteed due to potential changes OEM vendors may make in products, firmware, etc. See OEM INTERPRETATION below for confirmed supported motherboard interpretations.</dd></dl>
 <h2>Hostranged Options</h2>
 <p>The following options manipulate hostranged output. See HOSTRANGED SUPPORT below for additional information on hostranges.</p>
 <dl>
-<dt><code>-B</code>, <code>&#8211;buffer-output</code></p>
-<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-C</code>, <code>&#8211;consolidate-output</code></p>
-<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></p>
-<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</p>
-<dt><code>-E</code>, <code>&#8211;eliminate</code></p>
-<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</p>
-<dt><code>&#8211;always-prefix</code></p>
-<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dl>
+<dt><code>-B</code>, <code>&#8211;buffer-output</code></dt>
+<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-C</code>, <code>&#8211;consolidate-output</code></dt>
+<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></dt>
+<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</dd>
+<dt><code>-E</code>, <code>&#8211;eliminate</code></dt>
+<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</dd>
+<dt><code>&#8211;always-prefix</code></dt>
+<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dd></dl>
 <h2>Hostranged Support</h2>
 <p>Multiple hosts can be input either as an explicit comma separated lists of hosts or a range of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc. The later form should not be confused with regular expression character classes (also denoted by []). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

@@ -25,48 +25,48 @@ description: "geostore – geo cluster attribute manager"
 # geostore get -t ticket-A -s other bigdb-repl-status
 # geostore delete -t ticket-A -s 44.0.0.61 bigdb-repl-status
 # geostore list -t ticket-A -s other</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <p><code>-t</code></p>
 <dl>
-<dd>Ticket scope of the attribute (required, if more than one ticket is configured).</dl>
+<dd>Ticket scope of the attribute (required, if more than one ticket is configured).</dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>Site address or name where the attribute is to be stored/retrieved. </p>
+<dd>Site address or name where the attribute is to be stored/retrieved. </dd>
 <dl>
 <dd>
 <pre>The special value 'other' can be used to specify the other
 site. Obviously, in that case, the booth configuration must
 have exactly two sites defined.</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-c</code> <i>configfile</i></p>
 <dl>
-<dd>Configuration to use. </p>
+<dd>Configuration to use. </dd>
 <p> Can be a full path to a configuration file, or a short name; in the latter case, the directory <i>/etc/booth</i> and suffix <i>.conf</i> are added. Per default <i>booth</i> is used, which results in the path <i>/etc/booth/booth.conf</i>.</dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Give a short usage output.</dl>
+<dd>Give a short usage output.</dd></dl>
 <h2>Commands</h2>
 <p><i>set</i></p>
 <dl>
-<dd>Sets the attribute to the value.</dl>
+<dd>Sets the attribute to the value.</dd></dl>
 <p> <i>get</i></p>
 <dl>
-<dd>Get the attribute value and print it to <i>stdout</i>. If the attribute doesn&#8217;t exist, appropriate error message is printed to <i>stderr</i>.</dl>
+<dd>Get the attribute value and print it to <i>stdout</i>. If the attribute doesn&#8217;t exist, appropriate error message is printed to <i>stderr</i>.</dd></dl>
 <p> <i>delete</i></p>
 <dl>
-<dd>Delete the attribute. If the attribute doesn&#8217;t exist, appropriate error message is printed to <i>stderr</i>.</dl>
+<dd>Delete the attribute. If the attribute doesn&#8217;t exist, appropriate error message is printed to <i>stderr</i>.</dd></dl>
 <p> <i>list</i></p>
 <dl>
-<dd>List all attributes and their values stored at the site.</dl>
+<dd>List all attributes and their values stored at the site.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>0</code></p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <p> <code>1</code></p>
 <dl>
-<dd>Request failed or bad usage.</dl>
+<dd>Request failed or bad usage.</dd></dl>
 <h2>Resources</h2>
 <p>GitHub: <a rel="nofollow" href="https://github.com/ClusterLabs/booth">https://github.com/ClusterLabs/booth</a></p>
 <h2>Copying</h2>

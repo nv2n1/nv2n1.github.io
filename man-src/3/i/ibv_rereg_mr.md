@@ -17,7 +17,7 @@ url: "/docs/linux/man/3-ibv_rereg_mr/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_rereg_mr(struct ibv_mr *mr,
                  int flags,
@@ -25,7 +25,7 @@ int ibv_rereg_mr(struct ibv_mr *mr,
                  void *addr,
                  size_t length,
                  int access);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -36,11 +36,11 @@ int ibv_rereg_mr(struct ibv_mr *mr,
  flags is a bit-mask used to indicate which of the following properties of the memory region are being modified. Flags should be a combination (bit field) of:
 <dl>
 <dt>IBV_REREG_MR_CHANGE_TRANSLATION
-<dd> Change translation (location and length)
-<dt>IBV_REREG_MR_CHANGE_PD
-<dd> Change protection domain
-<dt>IBV_REREG_MR_CHANGE_ACCESS
-<dd> Change access flags</dl>
+</dt><dd> Change translation (location and length)
+</dd><dt>IBV_REREG_MR_CHANGE_PD
+</dt><dd> Change protection domain
+</dd><dt>IBV_REREG_MR_CHANGE_ACCESS
+</dt><dd> Change access flags</dd></dl>
  
 
  When IBV_REREG_MR_CHANGE_PD is used, pd represents the new PD this MR should be registered to. 

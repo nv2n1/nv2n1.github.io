@@ -12,7 +12,6 @@ std::atomic&lt;T&gt;::store - std::atomic&lt;T&gt;::store
 
 <pre><code>void store(T desired, std::memory_order order = std::memory_order_seq_cst) noexcept;
 (since C++ 11)
-
     void store(T desired, std::memory_order order = std::memory_order_seq_cst) volatile noexcept;</code></pre> 
 Atomically replaces the current value with desired. Memory is affected according to the value of order. 
 order must be one of std::memory_order_relaxed, std::memory_order_release or std::memory_order_seq_cst. Otherwise the behavior is undefined. 
@@ -29,7 +28,6 @@ order - memory order constraints to enforce
 <h2>See also</h2>
 
 <pre><code>stores a value into an atomic object
-
 operator=             (public member function)</code></pre> 
 atomic_store 
 atomic_store_explicit atomically replaces the value of the atomic object with a non-atomic argument 

@@ -25,24 +25,24 @@ description: "ipa-join – Join a machine to an IPA realm and get a keytab for t
 <p> Please note, that while the ipa-join option removes the client from the domain, it does not actually uninstall the client or properly remove all of the IPA-related configuration. The only way to uninstall a client completely is to use ipa-client-install &#8211;uninstall (see <code><a href="/docs/linux/man/1-ipa-client-install/">ipa-client-install</a></code>(1)). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h,&#8211;hostname hostname</code></p>
-<dd> The hostname of this server (FQDN). By default of nodename from <a href="/docs/linux/man/2-uname/">uname</a>(2) is used.</p>
-<dt><code>-s,&#8211;server server</code></p>
-<dd> The hostname of the IPA server (FQDN). Note that by default there is no /etc/ipa/default.conf, in most cases it needs to be supplied.</p>
-<dt><code>-k,&#8211;keytab keytab-file</code></p>
-<dd> The keytab file where to append the new key (will be created if it does not exist). Default: /etc/krb5.keytab</p>
-<dt><code>-w,&#8211;bindpw password</code></p>
-<dd> The password to use if not using Kerberos to authenticate. Use a password of this particular host (one time password created on IPA server)</p>
-<dt><code>-b,&#8211;basedn basedn</code></p>
-<dd> The basedn of the IPA server (of the form dc=example,dc=com). This is only needed when not using Kerberos to authenticate and anonymous binds are disallowed in the IPA LDAP server.</p>
-<dt><code>-f,&#8211;force</code></p>
-<dd> Force enrolling the host even if host entry exists.</p>
-<dt><code>-u,&#8211;unenroll</code></p>
-<dd> Unenroll this host from the IPA server. No keytab entry is removed in the process (see <code><a href="/docs/linux/man/1-ipa-rmkeytab/">ipa-rmkeytab</a></code>(1)).</p>
-<dt><code>-q,&#8211;quiet</code></p>
-<dd> Quiet mode. Only errors are displayed.</p>
-<dt><code>-d,&#8211;debug</code></p>
-<dd> Print the raw XML-RPC output in GSSAPI mode.</dl>
+<dt><code>-h,&#8211;hostname hostname</code></dt>
+<dd> The hostname of this server (FQDN). By default of nodename from <a href="/docs/linux/man/2-uname/">uname</a>(2) is used.</dd>
+<dt><code>-s,&#8211;server server</code></dt>
+<dd> The hostname of the IPA server (FQDN). Note that by default there is no /etc/ipa/default.conf, in most cases it needs to be supplied.</dd>
+<dt><code>-k,&#8211;keytab keytab-file</code></dt>
+<dd> The keytab file where to append the new key (will be created if it does not exist). Default: /etc/krb5.keytab</dd>
+<dt><code>-w,&#8211;bindpw password</code></dt>
+<dd> The password to use if not using Kerberos to authenticate. Use a password of this particular host (one time password created on IPA server)</dd>
+<dt><code>-b,&#8211;basedn basedn</code></dt>
+<dd> The basedn of the IPA server (of the form dc=example,dc=com). This is only needed when not using Kerberos to authenticate and anonymous binds are disallowed in the IPA LDAP server.</dd>
+<dt><code>-f,&#8211;force</code></dt>
+<dd> Force enrolling the host even if host entry exists.</dd>
+<dt><code>-u,&#8211;unenroll</code></dt>
+<dd> Unenroll this host from the IPA server. No keytab entry is removed in the process (see <code><a href="/docs/linux/man/1-ipa-rmkeytab/">ipa-rmkeytab</a></code>(1)).</dd>
+<dt><code>-q,&#8211;quiet</code></dt>
+<dd> Quiet mode. Only errors are displayed.</dd>
+<dt><code>-d,&#8211;debug</code></dt>
+<dd> Print the raw XML-RPC output in GSSAPI mode.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Join IPA domain and retrieve a keytab with kerberos credentials. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>kinit admin<br />

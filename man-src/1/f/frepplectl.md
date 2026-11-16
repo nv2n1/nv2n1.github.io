@@ -16,15 +16,15 @@ description: "frepplectl – open source production planning and scheduling"
 <p> This program is a wrapper for the administrative actions of the application. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>subcommand</code></p>
-<dd> Name of the command to execute. Use &#8216;frepplectl help&#8217; to get a list of available subcommands.</p>
-<dt><code>[options] [arguments]</code></p>
-<dd> Options and arguments applied to the chosen subcommand. Use &#8216;frepplectl help subcommand&#8217; to get a list of options and arguments applicable to a certain subcommand. </p>
+<dt><code>subcommand</code></dt>
+<dd> Name of the command to execute. Use &#8216;frepplectl help&#8217; to get a list of available subcommands.</dd>
+<dt><code>[options] [arguments]</code></dt>
+<dd> Options and arguments applied to the chosen subcommand. Use &#8216;frepplectl help subcommand&#8217; to get a list of options and arguments applicable to a certain subcommand. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>FREPPLE_HOME</p>
-<dd> Optionally points to a directory where the initialization files will be searched. </p>
+<dt>FREPPLE_HOME</dt>
+<dd> Optionally points to a directory where the initialization files will be searched. </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> 0 when successful, non-zero in case of errors </p>

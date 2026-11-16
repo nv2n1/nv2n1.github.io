@@ -15,14 +15,14 @@ description: "askmara – do simple dns queries"
 <p> <code>askmara</code> [-n] [ -v | -t timeout] query [ server ]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-t</p>
-<dd> If this is present, the following argument is the askmara timeout, in seconds. Note that <code>askmara</code> can not both have a user-defined timeout and verbose output.</p>
-<dt>-v</p>
-<dd> If this is set, <code>askmara</code> will verbosely output the complete reply that the server sent. Note that this verbose output is not csv2-compatible.</p>
-<dt>-n</p>
-<dd> If this is set, <code>askmara</code>, when sending out a query, will not request DNS recursion; in other words, askmara will request that the remote DNS server not contact other DNS server to answer the query in question.</p>
-<dt>query</p>
-<dd> dns record to be queried. The query has two sections: The type of record we desire, and the hostname we want this record for.</dl>
+<dt>-t</dt>
+<dd> If this is present, the following argument is the askmara timeout, in seconds. Note that <code>askmara</code> can not both have a user-defined timeout and verbose output.</dd>
+<dt>-v</dt>
+<dd> If this is set, <code>askmara</code> will verbosely output the complete reply that the server sent. Note that this verbose output is not csv2-compatible.</dd>
+<dt>-n</dt>
+<dd> If this is set, <code>askmara</code>, when sending out a query, will not request DNS recursion; in other words, askmara will request that the remote DNS server not contact other DNS server to answer the query in question.</dd>
+<dt>query</dt>
+<dd> dns record to be queried. The query has two sections: The type of record we desire, and the hostname we want this record for.</dd></dl>
 <p> The type of query can have two forms: A one-letter mnemonic, or a numeric rtype followed by a colon. This is immediately concatenated by the full name of the host name we wish to look up. </p>
 <p> For example, to ask for the IP of aqexample.com.aq, we can use the one-letter mnemonic, in the form aqAexample.com.aq, or we can use the numeric RR followed by a colon, giving the query aq1:example.com.aq (since A has the record type of one). Note that the query name needs the trailing dot at the end. </p>
 <p> Askmara supports a handful one-letter mnemonics, as follows: </p>
@@ -35,8 +35,8 @@ description: "askmara – do simple dns queries"
 <p> <code>T</code> signifies that we want a TXT RR </p>
 <p> <code>Z</code> signifies that we want to ask for all RRs.</p>
 <dl>
-<dt>server</p>
-<dd> IP address of the dns server to be queried. If no server is given, askmara will query 127.0.0.1.</dl>
+<dt>server</dt>
+<dd> IP address of the dns server to be queried. If no server is given, askmara will query 127.0.0.1.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Asking the server with the ip 127.0.0.1 for the IP address of example.com: </p>
 <pre>

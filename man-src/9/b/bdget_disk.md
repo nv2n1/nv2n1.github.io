@@ -14,10 +14,10 @@ description: "bdget_disk – do bdget by gendisk and partition number"
 <p><i>disk</i></p>
 <dl>
 <dd>
-<dd>gendisk of interest</dl>
+</dd><dd>gendisk of interest</dd></dl>
 <p> <i>partno</i></p>
 <dl>
-<dd>partition number</dl>
+<dd>partition number</dd></dl>
 <h2>Description</h2>
 <p>Find partition <i>partno</i> from <i>disk</i>, do <code>bdget</code> on it.</p>
 <h2>Context</h2>

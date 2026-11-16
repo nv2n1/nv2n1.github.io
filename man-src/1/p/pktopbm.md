@@ -16,12 +16,12 @@ description: "pktopbm – convert packed (PK) format font into PBM"
 <p> <code>pktopbm</code> reads a packed (PK) font file as input, and produces PBM images as output. If the filename &#8216;-&#8216; is used for any of the filenames, the standard input stream (or standard output where appropriate) will be used. If either the width or height is specified, this value will be used for all bitmaps produced. Also if one or both values are specified, the bitmap will be relocated with the hoffset and voffset given in the pkfile. The basepoint will be placed in the lower left corner of the bitmap if the bitmap is bigger than the specified size it will be truncated at the top or right. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>num</i></p>
-<dd> Sets the character number of the next bitmap written to <i>num</i>. </p>
-<dt><code>-x</code> <i>width</i></p>
-<dd> Sets the width of the image in columns. </p>
-<dt><code>-y</code> <i>width</i></p>
-<dd> Sets the height of the image in rows. </p>
+<dt><code>-c</code> <i>num</i></dt>
+<dd> Sets the character number of the next bitmap written to <i>num</i>. </dd>
+<dt><code>-x</code> <i>width</i></dt>
+<dd> Sets the width of the image in columns. </dd>
+<dt><code>-y</code> <i>width</i></dt>
+<dd> Sets the height of the image in rows. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtopk/">pbmtopk</a></code>(1) , <code>pbm</code>(1) </p>

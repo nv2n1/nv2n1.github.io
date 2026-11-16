@@ -14,12 +14,12 @@ description: "akcipher_request_free – zeroize and free public key request"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request to free</dl>
+</dd><dd>request to free</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

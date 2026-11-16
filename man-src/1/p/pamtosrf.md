@@ -21,22 +21,22 @@ description: "pamtosrf – convert a sequence of Netpbm images to a SRF image fi
 <p> <i>netpbmfile</i> is the input stream, which defaults to Standard Input. Output is always on Standard Output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Issue informational messages about the input and the conversion process. </p>
+<dt><code>-verbose</code></dt>
+<dd> Issue informational messages about the input and the conversion process. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-srftopam/">srftopam</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pam</code>(1) </p>
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> <code>srftopam</code> was new in Netpbm 10.55 (June 2011). </p>
 <p> It was contributed by Mike Frysinger. </p>

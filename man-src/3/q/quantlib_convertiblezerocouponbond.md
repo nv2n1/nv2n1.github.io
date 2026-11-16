@@ -17,6 +17,6 @@ description: "QuantLib::ConvertibleZeroCouponBond – convertible zero-coupon bo
 <p>convertible zero-coupon bond </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Most methods inherited from <code>Bond</code> (such as yield or the yield-based dirtyPrice and cleanPrice) refer to the underlying plain-vanilla bond and do not take convertibility and callability into account.</dl>
+<dd>Most methods inherited from <code>Bond</code> (such as yield or the yield-based dirtyPrice and cleanPrice) refer to the underlying plain-vanilla bond and do not take convertibility and callability into account.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

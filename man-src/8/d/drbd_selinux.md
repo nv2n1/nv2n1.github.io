@@ -96,8 +96,8 @@ description: "drbd_selinux – Security Enhanced Linux Policy for the drbd proce
 <p> <code>drbd_exec_t</code> </p>
 <p> &#8211; Set files with the drbd_exec_t type, if you want to transition an executable to the drbd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/drbdadm, /sbin/drbdsetup, /usr/sbin/drbdadm, /usr/sbin/drbdsetup, /usr/lib/ocf/resource.d/linbit/drbd </p>
+<dt>Paths:</dt>
+<dd>/sbin/drbdadm, /sbin/drbdsetup, /usr/sbin/drbdadm, /usr/sbin/drbdsetup, /usr/lib/ocf/resource.d/linbit/drbd </dd>
 </dl>
 <p> <code>drbd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the drbd_initrc_exec_t type, if you want to transition an executable to the drbd_initrc_t domain. </p>

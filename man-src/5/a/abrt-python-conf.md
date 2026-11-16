@@ -13,7 +13,7 @@ abrt-python.conf - Configuration file for ABRT's python crash hook
 Currently, only one item exists: 
 
  RequireAbsolutePath = <i>yes</i> / <i>no</i> ...
-<dl><dd>If set to <i>no</i>, unhandled python exceptions will be caught and saved even in scripts which are run without full path in sys.argv[0]. Default is <i>yes</i>: do not save them.</dl>
+<dl><dd>If set to <i>no</i>, unhandled python exceptions will be caught and saved even in scripts which are run without full path in sys.argv[0]. Default is <i>yes</i>: do not save them.</dd></dl>
 
 <h2>See Also</h2>
 
@@ -21,4 +21,4 @@ Currently, only one item exists:
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

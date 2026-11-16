@@ -14,8 +14,8 @@ description: "Tk_CreateGenericHandler, Tk_DeleteGenericHandler – associate pro
 <code>Tk_DeleteGenericHandler</code>(<i>proc, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_GenericProc <i>*proc</i> (in) Procedure to invoke whenever any X event occurs on any display.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>Tk_GenericProc <i>*proc</i> (in) Procedure to invoke whenever any X event occurs on any display.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_CreateGenericHandler</code> arranges for <i>proc</i> to be invoked in the future whenever any X event occurs. This mechanism is <i>not</i> intended for dispatching X events on windows managed by Tk (you should use <code>Tk_CreateEventHandler</code> for this purpose). <code>Tk_CreateGenericHandler</code> is intended for other purposes, such as tracing X events, monitoring events on windows not owned by Tk, accessing X-related libraries that were not originally designed for use with Tk, and so on. </p>
@@ -26,7 +26,7 @@ description: "Tk_CreateGenericHandler, Tk_DeleteGenericHandler – associate pro
 <pre>typedef int Tk_GenericProc(
  ClientData <i>clientData</i>,
  XEvent *<i>eventPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> parameter to <i>proc</i> is a copy of the <i>clientData</i> argument given to <code>Tk_CreateGenericHandler</code> when the callback was created. Typically, <i>clientData</i> points to a data structure containing application-specific information about how to handle events. <i>EventPtr</i> is a pointer to the X event. </p>
 <p> Whenever an X event is processed by <code>Tk_HandleEvent</code>, <i>proc</i> is called. The return value from <i>proc</i> is normally 0. A non-zero return value indicates that the event is not to be handled further; that is, <i>proc</i> has done all processing that is to be allowed for the event. </p>
 <p> If there are multiple generic event handlers, each one is called for each event, in the order in which they were established. </p>

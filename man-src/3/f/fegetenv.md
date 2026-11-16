@@ -48,16 +48,16 @@ int feupdateenv(const fenv_t *envp);
 <p> The <code>fesetround</code>() function sets the rounding mode as specified by its argument and returns zero when it was successful. </p>
 <p> C99 and POSIX.1-2008 specify an identifier, <code>FLT_ROUNDS</code>, defined in <i>&lt;float.h&gt;</i>, which indicates the implementation-defined rounding behavior for floating-point addition. This identifier has one of the following values:</p>
 <dl>
-<dt>-1</p>
-<dd> The rounding mode is not determinable.</p>
-<dt>0</p>
-<dd> Rounding is toward 0.</p>
-<dt>1</p>
-<dd> Rounding is toward nearest number.</p>
-<dt>2</p>
-<dd> Rounding is toward positive infinity.</p>
-<dt>3</p>
-<dd> Rounding is toward negative infinity.</dl>
+<dt>-1</dt>
+<dd> The rounding mode is not determinable.</dd>
+<dt>0</dt>
+<dd> Rounding is toward 0.</dd>
+<dt>1</dt>
+<dd> Rounding is toward nearest number.</dd>
+<dt>2</dt>
+<dd> Rounding is toward positive infinity.</dd>
+<dt>3</dt>
+<dd> Rounding is toward negative infinity.</dd></dl>
 <p> Other values represent machine-dependent, nonstandard rounding modes. </p>
 <p> The value of <code>FLT_ROUNDS</code> should reflect the current rounding mode as set by <code>fesetround</code>() (but see BUGS).</p>
 <h3>Floating-point environment</h3>

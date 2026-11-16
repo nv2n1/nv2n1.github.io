@@ -14,7 +14,7 @@ description: "atapi_drain_needed – Check whether data transfer may overflow"
 <p><i>rq</i></p>
 <dl>
 <dd>
-<dd>request to be checked</dl>
+</dd><dd>request to be checked</dd></dl>
 <h2>Description</h2>
 <p>ATAPI commands which transfer variable length data to host might overflow due to application error or hardware bug. This function checks whether overflow should be drained and ignored for <i>request</i>. </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "atapi_drain_needed – Check whether data transfer may overflow"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

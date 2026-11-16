@@ -14,10 +14,10 @@ description: "gnutls_transport_set_pull_timeout_function – API function"
 <p> <code>void gnutls_transport_set_pull_timeout_function(gnutls_session_t </code><i>session</i><code>, gnutls_pull_timeout_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_pull_timeout_func func</p>
-<dd> a callback function</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_pull_timeout_func func</dt>
+<dd> a callback function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the function where you set a function for gnutls to know whether data are ready to be received. It should wait for data a given time frame in milliseconds. The callback should return 0 on timeout, a positive number if data can be received, and -1 on error. You&#8217;ll need to override this function if <code>select()</code> is not suitable for the provided transport calls. </p>
 <p> As with <code>select()</code>, if the timeout value is zero the callback should return zero if no data are immediately available. </p>
@@ -33,6 +33,6 @@ description: "gnutls_transport_set_pull_timeout_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

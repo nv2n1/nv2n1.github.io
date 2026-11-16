@@ -92,7 +92,7 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>GetImage()</code> may be used to get the image object path of the image with the specified name. </p>
 <p> <code>ListImages()</code> returns an array of all currently known images. The structures in the array consist of the following fields: image name, type, read-only flag, creation time, modification time, current disk space, usage and image object path. </p>
@@ -101,40 +101,40 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 <p> <code>GetImageMetadataWithExtensions()</code> retrieves metadata associated with an image. This method is a superset of <code>GetImageMetadata()</code> with the addition of a list of extensions as input parameter, which were overlaid on top of the main image via <code>AttachImageWithExtensions()</code>. The path of each extension and an array of bytes with the content of the respective extension-release file are returned, one such structure for each extension named in the input arguments. </p>
 <p> <code>GetImageState()</code> retrieves the image state as one of the following strings: </p>
 <dl>
-<dd>&bull; detached</dl>
+<dd>&bull; detached</dd></dl>
 <dl>
-<dd>&bull; attached</dl>
+<dd>&bull; attached</dd></dl>
 <dl>
-<dd>&bull; attached-runtime</dl>
+<dd>&bull; attached-runtime</dd></dl>
 <dl>
-<dd>&bull; enabled</dl>
+<dd>&bull; enabled</dd></dl>
 <dl>
-<dd>&bull; enabled-runtime</dl>
+<dd>&bull; enabled-runtime</dd></dl>
 <dl>
-<dd>&bull; running</dl>
+<dd>&bull; running</dd></dl>
 <dl>
-<dd>&bull; running-runtime</dl>
+<dd>&bull; running-runtime</dd></dl>
 <p> <code>AttachImage()</code> attaches a portable image to the system. This method takes an image path or name, a list of strings that will be used to search for unit files inside the image (partial or complete matches), a string indicating which portable profile to use for the image (see <i>Profiles</i> property for a list of available profiles), a boolean indicating whether to attach the image only for the current boot session, and a string representing the preferred copy mode (whether to copy the image or to just symlink it) with the following possible values: </p>
 <dl>
-<dd>&bull; (null)</dl>
+<dd>&bull; (null)</dd></dl>
 <dl>
-<dd>&bull; copy</dl>
+<dd>&bull; copy</dd></dl>
 <dl>
-<dd>&bull; symlink</dl>
+<dd>&bull; symlink</dd></dl>
 <p> This method returns the list of changes applied to the system (for example, which unit was added and is now available as a system service). Each change is represented as a triplet of strings: the type of change applied, the path on which it was applied, and the source (if any). The type of change applied will be one of the following possible values: </p>
 <dl>
-<dd>&bull; copy</dl>
+<dd>&bull; copy</dd></dl>
 <dl>
-<dd>&bull; symlink</dl>
+<dd>&bull; symlink</dd></dl>
 <dl>
-<dd>&bull; write</dl>
+<dd>&bull; write</dd></dl>
 <dl>
-<dd>&bull; mkdir</dl>
+<dd>&bull; mkdir</dd></dl>
 <p> Note that an image cannot be attached if a unit that it contains is already present on the system. </p>
 <p> <code>AttachImageWithExtensions()</code> attaches a portable image to the system. This method is a superset of <code>AttachImage()</code> with the addition of a list of extensions as input parameter, which will be overlaid on top of the main image. When this method is used, detaching must be done by passing the same arguments via the <code>DetachImageWithExtensions()</code> method. For more details on this functionality, see the <i>MountImages=</i> entry on <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5) and <code><a href="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></code>(8). The <i>flag</i> parameter is currently unused and reserved for future purposes. </p>
 <p> <code>DetachImage()</code> detaches a portable image from the system. This method takes an image path or name, and a boolean indicating whether the image to detach was attached only for the current boot session or persistently. This method returns the list of changes applied to the system (for example, which unit was removed and is no longer available as a system service). Each change is represented as a triplet of strings: the type of change applied, the path on which it was applied, and the source (if any). The type of change applied will be one of the following possible values: </p>
 <dl>
-<dd>&bull; unlink</dl>
+<dd>&bull; unlink</dd></dl>
 <p> Note that an image cannot be detached if a unit that it contains is running. </p>
 <p> <code>DetachImageWithExtensions()</code> detaches a portable image from the system. This method is a superset of <code>DetachImage()</code> with the addition of a list of extensions as input parameter, which were overlaid on top of the main image via <code>AttachImageWithExtensions()</code>. The <i>flag</i> parameter is currently unused and reserved for future purposes. </p>
 <p> <code>ReattachImage()</code> combines the effects of the <code>AttachImage()</code> method and the <code>DetachImage()</code> method. The difference is that it is allowed to reattach an image while one or more of its units are running. The reattach operation will fail if no matching image is attached. The input parameters match the <code>AttachImage()</code> method, and the return parameters are the combination of the return parameters of the <code>DetachImage()</code> method (first array, units that were removed) and the <code>AttachImage()</code> method (second array, units that were updated or added). </p>
@@ -147,7 +147,7 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 <dl>
 <dd>
 <pre>#define SD_SYSTEMD_PORTABLE_RUNTIME (UINT64_C(1) &lt;&lt; 0)</pre>
-</dl>
+</dd></dl>
 <h3>Properties</h3>
 <p><i>PoolPath</i> specifies the file system path where images are written to. </p>
 <p> <i>PoolUsage</i> specifies the current usage size of the image pool in bytes. </p>
@@ -231,35 +231,35 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p>The following methods implement the same operation as the respective methods on the Manager object (see above). However, these methods operate on the image object and hence does not take an image name parameter. Invoking the methods directly on the Manager object has the advantage of not requiring a <code>GetImage()</code> call to get the image object for a specific image name. Calling the methods on the Manager object is hence a round trip optimization. List of methods: </p>
 <dl>
-<dd>&bull; GetOSRelease()</dl>
+<dd>&bull; GetOSRelease()</dd></dl>
 <dl>
-<dd>&bull; GetMetadata()</dl>
+<dd>&bull; GetMetadata()</dd></dl>
 <dl>
-<dd>&bull; GetMetadataWithExtensions()</dl>
+<dd>&bull; GetMetadataWithExtensions()</dd></dl>
 <dl>
-<dd>&bull; GetState()</dl>
+<dd>&bull; GetState()</dd></dl>
 <dl>
-<dd>&bull; Attach()</dl>
+<dd>&bull; Attach()</dd></dl>
 <dl>
-<dd>&bull; AttachWithExtensions()</dl>
+<dd>&bull; AttachWithExtensions()</dd></dl>
 <dl>
-<dd>&bull; Detach()</dl>
+<dd>&bull; Detach()</dd></dl>
 <dl>
-<dd>&bull; DetachWithExtensions()</dl>
+<dd>&bull; DetachWithExtensions()</dd></dl>
 <dl>
-<dd>&bull; Reattach()</dl>
+<dd>&bull; Reattach()</dd></dl>
 <dl>
-<dd>&bull; ReattacheWithExtensions()</dl>
+<dd>&bull; ReattacheWithExtensions()</dd></dl>
 <dl>
-<dd>&bull; Remove()</dl>
+<dd>&bull; Remove()</dd></dl>
 <dl>
-<dd>&bull; MarkReadOnly()</dl>
+<dd>&bull; MarkReadOnly()</dd></dl>
 <dl>
-<dd>&bull; SetLimit()</dl>
+<dd>&bull; SetLimit()</dd></dl>
 <h3>Properties</h3>
 <p><i>Name</i> specifies the image name. </p>
 <p> <i>Path</i> specifies the file system path where image is stored. </p>
@@ -275,7 +275,8 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>the usual interface versioning guidelines</p>
+<dt> 1.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

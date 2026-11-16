@@ -29,9 +29,9 @@ description: "atomic-pull – fetch an image locally"
 <p> If the user is not privileged, the image will be stored in the user specific repository. </p>
 <p> If your /etc/containers/policy.json requires signature verification, the pulled image is verified prior to being made available to the local docker daemon. When interacting with a docker registry, Atomic uses the policy and YAML configuration files /etc/containers/ to determine:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item if the image should be verified with a signature item and where to get the signature</dl>
+<p> item if the image should be verified with a signature item and where to get the signature</dd></dl>
 <p> If you use the &#8211;type atomic switch to interact with an atomic registry, Atomic will still use the policy to determine if verification is needed. The signature itself will be obtained from the atomic registry. An example of pulling from an atomic registry could be: </p>
 <p> atomic pull &#8211;type atomic my-atomic-registry:images/foobar </p>
 <h2>OPTIONS:</h2>
@@ -41,3 +41,4 @@ description: "atomic-pull – fetch an image locally"
 <h2>HISTORY</h2>
 <p> April 2016, Originally compiled by Giuseppe Scrivano (gscrivan at redhat dot com) </p>
 <h2>Index</h2>
+</p>

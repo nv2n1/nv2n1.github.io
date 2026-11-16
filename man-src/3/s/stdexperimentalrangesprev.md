@@ -11,39 +11,27 @@ std::experimental::ranges::prev - std::experimental::ranges::prev
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     namespace
 {
     (ranges TS)
-
         constexpr /* unspecified */ prev = /* unspecified */;
     (customization point object)
 }
-
 Call signature
-
     template &lt;Iterator I&gt;
     (1)
-
         constexpr I prev(I i);
-
 template &lt;Iterator I&gt;
 (2)
-
     constexpr I prev(I i, ranges::difference_type_t&lt;I&gt; n);
-
 template &lt;Iterator I&gt;
 (3)
-
     constexpr I prev(I i, ranges::difference_type_t&lt;I&gt; n, I bound);
 Decrements the iterator i n times, or until bound is reached, whichever comes first, and returns the decremented iterator.
-
 1) Equivalent to --i;
 return i;.
-
 2) Equivalent to ranges::advance(i, -n);
 return i;.
-
 3) Equivalent to ranges::advance(i, -n, bound);
 return i;
 .</code></pre> 

@@ -14,10 +14,10 @@ description: "gnutls_rsa_params_generate2 – API function"
 <p> <code>int gnutls_rsa_params_generate2(gnutls_rsa_params_t </code><i>params</i><code>, unsigned int </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_rsa_params_t params</p>
-<dd> The structure where the parameters will be stored</p>
-<dt>unsigned int bits</p>
-<dd> is the prime&#8217;s number of bits</dl>
+<dt>gnutls_rsa_params_t params</dt>
+<dd> The structure where the parameters will be stored</dd>
+<dt>unsigned int bits</dt>
+<dd> is the prime&#8217;s number of bits</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will generate new temporary RSA parameters for use in RSA-EXPORT ciphersuites. This function is normally slow. </p>
 <p> Note that if the parameters are to be used in export cipher suites the bits value should be 512 or less. Also note that the generation of new RSA parameters is only useful to servers. Clients use the parameters sent by the server, thus it&#8217;s no use calling this in client side.</p>
@@ -32,6 +32,6 @@ description: "gnutls_rsa_params_generate2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

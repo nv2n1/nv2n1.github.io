@@ -30,13 +30,13 @@ url: "/docs/linux/man/1-report-newt/"
  -d, --delete
 <dl>
 <dt>
-<dd> Remove PROBLEM_DIR after reporting</dl>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
  
 
  -V, --version
 <dl>
 <dt>
-<dd> Display version and exit</dl>
+</dt><dd> Display version and exit</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -44,7 +44,7 @@ url: "/docs/linux/man/1-report-newt/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

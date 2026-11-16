@@ -13,8 +13,8 @@ description: "mongoc_stream_flush() – This function shall flush any buffered b
 mongoc_stream_flush (mongoc_stream_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <p> This function shall flush any buffered bytes in the underlying stream to the physical transport. It mimics the API and semantics of <code><a href="/docs/linux/man/3-fflush/">fflush</a>(3)</code> , forcing a write of user space buffered data. </p>
 <p> Not all stream implementations may implement this feature. </p>
 <h2>Returns</h2>

@@ -10,18 +10,18 @@ description: "crc7_be – update the CRC7 for the data buffer"
 <p>crc7_be &#8211; update the CRC7 for the data buffer</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u8 crc7_be(u8&nbsp;<wbr></code><i>crc</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dl>
+<dt> <code>u8 crc7_be(u8&nbsp;<wbr></code><i>crc</i><code>, const u8&nbsp;<wbr>*&nbsp;<wbr></code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>crc</i></p>
 <dl>
 <dd>
-<dd>previous CRC7 value</dl>
+</dd><dd>previous CRC7 value</dd></dl>
 <p> <i>buffer</i></p>
 <dl>
-<dd>data pointer</dl>
+<dd>data pointer</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes in the buffer</dl>
+<dd>number of bytes in the buffer</dd></dl>
 <h2>Context</h2>
 <p>any</p>
 <h2>Description</h2>

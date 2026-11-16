@@ -14,10 +14,10 @@ description: "usb_hub_find_child – Get the pointer of child device attached to
 <p><i>hdev</i></p>
 <dl>
 <dd>
-<dd>USB device belonging to the usb hub</dl>
+</dd><dd>USB device belonging to the usb hub</dd></dl>
 <p> <i>port1</i></p>
 <dl>
-<dd>port num to indicate which port the child device is attached to.</dl>
+<dd>port num to indicate which port the child device is attached to.</dd></dl>
 <h2>Description</h2>
 <p>USB drivers call this function to get hub&#8217;s child device pointer.</p>
 <h2>Return</h2>

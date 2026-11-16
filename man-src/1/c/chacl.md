@@ -23,31 +23,31 @@ description: "chacl – change the access control list of a file or directory"
 <p> <i>chacl</i> changes the ACL(s) for a file or directory. The ACL(s) specified are applied to each file in the <tt>pathname</tt> arguments. </p>
 <p> Each ACL is a string which is interpreted using the <i><a href="/docs/linux/man/3-acl_from_text/">acl_from_text</a></i>(3) routine. These strings are made up of comma separated clauses each of which is of the form, tag:name:perm. Where <tt>tag</tt> can be:</p>
 <dl>
-<dt>&quot;user&quot; (or &quot;u&quot;)</p>
-<dd> indicating that the entry is a &quot;user&quot; ACL entry.</p>
-<dt>&quot;group&quot; (or &quot;g&quot;)</p>
-<dd> indicating that the entry is a &quot;group&quot; ACL entry.</p>
-<dt>&quot;other&quot; (or &quot;o&quot;)</p>
-<dd> indicating that the entry is an &quot;other&quot; ACL entry.</p>
-<dt>&quot;mask&quot; (or &quot;m&quot;)</p>
-<dd> indicating that the entry is a &quot;mask&quot; ACL entry.</dl>
+<dt>&quot;user&quot; (or &quot;u&quot;)</dt>
+<dd> indicating that the entry is a &quot;user&quot; ACL entry.</dd>
+<dt>&quot;group&quot; (or &quot;g&quot;)</dt>
+<dd> indicating that the entry is a &quot;group&quot; ACL entry.</dd>
+<dt>&quot;other&quot; (or &quot;o&quot;)</dt>
+<dd> indicating that the entry is an &quot;other&quot; ACL entry.</dd>
+<dt>&quot;mask&quot; (or &quot;m&quot;)</dt>
+<dd> indicating that the entry is a &quot;mask&quot; ACL entry.</dd></dl>
 <p> <tt>name</tt> is a string which is the user or group name for the ACL entry. A null <tt>name</tt> in a user or group ACL entry indicates the file&#8217;s owner or file&#8217;s group. <tt>perm</tt> is the string &quot;rwx&quot; where each of the entries may be replaced by a &quot;-&quot; indicating no access of that type, e.g. &quot;r-x&quot;, &quot;&#8211;x&quot;, &quot;&#8212;&quot;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Indicates that there are two ACLs to change, the first is the file access ACL and the second the directory default ACL.</p>
-<dt><code>-d</code></p>
-<dd> Used to set only the default ACL of a directory.</p>
-<dt><code>-R</code></p>
-<dd> Removes the file access ACL only.</p>
-<dt><code>-D</code></p>
-<dd> Removes directory default ACL only.</p>
-<dt><code>-B</code></p>
-<dd> Remove all ACLs.</p>
-<dt><code>-l</code></p>
-<dd> Lists the access ACL and possibly the default ACL associated with the specified files or directories. This option was added during the Linux port of XFS, and is not IRIX compatible.</p>
-<dt><code>-r</code></p>
-<dd> Set the access ACL recursively for each subtree rooted at <tt>pathname</tt>(s). This option was also added during the Linux port of XFS, and is not compatible with IRIX.</dl>
+<dt><code>-b</code></dt>
+<dd> Indicates that there are two ACLs to change, the first is the file access ACL and the second the directory default ACL.</dd>
+<dt><code>-d</code></dt>
+<dd> Used to set only the default ACL of a directory.</dd>
+<dt><code>-R</code></dt>
+<dd> Removes the file access ACL only.</dd>
+<dt><code>-D</code></dt>
+<dd> Removes directory default ACL only.</dd>
+<dt><code>-B</code></dt>
+<dd> Remove all ACLs.</dd>
+<dt><code>-l</code></dt>
+<dd> Lists the access ACL and possibly the default ACL associated with the specified files or directories. This option was added during the Linux port of XFS, and is not IRIX compatible.</dd>
+<dt><code>-r</code></dt>
+<dd> Set the access ACL recursively for each subtree rooted at <tt>pathname</tt>(s). This option was also added during the Linux port of XFS, and is not compatible with IRIX.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> A minimum ACL: </p>
 <pre>

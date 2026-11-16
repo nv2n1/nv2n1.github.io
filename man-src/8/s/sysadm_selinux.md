@@ -53,13 +53,13 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p>The SELinux user sysadm_u is able to X Windows login.</p>
 <h2>Network</h2>
 <dl>
-<dt>The SELinux user sysadm_u is able to listen on the following tcp ports.</p>
-<dd><code>all ports with out defined types</code> </p>
+<dt>The SELinux user sysadm_u is able to listen on the following tcp ports.</dt>
+<dd><code>all ports with out defined types</code> </dd>
 <p> <code>389,636,3268,7389</code> </p>
 <p> <code>32768-61000</code> </p>
 <p> <code>all ports &gt; 1024</code> </p>
-<dt>The SELinux user sysadm_u is able to connect to the following tcp ports.</p>
-<dd><code>53</code> </p>
+<dt>The SELinux user sysadm_u is able to connect to the following tcp ports.</dt>
+<dd><code>53</code> </dd>
 <p> <code>all ports</code> </p>
 <p> <code>8955</code> </p>
 <p> <code>5432,9898</code> </p>
@@ -70,13 +70,13 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p> <code>111</code> </p>
 <p> <code>32768-61000</code> </p>
 <p> <code>all ports &lt; 1024</code> </p>
-<dt>The SELinux user sysadm_u is able to listen on the following udp ports.</p>
-<dd><code>all ports with out defined types</code> </p>
+<dt>The SELinux user sysadm_u is able to listen on the following udp ports.</dt>
+<dd><code>all ports with out defined types</code> </dd>
 <p> <code>32768-61000</code> </p>
 <p> <code>123</code> </p>
 <p> <code>all ports &gt; 1024</code> </p>
-<dt>The SELinux user sysadm_u is able to connect to the following tcp ports.</p>
-<dd><code>53</code> </p>
+<dt>The SELinux user sysadm_u is able to connect to the following tcp ports.</dt>
+<dd><code>53</code> </dd>
 <p> <code>all ports</code> </p>
 <p> <code>8955</code> </p>
 <p> <code>5432,9898</code> </p>
@@ -158,10 +158,10 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p>Three things can happen when sysadm_t attempts to execute a program. </p>
 <p> <code>1.</code> SELinux Policy can deny sysadm_t from executing the program. </p>
 <dl>
-<dd><code>2.</code> SELinux Policy can allow sysadm_t to execute the program in the current user type. </p>
+<dd><code>2.</code> SELinux Policy can allow sysadm_t to execute the program in the current user type. </dd>
 <p> Execute the following to see the types that the SELinux user sysadm_t can execute without transitioning: </p>
 <p> <code>sesearch -A -s sysadm_t -c file -p execute_no_trans</code> </p>
-<dd><code>3.</code> SELinux can allow sysadm_t to execute the program and transition to a new type. </p>
+<dd><code>3.</code> SELinux can allow sysadm_t to execute the program and transition to a new type. </dd>
 <p> Execute the following to see the types that the SELinux user sysadm_t can execute and transition: </p>
 <p> <code>$ sesearch -A -s sysadm_t -c process -p transition</code> </p>
 </dl>

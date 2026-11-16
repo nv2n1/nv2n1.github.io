@@ -75,8 +75,8 @@ description: "mailman_queue_selinux – Security Enhanced Linux Policy for the m
 <p> <code>mailman_queue_exec_t</code> </p>
 <p> &#8211; Set files with the mailman_queue_exec_t type, if you want to transition an executable to the mailman_queue_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|monthly)/mailman, /usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|monthly)/mailman, /usr/lib/mailman.*/cron/.*, /usr/lib/mailman.*/bin/qrunner </dd>
 </dl>
 <p> <code>mailman_queue_tmp_t</code> </p>
 <p> &#8211; Set files with the mailman_queue_tmp_t type, if you want to store mailman queue temporary files in the /tmp directories. </p>

@@ -10,12 +10,10 @@ description: "libpack – support for connected components"
 <p><code>libpack</code> &#8211; support for connected components</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;graphviz/pack.h&gt;
-
 typedef enum { l_clust,
                l_node,
                l_graph,
                l_array } pack_mode;
-
 typedef struct {
     float aspect;        /* desired aspect ratio */
     int sz;              /* row/column size size */
@@ -26,17 +24,13 @@ typedef struct {
     packval_t *vals;     /* for arrays, sort numbers */
     int flags;
 } pack_info;
-
 point *putRects(int ng, boxf *bbs, pack_info *pinfo);
 int packRects(int ng, boxf *bbs, pack_info *pinfo);
-
 point *putGraphs(int, Agraph_t **, Agraph_t *, pack_info *);
 int packGraphs(int, Agraph_t **, Agraph_t *, pack_info *);
 int packSubgraphs(int, Agraph_t **, Agraph_t *, pack_info *);
-
 pack_mode getPackMode(Agraph_t *, pack_mode dflt);
 int getPack(Agraph_t *, int, int);
-
 int isConnected(Agraph_t *);
 Agraph_t **ccomps(Agraph_t *, int *, char *);
 Agraph_t **pccomps(Agraph_t *, int *, char *, boolean *);

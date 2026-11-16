@@ -42,7 +42,7 @@ time or is later than the current X server time. Otherwise, the
 last-focus-change time is set to the specified time CurrentTime
 is replaced by the current X server time). XSetDeviceFocus
 causes the X server to generate DeviceFocusIn and
-DeviceFocusOut events.</pre></dl><dl COMPACT><dd><pre>Depending on the focus argument, the following occurs:
+DeviceFocusOut events.</pre></dd></dl><dl COMPACT><dd><pre>Depending on the focus argument, the following occurs:
  * If focus is None , all device events are discarded until a
  new focus window is set, and the revert_to argument is
  ignored.
@@ -57,7 +57,7 @@ DeviceFocusOut events.</pre></dl><dl COMPACT><dd><pre>Depending on the focus arg
  case, the revert_to argument is ignored.
  * If focus is FollowKeyboard, the focus window is dynamically
  taken to be the window to which the X keyboard focus is set
- at each input event.</pre></dl><dl COMPACT><dd><pre>The specified focus window must be viewable at the time
+ at each input event.</pre></dd></dl><dl COMPACT><dd><pre>The specified focus window must be viewable at the time
 XSetDeviceFocus is called, or a BadMatch error results. If the
 focus window later becomes not viewable, the X server evaluates
 the revert_to argument to determine the new focus window as
@@ -67,34 +67,34 @@ follows:
  revert_to value is taken to be RevertToNone.
  * If revert_to is RevertToPointerRoot,
  RevertToFollowKeyboard, or RevertToNone, the focus reverts
- to PointerRoot, FollowKeyboard, or None, respectively.</pre></dl><dl COMPACT><dd><pre>When the focus reverts, the X server generates DeviceFocusIn
+ to PointerRoot, FollowKeyboard, or None, respectively.</pre></dd></dl><dl COMPACT><dd><pre>When the focus reverts, the X server generates DeviceFocusIn
 and DeviceFocusOut events, but the last-focus-change time is
-not affected.</pre></dl><dl COMPACT><dd><pre>Input extension devices are not required to support the ability
+not affected.</pre></dd></dl><dl COMPACT><dd><pre>Input extension devices are not required to support the ability
 to be focused. Attempting to set the focus of a device that
 does not support this request will result in a BadMatch error.
 Whether or not given device can support this request can be
 determined by the information returned by XOpenDevice. For
 those devices that support focus, XOpenDevice will return an
 XInputClassInfo structure with the input_class field equal to
-the constant FocusClass (defined in the file XI.h).</pre></dl><dl COMPACT><dd><pre>XSetDeviceFocus can generate BadDevice, BadMatch, BadValue, and
-BadWindow errors.</pre></dl><dl COMPACT><dd><pre>The XGetDeviceFocus request returns the focus window and the
-current focus state.</pre></dl><dl COMPACT><dd><pre>Not all input extension devices can be focused. Attempting to
+the constant FocusClass (defined in the file XI.h).</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceFocus can generate BadDevice, BadMatch, BadValue, and
+BadWindow errors.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceFocus request returns the focus window and the
+current focus state.</pre></dd></dl><dl COMPACT><dd><pre>Not all input extension devices can be focused. Attempting to
 query the focus state of a device that can't be focused results
 in a BadMatch error. A device that can be focused returns
 information for input Class Focus when an XOpenDevice request
-is made.</pre></dl><dl COMPACT><dd><pre>XGetDeviceFocus can generate BadDevice, and BadMatch errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+is made.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceFocus can generate BadDevice, and BadMatch errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadValue
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ Window.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGetDeviceFocus or
  XSetDeviceFocus request was made specifying a device
  that the server implementation does not allow to be
- focused.</pre></dl>
+ focused.</pre></dd></dl>

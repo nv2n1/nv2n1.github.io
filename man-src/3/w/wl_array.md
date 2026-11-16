@@ -15,13 +15,7 @@ wl_array -
 <h3>Public Attributes</h3>
 
 <pre><code>size_t size
-
-
-
 size_t alloc
-
-
-
 void * data
 </code></pre>
 

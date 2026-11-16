@@ -15,96 +15,96 @@ description: "rearj – Converts other archive formats to .arj files"
 <p> The <code>rearj</code> command can repackage other archive formats to arj.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-+</code></p>
-<dd> Ignore REARJ_SW variable.</p>
-<dt><code>-a</code><i>[suffix]</i></p>
-<dd> Convert archives within archives (&quot;*&quot; for all formats).</p>
-<dt><code>-b</code><i>command</i></p>
-<dd> Execute command before extracting files.</p>
-<dt><code>-c</code><i>command</i></p>
-<dd> Execute command on extracted files before counting them.</p>
-<dt><code>-d</code></p>
-<dd> Delete original archives.</p>
-<dt><code>-e</code></p>
-<dd> No error switch.</p>
-<dt><code>-f</code></p>
-<dd> Convert diskette archives.</p>
-<dt><code>-g</code></p>
-<dd> Skip creation of output archive.</p>
-<dt><code>-i</code><i>[name]</i></p>
-<dd> Check integrity of <i>rearj</i> program.</p>
-<dt><code>-j</code></p>
-<dd> Skip if output archive size is larger than the original.</p>
-<dt><code>-k</code></p>
-<dd> Skip archive timestamping.</p>
-<dt><code>-l</code><i>[name]</i></p>
-<dd> Write append log file (default name is <i>rearj.log</i>).</p>
-<dt><code>-m</code><i>[date]</i></p>
-<dd> Select archives before date in <i>YYMMDDHHMMSS</i> format.</p>
-<dt><code>-n</code><i>[date]</i></p>
-<dd> Select archives on or after date in <i>YYMMDDHHMMSS</i> format.</p>
-<dt><code>-o</code></p>
-<dd> Allow overwrite of existing target archive.</p>
-<dt><code>-p</code></p>
-<dd> Ignore long filenames under Windows 95.</p>
-<dt><code>-q</code></p>
-<dd> Query for each archive to convert.</p>
-<dt><code>-r</code></p>
-<dd> Recurse through subdirectories.</p>
-<dt><code>-s</code></p>
-<dd> Skip verify of file count and total size.</p>
-<dt><code>-t</code><i>suffix</i></p>
-<dd> Create suffix type archives.</p>
-<dt><code>-u</code><i>[bak]</i></p>
-<dd> Allow update of archive with backup (default is <i>BAK</i>).</p>
-<dt><code>-v</code></p>
-<dd> Execute configured command on extracted files.</p>
-<dt><code>-w</code><i>dir</i></p>
-<dd> Assign work directory.</p>
-<dt><code>-x</code><i>[!]file</i></p>
-<dd> Exclude by filename, wildname, or listfile.</p>
-<dt><code>-y</code><i>[text]</i></p>
-<dd> Delete output archive and write text to log (testing mode).</p>
-<dt><code>-z</code></p>
-<dd> Simulate operation.</dl>
+<dt><code>-+</code></dt>
+<dd> Ignore REARJ_SW variable.</dd>
+<dt><code>-a</code><i>[suffix]</i></dt>
+<dd> Convert archives within archives (&quot;*&quot; for all formats).</dd>
+<dt><code>-b</code><i>command</i></dt>
+<dd> Execute command before extracting files.</dd>
+<dt><code>-c</code><i>command</i></dt>
+<dd> Execute command on extracted files before counting them.</dd>
+<dt><code>-d</code></dt>
+<dd> Delete original archives.</dd>
+<dt><code>-e</code></dt>
+<dd> No error switch.</dd>
+<dt><code>-f</code></dt>
+<dd> Convert diskette archives.</dd>
+<dt><code>-g</code></dt>
+<dd> Skip creation of output archive.</dd>
+<dt><code>-i</code><i>[name]</i></dt>
+<dd> Check integrity of <i>rearj</i> program.</dd>
+<dt><code>-j</code></dt>
+<dd> Skip if output archive size is larger than the original.</dd>
+<dt><code>-k</code></dt>
+<dd> Skip archive timestamping.</dd>
+<dt><code>-l</code><i>[name]</i></dt>
+<dd> Write append log file (default name is <i>rearj.log</i>).</dd>
+<dt><code>-m</code><i>[date]</i></dt>
+<dd> Select archives before date in <i>YYMMDDHHMMSS</i> format.</dd>
+<dt><code>-n</code><i>[date]</i></dt>
+<dd> Select archives on or after date in <i>YYMMDDHHMMSS</i> format.</dd>
+<dt><code>-o</code></dt>
+<dd> Allow overwrite of existing target archive.</dd>
+<dt><code>-p</code></dt>
+<dd> Ignore long filenames under Windows 95.</dd>
+<dt><code>-q</code></dt>
+<dd> Query for each archive to convert.</dd>
+<dt><code>-r</code></dt>
+<dd> Recurse through subdirectories.</dd>
+<dt><code>-s</code></dt>
+<dd> Skip verify of file count and total size.</dd>
+<dt><code>-t</code><i>suffix</i></dt>
+<dd> Create suffix type archives.</dd>
+<dt><code>-u</code><i>[bak]</i></dt>
+<dd> Allow update of archive with backup (default is <i>BAK</i>).</dd>
+<dt><code>-v</code></dt>
+<dd> Execute configured command on extracted files.</dd>
+<dt><code>-w</code><i>dir</i></dt>
+<dd> Assign work directory.</dd>
+<dt><code>-x</code><i>[!]file</i></dt>
+<dd> Exclude by filename, wildname, or listfile.</dd>
+<dt><code>-y</code><i>[text]</i></dt>
+<dd> Delete output archive and write text to log (testing mode).</dd>
+<dt><code>-z</code></dt>
+<dd> Simulate operation.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>REARJ_SW</code> If set, its value will be used as command line options.</p>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Success.</p>
-<dt><code>1</code></p>
-<dd> File not found.</p>
-<dt><code>2</code></p>
-<dd> File is not a configured archive type.</p>
-<dt><code>3</code></p>
-<dd> Target archive already exists.</p>
-<dt><code>4</code></p>
-<dd> Not enough disk space.</p>
-<dt><code>5</code></p>
-<dd> User skipped or user did not select update option.</p>
-<dt><code>6</code></p>
-<dd> UNPACK command error.</p>
-<dt><code>7</code></p>
-<dd> PACK command error.</p>
-<dt><code>8</code></p>
-<dd> Target cannot support directories.</p>
-<dt><code>9</code></p>
-<dd> Wrong file count.</p>
-<dt><code>10</code></p>
-<dd> Wrong total size.</p>
-<dt><code>11</code></p>
-<dd> Internal archive REARJ error.</p>
-<dt><code>12</code></p>
-<dd> Rename archive error.</p>
-<dt><code>13</code></p>
-<dd> Invoked -v command error (found a virus?).</p>
-<dt><code>14</code></p>
-<dd> Output archive is larger.</dl>
+<dt><code>0</code></dt>
+<dd> Success.</dd>
+<dt><code>1</code></dt>
+<dd> File not found.</dd>
+<dt><code>2</code></dt>
+<dd> File is not a configured archive type.</dd>
+<dt><code>3</code></dt>
+<dd> Target archive already exists.</dd>
+<dt><code>4</code></dt>
+<dd> Not enough disk space.</dd>
+<dt><code>5</code></dt>
+<dd> User skipped or user did not select update option.</dd>
+<dt><code>6</code></dt>
+<dd> UNPACK command error.</dd>
+<dt><code>7</code></dt>
+<dd> PACK command error.</dd>
+<dt><code>8</code></dt>
+<dd> Target cannot support directories.</dd>
+<dt><code>9</code></dt>
+<dd> Wrong file count.</dd>
+<dt><code>10</code></dt>
+<dd> Wrong total size.</dd>
+<dt><code>11</code></dt>
+<dd> Internal archive REARJ error.</dd>
+<dt><code>12</code></dt>
+<dd> Rename archive error.</dd>
+<dt><code>13</code></dt>
+<dd> Invoked -v command error (found a virus?).</dd>
+<dt><code>14</code></dt>
+<dd> Output archive is larger.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
-<dt><code>rearj * -r -d</code></p>
-<dd> Convert all archives to <code>ARJ</code> format, searching all subdirectories, deleting original archives.</dl>
+<dt><code>rearj * -r -d</code></dt>
+<dd> Convert all archives to <code>ARJ</code> format, searching all subdirectories, deleting original archives.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-arj/">arj</a></code>(1).</p>
 <h2>AUTHOR</h2>

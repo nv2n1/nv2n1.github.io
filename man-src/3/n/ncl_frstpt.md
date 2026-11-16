@@ -13,9 +13,9 @@ FRSTPT - generates a &quot;pen-up&quot; move to a specified point in the user co
 
  void c_frstpt (float px, float py)
 <h2>Description</h2><dl COMPACT><dt>PX
-<dd>(an input expression of type REAL) defines the X user coordinate.
-<dt>PY
-<dd>(an input expression of type REAL) defines the Y user coordinate.</dl><h2>C-Binding Description ,,</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) defines the X user coordinate.
+</dd><dt>PY
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate.</dd></dl><h2>C-Binding Description ,,</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Polyline type, line width, and color can be set by calling the GKS routines GSLN, GSLWSC, GSCR, and GSPLCI before calling FRSTPT. 
 
  Note that, for the sake of efficiency, the routines FRSTPT and VECTOR buffer the polylines resulting from pen moves. One must be sure to flush the SPPS polyline buffer before changing polyline attributes. A &quot;CALL PLOTIF (0.,0.,2)&quot; will flush the buffer.

@@ -24,28 +24,27 @@ description: "git-release – Commit, tag and push changes to the repository"
 <p> Generates or populates the changelog with all commit message since the last tag. For more info see git-changelog..</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Release commit with the given &lt;tagname&gt;.</p>
+<dt>&bull;</dt>
+<dd> Release commit with the given &lt;tagname&gt;.</dd>
 <dt>
-<dd> $ git release 0.1.0</p>
-<dt>&bull;</p>
-<dd> Release commit with the given &lt;tagname&gt; and custom commit message.</p>
+</dt><dd> $ git release 0.1.0</dd>
+<dt>&bull;</dt>
+<dd> Release commit with the given &lt;tagname&gt; and custom commit message.</dd>
 <dt>
-<dd> $ git release 0.1.0 -m &quot;+ powerful feature added.&quot;</p>
-<dt>&bull;</p>
-<dd> Release commit with the given &lt;tagname&gt; and push to specific remote.</p>
+</dt><dd> $ git release 0.1.0 -m &quot;+ powerful feature added.&quot;</dd>
+<dt>&bull;</dt>
+<dd> Release commit with the given &lt;tagname&gt; and push to specific remote.</dd>
 <dt>
-<dd> $ git release 0.1.0 -r github</p>
-<dt>&bull;</p>
-<dd> Release commit with the given &lt;tagname&gt; and populate changelog.</p>
+</dt><dd> $ git release 0.1.0 -r github</dd>
+<dt>&bull;</dt>
+<dd> Release commit with the given &lt;tagname&gt; and populate changelog.</dd>
 <dt>
-<dd> $ git release 0.1.0 -c</p>
-<dt>&bull;</p>
-<dd> Release commit with the given &lt;tagname&gt;, populate changelog, and push to specific remote.</p>
+</dt><dd> $ git release 0.1.0 -c</dd>
+<dt>&bull;</dt>
+<dd> Release commit with the given &lt;tagname&gt;, populate changelog, and push to specific remote.</dd>
 <dt>
-<dd> $ git release 0.1.0 -r github -c</p>
-<dt>
-<dd></dl>
+</dt><dd> $ git release 0.1.0 -r github -c</dd>
+</dl>
 <h2>AUTHOR</h2>
 <p> Written by Tj Holowaychuk &lt;<i>tj [at] vision-media.ca</i>&gt; Extended by David Hartmann &lt;<i>dh [at] tsl.io</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

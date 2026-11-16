@@ -120,16 +120,16 @@ description: "apmd_selinux – Security Enhanced Linux Policy for the apmd proce
 <p> <code>apmd_exec_t</code> </p>
 <p> &#8211; Set files with the apmd_exec_t type, if you want to transition an executable to the apmd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/apmd, /usr/sbin/acpid, /usr/sbin/powersaved </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/apmd, /usr/sbin/acpid, /usr/sbin/powersaved </dd>
 </dl>
 <p> <code>apmd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the apmd_initrc_exec_t type, if you want to transition an executable to the apmd_initrc_t domain. </p>
 <p> <code>apmd_lock_t</code> </p>
 <p> &#8211; Set files with the apmd_lock_t type, if you want to treat the files as apmd lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/subsys/acpid, /var/lock/lmt-req.lock, /var/lock/subsys/lmt-req.lock </p>
+<dt>Paths:</dt>
+<dd>/var/lock/subsys/acpid, /var/lock/lmt-req.lock, /var/lock/subsys/lmt-req.lock </dd>
 </dl>
 <p> <code>apmd_log_t</code> </p>
 <p> &#8211; Set files with the apmd_log_t type, if you want to treat the data as apmd log data, usually stored under the /var/log directory. </p>
@@ -142,8 +142,8 @@ description: "apmd_selinux – Security Enhanced Linux Policy for the apmd proce
 <p> <code>apmd_var_run_t</code> </p>
 <p> &#8211; Set files with the apmd_var_run_t type, if you want to store the apmd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/.?acpid.socket, /var/run/apmd.pid, /var/run/acpid.pid, /var/run/powersaved.pid, /var/run/powersave_socket </p>
+<dt>Paths:</dt>
+<dd>/var/run/.?acpid.socket, /var/run/apmd.pid, /var/run/acpid.pid, /var/run/powersaved.pid, /var/run/powersave_socket </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

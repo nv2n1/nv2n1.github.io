@@ -20,11 +20,11 @@ description: "Library Maintenance Functions – Functions that start up and shut
 <p>Initialises the Embryo library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the library has been initialised without being shut down.</dl>
+<dd>The number of times the library has been initialised without being shut down.</dd></dl>
 <h3>EAPI int embryo_shutdown (void)</h3>
 <p>Shuts down the Embryo library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of times the library has been initialised without being shutdown.</dl>
+<dd>The number of times the library has been initialised without being shutdown.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

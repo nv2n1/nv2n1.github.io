@@ -15,10 +15,10 @@ description: "qrun – run a pbs batch job"
 <p> In order to execute qrun, the user must have PBS Operation or Manager privilege.</p>
 <h2>Options</h2>
 <dl>
-<dt>-a</p>
-<dd>Specifies the job(s) is to be run asynchronously.</p>
-<dt>-H host</p>
-<dd>Specifies the host within the cluster on which the job(s) are to be run. The <i> argument is the name of a host that is a member of the cluster of hosts managed by the server. If the option is not specified, the server will select the &quot;worst possible&quot; host on which to execute the job.</dl>
+<dt>-a</dt>
+<dd>Specifies the job(s) is to be run asynchronously.</dd>
+<dt>-H host</dt>
+<dd>Specifies the host within the cluster on which the job(s) are to be run. The <i> argument is the name of a host that is a member of the cluster of hosts managed by the server. If the option is not specified, the server will select the &quot;worst possible&quot; host on which to execute the job.</dd></dl>
 <p> </i></p>
 <h2>Operands</h2>
 <p>The qrun command accepts one or more <i> operands of the form:<br />

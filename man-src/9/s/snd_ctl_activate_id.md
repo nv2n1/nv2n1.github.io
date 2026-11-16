@@ -15,15 +15,15 @@ snd_ctl_activate_id - activate/inactivate the control of the given id
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the control id to activate/inactivate</dl>
+<dl><dd>the control id to activate/inactivate</dd></dl>
  
 
  <i>active</i>
-<dl><dd>non-zero to activate</dl>
+<dl><dd>non-zero to activate</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,7 +14,7 @@ description: "pcim_enable_device – Managed pci_enable_device"
 <p><i>pdev</i></p>
 <dl>
 <dd>
-<dd>PCI device to be initialized</dl>
+</dd><dd>PCI device to be initialized</dd></dl>
 <h2>Description</h2>
 <p>Managed <code>pci_enable_device</code>.</p>
 <h2>Copyright</h2>

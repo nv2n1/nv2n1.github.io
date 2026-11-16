@@ -10,10 +10,8 @@ description: "std::experimental::negation – std::experimental::negation"
 <p>std::experimental::negation &#8211; std::experimental::negation</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     template &lt;class B&gt;
     (1)(library fundamentals TS v2)
-
         struct negation;</code></pre>
 <p>Forms the logical negation of the type trait B.<br />
 The type negation&lt;B&gt; is a UnaryTypeTrait with a BaseCharacteristic of std::integral_constant&lt;bool, !bool(B::value)&gt;. </p>

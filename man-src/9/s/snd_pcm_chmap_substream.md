@@ -15,11 +15,11 @@ snd_pcm_chmap_substream - get the PCM substream assigned to the given chmap info
 <h2>Arguments</h2>
 
 <i>info</i>
-<dl><dd><dd>chmap information</dl>
+<dl><dd></dd><dd>chmap information</dd></dl>
  
 
  <i>idx</i>
-<dl><dd>the substream number index</dl>
+<dl><dd>the substream number index</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -15,7 +15,7 @@ snd_soc_dapm_to_codec - Casts a DAPM context to the CODEC it is embedded in
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>The DAPM context to cast to the CODEC</dl>
+<dl><dd></dd><dd>The DAPM context to cast to the CODEC</dd></dl>
 
 <h2>Description</h2>
 

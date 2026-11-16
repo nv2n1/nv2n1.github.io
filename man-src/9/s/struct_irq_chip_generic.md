@@ -34,71 +34,71 @@ description: "struct_irq_chip_generic – Generic irq chip data structure"
 <h2>Members</h2>
 <p>lock</p>
 <dl>
-<dd>Lock to protect register and cache data access</dl>
+<dd>Lock to protect register and cache data access</dd></dl>
 <p> reg_base</p>
 <dl>
-<dd>Register base address (virtual)</dl>
+<dd>Register base address (virtual)</dd></dl>
 <p> reg_readl</p>
 <dl>
-<dd>Alternate I/O accessor (defaults to readl if NULL)</dl>
+<dd>Alternate I/O accessor (defaults to readl if NULL)</dd></dl>
 <p> reg_writel</p>
 <dl>
-<dd>Alternate I/O accessor (defaults to writel if NULL)</dl>
+<dd>Alternate I/O accessor (defaults to writel if NULL)</dd></dl>
 <p> suspend</p>
 <dl>
-<dd>Function called from core code on suspend once per chip; can be useful instead of irq_chip::suspend to handle chip details even when no interrupts are in use</dl>
+<dd>Function called from core code on suspend once per chip; can be useful instead of irq_chip::suspend to handle chip details even when no interrupts are in use</dd></dl>
 <p> resume</p>
 <dl>
-<dd>Function called from core code on resume once per chip; can be useful instead of irq_chip::suspend to handle chip details even when no interrupts are in use</dl>
+<dd>Function called from core code on resume once per chip; can be useful instead of irq_chip::suspend to handle chip details even when no interrupts are in use</dd></dl>
 <p> irq_base</p>
 <dl>
-<dd>Interrupt base nr for this chip</dl>
+<dd>Interrupt base nr for this chip</dd></dl>
 <p> irq_cnt</p>
 <dl>
-<dd>Number of interrupts handled by this chip</dl>
+<dd>Number of interrupts handled by this chip</dd></dl>
 <p> mask_cache</p>
 <dl>
-<dd>Cached mask register shared between all chip types</dl>
+<dd>Cached mask register shared between all chip types</dd></dl>
 <p> type_cache</p>
 <dl>
-<dd>Cached type register</dl>
+<dd>Cached type register</dd></dl>
 <p> polarity_cache</p>
 <dl>
-<dd>Cached polarity register</dl>
+<dd>Cached polarity register</dd></dl>
 <p> wake_enabled</p>
 <dl>
-<dd>Interrupt can wakeup from suspend</dl>
+<dd>Interrupt can wakeup from suspend</dd></dl>
 <p> wake_active</p>
 <dl>
-<dd>Interrupt is marked as an wakeup from suspend source</dl>
+<dd>Interrupt is marked as an wakeup from suspend source</dd></dl>
 <p> num_ct</p>
 <dl>
-<dd>Number of available irq_chip_type instances (usually 1)</dl>
+<dd>Number of available irq_chip_type instances (usually 1)</dd></dl>
 <p> private</p>
 <dl>
-<dd>Private data for non generic chip callbacks</dl>
+<dd>Private data for non generic chip callbacks</dd></dl>
 <p> installed</p>
 <dl>
-<dd>bitfield to denote installed interrupts</dl>
+<dd>bitfield to denote installed interrupts</dd></dl>
 <p> unused</p>
 <dl>
-<dd>bitfield to denote unused interrupts</dl>
+<dd>bitfield to denote unused interrupts</dd></dl>
 <p> domain</p>
 <dl>
-<dd>irq domain pointer</dl>
+<dd>irq domain pointer</dd></dl>
 <p> list</p>
 <dl>
-<dd>List head for keeping track of instances</dl>
+<dd>List head for keeping track of instances</dd></dl>
 <p> chip_types[0]</p>
 <dl>
-<dd>Array of interrupt irq_chip_types</dl>
+<dd>Array of interrupt irq_chip_types</dd></dl>
 <h2>Description</h2>
 <p>Note, that irq_chip_generic can have multiple irq_chip_type implementations which can be associated to a particular irq line of an irq_chip_generic instance. That allows to share and protect state in an irq_chip_generic instance when we need to implement different flow mechanisms (level/edge) for it.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

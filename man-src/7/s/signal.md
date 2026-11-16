@@ -14,16 +14,16 @@ description: "signal – overview of signals"
 <p>Each signal has a current <i>disposition</i>, which determines how the process behaves when it is delivered the signal. </p>
 <p> The entries in the &quot;Action&quot; column of the table below specify the default disposition for each signal, as follows:</p>
 <dl>
-<dt>Term</p>
-<dd>Default action is to terminate the process.</p>
-<dt>Ign</p>
-<dd>Default action is to ignore the signal.</p>
-<dt>Core</p>
-<dd>Default action is to terminate the process and dump core (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)).</p>
-<dt>Stop</p>
-<dd>Default action is to stop the process.</p>
-<dt>Cont</p>
-<dd>Default action is to continue the process if it is currently stopped.</dl>
+<dt>Term</dt>
+<dd>Default action is to terminate the process.</dd>
+<dt>Ign</dt>
+<dd>Default action is to ignore the signal.</dd>
+<dt>Core</dt>
+<dd>Default action is to terminate the process and dump core (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)).</dd>
+<dt>Stop</dt>
+<dd>Default action is to stop the process.</dd>
+<dt>Cont</dt>
+<dd>Default action is to continue the process if it is currently stopped.</dd></dl>
 <p> A process can change the disposition of a signal using <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) or <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2). (The latter is less portable when establishing a signal handler; see <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2) for details.) Using these system calls, a process can elect one of the following behaviors to occur on delivery of the signal: perform the default action; ignore the signal; or catch the signal with a <i>signal handler</i>, a programmer-defined function that is automatically invoked when the signal is delivered. </p>
 <p> By default, a signal handler is invoked on the normal process stack. It is possible to arrange that the signal handler uses an alternate stack; see <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2) for a discussion of how to do this and when it might be useful. </p>
 <p> The signal disposition is a per-process attribute: in a multithreaded application, the disposition of a particular signal is the same for all threads. </p>
@@ -31,34 +31,34 @@ description: "signal – overview of signals"
 <h3>Sending a signal</h3>
 <p>The following system calls and library functions allow the caller to send a signal:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/3-raise/">raise</a></code>(3)</p>
-<dd>Sends a signal to the calling thread.</p>
-<dt><code><a href="/docs/linux/man/2-kill/">kill</a></code>(2)</p>
-<dd>Sends a signal to a specified process, to all members of a specified process group, or to all processes on the system.</p>
-<dt><code><a href="/docs/linux/man/2-pidfd_send_signal/">pidfd_send_signal</a></code>(2)</p>
-<dd>Sends a signal to a process identified by a PID file descriptor.</p>
-<dt><code><a href="/docs/linux/man/3-killpg/">killpg</a></code>(3)</p>
-<dd>Sends a signal to all of the members of a specified process group.</p>
-<dt><code><a href="/docs/linux/man/3-pthread_kill/">pthread_kill</a></code>(3)</p>
-<dd>Sends a signal to a specified POSIX thread in the same process as the caller.</p>
-<dt><code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2)</p>
-<dd>Sends a signal to a specified thread within a specific process. (This is the system call used to implement <code><a href="/docs/linux/man/3-pthread_kill/">pthread_kill</a></code>(3).)</p>
-<dt><code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3)</p>
-<dd>Sends a real-time signal with accompanying data to a specified process.</dl>
+<dt><code><a href="/docs/linux/man/3-raise/">raise</a></code>(3)</dt>
+<dd>Sends a signal to the calling thread.</dd>
+<dt><code><a href="/docs/linux/man/2-kill/">kill</a></code>(2)</dt>
+<dd>Sends a signal to a specified process, to all members of a specified process group, or to all processes on the system.</dd>
+<dt><code><a href="/docs/linux/man/2-pidfd_send_signal/">pidfd_send_signal</a></code>(2)</dt>
+<dd>Sends a signal to a process identified by a PID file descriptor.</dd>
+<dt><code><a href="/docs/linux/man/3-killpg/">killpg</a></code>(3)</dt>
+<dd>Sends a signal to all of the members of a specified process group.</dd>
+<dt><code><a href="/docs/linux/man/3-pthread_kill/">pthread_kill</a></code>(3)</dt>
+<dd>Sends a signal to a specified POSIX thread in the same process as the caller.</dd>
+<dt><code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2)</dt>
+<dd>Sends a signal to a specified thread within a specific process. (This is the system call used to implement <code><a href="/docs/linux/man/3-pthread_kill/">pthread_kill</a></code>(3).)</dd>
+<dt><code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3)</dt>
+<dd>Sends a real-time signal with accompanying data to a specified process.</dd></dl>
 <h3>Waiting for a signal to be caught</h3>
 <p>The following system calls suspend execution of the calling thread until a signal is caught (or an unhandled signal terminates the process):</p>
 <dl>
-<dt><code><a href="/docs/linux/man/2-pause/">pause</a></code>(2)</p>
-<dd>Suspends execution until any signal is caught.</p>
-<dt><code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2)</p>
-<dd>Temporarily changes the signal mask (see below) and suspends execution until one of the unmasked signals is caught.</dl>
+<dt><code><a href="/docs/linux/man/2-pause/">pause</a></code>(2)</dt>
+<dd>Suspends execution until any signal is caught.</dd>
+<dt><code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2)</dt>
+<dd>Temporarily changes the signal mask (see below) and suspends execution until one of the unmasked signals is caught.</dd></dl>
 <h3>Synchronously accepting a signal</h3>
 <p>Rather than asynchronously catching a signal via a signal handler, it is possible to synchronously accept the signal, that is, to block execution until the signal is delivered, at which point the kernel returns information about the signal to the caller. There are two general ways to do this:</p>
 <dl>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2), <code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), and <code><a href="/docs/linux/man/3-sigwait/">sigwait</a></code>(3) suspend execution until one of the signals in a specified set is delivered. Each of these calls returns information about the delivered signal.</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2) returns a file descriptor that can be used to read information about signals that are delivered to the caller. Each <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from this file descriptor blocks until one of the signals in the set specified in the <code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2) call is delivered to the caller. The buffer returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) contains a structure describing the signal.</dl>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2), <code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), and <code><a href="/docs/linux/man/3-sigwait/">sigwait</a></code>(3) suspend execution until one of the signals in a specified set is delivered. Each of these calls returns information about the delivered signal.</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2) returns a file descriptor that can be used to read information about signals that are delivered to the caller. Each <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from this file descriptor blocks until one of the signals in the set specified in the <code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2) call is delivered to the caller. The buffer returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2) contains a structure describing the signal.</dd></dl>
 <h3>Signal mask and pending signals</h3>
 <p>A signal may be <i>blocked</i>, which means that it will not be delivered until it is later unblocked. Between the time when it is generated and when it is delivered a signal is said to be <i>pending</i>. </p>
 <p> Each thread in a process has an independent <i>signal mask</i>, which indicates the set of signals that the thread is currently blocking. A thread can manipulate its signal mask using <code><a href="/docs/linux/man/3-pthread_sigmask/">pthread_sigmask</a></code>(3). In a traditional single-threaded application, <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2) can be used to manipulate the signal mask. </p>
@@ -70,41 +70,41 @@ description: "signal – overview of signals"
 <h3>Execution of signal handlers</h3>
 <p>Whenever there is a transition from kernel-mode to user-mode execution (e.g., on return from a system call or scheduling of a thread onto the CPU), the kernel checks whether there is a pending unblocked signal for which the process has established a signal handler. If there is such a pending signal, the following steps occur:</p>
 <dl>
-<dt>1.</p>
-<dd>The kernel performs the necessary preparatory steps for execution of the signal handler:</p>
+<dt>1.</dt>
+<dd>The kernel performs the necessary preparatory steps for execution of the signal handler:</dd>
 <dl>
 <dd>
-<dl>
-<dt>a)</p>
-<dd>The signal is removed from the set of pending signals.</p>
-<dt>b)</p>
-<dd>If the signal handler was installed by a call to <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) that specified the <code>SA_ONSTACK</code> flag and the thread has defined an alternate signal stack (using <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)), then that stack is installed.</p>
-<dt>c)</p>
-<dd>Various pieces of signal-related context are saved into a special frame that is created on the stack. The saved information includes:</p>
+</dd><dl>
+<dt>a)</dt>
+<dd>The signal is removed from the set of pending signals.</dd>
+<dt>b)</dt>
+<dd>If the signal handler was installed by a call to <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) that specified the <code>SA_ONSTACK</code> flag and the thread has defined an alternate signal stack (using <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)), then that stack is installed.</dd>
+<dt>c)</dt>
+<dd>Various pieces of signal-related context are saved into a special frame that is created on the stack. The saved information includes:</dd>
 <dl>
 <dd>
-<dl>
-<dt>+</p>
-<dd>the program counter register (i.e., the address of the next instruction in the main program that should be executed when the signal handler returns);</p>
-<dt>+</p>
-<dd>architecture-specific register state required for resuming the interrupted program;</p>
-<dt>+</p>
-<dd>the thread&#8217;s current signal mask;</p>
-<dt>+</p>
-<dd>the thread&#8217;s alternate signal stack settings.</dl>
+</dd><dl>
+<dt>+</dt>
+<dd>the program counter register (i.e., the address of the next instruction in the main program that should be executed when the signal handler returns);</dd>
+<dt>+</dt>
+<dd>architecture-specific register state required for resuming the interrupted program;</dd>
+<dt>+</dt>
+<dd>the thread&#8217;s current signal mask;</dd>
+<dt>+</dt>
+<dd>the thread&#8217;s alternate signal stack settings.</dd></dl>
 </dl>
-<dd>(If the signal handler was installed using the <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) <code>SA_SIGINFO</code> flag, then the above information is accessible via the <i>ucontext_t</i> object that is pointed to by the third argument of the signal handler.)</p>
-<dt>d)</p>
-<dd>Any signals specified in <i>act-&gt;sa_mask</i> when registering the handler with <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2) are added to the thread&#8217;s signal mask. The signal being delivered is also added to the signal mask, unless <code>SA_NODEFER</code> was specified when registering the handler. These signals are thus blocked while the handler executes.</dl>
+<dd>(If the signal handler was installed using the <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) <code>SA_SIGINFO</code> flag, then the above information is accessible via the <i>ucontext_t</i> object that is pointed to by the third argument of the signal handler.)</dd>
+<dt>d)</dt>
+<dd>Any signals specified in <i>act-&gt;sa_mask</i> when registering the handler with <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2) are added to the thread&#8217;s signal mask. The signal being delivered is also added to the signal mask, unless <code>SA_NODEFER</code> was specified when registering the handler. These signals are thus blocked while the handler executes.</dd></dl>
 </dl>
-<dt>2.</p>
-<dd>The kernel constructs a frame for the signal handler on the stack. The kernel sets the program counter for the thread to point to the first instruction of the signal handler function, and configures the return address for that function to point to a piece of user-space code known as the signal trampoline (described in <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2)).</p>
-<dt>3.</p>
-<dd>The kernel passes control back to user-space, where execution commences at the start of the signal handler function.</p>
-<dt>4.</p>
-<dd>When the signal handler returns, control passes to the signal trampoline code.</p>
-<dt>5.</p>
-<dd>The signal trampoline calls <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2), a system call that uses the information in the stack frame created in step 1 to restore the thread to its state before the signal handler was called. The thread&#8217;s signal mask and alternate signal stack settings are restored as part of this procedure. Upon completion of the call to <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2), the kernel transfers control back to user space, and the thread recommences execution at the point where it was interrupted by the signal handler.</dl>
+<dt>2.</dt>
+<dd>The kernel constructs a frame for the signal handler on the stack. The kernel sets the program counter for the thread to point to the first instruction of the signal handler function, and configures the return address for that function to point to a piece of user-space code known as the signal trampoline (described in <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2)).</dd>
+<dt>3.</dt>
+<dd>The kernel passes control back to user-space, where execution commences at the start of the signal handler function.</dd>
+<dt>4.</dt>
+<dd>When the signal handler returns, control passes to the signal trampoline code.</dd>
+<dt>5.</dt>
+<dd>The signal trampoline calls <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2), a system call that uses the information in the stack frame created in step 1 to restore the thread to its state before the signal handler was called. The thread&#8217;s signal mask and alternate signal stack settings are restored as part of this procedure. Upon completion of the call to <code><a href="/docs/linux/man/2-sigreturn/">sigreturn</a></code>(2), the kernel transfers control back to user space, and the thread recommences execution at the point where it was interrupted by the signal handler.</dd></dl>
 <p> Note that if the signal handler does not return (e.g., control is transferred out of the handler using <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3), or the handler executes a new program with <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)), then the final step is not performed. In particular, in such scenarios it is the programmer&#8217;s responsibility to restore the state of the signal mask (using <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)), if it is desired to unblock the signals that were blocked on entry to the signal handler. (Note that <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3) may or may not restore the signal mask, depending on the <i>savesigs</i> value that was specified in the corresponding call to <code><a href="/docs/linux/man/3-sigsetjmp/">sigsetjmp</a></code>(3).) </p>
 <p> From the kernel&#8217;s point of view, execution of the signal handler code is exactly the same as the execution of any other user-space code. That is to say, the kernel does not record any special state information indicating that the thread is currently excuting inside a signal handler. All necessary state information is maintained in user-space registers and the user-space stack. The depth to which nested signal handlers may be invoked is thus limited only by the user-space stack (and sensible software design!).</p>
 <h3>Standard signals</h3>
@@ -818,10 +818,10 @@ description: "signal – overview of signals"
 </table>
 <p> Note the following:</p>
 <dl>
-<dt>*</p>
-<dd>Where defined, <code>SIGUNUSED</code> is synonymous with <code>SIGSYS</code>. Since glibc 2.26, <code>SIGUNUSED</code> is no longer defined on any architecture.</p>
-<dt>*</p>
-<dd>Signal 29 is <code>SIGINFO</code>/<code>SIGPWR</code> (synonyms for the same value) on Alpha but <code>SIGLOST</code> on SPARC.</dl>
+<dt>*</dt>
+<dd>Where defined, <code>SIGUNUSED</code> is synonymous with <code>SIGSYS</code>. Since glibc 2.26, <code>SIGUNUSED</code> is no longer defined on any architecture.</dd>
+<dt>*</dt>
+<dd>Signal 29 is <code>SIGINFO</code>/<code>SIGPWR</code> (synonyms for the same value) on Alpha but <code>SIGLOST</code> on SPARC.</dd></dl>
 <h3>Real-time signals</h3>
 <p>Starting with version 2.2, Linux supports real-time signals as originally defined in the POSIX.1b real-time extensions (and now included in POSIX.1-2001). The range of supported real-time signals is defined by the macros <code>SIGRTMIN</code> and <code>SIGRTMAX</code>. POSIX.1-2001 requires that an implementation support at least <code>_POSIX_RTSIG_MAX</code> (8) real-time signals. </p>
 <p> The Linux kernel supports a range of 33 different real-time signals, numbered 32 to 64. However, the glibc POSIX threads implementation internally uses two (for NPTL) or three (for LinuxThreads) real-time signals (see <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)), and adjusts the value of <code>SIGRTMIN</code> suitably (to 34 or 35). Because the range of available real-time signals varies according to the glibc threading implementation (and this variation can occur at run time according to the available kernel and glibc), and indeed the range of real-time signals varies across UNIX systems, programs should <i>never refer to real-time signals using hard-coded numbers</i>, but instead should always refer to real-time signals using the notation <code>SIGRTMIN</code>+n, and include suitable (run-time) checks that <code>SIGRTMIN</code>+n does not exceed <code>SIGRTMAX</code>. </p>
@@ -829,12 +829,12 @@ description: "signal – overview of signals"
 <p> The default action for an unhandled real-time signal is to terminate the receiving process. </p>
 <p> Real-time signals are distinguished by the following:</p>
 <dl>
-<dt>1.</p>
-<dd>Multiple instances of real-time signals can be queued. By contrast, if multiple instances of a standard signal are delivered while that signal is currently blocked, then only one instance is queued.</p>
-<dt>2.</p>
-<dd>If the signal is sent using <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), an accompanying value (either an integer or a pointer) can be sent with the signal. If the receiving process establishes a handler for this signal using the <code>SA_SIGINFO</code> flag to <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), then it can obtain this data via the <i>si_value</i> field of the <i>siginfo_t</i> structure passed as the second argument to the handler. Furthermore, the <i>si_pid</i> and <i>si_uid</i> fields of this structure can be used to obtain the PID and real user ID of the process sending the signal.</p>
-<dt>3.</p>
-<dd>Real-time signals are delivered in a guaranteed order. Multiple real-time signals of the same type are delivered in the order they were sent. If different real-time signals are sent to a process, they are delivered starting with the lowest-numbered signal. (I.e., low-numbered signals have highest priority.) By contrast, if multiple standard signals are pending for a process, the order in which they are delivered is unspecified.</dl>
+<dt>1.</dt>
+<dd>Multiple instances of real-time signals can be queued. By contrast, if multiple instances of a standard signal are delivered while that signal is currently blocked, then only one instance is queued.</dd>
+<dt>2.</dt>
+<dd>If the signal is sent using <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), an accompanying value (either an integer or a pointer) can be sent with the signal. If the receiving process establishes a handler for this signal using the <code>SA_SIGINFO</code> flag to <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), then it can obtain this data via the <i>si_value</i> field of the <i>siginfo_t</i> structure passed as the second argument to the handler. Furthermore, the <i>si_pid</i> and <i>si_uid</i> fields of this structure can be used to obtain the PID and real user ID of the process sending the signal.</dd>
+<dt>3.</dt>
+<dd>Real-time signals are delivered in a guaranteed order. Multiple real-time signals of the same type are delivered in the order they were sent. If different real-time signals are sent to a process, they are delivered starting with the lowest-numbered signal. (I.e., low-numbered signals have highest priority.) By contrast, if multiple standard signals are pending for a process, the order in which they are delivered is unspecified.</dd></dl>
 <p> If both standard and real-time signals are pending for a process, POSIX leaves it unspecified which is delivered first. Linux, like many other implementations, gives priority to standard signals in this case. </p>
 <p> According to POSIX, an implementation should permit at least <code>_POSIX_SIGQUEUE_MAX</code> (32) real-time signals to be queued to a process. However, Linux does things differently. In kernels up to and including 2.6.7, Linux imposes a system-wide limit on the number of queued real-time signals for all processes. This limit can be viewed and (with privilege) changed via the <i>/proc/sys/kernel/rtsig-max</i> file. A related file, <i>/proc/sys/kernel/rtsig-nr</i>, can be used to find out how many real-time signals are currently queued. In Linux 2.6.8, these <i>/proc</i> interfaces were replaced by the <code>RLIMIT_SIGPENDING</code> resource limit, which specifies a per-user limit for queued signals; see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2) for further details. </p>
 <p> The addition of real-time signals required the widening of the signal set structure (<i>sigset_t</i>) from 32 to 64 bits. Consequently, various system calls were superseded by new system calls that supported the larger signal sets. The old and new system calls are as follows: </p>
@@ -878,76 +878,76 @@ description: "signal – overview of signals"
 <h3>Interruption of system calls and library functions by signal handlers</h3>
 <p>If a signal handler is invoked while a system call or library function call is blocked, then either:</p>
 <dl>
-<dt>*</p>
-<dd>the call is automatically restarted after the signal handler returns; or</p>
-<dt>*</p>
-<dd>the call fails with the error <code>EINTR</code>.</dl>
+<dt>*</dt>
+<dd>the call is automatically restarted after the signal handler returns; or</dd>
+<dt>*</dt>
+<dd>the call fails with the error <code>EINTR</code>.</dd></dl>
 <p> Which of these two behaviors occurs depends on the interface and whether or not the signal handler was established using the <code>SA_RESTART</code> flag (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)). The details vary across UNIX systems; below, the details for Linux. </p>
 <p> If a blocked call to one of the following interfaces is interrupted by a signal handler, then the call is automatically restarted after the signal handler returns if the <code>SA_RESTART</code> flag was used; otherwise the call fails with the error <code>EINTR</code>:</p>
 <dl>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-readv/">readv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2), and <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) calls on &quot;slow&quot; devices. A &quot;slow&quot; device is one where the I/O call may block for an indefinite time, for example, a terminal, pipe, or socket. If an I/O call on a slow device has already transferred some data by the time it is interrupted by a signal handler, then the call will return a success status (normally, the number of bytes transferred). Note that a (local) disk is not a slow device according to this definition; I/O operations on disk devices are not interrupted by signals.</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-open/">open</a></code>(2), if it can block (e.g., when opening a FIFO; see <code><a href="/docs/linux/man/7-fifo/">fifo</a></code>(7)).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-wait/">wait</a></code>(2), <code><a href="/docs/linux/man/2-wait3/">wait3</a></code>(2), <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2), <code><a href="/docs/linux/man/2-waitid/">waitid</a></code>(2), and <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2).</p>
-<dt>*</p>
-<dd>Socket interfaces: <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2), <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), unless a timeout has been set on the socket (see below).</p>
-<dt>*</p>
-<dd>File locking interfaces: <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) and the <code>F_SETLKW</code> and <code>F_OFD_SETLKW</code> operations of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)</p>
-<dt>*</p>
-<dd>POSIX message queue interfaces: <code><a href="/docs/linux/man/3-mq_receive/">mq_receive</a></code>(3), <code><a href="/docs/linux/man/3-mq_timedreceive/">mq_timedreceive</a></code>(3), <code><a href="/docs/linux/man/3-mq_send/">mq_send</a></code>(3), and <code><a href="/docs/linux/man/3-mq_timedsend/">mq_timedsend</a></code>(3).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT</code> (since Linux 2.6.22; beforehand, always failed with <code>EINTR</code>).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2).</p>
-<dt>*</p>
-<dd><code>pthread_mutex_lock</code>(3), <code>pthread_cond_wait</code>(3), and related APIs.</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT_BITSET</code>.</p>
-<dt>*</p>
-<dd>POSIX semaphore interfaces: <code><a href="/docs/linux/man/3-sem_wait/">sem_wait</a></code>(3) and <code><a href="/docs/linux/man/3-sem_timedwait/">sem_timedwait</a></code>(3) (since Linux 2.6.22; beforehand, always failed with <code>EINTR</code>).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2) from an <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) file descriptor (since Linux 3.8; beforehand, always failed with <code>EINTR</code>).</dl>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-readv/">readv</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2), and <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) calls on &quot;slow&quot; devices. A &quot;slow&quot; device is one where the I/O call may block for an indefinite time, for example, a terminal, pipe, or socket. If an I/O call on a slow device has already transferred some data by the time it is interrupted by a signal handler, then the call will return a success status (normally, the number of bytes transferred). Note that a (local) disk is not a slow device according to this definition; I/O operations on disk devices are not interrupted by signals.</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-open/">open</a></code>(2), if it can block (e.g., when opening a FIFO; see <code><a href="/docs/linux/man/7-fifo/">fifo</a></code>(7)).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-wait/">wait</a></code>(2), <code><a href="/docs/linux/man/2-wait3/">wait3</a></code>(2), <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2), <code><a href="/docs/linux/man/2-waitid/">waitid</a></code>(2), and <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Socket interfaces: <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2), <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), unless a timeout has been set on the socket (see below).</dd>
+<dt>*</dt>
+<dd>File locking interfaces: <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) and the <code>F_SETLKW</code> and <code>F_OFD_SETLKW</code> operations of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)</dd>
+<dt>*</dt>
+<dd>POSIX message queue interfaces: <code><a href="/docs/linux/man/3-mq_receive/">mq_receive</a></code>(3), <code><a href="/docs/linux/man/3-mq_timedreceive/">mq_timedreceive</a></code>(3), <code><a href="/docs/linux/man/3-mq_send/">mq_send</a></code>(3), and <code><a href="/docs/linux/man/3-mq_timedsend/">mq_timedsend</a></code>(3).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT</code> (since Linux 2.6.22; beforehand, always failed with <code>EINTR</code>).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2).</dd>
+<dt>*</dt>
+<dd><code>pthread_mutex_lock</code>(3), <code>pthread_cond_wait</code>(3), and related APIs.</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT_BITSET</code>.</dd>
+<dt>*</dt>
+<dd>POSIX semaphore interfaces: <code><a href="/docs/linux/man/3-sem_wait/">sem_wait</a></code>(3) and <code><a href="/docs/linux/man/3-sem_timedwait/">sem_timedwait</a></code>(3) (since Linux 2.6.22; beforehand, always failed with <code>EINTR</code>).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-read/">read</a></code>(2) from an <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) file descriptor (since Linux 3.8; beforehand, always failed with <code>EINTR</code>).</dd></dl>
 <p> The following interfaces are never restarted after being interrupted by a signal handler, regardless of the use of <code>SA_RESTART</code>; they always fail with the error <code>EINTR</code> when interrupted by a signal handler:</p>
 <dl>
-<dt>*</p>
-<dd>&quot;Input&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2) (also with a non-NULL <i>timeout</i> argument), and <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2).</p>
-<dt>*</p>
-<dd>&quot;Output&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2).</p>
-<dt>*</p>
-<dd>Interfaces used to wait for signals: <code><a href="/docs/linux/man/2-pause/">pause</a></code>(2), <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2), <code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), and <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2).</p>
-<dt>*</p>
-<dd>File descriptor multiplexing interfaces: <code><a href="/docs/linux/man/2-epoll_wait/">epoll_wait</a></code>(2), <code><a href="/docs/linux/man/2-epoll_pwait/">epoll_pwait</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), and <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2).</p>
-<dt>*</p>
-<dd>System V IPC interfaces: <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2), <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2), <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2), and <code><a href="/docs/linux/man/2-semtimedop/">semtimedop</a></code>(2).</p>
-<dt>*</p>
-<dd>Sleep interfaces: <code><a href="/docs/linux/man/2-clock_nanosleep/">clock_nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), and <code><a href="/docs/linux/man/3-usleep/">usleep</a></code>(3).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2).</dl>
+<dt>*</dt>
+<dd>&quot;Input&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2) (also with a non-NULL <i>timeout</i> argument), and <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2).</dd>
+<dt>*</dt>
+<dd>&quot;Output&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Interfaces used to wait for signals: <code><a href="/docs/linux/man/2-pause/">pause</a></code>(2), <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2), <code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), and <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2).</dd>
+<dt>*</dt>
+<dd>File descriptor multiplexing interfaces: <code><a href="/docs/linux/man/2-epoll_wait/">epoll_wait</a></code>(2), <code><a href="/docs/linux/man/2-epoll_pwait/">epoll_pwait</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), and <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2).</dd>
+<dt>*</dt>
+<dd>System V IPC interfaces: <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2), <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2), <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2), and <code><a href="/docs/linux/man/2-semtimedop/">semtimedop</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Sleep interfaces: <code><a href="/docs/linux/man/2-clock_nanosleep/">clock_nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), and <code><a href="/docs/linux/man/3-usleep/">usleep</a></code>(3).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2).</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-sleep/">sleep</a></code>(3) function is also never restarted if interrupted by a handler, but gives a success return: the number of seconds remaining to sleep.</p>
 <h3>Interruption of system calls and library functions by stop signals</h3>
 <p>On Linux, even in the absence of signal handlers, certain blocking interfaces can fail with the error <code>EINTR</code> after the process is stopped by one of the stop signals and then resumed via <code>SIGCONT</code>. This behavior is not sanctioned by POSIX.1, and doesn&#8217;t occur on other systems. </p>
 <p> The Linux interfaces that display this behavior are:</p>
 <dl>
-<dt>*</p>
-<dd>&quot;Input&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2) (also with a non-NULL <i>timeout</i> argument), and <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2).</p>
-<dt>*</p>
-<dd>&quot;Output&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), if a send timeout (<code>SO_SNDTIMEO</code>) has been set.</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-epoll_wait/">epoll_wait</a></code>(2), <code><a href="/docs/linux/man/2-epoll_pwait/">epoll_pwait</a></code>(2).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-semop/">semop</a></code>(2), <code><a href="/docs/linux/man/2-semtimedop/">semtimedop</a></code>(2).</p>
-<dt>*</p>
-<dd><code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2).</p>
-<dt>*</p>
-<dd>Linux 3.7 and earlier: <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from an <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) file descriptor</p>
-<dt>*</p>
-<dd>Linux 2.6.21 and earlier: <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT</code>, <code><a href="/docs/linux/man/3-sem_timedwait/">sem_timedwait</a></code>(3), <code><a href="/docs/linux/man/3-sem_wait/">sem_wait</a></code>(3).</p>
-<dt>*</p>
-<dd>Linux 2.6.8 and earlier: <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2), <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2).</p>
-<dt>*</p>
-<dd>Linux 2.4 and earlier: <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2).</dl>
+<dt>*</dt>
+<dd>&quot;Input&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2) (also with a non-NULL <i>timeout</i> argument), and <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2).</dd>
+<dt>*</dt>
+<dd>&quot;Output&quot; socket interfaces, when a timeout (<code>SO_RCVTIMEO</code>) has been set on the socket using <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2): <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), and <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), if a send timeout (<code>SO_SNDTIMEO</code>) has been set.</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-epoll_wait/">epoll_wait</a></code>(2), <code><a href="/docs/linux/man/2-epoll_pwait/">epoll_pwait</a></code>(2).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-semop/">semop</a></code>(2), <code><a href="/docs/linux/man/2-semtimedop/">semtimedop</a></code>(2).</dd>
+<dt>*</dt>
+<dd><code><a href="/docs/linux/man/2-sigtimedwait/">sigtimedwait</a></code>(2), <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Linux 3.7 and earlier: <code><a href="/docs/linux/man/2-read/">read</a></code>(2) from an <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) file descriptor</dd>
+<dt>*</dt>
+<dd>Linux 2.6.21 and earlier: <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT</code>, <code><a href="/docs/linux/man/3-sem_timedwait/">sem_timedwait</a></code>(3), <code><a href="/docs/linux/man/3-sem_wait/">sem_wait</a></code>(3).</dd>
+<dt>*</dt>
+<dd>Linux 2.6.8 and earlier: <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2), <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Linux 2.4 and earlier: <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2).</dd></dl>
 <h2>Conforming To</h2>
 <p>POSIX.1, except as noted.</p>
 <h2>Notes</h2>

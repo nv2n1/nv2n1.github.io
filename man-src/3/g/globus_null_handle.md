@@ -41,47 +41,47 @@ description: "Handle Table for Reference Counting Data –"
 <p>Handle datum destructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>datum</i> Datum to destroy</dl>
+<dd><i>datum</i> Datum to destroy</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>globus_bool_t</code> globus_handle_table_decrement_reference (<code>globus_handle_table_t</code> *handle_table, <code>globus_handle_t</code>handle)</h3>
 <p>Remove a reference to a handle. Remove a reference to a handle table entry, calling its destructor if no more references exist for the handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle_table</i> The table that the handle was created in.<br />
- <i>handle</i> The handle to a datum to decrement the reference count for.</dl>
+ <i>handle</i> The handle to a datum to decrement the reference count for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>globus_handle_table_decrement_reference()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dl>
+<dd>The <code>globus_handle_table_decrement_reference()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dd></dl>
 <h3>int globus_handle_table_destroy (<code>globus_handle_table_t</code> *handle_table)</h3>
 <p>Destroy a handle table. Destroy a handle table and call the destructor for all objects associated with it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle_table</i> Pointer to the handle table to destroy</dl>
+<dd><i>handle_table</i> Pointer to the handle table to destroy</dd></dl>
 <h3><code>globus_bool_t</code> globus_handle_table_increment_reference (<code>globus_handle_table_t</code> *handle_table, <code>globus_handle_t</code>handle)</h3>
 <p>Add a reference to a handle table entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle_table</i> The table that the handle was created in.<br />
- <i>handle</i> The handle to a datum to increment the reference count for.</dl>
+ <i>handle</i> The handle to a datum to increment the reference count for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>globus_handle_table_increment_reference()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dl>
+<dd>The <code>globus_handle_table_increment_reference()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dd></dl>
 <h3><code>globus_bool_t</code> globus_handle_table_increment_reference_by (<code>globus_handle_table_t</code> *handle_table, <code>globus_handle_t</code>handle, unsigned intinc)</h3>
 <p>Increment the reference count for handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle_table</i> The table that the handle was created in.<br />
  <i>handle</i> The handle to a datum to increment the reference count for.<br />
- <i>inc</i> The number of references to add the handle.</dl>
+ <i>inc</i> The number of references to add the handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>globus_handle_table_increment_reference_by()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dl>
+<dd>The <code>globus_handle_table_increment_reference_by()</code> function returns a boolean value indicating whether the handle still references a valid datum.</dd></dl>
 <h3>int globus_handle_table_init (<code>globus_handle_table_t</code> *handle_table, <code>globus_handle_destructor_t</code>destructor)</h3>
 <p>Initialize a table of unique reference counted handles. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle_table</i> the table of unique handles we want to use.<br />
- <i>destructor</i> Function to call to free the data associated with a handle when the handle&#8217;s reference count reaches 0 or the handle table is destroyed.</dl>
+ <i>destructor</i> Function to call to free the data associated with a handle when the handle&#8217;s reference count reaches 0 or the handle table is destroyed.</dd></dl>
 <h3><code>globus_handle_t</code> globus_handle_table_insert (<code>globus_handle_table_t</code> *handle_table, void *value, intinitial_refs)</h3>
 <p>Insert a datum into a handle table </p>
 <p> Insert a value into the handle table, and return a unique handle to it. </p>
@@ -89,18 +89,18 @@ description: "Handle Table for Reference Counting Data –"
 <dl COMPACT>
 <dd><i>handle_table</i> Handle table to add the value to<br />
  <i>value</i> The value to insert into the table<br />
- <i>initial_refs</i> The initial reference count of this value in the table</dl>
+ <i>initial_refs</i> The initial reference count of this value in the table</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>globus_handle_table_insert()</code> function returns a unique handle to value.</dl>
+<dd>The <code>globus_handle_table_insert()</code> function returns a unique handle to value.</dd></dl>
 <h3>void* globus_handle_table_lookup (<code>globus_handle_table_t</code> *handle_table, <code>globus_handle_t</code>handle)</h3>
 <p>Resolve a handle its datum. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle_table</i> The table that the handle was created in.<br />
- <i>handle</i> The handle to a datum to resolve</dl>
+ <i>handle</i> The handle to a datum to resolve</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The <code>globus_handle_table_lookup()</code> function returns the datum associated with the handle in the handle table, or NULL if the handle does not reference valid data.</dl>
+<dd>The <code>globus_handle_table_lookup()</code> function returns the datum associated with the handle in the handle table, or NULL if the handle does not reference valid data.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

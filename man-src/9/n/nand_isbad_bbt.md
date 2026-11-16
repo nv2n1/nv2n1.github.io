@@ -14,15 +14,15 @@ description: "nand_isbad_bbt – [NAND Interface] Check if a block is bad"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>offs</i></p>
 <dl>
-<dd>offset in the device</dl>
+<dd>offset in the device</dd></dl>
 <p> <i>allowbbt</i></p>
 <dl>
-<dd>allow access to bad block table region</dl>
+<dd>allow access to bad block table region</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

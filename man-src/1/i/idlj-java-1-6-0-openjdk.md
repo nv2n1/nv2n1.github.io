@@ -9,7 +9,7 @@ description: "idlj – The IDL-to-Java Compiler"
 
 <p>idlj &#8211; The IDL-to-Java Compiler </p>
 <dl>
-<dd><code>idlj</code> generates Java bindings from a given IDL file.</dl>
+<dd><code>idlj</code> generates Java bindings from a given IDL file.</dd></dl>
 <h2>Synopsis</h2>
 <pre><code>idlj [ </code><code>options</code><code> ] </code><tt>idl-file</tt></pre>
 <p>where <i>idl-file</i> is the name of a file containing Interface Definition Language (IDL) definitions. <i>Options</i> may appear in any order, but must precede the <i>idl-file</i>. </p>
@@ -17,7 +17,7 @@ description: "idlj – The IDL-to-Java Compiler"
 <p>The IDL-to-Java Compiler generates the Java bindings for a given IDL file.&nbsp;<wbr> For binding details, see the OMG IDL to Java Language Language Mapping Specification. Some previous releases of the IDL-to-Java compiler were named <i>idltojava</i>.</p>
 <h3>Emitting Client and Server Bindings</h3>
 <dl>
-<dd>To generate Java bindings for an IDL file named My.idl: <i>idlj My.idl</i> </p>
+<dd>To generate Java bindings for an IDL file named My.idl: <i>idlj My.idl</i> </dd>
 <p> This generates the client-side bindings and is equivalent to: <i>idlj </i><tt>-fclient</tt><i> My.idl</i> </p>
 <p> The client-side bindings do not include the server-side skeleton. If you want to generate the server-side bindings for the interfaces: <i>idlj </i><tt>-fserver</tt><i> My.idl</i> </p>
 <p> Server-side bindings include the client-side bindings plus the skeleton, all of which are <i>POA</i> (that is, Inheritance Model) classes. If you want to generate both client and server-side bindings, use one of the following (equivalent) commands: <i>idlj </i><tt>-fclient -fserver</tt><i> My.idl</i><br />
@@ -61,19 +61,19 @@ description: "idlj – The IDL-to-Java Compiler"
 </dl>
 <h3>Specifying Alternate Locations for Emitted Files</h3>
 <dl>
-<dd>If you want to direct the emitted files to a directory other than the current directory, invoke the compiler as:</p>
+<dd>If you want to direct the emitted files to a directory other than the current directory, invoke the compiler as:</dd>
 <dl>
-<dd><i>idlj </i><tt>-td /altdir</tt><i> My.idl</i></dl>
+<dd><i>idlj </i><tt>-td /altdir</tt><i> My.idl</i></dd></dl>
 <p> For the interface <i>My</i>, the bindings will be emitted to <i>/altdir/My.java</i>, etc., instead of <i>./My.java</i>.</dl>
 <h3>Specifying Alternate Locations for Include Files</h3>
 <dl>
-<dd>If <i>My.idl</i> included another idl file, <i>MyOther.idl</i>, the compiler assumes that <i>MyOther.idl</i> resides in the local directory. If it resides in <i>/includes</i>, for example, then you would invoke the compiler with the following command: <i>idlj </i><tt>-i /includes</tt><i> My.idl</i> </p>
+<dd>If <i>My.idl</i> included another idl file, <i>MyOther.idl</i>, the compiler assumes that <i>MyOther.idl</i> resides in the local directory. If it resides in <i>/includes</i>, for example, then you would invoke the compiler with the following command: <i>idlj </i><tt>-i /includes</tt><i> My.idl</i> </dd>
 <p> If <i>My.idl</i> also included <i>Another.idl</i> that resided in <i>/moreIncludes</i>, for example, then you would invoke the compiler with the following command: <i>idlj </i><tt>-i /includes -i /moreIncludes</tt><i> My.idl</i> </p>
 <p> Since this form of include can become irritatingly long, another means of indicating to the compiler where to search for included files is provided. This technique is similar to the idea of an environment variable. Create a file named <i>idl.config</i> in a directory that is listed in your CLASSPATH. Inside of <i>idl.config</i>, provide a line with the following form: <i>includes=/includes;/moreIncludes</i> </p>
 <p> The compiler will find this file and read in the includes list. Note that in this example the separator character between the two directories is a semicolon (;). This separator character is platform dependent. On the Windows platform, use a semicolon, on the Unix platform, use a colon, etc. For more information on <i>includes</i>, read the CLASSPATH&nbsp;<wbr>(Solaris) or CLASSPATH&nbsp;<wbr>(Windows) documentation.</dl>
 <h3>Emitting Bindings for Include Files</h3>
 <dl>
-<dd>By default, only those interfaces, structs, etc, that are defined in the idl file on the command line have Java bindings generated for them. The types defined in included files are not generated. For example, assume the following two idl files: <tt>My.idl</tt> </p>
+<dd>By default, only those interfaces, structs, etc, that are defined in the idl file on the command line have Java bindings generated for them. The types defined in included files are not generated. For example, assume the following two idl files: <tt>My.idl</tt> </dd>
 <p> <i>#include &lt;MyOther.idl&gt;</i><br />
  <i>interface My</i><br />
  <i>{</i><br />
@@ -109,7 +109,7 @@ description: "idlj – The IDL-to-Java Compiler"
 <h3>Inserting Package Prefixes</h3>
 <dl>
 <dd>Suppose that you work for a company named ABC that has constructed the following IDL file:<br />
- <tt>Widgets.idl</tt> </p>
+ <tt>Widgets.idl</tt> </dd>
 <p> <i>module Widgets</i><br />
  <i>{</i><br />
  <i>&nbsp;<wbr> interface W1 {&#8230;};</i><br />
@@ -124,48 +124,48 @@ description: "idlj – The IDL-to-Java Compiler"
 </dl>
 <h3>Defining Symbols Before Compilation</h3>
 <dl>
-<dd>You may need to define a symbol for compilation that is not defined within the IDL file, perhaps to include debugging code in the bindings. The command <i>idlj </i><tt>-d</tt><i> MYDEF My.idl</i> </p>
+<dd>You may need to define a symbol for compilation that is not defined within the IDL file, perhaps to include debugging code in the bindings. The command <i>idlj </i><tt>-d</tt><i> MYDEF My.idl</i> </dd>
 <p> is the equivalent of putting the line <i>#define MYDEF</i> inside <i>My.idl</i>.</dl>
 <h3>Preserving Pre-Existing Bindings</h3>
 <dl>
-<dd>If the Java binding files already exist, the <i>-keep</i> flag will keep the compiler from overwriting them. The default is to generate all files without considering if they already exist. If you&#8217;ve customized those files (which you should not do unless you are very comfortable with their contents), then the <i>-keep</i> option is very useful. The command <i>idlj </i><tt>-keep</tt><i> My.idl</i> </p>
+<dd>If the Java binding files already exist, the <i>-keep</i> flag will keep the compiler from overwriting them. The default is to generate all files without considering if they already exist. If you&#8217;ve customized those files (which you should not do unless you are very comfortable with their contents), then the <i>-keep</i> option is very useful. The command <i>idlj </i><tt>-keep</tt><i> My.idl</i> </dd>
 <p> emit all client-side bindings that do not already exist.</dl>
 <h3>Viewing Progress of Compilation</h3>
 <dl>
-<dd>The IDL-to-Java compiler will generate status messages as it progresses through its phases of execution. Use the <i>-v</i> option to activate this &quot;verbose&quot; mode: <i>idlj </i><tt>-v</tt><i> My.idl</i> </p>
+<dd>The IDL-to-Java compiler will generate status messages as it progresses through its phases of execution. Use the <i>-v</i> option to activate this &quot;verbose&quot; mode: <i>idlj </i><tt>-v</tt><i> My.idl</i> </dd>
 <p> By default the compiler does not operate in verbose mode.</dl>
 <h3>Displaying Version Information</h3>
 <dl>
-<dd>To display the build version of the IDL-to-Java compiler, specify the <i>-version</i> option on the command-line: </p>
+<dd>To display the build version of the IDL-to-Java compiler, specify the <i>-version</i> option on the command-line: </dd>
 <p> <i>idlj -version</i> </p>
 <p> Version information also appears within the bindings generated by the compiler. Any additional options appearing on the command-line are ignored. </p>
 </dl>
 <h2>Options</h2>
 <dl>
 <dd>
-<dl>
-<dt>-d symbol</p>
-<dd>This is equivalent to the following line in an IDL file:</p>
+</dd><dl>
+<dt>-d symbol</dt>
+<dd>This is equivalent to the following line in an IDL file:</dd>
 <dl>
 <dd>
 <pre><code>#define </code><tt>symbol</tt></pre>
-</dl>
-<dt>-emitAll</p>
-<dd>Emit all types, including those found in <i>#include</i> files.</p>
-<dt>-fside</p>
-<dd>Defines what bindings to emit. <i>side</i> is one of <i>client</i>, <i>server</i>, <i>serverTIE</i>, <i>all</i>, or <i>allTIE</i>. The <i>-fserverTIE</i> and <i>-fallTIE</i> options cause delegate model skeletons to be emitted. Assumes <i>-fclient</i> if the flag is not specified.</p>
-<dt>-i include-path</p>
-<dd>By default, the current directory is scanned for included files. This option adds another directory.</p>
-<dt>-keep</p>
-<dd>If a file to be generated already exists, do not overwrite it. By default it is overwritten.</p>
-<dt>-noWarn</p>
-<dd>Suppresses warning messages.</p>
-<dt>-oldImplBase</p>
-<dd>Generates skeletons compatible with pre-1.4 JDK ORBs. By default, the POA Inheritance Model server-side bindings are generated. This option provides backward-compatibility with older versions of the Java programming language by generating server-side bindings that are <i>ImplBase</i> Inheritance Model classes.</p>
-<dt>-pkgPrefix type prefix</p>
-<dd>Wherever <i>type</i> is encountered at file scope, prefix the generated Java package name with <i>prefix</i> for all files generated for that type. The <i>type</i> is the simple name of either a top-level module, or an IDL type defined outside of any module.</p>
-<dt>-pkgTranslate type package</p>
-<dd>Whenever the module name <i>type</i> is encountered in an identifier, replace it in the identifier with <i>package</i> for all files in the generated Java package. Note that <i>pkgPrefix</i> changes are made first. <i>type</i> is the simple name of either a top-level module, or an IDL type defined outside of any module, and must match the full package name exactly.</dl>
+</dd></dl>
+<dt>-emitAll</dt>
+<dd>Emit all types, including those found in <i>#include</i> files.</dd>
+<dt>-fside</dt>
+<dd>Defines what bindings to emit. <i>side</i> is one of <i>client</i>, <i>server</i>, <i>serverTIE</i>, <i>all</i>, or <i>allTIE</i>. The <i>-fserverTIE</i> and <i>-fallTIE</i> options cause delegate model skeletons to be emitted. Assumes <i>-fclient</i> if the flag is not specified.</dd>
+<dt>-i include-path</dt>
+<dd>By default, the current directory is scanned for included files. This option adds another directory.</dd>
+<dt>-keep</dt>
+<dd>If a file to be generated already exists, do not overwrite it. By default it is overwritten.</dd>
+<dt>-noWarn</dt>
+<dd>Suppresses warning messages.</dd>
+<dt>-oldImplBase</dt>
+<dd>Generates skeletons compatible with pre-1.4 JDK ORBs. By default, the POA Inheritance Model server-side bindings are generated. This option provides backward-compatibility with older versions of the Java programming language by generating server-side bindings that are <i>ImplBase</i> Inheritance Model classes.</dd>
+<dt>-pkgPrefix type prefix</dt>
+<dd>Wherever <i>type</i> is encountered at file scope, prefix the generated Java package name with <i>prefix</i> for all files generated for that type. The <i>type</i> is the simple name of either a top-level module, or an IDL type defined outside of any module.</dd>
+<dt>-pkgTranslate type package</dt>
+<dd>Whenever the module name <i>type</i> is encountered in an identifier, replace it in the identifier with <i>package</i> for all files in the generated Java package. Note that <i>pkgPrefix</i> changes are made first. <i>type</i> is the simple name of either a top-level module, or an IDL type defined outside of any module, and must match the full package name exactly.</dd></dl>
 <p> If more than one translation matches an identifier, the longest match is chosen. For example, if the arguments include: </p>
 <pre><code> -pkgTranslate foo bar -pkgTranslate foo.baz buzz.fizz</code></pre>
 <p>The following translations would occur: </p>
@@ -176,56 +176,56 @@ foo.baz.bar =&gt; buzz.fizz.bar</code></pre>
 <p>The following package names cannot be translated:</p>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd><i>org</i></p>
-<dt>o</p>
-<dd><i>org.omg</i> or any subpackages of <i>org.omg</i></dl>
+</dd><dl>
+<dt>o</dt>
+<dd><i>org</i></dd>
+<dt>o</dt>
+<dd><i>org.omg</i> or any subpackages of <i>org.omg</i></dd></dl>
 </dl>
 <p> Any attempt to translate these packages will result in uncompilable code, and the use of these packages as the first argument after <i>-pkgTranslate</i> will be treated as an error.</p>
 <dl>
-<dt>-skeletonName xxx%yyy</p>
-<dd>Use <i>xxx%yyy</i> as the pattern for naming the skeleton. The defaults are:</p>
+<dt>-skeletonName xxx%yyy</dt>
+<dd>Use <i>xxx%yyy</i> as the pattern for naming the skeleton. The defaults are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd>%POA for the <i>POA</i> base class (<i>-fserver</i> or <i>-fall</i>)</p>
-<dt>o</p>
-<dd>_%ImplBase for the <i>oldImplBase</i> class (<i>-oldImplBase</i> and (<i>-fserver</i> or <i>-fall</i>))</dl>
+</dd><dl>
+<dt>o</dt>
+<dd>%POA for the <i>POA</i> base class (<i>-fserver</i> or <i>-fall</i>)</dd>
+<dt>o</dt>
+<dd>_%ImplBase for the <i>oldImplBase</i> class (<i>-oldImplBase</i> and (<i>-fserver</i> or <i>-fall</i>))</dd></dl>
 </dl>
-<dt>-td dir</p>
-<dd>Use <i>dir</i> for the output directory instead of the current directory.</p>
-<dt>-tieName xxx%yyy</p>
-<dd>Name the tie according to the pattern. The defaults are:</p>
+<dt>-td dir</dt>
+<dd>Use <i>dir</i> for the output directory instead of the current directory.</dd>
+<dt>-tieName xxx%yyy</dt>
+<dd>Name the tie according to the pattern. The defaults are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd>%POATie for the <i>POA</i> tie base class (<i>-fserverTie</i> or <i>-fallTie</i>)</p>
-<dt>o</p>
-<dd>%_Tie for the <i>oldImplBase</i> tie class (<i>-oldImplBase</i> and (<i>-fserverTie</i> or <i>-fallTie</i>))</dl>
+</dd><dl>
+<dt>o</dt>
+<dd>%POATie for the <i>POA</i> tie base class (<i>-fserverTie</i> or <i>-fallTie</i>)</dd>
+<dt>o</dt>
+<dd>%_Tie for the <i>oldImplBase</i> tie class (<i>-oldImplBase</i> and (<i>-fserverTie</i> or <i>-fallTie</i>))</dd></dl>
 </dl>
-<dt>-nowarn, -verbose</p>
-<dd>Verbose mode.</p>
-<dt>-version</p>
-<dd>Display version information and terminate.</dl>
+<dt>-nowarn, -verbose</dt>
+<dd>Verbose mode.</dd>
+<dt>-version</dt>
+<dd>Display version information and terminate.</dd></dl>
 </dl>
 <p> See the Description section for more option information.</p>
 <h2>Restrictions:</h2>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd>Escaped identifiers in the global scope may not have the same spelling as IDL primitive types, <i>Object</i>, or <i>ValueBase</i>. This is because the symbol table is pre-loaded with these identifiers; allowing them to be redefined would overwrite their original definitions. (Possible permanent restriction).</p>
-<dt>o</p>
-<dd>The <i>fixed</i> IDL type is not supported.</dl>
+</dd><dl>
+<dt>o</dt>
+<dd>Escaped identifiers in the global scope may not have the same spelling as IDL primitive types, <i>Object</i>, or <i>ValueBase</i>. This is because the symbol table is pre-loaded with these identifiers; allowing them to be redefined would overwrite their original definitions. (Possible permanent restriction).</dd>
+<dt>o</dt>
+<dd>The <i>fixed</i> IDL type is not supported.</dd></dl>
 </dl>
 <h2>Known Problems:</h2>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd>No import generated for global identifiers. If you invoke on an unexported local impl, you do get an exception, but it seems to be due to a <i>NullPointerException</i> in the <i>ServerDelegate</i> DSI code.</dl>
+</dd><dl>
+<dt>o</dt>
+<dd>No import generated for global identifiers. If you invoke on an unexported local impl, you do get an exception, but it seems to be due to a <i>NullPointerException</i> in the <i>ServerDelegate</i> DSI code.</dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

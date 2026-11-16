@@ -16,16 +16,16 @@ description: "db5.3_codegen – generate application code for Berkeley DB"
 <p> The utility generates application code to create and configure Berkeley DB database environments and databases based on a simple description language and writes it to one or more output files. The generated code may need modification, in the case of complicated applications, but will usually significantly reduce the time required to create Berkeley DB applications. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-a </code><i>api</i></p>
-<dd> Generate code for the specified API (currently, only Do c Dc is accepted )</p>
-<dt><code>-i </code><i>file</i></p>
-<dd> Specify an input <i>file</i> by default, standard input is used.</p>
-<dt><code>-o </code><i>prefix</i></p>
-<dd> Specify an output file <i>prefix</i> by default, &#8220;application&#8221; is used.</p>
-<dt><code>-V</code></p>
-<dd> Write the library version number to standard output and exit.</p>
-<dt><code>-v</code></p>
-<dd> Run in verbose mode.</dl>
+<dt><code>-a </code><i>api</i></dt>
+<dd> Generate code for the specified API (currently, only Do c Dc is accepted )</dd>
+<dt><code>-i </code><i>file</i></dt>
+<dd> Specify an input <i>file</i> by default, standard input is used.</dd>
+<dt><code>-o </code><i>prefix</i></dt>
+<dd> Specify an output file <i>prefix</i> by default, &#8220;application&#8221; is used.</dd>
+<dt><code>-V</code></dt>
+<dd> Write the library version number to standard output and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Run in verbose mode.</dd></dl>
 <p> The utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>C Language Specific Information</h2>
 <p> By default, when the utility generates C-language code, the output file is named &#8220;application.c &#8221; The output filename can be specified with the &#8211;<code>o</code> option. </p>
@@ -94,62 +94,63 @@ environment myenv
 </blockquote>
 <h3>Environment Keywords</h3>
 <dl>
-<dt><code>environment</code></p>
-<dd> Start a database environment block. </p>
+<dt><code>environment</code></dt>
+<dd> Start a database environment block. </dd>
 <p> There must be three tokens on the line: the keyword, the name of the environment and an opening brace (&#8220;{&#8221; )</p>
-<dt><code>home</code></p>
-<dd> Specify the database environment home directory. </p>
+<dt><code>home</code></dt>
+<dd> Specify the database environment home directory. </dd>
 <p> There must be two tokens on the line: the keyword and the home directory.</p>
-<dt><code>cachesize</code></p>
-<dd> Specify the database environment cache size. </p>
+<dt><code>cachesize</code></dt>
+<dd> Specify the database environment cache size. </dd>
 <p> There must be two tokens on the line: the keyword, the gigabytes of cache, the bytes of cache, and the number of caches (the number of underlying physical areas into which the cache is logically divided).</p>
-<dt><code>private</code></p>
-<dd> Specify the database environment is private. </p>
+<dt><code>private</code></dt>
+<dd> Specify the database environment is private. </dd>
 <p> There must be one token on the line: the keyword by itself.</p>
-<dt><code>}</code></p>
-<dd> End the database environment block. </p>
+<dt><code>}</code></dt>
+<dd> End the database environment block. </dd>
 <p> There must be one token on the line: the keyword by itself.</dl>
 <h3>Database Keywords</h3>
 <dl>
-<dt><code>database</code></p>
-<dd> Start a database block. </p>
+<dt><code>database</code></dt>
+<dd> Start a database block. </dd>
 <p> There must be three tokens on the line: the keyword, the name of the database and an opening brace (&#8220;{&#8221; )</p>
-<dt><code>custom</code></p>
-<dd> Specify a custom key-comparison routine. This is used when the Btree database requires a specific sort that cannot generate. A stub key comparison routine will be created and configured for the database which should be modified as necessary. See the &#8220;<code>key_type</code> &#8221; keyword for more information. </p>
+<dt><code>custom</code></dt>
+<dd> Specify a custom key-comparison routine. This is used when the Btree database requires a specific sort that cannot generate. A stub key comparison routine will be created and configured for the database which should be modified as necessary. See the &#8220;<code>key_type</code> &#8221; keyword for more information. </dd>
 <p> There must be one token on the line: the keyword by itself.</p>
-<dt><code>dupsort</code></p>
-<dd> Configure the database to support sorted duplicates. </p>
+<dt><code>dupsort</code></dt>
+<dd> Configure the database to support sorted duplicates. </dd>
 <p> There must be one token on the line: the keyword by itself.</p>
-<dt><code>extentsize</code></p>
-<dd> Configure the size of the Queue database extent files. </p>
+<dt><code>extentsize</code></dt>
+<dd> Configure the size of the Queue database extent files. </dd>
 <p> There must be two tokens on the line: the keyword and the extent file size, as a number of pages.</p>
-<dt><code>key_type</code></p>
-<dd> Configure a integral type key-comparison routine. This is used when the Btree database key is an integral type (such as &#8220;Vt unsigned int &#8221; or &#8220;Vt u_int32_t ) &#8221; Any C-language integral type may be specified. See the &#8220;<code>custom</code> &#8221; keyword for more information. A Btree comparison routine based on the type of the key will be created and configured. </p>
+<dt><code>key_type</code></dt>
+<dd> Configure a integral type key-comparison routine. This is used when the Btree database key is an integral type (such as &#8220;Vt unsigned int &#8221; or &#8220;Vt u_int32_t ) &#8221; Any C-language integral type may be specified. See the &#8220;<code>custom</code> &#8221; keyword for more information. A Btree comparison routine based on the type of the key will be created and configured. </dd>
 <p> There must be two tokens on the line: the keyword and the type.</p>
-<dt><code>pagesize</code></p>
-<dd> Configure the database page size. </p>
+<dt><code>pagesize</code></dt>
+<dd> Configure the database page size. </dd>
 <p> There must be two tokens on the line: the keyword and the page size in bytes.</p>
-<dt><code>primary</code></p>
-<dd> Configure the database as a secondary index. A stub secondary callback routine will be created and configured for the database, which should be modified as necessary. See the &#8220;<code>secondary_offset</code> &#8221; keyword for more information. </p>
+<dt><code>primary</code></dt>
+<dd> Configure the database as a secondary index. A stub secondary callback routine will be created and configured for the database, which should be modified as necessary. See the &#8220;<code>secondary_offset</code> &#8221; keyword for more information. </dd>
 <p> There must be two tokens on the line: the keyword and the name of the primary database for which this database is a secondary.</p>
-<dt><code>recnum</code></p>
-<dd> Configure the Btree database to support record number access. </p>
+<dt><code>recnum</code></dt>
+<dd> Configure the Btree database to support record number access. </dd>
 <p> There must be one token on the line: the keyword by itself.</p>
-<dt><code>re_len</code></p>
-<dd> Configure the record length for a Queue database or a fixed-length Recno database. </p>
+<dt><code>re_len</code></dt>
+<dd> Configure the record length for a Queue database or a fixed-length Recno database. </dd>
 <p> There must be two tokens on the line: the keyword and the length of a record, in bytes. </p>
-<dt><code>secondary_offset</code></p>
-<dd> Configure a secondary callback routine based on a byte string found in the primary database&#8217;s data item. </p>
+<dt><code>secondary_offset</code></dt>
+<dd> Configure a secondary callback routine based on a byte string found in the primary database&#8217;s data item. </dd>
 <p> There must be three tokens on the line: the keyword, the byte offset from the beginning of the primary data item where the secondary key occurs, and the length of the secondary key in bytes.</p>
-<dt><code>transaction</code></p>
-<dd> Configure the database (and, by extension, the database environment), to be transactional. </p>
+<dt><code>transaction</code></dt>
+<dd> Configure the database (and, by extension, the database environment), to be transactional. </dd>
 <p> There must be one token on the line: the keyword by itself.</p>
-<dt><code>type</code></p>
-<dd> Configure the database type. </p>
+<dt><code>type</code></dt>
+<dd> Configure the database type. </dd>
 <p> There must be two tokens on the line: the keyword and the type, where the type is one of &#8220;btree&#8221; &#8220;hash&#8221; &#8220;queue&#8221; or &#8220;recno&#8221;</p>
-<dt><code>}</code></p>
-<dd> End the database environment block. </p>
+<dt><code>}</code></dt>
+<dd> End the database environment block. </dd>
 <p> There must be one token on the line: the keyword by itself.</dl>
 <h2>AUTHORS</h2>
 <p> An Thorsten Glaser Aq tg [at] debian.org wrote this manual page for the Debian project (but may be used by others) after the original HTML format documentation Copyright &#169; 1996,2008 Oracle. All rights reserved. </p>
 <h2>Index</h2>
+</p>

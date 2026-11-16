@@ -11,28 +11,23 @@ std::in_place,std::in_place_type,std::in_place_index,std::in_place_t, - std::in_
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     struct in_place_t {
     explicit in_place_t() = default;
     (since C++ 17)
 };
 inline constexpr in_place_t in_place{};
-
 template &lt;class T&gt;
 struct in_place_type_t {
     explicit in_place_type_t() = default;
 };
 (since C++ 17)
-
     template &lt;class T&gt;
     inline constexpr in_place_type_t&lt;T&gt; in_place_type{};
-
 template &lt;std::size_t I&gt;
 struct in_place_index_t {
     explicit in_place_index_t() = default;
 };
 (since C++ 17)
-
     template &lt;std::size_t I&gt;
     inline constexpr in_place_index_t&lt;I&gt; in_place_index{};</code></pre> 
 std::in_place, std::in_place_type, and std::in_place_index are disambiguation tags 

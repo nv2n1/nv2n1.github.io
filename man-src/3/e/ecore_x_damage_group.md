@@ -24,23 +24,23 @@ description: "X Damage Extension Functions – Functions related to the X Damage
 <p>Destroys a damage object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>damage</i> The damage object to destroy.</dl>
+<dd><i>damage</i> The damage object to destroy.</dd></dl>
 <p> Destroys the damage object damage.</p>
 <h3>EAPI Ecore_X_Damage ecore_x_damage_new (Ecore_X_Drawable drawable, Ecore_X_Damage_Report_Level level)</h3>
 <p>Creates a damage object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>drawable</i> The drawable to monotor.<br />
- <i>level</i> The level of the damage report.</dl>
+ <i>level</i> The level of the damage report.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The damage object.</dl>
+<dd>The damage object.</dd></dl>
 <p> Creates a damage object to monitor changes to drawable, with the level level.</p>
 <h3>EAPI int ecore_x_damage_query (void)</h3>
 <p>Return whether the Damage Extension is available. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the Damage Extension is available, 0 if not.</dl>
+<dd>1 if the Damage Extension is available, 0 if not.</dd></dl>
 <p> Return 1 if the X server supports the Damage Extension version 1.0, 0 otherwise.</p>
 <h3>EAPI void ecore_x_damage_subtract (Ecore_X_Damage damage, Ecore_X_Region repair, Ecore_X_Region parts)</h3>
 <p>Synchronously modifies the region. </p>
@@ -48,7 +48,7 @@ description: "X Damage Extension Functions – Functions related to the X Damage
 <dl COMPACT>
 <dd><i>damage</i> The damage object to destroy.<br />
  <i>repair</i> The repair region.<br />
- <i>parts</i> The parts region.</dl>
+ <i>parts</i> The parts region.</dd></dl>
 <p> Synchronously modifies the regions in the following manner: If repair is XCB_NONE: 1) parts = damage 2) damage = &lt;empty&gt; Otherwise: 1) parts = damage INTERSECT repair 2) damage = damage &#8211; parts 3) Generate DamageNotify for remaining damage areas</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

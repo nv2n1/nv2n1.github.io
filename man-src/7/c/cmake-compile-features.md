@@ -93,43 +93,43 @@ target_link_libraries(consumer_no foo)</pre>
 <h2>Supported Compilers</h2>
 <p>CMake is currently aware of the <code>C++ standards</code> and <code>compile features</code> available from the following <code>compiler ids</code> as of the versions specified for each:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>AppleClang</code>: Apple Clang for Xcode versions 4.4+.</p>
-<dt>&bull;</p>
-<dd><code>Clang</code>: Clang compiler versions 2.9+.</p>
-<dt>&bull;</p>
-<dd><code>GNU</code>: GNU compiler versions 4.4+.</p>
-<dt>&bull;</p>
-<dd><code>MSVC</code>: Microsoft Visual Studio versions 2010+.</p>
-<dt>&bull;</p>
-<dd><code>SunPro</code>: Oracle SolarisStudio versions 12.4+.</p>
-<dt>&bull;</p>
-<dd><code>Intel</code>: Intel compiler versions 12.1+. </p>
+<dt>&bull;</dt>
+<dd><code>AppleClang</code>: Apple Clang for Xcode versions 4.4+.</dd>
+<dt>&bull;</dt>
+<dd><code>Clang</code>: Clang compiler versions 2.9+.</dd>
+<dt>&bull;</dt>
+<dd><code>GNU</code>: GNU compiler versions 4.4+.</dd>
+<dt>&bull;</dt>
+<dd><code>MSVC</code>: Microsoft Visual Studio versions 2010+.</dd>
+<dt>&bull;</dt>
+<dd><code>SunPro</code>: Oracle SolarisStudio versions 12.4+.</dd>
+<dt>&bull;</dt>
+<dd><code>Intel</code>: Intel compiler versions 12.1+. </dd>
 <p> CMake is currently aware of the <code>C standards</code> and <code>compile features</code> available from the following <code>compiler ids</code> as of the versions specified for each:</p>
-<dt>&bull;</p>
-<dd>all compilers and versions listed above for C++.</p>
-<dt>&bull;</p>
-<dd><code>GNU</code>: GNU compiler versions 3.4+ </p>
+<dt>&bull;</dt>
+<dd>all compilers and versions listed above for C++.</dd>
+<dt>&bull;</dt>
+<dd><code>GNU</code>: GNU compiler versions 3.4+ </dd>
 <p> CMake is currently aware of the <code>C++ standards</code> and their associated meta-features (e.g. <code>cxx_std_11</code>) available from the following <code>compiler ids</code> as of the versions specified for each:</p>
-<dt>&bull;</p>
-<dd><code>Cray</code>: Cray Compiler Environment version 8.1+.</p>
-<dt>&bull;</p>
-<dd><code>Fujitsu</code>: Fujitsu HPC compiler 4.0+.</p>
-<dt>&bull;</p>
-<dd><code>PGI</code>: PGI version 12.10+.</p>
-<dt>&bull;</p>
-<dd><code>NVHPC</code>: NVIDIA HPC compilers version 11.0+.</p>
-<dt>&bull;</p>
-<dd><code>TI</code>: Texas Instruments compiler.</p>
-<dt>&bull;</p>
-<dd><code>XL</code>: IBM XL version 10.1+. </p>
+<dt>&bull;</dt>
+<dd><code>Cray</code>: Cray Compiler Environment version 8.1+.</dd>
+<dt>&bull;</dt>
+<dd><code>Fujitsu</code>: Fujitsu HPC compiler 4.0+.</dd>
+<dt>&bull;</dt>
+<dd><code>PGI</code>: PGI version 12.10+.</dd>
+<dt>&bull;</dt>
+<dd><code>NVHPC</code>: NVIDIA HPC compilers version 11.0+.</dd>
+<dt>&bull;</dt>
+<dd><code>TI</code>: Texas Instruments compiler.</dd>
+<dt>&bull;</dt>
+<dd><code>XL</code>: IBM XL version 10.1+. </dd>
 <p> CMake is currently aware of the <code>C standards</code> and their associated meta-features (e.g. <code>c_std_99</code>) available from the following <code>compiler ids</code> as of the versions specified for each:</p>
-<dt>&bull;</p>
-<dd>all compilers and versions listed above with only meta-features for C++. </p>
+<dt>&bull;</dt>
+<dd>all compilers and versions listed above with only meta-features for C++. </dd>
 <p> CMake is currently aware of the <code>CUDA standards</code> and their associated meta-features (e.g. <code>cuda_std_11</code>) available from the following <code>compiler ids</code> as of the versions specified for each:</p>
-<dt>&bull;</p>
-<dd><code>Clang</code>: Clang compiler 5.0+.</p>
-<dt>&bull;</p>
-<dd><code>NVIDIA</code>: NVIDIA nvcc compiler 7.5+.</dl>
+<dt>&bull;</dt>
+<dd><code>Clang</code>: Clang compiler 5.0+.</dd>
+<dt>&bull;</dt>
+<dd><code>NVIDIA</code>: NVIDIA nvcc compiler 7.5+.</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>

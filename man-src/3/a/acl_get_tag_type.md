@@ -21,8 +21,8 @@ description: "acl_get_tag_type – get the tag type of an ACL entry"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_get_tag_type function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
 <h2>SEE ALSO</h2>

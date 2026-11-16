@@ -84,10 +84,10 @@ if __name__ == &quot;__main__&quot;:
 <p> You can set various keyboard shortcuts to be used by bpython. However, we have yet to map all keys to their respective control codes. If you configure a key combination which is not yet supported by bpython it will raise an exception telling you the key does not exist in bpython.keys. </p>
 <p> Valid keys are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Control + any alphanumeric character (C-a through A-z, also a few others).</p>
-<dt>&bull;</p>
-<dd>Any function key ranging from F1 to F12.</dl>
+<dt>&bull;</dt>
+<dd>Control + any alphanumeric character (C-a through A-z, also a few others).</dd>
+<dt>&bull;</dt>
+<dd>Any function key ranging from F1 to F12.</dd></dl>
 <h3>pastebin</h3>
 <p>Default: &lt;F8&gt;</p>
 <h3>last_output</h3>

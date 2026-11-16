@@ -14,16 +14,16 @@ description: "gnutls_pubkey_verify_data2 – API function"
 <p> <code>int gnutls_pubkey_verify_data2(gnutls_pubkey_t </code><i>pubkey</i><code>, gnutls_sign_algorithm_t </code><i>algo</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t pubkey</p>
-<dd> Holds the public key</p>
-<dt>gnutls_sign_algorithm_t algo</p>
-<dd> The signature algorithm used</p>
-<dt>unsigned int flags</p>
-<dd> Zero or one of <code>gnutls_pubkey_flags_t</code></p>
-<dt>const gnutls_datum_t * data</p>
-<dd> holds the signed data</p>
-<dt>const gnutls_datum_t * signature</p>
-<dd> contains the signature</dl>
+<dt>gnutls_pubkey_t pubkey</dt>
+<dd> Holds the public key</dd>
+<dt>gnutls_sign_algorithm_t algo</dt>
+<dd> The signature algorithm used</dd>
+<dt>unsigned int flags</dt>
+<dd> Zero or one of <code>gnutls_pubkey_flags_t</code></dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> holds the signed data</dd>
+<dt>const gnutls_datum_t * signature</dt>
+<dd> contains the signature</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify the given signed data, using the parameters from the certificate.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pubkey_verify_data2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -15,21 +15,21 @@ description: "callback – call a user back, presenting a login prompt"
 <h2>Options</h2>
 <dl>
 <dt>
-<dt><code>-x &lt;debug level&gt;</code></p>
+</dt><dt><code>-x &lt;debug level&gt;</code></dt>
 <dd>
-<dd>Use the given level of verbosity for logging &#8211; 0 means no logging, 5 is really noisy.</p>
-<dt><code>-V</code></p>
-<dd>Print version number and quit.</p>
-<dt><code>-d</code></p>
-<dd>Do not go into the background. This is helpful for debugging.</p>
-<dt><code>-l &lt;modem lines&gt;</code></p>
-<dd>Use the given modem lines. Multiple lines can be separated by &quot;:&quot;, as with <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8). Example: callback -l tty1a:tty2a</p>
-<dt><code>-m &lt;init sequence&gt;</code></p>
-<dd>Set the modem initialization sequence (as usual: expect send expect &#8230;). This can do nearly everything, as long as it leaves the modem command responses on (that is, no ATQ1 here!) and switches the modem to data mode (AT+FCLASS=0) if it is used in data/fax mode.</p>
-<dt><code>-s &lt;speed&gt;</code></p>
-<dd>This is the bit rate that should be used for the machine-modem connection. Usually you&#8217;ll set this via the &quot;speed &lt;nnnn&gt;&quot; option in &quot;callback.config&quot;.</p>
-<dt><code>-S</code></p>
-<dd>Use the line where callback is started from for dialing out. Callback can make use of multiple modem lines, and with this options, you can force it to use just one modem, the one where a call comes in. </p>
+</dd><dd>Use the given level of verbosity for logging &#8211; 0 means no logging, 5 is really noisy.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version number and quit.</dd>
+<dt><code>-d</code></dt>
+<dd>Do not go into the background. This is helpful for debugging.</dd>
+<dt><code>-l &lt;modem lines&gt;</code></dt>
+<dd>Use the given modem lines. Multiple lines can be separated by &quot;:&quot;, as with <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8). Example: callback -l tty1a:tty2a</dd>
+<dt><code>-m &lt;init sequence&gt;</code></dt>
+<dd>Set the modem initialization sequence (as usual: expect send expect &#8230;). This can do nearly everything, as long as it leaves the modem command responses on (that is, no ATQ1 here!) and switches the modem to data mode (AT+FCLASS=0) if it is used in data/fax mode.</dd>
+<dt><code>-s &lt;speed&gt;</code></dt>
+<dd>This is the bit rate that should be used for the machine-modem connection. Usually you&#8217;ll set this via the &quot;speed &lt;nnnn&gt;&quot; option in &quot;callback.config&quot;.</dd>
+<dt><code>-S</code></dt>
+<dd>Use the line where callback is started from for dialing out. Callback can make use of multiple modem lines, and with this options, you can force it to use just one modem, the one where a call comes in. </dd>
 </dl>
 <h2>Config File</h2>
 <p><i>callback</i> will read all its configuration at run-time from a file, usually called /etc/mgetty+sendfax/callback.config. See the documentation in the mgetty.info manual for details.</p>

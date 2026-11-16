@@ -17,38 +17,38 @@ description: "nxtrc – a program to interact with LEGO NXT via BlueTooth"
 <p> The option <code>-s</code> starts a scan to find BlueTooth devices. If a BT address is given in the command line or is in the Environment Variable BTADDR it connects to the NXT and performs the task specified in &lt;command&gt;. The first time you connect with a device you need to exchange a password, this task is usually done by the Operative System BlueTooth Management (as Kbluetooth under KDE). </p>
 <h2>COMMANDS and OPTIONS</h2>
 <dl>
-<dt>-a</p>
-<dd> BlueTooth Address of the NXT, <code>required</code> if BTADDR Environment Variable is not set to the address</p>
-<dt>-b</p>
-<dd> Get Battery Level</p>
-<dt>-d FILE</p>
-<dd> Delete FILE frome NXT</p>
-<dt>-h</p>
-<dd> display a short help text</p>
-<dt>-i</p>
-<dd> Get info on NXT brick</p>
-<dt>-k</p>
-<dd> Stop a program running on NXT</p>
-<dt>-l[PATT]</p>
-<dd> List files on NXT brick matching PATTern if present (e.g. -l*.rxe) N.B. No spaces between -l and PATT! see at the end the patterns allowed</p>
-<dt>-m FILE</p>
-<dd> Play sound file FILE once</p>
-<dt>-M FILE</p>
-<dd> Play sound file FILE indefinitely</p>
-<dt>-n NAME</p>
-<dd> Set NXT name to NAME</p>
-<dt>-p FILE</p>
-<dd> Run Program FILE on NXT</p>
-<dt>-r FILE</p>
-<dd> Read FILE frome NXT and save it in the working directory if FILE is already present ask for permission to overwrite</p>
-<dt>-v</p>
-<dd> Be verbose. This is the only option that can be given with another command. It&#8217;s not always very useful&#8230;.</p>
-<dt>-w FILE</p>
-<dd> Write FILE on NXT, If FILE is already present ask for permission to overwrite</p>
-<dt>-W FILE</p>
-<dd> Same as -w forcing overwrite if FILE exists</p>
-<dt>-z</p>
-<dd> Stop Sound Playback </p>
+<dt>-a</dt>
+<dd> BlueTooth Address of the NXT, <code>required</code> if BTADDR Environment Variable is not set to the address</dd>
+<dt>-b</dt>
+<dd> Get Battery Level</dd>
+<dt>-d FILE</dt>
+<dd> Delete FILE frome NXT</dd>
+<dt>-h</dt>
+<dd> display a short help text</dd>
+<dt>-i</dt>
+<dd> Get info on NXT brick</dd>
+<dt>-k</dt>
+<dd> Stop a program running on NXT</dd>
+<dt>-l[PATT]</dt>
+<dd> List files on NXT brick matching PATTern if present (e.g. -l*.rxe) N.B. No spaces between -l and PATT! see at the end the patterns allowed</dd>
+<dt>-m FILE</dt>
+<dd> Play sound file FILE once</dd>
+<dt>-M FILE</dt>
+<dd> Play sound file FILE indefinitely</dd>
+<dt>-n NAME</dt>
+<dd> Set NXT name to NAME</dd>
+<dt>-p FILE</dt>
+<dd> Run Program FILE on NXT</dd>
+<dt>-r FILE</dt>
+<dd> Read FILE frome NXT and save it in the working directory if FILE is already present ask for permission to overwrite</dd>
+<dt>-v</dt>
+<dd> Be verbose. This is the only option that can be given with another command. It&#8217;s not always very useful&#8230;.</dd>
+<dt>-w FILE</dt>
+<dd> Write FILE on NXT, If FILE is already present ask for permission to overwrite</dd>
+<dt>-W FILE</dt>
+<dd> Same as -w forcing overwrite if FILE exists</dd>
+<dt>-z</dt>
+<dd> Stop Sound Playback </dd>
 </dl>
 <h2>File Names and Patterns</h2>
 <p> On the NXT File names are of the form &quot;Name.Ext&quot; with max 15 characters for the Name and 3 for the Extension. When asking a listing with the <code>-l</code> command you can give a specific file name to see if it&#8217;s on the NXT and list its size, or a Pattern using widlcards. Due to the limitation of the NXT API patterns are limited to the form &quot;*.ext&quot;, &quot;Name.*&quot; or &quot;*.*&quot; this last one is the default and can be omitted. </p>

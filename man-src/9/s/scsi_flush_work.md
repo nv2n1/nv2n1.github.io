@@ -14,12 +14,12 @@ description: "scsi_flush_work – Flush a Scsi_Host’s workqueue."
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>Pointer to Scsi_Host.</dl>
+</dd><dd>Pointer to Scsi_Host.</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

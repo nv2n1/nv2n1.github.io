@@ -28,52 +28,52 @@ description: "tlsmgr – Postfix TLS session cache and PRNG manager"
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Tls Session Cache</h2>
 <dl>
-<dt><code>lmtp_tls_loglevel (0)</code></p>
-<dd>The LMTP-specific version of the smtp_tls_loglevel configuration parameter.</p>
-<dt><code>lmtp_tls_session_cache_database (empty)</code></p>
-<dd>The LMTP-specific version of the smtp_tls_session_cache_database configuration parameter.</p>
-<dt><code>lmtp_tls_session_cache_timeout (3600s)</code></p>
-<dd>The LMTP-specific version of the smtp_tls_session_cache_timeout configuration parameter.</p>
-<dt><code>smtp_tls_loglevel (0)</code></p>
-<dd>Enable additional Postfix SMTP client logging of TLS activity.</p>
-<dt><code>smtp_tls_session_cache_database (empty)</code></p>
-<dd>Name of the file containing the optional Postfix SMTP client TLS session cache.</p>
-<dt><code>smtp_tls_session_cache_timeout (3600s)</code></p>
-<dd>The expiration time of Postfix SMTP client TLS session cache information.</p>
-<dt><code>smtpd_tls_loglevel (0)</code></p>
-<dd>Enable additional Postfix SMTP server logging of TLS activity.</p>
-<dt><code>smtpd_tls_session_cache_database (empty)</code></p>
-<dd>Name of the file containing the optional Postfix SMTP server TLS session cache.</p>
-<dt><code>smtpd_tls_session_cache_timeout (3600s)</code></p>
-<dd>The expiration time of Postfix SMTP server TLS session cache information.</dl>
+<dt><code>lmtp_tls_loglevel (0)</code></dt>
+<dd>The LMTP-specific version of the smtp_tls_loglevel configuration parameter.</dd>
+<dt><code>lmtp_tls_session_cache_database (empty)</code></dt>
+<dd>The LMTP-specific version of the smtp_tls_session_cache_database configuration parameter.</dd>
+<dt><code>lmtp_tls_session_cache_timeout (3600s)</code></dt>
+<dd>The LMTP-specific version of the smtp_tls_session_cache_timeout configuration parameter.</dd>
+<dt><code>smtp_tls_loglevel (0)</code></dt>
+<dd>Enable additional Postfix SMTP client logging of TLS activity.</dd>
+<dt><code>smtp_tls_session_cache_database (empty)</code></dt>
+<dd>Name of the file containing the optional Postfix SMTP client TLS session cache.</dd>
+<dt><code>smtp_tls_session_cache_timeout (3600s)</code></dt>
+<dd>The expiration time of Postfix SMTP client TLS session cache information.</dd>
+<dt><code>smtpd_tls_loglevel (0)</code></dt>
+<dd>Enable additional Postfix SMTP server logging of TLS activity.</dd>
+<dt><code>smtpd_tls_session_cache_database (empty)</code></dt>
+<dd>Name of the file containing the optional Postfix SMTP server TLS session cache.</dd>
+<dt><code>smtpd_tls_session_cache_timeout (3600s)</code></dt>
+<dd>The expiration time of Postfix SMTP server TLS session cache information.</dd></dl>
 <h2>Pseudo Random Number Generator</h2>
 <dl>
-<dt><code>tls_random_source (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The external entropy source for the in-memory <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) pseudo random number generator (PRNG) pool.</p>
-<dt><code>tls_random_bytes (32)</code></p>
-<dd>The number of bytes that <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) reads from $tls_random_source when (re)seeding the in-memory pseudo random number generator (PRNG) pool.</p>
-<dt><code>tls_random_exchange_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>Name of the pseudo random number generator (PRNG) state file that is maintained by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8).</p>
-<dt><code>tls_random_prng_update_period (3600s)</code></p>
-<dd>The time between attempts by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) to save the state of the pseudo random number generator (PRNG) to the file specified with $tls_random_exchange_name.</p>
-<dt><code>tls_random_reseed_period (3600s)</code></p>
-<dd>The maximal time between attempts by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) to re-seed the in-memory pseudo random number generator (PRNG) pool from external sources.</dl>
+<dt><code>tls_random_source (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The external entropy source for the in-memory <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) pseudo random number generator (PRNG) pool.</dd>
+<dt><code>tls_random_bytes (32)</code></dt>
+<dd>The number of bytes that <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) reads from $tls_random_source when (re)seeding the in-memory pseudo random number generator (PRNG) pool.</dd>
+<dt><code>tls_random_exchange_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>Name of the pseudo random number generator (PRNG) state file that is maintained by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8).</dd>
+<dt><code>tls_random_prng_update_period (3600s)</code></dt>
+<dd>The time between attempts by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) to save the state of the pseudo random number generator (PRNG) to the file specified with $tls_random_exchange_name.</dd>
+<dt><code>tls_random_reseed_period (3600s)</code></dt>
+<dd>The maximal time between attempts by <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) to re-seed the in-memory pseudo random number generator (PRNG) pool from external sources.</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>data_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The directory with Postfix-writable data files (for example: caches, pseudo-random numbers).</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtp/">smtp</a>(8), Postfix SMTP client
 <a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server

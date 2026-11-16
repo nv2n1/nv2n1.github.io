@@ -10,26 +10,18 @@ description: "std::variant_size,std::variant_size_v – std::variant_size,std::v
 <p>std::variant_size,std::variant_size_v &#8211; std::variant_size,std::variant_size_v</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;variant&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 17)
-
         struct variant_size; /* undefined */
-
 template &lt;class... Types&gt;
-
 struct variant_size&lt;std::variant&lt;Types...&gt;&gt;(2)(since C++ 17)
-
     : std::integral_constant&lt;std::size_t, sizeof...(Types)&gt; {
 };
-
 template &lt;class T&gt;
 class variant_size&lt;const T&gt;;
-
 template &lt;class T&gt;
 class variant_size&lt;volatile T&gt;;
 (3)(since C++ 17)
-
     template &lt;class T&gt;
     class variant_size&lt;const volatile T&gt;;</code></pre>
 <p>Provides access to the number of alternatives in a possibly cv-qualified variant as a compile-time constant expression.<br />
@@ -38,7 +30,6 @@ Formally,<br />
 3) meets the UnaryTypeTrait requirements with a BaseCharacteristic of std::integral_constant&lt;std::size_t, variant_size&lt;T&gt;&gt;<br />
 Helper variable template </p>
 <pre><code>template &lt;class T&gt;                                                          (since C++17)
-
 inline constexpr std::size_t variant_size_v = std::variant_size&lt;T&gt;::value;
 </code></pre>
 <p>Inherited from std::integral_constant </p>

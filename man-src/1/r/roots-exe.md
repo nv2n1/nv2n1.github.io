@@ -13,7 +13,7 @@ description: "roots.exe – Remote ROOT interpretor server"
 <h2>Original Authors</h2>
 <p>The ROOT team:</p>
 <dl COMPACT>
-<dd><code>Rene Brun</code> and <code>Fons Rademakers</code></dl>
+<dd><code>Rene Brun</code> and <code>Fons Rademakers</code></dd></dl>
 <h2>Copyright</h2>
 <p>This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. </p>
 <p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>

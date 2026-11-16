@@ -13,25 +13,25 @@ FTITLE - Used for unscrolled movie or video titles. It reads, from standard inpu
 
  void c_ftitle (int mtst)
 <h2>Description</h2><dl COMPACT><dt>MTST
-<dd>(an input expression of type INTEGER) is a switch indicating whether this is a &quot;real&quot; run or a &quot;practice&quot; run:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>means &quot;real run&quot;.
-<dt>1
-<dd>means &quot;practice run&quot;.</dl></dl><dd>During real runs, each title frame is repeated as many times as necessary to display it for a user-specified time period (at 'NFS' frames per second). Blank frames are placed before the first title frame ('TM1' seconds worth of them), between consecutive title frames ('TM2' seconds worth of them), and after the last title frame ('TM2' + 'TM3' seconds worth of them). Blank frames are to allow for splicing. 
+</dt><dd>(an input expression of type INTEGER) is a switch indicating whether this is a &quot;real&quot; run or a &quot;practice&quot; run:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>means &quot;real run&quot;.
+</dd><dt>1
+</dt><dd>means &quot;practice run&quot;.</dd></dl></dl><dd>During real runs, each title frame is repeated as many times as necessary to display it for a user-specified time period (at 'NFS' frames per second). Blank frames are placed before the first title frame ('TM1' seconds worth of them), between consecutive title frames ('TM2' seconds worth of them), and after the last title frame ('TM2' + 'TM3' seconds worth of them). Blank frames are to allow for splicing. 
 
  If the user has turned on fade-in (by setting the internal parameter 'FIN' non-zero), and/or fade-out (by setting the internal parameter 'FOU' non-zero), the required fade-in and fade-out frames will be generated, as well. 
 
- During practice runs, each title frame will occur from one to three times (once for fade-in, once for the stationary holding time, and once for fade-out); each of these frames will have a legend indicating how many seconds the frame represents in a real run. Each sequence of blank frames will be replaced by a single frame with a message indicating how many seconds worth of blank frames it represents.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+ During practice runs, each title frame will occur from one to three times (once for fade-in, once for the stationary holding time, and once for fade-out); each of these frames will have a legend indicating how many seconds the frame represents in a real run. Each sequence of blank frames will be replaced by a single frame with a message indicating how many seconds worth of blank frames it represents.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>FTITLE reads data from the unit specified by the internal parameter 'ICU', which has the default value 5, to specify standard input; this parameter can be given a different value to specify that another unit should be read instead. 
 
  The input data are read in groups. Each group represents one title frame. There can be any number of groups. FTITLE keeps processing groups until a group with NCDS = 0 is read or an end-of-file is encountered. A group consists of the following:
 <dl COMPACT><dt>&bull;
-<dd>A header line from which variables NCDS, TIME, and SIZE are read, using the FORTRAN format &quot;(I5,2F5.1)&quot;.
-<dd>NCDS is the number of text lines that follow. If NCDS = 0, FTITLE quits (returns to the calling routine without doing anything else).
-<dd>TIME is the time, in seconds, that the title frame should be displayed (not including fade-in and fade-out, if any).
-<dd>SIZE is the desired character size, given as a multiplier of the default height specified by the value of the internal parameter 'PSZ', the default value of which is 21 (out of 1023). Values of SIZE from .75 to 2.5 are recommended.
-<dt>&bull;
-<dd>Text lines, each containing one line of the title frame. PLOTCHAR function codes may be used as specified in the documentation for that package. Characters should not appear beyond column 80.</dl>
+</dt><dd>A header line from which variables NCDS, TIME, and SIZE are read, using the FORTRAN format &quot;(I5,2F5.1)&quot;.
+</dd><dd>NCDS is the number of text lines that follow. If NCDS = 0, FTITLE quits (returns to the calling routine without doing anything else).
+</dd><dd>TIME is the time, in seconds, that the title frame should be displayed (not including fade-in and fade-out, if any).
+</dd><dd>SIZE is the desired character size, given as a multiplier of the default height specified by the value of the internal parameter 'PSZ', the default value of which is 21 (out of 1023). Values of SIZE from .75 to 2.5 are recommended.
+</dd><dt>&bull;
+</dt><dd>Text lines, each containing one line of the title frame. PLOTCHAR function codes may be used as specified in the documentation for that package. Characters should not appear beyond column 80.</dd></dl>
  
 
  The internal parameters 'ALN', 'BGB', 'BGC', 'BGF', 'BGG', 'BGR', 'FGB', 'FGC', 'FGF', 'FGG', 'FGR', 'FIN', 'FOU', 'GSZ', 'ICO', 'ICU', 'LOG', 'LX1', 'LX2', 'LY1', 'LY2', 'MAP', 'NFS', 'NXE', 'NXS', 'ORV', 'PSZ', 'SBK', 'SFG', 'TM1', 'TM2', 'TM3', 'VPB', 'VPL', 'VPR', 'VPT', and 'WID' all affect the behavior of FTITLE in one way or another. Some of these have been mentioned above; all are described in the &quot;man&quot; page for &quot;scrolled_title_params&quot;. 

@@ -15,18 +15,18 @@ description: "pamphletangler – Extract code bits from LaTeX pamphlet files."
 <p> The clojure pamphlet system is a system based on the clojure literate system. In the clojure&#8217;s pamphlet system you have your main LaTeX file, which can be compiled regularly. This file contains documentation and source code (just like in other forms of literate programming). This code snippets are wrapped in the &#8216;chunk&#8217; environment, hence they can be recognized by the tangler in order to extract them. Chunks can be included inside each other by the &#8216;getchunk&#8217; command (which will be typesetted acordingly). Finally, you run your LaTeX file through the tangler and get your desired chunk of code.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-L, &#8211;line=linetext</p>
-<dd> If set, this text will be inserted after jumps of lines, changing the string inside &#8220;changetext&#8221; for the line number. This is used so that error report refers to pamphlet line number instead of output line number</p>
-<dt>-C, &#8211;change=changetext</p>
-<dd> Defaults to &#8220;{}&#8221; this is the text that will be replaced with the line number if the linetext option is specified</p>
-<dt>-?, &#8211;help</p>
-<dd> Give this help list</p>
-<dt>&#8211;usage</p>
-<dd> Give a short usage message</p>
-<dt>&#8211;man</p>
-<dd> Print manual page</p>
-<dt>-V, &#8211;version</p>
-<dd> Print program version</dl>
+<dt>-L, &#8211;line=linetext</dt>
+<dd> If set, this text will be inserted after jumps of lines, changing the string inside &#8220;changetext&#8221; for the line number. This is used so that error report refers to pamphlet line number instead of output line number</dd>
+<dt>-C, &#8211;change=changetext</dt>
+<dd> Defaults to &#8220;{}&#8221; this is the text that will be replaced with the line number if the linetext option is specified</dd>
+<dt>-?, &#8211;help</dt>
+<dd> Give this help list</dd>
+<dt>&#8211;usage</dt>
+<dd> Give a short usage message</dd>
+<dt>&#8211;man</dt>
+<dd> Print manual page</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Print program version</dd></dl>
 <h2>LICENSE</h2>
 <p> Copyright (C) 2019 Ernesto Lanchares Sanchez. </p>
 <pre>

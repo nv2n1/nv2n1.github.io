@@ -14,7 +14,7 @@ description: "usb_function_deactivate – prevent function and gadget enumeratio
 <p><i>function</i></p>
 <dl>
 <dd>
-<dd>the function that isn&#8217;t yet ready to respond</dl>
+</dd><dd>the function that isn&#8217;t yet ready to respond</dd></dl>
 <h2>Description</h2>
 <p>Blocks response of the gadget driver to host enumeration by preventing the data line pullup from being activated. This is normally called during <i>bind</i>() processing to change from the initial &#8220;ready to respond&#8221; state, or when a required resource becomes available. </p>
 <p> For example, drivers that serve as a passthrough to a userspace daemon can block enumeration unless that daemon (such as an OBEX, MTP, or print server) is ready to handle host requests. </p>
@@ -23,5 +23,5 @@ description: "usb_function_deactivate – prevent function and gadget enumeratio
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ pci_msi_unmask_irq - Generic irq chip callback to unmask PCI/MSI interrupts
 <h2>Arguments</h2>
 
 <i>data</i>
-<dl><dd><dd>pointer to irqdata associated to that interrupt</dl>
+<dl><dd></dd><dd>pointer to irqdata associated to that interrupt</dd></dl>
 
 <h2>Copyright</h2>
 

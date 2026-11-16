@@ -18,30 +18,30 @@ description: "BPF – BPF programmable classifier and actions for ingress/egress
 <h2>Description</h2>
 <p>Extended Berkeley Packet Filter ( <code>eBPF</code> ) and classic Berkeley Packet Filter (originally known as BPF, for better distinction referred to as <code>cBPF</code> here) are both available as a fully programmable and highly efficient classifier and actions. They both offer a minimal instruction set for implementing small programs which can safely be loaded into the kernel and thus executed in a tiny virtual machine from kernel space. An in-kernel verifier guarantees that a specified program always terminates and neither crashes nor leaks data from the kernel. In Linux, it&#8217;s generally considered that eBPF is the successor of cBPF. The kernel internally transforms cBPF expressions into eBPF expressions and executes the latter. Execution of them can be performed in an interpreter or at setup time, they can be just-in-time compiled (JIT&#8217;ed) to run as native machine code. Currently, the eBPF JIT compiler is available for the following architectures:</p>
 <dl>
-<dt>*</p>
-<dd>x86_64 (since Linux 3.18)</p>
-<dt>*</p>
-<dd>arm64 (since Linux 3.18)</p>
-<dt>*</p>
-<dd>s390 (since Linux 4.1)</p>
-<dt>*</p>
-<dd>ppc64 (since Linux 4.8)</p>
-<dt>*</p>
-<dd>sparc64 (since Linux 4.12)</p>
-<dt>*</p>
-<dd>mips64 (since Linux 4.13)</p>
-<dt>*</p>
-<dd>arm32 (since Linux 4.14)</p>
-<dt>*</p>
-<dd>x86_32 (since Linux 4.18)</dl>
+<dt>*</dt>
+<dd>x86_64 (since Linux 3.18)</dd>
+<dt>*</dt>
+<dd>arm64 (since Linux 3.18)</dd>
+<dt>*</dt>
+<dd>s390 (since Linux 4.1)</dd>
+<dt>*</dt>
+<dd>ppc64 (since Linux 4.8)</dd>
+<dt>*</dt>
+<dd>sparc64 (since Linux 4.12)</dd>
+<dt>*</dt>
+<dd>mips64 (since Linux 4.13)</dd>
+<dt>*</dt>
+<dd>arm32 (since Linux 4.14)</dd>
+<dt>*</dt>
+<dd>x86_32 (since Linux 4.18)</dd></dl>
 <p> Whereas the following architectures have cBPF, but did not (yet) switch to eBPF JIT support:</p>
 <dl>
-<dt>*</p>
-<dd>ppc32</p>
-<dt>*</p>
-<dd>sparc32</p>
-<dt>*</p>
-<dd>mips32</dl>
+<dt>*</dt>
+<dd>ppc32</dd>
+<dt>*</dt>
+<dd>sparc32</dd>
+<dt>*</dt>
+<dd>mips32</dd></dl>
 <p> eBPF&#8217;s instruction set has similar underlying principles as the cBPF instruction set, it however is modelled closer to the underlying architecture to better mimic native instruction sets with the aim to achieve a better run-time performance. It is designed to be JIT&#8217;ed with a one to one mapping, which can also open up the possibility for compilers to generate optimized eBPF code through an eBPF backend that performs almost as fast as natively compiled code. Given that LLVM provides such an eBPF backend, eBPF programs can therefore easily be programmed in a subset of the C language. Other than that, eBPF infrastructure also comes with a construct called &quot;maps&quot;. eBPF maps are key/value stores that are shared between multiple eBPF programs, but also between eBPF programs and user space applications. For the traffic control subsystem, classifier and actions that can be attached to ingress and egress qdiscs can be written in eBPF or cBPF. The advantage over other classifier and actions is that eBPF/cBPF provides the generic framework, while users can implement their highly specialized use cases efficiently. This means that the classifier or action written that way will not suffer from feature bloat, and can therefore execute its task highly efficient. It allows for non-linear classification and even merging the action part into the classification. Combined with efficient eBPF map data structures, user space can push new policies like classids into the kernel without reloading a classifier, or it can gather statistics that are pushed into one map and use another one for dynamically load balancing traffic based on the determined load, just to provide a few examples. </p>
 <h2>Parameters</h2>
 <h3>object-file</h3>
@@ -78,13 +78,11 @@ alias bcc=__bcc</pre>
 <p>A minimal, stand-alone unit, which matches on all traffic with the default classid (return code of -1) looks like: </p>
 <pre><code>#include &lt;pcap.h&gt;
 #include &lt;stdio.h&gt;
-
 int main(int argc, char **argv)
 {
     struct bpf_program prog;
     struct bpf_insn *ins;
     int i, ret, dlt = DLT_RAW;
-
     if (argc &lt; 2 || argc &gt; 3)
         return 1;
     if (argc == 3) {
@@ -92,21 +90,17 @@ int main(int argc, char **argv)
         if (dlt == -1)
             return 1;
     }
-
     ret = pcap_compile_nopcap(-1, dlt, &amp;prog, argv[argc - 1],
                               1, PCAP_NETMASK_UNKNOWN);
     if (ret)
         return 1;
-
     printf(&quot;%d,&quot;, prog.bf_len);
     ins = prog.bf_insns;
-
     for (i = 0; i &lt; prog.bf_len - 1; ++ins, ++i)
         printf(&quot;%u %u %u %u,&quot;, ins-&gt;code,
                ins-&gt;jt, ins-&gt;jf, ins-&gt;k);
     printf(&quot;%u %u %u %u&quot;,
            ins-&gt;code, ins-&gt;jt, ins-&gt;jf, ins-&gt;k);
-
     pcap_freecode(&amp;prog);
     return 0;
 }</code></pre>
@@ -190,13 +184,11 @@ sh# my_bpf_agent</pre>
 <p>Although we generally recommend switching to implementing <code>eBPF</code> classifier and actions, for the sake of completeness, a few words on how to program in cBPF will be lost here. Likewise, the <code>bpf_jit_enable</code> switch can be enabled as mentioned already. Tooling such as <code>bpf_jit_disasm</code> is also independent whether eBPF or cBPF code is being loaded. Unlike in eBPF, classifier and action are not implemented in restricted C, but rather in a minimal assembler-like language or with the help of other tooling. The raw interface with tc takes opcodes directly. For example, the most minimal classifier matching on every packet resulting in the default classid of 1:1 looks like: <code>tc filter add dev em1 parent 1: bpf bytecode &#8216;1,6 0 0 4294967295,&#8217; flowid 1:1</code> The first decimal of the bytecode sequence denotes the number of subsequent 4-tuples of cBPF opcodes. As mentioned, such a 4-tuple consists of <code>c t f k</code> decimals, where <code>c</code> represents the cBPF opcode, <code>t</code> the jump true offset target, <code>f</code> the jump false offset target and <code>k</code> the immediate constant/literal. Here, this denotes an unconditional return from the program with immediate value of -1. Thus, for egress classification, Willem de Bruijn implemented a minimal stand-alone helper tool under the GNU General Public License version 2 for <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code> BPF extension, which abuses the <code>libpcap</code> internal classic BPF compiler, his code derived here for usage with <code><a href="/docs/linux/man/8-tc/">tc</a>(8)</code> : </p>
 <pre><code>#include &lt;pcap.h&gt;
 #include &lt;stdio.h&gt;
-
 int main(int argc, char **argv)
 {
     struct bpf_program prog;
     struct bpf_insn *ins;
     int i, ret, dlt = DLT_RAW;
-
     if (argc &lt; 2 || argc &gt; 3)
         return 1;
     if (argc == 3) {
@@ -204,21 +196,17 @@ int main(int argc, char **argv)
         if (dlt == -1)
             return 1;
     }
-
     ret = pcap_compile_nopcap(-1, dlt, &amp;prog, argv[argc - 1],
                               1, PCAP_NETMASK_UNKNOWN);
     if (ret)
         return 1;
-
     printf(&quot;%d,&quot;, prog.bf_len);
     ins = prog.bf_insns;
-
     for (i = 0; i &lt; prog.bf_len - 1; ++ins, ++i)
         printf(&quot;%u %u %u %u,&quot;, ins-&gt;code,
                ins-&gt;jt, ins-&gt;jf, ins-&gt;k);
     printf(&quot;%u %u %u %u&quot;,
            ins-&gt;code, ins-&gt;jt, ins-&gt;jf, ins-&gt;k);
-
     pcap_freecode(&amp;prog);
     return 0;
 }</code></pre>

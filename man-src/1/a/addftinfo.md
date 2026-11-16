@@ -17,32 +17,32 @@ description: "addftinfo – add information to troff font files for use with gro
 <p> <code>-v</code> prints the version number. </p>
 <p> All other options change one of the parameters that are used to derive the heights and depths. Like the existing quantities in the font file, each <i>value</i> is in inches/<i>res</i> for a font whose point size is <i>unitwidth</i>. <i>param-option</i> must be one of:</p>
 <dl>
-<dt><code>-x-height</code></p>
-<dd> The height of lowercase letters without ascenders such as x.</p>
-<dt><code>-fig-height</code></p>
-<dd> The height of figures (digits).</p>
-<dt><code>-asc-height</code></p>
-<dd> The height of characters with ascenders, such as b, d or l.</p>
-<dt><code>-body-height</code></p>
-<dd> The height of characters such as parentheses.</p>
-<dt><code>-cap-height</code></p>
-<dd> The height of uppercase letters such as A.</p>
-<dt><code>-comma-depth</code></p>
-<dd> The depth of a comma.</p>
-<dt><code>-desc-depth</code></p>
-<dd> The depth of characters with descenders, such as p, q, or y.</p>
-<dt><code>-body-depth</code></p>
-<dd> The depth of characters such as parentheses.</dl>
+<dt><code>-x-height</code></dt>
+<dd> The height of lowercase letters without ascenders such as x.</dd>
+<dt><code>-fig-height</code></dt>
+<dd> The height of figures (digits).</dd>
+<dt><code>-asc-height</code></dt>
+<dd> The height of characters with ascenders, such as b, d or l.</dd>
+<dt><code>-body-height</code></dt>
+<dd> The height of characters such as parentheses.</dd>
+<dt><code>-cap-height</code></dt>
+<dd> The height of uppercase letters such as A.</dd>
+<dt><code>-comma-depth</code></dt>
+<dd> The depth of a comma.</dd>
+<dt><code>-desc-depth</code></dt>
+<dd> The depth of characters with descenders, such as p, q, or y.</dd>
+<dt><code>-body-depth</code></dt>
+<dd> The depth of characters such as parentheses.</dd></dl>
 <p> <code>addftinfo</code> makes no attempt to use the specified parameters to guess the unspecified parameters. If a parameter is not specified the default will be used. The defaults are chosen to have the reasonable values for a Times font.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7) </p>
 <p> You can view a man page <i>name</i><code>(</code><i>n</i><code>)</code> with</p>
 <dl>
 <dt>
-<dd> <code>man</code><i> n name</i></dl>
+</dt><dd> <code>man</code><i> n name</i></dd></dl>
 <p> in text mode and with</p>
 <dl>
 <dt>
-<dd> <code>groffer</code><i> n name</i></dl>
+</dt><dd> <code>groffer</code><i> n name</i></dd></dl>
 <p> in graphical mode (PDF, etc.). </p>
 <h2>Index</h2>

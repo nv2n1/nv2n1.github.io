@@ -25,399 +25,399 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> If the option <code>-graft-points</code> has been specified, it is possible to graft the paths at points other than the root directory, and it is possible to graft files or directories onto the cdrom image with names different than what they have in the source filesystem. This is easiest to illustrate with a couple of examples. Let&#8217;s start by assuming that a local file <i>../old.lis</i> exists, and you wish to include it in the cdrom image.</p>
 <dl>
 <dt>
-<dd> foo/bar/=../old.lis</dl>
+</dt><dd> foo/bar/=../old.lis</dd></dl>
 <p> will include <i>old.lis</i> in the cdrom image at <i>/foo/bar/old.lis</i>, while</p>
 <dl>
 <dt>
-<dd> foo/bar/xxx=../old.lis</dl>
+</dt><dd> foo/bar/xxx=../old.lis</dd></dl>
 <p> will include <i>old.lis</i> in the cdrom image at <i>/foo/bar/xxx</i>. The same sort of syntax can be used with directories as well. <code>genisoimage</code> will create any directories required such that the graft points exist on the cdrom image &#8212; the directories do not need to appear in one of the paths. By default, any directories that are created on the fly like this will have permissions 0555 and appear to be owned by the person running <code>genisoimage</code>. If you wish other permissions or owners of the intermediate directories, see <code>-uid</code>, <code>-gid</code>, <code>-dir-mode</code>, <code>-file-mode</code> and <code>-new-dir-mode</code>. </p>
 <p> <code>genisoimage</code> will also run on Windows machines when compiled with Cygnus&#8217; cygwin (available from <i><a rel="nofollow" href="http://www.cygwin.com/">http://www.cygwin.com/</a></i>). Therefore most references in this man page to <i>Unix</i> can be replaced with <i>Win32</i>.</p>
 <h2>OPTIONS</h2>
 <p> Several options can be specified as defaults in a <i>.genisoimagerc</i> configuration file, as well as on the command line. If a parameter is specified in both places, the setting from the command line is used. For details on the format and possible locations of this file, see <code><a href="/docs/linux/man/5-genisoimagerc/">genisoimagerc</a></code>(5).</p>
 <dl>
-<dt><code>-abstract</code><i> file</i></p>
-<dd> Specifies the abstract filename. There is space for 37 characters. Equivalent to <code>ABST</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-A</code><i> application_id</i></p>
-<dd> Specifies a text string that will be written into the volume header. This should describe the application that will be on the disc. There is space for 128 characters. Equivalent to <code>APPI</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-allow-limited-size</code></p>
-<dd> When processing files larger than 2GiB which cannot be easily represented in ISO9660, add them with a shrunk visible file size to ISO9660 and with the correct visible file size to the UDF system. The result is an inconsistent filesystem and users need to make sure that they really use UDF rather than ISO9660 driver to read a such disk. Implies enabling <code>-udf.</code></p>
-<dt><code>-allow-leading-dots</code></p>
+<dt><code>-abstract</code><i> file</i></dt>
+<dd> Specifies the abstract filename. There is space for 37 characters. Equivalent to <code>ABST</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-A</code><i> application_id</i></dt>
+<dd> Specifies a text string that will be written into the volume header. This should describe the application that will be on the disc. There is space for 128 characters. Equivalent to <code>APPI</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-allow-limited-size</code></dt>
+<dd> When processing files larger than 2GiB which cannot be easily represented in ISO9660, add them with a shrunk visible file size to ISO9660 and with the correct visible file size to the UDF system. The result is an inconsistent filesystem and users need to make sure that they really use UDF rather than ISO9660 driver to read a such disk. Implies enabling <code>-udf.</code></dd>
+<dt><code>-allow-leading-dots</code></dt>
 <dd>
-<dt><code>-ldots</code></p>
+</dd><dt><code>-ldots</code></dt>
 <dd> Allow ISO9660 filenames to begin with a period. Usually, a leading dot is replaced with an underscore in order to maintain MS-DOS compatibility.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-allow-lowercase</code></p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-allow-lowercase</code></dt>
 <dd> This options allows lowercase characters to appear in ISO9660 filenames.<br />
- This violates the ISO9660 standard, but it happens to work on some systems. Use with caution.</p>
-<dt><code>-allow-multidot</code></p>
+ This violates the ISO9660 standard, but it happens to work on some systems. Use with caution.</dd>
+<dt><code>-allow-multidot</code></dt>
 <dd> This options allows more than one dot to appear in ISO9660 filenames. A leading dot is not affected by this option, it may be allowed separately using <code>-allow-leading-dots</code>.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-biblio</code><i> file</i></p>
-<dd> Specifies the bibliographic filename. There is space for 37 characters. Equivalent to <code>BIBL</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-cache-inodes</code></p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-biblio</code><i> file</i></dt>
+<dd> Specifies the bibliographic filename. There is space for 37 characters. Equivalent to <code>BIBL</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-cache-inodes</code></dt>
 <dd>
-<dt><code>-no-cache-inodes</code></p>
-<dd> Enable or disable caching inode and device numbers to find hard links to files. If <code>genisoimage</code> finds a hard link (a file with multiple names), the file will also be hard-linked on the CD, so the file contents only appear once. This helps to save space. <code>-cache-inodes</code> is default on Unix-like operating systems, but <code>-no-cache-inodes</code> is default on some other systems such as Cygwin, because it is not safe to assume that inode numbers are unique on those systems. (Some versions of Cygwin create fake inode numbers using a weak hashing algorithm, which may produce duplicates.) If two files have the same inode number but are not hard links to the same file, <code>genisoimage -cache-inodes</code> will not behave correctly. <code>-no-cache-inodes</code> is safe in all situations, but in that case <code>genisoimage</code> cannot detect hard links, so the resulting CD image may be larger than necessary.</p>
-<dt><code>-alpha-boot</code><i> alpha_boot_image</i></p>
-<dd> Specifies the path and filename of the boot image to be used when making an Alpha/SRM bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>.</p>
-<dt><code>-hppa-bootloader</code><i> hppa_bootloader_image</i></p>
-<dd> Specifies the path and filename of the boot image to be used when making an HPPA bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. Other options are required, at the very least a kernel filename and a boot command line. See the <code>HPPA NOTES</code> section below for more information.</p>
-<dt><code>-hppa-cmdline</code><i> hppa_boot_command_line</i></p>
-<dd> Specifies the command line to be passed to the HPPA boot loader when making a bootable CD. Separate the parameters with spaces or commas. More options must be passed to <code>genisoimage,</code> at the very least a kernel filename and the boot loader filename. See the <code>HPPA NOTES</code> section below for more information.</p>
-<dt><code>-hppa-kernel-32</code><i> hppa_kernel_32</i></p>
+</dd><dt><code>-no-cache-inodes</code></dt>
+<dd> Enable or disable caching inode and device numbers to find hard links to files. If <code>genisoimage</code> finds a hard link (a file with multiple names), the file will also be hard-linked on the CD, so the file contents only appear once. This helps to save space. <code>-cache-inodes</code> is default on Unix-like operating systems, but <code>-no-cache-inodes</code> is default on some other systems such as Cygwin, because it is not safe to assume that inode numbers are unique on those systems. (Some versions of Cygwin create fake inode numbers using a weak hashing algorithm, which may produce duplicates.) If two files have the same inode number but are not hard links to the same file, <code>genisoimage -cache-inodes</code> will not behave correctly. <code>-no-cache-inodes</code> is safe in all situations, but in that case <code>genisoimage</code> cannot detect hard links, so the resulting CD image may be larger than necessary.</dd>
+<dt><code>-alpha-boot</code><i> alpha_boot_image</i></dt>
+<dd> Specifies the path and filename of the boot image to be used when making an Alpha/SRM bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>.</dd>
+<dt><code>-hppa-bootloader</code><i> hppa_bootloader_image</i></dt>
+<dd> Specifies the path and filename of the boot image to be used when making an HPPA bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. Other options are required, at the very least a kernel filename and a boot command line. See the <code>HPPA NOTES</code> section below for more information.</dd>
+<dt><code>-hppa-cmdline</code><i> hppa_boot_command_line</i></dt>
+<dd> Specifies the command line to be passed to the HPPA boot loader when making a bootable CD. Separate the parameters with spaces or commas. More options must be passed to <code>genisoimage,</code> at the very least a kernel filename and the boot loader filename. See the <code>HPPA NOTES</code> section below for more information.</dd>
+<dt><code>-hppa-kernel-32</code><i> hppa_kernel_32</i></dt>
 <dd>
-<dt><code>-hppa-kernel-64</code><i> hppa_kernel_64</i></p>
-<dd> Specifies the path and filename of the 32-bit and/or 64-bit kernel images to be used when making an HPPA bootable CD. The pathnames must be relative to the source path specified to <code>genisoimage</code>. Other options are required, at the very least the boot loader filename and the boot command line. See the <code>HPPA NOTES</code> section below for more information.</p>
-<dt><code>-hppa-ramdisk</code><i> hppa_ramdisk_image</i></p>
-<dd> Specifies the path and filename of the ramdisk image to be used when making an HPPA bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This parameter is optional. Other options are required, at the very least a kernel filename and the boot command line. See the <code>HPPA NOTES</code> section below for more information.</p>
-<dt><code>-mips-boot</code><i> mips_boot_image</i></p>
-<dd> Specifies the path and filename of the boot image to be used when making an SGI/big-endian MIPS bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This option may be specified several times, to store up to 15 boot images.</p>
-<dt><code>-mipsel-boot</code><i> mipsel_boot_image</i></p>
-<dd> Specifies the path and filename of the boot image to be used when making an DEC/little-endian MIPS bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>.</p>
-<dt><code>-B</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></p>
+</dd><dt><code>-hppa-kernel-64</code><i> hppa_kernel_64</i></dt>
+<dd> Specifies the path and filename of the 32-bit and/or 64-bit kernel images to be used when making an HPPA bootable CD. The pathnames must be relative to the source path specified to <code>genisoimage</code>. Other options are required, at the very least the boot loader filename and the boot command line. See the <code>HPPA NOTES</code> section below for more information.</dd>
+<dt><code>-hppa-ramdisk</code><i> hppa_ramdisk_image</i></dt>
+<dd> Specifies the path and filename of the ramdisk image to be used when making an HPPA bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This parameter is optional. Other options are required, at the very least a kernel filename and the boot command line. See the <code>HPPA NOTES</code> section below for more information.</dd>
+<dt><code>-mips-boot</code><i> mips_boot_image</i></dt>
+<dd> Specifies the path and filename of the boot image to be used when making an SGI/big-endian MIPS bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This option may be specified several times, to store up to 15 boot images.</dd>
+<dt><code>-mipsel-boot</code><i> mipsel_boot_image</i></dt>
+<dd> Specifies the path and filename of the boot image to be used when making an DEC/little-endian MIPS bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>.</dd>
+<dt><code>-B</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></dt>
 <dd>
-<dt><code>-sparc-boot</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></p>
-<dd> Specifies a comma-separated list of boot images that are needed to make a bootable CD for SPARC systems. Partition 0 is used for the ISO9660 image, the first image file is mapped to partition 1. The comma-separated list may have up to 7 fields, including empty fields. This option is required to make a bootable CD for Sun SPARC systems. If <code>-B</code> or <code>-sparc-boot</code> has been specified, the first sector of the resulting image will contain a Sun disk label. This disk label specifies slice 0 for the ISO9660 image and slices 1 to 7 for the boot images that have been specified with this option. Byte offsets 512 to 8191 within each of the additional boot images must contain a primary boot that works for the appropriate SPARC architecture. The rest of each of the images usually contains a UFS filesystem used for the primary kernel boot stage.</p>
+</dd><dt><code>-sparc-boot</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></dt>
+<dd> Specifies a comma-separated list of boot images that are needed to make a bootable CD for SPARC systems. Partition 0 is used for the ISO9660 image, the first image file is mapped to partition 1. The comma-separated list may have up to 7 fields, including empty fields. This option is required to make a bootable CD for Sun SPARC systems. If <code>-B</code> or <code>-sparc-boot</code> has been specified, the first sector of the resulting image will contain a Sun disk label. This disk label specifies slice 0 for the ISO9660 image and slices 1 to 7 for the boot images that have been specified with this option. Byte offsets 512 to 8191 within each of the additional boot images must contain a primary boot that works for the appropriate SPARC architecture. The rest of each of the images usually contains a UFS filesystem used for the primary kernel boot stage.</dd>
 <dt>
-<dd> The implemented boot method is the one found with SunOS 4.x and SunOS 5.x. However, it does not depend on SunOS internals but only on properties of the Open Boot prom, so it should be usable for any OS for SPARC systems. For more information also see the <code>NOTES</code> section below.</p>
+</dt><dd> The implemented boot method is the one found with SunOS 4.x and SunOS 5.x. However, it does not depend on SunOS internals but only on properties of the Open Boot prom, so it should be usable for any OS for SPARC systems. For more information also see the <code>NOTES</code> section below.</dd>
 <dt>
-<dd> If the special filename <code>&#8230;</code> is used, the actual and all following boot partitions are mapped to the previous partition. If <code>genisoimage</code> is called with <code>-G</code><i> image </i><code>-B</code><i> &#8230;</i> all boot partitions are mapped to the partition that contains the ISO9660 filesystem image and the generic boot image that is located in the first 16 sectors of the disc is used for all architectures.</p>
-<dt><code>-G</code><i> generic_boot_image</i></p>
-<dd> Specifies the path and filename of the generic boot image to be used when making a generic bootable CD. The boot image will be placed on the first 16 sectors of the CD, before the ISO9660 primary volume descriptor. If this option is used together with <code>-sparc-boot</code>, the Sun disk label will overlay the first 512 bytes of the generic boot image.</p>
-<dt><code>-b</code><i> eltorito_boot_image</i></p>
-<dd> Specifies the path and filename of the boot image to be used when making an El Torito bootable CD for x86 PCs. The pathname must be relative to the source path specified to <code>genisoimage</code>. This option is required to make an El Torito bootable CD. The boot image must be exactly 1200 kB, 1440 kB or 2880 kB, and <code>genisoimage</code> will use this size when creating the output ISO9660 filesystem. The PC BIOS will use the image to emulate a floppy disk, so the first 512-byte sector should contain PC boot code. This will work, for example, if the boot image is a LILO-based boot floppy.</p>
+</dt><dd> If the special filename <code>&#8230;</code> is used, the actual and all following boot partitions are mapped to the previous partition. If <code>genisoimage</code> is called with <code>-G</code><i> image </i><code>-B</code><i> &#8230;</i> all boot partitions are mapped to the partition that contains the ISO9660 filesystem image and the generic boot image that is located in the first 16 sectors of the disc is used for all architectures.</dd>
+<dt><code>-G</code><i> generic_boot_image</i></dt>
+<dd> Specifies the path and filename of the generic boot image to be used when making a generic bootable CD. The boot image will be placed on the first 16 sectors of the CD, before the ISO9660 primary volume descriptor. If this option is used together with <code>-sparc-boot</code>, the Sun disk label will overlay the first 512 bytes of the generic boot image.</dd>
+<dt><code>-b</code><i> eltorito_boot_image</i></dt>
+<dd> Specifies the path and filename of the boot image to be used when making an El Torito bootable CD for x86 PCs. The pathname must be relative to the source path specified to <code>genisoimage</code>. This option is required to make an El Torito bootable CD. The boot image must be exactly 1200 kB, 1440 kB or 2880 kB, and <code>genisoimage</code> will use this size when creating the output ISO9660 filesystem. The PC BIOS will use the image to emulate a floppy disk, so the first 512-byte sector should contain PC boot code. This will work, for example, if the boot image is a LILO-based boot floppy.</dd>
 <dt>
-<dd> If the boot image is not an image of a floppy, you need to add either <code>-hard-disk-boot</code> or <code>-no-emul-boot</code>. If the system should not boot off the emulated disk, use <code>-no-boot</code>.</p>
+</dt><dd> If the boot image is not an image of a floppy, you need to add either <code>-hard-disk-boot</code> or <code>-no-emul-boot</code>. If the system should not boot off the emulated disk, use <code>-no-boot</code>.</dd>
 <dt>
-<dd> If <code>-sort</code> has not been specified, the boot images are sorted with low priority (+2) to the beginning of the medium. If you don&#8217;t like this, you need to specify a sort weight of 0 for the boot images.</p>
-<dt><code>-eltorito-alt-boot</code></p>
-<dd> Start with a new set of El Torito boot parameters. Up to 63 El Torito boot entries may be stored on a single CD.</p>
-<dt><code>-hard-disk-boot</code></p>
-<dd> Specifies that the boot image used to create El Torito bootable CDs is a hard disk image. The image must begin with a master boot record that contains a single partition.</p>
-<dt><code>-no-emul-boot</code></p>
-<dd> Specifies that the boot image used to create El Torito bootable CDs is a &quot;no emulation&quot; image. The system will load and execute this image without performing any disk emulation.</p>
-<dt><code>-no-boot</code></p>
-<dd> Specifies that the created El Torito CD should be marked as not bootable. The system will provide an emulated drive for the image, but will boot off a standard boot device.</p>
-<dt><code>-boot-load-seg</code><i> segment_address</i></p>
-<dd> Specifies the load segment address of the boot image for no-emulation El Torito CDs.</p>
-<dt><code>-boot-load-size</code><i> load_sectors</i></p>
-<dd> Specifies the number of &quot;virtual&quot; (512-byte) sectors to load in no-emulation mode. The default is to load the entire boot file. Some BIOSes may have problems if this is not a multiple of 4.</p>
-<dt><code>-boot-info-table</code></p>
-<dd> Specifies that a 56-byte table with information of the CD-ROM layout will be patched in at offset 8 in the boot file. If this option is given, the boot file is <i>modified in the source filesystem</i>, so make a copy of this file if it cannot be easily regenerated! See the <code>EL TORITO BOOT INFO TABLE</code> section for a description of this table.</p>
-<dt><code>-C</code><i> last_sess_start,next_sess_start</i></p>
-<dd> This option is needed to create a CD Extra or the image of a second session or a higher-level session for a multisession disc. <code>-C</code> takes two numbers separated by a comma. The first is the first sector in the last session of the disc that should be appended to. The second number is the starting sector number of the new session. The correct numbers may be retrieved by calling <code>wodim -msinfo &#8230;</code> If <code>-C</code> is used in conjunction with <code>-M</code>, <code>genisoimage</code> will create a filesystem image that is intended to be a continuation of the previous session. If <code>-C</code> is used without <code>-M</code>, <code>genisoimage</code> will create a filesystem image that is intended to be used for a second session on a CD Extra. This is a multisession CD that holds audio data in the first session and an ISO9660 filesystem in the second session.</p>
-<dt><code>-c</code><i> boot_catalog</i></p>
-<dd> Specifies the path and filename of the boot catalog, which is required for an El Torito bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This file will be inserted into the output tree and not created in the source filesystem, so be sure the specified filename does not conflict with an existing file, or it will be excluded. Usually a name like <i>boot.catalog</i> is chosen.</p>
+</dt><dd> If <code>-sort</code> has not been specified, the boot images are sorted with low priority (+2) to the beginning of the medium. If you don&#8217;t like this, you need to specify a sort weight of 0 for the boot images.</dd>
+<dt><code>-eltorito-alt-boot</code></dt>
+<dd> Start with a new set of El Torito boot parameters. Up to 63 El Torito boot entries may be stored on a single CD.</dd>
+<dt><code>-hard-disk-boot</code></dt>
+<dd> Specifies that the boot image used to create El Torito bootable CDs is a hard disk image. The image must begin with a master boot record that contains a single partition.</dd>
+<dt><code>-no-emul-boot</code></dt>
+<dd> Specifies that the boot image used to create El Torito bootable CDs is a &quot;no emulation&quot; image. The system will load and execute this image without performing any disk emulation.</dd>
+<dt><code>-no-boot</code></dt>
+<dd> Specifies that the created El Torito CD should be marked as not bootable. The system will provide an emulated drive for the image, but will boot off a standard boot device.</dd>
+<dt><code>-boot-load-seg</code><i> segment_address</i></dt>
+<dd> Specifies the load segment address of the boot image for no-emulation El Torito CDs.</dd>
+<dt><code>-boot-load-size</code><i> load_sectors</i></dt>
+<dd> Specifies the number of &quot;virtual&quot; (512-byte) sectors to load in no-emulation mode. The default is to load the entire boot file. Some BIOSes may have problems if this is not a multiple of 4.</dd>
+<dt><code>-boot-info-table</code></dt>
+<dd> Specifies that a 56-byte table with information of the CD-ROM layout will be patched in at offset 8 in the boot file. If this option is given, the boot file is <i>modified in the source filesystem</i>, so make a copy of this file if it cannot be easily regenerated! See the <code>EL TORITO BOOT INFO TABLE</code> section for a description of this table.</dd>
+<dt><code>-C</code><i> last_sess_start,next_sess_start</i></dt>
+<dd> This option is needed to create a CD Extra or the image of a second session or a higher-level session for a multisession disc. <code>-C</code> takes two numbers separated by a comma. The first is the first sector in the last session of the disc that should be appended to. The second number is the starting sector number of the new session. The correct numbers may be retrieved by calling <code>wodim -msinfo &#8230;</code> If <code>-C</code> is used in conjunction with <code>-M</code>, <code>genisoimage</code> will create a filesystem image that is intended to be a continuation of the previous session. If <code>-C</code> is used without <code>-M</code>, <code>genisoimage</code> will create a filesystem image that is intended to be used for a second session on a CD Extra. This is a multisession CD that holds audio data in the first session and an ISO9660 filesystem in the second session.</dd>
+<dt><code>-c</code><i> boot_catalog</i></dt>
+<dd> Specifies the path and filename of the boot catalog, which is required for an El Torito bootable CD. The pathname must be relative to the source path specified to <code>genisoimage</code>. This file will be inserted into the output tree and not created in the source filesystem, so be sure the specified filename does not conflict with an existing file, or it will be excluded. Usually a name like <i>boot.catalog</i> is chosen.</dd>
 <dt>
-<dd> If <code>-sort</code> has not been specified, the boot catalog sorted with low priority (+1) to the beginning of the medium. If you don&#8217;t like this, you need to specify a sort weight of 0 for the boot catalog.</p>
-<dt><code>-check-oldnames</code></p>
-<dd> Check all filenames imported from the old session for compliance with the ISO9660 file naming rules. Without this option, only names longer than 31 characters are checked, as these files are a serious violation of the ISO9660 standard.</p>
-<dt><code>-check-session</code><i> file</i></p>
-<dd> Check all old sessions for compliance with actual <code>genisoimage </code> ISO9660 file naming rules. This is a high-level option that combines <code>-M</code> <i>file</i> <code>-C 0,0 -check-oldnames</code>. For the parameter <i>file</i>, see the description of <code>-M</code>.</p>
-<dt><code>-copyright</code><i> file</i></p>
-<dd> Specifies copyright information, typically a filename on the disc. There is space for 37 characters. Equivalent to <code>COPY</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-d</code></p>
+</dt><dd> If <code>-sort</code> has not been specified, the boot catalog sorted with low priority (+1) to the beginning of the medium. If you don&#8217;t like this, you need to specify a sort weight of 0 for the boot catalog.</dd>
+<dt><code>-check-oldnames</code></dt>
+<dd> Check all filenames imported from the old session for compliance with the ISO9660 file naming rules. Without this option, only names longer than 31 characters are checked, as these files are a serious violation of the ISO9660 standard.</dd>
+<dt><code>-check-session</code><i> file</i></dt>
+<dd> Check all old sessions for compliance with actual <code>genisoimage </code> ISO9660 file naming rules. This is a high-level option that combines <code>-M</code> <i>file</i> <code>-C 0,0 -check-oldnames</code>. For the parameter <i>file</i>, see the description of <code>-M</code>.</dd>
+<dt><code>-copyright</code><i> file</i></dt>
+<dd> Specifies copyright information, typically a filename on the disc. There is space for 37 characters. Equivalent to <code>COPY</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-d</code></dt>
 <dd> Do not append a period to files that do not have one.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-D</code></p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-D</code></dt>
 <dd> Do not use deep directory relocation, and instead just pack them in the way we see them.<br />
- If ISO9660:1999 has not been selected, this violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-dir-mode</code><i> mode</i></p>
-<dd> Overrides the mode of directories used to create the image to <i>mode</i>, specified as 4 digits of permission bits as in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). This option automatically enables Rock Ridge extensions.</p>
-<dt><code>-dvd-video</code></p>
-<dd> Generate a DVD-Video compliant UDF filesystem. This is done by sorting the order of the content of the appropriate files and by adding padding between the files if needed. Note that the sorting only works if the DVD-Video filenames include uppercase characters only.</p>
+ If ISO9660:1999 has not been selected, this violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-dir-mode</code><i> mode</i></dt>
+<dd> Overrides the mode of directories used to create the image to <i>mode</i>, specified as 4 digits of permission bits as in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). This option automatically enables Rock Ridge extensions.</dd>
+<dt><code>-dvd-video</code></dt>
+<dd> Generate a DVD-Video compliant UDF filesystem. This is done by sorting the order of the content of the appropriate files and by adding padding between the files if needed. Note that the sorting only works if the DVD-Video filenames include uppercase characters only.</dd>
 <dt>
-<dd> Note that in order to get a DVD-Video compliant filesystem image, you need to prepare a DVD-Video compliant directory tree. This requires a directory <code>VIDEO_TS</code> (all caps) in the root directory of the resulting DVD, and usually another directory <code>AUDIO_TS</code>. <code>VIDEO_TS</code> needs to include all needed files (filenames must be all caps) for a compliant DVD-Video filesystem.</p>
-<dt><code>-f</code></p>
-<dd> Follow symbolic links when generating the filesystem. When this option is not in use, symbolic links will be entered using Rock Ridge if enabled, otherwise they will be ignored.</p>
-<dt><code>-file-mode</code><i> mode</i></p>
-<dd> Overrides the mode of regular files used to create the image to <i>mode</i>, specified as 4 digits of permission bits as in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). This option automatically enables Rock Ridge extensions.</p>
-<dt><code>-gid</code><i> gid</i></p>
-<dd> Overrides the group ID read from the source files to the value of <i>gid</i>. Specifying this option automatically enables Rock Ridge extensions.</p>
-<dt><code>-gui</code></p>
-<dd> Switch the behaviour for a GUI. This currently makes the output more verbose but may have other effects in the future.</p>
-<dt><code>-graft-points</code></p>
-<dd> Allow use of graft points for filenames. If this option is used, all filenames are checked for graft points. The filename is divided at the first unescaped equal sign. All occurrences of `\&#8217; and `=&#8217; characters must be escaped with `\&#8217; if <code>-graft-points</code> has been specified.</p>
-<dt><code>-hide</code><i> glob</i></p>
-<dd> Hide any files matching <i>glob</i>, a shell wildcard pattern, from being seen in the ISO9660 or Rock Ridge directory. <i>glob</i> may match any part of the filename or path. If <i>glob</i> matches a directory, the contents of that directory will be hidden. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. All the hidden files will still be written to the output CD image file. See also <code>-hide-joliet</code>, and <i>README.hide</i>. This option may be used multiple times.</p>
-<dt><code>-hide-list</code><i> file</i></p>
-<dd> A file containing a list of shell wildcards to be hidden. See <code>-hide</code>.</p>
-<dt><code>-hidden</code><i> glob</i></p>
-<dd> Add the hidden (existence) ISO9660 directory attribute for files and directories matching <i>glob</i>, a shell wildcard pattern. This attribute will prevent the files from being shown by some MS-DOS and Windows commands. <i>glob</i> may match any part of the filename or path. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. This option may be used multiple times.</p>
-<dt><code>-hidden-list</code><i> file</i></p>
-<dd> A file containing a list of shell wildcards to get the hidden attribute. See <code>-hidden</code>.</p>
-<dt><code>-hide-joliet</code><i> glob</i></p>
-<dd> Hide files and directories matching <i>glob</i>, a shell wildcard pattern, from being seen in the Joliet directory. <i>glob</i> may match any part of the filename or path. If <i>glob</i> matches a directory, the contents of that directory will be hidden. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. All the hidden files will still be written to the output CD image file. This option is usually used with <code>-hide</code>. See also <i>README.hide</i>. This option may be used multiple times.</p>
-<dt><code>-hide-joliet-list</code><i> file</i></p>
-<dd> A file containing a list of shell wildcards to be hidden from the Joliet tree. See <code>-hide-joliet</code>.</p>
-<dt><code>-hide-joliet-trans-tbl</code></p>
-<dd> Hide the <i>TRANS.TBL</i> files from the Joliet tree. These files usually don&#8217;t make sense in the Joliet world as they list the real name and the ISO9660 name which may both be different from the Joliet name.</p>
-<dt><code>-hide-rr-moved</code></p>
-<dd> Rename the directory <i>RR_MOVED</i> to <i>.rr_moved</i> in the Rock Ridge tree. It seems to be impossible to completely hide the <i>RR_MOVED</i> directory from the Rock Ridge tree. This option only makes the visible tree less confusing for people who don&#8217;t know what this directory is for. If you need to have no <i>RR_MOVED</i> directory at all, you should use <code>-D</code>. Note that if <code>-D</code> has been specified, the resulting filesystem is not ISO9660 level-1 compliant and will not be readable on MS-DOS. See also the <code>NOTES</code> section.</p>
-<dt><code>-input-charset</code><i> charset</i></p>
-<dd> Input charset that defines the characters used in local filenames. To get a list of valid charset names, call <code>genisoimage -input-charset help</code>. To get a 1:1 mapping, you may use <code>default</code> as charset name. The default initial values are <i>cp437</i> on DOS-based systems and <i>iso8859-1</i> on all other systems. See the <code>CHARACTER SETS</code> section below for more details.</p>
-<dt><code>-output-charset</code><i> charset</i></p>
-<dd> Output charset that defines the characters that will be used in Rock Ridge filenames. Defaults to the input charset. See <code>CHARACTER SETS</code> section below for more details.</p>
-<dt><code>-iso-level</code><i> level</i></p>
-<dd> Set the ISO9660 conformance level. Valid numbers are 1 to 4.</p>
+</dt><dd> Note that in order to get a DVD-Video compliant filesystem image, you need to prepare a DVD-Video compliant directory tree. This requires a directory <code>VIDEO_TS</code> (all caps) in the root directory of the resulting DVD, and usually another directory <code>AUDIO_TS</code>. <code>VIDEO_TS</code> needs to include all needed files (filenames must be all caps) for a compliant DVD-Video filesystem.</dd>
+<dt><code>-f</code></dt>
+<dd> Follow symbolic links when generating the filesystem. When this option is not in use, symbolic links will be entered using Rock Ridge if enabled, otherwise they will be ignored.</dd>
+<dt><code>-file-mode</code><i> mode</i></dt>
+<dd> Overrides the mode of regular files used to create the image to <i>mode</i>, specified as 4 digits of permission bits as in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). This option automatically enables Rock Ridge extensions.</dd>
+<dt><code>-gid</code><i> gid</i></dt>
+<dd> Overrides the group ID read from the source files to the value of <i>gid</i>. Specifying this option automatically enables Rock Ridge extensions.</dd>
+<dt><code>-gui</code></dt>
+<dd> Switch the behaviour for a GUI. This currently makes the output more verbose but may have other effects in the future.</dd>
+<dt><code>-graft-points</code></dt>
+<dd> Allow use of graft points for filenames. If this option is used, all filenames are checked for graft points. The filename is divided at the first unescaped equal sign. All occurrences of `\&#8217; and `=&#8217; characters must be escaped with `\&#8217; if <code>-graft-points</code> has been specified.</dd>
+<dt><code>-hide</code><i> glob</i></dt>
+<dd> Hide any files matching <i>glob</i>, a shell wildcard pattern, from being seen in the ISO9660 or Rock Ridge directory. <i>glob</i> may match any part of the filename or path. If <i>glob</i> matches a directory, the contents of that directory will be hidden. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. All the hidden files will still be written to the output CD image file. See also <code>-hide-joliet</code>, and <i>README.hide</i>. This option may be used multiple times.</dd>
+<dt><code>-hide-list</code><i> file</i></dt>
+<dd> A file containing a list of shell wildcards to be hidden. See <code>-hide</code>.</dd>
+<dt><code>-hidden</code><i> glob</i></dt>
+<dd> Add the hidden (existence) ISO9660 directory attribute for files and directories matching <i>glob</i>, a shell wildcard pattern. This attribute will prevent the files from being shown by some MS-DOS and Windows commands. <i>glob</i> may match any part of the filename or path. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. This option may be used multiple times.</dd>
+<dt><code>-hidden-list</code><i> file</i></dt>
+<dd> A file containing a list of shell wildcards to get the hidden attribute. See <code>-hidden</code>.</dd>
+<dt><code>-hide-joliet</code><i> glob</i></dt>
+<dd> Hide files and directories matching <i>glob</i>, a shell wildcard pattern, from being seen in the Joliet directory. <i>glob</i> may match any part of the filename or path. If <i>glob</i> matches a directory, the contents of that directory will be hidden. In order to match a directory name, make sure the pathname does not include a trailing `/&#8217; character. All the hidden files will still be written to the output CD image file. This option is usually used with <code>-hide</code>. See also <i>README.hide</i>. This option may be used multiple times.</dd>
+<dt><code>-hide-joliet-list</code><i> file</i></dt>
+<dd> A file containing a list of shell wildcards to be hidden from the Joliet tree. See <code>-hide-joliet</code>.</dd>
+<dt><code>-hide-joliet-trans-tbl</code></dt>
+<dd> Hide the <i>TRANS.TBL</i> files from the Joliet tree. These files usually don&#8217;t make sense in the Joliet world as they list the real name and the ISO9660 name which may both be different from the Joliet name.</dd>
+<dt><code>-hide-rr-moved</code></dt>
+<dd> Rename the directory <i>RR_MOVED</i> to <i>.rr_moved</i> in the Rock Ridge tree. It seems to be impossible to completely hide the <i>RR_MOVED</i> directory from the Rock Ridge tree. This option only makes the visible tree less confusing for people who don&#8217;t know what this directory is for. If you need to have no <i>RR_MOVED</i> directory at all, you should use <code>-D</code>. Note that if <code>-D</code> has been specified, the resulting filesystem is not ISO9660 level-1 compliant and will not be readable on MS-DOS. See also the <code>NOTES</code> section.</dd>
+<dt><code>-input-charset</code><i> charset</i></dt>
+<dd> Input charset that defines the characters used in local filenames. To get a list of valid charset names, call <code>genisoimage -input-charset help</code>. To get a 1:1 mapping, you may use <code>default</code> as charset name. The default initial values are <i>cp437</i> on DOS-based systems and <i>iso8859-1</i> on all other systems. See the <code>CHARACTER SETS</code> section below for more details.</dd>
+<dt><code>-output-charset</code><i> charset</i></dt>
+<dd> Output charset that defines the characters that will be used in Rock Ridge filenames. Defaults to the input charset. See <code>CHARACTER SETS</code> section below for more details.</dd>
+<dt><code>-iso-level</code><i> level</i></dt>
+<dd> Set the ISO9660 conformance level. Valid numbers are 1 to 4.</dd>
 <dt>
-<dd> With level 1, files may only consist of one section and filenames are restricted to 8.3 characters.</p>
+</dt><dd> With level 1, files may only consist of one section and filenames are restricted to 8.3 characters.</dd>
 <dt>
-<dd> With level 2, files may only consist of one section.</p>
+</dt><dd> With level 2, files may only consist of one section.</dd>
 <dt>
-<dd> With level 3, no restrictions (other than ISO-9660:1988) do apply.</p>
+</dt><dd> With level 3, no restrictions (other than ISO-9660:1988) do apply.</dd>
 <dt>
-<dd> With all ISO9660 levels from 1 to 3, all filenames are restricted to uppercase letters, numbers and underscores (_). Filenames are limited to 31 characters, directory nesting is limited to 8 levels, and pathnames are limited to 255 characters.</p>
+</dt><dd> With all ISO9660 levels from 1 to 3, all filenames are restricted to uppercase letters, numbers and underscores (_). Filenames are limited to 31 characters, directory nesting is limited to 8 levels, and pathnames are limited to 255 characters.</dd>
 <dt>
-<dd> Level 4 officially does not exist but <code>genisoimage</code> maps it to ISO-9660:1999, which is ISO9660 version 2.</p>
+</dt><dd> Level 4 officially does not exist but <code>genisoimage</code> maps it to ISO-9660:1999, which is ISO9660 version 2.</dd>
 <dt>
-<dd> With level 4, an enhanced volume descriptor with version number and file structure version number set to 2 is emitted. Directory nesting is not limited to 8 levels, there is no need for a file to contain a dot and the dot has no special meaning, filenames do not have version numbers, and filenames can be up to 207 characters long, or 197 characters if Rock Ridge is used.</p>
+</dt><dd> With level 4, an enhanced volume descriptor with version number and file structure version number set to 2 is emitted. Directory nesting is not limited to 8 levels, there is no need for a file to contain a dot and the dot has no special meaning, filenames do not have version numbers, and filenames can be up to 207 characters long, or 197 characters if Rock Ridge is used.</dd>
 <dt>
-<dd> When creating Version 2 images, <code>genisoimage</code> emits an enhanced volume descriptor, similar but not identical to a primary volume descriptor. Be careful not to use broken software to make ISO9660 images bootable by assuming a second PVD copy and patching this putative PVD copy into an El Torito VD.</p>
-<dt><code>-J</code></p>
-<dd> Generate Joliet directory records in addition to regular ISO9660 filenames. This is primarily useful when the discs are to be used on Windows machines. Joliet filenames are specified in Unicode and each path component can be up to 64 Unicode characters long. Note that Joliet is not a standard &#8212; only Microsoft Windows and Linux systems can read Joliet extensions. For greater portability, consider using both Joliet and Rock Ridge extensions.</p>
-<dt><code>-joliet-long</code></p>
-<dd> Allow Joliet filenames to be up to 103 Unicode characters, instead of 64. This breaks the Joliet specification, but appears to work. Use with caution.</p>
-<dt><code>-jcharset</code><i> charset</i></p>
-<dd> A combination of <code>-J -input-charset</code> <i>charset</i>. See the <code>CHARACTER SETS</code> section below for more details.</p>
-<dt><code>-l</code></p>
-<dd> Allow full 31-character filenames. Normally the ISO9660 filename will be in an 8.3 format which is compatible with MS-DOS, even though the ISO9660 standard allows filenames of up to 31 characters. If you use this option, the disc may be difficult to use on a MS-DOS system, but will work on most other systems. Use with caution.</p>
-<dt><code>-L</code></p>
-<dd> Outdated option; use <code>-allow-leading-dots</code> instead.</p>
-<dt><code>-jigdo-jigdo</code><i> jigdo_file</i></p>
-<dd> Produce a <code>jigdo</code> <i>.jigdo</i> metadata file as well as the filesystem image. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-template</code><i> template_file</i></p>
-<dd> Produce a <code>jigdo</code> <i>.template</i> file as well as the filesystem image. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-min-file-size</code><i> size</i></p>
-<dd> Specify the minimum size for a file to be listed in the <i>.jigdo</i> file. Default (and minimum allowed) is 1KB. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-force-md5</code><i> path</i></p>
-<dd> Specify a file pattern where files <i>must</i> be contained in the externally-supplied MD5 list as supplied by <code>-md5-list</code>. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-exclude</code><i> path</i></p>
-<dd> Specify a file pattern where files will not be listed in the <i>.jigdo</i> file. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-map</code><i> path</i></p>
-<dd> Specify a pattern mapping for the jigdo file (e.g. <i>Debian=/mirror/debian</i>). See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-md5-list</code><i> md5_file</i></p>
-<dd> Specify a file containing the MD5sums, sizes and pathnames of the files to be included in the <i>.jigdo</i> file. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-jigdo-template-compress</code><i> algorithm</i></p>
-<dd> Specify a compression algorithm to use for template date. gzip and bzip2 are currently supported, and gzip is the default. See the <code>JIGDO NOTES</code> section below for more information.</p>
-<dt><code>-log-file</code><i> log_file</i></p>
-<dd> Redirect all error, warning and informational messages to <i>log_file</i> instead of the standard error.</p>
-<dt><code>-m</code><i> glob</i></p>
-<dd> Exclude files matching <i>glob</i>, a shell wildcard pattern, from being written to CD-ROM. <i>glob</i> may match either the filename component or the full pathname. This option may be used multiple times. For example: </p>
+</dt><dd> When creating Version 2 images, <code>genisoimage</code> emits an enhanced volume descriptor, similar but not identical to a primary volume descriptor. Be careful not to use broken software to make ISO9660 images bootable by assuming a second PVD copy and patching this putative PVD copy into an El Torito VD.</dd>
+<dt><code>-J</code></dt>
+<dd> Generate Joliet directory records in addition to regular ISO9660 filenames. This is primarily useful when the discs are to be used on Windows machines. Joliet filenames are specified in Unicode and each path component can be up to 64 Unicode characters long. Note that Joliet is not a standard &#8212; only Microsoft Windows and Linux systems can read Joliet extensions. For greater portability, consider using both Joliet and Rock Ridge extensions.</dd>
+<dt><code>-joliet-long</code></dt>
+<dd> Allow Joliet filenames to be up to 103 Unicode characters, instead of 64. This breaks the Joliet specification, but appears to work. Use with caution.</dd>
+<dt><code>-jcharset</code><i> charset</i></dt>
+<dd> A combination of <code>-J -input-charset</code> <i>charset</i>. See the <code>CHARACTER SETS</code> section below for more details.</dd>
+<dt><code>-l</code></dt>
+<dd> Allow full 31-character filenames. Normally the ISO9660 filename will be in an 8.3 format which is compatible with MS-DOS, even though the ISO9660 standard allows filenames of up to 31 characters. If you use this option, the disc may be difficult to use on a MS-DOS system, but will work on most other systems. Use with caution.</dd>
+<dt><code>-L</code></dt>
+<dd> Outdated option; use <code>-allow-leading-dots</code> instead.</dd>
+<dt><code>-jigdo-jigdo</code><i> jigdo_file</i></dt>
+<dd> Produce a <code>jigdo</code> <i>.jigdo</i> metadata file as well as the filesystem image. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-template</code><i> template_file</i></dt>
+<dd> Produce a <code>jigdo</code> <i>.template</i> file as well as the filesystem image. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-min-file-size</code><i> size</i></dt>
+<dd> Specify the minimum size for a file to be listed in the <i>.jigdo</i> file. Default (and minimum allowed) is 1KB. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-force-md5</code><i> path</i></dt>
+<dd> Specify a file pattern where files <i>must</i> be contained in the externally-supplied MD5 list as supplied by <code>-md5-list</code>. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-exclude</code><i> path</i></dt>
+<dd> Specify a file pattern where files will not be listed in the <i>.jigdo</i> file. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-map</code><i> path</i></dt>
+<dd> Specify a pattern mapping for the jigdo file (e.g. <i>Debian=/mirror/debian</i>). See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-md5-list</code><i> md5_file</i></dt>
+<dd> Specify a file containing the MD5sums, sizes and pathnames of the files to be included in the <i>.jigdo</i> file. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-jigdo-template-compress</code><i> algorithm</i></dt>
+<dd> Specify a compression algorithm to use for template date. gzip and bzip2 are currently supported, and gzip is the default. See the <code>JIGDO NOTES</code> section below for more information.</dd>
+<dt><code>-log-file</code><i> log_file</i></dt>
+<dd> Redirect all error, warning and informational messages to <i>log_file</i> instead of the standard error.</dd>
+<dt><code>-m</code><i> glob</i></dt>
+<dd> Exclude files matching <i>glob</i>, a shell wildcard pattern, from being written to CD-ROM. <i>glob</i> may match either the filename component or the full pathname. This option may be used multiple times. For example: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;genisoimage -o rom -m&nbsp;&#8216;*.o&#8217;&nbsp;-m core -m foobar </p>
 <p> would exclude all files ending in `.o&#8217;, or called <i>core</i> or <i>foobar</i> from the image. Note that if you had a directory called <i>foobar</i>, it too (and of course all its descendants) would be excluded.</p>
-<dt><code>-exclude-list</code><i> file</i></p>
-<dd> A file containing a list of shell wildcards to be excluded. See <code>-m</code>.</p>
-<dt><code>-max-iso9660-filenames</code></p>
+<dt><code>-exclude-list</code><i> file</i></dt>
+<dd> A file containing a list of shell wildcards to be excluded. See <code>-m</code>.</dd>
+<dt><code>-max-iso9660-filenames</code></dt>
 <dd> Allow ISO9660 filenames to be up to 37 characters long. This option enables <code>-N</code> as the extra name space is taken from the space reserved for file version numbers.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Although a conforming application needs to provide a buffer space of at least 37 characters, discs created with this option may cause a buffer overflow in the reading operating system. Use with extreme care.</p>
-<dt><code>-M</code><i> path</i></p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Although a conforming application needs to provide a buffer space of at least 37 characters, discs created with this option may cause a buffer overflow in the reading operating system. Use with extreme care.</dd>
+<dt><code>-M</code><i> path</i></dt>
 <dd>
-<dt><code>-M</code><i> device</i></p>
+</dd><dt><code>-M</code><i> device</i></dt>
 <dd>
-<dt><code>-dev</code><i> device</i></p>
-<dd> Specifies path to existing ISO9660 image to be merged. The alternate form takes a SCSI device specifier that uses the same syntax as the <code>dev=</code> parameter of <code>wodim</code>. The output of <code>genisoimage</code> will be a new session which should get written to the end of the image specified in <code>-M</code>. Typically this requires multisession capability for the CD recorder used to write the image. This option may only be used in conjunction with <code>-C</code>.</p>
-<dt><code>-N</code></p>
+</dd><dt><code>-dev</code><i> device</i></dt>
+<dd> Specifies path to existing ISO9660 image to be merged. The alternate form takes a SCSI device specifier that uses the same syntax as the <code>dev=</code> parameter of <code>wodim</code>. The output of <code>genisoimage</code> will be a new session which should get written to the end of the image specified in <code>-M</code>. Typically this requires multisession capability for the CD recorder used to write the image. This option may only be used in conjunction with <code>-C</code>.</dd>
+<dt><code>-N</code></dt>
 <dd> Omit version numbers from ISO9660 filenames.<br />
- This violates the ISO9660 standard, but no one really uses the version numbers anyway. Use with caution.</p>
-<dt><code>-new-dir-mode</code><i> mode</i></p>
-<dd> Specify the mode, a 4-digit number as used in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), to use when creating new directories in the filesystem image. The default is 0555.</p>
-<dt><code>-nobak</code></p>
+ This violates the ISO9660 standard, but no one really uses the version numbers anyway. Use with caution.</dd>
+<dt><code>-new-dir-mode</code><i> mode</i></dt>
+<dd> Specify the mode, a 4-digit number as used in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), to use when creating new directories in the filesystem image. The default is 0555.</dd>
+<dt><code>-nobak</code></dt>
 <dd>
-<dt><code>-no-bak</code></p>
-<dd> Exclude backup files files on the ISO9660 filesystem; that is, filenames that contain the characters `~&#8217; or `#&#8217; or end in <i>.bak</i>. These are typically backup files for Unix text editors.</p>
-<dt><code>-force-rr</code></p>
-<dd> Do not use the automatic Rock Ridge attributes recognition for previous sessions. This can work around problems with images created by, e.g., NERO Burning ROM.</p>
-<dt><code>-no-rr</code></p>
-<dd> Do not use the Rock Ridge attributes from previous sessions. This may help to avoid problems when <code>genisoimage</code> finds illegal Rock Ridge signatures on an old session.</p>
-<dt><code>-no-split-symlink-components</code></p>
-<dd> Don&#8217;t split the symlink components, but begin a new Continuation Area (CE) instead. This may waste some space, but the SunOS 4.1.4 cdrom driver has a bug in reading split symlink components.</p>
+</dd><dt><code>-no-bak</code></dt>
+<dd> Exclude backup files files on the ISO9660 filesystem; that is, filenames that contain the characters `~&#8217; or `#&#8217; or end in <i>.bak</i>. These are typically backup files for Unix text editors.</dd>
+<dt><code>-force-rr</code></dt>
+<dd> Do not use the automatic Rock Ridge attributes recognition for previous sessions. This can work around problems with images created by, e.g., NERO Burning ROM.</dd>
+<dt><code>-no-rr</code></dt>
+<dd> Do not use the Rock Ridge attributes from previous sessions. This may help to avoid problems when <code>genisoimage</code> finds illegal Rock Ridge signatures on an old session.</dd>
+<dt><code>-no-split-symlink-components</code></dt>
+<dd> Don&#8217;t split the symlink components, but begin a new Continuation Area (CE) instead. This may waste some space, but the SunOS 4.1.4 cdrom driver has a bug in reading split symlink components.</dd>
 <dt>
-<dd> It is questionable whether this option is useful nowadays.</p>
-<dt><code>-no-split-symlink-fields</code></p>
-<dd> Don&#8217;t split the symlink fields, but begin a new Continuation Area (CE) instead. This may waste some space, but the SunOS 4.1.4 and Solaris 2.5.1 cdrom driver have a bug in reading split symlink fields (a `/&#8217; can be dropped).</p>
+</dt><dd> It is questionable whether this option is useful nowadays.</dd>
+<dt><code>-no-split-symlink-fields</code></dt>
+<dd> Don&#8217;t split the symlink fields, but begin a new Continuation Area (CE) instead. This may waste some space, but the SunOS 4.1.4 and Solaris 2.5.1 cdrom driver have a bug in reading split symlink fields (a `/&#8217; can be dropped).</dd>
 <dt>
-<dd> It is questionable whether this option is useful nowadays.</p>
-<dt><code>-o</code><i> filename</i></p>
-<dd> Specify the output file for the the ISO9660 filesystem image. This can be a disk file, a tape drive, or it can correspond directly to the device name of the optical disc writer. If not specified, stdout is used. Note that the output can also be a block device for a regular disk partition, in which case the ISO9660 filesystem can be mounted normally to verify that it was generated correctly.</p>
-<dt><code>-pad</code></p>
-<dd> Pad the end of the whole image by 150 sectors (300 kB). This option is enabled by default. If used in combination with <code>-B</code>, padding is inserted between the ISO9660 partition and the boot partitions, such that the first boot partition starts on a sector number that is a multiple of 16.</p>
+</dt><dd> It is questionable whether this option is useful nowadays.</dd>
+<dt><code>-o</code><i> filename</i></dt>
+<dd> Specify the output file for the the ISO9660 filesystem image. This can be a disk file, a tape drive, or it can correspond directly to the device name of the optical disc writer. If not specified, stdout is used. Note that the output can also be a block device for a regular disk partition, in which case the ISO9660 filesystem can be mounted normally to verify that it was generated correctly.</dd>
+<dt><code>-pad</code></dt>
+<dd> Pad the end of the whole image by 150 sectors (300 kB). This option is enabled by default. If used in combination with <code>-B</code>, padding is inserted between the ISO9660 partition and the boot partitions, such that the first boot partition starts on a sector number that is a multiple of 16.</dd>
 <dt>
-<dd> The padding is needed as many operating systems (e.g. Linux) implement read-ahead bugs in their filesystem I/O. These bugs result in read errors on files that are located near the end of a track, particularly if the disc is written in Track At Once mode, or where a CD audio track follows the data track.</p>
-<dt><code>-no-pad</code></p>
-<dd> Do not pad the end by 150 sectors (300 kB) and do not make the the boot partitions start on a multiple of 16 sectors.</p>
-<dt><code>-path-list</code><i> file</i></p>
-<dd> A file containing a list of <i>pathspec</i> directories and filenames to be added to the ISO9660 filesystem. This list of pathspecs are processed after any that appear on the command line. If the argument is <i>&#8211;</i>, the list is read from the standard input.</p>
-<dt><code>-P</code></p>
-<dd> Outdated option; use <code>-publisher</code> instead.</p>
-<dt><code>-publisher</code><i> publisher_id</i></p>
-<dd> Specifies a text string that will be written into the volume header. This should describe the publisher of the CD-ROM, usually with a mailing address and phone number. There is space for 128 characters. Equivalent to <code>PUBL</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-p</code><i> preparer_id</i></p>
-<dd> Specifies a text string that will be written into the volume header. This should describe the preparer of the CD-ROM, usually with a mailing address and phone number. There is space for 128 characters. Equivalent to <code>PREP</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-print-size</code></p>
-<dd> Print estimated filesystem size in multiples of the sector size (2048 bytes) and exit. This option is needed for Disk At Once mode and with some CD-R drives when piping directly into <code>wodim</code>, cases where <code>wodim</code> needs to know the size of the filesystem image in advance. Old versions of <code>mkisofs</code> wrote this information (among other information) to <i>stderr</i>. As this turns out to be hard to parse, the number without any other information is now printed on <i>stdout</i> too. If you like to write a simple shell script, redirect <i>stderr</i> and catch the number from <i>stdout</i>. This may be done with: </p>
+</dt><dd> The padding is needed as many operating systems (e.g. Linux) implement read-ahead bugs in their filesystem I/O. These bugs result in read errors on files that are located near the end of a track, particularly if the disc is written in Track At Once mode, or where a CD audio track follows the data track.</dd>
+<dt><code>-no-pad</code></dt>
+<dd> Do not pad the end by 150 sectors (300 kB) and do not make the the boot partitions start on a multiple of 16 sectors.</dd>
+<dt><code>-path-list</code><i> file</i></dt>
+<dd> A file containing a list of <i>pathspec</i> directories and filenames to be added to the ISO9660 filesystem. This list of pathspecs are processed after any that appear on the command line. If the argument is <i>&#8211;</i>, the list is read from the standard input.</dd>
+<dt><code>-P</code></dt>
+<dd> Outdated option; use <code>-publisher</code> instead.</dd>
+<dt><code>-publisher</code><i> publisher_id</i></dt>
+<dd> Specifies a text string that will be written into the volume header. This should describe the publisher of the CD-ROM, usually with a mailing address and phone number. There is space for 128 characters. Equivalent to <code>PUBL</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-p</code><i> preparer_id</i></dt>
+<dd> Specifies a text string that will be written into the volume header. This should describe the preparer of the CD-ROM, usually with a mailing address and phone number. There is space for 128 characters. Equivalent to <code>PREP</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-print-size</code></dt>
+<dd> Print estimated filesystem size in multiples of the sector size (2048 bytes) and exit. This option is needed for Disk At Once mode and with some CD-R drives when piping directly into <code>wodim</code>, cases where <code>wodim</code> needs to know the size of the filesystem image in advance. Old versions of <code>mkisofs</code> wrote this information (among other information) to <i>stderr</i>. As this turns out to be hard to parse, the number without any other information is now printed on <i>stdout</i> too. If you like to write a simple shell script, redirect <i>stderr</i> and catch the number from <i>stdout</i>. This may be done with: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cdblocks=`&nbsp;genisoimage -print-size -quiet &#8230;&nbsp;` </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;genisoimage &#8230; | wodim &#8230; tsize=${cdblocks}s &#8211;</p>
-<dt><code>-quiet</code></p>
-<dd> This makes <code>genisoimage</code> even less verbose. No progress output will be provided.</p>
-<dt><code>-R</code></p>
-<dd> Generate SUSP and RR records using the Rock Ridge protocol to further describe the files on the ISO9660 filesystem.</p>
-<dt><code>-r</code></p>
-<dd> This is like the -R option, but file ownership and modes are set to more useful values. The uid and gid are set to zero, because they are usually only useful on the author&#8217;s system, and not useful to the client. All the file read bits are set true, so that files and directories are globally readable on the client. If any execute bit is set for a file, set all of the execute bits, so that executables are globally executable on the client. If any search bit is set for a directory, set all of the search bits, so that directories are globally searchable on the client. All write bits are cleared, because the filesystem will be mounted read-only in any case. If any of the special mode bits are set, clear them, because file locks are not useful on a read-only filesystem, and set-id bits are not desirable for uid 0 or gid 0. When used on Win32, the execute bit is set on <i>all</i> files. This is a result of the lack of file permissions on Win32 and the Cygwin POSIX emulation layer. See also <code>-uid</code>, <code>-gid</code>, <code>-dir-mode</code>, <code>-file-mode</code> and <code>-new-dir-mode</code>.</p>
-<dt><code>-relaxed-filenames</code></p>
+<dt><code>-quiet</code></dt>
+<dd> This makes <code>genisoimage</code> even less verbose. No progress output will be provided.</dd>
+<dt><code>-R</code></dt>
+<dd> Generate SUSP and RR records using the Rock Ridge protocol to further describe the files on the ISO9660 filesystem.</dd>
+<dt><code>-r</code></dt>
+<dd> This is like the -R option, but file ownership and modes are set to more useful values. The uid and gid are set to zero, because they are usually only useful on the author&#8217;s system, and not useful to the client. All the file read bits are set true, so that files and directories are globally readable on the client. If any execute bit is set for a file, set all of the execute bits, so that executables are globally executable on the client. If any search bit is set for a directory, set all of the search bits, so that directories are globally searchable on the client. All write bits are cleared, because the filesystem will be mounted read-only in any case. If any of the special mode bits are set, clear them, because file locks are not useful on a read-only filesystem, and set-id bits are not desirable for uid 0 or gid 0. When used on Win32, the execute bit is set on <i>all</i> files. This is a result of the lack of file permissions on Win32 and the Cygwin POSIX emulation layer. See also <code>-uid</code>, <code>-gid</code>, <code>-dir-mode</code>, <code>-file-mode</code> and <code>-new-dir-mode</code>.</dd>
+<dt><code>-relaxed-filenames</code></dt>
 <dd> Allows ISO9660 filenames to include all 7-bit ASCII characters except lowercase letters.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-root</code><i> dir</i></p>
-<dd> Moves all files and directories into <i>dir</i> in the image. This is essentially the same as using <code>-graft-points</code> and adding <i>dir</i> in front of every pathspec, but is easier to use. <i>dir</i> may actually be several levels deep. It is created with the same permissions as other graft points.</p>
-<dt><code>-old-root</code><i> dir</i></p>
-<dd> This option is necessary when writing a multisession image and the previous (or even older) session was written with <code>-root</code> <i>dir</i>. Using a directory name not found in the previous session causes <code>genisoimage</code> to abort with an error. Without this option, <code>genisoimage</code> would not be able to find unmodified files and would be forced to write their data into the image once more. <code>-root</code> and <code>-old-root</code> are meant to be used together to do incremental backups. The initial session would e.g. use: <code>genisoimage -root backup_1</code> <i>dirs</i>. The next incremental backup with <code>genisoimage -root backup_2 -old-root backup_1</code> <i>dirs</i> would take another snapshot of these directories. The first snapshot would be found in <code>backup_1</code>, the second one in <code>backup_2</code>, but only modified or new files need to be written into the second session. Without these options, new files would be added and old ones would be preserved. But old ones would be overwritten if the file was modified. Recovering the files by copying the whole directory back from CD would also restore files that were deleted intentionally. Accessing several older versions of a file requires support by the operating system to choose which sessions are to be mounted.</p>
-<dt><code>-sort</code><i> sort_file</i></p>
-<dd> Sort file locations on the media. Sorting is controlled by a file that contains pairs of filenames and sorting offset weighting. If the weighting is higher, the file will be located closer to the beginning of the media, if the weighting is lower, the file will be located closer to the end of the media. There must be only one space or tabs character between the filename and the weight and the weight must be the last characters on a line. The filename is taken to include all the characters up to, but not including the last space or tab character on a line. This is to allow for space characters to be in, or at the end of a filename. This option does <code>not</code> sort the order of the filenames that appear in the ISO9660 directory. It sorts the order in which the file data is written to the CD image, which is useful in order to optimize the data layout on a CD. See <code>README.sort</code> for more details.</p>
-<dt><code>-sparc-boot</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></p>
-<dd> See <code>-B</code> above.</p>
-<dt><code>-sparc-label</code><i> label</i></p>
-<dd> Set the Sun disk label name for the Sun disk label that is created with <code>-sparc-boot</code>.</p>
-<dt><code>-split-output</code></p>
-<dd> Split the output image into several files of approximately 1 GB each. This helps to create DVD-sized ISO9660 images on operating systems without large file support. <code>wodim</code> will concatenate more than one file into a single track if writing to a DVD. To make <code>-split-output</code> work, <code>-o</code><i> filename</i> must be specified. The resulting output images will be named: <i>filename_00</i>, <i>filename_01</i>, <i>filename_02</i>&#8230;.</p>
-<dt><code>-stream-media-size</code><i> #</i></p>
-<dd> Select streaming operation and set the media size to # sectors. This allows you to pipe the output of the <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) program into <code>genisoimage</code> and to create an ISO9660 filesystem without the need of an intermediate tar archive file. If this option has been specified, <code>genisoimage</code> reads from <i>stdin </i> and creates a file with the name <i>STREAM.IMG</i>. The maximum size of the file (with padding) is 200 sectors less than the specified media size. If <code>-no-pad</code> has been specified, the file size is 50 sectors less than the specified media size. If the file is smaller, <code>genisoimage</code> will write padding. This may take awhile.</p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-root</code><i> dir</i></dt>
+<dd> Moves all files and directories into <i>dir</i> in the image. This is essentially the same as using <code>-graft-points</code> and adding <i>dir</i> in front of every pathspec, but is easier to use. <i>dir</i> may actually be several levels deep. It is created with the same permissions as other graft points.</dd>
+<dt><code>-old-root</code><i> dir</i></dt>
+<dd> This option is necessary when writing a multisession image and the previous (or even older) session was written with <code>-root</code> <i>dir</i>. Using a directory name not found in the previous session causes <code>genisoimage</code> to abort with an error. Without this option, <code>genisoimage</code> would not be able to find unmodified files and would be forced to write their data into the image once more. <code>-root</code> and <code>-old-root</code> are meant to be used together to do incremental backups. The initial session would e.g. use: <code>genisoimage -root backup_1</code> <i>dirs</i>. The next incremental backup with <code>genisoimage -root backup_2 -old-root backup_1</code> <i>dirs</i> would take another snapshot of these directories. The first snapshot would be found in <code>backup_1</code>, the second one in <code>backup_2</code>, but only modified or new files need to be written into the second session. Without these options, new files would be added and old ones would be preserved. But old ones would be overwritten if the file was modified. Recovering the files by copying the whole directory back from CD would also restore files that were deleted intentionally. Accessing several older versions of a file requires support by the operating system to choose which sessions are to be mounted.</dd>
+<dt><code>-sort</code><i> sort_file</i></dt>
+<dd> Sort file locations on the media. Sorting is controlled by a file that contains pairs of filenames and sorting offset weighting. If the weighting is higher, the file will be located closer to the beginning of the media, if the weighting is lower, the file will be located closer to the end of the media. There must be only one space or tabs character between the filename and the weight and the weight must be the last characters on a line. The filename is taken to include all the characters up to, but not including the last space or tab character on a line. This is to allow for space characters to be in, or at the end of a filename. This option does <code>not</code> sort the order of the filenames that appear in the ISO9660 directory. It sorts the order in which the file data is written to the CD image, which is useful in order to optimize the data layout on a CD. See <code>README.sort</code> for more details.</dd>
+<dt><code>-sparc-boot</code><i> img_sun4,img_sun4c,img_sun4m,img_sun4d,img_sun4e</i></dt>
+<dd> See <code>-B</code> above.</dd>
+<dt><code>-sparc-label</code><i> label</i></dt>
+<dd> Set the Sun disk label name for the Sun disk label that is created with <code>-sparc-boot</code>.</dd>
+<dt><code>-split-output</code></dt>
+<dd> Split the output image into several files of approximately 1 GB each. This helps to create DVD-sized ISO9660 images on operating systems without large file support. <code>wodim</code> will concatenate more than one file into a single track if writing to a DVD. To make <code>-split-output</code> work, <code>-o</code><i> filename</i> must be specified. The resulting output images will be named: <i>filename_00</i>, <i>filename_01</i>, <i>filename_02</i>&#8230;.</dd>
+<dt><code>-stream-media-size</code><i> #</i></dt>
+<dd> Select streaming operation and set the media size to # sectors. This allows you to pipe the output of the <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) program into <code>genisoimage</code> and to create an ISO9660 filesystem without the need of an intermediate tar archive file. If this option has been specified, <code>genisoimage</code> reads from <i>stdin </i> and creates a file with the name <i>STREAM.IMG</i>. The maximum size of the file (with padding) is 200 sectors less than the specified media size. If <code>-no-pad</code> has been specified, the file size is 50 sectors less than the specified media size. If the file is smaller, <code>genisoimage</code> will write padding. This may take awhile.</dd>
 <dt>
-<dd> The option <code>-stream-media-size</code> creates simple ISO9660 filesystems only and may not used together with multisession or hybrid filesystem options.</p>
-<dt><code>-stream-file-name</code><i> name</i></p>
-<dd> Reserved for future use.</p>
-<dt><code>-sunx86-boot</code><i> UFS_img,,,AUX1_img</i></p>
-<dd> Specifies a comma-separated list of filesystem images that are needed to make a bootable CD for Solaris x86 systems.</p>
+</dt><dd> The option <code>-stream-media-size</code> creates simple ISO9660 filesystems only and may not used together with multisession or hybrid filesystem options.</dd>
+<dt><code>-stream-file-name</code><i> name</i></dt>
+<dd> Reserved for future use.</dd>
+<dt><code>-sunx86-boot</code><i> UFS_img,,,AUX1_img</i></dt>
+<dd> Specifies a comma-separated list of filesystem images that are needed to make a bootable CD for Solaris x86 systems.</dd>
 <dt>
-<dd> Note that partition 1 is used for the ISO9660 image and that partition 2 is the whole disk, so partition 1 and 2 may not be used by external partition data. The first image file is mapped to partition 0. There may be empty fields in the comma-separated list, and list entries for partition 1 and 2 must be empty. The maximum number of supported partitions is 8 (although the Solaris x86 partition table could support up to 16 partitions), so it is impossible to specify more than 6 partition images. This option is required to make a bootable CD for Solaris x86 systems.</p>
+</dt><dd> Note that partition 1 is used for the ISO9660 image and that partition 2 is the whole disk, so partition 1 and 2 may not be used by external partition data. The first image file is mapped to partition 0. There may be empty fields in the comma-separated list, and list entries for partition 1 and 2 must be empty. The maximum number of supported partitions is 8 (although the Solaris x86 partition table could support up to 16 partitions), so it is impossible to specify more than 6 partition images. This option is required to make a bootable CD for Solaris x86 systems.</dd>
 <dt>
-<dd> If <code>-sunx86-boot</code> has been specified, the first sector of the resulting image will contain a PC fdisk label with a Solaris type 0x82 fdisk partition that starts at offset 512 and spans the whole CD. In addition, for the Solaris type 0x82 fdisk partition, there is a SVr4 disk label at offset 1024 in the first sector of the CD. This disk label specifies slice 0 for the first (usually UFS type) filesystem image that is used to boot the PC and slice 1 for the ISO9660 image. Slice 2 spans the whole CD slice 3 &#8230; slice 7 may be used for additional filesystem images that have been specified with this option.</p>
+</dt><dd> If <code>-sunx86-boot</code> has been specified, the first sector of the resulting image will contain a PC fdisk label with a Solaris type 0x82 fdisk partition that starts at offset 512 and spans the whole CD. In addition, for the Solaris type 0x82 fdisk partition, there is a SVr4 disk label at offset 1024 in the first sector of the CD. This disk label specifies slice 0 for the first (usually UFS type) filesystem image that is used to boot the PC and slice 1 for the ISO9660 image. Slice 2 spans the whole CD slice 3 &#8230; slice 7 may be used for additional filesystem images that have been specified with this option.</dd>
 <dt>
-<dd> A Solaris x86 boot CD uses a 1024 byte sized primary boot that uses the <code>El-Torito no-emulation</code> boot mode and a secondary generic boot that is in CD sectors 1..15. For this reason, both <code>-b </code><i>bootimage</i><code> -no-emul-boot</code> and <code>-G</code><i> genboot</i> must be specified.</p>
-<dt><code>-sunx86-label</code><i> label</i></p>
-<dd> Set the SVr4 disk label name for the SVr4 disk label that is created with <code>-sunx86-boot</code>.</p>
-<dt><code>-sysid</code><i> ID</i></p>
-<dd> Specifies the system ID. There is space for 32 characters. Equivalent to <code>SYSI</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-T</code></p>
-<dd> Generate a file <i>TRANS.TBL</i> in each directory on the CD-ROM, which can be used on non-Rock Ridge-capable systems to help establish the correct filenames. There is also information present in the file that indicates the major and minor numbers for block and character devices, and each symlink has the name of the link file given.</p>
-<dt><code>-table-name</code><i> table_name</i></p>
-<dd> Alternative translation table filename (see above). Implies <code>-T</code>. If you are creating a multisession image you must use the same name as in the previous session.</p>
-<dt><code>-ucs-level</code><i> level</i></p>
-<dd> Set Unicode conformance level in the Joliet SVD. The default level is 3. It may be set to 1..3 using this option.</p>
-<dt><code>-udf</code></p>
-<dd> Include UDF filesystem support in the generated filesystem image. UDF support is currently in alpha status and for this reason, it is not possible to create UDF-only images. UDF data structures are currently coupled to the Joliet structures, so there are many pitfalls with the current implementation. There is no UID/GID support, there is no POSIX permission support, there is no support for symlinks. Note that UDF wastes the space from sector ~20 to sector 256 at the beginning of the disc in addition to the space needed for real UDF data structures.</p>
-<dt><code>-uid</code><i> uid</i></p>
-<dd> Overrides the uid read from the source files to the value of <i>uid</i>. Specifying this option automatically enables Rock Ridge extensions.</p>
-<dt><code>-use-fileversion</code></p>
-<dd> The option <code>-use-fileversion</code> allows <code>genisoimage</code> to use file version numbers from the filesystem. If the option is not specified, <code>genisoimage</code> creates a version number of 1 for all files. File versions are strings in the range <i>;1</i> to <i>;32767</i> This option is the default on VMS.</p>
-<dt><code>-U</code></p>
-<dd> Allows &quot;untranslated&quot; filenames, completely violating the ISO9660 standards described above. Enables the following flags: <code>-d -l -N -allow-leading-dots -relaxed-filenames</code> <code>-allow-lowercase -allow-multidot -no-iso-translate</code>. Allows more than one `.&#8217; character in the filename, as well as mixed-case filenames. This is useful on HP-UX, where the built-in <i>cdfs</i> filesystem does not recognize any extensions. Use with extreme caution.</p>
-<dt><code>-no-iso-translate</code></p>
+</dt><dd> A Solaris x86 boot CD uses a 1024 byte sized primary boot that uses the <code>El-Torito no-emulation</code> boot mode and a secondary generic boot that is in CD sectors 1..15. For this reason, both <code>-b </code><i>bootimage</i><code> -no-emul-boot</code> and <code>-G</code><i> genboot</i> must be specified.</dd>
+<dt><code>-sunx86-label</code><i> label</i></dt>
+<dd> Set the SVr4 disk label name for the SVr4 disk label that is created with <code>-sunx86-boot</code>.</dd>
+<dt><code>-sysid</code><i> ID</i></dt>
+<dd> Specifies the system ID. There is space for 32 characters. Equivalent to <code>SYSI</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-T</code></dt>
+<dd> Generate a file <i>TRANS.TBL</i> in each directory on the CD-ROM, which can be used on non-Rock Ridge-capable systems to help establish the correct filenames. There is also information present in the file that indicates the major and minor numbers for block and character devices, and each symlink has the name of the link file given.</dd>
+<dt><code>-table-name</code><i> table_name</i></dt>
+<dd> Alternative translation table filename (see above). Implies <code>-T</code>. If you are creating a multisession image you must use the same name as in the previous session.</dd>
+<dt><code>-ucs-level</code><i> level</i></dt>
+<dd> Set Unicode conformance level in the Joliet SVD. The default level is 3. It may be set to 1..3 using this option.</dd>
+<dt><code>-udf</code></dt>
+<dd> Include UDF filesystem support in the generated filesystem image. UDF support is currently in alpha status and for this reason, it is not possible to create UDF-only images. UDF data structures are currently coupled to the Joliet structures, so there are many pitfalls with the current implementation. There is no UID/GID support, there is no POSIX permission support, there is no support for symlinks. Note that UDF wastes the space from sector ~20 to sector 256 at the beginning of the disc in addition to the space needed for real UDF data structures.</dd>
+<dt><code>-uid</code><i> uid</i></dt>
+<dd> Overrides the uid read from the source files to the value of <i>uid</i>. Specifying this option automatically enables Rock Ridge extensions.</dd>
+<dt><code>-use-fileversion</code></dt>
+<dd> The option <code>-use-fileversion</code> allows <code>genisoimage</code> to use file version numbers from the filesystem. If the option is not specified, <code>genisoimage</code> creates a version number of 1 for all files. File versions are strings in the range <i>;1</i> to <i>;32767</i> This option is the default on VMS.</dd>
+<dt><code>-U</code></dt>
+<dd> Allows &quot;untranslated&quot; filenames, completely violating the ISO9660 standards described above. Enables the following flags: <code>-d -l -N -allow-leading-dots -relaxed-filenames</code> <code>-allow-lowercase -allow-multidot -no-iso-translate</code>. Allows more than one `.&#8217; character in the filename, as well as mixed-case filenames. This is useful on HP-UX, where the built-in <i>cdfs</i> filesystem does not recognize any extensions. Use with extreme caution.</dd>
+<dt><code>-no-iso-translate</code></dt>
 <dd> Do not translate the characters `#&#8217; and `~&#8217; which are invalid for ISO9660 filenames. Although invalid, these characters are often used by Microsoft systems.<br />
- This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</p>
-<dt><code>-V</code><i> volid</i></p>
-<dd> Specifies the volume ID (volume name or label) to be written into the master block. There is space for 32 characters. Equivalent to <code>VOLI</code> in the <i>.genisoimagerc</i> file. The volume ID is used as the mount point by the Solaris volume manager and as a label assigned to a disc on various other platforms such as Windows and Apple Mac OS.</p>
-<dt><code>-volset</code><i> ID</i></p>
-<dd> Specifies the volume set ID. There is space for 128 characters. Equivalent to <code>VOLS</code> in the <i>.genisoimagerc</i> file.</p>
-<dt><code>-volset-size</code><i> #</i></p>
-<dd> Sets the volume set size to #. The volume set size is the number of CDs that are in a CD volume set. A volume set is a collection of one or more volumes, on which a set of files is recorded.</p>
+ This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
+<dt><code>-V</code><i> volid</i></dt>
+<dd> Specifies the volume ID (volume name or label) to be written into the master block. There is space for 32 characters. Equivalent to <code>VOLI</code> in the <i>.genisoimagerc</i> file. The volume ID is used as the mount point by the Solaris volume manager and as a label assigned to a disc on various other platforms such as Windows and Apple Mac OS.</dd>
+<dt><code>-volset</code><i> ID</i></dt>
+<dd> Specifies the volume set ID. There is space for 128 characters. Equivalent to <code>VOLS</code> in the <i>.genisoimagerc</i> file.</dd>
+<dt><code>-volset-size</code><i> #</i></dt>
+<dd> Sets the volume set size to #. The volume set size is the number of CDs that are in a CD volume set. A volume set is a collection of one or more volumes, on which a set of files is recorded.</dd>
 <dt>
-<dd> Volume Sets are not intended to be used to create a set numbered CDs that are part of e.g. a Operation System installation set of CDs. Volume Sets are rather used to record a big directory tree that would not fit on a single volume. Each volume of a Volume Set contains a description of all the directories and files that are recorded on the volumes where the sequence numbers are less than, or equal to, the assigned Volume Set Size of the current volume.</p>
+</dt><dd> Volume Sets are not intended to be used to create a set numbered CDs that are part of e.g. a Operation System installation set of CDs. Volume Sets are rather used to record a big directory tree that would not fit on a single volume. Each volume of a Volume Set contains a description of all the directories and files that are recorded on the volumes where the sequence numbers are less than, or equal to, the assigned Volume Set Size of the current volume.</dd>
 <dt>
-<dd> <code>genisoimage</code> currently does not support a <code>-volset-size</code> that is larger than 1.</p>
+</dt><dd> <code>genisoimage</code> currently does not support a <code>-volset-size</code> that is larger than 1.</dd>
 <dt>
-<dd> The option <code>-volset-size</code> must be specified before <code>-volset-seqno</code> on each command line.</p>
-<dt><code>-volset-seqno</code><i> #</i></p>
-<dd> Sets the volume set sequence number to #. The volume set sequence number is the index number of the current CD in a CD set. The option <code>-volset-size</code> must be specified before <code>-volset-seqno</code> on each command line.</p>
-<dt><code>-v</code></p>
-<dd> Verbose execution. If given twice on the command line, extra debug information will be printed.</p>
-<dt><code>-x</code><i> glob</i></p>
-<dd> Identical to <code>-m</code> <i>glob</i>.</p>
-<dt><code>-z</code></p>
-<dd> Generate special <i>RRIP</i> records for transparently compressed files. This is only of use and interest for hosts that support transparent decompression, such as Linux 2.4.14 or later. You must specify <code>-R</code> or <code>-r</code> to enable Rock Ridge, and generate compressed files using the <code>mkzftree</code> utility before running <code>genisoimage</code>. Note that transparent compression is a nonstandard Rock Ridge extension. The resulting disks are only transparently readable if used on Linux. On other operating systems you will need to call <code>mkzftree</code> by hand to decompress the files.</dl>
+</dt><dd> The option <code>-volset-size</code> must be specified before <code>-volset-seqno</code> on each command line.</dd>
+<dt><code>-volset-seqno</code><i> #</i></dt>
+<dd> Sets the volume set sequence number to #. The volume set sequence number is the index number of the current CD in a CD set. The option <code>-volset-size</code> must be specified before <code>-volset-seqno</code> on each command line.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose execution. If given twice on the command line, extra debug information will be printed.</dd>
+<dt><code>-x</code><i> glob</i></dt>
+<dd> Identical to <code>-m</code> <i>glob</i>.</dd>
+<dt><code>-z</code></dt>
+<dd> Generate special <i>RRIP</i> records for transparently compressed files. This is only of use and interest for hosts that support transparent decompression, such as Linux 2.4.14 or later. You must specify <code>-R</code> or <code>-r</code> to enable Rock Ridge, and generate compressed files using the <code>mkzftree</code> utility before running <code>genisoimage</code>. Note that transparent compression is a nonstandard Rock Ridge extension. The resulting disks are only transparently readable if used on Linux. On other operating systems you will need to call <code>mkzftree</code> by hand to decompress the files.</dd></dl>
 <h2>HFS OPTIONS</h2>
 <dl>
-<dt><code>-hfs</code></p>
-<dd> Create an ISO9660/HFS hybrid CD. This option should be used in conjunction with the <code>-map</code>, <code>-magic</code> and/or the various <i>double dash</i> options given below.</p>
-<dt><code>-apple</code></p>
-<dd> Create an ISO9660 CD with Apple&#8217;s extensions. Similar to <code>-hfs</code>, except that the Apple Extensions to ISO9660 are added instead of creating an HFS hybrid volume. Former <code>genisoimage</code> versions did include Rock Ridge attributes by default if <code>-apple</code> was specified. This versions of <code>genisoimage</code> does not do this anymore. If you like to have Rock Ridge attributes, you need to specify this separately.</p>
-<dt><code>-map</code><i> mapping_file</i></p>
-<dd> Use the <i>mapping_file</i> to set the CREATOR and TYPE information for a file based on the filename&#8217;s extension. A filename is mapped only if it is not one of the know Apple/Unix file formats. See the <code>HFS CREATOR/TYPE</code> section below.</p>
-<dt><code>-magic</code><i> magic_file</i></p>
-<dd> The CREATOR and TYPE information is set by using a file&#8217;s <i>magic number</i> (usually the first few bytes of a file). The <i>magic_file</i> is only used if a file is not one of the known Apple/Unix file formats, or the filename extension has not been mapped using <code>-map</code>. See the <code>HFS CREATOR/TYPE</code> section below for more details.</p>
-<dt><code>-hfs-creator</code><i> creator</i></p>
-<dd> Set the default CREATOR for all files. Must be exactly 4 characters. See the <code>HFS CREATOR/TYPE</code> section below for more details.</p>
-<dt><code>-hfs-type</code><i> type</i></p>
-<dd> Set the default TYPE for all files. Must be exactly 4 characters. See the <code>HFS CREATOR/TYPE</code> section below for more details.</p>
-<dt><code>-probe</code></p>
-<dd> Search the contents of files for all the known Apple/Unix file formats. See the <code>HFS MACINTOSH FILE FORMATS</code> section below for more about these formats. However, the only way to check for <i>MacBinary</i> and <i>AppleSingle</i> files is to open and read them, so this option may increase processing time. It is better to use one or more <i>double dash</i> options given below if the Apple/Unix formats in use are known.</p>
-<dt><code>-no-desktop</code></p>
-<dd> Do not create (empty) Desktop files. New HFS Desktop files will be created when the CD is used on a Macintosh (and stored in the System Folder). By default, empty Desktop files are added to the HFS volume.</p>
-<dt><code>-mac-name</code></p>
-<dd> Use the HFS filename as the starting point for the ISO9660, Joliet and Rock Ridge filenames. See the <code>HFS MACINTOSH FILENAMES</code> section below for more information.</p>
-<dt><code>-boot-hfs-file</code><i> driver_file</i></p>
-<dd> Installs the <i>driver_file</i> that <i>may</i> make the CD bootable on a Macintosh. See the <code>HFS BOOT DRIVER</code> section below. (Alpha).</p>
-<dt><code>-part</code></p>
-<dd> Generate an HFS partition table. By default, no partition table is generated, but some older Macintosh CD-ROM drivers need an HFS partition table on the CD-ROM to be able to recognize a hybrid CD-ROM.</p>
-<dt><code>-auto</code><i> AutoStart_file</i></p>
-<dd> Make the HFS CD use the QuickTime 2.0 Autostart feature to launch an application or document. The given filename must be the name of a document or application located at the top level of the CD. The filename must be less than 12 characters. (Alpha).</p>
-<dt><code>-cluster-size</code><i> size</i></p>
-<dd> Set the size in bytes of the cluster or allocation units of PC Exchange files. Implies <code>&#8211;exchange</code>. See the <code>HFS MACINTOSH FILE FORMATS</code> section below.</p>
-<dt><code>-hide-hfs</code><i> glob</i></p>
-<dd> Hide <i>glob</i>, a shell wildcard pattern, from the HFS volume. The file or directory will still exist in the ISO9660 and/or Joliet directory. <i>glob</i> may match any part of the filename. Multiple globs may be excluded. Example: </p>
+<dt><code>-hfs</code></dt>
+<dd> Create an ISO9660/HFS hybrid CD. This option should be used in conjunction with the <code>-map</code>, <code>-magic</code> and/or the various <i>double dash</i> options given below.</dd>
+<dt><code>-apple</code></dt>
+<dd> Create an ISO9660 CD with Apple&#8217;s extensions. Similar to <code>-hfs</code>, except that the Apple Extensions to ISO9660 are added instead of creating an HFS hybrid volume. Former <code>genisoimage</code> versions did include Rock Ridge attributes by default if <code>-apple</code> was specified. This versions of <code>genisoimage</code> does not do this anymore. If you like to have Rock Ridge attributes, you need to specify this separately.</dd>
+<dt><code>-map</code><i> mapping_file</i></dt>
+<dd> Use the <i>mapping_file</i> to set the CREATOR and TYPE information for a file based on the filename&#8217;s extension. A filename is mapped only if it is not one of the know Apple/Unix file formats. See the <code>HFS CREATOR/TYPE</code> section below.</dd>
+<dt><code>-magic</code><i> magic_file</i></dt>
+<dd> The CREATOR and TYPE information is set by using a file&#8217;s <i>magic number</i> (usually the first few bytes of a file). The <i>magic_file</i> is only used if a file is not one of the known Apple/Unix file formats, or the filename extension has not been mapped using <code>-map</code>. See the <code>HFS CREATOR/TYPE</code> section below for more details.</dd>
+<dt><code>-hfs-creator</code><i> creator</i></dt>
+<dd> Set the default CREATOR for all files. Must be exactly 4 characters. See the <code>HFS CREATOR/TYPE</code> section below for more details.</dd>
+<dt><code>-hfs-type</code><i> type</i></dt>
+<dd> Set the default TYPE for all files. Must be exactly 4 characters. See the <code>HFS CREATOR/TYPE</code> section below for more details.</dd>
+<dt><code>-probe</code></dt>
+<dd> Search the contents of files for all the known Apple/Unix file formats. See the <code>HFS MACINTOSH FILE FORMATS</code> section below for more about these formats. However, the only way to check for <i>MacBinary</i> and <i>AppleSingle</i> files is to open and read them, so this option may increase processing time. It is better to use one or more <i>double dash</i> options given below if the Apple/Unix formats in use are known.</dd>
+<dt><code>-no-desktop</code></dt>
+<dd> Do not create (empty) Desktop files. New HFS Desktop files will be created when the CD is used on a Macintosh (and stored in the System Folder). By default, empty Desktop files are added to the HFS volume.</dd>
+<dt><code>-mac-name</code></dt>
+<dd> Use the HFS filename as the starting point for the ISO9660, Joliet and Rock Ridge filenames. See the <code>HFS MACINTOSH FILENAMES</code> section below for more information.</dd>
+<dt><code>-boot-hfs-file</code><i> driver_file</i></dt>
+<dd> Installs the <i>driver_file</i> that <i>may</i> make the CD bootable on a Macintosh. See the <code>HFS BOOT DRIVER</code> section below. (Alpha).</dd>
+<dt><code>-part</code></dt>
+<dd> Generate an HFS partition table. By default, no partition table is generated, but some older Macintosh CD-ROM drivers need an HFS partition table on the CD-ROM to be able to recognize a hybrid CD-ROM.</dd>
+<dt><code>-auto</code><i> AutoStart_file</i></dt>
+<dd> Make the HFS CD use the QuickTime 2.0 Autostart feature to launch an application or document. The given filename must be the name of a document or application located at the top level of the CD. The filename must be less than 12 characters. (Alpha).</dd>
+<dt><code>-cluster-size</code><i> size</i></dt>
+<dd> Set the size in bytes of the cluster or allocation units of PC Exchange files. Implies <code>&#8211;exchange</code>. See the <code>HFS MACINTOSH FILE FORMATS</code> section below.</dd>
+<dt><code>-hide-hfs</code><i> glob</i></dt>
+<dd> Hide <i>glob</i>, a shell wildcard pattern, from the HFS volume. The file or directory will still exist in the ISO9660 and/or Joliet directory. <i>glob</i> may match any part of the filename. Multiple globs may be excluded. Example: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;genisoimage -o rom -hfs -hide-hfs&nbsp;&#8216;*.o&#8217;&nbsp;-hide-hfs foobar </p>
 <p> would exclude all files ending in `.o&#8217; or called <i>foobar</i> from the HFS volume. Note that if you had a directory called <i>foobar</i>, it too (and of course all its descendants) would be excluded. The <i>glob</i> can also be a path name relative to the source directories given on the command line. Example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;genisoimage -o rom -hfs -hide-hfs src/html src </p>
 <p> would exclude just the file or directory called <i>html</i> from the <i>src</i> directory. Any other file or directory called <i>html</i> in the tree will not be excluded. Should be used with <code>-hide</code> and/or <code>-hide-joliet</code>. In order to match a directory name, make sure the pattern does not include a trailing `/&#8217; character. See <i>README.hide</i> for more details.</p>
-<dt><code>-hide-hfs-list</code><i> file</i></p>
-<dd> Specify a file containing a list of wildcard patterns to be hidden as in <code>-hide-hfs</code>.</p>
-<dt><code>-hfs-volid</code><i> hfs_volid</i></p>
-<dd> Volume name for the HFS partition. This is the name that is assigned to the disc on a Macintosh and replaces the <i>volid</i> used with <code>-V</code>.</p>
-<dt><code>-icon-position</code></p>
-<dd> Use the icon position information, if it exists, from the Apple/Unix file. The icons will appear in the same position as they would on a Macintosh desktop. Folder location and size on screen, its scroll positions, folder View (view as Icons, Small Icons, etc.) are also preserved. (Alpha).</p>
-<dt><code>-root-info</code><i> file</i></p>
-<dd> Set the location, size on screen, scroll positions, folder View etc. for the root folder of an HFS volume. See <i>README.rootinfo</i> for more information. (Alpha)</p>
-<dt><code>-prep-boot</code><i> file</i></p>
-<dd> PReP boot image file. Up to 4 are allowed. See <i>README.prep_boot</i> for more information. (Alpha)</p>
-<dt><code>-chrp-boot</code></p>
-<dd> Add CHRP boot header.</p>
-<dt><code>-input-hfs-charset</code><i> charset</i></p>
-<dd> Input charset that defines the characters used in HFS filenames when used with <code>-mac-name</code>. The default charset is <i>cp10000</i> (Mac Roman). See the <code>CHARACTER SETS</code> and <code>HFS MACINTOSH FILENAMES</code> sections below for more details.</p>
-<dt><code>-output-hfs-charset</code><i> charset</i></p>
-<dd> Output charset that defines the characters that will be used in the HFS filenames. Defaults to the input charset. See the <code>CHARACTER SETS</code> section below for more details.</p>
-<dt><code>-hfs-unlock</code></p>
-<dd> By default, <code>genisoimage</code> will create an HFS volume that is locked. This option leaves the volume unlocked so that other applications (e.g. <code>hfsutils</code>) can modify the volume. See the <code>HFS PROBLEMS/LIMITATIONS</code> section below for warnings about using this option.</p>
-<dt><code>-hfs-bless</code><i> folder_name</i></p>
-<dd> &quot;Bless&quot; the given directory (folder). This is usually the <i>System Folder</i> and is used in creating HFS bootable CDs. The name of the directory must be the whole path name as <code>genisoimage</code> sees it. E.g., if the given pathspec is <i>./cddata</i> and the required folder is called <i>System Folder</i>, the whole path name is <i>&quot;/cddata/System Folder&quot;</i> (remember to use quotes if the name contains spaces).</p>
-<dt><code>-hfs-parms</code><i> parameters</i></p>
-<dd> Override certain parameters used to create the HFS filesystem. Unlikely to be used in normal circumstances. See the <i>libhfs_iso/hybrid.h</i> source file for details.</p>
-<dt><code>&#8211;cap</code></p>
-<dd> Look for AUFS CAP Macintosh files. Search for CAP Apple/Unix file formats only. Searching for the other possible Apple/Unix file formats is disabled, unless other <i>double dash</i> options are given.</p>
-<dt><code>&#8211;netatalk</code></p>
-<dd> Look for NETATALK Macintosh files</p>
-<dt><code>&#8211;double</code></p>
-<dd> Look for AppleDouble Macintosh files</p>
-<dt><code>&#8211;ethershare</code></p>
-<dd> Look for Helios EtherShare Macintosh files</p>
-<dt><code>&#8211;ushare</code></p>
-<dd> Look for IPT UShare Macintosh files</p>
-<dt><code>&#8211;exchange</code></p>
-<dd> Look for PC Exchange Macintosh files</p>
-<dt><code>&#8211;sgi</code></p>
-<dd> Look for SGI Macintosh files</p>
-<dt><code>&#8211;xinet</code></p>
-<dd> Look for XINET Macintosh files</p>
-<dt><code>&#8211;macbin</code></p>
-<dd> Look for MacBinary Macintosh files</p>
-<dt><code>&#8211;single</code></p>
-<dd> Look for AppleSingle Macintosh files</p>
-<dt><code>&#8211;dave</code></p>
-<dd> Look for Thursby Software Systems DAVE Macintosh files</p>
-<dt><code>&#8211;sfm</code></p>
-<dd> Look for Microsoft&#8217;s Services for Macintosh files (NT only) (Alpha)</p>
-<dt><code>&#8211;osx-double</code></p>
-<dd> Look for Mac OS X AppleDouble Macintosh files</p>
-<dt><code>&#8211;osx-hfs</code></p>
-<dd> Look for Mac OS X HFS Macintosh files</dl>
+<dt><code>-hide-hfs-list</code><i> file</i></dt>
+<dd> Specify a file containing a list of wildcard patterns to be hidden as in <code>-hide-hfs</code>.</dd>
+<dt><code>-hfs-volid</code><i> hfs_volid</i></dt>
+<dd> Volume name for the HFS partition. This is the name that is assigned to the disc on a Macintosh and replaces the <i>volid</i> used with <code>-V</code>.</dd>
+<dt><code>-icon-position</code></dt>
+<dd> Use the icon position information, if it exists, from the Apple/Unix file. The icons will appear in the same position as they would on a Macintosh desktop. Folder location and size on screen, its scroll positions, folder View (view as Icons, Small Icons, etc.) are also preserved. (Alpha).</dd>
+<dt><code>-root-info</code><i> file</i></dt>
+<dd> Set the location, size on screen, scroll positions, folder View etc. for the root folder of an HFS volume. See <i>README.rootinfo</i> for more information. (Alpha)</dd>
+<dt><code>-prep-boot</code><i> file</i></dt>
+<dd> PReP boot image file. Up to 4 are allowed. See <i>README.prep_boot</i> for more information. (Alpha)</dd>
+<dt><code>-chrp-boot</code></dt>
+<dd> Add CHRP boot header.</dd>
+<dt><code>-input-hfs-charset</code><i> charset</i></dt>
+<dd> Input charset that defines the characters used in HFS filenames when used with <code>-mac-name</code>. The default charset is <i>cp10000</i> (Mac Roman). See the <code>CHARACTER SETS</code> and <code>HFS MACINTOSH FILENAMES</code> sections below for more details.</dd>
+<dt><code>-output-hfs-charset</code><i> charset</i></dt>
+<dd> Output charset that defines the characters that will be used in the HFS filenames. Defaults to the input charset. See the <code>CHARACTER SETS</code> section below for more details.</dd>
+<dt><code>-hfs-unlock</code></dt>
+<dd> By default, <code>genisoimage</code> will create an HFS volume that is locked. This option leaves the volume unlocked so that other applications (e.g. <code>hfsutils</code>) can modify the volume. See the <code>HFS PROBLEMS/LIMITATIONS</code> section below for warnings about using this option.</dd>
+<dt><code>-hfs-bless</code><i> folder_name</i></dt>
+<dd> &quot;Bless&quot; the given directory (folder). This is usually the <i>System Folder</i> and is used in creating HFS bootable CDs. The name of the directory must be the whole path name as <code>genisoimage</code> sees it. E.g., if the given pathspec is <i>./cddata</i> and the required folder is called <i>System Folder</i>, the whole path name is <i>&quot;/cddata/System Folder&quot;</i> (remember to use quotes if the name contains spaces).</dd>
+<dt><code>-hfs-parms</code><i> parameters</i></dt>
+<dd> Override certain parameters used to create the HFS filesystem. Unlikely to be used in normal circumstances. See the <i>libhfs_iso/hybrid.h</i> source file for details.</dd>
+<dt><code>&#8211;cap</code></dt>
+<dd> Look for AUFS CAP Macintosh files. Search for CAP Apple/Unix file formats only. Searching for the other possible Apple/Unix file formats is disabled, unless other <i>double dash</i> options are given.</dd>
+<dt><code>&#8211;netatalk</code></dt>
+<dd> Look for NETATALK Macintosh files</dd>
+<dt><code>&#8211;double</code></dt>
+<dd> Look for AppleDouble Macintosh files</dd>
+<dt><code>&#8211;ethershare</code></dt>
+<dd> Look for Helios EtherShare Macintosh files</dd>
+<dt><code>&#8211;ushare</code></dt>
+<dd> Look for IPT UShare Macintosh files</dd>
+<dt><code>&#8211;exchange</code></dt>
+<dd> Look for PC Exchange Macintosh files</dd>
+<dt><code>&#8211;sgi</code></dt>
+<dd> Look for SGI Macintosh files</dd>
+<dt><code>&#8211;xinet</code></dt>
+<dd> Look for XINET Macintosh files</dd>
+<dt><code>&#8211;macbin</code></dt>
+<dd> Look for MacBinary Macintosh files</dd>
+<dt><code>&#8211;single</code></dt>
+<dd> Look for AppleSingle Macintosh files</dd>
+<dt><code>&#8211;dave</code></dt>
+<dd> Look for Thursby Software Systems DAVE Macintosh files</dd>
+<dt><code>&#8211;sfm</code></dt>
+<dd> Look for Microsoft&#8217;s Services for Macintosh files (NT only) (Alpha)</dd>
+<dt><code>&#8211;osx-double</code></dt>
+<dd> Look for Mac OS X AppleDouble Macintosh files</dd>
+<dt><code>&#8211;osx-hfs</code></dt>
+<dd> Look for Mac OS X HFS Macintosh files</dd></dl>
 <h2>CHARACTER SETS</h2>
 <p> <code>genisoimage</code> processes filenames in a POSIX-compliant way as strings of 8-bit characters. To represent all codings for all languages, 8-bit characters are not sufficient. Unicode or ISO-10646 define character codings that need at least 21 bits to represent all known languages. They may be represented with <i>UTF-32</i>, <i>UTF-16</i> or <i>UTF-8</i> coding. UTF-32 uses a plain 32-bit coding but seems to be uncommon. UTF-16 is used by Microsoft with Win32 with the disadvantage that 16-bit characters are not compliant with the POSIX filesystem interface. </p>
 <p> Modern Unix operating systems may use UTF-8 coding for filenames. Each 32-bit character is represented by one or more 8-bit characters. If a character is coded in <i>ISO-8859-1</i> (used in Central Europe and North America) is maps 1:1 to a UTF-32 or UTF-16 coded Unicode character. If a character is coded in <i>7-Bit ASCII</i> (used in USA and other countries with limited character set) is maps 1:1 to a UTF-32, UTF-16 or UTF-8 coded Unicode character. Character codes that cannot be represented as a single byte in UTF-8 (if the value is &gt; 0x7F) use escape sequences that map to more than one 8-bit character. </p>
@@ -429,22 +429,22 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> As long as not all operating systems and applications use the same character set as the basis for filenames, it may be necessary to specify which character set your filenames use in and which character set the filenames should appear on the CD. </p>
 <p> There are four options to specify the character sets you want to use:</p>
 <dl>
-<dt><code>-input-charset</code></p>
-<dd> Defines the local character set you are using on your host machine. Any character set conversions that take place will use this character set as the starting point. The default input character sets are <i>cp437</i> on MS-DOS-based systems and <i>iso8859-1</i> on all other systems. If <code>-J</code> is given, the Unicode equivalents of the input character set will be used in the Joliet directory. <code>-jcharset</code> is the same as <code>-input-charset -J</code>.</p>
-<dt><code>-output-charset</code></p>
-<dd> Defines the character set that will be used with for the Rock Ridge names on the CD. Defaults to the input character set.</p>
-<dt><code>-input-hfs-charset</code></p>
-<dd> Defines the HFS character set used for HFS filenames decoded from any of the various Apple/Unix file formats. Only useful when used with <code>-mac-name</code>. See the <code>HFS MACINTOSH FILENAMES</code> for more information. Defaults to <i>cp10000</i> (Mac Roman).</p>
-<dt><code>-output-hfs-charset</code></p>
-<dd> Defines the HFS character set used to create HFS filenames from the input character set in use. In most cases this will be from the character set given with <code>-input-charset</code>. Defaults to the input HFS character set.</dl>
+<dt><code>-input-charset</code></dt>
+<dd> Defines the local character set you are using on your host machine. Any character set conversions that take place will use this character set as the starting point. The default input character sets are <i>cp437</i> on MS-DOS-based systems and <i>iso8859-1</i> on all other systems. If <code>-J</code> is given, the Unicode equivalents of the input character set will be used in the Joliet directory. <code>-jcharset</code> is the same as <code>-input-charset -J</code>.</dd>
+<dt><code>-output-charset</code></dt>
+<dd> Defines the character set that will be used with for the Rock Ridge names on the CD. Defaults to the input character set.</dd>
+<dt><code>-input-hfs-charset</code></dt>
+<dd> Defines the HFS character set used for HFS filenames decoded from any of the various Apple/Unix file formats. Only useful when used with <code>-mac-name</code>. See the <code>HFS MACINTOSH FILENAMES</code> for more information. Defaults to <i>cp10000</i> (Mac Roman).</dd>
+<dt><code>-output-hfs-charset</code></dt>
+<dd> Defines the HFS character set used to create HFS filenames from the input character set in use. In most cases this will be from the character set given with <code>-input-charset</code>. Defaults to the input HFS character set.</dd></dl>
 <p> There are a number of character sets built in to <code>genisoimage</code>. To get a listing, use <code>-input-charset help</code>. This list doesn&#8217;t include the charset derived from the current locale, if <code>genisoimage</code> is built with <i>iconv</i> support. </p>
 <p> Additional character sets can be read from file for any of the character set options by giving a filename as the argument to the options. The given file will only be read if its name does not match one of the built-in character sets. </p>
 <p> The format of the character set files is the same as the mapping files available from <i><a rel="nofollow" href="http://www.unicode.org/Public/MAPPINGS">http://www.unicode.org/Public/MAPPINGS</a></i>. This format is:</p>
 <dl>
 <dt>
-<dd> Column #1 is the input byte code (in hex as 0xXX)<br />
+</dt><dd> Column #1 is the input byte code (in hex as 0xXX)<br />
  Column #2 is the Unicode (in hex as 0xXXXX)<br />
- The rest of the line is ignored.</dl>
+ The rest of the line is ignored.</dd></dl>
 <p> Any blank line, line without two (or more) columns in the above format or comments lines (starting with the # character) are ignored without any warnings. Any missing input code is mapped to Unicode character 0x0000. </p>
 <p> Note that, while UTF-8 is supported, other Unicode encodings such as UCS-2/UTF-16 and UCS-4/UTF-32 are not, as POSIX operating systems cannot handle them natively. </p>
 <p> A 1:1 character set mapping can be defined by using the keyword <i>default</i> as the argument to any of the character set options. This is the behaviour of old versions of <code>mkisofs</code>. </p>
@@ -516,13 +516,13 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> Where:</p>
 <dl>
 <dt>
-<dd> The first column <i>EXTN</i> defines the Unix filename extension to be mapped. The default mapping for any filename extension that doesn&#8217;t match is defined with the `*&#8217; character.</p>
+</dt><dd> The first column <i>EXTN</i> defines the Unix filename extension to be mapped. The default mapping for any filename extension that doesn&#8217;t match is defined with the `*&#8217; character.</dd>
 <dt>
-<dd> The <i>Xlate</i> column defines the type of text translation between the Unix and Macintosh file it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code>aufs</code>(1). Although <code>genisoimage</code> does not alter the contents of a file, if a binary file has its TYPE set as <i>TEXT</i>, it <i>may</i> be read incorrectly on a Macintosh. Therefore a better choice for the default TYPE may be <i>????</i>.</p>
+</dt><dd> The <i>Xlate</i> column defines the type of text translation between the Unix and Macintosh file it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code>aufs</code>(1). Although <code>genisoimage</code> does not alter the contents of a file, if a binary file has its TYPE set as <i>TEXT</i>, it <i>may</i> be read incorrectly on a Macintosh. Therefore a better choice for the default TYPE may be <i>????</i>.</dd>
 <dt>
-<dd> The <i>CREATOR</i> and <i>TYPE</i> keywords must be 4 characters long and enclosed in single quotes.</p>
+</dt><dd> The <i>CREATOR</i> and <i>TYPE</i> keywords must be 4 characters long and enclosed in single quotes.</dd>
 <dt>
-<dd> The comment field is enclosed in double quotes &#8212; it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code>aufs</code>.</dl>
+</dt><dd> The comment field is enclosed in double quotes &#8212; it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code>aufs</code>.</dd></dl>
 <p> The format of the <i>magic</i> file is almost identical to the <code><a href="/docs/linux/man/5-magic/">magic</a></code>(5) file used by the <code><a href="/docs/linux/man/1-file/">file</a></code>(1) command. </p>
 <p> This file has four tab-separated columns for the <i>byte offset</i>, <i>type</i>, <i>test</i> and <i>message</i>. Lines starting with the `#&#8217; character are comment lines and are ignored. An example file would be like: </p>
 <table>
@@ -617,44 +617,44 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> Therefore to store a Macintosh file on a Unix filesystem, a way has to be found to cope with the two forks and the extra attributes (which are referred to as the <i>Finder info</i>). Unfortunately, it seems that every software package that stores Macintosh files on Unix has chosen a completely different storage method. </p>
 <p> The Apple/Unix formats that <code>genisoimage</code> (partially) supports are:</p>
 <dl>
-<dt>CAP AUFS format</p>
-<dd> Data fork stored in a file. Resource fork in subdirectory <i>.resource</i> with same filename as data fork. Finder info in subdirectory <i>.finderinfo</i> with same filename.</p>
-<dt>AppleDouble/Netatalk</p>
-<dd> Data fork stored in a file. Resource fork stored in a file with same name prefixed with `%&#8217;. Finder info also stored in same `%&#8217; file. Netatalk uses the same format, but the resource fork/Finder info stored in subdirectory <i>.AppleDouble</i> with same filename as data fork.</p>
-<dt>AppleSingle</p>
-<dd> Data structures similar to above, except both forks and Finder info are stored in one file.</p>
-<dt>Helios EtherShare</p>
-<dd> Data fork stored in a file. Resource fork and Finder info together in subdirectory <i>.rsrc</i> with same filename as data fork.</p>
-<dt>IPT UShare</p>
-<dd> Like the EtherShare format, but the Finder info is stored slightly differently.</p>
-<dt>MacBinary</p>
-<dd> Both forks and Finder info stored in one file.</p>
-<dt>Apple PC Exchange</p>
-<dd> Used by Macintoshes to store Apple files on DOS (FAT) disks. Data fork stored in a file. Resource fork in subdirectory <i>resource.frk</i> (or <i>RESOURCE.FRK</i>). Finder info as one record in file <i>finder.dat</i> (or <i>FINDER.DAT</i>). Separate <i>finder.dat</i> for each data fork directory.</p>
+<dt>CAP AUFS format</dt>
+<dd> Data fork stored in a file. Resource fork in subdirectory <i>.resource</i> with same filename as data fork. Finder info in subdirectory <i>.finderinfo</i> with same filename.</dd>
+<dt>AppleDouble/Netatalk</dt>
+<dd> Data fork stored in a file. Resource fork stored in a file with same name prefixed with `%&#8217;. Finder info also stored in same `%&#8217; file. Netatalk uses the same format, but the resource fork/Finder info stored in subdirectory <i>.AppleDouble</i> with same filename as data fork.</dd>
+<dt>AppleSingle</dt>
+<dd> Data structures similar to above, except both forks and Finder info are stored in one file.</dd>
+<dt>Helios EtherShare</dt>
+<dd> Data fork stored in a file. Resource fork and Finder info together in subdirectory <i>.rsrc</i> with same filename as data fork.</dd>
+<dt>IPT UShare</dt>
+<dd> Like the EtherShare format, but the Finder info is stored slightly differently.</dd>
+<dt>MacBinary</dt>
+<dd> Both forks and Finder info stored in one file.</dd>
+<dt>Apple PC Exchange</dt>
+<dd> Used by Macintoshes to store Apple files on DOS (FAT) disks. Data fork stored in a file. Resource fork in subdirectory <i>resource.frk</i> (or <i>RESOURCE.FRK</i>). Finder info as one record in file <i>finder.dat</i> (or <i>FINDER.DAT</i>). Separate <i>finder.dat</i> for each data fork directory.</dd>
 <dt>
-<dd> Note: <code>genisoimage</code> needs to know the native FAT cluster size of the disk that the PC Exchange files are on (or have been copied from). This size is given by <code>-cluster-size</code>. The cluster or allocation size can be found by using the DOS utility <code>chkdsk</code>.</p>
+</dt><dd> Note: <code>genisoimage</code> needs to know the native FAT cluster size of the disk that the PC Exchange files are on (or have been copied from). This size is given by <code>-cluster-size</code>. The cluster or allocation size can be found by using the DOS utility <code>chkdsk</code>.</dd>
 <dt>
-<dd> May not work with PC Exchange v2.2 or higher files (available with MacOS 8.1). DOS media containing PC Exchange files should be mounted as type <i>msdos</i> (not <i>vfat</i>) when using Linux.</p>
-<dt>SGI/XINET</p>
-<dd> Used by SGI machines when they mount HFS disks. Data fork stored in a file. Resource fork in subdirectory <i>.HSResource</i> with same filename. Finder info as one record in file <i>.HSancillary</i>. Separate <i>.HSancillary</i> for each data fork directory.</p>
-<dt>Thursby Software Systems DAVE</p>
-<dd> Allows Macintoshes to store Apple files on SMB servers. Data fork stored in a file. Resource fork in subdirectory <i>resource.frk</i>. Uses the AppleDouble format to store resource fork.</p>
-<dt>Services for Macintosh</p>
-<dd> Format of files stored by NT Servers on NTFS filesystems. Data fork is stored as <i>filename</i>. Resource fork stored as a NTFS stream called <i>filename:AFP_Resource</i>. The Finder info is stored as a NTFS stream called <i>filename:Afp_AfpInfo</i>. NTFS streams are normally invisible to the user.</p>
+</dt><dd> May not work with PC Exchange v2.2 or higher files (available with MacOS 8.1). DOS media containing PC Exchange files should be mounted as type <i>msdos</i> (not <i>vfat</i>) when using Linux.</dd>
+<dt>SGI/XINET</dt>
+<dd> Used by SGI machines when they mount HFS disks. Data fork stored in a file. Resource fork in subdirectory <i>.HSResource</i> with same filename. Finder info as one record in file <i>.HSancillary</i>. Separate <i>.HSancillary</i> for each data fork directory.</dd>
+<dt>Thursby Software Systems DAVE</dt>
+<dd> Allows Macintoshes to store Apple files on SMB servers. Data fork stored in a file. Resource fork in subdirectory <i>resource.frk</i>. Uses the AppleDouble format to store resource fork.</dd>
+<dt>Services for Macintosh</dt>
+<dd> Format of files stored by NT Servers on NTFS filesystems. Data fork is stored as <i>filename</i>. Resource fork stored as a NTFS stream called <i>filename:AFP_Resource</i>. The Finder info is stored as a NTFS stream called <i>filename:Afp_AfpInfo</i>. NTFS streams are normally invisible to the user.</dd>
 <dt>
-<dd> Warning: <code>genisoimage</code> only partially supports the SFM format. If an HFS file or folder stored on the NT server contains an illegal NT character in its name, NT converts these characters to <i>Private Use Unicode</i> characters. The characters are: &quot; * / &lt; &gt; ? \ | and a space or period if it is the last character of the filename, character codes 0x01 to 0x1f (control characters) and Apple&#8217;s apple logo.</p>
+</dt><dd> Warning: <code>genisoimage</code> only partially supports the SFM format. If an HFS file or folder stored on the NT server contains an illegal NT character in its name, NT converts these characters to <i>Private Use Unicode</i> characters. The characters are: &quot; * / &lt; &gt; ? \ | and a space or period if it is the last character of the filename, character codes 0x01 to 0x1f (control characters) and Apple&#8217;s apple logo.</dd>
 <dt>
-<dd> Unfortunately, these private Unicode characters are not readable by the <code>genisoimage</code> NT executable. Therefore any file or directory name containing these characters will be ignored &#8212; including the contents of any such directory.</p>
-<dt>Mac OS X AppleDouble</p>
-<dd> When HFS/HFS+ files are copied or saved by Mac OS X on to a non-HFS filesystem (e.g. UFS, NFS etc.), the files are stored in AppleDouble format. Data fork stored in a file. Resource fork stored in a file with same name prefixed with `._&#8217;. Finder info also stored in same `._&#8217; file.</p>
-<dt>Mac OS X HFS (Alpha)</p>
-<dd> Not really an Apple/Unix encoding, but actual HFS/HFS+ files on a Mac OS X system. Data fork stored in a file. Resource fork stored in a pseudo file with the same name with the suffix <i>/rsrc</i>. The Finder info is only available via a Mac OS X library call.</p>
+</dt><dd> Unfortunately, these private Unicode characters are not readable by the <code>genisoimage</code> NT executable. Therefore any file or directory name containing these characters will be ignored &#8212; including the contents of any such directory.</dd>
+<dt>Mac OS X AppleDouble</dt>
+<dd> When HFS/HFS+ files are copied or saved by Mac OS X on to a non-HFS filesystem (e.g. UFS, NFS etc.), the files are stored in AppleDouble format. Data fork stored in a file. Resource fork stored in a file with same name prefixed with `._&#8217;. Finder info also stored in same `._&#8217; file.</dd>
+<dt>Mac OS X HFS (Alpha)</dt>
+<dd> Not really an Apple/Unix encoding, but actual HFS/HFS+ files on a Mac OS X system. Data fork stored in a file. Resource fork stored in a pseudo file with the same name with the suffix <i>/rsrc</i>. The Finder info is only available via a Mac OS X library call.</dd>
 <dt>
-<dd> See also <i>README.macosx</i>.</p>
+</dt><dd> See also <i>README.macosx</i>.</dd>
 <dt>
-<dd> Only works when used on Mac OS X.</p>
+</dt><dd> Only works when used on Mac OS X.</dd>
 <dt>
-<dd> If a file is found with a zero length resource fork and empty finderinfo, it is assumed not to have any Apple/Unix encoding &#8212; therefore a TYPE and CREATOR can be set using other methods.</dl>
+</dt><dd> If a file is found with a zero length resource fork and empty finderinfo, it is assumed not to have any Apple/Unix encoding &#8212; therefore a TYPE and CREATOR can be set using other methods.</dd></dl>
 <p> <code>genisoimage</code> will attempt to set the CREATOR, TYPE, date and possibly other flags from the finder info. Additionally, if it exists, the Macintosh filename is set from the finder info, otherwise the Macintosh name is based on the Unix filename &#8212; see the <code>HFS MACINTOSH FILENAMES</code> section below. </p>
 <p> When using <code>-apple</code>, the TYPE and CREATOR are stored in the optional System Use or <i>SUSP</i> field in the ISO9660 Directory Record &#8212; in much the same way as the Rock Ridge attributes are. In fact to make life easy, the Apple extensions are added at the beginning of the existing Rock Ridge attributes (i.e., to get the Apple extensions you get the Rock Ridge extensions as well). </p>
 <p> The Apple extensions require the resource fork to be stored as an ISO9660 <i>associated</i> file. This is just like any normal file stored in the ISO9660 filesystem except that the associated file flag is set in the Directory Record (bit 2). This file has the same name as the data fork (the file seen by non-Apple machines). Associated files are normally ignored by other OSs </p>
@@ -706,21 +706,21 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> Probably the easiest way to create a custom icon that <code>genisoimage</code> can use is to format a blank HFS floppy disk on a Mac and paste an icon to its &quot;Get Info&quot; box. If using Linux with the HFS module installed, mount the floppy:</p>
 <dl>
 <dt>
-<dd> mount -t hfs /dev/fd0 /mnt/floppy</dl>
+</dt><dd> mount -t hfs /dev/fd0 /mnt/floppy</dd></dl>
 <p> The floppy will be mounted as a CAP filesystem by default. Then run <code>genisoimage</code> using something like:</p>
 <dl>
 <dt>
-<dd> genisoimage &#8211;cap -o output source_dir /mnt/floppy</dl>
+</dt><dd> genisoimage &#8211;cap -o output source_dir /mnt/floppy</dd></dl>
 <p> If you are not using Linux, you can use <code>hfsutils</code> to copy the icon file from the floppy. However, care has to be taken, as the icon file contains a control character. For example:</p>
 <dl>
 <dt>
-<dd> hmount /dev/fd0<br />
+</dt><dd> hmount /dev/fd0<br />
  hdir -a<br />
- hcopy -m Icon^V^M icon_dir/icon</dl>
+ hcopy -m Icon^V^M icon_dir/icon</dd></dl>
 <p> Where `^V^M&#8217; is control-V followed by control-M. Then run <code>genisoimage</code> by using something like:</p>
 <dl>
 <dt>
-<dd> genisoimage &#8211;macbin -o output source_dir icon_dir</dl>
+</dt><dd> genisoimage &#8211;macbin -o output source_dir icon_dir</dd></dl>
 <p> The procedure for creating/using custom folder icons is very similar &#8212; paste an icon to folder&#8217;s &quot;Get Info&quot; box and transfer the resulting <i>Icon
 </i> file to the relevant directory in the <code>genisoimage</code> source tree. </p>
 <p> You may want to hide the icon files from the ISO9660 and Joliet trees. </p>
@@ -738,7 +738,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> The format of this table is as follows; all integers are in section 7.3.1 (&quot;little endian&quot;) format. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Offset    Name           Size      Meaning
  8        bi_pvd         4 bytes   LBA of primary volume descriptor
@@ -747,10 +747,10 @@ Offset    Name           Size      Meaning
 20        bi_csum        4 bytes   32-bit checksum
 24        bi_reserved    40 bytes  Reserved
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd> The 32-bit checksum is the sum of all the 32-bit words in the boot file starting at byte offset 64. All linear block addresses (LBAs) are given in CD sectors (normally 2048 bytes).</dl>
+</dt><dd> The 32-bit checksum is the sum of all the 32-bit words in the boot file starting at byte offset 64. All linear block addresses (LBAs) are given in CD sectors (normally 2048 bytes).</dd></dl>
 <h2>HPPA NOTES</h2>
 <p> To make a bootable CD for HPPA, at the very least a boot loader file (<code>-hppa-bootloader</code>), a kernel image file (32-bit, 64-bit, or both, depending on hardware) and a boot command line (<code>-hppa-cmdline</code>) must be specified. Some systems can boot either a 32- or a 64-bit kernel, and the firmware will choose one if both are present. Optionally, a ramdisk can be used for the root filesystem using <code>-hppa-cmdline</code>.</p>
 <h2>JIGDO NOTES</h2>
@@ -758,15 +758,14 @@ Offset    Name           Size      Meaning
 <p> To create jigdo and template files alongside the ISO image from <code>genisoimage</code>, you must first generate a list of the files that will be used, in the following format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 MD5sum   File size  Path
 32 chars 12 chars   to end of line
 </pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> The MD5sum must be written in standard hexadecimal notation, the file size must list the size of the file in bytes, and the path must list the absolute path to the file. For example: </p>
 <pre>
 00006dcd58ff0756c36d2efae21be376         14736  /mirror/debian/file1
@@ -780,47 +779,47 @@ MD5sum   File size  Path
 <p> To create a vanilla ISO9660 filesystem image in the file <i>cd.iso</i>, where the directory <i>cd_dir</i> will become the root directory of the CD, call:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso cd_dir</dd></dl>
 <p> To create a CD with Rock Ridge extensions of the source directory <i>cd_dir</i>:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -R cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso -R cd_dir</dd></dl>
 <p> To create a CD with Rock Ridge extensions of the source directory <i>cd_dir</i> where all files have at least read permission and all files are owned by <i>root</i>, call:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -r cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso -r cd_dir</dd></dl>
 <p> To write a tar archive directly to a CD that will later contain a simple ISO9660 filesystem with the tar archive call:</p>
 <dl>
 <dt>
-<dd> % tar cf &#8211; . | genisoimage -stream-media-size 333000 | \ </p>
+</dt><dd> % tar cf &#8211; . | genisoimage -stream-media-size 333000 | \ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wodim dev=b,t,l -dao tsize=333000s &#8211;</dl>
 <p> To create a HFS hybrid CD with the Joliet and Rock Ridge extensions of the source directory <i>cd_dir</i>:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -R -J -hfs cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso -R -J -hfs cd_dir</dd></dl>
 <p> To create a HFS hybrid CD from the source directory <i>cd_dir</i> that contains Netatalk Apple/Unix files:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso &#8211;netatalk cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso &#8211;netatalk cd_dir</dd></dl>
 <p> To create a HFS hybrid CD from the source directory <i>cd_dir</i>, giving all files CREATOR and TYPES based on just their filename extensions listed in the file &quot;mapping&quot;.:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -map mapping cd_dir</dl>
+</dt><dd> % genisoimage -o cd.iso -map mapping cd_dir</dd></dl>
 <p> To create a CD with the Apple Extensions to ISO9660, from the source directories <i>cd_dir</i> and <i>another_dir</i>. Files in all the known Apple/Unix format are decoded and any other files are given CREATOR and TYPE based on their magic number given in the file <i>magic</i>:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -apple -magic magic -probe \ </p>
+</dt><dd> % genisoimage -o cd.iso -apple -magic magic -probe \ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cd_dir another_dir</dl>
 <p> The following example puts different files on the CD that all have the name README, but have different contents when seen as a ISO9660/Rock Ridge, Joliet or HFS CD. </p>
 <p> Current directory contains:</p>
 <dl>
 <dt>
-<dd> % ls -F<br />
- README.hfs README.joliet README.Unix cd_dir/</dl>
+</dt><dd> % ls -F<br />
+ README.hfs README.joliet README.Unix cd_dir/</dd></dl>
 <p> The following command puts the contents of the directory <i>cd_dir</i> on the CD along with the three README files &#8212; but only one will be seen from each of the three filesystems:</p>
 <dl>
 <dt>
-<dd> % genisoimage -o cd.iso -hfs -J -r -graft-points \ </p>
+</dt><dd> % genisoimage -o cd.iso -hfs -J -r -graft-points \ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-hide README.hfs -hide README.joliet&nbsp;\ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-hide-joliet README.hfs -hide-joliet README.Unix&nbsp;\ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-hide-hfs README.joliet -hide-hfs README.Unix&nbsp;\ </p>
@@ -846,7 +845,7 @@ MD5sum   File size  Path
 <p> Care must be taken when &quot;grafting&quot; Apple/Unix files or directories (see above for the method and syntax involved). It is not possible to use a new name for an Apple/Unix encoded file/directory. e.g. If a Apple/Unix encoded file called <i>oldname</i> is to added to the CD, you cannot use the command line:</p>
 <dl>
 <dt>
-<dd> genisoimage -o output.raw -hfs -graft-points newname=oldname cd_dir</dl>
+</dt><dd> genisoimage -o output.raw -hfs -graft-points newname=oldname cd_dir</dd></dl>
 <p> <code>genisoimage</code> will be unable to decode <i>oldname</i>. However, you can graft Apple/Unix encoded files or directories as long as you do not attempt to give them new names as above. </p>
 <p> When creating an HFS volume with the multisession options, <code>-M</code> and <code>-C</code>, only files in the last session will be in the HFS volume. i.e. <code>genisoimage</code> cannot <i>add</i> existing files from previous sessions to the HFS volume. </p>
 <p> However, if each session is created with <code>-part</code>, each session will appear as separate volumes when mounted on a Mac. In this case, it is worth using <code>-V</code> or <code>-hfs-volid</code> to give each session a unique volume name, otherwise each &quot;volume&quot; will appear on the Desktop with the same name. </p>

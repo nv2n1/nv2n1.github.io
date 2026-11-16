@@ -72,8 +72,8 @@ description: "git_script_selinux – Security Enhanced Linux Policy for the git_
 <p> <code>git_script_exec_t</code> </p>
 <p> &#8211; Set files with the git_script_exec_t type, if you want to transition an executable to the git_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/cgit, /var/www/git/gitweb.cgi, /var/www/gitweb-caching/gitweb.cgi </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/cgit, /var/www/git/gitweb.cgi, /var/www/gitweb-caching/gitweb.cgi </dd>
 </dl>
 <p> <code>git_script_tmp_t</code> </p>
 <p> &#8211; Set files with the git_script_tmp_t type, if you want to store git script temporary files in the /tmp directories. </p>

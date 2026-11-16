@@ -24,18 +24,16 @@ void *pvalloc(size_t size);
 <p> <code>aligned_alloc</code>(): _ISOC11_SOURCE </p>
 <p> <code>valloc</code>(): </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre><code>
 (_XOPEN_SOURCE &amp;nbsp; &gt;= &amp;nbsp; 500) &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L) || /* Glibc since 2.19: */ _DEFAULT_SOURCE
     || /* Glibc versions &lt;= 2.19: */ _SVID_SOURCE || _BSD_SOURCE
 </code></pre>
-<dt>Before glibc 2.12:</p>
+</dd><dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
- (The (nonstandard) header file <i>&lt;malloc.h&gt;</i> also exposes the declaration of <code>valloc</code>(); no feature test macros are required.)</dl>
+ (The (nonstandard) header file <i>&lt;malloc.h&gt;</i> also exposes the declaration of <code>valloc</code>(); no feature test macros are required.)</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>posix_memalign</code>() allocates <i>size</i> bytes and places the address of the allocated memory in <i>*memptr</i>. The address of the allocated memory will be a multiple of <i>alignment</i>, which must be a power of two and a multiple of <i>sizeof(void&nbsp;*)</i>. This address can later be successfully passed to <code><a href="/docs/linux/man/3-free/">free</a></code>(3). If <i>size</i> is 0, then the value placed in <i>*memptr</i> is either NULL or a unique pointer value. </p>
@@ -49,10 +47,10 @@ void *pvalloc(size_t size);
 <p> <code>posix_memalign</code>() returns zero on success, or one of the error values listed in the next section on failure. The value of <i>errno</i> is not set. On Linux (and other systems), <code>posix_memalign</code>() does not modify <i>memptr</i> on failure. A requirement standardizing this behavior was added in POSIX.1-2008 TC2.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The <i>alignment</i> argument was not a power of two, or was not a multiple of <i>sizeof(void&nbsp;*)</i>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was insufficient memory to fulfill the allocation request.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>alignment</i> argument was not a power of two, or was not a multiple of <i>sizeof(void&nbsp;*)</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was insufficient memory to fulfill the allocation request.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The functions <code>memalign</code>(), <code>valloc</code>(), and <code>pvalloc</code>() have been available since at least glibc 2.0. </p>
 <p> The function <code>aligned_alloc</code>() was added to glibc in version 2.16. </p>

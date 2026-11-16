@@ -28,48 +28,48 @@ description: "FvwmButtons – the fvwm buttonbox module"
 <h2>Configuration Options</h2>
 <p>The following commands are understood by FvwmButtons: </p>
 <dl>
-<dt>*FvwmButtons: Back <i>color</i></p>
-<dd>Specifies the background color for the buttons. The relief and shadow color are calculated from the background color. </p>
-<dt>*FvwmButtons: BoxSize <i>algorithm</i></p>
-<dd>This option specifies how serious FvwmButtons takes the Rows and Columns options (see below). It can be one of <i>dumb</i>, <i>fixed</i> or <i>smart</i>. </p>
+<dt>*FvwmButtons: Back <i>color</i></dt>
+<dd>Specifies the background color for the buttons. The relief and shadow color are calculated from the background color. </dd>
+<dt>*FvwmButtons: BoxSize <i>algorithm</i></dt>
+<dd>This option specifies how serious FvwmButtons takes the Rows and Columns options (see below). It can be one of <i>dumb</i>, <i>fixed</i> or <i>smart</i>. </dd>
 <p> If <i>fixed</i> is used and both Rows and Columns are specified and non-zero, FvwmButtons uses exactly the number of rows and columns specified. If the box is too small to accommodate all buttons the module will fail. </p>
 <p> If <i>smart</i> is used FvwmButtons enlarges the box so all buttons have a chance to fit. The number of columns is increased to at least the width of the widest button and new rows are added until all buttons are placed. For the best tolerance of configuration errors use the smart option. </p>
 <p> <i>dumb</i> is neither <i>fixed</i> nor <i>smart.</i> This is the default. </p>
-<dt>*FvwmButtons: Colorset <i>colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for the window background. Refer to the FvwmTheme man page for details about colorsets. </p>
-<dt>*FvwmButtons: ActiveColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for the background color/image and/or title color of a button when the mouse is hovering above a button. </p>
-<dt>*FvwmButtons: PressColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> for the background color/image and/or title color of a button when it is pressed. </p>
-<dt>*FvwmButtons: Columns <i>columns</i></p>
-<dd>Specifies the number of columns of buttons to be created. If unspecified, the number of columns is set to the number of buttons requested, divided by the number of rows. If both the rows and columns are specified, but the number of buttons is more than the rows and columns allow for, the columns specification is ignored unless the <i>BoxSize</i> option is <i>fixed</i>. </p>
-<dt>*FvwmButtons: File <i>filename</i></p>
-<dd>Specifies that the configuration for this button is found in the file <i>filename</i>. <i>Filename</i> can be a full pathname, or is assumed to be in fvwm&#8217;s startup directory. The configuration file is in the same format as fvwm&#8217;s configuration file, but each line is read as if prefixed by &quot;*FvwmButtons&quot;. Comments are given by starting a line with &quot;#&quot;. Line continuation is done by ending a line with a &quot;\&quot;. </p>
-<dt>*FvwmButtons: Font <i>font</i></p>
-<dd>Specifies the font to be used for labeling the buttons, or <i>None</i>. </p>
-<dt>*FvwmButtons: Fore <i>color</i></p>
-<dd>Specifies the color used for button label text and monochrome icons. </p>
-<dt>*FvwmButtons: Frame <i>width</i></p>
-<dd>Specifies the width of the relief around each button. If this is a negative number, the relief is inverted. This makes the button sunken normally and raised when activated. </p>
-<dt>*FvwmButtons: Geometry <i>geometry</i></p>
-<dd>Specifies the FvwmButtons window location and size. The geometry is a standard X11 window geometry specification. </p>
-<dt>*FvwmButtons: ButtonGeometry <i>geometry</i></p>
-<dd>This option works like the <i>Geometry</i> option except that the size is the size of a single button. The size of the whole FvwmButtons window is calculated by multiplying the button dimension by the number of rows and columns. </p>
-<dt>*FvwmButtons: Padding <i>width height</i></p>
-<dd>This option specifies the default horizontal padding to be <i>width</i> pixels, and the vertical padding to be <i>height</i> pixels. The amount of free space between the relief of the button and its contents is normally 2 pixels on the sides and 4 pixels above and below, except for swallowed windows and containers, which are not padded at all, unless this option is used. </p>
-<dt>*FvwmButtons: Pixmap <i>pixmapfile</i></p>
-<dd>Specifies a background pixmap to use. Specify &quot;none&quot; (without the double quotes) for a transparent background. </p>
-<dt>*FvwmButtons: Rows <i>rows</i></p>
-<dd>Specifies the number of rows of buttons to be created. The default is 2 rows. </p>
-<dt>*FvwmButtons: (<i>options</i>) [<i>title icon command</i>]</p>
-<dd>Specifies the contents of a button in the buttonbox. The following <i>options</i>, separated by commas or whitespace, can be given a button:</p>
+<dt>*FvwmButtons: Colorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for the window background. Refer to the FvwmTheme man page for details about colorsets. </dd>
+<dt>*FvwmButtons: ActiveColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for the background color/image and/or title color of a button when the mouse is hovering above a button. </dd>
+<dt>*FvwmButtons: PressColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> for the background color/image and/or title color of a button when it is pressed. </dd>
+<dt>*FvwmButtons: Columns <i>columns</i></dt>
+<dd>Specifies the number of columns of buttons to be created. If unspecified, the number of columns is set to the number of buttons requested, divided by the number of rows. If both the rows and columns are specified, but the number of buttons is more than the rows and columns allow for, the columns specification is ignored unless the <i>BoxSize</i> option is <i>fixed</i>. </dd>
+<dt>*FvwmButtons: File <i>filename</i></dt>
+<dd>Specifies that the configuration for this button is found in the file <i>filename</i>. <i>Filename</i> can be a full pathname, or is assumed to be in fvwm&#8217;s startup directory. The configuration file is in the same format as fvwm&#8217;s configuration file, but each line is read as if prefixed by &quot;*FvwmButtons&quot;. Comments are given by starting a line with &quot;#&quot;. Line continuation is done by ending a line with a &quot;\&quot;. </dd>
+<dt>*FvwmButtons: Font <i>font</i></dt>
+<dd>Specifies the font to be used for labeling the buttons, or <i>None</i>. </dd>
+<dt>*FvwmButtons: Fore <i>color</i></dt>
+<dd>Specifies the color used for button label text and monochrome icons. </dd>
+<dt>*FvwmButtons: Frame <i>width</i></dt>
+<dd>Specifies the width of the relief around each button. If this is a negative number, the relief is inverted. This makes the button sunken normally and raised when activated. </dd>
+<dt>*FvwmButtons: Geometry <i>geometry</i></dt>
+<dd>Specifies the FvwmButtons window location and size. The geometry is a standard X11 window geometry specification. </dd>
+<dt>*FvwmButtons: ButtonGeometry <i>geometry</i></dt>
+<dd>This option works like the <i>Geometry</i> option except that the size is the size of a single button. The size of the whole FvwmButtons window is calculated by multiplying the button dimension by the number of rows and columns. </dd>
+<dt>*FvwmButtons: Padding <i>width height</i></dt>
+<dd>This option specifies the default horizontal padding to be <i>width</i> pixels, and the vertical padding to be <i>height</i> pixels. The amount of free space between the relief of the button and its contents is normally 2 pixels on the sides and 4 pixels above and below, except for swallowed windows and containers, which are not padded at all, unless this option is used. </dd>
+<dt>*FvwmButtons: Pixmap <i>pixmapfile</i></dt>
+<dd>Specifies a background pixmap to use. Specify &quot;none&quot; (without the double quotes) for a transparent background. </dd>
+<dt>*FvwmButtons: Rows <i>rows</i></dt>
+<dd>Specifies the number of rows of buttons to be created. The default is 2 rows. </dd>
+<dt>*FvwmButtons: (<i>options</i>) [<i>title icon command</i>]</dt>
+<dd>Specifies the contents of a button in the buttonbox. The following <i>options</i>, separated by commas or whitespace, can be given a button:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>geometry</i></p>
-<dd>Specifies the size and position of the button within the FvwmButtons window or container. The geometry is a standard X11 window geometry specification. The button is <i>width</i> times the normal button width and <i>height</i> times the normal button height. If values for <i>x</i> and <i>y</i> are given, the button is placed x (y) button units from the left (top) of the container if x (y) is positive and x (y) units from the right (bottom) if x (y) is negative. Buttons with position arguments (x and y) are placed before those without them. If two or more buttons are forced to overlap by this, FvwmButtons exits with an error message. </p>
-<dt>Action [(<i>options</i>)] <i>command</i></p>
-<dd>Specifies an fvwm command to be executed when the button is activated by pressing return or a mouse button. The <i>command</i> needs to be quoted if it contains a comma or a closing parenthesis. </p>
+</dd><dl>
+<dt><i>geometry</i></dt>
+<dd>Specifies the size and position of the button within the FvwmButtons window or container. The geometry is a standard X11 window geometry specification. The button is <i>width</i> times the normal button width and <i>height</i> times the normal button height. If values for <i>x</i> and <i>y</i> are given, the button is placed x (y) button units from the left (top) of the container if x (y) is positive and x (y) units from the right (bottom) if x (y) is negative. Buttons with position arguments (x and y) are placed before those without them. If two or more buttons are forced to overlap by this, FvwmButtons exits with an error message. </dd>
+<dt>Action [(<i>options</i>)] <i>command</i></dt>
+<dd>Specifies an fvwm command to be executed when the button is activated by pressing return or a mouse button. The <i>command</i> needs to be quoted if it contains a comma or a closing parenthesis. </dd>
 <p> The current options of the <i>Action</i> are: Mouse <i>n</i> &#8211; this action is only executed for mouse button <i>n</i>. One action can be defined for each mouse button, in addition to the general action. </p>
 <p> In the <i>command</i> part, you can use a number of predefined variables: <i>$left</i>, <i>$right</i>, <i>$top</i> and <i>$bottom</i> are substituted by the left, right, top and bottom coordinates of the button pressed. <i>$-left</i>, <i>$-right</i>, <i>$-top</i> and <i>$-bottom</i> are substituted likewise, but the coordinates are calculated from the bottom or the right edge of the screen instead (for a button that is 5 pixels away from the right screen border, $-right will be 5). <i>$width</i> and <i>$height</i> are replaced by the width or height of the button. The variables <i>$fg</i> and <i>$bg</i> are replaced with the name of the foreground or background color set with the <i>Back</i> or <i>Fore</i> option (see below). All this is done regardless of any quoting characters. To get a literal &#8216;$&#8217; use the string &#8216;$$&#8217;. </p>
 <p> Example: </p>
@@ -79,54 +79,54 @@ description: "FvwmButtons – the fvwm buttonbox module"
 <pre> *FvwmButtons: (Action beep, ActionIgnoresClientWindow, \
  Swallow xeyes &quot;Exec exec xeyes&quot;)</pre>
 <p>In this example, the action is only executed when you click on the border of the button or the transparent part of the xeyes window, but not on the xeyes window itself. </p>
-<dt>ActionIgnoresClientWindow</p>
-<dd>See the note in the description of <i>Action</i> above. </p>
-<dt>ActionOnPress</p>
-<dd>Usually the action is executed on the button release except for the <code>Popup</code> action. This option changes this behavior, the action is executed on the button press. This may be good, for example, with <code>Menu</code> or <code>SendToModule</code> that generates popups, or when <code>Frame</code> is 0 and the button would look unresponsive otherwise. </p>
-<dt>Back <i>color</i></p>
-<dd>Specifies the background color to be used drawing this box. A relief color and a shadow color are calculated from this. </p>
-<dt>Center</p>
-<dd>The contents of the button is centered on the button. This is the default but may be changed by <i>Left</i> or <i>Right</i>. </p>
-<dt>Top</p>
-<dd>The contents of the button is vertically aligned at the top of the button. The default is to vertically center it. </p>
-<dt>Colorset <i>colorset</i></p>
-<dd>The given colorset can be applied to a container, a swallowed application and a simple button. To apply it to a button or container, simply put the option in a line with a button or container description. Drawing backgrounds for individual buttons and containers with colorsets requires a lot of communication with the X server. So if you are not content with the drawing speed of dozens of buttons with colorset backgrounds, do not use colorsets here. Setting colorsets as the background of swallowed applications does not have this restriction but depends entirely on the swallowed application. It may work as you wish, but since it involves fiddling with other applications&#8217; windows there is no guarantee for anything. I have tested three applications: xosview works nicely with a colorset background, xload works only with a VGradient or solid background and an analog xclock leaves a trail painted in the background color after its hands. </p>
+<dt>ActionIgnoresClientWindow</dt>
+<dd>See the note in the description of <i>Action</i> above. </dd>
+<dt>ActionOnPress</dt>
+<dd>Usually the action is executed on the button release except for the <code>Popup</code> action. This option changes this behavior, the action is executed on the button press. This may be good, for example, with <code>Menu</code> or <code>SendToModule</code> that generates popups, or when <code>Frame</code> is 0 and the button would look unresponsive otherwise. </dd>
+<dt>Back <i>color</i></dt>
+<dd>Specifies the background color to be used drawing this box. A relief color and a shadow color are calculated from this. </dd>
+<dt>Center</dt>
+<dd>The contents of the button is centered on the button. This is the default but may be changed by <i>Left</i> or <i>Right</i>. </dd>
+<dt>Top</dt>
+<dd>The contents of the button is vertically aligned at the top of the button. The default is to vertically center it. </dd>
+<dt>Colorset <i>colorset</i></dt>
+<dd>The given colorset can be applied to a container, a swallowed application and a simple button. To apply it to a button or container, simply put the option in a line with a button or container description. Drawing backgrounds for individual buttons and containers with colorsets requires a lot of communication with the X server. So if you are not content with the drawing speed of dozens of buttons with colorset backgrounds, do not use colorsets here. Setting colorsets as the background of swallowed applications does not have this restriction but depends entirely on the swallowed application. It may work as you wish, but since it involves fiddling with other applications&#8217; windows there is no guarantee for anything. I have tested three applications: xosview works nicely with a colorset background, xload works only with a VGradient or solid background and an analog xclock leaves a trail painted in the background color after its hands. </dd>
 <p> If the swallowed window is an fvwm module (see the (No)FvwmModule option to Swallow), then the <i>colorset</i> is not applied to the swallowed module. You should use the <i>colorset</i> in the module configuration. If the swallowed module has a transparent colorset background, then the FvwmButtons background (and not the button colorset) is seen by transparency of the background of the swallowed module. Refer to the man page of the FvwmTheme module for details about colorsets. </p>
-<dt>ActiveColorset <i>colorset</i></p>
-<dd>Use colorset <i>colorset</i> for the background color/image and/or title color of the button when the mouse is hovering above it. </p>
-<dt>PressColorset <i>colorset</i></p>
-<dd>Use colorset <i>colorset</i> for the background color/image and/or title color of the button when it is pressed. </p>
-<dt>Container [(<i>options</i>)]</p>
-<dd>Specifies that this button will contain a miniature buttonbox, equivalent to swallowing another FvwmButtons module. The options are the same as can be given for a single button, but they affect all the contained buttons. Options available for this use are <i>Back, Font, Fore, Frame</i> and <i>Padding</i>. Flags for Title and Swallow options can be set with <i>Title(flags)</i> and <i>Swallow(flags)</i>. You should also specify either &quot;Columns <i>width</i>&quot; or &quot;Rows <i>height</i>&quot;, or &quot;Rows 2&quot; will be assumed. For an example, see the <i>Sample configuration</i> section. </p>
+<dt>ActiveColorset <i>colorset</i></dt>
+<dd>Use colorset <i>colorset</i> for the background color/image and/or title color of the button when the mouse is hovering above it. </dd>
+<dt>PressColorset <i>colorset</i></dt>
+<dd>Use colorset <i>colorset</i> for the background color/image and/or title color of the button when it is pressed. </dd>
+<dt>Container [(<i>options</i>)]</dt>
+<dd>Specifies that this button will contain a miniature buttonbox, equivalent to swallowing another FvwmButtons module. The options are the same as can be given for a single button, but they affect all the contained buttons. Options available for this use are <i>Back, Font, Fore, Frame</i> and <i>Padding</i>. Flags for Title and Swallow options can be set with <i>Title(flags)</i> and <i>Swallow(flags)</i>. You should also specify either &quot;Columns <i>width</i>&quot; or &quot;Rows <i>height</i>&quot;, or &quot;Rows 2&quot; will be assumed. For an example, see the <i>Sample configuration</i> section. </dd>
 <p> The container button itself (separate from the contents) can take format options like <i>Frame</i> and <i>Padding</i>, and commands can be bound to it. This means you can make a sensitive relief around a container, like </p>
 <pre> *FvwmButtons: (2x2, Frame 5, Padding 2 2, Action Beep,\
  Container(Frame 1))</pre>
 <p>Typically you will want to at least give the container a size setting <i>width</i>x<i>height</i>. </p>
-<dt>End</p>
-<dd>Specifies that no more buttons are defined for the current container, and further buttons will be put in the container&#8217;s parent. This option should be given on a line by itself, i.e </p>
+<dt>End</dt>
+<dd>Specifies that no more buttons are defined for the current container, and further buttons will be put in the container&#8217;s parent. This option should be given on a line by itself, i.e </dd>
 <pre> *FvwmButtons: (End)</pre>
-<dt>Font <i>fontname</i></p>
-<dd>Specifies that the font <i>fontname</i> is to be used for labeling this button. </p>
-<dt>Fore <i>color</i></p>
-<dd>Specifies the foregound color of the title and monochrome icons in this button. </p>
-<dt>Frame <i>width</i></p>
-<dd>The relief of the button will be <i>width</i> pixels wide. If <i>width</i> is given as a negative number, the relief is inverted. This makes the button sunken normally and raised when activated. </p>
-<dt>Icon <i>filename</i></p>
-<dd>The name of an image file, containing the icon to display on the button. FvwmButtons searches through the path specified in the fvwm ImagePath configuration item to find the icon file. </p>
-<dt>ActiveIcon <i>filename</i></p>
-<dd>The name of an image file, containing an alternative icon to display on the button when the mouse is hovering above the button. If no ActiveIcon is specified, the image specified by Icon is displayed (if there is one). </p>
-<dt>PressIcon <i>filename</i></p>
-<dd>The name of an image file, containing an alternative icon to display on the button when the button is pressed. If no PressIcon is specified, the image specified by Icon is displayed (if there is one). </p>
-<dt>Id <i>id</i></p>
-<dd>The id to be used to identify this button. The first character of the id should be alphabetic. See also the &quot;DYNAMICAL ACTIONS&quot; section. </p>
-<dt>Left</p>
-<dd>The contents of the button are aligned to the left. The default is to center the contents on the button. </p>
-<dt>NoSize</p>
-<dd>This option specifies that this button will not be considered at all when making the initial calculations of button sizes. Useful for the odd button that gets just a couple of pixels too large to keep in line, and therefor blows up your whole buttonbox. &quot;NoSize&quot; is equivalent to &quot;Size 0 0&quot;. </p>
-<dt>Padding <i>width height</i></p>
-<dd>The amount of free space between the relief of the button and its contents is normally 2 pixels to the sides and 4 pixels above and below, except for swallowed windows and containers, which are by default not padded at all. This option sets the horizontal padding to <i>width</i> and the vertical padding to <i>height</i>. </p>
-<dt>Panel [ (<i>options</i>) ] <i>hangon</i> <i>command</i></p>
-<dd>Panels can be swallowed exactly like windows are swallowed by buttons with the <i>Swallow</i> command below, but they are not displayed within the button. Instead they are hidden until the user presses the panel&#8217;s button. Then the panel (the window of the swallowed application) opens with a sliding animation. The <i>options</i> can be any of the <i>flags</i> described for the Swallow command. In addition a direction &#8216;left&#8217;, &#8216;right&#8217;, &#8216;up&#8217; or &#8216;down&#8217; can be used to specify the sliding direction. </p>
+<dt>Font <i>fontname</i></dt>
+<dd>Specifies that the font <i>fontname</i> is to be used for labeling this button. </dd>
+<dt>Fore <i>color</i></dt>
+<dd>Specifies the foregound color of the title and monochrome icons in this button. </dd>
+<dt>Frame <i>width</i></dt>
+<dd>The relief of the button will be <i>width</i> pixels wide. If <i>width</i> is given as a negative number, the relief is inverted. This makes the button sunken normally and raised when activated. </dd>
+<dt>Icon <i>filename</i></dt>
+<dd>The name of an image file, containing the icon to display on the button. FvwmButtons searches through the path specified in the fvwm ImagePath configuration item to find the icon file. </dd>
+<dt>ActiveIcon <i>filename</i></dt>
+<dd>The name of an image file, containing an alternative icon to display on the button when the mouse is hovering above the button. If no ActiveIcon is specified, the image specified by Icon is displayed (if there is one). </dd>
+<dt>PressIcon <i>filename</i></dt>
+<dd>The name of an image file, containing an alternative icon to display on the button when the button is pressed. If no PressIcon is specified, the image specified by Icon is displayed (if there is one). </dd>
+<dt>Id <i>id</i></dt>
+<dd>The id to be used to identify this button. The first character of the id should be alphabetic. See also the &quot;DYNAMICAL ACTIONS&quot; section. </dd>
+<dt>Left</dt>
+<dd>The contents of the button are aligned to the left. The default is to center the contents on the button. </dd>
+<dt>NoSize</dt>
+<dd>This option specifies that this button will not be considered at all when making the initial calculations of button sizes. Useful for the odd button that gets just a couple of pixels too large to keep in line, and therefor blows up your whole buttonbox. &quot;NoSize&quot; is equivalent to &quot;Size 0 0&quot;. </dd>
+<dt>Padding <i>width height</i></dt>
+<dd>The amount of free space between the relief of the button and its contents is normally 2 pixels to the sides and 4 pixels above and below, except for swallowed windows and containers, which are by default not padded at all. This option sets the horizontal padding to <i>width</i> and the vertical padding to <i>height</i>. </dd>
+<dt>Panel [ (<i>options</i>) ] <i>hangon</i> <i>command</i></dt>
+<dd>Panels can be swallowed exactly like windows are swallowed by buttons with the <i>Swallow</i> command below, but they are not displayed within the button. Instead they are hidden until the user presses the panel&#8217;s button. Then the panel (the window of the swallowed application) opens with a sliding animation. The <i>options</i> can be any of the <i>flags</i> described for the Swallow command. In addition a direction &#8216;left&#8217;, &#8216;right&#8217;, &#8216;up&#8217; or &#8216;down&#8217; can be used to specify the sliding direction. </dd>
 <p> The <i>steps animation-steps</i> option defines the number of animation steps. </p>
 <p> The <i>delay ms</i> option sets the delay between the steps of the animation in milliseconds. Use zero for no delay. The maximum delay is 10 seconds (10000). It doesn&#8217;t make any sense to use the delay option unless you also use the smooth option. </p>
 <p> The <i>smooth</i> option causes the panel to redraw between the steps of the animation. The sliding animation may be smoother this way, it depends on the application, and display speed. The application may appear to grow instead of sliding out. The animation may be slower. </p>
@@ -150,12 +150,12 @@ description: "FvwmButtons – the fvwm buttonbox module"
  *SubPanel: (Icon my_lock.xpm, Action Exec xlock)
  *SubPanel: (Icon my_move.xpm, Action Move)
  ...</pre>
-<dt>Right</p>
-<dd>The contents of the button are aligned to the right. The default is to center the contents on the button. </p>
-<dt>Size <i>width height</i></p>
-<dd>Specifies that the contents of this button require <i>width</i> by <i>height</i> pixels, regardless of what size FvwmButtons calculates from the icon and the title. A button bar with only swallowed windows will not get very large without this option specified, as FvwmButtons does not consider sizes for swallowing buttons. Note that this option gives the minimum space assured; other buttons might require the buttonbox to use larger sizes. </p>
-<dt>Swallow [(<i>flags</i>)] <i>hangon</i> <i>command</i></p>
-<dd>Causes FvwmButtons to execute <i>command</i>, and when a window with a name, class or resource matching <i>hangon</i> appears, it is captured and swallowed into this button. The <i>hangon</i> string may contain wildcard characters (&#8216;*&#8217;) that match any substring. Swallow replaces the variables <i>$fg</i> and <i>$bg</i> as described above for the <i>Action</i> option (but if you use the UseOld and NoClose options the application is not be restarted when FvwmButtons is restarted and thus does not get the new colors &#8211; if you changed them). An example: </p>
+<dt>Right</dt>
+<dd>The contents of the button are aligned to the right. The default is to center the contents on the button. </dd>
+<dt>Size <i>width height</i></dt>
+<dd>Specifies that the contents of this button require <i>width</i> by <i>height</i> pixels, regardless of what size FvwmButtons calculates from the icon and the title. A button bar with only swallowed windows will not get very large without this option specified, as FvwmButtons does not consider sizes for swallowing buttons. Note that this option gives the minimum space assured; other buttons might require the buttonbox to use larger sizes. </dd>
+<dt>Swallow [(<i>flags</i>)] <i>hangon</i> <i>command</i></dt>
+<dd>Causes FvwmButtons to execute <i>command</i>, and when a window with a name, class or resource matching <i>hangon</i> appears, it is captured and swallowed into this button. The <i>hangon</i> string may contain wildcard characters (&#8216;*&#8217;) that match any substring. Swallow replaces the variables <i>$fg</i> and <i>$bg</i> as described above for the <i>Action</i> option (but if you use the UseOld and NoClose options the application is not be restarted when FvwmButtons is restarted and thus does not get the new colors &#8211; if you changed them). An example: </dd>
 <pre> *FvwmButtons: (Swallow XClock 'Exec xclock -geometry -3000-3000 &amp;')</pre>
 <p>takes the first window whose name, class, or resource is &quot;XClock&quot; and displays it in the button. If no matching window is found, the &quot;Exec&quot; command creates one. The argument &quot;-geometry -3000-3000&quot; is used so that the window is first drawn out of sight before its swallowed into FvwmButtons. </p>
 <p> Modules can be swallowed by specifying the module instead of &#8216;Exec whatever&#8217;, like: </p>
@@ -172,27 +172,27 @@ description: "FvwmButtons – the fvwm buttonbox module"
  Action `Exec &quot;Console&quot; console &amp;`)</pre>
 <p>NoTitle / UseTitle &#8211; Specifies whether the title of the button will be taken from the swallowed window&#8217;s title or not. If &quot;UseTitle&quot; is given, the title on the button changes dynamically to reflect the window name. The default is &quot;NoTitle&quot;. </p>
 <p> NoFvwmModule / FvwmModule &#8211; By default, FvwmButtons treats the swallowed window as an fvwm module window if the 4 first letters of the <i>command</i> is &quot;Fvwm&quot; or the 6 first letters of the <i>command</i> is &quot;Module&quot;. NoFvwmModule and FvwmModule override this logic. </p>
-<dt>Title [(<i>options</i>)] <i>name</i></p>
-<dd>Specifies the title to be written on the button. Whitespace can be included in the title by quoting it. If a title at any time is too long for its buttons, characters are chopped of one at a time until it fits. If <i>justify</i> is &quot;Right&quot;, the head is removed, otherwise its tail is removed. These <i>options</i> can be given to Title: </p>
+<dt>Title [(<i>options</i>)] <i>name</i></dt>
+<dd>Specifies the title to be written on the button. Whitespace can be included in the title by quoting it. If a title at any time is too long for its buttons, characters are chopped of one at a time until it fits. If <i>justify</i> is &quot;Right&quot;, the head is removed, otherwise its tail is removed. These <i>options</i> can be given to Title: </dd>
 <p> Center &#8211; The title is centered horizontally. This is the default. </p>
 <p> Left &#8211; The title is justified to the left side. </p>
 <p> Right &#8211; The title is justified to the right side. </p>
 <p> Side &#8211; Causes the title to appear on the right hand side of any icon or swallowed window, instead of below which is the default. If you use small icons, and combine this with the &quot;Left&quot; or &quot;Right&quot; option, you can get a look similar to fvwm&#8217;s menus. </p>
-<dt>ActiveTitle <i>name</i></p>
-<dd>Specifies the title to be written on the button when the mouse is hovering above the button. If no ActiveTitle is specified, the text specified by Title is displayed (if there is any). </p>
-<dt>PressTitle <i>name</i></p>
-<dd>Specifies the title to be written on the button when the button is pressed. If no PressTitle is specified, the text specified by Title is displayed (if there is any). </p>
-<dt>Legacy fields [<i>title icon command</i>]</p>
-<dd>These fields are kept for compatibility with previous versions of FvwmButtons, and their use is discouraged. The <i>title</i> field is similar to the option Title <i>name</i>. If the title field is &quot;-&quot;, no title is displayed. The <i>icon</i> field is similar to the option Icon <i>filename</i>. If the icon field is &quot;-&quot; no icon is displayed. The <i>command</i> field is similar to the option Action <i>command</i> or alternatively Swallow &quot;<i>hangon</i>&quot; <i>command</i>.</p>
-<dt>The <i>command</i></p>
-<dd>Any fvwm command is recognized by FvwmButtons. See <a href="/docs/linux/man/1-fvwm/">fvwm</a>(1) for more information. </p>
+<dt>ActiveTitle <i>name</i></dt>
+<dd>Specifies the title to be written on the button when the mouse is hovering above the button. If no ActiveTitle is specified, the text specified by Title is displayed (if there is any). </dd>
+<dt>PressTitle <i>name</i></dt>
+<dd>Specifies the title to be written on the button when the button is pressed. If no PressTitle is specified, the text specified by Title is displayed (if there is any). </dd>
+<dt>Legacy fields [<i>title icon command</i>]</dt>
+<dd>These fields are kept for compatibility with previous versions of FvwmButtons, and their use is discouraged. The <i>title</i> field is similar to the option Title <i>name</i>. If the title field is &quot;-&quot;, no title is displayed. The <i>icon</i> field is similar to the option Icon <i>filename</i>. If the icon field is &quot;-&quot; no icon is displayed. The <i>command</i> field is similar to the option Action <i>command</i> or alternatively Swallow &quot;<i>hangon</i>&quot; <i>command</i>.</dd>
+<dt>The <i>command</i></dt>
+<dd>Any fvwm command is recognized by FvwmButtons. See <a href="/docs/linux/man/1-fvwm/">fvwm</a>(1) for more information. </dd>
 <p> The Exec command has a small extension when used in Actions, its syntax is: </p>
 <pre> Exec [&quot;hangon&quot;] command</pre>
 <p>Example: </p>
 <pre> *FvwmButtons: (Action Exec &quot;xload&quot; xload)</pre>
 <p>The hangon string must be enclosed in double quotes. When FvwmButtons finds such an Exec command, the button remains pushed in until a window whose name, class or resource matches the quoted portion of the command is encountered. This is intended to provide visual feedback to the user that the action he has requested will be performed. The hangon string may contain wildcard characters (&#8216;*&#8217;) that match any substring. If the quoted portion contains no characters, then the button will pop out immediately. Note that users can continue pressing the button, and re-executing the command, even when it looks pressed in. </p>
-<dt>Quoting</p>
-<dd>Any string which contains whitespace must be quoted. Contrary to earlier versions commands no longer need to be quoted. In this case any quoting character will be passed on to the application untouched. Only commas &#8216;,&#8217; and closing parentheses &#8216;)&#8217; have to be quoted inside a command. Quoting can be done with any of the three quotation characters; single quote: </p>
+<dt>Quoting</dt>
+<dd>Any string which contains whitespace must be quoted. Contrary to earlier versions commands no longer need to be quoted. In this case any quoting character will be passed on to the application untouched. Only commas &#8216;,&#8217; and closing parentheses &#8216;)&#8217; have to be quoted inside a command. Quoting can be done with any of the three quotation characters; single quote: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&#8216;This is a&nbsp;<wbr>&quot;quote&quot;&#8217;, </p>
 <p> double quote: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&quot;It&#8217;s another&nbsp;<wbr>`quote&#8217;&quot;, </p>
@@ -261,14 +261,14 @@ Style &quot;Tools&quot; NoButton 2, NoButton 4, Sticky</pre>
 <h2>Arrangement Algorithm</h2>
 <p>FvwmButtons tries to arrange its buttons as best it can, by using recursively, on each container including the buttonbox itself, the following algorithm.</p>
 <dl>
-<dt>Getting the size right</p>
-<dd>First it calculates the number of button unit areas it will need, by adding the width times the height in buttons of each button. Containers are for the moment considered a normal button. Then it considers the given <i>rows</i> and <i>columns</i> arguments. If the number of rows is given, it will calculate how many columns are needed, and stick to that, unless <i>columns</i> is larger, in which case you will get some empty space at the bottom of the buttonbox. If the number of columns is given, it calculates how many rows it needs to fit all the buttons. If neither is given, it assumes you want two rows, and finds the number of columns from that. If the BoxSize option is set to <i>smart</i> at least the height/width of the tallest/widest button is used while the <i>fixed</i> value prevents the box from getting resized if both <i>rows</i> and <i>columns</i> have been set to non-zero.</p>
-<dt>Shuffling buttons</p>
-<dd>Now it has a large enough area to place the buttons in, all that is left is to place them right. There are two kinds of buttons: fixed and floating buttons. A fixed button is forced to a specific slot in the button box by a x/y geometry argument. All other buttons are considered floating. Fixed buttons are placed first. Should a fixed button overlap another one or shall be place outside the buttons window, FvwmButtons exits with an error message. After that the floating buttons are placed. The algorithm tries to place the buttons in a left to right, top to bottom western fashion. If a button fits at the suggested position it is placed there, if not the current slot stays empty and the slot to the right will be considered. After the button has been placed, the next button is tried to be placed in the next slot and so on until all buttons are placed. Additional rows are added below the bottom line of buttons until all buttons are placed if necessary if the BoxSize option <i>smart</i> is used.</p>
-<dt>Containers</p>
-<dd>Containers are arranged by the same algorithm, in fact they are shuffled recursively as the algorithm finds them.</p>
-<dt>Clarifying example</p>
-<dd>An example might be useful here: Suppose you have 6 buttons, all unit sized except number two, which is 2&#215;2. This makes for 5 times 1 plus 1 times 4 equals 9 unit buttons total area. Assume you have requested 3 columns. </p>
+<dt>Getting the size right</dt>
+<dd>First it calculates the number of button unit areas it will need, by adding the width times the height in buttons of each button. Containers are for the moment considered a normal button. Then it considers the given <i>rows</i> and <i>columns</i> arguments. If the number of rows is given, it will calculate how many columns are needed, and stick to that, unless <i>columns</i> is larger, in which case you will get some empty space at the bottom of the buttonbox. If the number of columns is given, it calculates how many rows it needs to fit all the buttons. If neither is given, it assumes you want two rows, and finds the number of columns from that. If the BoxSize option is set to <i>smart</i> at least the height/width of the tallest/widest button is used while the <i>fixed</i> value prevents the box from getting resized if both <i>rows</i> and <i>columns</i> have been set to non-zero.</dd>
+<dt>Shuffling buttons</dt>
+<dd>Now it has a large enough area to place the buttons in, all that is left is to place them right. There are two kinds of buttons: fixed and floating buttons. A fixed button is forced to a specific slot in the button box by a x/y geometry argument. All other buttons are considered floating. Fixed buttons are placed first. Should a fixed button overlap another one or shall be place outside the buttons window, FvwmButtons exits with an error message. After that the floating buttons are placed. The algorithm tries to place the buttons in a left to right, top to bottom western fashion. If a button fits at the suggested position it is placed there, if not the current slot stays empty and the slot to the right will be considered. After the button has been placed, the next button is tried to be placed in the next slot and so on until all buttons are placed. Additional rows are added below the bottom line of buttons until all buttons are placed if necessary if the BoxSize option <i>smart</i> is used.</dd>
+<dt>Containers</dt>
+<dd>Containers are arranged by the same algorithm, in fact they are shuffled recursively as the algorithm finds them.</dd>
+<dt>Clarifying example</dt>
+<dd>An example might be useful here: Suppose you have 6 buttons, all unit sized except number two, which is 2&#215;2. This makes for 5 times 1 plus 1 times 4 equals 9 unit buttons total area. Assume you have requested 3 columns. </dd>
 <pre>1) +---+---+---+ 2) +---+---+---+ 3) +---+---+---+
  | 1 | | | 1 | | | 1 | |
  +---+ + +---+ 2 + +---+ 2 +
@@ -283,28 +283,28 @@ Style &quot;Tools&quot; NoButton 2, NoButton 4, Sticky</pre>
  +---+---+---+ +---+---+---+ +---+-------+
  | 4 | | | 4 | 5 | | | 4 | 5 | 6 |
  +---+---+---+ +---+---+---+ +---+---+---+</pre>
-<dt>What size will the buttons be?</p>
-<dd>When FvwmButtons has read the icons and fonts that are required by its configuration, it can find out which size is needed for every non-swallowing button. The unit button size of a container is set to be large enough to hold the largest button in it without squeezing it. Swallowed windows are simply expected to be comfortable with the button size they get from this scheme. If a particular configuration requires more space for a swallowed window, it can be set in that button&#8217;s configuration line using the option &quot;Size <i>width height</i>&quot;. This will tell FvwmButtons to give this button at least <i>width</i> by <i>height</i> pixels inside the relief and padding. </p>
+<dt>What size will the buttons be?</dt>
+<dd>When FvwmButtons has read the icons and fonts that are required by its configuration, it can find out which size is needed for every non-swallowing button. The unit button size of a container is set to be large enough to hold the largest button in it without squeezing it. Swallowed windows are simply expected to be comfortable with the button size they get from this scheme. If a particular configuration requires more space for a swallowed window, it can be set in that button&#8217;s configuration line using the option &quot;Size <i>width height</i>&quot;. This will tell FvwmButtons to give this button at least <i>width</i> by <i>height</i> pixels inside the relief and padding. </dd>
 </dl>
 <h2>Dynamical Actions</h2>
 <p>A running FvwmButtons instance may receive some commands at run time. This is achived using the fvwm command </p>
 <pre>SendToModule FvwmButtons-Alias &lt;action&gt; &lt;params&gt;</pre>
 <p>Supported actions: </p>
 <dl>
-<dt>ChangeButton <i>button_id</i> options</p>
-<dd>can be used to change the title or icon of a button at run time. <i>button_id</i> is the id of the button to change as specified using the <code>Id</code> button option. It may also be a number, in this case the button with the given number is assumed. And finally, <i>button_id</i> may be in the form +x+y, where x and y are a column number and a row number of the button to be changed. It is possible to specify multiple option pairs (name with value) by delimiting them using comma. Currently options include <code>Title</code>, <code>ActiveTitle</code>, <code>PressTitle</code>, <code>Icon</code>, <code>ActiveIcon</code> and <code>PressIcon</code>. These options work like the configuration options of the same name. </p>
-<dt>ExpandButtonVars <i>button_id</i> command</p>
-<dd>replaces variables present in the <i>command</i> exactly like in the <code>Action</code> button option and then sends the command back to fvwm. <i>button_id</i> has the same syntax as described in <code>ChangeButton</code> above. </p>
-<dt>PressButton <i>button_id</i> [<i>mouse_button</i>]</p>
-<dd>simulates a mouse click on a button. <i>button_id</i> is the id of the button to press as specified using the <code>Id</code> button option and <i>mouse_button</i> is the number of mouse button used to click on the button e.g &quot;1&quot; for the left mouse button etc. Quotes around the number are not necessary. If <i>mouse_button</i> option is omitted, mouse button 1 is assumed. This command behaves exactly as if the mouse button was pressed and released on the button on in question. </p>
-<dt>Silent</p>
-<dd>This prefix may be specified before other actions. It disables all possible error and warning messages. </p>
-<dt>Example:</p>
+<dt>ChangeButton <i>button_id</i> options</dt>
+<dd>can be used to change the title or icon of a button at run time. <i>button_id</i> is the id of the button to change as specified using the <code>Id</code> button option. It may also be a number, in this case the button with the given number is assumed. And finally, <i>button_id</i> may be in the form +x+y, where x and y are a column number and a row number of the button to be changed. It is possible to specify multiple option pairs (name with value) by delimiting them using comma. Currently options include <code>Title</code>, <code>ActiveTitle</code>, <code>PressTitle</code>, <code>Icon</code>, <code>ActiveIcon</code> and <code>PressIcon</code>. These options work like the configuration options of the same name. </dd>
+<dt>ExpandButtonVars <i>button_id</i> command</dt>
+<dd>replaces variables present in the <i>command</i> exactly like in the <code>Action</code> button option and then sends the command back to fvwm. <i>button_id</i> has the same syntax as described in <code>ChangeButton</code> above. </dd>
+<dt>PressButton <i>button_id</i> [<i>mouse_button</i>]</dt>
+<dd>simulates a mouse click on a button. <i>button_id</i> is the id of the button to press as specified using the <code>Id</code> button option and <i>mouse_button</i> is the number of mouse button used to click on the button e.g &quot;1&quot; for the left mouse button etc. Quotes around the number are not necessary. If <i>mouse_button</i> option is omitted, mouse button 1 is assumed. This command behaves exactly as if the mouse button was pressed and released on the button on in question. </dd>
+<dt>Silent</dt>
+<dd>This prefix may be specified before other actions. It disables all possible error and warning messages. </dd>
+<dt>Example:</dt>
 <dd>
 <pre>*FvwmButtons: (Id note1, Title &quot;13:30 - Dinner&quot;, Icon clock1.xpm)
 SendToModule FvwmButtons Silent \
  ChangeButton note1 Icon clock2.xpm, Title &quot;18:00 - Go Home&quot;</pre>
-</dl>
+</dd></dl>
 <h2>Sample Configuration</h2>
 <p>The following are excerpts from a .fvwm2rc file which describe FvwmButtons initialization commands: </p>
 <pre>##########################################################

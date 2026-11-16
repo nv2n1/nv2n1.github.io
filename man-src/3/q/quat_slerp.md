@@ -11,7 +11,6 @@ quat_slerp - Version of quat_interpolate() allowing control over the rotation. A
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;allegro.h&gt;
-
 void quat_slerp(const QUAT *from, const QUAT *to, float t, QUAT *out, int how);</code></pre>
 
 <h2>Description</h2>

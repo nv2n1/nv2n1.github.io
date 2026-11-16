@@ -11,9 +11,7 @@ std::experimental::ranges::SignedIntegral - std::experimental::ranges::SignedInt
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T &gt;                                                    (ranges TS)
-
 concept bool SignedIntegral = Integral&lt;T&gt; &amp;&amp; std::is_signed&lt;T&gt;::value;</code></pre> 
 The concept SignedIntegral&lt;T&gt; is satisfied if and only if T is an integral type and std::is_signed&lt;T&gt;::value is true. 
 There need not be any subsumption relationship between SignedIntegral&lt;T&gt; and std::is_signed&lt;T&gt;::value. 

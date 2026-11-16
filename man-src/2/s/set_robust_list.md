@@ -30,16 +30,16 @@ long set_robust_list(struct robust_list_head *head, size_t len);
 <h2>ERRORS</h2>
 <p> The <code>set_robust_list</code>() system call can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>len</i> does not equal <i>sizeof(struct robust_list_head)</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>len</i> does not equal <i>sizeof(struct robust_list_head)</i>.</dd></dl>
 <p> The <code>get_robust_list</code>() system call can fail with the following errors:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The head of the robust futex list can&#8217;t be stored at the location <i>head</i>.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process does not have permission to see the robust futex list of the thread with the thread ID <i>pid</i>, and does not have the <code>CAP_SYS_PTRACE</code> capability.</p>
-<dt><code>ESRCH</code></p>
-<dd> No thread with the thread ID <i>pid</i> could be found.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The head of the robust futex list can&#8217;t be stored at the location <i>head</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process does not have permission to see the robust futex list of the thread with the thread ID <i>pid</i>, and does not have the <code>CAP_SYS_PTRACE</code> capability.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No thread with the thread ID <i>pid</i> could be found.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls were added in Linux 2.6.17.</p>
 <h2>NOTES</h2>

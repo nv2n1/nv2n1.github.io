@@ -92,28 +92,28 @@ description: "semanage_selinux – Security Enhanced Linux Policy for the semana
 <p> <code>semanage_exec_t</code> </p>
 <p> &#8211; Set files with the semanage_exec_t type, if you want to transition an executable to the semanage_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/semanage, /usr/sbin/semodule, /usr/libexec/selinux/semanage_migrate_store, /usr/share/system-config-selinux/selinux_server.py, /usr/share/system-config-selinux/system-config-selinux-dbus.py </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/semanage, /usr/sbin/semodule, /usr/libexec/selinux/semanage_migrate_store, /usr/share/system-config-selinux/selinux_server.py, /usr/share/system-config-selinux/system-config-selinux-dbus.py </dd>
 </dl>
 <p> <code>semanage_read_lock_t</code> </p>
 <p> &#8211; Set files with the semanage_read_lock_t type, if you want to treat the files as semanage read lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/selinux/([^/]*/)?modules/semanage.read.LOCK, /var/lib/selinux/[^/]+/semanage.read.LOCK </p>
+<dt>Paths:</dt>
+<dd>/etc/selinux/([^/]*/)?modules/semanage.read.LOCK, /var/lib/selinux/[^/]+/semanage.read.LOCK </dd>
 </dl>
 <p> <code>semanage_store_t</code> </p>
 <p> &#8211; Set files with the semanage_store_t type, if you want to treat the files as semanage store data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/selinux/([^/]*/)?policy(/.*)?, /etc/selinux/(minimum|mls|targeted)/active(/.*)?, /etc/selinux/([^/]*/)?modules/(active|tmp|previous)(/.*)?, /var/lib/selinux(/.*)?, /etc/share/selinux/mls(/.*)?, /etc/share/selinux/targeted(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/selinux/([^/]*/)?policy(/.*)?, /etc/selinux/(minimum|mls|targeted)/active(/.*)?, /etc/selinux/([^/]*/)?modules/(active|tmp|previous)(/.*)?, /var/lib/selinux(/.*)?, /etc/share/selinux/mls(/.*)?, /etc/share/selinux/targeted(/.*)? </dd>
 </dl>
 <p> <code>semanage_tmp_t</code> </p>
 <p> &#8211; Set files with the semanage_tmp_t type, if you want to store semanage temporary files in the /tmp directories. </p>
 <p> <code>semanage_trans_lock_t</code> </p>
 <p> &#8211; Set files with the semanage_trans_lock_t type, if you want to treat the files as semanage trans lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/selinux/([^/]*/)?modules/semanage.trans.LOCK, /var/lib/selinux/[^/]+/semanage.trans.LOCK </p>
+<dt>Paths:</dt>
+<dd>/etc/selinux/([^/]*/)?modules/semanage.trans.LOCK, /var/lib/selinux/[^/]+/semanage.trans.LOCK </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

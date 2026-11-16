@@ -85,22 +85,22 @@ description: "eventlogd_selinux – Security Enhanced Linux Policy for the event
 <p> <code>eventlogd_exec_t</code> </p>
 <p> &#8211; Set files with the eventlogd_exec_t type, if you want to transition an executable to the eventlogd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/eventlogd, /opt/likewise/sbin/eventlogd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/eventlogd, /opt/likewise/sbin/eventlogd </dd>
 </dl>
 <p> <code>eventlogd_var_lib_t</code> </p>
 <p> &#8211; Set files with the eventlogd_var_lib_t type, if you want to store the eventlogd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/db/lwi_events.db, /var/lib/likewise-open/db/lwi_events.db </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/db/lwi_events.db, /var/lib/likewise-open/db/lwi_events.db </dd>
 </dl>
 <p> <code>eventlogd_var_run_t</code> </p>
 <p> &#8211; Set files with the eventlogd_var_run_t type, if you want to store the eventlogd files under the /run or /var/run directory. </p>
 <p> <code>eventlogd_var_socket_t</code> </p>
 <p> &#8211; Set files with the eventlogd_var_socket_t type, if you want to treat the files as eventlogd var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.eventlog, /var/lib/likewise/rpc/socket, /var/lib/likewise-open/.eventlog, /var/lib/likewise-open/rpc/socket </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.eventlog, /var/lib/likewise/rpc/socket, /var/lib/likewise-open/.eventlog, /var/lib/likewise-open/rpc/socket </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

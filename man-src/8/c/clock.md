@@ -15,80 +15,80 @@ description: "hwclock – query or set the hardware clock (RTC)"
 <h2>Functions</h2>
 <p>You need exactly one of the following options to tell <code>hwclock</code> what function to perform: </p>
 <dl>
-<dt><code>-r</code>,<code>&nbsp;<wbr>&#8211;show</code></p>
-<dd>Read the Hardware Clock and print the time on standard output. The time shown is always in local time, even if you keep your Hardware Clock in Coordinated Universal Time. See the <code>&#8211;utc</code> option. Showing the Hardware Clock time is the default when no function is specified. </p>
-<dt><code>&#8211;set</code></p>
-<dd>Set the Hardware Clock to the time given by the <code>&#8211;date</code> option.</p>
-<dt><code>-s</code>,<code>&nbsp;<wbr>&#8211;hctosys</code></p>
-<dd>Set the System Time from the Hardware Clock. </p>
+<dt><code>-r</code>,<code>&nbsp;<wbr>&#8211;show</code></dt>
+<dd>Read the Hardware Clock and print the time on standard output. The time shown is always in local time, even if you keep your Hardware Clock in Coordinated Universal Time. See the <code>&#8211;utc</code> option. Showing the Hardware Clock time is the default when no function is specified. </dd>
+<dt><code>&#8211;set</code></dt>
+<dd>Set the Hardware Clock to the time given by the <code>&#8211;date</code> option.</dd>
+<dt><code>-s</code>,<code>&nbsp;<wbr>&#8211;hctosys</code></dt>
+<dd>Set the System Time from the Hardware Clock. </dd>
 <p> Also set the kernel&#8217;s timezone value to the local timezone as indicated by the TZ environment variable and/or <i>/usr/share/zoneinfo</i>, as <code><a href="/docs/linux/man/3-tzset/">tzset</a></code>(3) would interpret them. The obsolete tz_dsttime field of the kernel&#8217;s timezone value is set to DST_NONE. (For details on what this field used to mean, see <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2).) </p>
 <p> This is a good option to use in one of the system startup scripts.</p>
-<dt><code>-w</code>,<code>&nbsp;<wbr>&#8211;systohc</code></p>
-<dd>Set the Hardware Clock to the current System Time.</p>
-<dt><code>&#8211;systz</code></p>
-<dd>Set the kernel&#8217;s timezone and reset the System Time based on the current timezone. </p>
+<dt><code>-w</code>,<code>&nbsp;<wbr>&#8211;systohc</code></dt>
+<dd>Set the Hardware Clock to the current System Time.</dd>
+<dt><code>&#8211;systz</code></dt>
+<dd>Set the kernel&#8217;s timezone and reset the System Time based on the current timezone. </dd>
 <p> The system time is only reset on the first call after boot. </p>
 <p> The local timezone is taken to be what is indicated by the TZ environment variable and/or <i>/usr/share/zoneinfo</i>, as <code><a href="/docs/linux/man/3-tzset/">tzset</a></code>(3) would interpret them. The obsolete tz_dsttime field of the kernel&#8217;s timezone value is set to DST_NONE. (For details on what this field used to mean, see <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2).) </p>
 <p> This is an alternate option to <code>&#8211;hctosys</code> that does not read the hardware clock, and may be used in system startup scripts for recent 2.6 kernels where you know the System Time contains the Hardware Clock time. If the Hardware Clock is already in UTC, it is not reset.</p>
-<dt><code>&#8211;adjust</code></p>
-<dd>Add or subtract time from the Hardware Clock to account for systematic drift since the last time the clock was set or adjusted. See discussion below.</p>
-<dt><code>&#8211;getepoch</code></p>
-<dd>Print the kernel&#8217;s Hardware Clock epoch value to standard output. This is the number of years into AD to which a zero year value in the Hardware Clock refers. For example, if you are using the convention that the year counter in your Hardware Clock contains the number of full years since 1952, then the kernel&#8217;s Hardware Clock epoch value must be 1952. </p>
+<dt><code>&#8211;adjust</code></dt>
+<dd>Add or subtract time from the Hardware Clock to account for systematic drift since the last time the clock was set or adjusted. See discussion below.</dd>
+<dt><code>&#8211;getepoch</code></dt>
+<dd>Print the kernel&#8217;s Hardware Clock epoch value to standard output. This is the number of years into AD to which a zero year value in the Hardware Clock refers. For example, if you are using the convention that the year counter in your Hardware Clock contains the number of full years since 1952, then the kernel&#8217;s Hardware Clock epoch value must be 1952. </dd>
 <p> This epoch value is used whenever <code>hwclock</code> reads or sets the Hardware Clock.</p>
-<dt><code>&#8211;setepoch</code></p>
-<dd>Set the kernel&#8217;s Hardware Clock epoch value to the value specified by the <code>&#8211;epoch</code> option. See the <code>&#8211;getepoch</code> option for details. </p>
-<dt><code>&#8211;predict</code></p>
-<dd>Predict what the RTC will read at time given by the <code>&#8211;date</code> option based on the adjtime file. This is useful for example if you need to set an RTC wakeup time to distant future and want to account for the RTC drift.</p>
-<dt><code>-c</code>,<code>&nbsp;<wbr>&#8211;compare</code></p>
-<dd>Periodically compare the Hardware Clock to the System Time and output the difference every 10 seconds. This will also print the frequency offset and tick.</p>
-<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></p>
-<dd>Display a help text and exit.</p>
-<dt><code>-V</code>,<code>&nbsp;<wbr>&#8211;version</code></p>
-<dd>Display the version of <code>hwclock</code> and exit. </p>
+<dt><code>&#8211;setepoch</code></dt>
+<dd>Set the kernel&#8217;s Hardware Clock epoch value to the value specified by the <code>&#8211;epoch</code> option. See the <code>&#8211;getepoch</code> option for details. </dd>
+<dt><code>&#8211;predict</code></dt>
+<dd>Predict what the RTC will read at time given by the <code>&#8211;date</code> option based on the adjtime file. This is useful for example if you need to set an RTC wakeup time to distant future and want to account for the RTC drift.</dd>
+<dt><code>-c</code>,<code>&nbsp;<wbr>&#8211;compare</code></dt>
+<dd>Periodically compare the Hardware Clock to the System Time and output the difference every 10 seconds. This will also print the frequency offset and tick.</dd>
+<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd>Display a help text and exit.</dd>
+<dt><code>-V</code>,<code>&nbsp;<wbr>&#8211;version</code></dt>
+<dd>Display the version of <code>hwclock</code> and exit. </dd>
 </dl>
 <h2>Options</h2>
 <p>The first two options apply to just a few specific functions, the others apply to most functions.</p>
 <dl>
-<dt><code>&#8211;date=</code><i>date_string</i></p>
-<dd>You need this option if you specify the <code>&#8211;set</code> or <code>&#8211;predict</code> functions, otherwise it is ignored. It specifies the time to which to set the Hardware Clock, or the time for which to predict the Hardware Clock reading. The value of this option is an argument to the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) program. For example: </p>
+<dt><code>&#8211;date=</code><i>date_string</i></dt>
+<dd>You need this option if you specify the <code>&#8211;set</code> or <code>&#8211;predict</code> functions, otherwise it is ignored. It specifies the time to which to set the Hardware Clock, or the time for which to predict the Hardware Clock reading. The value of this option is an argument to the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) program. For example: </dd>
 <p> <code> hwclock &#8211;set &#8211;date=2011-08-14 16:45:05</code> </p>
 <p> The argument must be in local time, even if you keep your Hardware Clock in Coordinated Universal time. See the <code>&#8211;utc</code> option. </p>
-<dt><code>&#8211;epoch=</code><i>year</i></p>
-<dd>Specifies the year which is the beginning of the Hardware Clock&#8217;s epoch, that is the number of years into AD to which a zero value in the Hardware Clock&#8217;s year counter refers. It is used together with the <code>&#8211;setepoch</code> option to set the kernel&#8217;s idea of the epoch of the Hardware Clock, or otherwise to specify the epoch for use with direct ISA access. </p>
+<dt><code>&#8211;epoch=</code><i>year</i></dt>
+<dd>Specifies the year which is the beginning of the Hardware Clock&#8217;s epoch, that is the number of years into AD to which a zero value in the Hardware Clock&#8217;s year counter refers. It is used together with the <code>&#8211;setepoch</code> option to set the kernel&#8217;s idea of the epoch of the Hardware Clock, or otherwise to specify the epoch for use with direct ISA access. </dd>
 <p> For example, on a Digital Unix machine: </p>
 <p> <code> hwclock &#8211;setepoch &#8211;epoch=1952</code> </p>
-<dt><code>-u</code>,<code>&nbsp;<wbr>&#8211;utc</code></p>
+<dt><code>-u</code>,<code>&nbsp;<wbr>&#8211;utc</code></dt>
 <dd>
-<dt><code>&#8211;localtime</code></p>
-<dd>Indicates that the Hardware Clock is kept in Coordinated Universal Time or local time, respectively. It is your choice whether to keep your clock in UTC or local time, but nothing in the clock tells which you&#8217;ve chosen. So this option is how you give that information to <code>hwclock</code>. </p>
+</dd><dt><code>&#8211;localtime</code></dt>
+<dd>Indicates that the Hardware Clock is kept in Coordinated Universal Time or local time, respectively. It is your choice whether to keep your clock in UTC or local time, but nothing in the clock tells which you&#8217;ve chosen. So this option is how you give that information to <code>hwclock</code>. </dd>
 <p> If you specify the wrong one of these options (or specify neither and take a wrong default), both setting and querying of the Hardware Clock will be messed up. </p>
 <p> If you specify neither <code>&#8211;utc</code> nor <code>&#8211;localtime</code>, the default is whichever was specified the last time <code>hwclock</code> was used to set the clock (i.e. <code>hwclock</code> was successfully run with the <code>&#8211;set</code>, <code>&#8211;systohc</code>, or <code>&#8211;adjust</code> options), as recorded in the adjtime file. If the adjtime file doesn&#8217;t exist, the default is UTC time. </p>
-<dt><code>&#8211;noadjfile</code></p>
-<dd>Disables the facilities provided by <i>/etc/adjtime</i>. <code>hwclock</code> will not read nor write to that file with this option. Either <code>&#8211;utc</code> or <code>&#8211;localtime</code> must be specified when using this option. </p>
-<dt><code>&#8211;adjfile=</code><i>filename</i></p>
-<dd>Overrides the default /etc/adjtime. </p>
-<dt><code>-f</code>,<code>&nbsp;<wbr>&#8211;rtc=</code><i>filename</i></p>
-<dd>Overrides the default /dev file name, which is <i>/dev/rtc</i> on many platforms but may be <i>/dev/rtc0</i>, <i>/dev/rtc1</i>, and so on. </p>
-<dt><code>&#8211;directisa</code></p>
-<dd>This option is meaningful only on an ISA machine or an Alpha (which implements enough of ISA to be, roughly speaking, an ISA machine for <code>hwclock</code>&#8216;s purposes). For other machines, it has no effect. This option tells <code>hwclock</code> to use explicit I/O instructions to access the Hardware Clock. Without this option, <code>hwclock</code> will try to use the /dev/rtc device (which it assumes to be driven by the RTC device driver). If it is unable to open the device (for reading), it will use the explicit I/O instructions anyway. </p>
-<dt><code>&#8211;badyear</code></p>
-<dd>Indicates that the Hardware Clock is incapable of storing years outside the range 1994-1999. There is a problem in some BIOSes (almost all Award BIOSes made between 4/26/94 and 5/31/95) wherein they are unable to deal with years after 1999. If one attempts to set the year-of-century value to something less than 94 (or 95 in some cases), the value that actually gets set is 94 (or 95). Thus, if you have one of these machines, <code>hwclock</code> cannot set the year after 1999 and cannot use the value of the clock as the true time in the normal way. </p>
+<dt><code>&#8211;noadjfile</code></dt>
+<dd>Disables the facilities provided by <i>/etc/adjtime</i>. <code>hwclock</code> will not read nor write to that file with this option. Either <code>&#8211;utc</code> or <code>&#8211;localtime</code> must be specified when using this option. </dd>
+<dt><code>&#8211;adjfile=</code><i>filename</i></dt>
+<dd>Overrides the default /etc/adjtime. </dd>
+<dt><code>-f</code>,<code>&nbsp;<wbr>&#8211;rtc=</code><i>filename</i></dt>
+<dd>Overrides the default /dev file name, which is <i>/dev/rtc</i> on many platforms but may be <i>/dev/rtc0</i>, <i>/dev/rtc1</i>, and so on. </dd>
+<dt><code>&#8211;directisa</code></dt>
+<dd>This option is meaningful only on an ISA machine or an Alpha (which implements enough of ISA to be, roughly speaking, an ISA machine for <code>hwclock</code>&#8216;s purposes). For other machines, it has no effect. This option tells <code>hwclock</code> to use explicit I/O instructions to access the Hardware Clock. Without this option, <code>hwclock</code> will try to use the /dev/rtc device (which it assumes to be driven by the RTC device driver). If it is unable to open the device (for reading), it will use the explicit I/O instructions anyway. </dd>
+<dt><code>&#8211;badyear</code></dt>
+<dd>Indicates that the Hardware Clock is incapable of storing years outside the range 1994-1999. There is a problem in some BIOSes (almost all Award BIOSes made between 4/26/94 and 5/31/95) wherein they are unable to deal with years after 1999. If one attempts to set the year-of-century value to something less than 94 (or 95 in some cases), the value that actually gets set is 94 (or 95). Thus, if you have one of these machines, <code>hwclock</code> cannot set the year after 1999 and cannot use the value of the clock as the true time in the normal way. </dd>
 <p> To compensate for this (without your getting a BIOS update, which would definitely be preferable), always use <code>&#8211;badyear</code> if you have one of these machines. When <code>hwclock</code> knows it&#8217;s working with a brain-damaged clock, it ignores the year part of the Hardware Clock value and instead tries to guess the year based on the last calibrated date in the adjtime file, by assuming that date is within the past year. For this to work, you had better do a <code>hwclock &#8211;set</code> or <code>hwclock &#8211;systohc</code> at least once a year! </p>
 <p> Though <code>hwclock</code> ignores the year value when it reads the Hardware Clock, it sets the year value when it sets the clock. It sets it to 1995, 1996, 1997, or 1998, whichever one has the same position in the leap year cycle as the true year. That way, the Hardware Clock inserts leap days where they belong. Again, if you let the Hardware Clock run for more than a year without setting it, this scheme could be defeated and you could end up losing a day. </p>
 <p> <code>hwclock</code> warns you that you probably need <code>&#8211;badyear</code> whenever it finds your Hardware Clock set to 1994 or 1995. </p>
-<dt><code>&#8211;srm</code></p>
-<dd>This option is equivalent to <code>&#8211;epoch=1900</code> and is used to specify the most common epoch on Alphas with SRM console.</p>
-<dt><code>&#8211;arc</code></p>
-<dd>This option is equivalent to <code>&#8211;epoch=1980</code> and is used to specify the most common epoch on Alphas with ARC console (but Ruffians have epoch 1900).</p>
-<dt><code>&#8211;jensen</code></p>
+<dt><code>&#8211;srm</code></dt>
+<dd>This option is equivalent to <code>&#8211;epoch=1900</code> and is used to specify the most common epoch on Alphas with SRM console.</dd>
+<dt><code>&#8211;arc</code></dt>
+<dd>This option is equivalent to <code>&#8211;epoch=1980</code> and is used to specify the most common epoch on Alphas with ARC console (but Ruffians have epoch 1900).</dd>
+<dt><code>&#8211;jensen</code></dt>
 <dd>
-<dt><code>&#8211;funky-toy</code></p>
-<dd>These two options specify what kind of Alpha machine you have. They are invalid if you don&#8217;t have an Alpha and are usually unnecessary if you do, because <code>hwclock</code> should be able to determine by itself what it&#8217;s running on, at least when <i>/proc</i> is mounted. (If you find you need one of these options to make <code>hwclock</code> work, contact the maintainer to see if the program can be improved to detect your system automatically. Output of `hwclock &#8211;debug&#8217; and `cat /proc/cpuinfo&#8217; may be of interest.) </p>
+</dd><dt><code>&#8211;funky-toy</code></dt>
+<dd>These two options specify what kind of Alpha machine you have. They are invalid if you don&#8217;t have an Alpha and are usually unnecessary if you do, because <code>hwclock</code> should be able to determine by itself what it&#8217;s running on, at least when <i>/proc</i> is mounted. (If you find you need one of these options to make <code>hwclock</code> work, contact the maintainer to see if the program can be improved to detect your system automatically. Output of `hwclock &#8211;debug&#8217; and `cat /proc/cpuinfo&#8217; may be of interest.) </dd>
 <p> Option <code>&#8211;jensen</code> means you are running on a Jensen model. And <code>&#8211;funky-toy</code> means that on your machine one has to use the UF bit instead of the UIP bit in the Hardware Clock to detect a time transition. &quot;Toy&quot; in the option name refers to the Time Of Year facility of the machine. </p>
-<dt><code>&#8211;test</code></p>
-<dd>Do everything except actually updating the Hardware Clock or anything else. This is useful, especially in conjunction with <code>&#8211;debug</code>, in learning about <code>hwclock</code>.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Display a lot of information about what <code>hwclock</code> is doing internally. Some of its function is complex and this output can help you understand how the program works. </p>
+<dt><code>&#8211;test</code></dt>
+<dd>Do everything except actually updating the Hardware Clock or anything else. This is useful, especially in conjunction with <code>&#8211;debug</code>, in learning about <code>hwclock</code>.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Display a lot of information about what <code>hwclock</code> is doing internally. Some of its function is complex and this output can help you understand how the program works. </dd>
 </dl>
 <h2>Notes</h2>
 <h2>Clocks in a Linux System</h2>

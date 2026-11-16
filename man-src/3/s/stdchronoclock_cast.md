@@ -11,10 +11,8 @@ std::chrono::clock_cast - std::chrono::clock_cast
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class Dest, class Source, class Duration&gt;
     (since C++ 20)
-
         auto clock_cast(const std::chrono::time_point&lt;Source, Duration&gt; &amp;t);</code></pre> 
 Converts the time point t of a clock Source to an equivalent time point of the clock Dest, using std::chrono::system_clock and/or std::chrono::utc_clock as intermediaries if necessary. 
 * If the expression std::chrono::clock_time_conversion&lt;Dest, Source&gt;{}(t) is well-formed, returns the result of that expression. 

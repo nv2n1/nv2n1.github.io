@@ -17,10 +17,10 @@ url: "/docs/linux/man/3-ibv_get_device_guid/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 uint64_t ibv_get_device_guid(struct ibv_device *device);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

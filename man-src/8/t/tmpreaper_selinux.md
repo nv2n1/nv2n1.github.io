@@ -82,8 +82,8 @@ description: "tmpreaper_selinux – Security Enhanced Linux Policy for the tmpre
 <p> <code>tmpreaper_exec_t</code> </p>
 <p> &#8211; Set files with the tmpreaper_exec_t type, if you want to transition an executable to the tmpreaper_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/tmpwatch, /usr/sbin/tmpreaper, /etc/rc.d/init.d/mountall-bootclean.sh, /etc/rc.d/init.d/mountnfs-bootclean.sh </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/tmpwatch, /usr/sbin/tmpreaper, /etc/rc.d/init.d/mountall-bootclean.sh, /etc/rc.d/init.d/mountnfs-bootclean.sh </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

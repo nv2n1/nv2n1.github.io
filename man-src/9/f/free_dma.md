@@ -15,7 +15,7 @@ free_dma - free a reserved system DMA channel
 <h2>Arguments</h2>
 
 <i>dmanr</i>
-<dl><dd><dd>DMA channel number</dl>
+<dl><dd></dd><dd>DMA channel number</dd></dl>
 
 <h2>Copyright</h2>
 

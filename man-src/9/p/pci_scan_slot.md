@@ -15,11 +15,11 @@ pci_scan_slot - scan a PCI slot on a bus for devices.
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>PCI bus to scan</dl>
+<dl><dd></dd><dd>PCI bus to scan</dd></dl>
  
 
  <i>devfn</i>
-<dl><dd>slot number to scan (must have zero function.)</dl>
+<dl><dd>slot number to scan (must have zero function.)</dd></dl>
 
 <h2>Description</h2>
 

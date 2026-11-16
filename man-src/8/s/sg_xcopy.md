@@ -19,69 +19,69 @@ description: "sg_xcopy – copy data to and from files and devices using SCSI EX
 <p> By default the XCOPY command is sent to <i>IFILE</i>. This can be changed with the <i>&#8211;on_dst</i> option which causes the XCOPY command to be sent to <i>OFILE</i> instead.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>bpt</code>=<i>BPT</i></p>
-<dd>each IO transaction will be made using <i>BPT</i> blocks (or less if near the end of the copy). Default is 128 for block sizes less that 2048 bytes, otherwise the default is 32. So for bs=512 the reads and writes will each convey 64 KiB of data by default (less if near the end of the transfer or memory restrictions). When cd/dvd drives are accessed, the block size is typically 2048 bytes and bpt defaults to 32 which again implies 64 KiB transfers.</p>
-<dt><code>bs</code>=<i>BS</i></p>
-<dd>where <i>BS</i> <code>must</code> be the block size of the physical device (if either the input or output files are accessed via SCSI commands). Note that this differs from <code><a href="/docs/linux/man/1-dd/">dd</a>(1)</code> which permits <i>BS</i> to be an integral multiple. Defaults to the device block size.</p>
-<dt><code>cat</code>={0|1}</p>
-<dd>sets the SCSI EXTENDED COPY command segment descriptor CAT bit to 0 or 1 (default: 0). The CAT bit (in conjunction with the PAD bit) controls the handling of residual data. See section <code>HANDLING OF RESIDUAL DATA</code> for details.</p>
-<dt><code>dc</code>={0|1}</p>
-<dd>sets the SCSI EXTENDED COPY command segment descriptor DC bit to 0 or 1 (default: 0). The DC bit controls whether <i>COUNT</i> refers to the source (<i>dc=0</i>) or the target (<i>dc=1</i>) descriptor.</p>
-<dt><code>conv</code>=<code>CONV</code></p>
-<dd>all <code>CONV</code> arguments are ignored.</p>
-<dt><code>count</code>=<i>COUNT</i></p>
-<dd>copy <i>COUNT</i> blocks from <i>IFILE</i> to <i>OFILE</i>. Default is the minimum (<i>IFILE</i> if <i>dc=0</i> or <i>OFILE</i> if <i>dc=1</i>) number of blocks that SCSI devices report from SCSI READ CAPACITY commands or that block devices (or their partitions) report. Normal files are not probed for their size. If <i>skip=SKIP</i> or <i>skip=SEEK</i> are given and the count is derived (i.e. not explicitly given) then the derived count is scaled back so that the copy will not overrun the device. If the file name is a block device partition and <i>COUNT</i> is not given then the size of the partition rather than the size of the whole device is used. If <i>COUNT</i> is not given (or <i>count=-1</i>) and cannot be derived then an error message is issued and no copy takes place.</p>
-<dt><code>ibs</code>=<i>BS</i></p>
-<dd>if given must be the same as <i>BS</i> given to &#8216;bs=&#8217; option.</p>
-<dt><code>id_usage</code>={hold|discard|disable}</p>
-<dd>sets the SCSI EXTENDED COPY command parameter list field called LIST ID USAGE to 0 if the argument is &#8216;hold&#8217;, to 2 if the argument is &#8216;discard&#8217;, or to &#8216;3&#8217; if the argument is &#8216;disable&#8217;.</p>
-<dt><code>if</code>=<i>IFILE</i></p>
-<dd>read from <i>IFILE</i> instead of stdin. If <i>IFILE</i> is &#8216;-&#8216; then stdin is read. Starts reading at the beginning of <i>IFILE</i> unless <i>SKIP</i> is given.</p>
-<dt><code>iflag</code>=<i>FLAGS</i></p>
-<dd>where <i>FLAGS</i> is a comma separated list of one or more flags outlined below. These flags are associated with <i>IFILE</i> and are ignored when <i>IFILE</i> is stdin.</p>
-<dt><code>obs</code>=<i>BS</i></p>
-<dd>if given must be the same as <i>BS</i> given to &#8216;bs=&#8217; option.</p>
-<dt><code>of</code>=<i>OFILE</i></p>
-<dd>write to <i>OFILE</i> instead of stdout. If <i>OFILE</i> is &#8216;-&#8216; then writes to stdout. If <i>OFILE</i> is /dev/null then no actual writes are performed. If <i>OFILE</i> is &#8216;.&#8217; (period) then it is treated the same way as /dev/null (this is a shorthand notation). If <i>OFILE</i> exists then it is _not_ truncated; it is overwritten from the start of <i>OFILE</i> unless &#8216;oflag=append&#8217; or <i>SEEK</i> is given.</p>
-<dt><code>oflag</code>=<i>FLAGS</i></p>
-<dd>where <i>FLAGS</i> is a comma separated list of one or more flags outlined below. These flags are associated with <i>OFILE</i> and are ignored when <i>OFILE</i> is /dev/null, &#8216;.&#8217; (period), or stdout.</p>
-<dt><code>list_id</code>=<i>ID</i></p>
-<dd>sets the SCSI EXTENDED COPY command parameter list field called LIST IDENTIFIER to <i>ID</i>. <i>ID</i> should be a value between 0 and 255 (inclusive) and the default value is 1.</p>
-<dt><code>prio</code>=<i>PRIO</i></p>
-<dd>sets the SCSI EXTENDED COPY command parameter list field called PRIORITY to <i>PRIO</i>. The default value is 1.</p>
-<dt><code>seek</code>=<i>SEEK</i></p>
-<dd>start writing <i>SEEK</i> bs-sized blocks from the start of <i>OFILE</i>. Default is block 0 (i.e. start of file).</p>
-<dt><code>skip</code>=<i>SKIP</i></p>
-<dd>start reading <i>SKIP</i> bs-sized blocks from the start of <i>IFILE</i>. Default is block 0 (i.e. start of file).</p>
-<dt><code>time</code>={0|1}</p>
-<dd>when 1, times transfer and does throughput calculation, outputting the results (to stderr) at completion. When 0 (default) doesn&#8217;t perform timing.</p>
-<dt><code>verbose</code>=<i>VERB</i></p>
-<dd>as <i>VERB</i> increases so does the amount of debug output sent to stderr. Default value is zero which yields the minimum amount of debug output. A value of 1 reports extra information that is not repetitive. A value 2 reports cdbs and responses for SCSI commands that are not repetitive (i.e. other that READ and WRITE). Error processing is not considered repetitive. Values of 3 and 4 yield output for all SCSI commands (and Unix read() and write() calls) so there can be a lot of output.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>outputs usage message and exits.</p>
-<dt><code>&#8211;on_dst</code></p>
-<dd>send the XCOPY command to the output file/device.</p>
-<dt><code>&#8211;on_src</code></p>
-<dd>send the XCOPY command to the input file/device. This is the default when this option and <i>&#8211;on_dst</i> are not given.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>equivalent to <i>verbose=1</i>. When used twice, equivalent to <i>verbose=2</i>, etc.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>outputs version number information and exits.</dl>
+<dt><code>bpt</code>=<i>BPT</i></dt>
+<dd>each IO transaction will be made using <i>BPT</i> blocks (or less if near the end of the copy). Default is 128 for block sizes less that 2048 bytes, otherwise the default is 32. So for bs=512 the reads and writes will each convey 64 KiB of data by default (less if near the end of the transfer or memory restrictions). When cd/dvd drives are accessed, the block size is typically 2048 bytes and bpt defaults to 32 which again implies 64 KiB transfers.</dd>
+<dt><code>bs</code>=<i>BS</i></dt>
+<dd>where <i>BS</i> <code>must</code> be the block size of the physical device (if either the input or output files are accessed via SCSI commands). Note that this differs from <code><a href="/docs/linux/man/1-dd/">dd</a>(1)</code> which permits <i>BS</i> to be an integral multiple. Defaults to the device block size.</dd>
+<dt><code>cat</code>={0|1}</dt>
+<dd>sets the SCSI EXTENDED COPY command segment descriptor CAT bit to 0 or 1 (default: 0). The CAT bit (in conjunction with the PAD bit) controls the handling of residual data. See section <code>HANDLING OF RESIDUAL DATA</code> for details.</dd>
+<dt><code>dc</code>={0|1}</dt>
+<dd>sets the SCSI EXTENDED COPY command segment descriptor DC bit to 0 or 1 (default: 0). The DC bit controls whether <i>COUNT</i> refers to the source (<i>dc=0</i>) or the target (<i>dc=1</i>) descriptor.</dd>
+<dt><code>conv</code>=<code>CONV</code></dt>
+<dd>all <code>CONV</code> arguments are ignored.</dd>
+<dt><code>count</code>=<i>COUNT</i></dt>
+<dd>copy <i>COUNT</i> blocks from <i>IFILE</i> to <i>OFILE</i>. Default is the minimum (<i>IFILE</i> if <i>dc=0</i> or <i>OFILE</i> if <i>dc=1</i>) number of blocks that SCSI devices report from SCSI READ CAPACITY commands or that block devices (or their partitions) report. Normal files are not probed for their size. If <i>skip=SKIP</i> or <i>skip=SEEK</i> are given and the count is derived (i.e. not explicitly given) then the derived count is scaled back so that the copy will not overrun the device. If the file name is a block device partition and <i>COUNT</i> is not given then the size of the partition rather than the size of the whole device is used. If <i>COUNT</i> is not given (or <i>count=-1</i>) and cannot be derived then an error message is issued and no copy takes place.</dd>
+<dt><code>ibs</code>=<i>BS</i></dt>
+<dd>if given must be the same as <i>BS</i> given to &#8216;bs=&#8217; option.</dd>
+<dt><code>id_usage</code>={hold|discard|disable}</dt>
+<dd>sets the SCSI EXTENDED COPY command parameter list field called LIST ID USAGE to 0 if the argument is &#8216;hold&#8217;, to 2 if the argument is &#8216;discard&#8217;, or to &#8216;3&#8217; if the argument is &#8216;disable&#8217;.</dd>
+<dt><code>if</code>=<i>IFILE</i></dt>
+<dd>read from <i>IFILE</i> instead of stdin. If <i>IFILE</i> is &#8216;-&#8216; then stdin is read. Starts reading at the beginning of <i>IFILE</i> unless <i>SKIP</i> is given.</dd>
+<dt><code>iflag</code>=<i>FLAGS</i></dt>
+<dd>where <i>FLAGS</i> is a comma separated list of one or more flags outlined below. These flags are associated with <i>IFILE</i> and are ignored when <i>IFILE</i> is stdin.</dd>
+<dt><code>obs</code>=<i>BS</i></dt>
+<dd>if given must be the same as <i>BS</i> given to &#8216;bs=&#8217; option.</dd>
+<dt><code>of</code>=<i>OFILE</i></dt>
+<dd>write to <i>OFILE</i> instead of stdout. If <i>OFILE</i> is &#8216;-&#8216; then writes to stdout. If <i>OFILE</i> is /dev/null then no actual writes are performed. If <i>OFILE</i> is &#8216;.&#8217; (period) then it is treated the same way as /dev/null (this is a shorthand notation). If <i>OFILE</i> exists then it is _not_ truncated; it is overwritten from the start of <i>OFILE</i> unless &#8216;oflag=append&#8217; or <i>SEEK</i> is given.</dd>
+<dt><code>oflag</code>=<i>FLAGS</i></dt>
+<dd>where <i>FLAGS</i> is a comma separated list of one or more flags outlined below. These flags are associated with <i>OFILE</i> and are ignored when <i>OFILE</i> is /dev/null, &#8216;.&#8217; (period), or stdout.</dd>
+<dt><code>list_id</code>=<i>ID</i></dt>
+<dd>sets the SCSI EXTENDED COPY command parameter list field called LIST IDENTIFIER to <i>ID</i>. <i>ID</i> should be a value between 0 and 255 (inclusive) and the default value is 1.</dd>
+<dt><code>prio</code>=<i>PRIO</i></dt>
+<dd>sets the SCSI EXTENDED COPY command parameter list field called PRIORITY to <i>PRIO</i>. The default value is 1.</dd>
+<dt><code>seek</code>=<i>SEEK</i></dt>
+<dd>start writing <i>SEEK</i> bs-sized blocks from the start of <i>OFILE</i>. Default is block 0 (i.e. start of file).</dd>
+<dt><code>skip</code>=<i>SKIP</i></dt>
+<dd>start reading <i>SKIP</i> bs-sized blocks from the start of <i>IFILE</i>. Default is block 0 (i.e. start of file).</dd>
+<dt><code>time</code>={0|1}</dt>
+<dd>when 1, times transfer and does throughput calculation, outputting the results (to stderr) at completion. When 0 (default) doesn&#8217;t perform timing.</dd>
+<dt><code>verbose</code>=<i>VERB</i></dt>
+<dd>as <i>VERB</i> increases so does the amount of debug output sent to stderr. Default value is zero which yields the minimum amount of debug output. A value of 1 reports extra information that is not repetitive. A value 2 reports cdbs and responses for SCSI commands that are not repetitive (i.e. other that READ and WRITE). Error processing is not considered repetitive. Values of 3 and 4 yield output for all SCSI commands (and Unix read() and write() calls) so there can be a lot of output.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>outputs usage message and exits.</dd>
+<dt><code>&#8211;on_dst</code></dt>
+<dd>send the XCOPY command to the output file/device.</dd>
+<dt><code>&#8211;on_src</code></dt>
+<dd>send the XCOPY command to the input file/device. This is the default when this option and <i>&#8211;on_dst</i> are not given.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>equivalent to <i>verbose=1</i>. When used twice, equivalent to <i>verbose=2</i>, etc.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>outputs version number information and exits.</dd></dl>
 <h2>Flags</h2>
 <p>Here is a list of flags and their meanings:</p>
 <dl>
-<dt>append</p>
-<dd>causes the O_APPEND flag to be added to the open of <i>OFILE</i>. For regular files this will lead to data appended to the end of any existing data. Cannot be used together with the <i>seek=SEEK</i> option as they conflict. The default action of this utility is to overwrite any existing data from the beginning of the file or, if <i>SEEK</i> is given, starting at block <i>SEEK</i>. Note that attempting to &#8216;append&#8217; to a device file (e.g. a disk) will usually be ignored or may cause an error to be reported.</p>
-<dt>excl</p>
-<dd>causes the O_EXCL flag to be added to the open of <i>IFILE</i> and/or <i>OFILE</i>.</p>
-<dt>flock</p>
-<dd>after opening the associated file (i.e. <i>IFILE</i> and/or <i>OFILE</i>) an attempt is made to get an advisory exclusive lock with the flock() system call. The flock arguments are &quot;FLOCK_EX | FLOCK_NB&quot; which will cause the lock to be taken if available else a &quot;temporarily unavailable&quot; error is generated. An exit status of 90 is produced in the latter case and no copy is done.</p>
-<dt>null</p>
-<dd>has no affect, just a placeholder.</p>
-<dt>pad</p>
-<dd>sets the SCSI EXTENDED COPY command segment descriptor PAD bit. The PAD bit (in conjunction with the CAT bit) controls the handling of residual data.(See section <code>HANDLING OF RESIDUAL DATA</code> for details.</p>
-<dt>xcopy</p>
-<dd>has no affect; for compatibility with ddpt.</dl>
+<dt>append</dt>
+<dd>causes the O_APPEND flag to be added to the open of <i>OFILE</i>. For regular files this will lead to data appended to the end of any existing data. Cannot be used together with the <i>seek=SEEK</i> option as they conflict. The default action of this utility is to overwrite any existing data from the beginning of the file or, if <i>SEEK</i> is given, starting at block <i>SEEK</i>. Note that attempting to &#8216;append&#8217; to a device file (e.g. a disk) will usually be ignored or may cause an error to be reported.</dd>
+<dt>excl</dt>
+<dd>causes the O_EXCL flag to be added to the open of <i>IFILE</i> and/or <i>OFILE</i>.</dd>
+<dt>flock</dt>
+<dd>after opening the associated file (i.e. <i>IFILE</i> and/or <i>OFILE</i>) an attempt is made to get an advisory exclusive lock with the flock() system call. The flock arguments are &quot;FLOCK_EX | FLOCK_NB&quot; which will cause the lock to be taken if available else a &quot;temporarily unavailable&quot; error is generated. An exit status of 90 is produced in the latter case and no copy is done.</dd>
+<dt>null</dt>
+<dd>has no affect, just a placeholder.</dd>
+<dt>pad</dt>
+<dd>sets the SCSI EXTENDED COPY command segment descriptor PAD bit. The PAD bit (in conjunction with the CAT bit) controls the handling of residual data.(See section <code>HANDLING OF RESIDUAL DATA</code> for details.</dd>
+<dt>xcopy</dt>
+<dd>has no affect; for compatibility with ddpt.</dd></dl>
 <h2>Handling Of Residual Data</h2>
 <p>The <i>pad</i> and <i>cat</i> bits control the handling of residual data. As the data can be specified either in terms of source or target block size and both might have different block sizes residual data is likely to happen in these cases. If both block sizes are identical these bits have no effect as residual data will not occur. </p>
 <p> If none of these bits are set, the EXTENDED COPY command will be aborted with additional sense &#8216;UNEXPECTED INEXACT SEGMENT&#8217;. </p>
@@ -92,8 +92,8 @@ description: "sg_xcopy – copy data to and from files and devices using SCSI EX
 <h2>Retired Options</h2>
 <p>Here are some retired options that are still present:</p>
 <dl>
-<dt>append=0 | 1</p>
-<dd>when set, equivalent to &#8216;oflag=append&#8217;. When clear the action is to overwrite the existing file (if it exists); this is the default. See the &#8216;append&#8217; flag.</dl>
+<dt>append=0 | 1</dt>
+<dd>when set, equivalent to &#8216;oflag=append&#8217;. When clear the action is to overwrite the existing file (if it exists); this is the default. See the &#8216;append&#8217; flag.</dd></dl>
 <h2>Notes</h2>
 <p>Various numeric arguments (e.g. <i>SKIP</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> The <i>COUNT</i>, <i>SKIP</i> and <i>SEEK</i> arguments can take 64 bit values (i.e. very big numbers). Other values are limited to what can fit in a signed 32 bit number. </p>

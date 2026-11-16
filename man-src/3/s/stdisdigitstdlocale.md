@@ -11,9 +11,7 @@ std::isdigit(std::locale) - std::isdigit(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     bool isdigit(charT ch, const locale &amp;loc);</code></pre> 
 Checks if the given character is classified as a digit by the given locale's std::ctype facet. 
 
@@ -36,14 +34,10 @@ Returns true if the character is classified as a digit, false otherwise.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;string&gt;
-
 #include &lt;set&gt;
 struct jdigit_ctype : std::ctype&lt;wchar_t&gt;
-
 {
     std::set&lt;wchar_t&gt; jdigits{L'一', L'二', L'三', L'四', L'五', L'六', L'七', L'八', L'九', L'十'};
     bool do_is(mask m, char_type c) const
@@ -54,7 +48,6 @@ struct jdigit_ctype : std::ctype&lt;wchar_t&gt;
     }
 };
 int main()
-
 {
     std::wstring text = L&quot;123一二三１２３&quot;;
     std::locale loc(std::locale(&quot;&quot;), new jdigit_ctype);

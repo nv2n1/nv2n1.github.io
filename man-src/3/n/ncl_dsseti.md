@@ -10,9 +10,9 @@ DSSETI - Sets the value of an internal parameter of type INTEGER.
 
 <h2>Synopsis</h2>CALL DSSETI (PNAM, CVAL);
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
-<dt>CVAL
-<dd>A character string that is the value to be assigned to the internal parameter specified by pnam.</dl><h2>Usage</h2>This function allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
+</dt><dd>A character string that specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
+</dd><dt>CVAL
+</dt><dd>A character string that is the value to be assigned to the internal parameter specified by pnam.</dd></dl><h2>Usage</h2>This function allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
 <h2>Access</h2>To use DSSETI, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>dsgrid, dsgrid_params, dsgrid2s, dsgrid3s, dsgrid2d, dsgrid3d, dspnt2s, dspnt2d, dspnt3s, dspnt3d dsgeti. 
 

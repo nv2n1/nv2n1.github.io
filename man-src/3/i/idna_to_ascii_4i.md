@@ -14,14 +14,14 @@ description: "idna_to_ascii_4i – API function"
 <p> <code>int idna_to_ascii_4i(const uint32_t * </code><i>in</i><code>, size_t </code><i>inlen</i><code>, char * </code><i>out</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const uint32_t * in</p>
-<dd> input array with unicode code points.</p>
-<dt>size_t inlen</p>
-<dd> length of input array with unicode code points.</p>
-<dt>char * out</p>
-<dd> output zero terminated string that must have room for at least 63 characters plus the terminating zero.</p>
-<dt>int flags</p>
-<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dl>
+<dt>const uint32_t * in</dt>
+<dd> input array with unicode code points.</dd>
+<dt>size_t inlen</dt>
+<dd> length of input array with unicode code points.</dd>
+<dt>char * out</dt>
+<dd> output zero terminated string that must have room for at least 63 characters plus the terminating zero.</dd>
+<dt>int flags</dt>
+<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The ToASCII operation takes a sequence of Unicode code points that make up one domain label and transforms it into a sequence of code points in the ASCII range (0..7F). If ToASCII succeeds, the original sequence and the resulting sequence are equivalent labels. </p>
 <p> It is important to note that the ToASCII operation can fail. ToASCII fails if any step of it fails. If any step of the ToASCII operation fails on any label in a domain name, that domain name MUST NOT be used as an internationalized domain name. The method for deadling with this failure is application-specific. </p>
@@ -38,6 +38,6 @@ description: "idna_to_ascii_4i – API function"
 <p> The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libidn</code></dl>
+</dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

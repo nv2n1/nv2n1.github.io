@@ -10,12 +10,7 @@ description: "xcb_xkb_get_names –"
 <p>xcb_xkb_get_names &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_names_cookie_t xcb_xkb_get_names(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint32_t which);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_names_reply_t {
@@ -39,51 +34,51 @@ xcb_xkb_get_names_cookie_t xcb_xkb_get_names(xcb_connection_t *conn, xcb_xkb_dev
 } <code>xcb_xkb_get_names_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xkb_get_names_reply_t *<code>xcb_xkb_get_names_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_names_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xkb_get_names_reply_t *<code>xcb_xkb_get_names_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_names_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <p>xcb_xkb_get_names_value_list_t *xcb_xkb_get_names_value_list (const xcb_xkb_get_names_request_t *reply)</p>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>which</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>which</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_NAMES</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>which</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>minKeyCode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>maxKeyCode</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nTypes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupNames</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>virtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>indicators</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nRadioGroups</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyAliases</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKTLevels</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_NAMES</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>which</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>minKeyCode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>maxKeyCode</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nTypes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupNames</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>virtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>indicators</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nRadioGroups</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyAliases</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKTLevels</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_names_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_names_reply</i>. </p>

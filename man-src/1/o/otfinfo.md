@@ -17,16 +17,16 @@ description: "otfinfo – report information about OpenType fonts"
 <p> With long options, you need type only as many characters as will make the option unique.</p>
 <h3>Query options</h3>
 <dl>
-<dt><code>-s</code>, <code>&#8211;scripts</code></p>
-<dd> Print supported scripts and language systems. The scripts are printed one per line, with human-readable descriptions; for example: </p>
+<dt><code>-s</code>, <code>&#8211;scripts</code></dt>
+<dd> Print supported scripts and language systems. The scripts are printed one per line, with human-readable descriptions; for example: </dd>
 <pre>
   cyrl            Cyrillic
   grek            Greek
   latn            Latin
   latn.TUR        Latin/Turkish
 </pre>
-<dt><code>-f</code>, <code>&#8211;features</code></p>
-<dd> Print GSUB and GPOS features supported by the selected script (see the <code>&#8211;script</code> option below). The scripts are printed one per line, with human-readable descriptions; for example: </p>
+<dt><code>-f</code>, <code>&#8211;features</code></dt>
+<dd> Print GSUB and GPOS features supported by the selected script (see the <code>&#8211;script</code> option below). The scripts are printed one per line, with human-readable descriptions; for example: </dd>
 <pre>
   aalt    Access All Alternates
   c2sc    Small Capitals From Capitals
@@ -35,28 +35,28 @@ description: "otfinfo – report information about OpenType fonts"
   ...
   zero    Slashed Zero
 </pre>
-<dt><code>-z</code>, <code>&#8211;optical-size</code></p>
-<dd> Print optical size information. For example: </p>
+<dt><code>-z</code>, <code>&#8211;optical-size</code></dt>
+<dd> Print optical size information. For example: </dd>
 <pre>
   design size 11 pt, size range (8.4 pt, 13 pt], subfamily ID 11, subfamily name Semibold Italic
 </pre>
-<dt><code>-p</code>, <code>&#8211;postscript-name</code></p>
-<dd> Print each font&#8217;s PostScript name. For example: </p>
+<dt><code>-p</code>, <code>&#8211;postscript-name</code></dt>
+<dd> Print each font&#8217;s PostScript name. For example: </dd>
 <pre>
   MinionPro-SemiboldItCapt
 </pre>
-<dt><code>-a</code>, <code>&#8211;family</code></p>
-<dd> Print each font&#8217;s family name. For example: </p>
+<dt><code>-a</code>, <code>&#8211;family</code></dt>
+<dd> Print each font&#8217;s family name. For example: </dd>
 <pre>
   Minion Pro
 </pre>
-<dt><code>-v</code>, <code>&#8211;font-version</code></p>
-<dd> Print font version information, if available. For example: </p>
+<dt><code>-v</code>, <code>&#8211;font-version</code></dt>
+<dd> Print font version information, if available. For example: </dd>
 <pre>
   OTF 1.013;PS 001.000;Core 1.0.27;makeotf.lib(1.11)
 </pre>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd> Print each font&#8217;s name, version, designer, vendor, copyright, and license information. For example: </p>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd> Print each font&#8217;s name, version, designer, vendor, copyright, and license information. For example: </dd>
 <pre><code>
 Family : Minion Pro
              Subfamily : Regular
@@ -75,8 +75,8 @@ MinionPro - Regular
     a trademark of Adobe Systems Incorporated in the United States and / or other countries.Copyright : &amp;#169;
 2000 Adobe Systems Incorporated.All Rights Reserved.U.S.Patent Des.337, 604. Other patents pending.License URL : http: // www.adobe.com/type/legal.html
 </code></pre>
-<dt><code>-g</code>, <code>&#8211;glyphs</code></p>
-<dd> Print the name of every glyph in each font, one per line. For example: </p>
+<dt><code>-g</code>, <code>&#8211;glyphs</code></dt>
+<dd> Print the name of every glyph in each font, one per line. For example: </dd>
 <pre>
   .notdef
   space
@@ -85,10 +85,10 @@ MinionPro - Regular
   ncommaaccent.end
   lje.alt
 </pre>
-<dt><code>-u</code>, <code>&#8211;unicode</code></p>
-<dd> Print each Unicode code point supported by the font, followed by the glyph number representing that code point (and, if present, the name of the corresponding glyph). </p>
-<dt><code>-t</code>, <code>&#8211;tables</code></p>
-<dd> Print the size and name of every OpenType table in the font. For example: </p>
+<dt><code>-u</code>, <code>&#8211;unicode</code></dt>
+<dd> Print each Unicode code point supported by the font, followed by the glyph number representing that code point (and, if present, the name of the corresponding glyph). </dd>
+<dt><code>-t</code>, <code>&#8211;tables</code></dt>
+<dd> Print the size and name of every OpenType table in the font. For example: </dd>
 <pre>
        52 BASE
     87723 CFF
@@ -96,20 +96,20 @@ MinionPro - Regular
     21366 GPOS
   ...
 </pre>
-<dt><code>-T</code> <i>table</i>, <code>&#8211;dump-table=</code><i>table</i></p>
-<dd> Print the contents of the font&#8217;s OpenType table <i>table</i>.</dl>
+<dt><code>-T</code> <i>table</i>, <code>&#8211;dump-table=</code><i>table</i></dt>
+<dd> Print the contents of the font&#8217;s OpenType table <i>table</i>.</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt><code>&#8211;script=</code><i>script</i>[.<i>lang</i>]</p>
-<dd> Select the script system <i>script</i> and language system <i>lang</i> used to look up features by <code>&#8211;features</code>. Examples include &quot;latn&quot; (Latin script), &quot;grek&quot; (Greek script), and &quot;yi.YIC&quot; (Yi script with classic characters). If <i>lang</i> is not specified, otfinfo will use the default language system for that script. Defaults to &quot;latn&quot;. </p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Write progress messages to standard error. </p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Do not generate any error messages. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print usage information and exit. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and some short non-warranty information and exit.</dl>
+<dt><code>&#8211;script=</code><i>script</i>[.<i>lang</i>]</dt>
+<dd> Select the script system <i>script</i> and language system <i>lang</i> used to look up features by <code>&#8211;features</code>. Examples include &quot;latn&quot; (Latin script), &quot;grek&quot; (Greek script), and &quot;yi.YIC&quot; (Yi script with classic characters). If <i>lang</i> is not specified, otfinfo will use the default language system for that script. Defaults to &quot;latn&quot;. </dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Write progress messages to standard error. </dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not generate any error messages. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage information and exit. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and some short non-warranty information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>OpenType Specification</i>, Version 1.4</p>
 <h2>AUTHOR</h2>

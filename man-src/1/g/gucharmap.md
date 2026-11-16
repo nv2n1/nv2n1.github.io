@@ -15,10 +15,10 @@ description: "gucharmap – Unicode character picker and font browser"
 <p> <code>gucharmap</code> allows you to browse through all the available Unicode characters and categories for the installed fonts, and to examine their detailed properties.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;font</code></p>
-<dd> Font to start with, ex: &#8216;Serif 27&#8217;</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use</dl>
+<dt><code>&#8211;font</code></dt>
+<dd> Font to start with, ex: &#8216;Serif 27&#8217;</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use</dd></dl>
 <p> <code>gucharmap</code> also accepts the standard GNOME and GTK options.</p>
 <h2>AUTHORS</h2>
 <p> <code>gucharmap</code> was written by Noah Levitt &lt;nlevitt [at] columbia.edu&gt; and others. </p>

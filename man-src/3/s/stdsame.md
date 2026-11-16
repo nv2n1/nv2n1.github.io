@@ -11,9 +11,7 @@ std::Same - std::Same
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class T, class U &gt;    (since C++20)
-
 concept Same = /* see below */;</code></pre> 
 The concept Same&lt;T, U&gt; is satisfied if and only if T and U denote the same type. 
 std::Same&lt;T, U&gt; subsumes std::Same&lt;U, T&gt; and vice versa. 

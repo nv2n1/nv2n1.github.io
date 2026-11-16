@@ -11,9 +11,7 @@ std::experimental::ranges::tagged_tuple - std::experimental::ranges::tagged_tupl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/tuple&gt;
-
 template&lt; TaggedType... Types &gt;                (ranges TS)
-
 using tagged_tuple = /* see below */;</code></pre> 
 Convenience alias template for naming a ranges::tagged wrapping a std::tuple. 
 A TaggedType is a function type S(T), where S is a TagSpecifier and T is the type of the element. 

@@ -14,9 +14,7 @@ constexpr std::chrono::month operator++(int) noexcept; <code>(2)</code> <i>(sinc
 constexpr std::chrono::month&amp; operator&#8211;() noexcept; <code>(3)</code> <i>(since C++20)</i><br />
 constexpr std::chrono::month operator&#8211;(int) noexcept; <code>(4)</code> <i>(since C++20)</i> </p>
 <pre><code>Adds or subtracts 1 from the month value, reducing the result modulo 12 to an integer in the range [1, 12].
-
 1-2) Performs *this += std::chrono::months{1};
-
 3-4) Performs *this -= std::chrono::months{1};
 </code></pre>
 <h2>Parameters</h2>
@@ -31,17 +29,9 @@ constexpr std::chrono::month operator&#8211;(int) noexcept; <code>(4)</code> <i>
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
 <pre><code>adds or subtracts a number of months
-
 operator+= (public member function)
-
 operator-=
 performs arithmetic on months
-
 operator+  (function)
-
 operator-
-
-
-
-
 </code></pre>

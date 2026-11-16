@@ -85,14 +85,10 @@ The logical complement of the result of calling pred(x, y).
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 struct same : std::binary_function&lt;int, int, bool&gt;
-
 {
     bool operator()(int a, int b) const
     {
@@ -100,7 +96,6 @@ struct same : std::binary_function&lt;int, int, bool&gt;
     }
 };
 int main()
-
 {
     std::vector&lt;int&gt; v1;
     std::vector&lt;int&gt; v2;

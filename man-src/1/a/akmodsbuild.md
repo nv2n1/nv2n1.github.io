@@ -17,8 +17,8 @@ description: "akmodsbuild – Rebuilds kmod SRPM(s)"
 <p> Rebuilds kmod-SRPMs for kernels</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code>, <code>&#8211;kernels</code> &lt;list&gt;</p>
-<dd></dl>
+<dt><code>-k</code>, <code>&#8211;kernels</code> &lt;list&gt;</dt>
+<dd></dd></dl>
 <pre><code>
    Build the kmod for kernels in list; try to build for the current
    kernel (e.g. output from 'uname -r') if option is not used.
@@ -31,7 +31,6 @@ description: "akmodsbuild – Rebuilds kmod SRPM(s)"
 <pre>
    Save resulting RPMS in &lt;direcotry&gt;. Use current working directory if 
    directory is not specified.
-    
 </pre>
 <p> <code>-t</code>, <code>&#8211;target</code> </p>
 <pre>

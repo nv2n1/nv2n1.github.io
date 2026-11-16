@@ -12,7 +12,6 @@ std::filesystem::directory_entry::refresh - std::filesystem::directory_entry::re
 
 <pre><code>void refresh();
 (since C++ 17)
-
     void refresh(std::error_code &amp;ec) noexcept;</code></pre> 
 Examines the filesystem object referred to by this directory entry and stores its attributes for retrieval with status(), exists(), is_regular_file(), and other status accessors. 
 If an error occurs, the value of any cached attributes is unspecified 

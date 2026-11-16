@@ -13,13 +13,7 @@ description: "std::bernoulli_distribution::param_type –"
 <p>typedef <code>bernoulli_distribution</code> <code>distribution_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (double __p=0.5)
-
-
-
 double p () const
-
-
-
 Friends</code></pre>
 <p> bool <code>operator==</code> (const <code>param_type</code> &amp;__p1, const <code>param_type</code> &amp;__p2)</p>
 <h2>Detailed Description</h2>

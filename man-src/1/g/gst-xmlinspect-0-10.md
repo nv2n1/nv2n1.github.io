@@ -15,22 +15,22 @@ description: "gst-xmlinspect – print info about a GStreamer plugin or element"
 <h2>Options</h2>
 <p><i>gst-xmlinspect</i> accepts the following arguments and options:</p>
 <dl>
-<dt><code>PLUGIN</code></p>
-<dd>Name of a plugin</p>
-<dt><code>ELEMENT</code></p>
-<dd>Name of an element</p>
-<dt><code>&#8211;help</code></p>
-<dd>Print help synopsis and available FLAGS</p>
-<dt><code>&#8211;gst-info-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> info flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-debug-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> debugging flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-mask=FLAGS</code></p>
-<dd><i>GStreamer</i> info and debugging flags to set (list with &#8211;help)</p>
-<dt><code>&#8211;gst-plugin-spew</code></p>
-<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</p>
-<dt><code>&#8211;gst-plugin-path=PATH</code></p>
-<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dl>
+<dt><code>PLUGIN</code></dt>
+<dd>Name of a plugin</dd>
+<dt><code>ELEMENT</code></dt>
+<dd>Name of an element</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Print help synopsis and available FLAGS</dd>
+<dt><code>&#8211;gst-info-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> info flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-debug-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> debugging flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-mask=FLAGS</code></dt>
+<dd><i>GStreamer</i> info and debugging flags to set (list with &#8211;help)</dd>
+<dt><code>&#8211;gst-plugin-spew</code></dt>
+<dd><i>GStreamer</i> info flags to set Enable printout of errors while loading <i>GStreamer</i> plugins</dd>
+<dt><code>&#8211;gst-plugin-path=PATH</code></dt>
+<dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dd></dl>
 <h2>See Also</h2>
 <p><code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>Author</h2>

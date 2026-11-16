@@ -16,12 +16,12 @@ description: "struct_esw_eadm – EADM Subchannel Extended Status Word (ESW)"
 <h2>Members</h2>
 <p>sublog</p>
 <dl>
-<dd>subchannel logout</dl>
+<dd>subchannel logout</dd></dl>
 <p> erw</p>
 <dl>
-<dd>extended report word</dl>
+<dd>extended report word</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

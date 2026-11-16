@@ -14,14 +14,14 @@ description: "gnutls_x509_trust_list_add_cas – API function"
 <p> <code>int gnutls_x509_trust_list_add_cas(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_x509_crt_t * </code><i>clist</i><code>, unsigned </code><i>clist_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>const gnutls_x509_crt_t * clist</p>
-<dd> A list of CAs</p>
-<dt>unsigned clist_size</p>
-<dd> The length of the CA list</p>
-<dt>unsigned int flags</p>
-<dd> should be 0 or an or&#8217;ed sequence of <code>GNUTLS_TL</code> options.</dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>const gnutls_x509_crt_t * clist</dt>
+<dd> A list of CAs</dd>
+<dt>unsigned clist_size</dt>
+<dd> The length of the CA list</dd>
+<dt>unsigned int flags</dt>
+<dd> should be 0 or an or&#8217;ed sequence of <code>GNUTLS_TL</code> options.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will add the given certificate authorities to the trusted list. The list of CAs must not be deinitialized during this structure&#8217;s lifetime. </p>
 <p> If the flag <code>GNUTLS_TL_NO_DUPLICATES</code> is specified, then the provided <i>clist</i> entries that are duplicates will not be added to the list and will be deinitialized.</p>
@@ -38,6 +38,6 @@ description: "gnutls_x509_trust_list_add_cas – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -21,26 +21,26 @@ description: "BlazeBlogger – a CMS without boundaries"
 <p><code>BlazeBlogger</code> is a simple to use but capable <font SIZE="-1">CMS</font> for the command line. Being written in Perl as a cross-platform application and producing the static content without the need of database servers or server side scripting, it is literally a <font SIZE="-1">CMS</font> without boundaries suitable for a wide variety of web presentations, from personal weblog to a project page or even a company presentation.</p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/7-blazeintro/">blazeintro</a></code>(7)</p>
-<dd>An introduction to BlazeBlogger.</p>
-<dt><code><a href="/docs/linux/man/7-blazetheme/">blazetheme</a></code>(7)</p>
-<dd>An introduction to BlazeBlogger theme creation.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-init/">blaze-init</a></code>(1)</p>
-<dd>Create or recover a BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1)</p>
-<dd>Display or set the BlazeBlogger repository options.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-add/">blaze-add</a></code>(1)</p>
-<dd>Add a blog post or a page to the BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-edit/">blaze-edit</a></code>(1)</p>
-<dd>Edit a blog post or a page in the BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-remove/">blaze-remove</a></code>(1)</p>
-<dd>Remove a blog post or a page from the BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-list/">blaze-list</a></code>(1)</p>
-<dd>Browse the content of the BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1)</p>
-<dd>Generate static content from the BlazeBlogger repository.</p>
-<dt><code><a href="/docs/linux/man/1-blaze-log/">blaze-log</a></code>(1)</p>
-<dd>Display the BlazeBlogger repository log.</dl>
+<dt><code><a href="/docs/linux/man/7-blazeintro/">blazeintro</a></code>(7)</dt>
+<dd>An introduction to BlazeBlogger.</dd>
+<dt><code><a href="/docs/linux/man/7-blazetheme/">blazetheme</a></code>(7)</dt>
+<dd>An introduction to BlazeBlogger theme creation.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-init/">blaze-init</a></code>(1)</dt>
+<dd>Create or recover a BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1)</dt>
+<dd>Display or set the BlazeBlogger repository options.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-add/">blaze-add</a></code>(1)</dt>
+<dd>Add a blog post or a page to the BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-edit/">blaze-edit</a></code>(1)</dt>
+<dd>Edit a blog post or a page in the BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-remove/">blaze-remove</a></code>(1)</dt>
+<dd>Remove a blog post or a page from the BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-list/">blaze-list</a></code>(1)</dt>
+<dd>Browse the content of the BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1)</dt>
+<dd>Generate static content from the BlazeBlogger repository.</dd>
+<dt><code><a href="/docs/linux/man/1-blaze-log/">blaze-log</a></code>(1)</dt>
+<dd>Display the BlazeBlogger repository log.</dd></dl>
 <h2>Bugs</h2>
 <p>To report bug or even send patch, either add new issue to the project bugtracker at &lt;<a rel="nofollow" href="http://code.google.com/p/blazeblogger/issues/">http://code.google.com/p/blazeblogger/issues/</a>&gt;, or visit the discussion group at &lt;<a rel="nofollow" href="http://groups.google.com/group/blazeblogger/">http://groups.google.com/group/blazeblogger/</a>&gt;. You can also contact the author directly via e-mail.</p>
 <h2>Author</h2>

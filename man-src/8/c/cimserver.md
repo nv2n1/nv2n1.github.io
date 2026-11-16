@@ -35,66 +35,66 @@ description: "cimserver – start or stop the CIM Server; display the version nu
 <p>The <code>cimserver</code> command recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Display the version number or running status of the CIM Server.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Display the command usage.</p>
-<dt><code>&#8211;status</code></p>
-<dd>Display the running status of the CIM Server.</p>
-<dt><code>-s</code></p>
-<dd>Stop the CIM Server.</p>
-<dd>Specify the timeout value for shutting down the CIM Server. This can only be used in conjunction with the <code>-s </code> option. The minimum timeout value is 2 seconds. If this is not specified, the default configurable timeout value will be used.</p>
-<dt><i>configProperty=value</i></p>
-<dd>Set the value for the specified configuration property to be used in starting the CIM Server.</dl>
+</dd><dl>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Display the version number or running status of the CIM Server.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Display the command usage.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd>Display the running status of the CIM Server.</dd>
+<dt><code>-s</code></dt>
+<dd>Stop the CIM Server.</dd>
+<dd>Specify the timeout value for shutting down the CIM Server. This can only be used in conjunction with the <code>-s </code> option. The minimum timeout value is 2 seconds. If this is not specified, the default configurable timeout value will be used.</dd>
+<dt><i>configProperty=value</i></dt>
+<dd>Set the value for the specified configuration property to be used in starting the CIM Server.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>The <code>cimserver </code> command returns one of the following values:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>Success</p>
-<dt><code>1 </code></p>
-<dd>Error</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>Success</dd>
+<dt><code>1 </code></dt>
+<dd>Error</dd></dl>
 </dl>
 <p> The <code>cimserver &#8211;status </code> command returns one of the following values:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>The CIM Server is running</p>
-<dt><code>1 </code></p>
-<dd>Error</p>
-<dt><code>2 </code></p>
-<dd>The CIM Server is not running</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>The CIM Server is running</dd>
+<dt><code>1 </code></dt>
+<dd>Error</dd>
+<dt><code>2 </code></dt>
+<dd>The CIM Server is not running</dd></dl>
 </dl>
 <p> When an error occurs, an error message is written to stderr and an error value of 1 is returned.</p>
 <h2>Diagnostics</h2>
 <p><code>unable to connect to CIM Server. CIM Server may not be running.</code></p>
 <dl>
-<dd>The <code>cimserver</code> command was issued to stop the CIM Server when CIM Server was not running. An exit status value of 1 is returned.</dl>
+<dd>The <code>cimserver</code> command was issued to stop the CIM Server when CIM Server was not running. An exit status value of 1 is returned.</dd></dl>
 <p> <code>Error: Bind failed: Failed to bind socket. </code></p>
 <dl>
-<dd>The <code>cimserver</code> command was issued to start the CIM Server and the CIM Server was already running. An exit status value of 1 is returned.</dl>
+<dd>The <code>cimserver</code> command was issued to start the CIM Server and the CIM Server was already running. An exit status value of 1 is returned.</dd></dl>
 <h2>Examples</h2>
 <p>Stop the CIM Server with the default timeout value of 10 seconds.</p>
 <dl>
-<dd><code>cimserver -s</code></dl>
+<dd><code>cimserver -s</code></dd></dl>
 <p> Stop the CIM Server with a timeout value of 5 seconds.</p>
 <dl>
-<dd><code>cimserver -s shutdownTimeout=5</code></dl>
+<dd><code>cimserver -s shutdownTimeout=5</code></dd></dl>
 <p> Start the CIM Server.</p>
 <dl>
-<dd><code>cimserver</code></dl>
+<dd><code>cimserver</code></dd></dl>
 <p> Start the CIM Server with the configuration property <code>enableNamespaceAuthorization</code> set to true.</p>
 <dl>
-<dd><code>cimserver enableNamespaceAuthorization=true</code></dl>
+<dd><code>cimserver enableNamespaceAuthorization=true</code></dd></dl>
 <p> Display the version number of the CIM Server. This version number is used to identify the release version of the CIM Server in the OpenPegasus release.</p>
 <dl>
-<dd><code>cimserver -v</code></dl>
+<dd><code>cimserver -v</code></dd></dl>
 <p> Display the command usage.</p>
 <dl>
-<dd><code>cimserver -h</code></dl>
+<dd><code>cimserver -h</code></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-cimconfig/">cimconfig</a>(8). </p>

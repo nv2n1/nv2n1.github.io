@@ -59,3 +59,4 @@ $sref-&gt;$ *;
 <p> The functions PerlIO_get_bufsiz, PerlIO_get_cnt, PerlIO_set_cnt and PerlIO_set_ptrcnt now have SSize_t, rather than int, return values and parameters.</p>
 <h3>use locale now works on <font SIZE="-1">UTF-8</font> locales</h3>
 <p> Until this release, only single-byte locales, such as the <font SIZE="-1">ISO 8859</font> series were supported. Now, the increasingly common multi-byte <font SIZE="-1">UTF-8</font> locales are also supported. A <font SIZE="-1">UTF-8</font> locale is one in which the character set is Unicode and the encoding is <font SIZE="-1">UTF-8.</font> The <font SIZE="-1">POSIX</font> <tt>&quot;LC_CTYPE&quot;</tt> category operations (case changing (like <tt>&quot;lc()&quot;</tt>, <tt>&quot;
+</p>

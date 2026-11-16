@@ -18,19 +18,19 @@ description: "lsinitrd – tool to show the contents of an initramfs image"
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> print a help message and exit.</dl>
+</dt><dd> print a help message and exit.</dd></dl>
 <p> <code>-s, &#8211;size</code></p>
 <dl>
 <dt>
-<dd> sort the contents of the initramfs by size.</dl>
+</dt><dd> sort the contents of the initramfs by size.</dd></dl>
 <p> <code>-f, &#8211;file</code>&nbsp;<wbr><i>&lt;filename&gt;</i></p>
 <dl>
 <dt>
-<dd> print the contents of &lt;filename&gt;.</dl>
+</dt><dd> print the contents of &lt;filename&gt;.</dd></dl>
 <p> <code>-k, &#8211;kver</code>&nbsp;<wbr><i>&lt;kernel version&gt;</i></p>
 <dl>
 <dt>
-<dd> inspect the initramfs of &lt;kernel version&gt;.</dl>
+</dt><dd> inspect the initramfs of &lt;kernel version&gt;.</dd></dl>
 <h2>AVAILABILITY</h2>
 <p> The lsinitrd command is part of the dracut package and is available from m[blue]<code><a rel="nofollow" href="https://dracut.wiki.kernel.org">https://dracut.wiki.kernel.org</a></code>m[]</p>
 <h2>AUTHORS</h2>

@@ -30,44 +30,36 @@ description: "sty2dtx — Converts a LaTeX .sty file to a documented .dtx file"
 <p> The following macro definitions are detected when they are at the start of a line (can be prefixed by \global, \long, \protected and/or \outer): </p>
 <pre><code>
 \def   def   \gdef   �f
-    
 ewcommand
 {
-    
 ame
 }
-
 ewcommand *
 {
-    
 ame
 }
-
 ewcommand
 ame       
 ewcommand *
 ame
-    enewcommand
+enewcommand
 {
-    
 ame
 }
-enewcommand *
+enewcommand *
 {
-    
 ame
 }
-enewcommand
-ame     enewcommand *
+enewcommand
+ame     
+enewcommand *
 ame
     \providecommand
 {
-    
 ame
 }
 \providecommand *
 {
-    
 ame
 }
 \providecommand
@@ -75,7 +67,6 @@ ame   \providecommand *
 ame
     \@namedef
 {
-    
 ame
 }
 \@namedef
@@ -87,7 +78,8 @@ ewenvironment<br />
 {<br />
     name<br />
 }<br />
-enewenvironemnt<br />
+
+enewenvironemnt<br />
 {<br />
     name<br />
 }<br />
@@ -100,10 +92,10 @@ ewenvironment<br />
 <p>sty2dtx[&lt;options&gt;][&#8211; &lt; VAR &gt;= &lt;VALUE&gt;&#8230;][&#8211;][&lt;infile(s)&gt;][&lt;outfile&gt;]</p>
 <h3>Files</h3>
 <dl>
-<dt>&bull;</p>
-<dd> can be &#8216;<tt>&quot;-&quot;</tt>&#8216; for <font SIZE="-1">STDIN</font> or <font SIZE="-1">STDOUT</font>, which is the default if no files are given</p>
-<dt>&bull;</p>
-<dd> multiple input files are merged to one output file</dl>
+<dt>&bull;</dt>
+<dd> can be &#8216;<tt>&quot;-&quot;</tt>&#8216; for <font SIZE="-1">STDIN</font> or <font SIZE="-1">STDOUT</font>, which is the default if no files are given</dd>
+<dt>&bull;</dt>
+<dd> multiple input files are merged to one output file</dd></dl>
 <h3>Variables</h3>
 <p> Variables can be defined using </p>
 <pre>
@@ -123,44 +115,44 @@ ewenvironment<br />
 </pre>
 <h3>Options</h3>
 <dl>
-<dt><code>-h</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print this help text</p>
+<dt><code>-h</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print this help text</dt>
 <dd>
-<dt><code>-H</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print extended help</p>
+</dd><dt><code>-H</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print extended help</dt>
 <dd>
-<dt><code>-V</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print version and copyright</p>
+</dd><dt><code>-V</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Print version and copyright</dt>
 <dd>
-<dt><code>-v</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Be verbose</p>
+</dd><dt><code>-v</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Be verbose</dt>
 <dd>
-<dt><code>-o</code> <i>output</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;Use given file as output</p>
+</dd><dt><code>-o</code> <i>output</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;Use given file as output</dt>
 <dd>
-<dt><code>-O</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Overwrite already existing output file(s)</p>
+</dd><dt><code>-O</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Overwrite already existing output file(s)</dt>
 <dd>
-<dt><code>-B</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use basename of single input file for output file</p>
+</dd><dt><code>-B</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use basename of single input file for output file</dt>
 <dd>
-<dt><code>-I</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Also create .ins (install) file</p>
+</dd><dt><code>-I</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Also create .ins (install) file</dt>
 <dd>
-<dt><code>-c</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Only use code section (like v1.0)</p>
+</dd><dt><code>-c</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Only use code section (like v1.0)</dt>
 <dd>
-<dt><code>-r</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Remove existing &#8216;macro&#8217;, &#8216;macrocode&#8217;, etc. environments.</p>
+</dd><dt><code>-r</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Remove existing &#8216;macro&#8217;, &#8216;macrocode&#8217;, etc. environments.</dt>
 <dd>
-<dt><code>-R</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Do not remove existing &#8216;macro&#8217;, &#8216;macrocode&#8217;, etc. environments.</p>
+</dd><dt><code>-R</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Do not remove existing &#8216;macro&#8217;, &#8216;macrocode&#8217;, etc. environments.</dt>
 <dd>
-<dt><code>-i</code> <i>ins-file</i> &nbsp;Create .ins file with given name</p>
+</dd><dt><code>-i</code> <i>ins-file</i> &nbsp;Create .ins file with given name</dt>
 <dd>
-<dt><code>-t</code> <i>template</i> &nbsp;Use this file as template instead of the default one</p>
+</dd><dt><code>-t</code> <i>template</i> &nbsp;Use this file as template instead of the default one</dt>
 <dd>
-<dt><code>-T</code> <i>template</i> &nbsp;Use this file as template for the .ins file</p>
+</dd><dt><code>-T</code> <i>template</i> &nbsp;Use this file as template for the .ins file</dt>
 <dd>
-<dt><code>-e</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Export default .dtx template to file and exit</p>
+</dd><dt><code>-e</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Export default .dtx template to file and exit</dt>
 <dd>
-<dt><code>-E</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Export default .ins template to file and exit</p>
+</dd><dt><code>-E</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Export default .ins template to file and exit</dt>
 <dd>
-<dt><code>-D</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use current date as file date</p>
+</dd><dt><code>-D</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use current date as file date</dt>
 <dd>
-<dt><code>-F</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Read more options and variables from file.</p>
+</dd><dt><code>-F</code> <i>file</i> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Read more options and variables from file.</dt>
 <dd>
-<dt><code>-N</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Do not read default config file; must be the first option</p>
-<dd></dl>
+</dd><dt><code>-N</code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Do not read default config file; must be the first option</dt>
+<dd></dd></dl>
 <h3>Config files</h3>
 <p> A default config file either named &#8216;sty2dtx.cfg&#8217; or &#8216;.sty2dtx.cfg&#8217; is searched in the current directory, the users home directory and the directory of this script, in this order. The first one found is loaded. If none is found the &#8216;texmf&#8217; tree is searched for a &#8216;sty2dtx.cfg&#8217; config file. As with -F files the config file should contain one option or variable per line. Lines starting with &#8216;<tt>&quot;%&quot;</tt>&#8216; or &#8216;<tt>&quot;#&quot;</tt>&#8216; are ignored.</p>
 <h2>Examples</h2>

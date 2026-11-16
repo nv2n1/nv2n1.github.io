@@ -15,11 +15,11 @@ devm_snd_soc_register_card - resource managed card registration
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Device used to manage card</dl>
+<dl><dd></dd><dd>Device used to manage card</dd></dl>
  
 
  <i>card</i>
-<dl><dd>Card to register</dl>
+<dl><dd>Card to register</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,13 +14,13 @@ description: "bitmap_allocate_region – allocate bitmap region"
 <p><i>bitmap</i></p>
 <dl>
 <dd>
-<dd>array of unsigned longs corresponding to the bitmap</dl>
+</dd><dd>array of unsigned longs corresponding to the bitmap</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>beginning of bit region to allocate</dl>
+<dd>beginning of bit region to allocate</dd></dl>
 <p> <i>order</i></p>
 <dl>
-<dd>region size (log base 2 of number of bits) to allocate</dl>
+<dd>region size (log base 2 of number of bits) to allocate</dd></dl>
 <h2>Description</h2>
 <p>Allocate (set bits in) a specified region of a bitmap. </p>
 <p> Return 0 on success, or <code>-EBUSY</code> if specified region wasn&#8217;t free (not all bits were zero).</p>

@@ -14,14 +14,14 @@ description: "sas_port_add – add a SAS port to the device hierarchy"
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>port to be added</dl>
+</dd><dd>port to be added</dd></dl>
 <h2>Description</h2>
 <p>publishes a port to the rest of the system</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

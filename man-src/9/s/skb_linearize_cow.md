@@ -15,7 +15,7 @@ skb_linearize_cow - make sure skb is linear and writable
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to process</dl>
+<dl><dd></dd><dd>buffer to process</dd></dl>
 
 <h2>Description</h2>
 

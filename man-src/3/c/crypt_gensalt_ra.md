@@ -26,22 +26,22 @@ description: "crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra – encode set
 <p> Upon error, in addition to returning a null pointer, <code>crypt_gensalt</code> and <code>crypt_gensalt_rn</code> will write an invalid setting string to their output buffer, if there is enough space; this string will begin with a `<code>*</code> &#8216; and will not be equal to Fa prefix .</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>Er </code>EINVAL</p>
-<dd> Fa prefix is invalid or not supported by this implementation; Fa count is invalid for the requested Fa prefix ; the input Fa nrbytes is insufficient for the smallest valid salt with the requested Fa prefix .</p>
-<dt><code>Er </code>ERANGE</p>
-<dd> <code>crypt_gensalt_rn</code> only: Fa output_size is too small to hold the compiled Fa setting string.</p>
-<dt><code>Er </code>ENOMEM</p>
+<dt><code>Er </code>EINVAL</dt>
+<dd> Fa prefix is invalid or not supported by this implementation; Fa count is invalid for the requested Fa prefix ; the input Fa nrbytes is insufficient for the smallest valid salt with the requested Fa prefix .</dd>
+<dt><code>Er </code>ERANGE</dt>
+<dd> <code>crypt_gensalt_rn</code> only: Fa output_size is too small to hold the compiled Fa setting string.</dd>
+<dt><code>Er </code>ENOMEM</dt>
 <dd> Failed to allocate internal scratch memory.<br />
- <code>crypt_gensalt_ra</code> only: failed to allocate memory for the compiled Fa setting string.</p>
-<dt><code>Er </code>ENOSYS , EACCES , EIO , <code>etc.</code></p>
-<dd> Obtaining random bytes from the operating system failed. This can only happen when Fa rbytes is a null pointer.</dl>
+ <code>crypt_gensalt_ra</code> only: failed to allocate memory for the compiled Fa setting string.</dd>
+<dt><code>Er </code>ENOSYS , EACCES , EIO , <code>etc.</code></dt>
+<dd> Obtaining random bytes from the operating system failed. This can only happen when Fa rbytes is a null pointer.</dd></dl>
 <h2>FEATURE TEST MACROS</h2>
 <p> The following macros are defined by In crypt.h :</p>
 <dl>
-<dt><code>CRYPT_GENSALT_IMPLEMENTS_DEFAULT_PREFIX</code></p>
-<dd> A null pointer can be specified as the Fa prefix argument.</p>
-<dt><code>CRYPT_GENSALT_IMPLEMENTS_AUTO_ENTROPY</code></p>
-<dd> A null pointer can be specified as the Fa rbytes argument.</dl>
+<dt><code>CRYPT_GENSALT_IMPLEMENTS_DEFAULT_PREFIX</code></dt>
+<dd> A null pointer can be specified as the Fa prefix argument.</dd>
+<dt><code>CRYPT_GENSALT_IMPLEMENTS_AUTO_ENTROPY</code></dt>
+<dd> A null pointer can be specified as the Fa rbytes argument.</dd></dl>
 <h2>PORTABILITY NOTES</h2>
 <p> The functions <code>crypt_gensalt</code> <code>crypt_gensalt_rn</code> and <code>crypt_gensalt_ra</code> are not part of any standard. They originate with the Openwall project. A function with the name <code>crypt_gensalt</code> also exists on Solaris 10 and newer, but its prototype and semantics differ. </p>
 <p> The default prefix and auto entropy features are available since libxcrypt version 4.0.0. Portable software can use feature test macros to find out whether null pointers can be used for the Fa prefix and Fa rbytes arguments. </p>

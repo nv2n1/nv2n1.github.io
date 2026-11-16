@@ -16,13 +16,13 @@ description: "dssi_list_plugins – list available DSSI plugins"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>-v</code></p>
+</dt><dd> <code>-v</code></dd>
 <dt>
-<dd> <code>&#8211;verbose</code> Causes <code>dssi_list_plugins</code> to be more verbose in its reporting. It will note conditions which are typically ignored by most DSSI hosts, yet may indicate problems, including malformed or unreadable components of <code>DSSI_PATH</code>, directories which contain no plugin libraries, libraries which appear more than once in the <code>DSSI_PATH</code>, and libraries which contain no plugins.</dl>
+</dt><dd> <code>&#8211;verbose</code> Causes <code>dssi_list_plugins</code> to be more verbose in its reporting. It will note conditions which are typically ignored by most DSSI hosts, yet may indicate problems, including malformed or unreadable components of <code>DSSI_PATH</code>, directories which contain no plugin libraries, libraries which appear more than once in the <code>DSSI_PATH</code>, and libraries which contain no plugins.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DSSI_PATH</code></p>
-<dd> A colon-separated list of directories to scan for DSSI plugins.</dl>
+<dt><code>DSSI_PATH</code></dt>
+<dd> A colon-separated list of directories to scan for DSSI plugins.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> DSSI RFC version 1.0.</p>
 <h2>SEE ALSO</h2>

@@ -16,7 +16,7 @@ sge_qstat - xxQS_NAMExx default qstat file format
 
  The format of the default files is:
 <dl><dt>&bull;
-<dd>The default sge_qstat file may contain an arbitrary number of lines. Blank lines and lines with a '#' sign in the first column are skipped. Each line not to be skipped may contain any option. More than one option per line is allowed.</dl>
+</dt><dd>The default sge_qstat file may contain an arbitrary number of lines. Blank lines and lines with a '#' sign in the first column are skipped. Each line not to be skipped may contain any option. More than one option per line is allowed.</dd></dl>
 
 <h2>Examples</h2>
 

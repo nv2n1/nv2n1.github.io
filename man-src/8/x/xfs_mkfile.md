@@ -15,12 +15,12 @@ description: "xfs_mkfile – create an XFS file"
 <p><code>xfs_mkfile</code> creates one or more files. The file is padded with zeroes by default. The default size is in bytes, but it can be flagged as kilobytes, blocks, megabytes, or gigabytes with the <code>k</code>, <code>b</code>, <code>m</code>, or <code>g</code> suffixes, respectively.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd>Verbose. Report the names and sizes of created files.</p>
-<dt><code>-n</code></p>
-<dd>No bytes. Create a holey file &#8211; that is, do not write out any data, just seek to end of file and write a block.</p>
-<dt><code>-p</code></p>
-<dd>Preallocate. The file is preallocated, then overwritten with zeroes, then truncated to the desired size.</p>
-<dt><code>-V</code></p>
-<dd>Prints the version number and exits. </p>
+<dt><code>-v</code></dt>
+<dd>Verbose. Report the names and sizes of created files.</dd>
+<dt><code>-n</code></dt>
+<dd>No bytes. Create a holey file &#8211; that is, do not write out any data, just seek to end of file and write a block.</dd>
+<dt><code>-p</code></dt>
+<dd>Preallocate. The file is preallocated, then overwritten with zeroes, then truncated to the desired size.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints the version number and exits. </dd>
 </dl>

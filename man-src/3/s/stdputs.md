@@ -11,7 +11,6 @@ std::puts - std::puts
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int puts(const char *str);</code></pre> 
 Writes every character from the null-terminated string str and one additional newline character '\n' to the output stream stdout, as if by repeatedly executing std::fputc. 
 The terminating null character from str is not written. 
@@ -35,7 +34,6 @@ A typical cause of failure for std::puts is running out of space on the file sys
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
 int main()
-
 {
     int rc = std::puts(&quot;Hello World&quot;);
     if (rc == EOF)

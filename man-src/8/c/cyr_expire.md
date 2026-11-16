@@ -18,25 +18,25 @@ description: "cyr_expire – expire messages and duplicate delivery database ent
 <p> <i>Cyr_expire</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-D </code><i>delete-duration</i></p>
-<dd>Remove previously deleted mailboxes older than <i>delete-duration</i> (when using the &quot;delayed&quot; delete mode). The value can be a floating point number, and may have a suffix to specify the unit of time. If no suffix, the value is number of days. Valid suffixes are <code>d</code> (days), <code>h</code> (hours), <code>m</code> (minutes) and <code>s</code> (seconds).</p>
-<dt><code>-E </code><i>expire-duration</i></p>
-<dd>Prune the duplicate database of entries older than <i>expire-duration</i>. This value is only used for entries which do not have a corresponding <code>/vendor/cmu/cyrus-imapd/expire</code> mailbox annotation. Format is the same as delete-duration.</p>
-<dt><code>-X </code><i>expunge-duration</i></p>
-<dd>Expunge previously deleted messages older than <i>expunge-duration</i> (when using the &quot;delayed&quot; expunge mode). Format is the same as delete-duration.</p>
-<dt><code> -x</p>
-<dd>Do not expunge messages even if using delayed expunge mode (reduces the IO hit considerably, allowing you to run cyr_expire frequently to clean up the duplicate database without overloading your server)</p>
-<dt>-p </code><i>mailbox-prefix</i></p>
-<dd>Only find mailboxes starting with this prefix. e.g. &quot;user.justgotspammedlots&quot;</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose output.</p>
-<dt><code>-a</code></p>
-<dd>Skip the annotation lookup, so all <code>/vendor/cmu/cyrus-imapd/expire</code> annotations are ignored entirely. It behaves as if they were not set, so only <i>expire-days</i> is considered for all mailboxes.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-D </code><i>delete-duration</i></dt>
+<dd>Remove previously deleted mailboxes older than <i>delete-duration</i> (when using the &quot;delayed&quot; delete mode). The value can be a floating point number, and may have a suffix to specify the unit of time. If no suffix, the value is number of days. Valid suffixes are <code>d</code> (days), <code>h</code> (hours), <code>m</code> (minutes) and <code>s</code> (seconds).</dd>
+<dt><code>-E </code><i>expire-duration</i></dt>
+<dd>Prune the duplicate database of entries older than <i>expire-duration</i>. This value is only used for entries which do not have a corresponding <code>/vendor/cmu/cyrus-imapd/expire</code> mailbox annotation. Format is the same as delete-duration.</dd>
+<dt><code>-X </code><i>expunge-duration</i></dt>
+<dd>Expunge previously deleted messages older than <i>expunge-duration</i> (when using the &quot;delayed&quot; expunge mode). Format is the same as delete-duration.</dd>
+<dt><code> -x</dt>
+<dd>Do not expunge messages even if using delayed expunge mode (reduces the IO hit considerably, allowing you to run cyr_expire frequently to clean up the duplicate database without overloading your server)</dd>
+<dt>-p </code><i>mailbox-prefix</i></dt>
+<dd>Only find mailboxes starting with this prefix. e.g. &quot;user.justgotspammedlots&quot;</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose output.</dd>
+<dt><code>-a</code></dt>
+<dd>Skip the annotation lookup, so all <code>/vendor/cmu/cyrus-imapd/expire</code> annotations are ignored entirely. It behaves as if they were not set, so only <i>expire-days</i> is considered for all mailboxes.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code> </p>

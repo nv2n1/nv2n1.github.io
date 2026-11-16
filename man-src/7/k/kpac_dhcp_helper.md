@@ -13,10 +13,10 @@ description: "kpac_dhcp_helper – provides Proxy Auto Configuration to KDE"
 <h2>Description</h2>
 <p>Provides Proxy Auto Configuration to KDE by requesting a JavaScript function that uses the requested URL to determine the proxy settings. Locating that JavaScript can be done by using DHCP or DNS.</p>
 <dl>
-<dt>DHCP is preferred for its flexibility over DNS, which requires a wpad hostname or a fixed location to a script. The only requirements for DHCP are a network that supports DHCP and a current DHCP configuration. <code>kpac_dhcp_helper</code> is the setuid application needed to support DHCP.</p>
+<dt>DHCP is preferred for its flexibility over DNS, which requires a wpad hostname or a fixed location to a script. The only requirements for DHCP are a network that supports DHCP and a current DHCP configuration. <code>kpac_dhcp_helper</code> is the setuid application needed to support DHCP.</dt>
 <dd>
-<dt>This tool is a support utility for KDE libraries and is not called from the command line.</p>
-<dd></dl>
+</dd><dt>This tool is a support utility for KDE libraries and is not called from the command line.</dt>
+<dd></dd></dl>
 <h2>Options</h2>
 <p>kpac_dhcp_helper takes no arguments.</p>
 <h2>Security</h2>

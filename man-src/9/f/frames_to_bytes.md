@@ -10,13 +10,13 @@ description: "frames_to_bytes – Unit conversion of the size from frames to byt
 <p>frames_to_bytes &#8211; Unit conversion of the size from frames to bytes</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ssize_t frames_to_bytes(struct snd_pcm_runtime&nbsp;<wbr>*&nbsp;<wbr></code><i>runtime</i><code>, snd_pcm_sframes_t&nbsp;<wbr></code><i>size</i><code>);</code></dl>
+<dt> <code>ssize_t frames_to_bytes(struct snd_pcm_runtime&nbsp;<wbr>*&nbsp;<wbr></code><i>runtime</i><code>, snd_pcm_sframes_t&nbsp;<wbr></code><i>size</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>runtime</i></p>
 <dl>
 <dd>
-<dd>PCM runtime instance</dl>
+</dd><dd>PCM runtime instance</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size in frames</dl>
+<dd>size in frames</dd></dl>
 <h2>Copyright</h2>

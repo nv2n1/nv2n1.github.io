@@ -11,9 +11,7 @@ std::experimental::swap(std::experimental::promise) - std::experimental::swap(st
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class R&gt;
-
 void swap(std::experimental::promise&lt;R&gt; &amp;lhs,
-
           std::experimental::promise&lt;R&gt; &amp;rhs) noexcept;</code></pre> 
 Overloads the swap algorithm for std::experimental::promise. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

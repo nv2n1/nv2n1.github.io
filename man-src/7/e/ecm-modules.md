@@ -25,34 +25,34 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_DIR})</pre>
 <p>will be added to the executable target whose sources are specified by <code>&lt;sources_var&gt;</code> on platforms that support it (Windows and Mac OS X). Other icon files are ignored but on Mac SVG files can be supported and it is thus possible to mix those with png files in a single macro call. </p>
 <p> <code>&lt;size&gt;</code> is a numeric pixel size (typically 16, 32, 48, 64, 128 or 256). <code>&lt;other_text&gt;</code> can be any other text. See the platform notes below for any recommendations about icon sizes.</p>
 <dl>
-<dt><code>Windows notes</code></p>
+<dt><code>Windows notes</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>Icons are compiled into the executable using a resource file.</p>
-<dt>&bull;</p>
-<dd>Icons may not show up in Windows Explorer if the executable target does not have the <code>WIN32_EXECUTABLE</code> property set.</p>
-<dt>&bull;</p>
-<dd>The tool png2ico is required. See <code>FindPng2Ico</code>.</p>
-<dt>&bull;</p>
-<dd>Supported sizes: 16, 32, 48, 64, 128.</p>
-<dt><code>Mac OS X notes</code></p>
+</dd><dt>&bull;</dt>
+<dd>Icons are compiled into the executable using a resource file.</dd>
+<dt>&bull;</dt>
+<dd>Icons may not show up in Windows Explorer if the executable target does not have the <code>WIN32_EXECUTABLE</code> property set.</dd>
+<dt>&bull;</dt>
+<dd>The tool png2ico is required. See <code>FindPng2Ico</code>.</dd>
+<dt>&bull;</dt>
+<dd>Supported sizes: 16, 32, 48, 64, 128.</dd>
+<dt><code>Mac OS X notes</code></dt>
 <dd>
-<dt>&bull;</p>
-<dd>The executable target must have the <code>MACOSX_BUNDLE</code> property set.</p>
-<dt>&bull;</p>
-<dd>Icons are added to the bundle.</p>
-<dt>&bull;</p>
-<dd>If the ksvg2icns tool from KIconThemes is available, .svg and .svgz files are accepted; the first that is converted successfully to .icns will provide the application icon. SVG files are ignored otherwise.</p>
-<dt>&bull;</p>
-<dd>The tool iconutil (provided by Apple) is required for bitmap icons.</p>
-<dt>&bull;</p>
-<dd>Supported sizes: 16, 32, 64, 128, 256 (and 512, 1024 after OS X 10.9).</p>
-<dt>&bull;</p>
-<dd>At least a 128x128px (or an SVG) icon is required.</p>
-<dt>&bull;</p>
-<dd>Larger sizes are automatically used to substitute for smaller sizes on &quot;Retina&quot; (high-resolution) displays. For example, a 32px icon, if provided, will be used as a 32px icon on standard-resolution displays, and as a 16px-equivalent icon (with an &quot;@2x&quot; tag) on high-resolution displays. ksvg2icns handles this internally.</p>
-<dt>&bull;</p>
-<dd>This function sets the <code>MACOSX_BUNDLE_ICON_FILE</code> variable to the name of the generated icns file, so that it will be used as the <code>MACOSX_BUNDLE_ICON_FILE</code> target property when you call <code>add_executable</code>. </p>
+</dd><dt>&bull;</dt>
+<dd>The executable target must have the <code>MACOSX_BUNDLE</code> property set.</dd>
+<dt>&bull;</dt>
+<dd>Icons are added to the bundle.</dd>
+<dt>&bull;</dt>
+<dd>If the ksvg2icns tool from KIconThemes is available, .svg and .svgz files are accepted; the first that is converted successfully to .icns will provide the application icon. SVG files are ignored otherwise.</dd>
+<dt>&bull;</dt>
+<dd>The tool iconutil (provided by Apple) is required for bitmap icons.</dd>
+<dt>&bull;</dt>
+<dd>Supported sizes: 16, 32, 64, 128, 256 (and 512, 1024 after OS X 10.9).</dd>
+<dt>&bull;</dt>
+<dd>At least a 128x128px (or an SVG) icon is required.</dd>
+<dt>&bull;</dt>
+<dd>Larger sizes are automatically used to substitute for smaller sizes on &quot;Retina&quot; (high-resolution) displays. For example, a 32px icon, if provided, will be used as a 32px icon on standard-resolution displays, and as a 16px-equivalent icon (with an &quot;@2x&quot; tag) on high-resolution displays. ksvg2icns handles this internally.</dd>
+<dt>&bull;</dt>
+<dd>This function sets the <code>MACOSX_BUNDLE_ICON_FILE</code> variable to the name of the generated icns file, so that it will be used as the <code>MACOSX_BUNDLE_ICON_FILE</code> target property when you call <code>add_executable</code>. </dd>
 <p> Since 1.7.0.</dl>
 <h3>ECMAddTests</h3>
 <p>Convenience functions for adding tests. </p>
@@ -111,16 +111,16 @@ add_library(mylib ${mylib_SRCS})</pre>
 <p>Enable compiler sanitizer flags. </p>
 <p> The following sanitizers are supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Address Sanitizer</p>
-<dt>&bull;</p>
-<dd>Memory Sanitizer</p>
-<dt>&bull;</p>
-<dd>Thread Sanitizer</p>
-<dt>&bull;</p>
-<dd>Leak Sanitizer</p>
-<dt>&bull;</p>
-<dd>Undefined Behaviour Sanitizer </p>
+<dt>&bull;</dt>
+<dd>Address Sanitizer</dd>
+<dt>&bull;</dt>
+<dd>Memory Sanitizer</dd>
+<dt>&bull;</dt>
+<dd>Thread Sanitizer</dd>
+<dt>&bull;</dt>
+<dd>Leak Sanitizer</dd>
+<dt>&bull;</dt>
+<dd>Undefined Behaviour Sanitizer </dd>
 <p> All of them are implemented in Clang, depending on your version, and there is an work in progress in GCC, where some of them are currently implemented. </p>
 <p> This module will check your current compiler version to see if it supports the sanitizers that you want to enable</dl>
 <h3>Usage</h3>
@@ -129,16 +129,16 @@ add_library(mylib ${mylib_SRCS})</pre>
 <p>to your <code>CMakeLists.txt</code>. Note that this module is included in KDECompilerSettings, so projects using that module do not need to also include this one. </p>
 <p> The sanitizers are not enabled by default. Instead, you must set <code>ECM_ENABLE_SANITIZERS</code> (either in your <code>CMakeLists.txt</code> or on the command line) to a semicolon-separated list of sanitizers you wish to enable. The options are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>address</p>
-<dt>&bull;</p>
-<dd>memory</p>
-<dt>&bull;</p>
-<dd>thread</p>
-<dt>&bull;</p>
-<dd>leak</p>
-<dt>&bull;</p>
-<dd>undefined </p>
+<dt>&bull;</dt>
+<dd>address</dd>
+<dt>&bull;</dt>
+<dd>memory</dd>
+<dt>&bull;</dt>
+<dd>thread</dd>
+<dt>&bull;</dt>
+<dd>leak</dd>
+<dt>&bull;</dt>
+<dd>undefined </dd>
 <p> The sanitizers &quot;address&quot;, &quot;memory&quot; and &quot;thread&quot; are mutually exclusive. You cannot enable two of them in the same build. </p>
 <p> &quot;leak&quot; requires the &quot;address&quot; sanitizer. </p>
 <p> <code>NOTE:</code> To reduce the overhead induced by the instrumentation of the sanitizers, it is advised to enable compiler optimizations (<code>-O1</code> or higher).</dl>
@@ -173,16 +173,16 @@ cmake -DECM_ENABLE_SANITIZERS='address;leak;undefined' ..</pre>
 <p> If SKIP_DEPENDENCY_HANDLING is not set, the INTERFACE_LINK_LIBRARIES property of the imported target for &lt;component&gt; will be set to contain the imported targets for the components listed in &lt;name&gt;_&lt;component&gt;_component_deps. &lt;component&gt;_FOUND will also be set to false if any of the compoments in &lt;name&gt;_&lt;component&gt;_component_deps are not found. This requires the components in &lt;name&gt;_&lt;component&gt;_component_deps to be listed before &lt;component&gt; in the COMPONENTS argument. </p>
 <p> The following variables will be set:</p>
 <dl>
-<dt><code>&lt;name&gt;_TARGETS</code></p>
-<dd>the imported targets</p>
-<dt><code>&lt;name&gt;_LIBRARIES</code></p>
-<dd>the found libraries</p>
-<dt><code>&lt;name&gt;_INCLUDE_DIRS</code></p>
-<dd>the combined required include directories for the components</p>
-<dt><code>&lt;name&gt;_DEFINITIONS</code></p>
-<dd>the &quot;other&quot; CFLAGS provided by pkg-config, if any</p>
-<dt><code>&lt;name&gt;_VERSION</code></p>
-<dd>the value of <code>&lt;name&gt;_&lt;component&gt;_VERSION</code> for the first component that has this variable set (note that components are searched for in the order they are passed to the macro), although if it is already set, it will not be altered </p>
+<dt><code>&lt;name&gt;_TARGETS</code></dt>
+<dd>the imported targets</dd>
+<dt><code>&lt;name&gt;_LIBRARIES</code></dt>
+<dd>the found libraries</dd>
+<dt><code>&lt;name&gt;_INCLUDE_DIRS</code></dt>
+<dd>the combined required include directories for the components</dd>
+<dt><code>&lt;name&gt;_DEFINITIONS</code></dt>
+<dd>the &quot;other&quot; CFLAGS provided by pkg-config, if any</dd>
+<dt><code>&lt;name&gt;_VERSION</code></dt>
+<dd>the value of <code>&lt;name&gt;_&lt;component&gt;_VERSION</code> for the first component that has this variable set (note that components are searched for in the order they are passed to the macro), although if it is already set, it will not be altered </dd>
 <p> Note that these variables are never cleared, so if ecm_find_package_handle_library_components() is called multiple times with different components (typically because of multiple find_package() calls) then <code>&lt;name&gt;_TARGETS</code>, for example, will contain all the targets found in any call (although no duplicates). </p>
 <p> Since pre-1.0.0.</dl>
 <h3>ECMGenerateHeaders</h3>
@@ -446,3 +446,4 @@ set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR}/cmake)</pre>
 <p> Since pre-1.0.0.</p>
 <h2>Copyright</h2>
 <p>KDE Developers</p>
+</p>

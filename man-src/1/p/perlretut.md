@@ -104,10 +104,12 @@ if (/ World /) {<br />
 </pre>
 <p> In situations where it doesn&#8217;t make sense for a particular metacharacter to mean what it normally does, it automatically loses its metacharacter-ness and becomes an ordinary character that is to be matched literally. For example, the <tt>'}'</tt> is a metacharacter only when it is the mate of a <tt>'{'</tt> metacharacter. Otherwise it is treated as a literal <font SIZE="-1">RIGHT CURLY BRACKET.</font> This may lead to unexpected results. <tt>&quot;use re 'strict'&quot;</tt> can catch some of these. </p>
 <p> In addition to the metacharacters, there are some <font SIZE="-1">ASCII</font> characters which don&#8217;t have printable character equivalents and are instead represented by <i>escape sequences</i>. Common examples are <tt>&quot;	&quot;</tt> for a tab, <tt>&quot;
-&quot;</tt> for a newline, <tt>&quot;&quot;</tt> for a carriage return and <tt>&quot;&quot;</tt> for a bell (or alert). If your string is better thought of as a sequence of arbitrary bytes, the octal escape sequence, <i>e.g.</i>, <tt>&quot;&quot;</tt>, or hexadecimal escape sequence, <i>e.g.</i>, <tt>&quot;&quot;</tt> may be a more natural representation for your bytes. Here are some examples of escapes: </p>
+&quot;</tt> for a newline, <tt>&quot;
+&quot;</tt> for a carriage return and <tt>&quot;&quot;</tt> for a bell (or alert). If your string is better thought of as a sequence of arbitrary bytes, the octal escape sequence, <i>e.g.</i>, <tt>&quot;&quot;</tt>, or hexadecimal escape sequence, <i>e.g.</i>, <tt>&quot;&quot;</tt> may be a more natural representation for your bytes. Here are some examples of escapes: </p>
 <pre>
     &quot;1000	2000&quot; =~ m(0	2)   # matches
     &quot;1000
 2000&quot; =~ /0
 20/   # matches
     &quot;1000	2000&quot; =~ /
+</pre>

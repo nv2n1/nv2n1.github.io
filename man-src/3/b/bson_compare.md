@@ -16,11 +16,11 @@ int bson_compare(const bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>other</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>other</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_compare/">bson_compare</a>(3)</code> function shall compare two bson documents for equality. </p>
 <p> This can be useful in conjunction with _qsort()_. </p>
@@ -28,7 +28,7 @@ int bson_compare(const bson_t *bson,
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This function uses _memcmp()_ internally, so the semantics are the same.</dl>
+</dt><dd> This function uses _memcmp()_ internally, so the semantics are the same.</dd></dl>
 <h2>RETURNS</h2>
 <p> less than zero, zero, or greater than zero in <code><a href="/docs/linux/man/3-qsort/">qsort</a>(3)</code> style. </p>
 <h2>COLOPHON</h2>

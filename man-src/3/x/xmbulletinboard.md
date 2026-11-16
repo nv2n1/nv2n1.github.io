@@ -607,89 +607,89 @@ description: "XmBulletinBoard — The BulletinBoard widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNallowOverlap</code></p>
-<dd>Controls the policy for overlapping child widgets. If this resource is True, BulletinBoard allows geometry requests that result in overlapping children.</p>
-<dt><code>XmNautoUnmanage</code></p>
-<dd>Controls whether or not BulletinBoard is automatically unmanaged after a button is activated. If this resource is True on initialization and if the BulletinBoard&#8217;s parent is a DialogShell, BulletinBoard adds a callback to button children (PushButtons, PushButtonGadgets, and DrawnButtons) that unmanages the BulletinBoard when a button is activated. If this resource is False on initialization or if the BulletinBoard&#8217;s parent is not a DialogShell, the BulletinBoard is not automatically unmanaged. For BulletinBoard subclasses with Apply or Help buttons, activating those buttons does not automatically unmanage the BulletinBoard.</p>
-<dt><code>XmNbuttonFontList</code></p>
-<dd>Specifies the font list used for button descendants. See the <code>XmNbuttonRenderTable</code> resource.</p>
-<dt><code>XmNbuttonRenderTable</code></p>
-<dd>Specifies the render table used for BulletinBoard&#8217;s button descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmBUTTON_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNcancelButton</code></p>
-<dd>Specifies the widget ID of the <code>Cancel</code> button. BulletinBoard&#8217;s subclasses, which define a <code>Cancel</code> button, set this resource. BulletinBoard does not directly provide any behavior for that button.</p>
-<dt><code>XmNdefaultButton</code></p>
-<dd>Specifies the widget ID of the default button. Some BulletinBoard subclasses, which define a default button, set this resource. BulletinBoard defines translations and installs accelerators that activate that button when <code>KActivate</code> is pressed and the keyboard focus is not in another button.</p>
-<dt><code>XmNdefaultPosition</code></p>
-<dd>Controls the positioning of a DialogShell managing a BulletinBoard. If the BulletinBoard is not being managed by a DialogShell, then this resource has no effect. If <code>XmNdefaultPosition</code> is True, the DialogShell will center itself at the center of its own parent. For example, if the parent of the DialogShell is an ApplicationShell, then the center of the DialogShell will be at the same coordinates as the center of the ApplicationShell. If the DialogShell becomes unmapped (but stays managed) and then remapped, this resource has no influence on the DialogShell&#8217;s position. If this resource is False, the DialogShell does not automatically center itself.</p>
-<dt><code>XmNdialogStyle</code></p>
-<dd>Indicates the dialog style associated with the BulletinBoard. If the parent of the BulletinBoard is a DialogShell, the parent&#8217;s <code>XmNmwmInputMode</code> is set according to the value of this resource. This resource can be set only if the BulletinBoard is unmanaged. Possible values for this resource include the following:</p>
+<dt><code>XmNallowOverlap</code></dt>
+<dd>Controls the policy for overlapping child widgets. If this resource is True, BulletinBoard allows geometry requests that result in overlapping children.</dd>
+<dt><code>XmNautoUnmanage</code></dt>
+<dd>Controls whether or not BulletinBoard is automatically unmanaged after a button is activated. If this resource is True on initialization and if the BulletinBoard&#8217;s parent is a DialogShell, BulletinBoard adds a callback to button children (PushButtons, PushButtonGadgets, and DrawnButtons) that unmanages the BulletinBoard when a button is activated. If this resource is False on initialization or if the BulletinBoard&#8217;s parent is not a DialogShell, the BulletinBoard is not automatically unmanaged. For BulletinBoard subclasses with Apply or Help buttons, activating those buttons does not automatically unmanage the BulletinBoard.</dd>
+<dt><code>XmNbuttonFontList</code></dt>
+<dd>Specifies the font list used for button descendants. See the <code>XmNbuttonRenderTable</code> resource.</dd>
+<dt><code>XmNbuttonRenderTable</code></dt>
+<dd>Specifies the render table used for BulletinBoard&#8217;s button descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmBUTTON_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNcancelButton</code></dt>
+<dd>Specifies the widget ID of the <code>Cancel</code> button. BulletinBoard&#8217;s subclasses, which define a <code>Cancel</code> button, set this resource. BulletinBoard does not directly provide any behavior for that button.</dd>
+<dt><code>XmNdefaultButton</code></dt>
+<dd>Specifies the widget ID of the default button. Some BulletinBoard subclasses, which define a default button, set this resource. BulletinBoard defines translations and installs accelerators that activate that button when <code>KActivate</code> is pressed and the keyboard focus is not in another button.</dd>
+<dt><code>XmNdefaultPosition</code></dt>
+<dd>Controls the positioning of a DialogShell managing a BulletinBoard. If the BulletinBoard is not being managed by a DialogShell, then this resource has no effect. If <code>XmNdefaultPosition</code> is True, the DialogShell will center itself at the center of its own parent. For example, if the parent of the DialogShell is an ApplicationShell, then the center of the DialogShell will be at the same coordinates as the center of the ApplicationShell. If the DialogShell becomes unmapped (but stays managed) and then remapped, this resource has no influence on the DialogShell&#8217;s position. If this resource is False, the DialogShell does not automatically center itself.</dd>
+<dt><code>XmNdialogStyle</code></dt>
+<dd>Indicates the dialog style associated with the BulletinBoard. If the parent of the BulletinBoard is a DialogShell, the parent&#8217;s <code>XmNmwmInputMode</code> is set according to the value of this resource. This resource can be set only if the BulletinBoard is unmanaged. Possible values for this resource include the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDIALOG_SYSTEM_MODAL</code></p>
-<dd>Used for dialogs that must be responded to before any other interaction in any application.</p>
-<dt><code>XmDIALOG_PRIMARY_APPLICATION_MODAL</code></p>
-<dd>Used for dialogs that must be responded to before some other interactions in ancestors of the widget.</p>
-<dt><code>XmDIALOG_APPLICATION_MODAL</code></p>
-<dd>Used for dialogs that must be responded to before some other interactions in ancestors of the widget. This value is the same as <code>XmDIALOG_PRIMARY_APPLICATION_MODAL</code>, and remains for compatibility.</p>
-<dt><code>XmDIALOG_FULL_APPLICATION_MODAL</code></p>
-<dd>Used for dialogs that must be responded to before some other interactions in the same application.</p>
-<dt><code>XmDIALOG_MODELESS</code></p>
-<dd>Used for dialogs that do not interrupt interaction of any application. This is the default when the parent of the BulletinBoard is a DialogShell.</p>
-<dt><code>XmDIALOG_WORK_AREA</code></p>
-<dd>Used for BulletinBoard widgets whose parents are not DialogShells. <code>XmNdialogStyle</code> is forced to have this value when the parent of the BulletinBoard is not a DialogShell.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDIALOG_SYSTEM_MODAL</code></dt>
+<dd>Used for dialogs that must be responded to before any other interaction in any application.</dd>
+<dt><code>XmDIALOG_PRIMARY_APPLICATION_MODAL</code></dt>
+<dd>Used for dialogs that must be responded to before some other interactions in ancestors of the widget.</dd>
+<dt><code>XmDIALOG_APPLICATION_MODAL</code></dt>
+<dd>Used for dialogs that must be responded to before some other interactions in ancestors of the widget. This value is the same as <code>XmDIALOG_PRIMARY_APPLICATION_MODAL</code>, and remains for compatibility.</dd>
+<dt><code>XmDIALOG_FULL_APPLICATION_MODAL</code></dt>
+<dd>Used for dialogs that must be responded to before some other interactions in the same application.</dd>
+<dt><code>XmDIALOG_MODELESS</code></dt>
+<dd>Used for dialogs that do not interrupt interaction of any application. This is the default when the parent of the BulletinBoard is a DialogShell.</dd>
+<dt><code>XmDIALOG_WORK_AREA</code></dt>
+<dd>Used for BulletinBoard widgets whose parents are not DialogShells. <code>XmNdialogStyle</code> is forced to have this value when the parent of the BulletinBoard is not a DialogShell.</dd></dl>
 </dl>
-<dd>Posting a modal dialog in response to a button down or key down event (via translation actions or callbacks) can cause the corresponding button up or key up event to be lost. For example, posting a modal dialog from an <code>XmNincrementCallback</code> of <code>XmScrollBar</code> will cause the loss of the button up event, causing the <code>XmScrollBar</code> to auto-increment indefinitely.</p>
-<dt><code>XmNdialogTitle</code></p>
-<dd>Specifies the dialog title. If this resource is not NULL, and the parent of the BulletinBoard is a subclass of WMShell, BulletinBoard sets the <code>XmNtitle</code> and <code>XmNtitleEncoding</code> of its parent. If the only character set in <code>XmNdialogTitle</code> is ISO8859-1, <code>XmNtitle</code> is set to the string of the title, and <code>XmNtitleEncoding</code> is set to <code>STRING</code>. If <code>XmNdialogTitle</code> contains character sets other than ISO8859-1, <code>XmNtitle</code> is set to the string of the title converted to a compound text string, and <code>XmNtitleEncoding</code> is set to <code>COMPOUND_TEXT</code>. The direction of the title is based on the <code>XmNlayoutDirection</code> resource of the widget.</p>
-<dt><code>XmNfocusCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the BulletinBoard widget or one of its descendants accepts the input focus. The callback reason is <code>XmCR_FOCUS</code>.</p>
-<dt><code>XmNlabelFontList</code></p>
-<dd>Specifies the font list used for label descendants. See the <code>XmNlabelRenderTable</code> resource.</p>
-<dt><code>XmNlabelRenderTable</code></p>
-<dd>Specifies the render table used for BulletinBoard&#8217;s label descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmLABEL_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNmapCallback</code></p>
-<dd>Specifies the list of callbacks that is called only when the parent of the BulletinBoard is a DialogShell. In this case, this callback list is invoked when the BulletinBoard widget is mapped. The callback reason is <code>XmCR_MAP</code>. DialogShells are usually mapped when the DialogShell is managed.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the minimum spacing in pixels between the top or bottom edge of BulletinBoard and any child widget.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the minimum spacing in pixels between the left or right edge of BulletinBoard and any child widget.</p>
-<dt><code>XmNnoResize</code></p>
-<dd>Controls whether or not resize controls are included in the window manager frame around the BulletinBoard&#8217;s parent. If this resource is set to True, <code>mwm</code> does not include resize controls in the window manager frame containing the parent of the BulletinBoard if the parent is a subclass of VendorShell. If this resource is set to False, the window manager frame does include resize controls. Other controls provided by <code>mwm</code> can be included or excluded through the <code>mwm</code> resources provided by VendorShell.</p>
-<dt><code>XmNresizePolicy</code></p>
-<dd>Controls the policy for resizing BulletinBoard widgets. Possible values include</p>
+<dd>Posting a modal dialog in response to a button down or key down event (via translation actions or callbacks) can cause the corresponding button up or key up event to be lost. For example, posting a modal dialog from an <code>XmNincrementCallback</code> of <code>XmScrollBar</code> will cause the loss of the button up event, causing the <code>XmScrollBar</code> to auto-increment indefinitely.</dd>
+<dt><code>XmNdialogTitle</code></dt>
+<dd>Specifies the dialog title. If this resource is not NULL, and the parent of the BulletinBoard is a subclass of WMShell, BulletinBoard sets the <code>XmNtitle</code> and <code>XmNtitleEncoding</code> of its parent. If the only character set in <code>XmNdialogTitle</code> is ISO8859-1, <code>XmNtitle</code> is set to the string of the title, and <code>XmNtitleEncoding</code> is set to <code>STRING</code>. If <code>XmNdialogTitle</code> contains character sets other than ISO8859-1, <code>XmNtitle</code> is set to the string of the title converted to a compound text string, and <code>XmNtitleEncoding</code> is set to <code>COMPOUND_TEXT</code>. The direction of the title is based on the <code>XmNlayoutDirection</code> resource of the widget.</dd>
+<dt><code>XmNfocusCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the BulletinBoard widget or one of its descendants accepts the input focus. The callback reason is <code>XmCR_FOCUS</code>.</dd>
+<dt><code>XmNlabelFontList</code></dt>
+<dd>Specifies the font list used for label descendants. See the <code>XmNlabelRenderTable</code> resource.</dd>
+<dt><code>XmNlabelRenderTable</code></dt>
+<dd>Specifies the render table used for BulletinBoard&#8217;s label descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmLABEL_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNmapCallback</code></dt>
+<dd>Specifies the list of callbacks that is called only when the parent of the BulletinBoard is a DialogShell. In this case, this callback list is invoked when the BulletinBoard widget is mapped. The callback reason is <code>XmCR_MAP</code>. DialogShells are usually mapped when the DialogShell is managed.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the minimum spacing in pixels between the top or bottom edge of BulletinBoard and any child widget.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the minimum spacing in pixels between the left or right edge of BulletinBoard and any child widget.</dd>
+<dt><code>XmNnoResize</code></dt>
+<dd>Controls whether or not resize controls are included in the window manager frame around the BulletinBoard&#8217;s parent. If this resource is set to True, <code>mwm</code> does not include resize controls in the window manager frame containing the parent of the BulletinBoard if the parent is a subclass of VendorShell. If this resource is set to False, the window manager frame does include resize controls. Other controls provided by <code>mwm</code> can be included or excluded through the <code>mwm</code> resources provided by VendorShell.</dd>
+<dt><code>XmNresizePolicy</code></dt>
+<dd>Controls the policy for resizing BulletinBoard widgets. Possible values include</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmRESIZE_NONE</code></p>
-<dd>Fixed size</p>
-<dt><code>XmRESIZE_ANY</code></p>
-<dd>Shrink or grow as needed</p>
-<dt><code>XmRESIZE_GROW</code></p>
-<dd>Grow only</dl>
+</dd><dl COMPACT>
+<dt><code>XmRESIZE_NONE</code></dt>
+<dd>Fixed size</dd>
+<dt><code>XmRESIZE_ANY</code></dt>
+<dd>Shrink or grow as needed</dd>
+<dt><code>XmRESIZE_GROW</code></dt>
+<dd>Grow only</dd></dl>
 </dl>
-<dt><code>XmNshadowType</code></p>
-<dd>Describes the shadow drawing style for BulletinBoard. This resource can have the following values:</p>
+<dt><code>XmNshadowType</code></dt>
+<dd>Describes the shadow drawing style for BulletinBoard. This resource can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSHADOW_IN</code></p>
-<dd>Draws the BulletinBoard shadow so that it appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</p>
-<dt><code>XmSHADOW_OUT</code></p>
-<dd>Draws the BulletinBoard shadow so that it appears outset.</p>
-<dt><code>XmSHADOW_ETCHED_IN</code></p>
-<dd>Draws the BulletinBoard shadow using a double line giving the effect of a line etched into the window, similar to the Separator widget.</p>
-<dt><code>XmSHADOW_ETCHED_OUT</code></p>
-<dd>Draws the BulletinBoard shadow using a double line giving the effect of a line coming out of the window, similar to the Separator widget.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSHADOW_IN</code></dt>
+<dd>Draws the BulletinBoard shadow so that it appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</dd>
+<dt><code>XmSHADOW_OUT</code></dt>
+<dd>Draws the BulletinBoard shadow so that it appears outset.</dd>
+<dt><code>XmSHADOW_ETCHED_IN</code></dt>
+<dd>Draws the BulletinBoard shadow using a double line giving the effect of a line etched into the window, similar to the Separator widget.</dd>
+<dt><code>XmSHADOW_ETCHED_OUT</code></dt>
+<dd>Draws the BulletinBoard shadow using a double line giving the effect of a line coming out of the window, similar to the Separator widget.</dd></dl>
 </dl>
-<dt><code>XmNtextFontList</code></p>
-<dd>Specifies the font list used for text descendants. See the <code>XmNtextRenderTable</code> resource.</p>
-<dt><code>XmNtextRenderTable</code></p>
-<dd>Specifies the render table used for BulletinBoard&#8217;s text descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</p>
-<dt><code>XmNtextTranslations</code></p>
-<dd>It adds translations to any Text widget or Text widget subclass that is added as a child of BulletinBoard.</p>
-<dt><code>XmNunmapCallback</code></p>
-<dd>Specifies the list of callbacks that is called only when the parent of the BulletinBoard is a DialogShell. In this case, this callback list is invoked when the BulletinBoard widget is unmapped. The callback reason is <code>XmCR_UNMAP</code>. DialogShells are usually unmapped when the DialogShell is unmanaged.</dl>
+<dt><code>XmNtextFontList</code></dt>
+<dd>Specifies the font list used for text descendants. See the <code>XmNtextRenderTable</code> resource.</dd>
+<dt><code>XmNtextRenderTable</code></dt>
+<dd>Specifies the render table used for BulletinBoard&#8217;s text descendants. If this value is NULL at initialization, the parent hierarchy of the widget is searched for an ancestor that holds the <code>XmQTspecifyRenderTable</code> trait. If such an ancestor is found, the render table is initialized to the <code>XmTEXT_RENDER_TABLE</code> value of the ancestor widget. If no such ancestor is found, the default is implementation dependent. Refer to <code><a href="/docs/linux/man/3-xmrendertable/">XmRenderTable</a></code>(3) for more information on the creation and structure of a render table.</dd>
+<dt><code>XmNtextTranslations</code></dt>
+<dd>It adds translations to any Text widget or Text widget subclass that is added as a child of BulletinBoard.</dd>
+<dt><code>XmNunmapCallback</code></dt>
+<dd>Specifies the list of callbacks that is called only when the parent of the BulletinBoard is a DialogShell. In this case, this callback list is invoked when the BulletinBoard widget is unmapped. The callback reason is <code>XmCR_UNMAP</code>. DialogShells are usually unmapped when the DialogShell is unmanaged.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>BulletinBoard inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1780,26 +1780,26 @@ description: "XmBulletinBoard — The BulletinBoard widget class"
  XEvent <i>* event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd></dl>
 <h3>Translations</h3>
 <p><code>XmBulletinBoard</code> includes the translations from <code>XmManager</code>.</p>
 <h3>Additional Behavior</h3>
 <p>The <code>XmBulletinBoard</code> widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and if the parent of the BulletinBoard is a manager, passes the event to the parent.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive. In a List widget or single-line Text widget, the List or Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> is called before the BulletinBoard actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>.</p>
-<dd>In a multiline Text widget, any <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> event except <code>&lt;Key&gt;</code><code>&lt;Enter&gt;</code> calls the Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>, then the BulletinBoard actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. If no button has the focus, no default button exists, and the parent of the BulletinBoard is a manager, passes the event to the parent.</p>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNfocusCallback</code>. When the focus policy is <code>XmPOINTER</code>, the callbacks are called when the pointer enters the window. When the focus policy is <code>XmEXPLICIT</code>, the callbacks are called when the user traverses to the widget.</p>
-<dt><code>&lt;Map&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNmapCallback</code>.</p>
-<dt><code>&lt;Unmap&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNunmapCallback</code>.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the cancel button if it is sensitive. If no cancel button exists and if the parent of the BulletinBoard is a manager, passes the event to the parent.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive. In a List widget or single-line Text widget, the List or Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> is called before the BulletinBoard actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>.</dd>
+<dd>In a multiline Text widget, any <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code> event except <code>&lt;Key&gt;</code><code>&lt;Enter&gt;</code> calls the Text action associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>, then the BulletinBoard actions associated with <code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>. If no button has the focus, no default button exists, and the parent of the BulletinBoard is a manager, passes the event to the parent.</dd>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNfocusCallback</code>. When the focus policy is <code>XmPOINTER</code>, the callbacks are called when the pointer enters the window. When the focus policy is <code>XmEXPLICIT</code>, the callbacks are called when the user traverses to the widget.</dd>
+<dt><code>&lt;Map&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNmapCallback</code>.</dd>
+<dt><code>&lt;Unmap&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNunmapCallback</code>.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

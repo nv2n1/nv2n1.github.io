@@ -11,11 +11,8 @@ std::chrono::to_stream(std::chrono::utc_time) - std::chrono::to_stream(std::chro
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Duration&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;(since C++ 20)
-
     to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt,
-
               const std::chrono::utc_time&lt;Duration&gt; &amp;tp);</code></pre> 
 Outputs tp to the stream os, formatted according to the null-terminated format string fmt. If %Z is used, it is replaced with &quot;UTC&quot; widened to CharT. If %z or a modified variant thereof is used, an offset of 0min will be formatted. If tp represents a time during a leap second insertion and a seconds field is formatted, the integral portion of the field is &quot;60&quot; widened to CharT. 
 Format string 

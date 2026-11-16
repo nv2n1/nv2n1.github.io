@@ -11,15 +11,10 @@ description: "ql/termstructures/yield/zerocurve.hpp – interpolated zero-rates 
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/yield/zeroyieldstructure.hpp&gt;
-
 #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;
-
 #include &lt;ql/math/comparison.hpp&gt;
-
 #include &lt;boost/noncopyable.hpp&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;utility&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>InterpolatedZeroCurve&lt; Interpolator &gt;</code><br />

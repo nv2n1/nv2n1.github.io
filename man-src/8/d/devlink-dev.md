@@ -10,17 +10,11 @@ description: "devlink-dev – devlink device configuration"
 <p>devlink-dev &#8211; devlink device configuration</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ]
-
 dev
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
 <p> <code>devlink dev show</code> [ <i>DEV</i> ]<br />
@@ -28,17 +22,11 @@ OPTIONS := {
  <code>devlink dev eswitch set</code> <i>DEV</i> [ <code>mode</code> { <code>legacy</code> | <code>switchdev</code> } ] [ <code>inline-mode</code> { <code>none</code> | <code>link</code> | <code>network</code> | <code>transport</code> } ] [ <code>encap-mode</code> { <code>none</code> | <code>basic</code> } ]<br />
  <code>devlink dev eswitch show</code> <i>DEV</i> </p>
 <pre><code>devlink dev param set
-
 DEV
-
 name
-
 PARAMETER
-
 value
-
 VALUE
-
 cmode { runtime | driverinit | permanent }</code></pre>
 <p> <code>devlink dev param show</code> [ <i>DEV</i> <code>name</code> <i>PARAMETER</i> ]<br />
  <code>devlink dev reload</code> <i>DEV</i> [ <code>netns</code> { <i>PID</i> | <i>NAME</i> | <i>ID</i> } ] [ <code>action</code> { <code>driver_reinit</code> | <code>fw_activate</code> } ] [ <code>limit no_reset</code> ]<br />
@@ -50,20 +38,20 @@ cmode { runtime | driverinit | permanent }</code></pre>
 <h3>devlink dev eswitch show &#8211; display devlink device eswitch attributes</h3>
 <h3>devlink dev eswitch set &#8211; sets devlink device eswitch attributes</h3>
 <dl>
-<dt><code>mode</code> { <code>legacy</code> | <code>switchdev</code> }</p>
-<dd>Set eswitch mode <i>legacy</i> &#8211; Legacy SRIOV <i>switchdev</i> &#8211; SRIOV switchdev offloads</p>
-<dt><code>inline-mode</code> { <code>none</code> | <code>link</code> | <code>network</code> | <code>transport</code> }</p>
-<dd>Some HWs need the VF driver to put part of the packet headers on the TX descriptor so the e-switch can do proper matching and steering. <i>none</i> &#8211; None <i>link</i> &#8211; L2 mode <i>network</i> &#8211; L3 mode <i>transport</i> &#8211; L4 mode</p>
-<dt><code>encap-mode</code> { <code>none</code> | <code>basic</code> }</p>
-<dd>Set eswitch encapsulation support <i>none</i> &#8211; Disable encapsulation support <i>basic</i> &#8211; Enable encapsulation support</dl>
+<dt><code>mode</code> { <code>legacy</code> | <code>switchdev</code> }</dt>
+<dd>Set eswitch mode <i>legacy</i> &#8211; Legacy SRIOV <i>switchdev</i> &#8211; SRIOV switchdev offloads</dd>
+<dt><code>inline-mode</code> { <code>none</code> | <code>link</code> | <code>network</code> | <code>transport</code> }</dt>
+<dd>Some HWs need the VF driver to put part of the packet headers on the TX descriptor so the e-switch can do proper matching and steering. <i>none</i> &#8211; None <i>link</i> &#8211; L2 mode <i>network</i> &#8211; L3 mode <i>transport</i> &#8211; L4 mode</dd>
+<dt><code>encap-mode</code> { <code>none</code> | <code>basic</code> }</dt>
+<dd>Set eswitch encapsulation support <i>none</i> &#8211; Disable encapsulation support <i>basic</i> &#8211; Enable encapsulation support</dd></dl>
 <h3>devlink dev param set &#8211; set new value to devlink device configuration parameter</h3>
 <dl>
-<dt><code>name</code><i> PARAMETER</i></p>
-<dd>Specify parameter name to set.</p>
-<dt><code>value</code><i> VALUE</i></p>
-<dd>New value to set.</p>
-<dt><code>cmode</code> { <code>runtime</code> | <code>driverinit</code> | <code>permanent</code> }</p>
-<dd>Configuration mode in which the new value is set. <i>runtime</i> &#8211; Set new value while driver is running. This configuration mode doesn&#8217;t require any reset to apply the new value. <i>driverinit</i> &#8211; Set new value which will be applied during driver initialization. This configuration mode requires restart driver by devlink reload command to apply the new value. <i>permanent</i> &#8211; New value is written to device&#8217;s non-volatile memory. This configuration mode requires hard reset to apply the new value.</dl>
+<dt><code>name</code><i> PARAMETER</i></dt>
+<dd>Specify parameter name to set.</dd>
+<dt><code>value</code><i> VALUE</i></dt>
+<dd>New value to set.</dd>
+<dt><code>cmode</code> { <code>runtime</code> | <code>driverinit</code> | <code>permanent</code> }</dt>
+<dd>Configuration mode in which the new value is set. <i>runtime</i> &#8211; Set new value while driver is running. This configuration mode doesn&#8217;t require any reset to apply the new value. <i>driverinit</i> &#8211; Set new value which will be applied during driver initialization. This configuration mode requires restart driver by devlink reload command to apply the new value. <i>permanent</i> &#8211; New value is written to device&#8217;s non-volatile memory. This configuration mode requires hard reset to apply the new value.</dd></dl>
 <h3>devlink dev param show &#8211; display devlink device supported configuration parameters attributes</h3>
 <p><code>name</code> <i>PARAMETER</i> Specify parameter name to show. If this argument is omitted all parameters supported by devlink devices are listed.</p>
 <h3>devlink dev reload &#8211; perform hot reload of the driver.</h3>
@@ -75,31 +63,31 @@ cmode { runtime | driverinit | permanent }</code></pre>
 <h2>Examples</h2>
 <p>devlink dev show</p>
 <dl>
-<dd>Shows the state of all devlink devices on the system.</dl>
+<dd>Shows the state of all devlink devices on the system.</dd></dl>
 <p> devlink dev show pci/0000:01:00.0</p>
 <dl>
-<dd>Shows the state of specified devlink device.</dl>
+<dd>Shows the state of specified devlink device.</dd></dl>
 <p> devlink dev eswitch show pci/0000:01:00.0</p>
 <dl>
-<dd>Shows the eswitch mode of specified devlink device.</dl>
+<dd>Shows the eswitch mode of specified devlink device.</dd></dl>
 <p> devlink dev eswitch set pci/0000:01:00.0 mode switchdev</p>
 <dl>
-<dd>Sets the eswitch mode of specified devlink device to switchdev.</dl>
+<dd>Sets the eswitch mode of specified devlink device to switchdev.</dd></dl>
 <p> devlink dev param show pci/0000:01:00.0 name max_macs</p>
 <dl>
-<dd>Shows the parameter max_macs attributes.</dl>
+<dd>Shows the parameter max_macs attributes.</dd></dl>
 <p> devlink dev param set pci/0000:01:00.0 name internal_error_reset value true cmode runtime</p>
 <dl>
-<dd>Sets the parameter internal_error_reset of specified devlink device to true.</dl>
+<dd>Sets the parameter internal_error_reset of specified devlink device to true.</dd></dl>
 <p> devlink dev reload pci/0000:01:00.0</p>
 <dl>
-<dd>Performs hot reload of specified devlink device.</dl>
+<dd>Performs hot reload of specified devlink device.</dd></dl>
 <p> devlink dev flash pci/0000:01:00.0 file firmware.bin</p>
 <dl>
 <dd>Flashes the specified devlink device with provided firmware file name. If the driver supports it, user gets updates about the flash status. For example:<br />
  Preparing to flash<br />
  Flashing 100%<br />
- Flashing done</dl>
+ Flashing done</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-sb/">devlink-sb</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>
 <h2>Author</h2>

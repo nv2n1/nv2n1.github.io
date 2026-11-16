@@ -15,11 +15,11 @@ snd_dma_pointer - return the current pointer to DMA transfer buffer in bytes
 <h2>Arguments</h2>
 
 <i>dma</i>
-<dl><dd><dd>the dma number</dl>
+<dl><dd></dd><dd>the dma number</dd></dl>
  
 
  <i>size</i>
-<dl><dd>the dma transfer size</dl>
+<dl><dd>the dma transfer size</dd></dl>
 
 <h2>Return</h2>
 

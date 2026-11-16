@@ -16,68 +16,68 @@ description: "rsearch – Stress test an LDAP server with search operations"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-H</code></p>
-<dd> print Usage (this message)</p>
-<dt><code>-h</code> host</p>
-<dd> ldap server host (default: localhost)</p>
-<dt><code>-p</code> port</p>
-<dd> ldap server port (default: 389)</p>
-<dt><code>-S</code> scope</p>
-<dd> search SCOPE [0,1,or 2] (default: 2)</p>
-<dt><code>-b</code></p>
-<dd> bind before every operation</p>
-<dt><code>-u</code></p>
-<dd> don&#8217;t unbind <code>&#8212;</code> just close the connection</p>
-<dt><code>-L</code></p>
-<dd> set linger <code>&#8212;</code> connection discarded when closed</p>
-<dt><code>-N</code></p>
-<dd> No operation <code>&#8212;</code> just bind (ignore mdc)</p>
-<dt><code>-v</code></p>
-<dd> verbose</p>
-<dt><code>-y</code></p>
-<dd> nodelay</p>
-<dt><code>-q</code></p>
-<dd> quiet</p>
-<dt><code>-l</code></p>
-<dd> logging</p>
-<dt><code>-m</code></p>
-<dd> operaton: modify non-indexed attr (description). <code>-B</code> required</p>
-<dt><code>-M</code></p>
-<dd> operaton: modify indexed attr (telephonenumber). <code>-B</code> required</p>
-<dt><code>-d</code></p>
-<dd> operaton: delete. <code>-B</code> required</p>
-<dt><code>-c</code></p>
-<dd> operaton: compare. <code>-B</code> required</p>
-<dt><code>-i</code> file</p>
-<dd> name file; used for the search filter</p>
-<dt><code>-B</code> file</p>
-<dd> [DN and] UID file (use &#8216;-B \?&#8217; to see the format)</p>
-<dt><code>-A</code> attrs</p>
-<dd> list of attributes for search request</p>
-<dt><code>-a</code> file</p>
-<dd> list of attributes for search request in a file</p>
-<dt> <code>&#8212;</code> (use &#8216;-a \?&#8217; to see the format ; <code>-a</code> &amp; <code>-A</code> are mutually exclusive)</dl>
+<dt><code>-H</code></dt>
+<dd> print Usage (this message)</dd>
+<dt><code>-h</code> host</dt>
+<dd> ldap server host (default: localhost)</dd>
+<dt><code>-p</code> port</dt>
+<dd> ldap server port (default: 389)</dd>
+<dt><code>-S</code> scope</dt>
+<dd> search SCOPE [0,1,or 2] (default: 2)</dd>
+<dt><code>-b</code></dt>
+<dd> bind before every operation</dd>
+<dt><code>-u</code></dt>
+<dd> don&#8217;t unbind <code>&#8212;</code> just close the connection</dd>
+<dt><code>-L</code></dt>
+<dd> set linger <code>&#8212;</code> connection discarded when closed</dd>
+<dt><code>-N</code></dt>
+<dd> No operation <code>&#8212;</code> just bind (ignore mdc)</dd>
+<dt><code>-v</code></dt>
+<dd> verbose</dd>
+<dt><code>-y</code></dt>
+<dd> nodelay</dd>
+<dt><code>-q</code></dt>
+<dd> quiet</dd>
+<dt><code>-l</code></dt>
+<dd> logging</dd>
+<dt><code>-m</code></dt>
+<dd> operaton: modify non-indexed attr (description). <code>-B</code> required</dd>
+<dt><code>-M</code></dt>
+<dd> operaton: modify indexed attr (telephonenumber). <code>-B</code> required</dd>
+<dt><code>-d</code></dt>
+<dd> operaton: delete. <code>-B</code> required</dd>
+<dt><code>-c</code></dt>
+<dd> operaton: compare. <code>-B</code> required</dd>
+<dt><code>-i</code> file</dt>
+<dd> name file; used for the search filter</dd>
+<dt><code>-B</code> file</dt>
+<dd> [DN and] UID file (use &#8216;-B \?&#8217; to see the format)</dd>
+<dt><code>-A</code> attrs</dt>
+<dd> list of attributes for search request</dd>
+<dt><code>-a</code> file</dt>
+<dd> list of attributes for search request in a file</dd>
+<dt> <code>&#8212;</code> (use &#8216;-a \?&#8217; to see the format ; <code>-a</code> &amp; <code>-A</code> are mutually exclusive)</dt></dl>
 <dl>
-<dt><code>-n</code> number</p>
-<dd> (reserved for future use)</p>
-<dt><code>-o</code> number</p>
+<dt><code>-n</code> number</dt>
+<dd> (reserved for future use)</dd>
+<dt><code>-o</code> number</dt>
 <dd>
-<dd>Search time limit, in seconds; (default: 30; no time limit: 0)</p>
-<dt><code>-j</code> number</p>
-<dd> sample interval, in seconds (default: 10)</p>
-<dt><code>-t</code> number</p>
-<dd> threads (default: 1)</p>
-<dt><code>-T</code> number</p>
-<dd> Time limit, in seconds; cmd stops when exceeds &lt;number&gt;</p>
-<dt><code>-V</code></p>
-<dd> show running average</p>
-<dt><code>-C</code> num</p>
-<dd> take num samples, then stop</p>
-<dt><code>-R</code> num</p>
-<dd> drop connection &amp; reconnect every num searches</p>
-<dt><code>-x</code></p>
+</dd><dd>Search time limit, in seconds; (default: 30; no time limit: 0)</dd>
+<dt><code>-j</code> number</dt>
+<dd> sample interval, in seconds (default: 10)</dd>
+<dt><code>-t</code> number</dt>
+<dd> threads (default: 1)</dd>
+<dt><code>-T</code> number</dt>
+<dd> Time limit, in seconds; cmd stops when exceeds &lt;number&gt;</dd>
+<dt><code>-V</code></dt>
+<dd> show running average</dd>
+<dt><code>-C</code> num</dt>
+<dd> take num samples, then stop</dd>
+<dt><code>-R</code> num</dt>
+<dd> drop connection &amp; reconnect every num searches</dd>
+<dt><code>-x</code></dt>
 <dd> Use <code>-B</code> file for binding; ignored if <code>-B</code> is not given
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> rsearch was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

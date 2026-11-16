@@ -16,57 +16,57 @@ description: "lpstat – print cups status information"
 <h2>OPTIONS</h2>
 <p> The <i>lpstat</i> command supports the following options:</p>
 <dl>
-<dt>-E</p>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-H</p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-H</dt>
 <dd>
- Shows the server hostname and port.</p>
-<dt>-R</p>
+ Shows the server hostname and port.</dd>
+<dt>-R</dt>
 <dd>
- Shows the ranking of print jobs.</p>
-<dt>-U username</p>
+ Shows the ranking of print jobs.</dd>
+<dt>-U username</dt>
 <dd>
- Specifies an alternate username.</p>
-<dt>-W which-jobs</p>
+ Specifies an alternate username.</dd>
+<dt>-W which-jobs</dt>
 <dd>
- Specifies which jobs to show, <i>completed</i> or <i>not-completed</i> (the default). This option <i>must</i> appear before the <i>-o</i> option and/or any printer names, otherwise the default (not-completed) value will be used in the request to the scheduler.</p>
-<dt>-a [printer(s)]</p>
+ Specifies which jobs to show, <i>completed</i> or <i>not-completed</i> (the default). This option <i>must</i> appear before the <i>-o</i> option and/or any printer names, otherwise the default (not-completed) value will be used in the request to the scheduler.</dd>
+<dt>-a [printer(s)]</dt>
 <dd>
- Shows the accepting state of printer queues. If no printers are specified then all printers are listed.</p>
-<dt>-c [class(es)]</p>
+ Shows the accepting state of printer queues. If no printers are specified then all printers are listed.</dd>
+<dt>-c [class(es)]</dt>
 <dd>
- Shows the printer classes and the printers that belong to them. If no classes are specified then all classes are listed.</p>
-<dt>-d</p>
+ Shows the printer classes and the printers that belong to them. If no classes are specified then all classes are listed.</dd>
+<dt>-d</dt>
 <dd>
- Shows the current default destination.</p>
-<dt>-h server[:port]</p>
+ Shows the current default destination.</dd>
+<dt>-h server[:port]</dt>
 <dd>
- Specifies an alternate server.</p>
-<dt>-l</p>
+ Specifies an alternate server.</dd>
+<dt>-l</dt>
 <dd>
- Shows a long listing of printers, classes, or jobs.</p>
-<dt>-o [destination(s)]</p>
+ Shows a long listing of printers, classes, or jobs.</dd>
+<dt>-o [destination(s)]</dt>
 <dd>
- Shows the jobs queue on the specified destinations. If no destinations are specified all jobs are shown.</p>
-<dt>-p [printer(s)]</p>
+ Shows the jobs queue on the specified destinations. If no destinations are specified all jobs are shown.</dd>
+<dt>-p [printer(s)]</dt>
 <dd>
- Shows the printers and whether or not they are enabled for printing. If no printers are specified then all printers are listed.</p>
-<dt>-r</p>
+ Shows the printers and whether or not they are enabled for printing. If no printers are specified then all printers are listed.</dd>
+<dt>-r</dt>
 <dd>
- Shows whether the CUPS server is running.</p>
-<dt>-s</p>
+ Shows whether the CUPS server is running.</dd>
+<dt>-s</dt>
 <dd>
- Shows a status summary, including the default destination, a list of classes and their member printers, and a list of printers and their associated devices. This is equivalent to using the &quot;-d&quot;, &quot;-c&quot;, and &quot;-v&quot; options.</p>
-<dt>-t</p>
+ Shows a status summary, including the default destination, a list of classes and their member printers, and a list of printers and their associated devices. This is equivalent to using the &quot;-d&quot;, &quot;-c&quot;, and &quot;-v&quot; options.</dd>
+<dt>-t</dt>
 <dd>
- Shows all status information. This is equivalent to using the &quot;-r&quot;, &quot;-d&quot;, &quot;-c&quot;, &quot;-v&quot;, &quot;-a&quot;, &quot;-p&quot;, and &quot;-o&quot; options.</p>
-<dt>-u [user(s)]</p>
+ Shows all status information. This is equivalent to using the &quot;-r&quot;, &quot;-d&quot;, &quot;-c&quot;, &quot;-v&quot;, &quot;-a&quot;, &quot;-p&quot;, and &quot;-o&quot; options.</dd>
+<dt>-u [user(s)]</dt>
 <dd>
- Shows a list of print jobs queued by the specified users. If no users are specified, lists the jobs queued by the current user.</p>
-<dt>-v [printer(s)]</p>
+ Shows a list of print jobs queued by the specified users. If no users are specified, lists the jobs queued by the current user.</dd>
+<dt>-v [printer(s)]</dt>
 <dd>
- Shows the printers and what device they are attached to. If no printers are specified then all printers are listed.</dl>
+ Shows the printers and what device they are attached to. If no printers are specified then all printers are listed.</dd></dl>
 <h2>COMPATIBILITY</h2>
 <p> Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, and &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive. </p>
 <p> The &quot;-h&quot;, &quot;-E&quot;, &quot;-U&quot;, and &quot;-W&quot; options are unique to CUPS. </p>

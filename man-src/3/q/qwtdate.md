@@ -35,44 +35,44 @@ description: "QwtDate –"
 <p> An axis for a date/time interval is expected to be aligned and divided in time/date units like seconds, minutes, &#8230; <code>QwtDate</code> offers several algorithms that are needed to calculate these axes. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDateScaleEngine</code>, <code>QwtDateScaleDraw</code>, QDate, QTime</dl>
+<dd><code>QwtDateScaleEngine</code>, <code>QwtDateScaleDraw</code>, QDate, QTime</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>anonymous enum</h3>
 <p><code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>JulianDayForEpoch </i></p>
-<dd>The Julian day of &#8216;The Epoch&#8217;.</dl>
+<dt><i>JulianDayForEpoch </i></dt>
+<dd>The Julian day of &#8216;The Epoch&#8217;.</dd></dl>
 <h3>enum <code>QwtDate::IntervalType</code></h3>
 <p>Classification of an time interval </p>
 <p> Time intervals needs to be classified to decide how to align and divide it. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Millisecond </i></p>
-<dd>The interval is related to milliseconds.</p>
-<dt><i>Second </i></p>
-<dd>The interval is related to seconds.</p>
-<dt><i>Minute </i></p>
-<dd>The interval is related to minutes.</p>
-<dt><i>Hour </i></p>
-<dd>The interval is related to hours.</p>
-<dt><i>Day </i></p>
-<dd>The interval is related to days.</p>
-<dt><i>Week </i></p>
-<dd>The interval is related to weeks.</p>
-<dt><i>Month </i></p>
-<dd>The interval is related to months.</p>
-<dt><i>Year </i></p>
-<dd>The interval is related to years.</dl>
+<dt><i>Millisecond </i></dt>
+<dd>The interval is related to milliseconds.</dd>
+<dt><i>Second </i></dt>
+<dd>The interval is related to seconds.</dd>
+<dt><i>Minute </i></dt>
+<dd>The interval is related to minutes.</dd>
+<dt><i>Hour </i></dt>
+<dd>The interval is related to hours.</dd>
+<dt><i>Day </i></dt>
+<dd>The interval is related to days.</dd>
+<dt><i>Week </i></dt>
+<dd>The interval is related to weeks.</dd>
+<dt><i>Month </i></dt>
+<dd>The interval is related to months.</dd>
+<dt><i>Year </i></dt>
+<dd>The interval is related to years.</dd></dl>
 <h3>enum <code>QwtDate::Week0Type</code></h3>
 <p>How to identify the first week of year differs between countries. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>FirstThursday </i></p>
-<dd>According to ISO 8601 the first week of a year is defined as &#8216;the week with the year&#8217;s first Thursday in it&#8217;.</dl>
+<dt><i>FirstThursday </i></dt>
+<dd>According to ISO 8601 the first week of a year is defined as &#8216;the week with the year&#8217;s first Thursday in it&#8217;.</dd></dl>
 <p> FirstThursday corresponds to the numbering that is implemented in QDate::weekNumber().</p>
 <dl COMPACT>
-<dt><i>FirstDay </i></p>
-<dd></dl>
+<dt><i>FirstDay </i></dt>
+<dd></dd></dl>
 <p> In the U.S. this definition is more common than FirstThursday.</p>
 <h2>Member Function Documentation</h2>
 <h3>QDateTime QwtDate::ceil (const QDateTime &amp;dateTime, <code>IntervalType</code>intervalType) [static]</h3>
@@ -80,150 +80,150 @@ description: "QwtDate –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dateTime</i> Datetime value<br />
- <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dl>
+ <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Ceiled datetime</dl>
+<dd>Ceiled datetime</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>floor()</code></dl>
+<dd><code>floor()</code></dd></dl>
 <h3>QDate QwtDate::dateOfWeek0 (intyear, <code>Week0Type</code>type) [static]</h3>
 <p>Date of the first day of the first week for a year. The first day of a week depends on the current locale ( QLocale::firstDayOfWeek() ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>year</i> Year<br />
- <i>type</i> Option how to identify the first week</dl>
+ <i>type</i> Option how to identify the first week</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>First day of week 0</dl>
+<dd>First day of week 0</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QLocale::firstDayOfWeek(), <code>weekNumber()</code></dl>
+<dd>QLocale::firstDayOfWeek(), <code>weekNumber()</code></dd></dl>
 <h3>QDateTime QwtDate::floor (const QDateTime &amp;dateTime, <code>IntervalType</code>intervalType) [static]</h3>
 <p>Floor a datetime according the interval type </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dateTime</i> Datetime value<br />
- <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dl>
+ <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Floored datetime</dl>
+<dd>Floored datetime</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>floor()</code></dl>
+<dd><code>floor()</code></dd></dl>
 <h3>QDate QwtDate::maxDate () [static]</h3>
 <p>Maximum for the supported date range </p>
 <p> The range of valid dates depends on how QDate stores the Julian day internally. </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>For Qt4 it is &#8216;Tue Jun 3 5874898&#8217;</p>
-<dt>&bull;</p>
-<dd>For Qt5 it is &#8216;Tue Dec 31 2147483647&#8217;</dl>
+<dt>&bull;</dt>
+<dd>For Qt4 it is &#8216;Tue Jun 3 5874898&#8217;</dd>
+<dt>&bull;</dt>
+<dd>For Qt5 it is &#8216;Tue Dec 31 2147483647&#8217;</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>maximum of the date range</dl>
+<dd>maximum of the date range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minDate()</code></dl>
+<dd><code>minDate()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The maximum differs between Qt4 and Qt5</dl>
+<dd>The maximum differs between Qt4 and Qt5</dd></dl>
 <h3>QDate QwtDate::minDate () [static]</h3>
 <p>Minimum for the supported date range </p>
 <p> The range of valid dates depends on how QDate stores the Julian day internally. </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>For Qt4 it is &#8216;Tue Jan 2 -4713&#8217;</p>
-<dt>&bull;</p>
-<dd>For Qt5 it is &#8216;Thu Jan 1 -2147483648&#8217;</dl>
+<dt>&bull;</dt>
+<dd>For Qt4 it is &#8216;Tue Jan 2 -4713&#8217;</dd>
+<dt>&bull;</dt>
+<dd>For Qt5 it is &#8216;Thu Jan 1 -2147483648&#8217;</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>minimum of the date range</dl>
+<dd>minimum of the date range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxDate()</code></dl>
+<dd><code>maxDate()</code></dd></dl>
 <h3>QDateTime QwtDate::toDateTime (doublevalue, Qt::TimeSpectimeSpec = Qt::UTC) [static]</h3>
 <p>Translate from double to QDateTime </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>value</i> Number of milliseconds since the epoch, 1970-01-01T00:00:00 UTC<br />
- <i>timeSpec</i> Time specification</dl>
+ <i>timeSpec</i> Time specification</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Datetime value</dl>
+<dd>Datetime value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>toDouble()</code>, QDateTime::setMSecsSinceEpoch()</dl>
+<dd><code>toDouble()</code>, QDateTime::setMSecsSinceEpoch()</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The return datetime for Qt::OffsetFromUTC will be Qt::UTC</dl>
+<dd>The return datetime for Qt::OffsetFromUTC will be Qt::UTC</dd></dl>
 <h3>double QwtDate::toDouble (const QDateTime &amp;dateTime) [static]</h3>
 <p>Translate from QDateTime to double </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value</dl>
+<dd><i>dateTime</i> Datetime value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of milliseconds since 1970-01-01T00:00:00 UTC has passed.</dl>
+<dd>Number of milliseconds since 1970-01-01T00:00:00 UTC has passed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>toDateTime()</code>, QDateTime::toMSecsSinceEpoch()</dl>
+<dd><code>toDateTime()</code>, QDateTime::toMSecsSinceEpoch()</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>For values very far below or above 1970-01-01 UTC rounding errors will happen due to the limited significance of a double.</dl>
+<dd>For values very far below or above 1970-01-01 UTC rounding errors will happen due to the limited significance of a double.</dd></dl>
 <h3>QString QwtDate::toString (const QDateTime &amp;dateTime, const QString &amp;format, <code>Week0Type</code>week0Type) [static]</h3>
 <p>Translate a datetime into a string </p>
 <p> Beside the format expressions documented in QDateTime::toString() the following expressions are supported: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>w </p>
+<dt>&bull;</dt>
+<dd>w </dd>
 <p>&nbsp;<wbr>week number:&nbsp;<wbr>(&nbsp;<wbr>1 &#8211; 53&nbsp;<wbr>)</p>
-<dt>&bull;</p>
-<dd>ww </p>
+<dt>&bull;</dt>
+<dd>ww </dd>
 <p>&nbsp;<wbr>week number with a leading zero&nbsp;<wbr>(&nbsp;<wbr>01 &#8211; 53&nbsp;<wbr>)</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dateTime</i> Datetime value<br />
  <i>format</i> Format string<br />
- <i>week0Type</i> Specification of week 0</dl>
+ <i>week0Type</i> Specification of week 0</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Datetime string</dl>
+<dd>Datetime string</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QDateTime::toString(), <code>weekNumber()</code>, <code>QwtDateScaleDraw</code></dl>
+<dd>QDateTime::toString(), <code>weekNumber()</code>, <code>QwtDateScaleDraw</code></dd></dl>
 <h3>int QwtDate::utcOffset (const QDateTime &amp;dateTime) [static]</h3>
 <p>Offset in seconds from Coordinated Universal Time </p>
 <p> The offset depends on the time specification of dateTime: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Qt::UTC 0, dateTime has no offset</p>
-<dt>&bull;</p>
-<dd>Qt::OffsetFromUTC returns dateTime.utcOffset()</p>
-<dt>&bull;</p>
-<dd>Qt::LocalTime: number of seconds from the UTC</dl>
+<dt>&bull;</dt>
+<dd>Qt::UTC 0, dateTime has no offset</dd>
+<dt>&bull;</dt>
+<dd>Qt::OffsetFromUTC returns dateTime.utcOffset()</dd>
+<dt>&bull;</dt>
+<dd>Qt::LocalTime: number of seconds from the UTC</dd></dl>
 <p> For Qt::LocalTime the offset depends on the timezone and daylight savings. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value</dl>
+<dd><i>dateTime</i> Datetime value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Offset in seconds</dl>
+<dd>Offset in seconds</dd></dl>
 <h3>int QwtDate::weekNumber (const QDate &amp;date, <code>Week0Type</code>type) [static]</h3>
 <p>Find the week number of a date </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtDate::FirstThursday</code> </p>
+<dt>&bull;</dt>
+<dd><code>QwtDate::FirstThursday</code> </dd>
 <p>&nbsp;<wbr>Corresponding to ISO 8601&nbsp;<wbr>(&nbsp;<wbr>see QDate::weekNumber()&nbsp;<wbr>).</p>
-<dt>&bull;</p>
-<dd><code>QwtDate::FirstDay</code> </p>
+<dt>&bull;</dt>
+<dd><code>QwtDate::FirstDay</code> </dd>
 <p>&nbsp;<wbr>Number of weeks that have begun since&nbsp;<wbr><code>dateOfWeek0()</code>.</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>date</i> Date<br />
- <i>type</i> Option how to identify the first week</dl>
+ <i>type</i> Option how to identify the first week</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Week number, starting with 1</dl>
+<dd>Week number, starting with 1</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

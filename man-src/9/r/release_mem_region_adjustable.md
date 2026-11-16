@@ -15,15 +15,15 @@ release_mem_region_adjustable - release a previously reserved memory region
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>parent resource descriptor</dl>
+<dl><dd></dd><dd>parent resource descriptor</dd></dl>
  
 
  <i>start</i>
-<dl><dd>resource start address</dl>
+<dl><dd>resource start address</dd></dl>
  
 
  <i>size</i>
-<dl><dd>resource region size</dl>
+<dl><dd>resource region size</dd></dl>
 
 <h2>Description</h2>
 

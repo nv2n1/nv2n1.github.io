@@ -16,15 +16,15 @@ description: "sendmail – a mail enqueuer for smtpd(8)"
 <p> The options are as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-F</code> <i>name</i></p>
-<dd>Set the sender&#8217;s full name.</p>
-<dt><code>-f</code> <i>from</i></p>
-<dd>Set the sender&#8217;s address.</p>
-<dt><code>-t</code></p>
-<dd>Read the message&#8217;s To:, Cc:, and Bcc: fields for recipients. The Bcc: field will be deleted before sending.</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose output.</dl>
+</dd><dl>
+<dt><code>-F</code> <i>name</i></dt>
+<dd>Set the sender&#8217;s full name.</dd>
+<dt><code>-f</code> <i>from</i></dt>
+<dd>Set the sender&#8217;s address.</dd>
+<dt><code>-t</code></dt>
+<dd>Read the message&#8217;s To:, Cc:, and Bcc: fields for recipients. The Bcc: field will be deleted before sending.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose output.</dd></dl>
 </dl>
 <p> To maintain compatibility with Sendmail, Inc.&#8217;s implementation of <code>sendmail</code>, various other flags are accepted, but have no effect.</p>
 <h2>Exit Status</h2>

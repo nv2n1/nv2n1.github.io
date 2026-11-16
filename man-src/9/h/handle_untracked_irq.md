@@ -14,7 +14,7 @@ description: "handle_untracked_irq – Simple and software-decoded IRQs."
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>the interrupt description structure for this irq</dl>
+</dd><dd>the interrupt description structure for this irq</dd></dl>
 <h2>Description</h2>
 <p>Untracked interrupts are sent from a demultiplexing interrupt handler when the demultiplexer does not know which device it its multiplexed irq domain generated the interrupt. IRQ&#8217;s handled through here are not subjected to stats tracking, randomness, or spurious interrupt detection.</p>
 <h2>Note</h2>
@@ -22,8 +22,8 @@ description: "handle_untracked_irq – Simple and software-decoded IRQs."
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

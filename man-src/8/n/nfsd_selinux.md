@@ -59,9 +59,9 @@ description: "nfsd_selinux – Security Enhanced Linux Policy for the nfsd proce
 <p> Policy governs the access confined processes have to these ports. SELinux nfsd policy is very flexible allowing users to setup their nfsd processes in as secure a method as possible. </p>
 <p> The following port types are defined for nfsd: </p>
 <dl>
-<dt><code>nfs_port_t</code></p>
+<dt><code>nfs_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2049,20048-20049 udp 2049,20048-20049</dl>
+</dd><dd>Default Defined Ports: tcp 2049,20048-20049 udp 2049,20048-20049</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type nfsd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -116,8 +116,8 @@ description: "nfsd_selinux – Security Enhanced Linux Policy for the nfsd proce
 <p> <code>nfsd_exec_t</code> </p>
 <p> &#8211; Set files with the nfsd_exec_t type, if you want to transition an executable to the nfsd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rpc.nfsd, /usr/sbin/rpc.mountd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rpc.nfsd, /usr/sbin/rpc.mountd </dd>
 </dl>
 <p> <code>nfsd_fs_t</code> </p>
 <p> &#8211; Set files with the nfsd_fs_t type, if you want to treat the files as nfsd fs data. </p>
@@ -129,13 +129,13 @@ description: "nfsd_selinux – Security Enhanced Linux Policy for the nfsd proce
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow nfsd servers to read the /var/nfsd directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow nfsd servers to read the /var/nfsd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/nfsd(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/nfsd</code></p>
 <dl>
-<dt>Allow nfsd servers to read and write /var/nfsd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the nfsd_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow nfsd servers to read and write /var/nfsd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the nfsd_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/nfsd/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/nfsd/incoming</code><br />
  <code>setsebool -P nfsd_anon_write 1</code> </p>

@@ -15,15 +15,15 @@ dev_loopback_xmit - loop back <i>skb</i>
 <h2>Arguments</h2>
 
 <i>net</i>
-<dl><dd><dd>network namespace this loopback is happening in</dl>
+<dl><dd></dd><dd>network namespace this loopback is happening in</dd></dl>
  
 
  <i>sk</i>
-<dl><dd>sk needed to be a netfilter okfn</dl>
+<dl><dd>sk needed to be a netfilter okfn</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>buffer to transmit</dl>
+<dl><dd>buffer to transmit</dd></dl>
 
 <h2>Copyright</h2>
 

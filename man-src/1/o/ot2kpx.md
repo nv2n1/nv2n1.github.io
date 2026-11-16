@@ -15,35 +15,32 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <p> <code>ot2kpx</code> extract the kerning data from OpenType fonts and prints it to <tt>&quot;stdout&quot;</tt>, either in Adobe&#8217;s <font SIZE="-1">KPX</font> format (for adding to an <i>afm</i> file) or as a Luatex custom feature, for use with the <tt>&quot;\directlua&quot;</tt> command.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a short help text and exit.</p>
-<dt><code>-version</code></p>
-<dd> Print <code>ot2kpx</code>&#8216;s version and exit.</p>
-<dt><code>-afm</code>, <code>-kpx</code></p>
-<dd> Output the kerning data in Adobe&#8217;s <font SIZE="-1">KPX</font> format, as used in <i>afm</i> files. This is the default output format.</p>
-<dt><code>-lua</code></p>
-<dd> Output the kerning data as a Luatex custom font feature, to be included in a <tt>&quot;\directlua&quot;</tt> command.</p>
-<dt><code>&lt;fontfile&gt;</code></p>
-<dd> The OpenType font (both <i>otf</i> and <i>ttf</i> format are supported).</dl>
+<dt><code>-help</code></dt>
+<dd> Print a short help text and exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Print <code>ot2kpx</code>&#8216;s version and exit.</dd>
+<dt><code>-afm</code>, <code>-kpx</code></dt>
+<dd> Output the kerning data in Adobe&#8217;s <font SIZE="-1">KPX</font> format, as used in <i>afm</i> files. This is the default output format.</dd>
+<dt><code>-lua</code></dt>
+<dd> Output the kerning data as a Luatex custom font feature, to be included in a <tt>&quot;\directlua&quot;</tt> command.</dd>
+<dt><code>&lt;fontfile&gt;</code></dt>
+<dd> The OpenType font (both <i>otf</i> and <i>ttf</i> format are supported).</dd></dl>
 <h2>RESTRICTIONS</h2>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> <code>ot2kpx</code> doesn&#8217;t implement all of the OpenType specification. Things that are missing include: support for font files containing multiple fonts, LookupTables with LookupTypes other than 2, &#8220;kern&#8221; tables with format other than 0 and ValueRecords with other types of data than just XAdvance data. </p>
+<dt><code>&#8211;</code></dt>
+<dd> <code>ot2kpx</code> doesn&#8217;t implement all of the OpenType specification. Things that are missing include: support for font files containing multiple fonts, LookupTables with LookupTypes other than 2, &#8220;kern&#8221; tables with format other than 0 and ValueRecords with other types of data than just XAdvance data. </dd>
 <p> Most of these limitations won&#8217;t matter, since the missing features are rare (the only fonts I know of that use them are the non-western fonts that come with Adobe Reader). Furthermore, many of these features define (according to the OpenType specification) <i>&#8220;subtle, device-dependent adjustments at specific font sizes or device resolutions&#8221;</i>; since there&#8217;s no way to express such adjustments in <i>afm</i> format, ignoring them seems to be the only option anyway.</p>
-<dt><code>&#8211;</code></p>
-<dd> <code>ot2kpx</code> collects kerning data first from the &#8220;kern&#8221; table, then from all LookupTables associated with the &#8220;kern&#8221; feature; if a kerning pair occurs multiple times, the first value seen is chosen. There are (or may be) several issues with this approach:</p>
+<dt><code>&#8211;</code></dt>
+<dd> <code>ot2kpx</code> collects kerning data first from the &#8220;kern&#8221; table, then from all LookupTables associated with the &#8220;kern&#8221; feature; if a kerning pair occurs multiple times, the first value seen is chosen. There are (or may be) several issues with this approach:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> The OpenType specification says that fonts in <i>otf</i> format shouldn&#8217;t use the &#8220;kern&#8221; table at all, just the lookups from the &#8220;<font SIZE="-1">GPOS&#8221;</font> table. Many such fonts do, however, contain a &#8220;kern&#8221; table, but no &#8220;<font SIZE="-1">GPOS&#8221;</font> table; so we use the &#8220;kern&#8221; table anyway.</p>
-<dt>&#8211;</p>
-<dd> Instead of reading all LookupTables, it might be better to let the user specify a script and language and process only the LookupTables for those values. However, at least in the fonts I checked, all script/language combinations eventually point to the <i>same</i> &#8220;kern&#8221; LookupTables, so this approach wouldn&#8217;t make any difference (apart from further complicating the code).</dl>
+<dt>&#8211;</dt>
+<dd> The OpenType specification says that fonts in <i>otf</i> format shouldn&#8217;t use the &#8220;kern&#8221; table at all, just the lookups from the &#8220;<font SIZE="-1">GPOS&#8221;</font> table. Many such fonts do, however, contain a &#8220;kern&#8221; table, but no &#8220;<font SIZE="-1">GPOS&#8221;</font> table; so we use the &#8220;kern&#8221; table anyway.</dd>
+<dt>&#8211;</dt>
+<dd> Instead of reading all LookupTables, it might be better to let the user specify a script and language and process only the LookupTables for those values. However, at least in the fonts I checked, all script/language combinations eventually point to the <i>same</i> &#8220;kern&#8221; LookupTables, so this approach wouldn&#8217;t make any difference (apart from further complicating the code).</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> Marc Penninga &lt;marcpenninga [at] gmail.com&gt;</p>
@@ -58,9 +55,9 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <h2>RECENT CHANGES</h2>
 <p> (See the source code for the rest of the story.)</p>
 <dl>
-<dt><i>2019-05-20</i></p>
-<dd> Added the <i>-version</i> option.</p>
-<dt><i>2019-04-15</i></p>
-<dd> Added the <i>-lua</i> command-line option to get output in Luatex&#8217;s custom feature format. </p>
+<dt><i>2019-05-20</i></dt>
+<dd> Added the <i>-version</i> option.</dd>
+<dt><i>2019-04-15</i></dt>
+<dd> Added the <i>-lua</i> command-line option to get output in Luatex&#8217;s custom feature format. </dd>
 </dl>
 <h2>Index</h2>

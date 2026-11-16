@@ -15,7 +15,7 @@ eventfd_ctx_fdget - Acquires a reference to the internal eventfd context.
 <h2>Arguments</h2>
 
 <i>fd</i>
-<dl><dd>[in] Eventfd file descriptor.</dl>
+<dl><dd>[in] Eventfd file descriptor.</dd></dl>
 
 <h2>Description</h2>
 
@@ -26,3 +26,4 @@ eventfd_ctx_fdget - Acquires a reference to the internal eventfd context.
 <h2>Copyright</h2>
 
 
+</dd>

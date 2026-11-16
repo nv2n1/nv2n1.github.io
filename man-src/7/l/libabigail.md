@@ -28,118 +28,118 @@ description: "libabigail – Library to analyze and compare ELF ABIs"
 <h3>Environment</h3>
 <p>abidiff loads two default <i>suppression specifications files</i>, merges their content and use it to filter out ABI change reports that might be considered as false positives to users.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Default system-wide suppression specification file </p>
+<dt>&bull;</dt>
+<dd>Default system-wide suppression specification file </dd>
 <p> It&#8217;s located by the optional environment variable LIBABIGAIL_DEFAULT_SYSTEM_SUPPRESSION_FILE. If that environment variable is not set, then abidiff tries to load the suppression file $libdir/libabigail/libabigail-default.abignore. If that file is not present, then no default system-wide suppression specification file is loaded.</p>
-<dt>&bull;</p>
-<dd>Default user suppression specification file. </p>
+<dt>&bull;</dt>
+<dd>Default user suppression specification file. </dd>
 <p> It&#8217;s located by the optional environment LIBABIGAIL_DEFAULT_USER_SUPPRESSION_FILE. If that environment variable is not set, then abidiff tries to load the suppression file $HOME/.abignore. If that file is not present, then no default user suppression specification is loaded.</dl>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help | -h</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help | -h</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd><i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd><i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-dir1 | &#8211;d1</code> &lt;<i>di-path1</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-dir1 | &#8211;d1</code> &lt;<i>di-path1</i>&gt; </dd>
 <p> For cases where the debug information for <i>first-shared-library</i> is split out into a separate file, tells <code>abidiff</code> where to find that separate debug information file. </p>
 <p> Note that <i>di-path</i> must point to the root directory under which the debug information is arranged in a tree-like manner. Under Red Hat based systems, that directory is usually <code>&lt;root&gt;/usr/lib/debug</code>. </p>
 <p> Note also that this option is not mandatory for split debug information installed by your system&#8217;s package manager because then <code>abidiff</code> knows where to find it.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-dir2 | &#8211;d2</code> &lt;<i>di-path2</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-dir2 | &#8211;d2</code> &lt;<i>di-path2</i>&gt; </dd>
 <p> Like <code>&#8211;debug-info-dir1</code>, this options tells <code>abidiff</code> where to find the split debug information for the <i>second-shared-library</i> file.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;headers-dir1 | &#8211;hd1</code> &lt;headers-directory-path-1&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;headers-dir1 | &#8211;hd1</code> &lt;headers-directory-path-1&gt; </dd>
 <p> Specifies where to find the public headers of the first shared library that the tool has to consider. The tool will thus filter out ABI changes on types that are not defined in public headers.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;headers-dir2 | &#8211;hd2</code> &lt;headers-directory-path-1&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;headers-dir2 | &#8211;hd2</code> &lt;headers-directory-path-1&gt; </dd>
 <p> Specifies where to find the public headers of the second shared library that the tool has to consider. The tool will thus filter out ABI changes on types that are not defined in public headers.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;dont-drop-private-types</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;dont-drop-private-types</code> </dd>
 <p> This option is to be used with the <code>&#8211;headers-dir1</code> and <code>&#8211;headers-dir2</code> options. Without this option, types that are <i>NOT</i> defined in the headers are entirely dropped from the internal representation build by Libabigail to represent the ABI. They thus don&#8217;t have to be filtered out from the final ABI change report because they are not even present in Libabigail&#8217;s representation. </p>
 <p> With this option however, those private types are kept in the internal representation and later filtered out from the report. </p>
 <p> This options thus potentially makes Libabigail to potentially consume more memory. It&#8217;s meant to be mainly used for debugging purposes.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;stat</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;stat</code> </dd>
 <p> Rather than displaying the detailed ABI differences between <i>first-shared-library</i> and <i>second-shared-library</i>, just display some summary statistics about these differences.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;symtabs</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;symtabs</code> </dd>
 <p> Only display the symbol tables of the <i>first-shared-library</i> and <i>second-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;deleted-fns</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;deleted-fns</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the globally defined functions that got deleted from <i>first-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;changed-fns</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;changed-fns</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the changes in sub-types of the global functions defined in <i>first-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;added-fns</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;added-fns</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the globally defined functions that were added to <i>second-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;deleted-vars</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;deleted-vars</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the globally defined variables that were deleted from <i>first-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;changed-vars</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;changed-vars</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the changes in the sub-types of the global variables defined in <i>first-shared-library</i></p>
-<dt>&bull;</p>
-<dd><code>&#8211;added-vars</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;added-vars</code> </dd>
 <p> In the resulting report about the differences between <i>first-shared-library</i> and <i>second-shared-library</i>, only display the global variables that were added (defined) to <i>second-shared-library</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-linkage-name</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-linkage-name</code> </dd>
 <p> In the resulting report, do not display the linkage names of the added, removed, or changed functions or variables.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-unreferenced-symbols</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-unreferenced-symbols</code> </dd>
 <p> In the resulting report, do not display change information about function and variable symbols that are not referenced by any debug information. Note that for these symbols not referenced by any debug information, the change information displayed is either added or removed symbols.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-default-suppression</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-default-suppression</code> </dd>
 <p> Do not load the <i>default suppression specification files</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppressions</i>. Note that this option can appear multiple times on the command line. In that case, all of the provided suppression specification files are taken into account. </p>
 <p> Please note that, by default, if this option is not provided, then the <i>default suppression specification files</i> are loaded .</p>
-<dt>&bull;</p>
-<dd><code>&#8211;drop</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;drop</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, drop the globally defined functions and variables which name match the regular expression <i>regex</i>. As a result, no change involving these functions or variables will be emitted in the diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;drop-fn</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;drop-fn</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, drop the globally defined functions which name match the regular expression <i>regex</i>. As a result, no change involving these functions will be emitted in the diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;drop-var</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;drop-var</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, drop the globally defined variables matching a the regular expression <i>regex</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;keep</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;keep</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, keep the globally defined functions and variables which names match the regular expression <i>regex</i>. All other functions and variables are dropped on the floor and will thus not appear in the resulting diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;keep-fn</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;keep-fn</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, keep the globally defined functions which name match the regular expression <i>regex</i>. All other functions are dropped on the floor and will thus not appear in the resulting diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;keep-var</code> &lt;<i>regex</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;keep-var</code> &lt;<i>regex</i>&gt; </dd>
 <p> When reading the <i>first-shared-library</i> and <i>second-shared-library</i> ELF input files, keep the globally defined which names match the regular expression <i>regex</i>. All other variables are dropped on the floor and will thus not appear in the resulting diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;harmless</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;harmless</code> </dd>
 <p> In the diff report, display only the <i>harmless</i> changes. By default, the harmless changes are filtered out of the diff report keep the clutter to a minimum and have a greater change to spot real ABI issues.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-harmful</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-harmful</code> </dd>
 <p> In the diff report, do not display the <i>harmful</i> changes. By default, only the harmful changes are displayed in diff report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;redundant</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;redundant</code> </dd>
 <p> In the diff report, do display redundant changes. A redundant change is a change that has been displayed elsewhere in the report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-redundant</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-redundant</code> </dd>
 <p> In the diff report, do <i>NOT</i> display redundant changes. A redundant change is a change that has been displayed elsewhere in the report. This option is switched on by default.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-architecture</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-architecture</code> </dd>
 <p> Do not take architecture in account when comparing ABIs.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;dump-diff-tree</code> After the diff report, emit a textual representation of the diff nodes tree used by the comparison engine to represent the changed functions and variables. That representation is emitted to the error output for debugging purposes. Note that this diff tree is relevant only to functions and variables that have some sub-type changes. Added or removed functions and variables do not have any diff nodes tree associated to them.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;stats</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;dump-diff-tree</code> After the diff report, emit a textual representation of the diff nodes tree used by the comparison engine to represent the changed functions and variables. That representation is emitted to the error output for debugging purposes. Note that this diff tree is relevant only to functions and variables that have some sub-type changes. Added or removed functions and variables do not have any diff nodes tree associated to them.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;stats</code> </dd>
 <p> Emit statistics about various internal things.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;verbose</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;verbose</code> </dd>
 <p> Emit verbose logs about the progress of miscellaneous internal things.</dl>
 <h3>Return values</h3>
 <p>The exit code of the <code>abidiff</code> command is either 0 if the ABI of the binaries being compared are equal, or non-zero if they differ or if the tool encountered an error. </p>
@@ -150,16 +150,16 @@ description: "libabigail – Library to analyze and compare ELF ABIs"
 <p> The fourth bit, of value 8, named <code>ABIDIFF_ABI_INCOMPATIBLE_CHANGE</code> means the ABI of the binaries compared are different in an incompatible way. If this bit is set, then the <code>ABIDIFF_ABI_CHANGE</code> bit must be set as well. If the <code>ABIDIFF_ABI_CHANGE</code> is set and the <code>ABIDIFF_INCOMPATIBLE_CHANGE</code> is <i>NOT</i> set, then it means that the ABIs being compared might or might not be compatible. In that case, a human being needs to review the ABI changes to decide if they are compatible or not. </p>
 <p> Note that, at the moment, there are only a few kinds of ABI changes that would result in setting the flag <code>ABIDIFF_ABI_INCOMPATIBLE_CHANGE</code>. Those ABI changes are either:</p>
 <dl>
-<dt>&bull;</p>
-<dd>the removal of the symbol of a function or variable that has been defined and exported.</p>
-<dt>&bull;</p>
-<dd>the modification of the index of a member of a virtual function table (for C++ programs and libraries). </p>
+<dt>&bull;</dt>
+<dd>the removal of the symbol of a function or variable that has been defined and exported.</dd>
+<dt>&bull;</dt>
+<dd>the modification of the index of a member of a virtual function table (for C++ programs and libraries). </dd>
 <p> With time, when more ABI change patterns are found to <i>always</i> constitute incompatible ABI changes, we will adapt the code to recognize those cases and set the <code>ABIDIFF_ABI_INCOMPATIBLE_CHANGE</code> accordingly. So, if you find such patterns, please let us know. </p>
 <p> The remaining bits are not used for the moment.</dl>
 <h3>Usage examples</h3>
 <dl>
-<dt>1.</p>
-<dd>Detecting a change in a sub-type of a function: </p>
+<dt>1.</dt>
+<dd>Detecting a change in a sub-type of a function: </dd>
 <pre>$ cat -n test-v0.cc
  1 // Compile this with:
  2 // g++ -g -Wall -shared -o libtest-v0.so test-v0.cc
@@ -211,8 +211,8 @@ Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
  1 data member change:
  'int S0::m0' offset changed from 0 to 32
 $</pre>
-<dt>2.</p>
-<dd>Detecting another change in a sub-type of a function: </p>
+<dt>2.</dt>
+<dd>Detecting another change in a sub-type of a function: </dd>
 <pre>$ cat -n test-v0.cc
  1 // Compile this with:
  2 // g++ -g -Wall -shared -o libtest-v0.so test-v0.cc
@@ -260,8 +260,8 @@ Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
  1 data member change:
  'int S0::m0' offset changed from 0 to 32
 $</pre>
-<dt>3.</p>
-<dd>Detecting that functions got removed or added to a library: </p>
+<dt>3.</dt>
+<dd>Detecting that functions got removed or added to a library: </dd>
 <pre>$ cat -n test-v0.cc
  1 // Compile this with:
  2 // g++ -g -Wall -shared -o libtest-v0.so test-v0.cc
@@ -314,73 +314,73 @@ $</pre>
 <h3>Environment</h3>
 <p>abipkgdiff loads two default <i>suppression specifications files</i>, merges their content and use it to filter out ABI change reports that might be considered as false positives to users.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Default system-wide suppression specification file </p>
+<dt>&bull;</dt>
+<dd>Default system-wide suppression specification file </dd>
 <p> It&#8217;s located by the optional environment variable LIBABIGAIL_DEFAULT_SYSTEM_SUPPRESSION_FILE. If that environment variable is not set, then abipkgdiff tries to load the suppression file $libdir/libabigail/libabigail-default.abignore. If that file is not present, then no default system-wide suppression specification file is loaded.</p>
-<dt>&bull;</p>
-<dd>Default user suppression specification file. </p>
+<dt>&bull;</dt>
+<dd>Default user suppression specification file. </dd>
 <p> It&#8217;s located by the optional environment LIBABIGAIL_DEFAULT_USER_SUPPRESSION_FILE. If that environment variable is not set, then abipkgdiff tries to load the suppression file $HOME/.abignore. If that file is not present, then no default user suppression specification is loaded.</dl>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help | -h</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help | -h</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd><i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd><i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-pkg1 | &#8211;d1</code> &lt;path&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-pkg1 | &#8211;d1</code> &lt;path&gt; </dd>
 <p> For cases where the debug information for <i>package1</i> is split out into a separate file, tells <code>abipkgdiff</code> where to find that separate debug information package.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-pkg2 | &#8211;d2</code> &lt;path&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-pkg2 | &#8211;d2</code> &lt;path&gt; </dd>
 <p> For cases where the debug information for <i>package2</i> is split out into a separate file, tells <code>abipkgdiff</code> where to find that separate debug information package.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;devel-pkg1 | &#8211;devel1</code> &lt;path&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;devel-pkg1 | &#8211;devel1</code> &lt;path&gt; </dd>
 <p> Specifies where to find the <i>Development Package</i> associated with the first package to be compared. That <i>Development Package</i> at <code>path</code> should at least contain header files in which public types exposed by the libraries (of the first package to be compared) are defined. When this option is provided, the tool filters out reports about ABI changes to types that are <i>NOT</i> defined in these header files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;devel-pkg2 | &#8211;devel2</code> &lt;path&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;devel-pkg2 | &#8211;devel2</code> &lt;path&gt; </dd>
 <p> Specifies where to find the <i>Development Package</i> associated with the second package to be compared. That <i>Development Package</i> at <code>path</code> should at least contains header files in which public types exposed by the libraries (of the second package to be compared) are defined. When this option is provided, the tool filters out reports about ABI changes to types that are <i>NOT</i> defined in these header files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;dso-only</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;dso-only</code> </dd>
 <p> Compare ELF files that are shared libraries, only. Do not compare executable files, for instance.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;redundant</code> In the diff reports, do display redundant changes. A redundant change is a change that has been displayed elsewhere in a given report.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-linkage-name</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;redundant</code> In the diff reports, do display redundant changes. A redundant change is a change that has been displayed elsewhere in a given report.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-linkage-name</code> </dd>
 <p> In the resulting report, do not display the linkage names of the added, removed, or changed functions or variables.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-added-syms</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-added-syms</code> </dd>
 <p> Do not show the list of functions, variables, or any symbol that was added.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-added-binaries</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-added-binaries</code> </dd>
 <p> Do not show the list of binaries that got added to the second package. </p>
 <p> Please note that the presence of such added binaries is not considered like an ABI change by this tool; as such, it doesn&#8217;t have any impact on the exit code of the tool. It does only have an informational value. Removed binaries are, however, considered as an ABI change.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-abignore</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-abignore</code> </dd>
 <p> Do not search the <i>package2</i> for the presence of suppression files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-parallel</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-parallel</code> </dd>
 <p> By default, <code>abipkgdiff</code> will use all the processors it has available to execute concurrently. This option tells it not to extract packages or run comparisons in parallel.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-default-suppression</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-default-suppression</code> </dd>
 <p> Do not load the <i>default suppression specification files</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppressions</i>. Note that this option can appear multiple times on the command line. In that case, all of the suppression specification files are taken into account. </p>
 <p> Please note that, by default, if this option is not provided, then the <i>default suppression specification files</i> are loaded .</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;show-identical-binaries</code> Show the names of the all binaries compared, including the binaries whose ABI compare equal. By default, when this option is not provided, only binaries with ABI changes are mentionned in the output.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;fail-no-dbg</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;show-identical-binaries</code> Show the names of the all binaries compared, including the binaries whose ABI compare equal. By default, when this option is not provided, only binaries with ABI changes are mentionned in the output.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;fail-no-dbg</code> </dd>
 <p> Make the program fail and return a non-zero exit code if couldn&#8217;t read any of the debug information that comes from the debug info packages that were given on the command line. If no debug info package were provided on the command line then this option is not active. </p>
 <p> Note that the non-zero exit code returned by the program as a result of this option is the constant <code>ABIDIFF_ERROR</code>. To know the numerical value of that constant, please refer to the <i>exit code documentation</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;keep-tmp-files</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;keep-tmp-files</code> </dd>
 <p> Do not erase the temporary directory files that are created during the execution of the tool.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;verbose</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;verbose</code> </dd>
 <p> Emit verbose progress messages.</dl>
 <h3>Return value</h3>
 <p>The exit code of the <code>abipkgdiff</code> command is either 0 if the ABI of the binaries compared are equal, or non-zero if they differ or if the tool encountered an error. </p>
@@ -391,34 +391,34 @@ $</pre>
 <pre>abicompat [options] [&lt;application&gt; &lt;shared-library-first-version&gt; &lt;shared-library-second-version&gt;]</pre>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd><i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd><i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;list-undefined-symbols | -u</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;list-undefined-symbols | -u</code> </dd>
 <p> Display the list of undefined symbols of the application and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;show-base-names | -b</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;show-base-names | -b</code> </dd>
 <p> In the resulting report emitted by the tool, this option makes the application and libraries be referred to by their base names only; not by a full absolute name. This can be useful for use in scripts that wants to compare names of the application and libraries independently of what their directory names are.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;app-debug-info-dir | &#8211;appd</code> &lt;path-to-app-debug-info-directory&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;app-debug-info-dir | &#8211;appd</code> &lt;path-to-app-debug-info-directory&gt; </dd>
 <p> Set the path to the directory under which the debug information of the application is supposed to be laid out. This is useful for application binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;lib-debug-info-dir1 | &#8211;libd1</code> &lt;path-to-lib1-debug-info&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;lib-debug-info-dir1 | &#8211;libd1</code> &lt;path-to-lib1-debug-info&gt; </dd>
 <p> Set the path to the directory under which the debug information of the first version of the shared library is supposed to be laid out. This is useful for shared library binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;lib-debug-info-dir2 | &#8211;libd2</code> &lt;path-to-lib1-debug-info&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;lib-debug-info-dir2 | &#8211;libd2</code> &lt;path-to-lib1-debug-info&gt; </dd>
 <p> Set the path to the directory under which the debug information of the second version of the shared library is supposed to be laid out. This is useful for shared library binaries for which the debug info is in a separate set of files.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;suppressions | &#8211;suppr</code> &lt;<i>path-to-suppressions</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppressions</i>. Note that this option can appear multiple times on the command line; all the suppression specification files are then taken into account.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;weak-mode</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;weak-mode</code> </dd>
 <p> This triggers the weak mode of <code>abicompat</code>. In this mode, only one version of the library is required. That is, abicompat is invoked like this: </p>
 <pre>abicompat --weak-mode &lt;the-application&gt; &lt;the-library&gt;</pre>
 <p>Note that the <code>&#8211;weak-mode</code> option can even be omitted if only one version of the library is given, along with the application; in that case, <code>abicompat</code> automatically switches to operate in weak mode: </p>
@@ -436,8 +436,8 @@ $</pre>
 <p> The remaining bits are not used for the moment.</p>
 <h3>Usage examples</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Detecting a possible ABI incompatibility in a new shared library version: </p>
+<dt>&bull;</dt>
+<dd>Detecting a possible ABI incompatibility in a new shared library version: </dd>
 <pre>$ cat -n test0.h
  1 struct foo
  2 {
@@ -540,15 +540,15 @@ $ cat -n test1.cc
  22 }
  23 */
 $</pre>
-<dt>&bull;</p>
-<dd>Compile the first and second versions of the libraries: <code>libtest-0.so</code> and <code>libtest-1.so</code>: </p>
+<dt>&bull;</dt>
+<dd>Compile the first and second versions of the libraries: <code>libtest-0.so</code> and <code>libtest-1.so</code>: </dd>
 <pre>$ g++ -g -Wall -shared -o libtest-0.so test0.cc
 $ g++ -g -Wall -shared -o libtest-1.so test1.cc</pre>
-<dt>&bull;</p>
-<dd>Compile the application and link it against the first version of the library, creating the <code>test-app</code> binary: </p>
+<dt>&bull;</dt>
+<dd>Compile the application and link it against the first version of the library, creating the <code>test-app</code> binary: </dd>
 <pre>$ g++ -g -Wall -o test-app -L. -ltest-0.so test-app.cc</pre>
-<dt>&bull;</p>
-<dd>Now, use <code>abicompat</code> to see if libtest-1.so is ABI compatible with app, with respect to the ABI of libtest-0.so: </p>
+<dt>&bull;</dt>
+<dd>Now, use <code>abicompat</code> to see if libtest-1.so is ABI compatible with app, with respect to the ABI of libtest-0.so: </dd>
 <pre>$ abicompat test-app libtest-0.so libtest-1.so
 ELF file 'test-app' might not be ABI compatible with 'libtest-1.so' due to differences with 'libtest-0.so' below:
 Functions changes summary: 0 Removed, 2 Changed, 0 Added functions
@@ -564,8 +564,8 @@ Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
  parameter 0 of type 'foo&amp;' has sub-type changes:
  referenced type 'struct foo' changed, as reported earlier
 $</pre>
-<dt>&bull;</p>
-<dd>Now use the weak mode of abicompat, that is, providing just the application and the new version of the library: </p>
+<dt>&bull;</dt>
+<dd>Now use the weak mode of abicompat, that is, providing just the application and the new version of the library: </dd>
 <pre>$ abicompat --weak-mode test-app libtest-1.so
 functions defined in library
  'libtest-1.so'
@@ -586,48 +586,48 @@ $</pre>
 <pre>abidw [options] [&lt;path-to-elf-file&gt;]</pre>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help | -h</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help | -h</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd><i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd><i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-dir | -d</code> &lt;<i>dir-path</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-dir | -d</code> &lt;<i>dir-path</i>&gt; </dd>
 <p> In cases where the debug info for <i>path-to-elf-file</i> is in a separate file that is located in a non-standard place, this tells <code>abidw</code> where to look for that debug info file. </p>
 <p> Note that <i>dir-path</i> must point to the root directory under which the debug information is arranged in a tree-like manner. Under Red Hat based systems, that directory is usually <code>&lt;root&gt;/usr/lib/debug</code>. </p>
 <p> Note that this option is not mandatory for split debug information installed by your system&#8217;s package manager because then <code>abidw</code> knows where to find it.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;out-file</code> &lt;<i>file-path</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;out-file</code> &lt;<i>file-path</i>&gt; </dd>
 <p> This option instructs <code>abidw</code> to emit the XML representation of <i>path-to-elf-file</i> into the file <i>file-path</i>, rather than emitting it to its standard output.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;noout</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;noout</code> </dd>
 <p> This option instructs <code>abidw</code> to not emit the XML representation of the ABI. So it only reads the ELF and debug information, builds the internal representation of the ABI and exits. This option is usually useful for debugging purposes.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;suppressions | suppr</code> &lt;<i>path-to-suppression-specifications-file</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;suppressions | suppr</code> &lt;<i>path-to-suppression-specifications-file</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppression-specifications-file</i>. Note that this option can appear multiple times on the command line. In that case, all of the provided suppression specification files are taken into account. ABI artifacts matched by the suppression specifications are suppressed from the output of this tool.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;headers-dir | &#8211;hd</code> &lt;headers-directory-path-1&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;headers-dir | &#8211;hd</code> &lt;headers-directory-path-1&gt; </dd>
 <p> Specifies where to find the public headers of the first shared library that the tool has to consider. The tool will thus filter out types that are not defined in public headers.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;check-alternate-debug-info</code> &lt;<i>elf-path</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;check-alternate-debug-info</code> &lt;<i>elf-path</i>&gt; </dd>
 <p> If the debug info for the file <i>elf-path</i> contains a reference to an <i>alternate debug info</i> file, <code>abidw</code> checks that it can find that alternate debug info file. In that case, it emits a meaningful success message mentioning the full path to the alternate debug info file found. Otherwise, it emits an error code.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;check-alternate-debug-info-base-name</code> &lt;<i>elf-path</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-show-locs</code> Do not show information about where in the <i>second shared library</i> the respective type was changed.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;check-alternate-debug-info-base-name</code> &lt;<i>elf-path</i>&gt; </dd>
 <p> Like <code>&#8211;check-alternate-debug-info</code>, but in the success message, only mention the base name of the debug info file; not its full path.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;load-all-types</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;load-all-types</code> </dd>
 <p> By default, <code>libabigail</code> (and thus <code>abidw</code>) only loads types that are reachable from functions and variables declarations that are publicly defined and exported by the binary. So only those types are present in the output of <code>abidw</code>. This option however makes <code>abidw</code> load <i>all</i> the types defined in the binaries, even those that are not reachable from public declarations.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;abidiff</code> Load the ABI of the ELF binary given in argument, save it in libabigail&#8217;s XML format in a temporary file; read the ABI from the temporary XML file and compare the ABI that has been read back against the ABI of the ELF binary given in argument. The ABIs should compare equal. If they don&#8217;t, the program emits a diagnostic and exits with a non-zero code. </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;abidiff</code> Load the ABI of the ELF binary given in argument, save it in libabigail&#8217;s XML format in a temporary file; read the ABI from the temporary XML file and compare the ABI that has been read back against the ABI of the ELF binary given in argument. The ABIs should compare equal. If they don&#8217;t, the program emits a diagnostic and exits with a non-zero code. </dd>
 <p> This is a debugging and sanity check option.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;stats</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;stats</code> </dd>
 <p> Emit statistics about various internal things.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;verbose</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;verbose</code> </dd>
 <p> Emit verbose logs about the progress of miscellaneous internal things.</dl>
 <h3>Notes</h3>
 <h3>Alternate debug info files</h3>
@@ -640,34 +640,34 @@ $</pre>
 <pre>abilint [options] [&lt;abi-file1&gt;]</pre>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help</code> </dd>
 <p> Display a short help message and exits.</p>
-<dt>&bull;</p>
-<dd><i>&#8211;version | -v</i> </p>
+<dt>&bull;</dt>
+<dd><i>&#8211;version | -v</i> </dd>
 <p> Display the version of the program and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug-info-dir</code> &lt;<i>path</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug-info-dir</code> &lt;<i>path</i>&gt; </dd>
 <p> When reading an <i>ELF</i> input file which debug information is split out into a separate file, this options tells <code>abilint</code> where to find that separate debug information file. </p>
 <p> Note that <i>path</i> must point to the root directory under which the debug information is arranged in a tree-like manner. Under Red Hat based systems, that directory is usually <code>&lt;root&gt;/usr/lib/debug</code>. </p>
 <p> Note also that this option is not mandatory for split debug information installed by your system&#8217;s package manager because then <code>abidiff</code> knows where to find it.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;diff</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;diff</code> </dd>
 <p> For XML inputs, perform a text diff between the input and the memory model saved back to disk. This can help to spot issues in the handling of the XML format by the underlying Libabigail library.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;noout</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;noout</code> </dd>
 <p> Do not display anything on standard output. The return code of the command is the only way to know if the command succeeded.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;suppressions | suppr</code> &lt;<i>path-to-suppression-specifications-file</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;suppressions | suppr</code> &lt;<i>path-to-suppression-specifications-file</i>&gt; </dd>
 <p> Use a <i>suppression specification</i> file located at <i>path-to-suppression-specifications-file</i>. Note that this option can appear multiple times on the command line. In that case, all of the provided suppression specification files are taken into account. ABI artifacts matched by the suppression specifications are suppressed from the output of this tool.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;headers-dir | &#8211;hd</code> &lt;headers-directory-path-1&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;headers-dir | &#8211;hd</code> &lt;headers-directory-path-1&gt; </dd>
 <p> Specifies where to find the public headers of the first shared library that the tool has to consider. The tool will thus filter out types that are not defined in public headers.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;stdin | &#8212;</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;stdin | &#8212;</code> </dd>
 <p> Read the input content from standard input.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;tu</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;tu</code> </dd>
 <p> Expect the input XML to represent a single translation unit.</dl>
 <h3>fedabipkgdiff</h3>
 <p><code>fedabipkgdiff</code> compares the ABI of shared libraries in <i>Fedora</i> packages. It&#8217;s a convenient way to do so without having to manually download packages from the <i>Fedora Build System</i>. </p>
@@ -678,54 +678,54 @@ $</pre>
 <h3>Environment</h3>
 <p>fedabipkgdiff loads two default <i>suppression specifications files</i>, merges their content and use it to filter out ABI change reports that might be considered as false positives to users.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Default system-wide suppression specification file </p>
+<dt>&bull;</dt>
+<dd>Default system-wide suppression specification file </dd>
 <p> It&#8217;s located by the optional environment variable LIBABIGAIL_DEFAULT_SYSTEM_SUPPRESSION_FILE. If that environment variable is not set, then fedabipkgdiff tries to load the suppression file $libdir/libabigail/libabigail-default.abignore. If that file is not present, then no default system-wide suppression specification file is loaded.</p>
-<dt>&bull;</p>
-<dd>Default user suppression specification file. </p>
+<dt>&bull;</dt>
+<dd>Default user suppression specification file. </dd>
 <p> It&#8217;s located by the optional environment LIBABIGAIL_DEFAULT_USER_SUPPRESSION_FILE. If that environment variable is not set, then fedabipkgdiff tries to load the suppression file $HOME/.abignore. If that file is not present, then no default user suppression specification is loaded.</dl>
 <h3>Options</h3>
 <dl>
-<dt>&bull;</p>
-<dd><code>&#8211;help | -h</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;help | -h</code> </dd>
 <p> Display a short help about the command and exit.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;dry-run</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;dry-run</code> </dd>
 <p> Don&#8217;t actually perform the ABI comparison. Details about what is going to be done are emitted on standard output.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;debug</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;debug</code> </dd>
 <p> Emit debugging messages about the execution of the program. Details about each method invocation, including input parameters and returned values, are emitted.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;traceback</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;traceback</code> </dd>
 <p> Show traceback when an exception raised. This is useful for developers of the tool itself to know more exceptional errors.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;server</code> &lt;URL&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;server</code> &lt;URL&gt; </dd>
 <p> Specifies the URL of the <i>Koji</i> XMLRPC service the tool talks to. The default value of this option is <i><a rel="nofollow" href="http://koji.fedoraproject.org/kojihub">http://koji.fedoraproject.org/kojihub</a></i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;topdir</code> &lt;URL&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;topdir</code> &lt;URL&gt; </dd>
 <p> Specifies the URL of the package store the tool downloads RPMs from. The default value of this option is <i><a rel="nofollow" href="https://kojipkgs.fedoraproject.org">https://kojipkgs.fedoraproject.org</a></i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;from</code> &lt;distro&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;from</code> &lt;distro&gt; </dd>
 <p> Specifies the name of the baseline <i>Fedora</i> distribution in which to find the first <i>build</i> that is used for comparison. The <code>distro</code> value can be any valid value of the RPM macro <code>%{?dist}</code> for <i>Fedora</i>, for example, <code>fc4</code>, <code>fc23</code>, <code>fc25</code>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;to</code> &lt;distro&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;to</code> &lt;distro&gt; </dd>
 <p> Specifies the name of the <i>Fedora</i> distribution in which to find the <i>build</i> that is compared against the baseline specified by option <code>&#8211;from</code>. The <code>distro</code> value could be any valid value of the RPM macro <code>%{?dist}</code> for <i>Fedora</i>, for example, <code>fc4</code>, <code>fc23</code>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;all-subpackages</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;all-subpackages</code> </dd>
 <p> Instructs the tool to also compare the ABI of the binaries in the sub-packages of the packages specified.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;dso-only</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;dso-only</code> </dd>
 <p> Compares the ABI of shared libraries only. If this option is not provided, the tool compares the ABI of all ELF binaries found in the packages.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-default-suppression</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-default-suppression</code> </dd>
 <p> Do not load the <i>default suppression specification files</i>.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;no-devel-pkg</code> </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;no-devel-pkg</code> </dd>
 <p> Do not take associated development packages into account when performing the ABI comparison. This makes the tool report ABI changes about all types that are reachable from functions and global variables which symbols are defined and publicly exported in the binaries being compared, even if those types are not defined in public header files available from the packages being compared.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;show-identical-binaries</code> Show the names of the all binaries compared, including the binaries whose ABI compare equal. By default, when this option is not provided, only binaries with ABI changes are mentionned in the output.</p>
-<dt>&bull;</p>
-<dd><code>&#8211;abipkgdiff</code> &lt;path/to/abipkgdiff&gt; </p>
+<dt>&bull;</dt>
+<dd><code>&#8211;show-identical-binaries</code> Show the names of the all binaries compared, including the binaries whose ABI compare equal. By default, when this option is not provided, only binaries with ABI changes are mentionned in the output.</dd>
+<dt>&bull;</dt>
+<dd><code>&#8211;abipkgdiff</code> &lt;path/to/abipkgdiff&gt; </dd>
 <p> Specify an alternative abipkgdiff instead of the one installed in system. </p>
 <p> Note that a build is a specific version and release of an RPM package. It&#8217;s specified by its the package name, version and release. These are specified by the <i>Fedora Naming Guidelines</i></dl>
 <h3>Return value</h3>
@@ -734,22 +734,22 @@ $</pre>
 <h3>Use cases</h3>
 <p>Below are some usage examples currently supported by <code>fedabipkgdiff</code>.</p>
 <dl>
-<dt>1.</p>
-<dd>Compare the ABI of binaries in a local package against the ABI of the latest stable package in <i>Fedora</i> 23. </p>
+<dt>1.</dt>
+<dd>Compare the ABI of binaries in a local package against the ABI of the latest stable package in <i>Fedora</i> 23. </dd>
 <p> Suppose you have built just built the <code>httpd</code> package and you want to compare the ABI of the binaries in this locally built package against the ABI of the binaries in the latest <code>http</code> build from <i>Fedora</i> 23. The command line invocation would be: </p>
 <pre>$ fedabipkgdiff --from fc23 ./httpd-2.4.18-2.fc24.x86_64.rpm</pre>
-<dt>2.</p>
-<dd>Compare the ABI of binaries in the latest build of the <code>httpd</code> package in <code>Fedora 23</code> against the ABI of the binaries in the latest build of the same package in 24. </p>
+<dt>2.</dt>
+<dd>Compare the ABI of binaries in the latest build of the <code>httpd</code> package in <code>Fedora 23</code> against the ABI of the binaries in the latest build of the same package in 24. </dd>
 <p> In this case, note that neither of the two packages are available locally. The tool is going to talk with the <i>Fedora Build System</i>, determine what the versions and releases of the latest packages are, download them and perform the comparison locally. The command line invocation would be: </p>
 <pre>$ fedabipkgdiff --from fc23 --to fc24 httpd</pre>
-<dt>3.</p>
-<dd>Compare the ABI of binaries of two builds of the <code>httpd</code> package, designated their versions and releases. </p>
+<dt>3.</dt>
+<dd>Compare the ABI of binaries of two builds of the <code>httpd</code> package, designated their versions and releases. </dd>
 <p> If we want to do perform the ABI comparison for all the processor architectures supported by <i>Fedora</i> the command line invocation would be: </p>
 <pre>$ fedabipkgdiff httpd-2.8.14.fc23 httpd-2.8.14.fc24</pre>
 <p>But if we want to perform the ABI comparison for a specific architecture, say, x86_64, then the command line invocation would be: </p>
 <pre>$ fedabipkgdiff httpd-2.8.14.fc23.x86_64 httpd-2.8.14.fc24.x86_64</pre>
-<dt>4.</p>
-<dd>If the use wants to also compare the sub-packages of a given package, she can use the &#8211;all-subpackages option. The first command of the previous example would thus look like: </p>
+<dt>4.</dt>
+<dd>If the use wants to also compare the sub-packages of a given package, she can use the &#8211;all-subpackages option. The first command of the previous example would thus look like: </dd>
 <pre>$ fedabipkgdiff --all-subpackages httpd-2.8.14.fc23 httpd-2.8.14.fc24</pre>
 </dl>
 <h2>Concepts</h2>
@@ -811,16 +811,16 @@ property2_name = property2_value</pre>
 <p> Note that for the <code>[suppress_file]</code> directive to work, at least one of the following properties must be provided: <code>file_name_regexp</code>, <code>file_name_not_regexp</code>. </p>
 <p> The potential properties of this sections are listed below:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>file_name_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_regexp</code> </dd>
 <p> Usage: <code>file_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Prevents the system from loading the file which name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>file_name_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_not_regexp</code> </dd>
 <p> Usage: <code>file_name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Prevents the system from loading the file which name does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Define a label for the section. A label is just an informative string that might be used by the tool to refer to a type suppression in error messages.</dl>
 <h3><code>[suppress_type]</code></h3>
 <p>This directive suppresses report messages about a type change. </p>
@@ -828,74 +828,74 @@ property2_name = property2_value</pre>
 <p> If none of the following properties are provided, then the <code>[suppress_type]</code> directive is simply ignored. </p>
 <p> The potential properties of this sections are listed below:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>file_name_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_regexp</code> </dd>
 <p> Usage: <code>file_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>file_name_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_not_regexp</code> </dd>
 <p> Usage: <code>file_name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_regexp</code> </dd>
 <p> Usage: <code>soname_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_not_regexp</code> </dd>
 <p> Usage: <code>soname_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving types whose name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;a-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;a-value&gt; </dd>
 <p> Suppresses change reports involving types whose name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>type_kind</code> Usage:</p>
-<dt><code>type_kind</code> <code>=</code> <code>class</code> | <code>struct</code> | <code>union</code> | <code>enum</code> |</p>
-<dd><code>array</code> | <code>typedef</code> | <code>builtin</code> </p>
+<dt>&bull;</dt>
+<dd><code>type_kind</code> Usage:</dd>
+<dt><code>type_kind</code> <code>=</code> <code>class</code> | <code>struct</code> | <code>union</code> | <code>enum</code> |</dt>
+<dd><code>array</code> | <code>typedef</code> | <code>builtin</code> </dd>
 <p> Suppresses change reports involving a certain kind of type. The kind of type to suppress change reports for is specified by the possible values listed above:</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
-<dt><code>class</code>: suppress change reports for class types. Note that</p>
-<dd>even if class types don&#8217;t exist for C, this value still triggers the suppression of change reports for struct types, in C. In C++ however, it should do what it suggests.</p>
-<dt>&bull;</p>
+</dd><dt><code>class</code>: suppress change reports for class types. Note that</dt>
+<dd>even if class types don&#8217;t exist for C, this value still triggers the suppression of change reports for struct types, in C. In C++ however, it should do what it suggests.</dd>
+<dt>&bull;</dt>
 <dd>
-<dt><code>struct</code>: suppress change reports for struct types in C or C++.</p>
-<dd>Note that the value <code>class</code> above is a super-set of this one.</p>
-<dt>&bull;</p>
-<dd><code>union</code>: suppress change reports for union types.</p>
-<dt>&bull;</p>
-<dd><code>enum</code>: suppress change reports for enum types.</p>
-<dt>&bull;</p>
-<dd><code>array</code>: suppress change reports for array types.</p>
-<dt>&bull;</p>
-<dd><code>typedef</code>: suppress change reports for typedef types.</p>
-<dt>&bull;</p>
-<dd><code>builtin</code>: suppress change reports for built-in (or native) types. Example of built-in types are char, int, unsigned int, etc.</p>
-<dt>&bull;</p>
-<dd><code>source_location_not_in</code> Usage: <code>source_location_not_in</code> <code>=</code> &lt;<code>list-of-file-paths</code>&gt; </p>
+</dd><dt><code>struct</code>: suppress change reports for struct types in C or C++.</dt>
+<dd>Note that the value <code>class</code> above is a super-set of this one.</dd>
+<dt>&bull;</dt>
+<dd><code>union</code>: suppress change reports for union types.</dd>
+<dt>&bull;</dt>
+<dd><code>enum</code>: suppress change reports for enum types.</dd>
+<dt>&bull;</dt>
+<dd><code>array</code>: suppress change reports for array types.</dd>
+<dt>&bull;</dt>
+<dd><code>typedef</code>: suppress change reports for typedef types.</dd>
+<dt>&bull;</dt>
+<dd><code>builtin</code>: suppress change reports for built-in (or native) types. Example of built-in types are char, int, unsigned int, etc.</dd>
+<dt>&bull;</dt>
+<dd><code>source_location_not_in</code> Usage: <code>source_location_not_in</code> <code>=</code> &lt;<code>list-of-file-paths</code>&gt; </dd>
 <p> Suppresses change reports involving a type which is defined in a file which path is <i>NOT</i> listed in the value <code>list-of-file-paths</code>. Note that the value is a comma-separated list of file paths e.g, this property </p>
 <pre>source_location_not_in = libabigail/abg-ir.h, libabigail/abg-dwarf-reader.h</pre>
 <p>suppresses change reports about all the types that are <i>NOT</i> defined in header files whose path end up with the strings libabigail/abg-ir.h or libabigail/abg-dwarf-reader.h.</p>
-<dt>&bull;</p>
-<dd><code>source_location_not_regexp</code> Usage: <code>source_location_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>source_location_not_regexp</code> Usage: <code>source_location_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving a type which is defined in a file which path does <i>NOT</i> match the <i>regular expression</i> provided as value of the property. E.g, this property </p>
 <pre>source_location_not_regexp = libabigail/abg-.*\.h</pre>
 <p>suppresses change reports involving all the types that are <i>NOT</i> defined in header files whose path match the regular expression provided a value of the property.</p>
-<dt>&bull;</p>
-<dd><code>has_data_member_inserted_at</code> Usage: <code>has_data_member_inserted_at</code> <code>=</code> &lt;<code>offset-in-bit</code>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>has_data_member_inserted_at</code> Usage: <code>has_data_member_inserted_at</code> <code>=</code> &lt;<code>offset-in-bit</code>&gt; </dd>
 <p> Suppresses change reports involving a type which has at least one data member inserted at an offset specified by the property value <code>offset-in-bit</code>. The value <code>offset-in-bit</code> is either:</p>
-<dt>&bull;</p>
-<dd>an integer value, expressed in bits, which denotes the offset of the insertion point of the data member, starting from the beginning of the relevant structure or class.</p>
-<dt>&bull;</p>
-<dd>the keyword <code>end</code> which is a named constant which value equals the offset of the end of the of the structure or class.</p>
-<dt>&bull;</p>
-<dd>the function call expression <code>offset_of(data-member-name)</code> where <i>data-member-name</i> is the name of a given data member of the relevant structure or class. The value of this function call expression is an integer that represents the offset of the data member denoted by <code>data-member-name</code>.</p>
-<dt>&bull;</p>
-<dd>the function call expression <code>offset_after(data-member-name)</code> where <i>data-member-name</i> is the name of a given data member of the relevant structure or class. The value of this function call expression is an integer that represents the offset of the point that comes right after the region occupied by the data member denoted by <code>data-member-name</code>.</p>
-<dt>&bull;</p>
-<dd><code>has_data_member_inserted_between</code> Usage: <code>has_data_member_inserted_between</code> <code>=</code> {&lt;<code>range-begin</code>&gt;, &lt;<code>range-end</code>&gt;} </p>
+<dt>&bull;</dt>
+<dd>an integer value, expressed in bits, which denotes the offset of the insertion point of the data member, starting from the beginning of the relevant structure or class.</dd>
+<dt>&bull;</dt>
+<dd>the keyword <code>end</code> which is a named constant which value equals the offset of the end of the of the structure or class.</dd>
+<dt>&bull;</dt>
+<dd>the function call expression <code>offset_of(data-member-name)</code> where <i>data-member-name</i> is the name of a given data member of the relevant structure or class. The value of this function call expression is an integer that represents the offset of the data member denoted by <code>data-member-name</code>.</dd>
+<dt>&bull;</dt>
+<dd>the function call expression <code>offset_after(data-member-name)</code> where <i>data-member-name</i> is the name of a given data member of the relevant structure or class. The value of this function call expression is an integer that represents the offset of the point that comes right after the region occupied by the data member denoted by <code>data-member-name</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>has_data_member_inserted_between</code> Usage: <code>has_data_member_inserted_between</code> <code>=</code> {&lt;<code>range-begin</code>&gt;, &lt;<code>range-end</code>&gt;} </dd>
 <p> Suppresses change reports involving a type which has at least one data mber inserted at an offset that is comprised in the range between range-begin&#8220; and <code>range-end</code>. Please note that each of the lues <code>range-begin</code> and <code>range-end</code> can be of the same form as the <i>has_data_member_inserted_at</i> property above. </p>
 <p> Usage examples of this properties are: </p>
 <pre>has_data_member_inserted_between = {8, 64}</pre>
@@ -903,8 +903,8 @@ property2_name = property2_value</pre>
 <pre>has_data_member_inserted_between = {16, end}</pre>
 <p>or: </p>
 <pre>has_data_member_inserted_between = {offset_after(member1), end}</pre>
-<dt>&bull;</p>
-<dd><code>has_data_members_inserted_between</code> Usage: <code>has_data_members_inserted_between</code> <code>=</code> {&lt;sequence-of-ranges&gt;} </p>
+<dt>&bull;</dt>
+<dd><code>has_data_members_inserted_between</code> Usage: <code>has_data_members_inserted_between</code> <code>=</code> {&lt;sequence-of-ranges&gt;} </dd>
 <p> Suppresses change reports involving a type which has multiple data member inserted in various offset ranges. A usage example of this property is, for instance: </p>
 <pre>has_data_members_inserted_between = &#123;&#123;8, 31}, {72, 95}}</pre>
 <p>This usage example suppresses change reports involving a type which has data members inserted in bit offset ranges [8 31] and [72 95]. The length of the sequence of ranges or this <code>has_data_members_inserted_between</code> is not bounded; it can be as long as the system can cope with. The values of the boundaries of the ranges are of the same kind as for the <i>has_data_member_inserted_at</i> property above. </p>
@@ -914,30 +914,30 @@ property2_name = property2_value</pre>
  {offset_after(member0), offset_of(member1)},
  {72, end}
  }</pre>
-<dt>&bull;</p>
-<dd><code>accessed_through</code> Usage: <code>accessed_through</code> <code>=</code> &lt;some-predefined-values&gt; </p>
+<dt>&bull;</dt>
+<dd><code>accessed_through</code> Usage: <code>accessed_through</code> <code>=</code> &lt;some-predefined-values&gt; </dd>
 <p> Suppress change reports involving a type which is referred to either directly or through a pointer or a reference. The potential values of this property are the predefined keywords below:</p>
-<dt>&bull;</p>
-<dd><code>direct</code> </p>
+<dt>&bull;</dt>
+<dd><code>direct</code> </dd>
 <p> So if the <code>[suppress_type]</code> contains the property description: </p>
 <pre>accessed_through = direct</pre>
 <p>then changes about a type that is referred-to directly (i.e, not through a pointer or a reference) are going to be suppressed.</p>
-<dt>&bull;</p>
-<dd><code>pointer</code> </p>
+<dt>&bull;</dt>
+<dd><code>pointer</code> </dd>
 <p> If the <code>accessed_through</code> property is set to the value <code>pointer</code> then changes about a type that is referred-to through a pointer are going to be suppressed.</p>
-<dt>&bull;</p>
-<dd><code>reference</code> </p>
+<dt>&bull;</dt>
+<dd><code>reference</code> </dd>
 <p> If the <code>accessed_through</code> property is set to the value <code>reference</code> then changes about a type that is referred-to through a reference are going to be suppressed.</p>
-<dt>&bull;</p>
-<dd><code>reference-or-pointer</code> </p>
+<dt>&bull;</dt>
+<dd><code>reference-or-pointer</code> </dd>
 <p> If the <code>accessed_through</code> property is set to the value <code>reference-or-pointer</code> then changes about a type that is referred-to through either a reference or a pointer are going to be suppressed. </p>
 <p> For an extensive example of how to use this property, please check out the example below about <i>suppressing change reports about types accessed either directly or through pointers</i>.</p>
-<dt>&bull;</p>
-<dd><code>drop</code> Usage: <code>drop</code> <code>=</code> yes | no </p>
+<dt>&bull;</dt>
+<dd><code>drop</code> Usage: <code>drop</code> <code>=</code> yes | no </dd>
 <p> If a type is matched by a suppression specification which contains the &quot;drop&quot; property set to &quot;yes&quot; (or to &quot;true&quot;) then the type is not even going to be represented in the internal representation of the ABI being analyzed. This property makes its enclosing suppression specification to be applied in the <i>early suppression specification mode</i>. The net effect is that it potentially reduces the memory used to represent the ABI being analyzed. </p>
 <p> Please note that for this property to be effective, the enclosing suppression specification must have at least one of the following properties specified: <code>name_regexp</code>, <code>name</code>, <code>name_regexp</code>, <code>source_location_not_in</code> or <code>source_location_not_regexp</code>.</p>
-<dt>&bull;</p>
-<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Define a label for the section. A label is just an informative string that might be used by a tool to refer to a type suppression in error messages.</dl>
 <h3><code>[suppress_function]</code></h3>
 <p>This directive suppresses report messages about changes on a set of functions. </p>
@@ -946,55 +946,55 @@ property2_name = property2_value</pre>
 <p> If none of the following properties are provided, then the <code>[suppress_function]</code> directive is simply ignored. </p>
 <p> The potential properties of this sections are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> This property is the same as the <i>label property</i> defined above.</p>
-<dt>&bull;</p>
-<dd><code>file_name_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_regexp</code> </dd>
 <p> Usage: </p>
 <p> <code>file_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>file_name_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_not_regexp</code> </dd>
 <p> Usage: <code>file_name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_regexp</code> </dd>
 <p> Usage: <code>soname_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_not_regexp</code> </dd>
 <p> Usage: <code>soname_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving functions whose name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving functions whose name matches the regular expression specified as value of this property. </p>
 <p> Let&#8217;s consider the case of functions that have several symbol names. This happens when the underlying symbol for the function has aliases. Each symbol name is actually one alias name. </p>
 <p> In this case, if the regular expression matches the name of at least one of the aliases names, then it must match the names of all of the aliases of the function for the directive to actually suppress the diff reports for said function.</p>
-<dt>&bull;</p>
-<dd><code>name_not_regexp</code> Usage: <code>name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name_not_regexp</code> Usage: <code>name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving functions whose names don&#8217;t match the regular expression specified as value of this property. </p>
 <p> The rules for functions that have several symbol names are the same rules as for the <code>name_regexp</code> property above.</p>
-<dt>&bull;</p>
-<dd><code>change_kind</code> Usage: <code>change_kind</code> <code>=</code> &lt;predefined-possible-values&gt; </p>
+<dt>&bull;</dt>
+<dd><code>change_kind</code> Usage: <code>change_kind</code> <code>=</code> &lt;predefined-possible-values&gt; </dd>
 <p> Specifies the kind of changes this suppression specification should apply to. The possible values of this property as well as their meaning are listed below:</p>
-<dt>&bull;</p>
-<dd><code>function-subtype-change</code> </p>
+<dt>&bull;</dt>
+<dd><code>function-subtype-change</code> </dd>
 <p> This suppression specification applies to functions that which have at least one sub-type that has changed.</p>
-<dt>&bull;</p>
-<dd><code>added-function</code> </p>
+<dt>&bull;</dt>
+<dd><code>added-function</code> </dd>
 <p> This suppression specification applies to functions that have been added to the binary.</p>
-<dt>&bull;</p>
-<dd><code>deleted-function</code> </p>
+<dt>&bull;</dt>
+<dd><code>deleted-function</code> </dd>
 <p> This suppression specification applies to functions that have been removed from the binary.</p>
-<dt>&bull;</p>
-<dd><code>all</code> </p>
+<dt>&bull;</dt>
+<dd><code>all</code> </dd>
 <p> This suppression specification applies to functions that have all of the changes above. Note that not providing the <code>change_kind</code> property at all is equivalent to setting it to the value <code>all</code>.</p>
-<dt>&bull;</p>
-<dd><code>parameter</code> Usage: <code>parameter</code> <code>=</code> &lt;function-parameter-specification&gt; </p>
+<dt>&bull;</dt>
+<dd><code>parameter</code> Usage: <code>parameter</code> <code>=</code> &lt;function-parameter-specification&gt; </dd>
 <p> Suppresses change reports involving functions whose parameters match the parameter specification indicated as value of this property. </p>
 <p> The format of the function parameter specification is: </p>
 <p> <code>&#8216;</code> <code>&lt;parameter-index&gt;</code> <code>&lt;space&gt;</code> <code>&lt;type-name-or-regular-expression&gt;</code> </p>
@@ -1008,28 +1008,28 @@ property2_name = property2_value</pre>
 <p>Which means, the parameter at index 4, whose type name is <code>unsigned char*</code>. </p>
 <pre>'2 /^foo.*&amp;/</pre>
 <p>Which means, the parameter at index 2, whose type name starts with the string &quot;foo&quot; and ends with an &#8216;&amp;&#8217;. In other words, this is the third parameter and it&#8217;s a reference on a type that starts with the string &quot;foo&quot;.</p>
-<dt>&bull;</p>
-<dd><code>return_type_name</code> Usage: <code>return_type_name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>return_type_name</code> Usage: <code>return_type_name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving functions whose return type name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>return_type_regexp</code> Usage: <code>return_type_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>return_type_regexp</code> Usage: <code>return_type_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving functions whose return type name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>symbol_name</code> Usage: <code>symbol_name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_name</code> Usage: <code>symbol_name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving functions whose symbol name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>symbol_name_regexp</code> Usage: <code>symbol_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_name_regexp</code> Usage: <code>symbol_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving functions whose symbol name matches the regular expression specified as value of this property. </p>
 <p> Let&#8217;s consider the case of functions that have several symbol names. This happens when the underlying symbol for the function has aliases. Each symbol name is actually one alias name. </p>
 <p> In this case, the regular expression must match the names of all of the aliases of the function for the directive to actually suppress the diff reports for said function.</p>
-<dt>&bull;</p>
-<dd><code>symbol_version</code> Usage: <code>symbol_version</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_version</code> Usage: <code>symbol_version</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving functions whose symbol version equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>symbol_version_regexp</code> Usage: <code>symbol_version_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_version_regexp</code> Usage: <code>symbol_version_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving functions whose symbol version matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>drop</code> Usage: <code>drop</code> <code>=</code> yes | no </p>
+<dt>&bull;</dt>
+<dd><code>drop</code> Usage: <code>drop</code> <code>=</code> yes | no </dd>
 <p> If a function is matched by a suppression specification which contains the &quot;drop&quot; property set to &quot;yes&quot; (or to &quot;true&quot;) then the function is not even going to be represented in the internal representation of the ABI being analyzed. This property makes its enclosing suppression specification to be applied in the <i>early suppression specification mode</i>. The net effect is that it potentially reduces the memory used to represent the ABI being analyzed. </p>
 <p> Please note that for this property to be effective, the enclosing suppression specification must have at least one of the following properties specified: <code>name_regexp</code>, <code>name</code>, <code>name_regexp</code>, <code>source_location_not_in</code> or <code>source_location_not_regexp</code>.</dl>
 <h3><code>[suppress_variable]</code></h3>
@@ -1038,59 +1038,59 @@ property2_name = property2_value</pre>
 <p> If none of the following properties are provided, then the <code>[suppres_variable]</code> directive is simply ignored. </p>
 <p> The potential properties of this sections are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>label</code> Usage: <code>label</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> This property is the same as the <i>label property</i> defined above.</p>
-<dt>&bull;</p>
-<dd><code>file_name_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_regexp</code> </dd>
 <p> Usage: </p>
 <p> <code>file_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>file_name_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>file_name_not_regexp</code> </dd>
 <p> Usage: <code>file_name_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a binary file which name does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_regexp</code> </dd>
 <p> Usage: <code>soname_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>soname_not_regexp</code> </p>
+<dt>&bull;</dt>
+<dd><code>soname_not_regexp</code> </dd>
 <p> Usage: <code>soname_not_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
 <p> Suppresses change reports about ABI artifacts that are defined in a shared library which SONAME property does not match the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name</code> Usage: <code>name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving variables whose name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>name_regexp</code> Usage: <code>name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving variables whose name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>change_kind</code> Usage: <code>change_kind</code> <code>=</code> &lt;predefined-possible-values&gt; </p>
+<dt>&bull;</dt>
+<dd><code>change_kind</code> Usage: <code>change_kind</code> <code>=</code> &lt;predefined-possible-values&gt; </dd>
 <p> Specifies the kind of changes this suppression specification should apply to. The possible values of this property as well as their meaning are the same as when it&#8217;s <i>used in the [suppress_function] section</i>.</p>
-<dt>&bull;</p>
-<dd><code>symbol_name</code> Usage: <code>symbol_name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_name</code> Usage: <code>symbol_name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving variables whose symbol name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd>symbol_name_regexp Usage: <code>symbol_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd>symbol_name_regexp Usage: <code>symbol_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving variables whose symbol name matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>symbol_version</code> Usage: <code>symbol_version</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_version</code> Usage: <code>symbol_version</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving variables whose symbol version equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>symbol_version_regexp</code> Usage: <code>symbol_version_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>symbol_version_regexp</code> Usage: <code>symbol_version_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving variables whose symbol version matches the regular expression specified as value of this property.</p>
-<dt>&bull;</p>
-<dd><code>type_name</code> Usage: <code>type_name</code> <code>=</code> &lt;some-value&gt; </p>
+<dt>&bull;</dt>
+<dd><code>type_name</code> Usage: <code>type_name</code> <code>=</code> &lt;some-value&gt; </dd>
 <p> Suppresses change reports involving variables whose type name equals the value of this property.</p>
-<dt>&bull;</p>
-<dd><code>type_name_regexp</code> Usage: <code>type_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </p>
+<dt>&bull;</dt>
+<dd><code>type_name_regexp</code> Usage: <code>type_name_regexp</code> <code>=</code> &lt;<i>regular-expression</i>&gt; </dd>
 <p> Suppresses change reports involving variables whose type name matches the regular expression specified as value of this property.</dl>
 <h3>Comments</h3>
 <p><code>;</code> or <code>#</code> ASCII character at the beginning of a line indicates a comment. Comment lines are ignored.</p>
 <h3>Code examples</h3>
 <dl>
-<dt>1.</p>
-<dd>Suppressing change reports about types. </p>
+<dt>1.</dt>
+<dd>Suppressing change reports about types. </dd>
 <p> Suppose we have a library named <code>libtest1-v0.so</code> which contains this very useful code: </p>
 <pre>$ cat -n test1-v0.cc
  1 // A forward declaration for a type considered to be opaque to

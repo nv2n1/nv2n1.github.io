@@ -14,14 +14,14 @@ description: "//usr/$LIB/security/pam_krb5/pam_krb5_cchelper – Credential cach
 <p>The pam_krb5.so module uses pam_krb5_cchelper to create, update, and remove credential caches. </p>
 <h2>Arguments</h2>
 <dl>
-<dt>-c|-u|-d</p>
-<dd>A flag indicating whether the helper is expected to create, update, or destroy a ccache. When creating a ccache, the <i>ccname</i> argument should be a name or a pattern ending in XXXXXX. When updating or deleting a ccache, the <i>ccname</i> argument should be the name of an extant ccache. </p>
-<dt>ccname</p>
-<dd>A credential cache name or name pattern of the form <i>TYPE</i>:<i>/tmp/foo or TYPE</i>:<i>/tmp/fooXXXXXX</i>. </p>
-<dt>uid</p>
-<dd>An optional numeric UID which the helper will attempt to switch to before creating a ccache. The helper continues in its task if the attempt fails. </p>
-<dt>gid</p>
-<dd>An optional numeric GID which the helper will attempt to switch to before creating a ccache. The helper continues in its task if the attempt fails. </p>
+<dt>-c|-u|-d</dt>
+<dd>A flag indicating whether the helper is expected to create, update, or destroy a ccache. When creating a ccache, the <i>ccname</i> argument should be a name or a pattern ending in XXXXXX. When updating or deleting a ccache, the <i>ccname</i> argument should be the name of an extant ccache. </dd>
+<dt>ccname</dt>
+<dd>A credential cache name or name pattern of the form <i>TYPE</i>:<i>/tmp/foo or TYPE</i>:<i>/tmp/fooXXXXXX</i>. </dd>
+<dt>uid</dt>
+<dd>An optional numeric UID which the helper will attempt to switch to before creating a ccache. The helper continues in its task if the attempt fails. </dd>
+<dt>gid</dt>
+<dd>An optional numeric GID which the helper will attempt to switch to before creating a ccache. The helper continues in its task if the attempt fails. </dd>
 </dl>
 <h2>Operation</h2>
 <p>The helper will read contents from its standard input.<br />

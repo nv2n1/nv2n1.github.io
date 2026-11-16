@@ -11,7 +11,6 @@ description: "sc::PthreadThreadGrp –"
 <p> The <code>PthreadThreadGrp</code> class privides a concrete thread group appropriate for an environment where pthreads is available.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thpthd.h&gt;</code></pre>
 <p> Inherits <code>sc::ThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>

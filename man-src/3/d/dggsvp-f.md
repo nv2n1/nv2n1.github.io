@@ -18,7 +18,7 @@ description: "dggsvp.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGSVP computes orthogonal matrices U, V and Q such that
                     N-K-L  K    L
@@ -39,11 +39,11 @@ description: "dggsvp.f –"
  Generalized Singular Value Decomposition (GSVD), see subroutine
  DGGSVD.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>JOBU</i> </p>
+</dt><dd> <i>JOBU</i> </dd>
 <pre>
           JOBU is CHARACTER*1
           = 'U':  Orthogonal matrix U is computed;
@@ -184,18 +184,18 @@ description: "dggsvp.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dt>
-<dd> The subroutine uses LAPACK subroutine DGEQPF for the QR factorization with column pivoting to detect the effective numerical rank of the a matrix. It may be replaced by a better rank determination strategy.</dl>
+</dt><dd> The subroutine uses LAPACK subroutine DGEQPF for the QR factorization with column pivoting to detect the effective numerical rank of the a matrix. It may be replaced by a better rank determination strategy.</dd></dl>
 <p> Definition at line 253 of file dggsvp.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

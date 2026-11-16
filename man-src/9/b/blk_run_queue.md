@@ -15,7 +15,7 @@ blk_run_queue - run a single device queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>The queue to run</dl>
+<dl><dd></dd><dd>The queue to run</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,11 +14,11 @@ description: "mongoc_matcher_t – Client-side document matching abstraction"
 <p> It can perform the basics such as $in, $nin, $eq, $neq, $gt, $gte, $lt, and $lte. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_matcher_t</code> does not currently support the full spectrum of query operations that the MongoDB server supports.</dl>
+<dd><code>mongoc_matcher_t</code> does not currently support the full spectrum of query operations that the MongoDB server supports.</dd></dl>
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dl>
+<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dd></dl>
 <h2>Example</h2>
 <pre>#include &lt;bcon.h&gt;
 #include &lt;bson.h&gt;

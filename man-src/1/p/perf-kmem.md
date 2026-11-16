@@ -17,44 +17,44 @@ perf kmem{record | stat}[&lt;options&gt;]
 <p> There are two variants of perf kmem: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kmem record &lt;command&gt;' to record the kmem events
 of an arbitrary workload.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 'perf kmem stat' to report kernel memory statistics.
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -i &lt;file&gt;, &#8211;input=&lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Select the input file (default: perf.data unless stdin is a fifo)</dl>
+</dt><dd> Select the input file (default: perf.data unless stdin is a fifo)</dd></dl>
 <p> &#8211;caller</p>
 <dl>
 <dt>
-<dd> Show per-callsite statistics</dl>
+</dt><dd> Show per-callsite statistics</dd></dl>
 <p> &#8211;alloc</p>
 <dl>
 <dt>
-<dd> Show per-allocation statistics</dl>
+</dt><dd> Show per-allocation statistics</dd></dl>
 <p> -s &lt;key[,key2&#8230;]&gt;, &#8211;sort=&lt;key[,key2&#8230;]&gt;</p>
 <dl>
 <dt>
-<dd> Sort the output (default: frag,hit,bytes)</dl>
+</dt><dd> Sort the output (default: frag,hit,bytes)</dd></dl>
 <p> -l &lt;num&gt;, &#8211;line=&lt;num&gt;</p>
 <dl>
 <dt>
-<dd> Print n lines only</dl>
+</dt><dd> Print n lines only</dd></dl>
 <p> &#8211;raw-ip</p>
 <dl>
 <dt>
-<dd> Print raw ip instead of symbol</dl>
+</dt><dd> Print raw ip instead of symbol</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1) </p>
 <h2>Index</h2>

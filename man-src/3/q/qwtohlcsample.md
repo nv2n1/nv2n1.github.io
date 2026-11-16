@@ -32,7 +32,7 @@ description: "QwtOHLCSample –"
 <p> In financial charts the movement of a price in a time interval is often represented by the opening/closing prices and the lowest/highest prices in this interval. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtTradingChartData</code></dl>
+<dd><code>QwtTradingChartData</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtOHLCSample::QwtOHLCSample (doublet = 0.0, doubleo = 0.0, doubleh = 0.0, doublel = 0.0, doublec = 0.0) [inline]</h3>
 <p>Constructor </p>
@@ -42,28 +42,28 @@ description: "QwtOHLCSample –"
  <i>o</i> Open value<br />
  <i>h</i> High value<br />
  <i>l</i> Low value<br />
- <i>c</i> Close value</dl>
+ <i>c</i> Close value</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtInterval</code> QwtOHLCSample::boundingInterval () const [inline]</h3>
 <p>Calculate the bounding interval of the OHLC values. For valid samples the limits of this interval are always low/high. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding interval</dl>
+<dd>Bounding interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isValid()</code></dl>
+<dd><code>isValid()</code></dd></dl>
 <h3>bool QwtOHLCSample::isValid () const [inline]</h3>
 <p>Check if a sample is valid. A sample is valid, when all of the following checks are true: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>low &lt;= high</p>
-<dt>&bull;</p>
-<dd>low &lt;= open &lt;= high</p>
-<dt>&bull;</p>
-<dd>low &lt;= close &lt;= high</dl>
+<dt>&bull;</dt>
+<dd>low &lt;= high</dd>
+<dt>&bull;</dt>
+<dd>low &lt;= open &lt;= high</dd>
+<dt>&bull;</dt>
+<dd>low &lt;= close &lt;= high</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the sample is valid</dl>
+<dd>True, when the sample is valid</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>double QwtOHLCSample::time</h3>
 <p>Time of the sample, usually a number representing a specific interval &#8211; like a day. </p>

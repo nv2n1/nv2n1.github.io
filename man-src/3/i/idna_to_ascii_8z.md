@@ -14,12 +14,12 @@ description: "idna_to_ascii_8z – API function"
 <p> <code>int idna_to_ascii_8z(const char * </code><i>input</i><code>, char ** </code><i>output</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * input</p>
-<dd> zero terminated input UTF-8 string.</p>
-<dt>char ** output</p>
-<dd> pointer to newly allocated output string.</p>
-<dt>int flags</p>
-<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dl>
+<dt>const char * input</dt>
+<dd> zero terminated input UTF-8 string.</dd>
+<dt>char ** output</dt>
+<dd> pointer to newly allocated output string.</dd>
+<dt>int flags</dt>
+<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert UTF-8 domain name to ASCII string. The domain name may contain several labels, separated by dots. The output buffer must be deallocated by the caller.</p>
 <h2>RETURN VALUE</h2>
@@ -33,6 +33,6 @@ description: "idna_to_ascii_8z – API function"
 <p> The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libidn</code></dl>
+</dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

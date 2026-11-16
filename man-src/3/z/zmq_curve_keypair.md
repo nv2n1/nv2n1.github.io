@@ -17,7 +17,7 @@ description: "zmq_curve_keypair – generate a new CURVE keypair"
 <h2>Errors</h2>
 <p><code>ENOTSUP</code></p>
 <dl>
-<dd>The libzmq library was not built with cryptographic support (libsodium).</dl>
+<dd>The libzmq library was not built with cryptographic support (libsodium).</dd></dl>
 <h2>Example</h2>
 <p><code>Generating a new CURVE keypair</code>. </p>
 <pre><code>char public_key[41];

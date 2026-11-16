@@ -10,18 +10,15 @@ description: "poll_joystick – Polls the joystick. Allegro game programming lib
 <p>poll_joystick &#8211; Polls the joystick. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int poll_joystick();</code></pre>
 <h2>Description</h2>
 <p>The joystick handler is not interrupt driven, so you need to call this function every now and again to update the global position values. Example: </p>
 <pre><code>do {
     /* Get joystick input */
     poll_joystick();
-
     /* Process input for the first joystick */
     if (joy[0].button[0].b)
         first_button_pressed();
-
     if (joy[0].button[1].b)
         second_button_pressed();
     ...

@@ -34,37 +34,37 @@ description: "megatools – Mega.co.nz command line tools"
 <h2>Tools Overview</h2>
 <p><code><a href="/docs/linux/man/1-megareg/">megareg</a></code>(1)</p>
 <dl>
-<dd>Register and verify a new mega account</dl>
+<dd>Register and verify a new mega account</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megadf/">megadf</a></code>(1)</p>
 <dl>
-<dd>Show your cloud storage space usage/quota</dl>
+<dd>Show your cloud storage space usage/quota</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megals/">megals</a></code>(1)</p>
 <dl>
-<dd>List all remote files</dl>
+<dd>List all remote files</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megamkdir/">megamkdir</a></code>(1)</p>
 <dl>
-<dd>Create remote directory</dl>
+<dd>Create remote directory</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megarm/">megarm</a></code>(1)</p>
 <dl>
-<dd>Remove remote file or directory</dl>
+<dd>Remove remote file or directory</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megamv/">megamv</a></code>(1)</p>
 <dl>
-<dd>Move and rename remote files</dl>
+<dd>Move and rename remote files</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megaput/">megaput</a></code>(1)</p>
 <dl>
-<dd>Upload individual files</dl>
+<dd>Upload individual files</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megaget/">megaget</a></code>(1)</p>
 <dl>
-<dd>Download individual files</dl>
+<dd>Download individual files</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megadl/">megadl</a></code>(1)</p>
 <dl>
-<dd>Download file from a &quot;public&quot; Mega link (doesn&#8217;t require login)</dl>
+<dd>Download file from a &quot;public&quot; Mega link (doesn&#8217;t require login)</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megasync/">megasync</a></code>(1)</p>
 <dl>
-<dd>Upload or download a directory tree</dl>
+<dd>Upload or download a directory tree</dd></dl>
 <p> <code><a href="/docs/linux/man/1-megafs/">megafs</a></code>(1)</p>
 <dl>
-<dd>Mount remote filesystem locally.</dl>
+<dd>Mount remote filesystem locally.</dd></dl>
 <h2>Configuration Files</h2>
 <p>See <code><a href="/docs/linux/man/5-megarc/">megarc</a></code>(5) for information about mega configuration file. </p>
 <p> Each of the individual tools have help that can be accessed using &#8211;help parameter.</p>
@@ -79,23 +79,23 @@ description: "megatools – Mega.co.nz command line tools"
 <pre>/Root/conflictingfile
 /Root/conflictingfile.7Fdi3ZjC
 /Root/conflictingfile.mEU23aSD</pre>
-</dl>
+</dd></dl>
 <p> You need to be aware of several special folders: </p>
 <p> /Root</p>
 <dl>
-<dd>Writable directory representing the root of the filesystem.</dl>
+<dd>Writable directory representing the root of the filesystem.</dd></dl>
 <p> /Trash</p>
 <dl>
-<dd>Trash directory where Mega.co.nz web client moves deleted files. This directory is not used by megatools when removing files.</dl>
+<dd>Trash directory where Mega.co.nz web client moves deleted files. This directory is not used by megatools when removing files.</dd></dl>
 <p> /Inbox</p>
 <dl>
-<dd>Not sure.</dl>
+<dd>Not sure.</dd></dl>
 <p> /Contacts</p>
 <dl>
-<dd>Directory containing subdirectories representing your contacts list. If you want to add contacts to the list, simply create subdirectory named after the contact you want to add.</dl>
+<dd>Directory containing subdirectories representing your contacts list. If you want to add contacts to the list, simply create subdirectory named after the contact you want to add.</dd></dl>
 <p> /Contacts/&lt;email&gt;</p>
 <dl>
-<dd>Directories representing individual contacts in your contacts list. These directories contain folders that others shared with you. All shared files are read-only, at the moment.</dl>
+<dd>Directories representing individual contacts in your contacts list. These directories contain folders that others shared with you. All shared files are read-only, at the moment.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-megatools/">megatools</a></code>(7), <code><a href="/docs/linux/man/5-megarc/">megarc</a></code>(5), <code><a href="/docs/linux/man/1-megadf/">megadf</a></code>(1), <code><a href="/docs/linux/man/1-megadl/">megadl</a></code>(1), <code><a href="/docs/linux/man/1-megaget/">megaget</a></code>(1), <code><a href="/docs/linux/man/1-megals/">megals</a></code>(1), <code><a href="/docs/linux/man/1-megamkdir/">megamkdir</a></code>(1), <code><a href="/docs/linux/man/1-megaput/">megaput</a></code>(1), <code><a href="/docs/linux/man/1-megareg/">megareg</a></code>(1), <code><a href="/docs/linux/man/1-megarm/">megarm</a></code>(1), <code><a href="/docs/linux/man/1-megamv/">megamv</a></code>(1), <code><a href="/docs/linux/man/1-megasync/">megasync</a></code>(1), <code><a href="/docs/linux/man/1-megafs/">megafs</a></code>(1).</p>
 <h2>Megatools</h2>

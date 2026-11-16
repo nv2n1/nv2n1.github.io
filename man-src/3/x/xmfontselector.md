@@ -123,7 +123,7 @@ The Font Selector widget
 <h2>xlfdString</h2>The label for the Xlfd Fonts radio button. 
 
 <h2>Convenience Routine</h2><h2>
-<dt></h2></dl><h2>XmCreateFontSelector - Widget creation convenience routine</h2><pre><dd>Widget XmCreateFontSelector( 
+<dt></h2></dt></dl><h2>XmCreateFontSelector - Widget creation convenience routine</h2><pre><dd>Widget XmCreateFontSelector( 
  Widget parent, /* Widget id of parent for FontSelector */
  String name, /* Name of the created widget */
  ArgList args, /* argument list */
@@ -281,3 +281,4 @@ The Font Selector widget
  
 
 <h2>Copyright</h2>Copyright (c) 1992 by Integrated Computer Solutions, Inc.
+</dd>

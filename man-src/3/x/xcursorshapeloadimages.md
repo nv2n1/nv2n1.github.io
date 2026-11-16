@@ -65,8 +65,7 @@ XCURSOR - Cursor management library
  If no theme is set, or if no cursor is found for the specified theme, Xcursor checks the &quot;default&quot; theme. 
 
 <h2>Datatypes</h2><dl COMPACT><dt><b>XcursorImage</b>
-<dd>holds a single cursor image in memory. Each pixel in the cursor is a 32-bit value containing ARGB with A in the high byte. 
-
+</dt><dd>holds a single cursor image in memory. Each pixel in the cursor is a 32-bit value containing ARGB with A in the high byte. 
  <pre> typedef struct _XcursorImage {
  XcursorDim size; /* nominal size for matching */
  XcursorDim width; /* actual width */
@@ -74,107 +73,75 @@ XCURSOR - Cursor management library
  XcursorDim xhot; /* hot spot x (must be inside image) */
  XcursorDim yhot; /* hot spot y (must be inside image) */
  XcursorPixel *pixels; /* pointer to pixels */
- } XcursorImage;</pre><dt><b>XcursorImages</b>
-<dd>holds multiple XcursorImage structures. They're all freed when the XcursorImages is freed. 
-
+ } XcursorImage;</pre></dd><dt><b>XcursorImages</b>
+</dt><dd>holds multiple XcursorImage structures. They're all freed when the XcursorImages is freed. 
  <pre> typedef struct _XcursorImages {
  int nimage; /* number of images */
  XcursorImage **images; /* array of XcursorImage pointers */
- } XcursorImages;</pre><dt><b>XcursorCursors</b>
-<dd>Holds multiple Cursor objects. They're all freed when the XcursorCursors is freed. These are reference counted so that multiple XcursorAnimate structures can use the same XcursorCursors. 
-
+ } XcursorImages;</pre></dd><dt><b>XcursorCursors</b>
+</dt><dd>Holds multiple Cursor objects. They're all freed when the XcursorCursors is freed. These are reference counted so that multiple XcursorAnimate structures can use the same XcursorCursors. 
  <pre> typedef struct _XcursorCursors {
  Display *dpy; /* Display holding cursors */
  int ref; /* reference count */
  int ncursor; /* number of cursors */
  Cursor *cursors; /* array of cursors */
- } XcursorCursors;</pre><dt><b>XcursorAnimate</b>
-<dd>References a set of cursors and a sequence within that set. Multiple XcursorAnimate structures may reference the same XcursorCursors; each holds a reference which is removed when the XcursorAnimate is freed. 
-
+ } XcursorCursors;</pre></dd><dt><b>XcursorAnimate</b>
+</dt><dd>References a set of cursors and a sequence within that set. Multiple XcursorAnimate structures may reference the same XcursorCursors; each holds a reference which is removed when the XcursorAnimate is freed. 
  <pre> typedef struct _XcursorAnimate {
  XcursorCursors *cursors; /* list of cursors to use */
  int sequence; /* which cursor is next */
- } XcursorAnimate;</pre><dt><b>XcursorFile</b>
-<dd>Xcursor provides an abstract API for accessing the file data. Xcursor provides a stdio implementation of this abstract API; applications are free to create additional implementations. These functions parallel the stdio functions in return value and expected argument values; the read and write functions flip the arguments around to match the POSIX versions. 
-
+ } XcursorAnimate;</pre></dd><dt><b>XcursorFile</b>
+</dt><dd>Xcursor provides an abstract API for accessing the file data. Xcursor provides a stdio implementation of this abstract API; applications are free to create additional implementations. These functions parallel the stdio functions in return value and expected argument values; the read and write functions flip the arguments around to match the POSIX versions. 
  <pre> typedef struct _XcursorFile {
  void *closure;
  int (*read) (XcursorFile *file, unsigned char *buf, int len);
  int (*write) (XcursorFile *file, unsigned char *buf, int len);
  int (*seek) (XcursorFile *file, long offset, int whence);
- };</pre></dl><h2>Functions</h2><h3>Object Management</h3><dl COMPACT><dt>XcursorImage *XcursorImageCreate (int width, int height)
-<dd><dd>void XcursorImageDestroy (XcursorImage *image) Allocate and free images. On allocation, the hotspot and the pixels are left uninitialized. The size is set to the maximum of width and height. 
-
-<dt>XcursorImages *XcursorImagesCreate (int size)
-<dd><dd>void XcursorImagesDestroy (XcursorImages *images) Allocate and free arrays to hold multiple cursor images. On allocation, nimage is set to zero. 
-
-<dt>XcursorCursors *XcursorCursorsCreate (Display *dpy, int size)
-<dd><dd>void XcursorCursorsDestroy (XcursorCursors *cursors) Allocate and free arrays to hold multiple cursors. On allocation, ncursor is set to zero, ref is set to one. 
-
-</dl><h3>Reading and writing images.</h3><dl COMPACT><dt>XcursorImage *XcursorXcFileLoadImage (XcursorFile *file, int size)
-<dd><dd>XcursorImages *XcursorXcFileLoadImages (XcursorFile *file, int size) 
-
-<dd>XcursorImages *XcursorXcFileLoadAllImages (XcursorFile *file) 
-
-<dd>XcursorBool XcursorXcFileLoad (XcursorFile *file, XcursorComments **commentsp, XcursorImages **imagesp) 
-
-<dd>XcursorBool XcursorXcFileSave (XcursorFile *file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from an XcursorFile handle. After reading, the file pointer will be left at some random place in the file. 
-
-<dt>XcursorImage *XcursorFileLoadImage (FILE *file, int size)
-<dd><dd>XcursorImages *XcursorFileLoadImages (FILE *file, int size) 
-
-<dd>XcursorImages *XcursorFileLoadAllImages (FILE *file) 
-
-<dd>XcursorBool XcursorFileLoad (FILE *file, XcursorComments **commentsp, XcursorImages **imagesp) 
-
-<dd>XcursorBool XcursorFileSaveImages (FILE *file, const XcursorImages *images) 
-
-<dd>XcursorBool XcursorFileSave (FILE * file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from a stdio FILE handle. Writing flushes before returning so that any errors should be detected. 
-
-<dt>XcursorImage *XcursorFilenameLoadImage (const char *filename, int size)
-<dd><dd>XcursorImages *XcursorFilenameLoadImages (const char *filename, int size) 
-
-<dd>XcursorImages *XcursorFilenameLoadAllImages (FILE *file) 
-
-<dd>XcursorBool XcursorFilenameLoad (const char *file, XcursorComments **commentsp, XcursorImages **imagesp) 
-
-<dd>XcursorBool XcursorFilenameSaveImages (const char *filename, const XcursorImages *images) 
-
-<dd>XcursorBool XcursorFilenameSave (const char *file, const XcursorComments *comments, const XcursorImages *images) These parallel the stdio FILE interfaces above, but take filenames. 
-
-</dl><h3>Reading library images</h3><dl COMPACT><dt>XcursorImage *XcursorLibraryLoadImage (const char *name, const char *theme, int size)
-<dd><dd>XcursorImages *XcursorLibraryLoadImages (const char *name, const char *theme, int size) These search the library path, loading the first file found. If 'theme' is not NULL, these functions first try appending -theme to name and then name alone. 
-
-</dl><h3>Cursor APIs</h3><dl COMPACT><dt>Cursor XcursorFilenameLoadCursor (Display *dpy, const char *file)
-<dd><dd>XcursorCursors *XcursorFilenameLoadCursors (Display *dpy, const char *file) These load cursors from the specified file. 
-
-<dt>Cursor XcursorLibraryLoadCursor (Display *dpy, const char *name)
-<dd><dd>XcursorCursors *XcursorLibraryLoadCursors (Display *dpy, const char *name) These load cursors using the specified library name. The theme comes from the display. 
-
-</dl><h3>X Cursor Name APIs</h3><dl COMPACT><dt>XcursorImage *XcursorShapeLoadImage (unsigned int shape, const char *theme, int size)
-<dd><dd>XcursorImages *XcursorShapeLoadImages (unsigned int shape, const char *theme, int size) These map 'shape' to a library name using the standard X cursor names and then load the images. 
-
-<dt>Cursor XcursorShapeLoadCursor (Display *dpy, unsigned int shape)
-<dd><dd>XcursorCursors *XcursorShapeLoadCursors (Display *dpy, unsigned int shape) These map 'shape' to a library name and then load the cursors. 
-
-</dl><h3>Display Information APIs</h3><dl COMPACT><dt>XcursorBool XcursorSupportsARGB (Display *dpy)
-<dd>Returns whether the display supports ARGB cursors or whether cursors will be mapped to a core X cursor. 
-
-<dt>XcursorBool XcursorSetDefaultSize (Display *dpy, int size)
-<dd>Sets the default size for cursors on the specified display. When loading cursors, those whose nominal size is closest to this size will be preferred. 
-
-<dt>int XcursorGetDefaultSize (Display *dpy)
-<dd>Gets the default cursor size. 
-
-<dt>XcursorBool XcursorSetTheme (Display *dpy, const char *theme)
-<dd>Sets the current theme name. 
-
-<dt>char *XcursorGetTheme (Display *dpy)
-<dd>Gets the current theme name. 
-
-</dl><h2>Environment Variables</h2><dl COMPACT><dt><b>XCURSOR_PATH</b>
-<dd>This variable sets the list of paths to look for cursors in. Directories in this path are separated by colons (:). 
-
-</dl><h2>Restrictions</h2><b>Xcursor</b> will probably change radically in the future; weak attempts will be made to retain some level of source-file compatibility. 
+ };</pre></dd></dl><h2>Functions</h2><h3>Object Management</h3><dl COMPACT><dt>XcursorImage *XcursorImageCreate (int width, int height)
+</dt><dd></dd><dd>void XcursorImageDestroy (XcursorImage *image) Allocate and free images. On allocation, the hotspot and the pixels are left uninitialized. The size is set to the maximum of width and height. 
+</dd><dt>XcursorImages *XcursorImagesCreate (int size)
+</dt><dd></dd><dd>void XcursorImagesDestroy (XcursorImages *images) Allocate and free arrays to hold multiple cursor images. On allocation, nimage is set to zero. 
+</dd><dt>XcursorCursors *XcursorCursorsCreate (Display *dpy, int size)
+</dt><dd></dd><dd>void XcursorCursorsDestroy (XcursorCursors *cursors) Allocate and free arrays to hold multiple cursors. On allocation, ncursor is set to zero, ref is set to one. 
+</dd></dl><h3>Reading and writing images.</h3><dl COMPACT><dt>XcursorImage *XcursorXcFileLoadImage (XcursorFile *file, int size)
+</dt><dd></dd><dd>XcursorImages *XcursorXcFileLoadImages (XcursorFile *file, int size) 
+</dd><dd>XcursorImages *XcursorXcFileLoadAllImages (XcursorFile *file) 
+</dd><dd>XcursorBool XcursorXcFileLoad (XcursorFile *file, XcursorComments **commentsp, XcursorImages **imagesp) 
+</dd><dd>XcursorBool XcursorXcFileSave (XcursorFile *file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from an XcursorFile handle. After reading, the file pointer will be left at some random place in the file. 
+</dd><dt>XcursorImage *XcursorFileLoadImage (FILE *file, int size)
+</dt><dd></dd><dd>XcursorImages *XcursorFileLoadImages (FILE *file, int size) 
+</dd><dd>XcursorImages *XcursorFileLoadAllImages (FILE *file) 
+</dd><dd>XcursorBool XcursorFileLoad (FILE *file, XcursorComments **commentsp, XcursorImages **imagesp) 
+</dd><dd>XcursorBool XcursorFileSaveImages (FILE *file, const XcursorImages *images) 
+</dd><dd>XcursorBool XcursorFileSave (FILE * file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from a stdio FILE handle. Writing flushes before returning so that any errors should be detected. 
+</dd><dt>XcursorImage *XcursorFilenameLoadImage (const char *filename, int size)
+</dt><dd></dd><dd>XcursorImages *XcursorFilenameLoadImages (const char *filename, int size) 
+</dd><dd>XcursorImages *XcursorFilenameLoadAllImages (FILE *file) 
+</dd><dd>XcursorBool XcursorFilenameLoad (const char *file, XcursorComments **commentsp, XcursorImages **imagesp) 
+</dd><dd>XcursorBool XcursorFilenameSaveImages (const char *filename, const XcursorImages *images) 
+</dd><dd>XcursorBool XcursorFilenameSave (const char *file, const XcursorComments *comments, const XcursorImages *images) These parallel the stdio FILE interfaces above, but take filenames. 
+</dd></dl><h3>Reading library images</h3><dl COMPACT><dt>XcursorImage *XcursorLibraryLoadImage (const char *name, const char *theme, int size)
+</dt><dd></dd><dd>XcursorImages *XcursorLibraryLoadImages (const char *name, const char *theme, int size) These search the library path, loading the first file found. If 'theme' is not NULL, these functions first try appending -theme to name and then name alone. 
+</dd></dl><h3>Cursor APIs</h3><dl COMPACT><dt>Cursor XcursorFilenameLoadCursor (Display *dpy, const char *file)
+</dt><dd></dd><dd>XcursorCursors *XcursorFilenameLoadCursors (Display *dpy, const char *file) These load cursors from the specified file. 
+</dd><dt>Cursor XcursorLibraryLoadCursor (Display *dpy, const char *name)
+</dt><dd></dd><dd>XcursorCursors *XcursorLibraryLoadCursors (Display *dpy, const char *name) These load cursors using the specified library name. The theme comes from the display. 
+</dd></dl><h3>X Cursor Name APIs</h3><dl COMPACT><dt>XcursorImage *XcursorShapeLoadImage (unsigned int shape, const char *theme, int size)
+</dt><dd></dd><dd>XcursorImages *XcursorShapeLoadImages (unsigned int shape, const char *theme, int size) These map 'shape' to a library name using the standard X cursor names and then load the images. 
+</dd><dt>Cursor XcursorShapeLoadCursor (Display *dpy, unsigned int shape)
+</dt><dd></dd><dd>XcursorCursors *XcursorShapeLoadCursors (Display *dpy, unsigned int shape) These map 'shape' to a library name and then load the cursors. 
+</dd></dl><h3>Display Information APIs</h3><dl COMPACT><dt>XcursorBool XcursorSupportsARGB (Display *dpy)
+</dt><dd>Returns whether the display supports ARGB cursors or whether cursors will be mapped to a core X cursor. 
+</dd><dt>XcursorBool XcursorSetDefaultSize (Display *dpy, int size)
+</dt><dd>Sets the default size for cursors on the specified display. When loading cursors, those whose nominal size is closest to this size will be preferred. 
+</dd><dt>int XcursorGetDefaultSize (Display *dpy)
+</dt><dd>Gets the default cursor size. 
+</dd><dt>XcursorBool XcursorSetTheme (Display *dpy, const char *theme)
+</dt><dd>Sets the current theme name. 
+</dd><dt>char *XcursorGetTheme (Display *dpy)
+</dt><dd>Gets the current theme name. 
+</dd></dl><h2>Environment Variables</h2><dl COMPACT><dt><b>XCURSOR_PATH</b>
+</dt><dd>This variable sets the list of paths to look for cursors in. Directories in this path are separated by colons (:). 
+</dd></dl><h2>Restrictions</h2><b>Xcursor</b> will probably change radically in the future; weak attempts will be made to retain some level of source-file compatibility. 
 
 <h2>Author</h2>Keith Packard

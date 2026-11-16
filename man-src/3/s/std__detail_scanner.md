@@ -27,13 +27,7 @@ description: "std::__detail::_Scanner< _InputIterator > –"
 <p> const <code>_StringT</code> &amp; <code>_M_value</code> () const</p>
 <h3>Static Public Attributes</h3>
 <pre><code>static constexpr _StateT _S_state_at_start
-
-
-
 static constexpr _StateT _S_state_in_brace
-
-
-
 static constexpr _StateT _S_state_in_bracket</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _InputIterator&gt;class std::__detail::_Scanner&lt; _InputIterator &gt;</h3>

@@ -15,7 +15,7 @@ pci_back_from_sleep - turn PCI device on during system-wide transition into work
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Device to handle.</dl>
+<dl><dd></dd><dd>Device to handle.</dd></dl>
 
 <h2>Description</h2>
 

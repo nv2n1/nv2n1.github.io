@@ -31,9 +31,7 @@ Unique integer for use as pword/iword index.
 Uses base class pword storage for runtime type identification of derived stream objects. 
  // Run this code <pre><code>#include &lt;iostream&gt;
 template &lt;class charT, class traits = std::char_traits&lt;charT&gt;&gt;
-
 class mystream : public std::basic_ostream&lt;charT, traits&gt;
-
 {
   public:
     static const int xindex;
@@ -48,25 +46,18 @@ class mystream : public std::basic_ostream&lt;charT, traits&gt;
     }
 };
 // each specialization of mystream obtains a unique index from xalloc()
-
 template &lt;class charT, class traits&gt;
-
 const int mystream&lt;charT, traits&gt;::xindex = std::ios_base::xalloc();
 // This I/O manipulator will be able to recognize ostreams that are mystreams
-
 // by looking up the pointer stored in pword
-
 template &lt;class charT, class traits&gt;
-
 std::basic_ostream&lt;charT, traits&gt; &amp;mymanip(std::basic_ostream&lt;charT, traits&gt; &amp;os)
-
 {
     if (os.pword(mystream&lt;charT, traits&gt;::xindex) == &amp;os)
         static_cast&lt;mystream&lt;charT, traits&gt; &amp;&gt;(os).myfn();
     return os;
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;cout, narrow-character test &quot; &lt;&lt; mymanip &lt;&lt; '\n';
     mystream&lt;char&gt; myout(std::cout);

@@ -34,12 +34,12 @@ The SI system of units uses prefixes that indicate powers of ten. A kilometer is
 </td></tr><tr VALIGN=top><td>E</td><td>exa</td><td>10^18 = 1000000000000000000
 </td></tr><tr VALIGN=top><td>Z</td><td>zetta</td><td>10^21 = 1000000000000000000000
 </td></tr><tr VALIGN=top><td>Y</td><td>yotta</td><td>10^24 = 1000000000000000000000000
-</td></tr> </table></dl>
+</td></tr> </table></dd></dl>
  
 
  The symbol for micro is the Greek letter mu, often written u in an ASCII context where this Greek letter is not available. See also 
 
-<dl><dd></dl>
+<dl><dd></dd></dl>
 
 <h3>Binary prefixes</h3>
 
@@ -51,7 +51,7 @@ The binary prefixes resemble the decimal ones, but have an additional 'i' (and &
 </td></tr><tr VALIGN=top><td>Ti</td><td>tebi</td><td>2^40 = 1099511627776
 </td></tr><tr VALIGN=top><td>Pi</td><td>pebi</td><td>2^50 = 1125899906842624
 </td></tr><tr VALIGN=top><td>Ei</td><td>exbi</td><td>2^60 = 1152921504606846976
-</td></tr> </table></dl>
+</td></tr> </table></dd></dl>
  
 
  See also

@@ -11,40 +11,40 @@ description: "gdbus – Tool for working with D-Bus objects"
 <p> gdbus &#8211; Tool for working with D-Bus objects </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gdbus</code> introspect [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> [&#8211;xml] [&#8211;recurse] [&#8211;only-properties]</p>
-<dt> <code>gdbus</code> monitor [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> [&#8211;object-path&nbsp;<i>/path/to/object</i>]</p>
-<dt> <code>gdbus</code> call [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> &#8211;method&nbsp;<i>org.project.InterfaceName.MethodName</i> [&#8211;timeout&nbsp;<i>seconds</i> | &#8211;interactive] ARG1 ARG2&#8230;</p>
-<dt> <code>gdbus</code> emit [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;object-path&nbsp;<i>/path/to/object</i> &#8211;signal&nbsp;<i>org.project.InterfaceName.SignalName</i> [&#8211;dest&nbsp;<i>unique_bus_name</i>] ARG1 ARG2&#8230;</p>
-<dt> <code>gdbus</code> wait [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;activate&nbsp;<i>bus_name</i> [&#8211;timeout&nbsp;<i>seconds</i>] <i>bus_name</i></p>
-<dt> <code>gdbus</code> help</dl>
+<dt> <code>gdbus</code> introspect [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> [&#8211;xml] [&#8211;recurse] [&#8211;only-properties]</dt>
+<dt> <code>gdbus</code> monitor [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> [&#8211;object-path&nbsp;<i>/path/to/object</i>]</dt>
+<dt> <code>gdbus</code> call [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> &#8211;method&nbsp;<i>org.project.InterfaceName.MethodName</i> [&#8211;timeout&nbsp;<i>seconds</i> | &#8211;interactive] ARG1 ARG2&#8230;</dt>
+<dt> <code>gdbus</code> emit [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;object-path&nbsp;<i>/path/to/object</i> &#8211;signal&nbsp;<i>org.project.InterfaceName.SignalName</i> [&#8211;dest&nbsp;<i>unique_bus_name</i>] ARG1 ARG2&#8230;</dt>
+<dt> <code>gdbus</code> wait [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;activate&nbsp;<i>bus_name</i> [&#8211;timeout&nbsp;<i>seconds</i>] <i>bus_name</i></dt>
+<dt> <code>gdbus</code> help</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>gdbus</code></p>
-<dd>is a simple tool for working with D-Bus objects.</p>
+<dd>is a simple tool for working with D-Bus objects.</dd>
 <h2>COMMANDS</h2>
 <p> <code>introspect</code></p>
 <dl>
 <dt>
-<dd> Prints out interfaces and property values for a remote object. For this to work, the owner of the object needs to implement the org.freedesktop.DBus.Introspectable interface. If the <code>&#8211;xml</code> option is used, the returned introspection XML is printed, otherwise a parsed pretty representation is printed. The <code>&#8211;recurse</code> option can be used to introspect children (and their children and so on) and the <code>&#8211;only-properties</code> option can be used to only print the interfaces with properties.</dl>
+</dt><dd> Prints out interfaces and property values for a remote object. For this to work, the owner of the object needs to implement the org.freedesktop.DBus.Introspectable interface. If the <code>&#8211;xml</code> option is used, the returned introspection XML is printed, otherwise a parsed pretty representation is printed. The <code>&#8211;recurse</code> option can be used to introspect children (and their children and so on) and the <code>&#8211;only-properties</code> option can be used to only print the interfaces with properties.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
 <dt>
-<dd> Monitors one or all objects owned by the owner of <i>bus_name</i>.</dl>
+</dt><dd> Monitors one or all objects owned by the owner of <i>bus_name</i>.</dd></dl>
 <p> <code>call</code></p>
 <dl>
 <dt>
-<dd> Invokes a method on a remote object. Each argument to pass to the method must be specified as a serialized <code>GVariant</code> except that strings do not need explicit quotes. The return values are printed out as serialized <code>GVariant</code> values.</dl>
+</dt><dd> Invokes a method on a remote object. Each argument to pass to the method must be specified as a serialized <code>GVariant</code> except that strings do not need explicit quotes. The return values are printed out as serialized <code>GVariant</code> values.</dd></dl>
 <p> <code>emit</code></p>
 <dl>
 <dt>
-<dd> Emits a signal. Each argument to include in the signal must be specified as a serialized <code>GVariant</code> except that strings do not need explicit quotes.</dl>
+</dt><dd> Emits a signal. Each argument to include in the signal must be specified as a serialized <code>GVariant</code> except that strings do not need explicit quotes.</dd></dl>
 <p> <code>wait</code></p>
 <dl>
 <dt>
-<dd> Waits until <i>bus_name</i> is owned by some process on the bus. If the <code>&#8211;activate</code> is specified, that bus name will be auto-started first. It may be the same as the bus name being waited for, or different.</dl>
+</dt><dd> Waits until <i>bus_name</i> is owned by some process on the bus. If the <code>&#8211;activate</code> is specified, that bus name will be auto-started first. It may be the same as the bus name being waited for, or different.</dd></dl>
 <p> <code>help</code></p>
 <dl>
 <dt>
-<dd> Prints help and exit.</dl>
+</dt><dd> Prints help and exit.</dd></dl>
 <h2>BASH COMPLETION</h2>
 <p> <code>gdbus</code> ships with a bash completion script to complete commands, destinations, bus names, object paths and interface/method names.</p>
 <h2>EXAMPLES</h2>
@@ -52,7 +52,7 @@ description: "gdbus – Tool for working with D-Bus objects"
 &nbsp;<wbr>&nbsp;property is displayed: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ gdbus introspect-- system-- dest org.freedesktop.NetworkManager-- object - path / org / freedesktop / NetworkManager / Devices / 0 node / org / freedesktop / NetworkManager / Devices / 0
 {
@@ -105,11 +105,11 @@ $ gdbus introspect-- system-- dest org.freedesktop.NetworkManager-- object - pat
     };
 };
 </code></pre>
-</dl>
+</dd></dl>
 <p> The <code>&#8211;recurse</code> and <code>&#8211;only-properties</code> options can be useful when wanting to inspect all objects owned by a particular process: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ gdbus introspect&#8211; system&#8211; dest org.freedesktop.UPower&#8211; object &#8211; path / &#8211;recurse&#8211; only &#8211; properties node /<br />
 {<br />
     node / org<br />
@@ -144,11 +144,11 @@ $ gdbus introspect&#8211; system&#8211; dest org.freedesktop.UPower&#8211; objec
         };<br />
     };<br />
 };
-</dl>
+</dd></dl>
 <p> In a similar fashion, the <code>introspect</code> command can be used to learn details about the Notify method: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 [&#8230;] interface org.freedesktop.Notifications<br />
 {<br />
 methods:<br />
@@ -169,24 +169,24 @@ methods:<br />
            out u return_id);<br />
 };<br />
 [&#8230;]
-</dl>
+</dd></dl>
 <p> With this information, it&#8217;s easy to use the <code>call</code> command to display a notification </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ gdbus call&#8211; session&#8211; dest org.freedesktop.Notifications&#8211; object &#8211; path / org / freedesktop / Notifications&#8211; method org.freedesktop.Notifications.Notify my_app_name 42 gtk &#8211; dialog &#8211; info &#8220;The Summary&#8221;<br />
                                                                                                                                                                                                  &#8220;Here&#8217;s the body of the notification&#8221; [] {} 5000(uint32 12, )
-</dl>
+</dd></dl>
 <p> Call a method with file handle argument: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ gdbus call&#8211; session&#8211; dest org.example.foo&#8211; object &#8211; path / org / example / foo&#8211; method SendFDs 1 10 10 &lt; file.foo
-</dl>
+</dd></dl>
 <p> Monitoring all objects on a service: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gdbus monitor --system --dest org.freedesktop.ConsoleKit
 Monitoring signals from all objects owned by org.freedesktop.ConsoleKit
@@ -196,59 +196,59 @@ The name org.freedesktop.ConsoleKit is owned by :1.15
 /org/freedesktop/ConsoleKit/Session2: org.freedesktop.ConsoleKit.Session.ActiveChanged (true,)
 /org/freedesktop/ConsoleKit/Seat1: org.freedesktop.ConsoleKit.Seat.ActiveSessionChanged ('/org/freedesktop/ConsoleKit/Session2',)
 </pre>
-</dl>
+</dd></dl>
 <p> Monitoring a single object on a service: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ gdbus monitor&#8211; system&#8211; dest org.freedesktop.NetworkManager&#8211; object &#8211; path / org / freedesktop / NetworkManager / AccessPoint / 4141 Monitoring signals on object / org / freedesktop / NetworkManager / AccessPoint / 4141 owned by org.freedesktop.NetworkManager The name org.freedesktop.NetworkManager is owned by : 1.5 / org / freedesktop / NetworkManager / AccessPoint / 4141 : org.freedesktop.NetworkManager.AccessPoint.PropertiesChanged({&#8216;Strength&#8217; : &lt;byte 0x5c&gt;}, ) / org / freedesktop / NetworkManager / AccessPoint / 4141 : org.freedesktop.NetworkManager.AccessPoint.PropertiesChanged({&#8216;Strength&#8217; : &lt;byte 0x64&gt;}, ) / org / freedesktop / NetworkManager / AccessPoint / 4141 : org.freedesktop.NetworkManager.AccessPoint.PropertiesChanged({&#8216;Strength&#8217; : &lt;byte 0x5e&gt;}, ) / org / freedesktop / NetworkManager / AccessPoint / 4141 : org.freedesktop.NetworkManager.AccessPoint.PropertiesChanged({&#8216;Strength&#8217; : &lt;byte 0x64&gt;}, )
-</dl>
+</dd></dl>
 <p> Emitting a signal: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ gdbus emit&#8211; session&#8211; object &#8211; path / foo&#8211; signal org.bar.Foo &#8220;[&#8216;foo&#8217;, &#8216;bar&#8217;, &#8216;baz&#8217;]&#8221;
-</dl>
+</dd></dl>
 <p> Emitting a signal to a specific process: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ gdbus emit-- session-- object - path / bar-- signal org.bar.Bar someString-- dest : 1.42
 </code></pre>
-</dl>
+</dd></dl>
 <p> Waiting for a well-known name to be owned on the bus; this will <i>not</i> auto-start the service: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gdbus wait --session org.bar.SomeName
 </pre>
-</dl>
+</dd></dl>
 <p> Auto-starting then waiting for a well-known name to be owned on the bus: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gdbus wait --session --activate org.bar.SomeName
 </pre>
-</dl>
+</dd></dl>
 <p> Auto-starting a different service, then waiting for a well-known name to be owned on the bus. This is useful in situations where <i>SomeName</i> is not directly activatable: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gdbus wait --session --activate org.bar.PrerequisiteName org.bar.SomeName
 </pre>
-</dl>
+</dd></dl>
 <p> Waiting for a well-known name and giving up after 30 seconds. By default, the timeout is disabled; or set <code>&#8211;timeout</code> to 0 to disable it: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gdbus wait --session --timeout 30 org.bar.SomeName
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/glib/issues/new">https://gitlab.gnome.org/GNOME/glib/issues/new</a></code>m[].</p>
 <h2>SEE ALSO</h2>

@@ -11,10 +11,8 @@ std::weak_order - std::weak_order
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;compare&gt;
-
     template &lt;class T&gt;
     (since C++ 20)
-
         constexpr std::weak_ordering weak_order(const T &amp;a, const T &amp;b);</code></pre> 
 Compares two values using 3-way comparison and produces a result of type std::weak_ordering 
 Specifically, 

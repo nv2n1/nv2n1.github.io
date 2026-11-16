@@ -13,28 +13,28 @@ description: "REINDEX – rebuild indexes"
 <h2>Description</h2>
 <p><code>REINDEX</code> rebuilds an index using the data stored in the index&#8217;s table, replacing the old copy of the index. There are several scenarios in which to use <code>REINDEX</code>:</p>
 <dl>
-<dt>*</p>
-<dd>An index has become corrupted, and no longer contains valid data. Although in theory this should never happen, in practice indexes can become corrupted due to software bugs or hardware failures. <code>REINDEX</code> provides a recovery method.</p>
-<dt>*</p>
-<dd>An index has become &#8220;bloated&#8221;, that it is contains many empty or nearly-empty pages. This can occur with B-tree indexes in PostgreSQL under certain uncommon access patterns. <code>REINDEX</code> provides a way to reduce the space consumption of the index by writing a new version of the index without the dead pages. See in the documentation for more information.</p>
-<dt>*</p>
-<dd>You have altered a storage parameter (such as fillfactor) for an index, and wish to ensure that the change has taken full effect.</p>
-<dt>*</p>
-<dd>An index build with the CONCURRENTLY option failed, leaving an &#8220;invalid&#8221; index. Such indexes are useless but it can be convenient to use <code>REINDEX</code> to rebuild them. Note that <code>REINDEX</code> will not perform a concurrent build. To build the index without interfering with production you should drop the index and reissue the <code>CREATE INDEX CONCURRENTLY</code> command.</dl>
+<dt>*</dt>
+<dd>An index has become corrupted, and no longer contains valid data. Although in theory this should never happen, in practice indexes can become corrupted due to software bugs or hardware failures. <code>REINDEX</code> provides a recovery method.</dd>
+<dt>*</dt>
+<dd>An index has become &#8220;bloated&#8221;, that it is contains many empty or nearly-empty pages. This can occur with B-tree indexes in PostgreSQL under certain uncommon access patterns. <code>REINDEX</code> provides a way to reduce the space consumption of the index by writing a new version of the index without the dead pages. See in the documentation for more information.</dd>
+<dt>*</dt>
+<dd>You have altered a storage parameter (such as fillfactor) for an index, and wish to ensure that the change has taken full effect.</dd>
+<dt>*</dt>
+<dd>An index build with the CONCURRENTLY option failed, leaving an &#8220;invalid&#8221; index. Such indexes are useless but it can be convenient to use <code>REINDEX</code> to rebuild them. Note that <code>REINDEX</code> will not perform a concurrent build. To build the index without interfering with production you should drop the index and reissue the <code>CREATE INDEX CONCURRENTLY</code> command.</dd></dl>
 <h2>Parameters</h2>
 <dl>
-<dt><code>INDEX</code></p>
-<dd>Recreate the specified index.</p>
-<dt><code>TABLE</code></p>
-<dd>Recreate all indexes of the specified table. If the table has a secondary &#8220;TOAST&#8221; table, that is reindexed as well.</p>
-<dt><code>DATABASE</code></p>
-<dd>Recreate all indexes within the current database. Indexes on shared system catalogs are skipped except in stand-alone mode (see below). This form of <code>REINDEX</code> cannot be executed inside a transaction block.</p>
-<dt><code>SYSTEM</code></p>
-<dd>Recreate all indexes on system catalogs within the current database. Indexes on user tables are not processed. Also, indexes on shared system catalogs are skipped except in stand-alone mode (see below). This form of <code>REINDEX</code> cannot be executed inside a transaction block.</p>
-<dt><i>name</i></p>
-<dd>The name of the specific index, table, or database to be reindexed. Index and table names can be schema-qualified. Presently, <code>REINDEX DATABASE</code> and <code>REINDEX SYSTEM</code> can only reindex the current database, so their parameter must match the current database&#8217;s name.</p>
-<dt><code>FORCE</code></p>
-<dd>This is an obsolete option; it is ignored if specified.</dl>
+<dt><code>INDEX</code></dt>
+<dd>Recreate the specified index.</dd>
+<dt><code>TABLE</code></dt>
+<dd>Recreate all indexes of the specified table. If the table has a secondary &#8220;TOAST&#8221; table, that is reindexed as well.</dd>
+<dt><code>DATABASE</code></dt>
+<dd>Recreate all indexes within the current database. Indexes on shared system catalogs are skipped except in stand-alone mode (see below). This form of <code>REINDEX</code> cannot be executed inside a transaction block.</dd>
+<dt><code>SYSTEM</code></dt>
+<dd>Recreate all indexes on system catalogs within the current database. Indexes on user tables are not processed. Also, indexes on shared system catalogs are skipped except in stand-alone mode (see below). This form of <code>REINDEX</code> cannot be executed inside a transaction block.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the specific index, table, or database to be reindexed. Index and table names can be schema-qualified. Presently, <code>REINDEX DATABASE</code> and <code>REINDEX SYSTEM</code> can only reindex the current database, so their parameter must match the current database&#8217;s name.</dd>
+<dt><code>FORCE</code></dt>
+<dd>This is an obsolete option; it is ignored if specified.</dd></dl>
 <h2>Notes</h2>
 <p>If you suspect corruption of an index on a user table, you can simply rebuild that index, or all indexes on the table, using <code>REINDEX INDEX</code> or <code>REINDEX TABLE</code>. </p>
 <p> Things are more difficult if you need to recover from corruption of an index on a system table. In this case it&#8217;s important for the system to not have used any of the suspect indexes itself. (Indeed, in this sort of scenario you might find that server processes are crashing immediately at start-up, due to reliance on the corrupted indexes.) To recover safely, the server must be started with the <code>-P</code> option, which prevents it from using indexes for system catalog lookups. </p>

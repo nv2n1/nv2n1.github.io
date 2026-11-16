@@ -10,16 +10,16 @@ description: "list_entry – get the struct for this entry"
 <p>list_entry &#8211; get the struct for this entry</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>list_entry(</code><i>ptr</i><code>, </code><i>type</i><code>, </code><i>member</i><code>);</code></dl>
+<dt> <code>list_entry(</code><i>ptr</i><code>, </code><i>type</i><code>, </code><i>member</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>ptr</i></p>
 <dl>
 <dd>
-<dd>the struct list_head pointer.</dl>
+</dd><dd>the struct list_head pointer.</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>the type of the struct this is embedded in.</dl>
+<dd>the type of the struct this is embedded in.</dd></dl>
 <p> <i>member</i></p>
 <dl>
-<dd>the name of the list_head within the struct.</dl>
+<dd>the name of the list_head within the struct.</dd></dl>
 <h2>Copyright</h2>

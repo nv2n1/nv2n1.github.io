@@ -19,15 +19,15 @@ description: "sync-available – sync dpkg’s available database with apt’s d
 <p>The program exits with status code <code>0</code> if all went well, and a non-zero status code otherwise.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</p>
-<dd>Output the name and version of the program onto standard output stream.</p>
-<dt>&#8211;help</p>
-<dd>Give a brief usage statement on the standard output stream.</dl>
+<dt><code>&#8211;version</dt>
+<dd>Output the name and version of the program onto standard output stream.</dd>
+<dt>&#8211;help</dt>
+<dd>Give a brief usage statement on the standard output stream.</dd></dl>
 <p> </code></p>
 <h2>Environment</h2>
 <dl>
-<dt><code>TMPDIR</p>
-<dd>The name of the directory where temporary files are created. Default is </code><i>/tmp</i>.</dl>
+<dt><code>TMPDIR</dt>
+<dd>The name of the directory where temporary files are created. Default is </code><i>/tmp</i>.</dd></dl>
 <h2>Author</h2>
 <p>The program and this manual page were written by Antti-Juhani Kaijanaho &lt;ajk [at] debian.org&gt;.</p>
 <h2>See Also</h2>

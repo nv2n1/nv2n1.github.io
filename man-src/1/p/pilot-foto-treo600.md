@@ -43,7 +43,6 @@ description: "pilot-foto-treo600 – Copies Treo \"foto\" databases to current d
 <p>&nbsp;<wbr> </p>
 <pre>
                 <i>pilot-foto-treo600</i> <code>-p</code> <i>/dev/pilot</i> <code>-w</code>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <h2>AUTHOR</h2>

@@ -233,14 +233,14 @@ description: "perlgit – Detailed information about git and the Perl repository
 </pre>
 <p> Using <i>Porting/bisect.pl</i>, with one command (and no other files) it&#8217;s easy to find out</p>
 <dl>
-<dt>&bull;</p>
-<dd> Which commit caused this example code to break?</p>
-<dt>&bull;</p>
-<dd> Which commit caused this example code to start working?</p>
-<dt>&bull;</p>
-<dd> Which commit added the first file to match this regex?</p>
-<dt>&bull;</p>
-<dd> Which commit removed the last file to match this regex?</dl>
+<dt>&bull;</dt>
+<dd> Which commit caused this example code to break?</dd>
+<dt>&bull;</dt>
+<dd> Which commit caused this example code to start working?</dd>
+<dt>&bull;</dt>
+<dd> Which commit added the first file to match this regex?</dd>
+<dt>&bull;</dt>
+<dd> Which commit removed the last file to match this regex?</dd></dl>
 <p> usually without needing to know which versions of perl to use as start and end revisions, as <i>Porting/bisect.pl</i> automatically searches to find the earliest stable version for which the test case passes. Run <tt>&quot;Porting/bisect.pl --help&quot;</tt> for the full documentation, including how to set the <tt>&quot;Configure&quot;</tt> and build time options. </p>
 <p> If you require more flexibility than <i>Porting/bisect.pl</i> has to offer, you&#8217;ll need to run <tt>&quot;git bisect&quot;</tt> yourself. It&#8217;s most useful to use <tt>&quot;git bisect run&quot;</tt> to automate the building and testing of perl revisions. For this you&#8217;ll need a shell script for <tt>&quot;git&quot;</tt> to call to test a particular revision. An example script is <i>Porting/bisect-example.sh</i>, which you should copy <code>outside</code> of the repository, as the bisect process will reset the state to a clean checkout as it runs. The instructions below assume that you copied it as <i>~/run</i> and then edited it as appropriate. </p>
 <p> You first enter in bisect mode with: </p>
@@ -389,14 +389,14 @@ description: "perlgit – Detailed information about git and the Perl repository
 <p> The &#8216;blead&#8217; branch will become the next production release of Perl. </p>
 <p> Before pushing <i>any</i> local change to blead, it&#8217;s incredibly important that you do a few things, lest other committers come after you with pitchforks and torches:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Make sure you have a good commit message. See &#8220;Commit message&#8221; in perlhack for details.</p>
-<dt>&bull;</p>
-<dd> Run the test suite. You might not think that one typo fix would break a test file. You&#8217;d be wrong. Here&#8217;s an example of where not running the suite caused problems. A patch was submitted that added a couple of tests to an existing <i>.t</i>. It couldn&#8217;t possibly affect anything else, so no need to test beyond the single affected <i>.t</i>, right? But, the submitter&#8217;s email address had changed since the last of their submissions, and this caused other tests to fail. Running the test target given in the next item would have caught this problem.</p>
-<dt>&bull;</p>
-<dd> If you don&#8217;t run the full test suite, at least <tt>&quot;make test_porting&quot;</tt>. This will run basic sanity checks. To see which sanity checks, have a look in <i>t/porting</i>.</p>
-<dt>&bull;</p>
-<dd> If you make any changes that affect miniperl or core routines that have different code paths for miniperl, be sure to run <tt>&quot;make minitest&quot;</tt>. This will catch problems that even the full test suite will not catch because it runs a subset of tests under miniperl rather than perl.</dl>
+<dt>&bull;</dt>
+<dd> Make sure you have a good commit message. See &#8220;Commit message&#8221; in perlhack for details.</dd>
+<dt>&bull;</dt>
+<dd> Run the test suite. You might not think that one typo fix would break a test file. You&#8217;d be wrong. Here&#8217;s an example of where not running the suite caused problems. A patch was submitted that added a couple of tests to an existing <i>.t</i>. It couldn&#8217;t possibly affect anything else, so no need to test beyond the single affected <i>.t</i>, right? But, the submitter&#8217;s email address had changed since the last of their submissions, and this caused other tests to fail. Running the test target given in the next item would have caught this problem.</dd>
+<dt>&bull;</dt>
+<dd> If you don&#8217;t run the full test suite, at least <tt>&quot;make test_porting&quot;</tt>. This will run basic sanity checks. To see which sanity checks, have a look in <i>t/porting</i>.</dd>
+<dt>&bull;</dt>
+<dd> If you make any changes that affect miniperl or core routines that have different code paths for miniperl, be sure to run <tt>&quot;make minitest&quot;</tt>. This will catch problems that even the full test suite will not catch because it runs a subset of tests under miniperl rather than perl.</dd></dl>
 <h3>On merging and rebasing</h3>
 <p> Simple, one-off commits pushed to the &#8216;blead&#8217; branch should be simple commits that apply cleanly. In other words, you should make sure your work is committed against the current position of blead, so that you can push back to the master repository without merging. </p>
 <p> Sometimes, blead will move while you&#8217;re building or testing your changes. When this happens, your push will be rejected with a message like this: </p>

@@ -11,9 +11,9 @@ description: "im-launch – launch input method and execute session program"
 <p> im-launch &#8211; launch input method and execute session program </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>im-launch </code><i>SESSION-PROGRAM</i></p>
+<dt><code>im-launch </code><i>SESSION-PROGRAM</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>im-launch</code> command is used to start a input method framework server daemon such as <code>ibus-daemon</code>, set up the appropriate environment variables for the client programs, and execute <i>SESSION-PROGRAM</i> such as <code>x-session-manager</code>. </p>
 <p> This command is usually not invoked from the console of a normal user but is normally invoked by the <code>/etc/X11/Xsession.d/70im-config_launch</code>. </p>

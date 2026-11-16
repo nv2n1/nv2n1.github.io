@@ -18,13 +18,13 @@ description: "amsamba – Amanda Application to interface with smbclient"
 <p>This section lists the properties that control amsamba&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7) for information on application properties and how they are configured. </p>
 <p> SMBCLIENT-PATH</p>
 <dl>
-<dd>The path to the smbclient binary. The default is set when Amanda is built by the &#8211;with-smbclient configure option.</dl>
+<dd>The path to the smbclient binary. The default is set when Amanda is built by the &#8211;with-smbclient configure option.</dd></dl>
 <p> GNUTAR-PATH</p>
 <dl>
-<dd>The path to the gnutar binary. The default is set when Amanda is built by the &#8211;with-gnutar configure option. gnutar is used to create the index.</dl>
+<dd>The path to the gnutar binary. The default is set when Amanda is built by the &#8211;with-gnutar configure option. gnutar is used to create the index.</dd></dl>
 <p> AMANDAPASS</p>
 <dl>
-<dd>Location of the amandapass file, defaulting to &quot;$CONFIG_DIR/amandapass&quot;. Relative pathnames are relative to the configuration directory, &quot;$CONFIG_DIR/&lt;config&gt;&quot;. Note that this file is located on the client, not on the server. The format of the file is as follow: </p>
+<dd>Location of the amandapass file, defaulting to &quot;$CONFIG_DIR/amandapass&quot;. Relative pathnames are relative to the configuration directory, &quot;$CONFIG_DIR/&lt;config&gt;&quot;. Note that this file is located on the client, not on the server. The format of the file is as follow: </dd>
 <pre> Sharename User%Password Domain</pre>
 <p>Sharename is &#8216;//HOST/SHARE&#8217; without the SUBDIR. Sharename can be quoted, it can be &#8216;*&#8217; to match all share, it can be &#8216;//pc-host/*&#8217; to match all share on pc-host. User is the username use to connect to the share. Password is the password use to connect to the share. &#8216;%Password&#8217; is optional if the user can connect to the share without password. &#8216;User%Password&#8217; is optional, the user &#8216;guest&#8217; without password is use to connect to the share. Domain is optional. Example: </p>
 <pre> //another-pc/share otheruser%otherpw domain
@@ -35,13 +35,13 @@ description: "amsamba – Amanda Application to interface with smbclient"
 </dl>
 <p> ALLOW-ANONYMOUS</p>
 <dl>
-<dd>This username without password is used to connect to the share if no matching entry is found in the amandapass file.</dl>
+<dd>This username without password is used to connect to the share if no matching entry is found in the amandapass file.</dd></dl>
 <p> DIRECTORY</p>
 <dl>
-<dd>For restore command only, the data is recoved in that directory. Must be a unix path for &quot;tar&quot; RECOVER-MODE or a smb path for &quot;smb&quot; recover-MODE.</dl>
+<dd>For restore command only, the data is recoved in that directory. Must be a unix path for &quot;tar&quot; RECOVER-MODE or a smb path for &quot;smb&quot; recover-MODE.</dd></dl>
 <p> RECOVER-MODE</p>
 <dl>
-<dd>&quot;tar&quot; or &quot;smb&quot;, default to &quot;tar&quot;. If &quot;tar&quot;, the data is recovered on the local machine, If &quot;smb&quot;, the data is recovered on the smb client machine.</dl>
+<dd>&quot;tar&quot; or &quot;smb&quot;, default to &quot;tar&quot;. If &quot;tar&quot;, the data is recovered on the local machine, If &quot;smb&quot;, the data is recovered on the smb client machine.</dd></dl>
 <h2>Include And Exclude Lists</h2>
 <p>This application supplies exclude lists via the <code>smbclient</code> <code>-TX</code> option. Normal shell-style wildcard expressions, using * and ?, are not supported. All expressions are matched only from the base directory of the DLE. Expressions that match a directory may have a leading or trailing &quot;/&quot;. Example expressions: </p>
 <pre> ./temp-files # exclude top-level dir &quot;temp-files&quot; entirely
@@ -65,4 +65,4 @@ description: "amsamba – Amanda Application to interface with smbclient"
 <h2>Author</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

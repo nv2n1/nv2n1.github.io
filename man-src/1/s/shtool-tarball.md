@@ -17,22 +17,22 @@ description: "shtool tarball – GNU shtool command for rolling standardized tar
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>tarball</i></p>
-<dd> Output tarball to file <i>tarball</i>.</p>
-<dt><code>-c</code>, <code>&#8211;compress</code> <i>prog</i></p>
-<dd> Pipe resulting tarball through compression program <i>prog</i>.</p>
-<dt><code>-d</code>, <code>&#8211;directory</code> <i>directory</i></p>
-<dd> Sets the top-level directory into which the tarball unpacks. By default it is <i>tarball</i> without the trailing <tt>&quot;.tar.*&quot;</tt> extension.</p>
-<dt><code>-u</code>, <code>&#8211;user</code> <i>user</i></p>
-<dd> The user (owner) of files and directories in the tarball to <i>user</i>.</p>
-<dt><code>-g</code>, <code>&#8211;group</code> <i>group</i></p>
-<dd> The group of files and directories in the tarball to <i>group</i>.</p>
-<dt><code>-e</code>, <code>&#8211;exclude</code> <i>pattern</i></p>
-<dd> Exclude files and directories matching comma-separated list of regex <i>pattern</i> from the tarball. Directories are expanded before the filtering takes place. The default filter pattern is &quot;<tt>&quot;CVS,\.cvsignore,\.svn,\.[oa]\$&quot;</tt>&quot;.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>tarball</i></dt>
+<dd> Output tarball to file <i>tarball</i>.</dd>
+<dt><code>-c</code>, <code>&#8211;compress</code> <i>prog</i></dt>
+<dd> Pipe resulting tarball through compression program <i>prog</i>.</dd>
+<dt><code>-d</code>, <code>&#8211;directory</code> <i>directory</i></dt>
+<dd> Sets the top-level directory into which the tarball unpacks. By default it is <i>tarball</i> without the trailing <tt>&quot;.tar.*&quot;</tt> extension.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code> <i>user</i></dt>
+<dd> The user (owner) of files and directories in the tarball to <i>user</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group</code> <i>group</i></dt>
+<dd> The group of files and directories in the tarball to <i>group</i>.</dd>
+<dt><code>-e</code>, <code>&#8211;exclude</code> <i>pattern</i></dt>
+<dd> Exclude files and directories matching comma-separated list of regex <i>pattern</i> from the tarball. Directories are expanded before the filtering takes place. The default filter pattern is &quot;<tt>&quot;CVS,\.cvsignore,\.svn,\.[oa]\$&quot;</tt>&quot;.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   Makefile.in

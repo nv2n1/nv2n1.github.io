@@ -32,12 +32,12 @@ JetScan 630 OK
 JetScan 636PRO Untested</pre>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/pie.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pie.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pie.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/pie.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pie.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pie.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Contact And Bug-Reports</h2>

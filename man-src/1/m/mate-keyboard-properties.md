@@ -16,14 +16,14 @@ description: "mate-keyboard-properties – manage keyboard behaviour in MATE"
 <p> Keyboard Preferences manages all settings related to the keyboard in a MATE environment. This includes key repeat delay, cursor blinking, layouts and layout options. You can also configure a typing break which locks the screen and enforces a break from work.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;apply</code></p>
-<dd> Just apply settings and quit (compatibility only; now handled by daemon)</p>
-<dt><code>&#8211;init-session-settings</code></p>
-<dd> Just apply settings and quit (compatibility only; now handled by daemon)</p>
-<dt><code>&#8211;get-legacy</code></p>
-<dd> Retrieve and store legacy settings</p>
-<dt><code>&#8211;typing-break</code></p>
-<dd> Start the page with the typing break settings showing</dl>
+<dt><code>&#8211;apply</code></dt>
+<dd> Just apply settings and quit (compatibility only; now handled by daemon)</dd>
+<dt><code>&#8211;init-session-settings</code></dt>
+<dd> Just apply settings and quit (compatibility only; now handled by daemon)</dd>
+<dt><code>&#8211;get-legacy</code></dt>
+<dd> Retrieve and store legacy settings</dd>
+<dt><code>&#8211;typing-break</code></dt>
+<dd> Start the page with the typing break settings showing</dd></dl>
 <p> This program also accepts the standard MATE and GTK options.</p>
 <h2>AUTHORS</h2>
 <p> This manual page was writtenby Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the Debian project (but may be used by others).</p>

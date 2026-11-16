@@ -21,38 +21,38 @@ Usage : gdal_contour[-b&lt;band&gt;][-a&lt;attribute_name&gt;][-3d][-inodata]
 <p> This program generates a vector contour file from the input raster elevation model (DEM). </p>
 <p> Starting from version 1.7 the contour line-strings will be oriented consistently. The high side will be on the right, i.e. a line string goes clockwise around a top. </p>
 <dl>
-<dt><code>-b</code> <i>band</i>:</p>
-<dd> picks a particular band to get the DEM from. Defaults to band 1.</dl>
+<dt><code>-b</code> <i>band</i>:</dt>
+<dd> picks a particular band to get the DEM from. Defaults to band 1.</dd></dl>
 <dl>
-<dt><code>-a</code> <i>name</i>:</p>
-<dd> provides a name for the attribute in which to put the elevation. If not provided no elevation attribute is attached.</p>
-<dt><code>-3d</code>:</p>
-<dd> Force production of 3D vectors instead of 2D. Includes elevation at every vertex.</dl>
+<dt><code>-a</code> <i>name</i>:</dt>
+<dd> provides a name for the attribute in which to put the elevation. If not provided no elevation attribute is attached.</dd>
+<dt><code>-3d</code>:</dt>
+<dd> Force production of 3D vectors instead of 2D. Includes elevation at every vertex.</dd></dl>
 <dl>
-<dt><code>-inodata</code>:</p>
-<dd> Ignore any nodata value implied in the dataset &#8211; treat all values as valid.</dl>
+<dt><code>-inodata</code>:</dt>
+<dd> Ignore any nodata value implied in the dataset &#8211; treat all values as valid.</dd></dl>
 <dl>
-<dt><code>-snodata</code> <i>value</i>:</p>
-<dd> Input pixel value to treat as &#8216;nodata&#8217;.</dl>
+<dt><code>-snodata</code> <i>value</i>:</dt>
+<dd> Input pixel value to treat as &#8216;nodata&#8217;.</dd></dl>
 <dl>
-<dt><code>-f</code> <i>format</i>:</p>
-<dd> create output in a particular format, default is shapefiles.</dl>
+<dt><code>-f</code> <i>format</i>:</dt>
+<dd> create output in a particular format, default is shapefiles.</dd></dl>
 <dl>
-<dt><code>-dsco</code> <i>NAME=VALUE</i>:</p>
-<dd> Dataset creation option (format specific)</p>
-<dt><code>-lco</code> <i>NAME=VALUE</i>:</p>
-<dd> Layer creation option (format specific)</dl>
+<dt><code>-dsco</code> <i>NAME=VALUE</i>:</dt>
+<dd> Dataset creation option (format specific)</dd>
+<dt><code>-lco</code> <i>NAME=VALUE</i>:</dt>
+<dd> Layer creation option (format specific)</dd></dl>
 <dl>
-<dt><code>-i</code> <i>interval</i>:</p>
-<dd> elevation interval between contours.</dl>
+<dt><code>-i</code> <i>interval</i>:</dt>
+<dd> elevation interval between contours.</dd></dl>
 <dl>
-<dt><code>-off</code> <i>offset</i>:</p>
-<dd> Offset from zero relative to which to interpret intervals.</dl>
+<dt><code>-off</code> <i>offset</i>:</dt>
+<dd> Offset from zero relative to which to interpret intervals.</dd></dl>
 <dl>
-<dt><code>-fl</code> <i>level</i>:</p>
-<dd> Name one or more &#8216;fixed levels&#8217; to extract.</p>
-<dt><code>-nln</code> <i>outlayername</i>:</p>
-<dd> Provide a name for the output vector layer. Defaults to &#8216;contour&#8217;.</dl>
+<dt><code>-fl</code> <i>level</i>:</dt>
+<dd> Name one or more &#8216;fixed levels&#8217; to extract.</dd>
+<dt><code>-nln</code> <i>outlayername</i>:</dt>
+<dd> Provide a name for the output vector layer. Defaults to &#8216;contour&#8217;.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> This would create 10meter contours from the DEM data in dem.tif and produce a shapefile in contour.shp/shx/dbf with the contour elevations in the &#8216;elev&#8217; attribute. </p>
 <pre>

@@ -14,10 +14,10 @@ description: "irq_set_vcpu_affinity – Set vcpu affinity for the interrupt"
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>interrupt number to set affinity</dl>
+</dd><dd>interrupt number to set affinity</dd></dl>
 <p> <i>vcpu_info</i></p>
 <dl>
-<dd>vCPU specific data</dl>
+<dd>vCPU specific data</dd></dl>
 <h2>Description</h2>
 <p>This function uses the vCPU specific data to set the vCPU affinity for an irq. The vCPU specific data is passed from outside, such as KVM. One example code path is as below: KVM -&gt; IOMMU -&gt; <code>irq_set_vcpu_affinity</code>.</p>
 <h2>Copyright</h2>

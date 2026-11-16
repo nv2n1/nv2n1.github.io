@@ -15,35 +15,35 @@ pci_add_dynid - add a new PCI device ID to this driver and re-probe devices
 <h2>Arguments</h2>
 
 <i>drv</i>
-<dl><dd><dd>target pci driver</dl>
+<dl><dd></dd><dd>target pci driver</dd></dl>
  
 
  <i>vendor</i>
-<dl><dd>PCI vendor ID</dl>
+<dl><dd>PCI vendor ID</dd></dl>
  
 
  <i>device</i>
-<dl><dd>PCI device ID</dl>
+<dl><dd>PCI device ID</dd></dl>
  
 
  <i>subvendor</i>
-<dl><dd>PCI subvendor ID</dl>
+<dl><dd>PCI subvendor ID</dd></dl>
  
 
  <i>subdevice</i>
-<dl><dd>PCI subdevice ID</dl>
+<dl><dd>PCI subdevice ID</dd></dl>
  
 
  <i>class</i>
-<dl><dd>PCI class</dl>
+<dl><dd>PCI class</dd></dl>
  
 
  <i>class_mask</i>
-<dl><dd>PCI class mask</dl>
+<dl><dd>PCI class mask</dd></dl>
  
 
  <i>driver_data</i>
-<dl><dd>private driver data</dl>
+<dl><dd>private driver data</dd></dl>
 
 <h2>Description</h2>
 

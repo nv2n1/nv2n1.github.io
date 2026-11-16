@@ -37,3 +37,4 @@ description: "perluniintro – Perl Unicode introduction"
 <p> For example, </p>
 <pre><code>
 perl - e 'print "
+</code></pre>

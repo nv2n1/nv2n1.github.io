@@ -16,8 +16,8 @@ description: "ntfscat – print NTFS files and streams on the standard output"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfscat</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;attribute</code> TYPE</p>
-<dd>Display the contents of a particular attribute type. By default, the unnamed $DATA attribute will be shown. The attribute can be specified by a number in decimal or hexadecimal, or by name. </p>
+<dt><code>-a</code>, <code>&#8211;attribute</code> TYPE</dt>
+<dd>Display the contents of a particular attribute type. By default, the unnamed $DATA attribute will be shown. The attribute can be specified by a number in decimal or hexadecimal, or by name. </dd>
 <table BORDER>
 <tr>
 <td>
@@ -128,30 +128,30 @@ description: "ntfscat – print NTFS files and streams on the standard output"
 </table>
 <p> <code>Notes</code> The attribute names may be given without the leading $ symbol.<br />
  If you use the $ symbol, you must quote the name to prevent the shell interpreting the name.</p>
-<dt><code>-n</code>, <code>&#8211;attribute-name</code> NAME</p>
-<dd>Display this named attribute, stream.</p>
-<dt><code>-i</code>, <code>&#8211;inode</code> NUM</p>
-<dd>Specify a file by its inode number instead of its name.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress some debug/warning/error messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license <code>ntfscat</code>.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages.</dl>
+<dt><code>-n</code>, <code>&#8211;attribute-name</code> NAME</dt>
+<dd>Display this named attribute, stream.</dd>
+<dt><code>-i</code>, <code>&#8211;inode</code> NUM</dt>
+<dd>Specify a file by its inode number instead of its name.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress some debug/warning/error messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license <code>ntfscat</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages.</dd></dl>
 <h2>Examples</h2>
 <p>Display the contents of a file in the root of an NTFS volume.</p>
 <dl>
-<dd><code>ntfscat /dev/hda1 boot.ini</code></dl>
+<dd><code>ntfscat /dev/hda1 boot.ini</code></dd></dl>
 <p> Display the contents of a file in a subdirectory of an NTFS volume.</p>
 <dl>
-<dd><code>ntfscat /dev/hda1 /winnt/system32/drivers/etc/hosts</code></dl>
+<dd><code>ntfscat /dev/hda1 /winnt/system32/drivers/etc/hosts</code></dd></dl>
 <p> Display the contents of the $INDEX_ROOT attribute of the root directory (inode 5).</p>
 <dl>
-<dd><code>ntfscat /dev/hda1 -a INDEX_ROOT -i 5 | hexdump -C</code> </p>
+<dd><code>ntfscat /dev/hda1 -a INDEX_ROOT -i 5 | hexdump -C</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfscat</code>. If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -162,3 +162,4 @@ description: "ntfscat – print NTFS files and streams on the standard output"
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p>Read <code><a href="/docs/linux/man/8-libntfs/">libntfs</a></code>(8) for details how to access encrypted files. <code><a href="/docs/linux/man/8-libntfs/">libntfs</a></code>(8), <code><a href="/docs/linux/man/8-ntfsls/">ntfsls</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+</dl>

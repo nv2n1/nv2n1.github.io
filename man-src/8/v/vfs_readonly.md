@@ -10,7 +10,7 @@ description: "vfs_readonly – make a Samba share read only for a specified time
 <p>vfs_readonly &#8211; make a Samba share read only for a specified time period</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = readonly</dl>
+<dd>vfs objects = readonly</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_readonly VFS module marks a share as read only for all clients connecting within the configured time period. Clients connecting during this time will be denied write access to all files in the share, irrespective of their actual access privileges. </p>
@@ -18,14 +18,14 @@ description: "vfs_readonly – make a Samba share read only for a specified time
 <h2>Options</h2>
 <p>readonly:period = BEGIN, END</p>
 <dl>
-<dd>Only mark the share as read only if the client connection was made between the times marked by the BEGIN and END date specifiers. The syntax of these date specifiers is the same as that accepted by the -d option of GNU <code><a href="/docs/linux/man/1-date/">date</a></code>(1).</dl>
+<dd>Only mark the share as read only if the client connection was made between the times marked by the BEGIN and END date specifiers. The syntax of these date specifiers is the same as that accepted by the -d option of GNU <code><a href="/docs/linux/man/1-date/">date</a></code>(1).</dd></dl>
 <h2>Examples</h2>
 <p>Mark all shares read only: </p>
 <dl>
 <dd>
 <pre> <i>[global]</i>
  m[blue]<code>vfs objects = readonly</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Mark the [backup] share as read only during business hours: </p>
 <dl>
 <dd>
@@ -33,7 +33,7 @@ description: "vfs_readonly – make a Samba share read only for a specified time
  m[blue]<code>path = /readonly</code>m[]
  m[blue]<code>vfs objects = readonly</code>m[]
  m[blue]<code>readonly:period = readonly:period = &quot;today 9:00&quot;,&quot;today 17:00&quot;</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 3.0.25 of the Samba suite.</p>
 <h2>Author</h2>

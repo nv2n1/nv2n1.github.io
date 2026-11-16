@@ -19,7 +19,7 @@ description: "stfsm.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  Level 3 BLAS like routine for A in RFP Format.
  STFSM  solves the matrix equation
@@ -30,11 +30,11 @@ description: "stfsm.f –"
  A is in Rectangular Full Packed (RFP) Format.
  The matrix X is overwritten on B.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSR</i> </p>
+</dt><dd> <i>TRANSR</i> </dd>
 <pre>
           TRANSR is CHARACTER*1
           = 'N':  The Normal Form of RFP A is stored;
@@ -137,18 +137,18 @@ K = N / 2. RFP A is(0
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   We first consider Rectangular Full Packed (RFP) Format when N is
   even. We give an example where N = 6.
@@ -210,8 +210,9 @@ K = N / 2. RFP A is(0
      03 13 23 33 11             33 11 21 31 41 51
      04 14 24 34 44             43 44 22 32 42 52
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 277 of file stfsm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

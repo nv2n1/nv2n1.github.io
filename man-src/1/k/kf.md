@@ -14,23 +14,23 @@ description: "kf – securely forward tickets"
 <h2>DESCRIPTION</h2>
 <p> The program forwards tickets to a remote host through an authenticated and encrypted stream. Options supported are:</p>
 <dl>
-<dt> &#8211;<code>p </code><i>port</i> &#8211;<code>-port = </code><i>port</i></p>
+<dt> &#8211;<code>p </code><i>port</i> &#8211;<code>-port = </code><i>port</i></dt>
 <dd>
-<dd>port to connect to</p>
-<dt> &#8211;<code>l </code><i>login</i> &#8211;<code>-login = </code><i>login</i></p>
+</dd><dd>port to connect to</dd>
+<dt> &#8211;<code>l </code><i>login</i> &#8211;<code>-login = </code><i>login</i></dt>
 <dd>
-<dd>remote login name</p>
-<dt> &#8211;<code>c </code><i>ccache</i> &#8211;<code>-ccache = </code><i>ccache</i></p>
+</dd><dd>remote login name</dd>
+<dt> &#8211;<code>c </code><i>ccache</i> &#8211;<code>-ccache = </code><i>ccache</i></dt>
 <dd>
-<dd>remote cred cache</p>
-<dt><code>-F , -forwardable</code></p>
-<dd> forward forwardable credentials</p>
-<dt><code>-G , -no-forwardable</code></p>
-<dd> do not forward forwardable credentials</p>
-<dt><code>-h , -help</code></p>
+</dd><dd>remote cred cache</dd>
+<dt><code>-F , -forwardable</code></dt>
+<dd> forward forwardable credentials</dd>
+<dt><code>-G , -no-forwardable</code></dt>
+<dd> do not forward forwardable credentials</dd>
+<dt><code>-h , -help</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd></dd></dl>
 <p> is useful when you do not want to enter your password on a remote host but want to have your tickets one for example AFS. </p>
 <p> In order for to work you will need to acquire your initial ticket with forwardable flag, i.e. <code>kinit &#8211;forwardable</code> </p>
 <p> <code>telnet</code> is able to forward tickets by itself.</p>

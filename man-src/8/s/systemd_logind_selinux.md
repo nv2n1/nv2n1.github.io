@@ -142,8 +142,8 @@ description: "systemd_logind_selinux – Security Enhanced Linux Policy for the 
 <p> <code>systemd_logind_var_run_t</code> </p>
 <p> &#8211; Set files with the systemd_logind_var_run_t type, if you want to store the systemd logind files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/systemd/seats(/.*)?, /var/run/systemd/users(/.*)?, /var/run/nologin </p>
+<dt>Paths:</dt>
+<dd>/var/run/systemd/seats(/.*)?, /var/run/systemd/users(/.*)?, /var/run/nologin </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

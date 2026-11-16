@@ -15,7 +15,6 @@ description: "object_message – Sends a message to an object and returns the an
 <p> Sends a message to an object and returns the answer it has generated. Remember that the first parameter is the dialog object (not a whole array) that you wish to send the message to. For example, to make the second object in a dialog draw itself, you might write: </p>
 <pre>
    object_message(&amp;dialog[1], MSG_DRAW, 0);
-   
 </pre>
 <p> The function will take care of scaring and unscaring the mouse if the message is MSG_DRAW. </p>
 <h2>See Also</h2>

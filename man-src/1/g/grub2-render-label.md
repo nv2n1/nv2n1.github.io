@@ -13,32 +13,32 @@ description: "grub-render-label — Render an Apple disk label."
 <p> <code>grub-render-label</code> [-b | &#8211;bgcolor=<i>COLOR</i>] [-c | &#8211;color=<i>COLOR</i>]</p>
 <dl>
 <dt>
-<dd> [-f | &#8211;font=<i>FILE</i>] [-i | &#8211;input=<i>FILE</i>]</dl>
+</dt><dd> [-f | &#8211;font=<i>FILE</i>] [-i | &#8211;input=<i>FILE</i>]</dd></dl>
 <dl>
 <dt>
-<dd> [-o | &#8211;output=<i>FILE</i>] [-t | &#8211;text=<i>STRING</i>]</dl>
+</dt><dd> [-o | &#8211;output=<i>FILE</i>] [-t | &#8211;text=<i>STRING</i>]</dd></dl>
 <dl>
 <dt>
-<dd> [-v | &#8211;verbose] </p>
+</dt><dd> [-v | &#8211;verbose] </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>grub-render-label</code> renders an Apple disk label (.disk_label) file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;color</code>=<i>COLOR</i></p>
-<dd> Use <i>COLOR as the color for generated labels. </p>
-<dt></i><code>&#8211;bgcolor</code>=<i>COLOR</i></p>
-<dd> Use <i>COLOR</i> as the background color for generated labels. </p>
-<dt><code>&#8211;font</code>=<i>FILE</i></p>
-<dd> Use <i>FILE</i> as the font file for generated labels. </p>
-<dt>&#8211;input=<i>FILE</i></p>
-<dd> Read input text from <i>FILE</i>. </p>
-<dt>&#8211;output=<i>FILE</i></p>
-<dd> Render output to <i>FILE</i>. </p>
-<dt>&#8211;text=<i>STRING</i></p>
-<dd> Use <i>STRING</i> as input text. </p>
-<dt>&#8211;verbose</p>
-<dd> Print verbose output. </p>
+<dt><code>&#8211;color</code>=<i>COLOR</i></dt>
+<dd> Use <i>COLOR as the color for generated labels. </dd>
+<dt></i><code>&#8211;bgcolor</code>=<i>COLOR</i></dt>
+<dd> Use <i>COLOR</i> as the background color for generated labels. </dd>
+<dt><code>&#8211;font</code>=<i>FILE</i></dt>
+<dd> Use <i>FILE</i> as the font file for generated labels. </dd>
+<dt>&#8211;input=<i>FILE</i></dt>
+<dd> Read input text from <i>FILE</i>. </dd>
+<dt>&#8211;output=<i>FILE</i></dt>
+<dd> Render output to <i>FILE</i>. </dd>
+<dt>&#8211;text=<i>STRING</i></dt>
+<dd> Use <i>STRING</i> as input text. </dd>
+<dt>&#8211;verbose</dt>
+<dd> Print verbose output. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

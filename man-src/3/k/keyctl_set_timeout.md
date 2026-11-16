@@ -22,14 +22,14 @@ long keyctl_set_timeout(key_serial_t key, unsigned timeout);
 <p> On success <code>keyctl_set_timeout</code>() returns <code>0 .</code> On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The specified key does not exist.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The specified key has already expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The specified key has been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The named key exists, but does not grant <code>setattr</code> permission to the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The specified key does not exist.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The specified key has already expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The specified key has been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The named key exists, but does not grant <code>setattr</code> permission to the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

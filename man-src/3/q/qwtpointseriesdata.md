@@ -24,13 +24,13 @@ description: "QwtPointSeriesData –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Samples</dl>
+<dd><i>samples</i> Samples</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtPointSeriesData::boundingRect () const [virtual]</h3>
 <p>Calculate the bounding rectangle. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

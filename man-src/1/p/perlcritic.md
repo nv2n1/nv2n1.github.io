@@ -69,39 +69,39 @@ perlcritic YourModule.pm<br />
 <h2>OPTIONS</h2>
 <p> Option names can be abbreviated to uniqueness and can be stated with singe or double dashes, and option values can be separated from the option name by a space or &#8216;=&#8217; (as with Getopt::Long). Option names are also case-sensitive.</p>
 <dl>
-<dt>&quot;&#8211;profile FILE&quot; or &quot;-p FILE&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to use a profile named by <font SIZE="-1">FILE</font> rather than looking for the default <i>.perlcriticrc</i> file in the current directory or your home directory. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> in Perl::Critic for more information.</p>
-<dt>&quot;&#8211;noprofile&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> not to load any configuration file, thus reverting to the default configuration for all Policies.</p>
-<dt>&quot;&#8211;severity N&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to only apply Policies with a severity greater than <tt>&quot;N&quot;</tt>. Severity values are integers ranging from 1 (least severe) to 5 (most severe). The default is 5. For a given <tt>&quot;--profile&quot;</tt>, decreasing the <tt>&quot;--severity&quot;</tt> will usually produce more violations. You can set the default value for this option in your <i>.perlcriticrc</i> file. You can also redefine the <tt>&quot;severity&quot;</tt> for any Policy in your <i>.perlcriticrc</i> file. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> for more information.</p>
-<dt>&quot;-5 | -4 | -3 | -2 | -1&quot;</p>
-<dd> These are numeric shortcuts for setting the <tt>&quot;--severity&quot;</tt> option. For example, <tt>&quot;-4&quot;</tt> is equivalent to <tt>&quot;--severity 4&quot;</tt>. If multiple shortcuts are specified, then the most restrictive one wins. If an explicit <tt>&quot;--severity&quot;</tt> option is also given, then all shortcut options are silently ignored. <font SIZE="-1">NOTE:</font> Be careful not to put one of the number severity shortcut options immediately after the <tt>&quot;--top&quot;</tt> flag or <tt>&quot;perlcritic&quot;</tt> will interpret it as the number of violations to report.</p>
-<dt>&quot;&#8211;severity NAME&quot;</p>
-<dd> If it is difficult for you to remember whether severity &#8220;5&#8221; is the most or least restrictive level, then you can use one of these named values: </p>
+<dt>&quot;&#8211;profile FILE&quot; or &quot;-p FILE&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to use a profile named by <font SIZE="-1">FILE</font> rather than looking for the default <i>.perlcriticrc</i> file in the current directory or your home directory. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> in Perl::Critic for more information.</dd>
+<dt>&quot;&#8211;noprofile&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> not to load any configuration file, thus reverting to the default configuration for all Policies.</dd>
+<dt>&quot;&#8211;severity N&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to only apply Policies with a severity greater than <tt>&quot;N&quot;</tt>. Severity values are integers ranging from 1 (least severe) to 5 (most severe). The default is 5. For a given <tt>&quot;--profile&quot;</tt>, decreasing the <tt>&quot;--severity&quot;</tt> will usually produce more violations. You can set the default value for this option in your <i>.perlcriticrc</i> file. You can also redefine the <tt>&quot;severity&quot;</tt> for any Policy in your <i>.perlcriticrc</i> file. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> for more information.</dd>
+<dt>&quot;-5 | -4 | -3 | -2 | -1&quot;</dt>
+<dd> These are numeric shortcuts for setting the <tt>&quot;--severity&quot;</tt> option. For example, <tt>&quot;-4&quot;</tt> is equivalent to <tt>&quot;--severity 4&quot;</tt>. If multiple shortcuts are specified, then the most restrictive one wins. If an explicit <tt>&quot;--severity&quot;</tt> option is also given, then all shortcut options are silently ignored. <font SIZE="-1">NOTE:</font> Be careful not to put one of the number severity shortcut options immediately after the <tt>&quot;--top&quot;</tt> flag or <tt>&quot;perlcritic&quot;</tt> will interpret it as the number of violations to report.</dd>
+<dt>&quot;&#8211;severity NAME&quot;</dt>
+<dd> If it is difficult for you to remember whether severity &#8220;5&#8221; is the most or least restrictive level, then you can use one of these named values: </dd>
 <p>SEVERITY NAME&#8230; is equivalent to&#8230; SEVERITY NUMBER&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;severity gentle&#8211; severity 5 &#8211;severity stern&#8211; severity 4 &#8211;severity harsh&#8211; severity 3 &#8211;severity cruel&#8211; severity 2 &#8211;severity brutal&#8211; severity 1</p>
-<dt>&quot;&#8211;gentle | &#8211;stern | &#8211;harsh | &#8211;cruel | &#8211;brutal&quot;</p>
-<dd> These are named shortcuts for setting the <tt>&quot;--severity&quot;</tt> option. For example, <tt>&quot;--cruel&quot;</tt> is equivalent to <tt>&quot;--severity 2&quot;</tt>. If multiple shortcuts are specified, then the most restrictive one wins. If an explicit <tt>&quot;--severity&quot;</tt> option is also given, then all shortcut options are silently ignored.</p>
-<dt>&quot;&#8211;theme RULE&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply only Policies with themes that satisfy the <tt>&quot;RULE&quot;</tt>. Themes are arbitrary names for groups of related policies. You can combine theme names with boolean operators to create an arbitrarily complex <tt>&quot;RULE&quot;</tt>. For example, the following would apply only Policies that have a &#8216;bugs&#8217; <font SIZE="-1">AND </font>&#8216;pbp&#8217; theme: </p>
+<dt>&quot;&#8211;gentle | &#8211;stern | &#8211;harsh | &#8211;cruel | &#8211;brutal&quot;</dt>
+<dd> These are named shortcuts for setting the <tt>&quot;--severity&quot;</tt> option. For example, <tt>&quot;--cruel&quot;</tt> is equivalent to <tt>&quot;--severity 2&quot;</tt>. If multiple shortcuts are specified, then the most restrictive one wins. If an explicit <tt>&quot;--severity&quot;</tt> option is also given, then all shortcut options are silently ignored.</dd>
+<dt>&quot;&#8211;theme RULE&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply only Policies with themes that satisfy the <tt>&quot;RULE&quot;</tt>. Themes are arbitrary names for groups of related policies. You can combine theme names with boolean operators to create an arbitrarily complex <tt>&quot;RULE&quot;</tt>. For example, the following would apply only Policies that have a &#8216;bugs&#8217; <font SIZE="-1">AND </font>&#8216;pbp&#8217; theme: </dd>
 <pre>
     $&gt; perlcritic --theme='bugs &amp;&amp; pbp' MyModule.pm
 </pre>
 <p> Unless the <tt>&quot;--severity&quot;</tt> option is explicitly given, setting <tt>&quot;--theme&quot;</tt> silently causes the <tt>&quot;--severity&quot;</tt> to be set to 1. You can set the default value for this option in your <i>.perlcriticrc</i> file. See &#8220;<font SIZE="-1">POLICY THEMES&#8221;</font> in Perl::Critic for more information about themes.</p>
-<dt>&quot;&#8211;include PATTERN&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply additional Policies that match the regex <tt>&quot;/PATTERN/imx&quot;</tt>. Use this option to temporarily override your profile and/or the severity settings at the command-line. For example: </p>
+<dt>&quot;&#8211;include PATTERN&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply additional Policies that match the regex <tt>&quot;/PATTERN/imx&quot;</tt>. Use this option to temporarily override your profile and/or the severity settings at the command-line. For example: </dd>
 <pre>
     perlcritic --include=layout my_file.pl
 </pre>
 <p> This would cause <tt>&quot;perlcritic&quot;</tt> to apply all the <tt>&quot;CodeLayout::*&quot;</tt> policies even if they have a severity level that is less than the default level of 5, or have been disabled in your <i>.perlcriticrc</i> file. You can specify multiple <tt>&quot;--include&quot;</tt> options and you can use it in conjunction with the <tt>&quot;--exclude&quot;</tt> option. Note that <tt>&quot;--exclude&quot;</tt> takes precedence over <tt>&quot;--include&quot;</tt> when a Policy matches both patterns. You can set the default value for this option in your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;exclude PATTERN&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to not apply any Policy that matches the regex <tt>&quot;/PATTERN/imx&quot;</tt>. Use this option to temporarily override your profile and/or the severity settings at the command-line. For example: </p>
+<dt>&quot;&#8211;exclude PATTERN&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to not apply any Policy that matches the regex <tt>&quot;/PATTERN/imx&quot;</tt>. Use this option to temporarily override your profile and/or the severity settings at the command-line. For example: </dd>
 <pre>
     perlcritic --exclude=strict my_file.pl
 </pre>
 <p> This would cause <tt>&quot;perlcritic&quot;</tt> to not apply the <tt>&quot;RequireUseStrict&quot;</tt> and <tt>&quot;ProhibitNoStrict&quot;</tt> Policies even though they have the highest severity level. You can specify multiple <tt>&quot;--exclude&quot;</tt> options and you can use it in conjunction with the <tt>&quot;--include&quot;</tt> option. Note that <tt>&quot;--exclude&quot;</tt> takes precedence over <tt>&quot;--include&quot;</tt> when a Policy matches both patterns. You can set the default value for this option in your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;single-policy PATTERN&quot; or &quot;-s PATTERN&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply just one Policy module matching the regex <tt>&quot;/PATTERN/ixms&quot;</tt>, and exclude all other Policies. This option has precedence over the <tt>&quot;--severity&quot;</tt>, <tt>&quot;--theme&quot;</tt>, <tt>&quot;--include&quot;</tt>, <tt>&quot;--exclude&quot;</tt>, and <tt>&quot;--only&quot;</tt> options. For example: </p>
+<dt>&quot;&#8211;single-policy PATTERN&quot; or &quot;-s PATTERN&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to apply just one Policy module matching the regex <tt>&quot;/PATTERN/ixms&quot;</tt>, and exclude all other Policies. This option has precedence over the <tt>&quot;--severity&quot;</tt>, <tt>&quot;--theme&quot;</tt>, <tt>&quot;--include&quot;</tt>, <tt>&quot;--exclude&quot;</tt>, and <tt>&quot;--only&quot;</tt> options. For example: </dd>
 <pre>
     perlcritic --single-policy=nowarnings my_file.pl
 </pre>
@@ -115,16 +115,16 @@ perlcritic YourModule.pm<br />
 <pre>
     perlcritic --profile=customprofile --only my_file.pl
 </pre>
-<dt>&quot;&#8211;top [ N ]&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to report only the top <tt>&quot;N&quot;</tt> Policy violations in each file, ranked by their severity. If <tt>&quot;N&quot;</tt> is not specified, it defaults to 20. If the <tt>&quot;--severity&quot;</tt> option (or one of the shortcuts) is not explicitly given, the <tt>&quot;--top&quot;</tt> option implies that the minimum severity level is &#8220;1&#8221; (i.e. &#8220;brutal&#8221;). Users can redefine the severity for any Policy in their <i>.perlcriticrc</i> file. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> for more information. You can set the default value for this option in your <i>.perlcriticrc</i> file. <font SIZE="-1">NOTE:</font> Be careful not to put one of the severity shortcut options immediately after the <tt>&quot;--top&quot;</tt> flag or <tt>&quot;perlcritic&quot;</tt> will interpret it as the number of violations to report.</p>
-<dt>&quot;&#8211;force&quot;</p>
-<dd> Directs <tt>&quot;perlcritic&quot;</tt> to ignore the magical <tt>&quot;## no critic&quot;</tt> annotations in the source code. See &#8220;<font SIZE="-1">BENDING THE RULES&#8221;</font> for more information. You can set the default value for this option in your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;statistics&quot;</p>
-<dd> Causes several statistics about the code being scanned and the violations found to be reported after any other output.</p>
-<dt>&quot;&#8211;statistics-only&quot;</p>
-<dd> Like the <tt>&quot;--statistics&quot;</tt> option, but suppresses normal output and only shows the statistics.</p>
-<dt>&quot;&#8211;verbose N | FORMAT&quot;</p>
-<dd> Sets the verbosity level or format for reporting violations. If given a number (<tt>&quot;N&quot;</tt>), <tt>&quot;perlcritic&quot;</tt> reports violations using one of the predefined formats described below. If given a string (<tt>&quot;FORMAT&quot;</tt>), it is interpreted to be an actual format specification. If the <tt>&quot;--verbose&quot;</tt> option is not specified, it defaults to either 4 or 5, depending on whether multiple files were given as arguments to <tt>&quot;perlcritic&quot;</tt>. You can set the default value for this option in your <i>.perlcriticrc</i> file. </p>
+<dt>&quot;&#8211;top [ N ]&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to report only the top <tt>&quot;N&quot;</tt> Policy violations in each file, ranked by their severity. If <tt>&quot;N&quot;</tt> is not specified, it defaults to 20. If the <tt>&quot;--severity&quot;</tt> option (or one of the shortcuts) is not explicitly given, the <tt>&quot;--top&quot;</tt> option implies that the minimum severity level is &#8220;1&#8221; (i.e. &#8220;brutal&#8221;). Users can redefine the severity for any Policy in their <i>.perlcriticrc</i> file. See &#8220;<font SIZE="-1">CONFIGURATION&#8221;</font> for more information. You can set the default value for this option in your <i>.perlcriticrc</i> file. <font SIZE="-1">NOTE:</font> Be careful not to put one of the severity shortcut options immediately after the <tt>&quot;--top&quot;</tt> flag or <tt>&quot;perlcritic&quot;</tt> will interpret it as the number of violations to report.</dd>
+<dt>&quot;&#8211;force&quot;</dt>
+<dd> Directs <tt>&quot;perlcritic&quot;</tt> to ignore the magical <tt>&quot;## no critic&quot;</tt> annotations in the source code. See &#8220;<font SIZE="-1">BENDING THE RULES&#8221;</font> for more information. You can set the default value for this option in your <i>.perlcriticrc</i> file.</dd>
+<dt>&quot;&#8211;statistics&quot;</dt>
+<dd> Causes several statistics about the code being scanned and the violations found to be reported after any other output.</dd>
+<dt>&quot;&#8211;statistics-only&quot;</dt>
+<dd> Like the <tt>&quot;--statistics&quot;</tt> option, but suppresses normal output and only shows the statistics.</dd>
+<dt>&quot;&#8211;verbose N | FORMAT&quot;</dt>
+<dd> Sets the verbosity level or format for reporting violations. If given a number (<tt>&quot;N&quot;</tt>), <tt>&quot;perlcritic&quot;</tt> reports violations using one of the predefined formats described below. If given a string (<tt>&quot;FORMAT&quot;</tt>), it is interpreted to be an actual format specification. If the <tt>&quot;--verbose&quot;</tt> option is not specified, it defaults to either 4 or 5, depending on whether multiple files were given as arguments to <tt>&quot;perlcritic&quot;</tt>. You can set the default value for this option in your <i>.perlcriticrc</i> file. </dd>
 <p>Verbosity Format Specification&#8211; &#8212; &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -1 &#8220;%f:%l:%c:%m
 &#8221;,<br />
     2 &#8220;%f: (%l:%c) %m
@@ -154,46 +154,46 @@ perlcritic YourModule.pm<br />
 <p> Formats are a combination of literal and escape characters similar to the way <tt>&quot;sprintf&quot;</tt> works. See String::Format for a full explanation of the formatting capabilities. Valid escape characters are: </p>
 <p>Escape Meaning&#8211; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; % c Column number where the violation occurred % d Full diagnostic discussion of the violation % e Explanation of violation or page numbers in PBP % F Just the name of the file where the violation occurred.% f Path to the file where the violation occurred.% l Line number where the violation occurred % m Brief description of the violation % P Full name of the Policy module that created the violation % p Name of the Policy without the Perl::Critic::Policy::prefix % r The string of source code that caused the violation % C The class of the PPI::Element that caused the violation % s The severity level of the violation</p>
 <p> The purpose of these formats is to provide some compatibility with text editors that have an interface for parsing certain kinds of input. See &#8220;<font SIZE="-1">EDITOR INTEGRATION&#8221;</font> for more information about that.</p>
-<dt>&quot;&#8211;list&quot;</p>
-<dd> Displays a condensed listing of all the Perl::Critic::Policy modules that are found on this machine. This option lists <i>all</i> Policies, regardless of your <i>.perlcriticrc</i> or command line options. For each Policy, the name, default severity and default themes are shown.</p>
-<dt>&quot;&#8211;list-enabled&quot;</p>
-<dd> Displays a condensed listing of all the Perl::Critic::Policy modules that <i>would</i> be enforced, if you were actually going to critique a file with this command. This is useful when you&#8217;ve constructed a complicated command or modified your <i>.perlcriticrc</i> file and you want to see exactly which Policies are going to be enforced (or not enforced, as the case may be). For each Policy, the name, default severity and default themes are shown.</p>
-<dt>&quot;&#8211;list-themes&quot;</p>
-<dd> Displays a list of all the themes of the Perl::Critic::Policy modules that are found on this machine.</p>
-<dt>&quot;&#8211;profile-proto&quot;</p>
-<dd> Displays an expanded listing of all the Perl::Critic::Policy modules that are found on this machine. For each Policy, the name, default severity and default themes are shown, as well as the name of any additional parameters that the Policy supports. The format is suitable as a prototype for your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;only&quot;</p>
-<dd> Directs perlcritic to apply only Policies that are explicitly mentioned in your <i>.perlcriticrc</i> file. This is useful if you want to use just a small subset of Policies without having to disable all the others. You can set the default value for this option in your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;profile-strictness {warn|fatal|quiet}&quot;</p>
-<dd> Directs perlcritic how to treat certain recoverable problems found in a <i>.perlcriticrc</i> or file specified via the <tt>&quot;--profile&quot;</tt> option. Valid values are <tt>&quot;warn&quot;</tt> (the default), <tt>&quot;fatal&quot;</tt>, and <tt>&quot;quiet&quot;</tt>. For example, perlcritic normally only warns about profiles referring to non-existent Policies, but this option can make this situation fatal. You can set the default value for this option in your <i>.perlcriticrc</i> file.</p>
-<dt>&quot;&#8211;count&quot;</p>
+<dt>&quot;&#8211;list&quot;</dt>
+<dd> Displays a condensed listing of all the Perl::Critic::Policy modules that are found on this machine. This option lists <i>all</i> Policies, regardless of your <i>.perlcriticrc</i> or command line options. For each Policy, the name, default severity and default themes are shown.</dd>
+<dt>&quot;&#8211;list-enabled&quot;</dt>
+<dd> Displays a condensed listing of all the Perl::Critic::Policy modules that <i>would</i> be enforced, if you were actually going to critique a file with this command. This is useful when you&#8217;ve constructed a complicated command or modified your <i>.perlcriticrc</i> file and you want to see exactly which Policies are going to be enforced (or not enforced, as the case may be). For each Policy, the name, default severity and default themes are shown.</dd>
+<dt>&quot;&#8211;list-themes&quot;</dt>
+<dd> Displays a list of all the themes of the Perl::Critic::Policy modules that are found on this machine.</dd>
+<dt>&quot;&#8211;profile-proto&quot;</dt>
+<dd> Displays an expanded listing of all the Perl::Critic::Policy modules that are found on this machine. For each Policy, the name, default severity and default themes are shown, as well as the name of any additional parameters that the Policy supports. The format is suitable as a prototype for your <i>.perlcriticrc</i> file.</dd>
+<dt>&quot;&#8211;only&quot;</dt>
+<dd> Directs perlcritic to apply only Policies that are explicitly mentioned in your <i>.perlcriticrc</i> file. This is useful if you want to use just a small subset of Policies without having to disable all the others. You can set the default value for this option in your <i>.perlcriticrc</i> file.</dd>
+<dt>&quot;&#8211;profile-strictness {warn|fatal|quiet}&quot;</dt>
+<dd> Directs perlcritic how to treat certain recoverable problems found in a <i>.perlcriticrc</i> or file specified via the <tt>&quot;--profile&quot;</tt> option. Valid values are <tt>&quot;warn&quot;</tt> (the default), <tt>&quot;fatal&quot;</tt>, and <tt>&quot;quiet&quot;</tt>. For example, perlcritic normally only warns about profiles referring to non-existent Policies, but this option can make this situation fatal. You can set the default value for this option in your <i>.perlcriticrc</i> file.</dd>
+<dt>&quot;&#8211;count&quot;</dt>
 <dd>
-<dt>&quot;-C&quot;</p>
-<dd> Display only the number of violations for each file. Use this feature to get a quick handle on where a large pile of code might need the most attention.</p>
-<dt>&quot;&#8211;Safari&quot;</p>
-<dd> Report &#8220;Perl Best Practice&#8221; citations as section numbers from &lt;<a rel="nofollow" href="http://safari.oreilly.com">http://safari.oreilly.com</a>&gt; instead of page numbers from the actual book. <font SIZE="-1">NOTE:</font> This feature is not implemented yet.</p>
-<dt>&quot;&#8211;color&quot;</p>
-<dd> This option is on when outputting to a tty. When set, Severity 5 and 4 are colored red and yellow, respectively. Colorization only happens if Term::ANSIColor is installed and it only works on non-Windows environments. Negate this switch to disable color. You can set the default value for this option in your <i>.perlcriticrc</i> file. </p>
+</dd><dt>&quot;-C&quot;</dt>
+<dd> Display only the number of violations for each file. Use this feature to get a quick handle on where a large pile of code might need the most attention.</dd>
+<dt>&quot;&#8211;Safari&quot;</dt>
+<dd> Report &#8220;Perl Best Practice&#8221; citations as section numbers from &lt;<a rel="nofollow" href="http://safari.oreilly.com">http://safari.oreilly.com</a>&gt; instead of page numbers from the actual book. <font SIZE="-1">NOTE:</font> This feature is not implemented yet.</dd>
+<dt>&quot;&#8211;color&quot;</dt>
+<dd> This option is on when outputting to a tty. When set, Severity 5 and 4 are colored red and yellow, respectively. Colorization only happens if Term::ANSIColor is installed and it only works on non-Windows environments. Negate this switch to disable color. You can set the default value for this option in your <i>.perlcriticrc</i> file. </dd>
 <p> Can also be specified as <tt>&quot;--colour&quot;</tt>.</p>
-<dt>&quot;&#8211;pager PAGER_COMMAND_STRING&quot;</p>
-<dd> If set, perlcritic will pipe it&#8217;s output to the given <font SIZE="-1">PAGER_COMMAND_STRING.</font> You can set the default value for this option in your <i>.perlcriticrc</i> file. </p>
+<dt>&quot;&#8211;pager PAGER_COMMAND_STRING&quot;</dt>
+<dd> If set, perlcritic will pipe it&#8217;s output to the given <font SIZE="-1">PAGER_COMMAND_STRING.</font> You can set the default value for this option in your <i>.perlcriticrc</i> file. </dd>
 <p> Setting a pager turns off color by default. You will have to turn color on explicitly. If you want color, you&#8217;ll probably also want to tell your pager to display raw characters. For <tt>&quot;less&quot;</tt> and <tt>&quot;more&quot;</tt>, use the -R switch.</p>
-<dt>&quot;&#8211;color-severity-highest COLOR_SPECIFICATION&quot;</p>
-<dd> Specifies the color to be used for highest severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-highest&quot;</tt>, <tt>&quot;--color-severity-5&quot;</tt>, or <tt>&quot;--colour-severity-5&quot;</tt>.</p>
-<dt>&quot;&#8211;color-severity-high COLOR_SPECIFICATION&quot;</p>
-<dd> Specifies the color to be used for high severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-high&quot;</tt>, <tt>&quot;--color-severity-4&quot;</tt>, or <tt>&quot;--colour-severity-4&quot;</tt>.</p>
-<dt>&quot;&#8211;color-severity-medium COLOR_SPECIFICATION&quot;</p>
-<dd> Specifies the color to be used for medium severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-medium&quot;</tt>, <tt>&quot;--color-severity-3&quot;</tt>, or <tt>&quot;--colour-severity-3&quot;</tt>.</p>
-<dt>&quot;&#8211;color-severity-low COLOR_SPECIFICATION&quot;</p>
-<dd> Specifies the color to be used for low severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-low&quot;</tt>, <tt>&quot;--color-severity-2&quot;</tt>, or <tt>&quot;--colour-severity-2&quot;</tt>.</p>
-<dt>&quot;&#8211;color-severity-lowest COLOR_SPECIFICATION&quot;</p>
-<dd> Specifies the color to be used for lowest severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-lowest&quot;</tt>, <tt>&quot;--color-severity-1&quot;</tt>, or <tt>&quot;--colour-severity-1&quot;</tt>.</p>
-<dt>&quot;&#8211;files-with-violations&quot;</p>
-<dd> Display only the names of files with violations. Use this feature with &#8211;single-policy to find files that contain violations of a given policy. Can also be specified as <tt>&quot;--l&quot;</tt>.</p>
-<dt>&quot;&#8211;files-without-violations&quot;</p>
-<dd> Display only the names of files without violations. Use this feature with &#8211;single-policy to find files that do not contain violations of a given policy. Can also be specified as <tt>&quot;--L&quot;</tt>.</p>
-<dt>&quot;&#8211;program-extensions file_name_extension&quot;</p>
-<dd> Tell <tt>&quot;perlcritic&quot;</tt> to treat files whose names end in the given file name extension as programs, not as modules. If a leading &#8216;.&#8217; is desired it must be explicitly specified, e.g. </p>
+<dt>&quot;&#8211;color-severity-highest COLOR_SPECIFICATION&quot;</dt>
+<dd> Specifies the color to be used for highest severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-highest&quot;</tt>, <tt>&quot;--color-severity-5&quot;</tt>, or <tt>&quot;--colour-severity-5&quot;</tt>.</dd>
+<dt>&quot;&#8211;color-severity-high COLOR_SPECIFICATION&quot;</dt>
+<dd> Specifies the color to be used for high severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-high&quot;</tt>, <tt>&quot;--color-severity-4&quot;</tt>, or <tt>&quot;--colour-severity-4&quot;</tt>.</dd>
+<dt>&quot;&#8211;color-severity-medium COLOR_SPECIFICATION&quot;</dt>
+<dd> Specifies the color to be used for medium severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-medium&quot;</tt>, <tt>&quot;--color-severity-3&quot;</tt>, or <tt>&quot;--colour-severity-3&quot;</tt>.</dd>
+<dt>&quot;&#8211;color-severity-low COLOR_SPECIFICATION&quot;</dt>
+<dd> Specifies the color to be used for low severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-low&quot;</tt>, <tt>&quot;--color-severity-2&quot;</tt>, or <tt>&quot;--colour-severity-2&quot;</tt>.</dd>
+<dt>&quot;&#8211;color-severity-lowest COLOR_SPECIFICATION&quot;</dt>
+<dd> Specifies the color to be used for lowest severity violations, as a Term::ANSIColor color specification. Can also be specified as <tt>&quot;--colour-severity-lowest&quot;</tt>, <tt>&quot;--color-severity-1&quot;</tt>, or <tt>&quot;--colour-severity-1&quot;</tt>.</dd>
+<dt>&quot;&#8211;files-with-violations&quot;</dt>
+<dd> Display only the names of files with violations. Use this feature with &#8211;single-policy to find files that contain violations of a given policy. Can also be specified as <tt>&quot;--l&quot;</tt>.</dd>
+<dt>&quot;&#8211;files-without-violations&quot;</dt>
+<dd> Display only the names of files without violations. Use this feature with &#8211;single-policy to find files that do not contain violations of a given policy. Can also be specified as <tt>&quot;--L&quot;</tt>.</dd>
+<dt>&quot;&#8211;program-extensions file_name_extension&quot;</dt>
+<dd> Tell <tt>&quot;perlcritic&quot;</tt> to treat files whose names end in the given file name extension as programs, not as modules. If a leading &#8216;.&#8217; is desired it must be explicitly specified, e.g. </dd>
 <pre>
     --program-extensions .pl
 </pre>
@@ -206,26 +206,26 @@ perlcritic YourModule.pm<br />
     --program-extensions '.pl .cgi'
 </pre>
 <p> Files whose name ends in &#8216;.PL&#8217; will always be considered programs.</p>
-<dt>&quot;&#8211;doc PATTERN&quot;</p>
-<dd> Displays the perldoc for all Perl::Critic::Policy modules that match <tt>&quot;m/PATTERN/ixms&quot;</tt>. Since Policy modules tend to have rather long names, this just provides a more convenient way to say something like: <tt>&quot;perldoc Perl::Critic::Policy::ValuesAndExpressions::RequireUpperCaseHeredocTerminator&quot;</tt> at the command prompt.</p>
-<dt>&quot;&#8211;allow-unsafe&quot;</p>
-<dd> This option directs <tt>&quot;perlcritic&quot;</tt> to allow the use of Policies that have been marked as &#8220;unsafe&#8221;. Unsafe Policies may result in risky operations by compiling and executing the code they analyze. All the Policies that ship in the core Perl::Critic distribution are safe. However, third-party Policies, such as those in the Perl::Critic::Dynamic distribution are not safe. Note that &#8220;safety&#8221; is honorary &#8212; if a Policy author marks a Policy as safe, it is not a guarantee that it won&#8217;t do nasty things. <code>If you don&#8217;t trust your Policies and the code you are analyzing, then do not use this switch</code>.</p>
-<dt>&quot;&#8211;quiet&quot;</p>
-<dd> Suppress the &#8220;source <font SIZE="-1">OK&#8221;</font> message when no violations are found.</p>
-<dt>&quot;&#8211;help&quot;</p>
+<dt>&quot;&#8211;doc PATTERN&quot;</dt>
+<dd> Displays the perldoc for all Perl::Critic::Policy modules that match <tt>&quot;m/PATTERN/ixms&quot;</tt>. Since Policy modules tend to have rather long names, this just provides a more convenient way to say something like: <tt>&quot;perldoc Perl::Critic::Policy::ValuesAndExpressions::RequireUpperCaseHeredocTerminator&quot;</tt> at the command prompt.</dd>
+<dt>&quot;&#8211;allow-unsafe&quot;</dt>
+<dd> This option directs <tt>&quot;perlcritic&quot;</tt> to allow the use of Policies that have been marked as &#8220;unsafe&#8221;. Unsafe Policies may result in risky operations by compiling and executing the code they analyze. All the Policies that ship in the core Perl::Critic distribution are safe. However, third-party Policies, such as those in the Perl::Critic::Dynamic distribution are not safe. Note that &#8220;safety&#8221; is honorary &#8212; if a Policy author marks a Policy as safe, it is not a guarantee that it won&#8217;t do nasty things. <code>If you don&#8217;t trust your Policies and the code you are analyzing, then do not use this switch</code>.</dd>
+<dt>&quot;&#8211;quiet&quot;</dt>
+<dd> Suppress the &#8220;source <font SIZE="-1">OK&#8221;</font> message when no violations are found.</dd>
+<dt>&quot;&#8211;help&quot;</dt>
 <dd>
-<dt>&quot;-?&quot;</p>
+</dd><dt>&quot;-?&quot;</dt>
 <dd>
-<dt>&quot;-H&quot;</p>
-<dd> Displays a brief summary of options and exits.</p>
-<dt>&quot;&#8211;options&quot;</p>
-<dd> Displays the descriptions of the options and exits. While this output is long, it it nowhere near the length of the output of <tt>&quot;--man&quot;</tt>.</p>
-<dt>&quot;&#8211;man&quot;</p>
-<dd> Displays the complete <tt>&quot;perlcritic&quot;</tt> manual and exits.</p>
-<dt>&quot;&#8211;version&quot;</p>
+</dd><dt>&quot;-H&quot;</dt>
+<dd> Displays a brief summary of options and exits.</dd>
+<dt>&quot;&#8211;options&quot;</dt>
+<dd> Displays the descriptions of the options and exits. While this output is long, it it nowhere near the length of the output of <tt>&quot;--man&quot;</tt>.</dd>
+<dt>&quot;&#8211;man&quot;</dt>
+<dd> Displays the complete <tt>&quot;perlcritic&quot;</tt> manual and exits.</dd>
+<dt>&quot;&#8211;version&quot;</dt>
 <dd>
-<dt>&quot;-V&quot;</p>
-<dd> Displays the version number of <tt>&quot;perlcritic&quot;</tt> and exits.</dl>
+</dd><dt>&quot;-V&quot;</dt>
+<dd> Displays the version number of <tt>&quot;perlcritic&quot;</tt> and exits.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> Most of the settings for Perl::Critic and each of the Policy modules can be controlled by a configuration file. The default configuration file is called <i>.perlcriticrc</i>. <tt>&quot;perlcritic&quot;</tt> will look for this file in the current directory first, and then in your home directory. Alternatively, you can set the <tt>&quot;PERLCRITIC&quot;</tt> environment variable to explicitly point to a different file in another location. If none of these files exist, and the <tt>&quot;--profile&quot;</tt> option is not given on the command-line, then all Policies will be loaded with their default configuration. </p>
 <p> The format of the configuration file is a series of INI-style blocks that contain key-value pairs separated by &#8220;=&#8221;. Comments should start with &#8220;#&#8221; and can be placed on a separate line or after the name-value pairs if you desire. </p>
@@ -371,7 +371,7 @@ $long_int = 10000000000;
 <h2>THE Perl::Critic PHILOSOPHY</h2>
 <dl>
 <dt>
-<dd> Coding standards are deeply personal and highly subjective. The goal of Perl::Critic is to help you write code that conforms with a set of best practices. Our primary goal is not to dictate what those practices are, but rather, to implement the practices discovered by others. Ultimately, you make the rules &#8212; Perl::Critic is merely a tool for encouraging consistency. If there is a policy that you think is important or that we have overlooked, we would be very grateful for contributions, or you can simply load your own private set of policies into Perl::Critic.</dl>
+</dt><dd> Coding standards are deeply personal and highly subjective. The goal of Perl::Critic is to help you write code that conforms with a set of best practices. Our primary goal is not to dictate what those practices are, but rather, to implement the practices discovered by others. Ultimately, you make the rules &#8212; Perl::Critic is merely a tool for encouraging consistency. If there is a policy that you think is important or that we have overlooked, we would be very grateful for contributions, or you can simply load your own private set of policies into Perl::Critic.</dd></dl>
 <h2>EXTENDING THE CRITIC</h2>
 <p> The modular design of Perl::Critic is intended to facilitate the addition of new Policies. You&#8217;ll need to have some understanding of <font SIZE="-1">PPI</font>, but most Policy modules are pretty straightforward and only require about 20 lines of code, and half of those lines are simple use statements and simple declarations.. Please see the Perl::Critic::DEVELOPER file included in this distribution for a step-by-step demonstration of how to create new Policy modules. </p>
 <p> If you develop any new Policy modules, feel free to send them to <tt>&quot;&lt;jeff [at] imaginative-software.com&gt;&quot;</tt> and I&#8217;ll be happy to put them into the Perl::Critic distribution. Or if you would like to work on the Perl::Critic project directly, check out our repository at &lt;<a rel="nofollow" href="http://perlcritic.tigris.org">http://perlcritic.tigris.org</a>&gt;. To subscribe to our mailing list, send a message to &lt;mailto:dev-subscribe [at] perlcritic.tigris.org&gt;. </p>
@@ -405,21 +405,21 @@ $long_int = 10000000000;
 <p> Copyright (c) 2005-2011 Imaginative Software Systems. All rights reserved. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. The full text of this license can be found in the <font SIZE="-1">LICENSE</font> file included with this module. </p>
 <h2>Index</h2>
-<dt><a href="#lbAT">EXIT STATUS</a></p>
+<dt><a href="#lbAT">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAU">THE Perl::Critic PHILOSOPHY</a></p>
+</dd><dt><a href="#lbAU">THE Perl::Critic PHILOSOPHY</a></dt>
 <dd>
-<dt><a href="#lbAV">EXTENDING THE CRITIC</a></p>
+</dd><dt><a href="#lbAV">EXTENDING THE CRITIC</a></dt>
 <dd>
-<dt><a href="#lbAW">CONTACTING THE DEVELOPMENT TEAM</a></p>
+</dd><dt><a href="#lbAW">CONTACTING THE DEVELOPMENT TEAM</a></dt>
 <dd>
-<dt><a href="#lbAX">SEE ALSO</a></p>
+</dd><dt><a href="#lbAX">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAY">BUGS</a></p>
+</dd><dt><a href="#lbAY">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAZ">CREDITS</a></p>
+</dd><dt><a href="#lbAZ">CREDITS</a></dt>
 <dd>
-<dt><a href="#lbBA">AUTHOR</a></p>
+</dd><dt><a href="#lbBA">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbBB">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBB">COPYRIGHT</a></dt>
+<dd></dd></dl>

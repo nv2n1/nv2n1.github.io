@@ -16,28 +16,28 @@ description: "mimeopen – Open files by mimetype"
 <p> To use this script you need the freedesktop mime-info database and the freedesktop desktop-file-utils package. See <i>File::MimeInfo::Applications</i>(3) for more details.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;ask</code></p>
-<dd> Do not execute the default application but ask which application to run. This does not change the default application.</p>
-<dt><code>-d</code>, <code>&#8211;ask-default</code></p>
-<dd> Let the user choose a new default program for given files.</p>
-<dt><code>-n</code>, <code>&#8211;no-ask</code></p>
-<dd> Don&#8217;t ask the user which program to use. Choose the default program or the first program known to handle the file mimetype. This does not set the default application.</p>
-<dt><code>-M</code>, <code>&#8211;magic-only</code></p>
-<dd> Do not check for extensions, globs or inode type, only look at the content of the file. This is particularly useful if for some reason you don&#8217;t trust the name or the extension a file has.</p>
-<dt><code>&#8211;database</code>=<i>mimedir</i>:<i>mimedir</i>:&#8230;</p>
-<dd> Force the program to look in these directories for the shared mime-info database. The directories specified by the basedir specification are ignored.</p>
-<dt><code>-D</code>, <code>&#8211;debug</code></p>
-<dd> Print debug information about how the mimetype was determined.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+<dt><code>-a</code>, <code>&#8211;ask</code></dt>
+<dd> Do not execute the default application but ask which application to run. This does not change the default application.</dd>
+<dt><code>-d</code>, <code>&#8211;ask-default</code></dt>
+<dd> Let the user choose a new default program for given files.</dd>
+<dt><code>-n</code>, <code>&#8211;no-ask</code></dt>
+<dd> Don&#8217;t ask the user which program to use. Choose the default program or the first program known to handle the file mimetype. This does not set the default application.</dd>
+<dt><code>-M</code>, <code>&#8211;magic-only</code></dt>
+<dd> Do not check for extensions, globs or inode type, only look at the content of the file. This is particularly useful if for some reason you don&#8217;t trust the name or the extension a file has.</dd>
+<dt><code>&#8211;database</code>=<i>mimedir</i>:<i>mimedir</i>:&#8230;</dt>
+<dd> Force the program to look in these directories for the shared mime-info database. The directories specified by the basedir specification are ignored.</dd>
+<dt><code>-D</code>, <code>&#8211;debug</code></dt>
+<dd> Print debug information about how the mimetype was determined.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
-<dt><code>-u</code>, <code>&#8211;usage</code></p>
-<dd> Print a help message and exits.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print the version of the program and exit.</dl>
+</dd><dt><code>-u</code>, <code>&#8211;usage</code></dt>
+<dd> Print a help message and exits.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print the version of the program and exit.</dd></dl>
 <h2>DEPRECATED OPTIONS</h2>
 <dl>
-<dt><code>-L</code>, <code>&#8211;dereference</code></p>
-<dd> Follow symbolic links. Deprecated because this is the logical default for this command. Ignored silently.</dl>
+<dt><code>-L</code>, <code>&#8211;dereference</code></dt>
+<dd> Follow symbolic links. Deprecated because this is the logical default for this command. Ignored silently.</dd></dl>
 <h2>BUGS</h2>
 <p> No known bugs, please mail the author if you find one. </p>
 <p> See <i>File::MimeInfo::Applications</i>(3) and <i>File::DesktopEntry</i>(3) for some limitations.</p>

@@ -15,11 +15,11 @@ blk_pm_runtime_init - Block layer runtime PM initialization routine
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue of the device</dl>
+<dl><dd></dd><dd>the queue of the device</dd></dl>
  
 
  <i>dev</i>
-<dl><dd>the device the queue belongs to</dl>
+<dl><dd>the device the queue belongs to</dd></dl>
 
 <h2>Description</h2>
 

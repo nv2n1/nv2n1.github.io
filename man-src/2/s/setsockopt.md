@@ -30,16 +30,16 @@ int setsockopt(int sockfd, int level, int optname,
 <p> Netfilter allows the programmer to define custom socket options with associated handlers; for such options, the return value on success is the value returned by the handler.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The argument <i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> The address pointed to by <i>optval</i> is not in a valid part of the process address space. For <code>getsockopt</code>(), this error may also be returned if <i>optlen</i> is not in a valid part of the process address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>optlen</i> invalid in <code>setsockopt</code>(). In some cases this error can also occur for an invalid value in <i>optval</i> (e.g., for the <code>IP_ADD_MEMBERSHIP</code> option described in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7)).</p>
-<dt><code>ENOPROTOOPT</code></p>
-<dd> The option is unknown at the level indicated.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The argument <i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The address pointed to by <i>optval</i> is not in a valid part of the process address space. For <code>getsockopt</code>(), this error may also be returned if <i>optlen</i> is not in a valid part of the process address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>optlen</i> invalid in <code>setsockopt</code>(). In some cases this error can also occur for an invalid value in <i>optval</i> (e.g., for the <code>IP_ADD_MEMBERSHIP</code> option described in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7)).</dd>
+<dt><code>ENOPROTOOPT</code></dt>
+<dd> The option is unknown at the level indicated.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (these system calls first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

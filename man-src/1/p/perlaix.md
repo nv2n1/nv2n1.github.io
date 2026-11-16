@@ -271,5 +271,5 @@ Perl | AIX Level | Compiler Level | w th | w / o th-- -- -- -+-- -- -- -- -- -- 
 <h2>AUTHORS</h2>
 <p> Rainer Tammer &lt;tammer [at] tammer.net&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbBB">AUTHORS</a></p>
-<dd></dl>
+<dt><a href="#lbBB">AUTHORS</a></dt>
+<dd></dd></dl>

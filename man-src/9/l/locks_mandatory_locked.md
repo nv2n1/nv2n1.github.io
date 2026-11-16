@@ -14,7 +14,7 @@ description: "locks_mandatory_locked – Check for an active lock"
 <p><i>file</i></p>
 <dl>
 <dd>
-<dd>the file to check</dl>
+</dd><dd>the file to check</dd></dl>
 <h2>Description</h2>
 <p>Searches the inode&#8217;s list of locks to find any POSIX locks which conflict. This function is called from <code>locks_verify_locked</code> only.</p>
 <h2>Copyright</h2>

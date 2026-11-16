@@ -10,13 +10,9 @@ description: "std::ratio – std::ratio"
 <p>std::ratio &#8211; std::ratio</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;ratio&gt;
-
 template&lt;
-
 std::intmax_t Num,         (since C++11)
-
 std::intmax_t Denom = 1
-
 &gt; class ratio;</code></pre>
 <p>The class template std::ratio provides compile-time_rational_arithmetic support. Each instantiation of this template exactly represents any finite rational number as long as its numerator Num and denominator Denom are representable as compile-time constants of type std::intmax_t. In addition, Denom may not be zero and may not be equal to the most negative value.<br />
 The static data members nom and den representing the numerator and denominator are calculated by dividing Num and Denom by their greatest common divisor. However, two std::ratio with different Num or Denom are distinct types even if they represent the same rational number (after reduction). A ratio type can be reduced to the lowest terms via its type member: std::ratio&lt;3, 6&gt;::type is std::ratio&lt;1, 2&gt;.<br />

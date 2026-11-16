@@ -12,58 +12,37 @@ description: "librasqal – Rasqal RDF query library"
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;rasqal.h&gt;
-
 &amp;nbsp;
-
 rasqal_world *world = rasqal_new_world();
-
 rasqal_query_results *results;
-
 raptor_uri *base_uri = raptor_new_uri("http://example.org/foo");
-
 rasqal_query *rq = rasqal_new_query(world, "rdql", NULL);
-
 const char *query_string = "select * from &lt;http://example.org/data.rdf&gt;";
-
 &amp;nbsp;
-
 rasqal_query_prepare(rq, query_string, base_uri);
-
 results = rasqal_query_execute(rq);
-
 while (!rasqal_query_results_finished(results))
     &amp;nbsp;
 {
-
     &amp;nbsp;
     for (i = 0; i &lt; rasqal_query_results_get_bindings_count(results); i++) {
-
         &amp;nbsp;
         &amp;nbsp;
         const char *name = rasqal_query_results_get_binding_name(results, i);
-
         &amp;nbsp;
         &amp;nbsp;
         rasqal_literal *value = rasqal_query_results_get_binding_value(results, i);
-
         &amp;nbsp;
         &amp;nbsp; /* ... */
-
         &amp;nbsp;
     }
-
     &amp;nbsp;
     rasqal_query_results_next(results);
 }
-
 rasqal_free_query_results(results);
-
 rasqal_free_query(rq);
-
 raptor_free_uri(base_uri);
-
 rasqal_free_world(world);
-
 cc prog.c - o prog `pkg - config rasqal-- cflags` `pkg - config rasqal-- libs`
 </code></pre>
 <h2>DESCRIPTION</h2>

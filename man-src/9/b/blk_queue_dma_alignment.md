@@ -15,11 +15,11 @@ blk_queue_dma_alignment - set dma length and memory alignment
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>alignment mask</dl>
+<dl><dd>alignment mask</dd></dl>
 
 <h2>Description</h2>
 

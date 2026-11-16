@@ -14,10 +14,10 @@ description: "snd_card_file_remove – remove the file from the file list"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>soundcard structure</dl>
+</dd><dd>soundcard structure</dd></dl>
 <p> <i>file</i></p>
 <dl>
-<dd>file pointer</dl>
+<dd>file pointer</dd></dl>
 <h2>Description</h2>
 <p>This function removes the file formerly added to the card via <code>snd_card_file_add</code> function. If all files are removed and <code>snd_card_free_when_closed</code> was called beforehand, it processes the pending release of resources.</p>
 <h2>Return</h2>

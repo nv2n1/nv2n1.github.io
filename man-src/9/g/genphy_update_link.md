@@ -15,7 +15,7 @@ genphy_update_link - update link status in <i>phydev</i>
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>target phy_device struct</dl>
+<dl><dd></dd><dd>target phy_device struct</dd></dl>
 
 <h2>Description</h2>
 

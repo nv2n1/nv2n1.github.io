@@ -28,9 +28,9 @@ url: "/docs/linux/man/1-perlpolicy/"
  You might sometimes see reference to Rule 1 and Rule 2. Larry's power as Supreme Court is expressed in The Rules:
 <dl>
 <dt>1.
-<dd> Larry is always by definition right about how Perl should behave. This means he has final veto power on the core functionality.
-<dt>2.
-<dd> Larry is allowed to change his mind about any matter at a later date, regardless of whether he previously invoked Rule 1.</dl>
+</dt><dd> Larry is always by definition right about how Perl should behave. This means he has final veto power on the core functionality.
+</dd><dt>2.
+</dt><dd> Larry is allowed to change his mind about any matter at a later date, regardless of whether he previously invoked Rule 1.</dd></dl>
  
 
  Got that? Larry is always right, even when he was wrong. It's rare to see either Rule exercised, but they are often alluded to.
@@ -46,17 +46,17 @@ url: "/docs/linux/man/1-perlpolicy/"
  This document codifies the support and maintenance commitments that the Perl community should expect from Perl's developers:
 <dl>
 <dt>&bull;
-<dd> We ``officially'' support the two most recent stable release series. 5.24.x and earlier are now out of support. As of the release of 5.30.0, we will ``officially'' end support for Perl 5.26.x, other than providing security updates as described below.
-<dt>&bull;
-<dd> To the best of our ability, we will attempt to fix critical issues in the two most recent stable 5.x release series. Fixes for the current release series take precedence over fixes for the previous release series.
-<dt>&bull;
-<dd> To the best of our ability, we will provide ``critical'' security patches / releases for any major version of Perl whose 5.x.0 release was within the past three years. We can only commit to providing these for the most recent .y release in any 5.x.y series.
-<dt>&bull;
-<dd> We will not provide security updates or bug fixes for development releases of Perl.
-<dt>&bull;
-<dd> We encourage vendors to ship the most recent supported release of Perl at the time of their code freeze.
-<dt>&bull;
-<dd> As a vendor, you may have a requirement to backport security fixes beyond our 3 year support commitment. We can provide limited support and advice to you as you do so and, where possible will try to apply those patches to the relevant -maint branches in git, though we may or may not choose to make numbered releases or ``official'' patches available. See ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details on how to begin that process.</dl>
+</dt><dd> We ``officially'' support the two most recent stable release series. 5.24.x and earlier are now out of support. As of the release of 5.30.0, we will ``officially'' end support for Perl 5.26.x, other than providing security updates as described below.
+</dd><dt>&bull;
+</dt><dd> To the best of our ability, we will attempt to fix critical issues in the two most recent stable 5.x release series. Fixes for the current release series take precedence over fixes for the previous release series.
+</dd><dt>&bull;
+</dt><dd> To the best of our ability, we will provide ``critical'' security patches / releases for any major version of Perl whose 5.x.0 release was within the past three years. We can only commit to providing these for the most recent .y release in any 5.x.y series.
+</dd><dt>&bull;
+</dt><dd> We will not provide security updates or bug fixes for development releases of Perl.
+</dd><dt>&bull;
+</dt><dd> We encourage vendors to ship the most recent supported release of Perl at the time of their code freeze.
+</dd><dt>&bull;
+</dt><dd> As a vendor, you may have a requirement to backport security fixes beyond our 3 year support commitment. We can provide limited support and advice to you as you do so and, where possible will try to apply those patches to the relevant -maint branches in git, though we may or may not choose to make numbered releases or ``official'' patches available. See ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details on how to begin that process.</dd></dl>
 
 <h2>BACKWARD COMPATIBILITY AND DEPRECATION</h2>
 
@@ -85,19 +85,16 @@ url: "/docs/linux/man/1-perlpolicy/"
  To make sure we're talking about the same thing when we discuss the removal of features or functionality from the Perl core, we have specific definitions for a few words and phrases.
 <dl>
 <dt>experimental
-<dd> If something in the Perl core is marked as <b>experimental</b>, we may change its behaviour, deprecate or remove it without notice. While we'll always do our best to smooth the transition path for users of experimental features, you should contact the perl5-porters mailinglist if you find an experimental feature useful and want to help shape its future. 
-
+</dt><dd> If something in the Perl core is marked as <b>experimental</b>, we may change its behaviour, deprecate or remove it without notice. While we'll always do our best to smooth the transition path for users of experimental features, you should contact the perl5-porters mailinglist if you find an experimental feature useful and want to help shape its future. 
  Experimental features must be experimental in two stable releases before being marked non-experimental. Experimental features will only have their experimental status revoked when they no longer have any design-changing bugs open against them and when they have remained unchanged in behavior for the entire length of a development cycle. In other words, a feature present in v5.20.0 may be marked no longer experimental in v5.22.0 if and only if its behavior is unchanged throughout all of v5.21.
-<dt>deprecated
-<dd> If something in the Perl core is marked as <b>deprecated</b>, we may remove it from the core in the future, though we might not. Generally, backward incompatible changes will have deprecation warnings for two release cycles before being removed, but may be removed after just one cycle if the risk seems quite low or the benefits quite high. 
-
+</dd><dt>deprecated
+</dt><dd> If something in the Perl core is marked as <b>deprecated</b>, we may remove it from the core in the future, though we might not. Generally, backward incompatible changes will have deprecation warnings for two release cycles before being removed, but may be removed after just one cycle if the risk seems quite low or the benefits quite high. 
  As of Perl 5.12, deprecated features and modules warn the user as they're used. When a module is deprecated, it will also be made available on <font SIZE="-1">CPAN.</font> Installing it from <font SIZE="-1">CPAN</font> will silence deprecation warnings for that module. 
-
  If you use a deprecated feature or module and believe that its removal from the Perl core would be a mistake, please contact the perl5-porters mailinglist and plead your case. We don't deprecate things without a good reason, but sometimes there's a counterargument we haven't considered. Historically, we did not distinguish between ``deprecated'' and ``discouraged'' features.
-<dt>discouraged
-<dd> From time to time, we may mark language constructs and features which we consider to have been mistakes as <b>discouraged</b>. Discouraged features aren't currently candidates for removal, but we may later deprecate them if they're found to stand in the way of a significant improvement to the Perl core.
-<dt>removed
-<dd> Once a feature, construct or module has been marked as deprecated, we may remove it from the Perl core. Unsurprisingly, we say we've <b>removed</b> these things. When a module is removed, it will no longer ship with Perl, but will continue to be available on <font SIZE="-1">CPAN.</font></dl>
+</dd><dt>discouraged
+</dt><dd> From time to time, we may mark language constructs and features which we consider to have been mistakes as <b>discouraged</b>. Discouraged features aren't currently candidates for removal, but we may later deprecate them if they're found to stand in the way of a significant improvement to the Perl core.
+</dd><dt>removed
+</dt><dd> Once a feature, construct or module has been marked as deprecated, we may remove it from the Perl core. Unsurprisingly, we say we've <b>removed</b> these things. When a module is removed, it will no longer ship with Perl, but will continue to be available on <font SIZE="-1">CPAN.</font></dd></dl>
 
 <h2>MAINTENANCE BRANCHES</h2>
 
@@ -108,37 +105,37 @@ url: "/docs/linux/man/1-perlpolicy/"
  The following types of change may be considered acceptable, as long as they do not also fall into any of the ``unacceptable'' categories set out below:
 <dl>
 <dt>&bull;
-<dd> Patches that fix CVEs or security issues. These changes should be passed using the security reporting mechanism rather than applied directly; see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec.
-<dt>&bull;
-<dd> Patches that fix crashing bugs, assertion failures and memory corruption but which do not otherwise change perl's functionality or negatively impact performance.
-<dt>&bull;
-<dd> Patches that fix regressions in perl's behavior relative to previous releases, no matter how old the regression, since some people may upgrade from very old versions of perl to the latest version.
-<dt>&bull;
-<dd> Patches that fix bugs in features that were new in the corresponding 5.x.0 stable release.
-<dt>&bull;
-<dd> Patches that fix anything which prevents or seriously impacts the build or installation of perl.
-<dt>&bull;
-<dd> Portability fixes, such as changes to Configure and the files in the hints/ folder.
-<dt>&bull;
-<dd> Minimal patches that fix platform-specific test failures.
-<dt>&bull;
-<dd> Documentation updates that correct factual errors, explain significant bugs or deficiencies in the current implementation, or fix broken markup.
-<dt>&bull;
-<dd> Updates to dual-life modules should consist of minimal patches to fix crashing bugs or security issues (as above). Any changes made to dual-life modules for which <font SIZE="-1">CPAN</font> is canonical should be coordinated with the upstream author.</dl>
+</dt><dd> Patches that fix CVEs or security issues. These changes should be passed using the security reporting mechanism rather than applied directly; see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec.
+</dd><dt>&bull;
+</dt><dd> Patches that fix crashing bugs, assertion failures and memory corruption but which do not otherwise change perl's functionality or negatively impact performance.
+</dd><dt>&bull;
+</dt><dd> Patches that fix regressions in perl's behavior relative to previous releases, no matter how old the regression, since some people may upgrade from very old versions of perl to the latest version.
+</dd><dt>&bull;
+</dt><dd> Patches that fix bugs in features that were new in the corresponding 5.x.0 stable release.
+</dd><dt>&bull;
+</dt><dd> Patches that fix anything which prevents or seriously impacts the build or installation of perl.
+</dd><dt>&bull;
+</dt><dd> Portability fixes, such as changes to Configure and the files in the hints/ folder.
+</dd><dt>&bull;
+</dt><dd> Minimal patches that fix platform-specific test failures.
+</dd><dt>&bull;
+</dt><dd> Documentation updates that correct factual errors, explain significant bugs or deficiencies in the current implementation, or fix broken markup.
+</dd><dt>&bull;
+</dt><dd> Updates to dual-life modules should consist of minimal patches to fix crashing bugs or security issues (as above). Any changes made to dual-life modules for which <font SIZE="-1">CPAN</font> is canonical should be coordinated with the upstream author.</dd></dl>
  
 
  The following types of change are <font SIZE="-1">NOT</font> acceptable:
 <dl>
 <dt>&bull;
-<dd> Patches that break binary compatibility. (Please talk to a pumpking.)
-<dt>&bull;
-<dd> Patches that add or remove features.
-<dt>&bull;
-<dd> Patches that add new warnings or errors or deprecate features.
-<dt>&bull;
-<dd> Ports of Perl to a new platform, architecture or <font SIZE="-1">OS</font> release that involve changes to the implementation.
-<dt>&bull;
-<dd> New versions of dual-life modules should <font SIZE="-1">NOT</font> be imported into maint. Those belong in the next stable series.</dl>
+</dt><dd> Patches that break binary compatibility. (Please talk to a pumpking.)
+</dd><dt>&bull;
+</dt><dd> Patches that add or remove features.
+</dd><dt>&bull;
+</dt><dd> Patches that add new warnings or errors or deprecate features.
+</dd><dt>&bull;
+</dt><dd> Ports of Perl to a new platform, architecture or <font SIZE="-1">OS</font> release that involve changes to the implementation.
+</dd><dt>&bull;
+</dt><dd> New versions of dual-life modules should <font SIZE="-1">NOT</font> be imported into maint. Those belong in the next stable series.</dd></dl>
  
 
  If there is any question about whether a given patch might merit inclusion in a maint release, then it almost certainly should not be included.
@@ -168,11 +165,11 @@ url: "/docs/linux/man/1-perlpolicy/"
  Once a module has been included in the Perl core, however, everyone involved in maintaining Perl should be aware that the module is still the property of the original author unless the original author explicitly gives up their ownership of it. In particular:
 <dl>
 <dt>&bull;
-<dd> The version of the module in the Perl core should still be considered the work of the original author. All patches, bug reports, and so forth should be fed back to them. Their development directions should be respected whenever possible.
-<dt>&bull;
-<dd> Patches may be applied by the pumpkin holder without the explicit cooperation of the module author if and only if they are very minor, time-critical in some fashion (such as urgent security fixes), or if the module author cannot be reached. Those patches must still be given back to the author when possible, and if the author decides on an alternate fix in their version, that fix should be strongly preferred unless there is a serious problem with it. Any changes not endorsed by the author should be marked as such, and the contributor of the change acknowledged.
-<dt>&bull;
-<dd> The version of the module distributed with Perl should, whenever possible, be the latest version of the module as distributed by the author (the latest non-beta version in the case of public Perl releases), although the pumpkin holder may hold off on upgrading the version of the module distributed with Perl to the latest version until the latest version has had sufficient testing.</dl>
+</dt><dd> The version of the module in the Perl core should still be considered the work of the original author. All patches, bug reports, and so forth should be fed back to them. Their development directions should be respected whenever possible.
+</dd><dt>&bull;
+</dt><dd> Patches may be applied by the pumpkin holder without the explicit cooperation of the module author if and only if they are very minor, time-critical in some fashion (such as urgent security fixes), or if the module author cannot be reached. Those patches must still be given back to the author when possible, and if the author decides on an alternate fix in their version, that fix should be strongly preferred unless there is a serious problem with it. Any changes not endorsed by the author should be marked as such, and the contributor of the change acknowledged.
+</dd><dt>&bull;
+</dt><dd> The version of the module distributed with Perl should, whenever possible, be the latest version of the module as distributed by the author (the latest non-beta version in the case of public Perl releases), although the pumpkin holder may hold off on upgrading the version of the module distributed with Perl to the latest version until the latest version has had sufficient testing.</dd></dl>
  
 
  In other words, the author of a module should be considered to have final say on modifications to their module whenever possible (bearing in mind that it's expected that everyone involved will work together and arrive at reasonable compromises when there are disagreements). 
@@ -204,9 +201,9 @@ url: "/docs/linux/man/1-perlpolicy/"
  The official forum for the development of perl is the perl5-porters mailing list, mentioned above, and its bugtracker at rt.perl.org. Posting to the list and the bugtracker is not a right: all participants in discussion are expected to adhere to a standard of conduct.
 <dl>
 <dt>&bull;
-<dd> Always be civil.
-<dt>&bull;
-<dd> Heed the moderators.</dl>
+</dt><dd> Always be civil.
+</dd><dt>&bull;
+</dt><dd> Heed the moderators.</dd></dl>
  
 
  Civility is simple: stick to the facts while avoiding demeaning remarks, belittling other individuals, sarcasm, or a presumption of bad faith. It is not enough to be factual. You must also be civil. Responding in kind to incivility is not acceptable. If you relay otherwise-unposted comments to the list from a third party, you take responsibility for the content of those comments, and you must therefore ensure that they are civil. 

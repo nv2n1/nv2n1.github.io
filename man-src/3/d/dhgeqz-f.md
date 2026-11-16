@@ -18,7 +18,7 @@ description: "dhgeqz.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DHGEQZ computes the eigenvalues of a real matrix pair (H,T),
  where H is an upper Hessenberg matrix and T is upper triangular,
@@ -29,9 +29,7 @@ description: "dhgeqz.f –"
  as computed by DGGHRD.
  If JOB='S', then the Hessenberg-triangular pair (H,T) is
  also reduced to generalized Schur form,
- 
     H = Q*S*Z**T,  T = Q*P*Z**T,
- 
  where Q and Z are orthogonal matrices, P is an upper triangular
  matrix, and S is a quasi-triangular matrix with 1-by-1 and 2-by-2
  diagonal blocks.
@@ -50,7 +48,6 @@ description: "dhgeqz.f –"
  output matrices Q1*Q and Z1*Z are the orthogonal factors from the
  generalized Schur factorization of (A,B):
     A = (Q1*Q)*S*(Z1*Z)**T,  B = (Q1*Q)*P*(Z1*Z)**T.
- 
  To avoid overflow, eigenvalues of the matrix pair (H,T) (equivalently,
  of (A,B)) are computed as a pair of values (alpha,beta), where alpha is
  complex and beta real.
@@ -67,11 +64,11 @@ description: "dhgeqz.f –"
       Eigenvalue Problems&quot;, SIAM J. Numer. Anal., 10(1973),
       pp. 241--256.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is CHARACTER*1
           = 'E': Compute eigenvalues only;
@@ -231,18 +228,18 @@ description: "dhgeqz.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Iteration counters:
   JITER  -- counts iterations.
@@ -250,7 +247,8 @@ description: "dhgeqz.f –"
             changed.  This is therefore reset only when a 1-by-1 or
             2-by-2 block deflates off the bottom.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 303 of file dhgeqz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

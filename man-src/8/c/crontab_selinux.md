@@ -95,8 +95,8 @@ description: "crontab_selinux – Security Enhanced Linux Policy for the crontab
 <p> <code>crontab_exec_t</code> </p>
 <p> &#8211; Set files with the crontab_exec_t type, if you want to transition an executable to the crontab_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/(f)?crontab, /usr/bin/at, /usr/sbin/fcronsighup, /usr/libexec/fcronsighup </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/(f)?crontab, /usr/bin/at, /usr/sbin/fcronsighup, /usr/libexec/fcronsighup </dd>
 </dl>
 <p> <code>crontab_tmp_t</code> </p>
 <p> &#8211; Set files with the crontab_tmp_t type, if you want to store crontab temporary files in the /tmp directories. </p>

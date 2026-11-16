@@ -15,15 +15,15 @@ strncasecmp - Case insensitive, length-limited string comparison
 <h2>Arguments</h2>
 
 <i>s1</i>
-<dl><dd><dd>One string</dl>
+<dl><dd></dd><dd>One string</dd></dl>
  
 
  <i>s2</i>
-<dl><dd>The other string</dl>
+<dl><dd>The other string</dd></dl>
  
 
  <i>len</i>
-<dl><dd>the maximum number of characters to compare</dl>
+<dl><dd>the maximum number of characters to compare</dd></dl>
 
 <h2>Copyright</h2>
 

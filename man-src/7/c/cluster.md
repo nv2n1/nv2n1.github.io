@@ -19,12 +19,12 @@ CLUSTER [VERBOSE]</pre>
 <p> When a table is being clustered, an ACCESS EXCLUSIVE lock is acquired on it. This prevents any other database operations (both reads and writes) from operating on the table until the <code>CLUSTER</code> is finished.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>tablename</i></p>
-<dd>The name (possibly schema-qualified) of a table.</p>
-<dt><i>indexname</i></p>
-<dd>The name of an index.</p>
-<dt><code>VERBOSE</code></p>
-<dd>Prints a progress report as each table is clustered.</dl>
+<dt><i>tablename</i></dt>
+<dd>The name (possibly schema-qualified) of a table.</dd>
+<dt><i>indexname</i></dt>
+<dd>The name of an index.</dd>
+<dt><code>VERBOSE</code></dt>
+<dd>Prints a progress report as each table is clustered.</dd></dl>
 <h2>Notes</h2>
 <p>In cases where you are accessing single rows randomly within a table, the actual order of the data in the table is unimportant. However, if you tend to access some data more than others, and there is an index that groups them together, you will benefit from using <code>CLUSTER</code>. If you are requesting a range of indexed values from a table, or a single indexed value that has multiple rows that match, <code>CLUSTER</code> will help because once the index identifies the table page for the first row that matches, all other rows that match are probably already on the same table page, and so you save disk accesses and speed up the query. </p>
 <p> During the cluster operation, a temporary copy of the table is created that contains the table data in the index order. Temporary copies of each index on the table are created as well. Therefore, you need free space on disk at least equal to the sum of the table size and the index sizes. </p>

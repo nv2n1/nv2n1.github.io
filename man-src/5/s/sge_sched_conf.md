@@ -20,8 +20,8 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
 <p> Currently <code>default</code> is the only allowed setting.</p>
 <h3><code>load_formula</code></h3>
 <p>A simple algebraic expression used to derive a single weighted load value from all or part of the load parameters reported by for each host and from all or part of the consumable resources (see being maintained for each host. The load formula expression syntax is that of a summation weighted load values, that is: </p>
-<pre><dl><dt><dd>{w1|load_val1[*w1]}[{+|-}{w2|load_val2[*w2]}[{+|-}...]]
-</dl></pre>
+<pre><dl><dt></dt><dd>{w1|load_val1[*w1]}[{+|-}{w2|load_val2[*w2]}[{+|-}...]]
+</dd></dl></pre>
 <p><code>Note</code>, no blanks are allowed in the load formula.<br />
  The load values and consumable resources (load_val1, &#8230;) are specified by the name defined in the complex (see<br />
  <code>Note:</code> Administrator defined load values (see the <code>load_sensor</code> parameter in for details) and consumable resources available for all hosts (see may be used as well as Grid Engine default load parameters.<br />
@@ -48,8 +48,8 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
  If the value is set to 0, the usage is not decayed.</p>
 <h3><code>usage_weight_list</code></h3>
 <p>Grid Engine accounts for the consumption of the resources CPU-time, memory and IO to determine the usage which is imposed on a system by a job. A single usage value is computed from these three input parameters by multiplying the individual values by weights and adding them up. The weights are defined in the <code>usage_weight_list</code>. The format of the list is </p>
-<pre><dl><dt><dd>cpu=wcpu,mem=wmem,io=wio
-</dl></pre>
+<pre><dl><dt></dt><dd>cpu=wcpu,mem=wmem,io=wio
+</dd></dl></pre>
 <p>where wcpu, wmem and wio are the configurable weights. The weights are real number. The sum of all tree weights should be 1.</p>
 <h3><code>compensation_factor</code></h3>
 <p>Determines how fast Grid Engine should compensate for past usage below of above the share entitlement defined in the share tree. Recommended values are between 2 and 10, where 10 means faster compensation.</p>
@@ -86,24 +86,24 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
 <h3><code>params</code></h3>
 <p>This is foreseen for passing additional parameters to the Grid Engine scheduler. The following values are recognized:</p>
 <dl>
-<dt><i>DURATION_OFFSET</i></p>
+<dt><i>DURATION_OFFSET</i></dt>
 <dd>If set, overrides the default of value 60 seconds. This parameter is used by the Grid Engine scheduler when planning resource utilization as the delta between net job runtimes and total time until resources become available again. Net job runtime as specified with -l h_rt=&#8230; or -l s_rt=&#8230; or <code>default_duration</code> always differs from total job runtime due to delays before and after actual job start and finish. Among the delays before job start is the time until the end of a <code>schedule_interval</code>, the time it takes to deliver a job to and the delays caused by <code>prolog</code> in , <code>start_proc_args</code> in and <code>starter_method</code> in (<code>notify</code>, <code>terminate_method</code> or <code>checkpointing</code>), procedures run after actual job finish, such as <code>stop_proc_args</code> in or <code>epilog</code> in , and the delay until a new <code>schedule_interval</code>.<br />
- If the offset is too low, resource reservations (see <code>max_reservation</code>) can be delayed repeatedly due to an overly optimistic job circulation time.</p>
-<dt><i>JC_FILTER</i></p>
+ If the offset is too low, resource reservations (see <code>max_reservation</code>) can be delayed repeatedly due to an overly optimistic job circulation time.</dd>
+<dt><i>JC_FILTER</i></dt>
 <dd><code>Note:</code> Deprecated, may be removed in future release.<br />
- If set to true, the scheduler limits the number of jobs it looks at during a scheduling run. At the beginning of the scheduling run it assigns each job a specific category, which is based on the job&#8217;s requests, priority settings, and the job owner. All scheduling policies will assign the same importance to each job in one category. Therefore the number of jobs per category have a FIFO order and can be limited to the number of free slots in the system. </p>
+ If set to true, the scheduler limits the number of jobs it looks at during a scheduling run. At the beginning of the scheduling run it assigns each job a specific category, which is based on the job&#8217;s requests, priority settings, and the job owner. All scheduling policies will assign the same importance to each job in one category. Therefore the number of jobs per category have a FIFO order and can be limited to the number of free slots in the system. </dd>
 <p> A exception are jobs, which request a resource reservation. They are included regardless of the number of jobs in a category. </p>
 <p> This setting is turned off per default, because in very rare cases, the scheduler can make a wrong decision. It is also advised to turn report_pjob_tickets off. Otherwise qstat -ext can report outdated ticket amounts. The information shown with a qstat -j for a job, that was excluded in a scheduling run, is very limited.</p>
-<dt><i>PROFILE</i></p>
-<dd>If set equal to 1, the scheduler logs profiling information summarizing each scheduling run.</p>
-<dt><i>MONITOR</i></p>
-<dd>If set equal to 1, the scheduler records information for each scheduling run allowing to reproduce job resources utilization in the file <i>&lt;ge_root&gt;/&lt;cell&gt;/common/schedule</i>.</p>
-<dt><i>PE_RANGE_ALG</i></p>
+<dt><i>PROFILE</i></dt>
+<dd>If set equal to 1, the scheduler logs profiling information summarizing each scheduling run.</dd>
+<dt><i>MONITOR</i></dt>
+<dd>If set equal to 1, the scheduler records information for each scheduling run allowing to reproduce job resources utilization in the file <i>&lt;ge_root&gt;/&lt;cell&gt;/common/schedule</i>.</dd>
+<dt><i>PE_RANGE_ALG</i></dt>
 <dd>This parameter sets the algorithm for the pe range computation. The default is automatic, which means that the scheduler will select the best one, and it should not be necessary to change it to a different setting in normal operation. If a custom setting is needed, the following values are available:<br />
  auto : the scheduler selects the best algorithm<br />
  least : starts the resource matching with the lowest slot amount first<br />
  bin : starts the resource matching in the middle of the pe slot range<br />
- highest : starts the resource matching with the highest slot amount first</dl>
+ highest : starts the resource matching with the highest slot amount first</dd></dl>
 <p> Changing <code>params</code> will take immediate effect. The default for <code>params</code> is none.</p>
 <h3><code>reprioritize_interval</code></h3>
 <p>Interval (HH:MM:SS) to reprioritize jobs on the execution hosts based on the current ticket amount for the running jobs. If the interval is set to 00:00:00 the reprioritization is turned off. The default value is 00:00:00.</p>
@@ -113,9 +113,9 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
 <h3><code>halflife_decay_list</code></h3>
 <p>The halflife_decay_list allows to configure different decay rates for the &quot;finished_jobs usage types, which is used in the pending job ticket calculation to account for jobs which have just ended. This allows the user the pending jobs algorithm to count finished jobs against a user or project for a configurable decayed time period. This feature is turned off by default, and the halftime is used instead.<br />
  The halflife_decay_list also allows one to configure different decay rates for each usage type being tracked (cpu, io, and mem). The list is specified in the following format: </p>
-<pre><dl><dt><dd><br>
+<pre><dl><dt></dt><dd><br>
 &lt;USAGE_TYPE&gt;=&lt;TIME&gt;[:&lt;USAGE_TYPE&gt;=&lt;TIME&gt;[:&lt;USAGE_TYPE&gt;=&lt;TIME&gt;]]
-</dl></pre>
+</dd></dl></pre>
 <p>&lt;Usage_TYPE&gt; can be one of the following: cpu, io, or mem.<br />
  &lt;TIME&gt; can be -1, 0 or a timespan specified in minutes. If &lt;TIME&gt; is -1, only the usage of currently running jobs is used. 0 means that the usage is not decayed.</p>
 <h3><code>policy_hierarchy</code></h3>

@@ -15,22 +15,22 @@ description: "hosts_access – format of host access control files"
 <h2>Access Control Files</h2>
 <p>The access control software consults two files. The search stops at the first match:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Access will be granted when a (daemon,client) pair matches an entry in the <i>/etc/hosts.allow</i> file.</p>
-<dt>&bull;</p>
-<dd>Otherwise, access will be denied when a (daemon,client) pair matches an entry in the <i>/etc/hosts.deny</i> file.</p>
-<dt>&bull;</p>
-<dd>Otherwise, access will be granted.</dl>
+<dt>&bull;</dt>
+<dd>Access will be granted when a (daemon,client) pair matches an entry in the <i>/etc/hosts.allow</i> file.</dd>
+<dt>&bull;</dt>
+<dd>Otherwise, access will be denied when a (daemon,client) pair matches an entry in the <i>/etc/hosts.deny</i> file.</dd>
+<dt>&bull;</dt>
+<dd>Otherwise, access will be granted.</dd></dl>
 <p> A non-existing access control file is treated as if it were an empty file. Thus, access control can be turned off by providing no access control files.</p>
 <h2>Access Control Rules</h2>
 <p>Each access control file consists of zero or more lines of text. These lines are processed in order of appearance. The search terminates when a match is found.</p>
 <dl>
-<dt>&bull;</p>
-<dd>A newline character is ignored when it is preceded by a backslash character. This permits you to break up long lines so that they are easier to edit.</p>
-<dt>&bull;</p>
-<dd>Blank lines or lines that begin with a `#&#8217; character are ignored. This permits you to insert comments and whitespace so that the tables are easier to read.</p>
-<dt>&bull;</p>
-<dd>All other lines should satisfy the following format, things between [] being optional: </p>
+<dt>&bull;</dt>
+<dd>A newline character is ignored when it is preceded by a backslash character. This permits you to break up long lines so that they are easier to edit.</dd>
+<dt>&bull;</dt>
+<dd>Blank lines or lines that begin with a `#&#8217; character are ignored. This permits you to insert comments and whitespace so that the tables are easier to read.</dd>
+<dt>&bull;</dt>
+<dd>All other lines should satisfy the following format, things between [] being optional: </dd>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp; daemon_list : client_list [ : shell_command ]</dl>
 <p> <i>daemon_list</i> is a list of one or more daemon process names (argv[0] values) or server port numbers or wildcards (see below). </p>
 <p> <i>client_list</i> is a list of one or more host names, host addresses, patterns or wildcards (see below) that will be matched against the client host name or address. </p>
@@ -40,40 +40,40 @@ description: "hosts_access – format of host access control files"
 <h2>Patterns</h2>
 <p>The access control language implements the following patterns:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A string that begins with a `.&#8217; character. A host name is matched if the last components of its name match the specified pattern. For example, the pattern `.tue.nl&#8217; matches the host name `wzv.win.tue.nl&#8217;.</p>
-<dt>&bull;</p>
-<dd>A string that ends with a `.&#8217; character. A host address is matched if its first numeric fields match the given string. For example, the pattern `131.155.&#8217; matches the address of (almost) every host on the Eindhoven University network (131.155.x.x).</p>
-<dt>&bull;</p>
-<dd>A string that begins with an `@&#8217; character is treated as an NIS (formerly YP) netgroup name. A host name is matched if it is a host member of the specified netgroup. Netgroup matches are not supported for daemon process names or for client user names.</p>
-<dt>&bull;</p>
-<dd>An expression of the form `n.n.n.n/m.m.m.m&#8217; is interpreted as a `net/mask&#8217; pair. An IPv4 host address is matched if `net&#8217; is equal to the bitwise AND of the address and the `mask&#8217;. For example, the net/mask pattern `131.155.72.0/255.255.254.0&#8242; matches every address in the range `131.155.72.0&#8242; through `131.155.73.255&#8242;. `255.255.255.255&#8242; is not a valid mask value, so a single host can be matched just by its IP.</p>
-<dt>&bull;</p>
-<dd>An expression of the form `n.n.n.n/mm&#8217; is interpreted as a `net/masklength&#8217; pair, where `mm&#8217; is the number of consecutive `1&#8242; bits in the netmask applied to the `n.n.n.n&#8217; address.</p>
-<dt>&bull;</p>
-<dd>An expression of the form `[n:n:n:n:n:n:n:n]/m&#8217; is interpreted as a `[net]/prefixlen&#8217; pair. An IPv6 host address is matched if `prefixlen&#8217; bits of `net&#8217; is equal to the `prefixlen&#8217; bits of the address. For example, the [net]/prefixlen pattern `[3ffe:505:2:1::]/64&#8242; matches every address in the range `3ffe:505:2:1::&#8217; through `3ffe:505:2:1:ffff:ffff:ffff:ffff&#8217;.</p>
-<dt>&bull;</p>
-<dd>A string that begins with a `/&#8217; character is treated as a file name. A host name or address is matched if it matches any host name or address pattern listed in the named file. The file format is zero or more lines with zero or more host name or address patterns separated by whitespace. A file name pattern can be used anywhere a host name or address pattern can be used.</p>
-<dt>&bull;</p>
-<dd>Wildcards `*&#8217; and `?&#8217; can be used to match hostnames or IP addresses. This method of matching cannot be used in conjunction with `net/mask&#8217; matching, hostname matching beginning with `.&#8217; or IP address matching ending with `.&#8217;.</dl>
+<dt>&bull;</dt>
+<dd>A string that begins with a `.&#8217; character. A host name is matched if the last components of its name match the specified pattern. For example, the pattern `.tue.nl&#8217; matches the host name `wzv.win.tue.nl&#8217;.</dd>
+<dt>&bull;</dt>
+<dd>A string that ends with a `.&#8217; character. A host address is matched if its first numeric fields match the given string. For example, the pattern `131.155.&#8217; matches the address of (almost) every host on the Eindhoven University network (131.155.x.x).</dd>
+<dt>&bull;</dt>
+<dd>A string that begins with an `@&#8217; character is treated as an NIS (formerly YP) netgroup name. A host name is matched if it is a host member of the specified netgroup. Netgroup matches are not supported for daemon process names or for client user names.</dd>
+<dt>&bull;</dt>
+<dd>An expression of the form `n.n.n.n/m.m.m.m&#8217; is interpreted as a `net/mask&#8217; pair. An IPv4 host address is matched if `net&#8217; is equal to the bitwise AND of the address and the `mask&#8217;. For example, the net/mask pattern `131.155.72.0/255.255.254.0&#8242; matches every address in the range `131.155.72.0&#8242; through `131.155.73.255&#8242;. `255.255.255.255&#8242; is not a valid mask value, so a single host can be matched just by its IP.</dd>
+<dt>&bull;</dt>
+<dd>An expression of the form `n.n.n.n/mm&#8217; is interpreted as a `net/masklength&#8217; pair, where `mm&#8217; is the number of consecutive `1&#8242; bits in the netmask applied to the `n.n.n.n&#8217; address.</dd>
+<dt>&bull;</dt>
+<dd>An expression of the form `[n:n:n:n:n:n:n:n]/m&#8217; is interpreted as a `[net]/prefixlen&#8217; pair. An IPv6 host address is matched if `prefixlen&#8217; bits of `net&#8217; is equal to the `prefixlen&#8217; bits of the address. For example, the [net]/prefixlen pattern `[3ffe:505:2:1::]/64&#8242; matches every address in the range `3ffe:505:2:1::&#8217; through `3ffe:505:2:1:ffff:ffff:ffff:ffff&#8217;.</dd>
+<dt>&bull;</dt>
+<dd>A string that begins with a `/&#8217; character is treated as a file name. A host name or address is matched if it matches any host name or address pattern listed in the named file. The file format is zero or more lines with zero or more host name or address patterns separated by whitespace. A file name pattern can be used anywhere a host name or address pattern can be used.</dd>
+<dt>&bull;</dt>
+<dd>Wildcards `*&#8217; and `?&#8217; can be used to match hostnames or IP addresses. This method of matching cannot be used in conjunction with `net/mask&#8217; matching, hostname matching beginning with `.&#8217; or IP address matching ending with `.&#8217;.</dd></dl>
 <h2>Wildcards</h2>
 <p>The access control language supports explicit wildcards:</p>
 <dl>
-<dt>ALL</p>
-<dd>The universal wildcard, always matches.</p>
-<dt>LOCAL</p>
-<dd>Matches any host whose name does not contain a dot character.</p>
-<dt>UNKNOWN</p>
-<dd>Matches any user whose name is unknown, and matches any host whose name <i>or</i> address are unknown. This pattern should be used with care: host names may be unavailable due to temporary name server problems. A network address will be unavailable when the software cannot figure out what type of network it is talking to.</p>
-<dt>KNOWN</p>
-<dd>Matches any user whose name is known, and matches any host whose name <i>and</i> address are known. This pattern should be used with care: host names may be unavailable due to temporary name server problems. A network address will be unavailable when the software cannot figure out what type of network it is talking to.</p>
-<dt>PARANOID</p>
-<dd>Matches any host whose name does not match its address. When tcpd is built with -DPARANOID (default mode), it drops requests from such clients even before looking at the access control tables. Build without -DPARANOID when you want more control over such requests.</dl>
+<dt>ALL</dt>
+<dd>The universal wildcard, always matches.</dd>
+<dt>LOCAL</dt>
+<dd>Matches any host whose name does not contain a dot character.</dd>
+<dt>UNKNOWN</dt>
+<dd>Matches any user whose name is unknown, and matches any host whose name <i>or</i> address are unknown. This pattern should be used with care: host names may be unavailable due to temporary name server problems. A network address will be unavailable when the software cannot figure out what type of network it is talking to.</dd>
+<dt>KNOWN</dt>
+<dd>Matches any user whose name is known, and matches any host whose name <i>and</i> address are known. This pattern should be used with care: host names may be unavailable due to temporary name server problems. A network address will be unavailable when the software cannot figure out what type of network it is talking to.</dd>
+<dt>PARANOID</dt>
+<dd>Matches any host whose name does not match its address. When tcpd is built with -DPARANOID (default mode), it drops requests from such clients even before looking at the access control tables. Build without -DPARANOID when you want more control over such requests.</dd></dl>
 <h2>Operators</h2>
 <dl>
-<dt>EXCEPT</p>
+<dt>EXCEPT</dt>
 <dd>Intended use is of the form: `list_1 EXCEPT list_2&#8242;; this construct matches anything that matches <i>list_1</i> unless it matches <i>list_2</i>. The EXCEPT operator can be used in daemon_lists and in client_lists. The EXCEPT operator can be nested: if the control language would permit the use of parentheses, `a EXCEPT b EXCEPT c&#8217; would parse as `(a EXCEPT (b EXCEPT c))&#8217;.
-</dl>
+</dd></dl>
 <h2>Shell Commands</h2>
 <p>If the first-matched access control rule contains a shell command, that command is subjected to %&lt;letter&gt; substitutions (see next section). The result is executed by a <i>/bin/sh</i> child process with standard input, output and error connected to <i>/dev/null</i>. Specify an `&amp;&#8217; at the end of the command if you do not want to wait until it has completed. </p>
 <p> Shell commands should not rely on the PATH setting of the inetd. Instead, they should use absolute path names, or they should begin with an explicit PATH=whatever statement. </p>
@@ -81,26 +81,26 @@ description: "hosts_access – format of host access control files"
 <h2>% Expansions</h2>
 <p>The following expansions are available within shell commands:</p>
 <dl>
-<dt>%a (%A)</p>
-<dd>The client (server) host address.</p>
-<dt>%c</p>
-<dd>Client information: user [at] host, user [at] address, a host name, or just an address, depending on how much information is available.</p>
-<dt>%d</p>
-<dd>The daemon process name (argv[0] value).</p>
-<dt>%h (%H)</p>
-<dd>The client (server) host name or address, if the host name is unavailable.</p>
-<dt>%n (%N)</p>
-<dd>The client (server) host name (or &quot;unknown&quot; or &quot;paranoid&quot;).</p>
-<dt>%r (%R)</p>
-<dd>The clients (servers) port number (or &quot;0&quot;).</p>
-<dt>%p</p>
-<dd>The daemon process id.</p>
-<dt>%s</p>
-<dd>Server information: daemon [at] host, daemon [at] address, or just a daemon name, depending on how much information is available.</p>
-<dt>%u</p>
-<dd>The client user name (or &quot;unknown&quot;).</p>
-<dt>%%</p>
-<dd>Expands to a single `%&#8217; character.</dl>
+<dt>%a (%A)</dt>
+<dd>The client (server) host address.</dd>
+<dt>%c</dt>
+<dd>Client information: user [at] host, user [at] address, a host name, or just an address, depending on how much information is available.</dd>
+<dt>%d</dt>
+<dd>The daemon process name (argv[0] value).</dd>
+<dt>%h (%H)</dt>
+<dd>The client (server) host name or address, if the host name is unavailable.</dd>
+<dt>%n (%N)</dt>
+<dd>The client (server) host name (or &quot;unknown&quot; or &quot;paranoid&quot;).</dd>
+<dt>%r (%R)</dt>
+<dd>The clients (servers) port number (or &quot;0&quot;).</dd>
+<dt>%p</dt>
+<dd>The daemon process id.</dd>
+<dt>%s</dt>
+<dd>Server information: daemon [at] host, daemon [at] address, or just a daemon name, depending on how much information is available.</dd>
+<dt>%u</dt>
+<dd>The client user name (or &quot;unknown&quot;).</dd>
+<dt>%%</dt>
+<dd>Expands to a single `%&#8217; character.</dd></dl>
 <p> Characters in % expansions that may confuse the shell are replaced by underscores.</p>
 <h2>Server Endpoint Patterns</h2>
 <p>In order to distinguish clients by the network address that they connect to, use patterns of the form: </p>
@@ -113,14 +113,14 @@ description: "hosts_access – format of host access control files"
 <p> The daemon wrappers can be configured at compile time to perform rule-driven username lookups (default) or to always interrogate the client host. In the case of rule-driven username lookups, the above rule would cause username lookup only when both the <i>daemon_list</i> and the <i>host_pattern</i> match. </p>
 <p> A user pattern has the same syntax as a daemon process pattern, so the same wildcards apply (netgroup membership is not supported). One should not get carried away with username lookups, though.</p>
 <dl>
-<dt>&bull;</p>
-<dd>The client username information cannot be trusted when it is needed most, i.e. when the client system has been compromised. In general, ALL and (UN)KNOWN are the only user name patterns that make sense.</p>
-<dt>&bull;</p>
-<dd>Username lookups are possible only with TCP-based services, and only when the client host runs a suitable daemon; in all other cases the result is &quot;unknown&quot;.</p>
-<dt>&bull;</p>
-<dd>A well-known UNIX kernel bug may cause loss of service when username lookups are blocked by a firewall. The wrapper README document describes a procedure to find out if your kernel has this bug.</p>
-<dt>&bull;</p>
-<dd>Username lookups may cause noticeable delays for non-UNIX users. The default timeout for username lookups is 10 seconds: too short to cope with slow networks, but long enough to irritate PC users.</dl>
+<dt>&bull;</dt>
+<dd>The client username information cannot be trusted when it is needed most, i.e. when the client system has been compromised. In general, ALL and (UN)KNOWN are the only user name patterns that make sense.</dd>
+<dt>&bull;</dt>
+<dd>Username lookups are possible only with TCP-based services, and only when the client host runs a suitable daemon; in all other cases the result is &quot;unknown&quot;.</dd>
+<dt>&bull;</dt>
+<dd>A well-known UNIX kernel bug may cause loss of service when username lookups are blocked by a firewall. The wrapper README document describes a procedure to find out if your kernel has this bug.</dd>
+<dt>&bull;</dt>
+<dd>Username lookups may cause noticeable delays for non-UNIX users. The default timeout for username lookups is 10 seconds: too short to cope with slow networks, but long enough to irritate PC users.</dd></dl>
 <p> Selective username lookups can alleviate the last problem. For example, a rule like: </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp; daemon_list : @pcnetgroup ALL@ALL </p>
 <p> would match members of the pc netgroup without doing username lookups, but would perform username lookups with all other systems.</p>

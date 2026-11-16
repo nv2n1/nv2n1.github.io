@@ -14,15 +14,15 @@ description: "ilsel_enable_fixed – Enable an ILSEL set at a fixed interrupt le
 <p><i>set</i></p>
 <dl>
 <dd>
-<dd>ILSEL source (see ilsel_source_t enum in include/asm-sh/ilsel.h).</dl>
+</dd><dd>ILSEL source (see ilsel_source_t enum in include/asm-sh/ilsel.h).</dd></dl>
 <p> <i>level</i></p>
 <dl>
-<dd>Interrupt level (1 &#8211; 15)</dl>
+<dd>Interrupt level (1 &#8211; 15)</dd></dl>
 <h2>Description</h2>
 <p>Enables a given ILSEL source at a fixed interrupt level. Necessary both for level reservation as well as for aliased sources that only exist on special ILSEL#s. </p>
 <p> Returns an IRQ number (as <code>ilsel_enable</code>).</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

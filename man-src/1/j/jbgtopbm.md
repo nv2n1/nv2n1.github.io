@@ -18,20 +18,20 @@ description: "jbgtopbm – JBIG1 to portable bitmap file converter"
 <p> If more than one bit per pixel is stored in the JBIG1 file, then a PGM file will be produced.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> A single hyphen instead of an input file name will cause <i>jbgtopbm</i> to read the data from standard input instead from a file.</p>
-<dt><code>-x</code><i> number</i></p>
-<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels wide. If no such resolution layer exists, then use the smallest one available.</p>
-<dt><code>-y</code><i> number</i></p>
-<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels high. If no such resolution layer exists, then use the smallest one available. Options <code>-x</code> and <code>-y</code> can also be used together in which case the largest layer that satisfies both limits will be selected.</p>
-<dt><code>-m</code></p>
-<dd> Process multiple concatenated BIEs. If there are bytes left after the final SDE in the first BIE, then with this option <i>jbgtopbm</i> will attempt to decode these as the start of another BIE that may contain higher resolution data. Normally, any remaining bytes will generate a warning message.</p>
-<dt><code>-b</code></p>
-<dd> Use binary values instead of Gray code words in order to decode pixel values from multiple bitplanes. This option has only an effect if the input has more than one bitplane and a PGM output file is produced. Note that the decoder has to be used in the same mode as the encoder and cannot determine from the BIE, whether Gray or binary code words were used by the encoder.</p>
-<dt><code>-d</code></p>
-<dd> Diagnose a single BIE. With this option, <i>jbgtopbm</i> will print a summary of the header information found in the input file, followed by a list of all PSCD and ESC marker sequences encountered until the end of the file is reached.</p>
-<dt><code>-p</code><i> number</i></p>
-<dd> If the input contains multiple bitplanes, then extract only the specified single plane as a PBM file. The first plane has number 0.</dl>
+<dt><code>&#8211;</code></dt>
+<dd> A single hyphen instead of an input file name will cause <i>jbgtopbm</i> to read the data from standard input instead from a file.</dd>
+<dt><code>-x</code><i> number</i></dt>
+<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels wide. If no such resolution layer exists, then use the smallest one available.</dd>
+<dt><code>-y</code><i> number</i></dt>
+<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels high. If no such resolution layer exists, then use the smallest one available. Options <code>-x</code> and <code>-y</code> can also be used together in which case the largest layer that satisfies both limits will be selected.</dd>
+<dt><code>-m</code></dt>
+<dd> Process multiple concatenated BIEs. If there are bytes left after the final SDE in the first BIE, then with this option <i>jbgtopbm</i> will attempt to decode these as the start of another BIE that may contain higher resolution data. Normally, any remaining bytes will generate a warning message.</dd>
+<dt><code>-b</code></dt>
+<dd> Use binary values instead of Gray code words in order to decode pixel values from multiple bitplanes. This option has only an effect if the input has more than one bitplane and a PGM output file is produced. Note that the decoder has to be used in the same mode as the encoder and cannot determine from the BIE, whether Gray or binary code words were used by the encoder.</dd>
+<dt><code>-d</code></dt>
+<dd> Diagnose a single BIE. With this option, <i>jbgtopbm</i> will print a summary of the header information found in the input file, followed by a list of all PSCD and ESC marker sequences encountered until the end of the file is reached.</dd>
+<dt><code>-p</code><i> number</i></dt>
+<dd> If the input contains multiple bitplanes, then extract only the specified single plane as a PBM file. The first plane has number 0.</dd></dl>
 <h2>BUGS</h2>
 <p> Using standard input and standard output for binary data works only on systems where there is no difference between binary and text streams (e.g., Unix). On other systems (e.g., MS-DOS), using standard input or standard output may cause control characters like CR or LF to be inserted or deleted and this will damage the binary data.</p>
 <h2>STANDARDS</h2>

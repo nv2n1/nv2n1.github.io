@@ -10,7 +10,6 @@ description: "pack_feof – Returns nonzero as soon as you reach the end of the 
 <p>pack_feof &#8211; Returns nonzero as soon as you reach the end of the file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int pack_feof(PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Finds out if you have reached the end of the file. It does not wait for you to attempt to read beyond the end of the file, contrary to the ISO C feof() function. The only way to know whether you have read beyond the end of the file is to check the return value of the read operation you use (and be wary of pack_*getl() as EOF is also a valid return value with these functions).</p>

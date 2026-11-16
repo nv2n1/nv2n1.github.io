@@ -17,9 +17,9 @@ XListDeviceProperties - List a device's properties.
 properties associated with the input device specified in
 device. Each device may have an arbitrary number of properties
 attached, some of which were created by the driver and/or
-server, others created by clients at runtime.</pre></dl><dl COMPACT><dd><pre>The client is expected to free the list of properties using
-XFree.</pre></dl><dl COMPACT><dd><pre>XListDeviceProperties can generate a BadDevice error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+server, others created by clients at runtime.</pre></dd></dl><dl COMPACT><dd><pre>The client is expected to free the list of properties using
+XFree.</pre></dd></dl><dl COMPACT><dd><pre>XListDeviceProperties can generate a BadDevice error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceProperty(3),
+ exist.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceProperty(3),
 XGetDeviceProperty(3),
-XDeleteDeviceProperty(3)</pre></dl>
+XDeleteDeviceProperty(3)</pre></dd></dl>

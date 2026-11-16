@@ -24,8 +24,8 @@ description: "greylist_selinux – Security Enhanced Linux Policy for the greyli
 <p> greylist_milter_data_t </code> </p>
 <p> &#8211; Set files with the greylist_milter_data_t type, if you want to treat the files as greylist milter content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/milter-greylist.pid, /var/run/milter-greylist(/.*)?, /var/lib/milter-greylist(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/milter-greylist.pid, /var/run/milter-greylist(/.*)?, /var/lib/milter-greylist(/.*)? </dd>
 </dl>
 <p> <code>greylist_milter_exec_t </code> </p>
 <p> &#8211; Set files with the greylist_milter_exec_t type, if you want to transition an executable to the greylist_milter_t domain. </p>

@@ -59,9 +59,9 @@ description: "squid_selinux – Security Enhanced Linux Policy for the squid pro
 <p> Policy governs the access confined processes have to these ports. SELinux squid policy is very flexible allowing users to setup their squid processes in as secure a method as possible. </p>
 <p> The following port types are defined for squid: </p>
 <dl>
-<dt><code>squid_port_t</code></p>
+<dt><code>squid_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 3128,3401,4827 udp 3401,4827</dl>
+</dd><dd>Default Defined Ports: tcp 3128,3401,4827 udp 3401,4827</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type squid_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -136,14 +136,14 @@ description: "squid_selinux – Security Enhanced Linux Policy for the squid pro
 <p> <code>squid_cache_t</code> </p>
 <p> &#8211; Set files with the squid_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/squidGuard(/.*)?, /var/lightsquid(/.*)?, /var/cache/squid(/.*)?, /var/spool/squid(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/squidGuard(/.*)?, /var/lightsquid(/.*)?, /var/cache/squid(/.*)?, /var/spool/squid(/.*)? </dd>
 </dl>
 <p> <code>squid_conf_t</code> </p>
 <p> &#8211; Set files with the squid_conf_t type, if you want to treat the files as squid configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/squid(/.*)?, /etc/lightsquid(/.*)?, /usr/share/squid(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/squid(/.*)?, /etc/lightsquid(/.*)?, /usr/share/squid(/.*)? </dd>
 </dl>
 <p> <code>squid_content_t</code> </p>
 <p> &#8211; Set files with the squid_content_t type, if you want to treat the files as squid content. </p>
@@ -152,8 +152,8 @@ description: "squid_selinux – Security Enhanced Linux Policy for the squid pro
 <p> <code>squid_exec_t</code> </p>
 <p> &#8211; Set files with the squid_exec_t type, if you want to transition an executable to the squid_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/squid, /usr/libexec/squid/cache_swap.sh </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/squid, /usr/libexec/squid/cache_swap.sh </dd>
 </dl>
 <p> <code>squid_htaccess_t</code> </p>
 <p> &#8211; Set files with the squid_htaccess_t type, if you want to treat the file as a squid access file. </p>
@@ -162,8 +162,8 @@ description: "squid_selinux – Security Enhanced Linux Policy for the squid pro
 <p> <code>squid_log_t</code> </p>
 <p> &#8211; Set files with the squid_log_t type, if you want to treat the data as squid log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/squid(/.*)?, /var/log/squidGuard(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/squid(/.*)?, /var/log/squidGuard(/.*)? </dd>
 </dl>
 <p> <code>squid_ra_content_t</code> </p>
 <p> &#8211; Set files with the squid_ra_content_t type, if you want to treat the files as squid read/append content. </p>
@@ -172,8 +172,8 @@ description: "squid_selinux – Security Enhanced Linux Policy for the squid pro
 <p> <code>squid_script_exec_t</code> </p>
 <p> &#8211; Set files with the squid_script_exec_t type, if you want to transition an executable to the squid_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/lightsquid/cgi(/.*)?, /usr/lib/squid/cachemgr.cgi </p>
+<dt>Paths:</dt>
+<dd>/usr/share/lightsquid/cgi(/.*)?, /usr/lib/squid/cachemgr.cgi </dd>
 </dl>
 <p> <code>squid_tmp_t</code> </p>
 <p> &#8211; Set files with the squid_tmp_t type, if you want to store squid temporary files in the /tmp directories. </p>

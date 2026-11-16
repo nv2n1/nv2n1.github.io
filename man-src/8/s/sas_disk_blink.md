@@ -16,12 +16,12 @@ description: "sas_disk_blink – blink the LED on a SAS disk"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-s</code>, <code>&#8211;set</code> <i>NUM</i></p>
-<dd>when <i>NUM</i> is 0 then the RLM field is cleared. When <i>NUM</i> is 1 then the RLM field is set. When <i>NUM</i> &gt; 1 then the SAS disk LED is made to blink for <i>NUM</i> seconds. If this option is not given then the SAS disk LED is made to blink for 30 seconds.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-s</code>, <code>&#8211;set</code> <i>NUM</i></dt>
+<dd>when <i>NUM</i> is 0 then the RLM field is cleared. When <i>NUM</i> is 1 then the RLM field is set. When <i>NUM</i> &gt; 1 then the SAS disk LED is made to blink for <i>NUM</i> seconds. If this option is not given then the SAS disk LED is made to blink for 30 seconds.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status of this script is 0 when it is successful. Otherwise the exit status is that of the last sdparm utility called. See the <a href="/docs/linux/man/8-sdparm/">sdparm</a>(8) man page.</p>
 <h2>Authors</h2>

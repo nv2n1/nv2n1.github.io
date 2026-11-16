@@ -11,9 +11,7 @@ std::apply - std::apply
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;tuple&gt;
-
 template &lt;class F, class Tuple&gt;                    (since C++17)
-
 constexpr decltype(auto) apply(F&amp;&amp; f, Tuple&amp;&amp; t);</code></pre> 
 Invoke the Callable object f with a tuple of arguments. 
 
@@ -52,23 +50,19 @@ The tuple need not be std::tuple, and instead may be anything that supports std:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;utility&gt;
 int add(int first, int second)
 {
     return first + second;
 }
 template &lt;typename T&gt;
-
 T add_generic(T first, T second)
 {
     return first + second;
 }
 auto add_lambda = [](auto first, auto second) { return first + second; };
 int main()
-
 {
     // OK
     std::cout &lt;&lt; std::apply(add, std::make_pair(1, 2)) &lt;&lt; '\n';

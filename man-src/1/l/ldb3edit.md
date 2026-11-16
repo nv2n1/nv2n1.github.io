@@ -11,7 +11,7 @@ ldbedit - Edit LDB databases using your preferred editor
 <h2>Synopsis</h2>
 
 <dl>
-<dt> FCldbeditF[] [-?] [--usage] [-s base|one|sub] [-b basedn] [-a] [-e editor] [-H LDB-URL] [expression] [attributes...]</dl>
+<dt> FCldbeditF[] [-?] [--usage] [-s base|one|sub] [-b basedn] [-a] [-e editor] [-H LDB-URL] [expression] [attributes...]</dt></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -24,51 +24,51 @@ ldbedit - Edit LDB databases using your preferred editor
  
 
  -?, --help
-<dl>
+</dd><dl>
 <dt>
-<dd> Show list of available options, and a phrase describing what that option does.</dl>
+</dt><dd> Show list of available options, and a phrase describing what that option does.</dd></dl>
  
 
  --usage
 <dl>
 <dt>
-<dd> Show list of available options. This is similar to the help option, however it does not provide any description, and is hence shorter.</dl>
+</dt><dd> Show list of available options. This is similar to the help option, however it does not provide any description, and is hence shorter.</dd></dl>
  
 
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. For a tdb database, this will be of the form tdb://<i>filename</i>. For a LDAP connection over unix domain sockets, this will be of the form ldapi://<i>socket</i>. For a (potentially remote) LDAP connection over TCP, this will be of the form ldap://<i>hostname</i>. For an SQLite database, this will be of the form sqlite://<i>filename</i>.</dl>
+</dt><dd> LDB URL to connect to. For a tdb database, this will be of the form tdb://<i>filename</i>. For a LDAP connection over unix domain sockets, this will be of the form ldapi://<i>socket</i>. For a (potentially remote) LDAP connection over TCP, this will be of the form ldap://<i>hostname</i>. For an SQLite database, this will be of the form sqlite://<i>filename</i>.</dd></dl>
  
 
  -s one|sub|base
 <dl>
 <dt>
-<dd> Search scope to use. One-level, subtree or base.</dl>
+</dt><dd> Search scope to use. One-level, subtree or base.</dd></dl>
  
 
  -a, -all
 <dl>
 <dt>
-<dd> Edit all records. This allows you to apply the same change to a number of records at once. You probably want to combine this with an expression of the form &quot;objectclass=*&quot;.</dl>
+</dt><dd> Edit all records. This allows you to apply the same change to a number of records at once. You probably want to combine this with an expression of the form &quot;objectclass=*&quot;.</dd></dl>
  
 
  -e editor, --editor editor
 <dl>
 <dt>
-<dd> Specify the editor that should be used (overrides the VISUAL and EDITOR environment variables). If this option is not used, and neither VISUAL nor EDITOR environment variables are set, then the vi editor will be used.</dl>
+</dt><dd> Specify the editor that should be used (overrides the VISUAL and EDITOR environment variables). If this option is not used, and neither VISUAL nor EDITOR environment variables are set, then the vi editor will be used.</dd></dl>
  
 
  -b basedn
 <dl>
 <dt>
-<dd> Specify Base Distinguished Name to use.</dl>
+</dt><dd> Specify Base Distinguished Name to use.</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Make ldbedit more verbose about the operations that are being performed. Without this option, ldbedit will only provide a summary change line.</dl>
+</dt><dd> Make ldbedit more verbose about the operations that are being performed. Without this option, ldbedit will only provide a summary change line.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -77,13 +77,13 @@ ldbedit - Edit LDB databases using your preferred editor
  LDB_URL
 <dl>
 <dt>
-<dd> LDB URL to connect to. This can be overridden by using the -H command-line option.)</dl>
+</dt><dd> LDB URL to connect to. This can be overridden by using the -H command-line option.)</dd></dl>
  
 
  VISUAL and EDITOR
 <dl>
 <dt>
-<dd> Environment variables used to determine what editor to use. VISUAL takes precedence over EDITOR, and both are overridden by the -e command-line option.</dl>
+</dt><dd> Environment variables used to determine what editor to use. VISUAL takes precedence over EDITOR, and both are overridden by the -e command-line option.</dd></dl>
 
 <h2>VERSION</h2>
 

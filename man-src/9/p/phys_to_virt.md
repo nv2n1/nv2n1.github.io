@@ -14,15 +14,15 @@ description: "phys_to_virt – map physical address to virtual"
 <p><i>address</i></p>
 <dl>
 <dd>
-<dd>address to remap</dl>
+</dd><dd>address to remap</dd></dl>
 <h2>Description</h2>
 <p>The returned virtual address is a current CPU mapping for the memory address given. It is only valid to use this function on addresses that have a kernel mapping </p>
 <p> This function does not handle bus mappings for DMA transfers. In almost all conceivable cases a device driver should not be using this function</p>
 <h2>Authors</h2>
 <p><code>Matthew Wilcox</code> &lt;matthew [at] wil.cx&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

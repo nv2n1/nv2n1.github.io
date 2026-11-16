@@ -15,35 +15,33 @@ description: "memcached-tool – stats and management tool for memcached"
 <p> <code>memcached-tool</code> is a Perl script used to print statistics from a running memcached instance. The first parameter specifies the address of the daemon either by a hostname, optionally followed by the port number (the default is 11211), or a path to UNIX domain socket. The second parameter specifies the mode in which the tool should run. </p>
 <h2>MODES</h2>
 <dl>
-<dt><code>display</code></p>
-<dd> Print slab class statistics. This is the default mode if no mode is specified. The printed columns are:</p>
+<dt><code>display</code></dt>
+<dd> Print slab class statistics. This is the default mode if no mode is specified. The printed columns are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>#</code></p>
-<dd> Number of the slab class.</p>
-<dt><code>Item_Size</code></p>
-<dd> The amount of space each chunk uses. One item uses one chunk of the appropriate size.</p>
-<dt><code>Max_age</code></p>
-<dd> Age of the oldest item in the LRU.</p>
-<dt><code>Pages</code></p>
-<dd> Total number of pages allocated to the slab class.</p>
-<dt><code>Count</code></p>
-<dd> Number of items presently stored in this class. Expired items are not automatically excluded.</p>
-<dt><code>Full?</code></p>
-<dd> Yes if there are no free chunks at the end of the last allocated page.</p>
-<dt><code>Evicted</code></p>
-<dd> Number of times an item had to be evicted from the LRU before it expired.</p>
-<dt><code>Evict_Time</code></p>
-<dd> Seconds since the last access for the most recent item evicted from this class.</p>
-<dt><code>OOM</code></p>
-<dd> Number of times the underlying slab class was unable to store a new item.</dl>
+<dt><code>#</code></dt>
+<dd> Number of the slab class.</dd>
+<dt><code>Item_Size</code></dt>
+<dd> The amount of space each chunk uses. One item uses one chunk of the appropriate size.</dd>
+<dt><code>Max_age</code></dt>
+<dd> Age of the oldest item in the LRU.</dd>
+<dt><code>Pages</code></dt>
+<dd> Total number of pages allocated to the slab class.</dd>
+<dt><code>Count</code></dt>
+<dd> Number of items presently stored in this class. Expired items are not automatically excluded.</dd>
+<dt><code>Full?</code></dt>
+<dd> Yes if there are no free chunks at the end of the last allocated page.</dd>
+<dt><code>Evicted</code></dt>
+<dd> Number of times an item had to be evicted from the LRU before it expired.</dd>
+<dt><code>Evict_Time</code></dt>
+<dd> Seconds since the last access for the most recent item evicted from this class.</dd>
+<dt><code>OOM</code></dt>
+<dd> Number of times the underlying slab class was unable to store a new item.</dd></dl>
 </dl>
-<dt><code>stats</code></p>
-<dd> Print general-purpose statistics of the daemon. Each line contains the name of the statistic and its value.</p>
-<dt><code>dump</code></p>
-<dd> Make a partial dump of the cache written in the add statements of the memcached protocol. </p>
+<dt><code>stats</code></dt>
+<dd> Print general-purpose statistics of the daemon. Each line contains the name of the statistic and its value.</dd>
+<dt><code>dump</code></dt>
+<dd> Make a partial dump of the cache written in the add statements of the memcached protocol. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-memcached/">memcached</a></code>(1),<br />

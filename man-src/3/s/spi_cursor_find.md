@@ -15,6 +15,6 @@ description: "SPI_cursor_find – find an existing cursor by name"
 <h2>Arguments</h2>
 <p>const char * <i>name</i></p>
 <dl COMPACT>
-<dd>name of the portal</dl>
+<dd>name of the portal</dd></dl>
 <h2>Return Value</h2>
 <p>pointer to the portal with the specified name, or NULL if none was found</p>

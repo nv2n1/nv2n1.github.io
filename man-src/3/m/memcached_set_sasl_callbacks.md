@@ -12,15 +12,15 @@ description: "memcached_set_sasl_callbacks – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>
 <dl>
-<dt><code>void memcached_set_sasl_callbacks(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const sasl_callback_t<i>&nbsp;<wbr>*callbacks</i>)</p>
+<dt><code>void memcached_set_sasl_callbacks(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const sasl_callback_t<i>&nbsp;<wbr>*callbacks</i>)</dt>
 <dd>
-<dt><code>const sasl_callback_t *memcached_get_sasl_callbacks(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><code>const sasl_callback_t *memcached_get_sasl_callbacks(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_set_sasl_auth_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*username</i>, const char<i>&nbsp;<wbr>*password</i>)</p>
+</dd><dt><code>memcached_return_t memcached_set_sasl_auth_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*username</i>, const char<i>&nbsp;<wbr>*password</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_destroy_sasl_auth_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</p>
+</dd><dt><code>memcached_return_t memcached_destroy_sasl_auth_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) allows you to plug in your own callbacks function used by libsasl to perform SASL authentication. </p>
 <p> Please note that SASL requires the memcached binary protocol, and you have to specify the callbacks before you connect to the server. </p>
@@ -39,3 +39,4 @@ description: "memcached_set_sasl_callbacks – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

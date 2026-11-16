@@ -15,11 +15,11 @@ usb_register_device_driver - register a USB device (not interface) driver
 <h2>Arguments</h2>
 
 <i>new_udriver</i>
-<dl><dd><dd>USB operations for the device driver</dl>
+<dl><dd></dd><dd>USB operations for the device driver</dd></dl>
  
 
  <i>owner</i>
-<dl><dd>module owner of this driver.</dl>
+<dl><dd>module owner of this driver.</dd></dl>
 
 <h2>Description</h2>
 

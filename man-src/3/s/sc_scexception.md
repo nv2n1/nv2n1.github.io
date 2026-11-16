@@ -11,7 +11,6 @@ description: "sc::SCException –"
 <p> This is a std::exception specialization that records information about where an exception took place.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scexception.h&gt;</code></pre>
 <p> Inherited by <code>sc::AlgorithmException</code>, <code>sc::InputError</code>, <code>sc::LimitExceeded&lt; T &gt;</code>, <code>sc::ProgrammingError</code>, and <code>sc::SystemException</code>.</p>
 <h3>Public Member Functions</h3>

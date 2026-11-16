@@ -16,17 +16,15 @@ description: "vfork – create a child process and block parent"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>vfork</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre><code>
 (_XOPEN_SOURCE &amp;nbsp; &gt;= &amp;nbsp; 500) &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200809L) || /* Since glibc 2.19: */ _DEFAULT_SOURCE
     || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE
 </code></pre>
-<dt>Before glibc 2.12:</p>
-<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <h3>Standard description</h3>
@@ -45,12 +43,12 @@ description: "vfork – create a child process and block parent"
 <h2>NOTES</h2>
 <p> Some consider the semantics of <code>vfork</code>() to be an architectural blemish, and the 4.2BSD man page stated: &quot;This system call will be eliminated when proper system sharing mechanisms are implemented. Users should not depend on the memory sharing semantics of <code>vfork</code>() as it will, in that case, be made synonymous to <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2).&quot; However, even though modern memory management hardware has decreased the performance difference between <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code>vfork</code>(), there are various reasons why Linux and other systems have retained <code>vfork</code>():</p>
 <dl>
-<dt>*</p>
-<dd> Some performance-critical applications require the small performance advantage conferred by <code>vfork</code>().</p>
-<dt>*</p>
-<dd> <code>vfork</code>() can be implemented on systems that lack a memory-management unit (MMU), but <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) can&#8217;t be implemented on such systems. (POSIX.1-2008 removed <code>vfork</code>() from the standard; the POSIX rationale for the <code><a href="/docs/linux/man/3-posix_spawn/">posix_spawn</a></code>(3) function notes that that function, which provides functionality equivalent to <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2)+<code><a href="/docs/linux/man/3-exec/">exec</a></code>(3), is designed to be implementable on systems that lack an MMU.)</p>
-<dt>*</p>
-<dd> On systems where memory is constrained, <code>vfork</code>() avoids the need to temporarily commit memory (see the description of <i>/proc/sys/vm/overcommit_memory</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)) in order to execute a new program. (This can be especially beneficial where a large parent process wishes to execute a small helper program in a child process.) By contrast, using <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) in this scenario requires either committing an amount of memory equal to the size of the parent process (if strict overcommitting is in force) or overcommitting memory with the risk that a process is terminated by the out-of-memory (OOM) killer.</dl>
+<dt>*</dt>
+<dd> Some performance-critical applications require the small performance advantage conferred by <code>vfork</code>().</dd>
+<dt>*</dt>
+<dd> <code>vfork</code>() can be implemented on systems that lack a memory-management unit (MMU), but <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) can&#8217;t be implemented on such systems. (POSIX.1-2008 removed <code>vfork</code>() from the standard; the POSIX rationale for the <code><a href="/docs/linux/man/3-posix_spawn/">posix_spawn</a></code>(3) function notes that that function, which provides functionality equivalent to <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2)+<code><a href="/docs/linux/man/3-exec/">exec</a></code>(3), is designed to be implementable on systems that lack an MMU.)</dd>
+<dt>*</dt>
+<dd> On systems where memory is constrained, <code>vfork</code>() avoids the need to temporarily commit memory (see the description of <i>/proc/sys/vm/overcommit_memory</i> in <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)) in order to execute a new program. (This can be especially beneficial where a large parent process wishes to execute a small helper program in a child process.) By contrast, using <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) in this scenario requires either committing an amount of memory equal to the size of the parent process (if strict overcommitting is in force) or overcommitting memory with the risk that a process is terminated by the out-of-memory (OOM) killer.</dd></dl>
 <h3>Caveats</h3>
 <p> The child process should take care not to modify the memory in unintended ways, since such changes will be seen by the parent process once the child terminates or executes another program. In this regard, signal handlers can be especially problematic: if a signal handler that is invoked in the child of <code>vfork</code>() changes memory, those changes may result in an inconsistent process state from the perspective of the parent process (e.g., memory changes would be visible in the parent, but changes to the state of open file descriptors would not be visible). </p>
 <p> When <code>vfork</code>() is called in a multithreaded process, only the calling thread is suspended until the child terminates or executes a new program. This means that the child is sharing an address space with other running code. This can be dangerous if another thread in the parent process changes credentials (using <code><a href="/docs/linux/man/2-setuid/">setuid</a></code>(2) or similar), since there are now two processes with different privilege levels running in the same address space. As an example of the dangers, suppose that a multithreaded program running as root creates a child using <code>vfork</code>(). After the <code>vfork</code>(), a thread in the parent process drops the process to an unprivileged user in order to run some untrusted code (e.g., perhaps via plug-in opened with <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3)). In this case, attacks are possible where the parent process uses <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) to map in code that will be executed by the privileged child process.</p>

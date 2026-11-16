@@ -17,18 +17,18 @@ description: "h5repart – Repartitions a file or family of files."
 <p> File family names include an integer printf format such as %d.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Produce verbose output.</p>
-<dt><code>-V</code></p>
-<dd> Print a version number and exit.</p>
-<dt><code>-bN</code></p>
-<dd> The I/O block size, defaults to 1kB</p>
-<dt><code>-mN</code></p>
-<dd> The destination member size or 1GB</p>
-<dt>source_file</p>
-<dd> The name of the source file</p>
-<dt>dest_file</p>
-<dd> The name of the destination files</dl>
+<dt><code>-v</code></dt>
+<dd> Produce verbose output.</dd>
+<dt><code>-V</code></dt>
+<dd> Print a version number and exit.</dd>
+<dt><code>-bN</code></dt>
+<dd> The I/O block size, defaults to 1kB</dd>
+<dt><code>-mN</code></dt>
+<dd> The destination member size or 1GB</dd>
+<dt>source_file</dt>
+<dd> The name of the source file</dd>
+<dt>dest_file</dt>
+<dd> The name of the destination files</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1) </p>
 <h2>Index</h2>

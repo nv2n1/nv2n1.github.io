@@ -18,50 +18,50 @@ description: "trace-cmd-restore – restore a failed trace record"
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> Create a partial trace.dat file from the machine, to be used with a full trace-cmd restore at another time. This option is useful for embedded devices. If a server contains the cpu files of a crashed trace-cmd record (or trace-cmd listen), trace-cmd restore can be executed on the embedded device with the -c option to get all the stored information of that embedded device. Then the file created could be copied to the server to run the trace-cmd restore there with the cpu files. </p>
+</dt><dd> Create a partial trace.dat file from the machine, to be used with a full trace-cmd restore at another time. This option is useful for embedded devices. If a server contains the cpu files of a crashed trace-cmd record (or trace-cmd listen), trace-cmd restore can be executed on the embedded device with the -c option to get all the stored information of that embedded device. Then the file created could be copied to the server to run the trace-cmd restore there with the cpu files. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 If *-o* is not specified, then the file created will be called
 'trace-partial.dat'. This is because the file is not a full version
 of something that <a href="//www.systutorials.com/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1) could use.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-t</code> tracing_dir</p>
 <dl>
 <dt>
-<dd> Used with <code>-c</code>, it overrides the location to read the events from. By default, tracing information is read from the debugfs/tracing directory. <code>-t</code> will use that location instead. This can be useful if the trace.dat file to create is from another machine. Just tar -cvf events.tar debugfs/tracing and copy and untar that file locally, and use that directory instead.</dl>
+</dt><dd> Used with <code>-c</code>, it overrides the location to read the events from. By default, tracing information is read from the debugfs/tracing directory. <code>-t</code> will use that location instead. This can be useful if the trace.dat file to create is from another machine. Just tar -cvf events.tar debugfs/tracing and copy and untar that file locally, and use that directory instead.</dd></dl>
 <p> <code>-k</code> kallsyms</p>
 <dl>
 <dt>
-<dd> Used with <code>-c</code>, it overrides where to read the kallsyms file from. By default, /proc/kallsyms is used. <code>-k</code> will override the file to read the kallsyms from. This can be useful if the trace.dat file to create is from another machine. Just copy the /proc/kallsyms file locally, and use <code>-k</code> to point to that file.</dl>
+</dt><dd> Used with <code>-c</code>, it overrides where to read the kallsyms file from. By default, /proc/kallsyms is used. <code>-k</code> will override the file to read the kallsyms from. This can be useful if the trace.dat file to create is from another machine. Just copy the /proc/kallsyms file locally, and use <code>-k</code> to point to that file.</dd></dl>
 <p> <code>-o</code> output&#8217;</p>
 <dl>
 <dt>
-<dd> By default, trace-cmd restore will create a <i>trace.dat</i> file (or <i>trace-partial.dat</i> if <code>-c</code> is specified). You can specify a different file to write to with the <code>-o</code> option.</dl>
+</dt><dd> By default, trace-cmd restore will create a <i>trace.dat</i> file (or <i>trace-partial.dat</i> if <code>-c</code> is specified). You can specify a different file to write to with the <code>-o</code> option.</dd></dl>
 <p> <code>-i</code> input</p>
 <dl>
 <dt>
-<dd> By default, trace-cmd restore will read the information of the current system to create the initial data stored in the <i>trace.dat</i> file. If the crash was on another machine, then that machine should have the trace-cmd restore run with the <code>-c</code> option to create the trace.dat partial file. Then that file can be copied to the current machine where trace-cmd restore will use <code>-i</code> to load that file instead of reading from the current system.</dl>
+</dt><dd> By default, trace-cmd restore will read the information of the current system to create the initial data stored in the <i>trace.dat</i> file. If the crash was on another machine, then that machine should have the trace-cmd restore run with the <code>-c</code> option to create the trace.dat partial file. Then that file can be copied to the current machine where trace-cmd restore will use <code>-i</code> to load that file instead of reading from the current system.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> If a crash happened on another box, you could run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ trace-cmd restore -c -o box-partial.dat
 </pre>
-</dl>
+</dd></dl>
 <p> Then on the server that has the cpu files: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ trace-cmd restore -i box-partial.dat trace.dat.cpu0 trace.dat.cpu1
 </pre>
-</dl>
+</dd></dl>
 <p> This would create a trace.dat file for the embedded box.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>
@@ -73,10 +73,10 @@ $ trace-cmd restore -i box-partial.dat trace.dat.cpu0 trace.dat.cpu1
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

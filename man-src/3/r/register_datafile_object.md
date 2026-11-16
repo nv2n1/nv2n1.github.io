@@ -10,9 +10,7 @@ description: "register_datafile_object – Registers load/destroy functions for 
 <p>register_datafile_object &#8211; Registers load/destroy functions for custom object types. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void register_datafile_object(int id, void *(*load)(PACKFILE *f, long size),
-
                               void (*destroy)(void *data));</code></pre>
 <h2>Description</h2>
 <p>Used to add custom object types, specifying functions to load and destroy objects of this type. </p>

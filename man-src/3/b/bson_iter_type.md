@@ -39,8 +39,8 @@ bson_iter_type(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> function shall return the type of the observed element in a bson document. </p>
 <h2>RETURNS</h2>

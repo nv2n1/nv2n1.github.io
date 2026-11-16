@@ -14,11 +14,11 @@ mongoc_cursor_set_max_await_time_ms (mongoc_cursor_t *cursor,
  uint32_t max_await_time_ms);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>max_await_time_ms</code></p>
-<dd>A timeout in milliseconds.</dl>
+<dt><code>max_await_time_ms</code></dt>
+<dd>A timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>The maximum amount of time for the server to wait on new documents to satisfy a tailable cursor query. Only applies if the cursor is created from <code>mongoc_collection_find</code> with the <code>query flags</code> MONGOC_QUERY_TAILABLE_CURSOR and MONGOC_QUERY_AWAIT_DATA, and the server is MongoDB 3.2 or later. See <code>the documentation for maxTimeMS and the getMore command</code> \&amp;. </p>
 <p> The <code>max_await_time_ms</code> cannot be changed after the first call to <code>mongoc_cursor_next</code> \&amp;. </p>

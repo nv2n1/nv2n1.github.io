@@ -68,14 +68,12 @@ CZMQ_EXPORT void
 <pre><code>//  Create temporary directory for test files
 #define TESTDIR &quot;.test_zauth&quot;
 zsys_dir_create(TESTDIR);
-
 //  Install the authenticator
 zctx_t *ctx = zctx_new();
 assert(ctx);
 zauth_t *auth = zauth_new(ctx);
 assert(auth);
 zauth_set_verbose(auth, verbose);
-
 //  A default NULL connection should always success, and not
 //  go through our authentication infrastructure at all.
 void *server = zsocket_new(ctx, ZMQ_PUSH);
@@ -84,33 +82,28 @@ void *client = zsocket_new(ctx, ZMQ_PULL);
 assert(client);
 bool success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(success);
-
 //  When we set a domain on the server, we switch on authentication
 //  for NULL sockets, but with no policies, the client connection
 //  will be allowed.
 zsocket_set_zap_domain(server, &quot;global&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(success);
-
 //  Blacklist 127.0.0.1, connection should fail
 zsocket_set_zap_domain(server, &quot;global&quot;);
 zauth_deny(auth, &quot;127.0.0.1&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(!success);
-
 //  Whitelist our address, which overrides the blacklist
 zsocket_set_zap_domain(server, &quot;global&quot;);
 zauth_allow(auth, &quot;127.0.0.1&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(success);
-
 //  Try PLAIN authentication
 zsocket_set_plain_server(server, 1);
 zsocket_set_plain_username(client, &quot;admin&quot;);
 zsocket_set_plain_password(client, &quot;Password&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(!success);
-
 FILE *password = fopen(TESTDIR &quot;/password-file&quot;, &quot;w&quot;);
 assert(password);
 fprintf(password, &quot;admin=Password
@@ -122,13 +115,11 @@ zsocket_set_plain_password(client, &quot;Password&quot;);
 zauth_configure_plain(auth, &quot;*&quot;, TESTDIR &quot;/password-file&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(success);
-
 zsocket_set_plain_server(server, 1);
 zsocket_set_plain_username(client, &quot;admin&quot;);
 zsocket_set_plain_password(client, &quot;Bogus&quot;);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(!success);
-
 if (zsys_has_curve()) {
     //  Try CURVE authentication
     //  We'll create two new certificates and save the client public
@@ -139,7 +130,6 @@ if (zsys_has_curve()) {
     zcert_t *client_cert = zcert_new();
     assert(client_cert);
     char *server_key = zcert_public_txt(server_cert);
-
     //  Test without setting-up any authentication
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -147,7 +137,6 @@ if (zsys_has_curve()) {
     zsocket_set_curve_serverkey(client, server_key);
     success = s_can_connect(ctx, &amp;server, &amp;client);
     assert(!success);
-
     //  Test CURVE_ALLOW_ANY
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -156,7 +145,6 @@ if (zsys_has_curve()) {
     zauth_configure_curve(auth, &quot;*&quot;, CURVE_ALLOW_ANY);
     success = s_can_connect(ctx, &amp;server, &amp;client);
     assert(success);
-
     //  Test full client authentication using certificates
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -166,7 +154,6 @@ if (zsys_has_curve()) {
     zauth_configure_curve(auth, &quot;*&quot;, TESTDIR);
     success = s_can_connect(ctx, &amp;server, &amp;client);
     assert(success);
-
     zcert_destroy(&amp;server_cert);
     zcert_destroy(&amp;client_cert);
 }
@@ -174,9 +161,7 @@ if (zsys_has_curve()) {
 zauth_destroy(&amp;auth);
 success = s_can_connect(ctx, &amp;server, &amp;client);
 assert(success);
-
 zctx_destroy(&amp;ctx);
-
 //  Delete all test files
 zdir_t *dir = zdir_new(TESTDIR, NULL);
 assert(dir);
@@ -192,7 +177,8 @@ zdir_destroy(&amp;dir);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

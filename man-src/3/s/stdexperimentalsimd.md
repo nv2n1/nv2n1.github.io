@@ -10,9 +10,7 @@ description: "std::experimental::simd – std::experimental::simd"
 <p>std::experimental::simd &#8211; std::experimental::simd</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/simd&gt;
-
 template&lt; class T, class Abi = simd_abi::compatible&lt;T&gt; &gt;
-
 class simd;</code></pre>
 <p>The class template simd is a data-parallel type. The width of a given simd instantiation is a constant expression, determined by the template parameters.<br />
 An ABI tag is a type in the simd_abi namespace that indicates a choice of size and binary representation for objects of data-parallel type. </p>

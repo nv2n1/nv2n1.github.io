@@ -53,7 +53,7 @@ IBV_QPF_GRH_REQUIRED - When this flag is set, the applications must create all A
 <p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_query_qp</code>(3), <code>ibv_create_ah</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -24,6 +24,6 @@ description: "QuantLib::TqrEigenDecomposition – tridiag. QR eigen decompositio
 <p> Wilkinson, J.H. and Reinsch, C. 1971, <code>Linear</code> Algebra, vol. II of Handbook for Automatic Computation (New York: Springer-Verlag) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the result is tested by checking it against known good values.</dl>
+<dd>the correctness of the result is tested by checking it against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

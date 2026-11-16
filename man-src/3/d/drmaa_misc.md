@@ -57,41 +57,39 @@ size_t&amp;nbsp;error_diag_len
 <p> The drmaa_get_DRMAA_implementation() function returns the same value before and after is called. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_get_contact(), drmaa_version(), and drmaa_get_DRM_system() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>
 <p> The drmaa_get_contact(), drmaa_version(), drmaa_get_DRM_system(), and drmaa_get_DRMAA_implementation() can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></p>
-<dd> Unexpected or internal DRMAA error, like system call failure, etc.</p>
-<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></p>
-<dd> Could not contact DRM system for this request.</p>
-<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></p>
-<dd> The specified request is not processed successfully due to authorization failure.</p>
-<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></p>
-<dd> The input value for an argument is invalid.</p>
-<dt><code>DRMAA_ERRNO_NO_MEMORY</code></p>
-<dd> Failed allocating memory.</dl>
+<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></dt>
+<dd> Unexpected or internal DRMAA error, like system call failure, etc.</dd>
+<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></dt>
+<dd> Could not contact DRM system for this request.</dd>
+<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></dt>
+<dd> The specified request is not processed successfully due to authorization failure.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></dt>
+<dd> The input value for an argument is invalid.</dd>
+<dt><code>DRMAA_ERRNO_NO_MEMORY</code></dt>
+<dd> Failed allocating memory.</dd></dl>
 <p> The drmaa_get_contact() and drmaa_get_DRM_system() can fail with:</p>
 <dl>
-<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></p>
-<dd> Failed because there is no active session.</dl>
+<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
+<dd> Failed because there is no active session.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>Index</h2>

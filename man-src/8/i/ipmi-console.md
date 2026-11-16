@@ -17,24 +17,24 @@ description: "ipmiconsole – IPMI console utility"
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands.</p>
 <dl>
-<dt><code>-h</code> <i>IPMIHOSTFR, </i><code>&#8211;hostname</code>=<i>IPMIHOST[:PORT]</i></p>
-<dd>Specify the remote host to communicate with. An optional port can be specified, which may be useful in port forwarding or similar situations.</p>
-<dt><code>-u</code>, <code>&#8211;username</code>=<i>USERNAME</i></p>
-<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must a high enough privilege to establish a SOL session and have SOL session abilities.</p>
-<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></p>
-<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</p>
-<dt><code>-P</code>, <code>&#8211;password-prompt</code></p>
-<dd>Prompt for password to avoid possibility of listing it in process lists.</p>
-<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></p>
-<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</p>
-<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></p>
-<dd>Prompt for k-g to avoid possibility of listing it in process lists.</p>
-<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the session timeout in milliseconds. Defaults to 60000 milliseconds (60 seconds) if not specified.</p>
-<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 500 milliseconds (0.5 seconds) if not specified.</p>
-<dt><code>-I</code>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The user should be aware that only cipher suite ids 3, 8, and 12 encrypt console payloads. Console information will be sent in the clear if an alternate cipher suite id is selected. The following cipher suite ids are currently supported: </p>
+<dt><code>-h</code> <i>IPMIHOSTFR, </i><code>&#8211;hostname</code>=<i>IPMIHOST[:PORT]</i></dt>
+<dd>Specify the remote host to communicate with. An optional port can be specified, which may be useful in port forwarding or similar situations.</dd>
+<dt><code>-u</code>, <code>&#8211;username</code>=<i>USERNAME</i></dt>
+<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must a high enough privilege to establish a SOL session and have SOL session abilities.</dd>
+<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</dd>
+<dt><code>-P</code>, <code>&#8211;password-prompt</code></dt>
+<dd>Prompt for password to avoid possibility of listing it in process lists.</dd>
+<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></dt>
+<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</dd>
+<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></dt>
+<dd>Prompt for k-g to avoid possibility of listing it in process lists.</dd>
+<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the session timeout in milliseconds. Defaults to 60000 milliseconds (60 seconds) if not specified.</dd>
+<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 500 milliseconds (0.5 seconds) if not specified.</dd>
+<dt><code>-I</code>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The user should be aware that only cipher suite ids 3, 8, and 12 encrypt console payloads. Console information will be sent in the clear if an alternate cipher suite id is selected. The following cipher suite ids are currently supported: </dd>
 <p> 0 &#8211; Authentication Algorithm = None; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 1 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 2 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = HMAC-SHA1-96; Confidentiality Algorithm = None </p>
@@ -47,52 +47,52 @@ description: "ipmiconsole – IPMI console utility"
 <p> 15 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 16 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = None </p>
 <p> 17 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = AES-CBC-128</p>
-<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to ADMIN if not specified.</dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Ipmiconsole Options</h2>
 <p>The following options are specific to <code>Ipmiconsole.</code></p>
 <dl>
-<dt><code>-e</code> <i>CHAR</i>, <code>&#8211;escape-char</code>=<i>CHAR</i></p>
-<dd>Specify an alternate escape character (default char &#8216;&amp;&#8217;).</p>
-<dt><code>&#8211;dont-steal</code></p>
-<dd>Do not steal an SOL session if one is already detected as being in use. Under most circumstances, if SOL is detected as being in use, <code>ipmiconsole</code> will attempt to steal the SOL session away from the previous session. This default behavior exists for several reasons, most notably that earlier SOL sessions may have not been able to be deactivate properly.</p>
-<dt><code>&#8211;deactivate</code></p>
-<dd>Deactivate SOL session if one is detected as being in use and exit.</p>
-<dt><code>&#8211;serial-keepalive</code></p>
-<dd>Occasionally send NUL characters to detect inactive serial connections. This option is particularly useful for those who intend to run <code>ipmiconsole</code> without much interaction, such as for logging purposes. While IPMI connections may still be alive, some motherboards have exhibited bugs in which underlying serial data can no longer be sent/received. From the viewpoint of <code>ipmiconsole,</code> data is simply not be sent out of the remote system and this problem is only detected once there is user interaction. By sending the occasional NUL character, the underlying loss of serial data transfer can be detected far more quickly. There is some risk with this option, as the NUL character byte may affect the remote system depending on what data it may or may not be expecting.</p>
-<dt><code>&#8211;serial-keepalive-empty</code></p>
-<dd>This option is identical to <code>&#8211;serial-keepalive</code> except that SOL packets will contain no NUL character data. On some motherboards, this may be sufficient to deal with a hanging IPMI session without the risk regularly sending a NUL character byte may have. However, some systems may not ACK a SOL packet without character data in it, meaning these keepalive packets do nothing.</p>
-<dt><code>&#8211;sol-payload-instance</code>=<i>NUM</i></p>
-<dd>Specify the SOL payload instance number. The default value is 1, valid values range from 1 to 15. Most systems only support a single instance, however a few allow users to access multiple.</p>
-<dt><code>&#8211;deactivate-all-instances</code></p>
-<dd>When used along with the <code>&#8211;deactivate</code> option, will deactivate all active SOL instances instead of just the currently configured payload instance.</p>
-<dt><code>&#8211;lock-memory</code></p>
-<dd>Lock sensitive information (such as usernames and passwords) in memory.</dl>
+<dt><code>-e</code> <i>CHAR</i>, <code>&#8211;escape-char</code>=<i>CHAR</i></dt>
+<dd>Specify an alternate escape character (default char &#8216;&amp;&#8217;).</dd>
+<dt><code>&#8211;dont-steal</code></dt>
+<dd>Do not steal an SOL session if one is already detected as being in use. Under most circumstances, if SOL is detected as being in use, <code>ipmiconsole</code> will attempt to steal the SOL session away from the previous session. This default behavior exists for several reasons, most notably that earlier SOL sessions may have not been able to be deactivate properly.</dd>
+<dt><code>&#8211;deactivate</code></dt>
+<dd>Deactivate SOL session if one is detected as being in use and exit.</dd>
+<dt><code>&#8211;serial-keepalive</code></dt>
+<dd>Occasionally send NUL characters to detect inactive serial connections. This option is particularly useful for those who intend to run <code>ipmiconsole</code> without much interaction, such as for logging purposes. While IPMI connections may still be alive, some motherboards have exhibited bugs in which underlying serial data can no longer be sent/received. From the viewpoint of <code>ipmiconsole,</code> data is simply not be sent out of the remote system and this problem is only detected once there is user interaction. By sending the occasional NUL character, the underlying loss of serial data transfer can be detected far more quickly. There is some risk with this option, as the NUL character byte may affect the remote system depending on what data it may or may not be expecting.</dd>
+<dt><code>&#8211;serial-keepalive-empty</code></dt>
+<dd>This option is identical to <code>&#8211;serial-keepalive</code> except that SOL packets will contain no NUL character data. On some motherboards, this may be sufficient to deal with a hanging IPMI session without the risk regularly sending a NUL character byte may have. However, some systems may not ACK a SOL packet without character data in it, meaning these keepalive packets do nothing.</dd>
+<dt><code>&#8211;sol-payload-instance</code>=<i>NUM</i></dt>
+<dd>Specify the SOL payload instance number. The default value is 1, valid values range from 1 to 15. Most systems only support a single instance, however a few allow users to access multiple.</dd>
+<dt><code>&#8211;deactivate-all-instances</code></dt>
+<dd>When used along with the <code>&#8211;deactivate</code> option, will deactivate all active SOL instances instead of just the currently configured payload instance.</dd>
+<dt><code>&#8211;lock-memory</code></dt>
+<dd>Lock sensitive information (such as usernames and passwords) in memory.</dd></dl>
 <h2>Escape Characters</h2>
 <p>The following escape sequences are supported. The default supported escape character is &#8216;&amp;&#8217;, but can be changed with the <code>-e</code> option.</p>
 <dl>
-<dt><i>&amp;?</i></p>
-<dd>Display a list of currently available escape sequences.</p>
-<dt><i>&amp;.</i></p>
-<dd>Terminate the connection.</p>
-<dt><i>&amp;B</i></p>
-<dd>Send a &quot;serial-break&quot; to the remote console.</p>
-<dt><i>&amp;D</i></p>
-<dd>Send a DEL character.</p>
-<dt><i>&amp;&amp;</i></p>
-<dd>Send a single escape character.</dl>
+<dt><i>&amp;?</i></dt>
+<dd>Display a list of currently available escape sequences.</dd>
+<dt><i>&amp;.</i></dt>
+<dd>Terminate the connection.</dd>
+<dt><i>&amp;B</i></dt>
+<dd>Send a &quot;serial-break&quot; to the remote console.</dd>
+<dt><i>&amp;D</i></dt>
+<dd>Send a DEL character.</dd>
+<dt><i>&amp;&amp;</i></dt>
+<dd>Send a single escape character.</dd></dl>
 <h2>General Troubleshooting</h2>
 <p>Most often, IPMI problems are due to configuration problems. </p>
 <p> IPMI over LAN problems involve a misconfiguration of the remote machine&#8217;s BMC. Double check to make sure the following are configured properly in the remote machine&#8217;s BMC: IP address, MAC address, subnet mask, username, user enablement, user privilege, password, LAN privilege, LAN enablement, and allowed authentication type(s). For IPMI 2.0 connections, double check to make sure the cipher suite privilege(s) and K_g key are configured properly. The <code><a href="/docs/linux/man/8-bmc-config/">bmc-config</a>(8)</code> tool can be used to check and/or change these configuration settings. </p>

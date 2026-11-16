@@ -19,14 +19,14 @@ description: "xfs_copy – copy the contents of an XFS filesystem"
 <p> <code>xfs_copy</code> uses <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7) to perform simultaneous parallel writes. <code>xfs_copy</code> creates one additional thread for each target to be written. All threads die if <code>xfs_copy</code> terminates or aborts.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Create a duplicate (true clone) filesystem. This should be done only if the new filesystem will be used as a replacement for the original filesystem (such as in the case of disk replacement).</p>
-<dt><code>-b</code></p>
-<dd>The buffered option can be used to ensure direct IO is not attempted to any of the target files. This is useful when the filesystem holding the target file does not support direct IO.</p>
-<dt><code>-L</code><i> log</i></p>
-<dd>Specifies the location of the <i>log</i> if the default location of <i>/var/tmp/xfs_copy.log.XXXXXX</i> is not desired.</p>
-<dt><code>-V</code></p>
-<dd>Prints the version number and exits.</dl>
+<dt><code>-d</code></dt>
+<dd>Create a duplicate (true clone) filesystem. This should be done only if the new filesystem will be used as a replacement for the original filesystem (such as in the case of disk replacement).</dd>
+<dt><code>-b</code></dt>
+<dd>The buffered option can be used to ensure direct IO is not attempted to any of the target files. This is useful when the filesystem holding the target file does not support direct IO.</dd>
+<dt><code>-L</code><i> log</i></dt>
+<dd>Specifies the location of the <i>log</i> if the default location of <i>/var/tmp/xfs_copy.log.XXXXXX</i> is not desired.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints the version number and exits.</dd></dl>
 <h2>Diagnostics</h2>
 <p><code>xfs_copy</code> reports errors to both <code>stderr</code> and in more detailed form to a generated log file whose name is of the form <i>/var/tmp/xfs_copy.log.XXXXXX</i> or a log file specified by the <code>-L</code> option. If <code>xfs_copy</code> detects a write error on a target, the copy of that one target is aborted and an error message is issued to both stderr and the log file, but the rest of the copies continue. When <code>xfs_copy</code> terminates, all aborted targets are reported to both <code>stderr</code> and the log file. </p>
 <p> If all targets abort or if there is an error reading the source filesystem, <code>xfs_copy</code> immediately aborts. </p>

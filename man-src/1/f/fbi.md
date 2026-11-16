@@ -16,119 +16,119 @@ description: "fbi – Linux framebuffer imageviewer # #"
 <p> <code>Fbi</code> displays the specified file(s) on the linux console using the framebuffer device. <i>PhotoCD</i>, <i>jpeg</i>, <i>ppm</i>, <i>gif</i>, <i>tiff</i>, <i>xwd</i>, <i>bmp</i>, <i>png</i> and <i>webp</i> formats are supported natively. For other <code>fbi</code> tries to use <code><a href="/docs/linux/man/1-imagemagick/">ImageMagick</a></code>(1)&#8217;s <code><a href="/docs/linux/man/1-convert/">convert</a></code>(1). # #</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print usage info.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print <code>fbi</code> version number.</p>
-<dt><code>&#8211;store</code></p>
-<dd> Write command line arguments to config file.</p>
-<dt><code>-l</code><i>&nbsp;<wbr>file</i><code>, &#8211;list</code><i>&nbsp;<wbr>file</i></p>
-<dd> Read image filelist from <i>file</i>.</p>
-<dt><code>-P, &#8211;text</code></p>
-<dd> Enable textreading mode. In this mode <code>fbi</code> will display large images without vertical offset (default is to center the images). The <code>SPACE</code> command will first try to scroll down and go to the next image only if it is already on the bottom of the page. Useful if the images you are watching are text pages, all you have to do to get the next piece of text is to press space&#8230;</p>
-<dt><code>-a, &#8211;autozoom</code></p>
-<dd> Enable autozoom. <code>Fbi</code> will automagically pick a reasonable zoom factor when loading a new image.</p>
-<dt><code>&#8211;(no)autoup</code></p>
-<dd> Like autozoom, but scale up only.</p>
-<dt><code>&#8211;(no)autodown</code></p>
-<dd> Like autozoom, but scale down only.</p>
-<dt><code>&#8211;(no)fitwidth</code></p>
-<dd> Use width only for autoscaling.</p>
-<dt><code>-v, &#8211;(no)verbose</code></p>
-<dd> Be verbose: enable status line on the bottom of the screen.</p>
-<dt><code>-u, &#8211;(no)random</code></p>
-<dd> Randomize the order of the filenames.</p>
-<dt><code>&#8211;(no)comments</code></p>
-<dd> Display comment tags (if present) instead of the filename. Probably only useful if you added reasonable comments yourself (using <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1) for example), otherwise you likely just find texts pointing to the software which created the image.</p>
-<dt><code>-e, &#8211;(no)edit</code></p>
-<dd> Enable editing commands.</p>
-<dt><code>&#8211;(no)backup</code></p>
-<dd> Create backup files (when editing images).</p>
-<dt><code>-p, &#8211;(no)preserve</code></p>
-<dd> Preserve timestamps (when editing images).</p>
-<dt><code>&#8211;(no)readahead</code></p>
-<dd> Read ahead images into cache.</p>
-<dt><code>&#8211;cachemem</code><i>&nbsp;<wbr>size</i></p>
-<dd> Image cache <i>size</i> in megabytes (MB).</p>
-<dt><code>&#8211;blend</code><i>&nbsp;<wbr>time</i></p>
-<dd> Image blend <i>time</i> in miliseconds.</p>
-<dt><code>-T</code><i>&nbsp;<wbr>n</i><code>, &#8211;vt</code><i>&nbsp;<wbr>n</i></p>
-<dd> Start on virtual console <i>n</i>.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>steps</i><code>, &#8211;scroll</code><i>&nbsp;<wbr>steps</i></p>
-<dd> Set scroll <i>steps</i> in pixels (default is 50).</p>
-<dt><code>-t</code><i>&nbsp;<wbr>sec</i><code>, &#8211;timeout</code><i>&nbsp;<wbr>sec</i></p>
-<dd> Load next image after <i>sec</i> seconds without any keypress (i.e. slideshow).</p>
-<dt><code>-1, &#8211;(no)once</code></p>
-<dd> Don&#8217;t loop (only use with <code>-t</code>).</p>
-<dt><code>-r</code><i>&nbsp;<wbr>n</i><code>, &#8211;resolution</code><i>&nbsp;<wbr>n</i></p>
-<dd> Select resolution, <i>n = 1..5</i> (only <i>PhotoCD</i>).</p>
-<dt><code>-g</code><i>&nbsp;<wbr>n</i><code>, &#8211;gamma</code><i>&nbsp;<wbr>n</i></p>
-<dd> Gamma correction. Default is 1.0. Requires <i>Pseudocolor</i> or <i>Directcolor</i> visual, doesn&#8217;t work for <i>Truecolor</i>.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>&lt;arg&gt;</i><code>, &#8211;font</code><i>&nbsp;<wbr>&lt;arg&gt;</i></p>
-<dd> Set font. This <i>&lt;arg&gt;</i> can be anything fontconfig accepts (see <code><a href="/docs/linux/man/5-fonts-conf/">fonts-conf</a></code>(5)). Try <code><a href="/docs/linux/man/1-fc-list/">fc-list</a></code>(1) for a list of known fonts on your system. The fontconfig config file is evaluated as well, so any generic stuff defined there (such as mono, sans) will work as well. It is recommended to use monospaced fonts, the textboxes (help text, exif info) look better then.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>/dev/fbN</i><code>, &#8211;device</code><i>&nbsp;<wbr>/dev/fbN</i></p>
-<dd> Use <i>/dev/fbN</i> device framebuffer. Default is the one your virtual console is mapped to.</p>
-<dt><code>-m</code><i>&nbsp;<wbr>videomode</i><code>, &#8211;mode</code><i>&nbsp;<wbr>videomode</i></p>
-<dd> Name of the video mode to use (video mode must be listed in <i>/etc/fb.modes</i>). Default is not to change the video mode. # #</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print usage info.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print <code>fbi</code> version number.</dd>
+<dt><code>&#8211;store</code></dt>
+<dd> Write command line arguments to config file.</dd>
+<dt><code>-l</code><i>&nbsp;<wbr>file</i><code>, &#8211;list</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Read image filelist from <i>file</i>.</dd>
+<dt><code>-P, &#8211;text</code></dt>
+<dd> Enable textreading mode. In this mode <code>fbi</code> will display large images without vertical offset (default is to center the images). The <code>SPACE</code> command will first try to scroll down and go to the next image only if it is already on the bottom of the page. Useful if the images you are watching are text pages, all you have to do to get the next piece of text is to press space&#8230;</dd>
+<dt><code>-a, &#8211;autozoom</code></dt>
+<dd> Enable autozoom. <code>Fbi</code> will automagically pick a reasonable zoom factor when loading a new image.</dd>
+<dt><code>&#8211;(no)autoup</code></dt>
+<dd> Like autozoom, but scale up only.</dd>
+<dt><code>&#8211;(no)autodown</code></dt>
+<dd> Like autozoom, but scale down only.</dd>
+<dt><code>&#8211;(no)fitwidth</code></dt>
+<dd> Use width only for autoscaling.</dd>
+<dt><code>-v, &#8211;(no)verbose</code></dt>
+<dd> Be verbose: enable status line on the bottom of the screen.</dd>
+<dt><code>-u, &#8211;(no)random</code></dt>
+<dd> Randomize the order of the filenames.</dd>
+<dt><code>&#8211;(no)comments</code></dt>
+<dd> Display comment tags (if present) instead of the filename. Probably only useful if you added reasonable comments yourself (using <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1) for example), otherwise you likely just find texts pointing to the software which created the image.</dd>
+<dt><code>-e, &#8211;(no)edit</code></dt>
+<dd> Enable editing commands.</dd>
+<dt><code>&#8211;(no)backup</code></dt>
+<dd> Create backup files (when editing images).</dd>
+<dt><code>-p, &#8211;(no)preserve</code></dt>
+<dd> Preserve timestamps (when editing images).</dd>
+<dt><code>&#8211;(no)readahead</code></dt>
+<dd> Read ahead images into cache.</dd>
+<dt><code>&#8211;cachemem</code><i>&nbsp;<wbr>size</i></dt>
+<dd> Image cache <i>size</i> in megabytes (MB).</dd>
+<dt><code>&#8211;blend</code><i>&nbsp;<wbr>time</i></dt>
+<dd> Image blend <i>time</i> in miliseconds.</dd>
+<dt><code>-T</code><i>&nbsp;<wbr>n</i><code>, &#8211;vt</code><i>&nbsp;<wbr>n</i></dt>
+<dd> Start on virtual console <i>n</i>.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>steps</i><code>, &#8211;scroll</code><i>&nbsp;<wbr>steps</i></dt>
+<dd> Set scroll <i>steps</i> in pixels (default is 50).</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>sec</i><code>, &#8211;timeout</code><i>&nbsp;<wbr>sec</i></dt>
+<dd> Load next image after <i>sec</i> seconds without any keypress (i.e. slideshow).</dd>
+<dt><code>-1, &#8211;(no)once</code></dt>
+<dd> Don&#8217;t loop (only use with <code>-t</code>).</dd>
+<dt><code>-r</code><i>&nbsp;<wbr>n</i><code>, &#8211;resolution</code><i>&nbsp;<wbr>n</i></dt>
+<dd> Select resolution, <i>n = 1..5</i> (only <i>PhotoCD</i>).</dd>
+<dt><code>-g</code><i>&nbsp;<wbr>n</i><code>, &#8211;gamma</code><i>&nbsp;<wbr>n</i></dt>
+<dd> Gamma correction. Default is 1.0. Requires <i>Pseudocolor</i> or <i>Directcolor</i> visual, doesn&#8217;t work for <i>Truecolor</i>.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>&lt;arg&gt;</i><code>, &#8211;font</code><i>&nbsp;<wbr>&lt;arg&gt;</i></dt>
+<dd> Set font. This <i>&lt;arg&gt;</i> can be anything fontconfig accepts (see <code><a href="/docs/linux/man/5-fonts-conf/">fonts-conf</a></code>(5)). Try <code><a href="/docs/linux/man/1-fc-list/">fc-list</a></code>(1) for a list of known fonts on your system. The fontconfig config file is evaluated as well, so any generic stuff defined there (such as mono, sans) will work as well. It is recommended to use monospaced fonts, the textboxes (help text, exif info) look better then.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>/dev/fbN</i><code>, &#8211;device</code><i>&nbsp;<wbr>/dev/fbN</i></dt>
+<dd> Use <i>/dev/fbN</i> device framebuffer. Default is the one your virtual console is mapped to.</dd>
+<dt><code>-m</code><i>&nbsp;<wbr>videomode</i><code>, &#8211;mode</code><i>&nbsp;<wbr>videomode</i></dt>
+<dd> Name of the video mode to use (video mode must be listed in <i>/etc/fb.modes</i>). Default is not to change the video mode. # #</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>Fbi</code> uses the following environment variables:</p>
 <dl>
-<dt><code>FBGAMMA</code></p>
-<dd> This variable may be used to specify a default gamma correction. # #</dl>
+<dt><code>FBGAMMA</code></dt>
+<dd> This variable may be used to specify a default gamma correction. # #</dd></dl>
 <h2>COMMAND USAGE</h2>
 <p> The commands take effect immediately; it is not necessary to type a carriage return. </p>
 <p> In the following commands, <i>i</i> is a numerical argument.</p>
 <h3>Scrolling</h3>
 <dl>
-<dt><code>LEFT_ARROW</code>, <code>RIGHT_ARROW</code>, <code>UP_ARROW</code>, <code>DOWN_ARROW</code></p>
-<dd> Scroll large images.</p>
-<dt><code>PREV_SCREEN</code>, <code>k</code></p>
-<dd> Previous image.</p>
-<dt><code>NEXT_SCREEN</code>, <code>SPACE</code>, <code>j</code></p>
-<dd> Next image.</p>
-<dt><i>i</i><code>g</code></p>
-<dd> Jump to image #<i>i</i>.</p>
-<dt><code>RETURN</code></p>
-<dd> Write the filename of the current image to <code><a href="/docs/linux/man/3-stdout/">stdout</a></code>(3), then go to the next image.</dl>
+<dt><code>LEFT_ARROW</code>, <code>RIGHT_ARROW</code>, <code>UP_ARROW</code>, <code>DOWN_ARROW</code></dt>
+<dd> Scroll large images.</dd>
+<dt><code>PREV_SCREEN</code>, <code>k</code></dt>
+<dd> Previous image.</dd>
+<dt><code>NEXT_SCREEN</code>, <code>SPACE</code>, <code>j</code></dt>
+<dd> Next image.</dd>
+<dt><i>i</i><code>g</code></dt>
+<dd> Jump to image #<i>i</i>.</dd>
+<dt><code>RETURN</code></dt>
+<dd> Write the filename of the current image to <code><a href="/docs/linux/man/3-stdout/">stdout</a></code>(3), then go to the next image.</dd></dl>
 <p> The <code>RETURN</code> vs. <code>SPACE</code> key thing can be used to create a file list while reviewing the images and use the list for batch processing later on: </p>
 <p> <i>fbi file1.gif file2.jpg file3.jpg &gt;&nbsp;<wbr>fileimagelist.lst</i> </p>
 <p> some <code>RETURN</code> and <code>SPACE</code>&#8230; </p>
 <p> <i>fbi -l fileimagelist.lst</i></p>
 <h3>Zoom</h3>
 <dl>
-<dt><code>a</code></p>
-<dd> Autozoom.</p>
-<dt><code>+</code></p>
-<dd> In.</p>
-<dt><code>&#8211;</code></p>
-<dd> Out.</p>
-<dt><i>i</i><code>s</code></p>
-<dd> Set zoom to <i>i</i>%.</dl>
+<dt><code>a</code></dt>
+<dd> Autozoom.</dd>
+<dt><code>+</code></dt>
+<dd> In.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Out.</dd>
+<dt><i>i</i><code>s</code></dt>
+<dd> Set zoom to <i>i</i>%.</dd></dl>
 <h3>Other</h3>
 <dl>
-<dt><code>ESQ</code>, <code>q</code></p>
-<dd> Quit.</p>
-<dt><code>v</code></p>
-<dd> Toggle status line.</p>
-<dt><code>h</code></p>
-<dd> Display textbox with brief help.</p>
-<dt><code>i</code></p>
-<dd> Display textbox with some <i>EXIF</i> info.</p>
-<dt><code>p</code></p>
-<dd> Pause the slideshow (if started with <code>-t</code>, toggle).</dl>
+<dt><code>ESQ</code>, <code>q</code></dt>
+<dd> Quit.</dd>
+<dt><code>v</code></dt>
+<dd> Toggle status line.</dd>
+<dt><code>h</code></dt>
+<dd> Display textbox with brief help.</dd>
+<dt><code>i</code></dt>
+<dd> Display textbox with some <i>EXIF</i> info.</dd>
+<dt><code>p</code></dt>
+<dd> Pause the slideshow (if started with <code>-t</code>, toggle).</dd></dl>
 <h3>Edit mode</h3>
 <p> <code>Fbi</code> also provides some very basic image editing facilities. You have to start <code>fbi</code> with the <i>-e</i> switch to use them.</p>
 <dl>
-<dt><code>D</code>, <code>Shift+d</code></p>
-<dd> Delete image.</p>
-<dt><code>r</code></p>
-<dd> Rotate 90 degrees clockwise.</p>
-<dt><code>l</code></p>
-<dd> Rotate 90 degrees counter-clock wise.</p>
-<dt><code>x</code></p>
-<dd> Mirror image vertically (top / bottom).</p>
-<dt><code>y</code></p>
-<dd> Mirror image horizontally (left to right).</dl>
+<dt><code>D</code>, <code>Shift+d</code></dt>
+<dd> Delete image.</dd>
+<dt><code>r</code></dt>
+<dd> Rotate 90 degrees clockwise.</dd>
+<dt><code>l</code></dt>
+<dd> Rotate 90 degrees counter-clock wise.</dd>
+<dt><code>x</code></dt>
+<dd> Mirror image vertically (top / bottom).</dd>
+<dt><code>y</code></dt>
+<dd> Mirror image horizontally (left to right).</dd></dl>
 <p> The delete function actually wants a capital letter <code>D</code>, thus you have to type <code>Shift+d</code>. This is done to avoid deleting images by mistake because there are no safety bells: If you ask <code>Â fbi</code> to delete the image, it will be deleted without questions asked. </p>
 <p> The rotate function actually works for <i>JPEG</i> images only. It does a lossless transformation of the image. # #</p>
 <h2>BUGS</h2>

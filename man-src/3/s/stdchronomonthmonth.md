@@ -11,7 +11,6 @@ std::chrono::month::month - std::chrono::month::month
 <h2>Synopsis</h2>
 
 <pre><code>month() = default;                             (1) (since C++20)
-
 explicit constexpr month(unsigned m) noexcept; (2) (since C++20)</code></pre> 
 Constructs a month object. 
 1) Default constructor leaves the month value uninitialized. 

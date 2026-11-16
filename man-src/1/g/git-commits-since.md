@@ -20,7 +20,7 @@ description: "git-commits-since – Show commit logs since some date"
 <p> It is really flexible and these are only 3 of the options, go ahead give it a try:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git commits-since yesterday
 ... commits since yesterday
@@ -38,8 +38,7 @@ nickl- - Merge branch upstream master.
 TJ Holowaychuk - Merge pull request #128 from nickl-/git-extras-html-hyperlinks
 TJ Holowaychuk - Merge pull request #129 from nickl-/develop
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Tj Holowaychuk &lt;<i>tj [at] vision-media.ca</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

@@ -27,10 +27,10 @@ description: "zlartg.f –"
  F and G are unchanged on return.
  If G=0, then CS=1 and SN=0.
  If F=0, then CS=0 and SN is chosen so that R is real.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>F</i> </p>
+<dd><i>F</i> </dd>
 <pre> F is COMPLEX*16
  The first component of vector to be rotated.</pre>
 <p><i>G</i> </p>
@@ -48,20 +48,21 @@ description: "zlartg.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
 <pre> 3-5-96 - Modified with a new algorithm by W. Kahan and J. Demmel
  This version has a few statements commented out for thread safety
  (machine parameters are computed on each entry). 10 feb 03, SJH.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 104 of file zlartg.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

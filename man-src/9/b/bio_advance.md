@@ -15,11 +15,11 @@ bio_advance - increment/complete a bio by some number of bytes
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>bio to advance</dl>
+<dl><dd></dd><dd>bio to advance</dd></dl>
  
 
  <i>bytes</i>
-<dl><dd>number of bytes to complete</dl>
+<dl><dd>number of bytes to complete</dd></dl>
 
 <h2>Description</h2>
 

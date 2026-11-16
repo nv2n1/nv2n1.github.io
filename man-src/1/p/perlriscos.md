@@ -22,27 +22,26 @@ url: "/docs/linux/man/1-perlriscos/"
  Firstly, copy the source and build a native copy of perl for your host system. Then, in the source to be cross compiled:
 <dl>
 <dt>1.
-<dd> <pre>
+</dt><dd> <pre>
     $ ./Configure
 </pre>
-<dt>2.
-<dd> Select the riscos hint file. The default answers for the rest of the questions are usually sufficient. 
-
+</dd><dt>2.
+</dt><dd> Select the riscos hint file. The default answers for the rest of the questions are usually sufficient. 
  Note that, if you wish to run Configure non-interactively (see the <font SIZE="-1">INSTALL</font> document for details), to have it select the correct hint file, you'll need to provide the argument -Dhintfile=riscos on the Configure command-line.
-<dt>3.
-<dd> <pre>
+</dd><dt>3.
+</dt><dd> <pre>
     $ make miniperl
 </pre>
-<dt>4.
-<dd> This should build miniperl and then fail when it tries to run it.
-<dt>5.
-<dd> Copy the miniperl executable from the native build done earlier to replace the cross compiled miniperl.
-<dt>6.
-<dd> <pre>
+</dd><dt>4.
+</dt><dd> This should build miniperl and then fail when it tries to run it.
+</dd><dt>5.
+</dt><dd> Copy the miniperl executable from the native build done earlier to replace the cross compiled miniperl.
+</dd><dt>6.
+</dt><dd> <pre>
     $ make
 </pre>
-<dt>7.
-<dd> This will use miniperl to complete the rest of the build.</dl>
+</dd><dt>7.
+</dt><dd> This will use miniperl to complete the rest of the build.</dd></dl>
 
 <h2>AUTHOR</h2>
 

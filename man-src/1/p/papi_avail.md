@@ -37,15 +37,15 @@ url: "/docs/linux/man/1-papi_avail/"
 
 <dl>
 <dt>&bull;
-<dd> -a Display only the available PAPI preset events.
-<dt>&bull;
-<dd> -d Display PAPI preset event information in a more detailed format.
-<dt>&bull;
-<dd> -h Display help information about this utility.
-<dt>&bull;
-<dd> -t Display the PAPI preset event information in a tabular format. This is the default.
-<dt>&bull;
-<dd> -e &lt; event &gt; Display detailed event information for the named event. This event can be either a preset or a native event.</dl>
+</dt><dd> -a Display only the available PAPI preset events.
+</dd><dt>&bull;
+</dt><dd> -d Display PAPI preset event information in a more detailed format.
+</dd><dt>&bull;
+</dt><dd> -h Display help information about this utility.
+</dd><dt>&bull;
+</dt><dd> -t Display the PAPI preset event information in a tabular format. This is the default.
+</dd><dt>&bull;
+</dt><dd> -e &lt; event &gt; Display detailed event information for the named event. This event can be either a preset or a native event.</dd></dl>
  
 
 <h2>Bugs</h2>

@@ -14,10 +14,10 @@ description: "pingd – node up/down monitoring daemon"
 <p>The <code>pingd</code> daemon regularly sends out ICMP pings to determine if nodes are still up or down. The <code>pingd</code> daemon can be configured using the pingd configuration file. Nodes which should be pinged may also be configured via loadable modules. See the <code><a href="/docs/linux/man/5-pingd-conf/">pingd.conf</a>(5)</code> manpage for additional information. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Output help</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Output version </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Output help</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Output version </dd>
 </dl>
 <h2>Clusterlist Modules</h2>
 <p>The <code>pingd </code> daemon nodes to ping can also be configured with a clusterlist module. The clusterlist module can obtain a list of all cluster nodes. There are several possible clusterlist formats that can be parsed. By default, the following clusterlist modules are searched for by <code>pingd</code> in the following order: </p>

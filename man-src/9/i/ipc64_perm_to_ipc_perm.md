@@ -15,11 +15,11 @@ ipc64_perm_to_ipc_perm - convert new ipc permissions to old
 <h2>Arguments</h2>
 
 <i>in</i>
-<dl><dd><dd>new style ipc permissions</dl>
+<dl><dd></dd><dd>new style ipc permissions</dd></dl>
  
 
  <i>out</i>
-<dl><dd>old style ipc permissions</dl>
+<dl><dd>old style ipc permissions</dd></dl>
 
 <h2>Description</h2>
 

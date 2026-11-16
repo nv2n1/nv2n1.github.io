@@ -20,12 +20,12 @@ description: "Program Data Functions – Functions that set and retrieve data as
 <p>Retrieves the data associated to the given program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <h3>EAPI void embryo_program_data_set (Embryo_Program * ep, void * data)</h3>
 <p>Sets the data associated to the given program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The given program.<br />
- <i>data</i> New bytecode data.</dl>
+ <i>data</i> New bytecode data.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

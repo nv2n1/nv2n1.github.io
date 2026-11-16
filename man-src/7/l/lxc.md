@@ -53,7 +53,6 @@ description: "lxc – linux containers"
 <p> Before running an application, you should know what are the resources you want to isolate. The default configuration is to isolate the pids, the sysv ipc and the mount points. If you want to run a simple shell inside a container, a basic configuration is needed, especially if you want to share the rootfs. If you want to run an application like <code>sshd</code>, you should provide a new network stack and a new hostname. If you want to avoid conflicts with some files eg. <i>/var/run/httpd.pid</i>, you should remount <i>/var/run</i> with an empty directory. If you want to avoid the conflicts in all the cases, you can specify a rootfs for the container. The rootfs can be a directory tree, previously bind mounted with the initial rootfs, so you can still use your distro but with your own <i>/etc</i> and <i>/home</i> </p>
 <p> Here is an example of directory tree for <code>sshd</code>: </p>
 <pre>[root@lxc sshd]$ tree -d rootfs
- 
 rootfs 
 |-- bin 
 |-- dev 

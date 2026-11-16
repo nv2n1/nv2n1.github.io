@@ -40,12 +40,12 @@ description: "Tspi_Key_ConvertMigrationBlob – create a wrapped key from a migr
 <h2>Return Codes</h2>
 <p><code>Tspi_Key_ConvertMigrationBlob</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hKeyToMigrate</i> or <i>hParentKey</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
-<dd>One or more parameters is bad. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hKeyToMigrate</i> or <i>hParentKey</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Key_ConvertMigrationBlob</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

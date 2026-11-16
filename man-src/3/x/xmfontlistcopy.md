@@ -15,8 +15,8 @@ description: "XmFontListCopy — A font list function that copies a font list"
 <h2>Description</h2>
 <p><code>XmFontListCopy</code> creates a new font list consisting of the contents of the <i>fontlist</i> argument.</p>
 <dl COMPACT>
-<dt><i>fontlist</i></p>
-<dd>Specifies a font list to be copied</dl>
+<dt><i>fontlist</i></dt>
+<dd>Specifies a font list to be copied</dd></dl>
 <h2>Return</h2>
 <p>Returns NULL if <i>fontlist</i> is NULL; otherwise, returns a new font list and allocates space to hold the font list. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmFontListFree</code>.</p>
 <h2>Related</h2>

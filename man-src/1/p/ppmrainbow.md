@@ -19,17 +19,17 @@ description: "ppmrainbow – Generate a rainbow"
 <p> One use for such a rainbow is to compose it with another image under an alpha mask in order to add a rainbow area to another image. In fact, you can make rainbow-colored text by using <code>pbmtext</code>, <code>pnmcomp</code>, and <code>ppmrainbow</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-width </code><i>number</i></p>
-<dd> The width in pixels of the output image. </p>
+<dt><code>-width </code><i>number</i></dt>
+<dd> The width in pixels of the output image. </dd>
 <p> Default is 600.</p>
-<dt><code>-height </code><i>number</i></p>
-<dd> The height in pixels of the output image. </p>
+<dt><code>-height </code><i>number</i></dt>
+<dd> The height in pixels of the output image. </dd>
 <p> Default is 8.</p>
-<dt><code>-tmpdir</code></p>
-<dd> The directory specification of the directory <code>ppmrainbow</code> is to use for temporary files. </p>
+<dt><code>-tmpdir</code></dt>
+<dd> The directory specification of the directory <code>ppmrainbow</code> is to use for temporary files. </dd>
 <p> Default is the value of the <code>TMPDIR </code> environment variable, or <i>/tmp</i> if <code>TMPDIR </code> is not set.</p>
-<dt><code>-verbose</code></p>
-<dd> Print the &quot;commands&quot; (invocations of other Netpbm programs) that <code>ppmrainbow</code> uses to create the image. </p>
+<dt><code>-verbose</code></dt>
+<dd> Print the &quot;commands&quot; (invocations of other Netpbm programs) that <code>ppmrainbow</code> uses to create the image. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/1-pbmtext/">pbmtext</a></code>(1), <code><a href="/docs/linux/man/1-ppmfade/">ppmfade</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5). </p>

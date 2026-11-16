@@ -15,32 +15,32 @@ description: "iptraf – Interactive Colorful IP LAN Monitor"
 <h2>Options</h2>
 <p>These options can also be supplied to the command:</p>
 <dl>
-<dt><code>-i </code><i>iface</i></p>
-<dd>immediately start the IP traffic monitor on the specified interface, or all interfaces if &quot;-i all&quot; is specified</p>
-<dt><code>-g</code></p>
-<dd>immediately start the general interface statistics</p>
-<dt><code>-d </code><i>iface</i></p>
-<dd>allows you to immediately start the detailed on the indicated interface (iface)</p>
-<dt><code>-s </code><i>iface</i></p>
-<dd>allows you to immediately monitor TCP and UDP traffic on the specified interface (iface)</p>
-<dt><code>-z </code><i>iface</i></p>
-<dd>shows packet counts by size on the specified interface</p>
-<dt><code>-l </code><i>iface</i></p>
-<dd>start the LAN station monitor on the specified interface, or all LAN interfaces if &quot;-l all&quot; is specified</p>
-<dt><code>-t </code><i>timeout</i></p>
-<dd>tells IPTraf to run the specified facility for only <i>timeout</i> minutes. This option is used only with one of the above parameters.</p>
-<dt><code>-B</code></p>
-<dd>redirect standard output to /dev/null, closes standard input, and forks the program into the background. Can be used only with one of the facility invocation parameters above. Send the backgrounded process a USR2 signal to terminate.</p>
-<dt><code>-L logfile</code></p>
-<dd>allows you to specify an alternate log file name. The default log file name is based on either the interface selected (detailed interface statistics, TCP/UDP service statistics, packet size breakdown), or the instance of the facility (IP traffic monitor, LAN station monitor). If a path is not specified, the log file is placed in <code>/var/log/iptraf</code></p>
-<dt><code>-f</code></p>
-<dd>clears all locks and counters, causing this instance of IPTraf to think it&#8217;s the first one running. This should only be used to recover from an abnormal termination or system crash.</p>
-<dt><code>-u</code></p>
-<dd>allow use of unsupported interfaces as ethernet devices. This is needed if you changed the name of an interface (ex: ip link set eth0 name foo0)</p>
-<dt><code>-q</code></p>
-<dd>no longer needed, maintained only for compatibility.</p>
-<dt><code>-h</code></p>
-<dd>shows a command summary</dl>
+<dt><code>-i </code><i>iface</i></dt>
+<dd>immediately start the IP traffic monitor on the specified interface, or all interfaces if &quot;-i all&quot; is specified</dd>
+<dt><code>-g</code></dt>
+<dd>immediately start the general interface statistics</dd>
+<dt><code>-d </code><i>iface</i></dt>
+<dd>allows you to immediately start the detailed on the indicated interface (iface)</dd>
+<dt><code>-s </code><i>iface</i></dt>
+<dd>allows you to immediately monitor TCP and UDP traffic on the specified interface (iface)</dd>
+<dt><code>-z </code><i>iface</i></dt>
+<dd>shows packet counts by size on the specified interface</dd>
+<dt><code>-l </code><i>iface</i></dt>
+<dd>start the LAN station monitor on the specified interface, or all LAN interfaces if &quot;-l all&quot; is specified</dd>
+<dt><code>-t </code><i>timeout</i></dt>
+<dd>tells IPTraf to run the specified facility for only <i>timeout</i> minutes. This option is used only with one of the above parameters.</dd>
+<dt><code>-B</code></dt>
+<dd>redirect standard output to /dev/null, closes standard input, and forks the program into the background. Can be used only with one of the facility invocation parameters above. Send the backgrounded process a USR2 signal to terminate.</dd>
+<dt><code>-L logfile</code></dt>
+<dd>allows you to specify an alternate log file name. The default log file name is based on either the interface selected (detailed interface statistics, TCP/UDP service statistics, packet size breakdown), or the instance of the facility (IP traffic monitor, LAN station monitor). If a path is not specified, the log file is placed in <code>/var/log/iptraf</code></dd>
+<dt><code>-f</code></dt>
+<dd>clears all locks and counters, causing this instance of IPTraf to think it&#8217;s the first one running. This should only be used to recover from an abnormal termination or system crash.</dd>
+<dt><code>-u</code></dt>
+<dd>allow use of unsupported interfaces as ethernet devices. This is needed if you changed the name of an interface (ex: ip link set eth0 name foo0)</dd>
+<dt><code>-q</code></dt>
+<dd>no longer needed, maintained only for compatibility.</dd>
+<dt><code>-h</code></dt>
+<dd>shows a command summary</dd></dl>
 <h2>Signals</h2>
 <p>&nbsp;SIGUSR1 &#8211; rotates log files while program is running<br />
 &nbsp;SIGUSR2 &#8211; terminates an IPTraf process running in the background.</p>

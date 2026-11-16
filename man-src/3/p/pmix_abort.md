@@ -11,7 +11,6 @@ PMIx_Abort - Abort the specified processes
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pmix.h&gt;
-
 pmix_status_t PMIx_Abort(int status, const char msg[],
                          pmix_proc_t procs[], size_t nprocs);</code></pre>
 

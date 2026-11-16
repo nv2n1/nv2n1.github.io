@@ -22,63 +22,53 @@ description: "condor_transfer_data transfer spooled data"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>scheddname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>scheddname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>scheddname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <i>cluster</i></p>
 <dl>
 <dt>
-<dd> Transfer spooled data belonging to the specified cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Transfer spooled data belonging to the specified cluster</dd>
+</dl>
 <p> <i>cluster.process</i></p>
 <dl>
 <dt>
-<dd> Transfer spooled data belonging to a specific job in the cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Transfer spooled data belonging to a specific job in the cluster</dd>
+</dl>
 <p> <i>user</i></p>
 <dl>
 <dt>
-<dd> Transfer spooled data belonging to the specified user</p>
-<dt>
-<dd></dl>
+</dt><dd> Transfer spooled data belonging to the specified user</dd>
+</dl>
 <p> <code>-constraint </code> <i>expression</i></p>
 <dl>
 <dt>
-<dd> Transfer spooled data for jobs which match the job ClassAd expression constraint</p>
-<dt>
-<dd></dl>
+</dt><dd> Transfer spooled data for jobs which match the job ClassAd expression constraint</dd>
+</dl>
 <p> <i>-all</i></p>
 <dl>
 <dt>
-<dd> Transfer all spooled data</p>
-<dt>
-<dd></dl>
+</dt><dd> Transfer all spooled data</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_transfer_data</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

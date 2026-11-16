@@ -10,7 +10,6 @@ description: "xor_mode – Shortcut for toggling xor drawing mode on and off. Al
 <p>xor_mode &#8211; Shortcut for toggling xor drawing mode on and off. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void xor_mode(int on);</code></pre>
 <h2>Description</h2>
 <p>This is a shortcut for toggling xor drawing mode on and off. Calling xor_mode(TRUE) is equivalent to drawing_mode(DRAW_MODE_XOR, NULL, 0, 0). Calling xor_mode(FALSE) is equivalent to drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0). </p>

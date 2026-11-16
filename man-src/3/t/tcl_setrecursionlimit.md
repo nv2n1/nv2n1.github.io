@@ -14,8 +14,8 @@ int
 <code>Tcl_SetRecursionLimit</code>(<i>interp, depth</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter whose recursion limit is to be set. Must be greater than zero.</p>
-<dd>int <i>depth</i> (in) New limit for nested calls to <code>Tcl_Eval</code> for <i>interp</i>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter whose recursion limit is to be set. Must be greater than zero.</dd>
+<dd>int <i>depth</i> (in) New limit for nested calls to <code>Tcl_Eval</code> for <i>interp</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>At any given time Tcl enforces a limit on the number of recursive calls that may be active for <code>Tcl_Eval</code> and related procedures such as <code>Tcl_GlobalEval</code>. Any call to <code>Tcl_Eval</code> that exceeds this depth is aborted with an error. By default the recursion limit is 1000. </p>

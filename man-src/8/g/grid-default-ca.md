@@ -19,26 +19,26 @@ description: "grid-default-ca – Select default CA for certificate requests"
 <p>The full set of command-line options to <code>grid-default-ca</code> are: </p>
 <p> <code>-help, -h, -usage, -u</code></p>
 <dl>
-<dd>Display the command-line options to <code>grid-default-ca</code> and exit.</dl>
+<dd>Display the command-line options to <code>grid-default-ca</code> and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
-<dd>Display the version number of the <code>grid-default-ca</code> command. The second form includes more details.</dl>
+<dd>Display the version number of the <code>grid-default-ca</code> command. The second form includes more details.</dd></dl>
 <p> <code>-dir </code><i>CA-DIRECTORY</i></p>
 <dl>
-<dd>Use the trusted certificate directory named by <i>CA-DIRECTORY</i> instead of the default.</dl>
+<dd>Use the trusted certificate directory named by <i>CA-DIRECTORY</i> instead of the default.</dd></dl>
 <p> <code>-list</code></p>
 <dl>
-<dd>Instead of changing the default CA, print out a list of all available CA certificates in the trusted certificate directory.</dl>
+<dd>Instead of changing the default CA, print out a list of all available CA certificates in the trusted certificate directory.</dd></dl>
 <p> <code>-ca </code><i>CA-HASH</i></p>
 <dl>
-<dd>Set the default CA without displaying the list of choices or prompting. The CA file named by <i>CA-HASH</i> must exist.</dl>
+<dd>Set the default CA without displaying the list of choices or prompting. The CA file named by <i>CA-HASH</i> must exist.</dd></dl>
 <h2>Examples</h2>
 <p>List the contents of the trusted certificate directory that contain the string Example: </p>
 <dl>
 <dd>
 <pre>% grid-default-ca | grep Example
 15) cd1186ff - /DC=org/DC=Example/DC=Grid/CN=Example CA</pre>
-</dl>
+</dd></dl>
 <p> Choose that CA as the default: </p>
 <dl>
 <dd>
@@ -51,7 +51,7 @@ linking /etc/grid-security/certificates/grid-host-ssl.conf.cd1186ff to
 linking /etc/grid-security/certificates/grid-user-ssl.conf.cd1186ff to
  /etc/grid-security/certificates/grid-user-ssl.conf
 ...done.</pre>
-</dl>
+</dd></dl>
 <h2>Environment</h2>
 <p>The following environment variables affect the execution of <code>grid-default-ca</code>: <code>GRID_SECURITY_DIRECTORY</code>:: Path to the default trusted certificate directory. <code>X509_CERT_DIR</code>:: Path to the default trusted certificate directory. <code>GLOBUS_LOCATION</code>:: Path to the Globus Toolkit installation directory.</p>
 <h2>Bugs</h2>

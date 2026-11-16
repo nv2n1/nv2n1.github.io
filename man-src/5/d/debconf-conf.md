@@ -27,30 +27,30 @@ description: "debconf.conf – debconf configuration file"
 <p> The first stanza of the file is special, is used to configure debconf as a whole. Two fields are required to be in this first stanza:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Config</code></p>
-<dd>Specifies the name of the database from which to load config data.</p>
-<dt><code>Templates</code></p>
-<dd>Specifies the name of the database to use for the template cache.</dl>
+</dd><dl>
+<dt><code>Config</code></dt>
+<dd>Specifies the name of the database from which to load config data.</dd>
+<dt><code>Templates</code></dt>
+<dd>Specifies the name of the database to use for the template cache.</dd></dl>
 </dl>
 <p> Additional fields that can be used include:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Frontend</code></p>
-<dd>The frontend Debconf should use, overriding any frontend set in the debconf database.</p>
-<dt><code>Priority</code></p>
-<dd>The priority Debconf should use, overriding any priority set in the debconf database.</p>
-<dt><code>Admin-Email</code></p>
-<dd>The email address Debconf should send mail to if it needs to make sure that the admin has seen an important message. Defaults to &quot;root&quot;, but can be set to any valid email address to send the mail there. If you prefer to never have debconf send you mail, specify a blank address. This can be overridden on the fly with the DEBCONF_ADMIN_EMAIL environment variable.</p>
-<dt><code>Debug</code></p>
-<dd>If set, this will cause debconf to output debugging information to standard error. The value it is set to can be something like &quot;user&quot;, &quot;developer&quot;, &quot;db&quot;, or a regular expression. Typically, rather than setting it permanently in a config file, you will only want to temporarily turn on debugging, and the DEBCONF_DEBUG environment variable can be set instead to accomplish that.</p>
-<dt><code>NoWarnings</code></p>
-<dd>If set, this will make debconf not display warnings about various things. This can be overridden on the fly with the DEBCONF_NOWARNINGS environment variable.</p>
-<dt><code>Log</code></p>
-<dd>Makes debconf log debugging information as it runs, to the syslog. The value it is set to controls that is logged. See Debug, above for an explanation of the values that can be set to control what is logged.</p>
-<dt><code>Terse</code></p>
-<dd>If set to &quot;true&quot;, makes some debconf frontends use a special terse display mode that outputs as little as possible. Defaults to false. Terse mode may be temporarily set via the DEBCONF_TERSE environment variable.</dl>
+</dd><dl>
+<dt><code>Frontend</code></dt>
+<dd>The frontend Debconf should use, overriding any frontend set in the debconf database.</dd>
+<dt><code>Priority</code></dt>
+<dd>The priority Debconf should use, overriding any priority set in the debconf database.</dd>
+<dt><code>Admin-Email</code></dt>
+<dd>The email address Debconf should send mail to if it needs to make sure that the admin has seen an important message. Defaults to &quot;root&quot;, but can be set to any valid email address to send the mail there. If you prefer to never have debconf send you mail, specify a blank address. This can be overridden on the fly with the DEBCONF_ADMIN_EMAIL environment variable.</dd>
+<dt><code>Debug</code></dt>
+<dd>If set, this will cause debconf to output debugging information to standard error. The value it is set to can be something like &quot;user&quot;, &quot;developer&quot;, &quot;db&quot;, or a regular expression. Typically, rather than setting it permanently in a config file, you will only want to temporarily turn on debugging, and the DEBCONF_DEBUG environment variable can be set instead to accomplish that.</dd>
+<dt><code>NoWarnings</code></dt>
+<dd>If set, this will make debconf not display warnings about various things. This can be overridden on the fly with the DEBCONF_NOWARNINGS environment variable.</dd>
+<dt><code>Log</code></dt>
+<dd>Makes debconf log debugging information as it runs, to the syslog. The value it is set to controls that is logged. See Debug, above for an explanation of the values that can be set to control what is logged.</dd>
+<dt><code>Terse</code></dt>
+<dd>If set to &quot;true&quot;, makes some debconf frontends use a special terse display mode that outputs as little as possible. Defaults to false. Terse mode may be temporarily set via the DEBCONF_TERSE environment variable.</dd></dl>
 </dl>
 <p> For example, the first stanza of a file might look like this:<br />
 &nbsp;<wbr>&nbsp;<wbr>Config: configdb<br />
@@ -70,67 +70,67 @@ description: "debconf.conf – debconf configuration file"
 <p>A number of drivers are available, and more can be written with little difficulty. Drivers come in two general types. First there are real drivers &#8212; drivers that actually access and store data in some kind of database, which might be on the local filesystem, or on a remote system. Then there are meta-drivers that combine other drivers together to form more interesting systems. Let&#8217;s start with the former.</p>
 <dl>
 <dt>
-<dt><code>File</code></p>
+</dt><dt><code>File</code></dt>
 <dd>
-<dd>
-<dl>
-<dd>This database driver allows debconf to store a whole database in a single flat text file. This makes it easy to archive, transfer between machines, and edit. It is one of the more compact database formats in terms of disk space used. It is also one of the slowest. </p>
+</dd><dd>
+</dd><dl>
+<dd>This database driver allows debconf to store a whole database in a single flat text file. This makes it easy to archive, transfer between machines, and edit. It is one of the more compact database formats in terms of disk space used. It is also one of the slowest. </dd>
 <p> On the downside, the entire file has to be read in each time debconf starts up, and saving it is also slow. </p>
 <p> The following things are configurable for this driver.</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Filename</code></p>
-<dd>The file to use as the database. This is a required field.</p>
-<dt><code>Mode</code></p>
-<dd>The permissions to create the file with if it does not exist. Defaults to 600, since the file could contain passwords in some circumstances.</p>
-<dt><code>Format</code></p>
-<dd>The format of the file. See FORMATS below. Defaults to using a rfc-822 like format.</p>
-<dt><code>Backup</code></p>
-<dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dl>
+</dd><dl>
+<dt><code>Filename</code></dt>
+<dd>The file to use as the database. This is a required field.</dd>
+<dt><code>Mode</code></dt>
+<dd>The permissions to create the file with if it does not exist. Defaults to 600, since the file could contain passwords in some circumstances.</dd>
+<dt><code>Format</code></dt>
+<dd>The format of the file. See FORMATS below. Defaults to using a rfc-822 like format.</dd>
+<dt><code>Backup</code></dt>
+<dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dd></dl>
 </dl>
 <p> As example stanza setting up a database using this driver: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
 &nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/mydb.dat</dl>
-<dt><code>DirTree</code></p>
+<dt><code>DirTree</code></dt>
 <dd>
-<dl>
-<dd>This database driver allows debconf to store data in a hierarchical directory structure. The names of the various debconf templates and questions are used as-is to form directories with files in them. This format for the database is the easiest to browse and fiddle with by hand. It has very good load and save speeds. It also typically occupies the most space, since a lot of small files and subdirectories do take up some additional room. </p>
+</dd><dl>
+<dd>This database driver allows debconf to store data in a hierarchical directory structure. The names of the various debconf templates and questions are used as-is to form directories with files in them. This format for the database is the easiest to browse and fiddle with by hand. It has very good load and save speeds. It also typically occupies the most space, since a lot of small files and subdirectories do take up some additional room. </dd>
 <p> The following things are configurable for this driver.</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Directory</code></p>
-<dd>The directory to put the files in. Required.</p>
-<dt><code>Extension</code></p>
-<dd>An extension to add to the names of files. Must be set to a non-empty string; defaults to &quot;.dat&quot;</p>
-<dt><code>Format</code></p>
-<dd>The format of the file. See FORMATS below. Defaults to using a rfc-822 like format.</p>
-<dt><code>Backup</code></p>
-<dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dl>
+</dd><dl>
+<dt><code>Directory</code></dt>
+<dd>The directory to put the files in. Required.</dd>
+<dt><code>Extension</code></dt>
+<dd>An extension to add to the names of files. Must be set to a non-empty string; defaults to &quot;.dat&quot;</dd>
+<dt><code>Format</code></dt>
+<dd>The format of the file. See FORMATS below. Defaults to using a rfc-822 like format.</dd>
+<dt><code>Backup</code></dt>
+<dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dd></dl>
 </dl>
 <p> As example stanza setting up a database using this driver: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
 &nbsp;<wbr>&nbsp;<wbr>Driver: DirTree<br />
 &nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/mydb<br />
 &nbsp;<wbr>&nbsp;<wbr>Extension: .txt</dl>
-<dt><code>PackageDir</code></p>
+<dt><code>PackageDir</code></dt>
 <dd>
-<dl>
-<dd>This database driver is a compromise between the File and DirTree databases. It uses a directory, in which there is (approximately) one file per package that uses debconf. This is fairly fast, while using little more room than the File database driver. </p>
+</dd><dl>
+<dd>This database driver is a compromise between the File and DirTree databases. It uses a directory, in which there is (approximately) one file per package that uses debconf. This is fairly fast, while using little more room than the File database driver. </dd>
 <p> This driver is configurable in the same ways as is the DirTree driver, plus:</p>
 <dl>
-<dt><code>Mode</code></p>
-<dd>The permissions to create files with. Defaults to 600, since the files could contain passwords in some circumstances.</dl>
+<dt><code>Mode</code></dt>
+<dd>The permissions to create files with. Defaults to 600, since the files could contain passwords in some circumstances.</dd></dl>
 <p> As example stanza setting up a database using this driver: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
 &nbsp;<wbr>&nbsp;<wbr>Driver: PackageDir<br />
 &nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/mydb</dl>
-<dt><code>LDAP</code></p>
+<dt><code>LDAP</code></dt>
 <dd>
-<dl>
-<dd>WARNING: This database driver is currently experimental. Use with caution. </p>
+</dd><dl>
+<dd>WARNING: This database driver is currently experimental. Use with caution. </dd>
 <p> This database driver accesses a LDAP directory for debconf configuration data. Due to the nature of the beast, LDAP directories should typically be accessed in read-only mode. This is because multiple accesses can take place, and it&#8217;s generally better for data consistency if nobody tries to modify the data while this is happening. Of course, write access is supported for those cases where you do want to update the config data in the directory. </p>
 <p> For information about setting up a LDAP server for debconf, read /usr/share/doc/debconf-doc/README.LDAP (from the debconf-doc package). </p>
 <p> To use this database driver, you must have the libnet-ldap-perl package installed. Debconf suggests that package, but does not depend on it. </p>
@@ -138,24 +138,24 @@ description: "debconf.conf – debconf configuration file"
 <p> The following things are configurable for this driver.</p>
 <dl>
 <dd>
+</dd><dl>
+<dt><code>server</code></dt>
+<dd>The host name or IP address of an LDAP server to connect to.</dd>
+<dt><code>port</code></dt>
+<dd>The port on which to connect to the LDAP server. If none is given, the default port is used.</dd>
+<dt><code>basedn</code></dt>
+<dd>The DN under which all config items will be stored. Each config item will be assumed to live in a DN of cn=&lt;item name&gt;,&lt;Base DN&gt;. If this structure is not followed, all bets are off.</dd>
+<dt><code>binddn</code></dt>
+<dd>The DN to bind to the directory as. Anonymous bind will be used if none is specified.</dd>
+<dt><code>bindpasswd</code></dt>
+<dd>The password to use in an authenticated bind (used with binddn, above). If not specified, anonymous bind will be used.</dd></dl>
 <dl>
-<dt><code>server</code></p>
-<dd>The host name or IP address of an LDAP server to connect to.</p>
-<dt><code>port</code></p>
-<dd>The port on which to connect to the LDAP server. If none is given, the default port is used.</p>
-<dt><code>basedn</code></p>
-<dd>The DN under which all config items will be stored. Each config item will be assumed to live in a DN of cn=&lt;item name&gt;,&lt;Base DN&gt;. If this structure is not followed, all bets are off.</p>
-<dt><code>binddn</code></p>
-<dd>The DN to bind to the directory as. Anonymous bind will be used if none is specified.</p>
-<dt><code>bindpasswd</code></p>
-<dd>The password to use in an authenticated bind (used with binddn, above). If not specified, anonymous bind will be used.</dl>
+<dd>This option should not be used in the general case. Anonymous binding should be sufficient most of the time for read-only access. Specifying a bind DN and password should be reserved for the occasional case where you wish to update the debconf configuration data.</dd></dl>
 <dl>
-<dd>This option should not be used in the general case. Anonymous binding should be sufficient most of the time for read-only access. Specifying a bind DN and password should be reserved for the occasional case where you wish to update the debconf configuration data.</dl>
+<dt><code>keybykey</code></dt>
+<dd>Enable access to individual LDAP entries, instead of fetching them all at once in the beginning. This is very useful if you want to monitor your LDAP logs for specific debconf keys requested. In this way, you could also write custom handling code on the LDAP server part.</dd></dl>
 <dl>
-<dt><code>keybykey</code></p>
-<dd>Enable access to individual LDAP entries, instead of fetching them all at once in the beginning. This is very useful if you want to monitor your LDAP logs for specific debconf keys requested. In this way, you could also write custom handling code on the LDAP server part.</dl>
-<dl>
-<dd>Note that when this option is enabled, the connection to the LDAP server is kept active during the whole Debconf run. This is a little different from the all-in-one behavior where two brief connections are made to LDAP; in the beginning to retrieve all the entries, and in the end to save eventual changes.</dl>
+<dd>Note that when this option is enabled, the connection to the LDAP server is kept active during the whole Debconf run. This is a little different from the all-in-one behavior where two brief connections are made to LDAP; in the beginning to retrieve all the entries, and in the end to save eventual changes.</dd></dl>
 </dl>
 <p> An example stanza setting up a database using this driver, assuming the remote database is on example.com and can be accessed anonymously: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: ldapdb<br />
@@ -171,37 +171,37 @@ description: "debconf.conf – debconf configuration file"
 &nbsp;<wbr>&nbsp;<wbr>BaseDN: cn=debconf,dc=domain,dc=com<br />
 &nbsp;<wbr>&nbsp;<wbr>BindPasswd: secret<br />
 &nbsp;<wbr>&nbsp;<wbr>KeyByKey: 1</dl>
-<dt><code>Pipe</code></p>
+<dt><code>Pipe</code></dt>
 <dd>
-<dl>
-<dd>This special-purpose database driver reads and writes the database from standard input/output. It may be useful for people with special needs. </p>
+</dd><dl>
+<dd>This special-purpose database driver reads and writes the database from standard input/output. It may be useful for people with special needs. </dd>
 <p> The following things are configurable for this driver.</p>
 <dl>
 <dd>
-<dl>
-<dt><code>Format</code></p>
-<dd>The format to read and write. See FORMATS below. Defaults to using a rfc-822 like format.</p>
-<dt><code>Infd</code></p>
-<dd>File descriptor number to read from. Defaults to reading from stdin. If set to &quot;none&quot;, the database will not read any data on startup.</p>
-<dt><code>Outfd</code></p>
-<dd>File descriptor number to write to. Defaults to writing to stdout. If set to &quot;none&quot;, the database will be thrown away on shutdown.</dl>
+</dd><dl>
+<dt><code>Format</code></dt>
+<dd>The format to read and write. See FORMATS below. Defaults to using a rfc-822 like format.</dd>
+<dt><code>Infd</code></dt>
+<dd>File descriptor number to read from. Defaults to reading from stdin. If set to &quot;none&quot;, the database will not read any data on startup.</dd>
+<dt><code>Outfd</code></dt>
+<dd>File descriptor number to write to. Defaults to writing to stdout. If set to &quot;none&quot;, the database will be thrown away on shutdown.</dd></dl>
 </dl>
 </dl>
 </dl>
 <p> That&#8217;s all of the real drivers, now moving on to meta-drivers..</p>
 <dl>
-<dt><code>Stack</code></p>
+<dt><code>Stack</code></dt>
 <dd>
-<dl>
-<dd>This driver stacks up a number of other databases (of any type), and allows them to be accessed as one. When debconf asks for a value, the first database on the stack that contains the value returns it. If debconf writes something to the database, the write normally goes to the first driver on the stack that has the item debconf is modifying, and if none do, the new item is added to the first writable database on the stack. </p>
+</dd><dl>
+<dd>This driver stacks up a number of other databases (of any type), and allows them to be accessed as one. When debconf asks for a value, the first database on the stack that contains the value returns it. If debconf writes something to the database, the write normally goes to the first driver on the stack that has the item debconf is modifying, and if none do, the new item is added to the first writable database on the stack. </dd>
 <p> Things become more interesting if one of the databases on the stack is readonly. Consider a stack of the databases foo, bar, and baz, where foo and baz are both readonly. Debconf wants to change an item, and this item is only present in baz, which is readonly. The stack driver is smart enough to realize that won&#8217;t work, and it will copy the item from baz to bar, and the write will take place in bar. Now the item in baz is shadowed by the item in bar, and it will not longer be visible to debconf. </p>
 <p> This kind of thing is particularly useful if you want to point many systems at a central, readonly database, while still allowing things to be overridden on each system. When access controls are added to the picture, stacks allow you to do many other interesting things, like redirect all passwords to one database while a database underneath it handles everything else. </p>
 <p> Only one piece of configuration is needed to set up a stack: </p>
 <dl>
 <dd>
-<dl>
-<dt><code>Stack</code></p>
-<dd>This is where you specify a list of other databases, by name, to tell it what makes up the stack.</dl>
+</dd><dl>
+<dt><code>Stack</code></dt>
+<dd>This is where you specify a list of other databases, by name, to tell it what makes up the stack.</dd></dl>
 </dl>
 <p> For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: megadb<br />
@@ -211,15 +211,15 @@ description: "debconf.conf – debconf configuration file"
 </dl>
 <p> <code>Backup</code></p>
 <dl>
-<dd>This driver passes all requests on to another database driver. But it also copies all write requests to a backup database driver. </p>
+<dd>This driver passes all requests on to another database driver. But it also copies all write requests to a backup database driver. </dd>
 <p> You must specify the following fields to set up this driver: </p>
 <dl>
 <dd>
-<dl>
-<dt><code>Db</code></p>
-<dd>The database to read from and write to.</p>
-<dt><code>Backupdb</code></p>
-<dd>The name of the database to send copies of writes to.</dl>
+</dd><dl>
+<dt><code>Db</code></dt>
+<dd>The database to read from and write to.</dd>
+<dt><code>Backupdb</code></dt>
+<dd>The name of the database to send copies of writes to.</dd></dl>
 </dl>
 <p> For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Name: backup<br />
@@ -228,33 +228,33 @@ description: "debconf.conf – debconf configuration file"
 &nbsp;<wbr>&nbsp;<wbr>Backupdb: mybackupdb</dl>
 <p> <code>Debug</code></p>
 <dl>
-<dd>This driver passes all requests on to another database driver, outputting verbose debugging output about the request and the result. </p>
+<dd>This driver passes all requests on to another database driver, outputting verbose debugging output about the request and the result. </dd>
 <p> You must specify the following fields to set up this driver: </p>
 <dl>
 <dd>
-<dl>
-<dt><code>Db</code></p>
-<dd>The database to read from and write to.</dl>
+</dd><dl>
+<dt><code>Db</code></dt>
+<dd>The database to read from and write to.</dd></dl>
 </dl>
 </dl>
 <h2>Access Controls</h2>
 <p>When you set up a database, you can also use some fields to specify access controls. You can specify that a database only accepts passwords, for example, or make a database only accept things with &quot;foo&quot; in their name.</p>
 <dl>
-<dt><code>Readonly</code></p>
-<dd>As was mentioned earlier, this access control, if set to &quot;true&quot;, makes a database readonly. Debconf will read values from it, but will never write anything to it.</p>
-<dt><code>Accept-Name</code></p>
-<dd>The text in this field is a perl-compatible regular expression that is matched against the names of items as they are requested from the database. Only if an items name matches the regular expression, will the database allow debconf to access or modify it.</p>
-<dt><code>Reject-Name</code></p>
-<dd>Like Accept-Name, except any item name matching this regular expression will be rejected.</p>
-<dt><code>Accept-Type</code></p>
-<dd>Another regular expression, this matches against the type of the item that is being accessed. Only if the type matches the regex will access be granted.</p>
-<dt><code>Reject-Type</code></p>
-<dd>Like Accept-Type, except any type matching this regular expression will be rejected.</dl>
+<dt><code>Readonly</code></dt>
+<dd>As was mentioned earlier, this access control, if set to &quot;true&quot;, makes a database readonly. Debconf will read values from it, but will never write anything to it.</dd>
+<dt><code>Accept-Name</code></dt>
+<dd>The text in this field is a perl-compatible regular expression that is matched against the names of items as they are requested from the database. Only if an items name matches the regular expression, will the database allow debconf to access or modify it.</dd>
+<dt><code>Reject-Name</code></dt>
+<dd>Like Accept-Name, except any item name matching this regular expression will be rejected.</dd>
+<dt><code>Accept-Type</code></dt>
+<dd>Another regular expression, this matches against the type of the item that is being accessed. Only if the type matches the regex will access be granted.</dd>
+<dt><code>Reject-Type</code></dt>
+<dd>Like Accept-Type, except any type matching this regular expression will be rejected.</dd></dl>
 <h2>Formats</h2>
 <p>Some of the database drivers use format modules to control the actual format in which the database is stored on disk. These formats are currently supported:</p>
 <dl>
-<dt><code>822</code></p>
-<dd>This is a file format loosely based upon the rfc-822 format for email message headers. Similar formats are used throughout Debian; in the dpkg status file, and so on.</dl>
+<dt><code>822</code></dt>
+<dd>This is a file format loosely based upon the rfc-822 format for email message headers. Similar formats are used throughout Debian; in the dpkg status file, and so on.</dd></dl>
 <h2>Example</h2>
 <p>Here is a more complicated example of a debconf.conf file.<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This stanza is used for general debconf setup.<br />

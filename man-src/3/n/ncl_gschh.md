@@ -12,7 +12,7 @@ GSCHH (Set character height) - sets the character height for text.
 
  void gset_char_ht(Gdouble char_ht);
 <h2>Description</h2><dl COMPACT><dt>CHH
-<dd>(Real, Input) - Gives the height in world coordinates at which a character is drawn using the GTX output primitive. CHH &gt; 0. By default CHH = 0.01.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Real, Input) - Gives the height in world coordinates at which a character is drawn using the GTX output primitive. CHH &gt; 0. By default CHH = 0.01.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gtx, gstxp, gstxal, gstxfp, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, gset_char_ht 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

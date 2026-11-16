@@ -30,41 +30,41 @@ description: "QwtCPointerData –"
 <dl COMPACT>
 <dd><i>x</i> Array of x values<br />
  <i>y</i> Array of y values<br />
- <i>size</i> Size of the x and y arrays</dl>
+ <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The programmer must assure that the memory blocks referenced by the pointers remain valid during the lifetime of the QwtPlotCPointer object.</dl>
+<dd>The programmer must assure that the memory blocks referenced by the pointers remain valid during the lifetime of the QwtPlotCPointer object.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setRawSamples()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setRawSamples()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtCPointerData::boundingRect () const [virtual]</h3>
 <p>Calculate the bounding rectangle. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>QPointF QwtCPointerData::sample (size_tindex) const [virtual]</h3>
 <p>Return the sample at position i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at position i</dl>
+<dd>Sample at position i</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>size_t QwtCPointerData::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the data set</dl>
+<dd>Size of the data set</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>const double * QwtCPointerData::xData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the x-values</dl>
+<dd>Array of the x-values</dd></dl>
 <h3>const double * QwtCPointerData::yData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the y-values</dl>
+<dd>Array of the y-values</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

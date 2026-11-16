@@ -11,15 +11,10 @@ std::Copyable - std::Copyable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class T&gt;
-
     concept Copyable =
-
         std::CopyConstructible&lt;T&gt; &amp;&amp;(since C++ 20)
-
             std::Movable&lt;T&gt; &amp;&amp;
-
         std::Assignable&lt;T &amp;, const T &amp;&gt;;</code></pre> 
 The concept Copyable&lt;T&gt; specifies that T is an Movable object type that can also copied (that is, it supports copy construction and copy assignment). 
 

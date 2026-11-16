@@ -20,29 +20,29 @@ description: "krb5plugin_kuserok_ftable_desc –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
+</dt><dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
  <i>minor_version</i> The plugin minor version number (0)<br />
  <i>fini</i> Plugin finalization function<br />
- <i>kuserok</i> Plugin kuserok function</dl>
+ <i>kuserok</i> Plugin kuserok function</dd></dl>
 <p> The kuserok field is the plugin entry point that performs the traditional kuserok operation however the plugin desires. It is invoked in no particular order relative to other kuserok plugins, but it has a &#8216;rule&#8217; argument that indicates which plugin is intended to act on the rule. The plugin kuserok function must return KRB5_PLUGIN_NO_HANDLE if the rule is not applicable to it. </p>
 <p> The plugin kuserok function has the following arguments, in this order: </p>
 <dl>
-<dt>1.</p>
-<dd> plug_ctx, the context value output by the plugin&#8217;s init function</p>
-<dt>2.</p>
-<dd> context, a krb5_context</p>
-<dt>3.</p>
-<dd> rule, the kuserok rule being evaluated (from <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5))</p>
-<dt>4.</p>
-<dd> flags</p>
-<dt>5.</p>
-<dd> k5login_dir, configured location of k5login per-user files if any</p>
-<dt>6.</p>
-<dd> luser, name of the local user account to which principal is attempting to access.</p>
-<dt>7.</p>
-<dd> principal, the krb5_principal trying to access the luser account</p>
-<dt>8.</p>
-<dd> result, a krb5_boolean pointer where the plugin will output its result</dl>
+<dt>1.</dt>
+<dd> plug_ctx, the context value output by the plugin&#8217;s init function</dd>
+<dt>2.</dt>
+<dd> context, a krb5_context</dd>
+<dt>3.</dt>
+<dd> rule, the kuserok rule being evaluated (from <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5))</dd>
+<dt>4.</dt>
+<dd> flags</dd>
+<dt>5.</dt>
+<dd> k5login_dir, configured location of k5login per-user files if any</dd>
+<dt>6.</dt>
+<dd> luser, name of the local user account to which principal is attempting to access.</dd>
+<dt>7.</dt>
+<dd> principal, the krb5_principal trying to access the luser account</dd>
+<dt>8.</dt>
+<dd> result, a krb5_boolean pointer where the plugin will output its result</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

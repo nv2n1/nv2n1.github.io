@@ -14,18 +14,18 @@ description: "gnutls_x509_trust_list_add_trust_mem – API function"
 <p> <code>int gnutls_x509_trust_list_add_trust_mem(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_datum_t * </code><i>cas</i><code>, const gnutls_datum_t * </code><i>crls</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, unsigned int </code><i>tl_flags</i><code>, unsigned int </code><i>tl_vflags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>const gnutls_datum_t * cas</p>
-<dd> A buffer containing a list of CAs (optional)</p>
-<dt>const gnutls_datum_t * crls</p>
-<dd> A buffer containing a list of CRLs (optional)</p>
-<dt>gnutls_x509_crt_fmt_t type</p>
-<dd> The format of the certificates</p>
-<dt>unsigned int tl_flags</p>
-<dd> GNUTLS_TL_*</p>
-<dt>unsigned int tl_vflags</p>
-<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>const gnutls_datum_t * cas</dt>
+<dd> A buffer containing a list of CAs (optional)</dd>
+<dt>const gnutls_datum_t * crls</dt>
+<dd> A buffer containing a list of CRLs (optional)</dd>
+<dt>gnutls_x509_crt_fmt_t type</dt>
+<dd> The format of the certificates</dd>
+<dt>unsigned int tl_flags</dt>
+<dd> GNUTLS_TL_*</dd>
+<dt>unsigned int tl_vflags</dt>
+<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will add the given certificate authorities to the trusted list.</p>
 <h2>RETURNS</h2>
@@ -41,6 +41,6 @@ description: "gnutls_x509_trust_list_add_trust_mem – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

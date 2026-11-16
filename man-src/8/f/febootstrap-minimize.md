@@ -16,64 +16,64 @@ description: "febootstrap-minimize – Minimize an febootstrap image"
 <p> Note that image minimization involves deleting files that have been installed by <font SIZE="-1">RPM</font>. Thus after minimization, it is no longer guaranteed that <font SIZE="-1">RPM</font> will function correctly on the image. You should only do this as a final step for &#8220;throwaway&#8221; appliances that do not need to be modified or upgraded in future.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;all</code></p>
-<dd>Perform all minimization operations, to produce the smallest possible image. Note in particular that locales are discarded. </p>
+<dt><code>&#8211;all</code></dt>
+<dd>Perform all minimization operations, to produce the smallest possible image. Note in particular that locales are discarded. </dd>
 <p> You can perform all minimization operations <i>except</i> X, Y and Z by doing: </p>
 <pre> febootstrap-minimize --all --keep-X --keep-Y --keep-Z ...</pre>
 <p>(<tt>&quot;--all&quot;</tt> can be omitted since it is the default).</p>
-<dt><code>&#8211;none</code></p>
-<dd>Start with no minimization operations. You can specify <i>only</i> minimization operations X, Y and Z like this: </p>
+<dt><code>&#8211;none</code></dt>
+<dd>Start with no minimization operations. You can specify <i>only</i> minimization operations X, Y and Z like this: </dd>
 <pre> febootstrap-minimize --none --drop-X --drop-Y --drop-Z ...</pre>
-<dt><code>&#8211;keep-locales</code></p>
+<dt><code>&#8211;keep-locales</code></dt>
 <dd>
-<dt><code>&#8211;drop-locales</code></p>
-<dd>Keep or drop locale support.</p>
-<dt><code>&#8211;keep-docs</code></p>
+</dd><dt><code>&#8211;drop-locales</code></dt>
+<dd>Keep or drop locale support.</dd>
+<dt><code>&#8211;keep-docs</code></dt>
 <dd>
-<dt><code>&#8211;drop-docs</code></p>
-<dd>Keep or drop documentation, man pages and info files.</p>
-<dt><code>&#8211;keep-cracklib</code></p>
+</dd><dt><code>&#8211;drop-docs</code></dt>
+<dd>Keep or drop documentation, man pages and info files.</dd>
+<dt><code>&#8211;keep-cracklib</code></dt>
 <dd>
-<dt><code>&#8211;drop-cracklib</code></p>
-<dd>Keep or drop cracklib libraries.</p>
-<dt><code>&#8211;keep-i18n</code></p>
+</dd><dt><code>&#8211;drop-cracklib</code></dt>
+<dd>Keep or drop cracklib libraries.</dd>
+<dt><code>&#8211;keep-i18n</code></dt>
 <dd>
-<dt><code>&#8211;drop-i18n</code></p>
-<dd>Keep or drop <tt>&quot;/usr/share/i18n&quot;</tt>.</p>
-<dt><code>&#8211;keep-zoneinfo</code></p>
+</dd><dt><code>&#8211;drop-i18n</code></dt>
+<dd>Keep or drop <tt>&quot;/usr/share/i18n&quot;</tt>.</dd>
+<dt><code>&#8211;keep-zoneinfo</code></dt>
 <dd>
-<dt><code>&#8211;drop-zoneinfo</code></p>
-<dd>Keep or drop all timezones (except <font SIZE="-1">UTC</font> which is never deleted).</p>
-<dt><code>&#8211;keep-rpmdb</code></p>
+</dd><dt><code>&#8211;drop-zoneinfo</code></dt>
+<dd>Keep or drop all timezones (except <font SIZE="-1">UTC</font> which is never deleted).</dd>
+<dt><code>&#8211;keep-rpmdb</code></dt>
 <dd>
-<dt><code>&#8211;drop-rpmdb</code></p>
-<dd>Keep or drop the <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> package databases. Obviously <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> will be completely non-functional if you drop these.</p>
-<dt><code>&#8211;keep-yum-cache</code></p>
+</dd><dt><code>&#8211;drop-rpmdb</code></dt>
+<dd>Keep or drop the <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> package databases. Obviously <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> will be completely non-functional if you drop these.</dd>
+<dt><code>&#8211;keep-yum-cache</code></dt>
 <dd>
-<dt><code>&#8211;drop-yum-cache</code></p>
-<dd>Keep or drop the yum cache. Note that <i><a href="/docs/linux/man/8-febootstrap/">febootstrap</a></i>(8) has already deleted this directory unless you ran it with the <tt>&quot;--no-clean&quot;</tt> option.</p>
-<dt><code>&#8211;keep-services</code></p>
+</dd><dt><code>&#8211;drop-yum-cache</code></dt>
+<dd>Keep or drop the yum cache. Note that <i><a href="/docs/linux/man/8-febootstrap/">febootstrap</a></i>(8) has already deleted this directory unless you ran it with the <tt>&quot;--no-clean&quot;</tt> option.</dd>
+<dt><code>&#8211;keep-services</code></dt>
 <dd>
-<dt><code>&#8211;drop-services</code></p>
-<dd>Keep or drop the <tt>&quot;/etc/services&quot;</tt> file. If dropped, this file is replaced with a very minimal one which just lists the most common services. For less common services you will have to refer to them by port number instead of name.</p>
-<dt><code>&#8211;keep-sln</code></p>
+</dd><dt><code>&#8211;drop-services</code></dt>
+<dd>Keep or drop the <tt>&quot;/etc/services&quot;</tt> file. If dropped, this file is replaced with a very minimal one which just lists the most common services. For less common services you will have to refer to them by port number instead of name.</dd>
+<dt><code>&#8211;keep-sln</code></dt>
 <dd>
-<dt><code>&#8211;drop-sln</code></p>
-<dd>Keep or drop <tt>&quot;/sbin/sln&quot;</tt> (statically linked <tt>&quot;ln&quot;</tt>). This is not really required in minimal appliances.</p>
-<dt><code>&#8211;keep-ldconfig</code></p>
+</dd><dt><code>&#8211;drop-sln</code></dt>
+<dd>Keep or drop <tt>&quot;/sbin/sln&quot;</tt> (statically linked <tt>&quot;ln&quot;</tt>). This is not really required in minimal appliances.</dd>
+<dt><code>&#8211;keep-ldconfig</code></dt>
 <dd>
-<dt><code>&#8211;drop-ldconfig</code></p>
-<dd>Keep or drop <tt>&quot;/sbin/ldconfig&quot;</tt>, <tt>&quot;/etc/ld.so.cache&quot;</tt> and <tt>&quot;/var/cache/ldconfig&quot;</tt> (the dynamic linking cache). This is not needed. Dynamic linking during program execution will be marginally slower.</p>
-<dt><code>&#8211;pack-executables</code></p>
-<dd>This option has been removed in febootstrap 2.5. In previous versions it was used to pack executables using the external <tt>&quot;upx&quot;</tt> program. However it was not enabled by default and never worked very effectively.</dl>
+</dd><dt><code>&#8211;drop-ldconfig</code></dt>
+<dd>Keep or drop <tt>&quot;/sbin/ldconfig&quot;</tt>, <tt>&quot;/etc/ld.so.cache&quot;</tt> and <tt>&quot;/var/cache/ldconfig&quot;</tt> (the dynamic linking cache). This is not needed. Dynamic linking during program execution will be marginally slower.</dd>
+<dt><code>&#8211;pack-executables</code></dt>
+<dd>This option has been removed in febootstrap 2.5. In previous versions it was used to pack executables using the external <tt>&quot;upx&quot;</tt> program. However it was not enabled by default and never worked very effectively.</dd></dl>
 <h2>Todo</h2>
 <dl>
-<dt>*</p>
-<dd>Deduplicate files with the same content (by hardlinking them). See the program <i><a href="/docs/linux/man/1-hardlink/">hardlink</a></i>(1).</p>
-<dt>*</p>
-<dd>Remove unused binaries.</p>
-<dt>*</p>
-<dd>Remove unused libraries.</dl>
+<dt>*</dt>
+<dd>Deduplicate files with the same content (by hardlinking them). See the program <i><a href="/docs/linux/man/1-hardlink/">hardlink</a></i>(1).</dd>
+<dt>*</dt>
+<dd>Remove unused binaries.</dd>
+<dt>*</dt>
+<dd>Remove unused libraries.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-febootstrap/">febootstrap</a></i>(8).</p>
 <h2>Authors</h2>

@@ -20,14 +20,14 @@ description: "libnetpbm_image – overview of netpbm image-processing functions"
 <h2>Types</h2>
 <p> Here are some important types that you use with <code>libnetpbm</code>: </p>
 <dl>
-<dt>sample</p>
-<dd> A sample of a Netpbm image. See the format specifications &#8212; as an example, the red intensity of a particular pixel of a PPM image is a sample. This is an integer type. </p>
-<dt>tuple</p>
-<dd> A tuple from a PAM image or the PAM equivalent of a PNM image. See the PAM format specification &#8212; as an example, a pixel of a PPM image would be a tuple. A tuple is an array of samples. </p>
-<dt>samplen</p>
-<dd> Same as <code>sample</code>, except in normalized form. This is a floating point type with a value in the range 0..1. 0 corresponds to a PAM/PNM sample value of 0. 1 corresponds to a PAM/PNM sample value equal to the image&#8217;s maxval. </p>
-<dt>tuplen</p>
-<dd> The same as <code>tuple</code>, except composed of normalized samples (<code>samplen</code>) instead of regular samples (<code>sample</code>). </p>
+<dt>sample</dt>
+<dd> A sample of a Netpbm image. See the format specifications &#8212; as an example, the red intensity of a particular pixel of a PPM image is a sample. This is an integer type. </dd>
+<dt>tuple</dt>
+<dd> A tuple from a PAM image or the PAM equivalent of a PNM image. See the PAM format specification &#8212; as an example, a pixel of a PPM image would be a tuple. A tuple is an array of samples. </dd>
+<dt>samplen</dt>
+<dd> Same as <code>sample</code>, except in normalized form. This is a floating point type with a value in the range 0..1. 0 corresponds to a PAM/PNM sample value of 0. 1 corresponds to a PAM/PNM sample value equal to the image&#8217;s maxval. </dd>
+<dt>tuplen</dt>
+<dd> The same as <code>tuple</code>, except composed of normalized samples (<code>samplen</code>) instead of regular samples (<code>sample</code>). </dd>
 </dl>
 <p> The main argument to most of the PAM functions is the address of a <code>pam</code> structure, which is defined as follows: </p>
 <p> <code>struct pam {</code> <code>int </code><i>size</i> <code>int </code><i>len</i> <code>FILE *</code><i>file </i> <code>int </code><i>format</i> <code>int </code><i>plainformat</i> <code>int </code><i>height</i> <code>int </code><i>width</i> <code>int </code><i>depth</i> <code>sample </code><i>maxval</i> <code>int </code><i>bytes_per_sample</i> <code>char </code><i>tuple_type</i><code>[256]</code> <code>int </code><i>allocation_depth</i> <code>char **</code><i>comment_p</i><code>;</code> <code>}</code> </p>

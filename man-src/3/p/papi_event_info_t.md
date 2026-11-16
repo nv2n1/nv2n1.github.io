@@ -33,28 +33,28 @@ description: "PAPI_event_info_t –"
 <h3>unsigned int PAPI_event_info_t::code[12]</h3>
 <p>array of values that further describe the event:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>presets: native event_code values</p>
-<dt>&bull;</p>
-<dd>native:, register values(?)</dl>
+<dt>&bull;</dt>
+<dd>presets: native event_code values</dd>
+<dt>&bull;</dt>
+<dd>native:, register values(?)</dd></dl>
 <h3>int PAPI_event_info_t::component_index</h3>
 <p>component this event belongs to</p>
 <h3>unsigned int PAPI_event_info_t::count</h3>
 <p>number of terms (usually 1) in the code and name fields</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>presets: these are native events</p>
-<dt>&bull;</p>
-<dd>native: these are unused</dl>
+<dt>&bull;</dt>
+<dd>presets: these are native events</dd>
+<dt>&bull;</dt>
+<dd>native: these are unused</dd></dl>
 <h3>int PAPI_event_info_t::data_type</h3>
 <p>data type returned by PAPI</p>
 <h3>char PAPI_event_info_t::derived[64]</h3>
 <p>name of the derived type</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>presets: usually NOT_DERIVED</p>
-<dt>&bull;</p>
-<dd>native: empty string</dl>
+<dt>&bull;</dt>
+<dd>presets: usually NOT_DERIVED</dd>
+<dt>&bull;</dt>
+<dd>native: empty string</dd></dl>
 <h3>unsigned int PAPI_event_info_t::event_code</h3>
 <p>preset (0x8xxxxxxx) or native (0x4xxxxxxx) event code</p>
 <h3>unsigned int PAPI_event_info_t::event_type</h3>
@@ -66,8 +66,8 @@ description: "PAPI_event_info_t –"
 <h3>char PAPI_event_info_t::name[12][256]</h3>
 <p>&lt; names of code terms: &#8211; presets: native event names,</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>native: descriptive strings for each register value(?)</dl>
+<dt>&bull;</dt>
+<dd>native: descriptive strings for each register value(?)</dd></dl>
 <h3>char PAPI_event_info_t::note[1024]</h3>
 <pre> an optional developer note 
  supplied with a preset event

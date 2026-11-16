@@ -15,10 +15,10 @@ description: "git-merge-changelog – manual page for git-merge-changelog /build
 <p> Merges independent modifications of a ChangeLog style file. O-FILE-NAME names the original file, the ancestor of the two others. A-FILE-NAME names the publicly modified file. B-FILE-NAME names the user-modified file. Writes the merged file into A-FILE-NAME.</p>
 <h3>Informative output:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Bruno Haible.</p>
 <h2>REPORTING BUGS</h2>

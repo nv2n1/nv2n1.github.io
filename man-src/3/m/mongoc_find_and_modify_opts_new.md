@@ -13,7 +13,7 @@ description: "mongoc_find_and_modify_opts_new() – None"
 mongoc_find_and_modify_opts_new (void);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Returns</h2>
 <p>Creates a newly allocated find and modify builder structure that is used to create a findAndModify command. This should be freed with <code><a href="/docs/linux/man/3-mongoc_find_and_modify_opts_destroy/">mongoc_find_and_modify_opts_destroy</a>(3)</code> when no longer in use. </p>
 <h2>Colophon</h2>

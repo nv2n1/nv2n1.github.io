@@ -11,17 +11,11 @@ description: "sc::MOIntsTransformFactory –"
 <p> <code>MOIntsTransformFactory</code> is a factory that produces MOIntsTransform objects.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform_factory.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum StoreMethod { mem_posix =  0, posix =  1, mem_mpi =  2, mpi =  3, mem_only =  4 }
-
-
 Describes the method of storing transformed MO integrals.
-
-
-
 Public Member Functions</code></pre>
 <p> <code>MOIntsTransformFactory</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>MOIntsTransformFactory</code> (const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp;integral, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space1, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space2=0, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space3=0, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space4=0) </p>

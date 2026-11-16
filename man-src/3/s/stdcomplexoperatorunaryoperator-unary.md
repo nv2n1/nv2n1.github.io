@@ -12,27 +12,20 @@ std::complex&lt;T&gt;::operator+(unary),operator-(unary) - std::complex&lt;T&gt;
 
 <pre><code>template &lt;class T&gt;
 (until C++ 20)
-
     std::complex&lt;T&gt;
     operator+(const std::complex&lt;T&gt; &amp;val);
-
 template &lt;class T&gt;
 (since C++ 20)
-
     constexpr std::complex&lt;T&gt;
     operator+(const std::complex&lt;T&gt; &amp;val);
 (1)
-
     template &lt;class T&gt;
     (until C++ 20)
-
         std::complex&lt;T&gt;
         operator-(const std::complex&lt;T&gt; &amp;val);
 (2)
-
     template &lt;class T&gt;
     (since C++ 20)
-
         constexpr std::complex&lt;T&gt;
         operator-(const std::complex&lt;T&gt; &amp;val);</code></pre> 
 Implements the analogs of the unary arithmetic operators for complex numbers. 

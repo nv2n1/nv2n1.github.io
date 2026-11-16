@@ -11,7 +11,6 @@ description: "sc::PsiInput –"
 <p> <code>PsiInput</code> is a Psi input file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;psiinput.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

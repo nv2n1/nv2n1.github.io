@@ -21,9 +21,9 @@ CALL PCSETI (PNAM,IVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
-<dt>IVAL
-<dd>(an input expression of type INTEGER) is the value to be assigned to the internal parameter specified by PNAM. If the internal parameter is of type INTEGER, the value given to it is IVAL. If the internal parameter is of type REAL, the value given to it is REAL(IVAL).</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
+</dd><dt>IVAL
+</dt><dd>(an input expression of type INTEGER) is the value to be assigned to the internal parameter specified by PNAM. If the internal parameter is of type INTEGER, the value given to it is IVAL. If the internal parameter is of type REAL, the value given to it is REAL(IVAL).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -14,10 +14,10 @@ description: "generic_writepages – walk the list of dirty pages of the given a
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>address space structure to write</dl>
+</dd><dd>address space structure to write</dd></dl>
 <p> <i>wbc</i></p>
 <dl>
-<dd>subtract the number of written pages from *<i>wbc</i>-&gt;nr_to_write</dl>
+<dd>subtract the number of written pages from *<i>wbc</i>-&gt;nr_to_write</dd></dl>
 <h2>Description</h2>
 <p>This is a library function, which implements the <code>writepages</code> address_space_operation.</p>
 <h2>Copyright</h2>

@@ -15,15 +15,15 @@ xdr_init_decode - Initialize an xdr_stream for decoding data.
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to xdr_stream struct</dl>
+<dl><dd></dd><dd>pointer to xdr_stream struct</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>pointer to XDR buffer from which to decode data</dl>
+<dl><dd>pointer to XDR buffer from which to decode data</dd></dl>
  
 
  <i>p</i>
-<dl><dd>current pointer inside XDR buffer</dl>
+<dl><dd>current pointer inside XDR buffer</dd></dl>
 
 <h2>Copyright</h2>
 

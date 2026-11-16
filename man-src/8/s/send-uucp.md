@@ -19,18 +19,18 @@ description: "send-uucp – Send Usenet articles via UUCP"
 <p>The sites to which articles are to be sent must be configured in the configuration file <i>send-uucp.cf</i> in <i>pathetc</i> as set in <i>inn.conf</i>. Each site is specified with a line of the form: </p>
 <pre> site[:host[:funnel]] [compressor [maxsize [batchtime]]]</pre>
 <dl>
-<dt><i>site</i></p>
-<dd>The news site name being configured. This must match a site name from <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5).</p>
-<dt><i>host</i></p>
-<dd>The <font SIZE="-1">UUCP</font> host name to which batches should be sent for this site. If omitted, the news site name will be used as the <font SIZE="-1">UUCP</font> host name.</p>
-<dt><i>funnel</i></p>
-<dd>In the case of a site configured as a funnel, <code>send-uucp</code> needs to flush the channel (or exploder) being used as the target of the funnel instead of flushing the site. This is the way to tell <code>send-uucp</code> the name of the channel or exploder to flush for this site. If not specified, default to flushing the site.</p>
-<dt><i>compressor</i></p>
-<dd>The compression method to use for batches. This should be one of <tt>&quot;bzip2&quot;</tt>, <tt>&quot;compress&quot;</tt>, <tt>&quot;gzip&quot;</tt> or <tt>&quot;none&quot;</tt>. Arguments for the compression command may be specified by using <tt>&quot;_&quot;</tt> instead of spaces. For example, <tt>&quot;gzip_-9&quot;</tt>. The default value is <tt>&quot;gzip&quot;</tt>.</p>
-<dt><i>maxsize</i></p>
-<dd>The maximum size in bytes of a single batch <i>before</i> compression. The default value is <tt>500000</tt> bytes.</p>
-<dt><i>batchtime</i></p>
-<dd>A comma separated list of hours during which batches should be generated for a given site. When <code>send-uucp</code> runs, a site will only be processed if the current hour matches one of the hours in <i>batchtime</i>. The default is no limitation on when to generate batches.</dl>
+<dt><i>site</i></dt>
+<dd>The news site name being configured. This must match a site name from <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5).</dd>
+<dt><i>host</i></dt>
+<dd>The <font SIZE="-1">UUCP</font> host name to which batches should be sent for this site. If omitted, the news site name will be used as the <font SIZE="-1">UUCP</font> host name.</dd>
+<dt><i>funnel</i></dt>
+<dd>In the case of a site configured as a funnel, <code>send-uucp</code> needs to flush the channel (or exploder) being used as the target of the funnel instead of flushing the site. This is the way to tell <code>send-uucp</code> the name of the channel or exploder to flush for this site. If not specified, default to flushing the site.</dd>
+<dt><i>compressor</i></dt>
+<dd>The compression method to use for batches. This should be one of <tt>&quot;bzip2&quot;</tt>, <tt>&quot;compress&quot;</tt>, <tt>&quot;gzip&quot;</tt> or <tt>&quot;none&quot;</tt>. Arguments for the compression command may be specified by using <tt>&quot;_&quot;</tt> instead of spaces. For example, <tt>&quot;gzip_-9&quot;</tt>. The default value is <tt>&quot;gzip&quot;</tt>.</dd>
+<dt><i>maxsize</i></dt>
+<dd>The maximum size in bytes of a single batch <i>before</i> compression. The default value is <tt>500000</tt> bytes.</dd>
+<dt><i>batchtime</i></dt>
+<dd>A comma separated list of hours during which batches should be generated for a given site. When <code>send-uucp</code> runs, a site will only be processed if the current hour matches one of the hours in <i>batchtime</i>. The default is no limitation on when to generate batches.</dd></dl>
 <p> Fields are separated by spaces and only the site name needs to be specified, with defaults being used for unspecified values. If the first character on a line is a hash sign (<tt>&quot;#&quot;</tt>) then the rest of the line is ignored.</p>
 <h2>Example</h2>
 <p>Here is an example for the <i>send-uucp.cf</i> configuration file: </p>
@@ -50,10 +50,10 @@ description: "send-uucp – Send Usenet articles via UUCP"
  :Tf,Wnb,B4096/1024:</pre>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/send-uucp</p>
-<dd>The Perl script itself used to create news batches from the outgoing files.</p>
-<dt><i>pathetc</i>/send-uucp.cf</p>
-<dd>The configuration file which specifies a list of sites to be processed.</dl>
+<dt><i>pathbin</i>/send-uucp</dt>
+<dd>The Perl script itself used to create news batches from the outgoing files.</dd>
+<dt><i>pathetc</i>/send-uucp.cf</dt>
+<dd>The configuration file which specifies a list of sites to be processed.</dd></dl>
 <h2>History</h2>
 <p>This program was originally written by Edvard Tuinder &lt;ed [at] elm.net&gt; and then maintained and extended by Miquel van Smoorenburg &lt;miquels [at] cistron.nl&gt;. Marco d&#8217;Itri &lt;md [at] linux.it&gt; cleaned up the code for inclusion in <font SIZE="-1">INN. </font> This manual page was written by Mark Brown &lt;broonie [at] sirena.org.uk&gt;.</p>
 <h2>See Also</h2>

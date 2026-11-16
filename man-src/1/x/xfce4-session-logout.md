@@ -17,24 +17,24 @@ description: "xfce4-session-logout – Logs out from Xfce"
 <h2>OPTIONS</h2>
 <p> <code>xfce4-session-logout</code> takes the following command line options:</p>
 <dl>
-<dt><code>&#8211;logout</code></p>
-<dd> Log out without displaying the logout dialog.</p>
-<dt><code>&#8211;halt</code></p>
-<dd> Halt without displaing the logout dialog.</p>
-<dt><code>&#8211;reboot</code></p>
-<dd> Reboot without displaying the logout dialog.</p>
-<dt><code>&#8211;suspend</code></p>
-<dd> Suspend without displaying the logout dialog.</p>
-<dt><code>&#8211;hibernate</code></p>
-<dd> Hibernate without displaying the logout dialog.</p>
-<dt><code>&#8211;hybrid-sleep</code></p>
-<dd> Hybrid Sleep without displaying the logout dialog.</p>
-<dt><code>&#8211;fast</code></p>
-<dd> Do a fast shutdown. This instructs the session manager not to save the session, but instead to quit everything quickly.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a help screen and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit. </p>
+<dt><code>&#8211;logout</code></dt>
+<dd> Log out without displaying the logout dialog.</dd>
+<dt><code>&#8211;halt</code></dt>
+<dd> Halt without displaing the logout dialog.</dd>
+<dt><code>&#8211;reboot</code></dt>
+<dd> Reboot without displaying the logout dialog.</dd>
+<dt><code>&#8211;suspend</code></dt>
+<dd> Suspend without displaying the logout dialog.</dd>
+<dt><code>&#8211;hibernate</code></dt>
+<dd> Hibernate without displaying the logout dialog.</dd>
+<dt><code>&#8211;hybrid-sleep</code></dt>
+<dd> Hybrid Sleep without displaying the logout dialog.</dd>
+<dt><code>&#8211;fast</code></dt>
+<dd> Do a fast shutdown. This instructs the session manager not to save the session, but instead to quit everything quickly.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a help screen and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>xfce4-session-logout</code> and this manual page were written by Brian Tarricone &lt;kelnos [at] xfce.org&gt; and Benedikt Meurer &lt;benny [at] xfce.org&gt; as part of the Xfce project.</p>

@@ -15,19 +15,19 @@ vmap - map an array of pages into virtually contiguous space
 <h2>Arguments</h2>
 
 <i>pages</i>
-<dl><dd><dd>array of page pointers</dl>
+<dl><dd></dd><dd>array of page pointers</dd></dl>
  
 
  <i>count</i>
-<dl><dd>number of pages to map</dl>
+<dl><dd>number of pages to map</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>vm_area-&gt;flags</dl>
+<dl><dd>vm_area-&gt;flags</dd></dl>
  
 
  <i>prot</i>
-<dl><dd>page protection for the mapping</dl>
+<dl><dd>page protection for the mapping</dd></dl>
 
 <h2>Description</h2>
 

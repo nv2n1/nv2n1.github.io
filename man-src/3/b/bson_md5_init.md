@@ -15,8 +15,8 @@ void bson_md5_init(bson_md5_t *pms);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>pms</code></p>
-<dd> A <code>bson_md5_t</code> \&amp;.</dl>
+<dt><code>pms</code></dt>
+<dd> A <code>bson_md5_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Initialize a new instance of the MD5 algorithm. </p>
 <h2>COLOPHON</h2>

@@ -11,11 +11,8 @@ description: "ql/instruments/varianceswap.hpp – Variance swap."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/processes/blackscholesprocess.hpp&gt;
-
 #include &lt;ql/instruments/payoffs.hpp&gt;
-
 #include &lt;ql/option.hpp&gt;
-
 #include &lt;ql/position.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>VarianceSwap</code><br />

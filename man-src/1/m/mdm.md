@@ -19,16 +19,16 @@ description: "MDM – The MDM Display Manager"
 <h2>OPTIONS</h2>
 <p> <code>mdm</code> and thus also <code>mdm</code> accept the following options:</p>
 <dl>
-<dt><code>-nodaemon</code></p>
-<dd> Do not fork into the background</p>
-<dt><code>&#8211;no-console</code></p>
-<dd> No console (local) servers to be run</p>
-<dt><code>&#8211;preserve-ld-vars</code></p>
-<dd> Preserve LD_* variables</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the MDM version</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print simple description of accepted options</dl>
+<dt><code>-nodaemon</code></dt>
+<dd> Do not fork into the background</dd>
+<dt><code>&#8211;no-console</code></dt>
+<dd> No console (local) servers to be run</dd>
+<dt><code>&#8211;preserve-ld-vars</code></dt>
+<dd> Preserve LD_* variables</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the MDM version</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print simple description of accepted options</dd></dl>
 <p> <code>mdmsetup</code> accepts all standard GNOME options.</p>
 <h2>CONFIGURATION</h2>
 <p> Configuration is done either by running <code>mdmsetup</code> or by editting the /etc/X11/mdm/mdm.conf (usually, could also be /etc/mdm/mdm.conf) file. The graphical tool does not support all the options possible so editting the configuration file is sometimes necessary.</p>

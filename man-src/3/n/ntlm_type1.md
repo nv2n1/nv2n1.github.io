@@ -10,7 +10,6 @@ description: "ntlm_type1 –"
 <p>ntlm_type1 &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;heimntlm.h&gt;</code></pre>
 <h2>Detailed Description</h2>
 <p>Struct for the NTLM type1 message info, the strings is assumed to be in UTF8. When filled in by the library it should be freed with <code>heim_ntlm_free_type1()</code>. </p>

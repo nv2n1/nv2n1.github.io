@@ -33,7 +33,8 @@ description: "PAPI_disable_component –"
 <p> <code>PAPI_disable_component()</code> must be called before <code>PAPI_library_init()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_event_component</code> </p>
+<dd><code>PAPI_get_event_component</code> </dd>
 <p> <code>PAPI_library_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

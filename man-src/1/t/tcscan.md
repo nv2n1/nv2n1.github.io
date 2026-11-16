@@ -11,8 +11,8 @@ description: "tcscan – scan multimedia streams from medium and print informati
 <p> tcscan &#8211; scan multimedia streams from medium and print information on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tcscan</code></p>
-<dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-e</code> <i>r[,b[,c]]</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-w</code> <i>num</i> ] [ <code>-f</code> <i>rate</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dl>
+<dt><code>tcscan</code></dt>
+<dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-e</code> <i>r[,b[,c]]</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-w</code> <i>num</i> ] [ <code>-f</code> <i>rate</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcscan</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
@@ -21,11 +21,11 @@ description: "tcscan – scan multimedia streams from medium and print informati
  <code>tcscan</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i </code><i>name</i></p>
+<dt><code>-i </code><i>name</i></dt>
 <dd> Specify input source. If ommited, <i>stdin</i> is assumed.<br />
- You can specify a file, directory, device, mountpoint or host address as input source. <code>tcscan</code> usually handles the different types correctly.</p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </p>
+ You can specify a file, directory, device, mountpoint or host address as input source. <code>tcscan</code> usually handles the different types correctly.</dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
 <p> QUIET 0 </p>
 <p> INFO 1 </p>
 <p> DEBUG 2 </p>
@@ -36,8 +36,8 @@ description: "tcscan – scan multimedia streams from medium and print informati
 <p> SYNC 64 </p>
 <p> COUNTER 128 </p>
 <p> PRIVATE 256</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>tcscan</code> is a front end for scaning various source types and is used in <code>transcode</code>&#8216;s import modules. <code>tcscan</code> does a complete scan of the source to gather information.</p>
 <h2>EXAMPLES</h2>

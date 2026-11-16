@@ -15,11 +15,11 @@ list_move - delete from one list and add as another's head
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>the entry to move</dl>
+<dl><dd></dd><dd>the entry to move</dd></dl>
  
 
  <i>head</i>
-<dl><dd>the head that will precede our entry</dl>
+<dl><dd>the head that will precede our entry</dd></dl>
 
 <h2>Copyright</h2>
 

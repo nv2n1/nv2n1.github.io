@@ -12,13 +12,9 @@ description: "std::strstreambuf::overflow – std::strstreambuf::overflow"
 <pre><code>protected:
 virtual int_type overflow(int_type c = EOF);
 Appends the character c to the put area of the buffer, reallocating if possible.
-
 1) If c==EOF, does nothing
-
 2) Otherwise, if the put area has a write position available (pptr() &lt; epptr()), stores the character as if by *pptr()++ = c
-
 3) Otherwise, if the stream buffer mode is not dynamic or the stream buffer is currently frozen, the function fails and returns EOF
-
 4) Otherwise, the function reallocates (or initially allocates) a dynamic array large enough to hold the contents of the current dynamic array (if any) plus at least one additional write position. If a pointer to the allocating function palloc was used in the constructor, that function is called with (*palloc)(n) where n is the number of bytes to allocate, otherwise new char[n] is used. If a pointer to the deallocating function pfree was used in the constructor, that function is called with (*pfree)(p) to deallocate the previous array, if needed, otherwise delete[] p is used. If allocation fails, the function fails and returns EOF.
 </code></pre>
 <h2>Parameters</h2>
@@ -28,10 +24,8 @@ Appends the character c to the put area of the buffer, reallocating if possible.
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 struct mybuf : std::strstreambuf
-
 {
     int_type overflow(int_type c)
     {
@@ -46,7 +40,6 @@ struct mybuf : std::strstreambuf
     }
 };
 int main()
-
 {
     mybuf sbuf; // read-write dynamic strstreambuf
     std::iostream stream(&amp;sbuf);

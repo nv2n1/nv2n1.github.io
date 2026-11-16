@@ -18,7 +18,7 @@ description: "sla_gercond.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     SLA_GERCOND estimates the Skeel condition number of op(A) * op2(C)
     where op2 is determined by CMODE as follows
@@ -30,11 +30,11 @@ description: "sla_gercond.f –"
     diag(R)*A*op2(C) is row equilibrated and computing the standard
     infinity-norm condition number.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER*1
      Specifies the form of the system of equations:
@@ -109,14 +109,14 @@ description: "sla_gercond.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 150 of file sla_gercond.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

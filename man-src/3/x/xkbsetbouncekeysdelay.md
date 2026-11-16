@@ -11,16 +11,16 @@ description: "XkbSetBounceKeysDelay – Sets the BounceKeys delay for a keyboard
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetBounceKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; delay</i></p>
-<dd>backfilled with bounce keys delay, ms</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; delay</i></dt>
+<dd>backfilled with bounce keys delay, ms</dd></dl>
 <h2>Description</h2>
 <p>The server can generate XkbAccessXNotify events for some of the global keyboard controls. The detail field describes what AccessX event just occurred and can be any of the values in Table 1. </p>
 <table>
@@ -158,10 +158,10 @@ description: "XkbSetBounceKeysDelay – Sets the BounceKeys delay for a keyboard
 <p> <i>XkbSetBounceKeysDelay</i> sends a request to configure the BounceKeys control to the server. It does not wait for a reply and normally returns True. Specifying a value of zero for the delay parameter causes <i>XkbSetBounceKeysDelay </i> to generate a BadValue protocol error. If a compatible version of the Xkb extension is not available in the server, <i>XkbSetBounceKeysDelay </i> returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetBounceKeysDelay</i> function returns True when it sends a request to configure the BounceKeys control to the server.</p>
-<dt>False</p>
-<dd>The <i>XkbSetBounceKeysDelay</i> function returns False if a compatible version of the Xkb extension is not available in the server.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetBounceKeysDelay</i> function returns True when it sends a request to configure the BounceKeys control to the server.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetBounceKeysDelay</i> function returns False if a compatible version of the Xkb extension is not available in the server.</dd></dl>
 <h2>Structures</h2>
 <p>The structure for the XkbAccessXNotify event type is as follows: </p>
 <pre>typedef struct {
@@ -180,6 +180,6 @@ description: "XkbSetBounceKeysDelay – Sets the BounceKeys delay for a keyboard
 } XkbAccessXNotifyEvent;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range </p>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
 </dl>

@@ -17,16 +17,16 @@ description: "uhd_usrp_probe – USRP Hardware Driver Peripheral Report Utility"
 <p> <code>uhd_usrp_probe [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Device Address Arguments:</p>
-<dd> &#8211;args <i>arg</i></p>
-<dt>Print a complete property tree:</p>
-<dd> &#8211;tree</p>
-<dt>Query a string value from the properties tree:</p>
-<dd> &#8211;string <i>arg</i></p>
-<dt>Print the version string and exit:</p>
-<dd> &#8211;version</p>
-<dt>This help information:</p>
-<dd> &#8211;help</dl>
+<dt>Device Address Arguments:</dt>
+<dd> &#8211;args <i>arg</i></dd>
+<dt>Print a complete property tree:</dt>
+<dd> &#8211;tree</dd>
+<dt>Query a string value from the properties tree:</dt>
+<dd> &#8211;string <i>arg</i></dd>
+<dt>Print the version string and exit:</dt>
+<dd> &#8211;version</dd>
+<dt>This help information:</dt>
+<dd> &#8211;help</dd></dl>
 <h2>IDENTIFYING USRP DEVICES</h2>
 <p> Devices are addressed through key/value string pairs. These string pairs can be used to narrow down the search for a specific device or group of devices. Most UHD utility applications and examples have a &#8211;args parameter that takes a device address, where the device address is expressed as a delimited string. See the documentation in types/device_addr.hpp for reference. </p>
 <p> Every device has several ways of identifying it on the host system.</p>
@@ -53,8 +53,8 @@ description: "uhd_usrp_probe – USRP Hardware Driver Peripheral Report Utility"
 uhd_usrp_probe-- args = "type=usrp1" --OR-- uhd_usrp_probe-- args = "serial=12345678"
 </code></pre>
 <dl>
-<dt>Find all devices available to this system:</p>
-<dd> uhd_usrp_probe</dl>
+<dt>Find all devices available to this system:</dt>
+<dd> uhd_usrp_probe</dd></dl>
 <h2>SEE ALSO</h2>
 <p> UHD documentation: <code><a rel="nofollow" href="http://files.ettus.com/uhd_docs/manual/html/index.html">http://files.ettus.com/uhd_docs/manual/html/index.html</a></code> </p>
 <p> GR-UHD documentation: <code><a rel="nofollow" href="http://gnuradio.org/doc/doxygen/page_uhd.html">http://gnuradio.org/doc/doxygen/page_uhd.html</a></code> </p>

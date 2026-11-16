@@ -15,10 +15,10 @@ description: "getcert"
 <p> Forces <i>certmonger</i> to refresh information specific to a CA, such as locally-stored copies of its certificates. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> Refresh information about the CA which has the specified nickname.</p>
-<dt><code>-a</code></p>
-<dd> Refresh information about all known CAs. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> Refresh information about the CA which has the specified nickname.</dd>
+<dt><code>-a</code></dt>
+<dd> Refresh information about all known CAs. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

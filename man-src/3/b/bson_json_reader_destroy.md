@@ -15,8 +15,8 @@ void bson_json_reader_destroy(bson_json_reader_t *reader);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_json_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_json_reader_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Frees a bson_json_reader_t. </p>
 <h2>COLOPHON</h2>

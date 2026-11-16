@@ -13,8 +13,8 @@ description: "mongoc_uri_get_auth_source() – Fetches the authSource parameter 
 mongoc_uri_get_auth_source (const mongoc_uri_t *uri);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri</code></p>
-<dd>A <code>mongoc_uri_t</code> \&amp;.</dl>
+<dt><code>uri</code></dt>
+<dd>A <code>mongoc_uri_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the <code>authSource</code> parameter of an URI if provided. </p>
 <h2>Returns</h2>

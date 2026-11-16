@@ -16,22 +16,22 @@ description: "gofmt – format Go programs"
 <p> Without an explicit path, it processes the standard input. Given a file, it operates on that file; given a directory, it operates on all .go files in that directory, recursively. (Files starting with a period are ignored.) By default, gofmt prints the reformatted sources to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different than gofmt&#8217;s, print diffs to standard output.</p>
-<dt><code>-e</code></p>
-<dd> Print all (including spurious) errors.</p>
-<dt><code>-l</code></p>
-<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different from gofmt&#8217;s, print its name to standard output.</p>
-<dt><code>-r rule</code></p>
-<dd> Apply the rewrite rule to the source before reformatting.</p>
-<dt><code>-s</code></p>
-<dd> Try to simplify code (after applying the rewrite rule, if any).</p>
-<dt><code>-w</code></p>
-<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different from gofmt&#8217;s, overwrite it with gofmt&#8217;s version. If an error occurred during overwriting, the original file is restored from an automatic backup.</dl>
+<dt><code>-d</code></dt>
+<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different than gofmt&#8217;s, print diffs to standard output.</dd>
+<dt><code>-e</code></dt>
+<dd> Print all (including spurious) errors.</dd>
+<dt><code>-l</code></dt>
+<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different from gofmt&#8217;s, print its name to standard output.</dd>
+<dt><code>-r rule</code></dt>
+<dd> Apply the rewrite rule to the source before reformatting.</dd>
+<dt><code>-s</code></dt>
+<dd> Try to simplify code (after applying the rewrite rule, if any).</dd>
+<dt><code>-w</code></dt>
+<dd> Do not print reformatted sources to standard output. If a file&#8217;s formatting is different from gofmt&#8217;s, overwrite it with gofmt&#8217;s version. If an error occurred during overwriting, the original file is restored from an automatic backup.</dd></dl>
 <p> Debugging support:</p>
 <dl>
-<dt><code>-cpuprofile </code><i>filename</i></p>
-<dd> Write cpu profile to the specified file.</dl>
+<dt><code>-cpuprofile </code><i>filename</i></dt>
+<dd> Write cpu profile to the specified file.</dd></dl>
 <p> The rewrite rule specified with the -r flag must be a string of the form: </p>
 <pre>
       pattern -&gt; replacement

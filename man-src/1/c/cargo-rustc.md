@@ -16,96 +16,78 @@ description: "cargo-rustc – Compile a package and all of its dependencies"
 <p> This command requires that only one target is being compiled. If more than one target is available for the current package the filters of &#8211;lib, &#8211;bin, etc, must be used to select which target is compiled. To pass flags to all compiler processes spawned by Cargo, use the $RUSTFLAGS environment variable or the build.rustflags configuration option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-p </code>SPEC, &#8211;package SPEC</p>
-<dd> The profile to compiler for.</p>
+</dl>
+<dt><code>-p </code>SPEC, &#8211;package SPEC</dt>
+<dd> The profile to compiler for.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-j </code>N, &#8211;jobs N</p>
-<dd> Number of parallel jobs, defaults to # of CPUs.</p>
+</dl>
+<dt><code>-j </code>N, &#8211;jobs N</dt>
+<dd> Number of parallel jobs, defaults to # of CPUs.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;lib</code></p>
-<dd> Build only this package&#8217;s library.</p>
+</dl>
+<dt><code>&#8211;lib</code></dt>
+<dd> Build only this package&#8217;s library.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;bin </code>NAME</p>
-<dd> Build only the specified binary.</p>
+</dl>
+<dt><code>&#8211;bin </code>NAME</dt>
+<dd> Build only the specified binary.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;example </code>NAME</p>
-<dd> Build only the specified example.</p>
+</dl>
+<dt><code>&#8211;example </code>NAME</dt>
+<dd> Build only the specified example.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;test </code>NAME</p>
-<dd> Build only the specified test target.</p>
+</dl>
+<dt><code>&#8211;test </code>NAME</dt>
+<dd> Build only the specified test target.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;bench </code>NAME</p>
-<dd> Build only the specified benchmark target.</p>
+</dl>
+<dt><code>&#8211;bench </code>NAME</dt>
+<dd> Build only the specified benchmark target.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;release</code></p>
-<dd> Build artifacts in release mode, with optimizations.</p>
+</dl>
+<dt><code>&#8211;release</code></dt>
+<dd> Build artifacts in release mode, with optimizations.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;profile </code>PROFILE</p>
-<dd> Profile to build the selected target for.</p>
+</dl>
+<dt><code>&#8211;profile </code>PROFILE</dt>
+<dd> Profile to build the selected target for.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;features </code>FEATURES</p>
-<dd> The version to yank or un-yank.</p>
+</dl>
+<dt><code>&#8211;features </code>FEATURES</dt>
+<dd> The version to yank or un-yank.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;all-features</code></p>
-<dd> Build all available features.</p>
+</dl>
+<dt><code>&#8211;all-features</code></dt>
+<dd> Build all available features.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;no-default-features</code></p>
-<dd> Do not compile default features for the package.</p>
+</dl>
+<dt><code>&#8211;no-default-features</code></dt>
+<dd> Do not compile default features for the package.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;target </code>TRIPLE</p>
-<dd> Target triple which compiles will be for.</p>
+</dl>
+<dt><code>&#8211;target </code>TRIPLE</dt>
+<dd> Target triple which compiles will be for.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;manifest-path </code>PATH</p>
-<dd> Path to the manifest to fetch dependencies for.</p>
+</dl>
+<dt><code>&#8211;manifest-path </code>PATH</dt>
+<dd> Path to the manifest to fetch dependencies for.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No output printed to stdout.</p>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No output printed to stdout.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-run/">cargo-run</a>(1)</p>

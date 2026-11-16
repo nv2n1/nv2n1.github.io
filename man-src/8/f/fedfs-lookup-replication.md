@@ -19,38 +19,38 @@ description: "fedfs-lookup-replication – send a FEDFS_LOOKUP_REPLICATION ADMIN
 <p> Resolving a junction means performing an NSDB query with the contents of the junction to obtain a list of fileset locations, or FSLs, matching the stored UUID. The meaning of these is described in more detail in <code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7). </p>
 <p> There are three distinct types of replication lookup:</p>
 <dl>
-<dt><code>none</code></p>
-<dd>The remote server reports the actual contents of the replication stored on its local disk. This includes a UUID and the name and port of an NSDB. If the <code>-t</code> option is not specified, this type of lookup is performed.</p>
-<dt><code>cache</code></p>
-<dd>The remote server reports lookup results it may have cached from previous replication lookup requests. This includes a UUID, the name and port of an NSDB, and the cached list of fileset locations matching the UUID in the replication marker. Not all FedFS ADMIN service implementations support this type of request.</p>
-<dt><code>nsdb</code></p>
-<dd>The remote server performs a fresh replication lookup, and the results are returned. This includes an UUID, the name and port of an NSDB, and a list of fileset locations matching the UUID in the replication marker.</dl>
+<dt><code>none</code></dt>
+<dd>The remote server reports the actual contents of the replication stored on its local disk. This includes a UUID and the name and port of an NSDB. If the <code>-t</code> option is not specified, this type of lookup is performed.</dd>
+<dt><code>cache</code></dt>
+<dd>The remote server reports lookup results it may have cached from previous replication lookup requests. This includes a UUID, the name and port of an NSDB, and the cached list of fileset locations matching the UUID in the replication marker. Not all FedFS ADMIN service implementations support this type of request.</dd>
+<dt><code>nsdb</code></dt>
+<dd>The remote server performs a fresh replication lookup, and the results are returned. This includes an UUID, the name and port of an NSDB, and a list of fileset locations matching the UUID in the replication marker.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;debug</p>
-<dd>Enables debugging messages during operation.</p>
-<dt>-?, &#8211;help</p>
-<dd>Displays <a href="/docs/linux/man/8-fedfs-lookup-replication/">fedfs-lookup-replication</a></code>(8) version information and a usage message on <i>stderr</i>.</p>
-<dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
-<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
-<dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
-<dt><code>-t, &#8211;resolvetype=</code><i>type</i></p>
-<dd>Specifies the desired type of resolution. Valid values for <i>type</i> are <code>0</code>, <code>none</code>, <code>fedfs_resolve_none</code>, <code>1</code>, <code>cache</code>, <code>fedfs_resolve_cache</code>, <code>2</code>, <code>nsdb</code>, or <code>fedfs_resolve_nsdb</code>. The value is not case-sensitive. If this option is not specified, the default value is <code>none</code>.</p>
-<dt><code>-s, &#8211;security=</code><i>flavor</i></p>
-<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dl>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Enables debugging messages during operation.</dd>
+<dt>-?, &#8211;help</dt>
+<dd>Displays <a href="/docs/linux/man/8-fedfs-lookup-replication/">fedfs-lookup-replication</a></code>(8) version information and a usage message on <i>stderr</i>.</dd>
+<dt><code>-h, &#8211;hostname=</code><i>hostname</i></dt>
+<dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</dd>
+<dt><code>-n, &#8211;nettype=</code><i>nettype</i></dt>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</dd>
+<dt><code>-t, &#8211;resolvetype=</code><i>type</i></dt>
+<dd>Specifies the desired type of resolution. Valid values for <i>type</i> are <code>0</code>, <code>none</code>, <code>fedfs_resolve_none</code>, <code>1</code>, <code>cache</code>, <code>fedfs_resolve_cache</code>, <code>2</code>, <code>nsdb</code>, or <code>fedfs_resolve_nsdb</code>. The value is not case-sensitive. If this option is not specified, the default value is <code>none</code>.</dd>
+<dt><code>-s, &#8211;security=</code><i>flavor</i></dt>
+<dd>Specifies the security flavor to use when contacting the remote FedFS ADMIN service. Valid flavors are <code>sys</code>, <code>unix</code>, <code>krb5</code>, <code>krb5i</code>, and <code>krb5p</code>. If this option is not specified, the <code>unix</code> flavor is used. See the <code>SECURITY</code> section of this man page for details.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. You have created a FedFS replication on file server <i>fs.example.net</i>. To see how the replication appears on the remote server, use:</p>
 <dl>
 <dd>$ fedfs-lookup-replication -h fs.example.net /export/replication1<br />
  Call completed successfully<br />
  FSN UUID: 89c6d208-7280-11e0-9f1d-000c297fd679<br />
- NSDB: nsdb.example.net:389 </p>
+ NSDB: nsdb.example.net:389 </dd>
 </dl>
 <p> To see real-time replication resolution results as the remote server sees them, use:</p>
 <dl>
 <dd>$ fedfs-lookup-replication -h fs.example.net -t nsdb /export/replication1<br />
- Server returned FEDFS_ERR_NSDB_NOFSN </p>
+ Server returned FEDFS_ERR_NSDB_NOFSN </dd>
 </dl>
 <p> In this example, the replication marker exists on the file server, but the domain&#8217;s NSDB has not yet been updated to contain a list of fileset locations for the UUID contained in the replication marker. The file server is therefore not able to resolve the replication.</p>
 <h2>Security</h2>

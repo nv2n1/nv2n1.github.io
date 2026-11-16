@@ -52,28 +52,28 @@ description: "sc::IntCoorGen –"
 <h3>sc::IntCoorGen::IntCoorGen (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p> The <code>KeyVal</code> constructor. .IP &quot;molecule&quot; 1c A <code>Molecule</code> object. There is no default. </p>
 <dl COMPACT>
-<dt>radius_scale_factor</p>
-<dd> If the distance between two atoms is less than the radius scale factor times the sum of the atoms&#8217; atomic radii, then a bond is placed between the two atoms for the purpose of finding internal coordinates. The default is 1.1.</dl>
+<dt>radius_scale_factor</dt>
+<dd> If the distance between two atoms is less than the radius scale factor times the sum of the atoms&#8217; atomic radii, then a bond is placed between the two atoms for the purpose of finding internal coordinates. The default is 1.1.</dd></dl>
 <dl COMPACT>
-<dt>linear_bend_threshold</p>
-<dd> A bend angle in degress greater than 180 minus this keyword&#8217;s floating <code>point</code> value is considered a linear bend. The default is 1.0.</dl>
+<dt>linear_bend_threshold</dt>
+<dd> A bend angle in degress greater than 180 minus this keyword&#8217;s floating <code>point</code> value is considered a linear bend. The default is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>linear_tors_threshold</p>
-<dd> The angles formed by atoms a-b-c and b-c-d are checked for near linearity. If an angle in degrees is greater than 180 minus this keyword&#8217;s floating <code>point</code> value, then the torsion is classified as a linear torsion. The default is 1.0.</dl>
+<dt>linear_tors_threshold</dt>
+<dd> The angles formed by atoms a-b-c and b-c-d are checked for near linearity. If an angle in degrees is greater than 180 minus this keyword&#8217;s floating <code>point</code> value, then the torsion is classified as a linear torsion. The default is 1.0.</dd></dl>
 <dl COMPACT>
-<dt>linear_bend</p>
-<dd> Generate <code>BendSimpleCo</code> objects to describe linear bends. The default is false.</dl>
+<dt>linear_bend</dt>
+<dd> Generate <code>BendSimpleCo</code> objects to describe linear bends. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>linear_lbend</p>
-<dd> Generate pairs of <code>LinIPSimpleCo</code> and <code>LinIPSimpleCo</code> objects to describe linear bends. The default is true.</dl>
+<dt>linear_lbend</dt>
+<dd> Generate pairs of <code>LinIPSimpleCo</code> and <code>LinIPSimpleCo</code> objects to describe linear bends. The default is true.</dd></dl>
 <dl COMPACT>
-<dt>linear_tors</p>
-<dd> Generate <code>TorsSimpleCo</code> objects to described linear torsions. The default is false.</dl>
+<dt>linear_tors</dt>
+<dd> Generate <code>TorsSimpleCo</code> objects to described linear torsions. The default is false.</dd></dl>
 <dl COMPACT>
-<dt>linear_stors</p>
-<dd> Generate <code>ScaledTorsSimpleCo</code> objects to described linear torsions. The default is true.</dl>
+<dt>linear_stors</dt>
+<dd> Generate <code>ScaledTorsSimpleCo</code> objects to described linear torsions. The default is true.</dd></dl>
 <dl COMPACT>
-<dt>extra_bonds</p>
-<dd> This is a vector of atom numbers, where elements $2 (i-1) + 1$ and $2 i$ specify the atoms which are bound in extra bond $i$. The extra_bonds keyword should only be needed for weakly interacting fragments, otherwise all the needed bonds will be found.</dl>
+<dt>extra_bonds</dt>
+<dd> This is a vector of atom numbers, where elements $2 (i-1) + 1$ and $2 i$ specify the atoms which are bound in extra bond $i$. The extra_bonds keyword should only be needed for weakly interacting fragments, otherwise all the needed bonds will be found.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for MPQC from the source code.</p>

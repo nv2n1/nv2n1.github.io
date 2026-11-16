@@ -18,24 +18,24 @@ description: "jfbterm – program to print several character sets on framebuffer
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of current configuration.</p>
-<dt><code>-e, &#8211;exec, &#8211;shell</code></p>
-<dd> Specify a program that run in jfbterm. Default is $SHELL (or /bin/sh). Rest of arguments will be passed to the specified program.</p>
-<dt><code>-f, &#8211;config</code></p>
-<dd> Specify a pathname of the configuration file. Default is /etc/jfbterm.conf.</p>
-<dt><code>-c, &#8211;encoding, &#8211;charmap</code></p>
-<dd> Specify the encoding. The format is same as <code>encoding</code> line of <code>jfbterm.conf</code>(5) file.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of current configuration.</dd>
+<dt><code>-e, &#8211;exec, &#8211;shell</code></dt>
+<dd> Specify a program that run in jfbterm. Default is $SHELL (or /bin/sh). Rest of arguments will be passed to the specified program.</dd>
+<dt><code>-f, &#8211;config</code></dt>
+<dd> Specify a pathname of the configuration file. Default is /etc/jfbterm.conf.</dd>
+<dt><code>-c, &#8211;encoding, &#8211;charmap</code></dt>
+<dd> Specify the encoding. The format is same as <code>encoding</code> line of <code>jfbterm.conf</code>(5) file.</dd>
 <dt>
-<dd> When the given string is &quot;locale&quot; (the first format), the encoding specified by LC_CTYPE locale is adopted.</p>
+</dt><dd> When the given string is &quot;locale&quot; (the first format), the encoding specified by LC_CTYPE locale is adopted.</dd>
 <dt>
-<dd> When the given string doesn&#8217;t contain `,&#8217; (the second format), the string is assumed as an encoding name. A valid encoding name is either a name defined in encoding.<i>encodingName</i> line in <code>jfbterm.conf</code>(5) or a name which is valid for <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) or <code>iconv_open</code>(3).</p>
+</dt><dd> When the given string doesn&#8217;t contain `,&#8217; (the second format), the string is assumed as an encoding name. A valid encoding name is either a name defined in encoding.<i>encodingName</i> line in <code>jfbterm.conf</code>(5) or a name which is valid for <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) or <code>iconv_open</code>(3).</dd>
 <dt>
-<dd> When the given string contains a `,&#8217; (the third format), the string is assumed to have <i>GL</i>,<i>GR</i>,<i>G0</i>,<i>G1</i>,<i>G2</i>,<i>G3</i> format. See <code>jfbterm.conf</code>(5) for detail.</p>
-<dt><code>-r, &#8211;reset</code></p>
-<dd> Output ISO-2022 initialize sequence to tty. You can specify codeset name as optional argument like: <code>&#8211;reset=</code><i>encodingName</i>. Default is locale&#8217;s codeset.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Don&#8217;t print out messages.</dl>
+</dt><dd> When the given string contains a `,&#8217; (the third format), the string is assumed to have <i>GL</i>,<i>GR</i>,<i>G0</i>,<i>G1</i>,<i>G2</i>,<i>G3</i> format. See <code>jfbterm.conf</code>(5) for detail.</dd>
+<dt><code>-r, &#8211;reset</code></dt>
+<dd> Output ISO-2022 initialize sequence to tty. You can specify codeset name as optional argument like: <code>&#8211;reset=</code><i>encodingName</i>. Default is locale&#8217;s codeset.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Don&#8217;t print out messages.</dd></dl>
 <h2>NOTES</h2>
 <p> Since version 0.3.14, default encoding has been changed from EUC-JP to encoding for locale. To make it enable to display EUC-JP, run </p>
 <pre>

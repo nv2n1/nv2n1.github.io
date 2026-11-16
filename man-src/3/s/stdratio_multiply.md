@@ -11,9 +11,7 @@ std::ratio_multiply - std::ratio_multiply
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ratio&gt;
-
 template&lt; class R1, class R2 &gt;           (since C++11)
-
 using ratio_multiply = /* see below */;
 </code></pre> 
 The alias template std::ratio_multiply denotes the result of multiplying two exact rational fractions represented by the std::ratio specializations R1 and R2. 
@@ -27,10 +25,8 @@ The above definition requires that the result of std::ratio_multiply&lt;R1, R2&g
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;ratio&gt;
 int main()
-
 {
     typedef std::ratio&lt;2, 3&gt; two_third;
     typedef std::ratio&lt;1, 6&gt; one_sixth;

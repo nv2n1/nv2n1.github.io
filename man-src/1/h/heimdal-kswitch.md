@@ -14,21 +14,21 @@ description: "kswitch – switch between default credential caches"
 <h2>DESCRIPTION</h2>
 <p> Supported options:</p>
 <dl>
-<dt> &#8211;<code>t </code><i>type</i> &#8211;<code>-type= </code><i>type</i></p>
+<dt> &#8211;<code>t </code><i>type</i> &#8211;<code>-type= </code><i>type</i></dt>
 <dd>
-<dd>type of credential cache</p>
-<dt> &#8211;<code>c </code><i>cache</i> &#8211;<code>-cache= </code><i>cache</i></p>
+</dd><dd>type of credential cache</dd>
+<dt> &#8211;<code>c </code><i>cache</i> &#8211;<code>-cache= </code><i>cache</i></dt>
 <dd>
-<dd>name of credential cache to switch to</p>
-<dt> &#8211;<code>p </code><i>principal</i> &#8211;<code>-principal= </code><i>principal</i></p>
+</dd><dd>name of credential cache to switch to</dd>
+<dt> &#8211;<code>p </code><i>principal</i> &#8211;<code>-principal= </code><i>principal</i></dt>
 <dd>
-<dd>name of principal to switch to</p>
-<dt> &#8211;<code>i</code> &#8211;<code>-interactive</code></p>
+</dd><dd>name of principal to switch to</dd>
+<dt> &#8211;<code>i</code> &#8211;<code>-interactive</code></dt>
 <dd>
-<dd>interactive switching between credentials.</p>
-<dt> &#8211;<code>-version</code></p>
+</dd><dd>interactive switching between credentials.</dd>
+<dt> &#8211;<code>-version</code></dt>
 <dd>
-<dd>print version</p>
-<dt> &#8211;<code>-help</code></p>
-<dd></dl>
+</dd><dd>print version</dd>
+<dt> &#8211;<code>-help</code></dt>
+<dd></dd></dl>
 <h2>Index</h2>

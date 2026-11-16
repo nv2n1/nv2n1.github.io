@@ -32,7 +32,6 @@ typedef struct {
         unsigned int flags : 16;         /* optional feature flags */
     } comm;                              /* set/return communication and version info */
     int status;                          /* return initialization status here */
-
     union {
         struct { /* PMDA_INTERFACE_2 or _3 */
             pmdaExt *ext;
@@ -43,7 +42,6 @@ typedef struct {
             int (*text)(int, int, char **, pmdaExt *);
             int (*store)(pmResult *, pmdaExt *);
         } two, three;
-
         struct { /* PMDA_INTERFACE_4 or _5 */
             pmdaExt *ext;
             int (*profile)(__pmProfile *, pmdaExt *);
@@ -56,7 +54,6 @@ typedef struct {
             int (*name)(pmID, char ***, pmdaExt *);
             int (*children)(char *, int, char ***, int **, pmdaExt *);
         } four, five;
-
         struct { /* PMDA_INTERFACE_6 */
             pmdaExt *ext;
             int (*profile)(__pmProfile *, pmdaExt *);
@@ -71,7 +68,6 @@ typedef struct {
             int (*attribute)(int, int, const char *, int, pmdaExt *);
         } six;
     } version;
-
 } pmdaInterface;</code></pre>
 <p> This structure has been extended to incorporate the multiple interface versions that have evolved over time. For <code>pmdaMain,</code> <i>dispatch-&gt;domain</i> and <i>dispatch-&gt;status</i> are ignored. The <i>comm.pmda_interface</i> field is used to determine the interface used by the PMDA. Setting this field to <code>PMDA_INTERFACE_2</code> or <code>PMDA_INTERFACE_3</code> will force <code>pmdaMain</code> to use the callbacks in the <i>version.two</i> or <i>version.three</i> structure. A setting of <code>PMDA_INTERFACE_4</code> or <code>PMDA_INTERFACE_5</code> will force <code>pmdaMain</code> to use the callbacks in the <i>version.four</i> or <i>version.five</i> structure, and similarly a <code>PMDA_INTERFACE_6</code> setting forces <code>pmdaMain</code> to use the callbacks in the <i>version.six</i> structure. Any other value will result in an error and termination of <code>pmdaMain</code>. Note that the use of <code>dispatch</code> as the interface between the <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and the methods of the PMDA allows each PMDA to be implemented as though it were a DSO, with <code>pmdaMain</code> providing a convenient wrapper that may be used to convert from the DSO interface to the binary PDU (daemon PMDA) interface. <code>pmdaMain</code> executes as a continuous loop, returning only when an end of file is encountered on the PDU input file descriptor.</p>
 <h2>Callbacks</h2>
@@ -82,10 +78,10 @@ typedef struct {
 <h2>Diagnostics</h2>
 <p>These messages may be appended to the PMDA&#8217;s log file:</p>
 <dl>
-<dt><code>PMDA interface version </code><i>interface</i><code> not supported</code></p>
-<dd>The <i>interface</i> version is not supported by <code>pmdaMain</code>.</p>
-<dt><code>Unrecognized pdu type</code></p>
-<dd>The PMDA received a PDU from <code>pmcd</code> that it does not recognize. This may indicate that the <code>pmcd</code> process is using a more advanced interface than <code>pmdaMain</code>.</dl>
+<dt><code>PMDA interface version </code><i>interface</i><code> not supported</code></dt>
+<dd>The <i>interface</i> version is not supported by <code>pmdaMain</code>.</dd>
+<dt><code>Unrecognized pdu type</code></dt>
+<dd>The PMDA received a PDU from <code>pmcd</code> that it does not recognize. This may indicate that the <code>pmcd</code> process is using a more advanced interface than <code>pmdaMain</code>.</dd></dl>
 <p> If the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) debug control variable (<code>pmdebug</code>) has the DBG_TRACE_LIBPMDA flag set then each PDU that is received is reported in the PMDA&#8217;s log file.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3), <code><a href="/docs/linux/man/3-pmdaprofile/">pmdaProfile</a></code>(3), <code><a href="/docs/linux/man/3-pmdafetch/">pmdaFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmdadesc/">pmdaDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmdainstance/">pmdaInstance</a></code>(3), <code><a href="/docs/linux/man/3-pmdatext/">pmdaText</a></code>(3), <code><a href="/docs/linux/man/3-pmdastore/">pmdaStore</a></code>(3), <code><a href="/docs/linux/man/3-pmdapmid/">pmdaPMID</a></code>(3), <code><a href="/docs/linux/man/3-pmdaname/">pmdaName</a></code>(3), <code><a href="/docs/linux/man/3-pmdachildren/">pmdaChildren</a></code>(3), and <code><a href="/docs/linux/man/3-pmdaattribute/">pmdaAttribute</a></code>(3). </p>

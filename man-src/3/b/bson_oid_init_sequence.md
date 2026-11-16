@@ -17,17 +17,17 @@ bson_oid_init_sequence (bson_oid_t     *oid,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>context</code></p>
-<dd> An optional <code>bson_context_t</code> \&amp;.</dl>
+<dt><code>context</code></dt>
+<dd> An optional <code>bson_context_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Generates a new ObjectID using the 64-bit sequence. </p>
 <p> <code>NOTE</code></p>
 <dl>
 <dt>
-<dd> This form of ObjectID is generally used by MongoDB replica peers only.</dl>
+</dt><dd> This form of ObjectID is generally used by MongoDB replica peers only.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>

@@ -22,19 +22,19 @@ description: "bgldepend – create Bigloo dependencies in makefiles"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt>file</p>
+</dt><dt>file</dt>
 <dd>
-<dd> Is an file implementing a module. <code>Afile</code> reads that file to discover the name of the implemented module. </p>
-<dt>-search-path &lt;path&gt;</p>
-<dd> Add <i>path</i> to the directory list read for searching Bigloo source files. </p>
-<dt>-exclude-path &lt;path&gt;</p>
-<dd> Exclude <i>path</i> from the directory list read for searching Bigloo source files. </p>
-<dt>-suffix &lt;suf&gt;</p>
-<dd> Adds <i>suf</i> to the <code>bmake</code> source file suffixes list. Default suffixes are &quot;scm&quot;, &quot;sch&quot; and &quot;bgl&quot;. </p>
-<dt>-v</p>
-<dd> Verbose mode </p>
-<dt>-o &lt;makefile&gt;</p>
-<dd> The name of the <i>makefile</i> file to be updated </p>
+</dd><dd> Is an file implementing a module. <code>Afile</code> reads that file to discover the name of the implemented module. </dd>
+<dt>-search-path &lt;path&gt;</dt>
+<dd> Add <i>path</i> to the directory list read for searching Bigloo source files. </dd>
+<dt>-exclude-path &lt;path&gt;</dt>
+<dd> Exclude <i>path</i> from the directory list read for searching Bigloo source files. </dd>
+<dt>-suffix &lt;suf&gt;</dt>
+<dd> Adds <i>suf</i> to the <code>bmake</code> source file suffixes list. Default suffixes are &quot;scm&quot;, &quot;sch&quot; and &quot;bgl&quot;. </dd>
+<dt>-v</dt>
+<dd> Verbose mode </dd>
+<dt>-o &lt;makefile&gt;</dt>
+<dd> The name of the <i>makefile</i> file to be updated </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Normally, bgldepend will be used in a makefile target so that typing &#8220;make bgldepend&#8221; will bring the dependencies up to date for the makefile. For example, </p>

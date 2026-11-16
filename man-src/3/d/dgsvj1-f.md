@@ -18,7 +18,7 @@ description: "dgsvj1.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGSVJ1 is called from SGESVJ as a pre-processor and that is its main
  purpose. It applies Jacobi rotations in the same way as SGESVJ does, but
@@ -45,11 +45,11 @@ description: "dgsvj1.f –"
  The number of sweeps is given in NSWEEP and the orthogonality threshold
  is given in TOL.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>JOBV</i> </p>
+</dt><dd> <i>JOBV</i> </dd>
 <pre>
           JOBV is CHARACTER*1
           Specifies whether the output from this procedure is used
@@ -181,18 +181,18 @@ description: "dgsvj1.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
 <dt>
-<dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+</dt><dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> Definition at line 236 of file dgsvj1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

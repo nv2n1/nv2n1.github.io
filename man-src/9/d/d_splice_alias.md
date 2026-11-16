@@ -15,11 +15,11 @@ d_splice_alias - splice a disconnected dentry into the tree if one exists
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>the inode which may have a disconnected dentry</dl>
+<dl><dd></dd><dd>the inode which may have a disconnected dentry</dd></dl>
  
 
  <i>dentry</i>
-<dl><dd>a negative dentry which we want to point to the inode.</dl>
+<dl><dd>a negative dentry which we want to point to the inode.</dd></dl>
 
 <h2>Description</h2>
 

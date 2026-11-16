@@ -32,10 +32,8 @@ true if the lock was acquired successfully, otherwise false.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;mutex&gt;
 int main()
-
 {
     std::recursive_mutex test;
     if (test.try_lock() == true) {
@@ -46,7 +44,6 @@ int main()
         std::cout &lt;&lt; &quot;lock not acquired&quot; &lt;&lt; std::endl;
     }
     test.lock();
-
     // to lock it again
     if (test.try_lock()) { // true can be left out
         std::cout &lt;&lt; &quot;lock acquired&quot; &lt;&lt; std::endl;

@@ -11,16 +11,16 @@ description: "halt – variables that affect the behavior of the shutdown script
 <h2>Description</h2>
 <p>The <i>/etc/default/halt</i> file contains variable settings in POSIX format:</p>
 <dl>
-<dd>VAR=VAL</dl>
+<dd>VAR=VAL</dd></dl>
 <p> Only one assignment is allowed per line. Comments (starting with &#8216;#&#8217;) are also allowed. </p>
 <h2>Options</h2>
 <p>The following variables can be set. </p>
 <dl>
-<dt><code>HALT</code></p>
+<dt><code>HALT</code></dt>
 <dd>If set to <code>poweroff</code> the system will be powered down after it has been brought down. This is the default.<br />
- If set to <code>halt </code> the system will only be halted after it has been brought down. What exactly this means depends on your hardware. </p>
-<dt><code>NETDOWN</p>
-<dd>Setting this to no</code> prevents shutdown from shutting down the network intefaces. This is necessary to use Wake-On-Lan. Setting it to <code>yes</code> causes shutdown to also bring down the network interfaces (and thus prevent the machine from being woken up remotely). </p>
+ If set to <code>halt </code> the system will only be halted after it has been brought down. What exactly this means depends on your hardware. </dd>
+<dt><code>NETDOWN</dt>
+<dd>Setting this to no</code> prevents shutdown from shutting down the network intefaces. This is necessary to use Wake-On-Lan. Setting it to <code>yes</code> causes shutdown to also bring down the network interfaces (and thus prevent the machine from being woken up remotely). </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-halt/">halt</a></code>(8), <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8). </p>

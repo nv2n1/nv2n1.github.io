@@ -10,9 +10,7 @@ description: "std::tan(std::complex) – std::tan(std::complex)"
 <p>std::tan(std::complex) &#8211; std::tan(std::complex)</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     complex&lt;T&gt; tan(const complex&lt;T&gt; &amp;z);</code></pre>
 <p>Computes complex tangent of a complex value z. </p>
 <h2>Parameters</h2>
@@ -31,12 +29,9 @@ e-iz<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::fixed;
     std::complex&lt;double&gt; z(1, 0); // behaves like real tangent along the real line

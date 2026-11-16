@@ -33,15 +33,15 @@ description: "snap-confine – internal tool for confining snappy applications"
 <h2>Environment</h2>
 <p><i>snap-confine</i> responds to the following environment variables</p>
 <dl>
-<dt><i>SNAP_CONFINE_DEBUG</i>:</p>
-<dd>When defined the program will print additional diagnostic information about the actions being performed. All the output goes to stderr. </p>
+<dt><i>SNAP_CONFINE_DEBUG</i>:</dt>
+<dd>When defined the program will print additional diagnostic information about the actions being performed. All the output goes to stderr. </dd>
 <p> The following variables are only used when <i>snap-confine</i> is not setuid root. This is only applicable when testing the program itself.</p>
-<dt><i>SNAPPY_LAUNCHER_INSIDE_TESTS</i>:</p>
-<dd>Internal variable that should not be relied upon.</p>
-<dt><i>SNAPPY_LAUNCHER_SECCOMP_PROFILE_DIR</i>:</p>
-<dd>Internal variable that should not be relied upon.</p>
-<dt><i>SNAP_USER_DATA</i>:</p>
-<dd>Full path to the directory like /home/$LOGNAME/snap/$SNAP_NAME/$SNAP_REVISION. </p>
+<dt><i>SNAPPY_LAUNCHER_INSIDE_TESTS</i>:</dt>
+<dd>Internal variable that should not be relied upon.</dd>
+<dt><i>SNAPPY_LAUNCHER_SECCOMP_PROFILE_DIR</i>:</dt>
+<dd>Internal variable that should not be relied upon.</dd>
+<dt><i>SNAP_USER_DATA</i>:</dt>
+<dd>Full path to the directory like /home/$LOGNAME/snap/$SNAP_NAME/$SNAP_REVISION. </dd>
 <p> This directory is created by snap-confine on startup. This is a temporary feature that will be merged into snapd&#8217;s snap-run command. The set of directories that can be created is confined with apparmor.</dl>
 <h2>Files</h2>
 <p><i>snap-confine</i> and <i>snap-update-ns</i> use the following files: </p>
@@ -55,10 +55,10 @@ description: "snap-confine – internal tool for confining snappy applications"
 <p> <i>/run/snapd/ns/$SNAP_NAME.lock</i>: A <i><a href="/docs/linux/man/2-flock/">flock</a>(2)</i>-based lock file acquired to create or join the mount namespace represented as <i>/run/snaps/ns/$SNAP_NAME.mnt</i>. </p>
 <p> <i>/run/snapd/ns/$SNAP_NAME.mnt</i>: This file can be either:</p>
 <dl>
-<dt>&bull;</p>
-<dd>An empty file that may be seen before the mount namespace is preserved or when the mount namespace is unmounted.</p>
-<dt>&bull;</p>
-<dd>A file belonging to the <i>nsfs</i> file system, representing a fully populated mount namespace of a given snap. The file is bind mounted from <i>/proc/self/ns/mnt</i> from the first process in any snap. </p>
+<dt>&bull;</dt>
+<dd>An empty file that may be seen before the mount namespace is preserved or when the mount namespace is unmounted.</dd>
+<dt>&bull;</dt>
+<dd>A file belonging to the <i>nsfs</i> file system, representing a fully populated mount namespace of a given snap. The file is bind mounted from <i>/proc/self/ns/mnt</i> from the first process in any snap. </dd>
 <p> <i>/proc/self/mountinfo</i>: This file is read to decide if <i>/run/snapd/ns/</i> needs to be created and converted to a private bind mount, as described above. </p>
 <p> Note that the apparmor profile is external to <i>snap-confine</i> and is loaded directly into the kernel. The actual apparmor profile is managed by <i>snapd</i>.</dl>
 <h2>Bugs</h2>
@@ -67,3 +67,4 @@ description: "snap-confine – internal tool for confining snappy applications"
 <p>zygmunt.krynicki [at] canonical.com</p>
 <h2>Copyright</h2>
 <p>Canonical Ltd.</p>
+</p>

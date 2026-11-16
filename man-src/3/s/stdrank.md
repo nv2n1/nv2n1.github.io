@@ -10,10 +10,8 @@ description: "std::rank – std::rank"
 <p>std::rank &#8211; std::rank</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct rank;</code></pre>
 <p>If T is an array type, provides the member constant value equal to the number of dimensions of the array. For any other type, value is 0.<br />
 Helper variable template template&lt; class T &gt;                                    (since C++17)</p>
@@ -43,13 +41,10 @@ type std::integral_constant&lt;std::size_t, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::rank&lt;int&gt;{} &lt;&lt; &quot;
-
 &quot;;
     std::cout &lt;&lt; std::rank&lt;int[5]&gt;{} &lt;&lt; '
 ';

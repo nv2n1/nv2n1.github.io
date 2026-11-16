@@ -15,32 +15,32 @@ description: "kover – CD Cover printer"
 <p> Kover is an easy to use WYSIWYG CD cover printer with CDDB support.</p>
 <h3>Generic options:</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show help about options</p>
-<dt><code>&#8211;help-qt</code></p>
-<dd> Show Qt specific options</p>
-<dt><code>&#8211;help-kde</code></p>
-<dd> Show KDE specific options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all options</p>
-<dt><code>&#8211;author</code></p>
-<dd> Show author information</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Show version information</p>
-<dt><code>&#8211;license</code></p>
-<dd> Show license information</p>
-<dt><code>&#8212;</code></p>
-<dd> End of options</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help about options</dd>
+<dt><code>&#8211;help-qt</code></dt>
+<dd> Show Qt specific options</dd>
+<dt><code>&#8211;help-kde</code></dt>
+<dd> Show KDE specific options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all options</dd>
+<dt><code>&#8211;author</code></dt>
+<dd> Show author information</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Show version information</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Show license information</dd>
+<dt><code>&#8212;</code></dt>
+<dd> End of options</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;advise</code></p>
-<dd> Help me now!</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable debug output.</dl>
+<dt><code>&#8211;advise</code></dt>
+<dd> Help me now!</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable debug output.</dd></dl>
 <h3>Arguments:</h3>
 <dl>
-<dt>file</p>
-<dd> File to load</dl>
+<dt>file</dt>
+<dd> File to load</dd></dl>
 <h2>AVAILABILITY</h2>
 <p> kover can be found at <a rel="nofollow" href="http://lisas.de/kover/.">http://lisas.de/kover/.</a></p>
 <h2>REPORTING BUGS</h2>

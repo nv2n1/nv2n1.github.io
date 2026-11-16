@@ -20,14 +20,14 @@ description: "mc-wait-for-name – run until a D-Bus name appears on the session
 <p> <code>mc-wait-for-name</code> runs until a bus name appears, then exits successfully. This can be used as a service-activation helper for a bus name that is not directly activatable, but will be provided automatically (after a while) by the desktop session.</p>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt>0</p>
-<dd> The bus name eventually appeared.</p>
-<dt>64 (EX_USAGE)</p>
-<dd> Invocation error (too many or too few arguments, or the bus name given was not a syntactically valid well-known bus name).</p>
-<dt>69 (EX_UNAVAILABLE)</p>
-<dd> mc-wait-for-name was unable to connect to the session bus.</p>
-<dt>75 (EX_TEMPFAIL)</p>
-<dd> The name did not appear within a reasonable time.</dl>
+<dt>0</dt>
+<dd> The bus name eventually appeared.</dd>
+<dt>64 (EX_USAGE)</dt>
+<dd> Invocation error (too many or too few arguments, or the bus name given was not a syntactically valid well-known bus name).</dd>
+<dt>69 (EX_UNAVAILABLE)</dt>
+<dd> mc-wait-for-name was unable to connect to the session bus.</dd>
+<dt>75 (EX_TEMPFAIL)</dt>
+<dd> The name did not appear within a reasonable time.</dd></dl>
 <h2>OPTIONS</h2>
 <p> There are no additional command-line options.</p>
 <h2>BUGS</h2>

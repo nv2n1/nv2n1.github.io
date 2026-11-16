@@ -42,10 +42,10 @@ description: "sgsvj1.f –"
  tiled using quadratic tiles of side KBL. Here, KBL is a tunning parmeter.
  The number of sweeps is given in NSWEEP and the orthogonality threshold
  is given in TOL.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBV</i> </p>
+<dd><i>JOBV</i> </dd>
 <pre> JOBV is CHARACTER*1
  Specifies whether the output from this procedure is used
  to compute the matrix V:
@@ -140,16 +140,16 @@ description: "sgsvj1.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+<dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl>
 <p> Definition at line 236 of file sgsvj1.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

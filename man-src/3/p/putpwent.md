@@ -12,7 +12,6 @@ description: "putpwent – write a password file entry"
 <pre><code>#include &lt;pwd.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;sys/types.h&gt;
-
 int putpwent(const struct passwd *p, FILE *stream);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>putpwent</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
@@ -34,8 +33,8 @@ int putpwent(const struct passwd *p, FILE *stream);</code></pre>
 <p>The <code>putpwent</code>() function returns 0 on success, or -1 if an error occurs. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>Invalid (NULL) argument given.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid (NULL) argument given.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

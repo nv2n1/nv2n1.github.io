@@ -46,8 +46,8 @@ description: "blktap_selinux – Security Enhanced Linux Policy for the blktap p
 <p> <code>blktap_exec_t</code> </p>
 <p> &#8211; Set files with the blktap_exec_t type, if you want to transition an executable to the blktap_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/tapdisk, /usr/sbin/blktapctrl </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/tapdisk, /usr/sbin/blktapctrl </dd>
 </dl>
 <p> <code>blktap_var_run_t</code> </p>
 <p> &#8211; Set files with the blktap_var_run_t type, if you want to store the blktap files under the /run or /var/run directory. </p>

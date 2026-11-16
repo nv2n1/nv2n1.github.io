@@ -11,7 +11,6 @@ zzip_inflate_init - ...
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;zzip/lib.h&gt;
-
 static int zzip_inflate_init((ZZIP_FILE * fp, struct zzip_dir_hdr *hdr));</code></pre>
 
 <h2>Description</h2>
@@ -21,7 +20,7 @@ static int zzip_inflate_init((ZZIP_FILE * fp, struct zzip_dir_hdr *hdr));</code>
 <h2>Author</h2>
 
 <dl><dd>&bull;
-<dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dl>
+</dd><dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dd></dl>
 
 <h2>Copyright</h2>
 

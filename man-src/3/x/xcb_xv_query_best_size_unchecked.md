@@ -10,12 +10,7 @@ description: "xcb_xv_query_best_size –"
 <p>xcb_xv_query_best_size &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xv.h&gt;
-
-
 Request function
-
-
-
 xcb_xv_query_best_size_cookie_t xcb_xv_query_best_size(xcb_connection_t *conn, xcb_xv_port_t port, uint16_t vid_w, uint16_t vid_h, uint16_t drw_w, uint16_t drw_h, uint8_t motion);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xv_query_best_size_reply_t {
@@ -29,35 +24,35 @@ xcb_xv_query_best_size_cookie_t xcb_xv_query_best_size(xcb_connection_t *conn, x
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_xv_query_best_size_reply_t *<code>xcb_xv_query_best_size_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xv_query_best_size_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>port</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>vid_w</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>vid_h</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drw_w</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drw_h</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>motion</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>port</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>vid_w</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>vid_h</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drw_w</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drw_h</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>motion</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XV_QUERY_BEST_SIZE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>actual_width</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>actual_height</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XV_QUERY_BEST_SIZE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>actual_width</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>actual_height</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xv_query_best_size_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xv_query_best_size_reply</i>. </p>

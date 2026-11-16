@@ -16,16 +16,16 @@ description: "rpmdev-extract – manual page for rpmdev-extract version 1.10"
 <p> Depending on availability of external (un)archiver programs, the following archive types are supported: ace, ar/deb, arj, cab/exe, cpio, lha, rar, rpm, tar, zip/jar, zoo.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code></p>
-<dd> Suppress output.</p>
-<dt><code>-f</code></p>
-<dd> Force overwriting existing files.</p>
-<dt><code>-C</code> DIR</p>
-<dd> Change to directory DIR before extracting.</p>
-<dt><code>-h</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-q</code></dt>
+<dd> Suppress output.</dd>
+<dt><code>-f</code></dt>
+<dd> Force overwriting existing files.</dd>
+<dt><code>-C</code> DIR</dt>
+<dd> Change to directory DIR before extracting.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>

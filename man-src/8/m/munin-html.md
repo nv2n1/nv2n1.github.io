@@ -12,16 +12,16 @@ description: "munin-html – A program to generate html-pages in an Munin instal
 <p>munin-html [options]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;service &lt;service&gt;</code></p>
-<dd>Limit services to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</p>
-<dt><code>&#8211;host &lt;host&gt;</code></p>
-<dd>Limit hosts to those of &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</p>
-<dt><code>&#8211;config &lt;file&gt;</code></p>
-<dd>Use &lt;file&gt; as configuration file. [/etc/munin/munin.conf]</p>
-<dt><code>&#8211;help</code></p>
-<dd>View help message.</p>
-<dt><code>&#8211;[no]debug</code></p>
-<dd>If set, view debug messages. [&#8211;nodebug]</dl>
+<dt><code>&#8211;service &lt;service&gt;</code></dt>
+<dd>Limit services to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</dd>
+<dt><code>&#8211;host &lt;host&gt;</code></dt>
+<dd>Limit hosts to those of &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</dd>
+<dt><code>&#8211;config &lt;file&gt;</code></dt>
+<dd>Use &lt;file&gt; as configuration file. [/etc/munin/munin.conf]</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>View help message.</dd>
+<dt><code>&#8211;[no]debug</code></dt>
+<dd>If set, view debug messages. [&#8211;nodebug]</dd></dl>
 <h2>Description</h2>
 <p>Munin-html is a part of the package Munin, which is used in combination with Munin&#8217;s node. Munin is a group of programs to gather data from Munin&#8217;s nodes, graph them, create html-pages, and optionally warn Nagios about any off-limit values. </p>
 <p> Munin-html creates the html pages.</p>

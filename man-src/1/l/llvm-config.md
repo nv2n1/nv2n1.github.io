@@ -21,47 +21,47 @@ g++ `llvm - config-- cxxflags` - o HowToUseJIT.o - c HowToUseJIT.cpp g++ `llvm -
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number of <font SIZE="-1">LLVM</font>.</p>
-<dt><code>-help</code></p>
-<dd> Print a summary of <code>llvm-config</code> arguments.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd> Print the installation prefix for <font SIZE="-1">LLVM</font>.</p>
-<dt><code>&#8211;src-root</code></p>
-<dd> Print the source root from which <font SIZE="-1">LLVM</font> was built.</p>
-<dt><code>&#8211;obj-root</code></p>
-<dd> Print the object root used to build <font SIZE="-1">LLVM</font>.</p>
-<dt><code>&#8211;bindir</code></p>
-<dd> Print the installation directory for <font SIZE="-1">LLVM</font> binaries.</p>
-<dt><code>&#8211;includedir</code></p>
-<dd> Print the installation directory for <font SIZE="-1">LLVM</font> headers.</p>
-<dt><code>&#8211;libdir</code></p>
-<dd> Print the installation directory for <font SIZE="-1">LLVM</font> libraries.</p>
-<dt><code>&#8211;cxxflags</code></p>
-<dd> Print the C<font SIZE="-2">++</font> compiler flags needed to use <font SIZE="-1">LLVM</font> headers.</p>
-<dt><code>&#8211;ldflags</code></p>
-<dd> Print the flags needed to link against <font SIZE="-1">LLVM</font> libraries.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print all the libraries needed to link against the specified <font SIZE="-1">LLVM</font> <i>components</i>, including any dependencies.</p>
-<dt><code>&#8211;libnames</code></p>
-<dd> Similar to <code>&#8211;libs</code>, but prints the bare filenames of the libraries without <code>-l</code> or pathnames. Useful for linking against a not-yet-installed copy of <font SIZE="-1">LLVM</font>.</p>
-<dt><code>&#8211;libfiles</code></p>
-<dd> Similar to <code>&#8211;libs</code>, but print the full path to each library file. This is useful when creating makefile dependencies, to ensure that a tool is relinked if any library it uses changes.</p>
-<dt><code>&#8211;components</code></p>
-<dd> Print all valid component names.</p>
-<dt><code>&#8211;targets-built</code></p>
-<dd> Print the component names for all targets supported by this copy of <font SIZE="-1">LLVM</font>.</p>
-<dt><code>&#8211;build-mode</code></p>
-<dd> Print the build mode used when <font SIZE="-1">LLVM</font> was built (e.g. Debug or Release)</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number of <font SIZE="-1">LLVM</font>.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a summary of <code>llvm-config</code> arguments.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Print the installation prefix for <font SIZE="-1">LLVM</font>.</dd>
+<dt><code>&#8211;src-root</code></dt>
+<dd> Print the source root from which <font SIZE="-1">LLVM</font> was built.</dd>
+<dt><code>&#8211;obj-root</code></dt>
+<dd> Print the object root used to build <font SIZE="-1">LLVM</font>.</dd>
+<dt><code>&#8211;bindir</code></dt>
+<dd> Print the installation directory for <font SIZE="-1">LLVM</font> binaries.</dd>
+<dt><code>&#8211;includedir</code></dt>
+<dd> Print the installation directory for <font SIZE="-1">LLVM</font> headers.</dd>
+<dt><code>&#8211;libdir</code></dt>
+<dd> Print the installation directory for <font SIZE="-1">LLVM</font> libraries.</dd>
+<dt><code>&#8211;cxxflags</code></dt>
+<dd> Print the C<font SIZE="-2">++</font> compiler flags needed to use <font SIZE="-1">LLVM</font> headers.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd> Print the flags needed to link against <font SIZE="-1">LLVM</font> libraries.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print all the libraries needed to link against the specified <font SIZE="-1">LLVM</font> <i>components</i>, including any dependencies.</dd>
+<dt><code>&#8211;libnames</code></dt>
+<dd> Similar to <code>&#8211;libs</code>, but prints the bare filenames of the libraries without <code>-l</code> or pathnames. Useful for linking against a not-yet-installed copy of <font SIZE="-1">LLVM</font>.</dd>
+<dt><code>&#8211;libfiles</code></dt>
+<dd> Similar to <code>&#8211;libs</code>, but print the full path to each library file. This is useful when creating makefile dependencies, to ensure that a tool is relinked if any library it uses changes.</dd>
+<dt><code>&#8211;components</code></dt>
+<dd> Print all valid component names.</dd>
+<dt><code>&#8211;targets-built</code></dt>
+<dd> Print the component names for all targets supported by this copy of <font SIZE="-1">LLVM</font>.</dd>
+<dt><code>&#8211;build-mode</code></dt>
+<dd> Print the build mode used when <font SIZE="-1">LLVM</font> was built (e.g. Debug or Release)</dd></dl>
 <h2>COMPONENTS</h2>
 <p> To print a list of all available components, run <code>llvm-config &#8211;components</code>. In most cases, components correspond directly to <font SIZE="-1">LLVM</font> libraries. Useful &#8220;virtual&#8221; components include:</p>
 <dl>
-<dt><code>all</code></p>
-<dd> Includes all <font SIZE="-1">LLVM</font> libaries. The default if no components are specified.</p>
-<dt><code>backend</code></p>
-<dd> Includes either a native backend or the C backend.</p>
-<dt><code>engine</code></p>
-<dd> Includes either a native <font SIZE="-1">JIT</font> or the bitcode interpreter.</dl>
+<dt><code>all</code></dt>
+<dd> Includes all <font SIZE="-1">LLVM</font> libaries. The default if no components are specified.</dd>
+<dt><code>backend</code></dt>
+<dd> Includes either a native backend or the C backend.</dd>
+<dt><code>engine</code></dt>
+<dd> Includes either a native <font SIZE="-1">JIT</font> or the bitcode interpreter.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If <code>llvm-config</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>

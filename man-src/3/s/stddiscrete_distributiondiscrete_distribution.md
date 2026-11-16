@@ -18,15 +18,10 @@ discrete_distribution( std::size_t count, double xmin, double xmax, <code>(4)</c
 UnaryOperation unary_op );<br />
 explicit discrete_distribution( const param_type&amp; params ); <code>(5)</code> <i>(since C++11)</i> </p>
 <pre><code>Constructs a new distribution object.
-
 1) Default constructor. Constructs the distribution with a single weight p={1}. This distribution will always generate 0.
-
 2) Constructs the distribution with weights in the range [first, last). If first == last, the effects are the same as of the default constructor.
-
 3) Constructs the distribution with weights in weights. Effectively calls discrete_distribution(weights.begin(), weights.end()).
-
 4) Constructs the distribution with count weights that are generated using function unary_op. Each of the weights is equal to w
-
 i = unary_op(xmin + δ/2 + i · δ), where δ =</code></pre>
 <p>(xmax − xmin)<br />
 count<br />

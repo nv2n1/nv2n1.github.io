@@ -14,39 +14,39 @@ description: "icedtea-web-plugin – allow to run java applets in your favorite 
 <p> The IcedTeaPlugin.so must be placed, or linked inside specific directories. See <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web#Plugin">http://icedtea.classpath.org/wiki/IcedTea-Web#Plugin</a> </p>
 <p> <code>Mozilla compatible browsers </code> like Firefox, Midori, Epiphany, Chrome or Chromium use: </p>
 <dl>
-<dt>$HOME/.mozilla/plugins</p>
-<dd> Location of plugin library for user&#8217;s purposes on Mozilla compliant browser.</p>
-<dt>/usr/lib64/mozilla/plugins</p>
-<dd> Location of plugin library for global purposes on Mozilla compliant browser, 64-bit systems.</p>
-<dt>/usr/lib/mozilla/plugins</p>
-<dd> Location of plugin library for global purposes on Mozilla compliant browser, 32-bit systems. </p>
+<dt>$HOME/.mozilla/plugins</dt>
+<dd> Location of plugin library for user&#8217;s purposes on Mozilla compliant browser.</dd>
+<dt>/usr/lib64/mozilla/plugins</dt>
+<dd> Location of plugin library for global purposes on Mozilla compliant browser, 64-bit systems.</dd>
+<dt>/usr/lib/mozilla/plugins</dt>
+<dd> Location of plugin library for global purposes on Mozilla compliant browser, 32-bit systems. </dd>
 </dl>
 <p> <code>Opera family browsers </code> like Opera use: </p>
 <dl>
-<dt>/usr/lib64/opera/plugins</p>
-<dd> Location of plugin library for global purposes on opera compliant browser, 64-bit systems.</p>
-<dt>/usr/lib/opera/plugins</p>
-<dd> Location of plugin library for global purposes on opera compliant browser, 32-bit systems. </p>
+<dt>/usr/lib64/opera/plugins</dt>
+<dd> Location of plugin library for global purposes on opera compliant browser, 64-bit systems.</dd>
+<dt>/usr/lib/opera/plugins</dt>
+<dd> Location of plugin library for global purposes on opera compliant browser, 32-bit systems. </dd>
 </dl>
 <p> All third-party trademarks are the property of their respective owners </p>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.mozilla/plugins/IcedTeaPlugin.so</p>
-<dd> Location of plugin library for user&#8217;s purposes on Mozilla compliant browser.</p>
-<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</p>
-<dd> Additional information about items in cache</p>
-<dt>$XDG_CONFIG_HOME/icedtea-web/generated_jnlps</p>
-<dd> Location where jnlp files generated from html pages for javaws applications desktop/menu launchers icons are stored</p>
-<dt>$XDG_RUNTIME_DIR/tmp/icedteaplugin-user-*</p>
-<dd> Contains in and out pipe for native2java communication and (if enabled) debugging pipe.</p>
-<dt>/usr/lib/mozilla/plugins/IcedTeaPlugin.so</p>
-<dd> Location of plugin library for global purposes on Mozilla compliant browser, 32-bit systems.</p>
-<dt>/usr/lib/opera/plugins/IcedTeaPlugin.so</p>
-<dd> Location of plugin library for global purposes on opera compliant browser, 32-bit systems.</p>
-<dt>/usr/lib64/mozilla/plugins/IcedTeaPlugin.so</p>
-<dd> Location of plugin library for global purposes on Mozilla compliant browser, 64-bit systems.</p>
-<dt>/usr/lib64/opera/plugins/IcedTeaPlugin.so</p>
-<dd> Location of plugin library for global purposes on opera compliant browser, 64-bit systems. </p>
+<dt>$HOME/.mozilla/plugins/IcedTeaPlugin.so</dt>
+<dd> Location of plugin library for user&#8217;s purposes on Mozilla compliant browser.</dd>
+<dt>$XDG_CACHE_HOME/icedtea-web/cache/recently_used</dt>
+<dd> Additional information about items in cache</dd>
+<dt>$XDG_CONFIG_HOME/icedtea-web/generated_jnlps</dt>
+<dd> Location where jnlp files generated from html pages for javaws applications desktop/menu launchers icons are stored</dd>
+<dt>$XDG_RUNTIME_DIR/tmp/icedteaplugin-user-*</dt>
+<dd> Contains in and out pipe for native2java communication and (if enabled) debugging pipe.</dd>
+<dt>/usr/lib/mozilla/plugins/IcedTeaPlugin.so</dt>
+<dd> Location of plugin library for global purposes on Mozilla compliant browser, 32-bit systems.</dd>
+<dt>/usr/lib/opera/plugins/IcedTeaPlugin.so</dt>
+<dd> Location of plugin library for global purposes on opera compliant browser, 32-bit systems.</dd>
+<dt>/usr/lib64/mozilla/plugins/IcedTeaPlugin.so</dt>
+<dd> Location of plugin library for global purposes on Mozilla compliant browser, 64-bit systems.</dd>
+<dt>/usr/lib64/opera/plugins/IcedTeaPlugin.so</dt>
+<dd> Location of plugin library for global purposes on opera compliant browser, 64-bit systems. </dd>
 </dl>
 <p> Where $XDG_CONFIG_DIR, $XDG_CACHE_DIR and $XDG_RUNTIME_DIR are set as ~/.config, ~/.cache and /tmp or /var/tmp if not set.</p>
 <h2>BUGS</h2>

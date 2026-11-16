@@ -16,7 +16,6 @@ description: "goto_row"
 <p> Moves the cursor to line number ROW. If, for instance, the currently used font has a height of 12, then goto_row(4) is exactly the same as goto_y(4*12). Unless, of course, you use another line spacing than the default as the formula is </p>
 <pre>
    y-coordinate = line_spacing * row
-   
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code>gstream-move_row</code>(3), <code>gstream-goto_xy</code>(3) </p>

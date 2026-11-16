@@ -14,18 +14,18 @@ description: "debug_object_active_state – debug checks object usage state mach
 <p><i>addr</i></p>
 <dl>
 <dd>
-<dd>address of the object</dl>
+</dd><dd>address of the object</dd></dl>
 <p> <i>descr</i></p>
 <dl>
-<dd>pointer to an object specific debug description structure</dl>
+<dd>pointer to an object specific debug description structure</dd></dl>
 <p> <i>expect</i></p>
 <dl>
-<dd>expected state</dl>
+<dd>expected state</dd></dl>
 <p> <i>next</i></p>
 <dl>
-<dd>state to move to if expected state is found</dl>
+<dd>state to move to if expected state is found</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

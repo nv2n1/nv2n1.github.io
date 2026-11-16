@@ -12,25 +12,10 @@ description: "sc::AnimatedObject –"
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::MolFreqAnimate</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>AnimatedObject (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 const char * name () const
-
-
-
 void set_name (const char *name)
-
-
-
 virtual int nobject ()=0
-
-
-
 virtual Ref&lt; RenderedObject &gt; object (int iobject)=0
-
-
-
 Protected Attributes
 char * name_
 </code></pre>

@@ -21,7 +21,7 @@ url: "/docs/linux/man/3-fribidi_set_debug/"
 
 <dl>
 <dt><b>int state</b>
-<dd> New state to set.</dl>
+</dt><dd> New state to set.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

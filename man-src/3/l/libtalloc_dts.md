@@ -35,10 +35,10 @@ void specific_function()
 <p> It is recommended to use one of <code>talloc()</code> and <code>talloc_array()</code> (or its variants) to create the context as they set its name to the name of the given type automatically. </p>
 <p> If we have a context with such as a name, we can use two similar functions that do both the type check and the type cast for us: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>talloc_get_type()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_get_type_abort()</code></dl>
+<dt>&bull;</dt>
+<dd> <code>talloc_get_type()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_get_type_abort()</code></dd></dl>
 <h2>Examples</h2>
 <p> The following example will show how generic programming with talloc is handled &#8211; if we provide invalid data to the callback, the program will be aborted. This is a sufficient reaction for such an error in most applications. </p>
 <p>void foo_callback(void *pvt)<br />

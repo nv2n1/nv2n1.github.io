@@ -39,7 +39,6 @@ if ( SDL_OpenAudio(desired, obtained) &lt; 0 ){
 &quot;, SDL_GetError());
  exit(-1);
 }
- 
 free(desired);
 /* Load the test.wav */
 if( SDL_LoadWAV(&quot;test.wav&quot;, &amp;wav_spec, &amp;wav_buf, &amp;wav_len) == NULL ){
@@ -49,7 +48,6 @@ if( SDL_LoadWAV(&quot;test.wav&quot;, &amp;wav_spec, &amp;wav_buf, &amp;wav_len)
  free(obtained);
  exit(-1);
 }
- 
 /* Build AudioCVT */
 ret = SDL_BuildAudioCVT(&amp;wav_cvt,
  wav_spec.format, wav_spec.channels, wav_spec.freq,

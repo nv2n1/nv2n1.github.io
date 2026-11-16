@@ -16,14 +16,14 @@ description: "innwatch – Monitor the state of INN and the system"
 <p> Upon receipt of an interrupt signal (<font SIZE="-1">SIGINT</font>), <code>innwatch</code> will report its status in the file <i>innwatch.status</i> in <i>pathrun</i>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code> <i>file</i></p>
-<dd>Specify the control file to use, other than the default of <i>innwatch.ctl</i> in <i>pathetc</i>.</p>
-<dt><code>-i</code> <i>seconds</i></p>
-<dd>With this option, <code>innwatch</code> has an initial sleep of <i>seconds</i> seconds at startup. This is useful when <code>innwatch</code> is started at the same time as <font SIZE="-1">INN</font>, so that it can wait a little before beginning performing its checks.</p>
-<dt><code>-l</code> <i>logfile</i></p>
-<dd>Specify a log file to watch, other than the default of <i>news.crit</i>.</p>
-<dt><code>-t</code> <i>seconds</i></p>
-<dd>Specify the period in seconds between checks, to override the value set in <i>inn.conf</i>.</dl>
+<dt><code>-f</code> <i>file</i></dt>
+<dd>Specify the control file to use, other than the default of <i>innwatch.ctl</i> in <i>pathetc</i>.</dd>
+<dt><code>-i</code> <i>seconds</i></dt>
+<dd>With this option, <code>innwatch</code> has an initial sleep of <i>seconds</i> seconds at startup. This is useful when <code>innwatch</code> is started at the same time as <font SIZE="-1">INN</font>, so that it can wait a little before beginning performing its checks.</dd>
+<dt><code>-l</code> <i>logfile</i></dt>
+<dd>Specify a log file to watch, other than the default of <i>news.crit</i>.</dd>
+<dt><code>-t</code> <i>seconds</i></dt>
+<dd>Specify the period in seconds between checks, to override the value set in <i>inn.conf</i>.</dd></dl>
 <h2>History</h2>
 <p>Written by Mike Cooper &lt;mcooper [at] usc.edu&gt;, with modifications by &lt;kre [at] munnari.oz.au&gt;, Steve Groom &lt;stevo [at] elroy.jpl.nasa.gov&gt; and Christophe Wolfhugel &lt;wolf [at] pasteur.fr&gt;. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> innwatch.pod 9726 2014-09-24 18:05:04Z iulius $</p>

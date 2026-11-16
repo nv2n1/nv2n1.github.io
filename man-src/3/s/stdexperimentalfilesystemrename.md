@@ -11,10 +11,8 @@ std::experimental::filesystem::rename - std::experimental::filesystem::rename
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     void rename(const path &amp;old_p, const path &amp;new_p);
 (filesystem TS)
-
     void rename(const path &amp;old_p, const path &amp;new_p, std::error_code &amp;ec);</code></pre> 
 Moves or renames the filesystem object identified by old_p to new_p as if by the POSIX rename: 
 * If old_p is a non-directory file, then new_p must be one of: 
@@ -50,15 +48,10 @@ noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;sandbox&quot;;
     fs::create_directories(p / &quot;from&quot;);
@@ -66,7 +59,6 @@ int main()
     fs::create_directory(p / &quot;to&quot;);
     //    fs::rename(p/&quot;from/file1.txt&quot;, p/&quot;to/&quot;); // error: to is a directory
     fs::rename(p / &quot;from/file1.txt&quot;, p / &quot;to/file2.txt&quot;); // OK
-
     //    fs::rename(p/&quot;from&quot;, p/&quot;to&quot;); // error: to is not empty
     fs::rename(p / &quot;from&quot;, p / &quot;to/subdir&quot;); // OK
     fs::remove_all(p);

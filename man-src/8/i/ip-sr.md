@@ -10,9 +10,7 @@ description: "ip-sr – IPv6 Segment Routing management"
 <p>ip-sr &#8211; IPv6 Segment Routing management</p>
 <h2>Synopsis</h2>
 <pre><code>ip sr
-
 { COMMAND |
-
     help }
 </code></pre>
 <p> <code>ip sr hmac show</code><br />

@@ -21,8 +21,8 @@ description: "Pinta – simple image editor"
 <p> Pinta is currently early in development, and should be treated as such.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>file_name</code></p>
-<dd> Optional. The name of the image file for Pinta to open.</dl>
+<dt><code>file_name</code></dt>
+<dd> Optional. The name of the image file for Pinta to open.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Pinta is developed by the Pinta project contributors, led by Jonathan Pobst &lt;monkey [at] jpobst.com&gt;. For a complete list of contributors, refer to the <code>About</code> option in the <code>Help</code> menu.</p>
 <h2>BUGS</h2>

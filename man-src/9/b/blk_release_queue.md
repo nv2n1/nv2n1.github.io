@@ -14,7 +14,7 @@ description: "blk_release_queue – release a struct request_queue when it is no
 <p><i>kobj</i></p>
 <dl>
 <dd>
-<dd>the kobj belonging to the request queue to be released</dl>
+</dd><dd>the kobj belonging to the request queue to be released</dd></dl>
 <h2>Description</h2>
 <p>blk_release_queue is the pair to <code>blk_init_queue</code> or <code>blk_queue_make_request</code>. It should be called when a request queue is being released; typically when a block device is being de-registered. Currently, its primary task it to free all the struct request structures that were allocated to the queue and the queue itself.</p>
 <h2>Note</h2>

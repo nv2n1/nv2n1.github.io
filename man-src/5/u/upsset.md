@@ -21,7 +21,7 @@ description: "upsset.conf – Configuration for Network UPS Tools upsset.cgi"
  deny from all
  allow from your.network.addresses
  &lt;/Files&gt;</pre>
-</dl>
+</dd></dl>
 <p> You will probably have to set &quot;AllowOverride Limit&quot; for this directory in your server-level configuration file as well. </p>
 <p> If this doesn&#8217;t make sense, then stop reading and leave this program alone. It&#8217;s not something you absolutely need to have anyway. </p>
 <p> Assuming you have all this done, and it actually works (test it!), then you may add the following directive to this file: </p>

@@ -24,7 +24,7 @@ java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
 java.util.logging.SimpleFormatter.format = %4$s: %5$s%6$s%n
 46level = WARNING
 46handlers = java.util.logging.ConsoleHandler</pre>
-</dl>
+</dd></dl>
 <p> The systemd journal can be viewed with the following command: </p>
 <pre>$ journalctl -u pki-tomcatd@&lt;instance&gt;.service</pre>
 <p>For more information see the following documents: </p>
@@ -41,7 +41,7 @@ log4j.appender.console.Target = System.err
 log4j.appender.console.layout = org.apache.log4j.PatternLayout
 log4j.appender.console.layout.ConversionPattern = %p: %m%n
 log4j.rootLogger = WARN, console</pre>
-</dl>
+</dd></dl>
 <p> The default Tomcat 8 classpath does not include Log4j, so RESTEasy will use JUL instead. For more information see the following documents: </p>
 <pre>- <a rel="nofollow" href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/ConsoleAppender.html">http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/ConsoleAppender.html</a>
 - <a rel="nofollow" href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html">http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html</a>
@@ -55,7 +55,7 @@ debug.level=0
 debug.filename=/var/lib/pki/&lt;instance&gt;/logs/&lt;subsystem&gt;/debug
 debug.hashkeytypes=
 debug.showcaller=false</pre>
-</dl>
+</dd></dl>
 <p> The <code>debug.enabled</code> determines whether the debug log is enabled. By default it is enabled. The <code>debug.level</code> determines the amount of details to be logged. The value ranges from 0 (most details) to 10 (least details). The default is 0. The <code>debug.filename</code> determines the debug log file location. By default it is located at /var/lib/pki/&lt;instance&gt;/logs/&lt;subsystem&gt;/debug. The <code>debug.hashkeytypes</code> is a comma-separated list of additional components to log. By default it&#8217;s empty. The <code>debug.showcaller</code> determines whether to include the caller information in the log message. By default it&#8217;s disabled. </p>
 <h2>Customization</h2>
 <h3>java.util.logging (JUL)</h3>
@@ -69,12 +69,12 @@ $ chown pkiuser.pkiuser /etc/pki/&lt;instance&gt;/logging.properties</pre>
 <pre>netscape.level = ALL
 com.netscape.level = ALL
 org.dogtagpki.level = ALL</pre>
-</dl>
+</dd></dl>
 <p> To troubleshoot issues with RESTEasy add the following line (unless Log4j is installed in Tomcat classpath): </p>
 <dl>
 <dd>
 <pre>org.jboss.resteasy.level = ALL</pre>
-</dl>
+</dd></dl>
 <p> Then restart the server.</p>
 <h3>Log4j</h3>
 <p>To customize Log4j configuration, replace the link with a copy of the default configuration: </p>
@@ -85,7 +85,7 @@ $ chown pkiuser.pkiuser /var/lib/pki/&lt;instance&gt;/lib/log4j.properties</pre>
 <dl>
 <dd>
 <pre>log4j.logger.org.jboss.resteasy = ALL</pre>
-</dl>
+</dd></dl>
 <p> Then restart the server.</p>
 <h3>Internal Logging</h3>
 <p>To customize the internal logging configuration, edit the CS.cfg as needed, then restart the server.</p>

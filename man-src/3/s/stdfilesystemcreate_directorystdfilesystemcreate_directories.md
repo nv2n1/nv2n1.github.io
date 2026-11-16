@@ -10,25 +10,16 @@ description: "std::filesystem::create_directory,std::filesystem::create_director
 <p>std::filesystem::create_directory,std::filesystem::create_directories &#8211; std::filesystem::create_directory,std::filesystem::create_directories</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool create_directory(const std::filesystem::path &amp;p);
 (1)(since C++ 17)
-
     bool create_directory(const std::filesystem::path &amp;p, std::error_code &amp;ec) noexcept;
-
 bool create_directory(const std::filesystem::path &amp;p,
-
                       const std::filesystem::path &amp;existing_p);
-
 bool create_directory(const std::filesystem::path &amp;p, (2)(since C++ 17)
-
                                                           const std::filesystem::path &amp;existing_p,
-
                       std::error_code &amp;ec) noexcept;
-
 bool create_directories(const std::filesystem::path &amp;p);
 (3)(since C++ 17)
-
     bool create_directories(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre>
 <p>1) Creates the directory p as if by POSIX mkdir() with a second argument of static_cast&lt;int&gt;(std::filesystem::perms::all) (the parent directory must already exist). If the function fails because p resolves to an existing directory, no error is reported. Otherwise on failure an error is reported.<br />
 2) Same as <code>(1)</code>, except that the attributes of the new directory are copied from existing_p (which must be a directory that exists). It is OS-dependent which attributes are copied: on POSIX systems, the attributes are copied as if by<br />
@@ -56,16 +47,11 @@ P1164R1 C++17 creation failure caused by an existing non-directory file is not a
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/1/2/a&quot;);
     fs::create_directory(&quot;sandbox/1/2/b&quot;);

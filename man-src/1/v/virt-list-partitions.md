@@ -18,17 +18,17 @@ virt - list - partitions[--options] domname virt - list - partitions[--options] 
 <p> <tt>&quot;virt-list-partitions&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
-<dt><code>-l</code> | <code>&#8211;long</code></p>
-<dd> With this option, <tt>&quot;virt-list-partitions&quot;</tt> displays the type and size of each partition too (where &#8220;type&#8221; means <tt>&quot;ext3&quot;</tt>, <tt>&quot;pv&quot;</tt> etc.)</p>
-<dt><code>-h</code> | <code>&#8211;human-readable</code></p>
-<dd> Show sizes in human-readable form (eg. &#8220;1G&#8221;).</dl>
+<dt><code>-l</code> | <code>&#8211;long</code></dt>
+<dd> With this option, <tt>&quot;virt-list-partitions&quot;</tt> displays the type and size of each partition too (where &#8220;type&#8221; means <tt>&quot;ext3&quot;</tt>, <tt>&quot;pv&quot;</tt> etc.)</dd>
+<dt><code>-h</code> | <code>&#8211;human-readable</code></dt>
+<dd> Show sizes in human-readable form (eg. &#8220;1G&#8221;).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>

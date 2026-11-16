@@ -11,49 +11,19 @@ QuantLib::SingleVariate - default Monte Carlo traits for single-variate models
 <h2>Synopsis</h2>
 
 <pre><code>enum { allowsErrorEstimate =  RNG::allowsErrorEstimate }
-
-
-
 typedef RNG rng_traits
-
-
-
 typedef Path path_type
-
-
-
 typedef PathPricer&lt; path_type &gt; path_pricer_type
-
-
-
 typedef RNG::rsg_type rsg_type
-
-
-
 typedef PathGenerator&lt; rsg_type &gt; path_generator_type</code></pre>
 
 <h3>Public Types</h3>
 
 <pre><code>enum { allowsErrorEstimate =  RNG::allowsErrorEstimate }
-
-
-
 typedef RNG rng_traits
-
-
-
 typedef Path path_type
-
-
-
 typedef PathPricer&lt; path_type &gt; path_pricer_type
-
-
-
 typedef RNG::rsg_type rsg_type
-
-
-
 typedef PathGenerator&lt; rsg_type &gt; path_generator_type</code></pre>
 
 <h2>Detailed Description</h2>

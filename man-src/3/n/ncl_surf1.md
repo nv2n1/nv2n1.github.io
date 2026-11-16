@@ -17,35 +17,35 @@ CALL SURF1 (M, N, X, Y, Z, IZ, ZX1, ZXM, ZY1, ZYN, ZXY11, ZXYM1, ZXY1N, ZXYMN, I
 <h2>Description</h2>
 
 <dl><dt>M
-<dd>(integer, input) The number of grid lines in the X direction. (M &gt; 1)
-<dt>N
-<dd>(integer, input) The number of grid lines in the Y direction. (N &gt; 1)
-<dt>X
-<dd>(real, input) An array containing M X coordinates for grid lines in the X direction. These values must be strictly increasing.
-<dt>Y
-<dd>(real, input) An array containing N Y coordinates for grid lines in the Y direction. These values must be strictly increasing.
-<dt>Z
-<dd>(real, input) An array containing M x N functional values at the grid points; Z(I,J) contains the functional value at (X(I),Y(J)) for I=1,M and J=1,N.
-<dt>IZ
-<dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
-<dt>ZX1
-<dd>(real, input) An array containing N X-partial derivatives of the function along the line X(1), that is ZX1(J) is the X-partial derivative at point (X(1),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZXM
-<dd>(real, input) An array containing N X-partial derivatives of the function along the line X(M), that is ZXM(J) is the X-partial derivative at point (X(M),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZY1
-<dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(1), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(1)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZYN
-<dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(N), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(N)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZXY11
-<dd>(real, input) The X-Y-partial derivative at (X(1),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZXYM1
-<dd>(real, input) The X-Y-partial derivative at (X(M),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZXY1N
-<dd>(real, input) The X-Y-partial derivative at (X(1),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ZXYMN
-<dd>(real, input) The X-Y-partial derivative at (X(M),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
-<dt>ISLPSW
-<dd>(integer, input) A switch to indicate which boundary derivatives are user supplied and which should be estimated internally. Where I1 = 0 if ZX1 is user-supplied and 1 otherwise. 
+</dt><dd>(integer, input) The number of grid lines in the X direction. (M &gt; 1)
+</dd><dt>N
+</dt><dd>(integer, input) The number of grid lines in the Y direction. (N &gt; 1)
+</dd><dt>X
+</dt><dd>(real, input) An array containing M X coordinates for grid lines in the X direction. These values must be strictly increasing.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing N Y coordinates for grid lines in the Y direction. These values must be strictly increasing.
+</dd><dt>Z
+</dt><dd>(real, input) An array containing M x N functional values at the grid points; Z(I,J) contains the functional value at (X(I),Y(J)) for I=1,M and J=1,N.
+</dd><dt>IZ
+</dt><dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
+</dd><dt>ZX1
+</dt><dd>(real, input) An array containing N X-partial derivatives of the function along the line X(1), that is ZX1(J) is the X-partial derivative at point (X(1),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXM
+</dt><dd>(real, input) An array containing N X-partial derivatives of the function along the line X(M), that is ZXM(J) is the X-partial derivative at point (X(M),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZY1
+</dt><dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(1), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(1)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZYN
+</dt><dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(N), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(N)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXY11
+</dt><dd>(real, input) The X-Y-partial derivative at (X(1),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXYM1
+</dt><dd>(real, input) The X-Y-partial derivative at (X(M),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXY1N
+</dt><dd>(real, input) The X-Y-partial derivative at (X(1),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXYMN
+</dt><dd>(real, input) The X-Y-partial derivative at (X(M),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ISLPSW
+</dt><dd>(integer, input) A switch to indicate which boundary derivatives are user supplied and which should be estimated internally. Where I1 = 0 if ZX1 is user-supplied and 1 otherwise. 
  I2 = 0 if ZXM is user-supplied and 1 otherwise. 
  I3 = 0 if ZY1 is user-supplied and 1 otherwise. 
  I4 = 0 if ZYN is user-supplied and 1 otherwise. 
@@ -68,7 +68,7 @@ large values(e.g.50) result in nearly a polygonal line.A typical value
     is 1. IER(integer, output) An error return value.If IER is returned as 0,
     then no errors
     were detected.</code></pre> = 1 if N is less than 2. 
- = 2 if X or Y values are not strictly increasing.</dl>
+ = 2 if X or Y values are not strictly increasing.</dd></dl>
 
 <h2>Access</h2>
 

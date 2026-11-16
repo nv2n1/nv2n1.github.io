@@ -11,9 +11,7 @@ description: "ql/stochasticprocess.hpp – stochastic processes"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/time/date.hpp&gt;
-
 #include &lt;ql/patterns/observable.hpp&gt;
-
 #include &lt;ql/math/matrix.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>StochasticProcess</code><br />

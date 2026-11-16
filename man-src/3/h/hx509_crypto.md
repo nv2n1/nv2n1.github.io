@@ -18,15 +18,15 @@ description: "hx509 crypto functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br />
  <i>signer</i> the certificate that made the signature.<br />
  <i>alg</i> algorthm that was used to sign the data.<br />
  <i>data</i> the data that was signed.<br />
- <i>sig</i> the sigature to verify.</dl>
+ <i>sig</i> the sigature to verify.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dl>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
 <h2>Index</h2>

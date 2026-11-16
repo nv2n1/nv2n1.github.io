@@ -10,25 +10,20 @@ description: "xcb_glx_create_glx_pixmap –"
 <p>xcb_glx_create_glx_pixmap &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/glx.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_glx_create_glx_pixmap(xcb_connection_t *conn, uint32_t screen, xcb_visualid_t visual, xcb_pixmap_t pixmap, xcb_glx_pixmap_t glx_pixmap);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>screen</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>visual</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pixmap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>glx_pixmap</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>screen</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>visual</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pixmap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>glx_pixmap</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

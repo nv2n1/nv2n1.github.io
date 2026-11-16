@@ -16,8 +16,8 @@ description: "ldns_update_pkt_tsig_add"
 <p> ldns_status ldns_update_pkt_tsig_add(ldns_pkt *p, ldns_resolver *r); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_update_pkt_tsig_add</i>()</p>
-<dd>add tsig credentials to a packet from a resolver .br <code>p</code>: packet to copy to .br <code>r</code>: resolver to copy from </p>
+<dt> <i>ldns_update_pkt_tsig_add</i>()</dt>
+<dd>add tsig credentials to a packet from a resolver .br <code>p</code>: packet to copy to .br <code>r</code>: resolver to copy from </dd>
 <p> .br Returns status wether successfull or not</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -31,3 +31,4 @@ description: "ldns_update_pkt_tsig_add"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -14,21 +14,21 @@ description: "usb_gadget_config_buf – builts a complete configuration descript
 <p><i>config</i></p>
 <dl>
 <dd>
-<dd>Header for the descriptor, including characteristics such as power requirements and number of interfaces.</dl>
+</dd><dd>Header for the descriptor, including characteristics such as power requirements and number of interfaces.</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>Buffer for the resulting configuration descriptor.</dl>
+<dd>Buffer for the resulting configuration descriptor.</dd></dl>
 <p> <i>length</i></p>
 <dl>
-<dd>Length of buffer. If this is not big enough to hold the entire configuration descriptor, an error code will be returned.</dl>
+<dd>Length of buffer. If this is not big enough to hold the entire configuration descriptor, an error code will be returned.</dd></dl>
 <p> <i>desc</i></p>
 <dl>
-<dd>Null-terminated vector of pointers to the descriptors (interface, endpoint, etc) defining all functions in this device configuration.</dl>
+<dd>Null-terminated vector of pointers to the descriptors (interface, endpoint, etc) defining all functions in this device configuration.</dd></dl>
 <h2>Description</h2>
 <p>This copies descriptors into the response buffer, building a descriptor for that configuration. It returns the buffer length or a negative status code. The config.wTotalLength field is set to match the length of the result, but other descriptor fields (including power usage and interface count) must be set by the caller. </p>
 <p> Gadget drivers could use this when constructing a config descriptor in response to USB_REQ_GET_DESCRIPTOR. They will need to patch the resulting bDescriptorType value if USB_DT_OTHER_SPEED_CONFIG is needed.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

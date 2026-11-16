@@ -15,8 +15,8 @@ description: "XmRepTypeGetId — A representation type manager function that ret
 <h2>Description</h2>
 <p><code>XmRepTypeGetId</code> searches the registration list for the specified representation type and returns the associated identification number.</p>
 <dl COMPACT>
-<dt><i>rep_type</i></p>
-<dd>Specifies the representation type for which an identification number is requested</dl>
+<dt><i>rep_type</i></dt>
+<dd>Specifies the representation type for which an identification number is requested</dd></dl>
 <h2>Return</h2>
 <p>Returns the identification number of the specified representation type. If the representation type is not registered, the function returns <code>XmREP_TYPE_INVALID</code>.</p>
 <h2>Related</h2>

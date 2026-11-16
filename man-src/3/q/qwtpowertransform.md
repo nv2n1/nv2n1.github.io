@@ -27,28 +27,28 @@ description: "QwtPowerTransform –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exponent</i> Exponent</dl>
+<dd><i>exponent</i> Exponent</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtTransform</code> * QwtPowerTransform::copy () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Clone of the transformation</dl>
+<dd>Clone of the transformation</dd></dl>
 <p> Implements <code>QwtTransform</code>.</p>
 <h3>double QwtPowerTransform::invTransform (doublevalue) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be transformed</dl>
+<dd><i>value</i> Value to be transformed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Inverse exponentiation preserving the sign</dl>
+<dd>Inverse exponentiation preserving the sign</dd></dl>
 <p> Implements <code>QwtTransform</code>.</p>
 <h3>double QwtPowerTransform::transform (doublevalue) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be transformed</dl>
+<dd><i>value</i> Value to be transformed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Exponentiation preserving the sign</dl>
+<dd>Exponentiation preserving the sign</dd></dl>
 <p> Implements <code>QwtTransform</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

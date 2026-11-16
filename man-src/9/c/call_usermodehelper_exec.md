@@ -15,11 +15,11 @@ call_usermodehelper_exec - start a usermode application
 <h2>Arguments</h2>
 
 <i>sub_info</i>
-<dl><dd><dd>information about the subprocessa</dl>
+<dl><dd></dd><dd>information about the subprocessa</dd></dl>
  
 
  <i>wait</i>
-<dl><dd>wait for the application to finish and return status. when UMH_NO_WAIT don't wait at all, but you get no useful error back when the program couldn't be exec'ed. This makes it safe to call from interrupt context.</dl>
+<dl><dd>wait for the application to finish and return status. when UMH_NO_WAIT don't wait at all, but you get no useful error back when the program couldn't be exec'ed. This makes it safe to call from interrupt context.</dd></dl>
 
 <h2>Description</h2>
 

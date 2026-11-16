@@ -16,8 +16,8 @@ description: "jscal-store – stores joystick calibration"
 <p> An appropriate rule can be set up with udev so that any stored calibration settings are restored when the relevant device is connected. Some distributions (at least Debian, Ubuntu and Slackware) provide joystick packages which install such rules automatically.</p>
 <h2>FILES</h2>
 <dl>
-<dt>/var/lib/joystick/joystick.state</p>
-<dd> File used to store the calibration settings.</dl>
+<dt>/var/lib/joystick/joystick.state</dt>
+<dd> File used to store the calibration settings.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1), <code><a href="/docs/linux/man/1-jscal-restore/">jscal-restore</a></code>(1).</p>
 <h2>AUTHOR</h2>

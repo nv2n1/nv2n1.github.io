@@ -19,22 +19,22 @@ description: "ifuse – Mount directories of an iOS device locally using fuse."
 <p> Regular users are able to unmount fuse mounts using &quot;fusermount -u MOUNTPOINT&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o opt,[opt&#8230;] </code></p>
-<dd> mount options.</p>
-<dt><code>-u, &#8211;uuid UUID</code></p>
-<dd> mount specific device by its 40-digit device UUID.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> print version.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable libimobiledevice communication debugging.</p>
-<dt><code>&#8211;documents APPID</code></p>
-<dd> mount &#8216;Documents&#8217; folder of app identified by APPID.</p>
-<dt><code>&#8211;container APPID</code></p>
-<dd> mount sandbox root of an app identified by APPID.</p>
-<dt><code>&#8211;root </code></p>
-<dd> mount root file system (jailbroken device required). </p>
+<dt><code>-o opt,[opt&#8230;] </code></dt>
+<dd> mount options.</dd>
+<dt><code>-u, &#8211;uuid UUID</code></dt>
+<dd> mount specific device by its 40-digit device UUID.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> print version.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable libimobiledevice communication debugging.</dd>
+<dt><code>&#8211;documents APPID</code></dt>
+<dd> mount &#8216;Documents&#8217; folder of app identified by APPID.</dd>
+<dt><code>&#8211;container APPID</code></dt>
+<dd> mount sandbox root of an app identified by APPID.</dd>
+<dt><code>&#8211;root </code></dt>
+<dd> mount root file system (jailbroken device required). </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Julien Lavergne (man page) </p>

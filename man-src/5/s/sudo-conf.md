@@ -14,14 +14,14 @@ description: "sudo.conf – configuration for sudo front-end"
 <p>The <code>sudo.conf</code> file is used to configure the <code>sudo</code> front-end. It is used to configure sudo plugins, plugin-agnostic path names, debug flags, and other settings. </p>
 <p> The <code>sudo.conf</code> file supports the following directives, described in detail below.</p>
 <dl>
-<dt><code>Plugin</code></p>
-<dd>an approval, audit, I/O logging, or security policy plugin</p>
-<dt><code>Path</code></p>
-<dd>a plugin-agnostic path</p>
-<dt><code>Set</code></p>
-<dd>a front-end setting, such as <i>disable_coredump</i> or <i>group_source</i></p>
-<dt><code>Debug</code></p>
-<dd>debug flags to aid in debugging <code>sudo</code> <code>sudoreplay</code> <code>visudo</code> and the <code>sudoers</code> plugin.</dl>
+<dt><code>Plugin</code></dt>
+<dd>an approval, audit, I/O logging, or security policy plugin</dd>
+<dt><code>Path</code></dt>
+<dd>a plugin-agnostic path</dd>
+<dt><code>Set</code></dt>
+<dd>a front-end setting, such as <i>disable_coredump</i> or <i>group_source</i></dd>
+<dt><code>Debug</code></dt>
+<dd>debug flags to aid in debugging <code>sudo</code> <code>sudoreplay</code> <code>visudo</code> and the <code>sudoers</code> plugin.</dd></dl>
 <p> The pound sign (`#&#8217; ) is used to indicate a comment. Both the comment character and any text after it, up to the end of the line, are ignored. </p>
 <p> Long lines can be continued with a backslash (`\&#8217; ) as the last character on the line. Note that leading white space is removed from the beginning of lines even when the continuation character is used. </p>
 <p> Non-comment lines that don&#8217;t begin with <code>Plugin</code> <code>Path</code> <code>Debug</code> or <code>Set</code> are silently ignored. </p>
@@ -64,59 +64,59 @@ Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <p> If no path name is specified, features relying on the specified setting will be disabled. Disabling <code>Path</code> settings is only supported in <code>sudo</code> version 1.8.16 and higher. </p>
 <p> The following plugin-agnostic paths may be set in the /etc/sudo.conf file:</p>
 <dl>
-<dt><code>askpass</code></p>
-<dd>The fully qualified path to a helper program used to read the user&#8217;s password when no terminal is available. This may be the case when <code>sudo</code> is executed from a graphical (as opposed to text-based) application. The program specified by <i>askpass</i> should display the argument passed to it as the prompt and write the user&#8217;s password to the standard output. The value of <i>askpass</i> may be overridden by the <code>SUDO_ASKPASS</code> environment variable.</p>
-<dt><code>devsearch</code></p>
-<dd>An ordered, colon-separated search path of directories to look in for device nodes. This is used when mapping the process&#8217;s tty device number to a device name on systems that do not provide such a mechanism. Sudo will <i>not</i> recurse into sub-directories. If terminal devices may be located in a sub-directory of /dev that path must be explicitly listed in <i>devsearch</i> The default value is <code>/dev/pts:/dev/vt:/dev/term:/dev/zcons:/dev/pty:/dev</code> </p>
+<dt><code>askpass</code></dt>
+<dd>The fully qualified path to a helper program used to read the user&#8217;s password when no terminal is available. This may be the case when <code>sudo</code> is executed from a graphical (as opposed to text-based) application. The program specified by <i>askpass</i> should display the argument passed to it as the prompt and write the user&#8217;s password to the standard output. The value of <i>askpass</i> may be overridden by the <code>SUDO_ASKPASS</code> environment variable.</dd>
+<dt><code>devsearch</code></dt>
+<dd>An ordered, colon-separated search path of directories to look in for device nodes. This is used when mapping the process&#8217;s tty device number to a device name on systems that do not provide such a mechanism. Sudo will <i>not</i> recurse into sub-directories. If terminal devices may be located in a sub-directory of /dev that path must be explicitly listed in <i>devsearch</i> The default value is <code>/dev/pts:/dev/vt:/dev/term:/dev/zcons:/dev/pty:/dev</code> </dd>
 <p> This option is ignored on systems that support either the Fn devname or Fn _ttyname_dev functions, for example BSD , macOS and Solaris.</p>
-<dt><code>intercept</code></p>
-<dd>The fully-qualified path to a shared library containing a wrappers for the Fn execl , Fn execle , Fn execlp , Fn execv , Fn execve , Fn execvp , and Fn execvpe library functions that intercepts attempts to run further commands and performs a policy check before allowing them to be executed. This is used to implement the <i>intercept</i> functionality on systems that support <code>LD_PRELOAD</code> or its equivalent. The default value is /usr/libexec/sudo/sudo_intercept.so</p>
-<dt><code>noexec</code></p>
-<dd>The fully-qualified path to a shared library containing wrappers for the Fn execl , Fn execle , Fn execlp , Fn exect , Fn execv , Fn execve , Fn execveat , Fn execvP , Fn execvp , Fn execvpe , Fn fexecve , Fn popen , Fn posix_spawn , Fn posix_spawnp , Fn system , and Fn wordexp library functions that prevent the execution of further commands. This is used to implement the <i>noexec</i> functionality on systems that support <code>LD_PRELOAD</code> or its equivalent. The default value is /usr/libexec/sudo/sudo_noexec.so</p>
-<dt><code>plugin_dir</code></p>
-<dd>The default directory to use when searching for plugins that are specified without a fully qualified path name. The default value is /usr/libexec/sudo</p>
-<dt><code>sesh</code></p>
-<dd>The fully-qualified path to the <code>sesh</code> binary. This setting is only used when <code>sudo</code> is built with SELinux support. The default value is /usr/libexec/sudo/sesh</dl>
+<dt><code>intercept</code></dt>
+<dd>The fully-qualified path to a shared library containing a wrappers for the Fn execl , Fn execle , Fn execlp , Fn execv , Fn execve , Fn execvp , and Fn execvpe library functions that intercepts attempts to run further commands and performs a policy check before allowing them to be executed. This is used to implement the <i>intercept</i> functionality on systems that support <code>LD_PRELOAD</code> or its equivalent. The default value is /usr/libexec/sudo/sudo_intercept.so</dd>
+<dt><code>noexec</code></dt>
+<dd>The fully-qualified path to a shared library containing wrappers for the Fn execl , Fn execle , Fn execlp , Fn exect , Fn execv , Fn execve , Fn execveat , Fn execvP , Fn execvp , Fn execvpe , Fn fexecve , Fn popen , Fn posix_spawn , Fn posix_spawnp , Fn system , and Fn wordexp library functions that prevent the execution of further commands. This is used to implement the <i>noexec</i> functionality on systems that support <code>LD_PRELOAD</code> or its equivalent. The default value is /usr/libexec/sudo/sudo_noexec.so</dd>
+<dt><code>plugin_dir</code></dt>
+<dd>The default directory to use when searching for plugins that are specified without a fully qualified path name. The default value is /usr/libexec/sudo</dd>
+<dt><code>sesh</code></dt>
+<dd>The fully-qualified path to the <code>sesh</code> binary. This setting is only used when <code>sudo</code> is built with SELinux support. The default value is /usr/libexec/sudo/sesh</dd></dl>
 <h3>Other settings</h3>
 <p>The <code>sudo.conf</code> file also supports the following front-end settings:</p>
 <dl>
-<dt><code>disable_coredump</code></p>
-<dd>Core dumps of <code>sudo</code> itself are disabled by default to prevent the disclosure of potentially sensitive information. To aid in debugging <code>sudo</code> crashes, you may wish to re-enable core dumps by setting &#8220;disable_coredump&#8221; to false in <code>sudo.conf</code> as follows: </p>
+<dt><code>disable_coredump</code></dt>
+<dd>Core dumps of <code>sudo</code> itself are disabled by default to prevent the disclosure of potentially sensitive information. To aid in debugging <code>sudo</code> crashes, you may wish to re-enable core dumps by setting &#8220;disable_coredump&#8221; to false in <code>sudo.conf</code> as follows: </dd>
 <blockquote>
 <pre>Set disable_coredump false</pre>
 </blockquote>
 <p> All modern operating systems place restrictions on core dumps from set-user-ID processes like <code>sudo</code> so this option can be enabled without compromising security. To actually get a <code>sudo</code> core file you will likely need to enable core dumps for set-user-ID processes. On BSD and Linux systems this is accomplished in the <a href="/docs/linux/man/8-sysctl/">sysctl</a>(8) command. On Solaris, the coreadm(1m) command is used to configure core dump behavior. </p>
 <p> This setting is only available in <code>sudo</code> version 1.8.4 and higher.</p>
-<dt><code>developer_mode</code></p>
-<dd>By default <code>sudo</code> refuses to load plugins which can be modified by other than the root user. The plugin should be owned by root and write access permissions should be disabled for &#8220;group&#8221; and &#8220;other&#8221; . To make development of a plugin easier, you can disable that by setting &#8220;developer_mode&#8221; option to true in <code>sudo.conf</code> as follows: </p>
+<dt><code>developer_mode</code></dt>
+<dd>By default <code>sudo</code> refuses to load plugins which can be modified by other than the root user. The plugin should be owned by root and write access permissions should be disabled for &#8220;group&#8221; and &#8220;other&#8221; . To make development of a plugin easier, you can disable that by setting &#8220;developer_mode&#8221; option to true in <code>sudo.conf</code> as follows: </dd>
 <blockquote>
 <pre>Set developer_mode true</pre>
 </blockquote>
 <p> Please note that this creates a security risk, so it is not recommended on critical systems such as a desktop machine for daily use, but is intended to be used in development environments (VM, container, etc). Before enabling developer mode, ensure you understand the implications. </p>
 <p> This setting is only available in <code>sudo</code> version 1.9.0 and higher.</p>
-<dt><code>group_source</code></p>
-<dd><code>sudo</code> passes the invoking user&#8217;s group list to the policy and I/O plugins. On most systems, there is an upper limit to the number of groups that a user may belong to simultaneously (typically 16 for compatibility with NFS). On systems with the <a href="/docs/linux/man/1-getconf/">getconf</a>(1) utility, running: </p>
+<dt><code>group_source</code></dt>
+<dd><code>sudo</code> passes the invoking user&#8217;s group list to the policy and I/O plugins. On most systems, there is an upper limit to the number of groups that a user may belong to simultaneously (typically 16 for compatibility with NFS). On systems with the <a href="/docs/linux/man/1-getconf/">getconf</a>(1) utility, running: </dd>
 <blockquote><p><tt>getconf NGROUPS_MAX</tt></p></blockquote>
 <p> will return the maximum number of groups. </p>
 <p> However, it is still possible to be a member of a larger number of groups&#8211;they simply won&#8217;t be included in the group list returned by the kernel for the user. Starting with <code>sudo</code> version 1.8.7, if the user&#8217;s kernel group list has the maximum number of entries, <code>sudo</code> will consult the group database directly to determine the group list. This makes it possible for the security policy to perform matching by group name even when the user is a member of more than the maximum number of groups. </p>
 <p> The <i>group_source</i> setting allows the administrator to change this default behavior. Supported values for <i>group_source</i> are:</p>
 <dl>
-<dt><code>static</code></p>
-<dd>Use the static group list that the kernel returns. Retrieving the group list this way is very fast but it is subject to an upper limit as described above. It is &#8220;static&#8221; in that it does not reflect changes to the group database made after the user logs in. This was the default behavior prior to <code>sudo</code> 1.8.7.</p>
-<dt><code>dynamic</code></p>
-<dd>Always query the group database directly. It is &#8220;dynamic&#8221; in that changes made to the group database after the user logs in will be reflected in the group list. On some systems, querying the group database for all of a user&#8217;s groups can be time consuming when querying a network-based group database. Most operating systems provide an efficient method of performing such queries. Currently, <code>sudo</code> supports efficient group queries on AIX, BSD , HP-UX, Linux, macOS, and Solaris. This is the default behavior on macOS in <code>sudo</code> 1.9.6 and higher.</p>
-<dt><code>adaptive</code></p>
-<dd>Only query the group database if the static group list returned by the kernel has the maximum number of entries. This is the default behavior on systems other than macOS in <code>sudo</code> 1.8.7 and higher.</dl>
+<dt><code>static</code></dt>
+<dd>Use the static group list that the kernel returns. Retrieving the group list this way is very fast but it is subject to an upper limit as described above. It is &#8220;static&#8221; in that it does not reflect changes to the group database made after the user logs in. This was the default behavior prior to <code>sudo</code> 1.8.7.</dd>
+<dt><code>dynamic</code></dt>
+<dd>Always query the group database directly. It is &#8220;dynamic&#8221; in that changes made to the group database after the user logs in will be reflected in the group list. On some systems, querying the group database for all of a user&#8217;s groups can be time consuming when querying a network-based group database. Most operating systems provide an efficient method of performing such queries. Currently, <code>sudo</code> supports efficient group queries on AIX, BSD , HP-UX, Linux, macOS, and Solaris. This is the default behavior on macOS in <code>sudo</code> 1.9.6 and higher.</dd>
+<dt><code>adaptive</code></dt>
+<dd>Only query the group database if the static group list returned by the kernel has the maximum number of entries. This is the default behavior on systems other than macOS in <code>sudo</code> 1.8.7 and higher.</dd></dl>
 <p> For example, to cause <code>sudo</code> to only use the kernel&#8217;s static list of groups for the user: </p>
 <blockquote>
 <pre>Set group_source static</pre>
 </blockquote>
 <p> This setting is only available in <code>sudo</code> version 1.8.7 and higher.</p>
-<dt><code>max_groups</code></p>
-<dd>The maximum number of user groups to retrieve from the group database. Values less than one or larger than 1024 will be ignored. This setting is only used when querying the group database directly. It is intended to be used on systems where it is not possible to detect when the array to be populated with group entries is not sufficiently large. By default, <code>sudo</code> will allocate four times the system&#8217;s maximum number of groups (see above) and retry with double that number if the group database query fails. </p>
+<dt><code>max_groups</code></dt>
+<dd>The maximum number of user groups to retrieve from the group database. Values less than one or larger than 1024 will be ignored. This setting is only used when querying the group database directly. It is intended to be used on systems where it is not possible to detect when the array to be populated with group entries is not sufficiently large. By default, <code>sudo</code> will allocate four times the system&#8217;s maximum number of groups (see above) and retry with double that number if the group database query fails. </dd>
 <p> This setting is only available in <code>sudo</code> version 1.8.7 and higher. It should not be required in <code>sudo</code> versions 1.8.24 and higher and may be removed in a later release.</p>
-<dt><code>probe_interfaces</code></p>
-<dd>By default, <code>sudo</code> will probe the system&#8217;s network interfaces and pass the IP address of each enabled interface to the policy plugin. This makes it possible for the plugin to match rules based on the IP address without having to query DNS. On Linux systems with a large number of virtual interfaces, this may take a non-negligible amount of time. If IP-based matching is not required, network interface probing can be disabled as follows: </p>
+<dt><code>probe_interfaces</code></dt>
+<dd>By default, <code>sudo</code> will probe the system&#8217;s network interfaces and pass the IP address of each enabled interface to the policy plugin. This makes it possible for the plugin to match rules based on the IP address without having to query DNS. On Linux systems with a large number of virtual interfaces, this may take a non-negligible amount of time. If IP-based matching is not required, network interface probing can be disabled as follows: </dd>
 <blockquote>
 <pre>Set probe_interfaces false</pre>
 </blockquote>
@@ -143,39 +143,39 @@ sudo[123] &lt;- get_user_groups @ src/sudo.c:429 := groups=10,0,5</pre>
 <p> When the function is entered, indicated by a right arrow `-&gt;&#8217; , the program, process ID, function, source file, and line number are logged. When the function returns, indicated by a left arrow `&lt;-&#8216; , the same information is logged along with the return value. In this case, the return value is a string. </p>
 <p> The following subsystems are used by the <code>sudo</code> front-end:</p>
 <dl>
-<dt><i>all</i></p>
-<dd>matches every subsystem</p>
-<dt><i>args</i></p>
-<dd>command line argument processing</p>
-<dt><i>conv</i></p>
-<dd>user conversation</p>
-<dt><i>edit</i></p>
-<dd>sudoedit</p>
-<dt><i>event</i></p>
-<dd>event subsystem</p>
-<dt><i>exec</i></p>
-<dd>command execution</p>
-<dt><i>main</i></p>
-<dd><code>sudo</code> main function</p>
-<dt><i>netif</i></p>
-<dd>network interface handling</p>
-<dt><i>pcomm</i></p>
-<dd>communication with the plugin</p>
-<dt><i>plugin</i></p>
-<dd>plugin configuration</p>
-<dt><i>pty</i></p>
-<dd>pseudo-terminal related code</p>
-<dt><i>selinux</i></p>
-<dd>SELinux-specific handling</p>
-<dt><i>util</i></p>
-<dd>utility functions</p>
-<dt><i>utmp</i></p>
-<dd>utmp handling</dl>
+<dt><i>all</i></dt>
+<dd>matches every subsystem</dd>
+<dt><i>args</i></dt>
+<dd>command line argument processing</dd>
+<dt><i>conv</i></dt>
+<dd>user conversation</dd>
+<dt><i>edit</i></dt>
+<dd>sudoedit</dd>
+<dt><i>event</i></dt>
+<dd>event subsystem</dd>
+<dt><i>exec</i></dt>
+<dd>command execution</dd>
+<dt><i>main</i></dt>
+<dd><code>sudo</code> main function</dd>
+<dt><i>netif</i></dt>
+<dd>network interface handling</dd>
+<dt><i>pcomm</i></dt>
+<dd>communication with the plugin</dd>
+<dt><i>plugin</i></dt>
+<dd>plugin configuration</dd>
+<dt><i>pty</i></dt>
+<dd>pseudo-terminal related code</dd>
+<dt><i>selinux</i></dt>
+<dd>SELinux-specific handling</dd>
+<dt><i>util</i></dt>
+<dd>utility functions</dd>
+<dt><i>utmp</i></dt>
+<dd>utmp handling</dd></dl>
 <p> The <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) plugin includes support for additional subsystems.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sudo.conf </code></p>
-<dd><code>sudo</code> front-end configuration</dl>
+<dt><code>/etc/sudo.conf </code></dt>
+<dd><code>sudo</code> front-end configuration</dd></dl>
 <h2>Examples</h2>
 <pre>#
 # Default /etc/sudo.conf file

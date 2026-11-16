@@ -110,9 +110,9 @@ description: "operator – C operator precedence and order of evaluation"
 </table>
 <p> The following notes provide further information to the above table: </p>
 <dl>
-<dt>[1]</p>
-<dd>The ++ and &#8212; operators at this precedence level are the postfix flavors of the operators.</p>
-<dt>[2]</p>
-<dd>The ++ and &#8212; operators at this precedence level are the prefix flavors of the operators.</dl>
+<dt>[1]</dt>
+<dd>The ++ and &#8212; operators at this precedence level are the postfix flavors of the operators.</dd>
+<dt>[2]</dt>
+<dd>The ++ and &#8212; operators at this precedence level are the prefix flavors of the operators.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

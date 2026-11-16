@@ -17,9 +17,6 @@ description: "sc::TriInterpCoef –"
 <p> double &amp; <code>sderiv</code> (int i, int j, int k)</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static int ijk_to_index (int i, int j, int k)
-
-
-
 static int order_to_nvertex (int order)
 </code></pre>
 <h2>Author</h2>

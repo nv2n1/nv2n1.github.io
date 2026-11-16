@@ -16,12 +16,12 @@ description: "ppmtobmp – convert a portable pixmap into a BMP file"
 <h2>OPTIONS</h2>
 <p> All options can be abbreviated to their shortest unique prefix and you can use a double dash in place of the single dash, GNU-style.</p>
 <dl>
-<dt><code>-windows</code></p>
-<dd> Tells the program to produce a Microsoft Windows BMP file. (This is the default.)</p>
-<dt><code>-os2</code></p>
-<dd> Tells the program to produce an OS/2 BMP file. (Before August 2000, this was the default).</p>
-<dt><code>-bpp</code></p>
-<dd> This determines how many bits per pixel you want the BMP file to contain. Only 1, 4, 8, and 24 are possible. By default, <code>ppmtobmp</code> chooses the smallest number with which it can represent all the colors in the input image. If you specify a number too small to represent all the colors in the input image, <code>ppmtobmp</code> tells you and terminates. You can use <code>ppmquant</code> or <code>ppmdither</code> to reduce the number of colors in the image. </p>
+<dt><code>-windows</code></dt>
+<dd> Tells the program to produce a Microsoft Windows BMP file. (This is the default.)</dd>
+<dt><code>-os2</code></dt>
+<dd> Tells the program to produce an OS/2 BMP file. (Before August 2000, this was the default).</dd>
+<dt><code>-bpp</code></dt>
+<dd> This determines how many bits per pixel you want the BMP file to contain. Only 1, 4, 8, and 24 are possible. By default, <code>ppmtobmp</code> chooses the smallest number with which it can represent all the colors in the input image. If you specify a number too small to represent all the colors in the input image, <code>ppmtobmp</code> tells you and terminates. You can use <code>ppmquant</code> or <code>ppmdither</code> to reduce the number of colors in the image. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> To get a faithful reproduction of the input image, the maxval of the input image must be 255. If it is something else, <code>ppmtobmp</code> the colors in the BMP file may be slightly different from the colors in the input. </p>

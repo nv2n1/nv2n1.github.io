@@ -19,7 +19,7 @@ description: "csysv_rook.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CSYSV_ROOK computes the solution to a complex system of linear
  equations
@@ -38,11 +38,11 @@ description: "csysv_rook.f –"
  The factored form of A is then used to solve the system 
  of equations A * X = B by calling CSYTRS_ROOK.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  Upper triangle of A is stored;
@@ -122,7 +122,6 @@ description: "csysv_rook.f –"
           The length of WORK.  LWORK &gt;= 1, and for best performance
           LWORK &gt;= max(1,N*NB), where NB is the optimal blocksize for
           CSYTRF_ROOK.
-          
           TRS will be done with Level 2 BLAS
           If LWORK = -1, then a workspace query is assumed;
           the routine
@@ -142,18 +141,18 @@ description: "csysv_rook.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    April 2012, Igor Kozachenko,
                   Computer Science Division,
@@ -162,8 +161,9 @@ description: "csysv_rook.f –"
                   School of Mathematics,
                   University of Manchester
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 204 of file csysv_rook.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

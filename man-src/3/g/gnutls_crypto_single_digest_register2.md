@@ -14,14 +14,14 @@ description: "gnutls_crypto_single_digest_register2 – register a digest algori
 <p> <code>int gnutls_crypto_single_digest_register2(gnutls_digest_algorithm_t </code><i>algorithm</i><code>, int </code><i>priority</i><code>, int </code><i>version</i><code>, gnutls_crypto_single_digest_st * </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_digest_algorithm_t algorithm</p>
-<dd> is the gnutls algorithm identifier</p>
-<dt>int priority</p>
-<dd> is the priority of the algorithm</p>
-<dt>int version</p>
-<dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></p>
-<dt>gnutls_crypto_single_digest_st * s</p>
-<dd> is a structure holding new algorithms&#8217;s data</dl>
+<dt>gnutls_digest_algorithm_t algorithm</dt>
+<dd> is the gnutls algorithm identifier</dd>
+<dt>int priority</dt>
+<dd> is the priority of the algorithm</dd>
+<dt>int version</dt>
+<dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></dd>
+<dt>gnutls_crypto_single_digest_st * s</dt>
+<dd> is a structure holding new algorithms&#8217;s data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will register a digest (hash) algorithm to be used by gnutls. Any algorithm registered will override the included algorithms and by convention kernel implemented algorithms have priority of 90. The algorithm with the lowest priority will be used by gnutls. </p>
 <p> This function should be called before <code>gnutls_global_init()</code>. </p>
@@ -39,6 +39,6 @@ description: "gnutls_crypto_single_digest_register2 – register a digest algori
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

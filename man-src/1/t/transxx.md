@@ -11,10 +11,10 @@ description: "transxx – Create a pseudo translated PO file from a PO template 
 <p> transxx &#8211; Create a pseudo translated PO file from a PO template file </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>transxx</code> [<i>template.pot</i>]</dl>
+<dt> <code>transxx</code> [<i>template.pot</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>transxx</code></p>
-<dd>is a command-line tool that produces a basic fleshed-out PO-file from a PO-template file. Some of the formatting and structure of the msgid strings will be copied to the msgstr strings, but otherwise text will be translated to &#8220;xx&#8221;. </p>
+<dd>is a command-line tool that produces a basic fleshed-out PO-file from a PO-template file. Some of the formatting and structure of the msgid strings will be copied to the msgstr strings, but otherwise text will be translated to &#8220;xx&#8221;. </dd>
 <p> The fleshed-out PO-file is sent to standard output. </p>
 <p> Running your software with the language &#8220;xx&#8221; will quickly show you any user visible strings that are not translatable. </p>
 <p> This utility is part of the KDE Software Development Kit.</p>
@@ -25,5 +25,5 @@ description: "transxx – Create a pseudo translated PO file from a PO template 
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

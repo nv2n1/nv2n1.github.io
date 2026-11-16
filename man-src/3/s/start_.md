@@ -10,20 +10,12 @@ description: "QuantLib::InflationSwap – Abstract base class for inflation swap
 <p>QuantLib::InflationSwap &#8211; Abstract base class for inflation swaps. </p>
 <h2>Synopsis</h2>
 <pre><code>InflationSwap (const Date &amp;start, const Date &amp;maturity, const Period &amp;lag, const Calendar &amp;calendar, BusinessDayConvention convention, const DayCounter &amp;dayCounter, const Handle&lt; YieldTermStructure &gt; &amp;yieldTS)
-
-
 the constructor sets common data members
-
-
 virtual Rate fairRate () const =0</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>. Inherited by <code>YearOnYearInflationSwap</code>, and <code>ZeroCouponInflationSwap</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>InflationSwap (const Date &amp;start, const Date &amp;maturity, const Period &amp;lag, const Calendar &amp;calendar, BusinessDayConvention convention, const DayCounter &amp;dayCounter, const Handle&lt; YieldTermStructure &gt; &amp;yieldTS)
-
-
 the constructor sets common data members
-
-
 virtual Rate fairRate () const =0</code></pre>
 <p> <code>Inspectors</code> </p>
 <p> <code>Date</code> <code>baseDate</code> () const </p>

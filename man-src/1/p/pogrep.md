@@ -16,33 +16,33 @@ description: "pogrep – Grep XLIFF, Gettext PO and TMX localization files."
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pogrep.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pogrep.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h/&#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;manpage</p>
-<dd> output a manpage based on the help</p>
-<dt>&#8211;progress</p>
-<dd> show progress as: dots, none, bar, names, verbose</p>
-<dt>&#8211;errorlevel</p>
-<dd> show errorlevel as: none, message, exception, traceback</p>
-<dt>-i/&#8211;input</p>
-<dd> read from INPUT in xliff, mo, xlf, tmx, gmo, pot, xlff, po formats</p>
-<dt>-x/&#8211;exclude</p>
-<dd> exclude names matching EXCLUDE from input paths</p>
-<dt>-o/&#8211;output</p>
-<dd> write to OUTPUT in po, xliff, mo, xlf, tmx, gmo, pot, xlff formats</p>
-<dt>&#8211;search</p>
-<dd> searches the given parts (source, target, notes and locations)</p>
-<dt>-I/&#8211;ignore-case</p>
-<dd> ignore case distinctions</p>
-<dt>-e/&#8211;regexp</p>
-<dd> use regular expression matching</p>
-<dt>-v/&#8211;invert-match</p>
-<dd> select non-matching lines</p>
-<dt>&#8211;accelerator</p>
-<dd> ignores the given accelerator when matching</p>
-<dt>-k/&#8211;keep-translations</p>
-<dd> always extract units with translations </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h/&#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;manpage</dt>
+<dd> output a manpage based on the help</dd>
+<dt>&#8211;progress</dt>
+<dd> show progress as: dots, none, bar, names, verbose</dd>
+<dt>&#8211;errorlevel</dt>
+<dd> show errorlevel as: none, message, exception, traceback</dd>
+<dt>-i/&#8211;input</dt>
+<dd> read from INPUT in xliff, mo, xlf, tmx, gmo, pot, xlff, po formats</dd>
+<dt>-x/&#8211;exclude</dt>
+<dd> exclude names matching EXCLUDE from input paths</dd>
+<dt>-o/&#8211;output</dt>
+<dd> write to OUTPUT in po, xliff, mo, xlf, tmx, gmo, pot, xlff formats</dd>
+<dt>&#8211;search</dt>
+<dd> searches the given parts (source, target, notes and locations)</dd>
+<dt>-I/&#8211;ignore-case</dt>
+<dd> ignore case distinctions</dd>
+<dt>-e/&#8211;regexp</dt>
+<dd> use regular expression matching</dd>
+<dt>-v/&#8211;invert-match</dt>
+<dd> select non-matching lines</dd>
+<dt>&#8211;accelerator</dt>
+<dd> ignores the given accelerator when matching</dd>
+<dt>-k/&#8211;keep-translations</dt>
+<dd> always extract units with translations </dd>
 </dl>
 <h2>Index</h2>

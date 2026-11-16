@@ -27,26 +27,26 @@ description: "addr2line – convert addresses into file names and line numbers."
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent.</p>
 <dl>
-<dt><code>-b</code> <i>bfdname</i></p>
+<dt><code>-b</code> <i>bfdname</i></dt>
 <dd>
-<dt><code>&#8211;target=</code><i>bfdname</i></p>
-<dd> Specify that the object-code format for the object files is <i>bfdname</i>.</p>
-<dt><code>-C</code></p>
+</dd><dt><code>&#8211;target=</code><i>bfdname</i></dt>
+<dd> Specify that the object-code format for the object files is <i>bfdname</i>.</dd>
+<dt><code>-C</code></dt>
 <dd>
-<dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></p>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</p>
-<dt><code>-e</code> <i>filename</i></p>
+</dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dt><code>-e</code> <i>filename</i></dt>
 <dd>
-<dt><code>&#8211;exe=</code><i>filename</i></p>
-<dd> Specify the name of the executable for which addresses should be translated. The default file is <i>a.out</i>.</p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8211;exe=</code><i>filename</i></dt>
+<dd> Specify the name of the executable for which addresses should be translated. The default file is <i>a.out</i>.</dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;functions</code></p>
-<dd> Display function names as well as file and line number information.</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;functions</code></dt>
+<dd> Display function names as well as file and line number information.</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;basenames</code></p>
-<dd> Display only the base of each file name.</dl>
+</dd><dt><code>&#8211;basenames</code></dt>
+<dd> Display only the base of each file name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>

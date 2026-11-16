@@ -79,15 +79,15 @@ description: "QuantLib::Bond – Base bond class."
 <p> Derived classes must fill the uninitialized data members. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Most methods assume that the cash flows are stored sorted by date, the redemption(s) being after any cash flow at the same date. In particular, if there&#8217;s one single redemption, it must be the last cash flow,</dl>
+<dd>Most methods assume that the cash flows are stored sorted by date, the redemption(s) being after any cash flow at the same date. In particular, if there&#8217;s one single redemption, it must be the last cash flow,</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>price/yield calculations are cross-checked for consistency.</p>
-<dt>*</p>
-<dd>price/yield calculations are checked against known good values.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>price/yield calculations are cross-checked for consistency.</dd>
+<dt>*</dt>
+<dd>price/yield calculations are checked against known good values.</dd></dl>
 </dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp; calendar, const <code>Date</code> &amp; issueDate = <code>Date</code>(), const Leg &amp; coupons = Leg())</h3>
@@ -97,12 +97,12 @@ description: "QuantLib::Bond – Base bond class."
 <p>old constructor for non amortizing bonds. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The last passed cash flow must be the bond redemption. No other cash flow can have a date later than the redemption date.</dl>
+<dd>The last passed cash flow must be the bond redemption. No other cash flow can have a date later than the redemption date.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const Leg &amp; cashflows () const</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>returns all the cashflows, including the redemptions.</dl>
+<dd>returns all the cashflows, including the redemptions.</dd></dl>
 <h3>const Leg &amp; redemptions () const</h3>
 <p>returns just the redemption flows (not interest payments)</p>
 <h3>const boost::shared_ptr&lt;<code>CashFlow</code>&gt;&amp; redemption () const</h3>
@@ -112,13 +112,13 @@ description: "QuantLib::Bond – Base bond class."
 <p> The default bond settlement is used for calculation. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload.</dl>
+<dd>the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload.</dd></dl>
 <h3><code>Real</code> dirtyPrice () const</h3>
 <p>theoretical dirty price </p>
 <p> The default bond settlement is used for calculation. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload.</dl>
+<dd>the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload.</dd></dl>
 <h3><code>Real</code> settlementValue () const</h3>
 <p>theoretical settlement value </p>
 <p> The default bond settlement date is used for calculation.</p>
@@ -168,7 +168,7 @@ description: "QuantLib::Bond – Base bond class."
 <p> If given, the elements of the redemptions vector will multiply the amount of the redemption cash flow. The elements will be taken in base 100, i.e., a redemption equal to 100 does not modify the amount. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>The cashflows_ vector must contain at least one coupon and must be sorted by date.</dl>
+<dd>The cashflows_ vector must contain at least one coupon and must be sorted by date.</dd></dl>
 <h3>void setSingleRedemption (<code>Real</code> notional, <code>Real</code> redemption, const <code>Date</code> &amp; date) [protected]</h3>
 <p>This method can be called by derived classes in order to build a bond with a single redemption payment. It will fill the notionalSchedule_, notionals_, and redemptions_ data members. </p>
 <h2>Author</h2>

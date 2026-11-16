@@ -10,17 +10,11 @@ description: "tst – ternary search trie functions"
 <p>tst &#8211; ternary search trie functions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;inn/tst.h&gt;
-
 struct tst;
-
 struct tst *tst_init(int node_line_width);
-
 void tst_cleanup(struct tst *tst);
-
 int tst_insert(struct tst *tst, const unsigned char *key, void *data, int option, void **exist_ptr);
-
 void *tst_search(struct tst *tst, const unsigned char *key);
-
 void *tst_delete(struct tst *tst, const unsigned char *key);</code></pre>
 <h2>Description</h2>
 <p><code>tst_init</code> allocates memory for members of <i>struct tst</i>, and allocates the first <i>node_line_width</i> nodes. A <font SIZE="-1">NULL</font> pointer is returned by <code>tst_init</code> if any part of the memory allocation fails. On success, a pointer to a <i>struct tst</i> is returned. </p>

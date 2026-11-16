@@ -18,8 +18,8 @@ description: "libra_selinux – Security Enhanced Linux Policy for the libra pro
 <p> <code>libra_initrc_exec_t </code> </p>
 <p> &#8211; Set files with the libra_initrc_exec_t type, if you want to transition an executable to the libra_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/rhc-restorer, /etc/rc.d/init.d/mcollective, /etc/rc.d/init.d/libra </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/rhc-restorer, /etc/rc.d/init.d/mcollective, /etc/rc.d/init.d/libra </dd>
 </dl>
 <p> <code>libra_initrc_tmp_t </code> </p>
 <p> &#8211; Set files with the libra_initrc_tmp_t type, if you want to store libra initrc temporary files in the /tmp directories. </p>
@@ -45,9 +45,9 @@ description: "libra_selinux – Security Enhanced Linux Policy for the libra pro
 <p> Policy governs the access confined processes have to these ports. SELinux libra policy is very flexible allowing users to setup their libra processes in as secure a method as possible. </p>
 <p> The following port types are defined for libra: </p>
 <dl>
-<dt><code>libra_port_t </code></p>
+<dt><code>libra_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8021</dl>
+</dd><dd>Default Defined Ports: tcp 8021</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux libra policy is very flexible allowing users to setup their libra processes in as secure a method as possible. </p>

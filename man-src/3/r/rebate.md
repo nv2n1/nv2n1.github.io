@@ -10,16 +10,10 @@ description: "QuantLib::BarrierOption::arguments – Arguments for barrier optio
 <p>QuantLib::BarrierOption::arguments &#8211; Arguments for barrier option calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits OneAssetOption::arguments. Inherited by <code>arguments</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Barrier::Type <code>barrierType</code> </p>
 <p> <code>Real</code> <code>barrier</code> </p>

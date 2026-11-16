@@ -45,10 +45,10 @@ description: "ztgsyl.f –"
  Dif[(A,D),(B,E)]. That is, the reciprocal of a lower bound on the
  reciprocal of the smallest singular value of Z.
  This is a level-3 BLAS algorithm.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  = 'N': solve the generalized sylvester equation (1).
  = 'C': solve the &quot;conjugate transposed&quot; system (3).</pre>
@@ -152,21 +152,22 @@ description: "ztgsyl.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] B. Kagstrom and P. Poromaa, LAPACK-Style Algorithms and Software for Solving the Generalized Sylvester Equation and Estimating the Separation between Regular Matrix Pairs, Report UMINF &#8211; 93.23, Department of Computing Science, Umea University, S-901 87 Umea, Sweden, December 1993, Revised April 1994, Also as LAPACK Working Note 75. To appear in ACM Trans. on Math. Software, Vol 22, No 1, 1996. </p>
+<dd>[1] B. Kagstrom and P. Poromaa, LAPACK-Style Algorithms and Software for Solving the Generalized Sylvester Equation and Estimating the Separation between Regular Matrix Pairs, Report UMINF &#8211; 93.23, Department of Computing Science, Umea University, S-901 87 Umea, Sweden, December 1993, Revised April 1994, Also as LAPACK Working Note 75. To appear in ACM Trans. on Math. Software, Vol 22, No 1, 1996. </dd>
 <p>&nbsp;<wbr>[2]&nbsp;<wbr>B. Kagstrom, A Perturbation Analysis of the Generalized Sylvester Equation&nbsp;<wbr>(AR &#8211; LB, DR &#8211; LE&nbsp;<wbr>)&nbsp;<wbr>=&nbsp;<wbr>(C, F), SIAM J. Matrix Anal. Appl., H(4):1045-1060, 1994.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>[3]&nbsp;<wbr>B. Kagstrom and L. Westin, Generalized Schur Methods with Condition Estimators for Solving the Generalized Sylvester Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7, July 1989, pp 745-751.&nbsp;<wbr></dl>
 <p> Definition at line 294 of file ztgsyl.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

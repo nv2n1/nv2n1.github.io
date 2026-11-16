@@ -10,10 +10,8 @@ description: "std::uses_allocator<std::tuple> – std::uses_allocator<std::tuple
 <p>std::uses_allocator&lt;std::tuple&gt; &#8211; std::uses_allocator&lt;std::tuple&gt;</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;tuple&gt;
-
     template &lt;class... Types, class Alloc&gt;
     (since C++ 11)
-
         struct uses_allocator&lt;std::tuple&lt;Types...&gt;, Alloc&gt; : std::true_type {
 };</code></pre>
 <p>This specialization of std::uses_allocator informs other library components that tuples support uses-allocator construction, even though they do not have a nested allocator_type.<br />

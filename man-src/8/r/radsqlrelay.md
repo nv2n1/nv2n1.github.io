@@ -14,28 +14,28 @@ description: "radsqlrelay – relay SQL queries to a central database server"
 <p><code>radsqlrelay</code> tails a SQL <i>logfile</i> and forwards the queries to a database server. Used to replicate accounting records to one (central) database, even if the database has extended downtime. The SQL logfile is created by the <code>rlm_sql_log</code> module. The module must be configured in the <code>radiusd</code> server before you can use <code>radsqlrelay</code>. </p>
 <h2>Options</h2>
 <dl>
-<dt>-?</p>
-<dd>Print usage help information.</p>
-<dt>-d <i>sql_driver</i></p>
-<dd>Driver to use: mysql, pg, oracle.</p>
-<dt>-b <i>database</i></p>
-<dd>Name of the database to use.</p>
-<dt>-f <i>file</i></p>
-<dd>Read password from file, instead of command line.</p>
-<dt>-h <i>host</i></p>
-<dd>Connect to host.</p>
-<dt>-u <i>user</i></p>
-<dd>User for login.</p>
-<dt>-P <i>port</i></p>
-<dd>Port number to use for connection.</p>
-<dt>-p <i>password</i></p>
-<dd>Password to use when connecting to server.</p>
-<dt>-1</p>
-<dd>One-shot mode: push the file to database and exit.</p>
-<dt>-x</p>
-<dd>Turn on debugging.</p>
-<dt>file_path</p>
-<dd>The pathname of the SQL logfile to use. </p>
+<dt>-?</dt>
+<dd>Print usage help information.</dd>
+<dt>-d <i>sql_driver</i></dt>
+<dd>Driver to use: mysql, pg, oracle.</dd>
+<dt>-b <i>database</i></dt>
+<dd>Name of the database to use.</dd>
+<dt>-f <i>file</i></dt>
+<dd>Read password from file, instead of command line.</dd>
+<dt>-h <i>host</i></dt>
+<dd>Connect to host.</dd>
+<dt>-u <i>user</i></dt>
+<dd>User for login.</dd>
+<dt>-P <i>port</i></dt>
+<dd>Port number to use for connection.</dd>
+<dt>-p <i>password</i></dt>
+<dd>Password to use when connecting to server.</dd>
+<dt>-1</dt>
+<dd>One-shot mode: push the file to database and exit.</dd>
+<dt>-x</dt>
+<dd>Turn on debugging.</dd>
+<dt>file_path</dt>
+<dd>The pathname of the SQL logfile to use. </dd>
 </dl>
 <h2>Notes</h2>
 <h3>Oracle driver</h3>
@@ -51,7 +51,7 @@ description: "radsqlrelay – relay SQL queries to a central database server"
  (SERVICE_NAME = &lt;DB SID&gt;)
  )
  )</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-rlm_sql_log/">rlm_sql_log</a></code>(5) </p>
 <h2>Author</h2>

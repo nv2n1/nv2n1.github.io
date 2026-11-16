@@ -15,22 +15,22 @@ description: "DROP_COLLATION – remove a collation"
 <h2>Parameters</h2>
 <p>IF EXISTS</p>
 <dl>
-<dd>Do not throw an error if the collation does not exist. A notice is issued in this case.</dl>
+<dd>Do not throw an error if the collation does not exist. A notice is issued in this case.</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>The name of the collation. The collation name can be schema-qualified.</dl>
+<dd>The name of the collation. The collation name can be schema-qualified.</dd></dl>
 <p> CASCADE</p>
 <dl>
-<dd>Automatically drop objects that depend on the collation.</dl>
+<dd>Automatically drop objects that depend on the collation.</dd></dl>
 <p> RESTRICT</p>
 <dl>
-<dd>Refuse to drop the collation if any objects depend on it. This is the default.</dl>
+<dd>Refuse to drop the collation if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To drop the collation named german: </p>
 <dl>
 <dd>
 <pre>DROP COLLATION german;</pre>
-</dl>
+</dd></dl>
 <h2>Compatibility</h2>
 <p>The <code>DROP COLLATION</code> command conforms to the SQL standard, apart from the IF EXISTS option, which is a PostgreSQL extension.</p>
 <h2>See Also</h2>

@@ -14,28 +14,28 @@ description: "id – print real and effective user and group IDs"
 <h2>DESCRIPTION</h2>
 <p> Print user and group information for each specified USER, or (when USER omitted) for the current user.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> ignore, for compatibility with other versions</p>
-<dt><code>-Z</code>, <code>&#8211;context</code></p>
-<dd> print only the security context of the process</p>
-<dt><code>-g</code>, <code>&#8211;group</code></p>
-<dd> print only the effective group ID</p>
-<dt><code>-G</code>, <code>&#8211;groups</code></p>
-<dd> print all group IDs</p>
-<dt><code>-n</code>, <code>&#8211;name</code></p>
-<dd> print a name instead of a number, for <code>-ugG</code></p>
-<dt><code>-r</code>, <code>&#8211;real</code></p>
-<dd> print the real ID instead of the effective ID, with <code>-ugG</code></p>
-<dt><code>-u</code>, <code>&#8211;user</code></p>
-<dd> print only the effective user ID</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> delimit entries with NUL characters, not whitespace;</p>
+<dt><code>-a</code></dt>
+<dd> ignore, for compatibility with other versions</dd>
+<dt><code>-Z</code>, <code>&#8211;context</code></dt>
+<dd> print only the security context of the process</dd>
+<dt><code>-g</code>, <code>&#8211;group</code></dt>
+<dd> print only the effective group ID</dd>
+<dt><code>-G</code>, <code>&#8211;groups</code></dt>
+<dd> print all group IDs</dd>
+<dt><code>-n</code>, <code>&#8211;name</code></dt>
+<dd> print a name instead of a number, for <code>-ugG</code></dd>
+<dt><code>-r</code>, <code>&#8211;real</code></dt>
+<dd> print the real ID instead of the effective ID, with <code>-ugG</code></dd>
+<dt><code>-u</code>, <code>&#8211;user</code></dt>
+<dd> print only the effective user ID</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> delimit entries with NUL characters, not whitespace;</dd>
 <dt>
-<dd> not permitted in default format</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dt><dd> not permitted in default format</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Without any OPTION, print some useful set of identified information.</p>
 <h2>AUTHOR</h2>
 <p> Written by Arnold Robbins and David MacKenzie.</p>

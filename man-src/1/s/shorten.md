@@ -35,13 +35,13 @@ url: "/docs/linux/man/1-shorten/"
  The service used can be controlled in various ways. The program will use the first of the following values that it finds:
 <dl>
 <dt>&bull;
-<dd> The value of the <tt>&quot;--service&quot;</tt> command line option.
-<dt>&bull;
-<dd> The value of the <tt>&quot;SHORTEN_SERVICE&quot;</tt> environment variable.
-<dt>&bull;
-<dd> The value of the <tt>&quot;service&quot;</tt> option from the configuration file (see below).
-<dt>&bull;
-<dd> If none of the above options is found, the program defaults to using Metamark.</dl>
+</dt><dd> The value of the <tt>&quot;--service&quot;</tt> command line option.
+</dd><dt>&bull;
+</dt><dd> The value of the <tt>&quot;SHORTEN_SERVICE&quot;</tt> environment variable.
+</dd><dt>&bull;
+</dt><dd> The value of the <tt>&quot;service&quot;</tt> option from the configuration file (see below).
+</dd><dt>&bull;
+</dt><dd> If none of the above options is found, the program defaults to using Metamark.</dd></dl>
 
 <h2>CONFIGURATION FILE</h2>
 

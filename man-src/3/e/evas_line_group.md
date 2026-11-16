@@ -22,10 +22,10 @@ description: "Line Functions – Functions used to deal with evas line objects."
 <p>Adds a new evas line object to the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.</dl>
+<dd><i>e</i> The given evas.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new evas line object.</dl>
+<dd>The new evas line object.</dd></dl>
 <h3>EAPI void evas_object_line_xy_get (const <code>Evas_Object</code> * obj, Evas_Coord * x1, Evas_Coord * y1, Evas_Coord * x2, Evas_Coord * y2)</h3>
 <p>Retrieves the coordinates of the end points of the given evas line object. </p>
 <p> <code>Parameters:</code></p>
@@ -34,7 +34,7 @@ description: "Line Functions – Functions used to deal with evas line objects."
  <i>x1</i> Pointer to an integer in which to store the X coordinate of the first end point.<br />
  <i>y1</i> Pointer to an integer in which to store the Y coordinate of the first end point.<br />
  <i>x2</i> Pointer to an integer in which to store the X coordinate of the second end point.<br />
- <i>y2</i> Pointer to an integer in which to store the Y coordinate of the second end point.</dl>
+ <i>y2</i> Pointer to an integer in which to store the Y coordinate of the second end point.</dd></dl>
 <h3>EAPI void evas_object_line_xy_set (<code>Evas_Object</code> * obj, Evas_Coord x1, Evas_Coord y1, Evas_Coord x2, Evas_Coord y2)</h3>
 <p>Sets the coordinates of the end points of the given evas line object. </p>
 <p> <code>Parameters:</code></p>
@@ -43,6 +43,6 @@ description: "Line Functions – Functions used to deal with evas line objects."
  <i>x1</i> The X coordinate of the first point.<br />
  <i>y1</i> The Y coordinate of the first point.<br />
  <i>x2</i> The X coordinate of the second point.<br />
- <i>y2</i> The Y coordinate of the second point.</dl>
+ <i>y2</i> The Y coordinate of the second point.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

@@ -16,13 +16,15 @@ description: "winepath – Tool to convert Unix paths to/from Win32 paths"
 <p> If more than one option is given then the input paths are output in all formats specified, in the order long, short, Unix, Windows. If no option is given the default output is Unix format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u</code>,<code>&nbsp;&#8211;unix</p>
-<dd> converts a Windows path to a Unix path.</p>
-<dt>-w</code>,<code>&nbsp;&#8211;windows</p>
-<dd> converts a Unix path to a long Windows path.</p>
-<dt>-l</code>,<code>&nbsp;&#8211;long</p>
-<dd> converts the short Windows path of an existing file or directory to the long format.</p>
-<dt>-s</code>,<code>&nbsp;&#8211;short</p>
-<dd> converts the long Windows path of an existing file or directory to the short format.</p>
-<dt>-0</p>
+<dt><code>-u</code>,<code>&nbsp;&#8211;unix</dt>
+<dd> converts a Windows path to a Unix path.</dd>
+<dt>-w</code>,<code>&nbsp;&#8211;windows</dt>
+<dd> converts a Unix path to a long Windows path.</dd>
+<dt>-l</code>,<code>&nbsp;&#8211;long</dt>
+<dd> converts the short Windows path of an existing file or directory to the long format.</dd>
+<dt>-s</code>,<code>&nbsp;&#8211;short</dt>
+<dd> converts the long Windows path of an existing file or directory to the short format.</dd>
+<dt>-0</dt>
 <dd> separate output with 
+</dd></dl>
+</code>

@@ -11,9 +11,7 @@ std::fgetwc - std::fgetwc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wint_t fgetwc( std::FILE* stream );
-
 wint_t getwc( std::FILE* stream );</code></pre> 
 Reads the next wide character from the given input stream. getwc() may be implemented as a macro and may evaluate stream more than once. 
 

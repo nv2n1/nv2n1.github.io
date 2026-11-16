@@ -10,11 +10,8 @@ description: "std::beta,std::betaf,std::betal – std::beta,std::betaf,std::beta
 <p>std::beta,std::betaf,std::betal &#8211; std::beta,std::betaf,std::betal</p>
 <h2>Synopsis</h2>
 <pre><code>double beta( double x, double y );
-
 float betaf( float x, float y );                   (1) (since C++17)
-
 long double betal( long double x, long double y );
-
 Promoted beta( Arithmetic x, Arithmetic y );       (2) (since C++17)</code></pre>
 <p>1) Computes the beta_function of x and y.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -51,20 +48,14 @@ When x and y are positive integers, beta(x,y) equals \(rac{(x-1)!(y-1)!}{(x+y-1
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 double binom(int n, int k)
 {
     return 1 / ((n + 1) * std::beta(n - k + 1, k + 1));
 }
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;Pascal's triangle:
 &quot;;

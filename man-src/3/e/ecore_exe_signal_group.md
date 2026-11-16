@@ -32,44 +32,44 @@ description: "Spawned Process Signal Functions – Functions that send signals t
 <p>Continues the given paused process by sending it a SIGCONT signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <h3>EAPI void ecore_exe_hup (<code>Ecore_Exe</code> * exe)</h3>
 <p>Sends a SIGHUP signal to the given spawned process. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <h3>EAPI void ecore_exe_interrupt (<code>Ecore_Exe</code> * exe)</h3>
 <p>Sends the given spawned process a interrupt (SIGINT) signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <h3>EAPI void ecore_exe_kill (<code>Ecore_Exe</code> * exe)</h3>
 <p>Kills the given spawned process by sending it a SIGKILL signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <p> References ecore_timer_add(), and ecore_timer_del().</p>
 <h3>EAPI void ecore_exe_pause (<code>Ecore_Exe</code> * exe)</h3>
 <p>Pauses the given process by sending it a SIGSTOP signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <h3>EAPI void ecore_exe_quit (<code>Ecore_Exe</code> * exe)</h3>
 <p>Sends the given spawned process a quit (SIGQUIT) signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <h3>EAPI void ecore_exe_signal (<code>Ecore_Exe</code> * exe, int num)</h3>
 <p>Sends a SIGUSR signal to the given spawned process. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>exe</i> Process handle to the given process.<br />
- <i>num</i> The number user signal to send. Must be either 1 or 2, or the signal will be ignored.</dl>
+ <i>num</i> The number user signal to send. Must be either 1 or 2, or the signal will be ignored.</dd></dl>
 <h3>EAPI void ecore_exe_terminate (<code>Ecore_Exe</code> * exe)</h3>
 <p>Sends the given spawned process a terminate (SIGTERM) signal. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.</dl>
+<dd><i>exe</i> Process handle to the given process.</dd></dl>
 <p> Referenced by ecore_exe_pipe_run().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

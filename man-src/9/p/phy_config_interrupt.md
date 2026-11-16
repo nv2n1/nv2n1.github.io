@@ -15,11 +15,11 @@ phy_config_interrupt - configure the PHY device for the requested interrupts
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>the phy_device struct</dl>
+<dl><dd></dd><dd>the phy_device struct</dd></dl>
  
 
  <i>interrupts</i>
-<dl><dd>interrupt flags to configure for this <i>phydev</i></dl>
+<dl><dd>interrupt flags to configure for this <i>phydev</i></dd></dl>
 
 <h2>Description</h2>
 

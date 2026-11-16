@@ -26,12 +26,12 @@ description: "QuantLib::GapPayoff – Binary gap payoff."
 <p> This payoff is equivalent to being a) long a <code>PlainVanillaPayoff</code> at the first strike (same Call/Put type) and b) short a <code>CashOrNothingPayoff</code> at the first strike (same Call/Put type) with cash payoff equal to the difference between the second and the first strike. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>this payoff can be negative depending on the strikes</dl>
+<dd>this payoff can be negative depending on the strikes</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>std::string name () const [virtual]</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implements <code>Payoff</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

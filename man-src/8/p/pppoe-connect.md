@@ -15,12 +15,12 @@ description: "pppoe-connect – Shell script to manage a PPPoE link"
 <h2>Technical Details</h2>
 <p><code>pppoe-connect</code> uses the following shell variables from the configuration file: </p>
 <dl>
-<dt><code>ETH</code></p>
-<dd>The Ethernet interface connected to the DSL modem (for example, eth0). </p>
-<dt><code>USER</code></p>
-<dd>The PPPoE user-id (for example, b1xxnxnx [at] sympatico.ca). </p>
-<dt><code>PIDFILE</code></p>
-<dd>A file in which to write the process-ID of the pppoe-connect process (for example, <code>/var/run/pppoe.pid</code>). Two additional files ($PIDFILE.pppd and $PIDFILE.pppoe) hold the process-ID&#8217;s of the <code>pppd</code> and <code>pppoe</code> processes, respectively. </p>
+<dt><code>ETH</code></dt>
+<dd>The Ethernet interface connected to the DSL modem (for example, eth0). </dd>
+<dt><code>USER</code></dt>
+<dd>The PPPoE user-id (for example, b1xxnxnx [at] sympatico.ca). </dd>
+<dt><code>PIDFILE</code></dt>
+<dd>A file in which to write the process-ID of the pppoe-connect process (for example, <code>/var/run/pppoe.pid</code>). Two additional files ($PIDFILE.pppd and $PIDFILE.pppoe) hold the process-ID&#8217;s of the <code>pppd</code> and <code>pppoe</code> processes, respectively. </dd>
 </dl>
 <p> By using different configuration files with different PIDFILE settings, you can manage multiple PPPoE connections. Just specify the configuration file as an argument to <code>pppoe-start</code> and <code>pppoe-stop</code>.</p>
 <h2>Author</h2>

@@ -24,15 +24,15 @@ description: "Dislocker file – Read BitLocker encrypted volumes under Linux, O
 <p> Dislock the BitLocker encrypted volume:</p>
 <dl>
 <dt>
-<dd> <code>% dislocker -V /dev/sda2 -p563200-557084-108284-218900-019151-415437-694144-239976 &#8212; decrypted.ntfs</code></p>
+</dt><dd> <code>% dislocker -V /dev/sda2 -p563200-557084-108284-218900-019151-415437-694144-239976 &#8212; decrypted.ntfs</code></dd>
 <dt>
-<dd> This will decrypt <code>/dev/sda2</code> into <code>decrypted.ntfs</code> using the recovery password method.</p>
-<dt>To mount the partition once decrypted, use this sort of line:</p>
-<dd> <code>% mount -o loop decrypted.ntfs /mnt/clear</code></dl>
+</dt><dd> This will decrypt <code>/dev/sda2</code> into <code>decrypted.ntfs</code> using the recovery password method.</dd>
+<dt>To mount the partition once decrypted, use this sort of line:</dt>
+<dd> <code>% mount -o loop decrypted.ntfs /mnt/clear</code></dd></dl>
 <p> &#8212;</p>
 <dl>
-<dt>You may have to unmount the NTFS partition before halting the system. In order to do so, you may run this command (replacing your mount point):</p>
-<dd> <code>% umount /mnt/clear</code></dl>
+<dt>You may have to unmount the NTFS partition before halting the system. In order to do so, you may run this command (replacing your mount point):</dt>
+<dd> <code>% umount /mnt/clear</code></dd></dl>
 <p> &#8212; </p>
 <p> Note that these are <code>examples</code> and, as such, you may need to modify the given command lines. For example, you may want to change the decryption method used in them.</p>
 <h2>AUTHOR</h2>

@@ -11,13 +11,9 @@ std::function - std::function
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class &gt;                   (since C++11)
-
 class function; /* undefined */
-
 template&lt; class R, class... Args &gt;  (since C++11)
-
 class function&lt;R(Args...)&gt;;</code></pre> 
 Class template std::function is a general-purpose polymorphic function wrapper. Instances of std::function can store, copy, and invoke any Callable target -- functions, lambda_expressions, bind_expressions, or other function objects, as well as pointers to member functions and pointers to data members. 
 The stored callable object is called the target of std::function. If a std::function contains no target, it is called empty. Invoking the target of an empty std::function results in std::bad_function_call exception being thrown. 
@@ -81,7 +77,6 @@ Deduction_guides<i>(since C++17)</i>
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 struct Foo {
     Foo(int num)
@@ -95,7 +90,6 @@ struct Foo {
     int num_;
 };
 void print_num(int i)
-
 {
     std::cout &lt;&lt; i &lt;&lt; '\n';
 }
@@ -106,7 +100,6 @@ struct PrintNum {
     }
 };
 int main()
-
 {
     // store a free function
     std::function&lt;void(int)&gt; f_display = print_num;

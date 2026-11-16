@@ -17,10 +17,10 @@ description: "XmStringCompare — A compound string function that compares two s
 <p><code>XmStringCompare</code> returns a Boolean value indicating the results of a semantically equivalent comparison of two compound strings. </p>
 <p> Semantically equivalent means that the strings have the same text components, font list element tags, directions, and separators. In general, if two compound strings are created with the same (<code>char *</code>) string using <code>XmStringCreateLocalized</code> in the same language environment, the compound strings compare as equal. If two compound strings are created with the same text and tag argument using <code>XmStringCreate</code>, the strings compare as equal.</p>
 <dl COMPACT>
-<dt><i>s1</i></p>
-<dd>Specifies a compound string to be compared with <i>s2</i></p>
-<dt><i>s2</i></p>
-<dd>Specifies a compound string to be compared with <i>s1</i></dl>
+<dt><i>s1</i></dt>
+<dd>Specifies a compound string to be compared with <i>s2</i></dd>
+<dt><i>s2</i></dt>
+<dd>Specifies a compound string to be compared with <i>s1</i></dd></dl>
 <h2>Return</h2>
 <p>Returns True if two compound strings are equivalent.</p>
 <h2>Related</h2>

@@ -30,77 +30,77 @@ description: "alternatives – maintain symbolic links determining default comma
 <h2>Terminology</h2>
 <p>Since the activities of <code>alternatives</code> are quite involved, some specific terms will help to explain its operation.</p>
 <dl>
-<dt>generic name</p>
-<dd>A name, like <i>/usr/bin/editor</i>, which refers, via the alternatives system, to one of a number of files of similar function.</p>
-<dt>symlink</p>
-<dd>Without any further qualification, this means a symbolic link in the alternatives directory: one which the system administrator is expected to adjust.</p>
-<dt>alternative</p>
-<dd>The name of a specific file in the filesystem, which may be made accessible via a generic name using the alternatives system.</p>
-<dt>alternatives directory</p>
-<dd>A directory, by default <i>/etc/alternatives</i>, containing the symlinks.</p>
-<dt>administrative directory</p>
-<dd>A directory, by default <i>/var/lib/alternatives</i>, containing <code>alternatives</code>&#8216; state information.</p>
-<dt>link group</p>
-<dd>A set of related symlinks, intended to be updated as a group.</p>
-<dt>master link</p>
-<dd>The link in a link group which determines how the other links in the group are configured.</p>
-<dt>slave link</p>
-<dd>A link in a link group which is controlled by the setting of the master link.</p>
-<dt>automatic mode</p>
-<dd>When a link group is in automatic mode, the alternatives system ensures that the links in the group point to the highest priority alternatives appropriate for the group.</p>
-<dt>manual mode</p>
-<dd>When a link group is in manual mode, the alternatives system will not make any changes to the system administrator&#8217;s settings.</dl>
+<dt>generic name</dt>
+<dd>A name, like <i>/usr/bin/editor</i>, which refers, via the alternatives system, to one of a number of files of similar function.</dd>
+<dt>symlink</dt>
+<dd>Without any further qualification, this means a symbolic link in the alternatives directory: one which the system administrator is expected to adjust.</dd>
+<dt>alternative</dt>
+<dd>The name of a specific file in the filesystem, which may be made accessible via a generic name using the alternatives system.</dd>
+<dt>alternatives directory</dt>
+<dd>A directory, by default <i>/etc/alternatives</i>, containing the symlinks.</dd>
+<dt>administrative directory</dt>
+<dd>A directory, by default <i>/var/lib/alternatives</i>, containing <code>alternatives</code>&#8216; state information.</dd>
+<dt>link group</dt>
+<dd>A set of related symlinks, intended to be updated as a group.</dd>
+<dt>master link</dt>
+<dd>The link in a link group which determines how the other links in the group are configured.</dd>
+<dt>slave link</dt>
+<dd>A link in a link group which is controlled by the setting of the master link.</dd>
+<dt>automatic mode</dt>
+<dd>When a link group is in automatic mode, the alternatives system ensures that the links in the group point to the highest priority alternatives appropriate for the group.</dd>
+<dt>manual mode</dt>
+<dd>When a link group is in manual mode, the alternatives system will not make any changes to the system administrator&#8217;s settings.</dd></dl>
 <h2>Options</h2>
 <p>Exactly one action must be specified if <code>alternatives</code> is to perform any meaningful task. Any number of the common options may be specified together with any action.</p>
 <h3>Common Options</h3>
 <dl>
-<dt><code>&#8211;verbose</code></p>
-<dd>Generate more comments about what <code>alternatives</code> is doing.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Don&#8217;t generate any comments unless errors occur. This option is not yet implemented.</p>
-<dt><code>&#8211;test</code></p>
-<dd>Don&#8217;t actually do anything, just say what would be done. This option is not yet implemented.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Give some usage information (and say which version of <code>alternatives</code> this is).</p>
-<dt><code>&#8211;version</code></p>
-<dd>Tell which version of <code>alternatives</code> this is (and give some usage information).</p>
-<dt><code>&#8211;altdir</code> <i>directory</i></p>
-<dd>Specifies the alternatives directory, when this is to be different from the default.</p>
-<dt><code>&#8211;admindir</code> <i>directory</i></p>
-<dd>Specifies the administrative directory, when this is to be different from the default.</dl>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Generate more comments about what <code>alternatives</code> is doing.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Don&#8217;t generate any comments unless errors occur. This option is not yet implemented.</dd>
+<dt><code>&#8211;test</code></dt>
+<dd>Don&#8217;t actually do anything, just say what would be done. This option is not yet implemented.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Give some usage information (and say which version of <code>alternatives</code> this is).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Tell which version of <code>alternatives</code> this is (and give some usage information).</dd>
+<dt><code>&#8211;altdir</code> <i>directory</i></dt>
+<dd>Specifies the alternatives directory, when this is to be different from the default.</dd>
+<dt><code>&#8211;admindir</code> <i>directory</i></dt>
+<dd>Specifies the administrative directory, when this is to be different from the default.</dd></dl>
 <h3>Actions</h3>
 <dl>
-<dt><code>&#8211;install</code> <i>link name path priority</i> [<code>&#8211;slave</code> <i>slink sname spath</i>] [<code>&#8211;initscript</code> <i>service</i>]&#8230;</p>
-<dd>Add a group of alternatives to the system. <i>name</i> is the generic name for the master link, <i>link</i> is the name of its symlink, <i>path</i> is the alternative being introduced for the master link, and <i>priority</i> is the priority of the alternatives group. Higher priorities take precendence if no alternative is manually selected. <i>sname</i>, <i>slink</i> and <i>spath</i> are the generic name, symlink name and alternative for a slave link, and <i>service</i> is the name of any associated initscript for the alternative. <code>NOTE:</code> <code>&#8211;initscript and &#8211;family</code> are a Red Hat Linux specific options. Zero or more <code>&#8211;slave</code> options, each followed by three arguments, may be specified.</p>
-<dd>If the master symlink specified exists already in the alternatives system&#8217;s records, the information supplied will be added as a new set of alternatives for the group. Otherwise, a new group, set to automatic mode, will be added with this information. If the group is in automatic mode, and the newly added alternatives&#8217; priority is higher than any other installed alternatives for this group, the symlinks will be updated to point to the newly added alternatives. </p>
+<dt><code>&#8211;install</code> <i>link name path priority</i> [<code>&#8211;slave</code> <i>slink sname spath</i>] [<code>&#8211;initscript</code> <i>service</i>]&#8230;</dt>
+<dd>Add a group of alternatives to the system. <i>name</i> is the generic name for the master link, <i>link</i> is the name of its symlink, <i>path</i> is the alternative being introduced for the master link, and <i>priority</i> is the priority of the alternatives group. Higher priorities take precendence if no alternative is manually selected. <i>sname</i>, <i>slink</i> and <i>spath</i> are the generic name, symlink name and alternative for a slave link, and <i>service</i> is the name of any associated initscript for the alternative. <code>NOTE:</code> <code>&#8211;initscript and &#8211;family</code> are a Red Hat Linux specific options. Zero or more <code>&#8211;slave</code> options, each followed by three arguments, may be specified.</dd>
+<dd>If the master symlink specified exists already in the alternatives system&#8217;s records, the information supplied will be added as a new set of alternatives for the group. Otherwise, a new group, set to automatic mode, will be added with this information. If the group is in automatic mode, and the newly added alternatives&#8217; priority is higher than any other installed alternatives for this group, the symlinks will be updated to point to the newly added alternatives. </dd>
 <p> If <code>&#8211;initscript</code> is used, the alternatives system will manage the initscript associated with the alternative via <code>chkconfig,</code> registering and unregistering the init script depending on which alternative is active. </p>
 <p> <code>NOTE:</code> <code>&#8211;initscript</code> is a Red Hat Linux specific option. </p>
 <p> <code>&#8211;family</code> can be used to group similar alternatives. If the group is in manual mode and the alternative currently used is removed, alternatives will try to change links to different one with same family and highest priority. </p>
 <p> <code>NOTE:</code> <code>&#8211;family</code> is a Red Hat Linux specific option.</p>
-<dt><code>&#8211;remove</code> <i>name path</i></p>
-<dd>Remove an alternative and all of its associated slave links. <i>name</i> is a name in the alternatives directory, and <i>path</i> is an absolute filename to which <i>name</i> could be linked. If <i>name</i> is indeed linked to <i>path</i>, <i>name</i> will be updated to point to another appropriate alternative, or removed if there is no such alternative left. Associated slave links will be updated or removed, correspondingly. If the link is not currently pointing to <i>path</i>, no links are changed; only the information about the alternative is removed.</p>
-<dt><code>&#8211;set</code> <i>name path</i></p>
-<dd>The symbolic link and slaves for link group <i>name</i> set to those configured for <i>path</i>, and the link group is set to manual mode. This option is not in the original Debian implementation.</p>
-<dt><code>&#8211;config</code> <i>name</i></p>
-<dd>Present the user with a configuration menu for choosing the master link and slaves for link group <i>name</i>. Once chosen, the link group is set to manual mode.</p>
-<dt><code>&#8211;auto</code> <i>name</i></p>
-<dd>Switch the master symlink <i>name</i> to automatic mode. In the process, this symlink and its slaves are updated to point to the highest priority installed alternatives.</p>
-<dt><code>&#8211;display</code> <i>name</i></p>
-<dd>Display information about the link group of which <i>name</i> is the master link. Information displayed includes the group&#8217;s mode (auto or manual), which alternative the symlink currently points to, what other alternatives are available (and their corresponding slave alternatives), and the highest priority alternative currently installed.</p>
-<dt><code>&#8211;list </code></p>
-<dd>Display information about all link groups.</dl>
+<dt><code>&#8211;remove</code> <i>name path</i></dt>
+<dd>Remove an alternative and all of its associated slave links. <i>name</i> is a name in the alternatives directory, and <i>path</i> is an absolute filename to which <i>name</i> could be linked. If <i>name</i> is indeed linked to <i>path</i>, <i>name</i> will be updated to point to another appropriate alternative, or removed if there is no such alternative left. Associated slave links will be updated or removed, correspondingly. If the link is not currently pointing to <i>path</i>, no links are changed; only the information about the alternative is removed.</dd>
+<dt><code>&#8211;set</code> <i>name path</i></dt>
+<dd>The symbolic link and slaves for link group <i>name</i> set to those configured for <i>path</i>, and the link group is set to manual mode. This option is not in the original Debian implementation.</dd>
+<dt><code>&#8211;config</code> <i>name</i></dt>
+<dd>Present the user with a configuration menu for choosing the master link and slaves for link group <i>name</i>. Once chosen, the link group is set to manual mode.</dd>
+<dt><code>&#8211;auto</code> <i>name</i></dt>
+<dd>Switch the master symlink <i>name</i> to automatic mode. In the process, this symlink and its slaves are updated to point to the highest priority installed alternatives.</dd>
+<dt><code>&#8211;display</code> <i>name</i></dt>
+<dd>Display information about the link group of which <i>name</i> is the master link. Information displayed includes the group&#8217;s mode (auto or manual), which alternative the symlink currently points to, what other alternatives are available (and their corresponding slave alternatives), and the highest priority alternative currently installed.</dd>
+<dt><code>&#8211;list </code></dt>
+<dd>Display information about all link groups.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/alternatives/</i></p>
-<dd>The default alternatives directory. Can be overridden by the <code>&#8211;altdir</code> option.</p>
-<dt><i>/var/lib/alternatives/</i></p>
-<dd>The default administration directory. Can be overridden by the <code>&#8211;admindir</code> option.</dl>
+<dt><i>/etc/alternatives/</i></dt>
+<dd>The default alternatives directory. Can be overridden by the <code>&#8211;altdir</code> option.</dd>
+<dt><i>/var/lib/alternatives/</i></dt>
+<dd>The default administration directory. Can be overridden by the <code>&#8211;admindir</code> option.</dd></dl>
 <h2>Exit Status</h2>
 <dl>
-<dt>0</p>
-<dd>The requested action was successfully performed.</p>
-<dt>2</p>
-<dd>Problems were encountered whilst parsing the command line or performing the action.</dl>
+<dt>0</dt>
+<dd>The requested action was successfully performed.</dd>
+<dt>2</dt>
+<dd>Problems were encountered whilst parsing the command line or performing the action.</dd></dl>
 <h2>Diagnostics</h2>
 <p><code>alternatives</code> chatters incessantly about its activities on its standard output channel. If problems occur, <code>alternatives</code> outputs error messages on its standard error channel and returns an exit status of 2. These diagnostics should be self-explanatory; if you do not find them so, please report this as a bug.</p>
 <h2>Bugs</h2>

@@ -15,28 +15,28 @@ description: "ykinfo – Get basic information from a YubiKey"
 <p> Get basic information from a YubiKey. Can get serial number, version and current touch level. Can get all parameters at once or one at a time. If <code>-q</code> is given only the relevant string from the YubiKey is written to screen.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> get the serial number and output it.</p>
-<dt><code>-m</code></p>
-<dd> get the serial number and output it as modhex.</p>
-<dt><code>-H</code></p>
-<dd> get the serial number and output it as hex.</p>
-<dt><code>-v</code></p>
-<dd> get the version and output it.</p>
-<dt><code>-t</code></p>
-<dd> get the touch level and output it.</p>
-<dt><code>-p</code></p>
-<dd> get the programming sequence and output it.</p>
-<dt><code>-1</code></p>
-<dd> get the status of slot 1, 1 for programmed and 0 for empty.</p>
-<dt><code>-2</code></p>
-<dd> get the status of slot 2, 1 for programmed and 0 for empty.</p>
-<dt><code>-a</code></p>
-<dd> get all the information above.</p>
-<dt><code>-c</code></p>
-<dd> get YubiKey capability information. <code>-q</code> modifier, only show the relevant data from the YubiKey, no extra information.</p>
-<dt><code>-V</code></p>
-<dd> print tool version and exit </p>
+<dt><code>-s</code></dt>
+<dd> get the serial number and output it.</dd>
+<dt><code>-m</code></dt>
+<dd> get the serial number and output it as modhex.</dd>
+<dt><code>-H</code></dt>
+<dd> get the serial number and output it as hex.</dd>
+<dt><code>-v</code></dt>
+<dd> get the version and output it.</dd>
+<dt><code>-t</code></dt>
+<dd> get the touch level and output it.</dd>
+<dt><code>-p</code></dt>
+<dd> get the programming sequence and output it.</dd>
+<dt><code>-1</code></dt>
+<dd> get the status of slot 1, 1 for programmed and 0 for empty.</dd>
+<dt><code>-2</code></dt>
+<dd> get the status of slot 2, 1 for programmed and 0 for empty.</dd>
+<dt><code>-a</code></dt>
+<dd> get all the information above.</dd>
+<dt><code>-c</code></dt>
+<dd> get YubiKey capability information. <code>-q</code> modifier, only show the relevant data from the YubiKey, no extra information.</dd>
+<dt><code>-V</code></dt>
+<dd> print tool version and exit </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Output of all information from a YubiKey </p>

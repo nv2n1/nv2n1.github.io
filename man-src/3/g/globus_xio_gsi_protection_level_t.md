@@ -66,28 +66,28 @@ description: "Globus XIO GSI Driver –"
 <h2>Environment Variables</h2>
 <p> The gsi driver uses the following environment variables</p>
 <dl>
-<dt>&bull;</p>
-<dd> X509_USER_PROXY</p>
-<dt>&bull;</p>
-<dd> X509_USER_CERT</p>
-<dt>&bull;</p>
-<dd> X509_USER_KEY</p>
-<dt>&bull;</p>
-<dd> X509_CERT_DIR</dl>
+<dt>&bull;</dt>
+<dd> X509_USER_PROXY</dd>
+<dt>&bull;</dt>
+<dd> X509_USER_CERT</dd>
+<dt>&bull;</dt>
+<dd> X509_USER_KEY</dd>
+<dt>&bull;</dt>
+<dd> X509_CERT_DIR</dd></dl>
 <p> For details see Globus: GSI Environment Variables</p>
 <h2>Attributes and Cntls</h2>
 <p> GSI driver specific attrs and cntls </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_xio_attr_cntl () </p>
+</dt><dd> globus_xio_attr_cntl () </dd>
 <p> globus_xio_handle_cntl ()</dl>
 <h2>Error Types</h2>
 <p> The GSI driver uses mostly GSSAPI calls, so it generally just wraps the underlying GSSAPI errors or uses generic XIO errors. </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_xio_driver_error_match () </p>
+</dt><dd> globus_xio_driver_error_match () </dd>
 <p> globus_error_gssapi_match () </p>
 <p> globus_error_match_openssl_error ()</dl>
 <h2>Typedef Documentation</h2>
@@ -100,284 +100,284 @@ description: "Globus XIO GSI Driver –"
 <p> Globus XIO GSI authorization modes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_NO_AUTHORIZATION </i></p>
-<dd> Do not perform any authorization. This will cause a error when used in conjunction with delegation on the init/client side.</p>
-<dt><i>GLOBUS_XIO_GSI_SELF_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the peer has the same identity as ourselves</p>
-<dt><i>GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the peer identity matches the identity set in the target name.</p>
-<dt><i>GLOBUS_XIO_GSI_HOST_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the identity of the peer matches the identity of the peer hostname.</dl>
+<dt><i>GLOBUS_XIO_GSI_NO_AUTHORIZATION </i></dt>
+<dd> Do not perform any authorization. This will cause a error when used in conjunction with delegation on the init/client side.</dd>
+<dt><i>GLOBUS_XIO_GSI_SELF_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the peer has the same identity as ourselves</dd>
+<dt><i>GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the peer identity matches the identity set in the target name.</dd>
+<dt><i>GLOBUS_XIO_GSI_HOST_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the identity of the peer matches the identity of the peer hostname.</dd></dl>
 <h3>enum <code>globus_xio_gsi_cmd_t</code></h3>
 <p> GSI driver specific cntls </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_SET_CREDENTIAL </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code>, <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_CREDENTIAL </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code>, <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_GSSAPI_REQ_FLAGS </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_GSSAPI_REQ_FLAGS </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_PROXY_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_PROXY_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_AUTHORIZATION_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_AUTHORIZATION_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_DELEGATION_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_DELEGATION_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_SSL_COMPATIBLE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_ANON </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_WRAP_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_WRAP_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_BUFFER_SIZE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_BUFFER_SIZE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_PROTECTION_LEVEL </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_PROTECTION_LEVEL </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_TARGET_NAME </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_TARGET_NAME </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_CONTEXT </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_DELEGATED_CRED </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_PEER_NAME </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_LOCAL_NAME </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_INIT_DELEGATION </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_REGISTER_INIT_DELEGATION </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_ACCEPT_DELEGATION </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_REGISTER_ACCEPT_DELEGATION </i></p>
-<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_FORCE_SERVER_MODE </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_SET_ALLOW_MISSING_SIGNING_POLICY </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></p>
-<dt><i>GLOBUS_XIO_GSI_GET_ALLOW_MISSING_SIGNING_POLICY </i></p>
-<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dl>
+<dt><i>GLOBUS_XIO_GSI_SET_CREDENTIAL </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code>, <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_CREDENTIAL </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code>, <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_GSSAPI_REQ_FLAGS </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_GSSAPI_REQ_FLAGS </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_PROXY_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_PROXY_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_AUTHORIZATION_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_AUTHORIZATION_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_DELEGATION_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_DELEGATION_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_SSL_COMPATIBLE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_ANON </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_WRAP_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_WRAP_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_BUFFER_SIZE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_BUFFER_SIZE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_PROTECTION_LEVEL </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_PROTECTION_LEVEL </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_TARGET_NAME </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_TARGET_NAME </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_CONTEXT </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_DELEGATED_CRED </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_PEER_NAME </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_LOCAL_NAME </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_INIT_DELEGATION </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_REGISTER_INIT_DELEGATION </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_ACCEPT_DELEGATION </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_REGISTER_ACCEPT_DELEGATION </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_FORCE_SERVER_MODE </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_SET_ALLOW_MISSING_SIGNING_POLICY </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_GSI_GET_ALLOW_MISSING_SIGNING_POLICY </i></dt>
+<dd> See usage for: <code>globus_xio_gsi_attr_cntl </code></dd></dl>
 <h3>enum <code>globus_xio_gsi_delegation_mode_t</code></h3>
 <p> Globus XIO GSI delegation modes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_NONE </i></p>
-<dd> No delegation</p>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_LIMITED </i></p>
-<dd> Delegate a limited proxy</p>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_FULL </i></p>
-<dd> Delegate a full proxy</dl>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_NONE </i></dt>
+<dd> No delegation</dd>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_LIMITED </i></dt>
+<dd> Delegate a limited proxy</dd>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_FULL </i></dt>
+<dd> Delegate a full proxy</dd></dl>
 <h3>enum <code>globus_xio_gsi_error_t</code></h3>
 <p> GSI driver specific error types </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL </i></p>
-<dd> Indicates that the established context does not meet the required protection level</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI </i></p>
-<dd> Wraps a GSSAPI error</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME </i></p>
-<dd> Indicates that GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION is set but that the target name is empty</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME </i></p>
-<dd> Indicates that GLOBUS_XIO_GSI_HOST_AUTHORIZATION is set but that no host name is available</p>
-<dt><i>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED </i></p>
-<dd> Indicates that the peer is not authorized</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG </i></p>
-<dd> Indicates the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dl>
+<dt><i>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL </i></dt>
+<dd> Indicates that the established context does not meet the required protection level</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI </i></dt>
+<dd> Wraps a GSSAPI error</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION is set but that the target name is empty</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_HOST_AUTHORIZATION is set but that no host name is available</dd>
+<dt><i>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED </i></dt>
+<dd> Indicates that the peer is not authorized</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG </i></dt>
+<dd> Indicates the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dd></dl>
 <h3>enum <code>globus_xio_gsi_protection_level_t</code></h3>
 <p> Globus XIO GSI protection levels </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_NONE </i></p>
-<dd> No security</p>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_INTEGRITY </i></p>
-<dd> Messages are signed</p>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_PRIVACY </i></p>
-<dd> Messages are signed and encrypted</dl>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_NONE </i></dt>
+<dd> No security</dd>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_INTEGRITY </i></dt>
+<dd> Messages are signed</dd>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_PRIVACY </i></dt>
+<dd> Messages are signed and encrypted</dd></dl>
 <h3>enum <code>globus_xio_gsi_proxy_mode_t</code></h3>
 <p> Globus XIO GSI proxy modes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_FULL </i></p>
-<dd> Accept only full proxies</p>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_LIMITED </i></p>
-<dd> Accept full proxies and limited proxies if they are the only limited proxy in the cert chain.</p>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_MANY </i></p>
-<dd> Accept both full and limited proxies unconditionally</dl>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_FULL </i></dt>
+<dd> Accept only full proxies</dd>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_LIMITED </i></dt>
+<dd> Accept full proxies and limited proxies if they are the only limited proxy in the cert chain.</dd>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_MANY </i></dt>
+<dd> Accept both full and limited proxies unconditionally</dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_CREDENTIAL</code>, gss_cred_id_tcredential)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the credential to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The credential to set. The credential structure needs to remain valid for the lifetime of any XIO data structure it is used by.</dl>
+</dt><dd> <i>credential</i> The credential to set. The credential structure needs to remain valid for the lifetime of any XIO data structure it is used by.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> If this is called with the handle_cntl, there must be no outstanding operations on the handle.</dl>
+</dt><dd> If this is called with the handle_cntl, there must be no outstanding operations on the handle.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_CREDENTIAL</code>, gss_cred_id_t *credential)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the credential to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The credential that is currently set. This will only return a credential if a credential was explicitly set prior to this call. It will not return any credential automatically acquired during context initialization.</dl>
+</dt><dd> <i>credential</i> The credential that is currently set. This will only return a credential if a credential was explicitly set prior to this call. It will not return any credential automatically acquired during context initialization.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_GSSAPI_REQ_FLAGS</code>, OM_uint32req_flags)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the GSSAPI req_flags to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>req_flags</i> The req_flags to set</dl>
+</dt><dd> <i>req_flags</i> The req_flags to set</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_GSSAPI_REQ_FLAGS</code>, OM_uint32 *req_flags)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the GSSAPI req_flags to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>req_flags</i> The req flags currently in effect</dl>
+</dt><dd> <i>req_flags</i> The req flags currently in effect</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_PROXY_MODE</code>, <code>globus_xio_gsi_proxy_mode_t</code>proxy_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the proxy mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>proxy_mode</i> The proxy mode to set</dl>
+</dt><dd> <i>proxy_mode</i> The proxy mode to set</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the proxy mode changes the req_flags</dl>
+</dt><dd> Changing the proxy mode changes the req_flags</dd></dl>
 <p> string opt: proxy=&#8217;many&#8217;|&#8217;full&#8217;|&#8217;limited&#8217;</p>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_PROXY_MODE</code>, <code>globus_xio_gsi_proxy_mode_t</code> *proxy_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the proxy mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>proxy_mode</i> The proxy mode that is currently in effect</dl>
+</dt><dd> <i>proxy_mode</i> The proxy mode that is currently in effect</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the proxy mode changes the req_flags</dl>
+</dt><dd> Changing the proxy mode changes the req_flags</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_AUTHORIZATION_MODE</code>, <code>globus_xio_gsi_authorization_mode_t</code>authz_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the authorization mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>authz_mode</i> The authorization mode to set</dl>
+</dt><dd> <i>authz_mode</i> The authorization mode to set</dd></dl>
 <p> string opt: auth=&#8217;none&#8217;|&#8217;self&#8217;|&#8217;host&#8217;|&#8217;id&#8217;</p>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_AUTHORIZATION_MODE</code>, <code>globus_xio_gsi_authorization_mode_t</code> *authz_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the authorization mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>authz_mode</i> The authorization mode that is currently in effect</dl>
+</dt><dd> <i>authz_mode</i> The authorization mode that is currently in effect</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_DELEGATION_MODE</code>, <code>globus_xio_gsi_delegation_mode_t</code>delegation_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the delegation mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>delegation_mode</i> The delegation mode to use</dl>
+</dt><dd> <i>delegation_mode</i> The delegation mode to use</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the delegation mode changes the req_flags</dl>
+</dt><dd> Changing the delegation mode changes the req_flags</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_DELEGATION_MODE</code>, <code>globus_xio_gsi_delegation_mode_t</code> *delegation_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the delegation mode </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>delegation_mode</i> The delegation mode currently in effect</dl>
+</dt><dd> <i>delegation_mode</i> The delegation mode currently in effect</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_SSL_COMPATIBLE</code>, globus_bool_tssl_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Make the on the wire protocol SSL compatible. </p>
 <p> This implies no wrapping of security tokens and no delegation </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ssl_mode</i> The ssl compatibility mode to use</dl>
+</dt><dd> <i>ssl_mode</i> The ssl compatibility mode to use</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the ssl compatibility mode changes the req_flags</dl>
+</dt><dd> Changing the ssl compatibility mode changes the req_flags</dd></dl>
 <p> string opt: ssl_compatible=&#8217;true&#8217;|&#8217;false&#8217;</p>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_ANON</code>, globus_bool_tanon_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Do anonymous authentication </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>anon_mode</i> The ssl compatibility mode to use</dl>
+</dt><dd> <i>anon_mode</i> The ssl compatibility mode to use</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the ssl compatibility mode changes the req_flags and the wrapping mode</dl>
+</dt><dd> Changing the ssl compatibility mode changes the req_flags and the wrapping mode</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_WRAP_MODE</code>, globus_bool_twrap_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the wrapping mode </p>
 <p> This mode determines whether tokens will be wrapped with a Globus IO style header or not. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>wrap_mode</i> The wrapping mode to use</dl>
+</dt><dd> <i>wrap_mode</i> The wrapping mode to use</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_WRAP_MODE</code>, globus_bool_t *wrap_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the wrapping mode </p>
 <p> This mode determines whether tokens will be wrapped with a Globus IO style header or not. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>wrap_mode</i> The wrapping mode currently in use.</dl>
+</dt><dd> <i>wrap_mode</i> The wrapping mode currently in use.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_BUFFER_SIZE</code>, globus_size_tbuffer_size)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the read buffer size </p>
 <p> The read buffer is used for buffering wrapped data, is initialized with a default size of 128K and scaled dynamically to always be able to fit whole tokens. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>buffer_size</i> The size of the read buffer</dl>
+</dt><dd> <i>buffer_size</i> The size of the read buffer</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_BUFFER_SIZE</code>, globus_size_t *buffer_size)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the read buffer size </p>
 <p> The read buffer is used for buffering wrapped data, is initialized with a default size of 128K and scaled dynamically to always be able to fit whole tokens. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>buffer_size</i> The size of the read buffer</dl>
+</dt><dd> <i>buffer_size</i> The size of the read buffer</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_PROTECTION_LEVEL</code>, <code>globus_xio_gsi_protection_level_t</code>protection_level)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the protection level </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>protection_level</i> The protection level to set</dl>
+</dt><dd> <i>protection_level</i> The protection level to set</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing the proxy mode changes the req_flags</dl>
+</dt><dd> Changing the proxy mode changes the req_flags</dd></dl>
 <p> string opt: protection=&#8217;none&#8217;|&#8217;private&#8217;|&#8217;integrity&#8217;</p>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_PROTECTION_LEVEL</code>, <code>globus_xio_gsi_protection_level_t</code> *protection_level)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the protection level </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>protection_level</i> The current protection level</dl>
+</dt><dd> <i>protection_level</i> The current protection level</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_TARGET_NAME</code>, gss_name_t *target_name)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the expected peer name </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>target_name</i> The expected peer name</dl>
+</dt><dd> <i>target_name</i> The expected peer name</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_TARGET_NAME</code>, gss_name_ttarget_name)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the expected peer name </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>target_name</i> The expected peer name</dl>
+</dt><dd> <i>target_name</i> The expected peer name</dd></dl>
 <p> string opt: subject=<i>string</i></p>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_FORCE_SERVER_MODE</code>, globus_bool_tserver_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Force the server mode setting. </p>
@@ -385,106 +385,106 @@ description: "Globus XIO GSI Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>server_mode</i> The server mode.</dl>
+</dt><dd> <i>server_mode</i> The server mode.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_SET_ALLOW_MISSING_SIGNING_POLICY</code>, globus_bool_tallow)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the allow missing signing policy flag </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>allow</i> The flag setting to use</dl>
+</dt><dd> <i>allow</i> The flag setting to use</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Changing this flag changes the req_flags</dl>
+</dt><dd> Changing this flag changes the req_flags</dd></dl>
 <h3>globus_result_t globus_xio_gsi_attr_cntl (attr, driver, <code>GLOBUS_XIO_GSI_GET_ALLOW_MISSING_SIGNING_POLICY</code>, globus_bool_t *allow)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the allow missing signing policy flag </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>allow</i> The flag currently set</dl>
+</dt><dd> <i>allow</i> The flag currently set</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_SET_CREDENTIAL</code>, gss_cred_id_tcredential)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the credential to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The credential to set. The credential structure needs to remain valid for the lifetime of any XIO data structure it is used by.</dl>
+</dt><dd> <i>credential</i> The credential to set. The credential structure needs to remain valid for the lifetime of any XIO data structure it is used by.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> If this is called with the handle_cntl, there must be no outstanding operations on the handle.</dl>
+</dt><dd> If this is called with the handle_cntl, there must be no outstanding operations on the handle.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_GET_CREDENTIAL</code>, gss_cred_id_t *credential)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the credential to be used </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The credential that is currently set. This will only return a credential if a credential was explicitly set prior to this call. It will not return any credential automatically acquired during context initialization.</dl>
+</dt><dd> <i>credential</i> The credential that is currently set. This will only return a credential if a credential was explicitly set prior to this call. It will not return any credential automatically acquired during context initialization.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_GET_CONTEXT</code>, gss_ctx_id_t *context)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the GSS context </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The GSS context</dl>
+</dt><dd> <i>context</i> The GSS context</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_GET_DELEGATED_CRED</code>, gss_cred_id_t *credential)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the delegated credential </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The delegated credential</dl>
+</dt><dd> <i>credential</i> The delegated credential</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_GET_PEER_NAME</code>, gss_name_t *peer_name)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the name of the peer </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>peer_name</i> The GSS name of the peer.</dl>
+</dt><dd> <i>peer_name</i> The GSS name of the peer.</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_GET_LOCAL_NAME</code>, gss_name_t *local_name)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the GSS name associated with the local credentials </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>local_name</i> The GSS name of the local credentials</dl>
+</dt><dd> <i>local_name</i> The GSS name of the local credentials</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_INIT_DELEGATION</code>, gss_cred_id_tcredential, gss_OID_setrestriction_oids, gss_buffer_set_trestriction_buffers, OM_uint32time_req)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Initialize delegation-at-any-time process </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The GSS credential to delegate<br />
+</dt><dd> <i>credential</i> The GSS credential to delegate<br />
  <i>restriction_oids</i> The OIDs for X.509 extensions to embed in the delegated credential<br />
  <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
- <i>time_req</i> The lifetime of the delegated credential</dl>
+ <i>time_req</i> The lifetime of the delegated credential</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_REGISTER_INIT_DELEGATION</code>, gss_cred_id_tcredential, gss_OID_setrestriction_oids, gss_buffer_set_trestriction_buffers, OM_uint32time_req, <code>globus_xio_gsi_delegation_init_callback_t</code>callback, void *callback_arg)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Initialize non-blocking delegation-at-any-time process </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The GSS credential to delegate<br />
+</dt><dd> <i>credential</i> The GSS credential to delegate<br />
  <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
  <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
  <i>time_req</i> The lifetime of the delegated credential<br />
  <i>callback</i> The callback to call when the operation completes<br />
- <i>callback_arg</i> The arguments to pass to the callback</dl>
+ <i>callback_arg</i> The arguments to pass to the callback</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_ACCEPT_DELEGATION</code>, gss_cred_id_t *credential, gss_OID_setrestriction_oids, gss_buffer_set_trestriction_buffers, OM_uint32time_req)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Accept delegation-at-any-time process </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>credential</i> The delegated GSS credential<br />
+</dt><dd> <i>credential</i> The delegated GSS credential<br />
  <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
  <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
- <i>time_req</i> The requested lifetime of the delegated credential</dl>
+ <i>time_req</i> The requested lifetime of the delegated credential</dd></dl>
 <h3>globus_result_t globus_xio_gsi_handle_cntl (handle, driver, <code>GLOBUS_XIO_GSI_REGISTER_ACCEPT_DELEGATION</code>, gss_OID_setrestriction_oids, gss_buffer_set_trestriction_buffers, OM_uint32time_req, <code>globus_xio_gsi_delegation_accept_callback_t</code>callback, void *callback_arg)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Accept non-blocking delegation-at-any-time process </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
+</dt><dd> <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
  <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
  <i>time_req</i> The lifetime of the delegated credential<br />
  <i>callback</i> The callback to call when the operation completes<br />
- <i>callback_arg</i> The arguments to pass to the callback</dl>
+ <i>callback_arg</i> The arguments to pass to the callback</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio_gsi_driver from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAW">Function Documentation</a></p>
+<dt><a href="#lbAW">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbCE">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbCE">Author</a></dt>
+<dd></dd></dl>

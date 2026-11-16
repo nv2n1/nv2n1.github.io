@@ -12,23 +12,23 @@ description: "mlmmj-sub – subscribe address to a mailinglist run by mlmmj"
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-sub</code> <i>-L /path/to/list</i> [<i>-a john [at] doe.org</i> | <i>-m str</i>] [<i>-c</i>] [<i>-C</i>] [<i>-d</i> | <i>-n</i>] [<i>-f</i>] [<i>-h</i>] [<i>-q</i>] [<i>-r</i> | <i>-R</i>] [<i>-s</i>] [<i>-U</i>] [<i>-V</i>]</p>
 <dl>
-<dt> <code>-a</code>: Email address to subscribe</p>
-<dt> <code>-c</code>: Send welcome mail (unless requesting confirmation)</p>
-<dt> <code>-C</code>: Request mail confirmation (unless switching versions)</p>
-<dt> <code>-d</code>: Subscribe to digest version of the list</p>
-<dt> <code>-f</code>: Force subscription (do not moderate)</p>
-<dt> <code>-h</code>: This help</p>
-<dt> <code>-L</code>: Full path to list directory</p>
-<dt> <code>-m</code>: Moderation string</p>
-<dt> <code>-n</code>: Subscribe to nomail version of the list</p>
-<dt> <code>-q</code>: Be quiet (don&#8217;t notify owner about the subscription)</p>
-<dt> <code>-r</code>: Behave as if request arrived via email (internal use)</p>
-<dt> <code>-R</code>: Behave as if confirmation arrived via email (internal use)</p>
-<dt> <code>-s</code>: Don&#8217;t send a mail to the subscriber if already subscribed</p>
-<dt> <code>-U</code>: Don&#8217;t switch to the user id of the listdir owner</p>
-<dt> <code>-V</code>: Print version</dl>
+<dt> <code>-a</code>: Email address to subscribe</dt>
+<dt> <code>-c</code>: Send welcome mail (unless requesting confirmation)</dt>
+<dt> <code>-C</code>: Request mail confirmation (unless switching versions)</dt>
+<dt> <code>-d</code>: Subscribe to digest version of the list</dt>
+<dt> <code>-f</code>: Force subscription (do not moderate)</dt>
+<dt> <code>-h</code>: This help</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-m</code>: Moderation string</dt>
+<dt> <code>-n</code>: Subscribe to nomail version of the list</dt>
+<dt> <code>-q</code>: Be quiet (don&#8217;t notify owner about the subscription)</dt>
+<dt> <code>-r</code>: Behave as if request arrived via email (internal use)</dt>
+<dt> <code>-R</code>: Behave as if confirmation arrived via email (internal use)</dt>
+<dt> <code>-s</code>: Don&#8217;t send a mail to the subscriber if already subscribed</dt>
+<dt> <code>-U</code>: Don&#8217;t switch to the user id of the listdir owner</dt>
+<dt> <code>-V</code>: Print version</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility is used to subscribe people to the specified mailinglist. It will write the email address in a file with the name of the beginning letter of the email address getting subscribed in the &lt;listdir&gt;/subscribers.d/ directory. </p>
+<dd>This utility is used to subscribe people to the specified mailinglist. It will write the email address in a file with the name of the beginning letter of the email address getting subscribed in the &lt;listdir&gt;/subscribers.d/ directory. </dd>
 <p> The digest version of the list is a list version where people receive postings to the list periodically (e.g. once a day) or when a large number of posts have accumulated. Digest subscribers are in the &lt;listdir&gt;/digesters.d/ directory. </p>
 <p> The nomail version of the list is a list version where people are subscribed like usual, but they won&#8217;t receive any postings to the list. This is useful for people who read the mailinglist through a news gateway, but want to be able to post to the list. Nomail subscribers are in the &lt;listdir&gt;/nomailsubs.d/ directory. </p>
 <p> Unless the <code>-U</code> switch is used it will switch its user id to the user id owning the list directory. This is done to make sure that new files created are having correct permissions. </p>
@@ -41,8 +41,8 @@ description: "mlmmj-sub – subscribe address to a mailinglist run by mlmmj"
 <p> This manual page was written by the following persons:</p>
 <dl>
 <dt>
-<dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</p>
+</dt><dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</dd>
 <dt>
-<dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </p>
+</dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
 <h2>Index</h2>

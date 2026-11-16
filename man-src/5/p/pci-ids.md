@@ -12,12 +12,12 @@ description: "pci.ids – list of known identifiers related to PCI devices"
 <p>Devices on the PCI bus are identified by a combination of a vendor ID (assigned by the PCI SIG) and device ID (assigned by the vendor). Both IDs are 16-bit integers and the device itself provides no translation to a human-readable string. </p>
 <p> In addition to the vendor and device, devices also report several other identifiers: </p>
 <dl>
-<dt>&bull;</p>
-<dd>Device class and subclass (two 8-bit numbers) </p>
-<dt>&bull;</p>
-<dd>Programming interface (8-bit number, meaning specific for the subclass) </p>
-<dt>&bull;</p>
-<dd>Subsystem, which identifies the assembly in which the device is contained. A typical example is an Ethernet add-in card: the device is the Ethernet controller chip, while the card plays the role of the subsystem. Subsystems have their vendor ID (from the same namespace as device vendors) and subsystem ID. Generally, the meaning of the subsystem ID depends on the device, but there are cases in which a single subsystem ID is used for many devices &#8211; e.g., laptop motherboards. </p>
+<dt>&bull;</dt>
+<dd>Device class and subclass (two 8-bit numbers) </dd>
+<dt>&bull;</dt>
+<dd>Programming interface (8-bit number, meaning specific for the subclass) </dd>
+<dt>&bull;</dt>
+<dd>Subsystem, which identifies the assembly in which the device is contained. A typical example is an Ethernet add-in card: the device is the Ethernet controller chip, while the card plays the role of the subsystem. Subsystems have their vendor ID (from the same namespace as device vendors) and subsystem ID. Generally, the meaning of the subsystem ID depends on the device, but there are cases in which a single subsystem ID is used for many devices &#8211; e.g., laptop motherboards. </dd>
 <p> The PCI utilities use the <code>pci.ids</code> file to translate all these numeric IDs to strings. </p>
 </dl>
 <h2>Keeping The List Up-To-Date</h2>

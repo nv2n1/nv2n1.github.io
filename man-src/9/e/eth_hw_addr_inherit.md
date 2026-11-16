@@ -15,11 +15,11 @@ eth_hw_addr_inherit - Copy dev_addr from another net_device
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>pointer to net_device to copy dev_addr to</dl>
+<dl><dd></dd><dd>pointer to net_device to copy dev_addr to</dd></dl>
  
 
  <i>src</i>
-<dl><dd>pointer to net_device to copy dev_addr from</dl>
+<dl><dd>pointer to net_device to copy dev_addr from</dd></dl>
 
 <h2>Description</h2>
 

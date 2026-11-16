@@ -14,16 +14,16 @@ description: "powermand – power control and monitoring daemon"
 <p><code>powermand</code> provides power management in a data center or compute cluster environment.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-c, &#8211;conf filename</i></p>
-<dd>Override the default location of the powerman configuration file <i>/etc/powerman/powerman.conf.</i></p>
-<dt><i>-f, &#8211;foreground</i></p>
-<dd>Do not daemonize, and send debugging/error messages to stderr instead of syslog.</p>
-<dt><i>-d, &#8211;debug mask</i></p>
-<dd>Set mask for debugging output.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd>Provide a synopsis of the command options.</p>
-<dt><i>-V, &#8211;version</i></p>
-<dd>Display the powerman version number and exit. </p>
+<dt><i>-c, &#8211;conf filename</i></dt>
+<dd>Override the default location of the powerman configuration file <i>/etc/powerman/powerman.conf.</i></dd>
+<dt><i>-f, &#8211;foreground</i></dt>
+<dd>Do not daemonize, and send debugging/error messages to stderr instead of syslog.</dd>
+<dt><i>-d, &#8211;debug mask</i></dt>
+<dd>Set mask for debugging output.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>Provide a synopsis of the command options.</dd>
+<dt><i>-V, &#8211;version</i></dt>
+<dd>Display the powerman version number and exit. </dd>
 <p> <code>PowerMan</code> and exit. </p>
 </dl>
 <h2>Files</h2>

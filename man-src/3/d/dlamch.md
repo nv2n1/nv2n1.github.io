@@ -27,15 +27,15 @@ description: "dlamch.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dl>
+</dt><dd> LAPACK is a software package provided by Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> </p>
+</dt><dd> <i>A</i> </dd>
 <pre>
           A is a DOUBLE PRECISION
 </pre>
@@ -50,15 +50,15 @@ description: "dlamch.f –"
 <p> <code>DLAMCH</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLAMCH determines double precision machine parameters.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>CMACH</i> </p>
+</dt><dd> <i>CMACH</i> </dd>
 <pre>
           Specifies the value to be returned by DLAMCH:
           = 'E' or 'e',   DLAMCH := eps
@@ -87,14 +87,14 @@ description: "dlamch.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 64 of file dlamch.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

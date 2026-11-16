@@ -10,11 +10,8 @@ description: "gsignal, ssignal – software signal facility"
 <p>gsignal, ssignal &#8211; software signal facility</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 typedef void (*sighandler_t)(int);
-
 int gsignal(int signum);
-
 sighandler_t ssignal(int signum, sighandler_t action);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>gsignal</code>(), <code>ssignal</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />

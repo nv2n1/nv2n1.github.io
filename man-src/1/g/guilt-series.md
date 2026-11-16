@@ -17,15 +17,15 @@ description: "guilt-series – Print the stack of patches"
 <p> -e</p>
 <dl>
 <dt>
-<dd> Edit the series file.</dl>
+</dt><dd> Edit the series file.</dd></dl>
 <p> -g</p>
 <dl>
 <dt>
-<dd> Instead of outputting the series, start gitk and display the applied patches. Ignores the verbose flag.</dl>
+</dt><dd> Instead of outputting the series, start gitk and display the applied patches. Ignores the verbose flag.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Verbose output; adds an = next to the top most applied patch, and a + to all other applied patches</dl>
+</dt><dd> Verbose output; adds an = next to the top most applied patch, and a + to all other applied patches</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -34,10 +34,10 @@ description: "guilt-series – Print the stack of patches"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

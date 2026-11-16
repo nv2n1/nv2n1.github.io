@@ -23,19 +23,19 @@ description: "dh_installman – install man pages into package build directories
 <p> From debhelper compatibility level 11 on, <code>dh_install</code> will fall back to looking in <i>debian/tmp</i> for files, if it does not find them in the current directory (or wherever you&#8217;ve told it to look using <code>&#8211;sourcedir</code>).</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.manpages</p>
-<dd> Lists man pages to be installed.</dl>
+<dt>debian/<i>package</i>.manpages</dt>
+<dd> Lists man pages to be installed.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code>, <code>&#8211;all</code></p>
-<dd> Install all files specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on.</p>
-<dt><code>&#8211;language=</code><i>ll</i></p>
-<dd> Use this to specify that the man pages being acted on are written in the specified language.</p>
-<dt><code>&#8211;sourcedir=</code><i>dir</i></p>
-<dd> Look in the specified directory for files to be installed. This option requires compat 11 or later (it is silently ignored in compat 10 or earlier). </p>
+<dt><code>-A</code>, <code>&#8211;all</code></dt>
+<dd> Install all files specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on.</dd>
+<dt><code>&#8211;language=</code><i>ll</i></dt>
+<dd> Use this to specify that the man pages being acted on are written in the specified language.</dd>
+<dt><code>&#8211;sourcedir=</code><i>dir</i></dt>
+<dd> Look in the specified directory for files to be installed. This option requires compat 11 or later (it is silently ignored in compat 10 or earlier). </dd>
 <p> Note that this is not the same as the <code>&#8211;sourcedirectory</code> option used by the <code>dh_auto_</code><i>*</i> commands. You rarely need to use this option, since <code>dh_installman</code> automatically looks for files in <i>debian/tmp</i> in debhelper compatibility level 11 and above.</p>
-<dt><i>manpage</i> &#8230;</p>
-<dd> Install these man pages into the first package acted on. (Or in all packages if <code>-A</code> is specified).</dl>
+<dt><i>manpage</i> &#8230;</dt>
+<dd> Install these man pages into the first package acted on. (Or in all packages if <code>-A</code> is specified).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> An example <i>debian/manpages</i> file could look like this: </p>
 <pre>

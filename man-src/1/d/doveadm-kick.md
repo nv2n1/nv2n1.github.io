@@ -21,17 +21,17 @@ description: "doveadm-kick – Disconnect users by user name and/or IP address"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></p>
-<dd> This option is used to specify an absolute path to an alternative UNIX domain socket. </p>
+<dt><code>-a&nbsp;<wbr></code><i>anvil_socket_path</i></dt>
+<dd> This option is used to specify an absolute path to an alternative UNIX domain socket. </dd>
 <p> By default <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will use the socket <i>/var/run/dovecot/anvil</i>. The socket may be located in another directory, when the default <i>base_dir</i> setting was overridden in <i>/etc/dovecot/dovecot.conf</i>.</p>
-<dt><code>-f</code></p>
-<dd> Enforce the disconnect, even when there are multiple <i>user</i>s, from different networks, connected to a single process. This option may be only required when you have configured something like: </p>
+<dt><code>-f</code></dt>
+<dd> Enforce the disconnect, even when there are multiple <i>user</i>s, from different networks, connected to a single process. This option may be only required when you have configured something like: </dd>
 <pre>
 service imap {
   ...
@@ -43,10 +43,10 @@ service imap {
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>ip</i>[/<i>mask</i>]</p>
-<dd> <i>ip</i> or <i>ip</i><code>/</code><i>mask</i> is the host or network, from which the users are connected.</p>
-<dt><i>user</i></p>
-<dd> Is a <i>user</i>&#8216;s login name. Depending on the configuration, a login name may be for example <code>jane</code> or <code>john [at] example.com</code>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).</dl>
+<dt><i>ip</i>[/<i>mask</i>]</dt>
+<dd> <i>ip</i> or <i>ip</i><code>/</code><i>mask</i> is the host or network, from which the users are connected.</dd>
+<dt><i>user</i></dt>
+<dd> Is a <i>user</i>&#8216;s login name. Depending on the configuration, a login name may be for example <code>jane</code> or <code>john [at] example.com</code>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).</dd></dl>
 <h2>EXAMPLE</h2>
 <p> If you don&#8217;t want to disconnect all users at once, you can check who&#8217;s currently logged in. The first example demonstrates how to disconnect all users whose login name is 3 characters long and begins with <code>ba</code>. </p>
 <pre>

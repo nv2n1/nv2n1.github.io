@@ -23,10 +23,10 @@ description: "ssycon_rook.f –"
  A = U*D*U**T or A = L*D*L**T computed by SSYTRF_ROOK.
  An estimate is obtained for norm(inv(A)), and the reciprocal of the
  condition number is computed as RCOND = 1 / (ANORM * norm(inv(A))).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the details of the factorization are stored
  as an upper or lower triangular matrix.
@@ -65,16 +65,16 @@ description: "ssycon_rook.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> November 2011, Igor Kozachenko, Computer Science Division, University of California, Berkeley </p>
 <p> September 2007, Sven Hammarling, Nicholas J. Higham, Craig Lucas, School of Mathematics, University of Manchester </p>
 <p> Definition at line 144 of file ssycon_rook.f.</p>

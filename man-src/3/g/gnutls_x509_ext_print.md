@@ -14,14 +14,14 @@ description: "gnutls_x509_ext_print – API function"
 <p> <code>int gnutls_x509_ext_print(gnutls_x509_ext_st * </code><i>exts</i><code>, unsigned int </code><i>exts_size</i><code>, gnutls_certificate_print_formats_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_ext_st * exts</p>
-<dd> The structures to be printed</p>
-<dt>unsigned int exts_size</p>
-<dd> the number of available structures</p>
-<dt>gnutls_certificate_print_formats_t format</p>
-<dd> Indicate the format to use</p>
-<dt>gnutls_datum_t * out</p>
-<dd> Newly allocated datum with null terminated string.</dl>
+<dt>gnutls_x509_ext_st * exts</dt>
+<dd> The structures to be printed</dd>
+<dt>unsigned int exts_size</dt>
+<dd> the number of available structures</dd>
+<dt>gnutls_certificate_print_formats_t format</dt>
+<dd> Indicate the format to use</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> Newly allocated datum with null terminated string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will pretty print X.509 certificate extensions, suitable for display to a human. </p>
 <p> The output <i>out</i> needs to be deallocated using <code>gnutls_free()</code>.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_ext_print – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

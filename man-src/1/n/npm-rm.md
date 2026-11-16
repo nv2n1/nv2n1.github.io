@@ -18,19 +18,17 @@ npm uninstall &lt;name&gt;
 <p> This uninstalls a package, completely removing everything npm installed on its behalf.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> npm help prune</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc</p>
-<dt>
-<dd>
+<dt>&bull;</dt>
+<dd> npm help prune</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc</dd>
 </dl>
 <h2>Index</h2>

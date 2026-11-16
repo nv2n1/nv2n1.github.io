@@ -15,10 +15,10 @@ description: "profile2map – Fuse profiler output converter"
 <p> profile2map converts Fuse profiler output into Z80-style map format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>infile</i></p>
-<dd> specifies the Fuse profiler output to be converted.</p>
-<dt><i>outfile</i></p>
-<dd> specifies the Z80 map file for output.</dl>
+<dt><i>infile</i></dt>
+<dd> specifies the Fuse profiler output to be converted.</dd>
+<dt><i>outfile</i></dt>
+<dd> specifies the Z80 map file for output.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

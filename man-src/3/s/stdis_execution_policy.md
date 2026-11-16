@@ -10,10 +10,8 @@ description: "std::is_execution_policy – std::is_execution_policy"
 <p>std::is_execution_policy &#8211; std::is_execution_policy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;execution&gt;
-
     template &lt;class T&gt;
     (since C++ 17)
-
         struct is_execution_policy;</code></pre>
 <p>Checks whether T is a standard or implementation-defined execution policy type.<br />
 Provides the member constant value which is equal to true, if T is a_standard_execution_policy_type, or an implementation-defined execution policy type. Otherwise, value is equal to false.<br />

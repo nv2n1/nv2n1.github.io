@@ -12,7 +12,6 @@ std::filesystem::recursive_directory_iterator::operator*,std::filesystem::recurs
 
 <pre><code>const std::filesystem::directory_entry &amp;operator*() const;
 (1)(since C++ 17)
-
     const std::filesystem::directory_entry *
     operator-&gt;() const;
 (2)(since C++ 17)</code></pre> 

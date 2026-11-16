@@ -19,22 +19,22 @@ description: "genericups – Driver for contact-closure UPS equipment"
 <p>This driver supports the following settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> upstype=<i>type</i></p>
 <dl>
-<dd>Required. Configures the driver for a specific kind of UPS. See the UPS Types section below for more information on which entries are available.</dl>
+<dd>Required. Configures the driver for a specific kind of UPS. See the UPS Types section below for more information on which entries are available.</dd></dl>
 <p> mfr=<i>string</i></p>
 <dl>
-<dd>Optional. The very nature of a generic UPS driver sometimes means that the stock manufacturer data has no relation to the actual hardware that is attached. With the mfr setting, you can change the value that is seen by clients that monitor this UPS.</dl>
+<dd>Optional. The very nature of a generic UPS driver sometimes means that the stock manufacturer data has no relation to the actual hardware that is attached. With the mfr setting, you can change the value that is seen by clients that monitor this UPS.</dd></dl>
 <p> model=<i>string</i></p>
 <dl>
-<dd>Optional. This is like mfr above, but it overrides the model string instead.</dl>
+<dd>Optional. This is like mfr above, but it overrides the model string instead.</dd></dl>
 <p> serial=<i>string</i></p>
 <dl>
-<dd>Optional. This is like mfr above and intended to record the identification string of the UPS. It is titled &quot;serial&quot; because usually this string is referred to as the serial number.</dl>
+<dd>Optional. This is like mfr above and intended to record the identification string of the UPS. It is titled &quot;serial&quot; because usually this string is referred to as the serial number.</dd></dl>
 <p> sdtime=<i>value</i></p>
 <dl>
-<dd>Optional. The driver will sleep for this many seconds after setting the shutdown signal. This is necessary for some hardware which requires a sustained level to activate the shutdown sequence. </p>
+<dd>Optional. The driver will sleep for this many seconds after setting the shutdown signal. This is necessary for some hardware which requires a sustained level to activate the shutdown sequence. </dd>
 <p> The default behavior of the driver is to exit immediately. If this doesn&#8217;t reliably trigger a shutdown in your UPS hardware, use this setting to give it more time to react.</dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> very large values for sdtime may create warnings from upsdrvctl if it gets tired of waiting for the driver to return. </p>
 </dl>
 <h2>Custom Configurations</h2>
@@ -43,170 +43,170 @@ description: "genericups – Driver for contact-closure UPS equipment"
 <dl>
 <dd>
 <pre>CP = DTR</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>LB = DCD</pre>
-</dl>
+</dd></dl>
 <p> Recognized values for input lines are CTS, DCD, and RNG. Recognized values for output lines are DTR, RTS, and ST. See below for more about what these signals mean. </p>
 <p> These values may be negated for active low signals. That is, &quot;LB=-DCD&quot; recognizes a low battery condition when DCD is not held high.</p>
 <h2>Type Information</h2>
 <p>The essence of a UPS definition in this driver is how it uses the serial lines that are available. These are the abbreviations you will see below: </p>
 <p> OL</p>
 <dl>
-<dd>On line (no power failure) (opposite of OB &#8211; on battery)</dl>
+<dd>On line (no power failure) (opposite of OB &#8211; on battery)</dd></dl>
 <p> LB</p>
 <dl>
-<dd>Low battery</dl>
+<dd>Low battery</dd></dl>
 <p> SD</p>
 <dl>
-<dd>Shutdown load</dl>
+<dd>Shutdown load</dd></dl>
 <p> CP</p>
 <dl>
-<dd>Cable power (must be present for cable to have valid reading)</dl>
+<dd>Cable power (must be present for cable to have valid reading)</dd></dl>
 <p> CTS</p>
 <dl>
-<dd>Clear to Send. Received from the UPS.</dl>
+<dd>Clear to Send. Received from the UPS.</dd></dl>
 <p> RTS</p>
 <dl>
-<dd>Ready to Send. Sent by the PC.</dl>
+<dd>Ready to Send. Sent by the PC.</dd></dl>
 <p> DCD</p>
 <dl>
-<dd>Data Carrier Detect. Received from the UPS.</dl>
+<dd>Data Carrier Detect. Received from the UPS.</dd></dl>
 <p> RNG</p>
 <dl>
-<dd>Ring indicate. Received from the UPS.</dl>
+<dd>Ring indicate. Received from the UPS.</dd></dl>
 <p> DTR</p>
 <dl>
-<dd>Data Terminal Ready. Sent by the PC.</dl>
+<dd>Data Terminal Ready. Sent by the PC.</dd></dl>
 <p> ST</p>
 <dl>
-<dd>Send a BREAK on the transmit data line</dl>
+<dd>Send a BREAK on the transmit data line</dd></dl>
 <p> A &quot;-&quot; in front of a signal name (like -RNG) means that the indicated condition is signaled with an active low signal. For example, [LB=-RNG] means the battery is low when the ring indicate line goes low, and that the battery is OK when that line is held high.</p>
 <h2>Ups Types</h2>
 <p>0 = UPSonic LAN Saver 600 </p>
 <dl>
 <dd>
 <pre>[CP=DTR+RTS] [OL=-CTS] [LB=DCD] [SD=DTR]</pre>
-</dl>
+</dd></dl>
 <p> 1 = APC Back-UPS/Back-UPS Pro/Smart-UPS with 940-0095A/C cable </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=-RNG] [LB=DCD] [SD=RTS]</pre>
-</dl>
+</dd></dl>
 <p> 2 = APC Back-UPS/Back-UPS Pro/Smart-UPS with 940-0020B cable </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=-CTS] [LB=DCD] [SD=DTR+RTS]</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>Type 2 has also been reported to work with the 940-0020C cable.</pre>
-</dl>
+</dd></dl>
 <p> 3 = PowerTech Comp1000 with DTR cable power </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=DCD] [SD=DTR+RTS]</pre>
-</dl>
+</dd></dl>
 <p> 4 = Generic RUPS Model </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=CTS] [LB=-DCD] [SD=-RTS]</pre>
-</dl>
+</dd></dl>
 <p> 5 = Tripp Lite UPS with Lan2.2 interface (black 73-0844 cable) </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=DTR+RTS]</pre>
-</dl>
+</dd></dl>
 <p> 6 = Best Patriot with INT51 cable </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=RTS]</pre>
-</dl>
+</dd></dl>
 <p> 7 = CyberPower Power99 Also Upsonic Power Guardian PG-500, Belkin Belkin Home Office, F6H350-SER, F6H500-SER, F6H650-SER, Eaton Management Card Contact &#8211; Config3 with cable 66033 (shutdown does not work) </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=CTS] [LB=-DCD] [SD=DTR]</pre>
-</dl>
+</dd></dl>
 <p> 8 = Nitram Elite 500 </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=???]</pre>
-</dl>
+</dd></dl>
 <p> 9 = APC Back-UPS/Back-UPS Pro/Smart-UPS with 940-0023A cable </p>
 <dl>
 <dd>
 <pre>[CP=none] [OL=-DCD] [LB=CTS] [SD=RTS]</pre>
-</dl>
+</dd></dl>
 <p> 10 = Victron Lite with crack cable </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=CTS] [LB=-DCD] [SD=DTR]</pre>
-</dl>
+</dd></dl>
 <p> 11 = Powerware 3115 </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=-CTS] [LB=-DCD] [SD=ST]</pre>
-</dl>
+</dd></dl>
 <p> 12 = APC Back-UPS Office with 940-0119A cable </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=-CTS] [LB=DCD] [SD=DTR]</pre>
-</dl>
+</dd></dl>
 <p> 13 = RPT Repoteck RPT-800A/RPT-162A </p>
 <dl>
 <dd>
 <pre>[CP=DTR+RTS] [OL=DCD] [LB=-CTS] [SD=ST]</pre>
-</dl>
+</dd></dl>
 <p> 14 = Online P-series </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=DCD] [LB=-CTS] [SD=RTS]</pre>
-</dl>
+</dd></dl>
 <p> 15 = Powerware 5119, 5125 </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=ST]</pre>
-</dl>
+</dd></dl>
 <p> 16 = Nitram Elite 2002 </p>
 <dl>
 <dd>
 <pre>[CP=DTR+RTS] [OL=CTS] [LB=-DCD] [SD=???]</pre>
-</dl>
+</dd></dl>
 <p> 17 = PowerKinetics 9001 </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=???]</pre>
-</dl>
+</dd></dl>
 <p> 18 = TrippLite Omni 450LAN with Martin&#8217;s cabling </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=DCD] [SD=none]</pre>
-</dl>
+</dd></dl>
 <p> 19 = Fideltronic Ares Series </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=CTS] [LB=-DCD] [SD=RTS]</pre>
-</dl>
+</dd></dl>
 <p> 20 = Powerware 5119 RM </p>
 <dl>
 <dd>
 <pre>[CP=DTR] [OL=-CTS] [LB=DCD] [SD=ST]</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>Check docs/cables/powerware.txt</pre>
-</dl>
+</dd></dl>
 <p> 21 = Generic RUPS 2000 (Megatec M2501 cable) </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=CTS] [LB=-DCD] [SD=RTS+DTR]</pre>
-</dl>
+</dd></dl>
 <p> 22 = Gamatronic All models with alarm interface (also CyberPower SL series) </p>
 <dl>
 <dd>
 <pre>[CP=RTS] [OL=CTS] [LB=-DCD] [SD=DTR]</pre>
-</dl>
+</dd></dl>
 <h2>Similar Models</h2>
 <p>Many different UPS companies make models with similar interfaces. The RUPS cable seems to be especially popular in the &quot;power strip&quot; variety of UPS found in office supply stores. If your UPS works with an entry in the table above, but the model or manufacturer information don&#8217;t match, don&#8217;t despair. You can fix that easily by using the mfr and model variables documented above in your <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5).</p>
 <h2>Testing Compatibility</h2>
@@ -220,13 +220,13 @@ description: "genericups – Driver for contact-closure UPS equipment"
 <dl>
 <dd>
 <pre>genericups -x upstype=n /dev/port</pre>
-</dl>
+</dd></dl>
 <p> Let upsd sync up (watch the syslog), and then run upsc to see what it found. If the STATUS is right (should be OL for on line), continue to Step 3, otherwise go back to step 1. </p>
 <p> Alternatively, you can run genericups in debug mode &#8211; </p>
 <dl>
 <dd>
 <pre>genericups -DDDDD -x upstype=n /dev/port</pre>
-</dl>
+</dd></dl>
 <p> In this mode it will be running in the foreground and continuously display the line and battery status of the UPS.</p>
 <h3>Step 3</h3>
 <p>Disconnect the UPS from the wall/mains power. This is easiest if you have a switched outlet in between it and the wall, but you can also just pull the plug to test. The lamp should stay lit, and the status should switch to &quot;OB&quot;. If the lamp went out or the status didn&#8217;t go to &quot;OB&quot; within about 15 seconds, go to Step 1. Otherwise, continue to Step 4.</p>
@@ -239,7 +239,7 @@ description: "genericups – Driver for contact-closure UPS equipment"
 <dl>
 <dd>
 <pre>genericups -x upstype=n -k /dev/port</pre>
-</dl>
+</dd></dl>
 <p> If the UPS turns off the lamp, you&#8217;re done. At this point, you have verified that the shutdown sequence actually does what you want. You can start using the genericups driver with this type number for normal operations. </p>
 <p> You should use your findings to add a section to your ups.conf. Here is a quick example: </p>
 <dl>
@@ -248,7 +248,7 @@ description: "genericups – Driver for contact-closure UPS equipment"
  driver = genericups
  port = /dev/ttyS0
  upstype = 1</pre>
-</dl>
+</dd></dl>
 <p> Change the port and upstype values to match your system.</p>
 <h2>New Support</h2>
 <p>If the above testing sequence fails, you will probably need to create a new entry to support your hardware. All UPS types are determined from the table in the genericups.h file in the source tree. </p>

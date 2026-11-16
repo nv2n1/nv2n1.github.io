@@ -11,29 +11,29 @@ description: "pg_test_timing – measure timing overhead"
 <p> pg_test_timing &#8211; measure timing overhead </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pg_test_timing</code> [<i>option</i>&#8230;]</dl>
+<dt> <code>pg_test_timing</code> [<i>option</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>pg_test_timing is a tool to measure the timing overhead on your system and confirm that the system time never moves backwards. Systems that are slow to collect timing data can give less accurate <code>EXPLAIN ANALYZE</code> results.</p>
+<dd>pg_test_timing is a tool to measure the timing overhead on your system and confirm that the system time never moves backwards. Systems that are slow to collect timing data can give less accurate <code>EXPLAIN ANALYZE</code> results.</dd>
 <h2>OPTIONS</h2>
 <p> pg_test_timing accepts the following command-line options: </p>
 <p> <code>-d </code><i>duration</i>, <code>&#8211;duration=</code><i>duration</i></p>
 <dl>
 <dt>
-<dd> Specifies the test duration, in seconds. Longer durations give slightly better accuracy, and are more likely to discover problems with the system clock moving backwards. The default test duration is 3 seconds.</dl>
+</dt><dd> Specifies the test duration, in seconds. Longer durations give slightly better accuracy, and are more likely to discover problems with the system clock moving backwards. The default test duration is 3 seconds.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the pg_test_timing version and exit.</dl>
+</dt><dd> Print the pg_test_timing version and exit.</dd></dl>
 <p> <code>-?</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help about pg_test_timing command line arguments, and exit.</dl>
+</dt><dd> Show help about pg_test_timing command line arguments, and exit.</dd></dl>
 <h2>USAGE</h2>
 <h3>Interpreting results</h3>
 <p> Good results will show most (&gt;90%) individual timing calls take less than one microsecond. Average per loop overhead will be even lower, below 100 nanoseconds. This example from an Intel i7-860 system using a TSC clock source shows excellent performance: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Testing timing overhead for 3 seconds.
 Per loop time including overhead: 35.96 nsec
@@ -45,13 +45,13 @@ Histogram of timing durations:
         2:    2999652  3.59518%
         1:   80435604 96.40465%
 </pre>
-</dl>
+</dd></dl>
 <p> Note that different units are used for the per loop time than the histogram. The loop can have resolution within a few nanoseconds (nsec), while the individual timing calls can only resolve down to one microsecond (usec).</p>
 <h3>Measuring executor timing overhead</h3>
 <p> When the query executor is running a statement using <code>EXPLAIN ANALYZE</code>, individual operations are timed as well as showing a summary. The overhead of your system can be checked by counting rows with the psql program: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CREATE TABLE t AS SELECT *FROM generate_series(1, 100000);
 	iming
@@ -59,13 +59,13 @@ CREATE TABLE t AS SELECT *FROM generate_series(1, 100000);
     COUNT(*) FROM t;
 EXPLAIN ANALYZE SELECT COUNT(*) FROM t;
 </code></pre>
-</dl>
+</dd></dl>
 <p> The i7-860 system measured runs the count query in 9.8 ms while the <code>EXPLAIN ANALYZE</code> version takes 16.6 ms, each processing just over 100,000 rows. That 6.8 ms difference means the timing overhead per row is 68 ns, about twice what pg_test_timing estimated it would be. Even that relatively small amount of overhead is making the fully timed count statement take almost 70% longer. On more substantial queries, the timing overhead would be less problematic.</p>
 <h3>Changing time sources</h3>
 <p> On some newer Linux systems, it&#8217;s possible to change the clock source used to collect timing data at any time. A second example shows the slowdown possible from switching to the slower acpi_pm time source, on the same system used for the fast results above: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # cat /sys/devices/system/clocksource/clocksource0/available_clocksource
 tsc hpet acpi_pm
@@ -80,21 +80,21 @@ Histogram of timing durations:
         2:    2990371 72.05956%
         1:    1155682 27.84870%
 </pre>
-</dl>
+</dd></dl>
 <p> In this configuration, the sample <code>EXPLAIN ANALYZE</code> above takes 115.9 ms. That&#8217;s 1061 nsec of timing overhead, again a small multiple of what&#8217;s measured directly by this utility. That much timing overhead means the actual query itself is only taking a tiny fraction of the accounted for time, most of it is being consumed in overhead instead. In this configuration, any <code>EXPLAIN ANALYZE</code> totals involving many timed operations would be inflated significantly by timing overhead. </p>
 <p> FreeBSD also allows changing the time source on the fly, and it logs information about the timer selected during boot: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 dmesg | grep &quot;Timecounter&quot;
 sysctl kern.timecounter.hardware=TSC
 </pre>
-</dl>
+</dd></dl>
 <p> Other systems may only allow setting the time source on boot. On older Linux systems the &quot;clock&quot; kernel setting is the only way to make this sort of change. And even on some more recent ones, the only option you&#8217;ll see for a clock source is &quot;jiffies&quot;. Jiffies are the older Linux software clock implementation, which can have good resolution when it&#8217;s backed by fast enough timing hardware, as in this example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ cat /sys/devices/system/clocksource/clocksource0/available_clocksource
 jiffies
@@ -113,7 +113,7 @@ Histogram of timing durations:
         2:    2993204  9.75277%
         1:   27694571 90.23734%
 </pre>
-</dl>
+</dd></dl>
 <h3>Clock hardware and timing accuracy</h3>
 <p> Collecting accurate timing information is normally done on computers using hardware clocks with various levels of accuracy. With some hardware the operating systems can pass the system clock time almost directly to programs. A system clock can also be derived from a chip that simply provides timing interrupts, periodic ticks at some known time interval. In either case, operating system kernels provide a clock source that hides these details. But the accuracy of that clock source and how quickly it can return results varies based on the underlying hardware. </p>
 <p> Inaccurate time keeping can result in system instability. Test any change to the clock source very carefully. Operating system defaults are sometimes made to favor reliability over best accuracy. And if you are using a virtual machine, look into the recommended time sources compatible with it. Virtual hardware faces additional difficulties when emulating timers, and there are often per operating system settings suggested by vendors. </p>

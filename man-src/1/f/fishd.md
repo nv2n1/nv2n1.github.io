@@ -21,9 +21,9 @@ url: "/docs/linux/man/1-fishd/"
 
 <dl>
 <dt>*
-<dd> -h or --help displays this help message and then exits
-<dt>*
-<dd> -v or --version displays the current fish version and then exits</dl>
+</dt><dd> -h or --help displays this help message and then exits
+</dd><dt>*
+</dt><dd> -v or --version displays the current fish version and then exits</dd></dl>
  
 
 <h3>Files</h3>

@@ -15,11 +15,11 @@ description: "SDL_CDName – Returns a human-readable, system-dependent identifi
 <p>Returns a human-readable, system-dependent identifier for the CD-ROM. <code>drive</code> is the index of the drive. Drive indices start to 0 and end at <code>SDL_CDNumDrives()</code>-1.</p>
 <h2>Examples</h2>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>&quot;/dev/cdrom&quot;</p>
-<dt> &bull;</p>
-<dd>&quot;E:&quot;</p>
-<dt> &bull;</p>
-<dd>&quot;/dev/disk/ide/1/master&quot;</dl>
+<dt> &bull;</dt>
+<dd>&quot;/dev/cdrom&quot;</dd>
+<dt> &bull;</dt>
+<dd>&quot;E:&quot;</dd>
+<dt> &bull;</dt>
+<dd>&quot;/dev/disk/ide/1/master&quot;</dd></dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_CDNumDrives</code></p>

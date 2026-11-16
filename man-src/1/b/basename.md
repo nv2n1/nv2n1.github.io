@@ -16,26 +16,26 @@ description: "basename – strip directory and suffix from filenames"
 <p> Print NAME with any leading directory components removed. If specified, also remove a trailing SUFFIX. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;multiple</code></p>
-<dd> support multiple arguments and treat each as a NAME</p>
-<dt><code>-s</code>, <code>&#8211;suffix</code>=<i>,SUFFIX/</i></p>
-<dd> remove a trailing SUFFIX; implies <code>-a</code></p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> end each output line with NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;multiple</code></dt>
+<dd> support multiple arguments and treat each as a NAME</dd>
+<dt><code>-s</code>, <code>&#8211;suffix</code>=<i>,SUFFIX/</i></dt>
+<dd> remove a trailing SUFFIX; implies <code>-a</code></dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>basename /usr/bin/sort</p>
-<dd> -&gt; &quot;sort&quot;</p>
-<dt>basename include/stdio.h .h</p>
-<dd> -&gt; &quot;stdio&quot;</p>
-<dt>basename -s .h include/stdio.h</p>
-<dd> -&gt; &quot;stdio&quot;</p>
-<dt>basename -a any/str1 any/str2</p>
-<dd> -&gt; &quot;str1&quot; followed by &quot;str2&quot;</dl>
+<dt>basename /usr/bin/sort</dt>
+<dd> -&gt; &quot;sort&quot;</dd>
+<dt>basename include/stdio.h .h</dt>
+<dd> -&gt; &quot;stdio&quot;</dd>
+<dt>basename -s .h include/stdio.h</dt>
+<dd> -&gt; &quot;stdio&quot;</dd>
+<dt>basename -a any/str1 any/str2</dt>
+<dd> -&gt; &quot;str1&quot; followed by &quot;str2&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

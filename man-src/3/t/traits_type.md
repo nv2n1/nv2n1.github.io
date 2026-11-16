@@ -10,9 +10,6 @@ description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability 
 <p>QuantLib::PiecewiseDefaultCurve &#8211; Piecewise default-probability term structure. </p>
 <h2>Synopsis</h2>
 <pre><code>void update ()
-
-
-
 Friends</code></pre>
 <p> Inherits Traits::template curve::type&lt;Interpolator&gt;, and <code>QuantLib::LazyObject</code>.</p>
 <h3>Public Types</h3>
@@ -27,9 +24,6 @@ Friends</code></pre>
  void update ()</p>
 <p>Friends <code>Observer interface</code> </p>
 <pre><code>void update ()
-
-
-
 Friends</code></pre>
 <p> class <code>Bootstrap&lt; this_curve &gt;</code> </p>
 <p> class <code>BootstrapError&lt; this_curve &gt;</code></p>
@@ -40,7 +34,7 @@ Friends</code></pre>
 <p> Each segment is determined sequentially starting from the earliest period to the latest and is chosen so that the instrument whose maturity marks the end of such segment is correctly repriced on the curve. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dl>
+<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CDS.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

@@ -16,14 +16,14 @@ description: "bacula-tray-monitor – Bacula’s ‘System Tray’ monitor"
 <h2>OPTIONS</h2>
 <p> bacula-tray-monitor [-c config_file] [-d debug_level] [-t]</p>
 <dl>
-<dt><code>-c &lt;config&gt;</code></p>
-<dd> Specify configuration file.</p>
-<dt><code>-d &lt;nn&gt;</code></p>
-<dd> Set debug level to <i>nn</i>.</p>
-<dt><code>-t</code></p>
-<dd> Test config mode: read configuration and exit.</p>
-<dt><code>-?</code></p>
-<dd> Show version and usage of program.</dl>
+<dt><code>-c &lt;config&gt;</code></dt>
+<dd> Specify configuration file.</dd>
+<dt><code>-d &lt;nn&gt;</code></dt>
+<dd> Set debug level to <i>nn</i>.</dd>
+<dt><code>-t</code></dt>
+<dd> Test config mode: read configuration and exit.</dd>
+<dt><code>-?</code></dt>
+<dd> Show version and usage of program.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code>bacula-wxconsole</code>(1) <code>bls</code>(1), <code>bextract</code>(1). </p>
 <h2>AUTHOR</h2>

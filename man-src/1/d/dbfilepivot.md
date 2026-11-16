@@ -41,34 +41,34 @@ description: "dbfilepivot – pivot a table, converting multiple rows into singl
 <p> Memory usage is proportional to the number of unique pivot values.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k</code> or <code>&#8211;key</code> KeyField</p>
-<dd> specify which column is the key for grouping. Required (no default).</p>
-<dt><code>-p</code> or <code>&#8211;pivot</code> PivotField</p>
-<dd> specify which column is the key to indicate which column in the output is relevant. Required (no default).</p>
-<dt><code>-v</code> or <code>&#8211;value</code> ValueField</p>
-<dd> Specify which column is the value in the output. If none is given, 1 is used for the value.</p>
-<dt><code>-C S</code> or <code>&#8211;element-separator S</code></p>
-<dd> Specify the separator <i>S</i> used to join the input&#8217;s key column with its contents. (Defaults to a single underscore.)</p>
-<dt><code>-e E</code> or <code>&#8211;empty E</code></p>
-<dd> give value E as the value for empty (null) records</p>
-<dt><code>-S</code> or <code>&#8211;pre-sorted</code></p>
-<dd> Assume data is already grouped by key. Provided twice, it removes the validation of this assertion. By default, we sort by key.</p>
-<dt><code>-T TmpDir</code></p>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dl>
+<dt><code>-k</code> or <code>&#8211;key</code> KeyField</dt>
+<dd> specify which column is the key for grouping. Required (no default).</dd>
+<dt><code>-p</code> or <code>&#8211;pivot</code> PivotField</dt>
+<dd> specify which column is the key to indicate which column in the output is relevant. Required (no default).</dd>
+<dt><code>-v</code> or <code>&#8211;value</code> ValueField</dt>
+<dd> Specify which column is the value in the output. If none is given, 1 is used for the value.</dd>
+<dt><code>-C S</code> or <code>&#8211;element-separator S</code></dt>
+<dd> Specify the separator <i>S</i> used to join the input&#8217;s key column with its contents. (Defaults to a single underscore.)</dd>
+<dt><code>-e E</code> or <code>&#8211;empty E</code></dt>
+<dd> give value E as the value for empty (null) records</dd>
+<dt><code>-S</code> or <code>&#8211;pre-sorted</code></dt>
+<dd> Assume data is already grouped by key. Provided twice, it removes the validation of this assertion. By default, we sort by key.</dd>
+<dt><code>-T TmpDir</code></dt>
+<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

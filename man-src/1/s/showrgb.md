@@ -15,7 +15,7 @@ description: "showrgb – display an rgb color-name database"
 <p> The <i>showrgb</i> program reads an rgb color-name database from a text file and converts it back to source form, printing the result to standard output. The default database is the one that X was built with, and may be overridden on the command line. Specify the database name without the <i>.txt</i>, <i>.pag</i> or <i>.dir</i> suffix.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/share/X11/rgb</i></p>
-<dd> default database. </p>
+<dt><i>/usr/share/X11/rgb</i></dt>
+<dd> default database. </dd>
 </dl>
 <h2>Index</h2>

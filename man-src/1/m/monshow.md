@@ -15,32 +15,32 @@ description: "monshow – show operational status of mon server."
 <p> <code>monshow</code> show the operational status of the <code>mon</code> server. Both command-line and CGI interfaces are available.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> show help</p>
-<dt><code>&#8211;showall</code></p>
-<dd> Do not read configuration file, and show operational status of all groups and services.</p>
-<dt><code>&#8211;full</code></p>
-<dd> Instead of showing only failed services, show all services no matter the state.</p>
-<dt><code>&#8211;detail&nbsp;<wbr></code><i>group,service</i></p>
-<dd> Display detailed information for <i>group</i> and <i>service</i>. This includes description, detailed output of the monitor, dependency information, and more. When invoked via CGI, append &quot;detail=group,service&quot; to get detail for a service.</p>
-<dt><code>&#8211;view </code><i>name</i></p>
-<dd> Display a pre-configured view. When invoked via CGI, supply the arguments &quot;view=name&quot; in the URL, or by using this technique: &quot;<a rel="nofollow" href="http://monhost/monshow.cgi/name">http://monhost/monshow.cgi/name</a>&quot;. For security reasons, leading forward slashes and imbedded &quot;..&quot;s are removed from the view name.</p>
-<dt><code>&#8211;auth</code></p>
-<dd> Authenticate client to the mon server.</p>
-<dt><code>&#8211;disabled</code></p>
-<dd> Show disabled groups, services, and hosts. The default is to not show anything which is disabled, but this may be overridden by the config file.</p>
-<dt><code>&#8211;server </code><i>hostname</i></p>
-<dd> Connect to the mon server on host <i>hostname</i>. <i>hostname</i> can be either the name of a host or an IP address. If this name is not supplied by this argument, then the environment variable <i>MONHOST</i> is used, if it exists. Otherwise, <i>monshow</i> will fail.</p>
-<dt><code>&#8211;login</code><i>&nbsp;<wbr>username</i></p>
-<dd> When authenticating, use <i>username</i>.</p>
-<dt><code>&#8211;port</code><i>&nbsp;<wbr>portnum</i></p>
-<dd> Connect to the server on <code>portnum</code>.</p>
-<dt><code>&#8211;prot</code><i>&nbsp;<wbr>protocol</i></p>
-<dd> Sets the protocol to <i>protocol</i>. The protocol must match the format &quot;1.2.3&quot;. If unset, the default supplied by the Mon::Client module is used. Do not use this parameter unless you really know what you are doing.</p>
-<dt><code>&#8211;old</code></p>
-<dd> Use the old 0.37 protocol and port number (32777).</p>
-<dt><code>&#8211;rcfile</code><i>&nbsp;<wbr>file</i></p>
-<dd> Use configuration file <i>file</i> instead of ~/.monshowrc. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> show help</dd>
+<dt><code>&#8211;showall</code></dt>
+<dd> Do not read configuration file, and show operational status of all groups and services.</dd>
+<dt><code>&#8211;full</code></dt>
+<dd> Instead of showing only failed services, show all services no matter the state.</dd>
+<dt><code>&#8211;detail&nbsp;<wbr></code><i>group,service</i></dt>
+<dd> Display detailed information for <i>group</i> and <i>service</i>. This includes description, detailed output of the monitor, dependency information, and more. When invoked via CGI, append &quot;detail=group,service&quot; to get detail for a service.</dd>
+<dt><code>&#8211;view </code><i>name</i></dt>
+<dd> Display a pre-configured view. When invoked via CGI, supply the arguments &quot;view=name&quot; in the URL, or by using this technique: &quot;<a rel="nofollow" href="http://monhost/monshow.cgi/name">http://monhost/monshow.cgi/name</a>&quot;. For security reasons, leading forward slashes and imbedded &quot;..&quot;s are removed from the view name.</dd>
+<dt><code>&#8211;auth</code></dt>
+<dd> Authenticate client to the mon server.</dd>
+<dt><code>&#8211;disabled</code></dt>
+<dd> Show disabled groups, services, and hosts. The default is to not show anything which is disabled, but this may be overridden by the config file.</dd>
+<dt><code>&#8211;server </code><i>hostname</i></dt>
+<dd> Connect to the mon server on host <i>hostname</i>. <i>hostname</i> can be either the name of a host or an IP address. If this name is not supplied by this argument, then the environment variable <i>MONHOST</i> is used, if it exists. Otherwise, <i>monshow</i> will fail.</dd>
+<dt><code>&#8211;login</code><i>&nbsp;<wbr>username</i></dt>
+<dd> When authenticating, use <i>username</i>.</dd>
+<dt><code>&#8211;port</code><i>&nbsp;<wbr>portnum</i></dt>
+<dd> Connect to the server on <code>portnum</code>.</dd>
+<dt><code>&#8211;prot</code><i>&nbsp;<wbr>protocol</i></dt>
+<dd> Sets the protocol to <i>protocol</i>. The protocol must match the format &quot;1.2.3&quot;. If unset, the default supplied by the Mon::Client module is used. Do not use this parameter unless you really know what you are doing.</dd>
+<dt><code>&#8211;old</code></dt>
+<dd> Use the old 0.37 protocol and port number (32777).</dd>
+<dt><code>&#8211;rcfile</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Use configuration file <i>file</i> instead of ~/.monshowrc. </dd>
 </dl>
 <h2>CGI INVOCATION</h2>
 <p> If <code>monshow</code> is invoked with the &quot;REQUEST_METHOD&quot; environment variable set, then CGI invocation is assumed. In that case, <code>monshow</code> gathers variables and commands submitted via the POST method and QUERY_STRING. Command-line options are ignored for security reasons. </p>
@@ -56,43 +56,43 @@ description: "monshow – show operational status of mon server."
 <h2>VIEW CONFIGURATION FILE</h2>
 <p> The view file contains a list of which services to display, how to display them, and a number of other parameters. Blank lines and lines beginning with a # (pound) are ignored. </p>
 <dl>
-<dt><code>watch</code><i> group</i></p>
-<dd> Include the status of all the services for &quot;group&quot;.</p>
-<dt><code>service</code><i> group service</i></p>
-<dd> Include the status of the service specified by <i>group</i> and <i>service</i>. If no <code>watch</code> or <code>service</code> configuration lines are present, then the status of all groups and services are displayed.</p>
-<dt><code>set show-disabled</code></p>
-<dd> This has the same effect as using the <code>&#8211;disabled</code> option.</p>
-<dt><code>set host</code><i> hostname</i></p>
-<dd> Query the mon server <i>hostname</i>.</p>
-<dt><code>set port</code><i> number</i></p>
-<dd> The TCP port which the mon server is listening on.</p>
-<dt><code>set prot</code><i> protocol</i></p>
-<dd> Set the protocol. This probably should not be used unless you really know what you&#8217;re doing.</p>
-<dt><code>set full</code></p>
-<dd> Show everything disabled, all failures, all successes, and all untested services.</p>
-<dt><code>set bg</code><i> color</i></p>
-<dd> Background color for the CGI report. The value of this parameter should resemble &quot;d5d5d5&quot; (without the quotes).</p>
-<dt><code>set bg-ok</code><i> color</i></p>
-<dd> Background color for services which are in an &quot;ok&quot; state.</p>
-<dt><code>set bg-fail</code><i> color</i></p>
-<dd> Background color for services which are failing.</p>
-<dt><code>set bg-untested</code><i> color</i></p>
-<dd> Background color for services which have yet to be tested.</p>
-<dt><code>set refresh</code><i> seconds</i></p>
-<dd> For CGI output, set the frequency that the report reloads. The default is to not reload.</p>
-<dt><code>summary-len</code><i> len</i></p>
-<dd> For CGI output, set the maximum length of the summary output to display. Summary text which exceeds <i>len</i> will be truncated and replaced with ellipses.</p>
-<dt><code>link</code><i> group service URL</i></p>
-<dd> For the CGI report, make a link to <i>URL</i> at the bottom of the detail report for <i>group/service</i> for more information.</p>
-<dt><code>link-text</code><i> group service</i></p>
-<dd> Insert all HTML up until a line beginning with &quot;END&quot; after the link specified with the <code>link</code> setting.</p>
-<dt><code>set html-header</code></p>
-<dd> Lines after this statement, continuing up until a line beginning with the word &quot;END&quot; will be displayed after the &quot;&lt;/head&gt;&quot; tag in the CGI output. Use this to display custom headers, including images and other fancy things. </p>
+<dt><code>watch</code><i> group</i></dt>
+<dd> Include the status of all the services for &quot;group&quot;.</dd>
+<dt><code>service</code><i> group service</i></dt>
+<dd> Include the status of the service specified by <i>group</i> and <i>service</i>. If no <code>watch</code> or <code>service</code> configuration lines are present, then the status of all groups and services are displayed.</dd>
+<dt><code>set show-disabled</code></dt>
+<dd> This has the same effect as using the <code>&#8211;disabled</code> option.</dd>
+<dt><code>set host</code><i> hostname</i></dt>
+<dd> Query the mon server <i>hostname</i>.</dd>
+<dt><code>set port</code><i> number</i></dt>
+<dd> The TCP port which the mon server is listening on.</dd>
+<dt><code>set prot</code><i> protocol</i></dt>
+<dd> Set the protocol. This probably should not be used unless you really know what you&#8217;re doing.</dd>
+<dt><code>set full</code></dt>
+<dd> Show everything disabled, all failures, all successes, and all untested services.</dd>
+<dt><code>set bg</code><i> color</i></dt>
+<dd> Background color for the CGI report. The value of this parameter should resemble &quot;d5d5d5&quot; (without the quotes).</dd>
+<dt><code>set bg-ok</code><i> color</i></dt>
+<dd> Background color for services which are in an &quot;ok&quot; state.</dd>
+<dt><code>set bg-fail</code><i> color</i></dt>
+<dd> Background color for services which are failing.</dd>
+<dt><code>set bg-untested</code><i> color</i></dt>
+<dd> Background color for services which have yet to be tested.</dd>
+<dt><code>set refresh</code><i> seconds</i></dt>
+<dd> For CGI output, set the frequency that the report reloads. The default is to not reload.</dd>
+<dt><code>summary-len</code><i> len</i></dt>
+<dd> For CGI output, set the maximum length of the summary output to display. Summary text which exceeds <i>len</i> will be truncated and replaced with ellipses.</dd>
+<dt><code>link</code><i> group service URL</i></dt>
+<dd> For the CGI report, make a link to <i>URL</i> at the bottom of the detail report for <i>group/service</i> for more information.</dd>
+<dt><code>link-text</code><i> group service</i></dt>
+<dd> Insert all HTML up until a line beginning with &quot;END&quot; after the link specified with the <code>link</code> setting.</dd>
+<dt><code>set html-header</code></dt>
+<dd> Lines after this statement, continuing up until a line beginning with the word &quot;END&quot; will be displayed after the &quot;&lt;/head&gt;&quot; tag in the CGI output. Use this to display custom headers, including images and other fancy things. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>MONHOST</p>
-<dd> The hostname of the server which runs the <code>mon</code> process. </p>
+<dt>MONHOST</dt>
+<dd> The hostname of the server which runs the <code>mon</code> process. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-mon/">mon</a>(8)</p>

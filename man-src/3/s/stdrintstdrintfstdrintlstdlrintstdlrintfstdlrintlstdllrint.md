@@ -77,16 +77,11 @@ If the current rounding mode is&#8230;<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;climits&gt;
 int main()
-
 {
-
 #pragma STDC FENV_ACCESS ON
     std::fesetround(FE_TONEAREST);
     std::cout &lt;&lt; &quot;rounding to nearest (halfway cases to even):

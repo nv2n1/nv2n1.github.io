@@ -23,15 +23,15 @@ description: "htdigest – manage user files for digest authentication"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is deleted first.</p>
-<dt><i>passwdfile</i></p>
-<dd> Name of the file to contain the username, realm and password. If <code>-c</code> is given, this file is created if it does not already exist, or deleted and recreated if it does exist.</p>
-<dt><i>realm</i></p>
-<dd> The realm name to which the user name belongs. See <a rel="nofollow" href="http://tools.ietf.org/html/rfc2617#section-3.2.1">http://tools.ietf.org/html/rfc2617#section-3.2.1</a> for more details.</p>
-<dt><i>username</i></p>
+<dt><code>-c</code></dt>
+<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is deleted first.</dd>
+<dt><i>passwdfile</i></dt>
+<dd> Name of the file to contain the username, realm and password. If <code>-c</code> is given, this file is created if it does not already exist, or deleted and recreated if it does exist.</dd>
+<dt><i>realm</i></dt>
+<dd> The realm name to which the user name belongs. See <a rel="nofollow" href="http://tools.ietf.org/html/rfc2617#section-3.2.1">http://tools.ietf.org/html/rfc2617#section-3.2.1</a> for more details.</dd>
+<dt><i>username</i></dt>
 <dd> The user name to create or update in <i>passwdfile</i>. If <i>username</i> does not exist is this file, an entry is added. If it does exist, the password is changed.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>SECURITY CONSIDERATIONS</h2>
 <p>&nbsp; </p>
 <p> This program is not safe as a setuid executable. Do <i>not</i> make it setuid.<br />

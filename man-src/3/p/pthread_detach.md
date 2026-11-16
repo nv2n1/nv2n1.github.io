@@ -10,7 +10,6 @@ description: "pthread_detach – detach a thread"
 <p>pthread_detach &#8211; detach a thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_detach(pthread_t thread);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -20,10 +19,10 @@ int pthread_detach(pthread_t thread);</code></pre>
 <p>On success, <code>pthread_detach</code>() returns 0; on error, it returns an error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>thread</i> is not a joinable thread.</p>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>thread</i> is not a joinable thread.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

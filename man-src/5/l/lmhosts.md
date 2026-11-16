@@ -17,10 +17,10 @@ description: "lmhosts – The Samba NetBIOS hosts file"
 <p>It is an ASCII file containing one line for NetBIOS name. The two fields on each line are separated from each other by white space. Any entry beginning with &#8216;#&#8217; is ignored. Each line in the lmhosts file contains the following information:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; IP Address &#8211; in dotted decimal format.</dd></dl>
 <dl>
-<dd>&bull; IP Address &#8211; in dotted decimal format.</dl>
-<dl>
-<dd>&bull; NetBIOS Name &#8211; This name format is a maximum fifteen character host name, with an optional trailing &#8216;#&#8217; character followed by the NetBIOS name type as two hexadecimal digits. </p>
+<dd>&bull; NetBIOS Name &#8211; This name format is a maximum fifteen character host name, with an optional trailing &#8216;#&#8217; character followed by the NetBIOS name type as two hexadecimal digits. </dd>
 <p> If the trailing &#8216;#&#8217; is omitted then the given IP address will be returned for all names that match the given name, whatever the NetBIOS name type in the lookup.</dl>
 </dl>
 <p> An example follows: </p>
@@ -32,7 +32,7 @@ description: "lmhosts – The Samba NetBIOS hosts file"
 192.9.200.1 TESTPC
 192.9.200.20 NTSERVER#20
 192.9.200.21 SAMBASERVER</pre>
-</dl>
+</dd></dl>
 <p> Contains three IP to NetBIOS name mappings. The first and third will be returned for any queries for the names &quot;TESTPC&quot; and &quot;SAMBASERVER&quot; respectively, whatever the type component of the NetBIOS name requested. </p>
 <p> The second mapping will be returned only when the &quot;0x20&quot; name type for a name &quot;NTSERVER&quot; is queried. Any other name type will not be resolved. </p>
 <p> The default location of the lmhosts file is in the same directory as the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) file.</p>

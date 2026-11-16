@@ -22,26 +22,26 @@ description: "y4mtoppm – Convert YUV4MPEG2 stream to PPM images"
 <h2>OPTIONS</h2>
 <p> <code>y4mtoppm</code> accepts the following options: </p>
 <dl>
-<dt><code>-L</code></p>
-<dd> For interlaced streams, output a single PPM image for each frame, containing two interleaved fields. (Otherwise, two PPM images will be generated for each frame; one per field.)</p>
-<dt><code>-v</code><i> [0,1,2]</i></p>
+<dt><code>-L</code></dt>
+<dd> For interlaced streams, output a single PPM image for each frame, containing two interleaved fields. (Otherwise, two PPM images will be generated for each frame; one per field.)</dd>
+<dt><code>-v</code><i> [0,1,2]</i></dt>
 <dd> Set verbosity level.<br />
 &nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
 &nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br />
-&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </p>
+&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To turn the first 15 frames of an (MJPEG or DV) AVI file into individual PPM files: </p>
 <dl>
 <dt>
-<dd> lav2yuv -f 15 your-video.avi | y4mtoppm | pnmsplit &#8211; &quot;your-video-%d.ppm&quot;</dl>
+</dt><dd> lav2yuv -f 15 your-video.avi | y4mtoppm | pnmsplit &#8211; &quot;your-video-%d.ppm&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> This man page was written by Matt Marjanovic.<br />
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1), <code><a href="/docs/linux/man/1-pnmsplit/">pnmsplit</a></code>(1), <code><a href="/docs/linux/man/1-y4mscaler/">y4mscaler</a></code>(1) </p>

@@ -11,7 +11,6 @@ description: "sc::ReadMolecularHessian –"
 <p> <code>ReadMolecularHessian</code> is an implementation of <code>MolecularHessian</code> that reads the hessian from a file.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;hess.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>

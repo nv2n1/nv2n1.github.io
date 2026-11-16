@@ -14,14 +14,14 @@ description: "presage_demo – presage demo program (ncurses)"
 <h2>DESCRIPTION</h2>
 <p> Begin typing. presage will attempt to predict the desired word. After each keystroke, presage will return a number of predictions. If the desired word appears in the prediction list, select it by pressing the corresponding function key.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config</code> CONFIG</p>
-<dd> use config file CONFIG</p>
-<dt><code>-s</code>, <code>&#8211;suggestions</code> N</p>
-<dd> set prediction size to N suggestions</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;config</code> CONFIG</dt>
+<dd> use config file CONFIG</dd>
+<dt><code>-s</code>, <code>&#8211;suggestions</code> N</dt>
+<dd> set prediction size to N suggestions</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Direct your bug reports to: matteo.vescovi [at] yahoo.co.uk</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004 Matteo Vescovi.<br />

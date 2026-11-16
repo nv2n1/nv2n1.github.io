@@ -10,7 +10,6 @@ description: "std::ios_base – std::ios_base"
 <p>std::ios_base &#8211; std::ios_base</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;ios&gt;
-
 class ios_base;</code></pre>
 <p>The class ios_base is a multipurpose class that serves as the base class for all I/O stream classes. It maintains several kinds of data:<br />
 1) state information: stream status flags<br />

@@ -11,7 +11,6 @@ description: "ql/math/distributions/poissondistribution.hpp – Poisson distribu
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/factorial.hpp&gt;
-
 #include &lt;ql/math/incompletegamma.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PoissonDistribution</code><br />

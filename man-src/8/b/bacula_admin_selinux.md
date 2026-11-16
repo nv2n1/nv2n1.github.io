@@ -41,8 +41,8 @@ description: "bacula_admin_selinux – Security Enhanced Linux Policy for the ba
 <p> <code>bacula_admin_exec_t</code> </p>
 <p> &#8211; Set files with the bacula_admin_exec_t type, if you want to transition an executable to the bacula_admin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/bat, /usr/sbin/bconsole </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/bat, /usr/sbin/bconsole </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

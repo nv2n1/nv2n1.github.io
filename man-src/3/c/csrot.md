@@ -18,17 +18,17 @@ description: "csrot.f –"
 <p> <code>CSROT</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CSROT applies a plane rotation, where the cos and sin (c and s) are real
  and the vectors cx and cy are complex.
  jack dongarra, linpack, 3/11/78.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
            On entry, N specifies the order of the vectors cx and cy.
@@ -76,14 +76,14 @@ description: "csrot.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 99 of file csrot.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

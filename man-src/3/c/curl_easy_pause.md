@@ -20,14 +20,14 @@ description: "curl_easy_pause – pause and unpause a connection"
 <p> The <code>handle</code> argument is of course identifying the handle that operates on the connection you want to pause or unpause. </p>
 <p> The <code>bitmask</code> argument is a set of bits that sets the new state of the connection. The following bits can be used:</p>
 <dl>
-<dt>CURLPAUSE_RECV</p>
-<dd> Pause receiving data. There will be no data received on this connection until this function is called again without this bit set. Thus, the write callback (<i>CURLOPT_WRITEFUNCTION</i>) won&#8217;t be called.</p>
-<dt>CURLPAUSE_SEND</p>
-<dd> Pause sending data. There will be no data sent on this connection until this function is called again without this bit set. Thus, the read callback (<i>CURLOPT_READFUNCTION</i>) won&#8217;t be called.</p>
-<dt>CURLPAUSE_ALL</p>
-<dd> Convenience define that pauses both directions.</p>
-<dt>CURLPAUSE_CONT</p>
-<dd> Convenience define that unpauses both directions</dl>
+<dt>CURLPAUSE_RECV</dt>
+<dd> Pause receiving data. There will be no data received on this connection until this function is called again without this bit set. Thus, the write callback (<i>CURLOPT_WRITEFUNCTION</i>) won&#8217;t be called.</dd>
+<dt>CURLPAUSE_SEND</dt>
+<dd> Pause sending data. There will be no data sent on this connection until this function is called again without this bit set. Thus, the read callback (<i>CURLOPT_READFUNCTION</i>) won&#8217;t be called.</dd>
+<dt>CURLPAUSE_ALL</dt>
+<dd> Convenience define that pauses both directions.</dd>
+<dt>CURLPAUSE_CONT</dt>
+<dd> Convenience define that unpauses both directions</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> CURLE_OK (zero) means that the option was set properly, and a non-zero return code means something wrong occurred after the new state was set. See the <i><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</i> man page for the full list with descriptions.</p>
 <h2>AVAILABILITY</h2>

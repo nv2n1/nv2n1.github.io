@@ -15,22 +15,22 @@ description: "man-pages – conventions for writing Linux man pages"
 <h3>Sections of the manual pages</h3>
 <p>The manual Sections are traditionally defined as follows:</p>
 <dl>
-<dt><code>1 User commands (Programs)</code></p>
-<dd>Commands that can be executed by the user from within a shell.</p>
-<dt><code>2 System calls</code></p>
-<dd>Functions which wrap operations performed by the kernel.</p>
-<dt><code>3 Library calls</code></p>
-<dd>All library functions excluding the system call wrappers (Most of the <i>libc</i> functions).</p>
-<dt><code>4 Special files (devices)</code></p>
-<dd>Files found in <i>/dev</i> which allow to access to devices through the kernel.</p>
-<dt><code>5 File formats and configuration files</code></p>
-<dd>Describes various human-readable file formats and configuration files.</p>
-<dt><code>6 Games</code></p>
-<dd>Games and funny little programs available on the system.</p>
-<dt><code>7 Overview, conventions, and miscellaneous</code></p>
-<dd>Overviews or descriptions of various topics, conventions and protocols, character set standards, the standard filesystem layout, and miscellaneous other things.</p>
-<dt><code>8 System management commands</code></p>
-<dd>Commands like <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), many of which only root can execute.</dl>
+<dt><code>1 User commands (Programs)</code></dt>
+<dd>Commands that can be executed by the user from within a shell.</dd>
+<dt><code>2 System calls</code></dt>
+<dd>Functions which wrap operations performed by the kernel.</dd>
+<dt><code>3 Library calls</code></dt>
+<dd>All library functions excluding the system call wrappers (Most of the <i>libc</i> functions).</dd>
+<dt><code>4 Special files (devices)</code></dt>
+<dd>Files found in <i>/dev</i> which allow to access to devices through the kernel.</dd>
+<dt><code>5 File formats and configuration files</code></dt>
+<dd>Describes various human-readable file formats and configuration files.</dd>
+<dt><code>6 Games</code></dt>
+<dd>Games and funny little programs available on the system.</dd>
+<dt><code>7 Overview, conventions, and miscellaneous</code></dt>
+<dd>Overviews or descriptions of various topics, conventions and protocols, character set standards, the standard filesystem layout, and miscellaneous other things.</dd>
+<dt><code>8 System management commands</code></dt>
+<dd>Commands like <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), many of which only root can execute.</dd></dl>
 <h3>Macro package</h3>
 <p>New manual pages should be marked up using the <code>groff an.tmac</code> package described in <code><a href="/docs/linux/man/7-man/">man</a></code>(7). This choice is mainly for consistency: the vast majority of existing Linux manual pages are marked up using these macros.</p>
 <h3>Conventions for source file layout</h3>
@@ -38,24 +38,24 @@ description: "man-pages – conventions for writing Linux man pages"
 <h3>Title line</h3>
 <p>The first command in a man page should be a <code>TH</code> command: </p>
 <dl>
-<dd><code>.TH</code> <i>title section date source manual</i></dl>
+<dd><code>.TH</code> <i>title section date source manual</i></dd></dl>
 <p> The arguments of the command are as follows:</p>
 <dl>
-<dt><i>title</i></p>
-<dd>The title of the man page, written in all caps (e.g., <i>MAN-PAGES</i>).</p>
-<dt><i>section</i></p>
-<dd>The section number in which the man page should be placed (e.g., <i>7</i>).</p>
-<dt><i>date</i></p>
-<dd>The date of the last nontrivial change that was made to the man page. (Within the <i>man-pages</i> project, the necessary updates to these timestamps are handled automatically by scripts, so there is no need to manually update them as part of a patch.) Dates should be written in the form YYYY-MM-DD.</p>
-<dt><i>source</i></p>
-<dd>The source of the command, function, or system call.</p>
-<dd>For those few <i>man-pages</i> pages in Sections 1 and 8, probably you just want to write <i>GNU</i>.</p>
-<dd>For system calls, just write <i>Linux</i>. (An earlier practice was to write the version number of the kernel from which the manual page was being written/checked. However, this was never done consistently, and so was probably worse than including no version number. Henceforth, avoid including a version number.)</p>
-<dd>For library calls that are part of glibc or one of the other common GNU libraries, just use <i>GNU C Library</i>, <i>GNU</i>, or an empty string.</p>
-<dd>For Section 4 pages, use <i>Linux</i>.</p>
-<dd>In cases of doubt, just write <i>Linux</i>, or <i>GNU</i>.</p>
-<dt><i>manual</i></p>
-<dd>The title of the manual (e.g., for Section 2 and 3 pages in the <i>man-pages</i> package, use <i>Linux Programmer&#8217;s Manual</i>).</dl>
+<dt><i>title</i></dt>
+<dd>The title of the man page, written in all caps (e.g., <i>MAN-PAGES</i>).</dd>
+<dt><i>section</i></dt>
+<dd>The section number in which the man page should be placed (e.g., <i>7</i>).</dd>
+<dt><i>date</i></dt>
+<dd>The date of the last nontrivial change that was made to the man page. (Within the <i>man-pages</i> project, the necessary updates to these timestamps are handled automatically by scripts, so there is no need to manually update them as part of a patch.) Dates should be written in the form YYYY-MM-DD.</dd>
+<dt><i>source</i></dt>
+<dd>The source of the command, function, or system call.</dd>
+<dd>For those few <i>man-pages</i> pages in Sections 1 and 8, probably you just want to write <i>GNU</i>.</dd>
+<dd>For system calls, just write <i>Linux</i>. (An earlier practice was to write the version number of the kernel from which the manual page was being written/checked. However, this was never done consistently, and so was probably worse than including no version number. Henceforth, avoid including a version number.)</dd>
+<dd>For library calls that are part of glibc or one of the other common GNU libraries, just use <i>GNU C Library</i>, <i>GNU</i>, or an empty string.</dd>
+<dd>For Section 4 pages, use <i>Linux</i>.</dd>
+<dd>In cases of doubt, just write <i>Linux</i>, or <i>GNU</i>.</dd>
+<dt><i>manual</i></dt>
+<dd>The title of the manual (e.g., for Section 2 and 3 pages in the <i>man-pages</i> package, use <i>Linux Programmer&#8217;s Manual</i>).</dd></dl>
 <h3>Sections within a manual page</h3>
 <p>The list below shows conventional or suggested sections. Most manual pages should include at least the <code>highlighted</code> sections. Arrange a new manual page so that sections are placed in the order shown in the list. </p>
 <dl>
@@ -162,81 +162,81 @@ description: "man-pages – conventions for writing Linux man pages"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> <i>Where a traditional heading would apply</i>, <i>please use it</i>; this kind of consistency can make the information easier to understand. If you must, you can create your own headings if they make things easier to understand (this can be especially useful for pages in Sections 4 and 5). However, before doing this, consider whether you could use the traditional headings, with some subsections (<i>.SS</i>) within those sections. </p>
 <p> The following list elaborates on the contents of each of the above sections.</p>
 <dl>
-<dt><code>NAME</code></p>
-<dd>The name of this manual page.</p>
-<dd>See <code><a href="/docs/linux/man/7-man/">man</a></code>(7) for important details of the line(s) that should follow the <code>.SH NAME</code> command. All words in this line (including the word immediately following the &quot;\-&quot;) should be in lowercase, except where English or technical terminological convention dictates otherwise.</p>
-<dt><code>SYNOPSIS</code></p>
-<dd>A brief summary of the command or function&#8217;s interface.</p>
-<dd>For commands, this shows the syntax of the command and its arguments (including options); boldface is used for as-is text and italics are used to indicate replaceable arguments. Brackets ([]) surround optional arguments, vertical bars (|) separate choices, and ellipses (&#8230;) can be repeated. For functions, it shows any required data declarations or <code>#include</code> directives, followed by the function declaration.</p>
-<dd>Where a feature test macro must be defined in order to obtain the declaration of a function (or a variable) from a header file, then the SYNOPSIS should indicate this, as described in <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7).</p>
-<dt><code>CONFIGURATION</code></p>
-<dd>Configuration details for a device.</p>
-<dd>This section normally appears only in Section 4 pages.</p>
-<dt><code>DESCRIPTION</code></p>
-<dd>An explanation of what the program, function, or format does.</p>
-<dd>Discuss how it interacts with files and standard input, and what it produces on standard output or standard error. Omit internals and implementation details unless they&#8217;re critical for understanding the interface. Describe the usual case; for information on command-line options of a program use the <code>OPTIONS</code> section.</p>
-<dd>When describing new behavior or new flags for a system call or library function, be careful to note the kernel or C library version that introduced the change. The preferred method of noting this information for flags is as part of a <code>.TP</code> list, in the following form (here, for a new system call flag):</p>
+<dt><code>NAME</code></dt>
+<dd>The name of this manual page.</dd>
+<dd>See <code><a href="/docs/linux/man/7-man/">man</a></code>(7) for important details of the line(s) that should follow the <code>.SH NAME</code> command. All words in this line (including the word immediately following the &quot;\-&quot;) should be in lowercase, except where English or technical terminological convention dictates otherwise.</dd>
+<dt><code>SYNOPSIS</code></dt>
+<dd>A brief summary of the command or function&#8217;s interface.</dd>
+<dd>For commands, this shows the syntax of the command and its arguments (including options); boldface is used for as-is text and italics are used to indicate replaceable arguments. Brackets ([]) surround optional arguments, vertical bars (|) separate choices, and ellipses (&#8230;) can be repeated. For functions, it shows any required data declarations or <code>#include</code> directives, followed by the function declaration.</dd>
+<dd>Where a feature test macro must be defined in order to obtain the declaration of a function (or a variable) from a header file, then the SYNOPSIS should indicate this, as described in <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7).</dd>
+<dt><code>CONFIGURATION</code></dt>
+<dd>Configuration details for a device.</dd>
+<dd>This section normally appears only in Section 4 pages.</dd>
+<dt><code>DESCRIPTION</code></dt>
+<dd>An explanation of what the program, function, or format does.</dd>
+<dd>Discuss how it interacts with files and standard input, and what it produces on standard output or standard error. Omit internals and implementation details unless they&#8217;re critical for understanding the interface. Describe the usual case; for information on command-line options of a program use the <code>OPTIONS</code> section.</dd>
+<dd>When describing new behavior or new flags for a system call or library function, be careful to note the kernel or C library version that introduced the change. The preferred method of noting this information for flags is as part of a <code>.TP</code> list, in the following form (here, for a new system call flag):</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>XYZ_FLAG</code> (since Linux 3.7)</p>
-<dd>Description of flag&#8230;</dl>
+</dd><dl>
+<dt><code>XYZ_FLAG</code> (since Linux 3.7)</dt>
+<dd>Description of flag&#8230;</dd></dl>
 </dl>
-<dd>Including version information is especially useful to users who are constrained to using older kernel or C library versions (which is typical in embedded systems, for example).</p>
-<dt><code>OPTIONS</code></p>
-<dd>A description of the command-line options accepted by a program and how they change its behavior.</p>
-<dd>This section should appear only for Section 1 and 8 manual pages.</p>
-<dt><code>EXIT STATUS</code></p>
-<dd>A list of the possible exit status values of a program and the conditions that cause these values to be returned.</p>
-<dd>This section should appear only for Section 1 and 8 manual pages.</p>
-<dt><code>RETURN VALUE</code></p>
-<dd>For Section 2 and 3 pages, this section gives a list of the values the library routine will return to the caller and the conditions that cause these values to be returned.</p>
-<dt><code>ERRORS</code></p>
-<dd>For Section 2 and 3 manual pages, this is a list of the values that may be placed in <i>errno</i> in the event of an error, along with information about the cause of the errors.</p>
-<dd>Where several different conditions produce the same error, the preferred approach is to create separate list entries (with duplicate error names) for each of the conditions. This makes the separate conditions clear, may make the list easier to read, and allows metainformation (e.g., kernel version number where the condition first became applicable) to be more easily marked for each condition.</p>
-<dd><i>The error list should be in alphabetical order</i>.</p>
-<dt><code>ENVIRONMENT</code></p>
-<dd>A list of all environment variables that affect the program or function and how they affect it.</p>
-<dt><code>FILES</code></p>
-<dd>A list of the files the program or function uses, such as configuration files, startup files, and files the program directly operates on.</p>
-<dd>Give the full pathname of these files, and use the installation process to modify the directory part to match user preferences. For many programs, the default installation location is in <i>/usr/local</i>, so your base manual page should use <i>/usr/local</i> as the base.</p>
-<dt><code>ATTRIBUTES</code></p>
-<dd>A summary of various attributes of the function(s) documented on this page. See <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7) for further details.</p>
-<dt><code>VERSIONS</code></p>
-<dd>A brief summary of the Linux kernel or glibc versions where a system call or library function appeared, or changed significantly in its operation.</p>
-<dd>As a general rule, every new interface should include a VERSIONS section in its manual page. Unfortunately, many existing manual pages don&#8217;t include this information (since there was no policy to do so when they were written). Patches to remedy this are welcome, but, from the perspective of programmers writing new code, this information probably matters only in the case of kernel interfaces that have been added in Linux 2.4 or later (i.e., changes since kernel 2.2), and library functions that have been added to glibc since version 2.1 (i.e., changes since glibc 2.0).</p>
-<dd>The <code><a href="/docs/linux/man/2-syscalls/">syscalls</a></code>(2) manual page also provides information about kernel versions in which various system calls first appeared.</p>
-<dt><code>CONFORMING TO</code></p>
-<dd>A description of any standards or conventions that relate to the function or command described by the manual page.</p>
-<dd>The preferred terms to use for the various standards are listed as headings in <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7).</p>
-<dd>For a page in Section 2 or 3, this section should note the POSIX.1 version(s) that the call conforms to, and also whether the call is specified in C99. (Don&#8217;t worry too much about other standards like SUS, SUSv2, and XPG, or the SVr4 and 4.xBSD implementation standards, unless the call was specified in those standards, but isn&#8217;t in the current version of POSIX.1.)</p>
-<dd>If the call is not governed by any standards but commonly exists on other systems, note them. If the call is Linux-specific, note this.</p>
-<dd>If this section consists of just a list of standards (which it commonly does), terminate the list with a period (&#8216;.&#8217;).</p>
-<dt><code>NOTES</code></p>
-<dd>Miscellaneous notes.</p>
-<dd>For Section 2 and 3 man pages you may find it useful to include subsections (<code>SS</code>) named <i>Linux Notes</i> and <i>Glibc Notes</i>.</p>
-<dd>In Section 2, use the heading <i>C library/kernel differences</i> to mark off notes that describe the differences (if any) between the C library wrapper function for a system call and the raw system call interface provided by the kernel.</p>
-<dt><code>BUGS</code></p>
-<dd>A list of limitations, known defects or inconveniences, and other questionable activities.</p>
-<dt><code>EXAMPLES</code></p>
-<dd>One or more examples demonstrating how this function, file or command is used.</p>
-<dd>For details on writing example programs, see <i>Example programs</i> below.</p>
-<dt><code>AUTHORS</code></p>
-<dd>A list of authors of the documentation or program.</p>
-<dd><code>Use of an AUTHORS section is strongly discouraged</code>. Generally, it is better not to clutter every page with a list of (over time potentially numerous) authors; if you write or significantly amend a page, add a copyright notice as a comment in the source file. If you are the author of a device driver and want to include an address for reporting bugs, place this under the BUGS section.</p>
-<dt><code>REPORTING BUGS</code></p>
-<dd>The <i>man-pages</i> project doesn&#8217;t use a REPORTING BUGS section in manual pages. Information on reporting bugs is instead supplied in the script-generated COLOPHON section. However, various projects do use a REPORTING BUGS section. it is recommended to place it near the foot of the page.</p>
-<dt><code>COPYRIGHT</code></p>
-<dd>The <i>man-pages</i> project doesn&#8217;t use a COPYRIGHT section in manual pages. Copyright information is instead maintained in the page source. In pages where this section is present, it is recommended to place it near the foot of the page, just above SEE ALSO.</p>
-<dt><code>SEE ALSO</code></p>
-<dd>A comma-separated list of related man pages, possibly followed by other related pages or documents.</p>
-<dd>The list should be ordered by section number and then alphabetically by name. Do not terminate this list with a period.</p>
-<dd>Where the SEE ALSO list contains many long manual page names, to improve the visual result of the output, it may be useful to employ the <i>.ad l</i> (don&#8217;t right justify) and <i>.nh</i> (don&#8217;t hyphenate) directives. Hyphenation of individual page names can be prevented by preceding words with the string &quot;\%&quot;.</p>
-<dd>Given the distributed, autonomous nature of FOSS projects and their documentation, it is sometimes necessary&#8212;and in many cases desirable&#8212;that the SEE ALSO section includes references to manual pages provided by other projects.</dl>
+<dd>Including version information is especially useful to users who are constrained to using older kernel or C library versions (which is typical in embedded systems, for example).</dd>
+<dt><code>OPTIONS</code></dt>
+<dd>A description of the command-line options accepted by a program and how they change its behavior.</dd>
+<dd>This section should appear only for Section 1 and 8 manual pages.</dd>
+<dt><code>EXIT STATUS</code></dt>
+<dd>A list of the possible exit status values of a program and the conditions that cause these values to be returned.</dd>
+<dd>This section should appear only for Section 1 and 8 manual pages.</dd>
+<dt><code>RETURN VALUE</code></dt>
+<dd>For Section 2 and 3 pages, this section gives a list of the values the library routine will return to the caller and the conditions that cause these values to be returned.</dd>
+<dt><code>ERRORS</code></dt>
+<dd>For Section 2 and 3 manual pages, this is a list of the values that may be placed in <i>errno</i> in the event of an error, along with information about the cause of the errors.</dd>
+<dd>Where several different conditions produce the same error, the preferred approach is to create separate list entries (with duplicate error names) for each of the conditions. This makes the separate conditions clear, may make the list easier to read, and allows metainformation (e.g., kernel version number where the condition first became applicable) to be more easily marked for each condition.</dd>
+<dd><i>The error list should be in alphabetical order</i>.</dd>
+<dt><code>ENVIRONMENT</code></dt>
+<dd>A list of all environment variables that affect the program or function and how they affect it.</dd>
+<dt><code>FILES</code></dt>
+<dd>A list of the files the program or function uses, such as configuration files, startup files, and files the program directly operates on.</dd>
+<dd>Give the full pathname of these files, and use the installation process to modify the directory part to match user preferences. For many programs, the default installation location is in <i>/usr/local</i>, so your base manual page should use <i>/usr/local</i> as the base.</dd>
+<dt><code>ATTRIBUTES</code></dt>
+<dd>A summary of various attributes of the function(s) documented on this page. See <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7) for further details.</dd>
+<dt><code>VERSIONS</code></dt>
+<dd>A brief summary of the Linux kernel or glibc versions where a system call or library function appeared, or changed significantly in its operation.</dd>
+<dd>As a general rule, every new interface should include a VERSIONS section in its manual page. Unfortunately, many existing manual pages don&#8217;t include this information (since there was no policy to do so when they were written). Patches to remedy this are welcome, but, from the perspective of programmers writing new code, this information probably matters only in the case of kernel interfaces that have been added in Linux 2.4 or later (i.e., changes since kernel 2.2), and library functions that have been added to glibc since version 2.1 (i.e., changes since glibc 2.0).</dd>
+<dd>The <code><a href="/docs/linux/man/2-syscalls/">syscalls</a></code>(2) manual page also provides information about kernel versions in which various system calls first appeared.</dd>
+<dt><code>CONFORMING TO</code></dt>
+<dd>A description of any standards or conventions that relate to the function or command described by the manual page.</dd>
+<dd>The preferred terms to use for the various standards are listed as headings in <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7).</dd>
+<dd>For a page in Section 2 or 3, this section should note the POSIX.1 version(s) that the call conforms to, and also whether the call is specified in C99. (Don&#8217;t worry too much about other standards like SUS, SUSv2, and XPG, or the SVr4 and 4.xBSD implementation standards, unless the call was specified in those standards, but isn&#8217;t in the current version of POSIX.1.)</dd>
+<dd>If the call is not governed by any standards but commonly exists on other systems, note them. If the call is Linux-specific, note this.</dd>
+<dd>If this section consists of just a list of standards (which it commonly does), terminate the list with a period (&#8216;.&#8217;).</dd>
+<dt><code>NOTES</code></dt>
+<dd>Miscellaneous notes.</dd>
+<dd>For Section 2 and 3 man pages you may find it useful to include subsections (<code>SS</code>) named <i>Linux Notes</i> and <i>Glibc Notes</i>.</dd>
+<dd>In Section 2, use the heading <i>C library/kernel differences</i> to mark off notes that describe the differences (if any) between the C library wrapper function for a system call and the raw system call interface provided by the kernel.</dd>
+<dt><code>BUGS</code></dt>
+<dd>A list of limitations, known defects or inconveniences, and other questionable activities.</dd>
+<dt><code>EXAMPLES</code></dt>
+<dd>One or more examples demonstrating how this function, file or command is used.</dd>
+<dd>For details on writing example programs, see <i>Example programs</i> below.</dd>
+<dt><code>AUTHORS</code></dt>
+<dd>A list of authors of the documentation or program.</dd>
+<dd><code>Use of an AUTHORS section is strongly discouraged</code>. Generally, it is better not to clutter every page with a list of (over time potentially numerous) authors; if you write or significantly amend a page, add a copyright notice as a comment in the source file. If you are the author of a device driver and want to include an address for reporting bugs, place this under the BUGS section.</dd>
+<dt><code>REPORTING BUGS</code></dt>
+<dd>The <i>man-pages</i> project doesn&#8217;t use a REPORTING BUGS section in manual pages. Information on reporting bugs is instead supplied in the script-generated COLOPHON section. However, various projects do use a REPORTING BUGS section. it is recommended to place it near the foot of the page.</dd>
+<dt><code>COPYRIGHT</code></dt>
+<dd>The <i>man-pages</i> project doesn&#8217;t use a COPYRIGHT section in manual pages. Copyright information is instead maintained in the page source. In pages where this section is present, it is recommended to place it near the foot of the page, just above SEE ALSO.</dd>
+<dt><code>SEE ALSO</code></dt>
+<dd>A comma-separated list of related man pages, possibly followed by other related pages or documents.</dd>
+<dd>The list should be ordered by section number and then alphabetically by name. Do not terminate this list with a period.</dd>
+<dd>Where the SEE ALSO list contains many long manual page names, to improve the visual result of the output, it may be useful to employ the <i>.ad l</i> (don&#8217;t right justify) and <i>.nh</i> (don&#8217;t hyphenate) directives. Hyphenation of individual page names can be prevented by preceding words with the string &quot;\%&quot;.</dd>
+<dd>Given the distributed, autonomous nature of FOSS projects and their documentation, it is sometimes necessary&#8212;and in many cases desirable&#8212;that the SEE ALSO section includes references to manual pages provided by other projects.</dd></dl>
 <h2>Style Guide</h2>
 <p>The following subsections describe the preferred style for the <i>man-pages</i> project. For details not covered below, the Chicago Manual of Style is usually a good source; try also grepping for preexisting usage in the project source tree.</p>
 <h3>Use of gender-neutral language</h3>
@@ -272,8 +272,8 @@ description: "man-pages – conventions for writing Linux man pages"
 <p>Starting with release 2.59, <i>man-pages</i> follows American spelling conventions (previously, there was a random mix of British and American spellings); please write all new pages and patches according to these conventions. </p>
 <p> Aside from the well-known spelling differences, there are a few other subtleties to watch for:</p>
 <dl>
-<dt>*</p>
-<dd>American English tends to use the forms &quot;backward&quot;, &quot;upward&quot;, &quot;toward&quot;, and so on rather than the British forms &quot;backwards&quot;, &quot;upwards&quot;, &quot;towards&quot;, and so on.</dl>
+<dt>*</dt>
+<dd>American English tends to use the forms &quot;backward&quot;, &quot;upward&quot;, &quot;toward&quot;, and so on rather than the British forms &quot;backwards&quot;, &quot;upwards&quot;, &quot;towards&quot;, and so on.</dd></dl>
 <h3>BSD version numbers</h3>
 <p>The classical scheme for writing BSD version numbers is <i>x.yBSD</i>, where <i>x.y</i> is the version number (e.g., 4.2BSD). Avoid forms such as <i>BSD 4.3</i>.</p>
 <h3>Capitalization</h3>
@@ -573,3 +573,4 @@ description: "man-pages – conventions for writing Linux man pages"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;UnixWare</p>
 <h3>NULL, NUL, null pointer, and null character</h3>
 <p>A <i>null pointer</i> is a pointer that points to nothing, and is normally indicated by the constant <i>NULL</i>. On the other hand, <i>NUL</i> is the <i>null byte,</i> a byte with the value 0, represented in C via the character constant <i>&#8216;
+</p>

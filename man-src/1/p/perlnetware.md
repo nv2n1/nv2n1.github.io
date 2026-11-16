@@ -28,26 +28,22 @@ url: "/docs/linux/man/1-perlnetware/"
  The build process is dependent on the location of the NetWare <font SIZE="-1">SDK.</font> Once the Tools &amp; <font SIZE="-1">SDK</font> are installed, the build environment has to be setup. The following batch files setup the environment.
 <dl>
 <dt>SetNWBld.bat
-<dd> The Execution of this file takes 2 parameters as input. The first being the NetWare <font SIZE="-1">SDK</font> path, second being the path for CodeWarrior Compiler &amp; tools. Execution of this file sets these paths and also sets the build type to Release by default.
-<dt>Buildtype.bat
-<dd> This is used to set the build type to debug or release. Change the build type only after executing SetNWBld.bat 
-
+</dt><dd> The Execution of this file takes 2 parameters as input. The first being the NetWare <font SIZE="-1">SDK</font> path, second being the path for CodeWarrior Compiler &amp; tools. Execution of this file sets these paths and also sets the build type to Release by default.
+</dd><dt>Buildtype.bat
+</dt><dd> This is used to set the build type to debug or release. Change the build type only after executing SetNWBld.bat 
  Example:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt>1.
-<dd> Typing ``buildtype d on'' at the command prompt causes the buildtype to be set to Debug type with D2 flag set.
-<dt>2.
-<dd> Typing ``buildtype d off'' or ``buildtype d'' at the command prompt causes the buildtype to be set to Debug type with D1 flag set.
-<dt>3.
-<dd> Typing ``buildtype r'' at the command prompt sets it to Release Build type.</dl>
+</dt><dd> Typing ``buildtype d on'' at the command prompt causes the buildtype to be set to Debug type with D2 flag set.
+</dd><dt>2.
+</dt><dd> Typing ``buildtype d off'' or ``buildtype d'' at the command prompt causes the buildtype to be set to Debug type with D1 flag set.
+</dd><dt>3.
+</dt><dd> Typing ``buildtype r'' at the command prompt sets it to Release Build type.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 
 <h3>Make</h3>
@@ -57,9 +53,9 @@ url: "/docs/linux/man/1-perlnetware/"
  Currently the following two build types are tested on NetWare:
 <dl>
 <dt>&bull;
-<dd> <font SIZE="-1">USE_MULTI, USE_ITHREADS &amp; USE_IMP_SYS</font> defined
-<dt>&bull;
-<dd> <font SIZE="-1">USE_MULTI &amp; USE_IMP_SYS</font> defined and <font SIZE="-1">USE_ITHREADS</font> not defined</dl>
+</dt><dd> <font SIZE="-1">USE_MULTI, USE_ITHREADS &amp; USE_IMP_SYS</font> defined
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">USE_MULTI &amp; USE_IMP_SYS</font> defined and <font SIZE="-1">USE_ITHREADS</font> not defined</dd></dl>
 
 <h3>Interpreter</h3>
 
@@ -86,51 +82,41 @@ url: "/docs/linux/man/1-perlnetware/"
  Once this is done, do the following to build any extension:
 <dl>
 <dt>&bull;
-<dd> Change to the extension directory where its source files are present.
-<dt>&bull;
-<dd> Run the following command at the command prompt: 
-
+</dt><dd> Change to the extension directory where its source files are present.
+</dd><dt>&bull;
+</dt><dd> Run the following command at the command prompt: 
  <pre>
     perl -II&lt;path to NetWare lib dir&gt; -II&lt;path to lib&gt; Makefile.pl
 </pre> 
-
  Example: 
-
  <pre>
     perl -Ic:/perl/5.6.1/lib/NetWare-x86-multi-thread           \
                                 -Ic:\perl\5.6.1\lib MakeFile.pl
 </pre> 
-
  or 
-
  <pre>
     perl -Ic:/perl/5.8.0/lib/NetWare-x86-multi-thread           \
                                 -Ic:\perl\5.8.0\lib MakeFile.pl
 </pre>
-<dt>&bull;
-<dd> nmake
-<dt>&bull;
-<dd> nmake install 
-
+</dd><dt>&bull;
+</dt><dd> nmake
+</dd><dt>&bull;
+</dt><dd> nmake install 
  Install will copy the files into the Windows machine where NetWare Perl is installed and these files may have to be copied to the NetWare server manually. Alternatively, pass <i>INSTALLSITELIB=i:\perl\lib</i> as an input to makefile.pl above. Here <i>i:</i> is the mapped drive to the sys: volume of the server where Perl on NetWare is installed. Now typing <i>nmake install</i>, will copy the files onto the NetWare server. 
-
  Example: You can execute the following on the command prompt. 
-
  <pre>
   perl -Ic:/perl/5.6.1/lib/NetWare-x86-multi-thread             \
                                 -Ic:\perl\5.6.1\lib MakeFile.pl
   INSTALLSITELIB=i:\perl\lib
 </pre> 
-
  or 
-
  <pre>
   perl -Ic:/perl/5.8.0/lib/NetWare-x86-multi-thread             \
                                 -Ic:\perl\5.8.0\lib MakeFile.pl
   INSTALLSITELIB=i:\perl\lib
 </pre>
-<dt>&bull;
-<dd> Note: Some modules downloaded from <font SIZE="-1">CPAN</font> may require NetWare related <font SIZE="-1">API</font> in order to build on NetWare. Other modules may however build smoothly with or without minor changes depending on the type of module.</dl>
+</dd><dt>&bull;
+</dt><dd> Note: Some modules downloaded from <font SIZE="-1">CPAN</font> may require NetWare related <font SIZE="-1">API</font> in order to build on NetWare. Other modules may however build smoothly with or without minor changes depending on the type of module.</dd></dl>
 
 <h2>ACKNOWLEDGEMENTS</h2>
 
@@ -144,27 +130,26 @@ url: "/docs/linux/man/1-perlnetware/"
 
 <dl>
 <dt>&bull;
-<dd> Created - 18 Jan 2001
-<dt>&bull;
-<dd> Modified - 25 June 2001
-<dt>&bull;
-<dd> Modified - 13 July 2001
-<dt>&bull;
-<dd> Modified - 28 May 2002 
-
-</dl>
+</dt><dd> Created - 18 Jan 2001
+</dd><dt>&bull;
+</dt><dd> Modified - 25 June 2001
+</dd><dt>&bull;
+</dt><dd> Modified - 13 July 2001
+</dd><dt>&bull;
+</dt><dd> Modified - 28 May 2002 
+</dd></dl>
 
 <h2>Index</h2>
 
 
 
 <dt><a HREF="#lbAJ">INSTALL</a>
-<dd>
-<dt><a HREF="#lbAK">BUILD NEW EXTENSIONS</a>
-<dd>
-<dt><a HREF="#lbAL">ACKNOWLEDGEMENTS</a>
-<dd>
-<dt><a HREF="#lbAM">AUTHORS</a>
-<dd>
-<dt><a HREF="#lbAN">DATE</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">BUILD NEW EXTENSIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">ACKNOWLEDGEMENTS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">AUTHORS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">DATE</a>
+</dt><dd></dd></dl>

@@ -14,8 +14,8 @@ description: "gnutls_ia_free_server_credentials – Used to free an allocated #g
 <p> <code>void gnutls_ia_free_server_credentials(gnutls_ia_server_credentials_t </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ia_server_credentials_t sc</p>
-<dd> is a <code>gnutls_ia_server_credentials_t</code> structure.</dl>
+<dt>gnutls_ia_server_credentials_t sc</dt>
+<dd> is a <code>gnutls_ia_server_credentials_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This structure is complex enough to manipulate directly thus this helper function is provided in order to free (deallocate) it.</p>
 <h2>REPORTING BUGS</h2>
@@ -27,6 +27,6 @@ description: "gnutls_ia_free_server_credentials – Used to free an allocated #g
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

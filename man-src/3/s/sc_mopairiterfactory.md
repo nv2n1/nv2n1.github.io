@@ -11,9 +11,7 @@ description: "sc::MOPairIterFactory –"
 <p> This class produces <code>MOPairIter</code> objects.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pairiter.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>Ref</code>&lt; <code>SpatialMOPairIter</code> &gt; <code>mopairiter</code> (const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space1, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space2)<br />
  <i>Constructs an appropriate </i><code>MOPairIter</code> object.<br />

@@ -15,15 +15,15 @@ description: "hostip – Resolve a host name to an IP address"
 <p> It can be useful in order to retrieve IP addresses before <a href="/docs/linux/man/8-dnscrypt-proxy/">dnscrypt-proxy</a>(8) is started.</p>
 <h2>Options</h2>
 <dl>
-<dt>&bull;</p>
-<dd><code>-6</code>, <code>&#8211;ipv6</code>: ask for AAAA records.</p>
-<dt>&bull;</p>
-<dd><code>-h</code>, <code>&#8211;help</code>: show usage.</p>
-<dt>&bull;</p>
-<dd><code>-r</code>, <code>&#8211;resolver-address=&lt;ip&gt;[:port]</code>: the resolver IP address (default: 8.8.8.8, Google DNS).</p>
-<dt>&bull;</p>
-<dd><code>-V</code>, <code>&#8211;version</code>: show version number.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd><code>-6</code>, <code>&#8211;ipv6</code>: ask for AAAA records.</dd>
+<dt>&bull;</dt>
+<dd><code>-h</code>, <code>&#8211;help</code>: show usage.</dd>
+<dt>&bull;</dt>
+<dd><code>-r</code>, <code>&#8211;resolver-address=&lt;ip&gt;[:port]</code>: the resolver IP address (default: 8.8.8.8, Google DNS).</dd>
+<dt>&bull;</dt>
+<dd><code>-V</code>, <code>&#8211;version</code>: show version number.</dd>
+<dd></dd></dl>
 <h2>Simple Usage Example</h2>
 <pre>$ hostip <a rel="nofollow" href="http://www.example.com">www.example.com</a></pre>
 <h2>Advanced Usage Example</h2>

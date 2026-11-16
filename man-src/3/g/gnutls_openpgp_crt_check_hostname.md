@@ -14,10 +14,10 @@ description: "gnutls_openpgp_crt_check_hostname – API function"
 <p> <code>int gnutls_openpgp_crt_check_hostname(gnutls_openpgp_crt_t </code><i>key</i><code>, const char * </code><i>hostname</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> should contain a <code>gnutls_openpgp_crt_t</code> structure</p>
-<dt>const char * hostname</p>
-<dd> A null terminated string that contains a DNS name</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> should contain a <code>gnutls_openpgp_crt_t</code> structure</dd>
+<dt>const char * hostname</dt>
+<dd> A null terminated string that contains a DNS name</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will check if the given key&#8217;s owner matches the given hostname. This is a basic implementation of the matching described in RFC2818 (HTTPS), which takes into account wildcards.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_openpgp_crt_check_hostname – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -15,10 +15,10 @@ description: "pgmslice – extract one line of pixel values out of a portable gr
 <p> Extracts one line of pixel values out of a portable graymap and outputs it in a two column ascii format, with the first value being the pixel&#8217;s position in the line and the second value the pixel&#8217;s greyscale value. This is useful for making cross sections through, for example, greyscale CCD images.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-row</code></p>
-<dd> Extract a row of pixels</p>
-<dt><code>-col</code></p>
-<dd> Extract a column of pixels</dl>
+<dt><code>-row</code></dt>
+<dd> Extract a row of pixels</dd>
+<dt><code>-col</code></dt>
+<dd> Extract a column of pixels</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
 <h2>AUTHOR</h2>

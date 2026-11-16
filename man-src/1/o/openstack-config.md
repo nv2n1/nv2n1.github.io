@@ -15,14 +15,10 @@ description: "openstack-config – Manipulate the OpenStack ini files"
 <p> Provide functionality to add/edit/delete items and sections in the OpenStack ini format config files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt> <code>&#8211;set</code></p>
-<dt>
-<dd>
-<dd>Add/Edit the specified parameter</p>
-<dt> <code>&#8211;del</code></p>
-<dt>
-<dd>
-<dd>Remove the specified parameter or section</dl>
+<dt> <code>&#8211;set</code></dt>
+<dd>Add/Edit the specified parameter</dd>
+<dt> <code>&#8211;del</code></dt>
+<dd>Remove the specified parameter or section</dd></dl>
 <h2>SEE ALSO</h2>
 <p> This command is deprecated. Please consider using the more featureful <a href="/docs/linux/man/1-crudini/">crudini</a>(1). </p>
 <h2>Index</h2>

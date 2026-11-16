@@ -11,7 +11,6 @@ std::wcsncat - std::wcsncat
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wcsncat(wchar_t *dest, const wchar_t *src, std::size_t count);</code></pre> 
 Appends at most count wide characters from the wide string pointed to by src to the end of the character string pointed to by dest, stopping if the null terminator is copied. The wide character src[0] replaces the null terminator at the end of dest. The null terminator is always appended in the end (so the maximum number of wide characters the function may write is count+1). 
 The behavior is undefined if the destination array is not large enough for the contents of both str and dest and the terminating null wide character. 
@@ -30,12 +29,9 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cwchar&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;clocale&gt;
 int main(void)
-
 {
     wchar_t str[50] = L&quot;Земля, прощай.&quot;;
     std::wcsncat(str, L&quot; &quot;, 1);

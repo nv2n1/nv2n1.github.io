@@ -11,35 +11,20 @@ std::experimental::parallel::reduce - std::experimental::parallel::reduce
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/numeric&gt;
-
 template&lt;class InputIt&gt;
-
 typename std::iterator_traits&lt;InputIt&gt;::value_type reduce(               (1) (parallelism TS)
-
 InputIt first, InputIt last);
-
 template&lt;class ExecutionPolicy, class InputIterator&gt;
-
 typename std::iterator_traits&lt;InputIt&gt;::value_type reduce(               (2) (parallelism TS)
-
 ExecutionPolicy&amp;&amp; policy, InputIt first, InputIt last);
-
 template&lt;class InputIt, class T&gt;                                         (3) (parallelism TS)
-
 T reduce(InputIt first, InputIt last, T init);
-
 template&lt;class ExecutionPolicy, class InputIt, class T&gt;                  (4) (parallelism TS)
-
 T reduce(ExecutionPolicy&amp;&amp; policy, InputIt first, InputIt last, T init);
-
 template&lt;class InputIt, class T, class BinaryOp&gt;                         (5) (parallelism TS)
-
 T reduce(InputIt first, InputIt last, T init, BinaryOp binary_op);
-
 template&lt;class ExecutionPolicy, class InputIt, class T, class BinaryOp&gt;
-
 T reduce(ExecutionPolicy&amp;&amp; policy,                                       (6) (parallelism TS)
-
 InputIt first, InputIt last, T init, BinaryOp binary_op);</code></pre> 
 1) same as reduce(first, last, typename std::iterator_traits&lt;InputIt&gt;::value_type{}) 
 3) same as reduce(first, last, init, std::plus&lt;&gt;()) 
@@ -122,18 +107,12 @@ If the range is empty, init is returned, unmodified
 
 reduce is the out-of-order version of std::accumulate: 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;experimental/execution_policy&gt;
-
 #include &lt;experimental/numeric&gt;
 int main()
-
 {
     std::vector&lt;double&gt; v(10'000'007, 0.5);
     {

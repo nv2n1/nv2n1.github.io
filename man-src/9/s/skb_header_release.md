@@ -14,7 +14,7 @@ description: "skb_header_release – release reference to header"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer to operate on</dl>
+</dd><dd>buffer to operate on</dd></dl>
 <h2>Description</h2>
 <p>Drop a reference to the header part of the buffer. This is done by acquiring a payload reference. You must not read from the header part of skb-&gt;data after this.</p>
 <h2>Note</h2>

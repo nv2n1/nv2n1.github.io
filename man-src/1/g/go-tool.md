@@ -15,8 +15,8 @@ description: "go-tool – tool for managing Go source code"
 <p> Tool runs the go tool command identified by the arguments. With no arguments it prints the list of known tools.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> The -n flag causes tool to print the command that would be executed but not execute it.</dl>
+<dt><code>-n</code></dt>
+<dd> The -n flag causes tool to print the command that would be executed but not execute it.</dd></dl>
 <p> For more about each tool command, see &#8216;go tool command -h&#8217;.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help tool&#8217; for the Debian project (and may be used by others). </p>

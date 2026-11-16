@@ -10,66 +10,24 @@ description: "QuantLib::LfmCovarianceParameterization – Libor market model par
 <p>QuantLib::LfmCovarianceParameterization &#8211; Libor market model parameterization </p>
 <h2>Synopsis</h2>
 <pre><code>LfmCovarianceParameterization (Size size, Size factors)
-
-
-
 Size size () const
-
-
-
 Size factors () const
-
-
-
 virtual Disposable&lt; Matrix &gt; diffusion (Time t, const Array &amp;x=Null&lt; Array &gt;()) const =0
-
-
-
 virtual Disposable&lt; Matrix &gt; covariance (Time t, const Array &amp;x=Null&lt; Array &gt;()) const
-
-
-
 virtual Disposable&lt; Matrix &gt; integratedCovariance (Time t, const Array &amp;x=Null&lt; Array &gt;()) const
-
-
-
 Protected Attributes
 const Size size_
-
-
-
 const Size factors_</code></pre>
 <p> Inherited by <code>LfmCovarianceProxy</code>, and <code>LfmHullWhiteParameterization</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LfmCovarianceParameterization (Size size, Size factors)
-
-
-
 Size size () const
-
-
-
 Size factors () const
-
-
-
 virtual Disposable&lt; Matrix &gt; diffusion (Time t, const Array &amp;x=Null&lt; Array &gt;()) const =0
-
-
-
 virtual Disposable&lt; Matrix &gt; covariance (Time t, const Array &amp;x=Null&lt; Array &gt;()) const
-
-
-
 virtual Disposable&lt; Matrix &gt; integratedCovariance (Time t, const Array &amp;x=Null&lt; Array &gt;()) const
-
-
-
 Protected Attributes
 const Size size_
-
-
-
 const Size factors_</code></pre>
 <h2>Detailed Description</h2>
 <p>Libor market model parameterization </p>

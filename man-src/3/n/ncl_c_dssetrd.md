@@ -10,9 +10,9 @@ c_dssetrd - Set double valued parameters
 <h2>Function Prototype</h2>void c_dssetrd(char *, double);
 <h2>Synopsis</h2>void c_dssetrd(pnam, dval);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>A string that specifies the name of the parameter to be set.
-<dt>dval
-<dd>A double value to be assigned to the internal parameter specified by pnam.</dl><h2>Usage</h2>This routine allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
+</dt><dd>A string that specifies the name of the parameter to be set.
+</dd><dt>dval
+</dt><dd>A double value to be assigned to the internal parameter specified by pnam.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Dsgrid parameters. For a complete list of parameters available in this utility, see the dsgrid_params man page.
 <h2>Access</h2>To use c_dssetrd, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>c_dsgrid, c_dsgrid_params, c_dsgrid2s, c_dsgrid3s, c_dsgrid2d, c_dsgrid3d, c_dspnt2s, c_dspnt2d, c_dspnt3s, c_dspnt3d, c_dsgetrd 
 

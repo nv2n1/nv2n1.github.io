@@ -15,22 +15,22 @@ description: "flpsed – annotate PostScript and PDF files"
 <p> The utility allows to annotate Postscript files. PDF files can be imported using the pdftops and exported using the ps2pdf utility. If the document was saved in Postscript format, added text can be reedited later. is useful for filling in forms or adding short comments. Batch mode can be used to automate form filling. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Batch mode (no GUI). In batch mode reads from stdin, if no <i>infile</i> is specified. Batch mode is useful in combination with the <i>&#8211;</i><code>t</code> option.</p>
-<dt><code>-d</code></p>
-<dd> Dump tags and values from a document to stdout (implies &#8211;<code>b</code> ).</p>
-<dt><code>-h</code></p>
-<dd> Show short help text.</p>
-<dt><code>-t </code><i>tag=value</i></p>
-<dd> Set text to <i>value</i> where tag is <i>tag</i> Multiple &#8211;<code>t</code> options are allowed.</p>
-<dt><code>-z </code><i>zoom</i></p>
-<dd> Set initial zoom value in percent.</p>
-<dt><code>-geometry </code><i>WxH+X+Y</i></p>
-<dd> Set initial geometry.</p>
-<dt><code>-iconic</code></p>
-<dd> Start iconified.</p>
-<dt><code>-scheme </code><i>string</i></p>
-<dd> Use fltk scheme <i>string</i> Currently fltk supports &quot;plastic&quot; and &quot;gtk+&quot;.</dl>
+<dt><code>-b</code></dt>
+<dd> Batch mode (no GUI). In batch mode reads from stdin, if no <i>infile</i> is specified. Batch mode is useful in combination with the <i>&#8211;</i><code>t</code> option.</dd>
+<dt><code>-d</code></dt>
+<dd> Dump tags and values from a document to stdout (implies &#8211;<code>b</code> ).</dd>
+<dt><code>-h</code></dt>
+<dd> Show short help text.</dd>
+<dt><code>-t </code><i>tag=value</i></dt>
+<dd> Set text to <i>value</i> where tag is <i>tag</i> Multiple &#8211;<code>t</code> options are allowed.</dd>
+<dt><code>-z </code><i>zoom</i></dt>
+<dd> Set initial zoom value in percent.</dd>
+<dt><code>-geometry </code><i>WxH+X+Y</i></dt>
+<dd> Set initial geometry.</dd>
+<dt><code>-iconic</code></dt>
+<dd> Start iconified.</dd>
+<dt><code>-scheme </code><i>string</i></dt>
+<dd> Use fltk scheme <i>string</i> Currently fltk supports &quot;plastic&quot; and &quot;gtk+&quot;.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Ex -std</p>
 <h2>EXAMPLES</h2>

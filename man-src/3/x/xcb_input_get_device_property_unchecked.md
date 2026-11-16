@@ -10,12 +10,7 @@ description: "xcb_input_get_device_property –"
 <p>xcb_input_get_device_property &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xinput.h&gt;
-
-
 Request function
-
-
-
 xcb_input_get_device_property_cookie_t xcb_input_get_device_property(xcb_connection_t *conn, xcb_atom_t property, xcb_atom_t type, uint32_t offset, uint32_t len, uint8_t device_id, uint8_t _delete);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_input_get_device_property_reply_t {
@@ -32,45 +27,45 @@ xcb_input_get_device_property_cookie_t xcb_input_get_device_property(xcb_connect
 } <code>xcb_input_get_device_property_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_input_get_device_property_reply_t *<code>xcb_input_get_device_property_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_input_get_device_property_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_input_get_device_property_reply_t *<code>xcb_input_get_device_property_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_input_get_device_property_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <p>xcb_input_get_device_property_items_t *xcb_input_get_device_property_items (const xcb_input_get_device_property_request_t *reply)</p>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>property</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>type</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>offset</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>device_id</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>_delete</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>property</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>type</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>offset</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>device_id</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>_delete</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_INPUT_GET_DEVICE_PROPERTY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>xi_reply_type</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>type</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bytes_after</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_items</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>format</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>device_id</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_INPUT_GET_DEVICE_PROPERTY</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>xi_reply_type</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>type</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bytes_after</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_items</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>format</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>device_id</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_input_get_device_property_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_input_get_device_property_reply</i>. </p>

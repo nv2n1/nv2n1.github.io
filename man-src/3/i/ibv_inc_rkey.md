@@ -17,10 +17,10 @@ url: "/docs/linux/man/3-ibv_inc_rkey/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 uint32_t ibv_inc_rkey(uint32_t rkey);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

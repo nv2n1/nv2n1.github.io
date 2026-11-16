@@ -13,53 +13,53 @@ description: "pki-server-upgrade – Tool for upgrading Certificate System serve
 <h2>Description</h2>
 <p>There are two parts to upgrading Certificate System: upgrading the system configuration files used by both the client and the server processes and upgrading the server configuration files. When upgrading Certificate System, the existing server configuration files (e.g. <code>server.xml</code>, <code>web.xml</code>) may need to be upgraded because the content may have changed from one version to another. The configuration upgrade is executed automatically during RPM upgrade. However, in case there is a problem, the process can also be run manually using <code>pki-server-upgrade</code>. The server upgrade process is done incrementally using upgrade scriptlets. A server consists of the server instance itself and the subsystems running in that instance. The upgrade process executes one scriptlet at a time, running through each component (server instance and subsystem) in parallel and completing before executing the next scriptlet. If one component encounters an error, that component is skipped in the subsequent upgrade scriptlets. The upgrade process and scriptlet execution for each component is monitored in upgrade trackers. A counter shows the latest index number for the most recently executed scriptlet; when all scriptlets have run, the component tracker shows the updated version number. The scriptlets are stored in the upgrade directory:</p>
 <dl>
-<dd>/usr/share/pki/server/upgrade/&lt;version&gt;/&lt;index&gt;-&lt;name&gt;</dl>
+<dd>/usr/share/pki/server/upgrade/&lt;version&gt;/&lt;index&gt;-&lt;name&gt;</dd></dl>
 <p> The <code>version</code> is the server version to be upgraded. The <code>index</code> is the script execution order. The <code>name</code> is the scriptlet name. During upgrade, the scriptlets will back up all changes to the file system into the following folder:</p>
 <dl>
-<dd>/var/log/pki/server/upgrade/&lt;version&gt;/&lt;index&gt;</dl>
+<dd>/var/log/pki/server/upgrade/&lt;version&gt;/&lt;index&gt;</dd></dl>
 <p> The <code>version</code> and <code>index</code> values indicate the scriptlet being executed. A copy of the files and folders that are being modified or removed will be stored in <code>oldfiles</code>. The names of the newly-added files and folders will be stored in <code>newfiles</code>. The instance upgrade process is tracked using this file:</p>
 <dl>
-<dd>/var/lib/pki/&lt;instance&gt;/conf/tomcat.conf</dl>
+<dd>/var/lib/pki/&lt;instance&gt;/conf/tomcat.conf</dd></dl>
 <p> The subsystem upgrade process is tracked using this file:</p>
 <dl>
-<dd>/var/lib/pki/&lt;instance&gt;/&lt;subsystem&gt;/conf/CS.cfg</dl>
+<dd>/var/lib/pki/&lt;instance&gt;/&lt;subsystem&gt;/conf/CS.cfg</dd></dl>
 <p> The file stores the current configuration version and the last successful scriptlet index. </p>
 <h2>Options</h2>
 <h3>General options</h3>
 <dl>
-<dt><code>&#8211;silent</code></p>
-<dd>Upgrade in silent mode.</p>
-<dt><code>&#8211;status</code></p>
-<dd>Show upgrade status only <code>without</code> performing the upgrade.</p>
-<dt><code>&#8211;revert</code></p>
-<dd>Revert the last version.</p>
-<dt><code>-i, &#8211;instance &lt;instance&gt;</code></p>
-<dd>Upgrade a specific instance only.</p>
-<dt><code>-s, &#8211;subsystem &lt;subsystem&gt;</code></p>
-<dd>Upgrade a specific subsystem in an instance only.</p>
-<dt><code>-t, &#8211;instance-type &lt;type&gt;</code></p>
-<dd>Upgrade a specific instance type, by the major version number of the Dogtag instance. For example, use 9 for Dogtag 9 instances and 10 for Dogtag 10.</p>
-<dt><code>-X</code></p>
-<dd>Show advanced options.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Run in verbose mode.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show this help message. </p>
+<dt><code>&#8211;silent</code></dt>
+<dd>Upgrade in silent mode.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd>Show upgrade status only <code>without</code> performing the upgrade.</dd>
+<dt><code>&#8211;revert</code></dt>
+<dd>Revert the last version.</dd>
+<dt><code>-i, &#8211;instance &lt;instance&gt;</code></dt>
+<dd>Upgrade a specific instance only.</dd>
+<dt><code>-s, &#8211;subsystem &lt;subsystem&gt;</code></dt>
+<dd>Upgrade a specific subsystem in an instance only.</dd>
+<dt><code>-t, &#8211;instance-type &lt;type&gt;</code></dt>
+<dd>Upgrade a specific instance type, by the major version number of the Dogtag instance. For example, use 9 for Dogtag 9 instances and 10 for Dogtag 10.</dd>
+<dt><code>-X</code></dt>
+<dd>Show advanced options.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Run in verbose mode.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show this help message. </dd>
 </dl>
 <h3>Advanced options</h3>
 <p>The advanced options circumvent the normal component tracking process by changing the scriptlet order or changing the tracker information. </p>
 <p> <code>WARNING:</code> These options may render the system unusable. </p>
 <dl>
-<dt><code>&#8211;scriptlet-version &lt;version&gt;</code></p>
-<dd>Run scriptlets for a specific version only.</p>
-<dt><code>&#8211;scriptlet-index &lt;index&gt;</code></p>
-<dd>Run a specific scriptlet only.</p>
-<dt><code>&#8211;remove-tracker</code></p>
-<dd>Remove the tracker.</p>
-<dt><code>&#8211;reset-tracker</code></p>
-<dd>Reset the tracker to match the package version.</p>
-<dt><code>&#8211;set-tracker &lt;version&gt;</code></p>
-<dd>Set the tracker to a specific version. </p>
+<dt><code>&#8211;scriptlet-version &lt;version&gt;</code></dt>
+<dd>Run scriptlets for a specific version only.</dd>
+<dt><code>&#8211;scriptlet-index &lt;index&gt;</code></dt>
+<dd>Run a specific scriptlet only.</dd>
+<dt><code>&#8211;remove-tracker</code></dt>
+<dd>Remove the tracker.</dd>
+<dt><code>&#8211;reset-tracker</code></dt>
+<dd>Reset the tracker to match the package version.</dd>
+<dt><code>&#8211;set-tracker &lt;version&gt;</code></dt>
+<dd>Set the tracker to a specific version. </dd>
 </dl>
 <h2>Operations</h2>
 <h3>Interactive mode</h3>

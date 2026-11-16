@@ -16,11 +16,11 @@ description: "grantpt – grant access to the slave pseudoterminal"
 <p> <code>grantpt</code>(): </p>
 <dl>
 <dt>
-<dd> Since glibc 2.24:<br />
+</dt><dd> Since glibc 2.24:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br />
  Glibc 2.23 and earlier:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>grantpt</code>() function changes the mode and owner of the slave pseudoterminal device corresponding to the master pseudoterminal referred to by the file descriptor <i>fd</i>. The user ID of the slave is set to the real UID of the calling process. The group ID is set to an unspecified value (e.g., <i>tty</i>). The mode of the slave is set to 0620 (crw&#8211;w&#8212;-). </p>
 <p> The behavior of <code>grantpt</code>() is unspecified if a signal handler is installed to catch <code>SIGCHLD</code> signals.</p>
@@ -28,12 +28,12 @@ description: "grantpt – grant access to the slave pseudoterminal"
 <p> When successful, <code>grantpt</code>() returns 0. Otherwise, it returns -1 and sets <i>errno</i> appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The corresponding slave pseudoterminal could not be accessed.</p>
-<dt><code>EBADF</code></p>
-<dd> The <i>fd</i> argument is not a valid open file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>fd</i> argument is valid but not associated with a master pseudoterminal.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The corresponding slave pseudoterminal could not be accessed.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The <i>fd</i> argument is not a valid open file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>fd</i> argument is valid but not associated with a master pseudoterminal.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>grantpt</code>() is provided in glibc since version 2.1.</p>
 <h2>ATTRIBUTES</h2>

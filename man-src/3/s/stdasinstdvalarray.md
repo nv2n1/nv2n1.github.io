@@ -11,9 +11,7 @@ std::asin(std::valarray) - std::asin(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; asin(const valarray&lt;T&gt; &amp;va);</code></pre> 
 For each element in va computes arc sine of the value of the element. 
 
@@ -54,13 +52,10 @@ The function can be implemented with the return type different from std::valarra
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 const double pi = 4.0 * atan(1.0);
 int main()
-
 {
     // take common y-values from unit circle
     std::valarray&lt;double&gt; v1 = {-1.0, -sqrt(3.0) / 2.0, -sqrt(2.0) / 2.0, -0.5, 0.0, 0.5, sqrt(2.0) / 2.0, sqrt(3.0) / 2.0, 1.0};

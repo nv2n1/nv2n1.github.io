@@ -15,11 +15,11 @@ strpbrk - Find the first occurrence of a set of characters
 <h2>Arguments</h2>
 
 <i>cs</i>
-<dl><dd><dd>The string to be searched</dl>
+<dl><dd></dd><dd>The string to be searched</dd></dl>
  
 
  <i>ct</i>
-<dl><dd>The characters to search for</dl>
+<dl><dd>The characters to search for</dd></dl>
 
 <h2>Copyright</h2>
 

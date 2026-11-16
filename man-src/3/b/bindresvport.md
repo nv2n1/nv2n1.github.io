@@ -24,12 +24,12 @@ int bindresvport(int sockfd, struct sockaddr_in *sin);
 <h2>ERRORS</h2>
 <p> <code>bindresvport</code>() can fail for any of the same reasons as <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2). In addition, the following errors may occur:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The calling process was not privileged (on Linux: the calling process did not have the <code>CAP_NET_BIND_SERVICE</code> capability in the user namespace governing its network namespace).</p>
-<dt><code>EADDRINUSE</code></p>
-<dd> All privileged ports are in use.</p>
-<dt><code>EAFNOSUPPORT</code> (<code>EPFNOSUPPORT</code> in glibc 2.7 and earlier)</p>
-<dd> <i>sin</i> is not NULL and <i>sin-&gt;sin_family</i> is not <code>AF_INET</code>.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The calling process was not privileged (on Linux: the calling process did not have the <code>CAP_NET_BIND_SERVICE</code> capability in the user namespace governing its network namespace).</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> All privileged ports are in use.</dd>
+<dt><code>EAFNOSUPPORT</code> (<code>EPFNOSUPPORT</code> in glibc 2.7 and earlier)</dt>
+<dd> <i>sin</i> is not NULL and <i>sin-&gt;sin_family</i> is not <code>AF_INET</code>.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

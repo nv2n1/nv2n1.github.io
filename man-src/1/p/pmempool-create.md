@@ -21,51 +21,51 @@ description: "pmempool-create – Create Persistent Memory Pool of specified typ
 <p> <code>-s, &#8211;size</code> &lt;size&gt;</p>
 <dl>
 <dt>
-<dd> Size of pool file.</dl>
+</dt><dd> Size of pool file.</dd></dl>
 <p> <code>-M, &#8211;max-size</code></p>
 <dl>
 <dt>
-<dd> Set size of pool to available space of underlying file system.</dl>
+</dt><dd> Set size of pool to available space of underlying file system.</dd></dl>
 <p> <code>-m, &#8211;mode</code> &lt;octal&gt;</p>
 <dl>
 <dt>
-<dd> Set permissions to &lt;octal&gt; (the default is 0664).</dl>
+</dt><dd> Set permissions to &lt;octal&gt; (the default is 0664).</dd></dl>
 <p> <code>-i, &#8211;inherit</code> &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Create a new pool of the same size and other properties as <code>&lt;file&gt;.</code></dl>
+</dt><dd> Create a new pool of the same size and other properties as <code>&lt;file&gt;.</code></dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Increase verbosity level.</dl>
+</dt><dd> Increase verbosity level.</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help message and exit.</dl>
+</dt><dd> Display help message and exit.</dd></dl>
 <h3>Options for PMEMBLK:</h3>
 <p> By default when creating a pmem <code>blk</code> pool, the <code>BTT</code> layout is <i>not</i> written until the first <i>write operation</i> of block entry is performed. Using <code>-w</code> option you can force writing the <code>BTT</code> layout. Please refer to <code>libpmemblk</code>(3) for details. </p>
 <p> <code>-w, &#8211;write-layout</code></p>
 <dl>
 <dt>
-<dd> Force writing the <code>BTT</code> layout.</dl>
+</dt><dd> Force writing the <code>BTT</code> layout.</dd></dl>
 <h3>Options for PMEMOBJ:</h3>
 <p> By default when creating a pmem <code>obj</code> pool, the layout name provided to the <code>libpmemobj</code> library is an empty string. Please refer to <code>libpmemobj</code>(3) for details. </p>
 <p> <code>-l, &#8211;layout &lt;layout&gt;</code></p>
 <dl>
 <dt>
-<dd> Layout name of the <code>pmemobj</code> pool.</dl>
+</dt><dd> Layout name of the <code>pmemobj</code> pool.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>pmempool create blk 512 pool.blk</p>
-<dd> # Create a blk pool file of minimum allowed size and block size 512 bytes</p>
-<dt>pmempool create log -M pool.log</p>
-<dd> # Create a log pool file of maximum allowed size</p>
-<dt>pmempool create blk &#8211;size=4G &#8211;write-layout 1K pool.blk</p>
-<dd> # Create a blk pool file of size 4G, block size 1K and write the BTT layout</p>
-<dt>pmempool create &#8211;layout my_layout obj pool.obj</p>
-<dd> # Create an obj pool file of minimum allowed size and layout &#8216;my_layout&#8217;</p>
-<dt>pmempool create &#8211;inherit=pool.log new_pool.log</p>
-<dd> # Create a pool file based on pool.log file</dl>
+<dt>pmempool create blk 512 pool.blk</dt>
+<dd> # Create a blk pool file of minimum allowed size and block size 512 bytes</dd>
+<dt>pmempool create log -M pool.log</dt>
+<dd> # Create a log pool file of maximum allowed size</dd>
+<dt>pmempool create blk &#8211;size=4G &#8211;write-layout 1K pool.blk</dt>
+<dd> # Create a blk pool file of size 4G, block size 1K and write the BTT layout</dd>
+<dt>pmempool create &#8211;layout my_layout obj pool.obj</dt>
+<dd> # Create an obj pool file of minimum allowed size and layout &#8216;my_layout&#8217;</dd>
+<dt>pmempool create &#8211;inherit=pool.log new_pool.log</dt>
+<dd> # Create a pool file based on pool.log file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>

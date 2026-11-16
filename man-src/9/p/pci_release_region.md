@@ -15,11 +15,11 @@ pci_release_region - Release a PCI bar
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device whose resources were previously reserved by pci_request_region</dl>
+<dl><dd></dd><dd>PCI device whose resources were previously reserved by pci_request_region</dd></dl>
  
 
  <i>bar</i>
-<dl><dd>BAR to release</dl>
+<dl><dd>BAR to release</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,7 +14,7 @@ description: "relay_destroy_channel – free the channel struct"
 <p><i>kref</i></p>
 <dl>
 <dd>
-<dd>target kernel reference that contains the relay channel</dl>
+</dd><dd>target kernel reference that contains the relay channel</dd></dl>
 <h2>Description</h2>
 <p>Should only be called from <code>kref_put</code>.</p>
 <h2>Copyright</h2>

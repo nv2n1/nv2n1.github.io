@@ -27,20 +27,20 @@ $ llvm-cxxfilt &lt; input.txt
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;format=&lt;value&gt;, -s</code></p>
-<dd> Mangling scheme to assume. Valid values are <code>auto</code> (default, auto-detect the style) and <code>gnu</code> (assume GNU/Itanium style).</p>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>&#8211;no-strip-underscore, -n</code></p>
-<dd> Do not strip a leading underscore. This is the default for all platforms except Mach-O based hosts.</p>
-<dt><code>&#8211;strip-underscore, -_</code></p>
-<dd> Strip a single leading underscore, if present, from each input name before demangling. On by default on Mach-O based platforms.</p>
-<dt><code>&#8211;types, -t</code></p>
-<dd> Attempt to demangle names as type names as well as function names.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display the version of the <code>llvm-cxxfilt</code> executable.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dl>
+<dt><code>&#8211;format=&lt;value&gt;, -s</code></dt>
+<dd> Mangling scheme to assume. Valid values are <code>auto</code> (default, auto-detect the style) and <code>gnu</code> (assume GNU/Itanium style).</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>&#8211;no-strip-underscore, -n</code></dt>
+<dd> Do not strip a leading underscore. This is the default for all platforms except Mach-O based hosts.</dd>
+<dt><code>&#8211;strip-underscore, -_</code></dt>
+<dd> Strip a single leading underscore, if present, from each input name before demangling. On by default on Mach-O based platforms.</dd>
+<dt><code>&#8211;types, -t</code></dt>
+<dd> Attempt to demangle names as type names as well as function names.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the version of the <code>llvm-cxxfilt</code> executable.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options from response file <i>&lt;FILE&gt;</i>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-cxxfilt</code> returns 0 unless it encounters a usage error, in which case a non-zero exit code is returned.</p>
 <h2>SEE ALSO</h2>

@@ -15,7 +15,7 @@ usb_disable_autosuspend - prevent a USB device from being autosuspended
 <h2>Arguments</h2>
 
 <i>udev</i>
-<dl><dd><dd>the USB device which may not be autosuspended</dl>
+<dl><dd></dd><dd>the USB device which may not be autosuspended</dd></dl>
 
 <h2>Description</h2>
 

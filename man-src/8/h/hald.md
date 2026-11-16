@@ -15,16 +15,16 @@ description: "hald – HAL daemon"
 <h2>Options</h2>
 <p>The following options are supported:</p>
 <dl>
-<dt><i>&#8211;daemon=yes|no</i></p>
-<dd>Specify whether to run in the foreground or the background.</p>
-<dt><i>&#8211;verbose=yes|no</i></p>
-<dd>Enable verbose debug output.</p>
-<dt><i>&#8211;use-syslog</i></p>
-<dd>Enable logging of debug output to the syslog instead of stderr. Use this option only together with &#8211;verbose.</p>
-<dt><i>&#8211;help</i></p>
-<dd>Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd>Print the version of the daemon and exit. </p>
+<dt><i>&#8211;daemon=yes|no</i></dt>
+<dd>Specify whether to run in the foreground or the background.</dd>
+<dt><i>&#8211;verbose=yes|no</i></dt>
+<dd>Enable verbose debug output.</dd>
+<dt><i>&#8211;use-syslog</i></dt>
+<dd>Enable logging of debug output to the syslog instead of stderr. Use this option only together with &#8211;verbose.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd>Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd>Print the version of the daemon and exit. </dd>
 </dl>
 <h2>Bugs And Debugging</h2>
 <p>Please send bug reports to either the distribution or the HAL mailing list, see <i><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/hal">http://lists.freedesktop.org/mailman/listinfo/hal</a></i> on how to subscribe. </p>

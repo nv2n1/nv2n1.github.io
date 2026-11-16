@@ -11,14 +11,10 @@ std::common_type(std::chrono::duration) - std::common_type(std::chrono::duration
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Rep1, class Period1, class Rep2, class Period2&gt;
-
 struct common_type&lt;std::chrono::duration&lt;Rep1, Period1&gt;,
-
                    std::chrono::duration&lt;Rep2, Period2&gt;&gt; {
     (since C++ 11)
-
         typedef std::chrono::duration&lt;
-
             typename std::common_type&lt;Rep1, Rep2&gt;::type, /*see note*/&gt; type;
 };</code></pre> 
 Exposes the type named type, which is the common type of two std::chrono::durations. 
@@ -35,16 +31,12 @@ The period of the resulting duration is the greatest common divisor of Period1 a
 &nbsp;<wbr>&nbsp;// std::chrono already finds the greatest common divisor, 
 &nbsp;<wbr>&nbsp;// likely using std::common_type&lt;&gt;. We make the type 
 &nbsp;<wbr>&nbsp;// deduction externally. <pre><code>template &lt;typename T, typename S&gt;
-
 auto durationDiff(const T &amp;t, const S &amp;s) -&gt; typename std::common_type&lt;T, S&gt;::type
-
 {
     typedef typename std::common_type&lt;T, S&gt;::type Common;
     return Common(t) - Common(s);
 }
-
 int main()
-
 {
     typedef std::chrono::milliseconds milliseconds;
     typedef std::chrono::microseconds microseconds;

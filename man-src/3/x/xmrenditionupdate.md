@@ -17,11 +17,11 @@ description: "XmRenditionUpdate — A convenience function that modifies resourc
 <h2>Description</h2>
 <p><code>XmRenditionUpdate</code> modifies resources in the specified rendition.</p>
 <dl COMPACT>
-<dt><i>rendition</i></p>
-<dd>Specifies the rendition.</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list.</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dl>
+<dt><i>rendition</i></dt>
+<dd>Specifies the rendition.</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list.</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmrendition/">XmRendition</a></code>(3).</p>

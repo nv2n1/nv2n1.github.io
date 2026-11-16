@@ -11,46 +11,31 @@ std::end,std::cend - std::end,std::cend
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (since C++ 11)
-
         auto end(C &amp;c) -&gt; decltype(c.end());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto end(C &amp;c) -&gt; decltype(c.end());
-
 template &lt;class C&gt;
 (since C++ 11)
-
     auto end(const C &amp;c) -&gt; decltype(c.end());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto end(const C &amp;c) -&gt; decltype(c.end());
 (1)
-
     template &lt;class T, std::size_t N&gt;
     (since C++ 11)
-
         T *end(T (&amp;array)[N]);
 (1)(until C++ 14)
-
     template &lt;class T, std::size_t N&gt;
     (since C++ 14)
-
         constexpr T *end(T (&amp;array)[N]) noexcept;
 (2)
-
     template &lt;class C&gt;
-
     constexpr auto cend(const C &amp;c) noexcept(/* see below */)(3)(since C++ 14)
-
         -&gt; decltype(std::end(c));</code></pre> 
 Returns an iterator to the end (i.e. the element after the last element) of the given container c or array array. These templates rely on C::end() having a reasonable implementation. 
 1) Returns exactly c.end(), which is typically an iterator one past the end of the sequence represented by c. If C is a standard Container, this returns a C::iterator when c is not const-qualified, and a C::const_iterator otherwise. 
@@ -112,14 +97,10 @@ void for_each(Container &amp;&amp;cont, Function f)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {3, 1, 4};
     if (std::find(std::begin(v), std::end(v), 5) != std::end(v)) {

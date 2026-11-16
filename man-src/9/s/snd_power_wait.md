@@ -15,11 +15,11 @@ snd_power_wait - wait until the power-state is changed.
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>soundcard structure</dl>
+<dl><dd></dd><dd>soundcard structure</dd></dl>
  
 
  <i>power_state</i>
-<dl><dd>expected power state</dl>
+<dl><dd>expected power state</dd></dl>
 
 <h2>Description</h2>
 

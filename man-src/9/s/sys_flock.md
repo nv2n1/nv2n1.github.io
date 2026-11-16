@@ -14,10 +14,10 @@ description: "sys_flock – flock system call."
 <p><i>fd</i></p>
 <dl>
 <dd>
-<dd>the file descriptor to lock.</dl>
+</dd><dd>the file descriptor to lock.</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>the type of lock to apply.</dl>
+<dd>the type of lock to apply.</dd></dl>
 <h2>Description</h2>
 <p>Apply a <code>FL_FLOCK</code> style lock to an open file descriptor. The <i>cmd</i> can be one of </p>
 <p> <code>LOCK_SH</code> &#8212; a shared lock. </p>

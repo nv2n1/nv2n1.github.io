@@ -15,20 +15,20 @@ description: "flow-receive – Receive flow data with the NetFlow protocol."
 <p> The <code>flow-receive</code> utility is used to receive flows in NetFlow format. When the <i>remoteip</i> is configured only flows from that exporter will be processed, this is the most secure and recommended configuration. When the <i>localip</i> is configured <code>flow-receive</code> will only process flows sent to the <i> localip</i> IP address. If <i>remoteip</i> is 0 (not configured) flows from any source IP address are accepted. Multiple non aggregated PDU versions may be accepted at once to support Cisco&#8217;s Catalyst 6500 NetFlow implementation which exports from both the supervisor and MSFC with the same IP address and same port but different export versions. In this case the exports will be stored in the format specified by the -V flag or whichever export type is received first.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-o</code><i> file</i></p>
-<dd> Write to <i>file</i> instead of the standard out.</p>
-<dt><code>-S</code><i> stat_interval</i></p>
-<dd> When configured <code>flow-receive</code> will emit a timestamped message on stderr every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</p>
-<dt><code>-V</code><i> pdu_version</i></p>
-<dd> Use <i>pdu_version</i> format output. </p>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-o</code><i> file</i></dt>
+<dd> Write to <i>file</i> instead of the standard out.</dd>
+<dt><code>-S</code><i> stat_interval</i></dt>
+<dd> When configured <code>flow-receive</code> will emit a timestamped message on stderr every <i>stat_interval</i> minutes indicating counters such as the number of flows received, packets processed, and lost flows.</dd>
+<dt><code>-V</code><i> pdu_version</i></dt>
+<dd> Use <i>pdu_version</i> format output. </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -50,8 +50,8 @@ description: "flow-receive – Receive flow data with the NetFlow protocol."
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Listen on port 9800 on any local interface for exports from IP address 10.0.0.1, store the exports in <i>flows</i> </p>
 <p> <code>flow-receive</code> 0/10.0.0.1/9800 &gt; <i>flows</i> </p>

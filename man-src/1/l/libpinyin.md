@@ -16,24 +16,23 @@ description: "libpinyin – Library to deal with pinyin"
 <h2>USAGE</h2>
 <dl>
 <dt>
-<dd>gen_binary_files &#8211;table-dir &lt;DIRNAME&gt;</p>
+</dt><dd>gen_binary_files &#8211;table-dir &lt;DIRNAME&gt;</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt> <code>&#8211;table-dir</code></p>
-<dd>Read textual format files from the &lt;DIRNAME&gt; directory.</dl>
+<dt> <code>&#8211;table-dir</code></dt>
+<dd>Read textual format files from the &lt;DIRNAME&gt; directory.</dd></dl>
 </dl>
 <dt>
-<dd>import_interpolation &lt; &lt;MODELFILE&gt;</p>
+</dt><dd>import_interpolation &lt; &lt;MODELFILE&gt;</dd>
 <dt>
-<dd>gen_unigram </p>
+</dt><dd>gen_unigram </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Download the model.text.tar.gz, and extracts all files into the data sub-directory, then run the commands below to generate the binary model data. </p>
 <dl>
 <dt>
-<dd> gen_binary_files &#8211;table-dir ../data </p>
+</dt><dd> gen_binary_files &#8211;table-dir ../data </dd>
 <p> import_interpolation &lt; ../data/interpolation.text </p>
 <p> gen_unigram</dl>
 <h2>Index</h2>
+</p>

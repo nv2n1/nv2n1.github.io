@@ -14,23 +14,23 @@ description: "fc_host_post_event – called to post an even on an fc_host."
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>host the event occurred on</dl>
+</dd><dd>host the event occurred on</dd></dl>
 <p> <i>event_number</i></p>
 <dl>
-<dd>fc event number obtained from <code>get_fc_event_number</code></dl>
+<dd>fc event number obtained from <code>get_fc_event_number</code></dd></dl>
 <p> <i>event_code</i></p>
 <dl>
-<dd>fc_host event being posted</dl>
+<dd>fc_host event being posted</dd></dl>
 <p> <i>event_data</i></p>
 <dl>
-<dd>32bits of data for the event being posted</dl>
+<dd>32bits of data for the event being posted</dd></dl>
 <h2>Notes</h2>
 <p>This routine assumes no locks are held on entry.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

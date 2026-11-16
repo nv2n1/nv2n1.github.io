@@ -18,9 +18,9 @@ description: "ncecat – netCDF Ensemble Concatenator"
 <p> Consider a model experiment which generated five realizations of one year of data, say 1985. You can imagine that the experimenter slightly perturbs the initial conditions of the problem before generating each new solution. Assume each file contains all twelve months (a seasonal cycle) of data and we want to produce a single file containing all the seasonal cycles. Here the numeric filename suffix denotes the experiment number (<i>not</i> the month):</p>
 <dl>
 <dt>
-<dd> ncecat 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br />
+</dt><dd> ncecat 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br />
  ncecat 85_0[1-5].nc 85.nc<br />
- ncecat -n 5,2,1 85_01.nc 85.nc</dl>
+ ncecat -n 5,2,1 85_01.nc 85.nc</dd></dl>
 <p> These three commands produce identical answers. The output file, <code>85.nc</code>, is five times the size as a single <i>input-file</i>. It contains 60 months of data (which might or might not be stored in the record dimension, depending on the input files). </p>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
@@ -34,7 +34,7 @@ description: "ncecat – netCDF Ensemble Concatenator"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <p> <code><a href="/docs/linux/man/1-ncap/">ncap</a></code>(1), <code><a href="/docs/linux/man/1-ncap2/">ncap2</a></code>(1), <code><a href="/docs/linux/man/1-ncatted/">ncatted</a></code>(1), <code><a href="/docs/linux/man/1-ncbo/">ncbo</a></code>(1), <code><a href="/docs/linux/man/1-ncdiff/">ncdiff</a></code>(1), <code><a href="/docs/linux/man/1-nces/">nces</a></code>(1), <code><a href="/docs/linux/man/1-ncecat/">ncecat</a></code>(1), <code><a href="/docs/linux/man/1-ncflint/">ncflint</a></code>(1), <code><a href="/docs/linux/man/1-ncks/">ncks</a></code>(1), <code><a href="/docs/linux/man/1-nco/">nco</a></code>(1), <code><a href="/docs/linux/man/1-ncpdq/">ncpdq</a></code>(1), <code><a href="/docs/linux/man/1-ncra/">ncra</a></code>(1), <code><a href="/docs/linux/man/1-ncrcat/">ncrcat</a></code>(1), <code><a href="/docs/linux/man/1-ncrename/">ncrename</a></code>(1), <code><a href="/docs/linux/man/1-ncwa/">ncwa</a></code>(1) </p>
 <h2>HOMEPAGE</h2>

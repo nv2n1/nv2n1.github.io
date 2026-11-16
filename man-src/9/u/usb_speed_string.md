@@ -15,7 +15,7 @@ usb_speed_string - Returns human readable-name of the speed.
 <h2>Arguments</h2>
 
 <i>speed</i>
-<dl><dd><dd>The speed to return human-readable name for. If it's not any of the speeds defined in usb_device_speed enum, string for USB_SPEED_UNKNOWN will be returned.</dl>
+<dl><dd></dd><dd>The speed to return human-readable name for. If it's not any of the speeds defined in usb_device_speed enum, string for USB_SPEED_UNKNOWN will be returned.</dd></dl>
 
 <h2>Copyright</h2>
 

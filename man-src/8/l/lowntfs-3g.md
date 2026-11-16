@@ -21,7 +21,7 @@ description: "ntfs-3g – Third Generation Read/Write NTFS Driver"
 <p>On computers which can be dual-booted into Windows or Linux, Windows has to be fully shut down before booting into Linux, otherwise the NTFS file systems on internal disks may be left in an inconsistent state and changes made by Linux may be ignored by Windows. </p>
 <p> So, Windows may not be left in hibernation when starting Linux, in order to avoid inconsistencies. Moreover, the fast restart feature available on recent Windows systems has to be disabled. This can be achieved by issuing as an Administrator the Windows command which disables both hibernation and fast restarting :</p>
 <dl>
-<dd>powercfg /h off </p>
+<dd>powercfg /h off </dd>
 </dl>
 <p> If either Windows is hibernated or its fast restart is enabled, partitions on internal disks are forced to be mounted in read-only mode.</p>
 <h3>Access Handling and Security</h3>
@@ -31,3 +31,4 @@ description: "ntfs-3g – Third Generation Read/Write NTFS Driver"
 <p> If <code>ntfs-3g </code> is set setuid-root then non-root users will be also able to mount volumes.</p>
 <h3>Windows Filename Compatibility</h3>
 <p>NTFS supports several filename namespaces: DOS, Win32 and POSIX. While the <code>ntfs-3g</code> driver handles all of them, it always creates new files in the POSIX namespace for maximum portability and interoperability reasons. This means that filenames are case sensitive and all characters are allowed except &#8216;/&#8217; and &#8216;
+</p>

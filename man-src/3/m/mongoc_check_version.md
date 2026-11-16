@@ -17,14 +17,14 @@ mongoc_check_version (int required_major,
 </pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>required_major</code></p>
-<dd> The minimum major version required.</dl>
+<dt><code>required_major</code></dt>
+<dd> The minimum major version required.</dd></dl>
 <dl COMPACT>
-<dt><code>required_minor</code></p>
-<dd> The minimum minor version required.</dl>
+<dt><code>required_minor</code></dt>
+<dd> The minimum minor version required.</dd></dl>
 <dl COMPACT>
-<dt><code>required_micro</code></p>
-<dd> The minimum micro version required.</dl>
+<dt><code>required_micro</code></dt>
+<dd> The minimum micro version required.</dd></dl>
 <h2>Returns</h2>
 <p> True if libmongoc&#8217;s version is greater than or equal to the required version. </p>
 <h2>Colophon</h2>

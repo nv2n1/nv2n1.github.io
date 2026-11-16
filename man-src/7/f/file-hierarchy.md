@@ -14,146 +14,146 @@ description: "file-hierarchy – File system hierarchy overview"
 <h2>General Structure</h2>
 <p>/</p>
 <dl>
-<dd>The file system root. Usually writable, but this is not required. Possibly a temporary file system (&quot;tmpfs&quot;). Not shared with other hosts (unless read-only).</dl>
+<dd>The file system root. Usually writable, but this is not required. Possibly a temporary file system (&quot;tmpfs&quot;). Not shared with other hosts (unless read-only).</dd></dl>
 <p> /boot/</p>
 <dl>
-<dd>The boot partition used for bringing up the system. On EFI systems, this is possibly the EFI System Partition (ESP), also see <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8). This directory is usually strictly local to the host, and should be considered read-only, except when a new kernel or boot loader is installed. This directory only exists on systems that run on physical or emulated hardware that requires boot loaders.</dl>
+<dd>The boot partition used for bringing up the system. On EFI systems, this is possibly the EFI System Partition (ESP), also see <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8). This directory is usually strictly local to the host, and should be considered read-only, except when a new kernel or boot loader is installed. This directory only exists on systems that run on physical or emulated hardware that requires boot loaders.</dd></dl>
 <p> /efi/</p>
 <dl>
-<dd>If the boot partition /boot/ is maintained separately from the EFI System Partition (ESP), the latter is mounted here. Tools that need to operate on the EFI system partition should look for it at this mount point first, and fall back to /boot/ &#8212; if the former doesn&#8217;t qualify (for example if it is not a mount point or does not have the correct file system type <code>MSDOS_SUPER_MAGIC</code>).</dl>
+<dd>If the boot partition /boot/ is maintained separately from the EFI System Partition (ESP), the latter is mounted here. Tools that need to operate on the EFI system partition should look for it at this mount point first, and fall back to /boot/ &#8212; if the former doesn&#8217;t qualify (for example if it is not a mount point or does not have the correct file system type <code>MSDOS_SUPER_MAGIC</code>).</dd></dl>
 <p> /etc/</p>
 <dl>
-<dd>System-specific configuration. This directory may or may not be read-only. Frequently, this directory is pre-populated with vendor-supplied configuration files, but applications should not make assumptions about this directory being fully populated or populated at all, and should fall back to defaults if configuration is missing.</dl>
+<dd>System-specific configuration. This directory may or may not be read-only. Frequently, this directory is pre-populated with vendor-supplied configuration files, but applications should not make assumptions about this directory being fully populated or populated at all, and should fall back to defaults if configuration is missing.</dd></dl>
 <p> /home/</p>
 <dl>
-<dd>The location for normal user&#8217;s home directories. Possibly shared with other systems, and never read-only. This directory should only be used for normal users, never for system users. This directory and possibly the directories contained within it might only become available or writable in late boot or even only after user authentication. This directory might be placed on limited-functionality network file systems, hence applications should not assume the full set of file API is available on this directory. Applications should generally not reference this directory directly, but via the per-user <i>$HOME</i> environment variable, or via the home directory field of the user database.</dl>
+<dd>The location for normal user&#8217;s home directories. Possibly shared with other systems, and never read-only. This directory should only be used for normal users, never for system users. This directory and possibly the directories contained within it might only become available or writable in late boot or even only after user authentication. This directory might be placed on limited-functionality network file systems, hence applications should not assume the full set of file API is available on this directory. Applications should generally not reference this directory directly, but via the per-user <i>$HOME</i> environment variable, or via the home directory field of the user database.</dd></dl>
 <p> /root/</p>
 <dl>
-<dd>The home directory of the root user. The root user&#8217;s home directory is located outside of /home/ in order to make sure the root user may log in even without /home/ being available and mounted.</dl>
+<dd>The home directory of the root user. The root user&#8217;s home directory is located outside of /home/ in order to make sure the root user may log in even without /home/ being available and mounted.</dd></dl>
 <p> /srv/</p>
 <dl>
-<dd>The place to store general server payload, managed by the administrator. No restrictions are made how this directory is organized internally. Generally writable, and possibly shared among systems. This directory might become available or writable only very late during boot.</dl>
+<dd>The place to store general server payload, managed by the administrator. No restrictions are made how this directory is organized internally. Generally writable, and possibly shared among systems. This directory might become available or writable only very late during boot.</dd></dl>
 <p> /tmp/</p>
 <dl>
-<dd>The place for small temporary files. This directory is usually mounted as a &quot;tmpfs&quot; instance, and should hence not be used for larger files. (Use /var/tmp/ for larger files.) This directory is usually flushed at boot-up. Also, files that are not accessed within a certain time may be automatically deleted. </p>
+<dd>The place for small temporary files. This directory is usually mounted as a &quot;tmpfs&quot; instance, and should hence not be used for larger files. (Use /var/tmp/ for larger files.) This directory is usually flushed at boot-up. Also, files that are not accessed within a certain time may be automatically deleted. </dd>
 <p> If applications find the environment variable <i>$TMPDIR</i> set, they should use the directory specified in it instead of /tmp/ (see <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) and m[blue]<code>IEEE Std 1003.1</code>m[]<font SIZE="-2">[4]</font> for details). </p>
 <p> Since /tmp/ is accessible to other users of the system, it is essential that files and subdirectories under this directory are only created with <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls. For more details, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[]<font SIZE="-2">[5]</font>.</dl>
 <h2>Runtime Data</h2>
 <p>/run/</p>
 <dl>
-<dd>A &quot;tmpfs&quot; file system for system packages to place runtime data in. This directory is flushed on boot, and generally writable for privileged programs only. Always writable.</dl>
+<dd>A &quot;tmpfs&quot; file system for system packages to place runtime data in. This directory is flushed on boot, and generally writable for privileged programs only. Always writable.</dd></dl>
 <p> /run/log/</p>
 <dl>
-<dd>Runtime system logs. System components may place private logs in this directory. Always writable, even when /var/log/ might not be accessible yet.</dl>
+<dd>Runtime system logs. System components may place private logs in this directory. Always writable, even when /var/log/ might not be accessible yet.</dd></dl>
 <p> /run/user/</p>
 <dl>
-<dd>Contains per-user runtime directories, each usually individually mounted &quot;tmpfs&quot; instances. Always writable, flushed at each reboot and when the user logs out. User code should not reference this directory directly, but via the <i>$XDG_RUNTIME_DIR</i> environment variable, as documented in the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>.</dl>
+<dd>Contains per-user runtime directories, each usually individually mounted &quot;tmpfs&quot; instances. Always writable, flushed at each reboot and when the user logs out. User code should not reference this directory directly, but via the <i>$XDG_RUNTIME_DIR</i> environment variable, as documented in the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
 <h2>Vendor-Supplied Operating System Resources</h2>
 <p>/usr/</p>
 <dl>
-<dd>Vendor-supplied operating system resources. Usually read-only, but this is not required. Possibly shared between multiple hosts. This directory should not be modified by the administrator, except when installing or removing vendor-supplied packages.</dl>
+<dd>Vendor-supplied operating system resources. Usually read-only, but this is not required. Possibly shared between multiple hosts. This directory should not be modified by the administrator, except when installing or removing vendor-supplied packages.</dd></dl>
 <p> /usr/bin/</p>
 <dl>
-<dd>Binaries and executables for user commands that shall appear in the <i>$PATH</i> search path. It is recommended not to place binaries in this directory that are not useful for invocation from a shell (such as daemon binaries); these should be placed in a subdirectory of /usr/lib/ instead.</dl>
+<dd>Binaries and executables for user commands that shall appear in the <i>$PATH</i> search path. It is recommended not to place binaries in this directory that are not useful for invocation from a shell (such as daemon binaries); these should be placed in a subdirectory of /usr/lib/ instead.</dd></dl>
 <p> /usr/include/</p>
 <dl>
-<dd>C and C++ API header files of system libraries.</dl>
+<dd>C and C++ API header files of system libraries.</dd></dl>
 <p> /usr/lib/</p>
 <dl>
-<dd>Static, private vendor data that is compatible with all architectures (though not necessarily architecture-independent). Note that this includes internal executables or other binaries that are not regularly invoked from a shell. Such binaries may be for any architecture supported by the system. Do not place public libraries in this directory, use <i>$libdir</i> (see below), instead.</dl>
+<dd>Static, private vendor data that is compatible with all architectures (though not necessarily architecture-independent). Note that this includes internal executables or other binaries that are not regularly invoked from a shell. Such binaries may be for any architecture supported by the system. Do not place public libraries in this directory, use <i>$libdir</i> (see below), instead.</dd></dl>
 <p> /lib/<i>arch-id</i>/</p>
 <dl>
-<dd>Location for placing dynamic libraries into, also called <i>$libdir</i>. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list. Legacy locations of <i>$libdir</i> are /lib/, /lib64/. This directory should not be used for package-specific data, unless this data is architecture-dependent, too. To query <i>$libdir</i> for the primary architecture of the system, invoke: </p>
+<dd>Location for placing dynamic libraries into, also called <i>$libdir</i>. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list. Legacy locations of <i>$libdir</i> are /lib/, /lib64/. This directory should not be used for package-specific data, unless this data is architecture-dependent, too. To query <i>$libdir</i> for the primary architecture of the system, invoke: </dd>
 <dl>
 <dd>
 <pre># systemd-path system-library-arch</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> /usr/share/</p>
 <dl>
-<dd>Resources shared between multiple packages, such as documentation, man pages, time zone information, fonts and other resources. Usually, the precise location and format of files stored below this directory is subject to specifications that ensure interoperability.</dl>
+<dd>Resources shared between multiple packages, such as documentation, man pages, time zone information, fonts and other resources. Usually, the precise location and format of files stored below this directory is subject to specifications that ensure interoperability.</dd></dl>
 <p> /usr/share/doc/</p>
 <dl>
-<dd>Documentation for the operating system or system packages.</dl>
+<dd>Documentation for the operating system or system packages.</dd></dl>
 <p> /usr/share/factory/etc/</p>
 <dl>
-<dd>Repository for vendor-supplied default configuration files. This directory should be populated with pristine vendor versions of all configuration files that may be placed in /etc/. This is useful to compare the local configuration of a system with vendor defaults and to populate the local configuration with defaults.</dl>
+<dd>Repository for vendor-supplied default configuration files. This directory should be populated with pristine vendor versions of all configuration files that may be placed in /etc/. This is useful to compare the local configuration of a system with vendor defaults and to populate the local configuration with defaults.</dd></dl>
 <p> /usr/share/factory/var/</p>
 <dl>
-<dd>Similar to /usr/share/factory/etc/, but for vendor versions of files in the variable, persistent data directory /var/.</dl>
+<dd>Similar to /usr/share/factory/etc/, but for vendor versions of files in the variable, persistent data directory /var/.</dd></dl>
 <h2>Persistent Variable System Data</h2>
 <p>/var/</p>
 <dl>
-<dd>Persistent, variable system data. Must be writable. This directory might be pre-populated with vendor-supplied data, but applications should be able to reconstruct necessary files and directories in this subhierarchy should they be missing, as the system might start up without this directory being populated. Persistency is recommended, but optional, to support ephemeral systems. This directory might become available or writable only very late during boot. Components that are required to operate during early boot hence shall not unconditionally rely on this directory.</dl>
+<dd>Persistent, variable system data. Must be writable. This directory might be pre-populated with vendor-supplied data, but applications should be able to reconstruct necessary files and directories in this subhierarchy should they be missing, as the system might start up without this directory being populated. Persistency is recommended, but optional, to support ephemeral systems. This directory might become available or writable only very late during boot. Components that are required to operate during early boot hence shall not unconditionally rely on this directory.</dd></dl>
 <p> /var/cache/</p>
 <dl>
-<dd>Persistent system cache data. System components may place non-essential data in this directory. Flushing this directory should have no effect on operation of programs, except for increased runtimes necessary to rebuild these caches.</dl>
+<dd>Persistent system cache data. System components may place non-essential data in this directory. Flushing this directory should have no effect on operation of programs, except for increased runtimes necessary to rebuild these caches.</dd></dl>
 <p> /var/lib/</p>
 <dl>
-<dd>Persistent system data. System components may place private data in this directory.</dl>
+<dd>Persistent system data. System components may place private data in this directory.</dd></dl>
 <p> /var/log/</p>
 <dl>
-<dd>Persistent system logs. System components may place private logs in this directory, though it is recommended to do most logging via the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) and <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) calls.</dl>
+<dd>Persistent system logs. System components may place private logs in this directory, though it is recommended to do most logging via the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) and <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) calls.</dd></dl>
 <p> /var/spool/</p>
 <dl>
-<dd>Persistent system spool data, such as printer or mail queues.</dl>
+<dd>Persistent system spool data, such as printer or mail queues.</dd></dl>
 <p> /var/tmp/</p>
 <dl>
-<dd>The place for larger and persistent temporary files. In contrast to /tmp/, this directory is usually mounted from a persistent physical file system and can thus accept larger files. (Use /tmp/ for small ephemeral files.) This directory is generally not flushed at boot-up, but time-based cleanup of files that have not been accessed for a certain time is applied. </p>
+<dd>The place for larger and persistent temporary files. In contrast to /tmp/, this directory is usually mounted from a persistent physical file system and can thus accept larger files. (Use /tmp/ for small ephemeral files.) This directory is generally not flushed at boot-up, but time-based cleanup of files that have not been accessed for a certain time is applied. </dd>
 <p> If applications find the environment variable <i>$TMPDIR</i> set, they should use the directory specified in it instead of /var/tmp/ (see <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) for details). </p>
 <p> The same security restrictions as with /tmp/ apply: <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls should be used. For further details about this directory, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[]<font SIZE="-2">[5]</font>.</dl>
 <h2>Virtual Kernel And Api File Systems</h2>
 <p>/dev/</p>
 <dl>
-<dd>The root directory for device nodes. Usually, this directory is mounted as a &quot;devtmpfs&quot; instance, but might be of a different type in sandboxed/containerized setups. This directory is managed jointly by the kernel and <code><a href="/docs/linux/man/8-systemd-udevd/">systemd-udevd</a></code>(8), and should not be written to by other components. A number of special purpose virtual file systems might be mounted below this directory.</dl>
+<dd>The root directory for device nodes. Usually, this directory is mounted as a &quot;devtmpfs&quot; instance, but might be of a different type in sandboxed/containerized setups. This directory is managed jointly by the kernel and <code><a href="/docs/linux/man/8-systemd-udevd/">systemd-udevd</a></code>(8), and should not be written to by other components. A number of special purpose virtual file systems might be mounted below this directory.</dd></dl>
 <p> /dev/shm/</p>
 <dl>
-<dd>Place for POSIX shared memory segments, as created via <code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3). This directory is flushed on boot, and is a &quot;tmpfs&quot; file system. Since all users have write access to this directory, special care should be taken to avoid name clashes and vulnerabilities. For normal users, shared memory segments in this directory are usually deleted when the user logs out. Usually, it is a better idea to use memory mapped files in /run/ (for system programs) or <i>$XDG_RUNTIME_DIR</i> (for user programs) instead of POSIX shared memory segments, since these directories are not world-writable and hence not vulnerable to security-sensitive name clashes.</dl>
+<dd>Place for POSIX shared memory segments, as created via <code><a href="/docs/linux/man/3-shm_open/">shm_open</a></code>(3). This directory is flushed on boot, and is a &quot;tmpfs&quot; file system. Since all users have write access to this directory, special care should be taken to avoid name clashes and vulnerabilities. For normal users, shared memory segments in this directory are usually deleted when the user logs out. Usually, it is a better idea to use memory mapped files in /run/ (for system programs) or <i>$XDG_RUNTIME_DIR</i> (for user programs) instead of POSIX shared memory segments, since these directories are not world-writable and hence not vulnerable to security-sensitive name clashes.</dd></dl>
 <p> /proc/</p>
 <dl>
-<dd>A virtual kernel file system exposing the process list and other functionality. This file system is mostly an API to interface with the kernel and not a place where normal files may be stored. For details, see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5). A number of special purpose virtual file systems might be mounted below this directory.</dl>
+<dd>A virtual kernel file system exposing the process list and other functionality. This file system is mostly an API to interface with the kernel and not a place where normal files may be stored. For details, see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5). A number of special purpose virtual file systems might be mounted below this directory.</dd></dl>
 <p> /proc/sys/</p>
 <dl>
-<dd>A hierarchy below /proc/ that exposes a number of kernel tunables. The primary way to configure the settings in this API file tree is via <code><a href="/docs/linux/man/5-sysctl-d/">sysctl.d</a></code>(5) files. In sandboxed/containerized setups, this directory is generally mounted read-only.</dl>
+<dd>A hierarchy below /proc/ that exposes a number of kernel tunables. The primary way to configure the settings in this API file tree is via <code><a href="/docs/linux/man/5-sysctl-d/">sysctl.d</a></code>(5) files. In sandboxed/containerized setups, this directory is generally mounted read-only.</dd></dl>
 <p> /sys/</p>
 <dl>
-<dd>A virtual kernel file system exposing discovered devices and other functionality. This file system is mostly an API to interface with the kernel and not a place where normal files may be stored. In sandboxed/containerized setups, this directory is generally mounted read-only. A number of special purpose virtual file systems might be mounted below this directory.</dl>
+<dd>A virtual kernel file system exposing discovered devices and other functionality. This file system is mostly an API to interface with the kernel and not a place where normal files may be stored. In sandboxed/containerized setups, this directory is generally mounted read-only. A number of special purpose virtual file systems might be mounted below this directory.</dd></dl>
 <p> /sys/fs/cgroup/</p>
 <dl>
-<dd>A virtual kernel file system exposing process control groups (cgroups). This file system is an API to interface with the kernel and not a place where normal files may be stored. On current systems running in the default &quot;unified&quot; mode, this directory serves as the mount point for the &quot;cgroup2&quot; filesystem, which provides a unified cgroup hierarchy for all resource controllers. On systems with non-default configurations, this directory may instead be a tmpfs filesystem containing mount points for various &quot;cgroup&quot; (v1) resource controllers; in such configurations, if &quot;cgroup2&quot; is mounted it will be mounted on /sys/fs/cgroup/unified/, but cgroup2 will not have resource controllers attached. In sandboxed/containerized setups, this directory may either not exist or may include a subset of functionality.</dl>
+<dd>A virtual kernel file system exposing process control groups (cgroups). This file system is an API to interface with the kernel and not a place where normal files may be stored. On current systems running in the default &quot;unified&quot; mode, this directory serves as the mount point for the &quot;cgroup2&quot; filesystem, which provides a unified cgroup hierarchy for all resource controllers. On systems with non-default configurations, this directory may instead be a tmpfs filesystem containing mount points for various &quot;cgroup&quot; (v1) resource controllers; in such configurations, if &quot;cgroup2&quot; is mounted it will be mounted on /sys/fs/cgroup/unified/, but cgroup2 will not have resource controllers attached. In sandboxed/containerized setups, this directory may either not exist or may include a subset of functionality.</dd></dl>
 <h2>Compatibility Symlinks</h2>
 <p>/bin/, /sbin/, /usr/sbin/</p>
 <dl>
-<dd>These compatibility symlinks point to /usr/bin/, ensuring that scripts and binaries referencing these legacy paths correctly find their binaries.</dl>
+<dd>These compatibility symlinks point to /usr/bin/, ensuring that scripts and binaries referencing these legacy paths correctly find their binaries.</dd></dl>
 <p> /lib/</p>
 <dl>
-<dd>This compatibility symlink points to /lib/, ensuring that programs referencing this legacy path correctly find their resources.</dl>
+<dd>This compatibility symlink points to /lib/, ensuring that programs referencing this legacy path correctly find their resources.</dd></dl>
 <p> /lib64/</p>
 <dl>
-<dd>On some architecture ABIs, this compatibility symlink points to <i>$libdir</i>, ensuring that binaries referencing this legacy path correctly find their dynamic loader. This symlink only exists on architectures whose ABI places the dynamic loader in this path.</dl>
+<dd>On some architecture ABIs, this compatibility symlink points to <i>$libdir</i>, ensuring that binaries referencing this legacy path correctly find their dynamic loader. This symlink only exists on architectures whose ABI places the dynamic loader in this path.</dd></dl>
 <p> /var/run/</p>
 <dl>
-<dd>This compatibility symlink points to /run/, ensuring that programs referencing this legacy path correctly find their runtime data.</dl>
+<dd>This compatibility symlink points to /run/, ensuring that programs referencing this legacy path correctly find their runtime data.</dd></dl>
 <h2>Home Directory</h2>
 <p>User applications may want to place files and directories in the user&#8217;s home directory. They should follow the following basic structure. Note that some of these directories are also standardized (though more weakly) by the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>. Additional locations for high-level user resources are defined by m[blue]<code>xdg-user-dirs</code>m[]<font SIZE="-2">[3]</font>. </p>
 <p> ~/.cache/</p>
 <dl>
-<dd>Persistent user cache data. User programs may place non-essential data in this directory. Flushing this directory should have no effect on operation of programs, except for increased runtimes necessary to rebuild these caches. If an application finds <i>$XDG_CACHE_HOME</i> set, it should use the directory specified in it instead of this directory.</dl>
+<dd>Persistent user cache data. User programs may place non-essential data in this directory. Flushing this directory should have no effect on operation of programs, except for increased runtimes necessary to rebuild these caches. If an application finds <i>$XDG_CACHE_HOME</i> set, it should use the directory specified in it instead of this directory.</dd></dl>
 <p> ~/.config/</p>
 <dl>
-<dd>Application configuration and state. When a new user is created, this directory will be empty or not exist at all. Applications should fall back to defaults should their configuration or state in this directory be missing. If an application finds <i>$XDG_CONFIG_HOME</i> set, it should use the directory specified in it instead of this directory.</dl>
+<dd>Application configuration and state. When a new user is created, this directory will be empty or not exist at all. Applications should fall back to defaults should their configuration or state in this directory be missing. If an application finds <i>$XDG_CONFIG_HOME</i> set, it should use the directory specified in it instead of this directory.</dd></dl>
 <p> ~/.local/bin/</p>
 <dl>
-<dd>Executables that shall appear in the user&#8217;s <i>$PATH</i> search path. It is recommended not to place executables in this directory that are not useful for invocation from a shell; these should be placed in a subdirectory of ~/.local/lib/ instead. Care should be taken when placing architecture-dependent binaries in this place, which might be problematic if the home directory is shared between multiple hosts with different architectures.</dl>
+<dd>Executables that shall appear in the user&#8217;s <i>$PATH</i> search path. It is recommended not to place executables in this directory that are not useful for invocation from a shell; these should be placed in a subdirectory of ~/.local/lib/ instead. Care should be taken when placing architecture-dependent binaries in this place, which might be problematic if the home directory is shared between multiple hosts with different architectures.</dd></dl>
 <p> ~/.local/lib/</p>
 <dl>
-<dd>Static, private vendor data that is compatible with all architectures.</dl>
+<dd>Static, private vendor data that is compatible with all architectures.</dd></dl>
 <p> ~/.local/lib/<i>arch-id</i>/</p>
 <dl>
-<dd>Location for placing public dynamic libraries. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list.</dl>
+<dd>Location for placing public dynamic libraries. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list.</dd></dl>
 <p> ~/.local/share/</p>
 <dl>
-<dd>Resources shared between multiple packages, such as fonts or artwork. Usually, the precise location and format of files stored below this directory is subject to specifications that ensure interoperability. If an application finds <i>$XDG_DATA_HOME</i> set, it should use the directory specified in it instead of this directory.</dl>
+<dd>Resources shared between multiple packages, such as fonts or artwork. Usually, the precise location and format of files stored below this directory is subject to specifications that ensure interoperability. If an application finds <i>$XDG_DATA_HOME</i> set, it should use the directory specified in it instead of this directory.</dd></dl>
 <h2>Unprivileged Write Access</h2>
 <p>Unprivileged processes generally lack write access to most of the hierarchy. </p>
 <p> The exceptions for normal users are /tmp/, /var/tmp/, /dev/shm/, as well as the home directory <i>$HOME</i> (usually found below /home/) and the runtime directory <i>$XDG_RUNTIME_DIR</i> (found below /run/user/) of the user, which are all writable. </p>
@@ -301,27 +301,28 @@ description: "file-hierarchy – File system hierarchy overview"
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-hier/">hier</a></code>(7), <code><a href="/docs/linux/man/1-systemd-path/">systemd-path</a></code>(1), <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8), <code><a href="/docs/linux/man/5-sysctl-d/">sysctl.d</a></code>(5), <code><a href="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></code>(5), <code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>File System Hierarchy</p>
+<dt> 1.</dt>
+<dd>File System Hierarchy</dd>
 <dl>
-<dd><a rel="nofollow" href="http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html">http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html</a></dl>
-<dt> 2.</p>
-<dd>XDG Base Directory Specification</p>
+<dd><a rel="nofollow" href="http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html">http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html</a></dd></dl>
+<dt> 2.</dt>
+<dd>XDG Base Directory Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dl>
-<dt> 3.</p>
-<dd>XDG User Directories</p>
+<dd><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dd></dl>
+<dt> 3.</dt>
+<dd>XDG User Directories</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">https://www.freedesktop.org/wiki/Software/xdg-user-dirs/</a></dl>
-<dt> 4.</p>
-<dd>IEEE Std 1003.1</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">https://www.freedesktop.org/wiki/Software/xdg-user-dirs/</a></dd></dl>
+<dt> 4.</dt>
+<dd>IEEE Std 1003.1</dd>
 <dl>
-<dd><a rel="nofollow" href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08_03">http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08_03</a></dl>
-<dt> 5.</p>
-<dd>Using /tmp/ and /var/tmp/ Safely</p>
+<dd><a rel="nofollow" href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08_03">http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08_03</a></dd></dl>
+<dt> 5.</dt>
+<dd>Using /tmp/ and /var/tmp/ Safely</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/TEMPORARY_DIRECTORIES">https://systemd.io/TEMPORARY_DIRECTORIES</a></dl>
-<dt> 6.</p>
-<dd>Multiarch Architecture Specifiers (Tuples)</p>
+<dd><a rel="nofollow" href="https://systemd.io/TEMPORARY_DIRECTORIES">https://systemd.io/TEMPORARY_DIRECTORIES</a></dd></dl>
+<dt> 6.</dt>
+<dd>Multiarch Architecture Specifiers (Tuples)</dd>
 <dl>
-<dd><a rel="nofollow" href="https://wiki.debian.org/Multiarch/Tuples">https://wiki.debian.org/Multiarch/Tuples</a></dl>
+<dd><a rel="nofollow" href="https://wiki.debian.org/Multiarch/Tuples">https://wiki.debian.org/Multiarch/Tuples</a></dd></dl>
+</dl>

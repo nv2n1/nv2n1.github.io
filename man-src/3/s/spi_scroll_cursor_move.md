@@ -16,13 +16,13 @@ description: "SPI_scroll_cursor_move – move a cursor"
 <h2>Arguments</h2>
 <p>Portal <i>portal</i></p>
 <dl COMPACT>
-<dd>portal containing the cursor</dl>
+<dd>portal containing the cursor</dd></dl>
 <p> FetchDirection <i>direction</i></p>
 <dl COMPACT>
-<dd>one of FETCH_FORWARD, FETCH_BACKWARD, FETCH_ABSOLUTE or FETCH_RELATIVE</dl>
+<dd>one of FETCH_FORWARD, FETCH_BACKWARD, FETCH_ABSOLUTE or FETCH_RELATIVE</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>number of rows to move for FETCH_FORWARD or FETCH_BACKWARD; absolute row number to move to for FETCH_ABSOLUTE; or relative row number to move to for FETCH_RELATIVE</dl>
+<dd>number of rows to move for FETCH_FORWARD or FETCH_BACKWARD; absolute row number to move to for FETCH_ABSOLUTE; or relative row number to move to for FETCH_RELATIVE</dd></dl>
 <h2>Return Value</h2>
 <p><i>SPI_processed</i> is set as in <code>SPI_execute</code> if successful. <i>SPI_tuptable</i> is set to NULL, since no rows are returned by this function.</p>
 <h2>Notes</h2>

@@ -14,52 +14,52 @@ description: "GeodSolve — perform geodesic calculations"
 <p>The shortest path between two points on the ellipsoid at (<i>lat1</i>, <i>lon1</i>) and (<i>lat2</i>, <i>lon2</i>) is called the geodesic. Its length is <i>s12</i> and the geodesic from point 1 to point 2 has forward azimuths <i>azi1</i> and <i>azi2</i> at the two end points. </p>
 <p> <code>GeodSolve</code> operates in one of three modes:</p>
 <dl>
-<dt>1.</p>
-<dd>By default, <code>GeodSolve</code> accepts lines on the standard input containing <i>lat1</i> <i>lon1</i> <i>azi1</i> <i>s12</i> and prints <i>lat2</i> <i>lon2</i> <i>azi2</i> on standard output. This is the direct geodesic calculation.</p>
-<dt>2.</p>
-<dd>Command line arguments <code>-l</code> <i>lat1</i> <i>lon1</i> <i>azi1</i> specify a geodesic line. <code>GeodSolve</code> then accepts a sequence of <i>s12</i> values (one per line) on standard input and prints <i>lat2</i> <i>lon2</i> <i>azi2</i> for each. This generates a sequence of points on a single geodesic.</p>
-<dt>3.</p>
-<dd>With the <code>-i</code> command line argument, <code>GeodSolve</code> performs the inverse geodesic calculation. It reads lines containing <i>lat1</i> <i>lon1</i> <i>lat2</i> <i>lon2</i> and prints the corresponding values of <i>azi1</i> <i>azi2</i> <i>s12</i>.</dl>
+<dt>1.</dt>
+<dd>By default, <code>GeodSolve</code> accepts lines on the standard input containing <i>lat1</i> <i>lon1</i> <i>azi1</i> <i>s12</i> and prints <i>lat2</i> <i>lon2</i> <i>azi2</i> on standard output. This is the direct geodesic calculation.</dd>
+<dt>2.</dt>
+<dd>Command line arguments <code>-l</code> <i>lat1</i> <i>lon1</i> <i>azi1</i> specify a geodesic line. <code>GeodSolve</code> then accepts a sequence of <i>s12</i> values (one per line) on standard input and prints <i>lat2</i> <i>lon2</i> <i>azi2</i> for each. This generates a sequence of points on a single geodesic.</dd>
+<dt>3.</dt>
+<dd>With the <code>-i</code> command line argument, <code>GeodSolve</code> performs the inverse geodesic calculation. It reads lines containing <i>lat1</i> <i>lon1</i> <i>lat2</i> <i>lon2</i> and prints the corresponding values of <i>azi1</i> <i>azi2</i> <i>s12</i>.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd>perform an inverse geodesic calculation (see 3 above).</p>
-<dt><code>-l</code></p>
-<dd>line mode (see 2 above); generate a sequence of points along the geodesic specified by <i>lat1</i> <i>lon1</i> <i>azi1</i>.</p>
-<dt><code>-a</code></p>
-<dd>arc mode; on input <i>and</i> output <i>s12</i> is replaced by <i>a12</i> the arc length (in degrees) on the auxiliary sphere. See &#8220;<font SIZE="-1">AUXILIARY SPHERE&#8221;</font>.</p>
-<dt><code>-e</code></p>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</p>
-<dt><code>-u</code></p>
-<dd>unroll the longitude. On input longitudes must lie in [-540deg,540deg) and, normally, on output longitudes are reduced to lie in [-180deg,180deg). However with this option, the returned longitude <i>lon2</i> is &#8220;unrolled&#8221; so that <i>lon2</i> &#8211; <i>lon1</i> indicates how often and in what sense the geodesic has encircled the earth.</p>
-<dt><code>-d</code></p>
-<dd>output angles as degrees, minutes, seconds instead of decimal degrees.</p>
-<dt><code>-:</code></p>
-<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</p>
-<dt><code>-b</code></p>
-<dd>report the <i>back</i> azimuth at point 2 instead of the forward azimuth.</p>
-<dt><code>-f</code></p>
-<dd>full output; each line of output consists of 12 quantities: <i>lat1</i> <i>lon1</i> <i>azi1</i> <i>lat2</i> <i>lon2</i> <i>azi2</i> <i>s12</i> <i>a12</i> <i>m12</i> <i>M12</i> <i>M21</i> <i>S12</i>. <i>a12</i> is described in &#8220;<font SIZE="-1">AUXILIARY SPHERE&#8221;</font>. The four quantities <i>m12</i>, <i>M12</i>, <i>M21</i>, and <i>S12</i> are described in &#8220;<font SIZE="-1">ADDITIONAL QUANTITIES&#8221;</font>.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 3); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</p>
-<dt><code>-E</code></p>
-<dd>use &#8220;exact&#8221; algorithms (based on elliptic integrals) for the geodesic calculations. These are more accurate than the (default) series expansions for |<i>f</i>| &gt; 0.02.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-i</code></dt>
+<dd>perform an inverse geodesic calculation (see 3 above).</dd>
+<dt><code>-l</code></dt>
+<dd>line mode (see 2 above); generate a sequence of points along the geodesic specified by <i>lat1</i> <i>lon1</i> <i>azi1</i>.</dd>
+<dt><code>-a</code></dt>
+<dd>arc mode; on input <i>and</i> output <i>s12</i> is replaced by <i>a12</i> the arc length (in degrees) on the auxiliary sphere. See &#8220;<font SIZE="-1">AUXILIARY SPHERE&#8221;</font>.</dd>
+<dt><code>-e</code></dt>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
+<dt><code>-u</code></dt>
+<dd>unroll the longitude. On input longitudes must lie in [-540deg,540deg) and, normally, on output longitudes are reduced to lie in [-180deg,180deg). However with this option, the returned longitude <i>lon2</i> is &#8220;unrolled&#8221; so that <i>lon2</i> &#8211; <i>lon1</i> indicates how often and in what sense the geodesic has encircled the earth.</dd>
+<dt><code>-d</code></dt>
+<dd>output angles as degrees, minutes, seconds instead of decimal degrees.</dd>
+<dt><code>-:</code></dt>
+<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</dd>
+<dt><code>-b</code></dt>
+<dd>report the <i>back</i> azimuth at point 2 instead of the forward azimuth.</dd>
+<dt><code>-f</code></dt>
+<dd>full output; each line of output consists of 12 quantities: <i>lat1</i> <i>lon1</i> <i>azi1</i> <i>lat2</i> <i>lon2</i> <i>azi2</i> <i>s12</i> <i>a12</i> <i>m12</i> <i>M12</i> <i>M21</i> <i>S12</i>. <i>a12</i> is described in &#8220;<font SIZE="-1">AUXILIARY SPHERE&#8221;</font>. The four quantities <i>m12</i>, <i>M12</i>, <i>M21</i>, and <i>S12</i> are described in &#8220;<font SIZE="-1">ADDITIONAL QUANTITIES&#8221;</font>.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 3); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</dd>
+<dt><code>-E</code></dt>
+<dd>use &#8220;exact&#8221; algorithms (based on elliptic integrals) for the geodesic calculations. These are more accurate than the (default) series expansions for |<i>f</i>| &gt; 0.02.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Input</h2>
 <p><code>GeodSolve</code> measures all angles in degrees and all lengths (<i>s12</i>) in meters. On input angles (latitude, longitude, azimuth, arc length) can be as decimal degrees or degrees (d), minutes (&#8216;), seconds (&#8220;). A decimal point can only appear in the least significant component and the designator (d, &#8216;, or &#8221;) for this component is optional; thus <tt>&quot;40d30&quot;</tt>, <tt>&quot;40d30'&quot;</tt>, <tt>&quot;40.5d&quot;</tt>, and <tt>40.5</tt> are all equivalent. By default, latitude precedes longitude for each point; however on input either may be given first by appending (or prepending) <i>N</i> or <i>S</i> to the latitude and <i>E</i> or <i>W</i> to the longitude. Azimuths are measured clockwise from north; however this may be overridden with <i>E</i> or <i>W</i>. </p>
 <p> See the <tt>&quot;QUOTING&quot;</tt> section of <i><a href="/docs/linux/man/1-geoconvert/">GeoConvert</a></i>(1) for how to quote the <font SIZE="-1">DMS</font> designators &#8216; and &quot;.</p>
@@ -103,14 +103,14 @@ description: "GeodSolve — perform geodesic calculations"
 <h2>Multiple Solutions</h2>
 <p>The shortest distance returned for the inverse problem is (obviously) uniquely defined. However, in a few special cases there are multiple azimuths which yield the same shortest distance. Here is a catalog of those cases:</p>
 <dl>
-<dt><i>lat1</i> = &#8211;<i>lat2</i> (with neither point at a pole)</p>
-<dd>If <i>azi1</i> = <i>azi2</i>, the geodesic is unique. Otherwise there are two geodesics and the second one is obtained by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi2</i>,<i>azi1</i>], [<i>M12</i>,<i>M21</i>] = [<i>M21</i>,<i>M12</i>], <i>S12</i> = &#8211;<i>S12</i>. (This occurs when the longitude difference is near +/-180 for oblate ellipsoids.)</p>
-<dt><i>lon2</i> = <i>lon1</i> +/- 180 (with neither point at a pole)</p>
-<dd>If <i>azi1</i> = 0 or +/-180, the geodesic is unique. Otherwise there are two geodesics and the second one is obtained by setting [<i>azi1</i>,<i>azi2</i>] = [-<i>azi1</i>,-<i>azi2</i>], <i>S12</i> = &#8211;<i>S12</i>. (This occurs when <i>lat2</i> is near &#8211;<i>lat1</i> for prolate ellipsoids.)</p>
-<dt>Points 1 and 2 at opposite poles</p>
-<dd>There are infinitely many geodesics which can be generated by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi1</i>,<i>azi2</i>] + [<i>d</i>,-<i>d</i>], for arbitrary <i>d</i>. (For spheres, this prescription applies when points 1 and 2 are antipodal.)</p>
-<dt><i>s12</i> = 0 (coincident points)</p>
-<dd>There are infinitely many geodesics which can be generated by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi1</i>,<i>azi2</i>] + [<i>d</i>,<i>d</i>], for arbitrary <i>d</i>.</dl>
+<dt><i>lat1</i> = &#8211;<i>lat2</i> (with neither point at a pole)</dt>
+<dd>If <i>azi1</i> = <i>azi2</i>, the geodesic is unique. Otherwise there are two geodesics and the second one is obtained by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi2</i>,<i>azi1</i>], [<i>M12</i>,<i>M21</i>] = [<i>M21</i>,<i>M12</i>], <i>S12</i> = &#8211;<i>S12</i>. (This occurs when the longitude difference is near +/-180 for oblate ellipsoids.)</dd>
+<dt><i>lon2</i> = <i>lon1</i> +/- 180 (with neither point at a pole)</dt>
+<dd>If <i>azi1</i> = 0 or +/-180, the geodesic is unique. Otherwise there are two geodesics and the second one is obtained by setting [<i>azi1</i>,<i>azi2</i>] = [-<i>azi1</i>,-<i>azi2</i>], <i>S12</i> = &#8211;<i>S12</i>. (This occurs when <i>lat2</i> is near &#8211;<i>lat1</i> for prolate ellipsoids.)</dd>
+<dt>Points 1 and 2 at opposite poles</dt>
+<dd>There are infinitely many geodesics which can be generated by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi1</i>,<i>azi2</i>] + [<i>d</i>,-<i>d</i>], for arbitrary <i>d</i>. (For spheres, this prescription applies when points 1 and 2 are antipodal.)</dd>
+<dt><i>s12</i> = 0 (coincident points)</dt>
+<dd>There are infinitely many geodesics which can be generated by setting [<i>azi1</i>,<i>azi2</i>] = [<i>azi1</i>,<i>azi2</i>] + [<i>d</i>,<i>d</i>], for arbitrary <i>d</i>.</dd></dl>
 <h2>Examples</h2>
 <p>Route from <font SIZE="-1">JFK</font> Airport to Singapore Changi Airport: </p>
 <pre> echo 40:38:23N 073:46:44W 01:21:33N 103:59:22E |

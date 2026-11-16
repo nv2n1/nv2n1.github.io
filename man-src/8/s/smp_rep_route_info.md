@@ -18,30 +18,30 @@ description: "smp_rep_route_info – invoke REPORT ROUTE INFORMATION SMP functio
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></p>
-<dd>expander route index. <i>IN</i> is a value between 0 and 65535. Default is 0. More precisely the maximum index value is (expander_route_indexes &#8211; 1).</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-m</code>, <code>&#8211;multiple</code></p>
-<dd>call the REPORT ROUTE INFORMATION function multiple times, starting at <i>&#8211;index=IN</i>, incrementing the index value on each iteration for a maximum of <i>&#8211;num=NUM</i> iterations. For each enabled route table entry, one line is output. If <i>&#8211;num=NUM</i> is not given (or <i>NUM</i> is zero) then iterations continue until 4 adjacent disabled entries are found (or some error occurs).</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>used with <i>&#8211;multiple</i> option to specify the maximum number of iterations.</p>
-<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></p>
-<dd>phy identifier. <i>ID</i> is a value between 0 and 254. Default is 0.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd>zero the Allocated Response Length field in the request. This option also zeros the Request Length field in the request. This is required for strict SAS-1.1 compliance. However this option should not be given in SAS-2 and later; if it is given an abridged response may result.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></dt>
+<dd>expander route index. <i>IN</i> is a value between 0 and 65535. Default is 0. More precisely the maximum index value is (expander_route_indexes &#8211; 1).</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-m</code>, <code>&#8211;multiple</code></dt>
+<dd>call the REPORT ROUTE INFORMATION function multiple times, starting at <i>&#8211;index=IN</i>, incrementing the index value on each iteration for a maximum of <i>&#8211;num=NUM</i> iterations. For each enabled route table entry, one line is output. If <i>&#8211;num=NUM</i> is not given (or <i>NUM</i> is zero) then iterations continue until 4 adjacent disabled entries are found (or some error occurs).</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>used with <i>&#8211;multiple</i> option to specify the maximum number of iterations.</dd>
+<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></dt>
+<dd>phy identifier. <i>ID</i> is a value between 0 and 254. Default is 0.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd>zero the Allocated Response Length field in the request. This option also zeros the Request Length field in the request. This is required for strict SAS-1.1 compliance. However this option should not be given in SAS-2 and later; if it is given an abridged response may result.</dd></dl>
 <h2>Conforming To</h2>
 <p>The SMP REPORT ROUTE INFORMATION function was introduced in SAS-1 . The &quot;Expander change count&quot; field was added in SAS-2 .</p>
 <h2>Authors</h2>

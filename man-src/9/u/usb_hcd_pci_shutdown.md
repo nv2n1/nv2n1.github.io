@@ -15,7 +15,7 @@ usb_hcd_pci_shutdown - shutdown host controller
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>USB Host Controller being shutdown</dl>
+<dl><dd></dd><dd>USB Host Controller being shutdown</dd></dl>
 
 <h2>Copyright</h2>
 

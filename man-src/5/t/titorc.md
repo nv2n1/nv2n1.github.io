@@ -22,38 +22,36 @@ User preferences can optionally be stored:
 
 KOJI_OPTIONS
 <dl><dd>Specify strings of options, which is passed to koji on commandline when you use KojiReleaser. For example: 
-
-<dl><dd><pre>KOJI_OPTIONS=-c ~/.koji/katello-config build --nowait</pre></dl></dl>
+</dd><dl><dd><pre>KOJI_OPTIONS=-c ~/.koji/katello-config build --nowait</pre></dd></dl></dl>
  
 
  NO_AUTO_INSTALL
-<dl><dd>Specify list of packages (separated by space), which should NOT be installed, when tito is run with -i option.</dl>
+<dl><dd>Specify list of packages (separated by space), which should NOT be installed, when tito is run with -i option.</dd></dl>
  
 
  RPMBUILD_BASEDIR
-<dl><dd>Specifies a base directory for temp files, tarballs, and RPMs. If defined, and if the directory exists, tito will automatically create subdirectories as needed for <a HREF="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8). Can be overridden on the fly with -o. The default output directory is /tmp/tito.</dl>
+<dl><dd>Specifies a base directory for temp files, tarballs, and RPMs. If defined, and if the directory exists, tito will automatically create subdirectories as needed for <a HREF="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8). Can be overridden on the fly with -o. The default output directory is /tmp/tito.</dd></dl>
  
 
  HIDE_EMAIL
 <dl><dd>If set to something other than 0, your email address will not be used in changelog entries. I.e. instead of 
-
-<dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy &lt;msuchy [at] redhat.com&gt; 0.3.0-2 You will get:</dl><dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy 0.3.0-2</dl></dl>
+</dd><dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy &lt;msuchy [at] redhat.com&gt; 0.3.0-2 You will get:</dd></dl><dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy 0.3.0-2</dd></dl></dl>
  
 
  RHPKG_USER, FEDPKG_USER
-<dl><dd>By default this is the UNIX user running the command. Overriding it will run all rhpkg/fedpkg commands with --user $RHPKG_USER/FEDPKG_USER</dl>
+<dl><dd>By default this is the UNIX user running the command. Overriding it will run all rhpkg/fedpkg commands with --user $RHPKG_USER/FEDPKG_USER</dd></dl>
  
 
  COLOR
-<dl><dd>Set to <i>0</i> or <i>False</i> to disable colored output.</dl>
+<dl><dd>Set to <i>0</i> or <i>False</i> to disable colored output.</dd></dl>
  
 
  MEAD_SCM_USERNAME
-<dl><dd>The username to use when pushing the repository MEAD is going to build from. If this value is unset, the MEAD releaser will default to using the name of the current user.</dl>
+<dl><dd>The username to use when pushing the repository MEAD is going to build from. If this value is unset, the MEAD releaser will default to using the name of the current user.</dd></dl>
  
 
  COPR_REMOTE_LOCATION
-<dl><dd>URL that Tito will push SRPMs to for Copr to use.</dl>
+<dl><dd>URL that Tito will push SRPMs to for Copr to use.</dd></dl>
 
 <h2>Example</h2>
 

@@ -11,14 +11,14 @@ description: "dist – redistribute a message to additional addresses"
 <p> dist &#8211; redistribute a message to additional addresses </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>dist</code> [<i>+folder</i>] [<i>msg</i>] [<code>-form</code> <i>formfile</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-width</code> <i>columns</i>] [<code>-from</code> <i>address</i>] [<code>-to</code> <i>address</i>] [<code>-cc</code> <i>address</i>] [<code>-fcc</code> <i>+folder</i>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>dist</code> [<i>+folder</i>] [<i>msg</i>] [<code>-form</code> <i>formfile</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-width</code> <i>columns</i>] [<code>-from</code> <i>address</i>] [<code>-to</code> <i>address</i>] [<code>-cc</code> <i>address</i>] [<code>-fcc</code> <i>+folder</i>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Dist</code></p>
-<dd>is similar to <code>forw</code>. It prepares the specified message for redistribution to addresses that (presumably) are not on the original address list. </p>
+<dd>is similar to <code>forw</code>. It prepares the specified message for redistribution to addresses that (presumably) are not on the original address list. </dd>
 <p> The default message form contains the following elements: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Resent - From:
 {
@@ -42,12 +42,12 @@ or blank
 }
 or blank
 </code></pre>
-</dl>
+</dd></dl>
 <p> If a file named &#8220;<i>distcomps</i>&#8221; exists in the user&#8217;s nmh directory, it will be used instead of this default form. You may specify an alternate forms file with the switch <code>-form</code> <i>formfile</i>. Forms are processed via the <code>nmh</code> template system; see <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) for details. Components from the redistributed message are available as standard component escapes in the forms file. </p>
 <p> In addition to the standard <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) escapes, the following <i>component</i> escapes are also supported: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <i>Escape        ReturnsDescription</i>
 fcc    string  Any folders specified with `-fcc folder'
@@ -55,7 +55,7 @@ nmh-from       stringAddresses specified with `-from address'
 nmh-to string  Addresses specified with `-to address'
 nmh-cc string  Addresses specified with `-cc address'
 </pre>
-</dl>
+</dd></dl>
 <p> See the <i><a href="/docs/linux/man/1-forw/">forw</a></i>(1) man page for descriptions of the <code>-from</code>, <code>-to</code>, <code>-cc</code>, and <code>-fcc</code> switches. </p>
 <p> If the draft already exists, <code>dist</code> will ask you as to the disposition of the draft. A reply of <code>quit</code> will abort <code>dist</code>, leaving the draft intact; <code>replace</code> will replace the existing draft with a blank skeleton; and <code>list</code> will display the draft. </p>
 <p> Only those addresses in &#8220;<i>Resent-To:</i>&#8221;, &#8220;<i>Resent-cc:</i>&#8221;, and &#8220;<i>Resent-Bcc:</i>&#8221; will be sent. Also, a &#8220;<i>Resent-Fcc: folder</i>&#8221; will be honored (see <i><a href="/docs/linux/man/1-send/">send</a></i>(1)). Note that with <code>dist</code>, the draft should contain only &#8220;<i>Resent-xxx:</i>&#8221; fields and no body. The headers and the body of the original message are copied to the draft when the message is sent. Use care in constructing the headers for the redistribution. </p>
@@ -63,8 +63,8 @@ nmh-cc string  Addresses specified with `-cc address'
 <p> If the <code>-annotate</code> switch is given, the message being distributed will be annotated with the lines:</p>
 <dl>
 <dt>
-<dd> Resent: date<br />
- Resent: addrs</dl>
+</dt><dd> Resent: date<br />
+ Resent: addrs</dd></dl>
 <p> where each address list contains as many lines as required. This annotation will be done only if the message is sent directly from <code>dist</code>. If the message is not sent immediately from <code>dist</code>, &#8220;<code>comp</code> <code>-use</code>&#8221; may be used to re-edit and send the constructed message, but the annotations won&#8217;t take place. Normally annotations are done inplace in order to preserve any links to the message. You may use the <code>-noinplace</code> switch to change this. </p>
 <p> See <i><a href="/docs/linux/man/1-comp/">comp</a></i>(1) for a description of the <code>-editor</code> and <code>-noedit</code> switches. Note that while in the editor, with <code>-atfile</code> and if the current directory is writable, the message being resent is available through a link named &#8220;@&#8221; (assuming the default <i>whatnowproc</i>). In addition, the actual pathname of the message is stored in the environment variable <code>$editalt</code>, and the pathname of the folder containing the message is stored in the environment variable <code>$mhfolder</code>. The creation of the &#8220;@&#8221; file is controlled via the <code>-atfile</code> and <code>-noatfile</code> options. </p>
 <p> The <code>-draftfolder</code> <i>+folder</i> and <code>-draftmessage</code> <i>msg</i> switches invoke the <code>nmh</code> draft folder facility. This is an advanced (and highly useful) feature. Consult the <i><a href="/docs/linux/man/5-mh-draft/">mh-draft</a></i>(5) man page for more information. </p>

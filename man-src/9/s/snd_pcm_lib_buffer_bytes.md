@@ -15,7 +15,7 @@ snd_pcm_lib_buffer_bytes - Get the buffer size of the current PCM in bytes
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
 
 <h2>Copyright</h2>
 

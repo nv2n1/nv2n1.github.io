@@ -19,55 +19,55 @@ description: "mkfs.minix – make a Minix filesystem"
 /dev/hdb[1-8] (IDE disk 2)
 /dev/sda[1-8] (SCSI disk 1)
 /dev/sdb[1-8] (SCSI disk 2)</pre>
-</dl>
+</dd></dl>
 <p> The device may be a block device or an image file of one, but this is not enforced. Expect not much fun on a character device :-). </p>
 <p> The <i>size-in-blocks</i> parameter is the desired size of the file system, in blocks. It is present only for backwards compatibility. If omitted the size will be determined automatically. Only block counts strictly greater than 10 and strictly less than 65536 are allowed.</p>
 <h2>Options</h2>
 <p><code>-c</code>, <code>&#8211;check</code></p>
 <dl>
-<dd>Check the device for bad blocks before creating the filesystem. If any are found, the count is printed.</dl>
+<dd>Check the device for bad blocks before creating the filesystem. If any are found, the count is printed.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;namelength</code> <i>length</i></p>
 <dl>
-<dd>Specify the maximum length of filenames. Currently, the only allowable values are 14 and 30 for file system versions 1 and 2. Version 3 allows only value 60. The default is 30.</dl>
+<dd>Specify the maximum length of filenames. Currently, the only allowable values are 14 and 30 for file system versions 1 and 2. Version 3 allows only value 60. The default is 30.</dd></dl>
 <p> <code>&#8211;lock</code>[=<i>mode</i>]</p>
 <dl>
-<dd>Use exclusive BSD lock for device or file it operates. The optional argument <i>mode</i> can be <code>yes</code>, <code>no</code> (or 1 and 0) or <code>nonblock</code>. If the <i>mode</i> argument is omitted, it defaults to <code>&quot;yes&quot;</code>. This option overwrites environment variable <code>$LOCK_BLOCK_DEVICE</code>. The default is not to use any lock at all, but it&#8217;s recommended to avoid collisions with udevd or other tools.</dl>
+<dd>Use exclusive BSD lock for device or file it operates. The optional argument <i>mode</i> can be <code>yes</code>, <code>no</code> (or 1 and 0) or <code>nonblock</code>. If the <i>mode</i> argument is omitted, it defaults to <code>&quot;yes&quot;</code>. This option overwrites environment variable <code>$LOCK_BLOCK_DEVICE</code>. The default is not to use any lock at all, but it&#8217;s recommended to avoid collisions with udevd or other tools.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;inodes</code> <i>number</i></p>
 <dl>
-<dd>Specify the number of inodes for the filesystem.</dl>
+<dd>Specify the number of inodes for the filesystem.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;badblocks</code> <i>filename</i></p>
 <dl>
-<dd>Read the list of bad blocks from <i>filename</i>. The file has one bad-block number per line. The count of bad blocks read is printed.</dl>
+<dd>Read the list of bad blocks from <i>filename</i>. The file has one bad-block number per line. The count of bad blocks read is printed.</dd></dl>
 <p> <code>-1</code></p>
 <dl>
-<dd>Make a Minix version 1 filesystem. This is the default.</dl>
+<dd>Make a Minix version 1 filesystem. This is the default.</dd></dl>
 <p> <code>-2</code>, <code>-v</code></p>
 <dl>
-<dd>Make a Minix version 2 filesystem.</dl>
+<dd>Make a Minix version 2 filesystem.</dd></dl>
 <p> <code>-3</code></p>
 <dl>
-<dd>Make a Minix version 3 filesystem.</dl>
+<dd>Make a Minix version 3 filesystem.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit. The long option cannot be combined with other options.</dl>
+<dd>Display version information and exit. The long option cannot be combined with other options.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Environment</h2>
 <p>LOCK_BLOCK_DEVICE=&lt;mode&gt;</p>
 <dl>
-<dd>use exclusive BSD lock. The mode is &quot;1&quot; or &quot;0&quot;. See <code>&#8211;lock</code> for more details.</dl>
+<dd>use exclusive BSD lock. The mode is &quot;1&quot; or &quot;0&quot;. See <code>&#8211;lock</code> for more details.</dd></dl>
 <h2>Exit Status</h2>
 <p>The exit status returned by <code>mkfs.minix</code> is one of the following: </p>
 <p> 0</p>
 <dl>
-<dd>No errors</dl>
+<dd>No errors</dd></dl>
 <p> 8</p>
 <dl>
-<dd>Operational error</dl>
+<dd>Operational error</dd></dl>
 <p> 16</p>
 <dl>
-<dd>Usage or syntax error</dl>
+<dd>Usage or syntax error</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8)</p>
 <h2>Reporting Bugs</h2>

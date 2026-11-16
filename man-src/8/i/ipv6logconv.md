@@ -17,37 +17,37 @@ description: "ipv6logconv – HTTP server log file converter for statistics"
 <h2>Options</h2>
 <p>General options:</p>
 <dl>
-<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></p>
-<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</p>
-<dt><code>[-v|&#8211;version [-v [-v]]]</code></p>
-<dd>version information (2 optional detail levels)</p>
-<dt><code>[-v|&#8211;version -h]</code></p>
-<dd>explanation of feature tokens</p>
-<dt><code>[-V|&#8211;verbose]</code></p>
-<dd>be more verbose</p>
-<dt><code>[-h|&#8211;help|-?]</code></p>
-<dd>this online help</dl>
+<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></dt>
+<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</dd>
+<dt><code>[-v|&#8211;version [-v [-v]]]</code></dt>
+<dd>version information (2 optional detail levels)</dd>
+<dt><code>[-v|&#8211;version -h]</code></dt>
+<dd>explanation of feature tokens</dd>
+<dt><code>[-V|&#8211;verbose]</code></dt>
+<dd>be more verbose</dd>
+<dt><code>[-h|&#8211;help|-?]</code></dt>
+<dd>this online help</dd></dl>
 <p> Performance options:</p>
 <dl>
-<dt><code>[-n|&#8211;nocache]</code></p>
-<dd>disable caching</p>
-<dt><code>[-c|&#8211;cachelimit </code><i>VALUE</i><code>]</code></p>
-<dd>set cache limit; default: <code>20</code>, maximum: <code>200</code>.</dl>
+<dt><code>[-n|&#8211;nocache]</code></dt>
+<dd>disable caching</dd>
+<dt><code>[-c|&#8211;cachelimit </code><i>VALUE</i><code>]</code></dt>
+<dd>set cache limit; default: <code>20</code>, maximum: <code>200</code>.</dd></dl>
 <p> Output options:</p>
 <dl>
-<dt><code>[&#8211;out </code><i>OUTPUTTYPE</i><code>]</code></p>
-<dd>Specify output type:</p>
+<dt><code>[&#8211;out </code><i>OUTPUTTYPE</i><code>]</code></dt>
+<dd>Specify output type:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>addrtype</code></p>
-<dd>Address type</p>
-<dt><code>ouitype</code></p>
-<dd>OUI (IEEE) type</p>
-<dt><code>ipv6addrtype</code></p>
-<dd>IPv6 address type</p>
-<dt><code>any</code></p>
-<dd>any type</dl>
+</dd><dl>
+<dt><code>addrtype</code></dt>
+<dd>Address type</dd>
+<dt><code>ouitype</code></dt>
+<dd>OUI (IEEE) type</dd>
+<dt><code>ipv6addrtype</code></dt>
+<dd>IPv6 address type</dd>
+<dt><code>any</code></dt>
+<dd>any type</dd></dl>
 </dl>
 </dl>
 <h2>See Also</h2>

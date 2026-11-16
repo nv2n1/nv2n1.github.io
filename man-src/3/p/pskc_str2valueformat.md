@@ -13,8 +13,8 @@ description: "pskc_str2valueformat – API function"
 <p> <code>pskc_valueformat pskc_str2valueformat(const char * </code><i>valueformat</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * valueformat</p>
-<dd>an string describing a key usage.</dl>
+<dt>const char * valueformat</dt>
+<dd>an string describing a key usage.</dd></dl>
 <h2>Description</h2>
 <p>Convert a string to a <code>pskc_valueformat</code> type. For example, pskc_str2valueformat(&quot;DECIMAL&quot;) will return <code>PSKC_VALUEFORMAT_DECIMAL</code>.</p>
 <h2>Returns</h2>

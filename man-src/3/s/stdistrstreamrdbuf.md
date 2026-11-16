@@ -24,9 +24,7 @@ Pointer to the associated std::strsteambuf, with constness cast away.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 int main()
-
 {
     const std::istrstream buf(&quot;example&quot;);
     std::strstreambuf *ptr = buf.rdbuf();

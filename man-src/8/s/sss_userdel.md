@@ -10,26 +10,26 @@ description: "sss_userdel – delete a user account"
 <p>sss_userdel &#8211; delete a user account</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sss_userdel</code> [<i>options</i>] <i>LOGIN</i></dl>
+<dt> <code>sss_userdel</code> [<i>options</i>] <i>LOGIN</i></dt></dl>
 <h2>Description</h2>
 <p><code>sss_userdel</code></p>
-<dd>deletes a user identified by login name <i>LOGIN</i> from the system.</p>
+<dd>deletes a user identified by login name <i>LOGIN</i> from the system.</dd>
 <h2>Options</h2>
 <p><code>-?</code>,<code>&#8211;help</code></p>
 <dl>
-<dd>Display help message and exit.</dl>
+<dd>Display help message and exit.</dd></dl>
 <p> <code>-r</code>,<code>&#8211;remove</code></p>
 <dl>
-<dd>Files in the user&#8217;s home directory will be removed along with the home directory itself and the user&#8217;s mail spool. Overrides the configuration.</dl>
+<dd>Files in the user&#8217;s home directory will be removed along with the home directory itself and the user&#8217;s mail spool. Overrides the configuration.</dd></dl>
 <p> <code>-R</code>,<code>&#8211;no-remove</code></p>
 <dl>
-<dd>Files in the user&#8217;s home directory will NOT be removed along with the home directory itself and the user&#8217;s mail spool. Overrides the configuration.</dl>
+<dd>Files in the user&#8217;s home directory will NOT be removed along with the home directory itself and the user&#8217;s mail spool. Overrides the configuration.</dd></dl>
 <p> <code>-f</code>,<code>&#8211;force</code></p>
 <dl>
-<dd>This option forces <code>sss_userdel</code> to remove the user&#8217;s home directory and mail spool, even if they are not owned by the specified user.</dl>
+<dd>This option forces <code>sss_userdel</code> to remove the user&#8217;s home directory and mail spool, even if they are not owned by the specified user.</dd></dl>
 <p> <code>-k</code>,<code>&#8211;kick</code></p>
 <dl>
-<dd>Before actually deleting the user, terminate all his processes.</dl>
+<dd>Before actually deleting the user, terminate all his processes.</dd></dl>
 <h2>The Local Domain</h2>
 <p>In order to function correctly, a domain with &#8220;id_provider=local&#8221; must be created and the SSSD must be running. </p>
 <p> The administrator might want to use the SSSD local users instead of traditional UNIX users in cases where the group nesting (see <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8)) is needed. The local users are also useful for testing and development of the SSSD without having to deploy a full remote server. The <code>sss_user*</code> and <code>sss_group*</code> tools use a local LDB storage to store users and groups.</p>

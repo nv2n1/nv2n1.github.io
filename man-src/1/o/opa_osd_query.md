@@ -34,117 +34,85 @@ url: "/docs/linux/man/1-opa_osd_query/"
 <dl>
 <dt>
 &nbsp;<wbr><i>options</i>&nbsp;<wbr>
-<dd> Options. Values include: 
-
+</dt><dd> Options. Values include: 
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> 
-
+</dt><dd> 
  -v/--verbose <i>arg</i> Sets debugging level. Range = 1 - 7. 
-
-</dl>
-</dl>
- 
-
-<dl>
-<dt>
-<dd>
-<dl>
-<dt>
-<dd> 
-
- -s/--slid <i>arg</i> Specifies source LID.</dl>
+</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -d/--dlid <i>arg</i> Specifies destination LID.</dl>
+</dt><dd> 
+ -s/--slid <i>arg</i> Specifies source LID.</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -S/--sgid <i>arg</i> Specifies source GID in GID format (0x00000000:0x00000000) or in Inet6 format (x:x:x:x:x:x:x:x).</dl>
+</dt><dd> 
+ -d/--dlid <i>arg</i> Specifies destination LID.</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -D/--dgid <i>arg</i> Specifies destination GID in GID format (0x00000000:0x00000000) or in Inet6 format (x:x:x:x:x:x:x:x).</dl>
+</dt><dd> 
+ -S/--sgid <i>arg</i> Specifies source GID in GID format (0x00000000:0x00000000) or in Inet6 format (x:x:x:x:x:x:x:x).</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -k/--pkey <i>arg</i> Specifies partition key.</dl>
+</dt><dd> 
+ -D/--dgid <i>arg</i> Specifies destination GID in GID format (0x00000000:0x00000000) or in Inet6 format (x:x:x:x:x:x:x:x).</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -i/--sid <i>arg</i> Specifies service ID.</dl>
+</dt><dd> 
+ -k/--pkey <i>arg</i> Specifies partition key.</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -h/--hfi <i>arg</i> Specifies the HFI to use. Default = first HFI. The HFI can be identified by name, for example, mthfi0 or by number, for example, 1.</dl>
+</dt><dd> 
+ -i/--sid <i>arg</i> Specifies service ID.</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
-
- -p/--port <i>arg</i> Specifies the port to use. Default = first port.</dl>
+</dt><dd> 
+ -h/--hfi <i>arg</i> Specifies the HFI to use. Default = first HFI. The HFI can be identified by name, for example, mthfi0 or by number, for example, 1.</dd></dl>
 </dl>
  
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
+ -p/--port <i>arg</i> Specifies the port to use. Default = first port.</dd></dl>
+</dl>
+ 
 
- -H/--help Provides this help text.</dl>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+ -H/--help Provides this help text.</dd></dl>
 </dl>
  
 

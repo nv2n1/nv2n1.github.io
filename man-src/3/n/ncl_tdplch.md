@@ -22,15 +22,15 @@ CALL TDPLCH (XPOS, YPOS, CHRS, SIZE, ANGD, CNTR)
 
 The arguments of TDPLCH are as follows:
 <dl><dt>XPOS and YPOS
-<dd>(input expressions of type REAL) - the parallelogram coordinates of a point relative to which the character string is to be positioned.
-<dt>CHRS
-<dd>(input, of type CHARACTER) - a string suitable for input to the PLOTCHAR routine PLCHHQ.
-<dt>SIZE
-<dd>(an input expression of type REAL) - specifies the width of the characters to be used as a multiple of the &quot;X&quot; dimension of the reference parallelogram. If the reference parallelogram is not a square, distortion of the characters is to be expected: for example, if the reference parallelogram is twice as wide as it is high, then the same will be true of characters drawn by TDPLCH.
-<dt>ANGD
-<dd>(an input expression of type REAL) - specifies the angle, in degrees, at which the character string is to be drawn relative to the reference parallelogram (0 =&gt; in the direction of positive X, 90 =&gt; in the direction of positive Y, 180 =&gt; in the direction of negative X, and so on).
-<dt>CNTR
-<dd>(an input expression of type REAL) - specifies how the character string is to be centered relative to the point (XPOS,YPOS) within the reference parallelogram. If CNTR = -1, the leading edge of the character string will be placed at (XPOS,YPOS); if CNTR = 0, the center of the character string will be placed at (XPOS,YPOS); and if CNTR = +1, the trailing edge of the character string will be placed at (XPOS,YPOS). Other values may be used, with the logical results; for example, if CNTR = -.5, the point halfway between the leading edge and the center of the character string will be placed at (XPOS,YPOS).</dl>
+</dt><dd>(input expressions of type REAL) - the parallelogram coordinates of a point relative to which the character string is to be positioned.
+</dd><dt>CHRS
+</dt><dd>(input, of type CHARACTER) - a string suitable for input to the PLOTCHAR routine PLCHHQ.
+</dd><dt>SIZE
+</dt><dd>(an input expression of type REAL) - specifies the width of the characters to be used as a multiple of the &quot;X&quot; dimension of the reference parallelogram. If the reference parallelogram is not a square, distortion of the characters is to be expected: for example, if the reference parallelogram is twice as wide as it is high, then the same will be true of characters drawn by TDPLCH.
+</dd><dt>ANGD
+</dt><dd>(an input expression of type REAL) - specifies the angle, in degrees, at which the character string is to be drawn relative to the reference parallelogram (0 =&gt; in the direction of positive X, 90 =&gt; in the direction of positive Y, 180 =&gt; in the direction of negative X, and so on).
+</dd><dt>CNTR
+</dt><dd>(an input expression of type REAL) - specifies how the character string is to be centered relative to the point (XPOS,YPOS) within the reference parallelogram. If CNTR = -1, the leading edge of the character string will be placed at (XPOS,YPOS); if CNTR = 0, the center of the character string will be placed at (XPOS,YPOS); and if CNTR = +1, the trailing edge of the character string will be placed at (XPOS,YPOS). Other values may be used, with the logical results; for example, if CNTR = -.5, the point halfway between the leading edge and the center of the character string will be placed at (XPOS,YPOS).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

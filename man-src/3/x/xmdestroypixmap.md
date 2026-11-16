@@ -16,10 +16,10 @@ description: "XmDestroyPixmap — A pixmap caching function that removes a pixma
 <h2>Description</h2>
 <p><code>XmDestroyPixmap</code> removes pixmaps that are no longer used. Pixmaps are completely freed only when there is no further reference to them.</p>
 <dl COMPACT>
-<dt><i>screen</i></p>
-<dd>Specifies the display screen for which the pixmap was requested</p>
-<dt><i>pixmap</i></p>
-<dd>Specifies the pixmap to be destroyed</dl>
+<dt><i>screen</i></dt>
+<dd>Specifies the display screen for which the pixmap was requested</dd>
+<dt><i>pixmap</i></dt>
+<dd>Specifies the pixmap to be destroyed</dd></dl>
 <h2>Return</h2>
 <p>Returns True when successful; returns False if there is no matching screen and pixmap in the pixmap cache.</p>
 <h2>Related</h2>

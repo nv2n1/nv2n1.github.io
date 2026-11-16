@@ -19,22 +19,22 @@ description: "pmNewContext – establish a new PMAPI context"
 <p> For a <i>type</i> of <code>PM_CONTEXT_ARCHIVE</code>, each element of the list of names in <i>name</i> may also be the name of any of the physical files of an archive, e.g. <i>myarchive</i><code>.meta</code> (the metadata file) or <i>myarchive</i><code>.index</code> (the temporal index) or <i>myarchive</i><code>.0</code> (the first data volume of the archive) or <i>myarchive</i><code>.0.bz2</code> or <i>myarchive</i><code>.0.bz</code> (the first data volume compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1)) or <i>myarchive</i><code>.0.gz</code> or <i>myarchive</i><code>.0.Z</code> or <i>myarchive</i><code>.0.z</code> (the first data volume compressed with <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1)), <i>myarchive</i><code>.1</code> or <i>myarchive</i><code>.3.bz2</code> or <i>myarchive</i><code>.42.gz</code> etc. </p>
 <p> If more than one archive is specified for a <i>type</i> of <code>PM_CONTEXT_ARCHIVE</code>, there are some restrictions on the archives within the set:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The archives must all have been generated on the same host.</p>
-<dt>&bull;</p>
-<dd>The archives must not overlap in time.</p>
-<dt>&bull;</p>
-<dd>The archives must all have been created using the same time zone.</p>
-<dt>&bull;</p>
-<dd>The <i>PMID</i> of each metric should be the same in all of the archives. Multiple <i>PMID</i>s are currently tolerated by using the first <i>PMID</i> defined for each metric and ignoring subsequent <i>PMID</i>s.</p>
-<dt>&bull;</p>
-<dd>The type of each metric must be the same in all of the archives.</p>
-<dt>&bull;</p>
-<dd>The semantics of each metric must be the same in all of the archives.</p>
-<dt>&bull;</p>
-<dd>The units of each metric must be the same in all of the archives.</p>
-<dt>&bull;</p>
-<dd>The instance domain of each metric must be the same in all of the archives.</dl>
+<dt>&bull;</dt>
+<dd>The archives must all have been generated on the same host.</dd>
+<dt>&bull;</dt>
+<dd>The archives must not overlap in time.</dd>
+<dt>&bull;</dt>
+<dd>The archives must all have been created using the same time zone.</dd>
+<dt>&bull;</dt>
+<dd>The <i>PMID</i> of each metric should be the same in all of the archives. Multiple <i>PMID</i>s are currently tolerated by using the first <i>PMID</i> defined for each metric and ignoring subsequent <i>PMID</i>s.</dd>
+<dt>&bull;</dt>
+<dd>The type of each metric must be the same in all of the archives.</dd>
+<dt>&bull;</dt>
+<dd>The semantics of each metric must be the same in all of the archives.</dd>
+<dt>&bull;</dt>
+<dd>The units of each metric must be the same in all of the archives.</dd>
+<dt>&bull;</dt>
+<dd>The instance domain of each metric must be the same in all of the archives.</dd></dl>
 <p> In the case where <i>type</i> is <code>PM_CONTEXT_LOCAL</code>, <i>name</i> is ignored, and the context uses a standalone connection to the PMDA methods used by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). When this type of context is used, the range of accessible performance metrics is constrained to those from the operating system, and optionally the &#8220;proc&#8221;, &#8220;sample&#8221; and &#8220;ib&#8221; PMDAs. </p>
 <p> In the case where <i>type</i> is <code>PM_CONTEXT_HOST</code>, additional flags can be added to the <i>type</i> to indicate if the connection to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) should be encrypted (<code>PM_CTXFLAG_SECURE</code>), deferred (<code>PM_CTXFLAG_SHALLOW</code>) and if the file descriptor used to communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), should not be shared across contexts (<code>PM_CTXFLAG_EXCLUSIVE</code>). The <code>PM_CTXFLAG_SHALLOW</code> flag is now deprecated and ignored. </p>
 <p> The initial instance profile is set up to select all instances in all instance domains. In the case of a set of archives, the initial collection time is also set to zero, so that an initial <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3) will result in the earliest set of metrics being returned from the set of archives. </p>
@@ -44,12 +44,12 @@ description: "pmNewContext – establish a new PMAPI context"
 <p> When attempting to connect to a remote <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on a machine that is booting, <code>pmNewContext</code> could potentially block for a long time until the remote machine finishes its initialization. <code>pmNewContext</code> will abort and return an error if the connection has not been established after some specified interval has elapsed. The default interval is 5 seconds. This may be modified by setting <code>PMCD_CONNECT_TIMEOUT</code> in the environment to a real number of seconds for the desired timeout. This is most useful in cases where the remote host is at the end of a slow network, requiring longer latencies to establish the connection correctly.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>PMCD_CONNECT_TIMEOUT</code></p>
-<dd>Timeout period (in seconds) for <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) connection attempts.</p>
-<dt><code>PMCD_PORT</code></p>
-<dd>TCP/IP port(s) for connecting to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), historically was 4321 and more recently the officially registered port 44321; in the current release, <code>pmcd</code> listens on both these ports as a transitional arrangement. If used, should be set to a comma-separated list of numerical port numbers.</p>
-<dt><code>PMDA_PATH</code></p>
-<dd>When searching for PMDAs to be loaded when <i>type</i> is <code>PM_CONTEXT_LOCAL</code>, the <code>PMDA_PATH</code> environment variable may be used to define a search path of directories to be used to locate the PMDA executables. The default search path is <code>$PCP_SHARE_DIR/lib:/usr/pcp/lib</code>.</dl>
+<dt><code>PMCD_CONNECT_TIMEOUT</code></dt>
+<dd>Timeout period (in seconds) for <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) connection attempts.</dd>
+<dt><code>PMCD_PORT</code></dt>
+<dd>TCP/IP port(s) for connecting to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), historically was 4321 and more recently the officially registered port 44321; in the current release, <code>pmcd</code> listens on both these ports as a transitional arrangement. If used, should be set to a comma-separated list of numerical port numbers.</dd>
+<dt><code>PMDA_PATH</code></dt>
+<dd>When searching for PMDAs to be loaded when <i>type</i> is <code>PM_CONTEXT_LOCAL</code>, the <code>PMDA_PATH</code> environment variable may be used to define a search path of directories to be used to locate the PMDA executables. The default search path is <code>$PCP_SHARE_DIR/lib:/usr/pcp/lib</code>.</dd></dl>
 <h2>Caveats</h2>
 <p>When using a <i>type</i> of <code>PM_CONTEXT_LOCAL</code>, the operating system PMDA may export data structures directly from the kernel, which means that the <code>pmNewContext</code> caller should be an executable program compiled for the same object code format as the booted kernel. </p>
 <p> In addition, applications using a <code>PM_CONTEXT_LOCAL</code> context must be single-threaded because the various DSO PMDAs may not be thread-safe. This restriction is enforced at the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), where routines may return the error code <code>PM_ERR_THREAD</code> if the library detects calls from more than one thread. </p>
@@ -59,32 +59,32 @@ description: "pmNewContext – establish a new PMAPI context"
 <h2>Diagnostics</h2>
 <p><code>PM_ERR_PERMISSION</code></p>
 <dl>
-<dd>No permission to perform requested operation</dl>
+<dd>No permission to perform requested operation</dd></dl>
 <p> <code>PM_ERR_CONNLIMIT</code></p>
 <dl>
-<dd>PMCD connection limit for this host exceeded</dl>
+<dd>PMCD connection limit for this host exceeded</dd></dl>
 <p> <code>PM_ERR_NOCONTEXT</code></p>
 <dl>
-<dd>Requested context type was not <code>PM_CONTEXT_LOCAL</code>, <code>PM_CONTEXT_HOST </code> or <code>PM_CONTEXT_ARCHIVE</code>.</dl>
+<dd>Requested context type was not <code>PM_CONTEXT_LOCAL</code>, <code>PM_CONTEXT_HOST </code> or <code>PM_CONTEXT_ARCHIVE</code>.</dd></dl>
 <p> <code>PM_ERR_LOGOVERLAP</code></p>
 <dl>
-<dd>Archives overlap in time</dl>
+<dd>Archives overlap in time</dd></dl>
 <p> <code>PM_ERR_LOGHOST</code></p>
 <dl>
-<dd>Archives differ by host</dl>
+<dd>Archives differ by host</dd></dl>
 <p> <code>PM_ERR_LOGTIMEZONE</code></p>
 <dl>
-<dd>Archives differ by time zone.</dl>
+<dd>Archives differ by time zone.</dd></dl>
 <p> <code>PM_ERR_LOGCHANGETYPE</code></p>
 <dl>
-<dd>The type of a metric differs among archives</dl>
+<dd>The type of a metric differs among archives</dd></dl>
 <p> <code>PM_ERR_LOGCHANGESEM</code></p>
 <dl>
-<dd>The semantics of a metric differs among archives</dl>
+<dd>The semantics of a metric differs among archives</dd></dl>
 <p> <code>PM_ERR_LOGCHANGEINDOM</code></p>
 <dl>
-<dd>The instance domain of a metric differs among archives</dl>
+<dd>The instance domain of a metric differs among archives</dd></dl>
 <p> <code>PM_ERR_LOGCHANGEUNITS</code></p>
 <dl>
-<dd>The units of a metric differs among archives </p>
+<dd>The units of a metric differs among archives </dd>
 </dl>

@@ -14,14 +14,14 @@ description: "knopwatchd – \"FwKnop Watch Daemon\" checks to make sure knopmd,
 <p><code>knopwatchd</code> checks on an interval of every five seconds to make sure that knopmd, knoptm and fwknopd are running on the box. If any of the three daemons have died, knopwatchd will restart the daemon and notify each email address listed in the EMAIL_ADDRESSES variable that the daemon has been restarted. <code>knopwatchd</code> uses the fwknop.conf configuration file which by default is located at /etc/fwknop/, but a different path can be specified on the command line.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c&nbsp;<wbr>&lt;config-file&gt;</code></p>
-<dd>Specify path to config file instead of using the default configuration file /etc/fwknop/fwknop.conf.</p>
-<dt><code>-D</code></p>
-<dd>Dump the configuration values that <code>knopwatchd</code> derives from /etc/fwknop/fwknop.conf (or other override files) on STDERR.</p>
-<dt><code>-h</code></p>
-<dd>Display usage information and exit.</p>
-<dt><code>-O&nbsp;<wbr>&lt;config-file&gt;</code></p>
-<dd>Override config variable values that are normally read from the /etc/fwknop/fwknop.conf file with values from the specified file. Multiple override config files can be given as a comma separated list.</dl>
+<dt><code>-c&nbsp;<wbr>&lt;config-file&gt;</code></dt>
+<dd>Specify path to config file instead of using the default configuration file /etc/fwknop/fwknop.conf.</dd>
+<dt><code>-D</code></dt>
+<dd>Dump the configuration values that <code>knopwatchd</code> derives from /etc/fwknop/fwknop.conf (or other override files) on STDERR.</dd>
+<dt><code>-h</code></dt>
+<dd>Display usage information and exit.</dd>
+<dt><code>-O&nbsp;<wbr>&lt;config-file&gt;</code></dt>
+<dd>Override config variable values that are normally read from the /etc/fwknop/fwknop.conf file with values from the specified file. Multiple override config files can be given as a comma separated list.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fwknop/">fwknop</a></code>(8), <code><a href="/docs/linux/man/8-fwknopd/">fwknopd</a></code>(8), <code><a href="/docs/linux/man/8-knopmd/">knopmd</a></code>(8),</p>
 <h2>Author</h2>

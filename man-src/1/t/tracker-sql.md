@@ -19,23 +19,23 @@ description: "tracker-sql – Use SQL to query the Tracker databases."
 <p> The <i>file</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f, &#8211;file</code>=&lt;<i>file</i>&gt;</p>
-<dd> Use a <i>file</i> with SPARQL content to query. Don&#8217;t forget to end all queries with a semicolon (;) and also to use quotes around table names. The quotes are important because most tables are named after ontology classes like &quot;nfo:Document&quot; and queries will fail without the quotes.</p>
-<dt><code>-q, &#8211;query</code>=&lt;<i>sql</i>&gt;</p>
-<dd> Use a <i>sql</i> string to query the database with. </p>
+<dt><code>-f, &#8211;file</code>=&lt;<i>file</i>&gt;</dt>
+<dd> Use a <i>file</i> with SPARQL content to query. Don&#8217;t forget to end all queries with a semicolon (;) and also to use quotes around table names. The quotes are important because most tables are named after ontology classes like &quot;nfo:Document&quot; and queries will fail without the quotes.</dd>
+<dt><code>-q, &#8211;query</code>=&lt;<i>sql</i>&gt;</dt>
+<dd> Use a <i>sql</i> string to query the database with. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Show first 10 &quot;nfo:Document&quot; entries where the TOC is not NULL:</p>
+<dt>Show first 10 &quot;nfo:Document&quot; entries where the TOC is not NULL:</dt>
 <dd>
 <pre>
 $ tracker sql -q 'SELECT * FROM &quot;nfo:Document&quot; WHERE &quot;nfo:tableOfContents&quot; NOT NULL LIMIT 10;'
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-sparql/">tracker-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-info/">tracker-info</a></code>(1).</p>
 <dl>
-<dt><code><a rel="nofollow" href="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</a></code></p>
+<dt><code><a rel="nofollow" href="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</a></code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

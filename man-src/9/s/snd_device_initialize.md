@@ -15,11 +15,11 @@ snd_device_initialize - Initialize struct device for sound devices
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to initialize</dl>
+<dl><dd></dd><dd>device to initialize</dd></dl>
  
 
  <i>card</i>
-<dl><dd>card to assign, optional</dl>
+<dl><dd>card to assign, optional</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -46,8 +46,8 @@ description: "ppmtolss16 — Convert a PPM to an LSS16 image"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><i>#rrggbb</i>=<i>i</i></p>
-<dd> Specify that the color #rrggbb (hex) should be assigned index i (decimal). </p>
+<dt><i>#rrggbb</i>=<i>i</i></dt>
+<dd> Specify that the color #rrggbb (hex) should be assigned index i (decimal). </dd>
 </dl>
 <h2>BUG</h2>
 <p> This program cannot handle comments in the header, nor &quot;plain&quot; ppm format. </p>

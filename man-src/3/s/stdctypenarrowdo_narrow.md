@@ -11,25 +11,17 @@ std::ctype&lt;CharT&gt;::narrow,do_narrow - std::ctype&lt;CharT&gt;::narrow,do_n
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  char narrow(CharT c, char dflt) const;
-
 public:
 const CharT *narrow(const CharT *beg, const CharT *end, (2)
-
                                                             char dflt,
                     char *dst) const;
-
 protected:
 (3)
-
     virtual char do_narrow(CharT c, char dflt) const;
-
 protected:
 virtual const CharT *do_narrow(const CharT *beg, const CharT *end, (4)
-
                                                                        char dflt,
                                char *dst) const;</code></pre> 
 1,2) Public member function, calls the protected virtual member function do_narrow of the most derived class. 
@@ -55,10 +47,8 @@ dst - pointer to the first element of the array of char to fill
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
 void try_narrow(const std::ctype&lt;wchar_t&gt; &amp;f, wchar_t c)
-
 {
     char n = f.narrow(c, 0);
     if (n) {
@@ -68,7 +58,6 @@ void try_narrow(const std::ctype&lt;wchar_t&gt; &amp;f, wchar_t c)
     }
 }
 int main()
-
 {
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
     std::wcout.imbue(std::locale());

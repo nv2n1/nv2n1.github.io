@@ -19,7 +19,7 @@ description: "strsyl.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 STRSYL solves the real Sylvester matrix equation : op(A) * X + X *op(B) = scale * C or
                                                                           op(A) * X - X * op(B) = scale * C,
@@ -30,11 +30,11 @@ the right hand side C and
 and scale is an output scale factor, set &lt;= 1 to avoid overflow in X.A and B must be in Schur canonical form(as returned by SHSEQR), that is, block upper triangular with 1 - by - 1 and 2 - by - 2 diagonal blocks;
 each 2 - by - 2 diagonal block has its diagonal elements equal and its off - diagonal elements of opposite sign.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANA</i> </p>
+</dt><dd> <i>TRANA</i> </dd>
 <pre>
           TRANA is CHARACTER*1
           Specifies the option op(A):
@@ -118,14 +118,14 @@ each 2 - by - 2 diagonal block has its diagonal elements equal and its off - dia
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 164 of file strsyl.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

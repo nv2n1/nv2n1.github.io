@@ -34,10 +34,10 @@ description: "dgerfsx.f –"
  defaults are acceptable. If the defaults are acceptable, users
  can pass NPARAMS = 0 which prevents the source code from accessing
  the PARAMS argument.</pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANS</i> </p>
+<dd><i>TRANS</i> </dd>
 <pre> TRANS is CHARACTER*1
  Specifies the form of the system of equations:
  = 'N': A * X = B (No transpose)
@@ -276,13 +276,13 @@ description: "dgerfsx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 412 of file dgerfsx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

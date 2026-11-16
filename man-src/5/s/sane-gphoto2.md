@@ -26,24 +26,24 @@ description: "sane-gphoto2 – SANE backend for gphoto2 supported cameras"
  high_resolution=1280&#215;960<br />
  low_resolution=640&#215;480<br />
  thumb_resolution=160&#215;120<br />
- dumpinquiry</dl>
+ dumpinquiry</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/gphoto2.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-gphoto2.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-gphoto2.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/gphoto2.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-gphoto2.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-gphoto2.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (<i>.</i>) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_GPHOTO2</code></p>
-<dd>If the library was compiled with debugging support enabled, this environment variable controls the debug level for this backend. A value of 128 requests maximally copious debug output; smaller levels reduce verbosity.</p>
-<dt><code>GP_DEBUG</code></p>
-<dd>Set to 1, 2, or 3, to enable various levels of debugging within the gphoto2 libraries. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (<i>.</i>) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_GPHOTO2</code></dt>
+<dd>If the library was compiled with debugging support enabled, this environment variable controls the debug level for this backend. A value of 128 requests maximally copious debug output; smaller levels reduce verbosity.</dd>
+<dt><code>GP_DEBUG</code></dt>
+<dd>Set to 1, 2, or 3, to enable various levels of debugging within the gphoto2 libraries. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)<code>,</code> <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<code>,</code> <code>xscanimage</code>(1)<code>,</code> <code><a href="/docs/linux/man/3-libgphoto2/">libgphoto2</a></code>(3) </p>

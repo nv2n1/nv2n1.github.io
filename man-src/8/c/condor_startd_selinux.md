@@ -82,8 +82,8 @@ description: "condor_startd_selinux – Security Enhanced Linux Policy for the c
 <p> <code>condor_startd_exec_t</code> </p>
 <p> &#8211; Set files with the condor_startd_exec_t type, if you want to transition an executable to the condor_startd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/condor_startd, /usr/sbin/condor_starter </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/condor_startd, /usr/sbin/condor_starter </dd>
 </dl>
 <p> <code>condor_startd_tmp_t</code> </p>
 <p> &#8211; Set files with the condor_startd_tmp_t type, if you want to store condor startd temporary files in the /tmp directories. </p>

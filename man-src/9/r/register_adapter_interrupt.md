@@ -14,11 +14,11 @@ description: "register_adapter_interrupt – register adapter interrupt handler"
 <p><i>airq</i></p>
 <dl>
 <dd>
-<dd>pointer to adapter interrupt descriptor</dl>
+</dd><dd>pointer to adapter interrupt descriptor</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 on success, or -EINVAL.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

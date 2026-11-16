@@ -48,8 +48,8 @@ description: "sysinfo – return system information"
 <p> On success, <code>sysinfo</code>() returns zero. On error, -1 is returned, and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>info</i> is not a valid address.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>info</i> is not a valid address.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>sysinfo</code>() first appeared in Linux 0.98.pl6.</p>
 <h2>CONFORMING TO</h2>

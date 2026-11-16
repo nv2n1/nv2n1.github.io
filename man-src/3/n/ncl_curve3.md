@@ -13,9 +13,9 @@ CURVE3 - Draws the projection of a curve defined by a sequence of points in 3-sp
 
  void c_curve3 (float *u, float *v, float *w, int n)
 <h2>Description</h2><dl COMPACT><dt>U,V,W
-<dd>(input arrays, dimensioned at least N, of type REAL) contain the U, V, and W coordinates, respectively, of the points defining the curve whose projection is to be drawn.
-<dt>N
-<dd>(an input expression of type INTEGER) is the number of points defining the curve.</dl>
+</dt><dd>(input arrays, dimensioned at least N, of type REAL) contain the U, V, and W coordinates, respectively, of the points defining the curve whose projection is to be drawn.
+</dd><dt>N
+</dt><dd>(an input expression of type INTEGER) is the number of points defining the curve.</dd></dl>
  
 
  Curves drawn by CURVE3 are drawn in the current polyline color, as determined by the last call to the GKS routine GSPLCI; by default, color index 1 is used. Line width is determined by the last call to the GKS routine GSLWSC; by default, the line width scale factor is 1.

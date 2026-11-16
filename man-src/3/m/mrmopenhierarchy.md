@@ -18,14 +18,14 @@ description: "MrmOpenHierarchy — Allocates a hierarchy ID and opens all the UI
 <h2>Description</h2>
 <p>This routine is obsolete and exists for compatibility with previous releases. It is replaced by <code>MrmOpenHierarchyPerDisplay</code>. <code>MrmOpenHierarchy</code> is identical to <code>MrmOpenHierarchyPerDisplay</code> except that <code>MrmOpenHierarchy</code> does not take a <i>display</i> argument.</p>
 <dl COMPACT>
-<dt><i>num_files</i></p>
-<dd>Specifies the number of files in the name list.</p>
-<dt><i>file_names_list</i></p>
-<dd>Specifies an array of character strings that identify the UID files.</p>
-<dt><i>ancillary_structures_list</i></p>
-<dd>A list of operating-system-dependent ancillary structures corresponding to items such as filenames, clobber flags, and so forth. This argument should be NULL for most operations. If you need to reference this structure, see the definition of <code>MrmOsOpenParamPtr</code> in the <code>MrmPublic.h</code> header file for more information.</p>
-<dt><i>hierarchy_id</i></p>
-<dd>Returns the search hierarchy ID. The search hierarchy ID identifies the list of UID files that MRM searches (in order) when performing subsequent fetch calls.</dl>
+<dt><i>num_files</i></dt>
+<dd>Specifies the number of files in the name list.</dd>
+<dt><i>file_names_list</i></dt>
+<dd>Specifies an array of character strings that identify the UID files.</dd>
+<dt><i>ancillary_structures_list</i></dt>
+<dd>A list of operating-system-dependent ancillary structures corresponding to items such as filenames, clobber flags, and so forth. This argument should be NULL for most operations. If you need to reference this structure, see the definition of <code>MrmOsOpenParamPtr</code> in the <code>MrmPublic.h</code> header file for more information.</dd>
+<dt><i>hierarchy_id</i></dt>
+<dd>Returns the search hierarchy ID. The search hierarchy ID identifies the list of UID files that MRM searches (in order) when performing subsequent fetch calls.</dd></dl>
 <p> Each UID file string in <i>file_names_list</i> can specify either a full pathname or a filename. If a UID file string has a leading slash (/), it specifies a full pathname, and MRM opens the file as specified. Otherwise, the UID file string specifies a filename. In this case, MRM looks for the file along a search path specified by the <code>UIDPATH</code> environment variable or by a default search path, which varies depending on whether or not the <code>XAPPLRESDIR</code> environment variable is set. </p>
 <p> The <code>UIDPATH</code> environment variable specifies a search path and naming conventions associated with UID files. It can contain the substitution field <code>%U</code>, where the UID file string from the <i>file_names_list</i> argument to <code>MrmOpenHierarchyPerDisplay</code> is substituted for <code>%U</code>. It can also contain the substitution fields accepted by <code>XtResolvePathname</code>. The substitution field <code>%T</code> is always mapped to <i>uid</i>. The entire path is first searched with <code>%S</code> mapped to <code>.uid</code>. If no file is found, it is searched again with <code>%S</code> mapped to NULL. </p>
 <p> If no display is set prior to calling this function, the result of this function&#8217;s call to <code>XtResolvePathname</code> is undefined. </p>
@@ -38,91 +38,91 @@ description: "MrmOpenHierarchy — Allocates a hierarchy ID and opens all the UI
 <p> After <code>MrmOpenHierarchy</code> opens the UID hierarchy, you should not delete or modify the UID files until you close the UID hierarchy by calling <code>MrmCloseHierarchy</code>. </p>
 <p> If <code>UIDPATH</code> is not set but the environment variable <code>XAPPLRESDIR</code> is set, MRM searches the following pathnames:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/%L/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/%l/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/%L/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/%l/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$XAPPLRESDIR/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%L/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%l/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%L/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%l/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/include/X11/uid/%U%S</code></dl>
+<dt> &bull;</dt>
+<dd><code>%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%L/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%L/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/include/X11/uid/%U%S</code></dd></dl>
 <p> If neither <code>UIDPATH</code> nor <code>XAPPLRESDIR</code> is set, MRM searches the following pathnames:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>HOME/%L/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>HOME/%l/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/%L/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/%l/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>$HOME/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%L/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%l/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/uid/%N/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%L/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/%l/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/lib/X11/uid/%U%S</code></p>
-<dt> &bull;</p>
-<dd><code>/usr/include/X11/uid/%U%S</code></dl>
+<dt> &bull;</dt>
+<dd><code>%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>HOME/%L/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>HOME/%l/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%L/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%l/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/uid/%N/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/uid/%U%S</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/include/X11/uid/%U%S</code></dd></dl>
 <p> These paths are defaults that vendors may change. For example, a vendor may use different directories for <code>/usr/lib/X11</code> and <code>/usr/include/X11</code>. </p>
 <p> The following substitutions are used in these paths:</p>
 <dl COMPACT>
-<dt><code>%U</code></p>
-<dd>The UID file string, from the <i>file_names_list</i> argument.</p>
-<dt><code>%N</code></p>
-<dd>The class name of the application.</p>
-<dt><code>%L</code></p>
-<dd>The display&#8217;s language string. This string is influenced by <code>XtSetLanguageProc</code>. The default string is determined by calling setlocale(<code>LC_ALL, NULL</code>).</p>
-<dt><code>%l</code></p>
-<dd>The language component of the display&#8217;s language string.</p>
-<dt><code>%S</code></p>
-<dd>The suffix to the filename. The entire path is first searched with a suffix of <code>.uid</code>. If no file is found, it is searched again with a NULL suffix.</dl>
+<dt><code>%U</code></dt>
+<dd>The UID file string, from the <i>file_names_list</i> argument.</dd>
+<dt><code>%N</code></dt>
+<dd>The class name of the application.</dd>
+<dt><code>%L</code></dt>
+<dd>The display&#8217;s language string. This string is influenced by <code>XtSetLanguageProc</code>. The default string is determined by calling setlocale(<code>LC_ALL, NULL</code>).</dd>
+<dt><code>%l</code></dt>
+<dd>The language component of the display&#8217;s language string.</dd>
+<dt><code>%S</code></dt>
+<dd>The suffix to the filename. The entire path is first searched with a suffix of <code>.uid</code>. If no file is found, it is searched again with a NULL suffix.</dd></dl>
 <h2>Return</h2>
 <p>This function returns one of the following status return constants:</p>
 <dl COMPACT>
-<dt><code>MrmSUCCESS</code></p>
-<dd>The function executed successfully.</p>
-<dt><code>MrmNOT_FOUND</code></p>
-<dd>File not found.</p>
-<dt><code>MrmFAILURE</code></p>
-<dd>The function failed.</dl>
+<dt><code>MrmSUCCESS</code></dt>
+<dd>The function executed successfully.</dd>
+<dt><code>MrmNOT_FOUND</code></dt>
+<dd>File not found.</dd>
+<dt><code>MrmFAILURE</code></dt>
+<dd>The function failed.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-mrmopenhierarchyperdisplay/">MrmOpenHierarchyPerDisplay</a></code>(3) and <code><a href="/docs/linux/man/3-mrmclosehierarchy/">MrmCloseHierarchy</a></code>(3).</p>

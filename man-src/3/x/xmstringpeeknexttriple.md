@@ -15,8 +15,8 @@ description: "XmStringPeekNextTriple — A function that returns the component t
 <h2>Description</h2>
 <p><code>XmStringPeekNextTriple</code> examines the next component that would be fetched by <code>XmStringGetNextTriple</code> and returns the component type.</p>
 <dl COMPACT>
-<dt><i>context</i></p>
-<dd>Specifies the string context structure that was allocated by the <code>XmStringInitContext</code> function.</dl>
+<dt><i>context</i></dt>
+<dd>Specifies the string context structure that was allocated by the <code>XmStringInitContext</code> function.</dd></dl>
 <h2>Return</h2>
 <p>Returns the type of the component found. Refer to the <code><a href="/docs/linux/man/3-xmstringcomponenttype/">XmStringComponentType</a></code>(3) reference page for a list of component types.</p>
 <h2>Related</h2>

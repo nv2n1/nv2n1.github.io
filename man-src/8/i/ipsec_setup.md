@@ -19,4 +19,4 @@ description: "ipsec_setup – wrapper routine to the Libreswan init system"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

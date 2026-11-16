@@ -18,14 +18,14 @@ description: "XmCreateDropDown — The default DropDown widget creation function
 <h2>Description</h2>
 <p><code>XmCreateDropDown</code> creates an instance of a DropDown widget and returns the associated widget ID.</p>
 <dl COMPACT>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget.</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list.</p>
-<dt><code>arg_count</code></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dl>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget.</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list.</dd>
+<dt><code>arg_count</code></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dd></dl>
 <p> For a complete definition of DropDown and its associated resources, see <code><a href="/docs/linux/man/3-xmdropdown/">XmDropDown</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the DropDown widget ID.</p>

@@ -10,11 +10,10 @@ description: "pthread_kill – send a signal to a thread"
 <p>pthread_kill &#8211; send a signal to a thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int pthread_kill(pthread_t thread, int sig);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_kill</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 <h2>Description</h2>
 <p>The <code>pthread_kill</code>() function sends the signal <i>sig</i> to <i>thread</i>, a thread in the same process as the caller. The signal is asynchronously directed to <i>thread</i>. </p>
 <p> If <i>sig</i> is 0, then no signal is sent, but error checking is still performed.</p>
@@ -22,8 +21,8 @@ int pthread_kill(pthread_t thread, int sig);</code></pre>
 <p>On success, <code>pthread_kill</code>() returns 0; on error, it returns an error number, and no signal is sent.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>An invalid signal was specified.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>An invalid signal was specified.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

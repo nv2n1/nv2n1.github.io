@@ -38,78 +38,78 @@ description: "struct_nand_ecc_ctrl – Control structure for ECC"
 <h2>Members</h2>
 <p>mode</p>
 <dl>
-<dd>ECC mode</dl>
+<dd>ECC mode</dd></dl>
 <p> algo</p>
 <dl>
-<dd>ECC algorithm</dl>
+<dd>ECC algorithm</dd></dl>
 <p> steps</p>
 <dl>
-<dd>number of ECC steps per page</dl>
+<dd>number of ECC steps per page</dd></dl>
 <p> size</p>
 <dl>
-<dd>data bytes per ECC step</dl>
+<dd>data bytes per ECC step</dd></dl>
 <p> bytes</p>
 <dl>
-<dd>ECC bytes per step</dl>
+<dd>ECC bytes per step</dd></dl>
 <p> total</p>
 <dl>
-<dd>total number of ECC bytes per page</dl>
+<dd>total number of ECC bytes per page</dd></dl>
 <p> strength</p>
 <dl>
-<dd>max number of correctible bits per ECC step</dl>
+<dd>max number of correctible bits per ECC step</dd></dl>
 <p> prepad</p>
 <dl>
-<dd>padding information for syndrome based ECC generators</dl>
+<dd>padding information for syndrome based ECC generators</dd></dl>
 <p> postpad</p>
 <dl>
-<dd>padding information for syndrome based ECC generators</dl>
+<dd>padding information for syndrome based ECC generators</dd></dl>
 <p> options</p>
 <dl>
-<dd>ECC specific options (see NAND_ECC_XXX flags defined above)</dl>
+<dd>ECC specific options (see NAND_ECC_XXX flags defined above)</dd></dl>
 <p> priv</p>
 <dl>
-<dd>pointer to private ECC control data</dl>
+<dd>pointer to private ECC control data</dd></dl>
 <p> hwctl</p>
 <dl>
-<dd>function to control hardware ECC generator. Must only be provided if an hardware ECC is available</dl>
+<dd>function to control hardware ECC generator. Must only be provided if an hardware ECC is available</dd></dl>
 <p> calculate</p>
 <dl>
-<dd>function for ECC calculation or readback from ECC hardware</dl>
+<dd>function for ECC calculation or readback from ECC hardware</dd></dl>
 <p> correct</p>
 <dl>
-<dd>function for ECC correction, matching to ECC generator (sw/hw). Should return a positive number representing the number of corrected bitflips, -EBADMSG if the number of bitflips exceed ECC strength, or any other error code if the error is not directly related to correction. If -EBADMSG is returned the input buffers should be left untouched.</dl>
+<dd>function for ECC correction, matching to ECC generator (sw/hw). Should return a positive number representing the number of corrected bitflips, -EBADMSG if the number of bitflips exceed ECC strength, or any other error code if the error is not directly related to correction. If -EBADMSG is returned the input buffers should be left untouched.</dd></dl>
 <p> read_page_raw</p>
 <dl>
-<dd>function to read a raw page without ECC. This function should hide the specific layout used by the ECC controller and always return contiguous in-band and out-of-band data even if they&#8217;re not stored contiguously on the NAND chip (e.g. NAND_ECC_HW_SYNDROME interleaves in-band and out-of-band data).</dl>
+<dd>function to read a raw page without ECC. This function should hide the specific layout used by the ECC controller and always return contiguous in-band and out-of-band data even if they&#8217;re not stored contiguously on the NAND chip (e.g. NAND_ECC_HW_SYNDROME interleaves in-band and out-of-band data).</dd></dl>
 <p> write_page_raw</p>
 <dl>
-<dd>function to write a raw page without ECC. This function should hide the specific layout used by the ECC controller and consider the passed data as contiguous in-band and out-of-band data. ECC controller is responsible for doing the appropriate transformations to adapt to its specific layout (e.g. NAND_ECC_HW_SYNDROME interleaves in-band and out-of-band data).</dl>
+<dd>function to write a raw page without ECC. This function should hide the specific layout used by the ECC controller and consider the passed data as contiguous in-band and out-of-band data. ECC controller is responsible for doing the appropriate transformations to adapt to its specific layout (e.g. NAND_ECC_HW_SYNDROME interleaves in-band and out-of-band data).</dd></dl>
 <p> read_page</p>
 <dl>
-<dd>function to read a page according to the ECC generator requirements; returns maximum number of bitflips corrected in any single ECC step, 0 if bitflips uncorrectable, -EIO hw error</dl>
+<dd>function to read a page according to the ECC generator requirements; returns maximum number of bitflips corrected in any single ECC step, 0 if bitflips uncorrectable, -EIO hw error</dd></dl>
 <p> read_subpage</p>
 <dl>
-<dd>function to read parts of the page covered by ECC; returns same as <code>read_page</code></dl>
+<dd>function to read parts of the page covered by ECC; returns same as <code>read_page</code></dd></dl>
 <p> write_subpage</p>
 <dl>
-<dd>function to write parts of the page covered by ECC.</dl>
+<dd>function to write parts of the page covered by ECC.</dd></dl>
 <p> write_page</p>
 <dl>
-<dd>function to write a page according to the ECC generator requirements.</dl>
+<dd>function to write a page according to the ECC generator requirements.</dd></dl>
 <p> write_oob_raw</p>
 <dl>
-<dd>function to write chip OOB data without ECC</dl>
+<dd>function to write chip OOB data without ECC</dd></dl>
 <p> read_oob_raw</p>
 <dl>
-<dd>function to read chip OOB data without ECC</dl>
+<dd>function to read chip OOB data without ECC</dd></dl>
 <p> read_oob</p>
 <dl>
-<dd>function to read chip OOB data</dl>
+<dd>function to read chip OOB data</dd></dl>
 <p> write_oob</p>
 <dl>
-<dd>function to write chip OOB data</dl>
+<dd>function to write chip OOB data</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

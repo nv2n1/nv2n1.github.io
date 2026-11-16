@@ -28,12 +28,9 @@ Path relative to the root_path.
 <h2>Examples</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::path p = fs::current_path();
     std::cout &lt;&lt; &quot;The current path &quot; &lt;&lt; p &lt;&lt; &quot; decomposes into:\n&quot;

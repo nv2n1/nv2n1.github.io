@@ -26,30 +26,30 @@ description: "ddr_crypt – Data de/encryption plugin for dd_rescue"
 <h3>De/encryption algorithm</h3>
 <p> The crypt plugin supports a number of the de/encryption variants of AES. You can specify which one you want to use by passing</p>
 <dl>
-<dt><code>algo=AESxxx-yyy</code>,</p>
+<dt><code>algo=AESxxx-yyy</code>,</dt>
 <dd> where xxx can be 128, 192, 256, 128+, 192+, 256+, 128&#215;2, 192&#215;2, or 256&#215;2, and yyy can be ECB, CBC, or CTR. Pass <code>algo=help</code> to get a list of available algorithms. See section ALGORITHMS AND STREAM MODES for a discussion of the options. Note that decrypting a file can only be successful if the exact same algorithms is chosen as was used for encryption. There is no way to tell from an encrypted file which algorithm has been chosen.<br />
- The default (AES192-CTR) is a good choice if you can ensure that the key/IV combination is NEVER reused.</dl>
+ The default (AES192-CTR) is a good choice if you can ensure that the key/IV combination is NEVER reused.</dd></dl>
 <h3>Crypto engine</h3>
 <p> There are several implementations of the AES algorithms that this plugin can currently use:</p>
 <dl>
-<dt><code>engine=aesni</code></p>
-<dd> This will use an own AES implementation using the AESNI instructions of the intel x86 core CPUs since Westmere. If possible, this should be used, as it provides both superior performance and avoids some of the cache timing attacks that the lookup tables used in discrete implementations may be prone to. This engine supports all algorithms.</p>
-<dt><code>engine=aesarm64</code></p>
-<dd> This will use an own AES implementation using the AESv8 crypto extensions of the ARMv8 (AArch64 = ARM 64bit) architecture (available on CPUs/SOCs based on ARM&#8217;s Cortex A53,A57,A72 or Qualcomm&#8217;s Kryo or Apple&#8217;s A7x or newer designs). If possible, this should be used, as it provides both superior performance and avoids some of the cache timing attacks that the lookup tables used in discrete implementations may be prone to. This engine supports all algorithms.</p>
-<dt><code>engine=aes_c</code></p>
-<dd> This uses an AES implementation in C which is based on the rijndael reference code. It is available on all CPUs and supports all algorithms. Some prefetching is done on the tables to make cache timing attacks a bit harder, but this is most likely insufficient to thwart sophisticated attackers.</p>
-<dt><code>engine=openssl</code></p>
-<dd> This uses the openssl library to implement the AES routines, which should take advantage of hardware acceleration where available and have received some hardening against attacks. Note that the openssl implementation does not support the + variants (increased number of rounds) that the other engines provide.</dl>
+<dt><code>engine=aesni</code></dt>
+<dd> This will use an own AES implementation using the AESNI instructions of the intel x86 core CPUs since Westmere. If possible, this should be used, as it provides both superior performance and avoids some of the cache timing attacks that the lookup tables used in discrete implementations may be prone to. This engine supports all algorithms.</dd>
+<dt><code>engine=aesarm64</code></dt>
+<dd> This will use an own AES implementation using the AESv8 crypto extensions of the ARMv8 (AArch64 = ARM 64bit) architecture (available on CPUs/SOCs based on ARM&#8217;s Cortex A53,A57,A72 or Qualcomm&#8217;s Kryo or Apple&#8217;s A7x or newer designs). If possible, this should be used, as it provides both superior performance and avoids some of the cache timing attacks that the lookup tables used in discrete implementations may be prone to. This engine supports all algorithms.</dd>
+<dt><code>engine=aes_c</code></dt>
+<dd> This uses an AES implementation in C which is based on the rijndael reference code. It is available on all CPUs and supports all algorithms. Some prefetching is done on the tables to make cache timing attacks a bit harder, but this is most likely insufficient to thwart sophisticated attackers.</dd>
+<dt><code>engine=openssl</code></dt>
+<dd> This uses the openssl library to implement the AES routines, which should take advantage of hardware acceleration where available and have received some hardening against attacks. Note that the openssl implementation does not support the + variants (increased number of rounds) that the other engines provide.</dd></dl>
 <p> The engines are used in this order if available, which means that <i>aesni</i> will be used by default on x86 if supported, <i>aesarm64</i> will be used on ARMv8 and <i>aes_c</i> by default on all other platforms.</p>
 <h3>Padding</h3>
 <p> As AES is a block cipher (with a block size of 16 bytes), files which are not a multiple of the block size need padding at the end to have a full block.</p>
 <dl>
-<dt><code>pad=zero</code></p>
-<dd> The last block is filled up with zeroes and then encrypted. Note that on decryption, these zeroes can&#8217;t be automatically stripped, as the decryptor has no way to tell whether there true trailing zeros or whether those had been added by padding. This option is thus not recommended for copying files of arbitrary length.</p>
-<dt><code>pad=always</code></p>
-<dd> This uses the PKCS7 scheme used by openssl, appending one to sixteen bytes with the number of bytes to discard when decrypting. This is always safe, but always makes the output file larger than the input file. Use this when copying files.</p>
-<dt><code>pad=asneeded</code></p>
-<dd> This is a hybrid between zero and always. This does PKCS7 padding when the file size does not fill a complete block, but does no padding when it does. This mechanism has in the worst case (no pad bytes) a chance of 1/255 to produce an incorrect decryption result by wrong unpadding (which means that it has an overall chance of misrepresenting the final file size of 1/4080 for arbitrary file sizes). Don&#8217;t use this unless you can deal with such errors (or exclude them)!</dl>
+<dt><code>pad=zero</code></dt>
+<dd> The last block is filled up with zeroes and then encrypted. Note that on decryption, these zeroes can&#8217;t be automatically stripped, as the decryptor has no way to tell whether there true trailing zeros or whether those had been added by padding. This option is thus not recommended for copying files of arbitrary length.</dd>
+<dt><code>pad=always</code></dt>
+<dd> This uses the PKCS7 scheme used by openssl, appending one to sixteen bytes with the number of bytes to discard when decrypting. This is always safe, but always makes the output file larger than the input file. Use this when copying files.</dd>
+<dt><code>pad=asneeded</code></dt>
+<dd> This is a hybrid between zero and always. This does PKCS7 padding when the file size does not fill a complete block, but does no padding when it does. This mechanism has in the worst case (no pad bytes) a chance of 1/255 to produce an incorrect decryption result by wrong unpadding (which means that it has an overall chance of misrepresenting the final file size of 1/4080 for arbitrary file sizes). Don&#8217;t use this unless you can deal with such errors (or exclude them)!</dd></dl>
 <p> Note that the CTR stream mode does NOT require padding and indeed ddr_crypt does not apply any padding regardless of the pad option when it is used.</p>
 <h3>Debugging and Benchmarking</h3>
 <p> The <code>debug</code> parameter makes the ddr_crypt module output some debugging information. With <code>outkeyiv</code> the key and IV will be output. The <code>benchmark</code> parameter will result in reporting the en/decryption speed.</p>
@@ -124,14 +124,14 @@ description: "ddr_crypt – Data de/encryption plugin for dd_rescue"
  Support for other streaming modes (XTS, GCM, &#8230;)</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>dd_rescue -ptAL crypt=algo=AES256-CTR:enc:keygen:ivgen:keysfile:ivsfile infile outfile</code></p>
-<dd> encrypts data from <i>infile</i> with AES256 in CTR mode using a generated (random) key and IV and writes the result to <i>outfile</i> It adds a line to KEYS.AES256-CTR and to IVS.AES256-CTR where the used key and IV are written to respectively. (Please ensure that this file is not accessible by any unauthorized person!) Decryption can be performed by</dl>
+<dt><code>dd_rescue -ptAL crypt=algo=AES256-CTR:enc:keygen:ivgen:keysfile:ivsfile infile outfile</code></dt>
+<dd> encrypts data from <i>infile</i> with AES256 in CTR mode using a generated (random) key and IV and writes the result to <i>outfile</i> It adds a line to KEYS.AES256-CTR and to IVS.AES256-CTR where the used key and IV are written to respectively. (Please ensure that this file is not accessible by any unauthorized person!) Decryption can be performed by</dd></dl>
 <p> <code>dd_rescue -ptAL crypt=algo=AES256-CTR:dec:keysfile:ivsfile outfile infile</code></p>
 <dl>
-<dt><code>dd_rescue -AL crypt=AES192+-CTR:enc:saltgen:saltxattr:sxfallback:passfd=0:pbkdf2 infile outfile</code></p>
-<dd> will ask for a password, generate a random salt and store it in the extended attribute of <code>outfile </code> (and fallback to SALTS.AES192+-CTR index file) and uses pbkdf2 function to produce a key and IV for encrypting the data. For decrypting, just omit the <code>saltgen </code> parameter.</p>
-<dt><code>dd_rescue -ptL lzo=compr,crypt=AES256-CTR:enc:keygen:ivgen:keysfile:ivsfile infile outfile</code></p>
-<dd> will compress the data (using lzo) and then encrypt. Use the reverse order and omit keygen and ivgen to decrypt and uncompress. Compression has the nice side effect of dealing with holes, which otherwise get compressed to non-zero values (unless you specify skiphole). Feel free to add the hash plugin at the beginning and/or the end to produce cryptographic checksums for both the original file and the end result.</dl>
+<dt><code>dd_rescue -AL crypt=AES192+-CTR:enc:saltgen:saltxattr:sxfallback:passfd=0:pbkdf2 infile outfile</code></dt>
+<dd> will ask for a password, generate a random salt and store it in the extended attribute of <code>outfile </code> (and fallback to SALTS.AES192+-CTR index file) and uses pbkdf2 function to produce a key and IV for encrypting the data. For decrypting, just omit the <code>saltgen </code> parameter.</dd>
+<dt><code>dd_rescue -ptL lzo=compr,crypt=AES256-CTR:enc:keygen:ivgen:keysfile:ivsfile infile outfile</code></dt>
+<dd> will compress the data (using lzo) and then encrypt. Use the reverse order and omit keygen and ivgen to decrypt and uncompress. Compression has the nice side effect of dealing with holes, which otherwise get compressed to non-zero values (unless you specify skiphole). Feel free to add the hash plugin at the beginning and/or the end to produce cryptographic checksums for both the original file and the end result.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dd_rescue/">dd_rescue</a></code>(1)</p>
 <h2>AUTHOR</h2>

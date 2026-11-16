@@ -15,11 +15,11 @@ blk_queue_chunk_sectors - set size of the chunk for this queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>chunk_sectors</i>
-<dl><dd>chunk sectors in the usual 512b unit</dl>
+<dl><dd>chunk sectors in the usual 512b unit</dd></dl>
 
 <h2>Description</h2>
 

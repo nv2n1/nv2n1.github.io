@@ -14,7 +14,7 @@ description: "deb-src-files – Debian distribute files format"
 <p>This file contains the list of artifacts that are to be distributed via the <code>.changes</code> control file. </p>
 <p> The <i>debian/files</i> file has a simple whitespace-delimited format. </p>
 <dl>
-<dd><i>filename</i> <i>section</i> <i>priority</i> [ <i>keyword=value&#8230;</i> ]</dl>
+<dd><i>filename</i> <i>section</i> <i>priority</i> [ <i>keyword=value&#8230;</i> ]</dd></dl>
 <p> <i>filename</i> is the name of the artifact to distribute. </p>
 <p> <i>section</i> and <i>priority</i> correspond to the respective control fields available in the .deb. The allowed values are specific to each distribution archive. </p>
 <p> <i>keyword=value&#8230;</i> corresponds to an optional whitespace-delimited list of attributes for this entry. The only currently supported keyword is <code>automatic</code> with value <code>yes</code>, to mark automatically generated files.</p>

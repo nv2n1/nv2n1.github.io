@@ -33,7 +33,7 @@ description: "apt-transport-http – APT transport for downloading via the Hyper
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Acquire::http
 {
@@ -51,7 +51,7 @@ Acquire::http
     SendAccept "false";
 };
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) <code><a href="/docs/linux/man/5-apt_auth-conf/">apt_auth.conf</a></code>(5) <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5)</p>
 <h2>BUGS</h2>
@@ -59,14 +59,13 @@ Acquire::http
 <h2>AUTHOR</h2>
 <p> <code>APT team</code></p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> APT bug page</p>
+<dt> 1.</dt>
+<dd> APT bug page</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
 </dl>
 <h2>Index</h2>

@@ -15,24 +15,24 @@ description: "jack_metro – JACK toolkit metronome"
 <p> <code>jack_metro</code> is a simple metronome for JACK. It generates a synthetic &quot;tick&quot; sound for every beat. Note that is does <code>not</code> connect its output port by default &#8211; to hear the sound it makes you must connect them using some other tool.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;name</code></p>
+<dt><code>-n</code>, <code>&#8211;name</code></dt>
 <dd>
- Specify a name for this instance of the metronome.</p>
-<dt><code>-f</code>, <code>&#8211;frequency</code> Hz</p>
+ Specify a name for this instance of the metronome.</dd>
+<dt><code>-f</code>, <code>&#8211;frequency</code> Hz</dt>
 <dd>
- Define the frequency of the &quot;tick&quot; in Hz.</p>
-<dt><code>-D</code>, <code>&#8211;duration</code> msecs</p>
+ Define the frequency of the &quot;tick&quot; in Hz.</dd>
+<dt><code>-D</code>, <code>&#8211;duration</code> msecs</dt>
 <dd>
- Define the duration of the &quot;tick&quot; in milliseconds.</p>
-<dt><code>-a</code>, <code>&#8211;attack</code> %-age</p>
+ Define the duration of the &quot;tick&quot; in milliseconds.</dd>
+<dt><code>-a</code>, <code>&#8211;attack</code> %-age</dt>
 <dd>
- Define the duration of the attack phase of the &quot;tick&quot; as a percentage of the duration.</p>
-<dt><code>-d</code>, <code>&#8211;decay</code> %-age</p>
+ Define the duration of the attack phase of the &quot;tick&quot; as a percentage of the duration.</dd>
+<dt><code>-d</code>, <code>&#8211;decay</code> %-age</dt>
 <dd>
- Define the duration of the decay phase of the &quot;tick&quot; as a percentage of the duration.</p>
-<dt><code>&#8211;b</code>, <code>&#8211;bpm</code> bpm</p>
+ Define the duration of the decay phase of the &quot;tick&quot; as a percentage of the duration.</dd>
+<dt><code>&#8211;b</code>, <code>&#8211;bpm</code> bpm</dt>
 <dd>
- Define the number of beats per minute.</dl>
+ Define the number of beats per minute.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Anthony Van Groningen </p>
 <h2>Index</h2>

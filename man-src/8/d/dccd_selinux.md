@@ -55,9 +55,9 @@ description: "dccd_selinux – Security Enhanced Linux Policy for the dccd proce
 <p> Policy governs the access confined processes have to these ports. SELinux dccd policy is very flexible allowing users to setup their dccd processes in as secure a method as possible. </p>
 <p> The following port types are defined for dccd: </p>
 <dl>
-<dt><code>dcc_port_t</code></p>
+<dt><code>dcc_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 6276,6277</dl>
+</dd><dd>Default Defined Ports: udp 6276,6277</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dccd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -109,8 +109,8 @@ description: "dccd_selinux – Security Enhanced Linux Policy for the dccd proce
 <p> <code>dccd_exec_t</code> </p>
 <p> &#8211; Set files with the dccd_exec_t type, if you want to transition an executable to the dccd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/dccd, /usr/libexec/dcc/dccd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/dccd, /usr/libexec/dcc/dccd </dd>
 </dl>
 <p> <code>dccd_tmp_t</code> </p>
 <p> &#8211; Set files with the dccd_tmp_t type, if you want to store dccd temporary files in the /tmp directories. </p>

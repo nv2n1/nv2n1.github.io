@@ -11,16 +11,16 @@ description: "XkbNoteIndicatorChanges – Notes the changes in a changes structu
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbNoteIndicatorChanges</code> <code>(XkbIndicatorChangesPtr </code><i>old</i><code>,</code> <code>XkbIndicatorNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; old</i></p>
+<dt><i>&#8211; old</i></dt>
 <dd>
-<dd>XkbIndicatorChanges structure to be updated</p>
-<dt><i>&#8211; new</i></p>
-<dd>event from which changes are to be copied</p>
-<dt><i>&#8211; wanted</i></p>
-<dd>which changes are to be noted</dl>
+</dd><dd>XkbIndicatorChanges structure to be updated</dd>
+<dt><i>&#8211; new</i></dt>
+<dd>event from which changes are to be copied</dd>
+<dt><i>&#8211; wanted</i></dt>
+<dd>which changes are to be noted</dd></dl>
 <h2>Description</h2>
 <p>Whenever an indicator changes state, the server sends XkbIndicatorStateNotify events to all interested clients. Similarly, whenever an indicator&#8217;s map changes, the server sends XkbIndicatorMapNotify events to all interested clients. </p>
 <p> To receive XkbIndicatorStateNotify events, use <i>XkbSelectEvents </i> with both the <i>bits_to_change </i> and <i>values_for_bits </i> parameters containing XkbIndicatorStateNotifyMask. To receive XkbIndicatorMapNotify events, use <i>XkbSelectEvents </i> with XkbIndicatorMapNotifyMask. </p>

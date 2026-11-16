@@ -14,7 +14,7 @@ description: "atapi_xlat – Initialize PACKET taskfile"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>command structure to be initialized</dl>
+</dd><dd>command structure to be initialized</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "atapi_xlat – Initialize PACKET taskfile"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

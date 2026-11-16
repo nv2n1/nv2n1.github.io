@@ -25,10 +25,10 @@ description: "slaed5.f –"
  D(i) &lt; D(j) for i &lt; j .
  We also assume RHO &gt; 0 and that the Euclidean norm of the vector
  Z is one.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>I</i> </p>
+<dd><i>I</i> </dd>
 <pre> I is INTEGER
  The index of the eigenvalue to be computed. I = 1 or I = 2.</pre>
 <p><i>D</i> </p>
@@ -50,16 +50,16 @@ description: "slaed5.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 109 of file slaed5.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

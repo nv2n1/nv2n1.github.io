@@ -33,11 +33,11 @@ url: "/docs/linux/man/1-abrt-action-save-package-data/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # Determine in which package/component the crash happened (if not yet done):
 EVENT=post-create component=
         abrt-action-save-package-data
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -46,19 +46,19 @@ EVENT=post-create component=
  -v, --verbose
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
  
 
  -c CONFFILE
 <dl>
 <dt>
-<dd> Path to configuration file.</dl>
+</dt><dd> Path to configuration file.</dd></dl>
  
 
  -d DIR
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -72,7 +72,7 @@ EVENT=post-create component=
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

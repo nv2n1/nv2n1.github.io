@@ -11,9 +11,7 @@ std::scoped_lock - std::scoped_lock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;mutex&gt;
-
 template&lt; class... MutexTypes &gt;  (since C++17)
-
 class scoped_lock;</code></pre> 
 The class scoped_lock is a mutex wrapper that provides a convenient RAII-style mechanism for owning one or more mutexes for the duration of a scoped block. 
 When a scoped_lock object is created, it attempts to take ownership of the mutexes it is given. When control leaves the scope in which the scoped_lock object was created, the scoped_lock is destructed and the mutexes are released, in reverse order. If several mutexes are given, deadlock avoidance algorithm is used as if by std::lock. 
@@ -44,17 +42,11 @@ operator= not copy-assignable
 
 The following example uses std::scoped_lock to lock pairs of mutexes without deadlock and is RAII-style. 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;string&gt;
 struct Employee {
     Employee(std::string id)
@@ -73,13 +65,11 @@ struct Employee {
     }
 };
 void send_mail(Employee &amp;, Employee &amp;)
-
 {
     // simulate a time-consuming messaging operation
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
-
 {
     static std::mutex io_mutex;
     {
@@ -110,7 +100,6 @@ void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
     send_mail(e2, e1);
 }
 int main()
-
 {
     Employee alice(&quot;alice&quot;), bob(&quot;bob&quot;), christina(&quot;christina&quot;), dave(&quot;dave&quot;);
     // assign in parallel threads because mailing users about lunch assignments

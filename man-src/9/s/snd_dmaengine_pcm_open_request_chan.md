@@ -15,15 +15,15 @@ snd_dmaengine_pcm_open_request_chan - Open a dmaengine based PCM substream and r
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>filter_fn</i>
-<dl><dd>Filter function used to request the DMA channel</dl>
+<dl><dd>Filter function used to request the DMA channel</dd></dl>
  
 
  <i>filter_data</i>
-<dl><dd>Data passed to the DMA filter function</dl>
+<dl><dd>Data passed to the DMA filter function</dd></dl>
 
 <h2>Description</h2>
 

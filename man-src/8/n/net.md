@@ -10,170 +10,170 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>net &#8211; Tool for administration of Samba and remote CIFS servers.</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>net {&lt;ads|rap|rpc&gt;} [-h|&#8211;help] [-w|&#8211;workgroup workgroup] [-W|&#8211;myworkgroup myworkgroup] [-U|&#8211;user user] [-I|&#8211;ipaddress ip-address] [-p|&#8211;port port] [-n myname] [-s conffile] [-S|&#8211;server server] [-l|&#8211;long] [-v|&#8211;verbose] [-f|&#8211;force] [-P|&#8211;machine-pass] [-d debuglevel] [-V] [&#8211;request-timeout seconds] [-t|&#8211;timeout seconds] [-i|&#8211;stdin] [&#8211;tallocreport]</dl>
+<dd>net {&lt;ads|rap|rpc&gt;} [-h|&#8211;help] [-w|&#8211;workgroup workgroup] [-W|&#8211;myworkgroup myworkgroup] [-U|&#8211;user user] [-I|&#8211;ipaddress ip-address] [-p|&#8211;port port] [-n myname] [-s conffile] [-S|&#8211;server server] [-l|&#8211;long] [-v|&#8211;verbose] [-f|&#8211;force] [-P|&#8211;machine-pass] [-d debuglevel] [-V] [&#8211;request-timeout seconds] [-t|&#8211;timeout seconds] [-i|&#8211;stdin] [&#8211;tallocreport]</dd></dl>
 <h2>Description</h2>
 <p>This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The Samba net utility is meant to work just like the net utility available for windows and DOS. The first argument should be used to specify the protocol to use when executing a certain command. ADS is used for ActiveDirectory, RAP is using for old (Win9x/NT3) clients and RPC can be used for NT4 and Windows 2000. If this argument is omitted, net will try to determine it automatically. Not all commands are available on all protocols.</p>
 <h2>Options</h2>
 <p>-?|&#8211;help</p>
 <dl>
-<dd>Print a summary of command line options.</dl>
+<dd>Print a summary of command line options.</dd></dl>
 <p> -k|&#8211;kerberos</p>
 <dl>
-<dd>Try to authenticate with kerberos. Only useful in an Active Directory environment.</dl>
+<dd>Try to authenticate with kerberos. Only useful in an Active Directory environment.</dd></dl>
 <p> -w|&#8211;workgroup target-workgroup</p>
 <dl>
-<dd>Sets target workgroup or domain. You have to specify either this option or the IP address or the name of a server.</dl>
+<dd>Sets target workgroup or domain. You have to specify either this option or the IP address or the name of a server.</dd></dl>
 <p> -W|&#8211;myworkgroup workgroup</p>
 <dl>
-<dd>Sets client workgroup or domain</dl>
+<dd>Sets client workgroup or domain</dd></dl>
 <p> -U|&#8211;user user</p>
 <dl>
-<dd>User name to use</dl>
+<dd>User name to use</dd></dl>
 <p> -I|&#8211;ipaddress ip-address</p>
 <dl>
-<dd>IP address of target server to use. You have to specify either this option or a target workgroup or a target server.</dl>
+<dd>IP address of target server to use. You have to specify either this option or a target workgroup or a target server.</dd></dl>
 <p> -p|&#8211;port port</p>
 <dl>
-<dd>Port on the target server to connect to (usually 139 or 445). Defaults to trying 445 first, then 139.</dl>
+<dd>Port on the target server to connect to (usually 139 or 445). Defaults to trying 445 first, then 139.</dd></dl>
 <p> -n|&#8211;netbiosname &lt;primary NetBIOS name&gt;</p>
 <dl>
-<dd>This option allows you to override the NetBIOS name that Samba uses for itself. This is identical to setting the m[blue]<code>netbios name</code>m[] parameter in the smb.conf file. However, a command line setting will take precedence over settings in smb.conf.</dl>
+<dd>This option allows you to override the NetBIOS name that Samba uses for itself. This is identical to setting the m[blue]<code>netbios name</code>m[] parameter in the smb.conf file. However, a command line setting will take precedence over settings in smb.conf.</dd></dl>
 <p> -S|&#8211;server server</p>
 <dl>
-<dd>Name of target server. You should specify either this option or a target workgroup or a target IP address.</dl>
+<dd>Name of target server. You should specify either this option or a target workgroup or a target IP address.</dd></dl>
 <p> -l|&#8211;long</p>
 <dl>
-<dd>When listing data, give more information on each item.</dl>
+<dd>When listing data, give more information on each item.</dd></dl>
 <p> -v|&#8211;verbose</p>
 <dl>
-<dd>When listing data, give more verbose information on each item.</dl>
+<dd>When listing data, give more verbose information on each item.</dd></dl>
 <p> -f|&#8211;force</p>
 <dl>
-<dd>Enforcing a net command.</dl>
+<dd>Enforcing a net command.</dd></dl>
 <p> -P|&#8211;machine-pass</p>
 <dl>
-<dd>Make queries to the external server using the machine account of the local server.</dl>
+<dd>Make queries to the external server using the machine account of the local server.</dd></dl>
 <p> &#8211;request-timeout 30</p>
 <dl>
-<dd>Let client requests timeout after 30 seconds the default is 10 seconds.</dl>
+<dd>Let client requests timeout after 30 seconds the default is 10 seconds.</dd></dl>
 <p> -t|&#8211;timeout 30</p>
 <dl>
-<dd>Set timeout for client operations to 30 seconds.</dl>
+<dd>Set timeout for client operations to 30 seconds.</dd></dl>
 <p> &#8211;use-ccache</p>
 <dl>
-<dd>Try to use the credentials cached by winbind.</dl>
+<dd>Try to use the credentials cached by winbind.</dd></dl>
 <p> -i|&#8211;stdin</p>
 <dl>
-<dd>Take input for net commands from standard input.</dl>
+<dd>Take input for net commands from standard input.</dd></dl>
 <p> &#8211;tallocreport</p>
 <dl>
-<dd>Generate a talloc report while processing a net command.</dl>
+<dd>Generate a talloc report while processing a net command.</dd></dl>
 <p> -T|&#8211;test</p>
 <dl>
-<dd>Only test command sequence, dry-run.</dl>
+<dd>Only test command sequence, dry-run.</dd></dl>
 <p> -F|&#8211;flags FLAGS</p>
 <dl>
-<dd>Pass down integer flags to a net subcommand.</dl>
+<dd>Pass down integer flags to a net subcommand.</dd></dl>
 <p> -C|&#8211;comment COMMENT</p>
 <dl>
-<dd>Pass down a comment string to a net subcommand.</dl>
+<dd>Pass down a comment string to a net subcommand.</dd></dl>
 <p> -n|&#8211;myname MYNAME</p>
 <dl>
-<dd>Use MYNAME as a requester name for a net subcommand.</dl>
+<dd>Use MYNAME as a requester name for a net subcommand.</dd></dl>
 <p> -c|&#8211;container CONTAINER</p>
 <dl>
-<dd>Use a specific AD container for net ads operations.</dl>
+<dd>Use a specific AD container for net ads operations.</dd></dl>
 <p> -M|&#8211;maxusers MAXUSERS</p>
 <dl>
-<dd>Fill in the maxusers field in net rpc share operations.</dl>
+<dd>Fill in the maxusers field in net rpc share operations.</dd></dl>
 <p> -r|&#8211;reboot</p>
 <dl>
-<dd>Reboot a remote machine after a command has been successfully executed (e.g. in remote join operations).</dl>
+<dd>Reboot a remote machine after a command has been successfully executed (e.g. in remote join operations).</dd></dl>
 <p> &#8211;force-full-repl</p>
 <dl>
-<dd>When calling &quot;net rpc vampire keytab&quot; this option enforces a full re-creation of the generated keytab file.</dl>
+<dd>When calling &quot;net rpc vampire keytab&quot; this option enforces a full re-creation of the generated keytab file.</dd></dl>
 <p> &#8211;single-obj-repl</p>
 <dl>
-<dd>When calling &quot;net rpc vampire keytab&quot; this option allows one to replicate just a single object to the generated keytab file.</dl>
+<dd>When calling &quot;net rpc vampire keytab&quot; this option allows one to replicate just a single object to the generated keytab file.</dd></dl>
 <p> &#8211;clean-old-entries</p>
 <dl>
-<dd>When calling &quot;net rpc vampire keytab&quot; this option allows one to cleanup old entries from the generated keytab file.</dl>
+<dd>When calling &quot;net rpc vampire keytab&quot; this option allows one to cleanup old entries from the generated keytab file.</dd></dl>
 <p> &#8211;db</p>
 <dl>
-<dd>Define dbfile for &quot;net idmap&quot; commands.</dl>
+<dd>Define dbfile for &quot;net idmap&quot; commands.</dd></dl>
 <p> &#8211;lock</p>
 <dl>
-<dd>Activates locking of the dbfile for &quot;net idmap check&quot; command.</dl>
+<dd>Activates locking of the dbfile for &quot;net idmap check&quot; command.</dd></dl>
 <p> -a|&#8211;auto</p>
 <dl>
-<dd>Activates noninteractive mode in &quot;net idmap check&quot;.</dl>
+<dd>Activates noninteractive mode in &quot;net idmap check&quot;.</dd></dl>
 <p> &#8211;repair</p>
 <dl>
-<dd>Activates repair mode in &quot;net idmap check&quot;.</dl>
+<dd>Activates repair mode in &quot;net idmap check&quot;.</dd></dl>
 <p> &#8211;acls</p>
 <dl>
-<dd>Includes ACLs to be copied in &quot;net rpc share migrate&quot;.</dl>
+<dd>Includes ACLs to be copied in &quot;net rpc share migrate&quot;.</dd></dl>
 <p> &#8211;attrs</p>
 <dl>
-<dd>Includes file attributes to be copied in &quot;net rpc share migrate&quot;.</dl>
+<dd>Includes file attributes to be copied in &quot;net rpc share migrate&quot;.</dd></dl>
 <p> &#8211;timestamps</p>
 <dl>
-<dd>Includes timestamps to be copied in &quot;net rpc share migrate&quot;.</dl>
+<dd>Includes timestamps to be copied in &quot;net rpc share migrate&quot;.</dd></dl>
 <p> -X|&#8211;exclude DIRECTORY</p>
 <dl>
-<dd>Allows one to exclude directories when copying with &quot;net rpc share migrate&quot;.</dl>
+<dd>Allows one to exclude directories when copying with &quot;net rpc share migrate&quot;.</dd></dl>
 <p> &#8211;destination SERVERNAME</p>
 <dl>
-<dd>Defines the target servername of migration process (defaults to localhost).</dl>
+<dd>Defines the target servername of migration process (defaults to localhost).</dd></dl>
 <p> -L|&#8211;local</p>
 <dl>
-<dd>Sets the type of group mapping to local (used in &quot;net groupmap set&quot;).</dl>
+<dd>Sets the type of group mapping to local (used in &quot;net groupmap set&quot;).</dd></dl>
 <p> -D|&#8211;domain</p>
 <dl>
-<dd>Sets the type of group mapping to domain (used in &quot;net groupmap set&quot;).</dl>
+<dd>Sets the type of group mapping to domain (used in &quot;net groupmap set&quot;).</dd></dl>
 <p> -N|&#8211;ntname NTNAME</p>
 <dl>
-<dd>Sets the ntname of a group mapping (used in &quot;net groupmap set&quot;).</dl>
+<dd>Sets the ntname of a group mapping (used in &quot;net groupmap set&quot;).</dd></dl>
 <p> -R|&#8211;rid RID</p>
 <dl>
-<dd>Sets the rid of a group mapping (used in &quot;net groupmap set&quot;).</dl>
+<dd>Sets the rid of a group mapping (used in &quot;net groupmap set&quot;).</dd></dl>
 <p> &#8211;reg-version REG_VERSION</p>
 <dl>
-<dd>Assume database version {n|1,2,3} (used in &quot;net registry check&quot;).</dl>
+<dd>Assume database version {n|1,2,3} (used in &quot;net registry check&quot;).</dd></dl>
 <p> -o|&#8211;output FILENAME</p>
 <dl>
-<dd>Output database file (used in &quot;net registry check&quot;).</dl>
+<dd>Output database file (used in &quot;net registry check&quot;).</dd></dl>
 <p> &#8211;wipe</p>
 <dl>
-<dd>Create a new database from scratch (used in &quot;net registry check&quot;).</dl>
+<dd>Create a new database from scratch (used in &quot;net registry check&quot;).</dd></dl>
 <p> &#8211;precheck PRECHECK_DB_FILENAME</p>
 <dl>
-<dd>Defines filename for database prechecking (used in &quot;net registry import&quot;).</dl>
+<dd>Defines filename for database prechecking (used in &quot;net registry import&quot;).</dd></dl>
 <p> &#8211;no-dns-updates</p>
 <dl>
-<dd>Do not perform DNS updates as part of &quot;net ads join&quot;.</dl>
+<dd>Do not perform DNS updates as part of &quot;net ads join&quot;.</dd></dl>
 <p> -e|&#8211;encrypt</p>
 <dl>
-<dd>This command line parameter requires the remote server support the UNIX extensions or that the SMB3 protocol has been selected. Requests that the connection be encrypted. Negotiates SMB encryption using either SMB3 or POSIX extensions via GSSAPI. Uses the given credentials for the encryption negotiation (either kerberos or NTLMv1/v2 if given domain/username/password triple. Fails the connection if encryption cannot be negotiated.</dl>
+<dd>This command line parameter requires the remote server support the UNIX extensions or that the SMB3 protocol has been selected. Requests that the connection be encrypted. Negotiates SMB encryption using either SMB3 or POSIX extensions via GSSAPI. Uses the given credentials for the encryption negotiation (either kerberos or NTLMv1/v2 if given domain/username/password triple. Fails the connection if encryption cannot be negotiated.</dd></dl>
 <p> -d|&#8211;debuglevel=level</p>
 <dl>
-<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 1. </p>
+<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 1. </dd>
 <p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
 <p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
 <p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
 <p> -V|&#8211;version</p>
 <dl>
-<dd>Prints the program version number.</dl>
+<dd>Prints the program version number.</dd></dl>
 <p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
 <dl>
-<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dl>
+<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
 <p> -l|&#8211;log-basename=logdirectory</p>
 <dl>
-<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dl>
+<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
 <p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
 <dl>
-<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dl>
+<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
 <h2>Commands</h2>
 <h3>Changesecretpw</h3>
 <p>This command allows the Samba machine account password to be set from an external application to a machine account password that has already been stored in Active Directory. DO NOT USE this command unless you know exactly what you are doing. The use of this command requires that the force flag (-f) be used also. There will be NO command prompt. Whatever information is piped into stdin, either by typing at the command line or otherwise, will be stored as the literal machine password. Do NOT use this without care and attention as it will overwrite a legitimate machine password without warning. YOU HAVE BEEN WARNED.</p>
@@ -249,7 +249,7 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <h3>RAP VALIDATE <i>user</i> [<i>password</i>]</h3>
 <p>Validate whether the specified user can log in to the remote server. If the password is not specified on the commandline, it will be prompted. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Groupmember</h3>
@@ -262,20 +262,20 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <h3>RAP ADMIN <i>command</i></h3>
 <p>Execute the specified <i>command</i> on the remote server. Only works with OS/2 servers. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Service</h3>
 <h3>RAP SERVICE START NAME [arguments&#8230;]</h3>
 <p>Start the specified service on the remote server. Not implemented yet. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Service Stop</h3>
 <p>Stop the specified service on the remote server. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>RAP PASSWORD <i>USER</i> <i>OLDPASS</i> <i>NEWPASS</i></h3>
@@ -295,15 +295,15 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Samba uses a general caching interface called &#8216;gencache&#8217;. It can be controlled using &#8216;NET CACHE&#8217;. </p>
 <p> All the timeout parameters support the suffixes:</p>
 <dl>
-<dd>s &#8211; Seconds</dl>
+<dd>s &#8211; Seconds</dd></dl>
 <dl>
-<dd>m &#8211; Minutes</dl>
+<dd>m &#8211; Minutes</dd></dl>
 <dl>
-<dd>h &#8211; Hours</dl>
+<dd>h &#8211; Hours</dd></dl>
 <dl>
-<dd>d &#8211; Days</dl>
+<dd>d &#8211; Days</dd></dl>
 <dl>
-<dd>w &#8211; Weeks</dl>
+<dd>w &#8211; Weeks</dd></dl>
 <h3>CACHE ADD key data time-out</h3>
 <p>Add specified key+data to the cache with the given timeout.</p>
 <h3>CACHE DEL key</h3>
@@ -328,18 +328,18 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Manage the mappings between Windows group SIDs and UNIX groups. Common options include:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; unixgroup &#8211; Name of the UNIX group</dd></dl>
 <dl>
-<dd>&bull; unixgroup &#8211; Name of the UNIX group</dl>
+<dd>&bull; ntgroup &#8211; Name of the Windows NT group (must be resolvable to a SID</dd></dl>
 <dl>
-<dd>&bull; ntgroup &#8211; Name of the Windows NT group (must be resolvable to a SID</dl>
+<dd>&bull; rid &#8211; Unsigned 32-bit integer</dd></dl>
 <dl>
-<dd>&bull; rid &#8211; Unsigned 32-bit integer</dl>
+<dd>&bull; sid &#8211; Full SID in the form of &quot;S-1-&#8230;&quot;</dd></dl>
 <dl>
-<dd>&bull; sid &#8211; Full SID in the form of &quot;S-1-&#8230;&quot;</dl>
+<dd>&bull; type &#8211; Type of the group; either &#8216;domain&#8217;, &#8216;local&#8217;, or &#8216;builtin&#8217;</dd></dl>
 <dl>
-<dd>&bull; type &#8211; Type of the group; either &#8216;domain&#8217;, &#8216;local&#8217;, or &#8216;builtin&#8217;</dl>
-<dl>
-<dd>&bull; comment &#8211; Freeform text description of the group</dl>
+<dd>&bull; comment &#8211; Freeform text description of the group</dd></dl>
 </dl>
 <h3>Groupmap Add</h3>
 <p>Add a new group mapping entry: </p>
@@ -347,7 +347,7 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <dd>
 <pre>net groupmap add {rid=int|sid=string} unixgroup=string \
  [type={domain|local}] [ntgroup=string] [comment=string]</pre>
-</dl>
+</dd></dl>
 <h3>Groupmap Delete</h3>
 <p>Delete a group mapping entry. If more than one group name matches, the first entry found is deleted. </p>
 <p> net groupmap delete {ntgroup=string|sid=SID}</p>
@@ -357,7 +357,7 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <dd>
 <pre>net groupmap modify {ntgroup=string|sid=SID} [unixgroup=string] \
  [comment=string] [type={domain|local}]</pre>
-</dl>
+</dd></dl>
 <h3>Groupmap List</h3>
 <p>List existing group mapping entries. </p>
 <p> net groupmap list [verbose] [ntgroup=string] [sid=SID]</p>
@@ -386,27 +386,27 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p> <code>Options:</code> </p>
 <p> otherserver</p>
 <dl>
-<dd>Domain controller of the second domain</dl>
+<dd>Domain controller of the second domain</dd></dl>
 <p> otheruser</p>
 <dl>
-<dd>Admin user in the second domain</dl>
+<dd>Admin user in the second domain</dd></dl>
 <p> otherdomainsid</p>
 <dl>
-<dd>SID of the second domain</dl>
+<dd>SID of the second domain</dd></dl>
 <p> other_netbios_domain</p>
 <dl>
-<dd>NetBIOS (short) name of the second domain</dl>
+<dd>NetBIOS (short) name of the second domain</dd></dl>
 <p> otherdomain</p>
 <dl>
-<dd>DNS (full) name of the second domain</dl>
+<dd>DNS (full) name of the second domain</dd></dl>
 <p> trustpw</p>
 <dl>
-<dd>Trust password</dl>
+<dd>Trust password</dd></dl>
 <p> <code>Examples:</code> </p>
 <p> Create a trust object on srv1.dom1.dom for the domain dom2</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>net rpc trust create \
  otherdomainsid=S-x-x-xx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxx \
@@ -414,52 +414,52 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
  otherdomain=dom2.dom \
  trustpw=12345678 \
  -S srv1.dom1.dom</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Create a trust relationship between dom1 and dom2</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>net rpc trust create \
  otherserver=srv2.dom2.test \
  otheruser=dom2adm \
  -S srv1.dom1.dom</pre>
-</dl>
+</dd></dl>
 </dl>
 <h3>Rpc Trust Delete</h3>
 <p>Delete a trust object by calling lsaDeleteTrustedDomain. The can be done on a single server or on two servers at once. </p>
 <p> <code>Options:</code> </p>
 <p> otherserver</p>
 <dl>
-<dd>Domain controller of the second domain</dl>
+<dd>Domain controller of the second domain</dd></dl>
 <p> otheruser</p>
 <dl>
-<dd>Admin user in the second domain</dl>
+<dd>Admin user in the second domain</dd></dl>
 <p> otherdomainsid</p>
 <dl>
-<dd>SID of the second domain</dl>
+<dd>SID of the second domain</dd></dl>
 <p> <code>Examples:</code> </p>
 <p> Delete a trust object on srv1.dom1.dom for the domain dom2</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>net rpc trust delete \
  otherdomainsid=S-x-x-xx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxx \
  -S srv1.dom1.dom</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Delete a trust relationship between dom1 and dom2</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>net rpc trust delete \
  otherserver=srv2.dom2.test \
  otheruser=dom2adm \
  -S srv1.dom1.dom</pre>
-</dl>
+</dd></dl>
 </dl>
 <h3></h3>
 <h3>Rpc Rights</h3>
@@ -470,16 +470,16 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Shut down the remote server. </p>
 <p> -r</p>
 <dl>
-<dd>Reboot after shutdown.</dl>
+<dd>Reboot after shutdown.</dd></dl>
 <p> -f</p>
 <dl>
-<dd>Force shutting down all applications.</dl>
+<dd>Force shutting down all applications.</dd></dl>
 <p> -t timeout</p>
 <dl>
-<dd>Timeout before system will be shut down. An interactive user of the system can use this time to cancel the shutdown.</dl>
+<dd>Timeout before system will be shut down. An interactive user of the system can use this time to cancel the shutdown.</dd></dl>
 <p> -C message</p>
 <dl>
-<dd>Display the specified message on the screen to announce the shutdown.</dl>
+<dd>Display the specified message on the screen to announce the shutdown.</dd></dl>
 <h3>Rpc Samdump</h3>
 <p>Print out sam database of remote server. You need to run this against the PDC, from a Samba machine joined as a BDC.</p>
 <h3>Rpc Vampire</h3>
@@ -611,52 +611,52 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Check and repair the IDMAP database. If no option is given a read only check of the database is done. Among others an interactive or automatic repair mode may be chosen with one of the following options: </p>
 <p> -r|&#8211;repair</p>
 <dl>
-<dd>Interactive repair mode, ask a lot of questions.</dl>
+<dd>Interactive repair mode, ask a lot of questions.</dd></dl>
 <p> -a|&#8211;auto</p>
 <dl>
-<dd>Noninteractive repair mode, use default answers.</dl>
+<dd>Noninteractive repair mode, use default answers.</dd></dl>
 <p> -v|&#8211;verbose</p>
 <dl>
-<dd>Produce more output.</dl>
+<dd>Produce more output.</dd></dl>
 <p> -f|&#8211;force</p>
 <dl>
-<dd>Try to apply changes, even if they do not apply cleanly.</dl>
+<dd>Try to apply changes, even if they do not apply cleanly.</dd></dl>
 <p> -T|&#8211;test</p>
 <dl>
-<dd>Dry run, show what changes would be made but don&#8217;t touch anything.</dl>
+<dd>Dry run, show what changes would be made but don&#8217;t touch anything.</dd></dl>
 <p> -l|&#8211;lock</p>
 <dl>
-<dd>Lock the database while doing the check.</dl>
+<dd>Lock the database while doing the check.</dd></dl>
 <p> &#8211;db &lt;DB&gt;</p>
 <dl>
-<dd>Check the specified database.</dl>
+<dd>Check the specified database.</dd></dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> It reports about the finding of the following errors: </p>
 <p> Missing reverse mapping:</p>
 <dl>
-<dd>A record with mapping A-&gt;B where there is no B-&gt;A. Default action in repair mode is to &quot;fix&quot; this by adding the reverse mapping.</dl>
+<dd>A record with mapping A-&gt;B where there is no B-&gt;A. Default action in repair mode is to &quot;fix&quot; this by adding the reverse mapping.</dd></dl>
 <p> Invalid mapping:</p>
 <dl>
-<dd>A record with mapping A-&gt;B where B-&gt;C. Default action is to &quot;delete&quot; this record.</dl>
+<dd>A record with mapping A-&gt;B where B-&gt;C. Default action is to &quot;delete&quot; this record.</dd></dl>
 <p> Missing or invalid HWM:</p>
 <dl>
-<dd>A high water mark is not at least equal to the largest ID in the database. Default action is to &quot;fix&quot; this by setting it to the largest ID found +1.</dl>
+<dd>A high water mark is not at least equal to the largest ID in the database. Default action is to &quot;fix&quot; this by setting it to the largest ID found +1.</dd></dl>
 <p> Invalid record:</p>
 <dl>
-<dd>Something we failed to parse. Default action is to &quot;edit&quot; it in interactive and &quot;delete&quot; it in automatic mode.</dl>
+<dd>Something we failed to parse. Default action is to &quot;edit&quot; it in interactive and &quot;delete&quot; it in automatic mode.</dd></dl>
 <h3>Usershare</h3>
 <p>Starting with version 3.0.23, a Samba server now supports the ability for non-root users to add user defined shares to be exported using the &quot;net usershare&quot; commands. </p>
 <p> To set this up, first set up your smb.conf by adding to the [global] section: usershare path = /usr/local/samba/lib/usershares Next create the directory /usr/local/samba/lib/usershares, change the owner to root and set the group owner to the UNIX group who should have the ability to create usershares, for example a group called &quot;serverops&quot;. Set the permissions on /usr/local/samba/lib/usershares to 01770. (Owner and group all access, no access for others, plus the sticky bit, which means that a file in that directory can be renamed or deleted only by the owner of the file). Finally, tell smbd how many usershares you will allow by adding to the [global] section of smb.conf a line such as : usershare max shares = 100. To allow 100 usershare definitions. Now, members of the UNIX group &quot;serverops&quot; can create user defined shares on demand using the commands below. </p>
 <p> The usershare commands are:</p>
 <dl>
-<dd>net usershare add sharename path [comment [acl] [guest_ok=[y|n]]] &#8211; to add or change a user defined share.</dl>
+<dd>net usershare add sharename path [comment [acl] [guest_ok=[y|n]]] &#8211; to add or change a user defined share.</dd></dl>
 <dl>
-<dd>net usershare delete sharename &#8211; to delete a user defined share.</dl>
+<dd>net usershare delete sharename &#8211; to delete a user defined share.</dd></dl>
 <dl>
-<dd>net usershare info [-l|&#8211;long] [wildcard sharename] &#8211; to print info about a user defined share.</dl>
+<dd>net usershare info [-l|&#8211;long] [wildcard sharename] &#8211; to print info about a user defined share.</dd></dl>
 <dl>
-<dd>net usershare list [-l|&#8211;long] [wildcard sharename] &#8211; to list user defined shares.</dl>
+<dd>net usershare list [-l|&#8211;long] [wildcard sharename] &#8211; to list user defined shares.</dd></dl>
 <h3>USERSHARE ADD sharename path [comment] [acl] [guest_ok=[y|n]]</h3>
 <p>Add or replace a new user defined share, with name &quot;sharename&quot;. </p>
 <p> &quot;path&quot; specifies the absolute pathname on the system to be exported. Restrictions may be put on this, see the global smb.conf parameters: &quot;usershare owner only&quot;, &quot;usershare prefix allow list&quot;, and &quot;usershare prefix deny list&quot;. </p>
@@ -679,31 +679,31 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p> The deployment of this configuration data can be activated in two levels from the <i>smb.conf</i> file: Share definitions from registry are activated by setting <i>registry shares</i> to &#8220;yes&#8221; in the [global] section and global configuration options are activated by setting m[blue]<code>include = registry</code>m[] in the [global] section for a mixed configuration or by setting m[blue]<code>config backend = registry</code>m[] in the [global] section for a registry-only configuration. See the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) manpage for details. </p>
 <p> The conf commands are:</p>
 <dl>
-<dd>net [rpc] conf list &#8211; Dump the complete configuration in smb.conf like format.</dl>
+<dd>net [rpc] conf list &#8211; Dump the complete configuration in smb.conf like format.</dd></dl>
 <dl>
-<dd>net [rpc] conf import &#8211; Import configuration from file in smb.conf format.</dl>
+<dd>net [rpc] conf import &#8211; Import configuration from file in smb.conf format.</dd></dl>
 <dl>
-<dd>net [rpc] conf listshares &#8211; List the registry shares.</dl>
+<dd>net [rpc] conf listshares &#8211; List the registry shares.</dd></dl>
 <dl>
-<dd>net [rpc] conf drop &#8211; Delete the complete configuration from registry.</dl>
+<dd>net [rpc] conf drop &#8211; Delete the complete configuration from registry.</dd></dl>
 <dl>
-<dd>net [rpc] conf showshare &#8211; Show the definition of a registry share.</dl>
+<dd>net [rpc] conf showshare &#8211; Show the definition of a registry share.</dd></dl>
 <dl>
-<dd>net [rpc] conf addshare &#8211; Create a new registry share.</dl>
+<dd>net [rpc] conf addshare &#8211; Create a new registry share.</dd></dl>
 <dl>
-<dd>net [rpc] conf delshare &#8211; Delete a registry share.</dl>
+<dd>net [rpc] conf delshare &#8211; Delete a registry share.</dd></dl>
 <dl>
-<dd>net [rpc] conf setparm &#8211; Store a parameter.</dl>
+<dd>net [rpc] conf setparm &#8211; Store a parameter.</dd></dl>
 <dl>
-<dd>net [rpc] conf getparm &#8211; Retrieve the value of a parameter.</dl>
+<dd>net [rpc] conf getparm &#8211; Retrieve the value of a parameter.</dd></dl>
 <dl>
-<dd>net [rpc] conf delparm &#8211; Delete a parameter.</dl>
+<dd>net [rpc] conf delparm &#8211; Delete a parameter.</dd></dl>
 <dl>
-<dd>net [rpc] conf getincludes &#8211; Show the includes of a share definition.</dl>
+<dd>net [rpc] conf getincludes &#8211; Show the includes of a share definition.</dd></dl>
 <dl>
-<dd>net [rpc] conf setincludes &#8211; Set includes for a share.</dl>
+<dd>net [rpc] conf setincludes &#8211; Set includes for a share.</dd></dl>
 <dl>
-<dd>net [rpc] conf delincludes &#8211; Delete includes from a share definition.</dl>
+<dd>net [rpc] conf delincludes &#8211; Delete includes from a share definition.</dd></dl>
 <h3>[Rpc] Conf List</h3>
 <p>Print the configuration data stored in the registry in a smb.conf-like format to standard output.</p>
 <h3>[RPC] CONF IMPORT [&#8211;test|-T] filename [section]</h3>
@@ -736,39 +736,39 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Manipulate Samba&#8217;s registry. </p>
 <p> The registry commands are:</p>
 <dl>
-<dd>net registry enumerate &#8211; Enumerate registry keys and values.</dl>
+<dd>net registry enumerate &#8211; Enumerate registry keys and values.</dd></dl>
 <dl>
-<dd>net registry enumerate_recursive &#8211; Enumerate registry key and its subkeys.</dl>
+<dd>net registry enumerate_recursive &#8211; Enumerate registry key and its subkeys.</dd></dl>
 <dl>
-<dd>net registry createkey &#8211; Create a new registry key.</dl>
+<dd>net registry createkey &#8211; Create a new registry key.</dd></dl>
 <dl>
-<dd>net registry deletekey &#8211; Delete a registry key.</dl>
+<dd>net registry deletekey &#8211; Delete a registry key.</dd></dl>
 <dl>
-<dd>net registry deletekey_recursive &#8211; Delete a registry key with subkeys.</dl>
+<dd>net registry deletekey_recursive &#8211; Delete a registry key with subkeys.</dd></dl>
 <dl>
-<dd>net registry getvalue &#8211; Print a registry value.</dl>
+<dd>net registry getvalue &#8211; Print a registry value.</dd></dl>
 <dl>
-<dd>net registry getvalueraw &#8211; Print a registry value (raw format).</dl>
+<dd>net registry getvalueraw &#8211; Print a registry value (raw format).</dd></dl>
 <dl>
-<dd>net registry setvalue &#8211; Set a new registry value.</dl>
+<dd>net registry setvalue &#8211; Set a new registry value.</dd></dl>
 <dl>
-<dd>net registry increment &#8211; Increment a DWORD registry value under a lock.</dl>
+<dd>net registry increment &#8211; Increment a DWORD registry value under a lock.</dd></dl>
 <dl>
-<dd>net registry deletevalue &#8211; Delete a registry value.</dl>
+<dd>net registry deletevalue &#8211; Delete a registry value.</dd></dl>
 <dl>
-<dd>net registry getsd &#8211; Get security descriptor.</dl>
+<dd>net registry getsd &#8211; Get security descriptor.</dd></dl>
 <dl>
-<dd>net registry getsd_sdd1 &#8211; Get security descriptor in sddl format.</dl>
+<dd>net registry getsd_sdd1 &#8211; Get security descriptor in sddl format.</dd></dl>
 <dl>
-<dd>net registry setsd_sdd1 &#8211; Set security descriptor from sddl format string.</dl>
+<dd>net registry setsd_sdd1 &#8211; Set security descriptor from sddl format string.</dd></dl>
 <dl>
-<dd>net registry import &#8211; Import a registration entries (.reg) file.</dl>
+<dd>net registry import &#8211; Import a registration entries (.reg) file.</dd></dl>
 <dl>
-<dd>net registry export &#8211; Export a registration entries (.reg) file.</dl>
+<dd>net registry export &#8211; Export a registration entries (.reg) file.</dd></dl>
 <dl>
-<dd>net registry convert &#8211; Convert a registration entries (.reg) file.</dl>
+<dd>net registry convert &#8211; Convert a registration entries (.reg) file.</dd></dl>
 <dl>
-<dd>net registry check &#8211; Check and repair a registry database.</dl>
+<dd>net registry check &#8211; Check and repair a registry database.</dd></dl>
 <h3>REGISTRY ENUMERATE key</h3>
 <p>Enumerate subkeys and values of <i>key</i>.</p>
 <h3>REGISTRY ENUMERATE_RECURSIVE key</h3>
@@ -800,18 +800,18 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p> The following options are available: </p>
 <p> &#8211;precheck <i>check-file</i></p>
 <dl>
-<dd>This is a mechanism to check the existence or non-existence of certain keys or values specified in a precheck file before applying the import file. The import file will only be applied if the precheck succeeds. </p>
+<dd>This is a mechanism to check the existence or non-existence of certain keys or values specified in a precheck file before applying the import file. The import file will only be applied if the precheck succeeds. </dd>
 <p> The check-file follows the normal registry file syntax with the following semantics:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; &lt;value name&gt;=&lt;value&gt; checks whether the value exists and has the given value.</dd></dl>
 <dl>
-<dd>&bull; &lt;value name&gt;=&lt;value&gt; checks whether the value exists and has the given value.</dl>
+<dd>&bull; &lt;value name&gt;=- checks whether the value does not exist.</dd></dl>
 <dl>
-<dd>&bull; &lt;value name&gt;=- checks whether the value does not exist.</dl>
+<dd>&bull; [key] checks whether the key exists.</dd></dl>
 <dl>
-<dd>&bull; [key] checks whether the key exists.</dl>
-<dl>
-<dd>&bull; [-key] checks whether the key does not exist.</dl>
+<dd>&bull; [-key] checks whether the key does not exist.</dd></dl>
 </dl>
 </dl>
 <h3>REGISTRY EXPORT keyfile[opt]</h3>
@@ -822,43 +822,43 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Check and repair the registry database. If no option is given a read only check of the database is done. Among others an interactive or automatic repair mode may be chosen with one of the following options </p>
 <p> -r|&#8211;repair</p>
 <dl>
-<dd>Interactive repair mode, ask a lot of questions.</dl>
+<dd>Interactive repair mode, ask a lot of questions.</dd></dl>
 <p> -a|&#8211;auto</p>
 <dl>
-<dd>Noninteractive repair mode, use default answers.</dl>
+<dd>Noninteractive repair mode, use default answers.</dd></dl>
 <p> -v|&#8211;verbose</p>
 <dl>
-<dd>Produce more output.</dl>
+<dd>Produce more output.</dd></dl>
 <p> -T|&#8211;test</p>
 <dl>
-<dd>Dry run, show what changes would be made but don&#8217;t touch anything.</dl>
+<dd>Dry run, show what changes would be made but don&#8217;t touch anything.</dd></dl>
 <p> -l|&#8211;lock</p>
 <dl>
-<dd>Lock the database while doing the check.</dl>
+<dd>Lock the database while doing the check.</dd></dl>
 <p> &#8211;reg-version={1,2,3}</p>
 <dl>
-<dd>Specify the format of the registry database. If not given it defaults to the value of the binary or, if an registry.tdb is explizitly stated at the commandline, to the value found in the INFO/version record.</dl>
+<dd>Specify the format of the registry database. If not given it defaults to the value of the binary or, if an registry.tdb is explizitly stated at the commandline, to the value found in the INFO/version record.</dd></dl>
 <p> [&#8211;db] &lt;DB&gt;</p>
 <dl>
-<dd>Check the specified database.</dl>
+<dd>Check the specified database.</dd></dl>
 <p> -o|&#8211;output &lt;ODB&gt;</p>
 <dl>
-<dd>Create a new registry database &lt;ODB&gt; instead of modifying the input. If &lt;ODB&gt; is already existing &#8211;wipe may be used to overwrite it.</dl>
+<dd>Create a new registry database &lt;ODB&gt; instead of modifying the input. If &lt;ODB&gt; is already existing &#8211;wipe may be used to overwrite it.</dd></dl>
 <p> &#8211;wipe</p>
 <dl>
-<dd>Replace the registry database instead of modifying the input or overwrite an existing output database.</dl>
+<dd>Replace the registry database instead of modifying the input or overwrite an existing output database.</dd></dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h3>Eventlog</h3>
 <p>Starting with version 3.4.0 net can read, dump, import and export native win32 eventlog files (usually *.evt). evt files are used by the native Windows eventviewer tools. </p>
 <p> The import and export of evt files can only succeed when <i>eventlog list</i> is used in <i>smb.conf</i> file. See the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) manpage for details. </p>
 <p> The eventlog commands are:</p>
 <dl>
-<dd>net eventlog dump &#8211; Dump a eventlog *.evt file on the screen.</dl>
+<dd>net eventlog dump &#8211; Dump a eventlog *.evt file on the screen.</dd></dl>
 <dl>
-<dd>net eventlog import &#8211; Import a eventlog *.evt into the samba internal tdb based representation of eventlogs.</dl>
+<dd>net eventlog import &#8211; Import a eventlog *.evt into the samba internal tdb based representation of eventlogs.</dd></dl>
 <dl>
-<dd>net eventlog export &#8211; Export the samba internal tdb based representation of eventlogs into an eventlog *.evt file.</dl>
+<dd>net eventlog export &#8211; Export the samba internal tdb based representation of eventlogs into an eventlog *.evt file.</dd></dl>
 <h3>EVENTLOG DUMP filename</h3>
 <p>Prints a eventlog *.evt file to standard output.</p>
 <h3>EVENTLOG IMPORT filename eventlog</h3>
@@ -870,25 +870,25 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p> In order for Samba to be joined or unjoined remotely an account must be used that is either member of the Domain Admins group, a member of the local Administrators group or a user that is granted the SeMachineAccountPrivilege privilege. </p>
 <p> The client side support for remote join is implemented in the net dom commands which are:</p>
 <dl>
-<dd>net dom join &#8211; Join a remote computer into a domain.</dl>
+<dd>net dom join &#8211; Join a remote computer into a domain.</dd></dl>
 <dl>
-<dd>net dom unjoin &#8211; Unjoin a remote computer from a domain.</dl>
+<dd>net dom unjoin &#8211; Unjoin a remote computer from a domain.</dd></dl>
 <dl>
-<dd>net dom renamecomputer &#8211; Renames a remote computer joined to a domain.</dl>
+<dd>net dom renamecomputer &#8211; Renames a remote computer joined to a domain.</dd></dl>
 <h3>DOM JOIN<tt>&nbsp;<wbr>&nbsp;</tt>domain=DOMAIN ou=OU account=ACCOUNT password=PASSWORD reboot</h3>
 <p>Joins a computer into a domain. This command supports the following additional parameters:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>DOMAIN</i> can be a NetBIOS domain name (also known as short domain name) or a DNS domain name for Active Directory Domains. As in Windows, it is also possible to control which Domain Controller to use. This can be achieved by appending the DC name using the \ separator character. Example: MYDOM\MYDC. The <i>DOMAIN</i> parameter cannot be NULL.</dd></dl>
 <dl>
-<dd>&bull; <i>DOMAIN</i> can be a NetBIOS domain name (also known as short domain name) or a DNS domain name for Active Directory Domains. As in Windows, it is also possible to control which Domain Controller to use. This can be achieved by appending the DC name using the \ separator character. Example: MYDOM\MYDC. The <i>DOMAIN</i> parameter cannot be NULL.</dl>
+<dd>&bull; <i>OU</i> can be set to a RFC 1779 LDAP DN, like <i>ou=mymachines,cn=Users,dc=example,dc=com</i> in order to create the machine account in a non-default LDAP container. This optional parameter is only supported when joining Active Directory Domains.</dd></dl>
 <dl>
-<dd>&bull; <i>OU</i> can be set to a RFC 1779 LDAP DN, like <i>ou=mymachines,cn=Users,dc=example,dc=com</i> in order to create the machine account in a non-default LDAP container. This optional parameter is only supported when joining Active Directory Domains.</dl>
+<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to join the machine to the domain. This domain account needs to have sufficient privileges to join machines.</dd></dl>
 <dl>
-<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to join the machine to the domain. This domain account needs to have sufficient privileges to join machines.</dl>
+<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dd></dl>
 <dl>
-<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dl>
-<dl>
-<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful join to the domain.</dl>
+<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful join to the domain.</dd></dl>
 </dl>
 <p> Note that you also need to use standard net parameters to connect and authenticate to the remote machine that you want to join. These additional parameters include: -S computer and -U user. </p>
 <p> Example: net dom join -S xp -U XP\administrator%secret domain=MYDOM account=MYDOM\administrator password=topsecret reboot. </p>
@@ -897,12 +897,12 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Unjoins a computer from a domain. This command supports the following additional parameters:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to unjoin the machine from the domain. This domain account needs to have sufficient privileges to unjoin machines.</dd></dl>
 <dl>
-<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to unjoin the machine from the domain. This domain account needs to have sufficient privileges to unjoin machines.</dl>
+<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dd></dl>
 <dl>
-<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dl>
-<dl>
-<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful unjoin from the domain.</dl>
+<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful unjoin from the domain.</dd></dl>
 </dl>
 <p> Note that you also need to use standard net parameters to connect and authenticate to the remote machine that you want to unjoin. These additional parameters include: -S computer and -U user. </p>
 <p> Example: net dom unjoin -S xp -U XP\administrator%secret account=MYDOM\administrator password=topsecret reboot. </p>
@@ -911,14 +911,14 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Renames a computer that is joined to a domain. This command supports the following additional parameters:</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>NEWNAME</i> defines the new name of the machine in the domain.</dd></dl>
 <dl>
-<dd>&bull; <i>NEWNAME</i> defines the new name of the machine in the domain.</dl>
+<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to rename the machine in the domain. This domain account needs to have sufficient privileges to rename machines.</dd></dl>
 <dl>
-<dd>&bull; <i>ACCOUNT</i> defines a domain account that will be used to rename the machine in the domain. This domain account needs to have sufficient privileges to rename machines.</dl>
+<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dd></dl>
 <dl>
-<dd>&bull; <i>PASSWORD</i> defines the password for the domain account defined with <i>ACCOUNT</i>.</dl>
-<dl>
-<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful rename in the domain.</dl>
+<dd>&bull; <i>REBOOT</i> is an optional parameter that can be set to reboot the remote machine after successful rename in the domain.</dd></dl>
 </dl>
 <p> Note that you also need to use standard net parameters to connect and authenticate to the remote machine that you want to rename in the domain. These additional parameters include: -S computer and -U user. </p>
 <p> Example: net dom renamecomputer -S xp -U XP\administrator%secret newname=XPNEW account=MYDOM\administrator password=topsecret reboot. </p>
@@ -929,12 +929,12 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>Execute a shell command under a global lock. This might be useful to define the order in which several shell commands will be executed. The locking information is stored in a file called g_lock.tdb. In setups with CTDB running, the locking information will be available on all cluster nodes.</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>LOCKNAME</i> defines the name of the global lock.</dd></dl>
 <dl>
-<dd>&bull; <i>LOCKNAME</i> defines the name of the global lock.</dl>
+<dd>&bull; <i>TIMEOUT</i> defines the timeout.</dd></dl>
 <dl>
-<dd>&bull; <i>TIMEOUT</i> defines the timeout.</dl>
-<dl>
-<dd>&bull; <i>COMMAND</i> defines the shell command to execute.</dl>
+<dd>&bull; <i>COMMAND</i> defines the shell command to execute.</dd></dl>
 </dl>
 <h3>G_Lock Locks</h3>
 <p>Print a list of all currently existing locknames.</p>
@@ -946,8 +946,8 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <p>List sharename, filename and number of share modes for a record from locking.tdb. With the optional DUMP options, dump the complete record.</p>
 <dl>
 <dd>
-<dl>
-<dd>&bull; <i>KEY</i> Key of the tdb record as hex string.</dl>
+</dd><dl>
+<dd>&bull; <i>KEY</i> Key of the tdb record as hex string.</dd></dl>
 </dl>
 <h3>Help [Command]</h3>
 <p>Gives usage information for the specified command.</p>

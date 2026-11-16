@@ -16,8 +16,8 @@ description: "mate-default-applications-properties — is a control center apple
 <p> It allows one to set default file manager, email client, web browser, etc. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p,</code> <code>&#8211;show-page=</code><i>PAGE</i></p>
-<dd> Specify the name of the page to show (internet|multimedia|system|a11y) </p>
+<dt><code>-p,</code> <code>&#8211;show-page=</code><i>PAGE</i></dt>
+<dd> Specify the name of the page to show (internet|multimedia|system|a11y) </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>

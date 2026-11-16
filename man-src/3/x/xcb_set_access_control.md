@@ -10,29 +10,24 @@ description: "xcb_set_access_control –"
 <p>xcb_set_access_control &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_set_access_control(xcb_connection_t *conn, uint8_t mode);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>mode</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>mode</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_ACCESS_CONTROL_DISABLE</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_ACCESS_CONTROL_ENABLE</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_ACCESS_CONTROL_DISABLE</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_ACCESS_CONTROL_ENABLE</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <h2>Description</h2>
 <h2>Return Value</h2>

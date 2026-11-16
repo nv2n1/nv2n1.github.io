@@ -11,14 +11,14 @@ description: "XkbSARedirectSetVMods – Sets the vmods0 and vmods1 of act from v
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbSARedirectSetVMods</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>v</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action in which to set vmods</p>
-<dt><i>&#8211; v</i></p>
-<dd>new value for virtual modifiers</dl>
+</dd><dd>action in which to set vmods</dd>
+<dt><i>&#8211; v</i></dt>
+<dd>new value for virtual modifiers</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbRedirectKeyAction structure generate KeyPress and KeyRelease events containing a keycode different from the key that was pressed or released. </p>
 <p> The <i>type </i> field for the XkbRedirectKeyAction structure should always be XkbSA_RedirectKey. Key presses cause a KeyPress event for the key specified by the <i>new_key </i> field instead of the actual key. The state reported in this event reports the current effective modifiers changed as follows: any real modifiers selected by the <i>mods_mask </i> field are set to corresponding values from the <i>mods </i> field. Any real modifiers bound to the virtual modifiers specified by the <i>vmods_mask0 </i> and <i>vmods_mask1 </i> fields are either set or cleared, depending on the corresponding values in the <i>vmods0 </i> and <i>vmods1 </i> fields. If the real and virtual modifier definitions specify conflicting values for a single modifier, the real modifier definition has priority. </p>

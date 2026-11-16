@@ -55,9 +55,9 @@ description: "rabbitmq_selinux – Security Enhanced Linux Policy for the rabbit
 <p> Policy governs the access confined processes have to these ports. SELinux rabbitmq policy is very flexible allowing users to setup their rabbitmq processes in as secure a method as possible. </p>
 <p> The following port types are defined for rabbitmq: </p>
 <dl>
-<dt><code>rabbitmq_port_t</code></p>
+<dt><code>rabbitmq_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 25672</dl>
+</dd><dd>Default Defined Ports: tcp 25672</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type rabbitmq_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -128,30 +128,30 @@ description: "rabbitmq_selinux – Security Enhanced Linux Policy for the rabbit
 <p> <code>rabbitmq_exec_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_exec_t type, if you want to transition an executable to the rabbitmq_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/rabbitmq/lib/rabbitmq_server-.*/sbin/rabbitmq-server, /usr/bin/ejabberdctl </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/rabbitmq/lib/rabbitmq_server-.*/sbin/rabbitmq-server, /usr/bin/ejabberdctl </dd>
 </dl>
 <p> <code>rabbitmq_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_initrc_exec_t type, if you want to transition an executable to the rabbitmq_initrc_t domain. </p>
 <p> <code>rabbitmq_unit_file_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_unit_file_t type, if you want to treat the files as rabbitmq unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/ejabberd.*, /usr/lib/systemd/system/rabbitmq-server.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/ejabberd.*, /usr/lib/systemd/system/rabbitmq-server.* </dd>
 </dl>
 <p> <code>rabbitmq_var_lib_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_var_lib_t type, if you want to store the rabbitmq files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/rabbitmq(/.*)?, /var/lib/ejabberd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/rabbitmq(/.*)?, /var/lib/ejabberd(/.*)? </dd>
 </dl>
 <p> <code>rabbitmq_var_lock_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_var_lock_t type, if you want to treat the files as rabbitmq var lock data, stored under the /var/lock directory </p>
 <p> <code>rabbitmq_var_log_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_var_log_t type, if you want to treat the data as rabbitmq var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/rabbitmq(/.*)?, /var/log/ejabberd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/rabbitmq(/.*)?, /var/log/ejabberd(/.*)? </dd>
 </dl>
 <p> <code>rabbitmq_var_run_t</code> </p>
 <p> &#8211; Set files with the rabbitmq_var_run_t type, if you want to store the rabbitmq files under the /run or /var/run directory. </p>

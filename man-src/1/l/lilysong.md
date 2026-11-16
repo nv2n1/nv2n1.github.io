@@ -16,20 +16,20 @@ description: "lilysong – manual page for lilysong 2.12.2"
  <code>lilysong</code> <i>&#8211;list-languages</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>&#8211;list-voices</code></p>
-<dd> list available Festival voices</p>
-<dt><code>&#8211;list-languages</code></p>
-<dd> list available Festival languages</p>
-<dt><code>-p</code> PROGRAM, <code>&#8211;play-program</code>=<i>PROGRAM</i></p>
-<dd> use PROGRAM to play song immediately</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>&#8211;list-voices</code></dt>
+<dd> list available Festival voices</dd>
+<dt><code>&#8211;list-languages</code></dt>
+<dd> list available Festival languages</dd>
+<dt><code>-p</code> PROGRAM, <code>&#8211;play-program</code>=<i>PROGRAM</i></dt>
+<dd> use PROGRAM to play song immediately</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>lilysong</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lilysong</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info lilysong</code></dl>
+</dt><dd> <code>info lilysong</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

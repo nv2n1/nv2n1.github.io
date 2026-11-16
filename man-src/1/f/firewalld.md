@@ -11,31 +11,31 @@ description: "firewalld – Dynamic Firewall Manager"
 <p> firewalld &#8211; Dynamic Firewall Manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>firewalld </code><code>[OPTIONS&#8230;]</code></dl>
+<dt> <code>firewalld </code><code>[OPTIONS&#8230;]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>firewalld provides a dynamically managed firewall with support for network/firewall zones to define the trust level of network connections or interfaces. It has support for IPv4, IPv6 firewall settings and for ethernet bridges and has a separation of runtime and permanent configuration options. It also supports an interface for services or applications to add firewall rules directly.</p>
+<dd>firewalld provides a dynamically managed firewall with support for network/firewall zones to define the trust level of network connections or interfaces. It has support for IPv4, IPv6 firewall settings and for ethernet bridges and has a separation of runtime and permanent configuration options. It also supports an interface for services or applications to add firewall rules directly.</dd>
 <h2>OPTIONS</h2>
 <p> These are the command line options of firewalld: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints a short help text and exists.</dl>
+</dt><dd> Prints a short help text and exists.</dd></dl>
 <p> <code>&#8211;debug</code>[=<i>level</i>]</p>
 <dl>
 <dt>
-<dd> Set the debug level for firewalld to <i>level</i>. The range of the debug level is 1 (lowest level) to 10 (highest level). The debug output will be written to the firewalld log file <i>/var/log/firewalld</i>.</dl>
+</dt><dd> Set the debug level for firewalld to <i>level</i>. The range of the debug level is 1 (lowest level) to 10 (highest level). The debug output will be written to the firewalld log file <i>/var/log/firewalld</i>.</dd></dl>
 <p> <code>&#8211;debug-gc</code></p>
 <dl>
 <dt>
-<dd> Print garbage collector leak information. The collector runs every 10 seconds and if there are leaks, it prints information about the leaks.</dl>
+</dt><dd> Print garbage collector leak information. The collector runs every 10 seconds and if there are leaks, it prints information about the leaks.</dd></dl>
 <p> <code>&#8211;nofork</code></p>
 <dl>
 <dt>
-<dd> Turn off daemon forking. Force firewalld to run as a foreground process instead of as a daemon in the background.</dl>
+</dt><dd> Turn off daemon forking. Force firewalld to run as a foreground process instead of as a daemon in the background.</dd></dl>
 <p> <code>&#8211;nopid</code></p>
 <dl>
 <dt>
-<dd> Disable writing pid file. By default the program will write a pid file. If the program is invoked with this option it will not check for an existing server process.</dl>
+</dt><dd> Disable writing pid file. By default the program will write a pid file. If the program is invoked with this option it will not check for an existing server process.</dd></dl>
 <h2>CONCEPTS</h2>
 <p> firewalld has a D-Bus interface for firewall configuration of services and applications. It also has a command line client for the user. Services or applications already using D-Bus can request changes to the firewall with the D-Bus interface directly. For more information on the firewalld D-Bus interface, please have a look at <code><a href="/docs/linux/man/5-firewalld-dbus/">firewalld.dbus</a></code>(5). </p>
 <p> firewalld provides support for zones, predefined services and ICMP types and has a separation of runtime and permanent configuration options. Permanent configuration is loaded from XML files in <i>/usr/lib/firewalld</i> or <i>/etc/firewalld</i> (see the section called &#8220;DIRECTORIES&#8221;). </p>
@@ -73,26 +73,26 @@ description: "firewalld – Dynamic Firewall Manager"
 <p> firewalld home page:</p>
 <dl>
 <dt>
-<dd> m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dl>
+</dt><dd> m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dd></dl>
 <p> More documentation with examples:</p>
 <dl>
 <dt>
-<dd> m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dl>
+</dt><dd> m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>Thomas Woerner</code> &lt;twoerner [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Developer</dl>
+</dt><dd> Developer</dd></dl>
 <p> <code>Jiri Popelka</code> &lt;jpopelka [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Developer</dl>
+</dt><dd> Developer</dd></dl>
 <h2>Index</h2>
-<dt><a href="#lbAP">SIGNALS</a></p>
+<dt><a href="#lbAP">SIGNALS</a></dt>
 <dd>
-<dt><a href="#lbAR">SEE ALSO</a></p>
+</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAS">NOTES</a></p>
+</dd><dt><a href="#lbAS">NOTES</a></dt>
 <dd>
-<dt><a href="#lbAT">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAT">AUTHORS</a></dt>
+<dd></dd></dl>

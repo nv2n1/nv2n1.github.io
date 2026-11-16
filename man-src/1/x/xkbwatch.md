@@ -14,8 +14,8 @@ description: "xkbwatch – XKB extension user utility"
 <h2>OPTIONS</h2>
 <p> <i>Xkbwatch</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>
 <dl>
-<dt><code>-version</code></p>
-<dd> This option indicates that the program version should be printed, after which the program exits.</dl>
+<dt><code>-version</code></dt>
+<dd> This option indicates that the program version should be printed, after which the program exits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7) </p>
 <h2>Index</h2>

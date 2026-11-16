@@ -20,18 +20,18 @@ description: "malaga – natural-language word and sentence analysis"
 <p> See <code>info Malaga</code> for details. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>[<code>elp</code>]</p>
-<dd> Print a help text about <code>malaga</code>&#8216;s command line arguments and exit.</p>
-<dt><code>-i</code>[<code>nput</code>] <i>input</i></p>
-<dd> Analyse a single word or sentence given as command line argument (only valid in morphology or syntax mode).</p>
-<dt><code>-m</code>[<code>orphology</code>]</p>
-<dd> Start <code>malaga</code> in morphology mode. In this mode word forms are read in from the standard input stream and analysed (one word form per line). The analysis result are written to the standard output stream.</p>
-<dt><code>-q</code>[<code>uoted</code>]</p>
-<dd> The input lines to be analysed are quoted (only valid in morphology or syntax mode).</p>
-<dt><code>-s</code>[<code>yntax</code>]</p>
-<dd> Start <code>malaga</code> in syntax mode. In this mode sentences are read in from the standard input stream and analysed (one sentence per line). The analysis result is written to the standard output stream.</p>
-<dt><code>-v</code>[<code>ersion</code>]</p>
-<dd> Print <code>malaga</code>&#8216;s version number and exit. </p>
+<dt><code>-h</code>[<code>elp</code>]</dt>
+<dd> Print a help text about <code>malaga</code>&#8216;s command line arguments and exit.</dd>
+<dt><code>-i</code>[<code>nput</code>] <i>input</i></dt>
+<dd> Analyse a single word or sentence given as command line argument (only valid in morphology or syntax mode).</dd>
+<dt><code>-m</code>[<code>orphology</code>]</dt>
+<dd> Start <code>malaga</code> in morphology mode. In this mode word forms are read in from the standard input stream and analysed (one word form per line). The analysis result are written to the standard output stream.</dd>
+<dt><code>-q</code>[<code>uoted</code>]</dt>
+<dd> The input lines to be analysed are quoted (only valid in morphology or syntax mode).</dd>
+<dt><code>-s</code>[<code>yntax</code>]</dt>
+<dd> Start <code>malaga</code> in syntax mode. In this mode sentences are read in from the standard input stream and analysed (one sentence per line). The analysis result is written to the standard output stream.</dd>
+<dt><code>-v</code>[<code>ersion</code>]</dt>
+<dd> Print <code>malaga</code>&#8216;s version number and exit. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Malaga was written by Bjoern Beutel. Numerous other people distributed to Malaga. This manpage was originally written for the Debian distribution by Antti-Juhani Kaijanaho. </p>

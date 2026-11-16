@@ -18,8 +18,8 @@ description: "LISTEN – listen for a notification"
 <p> NOTIFY [<code><a href="/docs/linux/man/7-notify/">notify</a></code>(7)] contains a more extensive discussion of the use of <code>LISTEN</code> and <code>NOTIFY</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>Name of a notify condition (any identifier).</dl>
+<dt><i>name</i></dt>
+<dd>Name of a notify condition (any identifier).</dd></dl>
 <h2>Examples</h2>
 <p>Configure and execute a listen/notify sequence from <code>psql</code>: </p>
 <pre>LISTEN virtual;

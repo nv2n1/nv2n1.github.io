@@ -25,32 +25,32 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the major status</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the major status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The major status stored in the object</dl>
+</dt><dd> The major status stored in the object</dd></dl>
 <h3>OM_uint32 globus_error_gssapi_get_minor_status (globus_object_t *error)</h3>
 <p> Get Minor Status. Retrieve the minor status from a gssapi error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the minor status</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the minor status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The minor status stored in the object</dl>
+</dt><dd> The minor status stored in the object</dd></dl>
 <h3>void globus_error_gssapi_set_major_status (globus_object_t *error, const OM_uint32major_status)</h3>
 <p> Set Major Status. Set the major status in a GSSAPI error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the major status<br />
- <i>major_status</i> The major status</dl>
+</dt><dd> <i>error</i> The error object for which to set the major status<br />
+ <i>major_status</i> The major status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_error from the source code. </p>
 <h2>Index</h2>

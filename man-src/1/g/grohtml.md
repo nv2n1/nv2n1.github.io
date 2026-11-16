@@ -17,48 +17,48 @@ description: "grohtml – HTML driver for groff"
 <p> <code>grohtml</code> always writes output in UTF-8 encoding and has built-in entities for all non-composite unicode characters. In spite of this, groff may issue warnings about unknown special characters if they can&#8217;t be found during the first pass. Such warnings can be safely ignored unless the special characters appear inside a table or equation.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code><i>aa-text-bits</i></p>
-<dd> Number of bits of antialiasing information to be used by <i>text</i> when generating PNG images. The default is~4 but valid values are 0, 1, 2, and~4. Note your version of <code>gs</code> needs to support the <code>-dTextAlphaBits</code> and <code>-dGraphicAlphaBits</code> options in order to exploit antialiasing. A value of~0 stops <code>grohtml</code> from issuing antialiasing commands to <code>gs</code>.</p>
-<dt><code>-b</code></p>
-<dd> Initialize the background color to white.</p>
-<dt><code>-D</code><i>dir</i></p>
-<dd> Inform <code>grohtml</code> to place all image files into directory <i>dir</i>.</p>
-<dt><code>-e</code></p>
-<dd> This option should not be directly invoked by the user as it is an internal option utilized by <code>groff</code> when <code>-Thtml</code> or <code>-Txhtml</code> is specified. It is used by the <code>grohtml</code> preprocessor to determine whether <code>eqn</code> should attempt to produce MathML (if <code>-Txhtml</code> is specified).</p>
-<dt><code>-F</code><i>dir</i></p>
-<dd> Prepend directory dir<i>/dev</i>name to the search path for font and device description files; <i>name</i> is the name of the device, usually <code>html</code>.</p>
-<dt><code>-g</code><i>aa-graphic-bits</i></p>
-<dd> Number of bits of antialiasing information to be used by <i>graphics</i> when generating PNG images. The default is~4 but valid values are 0, 1, 2, and~4. Note your version of <code>gs</code> needs to support the <code>-dTextAlphaBits</code> and <code>-dGraphicAlphaBits</code> options in order to exploit antialiasing. A value of~0 stops <code>grohtml</code> from issuing antialiasing commands to <code>gs</code>.</p>
-<dt><code>-h</code></p>
-<dd> Generate section and number headings by using <code>&lt;B&gt;</code>&#8230;<code>&lt;/B&gt;</code> and increasing the font size, rather than using the <code>&lt;H</code><i>n</i><code>&gt;</code>&#8230;<code>&lt;/H</code><i>n</i><code>&gt;</code> tags.</p>
-<dt><code>-i</code><i>resolution</i></p>
-<dd> Select the resolution for all images. By default this is 100 pixels per inch. Example: <code>-i200</code> indicates 200 pixels per inch.</p>
-<dt><code>-I</code><i>stem</i></p>
-<dd> Determine the image stem name. If omitted grohtml uses <code>grohtml-</code><i>XXX</i> (<i>XXX</i> is the process ID).</p>
-<dt><code>-j</code><i>filename</i></p>
-<dd> Inform <code>grohtml</code> to split the HTML output into multiple files. The <i>filename</i> is the stem and specified section headings (default is level one) start a new file, named <i>filename-n.html</i>.</p>
-<dt><code>-l</code></p>
-<dd> Turn off the production of automatic section links at the top of the document.</p>
-<dt><code>-n</code></p>
-<dd> Generate simple heading anchors whenever a section/number heading is found. Without the option the anchor value is the textual heading. This can cause problems when a heading contains a &#8216;?&#8217;a on older versions of some browsers (Netscape). This flag is automatically turned on if a heading contains an image.</p>
-<dt><code>-o</code><i>vertical-offset</i></p>
-<dd> Specify the vertical offset of images in points.</p>
-<dt><code>-p</code></p>
-<dd> Display page rendering progress to stderr. <code>grohtml</code> only displays a page number when an image is required.</p>
-<dt><code>-r</code></p>
-<dd> Turn off the automatic header and footer line (HTML rule).</p>
-<dt><code>-s size</code></p>
-<dd> Set the base point size of the source file. Thereafter when this point size is used in the source it will correspond to the HTML base size. Every increase of two points in the source will yield a <code>&lt;big&gt;</code> tag, and conversely when a decrease of two points is seen a <code>&lt;small&gt;</code> tag is emitted.</p>
-<dt><code>-S</code><i>level</i></p>
-<dd> When splitting HTML output, split at the heading level (or higher) defined by <i>level</i>.</p>
-<dt><code>-v</code></p>
-<dd> Print the version number.</p>
-<dt><code>-V</code></p>
-<dd> Create an XHTML or HTML validator button at the bottom of each page of the document.</p>
-<dt><code>-x</code><i>dialect</i></p>
-<dd> Select HTML dialect. Currently, <i>dialect</i> should be either the digit~<code>4</code> or the letter~<code>x</code> which indicates whether <code>grohtml</code> should generate HTML~4 or XHTML, respectively. This option should not be directly invoked by the user as it is an internal option utilized by <code>groff</code> when <code>-Thtml</code> or <code>-Txhtml</code> is specified.</p>
-<dt><code>-y</code></p>
-<dd> Produce a right-justified groff signature at the end of the document. This is only generated if the <code>-V</code> flag is also specified.</dl>
+<dt><code>-a</code><i>aa-text-bits</i></dt>
+<dd> Number of bits of antialiasing information to be used by <i>text</i> when generating PNG images. The default is~4 but valid values are 0, 1, 2, and~4. Note your version of <code>gs</code> needs to support the <code>-dTextAlphaBits</code> and <code>-dGraphicAlphaBits</code> options in order to exploit antialiasing. A value of~0 stops <code>grohtml</code> from issuing antialiasing commands to <code>gs</code>.</dd>
+<dt><code>-b</code></dt>
+<dd> Initialize the background color to white.</dd>
+<dt><code>-D</code><i>dir</i></dt>
+<dd> Inform <code>grohtml</code> to place all image files into directory <i>dir</i>.</dd>
+<dt><code>-e</code></dt>
+<dd> This option should not be directly invoked by the user as it is an internal option utilized by <code>groff</code> when <code>-Thtml</code> or <code>-Txhtml</code> is specified. It is used by the <code>grohtml</code> preprocessor to determine whether <code>eqn</code> should attempt to produce MathML (if <code>-Txhtml</code> is specified).</dd>
+<dt><code>-F</code><i>dir</i></dt>
+<dd> Prepend directory dir<i>/dev</i>name to the search path for font and device description files; <i>name</i> is the name of the device, usually <code>html</code>.</dd>
+<dt><code>-g</code><i>aa-graphic-bits</i></dt>
+<dd> Number of bits of antialiasing information to be used by <i>graphics</i> when generating PNG images. The default is~4 but valid values are 0, 1, 2, and~4. Note your version of <code>gs</code> needs to support the <code>-dTextAlphaBits</code> and <code>-dGraphicAlphaBits</code> options in order to exploit antialiasing. A value of~0 stops <code>grohtml</code> from issuing antialiasing commands to <code>gs</code>.</dd>
+<dt><code>-h</code></dt>
+<dd> Generate section and number headings by using <code>&lt;B&gt;</code>&#8230;<code>&lt;/B&gt;</code> and increasing the font size, rather than using the <code>&lt;H</code><i>n</i><code>&gt;</code>&#8230;<code>&lt;/H</code><i>n</i><code>&gt;</code> tags.</dd>
+<dt><code>-i</code><i>resolution</i></dt>
+<dd> Select the resolution for all images. By default this is 100 pixels per inch. Example: <code>-i200</code> indicates 200 pixels per inch.</dd>
+<dt><code>-I</code><i>stem</i></dt>
+<dd> Determine the image stem name. If omitted grohtml uses <code>grohtml-</code><i>XXX</i> (<i>XXX</i> is the process ID).</dd>
+<dt><code>-j</code><i>filename</i></dt>
+<dd> Inform <code>grohtml</code> to split the HTML output into multiple files. The <i>filename</i> is the stem and specified section headings (default is level one) start a new file, named <i>filename-n.html</i>.</dd>
+<dt><code>-l</code></dt>
+<dd> Turn off the production of automatic section links at the top of the document.</dd>
+<dt><code>-n</code></dt>
+<dd> Generate simple heading anchors whenever a section/number heading is found. Without the option the anchor value is the textual heading. This can cause problems when a heading contains a &#8216;?&#8217;a on older versions of some browsers (Netscape). This flag is automatically turned on if a heading contains an image.</dd>
+<dt><code>-o</code><i>vertical-offset</i></dt>
+<dd> Specify the vertical offset of images in points.</dd>
+<dt><code>-p</code></dt>
+<dd> Display page rendering progress to stderr. <code>grohtml</code> only displays a page number when an image is required.</dd>
+<dt><code>-r</code></dt>
+<dd> Turn off the automatic header and footer line (HTML rule).</dd>
+<dt><code>-s size</code></dt>
+<dd> Set the base point size of the source file. Thereafter when this point size is used in the source it will correspond to the HTML base size. Every increase of two points in the source will yield a <code>&lt;big&gt;</code> tag, and conversely when a decrease of two points is seen a <code>&lt;small&gt;</code> tag is emitted.</dd>
+<dt><code>-S</code><i>level</i></dt>
+<dd> When splitting HTML output, split at the heading level (or higher) defined by <i>level</i>.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version number.</dd>
+<dt><code>-V</code></dt>
+<dd> Create an XHTML or HTML validator button at the bottom of each page of the document.</dd>
+<dt><code>-x</code><i>dialect</i></dt>
+<dd> Select HTML dialect. Currently, <i>dialect</i> should be either the digit~<code>4</code> or the letter~<code>x</code> which indicates whether <code>grohtml</code> should generate HTML~4 or XHTML, respectively. This option should not be directly invoked by the user as it is an internal option utilized by <code>groff</code> when <code>-Thtml</code> or <code>-Txhtml</code> is specified.</dd>
+<dt><code>-y</code></dt>
+<dd> Produce a right-justified groff signature at the end of the document. This is only generated if the <code>-V</code> flag is also specified.</dd></dl>
 <h2>USAGE</h2>
 <p> There are styles called <code>R</code>, <code>I</code>, <code>B</code>, and <code>BI</code> mounted at font positions 1 to~4.</p>
 <h2>DEPENDENCIES</h2>
@@ -67,10 +67,10 @@ description: "grohtml – HTML driver for groff"
 <p> <code>grohtml</code> uses temporary files. See the <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) man page for details where such files are created.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>GROFF_FONT_PATH</i></p>
-<dd> A list of directories in which to search for the <i>dev</i>name directory in addition to the default ones. See <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) and <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) for more details.</p>
-<dt><i>SOURCE_DATE_EPOCH</i></p>
-<dd> A timestamp (expressed as seconds since the Unix epoch) to use as the creation timestamp in place of the current time.</dl>
+<dt><i>GROFF_FONT_PATH</i></dt>
+<dd> A list of directories in which to search for the <i>dev</i>name directory in addition to the default ones. See <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) and <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) for more details.</dd>
+<dt><i>SOURCE_DATE_EPOCH</i></dt>
+<dd> A timestamp (expressed as seconds since the Unix epoch) to use as the creation timestamp in place of the current time.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>Grohtml</code> has been completely redesigned and rewritten. It is still beta code.</p>
 <h2>SEE ALSO</h2>

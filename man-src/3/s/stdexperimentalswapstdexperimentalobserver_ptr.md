@@ -12,7 +12,6 @@ std::experimental::swap(std::experimental::observer_ptr) - std::experimental::sw
 
 <pre><code>template &lt;class W&gt;
 (library fundamentals TS v2)
-
     void swap(observer_ptr&lt;W&gt; &amp;lhs, observer_ptr&lt;W&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the swap algorithm for std::experimental::observer_ptr. Swaps the pointers of lhs and rhs. Calls lhs.swap(rhs). 
 

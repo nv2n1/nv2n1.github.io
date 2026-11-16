@@ -11,13 +11,10 @@ std::experimental::ranges::make_tagged_pair - std::experimental::ranges::make_ta
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / utility&gt;
-
     template &lt;TagSpecifier Tag1, TagSpecifier Tag2, class T1, class T2&gt;
     (ranges TS)
-
         constexpr ranges::tagged&lt;/*see below*/, Tag1, Tag2&gt; make_tagged_pair(T1 &amp;&amp;x, T2 &amp;&amp;y);
 Convenience function for creating a tagged pair, deducing the element types from the arguments (the tag specifiers must be explicitly specified).
-
 The see below portion of the return type is decltype(std::make_pair(std::forward&lt;T1&gt;(x), std::forward&lt;T2&gt;(y))).
 </code></pre>
 

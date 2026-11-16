@@ -14,10 +14,10 @@ description: "usb_string_ids_tab – allocate unused string IDs in batch"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>the device whose string descriptor IDs are being allocated</dl>
+</dd><dd>the device whose string descriptor IDs are being allocated</dd></dl>
 <p> <i>str</i></p>
 <dl>
-<dd>an array of usb_string objects to assign numbers to</dl>
+<dd>an array of usb_string objects to assign numbers to</dd></dl>
 <h2>Context</h2>
 <p>single threaded during gadget setup</p>
 <h2>Description</h2>
@@ -26,5 +26,5 @@ description: "usb_string_ids_tab – allocate unused string IDs in batch"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

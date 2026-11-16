@@ -22,17 +22,17 @@ description: "fgetpos, fseek, fsetpos, ftell, rewind – reposition a stream"
 <p> The <code>rewind</code>() function sets the file position indicator for the stream pointed to by <i>stream</i> to the beginning of the file. It is equivalent to: </p>
 <dl>
 <dt>
-<dd> (void) fseek(stream, 0L, SEEK_SET)</dl>
+</dt><dd> (void) fseek(stream, 0L, SEEK_SET)</dd></dl>
 <p> except that the error indicator for the stream is also cleared (see <code><a href="/docs/linux/man/3-clearerr/">clearerr</a></code>(3)). </p>
 <p> The <code>fgetpos</code>() and <code>fsetpos</code>() functions are alternate interfaces equivalent to <code>ftell</code>() and <code>fseek</code>() (with <i>whence</i> set to <code>SEEK_SET</code>), setting and storing the current value of the file offset into or from the object referenced by <i>pos</i>. On some non-UNIX systems, an <i>fpos_t</i> object may be a complex object and these routines may be the only way to portably reposition a text stream.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>rewind</code>() function returns no value. Upon successful completion, <code>fgetpos</code>(), <code>fseek</code>(), <code>fsetpos</code>() return 0, and <code>ftell</code>() returns the current offset. Otherwise, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The <i>whence</i> argument to <code>fseek</code>() was not <code>SEEK_SET</code>, <code>SEEK_END</code>, or <code>SEEK_CUR</code>. Or: the resulting file offset would be negative.</p>
-<dt><code>ESPIPE</code></p>
-<dd> The file descriptor underlying <i>stream</i> is not seekable (e.g., it refers to a pipe, FIFO, or socket).</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>whence</i> argument to <code>fseek</code>() was not <code>SEEK_SET</code>, <code>SEEK_END</code>, or <code>SEEK_CUR</code>. Or: the resulting file offset would be negative.</dd>
+<dt><code>ESPIPE</code></dt>
+<dd> The file descriptor underlying <i>stream</i> is not seekable (e.g., it refers to a pipe, FIFO, or socket).</dd></dl>
 <p> The functions <code>fgetpos</code>(), <code>fseek</code>(), <code>fsetpos</code>(), and <code>ftell</code>() may also fail and set <i>errno</i> for any of the errors specified for the routines <code><a href="/docs/linux/man/3-fflush/">fflush</a></code>(3), <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2), <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2), and <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

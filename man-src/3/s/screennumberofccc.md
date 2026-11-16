@@ -10,15 +10,15 @@ description: "DisplayOfCCC, VisualOfCCC, ScreenNumberOfCCC, ScreenWhitePointOfCC
 <p>DisplayOfCCC, VisualOfCCC, ScreenNumberOfCCC, ScreenWhitePointOfCCC, ClientWhitePointOfCCC &#8211; Color Conversion Context macros </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Display *DisplayOfCCC(XcmsCCC <i>ccc</i>);</p>
-<dd>Visual *VisualOfCCC(XcmsCCC <i>ccc</i>);</p>
-<dd>int ScreenNumberOfCCC(XcmsCCC <i>ccc</i>);</p>
-<dd>XcmsColor *ScreenWhitePointOfCCC(XcmsCCC <i>ccc</i>);</p>
-<dd>XcmsColor *ClientWhitePointOfCCC(XcmsCCC <i>ccc</i>);</dl>
+<dd>Display *DisplayOfCCC(XcmsCCC <i>ccc</i>);</dd>
+<dd>Visual *VisualOfCCC(XcmsCCC <i>ccc</i>);</dd>
+<dd>int ScreenNumberOfCCC(XcmsCCC <i>ccc</i>);</dd>
+<dd>XcmsColor *ScreenWhitePointOfCCC(XcmsCCC <i>ccc</i>);</dd>
+<dd>XcmsColor *ClientWhitePointOfCCC(XcmsCCC <i>ccc</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>ccc</i></p>
-<dd>Specifies the CCC.</dl>
+<dt><i>ccc</i></dt>
+<dd>Specifies the CCC.</dd></dl>
 <h2>Description</h2>
 <p>The <code>DisplayOfCCC</code> macro returns the display associated with the specified CCC. </p>
 <p> The <code>VisualOfCCC</code> macro returns the visual associated with the specified CCC. </p>

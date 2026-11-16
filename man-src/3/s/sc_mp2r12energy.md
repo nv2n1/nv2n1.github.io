@@ -11,7 +11,6 @@ description: "sc::MP2R12Energy –"
 <p> Class <code>MP2R12Energy</code> is the object that computes and maintains MP2-R12 energies.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mp2r12_energy.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>

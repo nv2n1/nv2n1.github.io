@@ -17,10 +17,10 @@ dcmgpdir[options][dcmfile - in...]
 <p> The <code>dcmgpdir</code> utility creates a <i>DICOMDIR</i> file from the specified referenced DICOM files according to the DICOM Part 11 Media Storage Application Profiles. </p>
 <p> Currently, the following profiles are supported: </p>
 <dl>
-<dt>&bull;</p>
-<dd> General Purpose CD-R Interchange (STD-GEN-CD)</p>
-<dt>&bull;</p>
-<dd> General Purpose Interchange on DVD-RAM Media (STD-GEN-DVD-RAM)</dl>
+<dt>&bull;</dt>
+<dd> General Purpose CD-R Interchange (STD-GEN-CD)</dd>
+<dt>&bull;</dt>
+<dd> General Purpose Interchange on DVD-RAM Media (STD-GEN-DVD-RAM)</dd></dl>
 <p> <code>dcmmkdir</code> is an extended version of this tool which also supports other Media Storage Application Profiles than the general purpose one (e.g. both cardio profiles requiring the use of icon images).</p>
 <h2>PARAMETERS</h2>
 <pre>

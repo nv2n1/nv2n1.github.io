@@ -14,17 +14,17 @@ description: "proc_scsi_open – glue function"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>not used</dl>
+</dd><dd>not used</dd></dl>
 <p> <i>file</i></p>
 <dl>
-<dd>passed to <code>single_open</code></dl>
+<dd>passed to <code>single_open</code></dd></dl>
 <h2>Description</h2>
 <p>Associates proc_scsi_show with this file</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -32,13 +32,9 @@ Any shared state is released. valid() is false after a call to this method. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;thread&gt;
-
 #include &lt;future&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;chrono&gt;
 std::string time()
 {
@@ -46,7 +42,6 @@ std::string time()
     std::chrono::duration&lt;double&gt; d = std::chrono::steady_clock::now() - start;
     return &quot;[&quot; + std::to_string(d.count()) + &quot;s]&quot;;
 }
-
 int main()
 {
     using namespace std::chrono_literals;

@@ -14,14 +14,14 @@ description: "sil_set_mode – wrap set_mode functions"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link to set up</dl>
+</dd><dd>link to set up</dd></dl>
 <p> <i>r_failed</i></p>
 <dl>
-<dd>returned device when we fail</dl>
+<dd>returned device when we fail</dd></dl>
 <h2>Description</h2>
 <p>Wrap the libata method for device setup as after the setup we need to inspect the results and do some configuration work</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -18,15 +18,15 @@ description: "kernelshark – graphical reader for"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Display the help text.</dl>
+</dt><dd> Display the help text.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Display the kernelshark version and exit.</dl>
+</dt><dd> Display the kernelshark version and exit.</dd></dl>
 <p> <code>-i</code> <i>input-file</i></p>
 <dl>
 <dt>
-<dd> Read trace data from the file <i>input-file</i>. By default input is read from <i>trace.dat</i>.</dl>
+</dt><dd> Read trace data from the file <i>input-file</i>. By default input is read from <i>trace.dat</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1)</p>
 <h2>AUTHOR</h2>
@@ -37,10 +37,10 @@ description: "kernelshark – graphical reader for"
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

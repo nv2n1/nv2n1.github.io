@@ -15,10 +15,10 @@ description: "ALTER_LARGE_OBJECT – change the definition of a large object"
 <h2>Parameters</h2>
 <p><i>large_object_oid</i></p>
 <dl>
-<dd>OID of the large object to be altered</dl>
+<dd>OID of the large object to be altered</dd></dl>
 <p> <i>new_owner</i></p>
 <dl>
-<dd>The new owner of the large object</dl>
+<dd>The new owner of the large object</dd></dl>
 <h2>Compatibility</h2>
 <p>There is no <code>ALTER LARGE OBJECT</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

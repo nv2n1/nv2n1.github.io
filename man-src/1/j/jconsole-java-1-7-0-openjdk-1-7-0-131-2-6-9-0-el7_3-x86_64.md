@@ -13,20 +13,20 @@ description: "jconsole – Java Monitoring and Management Console"
 <h2>Parameters</h2>
 <dl>
 <dd>
-<dl>
-<dt>options</p>
-<dd>Options, if used, should follow immediately after the command name.</p>
-<dt>connection = pid | host:port | jmxUrl</p>
+</dd><dl>
+<dt>options</dt>
+<dd>Options, if used, should follow immediately after the command name.</dd>
+<dt>connection = pid | host:port | jmxUrl</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd><i>pid</i> Process ID of a local Java VM. The Java VM must be running with the same user ID as the user ID running jconsole. See <i>JMX Monitoring and Management</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html</a> for details.</p>
-<dt>o</p>
-<dd><i>host</i>:<i>port</i> Name of the host system on which the Java VM is running and the port number specified by the system property <i>com.sun.management.jmxremote.port</i> when the Java VM was started. See <i>JMX Monitoring and Management</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html</a> for details.</p>
-<dt>o</p>
-<dd><i>jmxUrl</i> Address of the JMX agent to be connected to as described in <i>JMXServiceURL</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/javax/management/remote/JMXServiceURL.html.">http://docs.oracle.com/javase/7/docs/api/javax/management/remote/JMXServiceURL.html.</a></dl>
+</dd><dl>
+<dt>o</dt>
+<dd><i>pid</i> Process ID of a local Java VM. The Java VM must be running with the same user ID as the user ID running jconsole. See <i>JMX Monitoring and Management</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html</a> for details.</dd>
+<dt>o</dt>
+<dd><i>host</i>:<i>port</i> Name of the host system on which the Java VM is running and the port number specified by the system property <i>com.sun.management.jmxremote.port</i> when the Java VM was started. See <i>JMX Monitoring and Management</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html</a> for details.</dd>
+<dt>o</dt>
+<dd><i>jmxUrl</i> Address of the JMX agent to be connected to as described in <i>JMXServiceURL</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/javax/management/remote/JMXServiceURL.html.">http://docs.oracle.com/javase/7/docs/api/javax/management/remote/JMXServiceURL.html.</a></dd></dl>
 </dl>
 </dl>
 </dl>
@@ -36,29 +36,29 @@ description: "jconsole – Java Monitoring and Management Console"
 <h2>Options</h2>
 <dl>
 <dd>
-<dl>
-<dt>-interval=n</p>
-<dd>Set the update interval to <i>n</i> seconds (default is 4 seconds).</p>
-<dt>-notile</p>
-<dd>Do not tile windows initially (for two or more connections).</p>
-<dt>-pluginpath plugins</p>
-<dd>Specify a list of directories or JAR files which are searched for JConsole plugins. The <i>plugins</i> path should contain a provider-configuration file named: </p>
+</dd><dl>
+<dt>-interval=n</dt>
+<dd>Set the update interval to <i>n</i> seconds (default is 4 seconds).</dd>
+<dt>-notile</dt>
+<dd>Do not tile windows initially (for two or more connections).</dd>
+<dt>-pluginpath plugins</dt>
+<dd>Specify a list of directories or JAR files which are searched for JConsole plugins. The <i>plugins</i> path should contain a provider-configuration file named: </dd>
 <pre><code> META-INF/services/com.sun.tools.jconsole.JConsolePlugin</code></pre>
 <p>containing one line for each plugin specifying the fully qualified class name of the class implementing the <i>com.sun.tools.jconsole.JConsolePlugin</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/jdk/api/jconsole/spec/com/sun/tools/jconsole/JConsolePlugin.html">http://docs.oracle.com/javase/7/docs/jdk/api/jconsole/spec/com/sun/tools/jconsole/JConsolePlugin.html</a> class.</p>
-<dt>-version</p>
-<dd>Output version information and exit.</p>
-<dt>-help</p>
-<dd>Output help message and exit.</p>
-<dt>-J&lt;flag&gt;</p>
-<dd>Pass &lt;flag&gt; to the Java virtual machine on which jconsole is run.</dl>
+<dt>-version</dt>
+<dd>Output version information and exit.</dd>
+<dt>-help</dt>
+<dd>Output help message and exit.</dd>
+<dt>-J&lt;flag&gt;</dt>
+<dd>Pass &lt;flag&gt; to the Java virtual machine on which jconsole is run.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <dl>
 <dd>
-<dl>
-<dt>o</p>
-<dd><i>Using JConsole</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html</a></p>
-<dt>o</p>
-<dd><i>Monitoring and Management for Java Platform</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html</a></dl>
+</dd><dl>
+<dt>o</dt>
+<dd><i>Using JConsole</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html</a></dd>
+<dt>o</dt>
+<dd><i>Monitoring and Management for Java Platform</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

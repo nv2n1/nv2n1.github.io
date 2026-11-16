@@ -11,7 +11,6 @@ description: "sc::PZ81LCFunctional –"
 <p> Implements the PZ81 local (LSDA) correlation functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::LSDACFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -22,17 +21,8 @@ description: "sc::PZ81LCFunctional –"
  void <code>point_lc</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;, double &amp;, double &amp;, double &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>double Fec_rsgt1 (double rs, double beta_1, double beta_2, double gamma)
-
-
-
 double dFec_rsgt1_drho (double rs, double beta_1, double beta_2, double gamma, double &amp;dec_drs)
-
-
-
 double Fec_rslt1 (double rs, double A, double B, double C, double D)
-
-
-
 double dFec_rslt1_drho (double rs, double A, double B, double C, double D, double &amp;dec_drs)</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the PZ81 local (LSDA) correlation functional. </p>

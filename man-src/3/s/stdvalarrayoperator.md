@@ -56,10 +56,8 @@ For overloads (3,5,7,9), The function can be implemented with the return type di
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; data = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::cout &lt;&lt; &quot;Initial valarray: &quot;;

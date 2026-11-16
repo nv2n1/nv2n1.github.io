@@ -11,9 +11,7 @@ std::tolower(std::locale) - std::tolower(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     charT tolower(charT ch, const locale &amp;loc);</code></pre> 
 Converts the character ch to lowercase if possible, using the conversion rules specified by the given locale's std::ctype facet. 
 
@@ -40,12 +38,9 @@ Only 1:1 character mapping can be performed by this function, e.g. the Greek upp
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     wchar_t c = L'\u0190'; // Latin capital open E ('Ɛ')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase;

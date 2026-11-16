@@ -41,7 +41,7 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <p>cashflow-analysis functions </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add tests</dl>
+<dd>add tests</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>static <code>Real</code> npv (const Leg &amp; leg, const <code>YieldTermStructure</code> &amp; discountCurve, <code>Date</code> settlementDate = <code>Date</code>(), const <code>Date</code> &amp; npvDate = <code>Date</code>(), <code>Natural</code> exDividendDays = 0) [static]</h3>
 <p>NPV of the cash flows. </p>

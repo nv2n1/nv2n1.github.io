@@ -16,10 +16,10 @@ description: "XmMultiListToggleRow — An MultiList function that toggles the se
 <h2>Description</h2>
 <p><code>XmMultiListToggleRow</code> toggles the selection state of a row designated by row argument of the passed MultiList widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the MultiList from whose list an item is unselected.</p>
-<dt><i>row</i></p>
-<dd>Specified the number of row to toggle.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the MultiList from whose list an item is unselected.</dd>
+<dt><i>row</i></dt>
+<dd>Specified the number of row to toggle.</dd></dl>
 <p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>

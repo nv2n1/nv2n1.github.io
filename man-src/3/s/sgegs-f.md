@@ -23,22 +23,20 @@ description: "sgegs.f –"
  left and or/right Schur vectors of a real matrix pair (A,B).
  Given two square matrices A and B, the generalized real Schur
  factorization has the form
- 
  A = Q*S*Z**T, B = Q*T*Z**T
  where Q and Z are orthogonal matrices, T is upper triangular, and S
  is an upper quasi-triangular matrix with 1-by-1 and 2-by-2 diagonal
  blocks, the 2-by-2 blocks corresponding to complex conjugate pairs
  of eigenvalues of (A,B). The columns of Q are the left Schur vectors
  and the columns of Z are the right Schur vectors.
- 
  If only the eigenvalues of (A,B) are needed, the driver routine
  SGEGV should be used instead. See SGEGV for a description of the
  eigenvalues of the generalized nonsymmetric eigenvalue problem
  (GNEP).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBVSL</i> </p>
+<dd><i>JOBVSL</i> </dd>
 <pre> JOBVSL is CHARACTER*1
  = 'N': do not compute the left Schur vectors;
  = 'V': compute the left Schur vectors (returned in VSL).</pre>
@@ -137,13 +135,13 @@ description: "sgegs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 226 of file sgegs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

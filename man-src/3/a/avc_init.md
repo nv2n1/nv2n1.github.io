@@ -24,41 +24,41 @@ description: "avc_init – legacy userspace SELinux AVC setup"
 <p> Use an <code>avc_memory_callback</code> structure to specify alternate functions for dynamic memory allocation. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct avc_memory_callback {
     void *(*func_malloc)(size_t size);
     void (*func_free)(void *ptr);
 };
 </code></pre>
-</dl>
+</dd></dl>
 <p> The two fields of the structure should be pointers to functions which behave as <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) and <code><a href="/docs/linux/man/3-free/">free</a></code>(3), which are used by default. </p>
 <p> Use an <code>avc_log_callback</code> structure to specify alternate functions for logging. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 struct avc_log_callback {<br />
     void (*func_log)(const char *fmt, &#8230;);<br />
     void (*func_audit)(void *auditdata,<br />
                        security_class_t class,<br />
                        char *msgbuf, size_t msgbufsize);<br />
 };
-</dl>
+</dd></dl>
 <p> The <code>func_log</code> callback should accept a <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) style format and arguments and log them as desired. The default behavior prints the message on the standard error. The <code>func_audit</code> callback should interpret the <i>auditdata</i> parameter for the given <i>class</i>, printing a human-readable interpretation to <i>msgbuf</i> using no more than <i>msgbufsize</i> characters. The default behavior is to ignore <i>auditdata</i>. </p>
 <p> Use an <code>avc_thread_callback</code> structure to specify functions for starting and manipulating threads. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 struct avc_thread_callback {<br />
     void *(*func_create_thread)(void (*run)(void));<br />
     void (*func_stop_thread)(void *thread);<br />
 };
-</dl>
+</dd></dl>
 <p> The <code>func_create_thread</code> callback should create a new thread and return a pointer which references it. The thread should execute the <i>run</i> argument, which does not return under normal conditions. The <code>func_stop_thread</code> callback should cancel the running thread referenced by <i>thread</i>. By default, threading is not used; see <code>NETLINK NOTIFICATION</code> below. </p>
 <p> Use an <code>avc_lock_callback</code> structure to specify functions to create, obtain, and release locks for use by threads. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct avc_lock_callback {
     void *(*func_alloc_lock)(void);
@@ -67,7 +67,7 @@ struct avc_lock_callback {
     void (*func_free_lock)(void *lock);
 };
 </code></pre>
-</dl>
+</dd></dl>
 <p> The <code>func_alloc_lock</code> callback should create a new lock, returning a pointer which references it. The <code>func_get_lock</code> callback should obtain <i>lock</i>, blocking if necessary. The <code>func_release_lock</code> callback should release <i>lock</i>. The <code>func_free_lock</code> callback should destroy <i>lock</i>, freeing any resources associated with it. The default behavior is not to perform any locking. Note that undefined behavior may result if threading is used without appropriate locking.</p>
 <h2>NETLINK NOTIFICATION</h2>
 <p> Beginning with version 2.6.4, the Linux kernel supports SELinux status change notification via netlink. Two message types are currently implemented, indicating changes to the enforcing mode and to the loaded policy in the kernel, respectively. The userspace AVC listens for these messages and takes the appropriate action, modifying the behavior of <code><a href="/docs/linux/man/3-avc_has_perm/">avc_has_perm</a></code>(3) to reflect the current enforcing mode and flushing the cache on receipt of a policy load notification. Audit messages are produced when netlink notifications are processed. </p>

@@ -19,18 +19,18 @@ description: "ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr,
 <p> void ldns_dnssec_rrs_print(FILE *out, ldns_dnssec_rrs *rrs); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_rrs_new</i>()</dl>
+<dt> <i>ldns_dnssec_rrs_new</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_dnssec_rrs_free</i>()</p>
-<dd>Frees the list of rrs, but *not* the individual ldns_rr records contained in the list </p>
+<dt> <i>ldns_dnssec_rrs_free</i>()</dt>
+<dd>Frees the list of rrs, but *not* the individual ldns_rr records contained in the list </dd>
 <p> .br <code>rrs</code>: the data structure to free</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrs_add_rr</i>()</p>
-<dd>Adds an RR to the list of RRs. The list will remain ordered </p>
+<dt> <i>ldns_dnssec_rrs_add_rr</i>()</dt>
+<dd>Adds an RR to the list of RRs. The list will remain ordered </dd>
 <p> .br <code>rrs</code>: the list to add to .br <code>rr</code>: the RR to add .br Returns LDNS_STATUS_OK on success</dl>
 <dl>
-<dt> <i>ldns_dnssec_rrs_print</i>()</p>
-<dd>Prints the given rrs to the file descriptor </p>
+<dt> <i>ldns_dnssec_rrs_print</i>()</dt>
+<dd>Prints the given rrs to the file descriptor </dd>
 <p> .br <code>out</code>: the file descriptor to print to .br <code>rrs</code>: the list of RRs to print</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -44,3 +44,4 @@ description: "ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr,
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

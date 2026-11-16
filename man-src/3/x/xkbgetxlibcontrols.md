@@ -11,12 +11,12 @@ description: "XkbGetXlibControls – Determines the current state of the Library
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>unsigned int XkbGetXlibControls</code> <code>(Display *</code><i>display</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</dl>
+</dd><dd>connection to X server</dd></dl>
 <h2>Description</h2>
 <p><i>XkbGetXlibControls </i> returns the current state of the Library Controls as a bit mask that is an inclusive OR of the control masks from Table 1 for the controls that are enabled. For the optional compose processing controls, the fact that a control is enabled does not imply that it is actually implemented. </p>
 <table>

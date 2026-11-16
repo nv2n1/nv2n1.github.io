@@ -17,14 +17,14 @@ description: "jigdo-lite – Download jigdo files using wget"
 <p> `<i>.jigdo</i>&#8216; files that contain references to Debian mirrors are treated specially: When such a file is recognized, you are asked to select one mirror out of a list of all Debian mirrors. </p>
 <p> If <code>URL</code> is not given on the command line, the script prompts for a location to download the `<i>.jigdo</i>&#8216; file from. The following command line options are recognized:</p>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Output short summary of command syntax.</p>
-<dt><code>-v &#8211;version</code></p>
-<dd> Output version number.</p>
-<dt><code>&#8211;scan </code><i>FILES</i></p>
-<dd> Do not ask for &quot;Files to scan&quot;, use this path.</p>
-<dt><code>&#8211;noask</code></p>
-<dd> Do not ask any questions, instead behave as if the user had pressed Return at all prompts. This can be useful when running <code>jigdo-lite</code> from cron jobs or in other non-interactive environments.</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Output short summary of command syntax.</dd>
+<dt><code>-v &#8211;version</code></dt>
+<dd> Output version number.</dd>
+<dt><code>&#8211;scan </code><i>FILES</i></dt>
+<dd> Do not ask for &quot;Files to scan&quot;, use this path.</dd>
+<dt><code>&#8211;noask</code></dt>
+<dd> Do not ask any questions, instead behave as if the user had pressed Return at all prompts. This can be useful when running <code>jigdo-lite</code> from cron jobs or in other non-interactive environments.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1), <code>jigdo-mirror</code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) (or `<code>info wget</code>&#8216;) </p>
 <p> CD images for Debian Linux can be downloaded with jigdo &lt;URL:<a rel="nofollow" href="http://www.debian.org/CD/jigdo-cd/">http://www.debian.org/CD/jigdo-cd/</a>&gt;.</p>

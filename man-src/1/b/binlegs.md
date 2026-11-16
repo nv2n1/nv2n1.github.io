@@ -14,19 +14,19 @@ description: "binlegs – Maintain the GMT index files for mgg supplement"
 <h2>DESCRIPTION</h2>
 <p> <code>binlegs</code> will make changes to the <code>mgg</code> supplement data base files <i>gmt_legs.d</i> and <i>gmt_index.b</i> for the legs listed in the <i>leglistfile</i>. Normally, only the data archivist will need to be concerned with these operations.</p>
 <dl>
-<dt><i>leglistfile</i></p>
-<dd> Contains the list of legs to be worked on.</dl>
+<dt><i>leglistfile</i></dt>
+<dd> Contains the list of legs to be worked on.</dd></dl>
 <h2>OPTIONS</h2>
 <p> No space between the option flag and the associated arguments </p>
 <dl>
-<dt><code>-R</code></p>
-<dd> Replace the current information if a leg already is in the system. [Default is append].</p>
-<dt><code>-D</code></p>
-<dd> Delete information for these legs from the system index files.</p>
+<dt><code>-R</code></dt>
+<dd> Replace the current information if a leg already is in the system. [Default is append].</dd>
+<dt><code>-D</code></dt>
+<dd> Delete information for these legs from the system index files.</dd>
 <dt>
-<dt><code>-V</code></p>
+</dt><dt><code>-V</code></dt>
 <dd>
-<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dl>
+</dd><dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To add new cruises to the system: </p>
 <p> <code>binlegs</code> <i>newlegs.lis</i> <code>-V</code> <code>-P</code><i>/usr/lib/gmt</i> </p>

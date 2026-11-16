@@ -18,28 +18,28 @@ description: "rdisc – network router discovery daemon"
 <p> Server side of router discovery protocol is supported by Cisco IOS and by any more or less complete UNIX routing daemon, f.e <code>gated</code>. Or, <code>rdisc</code> can act as responder, if compiled with -DRDISC_SERVER.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Accept all routers independently of the preference they have in their <code>advertise</code> messages. Normally <code>rdisc</code> only accepts (and enters in the kernel routing tables) the router or routers with the highest preference.</p>
-<dt><code>-b</code></p>
-<dd>Opposite to <code>-a</code>, i.e. install only router with the best preference value. It is default behaviour.</p>
-<dt><code>-d</code></p>
-<dd>Send debugging messages to syslog.</p>
-<dt><code>-f</code></p>
-<dd>Run <code>rdisc</code> forever even if no routers are found. Normally <code>rdisc</code> gives up if it has not received any <code>advertise</code> message after after soliciting three times, in which case it exits with a non-zero exit code. If <code>-f</code> is not specified in the first form then <code>-s</code> must be specified.</p>
-<dt><code>-r</code></p>
-<dd>Responder mode, available only if compiled with -DRDISC_SERVER.</p>
-<dt><code>-s</code></p>
-<dd>Send three <code>solicitation</code> messages initially to quickly discover the routers when the system is booted. When <code>-s</code> is specified <code>rdisc</code> exits with a non-zero exit code if it can not find any routers. This can be overridden with the <code>-f</code> option.</p>
-<dt><code>-p </code><i>preference</i></p>
-<dd>Set preference in advertisement. Available only with -r option.</p>
-<dt><code>-T </code><i>max_interval</i></p>
-<dd>Set maximum advertisement interval in seconds. Default is 600 secs. Available only with -r option.</p>
-<dt><code>-t</code></p>
-<dd>Test mode. Do not go to background.</p>
-<dt><code>-v</code></p>
-<dd>Be verbose i.e. send lots of debugging messages to syslog.</p>
-<dt><code>-V</code></p>
-<dd>Print version and exit.</dl>
+<dt><code>-a</code></dt>
+<dd>Accept all routers independently of the preference they have in their <code>advertise</code> messages. Normally <code>rdisc</code> only accepts (and enters in the kernel routing tables) the router or routers with the highest preference.</dd>
+<dt><code>-b</code></dt>
+<dd>Opposite to <code>-a</code>, i.e. install only router with the best preference value. It is default behaviour.</dd>
+<dt><code>-d</code></dt>
+<dd>Send debugging messages to syslog.</dd>
+<dt><code>-f</code></dt>
+<dd>Run <code>rdisc</code> forever even if no routers are found. Normally <code>rdisc</code> gives up if it has not received any <code>advertise</code> message after after soliciting three times, in which case it exits with a non-zero exit code. If <code>-f</code> is not specified in the first form then <code>-s</code> must be specified.</dd>
+<dt><code>-r</code></dt>
+<dd>Responder mode, available only if compiled with -DRDISC_SERVER.</dd>
+<dt><code>-s</code></dt>
+<dd>Send three <code>solicitation</code> messages initially to quickly discover the routers when the system is booted. When <code>-s</code> is specified <code>rdisc</code> exits with a non-zero exit code if it can not find any routers. This can be overridden with the <code>-f</code> option.</dd>
+<dt><code>-p </code><i>preference</i></dt>
+<dd>Set preference in advertisement. Available only with -r option.</dd>
+<dt><code>-T </code><i>max_interval</i></dt>
+<dd>Set maximum advertisement interval in seconds. Default is 600 secs. Available only with -r option.</dd>
+<dt><code>-t</code></dt>
+<dd>Test mode. Do not go to background.</dd>
+<dt><code>-v</code></dt>
+<dd>Be verbose i.e. send lots of debugging messages to syslog.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and exit.</dd></dl>
 <h2>History</h2>
 <p>This program was developed by Sun Microsystems (see copyright notice in source file). It was ported to Linux by Alexey Kuznetsov &lt;kuznet [at] ms2.inr.ac.ru&gt;. It is now maintained by YOSHIFUJI Hideaki &lt;yoshfuji [at] skbuff.net&gt;.</p>
 <h2>See Also</h2>

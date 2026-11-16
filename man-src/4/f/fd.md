@@ -414,42 +414,42 @@ description: "fd – floppy disk device"
 <h2>Description</h2>
 <p><code>fd</code> special files access the floppy disk drives in raw mode. The following <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) calls are supported by <code>fd</code> devices:</p>
 <dl>
-<dt><code>FDCLRPRM</code></p>
-<dd>clears the media information of a drive (geometry of disk in drive).</p>
-<dt><code>FDSETPRM</code></p>
-<dd>sets the media information of a drive. The media information will be lost when the media is changed.</p>
-<dt><code>FDDEFPRM</code></p>
-<dd>sets the media information of a drive (geometry of disk in drive). The media information will not be lost when the media is changed. This will disable autodetection. In order to reenable autodetection, you have to issue an <code>FDCLRPRM</code>.</p>
-<dt><code>FDGETDRVTYP</code></p>
-<dd>returns the type of a drive (name parameter). For formats which work in several drive types, <code>FDGETDRVTYP</code> returns a name which is appropriate for the oldest drive type which supports this format.</p>
-<dt><code>FDFLUSH</code></p>
-<dd>invalidates the buffer cache for the given drive.</p>
-<dt><code>FDSETMAXERRS</code></p>
-<dd>sets the error thresholds for reporting errors, aborting the operation, recalibrating, resetting, and reading sector by sector.</p>
-<dt><code>FDSETMAXERRS</code></p>
-<dd>gets the current error thresholds.</p>
-<dt><code>FDGETDRVTYP</code></p>
-<dd>gets the internal name of the drive.</p>
-<dt><code>FDWERRORCLR</code></p>
-<dd>clears the write error statistics.</p>
-<dt><code>FDWERRORGET</code></p>
-<dd>reads the write error statistics. These include the total number of write errors, the location and disk of the first write error, and the location and disk of the last write error. Disks are identified by a generation number which is incremented at (almost) each disk change.</p>
-<dt><code>FDTWADDLE</code></p>
-<dd>Switch the drive motor off for a few microseconds. This might be needed in order to access a disk whose sectors are too close together.</p>
-<dt><code>FDSETDRVPRM</code></p>
-<dd>sets various drive parameters.</p>
-<dt><code>FDGETDRVPRM</code></p>
-<dd>reads these parameters back.</p>
-<dt><code>FDGETDRVSTAT</code></p>
-<dd>gets the cached drive state (disk changed, write protected et al.)</p>
-<dt><code>FDPOLLDRVSTAT</code></p>
-<dd>polls the drive and return its state.</p>
-<dt><code>FDGETFDCSTAT</code></p>
-<dd>gets the floppy controller state.</p>
-<dt><code>FDRESET</code></p>
-<dd>resets the floppy controller under certain conditions.</p>
-<dt><code>FDRAWCMD</code></p>
-<dd>sends a raw command to the floppy controller.</dl>
+<dt><code>FDCLRPRM</code></dt>
+<dd>clears the media information of a drive (geometry of disk in drive).</dd>
+<dt><code>FDSETPRM</code></dt>
+<dd>sets the media information of a drive. The media information will be lost when the media is changed.</dd>
+<dt><code>FDDEFPRM</code></dt>
+<dd>sets the media information of a drive (geometry of disk in drive). The media information will not be lost when the media is changed. This will disable autodetection. In order to reenable autodetection, you have to issue an <code>FDCLRPRM</code>.</dd>
+<dt><code>FDGETDRVTYP</code></dt>
+<dd>returns the type of a drive (name parameter). For formats which work in several drive types, <code>FDGETDRVTYP</code> returns a name which is appropriate for the oldest drive type which supports this format.</dd>
+<dt><code>FDFLUSH</code></dt>
+<dd>invalidates the buffer cache for the given drive.</dd>
+<dt><code>FDSETMAXERRS</code></dt>
+<dd>sets the error thresholds for reporting errors, aborting the operation, recalibrating, resetting, and reading sector by sector.</dd>
+<dt><code>FDSETMAXERRS</code></dt>
+<dd>gets the current error thresholds.</dd>
+<dt><code>FDGETDRVTYP</code></dt>
+<dd>gets the internal name of the drive.</dd>
+<dt><code>FDWERRORCLR</code></dt>
+<dd>clears the write error statistics.</dd>
+<dt><code>FDWERRORGET</code></dt>
+<dd>reads the write error statistics. These include the total number of write errors, the location and disk of the first write error, and the location and disk of the last write error. Disks are identified by a generation number which is incremented at (almost) each disk change.</dd>
+<dt><code>FDTWADDLE</code></dt>
+<dd>Switch the drive motor off for a few microseconds. This might be needed in order to access a disk whose sectors are too close together.</dd>
+<dt><code>FDSETDRVPRM</code></dt>
+<dd>sets various drive parameters.</dd>
+<dt><code>FDGETDRVPRM</code></dt>
+<dd>reads these parameters back.</dd>
+<dt><code>FDGETDRVSTAT</code></dt>
+<dd>gets the cached drive state (disk changed, write protected et al.)</dd>
+<dt><code>FDPOLLDRVSTAT</code></dt>
+<dd>polls the drive and return its state.</dd>
+<dt><code>FDGETFDCSTAT</code></dt>
+<dd>gets the floppy controller state.</dd>
+<dt><code>FDRESET</code></dt>
+<dd>resets the floppy controller under certain conditions.</dd>
+<dt><code>FDRAWCMD</code></dt>
+<dd>sends a raw command to the floppy controller.</dd></dl>
 <p> For more precise information, consult also the <i>&lt;linux/fd.h&gt;</i> and <i>&lt;linux/fdreg.h&gt;</i> include files, as well as the <code>floppycontrol</code>(1) manual page.</p>
 <h2>Files</h2>
 <p>/dev/fd*</p>

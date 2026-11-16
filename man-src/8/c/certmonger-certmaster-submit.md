@@ -14,32 +14,32 @@ description: "certmaster-submit"
 <p><i>certmaster-submit</i> is the helper which <i>certmonger</i> uses to make requests to certmaster-based CAs. It is not normally run interactively, but it can be for troubleshooting purposes. The signing request which is to be submitted should either be in a file whose name is given as an argument, or fed into <i>certmaster-submit</i> via stdin. There is no standard authenticated method for obtaining the root certificate from certmaster CAs, so <code>certmonger</code> does not support retrieving trust information from them. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> serverHost</p>
-<dd>Submit the request to the certmaster instance running on the named host. The default is <i>localhost:51235</i> if a file named <code>/var/run/certmaster.pid</code> is found on the local system, and is read from <code>/etc/certmaster/minion.conf</code> if that file is not found.</p>
-<dt><code>-c</code> cafile</p>
-<dd>Submit the request over HTTPS instead of HTTP, and only trust the server if its certificate was issued by the CA whose certificate is in the named file.</p>
-<dt><code>-C</code> capath</p>
-<dd>Submit the request over HTTPS instead of HTTP, and only trust the server if its certificate was issued by a CA whose certificate is in a file in the named directory. </p>
+<dt><code>-h</code> serverHost</dt>
+<dd>Submit the request to the certmaster instance running on the named host. The default is <i>localhost:51235</i> if a file named <code>/var/run/certmaster.pid</code> is found on the local system, and is read from <code>/etc/certmaster/minion.conf</code> if that file is not found.</dd>
+<dt><code>-c</code> cafile</dt>
+<dd>Submit the request over HTTPS instead of HTTP, and only trust the server if its certificate was issued by the CA whose certificate is in the named file.</dd>
+<dt><code>-C</code> capath</dt>
+<dd>Submit the request over HTTPS instead of HTTP, and only trust the server if its certificate was issued by a CA whose certificate is in a file in the named directory. </dd>
 </dl>
 <h2>Exit Status</h2>
 <dl>
-<dt>0</p>
-<dd>if the certificate was issued. The certificate will be printed.</p>
-<dt>1</p>
-<dd>if the CA is still thinking. A cookie value will be printed.</p>
-<dt>2</p>
-<dd>if the CA rejected the request. An error message may be printed.</p>
-<dt>3</p>
-<dd>if the CA was unreachable. An error message may be printed.</p>
-<dt>4</p>
-<dd>if critical configuration information is missing. An error message may be printed. </p>
+<dt>0</dt>
+<dd>if the certificate was issued. The certificate will be printed.</dd>
+<dt>1</dt>
+<dd>if the CA is still thinking. A cookie value will be printed.</dd>
+<dt>2</dt>
+<dd>if the CA rejected the request. An error message may be printed.</dd>
+<dt>3</dt>
+<dd>if the CA was unreachable. An error message may be printed.</dd>
+<dt>4</dt>
+<dd>if critical configuration information is missing. An error message may be printed. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/run/certmaster.pid</i></p>
-<dd>the certmaster service&#8217;s PID file. Its presence is taken to indicate that this system is a CA, and that requests should be submitted to a certmaster server running on the local system.</p>
-<dt><i>/etc/certmaster/minion.conf</i></p>
-<dd>the certmaster minion configuration file. If there is no indication that the local system is a certmaster server, then this file is consulted to determine the location of the certmaster server. </p>
+<dt><i>/var/run/certmaster.pid</i></dt>
+<dd>the certmaster service&#8217;s PID file. Its presence is taken to indicate that this system is a CA, and that requests should be submitted to a certmaster server running on the local system.</dd>
+<dt><i>/etc/certmaster/minion.conf</i></dt>
+<dd>the certmaster minion configuration file. If there is no indication that the local system is a certmaster server, then this file is consulted to determine the location of the certmaster server. </dd>
 </dl>
 <h2>Known Bugs</h2>
 <p>Checking for the existence of certmaster&#8217;s PID file is a terrible way to figure out whether we&#8217;re a minion or not.</p>

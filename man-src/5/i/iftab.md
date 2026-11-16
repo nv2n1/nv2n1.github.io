@@ -24,58 +24,58 @@ description: "iftab – static information about the network interfaces"
 <p>Each descriptor is composed of a descriptor name and descriptor value. Descriptors specify a static attribute of a network interface, the goal is to uniquely identify each piece of hardware. </p>
 <p> Most users will only use the <code>mac</code> selector despite its potential problems, other selectors are for more specialised setup. Most selectors accept a &#8216;*&#8217; in the selector value for wilcard matching, and most selectors are case insensitive.</p>
 <dl>
-<dt><code>mac</code><i> mac address</i></p>
+<dt><code>mac</code><i> mac address</i></dt>
 <dd>Matches the MAC Address of the interface with the specified MAC address. The MAC address of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8) or <i><a href="/docs/linux/man/8-ip/">ip</a></i>(8).<br />
- This is the most common selector, as most interfaces have a unique MAC address allowing to identify network interfaces without ambiguity. However, some interfaces don&#8217;t have a valid MAC address until they are brought up, in such case using this selector is tricky or impossible.</p>
-<dt><code>arp</code><i> arp type</i></p>
+ This is the most common selector, as most interfaces have a unique MAC address allowing to identify network interfaces without ambiguity. However, some interfaces don&#8217;t have a valid MAC address until they are brought up, in such case using this selector is tricky or impossible.</dd>
+<dt><code>arp</code><i> arp type</i></dt>
 <dd>Matches the ARP Type (also called Link Type) of the interface with the specified ARP type as a number. The ARP Type of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8) or <i><a href="/docs/linux/man/8-ip/">ip</a></i>(8), the <code>link/ether</code> type correspond to <code>1</code> and the <code>link/ieee802.11</code> type correspond to <code>801</code>.<br />
- This selector is useful when a driver create multiple network interfaces for a single network card.</p>
-<dt><code>driver</code><i> driver name</i></p>
-<dd>Matches the Driver Name of the interface with the specified driver name. The Driver Name of the interface can be shown using <i>ethtool -i</i>(8).</p>
-<dt><code>businfo</code><i> bus information</i></p>
-<dd>Matches the Bus Information of the interface with the specified bus information. The Bus Information of the interface can be shown using <i>ethtool -i</i>(8).</p>
-<dt><code>firmware</code><i> firmware revision</i></p>
-<dd>Matches the Firmware Revision of the interface with the firmware revision information. The Firmware Revision of the interface can be shown using <i>ethtool -i</i>(8).</p>
-<dt><code>baseaddress</code><i> base address</i></p>
+ This selector is useful when a driver create multiple network interfaces for a single network card.</dd>
+<dt><code>driver</code><i> driver name</i></dt>
+<dd>Matches the Driver Name of the interface with the specified driver name. The Driver Name of the interface can be shown using <i>ethtool -i</i>(8).</dd>
+<dt><code>businfo</code><i> bus information</i></dt>
+<dd>Matches the Bus Information of the interface with the specified bus information. The Bus Information of the interface can be shown using <i>ethtool -i</i>(8).</dd>
+<dt><code>firmware</code><i> firmware revision</i></dt>
+<dd>Matches the Firmware Revision of the interface with the firmware revision information. The Firmware Revision of the interface can be shown using <i>ethtool -i</i>(8).</dd>
+<dt><code>baseaddress</code><i> base address</i></dt>
 <dd>Matches the Base Address of the interface with the specified base address. The Base Address of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8).<br />
- Because most cards use dynamic allocation of the Base Address, this selector is only useful for ISA and EISA cards.</p>
-<dt><code>irq</code><i> irq line</i></p>
+ Because most cards use dynamic allocation of the Base Address, this selector is only useful for ISA and EISA cards.</dd>
+<dt><code>irq</code><i> irq line</i></dt>
 <dd>Matches the IRQ Line (interrupt) of the interface with the specified IRQ line. The IRQ Line of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8).<br />
- Because there are IRQ Lines may be shared, this selector is usually not sufficient to uniquely identify an interface.</p>
-<dt><code>iwproto</code><i> wireless protocol</i></p>
+ Because there are IRQ Lines may be shared, this selector is usually not sufficient to uniquely identify an interface.</dd>
+<dt><code>iwproto</code><i> wireless protocol</i></dt>
 <dd>Matches the Wireless Protocol of the interface with the specified wireless protocol. The Wireless Protocol of the interface can be shown using <i><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></i>(8) or <i><a href="/docs/linux/man/8-iwgetid/">iwgetid</a></i>(8).<br />
- This selector is only supported on wireless interfaces and is not sufficient to uniquely identify an interface.</p>
-<dt><code>pcmciaslot</code><i> pcmcia slot</i></p>
+ This selector is only supported on wireless interfaces and is not sufficient to uniquely identify an interface.</dd>
+<dt><code>pcmciaslot</code><i> pcmcia slot</i></dt>
 <dd>Matches the Pcmcia Socket number of the interface with the specified slot number. Pcmcia Socket number of the interface can be shown using <i>cardctl <a href="/docs/linux/man/8-ident/">ident</a></i>(8).<br />
- This selector is usually only supported on 16 bits cards, for 32 bits cards it is advised to use the selector <code>businfo</code>.</p>
-<dt><code>prevname</code><i> previous interface name</i></p>
+ This selector is usually only supported on 16 bits cards, for 32 bits cards it is advised to use the selector <code>businfo</code>.</dd>
+<dt><code>prevname</code><i> previous interface name</i></dt>
 <dd>Matches the name of the interface prior to renaming with the specified oldname.<br />
- This selector should be avoided as the previous interface name may vary depending on various condition. A system/kernel/driver update may change the original name. Then, ifrename or another tool may rename it prior to the execution of this selector.</p>
-<dt><code>SYSFS{</code><i>filename</i><code>}</code><i> value</i></p>
+ This selector should be avoided as the previous interface name may vary depending on various condition. A system/kernel/driver update may change the original name. Then, ifrename or another tool may rename it prior to the execution of this selector.</dd>
+<dt><code>SYSFS{</code><i>filename</i><code>}</code><i> value</i></dt>
 <dd>Matches the content the sysfs attribute given by filename to the specified value. For symlinks and parents directories, match the actual directory name of the sysfs attribute given by filename to the specified value.<br />
- A list of the most useful sysfs attributes is given in the next section.</dl>
+ A list of the most useful sysfs attributes is given in the next section.</dd></dl>
 <h2>Sysfs Descriptors</h2>
 <p>Sysfs attributes for a specific interface are located on most systems in the directory named after that interface at <i>/sys/class/net/</i>. Most sysfs attribute are files, and their values can be read using <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1) or <i><a href="/docs/linux/man/1-more/">more</a></i>(1). It is also possible to match attributes in subdirectories. </p>
 <p> Some sysfs attributes are symlinks, pointing to another directory in sysfs. If the attribute filename is a symlink the sysfs attribute resolves to the name of the directory pointed by the symlink using <i><a href="/docs/linux/man/1-readlink/">readlink</a></i>(1). The location is a directory in the sysfs tree is also important. If the attribute filename ends with <i>/..</i>, the sysfs attribute resolves to the real name of the parent directory using <i><a href="/docs/linux/man/1-pwd/">pwd</a></i>(1). </p>
 <p> The sysfs filesystem is only supported with 2.6.X kernel and need to be mounted (usually in <i>/sys</i>). sysfs selectors are not as efficient as other selectors, therefore they should be avoided for maximum performance. </p>
 <p> These are common sysfs attributes and their corresponding ifrename descriptors.</p>
 <dl>
-<dt><code>SYSFS{address}</code><i> value</i></p>
-<dd>Same as the <code>mac</code> descriptor.</p>
-<dt><code>SYSFS{type}</code><i> value</i></p>
-<dd>Same as the <code>arp</code> descriptor.</p>
-<dt><code>SYSFS{device}</code><i> value</i></p>
-<dd>Valid only up to kernel 2.6.20. Same as the <code>businfo</code> descriptor.</p>
-<dt><code>SYSFS{..}</code><i> value</i></p>
-<dd>Valid only from kernel 2.6.21. Same as the <code>businfo</code> descriptor.</p>
-<dt><code>SYSFS{device/driver}</code><i> value</i></p>
-<dd>Valid only up to kernel 2.6.20. Same as the <code>driver</code> descriptor.</p>
-<dt><code>SYSFS{../driver}</code><i> value</i></p>
-<dd>Valid only from kernel 2.6.21. Same as the <code>driver</code> descriptor.</p>
-<dt><code>SYSFS{device/irq}</code><i> value</i></p>
-<dd>Valid only up to kernel 2.6.20. Same as the <code>irq</code> descriptor.</p>
-<dt><code>SYSFS{../irq}</code><i> value</i></p>
-<dd>Valid only from kernel 2.6.21. Same as the <code>irq</code> descriptor.</dl>
+<dt><code>SYSFS{address}</code><i> value</i></dt>
+<dd>Same as the <code>mac</code> descriptor.</dd>
+<dt><code>SYSFS{type}</code><i> value</i></dt>
+<dd>Same as the <code>arp</code> descriptor.</dd>
+<dt><code>SYSFS{device}</code><i> value</i></dt>
+<dd>Valid only up to kernel 2.6.20. Same as the <code>businfo</code> descriptor.</dd>
+<dt><code>SYSFS{..}</code><i> value</i></dt>
+<dd>Valid only from kernel 2.6.21. Same as the <code>businfo</code> descriptor.</dd>
+<dt><code>SYSFS{device/driver}</code><i> value</i></dt>
+<dd>Valid only up to kernel 2.6.20. Same as the <code>driver</code> descriptor.</dd>
+<dt><code>SYSFS{../driver}</code><i> value</i></dt>
+<dd>Valid only from kernel 2.6.21. Same as the <code>driver</code> descriptor.</dd>
+<dt><code>SYSFS{device/irq}</code><i> value</i></dt>
+<dd>Valid only up to kernel 2.6.20. Same as the <code>irq</code> descriptor.</dd>
+<dt><code>SYSFS{../irq}</code><i> value</i></dt>
+<dd>Valid only from kernel 2.6.21. Same as the <code>irq</code> descriptor.</dd></dl>
 <h2>Examples</h2>
 <p># This is a comment<br />
  eth2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mac 08:00:09:DE:82:0E</p>

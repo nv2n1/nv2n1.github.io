@@ -21,20 +21,20 @@ description: "mimedefang-notify – Conventions used by"
 <p> Two special messages are &quot;*OK&quot; followed by a newline, which is issued when a listener first connects, and &quot;*ERR&quot; followed by some text and a newline, which is issued when an error occurs. </p>
 <p> The normal messages are: </p>
 <dl>
-<dt><code>B</code></p>
-<dd>This message is issued whenever a slave is killed because of a busy timeout. </p>
-<dt><code>F</code> <i>n</i></p>
-<dd>This message is issued whenever the number of free slaves changes. The parameter <i>n</i> is the number of free slaves. </p>
-<dt><code>R</code></p>
-<dd>This message is issued whenever someone has forced a filter reread. </p>
-<dt><code>S</code> <i>n</i> <i>nmsg</i></p>
-<dd>This message is issued whenever slave <i>n</i>&#8216;s status tag changes. The status tag is a string indicating what the slave is currently doing; the <code>-Z</code> option to the multiplexor allows the Perl code to update the status tag so you have a good idea what each slave is doing. </p>
-<dt><code>U</code></p>
-<dd>This message is issued whenever a slave has died unexpectedly. </p>
-<dt><code>Y</code></p>
-<dd>This message is issued whenever the number of free slaves changes from zero to non-zero. </p>
-<dt><code>Z</code></p>
-<dd>This message is issued whenever the number of free slaves falls to zero. </p>
+<dt><code>B</code></dt>
+<dd>This message is issued whenever a slave is killed because of a busy timeout. </dd>
+<dt><code>F</code> <i>n</i></dt>
+<dd>This message is issued whenever the number of free slaves changes. The parameter <i>n</i> is the number of free slaves. </dd>
+<dt><code>R</code></dt>
+<dd>This message is issued whenever someone has forced a filter reread. </dd>
+<dt><code>S</code> <i>n</i> <i>nmsg</i></dt>
+<dd>This message is issued whenever slave <i>n</i>&#8216;s status tag changes. The status tag is a string indicating what the slave is currently doing; the <code>-Z</code> option to the multiplexor allows the Perl code to update the status tag so you have a good idea what each slave is doing. </dd>
+<dt><code>U</code></dt>
+<dd>This message is issued whenever a slave has died unexpectedly. </dd>
+<dt><code>Y</code></dt>
+<dd>This message is issued whenever the number of free slaves changes from zero to non-zero. </dd>
+<dt><code>Z</code></dt>
+<dd>This message is issued whenever the number of free slaves falls to zero. </dd>
 </dl>
 <h2>Expressing Interest</h2>
 <p>A listener does not receive any messages until it has <i>expressed interest</i> in various message types. To express interest, the listener should send a question mark (&quot;?&quot;) followed by the types of messages it is interested in, followed by a newline over the socket. For example, a listener interested in the R and F messages would send this line: </p>
@@ -51,27 +51,22 @@ description: "mimedefang-notify – Conventions used by"
 #/ sbin / iptables - N smtp_connect
 #/ sbin / iptables - A INPUT -- proto tcp -- dport 25 -- syn - j smtp_connect
 #Then run the script as root.
-
 use IO::Socket::INET;
-
 sub no_free_slaves
 {
     print STDERR &quot;No free slaves!
 &quot;;
     system(&quot;/sbin/iptables -A smtp_connect -j REJECT&quot;);
 }
-
 sub some_free_slaves
 {
     print STDERR &quot;Some free slaves.
 &quot;;
     system(&quot;/sbin/iptables -F smtp_connect&quot;);
 }
-
 sub main
 {
     my $sock;
-
     $sock = IO::Socket::INET-&gt;new (PeerAddr = &gt; '127.0.0.1',
                                    PeerPort = &gt; '4567',
                                    Proto = &gt; 'tcp');
@@ -87,11 +82,9 @@ sub main
             some_free_slaves();
         }
     }
-
 #EOF from multiplexor ? ? Better undo firewalling
     system(&quot;/sbin/iptables -F smtp_connect&quot;);
 }
-
 main();
 </code></pre>
 <h2>See Also</h2>

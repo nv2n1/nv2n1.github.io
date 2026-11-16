@@ -10,7 +10,6 @@ description: "pbs_ gpureset – reset GPU error counts"
 <p>pbs_ gpureset &#8211; reset GPU error counts</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_ gpureset(int connect, char&nbsp;<wbr>*mom_node, int gpu_id, int ecc_perm, int ecc_vol)</pre>
 <h2>Description</h2>

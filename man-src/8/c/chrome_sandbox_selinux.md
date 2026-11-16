@@ -127,20 +127,20 @@ description: "chrome_sandbox_selinux – Security Enhanced Linux Policy for the 
 <p> <code>chrome_sandbox_exec_t</code> </p>
 <p> &#8211; Set files with the chrome_sandbox_exec_t type, if you want to transition an executable to the chrome_sandbox_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/google/chrome[^/]*/chrome-sandbox, /usr/lib/chromium-browser/chrome-sandbox </p>
+<dt>Paths:</dt>
+<dd>/opt/google/chrome[^/]*/chrome-sandbox, /usr/lib/chromium-browser/chrome-sandbox </dd>
 </dl>
 <p> <code>chrome_sandbox_home_t</code> </p>
 <p> &#8211; Set files with the chrome_sandbox_home_t type, if you want to store chrome sandbox files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.cache/chromium(/.*)?, /home/[^/]+/.cache/google-chrome(/.*)?, /home/[^/]+/.cache/google-chrome-unstable(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.cache/chromium(/.*)?, /home/[^/]+/.cache/google-chrome(/.*)?, /home/[^/]+/.cache/google-chrome-unstable(/.*)? </dd>
 </dl>
 <p> <code>chrome_sandbox_nacl_exec_t</code> </p>
 <p> &#8211; Set files with the chrome_sandbox_nacl_exec_t type, if you want to transition an executable to the chrome_sandbox_nacl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/google/chrome[^/]*/nacl_helper_bootstrap, /opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </p>
+<dt>Paths:</dt>
+<dd>/opt/google/chrome[^/]*/nacl_helper_bootstrap, /opt/google/chrome/nacl_helper_bootstrap, /usr/lib/chromium-browser/nacl_helper_bootstrap </dd>
 </dl>
 <p> <code>chrome_sandbox_tmp_t</code> </p>
 <p> &#8211; Set files with the chrome_sandbox_tmp_t type, if you want to store chrome sandbox temporary files in the /tmp directories. </p>

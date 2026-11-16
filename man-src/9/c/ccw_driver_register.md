@@ -14,7 +14,7 @@ description: "ccw_driver_register – register a ccw driver"
 <p><i>cdriver</i></p>
 <dl>
 <dd>
-<dd>driver to be registered</dl>
+</dd><dd>driver to be registered</dd></dl>
 <h2>Description</h2>
 <p>This function is mainly a wrapper around <code>driver_register</code>.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ccw_driver_register – register a ccw driver"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -149,3 +149,4 @@ Value: There are several rules for writing values:<br />
 <h3>Example</h3>
 <pre><code>
 (0008, 0020) DA[19921012] #8, 1 StudyDate(0008, 0016) UI = MRImageStorage #26, 1 SOPClassUID(0002, 0012) UI[1.2.276.0.7230010.100.1.1](0020, 0032) DS[0.0
+</code></pre>

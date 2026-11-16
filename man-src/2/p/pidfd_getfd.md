@@ -23,20 +23,20 @@ int pidfd_getfd(int pidfd, int targetfd, unsigned int flags);
 <p> On success, <code>pidfd_getfd</code>() returns a file descriptor (a nonnegative integer). On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>pidfd</i> is not a valid PID file descriptor.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>targetfd</i> is not an open file descriptor in the process referred to by <i>pidfd</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> is not 0.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached (see the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process did not have <code>PTRACE_MODE_ATTACH_REALCREDS</code> permissions (see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)) over the process referred to by <i>pidfd</i>.</p>
-<dt><code>ESRCH</code></p>
-<dd> The process referred to by <i>pidfd</i> does not exist (i.e., it has terminated and been waited on).</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>pidfd</i> is not a valid PID file descriptor.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>targetfd</i> is not an open file descriptor in the process referred to by <i>pidfd</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> is not 0.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached (see the description of <code>RLIMIT_NOFILE</code> in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process did not have <code>PTRACE_MODE_ATTACH_REALCREDS</code> permissions (see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)) over the process referred to by <i>pidfd</i>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The process referred to by <i>pidfd</i> does not exist (i.e., it has terminated and been waited on).</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pidfd_getfd</code>() first appeared in Linux 5.6.</p>
 <h2>CONFORMING TO</h2>
@@ -46,12 +46,12 @@ int pidfd_getfd(int pidfd, int targetfd, unsigned int flags);
 <p> For a description of PID file descriptors, see <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2). </p>
 <p> The effect of <code>pidfd_getfd</code>() is similar to the use of <code>SCM_RIGHTS</code> messages described in <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7), but differs in the following respects:</p>
 <dl>
-<dt>&bull;</p>
-<dd> In order to pass a file descriptor using an <code>SCM_RIGHTS</code> message, the two processes must first establish a UNIX domain socket connection.</p>
-<dt>&bull;</p>
-<dd> The use of <code>SCM_RIGHTS</code> requires cooperation on the part of the process whose file descriptor is being copied. By contrast, no such cooperation is necessary when using <code>pidfd_getfd</code>().</p>
-<dt>&bull;</p>
-<dd> The ability to use <code>pidfd_getfd</code>() is restricted by a <code>PTRACE_MODE_ATTACH_REALCREDS</code> ptrace access mode check.</dl>
+<dt>&bull;</dt>
+<dd> In order to pass a file descriptor using an <code>SCM_RIGHTS</code> message, the two processes must first establish a UNIX domain socket connection.</dd>
+<dt>&bull;</dt>
+<dd> The use of <code>SCM_RIGHTS</code> requires cooperation on the part of the process whose file descriptor is being copied. By contrast, no such cooperation is necessary when using <code>pidfd_getfd</code>().</dd>
+<dt>&bull;</dt>
+<dd> The ability to use <code>pidfd_getfd</code>() is restricted by a <code>PTRACE_MODE_ATTACH_REALCREDS</code> ptrace access mode check.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-clone3/">clone3</a></code>(2), <code><a href="/docs/linux/man/2-dup/">dup</a></code>(2), <code><a href="/docs/linux/man/2-kcmp/">kcmp</a></code>(2), <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2)</p>
 <h2>COLOPHON</h2>

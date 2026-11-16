@@ -19,44 +19,44 @@ description: "opt – LLVM optimizer"
 <p> If an output filename is not specified with the <code>-o</code> option, <code>opt</code> writes its output to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Enable binary output on terminals. Normally, <code>opt</code> will refuse to write raw bitcode output if the output stream is a terminal. With this option, <code>opt</code> will write raw bitcode regardless of the output device.</p>
-<dt><code>-help</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>-o</code> <i>filename</i></p>
-<dd> Specify the output filename.</p>
-<dt><code>-S</code></p>
-<dd> Write output in <font SIZE="-1">LLVM</font> intermediate language (instead of bitcode).</p>
-<dt><code>-{passname}</code></p>
-<dd> <code>opt</code> provides the ability to run any of <font SIZE="-1">LLVM</font>&#8216;s optimization or analysis passes in any order. The <code>-help</code> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</p>
-<dt><code>-std-compile-opts</code></p>
-<dd> This is short hand for a standard list of <i>compile time optimization</i> passes. This is typically used to optimize the output from the llvm-gcc front end. It might be useful for other front end compilers as well. To discover the full set of options available, use the following command: </p>
+<dt><code>-f</code></dt>
+<dd> Enable binary output on terminals. Normally, <code>opt</code> will refuse to write raw bitcode output if the output stream is a terminal. With this option, <code>opt</code> will write raw bitcode regardless of the output device.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>-o</code> <i>filename</i></dt>
+<dd> Specify the output filename.</dd>
+<dt><code>-S</code></dt>
+<dd> Write output in <font SIZE="-1">LLVM</font> intermediate language (instead of bitcode).</dd>
+<dt><code>-{passname}</code></dt>
+<dd> <code>opt</code> provides the ability to run any of <font SIZE="-1">LLVM</font>&#8216;s optimization or analysis passes in any order. The <code>-help</code> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</dd>
+<dt><code>-std-compile-opts</code></dt>
+<dd> This is short hand for a standard list of <i>compile time optimization</i> passes. This is typically used to optimize the output from the llvm-gcc front end. It might be useful for other front end compilers as well. To discover the full set of options available, use the following command: </dd>
 <pre>
    llvm-as &lt; /dev/null | opt -std-compile-opts -disable-output -debug-pass=Arguments
 </pre>
-<dt><code>-disable-inlining</code></p>
-<dd> This option is only meaningful when <code>-std-compile-opts</code> is given. It simply removes the inlining pass from the standard list.</p>
-<dt><code>-disable-opt</code></p>
-<dd> This option is only meaningful when <code>-std-compile-opts</code> is given. It disables most, but not all, of the <code>-std-compile-opts</code>. The ones that remain are <code>-verify</code>, <code>-lower-setjmp</code>, and <code>-funcresolve</code>.</p>
-<dt><code>-strip-debug</code></p>
-<dd> This option causes opt to strip debug information from the module before applying other optimizations. It is essentially the same as <code>-strip</code> but it ensures that stripping of debug information is done first.</p>
-<dt><code>-verify-each</code></p>
-<dd> This option causes opt to add a verify pass after every pass otherwise specified on the command line (including <code>-verify</code>). This is useful for cases where it is suspected that a pass is creating an invalid module but it is not clear which pass is doing it. The combination of <code>-std-compile-opts</code> and <code>-verify-each</code> can quickly track down this kind of problem.</p>
-<dt><code>-profile-info-file</code> <i>filename</i></p>
-<dd> Specify the name of the file loaded by the -profile-loader option.</p>
-<dt><code>-stats</code></p>
-<dd> Print statistics.</p>
-<dt><code>-time-passes</code></p>
-<dd> Record the amount of time needed for each pass and print it to standard error.</p>
-<dt><code>-debug</code></p>
-<dd> If this is a debug build, this option will enable debug printouts from passes which use the <i></i><font SIZE="-1"><i>DEBUG</i></font><i>()</i> macro. See the <font SIZE="-1"><code>LLVM</code></font><code> Programmer&#8217;s Manual</code>, section <i>#DEBUG</i> for more information.</p>
-<dt><code>-load</code>=<i>plugin</i></p>
-<dd> Load the dynamic object <i>plugin</i>. This object should register new optimization or analysis passes. Once loaded, the object will add new command line options to enable various optimizations or analyses. To see the new complete list of optimizations, use the <code>-help</code> and <code>-load</code> options together. For example: </p>
+<dt><code>-disable-inlining</code></dt>
+<dd> This option is only meaningful when <code>-std-compile-opts</code> is given. It simply removes the inlining pass from the standard list.</dd>
+<dt><code>-disable-opt</code></dt>
+<dd> This option is only meaningful when <code>-std-compile-opts</code> is given. It disables most, but not all, of the <code>-std-compile-opts</code>. The ones that remain are <code>-verify</code>, <code>-lower-setjmp</code>, and <code>-funcresolve</code>.</dd>
+<dt><code>-strip-debug</code></dt>
+<dd> This option causes opt to strip debug information from the module before applying other optimizations. It is essentially the same as <code>-strip</code> but it ensures that stripping of debug information is done first.</dd>
+<dt><code>-verify-each</code></dt>
+<dd> This option causes opt to add a verify pass after every pass otherwise specified on the command line (including <code>-verify</code>). This is useful for cases where it is suspected that a pass is creating an invalid module but it is not clear which pass is doing it. The combination of <code>-std-compile-opts</code> and <code>-verify-each</code> can quickly track down this kind of problem.</dd>
+<dt><code>-profile-info-file</code> <i>filename</i></dt>
+<dd> Specify the name of the file loaded by the -profile-loader option.</dd>
+<dt><code>-stats</code></dt>
+<dd> Print statistics.</dd>
+<dt><code>-time-passes</code></dt>
+<dd> Record the amount of time needed for each pass and print it to standard error.</dd>
+<dt><code>-debug</code></dt>
+<dd> If this is a debug build, this option will enable debug printouts from passes which use the <i></i><font SIZE="-1"><i>DEBUG</i></font><i>()</i> macro. See the <font SIZE="-1"><code>LLVM</code></font><code> Programmer&#8217;s Manual</code>, section <i>#DEBUG</i> for more information.</dd>
+<dt><code>-load</code>=<i>plugin</i></dt>
+<dd> Load the dynamic object <i>plugin</i>. This object should register new optimization or analysis passes. Once loaded, the object will add new command line options to enable various optimizations or analyses. To see the new complete list of optimizations, use the <code>-help</code> and <code>-load</code> options together. For example: </dd>
 <pre>
    opt -load=plugin.so -help
 </pre>
-<dt><code>-p</code></p>
-<dd> Print module after each transformation.</dl>
+<dt><code>-p</code></dt>
+<dd> Print module after each transformation.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If <code>opt</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>

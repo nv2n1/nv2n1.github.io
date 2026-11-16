@@ -91,22 +91,22 @@ description: "netlogond_selinux – Security Enhanced Linux Policy for the netlo
 <p> <code>netlogond_exec_t</code> </p>
 <p> &#8211; Set files with the netlogond_exec_t type, if you want to transition an executable to the netlogond_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/netlogond, /opt/likewise/sbin/netlogond </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/netlogond, /opt/likewise/sbin/netlogond </dd>
 </dl>
 <p> <code>netlogond_var_lib_t</code> </p>
 <p> &#8211; Set files with the netlogond_var_lib_t type, if you want to store the netlogond files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/LWNetsd.err, /var/lib/likewise-open/LWNetsd.err, /var/lib/likewise/krb5-affinity.conf, /var/lib/likewise-open/krb5-affinity.conf </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/LWNetsd.err, /var/lib/likewise-open/LWNetsd.err, /var/lib/likewise/krb5-affinity.conf, /var/lib/likewise-open/krb5-affinity.conf </dd>
 </dl>
 <p> <code>netlogond_var_run_t</code> </p>
 <p> &#8211; Set files with the netlogond_var_run_t type, if you want to store the netlogond files under the /run or /var/run directory. </p>
 <p> <code>netlogond_var_socket_t</code> </p>
 <p> &#8211; Set files with the netlogond_var_socket_t type, if you want to treat the files as netlogond var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.netlogond, /var/lib/likewise-open/.netlogond </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.netlogond, /var/lib/likewise-open/.netlogond </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -10,10 +10,8 @@ description: "std::allocator_traits – std::allocator_traits"
 <p>std::allocator_traits &#8211; std::allocator_traits</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class Alloc&gt;
     (since C++ 11)
-
         struct allocator_traits;</code></pre>
 <p>The allocator_traits class template provides the standardized way to access various properties of Allocators. The standard containers and other standard library components access allocators through this template, which makes it possible to use any class type as an allocator, as long as the user-provided specialization of allocator_traits implements all required functionality.<br />
 The default, non-specialized, allocator_traits contains the following members: </p>

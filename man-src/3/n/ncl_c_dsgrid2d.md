@@ -12,23 +12,23 @@ c_dsgrid2d - primary double precision C entry for 2D gridding
  int, int, double [], double [], int *);</pre><h2>Synopsis</h2><pre>double *c_dsgrid2d(int n, double x[], double y[], double z[],
 <br>
  int nx, int ny, double xo[], double yo[], int *ier)</pre><h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data points.
-<dt>x
-<dd>An array containing the X coordinates of the input data points.
-<dt>y
-<dd>An array containing the Y coordinates of the input data points.
-<dt>z
-<dd>An array of size n containing the functional values of the input data points. That is, z[m] is the value of the input function at coordinate (x[m],y[m]), for 0 &lt;= m &lt; n.
-<dt>nx
-<dd>The number of X values in the output grid.
-<dt>ny
-<dd>The number of Y values in the output grid.
-<dt>xo
-<dd>An array of size nx containing the X coordinates of the output data grid. The values in xo must be increasing, but need not be equally spaced.
-<dt>yo
-<dd>An array of size ny containing the Y coordinates of the output data grid. The values in yo must be increasing, but need not be equally spaced.
-<dt>ier
-<dd>An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the man page for dsgrid_errors.</dl><h2>Usage</h2>c_dsgrid2d returns a pointer to a linear array of data that is the interpolated grid stored in row-major order. That is, if out is declared as 
+</dt><dd>The number of input data points.
+</dd><dt>x
+</dt><dd>An array containing the X coordinates of the input data points.
+</dd><dt>y
+</dt><dd>An array containing the Y coordinates of the input data points.
+</dd><dt>z
+</dt><dd>An array of size n containing the functional values of the input data points. That is, z[m] is the value of the input function at coordinate (x[m],y[m]), for 0 &lt;= m &lt; n.
+</dd><dt>nx
+</dt><dd>The number of X values in the output grid.
+</dd><dt>ny
+</dt><dd>The number of Y values in the output grid.
+</dd><dt>xo
+</dt><dd>An array of size nx containing the X coordinates of the output data grid. The values in xo must be increasing, but need not be equally spaced.
+</dd><dt>yo
+</dt><dd>An array of size ny containing the Y coordinates of the output data grid. The values in yo must be increasing, but need not be equally spaced.
+</dd><dt>ier
+</dt><dd>An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the man page for dsgrid_errors.</dd></dl><h2>Usage</h2>c_dsgrid2d returns a pointer to a linear array of data that is the interpolated grid stored in row-major order. That is, if out is declared as 
 
  double *out; 
 

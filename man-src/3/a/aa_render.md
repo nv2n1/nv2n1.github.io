@@ -22,18 +22,18 @@ description: "aa_render – convert image buffer to ASCII-art."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>const aa_renderparams *p</code></p>
-<dd> Rendering parametters used to specify brightness, gamma correction and other usefull stuff. Use aa_defrenderparams for default values.</p>
-<dt><code>int x1</code></p>
-<dd> Column of top left coner of rendered area (in characters!).</p>
-<dt><code>int y1</code></p>
-<dd> Row of top left coner of rendered area.</p>
-<dt><code>int x2</code></p>
-<dd> Column of bottom right coner of rendered area.</p>
-<dt><code>int y2</code></p>
-<dd> Row of bottom right coner of rendered area.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>const aa_renderparams *p</code></dt>
+<dd> Rendering parametters used to specify brightness, gamma correction and other usefull stuff. Use aa_defrenderparams for default values.</dd>
+<dt><code>int x1</code></dt>
+<dd> Column of top left coner of rendered area (in characters!).</dd>
+<dt><code>int y1</code></dt>
+<dd> Row of top left coner of rendered area.</dd>
+<dt><code>int x2</code></dt>
+<dd> Column of bottom right coner of rendered area.</dd>
+<dt><code>int y2</code></dt>
+<dd> Row of bottom right coner of rendered area.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function does the trick of converting the emulated framebuffer into high quality ASCII-art. If you want to be really fast, you might use aa_fastrender. If you want to emulate palette, use aa_renderpalette. </p>
 <p> Note that to see the effect you need to call aa_flush too. </p>

@@ -19,64 +19,64 @@ description: "fedup – Fedora Upgrade tool"
 <h3>Optional arguments</h3>
 <p><code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Show a help message and exit.</dl>
+<dd>Show a help message and exit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Print more info.</dl>
+<dd>Print more info.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;debug</code></p>
 <dl>
-<dd>Print lots of debugging info.</dl>
+<dd>Print lots of debugging info.</dd></dl>
 <p> <code>&#8211;debuglog</code> <i>DEBUGLOG</i></p>
 <dl>
-<dd>Write debugging output to the given file. Defaults to <i>/var/log/fedup.log</i>.</dl>
+<dd>Write debugging output to the given file. Defaults to <i>/var/log/fedup.log</i>.</dd></dl>
 <p> <code>&#8211;reboot</code></p>
 <dl>
-<dd>Automatically reboot to start the upgrade when ready.</dl>
+<dd>Automatically reboot to start the upgrade when ready.</dd></dl>
 <h3>Source</h3>
 <p>These options tell <code>fedup</code> where to look for the packages and boot images needed to run the upgrade. At least one of these options is required. </p>
 <p> <code>&#8211;device</code> [<i>DEV</i>]</p>
 <dl>
-<dd>Device or mountpoint of mounted install media. If <i>DEV</i> is omitted, <code>fedup</code> will scan all currently-mounted removable devices (USB disks, optical media, etc.) </p>
+<dd>Device or mountpoint of mounted install media. If <i>DEV</i> is omitted, <code>fedup</code> will scan all currently-mounted removable devices (USB disks, optical media, etc.) </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- Fedora Live images cannot be used as install media! </p>
+ Fedora Live images cannot be used as install media! </dd>
 </dl>
 </dl>
 <p> <code>&#8211;iso</code> <i>ISO</i></p>
 <dl>
-<dd>Installation image file.</dl>
+<dd>Installation image file.</dd></dl>
 <p> <code>&#8211;network</code> <i>VERSION</i></p>
 <dl>
-<dd>Online repos matching <i>VERSION</i> (a number or &quot;rawhide&quot;)</dl>
+<dd>Online repos matching <i>VERSION</i> (a number or &quot;rawhide&quot;)</dd></dl>
 <p> Multiple sources may be used, if desired.</p>
 <h3>Additional options for &#8211;network</h3>
 <p><code>&#8211;enablerepo</code> <i>REPOID</i></p>
 <dl>
-<dd>Enable one or more repos (wildcards allowed).</dl>
+<dd>Enable one or more repos (wildcards allowed).</dd></dl>
 <p> <code>&#8211;disablerepo</code> <i>REPOID</i></p>
 <dl>
-<dd>Disable one or more repos (wildcards allowed).</dl>
+<dd>Disable one or more repos (wildcards allowed).</dd></dl>
 <p> <code>&#8211;addrepo</code> <i>REPOID=[@]URL</i></p>
 <dl>
-<dd>Add the repo at <i>URL</i>. Prefix URL with <i>@</i> to indicate that the URL is a mirrorlist.</dl>
+<dd>Add the repo at <i>URL</i>. Prefix URL with <i>@</i> to indicate that the URL is a mirrorlist.</dd></dl>
 <p> <code>&#8211;instrepo</code> <i>REPOID</i></p>
 <dl>
-<dd>Get upgrader boot images from the repo named <i>REPOID</i>. The repo must contain a valid <i>.treeinfo</i> file which points to the location of usable <i>kernel</i> and <i>upgrade</i> images. </p>
+<dd>Get upgrader boot images from the repo named <i>REPOID</i>. The repo must contain a valid <i>.treeinfo</i> file which points to the location of usable <i>kernel</i> and <i>upgrade</i> images. </dd>
 <p> By default, <code>fedup</code> will ask <a rel="nofollow" href="https://mirrors.fedoraproject.org/">https://mirrors.fedoraproject.org/</a> for the installable tree for the given <code>&#8211;network</code><i>VERSION</i>. The actual filename requested is: </p>
 <p> /metalink?repo=fedora-install-<i>$releasever</i>&amp;arch=<i>$basearch</i> </p>
 <p> where <i>$basearch</i> is the system&#8217;s arch (<i>i386</i>, <i>x86_64</i>, etc.) and <i>$releasever</i> is the <i>VERSION</i> given with the <code>&#8211;network</code> option. </p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- You should only need to use this option if you&#8217;re testing <code>fedup</code> before the release is public. </p>
+ You should only need to use this option if you&#8217;re testing <code>fedup</code> before the release is public. </dd>
 </dl>
 </dl>
 <h3>Cleanup commands</h3>
 <p><code>&#8211;resetbootloader</code></p>
 <dl>
-<dd>Remove any modifications made to bootloader configuration.</dl>
+<dd>Remove any modifications made to bootloader configuration.</dd></dl>
 <p> <code>&#8211;clean</code></p>
 <dl>
-<dd>Clean up everything written by <code>fedup</code>.</dl>
+<dd>Clean up everything written by <code>fedup</code>.</dd></dl>
 <h2>Examples</h2>
 <p><code>fedup &#8211;network 18</code> </p>
 <p> Upgrade to Fedora 18 by downloading all needed packages and data from the Fedora mirror system. </p>
@@ -85,16 +85,16 @@ description: "fedup – Fedora Upgrade tool"
 <h2>Exit Status</h2>
 <p>0</p>
 <dl>
-<dd>Success.</dl>
+<dd>Success.</dd></dl>
 <p> 1</p>
 <dl>
-<dd>Cancelled by user, failure writing files to disk, or other unknown error</dl>
+<dd>Cancelled by user, failure writing files to disk, or other unknown error</dd></dl>
 <p> 2</p>
 <dl>
-<dd>Failed to download/copy files from the given <i>SOURCE</i></dl>
+<dd>Failed to download/copy files from the given <i>SOURCE</i></dd></dl>
 <p> 3</p>
 <dl>
-<dd>RPM upgrade transaction test failed</dl>
+<dd>RPM upgrade transaction test failed</dd></dl>
 <h2>Bugs</h2>
 <p>The <code>&#8211;iso</code> image must be on a filesystem listed in <i>/etc/fstab</i>.</p>
 <h2>Authors</h2>

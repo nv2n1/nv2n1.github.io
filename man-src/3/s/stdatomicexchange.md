@@ -11,7 +11,6 @@ std::atomic&lt;T&gt;::exchange - std::atomic&lt;T&gt;::exchange
 <h2>Synopsis</h2>
 
 <pre><code>T exchange( T desired, std::memory_order order = std::memory_order_seq_cst ) noexcept;           (since C++11)
-
 T exchange( T desired, std::memory_order order = std::memory_order_seq_cst ) volatile noexcept;</code></pre> 
 Atomically replaces the underlying value with desired. The operation is read-modify-write operation. Memory is affected according to the value of order. 
 

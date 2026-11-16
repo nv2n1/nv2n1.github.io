@@ -34,17 +34,17 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <p> In the event of an error, these functions <i>errno</i> set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>ESRCH</code></p>
-<dd> Record not found.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> Record not found.</dd></dl>
 <p> <code>setutent</code>(), <code>pututline</code>(), and the <code>getut*</code>() functions can also fail for the reasons described in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/run/utmp</i></p>
-<dd> database of currently logged-in users</p>
-<dt><i>/var/log/wtmp</i></p>
-<dd> database of past user logins</dl>
+<dt><i>/var/run/utmp</i></dt>
+<dd> database of currently logged-in users</dd>
+<dt><i>/var/log/wtmp</i></dt>
+<dd> database of past user logins</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>
@@ -92,7 +92,7 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <p> All these functions are obsolete now on non-Linux systems. POSIX.1-2001 and POSIX.1-2008, following SUSv1, does not have any of these functions, but instead uses </p>
 <dl>
 <dt>
-<dd> <code>#include &lt;utmpx.h&gt;</code> </p>
+</dt><dd> <code>#include &lt;utmpx.h&gt;</code> </dd>
 <p> <code>struct utmpx *getutxent(void);</code> <code>struct utmpx *getutxid(const struct utmpx *);</code> <code>struct utmpx *getutxline(const struct utmpx *);</code> <code>struct utmpx *pututxline(const struct utmpx *);</code> <code>void setutxent(void);</code> <code>void endutxent(void);</code></dl>
 <p> These functions are provided by glibc, and perform the same task as their equivalents without the &quot;x&quot;, but use <i>struct utmpx</i>, defined on Linux to be the same as <i>struct utmp</i>. For completeness, glibc also provides <code>utmpxname</code>(), although this function is not specified by POSIX.1. </p>
 <p> On some other systems, the <i>utmpx</i> structure is a superset of the <i>utmp</i> structure, with additional fields, and larger versions of the existing fields, and parallel files are maintained, often <i>/var/*/utmpx</i> and <i>/var/*/wtmpx</i>. </p>
@@ -147,3 +147,4 @@ _GNU_SOURCE
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
+</p>

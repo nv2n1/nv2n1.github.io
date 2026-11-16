@@ -14,16 +14,16 @@ description: "gnutls_x509_privkey_import2 – API function"
 <p> <code>int gnutls_x509_privkey_import2(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> The structure to store the parsed key</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> The DER or PEM encoded key.</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> One of DER or PEM</p>
-<dt>const char * password</p>
-<dd> A password (optional)</p>
-<dt>unsigned int flags</p>
-<dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dl>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> The structure to store the parsed key</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The DER or PEM encoded key.</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> One of DER or PEM</dd>
+<dt>const char * password</dt>
+<dd> A password (optional)</dd>
+<dt>unsigned int flags</dt>
+<dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will import the given DER or PEM encoded key, to the native <code>gnutls_x509_privkey_t</code> format, irrespective of the input format. The input format is auto-detected. </p>
 <p> The supported formats are basic unencrypted key, PKCS8, PKCS12, and the openssl format. </p>
@@ -39,6 +39,6 @@ description: "gnutls_x509_privkey_import2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

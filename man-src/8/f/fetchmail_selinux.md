@@ -96,8 +96,8 @@ description: "fetchmail_selinux – Security Enhanced Linux Policy for the fetch
 <p> <code>fetchmail_home_t</code> </p>
 <p> &#8211; Set files with the fetchmail_home_t type, if you want to store fetchmail files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.fetchmailrc, /home/[^/]+/.fetchmailrc </p>
+<dt>Paths:</dt>
+<dd>/root/.fetchmailrc, /home/[^/]+/.fetchmailrc </dd>
 </dl>
 <p> <code>fetchmail_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the fetchmail_initrc_exec_t type, if you want to transition an executable to the fetchmail_initrc_t domain. </p>
@@ -106,8 +106,8 @@ description: "fetchmail_selinux – Security Enhanced Linux Policy for the fetch
 <p> <code>fetchmail_uidl_cache_t</code> </p>
 <p> &#8211; Set files with the fetchmail_uidl_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/fetchmail(/.*)?, /var/mail/.fetchmail-UIDL-cache </p>
+<dt>Paths:</dt>
+<dd>/var/lib/fetchmail(/.*)?, /var/mail/.fetchmail-UIDL-cache </dd>
 </dl>
 <p> <code>fetchmail_var_run_t</code> </p>
 <p> &#8211; Set files with the fetchmail_var_run_t type, if you want to store the fetchmail files under the /run or /var/run directory. </p>

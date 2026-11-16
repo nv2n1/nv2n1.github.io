@@ -19,51 +19,51 @@ description: "afInitFileFormat – initialize file format of an audio file setup
 <p> The following file formats are currently supported: </p>
 <p> AF_FILE_RAWDATA</p>
 <dl COMPACT>
-<dd>raw audio data</dl>
+<dd>raw audio data</dd></dl>
 <p> AF_FILE_AIFF</p>
 <dl COMPACT>
-<dd>Audio Interchange File Format</dl>
+<dd>Audio Interchange File Format</dd></dl>
 <p> AF_FILE_AIFFC</p>
 <dl COMPACT>
-<dd>Audio Interchange File Format AIFF-C</dl>
+<dd>Audio Interchange File Format AIFF-C</dd></dl>
 <p> AF_FILE_NEXTSND</p>
 <dl COMPACT>
-<dd>NeXT .snd/Sun .au</dl>
+<dd>NeXT .snd/Sun .au</dd></dl>
 <p> AF_FILE_WAVE</p>
 <dl COMPACT>
-<dd>Microsoft RIFF WAVE</dl>
+<dd>Microsoft RIFF WAVE</dd></dl>
 <p> AF_FILE_BICSF</p>
 <dl COMPACT>
-<dd>Berkeley/IRCAM/CARL Sound File</dl>
+<dd>Berkeley/IRCAM/CARL Sound File</dd></dl>
 <p> AF_FILE_AVR</p>
 <dl COMPACT>
-<dd>Audio Visual Research</dl>
+<dd>Audio Visual Research</dd></dl>
 <p> AF_FILE_IFF_8SVX</p>
 <dl COMPACT>
-<dd>Amiga IFF/8SVX</dl>
+<dd>Amiga IFF/8SVX</dd></dl>
 <p> AF_FILE_SAMPLEVISION</p>
 <dl COMPACT>
-<dd>Sample Vision</dl>
+<dd>Sample Vision</dd></dl>
 <p> AF_FILE_VOC</p>
 <dl COMPACT>
-<dd>Creative Voice File</dl>
+<dd>Creative Voice File</dd></dl>
 <p> AF_FILE_NIST_SPHERE</p>
 <dl COMPACT>
-<dd>NIST SPHERE</dl>
+<dd>NIST SPHERE</dd></dl>
 <p> AF_FILE_CAF</p>
 <dl COMPACT>
-<dd>Core Audio Format</dl>
+<dd>Core Audio Format</dd></dl>
 <h2>Errors</h2>
 <p>afInitFileFormat can produce the following errors: </p>
 <p> AF_BAD_FILESETUP</p>
 <dl COMPACT>
-<dd>setup represents an invalid file setup.</dl>
+<dd>setup represents an invalid file setup.</dd></dl>
 <p> AF_BAD_FILEFMT</p>
 <dl COMPACT>
-<dd>fileFormat represents an unknown file format.</dl>
+<dd>fileFormat represents an unknown file format.</dd></dl>
 <p> AF_BAD_NOT_IMPLEMENTED</p>
 <dl COMPACT>
-<dd>fileFormat represents a file format which is not currently implemented.</dl>
+<dd>fileFormat represents a file format which is not currently implemented.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3)</p>
 <h2>Author</h2>

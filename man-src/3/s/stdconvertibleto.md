@@ -11,22 +11,15 @@ std::ConvertibleTo - std::ConvertibleTo
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt;class From, class To&gt;
-
 concept ConvertibleTo =
-
 std::is_convertible_v&lt;From, To&gt; &amp;&amp;  (since C++20)
-
 requires(From (&amp;f)()) {
-
     static_cast&lt;To&gt;(f());
-
 };</code></pre> 
 The concept ConvertibleTo&lt;From, To&gt; specifies that an expression of the type and value category specified by From can be implicitly and explicitly converted to the type To, and the two forms of conversion are equivalent. 
 Specifically, ConvertibleTo&lt;From, To&gt; is satisfied only if, given a function fun of type From () such that the expression fun() is equality-preserving (see below), 
 * Either <pre><code>o To is neither an object type nor a reference - to - object type, or
-
                                                                        o static_cast&lt;To&gt;(fun()) is equal to[]()-&gt;To
 {
     return fun();

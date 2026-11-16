@@ -37,19 +37,13 @@ Scanport SQ4836 SCSI
 Scanpaq SQ2030 Parport</pre>
 <p>Additional information can be found at <i><a rel="nofollow" href="http://www.sane-project.org/">http://www.sane-project.org/</a></i>. If you own a Microtek scanner other than the ones listed above, it may or may not work with SANE! Because equal scanners are sold under different names in different countries your model may be equivalent to one of the above. The parport scanners work with the ppscsi + onscsi kernel modules. See <i><a rel="nofollow" href="http://cyberelk.net/tim/parport/ppscsi.html">http://cyberelk.net/tim/parport/ppscsi.html</a></i> and <i><a rel="nofollow" href="http://penguin-breeder.org/kernel/download/">http://penguin-breeder.org/kernel/download/</a></i>. The USB scanners work with the microtek kernel module. You may have to add the vendor and model codes to microtek.c if they aren&#8217;t yet listed there. Both parport and USB scanners need the generic SCSI support, so check if you have loaded the scsi_mod and sg modules! If you try your scanner for the first time keep an eye on it. If it gets commands that it doesn&#8217;t understand the scanhead may go beyond the scan area. The scanner then makes strange noises. In this case immediately switch off the scanner or disconnect its power cable to prevent damages! If your scanner is a different one than the models mentioned above and it is working please tell the author about it. It would be nice if you add a logfile to this information (creation of the logfile: see below). If your scanner is not working properly you also should create a logfile and send it to the author. He will use the information to improve the backend and possibly make your scanner work. </p>
 <pre><code>How to create the logfile?
-
 - put the line
-
 &quot;option dump 2&quot; into your
 microtek2.conf
-
 file or change the existing &quot;option dump&quot; to &quot;2&quot;
 - in a terminal (bash) type
-
 &quot;export SANE_DEBUG_MICROTEK2=30&quot; and then
-
 &quot;scanimage -l0 -t0 -x100 -y20 2&gt;scan.log &gt;sout.pnm&quot;
-
 You get two files: scan.log contains the logfile and sout.pnm the scanned
 image (if there was scanned something). Zip them before sending.
 </code></pre>
@@ -63,7 +57,7 @@ image (if there was scanned something). Zip them before sending.
 <h2>Device Names</h2>
 <p>This backend expects device names of the form: </p>
 <dl>
-<dd><i>special</i></dl>
+<dd><i>special</i></dd></dl>
 <p> Where <i>special</i> is the UNIX path-name for the special device that corresponds to the scanner. The special device name must be a generic SCSI device or a symlink to such a device. Under Linux, such a device name could be <i>/dev/sga</i> or <i>/dev/sge</i> for example.</p>
 <h2>Configuration</h2>
 <p>The configuration file for this backend resides in <i>/etc/sane.d/microtek2.conf</i>. </p>
@@ -77,7 +71,7 @@ image (if there was scanned something). Zip them before sending.
  option toggle-lamp &lt;on/off&gt;<br />
  option lineart-autoadjust &lt;on/off&gt;<br />
  option backend-calibration &lt;on/off&gt;<br />
- option colorbalance-adjust &lt;on/off&gt;</dl>
+ option colorbalance-adjust &lt;on/off&gt;</dd></dl>
 <p> <i>option dump &lt;n&gt;</i> enables printing of additional information about the SCSI commands that are sent to the scanner to stderr. This option is primarily useful for debugging purpose. This option has to be a global option and is best placed at the top of the <i>microtek2.conf</i> file. </p>
 <p> If n=1 the contents of the command blocks and the results for the INQUIRY and READ SCANNER ATTRIBUTES command are printed to stderr. </p>
 <p> If n=2 the contents of the command blocks for all other SCSI commands are printed to stderr, too. If n=3 the contents of the gamma table is printed, too. If n=4 all scan data is additionally printed to stderr. </p>
@@ -99,7 +93,7 @@ image (if there was scanned something). Zip them before sending.
  option no-backtrack-option on<br />
  # this is a comment<br />
  /dev/sge<br />
- option lightlid-35 on</dl>
+ option lightlid-35 on</dd></dl>
 <p> This backend also supports the new configuration file format which makes it easier to detect scanners under Linux. If you have only one scanner it would be best to use the following configuration file for this backend: </p>
 <dl>
 <dd>option dump 1<br />
@@ -110,24 +104,24 @@ image (if there was scanned something). Zip them before sending.
  option toggle-lamp on<br />
  option lineart-autoadjust on<br />
  option colorbalance-adjust off<br />
- scsi * * Scanner</dl>
+ scsi * * Scanner</dd></dl>
 <p> In this case all SCSI-Scanners should be detected automatically because of the </p>
 <p> scsi * * Scanner </p>
 <p> line.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/microtek2.conf</i></p>
-<dd>The backend configuration file.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-microtek2.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-microtek2.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/microtek2.conf</i></dt>
+<dd>The backend configuration file.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-microtek2.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-microtek2.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_MICROTEK2</code></p>
+<dt><code>SANE_DEBUG_MICROTEK2</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 255 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_MICROTEK2</code> to 1 (Remark: The whole debugging levels should be better revised).<br />
  E.g. just say:<br />
- export SANE_DEBUG_MICROTEK2=128 </p>
+ export SANE_DEBUG_MICROTEK2=128 </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5)</code>, <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>

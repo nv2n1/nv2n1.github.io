@@ -14,14 +14,14 @@ description: "gmt2bin – Create bin-index files from gmt files"
 <h2>DESCRIPTION</h2>
 <p> <code>gmt2bin</code> reads a file with a list of leg ids, opens each gmt file, and creates a bin-index file for each leg called &lt;legid&gt;.bix. These are used by <code>binlegs</code> to update the system files read by <code>gmtlegs</code>. Normally, only the data archivist will need to be concerned with these operations.</p>
 <dl>
-<dt><i>listfile</i></p>
-<dd> This is a one column ASCII file with one leg id pr line.</dl>
+<dt><i>listfile</i></dt>
+<dd> This is a one column ASCII file with one leg id pr line.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-P</code></p>
-<dd> Sets full path to directory with gmtfiles. [Default is current directory].</p>
-<dt><code>-V</code></p>
-<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dl>
+<dt><code>-P</code></dt>
+<dd> Sets full path to directory with gmtfiles. [Default is current directory].</dd>
+<dt><code>-V</code></dt>
+<dd> Selects verbose mode, which will send progress reports to stderr [Default runs &quot;silently&quot;].</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-binlegs/">binlegs</a></i>(1), <i><a href="/docs/linux/man/1-dat2gmt/">dat2gmt</a></i>(1), <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1)</p>
 <h2>REFERENCES</h2>

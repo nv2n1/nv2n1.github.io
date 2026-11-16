@@ -13,7 +13,7 @@ description: "powerman-devices – Powerman Device Configuration Notes"
 <h2>Cyclades Ts-1000</h2>
 <p>A cyclades TS-1000 configured so that PowerMan can connect to serial-port-based remote power control devices using telnet is set up as follows: Attach console cable between laptop running minicom and console port at 9600,8n1 and authenticate with default account: root/tslinux. Edit the following files (assumes no off-subnet routing or name service required):</p>
 <dl>
-<dt><i>/etc/portslave/portslave.conf</i></p>
+<dt><i>/etc/portslave/portslave.conf</i></dt>
 <dd>
 <pre>conf.eth_ip 192.168.54.151
 conf.eth_mask 255.255.255.0 
@@ -47,13 +47,13 @@ s13.tty ttyS13
 s14.tty ttyS14
 s15.tty ttyS15
 s16.tty ttyS16</pre>
-<dt><i>/etc/hostname</i></p>
-<dd>cyclades-ts-test</p>
-<dt><i>/etc/hosts</i></p>
+</dd><dt><i>/etc/hostname</i></dt>
+<dd>cyclades-ts-test</dd>
+<dt><i>/etc/hosts</i></dt>
 <dd>
 <pre>127.0.0.1 localhost
 192.168.54.151 cycaldes-ts-test</pre>
-<p>Next, run <code>signal_ras hup</code> and <code>saveconf</code> and finally, power cycle the unit. It should be possible to configure PowerMan to connect to hostname:7001 for port 1, hostname:7002 for port 2, etc..</dl>
+<p>Next, run <code>signal_ras hup</code> and <code>saveconf</code> and finally, power cycle the unit. It should be possible to configure PowerMan to connect to hostname:7001 for port 1, hostname:7002 for port 2, etc..</dd></dl>
 <h2>BAYTECH RPC-3 (non-NC models) (network port 23)</h2>
 <p>Attach console cable between laptop running minicom and console port at 9600,8n1. Main menu should display. From main menu, select 3)&#8230;Configuration, then set IP parameters. From Configuration menu, select 5)&#8230;Access, then disable command confirmation, set admin password to baytech, and enable prompt for password. Exit Access menu by typing return. From Configuration menu, select 6)&#8230;Outlets. Ensure that 1)&#8230;Outlet Status display is disabled, and 2)&#8230;Command Confirmation is disabled. Exit back to main menu by typing return twice, then answer Y to the Accept changes? prompt.</p>
 <h2>BAYTECH RPC-28-NC (serial 9600,8n1)</h2>
@@ -61,14 +61,14 @@ s16.tty ttyS16</pre>
 <h2>LNXI ICEBOX V2 (network port 1010)</h2>
 <p>Attach console cable between laptop running minicom and console port at 9600,8n1. Enter default password of icebox.</p>
 <dl>
-<dt><i>net ip 192.168.54.153</i></p>
-<dd>Sets IP address.</p>
-<dt><i>net mask 255.255.255.0</i></p>
-<dd>Sets network mask</p>
-<dt><i>net gw 192.168.54.254</i></p>
-<dd>Set default gateway. Note: this may need to be set to an address in the same subnet as the ice box regardless of whether it is to be used or not.</p>
-<dt><i>reboot</i></p>
-<dd>Reboots the icebox.</dl>
+<dt><i>net ip 192.168.54.153</i></dt>
+<dd>Sets IP address.</dd>
+<dt><i>net mask 255.255.255.0</i></dt>
+<dd>Sets network mask</dd>
+<dt><i>net gw 192.168.54.254</i></dt>
+<dd>Set default gateway. Note: this may need to be set to an address in the same subnet as the ice box regardless of whether it is to be used or not.</dd>
+<dt><i>reboot</i></dt>
+<dd>Reboots the icebox.</dd></dl>
 <h2>LNXI ICEBOX V3 (network port 1010)</h2>
 <p>Attach console cable between laptop running minicom and console port at 9600,8n1. Authenticate with default account admin/icebox. Configuration is the same as the V2 ICE BOX.</p>
 <h2>APC MASTERSWITCH MODEL AP9606 (network port 23)</h2>
@@ -89,7 +89,7 @@ s16.tty ttyS16</pre>
  set pendingipnetmask=xxx.xxx.xxx.xxx
  set pendingipgateway=xxx.xxx.xxx.xxx
  set commitpending=true</pre>
-<p>The ILOM network configuration can alternatively be set up via the system BIOS setup screen. Hit F2 during boot to access BIOS setup, go to the &quot;Advanced&quot; tab, select &quot;IPMI 2.0 configuration&quot; and &quot;set LAN configuration&quot;. Make your changes and commit them.</dl>
+<p>The ILOM network configuration can alternatively be set up via the system BIOS setup screen. Hit F2 during boot to access BIOS setup, go to the &quot;Advanced&quot; tab, select &quot;IPMI 2.0 configuration&quot; and &quot;set LAN configuration&quot;. Make your changes and commit them.</dd></dl>
 <h2>IPMI (via Ipmipower)</h2>
 <p>IPMI based power control is supported via FreeIPMI&#8217;s <code>ipmipower.</code> It is configured by running <code>ipmipower</code> in coprocess mode in powerman.conf </p>
 <p> Due to semantic differences between IPMI and traditional remote power control devices, some power control operations may not seem to work properly by default with <code>Powerman. </code> For example, several IPMI power control operations are allowed to return prior to the operation fully completing. A machine that has been powered off by IPMI may be later queried as being powered on. This is because IPMI may successfully return from a power off operation to the user, but the machine may elect to power itself off at a later time. In order to get around several of these issues, it is recommended that the user configure <code>ipmipower </code> with the <code>&#8211;wait-until-on</code> and <code>&#8211;wait-until-off</code> options. With these options set, <code>ipmipower</code> will behave more like traditional remote power control devices. </p>
@@ -109,3 +109,4 @@ s16.tty ttyS16</pre>
 <p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-powerman/">powerman</a></code>(1), <code><a href="/docs/linux/man/8-powermand/">powermand</a></code>(8), <code><a href="/docs/linux/man/8-httppower/">httppower</a></code>(8), <code><a href="/docs/linux/man/8-plmpower/">plmpower</a></code>(8), <code><a href="/docs/linux/man/8-vpcd/">vpcd</a></code>(8), <code><a href="/docs/linux/man/5-powerman-conf/">powerman.conf</a></code>(5), <code><a href="/docs/linux/man/5-powerman-dev/">powerman.dev</a></code>(5), <code><a href="/docs/linux/man/7-powerman-devices/">powerman-devices</a></code>(7). <code><a rel="nofollow" href="http://sourceforge.net/projects/powerman">http://sourceforge.net/projects/powerman</a></code> </p>
+</p>

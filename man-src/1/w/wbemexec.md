@@ -21,40 +21,36 @@ description: "wbemexec – submit a CIM operation request to a CIM Server"
 <h3>Options</h3>
 <p> <code>wbemexec</code> recognizes the following options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-h</code> hostname</p>
-<dd> Connect to the CIM Server on the specified host. If this option is not specified, <code>wbemexec </code> connects to the local host.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display command usage information.</p>
-<dt><code>-m</code> httpmethod</p>
-<dd> Use the specified HTTP method for the request. The method must be &quot;POST&quot; or &quot;M-POST&quot;.</p>
-<dt><code>-p</code> portnumber</p>
-<dd> Connect to the CIM Server on the specified port number. If this option is not specified, <code>wbemexec</code> connects to the default port for the wbem-http service, or if the <code>-s</code> option is specified, to the default port for the wbem-https service.</p>
-<dt><code>-s</code></p>
-<dd> Enable the use of the SSL protocol between and the CIM server. The <code>-s</code> option should be specified if the CIM Server on the specified hostname/portnumber expects clients to connect using HTTPS.</p>
-<dt><code>-t</code> timeout</p>
-<dd> Wait the specified number of milliseconds on sending a request, before timing out if no response has been received. The <i>timeout </i> value must be an integer value greater than 0.</p>
-<dt><code>-u</code> username</p>
-<dd> Connect as the specified <i>R username . </i> If <i>username </i> is not specified, the current logged in user is used for authentication. This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified.</p>
-<dt><code>-v</code> httpversion</p>
-<dd> Use the specified HTTP version for the request. The version must be &quot;1.0&quot; or &quot;1.1&quot;. The 1.0 version may not be specified if the M-POST method is specified.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display CIM Server version.</p>
-<dt><code>-w</code> password</p>
-<dd> Authenticate the connection using the specified <i>password .</i> This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified. WARNING: A password should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If the remote host requests authentication and this option is not specified, <code>wbemexec</code> will prompt for the password. (See <code>cimconfig (1)</code> for information on configuring the CIM Server.)</dl>
+<dt><code>-h</code> hostname</dt>
+<dd> Connect to the CIM Server on the specified host. If this option is not specified, <code>wbemexec </code> connects to the local host.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display command usage information.</dd>
+<dt><code>-m</code> httpmethod</dt>
+<dd> Use the specified HTTP method for the request. The method must be &quot;POST&quot; or &quot;M-POST&quot;.</dd>
+<dt><code>-p</code> portnumber</dt>
+<dd> Connect to the CIM Server on the specified port number. If this option is not specified, <code>wbemexec</code> connects to the default port for the wbem-http service, or if the <code>-s</code> option is specified, to the default port for the wbem-https service.</dd>
+<dt><code>-s</code></dt>
+<dd> Enable the use of the SSL protocol between and the CIM server. The <code>-s</code> option should be specified if the CIM Server on the specified hostname/portnumber expects clients to connect using HTTPS.</dd>
+<dt><code>-t</code> timeout</dt>
+<dd> Wait the specified number of milliseconds on sending a request, before timing out if no response has been received. The <i>timeout </i> value must be an integer value greater than 0.</dd>
+<dt><code>-u</code> username</dt>
+<dd> Connect as the specified <i>R username . </i> If <i>username </i> is not specified, the current logged in user is used for authentication. This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified.</dd>
+<dt><code>-v</code> httpversion</dt>
+<dd> Use the specified HTTP version for the request. The version must be &quot;1.0&quot; or &quot;1.1&quot;. The 1.0 version may not be specified if the M-POST method is specified.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display CIM Server version.</dd>
+<dt><code>-w</code> password</dt>
+<dd> Authenticate the connection using the specified <i>password .</i> This option is ignored if neither <i>hostname </i> nor <i>portnumber </i> is specified. WARNING: A password should not be specified on the command line on a multi-user system, since command-line options are typically world-readable for a short window of time. If the remote host requests authentication and this option is not specified, <code>wbemexec</code> will prompt for the password. (See <code>cimconfig (1)</code> for information on configuring the CIM Server.)</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> When an error occurs, an explanatory error message is written to stderr and an appropriate value is returned. The following exit values are returned:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0</code></p>
-<dd> Success</p>
-<dt><code>1</code></p>
-<dd> Error</dl>
+<dt><code>0</code></dt>
+<dd> Success</dd>
+<dt><code>1</code></dt>
+<dd> Error</dd></dl>
 </dl>
 <h2>USAGE NOTE</h2>
 <p> The <code>wbemexec </code> command requires that the CIM Server is running.</p>
@@ -62,11 +58,11 @@ description: "wbemexec – submit a CIM operation request to a CIM Server"
 <p> Submit an XML request contained in the file cimrequest.xml to the CIM Server running on the local host on the default port:</p>
 <dl>
 <dt>
-<dd> <code>wbemexec cimrequest.xml</code></dl>
+</dt><dd> <code>wbemexec cimrequest.xml</code></dd></dl>
 <p> Submit an XML request contained in the file cimrequest.xml to the CIM Server running on the host hpserver on port 49152, using the <i>username </i> guest and <i>password </i> guest for authentication:</p>
 <dl>
 <dt>
-<dd> <code>wbemexec -h hpserver -p 49152 -u guest -w guest cimrequest.xml</code></dl>
+</dt><dd> <code>wbemexec -h hpserver -p 49152 -u guest -w guest cimrequest.xml</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> cimserver(1), cimconfig(1).</p>
 <h2>STANDARDS CONFORMANCE</h2>

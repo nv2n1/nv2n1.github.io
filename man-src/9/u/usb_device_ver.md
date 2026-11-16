@@ -10,21 +10,21 @@ description: "USB_DEVICE_VER – describe a specific usb device with a version r
 <p>USB_DEVICE_VER &#8211; describe a specific usb device with a version range</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>USB_DEVICE_VER(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>lo</i><code>, </code><i>hi</i><code>);</code></dl>
+<dt> <code>USB_DEVICE_VER(</code><i>vend</i><code>, </code><i>prod</i><code>, </code><i>lo</i><code>, </code><i>hi</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>vend</i></p>
 <dl>
 <dd>
-<dd>the 16 bit USB Vendor ID</dl>
+</dd><dd>the 16 bit USB Vendor ID</dd></dl>
 <p> <i>prod</i></p>
 <dl>
-<dd>the 16 bit USB Product ID</dl>
+<dd>the 16 bit USB Product ID</dd></dl>
 <p> <i>lo</i></p>
 <dl>
-<dd>the bcdDevice_lo value</dl>
+<dd>the bcdDevice_lo value</dd></dl>
 <p> <i>hi</i></p>
 <dl>
-<dd>the bcdDevice_hi value</dl>
+<dd>the bcdDevice_hi value</dd></dl>
 <h2>Description</h2>
 <p>This macro is used to create a struct usb_device_id that matches a specific device, with a version range.</p>
 <h2>Copyright</h2>

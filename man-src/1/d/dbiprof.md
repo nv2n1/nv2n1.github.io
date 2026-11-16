@@ -40,39 +40,36 @@ url: "/docs/linux/man/1-dbiprof/"
  This program accepts the following options:
 <dl>
 <dt>--number N
-<dd> Produce this many items in the report. Defaults to 10. If set to ``all'' then all results are shown.
-<dt>--sort field
-<dd> Sort results by the given field. Sorting by multiple fields isn't currently supported (patches welcome). The available sort fields are:
-<dl>
-<dt>
-<dd>
+</dt><dd> Produce this many items in the report. Defaults to 10. If set to ``all'' then all results are shown.
+</dd><dt>--sort field
+</dt><dd> Sort results by the given field. Sorting by multiple fields isn't currently supported (patches welcome). The available sort fields are:
+</dd><dl>
 <dl>
 <dt>total
-<dd> Sorts by total time run time across all runs. This is the default sort.
-<dt>longest
-<dd> Sorts by the longest single run.
-<dt>count
-<dd> Sorts by total number of runs.
-<dt>first
-<dd> Sorts by the time taken in the first run.
-<dt>shortest
-<dd> Sorts by the shortest single run.
-<dt>key1
-<dd> Sorts by the value of the first element in the Path, which should be numeric. You can also sort by <tt>&quot;key2&quot;</tt> and <tt>&quot;key3&quot;</tt>.</dl>
+</dt><dd> Sorts by total time run time across all runs. This is the default sort.
+</dd><dt>longest
+</dt><dd> Sorts by the longest single run.
+</dd><dt>count
+</dt><dd> Sorts by total number of runs.
+</dd><dt>first
+</dt><dd> Sorts by the time taken in the first run.
+</dd><dt>shortest
+</dt><dd> Sorts by the shortest single run.
+</dd><dt>key1
+</dt><dd> Sorts by the value of the first element in the Path, which should be numeric. You can also sort by <tt>&quot;key2&quot;</tt> and <tt>&quot;key3&quot;</tt>.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>--reverse
-<dd> Reverses the selected sort. For example, to see a report of the shortest overall time: 
+</dt><dd> Reverses the selected sort. For example, to see a report of the shortest overall time: 
 
  <pre>
   dbiprof --sort total --reverse
 </pre>
-<dt>--match keyN=value
-<dd> Consider only items where the specified key matches the given value. Keys are numbered from 1. For example, let's say you used a DBI::Profile Path of: 
+</dd><dt>--match keyN=value
+</dt><dd> Consider only items where the specified key matches the given value. Keys are numbered from 1. For example, let's say you used a DBI::Profile Path of: 
 
  <pre>
   [ DBIprofile_Statement, DBIprofile_Methodname ]
@@ -93,8 +90,8 @@ url: "/docs/linux/man/1-dbiprof/"
 </pre> 
 
  By default the match expression is matched case-insensitively, but this can be changed with the --case-sensitive option.
-<dt>--exclude keyN=value
-<dd> Remove items for where the specified key matches the given value. For example, to exclude all prepare entries where key2 is the method name: 
+</dd><dt>--exclude keyN=value
+</dt><dd> Remove items for where the specified key matches the given value. For example, to exclude all prepare entries where key2 is the method name: 
 
  <pre>
   dbiprof --exclude key2=prepare
@@ -107,14 +104,14 @@ url: "/docs/linux/man/1-dbiprof/"
 </pre> 
 
  By default the exclude expression is matched case-insensitively, but this can be changed with the --case-sensitive option.
-<dt>--case-sensitive
-<dd> Using this option causes --match and --exclude to work case-sensitively. Defaults to off.
-<dt>--delete
-<dd> Sets the <tt>&quot;DeleteFiles&quot;</tt> option to DBI::ProfileData which causes the files to be deleted after reading. See DBI::ProfileData for more details.
-<dt>--dumpnodes
-<dd> Print the list of nodes in the form of a perl data structure. Use the <tt>&quot;-sort&quot;</tt> option if you want the list sorted.
-<dt>--version
-<dd> Print the dbiprof version number and exit.</dl>
+</dd><dt>--case-sensitive
+</dt><dd> Using this option causes --match and --exclude to work case-sensitively. Defaults to off.
+</dd><dt>--delete
+</dt><dd> Sets the <tt>&quot;DeleteFiles&quot;</tt> option to DBI::ProfileData which causes the files to be deleted after reading. See DBI::ProfileData for more details.
+</dd><dt>--dumpnodes
+</dt><dd> Print the list of nodes in the form of a perl data structure. Use the <tt>&quot;-sort&quot;</tt> option if you want the list sorted.
+</dd><dt>--version
+</dt><dd> Print the dbiprof version number and exit.</dd></dl>
 
 <h2>AUTHOR</h2>
 

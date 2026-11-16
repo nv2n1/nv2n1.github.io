@@ -26,21 +26,21 @@ pl2link input - file[destination - file] pl - input[input - file] - output[desti
  Property lists in GNUstep are hierarchical lists of values or attribute-value pairs. Programmatically they are represented by instances of the NSString, NSData, NSArray, or NSDictionary (most common) class (which may contain other instances of such classes). These instances can be serialized as binary objects to form a persistent representation. In addition, there are two alternative human-readable representations. The first, utilized in NeXTstep and OpenStep, utilizes a text format with equals signs expressing attribute-value bindings and set braces expressing hierarchical organization. The second, often (uninformatively) referred to as &quot;plist&quot; format, is in XML and is used by Mac OS X. The tools described here are utilities for manipulating the various persistent property list representations as files.
 <dl>
 <dt><b>pldes</b> <i>filename(s)</i>
-<dd> Converts a binary serialised property list (class instance) to a text representation.
-<dt><b>plget</b> <i>key</i>
-<dd> Reads a text representation of a dictionary in property list format as standard input, extracts the string value held in that dictionary with the specified key, and writes the result to standard output. Multiple keys may be used to extract values from nested dictionaries.
-<dt><b>plser</b> <i>filename(s)</i>
-<dd> Converts a text representation of a property list to a binary serialized representation.
-<dt><b>plmerge</b> [ <i>destination-file</i> ] [ <i>input-file(s)</i> ]
-<dd> Merges text property lists into a single property list
-<dt><b>plparse</b> <i>filename(s)</i>
-<dd> Checks that each file contains a valid text representation of a property list.
-<dt><b>pl2link</b> <i>input-file</i> [ <i>destination-file</i> ]
-<dd> Produces a desktop link file for KDE and Gnome for the given text representation of a property list.
-<dt><b>pl</b> <i>-input</i> [ <i>input-file</i> ]
-<dd> Takes the serialized plist represented by input-file and outputs it to standard output.
-<dt><b>pl</b> <i>-output</i> [ <i>destination-file</i> ]
-<dd> Takes a plist from standard input and serializes it into destination-file.</dl>
+</dt><dd> Converts a binary serialised property list (class instance) to a text representation.
+</dd><dt><b>plget</b> <i>key</i>
+</dt><dd> Reads a text representation of a dictionary in property list format as standard input, extracts the string value held in that dictionary with the specified key, and writes the result to standard output. Multiple keys may be used to extract values from nested dictionaries.
+</dd><dt><b>plser</b> <i>filename(s)</i>
+</dt><dd> Converts a text representation of a property list to a binary serialized representation.
+</dd><dt><b>plmerge</b> [ <i>destination-file</i> ] [ <i>input-file(s)</i> ]
+</dt><dd> Merges text property lists into a single property list
+</dd><dt><b>plparse</b> <i>filename(s)</i>
+</dt><dd> Checks that each file contains a valid text representation of a property list.
+</dd><dt><b>pl2link</b> <i>input-file</i> [ <i>destination-file</i> ]
+</dt><dd> Produces a desktop link file for KDE and Gnome for the given text representation of a property list.
+</dd><dt><b>pl</b> <i>-input</i> [ <i>input-file</i> ]
+</dt><dd> Takes the serialized plist represented by input-file and outputs it to standard output.
+</dd><dt><b>pl</b> <i>-output</i> [ <i>destination-file</i> ]
+</dt><dd> Takes a plist from standard input and serializes it into destination-file.</dd></dl>
  
 
  

@@ -14,23 +14,23 @@ description: "rio_add_outb_message – Add RIO message to an outbound mailbox qu
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port containing the outbound queue</dl>
+</dd><dd>RIO master port containing the outbound queue</dd></dl>
 <p> <i>rdev</i></p>
 <dl>
-<dd>RIO device the message is be sent to</dl>
+<dd>RIO device the message is be sent to</dd></dl>
 <p> <i>mbox</i></p>
 <dl>
-<dd>The outbound mailbox queue</dl>
+<dd>The outbound mailbox queue</dd></dl>
 <p> <i>buffer</i></p>
 <dl>
-<dd>Pointer to the message buffer</dl>
+<dd>Pointer to the message buffer</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>Length of the message buffer</dl>
+<dd>Length of the message buffer</dd></dl>
 <h2>Description</h2>
 <p>Adds a RIO message buffer to an outbound mailbox queue for transmission. Returns 0 on success.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -17,21 +17,21 @@ description: "krb5_krbhst_init krb5_krbhst_init_flags krb5_krbhst_next krb5_krbh
 <p> These functions are used to sequence through all Kerberos hosts of a particular realm and service. The service type can be the KDCs, the administrative servers, the password changing servers, or the servers for Kerberos 4 ticket conversion. </p>
 <p> First a handle to a particular service is obtained by calling Fn krb5_krbhst_init (or Fn krb5_krbhst_init_flags ) with the Fa realm of interest and the type of service to lookup. The Fa type can be one of: </p>
 <dl>
-<dt><code>KRB5_KRBHST_KDC</code></p>
+<dt><code>KRB5_KRBHST_KDC</code></dt>
 <dd>
-<dt><code>KRB5_KRBHST_ADMIN</code></p>
+</dd><dt><code>KRB5_KRBHST_ADMIN</code></dt>
 <dd>
-<dt><code>KRB5_KRBHST_CHANGEPW</code></p>
+</dd><dt><code>KRB5_KRBHST_CHANGEPW</code></dt>
 <dd>
-<dt><code>KRB5_KRBHST_KRB524</code></p>
-<dd></dl>
+</dd><dt><code>KRB5_KRBHST_KRB524</code></dt>
+<dd></dd></dl>
 <p> The Fa handle is returned to the caller, and should be passed to the other functions. </p>
 <p> The Fa flag argument to <code>krb5_krbhst_init_flags</code> is the same flags as Fn krb5_send_to_kdc_flags uses. Possible values are: </p>
 <dl>
-<dt><code>KRB5_KRBHST_FLAGS_MASTER</code></p>
-<dd> only talk to master (readwrite) KDC</p>
-<dt><code>KRB5_KRBHST_FLAGS_LARGE_MSG</code></p>
-<dd> this is a large message, so use transport that can handle that.</dl>
+<dt><code>KRB5_KRBHST_FLAGS_MASTER</code></dt>
+<dd> only talk to master (readwrite) KDC</dd>
+<dt><code>KRB5_KRBHST_FLAGS_LARGE_MSG</code></dt>
+<dd> this is a large message, so use transport that can handle that.</dd></dl>
 <p> For each call to Fn krb5_krbhst_next information on a new host is returned. The former function returns in Fa host a pointer to a structure containing information about the host, such as protocol, hostname, and port: </p>
 <blockquote>
 <pre><code>

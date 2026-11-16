@@ -19,454 +19,453 @@ The default location of cgitrc, defined at compile time, is /etc/cgitrc. At runt
 <h2>Global Settings</h2>
 
 about-filter
-<dl><dd>Specifies a command which will be invoked to format the content of about pages (both top-level and for each repository). The command will get the content of the about-file on its STDIN, the name of the file as the first argument, and the STDOUT from the command will be included verbatim on the about page. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command which will be invoked to format the content of about pages (both top-level and for each repository). The command will get the content of the about-file on its STDIN, the name of the file as the first argument, and the STDOUT from the command will be included verbatim on the about page. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  agefile
-<dl><dd>Specifies a path, relative to each repository path, which can be used to specify the date and time of the youngest commit in the repository. The first line in the file is used as input to the &quot;parse_date&quot; function in libgit. Recommended timestamp-format is &quot;yyyy-mm-dd hh:mm:ss&quot;. You may want to generate this file from a post-receive hook. Default value: &quot;info/web/last-modified&quot;.</dl>
+<dl><dd>Specifies a path, relative to each repository path, which can be used to specify the date and time of the youngest commit in the repository. The first line in the file is used as input to the &quot;parse_date&quot; function in libgit. Recommended timestamp-format is &quot;yyyy-mm-dd hh:mm:ss&quot;. You may want to generate this file from a post-receive hook. Default value: &quot;info/web/last-modified&quot;.</dd></dl>
  
 
  auth-filter
-<dl><dd>Specifies a command that will be invoked for authenticating repository access. Receives quite a few arguments, and data on both stdin and stdout for authentication processing. Details follow later in this document. If no auth-filter is specified, no authentication is performed. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command that will be invoked for authenticating repository access. Receives quite a few arguments, and data on both stdin and stdout for authentication processing. Details follow later in this document. If no auth-filter is specified, no authentication is performed. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  branch-sort
-<dl><dd>Flag which, when set to &quot;age&quot;, enables date ordering in the branch ref list, and when set to &quot;name&quot; enables ordering by branch name. Default value: &quot;name&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;age&quot;, enables date ordering in the branch ref list, and when set to &quot;name&quot; enables ordering by branch name. Default value: &quot;name&quot;.</dd></dl>
  
 
  cache-root
-<dl><dd>Path used to store the cgit cache entries. Default value: &quot;/var/cache/cgit&quot;. See also: &quot;MACRO EXPANSION&quot;.</dl>
+<dl><dd>Path used to store the cgit cache entries. Default value: &quot;/var/cache/cgit&quot;. See also: &quot;MACRO EXPANSION&quot;.</dd></dl>
  
 
  cache-static-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of repository pages accessed with a fixed SHA1. See also: &quot;CACHE&quot;. Default value: -1&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of repository pages accessed with a fixed SHA1. See also: &quot;CACHE&quot;. Default value: -1&quot;.</dd></dl>
  
 
  cache-dynamic-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of repository pages accessed without a fixed SHA1. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of repository pages accessed without a fixed SHA1. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dd></dl>
  
 
  cache-repo-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository summary page. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository summary page. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dd></dl>
  
 
  cache-root-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository index page. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository index page. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dd></dl>
  
 
  cache-scanrc-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the result of scanning a path for git repositories. See also: &quot;CACHE&quot;. Default value: &quot;15&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the result of scanning a path for git repositories. See also: &quot;CACHE&quot;. Default value: &quot;15&quot;.</dd></dl>
  
 
  cache-about-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository about page. See also: &quot;CACHE&quot;. Default value: &quot;15&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of the repository about page. See also: &quot;CACHE&quot;. Default value: &quot;15&quot;.</dd></dl>
  
 
  cache-snapshot-ttl
-<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of snapshots. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dl>
+<dl><dd>Number which specifies the time-to-live, in minutes, for the cached version of snapshots. See also: &quot;CACHE&quot;. Default value: &quot;5&quot;.</dd></dl>
  
 
  cache-size
-<dl><dd>The maximum number of entries in the cgit cache. When set to &quot;0&quot;, caching is disabled. See also: &quot;CACHE&quot;. Default value: &quot;0&quot;</dl>
+<dl><dd>The maximum number of entries in the cgit cache. When set to &quot;0&quot;, caching is disabled. See also: &quot;CACHE&quot;. Default value: &quot;0&quot;</dd></dl>
  
 
  case-sensitive-sort
-<dl><dd>Sort items in the repo list case sensitively. Default value: &quot;1&quot;. See also: repository-sort, section-sort.</dl>
+<dl><dd>Sort items in the repo list case sensitively. Default value: &quot;1&quot;. See also: repository-sort, section-sort.</dd></dl>
  
 
  clone-prefix
-<dl><dd>Space-separated list of common prefixes which, when combined with a repository url, generates valid clone urls for the repository. This setting is only used if repo.clone-url is unspecified. Default value: none.</dl>
+<dl><dd>Space-separated list of common prefixes which, when combined with a repository url, generates valid clone urls for the repository. This setting is only used if repo.clone-url is unspecified. Default value: none.</dd></dl>
  
 
  clone-url
-<dl><dd>Space-separated list of clone-url templates. This setting is only used if repo.clone-url is unspecified. Default value: none. See also: &quot;MACRO EXPANSION&quot;, &quot;FILTER API&quot;.</dl>
+<dl><dd>Space-separated list of clone-url templates. This setting is only used if repo.clone-url is unspecified. Default value: none. See also: &quot;MACRO EXPANSION&quot;, &quot;FILTER API&quot;.</dd></dl>
  
 
  commit-filter
-<dl><dd>Specifies a command which will be invoked to format commit messages. The command will get the message on its STDIN, and the STDOUT from the command will be included verbatim as the commit message, i.e. this can be used to implement bugtracker integration. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command which will be invoked to format commit messages. The command will get the message on its STDIN, and the STDOUT from the command will be included verbatim as the commit message, i.e. this can be used to implement bugtracker integration. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  commit-sort
-<dl><dd>Flag which, when set to &quot;date&quot;, enables strict date ordering in the commit log, and when set to &quot;topo&quot; enables strict topological ordering. If unset, the default ordering of &quot;git log&quot; is used. Default value: unset.</dl>
+<dl><dd>Flag which, when set to &quot;date&quot;, enables strict date ordering in the commit log, and when set to &quot;topo&quot; enables strict topological ordering. If unset, the default ordering of &quot;git log&quot; is used. Default value: unset.</dd></dl>
  
 
  css
-<dl><dd>Url which specifies the css document to include in all cgit pages. Default value: &quot;/cgit.css&quot;.</dl>
+<dl><dd>Url which specifies the css document to include in all cgit pages. Default value: &quot;/cgit.css&quot;.</dd></dl>
  
 
  email-filter
-<dl><dd>Specifies a command which will be invoked to format names and email address of committers, authors, and taggers, as represented in various places throughout the cgit interface. This command will receive an email address and an origin page string as its command line arguments, and the text to format on STDIN. It is to write the formatted text back out onto STDOUT. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command which will be invoked to format names and email address of committers, authors, and taggers, as represented in various places throughout the cgit interface. This command will receive an email address and an origin page string as its command line arguments, and the text to format on STDIN. It is to write the formatted text back out onto STDOUT. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  embedded
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate a html fragment suitable for embedding in other html pages. Default value: none. See also: &quot;noheader&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate a html fragment suitable for embedding in other html pages. Default value: none. See also: &quot;noheader&quot;.</dd></dl>
  
 
  enable-commit-graph
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print an ASCII-art commit history graph to the left of the commit messages in the repository log page. Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print an ASCII-art commit history graph to the left of the commit messages in the repository log page. Default value: &quot;0&quot;.</dd></dl>
  
 
  enable-filter-overrides
-<dl><dd>Flag which, when set to &quot;1&quot;, allows all filter settings to be overridden in repository-specific cgitrc files. Default value: none.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, allows all filter settings to be overridden in repository-specific cgitrc files. Default value: none.</dd></dl>
  
 
  enable-follow-links
-<dl><dd>Flag which, when set to &quot;1&quot;, allows users to follow a file in the log view. Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, allows users to follow a file in the log view. Default value: &quot;0&quot;.</dd></dl>
  
 
  enable-http-clone
-<dl><dd>If set to &quot;1&quot;, cgit will act as an dumb HTTP endpoint for git clones. You can add &quot;<a rel="nofollow" HREF="http://$HTTP_HOST$SCRIPT_NAME/$CGIT_REPO_URL">http://$HTTP_HOST$SCRIPT_NAME/$CGIT_REPO_URL</a>&quot; to clone-url to expose this feature. If you use an alternate way of serving git repositories, you may wish to disable this. Default value: &quot;1&quot;.</dl>
+<dl><dd>If set to &quot;1&quot;, cgit will act as an dumb HTTP endpoint for git clones. You can add &quot;<a rel="nofollow" HREF="http://$HTTP_HOST$SCRIPT_NAME/$CGIT_REPO_URL">http://$HTTP_HOST$SCRIPT_NAME/$CGIT_REPO_URL</a>&quot; to clone-url to expose this feature. If you use an alternate way of serving git repositories, you may wish to disable this. Default value: &quot;1&quot;.</dd></dl>
  
 
  enable-index-links
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate extra links for each repo in the repository index (specifically, to the &quot;summary&quot;, &quot;commit&quot; and &quot;tree&quot; pages). Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate extra links for each repo in the repository index (specifically, to the &quot;summary&quot;, &quot;commit&quot; and &quot;tree&quot; pages). Default value: &quot;0&quot;.</dd></dl>
  
 
  enable-index-owner
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display the owner of each repo in the repository index. Default value: &quot;1&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display the owner of each repo in the repository index. Default value: &quot;1&quot;.</dd></dl>
  
 
  enable-log-filecount
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print the number of modified files for each commit on the repository log page. Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print the number of modified files for each commit on the repository log page. Default value: &quot;0&quot;.</dd></dl>
  
 
  enable-log-linecount
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print the number of added and removed lines for each commit on the repository log page. Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit print the number of added and removed lines for each commit on the repository log page. Default value: &quot;0&quot;.</dd></dl>
  
 
  enable-remote-branches
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display remote branches in the summary and refs views. Default value: &quot;0&quot;. See also: &quot;repo.enable-remote-branches&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display remote branches in the summary and refs views. Default value: &quot;0&quot;. See also: &quot;repo.enable-remote-branches&quot;.</dd></dl>
  
 
  enable-subject-links
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit use the subject of the parent commit as link text when generating links to parent commits in commit view. Default value: &quot;0&quot;. See also: &quot;repo.enable-subject-links&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit use the subject of the parent commit as link text when generating links to parent commits in commit view. Default value: &quot;0&quot;. See also: &quot;repo.enable-subject-links&quot;.</dd></dl>
  
 
  enable-html-serving
-<dl><dd>Flag which, when set to &quot;1&quot;, will allow the /plain handler to serve mimetype headers that result in the file being treated as HTML by the browser. When set to &quot;0&quot;, such file types are returned instead as text/plain or application/octet-stream. Default value: &quot;0&quot;. See also: &quot;repo.enable-html-serving&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will allow the /plain handler to serve mimetype headers that result in the file being treated as HTML by the browser. When set to &quot;0&quot;, such file types are returned instead as text/plain or application/octet-stream. Default value: &quot;0&quot;. See also: &quot;repo.enable-html-serving&quot;.</dd></dl>
  
 
  enable-tree-linenumbers
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate linenumber links for plaintext blobs printed in the tree view. Default value: &quot;1&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit generate linenumber links for plaintext blobs printed in the tree view. Default value: &quot;1&quot;.</dd></dl>
  
 
  enable-git-config
-<dl><dd>Flag which, when set to &quot;1&quot;, will allow cgit to use git config to set any repo specific settings. This option is used in conjunction with &quot;scan-path&quot;, and must be defined prior, to augment repo-specific settings. The keys gitweb.owner, gitweb.category, gitweb.description, and gitweb.homepage will map to the cgit keys repo.owner, repo.section, repo.desc, and repo.homepage respectively. All git config keys that begin with &quot;cgit.&quot; will be mapped to the corresponding &quot;repo.&quot; key in cgit. Default value: &quot;0&quot;. See also: scan-path, section-from-path.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will allow cgit to use git config to set any repo specific settings. This option is used in conjunction with &quot;scan-path&quot;, and must be defined prior, to augment repo-specific settings. The keys gitweb.owner, gitweb.category, gitweb.description, and gitweb.homepage will map to the cgit keys repo.owner, repo.section, repo.desc, and repo.homepage respectively. All git config keys that begin with &quot;cgit.&quot; will be mapped to the corresponding &quot;repo.&quot; key in cgit. Default value: &quot;0&quot;. See also: scan-path, section-from-path.</dd></dl>
  
 
  favicon
-<dl><dd>Url used as link to a shortcut icon for cgit. It is suggested to use the value &quot;/favicon.ico&quot; since certain browsers will ignore other values. Default value: &quot;/favicon.ico&quot;.</dl>
+<dl><dd>Url used as link to a shortcut icon for cgit. It is suggested to use the value &quot;/favicon.ico&quot; since certain browsers will ignore other values. Default value: &quot;/favicon.ico&quot;.</dd></dl>
  
 
  footer
-<dl><dd>The content of the file specified with this option will be included verbatim at the bottom of all pages (i.e. it replaces the standard &quot;generated by...&quot; message. Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim at the bottom of all pages (i.e. it replaces the standard &quot;generated by...&quot; message. Default value: none.</dd></dl>
  
 
  head-include
-<dl><dd>The content of the file specified with this option will be included verbatim in the html HEAD section on all pages. Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim in the html HEAD section on all pages. Default value: none.</dd></dl>
  
 
  header
-<dl><dd>The content of the file specified with this option will be included verbatim at the top of all pages. Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim at the top of all pages. Default value: none.</dd></dl>
  
 
  include
-<dl><dd>Name of a configfile to include before the rest of the current config- file is parsed. Default value: none. See also: &quot;MACRO EXPANSION&quot;.</dl>
+<dl><dd>Name of a configfile to include before the rest of the current config- file is parsed. Default value: none. See also: &quot;MACRO EXPANSION&quot;.</dd></dl>
  
 
  index-header
-<dl><dd>The content of the file specified with this option will be included verbatim above the repository index. This setting is deprecated, and will not be supported by cgit-1.0 (use root-readme instead). Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim above the repository index. This setting is deprecated, and will not be supported by cgit-1.0 (use root-readme instead). Default value: none.</dd></dl>
  
 
  index-info
-<dl><dd>The content of the file specified with this option will be included verbatim below the heading on the repository index page. This setting is deprecated, and will not be supported by cgit-1.0 (use root-desc instead). Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim below the heading on the repository index page. This setting is deprecated, and will not be supported by cgit-1.0 (use root-desc instead). Default value: none.</dd></dl>
  
 
  local-time
-<dl><dd>Flag which, if set to &quot;1&quot;, makes cgit print commit and tag times in the servers timezone. Default value: &quot;0&quot;.</dl>
+<dl><dd>Flag which, if set to &quot;1&quot;, makes cgit print commit and tag times in the servers timezone. Default value: &quot;0&quot;.</dd></dl>
  
 
  logo
-<dl><dd>Url which specifies the source of an image which will be used as a logo on all cgit pages. Default value: &quot;/cgit.png&quot;.</dl>
+<dl><dd>Url which specifies the source of an image which will be used as a logo on all cgit pages. Default value: &quot;/cgit.png&quot;.</dd></dl>
  
 
  logo-link
-<dl><dd>Url loaded when clicking on the cgit logo image. If unspecified the calculated url of the repository index page will be used. Default value: none.</dl>
+<dl><dd>Url loaded when clicking on the cgit logo image. If unspecified the calculated url of the repository index page will be used. Default value: none.</dd></dl>
  
 
  owner-filter
-<dl><dd>Specifies a command which will be invoked to format the Owner column of the main page. The command will get the owner on STDIN, and the STDOUT from the command will be included verbatim in the table. This can be used to link to additional context such as an owners home page. When active this filter is used instead of the default owner query url. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command which will be invoked to format the Owner column of the main page. The command will get the owner on STDIN, and the STDOUT from the command will be included verbatim in the table. This can be used to link to additional context such as an owners home page. When active this filter is used instead of the default owner query url. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  max-atom-items
-<dl><dd>Specifies the number of items to display in atom feeds view. Default value: &quot;10&quot;.</dl>
+<dl><dd>Specifies the number of items to display in atom feeds view. Default value: &quot;10&quot;.</dd></dl>
  
 
  max-commit-count
-<dl><dd>Specifies the number of entries to list per page in &quot;log&quot; view. Default value: &quot;50&quot;.</dl>
+<dl><dd>Specifies the number of entries to list per page in &quot;log&quot; view. Default value: &quot;50&quot;.</dd></dl>
  
 
  max-message-length
-<dl><dd>Specifies the maximum number of commit message characters to display in &quot;log&quot; view. Default value: &quot;80&quot;.</dl>
+<dl><dd>Specifies the maximum number of commit message characters to display in &quot;log&quot; view. Default value: &quot;80&quot;.</dd></dl>
  
 
  max-repo-count
-<dl><dd>Specifies the number of entries to list per page on the repository index page. Default value: &quot;50&quot;.</dl>
+<dl><dd>Specifies the number of entries to list per page on the repository index page. Default value: &quot;50&quot;.</dd></dl>
  
 
  max-repodesc-length
-<dl><dd>Specifies the maximum number of repo description characters to display on the repository index page. Default value: &quot;80&quot;.</dl>
+<dl><dd>Specifies the maximum number of repo description characters to display on the repository index page. Default value: &quot;80&quot;.</dd></dl>
  
 
  max-blob-size
-<dl><dd>Specifies the maximum size of a blob to display HTML for in KBytes. Default value: &quot;0&quot; (limit disabled).</dl>
+<dl><dd>Specifies the maximum size of a blob to display HTML for in KBytes. Default value: &quot;0&quot; (limit disabled).</dd></dl>
  
 
  max-stats
-<dl><dd>Set the default maximum statistics period. Valid values are &quot;week&quot;, &quot;month&quot;, &quot;quarter&quot; and &quot;year&quot;. If unspecified, statistics are disabled. Default value: none. See also: &quot;repo.max-stats&quot;.</dl>
+<dl><dd>Set the default maximum statistics period. Valid values are &quot;week&quot;, &quot;month&quot;, &quot;quarter&quot; and &quot;year&quot;. If unspecified, statistics are disabled. Default value: none. See also: &quot;repo.max-stats&quot;.</dd></dl>
  
 
  mimetype.&lt;ext&gt;
-<dl><dd>Set the mimetype for the specified filename extension. This is used by the plain command when returning blob content.</dl>
+<dl><dd>Set the mimetype for the specified filename extension. This is used by the plain command when returning blob content.</dd></dl>
  
 
  mimetype-file
 <dl><dd>Specifies the file to use for automatic mimetype lookup. If specified then this field is used as a fallback when no &quot;mimetype.&lt;ext&gt;&quot; match is found. If unspecified then no such lookup is performed. The typical file to use on a Linux system is /etc/mime.types. The format of the file must comply to: 
-
-<dl><dd>&bull; a comment line is an empty line or a line starting with a hash (#), optionally preceded by whitespace</dl><dl><dd>&bull; a non-comment line starts with the mimetype (like image/png), followed by one or more file extensions (like jpg), all separated by whitespace Default value: none. See also: &quot;mimetype.&lt;ext&gt;&quot;.</dl></dl>
+</dd><dl><dd>&bull; a comment line is an empty line or a line starting with a hash (#), optionally preceded by whitespace</dd></dl><dl><dd>&bull; a non-comment line starts with the mimetype (like image/png), followed by one or more file extensions (like jpg), all separated by whitespace Default value: none. See also: &quot;mimetype.&lt;ext&gt;&quot;.</dd></dl></dl>
  
 
  module-link
-<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule is printed in a directory listing. The arguments for the formatstring are the path and SHA1 of the submodule commit. Default value: none.</dl>
+<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule is printed in a directory listing. The arguments for the formatstring are the path and SHA1 of the submodule commit. Default value: none.</dd></dl>
  
 
  nocache
-<dl><dd>If set to the value &quot;1&quot; caching will be disabled. This settings is deprecated, and will not be honored starting with cgit-1.0. Default value: &quot;0&quot;.</dl>
+<dl><dd>If set to the value &quot;1&quot; caching will be disabled. This settings is deprecated, and will not be honored starting with cgit-1.0. Default value: &quot;0&quot;.</dd></dl>
  
 
  noplainemail
-<dl><dd>If set to &quot;1&quot; showing full author email addresses will be disabled. Default value: &quot;0&quot;.</dl>
+<dl><dd>If set to &quot;1&quot; showing full author email addresses will be disabled. Default value: &quot;0&quot;.</dd></dl>
  
 
  noheader
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit omit the standard header on all pages. Default value: none. See also: &quot;embedded&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit omit the standard header on all pages. Default value: none. See also: &quot;embedded&quot;.</dd></dl>
  
 
  project-list
-<dl><dd>A list of subdirectories inside of scan-path, relative to it, that should loaded as git repositories. This must be defined prior to scan-path. Default value: none. See also: scan-path, &quot;MACRO EXPANSION&quot;.</dl>
+<dl><dd>A list of subdirectories inside of scan-path, relative to it, that should loaded as git repositories. This must be defined prior to scan-path. Default value: none. See also: scan-path, &quot;MACRO EXPANSION&quot;.</dd></dl>
  
 
  readme
-<dl><dd>Text which will be used as default value for &quot;repo.readme&quot;. Multiple config keys may be specified, and cgit will use the first found file in this list. This is useful in conjunction with scan-path. Default value: none. See also: scan-path, repo.readme.</dl>
+<dl><dd>Text which will be used as default value for &quot;repo.readme&quot;. Multiple config keys may be specified, and cgit will use the first found file in this list. This is useful in conjunction with scan-path. Default value: none. See also: scan-path, repo.readme.</dd></dl>
  
 
  remove-suffix
-<dl><dd>If set to &quot;1&quot; and scan-path is enabled, if any repositories are found with a suffix of &quot;.git&quot;, this suffix will be removed for the url and name. This must be defined prior to scan-path. Default value: &quot;0&quot;. See also: scan-path.</dl>
+<dl><dd>If set to &quot;1&quot; and scan-path is enabled, if any repositories are found with a suffix of &quot;.git&quot;, this suffix will be removed for the url and name. This must be defined prior to scan-path. Default value: &quot;0&quot;. See also: scan-path.</dd></dl>
  
 
  renamelimit
-<dl><dd>Maximum number of files to consider when detecting renames. The value &quot;-1&quot; uses the compiletime value in git (for further info, look at man git-diff). Default value: &quot;-1&quot;.</dl>
+<dl><dd>Maximum number of files to consider when detecting renames. The value &quot;-1&quot; uses the compiletime value in git (for further info, look at man git-diff). Default value: &quot;-1&quot;.</dd></dl>
  
 
  repo.group
-<dl><dd>Legacy alias for &quot;section&quot;. This option is deprecated and will not be supported in cgit-1.0.</dl>
+<dl><dd>Legacy alias for &quot;section&quot;. This option is deprecated and will not be supported in cgit-1.0.</dd></dl>
  
 
  repository-sort
-<dl><dd>The way in which repositories in each section are sorted. Valid values are &quot;name&quot; for sorting by the repo name or &quot;age&quot; for sorting by the most recently updated repository. Default value: &quot;name&quot;. See also: section, case-sensitive-sort, section-sort.</dl>
+<dl><dd>The way in which repositories in each section are sorted. Valid values are &quot;name&quot; for sorting by the repo name or &quot;age&quot; for sorting by the most recently updated repository. Default value: &quot;name&quot;. See also: section, case-sensitive-sort, section-sort.</dd></dl>
  
 
  robots
-<dl><dd>Text used as content for the &quot;robots&quot; meta-tag. Default value: &quot;index, nofollow&quot;.</dl>
+<dl><dd>Text used as content for the &quot;robots&quot; meta-tag. Default value: &quot;index, nofollow&quot;.</dd></dl>
  
 
  root-desc
-<dl><dd>Text printed below the heading on the repository index page. Default value: &quot;a fast webinterface for the git dscm&quot;.</dl>
+<dl><dd>Text printed below the heading on the repository index page. Default value: &quot;a fast webinterface for the git dscm&quot;.</dd></dl>
  
 
  root-readme
-<dl><dd>The content of the file specified with this option will be included verbatim below the &quot;about&quot; link on the repository index page. Default value: none.</dl>
+<dl><dd>The content of the file specified with this option will be included verbatim below the &quot;about&quot; link on the repository index page. Default value: none.</dd></dl>
  
 
  root-title
-<dl><dd>Text printed as heading on the repository index page. Default value: &quot;Git Repository Browser&quot;.</dl>
+<dl><dd>Text printed as heading on the repository index page. Default value: &quot;Git Repository Browser&quot;.</dd></dl>
  
 
  scan-hidden-path
-<dl><dd>If set to &quot;1&quot; and scan-path is enabled, scan-path will recurse into directories whose name starts with a period (<i>.</i>). Otherwise, scan-path will stay away from such directories (considered as &quot;hidden&quot;). Note that this does not apply to the &quot;.git&quot; directory in non-bare repos. This must be defined prior to scan-path. Default value: 0. See also: scan-path.</dl>
+<dl><dd>If set to &quot;1&quot; and scan-path is enabled, scan-path will recurse into directories whose name starts with a period (<i>.</i>). Otherwise, scan-path will stay away from such directories (considered as &quot;hidden&quot;). Note that this does not apply to the &quot;.git&quot; directory in non-bare repos. This must be defined prior to scan-path. Default value: 0. See also: scan-path.</dd></dl>
  
 
  scan-path
-<dl><dd>A path which will be scanned for repositories. If caching is enabled, the result will be cached as a cgitrc include-file in the cache directory. If project-list has been defined prior to scan-path, scan-path loads only the directories listed in the file pointed to by project-list. Be advised that only the global settings taken before the scan-path directive will be applied to each repository. Default value: none. See also: cache-scanrc-ttl, project-list, &quot;MACRO EXPANSION&quot;.</dl>
+<dl><dd>A path which will be scanned for repositories. If caching is enabled, the result will be cached as a cgitrc include-file in the cache directory. If project-list has been defined prior to scan-path, scan-path loads only the directories listed in the file pointed to by project-list. Be advised that only the global settings taken before the scan-path directive will be applied to each repository. Default value: none. See also: cache-scanrc-ttl, project-list, &quot;MACRO EXPANSION&quot;.</dd></dl>
  
 
  section
-<dl><dd>The name of the current repository section - all repositories defined after this option will inherit the current section name. Default value: none.</dl>
+<dl><dd>The name of the current repository section - all repositories defined after this option will inherit the current section name. Default value: none.</dd></dl>
  
 
  section-sort
-<dl><dd>Flag which, when set to &quot;1&quot;, will sort the sections on the repository listing by name. Set this flag to &quot;0&quot; if the order in the cgitrc file should be preserved. Default value: &quot;1&quot;. See also: section, case-sensitive-sort, repository-sort.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will sort the sections on the repository listing by name. Set this flag to &quot;0&quot; if the order in the cgitrc file should be preserved. Default value: &quot;1&quot;. See also: section, case-sensitive-sort, repository-sort.</dd></dl>
  
 
  section-from-path
-<dl><dd>A number which, if defined prior to scan-path, specifies how many path elements from each repo path to use as a default section name. If negative, cgit will discard the specified number of path elements above the repo directory. Default value: &quot;0&quot;.</dl>
+<dl><dd>A number which, if defined prior to scan-path, specifies how many path elements from each repo path to use as a default section name. If negative, cgit will discard the specified number of path elements above the repo directory. Default value: &quot;0&quot;.</dd></dl>
  
 
  side-by-side-diffs
-<dl><dd>If set to &quot;1&quot; shows side-by-side diffs instead of unidiffs per default. Default value: &quot;0&quot;.</dl>
+<dl><dd>If set to &quot;1&quot; shows side-by-side diffs instead of unidiffs per default. Default value: &quot;0&quot;.</dd></dl>
  
 
  snapshots
-<dl><dd>Text which specifies the default set of snapshot formats that cgit generates links for. The value is a space-separated list of zero or more of the values &quot;tar&quot;, &quot;tar.gz&quot;, &quot;tar.bz2&quot;, &quot;tar.xz&quot; and &quot;zip&quot;. Default value: none.</dl>
+<dl><dd>Text which specifies the default set of snapshot formats that cgit generates links for. The value is a space-separated list of zero or more of the values &quot;tar&quot;, &quot;tar.gz&quot;, &quot;tar.bz2&quot;, &quot;tar.xz&quot; and &quot;zip&quot;. Default value: none.</dd></dl>
  
 
  source-filter
-<dl><dd>Specifies a command which will be invoked to format plaintext blobs in the tree view. The command will get the blob content on its STDIN and the name of the blob as its only command line argument. The STDOUT from the command will be included verbatim as the blob contents, i.e. this can be used to implement e.g. syntax highlighting. Default value: none. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Specifies a command which will be invoked to format plaintext blobs in the tree view. The command will get the blob content on its STDIN and the name of the blob as its only command line argument. The STDOUT from the command will be included verbatim as the blob contents, i.e. this can be used to implement e.g. syntax highlighting. Default value: none. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  summary-branches
-<dl><dd>Specifies the number of branches to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dl>
+<dl><dd>Specifies the number of branches to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dd></dl>
  
 
  summary-log
-<dl><dd>Specifies the number of log entries to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dl>
+<dl><dd>Specifies the number of log entries to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dd></dl>
  
 
  summary-tags
-<dl><dd>Specifies the number of tags to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dl>
+<dl><dd>Specifies the number of tags to display in the repository &quot;summary&quot; view. Default value: &quot;10&quot;.</dd></dl>
  
 
  strict-export
-<dl><dd>Filename which, if specified, needs to be present within the repository for cgit to allow access to that repository. This can be used to emulate gitweb's EXPORT_OK and STRICT_EXPORT functionality and limit cgit's repositories to match those exported by git-daemon. This option must be defined prior to scan-path.</dl>
+<dl><dd>Filename which, if specified, needs to be present within the repository for cgit to allow access to that repository. This can be used to emulate gitweb's EXPORT_OK and STRICT_EXPORT functionality and limit cgit's repositories to match those exported by git-daemon. This option must be defined prior to scan-path.</dd></dl>
  
 
  virtual-root
-<dl><dd>Url which, if specified, will be used as root for all cgit links. It will also cause cgit to generate <i>virtual urls</i>, i.e. urls like <i>/cgit/tree/README</i> as opposed to <i>?r=cgit&amp;p=tree&amp;path=README</i>. Default value: none. NOTE: cgit has recently learned how to use PATH_INFO to achieve the same kind of virtual urls, so this option will probably be deprecated.</dl>
+<dl><dd>Url which, if specified, will be used as root for all cgit links. It will also cause cgit to generate <i>virtual urls</i>, i.e. urls like <i>/cgit/tree/README</i> as opposed to <i>?r=cgit&amp;p=tree&amp;path=README</i>. Default value: none. NOTE: cgit has recently learned how to use PATH_INFO to achieve the same kind of virtual urls, so this option will probably be deprecated.</dd></dl>
 
 <h2>Repository Settings</h2>
 
 repo.about-filter
-<dl><dd>Override the default about-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Override the default about-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  repo.branch-sort
-<dl><dd>Flag which, when set to &quot;age&quot;, enables date ordering in the branch ref list, and when set to &quot;name&quot; enables ordering by branch name. Default value: &quot;name&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;age&quot;, enables date ordering in the branch ref list, and when set to &quot;name&quot; enables ordering by branch name. Default value: &quot;name&quot;.</dd></dl>
  
 
  repo.clone-url
-<dl><dd>A list of space-separated urls which can be used to clone this repo. Default value: none. See also: &quot;MACRO EXPANSION&quot;.</dl>
+<dl><dd>A list of space-separated urls which can be used to clone this repo. Default value: none. See also: &quot;MACRO EXPANSION&quot;.</dd></dl>
  
 
  repo.commit-filter
-<dl><dd>Override the default commit-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Override the default commit-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  repo.commit-sort
-<dl><dd>Flag which, when set to &quot;date&quot;, enables strict date ordering in the commit log, and when set to &quot;topo&quot; enables strict topological ordering. If unset, the default ordering of &quot;git log&quot; is used. Default value: unset.</dl>
+<dl><dd>Flag which, when set to &quot;date&quot;, enables strict date ordering in the commit log, and when set to &quot;topo&quot; enables strict topological ordering. If unset, the default ordering of &quot;git log&quot; is used. Default value: unset.</dd></dl>
  
 
  repo.defbranch
-<dl><dd>The name of the default branch for this repository. If no such branch exists in the repository, the first branch name (when sorted) is used as default instead. Default value: branch pointed to by HEAD, or &quot;master&quot; if there is no suitable HEAD.</dl>
+<dl><dd>The name of the default branch for this repository. If no such branch exists in the repository, the first branch name (when sorted) is used as default instead. Default value: branch pointed to by HEAD, or &quot;master&quot; if there is no suitable HEAD.</dd></dl>
  
 
  repo.desc
-<dl><dd>The value to show as repository description. Default value: none.</dl>
+<dl><dd>The value to show as repository description. Default value: none.</dd></dl>
  
 
  repo.homepage
-<dl><dd>The value to show as repository homepage. Default value: none.</dl>
+<dl><dd>The value to show as repository homepage. Default value: none.</dd></dl>
  
 
  repo.email-filter
-<dl><dd>Override the default email-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Override the default email-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  repo.enable-commit-graph
-<dl><dd>A flag which can be used to disable the global setting 'enable-commit-graph'. Default value: none.</dl>
+<dl><dd>A flag which can be used to disable the global setting 'enable-commit-graph'. Default value: none.</dd></dl>
  
 
  repo.enable-log-filecount
-<dl><dd>A flag which can be used to disable the global setting 'enable-log-filecount'. Default value: none.</dl>
+<dl><dd>A flag which can be used to disable the global setting 'enable-log-filecount'. Default value: none.</dd></dl>
  
 
  repo.enable-log-linecount
-<dl><dd>A flag which can be used to disable the global setting 'enable-log-linecount'. Default value: none.</dl>
+<dl><dd>A flag which can be used to disable the global setting 'enable-log-linecount'. Default value: none.</dd></dl>
  
 
  repo.enable-remote-branches
-<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display remote branches in the summary and refs views. Default value: &lt;enable-remote-branches&gt;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, will make cgit display remote branches in the summary and refs views. Default value: &lt;enable-remote-branches&gt;.</dd></dl>
  
 
  repo.enable-subject-links
-<dl><dd>A flag which can be used to override the global setting 'enable-subject-links'. Default value: none.</dl>
+<dl><dd>A flag which can be used to override the global setting 'enable-subject-links'. Default value: none.</dd></dl>
  
 
  repo.enable-html-serving
-<dl><dd>A flag which can be used to override the global setting enable-html-serving. Default value: none.</dl>
+<dl><dd>A flag which can be used to override the global setting enable-html-serving. Default value: none.</dd></dl>
  
 
  repo.hide
-<dl><dd>Flag which, when set to &quot;1&quot;, hides the repository from the repository index. The repository can still be accessed by providing a direct path. Default value: &quot;0&quot;. See also: &quot;repo.ignore&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, hides the repository from the repository index. The repository can still be accessed by providing a direct path. Default value: &quot;0&quot;. See also: &quot;repo.ignore&quot;.</dd></dl>
  
 
  repo.ignore
-<dl><dd>Flag which, when set to &quot;1&quot;, ignores the repository. The repository is not shown in the index and cannot be accessed by providing a direct path. Default value: &quot;0&quot;. See also: &quot;repo.hide&quot;.</dl>
+<dl><dd>Flag which, when set to &quot;1&quot;, ignores the repository. The repository is not shown in the index and cannot be accessed by providing a direct path. Default value: &quot;0&quot;. See also: &quot;repo.hide&quot;.</dd></dl>
  
 
  repo.logo
-<dl><dd>Url which specifies the source of an image which will be used as a logo on this repo's pages. Default value: global logo.</dl>
+<dl><dd>Url which specifies the source of an image which will be used as a logo on this repo's pages. Default value: global logo.</dd></dl>
  
 
  repo.logo-link
-<dl><dd>Url loaded when clicking on the cgit logo image. If unspecified the calculated url of the repository index page will be used. Default value: global logo-link.</dl>
+<dl><dd>Url loaded when clicking on the cgit logo image. If unspecified the calculated url of the repository index page will be used. Default value: global logo-link.</dd></dl>
  
 
  repo.owner-filter
-<dl><dd>Override the default owner-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Override the default owner-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  repo.module-link
-<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule is printed in a directory listing. The arguments for the formatstring are the path and SHA1 of the submodule commit. Default value: &lt;module-link&gt;</dl>
+<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule is printed in a directory listing. The arguments for the formatstring are the path and SHA1 of the submodule commit. Default value: &lt;module-link&gt;</dd></dl>
  
 
  repo.module-link.&lt;path&gt;
-<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule with the specified subdirectory path is printed in a directory listing. The only argument for the formatstring is the SHA1 of the submodule commit. Default value: none.</dl>
+<dl><dd>Text which will be used as the formatstring for a hyperlink when a submodule with the specified subdirectory path is printed in a directory listing. The only argument for the formatstring is the SHA1 of the submodule commit. Default value: none.</dd></dl>
  
 
  repo.max-stats
-<dl><dd>Override the default maximum statistics period. Valid values are equal to the values specified for the global &quot;max-stats&quot; setting. Default value: none.</dl>
+<dl><dd>Override the default maximum statistics period. Valid values are equal to the values specified for the global &quot;max-stats&quot; setting. Default value: none.</dd></dl>
  
 
  repo.name
-<dl><dd>The value to show as repository name. Default value: &lt;repo.url&gt;.</dl>
+<dl><dd>The value to show as repository name. Default value: &lt;repo.url&gt;.</dd></dl>
  
 
  repo.owner
-<dl><dd>A value used to identify the owner of the repository. Default value: none.</dl>
+<dl><dd>A value used to identify the owner of the repository. Default value: none.</dd></dl>
  
 
  repo.path
-<dl><dd>An absolute path to the repository directory. For non-bare repositories this is the .git-directory. Default value: none.</dl>
+<dl><dd>An absolute path to the repository directory. For non-bare repositories this is the .git-directory. Default value: none.</dd></dl>
  
 
  repo.readme
-<dl><dd>A path (relative to &lt;repo.path&gt;) which specifies a file to include verbatim as the &quot;About&quot; page for this repo. You may also specify a git refspec by head or by hash by prepending the refspec followed by a colon. For example, &quot;master:docs/readme.mkd&quot;. If the value begins with a colon, i.e. &quot;:docs/readme.rst&quot;, the default branch of the repository will be used. Sharing any file will expose that entire directory tree to the &quot;/about/PATH&quot; endpoints, so be sure that there are no non-public files located in the same directory as the readme file. Default value: &lt;readme&gt;.</dl>
+<dl><dd>A path (relative to &lt;repo.path&gt;) which specifies a file to include verbatim as the &quot;About&quot; page for this repo. You may also specify a git refspec by head or by hash by prepending the refspec followed by a colon. For example, &quot;master:docs/readme.mkd&quot;. If the value begins with a colon, i.e. &quot;:docs/readme.rst&quot;, the default branch of the repository will be used. Sharing any file will expose that entire directory tree to the &quot;/about/PATH&quot; endpoints, so be sure that there are no non-public files located in the same directory as the readme file. Default value: &lt;readme&gt;.</dd></dl>
  
 
  repo.snapshots
-<dl><dd>A mask of snapshot formats for this repo that cgit generates links for, restricted by the global &quot;snapshots&quot; setting. Default value: &lt;snapshots&gt;.</dl>
+<dl><dd>A mask of snapshot formats for this repo that cgit generates links for, restricted by the global &quot;snapshots&quot; setting. Default value: &lt;snapshots&gt;.</dd></dl>
  
 
  repo.section
-<dl><dd>Override the current section name for this repository. Default value: none.</dl>
+<dl><dd>Override the current section name for this repository. Default value: none.</dd></dl>
  
 
  repo.source-filter
-<dl><dd>Override the default source-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dl>
+<dl><dd>Override the default source-filter. Default value: none. See also: &quot;enable-filter-overrides&quot;. See also: &quot;FILTER API&quot;.</dd></dl>
  
 
  repo.url
-<dl><dd>The relative url used to access the repository. This must be the first setting specified for each repo. Default value: none.</dl>
+<dl><dd>The relative url used to access the repository. This must be the first setting specified for each repo. Default value: none.</dd></dl>
 
 <h2>Repository-Specific Cgitrc File</h2>
 
@@ -479,86 +478,83 @@ When the option &quot;scan-path&quot; is used to auto-discover git repositories,
 By default, filters are separate processes that are executed each time they are needed. Alternative technologies may be used by prefixing the filter specification with the relevant string; available values are: 
 
  <i>exec:</i>
-<dl><dd>The default &quot;one process per filter&quot; mode.</dl>
+<dl><dd>The default &quot;one process per filter&quot; mode.</dd></dl>
  
 
  <i>lua:</i>
-<dl><dd>Executes the script using a built-in Lua interpreter. The script is loaded once per execution of cgit, and may be called multiple times during cgit's lifetime, making it a good choice for repeated filters such as the <i>email filter</i>. It responds to three functions:</dl>
+<dl><dd>Executes the script using a built-in Lua interpreter. The script is loaded once per execution of cgit, and may be called multiple times during cgit's lifetime, making it a good choice for repeated filters such as the <i>email filter</i>. It responds to three functions:</dd></dl>
  
 
  <i>filter_open(argument1, argument2, argument3, ...)</i>
-<dl><dd>This is called upon activation of the filter for a particular set of data.</dl>
+<dl><dd>This is called upon activation of the filter for a particular set of data.</dd></dl>
  
 
  <i>filter_write(buffer)</i>
-<dl><dd>This is called whenever cgit writes data to the webpage.</dl>
+<dl><dd>This is called whenever cgit writes data to the webpage.</dd></dl>
  
 
  <i>filter_close()</i>
 <dl><dd>This is called when the current filtering operation is completed. It must return an integer value. Usually 0 indicates success. 
-
-<dl><dd><pre>Additionally, cgit exposes to the Lua the following built-in functions:</pre></dl></dl>
+</dd><dl><dd><pre>Additionally, cgit exposes to the Lua the following built-in functions:</pre></dd></dl></dl>
  
 
  <i>html(str)</i>
-<dl><dd>Writes <i>str</i> to the webpage.</dl>
+<dl><dd>Writes <i>str</i> to the webpage.</dd></dl>
  
 
  <i>html_txt(str)</i>
-<dl><dd>HTML escapes and writes <i>str</i> to the webpage.</dl>
+<dl><dd>HTML escapes and writes <i>str</i> to the webpage.</dd></dl>
  
 
  <i>html_attr(str)</i>
-<dl><dd>HTML escapes for an attribute and writes &quot;str' to the webpage.</dl>
+<dl><dd>HTML escapes for an attribute and writes &quot;str' to the webpage.</dd></dl>
  
 
  <i>html_url_path(str)</i>
-<dl><dd>URL escapes for a path and writes <i>str</i> to the webpage.</dl>
+<dl><dd>URL escapes for a path and writes <i>str</i> to the webpage.</dd></dl>
  
 
  <i>html_url_arg(str)</i>
-<dl><dd>URL escapes for an argument and writes <i>str</i> to the webpage.</dl>
+<dl><dd>URL escapes for an argument and writes <i>str</i> to the webpage.</dd></dl>
  
 
  <i>html_include(file)</i>
-<dl><dd>Includes <i>file</i> in webpage.</dl>
+<dl><dd>Includes <i>file</i> in webpage.</dd></dl>
  
 
  Parameters are provided to filters as follows. 
 
  about filter
-<dl><dd>This filter is given a single parameter: the filename of the source file to filter. The filter can use the filename to determine (for example) the type of syntax to follow when formatting the readme file. The about text that is to be filtered is available on standard input and the filtered text is expected on standard output.</dl>
+<dl><dd>This filter is given a single parameter: the filename of the source file to filter. The filter can use the filename to determine (for example) the type of syntax to follow when formatting the readme file. The about text that is to be filtered is available on standard input and the filtered text is expected on standard output.</dd></dl>
  
 
  commit filter
-<dl><dd>This filter is given no arguments. The commit message text that is to be filtered is available on standard input and the filtered text is expected on standard output.</dl>
+<dl><dd>This filter is given no arguments. The commit message text that is to be filtered is available on standard input and the filtered text is expected on standard output.</dd></dl>
  
 
  email filter
-<dl><dd>This filter is given two parameters: the email address of the relevant author and a string indicating the originating page. The filter will then receive the text string to format on standard input and is expected to write to standard output the formatted text to be included in the page.</dl>
+<dl><dd>This filter is given two parameters: the email address of the relevant author and a string indicating the originating page. The filter will then receive the text string to format on standard input and is expected to write to standard output the formatted text to be included in the page.</dd></dl>
  
 
  owner filter
-<dl><dd>This filter is given no arguments. The owner text is available on standard input and the filter is expected to write to standard output. The output is included in the Owner column.</dl>
+<dl><dd>This filter is given no arguments. The owner text is available on standard input and the filter is expected to write to standard output. The output is included in the Owner column.</dd></dl>
  
 
  source filter
-<dl><dd>This filter is given a single parameter: the filename of the source file to filter. The filter can use the filename to determine (for example) the syntax highlighting mode. The contents of the source file that is to be filtered is available on standard input and the filtered contents is expected on standard output.</dl>
+<dl><dd>This filter is given a single parameter: the filename of the source file to filter. The filter can use the filename to determine (for example) the syntax highlighting mode. The contents of the source file that is to be filtered is available on standard input and the filtered contents is expected on standard output.</dd></dl>
  
 
  auth filter
 <dl><dd>The authentication filter receives 12 parameters: 
-
-<dl><dd>&bull; filter action, explained below, which specifies which action the filter is called for</dl><dl><dd>&bull; http cookie</dl><dl><dd>&bull; http method</dl><dl><dd>&bull; http referer</dl><dl><dd>&bull; http path</dl><dl><dd>&bull; http https flag</dl><dl><dd>&bull; cgit repo</dl><dl><dd>&bull; cgit page</dl><dl><dd>&bull; cgit url</dl><dl><dd>&bull; cgit login url When the filter action is &quot;body&quot;, this filter must write to output the HTML for displaying the login form, which POSTs to the login url. When the filter action is &quot;authenticate-cookie&quot;, this filter must validate the http cookie and return a 0 if it is invalid or 1 if it is invalid, in the exit code / close function. If the filter action is &quot;authenticate-post&quot;, this filter receives POST'd parameters on standard input, and should write a complete CGI response, preferably with a 302 redirect, and write to output one or more &quot;Set-Cookie&quot; HTTP headers, each followed by a newline. 
-
-<dl><dd><pre>Please see `filters/simple-authentication.lua` for a clear example
-script that may be modified.</pre></dl></dl>
+</dd><dl><dd>&bull; filter action, explained below, which specifies which action the filter is called for</dd></dl><dl><dd>&bull; http cookie</dd></dl><dl><dd>&bull; http method</dd></dl><dl><dd>&bull; http referer</dd></dl><dl><dd>&bull; http path</dd></dl><dl><dd>&bull; http https flag</dd></dl><dl><dd>&bull; cgit repo</dd></dl><dl><dd>&bull; cgit page</dd></dl><dl><dd>&bull; cgit url</dd></dl><dl><dd>&bull; cgit login url When the filter action is &quot;body&quot;, this filter must write to output the HTML for displaying the login form, which POSTs to the login url. When the filter action is &quot;authenticate-cookie&quot;, this filter must validate the http cookie and return a 0 if it is invalid or 1 if it is invalid, in the exit code / close function. If the filter action is &quot;authenticate-post&quot;, this filter receives POST'd parameters on standard input, and should write a complete CGI response, preferably with a 302 redirect, and write to output one or more &quot;Set-Cookie&quot; HTTP headers, each followed by a newline. 
+</dd><dl><dd><pre>Please see `filters/simple-authentication.lua` for a clear example
+script that may be modified.</pre></dd></dl></dl>
 </dl>
  
 
  All filters are handed the following environment variables: 
 
-<dl><dd>&bull; CGIT_REPO_URL (from repo.url)</dl><dl><dd>&bull; CGIT_REPO_NAME (from repo.name)</dl><dl><dd>&bull; CGIT_REPO_PATH (from repo.path)</dl><dl><dd>&bull; CGIT_REPO_OWNER (from repo.owner)</dl><dl><dd>&bull; CGIT_REPO_DEFBRANCH (from repo.defbranch)</dl><dl><dd>&bull; CGIT_REPO_SECTION (from repo.section)</dl><dl><dd>&bull; CGIT_REPO_CLONE_URL (from repo.clone-url)</dl>
+<dl><dd>&bull; CGIT_REPO_URL (from repo.url)</dd></dl><dl><dd>&bull; CGIT_REPO_NAME (from repo.name)</dd></dl><dl><dd>&bull; CGIT_REPO_PATH (from repo.path)</dd></dl><dl><dd>&bull; CGIT_REPO_OWNER (from repo.owner)</dd></dl><dl><dd>&bull; CGIT_REPO_DEFBRANCH (from repo.defbranch)</dd></dl><dl><dd>&bull; CGIT_REPO_SECTION (from repo.section)</dd></dl><dl><dd>&bull; CGIT_REPO_CLONE_URL (from repo.clone-url)</dd></dl>
  
 
  If a setting is not defined for a repository and the corresponding global setting is also not defined (if applicable), then the corresponding environment variable will be unset.
@@ -567,19 +563,19 @@ script that may be modified.</pre></dl></dl>
 
 The following cgitrc options support a simple macro expansion feature, where tokens prefixed with &quot;$&quot; are replaced with the value of a similarly named environment variable: 
 
-<dl><dd>&bull; cache-root</dl><dl><dd>&bull; include</dl><dl><dd>&bull; project-list</dl><dl><dd>&bull; scan-path</dl>
+<dl><dd>&bull; cache-root</dd></dl><dl><dd>&bull; include</dd></dl><dl><dd>&bull; project-list</dd></dl><dl><dd>&bull; scan-path</dd></dl>
  
 
  Macro expansion will also happen on the content of $CGIT_CONFIG, if defined. 
 
  One usage of this feature is virtual hosting, which in its simplest form can be accomplished by adding the following line to /etc/cgitrc: 
 
-<dl><dd><pre>include=/etc/cgitrc.d/$HTTP_HOST</pre></dl>
+<dl><dd><pre>include=/etc/cgitrc.d/$HTTP_HOST</pre></dd></dl>
  
 
  The following options are expanded during request processing, and support the environment variables defined in &quot;FILTER API&quot;: 
 
-<dl><dd>&bull; clone-url</dl><dl><dd>&bull; repo.clone-url</dl>
+<dl><dd>&bull; clone-url</dd></dl><dl><dd>&bull; repo.clone-url</dd></dl>
 
 <h2>Cache</h2>
 
@@ -707,12 +703,12 @@ repo.snapshots=0
 # Disable line-counts for this repo
 repo.enable-log-linecount=0
 # Restrict the max statistics period for this repo
-repo.max-stats=month</pre></dl>
+repo.max-stats=month</pre></dd></dl>
 
 <h2>Bugs</h2>
 
 Comments currently cannot appear on the same line as a setting; the comment will be included as part of the value. E.g. this line:
-<dl><dd><pre>robots=index # allow indexing</pre></dl>
+<dl><dd><pre>robots=index # allow indexing</pre></dd></dl>
  will generate the following html element: <pre><code>&lt;meta name='robots' content='index  # allow indexing'/&gt;</code></pre>
 
 <h2>Author</h2>

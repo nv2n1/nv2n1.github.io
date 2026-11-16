@@ -19,8 +19,8 @@ description: "fclose – close a stream"
 <p> Upon successful completion, 0 is returned. Otherwise, <code>EOF</code> is returned and <i>errno</i> is set to indicate the error. In either case, any further access (including another call to <code>fclose</code>()) to the stream results in undefined behavior.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The file descriptor underlying <i>stream</i> is not valid.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The file descriptor underlying <i>stream</i> is not valid.</dd></dl>
 <p> The <code>fclose</code>() function may also fail and set <i>errno</i> for any of the errors specified for the routines <code><a href="/docs/linux/man/2-close/">close</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), or <code><a href="/docs/linux/man/3-fflush/">fflush</a></code>(3).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

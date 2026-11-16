@@ -11,7 +11,6 @@ description: "sc::PowellUpdate –"
 <p> The <code>PowellUpdate</code> class is used to specify a Powell hessian update.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;update.h&gt;</code></pre>
 <p> Inherits <code>sc::HessianUpdate</code>.</p>
 <h3>Public Member Functions</h3>

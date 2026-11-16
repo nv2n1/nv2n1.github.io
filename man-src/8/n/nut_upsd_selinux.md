@@ -95,8 +95,8 @@ description: "nut_upsd_selinux – Security Enhanced Linux Policy for the nut_up
 <p> <code>nut_upsdrvctl_exec_t</code> </p>
 <p> &#8211; Set files with the nut_upsdrvctl_exec_t type, if you want to transition an executable to the nut_upsdrvctl_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/upsdrvctl, /usr/sbin/upsdrvctl, /usr/sbin/blazer_usb </p>
+<dt>Paths:</dt>
+<dd>/sbin/upsdrvctl, /usr/sbin/upsdrvctl, /usr/sbin/blazer_usb </dd>
 </dl>
 <p> <code>nut_upsdrvctl_tmp_t</code> </p>
 <p> &#8211; Set files with the nut_upsdrvctl_tmp_t type, if you want to store nut upsdrvctl temporary files in the /tmp directories. </p>

@@ -16,38 +16,38 @@ description: "bcmxcp – Driver for UPSes supporting the serial BCM/XCP protocol
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5). </p>
 <p> <code>shutdown_delay=</code><i>delay</i></p>
 <dl>
-<dd>The number of seconds that the UPS should wait between receiving the shutdown command (upsdrvctl shutdown) and actually shutting off.</dl>
+<dd>The number of seconds that the UPS should wait between receiving the shutdown command (upsdrvctl shutdown) and actually shutting off.</dd></dl>
 <p> <code>baud_rate=</code><i>rate</i></p>
 <dl>
-<dd>Communication speed for the UPS. If this is set to 9600, it tries to connect to the UPS at 9600bps. If it fails to communicate, it will go into baud-hunting. It starts at 1200 and goes up to 19200. If it succeeds, it tell you the speed it connected with. If not included in the config, it defaults to baud-hunting.</dl>
+<dd>Communication speed for the UPS. If this is set to 9600, it tries to connect to the UPS at 9600bps. If it fails to communicate, it will go into baud-hunting. It starts at 1200 and goes up to 19200. If it succeeds, it tell you the speed it connected with. If not included in the config, it defaults to baud-hunting.</dd></dl>
 <h2>Default Values For The Extra Arguments</h2>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code>shutdown_delay =</code> <i>120</i></dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code>baud_rate =</code> <i>none</i></dl>
 <h2>Instant Commands</h2>
 <p>This driver supports the following Instant Commands: </p>
 <p> <code>shutdown.return</code></p>
 <dl>
-<dd>Turn off the load and return when power is back.</dl>
+<dd>Turn off the load and return when power is back.</dd></dl>
 <p> <code>shutdown.stayoff</code></p>
 <dl>
-<dd>Turn off the load and remain off.</dl>
+<dd>Turn off the load and remain off.</dd></dl>
 <p> <code>test.battery.start</code></p>
 <dl>
-<dd>Start a battery test.</dl>
+<dd>Start a battery test.</dd></dl>
 <p> <code>outlet.n.shutdown.return</code></p>
 <dl>
-<dd>Turn off the load on outlet <i>n</i> and return when power is back. (<i>n</i> is the outlet number reported by the upsc command)</dl>
+<dd>Turn off the load on outlet <i>n</i> and return when power is back. (<i>n</i> is the outlet number reported by the upsc command)</dd></dl>
 <h2>Todo List</h2>
 <p>Report UPS statistics information</p>
 <dl>
-<dd>BCM/XCP supports reporting of UPS statistics data.</dl>
+<dd>BCM/XCP supports reporting of UPS statistics data.</dd></dl>
 <p> Change settings</p>
 <dl>
-<dd>Access the config register to change settings.</dl>
+<dd>Access the config register to change settings.</dd></dl>
 <h2>Bugs</h2>
 <p>None known.</p>
 <h2>Author</h2>

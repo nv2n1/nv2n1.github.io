@@ -17,15 +17,15 @@ The <i>mailto.conf</i> file defines the local mail server and email notification
 <h2>Directives</h2>
 
 <dl><dt>Cc <i>cc-address [at] domain.com</i>
-<dd>Specifies an additional recipient for all email notifications.
-<dt>From <i>from-address [at] domain.com</i>
-<dd>Specifies the sender of email notifications.
-<dt>Sendmail <i>sendmail command and options</i>
-<dd>Specifies the sendmail command to use when sending email notifications. Only one <i>Sendmail</i> or <i>SMTPServer</i> line may be present in the <i>mailto.conf</i> file. If multiple lines are present, only the last one is used.
-<dt>SMTPServer <i>servername</i>
-<dd>Specifies a SMTP server to send email notifications to. Only one <i>Sendmail</i> or <i>SMTPServer</i> line may be present in the <i>mailto.conf</i> file. If multiple lines are present, only the last one is used.
-<dt>Subject <i>subject-prefix</i>
-<dd>Specifies a prefix string for the subject line of an email notification.</dl>
+</dt><dd>Specifies an additional recipient for all email notifications.
+</dd><dt>From <i>from-address [at] domain.com</i>
+</dt><dd>Specifies the sender of email notifications.
+</dd><dt>Sendmail <i>sendmail command and options</i>
+</dt><dd>Specifies the sendmail command to use when sending email notifications. Only one <i>Sendmail</i> or <i>SMTPServer</i> line may be present in the <i>mailto.conf</i> file. If multiple lines are present, only the last one is used.
+</dd><dt>SMTPServer <i>servername</i>
+</dt><dd>Specifies a SMTP server to send email notifications to. Only one <i>Sendmail</i> or <i>SMTPServer</i> line may be present in the <i>mailto.conf</i> file. If multiple lines are present, only the last one is used.
+</dd><dt>Subject <i>subject-prefix</i>
+</dt><dd>Specifies a prefix string for the subject line of an email notification.</dd></dl>
 
 <h2>See Also</h2>
 

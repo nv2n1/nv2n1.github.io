@@ -10,18 +10,18 @@ description: "page_cache_prev_hole – find the prev hole (not-present entry)"
 <p>page_cache_prev_hole &#8211; find the prev hole (not-present entry)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pgoff_t page_cache_prev_hole(struct address_space&nbsp;<wbr>*&nbsp;<wbr></code><i>mapping</i><code>, pgoff_t&nbsp;<wbr></code><i>index</i><code>, unsigned long&nbsp;<wbr></code><i>max_scan</i><code>);</code></dl>
+<dt> <code>pgoff_t page_cache_prev_hole(struct address_space&nbsp;<wbr>*&nbsp;<wbr></code><i>mapping</i><code>, pgoff_t&nbsp;<wbr></code><i>index</i><code>, unsigned long&nbsp;<wbr></code><i>max_scan</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>mapping</dl>
+</dd><dd>mapping</dd></dl>
 <p> <i>index</i></p>
 <dl>
-<dd>index</dl>
+<dd>index</dd></dl>
 <p> <i>max_scan</i></p>
 <dl>
-<dd>maximum range to search</dl>
+<dd>maximum range to search</dd></dl>
 <h2>Description</h2>
 <p>Search backwards in the range [max(index-max_scan+1, 0), index] for the first hole.</p>
 <h2>Return</h2>

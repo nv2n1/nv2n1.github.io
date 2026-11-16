@@ -19,7 +19,7 @@ description: "dbdsdc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DBDSDC computes the singular value decomposition (SVD) of a real
  N-by-N (upper or lower) bidiagonal matrix B:  B = U * S * VT,
@@ -38,11 +38,11 @@ description: "dbdsdc.f –"
  However, it can be slightly modified to compute singular values
  using the divide and conquer method.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  B is upper bidiagonal.
@@ -155,18 +155,18 @@ description: "dbdsdc.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 205 of file dbdsdc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

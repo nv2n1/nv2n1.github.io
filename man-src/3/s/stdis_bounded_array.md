@@ -10,10 +10,8 @@ description: "std::is_bounded_array – std::is_bounded_array"
 <p>std::is_bounded_array &#8211; std::is_bounded_array</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 20)
-
         struct is_bounded_array;</code></pre>
 <p>Checks whether T is an array type of known bound. Provides the member constant value which is equal to true, if T is an array type of known bound. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -44,13 +42,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_bounded_array_v&lt;A&gt; &lt;&lt; '

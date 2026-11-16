@@ -16,18 +16,18 @@ description: "card_eventmgr – PCSC-Lite Event Manager"
 <p> Three events are supported: card insertion, card removal and timeout on removed card. Actions are specified in a configuration file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>debug</code></p>
-<dd> Enable debugging output.</p>
-<dt>[<code>no</code>]<code>daemon</code></p>
-<dd> Runs in background if daemon or in foreground if nodaemon (default). If debug is unset, the program dettaches itself from the tty.</p>
-<dt><code>timeout=</code><i>&lt;msecs&gt;</i></p>
-<dd> Set polling timeout in milliseconds. Defaults to 1000 (1 second).</p>
-<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></p>
-<dd> Sets de configuration file. Default value is <i>/etc/pam_pkcs11/card_eventmgr.conf</i>.</p>
-<dt><code>pidfile=</code><i>&lt;pidfile&gt;</i></p>
-<dd> Store the <code>card_eventmgr</code> process ID (pid) in the file <i>pidfile</i>.</p>
-<dt><code>kill</code></p>
-<dd> Read a process id from <i>pidfile</i> and kill that process. You must use the argument <code>pidfile=</code><i>&lt;pidfile&gt;</i> to use <code>kill</code>.</dl>
+<dt><code>debug</code></dt>
+<dd> Enable debugging output.</dd>
+<dt>[<code>no</code>]<code>daemon</code></dt>
+<dd> Runs in background if daemon or in foreground if nodaemon (default). If debug is unset, the program dettaches itself from the tty.</dd>
+<dt><code>timeout=</code><i>&lt;msecs&gt;</i></dt>
+<dd> Set polling timeout in milliseconds. Defaults to 1000 (1 second).</dd>
+<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></dt>
+<dd> Sets de configuration file. Default value is <i>/etc/pam_pkcs11/card_eventmgr.conf</i>.</dd>
+<dt><code>pidfile=</code><i>&lt;pidfile&gt;</i></dt>
+<dd> Store the <code>card_eventmgr</code> process ID (pid) in the file <i>pidfile</i>.</dd>
+<dt><code>kill</code></dt>
+<dd> Read a process id from <i>pidfile</i> and kill that process. You must use the argument <code>pidfile=</code><i>&lt;pidfile&gt;</i> to use <code>kill</code>.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/pam_pkcs11/card_eventmgr.conf</i></p>
 <h2>EXAMPLES</h2>

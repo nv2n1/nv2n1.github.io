@@ -11,9 +11,7 @@ std::variant - std::variant
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;variant&gt;
-
 template &lt;class... Types&gt;    (since C++17)
-
 class variant;</code></pre> 
 The class template std::variant represents a type-safe union. An instance of std::variant at any given time either holds a value of one of its alternative types, or in the case of error - no value (this state is hard to achieve, see valueless_by_exception). 
 As with unions, if a variant holds a value of some object type T, the object representation of T is allocated directly within the object representation of the variant itself. Variant is not allowed to allocate additional (dynamic) memory. 
@@ -144,12 +142,9 @@ LWG_2901 C++17 specialization of std::uses_allocator provided, but variant can't
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;variant&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cassert&gt;
 int main()
-
 {
     std::variant&lt;int, float&gt; v, w;
     v = 12; // v contains int
@@ -158,7 +153,6 @@ int main()
     w = std::get&lt;0&gt;(v); // same effect as the previous line
     w = v;              // same effect as the previous line
     //  std::get&lt;double&gt;(v); // error: no double in [int, float]
-
     //  std::get&lt;3&gt;(v);      // error: valid index values are 0 and 1
     try {
         std::get&lt;float&gt;(w); // w contains int, not float: will throw

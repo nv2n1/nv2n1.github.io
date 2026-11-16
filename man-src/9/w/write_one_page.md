@@ -14,10 +14,10 @@ description: "write_one_page – write out a single page and optionally wait on 
 <p><i>page</i></p>
 <dl>
 <dd>
-<dd>the page to write</dl>
+</dd><dd>the page to write</dd></dl>
 <p> <i>wait</i></p>
 <dl>
-<dd>if true, wait on writeout</dl>
+<dd>if true, wait on writeout</dd></dl>
 <h2>Description</h2>
 <p>The page must be locked by the caller and will be unlocked upon return. </p>
 <p> <code>write_one_page</code> returns a negative error code if I/O failed.</p>

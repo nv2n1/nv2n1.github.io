@@ -15,7 +15,7 @@ unregister_filesystem - unregister a file system
 <h2>Arguments</h2>
 
 <i>fs</i>
-<dl><dd><dd>filesystem to unregister</dl>
+<dl><dd></dd><dd>filesystem to unregister</dd></dl>
 
 <h2>Description</h2>
 

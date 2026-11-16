@@ -24,86 +24,70 @@ description: "dnsdist – tool to balance DNS queries over downstream servers"
 <p> The goal for dnsdist is to remain simple. If more powerful loadbalancing is required, dedicated hardware or software is recommended. Linux Virtual Server for example is often mentioned.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a,&#8211;acl </code>NETMASK</p>
-<dd> Add NETMASK to the ACL.</p>
+<dt><code>-a,&#8211;acl </code>NETMASK</dt>
+<dd> Add NETMASK to the ACL.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-C,&#8211;config </code>FILE</p>
-<dd> Load configuration from FILE.</p>
+</dl>
+<dt><code>-C,&#8211;config </code>FILE</dt>
+<dd> Load configuration from FILE.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;check-config</code></p>
-<dd> Test the configuration file (which may be set with &#8211;config or -C) for errors. dnsdist will show the errors and exit with a non-zero exit-code when errors are found.</p>
+</dl>
+<dt><code>&#8211;check-config</code></dt>
+<dd> Test the configuration file (which may be set with &#8211;config or -C) for errors. dnsdist will show the errors and exit with a non-zero exit-code when errors are found.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-c,&#8211;client [</code>ADDRESS[:PORT]]</p>
-<dd> Operate as a client, connect to dnsdist. This will read the dnsdist configuration for the controlSocket statement and connect to it. When ADDRESS (with optional PORT) is set, dnsdist will connect to that instead.</p>
+</dl>
+<dt><code>-c,&#8211;client [</code>ADDRESS[:PORT]]</dt>
+<dd> Operate as a client, connect to dnsdist. This will read the dnsdist configuration for the controlSocket statement and connect to it. When ADDRESS (with optional PORT) is set, dnsdist will connect to that instead.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-k,&#8211;setkey </code>KEY</p>
-<dd> When operating as a client(-c, &#8211;client), use KEY as shared secret to connect to dnsdist. This should be the same key that is used on the server (set with setKey()). Note that this will leak the key into your shell&#8217;s history. Only available when dnsdist is compiled with libsodium support.</p>
+</dl>
+<dt><code>-k,&#8211;setkey </code>KEY</dt>
+<dd> When operating as a client(-c, &#8211;client), use KEY as shared secret to connect to dnsdist. This should be the same key that is used on the server (set with setKey()). Note that this will leak the key into your shell&#8217;s history. Only available when dnsdist is compiled with libsodium support.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-d,&#8211;daemon</code></p>
-<dd> Operate as a daemon.</p>
+</dl>
+<dt><code>-d,&#8211;daemon</code></dt>
+<dd> Operate as a daemon.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-e,&#8211;execute </code>CMD</p>
-<dd> Connect to dnsdist and execute CMD.</p>
+</dl>
+<dt><code>-e,&#8211;execute </code>CMD</dt>
+<dd> Connect to dnsdist and execute CMD.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Display a helpful message and exit.</p>
+</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display a helpful message and exit.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-l,&#8211;local </code>ADDRESS</p>
-<dd> Bind to ADDRESS, Supply as many addresses (using multiple &#8211;local statements) to listen on as required. Specify IPv4 as 0.0.0.0:53 and IPv6 as [::]:53.</p>
+</dl>
+<dt><code>-l,&#8211;local </code>ADDRESS</dt>
+<dd> Bind to ADDRESS, Supply as many addresses (using multiple &#8211;local statements) to listen on as required. Specify IPv4 as 0.0.0.0:53 and IPv6 as [::]:53.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;supervised</code></p>
-<dd> Run in foreground, but do not spawn a console. Use this switch to run dnsdist inside a supervisor (use with e.g. systemd and daemontools).</p>
+</dl>
+<dt><code>&#8211;supervised</code></dt>
+<dd> Run in foreground, but do not spawn a console. Use this switch to run dnsdist inside a supervisor (use with e.g. systemd and daemontools).</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;disable-syslog</code></p>
-<dd> Disable logging to syslog. Use this when running inside a supervisor that handles logging (like systemd). Do not use in combination with &#8211;daemon.</p>
+</dl>
+<dt><code>&#8211;disable-syslog</code></dt>
+<dd> Disable logging to syslog. Use this when running inside a supervisor that handles logging (like systemd). Do not use in combination with &#8211;daemon.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-p,&#8211;pidfile </code>FILE</p>
-<dd> Write a pidfile to FILE, works only with &#8211;daemon.</p>
+</dl>
+<dt><code>-p,&#8211;pidfile </code>FILE</dt>
+<dd> Write a pidfile to FILE, works only with &#8211;daemon.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-u,&#8211;uid </code>UID</p>
-<dd> Change the process user to UID after binding sockets. UID can be a name or number.</p>
+</dl>
+<dt><code>-u,&#8211;uid </code>UID</dt>
+<dd> Change the process user to UID after binding sockets. UID can be a name or number.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-g,&#8211;gid </code>GID</p>
-<dd> Change the process group to GID after binding sockets. GID Can be a name or number.</p>
+</dl>
+<dt><code>-g,&#8211;gid </code>GID</dt>
+<dd> Change the process group to GID after binding sockets. GID Can be a name or number.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-V,&#8211;version</code></p>
-<dd> Show the dnsdist version and exit.</p>
+</dl>
+<dt><code>-V,&#8211;version</code></dt>
+<dd> Show the dnsdist version and exit.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>ADDRESS</code></p>
-<dd> Any number of downstream DNS servers, in the same syntax as used with &#8211;local. If the port is not specified, 53 is used.</p>
+</dl>
+<dt><code>ADDRESS</code></dt>
+<dd> Any number of downstream DNS servers, in the same syntax as used with &#8211;local. If the port is not specified, 53 is used.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>BUGS</h2>
 <p> Right now, the TCP support has some rather arbitrary limits.</p>

@@ -15,32 +15,32 @@ description: "airdriver-ng – automatically install/uninstall and patch drivers
 <p> <code>airdriver-ng</code> is a script that provides status information about the wireless drivers on your system plus the ability to load and unload the drivers. Additionally, airdriver-ng allows you to install and uninstall drivers complete with the patches required for monitor and injection modes. Plus a number of other functions.</p>
 <h2>COMMAND</h2>
 <dl>
-<dt><i>supported</i></p>
-<dd> Lists all supported drivers</p>
-<dt><i>kernel</i></p>
-<dd> Lists all in-kernel drivers</p>
-<dt><i>installed</i></p>
-<dd> Lists all installed drivers</p>
-<dt><i>loaded</i></p>
-<dd> Lists all loaded drivers</p>
-<dt><i>load &lt;drivernum&gt;</i></p>
-<dd> Loads a driver</p>
-<dt><i>unload &lt;drivernum&gt;</i></p>
-<dd> Unloads a driver</p>
-<dt><i>reload &lt;drivernum&gt;</i></p>
-<dd> Reloads a driver</p>
-<dt><i>install &lt;drivernum&gt;</i></p>
-<dd> Installs a driver</p>
-<dt><i>remove &lt;drivernum&gt;</i></p>
-<dd> Removes a driver</p>
-<dt><i>remove_stack &lt;num&gt;</i></p>
-<dd> Removes a stack</p>
-<dt><i>install_stack &lt;num&gt;</i></p>
-<dd> Installs a stack</p>
-<dt><i>details &lt;drivernum&gt;</i></p>
-<dd> Prints driver details</p>
-<dt><i>detect</i></p>
-<dd> Detects wireless cards</dl>
+<dt><i>supported</i></dt>
+<dd> Lists all supported drivers</dd>
+<dt><i>kernel</i></dt>
+<dd> Lists all in-kernel drivers</dd>
+<dt><i>installed</i></dt>
+<dd> Lists all installed drivers</dd>
+<dt><i>loaded</i></dt>
+<dd> Lists all loaded drivers</dd>
+<dt><i>load &lt;drivernum&gt;</i></dt>
+<dd> Loads a driver</dd>
+<dt><i>unload &lt;drivernum&gt;</i></dt>
+<dd> Unloads a driver</dd>
+<dt><i>reload &lt;drivernum&gt;</i></dt>
+<dd> Reloads a driver</dd>
+<dt><i>install &lt;drivernum&gt;</i></dt>
+<dd> Installs a driver</dd>
+<dt><i>remove &lt;drivernum&gt;</i></dt>
+<dd> Removes a driver</dd>
+<dt><i>remove_stack &lt;num&gt;</i></dt>
+<dd> Removes a stack</dd>
+<dt><i>install_stack &lt;num&gt;</i></dt>
+<dd> Installs a stack</dd>
+<dt><i>details &lt;drivernum&gt;</i></dt>
+<dd> Prints driver details</dd>
+<dt><i>detect</i></dt>
+<dd> Detects wireless cards</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

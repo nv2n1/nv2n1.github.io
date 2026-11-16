@@ -16,58 +16,58 @@ description: "align_image_stack – Align overlapping images for HDR or focus st
 <h2>OPTIONS</h2>
 <p> Modes of operation:</p>
 <dl>
-<dt><code>-p</code> <i>file</i></p>
-<dd> Output .pto file (useful for debugging, or further refinement)</p>
-<dt><code>-a</code> <i>prefix</i></p>
-<dd> Output aligned images as prefix_xxxx.tif</p>
-<dt><code>-o</code> <i>output</i></p>
-<dd> Align images and merge them to <font SIZE="-1">HDR,</font> generate output.hdr</dl>
+<dt><code>-p</code> <i>file</i></dt>
+<dd> Output .pto file (useful for debugging, or further refinement)</dd>
+<dt><code>-a</code> <i>prefix</i></dt>
+<dd> Output aligned images as prefix_xxxx.tif</dd>
+<dt><code>-o</code> <i>output</i></dt>
+<dd> Align images and merge them to <font SIZE="-1">HDR,</font> generate output.hdr</dd></dl>
 <p> Modifiers:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose, print progress messages. Repeat for higher verbosity</p>
-<dt><code>-e</code></p>
-<dd> Assume input images are full frame fish eye (default: rectilinear)</p>
-<dt><code>-t</code> <i>num</i></p>
-<dd> Remove all control points with an error higher than num pixels (default: 3)</p>
-<dt><code>&#8211;corr=num</code></p>
-<dd> Correlation threshold for identifying control points (default: 0.9)</p>
-<dt><code>-f</code> <i></i><font SIZE="-1"><i>HFOV</i></font><i></i></p>
-<dd> Approximate horizontal field of view of input images, use if <font SIZE="-1">EXIF</font> info not complete</p>
-<dt><code>-m</code></p>
-<dd> Optimize field of view for all images, except for first. Useful for aligning focus stacks with slightly different magnification.</p>
-<dt><code>-d</code></p>
-<dd> Optimize radial distortion for all images, except for first.</p>
-<dt><code>-i</code></p>
-<dd> Optimize image center shift for all images, except for first.</p>
-<dt><code>-x</code></p>
-<dd> Optimize X coordinate of camera position</p>
-<dt><code>-y</code></p>
-<dd> Optimize Y coordinate of camera position</p>
-<dt><code>-z</code></p>
-<dd> Optimize Z coordinate of camera position</p>
-<dt><code>-S</code></p>
-<dd> Assume stereo images &#8211; allow horizontal shift of control points.</p>
-<dt><code>-A</code></p>
-<dd> Align stereo window &#8211; assumes -S</p>
-<dt><code>-P</code></p>
-<dd> Align stereo window with pop-out effect &#8211; assumes -S</p>
-<dt><code>-C</code></p>
-<dd> Auto crop the image to the area covered by all images</p>
-<dt><code>-c</code> <i>num</i></p>
-<dd> Number of control points (per grid) to create between adjacent images (default: 8)</p>
-<dt><code>-l</code></p>
-<dd> Assume linear input files</p>
-<dt><code>-s</code> <i>scale</i></p>
-<dd> Scale down image by 2^scale (default: 1 [2x down-sampling])</p>
-<dt><code>-g</code> <i>gsize</i></p>
-<dd> Break image into a rectangular grid (gsize x gsize) and attempt to find num control points in each section (default: 5 [5&#215;5 grid])</p>
-<dt><code>&#8211;threads=NUM</code></p>
-<dd> Use <font SIZE="-1">NUM</font> threads</p>
-<dt><code>&#8211;gpu</code></p>
-<dd> Use <font SIZE="-1">GPU</font> for remapping</p>
-<dt><code>-h</code></p>
-<dd> Display help summary.</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose, print progress messages. Repeat for higher verbosity</dd>
+<dt><code>-e</code></dt>
+<dd> Assume input images are full frame fish eye (default: rectilinear)</dd>
+<dt><code>-t</code> <i>num</i></dt>
+<dd> Remove all control points with an error higher than num pixels (default: 3)</dd>
+<dt><code>&#8211;corr=num</code></dt>
+<dd> Correlation threshold for identifying control points (default: 0.9)</dd>
+<dt><code>-f</code> <i></i><font SIZE="-1"><i>HFOV</i></font><i></i></dt>
+<dd> Approximate horizontal field of view of input images, use if <font SIZE="-1">EXIF</font> info not complete</dd>
+<dt><code>-m</code></dt>
+<dd> Optimize field of view for all images, except for first. Useful for aligning focus stacks with slightly different magnification.</dd>
+<dt><code>-d</code></dt>
+<dd> Optimize radial distortion for all images, except for first.</dd>
+<dt><code>-i</code></dt>
+<dd> Optimize image center shift for all images, except for first.</dd>
+<dt><code>-x</code></dt>
+<dd> Optimize X coordinate of camera position</dd>
+<dt><code>-y</code></dt>
+<dd> Optimize Y coordinate of camera position</dd>
+<dt><code>-z</code></dt>
+<dd> Optimize Z coordinate of camera position</dd>
+<dt><code>-S</code></dt>
+<dd> Assume stereo images &#8211; allow horizontal shift of control points.</dd>
+<dt><code>-A</code></dt>
+<dd> Align stereo window &#8211; assumes -S</dd>
+<dt><code>-P</code></dt>
+<dd> Align stereo window with pop-out effect &#8211; assumes -S</dd>
+<dt><code>-C</code></dt>
+<dd> Auto crop the image to the area covered by all images</dd>
+<dt><code>-c</code> <i>num</i></dt>
+<dd> Number of control points (per grid) to create between adjacent images (default: 8)</dd>
+<dt><code>-l</code></dt>
+<dd> Assume linear input files</dd>
+<dt><code>-s</code> <i>scale</i></dt>
+<dd> Scale down image by 2^scale (default: 1 [2x down-sampling])</dd>
+<dt><code>-g</code> <i>gsize</i></dt>
+<dd> Break image into a rectangular grid (gsize x gsize) and attempt to find num control points in each section (default: 5 [5&#215;5 grid])</dd>
+<dt><code>&#8211;threads=NUM</code></dt>
+<dd> Use <font SIZE="-1">NUM</font> threads</dd>
+<dt><code>&#8211;gpu</code></dt>
+<dd> Use <font SIZE="-1">GPU</font> for remapping</dd>
+<dt><code>-h</code></dt>
+<dd> Display help summary.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. Stereo functionality added by Vladimir Nadvornik. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>

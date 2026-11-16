@@ -37,21 +37,13 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfloat&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cstring&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;acosh(1) = &quot; &lt;&lt; std::acosh(1) &lt;&lt; '
 '

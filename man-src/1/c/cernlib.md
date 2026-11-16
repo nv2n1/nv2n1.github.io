@@ -23,42 +23,42 @@ description: "cernlib – print CERN library dependencies"
 <p> gfortran -o myprogram myprogram.F `cernlib -safe -G Motif pawlib`</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code><i>arch</i></p>
-<dd> Specify a system architecture, e.g. Linux (default), AIX, HP-UX, etc.</p>
-<dt><code>-dy</code></p>
-<dd> Equivalent to -safe; for backwards compatibility.</p>
-<dt><code>-G </code><i>driver</i></p>
-<dd> Specify a graphics driver. The available options on Linux are X11 and Motif (the latter option will also work when the Lesstif library is present).</p>
-<dt><code>-P, -s</code></p>
-<dd> Ignored; for backwards compatibility.</p>
-<dt><code>-safe</code></p>
-<dd> Do not make any assumptions about whether the CERN libraries should be linked against dynamically or statically. (The default behavior, if this flag is not used, is to link them statically.)</p>
-<dt><code>-u</code></p>
-<dd> Do not include architecture-specific libraries in the output.</p>
-<dt><code>-v </code><i>version</i></p>
-<dd> Specify version of $CERN_LEVEL. This is meaningless unless you have installed an upstream version of CERNLIB (i.e. not packaged by Debian); see the file <i>/usr/share/doc/cernlib-base/README.Debian</i>.</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show a summary of options.</p>
-<dt><code>&#8212;</code></p>
-<dd> Tell cernlib that this marks the end of cernlib-specific flags, and all following arguments are to be parsed as described in the <code>LIBRARIES</code> section below. If &#8212; is not given, the first word parsed as a library name will be the first word not starting with a hyphen &quot;-&quot; that is not an argument to a preceding cernlib flag.</dl>
+<dt><code>-a </code><i>arch</i></dt>
+<dd> Specify a system architecture, e.g. Linux (default), AIX, HP-UX, etc.</dd>
+<dt><code>-dy</code></dt>
+<dd> Equivalent to -safe; for backwards compatibility.</dd>
+<dt><code>-G </code><i>driver</i></dt>
+<dd> Specify a graphics driver. The available options on Linux are X11 and Motif (the latter option will also work when the Lesstif library is present).</dd>
+<dt><code>-P, -s</code></dt>
+<dd> Ignored; for backwards compatibility.</dd>
+<dt><code>-safe</code></dt>
+<dd> Do not make any assumptions about whether the CERN libraries should be linked against dynamically or statically. (The default behavior, if this flag is not used, is to link them statically.)</dd>
+<dt><code>-u</code></dt>
+<dd> Do not include architecture-specific libraries in the output.</dd>
+<dt><code>-v </code><i>version</i></dt>
+<dd> Specify version of $CERN_LEVEL. This is meaningless unless you have installed an upstream version of CERNLIB (i.e. not packaged by Debian); see the file <i>/usr/share/doc/cernlib-base/README.Debian</i>.</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show a summary of options.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Tell cernlib that this marks the end of cernlib-specific flags, and all following arguments are to be parsed as described in the <code>LIBRARIES</code> section below. If &#8212; is not given, the first word parsed as a library name will be the first word not starting with a hyphen &quot;-&quot; that is not an argument to a preceding cernlib flag.</dd></dl>
 <h2>LIBRARIES</h2>
 <p> The following library names are recognized by this version of the cernlib script. These names may be used exactly as shown here, or prefixed by &quot;-l&quot;.</p>
 <dl>
-<dt><code>Core CERN libraries</code></p>
-<dd> mathlib, packlib, kernlib</p>
-<dt><code>Graphics and PAW libraries</code></p>
-<dd> graflib, pawlib</p>
-<dt><code>Monte Carlo and GEANT libraries</code></p>
-<dd> cojets, eurodec, geant321, herwig59, isajet758, pdflib804, photos202, phtools</p>
-<dt><code>Additional Monte Carlo libraries</code></p>
+<dt><code>Core CERN libraries</code></dt>
+<dd> mathlib, packlib, kernlib</dd>
+<dt><code>Graphics and PAW libraries</code></dt>
+<dd> graflib, pawlib</dd>
+<dt><code>Monte Carlo and GEANT libraries</code></dt>
+<dd> cojets, eurodec, geant321, herwig59, isajet758, pdflib804, photos202, phtools</dd>
+<dt><code>Additional Monte Carlo libraries</code></dt>
 <dd> (to obtain these, see /usr/share/doc/montecarlo-base/README.Debian)<br />
- ariadne, ariadne-p5, fritiof, jetset, lepto, pythia5, pythia6</p>
-<dt><code>Aliases</code></p>
-<dd> The numerals at the end may be left off most of the library names above.</p>
-<dt><code>Other library names</code></p>
-<dd> Various other names are recognized for backwards compatibility, internal use, and non-Linux architectures. For the complete list, please see the cernlib script.</p>
-<dt><code>Other</code></p>
-<dd> Any names not recognized by cernlib that start with &quot;-l&quot; or with any character other than a hyphen (&quot;-&quot;) are output as -l${name#-l} (<i>i.e.</i>, are assumed to be a library). Names starting with a hyphen for which the second character is not &quot;l&quot; are assumed to be compiler flags, and are output at the beginning of the line before all other output.</dl>
+ ariadne, ariadne-p5, fritiof, jetset, lepto, pythia5, pythia6</dd>
+<dt><code>Aliases</code></dt>
+<dd> The numerals at the end may be left off most of the library names above.</dd>
+<dt><code>Other library names</code></dt>
+<dd> Various other names are recognized for backwards compatibility, internal use, and non-Linux architectures. For the complete list, please see the cernlib script.</dd>
+<dt><code>Other</code></dt>
+<dd> Any names not recognized by cernlib that start with &quot;-l&quot; or with any character other than a hyphen (&quot;-&quot;) are output as -l${name#-l} (<i>i.e.</i>, are assumed to be a library). Names starting with a hyphen for which the second character is not &quot;l&quot; are assumed to be compiler flags, and are output at the beginning of the line before all other output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>/usr/share/doc/cernlib-base/README.Debian</i> describes some of the changes that have been made to the CERN libraries in order to comply with Debian policy and the Filesystem Hierarchy Standard. </p>
 <p> CERNLIB documentation for all related libraries and programs is available at the following URL: <i><a rel="nofollow" href="http://cern.ch/cernlib/">http://cern.ch/cernlib/</a></i></p>

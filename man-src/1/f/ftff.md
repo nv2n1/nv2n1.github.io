@@ -18,40 +18,40 @@ description: "ftff – fault tolerant file find utility"
 <p> &#8216;find start_directory -name file_to_find -print&#8217; </p>
 <p> with the following differences:</p>
 <dl>
-<dt>&#8211;</p>
-<dd> ftff is fault tolerant</p>
-<dt>&#8211;</p>
-<dd> ftff is NOT case sensitive</p>
-<dt>&#8211;</p>
-<dd> the level of fault tolerance can be adjusted by specifying the optional parameter <code>tolerance.</code> A <code>tolerance</code> of 0 specifies exact match.</dl>
+<dt>&#8211;</dt>
+<dd> ftff is fault tolerant</dd>
+<dt>&#8211;</dt>
+<dd> ftff is NOT case sensitive</dd>
+<dt>&#8211;</dt>
+<dd> the level of fault tolerance can be adjusted by specifying the optional parameter <code>tolerance.</code> A <code>tolerance</code> of 0 specifies exact match.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Prints a little help/usage information.</p>
-<dt><i>-f</i></p>
-<dd> Follow symbolic links on directories. Note: a symbolic link like &quot;somewhere -&gt; ..&quot; causes naturally an endless loop. By default <code>ftff</code> does not follow symbolic links to directories.</p>
-<dt><i>-F</i></p>
+<dt><i>-h</i></dt>
+<dd> Prints a little help/usage information.</dd>
+<dt><i>-f</i></dt>
+<dd> Follow symbolic links on directories. Note: a symbolic link like &quot;somewhere -&gt; ..&quot; causes naturally an endless loop. By default <code>ftff</code> does not follow symbolic links to directories.</dd>
+<dt><i>-F</i></dt>
 <dd> Classify the file type by appending a character to each file name. This character is:<br />
  <i>&#8216;*&#8217; </i> for regular files that are executable<br />
  <i>&#8216;/&#8217; </i> for directories<br />
  <i>&#8216;@&#8217; </i> for symbolic links<br />
  <i>&#8216;|&#8217; </i> for FIFOs<br />
- <i>&#8216;=&#8217; </i> for sockets</p>
-<dt><i>-p</i></p>
-<dd> print the actual distance value in front of the filename. This value is equal to the number of insertions, deletions and replacements necessary to transform the file that was found into the search key (the file_to_find).</p>
-<dt><i>-q</i></p>
-<dd> keep quiet and do not print any warning about non readable directories.</p>
-<dt><i>-# or -t#</i></p>
-<dd> Set the fault tolerance level to #. The fault tolerance level is an integer in the range 0-255. It specifies the maximum number of errors permitted in finding the approximate match. The default tolerance is (strlen(searchpattern) &#8211; number of wildcards)/6 + 1</p>
-<dt><i>-I</i></p>
-<dd> Do case sensitive search (default is case in-sensitive)</dl>
+ <i>&#8216;=&#8217; </i> for sockets</dd>
+<dt><i>-p</i></dt>
+<dd> print the actual distance value in front of the filename. This value is equal to the number of insertions, deletions and replacements necessary to transform the file that was found into the search key (the file_to_find).</dd>
+<dt><i>-q</i></dt>
+<dd> keep quiet and do not print any warning about non readable directories.</dd>
+<dt><i>-# or -t#</i></dt>
+<dd> Set the fault tolerance level to #. The fault tolerance level is an integer in the range 0-255. It specifies the maximum number of errors permitted in finding the approximate match. The default tolerance is (strlen(searchpattern) &#8211; number of wildcards)/6 + 1</dd>
+<dt><i>-I</i></dt>
+<dd> Do case sensitive search (default is case in-sensitive)</dd></dl>
 <dl>
-<dt><i>file_to_find</i></p>
+<dt><i>file_to_find</i></dt>
 <dd> The filename to search for. &#8216;*&#8217; and &#8216;?&#8217; can be used as wildcards.<br />
  &#8216;?&#8217; denotes one single character.<br />
- &#8216;*&#8217; denotes an arbitrary number of characters.</p>
-<dt><i>start_directory</i></p>
-<dd> The directory to start the search. The current directory is the default.</dl>
+ &#8216;*&#8217; denotes an arbitrary number of characters.</dd>
+<dt><i>start_directory</i></dt>
+<dd> The directory to start the search. The current directory is the default.</dd></dl>
 <p> The last argument to ftff is not parsed for options as the program needs at least one file-name argument. This means that <i>ftff -x</i> will not complain about a wrong option but search for the file named -x.</p>
 <h2>EXAMPLE</h2>
 <p> <i>ftff </i> samething </p>

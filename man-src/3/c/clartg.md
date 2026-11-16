@@ -19,7 +19,7 @@ description: "clartg.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CLARTG generates a plane rotation so that
     [  CS  SN  ]     [ F ]     [ R ]
@@ -31,11 +31,11 @@ description: "clartg.f –"
     If G=0, then CS=1 and SN=0.
     If F=0, then CS=0 and SN is chosen so that R is real.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>F</i> </p>
+</dt><dd> <i>F</i> </dd>
 <pre>
           F is COMPLEX
           The first component of vector to be rotated.
@@ -64,25 +64,26 @@ description: "clartg.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   3-5-96 - Modified with a new algorithm by W. Kahan and J. Demmel
   This version has a few statements commented out for thread safety
   (machine parameters are computed on each entry). 10 feb 03, SJH.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 104 of file clartg.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

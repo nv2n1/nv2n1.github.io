@@ -15,22 +15,22 @@ description: "lscgroup – list all cgroups"
 <h2>DESCRIPTION</h2>
 <p> List all/chosen cgroups. </p>
 <dl>
-<dt><code>&lt;controllers&gt;:&lt;path&gt;</code></p>
-<dd> defines the control groups whose subgroups will be shown. If this parameter is not used, the command will list all existing cgroups. </p>
+<dt><code>&lt;controllers&gt;:&lt;path&gt;</code></dt>
+<dd> defines the control groups whose subgroups will be shown. If this parameter is not used, the command will list all existing cgroups. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CGROUP_LOGLEVEL</code></p>
-<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </p>
+<dt><code>CGROUP_LOGLEVEL</code></dt>
+<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>lscgroup -g cpu:/</code></p>
-<dd> list all cgroups which are in hierarchy containing cpu controller </p>
-<dt><code>lscgroup -g cpu:/student</code></p>
-<dd> list all cgroups which are in hierarchy containing cpu controller in subgroup student </p>
-<dt><code>lscgroup</code></p>
-<dd> list all cgroups which in all hierarchies </p>
+<dt><code>lscgroup -g cpu:/</code></dt>
+<dd> list all cgroups which are in hierarchy containing cpu controller </dd>
+<dt><code>lscgroup -g cpu:/student</code></dt>
+<dd> list all cgroups which are in hierarchy containing cpu controller in subgroup student </dd>
+<dt><code>lscgroup</code></dt>
+<dd> list all cgroups which in all hierarchies </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> lssubsys (1), cgcreate (1), cgdelete (1), cgconfig.conf (5) </p>

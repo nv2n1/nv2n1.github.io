@@ -17,11 +17,11 @@ description: "telepathy-idle – Telepathy connection manager for IRC"
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>IDLE_LOGFILE</code>=<i>filename</i></p>
-<dd>If set, debug output will go to the given file rather than to stderr. If <code>+</code> is prepended to the <i>filename</i> (e.g. <code>IDLE_LOGFILE=+idle.log</code>), debug output will be appended to the file; otherwise, any existing file will be replaced.</p>
+<dt><code>IDLE_LOGFILE</code>=<i>filename</i></dt>
+<dd>If set, debug output will go to the given file rather than to stderr. If <code>+</code> is prepended to the <i>filename</i> (e.g. <code>IDLE_LOGFILE=+idle.log</code>), debug output will be appended to the file; otherwise, any existing file will be replaced.</dd>
 <dt>
-<dt><code>IDLE_DEBUG</code>=<i>type</i></p>
+</dt><dt><code>IDLE_DEBUG</code>=<i>type</i></dt>
 <dd>
-<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dl>
+</dd><dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i>, <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1) </p>

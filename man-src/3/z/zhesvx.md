@@ -11,8 +11,6 @@ description: "zhesvx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zhesvx (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, RWORK, INFO)
-
-
 ZHESVX computes the solution to system of linear equations A * X = B for HE matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhesvx (characterFACT, characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integerINFO)</h3>
@@ -26,7 +24,7 @@ ZHESVX computes the solution to system of linear equations A * X = B for HE matr
  matrices.
  Error bounds on the solution and a condition estimate are also
  provided.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -49,10 +47,10 @@ ZHESVX computes the solution to system of linear equations A * X = B for HE matr
  4. Iterative refinement is applied to improve the computed solution
  matrix and calculate error bounds and backward error estimates
  for it.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of A has been
  supplied on entry.
@@ -178,13 +176,13 @@ ZHESVX computes the solution to system of linear equations A * X = B for HE matr
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 284 of file zhesvx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

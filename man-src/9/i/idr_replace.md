@@ -14,13 +14,13 @@ description: "idr_replace – replace pointer for given id"
 <p><i>idp</i></p>
 <dl>
 <dd>
-<dd>idr handle</dl>
+</dd><dd>idr handle</dd></dl>
 <p> <i>ptr</i></p>
 <dl>
-<dd>pointer you want associated with the id</dl>
+<dd>pointer you want associated with the id</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>lookup key</dl>
+<dd>lookup key</dd></dl>
 <h2>Description</h2>
 <p>Replace the pointer registered with an id and return the old value. A <code>-ENOENT</code> return indicates that <i>id</i> was not found. A <code>-EINVAL</code> return indicates that <i>id</i> was not within valid constraints. </p>
 <p> The caller must serialize with writers.</p>

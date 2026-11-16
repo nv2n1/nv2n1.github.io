@@ -11,18 +11,16 @@ description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 <p> ldmtool &#8211; A tool to manage Microsoft Windows dynamic disks </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ldmtool</code> [options]</p>
-<dt> <code>ldmtool</code> [options] scan [<i>device</i>&#8230;]</p>
-<dt> <code>ldmtool</code> [options] show diskgroup {<i>disk group GUID</i>}</p>
-<dt> <code>ldmtool</code> [options] show {volume | partition | disk} {<i>disk group GUID</i>} {<i>object name</i>}</p>
-<dt> <code>ldmtool</code> [options] {create | remove} all</p>
-<dt> <code>ldmtool</code> [options] {create | remove} volume {<i>disk group GUID</i>} {<i>volume name</i>}</dl>
+<dt> <code>ldmtool</code> [options]</dt>
+<dt> <code>ldmtool</code> [options] scan [<i>device</i>&#8230;]</dt>
+<dt> <code>ldmtool</code> [options] show diskgroup {<i>disk group GUID</i>}</dt>
+<dt> <code>ldmtool</code> [options] show {volume | partition | disk} {<i>disk group GUID</i>} {<i>object name</i>}</dt>
+<dt> <code>ldmtool</code> [options] {create | remove} all</dt>
+<dt> <code>ldmtool</code> [options] {create | remove} volume {<i>disk group GUID</i>} {<i>volume name</i>}</dt></dl>
 <h2>OPTIONS</h2>
 <p> <code>-d|&#8211;device</code> <i>device</i></p>
 <dl>
-<dt>
-<dd>
-<dd>Automatically scan <i>device</i>.</dl>
+<dd>Automatically scan <i>device</i>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ldmtool</code> is a tool for managing Microsoft Windows dynamic disks, which use Microsoft&#8217;s LDM metadata. It can inspect them, and also create and remove device-mapper block devices which can be mounted. </p>
 <p> Although a filesystem can be mounted read-write and its contents modified, <code>ldmtool</code> is not able to modify the LDM metadata itself. That is, it cannot create, remove or edit dynamic disks. </p>
@@ -46,101 +44,101 @@ description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 <p> name</p>
 <dl>
 <dt>
-<dd> The human-readable name of the disk group</dl>
+</dt><dd> The human-readable name of the disk group</dd></dl>
 <p> guid</p>
 <dl>
 <dt>
-<dd> The Windows-assigned GUID of the disk group</dl>
+</dt><dd> The Windows-assigned GUID of the disk group</dd></dl>
 <p> volumes</p>
 <dl>
 <dt>
-<dd> A list of the names of all volumes in the disk group</dl>
+</dt><dd> A list of the names of all volumes in the disk group</dd></dl>
 <p> disks</p>
 <dl>
 <dt>
-<dd> A list of the name of all disks in the disk group</dl>
+</dt><dd> A list of the name of all disks in the disk group</dd></dl>
 <h3>show volume {<i>disk group GUID</i>} {<i>volume name</i>}</h3>
 <p> Return detailed information about a volume. </p>
 <p> <code>Returns:</code> </p>
 <p> name</p>
 <dl>
 <dt>
-<dd> The name of the volume</dl>
+</dt><dd> The name of the volume</dd></dl>
 <p> type</p>
 <dl>
 <dt>
-<dd> The volume type. One of: simple , spanned , striped , mirrored , raid5</dl>
+</dt><dd> The volume type. One of: simple , spanned , striped , mirrored , raid5</dd></dl>
 <p> size</p>
 <dl>
 <dt>
-<dd> The size of the volume in sectors</dl>
+</dt><dd> The size of the volume in sectors</dd></dl>
 <p> chunk-size</p>
 <dl>
 <dt>
-<dd> The chunk size, in sectors, used by striped and raid5 volumes. For other volume types it will be 0.</dl>
+</dt><dd> The chunk size, in sectors, used by striped and raid5 volumes. For other volume types it will be 0.</dd></dl>
 <p> hint</p>
 <dl>
 <dt>
-<dd> The volume mounting hint. This value specifies how Windows expects the volume to be mounted. For a volume with an assigned drive letter, it might be &#8216;E:&#8217;.</dl>
+</dt><dd> The volume mounting hint. This value specifies how Windows expects the volume to be mounted. For a volume with an assigned drive letter, it might be &#8216;E:&#8217;.</dd></dl>
 <p> partitions</p>
 <dl>
 <dt>
-<dd> A list of the names of the partitions which constitute this volume.</dl>
+</dt><dd> A list of the names of the partitions which constitute this volume.</dd></dl>
 <h3>show partition {<i>disk group GUID</i>} {<i>partition name</i>}</h3>
 <p> Return detailed information about a partition. </p>
 <p> <code>Returns:</code> </p>
 <p> name</p>
 <dl>
 <dt>
-<dd> The name of the partition</dl>
+</dt><dd> The name of the partition</dd></dl>
 <p> start</p>
 <dl>
 <dt>
-<dd> The offset, in sectors, of the start of the partition from the beginning of the disk</dl>
+</dt><dd> The offset, in sectors, of the start of the partition from the beginning of the disk</dd></dl>
 <p> size</p>
 <dl>
 <dt>
-<dd> The size of the partition in sectors</dl>
+</dt><dd> The size of the partition in sectors</dd></dl>
 <p> disk</p>
 <dl>
 <dt>
-<dd> The name of the disk the partition is on</dl>
+</dt><dd> The name of the disk the partition is on</dd></dl>
 <h3>show disk {<i>disk group GUID</i>} {<i>disk name</i>}</h3>
 <p> Return detailed information about a disk. </p>
 <p> <code>Returns:</code> </p>
 <p> name</p>
 <dl>
 <dt>
-<dd> The human-readable name of the disk</dl>
+</dt><dd> The human-readable name of the disk</dd></dl>
 <p> guid</p>
 <dl>
 <dt>
-<dd> The GUID of the disk</dl>
+</dt><dd> The GUID of the disk</dd></dl>
 <p> present</p>
 <dl>
 <dt>
-<dd> Whether the disk has been discovered during scanning: true or false</dl>
+</dt><dd> Whether the disk has been discovered during scanning: true or false</dd></dl>
 <p> <code>If the disk is present, additionally returns:</code> </p>
 <p> device</p>
 <dl>
 <dt>
-<dd> The name of the host device (e.g. /dev/sda)</dl>
+</dt><dd> The name of the host device (e.g. /dev/sda)</dd></dl>
 <p> data-start</p>
 <dl>
 <dt>
-<dd> The start sector of the data portion of the disk</dl>
+</dt><dd> The start sector of the data portion of the disk</dd></dl>
 <p> data-size</p>
 <dl>
 <dt>
-<dd> The size, in sectors, of the data portion of the disk</dl>
+</dt><dd> The size, in sectors, of the data portion of the disk</dd></dl>
 <p> metadata-start</p>
 <dl>
 <dt>
-<dd> The start sector of the metadata portion of the disk</dl>
+</dt><dd> The start sector of the metadata portion of the disk</dd></dl>
 <p> metadata-size</p>
 <dl>
 <dt>
-<dd> The size, in sectors, of the metadata portion of the disk</dl>
+</dt><dd> The size, in sectors, of the metadata portion of the disk</dd></dl>
 <h3>create {volume&nbsp;{&nbsp;<i>disk group GUID</i>&nbsp;}&nbsp;{&nbsp;<i>volume name</i>&nbsp;} | all}</h3>
 <p> Create a device-mapper device for either the specified volume or all volumes in all detected disk groups. </p>
 <p> Returns a list of the device-mapper device names which were created by this action. Note that if a device already existed for a volume it will not be returned in this list.</p>
@@ -152,7 +150,7 @@ description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 <p> Scan all loop devices for LDM metadata: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ldm &gt; scan / dev / loop[0 - 9] *
           [
@@ -160,12 +158,12 @@ ldm &gt; scan / dev / loop[0 - 9] *
               "06495a84-fbfd-11e1-8cf9-52540061f5db"
           ]
 </code></pre>
-</dl>
+</dd></dl>
 <p> Two disk groups were detected. The list contains their GUIDs. </p>
 <p> Show detailed information about one of the disk groups: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 ldm &gt; show diskgroup 06495a84 &#8211; fbfd &#8211; 11e1 &#8211; 8cf9 &#8211; 52540061f5db<br />
 {<br />
     &#8220;name&#8221; : &#8220;WIN-ERRDJSBDAVF-Dg0&#8221;,<br />
@@ -189,11 +187,11 @@ ldm &gt; show diskgroup 06495a84 &#8211; fbfd &#8211; 11e1 &#8211; 8cf9 &#8211; 
                                       &#8220;Disk9&#8221;<br />
                                   ]<br />
 }
-</dl>
+</dd></dl>
 <p> Show detailed information about one of the volumes in the disk group: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ldm &gt; show volume 06495a84 - fbfd - 11e1 - 8cf9 - 52540061f5db Volume1
 {
@@ -208,11 +206,11 @@ ldm &gt; show volume 06495a84 - fbfd - 11e1 - 8cf9 - 52540061f5db Volume1
                                ]
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> Show detailed information about one of the partitions in the volume: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; show partition 06495a84-fbfd-11e1-8cf9-52540061f5db Disk1-01
 {
@@ -221,13 +219,12 @@ ldm&gt; show partition 06495a84-fbfd-11e1-8cf9-52540061f5db Disk1-01
   &quot;size&quot; : 96256,
   &quot;disk&quot; : &quot;Disk1&quot;
 }
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Show detailed information about the disk containing the partition: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; show disk 06495a84-fbfd-11e1-8cf9-52540061f5db Disk1
 {
@@ -240,26 +237,24 @@ ldm&gt; show disk 06495a84-fbfd-11e1-8cf9-52540061f5db Disk1
   &quot;metadata-start&quot; : 100352,
   &quot;metadata-size&quot; : 2048
 }
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Create a device-mapper device for a volume: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; create volume 06495a84-fbfd-11e1-8cf9-52540061f5db Volume1
 [
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume1&quot;
 ]
-    
 </pre>
-</dl>
+</dd></dl>
 <p> A new device-mapper device has been created, called ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume1. Depending on how udev is configured, it will probably now be available as /dev/mapper/ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume1. </p>
 <p> Create device-mapper devices for all volumes in both disk groups: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; create all
 [
@@ -274,25 +269,23 @@ ldm&gt; create all
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume3&quot;,
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume5&quot;
 ]
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Note that ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume1 is not in the list of devices which were created as it already existed. </p>
 <p> Remove the device-mapper device for a single volume: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; remove volume 06495a84-fbfd-11e1-8cf9-52540061f5db Volume2
 [
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume2&quot;
 ]
-    
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ldm&gt; remove all
 [
@@ -307,17 +300,15 @@ ldm&gt; remove all
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume3&quot;,
   &quot;ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume5&quot;
 ]
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Note that ldm_vol_WIN-ERRDJSBDAVF-Dg0_Volume2 is not in the list of devices which were removed, as it was removed previously.</p>
 <h2>AUTHOR</h2>
 <p> <code>Matthew Booth</code> &lt;mbooth [at] redhat.com&gt;</p>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <h2>Index</h2>
-<dt><a href="#lbAR">EXAMPLES</a></p>
+<dt><a href="#lbAR">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAS">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAS">AUTHOR</a></dt>
+<dd></dd></dl>

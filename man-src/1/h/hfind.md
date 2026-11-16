@@ -17,20 +17,20 @@ description: "hfind – Lookup a hash value in a hash database"
 <p> This tool is needed for efficiency. Most text-based databases do not have fixed length entries and are sometimes not sorted. The hfind tool will create an index file that is sorted and has fixed-length entries. This allows for fast lookups using a binary search algorithm instead of a linear search such as &#8216;grep&#8217;. </p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>-i db_type</p>
-<dd> Create an index file for the database. This step must be done before a lookup can be performed. The &#8216;db_type&#8217; argument specifies the database type (i.e. nsrl-md5 or md5sum). See section below.</p>
-<dt>-f lookup_file</p>
-<dd> Specify the location of a file that contains one hash value per line. These hashes will be looked up in the database.</p>
-<dt>-e</p>
-<dd> Extended mode. Additional information besides just the name is printed. (Does not apply for all hash database types).</p>
-<dt>-q</p>
-<dd> Quick mode. Instead of displaying the corresponding information with the hash, just display 0 if the hash was not found and 1 if it was. If this flag is used, then only one hash can be given at a time.</p>
-<dt>-V</p>
-<dd> Display version</p>
-<dt>db_file</p>
-<dd> The location of the hash database file.</p>
-<dt>[hashes]</p>
-<dd> The hashes to lookup. If they are not supplied on the command line, STDIN is used. If index files exist for both SHA-1 and MD5 hashes, then both types of hashes can be given at runtime. </p>
+<dt>-i db_type</dt>
+<dd> Create an index file for the database. This step must be done before a lookup can be performed. The &#8216;db_type&#8217; argument specifies the database type (i.e. nsrl-md5 or md5sum). See section below.</dd>
+<dt>-f lookup_file</dt>
+<dd> Specify the location of a file that contains one hash value per line. These hashes will be looked up in the database.</dd>
+<dt>-e</dt>
+<dd> Extended mode. Additional information besides just the name is printed. (Does not apply for all hash database types).</dd>
+<dt>-q</dt>
+<dd> Quick mode. Instead of displaying the corresponding information with the hash, just display 0 if the hash was not found and 1 if it was. If this flag is used, then only one hash can be given at a time.</dd>
+<dt>-V</dt>
+<dd> Display version</dd>
+<dt>db_file</dt>
+<dd> The location of the hash database file.</dd>
+<dt>[hashes]</dt>
+<dd> The hashes to lookup. If they are not supplied on the command line, STDIN is used. If index files exist for both SHA-1 and MD5 hashes, then both types of hashes can be given at runtime. </dd>
 </dl>
 <h2>INDEX FILE</h2>
 <p> <code>hfind </code> uses an index file to perform a binary search for a hash value. This is much faster than using &#8216;grep&#8217;, which will do a linear search. Before a hash database is used, a corresponding index file must be created. This is done with the &#8216;-i&#8217; option to hfind. </p>

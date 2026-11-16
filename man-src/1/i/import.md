@@ -11,8 +11,8 @@ description: "import – saves any visible window on an X server and outputs it 
 <p> import &#8211; saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen. </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>import-im6.q16</code> [<i>options</i>] <i>output-file</i></p>
-<dd></dl>
+<dt><code>import-im6.q16</code> [<i>options</i>] <i>output-file</i></dt>
+<dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>import-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to capture some or all of an X server screen and save the image to a file. </p>
 <p> For more information about the import command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/import.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/import.php.">https://www.imagemagick.org/script/import.php.</a></p>

@@ -30,43 +30,43 @@ url: "/docs/linux/man/1-report-gtk/"
  -d, --delete
 <dl>
 <dt>
-<dd> Remove PROBLEM_DIR after reporting</dl>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
  
 
  -e EVENT
 <dl>
 <dt>
-<dd> Run only theset EVENTs on PROBLEM_DIR</dl>
+</dt><dd> Run only theset EVENTs on PROBLEM_DIR</dd></dl>
  
 
  -g FILE
 <dl>
 <dt>
-<dd> Alternate GUI file</dl>
+</dt><dd> Alternate GUI file</dd></dl>
  
 
  -p
 <dl>
 <dt>
-<dd> Add program names to log</dl>
+</dt><dd> Add program names to log</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
  
 
  -V, --version
 <dl>
 <dt>
-<dd> Display version and exit</dl>
+</dt><dd> Display version and exit</dd></dl>
  
 
  -x, --expert
 <dl>
 <dt>
-<dd> Enabled advanced features</dl>
+</dt><dd> Enabled advanced features</dd></dl>
 
 <h2>CONFIGURATION</h2>
 
@@ -80,7 +80,7 @@ url: "/docs/linux/man/1-report-gtk/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;!ELEMENT workflow    (name+,description+,events*)&gt;
 &lt;!ELEMENT name        (#PCDATA)&gt;
 &lt;!ATTLIST name         xml:lang CDATA #IMPLIED&gt;
@@ -88,31 +88,31 @@ url: "/docs/linux/man/1-report-gtk/"
 &lt;!ATTLIST description  xml:lang CDATA #IMPLIED&gt;
 &lt;!ELEMENT events =    (event)+&gt;
 &lt;!ELEMENT event =     (#PCDATA)&gt;
-</pre></dl>
+</pre></dd></dl>
  
 
  name
 <dl>
 <dt>
-<dd> User visible name</dl>
+</dt><dd> User visible name</dd></dl>
  
 
  description
 <dl>
 <dt>
-<dd> User visible description</dl>
+</dt><dd> User visible description</dd></dl>
  
 
  events
 <dl>
 <dt>
-<dd> List of executed events</dl>
+</dt><dd> List of executed events</dd></dl>
  
 
  event
 <dl>
 <dt>
-<dd> Name of event. If event is not applicable on the problem data or if it is not defined then process continues with next event sibling.</dl>
+</dt><dd> Name of event. If event is not applicable on the problem data or if it is not defined then process continues with next event sibling.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -122,7 +122,7 @@ url: "/docs/linux/man/1-report-gtk/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;workflow&gt;
   &lt;name xml:lang=&quot;en&quot;&gt;Example&lt;/name&gt;
   &lt;name xml:lang=&quot;cs&quot;&gt;Př&iacute;klad&lt;/name&gt;
@@ -134,7 +134,7 @@ url: "/docs/linux/man/1-report-gtk/"
      &lt;event&gt;report_example&lt;/event&gt;
   &lt;/events&gt;
 &lt;/workflow&gt;
-</pre></dl>
+</pre></dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -142,7 +142,7 @@ url: "/docs/linux/man/1-report-gtk/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

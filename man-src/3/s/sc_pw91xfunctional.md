@@ -11,7 +11,6 @@ description: "sc::PW91XFunctional –"
 <p> The Perdew-Wang 1991 exchange functional computes energies and densities using the designated local correlation functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -23,30 +22,12 @@ description: "sc::PW91XFunctional –"
 <p> void <code>point</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void spin_contrib (const PointInputData::SpinData &amp;, double &amp;mpw, double &amp;dmpw_dr, double &amp;dmpw_dg)
-
-
-
 void init_constants ()
-
-
-
 Protected Attributes
 double a
-
-
-
 double b
-
-
-
 double c
-
-
-
 double d
-
-
-
 double a_x</code></pre>
 <h2>Detailed Description</h2>
 <p>The Perdew-Wang 1991 exchange functional computes energies and densities using the designated local correlation functional. </p>

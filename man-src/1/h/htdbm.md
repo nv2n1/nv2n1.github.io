@@ -35,43 +35,43 @@ description: "htdbm – Manipulate DBM password databases"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Use batch mode; <i>i.e.</i>, get the password from the command line rather than prompting for it. This option should be used with extreme care, since <code>the password is clearly visible</code> on the command line. For script use see the <code>-i</code> option.</p>
-<dt><code>-i</code></p>
-<dd> Read the password from stdin without verification (for script usage).</p>
-<dt><code>-c</code></p>
-<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is rewritten and truncated. This option cannot be combined with the <code>-n</code> option.</p>
-<dt><code>-n</code></p>
-<dd> Display the results on standard output rather than updating a database. This option changes the syntax of the command line, since the <i>passwdfile</i> argument (usually the first one) is omitted. It cannot be combined with the <code>-c</code> option.</p>
-<dt><code>-m</code></p>
-<dd> Use MD5 encryption for passwords. On Windows and Netware, this is the default.</p>
-<dt><code>-B</code></p>
-<dd> Use bcrypt encryption for passwords. This is currently considered to be very secure.</p>
-<dt><code>-C</code></p>
-<dd> This flag is only allowed in combination with <code>-B</code> (bcrypt encryption). It sets the computing time used for the bcrypt algorithm (higher is more secure but slower, default: 5, valid: 4 to 31).</p>
-<dt><code>-d</code></p>
-<dd> Use <code>crypt()</code> encryption for passwords. The default on all platforms but Windows and Netware. Though possibly supported by <code>htdbm</code> on all platforms, it is not supported by the httpd server on Windows and Netware. This algorithm is <code>insecure</code> by today&#8217;s standards.</p>
-<dt><code>-s</code></p>
-<dd> Use SHA encryption for passwords. Facilitates migration from/to Netscape servers using the LDAP Directory Interchange Format (ldif). This algorithm is <code>insecure</code> by today&#8217;s standards.</p>
-<dt><code>-p</code></p>
-<dd> Use plaintext passwords. Though <code>htdbm</code> will support creation on all platforms, the httpd daemon will only accept plain text passwords on Windows and Netware.</p>
-<dt><code>-l</code></p>
-<dd> Print each of the usernames and comments from the database on stdout.</p>
-<dt><code>-v</code></p>
-<dd> Verify the username and password. The program will print a message indicating whether the supplied password is valid. If the password is invalid, the program exits with error code 3.</p>
-<dt><code>-x</code></p>
-<dd> Delete user. If the username exists in the specified DBM file, it will be deleted.</p>
-<dt><code>-t</code></p>
-<dd> Interpret the final parameter as a comment. When this option is specified, an additional string can be appended to the command line; this string will be stored in the &quot;Comment&quot; field of the database, associated with the specified username.</p>
-<dt><i>filename</i></p>
-<dd> The filename of the DBM format file. Usually without the extension <code>.db</code>, <code>.pag</code>, or <code>.dir</code>. If <code>-c</code> is given, the DBM file is created if it does not already exist, or updated if it does exist.</p>
-<dt><i>username</i></p>
-<dd> The username to create or update in <i>passwdfile</i>. If <i>username</i> does not exist in this file, an entry is added. If it does exist, the password is changed.</p>
-<dt><i>password</i></p>
-<dd> The plaintext password to be encrypted and stored in the DBM file. Used only with the <code>-b</code> flag.</p>
-<dt><code>-T</code><i>DBTYPE</i></p>
+<dt><code>-b</code></dt>
+<dd> Use batch mode; <i>i.e.</i>, get the password from the command line rather than prompting for it. This option should be used with extreme care, since <code>the password is clearly visible</code> on the command line. For script use see the <code>-i</code> option.</dd>
+<dt><code>-i</code></dt>
+<dd> Read the password from stdin without verification (for script usage).</dd>
+<dt><code>-c</code></dt>
+<dd> Create the <i>passwdfile</i>. If <i>passwdfile</i> already exists, it is rewritten and truncated. This option cannot be combined with the <code>-n</code> option.</dd>
+<dt><code>-n</code></dt>
+<dd> Display the results on standard output rather than updating a database. This option changes the syntax of the command line, since the <i>passwdfile</i> argument (usually the first one) is omitted. It cannot be combined with the <code>-c</code> option.</dd>
+<dt><code>-m</code></dt>
+<dd> Use MD5 encryption for passwords. On Windows and Netware, this is the default.</dd>
+<dt><code>-B</code></dt>
+<dd> Use bcrypt encryption for passwords. This is currently considered to be very secure.</dd>
+<dt><code>-C</code></dt>
+<dd> This flag is only allowed in combination with <code>-B</code> (bcrypt encryption). It sets the computing time used for the bcrypt algorithm (higher is more secure but slower, default: 5, valid: 4 to 31).</dd>
+<dt><code>-d</code></dt>
+<dd> Use <code>crypt()</code> encryption for passwords. The default on all platforms but Windows and Netware. Though possibly supported by <code>htdbm</code> on all platforms, it is not supported by the httpd server on Windows and Netware. This algorithm is <code>insecure</code> by today&#8217;s standards.</dd>
+<dt><code>-s</code></dt>
+<dd> Use SHA encryption for passwords. Facilitates migration from/to Netscape servers using the LDAP Directory Interchange Format (ldif). This algorithm is <code>insecure</code> by today&#8217;s standards.</dd>
+<dt><code>-p</code></dt>
+<dd> Use plaintext passwords. Though <code>htdbm</code> will support creation on all platforms, the httpd daemon will only accept plain text passwords on Windows and Netware.</dd>
+<dt><code>-l</code></dt>
+<dd> Print each of the usernames and comments from the database on stdout.</dd>
+<dt><code>-v</code></dt>
+<dd> Verify the username and password. The program will print a message indicating whether the supplied password is valid. If the password is invalid, the program exits with error code 3.</dd>
+<dt><code>-x</code></dt>
+<dd> Delete user. If the username exists in the specified DBM file, it will be deleted.</dd>
+<dt><code>-t</code></dt>
+<dd> Interpret the final parameter as a comment. When this option is specified, an additional string can be appended to the command line; this string will be stored in the &quot;Comment&quot; field of the database, associated with the specified username.</dd>
+<dt><i>filename</i></dt>
+<dd> The filename of the DBM format file. Usually without the extension <code>.db</code>, <code>.pag</code>, or <code>.dir</code>. If <code>-c</code> is given, the DBM file is created if it does not already exist, or updated if it does exist.</dd>
+<dt><i>username</i></dt>
+<dd> The username to create or update in <i>passwdfile</i>. If <i>username</i> does not exist in this file, an entry is added. If it does exist, the password is changed.</dd>
+<dt><i>password</i></dt>
+<dd> The plaintext password to be encrypted and stored in the DBM file. Used only with the <code>-b</code> flag.</dd>
+<dt><code>-T</code><i>DBTYPE</i></dt>
 <dd> Type of DBM file (SDBM, GDBM, DB, or &quot;default&quot;).<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>BUGS</h2>
 <p>&nbsp; </p>
 <p> One should be aware that there are a number of different DBM file formats in existence, and with all likelihood, libraries for more than one format may exist on your system. The three primary examples are SDBM, NDBM, GNU GDBM, and Berkeley/Sleepycat DB 2/3/4. Unfortunately, all these libraries use different file formats, and you must make sure that the file format used by <i>filename</i> is the same format that <code>htdbm</code> expects to see. <code>htdbm</code> currently has no way of determining what type of DBM file it is looking at. If used against the wrong format, will simply return nothing, or may create a different DBM file with a different name, or at worst, it may corrupt the DBM file if you were attempting to write to it.<br />
@@ -86,21 +86,18 @@ description: "htdbm – Manipulate DBM password databases"
 <p>&nbsp; </p>
 <pre>
       htdbm /usr/local/etc/apache/.htdbm-users jsmith
-    
 </pre>
 <p>&nbsp; </p>
 <p> Adds or modifies the password for user <code>jsmith</code>. The user is prompted for the password. If executed on a Windows system, the password will be encrypted using the modified Apache MD5 algorithm; otherwise, the system&#8217;s <code>crypt()</code> routine will be used. If the file does not exist, <code>htdbm</code> will do nothing except return an error.<br />
 &nbsp; </p>
 <pre>
       htdbm -c /home/doe/public_html/.htdbm jane
-    
 </pre>
 <p>&nbsp; </p>
 <p> Creates a new file and stores a record in it for user <code>jane</code>. The user is prompted for the password. If the file exists and cannot be read, or cannot be written, it is not altered and <code>htdbm</code> will display a message and return an error status.<br />
 &nbsp; </p>
 <pre>
       htdbm -mb /usr/web/.htdbm-all jones Pwd4Steve
-    
 </pre>
 <p>&nbsp; </p>
 <p> Encrypts the password from the command line (<code>Pwd4Steve</code>) using the MD5 algorithm, and stores it in the specified file.<br />

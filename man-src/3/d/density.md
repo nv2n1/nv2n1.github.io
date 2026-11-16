@@ -60,7 +60,7 @@ description: "QuantLib::OneFactorCopula – Abstract base class for one-factor c
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> Improve on simple Euler integration</dl>
+</dt><dd> Improve on simple Euler integration</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual Real density (Real m) const [pure virtual]</h3>
 <p> Density function of M. </p>

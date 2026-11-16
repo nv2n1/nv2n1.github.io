@@ -54,50 +54,50 @@ description: "QwtPlotIntervalCurve –"
 <p>Curve styles. The default setting is <code>QwtPlotIntervalCurve::Tube</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code>, <code>style()</code></dl>
+<dd><code>setStyle()</code>, <code>style()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoCurve </i></p>
-<dd>Don&#8217;t draw a curve. Note: This doesn&#8217;t affect the symbols.</p>
-<dt><i>Tube </i></p>
-<dd>Build 2 curves from the upper and lower limits of the intervals and draw them with the <code>pen()</code>. The area between the curves is filled with the <code>brush()</code>.</p>
-<dt><i>UserCurve </i></p>
-<dd>Styles &gt;= <code>QwtPlotIntervalCurve::UserCurve</code> are reserved for derived classes that overload <code>drawSeries()</code> with additional application specific curve types.</dl>
+<dt><i>NoCurve </i></dt>
+<dd>Don&#8217;t draw a curve. Note: This doesn&#8217;t affect the symbols.</dd>
+<dt><i>Tube </i></dt>
+<dd>Build 2 curves from the upper and lower limits of the intervals and draw them with the <code>pen()</code>. The area between the curves is filled with the <code>brush()</code>.</dd>
+<dt><i>UserCurve </i></dt>
+<dd>Styles &gt;= <code>QwtPlotIntervalCurve::UserCurve</code> are reserved for derived classes that overload <code>drawSeries()</code> with additional application specific curve types.</dd></dl>
 <h3>enum <code>QwtPlotIntervalCurve::PaintAttribute</code></h3>
 <p>Attributes to modify the drawing algorithm. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>ClipPolygons </i></p>
-<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance.</p>
-<dt><i>ClipSymbol </i></p>
-<dd>Check if a symbol is on the plot canvas before painting it.</dl>
+<dt><i>ClipPolygons </i></dt>
+<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance.</dd>
+<dt><i>ClipSymbol </i></dt>
+<dd>Check if a symbol is on the plot canvas before painting it.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotIntervalCurve::QwtPlotIntervalCurve (const QString &amp;title = QString::null) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h3>QwtPlotIntervalCurve::QwtPlotIntervalCurve (const <code>QwtText</code> &amp;title) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtPlotIntervalCurve::boundingRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of all samples. For an empty series the rectangle is invalid.</dl>
+<dd>Bounding rectangle of all samples. For an empty series the rectangle is invalid.</dd></dl>
 <p> Reimplemented from <code>QwtPlotSeriesItem</code>.</p>
 <h3>const QBrush &amp; QwtPlotIntervalCurve::brush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush used to fill the area in Tube <code>style()</code></dl>
+<dd>Brush used to fill the area in Tube <code>style()</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code>, <code>setStyle()</code>, <code>CurveStyle</code></dl>
+<dd><code>setBrush()</code>, <code>setStyle()</code>, <code>CurveStyle</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::drawSeries (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [virtual]</h3>
 <p>Draw a subset of the samples </p>
 <p> <code>Parameters:</code></p>
@@ -107,10 +107,10 @@ description: "QwtPlotIntervalCurve –"
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first sample to be painted<br />
- <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dl>
+ <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawTube()</code>, <code>drawSymbols()</code></dl>
+<dd><code>drawTube()</code>, <code>drawSymbols()</code></dd></dl>
 <p> Implements <code>QwtPlotSeriesItem</code>.</p>
 <h3>void QwtPlotIntervalCurve::drawSymbols (QPainter *painter, const <code>QwtIntervalSymbol</code> &amp;symbol, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw symbols for a subset of the samples </p>
@@ -122,10 +122,10 @@ description: "QwtPlotIntervalCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first sample to be painted<br />
- <i>to</i> Index of the last sample to be painted</dl>
+ <i>to</i> Index of the last sample to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code>, <code>drawSeries()</code>, <code>drawTube()</code></dl>
+<dd><code>setSymbol()</code>, <code>drawSeries()</code>, <code>drawTube()</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::drawTube (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw a tube </p>
 <p> Builds 2 curves from the upper and lower limits of the intervals and draws them with the <code>pen()</code>. The area between the curves is filled with the <code>brush()</code>. </p>
@@ -136,53 +136,53 @@ description: "QwtPlotIntervalCurve –"
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first sample to be painted<br />
- <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dl>
+ <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawSeries()</code>, <code>drawSymbols()</code></dl>
+<dd><code>drawSeries()</code>, <code>drawSymbols()</code></dd></dl>
 <h3><code>QwtGraphic</code> QwtPlotIntervalCurve::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Icon for the legend</dl>
+<dd>Icon for the legend</dd></dl>
 <p> In case of Tube <code>style()</code> the icon is a plain rectangle filled with the <code>brush()</code>. If a symbol is assigned it is scaled to size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br />
- <i>size</i> Icon size</dl>
+ <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::setLegendIconSize()</code>, <code>QwtPlotItem::legendData()</code></dl>
+<dd><code>QwtPlotItem::setLegendIconSize()</code>, <code>QwtPlotItem::legendData()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>const QPen &amp; QwtPlotIntervalCurve::pen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen used to draw the lines</dl>
+<dd>Pen used to draw the lines</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPen()</code>, <code>brush()</code></dl>
+<dd><code>setPen()</code>, <code>brush()</code></dd></dl>
 <h3>int QwtPlotIntervalCurve::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotIntervalCurve</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotIntervalCurve</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotIntervalCurve::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. </p>
 <p> The brush is used to fill the area in Tube <code>style()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Brush</dl>
+<dd><i>brush</i> Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brush()</code>, <code>pen()</code>, <code>setStyle()</code>, <code>CurveStyle</code></dl>
+<dd><code>brush()</code>, <code>pen()</code>, <code>setStyle()</code>, <code>CurveStyle</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testPaintAttribute()</code></dl>
+<dd><code>testPaintAttribute()</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -190,68 +190,68 @@ description: "QwtPlotIntervalCurve –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> New pen</dl>
+<dd><i>pen</i> New pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::setSamples (const QVector&lt; <code>QwtIntervalSample</code> &gt; &amp;samples)</h3>
 <p>Initialize data with an array of samples. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Vector of samples</dl>
+<dd><i>samples</i> Vector of samples</dd></dl>
 <h3>void QwtPlotIntervalCurve::setSamples (<code>QwtSeriesData</code>&lt; <code>QwtIntervalSample</code> &gt; *data)</h3>
 <p>Assign a series of samples </p>
 <p> <code>setSamples()</code> is just a wrapper for <code>setData()</code> without any additional value &#8211; beside that it is easier to find for the developer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Data</dl>
+<dd><i>data</i> Data</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dl>
+<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dd></dl>
 <h3>void QwtPlotIntervalCurve::setStyle (<code>CurveStyle</code>style)</h3>
 <p>Set the curve&#8217;s drawing style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Curve style</dl>
+<dd><i>style</i> Curve style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CurveStyle</code>, <code>style()</code></dl>
+<dd><code>CurveStyle</code>, <code>style()</code></dd></dl>
 <h3>void QwtPlotIntervalCurve::setSymbol (const <code>QwtIntervalSymbol</code> *symbol)</h3>
 <p>Assign a symbol. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>symbol</i> Symbol</dl>
+<dd><i>symbol</i> Symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbol()</code></dl>
+<dd><code>symbol()</code></dd></dl>
 <h3><code>QwtPlotIntervalCurve::CurveStyle</code> QwtPlotIntervalCurve::style () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Style of the curve</dl>
+<dd>Style of the curve</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code></dl>
+<dd><code>setStyle()</code></dd></dl>
 <h3>const <code>QwtIntervalSymbol</code> * QwtPlotIntervalCurve::symbol () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current symbol or NULL, when no symbol has been assigned</dl>
+<dd>Current symbol or NULL, when no symbol has been assigned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbol()</code></dl>
+<dd><code>setSymbol()</code></dd></dl>
 <h3>bool QwtPlotIntervalCurve::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dl>
+<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

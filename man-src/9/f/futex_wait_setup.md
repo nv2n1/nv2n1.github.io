@@ -14,19 +14,19 @@ description: "futex_wait_setup – Prepare to wait on a futex"
 <p><i>uaddr</i></p>
 <dl>
 <dd>
-<dd>the futex userspace address</dl>
+</dd><dd>the futex userspace address</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>the expected value</dl>
+<dd>the expected value</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>futex flags (FLAGS_SHARED, etc.)</dl>
+<dd>futex flags (FLAGS_SHARED, etc.)</dd></dl>
 <p> <i>q</i></p>
 <dl>
-<dd>the associated futex_q</dl>
+<dd>the associated futex_q</dd></dl>
 <p> <i>hb</i></p>
 <dl>
-<dd>storage for hash_bucket pointer to be returned to caller</dl>
+<dd>storage for hash_bucket pointer to be returned to caller</dd></dl>
 <h2>Description</h2>
 <p>Setup the futex_q and locate the hash_bucket. Get the futex value and compare it with the expected value. Handle atomic faults internally. Return with the hb lock held and a q.key reference on success, and unlocked with no q.key reference on failure.</p>
 <h2>Return</h2>
@@ -34,5 +34,5 @@ description: "futex_wait_setup – Prepare to wait on a futex"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

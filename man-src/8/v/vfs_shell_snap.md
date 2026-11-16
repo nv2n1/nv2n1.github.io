@@ -10,34 +10,34 @@ description: "vfs_shell_snap – Shell script callouts for snapshot creation and
 <p>vfs_shell_snap &#8211; Shell script callouts for snapshot creation and deletion</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = shell_snap</dl>
+<dd>vfs objects = shell_snap</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8) suite. </p>
 <p> The vfs_shell_snap VFS provides shell-script callouts for snapshot creation and deletion operations issued by remote clients using the File Server Remote VSS Protocol (FSRVP). </p>
 <p> The following shell callouts may be configured in smb.conf: </p>
 <p> m[blue]<code>shell_snap:check path command</code>m[] </p>
 <dl>
-<dd>&bull; Called when an FSRVP client wishes to check whether a given share supports snapshot create/delete requests.</dl>
+<dd>&bull; Called when an FSRVP client wishes to check whether a given share supports snapshot create/delete requests.</dd></dl>
 <dl>
-<dd>&bull; The command is called with a single <i>share_path</i> argument.</dl>
+<dd>&bull; The command is called with a single <i>share_path</i> argument.</dd></dl>
 <dl>
-<dd>&bull; The command must return 0 if <i>share_path</i> is capable of being snapshotted.</dl>
+<dd>&bull; The command must return 0 if <i>share_path</i> is capable of being snapshotted.</dd></dl>
 <p> m[blue]<code>shell_snap:create command</code>m[] </p>
 <dl>
-<dd>&bull; Called when an FSRVP client wishes to create a snapshot.</dl>
+<dd>&bull; Called when an FSRVP client wishes to create a snapshot.</dd></dl>
 <dl>
-<dd>&bull; The command is called with a single <i>share_path</i> argument.</dl>
+<dd>&bull; The command is called with a single <i>share_path</i> argument.</dd></dl>
 <dl>
-<dd>&bull; The command must return 0 status if the snapshot was successfully taken.</dl>
+<dd>&bull; The command must return 0 status if the snapshot was successfully taken.</dd></dl>
 <dl>
-<dd>&bull; The command must output the path of the newly created snapshot to stdout.</dl>
+<dd>&bull; The command must output the path of the newly created snapshot to stdout.</dd></dl>
 <p> m[blue]<code>shell_snap:delete command</code>m[] </p>
 <dl>
-<dd>&bull; Called when an FSRVP client wishes to delete a snapshot.</dl>
+<dd>&bull; Called when an FSRVP client wishes to delete a snapshot.</dd></dl>
 <dl>
-<dd>&bull; The command is called with <i>base_share_path</i> and <i>snapshot_share_path</i> arguments.</dl>
+<dd>&bull; The command is called with <i>base_share_path</i> and <i>snapshot_share_path</i> arguments.</dd></dl>
 <dl>
-<dd>&bull; The command must return 0 status if the snapshot was successfully removed.</dl>
+<dd>&bull; The command must return 0 status if the snapshot was successfully removed.</dd></dl>
 <p> All commands are executed as the authenticated FSRVP client user. </p>
 <p> This module is stackable.</p>
 <h2>Configuration</h2>
@@ -48,7 +48,7 @@ description: "vfs_shell_snap – Shell script callouts for snapshot creation and
  m[blue]<code>shell_snap:check path command = snap_check_path.sh</code>m[]
  m[blue]<code>shell_snap:create command = snap_create.sh</code>m[]
  m[blue]<code>shell_snap:delete command = snap_delete.sh</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> Samba&#8217;s FSRVP server must be configured in the [global] section: </p>
 <dl>
 <dd>
@@ -56,7 +56,7 @@ description: "vfs_shell_snap – Shell script callouts for snapshot creation and
  m[blue]<code>rpc_daemon:fssd = fork</code>m[]
  m[blue]<code>registry shares = yes</code>m[]
  m[blue]<code>include = registry</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.2.0 of the Samba suite.</p>
 <h2>Author</h2>

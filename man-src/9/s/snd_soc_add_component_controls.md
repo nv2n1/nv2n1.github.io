@@ -15,15 +15,15 @@ snd_soc_add_component_controls - Add an array of controls to a component.
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>Component to add controls to</dl>
+<dl><dd></dd><dd>Component to add controls to</dd></dl>
  
 
  <i>controls</i>
-<dl><dd>Array of controls to add</dl>
+<dl><dd>Array of controls to add</dd></dl>
  
 
  <i>num_controls</i>
-<dl><dd>Number of elements in the array</dl>
+<dl><dd>Number of elements in the array</dd></dl>
 
 <h2>Return</h2>
 

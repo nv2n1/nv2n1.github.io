@@ -25,20 +25,20 @@ description: "docbook2texi-spec.pl – convert DocBook Booksto Texinfo documents
 <p> This program does not come close to supporting all the possible markup in DocBook, and may produce wrong output in some cases with supported markup.</p>
 <h2>TO DO</h2>
 <dl>
-<dt>*</p>
-<dd> How the hell do you represent a backslash (\) in Texinfo!!@? I&#8217;ve tried \ but TeX complains about it.</p>
-<dt>*</p>
-<dd> Fix breakages found in the test documents.</p>
-<dt>*</p>
-<dd> Add new element handling and fix existing handling. Be robust.</p>
-<dt>*</p>
-<dd> Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</p>
-<dt>*</p>
-<dd> There are some dependencies on elements occurring when they are actually optional (according to the DTD). We need to fix that (preferably) or prominently state the requirements.</p>
-<dt>*</p>
-<dd> Allow other more common document elements.</p>
-<dt>*</p>
-<dd> Separate out node referencing to a separate script. Not only would it make it faster/easier to maintain because it&#8217;s separate from the main code, but also I would like it to evolve into an automatic DocBook ToC generator.</dl>
+<dt>*</dt>
+<dd> How the hell do you represent a backslash (\) in Texinfo!!@? I&#8217;ve tried \ but TeX complains about it.</dd>
+<dt>*</dt>
+<dd> Fix breakages found in the test documents.</dd>
+<dt>*</dt>
+<dd> Add new element handling and fix existing handling. Be robust.</dd>
+<dt>*</dt>
+<dd> Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</dd>
+<dt>*</dt>
+<dd> There are some dependencies on elements occurring when they are actually optional (according to the DTD). We need to fix that (preferably) or prominently state the requirements.</dd>
+<dt>*</dt>
+<dd> Allow other more common document elements.</dd>
+<dt>*</dt>
+<dd> Separate out node referencing to a separate script. Not only would it make it faster/easier to maintain because it&#8217;s separate from the main code, but also I would like it to evolve into an automatic DocBook ToC generator.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1998-1999 Steve Cheng &lt;steve [at] ggi-project.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>

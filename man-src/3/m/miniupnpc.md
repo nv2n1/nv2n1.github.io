@@ -22,27 +22,26 @@ url: "/docs/linux/man/3-miniupnpc/"
 
 <dl>
 <dt>miniupnpc.h
-<dd> That's the main header file for the miniupnpc library API. It contains all the functions and structures related to device discovery.
-<dt>upnpcommands.h
-<dd> This header file contain the UPnP IGD methods that are accessible through the miniupnpc API. The name of the C functions are matching the UPnP methods names. ie: GetGenericPortMappingEntry is UPNP_GetGenericPortMappingEntry.</dl>
+</dt><dd> That's the main header file for the miniupnpc library API. It contains all the functions and structures related to device discovery.
+</dd><dt>upnpcommands.h
+</dt><dd> This header file contain the UPnP IGD methods that are accessible through the miniupnpc API. The name of the C functions are matching the UPnP methods names. ie: GetGenericPortMappingEntry is UPNP_GetGenericPortMappingEntry.</dd></dl>
 
 <h2>API FUNCTIONS</h2>
 
 <dl>
 <dt>struct UPNPDev * upnpDiscover(int delay, const char * multicastif, const char * minissdpdsock, int localport, int ipv6, int * error);
-<dd> execute the discovery process. delay (in millisecond) is the maximum time for waiting any device response. If available, device list will be obtained from MiniSSDPd. Default path for minissdpd socket will be used if minissdpdsock argument is NULL. If multicastif is not NULL, it will be used instead of the default multicast interface for sending SSDP discover packets. If localport is set to UPNP_LOCAL_PORT_SAME(1) SSDP packets will be sent from the source port 1900 (same as destination port), if set to UPNP_LOCAL_PORT_ANY(0) system assign a source port, any other value will be attempted as the source port. If ipv6 is not 0, IPv6 is used instead of IPv4 for the discovery process.
-<dt>void freeUPNPDevlist(struct UPNPDev * devlist);
-<dd> free the list returned by upnpDiscover().
-<dt>int UPNP_GetValidIGD(struct UPNPDev * devlist, struct UPNPUrls * urls, struct IGDdatas * data, char * lanaddr, int lanaddrlen);
-<dd> browse the list of device returned by upnpDiscover(), find a live UPnP internet gateway device and fill structures passed as arguments with data used for UPNP methods invokation.
-<dt>int UPNP_GetIGDFromUrl(const char * rootdescurl, struct UPNPUrls * urls, struct IGDdatas * data, char * lanaddr, int lanaddrlen);
-<dd> permit to bypass the upnpDiscover() call if the xml root description URL of the UPnP IGD is known. Fill structures passed as arguments with data used for UPNP methods invokation.
-<dt>void GetUPNPUrls(struct UPNPUrls *, struct IGDdatas *, const char *);
-<dd>
-<dt>void FreeUPNPUrls(struct UPNPUrls *);
-<dd> 
-
-</dl>
+</dt><dd> execute the discovery process. delay (in millisecond) is the maximum time for waiting any device response. If available, device list will be obtained from MiniSSDPd. Default path for minissdpd socket will be used if minissdpdsock argument is NULL. If multicastif is not NULL, it will be used instead of the default multicast interface for sending SSDP discover packets. If localport is set to UPNP_LOCAL_PORT_SAME(1) SSDP packets will be sent from the source port 1900 (same as destination port), if set to UPNP_LOCAL_PORT_ANY(0) system assign a source port, any other value will be attempted as the source port. If ipv6 is not 0, IPv6 is used instead of IPv4 for the discovery process.
+</dd><dt>void freeUPNPDevlist(struct UPNPDev * devlist);
+</dt><dd> free the list returned by upnpDiscover().
+</dd><dt>int UPNP_GetValidIGD(struct UPNPDev * devlist, struct UPNPUrls * urls, struct IGDdatas * data, char * lanaddr, int lanaddrlen);
+</dt><dd> browse the list of device returned by upnpDiscover(), find a live UPnP internet gateway device and fill structures passed as arguments with data used for UPNP methods invokation.
+</dd><dt>int UPNP_GetIGDFromUrl(const char * rootdescurl, struct UPNPUrls * urls, struct IGDdatas * data, char * lanaddr, int lanaddrlen);
+</dt><dd> permit to bypass the upnpDiscover() call if the xml root description URL of the UPnP IGD is known. Fill structures passed as arguments with data used for UPNP methods invokation.
+</dd><dt>void GetUPNPUrls(struct UPNPUrls *, struct IGDdatas *, const char *);
+</dt><dd>
+</dd><dt>void FreeUPNPUrls(struct UPNPUrls *);
+</dt><dd> 
+</dd></dl>
 
 <h2>SEE ALSO</h2>
 

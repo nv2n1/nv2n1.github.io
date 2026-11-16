@@ -32,12 +32,12 @@ void aio_init(const struct aioinit *init);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int aio_reserved; }; </p>
 <p> The following fields are used in the <i>aioinit</i> structure:</p>
 <dl>
-<dt><i>aio_threads</i></p>
-<dd> This field specifies the maximum number of worker threads that may be used by the implementation. If the number of outstanding I/O operations exceeds this limit, then excess operations will be queued until a worker thread becomes free. If this field is specified with a value less than 1, the value 1 is used. The default value is 20.</p>
-<dt><i>aio_num</i></p>
-<dd> This field should specify the maximum number of simultaneous I/O requests that the caller expects to enqueue. If a value less than 32 is specified for this field, it is rounded up to 32. The default value is 64.</p>
-<dt><i>aio_idle_time</i></p>
-<dd> This field specifies the amount of time in seconds that a worker thread should wait for further requests before terminating, after having completed a previous request. The default value is 1.</dl>
+<dt><i>aio_threads</i></dt>
+<dd> This field specifies the maximum number of worker threads that may be used by the implementation. If the number of outstanding I/O operations exceeds this limit, then excess operations will be queued until a worker thread becomes free. If this field is specified with a value less than 1, the value 1 is used. The default value is 20.</dd>
+<dt><i>aio_num</i></dt>
+<dd> This field should specify the maximum number of simultaneous I/O requests that the caller expects to enqueue. If a value less than 32 is specified for this field, it is rounded up to 32. The default value is 64.</dd>
+<dt><i>aio_idle_time</i></dt>
+<dd> This field specifies the amount of time in seconds that a worker thread should wait for further requests before terminating, after having completed a previous request. The default value is 1.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_init</code>() function is available since glibc 2.1.</p>
 <h2>CONFORMING TO</h2>

@@ -293,10 +293,10 @@ description: "ggz.h –"
 <h2>Detailed Description</h2>
 <p><code>Author:</code></p>
 <dl COMPACT>
-<dd>Brent M. Hendricks</dl>
+<dd>Brent M. Hendricks</dd></dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>Fri Nov 2 23:32:17 2001 </p>
+<dd>Fri Nov 2 23:32:17 2001 </dd>
 <p> <code>Id</code>.RS 4 <code>ggz.h</code>,v 1.59 2005/05/21 10:19:22 josef Exp</dl>
 <p> Header file for ggz components lib </p>
 <p> Copyright (C) 2001 Brent Hendricks. </p>
@@ -309,3 +309,4 @@ description: "ggz.h –"
 <p> Under gcc, we use the __attribute__ macro to check variadic arguments, for instance to printf-style functions. Other compilers may be able to do something similar, but this is generally unnecessary since it&#8217;s only realy purpose is to give warning messages when the developer compiles the code.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LibGGZ from the source code.</p>
+</p>

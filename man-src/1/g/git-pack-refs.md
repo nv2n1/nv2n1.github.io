@@ -22,11 +22,11 @@ git pack - refs[--all][--no - prune]
 <p> &#8211;all</p>
 <dl>
 <dt>
-<dd> The command by default packs all tags and refs that are already packed, and leaves other refs alone. This is because branches are expected to be actively developed and packing their tips does not help performance. This option causes branch tips to be packed as well. Useful for a repository with many branches of historical interests.</dl>
+</dt><dd> The command by default packs all tags and refs that are already packed, and leaves other refs alone. This is because branches are expected to be actively developed and packing their tips does not help performance. This option causes branch tips to be packed as well. Useful for a repository with many branches of historical interests.</dd></dl>
 <p> &#8211;no-prune</p>
 <dl>
 <dt>
-<dd> The command usually removes loose refs under <code>$GIT_DIR/refs</code> hierarchy after packing them. This option tells it not to.</dl>
+</dt><dd> The command usually removes loose refs under <code>$GIT_DIR/refs</code> hierarchy after packing them. This option tells it not to.</dd></dl>
 <h2>BUGS</h2>
 <p> Older documentation written before the packed-refs mechanism was introduced may still say things like &quot;.git/refs/heads/&lt;branch&gt; file exists&quot; when it means &quot;branch &lt;branch&gt; exists&quot;.</p>
 <h2>GIT</h2>

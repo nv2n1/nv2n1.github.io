@@ -20,36 +20,36 @@ description: "cameratopam – convert raw camera image to PAM"
 <p> Digital still cameras often can produce images in a special raw format in addition to something more standard such as TIFF or JFIF (JPEG). Software supplied with the camera allows you to manipulate the image using information which is lost when the camera converts to the common format. A particular camera model often has a unique raw format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-identify_only</code></p>
-<dd> Report to Standard Error the format of the input image but don&#8217;t generate an output image. Program fails if it cannot recognize the format. </p>
-<dt><code>-verbose</code></p>
-<dd> Report to Standard Error details of the processing. </p>
-<dt><code>-quick_interpolate</code></p>
-<dd> Use simple bilinear interpolation for quick results. The default is to use a slow, high-quality adaptive algorithm. </p>
-<dt><code>-half_size</code></p>
-<dd> Half-size the output image. Instead of interpolating, reduce each 2&#215;2 block of sensors to one pixel. Much faster than <code>-quick_interpolate</code>. </p>
-<dt><code>-four_color_rgb</code></p>
-<dd> Interpolate RGB as four colors. This causes a slight loss of detail, so use this only if you see false 2&#215;2 mesh patterns in blue sky. </p>
-<dt><code>-document_mode</code></p>
-<dd> Show the raw data as a grayscale image with no interpolation. This is good for photographing black and white documents. </p>
-<dt><code>-balance_auto</code></p>
-<dd> Automatic color balance. The default is to use a fixed color balance based on a white card photographed in sunlight. </p>
-<dt><code>-balance_camera</code></p>
-<dd> Use the color balance specified by the camera. If <code>cameratopam</code> can&#8217;t find this, it prints a warning and reverts to the default. </p>
-<dt><code>-red_scale=</code><i>float</i></p>
+<dt><code>-identify_only</code></dt>
+<dd> Report to Standard Error the format of the input image but don&#8217;t generate an output image. Program fails if it cannot recognize the format. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Report to Standard Error details of the processing. </dd>
+<dt><code>-quick_interpolate</code></dt>
+<dd> Use simple bilinear interpolation for quick results. The default is to use a slow, high-quality adaptive algorithm. </dd>
+<dt><code>-half_size</code></dt>
+<dd> Half-size the output image. Instead of interpolating, reduce each 2&#215;2 block of sensors to one pixel. Much faster than <code>-quick_interpolate</code>. </dd>
+<dt><code>-four_color_rgb</code></dt>
+<dd> Interpolate RGB as four colors. This causes a slight loss of detail, so use this only if you see false 2&#215;2 mesh patterns in blue sky. </dd>
+<dt><code>-document_mode</code></dt>
+<dd> Show the raw data as a grayscale image with no interpolation. This is good for photographing black and white documents. </dd>
+<dt><code>-balance_auto</code></dt>
+<dd> Automatic color balance. The default is to use a fixed color balance based on a white card photographed in sunlight. </dd>
+<dt><code>-balance_camera</code></dt>
+<dd> Use the color balance specified by the camera. If <code>cameratopam</code> can&#8217;t find this, it prints a warning and reverts to the default. </dd>
+<dt><code>-red_scale=</code><i>float</i></dt>
 <dd>
-<dt><code>-blue_scale</code><i>float</i></p>
-<dd> Further adjust the color balance by multiplying the red and blue channels by these values. Both default to 1.0. </p>
-<dt><code>-bright=</code><i>float</i></p>
-<dd> Change the output brightness. Default is 1.0. </p>
-<dt><code>-no_clip_color</code></p>
-<dd> By default, <code>cameratoapm</code> clips all colors to prevent pink hues in the highlights. Combine this option with <code>-bright=0.25</code> to leave the image data completely unclipped. </p>
-<dt><code>-rgb</code></p>
-<dd> Write raw camera colors to the output file. By default, <code>cameratoapm</code> converts to sRGB colorspace. </p>
-<dt><code>-use_secondary</code></p>
-<dd> For cameras based on the Fuji Super CCD SR, this option causes <code>cameratopam</code> to use the secondary sensors, in effect underexposing the image by four stops to reveal detail in the highlights. <code>cameratopam</code> silently ignores this option for all other cameras. </p>
-<dt><code>-linear</code></p>
-<dd> This option causes <code>cameratopam</code> to generate a variation on PAM that has &#8216;linear&#8217; color samples. In true PAM, each sample in the image raster is gamma-corrected; i.e. it is essentially proportional to brightness. With the <code>linear</code> option, <code>cameratopam</code> generates an image in which the samples are instead proportional to light intensity. </p>
+</dd><dt><code>-blue_scale</code><i>float</i></dt>
+<dd> Further adjust the color balance by multiplying the red and blue channels by these values. Both default to 1.0. </dd>
+<dt><code>-bright=</code><i>float</i></dt>
+<dd> Change the output brightness. Default is 1.0. </dd>
+<dt><code>-no_clip_color</code></dt>
+<dd> By default, <code>cameratoapm</code> clips all colors to prevent pink hues in the highlights. Combine this option with <code>-bright=0.25</code> to leave the image data completely unclipped. </dd>
+<dt><code>-rgb</code></dt>
+<dd> Write raw camera colors to the output file. By default, <code>cameratoapm</code> converts to sRGB colorspace. </dd>
+<dt><code>-use_secondary</code></dt>
+<dd> For cameras based on the Fuji Super CCD SR, this option causes <code>cameratopam</code> to use the secondary sensors, in effect underexposing the image by four stops to reveal detail in the highlights. <code>cameratopam</code> silently ignores this option for all other cameras. </dd>
+<dt><code>-linear</code></dt>
+<dd> This option causes <code>cameratopam</code> to generate a variation on PAM that has &#8216;linear&#8217; color samples. In true PAM, each sample in the image raster is gamma-corrected; i.e. it is essentially proportional to brightness. With the <code>linear</code> option, <code>cameratopam</code> generates an image in which the samples are instead proportional to light intensity. </dd>
 <p> Without <code>-linear</code>, the image maxval is 255, so the image contains one byte per sample. With <code>-linear</code>, the maxval is 65535, so the image contains two bytes per sample. </p>
 <p> Without <code>-linear</code>, <code>cameratopam</code> uses a 99th percentile white point. With <code>-linear</code>, it doesn&#8217;t. I don&#8217;t know what that means. </p>
 </dl>

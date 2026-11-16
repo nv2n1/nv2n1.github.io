@@ -14,12 +14,12 @@ description: "z8530_rx_done – Receive completion callback"
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>The channel that completed a receive</dl>
+</dd><dd>The channel that completed a receive</dd></dl>
 <h2>Description</h2>
 <p>A new packet is complete. Our goal here is to get back into receive mode as fast as possible. On the Z85230 we could change to using ESCC mode, but on the older chips we have no choice. We flip to the new buffer immediately in DMA mode so that the DMA of the next frame can occur while we are copying the previous buffer to an sk_buff </p>
 <p> Called with the lock held</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

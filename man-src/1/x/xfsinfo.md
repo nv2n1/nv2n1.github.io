@@ -15,8 +15,8 @@ description: "xfsinfo – X font server information utility"
 <p> <i>Xfsinfo</i> is a utility for displaying information about an X font server. It is used to examine the capabilities of a server, the predefined values for various parameters used in communicating between clients and the server, and the font catalogues and alternate servers that are available.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-server </code><i>servername</i></p>
-<dd> This option specifies the X font server to contact. <i>servername</i> must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7). If not specified, the server name in the <code>FONTSERVER</code> environment variable is used.</dl>
+<dt><code>-server </code><i>servername</i></dt>
+<dd> This option specifies the X font server to contact. <i>servername</i> must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7). If not specified, the server name in the <code>FONTSERVER</code> environment variable is used.</dd></dl>
 <h2>HISTORY</h2>
 <p> <i>Xfsinfo</i> was originally called <i>fsinfo.</i> It was renamed to avoid a clash with the <i>fsinfo</i> utility from the Berkeley automounter <i>amd.</i></p>
 <h2>EXAMPLE</h2>
@@ -37,8 +37,8 @@ number of extensions:   0
 </pre>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>FONTSERVER</code></p>
-<dd> To get the default fontserver. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dl>
+<dt><code>FONTSERVER</code></dt>
+<dd> To get the default fontserver. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> xfs(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>AUTHOR</h2>

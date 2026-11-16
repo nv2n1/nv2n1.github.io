@@ -26,10 +26,10 @@ description: "cgbsv.f –"
  and unit lower triangular matrices with KL subdiagonals, and U is
  upper triangular with KL+KU superdiagonals. The factored form of A
  is then used to solve the system of equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of linear equations, i.e., the order of the
  matrix A. N &gt;= 0.</pre>
@@ -79,13 +79,13 @@ description: "cgbsv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -101,7 +101,8 @@ description: "cgbsv.f –"
  Array elements marked * are not used by the routine; elements marked
  + need not be set on entry, but are required by the routine to store
  elements of U because of fill-in resulting from the row interchanges.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file cgbsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

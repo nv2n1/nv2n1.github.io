@@ -20,9 +20,10 @@ description: "SDL_SetTimer – Set a callback to run after the specified number 
 <p> The maximum resolution of this timer is 10 ms, which means that if you request a 16 ms timer, your callback will run approximately 20 ms later on an unloaded system. If you wanted to set a flag signaling a frame update at 30 frames per second (every 33 ms), you might set a timer for 30 ms (see example below). </p>
 <p> If you use this function, you need to pass <code>SDL_INIT_TIMER</code> to <code>SDL_Init()</code>. </p>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> This function is kept for compatibility but has been superseded by the new timer functions </code><i>SDL_AddTimer</i> and <i>SDL_RemoveTimer</i> which support multiple timers.</dl>
 <h2>Examples</h2>
 <pre><tt>SDL_SetTimer((33/10)*10, my_callback);</tt></pre>
 <h2>See Also</h2>
 <p><i></i><code>SDL_AddTimer</code></p>
+</p>

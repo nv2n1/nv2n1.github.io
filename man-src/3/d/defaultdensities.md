@@ -44,7 +44,7 @@ description: "QuantLib::InterpolatedDefaultDensityCurve – interpolated default
 <p> implemented in terms of the default density $ p(t) $ as [ S(t) = 1 &#8211; int_0^t p( au) d au. ] </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This implementation uses numerical integration. Derived classes should override it if a more efficient formula is available.</dl>
+<dd>This implementation uses numerical integration. Derived classes should override it if a more efficient formula is available.</dd></dl>
 <p> Reimplemented from <code>DefaultDensityStructure</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

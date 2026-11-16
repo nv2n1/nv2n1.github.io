@@ -17,11 +17,11 @@ description: "ldns_rr_push_rdf, ldns_rr_pop_rdf"
 <p> ldns_rdf* ldns_rr_pop_rdf(ldns_rr *rr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_push_rdf</i>()</p>
-<dd>sets rd_field member, it will be placed in the next available spot. .br <code>*rr</code>: rr to operate on .br <code>*f</code>: the data field member to set .br Returns bool</dl>
+<dt> <i>ldns_rr_push_rdf</i>()</dt>
+<dd>sets rd_field member, it will be placed in the next available spot. .br <code>*rr</code>: rr to operate on .br <code>*f</code>: the data field member to set .br Returns bool</dd></dl>
 <dl>
-<dt> <i>ldns_rr_pop_rdf</i>()</p>
-<dd>removes a rd_field member, it will be popped from the last position. .br <code>*rr</code>: rr to operate on .br Returns rdf which was popped (null if nothing)</dl>
+<dt> <i>ldns_rr_pop_rdf</i>()</dt>
+<dd>removes a rd_field member, it will be popped from the last position. .br <code>*rr</code>: rr to operate on .br Returns rdf which was popped (null if nothing)</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

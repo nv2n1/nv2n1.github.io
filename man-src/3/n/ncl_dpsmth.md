@@ -13,11 +13,11 @@ DPSMTH - Used to draw a curve when fractional coordinates are available and smoo
 
  void c_dpsmth (float xcpf, float ycpf, int ifvl);
 <h2>Description</h2><dl COMPACT><dt>XCPF
-<dd>(an input expression of type REAL) specifies the X coordinate of a point in the fractional coordinate system. Ignored when IFVL = 2.
-<dt>YCPF
-<dd>(an input expression of type REAL) specifies the Y coordinate of a point in the fractional coordinate system. Ignored when IFVL = 2.
-<dt>IFVL
-<dd>(an input expression of type INTEGER) indicates what type of call is being done: &quot;0&quot; implies a &quot;first-point&quot; call, &quot;1&quot; implies a &quot;vector&quot; call, and &quot;2&quot; implies a &quot;last-point&quot; or &quot;buffer-flush&quot; call.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) specifies the X coordinate of a point in the fractional coordinate system. Ignored when IFVL = 2.
+</dd><dt>YCPF
+</dt><dd>(an input expression of type REAL) specifies the Y coordinate of a point in the fractional coordinate system. Ignored when IFVL = 2.
+</dd><dt>IFVL
+</dt><dd>(an input expression of type INTEGER) indicates what type of call is being done: &quot;0&quot; implies a &quot;first-point&quot; call, &quot;1&quot; implies a &quot;vector&quot; call, and &quot;2&quot; implies a &quot;last-point&quot; or &quot;buffer-flush&quot; call.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Use &quot;CALL DPSMTH(XCPF,YCPF,0)&quot; to do a &quot;pen-up&quot; move to the first point in a sequence of points defining a curve. 
 
  Use &quot;CALL DPSMTH(XCPF,YCPF,1)&quot; to do &quot;pen-down&quot; moves to the second and following points in a sequence of points defining a curve. 

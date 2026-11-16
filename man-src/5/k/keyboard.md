@@ -11,34 +11,34 @@ description: "keyboard – keyboard configuration file"
 <h2>Description</h2>
 <p>The <code>keyboard</code> file describes the properties of the keyboard. It is read by <code><a href="/docs/linux/man/1-setupcon/">setupcon</a></code>(1) in order to configure the keyboard on the console. In Debian systems the default keyboard layout is described in <i>/etc/default/keyboard</i> and it is shared between X and the console. The specification of the keyboard layout in the <code>keyboard</code> file is based on the <font SIZE="-1">XKB</font> options XkbModel, XkbLayout, XkbVariant and XkbOptions. Unfortunately, there is little documentation how to use them. Description of all possible values for these options can be found in the file <i>xorg.lst</i>. You might want to read &#8220;The XKB Configuration Guide&#8221; by Kamil Toman and Ivan U. Pascal:</p>
 <dl>
-<dd><a rel="nofollow" href="http://www.xfree86.org/current/XKB-Config.html">http://www.xfree86.org/current/XKB-Config.html</a></dl>
+<dd><a rel="nofollow" href="http://www.xfree86.org/current/XKB-Config.html">http://www.xfree86.org/current/XKB-Config.html</a></dd></dl>
 <p> Other possible readings are:</p>
 <dl>
 <dd><a rel="nofollow" href="https://wiki.archlinux.org/index.php/X_KeyBoard_extension">https://wiki.archlinux.org/index.php/X_KeyBoard_extension</a><br />
  <a rel="nofollow" href="http://pascal.tsu.ru/en/xkb/">http://pascal.tsu.ru/en/xkb/</a><br />
- <a rel="nofollow" href="http://www.charvolant.org/~doug/xkb/">http://www.charvolant.org/~doug/xkb/</a></dl>
+ <a rel="nofollow" href="http://www.charvolant.org/~doug/xkb/">http://www.charvolant.org/~doug/xkb/</a></dd></dl>
 <p> The complete XKB-specification can be found on</p>
 <dl>
-<dd><a rel="nofollow" href="http://xfree86.org/current/XKBproto.pdf">http://xfree86.org/current/XKBproto.pdf</a></dl>
+<dd><a rel="nofollow" href="http://xfree86.org/current/XKBproto.pdf">http://xfree86.org/current/XKBproto.pdf</a></dd></dl>
 <p> The file <code>keyboard</code> consists of variable settings in <font SIZE="-1">POSIX</font> format:</p>
 <dl>
-<dd><i>VARIABLE</i>=<i>VALUE</i></dl>
+<dd><i>VARIABLE</i>=<i>VALUE</i></dd></dl>
 <p> Only one assignment is allowed per line. Comments (starting with &#8216;#&#8217;) are also allowed. </p>
 <h2>Options</h2>
 <p>The following variables can be set. </p>
 <dl>
-<dt><code>XKBMODEL</code></p>
-<dd>Specifies the <font SIZE="-1">XKB</font> keyboard model name. Default: <code>pc105</code> on most platforms. </p>
-<dt><code>XKBLAYOUT</code></p>
-<dd>Specifies the <font SIZE="-1">XKB</font> keyboard layout name. This is usually the country or language type of the keyboard. Default: <code>us</code> on most platforms </p>
-<dt><code>XKBVARIANT</code></p>
-<dd>Specifies the <font SIZE="-1">XKB</font> keyboard variant components. These can be used to further specify the keyboard layout details. Default: not set. </p>
-<dt><code>XKBOPTIONS</code></p>
-<dd>Specifies the <font SIZE="-1">XKB</font> keyboard option components. Options usually relate to the behavior of the special keys <font SIZE="-1">(&lt;Shift&gt;, &lt;Control&gt;, &lt;Alt&gt;, &lt;CapsLock&gt;, etc.)</font> Default: not set. </p>
-<dt><code>BACKSPACE</code></p>
-<dd>Determines the behavior of <font SIZE="-1">&lt;BackSpace&gt;</font> and <font SIZE="-1">&lt;Delete&gt;</font> keys on the console. Allowed values: <code>bs,</code> del <code>and</code> guess. In most cases you can specify <code>guess</code> here, in which case the current terminal settings and the kernel of your operating system will be used to determine the correct value. Value <code>bs</code> specifies VT100-conformant behavior: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^H</code> <font SIZE="-1">(ASCII BS)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL).</font> Value <code>del</code> specifies VT220-conformant behavior: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate a special function sequence. </p>
-<dt><code>KMAP</code></p>
-<dd>Usually this variable will be unset but if you don&#8217;t want to use a <font SIZE="-1">XKB</font> layout on the console, you can specify an alternative keymap here. Specify a file that is suitable as input for <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) on Linux or for <code>kbdcontrol</code>(1) on FreeBSD. </p>
+<dt><code>XKBMODEL</code></dt>
+<dd>Specifies the <font SIZE="-1">XKB</font> keyboard model name. Default: <code>pc105</code> on most platforms. </dd>
+<dt><code>XKBLAYOUT</code></dt>
+<dd>Specifies the <font SIZE="-1">XKB</font> keyboard layout name. This is usually the country or language type of the keyboard. Default: <code>us</code> on most platforms </dd>
+<dt><code>XKBVARIANT</code></dt>
+<dd>Specifies the <font SIZE="-1">XKB</font> keyboard variant components. These can be used to further specify the keyboard layout details. Default: not set. </dd>
+<dt><code>XKBOPTIONS</code></dt>
+<dd>Specifies the <font SIZE="-1">XKB</font> keyboard option components. Options usually relate to the behavior of the special keys <font SIZE="-1">(&lt;Shift&gt;, &lt;Control&gt;, &lt;Alt&gt;, &lt;CapsLock&gt;, etc.)</font> Default: not set. </dd>
+<dt><code>BACKSPACE</code></dt>
+<dd>Determines the behavior of <font SIZE="-1">&lt;BackSpace&gt;</font> and <font SIZE="-1">&lt;Delete&gt;</font> keys on the console. Allowed values: <code>bs,</code> del <code>and</code> guess. In most cases you can specify <code>guess</code> here, in which case the current terminal settings and the kernel of your operating system will be used to determine the correct value. Value <code>bs</code> specifies VT100-conformant behavior: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^H</code> <font SIZE="-1">(ASCII BS)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL).</font> Value <code>del</code> specifies VT220-conformant behavior: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate a special function sequence. </dd>
+<dt><code>KMAP</code></dt>
+<dd>Usually this variable will be unset but if you don&#8217;t want to use a <font SIZE="-1">XKB</font> layout on the console, you can specify an alternative keymap here. Specify a file that is suitable as input for <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) on Linux or for <code>kbdcontrol</code>(1) on FreeBSD. </dd>
 </dl>
 <h2>Files</h2>
 <p>The standard location of the <code>keyboard</code> file is <i>/etc/default/keyboard</i>. Description of all available keyboard models, layouts, variants and options is available in <i>/usr/share/X11/xkb/rules/xorg.lst</i>. In most cases, in <i>/usr/share/keymaps/</i> or <i>/usr/share/syscons/keymaps/</i> you will find several keymaps that can be used with the variable <code>KMAP</code>.</p>

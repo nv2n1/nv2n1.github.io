@@ -15,12 +15,12 @@ description: "scsi_stop – stop (spin down) one or more SCSI disks"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level or verbosity.</p>
-<dt><code>-w</code>, <code>&#8211;wait</code></p>
-<dd>wait for the spin down (stop) on each given <i>DEVICE</i> to complete. The default action is to do each stop in immediate mode.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level or verbosity.</dd>
+<dt><code>-w</code>, <code>&#8211;wait</code></dt>
+<dd>wait for the spin down (stop) on each given <i>DEVICE</i> to complete. The default action is to do each stop in immediate mode.</dd></dl>
 <h2>Notes</h2>
 <p>The sg_start utility calls the SCSI START STOP UNIT command and can either start (spin up) or stop (spin down) a SCSI disk depending on the given command line options.</p>
 <h2>Exit Status</h2>

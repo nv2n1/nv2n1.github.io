@@ -10,12 +10,7 @@ description: "xcb_xkb_get_state –"
 <p>xcb_xkb_get_state &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_state_cookie_t xcb_xkb_get_state(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_state_reply_t {
@@ -43,51 +38,51 @@ xcb_xkb_get_state_cookie_t xcb_xkb_get_state(xcb_connection_t *conn, xcb_xkb_dev
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_xkb_get_state_reply_t *<code>xcb_xkb_get_state_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_state_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_STATE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>mods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>baseMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>latchedMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>lockedMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>group</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>lockedGroup</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>baseGroup</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>latchedGroup</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>compatState</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>grabMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>compatGrabMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>lookupMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>compatLookupMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ptrBtnState</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_STATE</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>mods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>baseMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>latchedMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>lockedMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>group</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>lockedGroup</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>baseGroup</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>latchedGroup</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>compatState</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>grabMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>compatGrabMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>lookupMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>compatLookupMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ptrBtnState</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_state_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_state_reply</i>. </p>

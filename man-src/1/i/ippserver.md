@@ -16,38 +16,38 @@ description: "ippserver – a simple internet printing protocol server"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>ippserver:</code></p>
 <dl>
-<dt><code>-2</code></p>
-<dd> Report support for two-sided (duplex) printing.</p>
-<dt><code>-M </code><i>manufacturer</i></p>
-<dd> Set the manufacturer of the printer. The default is &quot;Test&quot;.</p>
-<dt><code>-P</code></p>
-<dd> Report support for PIN printing.</p>
-<dt><code>-c </code><i>command</i></p>
-<dd> Run the specified command for each document that is printed.</p>
-<dt><code>-d </code><i>spool-directory</i></p>
-<dd> Specifies the directory that will hold the print files. The default is a directory under the user&#8217;s current temporary directory.</p>
-<dt><code>-f </code><i>type/subtype[,&#8230;]</i></p>
-<dd> Specifies a list of MIME media types that the server will accept. The default is &quot;application/pdf,image/jpeg,image/pwg-raster&quot;.</p>
-<dt><code>-h</code></p>
-<dd> Shows program help.</p>
-<dt><code>-i </code><i>iconfile.png</i></p>
-<dd> Specifies the printer icon file for the server. The default is &quot;printer.png&quot;.</p>
-<dt><code>-k</code></p>
-<dd> Keeps the print documents in the spool directory rather than deleting them.</p>
-<dt><code>-l </code><i>location</i></p>
-<dd> Specifies the human-readable location string that is reported by the server. The default is the empty string.</p>
-<dt><code>-m </code><i>model</i></p>
-<dd> Specifies the model name of the printer. The default is &quot;Printer&quot;.</p>
-<dt><code>-n </code><i>hostname</i></p>
-<dd> Specifies the hostname that is reported by the server. The default is the name returned by the <code><a href="/docs/linux/man/1-hostname/">hostname</a></code>(1) command.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd> Specifies the port number to listen on. The default is a user-specific number from 8000 to 8999.</p>
-<dt><code>-r </code><i>subtype</i></p>
-<dd> Specifies the Bonjour subtype(s) to advertise. Separate multiple subtypes with a comma. The default is &quot;_print&quot;.</p>
-<dt><code>-s </code><i>speed[,color-speed]</i></p>
-<dd> Specifies the printer speed in pages per minute. If two numbers are specified and the second number is greater than zero, the server will report support for color printing. The default is &quot;10,0&quot;.</p>
-<dt><code>-v[vvv]</code></p>
-<dd> Be (very) verbose when logging activity to the standard output.</dl>
+<dt><code>-2</code></dt>
+<dd> Report support for two-sided (duplex) printing.</dd>
+<dt><code>-M </code><i>manufacturer</i></dt>
+<dd> Set the manufacturer of the printer. The default is &quot;Test&quot;.</dd>
+<dt><code>-P</code></dt>
+<dd> Report support for PIN printing.</dd>
+<dt><code>-c </code><i>command</i></dt>
+<dd> Run the specified command for each document that is printed.</dd>
+<dt><code>-d </code><i>spool-directory</i></dt>
+<dd> Specifies the directory that will hold the print files. The default is a directory under the user&#8217;s current temporary directory.</dd>
+<dt><code>-f </code><i>type/subtype[,&#8230;]</i></dt>
+<dd> Specifies a list of MIME media types that the server will accept. The default is &quot;application/pdf,image/jpeg,image/pwg-raster&quot;.</dd>
+<dt><code>-h</code></dt>
+<dd> Shows program help.</dd>
+<dt><code>-i </code><i>iconfile.png</i></dt>
+<dd> Specifies the printer icon file for the server. The default is &quot;printer.png&quot;.</dd>
+<dt><code>-k</code></dt>
+<dd> Keeps the print documents in the spool directory rather than deleting them.</dd>
+<dt><code>-l </code><i>location</i></dt>
+<dd> Specifies the human-readable location string that is reported by the server. The default is the empty string.</dd>
+<dt><code>-m </code><i>model</i></dt>
+<dd> Specifies the model name of the printer. The default is &quot;Printer&quot;.</dd>
+<dt><code>-n </code><i>hostname</i></dt>
+<dd> Specifies the hostname that is reported by the server. The default is the name returned by the <code><a href="/docs/linux/man/1-hostname/">hostname</a></code>(1) command.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd> Specifies the port number to listen on. The default is a user-specific number from 8000 to 8999.</dd>
+<dt><code>-r </code><i>subtype</i></dt>
+<dd> Specifies the Bonjour subtype(s) to advertise. Separate multiple subtypes with a comma. The default is &quot;_print&quot;.</dd>
+<dt><code>-s </code><i>speed[,color-speed]</i></dt>
+<dd> Specifies the printer speed in pages per minute. If two numbers are specified and the second number is greater than zero, the server will report support for color printing. The default is &quot;10,0&quot;.</dd>
+<dt><code>-v[vvv]</code></dt>
+<dd> Be (very) verbose when logging activity to the standard output.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>ippserver</code> program returns 1 if it is unable to process the command-line arguments or register the IPP service. Otherwise <code>ippserver</code> will run continuously until terminated.</p>
 <h2>CONFORMING TO</h2>

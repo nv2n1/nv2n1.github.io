@@ -14,18 +14,18 @@ description: "ext_unix_group_acl – Squid UNIX Group ACL helper"
 <p><code>ext_unix_group_acl</code> allows Squid to base access controls on users memberships in UNIX groups.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d </code></p>
-<dd>Write debug info to stderr. <code>-g </code><i>group </i> Specifies a group name to match.</p>
-<dt><code>-p</code></p>
-<dd>Also match the users primary group from <code>/etc/passwd</code></p>
-<dt><code>-s</code></p>
-<dd>Strip NT domain name component from user names (/ or \ separated)</dl>
+<dt><code>-d </code></dt>
+<dd>Write debug info to stderr. <code>-g </code><i>group </i> Specifies a group name to match.</dd>
+<dt><code>-p</code></dt>
+<dd>Also match the users primary group from <code>/etc/passwd</code></dd>
+<dt><code>-s</code></dt>
+<dd>Strip NT domain name component from user names (/ or \ separated)</dd></dl>
 <h2>Configuration</h2>
 <p>This <code>squid.conf</code> example defines two Squid acls. <i>usergroup1</i> matches users in <i>group1</i> , and <i>usergroup2</i> matches users in <i>group2</i> or <i>group3</i></p>
 <dl>
 <dd><code>external_acl_type unix_group %LOGIN /usr/local/squid/libexec/ext_unix_group_acl -p</code><br />
  <code>acl usergroup1 external unix_group group1</code><br />
- <code>acl usergroup2 external unix_group group2 group3</code></dl>
+ <code>acl usergroup2 external unix_group group2 group3</code></dd></dl>
 <p> By default up to 11 groups can be matched in one acl (including commandline specified groups). This limit is defined by <code>MAX_GROUPS</code> in the source code.</p>
 <h2>Known Issues</h2>
 <p>Does not understand GID aliased groups sometimes used to work around groups size limitations. If you are using GID aliased groups then you must specify each alias by name.</p>

@@ -11,10 +11,8 @@ std::experimental::filesystem::file_size - std::experimental::filesystem::file_s
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     std::uintmax_t file_size(const path &amp;p);
 (1)(filesystem TS)
-
     std::uintmax_t file_size(const path &amp;p, error_code &amp;ec);</code></pre> 
 Returns the size of the regular file p, determined as if by reading the st_size member of the structure obtained by POSIX stat (symlinks are followed) 
 Attempting to determine the size of a directory (as well as any other file that is not a regular file or a symlink) is treated as an error. 
@@ -38,15 +36,10 @@ noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p).put('a'); // create file of size 1

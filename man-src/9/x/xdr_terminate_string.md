@@ -15,11 +15,11 @@ xdr_terminate_string - '\0'-terminate a string residing in an xdr_buf
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>XDR buffer where string resides</dl>
+<dl><dd></dd><dd>XDR buffer where string resides</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of string, in bytes</dl>
+<dl><dd>length of string, in bytes</dd></dl>
 
 <h2>Copyright</h2>
 

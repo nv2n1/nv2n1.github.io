@@ -110,8 +110,8 @@ description: "postfix_master_selinux – Security Enhanced Linux Policy for the 
 <p> <code>postfix_master_exec_t</code> </p>
 <p> &#8211; Set files with the postfix_master_exec_t type, if you want to transition an executable to the postfix_master_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/postcat, /usr/sbin/postfix, /usr/sbin/postlog, /usr/sbin/postkick, /usr/sbin/postlock, /usr/sbin/postalias, /usr/sbin/postsuper, /usr/libexec/postfix/master </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/postcat, /usr/sbin/postfix, /usr/sbin/postlog, /usr/sbin/postkick, /usr/sbin/postlock, /usr/sbin/postalias, /usr/sbin/postsuper, /usr/libexec/postfix/master </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

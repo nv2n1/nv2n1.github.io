@@ -22,25 +22,25 @@ description: "git-lost-found – Recover lost refs that luckily have not yet bee
 <p> Suppose you run <i>git tag -f</i> and mistype the tag to overwrite. The ref to your tag is overwritten, but until you run <i>git prune</i>, the tag itself is still there. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git lost-found
 [1ef2b196d909eed523d4f3c9bf54b78cdd6843c6] GIT 0.99.9c
 ...
 </pre>
-</dl>
+</dd></dl>
 <p> Also you can use gitk to browse how any tags found relate to each other. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ gitk $(cd .git/lost-found/commit &amp;&amp; echo ??*)
 </pre>
-</dl>
+</dd></dl>
 <p> After making sure you know which the object is the tag you are looking for, you can reconnect it to your regular refs hierarchy by using the update-ref command. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git cat-file -t 1ef2b196
 tag
@@ -56,7 +56,7 @@ $ git update-ref refs/tags/not-lost-anymore 1ef2b196
 $ git rev-parse not-lost-anymore
 1ef2b196d909eed523d4f3c9bf54b78cdd6843c6
 </pre>
-</dl>
+</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

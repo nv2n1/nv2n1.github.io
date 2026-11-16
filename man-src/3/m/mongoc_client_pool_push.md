@@ -15,10 +15,10 @@ mongoc_client_pool_push (mongoc_client_pool_t *pool,
 <p>This function returns a <code>mongoc_client_t</code> back to the client pool. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>pool</code></p>
-<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dl>
+<dt><code>pool</code></dt>
+<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

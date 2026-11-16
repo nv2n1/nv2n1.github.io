@@ -10,10 +10,8 @@ description: "std::is_pointer – std::is_pointer"
 <p>std::is_pointer &#8211; std::is_pointer</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_pointer;</code></pre>
 <p>Checks whether T is a pointer_to_object or a pointer to function (but not a pointer to member/member function). Provides the member constant value which is equal to true, if T is a object/function pointer type. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -43,13 +41,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_pointer&lt;A&gt;::value &lt;&lt; '

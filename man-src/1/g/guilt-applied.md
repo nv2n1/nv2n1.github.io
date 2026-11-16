@@ -21,15 +21,15 @@ description: "guilt-applied – List applied patches"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
-<dt> 2.</p>
-<dd> brandon [at] ifup.org</p>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
+<dt> 2.</dt>
+<dd> brandon [at] ifup.org</dd>
 <dl>
 <dt>
-<dd> mailto:brandon [at] ifup.org</dl>
+</dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
 <h2>Index</h2>

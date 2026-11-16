@@ -14,7 +14,7 @@ description: "genphy_setup_forced – configures/forces speed/duplex from phydev
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>target phy_device struct</dl>
+</dd><dd>target phy_device struct</dd></dl>
 <h2>Description</h2>
 <p>Configures MII_BMCR to force speed/duplex to the values in phydev. Assumes that the values are valid. Please see <code>phy_sanitize_settings</code>.</p>
 <h2>Copyright</h2>

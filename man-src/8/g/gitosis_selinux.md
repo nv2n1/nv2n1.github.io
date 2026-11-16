@@ -52,14 +52,14 @@ description: "gitosis_selinux – Security Enhanced Linux Policy for the gitosis
 <p> <code>gitosis_exec_t</code> </p>
 <p> &#8211; Set files with the gitosis_exec_t type, if you want to transition an executable to the gitosis_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/gitosis-serve, /usr/bin/gl-auth-command </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/gitosis-serve, /usr/bin/gl-auth-command </dd>
 </dl>
 <p> <code>gitosis_var_lib_t</code> </p>
 <p> &#8211; Set files with the gitosis_var_lib_t type, if you want to store the gitosis files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/srv/lib/gitosis(/.*)?, /var/lib/gitosis(/.*)?, /var/lib/gitolite(3)?(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/srv/lib/gitosis(/.*)?, /var/lib/gitosis(/.*)?, /var/lib/gitolite(3)?(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

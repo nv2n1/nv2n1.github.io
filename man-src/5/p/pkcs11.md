@@ -20,7 +20,8 @@ description: "pkcs11.txt – NSS PKCS #11 module configuration file"
 <p>Licensed under the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a rel="nofollow" href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a></p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>PKCS #11 Module Specs</p>
+<dt> 1.</dt>
+<dd>PKCS #11 Module Specs</dd>
 <dl>
-<dd><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/PKCS11_Module_Specs">https://developer.mozilla.org/en-US/docs/PKCS11_Module_Specs</a></dl>
+<dd><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/PKCS11_Module_Specs">https://developer.mozilla.org/en-US/docs/PKCS11_Module_Specs</a></dd></dl>
+</dl>

@@ -18,47 +18,47 @@ description: "lnstat – unified linux network statistics"
 <h2>Options</h2>
 <p>lnstat supports the following options.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Show version of program.</p>
-<dt><code>-c, &#8211;count &lt;count&gt;</code></p>
-<dd>Print &lt;count&gt; number of intervals.</p>
-<dt><code>-d, &#8211;dump</code></p>
-<dd>Dump list of available files/keys.</p>
-<dt><code>-f, &#8211;file &lt;file&gt;</code></p>
-<dd>Statistics file to use, may be specified multiple times. By default all files in /proc/net/stat are scanned.</p>
-<dt><code>-i, &#8211;interval &lt;intv&gt;</code></p>
-<dd>Set interval to &#8216;intv&#8217; seconds.</p>
-<dt><code>-j, &#8211;json</code></p>
-<dd>Display results in JSON format</p>
-<dt><code>-k, &#8211;keys k,k,k,&#8230;</code></p>
-<dd>Display only keys specified. Each key <code>k</code> is of the form <code>[file:]key</code>. If <code>&lt;file&gt;</code> is given, the search for the given key is limited to that file. Otherwise the first file containing the searched key is being used.</p>
-<dt><code>-s, &#8211;subject [0-2]</code></p>
-<dd>Specify display of subject/header. &#8216;0&#8217; means no header at all, &#8216;1&#8217; prints a header only at start of the program and &#8216;2&#8217; prints a header every 20 lines.</p>
-<dt><code>-w, &#8211;width n,n,n,&#8230;</code></p>
-<dd>Width for each field.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-c, &#8211;count &lt;count&gt;</code></dt>
+<dd>Print &lt;count&gt; number of intervals.</dd>
+<dt><code>-d, &#8211;dump</code></dt>
+<dd>Dump list of available files/keys.</dd>
+<dt><code>-f, &#8211;file &lt;file&gt;</code></dt>
+<dd>Statistics file to use, may be specified multiple times. By default all files in /proc/net/stat are scanned.</dd>
+<dt><code>-i, &#8211;interval &lt;intv&gt;</code></dt>
+<dd>Set interval to &#8216;intv&#8217; seconds.</dd>
+<dt><code>-j, &#8211;json</code></dt>
+<dd>Display results in JSON format</dd>
+<dt><code>-k, &#8211;keys k,k,k,&#8230;</code></dt>
+<dd>Display only keys specified. Each key <code>k</code> is of the form <code>[file:]key</code>. If <code>&lt;file&gt;</code> is given, the search for the given key is limited to that file. Otherwise the first file containing the searched key is being used.</dd>
+<dt><code>-s, &#8211;subject [0-2]</code></dt>
+<dd>Specify display of subject/header. &#8216;0&#8217; means no header at all, &#8216;1&#8217; prints a header only at start of the program and &#8216;2&#8217; prints a header every 20 lines.</dd>
+<dt><code>-w, &#8211;width n,n,n,&#8230;</code></dt>
+<dd>Width for each field.</dd></dl>
 <h2>Usage Examples</h2>
 <dl>
-<dt><code># lnstat -d</code></p>
-<dd>Get a list of supported statistics files.</p>
-<dt><code># lnstat -k arp_cache:entries,rt_cache:in_hit,arp_cache:destroys</code></p>
-<dd>Select the specified files and keys.</p>
-<dt><code># lnstat -i 10</code></p>
-<dd>Use an interval of 10 seconds.</p>
-<dt><code># lnstat -f ip_conntrack</code></p>
-<dd>Use only the specified file for statistics.</p>
-<dt><code># lnstat -s 0</code></p>
-<dd>Do not print a header at all.</p>
-<dt><code># lnstat -s 20</code></p>
-<dd>Print a header at start and every 20 lines.</p>
-<dt><code># lnstat -c -1 -i 1 -f rt_cache -k entries,in_hit,in_slow_tot</code></p>
-<dd>Display statistics for keys entries, in_hit and in_slow_tot of field rt_cache every second. </p>
+<dt><code># lnstat -d</code></dt>
+<dd>Get a list of supported statistics files.</dd>
+<dt><code># lnstat -k arp_cache:entries,rt_cache:in_hit,arp_cache:destroys</code></dt>
+<dd>Select the specified files and keys.</dd>
+<dt><code># lnstat -i 10</code></dt>
+<dd>Use an interval of 10 seconds.</dd>
+<dt><code># lnstat -f ip_conntrack</code></dt>
+<dd>Use only the specified file for statistics.</dd>
+<dt><code># lnstat -s 0</code></dt>
+<dd>Do not print a header at all.</dd>
+<dt><code># lnstat -s 20</code></dt>
+<dd>Print a header at start and every 20 lines.</dd>
+<dt><code># lnstat -c -1 -i 1 -f rt_cache -k entries,in_hit,in_slow_tot</code></dt>
+<dd>Display statistics for keys entries, in_hit and in_slow_tot of field rt_cache every second. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/proc/net/stat/arp_cache, /proc/net/stat/ndisc_cache</code></p>
-<dd>Statistics around neighbor cache and ARP. <code>arp_cache</code> is for IPv4, <code>ndisc_cache</code> is the same for IPv6. </p>
+<dt><code>/proc/net/stat/arp_cache, /proc/net/stat/ndisc_cache</code></dt>
+<dd>Statistics around neighbor cache and ARP. <code>arp_cache</code> is for IPv4, <code>ndisc_cache</code> is the same for IPv6. </dd>
 <p> <code>entries</code> Number of entries in the neighbor table. </p>
 <p> <code>allocs</code> How many neighbor entries have been allocated. </p>
 <p> <code>destroys</code> How many neighbor entries have been removed. </p>
@@ -72,8 +72,8 @@ description: "lnstat – unified linux network statistics"
 <p> <code>forced_gc_runs</code> How many forced garbage collection runs were executed. Happens when adding an entry and the table is too full. </p>
 <p> <code>unresolved_discards</code> How many neighbor table entries were discarded due to lookup failure. </p>
 <p> <code>table_fulls</code> Number of table overflows. Happens if table is full and forced GC run (see <code>forced_gc_runs</code>) has failed. </p>
-<dt><code>/proc/net/stat/ip_conntrack, /proc/net/stat/nf_conntrack</code></p>
-<dd>Conntrack related counters. <code>ip_conntrack</code> is for backwards compatibility with older userspace only and shows the same data as <code>nf_conntrack</code>. </p>
+<dt><code>/proc/net/stat/ip_conntrack, /proc/net/stat/nf_conntrack</code></dt>
+<dd>Conntrack related counters. <code>ip_conntrack</code> is for backwards compatibility with older userspace only and shows the same data as <code>nf_conntrack</code>. </dd>
 <p> <code>entries</code> Number of entries in conntrack table. </p>
 <p> <code>searched</code> Number of conntrack table lookups performed. </p>
 <p> <code>found</code> Number of <code>searched</code> entries which were successful. </p>
@@ -91,8 +91,8 @@ description: "lnstat – unified linux network statistics"
 <p> <code>expect_create</code> Number of expectations added. </p>
 <p> <code>expect_delete</code> Number of expectations deleted. </p>
 <p> <code>search_restart</code> Number of conntrack table lookups which had to be restarted due to hashtable resizes. </p>
-<dt><code>/proc/net/stat/rt_cache</code></p>
-<dd>Routing cache statistics. </p>
+<dt><code>/proc/net/stat/rt_cache</code></dt>
+<dd>Routing cache statistics. </dd>
 <p> <code>entries</code> Number of entries in routing cache. </p>
 <p> <code>in_hit</code> Number of route cache hits for incoming packets. Deprecated since IP route cache removal, therefore always zero. </p>
 <p> <code>in_slow_tot</code> Number of routing cache entries added for input traffic. </p>

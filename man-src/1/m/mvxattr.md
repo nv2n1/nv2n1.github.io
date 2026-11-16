@@ -12,7 +12,7 @@ description: "mvxattr – Recursively rename extended attributes"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>mvxattr {-s STRING, &#8211;from=STRING} {-d STRING, &#8211;to=STRING} [-l, &#8211;follow-symlinks] [-p, &#8211;print] [-v, &#8211;verbose] [-f, &#8211;force] {PATH&nbsp;<wbr>[PATH &#8230;]}</dl>
+</dt><dd>mvxattr {-s STRING, &#8211;from=STRING} {-d STRING, &#8211;to=STRING} [-l, &#8211;follow-symlinks] [-p, &#8211;print] [-v, &#8211;verbose] [-f, &#8211;force] {PATH&nbsp;<wbr>[PATH &#8230;]}</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This tool is part of the <code>samba</code>(1) suite. </p>
 <p> mvxattr is a simple utility to recursively rename extended attributes. </p>
@@ -21,27 +21,27 @@ description: "mvxattr – Recursively rename extended attributes"
 <p> -s STRING, &#8211;from=STRING</p>
 <dl>
 <dt>
-<dd> Source xattr name</dl>
+</dt><dd> Source xattr name</dd></dl>
 <p> -d STRING, &#8211;to=STRING</p>
 <dl>
 <dt>
-<dd> Destination xattr name</dl>
+</dt><dd> Destination xattr name</dd></dl>
 <p> -l, &#8211;follow-symlinks</p>
 <dl>
 <dt>
-<dd> Follow symlinks, the default is to ignore them.</dl>
+</dt><dd> Follow symlinks, the default is to ignore them.</dd></dl>
 <p> -p, &#8211;print</p>
 <dl>
 <dt>
-<dd> Print files where the xattr got renamed.</dl>
+</dt><dd> Print files where the xattr got renamed.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Print files as they are checked.</dl>
+</dt><dd> Print files as they are checked.</dd></dl>
 <p> -f, &#8211;force</p>
 <dl>
 <dt>
-<dd> Force overwriting of destination xattr.</dl>
+</dt><dd> Force overwriting of destination xattr.</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 4 of the Samba suite.</p>
 <h2>AUTHOR</h2>

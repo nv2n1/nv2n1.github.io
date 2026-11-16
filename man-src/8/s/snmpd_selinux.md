@@ -55,9 +55,9 @@ description: "snmpd_selinux – Security Enhanced Linux Policy for the snmpd pro
 <p> Policy governs the access confined processes have to these ports. SELinux snmpd policy is very flexible allowing users to setup their snmpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for snmpd: </p>
 <dl>
-<dt><code>snmp_port_t</code></p>
+<dt><code>snmp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 199,1161,161-162 udp 161-162</dl>
+</dd><dd>Default Defined Ports: tcp 199,1161,161-162 udp 161-162</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type snmpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -116,8 +116,8 @@ description: "snmpd_selinux – Security Enhanced Linux Policy for the snmpd pro
 <p> <code>snmpd_exec_t</code> </p>
 <p> &#8211; Set files with the snmpd_exec_t type, if you want to transition an executable to the snmpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/snmpd, /usr/sbin/snmptrapd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/snmpd, /usr/sbin/snmptrapd </dd>
 </dl>
 <p> <code>snmpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the snmpd_initrc_exec_t type, if you want to transition an executable to the snmpd_initrc_t domain. </p>
@@ -126,14 +126,14 @@ description: "snmpd_selinux – Security Enhanced Linux Policy for the snmpd pro
 <p> <code>snmpd_var_lib_t</code> </p>
 <p> &#8211; Set files with the snmpd_var_lib_t type, if you want to store the snmpd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/agentx(/.*)?, /var/net-snmp(/.*), /var/lib/snmp(/.*)?, /var/net-snmp(/.*)?, /var/lib/net-snmp(/.*)?, /var/spool/snmptt(/.*)?, /usr/share/snmp/mibs/.index </p>
+<dt>Paths:</dt>
+<dd>/var/agentx(/.*)?, /var/net-snmp(/.*), /var/lib/snmp(/.*)?, /var/net-snmp(/.*)?, /var/lib/net-snmp(/.*)?, /var/spool/snmptt(/.*)?, /usr/share/snmp/mibs/.index </dd>
 </dl>
 <p> <code>snmpd_var_run_t</code> </p>
 <p> &#8211; Set files with the snmpd_var_run_t type, if you want to store the snmpd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/snmpd(/.*)?, /var/run/net-snmp(/.*)?, /var/run/snmpd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/snmpd(/.*)?, /var/run/net-snmp(/.*)?, /var/run/snmpd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

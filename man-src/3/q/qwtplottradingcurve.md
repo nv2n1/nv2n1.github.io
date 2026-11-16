@@ -64,65 +64,65 @@ description: "QwtPlotTradingCurve –"
 <p> <code>QwtPlotTradingCurve</code> supports candlestick or bar ( OHLC ) charts that are used in the domain of technical analysis. </p>
 <p> While the length ( height or width depending on <code>orientation()</code> ) of each symbol depends on the corresponding OHLC sample the size of the other dimension can be controlled using: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>setSymbolExtent()</code></p>
-<dt>&bull;</p>
-<dd>setSymbolMinWidth()</p>
-<dt>&bull;</p>
-<dd>setSymbolMaxWidth()</dl>
+<dt>&bull;</dt>
+<dd><code>setSymbolExtent()</code></dd>
+<dt>&bull;</dt>
+<dd>setSymbolMinWidth()</dd>
+<dt>&bull;</dt>
+<dd>setSymbolMaxWidth()</dd></dl>
 <p> The extent is a size in scale coordinates, so that the symbol width is increasing when the plot is zoomed in. Minimum/Maximum width is in widget coordinates independent from the zoom level. When setting the minimum and maximum to the same value, the width of the symbol is fixed.</p>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotTradingCurve::Direction</code></h3>
 <p>Direction of a price movement. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Increasing </i></p>
-<dd>The closing price is higher than the opening price.</p>
-<dt><i>Decreasing </i></p>
-<dd>The closing price is lower than the opening price.</dl>
+<dt><i>Increasing </i></dt>
+<dd>The closing price is higher than the opening price.</dd>
+<dt><i>Decreasing </i></dt>
+<dd>The closing price is lower than the opening price.</dd></dl>
 <h3>enum <code>QwtPlotTradingCurve::PaintAttribute</code></h3>
 <p>Attributes to modify the drawing algorithm. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>ClipSymbols </i></p>
-<dd>Check if a symbol is on the plot canvas before painting it.</dl>
+<dt><i>ClipSymbols </i></dt>
+<dd>Check if a symbol is on the plot canvas before painting it.</dd></dl>
 <h3>enum <code>QwtPlotTradingCurve::SymbolStyle</code></h3>
 <p>Symbol styles. The default setting is QwtPlotSeriesItem::CandleStick. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbolStyle()</code>, <code>symbolStyle()</code></dl>
+<dd><code>setSymbolStyle()</code>, <code>symbolStyle()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoSymbol </i></p>
-<dd>Nothing is displayed.</p>
-<dt><i>Bar </i></p>
-<dd>A line on the chart shows the price range (the highest and lowest prices) over one unit of time, e.g. one day or one hour. Tick marks project from each side of the line indicating the opening and closing price.</p>
-<dt><i>CandleStick </i></p>
-<dd>The range between opening/closing price are displayed as a filled box. The fill brush depends on the direction of the price movement. The box is connected to the highest/lowest values by lines.</p>
-<dt><i>UserSymbol </i></p>
-<dd>SymbolTypes &gt;= UserSymbol are displayed by <code>drawUserSymbol()</code>, that needs to be overloaded and implemented in derived curve classes.</dl>
+<dt><i>NoSymbol </i></dt>
+<dd>Nothing is displayed.</dd>
+<dt><i>Bar </i></dt>
+<dd>A line on the chart shows the price range (the highest and lowest prices) over one unit of time, e.g. one day or one hour. Tick marks project from each side of the line indicating the opening and closing price.</dd>
+<dt><i>CandleStick </i></dt>
+<dd>The range between opening/closing price are displayed as a filled box. The fill brush depends on the direction of the price movement. The box is connected to the highest/lowest values by lines.</dd>
+<dt><i>UserSymbol </i></dt>
+<dd>SymbolTypes &gt;= UserSymbol are displayed by <code>drawUserSymbol()</code>, that needs to be overloaded and implemented in derived curve classes.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawUserSymbol()</code></dl>
+<dd><code>drawUserSymbol()</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotTradingCurve::QwtPlotTradingCurve (const QString &amp;title = QString::null) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h3>QwtPlotTradingCurve::QwtPlotTradingCurve (const <code>QwtText</code> &amp;title) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the curve</dl>
+<dd><i>title</i> Title of the curve</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtPlotTradingCurve::boundingRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of all samples. For an empty series the rectangle is invalid.</dl>
+<dd>Bounding rectangle of all samples. For an empty series the rectangle is invalid.</dd></dl>
 <p> Reimplemented from <code>QwtPlotSeriesItem</code>.</p>
 <h3>void QwtPlotTradingCurve::drawBar (QPainter *painter, const <code>QwtOHLCSample</code> &amp;sample, Qt::Orientationorientation, boolinverted, doublewidth) const [protected]</h3>
 <p>Draw a bar. </p>
@@ -132,10 +132,10 @@ description: "QwtPlotTradingCurve –"
  <i>sample</i> Sample, already translated into paint device coordinates<br />
  <i>orientation</i> Vertical or horizontal<br />
  <i>inverted</i> When inverted is false the open tick is painted to the left/top, otherwise it is painted right/bottom. The close tick is painted in the opposite direction of the open tick. painted in the opposite d opposite direction.<br />
- <i>width</i> Width or height of the candle, depending on the orientation</dl>
+ <i>width</i> Width or height of the candle, depending on the orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>Bar</code></dl>
+<dd><code>Bar</code></dd></dl>
 <h3>void QwtPlotTradingCurve::drawCandleStick (QPainter *painter, const <code>QwtOHLCSample</code> &amp;sample, Qt::Orientationorientation, doublewidth) const [protected]</h3>
 <p>Draw a candle stick. </p>
 <p> <code>Parameters:</code></p>
@@ -143,10 +143,10 @@ description: "QwtPlotTradingCurve –"
 <dd><i>painter</i> Qt painter, initialized with pen/brush<br />
  <i>sample</i> Samples already translated into paint device coordinates<br />
  <i>orientation</i> Vertical or horizontal<br />
- <i>width</i> Width or height of the candle, depending on the orientation</dl>
+ <i>width</i> Width or height of the candle, depending on the orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CandleStick</code></dl>
+<dd><code>CandleStick</code></dd></dl>
 <h3>void QwtPlotTradingCurve::drawSeries (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [virtual]</h3>
 <p>Draw an interval of the curve </p>
 <p> <code>Parameters:</code></p>
@@ -156,10 +156,10 @@ description: "QwtPlotTradingCurve –"
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first point to be painted<br />
- <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dl>
+ <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawSymbols()</code></dl>
+<dd><code>drawSymbols()</code></dd></dl>
 <p> Implements <code>QwtPlotSeriesItem</code>.</p>
 <h3>void QwtPlotTradingCurve::drawSymbols (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [protected], [virtual]</h3>
 <p>Draw symbols </p>
@@ -170,10 +170,10 @@ description: "QwtPlotTradingCurve –"
  <i>yMap</i> y map<br />
  <i>canvasRect</i> Contents rectangle of the canvas<br />
  <i>from</i> Index of the first point to be painted<br />
- <i>to</i> Index of the last point to be painted</dl>
+ <i>to</i> Index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawSeries()</code></dl>
+<dd><code>drawSeries()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::drawUserSymbol (QPainter *painter, <code>SymbolStyle</code>symbolStyle, const <code>QwtOHLCSample</code> &amp;sample, Qt::Orientationorientation, boolinverted, doublesymbolWidth) const [protected], [virtual]</h3>
 <p>Draw a symbol for a symbol style &gt;= UserSymbol. The implementation does nothing and is intended to be overloaded </p>
 <p> <code>Parameters:</code></p>
@@ -183,37 +183,37 @@ description: "QwtPlotTradingCurve –"
  <i>sample</i> Samples already translated into paint device coordinates<br />
  <i>orientation</i> Vertical or horizontal<br />
  <i>inverted</i> True, when the opposite scale ( Qt::Vertical: x, Qt::Horizontal: y ) is increasing in the opposite direction as QPainter coordinates.<br />
- <i>symbolWidth</i> Width of the symbol in paint device coordinates</dl>
+ <i>symbolWidth</i> Width of the symbol in paint device coordinates</dd></dl>
 <h3><code>QwtGraphic</code> QwtPlotTradingCurve::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A rectangle filled with the color of the symbol pen</dl>
+<dd>A rectangle filled with the color of the symbol pen</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
- <i>size</i> Icon size</dl>
+ <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dl>
+<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>double QwtPlotTradingCurve::maxSymbolWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Maximum for the symbol width</dl>
+<dd>Maximum for the symbol width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMaxSymbolWidth()</code>, <code>minSymbolWidth()</code>, <code>symbolExtent()</code></dl>
+<dd><code>setMaxSymbolWidth()</code>, <code>minSymbolWidth()</code>, <code>symbolExtent()</code></dd></dl>
 <h3>double QwtPlotTradingCurve::minSymbolWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minmum for the symbol width</dl>
+<dd>Minmum for the symbol width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMinSymbolWidth()</code>, <code>maxSymbolWidth()</code>, <code>symbolExtent()</code></dl>
+<dd><code>setMinSymbolWidth()</code>, <code>maxSymbolWidth()</code>, <code>symbolExtent()</code></dd></dl>
 <h3>int QwtPlotTradingCurve::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotTradingCurve</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotTradingCurve</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>double QwtPlotTradingCurve::scaledSymbolWidth (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [protected], [virtual]</h3>
 <p>Calculate the symbol width in paint coordinates </p>
@@ -222,73 +222,73 @@ description: "QwtPlotTradingCurve –"
 <dl COMPACT>
 <dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
  <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas</dl>
+ <i>canvasRect</i> Contents rectangle of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Symbol width in paint coordinates</dl>
+<dd>Symbol width in paint coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbolExtent()</code>, <code>minSymbolWidth()</code>, <code>maxSymbolWidth()</code></dl>
+<dd><code>symbolExtent()</code>, <code>minSymbolWidth()</code>, <code>maxSymbolWidth()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setMaxSymbolWidth (doublewidth)</h3>
 <p>Set a maximum for the symbol width </p>
 <p> A value &lt;= 0.0 means an unlimited width </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width in paint device coordinates</dl>
+<dd><i>width</i> Width in paint device coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxSymbolWidth()</code>, <code>setMinSymbolWidth()</code>, <code>setSymbolExtent()</code></dl>
+<dd><code>maxSymbolWidth()</code>, <code>setMinSymbolWidth()</code>, <code>setSymbolExtent()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setMinSymbolWidth (doublewidth)</h3>
 <p>Set a minimum for the symbol width </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width in paint device coordinates</dl>
+<dd><i>width</i> Width in paint device coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minSymbolWidth()</code>, <code>setMaxSymbolWidth()</code>, <code>setSymbolExtent()</code></dl>
+<dd><code>minSymbolWidth()</code>, <code>setMaxSymbolWidth()</code>, <code>setSymbolExtent()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testPaintAttribute()</code></dl>
+<dd><code>testPaintAttribute()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setSamples (const QVector&lt; <code>QwtOHLCSample</code> &gt; &amp;samples)</h3>
 <p>Initialize data with an array of samples. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Vector of samples</dl>
+<dd><i>samples</i> Vector of samples</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QwtPlotSeriesItem::setData()</dl>
+<dd>QwtPlotSeriesItem::setData()</dd></dl>
 <h3>void QwtPlotTradingCurve::setSamples (<code>QwtSeriesData</code>&lt; <code>QwtOHLCSample</code> &gt; *data)</h3>
 <p>Assign a series of samples </p>
 <p> <code>setSamples()</code> is just a wrapper for <code>setData()</code> without any additional value &#8211; beside that it is easier to find for the developer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Data</dl>
+<dd><i>data</i> Data</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dl>
+<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dd></dl>
 <h3>void QwtPlotTradingCurve::setSymbolBrush (<code>Direction</code>direction, const QBrush &amp;brush)</h3>
 <p>Set the symbol brush </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>direction</i> Direction type<br />
- <i>brush</i> Brush used to fill the body of all candlestick symbols with the direction</dl>
+ <i>brush</i> Brush used to fill the body of all candlestick symbols with the direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbolBrush()</code>, <code>setSymbolPen()</code></dl>
+<dd><code>symbolBrush()</code>, <code>setSymbolPen()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setSymbolExtent (doubleextent)</h3>
 <p>Set the extent of the symbol. The width of the symbol is given in scale coordinates. When painting a symbol the width is scaled into paint device coordinates by <code>scaledSymbolWidth()</code>. The scaled width is bounded by <code>minSymbolWidth()</code>, <code>maxSymbolWidth()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>extent</i> Symbol width in scale coordinates</dl>
+<dd><i>extent</i> Symbol width in scale coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbolExtent()</code>, <code>scaledSymbolWidth()</code>, <code>setMinSymbolWidth()</code>, <code>setMaxSymbolWidth()</code></dl>
+<dd><code>symbolExtent()</code>, <code>scaledSymbolWidth()</code>, <code>setMinSymbolWidth()</code>, <code>setMaxSymbolWidth()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setSymbolPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign the symbol pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -296,60 +296,60 @@ description: "QwtPlotTradingCurve –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>pen(), brush()</dl>
+<dd>pen(), brush()</dd></dl>
 <h3>void QwtPlotTradingCurve::setSymbolPen (const QPen &amp;pen)</h3>
 <p>Set the symbol pen. The symbol pen is used for rendering the lines of the bar or candlestick symbols </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbolPen()</code>, <code>setSymbolBrush()</code></dl>
+<dd><code>symbolPen()</code>, <code>setSymbolBrush()</code></dd></dl>
 <h3>void QwtPlotTradingCurve::setSymbolStyle (<code>SymbolStyle</code>style)</h3>
 <p>Set the symbol style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Symbol style</dl>
+<dd><i>style</i> Symbol style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>symbolStyle()</code>, <code>setSymbolExtent()</code>, <code>setSymbolPen()</code>, <code>setSymbolBrush()</code></dl>
+<dd><code>symbolStyle()</code>, <code>setSymbolExtent()</code>, <code>setSymbolPen()</code>, <code>setSymbolBrush()</code></dd></dl>
 <h3>QBrush QwtPlotTradingCurve::symbolBrush (<code>Direction</code>direction) const</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>direction</i></dl>
+<dd><i>direction</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush used to fill the body of all candlestick symbols with the direction</dl>
+<dd>Brush used to fill the body of all candlestick symbols with the direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbolPen()</code>, <code>symbolBrush()</code></dl>
+<dd><code>setSymbolPen()</code>, <code>symbolBrush()</code></dd></dl>
 <h3>double QwtPlotTradingCurve::symbolExtent () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Extent of a symbol in scale coordinates</dl>
+<dd>Extent of a symbol in scale coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbolExtent()</code>, <code>scaledSymbolWidth()</code>, <code>minSymbolWidth()</code>, <code>maxSymbolWidth()</code></dl>
+<dd><code>setSymbolExtent()</code>, <code>scaledSymbolWidth()</code>, <code>minSymbolWidth()</code>, <code>maxSymbolWidth()</code></dd></dl>
 <h3>QPen QwtPlotTradingCurve::symbolPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Symbol pen</dl>
+<dd>Symbol pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbolPen()</code>, <code>symbolBrush()</code></dl>
+<dd><code>setSymbolPen()</code>, <code>symbolBrush()</code></dd></dl>
 <h3><code>QwtPlotTradingCurve::SymbolStyle</code> QwtPlotTradingCurve::symbolStyle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Symbol style</dl>
+<dd>Symbol style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSymbolStyle()</code>, <code>symbolExtent()</code>, <code>symbolPen()</code>, <code>symbolBrush()</code></dl>
+<dd><code>setSymbolStyle()</code>, <code>symbolExtent()</code>, <code>symbolPen()</code>, <code>symbolBrush()</code></dd></dl>
 <h3>bool QwtPlotTradingCurve::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dl>
+<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

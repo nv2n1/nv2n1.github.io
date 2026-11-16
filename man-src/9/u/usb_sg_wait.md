@@ -14,7 +14,7 @@ description: "usb_sg_wait – synchronously execute scatter/gather request"
 <p><i>io</i></p>
 <dl>
 <dd>
-<dd>request block handle, as initialized with <code>usb_sg_init</code>. some fields become accessible when this call returns.</dl>
+</dd><dd>request block handle, as initialized with <code>usb_sg_init</code>. some fields become accessible when this call returns.</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

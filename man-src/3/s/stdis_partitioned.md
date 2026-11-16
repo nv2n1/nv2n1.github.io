@@ -10,17 +10,11 @@ description: "std::is_partitioned – std::is_partitioned"
 <p>std::is_partitioned &#8211; std::is_partitioned</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                             (since C++11)
-
 bool is_partitioned( InputIt first, InputIt last, UnaryPredicate p );                                       (until C++20)
-
 template&lt; class InputIt, class UnaryPredicate &gt;                                                     (1)     (since C++20)
-
 constexpr bool is_partitioned( InputIt first, InputIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class UnaryPredicate &gt;                                (2) (since C++17)
-
 bool is_partitioned( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, UnaryPredicate p );</code></pre>
 <p>1) Returns true if all elements in the range [first, last) that satisfy the predicate p appear before all elements that don&#8217;t. Also returns true if [first, last) is empty.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -61,12 +55,9 @@ UnaryPredicate must meet the requirements of Predicate.</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::array&lt;int, 9&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     auto is_even = [](int i) { return i % 2 == 0; };

@@ -16,17 +16,17 @@ description: "condor_qedit modify job attributes"
 <p> To ensure security and correctness, <i>condor_qedit</i> will not allow modification of the following ClassAd attributes:</p>
 <dl>
 <dt>
-<dd> * Owner</p>
+</dt><dd> * Owner</dd>
 <dt>
-<dd> * ClusterId</p>
+</dt><dd> * ClusterId</dd>
 <dt>
-<dd> * ProcId</p>
+</dt><dd> * ProcId</dd>
 <dt>
-<dd> * MyType</p>
+</dt><dd> * MyType</dd>
 <dt>
-<dd> * TargetType</p>
+</dt><dd> * TargetType</dd>
 <dt>
-<dd> * JobStatus</dl>
+</dt><dd> * JobStatus</dd></dl>
 <p> Since JobStatus may not be changed with <i>condor_qedit</i> , use <i>condor_hold</i> to place a job in the hold state, and use <i>condor_release</i> to release a held job, instead of attempting to modify JobStatus directly. </p>
 <p> If a job is currently running, modified attributes for that job will not affect the job until it restarts. As an example, for PeriodicRemove to affect when a currently running job will be removed from the queue, that job must first be evicted from a machine and returned to the queue. The same is true for other periodic expressions, such as PeriodicHold and PeriodicRelease . </p>
 <p> <i>condor_qedit</i> validates both attribute names and attribute values, checking for correct ClassAd syntax. An error message is printed, and no attribute is set or changed if the name or value is invalid. </p>
@@ -34,21 +34,18 @@ description: "condor_qedit modify job attributes"
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</p>
-<dt>
-<dd></dl>
+</dt><dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</dd>
+</dl>
 <p> <code>-n </code> <i>schedd-name</i></p>
 <dl>
 <dt>
-<dd> Modify job attributes in the queue of the specified schedd</p>
-<dt>
-<dd></dl>
+</dt><dd> Modify job attributes in the queue of the specified schedd</dd>
+</dl>
 <p> <code>-pool </code> <i>pool-name</i></p>
 <dl>
 <dt>
-<dd> Modify job attributes in the queue of the schedd specified in the specified pool</p>
-<dt>
-<dd></dl>
+</dt><dd> Modify job attributes in the queue of the schedd specified in the specified pool</dd>
+</dl>
 <h2>Examples</h2>
 <p> % condor_qedit -name north.cs.wisc.edu -pool condor.cs.wisc.edu 249.0 answer 42<br />
  Set attribute &quot;answer&quot;.<br />

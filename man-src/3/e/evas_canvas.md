@@ -22,24 +22,24 @@ description: "Evas Canvas – Functions that deal with the basic evas object."
 <p> Any objects with &#8216;free&#8217; callbacks will have those callbacks called in this function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.</dl>
+<dd><i>e</i> The given evas.</dd></dl>
 <p> References evas_font_path_clear(), evas_hash_free(), evas_list_free(), and evas_list_remove().</p>
 <h3>EAPI <code>Evas</code>* evas_new (void)</h3>
 <p>Creates a new empty evas. </p>
 <p> Note that before you can use the evas, you will to at a minimum: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Set its render method with <code>evas_output_method_set</code> .</p>
-<dt>*</p>
-<dd>Set its viewport size with <code>evas_output_viewport_set</code> .</p>
-<dt>*</p>
-<dd>Set its size of the canvas with <code>evas_output_size_set</code> .</p>
-<dt>*</p>
-<dd>Ensure that the render engine is given the correct settings with <code>evas_engine_info_set</code> .</dl>
+<dt>*</dt>
+<dd>Set its render method with <code>evas_output_method_set</code> .</dd>
+<dt>*</dt>
+<dd>Set its viewport size with <code>evas_output_viewport_set</code> .</dd>
+<dt>*</dt>
+<dd>Set its size of the canvas with <code>evas_output_size_set</code> .</dd>
+<dt>*</dt>
+<dd>Ensure that the render engine is given the correct settings with <code>evas_engine_info_set</code> .</dd></dl>
 <p> This function should only fail if the memory allocation fails. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new uninitialised Evas canvas on success. Otherwise, NULL.</dl>
+<dd>A new uninitialised Evas canvas on success. Otherwise, NULL.</dd></dl>
 <p> References EVAS_FONT_HINTING_BYTECODE.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

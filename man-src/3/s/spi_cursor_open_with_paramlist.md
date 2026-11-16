@@ -19,15 +19,15 @@ description: "SPI_cursor_open_with_paramlist – set up a cursor using parameter
 <h2>Arguments</h2>
 <p>const char * <i>name</i></p>
 <dl COMPACT>
-<dd>name for portal, or NULL to let the system select a name</dl>
+<dd>name for portal, or NULL to let the system select a name</dd></dl>
 <p> SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <p> ParamListInfo <i>params</i></p>
 <dl COMPACT>
-<dd>data structure containing parameter types and values; NULL if none</dl>
+<dd>data structure containing parameter types and values; NULL if none</dd></dl>
 <p> bool <i>read_only</i></p>
 <dl COMPACT>
-<dd>true for read-only execution</dl>
+<dd>true for read-only execution</dd></dl>
 <h2>Return Value</h2>
 <p>Pointer to portal containing the cursor. Note there is no error return convention; any error will be reported via <code>elog</code>.</p>

@@ -11,28 +11,28 @@ description: "xdg-settings – get various settings from the desktop environment
 <p> xdg-settings &#8211; get various settings from the desktop environment </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>xdg-settings</code> {<i>get</i> | <i>check</i> | <i>set</i>} {<code>property</code>} [<code>subproperty</code>] [<code>value</code>]</p>
-<dt> <code>xdg-settings</code> {<code>&#8211;help</code> | <code>&#8211;list</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dl>
+<dt> <code>xdg-settings</code> {<i>get</i> | <i>check</i> | <i>set</i>} {<code>property</code>} [<code>subproperty</code>] [<code>value</code>]</dt>
+<dt> <code>xdg-settings</code> {<code>&#8211;help</code> | <code>&#8211;list</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>xdg-settings gets various settings from the desktop environment. For instance, desktop environments often provide proxy configuration and default web browser settings. Using xdg-settings these parameters can be extracted for use by applications that do not use the desktop environment&#8217;s libraries (which would use the settings natively). </p>
+<dd>xdg-settings gets various settings from the desktop environment. For instance, desktop environments often provide proxy configuration and default web browser settings. Using xdg-settings these parameters can be extracted for use by applications that do not use the desktop environment&#8217;s libraries (which would use the settings natively). </dd>
 <p> xdg-settings is for use inside a desktop session only. It is not recommended to use xdg-settings as root.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show command synopsis.</dl>
+</dt><dd> Show command synopsis.</dd></dl>
 <p> <code>&#8211;list</code></p>
 <dl>
 <dt>
-<dd> List all properties xdg-settings knows about.</dl>
+</dt><dd> List all properties xdg-settings knows about.</dd></dl>
 <p> <code>&#8211;manual</code></p>
 <dl>
 <dt>
-<dd> Show this manual page.</dl>
+</dt><dd> Show this manual page.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show the xdg-utils version information.</dl>
+</dt><dd> Show the xdg-utils version information.</dd></dl>
 <h2>PROPERTIES</h2>
 <p> When using xdg-settings to get, check or set a desktop setting, properties and possibly sub-properties are used to specify the setting to be changed. </p>
 <p> Some properties (such as default-web-browser) fully describe the setting to be changed. Other properties (such as default-url-scheme-handler) require more information (in this case the actual scheme to set the default handler for) which must be provided in a sub-property.</p>
@@ -41,71 +41,67 @@ description: "xdg-settings – get various settings from the desktop environment
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Error in command line syntax.</dl>
+</dt><dd> Error in command line syntax.</dd></dl>
 <p> <code>2</code></p>
 <dl>
 <dt>
-<dd> One of the files passed on the command line did not exist.</dl>
+</dt><dd> One of the files passed on the command line did not exist.</dd></dl>
 <p> <code>3</code></p>
 <dl>
 <dt>
-<dd> A required tool could not be found.</dl>
+</dt><dd> A required tool could not be found.</dd></dl>
 <p> <code>4</code></p>
 <dl>
 <dt>
-<dd> The action failed.</dl>
+</dt><dd> The action failed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), <code><a href="/docs/linux/man/1-xdg-open/">xdg-open</a></code>(1), m[blue]<code>MIME applications associations specification</code>m[]<font SIZE="-2">[1]</font></p>
 <h2>EXAMPLES</h2>
 <p> Get the desktop file name of the current default web browser </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         xdg-settings get default-web-browser
-      
 </pre>
-</dl>
+</dd></dl>
 <p> Check whether the default web browser is firefox.desktop, which can be false even if &quot;get default-web-browser&quot; says that is the current value (if only some of the underlying settings actually reflect that value) </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         xdg-settings check default-web-browser firefox.desktop
-      
 </pre>
-</dl>
+</dd></dl>
 <p> Set the default web browser to google-chrome.desktop </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         xdg-settings set default-web-browser google-chrome.desktop
-      
 </pre>
-</dl>
+</dd></dl>
 <p> Set the default mailto URL scheme handler to be evolution.desktop </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         xdg-settings set default-url-scheme-handler mailto evolution.desktop
-      
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>Mike Mammarella</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009-2011 </p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> MIME applications associations specification</p>
+<dt> 1.</dt>
+<dd> MIME applications associations specification</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/">http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/">http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/</a></dd></dl>
 </dl>
 <h2>Index</h2>

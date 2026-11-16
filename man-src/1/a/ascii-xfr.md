@@ -17,24 +17,24 @@ description: "ascii-xfr – upload/download files using the ASCII protocol"
 <p> <code>Ascii-xfr</code> reads from <i>stdin</i> when receiving, and sends data on <i>stdout</i> when sending. Some form of input or output redirection to the modem device is thus needed when downloading or uploading, respectively.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> Send a file.</p>
-<dt><code>-r</code></p>
-<dd> Receive a file. One of <code>-s</code> or <code>-r</code> <i>must</i> be present.</p>
-<dt><code>-e</code></p>
-<dd> Send the End-Of-File character (Control-Z, ASCII 26 by default) when uploading has finished.</p>
-<dt><code>-d</code></p>
-<dd> Use the Control-D (ASCII 4) as End-Of-File character.</p>
-<dt><code>-n</code></p>
-<dd> Do not translate CR to CRLF and vice versa.</p>
-<dt><code>-v</code></p>
-<dd> Verbose: show transfer statistics on the stderr output.</p>
-<dt><code>-l</code> <i>milliseconds</i></p>
-<dd> When transmitting, pause for this delay after each line.</p>
-<dt><code>-c</code> <i>milliseconds</i></p>
-<dd> When transmitting, pause for this delay after each character.</p>
-<dt><i>file</i></p>
-<dd> Name of the file to send or receive. When receiving, any existing file by this name will be truncated.</dl>
+<dt><code>-s</code></dt>
+<dd> Send a file.</dd>
+<dt><code>-r</code></dt>
+<dd> Receive a file. One of <code>-s</code> or <code>-r</code> <i>must</i> be present.</dd>
+<dt><code>-e</code></dt>
+<dd> Send the End-Of-File character (Control-Z, ASCII 26 by default) when uploading has finished.</dd>
+<dt><code>-d</code></dt>
+<dd> Use the Control-D (ASCII 4) as End-Of-File character.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not translate CR to CRLF and vice versa.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose: show transfer statistics on the stderr output.</dd>
+<dt><code>-l</code> <i>milliseconds</i></dt>
+<dd> When transmitting, pause for this delay after each line.</dd>
+<dt><code>-c</code> <i>milliseconds</i></dt>
+<dd> When transmitting, pause for this delay after each character.</dd>
+<dt><i>file</i></dt>
+<dd> Name of the file to send or receive. When receiving, any existing file by this name will be truncated.</dd></dl>
 <h2>USAGE WITH MINICOM</h2>
 <p> If you want to call this program from <code><a href="/docs/linux/man/1-minicom/">minicom</a>(1)</code>, start minicom and go to the <code>O</code>ptions menu. Select <i>File transfer protocols</i>. Add the following lines, for example as protocols <code>I</code> and <code>J</code>. </p>
 <pre>

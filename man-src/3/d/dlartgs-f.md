@@ -26,10 +26,10 @@ description: "dlartgs.f –"
  [ -SN CS ] [ X * Y ] [ 0 ]
  with R nonnegative. If X^2 - SIGMA and X * Y are 0, then the
  rotation is by PI/2.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>X</i> </p>
+<dd><i>X</i> </dd>
 <pre> X is DOUBLE PRECISION
  The (1,1) entry of an upper bidiagonal matrix.</pre>
 <p><i>Y</i> </p>
@@ -47,13 +47,13 @@ description: "dlartgs.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 91 of file dlartgs.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

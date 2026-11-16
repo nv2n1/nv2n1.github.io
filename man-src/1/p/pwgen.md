@@ -17,36 +17,36 @@ description: "pwgen – generate pronounceable passwords"
 <p> When standard output (stdout) is not a tty, <code>pwgen</code> will only generate one password, as this tends to be much more convenient for shell scripts, and in order to be compatible with previous versions of this program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-0, &#8211;no-numerals</code></p>
-<dd> Don&#8217;t include numbers in the generated passwords.</p>
-<dt><code>-1</code></p>
-<dd> Print the generated passwords one per line.</p>
-<dt><code>-A, &#8211;no-capitalize</code></p>
-<dd> Don&#8217;t bother to include any capital letters in the generated passwords.</p>
-<dt><code>-a, &#8211;alt-phonics</code></p>
-<dd> This option doesn&#8217;t do anything special; it is present only for backwards compatibility.</p>
-<dt><code>-B, &#8211;ambiguous</code></p>
-<dd> Don&#8217;t use characters that could be confused by the user when printed, such as &#8216;l&#8217; and &#8216;1&#8217;, or &#8216;0&#8217; or &#8216;O&#8217;. This reduces the number of possible passwords significantly, and as such reduces the quality of the passwords. It may be useful for users who have bad vision, but in general use of this option is not recommended.</p>
-<dt><code>-c, &#8211;capitalize</code></p>
-<dd> Include at least one capital letter in the password. This is the default if the standard output is a tty device.</p>
-<dt><code>-C</code></p>
-<dd> Print the generated passwords in columns. This is the default if the standard output is a tty device.</p>
-<dt><code>-N, &#8211;num-passwords=</code><i>num</i></p>
-<dd> Generate <i>num</i> passwords. This defaults to a screenful if passwords are printed by columns, and one password.</p>
-<dt><code>-n, &#8211;numerals</code></p>
-<dd> Include at least one number in the password. This is the default if the standard output is a tty device.</p>
-<dt><code>-H, &#8211;sha1=</code><i>/path/to/file[#seed]</i></p>
-<dd> Will use the sha1&#8217;s hash of given file and the optional seed to create password. It will allow you to compute the same password later, if you remember the file, seed, and pwgen&#8217;s options used. ie: pwgen -H ~/your_favorite.mp3#your [at] email.com gives a list of possibles passwords for your pop3 account, and you can ask this list again and again.</p>
+<dt><code>-0, &#8211;no-numerals</code></dt>
+<dd> Don&#8217;t include numbers in the generated passwords.</dd>
+<dt><code>-1</code></dt>
+<dd> Print the generated passwords one per line.</dd>
+<dt><code>-A, &#8211;no-capitalize</code></dt>
+<dd> Don&#8217;t bother to include any capital letters in the generated passwords.</dd>
+<dt><code>-a, &#8211;alt-phonics</code></dt>
+<dd> This option doesn&#8217;t do anything special; it is present only for backwards compatibility.</dd>
+<dt><code>-B, &#8211;ambiguous</code></dt>
+<dd> Don&#8217;t use characters that could be confused by the user when printed, such as &#8216;l&#8217; and &#8216;1&#8217;, or &#8216;0&#8217; or &#8216;O&#8217;. This reduces the number of possible passwords significantly, and as such reduces the quality of the passwords. It may be useful for users who have bad vision, but in general use of this option is not recommended.</dd>
+<dt><code>-c, &#8211;capitalize</code></dt>
+<dd> Include at least one capital letter in the password. This is the default if the standard output is a tty device.</dd>
+<dt><code>-C</code></dt>
+<dd> Print the generated passwords in columns. This is the default if the standard output is a tty device.</dd>
+<dt><code>-N, &#8211;num-passwords=</code><i>num</i></dt>
+<dd> Generate <i>num</i> passwords. This defaults to a screenful if passwords are printed by columns, and one password.</dd>
+<dt><code>-n, &#8211;numerals</code></dt>
+<dd> Include at least one number in the password. This is the default if the standard output is a tty device.</dd>
+<dt><code>-H, &#8211;sha1=</code><i>/path/to/file[#seed]</i></dt>
+<dd> Will use the sha1&#8217;s hash of given file and the optional seed to create password. It will allow you to compute the same password later, if you remember the file, seed, and pwgen&#8217;s options used. ie: pwgen -H ~/your_favorite.mp3#your [at] email.com gives a list of possibles passwords for your pop3 account, and you can ask this list again and again.</dd>
 <dt>
-<dd> <code>WARNING:</code> The passwords generated using this option are not very random. If you use this option, make sure the attacker can not obtain a copy of the file. Also, note that the name of the file may be easily available from the ~/.history or ~/.bash_history file.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a help message.</p>
-<dt><code>-s, &#8211;secure</code></p>
-<dd> Generate completely random, hard-to-memorize passwords. These should only be used for machine passwords, since otherwise it&#8217;s almost guaranteed that users will simply write the password on a piece of paper taped to the monitor&#8230;</p>
-<dt><code>-v, &#8211;no-vowels</code></p>
-<dd> Generate random passwords that do not contain vowels or numbers that might be mistaken for vowels. It provides less secure passwords to allow system administrators to not have to worry with random passwords accidentally contain offensive substrings.</p>
-<dt><code>-y, &#8211;symbols</code></p>
-<dd> Include at least one special character in the password.</dl>
+</dt><dd> <code>WARNING:</code> The passwords generated using this option are not very random. If you use this option, make sure the attacker can not obtain a copy of the file. Also, note that the name of the file may be easily available from the ~/.history or ~/.bash_history file.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a help message.</dd>
+<dt><code>-s, &#8211;secure</code></dt>
+<dd> Generate completely random, hard-to-memorize passwords. These should only be used for machine passwords, since otherwise it&#8217;s almost guaranteed that users will simply write the password on a piece of paper taped to the monitor&#8230;</dd>
+<dt><code>-v, &#8211;no-vowels</code></dt>
+<dd> Generate random passwords that do not contain vowels or numbers that might be mistaken for vowels. It provides less secure passwords to allow system administrators to not have to worry with random passwords accidentally contain offensive substrings.</dd>
+<dt><code>-y, &#8211;symbols</code></dt>
+<dd> Include at least one special character in the password.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This version of <code>pwgen</code> was written by Theodore Ts&#8217;o &lt;tytso [at] alum.mit.edu&gt;. It is modelled after a program originally written by Brandon S. Allbery, and then later extensively modified by Olaf Titz, Jim Lynch, and others. It was rewritten from scratch by Theodore Ts&#8217;o because the original program was somewhat of a hack, and thus hard to maintain, and because the licensing status of the program was unclear.</p>
 <h2>SEE ALSO</h2>

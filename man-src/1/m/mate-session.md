@@ -19,32 +19,32 @@ description: "mate-session – Start the MATE Desktop Environment."
 <h2>OPTIONS</h2>
 <h3>The following options are supported:</h3>
 <dl>
-<dt><code>-a, &#8211;autostart=DIR</code></p>
+<dt><code>-a, &#8211;autostart=DIR</code></dt>
 <dd> Start all applications defined in &quot;<code>DIR</code>&quot;, instead of starting the applications defined in <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><i>default-session</i><br />
- Multiple <code>&#8211;autostart</code> options can be passed.</p>
-<dt><code>-f, &#8211;failsafe</code></p>
-<dd> Run in fail-safe mode. User-specified applications will not be started.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable debugging code.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options. </p>
+ Multiple <code>&#8211;autostart</code> options can be passed.</dd>
+<dt><code>-f, &#8211;failsafe</code></dt>
+<dd> Run in fail-safe mode. User-specified applications will not be started.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable debugging code.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <h3><code>mate-session</code> sets several environment variables for the use of its child processes:</h3>
 <p> <code>SESSION_MANAGER</code></p>
 <dl>
 <dt>
-<dd> This variable is used by session-manager aware clients to contact mate-session.</dl>
+</dt><dd> This variable is used by session-manager aware clients to contact mate-session.</dd></dl>
 <p> <code>DISPLAY</code></p>
 <dl>
 <dt>
-<dd> This variable is set to the X display being used by <code>mate-session</code>. Note that if the &#8211;display option is used this might be different from the setting of the environment variable when mate-session is invoked. </p>
+</dt><dd> This variable is set to the X display being used by <code>mate-session</code>. Note that if the &#8211;display option is used this might be different from the setting of the environment variable when mate-session is invoked. </dd>
 </dl>
 <h2>FILES</h2>
 <pre>
@@ -54,11 +54,11 @@ description: "mate-session – Start the MATE Desktop Environment."
 </pre>
 <dl>
 <dt>
-<dd> The applications defined in the above directories will be started on login. <code><a href="/docs/linux/man/1-mate-session-properties/">mate-session-properties</a>(1)</code> can be used to easily configure them.</dl>
+</dt><dd> The applications defined in the above directories will be started on login. <code><a href="/docs/linux/man/1-mate-session-properties/">mate-session-properties</a>(1)</code> can be used to easily configure them.</dd></dl>
 <p> <code>~/.config/mate-session/saved-session</code></p>
 <dl>
 <dt>
-<dd> This directory contains the list of applications of the saved session.</dl>
+</dt><dd> This directory contains the list of applications of the saved session.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-session/issues">http://github.com/mate-desktop/mate-session/issues</a></p>
@@ -74,12 +74,12 @@ Miguel de Icaza&lt;miguel[at] helixcode.com&gt;(2000)
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
 <p> <code><a href="/docs/linux/man/1-mate-session-properties/">mate-session-properties</a>(1),</code> <code><a href="/docs/linux/man/1-mate-session-save/">mate-session-save</a>(1),</code> <code><a href="/docs/linux/man/1-mate-wm/">mate-wm</a>(1)</code> </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">FILES</a></p>
+<dt><a href="#lbAI">FILES</a></dt>
 <dd>
-<dt><a href="#lbAJ">BUGS</a></p>
+</dd><dt><a href="#lbAJ">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHORS</a></p>
+</dd><dt><a href="#lbAL">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAO">SEE ALSO</a></p>
+</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
 <dd>
-</dl>
+</dd></dl>

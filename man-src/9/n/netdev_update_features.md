@@ -15,7 +15,7 @@ netdev_update_features - recalculate device features
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the device to check</dl>
+<dl><dd></dd><dd>the device to check</dd></dl>
 
 <h2>Description</h2>
 

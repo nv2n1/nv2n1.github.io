@@ -16,24 +16,24 @@ description: "mcedit – Internal file editor of GNU Midnight Commander."
 <p> mcedit is a link to <code>mc</code>, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name runs the internal editor and opens files specified on the command line. The editor is based on the terminal version of <code>cooledit</code> &#8211; standalone editor for X Window System.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>+lineno</i></p>
-<dd> Go to the line specified by number (do not put a space between the <i>+</i> sign and the number). Several line numbers are allowed but only the last one will be used, and it will be applied to the first file only.</p>
-<dt><i>-b</i></p>
-<dd> Force black and white display.</p>
-<dt><i>-c</i></p>
-<dd> Force ANSI color mode on terminals that don&#8217;t seem to have color support.</p>
-<dt><i>-C &lt;keyword&gt;=&lt;fgcolor&gt;,&lt;bgcolor&gt;,&lt;attributes&gt;:&lt;keyword&gt;= &#8230;</i></p>
-<dd> Specify a different color set. See the <code>Colors</code> section in <a href="/docs/linux/man/1-mc/">mc</a>(1) for more information.</p>
-<dt><i>-d</i></p>
-<dd> Disable mouse support.</p>
-<dt><i>-f</i></p>
-<dd> Display the compiled-in search path for GNU Midnight Commander data files.</p>
-<dt><i>-t</i></p>
-<dd> Force using termcap database instead of terminfo. This option is only applicable if GNU Midnight Commander was compiled with S-Lang library with terminfo support.</p>
-<dt><i>-V</i></p>
-<dd> Display the version of the program.</p>
-<dt><i>-x</i></p>
-<dd> Force xterm mode. Used when running on xterm-capable terminals (two screen modes, and able to send mouse escape sequences).</dl>
+<dt><i>+lineno</i></dt>
+<dd> Go to the line specified by number (do not put a space between the <i>+</i> sign and the number). Several line numbers are allowed but only the last one will be used, and it will be applied to the first file only.</dd>
+<dt><i>-b</i></dt>
+<dd> Force black and white display.</dd>
+<dt><i>-c</i></dt>
+<dd> Force ANSI color mode on terminals that don&#8217;t seem to have color support.</dd>
+<dt><i>-C &lt;keyword&gt;=&lt;fgcolor&gt;,&lt;bgcolor&gt;,&lt;attributes&gt;:&lt;keyword&gt;= &#8230;</i></dt>
+<dd> Specify a different color set. See the <code>Colors</code> section in <a href="/docs/linux/man/1-mc/">mc</a>(1) for more information.</dd>
+<dt><i>-d</i></dt>
+<dd> Disable mouse support.</dd>
+<dt><i>-f</i></dt>
+<dd> Display the compiled-in search path for GNU Midnight Commander data files.</dd>
+<dt><i>-t</i></dt>
+<dd> Force using termcap database instead of terminfo. This option is only applicable if GNU Midnight Commander was compiled with S-Lang library with terminfo support.</dd>
+<dt><i>-V</i></dt>
+<dd> Display the version of the program.</dd>
+<dt><i>-x</i></dt>
+<dd> Force xterm mode. Used when running on xterm-capable terminals (two screen modes, and able to send mouse escape sequences).</dd></dl>
 <h2>FEATURES</h2>
 <p> The internal file editor is a full-featured windowed editor. It can edit several files at the same time. Maximim size of each file is 64 megabytes. It is possible to edit binary files. The features it presently supports are: block copy, move, delete, cut, paste; key for key undo; pull-down menus; file insertion; macro commands; regular expression search and replace; shift-arrow text highlighting (if supported by the terminal); insert-overwrite toggle; autoindent; tunable tab size; syntax highlighting for various file types; and an option to pipe text blocks through shell commands like indent and ispell. </p>
 <p> Each file is opened in its own window in full-screen mode. Window control in mcedit is similar to the window control in other multi-window program: double click on window title maximizes the window to full-screen or restores window size and position; left-click on window title and mouse drag moves the window in editor area; left-click on low-right frame corner and mouse drag resizes the window. These actions can be made using &quot;Window&quot; menu.</p>
@@ -53,36 +53,36 @@ ctrl-W=ExecuteScript:25;
 <p> External scripts are stored in <code>~/.local/share/mc/mcedit/macros.d/</code> directory and must be named as <code>macro.XXXX.sh</code> where <code>XXXX</code> is the number from 0 to 9999. See <code>Menu File Edit</code> for more detail about format of the script. </p>
 <p> Following macro definition and directives can be used:</p>
 <dl>
-<dt><i>#silent</i></p>
-<dd> If this directive is set, then script starts without interactive subshell.</p>
-<dt><i>%c</i></p>
-<dd> The cursor column position number.</p>
-<dt><i>%i</i></p>
-<dd> The indent of blank space, equal the cursor column.</p>
-<dt><i>%y</i></p>
-<dd> The syntax type of current file.</p>
-<dt><i>%b</i></p>
-<dd> The block file name.</p>
-<dt><i>%f</i></p>
-<dd> The current file name.</p>
-<dt><i>%n</i></p>
-<dd> Only the current file name without extension.</p>
-<dt><i>%x</i></p>
-<dd> The extension of current file name.</p>
-<dt><i>%d</i></p>
-<dd> The current directory name.</p>
-<dt><i>%F</i></p>
-<dd> The current file in the unselected panel.</p>
-<dt><i>%D</i></p>
-<dd> The directory name of the unselected panel.</p>
-<dt><i>%t</i></p>
-<dd> The currently tagged files.</p>
-<dt><i>%T</i></p>
-<dd> The tagged files in the unselected panel.</p>
-<dt><i>%u</i> and <i>%U</i></p>
-<dd> Similar to the <i>%t</i> and <i>%T</i> macros, but in addition the files are untagged. You can use this macro only once per menu file entry or extension file entry, because next time there will be no tagged files.</p>
-<dt><i>%s</i> and <i>%S</i></p>
-<dd> The selected files: The tagged files if there are any. Otherwise the current file.</dl>
+<dt><i>#silent</i></dt>
+<dd> If this directive is set, then script starts without interactive subshell.</dd>
+<dt><i>%c</i></dt>
+<dd> The cursor column position number.</dd>
+<dt><i>%i</i></dt>
+<dd> The indent of blank space, equal the cursor column.</dd>
+<dt><i>%y</i></dt>
+<dd> The syntax type of current file.</dd>
+<dt><i>%b</i></dt>
+<dd> The block file name.</dd>
+<dt><i>%f</i></dt>
+<dd> The current file name.</dd>
+<dt><i>%n</i></dt>
+<dd> Only the current file name without extension.</dd>
+<dt><i>%x</i></dt>
+<dd> The extension of current file name.</dd>
+<dt><i>%d</i></dt>
+<dd> The current directory name.</dd>
+<dt><i>%F</i></dt>
+<dd> The current file in the unselected panel.</dd>
+<dt><i>%D</i></dt>
+<dd> The directory name of the unselected panel.</dd>
+<dt><i>%t</i></dt>
+<dd> The currently tagged files.</dd>
+<dt><i>%T</i></dt>
+<dd> The tagged files in the unselected panel.</dd>
+<dt><i>%u</i> and <i>%U</i></dt>
+<dd> Similar to the <i>%t</i> and <i>%T</i> macros, but in addition the files are untagged. You can use this macro only once per menu file entry or extension file entry, because next time there will be no tagged files.</dd>
+<dt><i>%s</i> and <i>%S</i></dt>
+<dd> The selected files: The tagged files if there are any. Otherwise the current file.</dd></dl>
 <p> Feel free to edit this files, if you need. Here is a sample external script: </p>
 <pre><code>
 l comment selection
@@ -188,54 +188,54 @@ editmarked=black,cyan&quot;
 <h2>OPTIONS</h2>
 <p> Most options can be set from Options dialog box. See the <code>Options</code> menu. The following options are defined in <code>~/.config/mc/ini</code> and have obvious counterparts in the dialog box. You can modify them to change the editor behavior, by editing the file. Unless specified, a 1 sets the option to on, and a 0 sets it to off, as usual.</p>
 <dl>
-<dt><i>use_internal_edit</i></p>
-<dd> This option is ignored when invoking <code>mcedit</code>.</p>
-<dt><i>editor_tab_spacing</i></p>
-<dd> Interpret the tab character as being of this length. Default is 8. You should avoid using other than 8 since most other editors and text viewers assume a tab spacing of 8. Use <code>editor_fake_half_tabs</code> to simulate a smaller tab spacing.</p>
-<dt><i>editor_fill_tabs_with_spaces</i></p>
-<dd> Never insert a tab character. Rather insert spaces (ascii 32) to fill to the desired tab size.</p>
-<dt><i>editor_return_does_auto_indent</i></p>
-<dd> Pressing return will tab across to match the indentation of the first line above that has text on it.</p>
-<dt><i>editor_backspace_through_tabs</i></p>
-<dd> Make a single backspace delete all the space to the left margin if there is no text between the cursor and the left margin.</p>
-<dt><i>editor_fake_half_tabs</i></p>
-<dd> This will emulate a half tab for those who want to program with a tab spacing of 4, but do not want the tab size changed from 8 (so that the code will be formatted the same when displayed by other programs). When editing between text and the left margin, moving and tabbing will be as though a tab space were 4, while actually using spaces and normal tabs for an optimal fill. When editing anywhere else, a normal tab is inserted.</p>
-<dt><i>editor_option_save_mode</i></p>
-<dd> Possible values 0, 1 and 2. The save mode (see the options menu also) allows you to change the method of saving a file. Quick save (0) saves the file immediately, truncating the disk file to zero length (i.e. erasing it) and then writing the editor contents to the file. This method is fast, but dangerous, since a system error during a file save will leave the file only partially written, possibly rendering the data irretrievable. When saving, the safe save (1) option enables creation of a temporary file into which the file contents are first written. In the event of a problem, the original file is untouched. When the temporary file is successfully written, it is renamed to the name of the original file, thus replacing it. The safest method is create backups (2): a backup file is created before any changes are made. You can specify your own backup file extension in the dialog. Note that saving twice will replace your backup as well as your original file.</p>
-<dt><i>editor_word_wrap_line_length</i></p>
-<dd> Line length to wrap at. Default is 72.</p>
-<dt><i>editor_backup_extension</i></p>
-<dd> Symbol to add to name of backup files. Default is &quot;~&quot;.</p>
-<dt><i>editor_line_state</i></p>
-<dd> Show state line of editor. Currently it shows current line number (in the future it might show things like folding, breakpoints, etc.). M-n toggles this option.</p>
-<dt><i>editor_visible_spaces</i></p>
-<dd> Toggle &quot;show visible trailing spaces&quot;. If editor_visible_spaces=1, they are shown as &#8216;.&#8217;</p>
-<dt><i>editor_visible_tabs</i></p>
-<dd> Toggle &quot;show visible tabs&quot;. If editor_visible_tabs=1, tabs are shown as &#8216;&lt;&#8212;-&gt;&#8217;</p>
-<dt><i>editor_persistent_selections</i></p>
-<dd> Do not remove block selection after cursor movement.</p>
-<dt><i>editor_cursor_beyond_eol</i></p>
-<dd> Allow moving cursor beyond the end of line.</p>
-<dt><i>editor_cursor_after_inserted_block</i></p>
-<dd> Allow moving cursor after inserted block.</p>
-<dt><i>editor_syntax_highlighting</i></p>
-<dd> enable syntax highlighting.</p>
-<dt><i>editor_edit_confirm_save</i></p>
-<dd> Show confirmation dialog on save.</p>
-<dt><i>editor_option_typewriter_wrap</i></p>
-<dd> to be described</p>
-<dt><i>editor_option_auto_para_formatting</i></p>
-<dd> to be described</p>
-<dt><i>editor_option_save_position</i></p>
-<dd> save file position on exit.</p>
-<dt><i>source_codepage</i></p>
-<dd> symbol representation of codepage name for file (i.e. CP1251, ~ &#8211; default).</p>
-<dt><i>editor_group_undo</i></p>
-<dd> do UNDO for several of the same type of action (inserting/overwriting, deleting, navigating, typing)</p>
-<dt><i>editor_wordcompletion_collect_entire_file</i></p>
-<dd> Search autocomplete candidates in entire of file or just from begin of file to cursor position (0)</p>
-<dt><i>spell_language</i></p>
-<dd> Spelling language (en, en-variant_0, ru, etc) installed with aspell package (a full list can be get using &#8216;aspell&#8217; utility). Use <code>spell_language = NONE</code> to disable aspell support. Default value is &#8216;en&#8217;. Option must located in the [Misc] section.</dl>
+<dt><i>use_internal_edit</i></dt>
+<dd> This option is ignored when invoking <code>mcedit</code>.</dd>
+<dt><i>editor_tab_spacing</i></dt>
+<dd> Interpret the tab character as being of this length. Default is 8. You should avoid using other than 8 since most other editors and text viewers assume a tab spacing of 8. Use <code>editor_fake_half_tabs</code> to simulate a smaller tab spacing.</dd>
+<dt><i>editor_fill_tabs_with_spaces</i></dt>
+<dd> Never insert a tab character. Rather insert spaces (ascii 32) to fill to the desired tab size.</dd>
+<dt><i>editor_return_does_auto_indent</i></dt>
+<dd> Pressing return will tab across to match the indentation of the first line above that has text on it.</dd>
+<dt><i>editor_backspace_through_tabs</i></dt>
+<dd> Make a single backspace delete all the space to the left margin if there is no text between the cursor and the left margin.</dd>
+<dt><i>editor_fake_half_tabs</i></dt>
+<dd> This will emulate a half tab for those who want to program with a tab spacing of 4, but do not want the tab size changed from 8 (so that the code will be formatted the same when displayed by other programs). When editing between text and the left margin, moving and tabbing will be as though a tab space were 4, while actually using spaces and normal tabs for an optimal fill. When editing anywhere else, a normal tab is inserted.</dd>
+<dt><i>editor_option_save_mode</i></dt>
+<dd> Possible values 0, 1 and 2. The save mode (see the options menu also) allows you to change the method of saving a file. Quick save (0) saves the file immediately, truncating the disk file to zero length (i.e. erasing it) and then writing the editor contents to the file. This method is fast, but dangerous, since a system error during a file save will leave the file only partially written, possibly rendering the data irretrievable. When saving, the safe save (1) option enables creation of a temporary file into which the file contents are first written. In the event of a problem, the original file is untouched. When the temporary file is successfully written, it is renamed to the name of the original file, thus replacing it. The safest method is create backups (2): a backup file is created before any changes are made. You can specify your own backup file extension in the dialog. Note that saving twice will replace your backup as well as your original file.</dd>
+<dt><i>editor_word_wrap_line_length</i></dt>
+<dd> Line length to wrap at. Default is 72.</dd>
+<dt><i>editor_backup_extension</i></dt>
+<dd> Symbol to add to name of backup files. Default is &quot;~&quot;.</dd>
+<dt><i>editor_line_state</i></dt>
+<dd> Show state line of editor. Currently it shows current line number (in the future it might show things like folding, breakpoints, etc.). M-n toggles this option.</dd>
+<dt><i>editor_visible_spaces</i></dt>
+<dd> Toggle &quot;show visible trailing spaces&quot;. If editor_visible_spaces=1, they are shown as &#8216;.&#8217;</dd>
+<dt><i>editor_visible_tabs</i></dt>
+<dd> Toggle &quot;show visible tabs&quot;. If editor_visible_tabs=1, tabs are shown as &#8216;&lt;&#8212;-&gt;&#8217;</dd>
+<dt><i>editor_persistent_selections</i></dt>
+<dd> Do not remove block selection after cursor movement.</dd>
+<dt><i>editor_cursor_beyond_eol</i></dt>
+<dd> Allow moving cursor beyond the end of line.</dd>
+<dt><i>editor_cursor_after_inserted_block</i></dt>
+<dd> Allow moving cursor after inserted block.</dd>
+<dt><i>editor_syntax_highlighting</i></dt>
+<dd> enable syntax highlighting.</dd>
+<dt><i>editor_edit_confirm_save</i></dt>
+<dd> Show confirmation dialog on save.</dd>
+<dt><i>editor_option_typewriter_wrap</i></dt>
+<dd> to be described</dd>
+<dt><i>editor_option_auto_para_formatting</i></dt>
+<dd> to be described</dd>
+<dt><i>editor_option_save_position</i></dt>
+<dd> save file position on exit.</dd>
+<dt><i>source_codepage</i></dt>
+<dd> symbol representation of codepage name for file (i.e. CP1251, ~ &#8211; default).</dd>
+<dt><i>editor_group_undo</i></dt>
+<dd> do UNDO for several of the same type of action (inserting/overwriting, deleting, navigating, typing)</dd>
+<dt><i>editor_wordcompletion_collect_entire_file</i></dt>
+<dd> Search autocomplete candidates in entire of file or just from begin of file to cursor position (0)</dd>
+<dt><i>spell_language</i></dt>
+<dd> Spelling language (en, en-variant_0, ru, etc) installed with aspell package (a full list can be get using &#8216;aspell&#8217; utility). Use <code>spell_language = NONE</code> to disable aspell support. Default value is &#8216;en&#8217;. Option must located in the [Misc] section.</dd></dl>
 <h2>MISCELLANEOUS</h2>
 <p> You can use scanf search and replace to search and replace a C format string. First take a look at the <code>sscanf</code> and <code>sprintf</code> man pages to see what a format string is and how it works. Here&#8217;s an example: suppose that you want to replace all occurrences of an open bracket, three comma separated numbers, and a close bracket, with the word <i>apples</i>, the third number, the word <i>oranges</i> and then the second number. You would fill in the Replace dialog box as follows: </p>
 <pre>
@@ -253,27 +253,27 @@ apples %d oranges %d
 <p> <i>/usr/share/mc/mc.hlp</i></p>
 <dl>
 <dt>
-<dd> The help file for the program.</dl>
+</dt><dd> The help file for the program.</dd></dl>
 <p> <i>/usr/share/mc/mc.ini</i></p>
 <dl>
 <dt>
-<dd> The default system-wide setup for GNU Midnight Commander, used only if the user&#8217;s own ~/.config/mc/ini file is missing.</dl>
+</dt><dd> The default system-wide setup for GNU Midnight Commander, used only if the user&#8217;s own ~/.config/mc/ini file is missing.</dd></dl>
 <p> <i>/usr/share/mc/mc.lib</i></p>
 <dl>
 <dt>
-<dd> Global settings for the Midnight Commander. Settings in this file affect all users, whether they have ~/.config/mc/ini or not.</dl>
+</dt><dd> Global settings for the Midnight Commander. Settings in this file affect all users, whether they have ~/.config/mc/ini or not.</dd></dl>
 <p> <i>/usr/share/mc/syntax/*</i></p>
 <dl>
 <dt>
-<dd> The default system-wide syntax files for mcedit, used only if the corresponding user&#8217;s own ~/.local/share/mc/mcedit/ file is missing.</dl>
+</dt><dd> The default system-wide syntax files for mcedit, used only if the corresponding user&#8217;s own ~/.local/share/mc/mcedit/ file is missing.</dd></dl>
 <p> <i>~/.config/mc/ini</i></p>
 <dl>
 <dt>
-<dd> User&#8217;s own setup. If this file is present then the setup is loaded from here instead of the system-wide setup file.</dl>
+</dt><dd> User&#8217;s own setup. If this file is present then the setup is loaded from here instead of the system-wide setup file.</dd></dl>
 <p> <i>~/.local/share/mc/mcedit/</i></p>
 <dl>
 <dt>
-<dd> User&#8217;s own directory where block commands are processed and saved and user&#8217;s own syntax files are located.</dl>
+</dt><dd> User&#8217;s own directory where block commands are processed and saved and user&#8217;s own syntax files are located.</dd></dl>
 <h2>LICENSE</h2>
 <p> This program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. See the built-in help of the Midnight Commander for details on the License and the lack of warranty.</p>
 <h2>AVAILABILITY</h2>

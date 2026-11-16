@@ -12,16 +12,12 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <p><font SIZE="-1">PDL</font> has support (currently experimental) for splitting up numerical processing between multiple parallel processor threads (or pthreads) using the <i>set_autopthread_targ</i> and <i>set_autopthread_size</i> functions. This can improve processing performance (by greater than 2-4X in most cases) by taking advantage of multi-core and/or multi-processor machines.</p>
 <h2>Synopsis</h2>
 <pre> use PDL;
- 
  # Set target of 4 parallel pthreads to create, with a lower limit of
  # 5Meg elements for splitting processing into parallel pthreads.
  set_autopthread_targ(4);
  set_autopthread_size(5);
- 
  $a = zeroes(5000,5000); # Create 25Meg element array
- 
  $b = $a + 5; # Processing will be split up into multiple pthreads
- 
  # Get the actual number of pthreads for the last
  # processing operation.
  $actualPthreads = get_autopthread_actual();</pre>
@@ -31,14 +27,14 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <h2>Functions that control PDL PThreads</h2>
 <p>This is a brief listing and description of the <font SIZE="-1">PDL</font> pthreading functions, see the PDL::Core docs for detailed information.</p>
 <dl>
-<dt>set_autopthread_targ</p>
-<dd>Set the target number of processor-threads (pthreads) for multi-threaded processing. Setting auto_pthread_targ to 0 means that no pthreading will occur. </p>
+<dt>set_autopthread_targ</dt>
+<dd>Set the target number of processor-threads (pthreads) for multi-threaded processing. Setting auto_pthread_targ to 0 means that no pthreading will occur. </dd>
 <p> See PDL::Core for details.</p>
-<dt>set_autopthread_size</p>
-<dd>Set the minimum size (in Meg-elements or 2**20 elements) of the largest <font SIZE="-1">PDL</font> involved in a function where auto-pthreading will be performed. For small PDLs, it probably isn&#8217;t worth starting multiple pthreads, so this function is used to define a minimum threshold where auto-pthreading won&#8217;t be attempted. </p>
+<dt>set_autopthread_size</dt>
+<dd>Set the minimum size (in Meg-elements or 2**20 elements) of the largest <font SIZE="-1">PDL</font> involved in a function where auto-pthreading will be performed. For small PDLs, it probably isn&#8217;t worth starting multiple pthreads, so this function is used to define a minimum threshold where auto-pthreading won&#8217;t be attempted. </dd>
 <p> See PDL::Core for details.</p>
-<dt>get_autopthread_actual</p>
-<dd>Get the actual number of pthreads executed for the last pdl processing function. </p>
+<dt>get_autopthread_actual</dt>
+<dd>Get the actual number of pthreads executed for the last pdl processing function. </dd>
 <p> See PDL::get_autopthread_actual for details.</dl>
 <h2>Global Control of PDL PThreading using Environment Variables</h2>
 <p><font SIZE="-1">PDL</font> PThreading can be globally turned on, without modifying existing code by setting environment variables <font SIZE="-1"><code>PDL_AUTOPTHREAD_TARG</code></font> and <font SIZE="-1"><code>PDL_AUTOPTHREAD_SIZE</code></font> before running a <font SIZE="-1">PDL</font> script. These environment variables are checked when <font SIZE="-1">PDL</font> starts up and calls to <i>set_autopthread_targ</i> and <i>set_autopthread_size</i> functions made with the environment variable&#8217;s values. </p>
@@ -49,7 +45,6 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <p>The auto-pthreading process works by analyzing threaded array dimensions in <font SIZE="-1">PDL</font> operations and splitting up processing based on the thread dimension sizes and desired number of pthreads (i.e. the pthread target or pthread_targ). The offsets and increments that <font SIZE="-1">PDL</font> uses to step thru the data in memory are modified for each pthread so each one sees a different set of data when performing processing. </p>
 <p> <code>Example</code> </p>
 <pre> $a = sequence(20,4,3); # Small 3-D Array, size 20,4,3
- 
  # Setup auto-pthreading:
  set_autopthread_targ(2); # Target of 2 pthreads
  set_autopthread_size(0); # Zero so that the small PDLs in this example will be pthreaded
@@ -73,3 +68,4 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <h2>Copyright</h2>
 <p>Copyright 2011 John Cerney. You can distribute and/or modify this document under the same terms as the current Perl license. </p>
 <p> See: <a rel="nofollow" href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a></p>
+</p>

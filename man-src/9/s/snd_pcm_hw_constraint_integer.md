@@ -15,11 +15,11 @@ snd_pcm_hw_constraint_integer - apply an integer constraint to an interval
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the integer constraint</dl>
+<dl><dd>hw_params variable to apply the integer constraint</dd></dl>
 
 <h2>Description</h2>
 

@@ -42,8 +42,8 @@ description: "condor_selinux – Security Enhanced Linux Policy for the condor p
 <p> <code>condor_startd_exec_t </code> </p>
 <p> &#8211; Set files with the condor_startd_exec_t type, if you want to transition an executable to the condor_startd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/condor_starter, /usr/sbin/condor_startd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/condor_starter, /usr/sbin/condor_startd </dd>
 </dl>
 <p> <code>condor_startd_tmp_t </code> </p>
 <p> &#8211; Set files with the condor_startd_tmp_t type, if you want to store condor startd temporary files in the /tmp directories. </p>
@@ -54,8 +54,8 @@ description: "condor_selinux – Security Enhanced Linux Policy for the condor p
 <p> <code>condor_var_lib_t </code> </p>
 <p> &#8211; Set files with the condor_var_lib_t type, if you want to store the condor files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/condor(/.*)?, /var/lib/condor/execute(/.*)?, /var/lib/condor/spool(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/condor(/.*)?, /var/lib/condor/execute(/.*)?, /var/lib/condor/spool(/.*)? </dd>
 </dl>
 <p> <code>condor_var_lock_t </code> </p>
 <p> &#8211; Set files with the condor_var_lock_t type, if you want to treat the files as condor var lock data, stored under the /var/lock directory </p>
@@ -69,9 +69,9 @@ description: "condor_selinux – Security Enhanced Linux Policy for the condor p
 <p> Policy governs the access confined processes have to these ports. SELinux condor policy is very flexible allowing users to setup their condor processes in as secure a method as possible. </p>
 <p> The following port types are defined for condor: </p>
 <dl>
-<dt><code>condor_port_t </code></p>
+<dt><code>condor_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9618 udp 9618</dl>
+</dd><dd>Default Defined Ports: tcp 9618 udp 9618</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux condor policy is very flexible allowing users to setup their condor processes in as secure a method as possible. </p>

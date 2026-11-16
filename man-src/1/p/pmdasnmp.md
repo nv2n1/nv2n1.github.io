@@ -27,14 +27,14 @@ description: "pmdasnmp – Gateway from SNMP to PCP (PMDA)"
 <p> <font SIZE="-1">TODO:</font> define config file format here &#8211; map/set/host/&#8230; etc</p>
 <h2>FILES</h2>
 <dl>
-<dt>$PCP_PMDAS_DIR/snmp/snmp.conf</p>
-<dd> optional configuration file for <code>pmdasnmp</code></p>
-<dt>$PCP_PMDAS_DIR/snmp/Install</p>
-<dd> installation script for the <code>pmdasnmp</code> agent</p>
-<dt>$PCP_PMDAS_DIR/snmp/Remove</p>
-<dd> undo installation script for the <code>pmdasnmp</code> agent</p>
-<dt>$PCP_LOG_DIR/pmcd/snmp.log</p>
-<dd> default log file for error and <i>warn()</i> messages from <code>pmdasnmp</code></dl>
+<dt>$PCP_PMDAS_DIR/snmp/snmp.conf</dt>
+<dd> optional configuration file for <code>pmdasnmp</code></dd>
+<dt>$PCP_PMDAS_DIR/snmp/Install</dt>
+<dd> installation script for the <code>pmdasnmp</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/snmp/Remove</dt>
+<dd> undo installation script for the <code>pmdasnmp</code> agent</dd>
+<dt>$PCP_LOG_DIR/pmcd/snmp.log</dt>
+<dd> default log file for error and <i>warn()</i> messages from <code>pmdasnmp</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and <font SIZE="-1">SNMP</font> </p>
 <h2>Index</h2>

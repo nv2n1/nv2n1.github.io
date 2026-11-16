@@ -36,14 +36,14 @@ description: "perlvms – VMS-specific documentation for Perl"
 </pre>
 <p> <font SIZE="-1">VMS</font> support for this process in the current release of Perl is sufficient to handle most extensions. (See the MakeMaker documentation for more details on installation options for extensions.)</p>
 <dl>
-<dt>&bull;</p>
-<dd> the <i>[.Lib.Auto.</i><i>Arch</i><i></i>$PVers<i></i><i>Extname</i><i>]</i> subdirectory of one of the directories in <tt>@INC</tt> (where <i>PVers</i> is the version of Perl you&#8217;re using, as supplied in <tt>$]</tt>, with &#8216;.&#8217; converted to &#8216;_&#8217;), or</p>
-<dt>&bull;</p>
-<dd> one of the directories in <tt>@INC</tt>, or</p>
-<dt>&bull;</p>
-<dd> a directory which the extensions Perl library module passes to the DynaLoader when asking it to map the shareable image, or</p>
-<dt>&bull;</p>
-<dd> <i>Sys$Share</i> or <i>Sys$Library</i>.</dl>
+<dt>&bull;</dt>
+<dd> the <i>[.Lib.Auto.</i><i>Arch</i><i></i>$PVers<i></i><i>Extname</i><i>]</i> subdirectory of one of the directories in <tt>@INC</tt> (where <i>PVers</i> is the version of Perl you&#8217;re using, as supplied in <tt>$]</tt>, with &#8216;.&#8217; converted to &#8216;_&#8217;), or</dd>
+<dt>&bull;</dt>
+<dd> one of the directories in <tt>@INC</tt>, or</dd>
+<dt>&bull;</dt>
+<dd> a directory which the extensions Perl library module passes to the DynaLoader when asking it to map the shareable image, or</dd>
+<dt>&bull;</dt>
+<dd> <i>Sys$Share</i> or <i>Sys$Library</i>.</dd></dl>
 <p> If the shareable image isn&#8217;t in any of these places, you&#8217;ll need to define a logical name <i>Extshortname</i>, where <i>Extshortname</i> is the portion of the extension&#8217;s name after the last <tt>&quot;::&quot;</tt>, which translates to the full file specification of the shareable image.</p>
 <h2>File specifications</h2>
 <h3>Syntax</h3>
@@ -108,30 +108,30 @@ description: "perlvms – VMS-specific documentation for Perl"
 <h3>I/O redirection and backgrounding</h3>
 <p> Perl for <font SIZE="-1">VMS</font> supports redirection of input and output on the command line, using a subset of Bourne shell syntax:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;&lt;file&quot;</tt> reads stdin from <tt>&quot;file&quot;</tt>,</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;&gt;file&quot;</tt> writes stdout to <tt>&quot;file&quot;</tt>,</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;&gt;&gt;file&quot;</tt> appends stdout to <tt>&quot;file&quot;</tt>,</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;2&gt;file&quot;</tt> writes stderr to <tt>&quot;file&quot;</tt>,</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;2&gt;&gt;file&quot;</tt> appends stderr to <tt>&quot;file&quot;</tt>, and</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;2&gt;&amp;1&quot;</tt> redirects stderr to stdout.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;&lt;file&quot;</tt> reads stdin from <tt>&quot;file&quot;</tt>,</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;&gt;file&quot;</tt> writes stdout to <tt>&quot;file&quot;</tt>,</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;&gt;&gt;file&quot;</tt> appends stdout to <tt>&quot;file&quot;</tt>,</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;2&gt;file&quot;</tt> writes stderr to <tt>&quot;file&quot;</tt>,</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;2&gt;&gt;file&quot;</tt> appends stderr to <tt>&quot;file&quot;</tt>, and</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;2&gt;&amp;1&quot;</tt> redirects stderr to stdout.</dd></dl>
 <p> In addition, output may be piped to a subprocess, using the character &#8216;|&#8217;. Anything after this character on the command line is passed to a subprocess for execution; the subprocess takes the output of Perl as its input. </p>
 <p> Finally, if the command line ends with &#8216;&amp;&#8217;, the entire command is run in the background as an asynchronous subprocess.</p>
 <h3>Command line switches</h3>
 <p> The following command line switches behave differently under <font SIZE="-1">VMS</font> than described in perlrun. Note also that in order to pass uppercase switches to Perl, you need to enclose them in double-quotes on the command line, since the <font SIZE="-1">CRTL</font> downcases all unquoted strings. </p>
 <p> On newer 64 bit versions of OpenVMS, a process setting now controls if the quoting is needed to preserve the case of command line arguments.</p>
 <dl>
-<dt>-i</p>
-<dd> If the <tt>&quot;-i&quot;</tt> switch is present but no extension for a backup copy is given, then inplace editing creates a new version of a file; the existing copy is not deleted. (Note that if an extension is given, an existing file is renamed to the backup file, as is the case under other operating systems, so it does not remain as a previous version under the original filename.)</p>
-<dt>-S</p>
-<dd> If the <tt>&quot;-S&quot;</tt> or <tt>&quot;-&quot;S&quot;&quot;</tt> switch is present <i>and</i> the script name does not contain a directory, then Perl translates the logical name <font SIZE="-1">DCL$PATH</font> as a searchlist, using each translation as a directory in which to look for the script. In addition, if no file type is specified, Perl looks in each directory for a file matching the name specified, with a blank type, a type of <i>.pl</i>, and a type of <i>.com</i>, in that order.</p>
-<dt>-u</p>
-<dd> The <tt>&quot;-u&quot;</tt> switch causes the <font SIZE="-1">VMS</font> debugger to be invoked after the Perl program is compiled, but before it has run. It does not create a core dump file.</dl>
+<dt>-i</dt>
+<dd> If the <tt>&quot;-i&quot;</tt> switch is present but no extension for a backup copy is given, then inplace editing creates a new version of a file; the existing copy is not deleted. (Note that if an extension is given, an existing file is renamed to the backup file, as is the case under other operating systems, so it does not remain as a previous version under the original filename.)</dd>
+<dt>-S</dt>
+<dd> If the <tt>&quot;-S&quot;</tt> or <tt>&quot;-&quot;S&quot;&quot;</tt> switch is present <i>and</i> the script name does not contain a directory, then Perl translates the logical name <font SIZE="-1">DCL$PATH</font> as a searchlist, using each translation as a directory in which to look for the script. In addition, if no file type is specified, Perl looks in each directory for a file matching the name specified, with a blank type, a type of <i>.pl</i>, and a type of <i>.com</i>, in that order.</dd>
+<dt>-u</dt>
+<dd> The <tt>&quot;-u&quot;</tt> switch causes the <font SIZE="-1">VMS</font> debugger to be invoked after the Perl program is compiled, but before it has run. It does not create a core dump file.</dd></dl>
 <h2>Perl functions</h2>
 <p> As of the time this document was last revised, the following Perl functions were implemented in the <font SIZE="-1">VMS</font> port of Perl (functions marked with * are discussed in more detail below): </p>
 <pre>
@@ -196,17 +196,17 @@ description: "perlvms – VMS-specific documentation for Perl"
    statvfs, socketpair
 </pre>
 <dl>
-<dt>File tests</p>
-<dd> The tests <tt>&quot;-b&quot;</tt>, <tt>&quot;-B&quot;</tt>, <tt>&quot;-c&quot;</tt>, <tt>&quot;-C&quot;</tt>, <tt>&quot;-d&quot;</tt>, <tt>&quot;-e&quot;</tt>, <tt>&quot;-f&quot;</tt>, <tt>&quot;-o&quot;</tt>, <tt>&quot;-M&quot;</tt>, <tt>&quot;-s&quot;</tt>, <tt>&quot;-S&quot;</tt>, <tt>&quot;-t&quot;</tt>, <tt>&quot;-T&quot;</tt>, and <tt>&quot;-z&quot;</tt> work as advertised. The return values for <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, and <tt>&quot;-x&quot;</tt> tell you whether you can actually access the file; this may not reflect the UIC-based file protections. Since real and effective <font SIZE="-1">UIC</font> don&#8217;t differ under <font SIZE="-1">VMS,</font> <tt>&quot;-O&quot;</tt>, <tt>&quot;-R&quot;</tt>, <tt>&quot;-W&quot;</tt>, and <tt>&quot;-X&quot;</tt> are equivalent to <tt>&quot;-o&quot;</tt>, <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, and <tt>&quot;-x&quot;</tt>. Similarly, several other tests, including <tt>&quot;-A&quot;</tt>, <tt>&quot;-g&quot;</tt>, <tt>&quot;-k&quot;</tt>, <tt>&quot;-l&quot;</tt>, <tt>&quot;-p&quot;</tt>, and <tt>&quot;-u&quot;</tt>, aren&#8217;t particularly meaningful under <font SIZE="-1">VMS,</font> and the values returned by these tests reflect whatever your <font SIZE="-1">CRTL</font> <tt>&quot;stat()&quot;</tt> routine does to the equivalent bits in the st_mode field. Finally, <tt>&quot;-d&quot;</tt> returns true if passed a device specification without an explicit directory (e.g. <tt>&quot;DUA1:&quot;</tt>), as well as if passed a directory. </p>
+<dt>File tests</dt>
+<dd> The tests <tt>&quot;-b&quot;</tt>, <tt>&quot;-B&quot;</tt>, <tt>&quot;-c&quot;</tt>, <tt>&quot;-C&quot;</tt>, <tt>&quot;-d&quot;</tt>, <tt>&quot;-e&quot;</tt>, <tt>&quot;-f&quot;</tt>, <tt>&quot;-o&quot;</tt>, <tt>&quot;-M&quot;</tt>, <tt>&quot;-s&quot;</tt>, <tt>&quot;-S&quot;</tt>, <tt>&quot;-t&quot;</tt>, <tt>&quot;-T&quot;</tt>, and <tt>&quot;-z&quot;</tt> work as advertised. The return values for <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, and <tt>&quot;-x&quot;</tt> tell you whether you can actually access the file; this may not reflect the UIC-based file protections. Since real and effective <font SIZE="-1">UIC</font> don&#8217;t differ under <font SIZE="-1">VMS,</font> <tt>&quot;-O&quot;</tt>, <tt>&quot;-R&quot;</tt>, <tt>&quot;-W&quot;</tt>, and <tt>&quot;-X&quot;</tt> are equivalent to <tt>&quot;-o&quot;</tt>, <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, and <tt>&quot;-x&quot;</tt>. Similarly, several other tests, including <tt>&quot;-A&quot;</tt>, <tt>&quot;-g&quot;</tt>, <tt>&quot;-k&quot;</tt>, <tt>&quot;-l&quot;</tt>, <tt>&quot;-p&quot;</tt>, and <tt>&quot;-u&quot;</tt>, aren&#8217;t particularly meaningful under <font SIZE="-1">VMS,</font> and the values returned by these tests reflect whatever your <font SIZE="-1">CRTL</font> <tt>&quot;stat()&quot;</tt> routine does to the equivalent bits in the st_mode field. Finally, <tt>&quot;-d&quot;</tt> returns true if passed a device specification without an explicit directory (e.g. <tt>&quot;DUA1:&quot;</tt>), as well as if passed a directory. </dd>
 <p> There are <font SIZE="-1">DECC</font> feature logical names <font SIZE="-1">AND ODS-5</font> volume attributes that also control what values are returned for the date fields. </p>
 <p> Note: Some sites have reported problems when using the file-access tests (<tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, and <tt>&quot;-x&quot;</tt>) on files accessed via <font SIZE="-1">DEC</font>&#8216;s <font SIZE="-1">DFS.</font> Specifically, since <font SIZE="-1">DFS</font> does not currently provide access to the extended file header of files on remote volumes, attempts to examine the <font SIZE="-1">ACL</font> fail, and the file tests will return false, with <tt>$!</tt> indicating that the file does not exist. You can use <tt>&quot;stat&quot;</tt> on these files, since that checks UIC-based protection only, and then manually check the appropriate bits, as defined by your C compiler&#8217;s <i>stat.h</i>, in the mode value it returns, if you need an approximation of the file&#8217;s protections.</p>
-<dt>backticks</p>
-<dd> Backticks create a subprocess, and pass the enclosed string to it for execution as a <font SIZE="-1">DCL</font> command. Since the subprocess is created directly via <tt>&quot;lib$spawn()&quot;</tt>, any valid <font SIZE="-1">DCL</font> command string may be specified.</p>
-<dt>binmode <font SIZE="-1">FILEHANDLE</font></p>
-<dd> The <tt>&quot;binmode&quot;</tt> operator will attempt to insure that no translation of carriage control occurs on input from or output to this filehandle. Since this involves reopening the file and then restoring its file position indicator, if this function returns <font SIZE="-1">FALSE,</font> the underlying filehandle may no longer point to an open file, or may point to a different position in the file than before <tt>&quot;binmode&quot;</tt> was called. </p>
+<dt>backticks</dt>
+<dd> Backticks create a subprocess, and pass the enclosed string to it for execution as a <font SIZE="-1">DCL</font> command. Since the subprocess is created directly via <tt>&quot;lib$spawn()&quot;</tt>, any valid <font SIZE="-1">DCL</font> command string may be specified.</dd>
+<dt>binmode <font SIZE="-1">FILEHANDLE</font></dt>
+<dd> The <tt>&quot;binmode&quot;</tt> operator will attempt to insure that no translation of carriage control occurs on input from or output to this filehandle. Since this involves reopening the file and then restoring its file position indicator, if this function returns <font SIZE="-1">FALSE,</font> the underlying filehandle may no longer point to an open file, or may point to a different position in the file than before <tt>&quot;binmode&quot;</tt> was called. </dd>
 <p> Note that <tt>&quot;binmode&quot;</tt> is generally not necessary when using normal filehandles; it is provided so that you can control I/O to existing record-structured files when necessary. You can also use the <tt>&quot;vmsfopen&quot;</tt> function in the VMS::Stdio extension to gain finer control of I/O to files and devices with different record structures.</p>
-<dt>crypt <font SIZE="-1">PLAINTEXT, USER</font></p>
-<dd> The <tt>&quot;crypt&quot;</tt> operator uses the <tt>&quot;sys$hash_password&quot;</tt> system service to generate the hashed representation of <font SIZE="-1">PLAINTEXT.</font> If <font SIZE="-1">USER</font> is a valid username, the algorithm and salt values are taken from that user&#8217;s <font SIZE="-1">UAF</font> record. If it is not, then the preferred algorithm and a salt of 0 are used. The quadword encrypted value is returned as an 8-character string. </p>
+<dt>crypt <font SIZE="-1">PLAINTEXT, USER</font></dt>
+<dd> The <tt>&quot;crypt&quot;</tt> operator uses the <tt>&quot;sys$hash_password&quot;</tt> system service to generate the hashed representation of <font SIZE="-1">PLAINTEXT.</font> If <font SIZE="-1">USER</font> is a valid username, the algorithm and salt values are taken from that user&#8217;s <font SIZE="-1">UAF</font> record. If it is not, then the preferred algorithm and a salt of 0 are used. The quadword encrypted value is returned as an 8-character string. </dd>
 <p> The value returned by <tt>&quot;crypt&quot;</tt> may be compared against the encrypted password from the <font SIZE="-1">UAF</font> returned by the <tt>&quot;getpw*&quot;</tt> functions, in order to authenticate users. If you&#8217;re going to do this, remember that the encrypted password in the <font SIZE="-1">UAF</font> was generated using uppercase username and password strings; you&#8217;ll have to upcase the arguments to <tt>&quot;crypt&quot;</tt> to insure that you&#8217;ll get the proper value: </p>
 <pre><code>
 sub validate_passwd
@@ -215,3 +215,5 @@ sub validate_passwd
     my($pwdhash);
     if (!($pwdhash = (getpwnam($user))[1]) ||
         $pwdhash ne crypt("
+</dl>
+</code></pre>

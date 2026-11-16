@@ -14,10 +14,10 @@ description: "w1_next_pullup – register for a strong pullup"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <p> <i>delay</i></p>
 <dl>
-<dd>time in milliseconds</dl>
+<dd>time in milliseconds</dd></dl>
 <h2>Description</h2>
 <p>Put out a strong pull-up of the specified duration after the next write operation. Not all hardware supports strong pullups. Hardware that doesn&#8217;t support strong pullups will sleep for the given time after the write operation without a strong pullup. This is a one shot request for the next write, specifying zero will clear a previous request. The w1 master lock must be held.</p>
 <h2>Return</h2>
@@ -25,5 +25,5 @@ description: "w1_next_pullup – register for a strong pullup"
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

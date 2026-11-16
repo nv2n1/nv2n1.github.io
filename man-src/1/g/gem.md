@@ -16,11 +16,11 @@ description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 <p> Further help:</p>
 <dl>
 <dt>
-<dd> <code>gem2.7 help commands</code> list all gem2.7 commands</p>
+</dt><dd> <code>gem2.7 help commands</code> list all gem2.7 commands</dd>
 <dt>
-<dd> <code>gem2.7 help examples</code> shows some examples of usage</p>
+</dt><dd> <code>gem2.7 help examples</code> shows some examples of usage</dd>
 <dt>
-<dd> <code>gem2.7 help COMMAND</code> show help on COMMAND, (e.g. &#8216;gem2.7 help install&#8217;)</dl>
+</dt><dd> <code>gem2.7 help COMMAND</code> show help on COMMAND, (e.g. &#8216;gem2.7 help install&#8217;)</dd></dl>
 <h2>LINKS</h2>
 <p> <a rel="nofollow" href="http://rubygems.org/">http://rubygems.org/</a></p>
 <h2>EXAMPLES</h2>

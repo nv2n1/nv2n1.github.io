@@ -12,16 +12,16 @@ description: "csv1 – Format of the csv1 zone file that MaraDNS uses"
 <p>The csv1 zone file format is supported primarily for MaraDNS users who already have zone files in the csv1 format. MaraDNS now supports a csv2 zone file format. Note that the csv1 zone file format will continue to function as long as I am MaraDNSaq maintainer.</p>
 <h2>Special Characters</h2>
 <dl>
-<dt>|</p>
-<dd>This delimits fields</p>
-<dt>#</p>
-<dd>This signifies a comment. Lines starting with this are ignored, otherwise it has no significance</p>
-<dt>%</p>
-<dd>This, in domain names, signifies that the rest of the domain name should be the name of this zone</p>
-<dt>*</p>
-<dd>This is translated to mean &quot;any host name that otherwise does not resolve&quot;. It must be at the beginning of a domain name.</p>
-<dt>\</p>
-<dd>This is used an an escape character, either to escape octal values such as aq%aq for %, or to escape the aq%aq character so it has no special meaning, or to escape the backslash character.</dl>
+<dt>|</dt>
+<dd>This delimits fields</dd>
+<dt>#</dt>
+<dd>This signifies a comment. Lines starting with this are ignored, otherwise it has no significance</dd>
+<dt>%</dt>
+<dd>This, in domain names, signifies that the rest of the domain name should be the name of this zone</dd>
+<dt>*</dt>
+<dd>This is translated to mean &quot;any host name that otherwise does not resolve&quot;. It must be at the beginning of a domain name.</dd>
+<dt>\</dt>
+<dd>This is used an an escape character, either to escape octal values such as aq%aq for %, or to escape the aq%aq character so it has no special meaning, or to escape the backslash character.</dd></dl>
 <h2>Notes On Processing</h2>
 <p>All domain-name labels are converted to their lower-case equivalents before processing is done. This is because domain-name literals in the database with one or more upper-case letters in them are case-sensitive. This is my way to resolve RFC1035 schizophrenic desire to both allow binary domain labels, and its desire to be case-insensitive. </p>
 <p> The file must first have a SOA record, followed by one or more NS records, followed by other records. The initial NS and SOA records must be RR for this zone. NS records after any non-NS record must be part of another zone. The resolution algorithm will not break if non-CNAME records share records with a CNAME record, but this is not a good idea to do.</p>

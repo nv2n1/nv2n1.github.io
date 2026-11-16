@@ -15,36 +15,36 @@ description: "xkbbell – XKB extension user utility"
 <p> user utility</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-display &lt;dpy&gt;</code></p>
-<dd> specifies which display to use</p>
-<dt><code>-synch</code></p>
-<dd> turns on synchronization</dl>
+<dt><code>-display &lt;dpy&gt;</code></dt>
+<dd> specifies which display to use</dd>
+<dt><code>-synch</code></dt>
+<dd> turns on synchronization</dd></dl>
 <dl>
-<dt><code>-dev &lt;id&gt;</code></p>
-<dd> specifies which device to use</dl>
+<dt><code>-dev &lt;id&gt;</code></dt>
+<dd> specifies which device to use</dd></dl>
 <dl>
-<dt><code>-force</code></p>
-<dd> force audible bell</dl>
+<dt><code>-force</code></dt>
+<dd> force audible bell</dd></dl>
 <dl>
-<dt><code>-nobeep</code></p>
-<dd> suppress server bell, event only</dl>
+<dt><code>-nobeep</code></dt>
+<dd> suppress server bell, event only</dd></dl>
 <dl>
-<dt><code>-bf &lt;id&gt;</code></p>
-<dd> specifies which bell feedback to use</dl>
+<dt><code>-bf &lt;id&gt;</code></dt>
+<dd> specifies which bell feedback to use</dd></dl>
 <dl>
-<dt><code>-kf &lt;id&gt;</code></p>
-<dd> specifies which keyboard feedback to use</dl>
+<dt><code>-kf &lt;id&gt;</code></dt>
+<dd> specifies which keyboard feedback to use</dd></dl>
 <dl>
-<dt><code>-v &lt;volume&gt;</code></p>
-<dd> specifies which volume to use</dl>
+<dt><code>-v &lt;volume&gt;</code></dt>
+<dd> specifies which volume to use</dd></dl>
 <dl>
-<dt><code>-w &lt;id&gt;</code></p>
-<dd> specifies which window to use</dl>
+<dt><code>-w &lt;id&gt;</code></dt>
+<dd> specifies which window to use</dd></dl>
 <dl>
-<dt><code>-help</code></p>
-<dd> print list of options and exit</dl>
+<dt><code>-help</code></dt>
+<dd> print list of options and exit</dd></dl>
 <dl>
-<dt><code>-version</code></p>
-<dd> print program version and exit</dl>
+<dt><code>-version</code></dt>
+<dd> print program version and exit</dd></dl>
 <p> If neither device nor feedback are specified, xkbbell uses the default values for the core keyboard device. </p>
 <h2>Index</h2>

@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_list_next() – This function shall iterate the
 mongoc_gridfs_file_list_next (mongoc_gridfs_file_list_t *list);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>list</code></p>
-<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dl>
+<dt><code>list</code></dt>
+<dd>A <code>mongoc_gridfs_file_list_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall iterate the underlying gridfs file list, returning the next file each iteration. This is a blocking function. </p>
 <h2>Returns</h2>

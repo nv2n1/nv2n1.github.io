@@ -9,18 +9,18 @@ url: "/docs/linux/man/3-sd_journal_nop/"
 sd_journal_get_fd, sd_journal_get_events, sd_journal_get_timeout, sd_journal_process, sd_journal_wait, sd_journal_reliable_fd, SD_JOURNAL_NOP, SD_JOURNAL_APPEND, SD_JOURNAL_INVALIDATE - Journal change notification interface 
 
 <h2>Synopsis</h2><pre>#include &lt;systemd/sd-journal.h&gt;</pre><dl COMPACT><dt> <b>int sd_journal_get_fd(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>int sd_journal_get_events(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>int sd_journal_get_timeout(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr>*</b><i>timeout_usec</i><b>);</b>
-<dt> <b>int sd_journal_process(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>int sd_journal_wait(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>timeout_usec</i><b>);</b>
-<dt> <b>int sd_journal_reliable_fd(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b></dl><h2>Description</h2><b>sd_journal_get_fd()</b>
+</dt><dt> <b>int sd_journal_get_events(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
+</dt><dt> <b>int sd_journal_get_timeout(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr>*</b><i>timeout_usec</i><b>);</b>
+</dt><dt> <b>int sd_journal_process(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
+</dt><dt> <b>int sd_journal_wait(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>timeout_usec</i><b>);</b>
+</dt><dt> <b>int sd_journal_reliable_fd(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b></dt></dl><h2>Description</h2><b>sd_journal_get_fd()</b>
 <dd>returns a file descriptor that may be asynchronously polled in an external event loop and is signaled as soon as the journal changes, because new entries or files were added, rotation took place, or files have been deleted, and similar. The file descriptor is suitable for usage in <b><a HREF="/docs/linux/man/2-poll/">poll</a></b>(2). Use <b>sd_journal_get_events()</b> for an events mask to watch for. The call takes one argument: the journal context object. Note that not all file systems are capable of generating the necessary events for wakeups from this file descriptor for changes to be noticed immediately. In particular network files systems do not generate suitable file change events in all cases. Cases like this can be detected with <b>sd_journal_reliable_fd()</b>, below. <b>sd_journal_get_timeout()</b> will ensure in these cases that wake-ups happen frequently enough for changes to be noticed, although with a certain latency. 
 
  <b>sd_journal_get_events()</b> will return the <b>poll()</b> mask to wait for. This function will return a combination of <b>POLLIN</b> and <b>POLLOUT</b> and similar to fill into the &quot;.events&quot; field of <i>struct pollfd</i>. 
 
  <b>sd_journal_get_timeout()</b> will return a timeout value for usage in <b>poll()</b>. This returns a value in microseconds since the epoch of <b>CLOCK_MONOTONIC</b> for timing out <b>poll()</b> in <i>timeout_usec</i>. See <b><a HREF="/docs/linux/man/2-clock_gettime/">clock_gettime</a></b>(2) for details about <b>CLOCK_MONOTONIC</b>. If there is no timeout to wait for, this will fill in <b>(uint64_t) -1</b> instead. Note that <b>poll()</b> takes a relative timeout in milliseconds rather than an absolute timeout in microseconds. To convert the absolute 'us' timeout into relative 'ms', use code like the following: 
 
-<dl COMPACT><dd><pre>uint64_t t;
+</dd><dl COMPACT><dd><pre>uint64_t t;
 int msec;
 sd_journal_get_timeout(m, &amp;t);
 if (t == (uint64_t) -1)
@@ -31,7 +31,7 @@ else {
  clock_getttime(CLOCK_MONOTONIC, &amp;ts);
  n = (uint64_t) ts.tv_sec * 1000000 + ts.tv_nsec / 1000;
  msec = t &gt; n ? (int) ((t - n + 999) / 1000) : 0;
-}</pre></dl>
+}</pre></dd></dl>
  
 
  The code above does not do any error checking for brevity's sake. The calculated <i>msec</i> integer can be passed directly as <b>poll()</b>'s timeout parameter. 
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
  }
  sd_journal_close(j);
  return 0;
-}</pre></dl>
+}</pre></dd></dl>
  
 
  Waiting with <b>poll()</b> (this example lacks all error checking for the sake of simplicity): 
@@ -112,4 +112,4 @@ int wait_for_changes(sd_journal *j) {
  pollfd.events = sd_journal_get_events(j);
  poll(&amp;pollfd, 1, msec);
  return sd_journal_process(j);
-}</pre></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/2-poll/">poll</a></b>(2), <b><a HREF="/docs/linux/man/2-clock_gettime/">clock_gettime</a></b>(2)
+}</pre></dd></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/2-poll/">poll</a></b>(2), <b><a HREF="/docs/linux/man/2-clock_gettime/">clock_gettime</a></b>(2)

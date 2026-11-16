@@ -15,43 +15,43 @@ description: "oggResize – resizes ogg files in multiple ways"
 <p> Additionally, since version 0.8 <code>oggResize </code> can add any ogg comment and png-pictures with an alpha channel can be rendered into the video at any time period before and after the resizing process. </p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-s</p>
-<dd>Sets the size of the video frame. The size is given as <code>&lt;width&gt;x&lt;height&gt;</code> The default size is 480&#215;320. </p>
+<dt>-s</dt>
+<dd>Sets the size of the video frame. The size is given as <code>&lt;width&gt;x&lt;height&gt;</code> The default size is 480&#215;320. </dd>
 <p> <i>Example: -s 320&#215;240</i> </p>
-<dt>-d</p>
-<dd>Sets the datarate in byte per seconds for the video encoder (theora). This meant to be a upper threshold. So the file may be smaller than assumed. If not set, the datarate of the original stream is used. </p>
+<dt>-d</dt>
+<dd>Sets the datarate in byte per seconds for the video encoder (theora). This meant to be a upper threshold. So the file may be smaller than assumed. If not set, the datarate of the original stream is used. </dd>
 <p> <i>Example: -d 1024000</i> </p>
-<dt>-D</p>
-<dd>Sets the datarate in byte per seconds for the audio encoder (vorbis). If not set, the datarate of the original stream is used. </p>
+<dt>-D</dt>
+<dd>Sets the datarate in byte per seconds for the audio encoder (vorbis). If not set, the datarate of the original stream is used. </dd>
 <p> <i>Example: -D 64000</i> </p>
-<dt>-f</p>
-<dd>Sets the frame rate of the video with numinator and demoninator and is the pictures per second. If only one number is given, the denominator is set to 1. If not set, the framerate of the original video is used. </p>
+<dt>-f</dt>
+<dd>Sets the frame rate of the video with numinator and demoninator and is the pictures per second. If only one number is given, the denominator is set to 1. If not set, the framerate of the original video is used. </dd>
 <p> <i>Example: -f 25:2</i> </p>
-<dt>-F</p>
-<dd>Sets the sample frequency (sample rate) of the audio data in Hertz. If the sample frequency does not match the one with the original file, resamling is invoked. </p>
+<dt>-F</dt>
+<dd>Sets the sample frequency (sample rate) of the audio data in Hertz. If the sample frequency does not match the one with the original file, resamling is invoked. </dd>
 <p> <i>Example: -F 32000</i> </p>
-<dt>-c</p>
-<dd>Adds comments to the video (theora) stream. Comments are given by a pair of type and value in the form &#8216;type=value&#8217;. More than one comment can be concatenated with a semicolon. It is recommended to use apostrophes as the command line may use the semicolon as a seperator. </p>
+<dt>-c</dt>
+<dd>Adds comments to the video (theora) stream. Comments are given by a pair of type and value in the form &#8216;type=value&#8217;. More than one comment can be concatenated with a semicolon. It is recommended to use apostrophes as the command line may use the semicolon as a seperator. </dd>
 <p> <i>Example: -c &#8216;AUTHOR=yorn;DATE=03.07.09&#8217;</i> </p>
-<dt>-C</p>
-<dd>Adds comments to the audio (vorbis) stream. Comments are given by a pair of type and value in the form &#8216;type=value&#8217;. More than one comment can be concatenated with a semicolon. It is recommended to use apostrophes as the command line may use the semicolon as a seperator. </p>
+<dt>-C</dt>
+<dd>Adds comments to the audio (vorbis) stream. Comments are given by a pair of type and value in the form &#8216;type=value&#8217;. More than one comment can be concatenated with a semicolon. It is recommended to use apostrophes as the command line may use the semicolon as a seperator. </dd>
 <p> <i>Example: -C &#8216;AUTHOR=yorn;DATE=03.07.09&#8217;</i> </p>
-<dt>-q</p>
-<dd>Specifies the quality for the resizing process. Values can be chosen between 1 (best quality, with slight bluring) and 6 (worst quality). The default value is 2. </p>
+<dt>-q</dt>
+<dd>Specifies the quality for the resizing process. Values can be chosen between 1 (best quality, with slight bluring) and 6 (worst quality). The default value is 2. </dd>
 <p> <i>Example: -q1</i> </p>
-<dt>-p</p>
-<dd>This option is meant to help creating a preview of a film. The number given with this option defines the number of frames, that are omitted. E.g. if a film has 24 frames per second and -p24 is given, the newly created video shows the video 24 times faster as only every 24th frame is used. This option can be combined with the option -f to control the framerate. With both options nice video previews can be created. If -p is used, the audio stream is ignored. </p>
+<dt>-p</dt>
+<dd>This option is meant to help creating a preview of a film. The number given with this option defines the number of frames, that are omitted. E.g. if a film has 24 frames per second and -p24 is given, the newly created video shows the video 24 times faster as only every 24th frame is used. This option can be combined with the option -f to control the framerate. With both options nice video previews can be created. If -p is used, the audio stream is ignored. </dd>
 <p> <i>Example: -p 24</i> </p>
-<dt>-a</p>
-<dd>Adds a picture to the video frame before it is resized. The expression for the picture appearances: </p>
+<dt>-a</dt>
+<dd>Adds a picture to the video frame before it is resized. The expression for the picture appearances: </dd>
 <p> <code>&lt;picture1.png&gt;[,&lt;startTime&gt;[,&lt;endTime&gt;[,s]]]</code> </p>
 <p> default <code>startTime </code> is 0 </p>
 <p> default <code>endTime</code> is -1, which is the end of the stream duration </p>
 <p> default <code>s </code> ist not set. If <code>s </code> is set, the picture slides in smoothly. </p>
 <p> More than one picture can be included. To concatenate the expressions use the colon. If the appearance time overlap, the pictures are placed on one another, so the last picture is the uppest layer. </p>
 <p> <i>Example: -a etwas.png,2,7,s:etwasneues.png,5,10</i> </p>
-<dt>-A</p>
-<dd>Adds a picture to the video frame after it is resized. </p>
+<dt>-A</dt>
+<dd>Adds a picture to the video frame after it is resized. </dd>
 <p> The syntax follows the same expression as with option -a. </p>
 </dl>
 <h2>Example</h2>

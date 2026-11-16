@@ -14,10 +14,10 @@ description: "gcore – Generate core files for running processes"
 <h2>DESCRIPTION</h2>
 <p> gcore generates a core file for the process(es) specified by process IDs, <i>pid[s]</i>. By default, each core file is written to core.<i>pid</i>, in the current directory.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> (Linux only) ignore /proc/PID/coredump_filter and also dump memory mappings marked with the &#8216;VM_DONTDUMP&#8217; flag. See info node Core File Generation for longer explanation.</p>
-<dt><code>-o</code> <i>filename</i></p>
-<dd> write core file to <i>filename</i> if one PID, or <i>filename.pid</i> if multiple PIDs, instead of default core.<i>pid</i></dl>
+<dt><code>-a</code></dt>
+<dd> (Linux only) ignore /proc/PID/coredump_filter and also dump memory mappings marked with the &#8216;VM_DONTDUMP&#8217; flag. See info node Core File Generation for longer explanation.</dd>
+<dt><code>-o</code> <i>filename</i></dt>
+<dd> write core file to <i>filename</i> if one PID, or <i>filename.pid</i> if multiple PIDs, instead of default core.<i>pid</i></dd></dl>
 <h2>COPYING</h2>
 <p> Copyright &#169; 2003, 2005, 2007, 2008, 2018, 2020 Free Software Foundation, Inc. </p>
 <p> Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this permission notice are preserved on all copies. </p>

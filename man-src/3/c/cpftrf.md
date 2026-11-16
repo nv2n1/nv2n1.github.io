@@ -19,7 +19,7 @@ description: "cpftrf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CPFTRF computes the Cholesky factorization of a complex Hermitian
  positive definite matrix A.
@@ -29,11 +29,11 @@ description: "cpftrf.f –"
  where U is an upper triangular matrix and L is lower triangular.
  This is the block version of the algorithm, calling Level 3 BLAS.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSR</i> </p>
+</dt><dd> <i>TRANSR</i> </dd>
 <pre>
           TRANSR is CHARACTER*1
           = 'N':  The Normal TRANSR of RFP A is stored;
@@ -77,14 +77,14 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 212 of file cpftrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

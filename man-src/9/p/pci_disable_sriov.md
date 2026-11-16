@@ -15,7 +15,7 @@ pci_disable_sriov - disable the SR-IOV capability
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device</dl>
+<dl><dd></dd><dd>the PCI device</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -15,15 +15,15 @@ replace_page_cache_page - replace a pagecache page with a new one
 <h2>Arguments</h2>
 
 <i>old</i>
-<dl><dd><dd>page to be replaced</dl>
+<dl><dd></dd><dd>page to be replaced</dd></dl>
  
 
  <i>new</i>
-<dl><dd>page to replace with</dl>
+<dl><dd>page to replace with</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation mode</dl>
+<dl><dd>allocation mode</dd></dl>
 
 <h2>Description</h2>
 

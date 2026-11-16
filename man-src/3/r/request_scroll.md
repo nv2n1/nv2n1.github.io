@@ -10,7 +10,6 @@ description: "request_scroll – Queues a hardware scroll request with triple bu
 <p>request_scroll &#8211; Queues a hardware scroll request with triple buffering. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int request_scroll(int x, int y);</code></pre>
 <h2>Description</h2>
 <p>This function is used for triple buffering. It requests a hardware scroll to the specified position, but returns immediately rather than waiting for a retrace. The scroll will then take place during the next vertical retrace, but you can carry on running other code in the meantime and use the poll_scroll() routine to detect when the flip has actually taken place. </p>

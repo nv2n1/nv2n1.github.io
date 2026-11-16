@@ -15,14 +15,14 @@ description: "png – Portable Network Graphics (PNG) format"
 <p><code><a href="/docs/linux/man/3-libpng/">libpng</a>(3),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> deflate(5),and<code> zlib(5)</code> </p>
 <p> PNG specification (second edition), November 2003:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&lt;<a rel="nofollow" href="http://www.w3.org/TR/2003/REC-PNG-20031110/">http://www.w3.org/TR/2003/REC-PNG-20031110/</a> PNG 1.2 specification, July 1999:</p>
-<dd><a rel="nofollow" href="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a></dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&lt;<a rel="nofollow" href="http://www.w3.org/TR/2003/REC-PNG-20031110/">http://www.w3.org/TR/2003/REC-PNG-20031110/</a> PNG 1.2 specification, July 1999:</dd>
+<dd><a rel="nofollow" href="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a></dd></dl>
 <p> PNG 1.0 specification, October 1996:</p>
 <dl>
-<dd>RFC 2083</p>
+<dd>RFC 2083</dd>
 <dd><a href="ftp://ds.internic.net/rfc/rfc2083.txt">ftp://ds.internic.net/rfc/rfc2083.txt</a><br />
  or (as a W3C Recommendation) at<br />
- <a rel="nofollow" href="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a></dl>
+ <a rel="nofollow" href="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a></dd></dl>
 <h2>Authors</h2>
 <p>This man page: Glenn Randers-Pehrson </p>
 <p> Portable Network Graphics (PNG) Specification (Second Edition) Information technology &#8211; Computer graphics and image processing &#8211; Portable Network Graphics (PNG): Functional specification. ISO/IEC 15948:2003 (E) (November 10, 2003): David Duce and others. </p>

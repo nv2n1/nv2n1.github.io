@@ -25,14 +25,10 @@ A reference to the static object of unspecified runtime type, derived from std::
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::error_condition econd = std::system_category().default_error_condition(EDOM);
     std::cout &lt;&lt; &quot;Category: &quot; &lt;&lt; econd.category().name() &lt;&lt; '\n'

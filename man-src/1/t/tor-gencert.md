@@ -19,43 +19,43 @@ description: "tor-gencert – Generate certs and keys for Tor directory authorit
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Display verbose output.</dl>
+</dt><dd> Display verbose output.</dd></dl>
 <p> <code>-h</code> or <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-r</code> or <code>&#8211;reuse</code></p>
 <dl>
 <dt>
-<dd> Generate a new certificate, but not a new signing key. This can be used to change the address or lifetime associated with a given key.</dl>
+</dt><dd> Generate a new certificate, but not a new signing key. This can be used to change the address or lifetime associated with a given key.</dd></dl>
 <p> <code>&#8211;create-identity-key</code></p>
 <dl>
 <dt>
-<dd> Generate a new identity key. You should only use this option the first time you run tor-gencert; in the future, you should use the identity key that&#8217;s already there.</dl>
+</dt><dd> Generate a new identity key. You should only use this option the first time you run tor-gencert; in the future, you should use the identity key that&#8217;s already there.</dd></dl>
 <p> <code>-i</code> <i>FILENAME</i></p>
 <dl>
 <dt>
-<dd> Read the identity key from the specified file. If the file is not present and &#8211;create-identity-key is provided, create the identity key in the specified file. Default: &quot;./authority_identity_key&quot;</dl>
+</dt><dd> Read the identity key from the specified file. If the file is not present and &#8211;create-identity-key is provided, create the identity key in the specified file. Default: &quot;./authority_identity_key&quot;</dd></dl>
 <p> <code>-s</code> <i>FILENAME</i></p>
 <dl>
 <dt>
-<dd> Write the signing key to the specified file. Default: &quot;./authority_signing_key&quot;</dl>
+</dt><dd> Write the signing key to the specified file. Default: &quot;./authority_signing_key&quot;</dd></dl>
 <p> <code>-c</code> <i>FILENAME</i></p>
 <dl>
 <dt>
-<dd> Write the certificate to the specified file. Default: &quot;./authority_certificate&quot;</dl>
+</dt><dd> Write the certificate to the specified file. Default: &quot;./authority_certificate&quot;</dd></dl>
 <p> <code>-m</code> <i>NUM</i></p>
 <dl>
 <dt>
-<dd> Number of months that the certificate should be valid. Default: 12.</dl>
+</dt><dd> Number of months that the certificate should be valid. Default: 12.</dd></dl>
 <p> <code>&#8211;passphrase-fd</code> <i>FILEDES</i></p>
 <dl>
 <dt>
-<dd> Filedescriptor to read the passphrase from. Ends at the first NUL or newline. Default: read from the terminal.</dl>
+</dt><dd> Filedescriptor to read the passphrase from. Ends at the first NUL or newline. Default: read from the terminal.</dd></dl>
 <p> <code>-a</code> <i>address</i>:<i>port</i></p>
 <dl>
 <dt>
-<dd> If provided, advertise the address:port combination as this authority&#8217;s preferred directory port in its certificate. If the address is a hostname, the hostname is resolved to an IP before it&#8217;s published.</dl>
+</dt><dd> If provided, advertise the address:port combination as this authority&#8217;s preferred directory port in its certificate. If the address is a hostname, the hostname is resolved to an IP before it&#8217;s published.</dd></dl>
 <h2>BUGS</h2>
 <p> This probably doesn&#8217;t run on Windows. That&#8217;s not a big issue, since we don&#8217;t really want authorities to be running on Windows anyway.</p>
 <h2>SEE ALSO</h2>
@@ -64,14 +64,14 @@ description: "tor-gencert – Generate certs and keys for Tor directory authorit
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Roger Dingledine&lt;arma[at] mit.edu&gt;, Nick Mathewson&lt;nickm[at] alum.mit.edu&gt;.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>Nick Mathewson</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

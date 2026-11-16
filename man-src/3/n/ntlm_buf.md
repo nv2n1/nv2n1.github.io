@@ -10,14 +10,9 @@ description: "ntlm_buf –"
 <p>ntlm_buf &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;heimntlm.h&gt;
-
 Data Fields
 size_t length
-
-
-
 void * data</code></pre>
 <h2>Detailed Description</h2>
 <p>Buffer for storing data in the NTLM library. When filled in by the library it should be freed with <code>heim_ntlm_free_buf()</code>. </p>

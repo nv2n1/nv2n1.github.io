@@ -15,11 +15,11 @@ blk_integrity_compare - Compare integrity profile of two disks
 <h2>Arguments</h2>
 
 <i>gd1</i>
-<dl><dd><dd>Disk to compare</dl>
+<dl><dd></dd><dd>Disk to compare</dd></dl>
  
 
  <i>gd2</i>
-<dl><dd>Disk to compare</dl>
+<dl><dd>Disk to compare</dd></dl>
 
 <h2>Description</h2>
 

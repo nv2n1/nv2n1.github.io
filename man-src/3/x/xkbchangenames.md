@@ -11,16 +11,16 @@ description: "XkbChangeNames – _summary-line_"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>Xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of names or map components to be updated</p>
-<dt><i>&#8211; Xkb</i></p>
-<dd>keyboard description to be updated</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of names or map components to be updated</dd>
+<dt><i>&#8211; Xkb</i></dt>
+<dd>keyboard description to be updated</dd></dl>
 <h2>Description</h2>
 <p><i>XkbChangeNames </i> provides a more flexible method for changing symbolic names than <i>XkbSetNames </i> and requires the use of an XkbNameChangesRec structure. </p>
 <p> <i>XkbChangeNames </i> copies any names specified by <i>changes </i> from the keyboard description, <i>xkb, </i> to the X server specified by <i>dpy. XkbChangeNames </i> aborts and returns False if any illegal type names or type shift level names are specified by changes. </p>
@@ -330,15 +330,15 @@ were changed */
 </table>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadAtom</code></p>
-<dd>A name is neither a valid Atom or None</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</p>
-<dt><code>BadLength</code></p>
-<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadAtom</code></dt>
+<dd>A name is neither a valid Atom or None</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd>
+<dt><code>BadLength</code></dt>
+<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbsetnames/">XkbSetNames</a></code>(3)</p>

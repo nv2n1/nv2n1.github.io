@@ -28,10 +28,10 @@ description: "Tspi_TPM_SelfTestFull – perform a self-test of each internal TPM
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_GetStatus</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hTPM</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hTPM</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_SelfTestFull</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

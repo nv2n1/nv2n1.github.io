@@ -21,8 +21,8 @@ int malloc_info(int options, FILE *stream);
 <p> On success, <code>malloc_info</code>() returns 0; on error, it returns -1, with <i>errno</i> set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>options</i> was nonzero.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>options</i> was nonzero.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>malloc_info</code>() was added to glibc in version 2.10.</p>
 <h2>ATTRIBUTES</h2>

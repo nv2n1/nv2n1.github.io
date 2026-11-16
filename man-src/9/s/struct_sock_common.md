@@ -19,7 +19,7 @@ struct_sock_common - minimal network layer representation of sockets
 <h2>Members</h2>
 
 {unnamed_union}
-<dl><dd>anonymous</dl>
+<dl><dd>anonymous</dd></dl>
 
 <h2>Description</h2>
 

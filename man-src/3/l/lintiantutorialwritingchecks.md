@@ -25,7 +25,6 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  package Lintian::deb::pkg_check;
  use strict;
  use warnings;
- 
  sub run {
  my ($pkg, $type, $info, $proc, $group) = @_;
  return;
@@ -35,27 +34,21 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
 
  It is given 5 arguments (in the future, possibly more), which are:
 <dl COMPACT><dt>$pkg - The name of the package being processed.
-<dd>(Same as <tt>$proc</tt>-&gt;pkg_name)
-<dt>$type - The type of the package being processed.
-<dd>At the moment, <tt>$type</tt> is one of ``binary'' (.deb), ``udeb'', ``source'' (.dsc) or ``changes''. This argument is mostly useful if certain checks do not apply equally to all package types being processed. 
-
+</dt><dd>(Same as <tt>$proc</tt>-&gt;pkg_name)
+</dd><dt>$type - The type of the package being processed.
+</dt><dd>At the moment, <tt>$type</tt> is one of ``binary'' (.deb), ``udeb'', ``source'' (.dsc) or ``changes''. This argument is mostly useful if certain checks do not apply equally to all package types being processed. 
  Generally it is advisable to check only binaries (``binary'' and ``udeb''), sources or changes in a given check. But in rare cases, it makes sense to lump multiple types together in the same check and this argument helps you do that. 
-
  (Current it is always identical to <tt>$proc</tt>-&gt;pkg_type)
-<dt>$info - Accessor to the data Lintian has extracted
-<dd>Basically all information you want about a given package comes from the <tt>$info</tt> object. Sometimes referred to as either the ``info object'' or (an instance of) Lintian::Collect. 
-
+</dd><dt>$info - Accessor to the data Lintian has extracted
+</dt><dd>Basically all information you want about a given package comes from the <tt>$info</tt> object. Sometimes referred to as either the ``info object'' or (an instance of) Lintian::Collect. 
  This object (together with a properly set Needs-Info in the <i>.desc</i> file) will grant you access to all of the data Lintian has extracted about this package. 
-
  Based on the value of the <tt>$type</tt> argument, it will be one of Lintian::Collect::Binary, Lintian::Collect::Changes or Lintian::Collect::Source. 
-
  (Currently it is the same as <tt>$proc</tt>-&gt;info)
-<dt>$proc - Basic metadata about the package
-<dd>This is an instance of Lintian::Processable and is useful for trivially obtaining very basic package metadata. Particularly, the name of source package and version of source package are readily available through this object.
-<dt>$group - Group of processables from the same source
-<dd>If you want to do a cross-check between different packages built from the same source, <tt>$group</tt> helps you access those other packages (if they are available). 
-
- This is an instance of Lintian::ProcessableGroup.</dl>
+</dd><dt>$proc - Basic metadata about the package
+</dt><dd>This is an instance of Lintian::Processable and is useful for trivially obtaining very basic package metadata. Particularly, the name of source package and version of source package are readily available through this object.
+</dd><dt>$group - Group of processables from the same source
+</dt><dd>If you want to do a cross-check between different packages built from the same source, <tt>$group</tt> helps you access those other packages (if they are available). 
+ This is an instance of Lintian::ProcessableGroup.</dd></dl>
  
 
  Now back to the coding.
@@ -88,17 +81,16 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  Now we can load it by using: 
 
  <pre> use Lintian::Data;
- 
  my $VALID_MULTI_ARCH_VALUES =
  Lintian::Data-&gt;new('deb/pkg-check/multiarch-values');</pre>Actually, this is not quite true. Lintian::Data is lazy, so it will not load anything before we force it to do so. Most of the time this is just an added bonus. However, if you ever have to force it to load something immediately, you can do so by invoking its ``known'' method (with an arbitrary defined string and ignore the result). 
 
  Data files work with 3 access methods, ``all'', ``known'' and ``value''.
 <dl COMPACT><dt>all
-<dd>``all'' (i.e. <tt>$data</tt>-&gt;all) returns a list of all the entries in the data file (for key/value tables, all returns the keys). The list is not sorted in any order (not even input order).
-<dt>known
-<dd>``known'' (i.e. <tt>$data</tt>-&gt;known('item')) returns a truth value if a given item or key is known (present) in the data set or table. For key/pair tables, the value associated with the key can be retrieved with ``value'' (see below).
-<dt>value
-<dd>``value'' (i.e. <tt>$data</tt>-&gt;value('key')) returns a value associated with a key for key/value tables. For unknown keys, it returns <tt>&quot;undef&quot;</tt>. If the data file is not a key/value table but just a set, value returns a truth value for known keys.</dl>
+</dt><dd>``all'' (i.e. <tt>$data</tt>-&gt;all) returns a list of all the entries in the data file (for key/value tables, all returns the keys). The list is not sorted in any order (not even input order).
+</dd><dt>known
+</dt><dd>``known'' (i.e. <tt>$data</tt>-&gt;known('item')) returns a truth value if a given item or key is known (present) in the data set or table. For key/pair tables, the value associated with the key can be retrieved with ``value'' (see below).
+</dd><dt>value
+</dt><dd>``value'' (i.e. <tt>$data</tt>-&gt;value('key')) returns a value associated with a key for key/value tables. For unknown keys, it returns <tt>&quot;undef&quot;</tt>. If the data file is not a key/value table but just a set, value returns a truth value for known keys.</dd></dl>
  
 
  While we could use both ``value'' and ``known'', we will use the latter for readability (and to remind ourselves that this is a data set and not a data table). 
@@ -135,7 +127,6 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  The following snippet may be useful for testing that a given path does not escape the root. 
 
  <pre> use Lintian::Util qw(is_ancestor_of);
- 
  my $path = ...;
  # The snippet applies equally well to $info-&gt;debfiles and
  # $info-&gt;control (just remember to subst all occurrences of
@@ -149,40 +140,30 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
 
  <pre> Needs-Info requirements for using methodx: Y</pre>Which means that the methodx requires Y to work. Here Y is a comma separated list and each element of Y basically falls into 3 cases.
 <dl COMPACT><dt>&bull;
-<dd>The element is the word <i>none</i> 
-
+</dt><dd>The element is the word <i>none</i> 
  In this case, the method has no ``external'' requirements and can be used without any changes to your Needs-Info. The ``field'' method is an example of this. 
-
  This only makes sense if it is the only element in the list.
-<dt>&bull;
-<dd>The element is a link to a method 
-
+</dd><dt>&bull;
+</dt><dd>The element is a link to a method 
  In this case, the method uses another method to do its job. An example is the sorted_control_index method, which uses the control_index method. So using <i>sorted_control_index</i> has the same requirements as using <i>control_index</i>.
-<dt>&bull;
-<dd>The element is the name of a collection (e.g. ``control_index''). 
-
- In this case, the method needs the given collection to be run. So to use (e.g.) control_index, you have to put ``bin-pkg-control'' in your Needs-Info.</dl>
+</dd><dt>&bull;
+</dt><dd>The element is the name of a collection (e.g. ``control_index''). 
+ In this case, the method needs the given collection to be run. So to use (e.g.) control_index, you have to put ``bin-pkg-control'' in your Needs-Info.</dd></dl>
  
 
  <font SIZE="-1">CAVEAT:</font> Methods can have different requirements based on the type of package! An example of this ``changelog'', which requires ``changelog-file'' in binary packages and ``Same as debfiles'' in source packages.
 <h3>Avoiding security issues</h3>Over the years a couple of security issues have been discovered in Lintian. The problem is that people can in theory create some really nasty packages. Please keep the following in mind when writing a check:
 <dl COMPACT><dt>&bull;
-<dd>Avoid 2-arg open, system/exec($shellcmd), `$shellcmd` like the plague. 
-
+</dt><dd>Avoid 2-arg open, system/exec($shellcmd), `$shellcmd` like the plague. 
  When you get any one of those wrong you introduce ``arbitrary code execution'' vulnerabilities (we learned this the hard way via <font SIZE="-1">CVE-2009-4014</font>). 
-
  Usually 3-arg open and the non-shell variant of system/exec are enough. When you actually need a shell pipeline, consider using Lintian::Command. It also provides a <i>safe_qx</i> command to assist with capturing stdout as an alternative to `$cmd` (or qx/$cmd/).
-<dt>&bull;
-<dd>Do not trust field values. 
-
+</dd><dt>&bull;
+</dt><dd>Do not trust field values. 
  This is especially true if you intend to use the value as part of a file name. Verify that the field contains what you expect before you use it.
-<dt>&bull;
-<dd>Use Lintian::Path (or, failing that, is_ancestor_of) 
-
+</dd><dt>&bull;
+</dt><dd>Use Lintian::Path (or, failing that, is_ancestor_of) 
  You might be tempted to think that the following code is safe: 
-
  <pre> use autodie;
- 
  my $filename = 'some/file';
  my $ufile = $info-&gt;unpacked($filename);
  if ( ! -l $ufile) {
@@ -190,7 +171,6 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  open(my $fd, '&lt;', $ufile);
  ...;
  }</pre>This is definitely unsafe if ``$filename'' contains at least one directory segment. So, if in doubt, use is_ancestor_of to verify that the requested file is indeed the file you think it is. A better version of the above would be: 
-
  <pre> use autodie,
  use Lintian::Util qw(is_ancestor_of);
  [...]
@@ -201,14 +181,11 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  open(m $fd, '&lt;', $ufile);
  ...;
  }</pre>In some cases you can even drop the ``! -l <tt>$ufile</tt>'' part. 
-
  Of course, it is much easier to use the Lintian::Path object (whenever possible). 
-
  <pre> my $filename = 'some/file';
  my $ufile = $info-&gt;index($filename);
  if ( $ufile &amp;&amp; $ufile-&gt;is_file &amp;&amp; $ufile-&gt;is_open_ok) {
  my $fd = $ufile-&gt;open;
  ...;
  }</pre>Here you can drop the `` &amp;&amp; <tt>$ufile</tt>-&gt;is_file'' if you want to permit safe symlinks. 
-
- For more information on the is_ancestor_of check, see is_ancestor_of</dl><h2>See Also</h2>Lintian::Tutorial::WritingTests, Lintian::Tutorial::TestSuite
+ For more information on the is_ancestor_of check, see is_ancestor_of</dd></dl><h2>See Also</h2>Lintian::Tutorial::WritingTests, Lintian::Tutorial::TestSuite

@@ -34,15 +34,15 @@ url: "/docs/linux/man/1-perlqnx/"
  As with many unix ports, this one depends on a few ``standard'' unix utilities which are not necessarily standard for <font SIZE="-1">QNX4.</font>
 <dl>
 <dt>/bin/sh
-<dd> This is used heavily by Configure and then by perl itself. <font SIZE="-1">QNX4</font>'s version is fine, but Configure will choke on the 16-bit version, so if you are running <font SIZE="-1">QNX 4.22,</font> link /bin/sh to /bin32/ksh
-<dt>ar
-<dd> This is the standard unix library builder. We use wlib. With Watcom 10.6, when wlib is linked as ``ar'', it behaves like ar and all is fine. Under 9.5, a cover is required. One is included in ../qnx
-<dt>nm
-<dd> This is used (optionally) by configure to list the contents of libraries. I will generate a cover function on the fly in the <font SIZE="-1">UU</font> directory.
-<dt>cpp
-<dd> Configure and perl need a way to invoke a C preprocessor. I have created a simple cover for cc which does the right thing. Without this, Configure will create its own wrapper which works, but it doesn't handle some of the command line arguments that perl will throw at it.
-<dt>make
-<dd> You really need <font SIZE="-1">GNU</font> make to compile this. <font SIZE="-1">GNU</font> make ships by default with <font SIZE="-1">QNX 4.23,</font> but you can get it from quics for earlier versions.</dl>
+</dt><dd> This is used heavily by Configure and then by perl itself. <font SIZE="-1">QNX4</font>'s version is fine, but Configure will choke on the 16-bit version, so if you are running <font SIZE="-1">QNX 4.22,</font> link /bin/sh to /bin32/ksh
+</dd><dt>ar
+</dt><dd> This is the standard unix library builder. We use wlib. With Watcom 10.6, when wlib is linked as ``ar'', it behaves like ar and all is fine. Under 9.5, a cover is required. One is included in ../qnx
+</dd><dt>nm
+</dt><dd> This is used (optionally) by configure to list the contents of libraries. I will generate a cover function on the fly in the <font SIZE="-1">UU</font> directory.
+</dd><dt>cpp
+</dt><dd> Configure and perl need a way to invoke a C preprocessor. I have created a simple cover for cc which does the right thing. Without this, Configure will create its own wrapper which works, but it doesn't handle some of the command line arguments that perl will throw at it.
+</dd><dt>make
+</dt><dd> You really need <font SIZE="-1">GNU</font> make to compile this. <font SIZE="-1">GNU</font> make ships by default with <font SIZE="-1">QNX 4.23,</font> but you can get it from quics for earlier versions.</dd></dl>
 
 <h3>Outstanding Issues with Perl on <font SIZE="-1">QNX4</font></h3>
 
@@ -65,9 +65,9 @@ url: "/docs/linux/man/1-perlqnx/"
  The files in the ``qnx'' directory are:
 <dl>
 <dt>qnx/ar
-<dd> A script that emulates the standard unix archive (aka library) utility. Under Watcom 10.6, ar is linked to wlib and provides the expected interface. With Watcom 9.5, a cover function is required. This one is fairly crude but has proved adequate for compiling perl.
-<dt>qnx/cpp
-<dd> A script that provides C preprocessing functionality. Configure can generate a similar cover, but it doesn't handle all the command-line options that perl throws at it. This might be reasonably placed in /usr/local/bin.</dl>
+</dt><dd> A script that emulates the standard unix archive (aka library) utility. Under Watcom 10.6, ar is linked to wlib and provides the expected interface. With Watcom 9.5, a cover function is required. This one is fairly crude but has proved adequate for compiling perl.
+</dd><dt>qnx/cpp
+</dt><dd> A script that provides C preprocessing functionality. Configure can generate a similar cover, but it doesn't handle all the command-line options that perl throws at it. This might be reasonably placed in /usr/local/bin.</dd></dl>
 
 <h3>Outstanding issues with perl under <font SIZE="-1">QNX6</font></h3>
 
@@ -138,4 +138,4 @@ url: "/docs/linux/man/1-perlqnx/"
 
 
 <dt><a HREF="#lbAI">AUTHOR</a>
-<dd></dl>
+</dt><dd></dd></dl>

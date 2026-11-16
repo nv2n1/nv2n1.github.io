@@ -21,23 +21,23 @@ struct_snd_soc_jack_zone - Describes voltage zones of jack detection
 <h2>Members</h2>
 
 min_mv
-<dl><dd>start voltage in mv</dl>
+<dl><dd>start voltage in mv</dd></dl>
  
 
  max_mv
-<dl><dd>end voltage in mv</dl>
+<dl><dd>end voltage in mv</dd></dl>
  
 
  jack_type
-<dl><dd>type of jack that is expected for this voltage</dl>
+<dl><dd>type of jack that is expected for this voltage</dd></dl>
  
 
  debounce_time
-<dl><dd>debounce_time for jack, codec driver should wait for this duration before reading the adc for voltages</dl>
+<dl><dd>debounce_time for jack, codec driver should wait for this duration before reading the adc for voltages</dd></dl>
  
 
  list
-<dl><dd>internal list entry</dl>
+<dl><dd>internal list entry</dd></dl>
 
 <h2>Copyright</h2>
 

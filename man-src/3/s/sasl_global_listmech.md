@@ -10,8 +10,6 @@ description: "sasl_listmech – Retrieve a list of the supported SASL mechanisms
 <p>sasl_listmech &#8211; Retrieve a list of the supported SASL mechanisms</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 const char ** sasl_global_listmech()</code></pre>
 <h2>Description</h2>
 <p><code>sasl_global_listmech()</code> returns a null-terminated array of strings that lists all mechanisms that are loaded by either the client or server side of the library. </p>

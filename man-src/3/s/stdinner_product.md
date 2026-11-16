@@ -11,23 +11,14 @@ std::inner_product - std::inner_product
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt1, class InputIt2, class T &gt;
-
 T inner_product( InputIt1 first1, InputIt1 last1,   (1)
-
 InputIt2 first2, T init );
-
 template&lt;class InputIt1, class InputIt2, class T,
-
 class BinaryOperation1, class BinaryOperation2&gt;
-
 T inner_product( InputIt1 first1, InputIt1 last1,   (2)
-
 InputIt2 first2, T init,
-
 BinaryOperation1 op1,
-
 BinaryOperation2 op2 );</code></pre> 
 Computes inner product (i.e. sum of products) or performs ordered map/reduce operation on the range [first1, last1) and the range beginning at first2. 
 1) Initializes the accumulator acc with the initial value init and then modifies it with the expression acc = acc + *first1 * *first2, then modifies again with the expression acc = acc + *(first1+1) * *(first2+1), etc                       (until C++20)
@@ -111,15 +102,10 @@ The parallelizable version of this algorithm, std::transform_reduce, requires op
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;numeric&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
-
 int main()
-
 {
     std::vector&lt;int&gt; a{0, 1, 2, 3, 4};
     std::vector&lt;int&gt; b{5, 4, 2, 3, 1};

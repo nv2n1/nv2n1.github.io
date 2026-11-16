@@ -14,14 +14,14 @@ description: "gnutls_x509_privkey_verify_data – Verify the signed data using p
 <p> <code>int gnutls_x509_privkey_verify_data(gnutls_x509_privkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> Holds the key</p>
-<dt>unsigned int flags</p>
-<dd> should be 0 for now</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> holds the data to be signed</p>
-<dt>const gnutls_datum_t * signature</p>
-<dd> contains the signature</dl>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> Holds the key</dd>
+<dt>unsigned int flags</dt>
+<dd> should be 0 for now</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> holds the data to be signed</dd>
+<dt>const gnutls_datum_t * signature</dt>
+<dd> contains the signature</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify the given signed data, using the parameters in the private key.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_privkey_verify_data – Verify the signed data using p
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

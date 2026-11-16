@@ -13,49 +13,49 @@ description: "Fortran – Reports statistics regarding an HDF5 file and the obje
 <p> usage: h5fc [OPTIONS] &lt;compile line&gt;</p>
 <dl>
 <dt>
-<dd> OPTIONS:</p>
-<dt><code>-help</code></p>
-<dd> This help message.</p>
-<dt><code>-echo</code></p>
-<dd> Show all the shell commands executed</p>
-<dt><code>-prefix</code>=<i>DIR</i></p>
-<dd> Prefix directory to find HDF5 lib/ and include/</p>
+</dt><dd> OPTIONS:</dd>
+<dt><code>-help</code></dt>
+<dd> This help message.</dd>
+<dt><code>-echo</code></dt>
+<dd> Show all the shell commands executed</dd>
+<dt><code>-prefix</code>=<i>DIR</i></dt>
+<dd> Prefix directory to find HDF5 lib/ and include/</dd>
 <dt>
-<dd> subdirectories [default: /usr]</p>
-<dt><code>-show</code></p>
-<dd> Show the commands without executing them</p>
-<dt><code>-showconfig</code></p>
-<dd> Show the HDF5 library configuration summary</p>
-<dt><code>-shlib</code></p>
-<dd> Compile with shared HDF5 libraries</p>
-<dt><code>-noshlib</code></p>
-<dd> Compile with static HDF5 libraries [default]</p>
-<dt>&lt;compile line&gt;</p>
-<dd> &#8211; the normal compile line options for your compiler.</p>
+</dt><dd> subdirectories [default: /usr]</dd>
+<dt><code>-show</code></dt>
+<dd> Show the commands without executing them</dd>
+<dt><code>-showconfig</code></dt>
+<dd> Show the HDF5 library configuration summary</dd>
+<dt><code>-shlib</code></dt>
+<dd> Compile with shared HDF5 libraries</dd>
+<dt><code>-noshlib</code></dt>
+<dd> Compile with static HDF5 libraries [default]</dd>
+<dt>&lt;compile line&gt;</dt>
+<dd> &#8211; the normal compile line options for your compiler.</dd>
 <dt>
-<dd> h5fc uses the same compiler you used to compile HDF5. Check with your compiler&#8217;s man pages for more information on which options are needed.</p>
+</dt><dd> h5fc uses the same compiler you used to compile HDF5. Check with your compiler&#8217;s man pages for more information on which options are needed.</dd>
 <dt>
-<dd> You can override the compiler and linker to compile your program by setting the following environment variables accordingly:</p>
-<dt>HDF5_FC</p>
-<dd> &#8211; use a different Fortran 90 or 95 compiler</p>
-<dt>HDF5_FLINKER</p>
-<dd> &#8211; use a different linker</p>
-<dt>HDF5_USE_SHLIB=[yes|no]</p>
-<dd> &#8211; use shared or static version of the HDF5 library</p>
+</dt><dd> You can override the compiler and linker to compile your program by setting the following environment variables accordingly:</dd>
+<dt>HDF5_FC</dt>
+<dd> &#8211; use a different Fortran 90 or 95 compiler</dd>
+<dt>HDF5_FLINKER</dt>
+<dd> &#8211; use a different linker</dd>
+<dt>HDF5_USE_SHLIB=[yes|no]</dt>
+<dd> &#8211; use shared or static version of the HDF5 library</dd>
 <dt>
-<dd> [default: no]</p>
+</dt><dd> [default: no]</dd>
 <dt>
-<dd> You can also add or change paths and flags to the compile line using the following environment varibles or by assigning them to their counterparts in the &#8216;Things You Can Modify to Override&#8230;&#8217; section of h5fc</p>
-<dt>Variable</p>
-<dd> Current value to be replaced</p>
-<dt>HDF5_FFLAGS</p>
-<dd> &quot;&quot;</p>
-<dt>HDF5_LDFLAGS</p>
-<dd> &quot;&quot;</p>
-<dt>HDF5_LIBS</p>
-<dd> &quot;&quot;</p>
+</dt><dd> You can also add or change paths and flags to the compile line using the following environment varibles or by assigning them to their counterparts in the &#8216;Things You Can Modify to Override&#8230;&#8217; section of h5fc</dd>
+<dt>Variable</dt>
+<dd> Current value to be replaced</dd>
+<dt>HDF5_FFLAGS</dt>
+<dd> &quot;&quot;</dd>
+<dt>HDF5_LDFLAGS</dt>
+<dd> &quot;&quot;</dd>
+<dt>HDF5_LIBS</dt>
+<dd> &quot;&quot;</dd>
 <dt>
-<dd> Note that adding library paths to HDF5_LDFLAGS where another hdf5 version is located may link your program with that other hdf5 library version.</dl>
+</dt><dd> Note that adding library paths to HDF5_LDFLAGS where another hdf5 version is located may link your program with that other hdf5 library version.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2011 Free Software Foundation, Inc. </p>
 <p> GNU Fortran comes with NO WARRANTY, to the extent permitted by law. You may redistribute copies of GNU Fortran under the terms of the GNU General Public License. For more information about these matters, see the file named COPYING</p>
@@ -63,6 +63,6 @@ description: "Fortran – Reports statistics regarding an HDF5 file and the obje
 <p> The full documentation for <code>Fortran</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>Fortran</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info Fortran</code></dl>
+</dt><dd> <code>info Fortran</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

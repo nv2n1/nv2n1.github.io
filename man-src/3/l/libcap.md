@@ -43,12 +43,12 @@ Link with - lcap.
 <p> These functions work on a capability state held in working storage. A <i>cap_t</i> holds information about the capabilities in each of the three sets, Permitted, Inheritable, and Effective. Each capability in a set may be clear (disabled, 0) or set (enabled, 1). </p>
 <p> These functions work with the following data types:</p>
 <dl>
-<dt><i>cap_value_t</i></p>
-<dd> identifies a capability, such as <code>CAP_CHOWN</code>.</p>
-<dt><i>cap_flag_t</i></p>
-<dd> identifies one of the three flags associated with a capability (i.e., it identifies one of the three capability sets). Valid values for this type are <code>CAP_EFFECTIVE</code>, <code>CAP_INHERITABLE</code> or <code>CAP_PERMITTED</code>.</p>
-<dt><i>cap_flag_value_t</i></p>
-<dd> identifies the setting of a particular capability flag (i.e, the value of a capability in a set). Valid values for this type are <code>CAP_CLEAR</code>(0) or <code>CAP_SET</code>(1).</dl>
+<dt><i>cap_value_t</i></dt>
+<dd> identifies a capability, such as <code>CAP_CHOWN</code>.</dd>
+<dt><i>cap_flag_t</i></dt>
+<dd> identifies one of the three flags associated with a capability (i.e., it identifies one of the three capability sets). Valid values for this type are <code>CAP_EFFECTIVE</code>, <code>CAP_INHERITABLE</code> or <code>CAP_PERMITTED</code>.</dd>
+<dt><i>cap_flag_value_t</i></dt>
+<dd> identifies the setting of a particular capability flag (i.e, the value of a capability in a set). Valid values for this type are <code>CAP_CLEAR</code>(0) or <code>CAP_SET</code>(1).</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The return value is generally specific to the individual function called. On failure, <i>errno</i> is set appropriately.</p>
 <h2>CONFORMING TO</h2>

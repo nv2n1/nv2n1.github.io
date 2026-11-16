@@ -11,78 +11,30 @@ description: "sc::ThreadGrp –"
 <p> The <code>ThreadGrp</code> abstract class provides a means to manage separate threads of control.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thread.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>. Inherited by <code>sc::ProcThreadGrp</code>, <code>sc::PthreadThreadGrp</code>, and <code>sc::PumaThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>ThreadGrp (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 ThreadGrp (const ThreadGrp &amp;, int nthread=-1)
-
-
-
 virtual void add_thread (int threadnum, Thread *thread)
-
-
 Assigns a Thread object to each thread.
-
-
 virtual void add_thread (int threadnum, Thread *thread, int priority)
-
-
 Like add_thread(threadnum, thread), but assign a priority that the thread is to use.
-
-
 int nthread () const
-
-
 The number of threads that will be run by start_thread.
-
-
 void delete_threads ()
-
-
-
 virtual int start_threads ()=0
-
-
 Starts the threads running.
-
-
 virtual int wait_threads ()=0
-
-
 Wait for all the threads to complete.
-
-
 virtual Ref&lt; ThreadLock &gt; new_lock ()=0
-
-
 Return a local object.
-
-
 virtual ThreadGrp * clone (int nthread=-1)
-
-
 Create a ThreadGrp like the current one.
-
-
-
 Static Public Member Functions
 static void set_default_threadgrp (const Ref&lt; ThreadGrp &gt; &amp;)
-
-
-
 static ThreadGrp * get_default_threadgrp ()
-
-
-
 static ThreadGrp * initial_threadgrp (int &amp;argc, char **argv)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Thread</code> ** <code>threads_</code> </p>
 <p> int <code>nthread_</code></p>

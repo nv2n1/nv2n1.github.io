@@ -26,10 +26,11 @@ This call is equivalent to wall clock time.
 <p>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>PAPIF </p>
+<dd>PAPIF </dd>
 <p> PAPI </p>
 <p> <code>PAPI_get_virt_usec</code> </p>
 <p> <code>PAPI_get_virt_cyc</code> </p>
 <p> <code>PAPI_library_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -80,10 +80,10 @@ $ export ANDROID_TOOLCHAIN = / tmp / my - toolchain - $TARGETARCH $ export SYSRO
 <p> As a final word of warning, if you&#8217;re using adb, <tt>&quot;make test&quot;</tt> may appear to hang; this is because it doesn&#8217;t output anything until it finishes running all tests. You can check its progress by logging into the device, moving to <i></i>$TARGETDIR<i></i>, and looking at the file <i>output.stdout</i>. </p>
 <p> <i>Notes</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> If you are targetting x86 Android, you will have to change <tt>&quot;$TARGETARCH-gcc&quot;</tt> to <tt>&quot;i686-linux-android-gcc&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> On some older low-end devices &#8212; think early 2.2 era &#8212; some tests, particularly <i>t/re/uniprops.t</i>, may crash the phone, causing it to turn itself off once, and then back on again.</dl>
+<dt>&bull;</dt>
+<dd> If you are targetting x86 Android, you will have to change <tt>&quot;$TARGETARCH-gcc&quot;</tt> to <tt>&quot;i686-linux-android-gcc&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> On some older low-end devices &#8212; think early 2.2 era &#8212; some tests, particularly <i>t/re/uniprops.t</i>, may crash the phone, causing it to turn itself off once, and then back on again.</dd></dl>
 <h2>Native Builds</h2>
 <p> While Google doesn&#8217;t provide a native toolchain for Android, you can still get one from the Play Store; for example, there&#8217;s the CCTools app which you can get for free. Keep in mind that you want a full toolchain; some apps tend to default to installing only a barebones version without some important utilities, like ar or nm. </p>
 <p> Once you have the toolchain set up properly, the only remaining hurdle is actually locating where in the device it was installed in. For example, CCTools installs its toolchain in <i>/data/data/com.pdaxrom.cctools/root/cctools</i>. With the path in hand, compiling perl is little more than: </p>
@@ -95,7 +95,7 @@ $ export ANDROID_TOOLCHAIN = / tmp / my - toolchain - $TARGETARCH $ export SYSRO
 <h2>AUTHOR</h2>
 <p> Brian Fraser &lt;fraserbn [at] gmail.com&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Native Builds</a></p>
+<dt><a href="#lbAK">Native Builds</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">AUTHOR</a></dt>
+<dd></dd></dl>

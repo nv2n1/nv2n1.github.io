@@ -15,26 +15,26 @@ description: "ed – line-oriented text editor"
 <p> GNU ed is a line-oriented text editor. It is used to create, display, modify and otherwise manipulate text files, both interactively and via shell scripts. A restricted version of ed, red, can only edit files in the current directory and cannot execute shell commands. Ed is the &#8216;standard&#8217; text editor in the sense that it is the original editor for Unix, and thus widely available. For most purposes, however, it is superseded by full-screen editors such as GNU Emacs or GNU Moe.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</p>
-<dt><code>-E</code>, <code>&#8211;extended-regexp</code></p>
-<dd> use extended regular expressions</p>
-<dt><code>-G</code>, <code>&#8211;traditional</code></p>
-<dd> run in compatibility mode</p>
-<dt><code>-l</code>, <code>&#8211;loose-exit-status</code></p>
-<dd> exit with 0 status even if a command fails</p>
-<dt><code>-p</code>, <code>&#8211;prompt</code>=<i>,STRING/</i></p>
-<dd> use STRING as an interactive prompt</p>
-<dt><code>-r</code>, <code>&#8211;restricted</code></p>
-<dd> run in restricted mode</p>
-<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> suppress diagnostics, byte counts and &#8216;!&#8217; prompt</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> be verbose; equivalent to the &#8216;H&#8217; command</p>
-<dt><code>&#8211;strip-trailing-cr</code></p>
-<dd> strip carriage returns at end of text lines</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd>
+<dt><code>-E</code>, <code>&#8211;extended-regexp</code></dt>
+<dd> use extended regular expressions</dd>
+<dt><code>-G</code>, <code>&#8211;traditional</code></dt>
+<dd> run in compatibility mode</dd>
+<dt><code>-l</code>, <code>&#8211;loose-exit-status</code></dt>
+<dd> exit with 0 status even if a command fails</dd>
+<dt><code>-p</code>, <code>&#8211;prompt</code>=<i>,STRING/</i></dt>
+<dd> use STRING as an interactive prompt</dd>
+<dt><code>-r</code>, <code>&#8211;restricted</code></dt>
+<dd> run in restricted mode</dd>
+<dt><code>-s</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> suppress diagnostics, byte counts and &#8216;!&#8217; prompt</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> be verbose; equivalent to the &#8216;H&#8217; command</dd>
+<dt><code>&#8211;strip-trailing-cr</code></dt>
+<dd> strip carriage returns at end of text lines</dd></dl>
 <p> Start edit by reading in &#8216;file&#8217; if given. If &#8216;file&#8217; begins with a &#8216;!&#8217;, read output of shell command. </p>
 <p> Exit status: 0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or invalid input file, 3 for an internal consistency error (e.g., bug) which caused ed to panic.</p>
 <h2>REPORTING BUGS</h2>
@@ -49,6 +49,6 @@ description: "ed – line-oriented text editor"
 <p> The full documentation for <code>ed</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>ed</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info ed</code></dl>
+</dt><dd> <code>info ed</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

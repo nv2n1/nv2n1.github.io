@@ -30,20 +30,20 @@ description: "Globus GSS Assist –"
 <p> The GSS Assist code provides convenience functions for using the Globus GSS-API. </p>
 <p> This API includes</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Activation</code></p>
-<dt>&bull;</p>
-<dd> <code>Credential Management</code></p>
-<dt>&bull;</p>
-<dd> <code>Security Context Management</code></p>
-<dt>&bull;</p>
-<dd> <code>Gridmap Authorization</code></p>
-<dt>&bull;</p>
-<dd> <code>Token Transport</code></p>
-<dt>&bull;</p>
-<dd> <code>GSSAPI Result Status Strings</code></p>
-<dt>&bull;</p>
-<dd> <code>GSI GSS Assist Constants</code></dl>
+<dt>&bull;</dt>
+<dd> <code>Activation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Credential Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Security Context Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Gridmap Authorization</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Token Transport</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GSSAPI Result Status Strings</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GSI GSS Assist Constants</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
 <h2>Index</h2>

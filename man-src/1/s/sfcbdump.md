@@ -14,18 +14,17 @@ description: "sfcbdump – sfcBroker repository dumper"
 <h2>OPTIONS</h2>
 <p> Allowed options:</p>
 <dl>
-<dt><code>-s</code>, <code>&#8211;stringbuffer-details</code></p>
+<dt><code>-s</code>, <code>&#8211;stringbuffer-details</code></dt>
 <dd>
-<dt><code>-a</code>, <code>&#8211;arraybuffer-details</code></p>
+</dd><dt><code>-a</code>, <code>&#8211;arraybuffer-details</code></dt>
 <dd>
-<dt><code>-p</code>, <code>&#8211;property-details</code></p>
+</dd><dt><code>-p</code>, <code>&#8211;property-details</code></dt>
 <dd>
-<dt><code>-q</code>, <code>&#8211;qualifier-details</code></p>
+</dd><dt><code>-q</code>, <code>&#8211;qualifier-details</code></dt>
 <dd>
-<dt><code>-m</code>, <code>&#8211;method-details</code></p>
+</dd><dt><code>-m</code>, <code>&#8211;method-details</code></dt>
 <dd>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+</dd><dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>Index</h2>

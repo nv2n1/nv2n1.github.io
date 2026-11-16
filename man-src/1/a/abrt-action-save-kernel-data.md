@@ -33,11 +33,11 @@ url: "/docs/linux/man/1-abrt-action-save-kernel-data/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # Determine in which package/component the crash happened (if not yet done):
 EVENT=post-create analyzer=Kerneloops
         abrt-action-save-kernel-data
-</pre></dl>
+</pre></dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -45,7 +45,7 @@ EVENT=post-create analyzer=Kerneloops
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

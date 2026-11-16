@@ -15,15 +15,15 @@ snd_soc_dapm_del_routes - Remove routes between DAPM widgets
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>DAPM context</dl>
+<dl><dd></dd><dd>DAPM context</dd></dl>
  
 
  <i>route</i>
-<dl><dd>audio routes</dl>
+<dl><dd>audio routes</dd></dl>
  
 
  <i>num</i>
-<dl><dd>number of routes</dl>
+<dl><dd>number of routes</dd></dl>
 
 <h2>Description</h2>
 

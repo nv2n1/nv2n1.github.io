@@ -81,6 +81,6 @@ XGetDeviceProperty, XChangeDeviceProperty, XDeleteDeviceProperty - Get, change o
 <h2>Diagnosis</h2><dl COMPACT><dd><pre>BadAtom
  A value does not describe a valid named identifier or
  the client attempted to remove a driver-allocated
- property.</pre></dl><dl COMPACT><dd><pre>BadDevice
+ property.</pre></dd></dl><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XListDeviceProperties(3)</pre></dl>
+ exist.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XListDeviceProperties(3)</pre></dd></dl>

@@ -18,34 +18,34 @@ description: "pth-config – Pth library build utility"
 <h2>OPTIONS</h2>
 <p> <code>pth-config</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Prints the short usage information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the version number and date of the installed <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library.</p>
-<dt><code>&#8211;all</code></p>
-<dd> Forces the output of all flags, that is, including extra flags which are not <code>Pth</code> specific.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd> Prints the installation prefix of architecture independent files</p>
-<dt><code>&#8211;exec-prefix</code></p>
-<dd> Prints the installation prefix of architecture dependent files.</p>
-<dt><code>&#8211;bindir</code></p>
-<dd> Prints the installation directory of binaries.</p>
-<dt><code>&#8211;libdir</code></p>
-<dd> Prints the installation directory of libraries.</p>
-<dt><code>&#8211;includedir</code></p>
-<dd> Prints the installation directory of include headers.</p>
-<dt><code>&#8211;mandir</code></p>
-<dd> Prints the installation directory of manual pages.</p>
-<dt><code>&#8211;datadir</code></p>
-<dd> Prints the installation directory of shared data.</p>
-<dt><code>&#8211;acdir</code></p>
-<dd> Prints the installation directory of <code>autoconf</code> data.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Prints the C compiler flags which are needed to compile the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3)-based application. The output is usually added to the <tt>&quot;CFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</p>
-<dt><code>&#8211;ldflags</code></p>
-<dd> Prints the linker flags (<tt>&quot;-L&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library. The output is usually added to the <tt>&quot;LDFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Prints the library flags (<tt>&quot;-l&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library. The output is usually added to the <tt>&quot;LIBS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints the short usage information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the version number and date of the installed <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library.</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> Forces the output of all flags, that is, including extra flags which are not <code>Pth</code> specific.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Prints the installation prefix of architecture independent files</dd>
+<dt><code>&#8211;exec-prefix</code></dt>
+<dd> Prints the installation prefix of architecture dependent files.</dd>
+<dt><code>&#8211;bindir</code></dt>
+<dd> Prints the installation directory of binaries.</dd>
+<dt><code>&#8211;libdir</code></dt>
+<dd> Prints the installation directory of libraries.</dd>
+<dt><code>&#8211;includedir</code></dt>
+<dd> Prints the installation directory of include headers.</dd>
+<dt><code>&#8211;mandir</code></dt>
+<dd> Prints the installation directory of manual pages.</dd>
+<dt><code>&#8211;datadir</code></dt>
+<dd> Prints the installation directory of shared data.</dd>
+<dt><code>&#8211;acdir</code></dt>
+<dd> Prints the installation directory of <code>autoconf</code> data.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Prints the C compiler flags which are needed to compile the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3)-based application. The output is usually added to the <tt>&quot;CFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd> Prints the linker flags (<tt>&quot;-L&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library. The output is usually added to the <tt>&quot;LDFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Prints the library flags (<tt>&quot;-l&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library. The output is usually added to the <tt>&quot;LIBS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  CC      = cc

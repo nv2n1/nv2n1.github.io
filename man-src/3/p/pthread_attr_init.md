@@ -10,10 +10,8 @@ description: "pthread_attr_init, pthread_attr_destroy – initialize and destroy
 <p>pthread_attr_init, pthread_attr_destroy &#8211; initialize and destroy thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_init(pthread_attr_t *attr);
 int pthread_attr_destroy(pthread_attr_t *attr);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_init</code>() function initializes the thread attributes object pointed to by <i>attr</i> with default attribute values. After this call, individual attributes of the object can be set using various related functions (listed under SEE ALSO), and then the object can be used in one or more <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) calls that create threads. </p>
@@ -55,7 +53,6 @@ Compile and link with - pthread.</code></pre>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Stack address&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;0x40196000<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Stack size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;0x201000 bytes When we supply a stack size as a command-line argument, the program initializes a thread attributes object, sets various attributes in that object, and passes a pointer to the object in the call to <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3). Running the program on Linux/x86-32 with the NPTL threading implementation, we see the following: </p>
 <pre><code>$ ./a.out 0x3000000
-
 posix_memalign() allocated at 0x40197000
 Thread attributes:
 Detach state        = PTHREAD_CREATE_DETACHED
@@ -66,13 +63,7 @@ Scheduling priority = 0
 Guard size          = 0 bytes
 Stack address       = 0x40197000
 Stack size          = 0x3000000 bytes
-
-
-
 Program source
-
-
-
 #define _GNU_SOURCE     /* To get pthread_getattr_np() declaration */
 #include &lt;pthread.h&gt;
 #include &lt;stdio.h&gt;

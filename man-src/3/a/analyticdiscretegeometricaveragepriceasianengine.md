@@ -19,15 +19,15 @@ description: "QuantLib::AnalyticDiscreteGeometricAveragePriceAsianEngine – Pri
 <p> This class implements a discrete geometric average price Asian option, with European exercise. The formula is from &#8216;Asian Option&#8217;, E. Levy (1997) in &#8216;Exotic Options: The State of the Art&#8217;, edited by L. Clewlow, C. Strickland, pag 65-97 </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>implement correct theta, rho, and dividend-rho calculation</dl>
+<dd>implement correct theta, rho, and dividend-rho calculation</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the available greeks is tested against numerical calculations.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the available greeks is tested against numerical calculations.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

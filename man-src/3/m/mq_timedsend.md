@@ -21,7 +21,7 @@ description: "mq_send, mq_timedsend – send a message to a message queue"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>mq_timedsend</code>():</p>
 <dl COMPACT>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p><code>mq_send</code>() adds the message pointed to by <i>msg_ptr</i> to the message queue referred to by the message queue descriptor <i>mqdes</i>. The <i>msg_len</i> argument specifies the length of the message pointed to by <i>msg_ptr</i>; this length must be less than or equal to the queue&#8217;s <i>mq_msgsize</i> attribute. Zero-length messages are allowed. </p>
 <p> The <i>msg_prio</i> argument is a nonnegative integer that specifies the priority of this message. Messages are placed on the queue in decreasing order of priority, with newer messages of the same priority being placed after older messages with the same priority. See <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details on the range for the message priority. </p>
@@ -35,18 +35,18 @@ description: "mq_send, mq_timedsend – send a message to a message queue"
 <p>On success, <code>mq_send</code>() and <code>mq_timedsend</code>() return zero; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EAGAIN</code></p>
-<dd>The queue was full, and the <code>O_NONBLOCK</code> flag was set for the message queue description referred to by <i>mqdes</i>.</p>
-<dt><code>EBADF</code></p>
-<dd>The descriptor specified in <i>mqdes</i> was invalid or not opened for writing.</p>
-<dt><code>EINTR</code></p>
-<dd>The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd>The call would have blocked, and <i>abs_timeout</i> was invalid, either because <i>tv_sec</i> was less than zero, or because <i>tv_nsec</i> was less than zero or greater than 1000 million.</p>
-<dt><code>EMSGSIZE</code></p>
-<dd><i>msg_len</i> was greater than the <i>mq_msgsize</i> attribute of the message queue.</p>
-<dt><code>ETIMEDOUT</code></p>
-<dd>The call timed out before a message could be transferred.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>The queue was full, and the <code>O_NONBLOCK</code> flag was set for the message queue description referred to by <i>mqdes</i>.</dd>
+<dt><code>EBADF</code></dt>
+<dd>The descriptor specified in <i>mqdes</i> was invalid or not opened for writing.</dd>
+<dt><code>EINTR</code></dt>
+<dd>The call was interrupted by a signal handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The call would have blocked, and <i>abs_timeout</i> was invalid, either because <i>tv_sec</i> was less than zero, or because <i>tv_nsec</i> was less than zero or greater than 1000 million.</dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd><i>msg_len</i> was greater than the <i>mq_msgsize</i> attribute of the message queue.</dd>
+<dt><code>ETIMEDOUT</code></dt>
+<dd>The call timed out before a message could be transferred.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

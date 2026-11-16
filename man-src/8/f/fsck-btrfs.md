@@ -20,10 +20,10 @@ description: "fsck.btrfs – do nothing, successfully"
 <p>There are two possible exit code returned: </p>
 <p> 0</p>
 <dl>
-<dd>No error</dl>
+<dd>No error</dd></dl>
 <p> 8</p>
 <dl>
-<dd>Operational error, eg. device does not exist</dl>
+<dd>Operational error, eg. device does not exist</dd></dl>
 <h2>Files</h2>
 <p><code>/etc/fstab</code></p>
 <h2>See Also</h2>

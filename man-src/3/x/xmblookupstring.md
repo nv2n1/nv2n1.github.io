@@ -10,25 +10,25 @@ description: "XmbLookupString, XwcLookupString, Xutf8LookupString – obtain com
 <p>XmbLookupString, XwcLookupString, Xutf8LookupString &#8211; obtain composed input from an input method </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XmbLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</p>
-<dd>int XwcLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, wchar_t *<i>buffer_return</i>, int <i>wchars_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</p>
-<dd>int Xutf8LookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dl>
+<dd>int XmbLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd>
+<dd>int XwcLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, wchar_t *<i>buffer_return</i>, int <i>wchars_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd>
+<dd>int Xutf8LookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>buffer_return</i></p>
-<dd>Returns a multibyte string or wide character string (if any) from the input method.</p>
-<dt><i>bytes_buffer</i></p>
+<dt><i>buffer_return</i></dt>
+<dd>Returns a multibyte string or wide character string (if any) from the input method.</dd>
+<dt><i>bytes_buffer</i></dt>
 <dd>
-<dt><i>wchars_buffer</i></p>
-<dd>Specifies space available in the return buffer.</p>
-<dt><i>event</i></p>
-<dd>Specifies the key event to be used.</p>
-<dt><i>ic</i></p>
-<dd>Specifies the input context.</p>
-<dt><i>keysym_return</i></p>
-<dd>Returns the KeySym computed from the event if this argument is not NULL.</p>
-<dt><i>status_return</i></p>
-<dd>Returns a value indicating what kind of data is returned.</dl>
+</dd><dt><i>wchars_buffer</i></dt>
+<dd>Specifies space available in the return buffer.</dd>
+<dt><i>event</i></dt>
+<dd>Specifies the key event to be used.</dd>
+<dt><i>ic</i></dt>
+<dd>Specifies the input context.</dd>
+<dt><i>keysym_return</i></dt>
+<dd>Returns the KeySym computed from the event if this argument is not NULL.</dd>
+<dt><i>status_return</i></dt>
+<dd>Returns a value indicating what kind of data is returned.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XmbLookupString</code>, <code>XwcLookupString</code> and <code>Xutf8LookupString</code> functions return the string from the input method specified in the buffer_return argument. If no string is returned, the buffer_return argument is unchanged. </p>
 <p> The KeySym into which the KeyCode from the event was mapped is returned in the keysym_return argument if it is non-NULL and the status_return argument indicates that a KeySym was returned. If both a string and a KeySym are returned, the KeySym value does not necessarily correspond to the string returned. </p>

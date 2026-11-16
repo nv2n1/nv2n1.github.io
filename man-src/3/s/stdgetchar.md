@@ -11,7 +11,6 @@ std::getchar - std::getchar
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int getchar();</code></pre> 
 Reads the next character from stdin. 
 Equivalent to std::getc(stdin). 

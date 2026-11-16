@@ -19,14 +19,14 @@ void bson_iter_timestamp(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>timestamp</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>timestamp</code></dt>
+<dd> A uint32_t.</dd></dl>
 <dl>
-<dt><code>increment</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>increment</code></dt>
+<dd> A uint32_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The BSON_TYPE_TIMESTAMP type is not a date/time and is typically used for intra-server communication. </p>
 <p> You probably want <code><a href="/docs/linux/man/3-bson_iter_date_time/">bson_iter_date_time</a>(3)</code> \&amp;. </p>

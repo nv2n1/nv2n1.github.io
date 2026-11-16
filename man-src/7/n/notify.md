@@ -21,8 +21,8 @@ description: "NOTIFY – generate a notification"
 <p> It is common for a client that executes <code>NOTIFY</code> to be listening on the same notification name itself. In that case it will get back a notification event, just like all the other listening sessions. Depending on the application logic, this could result in useless work, for example, reading a database table to find the same updates that that session just wrote out. It is possible to avoid such extra work by noticing whether the notifying session&#8217;s server process PID (supplied in the notification event message) is the same as one&#8217;s own session&#8217;s PID (available from <code>libpq</code>). When they are the same, the notification event is one&#8217;s own work bouncing back, and can be ignored. (Despite what was said in the preceding paragraph, this is a safe technique. PostgreSQL keeps self-notifications separate from notifications arriving from other sessions, so you cannot miss an outside notification by ignoring your own notifications.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>Name of the notification to be signaled (any identifier).</dl>
+<dt><i>name</i></dt>
+<dd>Name of the notification to be signaled (any identifier).</dd></dl>
 <h2>Examples</h2>
 <p>Configure and execute a listen/notify sequence from <code>psql</code>: </p>
 <pre>LISTEN virtual;

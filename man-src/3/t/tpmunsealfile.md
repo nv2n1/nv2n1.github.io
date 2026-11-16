@@ -14,9 +14,7 @@ description: "tpmUnsealFile, tpmUnsealShred, tpmUnsealStrerror – unseal routin
 <h2>Synopsis</h2>
 <pre><code>#include &lt;tpm_unseal/tpm_unseal.h&gt;
 int tpmUnsealFile(char *file, char **data, int *size);
-
 void tpmUnsealShred(char *data, int size);
-
 char *tpmUnsealStrerror(int rc);
 </code></pre>
 <h2>Description</h2>

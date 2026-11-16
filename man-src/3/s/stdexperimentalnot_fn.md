@@ -11,9 +11,7 @@ std::experimental::not_fn - std::experimental::not_fn
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/functional&gt;
-
 template&lt; class F&gt;                           (library fundamentals TS v2)
-
 /*unspecified*/ not_fn( F&amp;&amp; f );</code></pre> 
 Creates a forwarding call wrapper that returns the complement of the callable object it holds. 
 

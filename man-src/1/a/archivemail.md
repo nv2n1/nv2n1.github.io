@@ -19,94 +19,92 @@ description: "archivemail – archive and compress your old email"
 <p> <code>archivemail</code> has some support for being run as the root user on user mailboxes. When running as root, it will <code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2) to the owner of the mailbox it is reading, creating any archive files as that user. <code>Warning:</code> this automatic seteuid feature is insecure and deprecated. It will be removed from later versions of <code>archivemail</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code> -d </code><i>NUM</i><code>, &#8211;days=</code><i>NUM</i></p>
-<dd> Archive messages older than <i>NUM</i> days. The default is 180. This option is incompatible with the <code>&#8211;date</code> option below.</p>
-<dt><code> -D </code><i>DATE</i><code>, &#8211;date=</code><i>DATE</i></p>
-<dd> Archive messages older than <i>DATE</i>. <i>DATE</i> can be a date string in ISO format (eg &#8216;2002-04-23&#8242;), Internet format (eg &#8217;23 Apr 2002&#8242;) or Internet format with full month names (eg &#8217;23 April 2002&#8217;). Two-digit years are not supported. This option is incompatible with the <code>&#8211;days</code> option above.</p>
-<dt><code> -o </code><i>PATH</i><code>, &#8211;output-dir=</code><i>PATH</i></p>
-<dd> Use the directory name <i>PATH</i> to store the mailbox archives. The default is the same directory as the mailbox to be read.</p>
-<dt><code> -P </code><i>FILE</i><code>, &#8211;pwfile=</code><i>FILE</i></p>
-<dd> Read IMAP password from file <i>FILE</i> instead of from the command line. Note that this will probably not work if you are archiving folders from more than one IMAP account.</p>
-<dt><code> -F </code><i>STRING</i><code>, &#8211;filter-append=</code><i>STRING</i></p>
-<dd> Append <i>STRING</i> to the IMAP filter string. For IMAP wizards.</p>
-<dt><code> -s </code><i>NAME</i><code>, &#8211;suffix=</code><i>NAME</i></p>
-<dd> Use the suffix <i>NAME</i> to create the filename used for archives. The default is <i>_archive</i>. For example, if you run <code>archivemail</code> on a mailbox called <i>exsouthrock</i>, the archive will be created with the filename <i>exsouthrock_archive.gz</i>. </p>
+<dt><code> -d </code><i>NUM</i><code>, &#8211;days=</code><i>NUM</i></dt>
+<dd> Archive messages older than <i>NUM</i> days. The default is 180. This option is incompatible with the <code>&#8211;date</code> option below.</dd>
+<dt><code> -D </code><i>DATE</i><code>, &#8211;date=</code><i>DATE</i></dt>
+<dd> Archive messages older than <i>DATE</i>. <i>DATE</i> can be a date string in ISO format (eg &#8216;2002-04-23&#8242;), Internet format (eg &#8217;23 Apr 2002&#8242;) or Internet format with full month names (eg &#8217;23 April 2002&#8217;). Two-digit years are not supported. This option is incompatible with the <code>&#8211;days</code> option above.</dd>
+<dt><code> -o </code><i>PATH</i><code>, &#8211;output-dir=</code><i>PATH</i></dt>
+<dd> Use the directory name <i>PATH</i> to store the mailbox archives. The default is the same directory as the mailbox to be read.</dd>
+<dt><code> -P </code><i>FILE</i><code>, &#8211;pwfile=</code><i>FILE</i></dt>
+<dd> Read IMAP password from file <i>FILE</i> instead of from the command line. Note that this will probably not work if you are archiving folders from more than one IMAP account.</dd>
+<dt><code> -F </code><i>STRING</i><code>, &#8211;filter-append=</code><i>STRING</i></dt>
+<dd> Append <i>STRING</i> to the IMAP filter string. For IMAP wizards.</dd>
+<dt><code> -s </code><i>NAME</i><code>, &#8211;suffix=</code><i>NAME</i></dt>
+<dd> Use the suffix <i>NAME</i> to create the filename used for archives. The default is <i>_archive</i>. For example, if you run <code>archivemail</code> on a mailbox called <i>exsouthrock</i>, the archive will be created with the filename <i>exsouthrock_archive.gz</i>. </dd>
 <p> <i>NAME</i> is run through the <code><a href="/docs/linux/man/1-python/">python</a></code>(1) <code>time.strftime()</code> function, which means that you can specify any of the following special directives in <i>NAME</i> to make archives named after the archive cut-off date:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <code>%a</code> Locale&#8217;s abbreviated weekday name.</p>
-<dt>*</p>
-<dd> <code>%A</code> Locale&#8217;s full weekday name.</p>
-<dt>*</p>
-<dd> <code>%b</code> Locale&#8217;s abbreviated month name.</p>
-<dt>*</p>
-<dd> <code>%B</code> Locale&#8217;s full month name.</p>
-<dt>*</p>
-<dd> <code>%c</code> Locale&#8217;s appropriate date and time representation.</p>
-<dt>*</p>
-<dd> <code>%d</code> Day of the month as a decimal number [01,31].</p>
-<dt>*</p>
-<dd> <code>%H</code> Hour (24-hour clock) as a decimal number [00,23].</p>
-<dt>*</p>
-<dd> <code>%I</code> Hour (12-hour clock) as a decimal number [01,12].</p>
-<dt>*</p>
-<dd> <code>%j</code> Day of the year as a decimal number [001,366].</p>
-<dt>*</p>
-<dd> <code>%m</code> Month as a decimal number [01,12].</p>
-<dt>*</p>
-<dd> <code>%M</code> Minute as a decimal number [00,59].</p>
-<dt>*</p>
-<dd> <code>%p</code> Locale&#8217;s equivalent of either AM or PM.</p>
-<dt>*</p>
-<dd> <code>%S</code> Second as a decimal number [00,61]. (1)</p>
-<dt>*</p>
-<dd> <code>%U</code> Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.</p>
-<dt>*</p>
-<dd> <code>%w</code> Weekday as a decimal number [0(Sunday),6].</p>
-<dt>*</p>
-<dd> <code>%W</code> Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.</p>
-<dt>*</p>
-<dd> <code>%x</code> Locale&#8217;s appropriate date representation.</p>
-<dt>*</p>
-<dd> <code>%X</code> Locale&#8217;s appropriate time representation.</p>
-<dt>*</p>
-<dd> <code>%y</code> Year without century as a decimal number [00,99].</p>
-<dt>*</p>
-<dd> <code>%Y</code> Year with century as a decimal number.</p>
-<dt>*</p>
-<dd> <code>%Z</code> Time zone name (or by no characters if no time zone exists).</p>
-<dt>*</p>
-<dd> <code>%%</code> A literal &quot;%&quot; character.</dl>
+<dt>*</dt>
+<dd> <code>%a</code> Locale&#8217;s abbreviated weekday name.</dd>
+<dt>*</dt>
+<dd> <code>%A</code> Locale&#8217;s full weekday name.</dd>
+<dt>*</dt>
+<dd> <code>%b</code> Locale&#8217;s abbreviated month name.</dd>
+<dt>*</dt>
+<dd> <code>%B</code> Locale&#8217;s full month name.</dd>
+<dt>*</dt>
+<dd> <code>%c</code> Locale&#8217;s appropriate date and time representation.</dd>
+<dt>*</dt>
+<dd> <code>%d</code> Day of the month as a decimal number [01,31].</dd>
+<dt>*</dt>
+<dd> <code>%H</code> Hour (24-hour clock) as a decimal number [00,23].</dd>
+<dt>*</dt>
+<dd> <code>%I</code> Hour (12-hour clock) as a decimal number [01,12].</dd>
+<dt>*</dt>
+<dd> <code>%j</code> Day of the year as a decimal number [001,366].</dd>
+<dt>*</dt>
+<dd> <code>%m</code> Month as a decimal number [01,12].</dd>
+<dt>*</dt>
+<dd> <code>%M</code> Minute as a decimal number [00,59].</dd>
+<dt>*</dt>
+<dd> <code>%p</code> Locale&#8217;s equivalent of either AM or PM.</dd>
+<dt>*</dt>
+<dd> <code>%S</code> Second as a decimal number [00,61]. (1)</dd>
+<dt>*</dt>
+<dd> <code>%U</code> Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.</dd>
+<dt>*</dt>
+<dd> <code>%w</code> Weekday as a decimal number [0(Sunday),6].</dd>
+<dt>*</dt>
+<dd> <code>%W</code> Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.</dd>
+<dt>*</dt>
+<dd> <code>%x</code> Locale&#8217;s appropriate date representation.</dd>
+<dt>*</dt>
+<dd> <code>%X</code> Locale&#8217;s appropriate time representation.</dd>
+<dt>*</dt>
+<dd> <code>%y</code> Year without century as a decimal number [00,99].</dd>
+<dt>*</dt>
+<dd> <code>%Y</code> Year with century as a decimal number.</dd>
+<dt>*</dt>
+<dd> <code>%Z</code> Time zone name (or by no characters if no time zone exists).</dd>
+<dt>*</dt>
+<dd> <code>%%</code> A literal &quot;%&quot; character.</dd></dl>
 </dl>
-<dt><code> -S </code><i>NUM</i><code>, &#8211;size=</code><i>NUM</i></p>
-<dd> Only archive messages that are <i>NUM</i> bytes or greater.</p>
-<dt><code> -n, &#8211;dry-run</code></p>
-<dd> Don&#8217;t write to any files &#8212; just show what would have been done. This is useful for testing to see how many messages would have been archived.</p>
-<dt><code> -u, &#8211;preserve-unread</code></p>
-<dd> Do not archive any messages that have not yet been read. <code>archivemail</code> determines if a message in a <code>mbox</code>-format or <code>MH</code>-format mailbox has been read by looking at the <code>Status</code> header (if it exists). If the status header is equal to &#8216;RO&#8217; or &#8216;OR&#8217; then <code>archivemail</code> assumes the message has been read. <code>archivemail</code> determines if a <code>maildir</code> message has been read by looking at the filename. If the filename contains an &#8216;S&#8217; after <i>:2,</i> then it assumes the message has been read.</p>
-<dt><code> &#8211;dont-mangle</code></p>
-<dd> Do not mangle lines in message bodies beginning with &quot;From &quot;. When archiving a message from a mailbox not in <code>mbox</code> format, by default <code>archivemail</code> mangles such lines by prepending a &#8216;&gt;&#8217; to them, since mail user agents might otherwise interpret these lines as message separators. Messages from <code>mbox</code> folders are never mangled. See <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5) for more information.</p>
-<dt><code> &#8211;delete</code></p>
-<dd> Delete rather than archive old mail. Use this option with caution!</p>
-<dt><code> &#8211;copy</code></p>
-<dd> Copy rather than archive old mail. Creates an archive, but the archived messages are not deleted from the originating mailbox, which is left unchanged. This is a complement to the <code>&#8211;delete</code> option, and mainly useful for testing purposes.</p>
-<dt><code> &#8211;include-flagged</code></p>
-<dd> Normally messages that are flagged important are not archived or deleted. If you specify this option, these messages can be archived or deleted just like any other message.</p>
-<dt><code> &#8211;no-compress</code></p>
-<dd> Do not compress any archives.</p>
-<dt><code> &#8211;warn-duplicate</code></p>
-<dd> Warn about duplicate <code>Message-ID</code>s that appear in the input mailbox.</p>
-<dt><code> -v, &#8211;verbose</code></p>
-<dd> Reports lots of extra debugging information about what is going on.</p>
-<dt><code> -q, &#8211;quiet</code></p>
-<dd> Turns on quiet mode. Do not print any statistics about how many messages were archived. This should be used if you are running <code>archivemail</code> from cron.</p>
-<dt><code> -V, &#8211;version</code></p>
-<dd> Display the version of <code>archivemail</code> and exit.</p>
-<dt><code> -h, &#8211;help</code></p>
-<dd> Display brief summary information about how to run <code>archivemail</code>.</dl>
+<dt><code> -S </code><i>NUM</i><code>, &#8211;size=</code><i>NUM</i></dt>
+<dd> Only archive messages that are <i>NUM</i> bytes or greater.</dd>
+<dt><code> -n, &#8211;dry-run</code></dt>
+<dd> Don&#8217;t write to any files &#8212; just show what would have been done. This is useful for testing to see how many messages would have been archived.</dd>
+<dt><code> -u, &#8211;preserve-unread</code></dt>
+<dd> Do not archive any messages that have not yet been read. <code>archivemail</code> determines if a message in a <code>mbox</code>-format or <code>MH</code>-format mailbox has been read by looking at the <code>Status</code> header (if it exists). If the status header is equal to &#8216;RO&#8217; or &#8216;OR&#8217; then <code>archivemail</code> assumes the message has been read. <code>archivemail</code> determines if a <code>maildir</code> message has been read by looking at the filename. If the filename contains an &#8216;S&#8217; after <i>:2,</i> then it assumes the message has been read.</dd>
+<dt><code> &#8211;dont-mangle</code></dt>
+<dd> Do not mangle lines in message bodies beginning with &quot;From &quot;. When archiving a message from a mailbox not in <code>mbox</code> format, by default <code>archivemail</code> mangles such lines by prepending a &#8216;&gt;&#8217; to them, since mail user agents might otherwise interpret these lines as message separators. Messages from <code>mbox</code> folders are never mangled. See <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5) for more information.</dd>
+<dt><code> &#8211;delete</code></dt>
+<dd> Delete rather than archive old mail. Use this option with caution!</dd>
+<dt><code> &#8211;copy</code></dt>
+<dd> Copy rather than archive old mail. Creates an archive, but the archived messages are not deleted from the originating mailbox, which is left unchanged. This is a complement to the <code>&#8211;delete</code> option, and mainly useful for testing purposes.</dd>
+<dt><code> &#8211;include-flagged</code></dt>
+<dd> Normally messages that are flagged important are not archived or deleted. If you specify this option, these messages can be archived or deleted just like any other message.</dd>
+<dt><code> &#8211;no-compress</code></dt>
+<dd> Do not compress any archives.</dd>
+<dt><code> &#8211;warn-duplicate</code></dt>
+<dd> Warn about duplicate <code>Message-ID</code>s that appear in the input mailbox.</dd>
+<dt><code> -v, &#8211;verbose</code></dt>
+<dd> Reports lots of extra debugging information about what is going on.</dd>
+<dt><code> -q, &#8211;quiet</code></dt>
+<dd> Turns on quiet mode. Do not print any statistics about how many messages were archived. This should be used if you are running <code>archivemail</code> from cron.</dd>
+<dt><code> -V, &#8211;version</code></dt>
+<dd> Display the version of <code>archivemail</code> and exit.</dd>
+<dt><code> -h, &#8211;help</code></dt>
+<dd> Display brief summary information about how to run <code>archivemail</code>.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>archivemail</code> requires <code><a href="/docs/linux/man/1-python/">python</a></code>(1) version 2.3 or later. When reading an <code>mbox</code>-format mailbox, <code>archivemail</code> will create a lockfile with the extension <i>.lock</i> so that procmail will not deliver to the mailbox while it is being processed. It will also create an advisory lock on the mailbox using <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2). <code>archivemail</code> will also complain and abort if a 3rd-party modifies the mailbox while it is being read. </p>
 <p> <code>archivemail</code> will always attempt to preserve the mode, last-access and last-modify times of the input mailbox. However, archive mailboxes are always created with a mode of <code>0600</code>. If <code>archivemail</code> finds a pre-existing archive mailbox it will append rather than overwrite that archive. <code>archivemail</code> will refuse to operate on mailboxes that are symbolic links or create tempfiles or archives in world-writable directories. </p>

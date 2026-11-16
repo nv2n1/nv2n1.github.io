@@ -13,10 +13,10 @@ description: "mongoc_find_and_modify_opts_t – find_and_modify abstraction"
 <p> It was created to be able to accommodate new arguments to the MongoDB find_and_modify command. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>As of MongoDB 3.2, the <code>mongoc_write_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dl>
+<dd>As of MongoDB 3.2, the <code>mongoc_write_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dd></dl>
 <h2>Example</h2>
 <pre>void fam_flags(mongoc_collection_t *collection)
 {

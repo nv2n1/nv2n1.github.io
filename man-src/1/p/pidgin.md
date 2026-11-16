@@ -11,67 +11,67 @@ description: "pidgin – Instant Messaging client"
 <p> pidgin &#8211; Instant Messaging client</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>pidgin </code><i>[options]</i></p>
+<dt><code>pidgin </code><i>[options]</i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>pidgin</code> is a graphical modular messaging client based on libpurple which is capable of connecting to AIM, MSN, Yahoo!, XMPP, ICQ, IRC, SILC, Novell GroupWise, Lotus Sametime, Zephyr, Gadu-Gadu, and QQ all at once. It has many common features found in other clients, as well as many unique features. Pidgin is not endorsed by or affiliated with America Online, ICQ, Microsoft, or Yahoo. </p>
 <p> Pidgin can be extended by plugins written in multiple programming languages and controlled through DBus or <code>purple-remote</code>. </p>
 <h2>OPTIONS</h2>
 <p> The following options are provided by Pidgin using the standard GNU command line syntax:</p>
 <dl>
-<dt><code>-c, &#8211;config=</code><i>DIR</i></p>
-<dd> Use <i>DIR</i> as the directory for config files instead of <i>~/.purple</i>.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Print debugging messages to stdout. These are the same debugging messages that are displayed in the <code>Debug Window</code>.</p>
-<dt><code>-f, &#8211;force-online</code></p>
-<dd> Try to be online even if the network is reported (by Windows, or NetworkManager on Linux) to be unavailable.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a summary of command line options and exit.</p>
-<dt><code>-m, &#8211;multiple</code></p>
-<dd> Allow multiple instances of Pidgin to run.</p>
-<dt><code>-n, &#8211;nologin</code></p>
-<dd> Don&#8217;t automatically login when Pidgin starts. Sets the global status to <code>Offline</code>.</p>
-<dt><code>-l, &#8211;login[=</code><i>NAME</i>,<i>NAME</i>,&#8230;]</p>
-<dd> Enable the comma-separated list of accounts provided, disabling all other accounts. If the user does not specify such a comma-separated list, the first account in accounts.xml will be enabled.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print the current version and exit. </p>
+<dt><code>-c, &#8211;config=</code><i>DIR</i></dt>
+<dd> Use <i>DIR</i> as the directory for config files instead of <i>~/.purple</i>.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Print debugging messages to stdout. These are the same debugging messages that are displayed in the <code>Debug Window</code>.</dd>
+<dt><code>-f, &#8211;force-online</code></dt>
+<dd> Try to be online even if the network is reported (by Windows, or NetworkManager on Linux) to be unavailable.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a summary of command line options and exit.</dd>
+<dt><code>-m, &#8211;multiple</code></dt>
+<dd> Allow multiple instances of Pidgin to run.</dd>
+<dt><code>-n, &#8211;nologin</code></dt>
+<dd> Don&#8217;t automatically login when Pidgin starts. Sets the global status to <code>Offline</code>.</dd>
+<dt><code>-l, &#8211;login[=</code><i>NAME</i>,<i>NAME</i>,&#8230;]</dt>
+<dd> Enable the comma-separated list of accounts provided, disabling all other accounts. If the user does not specify such a comma-separated list, the first account in accounts.xml will be enabled.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print the current version and exit. </dd>
 </dl>
 <h2>TERMS</h2>
 <p> Pidgin uses a few terms differently from other applications. For convenience they are defined here:</p>
 <dl>
-<dt><code>Buddy List</code></p>
-<dd> The list of other users who the user wants to see status information for and have quick access to for messaging.</p>
-<dt><code>Buddy</code></p>
-<dd> A user who has been added to the Buddy List.</p>
-<dt><code>Contact</code></p>
-<dd> A grouping of more than one buddy who are all the same person. A contact may contain buddies from any protocol and may contain as many buddies as the user desires. Contact arrangements are stored locally only.</p>
-<dt><code>Alias</code></p>
-<dd> A private &quot;nickname&quot; that may be set for Buddies or the user himself. On some protocols, aliases are saved on the server but not visible to other users. On other protocols, aliases are saved only locally.</p>
-<dt><code>Protocol</code></p>
-<dd> A messaging service. AIM, XMPP, MSN, Zephyr, etc. are protocols. Others may call these &quot;service types,&quot; &quot;account types,&quot; &quot;services,&quot; and so on. </p>
+<dt><code>Buddy List</code></dt>
+<dd> The list of other users who the user wants to see status information for and have quick access to for messaging.</dd>
+<dt><code>Buddy</code></dt>
+<dd> A user who has been added to the Buddy List.</dd>
+<dt><code>Contact</code></dt>
+<dd> A grouping of more than one buddy who are all the same person. A contact may contain buddies from any protocol and may contain as many buddies as the user desires. Contact arrangements are stored locally only.</dd>
+<dt><code>Alias</code></dt>
+<dd> A private &quot;nickname&quot; that may be set for Buddies or the user himself. On some protocols, aliases are saved on the server but not visible to other users. On other protocols, aliases are saved only locally.</dd>
+<dt><code>Protocol</code></dt>
+<dd> A messaging service. AIM, XMPP, MSN, Zephyr, etc. are protocols. Others may call these &quot;service types,&quot; &quot;account types,&quot; &quot;services,&quot; and so on. </dd>
 </dl>
 <h2>BUDDY LIST</h2>
 <p> The <code>Buddy List</code> window is Pidgin&#8217;s main interface window. Using this window a user can see which of his/her buddies is online, away, idle, etc. The user can also add buddies to and remove buddies from the buddy list. </p>
 <p> The <code>Buddy List</code> window contains a list of the user&#8217;s buddies who are online and have allowed the user to be notified of their presence. The icon to the left of each buddy indicates the buddy&#8217;s current status. Double clicking a buddy will open a new <code>Conversation</code> window. Right clicking will pop up a menu:</p>
 <dl>
-<dt><code>Get Info</code></p>
-<dd> Retrieves and displays information about the buddy. This information is also known as a Profile.</p>
-<dt><code>IM</code></p>
-<dd> Opens a new <code>Conversation</code> window to the selected buddy.</p>
-<dt><code>Send File</code></p>
-<dd> Sends a file to the selected buddy (only available on protocols that support file transfer).</p>
-<dt><code>Add Buddy Pounce</code></p>
-<dd> A Buddy Pounce is a configurable automated action to be performed when the buddy&#8217;s state changes. This will open the <code>Buddy Pounce</code> dialog, which will be discussed later.</p>
-<dt><code>View Log</code></p>
-<dd> Pidgin is capable of automatically logging messages. These logs are either plain text files (with a .txt extension) or html files (with a .html extension) located under the <i>~/.purple/logs</i> directory. This menu command will display Pidgin&#8217;s log viewer with logs loaded for that buddy or chat.</p>
-<dt><code>Alias</code></p>
-<dd> Create an alias for this buddy. This will show an editable text field where the buddy&#8217;s name was displayed. In this field one can give this buddy an alternate, more friendly name to appear on the buddy list and in conversations. </p>
+<dt><code>Get Info</code></dt>
+<dd> Retrieves and displays information about the buddy. This information is also known as a Profile.</dd>
+<dt><code>IM</code></dt>
+<dd> Opens a new <code>Conversation</code> window to the selected buddy.</dd>
+<dt><code>Send File</code></dt>
+<dd> Sends a file to the selected buddy (only available on protocols that support file transfer).</dd>
+<dt><code>Add Buddy Pounce</code></dt>
+<dd> A Buddy Pounce is a configurable automated action to be performed when the buddy&#8217;s state changes. This will open the <code>Buddy Pounce</code> dialog, which will be discussed later.</dd>
+<dt><code>View Log</code></dt>
+<dd> Pidgin is capable of automatically logging messages. These logs are either plain text files (with a .txt extension) or html files (with a .html extension) located under the <i>~/.purple/logs</i> directory. This menu command will display Pidgin&#8217;s log viewer with logs loaded for that buddy or chat.</dd>
+<dt><code>Alias</code></dt>
+<dd> Create an alias for this buddy. This will show an editable text field where the buddy&#8217;s name was displayed. In this field one can give this buddy an alternate, more friendly name to appear on the buddy list and in conversations. </dd>
 <p> For example, if a buddy&#8217;s name was jsmith1281xx and his real name was &#8216;John Q. Smith,&#8217; one could create an alias as to identify the buddy by his common name.</dl>
 <p> The remainder of the menu will consist of protocol specific commands. These commands vary depending on the protocol.</p>
 <dl>
-<dt><code>Status Selector</code></p>
-<dd> At the bottom of the <code>Buddy List</code> is a status selector which allows one to change his/her status. This will be discussed further in the <code>STATUS MESSAGES</code> section below. </p>
+<dt><code>Status Selector</code></dt>
+<dd> At the bottom of the <code>Buddy List</code> is a status selector which allows one to change his/her status. This will be discussed further in the <code>STATUS MESSAGES</code> section below. </dd>
 </dl>
 <h2>ACCOUNT EDITOR</h2>
 <p> The account editor consists of a list of accounts and information about them. It can be accessed by selecting <code>Manage</code> from the Accounts menu. Clicking <i>Delete</i> will delete the currently selected account. Clicking <i>Add</i> or <i>Modify</i> will invoke a <code>Modify Account</code> window. Here, the user can add or alter account information. When creating a new account, the user will submit a username and password. The user will also choose the protocol for the account. </p>
@@ -82,131 +82,131 @@ description: "pidgin – Instant Messaging client"
 <p> All options take effect immediately. </p>
 <h2>Interface</h2>
 <dl>
-<dt><code>Show system tray icon</code></p>
-<dd> Specifies when to show a Pidgin icon in the notification area of the user&#8217;s panel (commonly referred to as the System Tray). </p>
-<dt><code>Hide new IM conversations</code></p>
-<dd> Specifies when to hide new IM messages. Messages will queue under the specified condition until shown. Clicking the Pidgin icon in the notification area or system tray will display the queued messages. An icon also appears in the buddy list&#8217;s menu bar; this icon may also be used to display queued messages. </p>
-<dt><code>Show IMs and chats in tabbed windows</code></p>
-<dd> When checked, this option will cause IM and chat sessions to appear in windows with multiple tabs. One tab will represent one conversation or chat. Where tabs are placed will be dictated by the preferences below. </p>
-<dt><code>Show close buttons on tabs</code></p>
-<dd> When checked, this option will cause a clickable &quot;U+2715 MULTIPLICATION X&quot; unicode character to appear at the right edge of each tab. Clicking this will cause the tab to be closed. </p>
-<dt><code>Placement</code></p>
-<dd> Specifies where to place tabs in the window. Some tab orientations may allow some users to fit more tabs into a single window comfortably. </p>
-<dt><code>New conversations</code></p>
-<dd> Specifies under which conditions tabs are placed into existing windows or into new windows. For a single window, select <i>Last created window</i> here. </p>
+<dt><code>Show system tray icon</code></dt>
+<dd> Specifies when to show a Pidgin icon in the notification area of the user&#8217;s panel (commonly referred to as the System Tray). </dd>
+<dt><code>Hide new IM conversations</code></dt>
+<dd> Specifies when to hide new IM messages. Messages will queue under the specified condition until shown. Clicking the Pidgin icon in the notification area or system tray will display the queued messages. An icon also appears in the buddy list&#8217;s menu bar; this icon may also be used to display queued messages. </dd>
+<dt><code>Show IMs and chats in tabbed windows</code></dt>
+<dd> When checked, this option will cause IM and chat sessions to appear in windows with multiple tabs. One tab will represent one conversation or chat. Where tabs are placed will be dictated by the preferences below. </dd>
+<dt><code>Show close buttons on tabs</code></dt>
+<dd> When checked, this option will cause a clickable &quot;U+2715 MULTIPLICATION X&quot; unicode character to appear at the right edge of each tab. Clicking this will cause the tab to be closed. </dd>
+<dt><code>Placement</code></dt>
+<dd> Specifies where to place tabs in the window. Some tab orientations may allow some users to fit more tabs into a single window comfortably. </dd>
+<dt><code>New conversations</code></dt>
+<dd> Specifies under which conditions tabs are placed into existing windows or into new windows. For a single window, select <i>Last created window</i> here. </dd>
 </dl>
 <h2>Conversations</h2>
 <dl>
-<dt><code>Enable buddy icon animation</code></p>
-<dd> If a buddy&#8217;s icon happens to be animated, this option will enable the animation, otherwise only the first frame will be displayed. </p>
-<dt><code>Notify buddies that you are typing to them</code></p>
-<dd> Some protocols allow clients to tell their buddies when they are typing. This option enables this feature for protocols that supports it. </p>
-<dt><code>Default Formatting</code></p>
-<dd> Allows specifying the default formatting to apply to all outgoing messages (only applicable to protocols that support formatting in messages). </p>
+<dt><code>Enable buddy icon animation</code></dt>
+<dd> If a buddy&#8217;s icon happens to be animated, this option will enable the animation, otherwise only the first frame will be displayed. </dd>
+<dt><code>Notify buddies that you are typing to them</code></dt>
+<dd> Some protocols allow clients to tell their buddies when they are typing. This option enables this feature for protocols that supports it. </dd>
+<dt><code>Default Formatting</code></dt>
+<dd> Allows specifying the default formatting to apply to all outgoing messages (only applicable to protocols that support formatting in messages). </dd>
 </dl>
 <h2>Smiley Themes</h2>
 <p> Allows the user to choose between different smiley themes. The &quot;none&quot; theme will disable graphical emoticons &#8211; they will be displayed as text instead. The <code>Add</code> and <code>Remove</code> buttons may be used to install or uninstall smiley themes. Themes may also be installed by dragging and dropping them onto the list of themes. </p>
 <h2>Sounds</h2>
 <dl>
-<dt><code>Method</code></p>
-<dd> Lets the user choose between different playback methods. The user can also manually enter a command to be executed when a sound is to be played(<i>%s</i> expands to the full path to the file name). </p>
-<dt><code>Sounds when conversation has focus</code></p>
-<dd> When checked, sounds will play for events in the active conversation if the window is focused. When unchecked, sounds will not play for the active conversation when the window is focused. </p>
-<dt><code>Enable Sounds</code></p>
-<dd> Determines when to play sounds. </p>
-<dt><code>Sound Events</code></p>
-<dd> Lets the user choose when and what sounds are to be played. </p>
+<dt><code>Method</code></dt>
+<dd> Lets the user choose between different playback methods. The user can also manually enter a command to be executed when a sound is to be played(<i>%s</i> expands to the full path to the file name). </dd>
+<dt><code>Sounds when conversation has focus</code></dt>
+<dd> When checked, sounds will play for events in the active conversation if the window is focused. When unchecked, sounds will not play for the active conversation when the window is focused. </dd>
+<dt><code>Enable Sounds</code></dt>
+<dd> Determines when to play sounds. </dd>
+<dt><code>Sound Events</code></dt>
+<dd> Lets the user choose when and what sounds are to be played. </dd>
 </dl>
 <h2>Network</h2>
 <dl>
-<dt><code>STUN server</code></p>
-<dd> This allows specifying a server which uses the STUN protocol to determine a host&#8217;s public IP address. This can be particularly useful for some protocols. </p>
-<dt><code>Autodetect IP address</code></p>
-<dd> When checked, causes Pidign to attempt to determine the public IP address of the host on which Pidgin is running and disables the <code>Public IP</code> text field listed below. </p>
-<dt><code>Public IP</code></p>
-<dd> If <code>Autodetect IP address</code> is disabled, this field allows manually specifying the public IP address for the host on which Pidgin is running. This is mainly useful for users with multiple network interfaces or behind NATs. </p>
-<dt><code>Manually specify range of ports to listen on</code></p>
-<dd> Specify a range ports to listen on, overriding any defaults. This is sometimes useful for file transfers and Direct IM. </p>
-<dt><code>Proxy Server</code></p>
-<dd> The configuration section to enable Pidgin to operate through a proxy server. Pidgin currently supports SOCKS 4/5 and HTTP proxies. </p>
+<dt><code>STUN server</code></dt>
+<dd> This allows specifying a server which uses the STUN protocol to determine a host&#8217;s public IP address. This can be particularly useful for some protocols. </dd>
+<dt><code>Autodetect IP address</code></dt>
+<dd> When checked, causes Pidign to attempt to determine the public IP address of the host on which Pidgin is running and disables the <code>Public IP</code> text field listed below. </dd>
+<dt><code>Public IP</code></dt>
+<dd> If <code>Autodetect IP address</code> is disabled, this field allows manually specifying the public IP address for the host on which Pidgin is running. This is mainly useful for users with multiple network interfaces or behind NATs. </dd>
+<dt><code>Manually specify range of ports to listen on</code></dt>
+<dd> Specify a range ports to listen on, overriding any defaults. This is sometimes useful for file transfers and Direct IM. </dd>
+<dt><code>Proxy Server</code></dt>
+<dd> The configuration section to enable Pidgin to operate through a proxy server. Pidgin currently supports SOCKS 4/5 and HTTP proxies. </dd>
 </dl>
 <h2>Browser</h2>
 <dl>
-<dt><code>Browser</code></p>
-<dd> Allows the user to select Pidgin&#8217;s default web browser. Firefox, Galeon, Konqueror, Mozilla, Netscape and Opera are supported natively. The user can also manually enter a command to be executed when a link is clicked (<i>%s</i> expands to the URL). For example, <i>xterm -e lynx &quot;%s&quot;</i> will open the link with lynx. </p>
-<dt><code>Open link in</code></p>
-<dd> Allows the user to specify whether to use an existing window, a new tab, a new window, or to let the browser to decide what to do when calling the browser to open a link. Which options are available will depend on which browser is selected. </p>
+<dt><code>Browser</code></dt>
+<dd> Allows the user to select Pidgin&#8217;s default web browser. Firefox, Galeon, Konqueror, Mozilla, Netscape and Opera are supported natively. The user can also manually enter a command to be executed when a link is clicked (<i>%s</i> expands to the URL). For example, <i>xterm -e lynx &quot;%s&quot;</i> will open the link with lynx. </dd>
+<dt><code>Open link in</code></dt>
+<dd> Allows the user to specify whether to use an existing window, a new tab, a new window, or to let the browser to decide what to do when calling the browser to open a link. Which options are available will depend on which browser is selected. </dd>
 </dl>
 <h2>Logging</h2>
 <dl>
-<dt><code>Log format</code></p>
-<dd> Specifies how to log. Pidgin supports HTML and plain text, but plugins can provide other logging methods. </p>
-<dt><code>Log all instant messages</code></p>
-<dd> When enabled, all IM conversations are logged. This can be overridden on a per-conversation basis in the conversation window. </p>
-<dt><code>Log all chats</code></p>
-<dd> When enabled, all chat conversations are logged. This can be overridden on a per-conversation basis in the conversation window. </p>
-<dt><code>Log all status changes to system log</code></p>
-<dd> When enabled, status changes are logged. </p>
+<dt><code>Log format</code></dt>
+<dd> Specifies how to log. Pidgin supports HTML and plain text, but plugins can provide other logging methods. </dd>
+<dt><code>Log all instant messages</code></dt>
+<dd> When enabled, all IM conversations are logged. This can be overridden on a per-conversation basis in the conversation window. </dd>
+<dt><code>Log all chats</code></dt>
+<dd> When enabled, all chat conversations are logged. This can be overridden on a per-conversation basis in the conversation window. </dd>
+<dt><code>Log all status changes to system log</code></dt>
+<dd> When enabled, status changes are logged. </dd>
 </dl>
 <h2>Status / Idle</h2>
 <dl>
-<dt><code>Report idle time</code></p>
-<dd> Determines under which conditions to report idle time. <code>Based on keyboard and mouse use</code> uses keyboard and mouse activity to determine idle time. <code>From last sent message</code> uses the time at which the user last sent a message in Pidgin to determine idle. <code>Never</code> disables idle reporting. </p>
-<dt><code>Auto-reply</code></p>
-<dd> Determines when to send an auto-reply on protocols which support it (currently only AIM). </p>
-<dt><code>Change status when idle</code></p>
-<dd> When enabled, this uses the <code>Minutes before becoming idle</code> and <code>Change status to</code> preferences described below to set status on idle. </p>
-<dt><code>Minutes before becoming idle</code></p>
-<dd> Specifies how many minutes of inactivity are required before considering the user to be idle. </p>
-<dt><code>Change status to</code></p>
-<dd> Specifies which &quot;primitive&quot; or &quot;saved&quot; status to use when setting status on idle. </p>
-<dt><code>Use status from last exit at startup</code></p>
-<dd> If this is checked, Pidgin will remember what status was active when the user closed Pidgin and restore it at the next run. When disabled, Pidgin will always set the status selected in <code>Status to apply at startup</code> at startup. </p>
-<dt><code>Status to apply at startup</code></p>
-<dd> When <code>Use status from last exit at startup</code> is disabled, this specifies which &quot;primitive&quot; or &quot;saved&quot; status to use at startup. </p>
+<dt><code>Report idle time</code></dt>
+<dd> Determines under which conditions to report idle time. <code>Based on keyboard and mouse use</code> uses keyboard and mouse activity to determine idle time. <code>From last sent message</code> uses the time at which the user last sent a message in Pidgin to determine idle. <code>Never</code> disables idle reporting. </dd>
+<dt><code>Auto-reply</code></dt>
+<dd> Determines when to send an auto-reply on protocols which support it (currently only AIM). </dd>
+<dt><code>Change status when idle</code></dt>
+<dd> When enabled, this uses the <code>Minutes before becoming idle</code> and <code>Change status to</code> preferences described below to set status on idle. </dd>
+<dt><code>Minutes before becoming idle</code></dt>
+<dd> Specifies how many minutes of inactivity are required before considering the user to be idle. </dd>
+<dt><code>Change status to</code></dt>
+<dd> Specifies which &quot;primitive&quot; or &quot;saved&quot; status to use when setting status on idle. </dd>
+<dt><code>Use status from last exit at startup</code></dt>
+<dd> If this is checked, Pidgin will remember what status was active when the user closed Pidgin and restore it at the next run. When disabled, Pidgin will always set the status selected in <code>Status to apply at startup</code> at startup. </dd>
+<dt><code>Status to apply at startup</code></dt>
+<dd> When <code>Use status from last exit at startup</code> is disabled, this specifies which &quot;primitive&quot; or &quot;saved&quot; status to use at startup. </dd>
 </dl>
 <h2>CONVERSATIONS</h2>
 <p> When starting a new conversation, the user is presented with the <code>Conversation</code> window. The conversation appears in the upper text box and the user types his/her message in the lower text box. Between the two is a row of options, represented by icons. Some or all buttons may not be active if the protocol does not support the specific formatting. From left to right:</p>
 <dl>
-<dt><code>Font</code></p>
-<dd> This menu provides font control options for the current conversation. Size, style, and face may be configured here.</p>
-<dt><code>Insert</code></p>
-<dd> This menu provides the ability to insert images, horizontal rules, and links where the protocol supports each of these features.</p>
-<dt><code>Smile!</code></p>
-<dd> Allows the insertion of graphical smileys via the mouse. This button shows the user a dialog with the available smileys for the current conversation. </p>
+<dt><code>Font</code></dt>
+<dd> This menu provides font control options for the current conversation. Size, style, and face may be configured here.</dd>
+<dt><code>Insert</code></dt>
+<dd> This menu provides the ability to insert images, horizontal rules, and links where the protocol supports each of these features.</dd>
+<dt><code>Smile!</code></dt>
+<dd> Allows the insertion of graphical smileys via the mouse. This button shows the user a dialog with the available smileys for the current conversation. </dd>
 </dl>
 <h2>CHATS</h2>
 <p> For protocols that allow it, <code>Chats</code> can be entered through the <i>Buddies</i> menu. </p>
 <p> Additional features available in chat, depending on the protocol are:</p>
 <dl>
-<dt><code>Whisper</code></p>
-<dd> The text will appear in the chat conversation, but it will only be visible to the sender and the receiver.</p>
-<dt><code>Invite</code></p>
-<dd> Invite other people to join the chat room.</p>
-<dt><code>Ignore</code></p>
-<dd> Ignore anything said by the chosen person</p>
-<dt><code>Set Topic</code></p>
-<dd> Set the topic of the chat room. This is usually a brief sentence describing the nature of the chat&#8211;an explanation of the chat room&#8217;s name.</p>
-<dt><code>Private Message (IM)</code></p>
-<dd> Send a message to a specific person in the chat. Messages sent this way will not appear in the chat window, but instead open a new IM conversation. </p>
+<dt><code>Whisper</code></dt>
+<dd> The text will appear in the chat conversation, but it will only be visible to the sender and the receiver.</dd>
+<dt><code>Invite</code></dt>
+<dd> Invite other people to join the chat room.</dd>
+<dt><code>Ignore</code></dt>
+<dd> Ignore anything said by the chosen person</dd>
+<dt><code>Set Topic</code></dt>
+<dd> Set the topic of the chat room. This is usually a brief sentence describing the nature of the chat&#8211;an explanation of the chat room&#8217;s name.</dd>
+<dt><code>Private Message (IM)</code></dt>
+<dd> Send a message to a specific person in the chat. Messages sent this way will not appear in the chat window, but instead open a new IM conversation. </dd>
 </dl>
 <h2>STATUS MESSAGES</h2>
 <p> Most protocols allow for status messages. By using status messages, a user can leave an informative message for others to see. Status and status messages are configured via the status selector at the bottom of the Buddy List window. By default the menu shown here is divided into sections for &quot;primitive&quot; status types, such as <i>Available</i>, <i>Away</i>, etc.; a few &quot;popular&quot; statuses (including &quot;transient&quot; statuses) which have been recently used, and a section which shows <code>New Status&#8230;</code> and <code>Saved Statuses&#8230;</code> options for more advanced status manipulation. </p>
 <dl>
-<dt><code>Primitive Statuses</code></p>
-<dd> A primitive status is a basic status supported by the protocol. Examples of primitive statuses would be Available, Away, Invisible, etc. A primitive status can be used to create a <code>Transient Status or a Saved Status</code>, both explained below. Essentially, primitive statuses are building blocks of more complicated statuses. </p>
-<dt><code>Transient Statuses</code></p>
-<dd> When one of the statuses from the topmost section of the status selector&#8217;s menu is selected, this creates a transient, or temporary, status. The status will show in the &quot;popular statuses&quot; section in the menu until it has not been used for a sufficiently long time. A transient status may also be created by selecting <i>New Status&#8230;</i> from the status selector&#8217;s menu, then clicking <i>Use</i> once the user has entered the message. </p>
-<dt><code>Saved Statuses</code></p>
-<dd> Saved statuses are permanent&#8211;once created, they will exist until deleted. Saved statuses are useful for statuses and status messages that will be used on a regular basis. They are also useful for creating complex statuses in which some accounts should always have a different status from others. For example, one might wish to create a status called &quot;Sleeping&quot; that has all accounts set to &quot;Away&quot;, then create another status called &quot;Working&quot; that has three accounts set to &quot;Away&quot; and another account set to &quot;Available.&quot; </p>
-<dt><code>New Status Window</code></p>
-<dd> When the user selects <i>New Status&#8230;</i> from the status selector menu, Pidgin presents the user with a dialog asking for status-related information. That information is discussed below: </p>
+<dt><code>Primitive Statuses</code></dt>
+<dd> A primitive status is a basic status supported by the protocol. Examples of primitive statuses would be Available, Away, Invisible, etc. A primitive status can be used to create a <code>Transient Status or a Saved Status</code>, both explained below. Essentially, primitive statuses are building blocks of more complicated statuses. </dd>
+<dt><code>Transient Statuses</code></dt>
+<dd> When one of the statuses from the topmost section of the status selector&#8217;s menu is selected, this creates a transient, or temporary, status. The status will show in the &quot;popular statuses&quot; section in the menu until it has not been used for a sufficiently long time. A transient status may also be created by selecting <i>New Status&#8230;</i> from the status selector&#8217;s menu, then clicking <i>Use</i> once the user has entered the message. </dd>
+<dt><code>Saved Statuses</code></dt>
+<dd> Saved statuses are permanent&#8211;once created, they will exist until deleted. Saved statuses are useful for statuses and status messages that will be used on a regular basis. They are also useful for creating complex statuses in which some accounts should always have a different status from others. For example, one might wish to create a status called &quot;Sleeping&quot; that has all accounts set to &quot;Away&quot;, then create another status called &quot;Working&quot; that has three accounts set to &quot;Away&quot; and another account set to &quot;Available.&quot; </dd>
+<dt><code>New Status Window</code></dt>
+<dd> When the user selects <i>New Status&#8230;</i> from the status selector menu, Pidgin presents the user with a dialog asking for status-related information. That information is discussed below: </dd>
 <p> <i>Title</i> &#8211; The name of the status that will appear in the status selctor&#8217;s menu. If the user clicks the <i>Save</i> or <i>Save &amp; Use</i> button, this name will also be shown in the <code>Saved Status Window</code>. The title should be a short description of the status. </p>
 <p> <i>Status</i> &#8211; The type of status being created, such as Available, Away, etc. </p>
 <p> <i>Message</i> &#8211; The content of the status message. This is what is visible to other users. Some protocols will allow formatting in some status messages; where formatting is not supported it will be stripped to the bare text entered. </p>
 <p> <i>Use a different status for some accounts</i> &#8211; This allows the creation of complex statuses in which some accounts&#8217; status differs from that of other accounts. To use this, the user will click the expander to the left of the text, then select individual accounts which will have a different status and/or status message. When the user selects an account, Pidgin will present another status dialog asking for a status and a message just for the selected account. </p>
-<dt><code>Saved Status Window</code></p>
-<dd> When the user selects <i>Saved Statuses&#8230;</i> from the status selector&#8217;s menu, Pidgin presents a dialog that lists all saved statuses. &quot;Transient&quot; statuses, discussed above, are <i>NOT</i> shown here. This window provides the ability to manage saved statuses by allowing the creation, modification, and deletion of saved statuses. The <i>Use</i>, <i>Modify</i>, and <i>Delete</i> buttons here allow operation on the status selected from the list; the dd button allows creation of a new saved status, and the <i>Close</i> button closes the window. </p>
+<dt><code>Saved Status Window</code></dt>
+<dd> When the user selects <i>Saved Statuses&#8230;</i> from the status selector&#8217;s menu, Pidgin presents a dialog that lists all saved statuses. &quot;Transient&quot; statuses, discussed above, are <i>NOT</i> shown here. This window provides the ability to manage saved statuses by allowing the creation, modification, and deletion of saved statuses. The <i>Use</i>, <i>Modify</i>, and <i>Delete</i> buttons here allow operation on the status selected from the list; the dd button allows creation of a new saved status, and the <i>Close</i> button closes the window. </dd>
 </dl>
 <h2>BUDDY POUNCE</h2>
 <p> A Buddy Pounce is an automated trigger that occurs when a buddy returns to a normal state from an away state. The <code>Buddy Pounce</code> dialog box can be activated by selecting the <i>Buddy Pounce</i> option from the <code>Tools</code> menu. From this dialog, new pounces can be created with the <code>Add</code> button and existing pounces can be removed with the <code>Delete</code> button. A pounce can be set to occur on any combination of the events listed, and any combination of actions can result. If <i>Pounce only when my status is not Available</i> is checked, the pounce will occur only if the user is set to a non-available status, such as invisible, do not disturb, away, etc. If <i>Recurring</i> is checked, the pounce will remain until removed by the <code>Delete</code> button. </p>

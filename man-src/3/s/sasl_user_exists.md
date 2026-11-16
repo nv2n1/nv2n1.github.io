@@ -10,8 +10,6 @@ description: "sasl_user_exists – Check if a user exists on server"
 <p>sasl_user_exists &#8211; Check if a user exists on server </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_user_exists( sasl_conn_t *conn,
 const char *service, const char *user_realm,
 const char *user)</code></pre>

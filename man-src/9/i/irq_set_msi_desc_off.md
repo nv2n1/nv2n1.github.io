@@ -14,20 +14,20 @@ description: "irq_set_msi_desc_off – set MSI descriptor data for an irq at off
 <p><i>irq_base</i></p>
 <dl>
 <dd>
-<dd>Interrupt number base</dl>
+</dd><dd>Interrupt number base</dd></dl>
 <p> <i>irq_offset</i></p>
 <dl>
-<dd>Interrupt number offset</dl>
+<dd>Interrupt number offset</dd></dl>
 <p> <i>entry</i></p>
 <dl>
-<dd>Pointer to MSI descriptor data</dl>
+<dd>Pointer to MSI descriptor data</dd></dl>
 <h2>Description</h2>
 <p>Set the MSI descriptor entry for an irq at offset</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

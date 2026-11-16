@@ -26,12 +26,9 @@ See floating-point_rounding_macros for the effects of rounding. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
 #pragma STDC FENV_ACCESS ON
     std::fesetround(FE_DOWNWARD);

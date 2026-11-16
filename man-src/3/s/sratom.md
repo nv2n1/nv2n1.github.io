@@ -35,10 +35,10 @@ description: "Sratom –"
 <p> Currently, blank nodes are always read as Objects, but support for reading blank node IDs may be added in the future. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SRATOM_OBJECT_MODE_BLANK </i></p>
-<dd>Read blank nodes as Objects, and named resources as URIs.</p>
-<dt><i>SRATOM_OBJECT_MODE_BLANK_SUBJECT </i></p>
-<dd>Read blank nodes and the main subject as Objects, and any other named resources as URIs. The &#8216;main subject&#8217; is the subject parameter passed to <code>sratom_read()</code>; if this is a resource it will be read as an Object, but all other named resources encountered will be read as URIs.</dl>
+<dt><i>SRATOM_OBJECT_MODE_BLANK </i></dt>
+<dd>Read blank nodes as Objects, and named resources as URIs.</dd>
+<dt><i>SRATOM_OBJECT_MODE_BLANK_SUBJECT </i></dt>
+<dd>Read blank nodes and the main subject as Objects, and any other named resources as URIs. The &#8216;main subject&#8217; is the subject parameter passed to <code>sratom_read()</code>; if this is a resource it will be read as an Object, but all other named resources encountered will be read as URIs.</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>Sratom</code>* sratom_new (LV2_URID_Map *map)</h3>
 <p>Create a new Atom serialiser.</p>
@@ -54,7 +54,7 @@ description: "Sratom –"
 <p>Write an Atom to RDF. The serialised atom is written to the sink set by <code>sratom_set_sink()</code>. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>0 on success, or a non-zero error code otherwise.</dl>
+<dd>0 on success, or a non-zero error code otherwise.</dd></dl>
 <h3>void sratom_read (<code>Sratom</code> *sratom, LV2_Atom_Forge *forge, SordWorld *world, SordModel *model, const SordNode *subject)</h3>
 <p>Read an Atom from RDF. The resulting atom will be written to forge.</p>
 <h3>char* sratom_to_turtle (<code>Sratom</code> *sratom, LV2_URID_Unmap *unmap, const char *base_uri, const SerdNode *subject, const SerdNode *predicate, uint32_ttype, uint32_tsize, const void *body)</h3>

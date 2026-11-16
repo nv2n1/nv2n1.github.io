@@ -16,23 +16,23 @@ description: "upsstats.html – HTML template for Network UPS Tools upsstats"
 <p>Some commands begin blocks &#8211; sections of the template that will be included, excluded, or repeated depending on certain parameters.</p>
 <h2>Block Control &#8211; Iteration</h2>
 <dl>
-<dt>@FOREACHUPS@</p>
-<dd>Starts a block that will be repeated for each MONITOR directive in the <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). This is how you can generate pages that monitor all of your systems simultaneously. </p>
-<dt>@ENDFOR@</p>
-<dd>Ends a FOREACHUPS block. </p>
+<dt>@FOREACHUPS@</dt>
+<dd>Starts a block that will be repeated for each MONITOR directive in the <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). This is how you can generate pages that monitor all of your systems simultaneously. </dd>
+<dt>@ENDFOR@</dt>
+<dd>Ends a FOREACHUPS block. </dd>
 </dl>
 <h2>Block Control &#8211; Matching Specific Cases</h2>
 <dl>
-<dt>@IFSUPP var@</p>
-<dd>Starts a block that will only be printed if the variable var is supported by the current UPS. This is generally used to suppress &quot;not supported&quot; messages by avoiding the label and variable call entirely. </p>
-<dt>@IFEQ var value@</p>
-<dd>Starts a block if the value returned from the variable var matches value. </p>
-<dt>@IFBETWEEN varlow varhigh varvalue@</p>
-<dd>Starts a block if the value returned by the variable varvalue is between the values returned by the variables varlow and varhigh. </p>
-<dt>@ELSE@</p>
-<dd>If the previous IF-command did not match, perform this instead. </p>
-<dt>@ENDIF@</p>
-<dd>Ends an IF/ELSE-block. </p>
+<dt>@IFSUPP var@</dt>
+<dd>Starts a block that will only be printed if the variable var is supported by the current UPS. This is generally used to suppress &quot;not supported&quot; messages by avoiding the label and variable call entirely. </dd>
+<dt>@IFEQ var value@</dt>
+<dd>Starts a block if the value returned from the variable var matches value. </dd>
+<dt>@IFBETWEEN varlow varhigh varvalue@</dt>
+<dd>Starts a block if the value returned by the variable varvalue is between the values returned by the variables varlow and varhigh. </dd>
+<dt>@ELSE@</dt>
+<dd>If the previous IF-command did not match, perform this instead. </dd>
+<dt>@ENDIF@</dt>
+<dd>Ends an IF/ELSE-block. </dd>
 </dl>
 <h2>Block Control &#8211; Advanced Expressions</h2>
 <p>Even though the parser is pretty limited, it&#8217;s still possible to create rather advanced expressions. The key to this is the fact that multiple block control commands are AND:ed. This is illustrated with an example (more examples are available in upsstats.html). </p>
@@ -50,20 +50,20 @@ description: "upsstats.html – HTML template for Network UPS Tools upsstats"
 <p> @ENDIF@</p>
 <h2>Other Commands</h2>
 <dl>
-<dt>@AMBTEMP@</p>
-<dd>Insert the ambient temperature in the current temperature scale. </p>
-<dt>@DATE format@</p>
-<dd>Insert the current date and time. The format string is passed to strftime, so almost anything is possible. See <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible values. </p>
-<dt>@DEGREES@</p>
-<dd>Insert the entity for degrees (&amp;deg;) and either C or F depending on the current temperature scale. </p>
-<dt>@HOST@</p>
-<dd>Insert the designation of the host being monitored, like myups [at] localhost. </p>
-<dt>@HOSTDESC@</p>
-<dd>Insert the host&#8217;s description from <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). </p>
-<dt>@HOSTLINK@</p>
-<dd>Insert a link to upsstats.cgi with the &quot;host&quot; variable set to the current UPS. This is only useful within a FOREACHUPS block. </p>
-<dt>@IMG varname [<i>extra</i>]@</p>
-<dd>Insert an IMG SRC to <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8) for one of these status variables: </p>
+<dt>@AMBTEMP@</dt>
+<dd>Insert the ambient temperature in the current temperature scale. </dd>
+<dt>@DATE format@</dt>
+<dd>Insert the current date and time. The format string is passed to strftime, so almost anything is possible. See <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for possible values. </dd>
+<dt>@DEGREES@</dt>
+<dd>Insert the entity for degrees (&amp;deg;) and either C or F depending on the current temperature scale. </dd>
+<dt>@HOST@</dt>
+<dd>Insert the designation of the host being monitored, like myups [at] localhost. </dd>
+<dt>@HOSTDESC@</dt>
+<dd>Insert the host&#8217;s description from <code><a href="/docs/linux/man/5-hosts-conf/">hosts.conf</a></code>(5). </dd>
+<dt>@HOSTLINK@</dt>
+<dd>Insert a link to upsstats.cgi with the &quot;host&quot; variable set to the current UPS. This is only useful within a FOREACHUPS block. </dd>
+<dt>@IMG varname [<i>extra</i>]@</dt>
+<dd>Insert an IMG SRC to <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8) for one of these status variables: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>battery.charge &#8211; Battery charge &#8211; a percentage</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>battery.voltage &#8211; The charge on the battery in volts</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>input.frequency &#8211; Incoming utility frequency (Hz)</p>
@@ -97,28 +97,28 @@ description: "upsstats.html – HTML template for Network UPS Tools upsstats"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>@IMG battery.charge@</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>@IMG battery.charge back_col=0xff00ff bar_col=0xaabbcc@</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>@IMG input.voltage ok_zone_maj_col=0x123456@</p>
-<dt>@REFRESH@</p>
-<dd>Insert the META header magic for refreshing the page if that variable has been set by the browser. This needs to be in the HEAD section of the page. </p>
-<dt>@STATUS@</p>
-<dd>Expand the abbreviations in the ups.status variable &#8211; OL becomes &quot;On line&quot;, OB becomes &quot;On battery&quot;, and so on. </p>
-<dt>@STATUSCOLOR@</p>
-<dd>Insert red, green, or yellow color triplets depending on the severity of the current UPS status. Normal operations are green, warnings like voltage trim/boost or &quot;off&quot; are yellow, and other events like being on battery or having a low battery are red. </p>
-<dt>@VAR varname@</p>
-<dd>Insert the current value of the status variable varname on the host being monitored, or &quot;Not supported&quot;. </p>
-<dt>@RUNTIME@</p>
-<dd>Inserts the current runtime, in hh:mm:ss format. </p>
-<dt>@TEMPC@</p>
-<dd>Use the Celsius scale for temperature data (default). </p>
-<dt>@TEMPF@</p>
-<dd>Use the Fahrenheit scale for temperature data. </p>
-<dt>@UPSTEMP@</p>
-<dd>Insert the UPS temperature in the current scale. </p>
-<dt>@BATTTEMP@</p>
-<dd>Insert the battery temperature in the current scale. </p>
-<dt>@UTILITYCOLOR@</p>
-<dd>Obsoleted. Use IFBETWEEN instead (see example in upsstats.html). </p>
-<dt>@VERSION@</p>
-<dd>Insert the version number of the software. </p>
+<dt>@REFRESH@</dt>
+<dd>Insert the META header magic for refreshing the page if that variable has been set by the browser. This needs to be in the HEAD section of the page. </dd>
+<dt>@STATUS@</dt>
+<dd>Expand the abbreviations in the ups.status variable &#8211; OL becomes &quot;On line&quot;, OB becomes &quot;On battery&quot;, and so on. </dd>
+<dt>@STATUSCOLOR@</dt>
+<dd>Insert red, green, or yellow color triplets depending on the severity of the current UPS status. Normal operations are green, warnings like voltage trim/boost or &quot;off&quot; are yellow, and other events like being on battery or having a low battery are red. </dd>
+<dt>@VAR varname@</dt>
+<dd>Insert the current value of the status variable varname on the host being monitored, or &quot;Not supported&quot;. </dd>
+<dt>@RUNTIME@</dt>
+<dd>Inserts the current runtime, in hh:mm:ss format. </dd>
+<dt>@TEMPC@</dt>
+<dd>Use the Celsius scale for temperature data (default). </dd>
+<dt>@TEMPF@</dt>
+<dd>Use the Fahrenheit scale for temperature data. </dd>
+<dt>@UPSTEMP@</dt>
+<dd>Insert the UPS temperature in the current scale. </dd>
+<dt>@BATTTEMP@</dt>
+<dd>Insert the battery temperature in the current scale. </dd>
+<dt>@UTILITYCOLOR@</dt>
+<dd>Obsoleted. Use IFBETWEEN instead (see example in upsstats.html). </dd>
+<dt>@VERSION@</dt>
+<dd>Insert the version number of the software. </dd>
 </dl>
 <h2>Other Templates</h2>
 <p><code><a href="/docs/linux/man/8-upsstats-cgi/">upsstats.cgi</a></code>(8) will also open a file called upsstats-single.html if you call it with &quot;host=&quot; set in the URL. That file uses the same rules and techniques documented here.</p>

@@ -11,7 +11,6 @@ description: "sc::PsiExEnv –"
 <p> <code>PsiExEnv</code> specifies a Psi calculation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;psiexenv.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClass</code>.</p>
 <h3>Public Member Functions</h3>

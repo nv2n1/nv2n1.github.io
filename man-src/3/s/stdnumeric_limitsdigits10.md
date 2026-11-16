@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::digits10 – std::numeric_limits<T>::digit
 <h2>Synopsis</h2>
 <pre><code>static const int digits10;
 (until C++ 11)
-
     static constexpr int digits10(since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::digits10 is the number of base-10 digits that can be represented by the type T without change, that is, any number with this many significant decimal digits can be converted to a value of type T and back to decimal form, without change due to rounding or overflow. For base-radix types, it is the value of digits (digits-1 for floating-point types) multiplied by log<br />
 10(radix) and rounded down. </p>

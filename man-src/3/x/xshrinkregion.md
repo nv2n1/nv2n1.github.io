@@ -10,33 +10,33 @@ description: "XIntersectRegion, XUnionRegion, XUnionRectWithRegion, XSubtractReg
 <p>XIntersectRegion, XUnionRegion, XUnionRectWithRegion, XSubtractRegion, XXorRegion, XOffsetRegion, XShrinkRegion &#8211; region arithmetic </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XIntersectRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</p>
-<dd>int XUnionRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</p>
-<dd>int XUnionRectWithRegion(XRectangle *<i>rectangle</i>, Region <i>src_region</i>, Region <i>dest_region_return</i>);</p>
-<dd>int XSubtractRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</p>
-<dd>int XXorRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</p>
-<dd>int XOffsetRegion(Region <i>r</i>, int <i>dx</i>, int <i>dy</i>);</p>
-<dd>int XShrinkRegion(Region <i>r</i>, int <i>dx</i>, int <i>dy</i>);</dl>
+<dd>int XIntersectRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</dd>
+<dd>int XUnionRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</dd>
+<dd>int XUnionRectWithRegion(XRectangle *<i>rectangle</i>, Region <i>src_region</i>, Region <i>dest_region_return</i>);</dd>
+<dd>int XSubtractRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</dd>
+<dd>int XXorRegion(Region <i>sra</i>, Region <i>srb</i>, Region <i>dr_return</i>);</dd>
+<dd>int XOffsetRegion(Region <i>r</i>, int <i>dx</i>, int <i>dy</i>);</dd>
+<dd>int XShrinkRegion(Region <i>r</i>, int <i>dx</i>, int <i>dy</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dest_region_return</i></p>
-<dd>Returns the destination region.</p>
-<dt><i>dr_return</i></p>
-<dd>Returns the result of the computation.</p>
-<dt><i>dx</i></p>
+<dt><i>dest_region_return</i></dt>
+<dd>Returns the destination region.</dd>
+<dt><i>dr_return</i></dt>
+<dd>Returns the result of the computation.</dd>
+<dt><i>dx</i></dt>
 <dd>
-<dt><i>dy</i></p>
-<dd>Specify the x and y coordinates, which define the amount you want to move or shrink the specified region.</p>
-<dt><i>r</i></p>
-<dd>Specifies the region.</p>
-<dt><i>rectangle</i></p>
-<dd>Specifies the rectangle.</p>
-<dt><i>sra</i></p>
+</dd><dt><i>dy</i></dt>
+<dd>Specify the x and y coordinates, which define the amount you want to move or shrink the specified region.</dd>
+<dt><i>r</i></dt>
+<dd>Specifies the region.</dd>
+<dt><i>rectangle</i></dt>
+<dd>Specifies the rectangle.</dd>
+<dt><i>sra</i></dt>
 <dd>
-<dt><i>srb</i></p>
-<dd>Specify the two regions with which you want to perform the computation.</p>
-<dt><i>src_region</i></p>
-<dd>Specifies the source region to be used.</dl>
+</dd><dt><i>srb</i></dt>
+<dd>Specify the two regions with which you want to perform the computation.</dd>
+<dt><i>src_region</i></dt>
+<dd>Specifies the source region to be used.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XIntersectRegion</code> function computes the intersection of two regions. </p>
 <p> The <code>XUnionRegion</code> function computes the union of two regions. </p>

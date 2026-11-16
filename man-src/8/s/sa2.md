@@ -22,7 +22,7 @@ description: "sa2 – Create a report from the current standard system activity 
 <p><i>/var/log/sysstat/sarDD</i><br />
  <i>/var/log/sysstat/sarYYYYMMDD</i></p>
 <dl>
-<dd>The standard system activity daily report files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD </i>for the current day. </p>
+<dd>The standard system activity daily report files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD </i>for the current day. </dd>
 </dl>
 <h2>Author</h2>
 <p>Sebastien Godard (sysstat &lt;at&gt; orange.fr)</p>

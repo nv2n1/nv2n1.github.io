@@ -24,21 +24,22 @@ description: "timesyncd.conf, timesyncd.conf.d – Network Time Synchronization 
 <p>The following settings are configured in the [Time] section: </p>
 <p> <i>NTP=</i></p>
 <dl>
-<dd>A space-separated list of NTP server host names or IP addresses. During runtime this list is combined with any per-interface NTP servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8). <code>systemd-timesyncd</code> will contact all configured system or per-interface servers in turn, until one responds. When the empty string is assigned, the list of NTP servers is reset, and all prior assignments will have no effect. This setting defaults to an empty list.</dl>
+<dd>A space-separated list of NTP server host names or IP addresses. During runtime this list is combined with any per-interface NTP servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8). <code>systemd-timesyncd</code> will contact all configured system or per-interface servers in turn, until one responds. When the empty string is assigned, the list of NTP servers is reset, and all prior assignments will have no effect. This setting defaults to an empty list.</dd></dl>
 <p> <i>FallbackNTP=</i></p>
 <dl>
-<dd>A space-separated list of NTP server host names or IP addresses to be used as the fallback NTP servers. Any per-interface NTP servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>NTP=</i> above. This setting is hence only relevant if no other NTP server information is known. When the empty string is assigned, the list of NTP servers is reset, and all prior assignments will have no effect. If this option is not given, a compiled-in list of NTP servers is used.</dl>
+<dd>A space-separated list of NTP server host names or IP addresses to be used as the fallback NTP servers. Any per-interface NTP servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>NTP=</i> above. This setting is hence only relevant if no other NTP server information is known. When the empty string is assigned, the list of NTP servers is reset, and all prior assignments will have no effect. If this option is not given, a compiled-in list of NTP servers is used.</dd></dl>
 <p> <i>RootDistanceMaxSec=</i></p>
 <dl>
-<dd>Maximum acceptable root distance, i.e. the maximum estimated time required for a packet to travel to the server we are connected to from the server with the reference clock. If the current server does not satisfy this limit, <code>systemd-timesyncd</code> will switch to a different server. </p>
+<dd>Maximum acceptable root distance, i.e. the maximum estimated time required for a packet to travel to the server we are connected to from the server with the reference clock. If the current server does not satisfy this limit, <code>systemd-timesyncd</code> will switch to a different server. </dd>
 <p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). Defaults to 5 seconds.</dl>
 <p> <i>PollIntervalMinSec=</i>, <i>PollIntervalMaxSec=</i></p>
 <dl>
-<dd>The minimum and maximum poll intervals for NTP messages. Polling starts at the minimum poll interval, and is adjusted within the specified limits in response to received packets. </p>
+<dd>The minimum and maximum poll intervals for NTP messages. Polling starts at the minimum poll interval, and is adjusted within the specified limits in response to received packets. </dd>
 <p> Each setting takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). <i>PollIntervalMinSec=</i> defaults to 32 seconds and must not be smaller than 16 seconds. <i>PollIntervalMaxSec=</i> defaults to 34 min 8 s (2048 seconds) and must be larger than <i>PollIntervalMinSec=</i>.</dl>
 <p> <i>ConnectionRetrySec=</i></p>
 <dl>
-<dd>Specifies the minimum delay before subsequent attempts to contact a new NTP server are made. </p>
+<dd>Specifies the minimum delay before subsequent attempts to contact a new NTP server are made. </dd>
 <p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). Defaults to 30 seconds and must not be smaller than 1 second.</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-timesyncd-service/">systemd-timesyncd.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) </p>
+</p>

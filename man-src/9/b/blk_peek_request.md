@@ -14,7 +14,7 @@ description: "blk_peek_request – peek at the top of a request queue"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>request queue to peek at</dl>
+</dd><dd>request queue to peek at</dd></dl>
 <h2>Description</h2>
 <p>Return the request at the top of <i>q</i>. The returned request should be started using <code>blk_start_request</code> before LLD starts processing it.</p>
 <h2>Return</h2>

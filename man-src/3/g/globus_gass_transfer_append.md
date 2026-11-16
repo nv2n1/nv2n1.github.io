@@ -30,22 +30,22 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
  <i>url</i> URL to append to.<br />
- <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.</dl>
+ <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_register_append()</code></dl>
+</dt><dd> <code>globus_gass_transfer_register_append()</code></dd></dl>
 <h3>int globus_gass_transfer_get (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url)</h3>
 <p> Blocking file get. </p>
 <p> This function initiates a new &#8216;get&#8217; request of the file named by <i>url</i>. The entire file will be transferred from the server if the file exists and user is authorized to do so. This function blocks until the GASS library has determined whether the file may be retrievied by the caller, may not because it is a referral to another URL or URLs, or the server has denied the request. </p>
@@ -54,21 +54,21 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
- <i>url</i> URL to get</dl>
+ <i>url</i> URL to get</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_register_get()</code></dl>
+</dt><dd> <code>globus_gass_transfer_register_get()</code></dd></dl>
 <h3>int globus_gass_transfer_put (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url, globus_size_tlength)</h3>
 <p> Blocking file put. </p>
 <p> This function initiates a new &#8216;put&#8217; request of the file named by <i>url</i>. The entire file will be transferred to the server if the user is authorized to do so. This function blocks until the GASS library has determined whether the file may be retrieved by the caller, may not because it is a referral to another URL or URLs, or the server has denied the request. </p>
@@ -77,22 +77,22 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
  <i>url</i> URL to put.<br />
- <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.</dl>
+ <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_register_put()</code></dl>
+</dt><dd> <code>globus_gass_transfer_register_put()</code></dd></dl>
 <h3>int globus_gass_transfer_register_append (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url, globus_size_tlength, globus_gass_transfer_callback_tcallback, void *user_arg)</h3>
 <p> Nonblocking file append. </p>
 <p> This function initiates a new &#8216;append&#8217; request of the file named by <i>url</i>. The entire file will be transferred to the server if the user is authorized to do so. This function does not block; instead, the user&#8217;s callback function will be called once the GASS library has determined whether the file may be stored or not. </p>
@@ -101,24 +101,24 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
  <i>url</i> URL to append to.<br />
  <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.<br />
  <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
- <i>user_arg</i> User-supplied argument to the callback function.</dl>
+ <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_append()</code></dl>
+</dt><dd> <code>globus_gass_transfer_append()</code></dd></dl>
 <h3>int globus_gass_transfer_register_get (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url, globus_gass_transfer_callback_tcallback, void *user_arg)</h3>
 <p> Nonblocking file get. </p>
 <p> This function initiates a new &#8216;get&#8217; request of the file named by <i>url</i>. The entire file will be transferred from the server if the file exists and user is authorized to do so. This function does not block; instead, the user&#8217;s callback function will be called once the GASS library has determined whether the file can be retrieved or not. </p>
@@ -127,23 +127,23 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
  <i>url</i> URL to get<br />
  <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
- <i>user_arg</i> User-supplied argument to the callback function.</dl>
+ <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The get could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_get()</code></dl>
+</dt><dd> <code>globus_gass_transfer_get()</code></dd></dl>
 <h3>int globus_gass_transfer_register_put (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url, globus_size_tlength, globus_gass_transfer_callback_tcallback, void *user_arg)</h3>
 <p> Nonblocking file put. </p>
 <p> This function initiates a new &#8216;put&#8217; request of the file named by <i>url</i>. The entire file will be transferred to the server if the user is authorized to do so. This function does not block; instead, the user&#8217;s callback function will be called once the GASS library has determined whether the file may be stored or not. </p>
@@ -152,26 +152,26 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>request</i> A pointer to an uninitialized request handle.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
  <i>attr</i> Request attributes.<br />
  <i>url</i> URL to put.<br />
  <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.<br />
  <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
- <i>user_arg</i> User-supplied argument to the callback function.</dl>
+ <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dl>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gass_transfer_put()</code></dl>
+</dt><dd> <code>globus_gass_transfer_put()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

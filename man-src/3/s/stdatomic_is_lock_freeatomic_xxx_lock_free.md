@@ -10,35 +10,20 @@ description: "std::atomic_is_lock_free,ATOMIC_xxx_LOCK_FREE – std::atomic_is_l
 <p>std::atomic_is_lock_free,ATOMIC_xxx_LOCK_FREE &#8211; std::atomic_is_lock_free,ATOMIC_xxx_LOCK_FREE</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
-
     bool atomic_is_lock_free(const volatile std::atomic&lt;T&gt; *obj) noexcept;
-
 template &lt;class T&gt;
-
 bool atomic_is_lock_free(const std::atomic&lt;T&gt; *obj) noexcept;
-
 #define ATOMIC_BOOL_LOCK_FREE /* unspecified */
-
 #define ATOMIC_CHAR_LOCK_FREE /* unspecified */
-
 #define ATOMIC_CHAR16_T_LOCK_FREE /* unspecified */
-
 #define ATOMIC_CHAR32_T_LOCK_FREE /* unspecified */ (1)(since C++ 11)
-
 #define ATOMIC_WCHAR_T_LOCK_FREE /* unspecified */ (2)(since C++ 11)
-
 #define ATOMIC_SHORT_LOCK_FREE /* unspecified */
-
 #define ATOMIC_INT_LOCK_FREE /* unspecified */
-
 #define ATOMIC_LONG_LOCK_FREE /* unspecified */
-
 #define ATOMIC_LLONG_LOCK_FREE /* unspecified */
-
 #define ATOMIC_POINTER_LOCK_FREE /* unspecified */
-
 #define ATOMIC_CHAR8_T_LOCK_FREE /* unspecified */ (3)(since C++ 20)</code></pre>
 <p>1) Determines if the atomic object pointed to by obj is implemented lock-free, as if by calling obj-&gt;is_lock_free(). In any given program execution, the result of the lock-free query is the same for all pointers of the same type.<br />
 2,3) Expands to an integer constant expression with value<br />
@@ -55,20 +40,15 @@ The C++ standard recommends (but does not require) that lock-free atomic operati
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;atomic&gt;
 struct A {
     int a[100];
 };
-
 struct B {
     int x, y;
 };
-
 int main()
-
 {
     std::atomic&lt;A&gt; a;
     std::atomic&lt;B&gt; b;

@@ -11,7 +11,6 @@ std::raise - std::raise
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;csignal&gt;
-
     int raise(int sig);</code></pre> 
 Sends signal sig to the program. The signal handler (specified using the std::signal() function) is invoked. 
 If the user-defined signal handling strategy is not set using std::signal() yet, it is implementation-defined whether the signal will be ignored or default handler will be invoked. 
@@ -37,15 +36,12 @@ sig - SIGILL (macro constant)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;csignal&gt;
-
 #include &lt;iostream&gt;
 void signal_handler(int signal)
-
 {
     std::cout &lt;&lt; &quot;Received signal &quot; &lt;&lt; signal &lt;&lt; '\n';
 }
 int main()
-
 {
     // Install a signal handler
     std::signal(SIGTERM, signal_handler);

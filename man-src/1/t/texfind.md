@@ -19,27 +19,27 @@ description: "texfind – graphical tool to search for text in TeX input files"
 <h2>MENU</h2>
 <p> Use the right mouse button to open a menu.</p>
 <dl>
-<dt> <code>File</code> : Currently only used to exit the program</p>
-<dt> <code>Edit</code> : Copy selections, select or unselect all</p>
-<dt> <code>Search</code> : Open a <code>Find</code> dialog that allows further searching</p>
-<dd>through the displayed results. The <code>Replace</code> option can be used to replace single or all occurrences of a string, but currently it is not possible to change the file.</dl>
+<dt> <code>File</code> : Currently only used to exit the program</dt>
+<dt> <code>Edit</code> : Copy selections, select or unselect all</dt>
+<dt> <code>Search</code> : Open a <code>Find</code> dialog that allows further searching</dt>
+<dd>through the displayed results. The <code>Replace</code> option can be used to replace single or all occurrences of a string, but currently it is not possible to change the file.</dd></dl>
 <p> <code>View</code> : Select specific lines, and adjust word or character wrapping. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt> <code>&#8211;font</code> : specify the font used for the menu. Default is</p>
-<dd>courier.</p>
+<dt> <code>&#8211;font</code> : specify the font used for the menu. Default is</dt>
+<dd>courier.</dd>
 <dt>
-<dd>Other options probably exist. I appreciate input by the program authors, experienced users, or Perl geeks.</p>
-<dt></dl>
+</dt><dd>Other options probably exist. I appreciate input by the program authors, experienced users, or Perl geeks.</dd>
+<dt></dt></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1).</p>
-<dt>&bull;</p>
-<dd> ConTeXt wiki &lt;URL: <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> &gt;. </p>
+<dt>&bull;</dt>
+<dd> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1).</dd>
+<dt>&bull;</dt>
+<dd> ConTeXt wiki &lt;URL: <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> &gt;. </dd>
 </dl>
 <h2>BUGS</h2>
-<dd>None known. However, the replace function isn&#8217;t the most useful one. </p>
+<dd>None known. However, the replace function isn&#8217;t the most useful one. </dd>
 <h2>AUTHOR</h2>
 <p> <code>texfind</code> was written for the ConTeXt package by Hans Hagen and Ton Otten, PRAGMA. </p>
 <p> This manual page was written by Frank K&uuml;ster &lt;frank [at] kuesterei.ch&gt; for the Debian GNU/Linux system, and modified by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt;. It may be used and modified by others without contacting the authors. </p>

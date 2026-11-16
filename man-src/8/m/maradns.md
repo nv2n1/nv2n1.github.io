@@ -30,7 +30,7 @@ Bugs
 Unimplemented Features
 Legal Disclaimer
 Authors</pre>
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>maradns</code> is a DNS server written with security, simplicity, and performance in mind. </p>
 <p> <code>maradns</code> has two forms of arguments, both of which are optional. </p>
@@ -45,17 +45,17 @@ Authors</pre>
 <p>If MaraDNS is being used as an authoritative nameserver, allow UDP connections from all hosts on the internet to UDP port 53 for the IP that the authoritative nameserver uses. </p>
 <p> If MaraDNS is being used as a recursive nameserver, the firewall needs to allow the following packets to go to and from the IP the recursive nameserver uses:</p>
 <dl>
-<dt>*</p>
-<dd>Allow UDP connections from the MaraDNS-running server to any machine on the internet where the UDP destination port is 53</p>
-<dt>*</p>
-<dd>Allow UDP connections from any machine on the internet to the IP of the recursive server, where the source port from the remote server is 53, and the destination port is between 15000 and 19095 (inclusive)</p>
-<dt>*</p>
-<dd>Allow UDP connections from IPs that use MaraDNS as a recursive DNS server to port 53 of the MaraDNS server</dl>
+<dt>*</dt>
+<dd>Allow UDP connections from the MaraDNS-running server to any machine on the internet where the UDP destination port is 53</dd>
+<dt>*</dt>
+<dd>Allow UDP connections from any machine on the internet to the IP of the recursive server, where the source port from the remote server is 53, and the destination port is between 15000 and 19095 (inclusive)</dd>
+<dt>*</dt>
+<dd>Allow UDP connections from IPs that use MaraDNS as a recursive DNS server to port 53 of the MaraDNS server</dd></dl>
 <p> MaraDNS uses a strong secure RNG for both the query (16 bits of entropy) and the source port of the query (12 bits of entropy). This makes spoofing replies to a MaraDNS server more difficult, since the attacker has only a one in 250 million chance that a given spoofed reply will be considered valid.</p>
 <h2>Frequently Asked Questions</h2>
 <p><code>INDEX</code> </p>
 <dl>
-<dd>1. Iaqm still using version 1.0 of MaraDNS </p>
+<dd>1. Iaqm still using version 1.0 of MaraDNS </dd>
 <p> 2. How do I try out MaraDNS? </p>
 <p> 3. What license is MaraDNS released under? </p>
 <p> 4. How do I report bugs in MaraDNS? </p>
@@ -106,7 +106,7 @@ Authors</pre>
 <p> <code>3. What license is MaraDNS released under?</code> </p>
 <p> MaraDNS 1.2 is released with the following two-clause BSD-type license: </p>
 <dl>
-<dd>Copyright (c) 2002-2007 Sam Trenholme </p>
+<dd>Copyright (c) 2002-2007 Sam Trenholme </dd>
 <p> TERMS </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: </p>
 <p> 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. </p>
@@ -124,10 +124,10 @@ Authors</pre>
 <p> <code>7. How do I set up reverse DNS on MaraDNS?</code> </p>
 <p> Reverse DNS (sometimes called &quot;reverse mapping&quot;) is set up by using PTR (pointer) records. For example, the PTR record which performs the reverse DNS lookup for the ip 10.2.3.4 looks like this in a CSV2 zone file: </p>
 <dl>
-<dd>4.3.2.10.in-addr.arpa. PTR <a rel="nofollow" href="http://www.example.com">www.example.com</a>. ~</dl>
+<dd>4.3.2.10.in-addr.arpa. PTR <a rel="nofollow" href="http://www.example.com">www.example.com</a>. ~</dd></dl>
 <p> It is also possible, on MaraDNS 1.2.05 and more recent releases, to use a special &quot;FQDN4&quot; which automatically sets up the reverse mapping of a given record: </p>
 <dl>
-<dd><a rel="nofollow" href="http://www.example.com">www.example.com</a>. FQDN6 10.2.3.4 ~</dl>
+<dd><a rel="nofollow" href="http://www.example.com">www.example.com</a>. FQDN6 10.2.3.4 ~</dd></dl>
 <p> If you wish to have a PTR (reverse DNS lookup; getting a DNS name from a numeric IP) record work on the internet at large, it is not a simple matter of just adding a record like this to a MaraDNS zonefile. One also needs control of the appropriate in-addr.arpa. domain. </p>
 <p> While it can make logical sense to contact the IP 10.11.12.13 when trying to get the reverse DNS lookup (fully qualified domain name) for a given IP, DNS servers donaqt do this. DNS server, instead, contact the root DNS servers for a given in-addr.arpa name to get the reverse DNS lookup, just like they do with any other record type. </p>
 <p> When an internet service provider is given a block of IPs, they are also given control of the DNS zones which allow them to control reverse DNS lookups for those IPs. While it is possible to obtain a domain and run a DNS server without the knowledge or intervention of an ISP, being able to control reverse DNS lookups for those IPs requires ISP intervention. </p>
@@ -136,7 +136,7 @@ Authors</pre>
 <dl>
 <dd>
 <pre>timeout_seconds = 5 </pre>
-</dl>
+</dd></dl>
 <p> Note that making this too high will slow MaraDNS down when DNS servers are down, which is, alas, all too common on todayaqs internet. </p>
 <p> <code>9. When I try to run MaraDNS, I get a cryptic error message.</code> </p>
 <p> There is usually some context of where there is a syntax error in a data file before the cryptic error message. For example, when there is a syntax error in a csv2 zone file, MaraDNS will tell you exactly at what point it had to terminate parsing of the zone file. </p>
@@ -164,17 +164,17 @@ Authors</pre>
 <p> Yes. </p>
 <p> Here is the procedure for making a proper patch: </p>
 <dl>
-<dt>*</p>
-<dd>Enter the directory that the file is in, for example maradns-1.2.00/server</p>
-<dt>*</p>
-<dd>Copy over the file that you wish to modify to another file name. For example: cp MaraDNS.c MaraDNS.c.orig</p>
-<dt>*</p>
-<dd>Edit the file in question, e.g: vi MaraDNS.c</p>
-<dt>*</p>
+<dt>*</dt>
+<dd>Enter the directory that the file is in, for example maradns-1.2.00/server</dd>
+<dt>*</dt>
+<dd>Copy over the file that you wish to modify to another file name. For example: cp MaraDNS.c MaraDNS.c.orig</dd>
+<dt>*</dt>
+<dd>Edit the file in question, e.g: vi MaraDNS.c</dd>
+<dt>*</dt>
 <dd>After editing, do something like this:<br />
- diff -u MaraDNS.c.orig MaraDNS.c &gt; maradns.patch</p>
-<dt>*</p>
-<dd>Make sure the modified version compiles cleanly</dl>
+ diff -u MaraDNS.c.orig MaraDNS.c &gt; maradns.patch</dd>
+<dt>*</dt>
+<dd>Make sure the modified version compiles cleanly</dd></dl>
 <p> Send a patch to me in email, along with a statement that you place the contents of the patch under MaraDNSaq BSD license. If I find that the patch works well, I will integrate it in to MaraDNS. </p>
 <p> <code>16. Can MaraDNS act as a primary nameserver?</code> </p>
 <p> Yes. </p>
@@ -192,10 +192,10 @@ Authors</pre>
 <p> MaraDNS will not add the record, since the record is out-of-bailiwick. In other words, it is a host name that does not end in .example.com. </p>
 <p> There are two workarounds for this issue:</p>
 <dl>
-<dt>*</p>
-<dd>Create a zone file for 1.1.10.in-addr.arpa., and put the PTR records there.</p>
-<dt>*</p>
-<dd>Use rcp, rsync, or another method to copy over the zone files in question.</dl>
+<dt>*</dt>
+<dd>Create a zone file for 1.1.10.in-addr.arpa., and put the PTR records there.</dd>
+<dt>*</dt>
+<dd>Use rcp, rsync, or another method to copy over the zone files in question.</dd></dl>
 <p> <code>20. Is MaraDNS portable?</code> </p>
 <p> MaraDNS is developed on a CentOS 3 and Windows XP dual boot laptop. MaraDNS may compile or run on other systems&#8211;there are official MaraDNS ports for Debian/Ubuntu, Slackware, FreeBSD, and NetBSD. Note that MaraDNS needs a system with a robust threading library, which some systems do not have. </p>
 <p> <code>21. Can I use MaraDNS in Windows?</code> </p>
@@ -219,7 +219,7 @@ Processing incoming DNS requests 1</pre>
 <p> <code>26. I am having problems setting upstream_servers</code> </p>
 <p> The upstream_servers mararc variable is set thusly: </p>
 <dl>
-<dd>upstream_servers[&quot;.&quot;] = &quot;10.3.28.79, 10.2.19.83&quot;</dl>
+<dd>upstream_servers[&quot;.&quot;] = &quot;10.3.28.79, 10.2.19.83&quot;</dd></dl>
 <p> Note the [&quot;.&quot;]. The reason for this is so future versions of MaraDNS may have more fine-grained control over the upstream_servers and root_servers values. </p>
 <p> Note that the upstream_servers variable needs to be initialized before being used via upstream_servers = {} (the reason for this is so that a mararc file has 100% Python-compatible syntax). A complete mararc file that uses upstream_servers may look like this: </p>
 <pre>ipv4_bind_addresses = &quot;127.0.0.1&quot;
@@ -235,16 +235,16 @@ upstream_servers[&quot;.&quot;] = &quot;10.1.2.3, 10.2.4.6&quot;</pre>
 <p> <code>28. How do MX records work?</code> </p>
 <p> How MX records work:</p>
 <dl>
-<dt>*</p>
-<dd>The mail transport agent (Sendmail, Postfix, Qmail, MS Exchange, etc.) looks up the MX record for the domain</p>
-<dt>*</p>
-<dd>For each of the records returned, the MTA (mail transport agent) looks up the IP for the names.</p>
-<dt>*</p>
-<dd>It will choose, at random, any of the MXes with the lowest priority number.</p>
-<dt>*</p>
-<dd>Should that server fail, it will try another server with the same priority number.</p>
-<dt>*</p>
-<dd>Should all MX records with a given priority number fail, the MTA will try sending email to any of the MX records with the second-lowest priority value.</dl>
+<dt>*</dt>
+<dd>The mail transport agent (Sendmail, Postfix, Qmail, MS Exchange, etc.) looks up the MX record for the domain</dd>
+<dt>*</dt>
+<dd>For each of the records returned, the MTA (mail transport agent) looks up the IP for the names.</dd>
+<dt>*</dt>
+<dd>It will choose, at random, any of the MXes with the lowest priority number.</dd>
+<dt>*</dt>
+<dd>Should that server fail, it will try another server with the same priority number.</dd>
+<dt>*</dt>
+<dd>Should all MX records with a given priority number fail, the MTA will try sending email to any of the MX records with the second-lowest priority value.</dd></dl>
 <p> As an aside, do not have MX records point to CNAMEs. </p>
 <p> <code>29. Does MaraDNS have support for SPF?</code> </p>
 <p> SPF, or sender policy framework, is method of using DNS that makes it more difficult to forge email. MaraDNS has full support for SPF, both via TXT records and, starting with MaraDNS 1.2.08, via RFC4408 SPF records. </p>
@@ -280,16 +280,16 @@ ns.joe.example.com. A 10.1.2.4 ~</pre>
 <p>Next, you are trying to find out why <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a> is not resolving. If you naively send a query to 10.1.2.3 for <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a> as askmara A<a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a>. 10.1.2.3 or as dig @10.1.2.3 <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a>. or as nslookup <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a>. 10.1.2.3, you will <code>not</code> get any information that will help you solve the problem, since 10.1.2.3 will try to contact 10.1.2.4 to resolve <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a>. </p>
 <p> The solution is to run your DNS query client thusly:</p>
 <dl>
-<dt>*</p>
-<dd>Askmara would be run thusly:</dl>
+<dt>*</dt>
+<dd>Askmara would be run thusly:</dd></dl>
 <p> askmara -n A<a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a>. 10.1.2.3 </p>
 <dl>
-<dt>*</p>
-<dd>Dig would be run thusly:</dl>
+<dt>*</dt>
+<dd>Dig would be run thusly:</dd></dl>
 <p> dig +norecurse @10.1.2.3 <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a> </p>
 <dl>
-<dt>*</p>
-<dd>Nslookup would be run thusly:</dl>
+<dt>*</dt>
+<dd>Nslookup would be run thusly:</dd></dl>
 <p> nslookup -norec <a rel="nofollow" href="http://www.joe.example.com">www.joe.example.com</a> 10.1.2.3 </p>
 <p> This will allow you to see that packets MaraDNS actually sends to a recursive DNS server. </p>
 <p> As an aside, this particular problem will not happen if MaraDNS is run only as an authoritative nameserver. </p>
@@ -334,38 +334,38 @@ root_servers[&quot;.&quot;] += &quot;65.243.92.254&quot;</pre>
 <p> No. OK, let me qualify that: I wonaqt do it unless you pay me enough money. </p>
 <p> In more detail, MaraDNS does not use autoconf for the following reasons:</p>
 <dl>
-<dt>*</p>
-<dd>Autoconf is designed to solve a problem that existed in the mid 1990s but does not exist today: A large number of different incompatible C compilers and libc implementations. These days, most systems are using gcc as the compiler and some version of glibc as the libc. There is no longer a need, for example, to figure out whether a given implementation of getopt() allows aq&#8211;aq options. MaraDNSaqs ./configure script can be run in only a second or two; compare this to the 3-5 minute process autoconfaqs ./configure needs.</p>
-<dt>*</p>
-<dd>Autoconf leaves GPL-tained files in a programaqs build tree. MaraDNS is licensed under a BSD license that is <i>not</i> GPL-compatible, so MaraDNS can not be distributed with these GPL-licensed files.</dl>
+<dt>*</dt>
+<dd>Autoconf is designed to solve a problem that existed in the mid 1990s but does not exist today: A large number of different incompatible C compilers and libc implementations. These days, most systems are using gcc as the compiler and some version of glibc as the libc. There is no longer a need, for example, to figure out whether a given implementation of getopt() allows aq&#8211;aq options. MaraDNSaqs ./configure script can be run in only a second or two; compare this to the 3-5 minute process autoconfaqs ./configure needs.</dd>
+<dt>*</dt>
+<dd>Autoconf leaves GPL-tained files in a programaqs build tree. MaraDNS is licensed under a BSD license that is <i>not</i> GPL-compatible, so MaraDNS can not be distributed with these GPL-licensed files.</dd></dl>
 <p> This leads us to the next question: </p>
 <p> <code>How do I change the compiler or compile-time flags with MaraDNSaq build process?</code> </p>
 <p> To change the compiler used by MaraDNS:</p>
 <dl>
-<dt>*</p>
-<dd>Run the ./configure script</p>
-<dt>*</p>
-<dd>Open up the file Makefile with an editor</p>
-<dt>*</p>
-<dd>Look for a line that starts with CC</p>
-<dt>*</p>
-<dd>If there is no line that starts with CC, create one just before the line that starts with FLAGS</p>
-<dt>*</p>
-<dd>Change (or create) that line to look something like CC=gcc296 In this example, the 2.96 version of gcc is used to compile MaraDNS.</p>
-<dt>*</p>
-<dd>Note that it is important to <code>not</code> remove anything from this line you do not understand; doing so will make MaraDNS unable to compile or run. So, if the CC line looks like CC=gcc&amp;nbsp;$(LDFLAGS)&amp;nbsp;-DNO_FLOCK and you want to compile with gcc 2.96, change the line to look like CC=gcc296&amp;nbsp;$(LDFLAGS)&amp;nbsp;-DNO_FLOCK retaining the flags added by the configuration script.</dl>
+<dt>*</dt>
+<dd>Run the ./configure script</dd>
+<dt>*</dt>
+<dd>Open up the file Makefile with an editor</dd>
+<dt>*</dt>
+<dd>Look for a line that starts with CC</dd>
+<dt>*</dt>
+<dd>If there is no line that starts with CC, create one just before the line that starts with FLAGS</dd>
+<dt>*</dt>
+<dd>Change (or create) that line to look something like CC=gcc296 In this example, the 2.96 version of gcc is used to compile MaraDNS.</dd>
+<dt>*</dt>
+<dd>Note that it is important to <code>not</code> remove anything from this line you do not understand; doing so will make MaraDNS unable to compile or run. So, if the CC line looks like CC=gcc&amp;nbsp;$(LDFLAGS)&amp;nbsp;-DNO_FLOCK and you want to compile with gcc 2.96, change the line to look like CC=gcc296&amp;nbsp;$(LDFLAGS)&amp;nbsp;-DNO_FLOCK retaining the flags added by the configuration script.</dd></dl>
 <p> Changing compile-time flags is a similar process:</p>
 <dl>
-<dt>*</p>
-<dd>Run the ./configure script</p>
-<dt>*</p>
-<dd>Open up the file Makefile with an editor</p>
-<dt>*</p>
-<dd>Look for a line that starts with FLAGS</p>
-<dt>*</p>
-<dd>Change (or create) that line to look something like FLAGS=-O3 In this example, MaraDNS is compiled with the -O3 option.</p>
-<dt>*</p>
-<dd>Note that it is important to <code>not</code> remove anything from this line you do not understand; doing so will make MaraDNS unable to compile or run. So, if the FLAGS line looks like FLAGS=-O2&amp;nbsp;-Wall&amp;nbsp;-DSELECT_PROBLEM and you want to compile at optimization level three, change this line to look like FLAGS=-O2&amp;nbsp;-Wall&amp;nbsp;-DSELECT_PROBLEM retaining the flags added by the configuration script. -DSELECT_PROBLEM for example, is needed in the Linux compile or MaraDNS will have problems with freezing up.</dl>
+<dt>*</dt>
+<dd>Run the ./configure script</dd>
+<dt>*</dt>
+<dd>Open up the file Makefile with an editor</dd>
+<dt>*</dt>
+<dd>Look for a line that starts with FLAGS</dd>
+<dt>*</dt>
+<dd>Change (or create) that line to look something like FLAGS=-O3 In this example, MaraDNS is compiled with the -O3 option.</dd>
+<dt>*</dt>
+<dd>Note that it is important to <code>not</code> remove anything from this line you do not understand; doing so will make MaraDNS unable to compile or run. So, if the FLAGS line looks like FLAGS=-O2&amp;nbsp;-Wall&amp;nbsp;-DSELECT_PROBLEM and you want to compile at optimization level three, change this line to look like FLAGS=-O2&amp;nbsp;-Wall&amp;nbsp;-DSELECT_PROBLEM retaining the flags added by the configuration script. -DSELECT_PROBLEM for example, is needed in the Linux compile or MaraDNS will have problems with freezing up.</dd></dl>
 <p> <code>Will you make a package for the particular Linux distribution I am using?</code> </p>
 <p> No. OK, let me qualify that: I wonaqt do it unless you pay me enough money. </p>
 <p> There are MaraDNS packages for a number of different distributions of Linux and other operating systems. On the MaraDNS site, there is a MaraDNS package for CentOS/Red Hat Enterprise Linux available. There is also usually an up-to-date Slackware package available. In addition, there is a Debian package in the Debian packages collection, a FreeBSD port of MaraDNS, a Ubuntu package which is derived from the Debian package, and undoubtably other MaraDNS packages floating around the internet. </p>
@@ -376,16 +376,16 @@ root_servers[&quot;.&quot;] += &quot;65.243.92.254&quot;</pre>
 <p> <code>I am using the native Windows port of MaraDNS, and some features are not working.</code> </p>
 <p> Since Windows 32 does not have some features that *NIX OSes have, the native Windows port does not have all of the features of the *NIX version of MaraDNS. In particular, the following features are disabled:</p>
 <dl>
-<dt>*</p>
-<dd>ipv6 (this is actually a mingw32, not a Windows deficiency)</p>
-<dt>*</p>
-<dd>The chroot_dir mararc variable</p>
-<dt>*</p>
-<dd>The maradns_gid and maradns_uid mararc variables</p>
-<dt>*</p>
-<dd>The maxprocs mararc variable</p>
-<dt>*</p>
-<dd>The synth_soa_serial variable can not have a value of 2</dl>
+<dt>*</dt>
+<dd>ipv6 (this is actually a mingw32, not a Windows deficiency)</dd>
+<dt>*</dt>
+<dd>The chroot_dir mararc variable</dd>
+<dt>*</dt>
+<dd>The maradns_gid and maradns_uid mararc variables</dd>
+<dt>*</dt>
+<dd>The maxprocs mararc variable</dd>
+<dt>*</dt>
+<dd>The synth_soa_serial variable can not have a value of 2</dd></dl>
 <p> If any of the above features are desired, try compiling MaraDNS using Cygwin. Note that the Cygwin port of MaraDNS does not have ipv6 support, and that while chroot_dir works in Cygwin, it does not have the security that the *NIX chroot() call has. </p>
 <p> <code>MaraDNS isnaqt starting up</code> </p>
 <p> This is usually caused by a syntax error in oneaqs mararc file, or by another MaraDNS process already running. To see what is happening, look at your system log (/var/log/messages in Centos 3) to see what errors MaraDNS reports. If you do not know how to look at a system log, you can also invoke MaraDNS from the command line as root; any errors will be visible when starting MaraDNS. </p>

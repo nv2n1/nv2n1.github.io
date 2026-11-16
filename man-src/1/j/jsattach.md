@@ -16,14 +16,14 @@ description: "jsattach – attach a serial line to a joystick device"
 <p> Exactly one of the following modes must be specified on the command line.</p>
 <h2>MODES</h2>
 <dl>
-<dt><i>&#8211;sball4</i></p>
-<dd> Use this option for the SpaceBall 4000 FLX.</p>
-<dt><i>&#8211;spaceorb</i></p>
-<dd> Use this option for the SpaceOrb 360 or SpaceBall Avenger.</p>
-<dt><i>&#8211;magellan</i></p>
-<dd> Use this option for the Magellan or SpaceMouse.</p>
-<dt><i>&#8211;warrior</i></p>
-<dd> Use this option for the WingMan Warrior.</dl>
+<dt><i>&#8211;sball4</i></dt>
+<dd> Use this option for the SpaceBall 4000 FLX.</dd>
+<dt><i>&#8211;spaceorb</i></dt>
+<dd> Use this option for the SpaceOrb 360 or SpaceBall Avenger.</dd>
+<dt><i>&#8211;magellan</i></dt>
+<dd> Use this option for the Magellan or SpaceMouse.</dd>
+<dt><i>&#8211;warrior</i></dt>
+<dd> Use this option for the WingMan Warrior.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1). </p>
 <h2>Index</h2>

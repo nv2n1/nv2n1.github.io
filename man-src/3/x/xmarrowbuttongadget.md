@@ -205,30 +205,30 @@ description: "XmArrowButtonGadget — The ArrowButtonGadget widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNactivateCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is activated. To activate the button, press and release <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. Activating the ArrowButtonGadget also disarms it. The reason sent by this callback is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</p>
-<dt><code>XmNarmCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is armed. To arm this widget, press <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. The reason sent by this callback is <code>XmCR_ARM</code>.</p>
-<dt><code>XmNarrowDirection</code></p>
-<dd>Sets the arrow direction. The values for this resource are</p>
+<dt><code>XmNactivateCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is activated. To activate the button, press and release <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. Activating the ArrowButtonGadget also disarms it. The reason sent by this callback is <code>XmCR_ACTIVATE</code>. This callback uses the <code>XmQTactivatable</code> trait.</dd>
+<dt><code>XmNarmCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is armed. To arm this widget, press <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. The reason sent by this callback is <code>XmCR_ARM</code>.</dd>
+<dt><code>XmNarrowDirection</code></dt>
+<dd>Sets the arrow direction. The values for this resource are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmARROW_UP</code></p>
-<dt> &bull;</p>
-<dd><code>XmARROW_DOWN</code></p>
-<dt> &bull;</p>
-<dd><code>XmARROW_LEFT</code></p>
-<dt> &bull;</p>
-<dd><code>XmARROW_RIGHT</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmARROW_UP</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmARROW_DOWN</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmARROW_LEFT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmARROW_RIGHT</code></dd></dl>
 </dl>
-<dt><code>XmNdetailShadowThickness</code></p>
-<dd>Specifies the thickness of the inside arrow shadows. The default thickness is 2 pixels.</p>
-<dt><code>XmNdisarmCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is disarmed. To disarm this widget, press and release <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. The reason sent by this callback is <code>XmCR_DISARM</code>.</p>
-<dt><code>XmNmultiClick</code></p>
-<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the ArrowButtonGadget is not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</dl>
+<dt><code>XmNdetailShadowThickness</code></dt>
+<dd>Specifies the thickness of the inside arrow shadows. The default thickness is 2 pixels.</dd>
+<dt><code>XmNdisarmCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the ArrowButtonGadget is disarmed. To disarm this widget, press and release <code>BSelect</code> while the pointer is inside the ArrowButtonGadget. The reason sent by this callback is <code>XmCR_DISARM</code>.</dd>
+<dt><code>XmNmultiClick</code></dt>
+<dd>If a button click is followed by another button click within the time span specified by the display&#8217;s multiclick time and this resource is set to <code>XmMULTICLICK_DISCARD</code>, the second click is not processed. If this resource is set to <code>XmMULTICLICK_KEEP</code>, the event is processed and <i>click_count</i> is incremented in the callback structure. When the ArrowButtonGadget is not in a menu, the default value is <code>XmMULTICLICK_KEEP</code>.</dd></dl>
 <h3>Inherited Resources</h3>
 <p><code>XmArrowButtonGadget</code> inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -995,32 +995,32 @@ description: "XmArrowButtonGadget — The ArrowButtonGadget widget class"
  int <i>click_count</i>;
 } XmArrowButtonCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><i>click_count</i></p>
-<dd>This value is valid only when the reason is <code>XmCR_ACTIVATE</code>. It contains the number of clicks in the last multiclick sequence if the <code>XmNmultiClick</code> resource is set to <code>XmMULTICLICK_KEEP</code>, otherwise it contains 1. The activate callback is invoked for each click if <code>XmNmultiClick</code> is set to <code>XmMULTICLICK_KEEP</code>.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><i>click_count</i></dt>
+<dd>This value is valid only when the reason is <code>XmCR_ACTIVATE</code>. It contains the number of clicks in the last multiclick sequence if the <code>XmNmultiClick</code> resource is set to <code>XmMULTICLICK_KEEP</code>, otherwise it contains 1. The activate callback is invoked for each click if <code>XmNmultiClick</code> is set to <code>XmMULTICLICK_KEEP</code>.</dd></dl>
 <h3>Behavior</h3>
 <p><code>XmArrowButtonGadget</code> includes behavior from <code>XmGadget</code>. The following list describes additional XmArrowButtonGadget behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>Draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>.</p>
-<dt><code>&lt;Btn1Down&gt;</code><code>&nbsp;<wbr>or&nbsp;<wbr></code><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>Draws the shadow in the unselected state. If the pointer is within the ArrowButtonGadget, calls the callbacks for <code>XmNactivateCallback</code>. Calls the callbacks for <code>XmNdisarmCallback</code>.</p>
-<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>:</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing. If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>.</p>
-<dt><code>&lt;Btn1Up&gt;</code><code>(2+)</code>:</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</p>
-<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action increments <i>click_count</i> in the callback structure and draws the shadow in the unselected state. If the pointer is within the ArrowButtonGadget, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</p>
-<dd>Draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>. Arranges for the shadow to be drawn in the unselected state and the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> to be called, either immediately or at a later time.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt><code>&lt;Enter&gt;</code>:</p>
-<dd>Draws the ArrowButtonGadget shadow in its selected state if the pointer leaves and re-enters the gadget while &lt;Btn1&gt; is pressed.</p>
-<dt><code>&lt;Leave&gt;</code>:</p>
-<dd>Draws the ArrowButtonGadget shadow in its unselected state if the pointer leaves the gadget while &lt;Btn1&gt; is pressed.</dl>
+<dt><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>Draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>.</dd>
+<dt><code>&lt;Btn1Down&gt;</code><code>&nbsp;<wbr>or&nbsp;<wbr></code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>Draws the shadow in the unselected state. If the pointer is within the ArrowButtonGadget, calls the callbacks for <code>XmNactivateCallback</code>. Calls the callbacks for <code>XmNdisarmCallback</code>.</dd>
+<dt><code>&lt;Btn1Down&gt;</code><code>(2+)</code>:</dt>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing. If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>.</dd>
+<dt><code>&lt;Btn1Up&gt;</code><code>(2+)</code>:</dt>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing.</dd>
+<dd>If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action increments <i>click_count</i> in the callback structure and draws the shadow in the unselected state. If the pointer is within the ArrowButtonGadget, this action calls the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code>.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd>Draws the shadow in the selected state and calls the callbacks for <code>XmNarmCallback</code>. Arranges for the shadow to be drawn in the unselected state and the callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> to be called, either immediately or at a later time.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt><code>&lt;Enter&gt;</code>:</dt>
+<dd>Draws the ArrowButtonGadget shadow in its selected state if the pointer leaves and re-enters the gadget while &lt;Btn1&gt; is pressed.</dd>
+<dt><code>&lt;Leave&gt;</code>:</dt>
+<dd>Draws the ArrowButtonGadget shadow in its unselected state if the pointer leaves the gadget while &lt;Btn1&gt; is pressed.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

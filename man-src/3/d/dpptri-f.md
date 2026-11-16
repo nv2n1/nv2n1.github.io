@@ -21,10 +21,10 @@ description: "dpptri.f –"
 <pre> DPPTRI computes the inverse of a real symmetric positive definite
  matrix A using the Cholesky factorization A = U**T*U or A = L*L**T
  computed by DPPTRF.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangular factor is stored in AP;
  = 'L': Lower triangular factor is stored in AP.</pre>
@@ -50,13 +50,13 @@ description: "dpptri.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 94 of file dpptri.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

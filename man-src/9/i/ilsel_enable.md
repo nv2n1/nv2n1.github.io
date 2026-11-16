@@ -14,12 +14,12 @@ description: "ilsel_enable – Enable an ILSEL set."
 <p><i>set</i></p>
 <dl>
 <dd>
-<dd>ILSEL source (see ilsel_source_t enum in include/asm-sh/ilsel.h).</dl>
+</dd><dd>ILSEL source (see ilsel_source_t enum in include/asm-sh/ilsel.h).</dd></dl>
 <h2>Description</h2>
 <p>Enables a given non-aliased ILSEL source (&lt;= ILSEL_KEY) at the highest available interrupt level. Callers should take care to order callsites noting descending interrupt levels. Aliasing FPGA and external board IRQs need to use <code>ilsel_enable_fixed</code>. </p>
 <p> The return value is an IRQ number that can later be taken down with <code>ilsel_disable</code>.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

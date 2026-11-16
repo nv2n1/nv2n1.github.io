@@ -16,47 +16,47 @@ description: "xditview – display ditroff output"
 <h2>OPTIONS</h2>
 <p> <i>Xditview</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>
 <dl>
-<dt><code>-page </code><i>page-number</i></p>
-<dd> This option specifies the page number of the document to be displayed at start up time.</p>
-<dt><code>-resolution </code><i>screen-resolution</i></p>
-<dd> This specifies the desired screen resolution to use; fonts will be opened by requesting this resolution field in the XLFD names.</p>
-<dt><code>-noPolyText</code></p>
-<dd> Some X servers incorrectly implement PolyText with multiple strings per request. This option suppresses the use of this feature in <i>xditview.</i></p>
-<dt><code>-backingStore </code><i>backing-store-type</i></p>
-<dd> Redisplay can take up to a second or so; this option causes the server to save the window contents so that when it is scrolled around the viewport, the window is painted from contents saved in backing store. <i>backing-store-type</i> can be one of <code>Always</code>, WhenMapped or NotUseful.</dl>
+<dt><code>-page </code><i>page-number</i></dt>
+<dd> This option specifies the page number of the document to be displayed at start up time.</dd>
+<dt><code>-resolution </code><i>screen-resolution</i></dt>
+<dd> This specifies the desired screen resolution to use; fonts will be opened by requesting this resolution field in the XLFD names.</dd>
+<dt><code>-noPolyText</code></dt>
+<dd> Some X servers incorrectly implement PolyText with multiple strings per request. This option suppresses the use of this feature in <i>xditview.</i></dd>
+<dt><code>-backingStore </code><i>backing-store-type</i></dt>
+<dd> Redisplay can take up to a second or so; this option causes the server to save the window contents so that when it is scrolled around the viewport, the window is painted from contents saved in backing store. <i>backing-store-type</i> can be one of <code>Always</code>, WhenMapped or NotUseful.</dd></dl>
 <p> The following standard X Toolkit command line arguments are commonly used with <i>xditview:</i></p>
 <dl>
-<dt><code>-bg </code><i>color</i></p>
-<dd> This option specifies the color to use for the background of the window. The default is <i>white</i>.</p>
-<dt><code>-bd </code><i>color</i></p>
-<dd> This option specifies the color to use for the border of the window. The default is <i>black</i>.</p>
-<dt><code>-bw </code><i>number</i></p>
-<dd> This option specifies the width in pixels of the border surrounding the window.</p>
-<dt><code>-fg </code><i>color</i></p>
-<dd> This option specifies the color to use for displaying text. The default is <i>black</i>.</p>
-<dt><code>-fn </code><i>font</i></p>
-<dd> This option specifies the font to be used for displaying widget text. The default is <i>fixed</i>.</p>
-<dt><code>-rv</code></p>
-<dd> This option indicates that reverse video should be simulated by swapping the foreground and background colors.</p>
-<dt><code>-geometry </code><i>geometry</i></p>
-<dd> This option specifies the preferred size and position of the window.</p>
-<dt><code>-display </code><i>host</i>:<i>display</i></p>
-<dd> This option specifies the X server to contact.</p>
-<dt><code>-xrm </code><i>resourcestring</i></p>
-<dd> This option specifies a resource string to be used.</dl>
+<dt><code>-bg </code><i>color</i></dt>
+<dd> This option specifies the color to use for the background of the window. The default is <i>white</i>.</dd>
+<dt><code>-bd </code><i>color</i></dt>
+<dd> This option specifies the color to use for the border of the window. The default is <i>black</i>.</dd>
+<dt><code>-bw </code><i>number</i></dt>
+<dd> This option specifies the width in pixels of the border surrounding the window.</dd>
+<dt><code>-fg </code><i>color</i></dt>
+<dd> This option specifies the color to use for displaying text. The default is <i>black</i>.</dd>
+<dt><code>-fn </code><i>font</i></dt>
+<dd> This option specifies the font to be used for displaying widget text. The default is <i>fixed</i>.</dd>
+<dt><code>-rv</code></dt>
+<dd> This option indicates that reverse video should be simulated by swapping the foreground and background colors.</dd>
+<dt><code>-geometry </code><i>geometry</i></dt>
+<dd> This option specifies the preferred size and position of the window.</dd>
+<dt><code>-display </code><i>host</i>:<i>display</i></dt>
+<dd> This option specifies the X server to contact.</dd>
+<dt><code>-xrm </code><i>resourcestring</i></dt>
+<dd> This option specifies a resource string to be used.</dd></dl>
 <h2>X DEFAULTS</h2>
 <p> This program uses a <i>Dvi</i> widget. It understands all of the core resource names and classes as well as: </p>
 <dl>
-<dt><code>width (</code>class<code> Width)</code></p>
-<dd> Specifies the width of the window.</p>
-<dt><code>height (</code>class<code> Height)</code></p>
-<dd> Specifies the height of the window.</p>
-<dt><code>foreground (</code>class<code> Foreground)</code></p>
-<dd> Specifies the default foreground color.</p>
-<dt><code>font (</code>class<code> Font)</code></p>
-<dd> Specifies the font to be used for error messages.</p>
-<dt><code>FontMap (class FontMap)</code></p>
-<dd> To associate the <i>ditroff</i> fonts with appropriate X fonts, this string resource contains a set of new-line separated specifications, each of which consists of a ditroff name, some white space and an XLFD pattern with * characters in appropriate places to allow all sizes to be listed. The default fontMap is: </p>
+<dt><code>width (</code>class<code> Width)</code></dt>
+<dd> Specifies the width of the window.</dd>
+<dt><code>height (</code>class<code> Height)</code></dt>
+<dd> Specifies the height of the window.</dd>
+<dt><code>foreground (</code>class<code> Foreground)</code></dt>
+<dd> Specifies the default foreground color.</dd>
+<dt><code>font (</code>class<code> Font)</code></dt>
+<dd> Specifies the font to be used for error messages.</dd>
+<dt><code>FontMap (class FontMap)</code></dt>
+<dd> To associate the <i>ditroff</i> fonts with appropriate X fonts, this string resource contains a set of new-line separated specifications, each of which consists of a ditroff name, some white space and an XLFD pattern with * characters in appropriate places to allow all sizes to be listed. The default fontMap is: </dd>
 <pre><code>
 R - *-times - medium - r - normal-- * -*-*-*-*-*-iso8859 - 1
 \
@@ -125,7 +125,6 @@ S - *-symbol -
 \
 S2 - *-symbol -
     medium - r - normal-- * -*-*-*-*-*-adobe - fontspecific
-
 </code></pre>
 </dl>
 <h2>USING XDITVIEW WITH DITROFF</h2>

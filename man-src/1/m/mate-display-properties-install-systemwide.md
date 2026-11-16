@@ -15,10 +15,10 @@ description: "mate-display-properties-install-systemwide – customize MATE disp
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> This command line tool installs a RANDR profile for multi-monitor setups into a systemwide location. The resulting profile will get used when the RANDR plug-in gets run in <code>mate-settings-daemon</code>.</p>
 <dl>
-<dt><i>&lt;SOURCE_FILE&gt;</i></p>
-<dd> a full pathname, typically /home/username/.config/monitors.xml</p>
-<dt><i>&lt;DEST_NAME&gt;</i></p>
-<dd> relative name for the installed file. This will get put in the systemwide directory for RANDR configurations, so the result will typically be /etc/mate-settings-daemon/xrandr/DEST_NAME</dl>
+<dt><i>&lt;SOURCE_FILE&gt;</i></dt>
+<dd> a full pathname, typically /home/username/.config/monitors.xml</dd>
+<dt><i>&lt;DEST_NAME&gt;</i></dt>
+<dd> relative name for the installed file. This will get put in the systemwide directory for RANDR configurations, so the result will typically be /etc/mate-settings-daemon/xrandr/DEST_NAME</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manual page was writtenby Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the Debian project (but may be used by others).</p>
 <h2>SEE ALSO</h2>

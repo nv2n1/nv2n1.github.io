@@ -170,14 +170,14 @@ description: "wireshark-filter – Wireshark filter syntax and reference"
 <h2>Filter Field Reference</h2>
 <p>The entire list of display filters is too large to list here. You can can find references and examples at the following locations:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The online Display Filter Reference: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/dfref/">http://www.wireshark.org/docs/dfref/</a>&gt;</p>
-<dt>&bull;</p>
-<dd><i>Help:Supported Protocols</i> in Wireshark</p>
-<dt>&bull;</p>
-<dd><tt>&quot;tshark -G fields&quot;</tt> on the command line</p>
-<dt>&bull;</p>
-<dd>The Wireshark wiki: &lt;<a rel="nofollow" href="http://wiki.wireshark.org/DisplayFilters">http://wiki.wireshark.org/DisplayFilters</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd>The online Display Filter Reference: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/dfref/">http://www.wireshark.org/docs/dfref/</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd><i>Help:Supported Protocols</i> in Wireshark</dd>
+<dt>&bull;</dt>
+<dd><tt>&quot;tshark -G fields&quot;</tt> on the command line</dd>
+<dt>&bull;</dt>
+<dd>The Wireshark wiki: &lt;<a rel="nofollow" href="http://wiki.wireshark.org/DisplayFilters">http://wiki.wireshark.org/DisplayFilters</a>&gt;</dd></dl>
 <h2>Notes</h2>
 <p>The <code>wireshark-filters</code> manpage is part of the <code>Wireshark</code> distribution. The latest version of <code>Wireshark</code> can be found at &lt;<a rel="nofollow" href="http://www.wireshark.org">http://www.wireshark.org</a>&gt;. </p>
 <p> Regular expressions in the &#8220;matches&#8221; operator are provided by GRegex in GLib. See &lt;<a rel="nofollow" href="http://developer.gnome.org/glib/2.32/glib-regex-syntax.html/">http://developer.gnome.org/glib/2.32/glib-regex-syntax.html/</a>&gt; or &lt;<a href="http://www.pcre.org/">http://www.pcre.org/</a>&gt; for more information. </p>

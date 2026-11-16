@@ -15,8 +15,8 @@ description: "XmHierarchyGetChildNodes — A List function that returns all inst
 <h2>Description</h2>
 <p><code>XmHierarchyGetChildNodes</code> is a function that returns a list of child nodes of a Hierarchy.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the Hierarchy widget.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the Hierarchy widget.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmhierarchy/">XmHierarchy</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns WidgetList with child nodes of the hierachy, or NULL if the hierachy contains no children.</p>

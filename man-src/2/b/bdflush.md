@@ -27,14 +27,14 @@ int bdflush(int func, long data);
 <p> If <i>func</i> is negative or 0 and the daemon successfully starts, <code>bdflush</code>() never returns. Otherwise, the return value is 0 on success and -1 on failure, with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> An attempt was made to enter the daemon code after another process has already entered.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>address</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> An attempt was made to read or write an invalid parameter number, or to write an invalid value to a parameter.</p>
-<dt><code>EPERM</code></p>
-<dd> Caller does not have the <code>CAP_SYS_ADMIN</code> capability.</dl>
+<dt><code>EBUSY</code></dt>
+<dd> An attempt was made to enter the daemon code after another process has already entered.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>address</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> An attempt was made to read or write an invalid parameter number, or to write an invalid value to a parameter.</dd>
+<dt><code>EPERM</code></dt>
+<dd> Caller does not have the <code>CAP_SYS_ADMIN</code> capability.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Since version 2.23, glibc no longer supports this obsolete system call.</p>
 <h2>CONFORMING TO</h2>

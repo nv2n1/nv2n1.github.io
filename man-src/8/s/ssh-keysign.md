@@ -16,24 +16,24 @@ description: "ssh-keysign – OpenSSH helper for host-based authentication"
 <p> <code>ssh-keysign</code> is not intended to be invoked by the user, but from <a href="/docs/linux/man/1-ssh/">ssh</a>(1). See <a href="/docs/linux/man/1-ssh/">ssh</a>(1) and <a href="/docs/linux/man/8-sshd/">sshd</a>(8) for more information about host-based authentication.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/ssh/ssh_config </code></p>
-<dd>Controls whether <code>ssh-keysign</code> is enabled. </p>
-<dt><code>/etc/ssh/ssh_host_dsa_key </code></p>
+<dt><code>/etc/ssh/ssh_config </code></dt>
+<dd>Controls whether <code>ssh-keysign</code> is enabled. </dd>
+<dt><code>/etc/ssh/ssh_host_dsa_key </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_ecdsa_key </code></p>
+</dd><dt><code>/etc/ssh/ssh_host_ecdsa_key </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_ed25519_key </code></p>
+</dd><dt><code>/etc/ssh/ssh_host_ed25519_key </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_rsa_key </code></p>
-<dd>These files contain the private parts of the host keys used to generate the digital signature. They should be owned by root, readable only by root, and not accessible to others. Since they are readable only by root, <code>ssh-keysign</code> must be set-uid root if host-based authentication is used. </p>
-<dt><code>/etc/ssh/ssh_host_dsa_key-cert.pub </code></p>
+</dd><dt><code>/etc/ssh/ssh_host_rsa_key </code></dt>
+<dd>These files contain the private parts of the host keys used to generate the digital signature. They should be owned by root, readable only by root, and not accessible to others. Since they are readable only by root, <code>ssh-keysign</code> must be set-uid root if host-based authentication is used. </dd>
+<dt><code>/etc/ssh/ssh_host_dsa_key-cert.pub </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_ecdsa_key-cert.pub </code></p>
+</dd><dt><code>/etc/ssh/ssh_host_ecdsa_key-cert.pub </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_ed25519_key-cert.pub </code></p>
+</dd><dt><code>/etc/ssh/ssh_host_ed25519_key-cert.pub </code></dt>
 <dd>
-<dt><code>/etc/ssh/ssh_host_rsa_key-cert.pub </code></p>
-<dd>If these files exist they are assumed to contain public certificate information corresponding with the private keys above.</dl>
+</dd><dt><code>/etc/ssh/ssh_host_rsa_key-cert.pub </code></dt>
+<dd>If these files exist they are assumed to contain public certificate information corresponding with the private keys above.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-keygen1, ssh_config5, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <h2>History</h2>

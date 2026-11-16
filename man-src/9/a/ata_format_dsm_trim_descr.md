@@ -14,16 +14,16 @@ description: "ata_format_dsm_trim_descr – SATL Write Same to DSM Trim"
 <p><i>cmd</i></p>
 <dl>
 <dd>
-<dd>SCSI command being translated</dl>
+</dd><dd>SCSI command being translated</dd></dl>
 <p> <i>trmax</i></p>
 <dl>
-<dd>Maximum number of entries that will fit in sector_size bytes.</dl>
+<dd>Maximum number of entries that will fit in sector_size bytes.</dd></dl>
 <p> <i>sector</i></p>
 <dl>
-<dd>Starting sector</dl>
+<dd>Starting sector</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>Total Range of request in logical sectors</dl>
+<dd>Total Range of request in logical sectors</dd></dl>
 <h2>Description</h2>
 <p>Rewrite the WRITE SAME descriptor to be a DSM TRIM little-endian formatted descriptor. </p>
 <p> Upto 64 entries of the format: 63:48 Range Length 47:0 LBA </p>
@@ -35,5 +35,5 @@ description: "ata_format_dsm_trim_descr – SATL Write Same to DSM Trim"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

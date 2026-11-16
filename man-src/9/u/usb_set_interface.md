@@ -14,13 +14,13 @@ description: "usb_set_interface – Makes a particular alternate setting be curr
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device whose interface is being updated</dl>
+</dd><dd>the device whose interface is being updated</dd></dl>
 <p> <i>interface</i></p>
 <dl>
-<dd>the interface being updated</dl>
+<dd>the interface being updated</dd></dl>
 <p> <i>alternate</i></p>
 <dl>
-<dd>the setting being chosen.</dl>
+<dd>the setting being chosen.</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

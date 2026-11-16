@@ -17,20 +17,20 @@ mongoc_collection_rename (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>new_db</code></p>
-<dd>The name of the new database.</dl>
+<dt><code>new_db</code></dt>
+<dd>The name of the new database.</dd></dl>
 <dl COMPACT>
-<dt><code>new_name</code></p>
-<dd>The new name for the collection.</dl>
+<dt><code>new_name</code></dt>
+<dd>The new name for the collection.</dd></dl>
 <dl COMPACT>
-<dt><code>drop_target_before_rename</code></p>
-<dd>If an existing collection matches the new name, drop it before the rename.</dl>
+<dt><code>drop_target_before_rename</code></dt>
+<dd>If an existing collection matches the new name, drop it before the rename.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function is a helper to rename an existing collection on a MongoDB server. The name of the collection will also be updated internally so it is safe to continue using this collection after the rename. Additional operations will occur on renamed collection. </p>
 <h2>Errors</h2>

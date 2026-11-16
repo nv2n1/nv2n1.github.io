@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_regular_file - std::filesystem::directory_e
 
 <pre><code>bool is_regular_file() const;
 (since C++ 17)
-
     bool is_regular_file(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a regular file. Effectively returns std::filesystem::is_regular_file(status()) or std::filesystem::is_regular_file(status(ec)), respectively 
 

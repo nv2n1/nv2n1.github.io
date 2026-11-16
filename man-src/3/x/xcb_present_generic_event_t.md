@@ -22,18 +22,18 @@ description: "xcb_present_generic_event_t –"
 } <code>xcb_present_generic_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_PRESENT_GENERIC</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>extension</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>length</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>evtype</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>event</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_PRESENT_GENERIC</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>extension</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>length</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>evtype</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>event</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

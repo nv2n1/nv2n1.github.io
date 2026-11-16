@@ -22,76 +22,76 @@ description: "nc – arbitrary TCP and UDP connections and listens"
 <li> and much, much more </ul>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-4</code></p>
-<dd> Use IPv4 addresses only.</p>
-<dt><code>-6</code></p>
-<dd> Use IPv6 addresses only.</p>
-<dt><code>-b</code></p>
-<dd> Allow broadcast.</p>
-<dt><code>-C</code></p>
-<dd> Send CRLF as line-ending. Each line feed (LF) character from the input data is translated into CR+LF before being written to the socket. Line feed characters that are already preceded with a carriage return (CR) are not translated. Received data is not affected.</p>
-<dt><code>-D</code></p>
-<dd> Enable debugging on the socket.</p>
-<dt><code>-d</code></p>
-<dd> Do not attempt to read from stdin.</p>
-<dt><code>-F</code></p>
-<dd> Pass the first connected socket using <a href="/docs/linux/man/2-sendmsg/">sendmsg</a>(2) to stdout and exit. This is useful in conjunction with &#8211;<code>X</code> to have <code>nc</code> perform connection setup with a proxy but then leave the rest of the connection to another program (e.g. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) using the ssh_config5 <code>ProxyUseFdpass</code> option). Cannot be used with &#8211;<code>U</code></p>
-<dt><code>-h</code></p>
-<dd> Print out the <code>nc</code> help text and exit.</p>
-<dt><code>-I </code><i>length</i></p>
-<dd> Specify the size of the TCP receive buffer.</p>
-<dt><code>-i </code><i>interval</i></p>
-<dd> Sleep for <i>interval</i> seconds between lines of text sent and received. Also causes a delay time between connections to multiple ports.</p>
-<dt><code>-k</code></p>
-<dd> When a connection is completed, listen for another one. Requires &#8211;<code>l</code> When used together with the &#8211;<code>u</code> option, the server socket is not connected and it can receive UDP datagrams from multiple hosts.</p>
-<dt><code>-l</code></p>
-<dd> Listen for an incoming connection rather than initiating a connection to a remote host. The <i>destination</i> and <i>port</i> to listen on can be specified either as non-optional arguments, or with options &#8211;<code>s</code> and &#8211;<code>p</code> respectively. Cannot be used together with &#8211;<code>x</code> or &#8211;<code>z</code> Additionally, any timeouts specified with the &#8211;<code>w</code> option are ignored.</p>
-<dt><code>-M </code><i>ttl</i></p>
-<dd> Set the TTL / hop limit of outgoing packets.</p>
-<dt><code>-m </code><i>minttl</i></p>
-<dd> Ask the kernel to drop incoming packets whose TTL / hop limit is under <i>minttl</i></p>
-<dt><code>-N</code></p>
-<dd> <a href="/docs/linux/man/2-shutdown/">shutdown</a>(2) the network socket after EOF on the input. Some servers require this to finish their work.</p>
-<dt><code>-n</code></p>
-<dd> Do not perform domain name resolution. If a name cannot be resolved without DNS, an error will be reported.</p>
-<dt><code>-O </code><i>length</i></p>
-<dd> Specify the size of the TCP send buffer.</p>
-<dt><code>-P </code><i>proxy_username</i></p>
-<dd> Specifies a username to present to a proxy server that requires authentication. If no username is specified then authentication will not be attempted. Proxy authentication is only supported for HTTP CONNECT proxies at present.</p>
-<dt><code>-p </code><i>source_port</i></p>
-<dd> Specify the source port <code>nc</code> should use, subject to privilege restrictions and availability.</p>
-<dt><code>-q </code><i>seconds</i></p>
-<dd> after EOF on stdin, wait the specified number of <i>seconds</i> and then quit. If <i>seconds</i> is negative, wait forever (default). Specifying a non-negative <i>seconds</i> implies &#8211;<code>N</code></p>
-<dt><code>-r</code></p>
-<dd> Choose source and/or destination ports randomly instead of sequentially within a range or in the order that the system assigns them.</p>
-<dt><code>-S</code></p>
-<dd> Enable the RFC 2385 TCP MD5 signature option.</p>
-<dt><code>-s </code><i>sourceaddr</i></p>
-<dd> Set the source address to send packets from, which is useful on machines with multiple interfaces. For UNIX datagram sockets, specifies the local temporary socket file to create and use so that datagrams can be received. Cannot be used together with &#8211;<code>x</code></p>
-<dt><code>-T </code><i>keyword</i></p>
-<dd> Change the IPv4 TOS/IPv6 traffic class value. <i>keyword</i> may be one of <code>critical</code> <code>inetcontrol</code> <code>lowcost</code> <code>lowdelay</code> <code>netcontrol</code> <code>throughput</code> <code>reliability</code> or one of the DiffServ Code Points: <code>ef</code> <code>af11 &#8230; af43</code> <code>cs0 &#8230; cs7</code> or a number in either hex or decimal.</p>
-<dt><code>-t</code></p>
-<dd> Send RFC 854 DON&#8217;T and WON&#8217;T responses to RFC 854 DO and WILL requests. This makes it possible to use <code>nc</code> to script telnet sessions.</p>
-<dt><code>-U</code></p>
-<dd> Use UNIX sockets. Cannot be used together with &#8211;<code>F</code> or &#8211;<code>x</code></p>
-<dt><code>-u</code></p>
-<dd> Use UDP instead of TCP. Cannot be used together with &#8211;<code>x</code> For UNIX sockets, use a datagram socket instead of a stream socket. If a UNIX socket is used, a temporary receiving socket is created in /tmp unless the &#8211;<code>s</code> flag is given.</p>
-<dt><code>-V </code><i>rtable</i></p>
-<dd> Set the routing table to be used.</p>
-<dt><code>-v</code></p>
-<dd> Produce more verbose output.</p>
-<dt><code>-W </code><i>recvlimit</i></p>
-<dd> Terminate after receiving <i>recvlimit</i> packets from the network.</p>
-<dt><code>-w </code><i>timeout</i></p>
-<dd> Connections which cannot be established or are idle timeout after <i>timeout</i> seconds. The &#8211;<code>w</code> flag has no effect on the &#8211;<code>l</code> option, i.e. <code>nc</code> will listen forever for a connection, with or without the &#8211;<code>w</code> flag. The default is no timeout.</p>
-<dt><code>-X </code><i>proxy_protocol</i></p>
-<dd> Use <i>proxy_protocol</i> when talking to the proxy server. Supported protocols are <code>4</code> (SOCKS v.4), <code>5</code> (SOCKS v.5) and <code>connect</code> (HTTPS proxy). If the protocol is not specified, SOCKS version 5 is used.</p>
-<dt><code>-x </code><i>proxy_address </i>[: <i>port</i> ]</p>
-<dd> Connect to <i>destination</i> using a proxy at <i>proxy_address</i> and <i>port</i> If <i>port</i> is not specified, the well-known port for the proxy protocol is used (1080 for SOCKS, 3128 for HTTPS). An IPv6 address can be specified unambiguously by enclosing <i>proxy_address</i> in square brackets. A proxy cannot be used with any of the options &#8211;<code>lsuU</code></p>
-<dt><code>-Z</code></p>
-<dd> DCCP mode.</p>
-<dt><code>-z</code></p>
-<dd> Only scan for listening daemons, without sending any data to them. Cannot be used together with &#8211;<code>l</code></dl>
+<dt><code>-4</code></dt>
+<dd> Use IPv4 addresses only.</dd>
+<dt><code>-6</code></dt>
+<dd> Use IPv6 addresses only.</dd>
+<dt><code>-b</code></dt>
+<dd> Allow broadcast.</dd>
+<dt><code>-C</code></dt>
+<dd> Send CRLF as line-ending. Each line feed (LF) character from the input data is translated into CR+LF before being written to the socket. Line feed characters that are already preceded with a carriage return (CR) are not translated. Received data is not affected.</dd>
+<dt><code>-D</code></dt>
+<dd> Enable debugging on the socket.</dd>
+<dt><code>-d</code></dt>
+<dd> Do not attempt to read from stdin.</dd>
+<dt><code>-F</code></dt>
+<dd> Pass the first connected socket using <a href="/docs/linux/man/2-sendmsg/">sendmsg</a>(2) to stdout and exit. This is useful in conjunction with &#8211;<code>X</code> to have <code>nc</code> perform connection setup with a proxy but then leave the rest of the connection to another program (e.g. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) using the ssh_config5 <code>ProxyUseFdpass</code> option). Cannot be used with &#8211;<code>U</code></dd>
+<dt><code>-h</code></dt>
+<dd> Print out the <code>nc</code> help text and exit.</dd>
+<dt><code>-I </code><i>length</i></dt>
+<dd> Specify the size of the TCP receive buffer.</dd>
+<dt><code>-i </code><i>interval</i></dt>
+<dd> Sleep for <i>interval</i> seconds between lines of text sent and received. Also causes a delay time between connections to multiple ports.</dd>
+<dt><code>-k</code></dt>
+<dd> When a connection is completed, listen for another one. Requires &#8211;<code>l</code> When used together with the &#8211;<code>u</code> option, the server socket is not connected and it can receive UDP datagrams from multiple hosts.</dd>
+<dt><code>-l</code></dt>
+<dd> Listen for an incoming connection rather than initiating a connection to a remote host. The <i>destination</i> and <i>port</i> to listen on can be specified either as non-optional arguments, or with options &#8211;<code>s</code> and &#8211;<code>p</code> respectively. Cannot be used together with &#8211;<code>x</code> or &#8211;<code>z</code> Additionally, any timeouts specified with the &#8211;<code>w</code> option are ignored.</dd>
+<dt><code>-M </code><i>ttl</i></dt>
+<dd> Set the TTL / hop limit of outgoing packets.</dd>
+<dt><code>-m </code><i>minttl</i></dt>
+<dd> Ask the kernel to drop incoming packets whose TTL / hop limit is under <i>minttl</i></dd>
+<dt><code>-N</code></dt>
+<dd> <a href="/docs/linux/man/2-shutdown/">shutdown</a>(2) the network socket after EOF on the input. Some servers require this to finish their work.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not perform domain name resolution. If a name cannot be resolved without DNS, an error will be reported.</dd>
+<dt><code>-O </code><i>length</i></dt>
+<dd> Specify the size of the TCP send buffer.</dd>
+<dt><code>-P </code><i>proxy_username</i></dt>
+<dd> Specifies a username to present to a proxy server that requires authentication. If no username is specified then authentication will not be attempted. Proxy authentication is only supported for HTTP CONNECT proxies at present.</dd>
+<dt><code>-p </code><i>source_port</i></dt>
+<dd> Specify the source port <code>nc</code> should use, subject to privilege restrictions and availability.</dd>
+<dt><code>-q </code><i>seconds</i></dt>
+<dd> after EOF on stdin, wait the specified number of <i>seconds</i> and then quit. If <i>seconds</i> is negative, wait forever (default). Specifying a non-negative <i>seconds</i> implies &#8211;<code>N</code></dd>
+<dt><code>-r</code></dt>
+<dd> Choose source and/or destination ports randomly instead of sequentially within a range or in the order that the system assigns them.</dd>
+<dt><code>-S</code></dt>
+<dd> Enable the RFC 2385 TCP MD5 signature option.</dd>
+<dt><code>-s </code><i>sourceaddr</i></dt>
+<dd> Set the source address to send packets from, which is useful on machines with multiple interfaces. For UNIX datagram sockets, specifies the local temporary socket file to create and use so that datagrams can be received. Cannot be used together with &#8211;<code>x</code></dd>
+<dt><code>-T </code><i>keyword</i></dt>
+<dd> Change the IPv4 TOS/IPv6 traffic class value. <i>keyword</i> may be one of <code>critical</code> <code>inetcontrol</code> <code>lowcost</code> <code>lowdelay</code> <code>netcontrol</code> <code>throughput</code> <code>reliability</code> or one of the DiffServ Code Points: <code>ef</code> <code>af11 &#8230; af43</code> <code>cs0 &#8230; cs7</code> or a number in either hex or decimal.</dd>
+<dt><code>-t</code></dt>
+<dd> Send RFC 854 DON&#8217;T and WON&#8217;T responses to RFC 854 DO and WILL requests. This makes it possible to use <code>nc</code> to script telnet sessions.</dd>
+<dt><code>-U</code></dt>
+<dd> Use UNIX sockets. Cannot be used together with &#8211;<code>F</code> or &#8211;<code>x</code></dd>
+<dt><code>-u</code></dt>
+<dd> Use UDP instead of TCP. Cannot be used together with &#8211;<code>x</code> For UNIX sockets, use a datagram socket instead of a stream socket. If a UNIX socket is used, a temporary receiving socket is created in /tmp unless the &#8211;<code>s</code> flag is given.</dd>
+<dt><code>-V </code><i>rtable</i></dt>
+<dd> Set the routing table to be used.</dd>
+<dt><code>-v</code></dt>
+<dd> Produce more verbose output.</dd>
+<dt><code>-W </code><i>recvlimit</i></dt>
+<dd> Terminate after receiving <i>recvlimit</i> packets from the network.</dd>
+<dt><code>-w </code><i>timeout</i></dt>
+<dd> Connections which cannot be established or are idle timeout after <i>timeout</i> seconds. The &#8211;<code>w</code> flag has no effect on the &#8211;<code>l</code> option, i.e. <code>nc</code> will listen forever for a connection, with or without the &#8211;<code>w</code> flag. The default is no timeout.</dd>
+<dt><code>-X </code><i>proxy_protocol</i></dt>
+<dd> Use <i>proxy_protocol</i> when talking to the proxy server. Supported protocols are <code>4</code> (SOCKS v.4), <code>5</code> (SOCKS v.5) and <code>connect</code> (HTTPS proxy). If the protocol is not specified, SOCKS version 5 is used.</dd>
+<dt><code>-x </code><i>proxy_address </i>[: <i>port</i> ]</dt>
+<dd> Connect to <i>destination</i> using a proxy at <i>proxy_address</i> and <i>port</i> If <i>port</i> is not specified, the well-known port for the proxy protocol is used (1080 for SOCKS, 3128 for HTTPS). An IPv6 address can be specified unambiguously by enclosing <i>proxy_address</i> in square brackets. A proxy cannot be used with any of the options &#8211;<code>lsuU</code></dd>
+<dt><code>-Z</code></dt>
+<dd> DCCP mode.</dd>
+<dt><code>-z</code></dt>
+<dd> Only scan for listening daemons, without sending any data to them. Cannot be used together with &#8211;<code>l</code></dd></dl>
 <p> <i>destination</i> can be a numerical IP address or a symbolic hostname (unless the &#8211;<code>n</code> option is given). In general, a destination must be specified, unless the &#8211;<code>l</code> option is given (in which case the local host is used). For UNIX sockets, a destination is required and is the socket path to connect to (or listen on if the &#8211;<code>l</code> option is given). </p>
 <p> <i>port</i> can be specified as a numeric port number or as a service name. Port ranges may be specified as numeric port numbers of the form <i>nn </i><code>&#8211; </code><i>mm</i> In general, a destination port must be specified, unless the &#8211;<code>U</code> option is given.</p>
 <h2>CLIENT/SERVER MODEL</h2>
@@ -122,7 +122,6 @@ description: "nc – arbitrary TCP and UDP connections and listens"
 <blockquote>
 <pre>
 $ printf &quot;GET / HTTP/1.0
-
 &quot; | nc host.example.com 80
 </pre>
 </blockquote>

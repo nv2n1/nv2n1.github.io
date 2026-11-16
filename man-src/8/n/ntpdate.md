@@ -17,39 +17,39 @@ description: "ntpdate – set the date and time via NTP"
 <h2>Command Line Options</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>-4</code></p>
-<dd>Force DNS resolution of following host names on the command line to the IPv4 namespace.</p>
-<dt><code>-6</code></p>
-<dd>Force DNS resolution of following host names on the command line to the IPv6 namespace.</p>
-<dt><code>-a </code><i>key</i></p>
-<dd>Enable the authentication function and specify the key identifier to be used for authentication as the argument <i>key</i>46 The keys and key identifiers must match in both the client and server key files. The default is to disable the authentication function.</p>
-<dt><code>-B</code></p>
-<dd>Force the time to always be slewed using the adjtime() system call, even if the measured offset is greater than +-500 ms. The default is to step the time using settimeofday() if the offset is greater than +-500 ms. Note that, if the offset is much greater than +-500 ms in this case, that it can take a long time (hours) to slew the clock to the correct value. During this time. the host should not be used to synchronize clients.</p>
-<dt><code>-b</code></p>
-<dd>Force the time to be stepped using the settimeofday() system call, rather than slewed (default) using the adjtime() system call. This option should be used when called from a startup file at boot time.</p>
-<dt><code>-d</code></p>
-<dd>Enable the debugging mode, in which <code>ntpdate</code> will go through all the steps, but not adjust the local clock. Information useful for general debugging will also be printed.</p>
-<dt><code>-e </code><i>authdelay</i></p>
-<dd>Specify the processing delay to perform an authentication function as the value <i>authdelay</i>, in seconds and fraction (see <code>ntpd</code> for details). This number is usually small enough to be negligible for most purposes, though specifying a value may improve timekeeping on very slow CPU&#8217;s.</p>
-<dt><code>-k </code><i>keyfile</i></p>
-<dd>Specify the path for the authentication key file as the string <i>keyfile</i>46 The default is <code>/etc/ntp/keys</code>46 This file should be in the format described in <code>ntpd</code>46</p>
-<dt><code>-o </code><i>version</i></p>
-<dd>Specify the NTP version for outgoing packets as the integer <i>version</i>, which can be 1 or 2. The default is 4. This allows <code>ntpdate</code> to be used with older NTP versions.</p>
-<dt><code>-p </code><i>samples</i></p>
-<dd>Specify the number of samples to be acquired from each server as the integer <i>samples</i>, with values from 1 to 8 inclusive. The default is 4.</p>
-<dt><i></i><code>-q</code><i></i></p>
-<dd>Query only &#8211; don&#8217;t set the clock.</p>
-<dt><code>-s</code></p>
-<dd>Divert logging output from the standard output (default) to the system <code>syslog</code> facility. This is designed primarily for convenience of <code>cron</code> scripts.</p>
-<dt><code>-t </code><i>timeout</i></p>
-<dd>Specify the maximum time waiting for a server response as the value <i>timeout</i>, in seconds and fraction. The value is is rounded to a multiple of 0.2 seconds. The default is 1 second, a value suitable for polling across a LAN.</p>
-<dt><code>-u</code></p>
-<dd>Direct <code>ntpdate</code> to use an unprivileged port for outgoing packets. This is most useful when behind a firewall that blocks incoming traffic to privileged ports, and you want to synchronize with hosts beyond the firewall. Note that the <code>-d</code> option always uses unprivileged ports.</p>
-<dt><code>&#8211;</code><i>v</i></p>
-<dd>Be verbose. This option will cause <code>ntpdate</code>&#8216;s version identification string to be logged.</p>
-<dt><code>-U </code><i>user_name</i></p>
-<dd>ntpdate process drops root privileges and changes user ID to <i>user_name</i> and group ID to the primary group of <i>server_user</i>46</dl>
+</dd><dl>
+<dt><code>-4</code></dt>
+<dd>Force DNS resolution of following host names on the command line to the IPv4 namespace.</dd>
+<dt><code>-6</code></dt>
+<dd>Force DNS resolution of following host names on the command line to the IPv6 namespace.</dd>
+<dt><code>-a </code><i>key</i></dt>
+<dd>Enable the authentication function and specify the key identifier to be used for authentication as the argument <i>key</i>46 The keys and key identifiers must match in both the client and server key files. The default is to disable the authentication function.</dd>
+<dt><code>-B</code></dt>
+<dd>Force the time to always be slewed using the adjtime() system call, even if the measured offset is greater than +-500 ms. The default is to step the time using settimeofday() if the offset is greater than +-500 ms. Note that, if the offset is much greater than +-500 ms in this case, that it can take a long time (hours) to slew the clock to the correct value. During this time. the host should not be used to synchronize clients.</dd>
+<dt><code>-b</code></dt>
+<dd>Force the time to be stepped using the settimeofday() system call, rather than slewed (default) using the adjtime() system call. This option should be used when called from a startup file at boot time.</dd>
+<dt><code>-d</code></dt>
+<dd>Enable the debugging mode, in which <code>ntpdate</code> will go through all the steps, but not adjust the local clock. Information useful for general debugging will also be printed.</dd>
+<dt><code>-e </code><i>authdelay</i></dt>
+<dd>Specify the processing delay to perform an authentication function as the value <i>authdelay</i>, in seconds and fraction (see <code>ntpd</code> for details). This number is usually small enough to be negligible for most purposes, though specifying a value may improve timekeeping on very slow CPU&#8217;s.</dd>
+<dt><code>-k </code><i>keyfile</i></dt>
+<dd>Specify the path for the authentication key file as the string <i>keyfile</i>46 The default is <code>/etc/ntp/keys</code>46 This file should be in the format described in <code>ntpd</code>46</dd>
+<dt><code>-o </code><i>version</i></dt>
+<dd>Specify the NTP version for outgoing packets as the integer <i>version</i>, which can be 1 or 2. The default is 4. This allows <code>ntpdate</code> to be used with older NTP versions.</dd>
+<dt><code>-p </code><i>samples</i></dt>
+<dd>Specify the number of samples to be acquired from each server as the integer <i>samples</i>, with values from 1 to 8 inclusive. The default is 4.</dd>
+<dt><i></i><code>-q</code><i></i></dt>
+<dd>Query only &#8211; don&#8217;t set the clock.</dd>
+<dt><code>-s</code></dt>
+<dd>Divert logging output from the standard output (default) to the system <code>syslog</code> facility. This is designed primarily for convenience of <code>cron</code> scripts.</dd>
+<dt><code>-t </code><i>timeout</i></dt>
+<dd>Specify the maximum time waiting for a server response as the value <i>timeout</i>, in seconds and fraction. The value is is rounded to a multiple of 0.2 seconds. The default is 1 second, a value suitable for polling across a LAN.</dd>
+<dt><code>-u</code></dt>
+<dd>Direct <code>ntpdate</code> to use an unprivileged port for outgoing packets. This is most useful when behind a firewall that blocks incoming traffic to privileged ports, and you want to synchronize with hosts beyond the firewall. Note that the <code>-d</code> option always uses unprivileged ports.</dd>
+<dt><code>&#8211;</code><i>v</i></dt>
+<dd>Be verbose. This option will cause <code>ntpdate</code>&#8216;s version identification string to be logged.</dd>
+<dt><code>-U </code><i>user_name</i></dt>
+<dd>ntpdate process drops root privileges and changes user ID to <i>user_name</i> and group ID to the primary group of <i>server_user</i>46</dd></dl>
 </dl>
 <h2>Diagnostics</h2>
 <p><code>ntpdate</code>&#8216;s exit status is zero if it finds a server and updates the clock, and nonzero otherwise.</p>

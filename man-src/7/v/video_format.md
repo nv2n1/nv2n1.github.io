@@ -13,12 +13,12 @@ description: "video_format – Proposal For A Video Format Preference Specificat
 <p> Therefore, there needs to be a way for the user to configure a single default that will apply to all these programs. This default should be settable on a per-user basis and a systemwide basis, with the per-user setting overriding the systemwide one, as is usual. It makes sense to avoid dotfile clutter by following, at least to some extent, the XDG Base Directory Specification <a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/latest/.">http://standards.freedesktop.org/basedir-spec/latest/.</a> </p>
 <p> The preference setting shall consist of the single word “NTSC” or “PAL” (without quotes, might as well be case-insensitive). This can be specified in the following ways, in order of decreasing priority:</p>
 <dl>
-<dt>&bull;</p>
-<dd>As the value of the environment variable VIDEO_FORMAT</p>
-<dt>&bull;</p>
-<dd>As the contents of the user-specific file $XDG_CONFIG_HOME/video_format, with $XDG_CONFIG_HOME defaulting to $HOME/.config if not defined.</p>
-<dt>&bull;</p>
-<dd>As the contents of a systemwide file <i>dir</i>/video_format, where <i>dir</i> is taken in turn from the colon-separated items in the value of $XDG_CONFIG_DIRS until the file is found, or if $XDG_CONFIG_DIRS is not defined, then the single directory /etc.</dl>
+<dt>&bull;</dt>
+<dd>As the value of the environment variable VIDEO_FORMAT</dd>
+<dt>&bull;</dt>
+<dd>As the contents of the user-specific file $XDG_CONFIG_HOME/video_format, with $XDG_CONFIG_HOME defaulting to $HOME/.config if not defined.</dd>
+<dt>&bull;</dt>
+<dd>As the contents of a systemwide file <i>dir</i>/video_format, where <i>dir</i> is taken in turn from the colon-separated items in the value of $XDG_CONFIG_DIRS until the file is found, or if $XDG_CONFIG_DIRS is not defined, then the single directory /etc.</dd></dl>
 <p> The application should use the first of these settings that it finds, searching in the specified order. </p>
 <p> <code>Note:</code> the XDG Base Dir spec says systemwide config files should go in /etc/xdg. I&#8217;m not sure why this is, since lots of other apps put systemwide config in other places in /etc. Particularly since the spec doesn’t similarly restrict shared read-only data to just one subdirectory of /usr/share.</p>
 <h2>Discussion</h2>

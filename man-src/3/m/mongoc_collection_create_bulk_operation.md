@@ -17,14 +17,14 @@ mongoc_collection_create_bulk_operation (
  BSON_GNUC_WARN_UNUSED_RESULT;</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>ordered</code></p>
-<dd>If the operations must be performed in order.</dl>
+<dt><code>ordered</code></dt>
+<dd>If the operations must be performed in order.</dd></dl>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>An optional <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>An optional <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall begin a new bulk operation. After creating this you may call various functions such as <code><a href="/docs/linux/man/3-mongoc_bulk_operation_update/">mongoc_bulk_operation_update</a>(3)</code> , <code><a href="/docs/linux/man/3-mongoc_bulk_operation_insert/">mongoc_bulk_operation_insert</a>(3)</code> and others. </p>
 <p> After calling <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> the commands will be executed in as large as batches as reasonable by the client. </p>
@@ -37,6 +37,6 @@ mongoc_collection_create_bulk_operation (
 <p>A newly allocated <code>mongoc_bulk_operation_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_bulk_operation_destroy/">mongoc_bulk_operation_destroy</a>(3)</code> when no longer in use. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Failure to handle the result of this function is a programming error.</dl>
+<dd>Failure to handle the result of this function is a programming error.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

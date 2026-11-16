@@ -11,10 +11,10 @@ description: "bf_copy – shell script to copy a bogofilter working directory"
 <p> bf_copy &#8211; shell script to copy a bogofilter working directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bf_copy</code> [-c] <i>source_dir</i> <i>destination_dir</i></dl>
+<dt> <code>bf_copy</code> [-c] <i>source_dir</i> <i>destination_dir</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>bf_copy</code></p>
-<dd>copies a bogofilter working directory to another directory. Currently it copies the database files (*.db), related files (log.*), and DB_CONFIG (if present).</p>
+<dd>copies a bogofilter working directory to another directory. Currently it copies the database files (*.db), related files (log.*), and DB_CONFIG (if present).</dd>
 <h2>OPTIONS</h2>
 <p> The <code>-c</code> option causes only active log files to be copied, not all. The default is to copy all log files.</p>
 <h2>EXIT STATUS</h2>

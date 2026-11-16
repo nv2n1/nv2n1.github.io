@@ -47,24 +47,24 @@ cur-&gt;x = cur-&gt;y : D;<br />
 cur-&gt;y = temp;</p>
 <p> Data type specifiers follow standard <font SIZE="-1">FITS</font> table syntax for defining columns using <font SIZE="-1">TFORM:</font></p>
 <dl>
-<dt>*</p>
-<dd> A: <font SIZE="-1">ASCII</font> characters</p>
-<dt>*</p>
-<dd> B: unsigned 8-bit char</p>
-<dt>*</p>
-<dd> I: signed 16-bit int</p>
-<dt>*</p>
-<dd> U: unsigned 16-bit int (not standard <font SIZE="-1">FITS</font>)</p>
-<dt>*</p>
-<dd> J: signed 32-bit int</p>
-<dt>*</p>
-<dd> V: unsigned 32-bit int (not standard <font SIZE="-1">FITS</font>)</p>
-<dt>*</p>
-<dd> E: 32-bit float</p>
-<dt>*</p>
-<dd> D: 64-bit float</p>
-<dt>*</p>
-<dd> X: bits (treated as an array of chars)</dl>
+<dt>*</dt>
+<dd> A: <font SIZE="-1">ASCII</font> characters</dd>
+<dt>*</dt>
+<dd> B: unsigned 8-bit char</dd>
+<dt>*</dt>
+<dd> I: signed 16-bit int</dd>
+<dt>*</dt>
+<dd> U: unsigned 16-bit int (not standard <font SIZE="-1">FITS</font>)</dd>
+<dt>*</dt>
+<dd> J: signed 32-bit int</dd>
+<dt>*</dt>
+<dd> V: unsigned 32-bit int (not standard <font SIZE="-1">FITS</font>)</dd>
+<dt>*</dt>
+<dd> E: 32-bit float</dd>
+<dt>*</dt>
+<dd> D: 64-bit float</dd>
+<dt>*</dt>
+<dd> X: bits (treated as an array of chars)</dd></dl>
 <p> Note that only the first reference to a column should contain the explicit data type specifier. </p>
 <p> Of course, it is important to handle the data type of the columns correctly. One of the most frequent cause of error in <code>funcalc</code> programming is the implicit use of the wrong data type for a column in expression. For example, the calculation: </p>
 <pre>
@@ -122,14 +122,14 @@ fprintf(stdout, &#8220;%f	%f	%f	%f
 </pre>
 <p> The directives are:</p>
 <dl>
-<dt>*</p>
-<dd> <code>global</code> add code and declarations in global space, before the main routine.</p>
-<dt>*</p>
-<dd> <code>local</code> add declarations (and code) just after the local declarations in main</p>
-<dt>*</p>
-<dd> <code>before</code> add code just before entering the main row processing loop</p>
-<dt>*</p>
-<dd> <code>after</code> add code just after exiting the main row processing loop</dl>
+<dt>*</dt>
+<dd> <code>global</code> add code and declarations in global space, before the main routine.</dd>
+<dt>*</dt>
+<dd> <code>local</code> add declarations (and code) just after the local declarations in main</dd>
+<dt>*</dt>
+<dd> <code>before</code> add code just before entering the main row processing loop</dd>
+<dt>*</dt>
+<dd> <code>after</code> add code just after exiting the main row processing loop</dd></dl>
 <p> Thus, the following <code>funcalc</code> expression will declare global variables and make subroutine calls just before and just after the main processing loop: </p>
 <p>global double v1, v2;<br />
 double init(void);<br />

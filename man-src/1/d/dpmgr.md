@@ -29,40 +29,40 @@ description: "dpmgr – administration utility for QDBM Depot"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#depotcli.</p>
 <dl>
-<dt><code>-s</code></p>
-<dd> make the file sparse.</p>
-<dt><code>-bnum </code><i>num</i></p>
-<dd> specify the number of the elements of the bucket array.</p>
-<dt><code>-kx</code></p>
-<dd> treat <i>key</i> as a binary expression of hexadecimal notation.</p>
-<dt><code>-ki</code></p>
-<dd> treat <i>key</i> as an integer expression of decimal notation.</p>
-<dt><code>-vx</code></p>
-<dd> treat <i>val</i> as a binary expression of hexadecimal notation.</p>
-<dt><code>-vi</code></p>
-<dd> treat <i>val</i> as an integer expression of decimal notation.</p>
-<dt><code>-vf</code></p>
-<dd> read the value from a file specified with <i>val</i>.</p>
-<dt><code>-keep</code></p>
-<dd> specify the storing mode for `DP_DKEEP&#8217;.</p>
-<dt><code>-cat</code></p>
-<dd> specify the storing mode for `DP_DCAT&#8217;.</p>
-<dt><code>-na</code></p>
-<dd> do not set alignment.</p>
-<dt><code>-nl</code></p>
-<dd> open the database without file locking.</p>
-<dt><code>-start</code></p>
-<dd> specify the beginning offset of a value to fetch.</p>
-<dt><code>-max</code></p>
-<dd> specify the max size of a value to fetch.</p>
-<dt><code>-ox</code></p>
-<dd> treat the output as a binary expression of hexadecimal notation.</p>
-<dt><code>-n</code></p>
-<dd> do not output the tailing newline.</p>
-<dt><code>-k</code></p>
-<dd> output keys only.</p>
-<dt><code>-v</code></p>
-<dd> output values only.</dl>
+<dt><code>-s</code></dt>
+<dd> make the file sparse.</dd>
+<dt><code>-bnum </code><i>num</i></dt>
+<dd> specify the number of the elements of the bucket array.</dd>
+<dt><code>-kx</code></dt>
+<dd> treat <i>key</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-ki</code></dt>
+<dd> treat <i>key</i> as an integer expression of decimal notation.</dd>
+<dt><code>-vx</code></dt>
+<dd> treat <i>val</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-vi</code></dt>
+<dd> treat <i>val</i> as an integer expression of decimal notation.</dd>
+<dt><code>-vf</code></dt>
+<dd> read the value from a file specified with <i>val</i>.</dd>
+<dt><code>-keep</code></dt>
+<dd> specify the storing mode for `DP_DKEEP&#8217;.</dd>
+<dt><code>-cat</code></dt>
+<dd> specify the storing mode for `DP_DCAT&#8217;.</dd>
+<dt><code>-na</code></dt>
+<dd> do not set alignment.</dd>
+<dt><code>-nl</code></dt>
+<dd> open the database without file locking.</dd>
+<dt><code>-start</code></dt>
+<dd> specify the beginning offset of a value to fetch.</dd>
+<dt><code>-max</code></dt>
+<dd> specify the max size of a value to fetch.</dd>
+<dt><code>-ox</code></dt>
+<dd> treat the output as a binary expression of hexadecimal notation.</dd>
+<dt><code>-n</code></dt>
+<dd> do not output the tailing newline.</dd>
+<dt><code>-k</code></dt>
+<dd> output keys only.</dd>
+<dt><code>-v</code></dt>
+<dd> output values only.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-dptsv/">dptsv</a></code>(1), <code>dpopen</code>(3).</p>
 <h2>AUTHOR</h2>

@@ -25,26 +25,26 @@ extern int signgam;
 <p> <code>lgamma</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L || _XOPEN_SOURCE<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L || _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>lgammaf</code>(), <code>lgammal</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>lgamma_r</code>(), <code>lgammaf_r</code>(), <code>lgammal_r</code>():</p>
 <dl>
 <dt>
-<dd> /* Since glibc 2.19: */ _DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+</dt><dd> /* Since glibc 2.19: */ _DEFAULT_SOURCE<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <i>signgam</i>:</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> For the definition of the Gamma function, see <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3). </p>
 <p> The <code>lgamma</code>(), <code>lgammaf</code>(), and <code>lgammal</code>() functions return the natural logarithm of the absolute value of the Gamma function. The sign of the Gamma function is returned in the external integer <i>signgam</i> declared in <i>&lt;math.h&gt;</i>. It is 1 when the Gamma function is positive or zero, -1 when it is negative. </p>
@@ -60,10 +60,10 @@ extern int signgam;
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Pole error: <i>x</i> is a nonpositive integer</p>
-<dd> <i>errno</i> is set to <code>ERANGE</code> (but see BUGS). A divide-by-zero floating-point exception (<code>FE_DIVBYZERO</code>) is raised.</p>
-<dt>Range error: result overflow</p>
-<dd> <i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dl>
+<dt>Pole error: <i>x</i> is a nonpositive integer</dt>
+<dd> <i>errno</i> is set to <code>ERANGE</code> (but see BUGS). A divide-by-zero floating-point exception (<code>FE_DIVBYZERO</code>) is raised.</dd>
+<dt>Range error: result overflow</dt>
+<dd> <i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> The <code>lgamma</code>() functions are specified in C99, POSIX.1-2001, and POSIX.1-2008. <i>signgam</i> is specified in POSIX.1-2001 and POSIX.1-2008, but not in C99. The <code>lgamma_r</code>() functions are nonstandard, but present on several other systems.</p>
 <h2>BUGS</h2>

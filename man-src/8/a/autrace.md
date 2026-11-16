@@ -14,8 +14,8 @@ description: "autrace – a program similar to strace"
 <p><code>autrace</code> is a program that will add the audit rules to trace a process similar to strace. It will then execute the <i>program</i> passing <i>arguments</i> to it. The resulting audit information will be in the audit logs if the audit daemon is running or syslog. This command deletes all audit rules prior to executing the target program and after executing it. As a safety precaution, it will not run unless all rules are deleted with <code>auditctl</code> prior to use.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd>Limit syscalls collected to ones needed for analyzing resource usage. This could help people doing threat modeling. This saves space in logs.</dl>
+<dt><code>-r</code></dt>
+<dd>Limit syscalls collected to ones needed for analyzing resource usage. This could help people doing threat modeling. This saves space in logs.</dd></dl>
 <h2>Examples</h2>
 <p>The following illustrates a typical session: </p>
 <pre><code>autrace /bin/ls /tmp</code>

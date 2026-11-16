@@ -20,14 +20,14 @@ description: "aa_getmouse – Get mouse position as specified by last mouse even
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int *x</code></p>
-<dd> Used to return X coordinate of mouse in characters.</p>
-<dt><code>int *y</code></p>
-<dd> Used to return Y coordinate of mouse in characters.</p>
-<dt><code>int *b</code></p>
-<dd> Used to return button mask of mouse. (Values used are AA_BUTTON1, AA_BUTTON2 and AA_BUTTON3).</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int *x</code></dt>
+<dd> Used to return X coordinate of mouse in characters.</dd>
+<dt><code>int *y</code></dt>
+<dd> Used to return Y coordinate of mouse in characters.</dd>
+<dt><code>int *b</code></dt>
+<dd> Used to return button mask of mouse. (Values used are AA_BUTTON1, AA_BUTTON2 and AA_BUTTON3).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get mouse position as specified by last mouse event read by aa_getevent.</p>
 <h2>SEE ALSO</h2>

@@ -11,9 +11,7 @@ std::isxdigit(std::locale) - std::isxdigit(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     bool isxdigit(charT ch, const locale &amp;loc);</code></pre> 
 Checks if the given character is classified as a hexadecimal digit by the given locale's std::ctype facet. 
 

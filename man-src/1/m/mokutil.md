@@ -58,65 +58,64 @@ description: "mokutil – utility to manipulate machine owner keys"
 <p> <code>mokutil</code> is a tool to import or delete the machines owner keys (MOK) stored in the database of shim. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l, &#8211;list-enrolled</code></p>
-<dd> List the keys the already stored in the database</p>
-<dt><code>-N, &#8211;list-new</code></p>
-<dd> List the keys to be enrolled</p>
-<dt><code>-D, &#8211;list-delete</code></p>
-<dd> List the keys to be deleted</p>
-<dt><code>-i, &#8211;import</code></p>
-<dd> Collect the followed files and form a enrolling request to shim. The files must be in DER format.</p>
-<dt><code>-d, &#8211;delete</code></p>
-<dd> Collect the followed files and form a deleting request to shim. The files must be in DER format.</p>
-<dt><code>&#8211;revoke-import</code></p>
-<dd> Revoke the current import request (MokNew)</p>
-<dt><code>&#8211;revoke-delete</code></p>
-<dd> Revoke the current delete request (MokDel)</p>
-<dt><code>-x, &#8211;export</code></p>
-<dd> Export the keys stored in MokListRT</p>
-<dt><code>-p, &#8211;password</code></p>
-<dd> Setup the password for MokManager (MokPW)</p>
-<dt><code>-c, &#8211;clear-password</code></p>
-<dd> Clear the password for MokManager (MokPW)</p>
-<dt><code>&#8211;disable-validation</code></p>
-<dd> Disable the validation process in shim</p>
-<dt><code>&#8211;enrolled-validation</code></p>
-<dd> Enable the validation process in shim</p>
-<dt><code>&#8211;sb-state</code></p>
-<dd> Show SecureBoot State</p>
-<dt><code>-t, &#8211;test-key</code></p>
-<dd> Test if the key is enrolled or not</p>
-<dt><code>&#8211;reset</code></p>
-<dd> Reset MOK list</p>
-<dt><code>&#8211;generate-hash</code></p>
-<dd> Generate the password hash</p>
-<dt><code>&#8211;hash-file</code></p>
-<dd> Use the password hash from a specific file</p>
-<dt><code>-P, &#8211;root-pw</code></p>
-<dd> Use the root password hash from /etc/shadow</p>
-<dt><code>-s, &#8211;simple-hash</code></p>
+<dt><code>-l, &#8211;list-enrolled</code></dt>
+<dd> List the keys the already stored in the database</dd>
+<dt><code>-N, &#8211;list-new</code></dt>
+<dd> List the keys to be enrolled</dd>
+<dt><code>-D, &#8211;list-delete</code></dt>
+<dd> List the keys to be deleted</dd>
+<dt><code>-i, &#8211;import</code></dt>
+<dd> Collect the followed files and form a enrolling request to shim. The files must be in DER format.</dd>
+<dt><code>-d, &#8211;delete</code></dt>
+<dd> Collect the followed files and form a deleting request to shim. The files must be in DER format.</dd>
+<dt><code>&#8211;revoke-import</code></dt>
+<dd> Revoke the current import request (MokNew)</dd>
+<dt><code>&#8211;revoke-delete</code></dt>
+<dd> Revoke the current delete request (MokDel)</dd>
+<dt><code>-x, &#8211;export</code></dt>
+<dd> Export the keys stored in MokListRT</dd>
+<dt><code>-p, &#8211;password</code></dt>
+<dd> Setup the password for MokManager (MokPW)</dd>
+<dt><code>-c, &#8211;clear-password</code></dt>
+<dd> Clear the password for MokManager (MokPW)</dd>
+<dt><code>&#8211;disable-validation</code></dt>
+<dd> Disable the validation process in shim</dd>
+<dt><code>&#8211;enrolled-validation</code></dt>
+<dd> Enable the validation process in shim</dd>
+<dt><code>&#8211;sb-state</code></dt>
+<dd> Show SecureBoot State</dd>
+<dt><code>-t, &#8211;test-key</code></dt>
+<dd> Test if the key is enrolled or not</dd>
+<dt><code>&#8211;reset</code></dt>
+<dd> Reset MOK list</dd>
+<dt><code>&#8211;generate-hash</code></dt>
+<dd> Generate the password hash</dd>
+<dt><code>&#8211;hash-file</code></dt>
+<dd> Use the password hash from a specific file</dd>
+<dt><code>-P, &#8211;root-pw</code></dt>
+<dd> Use the root password hash from /etc/shadow</dd>
+<dt><code>-s, &#8211;simple-hash</code></dt>
 <dd> Use the old SHA256 password hash method to hash the password<br />
- Note: &#8211;root-pw invalidates &#8211;simple-hash</p>
-<dt><code>&#8211;ignore-db</code></p>
-<dd> Tell shim to not use the keys in db to verify EFI images</p>
-<dt><code>&#8211;use-db</code></p>
-<dd> Tell shim to use the keys in db to verify EFI images (default)</p>
-<dt><code>-X, &#8211;mokx</code></p>
-<dd> Manipulate the MOK blacklist (MOKX) instead of the MOK list</p>
-<dt><code>-i, &#8211;import-hash</code></p>
-<dd> Create an enrolling request for the hash of a key in DER format. Note that this is not the password hash.</p>
-<dt><code>-d, &#8211;delete-hash</code></p>
-<dd> Create an deleting request for the hash of a key in DER format. Note that this is not the password hash.</p>
-<dt><code>&#8211;set-verbosity</code></p>
-<dd> Set the SHIM_VERBOSE to make shim more or less verbose</p>
-<dt><code>&#8211;pk</code></p>
-<dd> List the keys in the public Platform Key (PK)</p>
-<dt><code>&#8211;kek</code></p>
-<dd> List the keys in the Key Exchange Key Signature database (KEK)</p>
-<dt><code>&#8211;db</code></p>
-<dd> List the keys in the secure boot signature store (db)</p>
-<dt><code>&#8211;dbx</code></p>
-<dd> List the keys in the secure boot blacklist signature store (dbx)</p>
-<dt>
-<dd></dl>
+ Note: &#8211;root-pw invalidates &#8211;simple-hash</dd>
+<dt><code>&#8211;ignore-db</code></dt>
+<dd> Tell shim to not use the keys in db to verify EFI images</dd>
+<dt><code>&#8211;use-db</code></dt>
+<dd> Tell shim to use the keys in db to verify EFI images (default)</dd>
+<dt><code>-X, &#8211;mokx</code></dt>
+<dd> Manipulate the MOK blacklist (MOKX) instead of the MOK list</dd>
+<dt><code>-i, &#8211;import-hash</code></dt>
+<dd> Create an enrolling request for the hash of a key in DER format. Note that this is not the password hash.</dd>
+<dt><code>-d, &#8211;delete-hash</code></dt>
+<dd> Create an deleting request for the hash of a key in DER format. Note that this is not the password hash.</dd>
+<dt><code>&#8211;set-verbosity</code></dt>
+<dd> Set the SHIM_VERBOSE to make shim more or less verbose</dd>
+<dt><code>&#8211;pk</code></dt>
+<dd> List the keys in the public Platform Key (PK)</dd>
+<dt><code>&#8211;kek</code></dt>
+<dd> List the keys in the Key Exchange Key Signature database (KEK)</dd>
+<dt><code>&#8211;db</code></dt>
+<dd> List the keys in the secure boot signature store (db)</dd>
+<dt><code>&#8211;dbx</code></dt>
+<dd> List the keys in the secure boot blacklist signature store (dbx)</dd>
+</dl>
 <h2>Index</h2>

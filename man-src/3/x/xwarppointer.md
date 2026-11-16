@@ -10,27 +10,27 @@ description: "XWarpPointer – move pointer"
 <p>XWarpPointer &#8211; move pointer </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XWarpPointer(Display *<i>display</i>, Window <i>src_w</i>, Window <i>dest_w</i>, int <i>src_x</i>, int <i>src_y</i>, unsigned int <i>src_width</i>, unsigned int <i>src_height</i>, int <i>dest_x</i>, int <i>dest_y</i>);</dl>
+<dd>int XWarpPointer(Display *<i>display</i>, Window <i>src_w</i>, Window <i>dest_w</i>, int <i>src_x</i>, int <i>src_y</i>, unsigned int <i>src_width</i>, unsigned int <i>src_height</i>, int <i>dest_x</i>, int <i>dest_y</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dest_w</i></p>
-<dd>Specifies the destination window or <code>None</code>.</p>
-<dt><i>dest_x</i></p>
+<dt><i>dest_w</i></dt>
+<dd>Specifies the destination window or <code>None</code>.</dd>
+<dt><i>dest_x</i></dt>
 <dd>
-<dt><i>dest_y</i></p>
-<dd>Specify the x and y coordinates within the destination window.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>src_x</i></p>
+</dd><dt><i>dest_y</i></dt>
+<dd>Specify the x and y coordinates within the destination window.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>src_x</i></dt>
 <dd>
-<dt><i>src_y</i></p>
+</dd><dt><i>src_y</i></dt>
 <dd>
-<dt><i>src_width</i></p>
+</dd><dt><i>src_width</i></dt>
 <dd>
-<dt><i>src_height</i></p>
-<dd>Specify a rectangle in the source window.</p>
-<dt><i>src_w</i></p>
-<dd>Specifies the source window or <code>None</code>.</dl>
+</dd><dt><i>src_height</i></dt>
+<dd>Specify a rectangle in the source window.</dd>
+<dt><i>src_w</i></dt>
+<dd>Specifies the source window or <code>None</code>.</dd></dl>
 <h2>Description</h2>
 <p>If dest_w is <code>None</code>, <code>XWarpPointer</code> moves the pointer by the offsets (dest_x, dest_y) relative to the current position of the pointer. If dest_w is a window, <code>XWarpPointer</code> moves the pointer to the offsets (dest_x, dest_y) relative to the origin of dest_w. However, if src_w is a window, the move only takes place if the window src_w contains the pointer and if the specified rectangle of src_w contains the pointer. </p>
 <p> The src_x and src_y coordinates are relative to the origin of src_w. If src_height is zero, it is replaced with the current height of src_w minus src_y. If src_width is zero, it is replaced with the current width of src_w minus src_x. </p>
@@ -38,8 +38,8 @@ description: "XWarpPointer – move pointer"
 <p> <code>XWarpPointer</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xsetinputfocus/">XSetInputFocus</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -24,3 +24,4 @@ description: "QuantLib::OneFactorGaussianCopula – One-factor Gaussian Copula."
 <p>One-factor Gaussian Copula. </p>
 <p> The copula model [ Y_i = a_i,M+qrt{1-a_i^2}:Z_i ] is specified here by setting the desnity function for all variables, $ M, Z,$ and also $ Y $ to the standard normal distribution $<br />
  hi(x) = 
+</p>

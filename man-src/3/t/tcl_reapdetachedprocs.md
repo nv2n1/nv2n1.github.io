@@ -16,12 +16,12 @@ Tcl_Pid
 <code>Tcl_WaitPid</code>(<i>pid, statusPtr, options</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>numPids</i> (in) Number of process ids contained in the array pointed to by <i>pidPtr</i>.</p>
-<dd>int <i>*pidPtr</i> (in) Address of array containing <i>numPids</i> process ids.</p>
-<dd>Tcl_Pid <i>pid</i> (in) The id of the process (pipe) to wait for.</p>
-<dd>int <i>*statusPtr</i> (out) The result of waiting on a process (pipe). Either 0 or ECHILD.</p>
+<dd>int <i>numPids</i> (in) Number of process ids contained in the array pointed to by <i>pidPtr</i>.</dd>
+<dd>int <i>*pidPtr</i> (in) Address of array containing <i>numPids</i> process ids.</dd>
+<dd>Tcl_Pid <i>pid</i> (in) The id of the process (pipe) to wait for.</dd>
+<dd>int <i>*statusPtr</i> (out) The result of waiting on a process (pipe). Either 0 or ECHILD.</dd>
 <dd>int <i>options</i> (in) The options controlling the wait. WNOHANG specifies not to wait when checking the process.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tcl_DetachPids</code> and <code>Tcl_ReapDetachedProcs</code> provide a mechanism for managing subprocesses that are running in background. These procedures are needed because the parent of a process must eventually invoke the <code>waitpid</code> kernel call (or one of a few other similar kernel calls) to wait for the child to exit. Until the parent waits for the child, the child&#8217;s state cannot be completely reclaimed by the system. If a parent continually creates children and doesn&#8217;t wait on them, the system&#8217;s process table will eventually overflow, even if all the children have exited. </p>
 <p> <code>Tcl_DetachPids</code> may be called to ask Tcl to take responsibility for one or more processes whose process ids are contained in the <i>pidPtr</i> array passed as argument. The caller presumably has started these processes running in background and does not want to have to deal with them again. </p>

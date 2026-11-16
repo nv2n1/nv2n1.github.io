@@ -15,11 +15,11 @@ skb_pull_rcsum - pull skb and update receive checksum
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to update</dl>
+<dl><dd></dd><dd>buffer to update</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of data pulled</dl>
+<dl><dd>length of data pulled</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,15 +15,15 @@ snd_ctl_replace - replace the control instance of the card
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>kcontrol</i>
-<dl><dd>the control instance to replace</dl>
+<dl><dd>the control instance to replace</dd></dl>
  
 
  <i>add_on_replace</i>
-<dl><dd>add the control if not already added</dl>
+<dl><dd>add the control if not already added</dd></dl>
 
 <h2>Description</h2>
 

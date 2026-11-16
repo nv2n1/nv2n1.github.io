@@ -15,37 +15,37 @@ description: "ntfscp – copy file to an NTFS volume."
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfscp</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;attribute</code> NUM</p>
-<dd>Write to this attribute.</p>
-<dt><code>-i</code>, <code>&#8211;inode</code></p>
-<dd>Treat <i>destination</i> as inode number.</p>
-<dt><code>-m</code>, <code>&#8211;min-fragments</code></p>
-<dd>Minimize fragmentation when allocating space to the attribute. This is mostly useful when creating big files.</p>
-<dt><code>-N</code>, <code>&#8211;attr-name</code> NAME</p>
-<dd>Write to attribute with this name.</p>
-<dt><code>-n</code>, <code>&#8211;no-action</code></p>
-<dd>Use this option to make a test run before doing the real copy operation. Volume will be opened read-only and no write will be done.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not working with a mounted volume. Use this option with caution.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress some debug/warning/error messages.</p>
-<dt><code>-t</code>, <code>&#8211;timestamp</code></p>
-<dd>Copy the modification time of source_file to destination. This is not compatible with <code>&#8211;attr-name</code> and <code>&#8211;attribute</code>.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license <code>ntfscp</code>.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages.</dl>
+<dt><code>-a</code>, <code>&#8211;attribute</code> NUM</dt>
+<dd>Write to this attribute.</dd>
+<dt><code>-i</code>, <code>&#8211;inode</code></dt>
+<dd>Treat <i>destination</i> as inode number.</dd>
+<dt><code>-m</code>, <code>&#8211;min-fragments</code></dt>
+<dd>Minimize fragmentation when allocating space to the attribute. This is mostly useful when creating big files.</dd>
+<dt><code>-N</code>, <code>&#8211;attr-name</code> NAME</dt>
+<dd>Write to attribute with this name.</dd>
+<dt><code>-n</code>, <code>&#8211;no-action</code></dt>
+<dd>Use this option to make a test run before doing the real copy operation. Volume will be opened read-only and no write will be done.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not working with a mounted volume. Use this option with caution.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress some debug/warning/error messages.</dd>
+<dt><code>-t</code>, <code>&#8211;timestamp</code></dt>
+<dd>Copy the modification time of source_file to destination. This is not compatible with <code>&#8211;attr-name</code> and <code>&#8211;attribute</code>.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license <code>ntfscp</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages.</dd></dl>
 <h2>Data Streams</h2>
 <p>All data on NTFS is stored in streams, which can have names. A file can have more than one data streams, but exactly one must have no name. The size of a file is the size of its unnamed data stream. Usually when you don&#8217;t specify stream name you are access to unnamed data stream. If you want access to named data stream you need to add &quot;:stream_name&quot; to the filename. For example: by opening &quot;some.mp3:artist&quot; you will open stream &quot;artist&quot; in &quot;some.mp3&quot;. But windows usually prevent you from accessing to named data streams, so you need to use some program like FAR or utils from cygwin to access named data streams.</p>
 <h2>Examples</h2>
 <p>Copy new_boot.ini from /home/user as boot.ini to the root of an /dev/hda1 NTFS volume:</p>
 <dl>
-<dd><code>ntfscp /dev/hda1 /home/user/new_boot.ini boot.ini</code></dl>
+<dd><code>ntfscp /dev/hda1 /home/user/new_boot.ini boot.ini</code></dd></dl>
 <p> Copy myfile to C:\some\path\myfile:stream (assume that /dev/hda1 letter in windows is C):</p>
 <dl>
-<dd><code>ntfscp -N stream /dev/hda1 myfile /some/path</code> </p>
+<dd><code>ntfscp -N stream /dev/hda1 myfile /some/path</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfscp</code>. If you find a bug please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -58,3 +58,4 @@ description: "ntfscp – copy file to an NTFS volume."
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g">https://github.com/tuxera/ntfs-3g</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+</dl>

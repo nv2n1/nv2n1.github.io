@@ -42,3 +42,4 @@ description: "QuantLib::InterpolatedHazardRateCurve – interpolated hazard-rate
 <h3>Probability survivalProbabilityImpl (Time) const [protected, virtual]</h3>
 <p>probability of survival between today (t = 0) and a given time </p>
 <p> implemented in terms of the hazard rate $ h(t) $ as [ S(t) = 
+</p>

@@ -13,36 +13,36 @@ description: "xfconf-query – Command line utility for xfconf system"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> xfconf-query [OPTION&#8230;] &#8211; xfconf commandline utility</dl>
+</dt><dd> xfconf-query [OPTION&#8230;] &#8211; xfconf commandline utility</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Version information</p>
-<dt><code>-c</code>, <code>&#8211;channel</code></p>
-<dd> The channel to query/modify</p>
-<dt><code>-p</code>, <code>&#8211;property</code></p>
-<dd> The property to query/modify</p>
-<dt><code>-s</code>, <code>&#8211;set</code></p>
-<dd> The new value to set for the property</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> List properties (or channels if <code>-c</code> is not specified)</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose output</p>
-<dt><code>-n</code>, <code>&#8211;create</code></p>
-<dd> Create a new property if it does not already exist</p>
-<dt><code>-t</code>, <code>&#8211;type</code></p>
-<dd> Specify the property value type</p>
-<dt><code>-r</code>, <code>&#8211;reset</code></p>
-<dd> Reset property</p>
-<dt><code>-R</code>, <code>&#8211;recursive</code></p>
-<dd> Recursive (use with <code>-r</code>)</p>
-<dt><code>-a</code>, <code>&#8211;force-array</code></p>
-<dd> Force array even if only one element</p>
-<dt><code>-m</code>, <code>&#8211;monitor</code></p>
-<dd> Monitor a channel for property changes </p>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Version information</dd>
+<dt><code>-c</code>, <code>&#8211;channel</code></dt>
+<dd> The channel to query/modify</dd>
+<dt><code>-p</code>, <code>&#8211;property</code></dt>
+<dd> The property to query/modify</dd>
+<dt><code>-s</code>, <code>&#8211;set</code></dt>
+<dd> The new value to set for the property</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> List properties (or channels if <code>-c</code> is not specified)</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose output</dd>
+<dt><code>-n</code>, <code>&#8211;create</code></dt>
+<dd> Create a new property if it does not already exist</dd>
+<dt><code>-t</code>, <code>&#8211;type</code></dt>
+<dd> Specify the property value type</dd>
+<dt><code>-r</code>, <code>&#8211;reset</code></dt>
+<dd> Reset property</dd>
+<dt><code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd> Recursive (use with <code>-r</code>)</dd>
+<dt><code>-a</code>, <code>&#8211;force-array</code></dt>
+<dd> Force array even if only one element</dd>
+<dt><code>-m</code>, <code>&#8211;monitor</code></dt>
+<dd> Monitor a channel for property changes </dd>
 </dl>
 <h2>Index</h2>

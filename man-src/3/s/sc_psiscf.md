@@ -11,7 +11,6 @@ description: "sc::PsiSCF –"
 <p> <code>PsiSCF</code> is an abstract base for all Psi <code>SCF</code> wave functions.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;psiwfn.h&gt;</code></pre>
 <p> Inherits <code>sc::PsiWavefunction</code>. Inherited by <code>sc::PsiCLHF</code>, <code>sc::PsiHSOSHF</code>, and <code>sc::PsiUHF</code>.</p>
 <h3>Public Types</h3>

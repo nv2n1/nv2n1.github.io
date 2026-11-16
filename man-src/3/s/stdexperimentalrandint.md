@@ -11,9 +11,7 @@ std::experimental::randint - std::experimental::randint
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/random&gt;
-
 template &lt;class IntType&gt;                 (library fundamentals TS v2)
-
 IntType randint(IntType a, IntType b);</code></pre> 
 Generates a random integer in the closed interval [a, b]. 
 
@@ -31,10 +29,8 @@ The behavior is undefined if a &gt; b.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/random&gt;
 int main()
-
 {
     int random_number = std::experimental::randint(100, 999);
     std::cout &lt;&lt; &quot;random 3-digit number: &quot; &lt;&lt; random_number &lt;&lt; '\n';

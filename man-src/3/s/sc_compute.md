@@ -11,7 +11,6 @@ description: "sc::Compute –"
 <p> The <code>Compute</code> class provides a means of keeping results up to date.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;compute.h&gt;</code></pre>
 <p> Inherited by <code>sc::Function</code>.</p>
 <h3>Public Member Functions</h3>
@@ -19,12 +18,7 @@ description: "sc::Compute –"
  <i>Marks all results as being out of date. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void compute ()=0
-
-
 Recompute at least the results that have compute true and are not already computed.
-
-
-
 Friends</code></pre>
 <p> class <code>ResultInfo</code> </p>
 <p> class <code>AccResultInfo</code></p>

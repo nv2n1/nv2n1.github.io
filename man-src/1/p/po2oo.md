@@ -15,47 +15,47 @@ description: "po2oo – Convert Gettext PO localization files to an OpenOffice.o
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/oo2po.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/oo2po.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h/&#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;manpage</p>
-<dd> output a manpage based on the help</p>
-<dt>&#8211;progress</p>
-<dd> show progress as: dots, none, bar, names, verbose</p>
-<dt>&#8211;errorlevel</p>
-<dd> show errorlevel as: none, message, exception, traceback</p>
-<dt>-i/&#8211;input</p>
-<dd> read from INPUT in xlf, po, pot formats</p>
-<dt>-x/&#8211;exclude</p>
-<dd> exclude names matching EXCLUDE from input paths</p>
-<dt>-o/&#8211;output</p>
-<dd> write to OUTPUT in oo, sdf formats</p>
-<dt>-t/&#8211;template</p>
-<dd> read from TEMPLATE in oo, sdf formats</p>
-<dt>-S/&#8211;timestamp</p>
-<dd> skip conversion if the output file has newer timestamp</p>
-<dt>-l/&#8211;language</p>
-<dd> set target language code (e.g. af-ZA) [required]</p>
-<dt>&#8211;source-language</p>
-<dd> set source language code (default en-US)</p>
-<dt>-T/&#8211;keeptimestamp</p>
-<dd> don&#8217;t change the timestamps of the strings</p>
-<dt>&#8211;nonrecursiveoutput</p>
-<dd> don&#8217;t treat the output oo as a recursive store</p>
-<dt>&#8211;nonrecursivetemplate</p>
-<dd> don&#8217;t treat the template oo as a recursive store</p>
-<dt>&#8211;skipsource</p>
-<dd> don&#8217;t output the source language, but fallback to it where needed</p>
-<dt>&#8211;filteraction</p>
-<dd> action on pofilter failure: none (default), warn, exclude-serious, exclude-all</p>
-<dt>&#8211;threshold</p>
-<dd> only convert files where the translation completion is above PERCENT</p>
-<dt>&#8211;fuzzy</p>
-<dd> use translations marked fuzzy</p>
-<dt>&#8211;nofuzzy</p>
-<dd> don&#8217;t use translations marked fuzzy (default)</p>
-<dt>&#8211;multifile</p>
-<dd> how to split po/pot files (single, toplevel or onefile) </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h/&#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;manpage</dt>
+<dd> output a manpage based on the help</dd>
+<dt>&#8211;progress</dt>
+<dd> show progress as: dots, none, bar, names, verbose</dd>
+<dt>&#8211;errorlevel</dt>
+<dd> show errorlevel as: none, message, exception, traceback</dd>
+<dt>-i/&#8211;input</dt>
+<dd> read from INPUT in xlf, po, pot formats</dd>
+<dt>-x/&#8211;exclude</dt>
+<dd> exclude names matching EXCLUDE from input paths</dd>
+<dt>-o/&#8211;output</dt>
+<dd> write to OUTPUT in oo, sdf formats</dd>
+<dt>-t/&#8211;template</dt>
+<dd> read from TEMPLATE in oo, sdf formats</dd>
+<dt>-S/&#8211;timestamp</dt>
+<dd> skip conversion if the output file has newer timestamp</dd>
+<dt>-l/&#8211;language</dt>
+<dd> set target language code (e.g. af-ZA) [required]</dd>
+<dt>&#8211;source-language</dt>
+<dd> set source language code (default en-US)</dd>
+<dt>-T/&#8211;keeptimestamp</dt>
+<dd> don&#8217;t change the timestamps of the strings</dd>
+<dt>&#8211;nonrecursiveoutput</dt>
+<dd> don&#8217;t treat the output oo as a recursive store</dd>
+<dt>&#8211;nonrecursivetemplate</dt>
+<dd> don&#8217;t treat the template oo as a recursive store</dd>
+<dt>&#8211;skipsource</dt>
+<dd> don&#8217;t output the source language, but fallback to it where needed</dd>
+<dt>&#8211;filteraction</dt>
+<dd> action on pofilter failure: none (default), warn, exclude-serious, exclude-all</dd>
+<dt>&#8211;threshold</dt>
+<dd> only convert files where the translation completion is above PERCENT</dd>
+<dt>&#8211;fuzzy</dt>
+<dd> use translations marked fuzzy</dd>
+<dt>&#8211;nofuzzy</dt>
+<dd> don&#8217;t use translations marked fuzzy (default)</dd>
+<dt>&#8211;multifile</dt>
+<dd> how to split po/pot files (single, toplevel or onefile) </dd>
 </dl>
 <h2>Index</h2>

@@ -19,12 +19,12 @@ description: "lxsession-logout — program to logout from LXSession"
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.<br />
 &nbsp;<wbr></p>
 <dl>
-<dt> <code>&#8211;prompt </code><i>Your custom message</i></p>
-<dd> Customize the logout message.</p>
-<dt> <code>&#8211;banner </code><i>Your logo</i></p>
-<dd> Customize the logout logo.</p>
-<dt> <code>&#8211;side left|top|right|bottom</code></p>
-<dd> The position of the logo.</dl>
+<dt> <code>&#8211;prompt </code><i>Your custom message</i></dt>
+<dd> Customize the logout message.</dd>
+<dt> <code>&#8211;banner </code><i>Your logo</i></dt>
+<dd> Customize the logout logo.</dd>
+<dt> <code>&#8211;side left|top|right|bottom</code></dt>
+<dd> The position of the logo.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> lxsession (1).</p>
 <h2>AUTHOR</h2>

@@ -24,10 +24,10 @@ description: "procmailrc – procmail rcfile"
 <p>A word beginning with # and all the following characters up to a NEWLINE are ignored. This does not apply to condition lines, which cannot be commented.</p>
 <h3>Recipes</h3>
 <p>A line starting with &#8216;:&#8217; marks the beginning of a recipe. It has the following format: </p>
-<pre><dl><dt><dd>:0 [<i>flags</i>] [ : [<i>locallockfile</i>] ]
+<pre><dl><dt></dt><dd>:0 [<i>flags</i>] [ : [<i>locallockfile</i>] ]
 &lt;zero or more conditions (one per line)&gt;
 &lt;exactly one action line&gt;
-</dl></pre>
+</dd></dl></pre>
 <p>Conditions start with a leading `*&#8217;, everything after that character is passed on to the internal egrep <code>literally</code>, except for leading and trailing whitespace. These regular expressions are <code>completely</code> compatible to the normal <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) extended regular expressions. See also <code>Extended regular expressions</code>. </p>
 <p> Conditions are anded; if there are no conditions the result will be true by default. </p>
 <p> <i>Flags</i> can be any of the following:<br />
@@ -181,8 +181,8 @@ ame substitution will never be split on whitespace. When the <code>-a</code> or 
 <p> In the old days, the `:0&#8242; that marks the beginning of a recipe, had to be changed to `:n&#8217;, whereby `n&#8217; denotes the number of conditions that follow.</p>
 <h2>Authors</h2>
 <p>Stephen R. van den Berg </p>
-<pre><dl><dt><dd>&lt;srb [at] cuci.nl&gt;
-</dl></pre>
+<pre><dl><dt></dt><dd>&lt;srb [at] cuci.nl&gt;
+</dd></dl></pre>
 <p>Philip A. Guenther </p>
-<pre><dl><dt><dd>&lt;guenther [at] sendmail.com&gt;
-</dl></pre>
+<pre><dl><dt></dt><dd>&lt;guenther [at] sendmail.com&gt;
+</dd></dl></pre>

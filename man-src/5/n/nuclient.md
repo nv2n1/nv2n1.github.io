@@ -18,20 +18,20 @@ description: "nuclient.conf – nuauth client configuration file"
 <h2>Options</h2>
 <p>The different configuration options are:</p>
 <dl>
-<dt><code>nuauth_ip </code></p>
-<dd>Name of the nuauth server (fully qualified domain name, or IP address).</p>
-<dt><code>nuauth_port </code></p>
-<dd>Port number to use on the nuauth server (default: 4129).</p>
-<dt><code>nuauth_tls_ca </code></p>
-<dd>Certificate authority used to check the validity of nuauth certificate.</p>
-<dt><code>nuauth_tls_cert </code></p>
-<dd>Certificate file used to negotiate the TLS connection to nuauth.</p>
-<dt><code>nuauth_tls_key </code></p>
-<dd>Key of the certificate file from the <i>nuauth_tls_cert</i> option.</p>
-<dt><code>nuauth_tls_crl </code></p>
-<dd>Certificate revocation list file to use. If the client is disconnected from nuauth, it will reload this file at reconnect.</p>
-<dt><code>nuauth_suppress_fqdn_verif </code></p>
-<dd>If set to 1, suppress error if server FQDN does not match certificate CN (default: 0).</dl>
+<dt><code>nuauth_ip </code></dt>
+<dd>Name of the nuauth server (fully qualified domain name, or IP address).</dd>
+<dt><code>nuauth_port </code></dt>
+<dd>Port number to use on the nuauth server (default: 4129).</dd>
+<dt><code>nuauth_tls_ca </code></dt>
+<dd>Certificate authority used to check the validity of nuauth certificate.</dd>
+<dt><code>nuauth_tls_cert </code></dt>
+<dd>Certificate file used to negotiate the TLS connection to nuauth.</dd>
+<dt><code>nuauth_tls_key </code></dt>
+<dd>Key of the certificate file from the <i>nuauth_tls_cert</i> option.</dd>
+<dt><code>nuauth_tls_crl </code></dt>
+<dd>Certificate revocation list file to use. If the client is disconnected from nuauth, it will reload this file at reconnect.</dd>
+<dt><code>nuauth_suppress_fqdn_verif </code></dt>
+<dd>If set to 1, suppress error if server FQDN does not match certificate CN (default: 0).</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-nufw/">nufw</a>(8) </p>
 <p> <a href="/docs/linux/man/8-nuauth/">nuauth</a>(8) </p>

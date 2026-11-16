@@ -20,14 +20,14 @@ description: "Ecore Connection Library Functions – Utility functions that set 
 <p>Initialises the Ecore_Con library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of times the library has been initialised without being shut down.</dl>
+<dd>Number of times the library has been initialised without being shut down.</dd></dl>
 <p> References ecore_event_type_new(), and ecore_list_new(). </p>
 <p> Referenced by ecore_ipc_init().</p>
 <h3>EAPI int ecore_con_shutdown (void)</h3>
 <p>Shuts down the Ecore_Con library. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of times the library has been initialised without being shut down.</dl>
+<dd>Number of times the library has been initialised without being shut down.</dd></dl>
 <p> References ecore_list_destroy(), ecore_list_empty_is(), and ecore_list_first_remove(). </p>
 <p> Referenced by ecore_ipc_shutdown().</p>
 <h2>Author</h2>

@@ -13,10 +13,10 @@ description: "stringprep_unichar_to_utf8 – API function"
 int stringprep_unichar_to_utf8(uint32_t c, char *outbuf);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>uint32_t c</p>
-<dd>a ISO10646 character code</p>
-<dt>char * outbuf</p>
-<dd>output buffer, must have at least 6 bytes of space. If <code>NULL</code>, the length will be computed and returned and nothing will be written to <i>outbuf</i>.</dl>
+<dt>uint32_t c</dt>
+<dd>a ISO10646 character code</dd>
+<dt>char * outbuf</dt>
+<dd>output buffer, must have at least 6 bytes of space. If <code>NULL</code>, the length will be computed and returned and nothing will be written to <i>outbuf</i>.</dd></dl>
 <h2>Description</h2>
 <p>Converts a single character to UTF-8.</p>
 <h2>Return Value</h2>
@@ -29,5 +29,5 @@ int stringprep_unichar_to_utf8(uint32_t c, char *outbuf);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

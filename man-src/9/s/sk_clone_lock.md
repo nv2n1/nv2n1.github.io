@@ -14,10 +14,10 @@ description: "sk_clone_lock – clone a socket, and lock its clone"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>the socket to clone</dl>
+</dd><dd>the socket to clone</dd></dl>
 <p> <i>priority</i></p>
 <dl>
-<dd>for allocation (<code>GFP_KERNEL</code>, <code>GFP_ATOMIC</code>, etc)</dl>
+<dd>for allocation (<code>GFP_KERNEL</code>, <code>GFP_ATOMIC</code>, etc)</dd></dl>
 <h2>Description</h2>
 <p>Caller must unlock socket even in error path (bh_unlock_sock(newsk))</p>
 <h2>Copyright</h2>

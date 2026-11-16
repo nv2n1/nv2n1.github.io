@@ -14,17 +14,17 @@ description: "rio_chk_dev_route – Validate route to the specified device."
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device failed to respond</dl>
+</dd><dd>RIO device failed to respond</dd></dl>
 <p> <i>nrdev</i></p>
 <dl>
-<dd>Last active device on the route to rdev</dl>
+<dd>Last active device on the route to rdev</dd></dl>
 <p> <i>npnum</i></p>
 <dl>
-<dd>nrdev&#8217;s port number on the route to rdev</dl>
+<dd>nrdev&#8217;s port number on the route to rdev</dd></dl>
 <h2>Description</h2>
 <p>Follows a route to the specified RIO device to determine the last available device (and corresponding RIO port) on the route.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

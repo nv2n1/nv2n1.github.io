@@ -19,6 +19,6 @@ description: "keyboard-request – event signalling console press of Alt-UpArrow
 <dl>
 <dd>
 <pre>start on keyboard-request</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-control-alt-delete/">control-alt-delete</a></code>(7) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

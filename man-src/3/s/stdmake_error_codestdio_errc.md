@@ -25,11 +25,8 @@ A value of type std::error_code that holds the error code number from e associat
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;system_error&gt;
-
 int main()
-
 {
     std::error_code ec = std::make_error_code(std::io_errc::stream);
     std::cout &lt;&lt; &quot;Error code from io_errc::stream has category &quot;

@@ -117,14 +117,14 @@ int trace.pmtracestate(int <i>flags</i>);</pre>
 <p>The <i>pcp_trace</i> Java class interface has been developed and verified using version 1.1 of the Java Native Interface (JNI) specification.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>$PCP_DEMOS_DIR/trace/*.c</code></p>
-<dd>Sample C programs and source for <code><a href="/docs/linux/man/1-pmtrace/">pmtrace</a></code>(1). Use <code><a href="/docs/linux/man/1-make/">make</a></code>(1) to build these programs.</p>
-<dt><code>$PCP_DEMOS_DIR/trace/fapp1.f</code></p>
-<dd>Sample Fortran program. Call `make fortran77&#8242; or `make fortran90&#8242; to build this program.</p>
-<dt><code>$PCP_DEMOS_DIR/trace/japp1.java</code></p>
-<dd>Sample Java program. `make java&#8217; builds the java class file.</p>
-<dt><code>/usr/java/classes/sgi/pcp/trace.java</code></p>
-<dd>Java trace class definition.</dl>
+<dt><code>$PCP_DEMOS_DIR/trace/*.c</code></dt>
+<dd>Sample C programs and source for <code><a href="/docs/linux/man/1-pmtrace/">pmtrace</a></code>(1). Use <code><a href="/docs/linux/man/1-make/">make</a></code>(1) to build these programs.</dd>
+<dt><code>$PCP_DEMOS_DIR/trace/fapp1.f</code></dt>
+<dd>Sample Fortran program. Call `make fortran77&#8242; or `make fortran90&#8242; to build this program.</dd>
+<dt><code>$PCP_DEMOS_DIR/trace/japp1.java</code></dt>
+<dd>Sample Java program. `make java&#8217; builds the java class file.</dd>
+<dt><code>/usr/java/classes/sgi/pcp/trace.java</code></dt>
+<dd>Java trace class definition.</dd></dl>
 <h2>Pcp Environment</h2>
 <p>Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). Values for these variables may be obtained programmatically using the <i><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></i>(3) function.</p>
 <h2>See Also</h2>

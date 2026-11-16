@@ -11,13 +11,10 @@ std::filesystem::is_other - std::filesystem::is_other
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool is_other(std::filesystem::file_status s) noexcept;
 (1)(since C++ 17)
-
     bool is_other(const std::filesystem::path &amp;p);
 (2)(since C++ 17)
-
     bool is_other(const std::filesystem::path &amp;p, std::error_code &amp;ec) noexcept;</code></pre> 
 Checks if the given file status or path corresponds to a file of type other type. That is, the file exists, but is neither regular file, nor directory nor a symlink. 
 1) Equivalent to exists(s) &amp;&amp; !is_regular_file(s) &amp;&amp; !is_directory(s) &amp;&amp; !is_symlink(s). 

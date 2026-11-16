@@ -12,15 +12,10 @@ std::swap(std::forward_list) - std::swap(std::forward_list)
 
 <pre><code>template &lt;class T, class Alloc&gt;
 (since C++ 11)
-
     void swap(forward_list&lt;T, Alloc&gt; &amp;lhs, (until C++ 17)
-
                                                forward_list&lt;T, Alloc&gt; &amp;rhs);
-
 template &lt;class T, class Alloc&gt;
-
 void swap(forward_list&lt;T, Alloc&gt; &amp;lhs, (since C++ 17)
-
                                            forward_list&lt;T, Alloc&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::forward_list. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 

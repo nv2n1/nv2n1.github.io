@@ -15,7 +15,7 @@ rpc_free - free RPC buffer resources allocated via rpc_malloc
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>RPC task</dl>
+<dl><dd></dd><dd>RPC task</dd></dl>
 
 <h2>Copyright</h2>
 

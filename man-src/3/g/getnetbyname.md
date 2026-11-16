@@ -32,20 +32,20 @@ void endnetent(void);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;n_net;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;network number&nbsp;*/ } </p>
 <p> The members of the <i>netent</i> structure are:</p>
 <dl>
-<dt><i>n_name</i></p>
-<dd> The official name of the network.</p>
-<dt><i>n_aliases</i></p>
-<dd> A NULL-terminated list of alternative names for the network.</p>
-<dt><i>n_addrtype</i></p>
-<dd> The type of the network number; always <code>AF_INET</code>.</p>
-<dt><i>n_net</i></p>
-<dd> The network number in host byte order.</dl>
+<dt><i>n_name</i></dt>
+<dd> The official name of the network.</dd>
+<dt><i>n_aliases</i></dt>
+<dd> A NULL-terminated list of alternative names for the network.</dd>
+<dt><i>n_addrtype</i></dt>
+<dd> The type of the network number; always <code>AF_INET</code>.</dd>
+<dt><i>n_net</i></dt>
+<dd> The network number in host byte order.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The <code>getnetent</code>(), <code>getnetbyname</code>(), and <code>getnetbyaddr</code>() functions return a pointer to a statically allocated <i>netent</i> structure, or a null pointer if an error occurs or the end of the file is reached.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/networks</i></p>
-<dd> networks database file</dl>
+<dt><i>/etc/networks</i></dt>
+<dd> networks database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

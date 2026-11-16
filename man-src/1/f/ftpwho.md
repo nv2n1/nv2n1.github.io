@@ -15,14 +15,14 @@ description: "ftpwho – show current process information for each FTP session"
 <p> The <code>ftpwho</code> command shows process information for all active proftpd connections, and a count of all connected users off of each server. Proftpd sesssions spawned from inetd are counted separately from those created by a master proftpd <i>standalone</i> server.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Display a short usage description, including all available options.</p>
-<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></p>
-<dd> Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpwho</code> must either be recompiled, or this option must be used in order to find proftpd&#8217;s scoreboard.</p>
-<dt><code>-o,&#8211;outform</code><i> format</i></p>
-<dd> Specify an output format. Currently, two &quot;formats&quot; are supported: <code>compat</code> and <code>oneline</code>. The <code>compat</code> format is used for backward compatibility. The <code>oneline</code> format causes all of the fields for a session to be displayed on a single line, for ease of line-based searches (e.g. grep).</p>
-<dt><code>-v,&#8211;verbose</code></p>
-<dd> Reports additional information for each connection, such as the remote host and current working directory. <code>-S,&#8211;server</code><i> server-name</i> Specify the ServerName for a specific virtual host. If used, <i>ftpwho</i> will only show session information for the given virtual host.</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display a short usage description, including all available options.</dd>
+<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></dt>
+<dd> Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpwho</code> must either be recompiled, or this option must be used in order to find proftpd&#8217;s scoreboard.</dd>
+<dt><code>-o,&#8211;outform</code><i> format</i></dt>
+<dd> Specify an output format. Currently, two &quot;formats&quot; are supported: <code>compat</code> and <code>oneline</code>. The <code>compat</code> format is used for backward compatibility. The <code>oneline</code> format causes all of the fields for a session to be displayed on a single line, for ease of line-based searches (e.g. grep).</dd>
+<dt><code>-v,&#8211;verbose</code></dt>
+<dd> Reports additional information for each connection, such as the remote host and current working directory. <code>-S,&#8211;server</code><i> server-name</i> Specify the ServerName for a specific virtual host. If used, <i>ftpwho</i> will only show session information for the given virtual host.</dd></dl>
 <h2>FILES</h2>
 <p> <code>/usr/bin/ftpwho</code><br />
  <code>/run/proftpd/proftpd.scoreboard</code></p>

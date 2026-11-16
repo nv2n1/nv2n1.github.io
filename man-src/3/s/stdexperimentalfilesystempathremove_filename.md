@@ -21,12 +21,9 @@ The behavior is undefined if the path has no filename component (has_filename re
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::cout &lt;&lt; fs::path(&quot;/foo&quot;).remove_filename() &lt;&lt; '
 '

@@ -10,17 +10,17 @@ description: "w1_touch_bit – Generates a write-0 or write-1 cycle and samples 
 <p>w1_touch_bit &#8211; Generates a write-0 or write-1 cycle and samples the level.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u8 w1_touch_bit(struct w1_master&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>, int&nbsp;<wbr></code><i>bit</i><code>);</code></dl>
+<dt> <code>u8 w1_touch_bit(struct w1_master&nbsp;<wbr>*&nbsp;<wbr></code><i>dev</i><code>, int&nbsp;<wbr></code><i>bit</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <p> <i>bit</i></p>
 <dl>
-<dd>0 &#8211; write a 0, 1 &#8211; write a 0 read the level</dl>
+<dd>0 &#8211; write a 0, 1 &#8211; write a 0 read the level</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

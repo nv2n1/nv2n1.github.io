@@ -14,14 +14,14 @@ description: "gnutls_pkcs11_obj_get_exts – API function"
 <p> <code>int gnutls_pkcs11_obj_get_exts(gnutls_pkcs11_obj_t </code><i>obj</i><code>, gnutls_x509_ext_st ** </code><i>exts</i><code>, unsigned int * </code><i>exts_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_obj_t obj</p>
-<dd> should contain a <code>gnutls_pkcs11_obj_t</code> type</p>
-<dt>gnutls_x509_ext_st ** exts</p>
-<dd> a pointer to a <code>gnutls_x509_ext_st</code> pointer</p>
-<dt>unsigned int * exts_size</p>
-<dd> will be updated with the number of <i>exts</i></p>
-<dt>unsigned int flags</p>
-<dd> Or sequence of <code>GNUTLS_PKCS11_OBJ_</code>* flags</dl>
+<dt>gnutls_pkcs11_obj_t obj</dt>
+<dd> should contain a <code>gnutls_pkcs11_obj_t</code> type</dd>
+<dt>gnutls_x509_ext_st ** exts</dt>
+<dd> a pointer to a <code>gnutls_x509_ext_st</code> pointer</dd>
+<dt>unsigned int * exts_size</dt>
+<dd> will be updated with the number of <i>exts</i></dd>
+<dt>unsigned int flags</dt>
+<dd> Or sequence of <code>GNUTLS_PKCS11_OBJ_</code>* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return information about attached extensions that associate to the provided object (which should be a certificate). The extensions are the attached p11-kit trust module extensions. </p>
 <p> Each element of <i>exts</i> must be deinitialized using <code>gnutls_x509_ext_deinit()</code> while <i>exts</i> should be deallocated using <code>gnutls_free()</code>.</p>
@@ -38,6 +38,6 @@ description: "gnutls_pkcs11_obj_get_exts – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

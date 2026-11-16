@@ -62,8 +62,8 @@ description: "PDL::Internals – description of some aspects of the current inte
  };</pre>
 <p>This is quite a structure for just storing some data in &#8211; what is going on?</p>
 <dl>
-<dt>Data storage</p>
-<dd>We are going to start with some of the simpler members: first of all, there is the member </p>
+<dt>Data storage</dt>
+<dd>We are going to start with some of the simpler members: first of all, there is the member </dd>
 <pre> void *datasv;</pre>
 <p>which is really a pointer to a Perl <font SIZE="-1">SV</font> structure (<tt>&quot;SV *&quot;</tt>). The <font SIZE="-1">SV</font> is expected to be representing a string, in which the data of the piddle is stored in a tightly packed form. This pointer counts as a reference to the <font SIZE="-1">SV</font> so the reference count has been incremented when the <tt>&quot;SV *&quot;</tt> was placed here (this reference count business has to do with Perl&#8217;s garbage collection mechanism &#8212; don&#8217;t worry if this doesn&#8217;t mean much to you). This pointer is allowed to have the value <tt>&quot;NULL&quot;</tt> which means that there is no actual Perl <font SIZE="-1">SV</font> for this data &#8211; for instance, the data might be allocated by a <tt>&quot;mmap&quot;</tt> operation. Note the use of an SV* was purely for convenience, it allows easy transformation of packed data from files into piddles. Other implementations are not excluded. </p>
 <p> The actual pointer to data is stored in the member </p>
@@ -74,8 +74,8 @@ description: "PDL::Internals – description of some aspects of the current inte
 <p> The data type of the data is stored in the variable </p>
 <pre> int datatype;</pre>
 <p>the values for this member are given in the enum <tt>&quot;pdl_datatypes&quot;</tt> (see <i>pdl.h</i>). Currently we have byte, short, unsigned short, long, float and double types, see also PDL::Types.</p>
-<dt>Dimensions</p>
-<dd>The number of dimensions in the piddle is given by the member </p>
+<dt>Dimensions</dt>
+<dd>The number of dimensions in the piddle is given by the member </dd>
 <pre> int ndims;</pre>
 <p>which shows how many entries there are in the arrays </p>
 <pre> PDL_Indx *dims; 
@@ -91,22 +91,22 @@ description: "PDL::Internals – description of some aspects of the current inte
  offs += it-&gt;dimincs[i] * index[i];
  }</pre>
 <p>but this is not always the right thing to do, at least without checking for certain things first.</p>
-<dt>Default storage</p>
-<dd>Since the vast majority of piddles don&#8217;t have more than 6 dimensions, it is more efficient to have default storage for the dimensions and dimincs inside the <font SIZE="-1">PDL</font> struct. </p>
+<dt>Default storage</dt>
+<dd>Since the vast majority of piddles don&#8217;t have more than 6 dimensions, it is more efficient to have default storage for the dimensions and dimincs inside the <font SIZE="-1">PDL</font> struct. </dd>
 <pre> PDL_Indx def_dims[PDL_NDIMS]; 
  PDL_Indx def_dimincs[PDL_NDIMS];</pre>
 <p>The <tt>&quot;dims&quot;</tt> and <tt>&quot;dimincs&quot;</tt> may be set to point to the beginning of these arrays if <tt>&quot;ndims&quot;</tt> is smaller than or equal to the compile-time constant <tt>&quot;PDL_NDIMS&quot;</tt>. This is important to note when freeing a piddle struct. The same applies for the threadids: </p>
 <pre> unsigned char def_threadids[PDL_NTHREADIDS];</pre>
-<dt>Magic</p>
-<dd>It is possible to attach magic to piddles, much like Perl&#8217;s own magic mechanism. If the member pointer </p>
+<dt>Magic</dt>
+<dd>It is possible to attach magic to piddles, much like Perl&#8217;s own magic mechanism. If the member pointer </dd>
 <pre> struct pdl_magic *magic;</pre>
 <p>is nonzero, the <font SIZE="-1">PDL</font> has some magic attached to it. The implementation of magic can be gleaned from the file <i>pdlmagic.c</i> in the distribution.</p>
-<dt>State</p>
-<dd>One of the first members of the structure is </p>
+<dt>State</dt>
+<dd>One of the first members of the structure is </dd>
 <pre> int state;</pre>
 <p>The possible flags and their meanings are given in <tt>&quot;pdl.h&quot;</tt>. These are mainly used to implement the lazy evaluation mechanism and keep track of piddles in these operations.</p>
-<dt>Transformations and virtual affine transformations</p>
-<dd>As you should already know, piddles often carry information about where they come from. For example, the code </p>
+<dt>Transformations and virtual affine transformations</dt>
+<dd>As you should already know, piddles often carry information about where they come from. For example, the code </dd>
 <pre> $b = $a-&gt;slice(&quot;2:5&quot;);
  $b .= 1;</pre>
 <p>will alter <tt>$a</tt>. So <tt>$b</tt> and <tt>$a</tt> <i>know</i> that they are connected via a <tt>&quot;slice&quot;</tt>-transformation. This information is stored in the members </p>
@@ -114,8 +114,8 @@ description: "PDL::Internals – description of some aspects of the current inte
  pdl_vaffine *vafftrans;</pre>
 <p>Both <tt>$a</tt> (the <i>parent</i>) and <tt>$b</tt> (the child) store this information about the transformation in appropriate slots of the <tt>&quot;pdl&quot;</tt> structure. </p>
 <p> <tt>&quot;pdl_trans&quot;</tt> and <tt>&quot;pdl_vaffine&quot;</tt> are structures that we will look at in more detail below.</p>
-<dt>The Perl SVs</p>
-<dd>When piddles are referred to through Perl SVs, we store an additional reference to it in the member </p>
+<dt>The Perl SVs</dt>
+<dd>When piddles are referred to through Perl SVs, we store an additional reference to it in the member </dd>
 <pre> void* sv;</pre>
 <p>in order to be able to return a reference to the user when he wants to inspect the transformation structure on the Perl side. </p>
 <p> Also, we store an opaque </p>
@@ -125,12 +125,12 @@ description: "PDL::Internals – description of some aspects of the current inte
 <p>Smart references and most other fundamental functions operating on piddles are implemented via <i>transformations</i> (Aas mentioned above) which are represented by the type <tt>&quot;pdl_trans&quot;</tt> in <font SIZE="-1">PDL.</font> </p>
 <p> A transformation links input and output piddles and contains all the infrastructure that defines how</p>
 <dl>
-<dt>&bull;</p>
-<dd>output piddles are obtained from input piddles</p>
-<dt>&bull;</p>
-<dd>changes in smartly linked output piddles (e.g. the <i>child</i> of a sliced <i>parent</i> piddle) are flown back to the input piddle in transformations where this is supported (the most often used example being <tt>&quot;slice&quot;</tt> here).</p>
-<dt>&bull;</p>
-<dd>datatype and size of output piddles that need to be created are obtained</dl>
+<dt>&bull;</dt>
+<dd>output piddles are obtained from input piddles</dd>
+<dt>&bull;</dt>
+<dd>changes in smartly linked output piddles (e.g. the <i>child</i> of a sliced <i>parent</i> piddle) are flown back to the input piddle in transformations where this is supported (the most often used example being <tt>&quot;slice&quot;</tt> here).</dd>
+<dt>&bull;</dt>
+<dd>datatype and size of output piddles that need to be created are obtained</dd></dl>
 <p> In general, executing a <font SIZE="-1">PDL</font> function on a group of piddles results in creation of a transformation of the requested type that links all input and output arguments (at least those that are piddles). In <font SIZE="-1">PDL</font> functions that support data flow between input and output args (e.g. <tt>&quot;slice&quot;</tt>, <tt>&quot;index&quot;</tt>) this transformation links <i>parent</i> (input) and <i>child</i> (output) piddles permanently until either the link is explicitly broken by user request (<tt>&quot;sever&quot;</tt> at the Perl level) or all parents and children have been destroyed. In those cases the transformation is lazy-evaluated, e.g. only executed when piddle values are actually accessed. </p>
 <p> In <i>non-flowing</i> functions, for example addition (<tt>&quot;+&quot;</tt>) and inner products (<tt>&quot;inner&quot;</tt>), the transformation is installed just as in flowing functions but then the transformation is immediately executed and destroyed (breaking the link between input and output args) before the function returns. </p>
 <p> It should be noted that the close link between input and output args of a flowing function (like slice) requires that piddle objects that are linked in such a way be kept alive beyond the point where they have gone out of scope from the point of view of Perl: </p>
@@ -266,12 +266,12 @@ description: "PDL::Internals – description of some aspects of the current inte
  Perl_croak(aTHX_ &quot;Foo needs to be recompiled against the newly installed PDL&quot;);</pre>
 <p>If you add a new field to the <i>Core</i> struct you should:</p>
 <dl>
-<dt>&bull;</p>
-<dd>discuss it on the pdl porters email list (pdl-porters [at] jach.hawaii.edu) [with the possibility of making your changes to a separate branch of the <font SIZE="-1">CVS</font> tree if it&#8217;s a change that will take time to complete]</p>
-<dt>&bull;</p>
-<dd>increase by 1 the value of the <tt>$pdl_core_version</tt> variable in <i>pdlcore.h.PL</i>. This sets the value of the <tt>&quot;PDL_CORE_VERSION&quot;</tt> C macro used to populate the Version field</p>
-<dt>&bull;</p>
-<dd>add documentation (e.g. to <font SIZE="-1">PDL::API</font>) if it&#8217;s a &#8220;useful&#8221; function for external module writers (as well as ensuring the code is as well documented as the rest of <font SIZE="-1">PDL </font>;)</dl>
+<dt>&bull;</dt>
+<dd>discuss it on the pdl porters email list (pdl-porters [at] jach.hawaii.edu) [with the possibility of making your changes to a separate branch of the <font SIZE="-1">CVS</font> tree if it&#8217;s a change that will take time to complete]</dd>
+<dt>&bull;</dt>
+<dd>increase by 1 the value of the <tt>$pdl_core_version</tt> variable in <i>pdlcore.h.PL</i>. This sets the value of the <tt>&quot;PDL_CORE_VERSION&quot;</tt> C macro used to populate the Version field</dd>
+<dt>&bull;</dt>
+<dd>add documentation (e.g. to <font SIZE="-1">PDL::API</font>) if it&#8217;s a &#8220;useful&#8221; function for external module writers (as well as ensuring the code is as well documented as the rest of <font SIZE="-1">PDL </font>;)</dd></dl>
 <h2>Bugs</h2>
 <p>This description is far from perfect. If you need more details or something is still unclear please ask on the pdl-porters mailing list (pdl-porters [at] jach.hawaii.edu).</p>
 <h2>Author</h2>

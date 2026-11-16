@@ -15,46 +15,46 @@ description: "Pacemaker – Part of the Pacemaker cluster resource manager"
 <p> The tool produces a custom (diff-like) output which it can also apply like a patch</p>
 <h2>Options</h2>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd>This text</p>
-<dt>-$, <code>&#8211;version</code></p>
-<dd>Version information</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd>Increase debug output</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt>-$, <code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd></dl>
 <h3>Original XML:</h3>
 <dl>
-<dt><code>-o</code>, <code>&#8211;original</code>=<i>value</i></p>
-<dd>XML is contained in the named file</p>
-<dt><code>-O</code>, <code>&#8211;original-string</code>=<i>value</i></p>
-<dd>XML is contained in the supplied string</dl>
+<dt><code>-o</code>, <code>&#8211;original</code>=<i>value</i></dt>
+<dd>XML is contained in the named file</dd>
+<dt><code>-O</code>, <code>&#8211;original-string</code>=<i>value</i></dt>
+<dd>XML is contained in the supplied string</dd></dl>
 <h3>Operation:</h3>
 <dl>
-<dt><code>-n</code>, <code>&#8211;new</code>=<i>value</i></p>
-<dd>Compare the original XML to the contents of the named file</p>
-<dt><code>-N</code>, <code>&#8211;new-string</code>=<i>value</i></p>
-<dd>Compare the original XML to the contents of the supplied string</p>
-<dt><code>-p</code>, <code>&#8211;patch</code>=<i>value</i></p>
-<dd>Patch the original XML with the contents of the named file</dl>
+<dt><code>-n</code>, <code>&#8211;new</code>=<i>value</i></dt>
+<dd>Compare the original XML to the contents of the named file</dd>
+<dt><code>-N</code>, <code>&#8211;new-string</code>=<i>value</i></dt>
+<dd>Compare the original XML to the contents of the supplied string</dd>
+<dt><code>-p</code>, <code>&#8211;patch</code>=<i>value</i></dt>
+<dd>Patch the original XML with the contents of the named file</dd></dl>
 <h3>Additional Options:</h3>
 <dl>
-<dt><code>-c</code>, <code>&#8211;cib</code></p>
-<dd>Compare/patch the inputs as a CIB (includes versions details)</p>
-<dt><code>-u</code>, <code>&#8211;no-version</code></p>
-<dd>Generate the difference without versions details</dl>
+<dt><code>-c</code>, <code>&#8211;cib</code></dt>
+<dd>Compare/patch the inputs as a CIB (includes versions details)</dd>
+<dt><code>-u</code>, <code>&#8211;no-version</code></dt>
+<dd>Generate the difference without versions details</dd></dl>
 <h2>Examples</h2>
 <p>Obtain the two different configuration files by running cibadmin on the two cluster setups to compare:</p>
 <dl>
-<dd># cibadmin &#8211;query &gt; cib-old.xml</p>
-<dd># cibadmin &#8211;query &gt; cib-new.xml</dl>
+<dd># cibadmin &#8211;query &gt; cib-old.xml</dd>
+<dd># cibadmin &#8211;query &gt; cib-new.xml</dd></dl>
 <p> Calculate and save the difference between the two files:</p>
 <dl>
-<dd># crm_diff &#8211;original cib-old.xml &#8211;new cib-new.xml &gt; patch.xml</dl>
+<dd># crm_diff &#8211;original cib-old.xml &#8211;new cib-new.xml &gt; patch.xml</dd></dl>
 <p> Apply the patch to the original file:</p>
 <dl>
-<dd># crm_diff &#8211;original cib-old.xml &#8211;patch patch.xml &gt; updated.xml</dl>
+<dd># crm_diff &#8211;original cib-old.xml &#8211;patch patch.xml &gt; updated.xml</dd></dl>
 <p> Apply the patch to the running cluster:</p>
 <dl>
-<dd># cibadmin &#8211;patch patch.xml</dl>
+<dd># cibadmin &#8211;patch patch.xml</dd></dl>
 <h2>Author</h2>
 <p>Written by Andrew Beekhof</p>
 <h2>Reporting Bugs</h2>

@@ -45,7 +45,6 @@ description: "postgrey – Postfix Greylisting Policy Server"
      --x-greylist-header=TXT      header when a mail was delayed by greylisting
                                   default: X-Greylist: delayed &lt;seconds&gt; seconds by postgrey-&lt;version&gt; at &lt;server&gt;;
 &lt;date&gt;
-
     Note that the-- whitelist - x options can be specified multiple times,
     and that per default / etc / postfix / postgrey_whitelist_clients.local is also read, so that you can put there local entries.</code></pre>
 <h2>Description</h2>
@@ -54,23 +53,23 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <p> Note that you shouldn&#8217;t use the &#8211;lookup-by-host option unless you know what you are doing: there are a lot of mail servers that use a pool of addresses to send emails, so that they can change <font SIZE="-1">IP</font> every time they try again. That&#8217;s why without this option postgrey will strip the last byte of the <font SIZE="-1">IP</font> address when doing lookups in the database.</p>
 <h3>Installation</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Create a <tt>&quot;postgrey&quot;</tt> user and the directory where to put the database <i>dbdir</i> (default: <tt>&quot;/var/spool/postfix/postgrey&quot;</tt>)</p>
-<dt>&bull;</p>
-<dd>Write an init script to start postgrey at boot and start it. Like this for example: </p>
+<dt>&bull;</dt>
+<dd>Create a <tt>&quot;postgrey&quot;</tt> user and the directory where to put the database <i>dbdir</i> (default: <tt>&quot;/var/spool/postfix/postgrey&quot;</tt>)</dd>
+<dt>&bull;</dt>
+<dd>Write an init script to start postgrey at boot and start it. Like this for example: </dd>
 <pre> postgrey --inet=10023 -d</pre>
 <p><i>contrib/postgrey.init</i> in the postgrey source distribution includes a LSB-compliant init script by Adrian von Bidder for the Debian system.</p>
-<dt>&bull;</p>
-<dd>Put something like this in /etc/main.cf: </p>
+<dt>&bull;</dt>
+<dd>Put something like this in /etc/main.cf: </dd>
 <pre> smtpd_recipient_restrictions =
  permit_mynetworks
  ...
  reject_unauth_destination
  check_policy_service inet:127.0.0.1:10023</pre>
-<dt>&bull;</p>
-<dd>Install the provided postgrey_whitelist_clients and postgrey_whitelist_recipients in /etc/postfix.</p>
-<dt>&bull;</p>
-<dd>Put in /etc/postfix/postgrey_whitelist_recipients users that do not want greylisting.</dl>
+<dt>&bull;</dt>
+<dd>Install the provided postgrey_whitelist_clients and postgrey_whitelist_recipients in /etc/postfix.</dd>
+<dt>&bull;</dt>
+<dd>Put in /etc/postfix/postgrey_whitelist_recipients users that do not want greylisting.</dd></dl>
 <h3>Whitelists</h3>
 <p>Whitelists allow you to specify client addresses or recipient address, for which no greylisting should be done. Per default postgrey will read the following files: </p>
 <pre> /etc/postfix/postgrey_whitelist_clients
@@ -79,31 +78,31 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <p>You can specify alternative paths with the &#8211;whitelist-x options. </p>
 <p> Postgrey whitelists follow similar syntax rules as Postfix access tables. The following can be specified for <code>recipient addresses</code>:</p>
 <dl>
-<dt>domain.addr</p>
-<dd><tt>&quot;domain.addr&quot;</tt> domain and subdomains.</p>
-<dt>name@</p>
-<dd><tt>&quot;name@.*&quot;</tt> and extended addresses <tt>&quot;name+blabla@.*&quot;</tt>.</p>
-<dt>name [at] domain.addr</p>
-<dd><tt>&quot;name [at] domain.addr&quot;</tt> and extended addresses.</p>
-<dt>/regexp/</p>
-<dd>anything that matches <tt>&quot;regexp&quot;</tt> (the full address is matched).</dl>
+<dt>domain.addr</dt>
+<dd><tt>&quot;domain.addr&quot;</tt> domain and subdomains.</dd>
+<dt>name@</dt>
+<dd><tt>&quot;name@.*&quot;</tt> and extended addresses <tt>&quot;name+blabla@.*&quot;</tt>.</dd>
+<dt>name [at] domain.addr</dt>
+<dd><tt>&quot;name [at] domain.addr&quot;</tt> and extended addresses.</dd>
+<dt>/regexp/</dt>
+<dd>anything that matches <tt>&quot;regexp&quot;</tt> (the full address is matched).</dd></dl>
 <p> The following can be specified for <code>client addresses</code>:</p>
 <dl>
-<dt>domain.addr</p>
-<dd><tt>&quot;domain.addr&quot;</tt> domain and subdomains.</p>
-<dt><font SIZE="-1">IP1.IP2.IP3.IP4</font></p>
-<dd><font SIZE="-1">IP</font> address <font SIZE="-1">IP1.IP2.IP3.IP4.</font> You can also leave off one number, in which case only the first specified numbers will be checked.</p>
-<dt><font SIZE="-1">IP1.IP2.IP3.IP4/MASK</font></p>
-<dd>CIDR-syle network. Example: 192.168.1.0/24</p>
-<dt>/regexp/</p>
-<dd>anything that matches <tt>&quot;regexp&quot;</tt> (the full address is matched).</dl>
+<dt>domain.addr</dt>
+<dd><tt>&quot;domain.addr&quot;</tt> domain and subdomains.</dd>
+<dt><font SIZE="-1">IP1.IP2.IP3.IP4</font></dt>
+<dd><font SIZE="-1">IP</font> address <font SIZE="-1">IP1.IP2.IP3.IP4.</font> You can also leave off one number, in which case only the first specified numbers will be checked.</dd>
+<dt><font SIZE="-1">IP1.IP2.IP3.IP4/MASK</font></dt>
+<dd>CIDR-syle network. Example: 192.168.1.0/24</dd>
+<dt>/regexp/</dt>
+<dd>anything that matches <tt>&quot;regexp&quot;</tt> (the full address is matched).</dd></dl>
 <h3>Auto-whitelisting clients</h3>
 <p>With the option &#8211;auto-whitelist-clients a client <font SIZE="-1">IP</font> address will be automatically whitelisted if the following conditions are met:</p>
 <dl>
-<dt>&bull;</p>
-<dd>At least 5 successfull attempts of delivering a mail (after greylisting was done). That number can be changed by specifying a number after the &#8211;auto-whitelist-clients argument. Only one attempt per hour counts.</p>
-<dt>&bull;</p>
-<dd>The client was last seen before &#8211;max-age days (35 per default).</dl>
+<dt>&bull;</dt>
+<dd>At least 5 successfull attempts of delivering a mail (after greylisting was done). That number can be changed by specifying a number after the &#8211;auto-whitelist-clients argument. Only one attempt per hour counts.</dd>
+<dt>&bull;</dt>
+<dd>The client was last seen before &#8211;max-age days (35 per default).</dd></dl>
 <h3>Greylist Action</h3>
 <p>To set the action to be returned to postfix when a message fails postgrey&#8217;s tests and should be deferred, use the &#8211;greylist-action=ACTION option. </p>
 <p> By default, postgrey returns <font SIZE="-1">DEFER_IF_PERMIT,</font> which causes postfix to check the rest of the restrictions and defer the message only if it would otherwise be accepted. A delay action of 451 causes postfix to always defer the message with an <font SIZE="-1">SMTP</font> reply code of 451 (temp fail). </p>
@@ -114,23 +113,23 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <p>Usually no user should see that error message and the idea of that <font SIZE="-1">URL</font> is to provide some help to system administrators seeing that message or users of broken mail clients which try to send mails directly and get a greylisting error. Note that the default help-URL contains the original recipient domain (example.com), so that domain-specific help can be presented to the user (on the default page it is said to contact postmaster [at] example.com) </p>
 <p> You can change the text (and <font SIZE="-1">URL</font>) with the <code>&#8211;greylist-text</code> parameter. The following special variables will be replaced in the text:</p>
 <dl>
-<dt>%s</p>
-<dd>How many seconds left until the greylisting is over (300).</p>
-<dt>%r</p>
-<dd>Mail-domain of the recipient (example.com).</dl>
+<dt>%s</dt>
+<dd>How many seconds left until the greylisting is over (300).</dd>
+<dt>%r</dt>
+<dd>Mail-domain of the recipient (example.com).</dd></dl>
 <h3>Greylist Header</h3>
 <p>When a message is greylisted, an additional header can be prepended to the header section of the mail: </p>
 <pre> X-Greylist: delayed %t seconds by postgrey-%v at %h; %d</pre>
 <p>You can change the text with the <code>&#8211;x-greylist-header</code> parameter. The following special variables will be replaced in the text:</p>
 <dl>
-<dt>%t</p>
-<dd>How many seconds the mail has been delayed due to greylisting.</p>
-<dt>%v</p>
-<dd>The version of postgrey.</p>
-<dt>%d</p>
-<dd>The date.</p>
-<dt>%h</p>
-<dd>The host.</dl>
+<dt>%t</dt>
+<dd>How many seconds the mail has been delayed due to greylisting.</dd>
+<dt>%v</dt>
+<dd>The version of postgrey.</dd>
+<dt>%d</dt>
+<dd>The date.</dd>
+<dt>%h</dt>
+<dd>The host.</dd></dl>
 <h3>Privacy</h3>
 <p>The &#8211;privacy option enable the use of a <font SIZE="-1">SHA1</font> hash function to store IPs and emails in the greylisting database. This will defeat straight forward attempts to retrieve mail user behaviours.</p>
 <h3><font SIZE="-1">SEE ALSO</font></h3>

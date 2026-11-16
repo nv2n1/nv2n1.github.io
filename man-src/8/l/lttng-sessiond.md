@@ -18,71 +18,71 @@ description: "lttng-sessiond — LTTng 2.x central tracing registry session daem
 <h2>Options</h2>
 <p>This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of possible options and commands</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Increase verbosity </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of possible options and commands</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Increase verbosity </dd>
 <p> There is three debugging level which will print on stderr. Maximum verbosity is <code>-vvv</code>.</p>
-<dt><code> &#8211;verbose-consumer</code></p>
-<dd>Verbose mode for consumer. Activate DBG() macro.</p>
-<dt><code>-d, &#8211;daemonize</code></p>
-<dd>Start as a daemon</p>
-<dt><code>-b, &#8211;background</code></p>
-<dd>Start as a daemon, keeping console open</p>
-<dt><code>-g, &#8211;group=NAME</code></p>
-<dd>Specify the tracing group name. (default: tracing)</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Show version number</p>
-<dt><code>-S, &#8211;sig-parent</code></p>
-<dd>Send SIGUSR1 to parent pid to notify readiness. </p>
+<dt><code> &#8211;verbose-consumer</code></dt>
+<dd>Verbose mode for consumer. Activate DBG() macro.</dd>
+<dt><code>-d, &#8211;daemonize</code></dt>
+<dd>Start as a daemon</dd>
+<dt><code>-b, &#8211;background</code></dt>
+<dd>Start as a daemon, keeping console open</dd>
+<dt><code>-g, &#8211;group=NAME</code></dt>
+<dd>Specify the tracing group name. (default: tracing)</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show version number</dd>
+<dt><code>-S, &#8211;sig-parent</code></dt>
+<dd>Send SIGUSR1 to parent pid to notify readiness. </dd>
 <p> This is used by <code><a href="/docs/linux/man/1-lttng/">lttng</a>(1)</code> to get notified when the session daemon is ready to accept command. When building a third party tool over liblttng-ctl, this option can be very handy to synchronize the control tool and the session daemon.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>No output at all.</p>
-<dt><code> &#8211;no-kernel</code></p>
-<dd>No kernel tracer support</p>
-<dt><code> &#8211;jul-tcp-port</code></p>
-<dd>JUL application registration TCP port (default: 5345)</p>
-<dt><code>-c, &#8211;client-sock=PATH</code></p>
-<dd>Specify path for the client unix socket</p>
-<dt><code>-a, &#8211;apps-sock PATH</code></p>
-<dd>Specify path for apps unix socket</p>
-<dt><code> &#8211;kconsumerd-err-sock=PATH</code></p>
-<dd>Specify path for the kernel consumer error socket</p>
-<dt><code> &#8211;kconsumerd-cmd-sock=PATH</code></p>
-<dd>Specify path for the kernel consumer command socket</p>
-<dt><code> &#8211;ustconsumerd32-err-sock=PATH</code></p>
-<dd>Specify path for the 32-bit UST consumer error socket</p>
-<dt><code> &#8211;ustconsumerd64-err-sock=PATH</code></p>
-<dd>Specify path for the 64-bit UST consumer error socket</p>
-<dt><code> &#8211;ustconsumerd32-cmd-sock=PATH</code></p>
-<dd>Specify path for the 32-bit UST consumer command socket</p>
-<dt><code> &#8211;ustconsumerd64-cmd-sock=PATH</code></p>
-<dd>Specify path for the 64-bit UST consumer command socket</p>
-<dt><code> &#8211;consumerd32-path=PATH</code></p>
-<dd>Specify path for the 32-bit UST consumer daemon binary</p>
-<dt><code> &#8211;consumerd32-libdir=PATH</code></p>
-<dd>Specify path for the 32-bit UST consumer daemon libraries</p>
-<dt><code> &#8211;consumerd64-path=PATH</code></p>
-<dd>Specify path for the 64-bit UST consumer daemon binary</p>
-<dt><code> &#8211;consumerd64-libdir=PATH</code></p>
-<dd>Specify path for the 64-bit UST consumer daemon libraries</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>No output at all.</dd>
+<dt><code> &#8211;no-kernel</code></dt>
+<dd>No kernel tracer support</dd>
+<dt><code> &#8211;jul-tcp-port</code></dt>
+<dd>JUL application registration TCP port (default: 5345)</dd>
+<dt><code>-c, &#8211;client-sock=PATH</code></dt>
+<dd>Specify path for the client unix socket</dd>
+<dt><code>-a, &#8211;apps-sock PATH</code></dt>
+<dd>Specify path for apps unix socket</dd>
+<dt><code> &#8211;kconsumerd-err-sock=PATH</code></dt>
+<dd>Specify path for the kernel consumer error socket</dd>
+<dt><code> &#8211;kconsumerd-cmd-sock=PATH</code></dt>
+<dd>Specify path for the kernel consumer command socket</dd>
+<dt><code> &#8211;ustconsumerd32-err-sock=PATH</code></dt>
+<dd>Specify path for the 32-bit UST consumer error socket</dd>
+<dt><code> &#8211;ustconsumerd64-err-sock=PATH</code></dt>
+<dd>Specify path for the 64-bit UST consumer error socket</dd>
+<dt><code> &#8211;ustconsumerd32-cmd-sock=PATH</code></dt>
+<dd>Specify path for the 32-bit UST consumer command socket</dd>
+<dt><code> &#8211;ustconsumerd64-cmd-sock=PATH</code></dt>
+<dd>Specify path for the 64-bit UST consumer command socket</dd>
+<dt><code> &#8211;consumerd32-path=PATH</code></dt>
+<dd>Specify path for the 32-bit UST consumer daemon binary</dd>
+<dt><code> &#8211;consumerd32-libdir=PATH</code></dt>
+<dd>Specify path for the 32-bit UST consumer daemon libraries</dd>
+<dt><code> &#8211;consumerd64-path=PATH</code></dt>
+<dd>Specify path for the 64-bit UST consumer daemon binary</dd>
+<dt><code> &#8211;consumerd64-libdir=PATH</code></dt>
+<dd>Specify path for the 64-bit UST consumer daemon libraries</dd></dl>
 <h2>Environment Variables</h2>
 <p>Note that all command line options will override environment variables. </p>
 <dl>
-<dt>LTTNG_CONSUMERD32_BIN</p>
-<dd>Specify the 32-bit consumer binary path. <code>&#8211;consumerd32-path</code> override this variable.</p>
-<dt>LTTNG_CONSUMERD64_BIN</p>
-<dd>Specify the 64-bit consumer binary path. <code>&#8211;consumerd64-path</code> override this variable.</p>
-<dt>LTTNG_CONSUMERD32_LIBDIR</p>
-<dd>Specifiy the 64-bit library path containing libconsumer.so. <code>&#8211;consumerd32-libdir</code> override this variable.</p>
-<dt>LTTNG_CONSUMERD64_LIBDIR</p>
-<dd>Specifiy the 32-bit library path containing libconsumer.so. <code>&#8211;consumerd64-libdir</code> override this variable.</p>
-<dt>LTTNG_DEBUG_NOCLONE</p>
-<dd>Debug-mode disabling use of clone/fork. Insecure, but required to allow debuggers to work with sessiond on some operating systems.</p>
-<dt>LTTNG_APP_SOCKET_TIMEOUT</p>
-<dd>Control the timeout of application&#8217;s socket when sending and receiving commands. Takes an integer parameter: the timeout value, in seconds. After this period of time, the application is unregistered by the session daemon. A value of 0 or -1 means an infinite timeout. Default value is 5 seconds.</p>
-<dt>LTTNG_NETWORK_SOCKET_TIMEOUT</p>
-<dd>Control timeout of socket connection, receive and send. Takes an integer parameter: the timeout value, in milliseconds. A value of 0 or -1 uses the timeout of the operating system (this is the default).</dl>
+<dt>LTTNG_CONSUMERD32_BIN</dt>
+<dd>Specify the 32-bit consumer binary path. <code>&#8211;consumerd32-path</code> override this variable.</dd>
+<dt>LTTNG_CONSUMERD64_BIN</dt>
+<dd>Specify the 64-bit consumer binary path. <code>&#8211;consumerd64-path</code> override this variable.</dd>
+<dt>LTTNG_CONSUMERD32_LIBDIR</dt>
+<dd>Specifiy the 64-bit library path containing libconsumer.so. <code>&#8211;consumerd32-libdir</code> override this variable.</dd>
+<dt>LTTNG_CONSUMERD64_LIBDIR</dt>
+<dd>Specifiy the 32-bit library path containing libconsumer.so. <code>&#8211;consumerd64-libdir</code> override this variable.</dd>
+<dt>LTTNG_DEBUG_NOCLONE</dt>
+<dd>Debug-mode disabling use of clone/fork. Insecure, but required to allow debuggers to work with sessiond on some operating systems.</dd>
+<dt>LTTNG_APP_SOCKET_TIMEOUT</dt>
+<dd>Control the timeout of application&#8217;s socket when sending and receiving commands. Takes an integer parameter: the timeout value, in seconds. After this period of time, the application is unregistered by the session daemon. A value of 0 or -1 means an infinite timeout. Default value is 5 seconds.</dd>
+<dt>LTTNG_NETWORK_SOCKET_TIMEOUT</dt>
+<dd>Control timeout of socket connection, receive and send. Takes an integer parameter: the timeout value, in milliseconds. A value of 0 or -1 uses the timeout of the operating system (this is the default).</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1), <a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3), <a href="/docs/linux/man/1-lttng/">lttng</a>(1) </p>
 <h2>Limitations</h2>

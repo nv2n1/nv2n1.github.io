@@ -17,6 +17,6 @@ description: "QuantLib::FalsePosition – False position 1-D solver."
 <p>False position 1-D solver. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against known good results.</dl>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

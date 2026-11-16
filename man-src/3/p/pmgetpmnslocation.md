@@ -21,6 +21,6 @@ description: "pmGetPMNSLocation – determine the location of the currently used
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmtrimnamespace/">pmTrimNameSpace</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOPMNS</code></p>
-<dd>If is not possible to determine where the location of the PMNS is. This could be due to problems with the current context or being unable to load a local PMNS. </p>
+<dt><code>PM_ERR_NOPMNS</code></dt>
+<dd>If is not possible to determine where the location of the PMNS is. This could be due to problems with the current context or being unable to load a local PMNS. </dd>
 </dl>

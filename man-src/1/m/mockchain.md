@@ -19,21 +19,21 @@ description: "mockchain – chain package builder."
 <p> If you want to force the rebuild of a package which has been built successfully simply remove the &#8216;success&#8217; file from the directory for the package in the localrepo path. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> REPOS, <code>&#8211;addrepo</code>=<i>REPOS</i></p>
-<dd> add this repo baseurl to the yumconfig for the chroot. This can be specified multiple times. Let&#8217;s you point to multiple paths beyond the default to pull build deps from. </p>
-<dt><code>-c</code>, <code>&#8211;continue</code></p>
-<dd> if a pkg fails to build, continue to the next one, default is to stop </p>
-<dt><code>-l</code> LOCALREPO, <code>&#8211;localrepo</code>=<i>PATH</i></p>
-<dd> set the path to put the results/repo in. This path needs to be somewhere accessible to users other than you for reading as the mock process doesn&#8217;t run as you. Will make a tempdir if not set. </p>
-<dt><code>&#8211;log</code>=<i>LOGFILE</i></p>
-<dd> log to the file named by this option, defaults to not logging </p>
-<dt><code>-m</code> OPTION, <code>&#8211;mock-option</code>=<i>OPTION</i></p>
-<dd> pass the OPTION to mock. Can be used several times. For example: </p>
+<dt><code>-a</code> REPOS, <code>&#8211;addrepo</code>=<i>REPOS</i></dt>
+<dd> add this repo baseurl to the yumconfig for the chroot. This can be specified multiple times. Let&#8217;s you point to multiple paths beyond the default to pull build deps from. </dd>
+<dt><code>-c</code>, <code>&#8211;continue</code></dt>
+<dd> if a pkg fails to build, continue to the next one, default is to stop </dd>
+<dt><code>-l</code> LOCALREPO, <code>&#8211;localrepo</code>=<i>PATH</i></dt>
+<dd> set the path to put the results/repo in. This path needs to be somewhere accessible to users other than you for reading as the mock process doesn&#8217;t run as you. Will make a tempdir if not set. </dd>
+<dt><code>&#8211;log</code>=<i>LOGFILE</i></dt>
+<dd> log to the file named by this option, defaults to not logging </dd>
+<dt><code>-m</code> OPTION, <code>&#8211;mock-option</code>=<i>OPTION</i></dt>
+<dd> pass the OPTION to mock. Can be used several times. For example: </dd>
 <p> <code>-m &#8211;define=&quot;packager Monkey&quot;</code> </p>
-<dt><code>-r</code> CONFIG, <code>&#8211;root</code>=<i>CONFIG</i></p>
-<dd> chroot config name to use in the mock build </p>
-<dt><code>&#8211;recurse</code></p>
-<dd> build all pkgs, record the failures and try to rebuild them again and again until everything gets built (or until the set of pkgs failing to build are the same over) sets &#8211;continue </p>
+<dt><code>-r</code> CONFIG, <code>&#8211;root</code>=<i>CONFIG</i></dt>
+<dd> chroot config name to use in the mock build </dd>
+<dt><code>&#8211;recurse</code></dt>
+<dd> build all pkgs, record the failures and try to rebuild them again and again until everything gets built (or until the set of pkgs failing to build are the same over) sets &#8211;continue </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Seth Vidal &lt;skvidal1.3.3&quot;fedoraproject.org&gt; </p>

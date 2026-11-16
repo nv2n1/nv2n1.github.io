@@ -10,36 +10,36 @@ description: "amplot – visualize the behavior of Amanda"
 <p>amplot &#8211; visualize the behavior of Amanda</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amplot</code> [-b] [-c] [-e] [-g] [-l] [-p] [-t&nbsp;<wbr><i>T</i>] <i>amdump_files</i></p>
+<dt> <code>amplot</code> [-b] [-c] [-e] [-g] [-l] [-p] [-t&nbsp;<wbr><i>T</i>] <i>amdump_files</i></dt>
 <dd>
 <h2>Description</h2>
 <p><code>Amplot</code></p>
-<dd>reads an <code>amdump</code> output file that Amanda generates each run (e.g. <i>amdump.1</i>) and translates the information into a picture format that may be used to determine how your installation is doing and if any parameters need to be changed. <code>Amplot</code> also prints out <code>amdump</code> lines that it either does not understand or knows to be warning or error lines and a summary of the start, end and total time for each backup image. </p>
+</dd><dd>reads an <code>amdump</code> output file that Amanda generates each run (e.g. <i>amdump.1</i>) and translates the information into a picture format that may be used to determine how your installation is doing and if any parameters need to be changed. <code>Amplot</code> also prints out <code>amdump</code> lines that it either does not understand or knows to be warning or error lines and a summary of the start, end and total time for each backup image. </dd>
 <p> <code>Amplot</code> is a shell script that executes an <code>awk</code> program (<i>amplot.awk</i>) to scan the <code>amdump</code> output file. It then executes a <code>gnuplot</code> program (<i>amplot.g</i>) to generate the graph. The <code>awk</code> program is written in an enhanced version of awk, such as GNU awk (<code><a href="/docs/linux/man/1-gawk/">gawk</a></code>(1) version 2.15 or later) or <code><a href="/docs/linux/man/1-nawk/">nawk</a></code>(1). </p>
 <p> During execution, <code>amplot</code> generates a few temporary files that <code>gnuplot</code> uses. These files are deleted at the end of execution. </p>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><code>-b</code></p>
 <dl>
-<dd>Generate b/w postscript file (need <code>-p</code>).</dl>
+<dd>Generate b/w postscript file (need <code>-p</code>).</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>Compress <i>amdump_files</i> after plotting.</dl>
+<dd>Compress <i>amdump_files</i> after plotting.</dd></dl>
 <p> <code>-e</code></p>
 <dl>
-<dd>Extend the X (time) axis if needed.</dl>
+<dd>Extend the X (time) axis if needed.</dd></dl>
 <p> <code>-g</code></p>
 <dl>
-<dd>Direct <i>gnuplot</i> output directly to the X11 display (default).</dl>
+<dd>Direct <i>gnuplot</i> output directly to the X11 display (default).</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>Direct postscript output to file <i>YYYYMMDD</i><i>.ps</i> (opposite of <code>-g</code>).</dl>
+<dd>Direct postscript output to file <i>YYYYMMDD</i><i>.ps</i> (opposite of <code>-g</code>).</dd></dl>
 <p> <code>-l</code></p>
 <dl>
-<dd>Generate landscape oriented output (needs <code>-p</code>).</dl>
+<dd>Generate landscape oriented output (needs <code>-p</code>).</dd></dl>
 <p> <code>-t </code><i>T</i></p>
 <dl>
-<dd>Set the right edge of the plot to be <i>T</i> hours.</dl>
+<dd>Set the right edge of the plot to be <i>T</i> hours.</dd></dl>
 <p> The <i>amdump_files</i> may be in various compressed formats (<i>compress</i>, <code>gzip</code>, <code>pact</code>, <code>compact</code>).</p>
 <h2>Interpretation</h2>
 <p>The figure is divided into a number of regions. There are titles on the top that show important statistical information about the configuration and from this execution of <code>amdump</code>. In the figure, the X axis is time, with 0 being the moment <code>amdump</code> was started. The Y axis is divided into 5 regions: </p>
@@ -57,5 +57,6 @@ description: "amplot – visualize the behavior of Amanda"
 <h2>Authors</h2>
 <p><code>Olafur Gudmundsson</code> &lt;ogud [at] tis.com&gt;</p>
 <dl>
-<dd>Trusted Information Systems</dl>
+<dd>Trusted Information Systems</dd></dl>
 <p> <code>Stefan G. Weichinger</code> &lt;sgw [at] amanda.org&gt;</p>
+</dl>

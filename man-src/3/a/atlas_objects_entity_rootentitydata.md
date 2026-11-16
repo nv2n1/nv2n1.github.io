@@ -143,14 +143,14 @@ description: "Atlas::Objects::Entity::RootEntityData – Starting point for enti
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::RootData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Entity::AnonymousData</code>, <code>Atlas::Objects::Entity::AdminEntityData</code>, <code>Atlas::Objects::Entity::AccountData</code>, <code>Atlas::Objects::Entity::PlayerData</code>, <code>Atlas::Objects::Entity::AdminData</code>, <code>Atlas::Objects::Entity::GameData</code>, and <code>Atlas::Objects::Entity::GameEntityData</code>.</p>
 <h3>static <code>RootEntityData</code>* Atlas::Objects::Entity::RootEntityData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::RootData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Entity::AnonymousData</code>, <code>Atlas::Objects::Entity::AdminEntityData</code>, <code>Atlas::Objects::Entity::AccountData</code>, <code>Atlas::Objects::Entity::PlayerData</code>, <code>Atlas::Objects::Entity::AdminData</code>, <code>Atlas::Objects::Entity::GameData</code>, and <code>Atlas::Objects::Entity::GameEntityData</code>. </p>
 <h2>Author</h2>

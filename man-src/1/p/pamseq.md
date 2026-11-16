@@ -18,8 +18,8 @@ description: "pamseq – generate PAM image of all possible tuple values, in seq
 <p> For a depth of one, the order is simple: From 0 to maxval, going from left to right. For higher depths, the highest numbered plane goes from 0 to maxval (going left to right) while all the other planes have value 0. Then the sequence repeats except with the next highest plane set to a value of 1, then 2, etc. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-tupletype</code></p>
-<dd> This is the value of the &quot;tuple_type&quot; attribute of the created PAM image. It can be any string up to 255 characters. </p>
+<dt><code>-tupletype</code></dt>
+<dd> This is the value of the &quot;tuple_type&quot; attribute of the created PAM image. It can be any string up to 255 characters. </dd>
 </dl>
 <h2>USAGE</h2>
 <p> To create a simple ramp of the values 0..255, for input to various matrix calculations, try </p>

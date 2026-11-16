@@ -10,9 +10,9 @@ description: "yasm_objfmts – Yasm Supported Object Formats"
 <p>yasm_objfmts &#8211; Yasm Supported Object Formats</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>yasm</code> <code>-f&nbsp;<wbr></code><i>objfmt</i> <i>&#8230;</i></dl>
+<dt> <code>yasm</code> <code>-f&nbsp;<wbr></code><i>objfmt</i> <i>&#8230;</i></dt></dl>
 <h2>Description</h2>
-<dd>The standard Yasm distribution includes a number of modules for different object formats (Yasm&#8217;s primary output). </p>
+<dd>The standard Yasm distribution includes a number of modules for different object formats (Yasm&#8217;s primary output). </dd>
 <p> The object format is selected on the <code><a href="/docs/linux/man/1-yasm/">yasm</a></code>(1) command line by use of the <code>-f </code><i>objfmt</i> command line option.</p>
 <h2>Bin</h2>
 <p>The &#8220;bin&#8221; object format produces a flat-format, non-relocatable binary file. It is appropriate for producing DOS .COM executables or things like boot blocks. It supports only 3 sections and those sections are written in a predefined order to the output file.</p>
@@ -37,6 +37,6 @@ description: "yasm_objfmts – Yasm Supported Object Formats"
 <h2>Author</h2>
 <p><code>Peter Johnson</code> &lt;peter [at] tortall.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2006 Peter Johnson</p>

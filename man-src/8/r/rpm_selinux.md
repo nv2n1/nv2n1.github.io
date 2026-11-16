@@ -78,16 +78,16 @@ description: "rpm_selinux – Security Enhanced Linux Policy for the rpm process
 <p> <code>rpm_exec_t</code> </p>
 <p> &#8211; Set files with the rpm_exec_t type, if you want to transition an executable to the rpm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/dnf-[0-9]+, /usr/libexec/yumDBUSBackend.py, /bin/rpm, /usr/bin/dnf, /usr/bin/rpm, /usr/bin/yum, /usr/bin/zif, /usr/sbin/pup, /usr/bin/smart, /usr/sbin/bcfg2, /usr/sbin/pirut, /usr/bin/apt-get, /bin/yum-builddep, /usr/sbin/up2date, /usr/bin/repoquery, /usr/sbin/yum-cron, /usr/sbin/synaptic, /usr/bin/apt-shell, /usr/sbin/rhn_check, /usr/sbin/rhnreg_ks, /usr/bin/anaconda-yum, /usr/bin/yum-builddep, /usr/sbin/packagekitd, /usr/bin/dnf-automatic, /usr/sbin/yum-updatesd, /usr/bin/yum-deprecated, /usr/libexec/packagekitd, /usr/bin/package-cleanup, /usr/bin/fedora-rmdevelrpms, /usr/bin/rpmdev-rmdevelrpms, /usr/sbin/system-install-packages, /usr/share/yumex/yum_childtask.py, /usr/sbin/yum-complete-transaction, /usr/share/yumex/yumex-yum-backend, /usr/libexec/pegasus/pycmpiLMI_Software-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/dnf-[0-9]+, /usr/libexec/yumDBUSBackend.py, /bin/rpm, /usr/bin/dnf, /usr/bin/rpm, /usr/bin/yum, /usr/bin/zif, /usr/sbin/pup, /usr/bin/smart, /usr/sbin/bcfg2, /usr/sbin/pirut, /usr/bin/apt-get, /bin/yum-builddep, /usr/sbin/up2date, /usr/bin/repoquery, /usr/sbin/yum-cron, /usr/sbin/synaptic, /usr/bin/apt-shell, /usr/sbin/rhn_check, /usr/sbin/rhnreg_ks, /usr/bin/anaconda-yum, /usr/bin/yum-builddep, /usr/sbin/packagekitd, /usr/bin/dnf-automatic, /usr/sbin/yum-updatesd, /usr/bin/yum-deprecated, /usr/libexec/packagekitd, /usr/bin/package-cleanup, /usr/bin/fedora-rmdevelrpms, /usr/bin/rpmdev-rmdevelrpms, /usr/sbin/system-install-packages, /usr/share/yumex/yum_childtask.py, /usr/sbin/yum-complete-transaction, /usr/share/yumex/yumex-yum-backend, /usr/libexec/pegasus/pycmpiLMI_Software-cimprovagt </dd>
 </dl>
 <p> <code>rpm_file_t</code> </p>
 <p> &#8211; Set files with the rpm_file_t type, if you want to treat the files as rpm content. </p>
 <p> <code>rpm_log_t</code> </p>
 <p> &#8211; Set files with the rpm_log_t type, if you want to treat the data as rpm log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/yum.log.*, /var/log/up2date.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/yum.log.*, /var/log/up2date.* </dd>
 </dl>
 <p> <code>rpm_script_exec_t</code> </p>
 <p> &#8211; Set files with the rpm_script_exec_t type, if you want to transition an executable to the rpm_script_t domain. </p>
@@ -102,20 +102,20 @@ description: "rpm_selinux – Security Enhanced Linux Policy for the rpm process
 <p> <code>rpm_var_cache_t</code> </p>
 <p> &#8211; Set files with the rpm_var_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/cache/yum(/.*)?, /var/cache/dnf(/.*)?, /var/spool/up2date(/.*)?, /var/cache/PackageKit(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/cache/yum(/.*)?, /var/cache/dnf(/.*)?, /var/spool/up2date(/.*)?, /var/cache/PackageKit(/.*)? </dd>
 </dl>
 <p> <code>rpm_var_lib_t</code> </p>
 <p> &#8211; Set files with the rpm_var_lib_t type, if you want to store the rpm files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/rpm(/.*)?, /var/lib/yum(/.*)?, /var/lib/dnf(/.*)?, /usr/share/rpm(/.*)?, /var/lib/PackageKit(/.*)?, /var/lib/alternatives(/.*)?, /var/lib/rpmrebuilddb.*(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/rpm(/.*)?, /var/lib/yum(/.*)?, /var/lib/dnf(/.*)?, /usr/share/rpm(/.*)?, /var/lib/PackageKit(/.*)?, /var/lib/alternatives(/.*)?, /var/lib/rpmrebuilddb.*(/.*)? </dd>
 </dl>
 <p> <code>rpm_var_run_t</code> </p>
 <p> &#8211; Set files with the rpm_var_run_t type, if you want to store the rpm files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/yum.*, /var/run/PackageKit(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/yum.*, /var/run/PackageKit(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -18,19 +18,19 @@ description: "gxl2gv,gv2gxl – GXL-GV converters"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-g</code></p>
-<dd> The command name and input file extensions are ignored, the input is taken as a GV file and a GXL file is generated.</p>
-<dt><code>-d</code></p>
-<dd> The command name and input file extensions are ignored, the input is taken as a GXL file and a GV file is generated.</p>
-<dt><code>-?</code></p>
-<dd> Prints usage information and exits.</p>
-<dt><code>-o</code><i> outfile</i></p>
-<dd> If specified, the output will be written into the file <i>outfile</i>. Otherwise, output is written to standard out.</dl>
+<dt><code>-g</code></dt>
+<dd> The command name and input file extensions are ignored, the input is taken as a GV file and a GXL file is generated.</dd>
+<dt><code>-d</code></dt>
+<dd> The command name and input file extensions are ignored, the input is taken as a GXL file and a GV file is generated.</dd>
+<dt><code>-?</code></dt>
+<dd> Prints usage information and exits.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> If specified, the output will be written into the file <i>outfile</i>. Otherwise, output is written to standard out.</dd></dl>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in GXL or GV. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in GXL or GV. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>RETURN CODES</h2>
 <p> Both <code>gxl2gv</code> and <code>gv2gxl</code> return <code>0</code> if there were no problems during conversion; and non-zero if any error occurred.</p>
 <h2>BUGS</h2>

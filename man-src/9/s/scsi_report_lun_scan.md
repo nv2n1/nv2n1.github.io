@@ -14,13 +14,13 @@ description: "scsi_report_lun_scan – Scan using SCSI REPORT LUN results"
 <p><i>starget</i></p>
 <dl>
 <dd>
-<dd>which target</dl>
+</dd><dd>which target</dd></dl>
 <p> <i>bflags</i></p>
 <dl>
-<dd>Zero or a mix of BLIST_NOLUN, BLIST_REPORTLUN2, or BLIST_NOREPORTLUN</dl>
+<dd>Zero or a mix of BLIST_NOLUN, BLIST_REPORTLUN2, or BLIST_NOREPORTLUN</dd></dl>
 <p> <i>rescan</i></p>
 <dl>
-<dd>nonzero if we can skip code only needed on first scan</dl>
+<dd>nonzero if we can skip code only needed on first scan</dd></dl>
 <h2>Description</h2>
 <p>Fast scanning for modern (SCSI-3) devices by sending a REPORT LUN command. Scan the resulting list of LUNs by calling scsi_probe_and_add_lun. </p>
 <p> If BLINK_REPORTLUN2 is set, scan a target that supports more than 8 LUNs even if it&#8217;s older than SCSI-3. If BLIST_NOREPORTLUN is set, return 1 always. If BLIST_NOLUN is set, return 0 always. If starget-&gt;no_report_luns is set, return 1 always.</p>
@@ -29,8 +29,8 @@ description: "scsi_report_lun_scan – Scan using SCSI REPORT LUN results"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

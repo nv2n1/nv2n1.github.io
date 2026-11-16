@@ -16,8 +16,8 @@ bson_string_new(const char *str);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> A string to be copied or NULL.</dl>
+<dt><code>str</code></dt>
+<dd> A string to be copied or NULL.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new string builder, which uses power-of-two growth of buffers. Use the various bson_string_append*() functions to append to the string. </p>
 <h2>RETURNS</h2>

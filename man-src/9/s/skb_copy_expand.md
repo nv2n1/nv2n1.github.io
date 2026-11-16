@@ -14,16 +14,16 @@ description: "skb_copy_expand – copy and expand sk_buff"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer to copy</dl>
+</dd><dd>buffer to copy</dd></dl>
 <p> <i>newheadroom</i></p>
 <dl>
-<dd>new free bytes at head</dl>
+<dd>new free bytes at head</dd></dl>
 <p> <i>newtailroom</i></p>
 <dl>
-<dd>new free bytes at tail</dl>
+<dd>new free bytes at tail</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>allocation priority</dl>
+<dd>allocation priority</dd></dl>
 <h2>Description</h2>
 <p>Make a copy of both an sk_buff and its data and while doing so allocate additional space. </p>
 <p> This is used when the caller wishes to modify the data and needs a private copy of the data to alter as well as more space for new fields. Returns <code>NULL</code> on failure or the pointer to the buffer on success. The returned buffer has a reference count of 1. </p>

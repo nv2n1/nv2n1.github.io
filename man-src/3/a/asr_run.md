@@ -45,7 +45,7 @@ description: "asr_run, asr_run_sync, asr_abort, res_send_async, res_query_async,
 <p> The <code>asr_run</code>() function drives the resolving process. It runs the asynchronous query represented by the handle until a result is available, or until it cannot continue without blocking. The results are returned to the user through the parameter, which must be a valid pointer to user allocated memory. is defined as:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct asr_result {
     /* Fields set if the query is not done yet (asr_run returns 0) */
@@ -69,27 +69,19 @@ struct asr_result {
     struct hostent *ar_hostent;
     struct netent *ar_netent;
 };
-
 The function returns one of the following values:
-
 0The query cannot be processed further until a specific condition on a
 file descriptor becomes true.
 The following members of the
 structure are filled:
-
-
 one of ASR_WANT_READ or ASR_WANT_WRITE,the file descriptor waiting for an IO operation,the amount of time to wait for in milliseconds.
-
 The caller is expected to call
 asr_run()
 again once the condition holds or the timeout expires.
-
 1The query is completed.
 The members relevant to the actual async query type are set accordingly,
 including error conditions.
 In any case, the query is cleared and its handle is invalidated.
-
-
 Note that although the query itself may fail (the error being properly reported
 in the
 structure), the
@@ -209,3 +201,4 @@ freeaddrinfo(3).
 <h2>CAVEATS</h2>
 <p> This DNS resolver implementation doesn&#8217;t support the EDNS0 protocol extension yet. </p>
 <h2>Index</h2>
+</dd></dl>

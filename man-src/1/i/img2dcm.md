@@ -77,11 +77,11 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
 <h3>Attribute Sources</h3>
 <p> For converting a general image format into DICOM format, the <code>img2dcm</code> application may be fed with some additional input for filling mandatory (and optional) attributes in the new DICOM file like patient, study and series information. This information can be collected using different approaches, which can be combined and are applied to the result file in the following order: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Using the <i>&#8211;dataset-from</i> option <code>img2dcm</code> is forced to import attributes from an existing DICOM file. The given DICOM file is fully imported and serves as the basis for all further export operations. As an exception, the SOP Instance UID is not copied by this option. Also image related data like Rows, Columns etc. is exchanged during conversion. Note that <code>img2dcm</code> does not check any other attribute values for validity, e. g. it does not look into sequences to adapt any attributes to the new object (referenced images etc.). Therefore, it is recommended to use the templates in the data directory for (old) SC and VLP objects. See also section &#8216;Input Templates&#8217;.</dl>
+<dt>&bull;</dt>
+<dd> Using the <i>&#8211;dataset-from</i> option <code>img2dcm</code> is forced to import attributes from an existing DICOM file. The given DICOM file is fully imported and serves as the basis for all further export operations. As an exception, the SOP Instance UID is not copied by this option. Also image related data like Rows, Columns etc. is exchanged during conversion. Note that <code>img2dcm</code> does not check any other attribute values for validity, e. g. it does not look into sequences to adapt any attributes to the new object (referenced images etc.). Therefore, it is recommended to use the templates in the data directory for (old) SC and VLP objects. See also section &#8216;Input Templates&#8217;.</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>&#8211;study-from</i> and <i>&#8211;series-from</i> options (mutually exclusive) can be used to import patient, study and series information from an existing DICOM file. If <i>&#8211;series-from</i> is specified, then the given DICOM file is opened by <code>img2dcm</code> and all mandatory information down to the series level is imported. Note that this includes patient, study and series information. In case of <i>&#8211;study-from</i>, the series information is excluded. The following attributes are taken over:</dl>
+<dt>&bull;</dt>
+<dd> The <i>&#8211;study-from</i> and <i>&#8211;series-from</i> options (mutually exclusive) can be used to import patient, study and series information from an existing DICOM file. If <i>&#8211;series-from</i> is specified, then the given DICOM file is opened by <code>img2dcm</code> and all mandatory information down to the series level is imported. Note that this includes patient, study and series information. In case of <i>&#8211;study-from</i>, the series information is excluded. The following attributes are taken over:</dd></dl>
 <pre>
       Patient Level:
         Patient's Name
@@ -100,14 +100,13 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
         Series Instance UID
         Series Number
         Manufacturer
-    
 </pre>
 <dl>
-<dt>&bull;</p>
-<dd> With the <i>&#8211;insert-type2</i> and <i>&#8211;invent-type1</i> options (both enabled per default), missing attributes (type 2 attributes) and/or missing attribute values (for type 1 attributes) are automatically added and invented by <code>img2dcm</code>. Please note that these options are only evaluated if option <i>&#8211;do-checks</i> is enabled (default). If the <i>&#8211;no-checks</i> options is enabled, no automatic attribute insertion will take place.</dl>
+<dt>&bull;</dt>
+<dd> With the <i>&#8211;insert-type2</i> and <i>&#8211;invent-type1</i> options (both enabled per default), missing attributes (type 2 attributes) and/or missing attribute values (for type 1 attributes) are automatically added and invented by <code>img2dcm</code>. Please note that these options are only evaluated if option <i>&#8211;do-checks</i> is enabled (default). If the <i>&#8211;no-checks</i> options is enabled, no automatic attribute insertion will take place.</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>&#8211;key</i> option can be used to add further attributes to the DICOM output file. This option is applied at the very end, just before saving the DICOM file. It is also possible to specify sequences, items and nested attributes using the <i>&#8211;key</i> option. In these cases, a special &#8216;path&#8217; notation has to be used. Details on this path notation can be found in the documentation of <code>dcmodify</code>.</dl>
+<dt>&bull;</dt>
+<dd> The <i>&#8211;key</i> option can be used to add further attributes to the DICOM output file. This option is applied at the very end, just before saving the DICOM file. It is also possible to specify sequences, items and nested attributes using the <i>&#8211;key</i> option. In these cases, a special &#8216;path&#8217; notation has to be used. Details on this path notation can be found in the documentation of <code>dcmodify</code>.</dd></dl>
 <h3>UIDs</h3>
 <p> New Study and Series Instance UIDs are generated <code>if necessary</code> after applying the <i>&#8211;study-from</i> and <i>&#8211;series</i> options. If Study Instance UID or Series Instance UID are not present after these steps, they are newly generated, independently from each other. A contrary behaviour is choosen for the SOP Instance UID that one could expect to be taken over when using the <i>&#8211;dataset-from</i> option. This is <code>not</code> the case, the SOP Instance UID is <code>not</code> copied to the new object. This should be the desirable behaviour for most use cases. However, if a certain SOP Instance UID should be inserted into the new object, the <i>&#8211;key</i> option should be used.</p>
 <h3>Input Templates</h3>
@@ -121,14 +120,14 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
 <h3>JPEG Input Plugin</h3>
 <p> For JPEG, the original JPEG from the source file is not decoded but extracted and slightly transformed (e. g. JFIF header is cut off) to allow fast conversion of even big JPEG files without the need of decoding and re-encoding. The JPEG plugin chooses the necessary output transfer syntax automatically depending on the actual encoding of the data inside the JPEG file. Therefore, the following Transfer Syntaxes (and their corresponding JPEG encodings) are used by the JPEG plugin: </p>
 <dl>
-<dt>&bull;</p>
-<dd> JPEG Coding Process 1 Baseline, Lossy, Non-Hierarchical, Sequential, DCT, Huffman, 8 Bit SOP Class = 1.2.840.10008.1.2.4.50</dl>
+<dt>&bull;</dt>
+<dd> JPEG Coding Process 1 Baseline, Lossy, Non-Hierarchical, Sequential, DCT, Huffman, 8 Bit SOP Class = 1.2.840.10008.1.2.4.50</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> JPEG Coding Process 2 (8-bit) and 4 (12-bit) Extended, Lossy, Non-Hierarchical, Sequential, DCT, Huffman, 8/12 Bit SOP Class = 1.2.840.10008.1.2.4.51</dl>
+<dt>&bull;</dt>
+<dd> JPEG Coding Process 2 (8-bit) and 4 (12-bit) Extended, Lossy, Non-Hierarchical, Sequential, DCT, Huffman, 8/12 Bit SOP Class = 1.2.840.10008.1.2.4.51</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd> JPEG Coding Process 10 (8-bit) and 12 (12-bit) Full Progression, lossy, Non-Hierarch., Progressive, DCT, Huffman, 8/12 Bit SOP Class = 1.2.840.10008.1.2.4.55</dl>
+<dt>&bull;</dt>
+<dd> JPEG Coding Process 10 (8-bit) and 12 (12-bit) Full Progression, lossy, Non-Hierarch., Progressive, DCT, Huffman, 8/12 Bit SOP Class = 1.2.840.10008.1.2.4.55</dd></dl>
 <p> Color and grayscale images are supported. </p>
 <p> The support for the Extended JPEG Transfer Syntax can be disabled (<i>&#8211;disable-ext</i> option) as well as the support for the (retired) Progressive JPEG Transfer Syntax (<i>&#8211;disable-progr</i> option). </p>
 <p> JPEG lossless encoding as well as any arithmethic or hierarchical JPEG encoding modes are not supported by the plugin. </p>
@@ -142,33 +141,33 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
 <h2>EXAMPLES</h2>
 <p> Here are some examples that show how the <code>img2dcm</code> application can be used. </p>
 <dl>
-<dt>1.</p>
+<dt>1.</dt>
 <dd> img2dcm image.jpg out.dcm<br />
- Read JPEG file &#8216;image.jpg&#8217;, convert to the old Secondary Capture SOP class and save the result to DICOM file &#8216;out.dcm&#8217;. This is the easiest way of using <code>img2dcm</code>. Any type 1 and type 2 attributes required for writing valid objects of this SOP class are inserted automatically.</dl>
+ Read JPEG file &#8216;image.jpg&#8217;, convert to the old Secondary Capture SOP class and save the result to DICOM file &#8216;out.dcm&#8217;. This is the easiest way of using <code>img2dcm</code>. Any type 1 and type 2 attributes required for writing valid objects of this SOP class are inserted automatically.</dd></dl>
 <dl>
-<dt>2.</p>
+<dt>2.</dt>
 <dd> img2dcm -i BMP image.bmp out.dcm<br />
- Same as above but tells img2dcm to read a BMP file instead of JPEG.</dl>
+ Same as above but tells img2dcm to read a BMP file instead of JPEG.</dd></dl>
 <dl>
-<dt>3.</p>
+<dt>3.</dt>
 <dd> img2dcm image.jpg out.dcm -vlp -k &#8216;PatientName=Bond^James&#8217;<br />
- Same as first example, but writes Visible Light Photographic Image object to &#8216;out.dcm&#8217; and sets PatientName to &#8216;Bond^James&#8217; which otherwise would be left empty.</dl>
+ Same as first example, but writes Visible Light Photographic Image object to &#8216;out.dcm&#8217; and sets PatientName to &#8216;Bond^James&#8217; which otherwise would be left empty.</dd></dl>
 <dl>
-<dt>4.</p>
+<dt>4.</dt>
 <dd> img2dcm image.jpg out.dcm &#8211;series-from template.dcm -k &#8216;PatientName=Bond^James&#8217;<br />
- Same as 1), but imports patient/study/series infomation from DICOM file &#8216;template.dcm&#8217;. Please note that attribute PatientName will contain &#8216;Bond^James&#8217; at the end, any value from &#8216;template.dcm&#8217; will be overwritten. That is, because the -k option is applied at the very end of the conversion pipeline (see above).</dl>
+ Same as 1), but imports patient/study/series infomation from DICOM file &#8216;template.dcm&#8217;. Please note that attribute PatientName will contain &#8216;Bond^James&#8217; at the end, any value from &#8216;template.dcm&#8217; will be overwritten. That is, because the -k option is applied at the very end of the conversion pipeline (see above).</dd></dl>
 <dl>
-<dt>5.</p>
+<dt>5.</dt>
 <dd> img2dcm image.jpg out.dcm &#8211;no-checks<br />
- Same as 1), but does not perform any attribute checking and no type 1 and type 2 attribute insertion! So in this case, an invalid DICOM object would be generated. This can be interesting if the output file is not meant to be completed but will undergo further transformations, e. g. adding attributes using <code>dcmodify</code>. Only use option <i>&#8211;no-checks</i> if you know what you are doing!</dl>
+ Same as 1), but does not perform any attribute checking and no type 1 and type 2 attribute insertion! So in this case, an invalid DICOM object would be generated. This can be interesting if the output file is not meant to be completed but will undergo further transformations, e. g. adding attributes using <code>dcmodify</code>. Only use option <i>&#8211;no-checks</i> if you know what you are doing!</dd></dl>
 <dl>
-<dt>6.</p>
+<dt>6.</dt>
 <dd> img2dcm image.jpg out.dcm &#8211;no-type1-invent<br />
- Same as 1), but does not insert missing type 1 attributes and/or their values. Type 2 attributes will be inserted. Note that in this case it must be assured that all type 1 attributes are provided by other means, i. e. by adding them with the <i>&#8211;key</i> option. Otherwise, <code>img2dcm</code> will report an error and will stop converting.</dl>
+ Same as 1), but does not insert missing type 1 attributes and/or their values. Type 2 attributes will be inserted. Note that in this case it must be assured that all type 1 attributes are provided by other means, i. e. by adding them with the <i>&#8211;key</i> option. Otherwise, <code>img2dcm</code> will report an error and will stop converting.</dd></dl>
 <dl>
-<dt>7.</p>
+<dt>7.</dt>
 <dd> img2dcm image.jpg out.dcm &#8211;keep-appn &#8211;insist-on-jfif<br />
- Same as 1), but takes over APPn information like EXIF into the DICOM object&#8217;s resulting JPEG stream. Further, <i>&#8211;insist-on-jfif</i> will force <code>img2dcm</code> to abort if no JFIF information is existent in the source file.</dl>
+ Same as 1), but takes over APPn information like EXIF into the DICOM object&#8217;s resulting JPEG stream. Further, <i>&#8211;insist-on-jfif</i> will force <code>img2dcm</code> to abort if no JFIF information is existent in the source file.</dd></dl>
 <h2>LOGGING</h2>
 <p> The level of logging output of the various command line tools and underlying libraries can be specified by the user. By default, only errors and warnings are written to the standard error stream. Using option <i>&#8211;verbose</i> also informational messages like processing details are reported. Option <i>&#8211;debug</i> can be used to get more details on the internal activity, e.g. for debugging purposes. Other logging levels can be selected using option <i>&#8211;log-level</i>. In <i>&#8211;quiet</i> mode only fatal errors are reported. In such very severe error events, the application will usually terminate. For more details on the different logging levels, see documentation of module &#8216;oflog&#8217;. </p>
 <p> In case the logging output should be written to file (optionally with logfile rotation), to syslog (Unix) or the event log (Windows) option <i>&#8211;log-config</i> can be used. This configuration file also allows for directing only certain messages to a particular output stream and for filtering certain messages based on the module or application where they are generated. An example configuration file is provided in <i>&lt;etcdir&gt;/logger.cfg</i>).</p>

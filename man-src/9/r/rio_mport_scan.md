@@ -14,9 +14,9 @@ description: "rio_mport_scan – execute enumeration/discovery on the specified 
 <p><i>mport_id</i></p>
 <dl>
 <dd>
-<dd>number (ID) of mport device</dl>
+</dd><dd>number (ID) of mport device</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

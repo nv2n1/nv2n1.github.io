@@ -14,10 +14,10 @@ description: "ata_scsi_find_dev – lookup ata_device from scsi_cmnd"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>ATA port to which the device is attached</dl>
+</dd><dd>ATA port to which the device is attached</dd></dl>
 <p> <i>scsidev</i></p>
 <dl>
-<dd>SCSI device from which we derive the ATA device</dl>
+<dd>SCSI device from which we derive the ATA device</dd></dl>
 <h2>Description</h2>
 <p>Given various information provided in struct scsi_cmnd, map that onto an ATA bus, and using that mapping determine which ata_device is associated with the SCSI command to be sent. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -26,5 +26,5 @@ description: "ata_scsi_find_dev – lookup ata_device from scsi_cmnd"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

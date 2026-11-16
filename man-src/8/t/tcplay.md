@@ -20,68 +20,68 @@ description: "tcplay – tool to manage TrueCrypt volumes"
 <h2>Description</h2>
 <p>The utility provides full support for creating and opening/mapping TrueCrypt-compatible volumes. It supports the following commands, each with a set of options detailed further below:</p>
 <dl>
-<dt><code>-c , &#8211;create</code></p>
-<dd>Create a new encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code></p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print help message and exit.</p>
-<dt><code>-i , &#8211;info</code></p>
-<dd>Print out information about the encrypted device specified by &#8211;<code>-device</code></p>
-<dt><code>-j </code><i>mapping , &#8211;</i><code>-info-mapped = </code><i>mapping</i></p>
-<dd>Print out information about the mapped tcplay volume specified by <i>mapping</i> Information such as key CRC and the PBKDF2 PRF is not available via this command.</p>
-<dt><code>&#8211;modify</code></p>
-<dd>Modify the volume header. This mode allows changing passphrase, keyfiles, PBKDF2 PRF as well as restoring from a backup header.</p>
-<dt><code>-m </code><i>mapping , &#8211;</i><code>-map = </code><i>mapping</i></p>
-<dd>Map the encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code> as a dm(4) mapping called <i>mapping</i> The <i>mapping</i> argument should not contain any spaces or special characters.</p>
-<dt><code>-u </code><i>mapping , &#8211;</i><code>-unmap = </code><i>mapping</i></p>
-<dd>Removes (unmaps) the dm(4) mapping specified by <i>mapping</i> as well as any related cascade mappings. If you mapped a volume using full disk encryption and created mapping for individual partitions using <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8), you must remove these prior to unmapping the volume.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Print version message and exit.</dl>
+<dt><code>-c , &#8211;create</code></dt>
+<dd>Create a new encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code></dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print help message and exit.</dd>
+<dt><code>-i , &#8211;info</code></dt>
+<dd>Print out information about the encrypted device specified by &#8211;<code>-device</code></dd>
+<dt><code>-j </code><i>mapping , &#8211;</i><code>-info-mapped = </code><i>mapping</i></dt>
+<dd>Print out information about the mapped tcplay volume specified by <i>mapping</i> Information such as key CRC and the PBKDF2 PRF is not available via this command.</dd>
+<dt><code>&#8211;modify</code></dt>
+<dd>Modify the volume header. This mode allows changing passphrase, keyfiles, PBKDF2 PRF as well as restoring from a backup header.</dd>
+<dt><code>-m </code><i>mapping , &#8211;</i><code>-map = </code><i>mapping</i></dt>
+<dd>Map the encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code> as a dm(4) mapping called <i>mapping</i> The <i>mapping</i> argument should not contain any spaces or special characters.</dd>
+<dt><code>-u </code><i>mapping , &#8211;</i><code>-unmap = </code><i>mapping</i></dt>
+<dd>Removes (unmaps) the dm(4) mapping specified by <i>mapping</i> as well as any related cascade mappings. If you mapped a volume using full disk encryption and created mapping for individual partitions using <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8), you must remove these prior to unmapping the volume.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Print version message and exit.</dd></dl>
 <p> Options common to all commands are:</p>
 <dl>
-<dt><code>-d </code><i>device , &#8211;</i><code>-device = </code><i>device</i></p>
-<dd>Specifies the disk <i>device</i> on which the TrueCrypt volume resides/will reside. This option is mandatory for all commands.</p>
-<dt><code>-f </code><i>keyfile_hidden , &#8211;</i><code>-keyfile-hidden = </code><i>keyfile_hidden</i></p>
-<dd>Specifies a keyfile to use in addition to the passphrase when either creating a hidden volume or when protecting a hidden volume while mapping or querying the outer volume. If you only intend to map a hidden volume, the &#8211;<code>-keyfile</code> option has to be used. This option can appear multiple times; if so, multiple keyfiles will be used. This option is not valid in the &#8211;<code>-modify</code> mode.</p>
-<dt><code>-k </code><i>keyfile , &#8211;</i><code>-keyfile = </code><i>keyfile</i></p>
-<dd>Specifies a <i>keyfile</i> to use in addition to the passphrase. This option can appear multiple times; if so, multiple keyfiles will be used.</dl>
+<dt><code>-d </code><i>device , &#8211;</i><code>-device = </code><i>device</i></dt>
+<dd>Specifies the disk <i>device</i> on which the TrueCrypt volume resides/will reside. This option is mandatory for all commands.</dd>
+<dt><code>-f </code><i>keyfile_hidden , &#8211;</i><code>-keyfile-hidden = </code><i>keyfile_hidden</i></dt>
+<dd>Specifies a keyfile to use in addition to the passphrase when either creating a hidden volume or when protecting a hidden volume while mapping or querying the outer volume. If you only intend to map a hidden volume, the &#8211;<code>-keyfile</code> option has to be used. This option can appear multiple times; if so, multiple keyfiles will be used. This option is not valid in the &#8211;<code>-modify</code> mode.</dd>
+<dt><code>-k </code><i>keyfile , &#8211;</i><code>-keyfile = </code><i>keyfile</i></dt>
+<dd>Specifies a <i>keyfile</i> to use in addition to the passphrase. This option can appear multiple times; if so, multiple keyfiles will be used.</dd></dl>
 <p> Additional options for the &#8211;<code>-create</code> command are:</p>
 <dl>
-<dt><code>-a </code><i>pbkdf_hash , &#8211;</i><code>-pbkdf-prf = </code><i>pbkdf_hash</i></p>
-<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf = help</code></p>
-<dt><code>-b </code><i>cipher , &#8211;</i><code>-cipher = </code><i>cipher</i></p>
-<dd>Specifies which cipher algorithm or cascade of ciphers to use to encrypt the new volume. To see which algorithms are supported, specify &#8211;<code>-cipher = help</code></p>
-<dt><code>-g, &#8211;hidden</code></p>
-<dd>Specifies that the newly created volume will contain a hidden volume. The keyfiles applied to the passphrase for the hidden volume are those specified by &#8211;<code>-keyfile-hidden</code> The user will be prompted for the size of the hidden volume interactively.</p>
-<dt><code>-w, &#8211;weak-keys</code></p>
-<dd>Use <a href="/docs/linux/man/4-urandom/">urandom</a>(4) for key material instead of a strong entropy source. This is in general a really bad idea and should only be used for testing.</p>
-<dt><code>-x </code><i>pbkdf_hash , &#8211;</i><code>-pbkdf-prf-hidden = </code><i>pbkdf_hash</i></p>
-<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation for the hidden volume. Only valid in conjunction with &#8211;<code>-hidden</code> If no algorithm is specified, the same as for the outer volume will be used. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf-hidden = help</code></p>
-<dt><code>-y </code><i>cipher , &#8211;</i><code>-cipher-hidden = </code><i>cipher</i></p>
-<dd>Specifies which cipher algorithm or cascade of ciphers to use to encrypt the hidden volume on the new TrueCrypt volume. Only valid in conjunction with &#8211;<code>-hidden</code> If no cipher is specified, the same as for the outer volume will be used. To see which algorithms are supported, specify &#8211;<code>-cipher-hidden = help</code></p>
-<dt><code>-z, &#8211;insecure-erase</code></p>
-<dd>Skips the secure erase of the disk. Use this option carefully as it is a security risk!</dl>
+<dt><code>-a </code><i>pbkdf_hash , &#8211;</i><code>-pbkdf-prf = </code><i>pbkdf_hash</i></dt>
+<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf = help</code></dd>
+<dt><code>-b </code><i>cipher , &#8211;</i><code>-cipher = </code><i>cipher</i></dt>
+<dd>Specifies which cipher algorithm or cascade of ciphers to use to encrypt the new volume. To see which algorithms are supported, specify &#8211;<code>-cipher = help</code></dd>
+<dt><code>-g, &#8211;hidden</code></dt>
+<dd>Specifies that the newly created volume will contain a hidden volume. The keyfiles applied to the passphrase for the hidden volume are those specified by &#8211;<code>-keyfile-hidden</code> The user will be prompted for the size of the hidden volume interactively.</dd>
+<dt><code>-w, &#8211;weak-keys</code></dt>
+<dd>Use <a href="/docs/linux/man/4-urandom/">urandom</a>(4) for key material instead of a strong entropy source. This is in general a really bad idea and should only be used for testing.</dd>
+<dt><code>-x </code><i>pbkdf_hash , &#8211;</i><code>-pbkdf-prf-hidden = </code><i>pbkdf_hash</i></dt>
+<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation for the hidden volume. Only valid in conjunction with &#8211;<code>-hidden</code> If no algorithm is specified, the same as for the outer volume will be used. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf-hidden = help</code></dd>
+<dt><code>-y </code><i>cipher , &#8211;</i><code>-cipher-hidden = </code><i>cipher</i></dt>
+<dd>Specifies which cipher algorithm or cascade of ciphers to use to encrypt the hidden volume on the new TrueCrypt volume. Only valid in conjunction with &#8211;<code>-hidden</code> If no cipher is specified, the same as for the outer volume will be used. To see which algorithms are supported, specify &#8211;<code>-cipher-hidden = help</code></dd>
+<dt><code>-z, &#8211;insecure-erase</code></dt>
+<dd>Skips the secure erase of the disk. Use this option carefully as it is a security risk!</dd></dl>
 <p> Additional options for the &#8211;<code>-info</code> &#8211;<code>-map</code> and &#8211;<code>-modify</code> commands are:</p>
 <dl>
-<dt><code>-e, &#8211;protect-hidden</code></p>
-<dd>Specifies that an outer volume will be queried or mapped, but its reported size will be adjusted accordingly to the size of the hidden volume contained in it. Both the hidden volume and outer volume passphrase and keyfiles will be required. This option only applies to the &#8211;<code>-info</code> and &#8211;<code>-map</code> commands.</p>
-<dt><code>-s </code><i>system_device , &#8211;</i><code>-system-encryption = </code><i>system_device</i></p>
-<dd>This option is required if you are attempting to access a device that uses system encryption, for example an encrypted <code>Windows</code> system partition. It does not apply to disks using full disk encryption. The &#8211;<code>-device</code> option will point at the actual encrypted partition, while the <i>system_device</i> argument will point to the parent device (i.e. underlying physical disk) of the encrypted partition.</p>
-<dt><code>&#8211;fde</code></p>
-<dd>This option is intended to be used with disks using full disk encryption (FDE). When a disk has been encrypted using TrueCrypt&#8217;s FDE, the complete disk is encrypted except for the first 63 sectors. The &#8211;<code>-device</code> option should point to the whole disk device, not to any particular partition. The resultant mapping will cover the whole disk, and will not appear as separate partitions. To access individual partitions after mapping, <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8) can be used.</p>
-<dt><code>&#8211;use-backup</code></p>
-<dd>This option is intended to be used when the primary headers of a volume have been corrupted. This option will force to use the backup headers, which are located at the end of the device, to access the volume.</dl>
+<dt><code>-e, &#8211;protect-hidden</code></dt>
+<dd>Specifies that an outer volume will be queried or mapped, but its reported size will be adjusted accordingly to the size of the hidden volume contained in it. Both the hidden volume and outer volume passphrase and keyfiles will be required. This option only applies to the &#8211;<code>-info</code> and &#8211;<code>-map</code> commands.</dd>
+<dt><code>-s </code><i>system_device , &#8211;</i><code>-system-encryption = </code><i>system_device</i></dt>
+<dd>This option is required if you are attempting to access a device that uses system encryption, for example an encrypted <code>Windows</code> system partition. It does not apply to disks using full disk encryption. The &#8211;<code>-device</code> option will point at the actual encrypted partition, while the <i>system_device</i> argument will point to the parent device (i.e. underlying physical disk) of the encrypted partition.</dd>
+<dt><code>&#8211;fde</code></dt>
+<dd>This option is intended to be used with disks using full disk encryption (FDE). When a disk has been encrypted using TrueCrypt&#8217;s FDE, the complete disk is encrypted except for the first 63 sectors. The &#8211;<code>-device</code> option should point to the whole disk device, not to any particular partition. The resultant mapping will cover the whole disk, and will not appear as separate partitions. To access individual partitions after mapping, <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8) can be used.</dd>
+<dt><code>&#8211;use-backup</code></dt>
+<dd>This option is intended to be used when the primary headers of a volume have been corrupted. This option will force to use the backup headers, which are located at the end of the device, to access the volume.</dd></dl>
 <p> Additional options only for the &#8211;<code>-map</code> command are:</p>
 <dl>
-<dt><code>-t , &#8211;allow-trim</code></p>
-<dd>This option enables TRIM (discard) support on the mapped volume.</dl>
+<dt><code>-t , &#8211;allow-trim</code></dt>
+<dd>This option enables TRIM (discard) support on the mapped volume.</dd></dl>
 <p> Additional options only for the &#8211;<code>-modify</code> command are:</p>
 <dl>
-<dt><code>&#8211;new-pbkdf-prf = </code><i>pbkdf_hash</i></p>
-<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation on reencrypting the volume header. If this option is not specified, the reencrypted header will use the current PRF. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf = help</code></p>
-<dt><code>&#8211;new-keyfile = </code><i>keyfile</i></p>
-<dd>Specifies a <i>keyfile</i> to use in addition to the new passphrase on reencrypting the volume header. This option can appear multiple times; if so, multiple keyfiles will be used.</p>
-<dt><code>&#8211;restore-from-backup-hdr</code></p>
-<dd>If this option is specified, neither &#8211;<code>-new-pbkdf-prf</code> nor &#8211;<code>-new-keyfile</code> should be specified. This option implies &#8211;<code>-use-backup</code> Use this option to restore the volume headers from the backup header.</dl>
+<dt><code>&#8211;new-pbkdf-prf = </code><i>pbkdf_hash</i></dt>
+<dd>Specifies which hash algorithm to use for the PBKDF2 password derivation on reencrypting the volume header. If this option is not specified, the reencrypted header will use the current PRF. To see which algorithms are supported, specify &#8211;<code>-pbkdf-prf = help</code></dd>
+<dt><code>&#8211;new-keyfile = </code><i>keyfile</i></dt>
+<dd>Specifies a <i>keyfile</i> to use in addition to the new passphrase on reencrypting the volume header. This option can appear multiple times; if so, multiple keyfiles will be used.</dd>
+<dt><code>&#8211;restore-from-backup-hdr</code></dt>
+<dd>If this option is specified, neither &#8211;<code>-new-pbkdf-prf</code> nor &#8211;<code>-new-keyfile</code> should be specified. This option implies &#8211;<code>-use-backup</code> Use this option to restore the volume headers from the backup header.</dd></dl>
 <p> Sending a <code>SIGINFO</code> or <code>SIGUSR1</code> signal to a running process makes it print progress on slower tasks such as gathering entropy or wiping the volume.</p>
 <h2>Notes</h2>
 <p>TrueCrypt limits passphrases to 64 characters (including the terminating null character). To be compatible with it, does the same. All passphrases (excluding keyfiles) are trimmed to 64 characters. Similarly, keyfiles are limited to a size of 1 MB, but up to 256 keyfiles can be used.</p>

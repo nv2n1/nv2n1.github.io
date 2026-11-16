@@ -19,25 +19,25 @@ description: "user_contexts – The SELinux user contexts configuration files"
  <code><a href="/docs/linux/man/3-get_default_context_with_role/">get_default_context_with_role</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-get_default_context_with_rolelevel/">get_default_context_with_rolelevel</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-query_user_context/">query_user_context</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dl>
+ <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dd></dl>
 <p> There can be one file for each SELinux user configured on the system. The file path is formed using the path returned by <code><a href="/docs/linux/man/3-selinux_user_contexts_path/">selinux_user_contexts_path</a></code>(3) for the active policy, with the SELinux user name appended, for example:</p>
 <dl>
 <dd><i>/etc/selinux/{SELINUXTYPE}/contexts/users/unconfined_u</i><br />
- <i>/etc/selinux/{SELINUXTYPE}/contexts/users/xguest_u</i></dl>
+ <i>/etc/selinux/{SELINUXTYPE}/contexts/users/xguest_u</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> These files contain context information as described in the <code>FILE FORMAT</code> section.</p>
 <h2>File Format</h2>
 <p>Each line in the user context configuration file consists of the following:</p>
 <dl>
-<dd><i>login_process user_login_process</i></dl>
+<dd><i>login_process user_login_process</i></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>login_process</i></p>
+<dd><i>login_process</i></dd>
 <dl>
-<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the login process context.</dl>
+<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the login process context.</dd></dl>
 <p> <i>user_login_process</i></p>
 <dl>
-<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the user login process context.</dl>
+<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the user login process context.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># Example for xguest_u at /etc/selinux/targeted/contexts/users/xguest_u<br />

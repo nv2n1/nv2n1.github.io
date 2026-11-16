@@ -11,7 +11,6 @@ description: "sc::RedundantCartesianSubIter –"
 <p> Like <code>RedundantCartesianIter</code>, except a, b, and c are fixed to a given value.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;cartiter.h&gt;</code></pre>
 <p> Inherited by <code>sc::RedundantCartesianSubIterCCA</code>, <code>sc::RedundantCartesianSubIterCints</code>, and <code>sc::RedundantCartesianSubIterV3</code>.</p>
 <h3>Public Member Functions</h3>

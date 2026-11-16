@@ -19,18 +19,18 @@ description: "chbgv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHBGV computes all the eigenvalues, and optionally, the eigenvectors
  of a complex generalized Hermitian-definite banded eigenproblem, of
  the form A*x=(lambda)*B*x. Here A and B are assumed to be Hermitian
  and banded, and B is also positive definite.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBZ</i> </p>
+</dt><dd> <i>JOBZ</i> </dd>
 <pre>
           JOBZ is CHARACTER*1
           = 'N':  Compute eigenvalues only;
@@ -130,14 +130,14 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 183 of file chbgv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

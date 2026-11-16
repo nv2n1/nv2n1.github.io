@@ -13,12 +13,12 @@ description: "plainrsa-gen – generator for Plain RSA keys"
 <h2>Description</h2>
 <p><code>plainrsa-gen</code> can be used to generate <code>Plain RSA keys</code> for authentication purposes. Using <code>Plain RSA keys</code> is optional. Other possibilities are <code>Pre-shared keys</code> or <code>X.509 certificates</code></p>
 <dl>
-<dt><code>-b </code><i>bits</i></p>
-<dd>bit length of the key. Default is <code>1024</code> recommended length is <code>2048</code> or even <code>4096</code> bits. Note that generating longer keys takes longer time.</p>
-<dt><code>-e </code><i>pubexp</i></p>
-<dd>value of RSA public exponent. Default is <code>0x3</code> Don&#8217;t change this unless you really know what you are doing!</p>
-<dt><code>-f </code><i>outfile</i></p>
-<dd><i>outfile</i> instead of <code>stdout</code> If the file already exists it won&#8217;t be overwritten. You wouldn&#8217;t like to lose your private key by accident, would you?</dl>
+<dt><code>-b </code><i>bits</i></dt>
+<dd>bit length of the key. Default is <code>1024</code> recommended length is <code>2048</code> or even <code>4096</code> bits. Note that generating longer keys takes longer time.</dd>
+<dt><code>-e </code><i>pubexp</i></dt>
+<dd>value of RSA public exponent. Default is <code>0x3</code> Don&#8217;t change this unless you really know what you are doing!</dd>
+<dt><code>-f </code><i>outfile</i></dt>
+<dd><i>outfile</i> instead of <code>stdout</code> If the file already exists it won&#8217;t be overwritten. You wouldn&#8217;t like to lose your private key by accident, would you?</dd></dl>
 <h2>Output File Format</h2>
 <p>This is the secret <code>private key</code> that should <code>never</code> leave your computer: </p>
 <pre>: RSA {

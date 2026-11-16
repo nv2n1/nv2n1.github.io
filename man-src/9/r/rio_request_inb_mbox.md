@@ -14,23 +14,23 @@ description: "rio_request_inb_mbox – request inbound mailbox service"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port from which to allocate the mailbox resource</dl>
+</dd><dd>RIO master port from which to allocate the mailbox resource</dd></dl>
 <p> <i>dev_id</i></p>
 <dl>
-<dd>Device specific pointer to pass on event</dl>
+<dd>Device specific pointer to pass on event</dd></dl>
 <p> <i>mbox</i></p>
 <dl>
-<dd>Mailbox number to claim</dl>
+<dd>Mailbox number to claim</dd></dl>
 <p> <i>entries</i></p>
 <dl>
-<dd>Number of entries in inbound mailbox queue</dl>
+<dd>Number of entries in inbound mailbox queue</dd></dl>
 <p> <i>minb</i></p>
 <dl>
-<dd>Callback to execute when inbound message is received</dl>
+<dd>Callback to execute when inbound message is received</dd></dl>
 <h2>Description</h2>
 <p>Requests ownership of an inbound mailbox resource and binds a callback function to the resource. Returns <code>0</code> on success.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

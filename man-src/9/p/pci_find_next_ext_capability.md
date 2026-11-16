@@ -15,15 +15,15 @@ pci_find_next_ext_capability - Find an extended capability
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
  
 
  <i>start</i>
-<dl><dd>address at which to start looking (0 to start at beginning of list)</dl>
+<dl><dd>address at which to start looking (0 to start at beginning of list)</dd></dl>
  
 
  <i>cap</i>
-<dl><dd>capability code</dl>
+<dl><dd>capability code</dd></dl>
 
 <h2>Description</h2>
 

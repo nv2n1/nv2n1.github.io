@@ -91,8 +91,8 @@ description: "hsqldb_selinux – Security Enhanced Linux Policy for the hsqldb p
 <p> <code>hsqldb_exec_t</code> </p>
 <p> &#8211; Set files with the hsqldb_exec_t type, if you want to transition an executable to the hsqldb_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/hsqldb/hsqldb-post, /usr/lib/hsqldb/hsqldb-stop, /usr/lib/hsqldb/hsqldb-wrapper </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/hsqldb/hsqldb-post, /usr/lib/hsqldb/hsqldb-stop, /usr/lib/hsqldb/hsqldb-wrapper </dd>
 </dl>
 <p> <code>hsqldb_tmp_t</code> </p>
 <p> &#8211; Set files with the hsqldb_tmp_t type, if you want to store hsqldb temporary files in the /tmp directories. </p>

@@ -10,27 +10,24 @@ description: "vdpa – vdpa management tool"
 <p>vdpa &#8211; vdpa management tool</p>
 <h2>Synopsis</h2>
 <pre><code>vdpa
-
 [ OPTIONS ] { dev|mgmtdev } { COMMAND |
-
     help }
-
 </code></pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code>,<code> &#8211;Version</code></p>
-<dd>Print the version of the <code>vdpa</code> utility and exit. </p>
-<dt><code>-j</code>,<code> &#8211;json</code></p>
-<dd>Generate JSON output. </p>
-<dt><code>-p</code>,<code> &#8211;pretty</code></p>
-<dd>When combined with -j generate a pretty JSON output. </p>
+<dt><code>-V</code>,<code> &#8211;Version</code></dt>
+<dd>Print the version of the <code>vdpa</code> utility and exit. </dd>
+<dt><code>-j</code>,<code> &#8211;json</code></dt>
+<dd>Generate JSON output. </dd>
+<dt><code>-p</code>,<code> &#8211;pretty</code></dt>
+<dd>When combined with -j generate a pretty JSON output. </dd>
 </dl>
 <h3><i>OBJECT</i></h3>
 <dl>
-<dt><code>dev</code></p>
-<dd>&#8211; vdpa device. </p>
-<dt><code>mgmtdev</code></p>
-<dd>&#8211; vdpa management device. </p>
+<dt><code>dev</code></dt>
+<dd>&#8211; vdpa device. </dd>
+<dt><code>mgmtdev</code></dt>
+<dd>&#8211; vdpa management device. </dd>
 </dl>
 <h3><i>COMMAND</i></h3>
 <p>Specifies the action to perform on the object. The set of possible actions depends on the object type. It is possible to <code>show</code> (or <code>list</code> ) objects. The <code>help</code> command is available for all objects. It prints out a list of available commands and argument syntax conventions. </p>

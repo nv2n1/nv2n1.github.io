@@ -11,15 +11,11 @@ std::declval - std::declval
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         typename std::add_rvalue_reference&lt;T&gt;::type declval() noexcept;
 Converts any type T to a reference type, making it possible to use member functions in decltype expressions without the need to go through constructors.
-
 declval is commonly used in templates where acceptable template parameters may have no constructor in common, but have the same member function whose return type is needed.
-
 Note that because no definition exists for declval, it can only be used in unevaluated_contexts;
 it is an error to evaluate an expression that contains this function.Formally, the program is ill - formed if this function is odr - used.
 </code></pre>
@@ -36,7 +32,6 @@ Cannot be called and thus never returns a value. The return type is T&amp;&amp; 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;utility&gt;
-
 #include &lt;iostream&gt;
 struct Default {
     int foo() const
@@ -45,7 +40,6 @@ struct Default {
     }
 };
 struct NonDefault
-
 {
     NonDefault(const NonDefault &amp;)
     {
@@ -56,10 +50,8 @@ struct NonDefault
     }
 };
 int main()
-
 {
     decltype(Default().foo()) n1 = 1; // type of n1 is int
-
     //  decltype(NonDefault().foo()) n2 = n1;               // error: no default constructor
     decltype(std::declval&lt;NonDefault&gt;().foo()) n2 = n1; // type of n2 is int
     std::cout &lt;&lt; &quot;n1 = &quot; &lt;&lt; n1 &lt;&lt; '\n'

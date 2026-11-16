@@ -16,55 +16,55 @@ description: "dimfilter – Directional filtering of 2-D gridded files in the sp
 <p> <code>dimfilter</code> will filter a <i>.nc</i> file in the space (or time) domain by dividing the given filter circle into <i>n_sectors</i>, applying one of the selected primary convolution or non-convolution filters to each sector, and choosing the final outcome according to the selected secondary filter. It computes distances using Cartesian or Spherical geometries. The output <i>.nc</i> file can optionally be generated as a subregion of the input and/or with a new <code>-I</code>ncrement. In this way, one may have &quot;extra space&quot; in the input data so that there will be no edge effects for the output grid. If the filter is low-pass, then the output may be less frequently sampled than the input. <code>-Q</code> is for the error analysis mode and only requires the total number of columns in the input file, which contains the filtered depths. Finally, one should know that <code>dimfilter</code> will not produce a smooth output as other spatial filters do because it returns a minimum median out of <i>N</i> medians of <i>N</i> sectors. The output can be rough unless the input data is noise-free. Thus, an additional filtering (e.g., Gaussian via <code>grdfilter</code>) of the DiM-filtered data is generally recommended.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>input_file.nc</i></p>
-<dd> The data grid to be filtered.</p>
-<dt><code>-D</code><i>distance_flag</i></p>
-<dd> Distance <i>flag</i> tells how grid (x,y) relates to filter <i>width</i>, as follows: </p>
+<dt><i>input_file.nc</i></dt>
+<dd> The data grid to be filtered.</dd>
+<dt><code>-D</code><i>distance_flag</i></dt>
+<dd> Distance <i>flag</i> tells how grid (x,y) relates to filter <i>width</i>, as follows: </dd>
 <p> <i>flag</i> = 0: grid (x,y) same units as <i>width</i>, Cartesian distances. <i>flag</i> = 1: grid (x,y) in degrees, <i>width</i> in kilometers, Cartesian distances. <i>flag</i> = 2: grid (x,y) in degrees, <i>width</i> in km, dx scaled by cos(middle y), Cartesian distances. </p>
 <p> The above options are fastest because they allow weight matrix to be computed only once. The next three options are slower because they recompute weights for each latitude. </p>
 <p> <i>flag</i> = 3: grid (x,y) in degrees, <i>width</i> in km, dx scaled by cosine(y), Cartesian distance calculation. </p>
 <p> <i>flag</i> = 4: grid (x,y) in degrees, <i>width</i> in km, Spherical distance calculation.</p>
-<dt><code>-F</code><i>&lt;filtertype&gt;&lt;width&gt;</i>[<i>mode</i>]</p>
-<dd> Sets the primary filter type. Choose among convolution and non-convolution filters. Append the filter code followed by the full diameter <i>width</i>. Available convolution filters are: </p>
+<dt><code>-F</code><i>&lt;filtertype&gt;&lt;width&gt;</i>[<i>mode</i>]</dt>
+<dd> Sets the primary filter type. Choose among convolution and non-convolution filters. Append the filter code followed by the full diameter <i>width</i>. Available convolution filters are: </dd>
 <p> (<code>b</code>) Boxcar: All weights are equal. </p>
 <p> (<code>c</code>) Cosine Arch: Weights follow a cosine arch curve. </p>
 <p> (<code>g</code>) Gaussian: Weights are given by the Gaussian function. </p>
 <p> Non-convolution filters are: </p>
 <p> (<code>m</code>) Median: Returns median value. </p>
 <p> (<code>p</code>) Maximum likelihood probability (a mode estimator): Return modal value. If more than one mode is found we return their average value. Append &#8211; or + to the filter width if you rather want to return the smallest or largest of the modal values.</p>
-<dt><code>-N</code><i>&lt;filtertype&gt;&lt;n_sectors&gt;</i></p>
-<dd> Sets the secondary filter type and the number of bow-tie sectors. <i>n_sectors</i> must be integer and larger than 0. When <i>n_sectors</i> is set to 1, the secondary filter is not effective. Available secondary filters are: </p>
+<dt><code>-N</code><i>&lt;filtertype&gt;&lt;n_sectors&gt;</i></dt>
+<dd> Sets the secondary filter type and the number of bow-tie sectors. <i>n_sectors</i> must be integer and larger than 0. When <i>n_sectors</i> is set to 1, the secondary filter is not effective. Available secondary filters are: </dd>
 <p> (<code>l</code>) Lower: Return the minimum of all filtered values. </p>
 <p> (<code>u</code>) Upper: Return the maximum of all filtered values. </p>
 <p> (<code>a</code>) Average: Return the mean of all filtered values. </p>
 <p> (<code>m</code>) Median: Return the median of all filtered values. </p>
 <p> (<code>p</code>) Mode: Return the mode of all filtered values.</p>
-<dt><code>-G</code><i>output_file.nc</i></p>
-<dd> <i>output_file.nc</i> is the output of the filter.</dl>
+<dt><code>-G</code><i>output_file.nc</i></dt>
+<dd> <i>output_file.nc</i> is the output of the filter.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-I</code></p>
-<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] is the output Increment. Append <code>m</code> to indicate minutes, or <code>c</code> to indicate seconds. If the new <i>x_inc</i>, <i>y_inc</i> are NOT integer multiples of the old ones (in the input data), filtering will be considerably slower. [Default: Same as input.]</p>
-<dt><code>-R</code></p>
-<dd> <i>west</i>, <i>east</i>, <i>south</i>, and <i>north</i> defines the Region of the output points. [Default: Same as input.]</p>
-<dt><code>-T</code></p>
-<dd> Toggle the node registration for the output grid so as to become the opposite of the input grid [Default gives the same registration as the input grid].</p>
-<dt><code>-Q</code><i>cols</i></p>
-<dd> <i>cols</i> is the total number of columns in the input text table file. For this mode, it expects to read depths consisted of several columns. Each column represents a filtered grid with a filter width, which can be obtained by <code>grd2xyz -Z</code>. The outcome will be median, MAD, and mean. So, the column with the medians is used to generate the regional component and the column with the MADs is used to conduct the error analysis.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-I</code></dt>
+<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] is the output Increment. Append <code>m</code> to indicate minutes, or <code>c</code> to indicate seconds. If the new <i>x_inc</i>, <i>y_inc</i> are NOT integer multiples of the old ones (in the input data), filtering will be considerably slower. [Default: Same as input.]</dd>
+<dt><code>-R</code></dt>
+<dd> <i>west</i>, <i>east</i>, <i>south</i>, and <i>north</i> defines the Region of the output points. [Default: Same as input.]</dd>
+<dt><code>-T</code></dt>
+<dd> Toggle the node registration for the output grid so as to become the opposite of the input grid [Default gives the same registration as the input grid].</dd>
+<dt><code>-Q</code><i>cols</i></dt>
+<dd> <i>cols</i> is the total number of columns in the input text table file. For this mode, it expects to read depths consisted of several columns. Each column represents a filtered grid with a filter width, which can be obtained by <code>grd2xyz -Z</code>. The outcome will be median, MAD, and mean. So, the column with the medians is used to generate the regional component and the column with the MADs is used to conduct the error analysis.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>GRID FILE FORMATS</h2>
 <p> By default GMT writes out grid as single precision floats in a COARDS-complaint netCDF file format. However, GMT is able to produce grid files in many other commonly used grid file formats and also facilitates so called &quot;packing&quot; of grids, writing out floating point data as 1- or 2-byte integers. To specify the precision, scale and offset, the user should add the suffix <code>=</code><i>id</i>[<code>/</code><i>scale</i><code>/</code><i>offset</i>[<code>/</code><i>nan</i>]], where <i>id</i> is a two-letter identifier of the grid type and precision, and <i>scale</i> and <i>offset</i> are optional scale factor and offset to be applied to all grid values, and <i>nan</i> is the value used to indicate missing data. In case the two characters <i>id</i> is not provided, as in <code>=/</code><i>scale</i> than a <i>id</i><code>=</code><i>nf</i> is assumed. When reading grids, the format is generally automatically recognized. If not, the same suffix can be added to input grid file names. See <code>grdconvert</code> and Section <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information. </p>
 <p> When reading a netCDF file that contains multiple grids, GMT will read, by default, the first 2-dimensional grid that can find in that file. To coax GMT into reading another multi-dimensional variable in the grid file, append <code>?</code><i>varname</i> to the file name, where <i>varname</i> is the name of the variable. Note that you may need to escape the special meaning of <code>?</code> in your shell program by putting a backslash in front of it, or by placing the filename and suffix between quotes or double quotes. The <code>?</code><i>varname</i> suffix can also be used for output grids to specify a variable name different from the default: &quot;z&quot;. See <code>grdconvert</code> and Sections <i>modifiers-for-CF</i> and <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information, particularly on how to read splices of 3-, 4-, or 5-dimensional grids.</p>

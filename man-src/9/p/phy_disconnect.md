@@ -15,7 +15,7 @@ phy_disconnect - disable interrupts, stop state machine, and detach a PHY device
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>target phy_device struct</dl>
+<dl><dd></dd><dd>target phy_device struct</dd></dl>
 
 <h2>Copyright</h2>
 

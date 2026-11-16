@@ -17,20 +17,20 @@ mongoc_collection_insert (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A <code>mongoc_insert_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A <code>mongoc_insert_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>document</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>document</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall insert <code>document</code> into <code>collection</code> \&amp;. </p>
 <p> If no <code>_id</code> element is found in <code>document</code> , then a <code>bson_oid_t</code> will be generated locally and added to the document. </p>

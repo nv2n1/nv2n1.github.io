@@ -17,13 +17,11 @@ locale_t duplocale(locale_t locobj);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>duplocale</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</p>
-<dt>Before glibc 2.10:</p>
-<dd> _GNU_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _GNU_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>duplocale</code>() function creates a duplicate of the locale object referred to by <i>locobj</i>. </p>
@@ -32,8 +30,8 @@ locale_t duplocale(locale_t locobj);
 <p> On success, <code>duplocale</code>() returns a handle for the new locale object. On error, it returns <i>(locale_t)&nbsp;0,</i> and sets <i>errno</i> to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to create the duplicate locale object.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to create the duplicate locale object.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>duplocale</code>() function first appeared in version 2.3 of the GNU C library.</p>
 <h2>CONFORMING TO</h2>
@@ -41,15 +39,15 @@ locale_t duplocale(locale_t locobj);
 <h2>NOTES</h2>
 <p> Duplicating a locale can serve the following purposes:</p>
 <dl>
-<dt>*</p>
-<dd> To create a copy of a locale object in which one of more categories are to be modified (using <code><a href="/docs/linux/man/3-newlocale/">newlocale</a></code>(3)).</p>
-<dt>*</p>
-<dd> To obtain a handle for the current locale which can used in other functions that employ a locale handle, such as <code><a href="/docs/linux/man/3-toupper_l/">toupper_l</a></code>(3). This is done by applying <code>duplocale</code>() to the value returned by the following call:</p>
+<dt>*</dt>
+<dd> To create a copy of a locale object in which one of more categories are to be modified (using <code><a href="/docs/linux/man/3-newlocale/">newlocale</a></code>(3)).</dd>
+<dt>*</dt>
+<dd> To obtain a handle for the current locale which can used in other functions that employ a locale handle, such as <code><a href="/docs/linux/man/3-toupper_l/">toupper_l</a></code>(3). This is done by applying <code>duplocale</code>() to the value returned by the following call:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;loc&nbsp;=&nbsp;uselocale((locale_t)&nbsp;0);</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;loc&nbsp;=&nbsp;uselocale((locale_t)&nbsp;0);</dd>
 <dt>
-<dd> This technique is necessary, because the above <code><a href="/docs/linux/man/3-uselocale/">uselocale</a></code>(3) call may return the value <code>LC_GLOBAL_LOCALE</code>, which results in undefined behavior if passed to functions such as <code><a href="/docs/linux/man/3-toupper_l/">toupper_l</a></code>(3). Calling <code>duplocale</code>() can be used to ensure that the <code>LC_GLOBAL_LOCALE</code> value is converted into a usable locale object. See EXAMPLES, below.</dl>
+</dt><dd> This technique is necessary, because the above <code><a href="/docs/linux/man/3-uselocale/">uselocale</a></code>(3) call may return the value <code>LC_GLOBAL_LOCALE</code>, which results in undefined behavior if passed to functions such as <code><a href="/docs/linux/man/3-toupper_l/">toupper_l</a></code>(3). Calling <code>duplocale</code>() can be used to ensure that the <code>LC_GLOBAL_LOCALE</code> value is converted into a usable locale object. See EXAMPLES, below.</dd></dl>
 <p> Each locale object created by <code>duplocale</code>() should be deallocated using <code><a href="/docs/linux/man/3-freelocale/">freelocale</a></code>(3).</p>
 <h2>EXAMPLES</h2>
 <p> The program below uses <code><a href="/docs/linux/man/3-uselocale/">uselocale</a></code>(3) and <code>duplocale</code>() to obtain a handle for the current locale which is then passed to <code><a href="/docs/linux/man/3-toupper_l/">toupper_l</a></code>(3). The program takes one command-line argument, a string of characters that is converted to uppercase and displayed on standard output. An example of its use is the following: </p>

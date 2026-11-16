@@ -14,10 +14,10 @@ description: "netdev_alloc_skb – allocate an skbuff for rx on a specific devic
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>network device to receive on</dl>
+</dd><dd>network device to receive on</dd></dl>
 <p> <i>length</i></p>
 <dl>
-<dd>length to allocate</dl>
+<dd>length to allocate</dd></dl>
 <h2>Description</h2>
 <p>Allocate a new sk_buff and assign it a usage count of one. The buffer has unspecified headroom built in. Users should allocate the headroom they think they need without accounting for the built in space. The built in space is used for optimisations. </p>
 <p> <code>NULL</code> is returned if there is no free memory. Although this function allocates memory it can be called from an interrupt.</p>

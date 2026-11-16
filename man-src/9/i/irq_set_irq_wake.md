@@ -15,11 +15,11 @@ irq_set_irq_wake - control irq power management wakeup
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>interrupt to control</dl>
+<dl><dd></dd><dd>interrupt to control</dd></dl>
  
 
  <i>on</i>
-<dl><dd>enable/disable power management wakeup</dl>
+<dl><dd>enable/disable power management wakeup</dd></dl>
 
 <h2>Description</h2>
 

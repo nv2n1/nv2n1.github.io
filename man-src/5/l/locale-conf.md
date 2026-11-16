@@ -26,6 +26,6 @@ description: "locale.conf – Configuration file for locale settings"
 <dd>
 <pre>LANG=de_DE.UTF-8
 LC_MESSAGES=en_US.UTF-8</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7), <code><a href="/docs/linux/man/1-localectl/">localectl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-localed-service/">systemd-localed.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) </p>

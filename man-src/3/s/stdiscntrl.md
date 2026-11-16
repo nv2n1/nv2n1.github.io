@@ -11,7 +11,6 @@ std::iscntrl - std::iscntrl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int iscntrl(int ch);</code></pre> 
 Checks if the given character is a control character as classified by the currently installed C locale. In the default, &quot;C&quot; locale, the control characters are the characters with the codes 0x00-0x1F and 0x7F. 
 The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF. 
@@ -46,12 +45,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\x94'; // the control code CCH in ISO-8859-1
     std::cout &lt;&lt; &quot;iscntrl(\'\\x94\', default C locale) returned &quot;

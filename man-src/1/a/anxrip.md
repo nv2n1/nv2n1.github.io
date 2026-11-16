@@ -20,26 +20,26 @@ description: "anxrip — Extract annotations and data tracks from annodexed medi
 &nbsp;<wbr></p>
 <h3>CMML generation options</h3>
 <dl>
-<dt>-c, &#8211;cmml</p>
+<dt>-c, &#8211;cmml</dt>
 <dd> Extract annotations as a valid CMML file (default)<br />
-&nbsp;<wbr></p>
-<dt>&#8211;head</p>
+&nbsp;<wbr></dd>
+<dt>&#8211;head</dt>
 <dd> Extract only the CMML head element<br />
-&nbsp;<wbr></p>
-<dt>-g, &#8211;granulerate</p>
+&nbsp;<wbr></dd>
+<dt>-g, &#8211;granulerate</dt>
 <dd> Include information about media granulerates<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <h3>Data track options</h3>
 <dl>
-<dt>-m, &#8211;media</p>
-<dd> Extract media from annodexed media</dl>
+<dt>-m, &#8211;media</dt>
+<dd> Extract media from annodexed media</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
 <dd> Write output to the specified <code>filename</code> instead of printing it to standard output.<br />
-&nbsp;<wbr></p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</dl>
+&nbsp;<wbr></dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker November 15, 2003;</p>
 <h2>COPYRIGHT</h2>

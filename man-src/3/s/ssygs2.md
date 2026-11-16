@@ -19,7 +19,7 @@ description: "ssygs2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SSYGS2 reduces a real symmetric-definite generalized eigenproblem
  to standard form.
@@ -29,11 +29,11 @@ description: "ssygs2.f –"
  B*A*x = lambda*x, and A is overwritten by U*A*U**T or L**T *A*L.
  B must have been previously factorized as U**T *U or L*L**T by SPOTRF.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ITYPE</i> </p>
+</dt><dd> <i>ITYPE</i> </dd>
 <pre>
           ITYPE is INTEGER
           = 1: compute inv(U**T)*A*inv(U) or inv(L)*A*inv(L**T);
@@ -91,14 +91,14 @@ description: "ssygs2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 128 of file ssygs2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

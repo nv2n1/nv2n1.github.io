@@ -10,10 +10,8 @@ description: "std::is_enum – std::is_enum"
 <p>std::is_enum &#8211; std::is_enum</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_enum;</code></pre>
 <p>Checks whether T is an enumeration_type. Provides the member constant value which is equal to true, if T is an enumeration type . Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -39,7 +37,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
@@ -47,7 +44,6 @@ class A
 enum E {};
 enum class Ec : int {};
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_enum&lt;A&gt;::value &lt;&lt; '

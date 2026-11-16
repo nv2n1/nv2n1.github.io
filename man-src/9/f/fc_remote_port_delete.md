@@ -14,7 +14,7 @@ description: "fc_remote_port_delete – notifies the fc transport that a remote 
 <p><i>rport</i></p>
 <dl>
 <dd>
-<dd>The remote port that no longer exists</dl>
+</dd><dd>The remote port that no longer exists</dd></dl>
 <h2>Description</h2>
 <p>The LLDD calls this routine to notify the transport that a remote port is no longer part of the topology. Note: Although a port may no longer be part of the topology, it may persist in the remote ports displayed by the fc_host. We do this under 2 conditions: 1) If the port was a scsi target, we delay its deletion by &#8220;blocking&#8221; it. This allows the port to temporarily disappear, then reappear without disrupting the SCSI device tree attached to it. During the &#8220;blocked&#8221; period the port will still exist. 2) If the port was a scsi target and disappears for longer than we expect, we&#8217;ll delete the port and the tear down the SCSI device tree attached to it. However, we want to semi-persist the target id assigned to that port if it eventually does exist. The port structure will remain (although with minimal information) so that the target id bindings remails. </p>
 <p> If the remote port is not an FCP Target, it will be fully torn down and deallocated, including the fc_remote_port class device. </p>
@@ -27,8 +27,8 @@ description: "fc_remote_port_delete – notifies the fc transport that a remote 
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

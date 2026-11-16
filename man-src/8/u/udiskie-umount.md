@@ -17,128 +17,128 @@ description: "udiskie – automounter for removable media"
 <h2>Common Options</h2>
 <p><code>-h, &#8211;help</code></p>
 <dl>
-<dd>Show help message and exit.</dl>
+<dd>Show help message and exit.</dd></dl>
 <p> <code>-V, &#8211;version</code></p>
 <dl>
-<dd>Show help message and exit.</dl>
+<dd>Show help message and exit.</dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
-<dd>Verbose output.</dl>
+<dd>Verbose output.</dd></dl>
 <p> <code>-q, &#8211;quiet</code></p>
 <dl>
-<dd>Quiet output.</dl>
+<dd>Quiet output.</dd></dl>
 <p> <code>-0, &#8211;udisks-auto</code></p>
 <dl>
-<dd>Auto discover UDisks version (default). Prefers UDisks2 if both are available.</dl>
+<dd>Auto discover UDisks version (default). Prefers UDisks2 if both are available.</dd></dl>
 <p> <code>-1, &#8211;use-udisks1</code></p>
 <dl>
-<dd>Use UDisks1 as DBus backend.</dl>
+<dd>Use UDisks1 as DBus backend.</dd></dl>
 <p> <code>-2, &#8211;use-udisks2</code></p>
 <dl>
-<dd>Use UDisks2 as DBus backend.</dl>
+<dd>Use UDisks2 as DBus backend.</dd></dl>
 <p> <code>-c FILE, &#8211;config=FILE</code></p>
 <dl>
-<dd>Specify config file.</dl>
+<dd>Specify config file.</dd></dl>
 <p> <code>-C, &#8211;no-config</code></p>
 <dl>
-<dd>Don&#8217;t use any config file.</dl>
+<dd>Don&#8217;t use any config file.</dd></dl>
 <h2>Shared Mount And Daemon Options</h2>
 <p><code>-p COMMAND, &#8211;password-prompt=COMMAND</code></p>
 <dl>
-<dd>Password retrieval command. The string is formatted with a Device object as its first argument.</dl>
+<dd>Password retrieval command. The string is formatted with a Device object as its first argument.</dd></dl>
 <p> <code>-P, &#8211;no-password-prompt</code></p>
 <dl>
-<dd>Disable unlocking of LUKS devices.</dl>
+<dd>Disable unlocking of LUKS devices.</dd></dl>
 <h2>Daemon Options</h2>
 <p><code>-a, &#8211;automount</code></p>
 <dl>
-<dd>Enable automounting new devices (default).</dl>
+<dd>Enable automounting new devices (default).</dd></dl>
 <p> <code>-A, &#8211;no-automount</code></p>
 <dl>
-<dd>Disable automounting new devices.</dl>
+<dd>Disable automounting new devices.</dd></dl>
 <p> <code>-n, &#8211;notify</code></p>
 <dl>
-<dd>Enable pop-up notifications (default).</dl>
+<dd>Enable pop-up notifications (default).</dd></dl>
 <p> <code>-N, &#8211;disable-notify</code></p>
 <dl>
-<dd>Disable pop-up notifications.</dl>
+<dd>Disable pop-up notifications.</dd></dl>
 <p> <code>-t, &#8211;tray</code></p>
 <dl>
-<dd>Show tray icon.</dl>
+<dd>Show tray icon.</dd></dl>
 <p> <code>-s, &#8211;smart-tray</code></p>
 <dl>
-<dd>Show tray icon that automatically hides when there is no action available.</dl>
+<dd>Show tray icon that automatically hides when there is no action available.</dd></dl>
 <p> <code>-T, &#8211;no-tray</code></p>
 <dl>
-<dd>Disable tray icon (default).</dl>
+<dd>Disable tray icon (default).</dd></dl>
 <p> <code>-f PROGRAM, &#8211;file-manager=PROGRAM</code></p>
 <dl>
-<dd>Set program to open mounted directories. Default is &#8216;xdg-open&#8217;. Pass an empty string to disable this feature. This option is deprecated and will probably be replaced by a python commands file.</dl>
+<dd>Set program to open mounted directories. Default is &#8216;xdg-open&#8217;. Pass an empty string to disable this feature. This option is deprecated and will probably be replaced by a python commands file.</dd></dl>
 <p> <code>-F, &#8211;no-file-manager</code></p>
 <dl>
-<dd>Disable browsing.</dl>
+<dd>Disable browsing.</dd></dl>
 <h2>Mount Options</h2>
 <p><code>-a, &#8211;all</code></p>
 <dl>
-<dd>Mount all handled devices.</dl>
+<dd>Mount all handled devices.</dd></dl>
 <p> <code>-r, &#8211;recursive</code></p>
 <dl>
-<dd>Recursively mount cleartext partitions after unlocking a LUKS device. This will happen by default when running the udiskie daemon.</dl>
+<dd>Recursively mount cleartext partitions after unlocking a LUKS device. This will happen by default when running the udiskie daemon.</dd></dl>
 <p> <code>-R, &#8211;no-recursive</code></p>
 <dl>
-<dd>Disable recursive mounting (default).</dl>
+<dd>Disable recursive mounting (default).</dd></dl>
 <p> <code>-o OPTIONS, &#8211;options=OPTIONS</code></p>
 <dl>
-<dd>Set mount options.</dl>
+<dd>Set mount options.</dd></dl>
 <h2>Unmount Options</h2>
 <p><code>-a, &#8211;all</code></p>
 <dl>
-<dd>Unmount all handled devices.</dl>
+<dd>Unmount all handled devices.</dd></dl>
 <p> <code>-d, &#8211;detach</code></p>
 <dl>
-<dd>Detach drive by e.g. powering down its physical port.</dl>
+<dd>Detach drive by e.g. powering down its physical port.</dd></dl>
 <p> <code>-D, &#8211;no-detach</code></p>
 <dl>
-<dd>Don&#8217;t detach drive (default).</dl>
+<dd>Don&#8217;t detach drive (default).</dd></dl>
 <p> <code>-e, &#8211;eject</code></p>
 <dl>
-<dd>Eject media from the drive, e.g CDROM.</dl>
+<dd>Eject media from the drive, e.g CDROM.</dd></dl>
 <p> <code>-E, &#8211;no-eject</code></p>
 <dl>
-<dd>Don&#8217;t eject media (default).</dl>
+<dd>Don&#8217;t eject media (default).</dd></dl>
 <p> <code>-f, &#8211;force</code></p>
 <dl>
-<dd>Force removal (recursive unmounting).</dl>
+<dd>Force removal (recursive unmounting).</dd></dl>
 <p> <code>-F, &#8211;no-force</code></p>
 <dl>
-<dd>Don&#8217;t force removal (default).</dl>
+<dd>Don&#8217;t force removal (default).</dd></dl>
 <p> <code>-l, &#8211;lock</code></p>
 <dl>
-<dd>Lock device after unmounting (default).</dl>
+<dd>Lock device after unmounting (default).</dd></dl>
 <p> <code>-L, &#8211;no-lock</code></p>
 <dl>
-<dd>Don&#8217;t lock device.</dl>
+<dd>Don&#8217;t lock device.</dd></dl>
 <h2>Example Usage</h2>
 <p>Start <code>udiskie</code> in <i>~/.xinitrc</i>: </p>
 <dl>
 <dd>
 <pre>udiskie &amp;</pre>
-</dl>
+</dd></dl>
 <p> Unmount media and power down USB device: </p>
 <dl>
 <dd>
 <pre>udiskie-umount --detach /media/Sticky</pre>
-</dl>
+</dd></dl>
 <p> Mount all media: </p>
 <dl>
 <dd>
 <pre>udiskie-mount -a</pre>
-</dl>
+</dd></dl>
 <p> Mount <i>/dev/sdb1</i>: </p>
 <dl>
 <dd>
 <pre>udiskie-mount /dev/sdb1</pre>
-</dl>
+</dd></dl>
 <h2>Configuration</h2>
 <p>The file <i>.config/udiskie/config.yml</i> can be used to configure defaults for command line parameters and customize further settings. The actual path may differ depending on <i>$XDG_CONFIG_HOME</i>. The file format is YAML, see <a rel="nofollow" href="http://en.wikipedia.org/wiki/YAML.">http://en.wikipedia.org/wiki/YAML.</a> If you don&#8217;t want to install PyYAML, it is possible to use an equivalent JSON file with the name <i>config.json</i> instead. </p>
 <dl>
@@ -222,14 +222,14 @@ icon_names:
  eject: [udiskie-eject, media-eject]
  detach: [udiskie-detach]
  quit: [application-exit]</pre>
-</dl>
+</dd></dl>
 <p> All keys are optional. Reasonable defaults are used if you leave them unspecified.</p>
 <h2>Device Attributes</h2>
 <p>Some of the config entries make use of Device attributes. The following list of attributes is currently availabe, but there is no guarantee that they will remain available: </p>
 <dl>
 <dd>
 <pre>Attribute Hint/Example</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>is_drive
@@ -258,7 +258,7 @@ is_mounted
 mount_paths list of mount paths
 is_unlocked
 in_use device or any of its children mounted</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-udisks/">udisks</a></code>(1) </p>
 <p> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/udisks/">http://www.freedesktop.org/wiki/Software/udisks/</a></p>

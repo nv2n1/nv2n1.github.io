@@ -26,24 +26,24 @@ description: "vig_optimize – Optimise photometric parameters"
 <h2>OPTIONS</h2>
 <p> General options:</p>
 <dl>
-<dt><code>-o</code> <i>file</i></p>
-<dd> Write results to output project</p>
-<dt><code>-v</code></p>
-<dd> Verbose, print progress messages</p>
-<dt><code>-p</code> <i>n</i></p>
-<dd> Number of points to extract</p>
-<dt><code>-r</code></p>
-<dd> Extract random point (faster, but less accurate)</p>
-<dt><code>-s</code> <i>level</i></p>
-<dd> Work on downscaled images, every step halves width and height</p>
-<dt><code>-h</code></p>
-<dd> Display help summary.</dl>
+<dt><code>-o</code> <i>file</i></dt>
+<dd> Write results to output project</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose, print progress messages</dd>
+<dt><code>-p</code> <i>n</i></dt>
+<dd> Number of points to extract</dd>
+<dt><code>-r</code></dt>
+<dd> Extract random point (faster, but less accurate)</dd>
+<dt><code>-s</code> <i>level</i></dt>
+<dd> Work on downscaled images, every step halves width and height</dd>
+<dt><code>-h</code></dt>
+<dd> Display help summary.</dd></dl>
 <p> Expert and debugging options:</p>
 <dl>
-<dt><code>-i</code> <i>file</i></p>
-<dd> Read corresponding points from file</p>
-<dt><code>-w</code> <i>file</i></p>
-<dd> Dump corresponding points to file</dl>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Read corresponding points from file</dd>
+<dt><code>-w</code> <i>file</i></dt>
+<dd> Dump corresponding points to file</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>

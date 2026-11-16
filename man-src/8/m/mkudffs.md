@@ -14,82 +14,82 @@ description: "mkudffs – create an UDF filesystem"
 <p><code>mkudffs</code> is used to create a UDF filesystem on a device (usually a disk). <i>device</i> is the special file corresponding to the device (e.g <i>/dev/hdX</i>). <i>blocks-count</i> is the number of blocks on the device. If omitted, <code>mkudffs</code> automagically figures the file system size. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Display the usage and list of options. </p>
-<dt><code>-b,&#8211;blocksize=</code><i> block-size </i></p>
-<dd>Specify the size of blocks in bytes. Valid block size vales are 1024, 2048 and 4096 bytes per block. If omitted, <code>mkudffs</code> block-size is 2048. </p>
-<dt><code>-r,&#8211;udfrev=</code><i> udf-revision </i></p>
-<dd>Specify the udf revision to use. Valid revisions are 0x0201, 0x0200, 0x0150, and 0x0102. If omitted, <code>mkudffs</code> udf-revision is 0x0201. </p>
-<dt><code>&#8211;lvid=</code><i> logical-volume-ident </i></p>
-<dd>Specify the logical volume identifier. </p>
-<dt><code>&#8211;vid=</code><i> volume-ident </i></p>
-<dd>Specify the volume identifier. </p>
-<dt><code>&#8211;vsid=</code><i> volume-set-ident </i></p>
-<dd>Specify the volume set identifier. </p>
-<dt><code>&#8211;fsid=</code><i> file-set-ident </i></p>
-<dd>Specify the file set identifier. </p>
-<dt><code>&#8211;strategy=</code><i> strategy </i></p>
-<dd>Specify the allocation strategy to use. Valid strategies are 4 and 4096. If omitted, <code>mkudffs</code> strategy is based on the <i>media-type</i>. </p>
-<dt><code>&#8211;spartable=</code><i> spartable-number </i></p>
-<dd>Specify the number of sparing tables to write to disc. Valid numbers are 1 &#8211; 4. This option implies <code>&#8211;media-type=</code><i>cdrw</i>. </p>
-<dt><code>&#8211;media-type=</code><i> media-type </i></p>
-<dd>Specify the media type. Valid media types are:</p>
+<dt><code>&#8211;help</code></dt>
+<dd>Display the usage and list of options. </dd>
+<dt><code>-b,&#8211;blocksize=</code><i> block-size </i></dt>
+<dd>Specify the size of blocks in bytes. Valid block size vales are 1024, 2048 and 4096 bytes per block. If omitted, <code>mkudffs</code> block-size is 2048. </dd>
+<dt><code>-r,&#8211;udfrev=</code><i> udf-revision </i></dt>
+<dd>Specify the udf revision to use. Valid revisions are 0x0201, 0x0200, 0x0150, and 0x0102. If omitted, <code>mkudffs</code> udf-revision is 0x0201. </dd>
+<dt><code>&#8211;lvid=</code><i> logical-volume-ident </i></dt>
+<dd>Specify the logical volume identifier. </dd>
+<dt><code>&#8211;vid=</code><i> volume-ident </i></dt>
+<dd>Specify the volume identifier. </dd>
+<dt><code>&#8211;vsid=</code><i> volume-set-ident </i></dt>
+<dd>Specify the volume set identifier. </dd>
+<dt><code>&#8211;fsid=</code><i> file-set-ident </i></dt>
+<dd>Specify the file set identifier. </dd>
+<dt><code>&#8211;strategy=</code><i> strategy </i></dt>
+<dd>Specify the allocation strategy to use. Valid strategies are 4 and 4096. If omitted, <code>mkudffs</code> strategy is based on the <i>media-type</i>. </dd>
+<dt><code>&#8211;spartable=</code><i> spartable-number </i></dt>
+<dd>Specify the number of sparing tables to write to disc. Valid numbers are 1 &#8211; 4. This option implies <code>&#8211;media-type=</code><i>cdrw</i>. </dd>
+<dt><code>&#8211;media-type=</code><i> media-type </i></dt>
+<dd>Specify the media type. Valid media types are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>hd</p>
-<dd>hard drive</p>
-<dt>dvd</p>
-<dd>DVD (Digital Versital Disc)</p>
-<dt>dvdram</p>
-<dd>DVD-RAM (Digital Versital Disc-Random Access Memory)</p>
-<dt>worm</p>
-<dd>WORM (Write Once Ready Many)</p>
-<dt>mo</p>
-<dd>MO (Magneto Optical)</p>
-<dt>cdrw</p>
-<dd>CD-RW (CD Read-Write)</dl>
+</dd><dl>
+<dt>hd</dt>
+<dd>hard drive</dd>
+<dt>dvd</dt>
+<dd>DVD (Digital Versital Disc)</dd>
+<dt>dvdram</dt>
+<dd>DVD-RAM (Digital Versital Disc-Random Access Memory)</dd>
+<dt>worm</dt>
+<dd>WORM (Write Once Ready Many)</dd>
+<dt>mo</dt>
+<dd>MO (Magneto Optical)</dd>
+<dt>cdrw</dt>
+<dd>CD-RW (CD Read-Write)</dd></dl>
 </dl>
-<dt><code>&#8211;space=</code><i> space </i></p>
+<dt><code>&#8211;space=</code><i> space </i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt>freedbitmap</p>
-<dd>Freed bitmap</p>
-<dt>freedtable</p>
-<dd>Freed table</p>
-<dt>unallocbitmap</p>
-<dd>Unallocated bitmap</p>
-<dt>unalloctable</p>
-<dd>Unallocated table</dl>
+</dd><dl>
+<dt>freedbitmap</dt>
+<dd>Freed bitmap</dd>
+<dt>freedtable</dt>
+<dd>Freed table</dd>
+<dt>unallocbitmap</dt>
+<dd>Unallocated bitmap</dd>
+<dt>unalloctable</dt>
+<dd>Unallocated table</dd></dl>
 </dl>
-<dt><code>&#8211;ad=</code><i> ad </i></p>
+<dt><code>&#8211;ad=</code><i> ad </i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt>inicb</p>
-<dd>Allocation Descriptors in ICB</p>
-<dt>short</p>
-<dd>Short Allocation Descriptors</p>
-<dt>long</p>
-<dd>Long Allocation Descriptors</dl>
+</dd><dl>
+<dt>inicb</dt>
+<dd>Allocation Descriptors in ICB</dd>
+<dt>short</dt>
+<dd>Short Allocation Descriptors</dd>
+<dt>long</dt>
+<dd>Long Allocation Descriptors</dd></dl>
 </dl>
-<dt><code>&#8211;noefe</code></p>
-<dd>Don&#8217;t Use Extended File Entries</p>
-<dt><code>&#8211;u8</code></p>
-<dd>Use 8-bit unicode for file names</p>
-<dt><code>&#8211;u16</code></p>
-<dd>Use 16-bit unicode for file names</p>
-<dt><code>&#8211;utf8</code></p>
-<dd>Use UTF-8 for file names</p>
-<dt><code>&#8211;closed</code></p>
+<dt><code>&#8211;noefe</code></dt>
+<dd>Don&#8217;t Use Extended File Entries</dd>
+<dt><code>&#8211;u8</code></dt>
+<dd>Use 8-bit unicode for file names</dd>
+<dt><code>&#8211;u16</code></dt>
+<dd>Use 16-bit unicode for file names</dd>
+<dt><code>&#8211;utf8</code></dt>
+<dd>Use UTF-8 for file names</dd>
+<dt><code>&#8211;closed</code></dt>
 <dd>
-<dt><code>&#8211;bridge</code></p>
+</dd><dt><code>&#8211;bridge</code></dt>
 <dd>
-<dt><code>&#8211;packetlen=</code><i> length </i></p>
-<dd></dl>
+</dd><dt><code>&#8211;packetlen=</code><i> length </i></dt>
+<dd></dd></dl>
 <h2>Exit Status</h2>
 <p><code>mkudffs</code> returns 0 if successful, non-zero if there are problems.</p>
 <h2>Author</h2>

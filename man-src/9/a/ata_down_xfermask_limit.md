@@ -14,10 +14,10 @@ description: "ata_down_xfermask_limit – adjust dev xfer masks downward"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to adjust xfer masks</dl>
+</dd><dd>Device to adjust xfer masks</dd></dl>
 <p> <i>sel</i></p>
 <dl>
-<dd>ATA_DNXFER_* selector</dl>
+<dd>ATA_DNXFER_* selector</dd></dl>
 <h2>Description</h2>
 <p>Adjust xfer masks of <i>dev</i> downward. Note that this function does not apply the change. Invoking <code>ata_set_mode</code> afterwards will apply the limit. </p>
 <p> LOCKING: Inherited from caller.</p>
@@ -26,5 +26,5 @@ description: "ata_down_xfermask_limit – adjust dev xfer masks downward"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,17 +11,11 @@ description: "sc::OverlapOrthog –"
 <p> This class computes the orthogonalizing transform for a basis set.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;orthog.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Types</h3>
 <pre><code>enum OrthogMethod { Symmetric = 1, Canonical = 2, GramSchmidt = 3 }
-
-
 An enum for the types of orthogonalization.
-
-
-
 Public Member Functions</code></pre>
 <p> <code>OverlapOrthog</code> (<code>OrthogMethod</code> method, const <code>RefSymmSCMatrix</code> &amp;overlap, const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;result_kit, double lindep_tolerance, int debug=0) </p>
 <p> <code>OverlapOrthog</code> (<code>StateIn</code> &amp;) </p>

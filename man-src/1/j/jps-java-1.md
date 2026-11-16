@@ -15,13 +15,11 @@ jps[options][hostid]
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>options</p>
-<dd> Command-line options.</p>
-<dt>hostid</p>
-<dd> The host identifier of the host for which the process report should be generated. The <i>hostid</i> may include optional components that indicate the communications protocol, port number, and other implementation specific data.</dl>
+<dt>options</dt>
+<dd> Command-line options.</dd>
+<dt>hostid</dt>
+<dd> The host identifier of the host for which the process report should be generated. The <i>hostid</i> may include optional components that indicate the communications protocol, port number, and other implementation specific data.</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>jps</code> tool lists the instrumented HotSpot Java Virtual Machines (JVMs) on the target system. The tool is limited to reporting information on JVMs for which it has the access permissions. </p>
@@ -33,37 +31,33 @@ jps[options][hostid]
 <h2>OPTIONS</h2>
 <p> The <code>jps</code> command supports a number of options that modify the output of the command. These options are subject to change or removal in the future. </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-q</p>
-<dd> Suppress the output of the class name, JAR file name, and arguments passed to the <i>main</i> method, producing only a list of local VM identifiers.</p>
-<dt>-m</p>
-<dd> Output the arguments passed to the main method. The output may be null for embedded JVMs.</p>
-<dt>-l</p>
-<dd> Output the full package name for the application&#8217;s main class or the full path name to the application&#8217;s JAR file.</p>
-<dt>-v</p>
-<dd> Output the arguments passed to the JVM.</p>
-<dt>-V</p>
-<dd> Output the arguments passed to the JVM through the flags file (the .hotspotrc file or the file specified by the -XX:Flags=&lt;<i>filename</i>&gt; argument).</p>
-<dt>-Joption</p>
-<dd> Pass <i>option</i> to the <code>java</code> launcher called by <code>jps</code>. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying VM executing applications written in Java.</dl>
+<dt>-q</dt>
+<dd> Suppress the output of the class name, JAR file name, and arguments passed to the <i>main</i> method, producing only a list of local VM identifiers.</dd>
+<dt>-m</dt>
+<dd> Output the arguments passed to the main method. The output may be null for embedded JVMs.</dd>
+<dt>-l</dt>
+<dd> Output the full package name for the application&#8217;s main class or the full path name to the application&#8217;s JAR file.</dd>
+<dt>-v</dt>
+<dd> Output the arguments passed to the JVM.</dd>
+<dt>-V</dt>
+<dd> Output the arguments passed to the JVM through the flags file (the .hotspotrc file or the file specified by the -XX:Flags=&lt;<i>filename</i>&gt; argument).</dd>
+<dt>-Joption</dt>
+<dd> Pass <i>option</i> to the <code>java</code> launcher called by <code>jps</code>. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying VM executing applications written in Java.</dd></dl>
 </dl>
 <h3>HOST IDENTIFIER</h3>
 <p> The host identifier, or <i>hostid</i> is a string that indicates the target system. The syntax of the <i>hostid</i> string largely corresponds to the syntax of a URI: </p>
 <p>[protocol:][[//]hostname][:port][/servername]</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>protocol</p>
-<dd> The communications protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is not specified, the default protocol is a platform specific, optimized, local protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is specified, then the default protocol is <code>rmi</code>.</p>
-<dt>hostname</p>
-<dd> A hostname or IP address indicating the target host. If <i>hostname</i> is omitted, then the target host is the local host.</p>
-<dt>port</p>
-<dd> The default port for communicating with the remote server. If the <i>hostname</i> is omitted or the <i>protocol</i> specifies an optimized, local protocol, then <i>port</i> is ignored. Otherwise, treatment of the <i>port</i> parameter is implementation specific. For the default <code>rmi</code> protocol the <i>port</i> indicates the port number for the rmiregistry on the remote host. If <i>port</i> is omitted, and <i>protocol</i> indicates <code>rmi</code>, then the default rmiregistry port (1099) is used.</p>
-<dt>servername</p>
-<dd> The treatment of this parameter depends on the implementation. For the optimized, local protocol, this field is ignored. For the <code>rmi</code> protocol, this parameter is a string representing the name of the RMI remote object on the remote host. See the <code>-n</code> option for the <a href="/docs/linux/man/1-jstatd/">jstatd</a>(1) command.</dl>
+<dt>protocol</dt>
+<dd> The communications protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is not specified, the default protocol is a platform specific, optimized, local protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is specified, then the default protocol is <code>rmi</code>.</dd>
+<dt>hostname</dt>
+<dd> A hostname or IP address indicating the target host. If <i>hostname</i> is omitted, then the target host is the local host.</dd>
+<dt>port</dt>
+<dd> The default port for communicating with the remote server. If the <i>hostname</i> is omitted or the <i>protocol</i> specifies an optimized, local protocol, then <i>port</i> is ignored. Otherwise, treatment of the <i>port</i> parameter is implementation specific. For the default <code>rmi</code> protocol the <i>port</i> indicates the port number for the rmiregistry on the remote host. If <i>port</i> is omitted, and <i>protocol</i> indicates <code>rmi</code>, then the default rmiregistry port (1099) is used.</dd>
+<dt>servername</dt>
+<dd> The treatment of this parameter depends on the implementation. For the optimized, local protocol, this field is ignored. For the <code>rmi</code> protocol, this parameter is a string representing the name of the RMI remote object on the remote host. See the <code>-n</code> option for the <a href="/docs/linux/man/1-jstatd/">jstatd</a>(1) command.</dd></dl>
 </dl>
 <h2>OUTPUT FORMAT</h2>
 <p> The output of the <code>jps</code> command follows the following pattern: </p>
@@ -106,17 +100,15 @@ lvmid [[classname | JARfilename | "Unknown"] [arg * ] [jvmarg * ]]
 </pre>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-java/">java</a>(1) &#8211; the Java Application Launcher</p>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-jstat/">jstat</a>(1) &#8211; the Java virtual machine Statistics Monitoring Tool</p>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-jstatd/">jstatd</a>(1) &#8211; the jstat daemon</p>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) &#8211; the Java Remote Object Registry</dl>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-java/">java</a>(1) &#8211; the Java Application Launcher</dd>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-jstat/">jstat</a>(1) &#8211; the Java virtual machine Statistics Monitoring Tool</dd>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-jstatd/">jstatd</a>(1) &#8211; the jstat daemon</dd>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) &#8211; the Java Remote Object Registry</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
 <h2>Index</h2>

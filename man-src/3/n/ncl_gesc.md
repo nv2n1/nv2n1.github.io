@@ -12,17 +12,17 @@ GESC (Escape) - provides a standard way of implementing nonstandard GKS features
 
  void gescape(Gint func_id, const Gescape_in_data *in_data, Gstore *store_data,Gescape_out_data **out_data);
 <h2>Description</h2><dl COMPACT><dt>FCTID
-<dd>(Integer, Input) - A function identifier specifying the requested activity. The legal values for FCTID are &quot;-1391&quot; for changing a metafile name and &quot;-1396&quot; for effecting a pause in an X window.
-<dt>LIDR
-<dd>(Integer, Input) - Dimension of the IDR input data record array (for IDR, see below).
-<dt>IDR
-<dd>(Character * 80 Array, Input) - Input data record. For calls to GESC with FCTID equal to -1391 the input data record should contain the desired metafile name left justified and blank filled; for calls to GESC with FCTID equal to -1396 the input data record should contain the workstation identifier encoded as a five character number.
-<dt>MXODR
-<dd>(Integer, Input) - Maximum length of the ODR output data record array (for ODR, see below).
-<dt>LODR
-<dd>(Integer, Output) - Dimension of the ODR output data record array.
-<dt>ODR (MXODR)
-<dd>(Character * 80 Array, Output) - Output data record.</dl><h2>Usage</h2>LIDR, MXODR, and LODR must always be at least &quot;1&quot; in value.
+</dt><dd>(Integer, Input) - A function identifier specifying the requested activity. The legal values for FCTID are &quot;-1391&quot; for changing a metafile name and &quot;-1396&quot; for effecting a pause in an X window.
+</dd><dt>LIDR
+</dt><dd>(Integer, Input) - Dimension of the IDR input data record array (for IDR, see below).
+</dd><dt>IDR
+</dt><dd>(Character * 80 Array, Input) - Input data record. For calls to GESC with FCTID equal to -1391 the input data record should contain the desired metafile name left justified and blank filled; for calls to GESC with FCTID equal to -1396 the input data record should contain the workstation identifier encoded as a five character number.
+</dd><dt>MXODR
+</dt><dd>(Integer, Input) - Maximum length of the ODR output data record array (for ODR, see below).
+</dd><dt>LODR
+</dt><dd>(Integer, Output) - Dimension of the ODR output data record array.
+</dd><dt>ODR (MXODR)
+</dt><dd>(Character * 80 Array, Output) - Output data record.</dd></dl><h2>Usage</h2>LIDR, MXODR, and LODR must always be at least &quot;1&quot; in value.
 <h2>Examples</h2>GESC can be used to dynamically change the name of an output metafile and to do so one should use the calls GOPKS and GOPWK instead of OPNGKS. If you are using OPNGKS, see the man page for SETUSV for changing the name of the metafile. 
 
  To change the name of the output metafile inside your program, you should make a call similar to the following: <pre> CHARACTER*80 MFNAME

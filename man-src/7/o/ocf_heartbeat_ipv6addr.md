@@ -10,39 +10,39 @@ description: "ocf_heartbeat_IPv6addr – Manages IPv6 aliases"
 <p>ocf_heartbeat_IPv6addr &#8211; Manages IPv6 aliases</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>IPv6addr</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>IPv6addr</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This script manages IPv6 alias IPv6 addresses,It can add an IP6 alias, or remove one.</p>
+<dd>This script manages IPv6 alias IPv6 addresses,It can add an IP6 alias, or remove one.</dd>
 <h2>Supported Parameters</h2>
 <p><code>ipv6addr</code></p>
 <dl>
-<dd>The IPv6 address this RA will manage (required, string, no default)</dl>
+<dd>The IPv6 address this RA will manage (required, string, no default)</dd></dl>
 <p> <code>cidr_netmask</code></p>
 <dl>
-<dd>The netmask for the interface in CIDR format. (ie, 24). The value of this parameter overwrites the value of _prefix_ of ipv6addr parameter. (optional, string, no default)</dl>
+<dd>The netmask for the interface in CIDR format. (ie, 24). The value of this parameter overwrites the value of _prefix_ of ipv6addr parameter. (optional, string, no default)</dd></dl>
 <p> <code>nic</code></p>
 <dl>
-<dd>The base network interface on which the IPv6 address will be brought online. (optional, string, no default)</dl>
+<dd>The base network interface on which the IPv6 address will be brought online. (optional, string, no default)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 15.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 15.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 15.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 15.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 15. Suggested interval: 15.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 15. Suggested interval: 15.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 15. Suggested interval: 15.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 15. Suggested interval: 15.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a IPv6addr resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_IPv6addr ocf:heartbeat:IPv6addr \

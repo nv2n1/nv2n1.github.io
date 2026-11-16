@@ -14,14 +14,14 @@ description: "rio_release_outb_dbell – release outbound doorbell message range
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device from which to release the doorbell resource</dl>
+</dd><dd>RIO device from which to release the doorbell resource</dd></dl>
 <p> <i>res</i></p>
 <dl>
-<dd>Doorbell resource to be freed</dl>
+<dd>Doorbell resource to be freed</dd></dl>
 <h2>Description</h2>
 <p>Releases ownership of a doorbell message range. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -69,79 +69,79 @@ description: "atomic-trust – Manage system container trust policy"
 <p> Add public key trust to specific registry repository </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 atomic trust add-- pubkeys / etc / pki / containers / foo[at] example.com-- sigstore https: //s3.bucket/foobar/sigstore/ \
        docker.io/foobar
 </code></pre>
-</dl>
+</dd></dl>
 <p> Modify a trust scope, adding a second public key and changing the sigstore web server </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 atomic trust add-- pubkeys https: //example.com/keys/example.pub \
        --pubkeys /etc/pki/containers/foo [at] example.com \
        --sigstore https://server.example.com/foobar/sigstore/ \
        docker.io/foobar
 </code></pre>
-</dl>
+</dd></dl>
 <p> Accept all unsigned images from a registry </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust add --type insecureAcceptAnything docker.io
 </pre>
-</dl>
+</dd></dl>
 <p> Remove a trust scope </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust delete docker.io
 </pre>
-</dl>
+</dd></dl>
 <p> Remove a trust scope but retain the sigstore configuration </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust delete docker.io --sigstore
 </pre>
-</dl>
+</dd></dl>
 <p> Modify default trust policy </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust default reject
 </pre>
-</dl>
+</dd></dl>
 <p> Display system trust policy </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust show
 </pre>
-</dl>
+</dd></dl>
 <p> Display trust policy file </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust show --raw
 </pre>
-</dl>
+</dd></dl>
 <p> Display trust as JSON </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic trust show --json
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> September 2016, originally compiled by Aaron Weitekamp (aweiteka at redhat dot com) </p>
 <h2>Index</h2>

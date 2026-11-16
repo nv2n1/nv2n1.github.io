@@ -26,36 +26,33 @@ In the first form shown in the SYNOPSIS this utility sends the SCSI REPORT LUNS 
 
 Arguments to long options are mandatory for short options as well.
 <dl><dt><b>-d</b>, <b>--decode</b>
-<dd>decode LUNs into their component parts, as described in the LUN section of SAM-3, SAM-4 and SAM-5.
-<dt><b>-h</b>, <b>--help</b>
-<dd>output the usage message then exit.
-<dt><b>-H</b>, <b>--hex</b>
-<dd>[device mode] when given once this utility will output the SCSI response (i.e. the data-out buffer) to the REPORT LUNS command in ASCII hex then exit. When given twice it causes <i>--decode</i> to output component fields in hex rather than decimal.
-<dt><b>-H</b>, <b>--hex</b>
-<dd>[test mode] when this option is given, then decoded component fields of <i>ALUN</i> are output in hex.
-<dt><b>-l</b>, <b>--linux</b>
-<dd>this option is only available in Linux. After the T10 representation of each 64 bit LUN (in 16 hexadecimal digits), if this option is given then to the right, in square brackets, is the Linux LUN integer in decimal. If the <i>--hex</i> option is given twice (e.g. -HH) as well then the Linux LUN integer is output in hexadecimal.
-<dt><b>-m</b>, <b>--maxlen</b>=<i>LEN</i>
-<dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb's &quot;allocation length&quot; field. If not given (or <i>LEN</i> is zero) then 8192 is used. The maximum allowed value of <i>LEN</i> is 1048576.
-<dt><b>-q</b>, <b>--quiet</b>
-<dd>output only the ASCII hex rendering of each report LUN, one per line. Without the <i>--quiet</i> option, there is header information printed before the LUN listing.
-<dt><b>-r</b>, <b>--raw</b>
-<dd>output the SCSI response (i.e. the data-out buffer) in binary (to stdout).
-<dt><b>-s</b>, <b>--select</b>=<i>SR</i>
-<dd>this option sets the SELECT REPORT field (<i>SR</i>) in the SCSI REPORT LUNS command. The default value is 0. For detailed information see the REPORT LUNS command in SPC (most recent is SPC-4 revision 36e in section 6.33). To simplify, for the I_T nexus associated with the <i>DEVICE</i>, the meanings of the <i>SR</i> values defined to date for SPC-4 are: 
- 
+</dt><dd>decode LUNs into their component parts, as described in the LUN section of SAM-3, SAM-4 and SAM-5.
+</dd><dt><b>-h</b>, <b>--help</b>
+</dt><dd>output the usage message then exit.
+</dd><dt><b>-H</b>, <b>--hex</b>
+</dt><dd>[device mode] when given once this utility will output the SCSI response (i.e. the data-out buffer) to the REPORT LUNS command in ASCII hex then exit. When given twice it causes <i>--decode</i> to output component fields in hex rather than decimal.
+</dd><dt><b>-H</b>, <b>--hex</b>
+</dt><dd>[test mode] when this option is given, then decoded component fields of <i>ALUN</i> are output in hex.
+</dd><dt><b>-l</b>, <b>--linux</b>
+</dt><dd>this option is only available in Linux. After the T10 representation of each 64 bit LUN (in 16 hexadecimal digits), if this option is given then to the right, in square brackets, is the Linux LUN integer in decimal. If the <i>--hex</i> option is given twice (e.g. -HH) as well then the Linux LUN integer is output in hexadecimal.
+</dd><dt><b>-m</b>, <b>--maxlen</b>=<i>LEN</i>
+</dt><dd>where <i>LEN</i> is the (maximum) response length in bytes. It is placed in the cdb's &quot;allocation length&quot; field. If not given (or <i>LEN</i> is zero) then 8192 is used. The maximum allowed value of <i>LEN</i> is 1048576.
+</dd><dt><b>-q</b>, <b>--quiet</b>
+</dt><dd>output only the ASCII hex rendering of each report LUN, one per line. Without the <i>--quiet</i> option, there is header information printed before the LUN listing.
+</dd><dt><b>-r</b>, <b>--raw</b>
+</dt><dd>output the SCSI response (i.e. the data-out buffer) in binary (to stdout).
+</dd><dt><b>-s</b>, <b>--select</b>=<i>SR</i>
+</dt><dd>this option sets the SELECT REPORT field (<i>SR</i>) in the SCSI REPORT LUNS command. The default value is 0. For detailed information see the REPORT LUNS command in SPC (most recent is SPC-4 revision 36e in section 6.33). To simplify, for the I_T nexus associated with the <i>DEVICE</i>, the meanings of the <i>SR</i> values defined to date for SPC-4 are: 
 &nbsp;<wbr>&nbsp;<wbr><b>0</b>&nbsp;<wbr>: all LUNs excluding well known logical units 
- 
 &nbsp;<wbr>&nbsp;<wbr><b>1</b>&nbsp;<wbr>: well known logical units 
- 
 &nbsp;<wbr>&nbsp;<wbr><b>2</b>&nbsp;<wbr>: all LUNs 
  Values between 0xf8 and 0xff (inclusive) are vendor specific (SPC-4 rev 36e), other values greater than 2 are reserved. This utility will accept any value between 0 and 255 (0xff) for <i>SR</i> .
-<dt><b>-t</b>, <b>--test</b>=<i>ALUN</i>
-<dd><i>ALUN</i> is assumed to be a hexadecimal number in ASCII hex or the letter 'L' followed by a decimal number (see below). The hexadecimal number can be up to 64 bits in size (i.e. 16 hexadecimal digits) and is padded to the right if less than 16 hexadecimal digits are given (e.g. <i>--test=0122003a</i> represents T10 LUN 0122003a00000000). <i>ALUN</i> may be prefixed by '0x' or '0X' (e.g. the previous example could have been <i>--test=0x0122003a</i>). <i>ALUN</i> may also be given with spaces or tabs between each byte (or other grouping) but then <i>ALUN</i> would need to be surrounded by single or double quotes. In the decimal number case (i.e. following a 'L') that number is assumed to be a Linux &quot;word flipped&quot; LUN which is converted into a T10 LUN representation and printed. In both cases the number is interpreted as a LUN and decoded as if the <i>--decode</i> option had been given. Also when <i>ALUN</i> is a hexadecimal number it can have a trailing 'L' in which case the corresponding Linux &quot;word flipped&quot; LUN value is output. The LUN is decoded in all cases.
-<dt><b>-v</b>, <b>--verbose</b>
-<dd>increase the level of verbosity, (i.e. debug output).
-<dt><b>-V</b>, <b>--version</b>
-<dd>print the version string and then exit.</dl>
+</dd><dt><b>-t</b>, <b>--test</b>=<i>ALUN</i>
+</dt><dd><i>ALUN</i> is assumed to be a hexadecimal number in ASCII hex or the letter 'L' followed by a decimal number (see below). The hexadecimal number can be up to 64 bits in size (i.e. 16 hexadecimal digits) and is padded to the right if less than 16 hexadecimal digits are given (e.g. <i>--test=0122003a</i> represents T10 LUN 0122003a00000000). <i>ALUN</i> may be prefixed by '0x' or '0X' (e.g. the previous example could have been <i>--test=0x0122003a</i>). <i>ALUN</i> may also be given with spaces or tabs between each byte (or other grouping) but then <i>ALUN</i> would need to be surrounded by single or double quotes. In the decimal number case (i.e. following a 'L') that number is assumed to be a Linux &quot;word flipped&quot; LUN which is converted into a T10 LUN representation and printed. In both cases the number is interpreted as a LUN and decoded as if the <i>--decode</i> option had been given. Also when <i>ALUN</i> is a hexadecimal number it can have a trailing 'L' in which case the corresponding Linux &quot;word flipped&quot; LUN value is output. The LUN is decoded in all cases.
+</dd><dt><b>-v</b>, <b>--verbose</b>
+</dt><dd>increase the level of verbosity, (i.e. debug output).
+</dd><dt><b>-V</b>, <b>--version</b>
+</dt><dd>print the version string and then exit.</dd></dl>
 
 <h2>Notes</h2>
 
@@ -71,12 +68,8 @@ Typically by the time user space programs get to run, SCSI LUs have been discove
 &nbsp;<wbr>&nbsp;<wbr>[6:0:0:1]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>disk&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Linux&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scsi_debug&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0004&nbsp;<wbr>&nbsp;<wbr>/dev/sdb&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/dev/sg1 
  
 &nbsp;<wbr>&nbsp;<wbr>[6:0:0:49409]wlun&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Linux&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scsi_debug&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0004&nbsp;<wbr>&nbsp;<wbr>-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/dev/sg2 We could send a REPORT LUNS command to either /dev/sdb, /dev/sg1 or /dev/sg2 and get the same result. Below we use /dev/sg1 : <pre><code># sg_luns /dev/sg1
-
 Lun list length = 8 which imples 1 lun entry
-
 Report luns [select_report=0x0]:
-
-
 0001000000000000</code></pre> That is a bit noisy so cut down the clutter with <i>--quiet</i>: 
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_luns -q&nbsp;<wbr>/dev/sg1 
  
@@ -134,12 +127,8 @@ Peripheral device addressing: bus_id=0x02, target=0x3a
 
 
 Peripheral device addressing: lun=0x4b The next example is Linux specific as we try to find out what the Linux LUN 49409 translates to in the T10 world: <pre><code># sg_luns --test=L49409
-
 64 bit LUN in T10 preferred (hex) format:  c1 01 00 00 00 00 00 00
-
 Decoded LUN:
-
-
 REPORT LUNS well known logical unit</code></pre> And the mapping between T10 and Linux LUN representations can be done the other way: 
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_luns -t c101L 
  

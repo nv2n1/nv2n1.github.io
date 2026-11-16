@@ -16,10 +16,10 @@ description: "photorec – Recover lost files from harddisk, digital camera and 
 For more information on how to use, please visit the wiki pages on&nbsp;<wbr><a rel="nofollow" href="http://www.cgsecurity.org">www.cgsecurity.org</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>/log</code></p>
-<dd>create a photorec.log file</p>
-<dt><code>/debug</code></p>
-<dd>add debug information</dl>
+<dt><code>/log</code></dt>
+<dd>create a photorec.log file</dd>
+<dt><code>/debug</code></dt>
+<dd>add debug information</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-testdisk/">testdisk</a>(8),</code> <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8).</p>
 <h2>Author</h2>

@@ -14,12 +14,12 @@ description: "idna_to_unicode_8z4z – API function"
 <p> <code>int idna_to_unicode_8z4z(const char * </code><i>input</i><code>, uint32_t ** </code><i>output</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * input</p>
-<dd> zero-terminated UTF-8 string.</p>
-<dt>uint32_t ** output</p>
-<dd> pointer to newly allocated output Unicode string.</p>
-<dt>int flags</p>
-<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dl>
+<dt>const char * input</dt>
+<dd> zero-terminated UTF-8 string.</dd>
+<dt>uint32_t ** output</dt>
+<dd> pointer to newly allocated output Unicode string.</dd>
+<dt>int flags</dt>
+<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert possibly ACE encoded domain name in UTF-8 format into a UCS-4 string. The domain name may contain several labels, separated by dots. The output buffer must be deallocated by the caller.</p>
 <h2>RETURN VALUE</h2>
@@ -33,6 +33,6 @@ description: "idna_to_unicode_8z4z – API function"
 <p> The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libidn</code></dl>
+</dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

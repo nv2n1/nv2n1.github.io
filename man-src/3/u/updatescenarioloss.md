@@ -13,113 +13,32 @@ description: "QuantLib::Basket –"
 #include &lt;ql/experimental/credit/basket.hpp&gt;</code></pre>
 <h3>Public Member Functions</h3>
 <pre><code>Basket (const std::vector&lt; std::string &gt; &amp;names, const std::vector&lt; Real &gt; &amp;notionals, const boost::shared_ptr&lt; Pool &gt; pool, Real attachmentRatio=0.0, Real detachmentRatio=1.0)
-
-
-
 Size size () const
-
-
-
 const std::vector&lt; std::string &gt; &amp; names () const
-
-
-
 const std::vector&lt; Real &gt; &amp; notionals () const
-
-
-
 Real notional ()
-
-
-
 boost::shared_ptr&lt; Pool &gt; pool () const
-
-
-
 const std::vector&lt; Real &gt; &amp; LGDs () const
-
-
-
 Real lgd ()
-
-
-
 Real attachmentRatio () const
-
-
-
 Real detachmentRatio () const
-
-
-
 Real basketNotional () const
-
-
-
 Real basketLGD () const
-
-
-
 Real trancheNotional () const
-
-
-
 Real attachmentAmount () const
-
-
-
 Real detachmentAmount () const
-
-
-
 std::vector&lt; Real &gt; probabilities (const Date &amp;d) const
-
-
-
 Real cumulatedLoss (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 Real remainingNotional (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 std::vector&lt; Real &gt; remainingNotionals (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 std::vector&lt; std::string &gt; remainingNames (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 Real remainingAttachmentRatio (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 Real remainingAttachmentAmount (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 Real remainingDetachmentRatio (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 Real remainingDetachmentAmount (const Date &amp;startDate, const Date &amp;endDate) const
-
-
-
 void updateScenarioLoss (bool zeroRecovery=false)
-
-
-
 Real scenarioTrancheLoss (Date endDate) const
-
-
-
 std::vector&lt; Loss &gt; scenarioIncrementalBasketLosses () const
-
-
-
 std::vector&lt; Loss &gt; scenarioIncrementalTrancheLosses (Date startDate=Date::minDate(), Date endDate=Date::maxDate()) const</code></pre>
 <h2>Detailed Description</h2>
 <p>Credit <code>Basket</code> A basket is a collection of credit names, represented by a unique identifier (a text string), associated notional amounts, a pool and tranche information. The pool is a map of &#8216;names&#8217; to issuers. The <code>Basket</code> structure is motivated by <code>CDO</code> squared instruments containing various underlying inner CDOs which can be represented by respective baskets including their tranche structure. The role of the Pool is providing a unique list of relevant issuers while names may appear multiple times across different baskets (overlap).</p>

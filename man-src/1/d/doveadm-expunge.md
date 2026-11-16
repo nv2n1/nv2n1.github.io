@@ -21,27 +21,27 @@ description: "doveadm-expunge – Expunge messages matching given search query"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </p>
+<dt><code>-A</code></dt>
+<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </dd>
 <p> When the SQL userdb module is used make sure that the <i>iterate_query</i> setting in <i>/etc/dovecot/dovecot-sql.conf.ext</i> matches your database layout. When using the LDAP userdb module, make sure that the <i>iterate_attrs</i> and <i>iterate_filter</i> settings in <i>/etc/dovecot/dovecot-ldap.conf.ext</i> match your LDAP schema. Otherwise <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will be unable to iterate over all users.</p>
-<dt><code>-d</code></p>
-<dd> Delete the mailbox if it is empty after expunging.</p>
-<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></p>
-<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </p>
+<dt><code>-d</code></dt>
+<dd> Delete the mailbox if it is empty after expunging.</dd>
+<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></dt>
+<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></p>
+<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
 <dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
- When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dl>
+ When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>search_query</i></p>
-<dd> Expunge messages matching this search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</dl>
+<dt><i>search_query</i></dt>
+<dd> Expunge messages matching this search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> This example expunges messages from Spam mailbox that were saved/copied there more than two weeks ago: </p>
 <pre>

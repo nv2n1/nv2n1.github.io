@@ -18,10 +18,10 @@ description: "rrdbuild – Instructions for building RRDtool"
 <h2>OPTIMISTIC BUILD</h2>
 <p> Before you start to build RRDtool, you have to decide two things:</p>
 <dl>
-<dt>1.</p>
-<dd> In which directory you want to build the software.</p>
-<dt>2.</p>
-<dd> Where you want to install the software.</dl>
+<dt>1.</dt>
+<dd> In which directory you want to build the software.</dd>
+<dt>2.</dt>
+<dd> Where you want to install the software.</dd></dl>
 <p> Once you have decided. Save the two locations into environment variables. </p>
 <pre>
  BUILD_DIR=/tmp/rrdbuild
@@ -98,7 +98,7 @@ description: "rrdbuild – Instructions for building RRDtool"
 <p> The above relies on the presence of the <i>pkgconfig</i> program. Below you find instructions on how to compile pkgconfig. </p>
 <p> Since we are compiling libraries dynamically, they must know where to find each other. This is done by setting an appropriate <font SIZE="-1">LDFLAGS</font>. Unfortunately, the syntax again differs from system to system:</p>
 <dl>
-<dt>Solaris</p>
+<dt>Solaris</dt>
 <dd>
 <pre>
  export LDFLAGS=-R${INSTALL_DIR}/lib
@@ -108,22 +108,22 @@ description: "rrdbuild – Instructions for building RRDtool"
  CFLAGS=&quot;-xO3 -xcode=pic13&quot;   (SPARC)
  CFLAGS=&quot;-xO3 -Kpic&quot;          (x86)
 </pre>
-<dt>Linux</p>
+</dd><dt>Linux</dt>
 <dd>
 <pre>
  export LDFLAGS=&quot;-Wl,--rpath -Wl,${INSTALL_DIR}/lib&quot;
 </pre>
-<dt><font SIZE="-1">HPUX</font></p>
+</dd><dt><font SIZE="-1">HPUX</font></dt>
 <dd>
 <pre>
  export LDFLAGS=&quot;+b${INSTALL_DIR}/lib&quot;
 </pre>
-<dt><font SIZE="-1">AIX</font></p>
+</dd><dt><font SIZE="-1">AIX</font></dt>
 <dd>
 <pre>
  export LDFLAGS=&quot;-Wl,-blibpath:${INSTALL_DIR}/lib&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> If you have <font SIZE="-1">GNU</font> make installed and it is not called &#8216;make&#8217;, then do </p>
 <pre>
  export MAKE=gmake
@@ -265,5 +265,5 @@ cd $BUILD_DIR
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">AUTHOR</a></p>
-<dd></dl>
+<dt><a href="#lbAM">AUTHOR</a></dt>
+<dd></dd></dl>

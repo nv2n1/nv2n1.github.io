@@ -31,6 +31,6 @@ description: "QuantLib::YoYInflationTermStructure – Base class for year-on-yea
 <p>year-on-year inflation rate </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>this is not the year-on-year swap (YYIIS) rate.</dl>
+<dd>this is not the year-on-year swap (YYIIS) rate.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

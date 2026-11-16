@@ -20,12 +20,12 @@ description: "pto_move – Move a project file with all images in it."
 <p> Moves all project files in the source folder to the destination folder including all images.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;copy</code></p>
-<dd> Copy project files and images instead of moving</p>
-<dt><code>&#8211;recursive</code></p>
-<dd> Only effective in use case 2. Go recursive in the the source folder and move all project files with images to destination folder by maintaining the folder structure relative to source folder.</p>
-<dt><code>&#8211;overwrite</code></p>
-<dd> Overwrite all existing files. Otherwise you will be asked for each existing file.</dl>
+<dt><code>&#8211;copy</code></dt>
+<dd> Copy project files and images instead of moving</dd>
+<dt><code>&#8211;recursive</code></dt>
+<dd> Only effective in use case 2. Go recursive in the the source folder and move all project files with images to destination folder by maintaining the folder structure relative to source folder.</dd>
+<dt><code>&#8211;overwrite</code></dt>
+<dd> Overwrite all existing files. Otherwise you will be asked for each existing file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

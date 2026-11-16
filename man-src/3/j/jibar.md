@@ -18,6 +18,6 @@ description: "QuantLib::Jibar – JIBAR rate"
 <p> Johannesburg Interbank Agreed Rate </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check settlement days and day-count convention.</dl>
+<dd>check settlement days and day-count convention.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

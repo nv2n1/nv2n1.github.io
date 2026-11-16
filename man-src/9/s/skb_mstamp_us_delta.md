@@ -10,13 +10,13 @@ description: "skb_mstamp_us_delta – compute the difference in usec between two
 <p>skb_mstamp_us_delta &#8211; compute the difference in usec between two skb_mstamp</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u32 skb_mstamp_us_delta(const struct skb_mstamp&nbsp;<wbr>*&nbsp;<wbr></code><i>t1</i><code>, const struct skb_mstamp&nbsp;<wbr>*&nbsp;<wbr></code><i>t0</i><code>);</code></dl>
+<dt> <code>u32 skb_mstamp_us_delta(const struct skb_mstamp&nbsp;<wbr>*&nbsp;<wbr></code><i>t1</i><code>, const struct skb_mstamp&nbsp;<wbr>*&nbsp;<wbr></code><i>t0</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>t1</i></p>
 <dl>
 <dd>
-<dd>pointer to newest sample</dl>
+</dd><dd>pointer to newest sample</dd></dl>
 <p> <i>t0</i></p>
 <dl>
-<dd>pointer to oldest sample</dl>
+<dd>pointer to oldest sample</dd></dl>
 <h2>Copyright</h2>

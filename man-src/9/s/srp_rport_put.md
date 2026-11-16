@@ -14,12 +14,12 @@ description: "srp_rport_put – decrement rport reference count"
 <p><i>rport</i></p>
 <dl>
 <dd>
-<dd>SRP target port.</dl>
+</dd><dd>SRP target port.</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

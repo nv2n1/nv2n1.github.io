@@ -19,7 +19,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_subscribe_devx_event/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_channel,
                                      struct mlx5dv_devx_obj *obj,
@@ -29,7 +29,7 @@ int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_
                                                                                               int fd,
                                                                                               struct mlx5dv_devx_obj *obj,
                                                                                               uint16_t event_num)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -41,17 +41,17 @@ int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_
 
 <dl>
 <dt>dv_event_channel
-<dd> Event channel to subscribe over.
-<dt>fd
-<dd> A file descriptor that previously was opened by the eventfd() system call.
-<dt>obj
-<dd> DEVX object that events_num relates to, can be NULL for unaffiliated events.
-<dt>events_sz
-<dd> Size of the events_num buffer that holds the events to subscribe for.
-<dt>events_num
-<dd> Holds the required event numbers to subscribe for, numbers are according to the device specification.
-<dt>cookie
-<dd> The value to be returned back when reading the event, can be used as an ID for application use.</dl>
+</dt><dd> Event channel to subscribe over.
+</dd><dt>fd
+</dt><dd> A file descriptor that previously was opened by the eventfd() system call.
+</dd><dt>obj
+</dt><dd> DEVX object that events_num relates to, can be NULL for unaffiliated events.
+</dd><dt>events_sz
+</dt><dd> Size of the events_num buffer that holds the events to subscribe for.
+</dd><dt>events_num
+</dt><dd> Holds the required event numbers to subscribe for, numbers are according to the device specification.
+</dd><dt>cookie
+</dt><dd> The value to be returned back when reading the event, can be used as an ID for application use.</dd></dl>
 
 <h2>NOTES</h2>
 

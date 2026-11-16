@@ -11,10 +11,8 @@ description: "std::experimental::filesystem::path::c_str,std::experimental::file
 <h2>Synopsis</h2>
 <pre><code>const value_type *c_str() const;
 (1)(filesystem TS)
-
     const string_type &amp;native() const;
 (2)(filesystem TS)
-
 operator string_type() const;
 (3)(filesystem TS)</code></pre>
 <p>Accesses the native path name as a character string.<br />
@@ -39,18 +37,12 @@ pathnames with no changes to code: fs::path p = &quot;/tmp/text.txt&quot;;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
@@ -58,12 +50,9 @@ int main()
     // native string representation can be used with OS APIs
     std::ofstream(p) &lt;&lt; &quot;File contents&quot;; // this uses operator string()
     if (std::FILE *f = std::fopen(p.c_str(), &quot;r&quot;)) {
-
         int ch;
-
         while ((ch = fgetc(f)) != EOF)
             putchar(ch);
-
         std::fclose(f);
     }
     // multibyte and wide representation can be used for output

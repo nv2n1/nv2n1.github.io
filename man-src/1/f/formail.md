@@ -61,65 +61,65 @@ description: "formail – mail (re)formatter"
 <p> <code>RFC822</code>, the original standard governing the format of Internet mail messages, did not specify whether Resent header fields (those that begin with `Resent-&#8216;, such as `Resent-From:&#8217;) should be considered when generating a reply. Since then, the recommended usage of the Resent headers has evolved to consider them as purely informational and not for use when generating a reply. This has been codified in <code>RFC2822</code>, the new Internet Message Format standard, which states in part:</p>
 <dl>
 <dt>
-<dd> Resent fields are used to identify a message as having been reintroduced into the transport system by a user. The purpose of using resent fields is to have the message appear to the final recipient as if it were sent directly by the original sender, with all of the original fields remaining the same&#8230;.They MUST NOT be used in the normal processing of replies or other such automatic actions on messages.</dl>
+</dt><dd> Resent fields are used to identify a message as having been reintroduced into the transport system by a user. The purpose of using resent fields is to have the message appear to the final recipient as if it were sent directly by the original sender, with all of the original fields remaining the same&#8230;.They MUST NOT be used in the normal processing of replies or other such automatic actions on messages.</dd></dl>
 <p> While formail now ignores Resent headers when generating header replies, versions of formail prior to 3.14 gave such headers a high precedence. If the old behavior is needed for established applications it can be specified by calling formail with the option `-a Resent-&#8216; in addition to the -r and -t options. This usage is deprecated and should not be used in new applications. </p>
 <h2>ENVIRONMENT</h2>
 <p> Tp .B FILENO <code>FILENO</code> While splitting, formail assigns the message number currently being output to this variable. By presetting FILENO, you can change the initial message number being used and the width of the zero-padded output. If FILENO is unset it will default to 000. If FILENO is non-empty and does not contain a number, FILENO generation is disabled. </p>
 <h2>EXAMPLES</h2>
 <p> To split up a digest one usually uses: </p>
 <pre>
-<dl><dt><dd>formail +1 -ds &gt;&gt;the_mailbox_of_your_choice
-</dl>
+<dl><dt></dt><dd>formail +1 -ds &gt;&gt;the_mailbox_of_your_choice
+</dd></dl>
 </pre>
 <p> or </p>
 <pre>
-<dl><dt><dd>formail +1 -ds procmail
-</dl>
+<dl><dt></dt><dd>formail +1 -ds procmail
+</dd></dl>
 </pre>
 <p> To remove all Received: fields from the header: </p>
 <pre>
-<dl><dt><dd>formail -I Received:
-</dl>
+<dl><dt></dt><dd>formail -I Received:
+</dd></dl>
 </pre>
 <p> To remove all fields except From: and Subject: from the header: </p>
 <pre>
-<dl><dt><dd>formail -k -X From: -X Subject:
-</dl>
+<dl><dt></dt><dd>formail -k -X From: -X Subject:
+</dd></dl>
 </pre>
 <p> To supersede the Reply-To: field in a header you could use: </p>
 <pre>
-<dl><dt><dd>formail -i &quot;Reply-To: foo@bar&quot;
-</dl>
+<dl><dt></dt><dd>formail -i &quot;Reply-To: foo@bar&quot;
+</dd></dl>
 </pre>
 <p> To convert a non-standard mailbox file into a standard mailbox file you can use: </p>
 <pre>
-<dl><dt><dd>formail -ds &lt;old_mailbox &gt;&gt;new_mailbox
-</dl>
+<dl><dt></dt><dd>formail -ds &lt;old_mailbox &gt;&gt;new_mailbox
+</dd></dl>
 </pre>
 <p> Or, if you have a very tolerant mailer: </p>
 <pre>
-<dl><dt><dd>formail -a Date: -ds &lt;old_mailbox &gt;&gt;new_mailbox
-</dl>
+<dl><dt></dt><dd>formail -a Date: -ds &lt;old_mailbox &gt;&gt;new_mailbox
+</dd></dl>
 </pre>
 <p> To extract the header from a message: </p>
 <pre>
-<dl><dt><dd>formail -X &quot;&quot;
-</dl>
+<dl><dt></dt><dd>formail -X &quot;&quot;
+</dd></dl>
 </pre>
 <p> or </p>
 <pre>
-<dl><dt><dd>sed -e '/^$/ q'
-</dl>
+<dl><dt></dt><dd>sed -e '/^$/ q'
+</dd></dl>
 </pre>
 <p> To extract the body from a message: </p>
 <pre>
-<dl><dt><dd>formail -I &quot;&quot;
-</dl>
+<dl><dt></dt><dd>formail -I &quot;&quot;
+</dd></dl>
 </pre>
 <p> or </p>
 <pre>
-<dl><dt><dd>sed -e '1,/^$/ d'
-</dl>
+<dl><dt></dt><dd>sed -e '1,/^$/ d'
+</dd></dl>
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>RFC822</code>, <code>RFC2822</code>, <code>RFC1123</code> </p>
@@ -145,7 +145,6 @@ description: "formail – mail (re)formatter"
 <p> The regular expression that is used to find `real&#8217; postmarks is: </p>
 <pre><code>
 "
-
 From [	 ]*[^	
  ]+[	 ]+[^
 	 ]"
@@ -159,31 +158,31 @@ From [	 ]*[^
 <h2>MAILINGLIST</h2>
 <p> There exists a mailinglist for questions relating to any program in the procmail package: </p>
 <pre>
-<dl><dt><dd>&lt;procmail-users [at] procmail.org&gt;
-<dl><dt><dd>for submitting questions/answers.
-</dl>
+<dl><dt></dt><dd>&lt;procmail-users [at] procmail.org&gt;
+</dd><dl><dt></dt><dd>for submitting questions/answers.
+</dd></dl>
 </pre>
 <p> &lt;procmail-users-request [at] procmail.org&gt; </p>
 <pre>
-<dl><dt><dd>for subscription requests.
-</dl>
+<dl><dt></dt><dd>for subscription requests.
+</dd></dl>
 </pre>
 </dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to </p>
 <pre>
-<dl><dt><dd>procmail-announce-request [at] procmail.org
-</dl>
+<dl><dt></dt><dd>procmail-announce-request [at] procmail.org
+</dd></dl>
 </pre>
 <p> (this is a readonly list). </p>
 <h2>AUTHORS</h2>
 <p> Stephen R. van den Berg </p>
 <pre>
-<dl><dt><dd>&lt;srb [at] cuci.nl&gt;
-</dl>
+<dl><dt></dt><dd>&lt;srb [at] cuci.nl&gt;
+</dd></dl>
 </pre>
 <p> Philip A. Guenther </p>
 <pre>
-<dl><dt><dd>&lt;guenther [at] sendmail.com&gt;
-</dl>
+<dl><dt></dt><dd>&lt;guenther [at] sendmail.com&gt;
+</dd></dl>
 </pre>
 <h2>Index</h2>

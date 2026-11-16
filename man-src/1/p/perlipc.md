@@ -193,42 +193,28 @@ sub code
  Perl 5.8.0 and later avoid these problems by ``deferring'' signals. That is, when the signal is delivered to the process by the system (to the C code that implements Perl) a flag is set, and the handler returns immediately. Then at strategic ``safe'' points in the Perl interpreter (e.g. when it is about to execute a new opcode) the flags are checked and the Perl level handler from <tt>%SIG</tt> is executed. The ``deferred'' scheme allows much more flexibility in the coding of signal handlers as we know the Perl interpreter is in a safe state, and that we are not in a system library function when the handler is called. However the implementation does differ from previous Perls in the following ways:
 <dl>
 <dt>Long-running opcodes
-<dd> As the Perl interpreter looks at signal flags only when it is about to execute a new opcode, a signal that arrives during a long-running opcode (e.g. a regular expression operation on a very large string) will not be seen until the current opcode completes. 
-
+</dt><dd> As the Perl interpreter looks at signal flags only when it is about to execute a new opcode, a signal that arrives during a long-running opcode (e.g. a regular expression operation on a very large string) will not be seen until the current opcode completes. 
  If a signal of any given type fires multiple times during an opcode (such as from a fine-grained timer), the handler for that signal will be called only once, after the opcode completes; all other instances will be discarded. Furthermore, if your system's signal queue gets flooded to the point that there are signals that have been raised but not yet caught (and thus not deferred) at the time an opcode completes, those signals may well be caught and deferred during subsequent opcodes, with sometimes surprising results. For example, you may see alarms delivered even after calling <tt>alarm(0)</tt> as the latter stops the raising of alarms but does not cancel the delivery of alarms raised but not yet caught. Do not depend on the behaviors described in this paragraph as they are side effects of the current implementation and may change in future versions of Perl.
-<dt>Interrupting <font SIZE="-1">IO</font>
-<dd> When a signal is delivered (e.g., <font SIZE="-1">SIGINT</font> from a control-C) the operating system breaks into <font SIZE="-1">IO</font> operations like <i><a HREF="/docs/linux/man/2-read/">read</a></i>(2), which is used to implement Perl's <b>readline()</b> function, the <tt>&quot;&lt;&gt;&quot;</tt> operator. On older Perls the handler was called immediately (and as <tt>&quot;read&quot;</tt> is not ``unsafe'', this worked well). With the ``deferred'' scheme the handler is <i>not</i> called immediately, and if Perl is using the system's <tt>&quot;stdio&quot;</tt> library that library may restart the <tt>&quot;read&quot;</tt> without returning to Perl to give it a chance to call the <tt>%SIG</tt> handler. If this happens on your system the solution is to use the <tt>&quot;:perlio&quot;</tt> layer to do IO---at least on those handles that you want to be able to break into with signals. (The <tt>&quot;:perlio&quot;</tt> layer checks the signal flags and calls <tt>%SIG</tt> handlers before resuming <font SIZE="-1">IO</font> operation.) 
-
+</dd><dt>Interrupting <font SIZE="-1">IO</font>
+</dt><dd> When a signal is delivered (e.g., <font SIZE="-1">SIGINT</font> from a control-C) the operating system breaks into <font SIZE="-1">IO</font> operations like <i><a HREF="/docs/linux/man/2-read/">read</a></i>(2), which is used to implement Perl's <b>readline()</b> function, the <tt>&quot;&lt;&gt;&quot;</tt> operator. On older Perls the handler was called immediately (and as <tt>&quot;read&quot;</tt> is not ``unsafe'', this worked well). With the ``deferred'' scheme the handler is <i>not</i> called immediately, and if Perl is using the system's <tt>&quot;stdio&quot;</tt> library that library may restart the <tt>&quot;read&quot;</tt> without returning to Perl to give it a chance to call the <tt>%SIG</tt> handler. If this happens on your system the solution is to use the <tt>&quot;:perlio&quot;</tt> layer to do IO---at least on those handles that you want to be able to break into with signals. (The <tt>&quot;:perlio&quot;</tt> layer checks the signal flags and calls <tt>%SIG</tt> handlers before resuming <font SIZE="-1">IO</font> operation.) 
  The default in Perl 5.8.0 and later is to automatically use the <tt>&quot;:perlio&quot;</tt> layer. 
-
  Note that it is not advisable to access a file handle within a signal handler where that signal has interrupted an I/O operation on that same handle. While perl will at least try hard not to crash, there are no guarantees of data integrity; for example, some data might get dropped or written twice. 
-
  Some networking library functions like <b>gethostbyname()</b> are known to have their own implementations of timeouts which may conflict with your timeouts. If you have problems with such functions, try using the <font SIZE="-1">POSIX</font> <b>sigaction()</b> function, which bypasses Perl safe signals. Be warned that this does subject you to possible memory corruption, as described above. 
-
  Instead of setting <tt>$SIG{ALRM}</tt>: 
-
- 
 local $SIG{ALRM} = sub{die "alarm"};
- 
-
  try something like the following: 
-
- 
 use POSIX qw(SIGALRM);
 POSIX::sigaction(SIGALRM,
                  POSIX::SigAction-&gt;new (sub{die "alarm"})) ||
     die "Error setting SIGALRM handler: $!\n";
- 
-
  Another way to disable the safe signal behavior locally is to use the <tt>&quot;Perl::Unsafe::Signals&quot;</tt> module from <font SIZE="-1">CPAN,</font> which affects all signals.
-<dt>Restartable system calls
-<dd> On systems that supported it, older versions of Perl used the <font SIZE="-1">SA_RESTART</font> flag when installing <tt>%SIG</tt> handlers. This meant that restartable system calls would continue rather than returning when a signal arrived. In order to deliver deferred signals promptly, Perl 5.8.0 and later do <i>not</i> use <font SIZE="-1">SA_RESTART.</font> Consequently, restartable system calls can fail (with $! set to <tt>&quot;EINTR&quot;</tt>) in places where they previously would have succeeded. 
-
+</dd><dt>Restartable system calls
+</dt><dd> On systems that supported it, older versions of Perl used the <font SIZE="-1">SA_RESTART</font> flag when installing <tt>%SIG</tt> handlers. This meant that restartable system calls would continue rather than returning when a signal arrived. In order to deliver deferred signals promptly, Perl 5.8.0 and later do <i>not</i> use <font SIZE="-1">SA_RESTART.</font> Consequently, restartable system calls can fail (with $! set to <tt>&quot;EINTR&quot;</tt>) in places where they previously would have succeeded. 
  The default <tt>&quot;:perlio&quot;</tt> layer retries <tt>&quot;read&quot;</tt>, <tt>&quot;write&quot;</tt> and <tt>&quot;close&quot;</tt> as described above; interrupted <tt>&quot;wait&quot;</tt> and <tt>&quot;waitpid&quot;</tt> calls will always be retried.
-<dt>Signals as &quot;faults&quot;
-<dd> Certain signals like <font SIZE="-1">SEGV, ILL,</font> and <font SIZE="-1">BUS</font> are generated by virtual memory addressing errors and similar ``faults''. These are normally fatal: there is little a Perl-level handler can do with them. So Perl delivers them immediately rather than attempting to defer them.
-<dt>Signals triggered by operating system state
-<dd> On some operating systems certain signal handlers are supposed to ``do something'' before returning. One example can be <font SIZE="-1">CHLD</font> or <font SIZE="-1">CLD,</font> which indicates a child process has completed. On some operating systems the signal handler is expected to <tt>&quot;wait&quot;</tt> for the completed child process. On such systems the deferred signal scheme will not work for those signals: it does not do the <tt>&quot;wait&quot;</tt>. Again the failure will look like a loop as the operating system will reissue the signal because there are completed child processes that have not yet been <tt>&quot;wait&quot;</tt>ed for.</dl>
+</dd><dt>Signals as &quot;faults&quot;
+</dt><dd> Certain signals like <font SIZE="-1">SEGV, ILL,</font> and <font SIZE="-1">BUS</font> are generated by virtual memory addressing errors and similar ``faults''. These are normally fatal: there is little a Perl-level handler can do with them. So Perl delivers them immediately rather than attempting to defer them.
+</dd><dt>Signals triggered by operating system state
+</dt><dd> On some operating systems certain signal handlers are supposed to ``do something'' before returning. One example can be <font SIZE="-1">CHLD</font> or <font SIZE="-1">CLD,</font> which indicates a child process has completed. On some operating systems the signal handler is expected to <tt>&quot;wait&quot;</tt> for the completed child process. On such systems the deferred signal scheme will not work for those signals: it does not do the <tt>&quot;wait&quot;</tt>. Again the failure will look like a loop as the operating system will reissue the signal because there are completed child processes that have not yet been <tt>&quot;wait&quot;</tt>ed for.</dd></dl>
  
 
  If you want the old signal behavior back despite possible memory corruption, set the environment variable <tt>&quot;PERL_SIGNALS&quot;</tt> to <tt>&quot;unsafe&quot;</tt>. This feature first appeared in Perl 5.8.1.
@@ -977,11 +963,11 @@ while (&lt;$remote&gt;) {
  Here are what those parameters to the <b>new()</b> constructor mean:
 <dl>
 <dt>&quot;Proto&quot;
-<dd> This is which protocol to use. In this case, the socket handle returned will be connected to a <font SIZE="-1">TCP</font> socket, because we want a stream-oriented connection, that is, one that acts pretty much like a plain old file. Not all sockets are this of this type. For example, the <font SIZE="-1">UDP</font> protocol can be used to make a datagram socket, used for message-passing.
-<dt>&quot;PeerAddr&quot;
-<dd> This is the name or Internet address of the remote host the server is running on. We could have specified a longer name like <tt>&quot;<a rel="nofollow" HREF="http://www.perl.com">www.perl.com</a>&quot;</tt>, or an address like <tt>&quot;207.171.7.72&quot;</tt>. For demonstration purposes, we've used the special hostname <tt>&quot;localhost&quot;</tt>, which should always mean the current machine you're running on. The corresponding Internet address for localhost is <tt>&quot;127.0.0.1&quot;</tt>, if you'd rather use that.
-<dt>&quot;PeerPort&quot;
-<dd> This is the service name or port number we'd like to connect to. We could have gotten away with using just <tt>&quot;daytime&quot;</tt> on systems with a well-configured system services file,[<font SIZE="-1">FOOTNOTE:</font> The system services file is found in <i>/etc/services</i> under Unixy systems.] but here we've specified the port number (13) in parentheses. Using just the number would have also worked, but numeric literals make careful programmers nervous.</dl>
+</dt><dd> This is which protocol to use. In this case, the socket handle returned will be connected to a <font SIZE="-1">TCP</font> socket, because we want a stream-oriented connection, that is, one that acts pretty much like a plain old file. Not all sockets are this of this type. For example, the <font SIZE="-1">UDP</font> protocol can be used to make a datagram socket, used for message-passing.
+</dd><dt>&quot;PeerAddr&quot;
+</dt><dd> This is the name or Internet address of the remote host the server is running on. We could have specified a longer name like <tt>&quot;<a rel="nofollow" HREF="http://www.perl.com">www.perl.com</a>&quot;</tt>, or an address like <tt>&quot;207.171.7.72&quot;</tt>. For demonstration purposes, we've used the special hostname <tt>&quot;localhost&quot;</tt>, which should always mean the current machine you're running on. The corresponding Internet address for localhost is <tt>&quot;127.0.0.1&quot;</tt>, if you'd rather use that.
+</dd><dt>&quot;PeerPort&quot;
+</dt><dd> This is the service name or port number we'd like to connect to. We could have gotten away with using just <tt>&quot;daytime&quot;</tt> on systems with a well-configured system services file,[<font SIZE="-1">FOOTNOTE:</font> The system services file is found in <i>/etc/services</i> under Unixy systems.] but here we've specified the port number (13) in parentheses. Using just the number would have also worked, but numeric literals make careful programmers nervous.</dd></dl>
  
 
  Notice how the return value from the <tt>&quot;new&quot;</tt> constructor is used as a filehandle in the <tt>&quot;while&quot;</tt> loop? That's what's called an <i>indirect filehandle</i>, a scalar variable containing a filehandle. You can use it the same way you would a normal filehandle. For example, you can read one line from it this way: 
@@ -1113,13 +1099,13 @@ while (sysread($handle, $byte, 1) == 1) {
  As always, setting up a server is little bit more involved than running a client. The model is that the server creates a special kind of socket that does nothing but listen on a particular port for incoming connections. It does this by calling the <tt>&quot;IO::Socket::INET-&gt;new()&quot;</tt> method with slightly different arguments than the client did.
 <dl>
 <dt>Proto
-<dd> This is which protocol to use. Like our clients, we'll still specify <tt>&quot;tcp&quot;</tt> here.
-<dt>LocalPort
-<dd> We specify a local port in the <tt>&quot;LocalPort&quot;</tt> argument, which we didn't do for the client. This is service name or port number for which you want to be the server. (Under Unix, ports under 1024 are restricted to the superuser.) In our sample, we'll use port 9000, but you can use any port that's not currently in use on your system. If you try to use one already in used, you'll get an ``Address already in use'' message. Under Unix, the <tt>&quot;netstat -a&quot;</tt> command will show which services current have servers.
-<dt>Listen
-<dd> The <tt>&quot;Listen&quot;</tt> parameter is set to the maximum number of pending connections we can accept until we turn away incoming clients. Think of it as a call-waiting queue for your telephone. The low-level Socket module has a special symbol for the system maximum, which is <font SIZE="-1">SOMAXCONN.</font>
-<dt>Reuse
-<dd> The <tt>&quot;Reuse&quot;</tt> parameter is needed so that we restart our server manually without waiting a few minutes to allow system buffers to clear out.</dl>
+</dt><dd> This is which protocol to use. Like our clients, we'll still specify <tt>&quot;tcp&quot;</tt> here.
+</dd><dt>LocalPort
+</dt><dd> We specify a local port in the <tt>&quot;LocalPort&quot;</tt> argument, which we didn't do for the client. This is service name or port number for which you want to be the server. (Under Unix, ports under 1024 are restricted to the superuser.) In our sample, we'll use port 9000, but you can use any port that's not currently in use on your system. If you try to use one already in used, you'll get an ``Address already in use'' message. Under Unix, the <tt>&quot;netstat -a&quot;</tt> command will show which services current have servers.
+</dd><dt>Listen
+</dt><dd> The <tt>&quot;Listen&quot;</tt> parameter is set to the maximum number of pending connections we can accept until we turn away incoming clients. Think of it as a call-waiting queue for your telephone. The low-level Socket module has a special symbol for the system maximum, which is <font SIZE="-1">SOMAXCONN.</font>
+</dd><dt>Reuse
+</dt><dd> The <tt>&quot;Reuse&quot;</tt> parameter is needed so that we restart our server manually without waiting a few minutes to allow system buffers to clear out.</dd></dl>
  
 
  Once the generic server socket has been created using the parameters listed above, the server then waits for a new client to connect to it. The server blocks in the <tt>&quot;accept&quot;</tt> method, which eventually accepts a bidirectional connection from the remote client. (Make sure to autoflush this handle to circumvent buffering.) 
@@ -1347,30 +1333,30 @@ msgctl($id, IPC_RMID, 0) || die "msgctl failed: $!\n";
 
 
 <dt><a HREF="#lbAG">Named Pipes</a>
-<dd>
-<dt><a HREF="#lbAH">Using <b>open()</b> for IPC</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAH">Using <b>open()</b> for IPC</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAP">Sockets: Client/Server Communication</a>
-<dd>
+</dd><dt><a HREF="#lbAP">Sockets: Client/Server Communication</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAT">TCP Clients with IO::Socket</a>
-<dd>
+</dd><dt><a HREF="#lbAT">TCP Clients with IO::Socket</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAX">TCP Servers with IO::Socket</a>
-<dd>
-<dt><a HREF="#lbAY">UDP: Message Passing</a>
-<dd>
-<dt><a HREF="#lbAZ">SysV IPC</a>
-<dd>
-<dt><a HREF="#lbBA">NOTES</a>
-<dd>
-<dt><a HREF="#lbBB">BUGS</a>
-<dd>
-<dt><a HREF="#lbBC">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbBD">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAX">TCP Servers with IO::Socket</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAY">UDP: Message Passing</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAZ">SysV IPC</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBA">NOTES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBB">BUGS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBC">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBD">SEE ALSO</a>
+</dt><dd></dd></dl>

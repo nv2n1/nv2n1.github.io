@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_numberoftransactions – API function"
 void pskc_set_key_policy_numberoftransactions(pskc_key_t *key, uint64_t uses);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint64_t uses</p>
-<dd>the number of transactions to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint64_t uses</dt>
+<dd>the number of transactions to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy NumberOfTransactions value. The value in this element indicates the maximum number of times a key carried within the PSKC document can be used by an application after having received it. When this element is omitted, there is no restriction regarding the number of times a key can be used. </p>
 <p> Note that while the PSKC specification uses the XML data type &quot;nonNegativeInteger&quot; for this variable, this implementation restricts the size of the value to 64-bit integers.</p>

@@ -22,22 +22,22 @@ description: "xfd – display all the characters in an X font"
 <h2>OPTIONS</h2>
 <p> <i>xfd</i> accepts all of the standard toolkit command line options along with the additional options listed below:</p>
 <dl>
-<dt><code>-fn </code><i>font</i></p>
-<dd> This option specifies the core X server side font to be displayed. This can also be set with the FontGrid <code>font</code> resource. A font must be specified.</p>
-<dt><code>-fa </code><i>font</i></p>
-<dd> This option specifies a Xft font to be displayed. This can also be set with the FontGrid <code>face</code> resource. A font pattern must be specified.</p>
-<dt><code>-box</code></p>
-<dd> This option indicates that a box should be displayed outlining the area that would be filled with background color by an ImageText request. This can also be set with the FontGrid <code>boxChars</code> resource. The default is False.</p>
-<dt><code>-center</code></p>
-<dd> This option indicates that each glyph should be centered in its grid. This can also be set with the FontGrid <code>centerChars</code> resource. The default is False.</p>
-<dt><code>-start </code><i>number</i></p>
-<dd> This option specifies the glyph index of the upper left hand corner of the grid. This is used to view characters at arbitrary locations in the font. This can also be set with the FontGrid <code>startChar</code> resource. The default is 0.</p>
-<dt><code>-bc </code><i>color</i></p>
-<dd> This option specifies the color to be used if ImageText boxes are drawn. This can also be set with the FontGrid <code>boxColor</code> resource.</p>
-<dt><code>-rows </code><i>numrows</i></p>
-<dd> This option specifies the number of rows in the grid. This can also be set with the FontGrid <code>cellRows</code> resource.</p>
-<dt><code>-columns </code><i>numcols</i></p>
-<dd> This option specifies the number of columns in the grid. This can also be set with the FontGrid <code>cellColumns</code> resource.</dl>
+<dt><code>-fn </code><i>font</i></dt>
+<dd> This option specifies the core X server side font to be displayed. This can also be set with the FontGrid <code>font</code> resource. A font must be specified.</dd>
+<dt><code>-fa </code><i>font</i></dt>
+<dd> This option specifies a Xft font to be displayed. This can also be set with the FontGrid <code>face</code> resource. A font pattern must be specified.</dd>
+<dt><code>-box</code></dt>
+<dd> This option indicates that a box should be displayed outlining the area that would be filled with background color by an ImageText request. This can also be set with the FontGrid <code>boxChars</code> resource. The default is False.</dd>
+<dt><code>-center</code></dt>
+<dd> This option indicates that each glyph should be centered in its grid. This can also be set with the FontGrid <code>centerChars</code> resource. The default is False.</dd>
+<dt><code>-start </code><i>number</i></dt>
+<dd> This option specifies the glyph index of the upper left hand corner of the grid. This is used to view characters at arbitrary locations in the font. This can also be set with the FontGrid <code>startChar</code> resource. The default is 0.</dd>
+<dt><code>-bc </code><i>color</i></dt>
+<dd> This option specifies the color to be used if ImageText boxes are drawn. This can also be set with the FontGrid <code>boxColor</code> resource.</dd>
+<dt><code>-rows </code><i>numrows</i></dt>
+<dd> This option specifies the number of rows in the grid. This can also be set with the FontGrid <code>cellRows</code> resource.</dd>
+<dt><code>-columns </code><i>numcols</i></dt>
+<dd> This option specifies the number of columns in the grid. This can also be set with the FontGrid <code>cellColumns</code> resource.</dd></dl>
 <h2>WIDGETS</h2>
 <p> In order to specify resources, it is useful to know the widgets which compose <i>xfd</i>. In the notation below, indentation indicates hierarchical structure. The widget class name is given first, followed by the widget instance name. The application class name is Xfd. </p>
 <pre>
@@ -60,16 +60,16 @@ Xfd  xfd
 <h2>APPLICATION SPECIFIC RESOURCES</h2>
 <p> The instance names of the application specific resources are given below. Capitalize the first letter of the resource instance name to get the corresponding class name. These resources are unlikely to be interesting unless you are localizing xfd for a different language.</p>
 <dl>
-<dt><code>selectFormat</code></p>
-<dd> Specifies a printf-style format string used to display information about the selected character. The default is &quot;character 0x%02x%02x (%u,%u) (%#o,%#o)&quot;. The arguments that will come after the format string are char.byte1, char.byte2, char.byte1, char.byte2, char.byte1, char.byte2. char.byte1 is byte 1 of the selected character. char.byte2 is byte 2 of the selected character.</p>
-<dt><code>metricsFormat</code></p>
-<dd> Specifies a printf-style format string used to display character metrics. The default is &quot;width %d; left %d, right %d; ascent %d, descent %d (font %d, %d)&quot;. The arguments that will come after the format string are the character metrics width, lbearing, rbearing, character ascent, character descent, font ascent, and font descent.</p>
-<dt><code>rangeFormat</code></p>
-<dd> Specifies a printf-style format string used to display the range of characters currently being displayed. The default is &quot;range: 0x%02x%02x (%u,%u) thru 0x%02x%02x (%u,%u)&quot;. The arguments that will come after the format string are the following fields from the XFontStruct that is returned from opening the font: min_byte1, min_char_or_byte2, min_byte1, min_char_or_byte2, max_byte1, max_char_or_byte2, max_byte1, max_char_or_byte2.</p>
-<dt><code>startFormat</code></p>
-<dd> Specifies a printf-style format string used to display information about the character at the upper left corner of the font grid. The default is &quot;upper left: 0x%04x (%d,%d)&quot;. The arguments that will come after the format string are the new character, the high byte of the new character, and the low byte of the new character.</p>
-<dt><code>nocharFormat</code></p>
-<dd> Specifies a printf-style format string to display when the selected character does not exist. The default is &quot;no such character 0x%02x%02x (%u,%u) (%#o,%#o)&quot;. The arguments that will come after the format string are the same as for the <code>selectFormat</code> resource.</dl>
+<dt><code>selectFormat</code></dt>
+<dd> Specifies a printf-style format string used to display information about the selected character. The default is &quot;character 0x%02x%02x (%u,%u) (%#o,%#o)&quot;. The arguments that will come after the format string are char.byte1, char.byte2, char.byte1, char.byte2, char.byte1, char.byte2. char.byte1 is byte 1 of the selected character. char.byte2 is byte 2 of the selected character.</dd>
+<dt><code>metricsFormat</code></dt>
+<dd> Specifies a printf-style format string used to display character metrics. The default is &quot;width %d; left %d, right %d; ascent %d, descent %d (font %d, %d)&quot;. The arguments that will come after the format string are the character metrics width, lbearing, rbearing, character ascent, character descent, font ascent, and font descent.</dd>
+<dt><code>rangeFormat</code></dt>
+<dd> Specifies a printf-style format string used to display the range of characters currently being displayed. The default is &quot;range: 0x%02x%02x (%u,%u) thru 0x%02x%02x (%u,%u)&quot;. The arguments that will come after the format string are the following fields from the XFontStruct that is returned from opening the font: min_byte1, min_char_or_byte2, min_byte1, min_char_or_byte2, max_byte1, max_char_or_byte2, max_byte1, max_char_or_byte2.</dd>
+<dt><code>startFormat</code></dt>
+<dd> Specifies a printf-style format string used to display information about the character at the upper left corner of the font grid. The default is &quot;upper left: 0x%04x (%d,%d)&quot;. The arguments that will come after the format string are the new character, the high byte of the new character, and the low byte of the new character.</dd>
+<dt><code>nocharFormat</code></dt>
+<dd> Specifies a printf-style format string to display when the selected character does not exist. The default is &quot;no such character 0x%02x%02x (%u,%u) (%#o,%#o)&quot;. The arguments that will come after the format string are the same as for the <code>selectFormat</code> resource.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-xfontsel/">xfontsel</a>(1), <a href="/docs/linux/man/1-fc-list/">fc-list</a>(1), <a href="/docs/linux/man/5-fonts-conf/">fonts.conf</a>(5), <i>X Logical Font Description Conventions</i></p>
 <h2>BUGS</h2>

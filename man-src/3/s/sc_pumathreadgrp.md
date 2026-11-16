@@ -11,7 +11,6 @@ description: "sc::PumaThreadGrp –"
 <p> The <code>PumaThreadGrp</code> class privides a concrete thread group appropriate for the intel teraflops machine.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thpuma.h&gt;</code></pre>
 <p> Inherits <code>sc::ThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>

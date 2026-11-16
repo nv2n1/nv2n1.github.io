@@ -16,10 +16,10 @@ description: "evince-previewer – show a printing preview of PostScript and PDF
 <h2>OPTIONS</h2>
 <p> evince-previewer obeys all normal GNOME and GTK+ command line options. The application options are</p>
 <dl>
-<dt><code>-u, &#8211;unlink-tempfile</code></p>
-<dd> Delete the temporary file</p>
-<dt><code>-p, &#8211;print-settings=FILE</code></p>
-<dd> Print settings file</dl>
+<dt><code>-u, &#8211;unlink-tempfile</code></dt>
+<dd> Delete the temporary file</dd>
+<dt><code>-p, &#8211;print-settings=FILE</code></dt>
+<dd> Print settings file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1), <code><a href="/docs/linux/man/7-gnome-options/">gnome-options</a></code>(7), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7). </p>
 <p> <a rel="nofollow" href="https://wiki.gnome.org/Apps/Evince">https://wiki.gnome.org/Apps/Evince</a> </p>

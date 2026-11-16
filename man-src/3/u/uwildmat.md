@@ -10,11 +10,8 @@ description: "uwildmat, uwildmat_simple, uwildmat_poison – Perform wildmat mat
 <p>uwildmat, uwildmat_simple, uwildmat_poison &#8211; Perform wildmat matching</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;inn/libinn.h&gt;
-
 bool uwildmat(const char *text, const char *pattern);
-
 bool uwildmat_simple(const char *text, const char *pattern);
-
 enum uwildmat uwildmat_poison(const char *text, const char *pattern);</code></pre>
 <h2>Description</h2>
 <p><code>uwildmat</code> compares <i>text</i> against the wildmat expression <i>pattern</i>, returning true if and only if the expression matches the text. <tt>&quot;@&quot;</tt> has no special meaning in <i>pattern</i> when passed to <code>uwildmat</code>. Both <i>text</i> and <i>pattern</i> are assumed to be in the <font SIZE="-1">UTF-8</font> character encoding, although malformed <font SIZE="-1">UTF-8</font> sequences are treated in a way that attempts to be mostly compatible with single-octet character sets like <font SIZE="-1">ISO</font> 8859-1. (In other words, if you try to match <font SIZE="-1">ISO</font> 8859-1 text with these routines everything should work as expected unless the <font SIZE="-1">ISO</font> 8859-1 text contains valid <font SIZE="-1">UTF-8</font> sequences, which thankfully is somewhat rare.) </p>
@@ -23,17 +20,17 @@ enum uwildmat uwildmat_poison(const char *text, const char *pattern);</code></pr
 <h2>Wildmat Expressions</h2>
 <p>A wildmat expression follows rules similar to those of shell filename wildcards but with some additions and changes. A wildmat <i>expression</i> is composed of one or more wildmat <i>patterns</i> separated by commas. Each character in the wildmat pattern matches a literal occurrence of that same character in the text, with the exception of the following metacharacters:</p>
 <dl>
-<dt>?</p>
-<dd>Matches any single character (including a single <font SIZE="-1">UTF-8</font> multibyte character, so <tt>&quot;?&quot;</tt> can match more than one byte).</p>
-<dt>*</p>
-<dd>Matches any sequence of zero or more characters.</p>
-<dt>\</p>
-<dd>Turns off any special meaning of the following character; the following character will match itself in the text. <tt>&quot;\&quot;</tt> will escape any character, including another backslash or a comma that otherwise would separate a pattern from the next pattern in an expression. Note that <tt>&quot;\&quot;</tt> is not special inside a character range (no metacharacters are).</p>
-<dt>[&#8230;]</p>
-<dd>A character set, which matches any single character that falls within that set. The presence of a character between the brackets adds that character to the set; for example, <tt>&quot;[amv]&quot;</tt> specifies the set containing the characters <tt>&quot;a&quot;</tt>, <tt>&quot;m&quot;</tt>, and <tt>&quot;v&quot;</tt>. A range of characters may be specified using <tt>&quot;-&quot;</tt>; for example, <tt>&quot;[0-5abc]&quot;</tt> is equivalent to <tt>&quot;[012345abc]&quot;</tt>. The order of characters is as defined in the <font SIZE="-1">UTF-8</font> character set, and if the start character of such a range falls after the ending character of the range in that ranking the results of attempting a match with that pattern are undefined. </p>
+<dt>?</dt>
+<dd>Matches any single character (including a single <font SIZE="-1">UTF-8</font> multibyte character, so <tt>&quot;?&quot;</tt> can match more than one byte).</dd>
+<dt>*</dt>
+<dd>Matches any sequence of zero or more characters.</dd>
+<dt>\</dt>
+<dd>Turns off any special meaning of the following character; the following character will match itself in the text. <tt>&quot;\&quot;</tt> will escape any character, including another backslash or a comma that otherwise would separate a pattern from the next pattern in an expression. Note that <tt>&quot;\&quot;</tt> is not special inside a character range (no metacharacters are).</dd>
+<dt>[&#8230;]</dt>
+<dd>A character set, which matches any single character that falls within that set. The presence of a character between the brackets adds that character to the set; for example, <tt>&quot;[amv]&quot;</tt> specifies the set containing the characters <tt>&quot;a&quot;</tt>, <tt>&quot;m&quot;</tt>, and <tt>&quot;v&quot;</tt>. A range of characters may be specified using <tt>&quot;-&quot;</tt>; for example, <tt>&quot;[0-5abc]&quot;</tt> is equivalent to <tt>&quot;[012345abc]&quot;</tt>. The order of characters is as defined in the <font SIZE="-1">UTF-8</font> character set, and if the start character of such a range falls after the ending character of the range in that ranking the results of attempting a match with that pattern are undefined. </dd>
 <p> In order to include a literal <tt>&quot;]&quot;</tt> character in the set, it must be the first character of the set (possibly following <tt>&quot;^&quot;</tt>); for example, <tt>&quot;[]a]&quot;</tt> matches either <tt>&quot;]&quot;</tt> or <tt>&quot;a&quot;</tt>. To include a literal <tt>&quot;-&quot;</tt> character in the set, it must be either the first or the last character of the set. Backslashes have no special meaning inside a character set, nor do any other of the wildmat metacharacters.</p>
-<dt>[^&#8230;]</p>
-<dd>A negated character set. Follows the same rules as a character set above, but matches any character <code>not</code> contained in the set. So, for example, <tt>&quot;[^]-]&quot;</tt> matches any character except <tt>&quot;]&quot;</tt> and <tt>&quot;-&quot;</tt>.</dl>
+<dt>[^&#8230;]</dt>
+<dd>A negated character set. Follows the same rules as a character set above, but matches any character <code>not</code> contained in the set. So, for example, <tt>&quot;[^]-]&quot;</tt> matches any character except <tt>&quot;]&quot;</tt> and <tt>&quot;-&quot;</tt>.</dd></dl>
 <p> In addition, <tt>&quot;!&quot;</tt> (and possibly <tt>&quot;@&quot;</tt>) have special meaning as the first character of a pattern; see below. </p>
 <p> When matching a wildmat expression against some text, each comma-separated pattern is matched in order from left to right. In order to match, the pattern must match the whole text; in regular expression terminology, it&#8217;s implicitly anchored at both the beginning and the end. For example, the pattern <tt>&quot;a&quot;</tt> matches only the text <tt>&quot;a&quot;</tt>; it doesn&#8217;t match <tt>&quot;ab&quot;</tt> or <tt>&quot;ba&quot;</tt> or even <tt>&quot;aa&quot;</tt>. If none of the patterns match, the whole expression doesn&#8217;t match. Otherwise, whether the expression matches is determined entirely by the rightmost matching pattern; the expression matches the text if and only if the rightmost matching pattern is not negated. </p>
 <p> For example, consider the text <tt>&quot;news.misc&quot;</tt>. The expression <tt>&quot;*&quot;</tt> matches this text, of course, as does <tt>&quot;comp.*,news.*&quot;</tt> (because the second pattern matches). <tt>&quot;news.*,!news.misc&quot;</tt> does not match this text because both patterns match, meaning that the rightmost takes precedence, and the rightmost matching pattern is negated. <tt>&quot;news.*,!news.misc,*.misc&quot;</tt> does match this text, since the rightmost matching pattern is not negated. </p>

@@ -10,7 +10,6 @@ description: "nerr_error_string"
 <p>nerr_error_string</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/neo_err.h&gt;
-
 void nerr_error_string(NEOERR *err, STRING *str);
 </code></pre>
 <h2>Arguments</h2>

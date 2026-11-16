@@ -15,7 +15,7 @@ snd_ctl_register_ioctl_compat - register the device-specific 32bit compat contro
 <h2>Arguments</h2>
 
 <i>fcn</i>
-<dl><dd><dd>ioctl callback function</dl>
+<dl><dd></dd><dd>ioctl callback function</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -11,14 +11,10 @@ description: "sc::AtomInfo –"
 <p> The <code>AtomInfo</code> class provides information about atoms.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;atominfo.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Classes</h3>
 <pre><code>struct atom
-
-
-
 Public Member Functions</code></pre>
 <p> <code>AtomInfo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
  <i>The </i><code>AtomInfo</code> <code>KeyVal</code> constructor is used to generate a <code>AtomInfo</code> object from the input.<br />

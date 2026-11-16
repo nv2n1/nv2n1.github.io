@@ -24,14 +24,14 @@ attr[-LRSq] - s attrname[-V attrvalue] pathname attr[-LRSq] - g attrname pathnam
 <p> The <i>attr</i> utility allows the manipulation of extended attributes associated with filesystem objects from within shell scripts. </p>
 <p> There are four main operations that <i>attr</i> can perform:</p>
 <dl>
-<dt><code>GET</code></p>
-<dd> The <code>-g attrname</code> option tells <i>attr</i> to search the named object and print (to <tt>stdout</tt>) the value associated with that attribute name. With the <code>-q</code> flag, <tt>stdout</tt> will be exactly and only the value of the attribute, suitable for storage directly into a file or processing via a piped command.</p>
-<dt><code>LIST</code></p>
-<dd> The <code>-l</code> option tells <i>attr</i> to list the names of all the attributes that are associated with the object, and the number of bytes in the value of each of those attributes. With the <code>-q</code> flag, <tt>stdout</tt> will be a simple list of only the attribute names, one per line, suitable for input into a script.</p>
-<dt><code>REMOVE</code></p>
-<dd> The <code>-r attrname</code> option tells <i>attr</i> to remove an attribute with the given name from the object if the attribute exists. There is no output on successful completion.</p>
-<dt><code>SET/CREATE</code></p>
-<dd> The <code>-s attrname</code> option tells <i>attr</i> to set the named attribute of the object to the value read from <tt>stdin</tt>. If an attribute with that name already exists, its value will be replaced with this one. If an attribute with that name does not already exist, one will be created with this value. With the <code>-V attrvalue</code> flag, the attribute will be set to have a value of <code>attrvalue</code> and <tt>stdin</tt> will not be read. With the <code>-q</code> flag, <tt>stdout</tt> will not be used. Without the <code>-q</code> flag, a message showing the attribute name and the entire value will be printed.</dl>
+<dt><code>GET</code></dt>
+<dd> The <code>-g attrname</code> option tells <i>attr</i> to search the named object and print (to <tt>stdout</tt>) the value associated with that attribute name. With the <code>-q</code> flag, <tt>stdout</tt> will be exactly and only the value of the attribute, suitable for storage directly into a file or processing via a piped command.</dd>
+<dt><code>LIST</code></dt>
+<dd> The <code>-l</code> option tells <i>attr</i> to list the names of all the attributes that are associated with the object, and the number of bytes in the value of each of those attributes. With the <code>-q</code> flag, <tt>stdout</tt> will be a simple list of only the attribute names, one per line, suitable for input into a script.</dd>
+<dt><code>REMOVE</code></dt>
+<dd> The <code>-r attrname</code> option tells <i>attr</i> to remove an attribute with the given name from the object if the attribute exists. There is no output on successful completion.</dd>
+<dt><code>SET/CREATE</code></dt>
+<dd> The <code>-s attrname</code> option tells <i>attr</i> to set the named attribute of the object to the value read from <tt>stdin</tt>. If an attribute with that name already exists, its value will be replaced with this one. If an attribute with that name does not already exist, one will be created with this value. With the <code>-V attrvalue</code> flag, the attribute will be set to have a value of <code>attrvalue</code> and <tt>stdin</tt> will not be read. With the <code>-q</code> flag, <tt>stdout</tt> will not be used. Without the <code>-q</code> flag, a message showing the attribute name and the entire value will be printed.</dd></dl>
 <p> When the <code>-L</code> option is given and the named object is a symbolic link, operate on the attributes of the object referenced by the symbolic link. Without this option, operate on the attributes of the symbolic link itself. </p>
 <p> When the <code>-R</code> option is given and the process has appropriate privileges, operate in the <i>root</i> attribute namespace rather that the <i>USER</i> attribute namespace. </p>
 <p> The <code>-S</code> option is similar, except it specifies use of the <i>security</i> attribute namespace. </p>

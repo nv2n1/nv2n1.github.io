@@ -10,9 +10,7 @@ description: "sigpause – atomically release blocked signals and wait for inter
 <p>sigpause &#8211; atomically release blocked signals and wait for interrupt</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int sigpause(int sigmask); /* BSD (but see NOTES) */
-
 int sigpause(int sig); /* System V / UNIX 95 */</code></pre>
 <h2>Description</h2>
 <p>Don&#8217;t use this function. Use <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2) instead. </p>
@@ -44,10 +42,10 @@ int sigpause(int sig); /* System V / UNIX 95 */</code></pre>
 <p>On Linux, this routine is a system call only on the Sparc (sparc64) architecture. </p>
 <p> Glibc uses the BSD version if the <code>_BSD_SOURCE</code> feature test macro is defined and none of <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code>, <code>_XOPEN_SOURCE</code>, <code>_GNU_SOURCE</code>, or <code>_SVID_SOURCE</code> is defined. Otherwise, the System V version is used, and feature test macros must be defined as follows to obtain the declaration:</p>
 <dl>
-<dt>*</p>
-<dd>Since glibc 2.26: _XOPEN_SOURCE &gt;= 500</p>
-<dt>*</p>
-<dd>Glibc 2.25 and earlier: _XOPEN_SOURCE</dl>
+<dt>*</dt>
+<dd>Since glibc 2.26: _XOPEN_SOURCE &gt;= 500</dd>
+<dt>*</dt>
+<dd>Glibc 2.25 and earlier: _XOPEN_SOURCE</dd></dl>
 <p> Since glibc 2.19, only the System V version is exposed by <i>&lt;signal.h&gt;</i>; applications that formerly used the BSD <code>sigpause</code>() should be amended to use <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2), <code><a href="/docs/linux/man/3-sigblock/">sigblock</a></code>(3), <code><a href="/docs/linux/man/3-sigvec/">sigvec</a></code>(3), <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)</p>

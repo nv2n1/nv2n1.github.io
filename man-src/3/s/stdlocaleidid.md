@@ -11,10 +11,8 @@ std::locale::id::id - std::locale::id::id
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
 id();
 (1)
-
     id(const id &amp;) = delete;
 (2)</code></pre> 
 1) default constructor: creates an object of type std::locale::id with implementation-specific content. 

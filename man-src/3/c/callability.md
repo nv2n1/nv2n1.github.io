@@ -46,7 +46,7 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> models/shortrate/calibrationHelpers </p>
+</dt><dd> models/shortrate/calibrationHelpers </dd>
 <p> OAS/OAD </p>
 <p> floating rate callable bonds ?</dl>
 <h2>Member Function Documentation</h2>
@@ -60,5 +60,5 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

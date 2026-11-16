@@ -15,11 +15,11 @@ description: "traptoemail – snmptrapd handler script to convert snmp traps int
 <p> converts snmp traps into email messages.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f FROM</code></p>
-<dd> sender address, defaults to &quot;root&quot;</p>
-<dt><code>-s SMTPSERVER</code></p>
-<dd> SMTP server, defaults to &quot;localhost&quot;</p>
-<dt><code>ADDRESSES</code></p>
-<dd> recipient addresses </p>
+<dt><code>-f FROM</code></dt>
+<dd> sender address, defaults to &quot;root&quot;</dd>
+<dt><code>-s SMTPSERVER</code></dt>
+<dd> SMTP server, defaults to &quot;localhost&quot;</dd>
+<dt><code>ADDRESSES</code></dt>
+<dd> recipient addresses </dd>
 </dl>
 <h2>Index</h2>

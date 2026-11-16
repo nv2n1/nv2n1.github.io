@@ -23,9 +23,9 @@ description: "XmPaned — The Paned widget class"
 <p>In order to make effective use of the Paned widget it is helpful to know the rules it uses to determine which child will be resized in any given situation. There are three rules used to determine which child is resized. While these rules are always the same, the panes that are searched can change depending upon what caused the change of layout.</p>
 <h3>Layout Rules</h3>
 <dl COMPACT>
-<dd>1. Do not let a pane grow larger than its max or smaller than its min size. In addition do not let a pane without a sash shrink below its preferred size due to a grip movement of another pane.</p>
-<dd>2. Do not adjust panes with XmNskipAdjust set.</p>
-<dd>3. Do not adjust panes away from their preferred size, although moving one closer to its preferred size is fine.</dl>
+<dd>1. Do not let a pane grow larger than its max or smaller than its min size. In addition do not let a pane without a sash shrink below its preferred size due to a grip movement of another pane.</dd>
+<dd>2. Do not adjust panes with XmNskipAdjust set.</dd>
+<dd>3. Do not adjust panes away from their preferred size, although moving one closer to its preferred size is fine.</dd></dl>
 <p> When searching the children the Paned widget looks for panes that satisfy all the rules, and if unsuccessful then it eliminates rule 3 and then 2. Rule 1 is always enforced. </p>
 <p> If the relayout is due to a resize or change in management then the panes are searched from bottom to top. If space is needed above the current sash the panes are searched from bottom to top beginning with the second pane above the grip that was moved. If space is needed below the current sash the panes are searched from top to bottom beginning with the second pane below the grip that was moved. The Paned widget never wraps its pane resizing. Therefore if space is needed below the sash then no widget above the sash will ever be resized. </p>
 <p> Note: If the orientation is horizontal then substitute &quot;right&quot; for &quot;bottom&quot; and &quot;left&quot; for &quot;top&quot; in the above paragraph.</p>
@@ -374,31 +374,31 @@ description: "XmPaned — The Paned widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcursor</code></p>
-<dd>Image that will be displayed as the pointer cursor whenever the pointer is over this widget. If the children do not explicitly set their cursor attribute then this resource will be inherited by each child.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the distance between the top and bottom edges of the Paned widget and its children.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the distance between the left and right edges of the Paned widget and its children.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Specifies the layout as either vertical (with the <code>XmVERTICAL</code> value) or horizontal (with the <code>XmHORIZONTAL</code> value). In the vertical layout, the children are laid out in a vertically tiled format. In the horizontal layout, the children are laid out in a horizontal layout, with the sash moveable along the horizontal axis.</p>
-<dt><code>XmNrefigureMode</code></p>
-<dd>Determines whether the panes&#8217; positions are recomputed and repositioned when programmatic changes are being made to the Paned widget. Setting this resource to True resets the children to their appropriate positions.</p>
-<dt><code>XmNsashHeight</code></p>
-<dd>Specifies the height of the sash.</p>
-<dt><code>XmNsashIndent</code></p>
-<dd>Specifies the horizontal placement of the sash along each pane. A positive value causes the sash to be offset from the near (left) side of the Paned widget, and a negative value causes the sash to be offset from the far (right) side of the Paned widget. If the offset is greater than the width of the Paned widget minus the width of the sash, the sash is placed flush against the near side of the Paned widget.</p>
-<dd>Whether the placement actually corresponds to the left or right side of the Paned widget depends on the <code>XmNlayoutDirection</code> resource of the widget.</p>
-<dt><code>XmNsashTranslations</code></p>
-<dd>Translation bindings for the sash. See below.</p>
-<dt><code>XmNsashShadowThickness</code></p>
-<dd>Specifies the thickness of the shadows of the sashes.</p>
-<dt><code>XmNsashWidth</code></p>
-<dd>Specifies the width of the sash.</p>
-<dt><code>XmNseparatorOn</code></p>
-<dd>Determines whether a separator is created between each of the panes. Setting this resource to True creates a Separator at the midpoint between each of the panes.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the distance between each child pane. </p>
+<dt><code>XmNcursor</code></dt>
+<dd>Image that will be displayed as the pointer cursor whenever the pointer is over this widget. If the children do not explicitly set their cursor attribute then this resource will be inherited by each child.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the distance between the top and bottom edges of the Paned widget and its children.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the distance between the left and right edges of the Paned widget and its children.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Specifies the layout as either vertical (with the <code>XmVERTICAL</code> value) or horizontal (with the <code>XmHORIZONTAL</code> value). In the vertical layout, the children are laid out in a vertically tiled format. In the horizontal layout, the children are laid out in a horizontal layout, with the sash moveable along the horizontal axis.</dd>
+<dt><code>XmNrefigureMode</code></dt>
+<dd>Determines whether the panes&#8217; positions are recomputed and repositioned when programmatic changes are being made to the Paned widget. Setting this resource to True resets the children to their appropriate positions.</dd>
+<dt><code>XmNsashHeight</code></dt>
+<dd>Specifies the height of the sash.</dd>
+<dt><code>XmNsashIndent</code></dt>
+<dd>Specifies the horizontal placement of the sash along each pane. A positive value causes the sash to be offset from the near (left) side of the Paned widget, and a negative value causes the sash to be offset from the far (right) side of the Paned widget. If the offset is greater than the width of the Paned widget minus the width of the sash, the sash is placed flush against the near side of the Paned widget.</dd>
+<dd>Whether the placement actually corresponds to the left or right side of the Paned widget depends on the <code>XmNlayoutDirection</code> resource of the widget.</dd>
+<dt><code>XmNsashTranslations</code></dt>
+<dd>Translation bindings for the sash. See below.</dd>
+<dt><code>XmNsashShadowThickness</code></dt>
+<dd>Specifies the thickness of the shadows of the sashes.</dd>
+<dt><code>XmNsashWidth</code></dt>
+<dd>Specifies the width of the sash.</dd>
+<dt><code>XmNseparatorOn</code></dt>
+<dd>Determines whether a separator is created between each of the panes. Setting this resource to True creates a Separator at the midpoint between each of the panes.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the distance between each child pane. </dd>
 <table BORDER>
 <tr>
 <td>
@@ -609,20 +609,20 @@ description: "XmPaned — The Paned widget class"
 </tr>
 </table>
 </table>
-<dt><code>XmNallowResize</code></p>
-<dd>Allows an application to specify whether the Paned widget should allow a pane to request to be resized. This flag has an effect only after the Paned widget and its children have been realized. If this flag is set to True, the Paned widget tries to honor requests to alter the height of the pane. If False, it always denies pane requests to resize.</p>
-<dt><code>XmNpaneMaximum</code></p>
-<dd>Allows an application to specify the maximum size to which a pane may be resized. This value must be greater than the specified minimum.</p>
-<dt><code>XmNpaneMinimum</code></p>
-<dd>Allows an application to specify the minimum size to which a pane may be resized. This value must be greater than 0 (zero).</p>
-<dt><code>XmNskipAdjust</code></p>
-<dd>When set to True, this Boolean resource allows an application to specify that the Paned widget should not automatically resize this pane.</p>
-<dt><code>XmNpreferredPaneSize</code></p>
-<dd>Preferred size of the pane. If this value is not set the paned widget will query the child for a preferred size. This resource allows the user or application to provide a new preferred size.</p>
-<dt><code>XmNresizeToPreferred</code></p>
-<dd>Specifies whether to resize each pane to its preferred size when the Paned window is resized. If this is False then only those panes the user has not resized with the sashes will be resized to their preferred size.</p>
-<dt><code>XmNshowSash</code></p>
-<dd>If True show the Sash below or to the right of this pane.</dl>
+<dt><code>XmNallowResize</code></dt>
+<dd>Allows an application to specify whether the Paned widget should allow a pane to request to be resized. This flag has an effect only after the Paned widget and its children have been realized. If this flag is set to True, the Paned widget tries to honor requests to alter the height of the pane. If False, it always denies pane requests to resize.</dd>
+<dt><code>XmNpaneMaximum</code></dt>
+<dd>Allows an application to specify the maximum size to which a pane may be resized. This value must be greater than the specified minimum.</dd>
+<dt><code>XmNpaneMinimum</code></dt>
+<dd>Allows an application to specify the minimum size to which a pane may be resized. This value must be greater than 0 (zero).</dd>
+<dt><code>XmNskipAdjust</code></dt>
+<dd>When set to True, this Boolean resource allows an application to specify that the Paned widget should not automatically resize this pane.</dd>
+<dt><code>XmNpreferredPaneSize</code></dt>
+<dd>Preferred size of the pane. If this value is not set the paned widget will query the child for a preferred size. This resource allows the user or application to provide a new preferred size.</dd>
+<dt><code>XmNresizeToPreferred</code></dt>
+<dd>Specifies whether to resize each pane to its preferred size when the Paned window is resized. If this is False then only those panes the user has not resized with the sashes will be resized to their preferred size.</dd>
+<dt><code>XmNshowSash</code></dt>
+<dd>If True show the Sash below or to the right of this pane.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Paned widget inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1718,60 +1718,60 @@ description: "XmPaned — The Paned widget class"
 <p> The translations for sashes within the Paned widget are described in the following table. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>SashAction(<code>Start</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</p>
-<dd>SashAction(<code>Move</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</p>
-<dd>SashAction(<code>Commit</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</p>
-<dd>SashAction(<code>Start</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</p>
-<dd>SashAction(<code>Move</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</p>
-<dd>SashAction(<code>Commit</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>SashAction(<code>Key,10,Up</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>SashAction(<code>Key,1,Up</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>SashAction(<code>Key,10,Right</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>SashAction(<code>Key,1,Right</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>SashAction(<code>Key,10,Down</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>SashAction(<code>Key,1,Down</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>SashAction(<code>Key,10,Left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>SashAction(<code>Key,1,Left</code>)</p>
-<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>PrevTabGroup()</p>
-<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>NextTabGroup()</dl>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>SashAction(<code>Start</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</dt>
+<dd>SashAction(<code>Move</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>SashAction(<code>Commit</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>SashAction(<code>Start</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</dt>
+<dd>SashAction(<code>Move</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>SashAction(<code>Commit</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>SashAction(<code>Key,10,Up</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>SashAction(<code>Key,1,Up</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>SashAction(<code>Key,10,Right</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>SashAction(<code>Key,1,Right</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>SashAction(<code>Key,10,Down</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>SashAction(<code>Key,1,Down</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SashAction(<code>Key,10,Left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SashAction(<code>Key,1,Left</code>)</dd>
+<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>PrevTabGroup()</dd>
+<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>NextTabGroup()</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmPaned</code> action routines are</p>
 <dl COMPACT>
-<dt>Help():</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>NextTabGroup():</p>
-<dd>Moves the keyboard focus to the next tab group. By default, each pane and sash is a tab group.</p>
-<dt>PrevTabGroup():</p>
-<dd>Moves the keyboard focus to the previous tab group. By default, each pane and sash is a tab group.</p>
-<dt>SashAction(<i>action</i><code>)</code>&nbsp;<wbr>or SashAction(<code>Key,</code><i>increment</i><code>,</code><i>direction</i><code>)</code>:</p>
-<dd>The <code>Start</code> action activates the interactive placement of the pane&#8217;s borders. The <code>Move</code> action causes the sash to track the position of the pointer. If one of the panes reaches its minimum or maximum size, adjustment continues with the next adjustable pane. The <code>Commit</code> action ends sash motion.</p>
-<dd>When sash action is caused by a keyboard event, the sash with the keyboard focus is moved according to the <i>increment</i> and <i>direction</i> specified. <code>DefaultIncr</code> adjusts the sash by one line. <code>LargeIncr</code> adjusts the sash by one view region. The <i>direction</i> is specified as either <code>Up</code>, <code>Down</code>, <code>Left</code>, or <code>Right</code>.</p>
-<dd>Note that the SashAction action routine is not a direct action routine of the <code>XmPaned,</code> but rather an action of the Sash control created by the <code>XmPaned</code>.</dl>
+<dt>Help():</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>NextTabGroup():</dt>
+<dd>Moves the keyboard focus to the next tab group. By default, each pane and sash is a tab group.</dd>
+<dt>PrevTabGroup():</dt>
+<dd>Moves the keyboard focus to the previous tab group. By default, each pane and sash is a tab group.</dd>
+<dt>SashAction(<i>action</i><code>)</code>&nbsp;<wbr>or SashAction(<code>Key,</code><i>increment</i><code>,</code><i>direction</i><code>)</code>:</dt>
+<dd>The <code>Start</code> action activates the interactive placement of the pane&#8217;s borders. The <code>Move</code> action causes the sash to track the position of the pointer. If one of the panes reaches its minimum or maximum size, adjustment continues with the next adjustable pane. The <code>Commit</code> action ends sash motion.</dd>
+<dd>When sash action is caused by a keyboard event, the sash with the keyboard focus is moved according to the <i>increment</i> and <i>direction</i> specified. <code>DefaultIncr</code> adjusts the sash by one line. <code>LargeIncr</code> adjusts the sash by one view region. The <i>direction</i> is specified as either <code>Up</code>, <code>Down</code>, <code>Left</code>, or <code>Right</code>.</dd>
+<dd>Note that the SashAction action routine is not a direct action routine of the <code>XmPaned,</code> but rather an action of the Sash control created by the <code>XmPaned</code>.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Moves the keyboard focus to the sash and highlights it</p>
-<dt><code>&lt;FocusOut&gt;</code>:</p>
-<dd>Unsets the keyboard focus in the sash and unhighlights it</dl>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Moves the keyboard focus to the sash and highlights it</dd>
+<dt><code>&lt;FocusOut&gt;</code>:</dt>
+<dd>Unsets the keyboard focus in the sash and unhighlights it</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

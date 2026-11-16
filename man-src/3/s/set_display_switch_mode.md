@@ -10,7 +10,6 @@ description: "set_display_switch_mode – Tells Allegro how the program handles 
 <p>set_display_switch_mode &#8211; Tells Allegro how the program handles background switching.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int set_display_switch_mode(int mode);</code></pre>
 <h2>Description</h2>
 <p>Sets how the program should handle being switched into the background, if the user tabs away from it. Not all of the possible modes will be supported by every graphics driver on every platform. The available modes are: </p>

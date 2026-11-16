@@ -23,9 +23,7 @@ This is an I/O manipulator, it may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase
               &lt;&lt; &quot;0x2a with uppercase: &quot; &lt;&lt; std::uppercase &lt;&lt; 0x2a &lt;&lt; '

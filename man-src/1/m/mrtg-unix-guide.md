@@ -14,13 +14,13 @@ description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 <h2>PREPARATION</h2>
 <p> In order to compile and use mrtg you need a C compiler and a copy of perl installed on your machine. In most cases this will already be available. In case it is not, here are some starting points. Below I&#8217;ll give you a detailed run through the whole compilation process.</p>
 <dl>
-<dt><font SIZE="-1">GCC</font></p>
-<dd> The <font SIZE="-1">GNU</font> C compiler comes preinstalled on most of the free Unicies out there. For commercial derivatives you may have to download and compile it first. If you have no compiler at all there is a chicken and egg problem, but there are also precompiled versions of gcc available for most operating systems. </p>
+<dt><font SIZE="-1">GCC</font></dt>
+<dd> The <font SIZE="-1">GNU</font> C compiler comes preinstalled on most of the free Unicies out there. For commercial derivatives you may have to download and compile it first. If you have no compiler at all there is a chicken and egg problem, but there are also precompiled versions of gcc available for most operating systems. </dd>
 <pre>
  <a rel="nofollow" href="http://gcc.gnu.org/">http://gcc.gnu.org/</a>
 </pre>
-<dt>Perl</p>
-<dd> Large parts of the <font SIZE="-1">MRTG</font> system are written in the Perl scripting language. Make sure there is a recent copy of perl on your machine (try perl -v). At least version 5.005 is required for mrtg to work well. If you use <font SIZE="-1">SNMPV3</font> and other new features you should use at least 5.8. </p>
+<dt>Perl</dt>
+<dd> Large parts of the <font SIZE="-1">MRTG</font> system are written in the Perl scripting language. Make sure there is a recent copy of perl on your machine (try perl -v). At least version 5.005 is required for mrtg to work well. If you use <font SIZE="-1">SNMPV3</font> and other new features you should use at least 5.8. </dd>
 <p> You can get the latest perl from </p>
 <pre>
  <a rel="nofollow" href="http://www.perl.com/">http://www.perl.com/</a>
@@ -29,18 +29,18 @@ description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 <p> <font SIZE="-1">MRTG</font> generates traffic graphs in the <font SIZE="-1">PNG</font> format. To be able to do this it needs several 3rd party libraries. When compiling these libraries I urge you to make sure you compile them as <code>static</code> libraries. There is just much less trouble ahead if you are doing it like this. See the Instructions in the next section for inspiration. Note that many free unices have all the required libraries already in place so there is no need to install another copy. To check it is best to skip all the library instructions below and go straight into the mrtg compile. </p>
 <p> If the first attempt fails and you do not get a working version of mrtg, try compiling new copies of all libraries as explained below. Do this <font SIZE="-1"><code>BEFORE</code></font> you send email to me about problems compiling mrtg.</p>
 <dl>
-<dt>gd</p>
-<dd> This is a basic graph drawing library created by Thomas Boutell. Note that all releases after Version 1.3 only create <font SIZE="-1">PNG</font> images. This is because a) Thomas got into trouble because the <font SIZE="-1">GIF</font> format which it used to produce uses a compression technology patented by Unisys. b) <font SIZE="-1">PNG</font> is more efficient and patent free. <font SIZE="-1">MRTG</font> can work with old and new version of the <font SIZE="-1">GD</font> library. You can get a recent copy of <font SIZE="-1">GD</font> from: </p>
+<dt>gd</dt>
+<dd> This is a basic graph drawing library created by Thomas Boutell. Note that all releases after Version 1.3 only create <font SIZE="-1">PNG</font> images. This is because a) Thomas got into trouble because the <font SIZE="-1">GIF</font> format which it used to produce uses a compression technology patented by Unisys. b) <font SIZE="-1">PNG</font> is more efficient and patent free. <font SIZE="-1">MRTG</font> can work with old and new version of the <font SIZE="-1">GD</font> library. You can get a recent copy of <font SIZE="-1">GD</font> from: </dd>
 <pre>
  <a rel="nofollow" href="http://www.boutell.com/gd/">http://www.boutell.com/gd/</a>
 </pre>
-<dt>libpng</p>
-<dd> Is required by gd in order to produce <font SIZE="-1">PNG</font> graphics files. Get it from: </p>
+<dt>libpng</dt>
+<dd> Is required by gd in order to produce <font SIZE="-1">PNG</font> graphics files. Get it from: </dd>
 <pre>
  <a rel="nofollow" href="http://www.libpng.org/pub/png/libpng.html">http://www.libpng.org/pub/png/libpng.html</a>
 </pre>
-<dt>zlib</p>
-<dd> Is needed by libpng to compress the graphics files you create. Get a copy from </p>
+<dt>zlib</dt>
+<dd> Is needed by libpng to compress the graphics files you create. Get a copy from </dd>
 <pre>
  <a rel="nofollow" href="http://www.gzip.org/zlib">http://www.gzip.org/zlib</a>
 </pre>

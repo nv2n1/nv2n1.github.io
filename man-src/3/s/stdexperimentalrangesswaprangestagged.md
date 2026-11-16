@@ -11,7 +11,6 @@ std::experimental::ranges::swap(ranges::tagged) - std::experimental::ranges::swa
 <h2>Synopsis</h2>
 
 <pre><code>friend constexpr void swap(tagged &amp;lhs, tagged &amp;rhs) noexcept(noexcept(lhs.swap(rhs)))
-
     requires Swappable&lt;Base&gt;;</code></pre> 
 Swap the contents of *this and rhs, as if by lhs.swap(rhs);. 
 This function is a hidden friend: it is not visible to ordinary unqualified or qualified_lookup, and can only be found by argument-dependent_lookup when tagged is an associated class of the arguments. 

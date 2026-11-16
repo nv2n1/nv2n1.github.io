@@ -17,9 +17,9 @@ description: "chdir, fchdir – change working directory"
 <p> <code>fchdir</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc up to and including 2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc up to and including 2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>chdir</code>() changes the current working directory of the calling process to the directory specified in <i>path</i>. </p>
 <p> <code>fchdir</code>() is identical to <code>chdir</code>(); the only difference is that the directory is given as an open file descriptor.</p>
@@ -28,30 +28,30 @@ description: "chdir, fchdir – change working directory"
 <h2>ERRORS</h2>
 <p> Depending on the filesystem, other errors can be returned. The more general errors for <code>chdir</code>() are listed below:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied for one of the components of <i>path</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>path</i> points outside your accessible address space.</p>
-<dt><code>EIO</code></p>
-<dd> An I/O error occurred.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>path</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>path</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> The directory specified in <i>path</i> does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of <i>path</i> is not a directory.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied for one of the components of <i>path</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>path</i> points outside your accessible address space.</dd>
+<dt><code>EIO</code></dt>
+<dd> An I/O error occurred.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>path</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>path</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The directory specified in <i>path</i> does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of <i>path</i> is not a directory.</dd></dl>
 <p> The general errors for <code>fchdir</code>() are listed below:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission was denied on the directory open on <i>fd</i>.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>fd</i> does not refer to a directory.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission was denied on the directory open on <i>fd</i>.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>fd</i> does not refer to a directory.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD.</p>
 <h2>NOTES</h2>

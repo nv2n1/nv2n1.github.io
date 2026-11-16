@@ -17,40 +17,40 @@ description: "btrfs-receive – receive subvolumes from send stream"
 <p> If <i>&#8211;dump</i> option is specified, <code>btrfs receive</code> will only do the validation of the stream, and print the stream metadata, one operation per line. </p>
 <p> <code>btrfs receive</code> will fail in the following cases: </p>
 <dl>
-<dd>1. receiving subvolume already exists</dl>
+<dd>1. receiving subvolume already exists</dd></dl>
 <dl>
-<dd>2. previously received subvolume has been changed after it was received</dl>
+<dd>2. previously received subvolume has been changed after it was received</dd></dl>
 <dl>
-<dd>3. default subvolume has changed or you didn&#8217;t mount the filesystem at the toplevel subvolume</dl>
+<dd>3. default subvolume has changed or you didn&#8217;t mount the filesystem at the toplevel subvolume</dd></dl>
 <p> A subvolume is made read-only after the receiving process finishes successfully (see BUGS below). </p>
 <p> <code>Options</code> </p>
 <p> -v</p>
 <dl>
-<dd>increase verbosity about performed actions, print details about each operation</dl>
+<dd>increase verbosity about performed actions, print details about each operation</dd></dl>
 <p> -q|&#8211;quiet</p>
 <dl>
-<dd>suppress all messages except errors</dl>
+<dd>suppress all messages except errors</dd></dl>
 <p> -f <i>&lt;FILE&gt;</i></p>
 <dl>
-<dd>read the stream from <i>&lt;FILE&gt;</i> instead of stdin,</dl>
+<dd>read the stream from <i>&lt;FILE&gt;</i> instead of stdin,</dd></dl>
 <p> -C|&#8211;chroot</p>
 <dl>
-<dd>confine the process to <i>path</i> using <code><a href="/docs/linux/man/1-chroot/">chroot</a></code>(1)</dl>
+<dd>confine the process to <i>path</i> using <code><a href="/docs/linux/man/1-chroot/">chroot</a></code>(1)</dd></dl>
 <p> -e</p>
 <dl>
-<dd>terminate after receiving an <i>end cmd</i> marker in the stream. </p>
+<dd>terminate after receiving an <i>end cmd</i> marker in the stream. </dd>
 <p> Without this option the receiver side terminates only in case of an error on end of file.</dl>
 <p> -E|&#8211;max-errors <i>&lt;NERR&gt;</i></p>
 <dl>
-<dd>terminate as soon as NERR errors occur while stream processing commands from the stream </p>
+<dd>terminate as soon as NERR errors occur while stream processing commands from the stream </dd>
 <p> Default value is 1. A value of 0 means no limit.</dl>
 <p> -m <i>&lt;ROOTMOUNT&gt;</i></p>
 <dl>
-<dd>the root mount point of the destination filesystem </p>
+<dd>the root mount point of the destination filesystem </dd>
 <p> By default the mountpoint is searched in <i>/proc/self/mounts</i>. If <i>/proc</i> is not accessible, eg. in a chroot environment, use this option to tell us where this filesystem is mounted.</dl>
 <p> &#8211;dump</p>
 <dl>
-<dd>dump the stream metadata, one line per operation </p>
+<dd>dump the stream metadata, one line per operation </dd>
 <p> Does not require the <i>path</i> parameter. The filesystem remains unchanged.</dl>
 <h2>Bugs</h2>
 <p><code>btrfs receive</code> sets the subvolume read-only after it completes successfully. However, while the receive is in progress, users who have write access to files or directories in the receiving <i>path</i> can add, remove, or modify files, in which case the resulting read-only subvolume will not be an exact copy of the sent subvolume. </p>
@@ -62,3 +62,4 @@ description: "btrfs-receive – receive subvolumes from send stream"
 <p><code>btrfs</code> is part of btrfs-progs. Please refer to the btrfs wiki m[blue]<code><a rel="nofollow" href="http://btrfs.wiki.kernel.org">http://btrfs.wiki.kernel.org</a></code>m[] for further details.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mkfs-btrfs/">mkfs.btrfs</a></code>(8), <code><a href="/docs/linux/man/8-btrfs-send/">btrfs-send</a></code>(8) </p>
+</p>

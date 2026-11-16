@@ -13,9 +13,9 @@ ARSETI - Provides a new integer value for an Areas parameter.
 
  void c_arseti (char *pnam, int ival)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first two characters of it will be examined.
-<dt>IVAL
-<dd>(an input expression of type INTEGER) - The integer value you select for the parameter. If the parameter is of type INTEGER, it will be given the value IVAL; if is is of type REAL, it will be given the value REAL(IVAL).</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) - The name of the parameter that you want to set. The character string can be of any length, but only the first two characters of it will be examined.
+</dd><dt>IVAL
+</dt><dd>(an input expression of type INTEGER) - The integer value you select for the parameter. If the parameter is of type INTEGER, it will be given the value IVAL; if is is of type REAL, it will be given the value REAL(IVAL).</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Areas parameters. For a complete list of parameters available in this utility, see the areas_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: cardb1, arex01.
 <h2>Access</h2>To use ARSETI or c_arseti, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

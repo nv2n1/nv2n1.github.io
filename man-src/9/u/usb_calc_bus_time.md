@@ -15,19 +15,19 @@ usb_calc_bus_time - approximate periodic transaction time in nanoseconds
 <h2>Arguments</h2>
 
 <i>speed</i>
-<dl><dd><dd>from dev-&gt;speed; USB_SPEED_{LOW,FULL,HIGH}</dl>
+<dl><dd></dd><dd>from dev-&gt;speed; USB_SPEED_{LOW,FULL,HIGH}</dd></dl>
  
 
  <i>is_input</i>
-<dl><dd>true iff the transaction sends data to the host</dl>
+<dl><dd>true iff the transaction sends data to the host</dd></dl>
  
 
  <i>isoc</i>
-<dl><dd>true for isochronous transactions, false for interrupt ones</dl>
+<dl><dd>true for isochronous transactions, false for interrupt ones</dd></dl>
  
 
  <i>bytecount</i>
-<dl><dd>how many bytes in the transaction.</dl>
+<dl><dd>how many bytes in the transaction.</dd></dl>
 
 <h2>Return</h2>
 

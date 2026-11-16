@@ -21,13 +21,11 @@ int mkfifoat(int dirfd, const char *pathname, mode_t mode);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>mkfifoat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mkfifo</code>() makes a FIFO special file with name <i>pathname</i>. <i>mode</i> specifies the FIFO&#8217;s permissions. It is modified by the process&#8217;s <code>umask</code> in the usual way: the permissions of the created file are <code>(</code><i>mode</i><code> &amp; ~umask)</code>. </p>
@@ -42,28 +40,28 @@ int mkfifoat(int dirfd, const char *pathname, mode_t mode);
 <p> On success <code>mkfifo</code>() and <code>mkfifoat</code>() return 0. In the case of an error, -1 is returned (in which case, <i>errno</i> is set appropriately).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> One of the directories in <i>pathname</i> did not allow search (execute) permission.</p>
-<dt><code>EDQUOT</code></p>
-<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</p>
-<dt><code>EEXIST</code></p>
-<dd> <i>pathname</i> already exists. This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> Either the total length of <i>pathname</i> is greater than <code>PATH_MAX</code>, or an individual filename component has a length greater than <code>NAME_MAX</code>. In the GNU system, there is no imposed limit on overall filename length, but some filesystems may place limits on the length of a component.</p>
-<dt><code>ENOENT</code></p>
-<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The directory or filesystem has no room for the new file.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</p>
-<dt><code>EROFS</code></p>
-<dd> <i>pathname</i> refers to a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> One of the directories in <i>pathname</i> did not allow search (execute) permission.</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The user&#8217;s quota of disk blocks or inodes on the filesystem has been exhausted.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <i>pathname</i> already exists. This includes the case where <i>pathname</i> is a symbolic link, dangling or not.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> Either the total length of <i>pathname</i> is greater than <code>PATH_MAX</code>, or an individual filename component has a length greater than <code>NAME_MAX</code>. In the GNU system, there is no imposed limit on overall filename length, but some filesystems may place limits on the length of a component.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The directory or filesystem has no room for the new file.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component used as a directory in <i>pathname</i> is not, in fact, a directory.</dd>
+<dt><code>EROFS</code></dt>
+<dd> <i>pathname</i> refers to a read-only filesystem.</dd></dl>
 <p> The following additional errors can occur for <code>mkfifoat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>mkfifoat</code>() was added to glibc in version 2.4. It is implemented using <code><a href="/docs/linux/man/2-mknodat/">mknodat</a></code>(2), available on Linux since kernel 2.6.16.</p>
 <h2>ATTRIBUTES</h2>

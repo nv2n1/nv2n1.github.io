@@ -70,7 +70,7 @@ description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+</dt><dd> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implements <code>CashFlow</code>.</p>
 <h3>void update () [virtual]</h3>
 <p> This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
@@ -79,5 +79,5 @@ description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

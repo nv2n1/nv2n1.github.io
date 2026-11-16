@@ -10,19 +10,19 @@ CPDRPL - Provides a useful polyline-drawer for the routine CPCLDM.
 
 <h2>Synopsis</h2>CALL CPDRPL (XCS, YCS, NCS, IAI, IAG, NAI)
 <h2>Description</h2><dl COMPACT><dt>XCS
-<dd>(a REAL array of dimension at least NCS, input) is an array containing the X coordinates of NCS points defining a polyline.
-<dt>YCS
-<dd>(a REAL array of dimension at least NCS, input) is an array containing the Y coordinates of NCS points defining a polyline.
-<dt>NCS
-<dd>(INTEGER, input) is the number of points defining the polyline.
-<dt>IAI
-<dd>(an INTEGER array of dimension at least NAI, input) is an array of area identifiers for the area in which the polyline lies. For each I from 1 to NAI, IAI(I) is the area identifier of the area with respect to the edge group IAG(I).
-<dt>IAG
-<dd>(an INTEGER array of dimension at least NAI, input) is an array of group identifiers. See the description of IAI, above.
-<dt>NAI
-<dd>(INTEGER, input) is the number of area identifiers in the array IAI and the number of group identifiers in the array IAG.</dl><h2>Usage</h2>If CPCLDM is called, and the only object of using it, instead of CPCLDR, to draw contour lines is to avoid drawing the lines through labels, then, in the routine which calls CPCLDM, put the declaration 
+</dt><dd>(a REAL array of dimension at least NCS, input) is an array containing the X coordinates of NCS points defining a polyline.
+</dd><dt>YCS
+</dt><dd>(a REAL array of dimension at least NCS, input) is an array containing the Y coordinates of NCS points defining a polyline.
+</dd><dt>NCS
+</dt><dd>(INTEGER, input) is the number of points defining the polyline.
+</dd><dt>IAI
+</dt><dd>(an INTEGER array of dimension at least NAI, input) is an array of area identifiers for the area in which the polyline lies. For each I from 1 to NAI, IAI(I) is the area identifier of the area with respect to the edge group IAG(I).
+</dd><dt>IAG
+</dt><dd>(an INTEGER array of dimension at least NAI, input) is an array of group identifiers. See the description of IAI, above.
+</dd><dt>NAI
+</dt><dd>(INTEGER, input) is the number of area identifiers in the array IAI and the number of group identifiers in the array IAG.</dd></dl><h2>Usage</h2>If CPCLDM is called, and the only object of using it, instead of CPCLDR, to draw contour lines is to avoid drawing the lines through labels, then, in the routine which calls CPCLDM, put the declaration 
 
-<dl COMPACT><dd>EXTERNAL CPDRPL</dl>
+<dl COMPACT><dd>EXTERNAL CPDRPL</dd></dl>
  
 
  and, in the call to CPCLDM, use CPDRPL for the argument RTPL. Each time CPDRPL is called, it draws the polyline defined by its first three arguments if, and only if, none of the area identifiers defined by the other three arguments is negative.

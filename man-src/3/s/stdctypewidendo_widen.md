@@ -11,24 +11,16 @@ std::ctype&lt;CharT&gt;::widen,do_widen - std::ctype&lt;CharT&gt;::widen,do_wide
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  CharT widen(char c) const;
-
 public:
 (2)
-
     const char *widen(const char *beg, const char *end, CharT *dst) const;
-
 protected:
 (3)
-
     virtual CharT do_widen(char c) const;
-
 protected:
 (4)
-
     virtual const char *do_widen(const char *beg, const char *end, CharT *dst) const;</code></pre> 
 1,2) public member function, calls the protected virtual member function do_widen of the most derived class. 
 3) Converts the single-byte character c to the corresponding wide character representation using the simplest reasonable transformation. Typically, this applies only to the characters whose multibyte encoding is a single byte (e.g. U+0000-U+007F in UTF-8). 
@@ -52,17 +44,14 @@ dst - pointer to the first element of the array of char to fill
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
 void try_widen(const std::ctype&lt;wchar_t&gt; &amp;f, char c)
-
 {
     wchar_t w = f.widen(c);
     std::cout &lt;&lt; &quot;The single-byte character &quot; &lt;&lt; +(unsigned char)c
               &lt;&lt; &quot; widens to &quot; &lt;&lt; +w &lt;&lt; '\n';
 }
 int main()
-
 {
     std::locale::global(std::locale(&quot;cs_CZ.iso88592&quot;));
     auto &amp;f = std::use_facet&lt;std::ctype&lt;wchar_t&gt;&gt;(std::locale());

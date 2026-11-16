@@ -22,7 +22,6 @@ create_light_table(&amp;global_trans_table, my_palette,
 ... if (get_color_depth() == 8)
     color_map = &amp;global_light_table;
 else set_trans_blender(0, 0, 0, 128);
-
 /* Enemies are in shadow unless lit by torch. */
 draw_gouraud_sprite(buffer, menacing_spy, x, y,
                     light_strength_on_corner_1,

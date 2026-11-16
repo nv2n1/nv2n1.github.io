@@ -12,40 +12,40 @@ description: "pcscd – PC/SC Smart Card Daemon"
 <p><code>pcscd</code> [<i>options</i>]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;apdu</code></p>
-<dd>log APDUs and SW using the debug method (see <code>&#8211;debug</code>).</p>
-<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></p>
-<dd>Specifies the file <i>file</i> as an alternate location for <i>/etc/reader.conf.d/reader.conf</i>.</p>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd>Runs pcscd in the foreground and sends log messages to stderr instead of <a href="/docs/linux/man/3-syslog/">syslog</a>(3).</p>
-<dt><code>-T</code>, <code>&#8211;color</code></p>
-<dd>use colored logs.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>use the lowest log level. Any log message of this level or above will be sent to stderr or <a href="/docs/linux/man/3-syslog/">syslog</a>(3) depending on the use of <code>&#8211;foreground</code>.</p>
-<dt><code>&#8211;info</code></p>
-<dd>use info log level. This is the default log level.</p>
-<dt><code>-e</code>, <code>&#8211;error</code></p>
-<dd>use error log level.</p>
-<dt><code>-C</code>, <code>&#8211;critical</code></p>
-<dd>use critical log level.</dl>
+<dt><code>-a</code>, <code>&#8211;apdu</code></dt>
+<dd>log APDUs and SW using the debug method (see <code>&#8211;debug</code>).</dd>
+<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></dt>
+<dd>Specifies the file <i>file</i> as an alternate location for <i>/etc/reader.conf.d/reader.conf</i>.</dd>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd>Runs pcscd in the foreground and sends log messages to stderr instead of <a href="/docs/linux/man/3-syslog/">syslog</a>(3).</dd>
+<dt><code>-T</code>, <code>&#8211;color</code></dt>
+<dd>use colored logs.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>use the lowest log level. Any log message of this level or above will be sent to stderr or <a href="/docs/linux/man/3-syslog/">syslog</a>(3) depending on the use of <code>&#8211;foreground</code>.</dd>
+<dt><code>&#8211;info</code></dt>
+<dd>use info log level. This is the default log level.</dd>
+<dt><code>-e</code>, <code>&#8211;error</code></dt>
+<dd>use error log level.</dd>
+<dt><code>-C</code>, <code>&#8211;critical</code></dt>
+<dd>use critical log level.</dd></dl>
 <p> The log levels are ordered as: debug &lt; info &lt; error &lt; critical. Use a log level l will log this level and all the levels above it.</p>
 <dl>
-<dt><code>&#8211;force-reader-polling </code></p>
-<dd>Ignore the IFD_GENERATE_HOTPLUG reader capability</p>
-<dt><code>-t</code>, <code>&#8211;max-thread</code></p>
-<dd>Set the maximum number of threads (default 200)</p>
-<dt><code>-s</code>, <code>&#8211;max-card-handle-per-thread</code></p>
-<dd>Set the maximum number of card handle per thread (default: 200)</p>
-<dt><code>-r</code>, <code>&#8211;max-card-handle-per-reader</code></p>
-<dd>Set the maximum number of card handle per reader (default: 200)</p>
-<dt><code>-x</code>, <code>&#8211;auto-exit</code></p>
-<dd>Cause pcscd to quit after 60 seconds of inactivity</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Displays information about the pcscd command line</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Displays the program version number</p>
-<dt><code>-H</code>, <code>&#8211;hotplug</code></p>
-<dd>Ask pcscd to rescan the USB buses for added or removed readers and re-read the <i>/etc/reader.conf.d/reader.conf</i> file to detect added or removed non-USB readers (serial or PCMCIA).</dl>
+<dt><code>&#8211;force-reader-polling </code></dt>
+<dd>Ignore the IFD_GENERATE_HOTPLUG reader capability</dd>
+<dt><code>-t</code>, <code>&#8211;max-thread</code></dt>
+<dd>Set the maximum number of threads (default 200)</dd>
+<dt><code>-s</code>, <code>&#8211;max-card-handle-per-thread</code></dt>
+<dd>Set the maximum number of card handle per thread (default: 200)</dd>
+<dt><code>-r</code>, <code>&#8211;max-card-handle-per-reader</code></dt>
+<dd>Set the maximum number of card handle per reader (default: 200)</dd>
+<dt><code>-x</code>, <code>&#8211;auto-exit</code></dt>
+<dd>Cause pcscd to quit after 60 seconds of inactivity</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Displays information about the pcscd command line</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Displays the program version number</dd>
+<dt><code>-H</code>, <code>&#8211;hotplug</code></dt>
+<dd>Ask pcscd to rescan the USB buses for added or removed readers and re-read the <i>/etc/reader.conf.d/reader.conf</i> file to detect added or removed non-USB readers (serial or PCMCIA).</dd></dl>
 <h2>Description</h2>
 <p>pcscd is the daemon program for pcsc-lite. It is a resource manager that coordinates communications with smart card readers and smart cards and cryptographic tokens that are connected to the system. </p>
 <p> It allows applications to access smart cards and readers using the winscard API but without knowing details of the card or reader. </p>

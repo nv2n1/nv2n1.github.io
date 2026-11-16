@@ -16,7 +16,6 @@ description: "fixatan – Fixed point inverse tangent lookup table. Allegro game
 <p> This function finds the inverse tangent of a value using a lookup table. The input value must be a fixed point radian. The inverse tangent is the value whose tangent is `x&#8217;. Example: </p>
 <pre>
    fixed result;
-   
    /* Sets `result' to binary angle 13. */
    result = fixatan(ftofix(0.326));
 </pre>

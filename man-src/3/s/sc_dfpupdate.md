@@ -11,7 +11,6 @@ description: "sc::DFPUpdate –"
 <p> The <code>DFPUpdate</code> class is used to specify a Davidson, Fletcher, and Powell hessian update scheme.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;update.h&gt;</code></pre>
 <p> Inherits <code>sc::HessianUpdate</code>. Inherited by <code>sc::BFGSUpdate</code>.</p>
 <h3>Public Member Functions</h3>
@@ -32,8 +31,8 @@ description: "sc::DFPUpdate –"
 <h3>sc::DFPUpdate::DFPUpdate (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor reads the following keywords:. .IP &quot;xprev&quot; 1c The previous coordinates can be given (but is not recommended). The default is none. </p>
 <dl>
-<dt>gprev</p>
-<dd>The previous gradient can be given (but is not recommended). The default is none.</dl>
+<dt>gprev</dt>
+<dd>The previous gradient can be given (but is not recommended). The default is none.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::DFPUpdate::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

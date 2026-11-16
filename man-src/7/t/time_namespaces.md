@@ -11,31 +11,31 @@ description: "time_namespaces – overview of Linux time namespaces"
 <h2>Description</h2>
 <p>Time namespaces virtualize the values of two system clocks:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CLOCK_MONOTONIC</code> (and likewise <code>CLOCK_MONOTONIC_COARSE</code> and <code>CLOCK_MONOTONIC_RAW</code>), a nonsettable clock that represents monotonic time since&#8212;as described by POSIX&#8212;&quot;some unspecified point in the past&quot;.</p>
-<dt>&bull;</p>
-<dd><code>CLOCK_BOOTTIME</code> (and likewise <code>CLOCK_BOOTTIME_ALARM</code>), a nonsettable clock that is identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended.</dl>
+<dt>&bull;</dt>
+<dd><code>CLOCK_MONOTONIC</code> (and likewise <code>CLOCK_MONOTONIC_COARSE</code> and <code>CLOCK_MONOTONIC_RAW</code>), a nonsettable clock that represents monotonic time since&#8212;as described by POSIX&#8212;&quot;some unspecified point in the past&quot;.</dd>
+<dt>&bull;</dt>
+<dd><code>CLOCK_BOOTTIME</code> (and likewise <code>CLOCK_BOOTTIME_ALARM</code>), a nonsettable clock that is identical to <code>CLOCK_MONOTONIC</code>, except that it also includes any time that the system is suspended.</dd></dl>
 <p> Thus, the processes in a time namespace share per-namespace values for these clocks. This affects various APIs that measure against these clocks, including: <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2), <code><a href="/docs/linux/man/2-clock_nanosleep/">clock_nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-timer_settime/">timer_settime</a></code>(2), <code><a href="/docs/linux/man/2-timerfd_settime/">timerfd_settime</a></code>(2), and <i>/proc/uptime</i>. Currently, the only way to create a time namespace is by calling <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2) with the <code>CLONE_NEWTIME</code> flag. This call creates a new time namespace but does <i>not</i> place the calling process in the new namespace. Instead, the calling process&#8217;s subsequently created children are placed in the new namespace. This allows clock offsets (see below) for the new namespace to be set before the first process is placed in the namespace. The <i>/proc/[pid]/ns/time_for_children</i> symbolic link shows the time namespace in which the children of a process will be created. (A process can use a file descriptor opened on this symbolic link in a call to <code><a href="/docs/linux/man/2-setns/">setns</a></code>(2) in order to move into the namespace.)</p>
 <h3>/proc/PID/timens_offsets</h3>
 <p>Associated with each time namespace are offsets, expressed with respect to the initial time namespace, that define the values of the monotonic and boot-time clocks in that namespace. These offsets are exposed via the file <i>/proc/PID/timens_offsets</i>. Within this file, the offsets are expressed as lines consisting of three space-delimited fields: </p>
 <pre><code>&lt;clock-id&gt; &lt;offset-secs&gt; &lt;offset-nanosecs&gt;</code></pre>
 <p> The <i>clock-id</i> is a string that identifies the clock whose offsets are being shown. This field is either <i>monotonic</i>, for <code>CLOCK_MONOTONIC</code>, or <i>boottime</i>, for <code>CLOCK_BOOTTIME</code>. The remaining fields express the offset (seconds plus nanoseconds) for the clock in this time namespace. These offsets are expressed relative to the clock values in the initial time namespace. The <i>offset-secs</i> value can be negative, subject to restrictions noted below; <i>offset-nanosecs</i> is an unsigned value. In the initial time namespace, the contents of the <i>timens_offsets</i> file are as follows: $ <code>cat /proc/self/timens_offsets</code> monotonic 0 0 boottime 0 0 In a new time namespace that has had no member processes, the clock offsets can be modified by writing newline-terminated records of the same form to the <i>timens_offsets</i> file. The file can be written to multiple times, but after the first process has been created in or has entered the namespace, <code><a href="/docs/linux/man/2-write/">write</a></code>(2)s on this file fail with the error <code>EACCES</code>. In order to write to the <i>timens_offsets</i> file, a process must have the <code>CAP_SYS_TIME</code> capability in the user namespace that owns the time namespace. Writes to the <i>timens_offsets</i> file can fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>An <i>offset-nanosecs</i> value is greater than 999,999,999.</p>
-<dt><code>EINVAL</code></p>
-<dd>A <i>clock-id</i> value is not valid.</p>
-<dt><code>EPERM</code></p>
-<dd>The caller does not have the <code>CAP_SYS_TIME</code> capability.</p>
-<dt><code>ERANGE</code></p>
-<dd>An <i>offset-secs</i> value is out of range. In particular;</p>
+<dt><code>EINVAL</code></dt>
+<dd>An <i>offset-nanosecs</i> value is greater than 999,999,999.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>A <i>clock-id</i> value is not valid.</dd>
+<dt><code>EPERM</code></dt>
+<dd>The caller does not have the <code>CAP_SYS_TIME</code> capability.</dd>
+<dt><code>ERANGE</code></dt>
+<dd>An <i>offset-secs</i> value is out of range. In particular;</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><i>offset-secs</i> can&#8217;t be set to a value which would make the current time on the corresponding clock inside the namespace a negative value; and</p>
-<dt>&bull;</p>
-<dd><i>offset-secs</i> can&#8217;t be set to a value such that the time on the corresponding clock inside the namespace would exceed half of the value of the kernel constant <code>KTIME_SEC_MAX</code> (this limits the clock value to a maximum of approximately 146 years).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><i>offset-secs</i> can&#8217;t be set to a value which would make the current time on the corresponding clock inside the namespace a negative value; and</dd>
+<dt>&bull;</dt>
+<dd><i>offset-secs</i> can&#8217;t be set to a value such that the time on the corresponding clock inside the namespace would exceed half of the value of the kernel constant <code>KTIME_SEC_MAX</code> (this limits the clock value to a maximum of approximately 146 years).</dd></dl>
 </dl>
 </dl>
 <p> In a new time namespace created by <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), the contents of the <i>timens_offsets</i> file are inherited from the time namespace of the creating process.</p>

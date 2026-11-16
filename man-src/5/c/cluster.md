@@ -15,20 +15,20 @@ description: "cluster.conf – configuration file for cman and related daemons"
 <h3>Cluster</h3>
 <p>The top level <code>cluster</code> section contains all other sections and has two required attributes:</p>
 <dl>
-<dt><code>name</code></p>
-<dd>The name of the cluster can be up to 15 characters long (16 including terminating null). It is important that this name be unique among clusters on the same network.</p>
-<dt><code>config_version</code></p>
-<dd>The config_version specifies the revision level of the file and should be increased each time the file is updated. </p>
+<dt><code>name</code></dt>
+<dd>The name of the cluster can be up to 15 characters long (16 including terminating null). It is important that this name be unique among clusters on the same network.</dd>
+<dt><code>config_version</code></dt>
+<dd>The config_version specifies the revision level of the file and should be increased each time the file is updated. </dd>
 <pre>&lt;cluster name=&quot;alpha&quot; config_version=&quot;1&quot;&gt;
 &lt;/cluster&gt;</pre>
 </dl>
 <h3>Cluster Nodes</h3>
 <p>The set of nodes that make up the cluster are defined in the <code>clusternodes</code> section which contains multiple <code>clusternode</code> sections. A clusternode has two required attributes:</p>
 <dl>
-<dt><code>name</code></p>
-<dd>The node name should correspond to the hostname on the network interface to be used for cluster communication.</p>
-<dt><code>nodeid</code></p>
-<dd>The node id must be greater than zero and unique. </p>
+<dt><code>name</code></dt>
+<dd>The node name should correspond to the hostname on the network interface to be used for cluster communication.</dd>
+<dt><code>nodeid</code></dt>
+<dd>The node id must be greater than zero and unique. </dd>
 <pre>&lt;cluster name=&quot;alpha&quot; config_version=&quot;1&quot;&gt;
  &lt;clusternodes&gt;
  &lt;clusternode name=&quot;node-01&quot; nodeid=&quot;1&quot;&gt;
@@ -59,21 +59,19 @@ description: "cluster.conf – configuration file for cman and related daemons"
 &lt;/logging&gt;</pre>
 <p>The attributes available at global, daemon and subsystem levels are:</p>
 <dl>
-<dt><code>to_syslog</code></p>
-<dd>enable/disable messages to syslog (yes/no), default &quot;yes&quot;</p>
-<dt><code>to_logfile</code></p>
-<dd>enable/disable messages to log file (yes/no), default &quot;yes&quot;</p>
-<dt><code>syslog_facility</code></p>
-<dd>facility used for syslog messages, default &quot;daemon&quot;</p>
-<dt><code>syslog_priority</code></p>
-<dd>messages at this level and up will be sent to syslog, default &quot;info&quot;</p>
-<dt><code>logfile_priority</code></p>
-<dd>messages at this level and up will be written to log file, default &quot;info&quot;</p>
-<dt><code>logfile &nbsp;<wbr> </code></p>
-<dd>the log file name, default /var/log/cluster/&lt;daemon&gt;.log </p>
+<dt><code>to_syslog</code></dt>
+<dd>enable/disable messages to syslog (yes/no), default &quot;yes&quot;</dd>
+<dt><code>to_logfile</code></dt>
+<dd>enable/disable messages to log file (yes/no), default &quot;yes&quot;</dd>
+<dt><code>syslog_facility</code></dt>
+<dd>facility used for syslog messages, default &quot;daemon&quot;</dd>
+<dt><code>syslog_priority</code></dt>
+<dd>messages at this level and up will be sent to syslog, default &quot;info&quot;</dd>
+<dt><code>logfile_priority</code></dt>
+<dd>messages at this level and up will be written to log file, default &quot;info&quot;</dd>
+<dt><code>logfile &nbsp;<wbr> </code></dt>
+<dd>the log file name, default /var/log/cluster/&lt;daemon&gt;.log </dd>
 <pre><code>debug=on
-
-
 a shortcut for logfile_priority=&quot;debug&quot;
 </code></pre>
 <h2>Example</h2>
@@ -106,10 +104,11 @@ a shortcut for logfile_priority=&quot;debug&quot;
 <pre>&lt;logging syslog_priority=&quot;error&quot; logfile_priority=&quot;info&quot;/&gt;</pre>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/cluster/cluster.conf</i></p>
-<dd>standard location of cluster configuration file</p>
-<dt><i>/usr/share/cluster/cluster.rng</i></p>
-<dd>standard location of cluster.conf schema </p>
+<dt><i>/etc/cluster/cluster.conf</i></dt>
+<dd>standard location of cluster configuration file</dd>
+<dt><i>/usr/share/cluster/cluster.rng</i></dt>
+<dd>standard location of cluster.conf schema </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ccs_tool/">ccs_tool</a></code>(8), <code><a href="/docs/linux/man/8-ccs_config_dump/">ccs_config_dump</a></code>(8), <code><a href="/docs/linux/man/8-ccs_config_validate/">ccs_config_validate</a></code>(8), <code><a href="/docs/linux/man/8-cman_tool/">cman_tool</a></code>(8), <code><a href="/docs/linux/man/5-cman/">cman</a></code>(5), <code><a href="/docs/linux/man/5-qdisk/">qdisk</a></code>(5), <code><a href="/docs/linux/man/8-fenced/">fenced</a></code>(8), <code><a href="/docs/linux/man/8-fence_node/">fence_node</a></code>(8), <code><a href="/docs/linux/man/8-dlm_controld/">dlm_controld</a></code>(8), <code><a href="/docs/linux/man/8-gfs_controld/">gfs_controld</a></code>(8), <code>rgmanager</code>(8) </p>
+</dl>

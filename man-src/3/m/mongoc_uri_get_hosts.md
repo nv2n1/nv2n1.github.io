@@ -13,8 +13,8 @@ description: "mongoc_uri_get_hosts() – Fetches a linked list of hosts that wer
 mongoc_uri_get_hosts (const mongoc_uri_t *uri);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>uri</code></p>
-<dd>A <code>mongoc_uri_t</code> \&amp;.</dl>
+<dt><code>uri</code></dt>
+<dd>A <code>mongoc_uri_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches a linked list of hosts that were defined in the URI (the comma-separated host section). </p>
 <h2>Returns</h2>

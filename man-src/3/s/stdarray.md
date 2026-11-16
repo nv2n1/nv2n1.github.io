@@ -12,7 +12,6 @@ std::array&lt;T,N&gt;::swap - std::array&lt;T,N&gt;::swap
 
 <pre><code>void swap(array &amp;other) noexcept(/* see below */);
 (since C++ 11)(until C++ 20)
-
     constexpr void swap(array &amp;other) noexcept(/* see below */);
 (since C++ 20)</code></pre> 
 Exchanges the contents of the container with those of other. Does not cause iterators and references to associate with the other container. 

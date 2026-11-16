@@ -33,16 +33,16 @@ description: "amanda-interactivity – Configuring Interactivity with Amanda Ama
 <p> The <i>email</i> module has many properties: </p>
 <p> check-file</p>
 <dl>
-<dd>If set, amanda will check this file for user input. The user can touch the file to tell amanda that the requested volume was inserted in the changer. If the user writes the name of a changer into the file, Amanda will use that changer. If the user writes the word &#8216;abort&#8217; into the file, the scan will be aborted.</dl>
+<dd>If set, amanda will check this file for user input. The user can touch the file to tell amanda that the requested volume was inserted in the changer. If the user writes the name of a changer into the file, Amanda will use that changer. If the user writes the word &#8216;abort&#8217; into the file, the scan will be aborted.</dd></dl>
 <p> check-file-delay</p>
 <dl>
-<dd>Default: 10. This integer property indicates the time in seconds between each check of the check-file.</dl>
+<dd>Default: 10. This integer property indicates the time in seconds between each check of the check-file.</dd></dl>
 <p> mailto</p>
 <dl>
-<dd>Default: global value of <code>mailto</code>. The email addresses to which the email should be sent. If multiple addresses are given, they should be separated by spaces.</dl>
+<dd>Default: global value of <code>mailto</code>. The email addresses to which the email should be sent. If multiple addresses are given, they should be separated by spaces.</dd></dl>
 <p> resend-delay</p>
 <dl>
-<dd>Default 0. The time in seconds between emails. Amanda will resend the same email at this frequency, which can be useful if <code>mailto</code> is a pager or phone. If set to 0, only one email is sent.</dl>
+<dd>Default 0. The time in seconds between emails. Amanda will resend the same email at this frequency, which can be useful if <code>mailto</code> is a pager or phone. If set to 0, only one email is sent.</dd></dl>
 <h3>Tty_Email</h3>
 <p>The <i>tty_email</i> interactivity module uses the <i>tty</i> module if a terminal is available and uses the <i>email</i> module otherwise. Its properties are a combination of properties from each module.</p>
 <h2>Example</h2>
@@ -60,4 +60,4 @@ description: "amanda-interactivity – Configuring Interactivity with Amanda Ama
 <h2>Author</h2>
 <p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

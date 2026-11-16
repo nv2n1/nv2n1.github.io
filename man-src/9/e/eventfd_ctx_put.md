@@ -13,7 +13,7 @@ description: "eventfd_ctx_put – Releases a reference to the internal eventfd c
 <h2>Arguments</h2>
 <p><i>ctx</i></p>
 <dl>
-<dd>[in] Pointer to eventfd context.</dl>
+<dd>[in] Pointer to eventfd context.</dd></dl>
 <h2>Description</h2>
-<dd>The eventfd context reference must have been previously acquired either with <code>eventfd_ctx_get</code> or <code>eventfd_ctx_fdget</code>.</p>
+<dd>The eventfd context reference must have been previously acquired either with <code>eventfd_ctx_get</code> or <code>eventfd_ctx_fdget</code>.</dd>
 <h2>Copyright</h2>

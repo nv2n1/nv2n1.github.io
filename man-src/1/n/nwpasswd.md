@@ -17,23 +17,23 @@ description: "nwpasswd – Change a user’s password"
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> With -h nwpasswd prints a little help text.</dl>
+</dt><dd> With -h nwpasswd prints a little help text.</dd></dl>
 <p> <code>-S</code> <i>server</i></p>
 <dl>
 <dt>
-<dd> is the name of the server you want to use.</dl>
+</dt><dd> is the name of the server you want to use.</dd></dl>
 <p> <code>-U</code> <i>user name</i></p>
 <dl>
 <dt>
-<dd> is the name of the bindery object whose password is to be changed.</dl>
+</dt><dd> is the name of the bindery object whose password is to be changed.</dd></dl>
 <p> <code>-O</code> <i>object name</i></p>
 <dl>
 <dt>
-<dd> If you have supervisor privileges, you can change other users&#8217; passwords. With <code>-O</code> you can tell nwpasswd the name of the user whose password should be changed.</dl>
+</dt><dd> If you have supervisor privileges, you can change other users&#8217; passwords. With <code>-O</code> you can tell nwpasswd the name of the user whose password should be changed.</dd></dl>
 <p> <code>-t</code> <i>object type</i></p>
 <dl>
 <dt>
-<dd> is the bindery object type of the object whose password is to be changed.</dl>
+</dt><dd> is the bindery object type of the object whose password is to be changed.</dd></dl>
 <h2>CREDITS</h2>
 <p> nwpasswd would not have been possible without the work of Guntram Blom. Look at nwcrypt.c for his work. </p>
 <h2>Index</h2>

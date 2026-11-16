@@ -17,26 +17,26 @@ description: "pq2-ls-files-server – List the file content of a dataset on a gi
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>dataset</i></p>
-<dd> The dataset whose files are to be listed.</p>
-<dt><code>-s</code> <i>servers</i></p>
-<dd> Comma-separated list of servers for which the information is wanted.</dl>
+<dt><i>dataset</i></dt>
+<dd> The dataset whose files are to be listed.</dd>
+<dt><code>-s</code> <i>servers</i></dt>
+<dd> Comma-separated list of servers for which the information is wanted.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>-d</code> &lt;<i>datasets</i>&gt;, <code>&#8211;dataset=</code>&lt;<i>datasets</i>&gt;</p>
-<dd> Alternative way to define the dataset to be analysed.</p>
-<dt><code>&#8211;server</code>=&lt;<i>servers</i>&gt;</p>
-<dd> Alternative way to define the list of servers for which the information is wanted.</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-d</code> &lt;<i>datasets</i>&gt;, <code>&#8211;dataset=</code>&lt;<i>datasets</i>&gt;</dt>
+<dd> Alternative way to define the dataset to be analysed.</dd>
+<dt><code>&#8211;server</code>=&lt;<i>servers</i>&gt;</dt>
+<dd> Alternative way to define the list of servers for which the information is wanted.</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> See <i>setup-pq2</i>(1).</p>
 <h2>SEE ALSO</h2>

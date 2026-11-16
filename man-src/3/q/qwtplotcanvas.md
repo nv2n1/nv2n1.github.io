@@ -54,155 +54,155 @@ description: "QwtPlotCanvas –"
 <p> Canvas is the widget where all plot items are displayed </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::setCanvas()</code>, <code>QwtPlotGLCanvas</code></dl>
+<dd><code>QwtPlot::setCanvas()</code>, <code>QwtPlotGLCanvas</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotCanvas::FocusIndicator</code></h3>
 <p>Focus indicator The default setting is NoFocusIndicator. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFocusIndicator()</code>, <code>focusIndicator()</code>, paintFocus()</dl>
+<dd><code>setFocusIndicator()</code>, <code>focusIndicator()</code>, paintFocus()</dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoFocusIndicator </i></p>
-<dd>Don&#8217;t paint a focus indicator.</p>
-<dt><i>CanvasFocusIndicator </i></p>
-<dd>The focus is related to the complete canvas. Paint the focus indicator using paintFocus()</p>
-<dt><i>ItemFocusIndicator </i></p>
-<dd>The focus is related to an item (curve, point, &#8230;) on the canvas. It is up to the application to display a focus indication using f.e. highlighting.</dl>
+<dt><i>NoFocusIndicator </i></dt>
+<dd>Don&#8217;t paint a focus indicator.</dd>
+<dt><i>CanvasFocusIndicator </i></dt>
+<dd>The focus is related to the complete canvas. Paint the focus indicator using paintFocus()</dd>
+<dt><i>ItemFocusIndicator </i></dt>
+<dd>The focus is related to an item (curve, point, &#8230;) on the canvas. It is up to the application to display a focus indication using f.e. highlighting.</dd></dl>
 <h3>enum <code>QwtPlotCanvas::PaintAttribute</code></h3>
 <p>Paint attributes. The default setting enables BackingStore and Opaque. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>BackingStore </i></p>
-<dd>Paint double buffered reusing the content of the pixmap buffer when possible. Using a backing store might improve the performance significantly, when working with widget overlays ( like rubber bands ). Disabling the cache might improve the performance for incremental paints (using <code>QwtPlotDirectPainter</code> ).</dl>
+<dt><i>BackingStore </i></dt>
+<dd>Paint double buffered reusing the content of the pixmap buffer when possible. Using a backing store might improve the performance significantly, when working with widget overlays ( like rubber bands ). Disabling the cache might improve the performance for incremental paints (using <code>QwtPlotDirectPainter</code> ).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>backingStore()</code>, <code>invalidateBackingStore()</code></dl>
+<dd><code>backingStore()</code>, <code>invalidateBackingStore()</code></dd></dl>
 <dl COMPACT>
-<dt><i>Opaque </i></p>
-<dd>Try to fill the complete contents rectangle of the plot canvas. When using styled backgrounds Qt assumes, that the canvas doesn&#8217;t fill its area completely ( f.e because of rounded borders ) and fills the area below the canvas. When this is done with gradients it might result in a serious performance bottleneck &#8211; depending on the size.</dl>
+<dt><i>Opaque </i></dt>
+<dd>Try to fill the complete contents rectangle of the plot canvas. When using styled backgrounds Qt assumes, that the canvas doesn&#8217;t fill its area completely ( f.e because of rounded borders ) and fills the area below the canvas. When this is done with gradients it might result in a serious performance bottleneck &#8211; depending on the size.</dd></dl>
 <p> When the Opaque attribute is enabled the canvas tries to identify the gaps with some heuristics and to fill those only. </p>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>Will not work for semitransparent backgrounds</dl>
+<dd>Will not work for semitransparent backgrounds</dd></dl>
 <dl COMPACT>
-<dt><i>HackStyledBackground </i></p>
-<dd>Try to improve painting of styled backgrounds. <code>QwtPlotCanvas</code> supports the box model attributes for customizing the layout with style sheets. Unfortunately the design of Qt style sheets has no concept how to handle backgrounds with rounded corners &#8211; beside of padding.</dl>
+<dt><i>HackStyledBackground </i></dt>
+<dd>Try to improve painting of styled backgrounds. <code>QwtPlotCanvas</code> supports the box model attributes for customizing the layout with style sheets. Unfortunately the design of Qt style sheets has no concept how to handle backgrounds with rounded corners &#8211; beside of padding.</dd></dl>
 <p> When HackStyledBackground is enabled the plot canvas tries to separate the background from the background border by reverse engineering to paint the background before and the border after the plot items. In this order the border gets perfectly antialiased and you can avoid some pixel artifacts in the corners.</p>
 <dl COMPACT>
-<dt><i>ImmediatePaint </i></p>
-<dd>When ImmediatePaint is set <code>replot()</code> calls repaint() instead of update().</dl>
+<dt><i>ImmediatePaint </i></dt>
+<dd>When ImmediatePaint is set <code>replot()</code> calls repaint() instead of update().</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>replot()</code>, QWidget::repaint(), QWidget::update()</dl>
+<dd><code>replot()</code>, QWidget::repaint(), QWidget::update()</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotCanvas::QwtPlotCanvas (<code>QwtPlot</code> *plot = NULL) [explicit]</h3>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plot</i> Parent plot widget</dl>
+<dd><i>plot</i> Parent plot widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::setCanvas()</code></dl>
+<dd><code>QwtPlot::setCanvas()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const QPixmap * QwtPlotCanvas::backingStore () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Backing store, might be null</dl>
+<dd>Backing store, might be null</dd></dl>
 <h3>QPainterPath QwtPlotCanvas::borderPath (const QRect &amp;rect) const</h3>
 <p>Calculate the painter path for a styled or rounded border </p>
 <p> When the canvas has no styled background or rounded borders the painter path is empty. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle of the canvas</dl>
+<dd><i>rect</i> Bounding rectangle of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Painter path, that can be used for clipping</dl>
+<dd>Painter path, that can be used for clipping</dd></dl>
 <h3>double QwtPlotCanvas::borderRadius () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Radius for the corners of the border frame</dl>
+<dd>Radius for the corners of the border frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderRadius()</code></dl>
+<dd><code>setBorderRadius()</code></dd></dl>
 <h3>void QwtPlotCanvas::drawBorder (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the border of the plot canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderRadius()</code></dl>
+<dd><code>setBorderRadius()</code></dd></dl>
 <h3>void QwtPlotCanvas::drawFocusIndicator (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the focus indication </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>bool QwtPlotCanvas::event (QEvent *event) [virtual]</h3>
 <p>Qt event handler for QEvent::PolishRequest and QEvent::StyleChange </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Qt Event</dl>
+<dd><i>event</i> Qt Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>See QFrame::event()</dl>
+<dd>See QFrame::event()</dd></dl>
 <h3><code>QwtPlotCanvas::FocusIndicator</code> QwtPlotCanvas::focusIndicator () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Focus indicator</dl>
+<dd>Focus indicator</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>FocusIndicator</code>, <code>setFocusIndicator()</code></dl>
+<dd><code>FocusIndicator</code>, <code>setFocusIndicator()</code></dd></dl>
 <h3>void QwtPlotCanvas::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>void QwtPlotCanvas::replot () [slot]</h3>
 <p>Invalidate the paint cache and repaint the canvas </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>invalidatePaintCache()</dl>
+<dd>invalidatePaintCache()</dd></dl>
 <h3>void QwtPlotCanvas::resizeEvent (QResizeEvent *event) [protected], [virtual]</h3>
 <p>Resize event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Resize event</dl>
+<dd><i>event</i> Resize event</dd></dl>
 <h3>void QwtPlotCanvas::setBorderRadius (doubleradius)</h3>
 <p>Set the radius for the corners of the border frame </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>radius</i> Radius of a rounded corner</dl>
+<dd><i>radius</i> Radius of a rounded corner</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>borderRadius()</code></dl>
+<dd><code>borderRadius()</code></dd></dl>
 <h3>void QwtPlotCanvas::setFocusIndicator (<code>FocusIndicator</code>focusIndicator)</h3>
 <p>Set the focus indicator </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>FocusIndicator</code>, <code>focusIndicator()</code></dl>
+<dd><code>FocusIndicator</code>, <code>focusIndicator()</code></dd></dl>
 <h3>void QwtPlotCanvas::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Changing the paint attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testPaintAttribute()</code>, <code>backingStore()</code></dl>
+<dd><code>testPaintAttribute()</code>, <code>backingStore()</code></dd></dl>
 <h3>bool QwtPlotCanvas::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p>Test whether a paint attribute is enabled </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute</dl>
+<dd><i>attribute</i> Paint attribute</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true, when attribute is enabled</dl>
+<dd>true, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

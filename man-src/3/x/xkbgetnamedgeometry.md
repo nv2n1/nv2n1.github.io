@@ -10,16 +10,16 @@ description: "XkbGetNamedGeometry – Loads a keyboard geometry description from
 <p>XkbGetNamedGeometry &#8211; Loads a keyboard geometry description from this database by name </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetNamedGeometry</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>Atom </code><i>name</i><code>);</code></dl>
+<dt> <code>Status XkbGetNamedGeometry</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>Atom </code><i>name</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description into which the geometry should be loaded</p>
-<dt><i>&#8211; name</i></p>
-<dd>name of the geometry to be loaded</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description into which the geometry should be loaded</dd>
+<dt><i>&#8211; name</i></dt>
+<dd>name of the geometry to be loaded</dd></dl>
 <h2>Description</h2>
 <p>It is also possible to load a keyboard geometry by name. The X server maintains a database of keyboard components (see below). </p>
 <p> <i>XkbGetNamedGeometry </i> can return BadName if the name cannot be found. </p>
@@ -104,6 +104,6 @@ description: "XkbGetNamedGeometry – Loads a keyboard geometry description from
 <p> When a keyboard description is built, the components are processed in the order in which they appear in Table 1; later definitions override earlier ones.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadName</code></p>
-<dd>A font or color of the specified name does not exist. </p>
+<dt><code>BadName</code></dt>
+<dd>A font or color of the specified name does not exist. </dd>
 </dl>

@@ -21,12 +21,12 @@ int ares_expand_string(const unsigned char *encoded,
 <h2>RETURN VALUES</h2>
 <p> <code>ares_expand_string</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> Expansion of the encoded string succeeded.</p>
-<dt><code>ARES_EBADSTR</code></p>
-<dd> The encoded string was malformed and could not be expanded.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> Memory was exhausted.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> Expansion of the encoded string succeeded.</dd>
+<dt><code>ARES_EBADSTR</code></dt>
+<dd> The encoded string was malformed and could not be expanded.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>

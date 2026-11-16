@@ -20,40 +20,34 @@ Systhem health agent that checks the S.M.A.R.T. status of the given drives and u
 
 <b>OCF_RESKEY_state</b> = string [/HealthSMART-.state]
 <dl><dd>State file 
-
- Location to store the resource state in.</dl>
+ Location to store the resource state in.</dd></dl>
  
 
  <b>OCF_RESKEY_drives</b> = string [/dev/sda]
 <dl><dd>Drives to check 
-
- The drive(s) to check as a SPACE separated list. Enter the full path to the device, e.g. &quot;/dev/sda&quot;.</dl>
+ The drive(s) to check as a SPACE separated list. Enter the full path to the device, e.g. &quot;/dev/sda&quot;.</dd></dl>
  
 
  <b>OCF_RESKEY_devices</b> = string
 <dl><dd>Device types 
-
- The device type(s) to assume for the drive(s) being tested as a SPACE separated list.</dl>
+ The device type(s) to assume for the drive(s) being tested as a SPACE separated list.</dd></dl>
  
 
  <b>OCF_RESKEY_temp_lower_limit</b> = string [0]
 <dl><dd>Lower limit for the red smart attribute 
-
- Lower limit of the temperature in deg C of the drive(s). Below this limit the status will be red.</dl>
+ Lower limit of the temperature in deg C of the drive(s). Below this limit the status will be red.</dd></dl>
  
 
  <b>OCF_RESKEY_temp_upper_limit</b> = string [60]
 <dl><dd>Upper limit for red smart attribute 
-
- Upper limit of the temperature if deg C of the drives(s). If the drive reports a temperature higher than this value the status of #health-smart will be red.</dl>
+ Upper limit of the temperature if deg C of the drives(s). If the drive reports a temperature higher than this value the status of #health-smart will be red.</dd></dl>
  
 
  <b>OCF_RESKEY_temp_warning</b> = string [5]
 <dl><dd>Deg C below/above the upper limits for yellow smart attribute 
-
- Number of deg C below/above the upper/lower temp limits at which point the status of #health-smart will change to yellow.</dl>
+ Number of deg C below/above the upper/lower temp limits at which point the status of #health-smart will change to yellow.</dd></dl>
 
 <h2>Author</h2>
 
 <b>Andrew Beekhof</b> &lt;andrew [at] beekhof.net&gt;
-<dl><dd>Author.</dl>
+<dl><dd>Author.</dd></dl>

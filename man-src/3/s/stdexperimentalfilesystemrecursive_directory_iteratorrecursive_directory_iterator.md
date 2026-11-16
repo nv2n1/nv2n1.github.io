@@ -12,22 +12,15 @@ std::experimental::filesystem::recursive_directory_iterator::recursive_directory
 
 <pre><code>recursive_directory_iterator();
 (1)(filesystem TS)
-
     recursive_directory_iterator(const recursive_directory_iterator &amp;) = default;
 (2)(filesystem TS)
-
     recursive_directory_iterator(recursive_directory_iterator &amp;&amp;) = default;
 (3)(filesystem TS)
-
     explicit recursive_directory_iterator(const path &amp;p, (4)(filesystem TS)
-
                                                              directory_options options = directory_options::none);
-
 recursive_directory_iterator(const path &amp;p, (5)(filesystem TS)
-
                                                 directory_options options,
                              error_code &amp;ec);
-
 recursive_directory_iterator(const path &amp;p, error_code &amp;ec);
 (6)(filesystem TS)</code></pre> 
 Contructs new recursive directory iterator. 

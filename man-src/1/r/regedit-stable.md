@@ -16,22 +16,22 @@ description: "regedit – Wine registry editor"
 <p> The switches are case-insensitive and can be prefixed either by &#8216;-&#8216; or &#8216;/&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-E</code> <i>file</i> [<i>regpath</i>]</p>
-<dd> Exports the content of the specified registry key to the specified <i>file</i>. It exports the whole registry if no key is specified.</p>
-<dt><code>-D</code>&nbsp;<i>regpath</p>
-<dd> Deletes the specified registry key.</p>
-<dt></i><code>-S</code></p>
-<dd> Run regedit silently (ignored, CLI mode is always silent). This exists for compatibility with Windows regedit.</p>
-<dt><code>-V</code></p>
-<dd> Run regedit in advanced mode (ignored). This exists for compatibility with Windows regedit.</p>
-<dt><code>-L</code>&nbsp;<i>location</p>
-<dd> Specifies the location of the system.dat registry file (ignored). This exists for compatibility with Windows regedit.</p>
-<dt></i><code>-R</code>&nbsp;<i>location</p>
-<dd> Specifies the location of the user.dat registry file (ignored). This exists for compatibility with Windows regedit.</p>
-<dt></i><code>-?</code></p>
-<dd> Prints a help message. Any other options are ignored.</p>
-<dt><code>-C</code>&nbsp;<i>file.reg</i></p>
-<dd> Create registry from <i>file.reg</i> (unimplemented).</dl>
+<dt><code>-E</code> <i>file</i> [<i>regpath</i>]</dt>
+<dd> Exports the content of the specified registry key to the specified <i>file</i>. It exports the whole registry if no key is specified.</dd>
+<dt><code>-D</code>&nbsp;<i>regpath</dt>
+<dd> Deletes the specified registry key.</dd>
+<dt></i><code>-S</code></dt>
+<dd> Run regedit silently (ignored, CLI mode is always silent). This exists for compatibility with Windows regedit.</dd>
+<dt><code>-V</code></dt>
+<dd> Run regedit in advanced mode (ignored). This exists for compatibility with Windows regedit.</dd>
+<dt><code>-L</code>&nbsp;<i>location</dt>
+<dd> Specifies the location of the system.dat registry file (ignored). This exists for compatibility with Windows regedit.</dd>
+<dt></i><code>-R</code>&nbsp;<i>location</dt>
+<dd> Specifies the location of the user.dat registry file (ignored). This exists for compatibility with Windows regedit.</dd>
+<dt></i><code>-?</code></dt>
+<dd> Prints a help message. Any other options are ignored.</dd>
+<dt><code>-C</code>&nbsp;<i>file.reg</i></dt>
+<dd> Create registry from <i>file.reg</i> (unimplemented).</dd></dl>
 <h2>BUGS</h2>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>
 <h2>AVAILABILITY</h2>

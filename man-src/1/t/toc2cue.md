@@ -18,10 +18,10 @@ description: "toc2cue – converts a TOC files of"
 <p> Please note that the resulting cue file is only valid if the toc-file was created with <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> using the commands &#8216;read-toc&#8217; or &#8216;read-cd&#8217;. For manually created or edited toc-files the cue file may not be correct. This program just checks for the most obvious toc-file features that cannot be converted to a cue file. Furthermore, if the toc-file contains audio tracks the byte order of the image file will be wrong. This will result in static noise when the cue file is used for recording (even with <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> itself). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v </code><i>verbosity_level</i></p>
-<dd> Sets the verbosity level to use, can be a integer between 1 and 3. By default, only fatal errors are displayed. A verbosity level of 1 shows warnings, 2 warnings and errors, 3 warnings, errors and internal errors.</p>
-<dt><code>-V</code></p>
-<dd> Prints the version of toc2cue. </p>
+<dt><code>-v </code><i>verbosity_level</i></dt>
+<dd> Sets the verbosity level to use, can be a integer between 1 and 3. By default, only fatal errors are displayed. A verbosity level of 1 shows warnings, 2 warnings and errors, 3 warnings, errors and internal errors.</dd>
+<dt><code>-V</code></dt>
+<dd> Prints the version of toc2cue. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> </p>

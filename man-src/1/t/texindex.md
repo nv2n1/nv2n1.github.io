@@ -15,12 +15,12 @@ description: "texindex – sort Texinfo index files"
 <p> Generate a sorted index for each TeX output FILE. Usually FILE&#8230; is specified as `foo.??&#8217; for a document `foo.texi&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version information and exit</p>
-<dt><code>&#8212;</code></p>
-<dd> end option processing</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version information and exit</dd>
+<dt><code>&#8212;</code></dt>
+<dd> end option processing</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br />
  Texinfo home page: <a rel="nofollow" href="https://www.gnu.org/software/texinfo/">https://www.gnu.org/software/texinfo/</a></p>
@@ -31,6 +31,6 @@ description: "texindex – sort Texinfo index files"
 <p> The full documentation for <code>texindex</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>texindex</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info texindex</code></dl>
+</dt><dd> <code>info texindex</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

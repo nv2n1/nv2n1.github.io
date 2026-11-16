@@ -22,43 +22,43 @@ description: "perf-trace – strace inspired tool"
 <p> -a, &#8211;all-cpus</p>
 <dl>
 <dt>
-<dd> System-wide collection from all CPUs.</dl>
+</dt><dd> System-wide collection from all CPUs.</dd></dl>
 <p> -e, &#8211;expr</p>
 <dl>
 <dt>
-<dd> List of events to show, currently only syscall names. Prefixing with ! shows all syscalls but the ones specified. You may need to escape it.</dl>
+</dt><dd> List of events to show, currently only syscall names. Prefixing with ! shows all syscalls but the ones specified. You may need to escape it.</dd></dl>
 <p> -o, &#8211;output=</p>
 <dl>
 <dt>
-<dd> Output file name.</dl>
+</dt><dd> Output file name.</dd></dl>
 <p> -p, &#8211;pid=</p>
 <dl>
 <dt>
-<dd> Record events on existing process ID (comma separated list).</dl>
+</dt><dd> Record events on existing process ID (comma separated list).</dd></dl>
 <p> -t, &#8211;tid=</p>
 <dl>
 <dt>
-<dd> Record events on existing thread ID (comma separated list).</dl>
+</dt><dd> Record events on existing thread ID (comma separated list).</dd></dl>
 <p> -u, &#8211;uid=</p>
 <dl>
 <dt>
-<dd> Record events in threads owned by uid. Name or number.</dl>
+</dt><dd> Record events in threads owned by uid. Name or number.</dd></dl>
 <p> -v, &#8211;verbose=</p>
 <dl>
 <dt>
-<dd> Verbosity level.</dl>
+</dt><dd> Verbosity level.</dd></dl>
 <p> -i, &#8211;no-inherit</p>
 <dl>
 <dt>
-<dd> Child tasks do not inherit counters.</dl>
+</dt><dd> Child tasks do not inherit counters.</dd></dl>
 <p> -m, &#8211;mmap-pages=</p>
 <dl>
 <dt>
-<dd> Number of mmap data pages (must be a power of two) or size specification with appended unit character &#8211; B/K/M/G. The size is rounded up to have nearest pages power of two value.</dl>
+</dt><dd> Number of mmap data pages (must be a power of two) or size specification with appended unit character &#8211; B/K/M/G. The size is rounded up to have nearest pages power of two value.</dd></dl>
 <p> -C, &#8211;cpu</p>
 <dl>
 <dt>
-<dd> Collect samples only on the list of CPUs provided. Multiple CPUs can be provided as a comma-separated list with no space: 0,1. Ranges of CPUs are specified with -: 0-2. In per-thread mode with inheritance mode on (default), Events are captured only when the thread executes on the designated CPUs. Default is to monitor all CPUs.</dl>
+</dt><dd> Collect samples only on the list of CPUs provided. Multiple CPUs can be provided as a comma-separated list with no space: 0,1. Ranges of CPUs are specified with -: 0-2. In per-thread mode with inheritance mode on (default), Events are captured only when the thread executes on the designated CPUs. Default is to monitor all CPUs.</dd></dl>
 <p> &#8211;duration: Show only events that had a duration greater than N.M ms. </p>
 <p> &#8211;sched: Accrue thread runtime and provide a summary at the end of the session. </p>
 <p> -i &#8211;input Process events from a given perf data file. </p>
@@ -66,45 +66,45 @@ description: "perf-trace – strace inspired tool"
 <p> &#8211;comm</p>
 <dl>
 <dt>
-<dd> Show process COMM right beside its ID, on by default, disable with &#8211;no-comm.</dl>
+</dt><dd> Show process COMM right beside its ID, on by default, disable with &#8211;no-comm.</dd></dl>
 <p> -s, &#8211;summary</p>
 <dl>
 <dt>
-<dd> Show only a summary of syscalls by thread with min, max, and average times (in msec) and relative stddev.</dl>
+</dt><dd> Show only a summary of syscalls by thread with min, max, and average times (in msec) and relative stddev.</dd></dl>
 <p> -S, &#8211;with-summary</p>
 <dl>
 <dt>
-<dd> Show all syscalls followed by a summary by thread with min, max, and average times (in msec) and relative stddev.</dl>
+</dt><dd> Show all syscalls followed by a summary by thread with min, max, and average times (in msec) and relative stddev.</dd></dl>
 <p> &#8211;tool_stats</p>
 <dl>
 <dt>
-<dd> Show tool stats such as number of times fd&rarr;pathname was discovered thru hooking the open syscall return + vfs_getname or via reading /proc/pid/fd, etc.</dl>
+</dt><dd> Show tool stats such as number of times fd&rarr;pathname was discovered thru hooking the open syscall return + vfs_getname or via reading /proc/pid/fd, etc.</dd></dl>
 <p> -F=[all|min|maj], &#8211;pf=[all|min|maj]</p>
 <dl>
 <dt>
-<dd> Trace pagefaults. Optionally, you can specify whether you want minor, major or all pagefaults. Default value is maj.</dl>
+</dt><dd> Trace pagefaults. Optionally, you can specify whether you want minor, major or all pagefaults. Default value is maj.</dd></dl>
 <p> &#8211;syscalls</p>
 <dl>
 <dt>
-<dd> Trace system calls. This options is enabled by default.</dl>
+</dt><dd> Trace system calls. This options is enabled by default.</dd></dl>
 <h2>PAGEFAULTS</h2>
 <p> When tracing pagefaults, the format of the trace is as follows: </p>
 <p> &lt;min|maj&gt;fault [&lt;ip.symbol&gt;+&lt;ip.offset&gt;] &rArr; &lt;m[blue]<code>addr.dso [at] addr.offset</code>m[]<font SIZE="-2">[1]</font>&gt; (&lt;map type&gt;&lt;addr level&gt;). </p>
 <dl>
 <dt>
-<dd> &bull; min/maj indicates whether fault event is minor or major;</dl>
+</dt><dd> &bull; min/maj indicates whether fault event is minor or major;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ip.symbol shows symbol for instruction pointer (the code that generated the fault); if no debug symbols available, perf trace will print raw IP;</dl>
+</dt><dd> &bull; ip.symbol shows symbol for instruction pointer (the code that generated the fault); if no debug symbols available, perf trace will print raw IP;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; addr.dso shows DSO for the faulted address;</dl>
+</dt><dd> &bull; addr.dso shows DSO for the faulted address;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; map type is either <i>d</i> for non-executable maps or <i>x</i> for executable maps;</dl>
+</dt><dd> &bull; map type is either <i>d</i> for non-executable maps or <i>x</i> for executable maps;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; addr level is either <i>k</i> for kernel dso or <i>.</i> for user dso.</dl>
+</dt><dd> &bull; addr level is either <i>k</i> for kernel dso or <i>.</i> for user dso.</dd></dl>
 <p> For symbols resolution you may need to install debugging symbols. </p>
 <p> Please be aware that duration is currently always 0 and doesn&#8217;t reflect actual time it took for fault to be handled! </p>
 <p> When &#8211;verbose specified, perf trace tries to print all available information for both IP and fault address in the form of m[blue]<code>dso [at] symbol</code>m[]<font SIZE="-2">[2]</font>+offset.</p>
@@ -112,48 +112,48 @@ description: "perf-trace – strace inspired tool"
 <p> Trace only major pagefaults: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ perf trace --no-syscalls -F
 </pre>
-</dl>
+</dd></dl>
 <p> Trace syscalls, major and minor pagefaults: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ perf trace -F all
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 1416.547(0.000 ms)
     : python / 20235 majfault[CRYPTO_push_info_ + 0x0] = &gt; / lib / x86_64 - linux - gnu / libcrypto.so .1.0.0 [at] 0x61be0(x.)
 </code></pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 As you can see, there was major pagefault in python process, from
 CRYPTO_push_info_ routine which faulted somewhere in libcrypto.so.
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-script/">perf-script</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> addr.dso [at] addr.offset</p>
+<dt> 1.</dt>
+<dd> addr.dso [at] addr.offset</dd>
 <dl>
 <dt>
-<dd> mailto:addr.dso [at] addr.offset</dl>
-<dt> 2.</p>
-<dd> dso [at] symbol</p>
+</dt><dd> mailto:addr.dso [at] addr.offset</dd></dl>
+<dt> 2.</dt>
+<dd> dso [at] symbol</dd>
 <dl>
 <dt>
-<dd> mailto:dso [at] symbol</dl>
+</dt><dd> mailto:dso [at] symbol</dd></dl>
 </dl>
 <h2>Index</h2>

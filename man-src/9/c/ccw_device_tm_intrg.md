@@ -14,11 +14,11 @@ description: "ccw_device_tm_intrg – perform interrogate function"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device on which to perform the interrogate function</dl>
+</dd><dd>ccw device on which to perform the interrogate function</dd></dl>
 <h2>Description</h2>
 <p>Perform an interrogate function on the given ccw device. Return zero on success, non-zero otherwise.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -10,23 +10,17 @@ description: "operator>>(std::basic_istream) – operator>>(std::basic_istream)"
 <p>operator&gt;&gt;(std::basic_istream) &#8211; operator&gt;&gt;(std::basic_istream)</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class CharT, class Traits&gt;
-
 basic_istream&lt;CharT, Traits&gt; &amp;operator&gt;&gt;(basic_istream&lt;CharT, Traits&gt; &amp;st, CharT &amp;ch);
 template &lt;class Traits&gt;
 (1)
-
     basic_istream&lt;char, Traits&gt; &amp;
     operator&gt;&gt;(basic_istream&lt;char, Traits&gt; &amp;st, signed char &amp;ch);
 template &lt;class Traits&gt;
-
 basic_istream&lt;char, Traits&gt; &amp;operator&gt;&gt;(basic_istream&lt;char, Traits&gt; &amp;st, unsigned char &amp;ch);
-
 template &lt;class CharT, class Traits&gt;
-
 basic_istream&lt;CharT, Traits&gt; &amp;operator&gt;&gt;(basic_istream&lt;CharT, Traits&gt; &amp;st, CharT *s);
 template &lt;class Traits&gt;
 (until C++ 20)
-
     basic_istream&lt;char, Traits&gt; &amp;
     operator&gt;&gt;(basic_istream&lt;char, Traits&gt; &amp;st, signed char *s);</code></pre>
 <p>template&lt; class Traits &gt;<br />
@@ -74,12 +68,9 @@ ch &#8211; reference to a character to store the extracted character to </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;sstream&gt;
 int main()
-
 {
     std::string input = &quot;n greetings&quot;;
     std::istringstream stream(input);

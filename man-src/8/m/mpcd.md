@@ -18,22 +18,22 @@ description: "mpcd – ATM MPOA (Multi-Protocol Over ATM) client daemon"
 <p> Linux MPOA client only supports non-LLC-muxed shortcuts. The number of supported MPOA clients is unlimited.</p>
 <h2>Options</h2>
 <dl>
-<dt>-s Control ATM address</p>
-<dd>Local ATM address this MPC uses for MPOA control connections.</p>
-<dt>-l Data ATM address</p>
-<dd>Local ATM address from and to which MPOA shortcuts are established.</p>
-<dt>-c MPS control ATM address</p>
-<dd>ATM address of MPS. Only needed if MPS can not advertise it by itself.</p>
-<dt>-i Interface number</p>
-<dd>The interface number of LEC this MPC serves. E.g. 2 for &quot;lec2&quot;.</p>
-<dt>-m MPS MAC address</p>
-<dd>MAC address of default router where MPS recides. Only useful if the MPOA server fails to advertise itself.</p>
-<dt>-L LEC address</p>
-<dd>Listen address of the <font SIZE="-1">LANE</font> client zeppelin. mpcd uses this address as its own <font SIZE="-1">ATM</font> address when it queries <font SIZE="-1">LECS</font> for <font SIZE="-1">MPC</font> configuration parameters. If this option is not present then mpcd <code>will not</code> use <font SIZE="-1">LECS</font> to query for configuration parameters. This option is normally the same as zeppelin&#8217;s -l option.</p>
-<dt>-n ELAN name</p>
-<dd>Name of the <font SIZE="-1">ELAN</font> for which mpcd asks for parameters when it connects to <font SIZE="-1">LECS.</font> If this option is not given, <font SIZE="-1">LECS</font> should respond with parameters belonging to the default <font SIZE="-1">ELAN</font> if one exists. This option is normally the same as zeppelin&#8217;s -n option.</p>
-<dt>-C LECS address</p>
-<dd>ATM address of <font SIZE="-1">LECS</font> mpcd asks for parameters. If this option is left empty and -L is given, mpcd uses ATM Forum assigned Well-Known <font SIZE="-1">LECS</font> address. This option is normally the same as zeppelin&#8217;s -c option.</dl>
+<dt>-s Control ATM address</dt>
+<dd>Local ATM address this MPC uses for MPOA control connections.</dd>
+<dt>-l Data ATM address</dt>
+<dd>Local ATM address from and to which MPOA shortcuts are established.</dd>
+<dt>-c MPS control ATM address</dt>
+<dd>ATM address of MPS. Only needed if MPS can not advertise it by itself.</dd>
+<dt>-i Interface number</dt>
+<dd>The interface number of LEC this MPC serves. E.g. 2 for &quot;lec2&quot;.</dd>
+<dt>-m MPS MAC address</dt>
+<dd>MAC address of default router where MPS recides. Only useful if the MPOA server fails to advertise itself.</dd>
+<dt>-L LEC address</dt>
+<dd>Listen address of the <font SIZE="-1">LANE</font> client zeppelin. mpcd uses this address as its own <font SIZE="-1">ATM</font> address when it queries <font SIZE="-1">LECS</font> for <font SIZE="-1">MPC</font> configuration parameters. If this option is not present then mpcd <code>will not</code> use <font SIZE="-1">LECS</font> to query for configuration parameters. This option is normally the same as zeppelin&#8217;s -l option.</dd>
+<dt>-n ELAN name</dt>
+<dd>Name of the <font SIZE="-1">ELAN</font> for which mpcd asks for parameters when it connects to <font SIZE="-1">LECS.</font> If this option is not given, <font SIZE="-1">LECS</font> should respond with parameters belonging to the default <font SIZE="-1">ELAN</font> if one exists. This option is normally the same as zeppelin&#8217;s -n option.</dd>
+<dt>-C LECS address</dt>
+<dd>ATM address of <font SIZE="-1">LECS</font> mpcd asks for parameters. If this option is left empty and -L is given, mpcd uses ATM Forum assigned Well-Known <font SIZE="-1">LECS</font> address. This option is normally the same as zeppelin&#8217;s -c option.</dd></dl>
 <h2>Examples</h2>
 <p>This script snippet shows how to run LANE and MPOA. After UNI signalling and ILMI have been started LANE (zeppelin) and MPOA (mpcd) are started. The commented out line shows how to start mpcd so that it queries <font SIZE="-1">LECS</font> for <font SIZE="-1">MPC</font> parameters. </p>
 <p> Arguments jaarli[1-3] are local ATM addresses listed in file <i>/etc/hosts.atm.</i> </p>
@@ -43,19 +43,19 @@ description: "mpcd – ATM MPOA (Multi-Protocol Over ATM) client daemon"
 &nbsp;<wbr>cd&nbsp;<wbr>$ATM<br />
 &nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-x sigd/atmsigd&nbsp;<wbr>]&nbsp;<wbr>;&nbsp;<wbr>then</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>sigd/atmsigd -b&nbsp;<wbr></dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>sigd/atmsigd -b&nbsp;<wbr></dd></dl>
 <p>&nbsp;<wbr>fi<br />
 &nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-x ilmid/ilmid&nbsp;<wbr>]&nbsp;<wbr>;&nbsp;<wbr>then</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>ilmid/ilmid -b -x</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>ilmid/ilmid -b -x</dd></dl>
 <p>&nbsp;<wbr>fi<br />
 &nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-x led/zeppelin&nbsp;<wbr>]&nbsp;<wbr>;&nbsp;<wbr>then</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>led/zeppelin -2 -n sampo -i2 -l jaarli3&nbsp;<wbr>&amp;<br />
-&nbsp;<wbr>&nbsp;<wbr>ifconfig lec2 10.10.10.208&nbsp;<wbr>\</p>
+&nbsp;<wbr>&nbsp;<wbr>ifconfig lec2 10.10.10.208&nbsp;<wbr>\</dd>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>netmask 255.255.255.192&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>broadcast 10.10.10.255</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>broadcast 10.10.10.255</dd></dl>
 <p>&nbsp;<wbr>&nbsp;<wbr>ifconfig lec2 up<br />
 &nbsp;<wbr>&nbsp;<wbr>route add default gw 10.10.10.193</dl>
 <p>&nbsp;<wbr>fi<br />
@@ -63,7 +63,7 @@ description: "mpcd – ATM MPOA (Multi-Protocol Over ATM) client daemon"
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>mpoad/mpcd -i2 -s jaarli1 -l jaarli2&nbsp;<wbr>&amp;<br />
 &nbsp;<wbr>&nbsp;<wbr>#mpoad/mpcd -i2 -s jaarli1 -l jaarli2&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-L jaarli3 -n sampo&nbsp;<wbr>&amp;&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-L jaarli3 -n sampo&nbsp;<wbr>&amp;&nbsp;<wbr></dd></dl>
 <p>&nbsp;<wbr>fi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
 &nbsp;<wbr>;;<br />
  esac<br />

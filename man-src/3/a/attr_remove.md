@@ -19,40 +19,40 @@ int attr_removef(int fd, const char *attrname, int flags);
 <p> ] The <code>attr_remove</code> and <code>attr_removef</code> functions provide a way to remove previously created attributes from filesystem objects. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. If the attribute <i>attrname</i> exists, the attribute name and value will be removed from the fileystem object. The <i>flags</i> argument can contain the following symbols bitwise OR&#8217;ed together:</p>
 <dl>
-<dt><font SIZE="-1">ATTR_ROOT</font></p>
-<dd> Look for <i>attrname</i> in the <code>root</code> address space, not in the <code>user</code> address space. (limited to use by super-user only)</p>
-<dt><font SIZE="-1">ATTR_DONTFOLLOW</font></p>
-<dd> Do not follow symbolic links when resolving a <i>path</i> on an <code>attr_remove</code> function call. The default is to follow symbolic links.</dl>
+<dt><font SIZE="-1">ATTR_ROOT</font></dt>
+<dd> Look for <i>attrname</i> in the <code>root</code> address space, not in the <code>user</code> address space. (limited to use by super-user only)</dd>
+<dt><font SIZE="-1">ATTR_DONTFOLLOW</font></dt>
+<dd> Do not follow symbolic links when resolving a <i>path</i> on an <code>attr_remove</code> function call. The default is to follow symbolic links.</dd></dl>
 <p> <code>attr_remove</code> will fail if one or more of the following are true:</p>
 <dl>
-<dt><font SIZE="-1">[ENOATTR]</font></p>
-<dd> The attribute name given is not associated with the indicated filesystem object.</p>
-<dt><font SIZE="-1">[ENOENT]</font></p>
-<dd> The named file does not exist.</p>
-<dt><font SIZE="-1">[EPERM]</font></p>
-<dd> The effective user <font SIZE="-1">ID</font> does not match the owner of the file and the effective user <font SIZE="-1">ID</font> is not super-user.</p>
-<dt><font SIZE="-1">[ENOTDIR]</font></p>
-<dd> A component of the path prefix is not a directory.</p>
-<dt><font SIZE="-1">[EACCES]</font></p>
-<dd> Search permission is denied on a component of the path prefix.</p>
-<dt><font SIZE="-1">[EINVAL]</font></p>
-<dd> A bit was set in the <i>flag</i> argument that is not defined for this system call.</p>
-<dt><font SIZE="-1">[EFAULT]</font></p>
-<dd> <i>Path</i> points outside the allocated address space of the process.</p>
-<dt><font SIZE="-1">[ELOOP]</font></p>
-<dd> A path name lookup involved too many symbolic links.</p>
-<dt><font SIZE="-1">[ENAMETOOLONG]</font></p>
-<dd> The length of <i>path</i> exceeds <font SIZE="-1">{<i>MAXPATHLEN</i>}, </font> or a pathname component is longer than <font SIZE="-1">{<i>MAXNAMELEN</i>}. </font></dl>
+<dt><font SIZE="-1">[ENOATTR]</font></dt>
+<dd> The attribute name given is not associated with the indicated filesystem object.</dd>
+<dt><font SIZE="-1">[ENOENT]</font></dt>
+<dd> The named file does not exist.</dd>
+<dt><font SIZE="-1">[EPERM]</font></dt>
+<dd> The effective user <font SIZE="-1">ID</font> does not match the owner of the file and the effective user <font SIZE="-1">ID</font> is not super-user.</dd>
+<dt><font SIZE="-1">[ENOTDIR]</font></dt>
+<dd> A component of the path prefix is not a directory.</dd>
+<dt><font SIZE="-1">[EACCES]</font></dt>
+<dd> Search permission is denied on a component of the path prefix.</dd>
+<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dd> A bit was set in the <i>flag</i> argument that is not defined for this system call.</dd>
+<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dd> <i>Path</i> points outside the allocated address space of the process.</dd>
+<dt><font SIZE="-1">[ELOOP]</font></dt>
+<dd> A path name lookup involved too many symbolic links.</dd>
+<dt><font SIZE="-1">[ENAMETOOLONG]</font></dt>
+<dd> The length of <i>path</i> exceeds <font SIZE="-1">{<i>MAXPATHLEN</i>}, </font> or a pathname component is longer than <font SIZE="-1">{<i>MAXNAMELEN</i>}. </font></dd></dl>
 <p> <code>attr_removef</code> will fail if:</p>
 <dl>
-<dt><font SIZE="-1">[ENOATTR]</font></p>
-<dd> The attribute name given is not associated with the indicated filesystem object.</p>
-<dt><font SIZE="-1">[EINVAL]</font></p>
-<dd> A bit was set in the <i>flag</i> argument that is not defined for this system call, or <i>fd</i> refers to a socket, not a file.</p>
-<dt><font SIZE="-1">[EFAULT]</font></p>
-<dd> <i>Attrname</i> points outside the allocated address space of the process.</p>
-<dt><font SIZE="-1">[EBADF]</font></p>
-<dd> <i>Fd</i> does not refer to a valid descriptor.</dl>
+<dt><font SIZE="-1">[ENOATTR]</font></dt>
+<dd> The attribute name given is not associated with the indicated filesystem object.</dd>
+<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dd> A bit was set in the <i>flag</i> argument that is not defined for this system call, or <i>fd</i> refers to a socket, not a file.</dd>
+<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dd> <i>Attrname</i> points outside the allocated address space of the process.</dd>
+<dt><font SIZE="-1">[EBADF]</font></dt>
+<dd> <i>Fd</i> does not refer to a valid descriptor.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>SEE ALSO</h2>

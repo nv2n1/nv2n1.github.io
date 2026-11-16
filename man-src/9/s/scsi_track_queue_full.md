@@ -14,10 +14,10 @@ description: "scsi_track_queue_full – track QUEUE_FULL events to adjust queue 
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>SCSI Device in question</dl>
+</dd><dd>SCSI Device in question</dd></dl>
 <p> <i>depth</i></p>
 <dl>
-<dd>Current number of outstanding SCSI commands on this device, not counting the one returned as QUEUE_FULL.</dl>
+<dd>Current number of outstanding SCSI commands on this device, not counting the one returned as QUEUE_FULL.</dd></dl>
 <h2>Description</h2>
 <p>This function will track successive QUEUE_FULL events on a specific SCSI device to determine if and when there is a need to adjust the queue depth on the device.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "scsi_track_queue_full – track QUEUE_FULL events to adjust queue 
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

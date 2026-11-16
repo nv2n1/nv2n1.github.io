@@ -14,7 +14,7 @@ description: "snd_card_free_when_closed – Disconnect the card, free it later e
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>soundcard structure</dl>
+</dd><dd>soundcard structure</dd></dl>
 <h2>Description</h2>
 <p>Unlike <code>snd_card_free</code>, this function doesn&#8217;t try to release the card resource immediately, but tries to disconnect at first. When the card is still in use, the function returns before freeing the resources. The card resources will be freed when the refcount gets to zero.</p>
 <h2>Copyright</h2>

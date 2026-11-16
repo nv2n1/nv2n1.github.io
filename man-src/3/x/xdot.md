@@ -10,43 +10,35 @@ description: "libxdot – parsing and deparsing of xdot operations"
 <p><code>libxdot</code> &#8211; parsing and deparsing of xdot operations</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;graphviz/xdot.h&gt;
-
 typedef enum {
     xd_left,
     xd_center,
     xd_right
 } xdot_align;
-
 typedef struct {
     double x, y, z;
 } xdot_point;
-
 typedef struct {
     double x, y, w, h;
 } xdot_rect;
-
 typedef struct {
     int cnt;
     xdot_point *pts;
 } xdot_polyline;
-
 typedef struct {
     double x, y;
     xdot_align align;
     double width;
     char *text;
 } xdot_text;
-
 typedef struct {
     xdot_rect pos;
     char *name;
 } xdot_image;
-
 typedef struct {
     double size;
     char *name;
 } xdot_font;
-
 typedef enum {
     xd_filled_ellipse,
     xd_unfilled_ellipse,
@@ -62,7 +54,6 @@ typedef enum {
     xd_style,
     xd_image
 } xdot_kind;
-
 typedef enum {
     xop_ellipse,
     xop_polygon,
@@ -75,11 +66,9 @@ typedef enum {
     xop_style,
     xop_image
 } xop_kind;
-
 typedef struct _xdot_op xdot_op;
 typedef void (*drawfunc_t)(xdot_op *, int);
 typedef void (*freefunc_t)(xdot_op *);
-
 struct _xdot_op {
     xdot_kind kind;
     union {
@@ -95,9 +84,7 @@ struct _xdot_op {
     } u;
     drawfunc_t drawfunc;
 };
-
 #define XDOT_PARSE_ERROR 1
-
 typedef struct {
     int cnt;
     int sz;
@@ -105,7 +92,6 @@ typedef struct {
     freefunc_t freefunc;
     int flags;
 } xdot;
-
 xdot *parseXDotF(char *, drawfunc_t opfns[], int sz);
 xdot *parseXDot(char *);
 char *sprintXDot(xdot *);
@@ -134,7 +120,8 @@ void freeXDot(xdot *);</code></pre>
 <p>The fields give the name and size, in points, of a font.</p>
 <h3> xdot_align</h3>
 <p>This enumeration type corresponds to the xdot alignment values -1, 0 and 1 used with the text operator, or &#8216;\l&#8217;, &#8216;
-&#8217; and &#8216;&#8217; used in dot text.</p>
+&#8217; and &#8216;
+&#8217; used in dot text.</p>
 <h3>Functions</h3>
 <h3> xdot* parseXDotF (char *str, drawfunc_t* opfns, int sz)</h3>
 <p>Parses the string <i>str</i> as a sequence of xdot operations and returns a pointer to the resulting <i>xdot</i> structure. The function parses as many xdot operations as it can. If some unknown or incorrect input was encountered in <i>str</i>, the <i>ops</i> and <i>cnt</i> fields will reflect the operations parsed before the error, and the <i>XDOT_PARSE_ERROR</i> bit will be set in the <i>flags</i> field. The function returns NULL if it cannot parse anything. If <i>sz</i> is non-zero, it is assumed to be the size of some structure type containing <i>xdot_op</i> as a prefix. In this case, the elements in the array pointed to by <i>ops</i> will each have size <i>sz</i>. If <i>opfns</i> is non-zero, it is taken to be any array of functions indexed by <i>xop_kind</i>. During parsing, the <i>drawfunc</i> member of <i>xop_op</i> will be set to the corresponding function in <i>opfns</i>.</p>

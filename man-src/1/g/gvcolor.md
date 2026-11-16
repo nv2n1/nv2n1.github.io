@@ -20,10 +20,10 @@ description: "gvcolor – flow colors through a ranked digraph"
 <h2>EXIT STATUS</h2>
 <p> The following exit values are returned:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful completion.</p>
-<dt><code>1</code></p>
-<dd> If nodes of the graph do not possess a &#8220;pos&#8221; attribute.</dl>
+<dt><code>0</code></dt>
+<dd> Successful completion.</dd>
+<dt><code>1</code></dt>
+<dd> If nodes of the graph do not possess a &#8220;pos&#8221; attribute.</dd></dl>
 <h2>BUGS</h2>
 <p> It would be nice to make the program work without relying on an initial pass through <code>dot</code>.</p>
 <h2>AUTHORS</h2>

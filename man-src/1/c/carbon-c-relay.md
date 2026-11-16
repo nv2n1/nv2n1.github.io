@@ -16,65 +16,63 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> <code>carbon-c-relay</code> is a simple program that reads its routing information from a file. The command line arguments allow to set the location for this file, as well as the amount of dispatchers (worker threads) to use for reading the data from incoming connections and passing them onto the right destination(s). The route file supports two main constructs: clusters and matches. The first define groups of hosts data metrics can be sent to, the latter define which metrics should be sent to which cluster. Aggregation rules are seen as matches. </p>
 <p> For every metric received by the relay, cleansing is performed. The following changes are performed before any match, aggregate or rewrite rule sees the metric:</p>
 <dl>
-<dt>&bull;</p>
-<dd> double dot elimination (necessary for correctly functioning consistent hash routing)</p>
-<dt>&bull;</p>
-<dd> trailing/leading dot elimination</p>
-<dt>&bull;</p>
-<dd> whitespace normalisation (this mostly affects output of the relay to other targets: metric, value and timestamp will be separated by a single space only, ever)</p>
-<dt>&bull;</p>
-<dd> irregular char replacement with underscores (_), currently irregular is defined as not being in <code>[0-9a-zA-Z-_:#]</code>, but can be overridden on the command line.</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> double dot elimination (necessary for correctly functioning consistent hash routing)</dd>
+<dt>&bull;</dt>
+<dd> trailing/leading dot elimination</dd>
+<dt>&bull;</dt>
+<dd> whitespace normalisation (this mostly affects output of the relay to other targets: metric, value and timestamp will be separated by a single space only, ever)</dd>
+<dt>&bull;</dt>
+<dd> irregular char replacement with underscores (_), currently irregular is defined as not being in <code>[0-9a-zA-Z-_:#]</code>, but can be overridden on the command line.</dd>
+</dl>
 <h2>OPTIONS</h2>
 <p> These options control the behaviour of <code>carbon-c-relay</code>.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>-v</code>: Print version string and exit.</p>
-<dt>&bull;</p>
-<dd> <code>-d</code>: Enable debug mode, this prints statistics to stdout and prints extra messages about some situations encountered by the relay that normally would be too verbose to be enabled. When combined with <code>-t</code> (test mode) this also prints stub routes and consistent-hash ring contents.</p>
-<dt>&bull;</p>
-<dd> <code>-m</code>: Change statistics submission to be like carbon-cache.py, e.g. not cumulative. After each submission, all counters are reset to <code>0</code>.</p>
-<dt>&bull;</p>
-<dd> <code>-s</code>: Enable submission mode. In this mode, internal statistics are not generated. Instead, queue pressure and metrics drops are reported on stdout. This mode is useful when used as submission relay which&#8217; job is just to forward to (a set of) main relays. Statistics about the submission relays in this case are not needed, and could easily cause a non-desired flood of metrics e.g. when used on each and every host locally.</p>
-<dt>&bull;</p>
-<dd> <code>-t</code>: Test mode. This mode doesn&#8217;t do any routing at all, but instead reads input from stdin and prints what actions would be taken given the loaded configuration. This mode is very useful for testing relay routes for regular expression syntax etc. It also allows to give insight on how routing is applied in complex configurations, for it shows rewrites and aggregates taking place as well.</p>
-<dt>&bull;</p>
-<dd> <code>-D</code>: Deamonise into the background after startup. This option requires <code>-l</code> and <code>-P</code> flags to be set as well.</p>
-<dt>&bull;</p>
-<dd> <code>-f</code> <i>config-file</i>: Read configuration from <i>config-file</i>. A configuration consists of clusters and routes. See <i>CONFIGURATION SYNTAX</i> for more information on the options and syntax of this file.</p>
-<dt>&bull;</p>
-<dd> <code>-i</code> <i>iface</i>: Open up connections on interface <i>iface</i>. Currently only one interface can be specified, and it is specified by its IP address, not the interface name. By default, the relay opens listeners on all available interfaces (a.k.a. <code>0.0.0.0</code>).</p>
-<dt>&bull;</p>
-<dd> <code>-l</code> <i>log-file</i>: Use <i>log-file</i> for writing messages. Without this option, the relay writes both to <i>stdout</i> and <i>stderr</i>. When logging to file, all messages are prefixed with <code>MSG</code> when they were sent to <i>stdout</i>, and <code>ERR</code> when they were sent to <i>stderr</i>.</p>
-<dt>&bull;</p>
-<dd> <code>-p</code> <i>port</i>: Listen for connections on port <i>port</i>. The port number is used for both <code>TCP</code>, <code>UDP</code> and <code>UNIX sockets</code>. In the latter case, the socket file contains the port number. The port defaults to <i>2003</i>, which is also used by the original <code>carbon-cache.py</code>.</p>
-<dt>&bull;</p>
-<dd> <code>-w</code> <i>workers</i>: Use <i>workers</i> number of threads. The default number of workers is equal to the amount of detected CPU cores. It makes sense to reduce this number on many-core machines, or when the traffic is low.</p>
-<dt>&bull;</p>
-<dd> <code>-b</code> <i>batchsize</i>: Set the amount of metrics that sent to remote servers at once to <i>batchsize</i>. When the relay sends metrics to servers, it will retrieve <code>batchsize</code> metrics from the pending queue of metrics waiting for that server and send those one by one. The size of the batch will have minimal impact on sending performance, but it controls the amount of lock-contention on the queue. The default is <i>2500</i>.</p>
-<dt>&bull;</p>
-<dd> <code>-q</code> <i>queuesize</i>: Each server from the configuration where the relay will send metrics to, has a queue associated with it. This queue allows for disruptions and bursts to be handled. The size of this queue will be set to <i>queuesize</i> which allows for that amount of metrics to be stored in the queue before it overflows, and the relay starts dropping metrics. The larger the queue, more metrics can be absorbed, but also more memory will be used by the relay. The default queue size is <i>25000</i>.</p>
-<dt>&bull;</p>
-<dd> <code>-L</code> <i>stalls</i>: Sets the max mount of stalls to <i>stalls</i> before the relay starts dropping metrics for a server. When a queue fills up, the relay uses a mechanism called stalling to signal the client (writing to the relay) of this event. In particular when the client sends a large amount of metrics in very short time (burst), stalling can help to avoid dropping metrics, since the client just needs to slow down for a bit, which in many cases is possible (e.g. when catting a file with <code><a href="/docs/linux/man/1-nc/">nc</a></code>(1)). However, this behaviour can also obstruct, artificially stalling writers which cannot stop that easily. For this the stalls can be set from <i>0</i> to <i>15</i>, where each stall can take around 1 second on the client. The default value is set to <i>4</i>, which is aimed at the occasional disruption scenario and max effort to not loose metrics with moderate slowing down of clients.</p>
-<dt>&bull;</p>
-<dd> <code>-S</code> <i>interval</i>: Set the interval in which statistics are being generated and sent by the relay to <i>interval</i> seconds. The default is <i>60</i>.</p>
-<dt>&bull;</p>
-<dd> <code>-B</code> <i>backlog</i>: Sets TCP connection listen backlog to <i>backlog</i> connections. The default value is <i>3</i> but on servers which receive many concurrent connections, this setting likely needs to be increased to avoid connection refused errors on the clients.</p>
-<dt>&bull;</p>
-<dd> <code>-U</code> <i>bufsize</i>: Sets the socket send/receive buffer sizes in bytes. When unset, the OS default is used. The maximum is also determined by the OS. The sizes are set using setsockopt with the flags SO<i>RCVBUF and SO</i>SNDBUF. Setting this size may be necessary for large volume scenarios, for which also <code>-B</code> might apply.</p>
-<dt>&bull;</p>
-<dd> <code>-T</code> <i>timeout</i>: Specifies the IO timeout in milliseconds used for server connections. The default is <i>600</i> milliseconds, but may need increasing when WAN links are used for target servers. A relatively low value for connection timeout allows the relay to quickly establish a server is unreachable, and as such failover strategies to kick in before the queue runs high.</p>
-<dt>&bull;</p>
-<dd> <code>-c</code> <i>chars</i>: Defines the characters that are next to <code>[A-Za-z0-9]</code> allowed in metrics to <i>chars</i>. Any character not in this list, is replaced by the relay with <code>_</code> (underscore). The default list of allowed characters is <i>-_:#</i>.</p>
-<dt>&bull;</p>
-<dd> <code>-H</code> <i>hostname</i>: Override hostname determined by a call to <code>gethostname</code>(3) with <i>hostname</i>. The hostname is used mainly in the statistics metrics <code>carbon.relays.&lt;hostname&gt;.&lt;&#8230;&gt;</code> sent by the relay.</p>
-<dt>&bull;</p>
-<dd> <code>-P</code> <i>pidfile</i>: Write the pid of the relay process to a file called <i>pidfile</i>. This is in particular useful when daemonised in combination with init managers.</p>
-<dt>&bull;</p>
-<dd> <code>-O</code> <i>threshold</i>: The minimum number of rules to find before trying to optimise the ruleset. The default is <code>50</code>, to disable the optimiser, use <code>-1</code>, to always run the optimiser use <code>0</code>. The optimiser tries to group rules to avoid spending excessive time on matching expressions.</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> <code>-v</code>: Print version string and exit.</dd>
+<dt>&bull;</dt>
+<dd> <code>-d</code>: Enable debug mode, this prints statistics to stdout and prints extra messages about some situations encountered by the relay that normally would be too verbose to be enabled. When combined with <code>-t</code> (test mode) this also prints stub routes and consistent-hash ring contents.</dd>
+<dt>&bull;</dt>
+<dd> <code>-m</code>: Change statistics submission to be like carbon-cache.py, e.g. not cumulative. After each submission, all counters are reset to <code>0</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-s</code>: Enable submission mode. In this mode, internal statistics are not generated. Instead, queue pressure and metrics drops are reported on stdout. This mode is useful when used as submission relay which&#8217; job is just to forward to (a set of) main relays. Statistics about the submission relays in this case are not needed, and could easily cause a non-desired flood of metrics e.g. when used on each and every host locally.</dd>
+<dt>&bull;</dt>
+<dd> <code>-t</code>: Test mode. This mode doesn&#8217;t do any routing at all, but instead reads input from stdin and prints what actions would be taken given the loaded configuration. This mode is very useful for testing relay routes for regular expression syntax etc. It also allows to give insight on how routing is applied in complex configurations, for it shows rewrites and aggregates taking place as well.</dd>
+<dt>&bull;</dt>
+<dd> <code>-D</code>: Deamonise into the background after startup. This option requires <code>-l</code> and <code>-P</code> flags to be set as well.</dd>
+<dt>&bull;</dt>
+<dd> <code>-f</code> <i>config-file</i>: Read configuration from <i>config-file</i>. A configuration consists of clusters and routes. See <i>CONFIGURATION SYNTAX</i> for more information on the options and syntax of this file.</dd>
+<dt>&bull;</dt>
+<dd> <code>-i</code> <i>iface</i>: Open up connections on interface <i>iface</i>. Currently only one interface can be specified, and it is specified by its IP address, not the interface name. By default, the relay opens listeners on all available interfaces (a.k.a. <code>0.0.0.0</code>).</dd>
+<dt>&bull;</dt>
+<dd> <code>-l</code> <i>log-file</i>: Use <i>log-file</i> for writing messages. Without this option, the relay writes both to <i>stdout</i> and <i>stderr</i>. When logging to file, all messages are prefixed with <code>MSG</code> when they were sent to <i>stdout</i>, and <code>ERR</code> when they were sent to <i>stderr</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-p</code> <i>port</i>: Listen for connections on port <i>port</i>. The port number is used for both <code>TCP</code>, <code>UDP</code> and <code>UNIX sockets</code>. In the latter case, the socket file contains the port number. The port defaults to <i>2003</i>, which is also used by the original <code>carbon-cache.py</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-w</code> <i>workers</i>: Use <i>workers</i> number of threads. The default number of workers is equal to the amount of detected CPU cores. It makes sense to reduce this number on many-core machines, or when the traffic is low.</dd>
+<dt>&bull;</dt>
+<dd> <code>-b</code> <i>batchsize</i>: Set the amount of metrics that sent to remote servers at once to <i>batchsize</i>. When the relay sends metrics to servers, it will retrieve <code>batchsize</code> metrics from the pending queue of metrics waiting for that server and send those one by one. The size of the batch will have minimal impact on sending performance, but it controls the amount of lock-contention on the queue. The default is <i>2500</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-q</code> <i>queuesize</i>: Each server from the configuration where the relay will send metrics to, has a queue associated with it. This queue allows for disruptions and bursts to be handled. The size of this queue will be set to <i>queuesize</i> which allows for that amount of metrics to be stored in the queue before it overflows, and the relay starts dropping metrics. The larger the queue, more metrics can be absorbed, but also more memory will be used by the relay. The default queue size is <i>25000</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-L</code> <i>stalls</i>: Sets the max mount of stalls to <i>stalls</i> before the relay starts dropping metrics for a server. When a queue fills up, the relay uses a mechanism called stalling to signal the client (writing to the relay) of this event. In particular when the client sends a large amount of metrics in very short time (burst), stalling can help to avoid dropping metrics, since the client just needs to slow down for a bit, which in many cases is possible (e.g. when catting a file with <code><a href="/docs/linux/man/1-nc/">nc</a></code>(1)). However, this behaviour can also obstruct, artificially stalling writers which cannot stop that easily. For this the stalls can be set from <i>0</i> to <i>15</i>, where each stall can take around 1 second on the client. The default value is set to <i>4</i>, which is aimed at the occasional disruption scenario and max effort to not loose metrics with moderate slowing down of clients.</dd>
+<dt>&bull;</dt>
+<dd> <code>-S</code> <i>interval</i>: Set the interval in which statistics are being generated and sent by the relay to <i>interval</i> seconds. The default is <i>60</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-B</code> <i>backlog</i>: Sets TCP connection listen backlog to <i>backlog</i> connections. The default value is <i>3</i> but on servers which receive many concurrent connections, this setting likely needs to be increased to avoid connection refused errors on the clients.</dd>
+<dt>&bull;</dt>
+<dd> <code>-U</code> <i>bufsize</i>: Sets the socket send/receive buffer sizes in bytes. When unset, the OS default is used. The maximum is also determined by the OS. The sizes are set using setsockopt with the flags SO<i>RCVBUF and SO</i>SNDBUF. Setting this size may be necessary for large volume scenarios, for which also <code>-B</code> might apply.</dd>
+<dt>&bull;</dt>
+<dd> <code>-T</code> <i>timeout</i>: Specifies the IO timeout in milliseconds used for server connections. The default is <i>600</i> milliseconds, but may need increasing when WAN links are used for target servers. A relatively low value for connection timeout allows the relay to quickly establish a server is unreachable, and as such failover strategies to kick in before the queue runs high.</dd>
+<dt>&bull;</dt>
+<dd> <code>-c</code> <i>chars</i>: Defines the characters that are next to <code>[A-Za-z0-9]</code> allowed in metrics to <i>chars</i>. Any character not in this list, is replaced by the relay with <code>_</code> (underscore). The default list of allowed characters is <i>-_:#</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-H</code> <i>hostname</i>: Override hostname determined by a call to <code>gethostname</code>(3) with <i>hostname</i>. The hostname is used mainly in the statistics metrics <code>carbon.relays.&lt;hostname&gt;.&lt;&#8230;&gt;</code> sent by the relay.</dd>
+<dt>&bull;</dt>
+<dd> <code>-P</code> <i>pidfile</i>: Write the pid of the relay process to a file called <i>pidfile</i>. This is in particular useful when daemonised in combination with init managers.</dd>
+<dt>&bull;</dt>
+<dd> <code>-O</code> <i>threshold</i>: The minimum number of rules to find before trying to optimise the ruleset. The default is <code>50</code>, to disable the optimiser, use <code>-1</code>, to always run the optimiser use <code>0</code>. The optimiser tries to group rules to avoid spending excessive time on matching expressions.</dd>
+</dl>
 <h2>CONFIGURATION SYNTAX</h2>
 <p> The config file supports the following syntax, where comments start with a <code>#</code> character and can appear at any position on a line and suppress input until the end of that line: </p>
 <p> ` cluster &lt;name&gt;<br />
@@ -259,72 +257,71 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> When <code>carbon-c-relay</code> is run without <code>-d</code> or <code>-s</code> arguments, statistics will be produced and sent to the relay itself in the form of <code>carbon.relays.&lt;hostname&gt;.*</code>. The hostname is determined on startup, and can be overriden using the <code>-H</code> argument. While many metrics have a similar name to what carbon-cache.py would produce, their values are different. To obtain a more compatible set of values, the <code>-m</code> argument can be used to make values non-cumulative, that is, they will report the change compared to the previous value. By default, most values are running counters which only increase over time. The use of the nonNegativeDerivative() function from graphite is useful with these. The default sending interval is 1 minute (60 seconds), but can be overridden using the <code>-S</code> argument specified in seconds. </p>
 <p> The following metrics are produced in the <code>carbon.relays.&lt;hostname&gt;</code> namespace:</p>
 <dl>
-<dt>&bull;</p>
-<dd> metricsReceived</p>
+<dt>&bull;</dt>
+<dd> metricsReceived</dd>
 <dt>
-<dd> The number of metrics that were received by the relay. Received here means that they were seen and processed by any of the dispatchers.</p>
-<dt>&bull;</p>
-<dd> metricsSent</p>
+</dt><dd> The number of metrics that were received by the relay. Received here means that they were seen and processed by any of the dispatchers.</dd>
+<dt>&bull;</dt>
+<dd> metricsSent</dd>
 <dt>
-<dd> The number of metrics that were sent from the relay. This is a total count for all servers combined. When incoming metrics are duplicated by the cluster configuration, this counter will include all those duplications. In other words, the amount of metrics that were successfully sent to other systems. Note that metrics that are processed (received) but still in the sending queue (queued) are not included in this counter.</p>
-<dt>&bull;</p>
-<dd> metricsQueued</p>
+</dt><dd> The number of metrics that were sent from the relay. This is a total count for all servers combined. When incoming metrics are duplicated by the cluster configuration, this counter will include all those duplications. In other words, the amount of metrics that were successfully sent to other systems. Note that metrics that are processed (received) but still in the sending queue (queued) are not included in this counter.</dd>
+<dt>&bull;</dt>
+<dd> metricsQueued</dd>
 <dt>
-<dd> The total number of metrics that are currently in the queues for all the server targets. This metric is not cumulative, for it is a sample of the queue size, which can (and should) go up and down. Therefore you should not use the derivative function for this metric.</p>
-<dt>&bull;</p>
-<dd> metricsDropped</p>
+</dt><dd> The total number of metrics that are currently in the queues for all the server targets. This metric is not cumulative, for it is a sample of the queue size, which can (and should) go up and down. Therefore you should not use the derivative function for this metric.</dd>
+<dt>&bull;</dt>
+<dd> metricsDropped</dd>
 <dt>
-<dd> The total number of metric that had to be dropped due to server queues overflowing. A queue typically overflows when the server it tries to send its metrics to is not reachable, or too slow in ingesting the amount of metrics queued. This can be network or resource related, and also greatly depends on the rate of metrics being sent to the particular server.</p>
-<dt>&bull;</p>
-<dd> metricsBlackholed</p>
+</dt><dd> The total number of metric that had to be dropped due to server queues overflowing. A queue typically overflows when the server it tries to send its metrics to is not reachable, or too slow in ingesting the amount of metrics queued. This can be network or resource related, and also greatly depends on the rate of metrics being sent to the particular server.</dd>
+<dt>&bull;</dt>
+<dd> metricsBlackholed</dd>
 <dt>
-<dd> The number of metrics that did not match any rule, or matched a rule with blackhole as target. Depending on your configuration, a high value might be an indication of a misconfiguration somewhere. These metrics were received by the relay, but never sent anywhere, thus they disappeared.</p>
-<dt>&bull;</p>
-<dd> metricStalls</p>
+</dt><dd> The number of metrics that did not match any rule, or matched a rule with blackhole as target. Depending on your configuration, a high value might be an indication of a misconfiguration somewhere. These metrics were received by the relay, but never sent anywhere, thus they disappeared.</dd>
+<dt>&bull;</dt>
+<dd> metricStalls</dd>
 <dt>
-<dd> The number of times the relay had to stall a client to indicate that the downstream server cannot handle the stream of metrics. A stall is only performed when the queue is full and the server is actually receptive of metrics, but just too slow at the moment. Stalls typically happen during micro-bursts, where the client typically is unaware that it should stop sending more data, while it is able to.</p>
-<dt>&bull;</p>
-<dd> connections</p>
+</dt><dd> The number of times the relay had to stall a client to indicate that the downstream server cannot handle the stream of metrics. A stall is only performed when the queue is full and the server is actually receptive of metrics, but just too slow at the moment. Stalls typically happen during micro-bursts, where the client typically is unaware that it should stop sending more data, while it is able to.</dd>
+<dt>&bull;</dt>
+<dd> connections</dd>
 <dt>
-<dd> The number of connect requests handled. This is an ever increasing number just counting how many connections were accepted.</p>
-<dt>&bull;</p>
-<dd> disconnects</p>
+</dt><dd> The number of connect requests handled. This is an ever increasing number just counting how many connections were accepted.</dd>
+<dt>&bull;</dt>
+<dd> disconnects</dd>
 <dt>
-<dd> The number of disconnected clients. A disconnect either happens because the client goes away, or due to an idle timeout in the relay. The difference between this metric and connections is the amount of connections actively held by the relay. In normal situations this amount remains within reasonable bounds. Many connections, but few disconnections typically indicate a possible connection leak in the client. The idle connections disconnect in the relay here is to guard against resource drain in such scenarios.</p>
-<dt>&bull;</p>
-<dd> dispatch_wallTime_us</p>
+</dt><dd> The number of disconnected clients. A disconnect either happens because the client goes away, or due to an idle timeout in the relay. The difference between this metric and connections is the amount of connections actively held by the relay. In normal situations this amount remains within reasonable bounds. Many connections, but few disconnections typically indicate a possible connection leak in the client. The idle connections disconnect in the relay here is to guard against resource drain in such scenarios.</dd>
+<dt>&bull;</dt>
+<dd> dispatch_wallTime_us</dd>
 <dt>
-<dd> The number of microseconds spent by the dispatchers to do their work. In particular on multi-core systems, this value can be confusing, however, it indicates how long the dispatchers were doing work handling clients. It includes everything they do, from reading data from a socket, cleaning up the input metric, to adding the metric to the appropriate queues. The larger the configuration, and more complex in terms of matches, the more time the dispatchers will spend on the cpu. But also time they do /not/ spend on the cpu is included in this number. It is the pure wallclock time the dispatcher was serving a client.</p>
-<dt>&bull;</p>
-<dd> dispatch_sleepTime_us</p>
+</dt><dd> The number of microseconds spent by the dispatchers to do their work. In particular on multi-core systems, this value can be confusing, however, it indicates how long the dispatchers were doing work handling clients. It includes everything they do, from reading data from a socket, cleaning up the input metric, to adding the metric to the appropriate queues. The larger the configuration, and more complex in terms of matches, the more time the dispatchers will spend on the cpu. But also time they do /not/ spend on the cpu is included in this number. It is the pure wallclock time the dispatcher was serving a client.</dd>
+<dt>&bull;</dt>
+<dd> dispatch_sleepTime_us</dd>
 <dt>
-<dd> The number of microseconds spent by the dispatchers sleeping waiting for work. When this value gets small (or even zero) the dispatcher has so much work that it doesn&#8217;t sleep any more, and likely can&#8217;t process the work in a timely fashion any more. This value plus the wallTime from above sort of sums up to the total uptime taken by this dispatcher. Therefore, expressing the wallTime as percentage of this sum gives the busyness percentage draining all the way up to 100% if sleepTime goes to 0.</p>
-<dt>&bull;</p>
-<dd> server_wallTime_us</p>
+</dt><dd> The number of microseconds spent by the dispatchers sleeping waiting for work. When this value gets small (or even zero) the dispatcher has so much work that it doesn&#8217;t sleep any more, and likely can&#8217;t process the work in a timely fashion any more. This value plus the wallTime from above sort of sums up to the total uptime taken by this dispatcher. Therefore, expressing the wallTime as percentage of this sum gives the busyness percentage draining all the way up to 100% if sleepTime goes to 0.</dd>
+<dt>&bull;</dt>
+<dd> server_wallTime_us</dd>
 <dt>
-<dd> The number of microseconds spent by the servers to send the metrics from their queues. This value includes connection creation, reading from the queue, and sending metrics over the network.</p>
-<dt>&bull;</p>
-<dd> dispatcherX</p>
+</dt><dd> The number of microseconds spent by the servers to send the metrics from their queues. This value includes connection creation, reading from the queue, and sending metrics over the network.</dd>
+<dt>&bull;</dt>
+<dd> dispatcherX</dd>
 <dt>
-<dd> For each indivual dispatcher, the metrics received and blackholed plus the wall clock time. The values are as described above.</p>
-<dt>&bull;</p>
-<dd> destinations.X</p>
+</dt><dd> For each indivual dispatcher, the metrics received and blackholed plus the wall clock time. The values are as described above.</dd>
+<dt>&bull;</dt>
+<dd> destinations.X</dd>
 <dt>
-<dd> For all known destinations, the number of dropped, queued and sent metrics plus the wall clock time spent. The values are as described above.</p>
-<dt>&bull;</p>
-<dd> aggregators.metricsReceived</p>
+</dt><dd> For all known destinations, the number of dropped, queued and sent metrics plus the wall clock time spent. The values are as described above.</dd>
+<dt>&bull;</dt>
+<dd> aggregators.metricsReceived</dd>
 <dt>
-<dd> The number of metrics that were matched an aggregator rule and were accepted by the aggregator. When a metric matches multiple aggregators, this value will reflect that. A metric is not counted when it is considered syntactically invalid, e.g. no value was found.</p>
-<dt>&bull;</p>
-<dd> aggregators.metricsDropped</p>
+</dt><dd> The number of metrics that were matched an aggregator rule and were accepted by the aggregator. When a metric matches multiple aggregators, this value will reflect that. A metric is not counted when it is considered syntactically invalid, e.g. no value was found.</dd>
+<dt>&bull;</dt>
+<dd> aggregators.metricsDropped</dd>
 <dt>
-<dd> The number of metrics that were sent to an aggregator, but did not fit timewise. This is either because the metric was too far in the past or future. The expire after clause in aggregate statements controls how long in the past metric values are accepted.</p>
-<dt>&bull;</p>
-<dd> aggregators.metricsSent</p>
+</dt><dd> The number of metrics that were sent to an aggregator, but did not fit timewise. This is either because the metric was too far in the past or future. The expire after clause in aggregate statements controls how long in the past metric values are accepted.</dd>
+<dt>&bull;</dt>
+<dd> aggregators.metricsSent</dd>
 <dt>
-<dd> The number of metrics that were sent from the aggregators. These metrics were produced and are the actual results of aggregations.</p>
-<dt>
-<dd></dl>
+</dt><dd> The number of metrics that were sent from the aggregators. These metrics were produced and are the actual results of aggregations.</dd>
+</dl>
 <h2>BUGS</h2>
 <p> Please report them at: <i><a rel="nofollow" href="https://github.com/grobian/carbon-c-relay/issues">https://github.com/grobian/carbon-c-relay/issues</a></i></p>
 <h2>AUTHOR</h2>

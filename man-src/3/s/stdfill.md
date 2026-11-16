@@ -10,20 +10,14 @@ description: "std::fill – std::fill"
 <p>std::fill &#8211; std::fill</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (until C++ 20)
-
         void fill(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ForwardIt, class T&gt;
 (1)(since C++ 20)
-
     constexpr void fill(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
 (2)(since C++ 17)
-
     void fill(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);</code></pre>
 <p>1) Assigns the given value to the elements in the range [first, last).<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -54,12 +48,9 @@ ForwardIt must meet the requirements of LegacyForwardIterator.</p>
 <p>The following code uses fill() to set all of the elements of a vector of integers to -1:<br />
  // Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::fill(v.begin(), v.end(), -1);

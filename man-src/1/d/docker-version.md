@@ -18,7 +18,7 @@ description: "docker-version – Show the Docker version information"
 <p> The default output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker version
 Client:
@@ -36,20 +36,20 @@ Server:
  Built:        Tue Jun 23 17:56:00 UTC 2015
  OS/Arch:      linux/amd64
 </pre>
-</dl>
+</dd></dl>
 <p> Get server version: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker version-- format '&#123;&#123;.Server.Version}}' 1.8.0
 </code></pre>
-</dl>
+</dd></dl>
 <p> Dump raw data: </p>
 <p> To view all available fields, you can use the format &#123;&#123;json .}}. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker version-- format '&#123;&#123;json .}}'
 {
@@ -59,7 +59,7 @@ $ docker version-- format '&#123;&#123;json .}}'
     }
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Format the output using the given Go template</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for version</p>

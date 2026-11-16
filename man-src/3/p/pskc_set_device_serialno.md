@@ -13,10 +13,10 @@ description: "pskc_set_device_serialno – API function"
 void pskc_set_device_serialno(pskc_key_t *key, const char *serialno);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle from, e.g., <code>pskc_add_keypackage()</code>.</p>
-<dt>const char * serialno</p>
-<dd>string with serial number to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle from, e.g., <code>pskc_add_keypackage()</code>.</dd>
+<dt>const char * serialno</dt>
+<dd>string with serial number to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage DeviceInfo SerialNo value. This element indicates the serial number of the device. </p>
 <p> The pointer is stored in <i>container</i>, not a copy of the data, so you must not deallocate the data before another call to this function or the last call to any function using <i>container</i>.</p>

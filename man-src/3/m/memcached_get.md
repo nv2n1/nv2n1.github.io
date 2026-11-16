@@ -12,25 +12,25 @@ description: "memcached_get – Retrieving data from the server"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_result_st * memcached_fetch_result(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+<dt><code>memcached_result_st * memcached_fetch_result(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>char * memcached_get(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, size_t<i>&nbsp;<wbr>*value_length</i>, uint32_t<i>&nbsp;<wbr>*flags</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><code>char * memcached_get(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, size_t<i>&nbsp;<wbr>*value_length</i>, uint32_t<i>&nbsp;<wbr>*flags</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_mget(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>)</p>
+</dd><dt><code>memcached_return_t memcached_mget(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>)</dt>
 <dd>
-<dt><code>char * memcached_get_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, size_t<i>&nbsp;<wbr>*value_length</i>, uint32_t<i>&nbsp;<wbr>*flags</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><code>char * memcached_get_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, size_t<i>&nbsp;<wbr>*value_length</i>, uint32_t<i>&nbsp;<wbr>*flags</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_mget_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>)</p>
+</dd><dt><code>memcached_return_t memcached_mget_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_fetch_execute(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</p>
+</dd><dt><code>memcached_return_t memcached_fetch_execute(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_mget_execute(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</p>
+</dd><dt><code>memcached_return_t memcached_mget_execute(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</dt>
 <dd>
-<dt><code>memcached_return_t memcached_mget_execute_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</p>
+</dd><dt><code>memcached_return_t memcached_mget_execute_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char * const<i>&nbsp;<wbr>*keys</i>, const size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>number_of_keys</i>, <i>memcached_execute_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</dt>
 <dd>
-<dt><code>memcached_return_t (*memcached_execute_fn)(const memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, void<i>&nbsp;<wbr>*context</i>)</p>
+</dd><dt><code>memcached_return_t (*memcached_execute_fn)(const memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_get()</i> is used to fetch an individual value from the server. You must pass in a key and its length to fetch the object. You must supply three pointer variables which will give you the state of the returned object. A <code>uint32_t</code> pointer to contain whatever flags you stored with the value, a <code>size_t</code> pointer which will be filled with size of of the object, and a <code>memcached_return_t</code> pointer to hold any error. The object will be returned upon success and NULL will be returned on failure. Any object returned by <i>memcached_get()</i> must be released by the caller application. </p>
 <p> <i>memcached_mget()</i> is used to select multiple keys at once. For multiple key operations it is always faster to use this function. This function always works asynchronously. </p>
@@ -55,3 +55,4 @@ description: "memcached_get – Retrieving data from the server"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

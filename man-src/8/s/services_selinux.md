@@ -18,8 +18,8 @@ description: "services_selinux – Security Enhanced Linux Policy for the servic
 <p> services_munin_plugin_exec_t </code> </p>
 <p> &#8211; Set files with the services_munin_plugin_exec_t type, if you want to transition an executable to the services_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/nut.*, /usr/share/munin/plugins/snmp_.*, /usr/share/munin/plugins/named, /usr/share/munin/plugins/varnish_.*, /usr/share/munin/plugins/tomcat_.*, /usr/share/munin/plugins/postgres_.*, /usr/share/munin/plugins/asterisk_.*, /usr/share/munin/plugins/lpstat, /usr/share/munin/plugins/mysql_.*, /usr/share/munin/plugins/slapd_.*, /usr/share/munin/plugins/apache_.*, /usr/share/munin/plugins/ping_, /usr/share/munin/plugins/squid_.*, /usr/share/munin/plugins/fail2ban, /usr/share/munin/plugins/openvpn, /usr/share/munin/plugins/samba, /usr/share/munin/plugins/ntp_.*, /usr/share/munin/plugins/http_loadtime </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/nut.*, /usr/share/munin/plugins/snmp_.*, /usr/share/munin/plugins/named, /usr/share/munin/plugins/varnish_.*, /usr/share/munin/plugins/tomcat_.*, /usr/share/munin/plugins/postgres_.*, /usr/share/munin/plugins/asterisk_.*, /usr/share/munin/plugins/lpstat, /usr/share/munin/plugins/mysql_.*, /usr/share/munin/plugins/slapd_.*, /usr/share/munin/plugins/apache_.*, /usr/share/munin/plugins/ping_, /usr/share/munin/plugins/squid_.*, /usr/share/munin/plugins/fail2ban, /usr/share/munin/plugins/openvpn, /usr/share/munin/plugins/samba, /usr/share/munin/plugins/ntp_.*, /usr/share/munin/plugins/http_loadtime </dd>
 </dl>
 <p> <code>services_munin_plugin_tmp_t </code> </p>
 <p> &#8211; Set files with the services_munin_plugin_tmp_t type, if you want to store services munin plugin temporary files in the /tmp directories. </p>

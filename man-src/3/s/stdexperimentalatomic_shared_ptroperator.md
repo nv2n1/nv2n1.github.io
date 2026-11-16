@@ -12,7 +12,6 @@ std::experimental::atomic_shared_ptr&lt;T&gt;::operator= - std::experimental::at
 
 <pre><code>void operator=(shared_ptr&lt;T&gt; desired) noexcept;
 (1)
-
     void
     operator=(const atomic_shared_ptr &amp;) = delete;
 (2)</code></pre> 

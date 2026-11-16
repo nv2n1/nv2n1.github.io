@@ -46,6 +46,6 @@ called prior to making any calls to the library other than PAPI_library_init() .
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_thread_init</code> PAPI</dl>
+<dd><code>PAPI_thread_init</code> PAPI</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

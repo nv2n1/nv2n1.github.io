@@ -11,36 +11,16 @@ description: "sc::HessianUpdate –"
 <p> The <code>HessianUpdate</code> abstract class is used to specify a hessian update scheme.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;update.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::DFPUpdate</code>, and <code>sc::PowellUpdate</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>HessianUpdate (StateIn &amp;)
-
-
-
 HessianUpdate (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual void update (const RefSymmSCMatrix &amp;hessian, const Ref&lt; Function &gt; &amp;, const RefSCVector &amp;xnew, const RefSCVector &amp;gnew)=0
-
-
-
 virtual void set_inverse ()
-
-
-
 virtual void apply_transform (const Ref&lt; NonlinearTransform &gt; &amp;)
-
-
-
 Protected Attributes
 int inverse_hessian_</code></pre>
 <h2>Detailed Description</h2>

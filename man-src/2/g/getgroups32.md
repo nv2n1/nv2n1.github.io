@@ -32,22 +32,22 @@ description: "getgroups, setgroups – get/set list of supplementary group IDs"
 <p> On success, <code>setgroups</code>() returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>list</i> has an invalid address.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>list</i> has an invalid address.</dd></dl>
 <p> <code>getgroups</code>() can additionally fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>size</i> is less than the number of supplementary group IDs, but is not zero.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>size</i> is less than the number of supplementary group IDs, but is not zero.</dd></dl>
 <p> <code>setgroups</code>() can additionally fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>size</i> is greater than <code>NGROUPS_MAX</code> (32 before Linux 2.6.4; 65536 since Linux 2.6.4).</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process has insufficient privilege (the caller does not have the <code>CAP_SETGID</code> capability in the user namespace in which it resides).</p>
-<dt><code>EPERM</code> (since Linux 3.19)</p>
-<dd> The use of <code>setgroups</code>() is denied in this user namespace. See the description of <i>/proc/[pid]/setgroups</i> in <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7).</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>size</i> is greater than <code>NGROUPS_MAX</code> (32 before Linux 2.6.4; 65536 since Linux 2.6.4).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process has insufficient privilege (the caller does not have the <code>CAP_SETGID</code> capability in the user namespace in which it resides).</dd>
+<dt><code>EPERM</code> (since Linux 3.19)</dt>
+<dd> The use of <code>setgroups</code>() is denied in this user namespace. See the description of <i>/proc/[pid]/setgroups</i> in <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>getgroups</code>(): SVr4, 4.3BSD, POSIX.1-2001, POSIX.1-2008. </p>
 <p> <code>setgroups</code>(): SVr4, 4.3BSD. Since <code>setgroups</code>() requires privilege, it is not covered by POSIX.1.</p>

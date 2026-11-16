@@ -10,7 +10,6 @@ description: "ucwidth – Low level helper function for testing Unicode text dat
 <p>ucwidth &#8211; Low level helper function for testing Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ucwidth(int c);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for testing Unicode text data.</p>

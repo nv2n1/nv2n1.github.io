@@ -18,37 +18,35 @@ description: "ppmlabel – add text to a portable pixmap"
 <p> The arguments on the <code>ppmlabel</code> command line are not options in the strict sense; they are commands which control the placement and appearance of the text being added to the input pixmap. They are executed left to right, and any number of arguments may appear. </p>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <dl>
-<dt><code>-angle</code><i> angle</i></p>
-<dd> Sets the angle of the baseline of subsequent text. <i>angle</i> is specified as an integral number of degrees, measured counterclockwise from the row axis of the pixmap.</p>
-<dt><code>-background transparent | </code><i>colour</i></p>
-<dd> If the argument is <code>&#8220;</code>transparent<code>&#8221;,</code> text is drawn over the existing pixels in the pixmap. If a <i>colour</i> is given (see the <code>-colour</code> switch below for information on how to specify colours), rectangles enclosing subsequent text are filled with that colour.</p>
-<dt><code>-colour</code><i> colour</i></p>
-<dd> Sets the colour for subsequent text. The <i>colour</i> can be specified in five ways:</p>
+<dt><code>-angle</code><i> angle</i></dt>
+<dd> Sets the angle of the baseline of subsequent text. <i>angle</i> is specified as an integral number of degrees, measured counterclockwise from the row axis of the pixmap.</dd>
+<dt><code>-background transparent | </code><i>colour</i></dt>
+<dd> If the argument is <code>&#8220;</code>transparent<code>&#8221;,</code> text is drawn over the existing pixels in the pixmap. If a <i>colour</i> is given (see the <code>-colour</code> switch below for information on how to specify colours), rectangles enclosing subsequent text are filled with that colour.</dd>
+<dt><code>-colour</code><i> colour</i></dt>
+<dd> Sets the colour for subsequent text. The <i>colour</i> can be specified in five ways:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> A name, assuming that a pointer to an X11-style colour names file was compiled in.</p>
-<dt>&bull;</p>
-<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</p>
-<dt>&bull;</p>
-<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</p>
-<dt>&bull;</p>
-<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</p>
-<dt>&bull;</p>
-<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.)</dl>
+<dt>&bull;</dt>
+<dd> A name, assuming that a pointer to an X11-style colour names file was compiled in.</dd>
+<dt>&bull;</dt>
+<dd> An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.</dd>
+<dt>&bull;</dt>
+<dd> An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.</dd>
+<dt>&bull;</dt>
+<dd> For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.</dd>
+<dt>&bull;</dt>
+<dd> For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1. (This style was added before MIT came up with the similar rgbi style.)</dd></dl>
 </dl>
-<dt><code>-file</code><i> filename</i></p>
-<dd> Reads text from the file <i>filename</i> and draws it on successive lines.</p>
-<dt><code>-size</code><i> textsize</i></p>
-<dd> Sets the height of the tallest characters above the baseline to <i>textsize</i> pixels.</p>
-<dt><code>-text</code><i> &#8216;text string&#8217;</i></p>
-<dd> Draws the given text string (which must be quoted if it contains spaces). The location for subsequent text is advanced by 1.75 times the current <i>textsize</i>, which allows drawing multiple lines of text in a reasonable manner without specifying the position of each line.</p>
-<dt><code>-x</code><i> column</i></p>
-<dd> Sets the column at which subsequent text will be left justified. Depending on the shape of the first character, the actual text may begin a few pixels to the right of this point.</p>
-<dt><code>-y</code><i> row</i></p>
-<dd> Sets the row which will form the baseline of subsequent text. Characters with descenders, such as &#8220;y&#8221;, will extend below this line.</dl>
+<dt><code>-file</code><i> filename</i></dt>
+<dd> Reads text from the file <i>filename</i> and draws it on successive lines.</dd>
+<dt><code>-size</code><i> textsize</i></dt>
+<dd> Sets the height of the tallest characters above the baseline to <i>textsize</i> pixels.</dd>
+<dt><code>-text</code><i> &#8216;text string&#8217;</i></dt>
+<dd> Draws the given text string (which must be quoted if it contains spaces). The location for subsequent text is advanced by 1.75 times the current <i>textsize</i>, which allows drawing multiple lines of text in a reasonable manner without specifying the position of each line.</dd>
+<dt><code>-x</code><i> column</i></dt>
+<dd> Sets the column at which subsequent text will be left justified. Depending on the shape of the first character, the actual text may begin a few pixels to the right of this point.</dd>
+<dt><code>-y</code><i> row</i></dt>
+<dd> Sets the row which will form the baseline of subsequent text. Characters with descenders, such as &#8220;y&#8221;, will extend below this line.</dd></dl>
 <h2>BUGS</h2>
 <p> Text strings are restricted to 7 bit ASCII. The text font used by <code>ppmdraw</code> doesn&#8217;t include definitions for 8 bit ISO 8859/1 characters. </p>
 <p> When drawing multiple lines of text with a non-transparent background, it should probably fill the space between the lines with the background colour. This is tricky to get right when the text is rotated to a non-orthogonal angle. </p>

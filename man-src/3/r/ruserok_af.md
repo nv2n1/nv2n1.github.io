@@ -10,27 +10,19 @@ description: "rcmd, rresvport, iruserok, ruserok, rcmd_af, rresvport_af, irusero
 <p>rcmd, rresvport, iruserok, ruserok, rcmd_af, rresvport_af, iruserok_af, ruserok_af &#8211; routines for returning a stream to a remote command</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt; /* Or &lt;unistd.h&gt; on some systems */
-
 int rcmd(char **ahost, unsigned short inport, const char *locuser,
          const char *remuser, const char *cmd, int *fd2p);
-
 int rresvport(int *port);
-
 int iruserok(uint32_t raddr, int superuser,
              const char *ruser, const char *luser);
-
 int ruserok(const char *rhost, int superuser,
             const char *ruser, const char *luser);
-
 int rcmd_af(char **ahost, unsigned short inport, const char *locuser,
             const char *remuser, const char *cmd, int *fd2p,
             sa_family_t af);
-
 int rresvport_af(int *port, sa_family_t af);
-
 int iruserok_af(const void *raddr, int superuser,
                 const char *ruser, const char *luser, sa_family_t af);
-
 int ruserok_af(const char *rhost, int superuser,
                const char *ruser, const char *luser, sa_family_t af);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>rcmd</code>(), <code>rcmd_af</code>(), <code>rresvport</code>(), <code>rresvport_af</code>(), <code>iruserok</code>(), <code>iruserok_af</code>(), <code>ruserok</code>(), <code>ruserok_af</code>():<br />

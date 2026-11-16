@@ -10,15 +10,15 @@ description: "ether_addr_equal_64bits – Compare two Ethernet addresses"
 <p>ether_addr_equal_64bits &#8211; Compare two Ethernet addresses</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool ether_addr_equal_64bits(const u8&nbsp;<wbr></code><i>addr1[6+2]</i><code>, const u8&nbsp;<wbr></code><i>addr2[6+2]</i><code>);</code></dl>
+<dt> <code>bool ether_addr_equal_64bits(const u8&nbsp;<wbr></code><i>addr1[6+2]</i><code>, const u8&nbsp;<wbr></code><i>addr2[6+2]</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>addr1[6+2]</i></p>
 <dl>
 <dd>
-<dd>Pointer to an array of 8 bytes</dl>
+</dd><dd>Pointer to an array of 8 bytes</dd></dl>
 <p> <i>addr2[6+2]</i></p>
 <dl>
-<dd>Pointer to an other array of 8 bytes</dl>
+<dd>Pointer to an other array of 8 bytes</dd></dl>
 <h2>Description</h2>
 <p>Compare two Ethernet addresses, returns true if equal, false otherwise. </p>
 <p> The function doesn&#8217;t need any conditional branches and possibly uses word memory accesses on CPU allowing cheap unaligned memory reads. arrays = { byte1, byte2, byte3, byte4, byte5, byte6, pad1, pad2 } </p>

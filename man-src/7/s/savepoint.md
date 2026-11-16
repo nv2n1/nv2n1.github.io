@@ -15,8 +15,8 @@ description: "SAVEPOINT – define a new savepoint within the current transactio
 <p> A savepoint is a special mark inside a transaction that allows all commands that are executed after it was established to be rolled back, restoring the transaction state to what it was at the time of the savepoint.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>savepoint_name</i></p>
-<dd>The name to give to the new savepoint.</dl>
+<dt><i>savepoint_name</i></dt>
+<dd>The name to give to the new savepoint.</dd></dl>
 <h2>Notes</h2>
 <p>Use ROLLBACK TO SAVEPOINT [<code><a href="/docs/linux/man/7-rollback_to_savepoint/">rollback_to_savepoint</a></code>(7)] to rollback to a savepoint. Use RELEASE SAVEPOINT [<code><a href="/docs/linux/man/7-release_savepoint/">release_savepoint</a></code>(7)] to destroy a savepoint, keeping the effects of commands executed after it was established. </p>
 <p> Savepoints can only be established when inside a transaction block. There can be multiple savepoints defined within a transaction.</p>

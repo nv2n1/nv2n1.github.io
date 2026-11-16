@@ -15,19 +15,19 @@ snd_soc_cnew - create new control
 <h2>Arguments</h2>
 
 <i>_template</i>
-<dl><dd><dd>control template</dl>
+<dl><dd></dd><dd>control template</dd></dl>
  
 
  <i>data</i>
-<dl><dd>control private data</dl>
+<dl><dd>control private data</dd></dl>
  
 
  <i>long_name</i>
-<dl><dd>control long name</dl>
+<dl><dd>control long name</dd></dl>
  
 
  <i>prefix</i>
-<dl><dd>control name prefix</dl>
+<dl><dd>control name prefix</dd></dl>
 
 <h2>Description</h2>
 

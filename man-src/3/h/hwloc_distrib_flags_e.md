@@ -19,8 +19,8 @@ description: "hwlocality_helper_distribute – Distributing items over a topolog
 <p> Flags to be given to <code>hwloc_distrib()</code>. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>HWLOC_DISTRIB_FLAG_REVERSE </i></p>
-<dd> Distrib in reverse order, starting from the last objects.</dl>
+<dt><i>HWLOC_DISTRIB_FLAG_REVERSE </i></dt>
+<dd> Distrib in reverse order, starting from the last objects.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>static int hwloc_distrib (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> * roots, unsigned n_roots, <code>hwloc_cpuset_t</code> * set, unsigned n, unsigned until, unsigned long flags) [inline], [static]</h3>
 <p> Distribute n items over the topology under roots. Array set will be filled with n cpusets recursively distributed linearly over the topology under objects roots, down to depth until (which can be INT_MAX to distribute down to the finest level). </p>
@@ -31,12 +31,12 @@ description: "hwlocality_helper_distribute – Distributing items over a topolog
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function requires the roots objects to have a CPU set. </p>
+</dt><dd> This function requires the roots objects to have a CPU set. </dd>
 <p> This function replaces the now deprecated hwloc_distribute() and hwloc_distributev() functions.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

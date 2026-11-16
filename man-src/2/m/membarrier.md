@@ -24,48 +24,48 @@ int membarrier(int cmd, unsigned int flags, int cpu_id);
 <p> This will add overhead to the slow side, and remove overhead from the fast side, thus resulting in an overall performance increase as long as the slow side is infrequent enough that the overhead of the <code>membarrier</code>() calls does not outweigh the performance gain on the fast side. </p>
 <p> The <i>cmd</i> argument is one of the following:</p>
 <dl>
-<dt><code>MEMBARRIER_CMD_QUERY</code> (since Linux 4.3)</p>
-<dd> Query the set of supported commands. The return value of the call is a bit mask of supported commands. <code>MEMBARRIER_CMD_QUERY</code>, which has the value 0, is not itself included in this bit mask. This command is always supported (on kernels where <code>membarrier</code>() is provided).</p>
-<dt><code>MEMBARRIER_CMD_GLOBAL</code> (since Linux 4.16)</p>
-<dd> Ensure that all threads from all processes on the system pass through a state where all memory accesses to user-space addresses match program order between entry to and return from the <code>membarrier</code>() system call. All threads on the system are targeted by this command.</p>
-<dt><code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> (since Linux 4.16)</p>
-<dd> Execute a memory barrier on all running threads of all processes that previously registered with <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</p>
+<dt><code>MEMBARRIER_CMD_QUERY</code> (since Linux 4.3)</dt>
+<dd> Query the set of supported commands. The return value of the call is a bit mask of supported commands. <code>MEMBARRIER_CMD_QUERY</code>, which has the value 0, is not itself included in this bit mask. This command is always supported (on kernels where <code>membarrier</code>() is provided).</dd>
+<dt><code>MEMBARRIER_CMD_GLOBAL</code> (since Linux 4.16)</dt>
+<dd> Ensure that all threads from all processes on the system pass through a state where all memory accesses to user-space addresses match program order between entry to and return from the <code>membarrier</code>() system call. All threads on the system are targeted by this command.</dd>
+<dt><code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> (since Linux 4.16)</dt>
+<dd> Execute a memory barrier on all running threads of all processes that previously registered with <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</dd>
 <dt>
-<dd> Upon return from the system call, the calling thread has a guarantee that all running threads have passed through a state where all memory accesses to user-space addresses match program order between entry to and return from the system call (non-running threads are de facto in such a state). This guarantee is provided only for the threads of processes that previously registered with <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</p>
+</dt><dd> Upon return from the system call, the calling thread has a guarantee that all running threads have passed through a state where all memory accesses to user-space addresses match program order between entry to and return from the system call (non-running threads are de facto in such a state). This guarantee is provided only for the threads of processes that previously registered with <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</dd>
 <dt>
-<dd> Given that registration is about the intent to receive the barriers, it is valid to invoke <code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> from a process that has not employed <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</p>
+</dt><dd> Given that registration is about the intent to receive the barriers, it is valid to invoke <code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> from a process that has not employed <code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code>.</dd>
 <dt>
-<dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones; they never block, but have the downside of causing extra overhead.</p>
-<dt><code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code> (since Linux 4.16)</p>
-<dd> Register the process&#8217;s intent to receive <code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> memory barriers.</p>
-<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code> (since Linux 4.14)</p>
-<dd> Execute a memory barrier on each running thread belonging to the same process as the calling thread.</p>
+</dt><dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones; they never block, but have the downside of causing extra overhead.</dd>
+<dt><code>MEMBARRIER_CMD_REGISTER_GLOBAL_EXPEDITED</code> (since Linux 4.16)</dt>
+<dd> Register the process&#8217;s intent to receive <code>MEMBARRIER_CMD_GLOBAL_EXPEDITED</code> memory barriers.</dd>
+<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code> (since Linux 4.14)</dt>
+<dd> Execute a memory barrier on each running thread belonging to the same process as the calling thread.</dd>
 <dt>
-<dd> Upon return from the system call, the calling thread has a guarantee that all its running thread siblings have passed through a state where all memory accesses to user-space addresses match program order between entry to and return from the system call (non-running threads are de facto in such a state). This guarantee is provided only for threads in the same process as the calling thread.</p>
+</dt><dd> Upon return from the system call, the calling thread has a guarantee that all its running thread siblings have passed through a state where all memory accesses to user-space addresses match program order between entry to and return from the system call (non-running threads are de facto in such a state). This guarantee is provided only for threads in the same process as the calling thread.</dd>
 <dt>
-<dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones; they never block, but have the downside of causing extra overhead.</p>
+</dt><dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones; they never block, but have the downside of causing extra overhead.</dd>
 <dt>
-<dd> A process must register its intent to use the private expedited command prior to using it.</p>
-<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED</code> (since Linux 4.14)</p>
-<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code>.</p>
-<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code> (since Linux 4.16)</p>
-<dd> In addition to providing the memory ordering guarantees described in <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code>, upon return from system call the calling thread has a guarantee that all its running thread siblings have executed a core serializing instruction. This guarantee is provided only for threads in the same process as the calling thread.</p>
+</dt><dd> A process must register its intent to use the private expedited command prior to using it.</dd>
+<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED</code> (since Linux 4.14)</dt>
+<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code>.</dd>
+<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code> (since Linux 4.16)</dt>
+<dd> In addition to providing the memory ordering guarantees described in <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED</code>, upon return from system call the calling thread has a guarantee that all its running thread siblings have executed a core serializing instruction. This guarantee is provided only for threads in the same process as the calling thread.</dd>
 <dt>
-<dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones, they never block, but have the downside of causing extra overhead.</p>
+</dt><dd> The &quot;expedited&quot; commands complete faster than the non-expedited ones, they never block, but have the downside of causing extra overhead.</dd>
 <dt>
-<dd> A process must register its intent to use the private expedited sync core command prior to using it.</p>
-<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_SYNC_CORE</code> (since Linux 4.16)</p>
-<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code>.</p>
-<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_RSEQ</code> (since Linux 5.10)</p>
-<dd> Ensure the caller thread, upon return from system call, that all its running thread siblings have any currently running rseq critical sections restarted if <i>flags</i> parameter is 0; if <i>flags</i> parameter is <code>MEMBARRIER_CMD_FLAG_CPU</code>, then this operation is performed only on CPU indicated by <i>cpu_id</i>. This guarantee is provided only for threads in the same process as the calling thread.</p>
+</dt><dd> A process must register its intent to use the private expedited sync core command prior to using it.</dd>
+<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_SYNC_CORE</code> (since Linux 4.16)</dt>
+<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code>.</dd>
+<dt><code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_RSEQ</code> (since Linux 5.10)</dt>
+<dd> Ensure the caller thread, upon return from system call, that all its running thread siblings have any currently running rseq critical sections restarted if <i>flags</i> parameter is 0; if <i>flags</i> parameter is <code>MEMBARRIER_CMD_FLAG_CPU</code>, then this operation is performed only on CPU indicated by <i>cpu_id</i>. This guarantee is provided only for threads in the same process as the calling thread.</dd>
 <dt>
-<dd> RSEQ membarrier is only available in the &quot;private expedited&quot; form.</p>
+</dt><dd> RSEQ membarrier is only available in the &quot;private expedited&quot; form.</dd>
 <dt>
-<dd> A process must register its intent to use the private expedited rseq command prior to using it.</p>
-<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_RSEQ</code> (since Linux 5.10)</p>
-<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_RSEQ</code>.</p>
-<dt><code>MEMBARRIER_CMD_SHARED</code> (since Linux 4.3)</p>
-<dd> This is an alias for <code>MEMBARRIER_CMD_GLOBAL</code> that exists for header backward compatibility.</dl>
+</dt><dd> A process must register its intent to use the private expedited rseq command prior to using it.</dd>
+<dt><code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_RSEQ</code> (since Linux 5.10)</dt>
+<dd> Register the process&#8217;s intent to use <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_RSEQ</code>.</dd>
+<dt><code>MEMBARRIER_CMD_SHARED</code> (since Linux 4.3)</dt>
+<dd> This is an alias for <code>MEMBARRIER_CMD_GLOBAL</code> that exists for header backward compatibility.</dd></dl>
 <p> The <i>flags</i> argument must be specified as 0 unless the command is <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_RSEQ</code>, in which case <i>flags</i> can be either 0 or <code>MEMBARRIER_CMD_FLAG_CPU</code>. </p>
 <p> The <i>cpu_id</i> argument is ignored unless <i>flags</i> is <code>MEMBARRIER_CMD_FLAG_CPU</code>, in which case it must specify the CPU targeted by this membarrier command. </p>
 <p> All memory accesses performed in program order from each targeted thread are guaranteed to be ordered with respect to <code>membarrier</code>(). </p>
@@ -79,12 +79,12 @@ int membarrier(int cmd, unsigned int flags, int cpu_id);
 <p> For a given command, with <i>flags</i> set to 0, this system call is guaranteed to always return the same value until reboot. Further calls with the same arguments will lead to the same result. Therefore, with <i>flags</i> set to 0, error handling is required only for the first call to <code>membarrier</code>().</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>cmd</i> is invalid, or <i>flags</i> is nonzero, or the <code>MEMBARRIER_CMD_GLOBAL</code> command is disabled because the <i>nohz_full</i> CPU parameter has been set, or the <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code> and <code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_SYNC_CORE</code> commands are not implemented by the architecture.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The <code>membarrier</code>() system call is not implemented by this kernel.</p>
-<dt><code>EPERM</code></p>
-<dd> The current process was not registered prior to using private expedited commands.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>cmd</i> is invalid, or <i>flags</i> is nonzero, or the <code>MEMBARRIER_CMD_GLOBAL</code> command is disabled because the <i>nohz_full</i> CPU parameter has been set, or the <code>MEMBARRIER_CMD_PRIVATE_EXPEDITED_SYNC_CORE</code> and <code>MEMBARRIER_CMD_REGISTER_PRIVATE_EXPEDITED_SYNC_CORE</code> commands are not implemented by the architecture.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The <code>membarrier</code>() system call is not implemented by this kernel.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The current process was not registered prior to using private expedited commands.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>membarrier</code>() system call was added in Linux 4.3. </p>
 <p> Before Linux 5.10, the prototype for <code>membarrier</code>() was: </p>

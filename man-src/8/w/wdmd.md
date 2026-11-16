@@ -26,29 +26,29 @@ description: "wdmd – watchdog multiplexing daemon"
 <p>wdmd will run scripts from a designated directory every test interval. If a script exits with 0, the test is considered a success, otherwise a failure. If a script does not exit by the end of the test interval, it is considered a failure. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version, -V</code></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Print version. </p>
-<dt><code>&#8211;help, -h</code></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Print usage. </p>
-<dt><code>&#8211;dump, -d</code></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Print debug information from the daemon. </p>
-<dt><code>&#8211;probe, -p</code></p>
+<dt><code>&#8211;version, -V</code></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Print version. </dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Print usage. </dd>
+<dt><code>&#8211;dump, -d</code></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Print debug information from the daemon. </dd>
+<dt><code>&#8211;probe, -p</code></dt>
 <dd>&nbsp;<wbr>&nbsp;<wbr>Print path of functional watchdog device.&nbsp;<wbr>&nbsp;<wbr>Exit code 0 indicates a<br />
 &nbsp;<wbr>&nbsp;<wbr>functional device was found.&nbsp;<wbr>&nbsp;<wbr>Exit code 1 indicates a functional device<br />
-&nbsp;<wbr>&nbsp;<wbr>was not found. </p>
-<dt><code>-D</code></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Enable debugging to stderr and don&#8217;t fork. </p>
-<dt><code>-H</code><i> 0|1</i></p>
+&nbsp;<wbr>&nbsp;<wbr>was not found. </dd>
+<dt><code>-D</code></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Enable debugging to stderr and don&#8217;t fork. </dd>
+<dt><code>-H</code><i> 0|1</i></dt>
 <dd>&nbsp;<wbr>&nbsp;<wbr>Enable&nbsp;<wbr>(1)&nbsp;<wbr>or disable&nbsp;<wbr>(0)&nbsp;<wbr>high priority features such as realtime<br />
-&nbsp;<wbr>&nbsp;<wbr>scheduling priority and mlockall. </p>
-<dt><code>-G</code><i> name</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Group ownership for the socket. </p>
-<dt><code>-S</code><i> 0|1</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Enable&nbsp;<wbr>(1)&nbsp;<wbr>or disable&nbsp;<wbr>(0)&nbsp;<wbr>script tests. </p>
-<dt><code>-s</code><i> path</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Path to scripts dir. </p>
-<dt><code>-k</code><i> num</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>Kill unfinished scripts after num seconds. </p>
-<dt><code>-w</code><i> path</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>The path to the watchdog device to try first. </p>
+&nbsp;<wbr>&nbsp;<wbr>scheduling priority and mlockall. </dd>
+<dt><code>-G</code><i> name</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Group ownership for the socket. </dd>
+<dt><code>-S</code><i> 0|1</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Enable&nbsp;<wbr>(1)&nbsp;<wbr>or disable&nbsp;<wbr>(0)&nbsp;<wbr>script tests. </dd>
+<dt><code>-s</code><i> path</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Path to scripts dir. </dd>
+<dt><code>-k</code><i> num</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>Kill unfinished scripts after num seconds. </dd>
+<dt><code>-w</code><i> path</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>The path to the watchdog device to try first. </dd>
 </dl>

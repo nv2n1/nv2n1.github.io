@@ -11,18 +11,18 @@ description: "XkbGetIndicatorChanges – Updates a local copy of the keyboard de
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbGetIndicatorChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbIndicatorChangesPtr </code><i>changes</i><code>,</code> <code>unsigned int </code><i>state</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description to hold the new values</p>
-<dt><i>&#8211; changes</i></p>
-<dd>indicator maps/state to be obtained from the server</p>
-<dt><i>&#8211; state</i></p>
-<dd>backfilled with the state of the indicators</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description to hold the new values</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>indicator maps/state to be obtained from the server</dd>
+<dt><i>&#8211; state</i></dt>
+<dd>backfilled with the state of the indicators</dd></dl>
 <h2>Description</h2>
 <p>Whenever an indicator changes state, the server sends XkbIndicatorStateNotify events to all interested clients. Similarly, whenever an indicator&#8217;s map changes, the server sends XkbIndicatorMapNotify events to all interested clients. </p>
 <p> To receive XkbIndicatorStateNotify events, use <i>XkbSelectEvents </i> with both the <i>bits_to_change </i> and <i>values_for_bits </i> parameters containing XkbIndicatorStateNotifyMask. To receive XkbIndicatorMapNotify events, use <i>XkbSelectEvents </i> with XkbIndicatorMapNotifyMask. </p>
@@ -45,11 +45,11 @@ description: "XkbGetIndicatorChanges – Updates a local copy of the keyboard de
 <p> <i>XkbGetIndicatorChanges </i> examines the <i>changes </i> parameter, pulls over the necessary information from the server, and copies the results into the <i>xkb </i> keyboard description. If any bits are set in the <i>state_changes </i> field of <i>changes, XkbGetIndicatorChanges </i> also places the state of those indicators in <i>state. </i> If the <i>indicators </i> field of <i>xkb </i> is NULL, <i>XkbGetIndicatorChanges </i> allocates and initializes it. To free the <i>indicators </i> field, use <i>XkbFreeIndicators.</i></p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code>XkbFreeIndicators</code>(3), <code><a href="/docs/linux/man/3-xkbgetindicatorchanges/">XkbGetIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbnoteindicatorchanges/">XkbNoteIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code>XkbSelectEventDetail</code>(3)</p>

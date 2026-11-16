@@ -11,41 +11,23 @@ std::ios_base::fmtflags - std::ios_base::fmtflags
 <h2>Synopsis</h2>
 
 <pre><code>typedef /*implementation defined*/ fmtflags;
-
 static constexpr fmtflags dec = /*implementation defined*/
-
 static constexpr fmtflags oct = /*implementation defined*/
-
 static constexpr fmtflags hex = /*implementation defined*/
-
 static constexpr fmtflags basefield = dec | oct | hex;
-
 static constexpr fmtflags left = /*implementation defined*/
-
 static constexpr fmtflags right = /*implementation defined*/
-
 static constexpr fmtflags internal = /*implementation defined*/
-
 static constexpr fmtflags adjustfield = left | right | internal;
-
 static constexpr fmtflags scientific = /*implementation defined*/
-
 static constexpr fmtflags fixed = /*implementation defined*/
-
 static constexpr fmtflags floatfield = scientific | fixed;
-
 static constexpr fmtflags boolalpha = /*implementation defined*/
-
 static constexpr fmtflags showbase = /*implementation defined*/
-
 static constexpr fmtflags showpoint = /*implementation defined*/
-
 static constexpr fmtflags showpos = /*implementation defined*/
-
 static constexpr fmtflags skipws = /*implementation defined*/
-
 static constexpr fmtflags unitbuf = /*implementation defined*/
-
 static constexpr fmtflags uppercase = /*implementation defined*/</code></pre> 
 Specifies available formatting flags. It is a BitmaskType. The following constants are defined: 
 Constant Explanation 
@@ -74,7 +56,6 @@ uppercase replace certain lowercase letters with their uppercase
 The following example shows several different ways to print the same result. 
  // Run this code <pre><code>#include &lt;iostream&gt;
 int main()
-
 {
     int num = 150;
     // using fmtflags as class member constants:

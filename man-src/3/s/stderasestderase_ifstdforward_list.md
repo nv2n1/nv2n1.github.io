@@ -11,19 +11,14 @@ std::erase,std::erase_if(std::forward_list) - std::erase,std::erase_if(std::forw
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;forward_list&gt;
-
     template &lt;class T, class Alloc, class U&gt;
     (1)(since C++ 20)
-
         void erase(std::forward_list&lt;T, Alloc&gt; &amp;c, const U &amp;value);
-
 template &lt;class T, class Alloc, class Pred&gt;
 (2)(since C++ 20)
-
     void erase_if(std::forward_list&lt;T, Alloc&gt; &amp;c, Pred pred);
 1) Erases all elements that compare equal to value from the container. Equivalent to c.remove_if([&amp;](auto&amp; elem) {
     return elem == value; });
-
 2) Erases all elements that satisfy the predicate pred from the container. Equivalent to c.remove_if(pred);
 </code></pre>
 

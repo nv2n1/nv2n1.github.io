@@ -25,58 +25,55 @@ description: "fulla – Correct lens distortion, vignetting and chromatic aberra
 <p> See <a rel="nofollow" href="http://hugin.sf.net/tutorials/tca">http://hugin.sf.net/tutorials/tca</a> for a method to determine these parameters.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-g</code> <i>a:b:c:d</i></p>
-<dd> Radial distortion coefficient for all channels, (a, b, c, d)</p>
-<dt><code>-b</code> <i>a:b:c:d</i></p>
-<dd> Radial distortion coefficients for blue channel, (a, b, c, d). This is applied on top of the <code>-g</code> distortion coefficients, use for <font SIZE="-1">TCA</font> corr</p>
-<dt><code>-r</code> <i>a:b:c:d</i></p>
-<dd> Radial distortion coefficients for red channel, (a, b, c, d). This is applied on top of the <code>-g</code> distortion coefficients, use for <font SIZE="-1">TCA</font> corr</p>
-<dt><code>-p</code></p>
-<dd> Try to read radial distortion coefficients (usually supplied using -g) from the PTLens database. The environment variable <font SIZE="-1">PTLENS_PROFILE</font> should point to the profile.txt file. Since newer version of the PTLens database are incompatible with fulla, download the PTLens database from the hugin sourceforge website instead: <a rel="nofollow" href="http://www.sf.net/projects/hugin">http://www.sf.net/projects/hugin</a></p>
-<dt><code>-m</code> <i>Canon</i></p>
-<dd> Camera manufacturer, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given</p>
-<dt><code>-n</code> <i>Camera</i></p>
-<dd> Camera name, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given.</p>
-<dt><code>-l</code> <i>Lens</i></p>
-<dd> Lens name, for PTLens database query if not specified, a list of possible lenses is displayed</p>
-<dt><code>-d</code> <i>50</i></p>
-<dd> Specify focal length in mm, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given.</p>
-<dt><code>-s</code></p>
-<dd> Do not rescale the image to avoid black borders.</p>
-<dt><code>-f</code> <i>filename</i></p>
-<dd> Vignetting correction by flat-field division </p>
+<dt><code>-g</code> <i>a:b:c:d</i></dt>
+<dd> Radial distortion coefficient for all channels, (a, b, c, d)</dd>
+<dt><code>-b</code> <i>a:b:c:d</i></dt>
+<dd> Radial distortion coefficients for blue channel, (a, b, c, d). This is applied on top of the <code>-g</code> distortion coefficients, use for <font SIZE="-1">TCA</font> corr</dd>
+<dt><code>-r</code> <i>a:b:c:d</i></dt>
+<dd> Radial distortion coefficients for red channel, (a, b, c, d). This is applied on top of the <code>-g</code> distortion coefficients, use for <font SIZE="-1">TCA</font> corr</dd>
+<dt><code>-p</code></dt>
+<dd> Try to read radial distortion coefficients (usually supplied using -g) from the PTLens database. The environment variable <font SIZE="-1">PTLENS_PROFILE</font> should point to the profile.txt file. Since newer version of the PTLens database are incompatible with fulla, download the PTLens database from the hugin sourceforge website instead: <a rel="nofollow" href="http://www.sf.net/projects/hugin">http://www.sf.net/projects/hugin</a></dd>
+<dt><code>-m</code> <i>Canon</i></dt>
+<dd> Camera manufacturer, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given</dd>
+<dt><code>-n</code> <i>Camera</i></dt>
+<dd> Camera name, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given.</dd>
+<dt><code>-l</code> <i>Lens</i></dt>
+<dd> Lens name, for PTLens database query if not specified, a list of possible lenses is displayed</dd>
+<dt><code>-d</code> <i>50</i></dt>
+<dd> Specify focal length in mm, for PTLens database query. <font SIZE="-1">EXIF</font> data inside <font SIZE="-1">JPEG</font> files is read, if this option is not given.</dd>
+<dt><code>-s</code></dt>
+<dd> Do not rescale the image to avoid black borders.</dd>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd> Vignetting correction by flat-field division </dd>
 <pre>
     I = I / c,    c = flat-field / mean(flat-field)
 </pre>
-<dt><code>-c</code> <i>a:b:c:d</i></p>
-<dd> Radial vignetting correction by division: </p>
+<dt><code>-c</code> <i>a:b:c:d</i></dt>
+<dd> Radial vignetting correction by division: </dd>
 <pre>
     I = I / c,    c = a + b*r^2 + c*r^4 + d*r^6
 </pre>
-<dt><code>-i</code> <i>value</i></p>
-<dd> Gamma of input data. used for gamma correction before and after flat-field correction</p>
-<dt><code>-t</code> <i>n</i></p>
-<dd> Number of threads that should be used during processing</p>
-<dt><code>-h</code></p>
-<dd> Display help summary.</p>
-<dt><code>-o</code> <i>name</i></p>
-<dd> Set output filename. If more than one image is given, the name will be uses as suffix (default suffix: _corr)</p>
-<dt><code>-e</code> <i>value</i></p>
-<dd> Compression of the output files</p>
+<dt><code>-i</code> <i>value</i></dt>
+<dd> Gamma of input data. used for gamma correction before and after flat-field correction</dd>
+<dt><code>-t</code> <i>n</i></dt>
+<dd> Number of threads that should be used during processing</dd>
+<dt><code>-h</code></dt>
+<dd> Display help summary.</dd>
+<dt><code>-o</code> <i>name</i></dt>
+<dd> Set output filename. If more than one image is given, the name will be uses as suffix (default suffix: _corr)</dd>
+<dt><code>-e</code> <i>value</i></dt>
+<dd> Compression of the output files</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>For <font SIZE="-1">JPEG</font> output: 0-100</p>
+<dt>For <font SIZE="-1">JPEG</font> output: 0-100</dt>
 <dd>
-<dt>For tiff output: <font SIZE="-1">DEFLATE, LZW</font></p>
-<dd></dl>
+</dd><dt>For tiff output: <font SIZE="-1">DEFLATE, LZW</font></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v</code></p>
-<dd> Verbose</dl>
+</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>

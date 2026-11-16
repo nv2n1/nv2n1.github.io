@@ -18,7 +18,7 @@ description: "clients.conf – FreeRADIUS client configuration"
 <pre>client &lt;short-name&gt; {
  &lt;attribute&gt; = &lt;value&gt;
  }</pre>
-</dl>
+</dd></dl>
 <p> Clients have many configuration parameters. Most are documented in the file itself as comments. This page documents only the format of the file. Please read the <code>clients.conf</code> file itself for more information. </p>
 <p> The old-style format from 1.x is still accepted by the server, but that form is deprecated.</p>
 <h2>Files</h2>

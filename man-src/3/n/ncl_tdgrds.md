@@ -22,13 +22,13 @@ CALL TDGRDS (UMIN, VMIN, WMIN, UMAX, VMAX, WMAX, USTP, VSTP, WSTP, IGRT, IHID)
 
 The arguments of TDGRDS are as follows:
 <dl><dt>UMIN, VMIN, WMIN, UMAX, VMAX, WMAX
-<dd>(input expressions of type REAL) - coordinate values defining the box in 3-space. The names of these should make it clear what they are.
-<dt>USTP, VSTP, and WSTP
-<dd>(input expressions of type REAL) - specify step sizes between ticks or grid lines in the U direction, the V direction, and the W direction, respectively. If one of these values is less than or equal to zero, the ticks or grid lines in the associated direction are omitted.
-<dt>IGRT
-<dd>(an input expression of type INTEGER) - of the form 10*IGRN+IGRF, where IGRN is a value specifying what to draw on the near sides of the box and IGRF is a value specifying what to draw on the far sides of the box, where &quot;near&quot; and &quot;far&quot; are as defined by the current line of sight. Each of IGRN and IGRF can have one of the values 0 (draw nothing), 1 (draw just a perimeter), 2 (draw a perimeter with inward-pointing ticks), or 3 (draw a perimeter with a grid). For example, to draw grids on the far side of the box and just perimeters on the near sides of the box, use IGRT = 13.
-<dt>IHID
-<dd>(an input expression of type INTEGER) - set to 0 to draw only those sides of the box that cannot be hidden by something inside the box or to 1 to draw only those sides of the box that can be hidden by something inside the box. Standard operating procedure is to call TDGRDS before drawing surfaces inside a box, with IHID set to 1, and then call it again after drawing surfaces inside a box, with IHID set to 0.</dl>
+</dt><dd>(input expressions of type REAL) - coordinate values defining the box in 3-space. The names of these should make it clear what they are.
+</dd><dt>USTP, VSTP, and WSTP
+</dt><dd>(input expressions of type REAL) - specify step sizes between ticks or grid lines in the U direction, the V direction, and the W direction, respectively. If one of these values is less than or equal to zero, the ticks or grid lines in the associated direction are omitted.
+</dd><dt>IGRT
+</dt><dd>(an input expression of type INTEGER) - of the form 10*IGRN+IGRF, where IGRN is a value specifying what to draw on the near sides of the box and IGRF is a value specifying what to draw on the far sides of the box, where &quot;near&quot; and &quot;far&quot; are as defined by the current line of sight. Each of IGRN and IGRF can have one of the values 0 (draw nothing), 1 (draw just a perimeter), 2 (draw a perimeter with inward-pointing ticks), or 3 (draw a perimeter with a grid). For example, to draw grids on the far side of the box and just perimeters on the near sides of the box, use IGRT = 13.
+</dd><dt>IHID
+</dt><dd>(an input expression of type INTEGER) - set to 0 to draw only those sides of the box that cannot be hidden by something inside the box or to 1 to draw only those sides of the box that can be hidden by something inside the box. Standard operating procedure is to call TDGRDS before drawing surfaces inside a box, with IHID set to 1, and then call it again after drawing surfaces inside a box, with IHID set to 0.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

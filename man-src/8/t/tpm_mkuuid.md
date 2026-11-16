@@ -13,9 +13,9 @@ description: "tpm_mkuuid"
 <h2>Description</h2>
 <p>The program generates a TPM UUID and stores it in the file UUID-FILE.</p>
 <dl>
-<dt>-h</p>
-<dd>Display command usage info.</p>
-<dt>-v</p>
-<dd>Display command version info.</dl>
+<dt>-h</dt>
+<dd>Display command usage info.</dd>
+<dt>-v</dt>
+<dd>Display command version info.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8) </p>

@@ -16,12 +16,12 @@ description: "pmgetopt – Performance Co-Pilot shell script option parser"
 <p> The parameters given to <code>pmgetopt</code> take two forms: initially, options specific to <code>pmgetopt</code> itself are passed in, and terminated using the &#8212; mechanism. Thereafter, all of the parameters passed into the shell script should be passed (usually this is simply the &quot;$@&quot; variable). </p>
 <p> The options specific to <code>pmgetopt</code> are as follows:</p>
 <dl>
-<dt><code>-c</code>,<code>&#8211;config</code></p>
-<dd> A configuration <i>file</i> in the format described below is passed to <code>pmconfig </code> using this option. If this option is omitted, then <code>pmconfig </code> will read its configuration from the standard input stream.</p>
-<dt><code>-p</code>,<code>&#8211;progname</code></p>
-<dd> When parsing the calling shell scripts parameters, error and usage messages will contain the given program <i>name</i> rather than referring to <code>pmgetopt</code> itself as the source of the error.</p>
-<dt><code>-u</code>,<code>&#8211;usage</code></p>
-<dd> A usage message appropriate for the calling shell script to present as its own can be generated using the option.</dl>
+<dt><code>-c</code>,<code>&#8211;config</code></dt>
+<dd> A configuration <i>file</i> in the format described below is passed to <code>pmconfig </code> using this option. If this option is omitted, then <code>pmconfig </code> will read its configuration from the standard input stream.</dd>
+<dt><code>-p</code>,<code>&#8211;progname</code></dt>
+<dd> When parsing the calling shell scripts parameters, error and usage messages will contain the given program <i>name</i> rather than referring to <code>pmgetopt</code> itself as the source of the error.</dd>
+<dt><code>-u</code>,<code>&#8211;usage</code></dt>
+<dd> A usage message appropriate for the calling shell script to present as its own can be generated using the option.</dd></dl>
 <p> <code>pmgetopt</code> parses the given parameters, and produces output in a format suitable for sourcing in the calling shell script. When both short and long forms of an argument are allowed by the specification, <code>pmgetopt</code> will always indicate the short form for simpler shell processing. If arguments are presented that do not match the configuration, a request for a usage message (-?) will be generated for the calling script to respond to. Any non-option parameters will be echoed back to the calling script preceded by the double-hyphen delimiter. Thus a script should stop handling options when this delimiter is detected, and begin the handling of any non-option arguments. </p>
 <p> Unlike with the shell built-in <i>getopt</i> command, variables like $OPTARG are not set and the calling script will typically employ use of the shell built-in <i>eval</i>, <i>set</i> and positional <i>shift</i> commands to ensure option processing occurs correctly.</p>
 <h2>CONFIGURATION</h2>

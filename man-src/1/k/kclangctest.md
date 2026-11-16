@@ -13,28 +13,28 @@ description: "kclangctest – command line interface to test the C language bind
 <p> The command `<code>kclangctest</code>&#8216; is a utility for facility test and performance test of the C language binding. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>
-<dd>
- <code>kclangctest order </code>[<code>-rnd</code>][<code>-etc</code>][<code>-tran</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i><i>rnum</i></p>
+</dt><dd>
+ <code>kclangctest order </code>[<code>-rnd</code>][<code>-etc</code>][<code>-tran</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i><i>rnum</i></dd>
 <dl>
 <dt>
-<dd> Performs in-order tests.</dl>
+</dt><dd> Performs in-order tests.</dd></dl>
 <p> <code>kclangctest index </code>[<code>-rnd</code>][<code>-etc</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs indexing operations.</dl>
+</dt><dd> Performs indexing operations.</dd></dl>
 <p> <code>kclangctest map </code>[<code>-rnd</code>][<code>-etc</code>][<code>-bnum </code><i>num</i>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs test of memory-saving hash map.</dl>
+</dt><dd> Performs test of memory-saving hash map.</dd></dl>
 <p> <code>kclangctest list </code>[<code>-rnd</code>][<code>-etc</code>]<i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs test of memory-saving array list.</dl>
+</dt><dd> Performs test of memory-saving array list.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-rnd</code> : performs random test.<br />
+</dt><dd> <code>-rnd</code> : performs random test.<br />
  <code>-etc</code> : performs miscellaneous operations.<br />
  <code>-tran</code> : performs transaction.<br />
  <code>-oat</code> : opens the database with the auto transaction option.<br />
@@ -43,7 +43,7 @@ description: "kclangctest – command line interface to test the C language bind
  <code>-otl</code> : opens the database with the try locking option.<br />
  <code>-onr</code> : opens the database with the no auto repair option.<br />
  <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcpolymgr/">kcpolymgr</a></code>(1), <code><a href="/docs/linux/man/1-kcpolytest/">kcpolytest</a></code>(1) </p>

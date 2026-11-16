@@ -20,47 +20,47 @@ description: "getopt – parse command options (enhanced)"
 <p> <code>-a</code>, <code>&#8211;alternative</code></p>
 <dl>
 <dt>
-<dd> Allow long options to start with a single &#8216;<code>&#8211;</code>&#8216;.</dl>
+</dt><dd> Allow long options to start with a single &#8216;<code>&#8211;</code>&#8216;.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit. No other output is generated.</dl>
+</dt><dd> Display help text and exit. No other output is generated.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;longoptions</code> <i>longopts</i></p>
 <dl>
 <dt>
-<dd> The long (multi-character) options to be recognized. More than one option name may be specified at once, by separating the names with commas. This option may be given more than once, the <i>longopts</i> are cumulative. Each long option name in <i>longopts</i> may be followed by one colon to indicate it has a required argument, and by two colons to indicate it has an optional argument.</dl>
+</dt><dd> The long (multi-character) options to be recognized. More than one option name may be specified at once, by separating the names with commas. This option may be given more than once, the <i>longopts</i> are cumulative. Each long option name in <i>longopts</i> may be followed by one colon to indicate it has a required argument, and by two colons to indicate it has an optional argument.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;name</code> <i>progname</i></p>
 <dl>
 <dt>
-<dd> The name that will be used by the <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines when it reports errors. Note that errors of <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) are still reported as coming from getopt.</dl>
+</dt><dd> The name that will be used by the <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines when it reports errors. Note that errors of <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) are still reported as coming from getopt.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;options</code> <i>shortopts</i></p>
 <dl>
 <dt>
-<dd> The short (one-character) options to be recognized. If this option is not found, the first parameter of <code>getopt</code> that does not start with a &#8216;<code>&#8211;</code>&#8216; (and is not an option argument) is used as the short options string. Each short option character in <i>shortopts</i> may be followed by one colon to indicate it has a required argument, and by two colons to indicate it has an optional argument. The first character of shortopts may be &#8216;<code>+</code>&#8216; or &#8216;<code>&#8211;</code>&#8216; to influence the way options are parsed and output is generated (see section <code>SCANNING MODES</code> for details).</dl>
+</dt><dd> The short (one-character) options to be recognized. If this option is not found, the first parameter of <code>getopt</code> that does not start with a &#8216;<code>&#8211;</code>&#8216; (and is not an option argument) is used as the short options string. Each short option character in <i>shortopts</i> may be followed by one colon to indicate it has a required argument, and by two colons to indicate it has an optional argument. The first character of shortopts may be &#8216;<code>+</code>&#8216; or &#8216;<code>&#8211;</code>&#8216; to influence the way options are parsed and output is generated (see section <code>SCANNING MODES</code> for details).</dd></dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Disable error reporting by <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3).</dl>
+</dt><dd> Disable error reporting by <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3).</dd></dl>
 <p> <code>-Q</code>, <code>&#8211;quiet-output</code></p>
 <dl>
 <dt>
-<dd> Do not generate normal output. Errors are still reported by <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3), unless you also use <code>-q</code>.</dl>
+</dt><dd> Do not generate normal output. Errors are still reported by <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3), unless you also use <code>-q</code>.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;shell</code> <i>shell</i></p>
 <dl>
 <dt>
-<dd> Set quoting conventions to those of <i>shell</i>. If the <code>-s</code> option is not given, the BASH conventions are used. Valid arguments are currently &#8216;<code>sh</code>&#8216; &#8216;<code>bash</code>&#8216;, &#8216;<code>csh</code>&#8216;, and &#8216;<code>tcsh</code>&#8216;.</dl>
+</dt><dd> Set quoting conventions to those of <i>shell</i>. If the <code>-s</code> option is not given, the BASH conventions are used. Valid arguments are currently &#8216;<code>sh</code>&#8216; &#8216;<code>bash</code>&#8216;, &#8216;<code>csh</code>&#8216;, and &#8216;<code>tcsh</code>&#8216;.</dd></dl>
 <p> <code>-T</code>, <code>&#8211;test</code></p>
 <dl>
 <dt>
-<dd> Test if your <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) is this enhanced version or an old version. This generates no output, and sets the error status to 4. Other implementations of <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1), and this version if the environment variable <code>GETOPT_COMPATIBLE</code> is set, will return &#8216;<code>&#8212;</code>&#8216; and error status 0.</dl>
+</dt><dd> Test if your <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) is this enhanced version or an old version. This generates no output, and sets the error status to 4. Other implementations of <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1), and this version if the environment variable <code>GETOPT_COMPATIBLE</code> is set, will return &#8216;<code>&#8212;</code>&#8216; and error status 0.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;unquoted</code></p>
 <dl>
 <dt>
-<dd> Do not quote the output. Note that whitespace and special (shell-dependent) characters can cause havoc in this mode (like they do with other <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) implementations).</dl>
+</dt><dd> Do not quote the output. Note that whitespace and special (shell-dependent) characters can cause havoc in this mode (like they do with other <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) implementations).</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit. No other output is generated.</dl>
+</dt><dd> Display version information and exit. No other output is generated.</dd></dl>
 <h2>PARSING</h2>
 <p> This section specifies the format of the second part of the parameters of <code>getopt</code> (the <i>parameters</i> in the <code>SYNOPSIS</code>). The next section (<code>OUTPUT</code>) describes the output that is generated. These parameters were typically the parameters a shell function was called with. Care must be taken that each parameter the shell function was called with corresponds to exactly one parameter in the parameter list of <code>getopt</code> (see the <code>EXAMPLES</code>). All parsing is done by the GNU <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines. </p>
 <p> The parameters are parsed from left to right. Each parameter is classified as a short option, a long option, an argument to an option, or a non-option parameter. </p>
@@ -96,11 +96,11 @@ description: "getopt – parse command options (enhanced)"
 <p> <code>POSIXLY_CORRECT</code></p>
 <dl>
 <dt>
-<dd> This environment variable is examined by the <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines. If it is set, parsing stops as soon as a parameter is found that is not an option or an option argument. All remaining parameters are also interpreted as non-option parameters, regardless whether they start with a &#8216;<code>&#8211;</code>&#8216;.</dl>
+</dt><dd> This environment variable is examined by the <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines. If it is set, parsing stops as soon as a parameter is found that is not an option or an option argument. All remaining parameters are also interpreted as non-option parameters, regardless whether they start with a &#8216;<code>&#8211;</code>&#8216;.</dd></dl>
 <p> <code>GETOPT_COMPATIBLE</code></p>
 <dl>
 <dt>
-<dd> Forces <code>getopt</code> to use the first calling format as specified in the <code>SYNOPSIS</code>.</dl>
+</dt><dd> Forces <code>getopt</code> to use the first calling format as specified in the <code>SYNOPSIS</code>.</dd></dl>
 <h2>BUGS</h2>
 <p> <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) can parse long options with optional arguments that are given an empty optional argument (but cannot do this for short options). This <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1) treats optional arguments that are empty as if they were not present. </p>
 <p> The syntax if you do not want any short option variables at all is not very intuitive (you have to set them explicitly to the empty string).</p>

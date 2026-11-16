@@ -15,15 +15,15 @@ sock_tx_timestamp - checks whether the outgoing packet is to be time stamped
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket sending this packet</dl>
+<dl><dd></dd><dd>socket sending this packet</dd></dl>
  
 
  <i>tsflags</i>
-<dl><dd>timestamping flags to use</dl>
+<dl><dd>timestamping flags to use</dd></dl>
  
 
  <i>tx_flags</i>
-<dl><dd>completed with instructions for time stamping</dl>
+<dl><dd>completed with instructions for time stamping</dd></dl>
 
 <h2>Note</h2>
 

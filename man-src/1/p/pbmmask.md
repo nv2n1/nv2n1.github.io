@@ -36,8 +36,8 @@ description: "pbmmask – create a mask bitmap from a regular bitmap"
 <p> An interesting variation on this is to pipe the mask through the <i>pnmsmooth</i> script before using it. This makes the boundary between the two images less sharp. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-expand</code></p>
-<dd> Expands the mask by one pixel out from the image. This is useful if you want a little white border around your image. (A better solution might be to turn the <i>pbmlife</i> tool into a general cellular automaton tool&#8230;) </p>
+<dt><code>-expand</code></dt>
+<dd> Expands the mask by one pixel out from the image. This is useful if you want a little white border around your image. (A better solution might be to turn the <i>pbmlife</i> tool into a general cellular automaton tool&#8230;) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1), <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1), <code><a href="/docs/linux/man/1-pnminvert/">pnminvert</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pnmarith/">pnmarith</a></code>(1), <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1)</p>

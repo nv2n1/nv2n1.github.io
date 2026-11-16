@@ -17,16 +17,16 @@ debconf - copydb sourcedb destdb[--pattern = pattern][--owner - pattern = patter
 <p> <code>debconf-copydb</code> copies items from an existing debconf database into another, possibly new database. The two databases may have different formats; if so a conversion will automatically be done.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>sourcedb</i></p>
-<dd> The name of the source database. Typically it will be defined in your debconf.conf (or .debconfrc) file.</p>
-<dt><i>destdb</i></p>
-<dd> The name of the destination database. It may be defined in debconf.conf or .debconfrc, or you might define it on the command line (see below).</p>
-<dt><code>-p</code> <i>pattern</i>, <code>&#8211;pattern</code> <i>pattern</i></p>
-<dd> If this is specified, only items in <i>sourcedb</i> whose names match the pattern will be copied.</p>
-<dt><code>&#8211;owner-pattern</code> <i>pattern</i></p>
-<dd> If this is specified, only items in <i>sourcedb</i> whose owners match the pattern will be copied.</p>
-<dt><code>-c</code> <i>foo:bar</i>, <code>&#8211;config</code> <i>Foo:bar</i></p>
-<dd> Set option Foo to bar. This is similar to writing: </p>
+<dt><i>sourcedb</i></dt>
+<dd> The name of the source database. Typically it will be defined in your debconf.conf (or .debconfrc) file.</dd>
+<dt><i>destdb</i></dt>
+<dd> The name of the destination database. It may be defined in debconf.conf or .debconfrc, or you might define it on the command line (see below).</dd>
+<dt><code>-p</code> <i>pattern</i>, <code>&#8211;pattern</code> <i>pattern</i></dt>
+<dd> If this is specified, only items in <i>sourcedb</i> whose names match the pattern will be copied.</dd>
+<dt><code>&#8211;owner-pattern</code> <i>pattern</i></dt>
+<dd> If this is specified, only items in <i>sourcedb</i> whose owners match the pattern will be copied.</dd>
+<dt><code>-c</code> <i>foo:bar</i>, <code>&#8211;config</code> <i>Foo:bar</i></dt>
+<dd> Set option Foo to bar. This is similar to writing: </dd>
 <pre>
   Foo: bar
 </pre>
@@ -53,3 +53,4 @@ debconf - copydb configdb pipe-- config = Name : pipe-- config = Driver : Pipe--
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
 <h2>Index</h2>
+</p>

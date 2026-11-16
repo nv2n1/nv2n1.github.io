@@ -18,12 +18,12 @@ description: "prj2make – Makefile generator from Visual Studio and Sharp Devel
 <p> By default <i>prj2make</i> will produce Makefiles suitable to be consumed by Unix Make. If your application needs to target nmake, you can use the option `-isNmake&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-c, -isCsc</i></p>
-<dd> Use csc instead of mcs on the generated files.</p>
-<dt><i>-csproj2prjx</i></p>
-<dd> Runs in conversion mode, and turns a csproj/sln into a set of prjx/cmbx files.</p>
-<dt><i>-n, -isNmake</i></p>
-<dd> Produce makefiles suitable to be used by Nmake.</dl>
+<dt><i>-c, -isCsc</i></dt>
+<dd> Use csc instead of mcs on the generated files.</dd>
+<dt><i>-csproj2prjx</i></dt>
+<dd> Runs in conversion mode, and turns a csproj/sln into a set of prjx/cmbx files.</dd>
+<dt><i>-n, -isNmake</i></dt>
+<dd> Produce makefiles suitable to be used by Nmake.</dd></dl>
 <h2>MAILING LISTS</h2>
 <p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-list">http://lists.ximian.com/mailman/listinfo/mono-list</a> for details.</p>
 <h2>WEB SITE</h2>

@@ -40,51 +40,53 @@ or
 <p> The standard options are: </p>
 <p> <code>option all-subnets-local</code> <i>flag</i><code>;</code></p>
 <dl>
-<dd>This option specifies whether or not the client may assume that all subnets of the IP network to which the client is connected use the same MTU as the subnet of that network to which the client is directly connected. A value of true indicates that all subnets share the same MTU. A value of false means that the client should assume that some subnets of the directly connected network may have smaller MTUs.</dl>
+<dd>This option specifies whether or not the client may assume that all subnets of the IP network to which the client is connected use the same MTU as the subnet of that network to which the client is directly connected. A value of true indicates that all subnets share the same MTU. A value of false means that the client should assume that some subnets of the directly connected network may have smaller MTUs.</dd></dl>
 <p> <code>option arp-cache-timeout</code> <i>uint32</i><code>;</code></p>
 <dl>
-<dd>This option specifies the timeout in seconds for ARP cache entries.</dl>
+<dd>This option specifies the timeout in seconds for ARP cache entries.</dd></dl>
 <p> <code>option associated-ip</code> <i>ip-address</i> [<code>,</code> <i>ip-address</i>&#8230; ]<code>;</code></p>
 <dl>
-<dd>This option is part of lease query. It is used to return all of the IP addresses associated with a given DHCP client. </p>
+<dd>This option is part of lease query. It is used to return all of the IP addresses associated with a given DHCP client. </dd>
 <p> This option is not user configurable.</dl>
 <p> <code>option bcms-controller-address</code> <i>ip-address</i> [<code>,</code> <i>ip-address</i>&#8230; ]<code>;</code></p>
 <dl>
-<dd>This option configures a list of IPv4 addresses for use as Broadcast and Multicast Controller Servers (&quot;BCMS&quot;).</dl>
+<dd>This option configures a list of IPv4 addresses for use as Broadcast and Multicast Controller Servers (&quot;BCMS&quot;).</dd></dl>
 <p> <code>option bcms-controller-names</code> <i>domain-list</i><code>;</code></p>
 <dl>
-<dd>This option contains the domain names of local Broadcast and Multicast Controller Servers (&quot;BCMS&quot;) controllers which the client may use.</dl>
+<dd>This option contains the domain names of local Broadcast and Multicast Controller Servers (&quot;BCMS&quot;) controllers which the client may use.</dd></dl>
 <p> <code>option bootfile-name</code> <i>text</i><code>;</code></p>
 <dl>
-<dd>This option is used to identify a bootstrap file. If supported by the client, it should have the same effect as the <code>filename</code> declaration. BOOTP clients are unlikely to support this option. Some DHCP clients will support it, and others actually require it.</dl>
+<dd>This option is used to identify a bootstrap file. If supported by the client, it should have the same effect as the <code>filename</code> declaration. BOOTP clients are unlikely to support this option. Some DHCP clients will support it, and others actually require it.</dd></dl>
 <p> <code>option boot-size</code> <i>uint16</i><code>;</code></p>
 <dl>
-<dd>This option specifies the length in 512-octet blocks of the default boot image for the client.</dl>
+<dd>This option specifies the length in 512-octet blocks of the default boot image for the client.</dd></dl>
 <p> <code>option broadcast-address</code> <i>ip-address</i><code>;</code></p>
 <dl>
-<dd>This option specifies the broadcast address in use on the client&#8217;s subnet. Legal values for broadcast addresses are specified in section 3.2.1.3 of STD 3 (RFC1122).</dl>
+<dd>This option specifies the broadcast address in use on the client&#8217;s subnet. Legal values for broadcast addresses are specified in section 3.2.1.3 of STD 3 (RFC1122).</dd></dl>
 <p> <code>option</code> <code>capwap-ac-v4</code> <i>ip-address </i>[<code>,</code> <i>ip-address </i>&#8230; ] <code>;</code></p>
 <dl>
-<dd>A list of IPv4 addresses of CAPWAP ACs that the WTP may use. The addresses are listed in preference order. </p>
+<dd>A list of IPv4 addresses of CAPWAP ACs that the WTP may use. The addresses are listed in preference order. </dd>
 <p> This option is included based on RFC 5417.</dl>
 <p> <code>option client-last-transaction-time</code> <i>uint32</i><code>;</code></p>
 <dl>
-<dd>This option is part of lease query. It allows the receiver to determine the time of the most recent access by the client. The value is a duration in seconds from when the client last communicated with the DHCP server. </p>
+<dd>This option is part of lease query. It allows the receiver to determine the time of the most recent access by the client. The value is a duration in seconds from when the client last communicated with the DHCP server. </dd>
 <p> This option is not user configurable.</dl>
 <p> <code>option cookie-servers</code> <i>ip-address</i> [<code>,</code> <i>ip-address</i>&#8230; ]<code>;</code></p>
 <dl>
-<dd>The cookie server option specifies a list of RFC 865 cookie servers available to the client. Servers should be listed in order of preference.</dl>
+<dd>The cookie server option specifies a list of RFC 865 cookie servers available to the client. Servers should be listed in order of preference.</dd></dl>
 <p> <code>option default-ip-ttl</code> <i>uint8;</i></p>
 <dl>
-<dd>This option specifies the default time-to-live that the client should use on outgoing datagrams.</dl>
+<dd>This option specifies the default time-to-live that the client should use on outgoing datagrams.</dd></dl>
 <p> <code>option default-tcp-ttl</code> <i>uint8</i><code>;</code></p>
 <dl>
-<dd>This option specifies the default TTL that the client should use when sending TCP segments. The minimum value is 1.</dl>
+<dd>This option specifies the default TTL that the client should use when sending TCP segments. The minimum value is 1.</dd></dl>
 <p> <code>option default-url</code> <i>string</i><code>;</code></p>
 <dl>
-<dd>The format and meaning of this option is not described in any standards document, but is claimed to be in use by Apple Computer. It is not known what clients may reasonably do if supplied with this option. Use at your own risk.</dl>
+<dd>The format and meaning of this option is not described in any standards document, but is claimed to be in use by Apple Computer. It is not known what clients may reasonably do if supplied with this option. Use at your own risk.</dd></dl>
 <p> <code>option dhcp-client-identifier</code> <i>string</i><code>;</code></p>
 <dl>
-<dd>This option can be used to specify a DHCP client identifier in a host declaration, so that dhcpd can find the host record by matching against the client identifier. </p>
+<dd>This option can be used to specify a DHCP client identifier in a host declaration, so that dhcpd can find the host record by matching against the client identifier. </dd>
 <p> Please be aware that some DHCP clients, when configured with client identifiers that are ASCII text, will prepend a zero to the ASCII text. So you may need to write: </p>
 <pre> option dhcp-client-identifier &quot;
+</dl>
+</pre>

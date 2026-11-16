@@ -18,27 +18,27 @@ description: "cidr_table – format of Postfix CIDR tables"
 <h2>Table Format</h2>
 <p>The general form of a Postfix CIDR table is:</p>
 <dl>
-<dt><i>pattern result</i></p>
-<dd>When a search string matches the specified <i>pattern</i>, use the corresponding <i>result</i> value. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below).</p>
-<dt><code>!</code><i>pattern result</i></p>
-<dd>When a search string does not match the specified <i>pattern</i>, use the specified <i>result</i> value. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). </p>
+<dt><i>pattern result</i></dt>
+<dd>When a search string matches the specified <i>pattern</i>, use the corresponding <i>result</i> value. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below).</dd>
+<dt><code>!</code><i>pattern result</i></dt>
+<dd>When a search string does not match the specified <i>pattern</i>, use the specified <i>result</i> value. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). </dd>
 <p> This feature is available in Postfix 3.2 and later.</p>
-<dt><code>if </code><i>pattern</i></p>
+<dt><code>if </code><i>pattern</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>When a search string matches the specified <i>pattern</i>, match that search string against the patterns between <code>if</code> and <code>endif</code>. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>When a search string matches the specified <i>pattern</i>, match that search string against the patterns between <code>if</code> and <code>endif</code>. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to text between <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 3.2 and later.</p>
-<dt><code>if !</code><i>pattern</i></p>
+<dt><code>if !</code><i>pattern</i></dt>
 <dd>
-<dt><code>endif</code></p>
-<dd>When a search string does not match the specified <i>pattern</i>, match that search string against the patterns between <code>if</code> and <code>endif</code>. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). The <code>if</code>..<code>endif</code> can nest. </p>
+</dd><dt><code>endif</code></dt>
+<dd>When a search string does not match the specified <i>pattern</i>, match that search string against the patterns between <code>if</code> and <code>endif</code>. The <i>pattern</i> must be in <i>network/prefix</i> or <i>network_address</i> form (see ADDRESS PATTERN SYNTAX below). The <code>if</code>..<code>endif</code> can nest. </dd>
 <p> Note: do not prepend whitespace to text between <code>if</code>..<code>endif</code>. </p>
 <p> This feature is available in Postfix 3.2 and later.</p>
-<dt>blank lines and comments</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>multi-line text</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt>blank lines and comments</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>multi-line text</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <h2>Table Search Order</h2>
 <p>Patterns are applied in the order as specified in the table, until a pattern is found that matches the search string.</p>
 <h2>Address Pattern Syntax</h2>

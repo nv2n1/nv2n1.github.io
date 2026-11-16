@@ -15,11 +15,11 @@ usb_anchor_urb - anchors an URB while it is processed
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to the urb to anchor</dl>
+<dl><dd></dd><dd>pointer to the urb to anchor</dd></dl>
  
 
  <i>anchor</i>
-<dl><dd>pointer to the anchor</dl>
+<dl><dd>pointer to the anchor</dd></dl>
 
 <h2>Description</h2>
 

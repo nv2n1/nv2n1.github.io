@@ -122,8 +122,8 @@ description: "policykit_auth_selinux – Security Enhanced Linux Policy for the 
 <p> <code>policykit_auth_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_auth_exec_t type, if you want to transition an executable to the policykit_auth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pkla-check-authorization, /usr/libexec/polkit-read-auth-helper, /usr/lib/polkit-1/polkit-agent-helper-1, /usr/lib/policykit/polkit-read-auth-helper, /usr/libexec/polkit-1/polkit-agent-helper-1, /usr/libexec/kde4/polkit-kde-authentication-agent-1 </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pkla-check-authorization, /usr/libexec/polkit-read-auth-helper, /usr/lib/polkit-1/polkit-agent-helper-1, /usr/lib/policykit/polkit-read-auth-helper, /usr/libexec/polkit-1/polkit-agent-helper-1, /usr/libexec/kde4/polkit-kde-authentication-agent-1 </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -15,13 +15,13 @@ description: "remove-ds-admin.pl – Remove all Directory Servers and Admin Serv
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>Force removal &#8211; continue on error &#8211; otherwise, the command will abort at the first error encountered</p>
-<dt><code>-d</code></p>
-<dd>Enable debugging &#8211; adding more -d will make output more verbose</p>
-<dt><code>-y</code></p>
+<dt><code>-f</code></dt>
+<dd>Force removal &#8211; continue on error &#8211; otherwise, the command will abort at the first error encountered</dd>
+<dt><code>-d</code></dt>
+<dd>Enable debugging &#8211; adding more -d will make output more verbose</dd>
+<dt><code>-y</code></dt>
 <dd>Do the actual processing. Since the command is very destructive, you must provide the -y argument in order for the operation to proceed. <code>Use with extreme caution!</code>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>remove-ds-admin.pl was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>

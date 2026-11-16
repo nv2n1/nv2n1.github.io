@@ -15,17 +15,15 @@ description: "ziptorrent – torrentzip zip archives"
 <p> <code>ziptorrent</code> torrentzips <code>archive.</code> This is a restricted file format used for using bittorrent on zip files. Please see zip_set_archive_flag(3) for details on what information gets lost through this process. </p>
 <p> Supported options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a short help message and exit.</p>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t actually change archives, just print what would be done.</p>
-<dt><code>-V</code></p>
-<dd> Display version information and exit.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose: print which archives are already torrentzipped and which need to be rezipped.</dl>
+<dt><code>-h</code></dt>
+<dd> Display a short help message and exit.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t actually change archives, just print what would be done.</dd>
+<dt><code>-V</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose: print which archives are already torrentzipped and which need to be rezipped.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <code>ziptorrent</code> exits 0 on success and &gt;1 if an error occurred.</p>

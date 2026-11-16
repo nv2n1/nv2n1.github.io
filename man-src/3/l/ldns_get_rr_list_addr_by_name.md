@@ -17,11 +17,11 @@ description: "ldns_get_rr_list_addr_by_name, ldns_get_rr_list_name_by_addr"
 <p> ldns_rr_list* ldns_get_rr_list_name_by_addr(ldns_resolver *r, ldns_rdf *addr, ldns_rr_class c, uint16_t flags); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_get_rr_list_addr_by_name</i>()</p>
-<dd>Ask the resolver about name and return all address records .br <code>r</code>: the resolver to use .br <code>name</code>: the name to look for .br <code>c</code>: the class to use .br <code>flags</code>: give some optional flags to the query</dl>
+<dt> <i>ldns_get_rr_list_addr_by_name</i>()</dt>
+<dd>Ask the resolver about name and return all address records .br <code>r</code>: the resolver to use .br <code>name</code>: the name to look for .br <code>c</code>: the class to use .br <code>flags</code>: give some optional flags to the query</dd></dl>
 <dl>
-<dt> <i>ldns_get_rr_list_name_by_addr</i>()</p>
-<dd>ask the resolver about the address and return the name .br <code>r</code>: the resolver to use .br <code>addr</code>: the addr to look for .br <code>c</code>: the class to use .br <code>flags</code>: give some optional flags to the query</dl>
+<dt> <i>ldns_get_rr_list_name_by_addr</i>()</dt>
+<dd>ask the resolver about the address and return the name .br <code>r</code>: the resolver to use .br <code>addr</code>: the addr to look for .br <code>c</code>: the class to use .br <code>flags</code>: give some optional flags to the query</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -11,9 +11,7 @@ std::experimental::swap(std::experimental::packaged_task) - std::experimental::s
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class R, class... Args&gt;
-
 void swap(std::experimental::packaged_task&lt;R(Args...)&gt; &amp;lhs,
-
           std::experimental::packaged_task&lt;R(Args...)&gt; &amp;rhs) noexcept;</code></pre> 
 Overloads the swap algorithm for std::experimental::packaged_task. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

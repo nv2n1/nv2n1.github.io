@@ -22,79 +22,79 @@ description: "su – run a command with substitute user and group ID"
 <p> <code>-c</code>, <code>&#8211;command</code>=<i>command</i></p>
 <dl>
 <dt>
-<dd> Pass <i>command</i> to the shell with the <code>-c</code> option.</dl>
+</dt><dd> Pass <i>command</i> to the shell with the <code>-c</code> option.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;fast</code></p>
 <dl>
 <dt>
-<dd> Pass <code>-f</code> to the shell, which may or may not be useful, depending on the shell.</dl>
+</dt><dd> Pass <code>-f</code> to the shell, which may or may not be useful, depending on the shell.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;group</code>=<i>group</i></p>
 <dl>
 <dt>
-<dd> Specify the primary group. This option is available to the root user only.</dl>
+</dt><dd> Specify the primary group. This option is available to the root user only.</dd></dl>
 <p> <code>-G</code>, <code>&#8211;supp-group</code>=<i>group</i></p>
 <dl>
 <dt>
-<dd> Specify a supplementary group. This option is available to the root user only. The first specified supplementary group is also used as a primary group if the option <code>&#8211;group</code> is not specified.</dl>
+</dt><dd> Specify a supplementary group. This option is available to the root user only. The first specified supplementary group is also used as a primary group if the option <code>&#8211;group</code> is not specified.</dd></dl>
 <p> <code>&#8211;</code>, <code>-l</code>, <code>&#8211;login</code></p>
 <dl>
 <dt>
-<dd> Start the shell as a login shell with an environment similar to a real login: </p>
+</dt><dd> Start the shell as a login shell with an environment similar to a real login: </dd>
 <dl>
 <dt>
-<dd> &bull; clears all the environment variables except <code>TERM</code> and variables specified by <code>&#8211;whitelist-environment</code></dl>
+</dt><dd> &bull; clears all the environment variables except <code>TERM</code> and variables specified by <code>&#8211;whitelist-environment</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; initializes the environment variables <code>HOME</code>, <code>SHELL</code>, <code>USER</code>, <code>LOGNAME</code>, and <code>PATH</code></dl>
+</dt><dd> &bull; initializes the environment variables <code>HOME</code>, <code>SHELL</code>, <code>USER</code>, <code>LOGNAME</code>, and <code>PATH</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; changes to the target user&#8217;s home directory</dl>
+</dt><dd> &bull; changes to the target user&#8217;s home directory</dd></dl>
 <dl>
 <dt>
-<dd> &bull; sets argv[0] of the shell to &#8216;<code>&#8211;</code>&#8216; in order to make the shell a login shell</dl>
+</dt><dd> &bull; sets argv[0] of the shell to &#8216;<code>&#8211;</code>&#8216; in order to make the shell a login shell</dd></dl>
 </dl>
 <p> <code>-m</code>, <code>-p</code>, <code>&#8211;preserve-environment</code></p>
 <dl>
 <dt>
-<dd> Preserve the entire environment, i.e., do not set <code>HOME</code>, <code>SHELL</code>, <code>USER</code> or <code>LOGNAME</code>. This option is ignored if the option <code>&#8211;login</code> is specified.</dl>
+</dt><dd> Preserve the entire environment, i.e., do not set <code>HOME</code>, <code>SHELL</code>, <code>USER</code> or <code>LOGNAME</code>. This option is ignored if the option <code>&#8211;login</code> is specified.</dd></dl>
 <p> <code>-P</code>, <code>&#8211;pty</code></p>
 <dl>
 <dt>
-<dd> Create a pseudo-terminal for the session. The independent terminal provides better security as the user does not share a terminal with the original session. This can be used to avoid TIOCSTI ioctl terminal injection and other security attacks against terminal file descriptors. The entire session can also be moved to the background (e.g., &quot;su &#8211;pty &#8211; username -c application &amp;&quot;). If the pseudo-terminal is enabled, then <code>su</code> works as a proxy between the sessions (copy stdin and stdout). </p>
+</dt><dd> Create a pseudo-terminal for the session. The independent terminal provides better security as the user does not share a terminal with the original session. This can be used to avoid TIOCSTI ioctl terminal injection and other security attacks against terminal file descriptors. The entire session can also be moved to the background (e.g., &quot;su &#8211;pty &#8211; username -c application &amp;&quot;). If the pseudo-terminal is enabled, then <code>su</code> works as a proxy between the sessions (copy stdin and stdout). </dd>
 <p> This feature is mostly designed for interactive sessions. If the standard input is not a terminal, but for example a pipe (e.g., echo &quot;date&quot; | su &#8211;pty), then the ECHO flag for the pseudo-terminal is disabled to avoid messy output.</dl>
 <p> <code>-s</code>, <code>&#8211;shell</code>=<i>shell</i></p>
 <dl>
 <dt>
-<dd> Run the specified <i>shell</i> instead of the default. The shell to run is selected according to the following rules, in order: </p>
+</dt><dd> Run the specified <i>shell</i> instead of the default. The shell to run is selected according to the following rules, in order: </dd>
 <dl>
 <dt>
-<dd> &bull; the shell specified with <code>&#8211;shell</code></dl>
+</dt><dd> &bull; the shell specified with <code>&#8211;shell</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; the shell specified in the environment variable <code>SHELL</code>, if the <code>&#8211;preserve-environment</code> option is used</dl>
+</dt><dd> &bull; the shell specified in the environment variable <code>SHELL</code>, if the <code>&#8211;preserve-environment</code> option is used</dd></dl>
 <dl>
 <dt>
-<dd> &bull; the shell listed in the passwd entry of the target user</dl>
+</dt><dd> &bull; the shell listed in the passwd entry of the target user</dd></dl>
 <dl>
 <dt>
-<dd> &bull; /bin/sh</dl>
+</dt><dd> &bull; /bin/sh</dd></dl>
 </dl>
 <p> If the target user has a restricted shell (i.e., not listed in /etc/shells), the <code>&#8211;shell</code> option and the <code>SHELL</code> environment variables are ignored unless the calling user is root. </p>
 <p> <code>&#8211;session-command=</code><i>command</i></p>
 <dl>
 <dt>
-<dd> Same as <code>-c</code>, but do not create a new session. (Discouraged.)</dl>
+</dt><dd> Same as <code>-c</code>, but do not create a new session. (Discouraged.)</dd></dl>
 <p> <code>-w</code>, <code>&#8211;whitelist-environment</code>=<i>list</i></p>
 <dl>
 <dt>
-<dd> Don&#8217;t reset the environment variables specified in the comma-separated <i>list</i> when clearing the environment for <code>&#8211;login</code>. The whitelist is ignored for the environment variables <code>HOME</code>, <code>SHELL</code>, <code>USER</code>, <code>LOGNAME</code>, and <code>PATH</code>.</dl>
+</dt><dd> Don&#8217;t reset the environment variables specified in the comma-separated <i>list</i> when clearing the environment for <code>&#8211;login</code>. The whitelist is ignored for the environment variables <code>HOME</code>, <code>SHELL</code>, <code>USER</code>, <code>LOGNAME</code>, and <code>PATH</code>.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>SIGNALS</h2>
 <p> Upon receiving either <code>SIGINT</code>, <code>SIGQUIT</code> or <code>SIGTERM</code>, <code>su</code> terminates its child and afterwards terminates itself with the received signal. The child is terminated by <code>SIGTERM</code>, after unsuccessful attempt and 2 seconds of delay the child is killed by <code>SIGKILL</code>.</p>
 <h2>CONFIG FILES</h2>
@@ -102,19 +102,19 @@ description: "su – run a command with substitute user and group ID"
 <p> <code>FAIL_DELAY</code> (number)</p>
 <dl>
 <dt>
-<dd> Delay in seconds in case of an authentication failure. The number must be a non-negative integer.</dl>
+</dt><dd> Delay in seconds in case of an authentication failure. The number must be a non-negative integer.</dd></dl>
 <p> <code>ENV_PATH</code> (string)</p>
 <dl>
 <dt>
-<dd> Defines the <code>PATH</code> environment variable for a regular user. The default value is <i>/usr/local/bin:/bin:/usr/bin</i>.</dl>
+</dt><dd> Defines the <code>PATH</code> environment variable for a regular user. The default value is <i>/usr/local/bin:/bin:/usr/bin</i>.</dd></dl>
 <p> <code>ENV_ROOTPATH</code> (string), <code>ENV_SUPATH</code> (string)</p>
 <dl>
 <dt>
-<dd> Defines the <code>PATH</code> environment variable for root. <code>ENV_SUPATH</code> takes precedence. The default value is <i>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</i>.</dl>
+</dt><dd> Defines the <code>PATH</code> environment variable for root. <code>ENV_SUPATH</code> takes precedence. The default value is <i>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</i>.</dd></dl>
 <p> <code>ALWAYS_SET_PATH</code> (boolean)</p>
 <dl>
 <dt>
-<dd> If set to <i>yes</i> and <code>&#8211;login</code> and <code>&#8211;preserve-environment</code> were not specified <code>su</code> initializes <code>PATH</code>. </p>
+</dt><dd> If set to <i>yes</i> and <code>&#8211;login</code> and <code>&#8211;preserve-environment</code> were not specified <code>su</code> initializes <code>PATH</code>. </dd>
 <p> The environment variable <code>PATH</code> may be different on systems where <i>/bin</i> and <i>/sbin</i> are merged into <i>/usr</i>; this variable is also affected by the <code>&#8211;login</code> command-line option and the PAM system setting (e.g., <code><a href="/docs/linux/man/8-pam_env/">pam_env</a></code>(8)).</dl>
 <h2>EXIT STATUS</h2>
 <p> <code>su</code> normally returns the exit status of the command it executed. If the command was killed by a signal, <code>su</code> returns the number of the signal plus 128. </p>
@@ -122,39 +122,39 @@ description: "su – run a command with substitute user and group ID"
 <p> 1</p>
 <dl>
 <dt>
-<dd> Generic error before executing the requested command</dl>
+</dt><dd> Generic error before executing the requested command</dd></dl>
 <p> 126</p>
 <dl>
 <dt>
-<dd> The requested command could not be executed</dl>
+</dt><dd> The requested command could not be executed</dd></dl>
 <p> 127</p>
 <dl>
 <dt>
-<dd> The requested command was not found</dl>
+</dt><dd> The requested command was not found</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/pam.d/su</i></p>
 <dl>
 <dt>
-<dd> default PAM configuration file</dl>
+</dt><dd> default PAM configuration file</dd></dl>
 <p> <i>/etc/pam.d/su-l</i></p>
 <dl>
 <dt>
-<dd> PAM configuration file if <code>&#8211;login</code> is specified</dl>
+</dt><dd> PAM configuration file if <code>&#8211;login</code> is specified</dd></dl>
 <p> <i>/etc/default/su</i></p>
 <dl>
 <dt>
-<dd> command specific logindef config file</dl>
+</dt><dd> command specific logindef config file</dd></dl>
 <p> <i>/etc/login.defs</i></p>
 <dl>
 <dt>
-<dd> global logindef config file</dl>
+</dt><dd> global logindef config file</dd></dl>
 <h2>NOTES</h2>
 <p> For security reasons, <code>su</code> always logs failed log-in attempts to the btmp file, but it does not write to the <i>lastlog</i> file at all. This solution can be used to control <code>su</code> behavior by PAM configuration. If you want to use the <code><a href="/docs/linux/man/8-pam_lastlog/">pam_lastlog</a></code>(8) module to print warning message about failed log-in attempts then <code><a href="/docs/linux/man/8-pam_lastlog/">pam_lastlog</a></code>(8) has to be configured to update the <i>lastlog</i> file as well. For example by:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> session required pam_lastlog.so nowtmp
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> This <code>su</code> command was derived from coreutils&#8217; <code>su</code>, which was based on an implementation by David MacKenzie. The util-linux version has been refactored by Karel Zak.</p>
 <h2>SEE ALSO</h2>
@@ -164,3 +164,4 @@ description: "su – run a command with substitute user and group ID"
 <h2>AVAILABILITY</h2>
 <p> The <code>su</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
 <h2>Index</h2>
+</p>

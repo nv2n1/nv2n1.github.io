@@ -14,15 +14,15 @@ description: "pagsh – creates a new credential cache sandbox"
 <h2>DESCRIPTION</h2>
 <p> Supported options:</p>
 <dl>
-<dt> &#8211;<code>c </code><i>command-string</i></p>
-<dd>Executes command(s) contained in <i>command-string</i></p>
-<dt> &#8211;<code>-cache-type= </code><i>string</i></p>
+<dt> &#8211;<code>c </code><i>command-string</i></dt>
+<dd>Executes command(s) contained in <i>command-string</i></dd>
+<dt> &#8211;<code>-cache-type= </code><i>string</i></dt>
 <dd>
-<dt> &#8211;<code>h</code> &#8211;<code>-help</code></p>
+</dd><dt> &#8211;<code>h</code> &#8211;<code>-help</code></dt>
 <dd>
-<dt> &#8211;<code>-version</code></p>
-<dd></dl>
-<dd>creates a new credential cache sandbox for the user to live in. If AFS is installed on the computer, the user is put in a newly created Process Authentication Group (PAG). </p>
+</dd><dt> &#8211;<code>-version</code></dt>
+<dd></dd></dl>
+<dd>creates a new credential cache sandbox for the user to live in. If AFS is installed on the computer, the user is put in a newly created Process Authentication Group (PAG). </dd>
 <p> For Kerberos 5, the credential cache type that is used is the same as the credential cache type that was used at the time of invocation. The credential cache type can be controlled by the option &#8211;<code>-cache-type</code></p>
 <h2>EXAMPLES</h2>
 <p> Create a new sandbox where new credentials can be used, while the old credentials can be used by other processes. </p>

@@ -16,8 +16,8 @@ description: "ldns_update_pkt_new"
 <p> ldns_pkt* ldns_update_pkt_new(ldns_rdf *zone_rdf, ldns_rr_class clas, ldns_rr_list *pr_rrlist, ldns_rr_list *up_rrlist, ldns_rr_list *ad_rrlist); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_update_pkt_new</i>()</p>
-<dd>create an update packet from zone name, class and the rr lists .br <code>zone_rdf</code>: name of the zone .br <code>clas</code>: zone class .br <code>pr_rrlist</code>: list of Prerequisite Section RRs .br <code>up_rrlist</code>: list of Updates Section RRs .br <code>ad_rrlist</code>: list of Additional Data Section RRs (currently unused) .br Returns the new packet</dl>
+<dt> <i>ldns_update_pkt_new</i>()</dt>
+<dd>create an update packet from zone name, class and the rr lists .br <code>zone_rdf</code>: name of the zone .br <code>clas</code>: zone class .br <code>pr_rrlist</code>: list of Prerequisite Section RRs .br <code>up_rrlist</code>: list of Updates Section RRs .br <code>ad_rrlist</code>: list of Additional Data Section RRs (currently unused) .br Returns the new packet</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

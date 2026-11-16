@@ -22,6 +22,6 @@ description: "QuantLib::MTBrownianGenerator – Mersenne-twister Brownian genera
 <p> Incremental Brownian generator using a Mersenne-twister uniform generator and inverse-cumulative Gaussian method. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>At this time, generation of the underlying uniform sequence is eager, while its transformation into Gaussian variates is lazy. Further optimization might be possible by using the Mersenne twister directly instead of a <code>RandomSequenceGenerator</code>; however, it is not clear how much of a difference this would make when compared to the inverse-cumulative Gaussian calculation.</dl>
+<dd>At this time, generation of the underlying uniform sequence is eager, while its transformation into Gaussian variates is lazy. Further optimization might be possible by using the Mersenne twister directly instead of a <code>RandomSequenceGenerator</code>; however, it is not clear how much of a difference this would make when compared to the inverse-cumulative Gaussian calculation.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

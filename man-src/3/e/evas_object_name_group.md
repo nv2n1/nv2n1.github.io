@@ -23,25 +23,25 @@ description: "Object Name Function – Functions that retrieve and set the name 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>e</i> The given evas.<br />
- <i>name</i> The given name.</dl>
+ <i>name</i> The given name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>If successful, the evas object with the given name. Otherwise, NULL.</dl>
+<dd>If successful, the evas object with the given name. Otherwise, NULL.</dd></dl>
 <p> References evas_hash_find().</p>
 <h3>EAPI const char* evas_object_name_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves the name of the given evas object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given object.</dl>
+<dd><i>obj</i> The given object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The name of the object. NULL if no name has been given to the object.</dl>
+<dd>The name of the object. NULL if no name has been given to the object.</dd></dl>
 <h3>EAPI void evas_object_name_set (<code>Evas_Object</code> * obj, const char * name)</h3>
 <p>Sets the name of the given evas object to the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given object.<br />
- <i>name</i> The given name.</dl>
+ <i>name</i> The given name.</dd></dl>
 <p> References evas_hash_add(), and evas_hash_del(). </p>
 <p> Referenced by evas_object_del().</p>
 <h2>Author</h2>

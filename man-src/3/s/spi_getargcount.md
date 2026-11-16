@@ -15,6 +15,6 @@ description: "SPI_getargcount – return the number of arguments needed by a sta
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <h2>Return Value</h2>
 <p>The count of expected arguments for the <i>plan</i>. If the <i>plan</i> is NULL or invalid, <i>SPI_result</i> is set to SPI_ERROR_ARGUMENT and -1 is returned.</p>

@@ -14,14 +14,14 @@ description: "vboxgetty – isdn voice box (getty)"
 <p>Vboxgetty is the heart of vbox: it watches the isdn system and waits for incoming voice calls, </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f, &#8211;file FILE</code></p>
-<dd>Config file to use. Default is the file &#8216;/etc/isdn/vboxgetty.conf&#8217;. </p>
-<dt><code>-d, &#8211;device TTY</code></p>
-<dd>ISDNdevice to use. You must use this option! </p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Show version of program. </p>
+<dt><code>-f, &#8211;file FILE</code></dt>
+<dd>Config file to use. Default is the file &#8216;/etc/isdn/vboxgetty.conf&#8217;. </dd>
+<dt><code>-d, &#8211;device TTY</code></dt>
+<dd>ISDNdevice to use. You must use this option! </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program. </dd>
 </dl>
 <h2>Configuring Vbox</h2>
 <p>vboxgetty should be started from the init process. To do this you need one line per vboxgetty in /etc/inittab like this one: </p>
@@ -37,20 +37,20 @@ description: "vboxgetty – isdn voice box (getty)"
 <p> If vbox has waited enough RINGs and the caller is still ringing, it takes the call and starts the tcl script /var/spool/vbox/&lt;user&gt;/standard.tcl (unless you change that name), and this script will do the rest (normally: play standard and beep message, record and then play timeout message).</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/isdn/vboxgetty.conf</code></p>
-<dd>default config file </p>
-<dt><code>/etc/inittab</code></p>
-<dd>init starts vboxgetty via this file. </p>
-<dt><code>/etc/isdn/vboxgetty.conf</code></p>
-<dd>the global vbox config file </p>
-<dt><code>/var/spool/vbox/&lt;user&gt;/vbox.conf</code></p>
-<dd>the per user configuration file for this port </p>
-<dt><code>/var/spool/vbox/&lt;user&gt;/standard.tcl</code></p>
-<dd>the tcl script used to communicate with the caller </p>
-<dt><code>/var/run/vboxgetty-&lt;device&gt;.pid</code></p>
-<dd>process id of the vboxgetty </p>
-<dt><code>/var/log/vbox/vboxgetty-&lt;device&gt;.log</code></p>
-<dd>logfile of the vboxgetty </p>
+<dt><code>/etc/isdn/vboxgetty.conf</code></dt>
+<dd>default config file </dd>
+<dt><code>/etc/inittab</code></dt>
+<dd>init starts vboxgetty via this file. </dd>
+<dt><code>/etc/isdn/vboxgetty.conf</code></dt>
+<dd>the global vbox config file </dd>
+<dt><code>/var/spool/vbox/&lt;user&gt;/vbox.conf</code></dt>
+<dd>the per user configuration file for this port </dd>
+<dt><code>/var/spool/vbox/&lt;user&gt;/standard.tcl</code></dt>
+<dd>the tcl script used to communicate with the caller </dd>
+<dt><code>/var/run/vboxgetty-&lt;device&gt;.pid</code></dt>
+<dd>process id of the vboxgetty </dd>
+<dt><code>/var/log/vbox/vboxgetty-&lt;device&gt;.log</code></dt>
+<dd>logfile of the vboxgetty </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-vboxgetty-conf/">vboxgetty.conf</a>(5), <a href="/docs/linux/man/5-vbox-conf/">vbox.conf</a>(5), vboxtcl(5), isdntime(5)</code> </p>

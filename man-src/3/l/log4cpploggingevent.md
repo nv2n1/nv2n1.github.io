@@ -39,7 +39,7 @@ description: "log4cpp::LoggingEvent –"
 <dd><i>category</i> The category of this event.<br />
  <i>message</i> The message of this event.<br />
  <i>ndc</i> The nested diagnostic context of this event.<br />
- <i>priority</i> The priority of this event.</dl>
+ <i>priority</i> The priority of this event.</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3>const std::string log4cpp::LoggingEvent::categoryName</h3>
 <p>The category name.</p>

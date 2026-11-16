@@ -54,150 +54,150 @@ description: "QwtDynGridLayout –"
 <dl COMPACT>
 <dd><i>parent</i> Parent widget<br />
  <i>margin</i> Margin<br />
- <i>spacing</i> Spacing</dl>
+ <i>spacing</i> Spacing</dd></dl>
 <h3>QwtDynGridLayout::QwtDynGridLayout (intspacing = -1) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Spacing</dl>
+<dd><i>spacing</i> Spacing</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtDynGridLayout::addItem (QLayoutItem *item) [virtual]</h3>
 <p>Add an item to the next free position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>item</i> Layout item</dl>
+<dd><i>item</i> Layout item</dd></dl>
 <h3>uint QwtDynGridLayout::columnsForWidth (intwidth) const [virtual]</h3>
 <p>Calculate the number of columns for a given width. The calculation tries to use as many columns as possible ( limited by <code>maxColumns()</code> ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Available width for all columns</dl>
+<dd><i>width</i> Available width for all columns</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of columns for a given width</dl>
+<dd>Number of columns for a given width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxColumns()</code>, <code>setMaxColumns()</code></dl>
+<dd><code>maxColumns()</code>, <code>setMaxColumns()</code></dd></dl>
 <h3>int QwtDynGridLayout::count () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of items in the layout</dl>
+<dd>Number of items in the layout</dd></dl>
 <h3>Qt::Orientations QwtDynGridLayout::expandingDirections () const [virtual]</h3>
 <p>Returns whether this layout can make use of more space than <code>sizeHint()</code>. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Orientations, where the layout expands</dl>
+<dd>Orientations, where the layout expands</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setExpandingDirections()</code></dl>
+<dd><code>setExpandingDirections()</code></dd></dl>
 <h3>bool QwtDynGridLayout::hasHeightForWidth () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true: <code>QwtDynGridLayout</code> implements <code>heightForWidth()</code>.</dl>
+<dd>true: <code>QwtDynGridLayout</code> implements <code>heightForWidth()</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>heightForWidth()</code></dl>
+<dd><code>heightForWidth()</code></dd></dl>
 <h3>int QwtDynGridLayout::heightForWidth (intwidth) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The preferred height for this layout, given a width.</dl>
+<dd>The preferred height for this layout, given a width.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>hasHeightForWidth()</code></dl>
+<dd><code>hasHeightForWidth()</code></dd></dl>
 <h3>bool QwtDynGridLayout::isEmpty () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>true if this layout is empty.</dl>
+<dd>true if this layout is empty.</dd></dl>
 <h3>QLayoutItem * QwtDynGridLayout::itemAt (intindex) const [virtual]</h3>
 <p>Find the item at a specific index </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Item at a specific index</dl>
+<dd>Item at a specific index</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>takeAt()</code></dl>
+<dd><code>takeAt()</code></dd></dl>
 <h3>uint QwtDynGridLayout::itemCount () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>number of layout items</dl>
+<dd>number of layout items</dd></dl>
 <h3>void QwtDynGridLayout::layoutGrid (uintnumColumns, QVector&lt; int &gt; &amp;rowHeight, QVector&lt; int &gt; &amp;colWidth) const [protected]</h3>
 <p>Calculate the dimensions for the columns and rows for a grid of numColumns columns. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>numColumns</i> Number of columns.<br />
  <i>rowHeight</i> Array where to fill in the calculated row heights.<br />
- <i>colWidth</i> Array where to fill in the calculated column widths.</dl>
+ <i>colWidth</i> Array where to fill in the calculated column widths.</dd></dl>
 <h3>QList&lt; QRect &gt; QwtDynGridLayout::layoutItems (const QRect &amp;rect, uintnumColumns) const</h3>
 <p>Calculate the geometries of the layout items for a layout with numColumns columns and a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>rect</i> Rect where to place the items<br />
- <i>numColumns</i> Number of columns</dl>
+ <i>numColumns</i> Number of columns</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>item geometries</dl>
+<dd>item geometries</dd></dl>
 <h3>uint QwtDynGridLayout::maxColumns () const</h3>
 <p>Return the upper limit for the number of columns. 0 means unlimited, what is the default. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Upper limit for the number of columns</dl>
+<dd>Upper limit for the number of columns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMaxColumns()</code></dl>
+<dd><code>setMaxColumns()</code></dd></dl>
 <h3>int QwtDynGridLayout::maxItemWidth () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the maximum width of all layout items</dl>
+<dd>the maximum width of all layout items</dd></dl>
 <h3>uint QwtDynGridLayout::numColumns () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of columns of the current layout.</dl>
+<dd>Number of columns of the current layout.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>numRows()</code></dl>
+<dd><code>numRows()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The number of columns might change whenever the geometry changes</dl>
+<dd>The number of columns might change whenever the geometry changes</dd></dl>
 <h3>uint QwtDynGridLayout::numRows () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of rows of the current layout.</dl>
+<dd>Number of rows of the current layout.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>numColumns()</code></dl>
+<dd><code>numColumns()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The number of rows might change whenever the geometry changes</dl>
+<dd>The number of rows might change whenever the geometry changes</dd></dl>
 <h3>void QwtDynGridLayout::setExpandingDirections (Qt::Orientationsexpanding)</h3>
 <p>Set whether this layout can make use of more space than <code>sizeHint()</code>. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions. The default value is 0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>expanding</i> Or&#8217;d orientations</dl>
+<dd><i>expanding</i> Or&#8217;d orientations</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>expandingDirections()</code></dl>
+<dd><code>expandingDirections()</code></dd></dl>
 <h3>void QwtDynGridLayout::setGeometry (const QRect &amp;rect) [virtual]</h3>
 <p>Reorganizes columns and rows and resizes managed items within a rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Layout geometry</dl>
+<dd><i>rect</i> Layout geometry</dd></dl>
 <h3>void QwtDynGridLayout::setMaxColumns (uintmaxColumns)</h3>
 <p>Limit the number of columns. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxColumns</i> upper limit, 0 means unlimited</dl>
+<dd><i>maxColumns</i> upper limit, 0 means unlimited</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxColumns()</code></dl>
+<dd><code>maxColumns()</code></dd></dl>
 <h3>QSize QwtDynGridLayout::sizeHint () const [virtual]</h3>
 <p>Return the size hint. If <code>maxColumns()</code> &gt; 0 it is the size for a grid with <code>maxColumns()</code> columns, otherwise it is the size for a grid with only one row. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size hint</dl>
+<dd>Size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxColumns()</code>, <code>setMaxColumns()</code></dl>
+<dd><code>maxColumns()</code>, <code>setMaxColumns()</code></dd></dl>
 <h3>void QwtDynGridLayout::stretchGrid (const QRect &amp;rect, uintnumColumns, QVector&lt; int &gt; &amp;rowHeight, QVector&lt; int &gt; &amp;colWidth) const [protected]</h3>
 <p>Stretch columns in case of expanding() &amp; QSizePolicy::Horizontal and rows in case of expanding() &amp; QSizePolicy::Vertical to fill the entire rect. Rows and columns are stretched with the same factor. </p>
 <p> <code>Parameters:</code></p>
@@ -205,20 +205,20 @@ description: "QwtDynGridLayout –"
 <dd><i>rect</i> Bounding rectangle<br />
  <i>numColumns</i> Number of columns<br />
  <i>rowHeight</i> Array to be filled with the calculated row heights<br />
- <i>colWidth</i> Array to be filled with the calculated column widths</dl>
+ <i>colWidth</i> Array to be filled with the calculated column widths</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>setExpanding(), expanding()</dl>
+<dd>setExpanding(), expanding()</dd></dl>
 <h3>QLayoutItem * QwtDynGridLayout::takeAt (intindex) [virtual]</h3>
 <p>Find the item at a specific index and remove it from the layout </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Layout item, removed from the layout</dl>
+<dd>Layout item, removed from the layout</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>itemAt()</code></dl>
+<dd><code>itemAt()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

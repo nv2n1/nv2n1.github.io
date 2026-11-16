@@ -10,7 +10,7 @@ description: "nmbd – NetBIOS name server to provide NetBIOS over IP naming ser
 <p>nmbd &#8211; NetBIOS name server to provide NetBIOS over IP naming services to clients</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>nmbd [-D|&#8211;daemon] [-F|&#8211;foreground] [-S|&#8211;log-stdout] [-i|&#8211;interactive] [-V] [-d&nbsp;<wbr>&lt;debug level&gt;] [-H|&#8211;hosts&nbsp;<wbr>&lt;lmhosts file&gt;] [-l&nbsp;<wbr>&lt;log directory&gt;] [-p|&#8211;port&nbsp;<wbr>&lt;port number&gt;] [-s&nbsp;<wbr>&lt;configuration file&gt;] [&#8211;no-process-group]</dl>
+<dd>nmbd [-D|&#8211;daemon] [-F|&#8211;foreground] [-S|&#8211;log-stdout] [-i|&#8211;interactive] [-V] [-d&nbsp;<wbr>&lt;debug level&gt;] [-H|&#8211;hosts&nbsp;<wbr>&lt;lmhosts file&gt;] [-l&nbsp;<wbr>&lt;log directory&gt;] [-p|&#8211;port&nbsp;<wbr>&lt;port number&gt;] [-s&nbsp;<wbr>&lt;configuration file&gt;] [&#8211;no-process-group]</dd></dl>
 <h2>Description</h2>
 <p>This program is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> nmbd is a server that understands and can reply to NetBIOS over IP name service requests, like those produced by SMB/CIFS clients such as Windows 95/98/ME, Windows NT, Windows 2000, Windows XP and LanManager clients. It also participates in the browsing protocols which make up the Windows &quot;Network Neighborhood&quot; view. </p>
@@ -21,64 +21,64 @@ description: "nmbd – NetBIOS name server to provide NetBIOS over IP naming ser
 <h2>Options</h2>
 <p>-D|&#8211;daemon</p>
 <dl>
-<dd>If specified, this parameter causes nmbd to operate as a daemon. That is, it detaches itself and runs in the background, fielding requests on the appropriate port. By default, nmbd will operate as a daemon if launched from a command shell. nmbd can also be operated from the inetd meta-daemon, although this is not recommended.</dl>
+<dd>If specified, this parameter causes nmbd to operate as a daemon. That is, it detaches itself and runs in the background, fielding requests on the appropriate port. By default, nmbd will operate as a daemon if launched from a command shell. nmbd can also be operated from the inetd meta-daemon, although this is not recommended.</dd></dl>
 <p> -F|&#8211;foreground</p>
 <dl>
-<dd>If specified, this parameter causes the main nmbd process to not daemonize, i.e. double-fork and disassociate with the terminal. Child processes are still created as normal to service each connection request, but the main process does not exit. This operation mode is suitable for running nmbd under process supervisors such as supervise and svscan from Daniel J. Bernstein&#8217;s daemontools package, or the AIX process monitor.</dl>
+<dd>If specified, this parameter causes the main nmbd process to not daemonize, i.e. double-fork and disassociate with the terminal. Child processes are still created as normal to service each connection request, but the main process does not exit. This operation mode is suitable for running nmbd under process supervisors such as supervise and svscan from Daniel J. Bernstein&#8217;s daemontools package, or the AIX process monitor.</dd></dl>
 <p> -S|&#8211;log-stdout</p>
 <dl>
-<dd>If specified, this parameter causes nmbd to log to standard output rather than a file.</dl>
+<dd>If specified, this parameter causes nmbd to log to standard output rather than a file.</dd></dl>
 <p> -i|&#8211;interactive</p>
 <dl>
-<dd>If this parameter is specified it causes the server to run &quot;interactively&quot;, not as a daemon, even if the server is executed on the command line of a shell. Setting this parameter negates the implicit daemon mode when run from the command line. nmbd also logs to standard output, as if the <code>-S</code> parameter had been given.</dl>
+<dd>If this parameter is specified it causes the server to run &quot;interactively&quot;, not as a daemon, even if the server is executed on the command line of a shell. Setting this parameter negates the implicit daemon mode when run from the command line. nmbd also logs to standard output, as if the <code>-S</code> parameter had been given.</dd></dl>
 <p> -?|&#8211;help</p>
 <dl>
-<dd>Print a summary of command line options.</dl>
+<dd>Print a summary of command line options.</dd></dl>
 <p> &#8211;usage</p>
 <dl>
-<dd>Display brief usage message.</dl>
+<dd>Display brief usage message.</dd></dl>
 <p> -H|&#8211;hosts &lt;filename&gt;</p>
 <dl>
-<dd>NetBIOS lmhosts file. The lmhosts file is a list of NetBIOS names to IP addresses that is loaded by the nmbd server and used via the name resolution mechanism m[blue]<code>name resolve order</code>m[] described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) to resolve any NetBIOS name queries needed by the server. Note that the contents of this file are <i>NOT</i> used by nmbd to answer any name queries. Adding a line to this file affects name NetBIOS resolution from this host <i>ONLY</i>. </p>
+<dd>NetBIOS lmhosts file. The lmhosts file is a list of NetBIOS names to IP addresses that is loaded by the nmbd server and used via the name resolution mechanism m[blue]<code>name resolve order</code>m[] described in <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) to resolve any NetBIOS name queries needed by the server. Note that the contents of this file are <i>NOT</i> used by nmbd to answer any name queries. Adding a line to this file affects name NetBIOS resolution from this host <i>ONLY</i>. </dd>
 <p> The default path to this file is compiled into Samba as part of the build process. Common defaults are /usr/local/samba/lib/lmhosts, /usr/samba/lib/lmhosts or /etc/samba/lmhosts. See the <code><a href="/docs/linux/man/5-lmhosts/">lmhosts</a></code>(5) man page for details on the contents of this file.</dl>
 <p> -d|&#8211;debuglevel=level</p>
 <dl>
-<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </p>
+<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </dd>
 <p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
 <p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
 <p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
 <p> -V|&#8211;version</p>
 <dl>
-<dd>Prints the program version number.</dl>
+<dd>Prints the program version number.</dd></dl>
 <p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
 <dl>
-<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dl>
+<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
 <p> -l|&#8211;log-basename=logdirectory</p>
 <dl>
-<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dl>
+<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
 <p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
 <dl>
-<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dl>
+<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
 <p> -p|&#8211;port &lt;UDP port number&gt;</p>
 <dl>
-<dd>UDP port number is a positive integer value. This option changes the default UDP port number (normally 137) that nmbd responds to name queries on. Don&#8217;t use this option unless you are an expert, in which case you won&#8217;t need help!</dl>
+<dd>UDP port number is a positive integer value. This option changes the default UDP port number (normally 137) that nmbd responds to name queries on. Don&#8217;t use this option unless you are an expert, in which case you won&#8217;t need help!</dd></dl>
 <p> &#8211;no-process-group</p>
 <dl>
-<dd>Do not create a new process group for nmbd.</dl>
+<dd>Do not create a new process group for nmbd.</dd></dl>
 <h2>Files</h2>
 <p>/etc/inetd.conf</p>
 <dl>
-<dd>If the server is to be run by the inetd meta-daemon, this file must contain suitable startup information for the meta-daemon.</dl>
+<dd>If the server is to be run by the inetd meta-daemon, this file must contain suitable startup information for the meta-daemon.</dd></dl>
 <p> /etc/rc</p>
 <dl>
-<dd>or whatever initialization script your system uses). </p>
+<dd>or whatever initialization script your system uses). </dd>
 <p> If running the server as a daemon at startup, this file will need to contain an appropriate startup sequence for the server.</dl>
 <p> /etc/services</p>
 <dl>
-<dd>If running the server via the meta-daemon inetd, this file must contain a mapping of service name (e.g., netbios-ssn) to service port (e.g., 139) and protocol type (e.g., tcp).</dl>
+<dd>If running the server via the meta-daemon inetd, this file must contain a mapping of service name (e.g., netbios-ssn) to service port (e.g., 139) and protocol type (e.g., tcp).</dd></dl>
 <p> /usr/local/samba/lib/smb.conf</p>
 <dl>
-<dd>This is the default location of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) server configuration file. Other common places that systems install this file are /usr/samba/lib/smb.conf and /etc/samba/smb.conf. </p>
+<dd>This is the default location of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) server configuration file. Other common places that systems install this file are /usr/samba/lib/smb.conf and /etc/samba/smb.conf. </dd>
 <p> When run as a WINS server (see the m[blue]<code>wins support</code>m[] parameter in the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) man page), nmbd will store the WINS database in the file wins.dat in the var/locks directory configured under wherever Samba was configured to install itself. </p>
 <p> If nmbd is acting as a <i> browse master</i> (see the m[blue]<code>local master</code>m[] parameter in the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) man page, nmbd will store the browsing database in the file browse.dat in the var/locks directory configured under wherever Samba was configured to install itself.</dl>
 <h2>Signals</h2>
@@ -92,3 +92,4 @@ description: "nmbd – NetBIOS name server to provide NetBIOS over IP naming ser
 <h2>Author</h2>
 <p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> The original Samba man pages were written by Karl Auer. The man page sources were converted to YODL format (another excellent piece of Open Source software, available at <a href="ftp://ftp.icce.rug.nl/pub/unix/)">ftp://ftp.icce.rug.nl/pub/unix/)</a> and updated for the Samba 2.0 release by Jeremy Allison. The conversion to DocBook for Samba 2.2 was done by Gerald Carter. The conversion to DocBook XML 4.2 for Samba 3.0 was done by Alexander Bokovoy.</p>
+</p>

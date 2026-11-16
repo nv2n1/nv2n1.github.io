@@ -17,13 +17,9 @@ If the variant is valueless_by_exception, returns variant_npos.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;variant&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::variant&lt;int, std::string&gt; v = &quot;abc&quot;;
     std::cout &lt;&lt; &quot;v.index = &quot; &lt;&lt; v.index() &lt;&lt; '\n';

@@ -61,15 +61,15 @@ description: "Connecting to BrlAPI –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the file descriptor, or -1 on error</dl>
+</dt><dd> the file descriptor, or -1 on error</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The file descriptor is returned in case the client wants to communicate with the server without using <i>libbrlapi</i> functions. If it uses them however, it won&#8217;t have to pass the file descriptor later, since the library keeps a copy of it. But that also means that <code>brlapi_openConnection()</code> may be called several times, but <i>libbrlapi</i> functions will always work with the last call&#8217;s descriptor</dl>
+</dt><dd> The file descriptor is returned in case the client wants to communicate with the server without using <i>libbrlapi</i> functions. If it uses them however, it won&#8217;t have to pass the file descriptor later, since the library keeps a copy of it. But that also means that <code>brlapi_openConnection()</code> may be called several times, but <i>libbrlapi</i> functions will always work with the last call&#8217;s descriptor</dd></dl>
 <p> <code>Example:</code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 if (brlapi_openConnection(&amp;settings, &amp;settings) &lt; 0) {
     fprintf(stderr, 'couldn' t connect to BrlAPI at % s
@@ -78,26 +78,26 @@ if (brlapi_openConnection(&amp;settings, &amp;settings) &lt; 0) {
     exit(1);
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>Errors:</code></p>
 <dl>
 <dt>
-<dd> <i>BrlAPI</i> might not be on this TCP port, the host name might not be resolvable, the authorization may fail,&#8230;</dl>
+</dt><dd> <i>BrlAPI</i> might not be on this TCP port, the host name might not be resolvable, the authorization may fail,&#8230;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>desiredSettings</i> this gives the desired connection parameters, as described in <code>brlapi_connectionSettings_t</code>. If NULL, defaults values are used, so that it is generally a good idea to give NULL as default, and only fill a <code>brlapi_connectionSettings_t</code> structure when the user gave parameters to the program for instance;<br />
- <i>actualSettings</i> if not NULL, parameters which were actually used are stored here, if the application ever needs them.</dl>
+</dt><dd> <i>desiredSettings</i> this gives the desired connection parameters, as described in <code>brlapi_connectionSettings_t</code>. If NULL, defaults values are used, so that it is generally a good idea to give NULL as default, and only fill a <code>brlapi_connectionSettings_t</code> structure when the user gave parameters to the program for instance;<br />
+ <i>actualSettings</i> if not NULL, parameters which were actually used are stored here, if the application ever needs them.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>brlapi_connectionSettings_t</code> <code>brlapi_writePacket()</code> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacketContent()</code> <code>brlapi_readPacket()</code></dl>
+</dt><dd> <code>brlapi_connectionSettings_t</code> <code>brlapi_writePacket()</code> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacketContent()</code> <code>brlapi_readPacket()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAP">Typedef Documentation</a></p>
+<dt><a href="#lbAP">Typedef Documentation</a></dt>
 <dd>
-<dt><a href="#lbAR">Function Documentation</a></p>
+</dd><dt><a href="#lbAR">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAW">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAW">Author</a></dt>
+<dd></dd></dl>

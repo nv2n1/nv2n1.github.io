@@ -13,8 +13,8 @@ description: "mongoc_read_prefs_get_mode() – Fetches the mongoc_read_mode_t fo
 mongoc_read_prefs_get_mode (const mongoc_read_prefs_t *read_prefs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the <code>mongoc_read_mode_t</code> for the read preference. </p>
 <h2>Returns</h2>

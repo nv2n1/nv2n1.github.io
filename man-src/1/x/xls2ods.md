@@ -19,154 +19,154 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <p> -c, &#8211;connection</p>
 <dl>
 <dt>
-<dd> UNO connection string to be used by the client to connect to an LibreOffice instance, or used by the listener to make LibreOffice listen. </p>
+</dt><dd> UNO connection string to be used by the client to connect to an LibreOffice instance, or used by the listener to make LibreOffice listen. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Default connection string is &quot;socket,host=localhost,port=2002;urp;StarOffice.ComponentContext&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -d, &#8211;doctype</p>
 <dl>
 <dt>
-<dd> Specify the LibreOffice document type of the backend format. Possible document types are: <i>document</i>, <i>graphics</i>, <i>presentation</i>, <i>spreadsheet</i>. </p>
+</dt><dd> Specify the LibreOffice document type of the backend format. Possible document types are: <i>document</i>, <i>graphics</i>, <i>presentation</i>, <i>spreadsheet</i>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Default document type is 'document'.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -e, &#8211;export</p>
 <dl>
 <dt>
-<dd> Set specific export filter options (related to the used LibreOffice filter). </p>
+</dt><dd> Set specific export filter options (related to the used LibreOffice filter). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 eg. for the PDF output filter one can specify: -e PageRange=1-2
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 See the *EXPORT FILTERS* section.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -f, &#8211;format</p>
 <dl>
 <dt>
-<dd> Specify the output format for the document. You can get a list of possible output formats per document type by using the &#8211;show option. </p>
+</dt><dd> Specify the output format for the document. You can get a list of possible output formats per document type by using the &#8211;show option. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Default document type is 'pdf'.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -F, &#8211;field</p>
 <dl>
 <dt>
-<dd> Replace user-defined text field with value </p>
+</dt><dd> Replace user-defined text field with value </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 eg. -F Client_Name=&quot;Oracle&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -i, &#8211;import</p>
 <dl>
 <dt>
-<dd> Set specific import filters options (related to the used LibreOffice import filter based on the input filename). </p>
+</dt><dd> Set specific import filters options (related to the used LibreOffice import filter based on the input filename). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 See the *IMPORT FILTERS* section.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -l, &#8211;listener</p>
 <dl>
 <dt>
-<dd> Start unoconv as listener for unoconv clients to connect to.</dl>
+</dt><dd> Start unoconv as listener for unoconv clients to connect to.</dd></dl>
 <p> -n, &#8211;no-launch</p>
 <dl>
 <dt>
-<dd> By default if no listener is running, unoconv will launch its own (temporary) listener to make sure the conversion works. This option will abort the conversion if no listener is found, rather than starting our own listener.</dl>
+</dt><dd> By default if no listener is running, unoconv will launch its own (temporary) listener to make sure the conversion works. This option will abort the conversion if no listener is found, rather than starting our own listener.</dd></dl>
 <p> -o, &#8211;output</p>
 <dl>
 <dt>
-<dd> If the argument is a directory, put the converted documents in this directory. If multiple input files are provided, use it as a basename (and add output extension). Otherwise use it as the output filename.</dl>
+</dt><dd> If the argument is a directory, put the converted documents in this directory. If multiple input files are provided, use it as a basename (and add output extension). Otherwise use it as the output filename.</dd></dl>
 <p> &#8211;password</p>
 <dl>
 <dt>
-<dd> Provide a password to decrypt the document</dl>
+</dt><dd> Provide a password to decrypt the document</dd></dl>
 <p> &#8211;pipe</p>
 <dl>
 <dt>
-<dd> Use a pipe as an alternative connection mechanism to talk to LibreOffice.</dl>
+</dt><dd> Use a pipe as an alternative connection mechanism to talk to LibreOffice.</dd></dl>
 <p> -p, &#8211;port</p>
 <dl>
 <dt>
-<dd> Port to listen on (as listener) or to connect to (as client). </p>
+</dt><dd> Port to listen on (as listener) or to connect to (as client). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Default port is '2002'.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;preserve</p>
 <dl>
 <dt>
-<dd> Keep timestamp and permissions of the original document</dl>
+</dt><dd> Keep timestamp and permissions of the original document</dd></dl>
 <p> -s, &#8211;server</p>
 <dl>
 <dt>
-<dd> Server (address) to listen on (as listener) or to connect to (as client). </p>
+</dt><dd> Server (address) to listen on (as listener) or to connect to (as client). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Default server is 'localhost'.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;show</p>
 <dl>
 <dt>
-<dd> List the possible output formats to be used with -f.</dl>
+</dt><dd> List the possible output formats to be used with -f.</dd></dl>
 <p> &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Read input file from stdin (filenames are ignored if provided)</dl>
+</dt><dd> Read input file from stdin (filenames are ignored if provided)</dd></dl>
 <p> &#8211;stdout</p>
 <dl>
 <dt>
-<dd> Print converted output file to stdout.</dl>
+</dt><dd> Print converted output file to stdout.</dd></dl>
 <p> -t, &#8211;template</p>
 <dl>
 <dt>
-<dd> Specify the template to use for importing styles from. This can be very useful if you have a corporate identity you have to apply to every document you distribute.</dl>
+</dt><dd> Specify the template to use for importing styles from. This can be very useful if you have a corporate identity you have to apply to every document you distribute.</dd></dl>
 <p> -T, &#8211;timeout</p>
 <dl>
 <dt>
-<dd> When unoconv starts its own listener, try to connect to it for an amount of seconds before giving up. Increasing this may help when you receive random errors caused by the listener not being ready to accept conversion jobs.</dl>
+</dt><dd> When unoconv starts its own listener, try to connect to it for an amount of seconds before giving up. Increasing this may help when you receive random errors caused by the listener not being ready to accept conversion jobs.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be more and more and more verbose.</dl>
+</dt><dd> Be more and more and more verbose.</dd></dl>
 <h2>ARGUMENTS</h2>
 <p> You can provide one or more <code>files</code> as arguments to convert each of them to the specified <code>output format</code>.</p>
 <h2>IMPORT FILTERS</h2>
@@ -177,74 +177,74 @@ Default server is 'localhost'.
 <p> The default import filter for many imports (eg. Lotus, dBase or DIF) accepts as the only argument the input encoding-type, so if you require utf-8 (76) you can do: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -i FilterOptions=76
 </pre>
-</dl>
+</dd></dl>
 <p> For a list of possible encoding types, you can use the above link to find the possible options. </p>
 <dl>
 <dt>
-<dd> &bull; FilterOptions</dl>
+</dt><dd> &bull; FilterOptions</dd></dl>
 <h2>TEXT IMPORT FILTER OPTIONS</h2>
 <p> The Text import filter accepts a FilterOptions setting holding the input encoding. </p>
 <dl>
 <dt>
-<dd> &bull; FilterOptions</dl>
+</dt><dd> &bull; FilterOptions</dd></dl>
 <h2>CSV IMPORT FILTER OPTIONS</h2>
 <p> The CSV import filter accepts a FilterOptions setting, the order is: <i>separator(s),text-delimiter,encoding,first-row,column-format</i> </p>
 <p> For example you might want to use this for a <i>real</i> comma-separated document: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -i FilterOptions=44,34,76,2,1/5/2/1/3/1/4/1
 </pre>
-</dl>
+</dd></dl>
 <p> which will use a comma (44) as the field separator, a double quote (34) as the text delimiter, UTF-8 (76) for the input encoding, start from the second row and use the specified formats for each column (1 means standard, 5 means YY/MM/DD date) </p>
 <p> If you like to use more than one separator (say a space or a tab) and use the system&#8217;s encoding (9), but with no text-delimiter, you can do: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -i FilterOptions=9/32,,9,2
 </pre>
-</dl>
+</dd></dl>
 <p> For a list of possible encoding types, you can use the above link to find the possible options. </p>
 <dl>
 <dt>
-<dd> &bull; FilterOptions</dl>
+</dt><dd> &bull; FilterOptions</dd></dl>
 <h2>EXPORT FILTERS</h2>
 <p> In contrast to import filters, export filters can have multiple named options, although it is not always clear what options are available. It all depends on the version of LibreOffice. The export dialog you get in LibreOffice might give you a clue about what is possible, each of those widgets represents an option.</p>
 <h2>TEXT EXPORT FILTER OPTIONS</h2>
 <p> The Text export filter accepts a FilterOptions setting holding the output encoding. </p>
 <dl>
 <dt>
-<dd> &bull; FilterOptions</dl>
+</dt><dd> &bull; FilterOptions</dd></dl>
 <p> The order of the arguments is: <i>encoding,field-seperator,text-delimiter,quote-all-text-cells,save-cell-content-as-shown</i></p>
 <h2>CSV EXPORT FILTER OPTIONS</h2>
 <p> The CSV export filter accepts various arguments, the order is: <i>field-seperator(s),text-delimiter,encoding</i> </p>
 <p> For example you might want to use this for a <i>real</i> comma-separated document: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -e FilterOptions=44,34,76
 </pre>
-</dl>
+</dd></dl>
 <p> which will use a comma (44) as the field separator, a double quote (34) as the text delimiter, UTF-8 (76) for the export encoding, start from the second row and use the specified formats for each column (1 means standard, 5 means YY/MM/DD date) </p>
 <p> If you like to use more than one separator (say a space or a tab) and use the system&#8217;s encoding (9), but with no text-delimiter, you can do: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -e FilterOptions=9/32,,9
 </pre>
-</dl>
+</dd></dl>
 <p> For a list of possible encoding types, you can use the above link to find the possible options. </p>
 <dl>
 <dt>
-<dd> &bull; FilterOptions</dl>
+</dt><dd> &bull; FilterOptions</dd></dl>
 <h2>PDF EXPORT FILTER OPTIONS</h2>
 <p> The PDF export filter is likely the most advanced export filter in its kind with a myriad of options one can use. The export filter options are described in a separate document, or on LibreOffice&#8217;s wiki at: </p>
 <p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/API/Tutorials/PDF_export">http://wiki.services.openoffice.org/wiki/API/Tutorials/PDF_export</a></code>m[] </p>
@@ -252,232 +252,220 @@ Default server is 'localhost'.
 <p> Here is a list of all options, however for more details please look in <i>filters.txt</i>: </p>
 <dl>
 <dt>
-<dd> &bull; AllowDuplicateFieldNames</dl>
+</dt><dd> &bull; AllowDuplicateFieldNames</dd></dl>
 <dl>
 <dt>
-<dd> &bull; CenterWindow</dl>
+</dt><dd> &bull; CenterWindow</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Changes</dl>
+</dt><dd> &bull; Changes</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ConvertOOoTargetToPDFTarget</dl>
+</dt><dd> &bull; ConvertOOoTargetToPDFTarget</dd></dl>
 <dl>
 <dt>
-<dd> &bull; DisplayPDFDocumentTitle</dl>
+</dt><dd> &bull; DisplayPDFDocumentTitle</dd></dl>
 <dl>
 <dt>
-<dd> &bull; DocumentOpenPassword</dl>
+</dt><dd> &bull; DocumentOpenPassword</dd></dl>
 <dl>
 <dt>
-<dd> &bull; EmbedStandardFonts</dl>
+</dt><dd> &bull; EmbedStandardFonts</dd></dl>
 <dl>
 <dt>
-<dd> &bull; EnableCopyingOfContent</dl>
+</dt><dd> &bull; EnableCopyingOfContent</dd></dl>
 <dl>
 <dt>
-<dd> &bull; EnableTextAccessForAccessibilityTools</dl>
+</dt><dd> &bull; EnableTextAccessForAccessibilityTools</dd></dl>
 <dl>
 <dt>
-<dd> &bull; EncryptFile</dl>
+</dt><dd> &bull; EncryptFile</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportBookmarks</dl>
+</dt><dd> &bull; ExportBookmarks</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportBookmarksToPDFDestination</dl>
+</dt><dd> &bull; ExportBookmarksToPDFDestination</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportFormFields</dl>
+</dt><dd> &bull; ExportFormFields</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportLinksRelativeFsys</dl>
+</dt><dd> &bull; ExportLinksRelativeFsys</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportNotes</dl>
+</dt><dd> &bull; ExportNotes</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ExportNotesPages</dl>
+</dt><dd> &bull; ExportNotesPages</dd></dl>
 <dl>
 <dt>
-<dd> &bull; FirstPageOnLeft</dl>
+</dt><dd> &bull; FirstPageOnLeft</dd></dl>
 <dl>
 <dt>
-<dd> &bull; FormsType</dl>
+</dt><dd> &bull; FormsType</dd></dl>
 <dl>
 <dt>
-<dd> &bull; HideViewerMenubar</dl>
+</dt><dd> &bull; HideViewerMenubar</dd></dl>
 <dl>
 <dt>
-<dd> &bull; HideViewerToolbar</dl>
+</dt><dd> &bull; HideViewerToolbar</dd></dl>
 <dl>
 <dt>
-<dd> &bull; HideViewerWindowControls</dl>
+</dt><dd> &bull; HideViewerWindowControls</dd></dl>
 <dl>
 <dt>
-<dd> &bull; InitialPage</dl>
+</dt><dd> &bull; InitialPage</dd></dl>
 <dl>
 <dt>
-<dd> &bull; InitialView</dl>
+</dt><dd> &bull; InitialView</dd></dl>
 <dl>
 <dt>
-<dd> &bull; IsAddStream</dl>
+</dt><dd> &bull; IsAddStream</dd></dl>
 <dl>
 <dt>
-<dd> &bull; IsSkipEmptyPages</dl>
+</dt><dd> &bull; IsSkipEmptyPages</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Magnification</dl>
+</dt><dd> &bull; Magnification</dd></dl>
 <dl>
 <dt>
-<dd> &bull; MaxImageResolution</dl>
+</dt><dd> &bull; MaxImageResolution</dd></dl>
 <dl>
 <dt>
-<dd> &bull; OpenBookmarkLevels</dl>
+</dt><dd> &bull; OpenBookmarkLevels</dd></dl>
 <dl>
 <dt>
-<dd> &bull; OpenInFullScreenMode</dl>
+</dt><dd> &bull; OpenInFullScreenMode</dd></dl>
 <dl>
 <dt>
-<dd> &bull; PageLayout</dl>
+</dt><dd> &bull; PageLayout</dd></dl>
 <dl>
 <dt>
-<dd> &bull; PageRange</dl>
+</dt><dd> &bull; PageRange</dd></dl>
 <dl>
 <dt>
-<dd> &bull; PDFViewSelection</dl>
+</dt><dd> &bull; PDFViewSelection</dd></dl>
 <dl>
 <dt>
-<dd> &bull; PermissionPassword</dl>
+</dt><dd> &bull; PermissionPassword</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Printing</dl>
+</dt><dd> &bull; Printing</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Quality</dl>
+</dt><dd> &bull; Quality</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ReduceImageResolution</dl>
+</dt><dd> &bull; ReduceImageResolution</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ResizeWindowToInitialPage</dl>
+</dt><dd> &bull; ResizeWindowToInitialPage</dd></dl>
 <dl>
 <dt>
-<dd> &bull; RestrictPermissionPassword</dl>
+</dt><dd> &bull; RestrictPermissionPassword</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Selection</dl>
+</dt><dd> &bull; Selection</dd></dl>
 <dl>
 <dt>
-<dd> &bull; SelectPdfVersion</dl>
+</dt><dd> &bull; SelectPdfVersion</dd></dl>
 <dl>
 <dt>
-<dd> &bull; UseLosslessCompression</dl>
+</dt><dd> &bull; UseLosslessCompression</dd></dl>
 <dl>
 <dt>
-<dd> &bull; UseTaggedPDF</dl>
+</dt><dd> &bull; UseTaggedPDF</dd></dl>
 <dl>
 <dt>
-<dd> &bull; UseTransitionEffects</dl>
+</dt><dd> &bull; UseTransitionEffects</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Watermark</dl>
+</dt><dd> &bull; Watermark</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Zoom</dl>
+</dt><dd> &bull; Zoom</dd></dl>
 <h3>GRAPHICS EXPORT FILTER OPTIONS</h3>
 <dl>
 <dt>
-<dd> &bull; Height</dl>
+</dt><dd> &bull; Height</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Resolution</dl>
+</dt><dd> &bull; Resolution</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Width</dl>
+</dt><dd> &bull; Width</dd></dl>
 <p> <font SIZE="+1"> <code>BMP EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; Compression</dl>
+</dt><dd> &bull; Compression</dd></dl>
 <dl>
 <dt>
-<dd> &bull; RLEEncoding</dl>
+</dt><dd> &bull; RLEEncoding</dd></dl>
 </dl>
 <p> </font><font SIZE="+2"> <code>JPEG EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; ColorDepth</dl>
+</dt><dd> &bull; ColorDepth</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Quality</dl>
+</dt><dd> &bull; Quality</dd></dl>
 </dl>
 <p> </font><font SIZE="+3"> <code>PBM/PGM/PPM EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; Encoding</dl>
+</dt><dd> &bull; Encoding</dd></dl>
 </dl>
 <p> </font><font SIZE="+4"> <code>PNG EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; Compression</dl>
+</dt><dd> &bull; Compression</dd></dl>
 <dl>
 <dt>
-<dd> &bull; InterlacedMode</dl>
+</dt><dd> &bull; InterlacedMode</dd></dl>
 </dl>
 <p> </font><font SIZE="+5"> <code>GIF EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; InterlacedMode</dl>
+</dt><dd> &bull; InterlacedMode</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Transparency</dl>
+</dt><dd> &bull; Transparency</dd></dl>
 </dl>
 <p> </font><font SIZE="+6"> <code>EPS EXPORT FILTER OPTIONS</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; ColorFormat</dl>
+</dt><dd> &bull; ColorFormat</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Compression</dl>
+</dt><dd> &bull; Compression</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Preview</dl>
+</dt><dd> &bull; Preview</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Version</dl>
+</dt><dd> &bull; Version</dd></dl>
 </dl>
 <p> </font></p>
 <h2>EXAMPLES</h2>
 <p> You can use unoconv in standalone mode, this means that in absence of an LibreOffice listener, it will starts its own: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 unoconv -f pdf some-document.odt
 </pre>
-</dl>
+</dd></dl>
 <p> One can use unoconv as a listener (by default localhost:2002) to let other unoconv instances connect to it: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 unoconv --listener &amp;
 unoconv -f pdf some-document.odt
@@ -486,71 +474,71 @@ unoconv -f jpg some-image.png
 unoconv -f xsl some-spreadsheet.csv
 kill -15 %-
 </pre>
-</dl>
+</dd></dl>
 <p> This also works on a remote host: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 unoconv --listener --server 1.2.3.4 --port 4567
 </pre>
-</dl>
+</dd></dl>
 <p> and then connect another system to convert documents: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 unoconv --server 1.2.3.4 --port 4567
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> UNO_PATH</p>
 <dl>
 <dt>
-<dd> specifies what LibreOffice pyuno installation unoconv needs to use eg. <i>/opt/libreoffice3.4/basis-link/program</i></dl>
+</dt><dd> specifies what LibreOffice pyuno installation unoconv needs to use eg. <i>/opt/libreoffice3.4/basis-link/program</i></dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Normally, the exit status is 0 if the conversion ran successful. If an error has occured, the return code is most likely an error returned by LibreOffice (or its interface, called UNO) however, the error never translates to something meaningful. In case you like to decipher the LibreOffice errCode, look at: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="http://cgit.freedesktop.org/libreoffice/core/tree/tools/inc/tools/errcode.hxx">http://cgit.freedesktop.org/libreoffice/core/tree/tools/inc/tools/errcode.hxx</a>
 <a rel="nofollow" href="http://cgit.freedesktop.org/libreoffice/core/tree/svtools/inc/svtools/sfxecode.hxx">http://cgit.freedesktop.org/libreoffice/core/tree/svtools/inc/svtools/sfxecode.hxx</a>
 <a rel="nofollow" href="http://cgit.freedesktop.org/libreoffice/core/tree/svtools/inc/svtools/soerr.hxx">http://cgit.freedesktop.org/libreoffice/core/tree/svtools/inc/svtools/soerr.hxx</a>
 </pre>
-</dl>
+</dd></dl>
 <p> Using the above lists, the error code 2074 means: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Class: 1 (ERRCODE_CLASS_ABORT)
 Code: 26 (ERRCODE_IO_INVALIDPARAMETER or SVSTREAM_INVALID_PARAMETER)
 </pre>
-</dl>
+</dd></dl>
 <p> And the error code 3088 means: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Class: 3 (ERRCODE_CLASS_NOTEXISTS)
 Code: 16 (ERRCODE_IO_CANTWRITE)
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/1-convert/">convert</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-file/">file</a>(1), odt2txt
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> unoconv uses the UNO bindings to connect to LibreOffice, in absence of a usable socket, it will start its own LibreOffice instance with the correct parameters. </p>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Please see the TODO file for known bugs and future plans. </p>
 </dl>
 <h2>REFERENCES</h2>
@@ -558,29 +546,29 @@ Code: 16 (ERRCODE_IO_CANTWRITE)
 <p> Asciidoc</p>
 <dl>
 <dt>
-<dd>
-<p> m[blue]<code><a rel="nofollow" href="http://www.methods.co.nz/asciidoc/">http://www.methods.co.nz/asciidoc/</a></code>m[]</dl>
+</dt><dd>
+<p> m[blue]<code><a rel="nofollow" href="http://www.methods.co.nz/asciidoc/">http://www.methods.co.nz/asciidoc/</a></code>m[]</dd></dl>
 <p> asciidoc-odf</p>
 <dl>
 <dt>
-<dd>
-<p> m[blue]<code><a rel="nofollow" href="http://github.com/dagwieers/asciidoc-odf">http://github.com/dagwieers/asciidoc-odf</a></code>m[]</dl>
+</dt><dd>
+<p> m[blue]<code><a rel="nofollow" href="http://github.com/dagwieers/asciidoc-odf">http://github.com/dagwieers/asciidoc-odf</a></code>m[]</dd></dl>
 <p> docbook2odf</p>
 <dl>
 <dt>
-<dd>
-<p> m[blue]<code><a rel="nofollow" href="http://open.comsultia.com/docbook2odf/">http://open.comsultia.com/docbook2odf/</a></code>m[]</dl>
+</dt><dd>
+<p> m[blue]<code><a rel="nofollow" href="http://open.comsultia.com/docbook2odf/">http://open.comsultia.com/docbook2odf/</a></code>m[]</dd></dl>
 <p> A list of possible import and export formats is available from: </p>
 <p> OpenOffice 2.1</p>
 <dl>
 <dt>
-<dd>
-<p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_2_1">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_2_1</a></code>m[]</dl>
+</dt><dd>
+<p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_2_1">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_2_1</a></code>m[]</dd></dl>
 <p> OpenOffice 3.0</p>
 <dl>
 <dt>
-<dd>
-<p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0</a></code>m[]</dl>
+</dt><dd>
+<p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0</a></code>m[]</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Dag Wieers, &lt;m[blue]<code>dag [at] wieers.com</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>RESOURCES</h2>
@@ -591,13 +579,13 @@ Code: 16 (ERRCODE_IO_CANTWRITE)
 <p> <code>Dag Wieers</code> &lt;dag [at] wieers.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> dag [at] wieers.com</p>
+<dt> 1.</dt>
+<dd> dag [at] wieers.com</dd>
 <dl>
 <dt>
-<dd> mailto:dag [at] wieers.com</dl>
+</dt><dd> mailto:dag [at] wieers.com</dd></dl>
 </dl>
 <h2>Index</h2>

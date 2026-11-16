@@ -11,12 +11,9 @@ std::experimental::simd_abi::fixed_size - std::experimental::simd_abi::fixed_siz
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     namespace simd_abi
 {
-
     template &lt;int N&gt;
-
     struct fixed_size {
     };
 }</code></pre> 

@@ -14,14 +14,14 @@ description: "gnutls_range_split – API function"
 <p> <code>int gnutls_range_split(gnutls_session_t </code><i>session</i><code>, const gnutls_range_st * </code><i>orig</i><code>, gnutls_range_st * </code><i>next</i><code>, gnutls_range_st * </code><i>remainder</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure</p>
-<dt>const gnutls_range_st * orig</p>
-<dd> is the original range provided by the user</p>
-<dt>gnutls_range_st * next</p>
-<dd> is the returned range that can be conveyed in a TLS record</p>
-<dt>gnutls_range_st * remainder</p>
-<dd> is the returned remaining range</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure</dd>
+<dt>const gnutls_range_st * orig</dt>
+<dd> is the original range provided by the user</dd>
+<dt>gnutls_range_st * next</dt>
+<dd> is the returned range that can be conveyed in a TLS record</dd>
+<dt>gnutls_range_st * remainder</dt>
+<dd> is the returned remaining range</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function should be used when it is required to hide the length of very long data that cannot be directly provided to <code>gnutls_record_send_range()</code>. In that case this function should be called with the desired length hiding range in <i>orig</i> . The returned <i>next</i> value should then be used in the next call to <code>gnutls_record_send_range()</code> with the partial data. That process should be repeated until <i>remainder</i> is (0,0).</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_range_split – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

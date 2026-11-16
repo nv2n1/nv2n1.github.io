@@ -49,7 +49,7 @@ description: "QuantLib::TimeSeries – Container for historical data."
 <p> This class acts as a generic repository for a set of historical data. Any single datum can be accessed through its date, while sets of consecutive data can be accessed through iterators. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>The Container type must satisfy the requirements set by the C++ standard for associative containers.</dl>
+<dd>The Container type must satisfy the requirements set by the C++ standard for associative containers.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>TimeSeries</code> ()</h3>
 <p>Default constructor</p>

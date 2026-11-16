@@ -18,7 +18,7 @@ description: "tclsh – Simple shell containing Tcl interpreter"
 <dl COMPACT>
 <dd>
 <pre><code>#!/usr/local/bin/tclsh</code></pre>
-</dl>
+</dd></dl>
 <p> then you can invoke the script file directly from your shell if you mark the file as executable. This assumes that <code>tclsh</code> has been installed in the default location in /usr/local/bin; if it is installed somewhere else then you will have to modify the above line to match. Many UNIX systems do not allow the <code>#!</code> line to exceed about 30 characters in length, so be sure that the <code>tclsh</code> executable can be accessed with a short file name. </p>
 <p> An even better approach is to start your script files with the following three lines: </p>
 <dl COMPACT>
@@ -26,20 +26,20 @@ description: "tclsh – Simple shell containing Tcl interpreter"
 <pre><code>#!/bin/sh
 # the next line restarts using tclsh \
 exec tclsh &quot;$0&quot; ${1+&quot;$@&quot;}</code></pre>
-</dl>
+</dd></dl>
 <p> This approach has three advantages over the approach in the previous paragraph. First, the location of the <code>tclsh</code> binary does not have to be hard-wired into the script: it can be anywhere in your shell search path. Second, it gets around the 30-character file name limit in the previous approach. Third, this approach will work even if <code>tclsh</code> is itself a shell script (this is done on some systems in order to handle multiple architectures or operating systems: the <code>tclsh</code> script selects one of several binaries to run). The three lines cause both <code>sh</code> and <code>tclsh</code> to process the script, but the <code>exec</code> is only executed by <code>sh</code>. <code>sh</code> processes the script first; it treats the second line as a comment and executes the third line. The <code>exec</code> statement cause the shell to stop processing and instead to start up <code>tclsh</code> to reprocess the entire script. When <code>tclsh</code> starts up, it treats all three lines as comments, since the backslash at the end of the second line causes the third line to be treated as part of the comment on the second line. </p>
 <p> You should note that it is also common practice to install tclsh with its version number as part of the name. This has the advantage of allowing multiple versions of Tcl to exist on the same system at once, but also the disadvantage of making it harder to write scripts that start up uniformly across different versions of Tcl.</p>
 <h2>Variables</h2>
 <p><code>Tclsh</code> sets the following global Tcl variables in addition to those created by the Tcl library itself (such as <code>env</code>, which maps environment variables such as <code>PATH</code> into Tcl):</p>
 <dl COMPACT>
-<dt><code>argc</code></p>
-<dd>Contains a count of the number of <i>arg</i> arguments (0 if none), not including the name of the script file.</p>
-<dt><code>argv</code></p>
-<dd>Contains a Tcl list whose elements are the <i>arg</i> arguments, in order, or an empty string if there are no <i>arg</i> arguments.</p>
-<dt><code>argv0</code></p>
-<dd>Contains <i>fileName</i> if it was specified. Otherwise, contains the name by which <code>tclsh</code> was invoked.</p>
-<dt><code>tcl_interactive</code></p>
-<dd>Contains 1 if <code>tclsh</code> is running interactively (no <i>fileName</i> was specified and standard input is a terminal-like device), 0 otherwise.</dl>
+<dt><code>argc</code></dt>
+<dd>Contains a count of the number of <i>arg</i> arguments (0 if none), not including the name of the script file.</dd>
+<dt><code>argv</code></dt>
+<dd>Contains a Tcl list whose elements are the <i>arg</i> arguments, in order, or an empty string if there are no <i>arg</i> arguments.</dd>
+<dt><code>argv0</code></dt>
+<dd>Contains <i>fileName</i> if it was specified. Otherwise, contains the name by which <code>tclsh</code> was invoked.</dd>
+<dt><code>tcl_interactive</code></dt>
+<dd>Contains 1 if <code>tclsh</code> is running interactively (no <i>fileName</i> was specified and standard input is a terminal-like device), 0 otherwise.</dd></dl>
 <h2>Prompts</h2>
 <p>When <code>tclsh</code> is invoked interactively it normally prompts for each command with &#8220;<code>% </code>&#8221;. You can change the prompt by setting the global variables <code>tcl_prompt1</code> and <code>tcl_prompt2</code>. If variable <code>tcl_prompt1</code> exists then it must consist of a Tcl script to output a prompt; instead of outputting a prompt <code>tclsh</code> will evaluate the script in <code>tcl_prompt1</code>. The variable <code>tcl_prompt2</code> is used in a similar way when a newline is typed but the current command is not yet complete; if <code>tcl_prompt2</code> is not set then no prompt is output for incomplete commands.</p>
 <h2>Standard Channels</h2>

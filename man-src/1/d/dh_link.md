@@ -20,18 +20,18 @@ description: "dh_link – create symlinks in package build directories"
 <p> <code>dh_link</code> also scans the package build tree for existing symlinks which do not conform to Debian policy, and corrects them (v4 or later).</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.links</p>
-<dd> Lists pairs of source and destination files to be symlinked. Each pair should be put on its own line, with the source and destination separated by whitespace. </p>
+<dt>debian/<i>package</i>.links</dt>
+<dd> Lists pairs of source and destination files to be symlinked. Each pair should be put on its own line, with the source and destination separated by whitespace. </dd>
 <p> In each pair the source file (called <code>target</code> by <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)) comes first and is followed by the destination file (called <code>link name</code> by <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)). Thus the pairs of source and destination files in each line are give in the same order as they would be given to <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1). </p>
 <p> In contrast to <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1), source and destination paths must be absolute (the leading slash is optional).</dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code>, <code>&#8211;all</code></p>
-<dd> Create any links specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on, not just the first.</p>
-<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></p>
-<dd> Exclude symlinks that contain <i>item</i> anywhere in their filename from being corrected to comply with Debian policy.</p>
-<dt><i>source destination</i> &#8230;</p>
-<dd> Create a file named <i>destination</i> as a link to a file named <i>source</i>. Do this in the package build directory of the first package acted on. (Or in all packages if <code>-A</code> is specified.)</dl>
+<dt><code>-A</code>, <code>&#8211;all</code></dt>
+<dd> Create any links specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on, not just the first.</dd>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude symlinks that contain <i>item</i> anywhere in their filename from being corrected to comply with Debian policy.</dd>
+<dt><i>source destination</i> &#8230;</dt>
+<dd> Create a file named <i>destination</i> as a link to a file named <i>source</i>. Do this in the package build directory of the first package acted on. (Or in all packages if <code>-A</code> is specified.)</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
  dh_link usr/share/man/man1/foo.1 usr/share/man/man1/bar.1

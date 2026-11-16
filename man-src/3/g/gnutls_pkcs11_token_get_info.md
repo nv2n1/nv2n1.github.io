@@ -14,14 +14,14 @@ description: "gnutls_pkcs11_token_get_info – API function"
 <p> <code>int gnutls_pkcs11_token_get_info(const char * </code><i>url</i><code>, gnutls_pkcs11_token_info_t </code><i>ttype</i><code>, void * </code><i>output</i><code>, size_t * </code><i>output_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * url</p>
-<dd> should contain a PKCS 11 URL</p>
-<dt>gnutls_pkcs11_token_info_t ttype</p>
-<dd> Denotes the type of information requested</p>
-<dt>void * output</p>
-<dd> where output will be stored</p>
-<dt>size_t * output_size</p>
-<dd> contains the maximum size of the output and will be overwritten with actual</dl>
+<dt>const char * url</dt>
+<dd> should contain a PKCS 11 URL</dd>
+<dt>gnutls_pkcs11_token_info_t ttype</dt>
+<dd> Denotes the type of information requested</dd>
+<dt>void * output</dt>
+<dd> where output will be stored</dd>
+<dt>size_t * output_size</dt>
+<dd> contains the maximum size of the output and will be overwritten with actual</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return information about the PKCS 11 token such as the label, id, etc.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_pkcs11_token_get_info – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

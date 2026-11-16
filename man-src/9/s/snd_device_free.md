@@ -15,11 +15,11 @@ snd_device_free - release the device from the card
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>device_data</i>
-<dl><dd>the data pointer to release</dl>
+<dl><dd>the data pointer to release</dd></dl>
 
 <h2>Description</h2>
 

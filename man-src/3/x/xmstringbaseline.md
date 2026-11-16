@@ -16,10 +16,10 @@ description: "XmStringBaseline — A compound string function that returns the n
 <h2>Description</h2>
 <p><code>XmStringBaseline</code> returns the number of pixels between the top of the character box and the baseline of the first line of text in the provided compound string.</p>
 <dl COMPACT>
-<dt><i>rendertable</i></p>
-<dd>Specifies the render table</p>
-<dt><i>string</i></p>
-<dd>Specifies the string</dl>
+<dt><i>rendertable</i></dt>
+<dd>Specifies the render table</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string</dd></dl>
 <h2>Return</h2>
 <p>Returns the number of pixels between the top of the character box and the baseline of the first line of text.</p>
 <h2>Related</h2>

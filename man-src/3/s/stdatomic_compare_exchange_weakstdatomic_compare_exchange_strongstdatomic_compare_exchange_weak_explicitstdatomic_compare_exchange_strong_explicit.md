@@ -10,85 +10,45 @@ description: "std::atomic_compare_exchange_weak,std::atomic_compare_exchange_str
 <p>std::atomic_compare_exchange_weak,std::atomic_compare_exchange_strong,std::atomic_compare_exchange_weak_explicit,std::atomic_compare_exchange_strong_explicit &#8211; std::atomic_compare_exchange_weak,std::atomic_compare_exchange_strong,std::atomic_compare_exchange_weak_explicit,std::atomic_compare_exchange_strong_explicit</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_weak( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired ) noexcept;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_weak( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired ) noexcept;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_strong( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired ) noexcept;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_strong( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired ) noexcept;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_weak_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired,                                 (1) (since C++11)
-
 std::memory_order succ,
-
 std::memory_order fail ) noexcept;
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_weak_explicit( volatile std::atomic&lt;T&gt;* obj,                      (2) (since C++11)
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired,
-
 std::memory_order succ,
-
 std::memory_order fail ) noexcept;                                                                               (3) (since C++11)
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_strong_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired,
-
 std::memory_order succ,
-
 std::memory_order fail ) noexcept;                                                                                                 (4) (since C++11)
-
 template&lt; class T &gt;
-
 bool atomic_compare_exchange_strong_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type* expected,
-
 typename std::atomic&lt;T&gt;::value_type desired,
-
 std::memory_order succ,
-
 std::memory_order fail ) noexcept;</code></pre>
 <p>Atomically compares the<br />
 object_representation<br />
@@ -123,9 +83,7 @@ Padding bits that never participate in an object&#8217;s value representation ar
  // Run this code </p>
 <pre><code>#include &lt;atomic&gt;
 template &lt;class T&gt;
-
 struct node
-
 {
     T data;
     node *next;
@@ -135,12 +93,9 @@ struct node
     }
 };
 template &lt;class T&gt;
-
 class stack
-
 {
     std::atomic&lt;node&lt;T&gt; *&gt; head;
-
   public:
     void push(const T &amp;data)
     {
@@ -158,16 +113,12 @@ class stack
             std::memory_order_release,
             std::memory_order_relaxed))
             ; // the body of the loop is empty
-
         // note: the above loop is not thread-safe in at least
-
         // GCC prior to 4.8.3 (bug 60272), clang prior to 2014-05-05 (bug 18899)
-
         // MSVC prior to 2014-03-17 (bug 819819). See member function version for workaround
     }
 };
 int main()
-
 {
     stack&lt;int&gt; s;
     s.push(1);

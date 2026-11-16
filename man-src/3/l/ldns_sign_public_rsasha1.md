@@ -18,14 +18,14 @@ description: "ldns_sign_public_dsa, ldns_sign_public_rsamd5, ldns_sign_public_rs
 <p> ldns_rdf* ldns_sign_public_rsasha1(ldns_buffer *to_sign, RSA *key); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_sign_public_dsa</i>()</p>
-<dd>Sign a buffer with the DSA key (hash with SHA1) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dl>
+<dt> <i>ldns_sign_public_dsa</i>()</dt>
+<dd>Sign a buffer with the DSA key (hash with SHA1) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dd></dl>
 <dl>
-<dt> <i>ldns_sign_public_rsamd5</i>()</p>
-<dd>Sign a buffer with the RSA key (hash with MD5) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dl>
+<dt> <i>ldns_sign_public_rsamd5</i>()</dt>
+<dd>Sign a buffer with the RSA key (hash with MD5) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dd></dl>
 <dl>
-<dt> <i>ldns_sign_public_rsasha1</i>()</p>
-<dd>Sign a buffer with the RSA key (hash with SHA1) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dl>
+<dt> <i>ldns_sign_public_rsasha1</i>()</dt>
+<dd>Sign a buffer with the RSA key (hash with SHA1) .br <code>to_sign</code>: buffer with the data .br <code>key</code>: the key to use .br Returns a ldns_rdf with the signed data</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

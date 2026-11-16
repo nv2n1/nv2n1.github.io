@@ -14,12 +14,12 @@ description: "ata_qc_issue – issue taskfile to device"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>command to issue to device</dl>
+</dd><dd>command to issue to device</dd></dl>
 <h2>Description</h2>
 <p>Prepare an ATA command to submission to device. This includes mapping the data into a DMA-able area, filling in the S/G table, and finally writing the taskfile to hardware, starting the command. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

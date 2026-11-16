@@ -11,105 +11,55 @@ std::regex_search - std::regex_search
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;regex&gt;
-
     template &lt;class BidirIt,
-
               class Alloc, class CharT, class Traits&gt;
-
     bool regex_search(BidirIt first, BidirIt last,
-
                       std::match_results&lt;BidirIt, Alloc&gt; &amp;m, (1)(since C++ 11)
-
                                                                  const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                       std::regex_constants::match_flag_type flags =
-
                           std::regex_constants::match_default);
-
 template &lt;class CharT, class Alloc, class Traits&gt;
-
 bool regex_search(const CharT *str,
-
                   std::match_results&lt;const CharT *, Alloc&gt; &amp;m, (2)(since C++ 11)
-
                                                                    const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                   std::regex_constants::match_flag_type flags =
-
                       std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class Alloc, class CharT, class Traits&gt;
-
 bool regex_search(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s,
-
                   std::match_results&lt;
-
                       typename std::basic_string&lt;CharT, STraits, SAlloc&gt;::const_iterator, (3)(since C++ 11)
-
                                                                                               Alloc
-
                       &gt; &amp;m,
-
                   const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                   std::regex_constants::match_flag_type flags =
-
                       std::regex_constants::match_default);
-
 template &lt;class BidirIt,
-
           class CharT, class Traits&gt;
-
 bool regex_search(BidirIt first, BidirIt last, (4)(since C++ 11)
-
                                                    const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                   std::regex_constants::match_flag_type flags =
-
                       std::regex_constants::match_default);
-
 template &lt;class CharT, class Traits&gt;
-
 bool regex_search(const CharT *str,
-
                   const std::basic_regex&lt;CharT, Traits&gt; &amp;e, (5)(since C++ 11)
-
                                                                 std::regex_constants::match_flag_type flags =
-
                                                                     std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class CharT, class Traits&gt;
-
 bool regex_search(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (6)(since C++ 11)
-
                                                                           const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                   std::regex_constants::match_flag_type flags =
-
                       std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class Alloc, class CharT, class Traits&gt;
-
 bool regex_search(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;&amp;,
-
                   std::match_results&lt;
-
                       typename std::basic_string&lt;CharT, STraits, SAlloc&gt;::const_iterator, (7)(since C++ 14)
-
                                                                                               Alloc
-
                       &gt; &amp;,
-
                   const std::basic_regex&lt;CharT, Traits&gt; &amp;,
-
                   std::regex_constants::match_flag_type flags =
-
                       std::regex_constants::match_default) = delete;</code></pre> 
 Determines if there is a match between the regular expression e and some subsequence in the target character sequence. 
 1) Analyzes generic range [first,last). Match results are returned in m. 
@@ -166,12 +116,9 @@ In order to examine all matches within the target sequence, std::regex_search ma
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;regex&gt;
 int main()
-
 {
     std::string lines[] = {&quot;Roses are #ff0000&quot;,
                            &quot;violets are #0000ff&quot;,
@@ -203,7 +150,6 @@ int main()
       Speed:      378
       Mass:       32
       Speed:      400
-
       Mass:   30)&quot;);
     std::regex r(R&quot;(Speed:\t\d*)&quot;);
     std::smatch sm;

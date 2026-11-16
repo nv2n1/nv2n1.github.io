@@ -28,32 +28,32 @@ description: "Evas Object Event Flag Functions – Functions that deal with how 
 <p>Determine whether an object is set to pass events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i></dl>
+<dd><i>obj</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>pass events state</dl>
+<dd>pass events state</dd></dl>
 <h3>EAPI void evas_object_pass_events_set (<code>Evas_Object</code> * obj, Evas_Bool pass)</h3>
 <p>Set an object&#8217;s pass events state. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> the evas object<br />
- <i>pass</i> whether to pass events or not</dl>
+ <i>pass</i> whether to pass events or not</dd></dl>
 <p> If pass is true, this will cause events on obj to be ignored. They will be triggered on the next lower object (that is not set to pass events) instead. </p>
 <p> If pass is false, events will be processed as normal.</p>
 <h3>EAPI Evas_Bool evas_object_propagate_events_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Determine whether an object is set to propagate events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i></dl>
+<dd><i>obj</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>propogate events state</dl>
+<dd>propogate events state</dd></dl>
 <h3>EAPI void evas_object_propagate_events_set (<code>Evas_Object</code> * obj, Evas_Bool prop)</h3>
 <p>Set whether events on a smart member object should propagate to its parent. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> the smart member object<br />
- <i>prop</i> wheter to propagate events or not</dl>
+ <i>prop</i> wheter to propagate events or not</dd></dl>
 <p> This function has no effect if obj is not a member of a smart object. </p>
 <p> If prop is true, events occuring on this object will propagate on to the smart object of which obj is a member. </p>
 <p> If prop is false, events for which callbacks are set on the member object, obj, will not be passed on to the parent smart object. </p>
@@ -62,16 +62,16 @@ description: "Evas Object Event Flag Functions – Functions that deal with how 
 <p>Determine whether an object is set to repeat events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i></dl>
+<dd><i>obj</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>repeat events state</dl>
+<dd>repeat events state</dd></dl>
 <h3>EAPI void evas_object_repeat_events_set (<code>Evas_Object</code> * obj, Evas_Bool repeat)</h3>
 <p>Set an object&#8217;s repeat events state. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> the object<br />
- <i>repeat</i> wheter to repeat events or not</dl>
+ <i>repeat</i> wheter to repeat events or not</dd></dl>
 <p> If repeat is true, this will cause events on obj to trigger callbacks, but also to be repeated on the next lower object in the stack. </p>
 <p> If repeat is false, events occuring on obj will be processed normally.</p>
 <h2>Author</h2>

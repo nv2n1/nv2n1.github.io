@@ -11,43 +11,26 @@ std::partial_sort - std::partial_sort
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void partial_sort(RandomIt first, RandomIt middle, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void partial_sort(RandomIt first, RandomIt middle, RandomIt last);
-
 template &lt;class ExecutionPolicy, class RandomIt&gt;
-
 void partial_sort(ExecutionPolicy &amp;&amp;policy, (2)(since C++ 17)
-
                                                 RandomIt first,
                   RandomIt middle, RandomIt last);
-
 template &lt;class RandomIt, class Compare&gt;
-
 void partial_sort(RandomIt first, RandomIt middle, RandomIt last, (1)(until C++ 20)
-
                                                                       Compare comp);
-
 template &lt;class RandomIt, class Compare&gt;
-
 constexpr void partial_sort(RandomIt first, RandomIt middle, RandomIt last, (3)(since C++ 20)
-
                                                                                 Compare comp);
-
 template &lt;class ExecutionPolicy, class RandomIt, class Compare&gt;
-
 void partial_sort(ExecutionPolicy &amp;&amp;policy, (4)(since C++ 17)
-
                                                 RandomIt first,
                   RandomIt middle, RandomIt last,
-
                   Compare comp);</code></pre> 
 Rearranges elements such that the range [first, middle) contains the sorted middle - first smallest elements in the range [first, last). 
 The order of equal elements is not guaranteed to be preserved. The order of the remaining elements in the range [middle, last) is unspecified. 
@@ -93,14 +76,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::array&lt;int, 10&gt; s{5, 7, 4, 2, 8, 6, 1, 9, 0, 3};
     std::partial_sort(s.begin(), s.begin() + 3, s.end());

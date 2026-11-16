@@ -30,19 +30,19 @@ url: "/docs/linux/man/1-abrt-merge-pstoreoops/"
  -o
 <dl>
 <dt>
-<dd> Print found oopses</dl>
+</dt><dd> Print found oopses</dd></dl>
  
 
  -d
 <dl>
 <dt>
-<dd> Delete files with found oopses</dl>
+</dt><dd> Delete files with found oopses</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -50,7 +50,7 @@ url: "/docs/linux/man/1-abrt-merge-pstoreoops/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

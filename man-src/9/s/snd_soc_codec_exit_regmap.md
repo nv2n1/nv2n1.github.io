@@ -14,7 +14,7 @@ description: "snd_soc_codec_exit_regmap – De-initialize regmap instance for th
 <p><i>codec</i></p>
 <dl>
 <dd>
-<dd>The CODEC for which to de-initialize the regmap instance</dl>
+</dd><dd>The CODEC for which to de-initialize the regmap instance</dd></dl>
 <h2>Description</h2>
 <p>Calls <code>regmap_exit</code> on the regmap instance associated to the CODEC and removes the regmap instance from the CODEC. </p>
 <p> This function should only be used if <code>snd_soc_codec_init_regmap</code> was used to initialize the regmap instance.</p>

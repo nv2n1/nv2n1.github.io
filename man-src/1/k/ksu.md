@@ -41,48 +41,48 @@ jqpublic[at] USC.EDU
 <p> <code>NOTE:</code> During authentication, only the tickets that could be obtained without providing a password are cached in in the source cache.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code> <i>target_principal_name</i></p>
-<dd> Specify a Kerberos target principal name. Used in authentication and authorization phases of ksu. </p>
+<dt><code>-n</code> <i>target_principal_name</i></dt>
+<dd> Specify a Kerberos target principal name. Used in authentication and authorization phases of ksu. </dd>
 <p> If ksu is invoked without <code>-n</code>, a default principal name is assigned via the following heuristic:</p>
-<dt>&bull;</p>
-<dd> Case 1: source user is non-root. </p>
+<dt>&bull;</dt>
+<dd> Case 1: source user is non-root. </dd>
 <p> If the target user is the source user the default principal name is set to the default principal of the source cache. If the cache does not exist then the default principal name is set to <code>target_user [at] local_realm</code>. If the source and target users are different and neither <code>~target_user/.k5users</code> nor <code>~target_user/.k5login</code> exist then the default principal name is <code>target_user_login_name [at] local_realm</code>. Otherwise, starting with the first principal listed below, ksu checks if the principal is authorized to access the target account and whether there is a legitimate ticket for that principal in the source cache. If both conditions are met that principal becomes the default target principal, otherwise go to the next principal.</p>
-<dt>a.</p>
-<dd> default principal of the source cache</p>
-<dt>b.</p>
-<dd> target_user [at] local_realm</p>
-<dt>c.</p>
-<dd> source_user [at] local_realm </p>
+<dt>a.</dt>
+<dd> default principal of the source cache</dd>
+<dt>b.</dt>
+<dd> target_user [at] local_realm</dd>
+<dt>c.</dt>
+<dd> source_user [at] local_realm </dd>
 <p> If a-c fails try any principal for which there is a ticket in the source cache and that is authorized to access the target account. If that fails select the first principal that is authorized to access the target account from the above list. If none are authorized and ksu is configured with <code>PRINC_LOOK_AHEAD</code> turned on, select the default principal as follows: </p>
 <p> For each candidate in the above list, select an authorized principal that has the same realm name and first part of the principal name equal to the prefix of the candidate. For example if candidate a) is <code>jqpublic [at] ISI.EDU</code> and <code>jqpublic/secure [at] ISI.EDU</code> is authorized to access the target account then the default principal is set to <code>jqpublic/secure [at] ISI.EDU</code>.</p>
-<dt>&bull;</p>
-<dd> Case 2: source user is root. </p>
+<dt>&bull;</dt>
+<dd> Case 2: source user is root. </dd>
 <p> If the target user is non-root then the default principal name is <code>target_user [at] local_realm</code>. Else, if the source cache exists the default principal name is set to the default principal of the source cache. If the source cache does not exist, default principal name is set to <code>root\@local_realm</code>. </p>
 <p> <code>-c</code> <i>source_cache_name</i> Specify source cache name (e.g., <code>-c FILE:/tmp/my_cache</code>). If <code>-c</code> option is not used then the name is obtained from <code>KRB5CCNAME</code> environment variable. If <code>KRB5CCNAME</code> is not defined the source cache name is set to <code>krb5cc_&lt;source uid&gt;</code>. The target cache name is automatically set to <code>krb5cc_&lt;target uid&gt;.(gen_sym())</code>, where gen_sym generates a new number such that the resulting cache does not already exist. For example: </p>
 <pre>
 krb5cc_1984.2
 </pre>
-<dt><code>-k</code></p>
-<dd> Do not delete the target cache upon termination of the target shell or a command (<code>-e</code> command). Without <code>-k</code>, ksu deletes the target cache.</p>
-<dt><code>-z</code></p>
-<dd> Restrict the copy of tickets from the source cache to the target cache to only the tickets where client == the target principal name. Use the <code>-n</code> option if you want the tickets for other then the default principal. Note that the <code>-z</code> option is mutually exclusive with the <code>-Z</code> option.</p>
-<dt><code>-Z</code></p>
-<dd> Don&#8217;t copy any tickets from the source cache to the target cache. Just create a fresh target cache, where the default principal name of the cache is initialized to the target principal name. Note that the <code>-Z</code> option is mutually exclusive with the <code>-z</code> option.</p>
-<dt><code>-q</code></p>
-<dd> Suppress the printing of status messages. </p>
+<dt><code>-k</code></dt>
+<dd> Do not delete the target cache upon termination of the target shell or a command (<code>-e</code> command). Without <code>-k</code>, ksu deletes the target cache.</dd>
+<dt><code>-z</code></dt>
+<dd> Restrict the copy of tickets from the source cache to the target cache to only the tickets where client == the target principal name. Use the <code>-n</code> option if you want the tickets for other then the default principal. Note that the <code>-z</code> option is mutually exclusive with the <code>-Z</code> option.</dd>
+<dt><code>-Z</code></dt>
+<dd> Don&#8217;t copy any tickets from the source cache to the target cache. Just create a fresh target cache, where the default principal name of the cache is initialized to the target principal name. Note that the <code>-Z</code> option is mutually exclusive with the <code>-z</code> option.</dd>
+<dt><code>-q</code></dt>
+<dd> Suppress the printing of status messages. </dd>
 <p> Ticket granting ticket options:</p>
-<dt><code>-l</code> <i>lifetime</i> <code>-r</code> <i>time</i> <code>-pf</code></p>
-<dd> The ticket granting ticket options only apply to the case where there are no appropriate tickets in the cache to authenticate the source user. In this case if ksu is configured to prompt users for a Kerberos password (<code>GET_TGT_VIA_PASSWD</code> is defined), the ticket granting ticket options that are specified will be used when getting a ticket granting ticket from the Kerberos server.</p>
-<dt><code>-l</code> <i>lifetime</i></p>
-<dd> (<i>duration</i> string.) Specifies the lifetime to be requested for the ticket; if this option is not specified, the default ticket lifetime (12 hours) is used instead.</p>
-<dt><code>-r</code> <i>time</i></p>
-<dd> (<i>duration</i> string.) Specifies that the <code>renewable</code> option should be requested for the ticket, and specifies the desired total lifetime of the ticket.</p>
-<dt><code>-p</code></p>
-<dd> specifies that the <code>proxiable</code> option should be requested for the ticket.</p>
-<dt><code>-f</code></p>
-<dd> option specifies that the <code>forwardable</code> option should be requested for the ticket.</p>
-<dt><code>-e</code> <i>command</i> [<i>args</i> &#8230;]</p>
-<dd> ksu proceeds exactly the same as if it was invoked without the <code>-e</code> option, except instead of executing the target shell, ksu executes the specified command. Example of usage: </p>
+<dt><code>-l</code> <i>lifetime</i> <code>-r</code> <i>time</i> <code>-pf</code></dt>
+<dd> The ticket granting ticket options only apply to the case where there are no appropriate tickets in the cache to authenticate the source user. In this case if ksu is configured to prompt users for a Kerberos password (<code>GET_TGT_VIA_PASSWD</code> is defined), the ticket granting ticket options that are specified will be used when getting a ticket granting ticket from the Kerberos server.</dd>
+<dt><code>-l</code> <i>lifetime</i></dt>
+<dd> (<i>duration</i> string.) Specifies the lifetime to be requested for the ticket; if this option is not specified, the default ticket lifetime (12 hours) is used instead.</dd>
+<dt><code>-r</code> <i>time</i></dt>
+<dd> (<i>duration</i> string.) Specifies that the <code>renewable</code> option should be requested for the ticket, and specifies the desired total lifetime of the ticket.</dd>
+<dt><code>-p</code></dt>
+<dd> specifies that the <code>proxiable</code> option should be requested for the ticket.</dd>
+<dt><code>-f</code></dt>
+<dd> option specifies that the <code>forwardable</code> option should be requested for the ticket.</dd>
+<dt><code>-e</code> <i>command</i> [<i>args</i> &#8230;]</dt>
+<dd> ksu proceeds exactly the same as if it was invoked without the <code>-e</code> option, except instead of executing the target shell, ksu executes the specified command. Example of usage: </dd>
 <pre>
 ksu bob -e ls -lag
 </pre>
@@ -94,8 +94,8 @@ ksu bob -e ls -lag
 <p> <code>jqpublic [at] USC.EDU</code> is only authorized to execute <code>ls</code>, <code>mail</code> and <code>klist</code> commands. <code>jqpublic/secure [at] USC.EDU</code> is authorized to execute any command. <code>jqpublic/admin [at] USC.EDU</code> is not authorized to execute any command. Note, that <code>jqpublic/admin [at] USC.EDU</code> is authorized to execute the target shell (regular ksu, without the <code>-e</code> option) but <code>jqpublic [at] USC.EDU</code> is not. </p>
 <p> The commands listed after the principal name must be either a full path names or just the program name. In the second case, <code>CMD_PATH</code> specifying the location of authorized programs must be defined at the compilation time of ksu. Which command gets executed? </p>
 <p> If the source user is root or the target user is the source user or the user is authorized to execute any command (<code>*</code> entry) then command can be either a full or a relative path leading to the target program. Otherwise, the user must specify either a full path or just the program name.</p>
-<dt><code>-a</code> <i>args</i></p>
-<dd> Specify arguments to be passed to the target shell. Note that all flags and parameters following -a will be passed to the shell, thus all options intended for ksu must precede <code>-a</code>. </p>
+<dt><code>-a</code> <i>args</i></dt>
+<dd> Specify arguments to be passed to the target shell. Note that all flags and parameters following -a will be passed to the shell, thus all options intended for ksu must precede <code>-a</code>. </dd>
 <p> The <code>-a</code> option can be used to simulate the <code>-e</code> option if used as follows: </p>
 <pre><code>
 - a - c[command[arguments]].
@@ -104,14 +104,14 @@ ksu bob -e ls -lag
 <h2>INSTALLATION INSTRUCTIONS</h2>
 <p> ksu can be compiled with the following four flags:</p>
 <dl>
-<dt><code>GET_TGT_VIA_PASSWD</code></p>
-<dd> In case no appropriate tickets are found in the source cache, the user will be prompted for a Kerberos password. The password is then used to get a ticket granting ticket from the Kerberos server. The danger of configuring ksu with this macro is if the source user is logged in remotely and does not have a secure channel, the password may get exposed.</p>
-<dt><code>PRINC_LOOK_AHEAD</code></p>
-<dd> During the resolution of the default principal name, <code>PRINC_LOOK_AHEAD</code> enables ksu to find principal names in the .k5users file as described in the OPTIONS section (see <code>-n</code> option).</p>
-<dt><code>CMD_PATH</code></p>
-<dd> Specifies a list of directories containing programs that users are authorized to execute (via .k5users file).</p>
-<dt><code>HAVE_GETUSERSHELL</code></p>
-<dd> If the source user is non-root, ksu insists that the target user&#8217;s shell to be invoked is a &quot;legal shell&quot;. <i><a href="/docs/linux/man/3-getusershell/">getusershell</a>(3)</i> is called to obtain the names of &quot;legal shells&quot;. Note that the target user&#8217;s shell is obtained from the passwd file. </p>
+<dt><code>GET_TGT_VIA_PASSWD</code></dt>
+<dd> In case no appropriate tickets are found in the source cache, the user will be prompted for a Kerberos password. The password is then used to get a ticket granting ticket from the Kerberos server. The danger of configuring ksu with this macro is if the source user is logged in remotely and does not have a secure channel, the password may get exposed.</dd>
+<dt><code>PRINC_LOOK_AHEAD</code></dt>
+<dd> During the resolution of the default principal name, <code>PRINC_LOOK_AHEAD</code> enables ksu to find principal names in the .k5users file as described in the OPTIONS section (see <code>-n</code> option).</dd>
+<dt><code>CMD_PATH</code></dt>
+<dd> Specifies a list of directories containing programs that users are authorized to execute (via .k5users file).</dd>
+<dt><code>HAVE_GETUSERSHELL</code></dt>
+<dd> If the source user is non-root, ksu insists that the target user&#8217;s shell to be invoked is a &quot;legal shell&quot;. <i><a href="/docs/linux/man/3-getusershell/">getusershell</a>(3)</i> is called to obtain the names of &quot;legal shells&quot;. Note that the target user&#8217;s shell is obtained from the passwd file. </dd>
 <p> Sample configuration: </p>
 <pre>
 KSU_OPTS = -DGET_TGT_VIA_PASSWD -DPRINC_LOOK_AHEAD -DCMD_PATH='&quot;/bin /usr/ucb /local/bin&quot;
@@ -127,3 +127,4 @@ KSU_OPTS = -DGET_TGT_VIA_PASSWD -DPRINC_LOOK_AHEAD -DCMD_PATH='&quot;/bin /usr/u
 <h2>COPYRIGHT</h2>
 <p> 1985-2017, MIT </p>
 <h2>Index</h2>
+</p>

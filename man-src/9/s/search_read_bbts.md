@@ -14,20 +14,20 @@ description: "search_read_bbts – [GENERIC] scan the device for bad block table
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>temporary buffer</dl>
+<dd>temporary buffer</dd></dl>
 <p> <i>td</i></p>
 <dl>
-<dd>descriptor for the bad block table</dl>
+<dd>descriptor for the bad block table</dd></dl>
 <p> <i>md</i></p>
 <dl>
-<dd>descriptor for the bad block table mirror</dl>
+<dd>descriptor for the bad block table mirror</dd></dl>
 <h2>Description</h2>
 <p>Search and read the bad block table(s).</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

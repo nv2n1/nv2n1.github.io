@@ -26,50 +26,50 @@ description: "epstopdf, repstopdf – convert an EPS file to PDF"
 <p> Options may start with either &quot;<code>&#8211;</code>&quot; or &quot;<code>&#8212;</code>&quot;, and may be unambiguously abbreviated. It is best to use the full option name in scripts to avoid possible collisions with new options in the future. </p>
 <p> General script options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display help message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version information and exit</p>
-<dt><code>&#8211;outfile</code>=<i>file</i></p>
-<dd> write result to <i>file</i>. If this option is not given, and <code>&#8211;nogs</code> or <code>&#8211;filter</code> is specified, write to standard output; otherwise, the default is to construct the output file name by replacing any extension in the input file with `.pdf&#8217;.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>debug</code></p>
-<dd> write debugging info (default: false).</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>exact</code></p>
-<dd> scan ExactBoundingBox (default: false).</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>filter</code></p>
-<dd> read standard input and (unless <code>&#8211;outfile</code> is given) write standard output (default: false).</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>gs</code></p>
-<dd> run Ghostscript (default: true). With <code>&#8211;nogs</code>, output (to standard output by default) the PostScript that would normally be converted; that is, the input PostScript as modified by <code>epstopdf</code>.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>hires</code></p>
-<dd> scan HiresBoundingBox (default: false).</p>
-<dt><code>&#8211;restricted</code>=<i>val</i></p>
-<dd> turn on restricted mode (default: [true for repstopdf, else false]); this forbids the use of <code>&#8211;gscmd</code> and other options and imposes restrictions on the input and output file names according to the values of openin_any and openout_any (see the Web2c manual, <a rel="nofollow" href="http://tug.org/web2c">http://tug.org/web2c</a>).</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display help message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version information and exit</dd>
+<dt><code>&#8211;outfile</code>=<i>file</i></dt>
+<dd> write result to <i>file</i>. If this option is not given, and <code>&#8211;nogs</code> or <code>&#8211;filter</code> is specified, write to standard output; otherwise, the default is to construct the output file name by replacing any extension in the input file with `.pdf&#8217;.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>debug</code></dt>
+<dd> write debugging info (default: false).</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>exact</code></dt>
+<dd> scan ExactBoundingBox (default: false).</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>filter</code></dt>
+<dd> read standard input and (unless <code>&#8211;outfile</code> is given) write standard output (default: false).</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>gs</code></dt>
+<dd> run Ghostscript (default: true). With <code>&#8211;nogs</code>, output (to standard output by default) the PostScript that would normally be converted; that is, the input PostScript as modified by <code>epstopdf</code>.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>hires</code></dt>
+<dd> scan HiresBoundingBox (default: false).</dd>
+<dt><code>&#8211;restricted</code>=<i>val</i></dt>
+<dd> turn on restricted mode (default: [true for repstopdf, else false]); this forbids the use of <code>&#8211;gscmd</code> and other options and imposes restrictions on the input and output file names according to the values of openin_any and openout_any (see the Web2c manual, <a rel="nofollow" href="http://tug.org/web2c">http://tug.org/web2c</a>).</dd></dl>
 <p> Options for Ghostscript (more info below):</p>
 <dl>
-<dt><code>&#8211;gscmd</code>=<i>val</i></p>
-<dd> pipe output to <i>val</i> (default: [<code>gswin32c</code> on Windows, else <code>gs</code>])</p>
-<dt><code>&#8211;gsopt</code>=<i>val</i></p>
-<dd> include <i>val</i> as one argument in the gs command (can be repeated).</p>
-<dt><code>&#8211;gsopts</code>=<i>val</i></p>
-<dd> split <i>val</i> at whitespace and include each resulting word as an argument in the gs command (can be repeated).</p>
-<dt><code>&#8211;autorotate</code>=<i>val</i></p>
-<dd> set AutoRotatePages (default: None); recognized <i>val</i> choices: None, All, PageByPage. For EPS files, PageByPage is equivalent to All.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>compress</code></p>
-<dd> use compression in the output (default: true); if turned off, passes <i>-dUseFlateCompression=false</i>.</p>
-<dt><code>&#8211;device</code>=<i>dev</i></p>
-<dd> use -sDEVICE=<i>dev</i> (default: pdfwrite); not allowed in restricted mode.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>embed</code></p>
-<dd> embed fonts (default: true); passes <i>-dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true.</i></p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>gray</code></p>
-<dd> grayscale output (default: false); passes <i>-sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray.</i></p>
-<dt><code>&#8211;pdfsettings</code>=<i>val</i></p>
-<dd> use -dPDFSETTINGS=/<i>val</i> (default is `prepress&#8217; if <code>&#8211;embed</code>, else empty); recognized <i>val</i> choices: screen, ebook, printer, prepress, default.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>quiet</code></p>
-<dd> use -q, a.k.a. -dQUIET (default: false).</p>
-<dt><code>&#8211;res</code>=<i>dpi, dpi</i>x<i>dpi</i></p>
-<dd> set image resolution (default: [use gs default]); ignored if <code>&#8211;debug</code> is set.</p>
-<dt><code>&#8212;</code>[<code>no</code>]<code>safer</code></p>
-<dd> use -d(NO)QUIET (default: true).</dl>
+<dt><code>&#8211;gscmd</code>=<i>val</i></dt>
+<dd> pipe output to <i>val</i> (default: [<code>gswin32c</code> on Windows, else <code>gs</code>])</dd>
+<dt><code>&#8211;gsopt</code>=<i>val</i></dt>
+<dd> include <i>val</i> as one argument in the gs command (can be repeated).</dd>
+<dt><code>&#8211;gsopts</code>=<i>val</i></dt>
+<dd> split <i>val</i> at whitespace and include each resulting word as an argument in the gs command (can be repeated).</dd>
+<dt><code>&#8211;autorotate</code>=<i>val</i></dt>
+<dd> set AutoRotatePages (default: None); recognized <i>val</i> choices: None, All, PageByPage. For EPS files, PageByPage is equivalent to All.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>compress</code></dt>
+<dd> use compression in the output (default: true); if turned off, passes <i>-dUseFlateCompression=false</i>.</dd>
+<dt><code>&#8211;device</code>=<i>dev</i></dt>
+<dd> use -sDEVICE=<i>dev</i> (default: pdfwrite); not allowed in restricted mode.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>embed</code></dt>
+<dd> embed fonts (default: true); passes <i>-dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true.</i></dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>gray</code></dt>
+<dd> grayscale output (default: false); passes <i>-sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray.</i></dd>
+<dt><code>&#8211;pdfsettings</code>=<i>val</i></dt>
+<dd> use -dPDFSETTINGS=/<i>val</i> (default is `prepress&#8217; if <code>&#8211;embed</code>, else empty); recognized <i>val</i> choices: screen, ebook, printer, prepress, default.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>quiet</code></dt>
+<dd> use -q, a.k.a. -dQUIET (default: false).</dd>
+<dt><code>&#8211;res</code>=<i>dpi, dpi</i>x<i>dpi</i></dt>
+<dd> set image resolution (default: [use gs default]); ignored if <code>&#8211;debug</code> is set.</dd>
+<dt><code>&#8212;</code>[<code>no</code>]<code>safer</code></dt>
+<dd> use -d(NO)QUIET (default: true).</dd></dl>
 <p> In addition to the specific options above, additional options to be used with gs can be specified with either or both of the two cumulative options <code>&#8211;gsopts</code> and <code>&#8211;gsopt.</code> </p>
 <p> <code>&#8211;gsopts</code> takes a single string of options, which is split at whitespace, each resulting word then added to the gs command line individually. </p>
 <p> <code>&#8211;gsopt</code> adds its argument as a single option to the gs command line. It can be used multiple times to specify options separately, and is necessary if an option or its value contains whitespace. </p>

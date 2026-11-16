@@ -21,7 +21,7 @@ CALL TICKS(LMJR,LMNR)
 <h2>Description</h2>
 
 <dl><dt>LMJR and LMNR
-<dd>See the description in the TICK4 man page.</dl>
+</dt><dd>See the description in the TICK4 man page.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
@@ -31,10 +31,9 @@ The C-binding argument descriptions are the same as the FORTRAN argument descrip
 
 The statement
 <dl><dd>CALL TICKS (LMJR,LMNR) 
-
-</dl>
+</dd></dl>
  is equivalent to
-<dl><dd>CALL TICK4 (LMJR,LMNR,LMJR,LMNR)</dl>
+<dl><dd>CALL TICK4 (LMJR,LMNR,LMJR,LMNR)</dd></dl>
 
 <h2>Access</h2>
 

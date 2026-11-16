@@ -15,12 +15,12 @@ description: "mtx-bibtex – bibtex helpers"
 <p> <code>bibtex helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;toxml</code></p>
-<dd> convert bibtex database(s) to xml</p>
-<dt><code>&#8211;tolua</code></p>
-<dd> convert bibtex database(s) to lua</p>
-<dt><code>&#8211;search</code></p>
-<dd> seatch bibtex database(s)</dl>
+<dt><code>&#8211;toxml</code></dt>
+<dd> convert bibtex database(s) to xml</dd>
+<dt><code>&#8211;tolua</code></dt>
+<dd> convert bibtex database(s) to lua</dd>
+<dt><code>&#8211;search</code></dt>
+<dd> seatch bibtex database(s)</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

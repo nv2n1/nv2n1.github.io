@@ -25,41 +25,41 @@ description: "pamtosvg – convert a Netpbm image to a SVG (Scalable Vector Grap
 <p> For more information on SVG, see the Worldwide Web Consortium&#8217;s SVG web page . </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-background-color=</code><i>colorname</i></p>
-<dd> Treat the specified color as the background color and ignore it. </p>
+<dt><code>-background-color=</code><i>colorname</i></dt>
+<dd> Treat the specified color as the background color and ignore it. </dd>
 <p> If you don&#8217;t specify this option, <code>pamtosvg</code> does not recognize any background color. </p>
 <p> Specify the color (<i>colorname</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
-<dt><code>-centerline</code></p>
-<dd> Trace an object&#8217;s centerline. </p>
+<dt><code>-centerline</code></dt>
+<dd> Trace an object&#8217;s centerline. </dd>
 <p> By default, <code>pamtosvg</code> traces an object&#8217;s outline. </p>
-<dt><code>-corner-always-threshold=</code><i>angle</i></p>
-<dd> Consider any angle at a pixel which falls below angle <i>angle</i> (in decimal floating point degrees) as a corner, even if it is bordered by other corner pixels. Default is 60 degrees. </p>
-<dt><code>-corner-surround=</code><i>integer</i></p>
-<dd> Consider the specified number of pixels on either side of a point when determining if that point is a corner. Default is 4. </p>
-<dt><code>-corner-threshold=</code><i>angle</i></p>
-<dd> Consider any pixel which forms an angle with its predecessors and successors that is smaller than <i>angle</i> (in decimal floating point degrees) as a corner. Default is 100. </p>
-<dt><code>-error-threshold=</code><i>float</i></p>
-<dd> Subdivide fitted curves that are offset by a number of pixels exceeding the specified number. Default is 2.0. </p>
-<dt><code>-filter-iterations=</code><i>integer</i></p>
-<dd> Smooth the curve the specified number of times prior to fitting Default is 4. </p>
-<dt><code>-line-reversion-threshold=</code><i>float</i></p>
-<dd> When a spline is closer to a straight line than the specified real number weighted by the square of the curve length, maintain it as a straight line, even if it is a list with curves. </p>
+<dt><code>-corner-always-threshold=</code><i>angle</i></dt>
+<dd> Consider any angle at a pixel which falls below angle <i>angle</i> (in decimal floating point degrees) as a corner, even if it is bordered by other corner pixels. Default is 60 degrees. </dd>
+<dt><code>-corner-surround=</code><i>integer</i></dt>
+<dd> Consider the specified number of pixels on either side of a point when determining if that point is a corner. Default is 4. </dd>
+<dt><code>-corner-threshold=</code><i>angle</i></dt>
+<dd> Consider any pixel which forms an angle with its predecessors and successors that is smaller than <i>angle</i> (in decimal floating point degrees) as a corner. Default is 100. </dd>
+<dt><code>-error-threshold=</code><i>float</i></dt>
+<dd> Subdivide fitted curves that are offset by a number of pixels exceeding the specified number. Default is 2.0. </dd>
+<dt><code>-filter-iterations=</code><i>integer</i></dt>
+<dd> Smooth the curve the specified number of times prior to fitting Default is 4. </dd>
+<dt><code>-line-reversion-threshold=</code><i>float</i></dt>
+<dd> When a spline is closer to a straight line than the specified real number weighted by the square of the curve length, maintain it as a straight line, even if it is a list with curves. </dd>
 <p> Default is .01. </p>
-<dt><code>-line-threshold=</code><i>float</i></p>
-<dd> If a spline does not deviate from the straight line defined by its endpoints by more than the specified number of pixels, then treat it as a straight line. </p>
+<dt><code>-line-threshold=</code><i>float</i></dt>
+<dd> If a spline does not deviate from the straight line defined by its endpoints by more than the specified number of pixels, then treat it as a straight line. </dd>
 <p> Default is 1. </p>
-<dt><code>-log</code></p>
-<dd> Create a log of the curve tracing process (suitable for debugging). Put it in the file named <i>inputfile</i><code>.log</code> in the current directory, where <i>inputfile</i> is the root of the input file name, or &#8216;pamtosvg&#8217; if the input is from Standard Input or a file with a weird name. </p>
-<dt><code>-preserve-width</code></p>
-<dd> Preserve line width prior to thinning. Meaningful only with <code>-centerline</code>. </p>
-<dt><code>remove-adjacent-corners</code></p>
-<dd> Remove adjacent corners. </p>
-<dt><code>-report-progress</code></p>
-<dd> Report the progress of the tracing to Standard Error as it happens. </p>
-<dt><code>-tangent-surround</code></p>
-<dd> Consider the specified number of points to either side of a point when computing the tangent at that point. Default is 3. </p>
-<dt><code>-width-weight-factor</code></p>
-<dd> Weight factor for fitting the linewidth. </p>
+<dt><code>-log</code></dt>
+<dd> Create a log of the curve tracing process (suitable for debugging). Put it in the file named <i>inputfile</i><code>.log</code> in the current directory, where <i>inputfile</i> is the root of the input file name, or &#8216;pamtosvg&#8217; if the input is from Standard Input or a file with a weird name. </dd>
+<dt><code>-preserve-width</code></dt>
+<dd> Preserve line width prior to thinning. Meaningful only with <code>-centerline</code>. </dd>
+<dt><code>remove-adjacent-corners</code></dt>
+<dd> Remove adjacent corners. </dd>
+<dt><code>-report-progress</code></dt>
+<dd> Report the progress of the tracing to Standard Error as it happens. </dd>
+<dt><code>-tangent-surround</code></dt>
+<dd> Consider the specified number of points to either side of a point when computing the tangent at that point. Default is 3. </dd>
+<dt><code>-width-weight-factor</code></dt>
+<dd> Weight factor for fitting the linewidth. </dd>
 </dl>
 <h2>Application Notes</h2>
 <p> A convenient way to view an SVG document is with a web browser. Many understand a file whose name ends in &#8216;.svg&#8217; to be an SVG image and can render it. </p>

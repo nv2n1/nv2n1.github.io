@@ -33,10 +33,10 @@ url: "/docs/linux/man/1-abrt-action-analyze-vmcore/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=analyze_VMcore analyzer=vmcore
         abrt-action-analyze-vmcore
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -45,19 +45,19 @@ EVENT=analyze_VMcore analyzer=vmcore
  -d DIR
 <dl>
 <dt>
-<dd> Path to a problem directory. Current working directory is used when this option is not provided.</dl>
+</dt><dd> Path to a problem directory. Current working directory is used when this option is not provided.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  --core=VMCORE
 <dl>
 <dt>
-<dd> Path to vmcore to analyze (Default: ./vmcore)</dl>
+</dt><dd> Path to vmcore to analyze (Default: ./vmcore)</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -65,7 +65,7 @@ EVENT=analyze_VMcore analyzer=vmcore
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

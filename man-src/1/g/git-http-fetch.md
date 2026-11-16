@@ -20,43 +20,43 @@ git http - fetch[-c][-t][-a][-d][-v][-w filename][--recover][--stdin | --packfil
 <p> commit-id</p>
 <dl>
 <dt>
-<dd> Either the hash or the filename under [URL]/refs/ to pull.</dl>
+</dt><dd> Either the hash or the filename under [URL]/refs/ to pull.</dd></dl>
 <p> -a, -c, -t</p>
 <dl>
 <dt>
-<dd> These options are ignored for historical reasons.</dl>
+</dt><dd> These options are ignored for historical reasons.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Report what is downloaded.</dl>
+</dt><dd> Report what is downloaded.</dd></dl>
 <p> -w &lt;filename&gt;</p>
 <dl>
 <dt>
-<dd> Writes the commit-id into the filename under $GIT_DIR/refs/&lt;filename&gt; on the local end after the transfer is complete.</dl>
+</dt><dd> Writes the commit-id into the filename under $GIT_DIR/refs/&lt;filename&gt; on the local end after the transfer is complete.</dd></dl>
 <p> &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> expects lines on stdin in the format </p>
+</dt><dd> Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> expects lines on stdin in the format </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &lt;commit-id&gt;['	'&lt;filename-as-in--w&gt;]
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;packfile=&lt;hash&gt;</p>
 <dl>
 <dt>
-<dd> For internal use only. Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> fetches the packfile directly at the given URL and uses index-pack to generate corresponding .idx and .keep files. The hash is used to determine the name of the temporary file and is arbitrary. The output of index-pack is printed to stdout. Requires &#8211;index-pack-args.</dl>
+</dt><dd> For internal use only. Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> fetches the packfile directly at the given URL and uses index-pack to generate corresponding .idx and .keep files. The hash is used to determine the name of the temporary file and is arbitrary. The output of index-pack is printed to stdout. Requires &#8211;index-pack-args.</dd></dl>
 <p> &#8211;index-pack-args=&lt;args&gt;</p>
 <dl>
 <dt>
-<dd> For internal use only. The command to run on the contents of the downloaded pack. Arguments are URL-encoded separated by spaces.</dl>
+</dt><dd> For internal use only. The command to run on the contents of the downloaded pack. Arguments are URL-encoded separated by spaces.</dd></dl>
 <p> &#8211;recover</p>
 <dl>
 <dt>
-<dd> Verify that everything reachable from target is fetched. Used after an earlier fetch is interrupted.</dl>
+</dt><dd> Verify that everything reachable from target is fetched. Used after an earlier fetch is interrupted.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

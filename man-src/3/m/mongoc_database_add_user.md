@@ -18,23 +18,23 @@ mongoc_database_add_user (mongoc_database_t *database,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>username</code></p>
-<dd>The name of the user.</dl>
+<dt><code>username</code></dt>
+<dd>The name of the user.</dd></dl>
 <dl COMPACT>
-<dt><code>password</code></p>
-<dd>The cleartext password for the user.</dl>
+<dt><code>password</code></dt>
+<dd>The cleartext password for the user.</dd></dl>
 <dl COMPACT>
-<dt><code>roles</code></p>
-<dd>An optional <code>bson_t</code> for roles.</dl>
+<dt><code>roles</code></dt>
+<dd>An optional <code>bson_t</code> for roles.</dd></dl>
 <dl COMPACT>
-<dt><code>custom_data</code></p>
-<dd>A optional <code>bson_t</code> for extra data.</dl>
+<dt><code>custom_data</code></dt>
+<dd>A optional <code>bson_t</code> for extra data.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>A location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>A location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <p> This function shall create a new user with access to <code>database</code> \&amp;. </p>
 <p> This function handles the difference between MongoDB <code>2.4</code> and <code>2.6</code> \&amp;. </p>
 <h2>Errors</h2>

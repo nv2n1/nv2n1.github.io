@@ -15,18 +15,18 @@ description: "webhttrack – offline browser : copy websites to a local director
 <p> <code>webhttrack</code> this program is a script frontend to <code><a href="/docs/linux/man/1-httrack/">httrack</a></code>(1) and <code><a href="/docs/linux/man/1-htsserver/">htsserver</a></code>(1) , a website copier.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>webhttrack lang 1</code></p>
+<dt><code>webhttrack lang 1</code></dt>
 <dd>
-&nbsp;<wbr>will launch the webhttrack server frontend, and the default system browser, with&nbsp;<wbr>&quot;lang&quot;&nbsp;<wbr>set to&nbsp;<wbr>&quot;english&quot;&nbsp;<wbr>(language&nbsp;<wbr>#1)</dl>
+&nbsp;<wbr>will launch the webhttrack server frontend, and the default system browser, with&nbsp;<wbr>&quot;lang&quot;&nbsp;<wbr>set to&nbsp;<wbr>&quot;english&quot;&nbsp;<wbr>(language&nbsp;<wbr>#1)</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/httrack.conf</i></p>
 <dl>
 <dt>
-<dd> The system wide configuration file.</dl>
+</dt><dd> The system wide configuration file.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>HOME</p>
-<dd> Is being used if you defined in /etc/httrack.conf the line <i>path ~/websites/# </i></dl>
+<dt>HOME</dt>
+<dd> Is being used if you defined in /etc/httrack.conf the line <i>path ~/websites/# </i></dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Errors/Warnings are reported to <i>hts-log.txt</i> located in the destination directory. </p>
 <h2>BUGS</h2>

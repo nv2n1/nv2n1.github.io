@@ -22,7 +22,6 @@ create_trans_table(&amp;global_trans_table, my_palette,
 ... if (get_color_depth() == 8)
     color_map = &amp;global_trans_table;
 else set_trans_blender(128, 128, 128, 128);
-
 draw_trans_rle_sprite(buffer, rle_ghost_sprite, x, y);
 </code></pre>
 <h2>SEE ALSO</h2>

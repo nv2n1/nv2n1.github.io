@@ -11,17 +11,11 @@ std::atomic_init - std::atomic_init
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
-
     void atomic_init(std::atomic&lt;T&gt; *obj, (since C++ 11)
-
                                               typename std::atomic&lt;T&gt;::value_type desired) noexcept;
-
 template &lt;class T&gt;
-
 void atomic_init(volatile std::atomic&lt;T&gt; *obj, (since C++ 11)
-
                                                    typename std::atomic&lt;T&gt;::value_type desired) noexcept;</code></pre> 
 Initializes the default-constructed atomic object obj with the value desired. The function is not atomic: concurrent access from another thread, even through an atomic operation, is a data race. 
 If obj was not default-constructed, the behavior is undefined. 

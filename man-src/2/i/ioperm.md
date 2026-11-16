@@ -21,14 +21,14 @@ description: "ioperm – set port input/output permissions"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> Invalid values for <i>from</i> or <i>num</i>.</p>
-<dt><code>EIO</code></p>
-<dd> (on PowerPC) This call is not supported.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling thread has insufficient privilege.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid values for <i>from</i> or <i>num</i>.</dd>
+<dt><code>EIO</code></dt>
+<dd> (on PowerPC) This call is not supported.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling thread has insufficient privilege.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>ioperm</code>() is Linux-specific and should not be used in programs intended to be portable.</p>
 <h2>NOTES</h2>

@@ -18,11 +18,11 @@ description: "glxheads – exercise multiple GLX connections"
 <p> To open a local connection on display 0 and two remote connections to the hosts <i>mars</i> (display 0) and <i>venus</i> (display 1), run glxheads with the following command-line: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ glxheads :0 mars:0 venus:1
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> glxheads was written by Brian Paul &lt;brian.paul [at] tungstengraphics.com&gt;. </p>
 <p> This manual page was written by Thierry Reding &lt;thierry [at] gilfi.de&gt; for the Debian project (but may be used by others). </p>

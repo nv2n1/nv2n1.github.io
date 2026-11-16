@@ -15,7 +15,7 @@ snd_soc_component_get_dapm - Returns the DAPM context associated with a componen
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>The component for which to get the DAPM context</dl>
+<dl><dd></dd><dd>The component for which to get the DAPM context</dd></dl>
 
 <h2>Copyright</h2>
 

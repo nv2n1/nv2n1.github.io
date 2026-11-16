@@ -85,7 +85,7 @@ description: "QuantLib::Date – Concrete date class."
 <p> This class provides methods to inspect dates as well as methods and operators which implement a limited date algebra (increasing and decreasing dates, and calculating their difference). </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>self-consistency of dates, serial numbers, days of month, months, and weekdays is checked over the whole date range.</dl>
+<dd>self-consistency of dates, serial numbers, days of month, months, and weekdays is checked over the whole date range.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>DiscreteHedging.cpp</code>, <code>EquityOption.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>FRA.cpp</code>, <code>Replication.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

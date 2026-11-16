@@ -23,18 +23,18 @@ description: "semget – get a System V semaphore set identifier"
 <p> Upon creation, the least significant 9 bits of the argument <i>semflg</i> define the permissions (for owner, group and others) for the semaphore set. These bits have the same format, and the same meaning, as the <i>mode</i> argument of <code><a href="/docs/linux/man/2-open/">open</a></code>(2) (though the execute permissions are not meaningful for semaphores, and write permissions mean permission to alter semaphore values). </p>
 <p> When creating a new semaphore set, <code>semget</code>() initializes the set&#8217;s associated data structure, <i>semid_ds</i> (see <code><a href="/docs/linux/man/2-semctl/">semctl</a></code>(2)), as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>sem_perm.cuid</i> and <i>sem_perm.uid</i> are set to the effective user ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> <i>sem_perm.cgid</i> and <i>sem_perm.gid</i> are set to the effective group ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> The least significant 9 bits of <i>sem_perm.mode</i> are set to the least significant 9 bits of <i>semflg</i>.</p>
-<dt>&bull;</p>
-<dd> <i>sem_nsems</i> is set to the value of <i>nsems</i>.</p>
-<dt>&bull;</p>
-<dd> <i>sem_otime</i> is set to 0.</p>
-<dt>&bull;</p>
-<dd> <i>sem_ctime</i> is set to the current time.</dl>
+<dt>&bull;</dt>
+<dd> <i>sem_perm.cuid</i> and <i>sem_perm.uid</i> are set to the effective user ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> <i>sem_perm.cgid</i> and <i>sem_perm.gid</i> are set to the effective group ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> The least significant 9 bits of <i>sem_perm.mode</i> are set to the least significant 9 bits of <i>semflg</i>.</dd>
+<dt>&bull;</dt>
+<dd> <i>sem_nsems</i> is set to the value of <i>nsems</i>.</dd>
+<dt>&bull;</dt>
+<dd> <i>sem_otime</i> is set to 0.</dd>
+<dt>&bull;</dt>
+<dd> <i>sem_ctime</i> is set to the current time.</dd></dl>
 <p> The argument <i>nsems</i> can be 0 (a don&#8217;t care) when a semaphore set is not being created. Otherwise, <i>nsems</i> must be greater than 0 and less than or equal to the maximum number of semaphores per semaphore set (<code>SEMMSL</code>). </p>
 <p> If the semaphore set already exists, the permissions are verified.</p>
 <h2>RETURN VALUE</h2>
@@ -42,20 +42,20 @@ description: "semget – get a System V semaphore set identifier"
 <h2>ERRORS</h2>
 <p> On failure, <i>errno</i> will be set to one of the following:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> A semaphore set exists for <i>key</i>, but the calling process does not have permission to access the set, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</p>
-<dt><code>EEXIST</code></p>
-<dd> <code>IPC_CREAT</code> and <code>IPC_EXCL</code> were specified in <i>semflg</i>, but a semaphore set already exists for <i>key</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>nsems</i> is less than 0 or greater than the limit on the number of semaphores per semaphore set (<code>SEMMSL</code>).</p>
-<dt><code>EINVAL</code></p>
-<dd> A semaphore set corresponding to <i>key</i> already exists, but <i>nsems</i> is larger than the number of semaphores in that set.</p>
-<dt><code>ENOENT</code></p>
-<dd> No semaphore set exists for <i>key</i> and <i>semflg</i> did not specify <code>IPC_CREAT</code>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> A semaphore set has to be created but the system does not have enough memory for the new data structure.</p>
-<dt><code>ENOSPC</code></p>
-<dd> A semaphore set has to be created but the system limit for the maximum number of semaphore sets (<code>SEMMNI</code>), or the system wide maximum number of semaphores (<code>SEMMNS</code>), would be exceeded.</dl>
+<dt><code>EACCES</code></dt>
+<dd> A semaphore set exists for <i>key</i>, but the calling process does not have permission to access the set, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <code>IPC_CREAT</code> and <code>IPC_EXCL</code> were specified in <i>semflg</i>, but a semaphore set already exists for <i>key</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>nsems</i> is less than 0 or greater than the limit on the number of semaphores per semaphore set (<code>SEMMSL</code>).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> A semaphore set corresponding to <i>key</i> already exists, but <i>nsems</i> is larger than the number of semaphores in that set.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No semaphore set exists for <i>key</i> and <i>semflg</i> did not specify <code>IPC_CREAT</code>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> A semaphore set has to be created but the system does not have enough memory for the new data structure.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> A semaphore set has to be created but the system limit for the maximum number of semaphore sets (<code>SEMMNI</code>), or the system wide maximum number of semaphores (<code>SEMMNS</code>), would be exceeded.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, POSIX.1-2001.</p>
 <h2>NOTES</h2>
@@ -67,12 +67,12 @@ description: "semget – get a System V semaphore set identifier"
 <h3>Semaphore limits</h3>
 <p> The following limits on semaphore set resources affect the <code>semget</code>() call:</p>
 <dl>
-<dt><code>SEMMNI</code></p>
-<dd> System-wide limit on the number of semaphore sets. On Linux systems before version 3.19, the default value for this limit was 128. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via the fourth field of <i>/proc/sys/kernel/sem</i>.</p>
-<dt><code>SEMMSL</code></p>
-<dd> Maximum number of semaphores per semaphore ID. On Linux systems before version 3.19, the default value for this limit was 250. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via the first field of <i>/proc/sys/kernel/sem</i>.</p>
-<dt><code>SEMMNS</code></p>
-<dd> System-wide limit on the number of semaphores: policy dependent (on Linux, this limit can be read and modified via the second field of <i>/proc/sys/kernel/sem</i>). Note that the number of semaphores system-wide is also limited by the product of <code>SEMMSL</code> and <code>SEMMNI</code>.</dl>
+<dt><code>SEMMNI</code></dt>
+<dd> System-wide limit on the number of semaphore sets. On Linux systems before version 3.19, the default value for this limit was 128. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via the fourth field of <i>/proc/sys/kernel/sem</i>.</dd>
+<dt><code>SEMMSL</code></dt>
+<dd> Maximum number of semaphores per semaphore ID. On Linux systems before version 3.19, the default value for this limit was 250. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via the first field of <i>/proc/sys/kernel/sem</i>.</dd>
+<dt><code>SEMMNS</code></dt>
+<dd> System-wide limit on the number of semaphores: policy dependent (on Linux, this limit can be read and modified via the second field of <i>/proc/sys/kernel/sem</i>). Note that the number of semaphores system-wide is also limited by the product of <code>SEMMSL</code> and <code>SEMMNI</code>.</dd></dl>
 <h2>BUGS</h2>
 <p> The name choice <code>IPC_PRIVATE</code> was perhaps unfortunate, <code>IPC_NEW</code> would more clearly show its function.</p>
 <h2>EXAMPLES</h2>

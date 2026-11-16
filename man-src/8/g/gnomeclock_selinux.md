@@ -24,8 +24,8 @@ description: "gnomeclock_selinux – Security Enhanced Linux Policy for the gnom
 <p> gnomeclock_exec_t </code> </p>
 <p> &#8211; Set files with the gnomeclock_exec_t type, if you want to transition an executable to the gnomeclock_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/gsd-datetime-mechanism, /usr/libexec/kde(3|4)/kcmdatetimehelper, /usr/libexec/gnome-clock-applet-mechanism </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/gsd-datetime-mechanism, /usr/libexec/kde(3|4)/kcmdatetimehelper, /usr/libexec/gnome-clock-applet-mechanism </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Process Types</h2>

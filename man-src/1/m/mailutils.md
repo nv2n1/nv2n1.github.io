@@ -16,15 +16,15 @@ description: "mailutils – Mailutils multi-purpose tool"
 <p> No commands found.</p>
 <dl>
 <dt>
-<dd> Informational options</p>
-<dt><code>&#8211;show-config-options</code></p>
-<dd> show compilation options</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+</dt><dd> Informational options</dd>
+<dt><code>&#8211;show-config-options</code></dt>
+<dd> show compilation options</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-mailutils [at] gnu.org&gt;.<br />
  GNU Mailutils home page: &lt;<a rel="nofollow" href="http://mailutils.org">http://mailutils.org</a>&gt;<br />
@@ -36,7 +36,7 @@ description: "mailutils – Mailutils multi-purpose tool"
 <p> The complete GNU mailutils documentation is maintained as a Texinfo manual. If the <code>mailutils-doc</code> package is installed, the command</p>
 <dl>
 <dt>
-<dd> <code>info mailutils</code></dl>
+</dt><dd> <code>info mailutils</code></dd></dl>
 <p> should give you access to the complete manual.<br />
  You can also find this manual online in the GNU mailutils webpage:<br />
  <a rel="nofollow" href="https://www.gnu.org/software/mailutils/manual/index.html.">https://www.gnu.org/software/mailutils/manual/index.html.</a><br />

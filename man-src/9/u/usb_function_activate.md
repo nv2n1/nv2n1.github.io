@@ -14,12 +14,12 @@ description: "usb_function_activate – allow function and gadget enumeration"
 <p><i>function</i></p>
 <dl>
 <dd>
-<dd>function on which <code>usb_function_activate</code> was called</dl>
+</dd><dd>function on which <code>usb_function_activate</code> was called</dd></dl>
 <h2>Description</h2>
 <p>Reverses effect of <code>usb_function_deactivate</code>. If no more functions are delaying their activation, the gadget driver will respond to host enumeration procedures. </p>
 <p> Returns zero on success, else negative errno.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

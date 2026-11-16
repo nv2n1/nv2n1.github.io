@@ -18,17 +18,17 @@ virt - list - filesystems[--options] domname virt - list - filesystems[--options
 <p> <tt>&quot;virt-list-filesystems&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
-<dt><code>-l</code> | <code>&#8211;long</code></p>
-<dd> With this option, <tt>&quot;virt-list-filesystems&quot;</tt> displays the type of each filesystem too (where &#8220;type&#8221; means <tt>&quot;ext3&quot;</tt>, <tt>&quot;xfs&quot;</tt> etc.)</p>
-<dt><code>-a</code> | <code>&#8211;all</code></p>
-<dd> Normally we only show mountable filesystems. If this option is given then swap devices are shown too.</dl>
+<dt><code>-l</code> | <code>&#8211;long</code></dt>
+<dd> With this option, <tt>&quot;virt-list-filesystems&quot;</tt> displays the type of each filesystem too (where &#8220;type&#8221; means <tt>&quot;ext3&quot;</tt>, <tt>&quot;xfs&quot;</tt> etc.)</dd>
+<dt><code>-a</code> | <code>&#8211;all</code></dt>
+<dd> Normally we only show mountable filesystems. If this option is given then swap devices are shown too.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar/">virt-tar</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>

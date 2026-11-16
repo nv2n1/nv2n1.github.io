@@ -15,19 +15,19 @@ snd_soc_component_update_bits - Perform read/modify/write cycle
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>Component to update</dl>
+<dl><dd></dd><dd>Component to update</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>Register to update</dl>
+<dl><dd>Register to update</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>Mask that specifies which bits to update</dl>
+<dl><dd>Mask that specifies which bits to update</dd></dl>
  
 
  <i>val</i>
-<dl><dd>New value for the bits specified by mask</dl>
+<dl><dd>New value for the bits specified by mask</dd></dl>
 
 <h2>Return</h2>
 

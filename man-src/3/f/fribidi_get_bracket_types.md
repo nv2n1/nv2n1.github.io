@@ -31,15 +31,14 @@ url: "/docs/linux/man/3-fribidi_get_bracket_types/"
 
 <dl>
 <dt><b>const FriBidiChar *str</b>
-<dd> Input string.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>const FriBidiCharType *types</b>
-<dd> Input bidi types. 
-
+</dt><dd> Input string.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>const FriBidiCharType *types</b>
+</dt><dd> Input bidi types. 
  Since there are 23 possible values for a <b>const FriBidiCharType</b>, they are not all listed here.
-<dt><b>FriBidiBracketType *btypes</b>
-<dd> Output bracketed characters.</dl>
+</dd><dt><b>FriBidiBracketType *btypes</b>
+</dt><dd> Output bracketed characters.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

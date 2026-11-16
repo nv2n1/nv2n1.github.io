@@ -11,33 +11,33 @@ description: "XkbDeviceBell – Rings the bell on an X input extension device or
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbDeviceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; window</i></p>
-<dd>window for which the bell is generated, or None</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; bell_class</i></p>
-<dd>X input extension bell class of the bell to be rung</p>
-<dt><i>&#8211; bell_id</i></p>
-<dd>X input extension bell ID of the bell to be rung</p>
-<dt><i>&#8211; percent</i></p>
-<dd>bell volume, from -100 to 100 inclusive</p>
-<dt><i>&#8211; name</i></p>
-<dd>a name for the bell, or NULL</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; window</i></dt>
+<dd>window for which the bell is generated, or None</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; bell_class</i></dt>
+<dd>X input extension bell class of the bell to be rung</dd>
+<dt><i>&#8211; bell_id</i></dt>
+<dd>X input extension bell ID of the bell to be rung</dd>
+<dt><i>&#8211; percent</i></dt>
+<dd>bell volume, from -100 to 100 inclusive</dd>
+<dt><i>&#8211; name</i></dt>
+<dd>a name for the bell, or NULL</dd></dl>
 <h2>Description</h2>
 <p>The core X protocol allows only applications to explicitly sound the system bell with a given duration, pitch, and volume. Xkb extends this capability by allowing clients to attach symbolic names to bells, disable audible bells, and receive an event whenever the keyboard bell is rung. For the purposes of this document, the <i>audible </i> bell is defined to be the system bell, or the default keyboard bell, as opposed to any other audible sound generated elsewhere in the system. You can ask to receive XkbBellNotify events when any client rings any one of the following: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The default bell</p>
-<dt>&bull;</p>
-<dd>Any bell on an input device that can be specified by a bell_class and bell_id pair</p>
-<dt>&bull;</p>
-<dd>Any bell specified only by an arbitrary name. (This is, from the server&#8217;s point of view, merely a name, and not connected with any physical sound-generating device. Some client application must generate the sound, or visual feedback, if any, that is associated with the name.) </p>
+<dt>&bull;</dt>
+<dd>The default bell</dd>
+<dt>&bull;</dt>
+<dd>Any bell on an input device that can be specified by a bell_class and bell_id pair</dd>
+<dt>&bull;</dt>
+<dd>Any bell specified only by an arbitrary name. (This is, from the server&#8217;s point of view, merely a name, and not connected with any physical sound-generating device. Some client application must generate the sound, or visual feedback, if any, that is associated with the name.) </dd>
 <p> You can also ask to receive XkbBellNotify events when the server rings the default bell or if any client has requested events only (without the bell sounding) for any of the bell types previously listed. </p>
 <p> You can disable audible bells on a global basis. For example, a client that replaces the keyboard bell with some other audible cue might want to turn off the AudibleBell control to prevent the server from also generating a sound and avoid cacophony. If you disable audible bells and request to receive XkbBellNotify events, you can generate feedback different from the default bell. </p>
 <p> You can, however, override the AudibleBell control by calling one of the functions that force the ringing of a bell in spite of the setting of the AudibleBell control &#8211; <i>XkbForceDeviceBell </i> or <i>XkbForceBell. </i> In this case the server does not generate a bell event. </p>
@@ -263,3 +263,4 @@ description: "XkbDeviceBell – Rings the bell on an X input extension device or
 <p>If your application needs to generate visual bell feedback on the screen when it receives a bell event, use the window ID in the XkbBellNotifyEvent, if present. </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xbell/">XBell</a></code>(3), <code>XkbBellNotify</code>(3), <code><a href="/docs/linux/man/3-xkbchangeenabledcontrols/">XkbChangeEnabledControls</a></code>(3), <code><a href="/docs/linux/man/3-xkbdevicebell/">XkbDeviceBell</a></code>(3), <code><a href="/docs/linux/man/3-xkbforcebell/">XkbForceBell</a></code>(3), <code><a href="/docs/linux/man/3-xkbforcedevicebell/">XkbForceDeviceBell</a></code>(3), <code><a href="/docs/linux/man/3-xgetfeedbackcontrol/">XGetFeedbackControl</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3)</p>
+</p>

@@ -11,10 +11,8 @@ std::strcspn - std::strcspn
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     size_t strcspn(const char *dest, const char *src);
 Returns the length of the maximum initial segment of the byte string pointed to by dest, that consists of only the characters not found in byte string pointed to by src.
-
 The function name stands for &quot;complementary span&quot;
 </code></pre>
 
@@ -30,14 +28,10 @@ The length of the maximum initial segment that contains only characters not foun
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;iostream&gt;
 const char *invalid = &quot;*$#&quot;;
-
 int main()
-
 {
     std::string s = &quot;abcde312$#@&quot;;
     size_t valid_len = std::strcspn(s.c_str(), invalid);

@@ -21,6 +21,6 @@ description: "QuantLib::TrapezoidIntegral – Integral of a one-dimensional func
 <p> Given a target accuracy $ \psilon $, the integral of a function $ f $ between $ a $ and $ b $ is calculated by means of the trapezoid formula [ int_{a}^{b} f mathrm{d}x = ac{1}{2} f(x_{0}) + f(x_{1}) + f(x_{2}) + ots + f(x_{N-1}) + ac{1}{2} f(x_{N}) ] where $ x_0 = a $, $ x_N = b $, and $ x_i = a+i Delta x $ with $ Delta x = (b-a)/N $. The number $ N $ of intervals is repeatedly increased until the target accuracy is reached. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the result is tested by checking it against known good values.</dl>
+<dd>the correctness of the result is tested by checking it against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

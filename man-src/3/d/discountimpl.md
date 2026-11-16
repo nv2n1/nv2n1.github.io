@@ -37,21 +37,21 @@ description: "QuantLib::CompoundForward – compound-forward structure"
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the curve is tested by reproducing the input data.</p>
-<dt>*</p>
-<dd>the correctness of the curve is tested by checking the consistency between returned rates and swaps priced on the curve.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the curve is tested by reproducing the input data.</dd>
+<dt>*</dt>
+<dd>the correctness of the curve is tested by checking the consistency between returned rates and swaps priced on the curve.</dd></dl>
 </dl>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>swap rates are not reproduced exactly when using indexed coupons. Apparently, some assumption about the swap fixings is hard-coded into the bootstrapping algorithm.</dl>
+<dd>swap rates are not reproduced exactly when using indexed coupons. Apparently, some assumption about the swap fixings is hard-coded into the bootstrapping algorithm.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Rate</code> zeroYieldImpl (Time t) const [protected, virtual]</h3>
 <p>Returns the zero yield rate for the given date calculating it from the instantaneous forward rate. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dl>
+<dd>This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dd></dl>
 <p> Reimplemented from <code>ForwardRateStructure</code>.</p>
 <h3><code>DiscountFactor</code> discountImpl (Time t) const [protected, virtual]</h3>
 <p>Returns the discount factor for the given date calculating it from the instantaneous forward rate. </p>

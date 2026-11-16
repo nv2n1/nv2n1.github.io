@@ -13,8 +13,8 @@ description: "rdma_get_dst_port – Returns the remote port number of a bound rd
 <p> <code>uint16_t rdma_get_dst_port</code> <code>(struct rdma_cm_id *</code><i>id</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>id</p>
-<dd>RDMA identifier.</dl>
+<dt>id</dt>
+<dd>RDMA identifier.</dd></dl>
 <h2>Description</h2>
 <p>Returns the remote port number for an rdma_cm_id that has been bound to a remote address.</p>
 <h2>Return Value</h2>

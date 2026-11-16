@@ -18,10 +18,10 @@ description: "puppet-inspect – Send an inspection report"
 <h2>Options</h2>
 <p>Any configuration setting which is valid in the configuration file is also a valid long argument, e.g. &#8216;&#8211;server=master.domain.com&#8217;. See the configuration file documentation at <a rel="nofollow" href="http://docs.puppetlabs.com/references/latest/configuration.html">http://docs.puppetlabs.com/references/latest/configuration.html</a> for the full list of acceptable settings.</p>
 <dl>
-<dt>&#8211;archive_files</p>
-<dd>During an inspect run, whether to archive files whose contents are audited to a file bucket.</p>
-<dt>&#8211;archive_file_server</p>
-<dd>During an inspect run, the file bucket server to archive files to if archive_files is set. The default value is &#8216;$server&#8217;.</dl>
+<dt>&#8211;archive_files</dt>
+<dd>During an inspect run, whether to archive files whose contents are audited to a file bucket.</dd>
+<dt>&#8211;archive_file_server</dt>
+<dd>During an inspect run, the file bucket server to archive files to if archive_files is set. The default value is &#8216;$server&#8217;.</dd></dl>
 <h2>Author</h2>
 <p>Puppet Labs</p>
 <h2>Copyright</h2>

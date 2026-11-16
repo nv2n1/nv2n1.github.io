@@ -15,75 +15,75 @@ description: "ngspice – circuit simulator derived from spice]3f5"
 <p> This man page is just a small overview. The primary documentation of ngspice is in the ngspice] User&#8217;s Manual, which is available as a pdf file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code> or <code>&#8211;no-spiceinit</code></p>
-<dd> Don&#8217;t try to source the file &quot;.spiceinit&quot; upon startup. Normally ngspice] tries to find the file in the current directory, and if it is not found then in the user&#8217;s home directory.</p>
-<dt><code>-q</code> or <code>&#8211;completion</code></p>
-<dd> Enable command completion. (defect)</p>
-<dt><code>-t</code> <i>term</i> or <code>&#8211;term=</code><i>term</i></p>
-<dd> The program is being run on a terminal with <code>mfb</code> name <i>term</i>.</p>
-<dt><code>-b</code> or <code>&#8211;batch</code></p>
-<dd> Run in batch mode. ngspice] will read the standard input or the specified input file and do the simulation. Note that if the standard input is not a terminal, ngspice] will default to batch mode, unless the -i flag is given.</p>
-<dt><code>-s</code> or <code>&#8211;server</code></p>
-<dd> Run in server mode. This is like batch mode, except that a temporary rawfile is used and then written to the standard output, preceded by a line with a single &quot;@&quot;, after the simulation is done. This mode is used by the ngspice daemon.</p>
-<dt><code>-i</code> or <code>&#8211;interactive</code></p>
-<dd> Run in interactive mode. This is useful if the standard input is not a terminal but interactive mode is desired. Command completion is not available unless the standard input is a terminal, however.</p>
-<dt><code>-r</code> <i>rawfile</i> or <code>&#8211;rawfile=</code><i>file</i></p>
-<dd> Use <i>rawfile</i> as the default file into which the results of the simulation are saved.</p>
-<dt><code>-c</code> <i>circuitfile</i> or <code>&#8211;circuitfile=</code><i>circuitfile</i></p>
-<dd> Use <i>circuitfile</i> as the default input deck.</p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd> Display a verbose help on the arguments available to the program.</p>
-<dt><code>-v</code> or <code>&#8211;version</code></p>
-<dd> Display a version number and copyright information of the program.</p>
-<dt><code>-a</code> or <code>&#8211;autorun</code></p>
-<dd> FIXME</p>
-<dt><code>-o</code> <i>outfile</i> or <code>&#8211;output=</code><i>outfile</i></p>
-<dd> All logs generated during a batch run (<code>-b</code>) will be saved in <i>outfile</i>.</p>
-<dt><code>-p</code> or <code>&#8211;pipe</code></p>
-<dd> Allow a program (e.g., xcircuit) to act as a GUI frontend for ngspice through a pipe. Thus ngspice will assume that the pipe is a tty and allows to run in interactive mode.</dl>
+<dt><code>-n</code> or <code>&#8211;no-spiceinit</code></dt>
+<dd> Don&#8217;t try to source the file &quot;.spiceinit&quot; upon startup. Normally ngspice] tries to find the file in the current directory, and if it is not found then in the user&#8217;s home directory.</dd>
+<dt><code>-q</code> or <code>&#8211;completion</code></dt>
+<dd> Enable command completion. (defect)</dd>
+<dt><code>-t</code> <i>term</i> or <code>&#8211;term=</code><i>term</i></dt>
+<dd> The program is being run on a terminal with <code>mfb</code> name <i>term</i>.</dd>
+<dt><code>-b</code> or <code>&#8211;batch</code></dt>
+<dd> Run in batch mode. ngspice] will read the standard input or the specified input file and do the simulation. Note that if the standard input is not a terminal, ngspice] will default to batch mode, unless the -i flag is given.</dd>
+<dt><code>-s</code> or <code>&#8211;server</code></dt>
+<dd> Run in server mode. This is like batch mode, except that a temporary rawfile is used and then written to the standard output, preceded by a line with a single &quot;@&quot;, after the simulation is done. This mode is used by the ngspice daemon.</dd>
+<dt><code>-i</code> or <code>&#8211;interactive</code></dt>
+<dd> Run in interactive mode. This is useful if the standard input is not a terminal but interactive mode is desired. Command completion is not available unless the standard input is a terminal, however.</dd>
+<dt><code>-r</code> <i>rawfile</i> or <code>&#8211;rawfile=</code><i>file</i></dt>
+<dd> Use <i>rawfile</i> as the default file into which the results of the simulation are saved.</dd>
+<dt><code>-c</code> <i>circuitfile</i> or <code>&#8211;circuitfile=</code><i>circuitfile</i></dt>
+<dd> Use <i>circuitfile</i> as the default input deck.</dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd> Display a verbose help on the arguments available to the program.</dd>
+<dt><code>-v</code> or <code>&#8211;version</code></dt>
+<dd> Display a version number and copyright information of the program.</dd>
+<dt><code>-a</code> or <code>&#8211;autorun</code></dt>
+<dd> FIXME</dd>
+<dt><code>-o</code> <i>outfile</i> or <code>&#8211;output=</code><i>outfile</i></dt>
+<dd> All logs generated during a batch run (<code>-b</code>) will be saved in <i>outfile</i>.</dd>
+<dt><code>-p</code> or <code>&#8211;pipe</code></dt>
+<dd> Allow a program (e.g., xcircuit) to act as a GUI frontend for ngspice through a pipe. Thus ngspice will assume that the pipe is a tty and allows to run in interactive mode.</dd></dl>
 <p> Further arguments are taken to be spice] input decks, which are read and saved. (If batch mode is requested then they are run immediately.)</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>SPICE_LIB_DIR</code></p>
+<dt><code>SPICE_LIB_DIR</code></dt>
 <dd>
-<dt><code>SPICE_EXEC_DIR</code></p>
+</dd><dt><code>SPICE_EXEC_DIR</code></dt>
 <dd>
-<dt><code>SPICE_HOST</code></p>
+</dd><dt><code>SPICE_HOST</code></dt>
 <dd>
-<dt><code>SPICE_BUGADDR</code></p>
+</dd><dt><code>SPICE_BUGADDR</code></dt>
 <dd>
-<dt><code>SPICE_EDITOR</code></p>
+</dd><dt><code>SPICE_EDITOR</code></dt>
 <dd>
-<dt><code>SPICE_ASCIIRAWFILE</code> default <i>0</i></p>
-<dd> Format of the rawfile. <i>0</i> for binary, and <i>1</i> for ascii.</p>
-<dt><code>SPICE_NEWS</code> default <i>$SPICE_LIB_DIR/news</i></p>
-<dd> A file which is copied verbatim to stdout when ngspice starts in interactive mode.</p>
-<dt><code>SPICE_MFBCAP</code> default <i>$SPICE_LIB_DIR/mfbcap</i></p>
+</dd><dt><code>SPICE_ASCIIRAWFILE</code> default <i>0</i></dt>
+<dd> Format of the rawfile. <i>0</i> for binary, and <i>1</i> for ascii.</dd>
+<dt><code>SPICE_NEWS</code> default <i>$SPICE_LIB_DIR/news</i></dt>
+<dd> A file which is copied verbatim to stdout when ngspice starts in interactive mode.</dd>
+<dt><code>SPICE_MFBCAP</code> default <i>$SPICE_LIB_DIR/mfbcap</i></dt>
 <dd>
-<dt><code>SPICE_HELP_DIR</code> default <i>$SPICE_LIB_DIR/helpdir</i></p>
+</dd><dt><code>SPICE_HELP_DIR</code> default <i>$SPICE_LIB_DIR/helpdir</i></dt>
 <dd>
-<dt><code>SPICE_SCRIPTS</code> default <i>$SPICE_LIB_DIR/scripts</i></p>
-<dd> In this directory the <i>spinit</i> file will be searched.</p>
-<dt><code>SPICE_PATH</code> default <i>$SPICE_EXEC_DIR/ngspice</i></p>
-<dd></dl>
+</dd><dt><code>SPICE_SCRIPTS</code> default <i>$SPICE_LIB_DIR/scripts</i></dt>
+<dd> In this directory the <i>spinit</i> file will be searched.</dd>
+<dt><code>SPICE_PATH</code> default <i>$SPICE_EXEC_DIR/ngspice</i></dt>
+<dd></dd></dl>
 <p> various undocumented ngspice centric environment variables :</p>
 <dl>
-<dt><code>NGSPICE_MEAS_PRECISION</code></p>
+<dt><code>NGSPICE_MEAS_PRECISION</code></dt>
 <dd>
-<dt><code>SPICE_NO_DATASEG_CHECK</code></p>
-<dd></dl>
+</dd><dt><code>SPICE_NO_DATASEG_CHECK</code></dt>
+<dd></dd></dl>
 <p> Common environment variables :</p>
 <dl>
-<dt><code>TERM</code> <code>LINES</code> <code>COLS</code> <code>DISPLAY</code> <code>HOME</code> <code>PATH</code> <code>EDITOR</code> <code>SHELL</code></p>
+<dt><code>TERM</code> <code>LINES</code> <code>COLS</code> <code>DISPLAY</code> <code>HOME</code> <code>PATH</code> <code>EDITOR</code> <code>SHELL</code></dt>
 <dd>
-<dt><code>POSIXLY_CORRECT</code></p>
-<dd></dl>
+</dd><dt><code>POSIXLY_CORRECT</code></dt>
+<dd></dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$SPICE_LIB_DIR/scripts/spinit</i></p>
-<dd> The System&#8217;s Initialisation File.</p>
-<dt><i>.spiceinit</i> or <i>$HOME/.spiceinit</i></p>
-<dd> The User&#8217;s Initialisation File.</dl>
+<dt><i>$SPICE_LIB_DIR/scripts/spinit</i></dt>
+<dd> The System&#8217;s Initialisation File.</dd>
+<dt><i>.spiceinit</i> or <i>$HOME/.spiceinit</i></dt>
+<dd> The User&#8217;s Initialisation File.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> sconvert(1), <a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a>(1), mfb(3), writedata(3), and<br />
  ngspice] User&#8217;s Manual at <code><a rel="nofollow" href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a></code></p>

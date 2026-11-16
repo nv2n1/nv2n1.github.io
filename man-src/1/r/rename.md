@@ -15,32 +15,32 @@ description: "rename – rename files"
 <p> <code>rename</code> will rename the specified files by replacing the first occurrence of <i>expression</i> in their name by <i>replacement</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Give visual feedback which files where renamed, if any.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</p>
-<dt><code>-s</code>, <code>&#8211;symlink</code></p>
-<dd> Peform rename on symlink target</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help text and exit.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Give visual feedback which files where renamed, if any.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>-s</code>, <code>&#8211;symlink</code></dt>
+<dd> Peform rename on symlink target</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help text and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Given the files <i>foo1</i>, &#8230;, <i>foo9</i>, <i>foo10</i>, &#8230;, <i>foo278</i>, the commands</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rename foo foo0 foo?
 rename foo foo0 foo??
 </pre>
-</dl>
+</dd></dl>
 <p> will turn them into <i>foo001</i>, &#8230;, <i>foo009</i>, <i>foo010</i>, &#8230;, <i>foo278</i>. And</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rename .htm .html *.htm
 </pre>
-</dl>
+</dd></dl>
 <p> will fix the extension of your html files.</p>
 <h2>WARNING</h2>
 <p> The renaming has no safeguards. If the user has permission to rewrite file names, the command will perform the action without any questions. For example, the result can be quite drastic when the command is run as root in the /lib directory. Always make a backup before running the command, unless you truly know what you are doing.</p>

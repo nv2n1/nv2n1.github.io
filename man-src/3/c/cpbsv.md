@@ -19,7 +19,7 @@ description: "cpbsv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CPBSV computes the solution to a complex system of linear equations
     A * X = B,
@@ -33,11 +33,11 @@ description: "cpbsv.f –"
  subdiagonals as A.  The factored form of A is then used to solve the
  system of equations A * X = B.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  Upper triangle of A is stored;
@@ -104,18 +104,18 @@ description: "cpbsv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The band storage scheme is illustrated by the following example, when
   N = 6, KD = 2, and UPLO = 'U':
@@ -130,8 +130,9 @@ description: "cpbsv.f –"
      a31  a42  a53  a64   *    *      l31  l42  l53  l64   *    *
   Array elements marked * are not used by the routine.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 165 of file cpbsv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

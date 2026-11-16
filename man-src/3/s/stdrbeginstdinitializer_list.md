@@ -11,10 +11,8 @@ std::rbegin(std::initializer_list) - std::rbegin(std::initializer_list)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class E&gt;
     (since C++ 14)
-
         std::reverse_iterator&lt;const E *&gt; rbegin(std::initializer_list&lt;E&gt; il);</code></pre> 
 The overload of std::rbegin for initializer_list returns an std::reverse_iterator pointing at the last element of il. 
 
@@ -37,10 +35,8 @@ This overload is necessary because std::initializer_list does not have a member 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     auto il = {3, 1, 4};
     for (auto it = std::rbegin(il); it != std::rend(il); ++it)

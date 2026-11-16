@@ -14,15 +14,15 @@ description: "ifcfg – simplistic script which replaces ifconfig IP management"
 <p>This manual page documents briefly the <code>ifcfg</code> command. This is a simplistic script replacing one option of <code>ifconfig</code> , namely, IP address management. It not only adds addresses, but also carries out Duplicate Address Detection RFC-DHCP, sends unsolicited ARP to update the caches of other hosts sharing the interface, adds some control routes and restarts Router Discovery when it is necessary. </p>
 <h2>Ifconfig &#8211; Command Syntax</h2>
 <h3>
-<dt><code>DEVICE</code></p>
+<dt><code>DEVICE</code></dt>
 <dd></h3>
 <p>&#8211; it may have alias, suffix, separated by colon. </p>
-<dt><code>command</code></p>
-<dd>&#8211; add, delete or stop. </p>
-<dt><code>ADDRESS</code></p>
-<dd>&#8211; optionally followed by prefix length. </p>
-<dt><code>peer</code></p>
-<dd>&#8211; optional peer address for pointpoint interfaces. </p>
+</dd><dt><code>command</code></dt>
+<dd>&#8211; add, delete or stop. </dd>
+<dt><code>ADDRESS</code></dt>
+<dd>&#8211; optionally followed by prefix length. </dd>
+<dt><code>peer</code></dt>
+<dd>&#8211; optional peer address for pointpoint interfaces. </dd>
 </dl>
 <h2>Notes</h2>
 <p>This script is not suitable for use with IPv6. </p>

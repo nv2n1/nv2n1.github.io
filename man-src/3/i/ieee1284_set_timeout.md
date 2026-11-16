@@ -14,9 +14,9 @@ description: "ieee1284_set_timeout – modify inactivity timeout"
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
-<dt> <code>struct timeval *ieee1284_set_timeout(struct parport&nbsp;<wbr>*</code><i>port</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dl>
+<dt> <code>struct timeval *ieee1284_set_timeout(struct parport&nbsp;<wbr>*</code><i>port</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This function sets a new value for the inactivity timeout (used for block transfer functions), and returns the old value. </p>
+<dd>This function sets a new value for the inactivity timeout (used for block transfer functions), and returns the old value. </dd>
 <p> The <i>port</i> must be claimed. </p>
 <p> The <i>timeout</i> parameter may be <code>NULL</code>, in which case the old value is left unchanged.</p>
 <h2>RETURN VALUE</h2>
@@ -28,7 +28,7 @@ description: "ieee1284_set_timeout – modify inactivity timeout"
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
 <h2>Index</h2>

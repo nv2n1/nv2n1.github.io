@@ -14,24 +14,24 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 <p>imgbase provides a specific management method to derive writeable filesystem layers from read-only base images. It also takes care that the layer which shall be used can be selected at boot time.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Warning</code> </font><br />
- imgbase is a WIP. That means this manpage is probably out of date and data loss can happen.  This works by using LVM thinpools and thin volumens, combined if a filesystem which supports the TRIM commant (i..e ext4 when it&#8217;s used with the discard mount option). The creation of this layout is described under the section called &#8220;USAGE&#8221;. imgbase needs a volume group, which is then populated with one or more base images (which are read-only thin volumes in a thinpool). For each of this base image one or more write-able layers can be added.</p>
+ imgbase is a WIP. That means this manpage is probably out of date and data loss can happen.  This works by using LVM thinpools and thin volumens, combined if a filesystem which supports the TRIM commant (i..e ext4 when it&#8217;s used with the discard mount option). The creation of this layout is described under the section called &#8220;USAGE&#8221;. imgbase needs a volume group, which is then populated with one or more base images (which are read-only thin volumes in a thinpool). For each of this base image one or more write-able layers can be added.</dd>
 <h2>Usage</h2>
 <h3>Creating the layout</h3>
 <p>imgbase makes assumptions about the existing LVM layout, if you start from scratch you can use imgbase to create the layout: </p>
 <dl>
 <dd>
 <pre># imgbase layout --init --size 10G /dev/sdb /dev/sdc</pre>
-</dl>
+</dd></dl>
 <p> This command will create the deafult volume group (HostVG) with a thinpool which is 10G in size, laying on /dev/sdb and /dev/sdc.</p>
 <h3>Adding a base</h3>
 <p>Once a valid layout was created you can add a base image using the following command: </p>
 <dl>
 <dd>
 <pre># imgbase base --add --size 1G rootfs.img</pre>
-</dl>
+</dd></dl>
 <p> This will create a new base image. It will create a 1G sized thin volume and populate it with the rootfs.img. The rootfs.img must be smaller than the given size. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> The base image name is derived from a pre-defined naming scheme. </p>
 </dl>
 <h3>Adding a layer</h3>
@@ -39,10 +39,10 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 <dl>
 <dd>
 <pre># imgbase layer --add</pre>
-</dl>
+</dd></dl>
 <p> This will add a new layer for the latest existing base image. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> The layer name is also derived from a pre-defined naming scheme. </p>
 </dl>
 <h3>Inspection at runtime</h3>
@@ -50,22 +50,22 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 <dl>
 <dd>
 <pre># imgbase layout</pre>
-</dl>
+</dd></dl>
 <p> To get the remaining free space in the used thinpool run: </p>
 <dl>
 <dd>
 <pre># imgbase layout --free-space</pre>
-</dl>
+</dd></dl>
 <h3>Upgrade to new image</h3>
 <dl>
 <dd>
 <pre># imgbase update --format liveimg FILENAME</pre>
-</dl>
+</dd></dl>
 <p> Example: </p>
 <dl>
 <dd>
 <pre># imgbase update ovirt-node-ng-4.0.0-0.999.master.20160329.0.el7.squashfs.img</pre>
-</dl>
+</dd></dl>
 <p> To verify a new base image was added: </p>
 <dl>
 <dd>
@@ -74,18 +74,18 @@ ovirt-node-ng-4.0.0-0
  └╼ ovirt-node-ng-4.0.0-0+1
 ovirt-node-ng-4.0.0-0.3.master.20160330132038.el7
  └╼ ovirt-node-ng-4.0.0-0.3.master.20160330132038.el7+1</pre>
-</dl>
+</dd></dl>
 <p> To load the new image: </p>
 <dl>
 <dd>
 <pre># reboot</pre>
-</dl>
+</dd></dl>
 <p> To verify you are in the new image (after reboot): </p>
 <dl>
 <dd>
 <pre># imgbase w
 [INFO] You are on ovirt-node-ng-4.0.0-0+1</pre>
-</dl>
+</dd></dl>
 <h3>Rollback to previous image</h3>
 <p>If you have updated and would like to return to a previous version. The rollback operation will set the bootloader to an earlier version. This defaults to rolling back one update. If you would like to return to a specific version, use &#8211;to. </p>
 <p> &#8212; </p>
@@ -103,16 +103,16 @@ ovirt-node-ng-4.0.0-0.3.master.20160330132038.el7
 <dd>
 <pre># imgbase w
 [INFO] You are on ovirt-node-ng-4.0.0-0.3.master.20160330132038.el7+1</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <p><code>&#8211;debug</code></p>
 <dl>
-<dd>Output debug informations</dl>
+<dd>Output debug informations</dd></dl>
 <p> <code>&#8211;dry</code></p>
 <dl>
-<dd>Do <i>not</i> run the commands, just output what would be run.</dl>
+<dd>Do <i>not</i> run the commands, just output what would be run.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Combine this with <code>&#8211;debug</code> to see the commands This does not work with all commands. </p>
 </dl>
 <p> Example: </p>
@@ -124,17 +124,18 @@ DEBUG:imgbase:Calling: (['vgcreate', 'HostVG', &lt;open file '/dev/sda', mode 'r
 at 0x22bf420&gt;],) {}
 DEBUG:imgbase:Calling: (['lvcreate', '--size', '1G', '--thin',
 'HostVG/ImagePool'],) {}</pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;vg=</code><i>VG</i></p>
 <dl>
-<dd>By default the volume group HostVG is used. Use this argument to use the volume group name <i>VG</i> instead.</dl>
+<dd>By default the volume group HostVG is used. Use this argument to use the volume group name <i>VG</i> instead.</dd></dl>
 <p> <code>&#8211;thinpool=</code><i>THINPOOL</i></p>
 <dl>
-<dd>By default the thinpool ImagePool is used. Use this argument to use the thinpool name <i>THINPOOL</i> instead.</dl>
+<dd>By default the thinpool ImagePool is used. Use this argument to use the thinpool name <i>THINPOOL</i> instead.</dd></dl>
 <p> <code>&#8211;layerformat=</code><i>FMT</i></p>
 <dl>
-<dd>By default the format Base-%d.%d is used to create and discover existing logical volumes. Use this argument to use the format <i>FMT</i> instead.</dl>
+<dd>By default the format Base-%d.%d is used to create and discover existing logical volumes. Use this argument to use the format <i>FMT</i> instead.</dd></dl>
 <h2>Availability</h2>
 <p>The imgbase command is part of the imgbased package and is available from m[blue]<code><a rel="nofollow" href="https://github.com/fabiand/imgbased/">https://github.com/fabiand/imgbased/</a></code>m[]</p>
 <h2>Authors</h2>
 <p>Fabian Deutsch</p>
+</dl>

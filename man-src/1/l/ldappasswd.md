@@ -17,45 +17,45 @@ description: "ldappasswd – change the password of an LDAP entry"
 <p> <code>ldappasswd</code> is neither designed nor intended to be a replacement for <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1) and should not be installed as such.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>[<code>V</code>]</p>
-<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></p>
-<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldappasswd</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</p>
-<dt><code>-n</code></p>
-<dd> Do not set password. (Can be useful when used in conjunction with <code>-v</code> or <code>-d</code>)</p>
-<dt><code>-v</code></p>
-<dd> Increase the verbosity of output. Can be specified multiple times.</p>
-<dt><code>-A</code></p>
-<dd> Prompt for old password. This is used instead of specifying the password on the command line.</p>
-<dt><code>-a</code><i>&nbsp;<wbr>oldPasswd</i></p>
-<dd> Set the old password to <i>oldPasswd</i>.</p>
-<dt><code>-t</code><i>&nbsp;<wbr>oldPasswdFile</i></p>
-<dd> Set the old password to the contents of <i>oldPasswdFile</i>.</p>
-<dt><code>-S</code></p>
-<dd> Prompt for new password. This is used instead of specifying the password on the command line.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>newPasswd</i></p>
-<dd> Set the new password to <i>newPasswd</i>.</p>
-<dt><code>-T</code><i>&nbsp;<wbr>newPasswdFile</i></p>
-<dd> Set the new password to the contents of <i>newPasswdFile</i>.</p>
-<dt><code>-x </code></p>
-<dd> Use simple authentication instead of SASL.</p>
-<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></p>
-<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</p>
-<dt><code>-W</code></p>
-<dd> Prompt for bind password. This is used instead of specifying the password on the command line.</p>
-<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></p>
-<dd> Use <i>passwd</i> as the password to bind with.</p>
-<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></p>
-<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</p>
-<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></p>
-<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></p>
-<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></p>
-<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+<dt><code>-V</code>[<code>V</code>]</dt>
+<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></dt>
+<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldappasswd</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not set password. (Can be useful when used in conjunction with <code>-v</code> or <code>-d</code>)</dd>
+<dt><code>-v</code></dt>
+<dd> Increase the verbosity of output. Can be specified multiple times.</dd>
+<dt><code>-A</code></dt>
+<dd> Prompt for old password. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-a</code><i>&nbsp;<wbr>oldPasswd</i></dt>
+<dd> Set the old password to <i>oldPasswd</i>.</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>oldPasswdFile</i></dt>
+<dd> Set the old password to the contents of <i>oldPasswdFile</i>.</dd>
+<dt><code>-S</code></dt>
+<dd> Prompt for new password. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>newPasswd</i></dt>
+<dd> Set the new password to <i>newPasswd</i>.</dd>
+<dt><code>-T</code><i>&nbsp;<wbr>newPasswdFile</i></dt>
+<dd> Set the new password to the contents of <i>newPasswdFile</i>.</dd>
+<dt><code>-x </code></dt>
+<dd> Use simple authentication instead of SASL.</dd>
+<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></dt>
+<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</dd>
+<dt><code>-W</code></dt>
+<dd> Prompt for bind password. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></dt>
+<dd> Use <i>passwd</i> as the password to bind with.</dd>
+<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></dt>
+<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</dd>
+<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></dt>
+<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></dt>
+<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></dt>
+<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
-<dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+</dd><dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
 <p> Specify general extensions with <code>-e</code> and passwd modify extensions with <code>-E</code>. &#8216;<code>!</code>&#8216; indicates criticality. </p>
 <p> General extensions: </p>
@@ -77,7 +77,7 @@ description: "ldappasswd – change the password of an LDAP entry"
 <pre>
   (none)
 </pre>
-<dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]]</p>
+</dd><dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]]</dt>
 <dd>
 <p> Specify general options. </p>
 <p> General options: </p>
@@ -85,24 +85,24 @@ description: "ldappasswd – change the password of an LDAP entry"
   nettimeout=&lt;timeout&gt;  (in seconds, or &quot;none&quot; or &quot;max&quot;)
   ldif-wrap=&lt;width&gt;     (in columns, or &quot;no&quot; for no wrapping)
 </pre>
-<dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></p>
-<dd> Specify SASL security properties.</p>
-<dt><code>-I</code></p>
-<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</p>
-<dt><code>-Q</code></p>
-<dd> Enable SASL Quiet mode. Never prompt.</p>
-<dt><code>-N</code></p>
-<dd> Do not use reverse DNS to canonicalize SASL host name.</p>
-<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></p>
-<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</p>
-<dt><code>-R</code><i>&nbsp;<wbr>realm</i></p>
-<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</p>
-<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></p>
-<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i>.</p>
-<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></p>
-<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</p>
-<dt><code>-Z</code>[<code>Z</code>]</p>
-<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful</dl>
+</dd><dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></dt>
+<dd> Specify SASL security properties.</dd>
+<dt><code>-I</code></dt>
+<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</dd>
+<dt><code>-Q</code></dt>
+<dd> Enable SASL Quiet mode. Never prompt.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not use reverse DNS to canonicalize SASL host name.</dd>
+<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></dt>
+<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</dd>
+<dt><code>-R</code><i>&nbsp;<wbr>realm</i></dt>
+<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</dd>
+<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></dt>
+<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i>.</dd>
+<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></dt>
+<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</dd>
+<dt><code>-Z</code>[<code>Z</code>]</dt>
+<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ldap_sasl_bind/">ldap_sasl_bind</a></code>(3), <code><a href="/docs/linux/man/3-ldap_extended_operation/">ldap_extended_operation</a></code>(3), <code><a href="/docs/linux/man/3-ldap_start_tls_s/">ldap_start_tls_s</a></code>(3)</p>
 <h2>AUTHOR</h2>

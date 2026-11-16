@@ -20,18 +20,18 @@ description: "xine-check – a checker for the xine video player"
 <h2>OPTIONS</h2>
 <p> The program follows usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options are included below. For a complete description, see <i>README</i> and <i>FAQ</i> in <i>/usr/share/doc/xine-ui-0.99.9</i> or on the xine home page. <code></p>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> </code> Show summary of options and version number.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> </code> Show summary of options and version number.</dd></dl>
 <p> The remaining options, labelled <code>XINE-CHECK options:</code> when listed with &quot;xine-check &#8211;help&quot;, are explained here. <code></p>
 <dl>
-<dt>-q, &#8211;quiet</p>
-<dd> </code> Only give a single one-line messages, even if problems are found. Normally <code>xine-check</code> provides hints for every problem found to help solve the problem. <code></p>
-<dt>-v, &#8211;verbose</p>
-<dd> </code> Enable extended output describing each check in detail, which produces a kind of frequently asked questions (FAQ) list. <code></p>
-<dt>-B, &#8211;batch</p>
-<dd> </code> Turn off pause after long messages. Normally <code>xine-check</code> waits for confirmation after a problem was found or a long message was printed. <code></p>
-<dt>-b, &#8211;bug</p>
-<dd> </code> Produce a bug report. This is the same as calling <code>xine-bugreport</code> directly. </p>
+<dt>-q, &#8211;quiet</dt>
+<dd> </code> Only give a single one-line messages, even if problems are found. Normally <code>xine-check</code> provides hints for every problem found to help solve the problem. <code></dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> </code> Enable extended output describing each check in detail, which produces a kind of frequently asked questions (FAQ) list. <code></dd>
+<dt>-B, &#8211;batch</dt>
+<dd> </code> Turn off pause after long messages. Normally <code>xine-check</code> waits for confirmation after a problem was found or a long message was printed. <code></dd>
+<dt>-b, &#8211;bug</dt>
+<dd> </code> Produce a bug report. This is the same as calling <code>xine-bugreport</code> directly. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> none, of course ;-) Well, there are surely a few of those. You can probably best ask for support (and report bugs) on our mailing list at &lt;xine-user [at] lists.sf.net&gt;. </p>

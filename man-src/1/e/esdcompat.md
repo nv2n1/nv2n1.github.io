@@ -18,14 +18,14 @@ description: "esdcompat – PulseAudio ESD wrapper script"
 <p> It is recommended to make <i>esd</i> a symbolic link to this script.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information.</p>
-<dt><code>-tcp | -promiscuous | -d | -b | -r | -as | -unix | -public | -terminate | -nobeeps | -trust | -port | -bind</code></p>
-<dd> These options understood by the original <i>esd</i> are ignored by <i>esdcompat</i>.</p>
-<dt><code>-spawnpid | -spawnfd</code></p>
-<dd> These internally used options understood by the original <i>esd</i> are properly handled by <i>esdcompat</i>, however are not to be used manually.</dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-tcp | -promiscuous | -d | -b | -r | -as | -unix | -public | -terminate | -nobeeps | -trust | -port | -bind</code></dt>
+<dd> These options understood by the original <i>esd</i> are ignored by <i>esdcompat</i>.</dd>
+<dt><code>-spawnpid | -spawnfd</code></dt>
+<dd> These internally used options understood by the original <i>esd</i> are properly handled by <i>esdcompat</i>, however are not to be used manually.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>

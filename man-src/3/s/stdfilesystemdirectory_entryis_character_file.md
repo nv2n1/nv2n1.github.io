@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_character_file - std::filesystem::directory
 
 <pre><code>bool is_character_file() const;
 (since C++ 17)
-
     bool is_character_file(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a character device. Effectively returns std::filesystem::is_character_file(status()) or std::filesystem::is_character_file(status(ec)), respectively 
 

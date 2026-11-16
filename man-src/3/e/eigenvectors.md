@@ -21,15 +21,15 @@ description: "QuantLib::SymmetricSchurDecomposition – symmetric threshold Jaco
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the correctness of the returned values is tested by checking their properties.</dl>
+</dt><dd> the correctness of the returned values is tested by checking their properties.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>SymmetricSchurDecomposition</code> (const <code>Matrix</code> &amp; s)</h3>
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> s must be symmetric</dl>
+</dt><dd> s must be symmetric</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

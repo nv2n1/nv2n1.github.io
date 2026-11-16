@@ -12,53 +12,52 @@ description: "netlink – communication between kernel and user space (AF_NETLIN
 <pre><code>#include &lt;asm/types.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;linux/netlink.h&gt;
-
 netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 <h2>Description</h2>
 <p>Netlink is used to transfer information between the kernel and user-space processes. It consists of a standard sockets-based interface for user space processes and an internal kernel API for kernel modules. The internal kernel interface is not documented in this manual page. There is also an obsolete netlink interface via netlink character devices; this interface is not documented here and is provided only for backward compatibility. Netlink is a datagram-oriented service. Both <code>SOCK_RAW</code> and <code>SOCK_DGRAM</code> are valid values for <i>socket_type</i>. However, the netlink protocol does not distinguish between datagram and raw sockets. <i>netlink_family</i> selects the kernel module or netlink group to communicate with. The currently assigned netlink families are:</p>
 <dl>
-<dt><code>NETLINK_ROUTE</code></p>
-<dd>Receives routing and link updates and may be used to modify the routing tables (both IPv4 and IPv6), IP addresses, link parameters, neighbor setups, queueing disciplines, traffic classes and packet classifiers (see <code><a href="/docs/linux/man/7-rtnetlink/">rtnetlink</a></code>(7)).</p>
-<dt><code>NETLINK_W1</code> (Linux 2.6.13 to 2.16.17)</p>
-<dd>Messages from 1-wire subsystem.</p>
-<dt><code>NETLINK_USERSOCK</code></p>
-<dd>Reserved for user-mode socket protocols.</p>
-<dt><code>NETLINK_FIREWALL</code> (up to and including Linux 3.4)</p>
-<dd>Transport IPv4 packets from netfilter to user space. Used by <i>ip_queue</i> kernel module. After a long period of being declared obsolete (in favor of the more advanced <i>nfnetlink_queue</i> feature), <code>NETLINK_FIREWALL</code> was removed in Linux 3.5.</p>
-<dt><code>NETLINK_SOCK_DIAG</code> (since Linux 3.3)</p>
-<dd>Query information about sockets of various protocol families from the kernel (see <code><a href="/docs/linux/man/7-sock_diag/">sock_diag</a></code>(7)).</p>
-<dt><code>NETLINK_INET_DIAG</code> (since Linux 2.6.14)</p>
-<dd>An obsolete synonym for <code>NETLINK_SOCK_DIAG</code>.</p>
-<dt><code>NETLINK_NFLOG</code> (up to and including Linux 3.16)</p>
-<dd>Netfilter/iptables ULOG.</p>
-<dt><code>NETLINK_XFRM</code></p>
-<dd>IPsec.</p>
-<dt><code>NETLINK_SELINUX</code> (since Linux 2.6.4)</p>
-<dd>SELinux event notifications.</p>
-<dt><code>NETLINK_ISCSI</code> (since Linux 2.6.15)</p>
-<dd>Open-iSCSI.</p>
-<dt><code>NETLINK_AUDIT</code> (since Linux 2.6.6)</p>
-<dd>Auditing.</p>
-<dt><code>NETLINK_FIB_LOOKUP</code> (since Linux 2.6.13)</p>
-<dd>Access to FIB lookup from user space.</p>
-<dt><code>NETLINK_CONNECTOR</code> (since Linux 2.6.14)</p>
-<dd>Kernel connector. See <i>Documentation/driver-api/connector.rst</i> (or <i>/Documentation/connector/connector.*</i> in kernel 5.2 and earlier) in the Linux kernel source tree for further information.</p>
-<dt><code>NETLINK_NETFILTER</code> (since Linux 2.6.14)</p>
-<dd>Netfilter subsystem.</p>
-<dt><code>NETLINK_SCSITRANSPORT</code> (since Linux 2.6.19)</p>
-<dd>SCSI Transports.</p>
-<dt><code>NETLINK_RDMA</code> (since Linux 3.0)</p>
-<dd>Infiniband RDMA.</p>
-<dt><code>NETLINK_IP6_FW</code> (up to and including Linux 3.4)</p>
-<dd>Transport IPv6 packets from netfilter to user space. Used by <i>ip6_queue</i> kernel module.</p>
-<dt><code>NETLINK_DNRTMSG</code></p>
-<dd>DECnet routing messages.</p>
-<dt><code>NETLINK_KOBJECT_UEVENT</code> (since Linux 2.6.10)</p>
-<dd>Kernel messages to user space.</p>
-<dt><code>NETLINK_GENERIC</code> (since Linux 2.6.15)</p>
-<dd>Generic netlink family for simplified netlink usage.</p>
-<dt><code>NETLINK_CRYPTO</code> (since Linux 3.2)</p>
-<dd>Netlink interface to request information about ciphers registered with the kernel crypto API as well as allow configuration of the kernel crypto API.</dl>
+<dt><code>NETLINK_ROUTE</code></dt>
+<dd>Receives routing and link updates and may be used to modify the routing tables (both IPv4 and IPv6), IP addresses, link parameters, neighbor setups, queueing disciplines, traffic classes and packet classifiers (see <code><a href="/docs/linux/man/7-rtnetlink/">rtnetlink</a></code>(7)).</dd>
+<dt><code>NETLINK_W1</code> (Linux 2.6.13 to 2.16.17)</dt>
+<dd>Messages from 1-wire subsystem.</dd>
+<dt><code>NETLINK_USERSOCK</code></dt>
+<dd>Reserved for user-mode socket protocols.</dd>
+<dt><code>NETLINK_FIREWALL</code> (up to and including Linux 3.4)</dt>
+<dd>Transport IPv4 packets from netfilter to user space. Used by <i>ip_queue</i> kernel module. After a long period of being declared obsolete (in favor of the more advanced <i>nfnetlink_queue</i> feature), <code>NETLINK_FIREWALL</code> was removed in Linux 3.5.</dd>
+<dt><code>NETLINK_SOCK_DIAG</code> (since Linux 3.3)</dt>
+<dd>Query information about sockets of various protocol families from the kernel (see <code><a href="/docs/linux/man/7-sock_diag/">sock_diag</a></code>(7)).</dd>
+<dt><code>NETLINK_INET_DIAG</code> (since Linux 2.6.14)</dt>
+<dd>An obsolete synonym for <code>NETLINK_SOCK_DIAG</code>.</dd>
+<dt><code>NETLINK_NFLOG</code> (up to and including Linux 3.16)</dt>
+<dd>Netfilter/iptables ULOG.</dd>
+<dt><code>NETLINK_XFRM</code></dt>
+<dd>IPsec.</dd>
+<dt><code>NETLINK_SELINUX</code> (since Linux 2.6.4)</dt>
+<dd>SELinux event notifications.</dd>
+<dt><code>NETLINK_ISCSI</code> (since Linux 2.6.15)</dt>
+<dd>Open-iSCSI.</dd>
+<dt><code>NETLINK_AUDIT</code> (since Linux 2.6.6)</dt>
+<dd>Auditing.</dd>
+<dt><code>NETLINK_FIB_LOOKUP</code> (since Linux 2.6.13)</dt>
+<dd>Access to FIB lookup from user space.</dd>
+<dt><code>NETLINK_CONNECTOR</code> (since Linux 2.6.14)</dt>
+<dd>Kernel connector. See <i>Documentation/driver-api/connector.rst</i> (or <i>/Documentation/connector/connector.*</i> in kernel 5.2 and earlier) in the Linux kernel source tree for further information.</dd>
+<dt><code>NETLINK_NETFILTER</code> (since Linux 2.6.14)</dt>
+<dd>Netfilter subsystem.</dd>
+<dt><code>NETLINK_SCSITRANSPORT</code> (since Linux 2.6.19)</dt>
+<dd>SCSI Transports.</dd>
+<dt><code>NETLINK_RDMA</code> (since Linux 3.0)</dt>
+<dd>Infiniband RDMA.</dd>
+<dt><code>NETLINK_IP6_FW</code> (up to and including Linux 3.4)</dt>
+<dd>Transport IPv6 packets from netfilter to user space. Used by <i>ip6_queue</i> kernel module.</dd>
+<dt><code>NETLINK_DNRTMSG</code></dt>
+<dd>DECnet routing messages.</dd>
+<dt><code>NETLINK_KOBJECT_UEVENT</code> (since Linux 2.6.10)</dt>
+<dd>Kernel messages to user space.</dd>
+<dt><code>NETLINK_GENERIC</code> (since Linux 2.6.15)</dt>
+<dd>Generic netlink family for simplified netlink usage.</dd>
+<dt><code>NETLINK_CRYPTO</code> (since Linux 3.2)</dt>
+<dd>Netlink interface to request information about ciphers registered with the kernel crypto API as well as allow configuration of the kernel crypto API.</dd></dl>
 <p> Netlink messages consist of a byte stream with one or multiple <i>nlmsghdr</i> headers and associated payload. The byte stream should be accessed only with the standard <code>NLMSG_*</code> macros. See <code><a href="/docs/linux/man/3-netlink/">netlink</a></code>(3) for further information. In multipart messages (multiple <i>nlmsghdr</i> headers with associated payload in one byte stream) the first and all following headers have the <code>NLM_F_MULTI</code> flag set, except for the last header which has the type <code>NLMSG_DONE</code>. After each <i>nlmsghdr</i> the payload follows. struct sockaddr_nl {<br />
     sa_family_t nl_family; /* AF_NETLINK */<br />
     unsigned short nl_pad; /* Zero */<br />
@@ -176,20 +175,20 @@ netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 <h3>Socket options</h3>
 <p>To set or get a netlink socket option, call <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2) to read or <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) to write the option with the option level argument set to <code>SOL_NETLINK</code>. Unless otherwise noted, <i>optval</i> is a pointer to an <i>int</i>.</p>
 <dl>
-<dt><code>NETLINK_PKTINFO</code> (since Linux 2.6.14)</p>
-<dd>Enable <code>nl_pktinfo</code> control messages for received packets to get the extended destination group number.</p>
-<dt><code>NETLINK_ADD_MEMBERSHIP</code>,&nbsp;<code>NETLINK_DROP_MEMBERSHIP</code> (since Linux 2.6.14)</p>
-<dd>Join/leave a group specified by <i>optval</i>.</p>
-<dt><code>NETLINK_LIST_MEMBERSHIPS</code> (since Linux 4.2)</p>
-<dd>Retrieve all groups a socket is a member of. <i>optval</i> is a pointer to <code>__u32</code> and <i>optlen</i> is the size of the array. The array is filled with the full membership set of the socket, and the required array size is returned in <i>optlen</i>.</p>
-<dt><code>NETLINK_BROADCAST_ERROR</code> (since Linux 2.6.30)</p>
-<dd>When not set, <code>netlink_broadcast()</code> only reports <code>ESRCH</code> errors and silently ignore <code>ENOBUFS</code> errors.</p>
-<dt><code>NETLINK_NO_ENOBUFS</code> (since Linux 2.6.30)</p>
-<dd>This flag can be used by unicast and broadcast listeners to avoid receiving <code>ENOBUFS</code> errors.</p>
-<dt><code>NETLINK_LISTEN_ALL_NSID</code> (since Linux 4.2)</p>
-<dd>When set, this socket will receive netlink notifications from all network namespaces that have an <i>nsid</i> assigned into the network namespace where the socket has been opened. The <i>nsid</i> is sent to user space via an ancillary data.</p>
-<dt><code>NETLINK_CAP_ACK</code> (since Linux 4.2)</p>
-<dd>The kernel may fail to allocate the necessary room for the acknowledgment message back to user space. This option trims off the payload of the original netlink message. The netlink message header is still included, so the user can guess from the sequence number which message triggered the acknowledgment.</dl>
+<dt><code>NETLINK_PKTINFO</code> (since Linux 2.6.14)</dt>
+<dd>Enable <code>nl_pktinfo</code> control messages for received packets to get the extended destination group number.</dd>
+<dt><code>NETLINK_ADD_MEMBERSHIP</code>,&nbsp;<code>NETLINK_DROP_MEMBERSHIP</code> (since Linux 2.6.14)</dt>
+<dd>Join/leave a group specified by <i>optval</i>.</dd>
+<dt><code>NETLINK_LIST_MEMBERSHIPS</code> (since Linux 4.2)</dt>
+<dd>Retrieve all groups a socket is a member of. <i>optval</i> is a pointer to <code>__u32</code> and <i>optlen</i> is the size of the array. The array is filled with the full membership set of the socket, and the required array size is returned in <i>optlen</i>.</dd>
+<dt><code>NETLINK_BROADCAST_ERROR</code> (since Linux 2.6.30)</dt>
+<dd>When not set, <code>netlink_broadcast()</code> only reports <code>ESRCH</code> errors and silently ignore <code>ENOBUFS</code> errors.</dd>
+<dt><code>NETLINK_NO_ENOBUFS</code> (since Linux 2.6.30)</dt>
+<dd>This flag can be used by unicast and broadcast listeners to avoid receiving <code>ENOBUFS</code> errors.</dd>
+<dt><code>NETLINK_LISTEN_ALL_NSID</code> (since Linux 4.2)</dt>
+<dd>When set, this socket will receive netlink notifications from all network namespaces that have an <i>nsid</i> assigned into the network namespace where the socket has been opened. The <i>nsid</i> is sent to user space via an ancillary data.</dd>
+<dt><code>NETLINK_CAP_ACK</code> (since Linux 4.2)</dt>
+<dd>The kernel may fail to allocate the necessary room for the acknowledgment message back to user space. This option trims off the payload of the original netlink message. The netlink message header is still included, so the user can guess from the sequence number which message triggered the acknowledgment.</dd></dl>
 <h2>Versions</h2>
 <p>The socket interface to netlink first appeared Linux 2.2. </p>
 <p> Linux 2.0 supported a more primitive device-based netlink interface (which is still available as a compatibility option). This obsolete interface is not described here.</p>

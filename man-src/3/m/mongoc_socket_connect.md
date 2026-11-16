@@ -16,17 +16,17 @@ mongoc_socket_connect (mongoc_socket_t *sock,
  int64_t expire_at);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>addr</code></p>
-<dd>A struct sockaddr.</dl>
+<dt><code>addr</code></dt>
+<dd>A struct sockaddr.</dd></dl>
 <dl COMPACT>
-<dt><code>addrlen</code></p>
-<dd>A socklen_t.</dl>
+<dt><code>addrlen</code></dt>
+<dd>A socklen_t.</dd></dl>
 <dl COMPACT>
-<dt><code>expire_at</code></p>
-<dd>A int64_t containing the absolute timeout using the monotonic clock.</dl>
+<dt><code>expire_at</code></dt>
+<dd>A int64_t containing the absolute timeout using the monotonic clock.</dd></dl>
 <h2>Description</h2>
 <p>This function is a wrapper around the BSD socket <code>connect(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
 <p> This function performs a socket connection but will fail if @expire_at has been reached by the monotonic clock. Keep in mind that this is an absolute timeout in milliseconds. You should add your desired timeout to <code>bson_get_monotonic_time(3)</code> \&amp;. </p>

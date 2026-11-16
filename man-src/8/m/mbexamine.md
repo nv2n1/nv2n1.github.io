@@ -18,13 +18,13 @@ description: "mbexamine – examine a cyrus-format mailbox"
 <p><i>Mbexamine</i> will examine the header, index, and cache files of a cyrus format mailbox and dump the information contained therein. It can also limit its output to a specific uid or sequence number, through use of the -s and -u switches. <i>Mbexamine</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>. It uses the mboxlist database to locate the mailbox on disk.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-s</code></p>
-<dd>Dump information for the given sequence number only.</p>
-<dt><code>-u</code></p>
-<dd>Dump information for the given uid only.</p>
-<dt><code>-q</code></p>
-<dd>Compare the quota usage in cyrus.index to the actual message file sizes and report any differences. If there are differences, the mailbox SHOULD be reconstructed.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-s</code></dt>
+<dd>Dump information for the given sequence number only.</dd>
+<dt><code>-u</code></dt>
+<dd>Dump information for the given uid only.</dd>
+<dt><code>-q</code></dt>
+<dd>Compare the quota usage in cyrus.index to the actual message file sizes and report any differences. If there are differences, the mailbox SHOULD be reconstructed.</dd></dl>
 <h2>Files</h2>
 <p><code>/etc/imapd.conf</code></p>

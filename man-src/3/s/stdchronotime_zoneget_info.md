@@ -12,12 +12,9 @@ std::chrono::time_zone::get_info - std::chrono::time_zone::get_info
 
 <pre><code>template &lt;class Duration&gt;
 (since C++ 20)
-
     std::chrono::sys_info get_info(const std::chrono::sys_time&lt;Duration&gt; &amp;tp) const;
-
 template &lt;class Duration&gt;
 (since C++ 20)
-
     std::chrono::local_info get_info(const std::chrono::local_time&lt;Duration&gt; &amp;tp) const;</code></pre> 
 Obtains information about this time zone at the time point tp. 
 

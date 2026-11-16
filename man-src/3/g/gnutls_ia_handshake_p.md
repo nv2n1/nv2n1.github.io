@@ -14,8 +14,8 @@ description: "gnutls_ia_handshake_p – API function"
 <p> <code>int gnutls_ia_handshake_p(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Predicate to be used after <code>gnutls_handshake()</code> to decide whether to invoke <code>gnutls_ia_handshake()</code>. Usable by both clients and servers.</p>
 <h2>RETURN VALUE</h2>
@@ -29,6 +29,6 @@ description: "gnutls_ia_handshake_p – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

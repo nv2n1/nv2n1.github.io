@@ -11,71 +11,52 @@ std::experimental::ranges::Boolean - std::experimental::ranges::Boolean
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class B&gt;
-
     concept bool Boolean =
-
         Movable&lt;std::decay_t&lt;B&gt;&gt; &amp;&amp;
-
         requires(const std::remove_reference_t&lt;B&gt; &amp;b1,
-
                  const std::remove_reference_t&lt;B&gt; &amp;b2, const bool a)
 {
-
     {
         b1
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         !b1
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         b1 &amp;&amp;a
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
-
     {
         b1 || a
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
-
     {
         b1 &amp;&amp;b2
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
     (ranges TS)
-
     {
         a &amp;&amp;b2
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
-
     {
         b1 || b2
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
-
     {
         a || b2
         } -&gt; Same&lt;bool&gt; &amp;&amp;;
-
     {
         b1 == b2
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         b1 == a
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         a == b2
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         b1 != b2
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         b1 != a
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;
-
     {
         a != b2
         } -&gt; ConvertibleTo&lt;bool&gt; &amp;&amp;;

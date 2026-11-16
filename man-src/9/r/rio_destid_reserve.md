@@ -14,14 +14,14 @@ description: "rio_destid_reserve – Reserve the specivied destID"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network</dl>
+</dd><dd>RIO network</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>destID to reserve</dl>
+<dd>destID to reserve</dd></dl>
 <h2>Description</h2>
 <p>Tries to reserve the specified destID. Returns 0 if successful.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

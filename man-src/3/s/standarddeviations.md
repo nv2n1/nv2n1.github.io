@@ -10,31 +10,13 @@ description: "QuantLib::CovarianceDecomposition – Covariance decomposition int
 <p>QuantLib::CovarianceDecomposition &#8211; Covariance decomposition into correlation and variances. </p>
 <h2>Synopsis</h2>
 <pre><code>CovarianceDecomposition (const Matrix &amp;covarianceMatrix, Real tolerance=1.0e-12, SalvagingAlgorithm::Type sa=SalvagingAlgorithm::None)
-
-
-
 const Array &amp; variances () const
-
-
-
 const Array &amp; standardDeviations () const
-
-
-
 const Matrix &amp; correlationMatrix () const</code></pre>
 <h3>Public Member Functions</h3>
 <pre><code>CovarianceDecomposition (const Matrix &amp;covarianceMatrix, Real tolerance=1.0e-12, SalvagingAlgorithm::Type sa=SalvagingAlgorithm::None)
-
-
-
 const Array &amp; variances () const
-
-
-
 const Array &amp; standardDeviations () const
-
-
-
 const Matrix &amp; correlationMatrix () const</code></pre>
 <h2>Detailed Description</h2>
 <p>Covariance decomposition into correlation and variances. </p>
@@ -42,15 +24,15 @@ const Matrix &amp; correlationMatrix () const</code></pre>
 <p> Note that only the lower symmetric part of the covariance matrix is used. </p>
 <p> <code>Precondition:</code></p>
 <dl>
-<dd>The covariance matrix must be symmetric.</dl>
+<dd>The covariance matrix must be symmetric.</dd></dl>
 <p> <code>Tests</code></p>
 <dl>
-<dd>cross checked with getCovariance</dl>
+<dd>cross checked with getCovariance</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>CovarianceDecomposition</code> (const <code>Matrix</code> &amp; covarianceMatrix, <code>Real</code> tolerance = 1.0e-12, SalvagingAlgorithm::Type sa = SalvagingAlgorithm::None)</h3>
 <p><code>Precondition:</code></p>
 <dl>
-<dd>covarianceMatrix must be symmetric</dl>
+<dd>covarianceMatrix must be symmetric</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const <code>Array</code>&amp; variances () const</h3>
 <p>returns the variances <code>Array</code></p>

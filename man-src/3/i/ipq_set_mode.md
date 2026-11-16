@@ -18,10 +18,10 @@ description: "ipq_set_mode — set the ip_queue queuing mode"
 <p> The <i>h</i> parameter is a context handle which must previously have been returned successfully from a call to <code>ipq_create_handle</code>. </p>
 <p> The <i>mode</i> parameter must be one of:</p>
 <dl>
-<dt><code>IPQ_COPY_META</code></p>
-<dd> Copy only packet metadata to userspace.</p>
-<dt><code>IPQ_COPY_PACKET</code></p>
-<dd> Copy packet metadata and packet payloads to userspace.</dl>
+<dt><code>IPQ_COPY_META</code></dt>
+<dd> Copy only packet metadata to userspace.</dd>
+<dt><code>IPQ_COPY_PACKET</code></dt>
+<dd> Copy packet metadata and packet payloads to userspace.</dd></dl>
 <p> The <i>range</i> parameter is used to specify how many bytes of the payload to copy to userspace. It is only valid for <code>IPQ_COPY_PACKET</code> mode and is otherwise ignored. The maximum useful value for <i>range</i> is 65535 (greater values will be clamped to this by ip_queue). </p>
 <p> <code>ipq_set_mode</code> is usually used immediately following <code>ipq_create_handle</code> to enable the flow of packets to userspace. </p>
 <p> Note that as the underlying Netlink messaging transport is connectionless, the ip_queue module does not know that a userspace application is ready to communicate until it receives a message such as this.</p>
@@ -34,7 +34,7 @@ description: "ipq_set_mode — set the ip_queue queuing mode"
 <p> A relatively common failure may occur if the ip_queue module is not loaded. In this case, the following code excerpt: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 status = ipq_set_mode(h, IPQ_COPY_META, 0);
 if (status &lt; 0) {
@@ -55,3 +55,4 @@ if (status &lt; 0) {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libipq/">libipq</a></code>(3), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8). </p>
 <h2>Index</h2>
+</dd></dl>

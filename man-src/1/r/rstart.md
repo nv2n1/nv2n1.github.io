@@ -15,14 +15,14 @@ description: "rstart – a sample implementation of a Remote Start client"
 <p> <i>Rstart</i> is a simple implementation of a Remote Start client as defined in &quot;A Flexible Remote Execution Protocol Based on <code>rsh</code>&quot;. It uses <i>rsh</i> as its underlying remote execution mechanism.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code><i>context</i></p>
-<dd> This option specifies the <i>context</i> in which the command is to be run. A <i>context</i> specifies a general environment the program is to be run in. The details of this environment are host-specific; the intent is that the client need not know how the environment must be configured. If omitted, the context defaults to <code>X</code>. This should be suitable for running X programs from the host&#8217;s &quot;usual&quot; X installation.</p>
-<dt><code>-g</code></p>
-<dd> Interprets <i>command</i> as a <i>generic command</i>, as discussed in the protocol document. This is intended to allow common applications to be invoked without knowing what they are called on the remote system. Currently, the only generic commands defined are <code>Terminal</code>, <code>LoadMonitor</code>, <code>ListContexts</code>, and <code>ListGenericCommands</code>.</p>
-<dt><code>-l </code><i>username</i></p>
-<dd> This option is passed to the underlying <i>rsh</i>; it requests that the command be run as the specified user.</p>
-<dt><code>-v</code></p>
-<dd> This option requests that <i>rstart</i> be verbose in its operation. Without this option, <i>rstart</i> discards output from the remote&#8217;s <i>rstart</i> helper, and directs the <i>rstart</i> helper to detach the program from the <i>rsh</i> connection used to start it. With this option, responses from the helper are displayed and the resulting program is not detached from the connection.</dl>
+<dt><code>-c </code><i>context</i></dt>
+<dd> This option specifies the <i>context</i> in which the command is to be run. A <i>context</i> specifies a general environment the program is to be run in. The details of this environment are host-specific; the intent is that the client need not know how the environment must be configured. If omitted, the context defaults to <code>X</code>. This should be suitable for running X programs from the host&#8217;s &quot;usual&quot; X installation.</dd>
+<dt><code>-g</code></dt>
+<dd> Interprets <i>command</i> as a <i>generic command</i>, as discussed in the protocol document. This is intended to allow common applications to be invoked without knowing what they are called on the remote system. Currently, the only generic commands defined are <code>Terminal</code>, <code>LoadMonitor</code>, <code>ListContexts</code>, and <code>ListGenericCommands</code>.</dd>
+<dt><code>-l </code><i>username</i></dt>
+<dd> This option is passed to the underlying <i>rsh</i>; it requests that the command be run as the specified user.</dd>
+<dt><code>-v</code></dt>
+<dd> This option requests that <i>rstart</i> be verbose in its operation. Without this option, <i>rstart</i> discards output from the remote&#8217;s <i>rstart</i> helper, and directs the <i>rstart</i> helper to detach the program from the <i>rsh</i> connection used to start it. With this option, responses from the helper are displayed and the resulting program is not detached from the connection.</dd></dl>
 <h2>NOTES</h2>
 <p> This is a trivial implementation. Far more sophisticated implementations are possible and should be developed. </p>
 <p> Error handling is nonexistent. Without <code>-v</code>, error reports from the remote are discarded silently. With <code>-v</code>, error reports are displayed. </p>

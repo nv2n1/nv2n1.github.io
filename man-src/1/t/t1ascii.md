@@ -15,10 +15,10 @@ description: "t1ascii – convert PostScript Type 1 font from binary to ASCII"
 <p> <code>t1ascii</code> converts Adobe Type 1 font programs in PFB (binary) format to PFA (hexadecimal) format. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;line-length=</code><i>num</i>, <code>-l</code><i> num</i></p>
-<dd> Set the maximum length of encrypted lines in the output to <i>num.</i> (These are the lines consisting wholly of hexadecimal digits.) The default is 64.</p>
-<dt><code>&#8211;warnings</code>, <code>-w</code></p>
-<dd> Warn when the input font contains lines longer than 255 characters. Long lines don&#8217;t strictly conform to Adobe&#8217;s Document Structuring Conventions, and may cause problems with older software.</dl>
+<dt><code>&#8211;line-length=</code><i>num</i>, <code>-l</code><i> num</i></dt>
+<dd> Set the maximum length of encrypted lines in the output to <i>num.</i> (These are the lines consisting wholly of hexadecimal digits.) The default is 64.</dd>
+<dt><code>&#8211;warnings</code>, <code>-w</code></dt>
+<dd> Warn when the input font contains lines longer than 255 characters. Long lines don&#8217;t strictly conform to Adobe&#8217;s Document Structuring Conventions, and may cause problems with older software.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>Adobe Type 1 Font Format</i></p>
 <h2>AUTHORS</h2>

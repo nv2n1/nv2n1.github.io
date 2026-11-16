@@ -23,18 +23,18 @@ description: "kadmind – server for administrative access to Kerberos database"
 <li> all </ul>
 <p> And the optional <i>principal-pattern</i> restricts the rights to operations on principals that match the glob-style pattern. Supported options:</p>
 <dl>
-<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></p>
-<dd>location of config file</p>
-<dt><code>-k </code><i>file , &#8211;</i><code>-key-file= </code><i>file</i></p>
-<dd>location of master key file</p>
-<dt><code>&#8211;keytab= </code><i>keytab</i></p>
-<dd>what keytab to use</p>
-<dt><code>-r </code><i>realm , &#8211;</i><code>-realm= </code><i>realm</i></p>
-<dd>realm to use</p>
-<dt><code>-d , &#8211;debug</code></p>
-<dd>enable debugging</p>
-<dt><code>-p </code><i>port , &#8211;</i><code>-ports= </code><i>port</i></p>
-<dd>ports to listen to. By default, if run as a daemon, it listens to port 749, but you can add any number of ports with this option. The port string is a whitespace separated list of port specifications, with the special string &#8220;+&#8221; representing the default port.</dl>
+<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></dt>
+<dd>location of config file</dd>
+<dt><code>-k </code><i>file , &#8211;</i><code>-key-file= </code><i>file</i></dt>
+<dd>location of master key file</dd>
+<dt><code>&#8211;keytab= </code><i>keytab</i></dt>
+<dd>what keytab to use</dd>
+<dt><code>-r </code><i>realm , &#8211;</i><code>-realm= </code><i>realm</i></dt>
+<dd>realm to use</dd>
+<dt><code>-d , &#8211;debug</code></dt>
+<dd>enable debugging</dd>
+<dt><code>-p </code><i>port , &#8211;</i><code>-ports= </code><i>port</i></dt>
+<dd>ports to listen to. By default, if run as a daemon, it listens to port 749, but you can add any number of ports with this option. The port string is a whitespace separated list of port specifications, with the special string &#8220;+&#8221; representing the default port.</dd></dl>
 <h2>Files</h2>
 <p>/var/heimdal/kadmind.acl</p>
 <h2>Examples</h2>

@@ -35,32 +35,32 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <h3>Q: 2.3 Why yet another Data Language ?</h3>
 <p>There are actually several reasons and everyone should decide for himself which are the most important ones:</p>
 <dl>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PDL</font> is &#8220;free software&#8221;. The authors of <font SIZE="-1">PDL</font> think that this concept has several advantages: everyone has access to the sources -&gt; better debugging, easily adaptable to your own needs, extensible for your purposes, etc&#8230; In comparison with commercial packages such as <font SIZE="-1">MATLAB</font> and <font SIZE="-1">IDL</font> this is of considerable importance for workers who want to do some work at home and cannot afford the considerable cost to buy commercial packages for personal use.</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PDL</font> is based on a powerful and well designed scripting language: Perl. In contrast to other scientific/numeric data analysis languages it has been designed using the features of a proven language instead of having grown into existence from scratch. Defining the control structures while features were added during development leads to languages that often appear clumsy and badly planned for most existing packages with similar scope as <font SIZE="-1">PDL.</font></p>
-<dt>&bull;</p>
-<dd>Using Perl as the basis a <font SIZE="-1">PDL</font> programmer has all the powerful features of Perl at his hand, right from the start. This includes regular expressions, associative arrays (hashes), well designed interfaces to the operating system, network, etc. Experience has shown that even in mainly numerically oriented programming it is often extremely handy if you have easy access to powerful semi-numerical or completely non-numerical functionality as well. For example, you might want to offer the results of a complicated computation as a server process to other processes on the network, perhaps directly accepting input from other processes on the network. Using Perl and existing Perl extension packages things like this are no problem at all (and it all will fit into your &#8220;<font SIZE="-1">PDL</font> script&#8221;).</p>
-<dt>&bull;</p>
-<dd>Extremely easy extensibility and interoperability as <font SIZE="-1">PDL</font> is a Perl extension; development support for Perl extensions is an integral part of Perl and there are already numerous extensions to standard Perl freely available on the network.</p>
-<dt>&bull;</p>
-<dd>Integral language features of Perl (regular expressions, hashes, object modules) immensely facilitated development and implementation of key concepts of <font SIZE="-1">PDL.</font> One of the most striking examples for this point is probably <font SIZE="-1">PDL::PP</font> (see Q: 6.16 below), a code generator/parser/pre-processor that generates <font SIZE="-1">PDL</font> functions from concise descriptions.</p>
-<dt>&bull;</p>
-<dd>None of the existing data languages follow the Perl language rules, which the authors firmly believe in:</p>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PDL</font> is &#8220;free software&#8221;. The authors of <font SIZE="-1">PDL</font> think that this concept has several advantages: everyone has access to the sources -&gt; better debugging, easily adaptable to your own needs, extensible for your purposes, etc&#8230; In comparison with commercial packages such as <font SIZE="-1">MATLAB</font> and <font SIZE="-1">IDL</font> this is of considerable importance for workers who want to do some work at home and cannot afford the considerable cost to buy commercial packages for personal use.</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PDL</font> is based on a powerful and well designed scripting language: Perl. In contrast to other scientific/numeric data analysis languages it has been designed using the features of a proven language instead of having grown into existence from scratch. Defining the control structures while features were added during development leads to languages that often appear clumsy and badly planned for most existing packages with similar scope as <font SIZE="-1">PDL.</font></dd>
+<dt>&bull;</dt>
+<dd>Using Perl as the basis a <font SIZE="-1">PDL</font> programmer has all the powerful features of Perl at his hand, right from the start. This includes regular expressions, associative arrays (hashes), well designed interfaces to the operating system, network, etc. Experience has shown that even in mainly numerically oriented programming it is often extremely handy if you have easy access to powerful semi-numerical or completely non-numerical functionality as well. For example, you might want to offer the results of a complicated computation as a server process to other processes on the network, perhaps directly accepting input from other processes on the network. Using Perl and existing Perl extension packages things like this are no problem at all (and it all will fit into your &#8220;<font SIZE="-1">PDL</font> script&#8221;).</dd>
+<dt>&bull;</dt>
+<dd>Extremely easy extensibility and interoperability as <font SIZE="-1">PDL</font> is a Perl extension; development support for Perl extensions is an integral part of Perl and there are already numerous extensions to standard Perl freely available on the network.</dd>
+<dt>&bull;</dt>
+<dd>Integral language features of Perl (regular expressions, hashes, object modules) immensely facilitated development and implementation of key concepts of <font SIZE="-1">PDL.</font> One of the most striking examples for this point is probably <font SIZE="-1">PDL::PP</font> (see Q: 6.16 below), a code generator/parser/pre-processor that generates <font SIZE="-1">PDL</font> functions from concise descriptions.</dd>
+<dt>&bull;</dt>
+<dd>None of the existing data languages follow the Perl language rules, which the authors firmly believe in:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><font SIZE="-1">TIMTOWTDI:</font> There is more than one way to do it. Minimalist languages are interesting for computer scientists, but for users, a little bit of redundancy makes things wildly easier to cope with and allows individual programming styles &#8211; just as people speak in different ways. For many people this will undoubtedly be a reason to avoid <font SIZE="-1">PDL </font>;)</p>
-<dt>&bull;</p>
-<dd>Simple things are simple, complicated things possible: Things that are often done should be easy to do in the language, whereas seldom done things shouldn&#8217;t be too cumbersome.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">TIMTOWTDI:</font> There is more than one way to do it. Minimalist languages are interesting for computer scientists, but for users, a little bit of redundancy makes things wildly easier to cope with and allows individual programming styles &#8211; just as people speak in different ways. For many people this will undoubtedly be a reason to avoid <font SIZE="-1">PDL </font>;)</dd>
+<dt>&bull;</dt>
+<dd>Simple things are simple, complicated things possible: Things that are often done should be easy to do in the language, whereas seldom done things shouldn&#8217;t be too cumbersome.</dd></dl>
 </dl>
 <dl>
-<dd>All existing languages violate at least one of these rules.</dl>
-<dt>&bull;</p>
-<dd>As a project for the future <font SIZE="-1">PDL</font> should be able to use super computer features, e.g. vector capabilities/parallel processing, <font SIZE="-1">GPGPU</font> acceleration. This will probably be achieved by having <font SIZE="-1">PDL::PP</font> (see Q: 6.16 below) generate appropriate code on such architectures to exploit these features.</p>
-<dt>&bull;</p>
-<dd>[ fill in your personal 111 favourite reasons here&#8230;]</dl>
+<dd>All existing languages violate at least one of these rules.</dd></dl>
+<dt>&bull;</dt>
+<dd>As a project for the future <font SIZE="-1">PDL</font> should be able to use super computer features, e.g. vector capabilities/parallel processing, <font SIZE="-1">GPGPU</font> acceleration. This will probably be achieved by having <font SIZE="-1">PDL::PP</font> (see Q: 6.16 below) generate appropriate code on such architectures to exploit these features.</dd>
+<dt>&bull;</dt>
+<dd>[ fill in your personal 111 favourite reasons here&#8230;]</dd></dl>
 <h3>Q: 2.4 What is <font SIZE="-1">PDL</font> good for ?</h3>
 <p>Just in case you do not yet know what the main features of <font SIZE="-1">PDL</font> are and what one could do with them, here is a (necessarily selective) list of key features: </p>
 <p> <font SIZE="-1">PDL</font> is well suited for matrix computations, general handling of multidimensional data, image processing, general scientific computation, numerical applications. It supports I/O for many popular image and data formats, 1D (line plots), 2D (images) and 3D (volume visualization, surface plots via OpenGL &#8211; for instance implemented using Mesa or video card OpenGL drivers), graphics display capabilities and implements many numerical and semi-numerical algorithms. </p>
@@ -98,18 +98,18 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <p>First of all, for all purely Perl-related questions there are tons of sources on the net. Good points to start are &lt;<a rel="nofollow" href="http://www.perl.com">http://www.perl.com</a>&gt; and &lt;<a href="http://www.perl.org">http://www.perl.org</a>&gt; . </p>
 <p> The <font SIZE="-1">PDL</font> home site can be accessed by pointing your web browser to &lt;<a rel="nofollow" href="http://pdl.perl.org">http://pdl.perl.org</a>&gt; . It has tons of goodies for anyone interested in <font SIZE="-1">PDL:</font></p>
 <dl>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PDL</font> distributions</p>
-<dt>&bull;</p>
-<dd>On-line documentation</p>
-<dt>&bull;</p>
-<dd>Pointers to an <font SIZE="-1">HTML</font> archive of the <font SIZE="-1">PDL</font> mailing lists</p>
-<dt>&bull;</p>
-<dd>A list of platforms on which <font SIZE="-1">PDL</font> has been successfully tested.</p>
-<dt>&bull;</p>
-<dd>News about recently added features, ported libraries, etc.</p>
-<dt>&bull;</p>
-<dd>Name of the current pumpkin holders for the different <font SIZE="-1">PDL</font> modules (if you want to know what that means you better had a look at the web pages).</dl>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PDL</font> distributions</dd>
+<dt>&bull;</dt>
+<dd>On-line documentation</dd>
+<dt>&bull;</dt>
+<dd>Pointers to an <font SIZE="-1">HTML</font> archive of the <font SIZE="-1">PDL</font> mailing lists</dd>
+<dt>&bull;</dt>
+<dd>A list of platforms on which <font SIZE="-1">PDL</font> has been successfully tested.</dd>
+<dt>&bull;</dt>
+<dd>News about recently added features, ported libraries, etc.</dd>
+<dt>&bull;</dt>
+<dd>Name of the current pumpkin holders for the different <font SIZE="-1">PDL</font> modules (if you want to know what that means you better had a look at the web pages).</dd></dl>
 <p> If you are interested in <font SIZE="-1">PDL</font> in general you can join the <font SIZE="-1">PDL</font> mailing list perldl [at] jach.hawaii.edu. This is a forum to discuss programming issues in <font SIZE="-1">PDL,</font> report bugs, seek assistance with <font SIZE="-1">PDL</font> related problems, etc. To subscribe, fill out the form at &lt;<a rel="nofollow" href="http://mailman.jach.hawaii.edu/mailman/listinfo/perldl">http://mailman.jach.hawaii.edu/mailman/listinfo/perldl</a>&gt; . </p>
 <p> A searchable archive and a hypertext version of the traffic on this list (1997-2004) can be found at &lt;<a rel="nofollow" href="http://www.xray.mpe.mpg.de/mailing-lists/perldl/">http://www.xray.mpe.mpg.de/mailing-lists/perldl/</a>&gt; . More recent messages (since June 2005) can be found at &lt;<a rel="nofollow" href="http://mailman.jach.hawaii.edu/mailman/listinfo/perldl">http://mailman.jach.hawaii.edu/mailman/listinfo/perldl</a>&gt; . </p>
 <p> If you are interested in all the technical details of the ongoing <font SIZE="-1">PDL</font> development you can join the <font SIZE="-1">PDL</font> developers mailing list pdl-porters [at] jach.hawaii.edu . To subscribe, fill out the form at &lt;<a rel="nofollow" href="http://mailman.jach.hawaii.edu/mailman/listinfo/pdl-porters">http://mailman.jach.hawaii.edu/mailman/listinfo/pdl-porters</a>&gt; . </p>
@@ -175,10 +175,10 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <h3>Q: 5.1 What is threading (is <font SIZE="-1">PDL</font> a newsreader) ?</h3>
 <p>Unfortunately, in the context of <font SIZE="-1">PDL</font> the term threading can have two different (but related) meanings:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When mentioned in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> directions and possibly during the build process we have the usual computer science meaning of multi-threading in mind (useful mainly on multiprocessor machines or clusters)</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">PDL</font> threading of operations on piddles (as mentioned in the indexing docs) is the iteration of a basic operation over appropriate sub-slices of piddles, e.g. the inner product <tt>&quot;inner $a, $b&quot;</tt> of a (3) pdl <tt>$a</tt> and a (3,5,4) pdl <tt>$b</tt> results in a (5,4) piddle where each value is the result of an inner product of the (3) pdl with a (3) sub-slice of the (3,5,4) piddle. For details check PDL::Indexing</dl>
+<dt>&bull;</dt>
+<dd>When mentioned in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> directions and possibly during the build process we have the usual computer science meaning of multi-threading in mind (useful mainly on multiprocessor machines or clusters)</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">PDL</font> threading of operations on piddles (as mentioned in the indexing docs) is the iteration of a basic operation over appropriate sub-slices of piddles, e.g. the inner product <tt>&quot;inner $a, $b&quot;</tt> of a (3) pdl <tt>$a</tt> and a (3,5,4) pdl <tt>$b</tt> results in a (5,4) piddle where each value is the result of an inner product of the (3) pdl with a (3) sub-slice of the (3,5,4) piddle. For details check PDL::Indexing</dd></dl>
 <p> <font SIZE="-1">PDL</font> threading leads naturally to potentially parallel code which can make use of multi threading on multiprocessor machines/networks; there you have the connection between the two types of use of the term.</p>
 <h3>Q: 5.2 What is a piddle?</h3>
 <p>Well, <font SIZE="-1">PDL</font> scalar variables (which are instances of a particular class of Perl objects, i.e. blessed thingies (see <tt>&quot;perldoc perlobj&quot;</tt> )) are in common <font SIZE="-1">PDL</font> parlance often called <i>piddles</i> (for example, check the mailing list archives). Err, clear? If not, simply use the term <i>piddle</i> when you refer to a <font SIZE="-1">PDL</font> variable (an instance of a <font SIZE="-1">PDL</font> object as you might remember) regardless of what actual data the <font SIZE="-1">PDL</font> variable contains.</p>
@@ -209,7 +209,6 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  use and memory is at a premium. For these circumstances the
  operator inplace() is provided which prevents the extra copy
  and allows the argument to be modified. e.g.:
- 
  $x = log($array); # $array unaffected
  log( inplace($bigarray) ); # $bigarray changed in situ</pre>
 <p>And also from the doc !!: </p>
@@ -248,7 +247,6 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <pre> pdl&gt; $a=pdl ( 1, -2, 3);
  pdl&gt; print '$a has at least one element &lt; 0' if (any $a &lt; 0);
  $a has at least one element &lt; 0
- 
  pdl&gt; print '$a is not positive definite' unless (all $a &gt; 0);
  $a is not positive definite</pre>
 <h3>Q: 6.11 Logical operators and piddles &#8211; &#8216;||&#8217; and &#8216;&amp;&amp;&#8217; don&#8217;t work!</h3>
@@ -273,7 +271,6 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <p>The short answer is: read PDL::Objects (e.g. type <tt>&quot;help PDL::Objects&quot;</tt> in the <i>perldl</i> or <i>pdl2</i> shell). </p>
 <p> The longer answer (extracted from PDL::Objects ): Since a <font SIZE="-1">PDL</font> object is an opaque reference to a C struct, it is not possible to extend the <font SIZE="-1">PDL</font> class by e.g. extra data via sub-classing (as you could do with a hash based Perl object). To circumvent this problem <font SIZE="-1">PDL</font> has built-in support to extend the <font SIZE="-1">PDL</font> class via the <i>has-a</i> relation for blessed hashes. You can get the <i>HAS-A</i> to behave like <i>IS-A</i> simply in that you assign the <font SIZE="-1">PDL</font> object to the attribute named <tt>&quot;PDL&quot;</tt> and redefine the method <i>initialize()</i>. For example: </p>
 <pre> package FOO;
- 
  @FOO::ISA = qw(PDL);
  sub initialize {
  my $class = shift;
@@ -316,19 +313,19 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <h3>Q: 6.18 What I/O formats are supported by <font SIZE="-1">PDL </font>?</h3>
 <p>The current versions of <font SIZE="-1">PDL</font> already support quite a number of different I/O formats. However, it is not always obvious which module implements which formats. To help you find the right module for the format you require, here is a short list of the current list of I/O formats and a hint in which module to find the implementation:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A home brew fast raw (binary) I/O format for <font SIZE="-1">PDL</font> is implemented by the FastRaw module</p>
-<dt>&bull;</p>
-<dd>The FlexRaw module implements generic methods for the input and output of `raw&#8217; data arrays. In particular, it is designed to read output from <font SIZE="-1">FORTRAN 77 UNFORMATTED</font> files and the low-level C <tt>&quot;write&quot;</tt> function, even if the files are compressed or gzipped. </p>
+<dt>&bull;</dt>
+<dd>A home brew fast raw (binary) I/O format for <font SIZE="-1">PDL</font> is implemented by the FastRaw module</dd>
+<dt>&bull;</dt>
+<dd>The FlexRaw module implements generic methods for the input and output of `raw&#8217; data arrays. In particular, it is designed to read output from <font SIZE="-1">FORTRAN 77 UNFORMATTED</font> files and the low-level C <tt>&quot;write&quot;</tt> function, even if the files are compressed or gzipped. </dd>
 <p> It is possible that the FastRaw functionality will be included in the FlexRaw module at some time in the future.</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">FITS I/O</font> is implemented by the <tt>&quot;wfits&quot;</tt>/<tt>&quot;rfits&quot;</tt> functions in <font SIZE="-1">PDL::IO::FITS</font> .</p>
-<dt>&bull;</p>
-<dd><font SIZE="-1">ASCII</font> file I/O in various formats can be achieved by using the <tt>&quot;rcols&quot;</tt> and <tt>&quot;rgrep&quot;</tt> functions, also in PDL::IO::Misc .</p>
-<dt>&bull;</p>
-<dd>PDL::IO::Pic implements an interface to the NetPBM/PBM+ filters to read/write several popular image formats; also supported is output of image sequences as <font SIZE="-1">MPEG</font> movies, animated GIFs and a wide variety of other video formats.</p>
-<dt>&bull;</p>
-<dd>On <font SIZE="-1">CPAN</font> you can find the PDL::NetCDF module that works with the current released version of <font SIZE="-1">PDL 2.006.</font></dl>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">FITS I/O</font> is implemented by the <tt>&quot;wfits&quot;</tt>/<tt>&quot;rfits&quot;</tt> functions in <font SIZE="-1">PDL::IO::FITS</font> .</dd>
+<dt>&bull;</dt>
+<dd><font SIZE="-1">ASCII</font> file I/O in various formats can be achieved by using the <tt>&quot;rcols&quot;</tt> and <tt>&quot;rgrep&quot;</tt> functions, also in PDL::IO::Misc .</dd>
+<dt>&bull;</dt>
+<dd>PDL::IO::Pic implements an interface to the NetPBM/PBM+ filters to read/write several popular image formats; also supported is output of image sequences as <font SIZE="-1">MPEG</font> movies, animated GIFs and a wide variety of other video formats.</dd>
+<dt>&bull;</dt>
+<dd>On <font SIZE="-1">CPAN</font> you can find the PDL::NetCDF module that works with the current released version of <font SIZE="-1">PDL 2.006.</font></dd></dl>
 <p> For further details consult the more detailed list in the <font SIZE="-1">PDL::IO</font> documentation or the documentation for the individual modules.</p>
 <h3>Q: 6.19 How can I stack a set of 2D arrays (images) into a 3D piddle?</h3>
 <p>Assuming all arrays are of the same size and in some format recognized by <tt>&quot;rpic&quot;</tt> (see PDL::IO::Pic ) you could say: </p>
@@ -388,7 +385,6 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  {
  int i;
  double sum, x;
- 
  sum = 0.0; x=0.0;
  for (i=1; i&lt;=n; i++) {
  x++;
@@ -408,47 +404,39 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  {
  int i;
  double sum, x;
- 
  sum = 0.0; x=0.0;
  for (i=1; i&lt;=n; i++) {
  x++; 
  sum += x/((4.0*x*x-1.0)*(4.0*x*x-1.0));
  }
  return 1.0/sum; 
- 
  } 
  '); 
- 
  pp_def (
  'eight',
  Pars =&gt; 'int a(); double [o]b();',
  Code =&gt; '$b()=eight_sum($a());'
  );
- 
  # Always make sure that you finish your PP declarations with
  # pp_done
- 
  pp_done();</pre>
 <p>A peculiarity with our example is that we have included the entire code with <tt>&quot;pp_addhdr&quot;</tt> instead of linking it in. This is only for the purposes of example, in a typical application you will use <tt>&quot;pp_addhdr&quot;</tt> to include header files. Note that the argument to <tt>&quot;pp_addhdr&quot;</tt> is enclosed in quotes. </p>
 <p> What is most important in this example is however the <tt>&quot;pp_def&quot;</tt> command. The first argument to this is the name of the new function <i>eight </i> , then comes a hash which the real meat:</p>
 <dl>
-<dt>&bull;</p>
-<dd>This gives the input parameters (here <tt>&quot;a&quot;</tt>) and the output parameters (here <tt>&quot;b&quot;</tt>). The latter are indicated by the <tt>&quot;[o]&quot;</tt> specifier. Both arguments can have a type specification as shown here. </p>
+<dt>&bull;</dt>
+<dd>This gives the input parameters (here <tt>&quot;a&quot;</tt>) and the output parameters (here <tt>&quot;b&quot;</tt>). The latter are indicated by the <tt>&quot;[o]&quot;</tt> specifier. Both arguments can have a type specification as shown here. </dd>
 <p> Many variations and further flexibility in the interface can be specified. See <tt>&quot;perldoc PDL::PP&quot;</tt> for details.</p>
-<dt>&bull;</p>
-<dd>This switch contains the code that should be executed. As you can see this is a rather peculiar mix of C and Perl, but essentially it is just as you would write it in C, but the variables that are passed from <font SIZE="-1">PDL</font> are treated differently and have to be referred to with a preceding &#8216;$&#8217;. </p>
+<dt>&bull;</dt>
+<dd>This switch contains the code that should be executed. As you can see this is a rather peculiar mix of C and Perl, but essentially it is just as you would write it in C, but the variables that are passed from <font SIZE="-1">PDL</font> are treated differently and have to be referred to with a preceding &#8216;$&#8217;. </dd>
 <p> There are also simple macros to pass pointers to data and to obtain the values of other Perl quantities, see the manual page for further details.</dl>
 <p> Finally note the call to <tt>&quot;pp_done()&quot;</tt> at the end of the file. This is necessary in all <font SIZE="-1">PP</font> files. </p>
 <p> <font SIZE="-1">OK.</font> So now we have a file with code that we dearly would like to use in Perl via <font SIZE="-1">PDL.</font> To do this we need to compile the function, and to do that we need a Makefile. </p>
 <pre> use PDL::Core::Dev;
  use ExtUtils::MakeMaker;
  PDL::Core::Dev-&gt;import();
- 
  $package = [&quot;eight.pd&quot;,Eight,PDL::Eight];
  %hash = pdlpp_stdargs($package);
- 
  WriteMakefile( %hash );
- 
  sub MY::postamble {pdlpp_postamble($package)};</pre>
 <p>The code above should go in a file called Makefile.PL, which should subsequently be called in the standard Perl way: <tt>&quot;perl Makefile.PL&quot;</tt> . This should give you a Makefile and running <tt>&quot;make&quot;</tt> should compile the module for you and <tt>&quot;make install&quot;</tt> will install it for you.</p>
 <h3>Q: 7.3 How can I interface package <font SIZE="-1">XXX</font> in <font SIZE="-1">PDL</font>?</h3>
@@ -473,7 +461,6 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  $min() = curmin;
  '
  );
- 
  pp_done();</pre>
 <p>The above might look like a confusing mixture of C and Perl, but behind the peculiar syntax lies a very powerful language. Let us take it line by line. </p>
 <p> The first line declares that we are starting the definition of a <font SIZE="-1">PDL:PP</font> function called <tt>&quot;quickstats&quot;</tt> . </p>
@@ -485,12 +472,9 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <pre> use PDL::Core::Dev;
  use ExtUtils::MakeMaker;
  PDL::Core::Dev-&gt;import();
- 
  $package = [&quot;quickstats.pd&quot;,Quickstats,PDL::Quickstats];
  %hash = pdlpp_stdargs($package);
- 
  WriteMakefile( %hash );
- 
  sub MY::postamble {pdlpp_postamble($package)};</pre>
 <p>An example Makefile.PL </p>
 <p> Our new statistic function should now compile using the tried and tested Perl way: <tt>&quot;perl Makefile.PL; make&quot;</tt> . </p>
@@ -504,3 +488,4 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <h2>Author And Copyright</h2>
 <p>This document emerged from a joint effort of several <font SIZE="-1">PDL</font> developers (Karl Glazebrook, Tuomas J. Lukka, Christian Soeller) to compile a list of the most frequently asked questions about <font SIZE="-1">PDL</font> with answers. Permission is granted for verbatim copying (and formatting) of this material as part of <font SIZE="-1">PDL.</font> </p>
 <p> Permission is explicitly not granted for distribution in book or any corresponding form. Ask on the <font SIZE="-1">PDL</font> mailing list perldl [at] jach.hawaii.edu if some of the issues covered in here are unclear.</p>
+</p>

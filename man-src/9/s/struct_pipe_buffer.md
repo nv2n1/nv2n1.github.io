@@ -22,27 +22,27 @@ struct_pipe_buffer - a linux kernel pipe buffer
 <h2>Members</h2>
 
 page
-<dl><dd>the page containing the data for the pipe buffer</dl>
+<dl><dd>the page containing the data for the pipe buffer</dd></dl>
  
 
  offset
-<dl><dd>offset of data inside the <i>page</i></dl>
+<dl><dd>offset of data inside the <i>page</i></dd></dl>
  
 
  len
-<dl><dd>length of data inside the <i>page</i></dl>
+<dl><dd>length of data inside the <i>page</i></dd></dl>
  
 
  ops
-<dl><dd>operations associated with this buffer. See <i>pipe_buf_operations</i>.</dl>
+<dl><dd>operations associated with this buffer. See <i>pipe_buf_operations</i>.</dd></dl>
  
 
  flags
-<dl><dd>pipe buffer flags. See above.</dl>
+<dl><dd>pipe buffer flags. See above.</dd></dl>
  
 
  private
-<dl><dd>private data owned by the ops.</dl>
+<dl><dd>private data owned by the ops.</dd></dl>
 
 <h2>Copyright</h2>
 

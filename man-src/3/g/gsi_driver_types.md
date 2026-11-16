@@ -27,48 +27,48 @@ description: "Types –"
 <p> Globus XIO GSI protection levels. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_NONE </i></p>
-<dd> No security.</p>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_INTEGRITY </i></p>
-<dd> Messages are signed.</p>
-<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_PRIVACY </i></p>
-<dd> Messages are signed and encrypted.</dl>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_NONE </i></dt>
+<dd> No security.</dd>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_INTEGRITY </i></dt>
+<dd> Messages are signed.</dd>
+<dt><i>GLOBUS_XIO_GSI_PROTECTION_LEVEL_PRIVACY </i></dt>
+<dd> Messages are signed and encrypted.</dd></dl>
 <h3>enum <code>globus_xio_gsi_delegation_mode_t</code></h3>
 <p> Globus XIO GSI delegation modes. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_NONE </i></p>
-<dd> No delegation.</p>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_LIMITED </i></p>
-<dd> Delegate a limited proxy.</p>
-<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_FULL </i></p>
-<dd> Delegate a full proxy.</dl>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_NONE </i></dt>
+<dd> No delegation.</dd>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_LIMITED </i></dt>
+<dd> Delegate a limited proxy.</dd>
+<dt><i>GLOBUS_XIO_GSI_DELEGATION_MODE_FULL </i></dt>
+<dd> Delegate a full proxy.</dd></dl>
 <h3>enum <code>globus_xio_gsi_proxy_mode_t</code></h3>
 <p> Globus XIO GSI proxy modes. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_FULL </i></p>
-<dd> Accept only full proxies.</p>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_LIMITED </i></p>
-<dd> Accept full proxies and limited proxies if they are the only limited proxy in the cert chain.</p>
-<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_MANY </i></p>
-<dd> Accept both full and limited proxies unconditionally.</dl>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_FULL </i></dt>
+<dd> Accept only full proxies.</dd>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_LIMITED </i></dt>
+<dd> Accept full proxies and limited proxies if they are the only limited proxy in the cert chain.</dd>
+<dt><i>GLOBUS_XIO_GSI_PROXY_MODE_MANY </i></dt>
+<dd> Accept both full and limited proxies unconditionally.</dd></dl>
 <h3>enum <code>globus_xio_gsi_authorization_mode_t</code></h3>
 <p> Globus XIO GSI authorization modes. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_NO_AUTHORIZATION </i></p>
-<dd> Do not perform any authorization. This will cause a error when used in conjunction with delegation on the init/client side.</p>
-<dt><i>GLOBUS_XIO_GSI_SELF_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the peer has the same identity as ourselves.</p>
-<dt><i>GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the peer identity matches the identity set in the target name.</p>
-<dt><i>GLOBUS_XIO_GSI_HOST_AUTHORIZATION </i></p>
-<dd> Authorize the peer if the identity of the peer matches the identity of the peer hostname.</dl>
+<dt><i>GLOBUS_XIO_GSI_NO_AUTHORIZATION </i></dt>
+<dd> Do not perform any authorization. This will cause a error when used in conjunction with delegation on the init/client side.</dd>
+<dt><i>GLOBUS_XIO_GSI_SELF_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the peer has the same identity as ourselves.</dd>
+<dt><i>GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the peer identity matches the identity set in the target name.</dd>
+<dt><i>GLOBUS_XIO_GSI_HOST_AUTHORIZATION </i></dt>
+<dd> Authorize the peer if the identity of the peer matches the identity of the peer hostname.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Enumeration Type Documentation</a></p>
+<dt><a href="#lbAH">Enumeration Type Documentation</a></dt>
 <dd>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

@@ -51,9 +51,9 @@ struct ibv_parent_domain_init_attr {
 <p> <code>ibv_alloc_parent_domain</code>(3), <code>ibv_dealloc_pd</code>(3), <code>ibv_alloc_pd</code>(3), <code>ibv_alloc_td</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</p>
+<dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

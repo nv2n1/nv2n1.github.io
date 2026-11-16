@@ -12,13 +12,13 @@ GCLRWK (Clear workstation) - clears a workstation.
 
  void gclear_ws(Gint ws_id, Gctrl_flag ctrl_flag);
 <h2>Description</h2><dl COMPACT><dt>WKID
-<dd>(Integer, Input) - A number identifying the workstation to be cleared. WKID must be the same as that used in some previous GOPWK call.
-<dt>COFL
-<dd>(Integer, Input) - Clear the workstation display surface. Options are:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Check to see if the display surface is empty. If so, do not issue a clear surface command.
-<dt>1
-<dd>Issue a clear surface command whether the surface has been written to or not.</dl></dl>
+</dt><dd>(Integer, Input) - A number identifying the workstation to be cleared. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>COFL
+</dt><dd>(Integer, Input) - Clear the workstation display surface. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Check to see if the display surface is empty. If so, do not issue a clear surface command.
+</dd><dt>1
+</dt><dd>Issue a clear surface command whether the surface has been written to or not.</dd></dl></dl>
 </dl><h2>Usage</h2>For workstations of type &quot;1&quot; (CGM), GCLRWK is interpreted as a picture termination in CGM generation. If COFL = 0 and no output primitives have been written in the current picture, then a call to GCLRWK is a &quot;do nothing&quot;; otherwise, it generates an END PICTURE element (as well as other picture initializing elements). If COFL = 1, then a call to GCLRWK generates an END PICTURE. 
 
  For workstations of types &quot;7&quot; or &quot;8&quot; (see the man page for GOPWK for a description of workstation types) clear workstations erases all primitives that appear on the screen. 

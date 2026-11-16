@@ -25,32 +25,32 @@ description: "pickup – Postfix local mail pickup"
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Content Inspection Controls</h2>
 <dl>
-<dt><code>content_filter (empty)</code></p>
-<dd>After the message is queued, send the entire message to the specified <i>transport:destination</i>.</p>
-<dt><code>receive_override_options (empty)</code></p>
-<dd>Enable or disable recipient validation, built-in content filtering, or address mapping.</dl>
+<dt><code>content_filter (empty)</code></dt>
+<dd>After the message is queued, send the entire message to the specified <i>transport:destination</i>.</dd>
+<dt><code>receive_override_options (empty)</code></dt>
+<dd>Enable or disable recipient validation, built-in content filtering, or address mapping.</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>line_length_limit (2048)</code></p>
-<dd>Upon input, long lines are chopped up into pieces of at most this length; upon delivery, long lines are reconstructed.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>line_length_limit (2048)</code></dt>
+<dd>Upon input, long lines are chopped up into pieces of at most this length; upon delivery, long lines are reconstructed.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), message canonicalization
 <a href="//www.systutorials.com/docs/linux/man/1-sendmail/">sendmail</a>(1), Sendmail-compatible interface

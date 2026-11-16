@@ -17,21 +17,21 @@ description: "CURLOPT_CUSTOMREQUEST – custom string for request"
 <p> Restore to the internal default by setting this to NULL. </p>
 <p> This option can be used to specify the request:</p>
 <dl COMPACT>
-<dt>HTTP</p>
-<dd>Instead of GET or HEAD when performing HTTP based requests. This is particularly useful, for example, for performing a HTTP DELETE request. </p>
+<dt>HTTP</dt>
+<dd>Instead of GET or HEAD when performing HTTP based requests. This is particularly useful, for example, for performing a HTTP DELETE request. </dd>
 <p> For example: </p>
 <p> When you tell libcurl to do a HEAD request, but then specify a GET though a custom request libcurl will still act as if it sent a HEAD. To switch to a proper HEAD use <i><a href="/docs/linux/man/3-curlopt_nobody/">CURLOPT_NOBODY</a>(3)</i>, to switch to a proper POST use <i><a href="/docs/linux/man/3-curlopt_post/">CURLOPT_POST</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_postfields/">CURLOPT_POSTFIELDS</a>(3)</i> and to switch to a proper GET use <i><a href="/docs/linux/man/3-curlopt_httpget/">CURLOPT_HTTPGET</a>(3)</i>. </p>
 <p> Many people have wrongly used this option to replace the entire request with their own, including multiple headers and POST contents. While that might work in many cases, it will cause libcurl to send invalid requests and it could possibly confuse the remote server badly. Use <i><a href="/docs/linux/man/3-curlopt_post/">CURLOPT_POST</a>(3)</i> and <i><a href="/docs/linux/man/3-curlopt_postfields/">CURLOPT_POSTFIELDS</a>(3)</i> to set POST data. Use <i><a href="/docs/linux/man/3-curlopt_httpheader/">CURLOPT_HTTPHEADER</a>(3)</i> to replace or extend the set of headers sent by libcurl. Use <i><a href="/docs/linux/man/3-curlopt_http_version/">CURLOPT_HTTP_VERSION</a>(3)</i> to change HTTP version. </p>
-<dt>FTP</p>
-<dd>Instead of LIST and NLST when performing FTP directory listings.</p>
-<dt>IMAP</p>
-<dd>Instead of LIST when issuing IMAP based requests.</p>
-<dt>POP3</p>
-<dd>Instead of LIST and RETR when issuing POP3 based requests. </p>
+<dt>FTP</dt>
+<dd>Instead of LIST and NLST when performing FTP directory listings.</dd>
+<dt>IMAP</dt>
+<dd>Instead of LIST when issuing IMAP based requests.</dd>
+<dt>POP3</dt>
+<dd>Instead of LIST and RETR when issuing POP3 based requests. </dd>
 <p> For example: </p>
 <p> When you tell libcurl to use a custom request it will behave like a LIST or RETR command was sent where it expects data to be returned by the server. As such <i><a href="/docs/linux/man/3-curlopt_nobody/">CURLOPT_NOBODY</a>(3)</i> should be used when specifying commands such as DELE and NOOP for example.</p>
-<dt>SMTP</p>
-<dd>Instead of a HELP or VRFY when issuing SMTP based requests. </p>
+<dt>SMTP</dt>
+<dd>Instead of a HELP or VRFY when issuing SMTP based requests. </dd>
 <p> For example: </p>
 <p> Normally a multiline response is returned which can be used, in conjunction with <i><a href="/docs/linux/man/3-curlopt_mail_rcpt/">CURLOPT_MAIL_RCPT</a>(3)</i>, to specify an EXPN request. If the <i><a href="/docs/linux/man/3-curlopt_nobody/">CURLOPT_NOBODY</a>(3)</i> option is specified then the request can be used to issue NOOP and RSET commands.</dl>
 <h2>Default</h2>
@@ -46,3 +46,4 @@ description: "CURLOPT_CUSTOMREQUEST – custom string for request"
 <p>Returns CURLE_OK if the option is supported, CURLE_UNKNOWN_OPTION if not, or CURLE_OUT_OF_MEMORY if there was insufficient heap space.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-curlopt_httpheader/">CURLOPT_HTTPHEADER</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_nobody/">CURLOPT_NOBODY</a></code>(3),</p>
+</p>

@@ -39,10 +39,7 @@ url: "/docs/linux/man/3-sgbcon/"
  <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
  SGBCON estimates the reciprocal of the condition number of a real
  general band matrix A, in either the 1-norm or the infinity-norm,
@@ -51,16 +48,13 @@ url: "/docs/linux/man/3-sgbcon/"
  condition number is computed as
     RCOND = 1 / ( norm(A) * norm(inv(A)) ).
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>NORM</i> 
-
+</dt><dd> <i>NORM</i> 
  <pre>
           NORM is CHARACTER*1
           Specifies whether the 1-norm condition number or the
@@ -68,34 +62,22 @@ url: "/docs/linux/man/3-sgbcon/"
           = '1' or 'O':  1-norm;
           = 'I':         Infinity-norm.
 </pre> 
-
- 
  <i>N</i> 
-
  <pre>
           N is INTEGER
           The order of the matrix A.  N &gt;= 0.
 </pre> 
-
- 
  <i>KL</i> 
-
  <pre>
           KL is INTEGER
           The number of subdiagonals within the band of A.  KL &gt;= 0.
 </pre> 
-
- 
  <i>KU</i> 
-
  <pre>
           KU is INTEGER
           The number of superdiagonals within the band of A.  KU &gt;= 0.
 </pre> 
-
- 
  <i>AB</i> 
-
  <pre>
           AB is REAL array, dimension (LDAB,N)
           Details of the LU factorization of the band matrix A, as
@@ -104,18 +86,12 @@ url: "/docs/linux/man/3-sgbcon/"
           the multipliers used during the factorization are stored in
           rows KL+KU+2 to 2*KL+KU+1.
 </pre> 
-
- 
  <i>LDAB</i> 
-
  <pre>
           LDAB is INTEGER
           The leading dimension of the array AB.  LDAB &gt;= 2*KL+KU+1.
 </pre> 
-
- 
  <i>IPIV</i> 
-
  <pre><code>
 IPIV is INTEGER array, dimension(N)
                            The pivot indices; for
@@ -124,68 +100,48 @@ IPIV is INTEGER array, dimension(N)
                  IPIV(i)
                      .
 </code></pre> 
-
- 
  <i>ANORM</i> 
-
  <pre>
           ANORM is REAL
           If NORM = '1' or 'O', the 1-norm of the original matrix A.
           If NORM = 'I', the infinity-norm of the original matrix A.
 </pre> 
-
- 
  <i>RCOND</i> 
-
  <pre>
           RCOND is REAL
           The reciprocal of the condition number of the matrix A,
           computed as RCOND = 1/(norm(A) * norm(inv(A))).
 </pre> 
-
- 
  <i>WORK</i> 
-
  <pre>
           WORK is REAL array, dimension (3*N)
 </pre> 
-
- 
  <i>IWORK</i> 
-
  <pre>
           IWORK is INTEGER array, dimension (N)
 </pre> 
-
- 
  <i>INFO</i> 
-
  <pre>
           INFO is INTEGER
           = 0:  successful exit
           &lt; 0: if INFO = -i, the i-th argument had an illegal value
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  

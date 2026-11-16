@@ -99,14 +99,10 @@ format &#8211; i signed char short int long long long intmax_t signed size_t ptr
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstdarg&gt;
-
 #include &lt;ctime&gt;
 void debug_log(const char *fmt, ...)
-
 {
     std::time_t t = std::time(nullptr);
     char time_buf[100];
@@ -123,7 +119,6 @@ void debug_log(const char *fmt, ...)
 &quot;, time_buf, buf.data());
 }
 int main()
-
 {
     debug_log(&quot;Logging, %d, %d, %d&quot;, 1, 2, 3);
 }

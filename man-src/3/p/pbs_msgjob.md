@@ -10,7 +10,6 @@ description: "pbs_msgjob – record a message for a running pbs batch job"
 <p>pbs_msgjob &#8211; record a message for a running pbs batch job</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_msgjob(int connect, char&nbsp;<wbr>*job_id, int file, char&nbsp;<wbr>*message,
 char&nbsp;<wbr>*extend)
@@ -22,11 +21,11 @@ char&nbsp;<wbr>*extend)
 <p> The parameter, </code><i> indicates the file or files to which the message string is to be written. The following values are defined in pbs_ifl.h:</p>
 <dl>
 <dd>
-<dl>
-<dt>#define MSG_ERR 2</p>
-<dd>directs the message to the standard error stream of the job.</p>
-<dt>#define MSG_OUT 1</p>
-<dd>directs the message to the standard output stream of the job.</dl>
+</dd><dl>
+<dt>#define MSG_ERR 2</dt>
+<dd>directs the message to the standard error stream of the job.</dd>
+<dt>#define MSG_OUT 1</dt>
+<dd>directs the message to the standard output stream of the job.</dd></dl>
 </dl>
 <p> The parameter, is the message string to be written. </p>
 <p> The parameter, is reserved for implementation defined extensions. </i></p>

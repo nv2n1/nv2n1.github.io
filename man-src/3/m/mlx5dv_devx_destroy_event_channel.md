@@ -19,7 +19,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_destroy_event_channel/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_devx_event_channel {
     int fd;
@@ -27,7 +27,7 @@ struct mlx5dv_devx_event_channel {
 struct mlx5dv_devx_event_channel *
 mlx5dv_devx_create_event_channel(struct ibv_context *context,
                                  enum mlx5dv_devx_create_event_channel_flags flags) void mlx5dv_devx_destroy_event_channel(struct mlx5dv_devx_event_channel *event_channel)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -41,13 +41,13 @@ mlx5dv_devx_create_event_channel(struct ibv_context *context,
 
 <dl>
 <dt>context
-<dd>
-<dt>
-<dd> <pre>
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
 RDMA device context to create the channel on.
 </pre>
-<dt>flags
-<dd> MLX5DV_DEVX_CREATE_EVENT_CHANNEL_FLAGS_OMIT_EV_DATA: omit the event data on this channel.</dl>
+</dd><dt>flags
+</dt><dd> MLX5DV_DEVX_CREATE_EVENT_CHANNEL_FLAGS_OMIT_EV_DATA: omit the event data on this channel.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

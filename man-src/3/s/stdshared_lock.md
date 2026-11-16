@@ -11,9 +11,7 @@ std::shared_lock - std::shared_lock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;shared_mutex&gt;
-
 template&lt; class Mutex &gt;           (since C++14)
-
 class shared_lock;</code></pre> 
 The class shared_lock is a general-purpose shared mutex ownership wrapper allowing deferred locking, timed locking and transfer of lock ownership. Locking a shared_lock locks the associated shared mutex in shared mode (to lock it in exclusive mode, std::unique_lock can be used) 
 The shared_lock class is movable, but not copyable -- it meets the requirements of MoveConstructible and MoveAssignable but not of CopyConstructible or CopyAssignable. 

@@ -15,7 +15,7 @@ d_invalidate - detach submounts, prune dcache, and drop
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>dentry to invalidate (aka detach, prune and drop)</dl>
+<dl><dd></dd><dd>dentry to invalidate (aka detach, prune and drop)</dd></dl>
 
 <h2>Description</h2>
 

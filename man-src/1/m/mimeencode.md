@@ -16,7 +16,6 @@ url: "/docs/linux/man/1-mimeencode/"
  <pre>
     mimeencode
         Give usage.
-     
     mimeencode [-d] encoding &lt;infile &gt;outfile
         Encode/decode stdin to stdout.
 </pre>

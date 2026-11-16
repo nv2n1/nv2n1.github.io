@@ -14,7 +14,7 @@ description: "ata_scsi_offline_dev – offline attached SCSI device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device to offline attached SCSI device for</dl>
+</dd><dd>ATA device to offline attached SCSI device for</dd></dl>
 <h2>Description</h2>
 <p>This function is called from <code>ata_eh_hotplug</code> and responsible for taking the SCSI device attached to <i>dev</i> offline. This function is called with host lock which protects dev-&gt;sdev against clearing. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
@@ -23,5 +23,5 @@ description: "ata_scsi_offline_dev – offline attached SCSI device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

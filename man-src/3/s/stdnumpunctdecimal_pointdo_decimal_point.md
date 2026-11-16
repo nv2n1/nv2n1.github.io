@@ -11,14 +11,10 @@ std::numpunct&lt;CharT&gt;::decimal_point,do_decimal_point - std::numpunct&lt;Ch
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  char_type decimal_point() const;
-
 protected:
 (2)
-
     virtual char_type do_decimal_point() const;</code></pre> 
 1) Public member function, calls the member function do_decimal_point of the most derived class. 
 2) Returns the character to be used as the decimal separator between integer and fractional parts. 
@@ -30,7 +26,6 @@ The value of type char_type to use as the decimal separator. The standard specia
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 struct slash : std::numpunct&lt;char&gt; {
     char do_decimal_point() const
@@ -39,7 +34,6 @@ struct slash : std::numpunct&lt;char&gt; {
     } // separate with slash
 };
 int main()
-
 {
     std::cout.precision(10);
     std::cout &lt;&lt; &quot;default locale: &quot; &lt;&lt; 1234.5678 &lt;&lt; '\n';

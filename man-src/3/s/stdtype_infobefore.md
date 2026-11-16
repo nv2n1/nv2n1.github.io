@@ -24,10 +24,8 @@ true if the type of this type_info precedes the type of rhs in the implementatio
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;typeinfo&gt;
 int main()
-
 {
     if (typeid(int).before(typeid(char)))
         std::cout &lt;&lt; &quot;int goes before char in this implementation.\n&quot;;

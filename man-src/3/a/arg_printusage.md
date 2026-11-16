@@ -35,19 +35,19 @@ struct getargs {
 </code></pre>
 <p> Fa long_name is the long name of the option, it can be <code>NULL</code> if you don&#8217;t want a long name. Fa short_name is the characted to use as short option, it can be zero. If the option has a value the Fa value field gets filled in with that value interpreted as specified by the Fa type field. Fa help is a longer help string for the option as a whole, if it&#8217;s <code>NULL</code> the help text for the option is omitted (but it&#8217;s still displayed in the synopsis). Fa arg_help is a description of the argument, if <code>NULL</code> a default value will be used, depending on the type of the option: </p>
 <dl>
-<dt><code>arg_integer</code></p>
-<dd> the argument is a signed integer, and Fa value should point to an Fa int .</p>
-<dt><code>Fa </code>arg_string</p>
-<dd> the argument is a string, and Fa value should point to a Fa char* .</p>
-<dt><code>Fa </code>arg_flag</p>
-<dd> the argument is a flag, and Fa value should point to a Fa int . It gets filled in with either zero or one, depending on how the option is given, the normal case being one. Note that if the option isn&#8217;t given, the value isn&#8217;t altered, so it should be initialised to some useful default.</p>
-<dt><code>Fa </code>arg_negative_flag</p>
-<dd> this is the same as Fa arg_flag but it reverses the meaning of the flag (a given short option clears the flag), and the synopsis of a long option is negated.</p>
-<dt><code>Fa </code>arg_strings</p>
-<dd> the argument can be given multiple times, and the values are collected in an array; Fa value should be a pointer to a Fa struct getarg_strings structure, which holds a length and a string pointer.</p>
-<dt><code>Fa </code>arg_double</p>
-<dd> argument is a double precision floating point value, and Fa value should point to a Fa double .</p>
-<dt><code>Fa </code>arg_collect</p>
+<dt><code>arg_integer</code></dt>
+<dd> the argument is a signed integer, and Fa value should point to an Fa int .</dd>
+<dt><code>Fa </code>arg_string</dt>
+<dd> the argument is a string, and Fa value should point to a Fa char* .</dd>
+<dt><code>Fa </code>arg_flag</dt>
+<dd> the argument is a flag, and Fa value should point to a Fa int . It gets filled in with either zero or one, depending on how the option is given, the normal case being one. Note that if the option isn&#8217;t given, the value isn&#8217;t altered, so it should be initialised to some useful default.</dd>
+<dt><code>Fa </code>arg_negative_flag</dt>
+<dd> this is the same as Fa arg_flag but it reverses the meaning of the flag (a given short option clears the flag), and the synopsis of a long option is negated.</dd>
+<dt><code>Fa </code>arg_strings</dt>
+<dd> the argument can be given multiple times, and the values are collected in an array; Fa value should be a pointer to a Fa struct getarg_strings structure, which holds a length and a string pointer.</dd>
+<dt><code>Fa </code>arg_double</dt>
+<dd> argument is a double precision floating point value, and Fa value should point to a Fa double .</dd>
+<dt><code>Fa </code>arg_collect</dt>
 <dd> allows more fine-grained control of the option parsing process. Fa value should be a pointer to a Fa getarg_collect_info structure:<br />
 typedef int (*getarg_collect_func)(int short_opt,<br />
                                    int argc,<br />
@@ -58,19 +58,19 @@ typedef int (*getarg_collect_func)(int short_opt,<br />
 typedef struct getarg_collect_info {<br />
     getarg_collect_func func;<br />
     void *data;<br />
-} getarg_collect_info;</p>
+} getarg_collect_info;</dd>
 <p> With the Fa func member set to a function to call, and Fa data to some application specific data. The parameters to the collect function are:</p>
 <dl>
-<dt><code>Fa </code>short_flag</p>
-<dd> non-zero if this call is via a short option flag, zero otherwise</p>
-<dt><code>Fa </code>argc , argv</p>
-<dd> the whole argument list</p>
-<dt><code>Fa </code>optind</p>
-<dd> pointer to the index in argv where the flag is</p>
-<dt><code>Fa </code>optarg</p>
-<dd> pointer to the index in argv[*optind] where the flag name starts</p>
-<dt><code>Fa </code>data</p>
-<dd> application specific data</dl>
+<dt><code>Fa </code>short_flag</dt>
+<dd> non-zero if this call is via a short option flag, zero otherwise</dd>
+<dt><code>Fa </code>argc , argv</dt>
+<dd> the whole argument list</dd>
+<dt><code>Fa </code>optind</dt>
+<dd> pointer to the index in argv where the flag is</dd>
+<dt><code>Fa </code>optarg</dt>
+<dd> pointer to the index in argv[*optind] where the flag name starts</dd>
+<dt><code>Fa </code>data</dt>
+<dd> application specific data</dd></dl>
 <p> You can modify Fa *optind , and Fa *optarg , but to do this correct you (more or less) have to know about the inner workings of getarg. </p>
 <p> You can skip parts of arguments by increasing Fa *optarg (you could implement the &#8211;<code>z </code><i>3</i> set of flags from <code>gzip</code> with this), or whole argument strings by increasing Fa *optind (let&#8217;s say you want a flag &#8211;<code>c </code><i>x y z</i> to specify a coordinate); if you also have to set Fa *optarg to a sane value. </p>
 <p> The collect function should return one of <code>ARG_ERR_NO_MATCH , ARG_ERR_BAD_ARG , ARG_ERR_NO_ARG, ENOMEM</code> on error, zero otherwise. </p>
@@ -139,3 +139,4 @@ $ ship++ --help
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-getopt/">getopt</a>(3) </p>
 <h2>Index</h2>
+</p>

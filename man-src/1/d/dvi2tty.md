@@ -19,7 +19,8 @@ description: "dvi2tty – preview a TeX DVI file on an ordinary ASCII terminal"
 <p> Options may be specified in the environment variable DVI2TTY. Any option on the command line, conflicting with one in the environment, will override the one from the environment. </p>
 <p> <code>Options:</code> </p>
 <dl>
-<dt><code>-o file</code></p>
-<dd> Write output to file &#8220;file&#8221;.</p>
-<dt><code>-p list</code></p>
+<dt><code>-o file</code></dt>
+<dd> Write output to file &#8220;file&#8221;.</dd>
+<dt><code>-p list</code></dt>
 <dd> Print the pages chosen by list. Numbers refer to TeX page numbers (known as 
+</dd></dl>

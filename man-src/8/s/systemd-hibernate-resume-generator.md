@@ -16,12 +16,12 @@ description: "systemd-hibernate-resume-generator – Unit generator for resume= 
 <p>systemd-hibernate-resume-generator understands the following kernel command line parameters: </p>
 <p> <i>resume=</i></p>
 <dl>
-<dd>Takes a path to the resume device. Both persistent block device paths like /dev/disk/by-foo/bar and <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5)-style specifiers like &quot;FOO=bar&quot; are supported.</dl>
+<dd>Takes a path to the resume device. Both persistent block device paths like /dev/disk/by-foo/bar and <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5)-style specifiers like &quot;FOO=bar&quot; are supported.</dd></dl>
 <p> <i>resumeflags=</i></p>
 <dl>
-<dd>Takes the resume device mount options to use. Defaults <i>rootflags=</i> if not specified.</dl>
+<dd>Takes the resume device mount options to use. Defaults <i>rootflags=</i> if not specified.</dd></dl>
 <p> <i>noresume</i></p>
 <dl>
-<dd>Do not try to resume from hibernation. If this parameter is present, <i>resume=</i> is ignored.</dl>
+<dd>Do not try to resume from hibernation. If this parameter is present, <i>resume=</i> is ignored.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code>systemd-hibernate-resume [at] .service</code>(8), <code><a href="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></code>(7) </p>

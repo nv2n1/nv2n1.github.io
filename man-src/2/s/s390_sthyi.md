@@ -19,15 +19,15 @@ int s390_sthyi(unsigned long function_code, void *resp_buffer,
 <p> The <code>s390_sthyi</code>() system call emulates the STHYI (Store Hypervisor Information) instruction. It provides hardware resource information for the machine and its virtualization levels. This includes CPU type and capacity, as well as the machine model and other metrics. </p>
 <p> The <i>function_code</i> argument indicates which function to perform. The following code(s) are supported:</p>
 <dl>
-<dt>0</p>
-<dd> Return CP (Central Processor) and IFL (Integrated Facility for Linux) capacity information.</dl>
+<dt>0</dt>
+<dd> Return CP (Central Processor) and IFL (Integrated Facility for Linux) capacity information.</dd></dl>
 <p> The <i>resp_buffer</i> argument specifies the address of a response buffer. When the <i>function_code</i> is 0, the buffer must be one page (4K) in size. If the system call returns 0, the response buffer will be filled with CPU capacity information. Otherwise, the response buffer&#8217;s content is unchanged. </p>
 <p> The <i>return_code</i> argument stores the return code of the STHYI instruction, using one of the following values:</p>
 <dl>
-<dt>0</p>
-<dd> Success.</p>
-<dt>4</p>
-<dd> Unsupported function code.</dl>
+<dt>0</dt>
+<dd> Success.</dd>
+<dt>4</dt>
+<dd> Unsupported function code.</dd></dl>
 <p> For further details about <i>return_code</i>, <i>function_code</i>, and <i>resp_buffer</i>, see the reference given in NOTES. </p>
 <p> The <i>flags</i> argument is provided to allow for future extensions and currently must be set to 0.</p>
 <h2>RETURN VALUE</h2>
@@ -35,14 +35,14 @@ int s390_sthyi(unsigned long function_code, void *resp_buffer,
 <p> On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> The value specified in <i>resp_buffer</i> or <i>return_code</i> is not a valid address.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value specified in <i>flags</i> is nonzero.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Allocating memory for handling the CPU capacity information failed.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The value specified in <i>function_code</i> is not valid.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> The value specified in <i>resp_buffer</i> or <i>return_code</i> is not a valid address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified in <i>flags</i> is nonzero.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Allocating memory for handling the CPU capacity information failed.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The value specified in <i>function_code</i> is not valid.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is available since Linux 4.15.</p>
 <h2>CONFORMING TO</h2>

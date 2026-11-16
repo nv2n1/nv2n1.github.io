@@ -10,119 +10,119 @@ description: "ocf_heartbeat_tomcat – Manages a Tomcat servlet environment inst
 <p>ocf_heartbeat_tomcat &#8211; Manages a Tomcat servlet environment instance</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>tomcat</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>tomcat</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Resource script for Tomcat. It manages a Tomcat instance as a cluster resource.</p>
+<dd>Resource script for Tomcat. It manages a Tomcat instance as a cluster resource.</dd>
 <h2>Supported Parameters</h2>
 <p><code>tomcat_name</code></p>
 <dl>
-<dd>The name of the resource, added as a Java parameter in JAVA_OPTS: </p>
+<dd>The name of the resource, added as a Java parameter in JAVA_OPTS: </dd>
 <p> -Dname=&lt;tomcat_name&gt; to Tomcat process on start. Used to ensure process is still running and must be unique. </p>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>script_log</code></p>
 <dl>
-<dd>Log file, used during start and stop operations. </p>
+<dd>Log file, used during start and stop operations. </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>tomcat_stop_timeout</code></p>
 <dl>
-<dd>Time-out for stop operation. DEPRECATED </p>
+<dd>Time-out for stop operation. DEPRECATED </dd>
 <p> (optional, integer, no default)</dl>
 <p> <code>tomcat_suspend_trialcount</code></p>
 <dl>
-<dd>Maximum number of times to retry stop operation before suspending and killing Tomcat. DEPRECATED. Does not retry. </p>
+<dd>Maximum number of times to retry stop operation before suspending and killing Tomcat. DEPRECATED. Does not retry. </dd>
 <p> (optional, integer, no default)</dl>
 <p> <code>tomcat_user</code></p>
 <dl>
-<dd>The user who starts Tomcat. </p>
+<dd>The user who starts Tomcat. </dd>
 <p> (optional, string, default &quot;root&quot;)</dl>
 <p> <code>statusurl</code></p>
 <dl>
-<dd>URL for state confirmation. </p>
+<dd>URL for state confirmation. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>max_stop_time</code></p>
 <dl>
-<dd>Number of seconds to wait during a stop before drastic measures (force kill) are used on the tomcat process. This number MUST be less than your cluster stop timeout for the resource. The default value is five seconds before the timeout value of stop operation. When it is over this value, it stops a process in kill commands. This parameter is only effective on Tomcat 6 or later. </p>
+<dd>Number of seconds to wait during a stop before drastic measures (force kill) are used on the tomcat process. This number MUST be less than your cluster stop timeout for the resource. The default value is five seconds before the timeout value of stop operation. When it is over this value, it stops a process in kill commands. This parameter is only effective on Tomcat 6 or later. </dd>
 <p> (optional, integer, no default)</dl>
 <p> <code>java_home</code></p>
 <dl>
-<dd>Home directory of Java. </p>
+<dd>Home directory of Java. </dd>
 <p> (required, string, no default)</dl>
 <p> <code>java_opts</code></p>
 <dl>
-<dd>Java JVM options used on start and stop. </p>
+<dd>Java JVM options used on start and stop. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>catalina_home</code></p>
 <dl>
-<dd>Home directory of Tomcat. </p>
+<dd>Home directory of Tomcat. </dd>
 <p> (required, string, no default)</dl>
 <p> <code>catalina_base</code></p>
 <dl>
-<dd>Instance directory of Tomcat </p>
+<dd>Instance directory of Tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>catalina_out</code></p>
 <dl>
-<dd>Log file name of Tomcat </p>
+<dd>Log file name of Tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>catalina_pid</code></p>
 <dl>
-<dd>A PID file name for Tomcat. </p>
+<dd>A PID file name for Tomcat. </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>tomcat_start_script</code></p>
 <dl>
-<dd>Absolute path to the custom tomcat start script to use. </p>
+<dd>Absolute path to the custom tomcat start script to use. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>tomcat_start_opts</code></p>
 <dl>
-<dd>Tomcat start options. </p>
+<dd>Tomcat start options. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>catalina_opts</code></p>
 <dl>
-<dd>Catalina options, for the start operation only. </p>
+<dd>Catalina options, for the start operation only. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>catalina_tmpdir</code></p>
 <dl>
-<dd>Temporary directory of Tomcat </p>
+<dd>Temporary directory of Tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>catalina_rotate_log</code></p>
 <dl>
-<dd>Rotate catalina.out flag. </p>
+<dd>Rotate catalina.out flag. </dd>
 <p> (optional, boolean, default NO)</dl>
 <p> <code>catalina_rotatetime</code></p>
 <dl>
-<dd>catalina.out rotation interval (seconds). </p>
+<dd>catalina.out rotation interval (seconds). </dd>
 <p> (optional, integer, no default)</dl>
 <p> <code>java_endorsed_dirs</code></p>
 <dl>
-<dd>Java_endorsed_dirs of tomcat </p>
+<dd>Java_endorsed_dirs of tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>logging_config</code></p>
 <dl>
-<dd>Logging_config of tomcat </p>
+<dd>Logging_config of tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <p> <code>logging_manager</code></p>
 <dl>
-<dd>Logging_manager of tomcat </p>
+<dd>Logging_manager of tomcat </dd>
 <p> (unique, optional, string, no default)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 60s.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 60s.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 120s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 120s.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 60.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 60.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 30s. Suggested interval: 10s.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 30s. Suggested interval: 10s.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a tomcat resource using the <code>crm</code>(8) shell: </p>
 <dl>
@@ -132,7 +132,7 @@ description: "ocf_heartbeat_tomcat – Manages a Tomcat servlet environment inst
  java_home=<i>string</i> \
  catalina_home=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;30s&quot; interval=&quot;10s&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a tomcat resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
@@ -141,7 +141,7 @@ description: "ocf_heartbeat_tomcat – Manages a Tomcat servlet environment inst
  java_home=<i>string</i> \
  catalina_home=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;30s&quot; interval=&quot;10s&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/tomcat_(resource_agent)">http://www.linux-ha.org/wiki/tomcat_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

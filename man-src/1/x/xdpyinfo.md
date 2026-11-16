@@ -18,8 +18,8 @@ description: "xdpyinfo – display information utility for X"
 <p> If <code>-version</code> is specified, xdpyinfo prints its version and exits, without contacting the X server.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> To get the default host, display number, and screen.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> To get the default host, display number, and screen.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xprop/">xprop</a></i>(1), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i><a href="/docs/linux/man/1-xwininfo/">xwininfo</a></i>(1), <i><a href="/docs/linux/man/1-xrandr/">xrandr</a></i>(1), <i><a href="/docs/linux/man/1-xdriinfo/">xdriinfo</a></i>(1), <i><a href="/docs/linux/man/1-xvinfo/">xvinfo</a></i>(1), <i><a href="/docs/linux/man/1-glxinfo/">glxinfo</a></i>(1)</p>
 <h2>AUTHOR</h2>

@@ -20,10 +20,10 @@ description: "cgeqrf.f –"
 <dd>
 <pre> CGEQRF computes a QR factorization of a complex M-by-N matrix A:
  A = Q * R.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -64,13 +64,13 @@ description: "cgeqrf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -81,7 +81,8 @@ description: "cgeqrf.f –"
  where tau is a complex scalar, and v is a complex vector with
  v(1:i-1) = 0 and v(i) = 1; v(i+1:m) is stored on exit in A(i+1:m,i),
  and tau in TAU(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 137 of file cgeqrf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -19,27 +19,27 @@ description: "ale – a synthetic capture engine and renderer"
 <p> <code>ale &#8211;hu</code></p>
 <dl>
 <dt>
-<dd> Print the help page on program usage.</dl>
+</dt><dd> Print the help page on program usage.</dd></dl>
 <p> <code>ale 001.ppm 002.ppm 003.ppm out.ppm</code></p>
 <dl>
 <dt>
-<dd> Render output file <code>out.ppm</code> from inputs <code>001.ppm</code>, <code>002.ppm</code>, and <code>003.ppm</code>.</dl>
+</dt><dd> Render output file <code>out.ppm</code> from inputs <code>001.ppm</code>, <code>002.ppm</code>, and <code>003.ppm</code>.</dd></dl>
 <p> <code>ale &#8211;scale 2 001.ppm 002.ppm 003.ppm out.png</code></p>
 <dl>
 <dt>
-<dd> Render output file <code>out.png</code> at 2x scale.</dl>
+</dt><dd> Render output file <code>out.png</code> at 2x scale.</dd></dl>
 <p> <code>ale &#8211;perturb-upper=0 &#8211;trans-load=a.t &#8211;projective frame*.png out.png</code></p>
 <dl>
 <dt>
-<dd> Render output file <code>out.png</code> from inputs <code>frame*.png</code>, using projective transformations as described in the file <code>a.t</code>.</dl>
+</dt><dd> Render output file <code>out.png</code> from inputs <code>frame*.png</code>, using projective transformations as described in the file <code>a.t</code>.</dd></dl>
 <p> <code>ale &#8211;3dv 0 out.png &#8211;projective frame*.png null:</code></p>
 <dl>
 <dt>
-<dd> Render output file <code>out.png</code> from inputs <code>frame*.png</code>, using a 3D scene model to determine transformations.</dl>
+</dt><dd> Render output file <code>out.png</code> from inputs <code>frame*.png</code>, using a 3D scene model to determine transformations.</dd></dl>
 <p> <code>ale &#8211;visp last:sinc*lanc:6 sf:0 out/ .jpg in/*.jpg null:</code></p>
 <dl>
 <dt>
-<dd> Render a video stream from files <code>in/*.jpg</code> to the directory <code>out/</code>, stabilizing to the first frame, with a lanczos-windowed sinc filter.</dl>
+</dt><dd> Render a video stream from files <code>in/*.jpg</code> to the directory <code>out/</code>, stabilizing to the first frame, with a lanczos-windowed sinc filter.</dd></dl>
 <h2>USAGE</h2>
 <p> <code>ale</code> is a wrapper script that calls the executable <code>ale-bin</code> after extracting exposure EXIF information from image files (when the <code>exiftool</code> utility is available) and converting from raw formats (when the <code>dcraw</code> utility is available). </p>
 <p> When <code>ale-bin</code> has been linked with ImageMagick, input and output files may be of any kind supported by ImageMagick. Otherwise, only PPM files can be read and written by <code>ale-bin</code>. </p>
@@ -52,23 +52,23 @@ description: "ale – a synthetic capture engine and renderer"
 <p> <code>ALE_BIN</code></p>
 <dl>
 <dt>
-<dd> ALE executable to use.</dl>
+</dt><dd> ALE executable to use.</dd></dl>
 <p> <code>DCRAW</code></p>
 <dl>
 <dt>
-<dd> dcraw raw extraction tool to use.</dl>
+</dt><dd> dcraw raw extraction tool to use.</dd></dl>
 <p> <code>EXIF_UTILITY</code></p>
 <dl>
 <dt>
-<dd> EXIF extraction utility to use.</dl>
+</dt><dd> EXIF extraction utility to use.</dd></dl>
 <p> <code>ALE_COUNT_THREADS</code></p>
 <dl>
 <dt>
-<dd> Displays statistics on thread counts when set to a non-zero value.</dl>
+</dt><dd> Displays statistics on thread counts when set to a non-zero value.</dd></dl>
 <p> <code>PAGER</code></p>
 <dl>
 <dt>
-<dd> Text pager to use (e.g., for displaying help pages).</dl>
+</dt><dd> Text pager to use (e.g., for displaying help pages).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> More detailed manuals for certain versions of ALE are distributed with source packages, and may also be available from: </p>
 <p> <a rel="nofollow" href="http://auricle.dyndns.org/ALE/manuals/">http://auricle.dyndns.org/ALE/manuals/</a> </p>

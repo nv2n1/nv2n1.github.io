@@ -17,50 +17,50 @@ description: "jfs_fsck – initiate replay of the JFS transaction log, and check
 <h2>Options</h2>
 <p>If no options are selected, the default is <code>-p.</code></p>
 <dl>
-<dt><code>-a</code></p>
-<dd>Autocheck mode &#8211; Replay the transaction log. Do not continue fsck processing unless the aggregate state is dirty or the log replay failed. Functionally equivalent to <code>-p.</code> Autocheck mode is typically the default mode used when <code>jfs_fsck</code> is called at boot time.</p>
-<dt><code>-f</code></p>
-<dd>Replay the transaction log and force checking even if the file system appears clean. Repair all problems automatically.</p>
-<dt><code>-j</code><i> journal_device</i></p>
-<dd>Specify the journal device.</p>
-<dt><code>-n</code></p>
-<dd>Open the file system read only. Do not replay the transaction log. Report errors, but do not repair them.</p>
-<dt><code>&#8211;omit_journal_replay</code></p>
-<dd>Omit the replay of the transaction log. This option should not be used unless as a last resort (i.e. the log has been severely corrupted and replaying it causes further problems).</p>
-<dt><code>-p</code></p>
-<dd>Automatically repair (&quot;preen&quot;) the file system. Replay the transaction log. Do not continue fsck processing unless the aggregate state is dirty or the log replay failed. Functionally equivalent to <code>-a.</code></p>
-<dt><code>&#8211;replay_journal_only</code></p>
-<dd>Only replay the transaction log. Do not continue with a full file system check if the replay fails or if the file system is still dirty even after a journal replay. In general, this option should only be used for debugging purposes as it could leave the file system in an unmountable state. This option cannot be used with <code>-f</code>, <code>-n</code>, or <code>&#8211;omit_journal_replay</code>.</p>
-<dt><code>-v</code></p>
-<dd>Verbose messaging &#8211; print details and debug statements to stdout.</p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit (regardless of any other chosen options).</dl>
+<dt><code>-a</code></dt>
+<dd>Autocheck mode &#8211; Replay the transaction log. Do not continue fsck processing unless the aggregate state is dirty or the log replay failed. Functionally equivalent to <code>-p.</code> Autocheck mode is typically the default mode used when <code>jfs_fsck</code> is called at boot time.</dd>
+<dt><code>-f</code></dt>
+<dd>Replay the transaction log and force checking even if the file system appears clean. Repair all problems automatically.</dd>
+<dt><code>-j</code><i> journal_device</i></dt>
+<dd>Specify the journal device.</dd>
+<dt><code>-n</code></dt>
+<dd>Open the file system read only. Do not replay the transaction log. Report errors, but do not repair them.</dd>
+<dt><code>&#8211;omit_journal_replay</code></dt>
+<dd>Omit the replay of the transaction log. This option should not be used unless as a last resort (i.e. the log has been severely corrupted and replaying it causes further problems).</dd>
+<dt><code>-p</code></dt>
+<dd>Automatically repair (&quot;preen&quot;) the file system. Replay the transaction log. Do not continue fsck processing unless the aggregate state is dirty or the log replay failed. Functionally equivalent to <code>-a.</code></dd>
+<dt><code>&#8211;replay_journal_only</code></dt>
+<dd>Only replay the transaction log. Do not continue with a full file system check if the replay fails or if the file system is still dirty even after a journal replay. In general, this option should only be used for debugging purposes as it could leave the file system in an unmountable state. This option cannot be used with <code>-f</code>, <code>-n</code>, or <code>&#8211;omit_journal_replay</code>.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose messaging &#8211; print details and debug statements to stdout.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit (regardless of any other chosen options).</dd></dl>
 <h2>Examples</h2>
 <p>Check the 3rd partition on the 2nd hard disk, print extended information to stdout, replay the transaction log, force complete jfs_fsck checking, and give permission to repair all errors:</p>
 <dl>
-<dd><code>jfs_fsck -v -f /dev/hdb3</code></p>
-<dd></dl>
+<dd><code>jfs_fsck -v -f /dev/hdb3</code></dd>
+<dd></dd></dl>
 <p> Check the 5th partition on the 1st hard disk, and report, but do not repair, any errors:</p>
 <dl>
-<dd><code>jfs_fsck -n /dev/hda5</code></p>
+<dd><code>jfs_fsck -n /dev/hda5</code></dd>
 <dd>
 <h2>Exit Code</h2>
 <p>The exit code returned by <code>jfs_fsck</code> represents one of the following conditions:</p>
-<dl>
-<dt><code>&nbsp;<wbr>0</code></p>
-<dd>No errors</p>
-<dt><code>&nbsp;<wbr>1</code></p>
-<dd>File system errors corrected and/or transaction log replayed successfully</p>
-<dt><code>&nbsp;<wbr>2</code></p>
-<dd>File system errors corrected, system should be rebooted if file system was mounted</p>
-<dt><code>&nbsp;<wbr>4</code></p>
-<dd>File system errors left uncorrected</p>
-<dt><code>&nbsp;<wbr>8</code></p>
-<dd>Operational error</p>
-<dt><code>&nbsp;<wbr>16</code></p>
-<dd>Usage or syntax error</p>
-<dt><code>&nbsp;<wbr>128</code></p>
-<dd>Shared library error </p>
+</dd><dl>
+<dt><code>&nbsp;<wbr>0</code></dt>
+<dd>No errors</dd>
+<dt><code>&nbsp;<wbr>1</code></dt>
+<dd>File system errors corrected and/or transaction log replayed successfully</dd>
+<dt><code>&nbsp;<wbr>2</code></dt>
+<dd>File system errors corrected, system should be rebooted if file system was mounted</dd>
+<dt><code>&nbsp;<wbr>4</code></dt>
+<dd>File system errors left uncorrected</dd>
+<dt><code>&nbsp;<wbr>8</code></dt>
+<dd>Operational error</dd>
+<dt><code>&nbsp;<wbr>16</code></dt>
+<dd>Usage or syntax error</dd>
+<dt><code>&nbsp;<wbr>128</code></dt>
+<dd>Shared library error </dd>
 </dl>
 <h2>Reporting Bugs</h2>
 <p>If you find a bug in <code>JFS</code> or <code>jfs_fsck</code>, please report it via the bug tracking system (&quot;Report Bugs&quot; section) of the JFS project web site: </p>
@@ -74,3 +74,4 @@ William Braswell, Jr.</pre>
 <p><code>jfs_fsck</code> is maintained by IBM. </p>
 <pre>See the JFS project web site for more details:
 <a rel="nofollow" href="http://jfs.sourceforge.net/">http://jfs.sourceforge.net/</a></pre>
+</dl>

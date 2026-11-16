@@ -22,17 +22,17 @@ url: "/docs/linux/man/1-entangle/"
  Valid command options:
 <dl>
 <dt>--debug-entangle
-<dd> Enable debugging of the Entangle application code
-<dt>--debug-gphoto
-<dd> Enable debugging of the gphoto library code
-<dt>--help
-<dd> Show command line option summary
-<dt>--help-all
-<dd> Show all command line options
-<dt>--help-gtk
-<dd> Show <font SIZE="-1">GTK+</font> command line options
-<dt>--help-entangle
-<dd> Show Entangle command line options</dl>
+</dt><dd> Enable debugging of the Entangle application code
+</dd><dt>--debug-gphoto
+</dt><dd> Enable debugging of the gphoto library code
+</dd><dt>--help
+</dt><dd> Show command line option summary
+</dd><dt>--help-all
+</dt><dd> Show all command line options
+</dd><dt>--help-gtk
+</dt><dd> Show <font SIZE="-1">GTK+</font> command line options
+</dd><dt>--help-entangle
+</dt><dd> Show Entangle command line options</dd></dl>
 
 <h2>AUTHOR</h2>
 

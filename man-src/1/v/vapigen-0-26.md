@@ -14,31 +14,31 @@ description: "vapigen – generate a Vala API"
 <p><code>vapigen</code> is a utility which generates Vala API (VAPI) files from GI files, which may be generated using the vala-gen-introspect(1) utility. </p>
 <h2>Examples</h2>
 <dl COMPACT>
-<dt>After compilation, the following command generates a GI for pango:</p>
-<dd><code>vala-gen-introspect pango packages/pango</code></p>
-<dt>This can then be converted to a Vala API as follows:</p>
-<dd><code>vapigen &#8211;pkg cairo &#8211;vapidir . &#8211;library pango packages/pango/pango.gi</code> </p>
+<dt>After compilation, the following command generates a GI for pango:</dt>
+<dd><code>vala-gen-introspect pango packages/pango</code></dd>
+<dt>This can then be converted to a Vala API as follows:</dt>
+<dd><code>vapigen &#8211;pkg cairo &#8211;vapidir . &#8211;library pango packages/pango/pango.gi</code> </dd>
 </dl>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-?, &#8211;help</code></p>
-<dd>Show help option</p>
-<dt><code>&#8211;vapidir=</code><i>DIRECTORY</i></p>
-<dd>Look for package bindings in <i>DIRECTORY</i>.</p>
-<dt><code>&#8211;girdir=</code><i>DIRECTORY</i></p>
-<dd>Look for GIR bindings in <i>DIRECTORY</i>.</p>
-<dt><code>&#8211;metadatadir=</code><i>DIRECTORY</i></p>
-<dd>Look for GIR .metadata files in <i>DIRECTORY</i>.</p>
-<dt><code>&#8211;pkg=</code><i>PACKAGE</i></p>
-<dd>Include binding for <i>PACKAGE</i></p>
-<dt><code>&#8211;library=</code><i>NAME</i></p>
-<dd>Specify library name as <i>NAME</i></p>
-<dt><code>-d, &#8211;directory=</code><i>DIRECTORY</i></p>
-<dd>Specify output directory as <i>DIRECTORY</i></p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version number and exit.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Do not print messages to the console </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd>Show help option</dd>
+<dt><code>&#8211;vapidir=</code><i>DIRECTORY</i></dt>
+<dd>Look for package bindings in <i>DIRECTORY</i>.</dd>
+<dt><code>&#8211;girdir=</code><i>DIRECTORY</i></dt>
+<dd>Look for GIR bindings in <i>DIRECTORY</i>.</dd>
+<dt><code>&#8211;metadatadir=</code><i>DIRECTORY</i></dt>
+<dd>Look for GIR .metadata files in <i>DIRECTORY</i>.</dd>
+<dt><code>&#8211;pkg=</code><i>PACKAGE</i></dt>
+<dd>Include binding for <i>PACKAGE</i></dd>
+<dt><code>&#8211;library=</code><i>NAME</i></dt>
+<dd>Specify library name as <i>NAME</i></dd>
+<dt><code>-d, &#8211;directory=</code><i>DIRECTORY</i></dt>
+<dd>Specify output directory as <i>DIRECTORY</i></dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version number and exit.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Do not print messages to the console </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>vala-gen-introspect</code>(1) </p>

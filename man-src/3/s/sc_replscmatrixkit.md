@@ -11,7 +11,6 @@ description: "sc::ReplSCMatrixKit –"
 <p> The <code>ReplSCMatrixKit</code> produces matrices that work in a many processor environment.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;repl.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixKit</code>.</p>
 <h3>Public Member Functions</h3>

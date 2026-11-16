@@ -15,19 +15,19 @@ snd_soc_register_codec - Register a codec with the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The parent device for this codec</dl>
+<dl><dd></dd><dd>The parent device for this codec</dd></dl>
  
 
  <i>codec_drv</i>
-<dl><dd>Codec driver</dl>
+<dl><dd>Codec driver</dd></dl>
  
 
  <i>dai_drv</i>
-<dl><dd>The associated DAI driver</dl>
+<dl><dd>The associated DAI driver</dd></dl>
  
 
  <i>num_dai</i>
-<dl><dd>Number of DAIs</dl>
+<dl><dd>Number of DAIs</dd></dl>
 
 <h2>Copyright</h2>
 

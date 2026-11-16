@@ -10,9 +10,7 @@ description: "register_font_file_type – Register a new font loading function. 
 <p>register_font_file_type &#8211; Register a new font loading function. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void register_font_file_type(const char *ext,
-
                              FONT *(*load)(const char *filename, RGB *pal, void *param));</code></pre>
 <h2>Description</h2>
 <p>Informs the load_font() functions of a new file type, providing a routine to read fonts in this format. The function you supply must follow the following prototype: </p>

@@ -11,51 +11,35 @@ std::rbegin,std::crbegin - std::rbegin,std::crbegin
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (since C++ 14)
-
         auto rbegin(C &amp;c) -&gt; decltype(c.rbegin());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto rbegin(C &amp;c) -&gt; decltype(c.rbegin());
-
 template &lt;class C&gt;
 (since C++ 14)
-
     auto rbegin(const C &amp;c) -&gt; decltype(c.rbegin());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto rbegin(const C &amp;c) -&gt; decltype(c.rbegin());
 (1)
-
     template &lt;class T, size_t N&gt;
     (since C++ 14)
-
         reverse_iterator&lt;T *&gt; rbegin(T (&amp;array)[N]);
 (1)(until C++ 17)
-
     template &lt;class T, size_t N&gt;
     (since C++ 17)
-
         constexpr reverse_iterator&lt;T *&gt; rbegin(T (&amp;array)[N]);
 (2)
-
     template &lt;class C&gt;
     (since C++ 14)
-
         auto crbegin(const C &amp;c) -&gt; decltype(std::rbegin(c));
 (3)(until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto crbegin(const C &amp;c) -&gt; decltype(std::rbegin(c));</code></pre> 
 Returns an iterator to the reverse-beginning of the given container c or array array. 
 1) Returns a possibly const-qualified iterator to the reverse-beginning of the container c. 
@@ -88,12 +72,9 @@ rbegin(std::initializer_list) specializes std::rbegin
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {3, 1, 4};
     auto vi = std::rbegin(v);

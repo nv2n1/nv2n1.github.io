@@ -14,38 +14,38 @@ description: "dvconnect – receive or transmit raw DV using the video1394 devic
 <h2>DESCRIPTION</h2>
 <p> <code>dvconnect</code> captures raw DV streams from or sends raw DV streams to the Linux IEEE 1394 video1394 device.</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show dvconnect version number.</p>
-<dt><code>-s</code>, <code>&#8211;send</code></p>
-<dd> send data instead of capturing.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> show status information while receiving / sending.</p>
-<dt><code>-c</code>, <code>&#8211;channel</code>=<i>number</i></p>
-<dd> channel to send / receive on (range: 0 &#8211; 63, default = 63).</p>
-<dt><code>-k</code>, <code>&#8211;kbuffers</code>=<i>number</i></p>
-<dd> number of kernel video1394 frame buffers to use. default = 8.</p>
-<dt><code>&#8211;start-frame</code>=<i>count</i></p>
-<dd> start at <i>count</i> frame (defaults to 0).</p>
-<dt><code>-e</code>, <code>&#8211;end-frame</code>=<i>count</i></p>
-<dd> end at <i>count</i> frame (defaults to unlimited).</p>
-<dt><code>&#8211;cip-n-ntsc</code>=<i>number</i></p>
-<dd> cip n ntsc timing counter (default: 2436).</p>
-<dt><code>&#8211;cip-d-ntsc</code>=<i>number</i></p>
-<dd> cip d ntsc timing counter (default: 38400).</p>
-<dt><code>&#8211;syt-offset</code>=<i>number</i></p>
-<dd> syt offset (default: 10000 range: 10000-26000).</p>
-<dt><code>-b</code>, <code>&#8211;buffers</code>=<i>number</i></p>
-<dd> max number of file io thread buffers to use. default = 250.</p>
-<dt><code>-u</code>, <code>&#8211;underrun-data</code>=<i>filename</i></p>
-<dd> file with the frame to send in case of underruns.</p>
-<dt><code>-d</code>, <code>&#8211;device</code>=<i>filename</i></p>
-<dd> Specify the video1394 device (default /dev/video1394/0).</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show dvconnect version number.</dd>
+<dt><code>-s</code>, <code>&#8211;send</code></dt>
+<dd> send data instead of capturing.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> show status information while receiving / sending.</dd>
+<dt><code>-c</code>, <code>&#8211;channel</code>=<i>number</i></dt>
+<dd> channel to send / receive on (range: 0 &#8211; 63, default = 63).</dd>
+<dt><code>-k</code>, <code>&#8211;kbuffers</code>=<i>number</i></dt>
+<dd> number of kernel video1394 frame buffers to use. default = 8.</dd>
+<dt><code>&#8211;start-frame</code>=<i>count</i></dt>
+<dd> start at <i>count</i> frame (defaults to 0).</dd>
+<dt><code>-e</code>, <code>&#8211;end-frame</code>=<i>count</i></dt>
+<dd> end at <i>count</i> frame (defaults to unlimited).</dd>
+<dt><code>&#8211;cip-n-ntsc</code>=<i>number</i></dt>
+<dd> cip n ntsc timing counter (default: 2436).</dd>
+<dt><code>&#8211;cip-d-ntsc</code>=<i>number</i></dt>
+<dd> cip d ntsc timing counter (default: 38400).</dd>
+<dt><code>&#8211;syt-offset</code>=<i>number</i></dt>
+<dd> syt offset (default: 10000 range: 10000-26000).</dd>
+<dt><code>-b</code>, <code>&#8211;buffers</code>=<i>number</i></dt>
+<dd> max number of file io thread buffers to use. default = 250.</dd>
+<dt><code>-u</code>, <code>&#8211;underrun-data</code>=<i>filename</i></dt>
+<dd> file with the frame to send in case of underruns.</dd>
+<dt><code>-d</code>, <code>&#8211;device</code>=<i>filename</i></dt>
+<dd> Specify the video1394 device (default /dev/video1394/0).</dd></dl>
 <p> Help Options</p>
 <dl>
-<dt>&#8211;<code>?</code>, <code>&#8211;help</code></p>
-<dd> Show help message.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message.</dl>
+<dt>&#8211;<code>?</code>, <code>&#8211;help</code></dt>
+<dd> Show help message.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-playdv/">playdv</a></code>(1),<code><a href="/docs/linux/man/1-dubdv/">dubdv</a></code>(1),<code><a href="/docs/linux/man/1-encodedv/">encodedv</a></code>(1).</p>
 <h2>AVAILABILITY</h2>

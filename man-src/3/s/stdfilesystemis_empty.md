@@ -11,10 +11,8 @@ std::filesystem::is_empty - std::filesystem::is_empty
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool is_empty(const std::filesystem::path &amp;p);
 (since C++ 17)
-
     bool is_empty(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre> 
 Checks whether the given path refers to an empty file or directory. 
 

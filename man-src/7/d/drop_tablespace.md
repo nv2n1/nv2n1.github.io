@@ -15,10 +15,10 @@ description: "DROP TABLESPACE – remove a tablespace"
 <p> A tablespace can only be dropped by its owner or a superuser. The tablespace must be empty of all database objects before it can be dropped. It is possible that objects in other databases might still reside in the tablespace even if no objects in the current database are using the tablespace. Also, if the tablespace is listed in the temp_tablespaces setting of any active session, the <code>DROP</code> might fail due to temporary files residing in the tablespace.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the tablespace does not exist. A notice is issued in this case.</p>
-<dt><i>tablespacename</i></p>
-<dd>The name of a tablespace.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the tablespace does not exist. A notice is issued in this case.</dd>
+<dt><i>tablespacename</i></dt>
+<dd>The name of a tablespace.</dd></dl>
 <h2>Notes</h2>
 <p><code>DROP TABLESPACE</code> cannot be executed inside a transaction block.</p>
 <h2>Examples</h2>

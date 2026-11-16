@@ -17,4 +17,4 @@ description: "ipsec__keycensor – internal routine to remove sensitive informat
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

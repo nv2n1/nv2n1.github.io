@@ -17,7 +17,7 @@ description: "asip-status.pl – Queries AFP servers for their capabilities"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>/usr/bin/asip-status.pl</code> 192.168.21.2
 AFP reply from 192.168.21.2:548
@@ -32,14 +32,13 @@ SupportsServerSignature,SupportsTCP/IP,SupportsSuperClient
 Server name: PowerMac 9600/200
 Signature:
 04 c1 6e 59 04 c1 6e 59 04 c1 6e 59 04 c1 6e 59  ..nY..nY..nY..nY
-                                                  
 Network address: 192.168.21.2:548 (tcp/ip address and port)
 Network address: 10.20 (ddp address)
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>/usr/bin/asip-status.pl</code> 192.168.21.1:10548
 AFP reply from 192.168.21.1:10548
@@ -56,12 +55,11 @@ SupportsUTF8Servername,SupportsSuperClient
 Server name: Fire V480
 Signature:
 83 29 cc 60 83 29 cc 60 83 29 cc 60 83 29 cc 60  .).`.).`.).`.).`
-                                                  
 Network address: 192.168.21.1:10548 (TCP/IP address and port)
 Network address: 65282.142 (ddp address)
 UTF8 Servername: Fire V480
 </pre>
-</dl>
+</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;. </p>
 <h2>Index</h2>

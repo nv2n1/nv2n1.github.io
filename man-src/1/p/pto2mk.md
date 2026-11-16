@@ -16,10 +16,10 @@ description: "pto2mk – Generate hugin stitching Makefiles"
 <p> <code>pto2mk</code> will generate a platform specific Makefile from an existing hugin .pto project.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> file</p>
-<dd> Output Makefile</p>
-<dt><code>-p</code> output_prefix</p>
-<dd> Prefix of output panorama</dl>
+<dt><code>-o</code> file</dt>
+<dd> Output Makefile</dd>
+<dt><code>-p</code> output_prefix</dt>
+<dd> Prefix of output panorama</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo and others. </p>
 <h2>Index</h2>

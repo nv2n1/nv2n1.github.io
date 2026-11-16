@@ -15,25 +15,10 @@ wl_socket -
 <h3>Public Attributes</h3>
 
 <pre><code>int fd
-
-
-
 int fd_lock
-
-
-
 struct sockaddr_un addr
-
-
-
 char lock_addr [UNIX_PATH_MAX+LOCK_SUFFIXLEN]
-
-
-
 struct wl_list link
-
-
-
 struct wl_event_source * source
 </code></pre>
 

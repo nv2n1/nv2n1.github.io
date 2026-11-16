@@ -14,7 +14,7 @@ description: "sil_dev_config – Apply device/host-specific errata fixups"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to be examined</dl>
+</dd><dd>Device to be examined</dd></dl>
 <h2>Description</h2>
 <p>After the IDENTIFY [PACKET] DEVICE step is complete, and a device is known to be present, this function is called. We apply two errata fixups which are specific to Silicon Image, a Seagate and a Maxtor fixup. </p>
 <p> For certain Seagate devices, we must limit the maximum sectors to under 8K. </p>
@@ -24,5 +24,5 @@ description: "sil_dev_config – Apply device/host-specific errata fixups"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

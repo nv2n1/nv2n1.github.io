@@ -39,72 +39,72 @@ description: "gprof – display call graph profile data"
 <p> Many of these options take an optional <i>symspec</i> to specify functions to be included or excluded. These options can be specified multiple times, with different symspecs, to include or exclude sets of symbols. </p>
 <p> Specifying any of these options overrides the default (<code>-p -q</code>), which prints a flat profile and call graph analysis for all functions.</p>
 <dl>
-<dt>&quot;-A[symspec<tt>]&quot;</p>
+<dt>&quot;-A[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--annotated-source[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-A</code> option causes <tt>&quot;gprof&quot;</tt> to print annotated source code. If <i>symspec</i> is specified, print output only for matching symbols.</p>
-<dt>&quot;-b&quot;</p>
+</dd><dt>&quot;--annotated-source[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-A</code> option causes <tt>&quot;gprof&quot;</tt> to print annotated source code. If <i>symspec</i> is specified, print output only for matching symbols.</dd>
+<dt>&quot;-b&quot;</dt>
 <dd>
-<dt>&quot;&#8211;brief&quot;</p>
-<dd> If the <code>-b</code> option is given, <tt>&quot;gprof&quot;</tt> doesn&#8217;t print the verbose blurbs that try to explain the meaning of all of the fields in the tables. This is useful if you intend to print out the output, or are tired of seeing the blurbs.</p>
-<dt>&quot;-C[symspec<tt>]&quot;</p>
+</dd><dt>&quot;&#8211;brief&quot;</dt>
+<dd> If the <code>-b</code> option is given, <tt>&quot;gprof&quot;</tt> doesn&#8217;t print the verbose blurbs that try to explain the meaning of all of the fields in the tables. This is useful if you intend to print out the output, or are tired of seeing the blurbs.</dd>
+<dt>&quot;-C[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--exec-counts[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-C</code> option causes <tt>&quot;gprof&quot;</tt> to print a tally of functions and the number of times each was called. If <i>symspec</i> is specified, print tally only for matching symbols. </p>
+</dd><dt>&quot;--exec-counts[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-C</code> option causes <tt>&quot;gprof&quot;</tt> to print a tally of functions and the number of times each was called. If <i>symspec</i> is specified, print tally only for matching symbols. </dd>
 <p> If the profile data file contains basic-block count records, specifying the <code>-l</code> option, along with <code>-C</code>, will cause basic-block execution counts to be tallied and displayed.</p>
-<dt>&quot;-i&quot;</p>
+<dt>&quot;-i&quot;</dt>
 <dd>
-<dt>&quot;&#8211;file-info&quot;</p>
-<dd> The <code>-i</code> option causes <tt>&quot;gprof&quot;</tt> to display summary information about the profile data file(s) and then exit. The number of histogram, call graph, and basic-block count records is displayed.</p>
-<dt>&quot;-I dirs<tt>&quot;</p>
+</dd><dt>&quot;&#8211;file-info&quot;</dt>
+<dd> The <code>-i</code> option causes <tt>&quot;gprof&quot;</tt> to display summary information about the profile data file(s) and then exit. The number of histogram, call graph, and basic-block count records is displayed.</dd>
+<dt>&quot;-I dirs<tt>&quot;</dt>
 <dd>
-<dt>&quot;--directory-path=</tt>dirs<tt>&quot;</p>
-<dd> The </tt><code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><font SIZE="-1"><i>GPROF_PATH</i></font><i></i> can also be used to convey this information. Used mostly for annotated source output.</p>
-<dt>&quot;-J[symspec<tt>]&quot;</p>
+</dd><dt>&quot;--directory-path=</tt>dirs<tt>&quot;</dt>
+<dd> The </tt><code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><font SIZE="-1"><i>GPROF_PATH</i></font><i></i> can also be used to convey this information. Used mostly for annotated source output.</dd>
+<dt>&quot;-J[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--no-annotated-source[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-J</code> option causes <tt>&quot;gprof&quot;</tt> not to print annotated source code. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints annotated source, but excludes matching symbols.</p>
-<dt>&quot;-L&quot;</p>
+</dd><dt>&quot;--no-annotated-source[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-J</code> option causes <tt>&quot;gprof&quot;</tt> not to print annotated source code. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints annotated source, but excludes matching symbols.</dd>
+<dt>&quot;-L&quot;</dt>
 <dd>
-<dt>&quot;&#8211;print-path&quot;</p>
-<dd> Normally, source filenames are printed with the path component suppressed. The <code>-L</code> option causes <tt>&quot;gprof&quot;</tt> to print the full pathname of source filenames, which is determined from symbolic debugging information in the image file and is relative to the directory in which the compiler was invoked.</p>
-<dt>&quot;-p[symspec<tt>]&quot;</p>
+</dd><dt>&quot;&#8211;print-path&quot;</dt>
+<dd> Normally, source filenames are printed with the path component suppressed. The <code>-L</code> option causes <tt>&quot;gprof&quot;</tt> to print the full pathname of source filenames, which is determined from symbolic debugging information in the image file and is relative to the directory in which the compiler was invoked.</dd>
+<dt>&quot;-p[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--flat-profile[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-p</code> option causes <tt>&quot;gprof&quot;</tt> to print a flat profile. If <i>symspec</i> is specified, print flat profile only for matching symbols.</p>
-<dt>&quot;-P[symspec<tt>]&quot;</p>
+</dd><dt>&quot;--flat-profile[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-p</code> option causes <tt>&quot;gprof&quot;</tt> to print a flat profile. If <i>symspec</i> is specified, print flat profile only for matching symbols.</dd>
+<dt>&quot;-P[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--no-flat-profile[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-P</code> option causes <tt>&quot;gprof&quot;</tt> to suppress printing a flat profile. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints a flat profile, but excludes matching symbols.</p>
-<dt>&quot;-q[symspec<tt>]&quot;</p>
+</dd><dt>&quot;--no-flat-profile[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-P</code> option causes <tt>&quot;gprof&quot;</tt> to suppress printing a flat profile. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints a flat profile, but excludes matching symbols.</dd>
+<dt>&quot;-q[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--graph[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-q</code> option causes <tt>&quot;gprof&quot;</tt> to print the call graph analysis. If <i>symspec</i> is specified, print call graph only for matching symbols and their children.</p>
-<dt>&quot;-Q[symspec<tt>]&quot;</p>
+</dd><dt>&quot;--graph[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-q</code> option causes <tt>&quot;gprof&quot;</tt> to print the call graph analysis. If <i>symspec</i> is specified, print call graph only for matching symbols and their children.</dd>
+<dt>&quot;-Q[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--no-graph[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-Q</code> option causes <tt>&quot;gprof&quot;</tt> to suppress printing the call graph. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints a call graph, but excludes matching symbols.</p>
-<dt>&quot;-t&quot;</p>
+</dd><dt>&quot;--no-graph[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-Q</code> option causes <tt>&quot;gprof&quot;</tt> to suppress printing the call graph. If <i>symspec</i> is specified, <tt>&quot;gprof&quot;</tt> prints a call graph, but excludes matching symbols.</dd>
+<dt>&quot;-t&quot;</dt>
 <dd>
-<dt>&quot;&#8211;table-length=num<tt>&quot;</p>
-<dd> The </tt><code>-t</code> option causes the <i>num</i> most active source lines in each source file to be listed when source annotation is enabled. The default is 10.</p>
-<dt>&quot;-y&quot;</p>
+</dd><dt>&quot;&#8211;table-length=num<tt>&quot;</dt>
+<dd> The </tt><code>-t</code> option causes the <i>num</i> most active source lines in each source file to be listed when source annotation is enabled. The default is 10.</dd>
+<dt>&quot;-y&quot;</dt>
 <dd>
-<dt>&quot;&#8211;separate-files&quot;</p>
-<dd> This option affects annotated source output only. Normally, <tt>&quot;gprof&quot;</tt> prints annotated source files to standard-output. If this option is specified, annotated source for a file named <i>path/filename</i> is generated in the file <i>filename-ann</i>. If the underlying file system would truncate <i>filename-ann</i> so that it overwrites the original <i>filename</i>, <tt>&quot;gprof&quot;</tt> generates annotated source in the file <i>filename.ann</i> instead (if the original file name has an extension, that extension is <i>replaced</i> with <i>.ann</i>).</p>
-<dt>&quot;-Z[symspec<tt>]&quot;</p>
+</dd><dt>&quot;&#8211;separate-files&quot;</dt>
+<dd> This option affects annotated source output only. Normally, <tt>&quot;gprof&quot;</tt> prints annotated source files to standard-output. If this option is specified, annotated source for a file named <i>path/filename</i> is generated in the file <i>filename-ann</i>. If the underlying file system would truncate <i>filename-ann</i> so that it overwrites the original <i>filename</i>, <tt>&quot;gprof&quot;</tt> generates annotated source in the file <i>filename.ann</i> instead (if the original file name has an extension, that extension is <i>replaced</i> with <i>.ann</i>).</dd>
+<dt>&quot;-Z[symspec<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--no-exec-counts[=</tt>symspec<tt>]&quot;</p>
-<dd> The </tt><code>-Z</code> option causes <tt>&quot;gprof&quot;</tt> not to print a tally of functions and the number of times each was called. If <i>symspec</i> is specified, print tally, but exclude matching symbols.</p>
-<dt>&quot;-r&quot;</p>
+</dd><dt>&quot;--no-exec-counts[=</tt>symspec<tt>]&quot;</dt>
+<dd> The </tt><code>-Z</code> option causes <tt>&quot;gprof&quot;</tt> not to print a tally of functions and the number of times each was called. If <i>symspec</i> is specified, print tally, but exclude matching symbols.</dd>
+<dt>&quot;-r&quot;</dt>
 <dd>
-<dt>&quot;&#8211;function-ordering&quot;</p>
-<dd> The <code>&#8211;function-ordering</code> option causes <tt>&quot;gprof&quot;</tt> to print a suggested function ordering for the program based on profiling data. This option suggests an ordering which may improve paging, tlb and cache behavior for the program on systems which support arbitrary ordering of functions in an executable. </p>
+</dd><dt>&quot;&#8211;function-ordering&quot;</dt>
+<dd> The <code>&#8211;function-ordering</code> option causes <tt>&quot;gprof&quot;</tt> to print a suggested function ordering for the program based on profiling data. This option suggests an ordering which may improve paging, tlb and cache behavior for the program on systems which support arbitrary ordering of functions in an executable. </dd>
 <p> The exact details of how to force the linker to place functions in a particular order is system dependent and out of the scope of this manual.</p>
-<dt>&quot;-R map_file<tt>&quot;</p>
+<dt>&quot;-R map_file<tt>&quot;</dt>
 <dd>
-<dt>&quot;--file-ordering </tt>map_file<tt>&quot;</p>
-<dd> The </tt><code>&#8211;file-ordering</code> option causes <tt>&quot;gprof&quot;</tt> to print a suggested .o link line ordering for the program based on profiling data. This option suggests an ordering which may improve paging, tlb and cache behavior for the program on systems which do not support arbitrary ordering of functions in an executable. </p>
+</dd><dt>&quot;--file-ordering </tt>map_file<tt>&quot;</dt>
+<dd> The </tt><code>&#8211;file-ordering</code> option causes <tt>&quot;gprof&quot;</tt> to print a suggested .o link line ordering for the program based on profiling data. This option suggests an ordering which may improve paging, tlb and cache behavior for the program on systems which do not support arbitrary ordering of functions in an executable. </dd>
 <p> Use of the <code>-a</code> argument is highly recommended with this option. </p>
 <p> The <i>map_file</i> argument is a pathname to a file which provides function name to object file mappings. The format of the file is similar to the output of the program <tt>&quot;nm&quot;</tt>. </p>
 <pre>
@@ -118,105 +118,105 @@ description: "gprof – display call graph profile data"
         ...
 </pre>
 <p> To create a <i>map_file</i> with <font SIZE="-1">GNU</font> <tt>&quot;nm&quot;</tt>, type a command like <tt>&quot;nm --extern-only --defined-only -v --print-file-name program-name&quot;</tt>.</p>
-<dt>&quot;-T&quot;</p>
+<dt>&quot;-T&quot;</dt>
 <dd>
-<dt>&quot;&#8211;traditional&quot;</p>
-<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; <font SIZE="-1">BSD</font> style.</p>
-<dt>&quot;-w width<tt>&quot;</p>
+</dd><dt>&quot;&#8211;traditional&quot;</dt>
+<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; <font SIZE="-1">BSD</font> style.</dd>
+<dt>&quot;-w width<tt>&quot;</dt>
 <dd>
-<dt>&quot;--width=</tt>width<tt>&quot;</p>
-<dd> Sets width of output lines to </tt><i>width</i>. Currently only used when printing the function index at the bottom of the call graph.</p>
-<dt>&quot;-x&quot;</p>
+</dd><dt>&quot;--width=</tt>width<tt>&quot;</dt>
+<dd> Sets width of output lines to </tt><i>width</i>. Currently only used when printing the function index at the bottom of the call graph.</dd>
+<dt>&quot;-x&quot;</dt>
 <dd>
-<dt>&quot;&#8211;all-lines&quot;</p>
-<dd> This option affects annotated source output only. By default, only the lines at the beginning of a basic-block are annotated. If this option is specified, every line in a basic-block is annotated by repeating the annotation for the first line. This behavior is similar to <tt>&quot;tcov&quot;</tt>&#8216;s <code>-a</code>.</p>
-<dt>&quot;&#8211;demangle[=style<tt>]&quot;</p>
+</dd><dt>&quot;&#8211;all-lines&quot;</dt>
+<dd> This option affects annotated source output only. By default, only the lines at the beginning of a basic-block are annotated. If this option is specified, every line in a basic-block is annotated by repeating the annotation for the first line. This behavior is similar to <tt>&quot;tcov&quot;</tt>&#8216;s <code>-a</code>.</dd>
+<dt>&quot;&#8211;demangle[=style<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--no-demangle&quot;</p>
-<dd> These options control whether C<font SIZE="-2">++</font> symbol names should be demangled when printing output. The default is to demangle symbols. The &quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dl>
+</dd><dt>&quot;--no-demangle&quot;</dt>
+<dd> These options control whether C<font SIZE="-2">++</font> symbol names should be demangled when printing output. The default is to demangle symbols. The &quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd></dl>
 <h3>Analysis Options</h3>
 <dl>
-<dt>&quot;-a&quot;</p>
+<dt>&quot;-a&quot;</dt>
 <dd>
-<dt>&quot;&#8211;no-static&quot;</p>
-<dd> The <code>-a</code> option causes <tt>&quot;gprof&quot;</tt> to suppress the printing of statically declared (private) functions. (These are functions whose names are not listed as global, and which are not visible outside the file/function/block where they were defined.) Time spent in these functions, calls to/from them, etc., will all be attributed to the function that was loaded directly before it in the executable file. This option affects both the flat profile and the call graph.</p>
-<dt>&quot;-c&quot;</p>
+</dd><dt>&quot;&#8211;no-static&quot;</dt>
+<dd> The <code>-a</code> option causes <tt>&quot;gprof&quot;</tt> to suppress the printing of statically declared (private) functions. (These are functions whose names are not listed as global, and which are not visible outside the file/function/block where they were defined.) Time spent in these functions, calls to/from them, etc., will all be attributed to the function that was loaded directly before it in the executable file. This option affects both the flat profile and the call graph.</dd>
+<dt>&quot;-c&quot;</dt>
 <dd>
-<dt>&quot;&#8211;static-call-graph&quot;</p>
-<dd> The <code>-c</code> option causes the call graph of the program to be augmented by a heuristic which examines the text space of the object file and identifies function calls in the binary machine code. Since normal call graph records are only generated when functions are entered, this option identifies children that could have been called, but never were. Calls to functions that were not compiled with profiling enabled are also identified, but only if symbol table entries are present for them. Calls to dynamic library routines are typically <i>not</i> found by this option. Parents or children identified via this heuristic are indicated in the call graph with call counts of <code>0</code>.</p>
-<dt>&quot;-D&quot;</p>
+</dd><dt>&quot;&#8211;static-call-graph&quot;</dt>
+<dd> The <code>-c</code> option causes the call graph of the program to be augmented by a heuristic which examines the text space of the object file and identifies function calls in the binary machine code. Since normal call graph records are only generated when functions are entered, this option identifies children that could have been called, but never were. Calls to functions that were not compiled with profiling enabled are also identified, but only if symbol table entries are present for them. Calls to dynamic library routines are typically <i>not</i> found by this option. Parents or children identified via this heuristic are indicated in the call graph with call counts of <code>0</code>.</dd>
+<dt>&quot;-D&quot;</dt>
 <dd>
-<dt>&quot;&#8211;ignore-non-functions&quot;</p>
-<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and <font SIZE="-1">HPUX</font> for example).</p>
-<dt>&quot;-k from<tt>/</tt>to<tt>&quot;</p>
-<dd> The </tt><code>-k</code> option allows you to delete from the call graph any arcs from symbols matching symspec <i>from</i> to those matching symspec <i>to</i>.</p>
-<dt>&quot;-l&quot;</p>
+</dd><dt>&quot;&#8211;ignore-non-functions&quot;</dt>
+<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and <font SIZE="-1">HPUX</font> for example).</dd>
+<dt>&quot;-k from<tt>/</tt>to<tt>&quot;</dt>
+<dd> The </tt><code>-k</code> option allows you to delete from the call graph any arcs from symbols matching symspec <i>from</i> to those matching symspec <i>to</i>.</dd>
+<dt>&quot;-l&quot;</dt>
 <dd>
-<dt>&quot;&#8211;line&quot;</p>
-<dd> The <code>-l</code> option enables line-by-line profiling, which causes histogram hits to be charged to individual source code lines, instead of functions. This feature only works with programs compiled by older versions of the <tt>&quot;gcc&quot;</tt> compiler. Newer versions of <tt>&quot;gcc&quot;</tt> are designed to work with the <tt>&quot;gcov&quot;</tt> tool instead. </p>
+</dd><dt>&quot;&#8211;line&quot;</dt>
+<dd> The <code>-l</code> option enables line-by-line profiling, which causes histogram hits to be charged to individual source code lines, instead of functions. This feature only works with programs compiled by older versions of the <tt>&quot;gcc&quot;</tt> compiler. Newer versions of <tt>&quot;gcc&quot;</tt> are designed to work with the <tt>&quot;gcov&quot;</tt> tool instead. </dd>
 <p> If the program was compiled with basic-block counting enabled, this option will also identify how many times each line of code was executed. While line-by-line profiling can help isolate where in a large function a program is spending its time, it also significantly increases the running time of <tt>&quot;gprof&quot;</tt>, and magnifies statistical inaccuracies.</p>
-<dt>&quot;-m num<tt>&quot;</p>
+<dt>&quot;-m num<tt>&quot;</dt>
 <dd>
-<dt>&quot;--min-count=</tt>num<tt>&quot;</p>
-<dd> This option affects execution count output only. Symbols that are executed less than </tt><i>num</i> times are suppressed.</p>
-<dt>&quot;-nsymspec<tt>&quot;</p>
+</dd><dt>&quot;--min-count=</tt>num<tt>&quot;</dt>
+<dd> This option affects execution count output only. Symbols that are executed less than </tt><i>num</i> times are suppressed.</dd>
+<dt>&quot;-nsymspec<tt>&quot;</dt>
 <dd>
-<dt>&quot;--time=</tt>symspec<tt>&quot;</p>
-<dd> The </tt><code>-n</code> option causes <tt>&quot;gprof&quot;</tt>, in its call graph analysis, to only propagate times for symbols matching <i>symspec</i>.</p>
-<dt>&quot;-Nsymspec<tt>&quot;</p>
+</dd><dt>&quot;--time=</tt>symspec<tt>&quot;</dt>
+<dd> The </tt><code>-n</code> option causes <tt>&quot;gprof&quot;</tt>, in its call graph analysis, to only propagate times for symbols matching <i>symspec</i>.</dd>
+<dt>&quot;-Nsymspec<tt>&quot;</dt>
 <dd>
-<dt>&quot;--no-time=</tt>symspec<tt>&quot;</p>
-<dd> The </tt><code>-n</code> option causes <tt>&quot;gprof&quot;</tt>, in its call graph analysis, not to propagate times for symbols matching <i>symspec</i>.</p>
-<dt>&quot;-Sfilename<tt>&quot;</p>
+</dd><dt>&quot;--no-time=</tt>symspec<tt>&quot;</dt>
+<dd> The </tt><code>-n</code> option causes <tt>&quot;gprof&quot;</tt>, in its call graph analysis, not to propagate times for symbols matching <i>symspec</i>.</dd>
+<dt>&quot;-Sfilename<tt>&quot;</dt>
 <dd>
-<dt>&quot;--external-symbol-table=</tt>filename<tt>&quot;</p>
-<dd> The </tt><code>-S</code> option causes <tt>&quot;gprof&quot;</tt> to read an external symbol table file, such as <i>/proc/kallsyms</i>, rather than read the symbol table from the given object file (the default is <tt>&quot;a.out&quot;</tt>). This is useful for profiling kernel modules.</p>
-<dt>&quot;-z&quot;</p>
+</dd><dt>&quot;--external-symbol-table=</tt>filename<tt>&quot;</dt>
+<dd> The </tt><code>-S</code> option causes <tt>&quot;gprof&quot;</tt> to read an external symbol table file, such as <i>/proc/kallsyms</i>, rather than read the symbol table from the given object file (the default is <tt>&quot;a.out&quot;</tt>). This is useful for profiling kernel modules.</dd>
+<dt>&quot;-z&quot;</dt>
 <dd>
-<dt>&quot;&#8211;display-unused-functions&quot;</p>
-<dd> If you give the <code>-z</code> option, <tt>&quot;gprof&quot;</tt> will mention all functions in the flat profile, even those that were never called, and that had no time spent in them. This is useful in conjunction with the <code>-c</code> option for discovering which routines were never called.</dl>
+</dd><dt>&quot;&#8211;display-unused-functions&quot;</dt>
+<dd> If you give the <code>-z</code> option, <tt>&quot;gprof&quot;</tt> will mention all functions in the flat profile, even those that were never called, and that had no time spent in them. This is useful in conjunction with the <code>-c</code> option for discovering which routines were never called.</dd></dl>
 <h3>Miscellaneous Options</h3>
 <dl>
-<dt>&quot;-d[num<tt>]&quot;</p>
+<dt>&quot;-d[num<tt>]&quot;</dt>
 <dd>
-<dt>&quot;--debug[=</tt>num<tt>]&quot;</p>
-<dd> The </tt><code>-d</code> <i>num</i> option specifies debugging options. If <i>num</i> is not specified, enable all debugging.</p>
-<dt>&quot;-h&quot;</p>
+</dd><dt>&quot;--debug[=</tt>num<tt>]&quot;</dt>
+<dd> The </tt><code>-d</code> <i>num</i> option specifies debugging options. If <i>num</i> is not specified, enable all debugging.</dd>
+<dt>&quot;-h&quot;</dt>
 <dd>
-<dt>&quot;&#8211;help&quot;</p>
-<dd> The <code>-h</code> option prints command line usage.</p>
-<dt>&quot;-Oname<tt>&quot;</p>
+</dd><dt>&quot;&#8211;help&quot;</dt>
+<dd> The <code>-h</code> option prints command line usage.</dd>
+<dt>&quot;-Oname<tt>&quot;</dt>
 <dd>
-<dt>&quot;--file-format=</tt>name<tt>&quot;</p>
-<dd> Selects the format of the profile data files. Recognized formats are </tt><code>auto</code> (the default), <code>bsd</code>, <code>4.4bsd</code>, <code>magic</code>, and <code>prof</code> (not yet supported).</p>
-<dt>&quot;-s&quot;</p>
+</dd><dt>&quot;--file-format=</tt>name<tt>&quot;</dt>
+<dd> Selects the format of the profile data files. Recognized formats are </tt><code>auto</code> (the default), <code>bsd</code>, <code>4.4bsd</code>, <code>magic</code>, and <code>prof</code> (not yet supported).</dd>
+<dt>&quot;-s&quot;</dt>
 <dd>
-<dt>&quot;&#8211;sum&quot;</p>
-<dd> The <code>-s</code> option causes <tt>&quot;gprof&quot;</tt> to summarize the information in the profile data files it read in, and write out a profile data file called <i>gmon.sum</i>, which contains all the information from the profile data files that <tt>&quot;gprof&quot;</tt> read in. The file <i>gmon.sum</i> may be one of the specified input files; the effect of this is to merge the data in the other input files into <i>gmon.sum</i>. </p>
+</dd><dt>&quot;&#8211;sum&quot;</dt>
+<dd> The <code>-s</code> option causes <tt>&quot;gprof&quot;</tt> to summarize the information in the profile data files it read in, and write out a profile data file called <i>gmon.sum</i>, which contains all the information from the profile data files that <tt>&quot;gprof&quot;</tt> read in. The file <i>gmon.sum</i> may be one of the specified input files; the effect of this is to merge the data in the other input files into <i>gmon.sum</i>. </dd>
 <p> Eventually you can run <tt>&quot;gprof&quot;</tt> again without <code>-s</code> to analyze the cumulative data in the file <i>gmon.sum</i>.</p>
-<dt>&quot;-v&quot;</p>
+<dt>&quot;-v&quot;</dt>
 <dd>
-<dt>&quot;&#8211;version&quot;</p>
-<dd> The <code>-v</code> flag causes <tt>&quot;gprof&quot;</tt> to print the current version number, and then exit.</dl>
+</dd><dt>&quot;&#8211;version&quot;</dt>
+<dd> The <code>-v</code> flag causes <tt>&quot;gprof&quot;</tt> to print the current version number, and then exit.</dd></dl>
 <h3>Deprecated Options</h3>
 <p> These options have been replaced with newer versions that use symspecs.</p>
 <dl>
-<dt>&quot;-e function_name<tt>&quot;</p>
-<dd> The </tt><code>-e</code> <i>function</i> option tells <tt>&quot;gprof&quot;</tt> to not print information about the function <i>function_name</i> (and its children&#8230;) in the call graph. The function will still be listed as a child of any functions that call it, but its index number will be shown as <code>[not printed]</code>. More than one <code>-e</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-e</code> option.</p>
-<dt>&quot;-E function_name<tt>&quot;</p>
-<dd> The &quot;-E </tt>function<tt>&quot;</tt> option works like the <tt>&quot;-e&quot;</tt> option, but time spent in the function (and children who were not called from anywhere else), will not be used to compute the percentages-of-time for the call graph. More than one <code>-E</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-E</code> option.</p>
-<dt>&quot;-f function_name<tt>&quot;</p>
-<dd> The </tt><code>-f</code> <i>function</i> option causes <tt>&quot;gprof&quot;</tt> to limit the call graph to the function <i>function_name</i> and its children (and their children&#8230;). More than one <code>-f</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-f</code> option.</p>
-<dt>&quot;-F function_name<tt>&quot;</p>
-<dd> The </tt><code>-F</code> <i>function</i> option works like the <tt>&quot;-f&quot;</tt> option, but only time spent in the function and its children (and their children&#8230;) will be used to determine total-time and percentages-of-time for the call graph. More than one <code>-F</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-F</code> option. The <code>-F</code> option overrides the <code>-E</code> option.</dl>
+<dt>&quot;-e function_name<tt>&quot;</dt>
+<dd> The </tt><code>-e</code> <i>function</i> option tells <tt>&quot;gprof&quot;</tt> to not print information about the function <i>function_name</i> (and its children&#8230;) in the call graph. The function will still be listed as a child of any functions that call it, but its index number will be shown as <code>[not printed]</code>. More than one <code>-e</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-e</code> option.</dd>
+<dt>&quot;-E function_name<tt>&quot;</dt>
+<dd> The &quot;-E </tt>function<tt>&quot;</tt> option works like the <tt>&quot;-e&quot;</tt> option, but time spent in the function (and children who were not called from anywhere else), will not be used to compute the percentages-of-time for the call graph. More than one <code>-E</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-E</code> option.</dd>
+<dt>&quot;-f function_name<tt>&quot;</dt>
+<dd> The </tt><code>-f</code> <i>function</i> option causes <tt>&quot;gprof&quot;</tt> to limit the call graph to the function <i>function_name</i> and its children (and their children&#8230;). More than one <code>-f</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-f</code> option.</dd>
+<dt>&quot;-F function_name<tt>&quot;</dt>
+<dd> The </tt><code>-F</code> <i>function</i> option works like the <tt>&quot;-f&quot;</tt> option, but only time spent in the function and its children (and their children&#8230;) will be used to determine total-time and percentages-of-time for the call graph. More than one <code>-F</code> option may be given; only one <i>function_name</i> may be indicated with each <code>-F</code> option. The <code>-F</code> option overrides the <code>-E</code> option.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>&quot;a.out<tt>&quot;</p>
-<dd> the namelist and text space.</p>
-<dt>&quot;</tt>gmon.out<tt>&quot;</p>
-<dd> dynamic call graph and profile.</p>
-<dt>&quot;</tt>gmon.sum<tt>&quot;</p>
-<dd> summarized dynamic call graph and profile.</dl>
+<dt>&quot;a.out<tt>&quot;</dt>
+<dd> the namelist and text space.</dd>
+<dt>&quot;</tt>gmon.out<tt>&quot;</dt>
+<dd> dynamic call graph and profile.</dd>
+<dt>&quot;</tt>gmon.sum<tt>&quot;</dt>
+<dd> summarized dynamic call graph and profile.</dd></dl>
 <p> </tt></p>
 <h2>BUGS</h2>
 <p> The granularity of the sampling is shown, but remains statistical at best. We assume that the time for each execution of a function can be expressed by the total time for the function divided by the number of times the function is called. Thus the time propagated along the call graph arcs to the function&#8217;s parents is directly proportional to the number of times that arc is traversed. </p>

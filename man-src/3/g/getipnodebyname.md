@@ -34,50 +34,50 @@ void freehostent(struct hostent *ip);
 <h3>getipnodebyname() arguments</h3>
 <p> The <code>getipnodebyname</code>() function looks up network addresses for the host specified by the <i>name</i> argument. The <i>af</i> argument specifies one of the following values:</p>
 <dl>
-<dt><code>AF_INET</code></p>
-<dd> The <i>name</i> argument points to a dotted-quad IPv4 address or a name of an IPv4 network host.</p>
-<dt><code>AF_INET6</code></p>
-<dd> The <i>name</i> argument points to a hexadecimal IPv6 address or a name of an IPv6 network host.</dl>
+<dt><code>AF_INET</code></dt>
+<dd> The <i>name</i> argument points to a dotted-quad IPv4 address or a name of an IPv4 network host.</dd>
+<dt><code>AF_INET6</code></dt>
+<dd> The <i>name</i> argument points to a hexadecimal IPv6 address or a name of an IPv6 network host.</dd></dl>
 <p> The <i>flags</i> argument specifies additional options. More than one option can be specified by bitwise OR-ing them together. <i>flags</i> should be set to 0 if no options are desired.</p>
 <dl>
-<dt><code>AI_V4MAPPED</code></p>
-<dd> This flag is used with <code>AF_INET6</code> to request a query for IPv4 addresses instead of IPv6 addresses; the IPv4 addresses will be mapped to IPv6 addresses.</p>
-<dt><code>AI_ALL</code></p>
-<dd> This flag is used with <code>AI_V4MAPPED</code> to request a query for both IPv4 and IPv6 addresses. Any IPv4 address found will be mapped to an IPv6 address.</p>
-<dt><code>AI_ADDRCONFIG</code></p>
-<dd> This flag is used with <code>AF_INET6</code> to further request that queries for IPv6 addresses should not be made unless the system has at least one IPv6 address assigned to a network interface, and that queries for IPv4 addresses should not be made unless the system has at least one IPv4 address assigned to a network interface. This flag may be used by itself or with the <code>AI_V4MAPPED</code> flag.</p>
-<dt><code>AI_DEFAULT</code></p>
-<dd> This flag is equivalent to <code>(AI_ADDRCONFIG | AI_V4MAPPED)</code>.</dl>
+<dt><code>AI_V4MAPPED</code></dt>
+<dd> This flag is used with <code>AF_INET6</code> to request a query for IPv4 addresses instead of IPv6 addresses; the IPv4 addresses will be mapped to IPv6 addresses.</dd>
+<dt><code>AI_ALL</code></dt>
+<dd> This flag is used with <code>AI_V4MAPPED</code> to request a query for both IPv4 and IPv6 addresses. Any IPv4 address found will be mapped to an IPv6 address.</dd>
+<dt><code>AI_ADDRCONFIG</code></dt>
+<dd> This flag is used with <code>AF_INET6</code> to further request that queries for IPv6 addresses should not be made unless the system has at least one IPv6 address assigned to a network interface, and that queries for IPv4 addresses should not be made unless the system has at least one IPv4 address assigned to a network interface. This flag may be used by itself or with the <code>AI_V4MAPPED</code> flag.</dd>
+<dt><code>AI_DEFAULT</code></dt>
+<dd> This flag is equivalent to <code>(AI_ADDRCONFIG | AI_V4MAPPED)</code>.</dd></dl>
 <h3>getipnodebyaddr() arguments</h3>
 <p> The <code>getipnodebyaddr</code>() function looks up the name of the host whose network address is specified by the <i>addr</i> argument. The <i>af</i> argument specifies one of the following values:</p>
 <dl>
-<dt><code>AF_INET</code></p>
-<dd> The <i>addr</i> argument points to a <i>struct in_addr</i> and <i>len</i> must be set to <i>sizeof(struct in_addr)</i>.</p>
-<dt><code>AF_INET6</code></p>
-<dd> The <i>addr</i> argument points to a <i>struct in6_addr</i> and <i>len</i> must be set to <i>sizeof(struct in6_addr)</i>.</dl>
+<dt><code>AF_INET</code></dt>
+<dd> The <i>addr</i> argument points to a <i>struct in_addr</i> and <i>len</i> must be set to <i>sizeof(struct in_addr)</i>.</dd>
+<dt><code>AF_INET6</code></dt>
+<dd> The <i>addr</i> argument points to a <i>struct in6_addr</i> and <i>len</i> must be set to <i>sizeof(struct in6_addr)</i>.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> NULL is returned if an error occurred, and <i>error_num</i> will contain an error code from the following list:</p>
 <dl>
-<dt><code>HOST_NOT_FOUND</code></p>
-<dd> The hostname or network address was not found.</p>
-<dt><code>NO_ADDRESS</code></p>
-<dd> The domain name server recognized the network address or name, but no answer was returned. This can happen if the network host has only IPv4 addresses and a request has been made for IPv6 information only, or vice versa.</p>
-<dt><code>NO_RECOVERY</code></p>
-<dd> The domain name server returned a permanent failure response.</p>
-<dt><code>TRY_AGAIN</code></p>
-<dd> The domain name server returned a temporary failure response. You might have better luck next time.</dl>
+<dt><code>HOST_NOT_FOUND</code></dt>
+<dd> The hostname or network address was not found.</dd>
+<dt><code>NO_ADDRESS</code></dt>
+<dd> The domain name server recognized the network address or name, but no answer was returned. This can happen if the network host has only IPv4 addresses and a request has been made for IPv6 information only, or vice versa.</dd>
+<dt><code>NO_RECOVERY</code></dt>
+<dd> The domain name server returned a permanent failure response.</dd>
+<dt><code>TRY_AGAIN</code></dt>
+<dd> The domain name server returned a temporary failure response. You might have better luck next time.</dd></dl>
 <p> A successful query returns a pointer to a <i>hostent</i> structure that contains the following fields:</p>
 <dl>
-<dt><i>h_name</i></p>
-<dd> This is the official name of this network host.</p>
-<dt><i>h_aliases</i></p>
-<dd> This is an array of pointers to unofficial aliases for the same host. The array is terminated by a null pointer.</p>
-<dt><i>h_addrtype</i></p>
-<dd> This is a copy of the <i>af</i> argument to <code>getipnodebyname</code>() or <code>getipnodebyaddr</code>(). <i>h_addrtype</i> will always be <code>AF_INET</code> if the <i>af</i> argument was <code>AF_INET</code>. <i>h_addrtype</i> will always be <code>AF_INET6</code> if the <i>af</i> argument was <code>AF_INET6</code>.</p>
-<dt><i>h_length</i></p>
-<dd> This field will be set to <i>sizeof(struct in_addr)</i> if <i>h_addrtype</i> is <code>AF_INET</code>, and to <i>sizeof(struct in6_addr)</i> if <i>h_addrtype</i> is <code>AF_INET6</code>.</p>
-<dt><i>h_addr_list</i></p>
-<dd> This is an array of one or more pointers to network address structures for the network host. The array is terminated by a null pointer.</dl>
+<dt><i>h_name</i></dt>
+<dd> This is the official name of this network host.</dd>
+<dt><i>h_aliases</i></dt>
+<dd> This is an array of pointers to unofficial aliases for the same host. The array is terminated by a null pointer.</dd>
+<dt><i>h_addrtype</i></dt>
+<dd> This is a copy of the <i>af</i> argument to <code>getipnodebyname</code>() or <code>getipnodebyaddr</code>(). <i>h_addrtype</i> will always be <code>AF_INET</code> if the <i>af</i> argument was <code>AF_INET</code>. <i>h_addrtype</i> will always be <code>AF_INET6</code> if the <i>af</i> argument was <code>AF_INET6</code>.</dd>
+<dt><i>h_length</i></dt>
+<dd> This field will be set to <i>sizeof(struct in_addr)</i> if <i>h_addrtype</i> is <code>AF_INET</code>, and to <i>sizeof(struct in6_addr)</i> if <i>h_addrtype</i> is <code>AF_INET6</code>.</dd>
+<dt><i>h_addr_list</i></dt>
+<dd> This is an array of one or more pointers to network address structures for the network host. The array is terminated by a null pointer.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> RFC 2553.</p>
 <h2>NOTES</h2>

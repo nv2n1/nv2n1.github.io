@@ -14,26 +14,26 @@ description: "gfstat – manual page for gfstat (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Display file status from a remote Gluster volume.</p>
 <dl>
-<dt><code>-L</code>, <code>&#8211;dereference</code></p>
-<dd> follow links</p>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-L</code>, <code>&#8211;dereference</code></dt>
+<dd> follow links</dd>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfstat <a href="glfs://host/volume/path/to/file">glfs://host/volume/path/to/file</a></p>
+</dt><dd> gfstat <a href="glfs://host/volume/path/to/file">glfs://host/volume/path/to/file</a></dd>
 <dt>
-<dd> Stat the file /path/to/file on the Gluster volume of groot on host localhost to standard output.</p>
+</dt><dd> Stat the file /path/to/file on the Gluster volume of groot on host localhost to standard output.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; stat /file</p>
+</dt><dd> gfcli (localhost/groot)&gt; stat /file</dd>
 <dt>
-<dd> In the context of a shell with a connection established, stat a file on the root of the Gluster volume groot on localhost.</dl>
+</dt><dd> In the context of a shell with a connection established, stat a file on the root of the Gluster volume groot on localhost.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

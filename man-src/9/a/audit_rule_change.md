@@ -15,23 +15,23 @@ audit_rule_change - apply all rules to the specified message type
 <h2>Arguments</h2>
 
 <i>type</i>
-<dl><dd><dd>audit message type</dl>
+<dl><dd></dd><dd>audit message type</dd></dl>
  
 
  <i>portid</i>
-<dl><dd>target port id for netlink audit messages</dl>
+<dl><dd>target port id for netlink audit messages</dd></dl>
  
 
  <i>seq</i>
-<dl><dd>netlink audit message sequence (serial) number</dl>
+<dl><dd>netlink audit message sequence (serial) number</dd></dl>
  
 
  <i>data</i>
-<dl><dd>payload data</dl>
+<dl><dd>payload data</dd></dl>
  
 
  <i>datasz</i>
-<dl><dd>size of payload data</dl>
+<dl><dd>size of payload data</dd></dl>
 
 <h2>Copyright</h2>
 

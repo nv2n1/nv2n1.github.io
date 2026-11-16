@@ -21,14 +21,14 @@ ndctl list --namespaces --bus=all --region=all
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # ndctl list --buses --namespaces
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 {
     "provider" : "nfit_test.1",
@@ -57,50 +57,50 @@ ndctl list --namespaces --bus=all --region=all
                          ]
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -r, &#8211;region=</p>
 <dl>
 <dt>
-<dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dl>
+</dt><dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dd></dl>
 <p> -b, &#8211;bus=</p>
 <dl>
 <dt>
-<dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dl>
+</dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <p> -d, &#8211;dimm=</p>
 <dl>
 <dt>
-<dd> An <i>nmemX</i> device name, or dimm id number. Filter listing by devices that reference the given dimm. For example to see all namespaces comprised of storage capacity on nmem0:</dl>
+</dt><dd> An <i>nmemX</i> device name, or dimm id number. Filter listing by devices that reference the given dimm. For example to see all namespaces comprised of storage capacity on nmem0:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # ndctl list --dimm=nmem0 --namespaces
 </pre>
-</dl>
+</dd></dl>
 <p> -n, &#8211;namespace=</p>
 <dl>
 <dt>
-<dd> An <i>namespaceX.Y</i> device name, or namespace region plus id tuple <i>X.Y</i>. Limit the namespace list to the single identified device if present.</dl>
+</dt><dd> An <i>namespaceX.Y</i> device name, or namespace region plus id tuple <i>X.Y</i>. Limit the namespace list to the single identified device if present.</dd></dl>
 <p> -t, &#8211;type=</p>
 <dl>
 <dt>
-<dd> Filter listing by region type (<i>pmem</i> or <i>blk</i>)</dl>
+</dt><dd> Filter listing by region type (<i>pmem</i> or <i>blk</i>)</dd></dl>
 <p> -B, &#8211;buses</p>
 <dl>
 <dt>
-<dd> Include bus info in the listing</dl>
+</dt><dd> Include bus info in the listing</dd></dl>
 <p> -D, &#8211;dimms</p>
 <dl>
 <dt>
-<dd> Include dimm info in the listing</dl>
+</dt><dd> Include dimm info in the listing</dd></dl>
 <p> -H, &#8211;health</p>
 <dl>
 <dt>
-<dd> Include dimm health info in the listing. For example:</dl>
+</dt><dd> Include dimm health info in the listing. For example:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 {
     "dev" : "nmem0",
@@ -118,19 +118,19 @@ ndctl list --namespaces --bus=all --region=all
     }
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> -R, &#8211;regions</p>
 <dl>
 <dt>
-<dd> Include region info in the listing</dl>
+</dt><dd> Include region info in the listing</dd></dl>
 <p> -N, &#8211;namespaces</p>
 <dl>
 <dt>
-<dd> Include namespace info in the listing. Namespace info is listed by default if no other options are specified to the command.</dl>
+</dt><dd> Include namespace info in the listing. Namespace info is listed by default if no other options are specified to the command.</dd></dl>
 <p> -i, &#8211;idle</p>
 <dl>
 <dt>
-<dd> Include idle (not enabled) devices in the listing</dl>
+</dt><dd> Include idle (not enabled) devices in the listing</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a></code>(1) </p>
 <h2>Index</h2>

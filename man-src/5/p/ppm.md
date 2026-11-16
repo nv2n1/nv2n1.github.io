@@ -11,42 +11,42 @@ description: "ppm – portable pixmap file format"
 <h2>Description</h2>
 <p>The portable pixmap format is a lowest common denominator color image file format. It should be noted that this format is egregiously inefficient. It is highly redundant, while containing a lot of information that the human eye can&#8217;t even discern. Furthermore, the format allows very little information about the image besides basic color, which means you may have to couple a file in this format with other independent information to get any decent use out of it. However, it is very easy to write and analyze programs to process this format, and that is the point. It should also be noted that files often conform to this format in every respect except the precise semantics of the sample values. These files are useful because of the way PPM is used as an intermediary format. They are informally called PPM files, but to be absolutely precise, you should indicate the variation from true PPM. For example, &quot;PPM using the red, green, and blue colors that the scanner in question uses.&quot; The format definition is as follows. A PPM file consists of a sequence of one or more PPM images. There are no data, delimiters, or padding before, after, or between images. Each PPM image consists of the following:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>A &quot;magic number&quot; for identifying the file type. A ppm image&#8217;s magic number is the two characters &quot;P6&quot;.</p>
-<dt>&#8211;</p>
-<dd>Whitespace (blanks, TABs, CRs, LFs).</p>
-<dt>&#8211;</p>
-<dd>A width, formatted as ASCII characters in decimal.</p>
-<dt>&#8211;</p>
-<dd>Whitespace.</p>
-<dt>&#8211;</p>
-<dd>A height, again in ASCII decimal.</p>
-<dt>&#8211;</p>
-<dd>Whitespace.</p>
-<dt>&#8211;</p>
-<dd>The maximum color value (Maxval), again in ASCII decimal. Must be less than 65536.</p>
-<dt>&#8211;</p>
-<dd>Newline or other single whitespace character.</p>
-<dt>&#8211;</p>
-<dd>A raster of Width * Height pixels, proceeding through the image in normal English reading order. Each pixel is a triplet of red, green, and blue samples, in that order. Each sample is represented in pure binary by either 1 or 2 bytes. If the Maxval is less than 256, it is 1 byte. Otherwise, it is 2 bytes. The most significant byte is first.</p>
-<dt>&#8211;</p>
-<dd>In the raster, the sample values are &quot;nonlinear.&quot; They are proportional to the intensity of the CIE Rec. 709 red, green, and blue in the pixel, adjusted by the CIE Rec. 709 gamma transfer function. (That transfer function specifies a gamma number of 2.2 and has a linear section for small intensities). A value of Maxval for all three samples represents CIE D65 white and the most intense color in the color universe of which the image is part (the color universe is all the colors in all images to which this image might be compared).</p>
-<dt>&#8211;</p>
-<dd>Note that a common variation on the PPM format is to have the sample values be &quot;linear,&quot; i.e. as specified above except without the gamma adjustment. <code>pnmgamma</code> takes such a PPM variant as input and produces a true PPM as output.</p>
-<dt>&#8211;</p>
-<dd>Characters from a &quot;#&quot; to the next end-of-line, before the maxval line, are comments and are ignored.</dl>
+<dt>&#8211;</dt>
+<dd>A &quot;magic number&quot; for identifying the file type. A ppm image&#8217;s magic number is the two characters &quot;P6&quot;.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace (blanks, TABs, CRs, LFs).</dd>
+<dt>&#8211;</dt>
+<dd>A width, formatted as ASCII characters in decimal.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace.</dd>
+<dt>&#8211;</dt>
+<dd>A height, again in ASCII decimal.</dd>
+<dt>&#8211;</dt>
+<dd>Whitespace.</dd>
+<dt>&#8211;</dt>
+<dd>The maximum color value (Maxval), again in ASCII decimal. Must be less than 65536.</dd>
+<dt>&#8211;</dt>
+<dd>Newline or other single whitespace character.</dd>
+<dt>&#8211;</dt>
+<dd>A raster of Width * Height pixels, proceeding through the image in normal English reading order. Each pixel is a triplet of red, green, and blue samples, in that order. Each sample is represented in pure binary by either 1 or 2 bytes. If the Maxval is less than 256, it is 1 byte. Otherwise, it is 2 bytes. The most significant byte is first.</dd>
+<dt>&#8211;</dt>
+<dd>In the raster, the sample values are &quot;nonlinear.&quot; They are proportional to the intensity of the CIE Rec. 709 red, green, and blue in the pixel, adjusted by the CIE Rec. 709 gamma transfer function. (That transfer function specifies a gamma number of 2.2 and has a linear section for small intensities). A value of Maxval for all three samples represents CIE D65 white and the most intense color in the color universe of which the image is part (the color universe is all the colors in all images to which this image might be compared).</dd>
+<dt>&#8211;</dt>
+<dd>Note that a common variation on the PPM format is to have the sample values be &quot;linear,&quot; i.e. as specified above except without the gamma adjustment. <code>pnmgamma</code> takes such a PPM variant as input and produces a true PPM as output.</dd>
+<dt>&#8211;</dt>
+<dd>Characters from a &quot;#&quot; to the next end-of-line, before the maxval line, are comments and are ignored.</dd></dl>
 <p> Note that you can use <code>pnmdepth</code> to convert between a the format with 1 byte per sample and the one with 2 bytes per sample. There is actually another version of the PPM format that is fairly rare: &quot;plain&quot; PPM format. The format above, which generally considered the normal one, is known as the &quot;raw&quot; PPM format. See <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) for some commentary on how plain and raw formats relate to one another. The difference in the plain format is:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>There is exactly one image in a file.</p>
-<dt>&#8211;</p>
-<dd>The magic number is P3 instead of P6.</p>
-<dt>&#8211;</p>
-<dd>Each sample in the raster is represented as an ASCII decimal number (of arbitrary size).</p>
-<dt>&#8211;</p>
-<dd>Each sample in the raster has white space before and after it. There must be at least one character of white space between any two samples, but there is no maximum. There is no particular separation of one pixel from another &#8212; just the required separation between the blue sample of one pixel from the red sample of the next pixel.</p>
-<dt>&#8211;</p>
-<dd>No line should be longer than 70 characters.</dl>
+<dt>&#8211;</dt>
+<dd>There is exactly one image in a file.</dd>
+<dt>&#8211;</dt>
+<dd>The magic number is P3 instead of P6.</dd>
+<dt>&#8211;</dt>
+<dd>Each sample in the raster is represented as an ASCII decimal number (of arbitrary size).</dd>
+<dt>&#8211;</dt>
+<dd>Each sample in the raster has white space before and after it. There must be at least one character of white space between any two samples, but there is no maximum. There is no particular separation of one pixel from another &#8212; just the required separation between the blue sample of one pixel from the red sample of the next pixel.</dd>
+<dt>&#8211;</dt>
+<dd>No line should be longer than 70 characters.</dd></dl>
 <p> Here is an example of a small pixmap in this format: </p>
 <pre>P3
 # feep.ppm

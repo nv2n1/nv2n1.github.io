@@ -14,20 +14,20 @@ description: "regulator_list_hardware_vsel – get the HW-specific register valu
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>regulator source</dl>
+</dd><dd>regulator source</dd></dl>
 <p> <i>selector</i></p>
 <dl>
-<dd>identify voltage to list</dl>
+<dd>identify voltage to list</dd></dl>
 <h2>Description</h2>
 <p>Converts the selector to a hardware-specific voltage selector that can be directly written to the regulator registers. The address of the voltage register can be determined by calling <i>regulator_get_hardware_vsel_register</i>. </p>
 <p> On error a negative errno is returned.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

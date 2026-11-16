@@ -18,12 +18,12 @@ description: "ranlib – generate index to archive."
 <p> The <font SIZE="-1">GNU</font> <code>ranlib</code> program is another form of <font SIZE="-1">GNU</font> <code>ar</code>; running <code>ranlib</code> is completely equivalent to executing <code>ar -s</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>-V</code></p>
+</dd><dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version number of <code>ranlib</code>.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Show the version number of <code>ranlib</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>

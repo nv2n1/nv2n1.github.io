@@ -13,25 +13,25 @@ c_ftcurvs1 - calculate values for a smoothing spline for data in the plane.
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>float d[], int m, float xl, float xr,&nbsp;<wbr> 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>float xo[], float yo[])
 <h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data points. (n &gt; 1)
-<dt>xi
-<dd>An array containing the X-coordinates for the input data. These need not be increasing.
-<dt>yi
-<dd>An array containing the Y-coordinates for the input data.
-<dt>dflg
-<dd>A switch for interpreting the value of d (as described below). If dflg=0, then d is an array of length n (an error estimate for each input data value); if dflg=1, then d is a scalar that serves as an error estimate for every single data item.
-<dt>d
-<dd>A user-specified value containing the observed weights. D may be either an array or a scalar, depending on the value of dflg.
-<dt>m
-<dd>The number of output values.
-<dt>xl
-<dd>A lower limit for an interval of interpolation. The interval between zero and one interpolates the entire curve, any value outside this range results in extrapolation. The interval [xl,xr] is divided into m equal values to produce the interpolated curve.
-<dt>xr
-<dd>An upper limit for an interval of interpolation. The interval between zero and one interpolates the entire curve, any value outside this range results in extrapolation. The interval [xl,xr] is divided into m equal values to produce the interpolated curve.
-<dt>xo
-<dd>The interpolated X values.
-<dt>yo
-<dd>The interpolated Y values.</dl><h2>Return Value</h2>c_ftcurvs1 returns an error value as per: 
+</dt><dd>The number of input data points. (n &gt; 1)
+</dd><dt>xi
+</dt><dd>An array containing the X-coordinates for the input data. These need not be increasing.
+</dd><dt>yi
+</dt><dd>An array containing the Y-coordinates for the input data.
+</dd><dt>dflg
+</dt><dd>A switch for interpreting the value of d (as described below). If dflg=0, then d is an array of length n (an error estimate for each input data value); if dflg=1, then d is a scalar that serves as an error estimate for every single data item.
+</dd><dt>d
+</dt><dd>A user-specified value containing the observed weights. D may be either an array or a scalar, depending on the value of dflg.
+</dd><dt>m
+</dt><dd>The number of output values.
+</dd><dt>xl
+</dt><dd>A lower limit for an interval of interpolation. The interval between zero and one interpolates the entire curve, any value outside this range results in extrapolation. The interval [xl,xr] is divided into m equal values to produce the interpolated curve.
+</dd><dt>xr
+</dt><dd>An upper limit for an interval of interpolation. The interval between zero and one interpolates the entire curve, any value outside this range results in extrapolation. The interval [xl,xr] is divided into m equal values to produce the interpolated curve.
+</dd><dt>xo
+</dt><dd>The interpolated X values.
+</dd><dt>yo
+</dt><dd>The interpolated Y values.</dd></dl><h2>Return Value</h2>c_ftcurvs1 returns an error value as per: 
  
 
  = 1 if n is less than 2. 

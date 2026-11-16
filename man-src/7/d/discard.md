@@ -15,12 +15,12 @@ description: "DISCARD – discard session state"
 <p> <code>DISCARD TEMP</code> drops all temporary tables created in the current session. <code>DISCARD PLANS</code> releases all internally cached query plans. <code>DISCARD ALL</code> resets a session to its original state, discarding temporary resources and resetting session-local configuration changes.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>TEMPORARY or TEMP</code></p>
-<dd>Drops all temporary tables created in the current session.</p>
-<dt><code>PLANS</code></p>
-<dd>Releases all cached query plans.</p>
-<dt><code>ALL</code></p>
-<dd>Releases all temporary resources associated with the current session and resets the session to its initial state. Currently, this has the same effect as executing the following sequence of statements: </p>
+<dt><code>TEMPORARY or TEMP</code></dt>
+<dd>Drops all temporary tables created in the current session.</dd>
+<dt><code>PLANS</code></dt>
+<dd>Releases all cached query plans.</dd>
+<dt><code>ALL</code></dt>
+<dd>Releases all temporary resources associated with the current session and resets the session to its initial state. Currently, this has the same effect as executing the following sequence of statements: </dd>
 <pre>SET SESSION AUTHORIZATION DEFAULT;
 RESET ALL;
 DEALLOCATE ALL;

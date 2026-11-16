@@ -55,9 +55,9 @@ description: "tcsd_selinux – Security Enhanced Linux Policy for the tcsd proce
 <p> Policy governs the access confined processes have to these ports. SELinux tcsd policy is very flexible allowing users to setup their tcsd processes in as secure a method as possible. </p>
 <p> The following port types are defined for tcsd: </p>
 <dl>
-<dt><code>tcs_port_t</code></p>
+<dt><code>tcs_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 30003</dl>
+</dd><dd>Default Defined Ports: tcp 30003</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type tcsd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

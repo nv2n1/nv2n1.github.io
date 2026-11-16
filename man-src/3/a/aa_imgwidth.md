@@ -14,8 +14,8 @@ description: "aa_imgwidth – returns width of the emulated image in pixels."
 <p> int aa_imgwidth(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns width of the emulated image in pixels.</p>
 <h2>SEE ALSO</h2>

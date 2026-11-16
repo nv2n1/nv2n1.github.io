@@ -14,18 +14,18 @@ description: "freight – a modern take on the Debian archive"
 <h2>DESCRIPTION</h2>
 <p> <code>freight</code> programs create the files needed to serve a Debian archive. The actual serving is done via your favorite HTTP server.</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-freight-add/">freight-add</a></code>(1)</p>
-<dd> Add a package to Freight.</p>
-<dt><code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1)</p>
-<dd> (Re)builds package repositories.</dl>
+<dt><code><a href="/docs/linux/man/1-freight-add/">freight-add</a></code>(1)</dt>
+<dd> Add a package to Freight.</dd>
+<dt><code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1)</dt>
+<dd> (Re)builds package repositories.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></p>
-<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dl>
+<dt><i>/etc/freight.conf</i>, <i>~/.freight.conf</i>, <i>etc/freight.conf</i>, <i>.freight.conf</i></dt>
+<dd> The default configuration files. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>FREIGHT_CONF</code></p>
-<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dl>
+<dt><code>FREIGHT_CONF</code></dt>
+<dd> The pathname of an alternate configuration file. See <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5).</dd></dl>
 <h2>THEME SONG</h2>
 <p> The New Pornographers &#8211; &quot;All the Old Showstoppers&quot;</p>
 <h2>AUTHOR</h2>

@@ -22,7 +22,7 @@ description: "brlapi_connectionSettings_t –"
 <pre>brlapi_connectionSettings_t settings;
 settings.auth='/etc/brlapi.key';
 settings.host='foo';</pre>
-</dl>
+</dd></dl>
 <p> <i>libbrlapi</i> will read authorization key from file /etc/brlapi.key and connect to the machine called &#8216;foo&#8217;, on the default TCP port. </p>
 <pre>settings.host='10.1.0.2';</pre>
 <p>lets directly enter an IP address instead of a machine name. </p>
@@ -30,7 +30,7 @@ settings.host='foo';</pre>
 <p>lets <i>libbrlapi</i> connect to the local computer, on port BRLAPI_SOCKETPORTNUM+1 </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brlapi_openConnection()</code></dl>
+<dd><code>brlapi_openConnection()</code></dd></dl>
 <h2>Field Documentation</h2>
 <h3>char* brlapi_connectionSettings_t::auth</h3>
 <p>For security reasons, <i>libbrlapi</i> has to get authorized to connect to the <i>BrlAPI</i> server. This can be done via a secret key, for instance. This is the path to the file which holds it; it will hence have to be readable by the application. </p>
@@ -39,7 +39,7 @@ settings.host='foo';</pre>
 <p>This tells where the <i>BrlAPI</i> server resides: it might be listening on another computer, on any TCP port. It should look like &#8216;foo:1&#8217;, which means TCP port number BRLAPI_SOCKETPORTNUM+1 on computer called &#8216;foo&#8217;. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Please check that resolving this name works before complaining</dl>
+<dd>Please check that resolving this name works before complaining</dd></dl>
 <p> Settings NULL defaults it to localhost, using the local installation&#8217;s default TCP port, or to the content of the BRLAPI_HOST environment variable, if it exists. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for BrlAPI from the source code.</p>

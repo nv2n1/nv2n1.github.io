@@ -17,24 +17,24 @@ description: "mev – a program to report mouse events"
 <p> mev&#8217;s default behaviour is to get anything, but command line switches can be used to set the various fields in the Gpm_Connect structure, in order to customize the program&#8217;s behaviour. I&#8217;m using mev to handle mouse events to Emacs. </p>
 <p> Command line switches for mev are the following:</p>
 <dl>
-<dt>-C <code>number</code></p>
-<dd> Select a virtual console to get events from. This is intended to be used for debugging.</p>
-<dt>-d <code>number</code></p>
-<dd> Choose a default mask. By default the server gets any events not belonging to the event mask. The mask can be provided either as a decimal number, or as a symbolic string.</p>
-<dt>-e <code>number</code></p>
-<dd> Choose the event mask. By default any event is received. The mask can be provided either as a decimal number, or as a symbolic string.</p>
-<dt>-E</p>
-<dd> Enter emacs mode. In emacs mode events are reported as lisp forms rather than numbers. This is the format used by the t-mouse package within emacs.</p>
-<dt>-f</p>
-<dd> Fit events inside the screen before reporting them. This options re-fits drag events, which are allowed to exit the screen border, </p>
-<dt>-i</p>
-<dd> Interactive. Accepts input from stdin to change connection parameters.</p>
-<dt>-m <code>number</code></p>
-<dd> Choose the minimum modifier mask. Any event with fewer modifiers will not be reported to mev. It defaults to 0. The mask must be provided either as a decimal number, or as a symbolic string.</p>
-<dt>-M <code>number</code></p>
-<dd> Choose the maximum modifier mask. Any event with more modifier than specified will not be reported to mev. It defaults to ~~0, i.e. all events are received. The mask must be provided either as a decimal number, or as a symbolic string.</p>
-<dt>-p</p>
-<dd> Requests to draw the pointer during drags. This option is used by emacs to avoid invoking ioctl() from lisp code. </p>
+<dt>-C <code>number</code></dt>
+<dd> Select a virtual console to get events from. This is intended to be used for debugging.</dd>
+<dt>-d <code>number</code></dt>
+<dd> Choose a default mask. By default the server gets any events not belonging to the event mask. The mask can be provided either as a decimal number, or as a symbolic string.</dd>
+<dt>-e <code>number</code></dt>
+<dd> Choose the event mask. By default any event is received. The mask can be provided either as a decimal number, or as a symbolic string.</dd>
+<dt>-E</dt>
+<dd> Enter emacs mode. In emacs mode events are reported as lisp forms rather than numbers. This is the format used by the t-mouse package within emacs.</dd>
+<dt>-f</dt>
+<dd> Fit events inside the screen before reporting them. This options re-fits drag events, which are allowed to exit the screen border, </dd>
+<dt>-i</dt>
+<dd> Interactive. Accepts input from stdin to change connection parameters.</dd>
+<dt>-m <code>number</code></dt>
+<dd> Choose the minimum modifier mask. Any event with fewer modifiers will not be reported to mev. It defaults to 0. The mask must be provided either as a decimal number, or as a symbolic string.</dd>
+<dt>-M <code>number</code></dt>
+<dd> Choose the maximum modifier mask. Any event with more modifier than specified will not be reported to mev. It defaults to ~~0, i.e. all events are received. The mask must be provided either as a decimal number, or as a symbolic string.</dd>
+<dt>-p</dt>
+<dd> Requests to draw the pointer during drags. This option is used by emacs to avoid invoking ioctl() from lisp code. </dd>
 </dl>
 <p> When the arguments are not decimal integers, they are considered lists of alphanumeric characters, separated by a single non-alphanumeric character. I use the comma (,), but any will do. </p>
 <p> Allowed names for events are move, drag, down or press, up or release, motion (which is both move and drag), and hard. </p>

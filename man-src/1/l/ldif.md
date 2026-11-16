@@ -16,12 +16,12 @@ description: "ldif – manipulates an LDIF stream by adding a column with the de
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Output base64 binary format</dl>
+<dt><code>-b</code></dt>
+<dd> Output base64 binary format</dd></dl>
 <h2>USAGE</h2>
 <dl>
-<dt><code>ldif dn &lt; /tmp/ldif</code></p>
-<dd></dl>
+<dt><code>ldif dn &lt; /tmp/ldif</code></dt>
+<dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> ldif was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

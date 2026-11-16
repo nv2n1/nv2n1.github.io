@@ -16,14 +16,14 @@ description: "log4c-config – script to get information about the installed ver
 <h2>OPTIONS</h2>
 <p> <i>log4c-config</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of <i>log4c</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a <i>log4c</i> program.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a <i>log4c</i> program.</p>
-<dt><code>&#8211;prefix</code></p>
-<dd> Print the prefix with which log4c was compiled.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of <i>log4c</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>log4c</i> program.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a <i>log4c</i> program.</dd>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Print the prefix with which log4c was compiled.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was copied from xml2-config manpage written by Fredrik Hallenberg &lt;hallon [at] lysator.liu.se&gt;. It was modified by František Dvořák &lt;valtri [at] civ.zcu.cz&gt;. </p>
 <h2>Index</h2>

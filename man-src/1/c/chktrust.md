@@ -14,18 +14,18 @@ description: "chktrust – Check the trust of a PE executable."
 <h2>DESCRIPTION</h2>
 <p> Verify if an PE executable (CLR assembly, Win32 EXE or DLL) has a valid Authenticode(r) signature that can be traced back to a trusted certificate authority (CA). This means that</p>
 <dl>
-<dt>(a) the signature is valid (i.e. file integrity) and,</p>
+<dt>(a) the signature is valid (i.e. file integrity) and,</dt>
 <dd>
-<dt>(b) the code-signing certificate can be chained back to one of the</p>
-<dd> certificates in the Trust store.</dl>
+</dd><dt>(b) the code-signing certificate can be chained back to one of the</dt>
+<dd> certificates in the Trust store.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-q, -quiet</i></p>
-<dd> Quiet mode. Limited display on console.</p>
-<dt><i>-v, -verbose</i></p>
-<dd> Verbose mode. More details displayed on the console.</p>
-<dt><i>-help, -h, -?, /?</i></p>
-<dd> Display help about this tool.</dl>
+<dt><i>-q, -quiet</i></dt>
+<dd> Quiet mode. Limited display on console.</dd>
+<dt><i>-v, -verbose</i></dt>
+<dd> Verbose mode. More details displayed on the console.</dd>
+<dt><i>-help, -h, -?, /?</i></dt>
+<dd> Display help about this tool.</dd></dl>
 <h2>KNOWN RESTRICTIONS</h2>
 <p> chktrust cannot validate Authenticode signatures on CAB files.</p>
 <h2>AUTHOR</h2>

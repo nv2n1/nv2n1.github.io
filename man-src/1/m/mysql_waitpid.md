@@ -11,33 +11,33 @@ description: "mysql_waitpid – kill process and wait for its termination"
 <p> mysql_waitpid &#8211; kill process and wait for its termination </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>wait_time</i></dl>
+<dt> <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>wait_time</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mysql_waitpid</code></p>
-<dd>signals a process to terminate and waits for the process to exit. It uses the kill() system call and Unix signals, so it runs on Unix and Unix-like systems. </p>
+<dd>signals a process to terminate and waits for the process to exit. It uses the kill() system call and Unix signals, so it runs on Unix and Unix-like systems. </dd>
 <p> Invoke <code>mysql_waitpid</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>wait_time</i>
 </pre>
-</dl>
+</dd></dl>
 <p> <code>mysql_waitpid</code> sends signal 0 to the process identified by <i>pid</i> and waits up to <i>wait_time</i> seconds for the process to terminate. <i>pid</i> and <i>wait_time</i> must be positive integers. </p>
 <p> If process termination occurs within the wait time or the process does not exist, <code>mysql_waitpid</code> returns 0. Otherwise, it returns 1. </p>
 <p> If the kill() system call cannot handle signal 0, <code>mysql_waitpid()</code> uses signal 1 instead. </p>
 <p> <code>mysql_waitpid</code> supports the following options: </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;help</code>, <code>-?</code>, <code>-I</code> </p>
+</dt><dd> &bull; <code>&#8211;help</code>, <code>-?</code>, <code>-I</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;verbose</code>, <code>-v</code> </p>
+</dt><dd> &bull; <code>&#8211;verbose</code>, <code>-v</code> </dd>
 <p> Verbose mode. Display a warning if signal 0 could not be used and signal 1 is used instead.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;version</code>, <code>-V</code> </p>
+</dt><dd> &bull; <code>&#8211;version</code>, <code>-V</code> </dd>
 <p> Display version information and exit.</dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2008 MySQL AB, 2008-2010 Sun Microsystems, Inc., 2010-2015 MariaDB Foundation </p>
@@ -49,3 +49,4 @@ shell&gt; <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>
 <h2>AUTHOR</h2>
 <p> MariaDB Foundation (<a rel="nofollow" href="http://www.mariadb.org/">http://www.mariadb.org/</a>). </p>
 <h2>Index</h2>
+</p>

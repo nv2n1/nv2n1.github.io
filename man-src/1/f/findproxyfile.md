@@ -17,14 +17,14 @@ description: "findproxyfile – returns full path to GSI Proxy file"
 <p> If <code>findproxyfile</code> does not find a proxy or if a User DN is not given, but <code>&#8211;outsidecache</code> was given, then the environment variable X509_USER_PROXY and the standard location /tmp/x509up_uUID are searched as well. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;proxycache=PATH</p>
-<dd> Give the path of the proxy cache directory explicitly, overriding the default and the GRST_PROXY_PATH environment variable if present. </p>
-<dt>&#8211;delegation-id=ID</p>
-<dd> The optional delegation ID is search for in the proxy cache in addition to the User DN. If absent, the default Delegation ID value is searched for. </p>
-<dt>&#8211;user-dn=DN</p>
-<dd> The DN of the full user certificate associated with the proxy to be searched for in the proxy cache. (This is not the DN of any proxy earlier in the chain: it is a the DN of a certificate issued by a recognised CA.) </p>
-<dt>&#8211;outsidecache</p>
-<dd> If a User DN is not given, or a proxy not found in the cache, then search for a proxy using X509_USER_PROXY environment variable and file name of form /tmp/x509up_uUID as well. </p>
+<dt>&#8211;proxycache=PATH</dt>
+<dd> Give the path of the proxy cache directory explicitly, overriding the default and the GRST_PROXY_PATH environment variable if present. </dd>
+<dt>&#8211;delegation-id=ID</dt>
+<dd> The optional delegation ID is search for in the proxy cache in addition to the User DN. If absent, the default Delegation ID value is searched for. </dd>
+<dt>&#8211;user-dn=DN</dt>
+<dd> The DN of the full user certificate associated with the proxy to be searched for in the proxy cache. (This is not the DN of any proxy earlier in the chain: it is a the DN of a certificate issued by a recognised CA.) </dd>
+<dt>&#8211;outsidecache</dt>
+<dd> If a User DN is not given, or a proxy not found in the cache, then search for a proxy using X509_USER_PROXY environment variable and file name of form /tmp/x509up_uUID as well. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> If a proxy is found, its full path is output on standard out. </p>

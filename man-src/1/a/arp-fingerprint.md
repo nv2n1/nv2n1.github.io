@@ -26,12 +26,12 @@ description: "arp-fingerprint – Fingerprint a system using ARP"
 <p> If you find a system that <code>arp-fingerprint</code> reports as <i>UNKNOWN</i>, and you know what operating system it is running, could you please send details of the operating system and fingerprint to <i>arp-scan [at] nta-monitor.com</i> so I can include it in future versions. Please include the exact version of the operating system if you know it, as fingerprints sometimes change between versions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a brief usage message and exit.</p>
-<dt><code>-v</code></p>
-<dd> Display verbose progress messages.</p>
-<dt><code>-o &lt;option-string&gt;</code></p>
-<dd> Pass specified options to arp-scan. You need to enclose the options string in quotes if it contains spaces. e.g. -o &quot;-I eth1&quot;. The commonly used options are &#8211;interface (-I) and &#8211;numeric (-N).</dl>
+<dt><code>-h</code></dt>
+<dd> Display a brief usage message and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Display verbose progress messages.</dd>
+<dt><code>-o &lt;option-string&gt;</code></dt>
+<dd> Pass specified options to arp-scan. You need to enclose the options string in quotes if it contains spaces. e.g. -o &quot;-I eth1&quot;. The commonly used options are &#8211;interface (-I) and &#8211;numeric (-N).</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 $ arp-fingerprint 192.168.0.1
@@ -47,7 +47,7 @@ $ arp-fingerprint -o &quot;-N -I eth1&quot; 192.168.0.202
 <p> Roy Hills &lt;Roy.Hills [at] nta-monitor.com&gt;</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</p>
-<dd></dl>
+<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</dt>
+<dd></dd></dl>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>
 <h2>Index</h2>

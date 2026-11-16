@@ -14,10 +14,10 @@ description: "snd_lookup_minor_data – get user data of a registered device"
 <p><i>minor</i></p>
 <dl>
 <dd>
-<dd>the minor number</dl>
+</dd><dd>the minor number</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>device type (SNDRV_DEVICE_TYPE_XXX)</dl>
+<dd>device type (SNDRV_DEVICE_TYPE_XXX)</dd></dl>
 <h2>Description</h2>
 <p>Checks that a minor device with the specified type is registered, and returns its user data pointer. </p>
 <p> This function increments the reference counter of the card instance if an associated instance with the given minor number and type is found. The caller must call <code>snd_card_unref</code> appropriately later.</p>

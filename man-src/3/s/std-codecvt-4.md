@@ -20,3 +20,4 @@ n &#8211; limit on the number of bytes in s that can be examined<br />
 pwc &#8211; pointer to the wide character for output </p>
 <h2>Return value</h2>
 <p>If s is not a null pointer, returns the number of bytes that are contained in the multibyte character or -1 if the first bytes pointed to by s do not form a valid multibyte character or 0 if s is pointing at the null charcter &#8216;
+</p>

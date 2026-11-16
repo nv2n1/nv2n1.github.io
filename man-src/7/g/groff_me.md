@@ -483,8 +483,8 @@ description: "groff_me – “me” macro package for formatting documents with 
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) Two manuals are available in source and rendered form. On your system, they may be compressed and/or available in additional formats.</p>
 <dl>
-<dt><i>/usr/:share/:doc/:groff-base/meintro.me</i></p>
-<dd><i>/usr/:share/:doc/:groff-base/meintro.ps</i> is <i>Writing Papers with Groff Using -me</i>, by Eric P. Allman and James Clark.</p>
-<dt><i>/usr/:share/:doc/:groff-base/meref.me</i></p>
-<dd><i>/usr/:share/:doc/:groff-base/meref.ps</i> is the <i>-me Reference Manual</i>, by Eric P. Allman and James Clark.</dl>
+<dt><i>/usr/:share/:doc/:groff-base/meintro.me</i></dt>
+<dd><i>/usr/:share/:doc/:groff-base/meintro.ps</i> is <i>Writing Papers with Groff Using -me</i>, by Eric P. Allman and James Clark.</dd>
+<dt><i>/usr/:share/:doc/:groff-base/meref.me</i></dt>
+<dd><i>/usr/:share/:doc/:groff-base/meref.ps</i> is the <i>-me Reference Manual</i>, by Eric P. Allman and James Clark.</dd></dl>
 <p> For preprocessors supported by <i>me</i>, see <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1), <code><a href="/docs/linux/man/1-grn/">grn</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), and <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1). </p>

@@ -17,17 +17,17 @@ description: "slapo-refint – Referential Integrity overlay to slapd"
 <h2>Configuration</h2>
 <p>These <code>slapd.conf</code> options apply to the Referential Integrity overlay. They should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>refint_attributes &lt;attribute&gt; [&#8230;]</code></p>
-<dd>Specify one or more attributes for which integrity will be maintained as described above.</p>
-<dt><code>refint_nothing &lt;string&gt;</code></p>
-<dd>Specify an arbitrary value to be used as a placeholder when the last value would otherwise be deleted from an attribute. This can be useful in cases where the schema requires the existence of an attribute for which referential integrity is enforced. The attempted deletion of a required attribute will otherwise result in an Object Class Violation, causing the request to fail. The string must be a valid DN.</p>
-<dt><code>refint_modifiersname &lt;DN&gt;</code></p>
-<dd>Specify the DN to be used as the modifiersName of the internal modifications performed by the overlay. It defaults to &quot;<i>cn=Referential Integrity Overlay</i>&quot;.</dl>
+<dt><code>refint_attributes &lt;attribute&gt; [&#8230;]</code></dt>
+<dd>Specify one or more attributes for which integrity will be maintained as described above.</dd>
+<dt><code>refint_nothing &lt;string&gt;</code></dt>
+<dd>Specify an arbitrary value to be used as a placeholder when the last value would otherwise be deleted from an attribute. This can be useful in cases where the schema requires the existence of an attribute for which referential integrity is enforced. The attempted deletion of a required attribute will otherwise result in an Object Class Violation, causing the request to fail. The string must be a valid DN.</dd>
+<dt><code>refint_modifiersname &lt;DN&gt;</code></dt>
+<dd>Specify the DN to be used as the modifiersName of the internal modifications performed by the overlay. It defaults to &quot;<i>cn=Referential Integrity Overlay</i>&quot;.</dd></dl>
 <p> Modifications performed by this overlay are not propagated during replication. This overlay must be configured identically on replication consumers in order to maintain full synchronization with the provider.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5).</p>
 <h2>Acknowledgements</h2>

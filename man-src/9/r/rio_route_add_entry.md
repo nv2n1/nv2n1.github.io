@@ -14,24 +14,24 @@ description: "rio_route_add_entry – Add a route entry to a switch routing tabl
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <p> <i>table</i></p>
 <dl>
-<dd>Routing table ID</dl>
+<dd>Routing table ID</dd></dl>
 <p> <i>route_destid</i></p>
 <dl>
-<dd>Destination ID to be routed</dl>
+<dd>Destination ID to be routed</dd></dl>
 <p> <i>route_port</i></p>
 <dl>
-<dd>Port number to be routed</dl>
+<dd>Port number to be routed</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>apply a hardware lock on switch device flag (1=lock, 0=no_lock)</dl>
+<dd>apply a hardware lock on switch device flag (1=lock, 0=no_lock)</dd></dl>
 <h2>Description</h2>
 <p>If available calls the switch specific <code>add_entry</code> method to add a route entry into a switch routing table. Otherwise uses standard RT update method as defined by RapidIO specification. A specific routing table can be selected using the <i>table</i> argument if a switch has per port routing tables or the standard (or global) table may be used by passing <code>RIO_GLOBAL_TABLE</code> in <i>table</i>. </p>
 <p> Returns <code>0</code> on success or <code>-EINVAL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

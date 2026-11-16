@@ -27,39 +27,39 @@ url: "/docs/linux/man/1-cfgmaint/"
 
 <dl>
 <dt>-r
-<dd> Write configuration to the system-wide config file
-<dt>-b
-<dd> Read configuration from both system-wide and user config files
-<dt>-x
-<dd> Do not write backups
-<dt>-o
-<dd> Read-only mode
-<dt>-p
-<dd> Execute <tt>&quot;use Prima;&quot;</tt> code before start. This option might be necessary when adding a module that relies on the toolkit but does not invoke the code itself.</dl>
+</dt><dd> Write configuration to the system-wide config file
+</dd><dt>-b
+</dt><dd> Read configuration from both system-wide and user config files
+</dd><dt>-x
+</dt><dd> Do not write backups
+</dd><dt>-o
+</dt><dd> Read-only mode
+</dd><dt>-p
+</dt><dd> Execute <tt>&quot;use Prima;&quot;</tt> code before start. This option might be necessary when adding a module that relies on the toolkit but does not invoke the code itself.</dd></dl>
 
 <h3>Objects</h3>
 
 <dl>
 <dt>m
-<dd> Selects a module. Valid for add, list, and remove commands.
-<dt>p
-<dd> Selects a page. Valid for all commands.
-<dt>w
-<dd> Selects a widget. Valid for list, remove, rename, and move commands.</dl>
+</dt><dd> Selects a module. Valid for add, list, and remove commands.
+</dd><dt>p
+</dt><dd> Selects a page. Valid for all commands.
+</dd><dt>w
+</dt><dd> Selects a widget. Valid for list, remove, rename, and move commands.</dd></dl>
 
 <h3>Commands</h3>
 
 <dl>
 <dt>a
-<dd> Adds a new object to the configuration. Can be either a page or a module.
-<dt>d
-<dd> Removes an object.
-<dt>l
-<dd> Prints object name. In case object is a widget, prints all registered widgets. If the string is specified as an additional parameter, it is treated as a page name and only widgets from the page are printed.
-<dt>r
-<dd> Renames an object to a new name, which is passed as additional parameter. Can be either a widget or a page.
-<dt>m
-<dd> If <tt>&quot;object&quot;</tt> is a widget, relocates one or more widgets to a new page. If <tt>&quot;object&quot;</tt> is a page, moves the page before the page specified as an additional parameter, or to the end if no additional page specified.</dl>
+</dt><dd> Adds a new object to the configuration. Can be either a page or a module.
+</dd><dt>d
+</dt><dd> Removes an object.
+</dd><dt>l
+</dt><dd> Prints object name. In case object is a widget, prints all registered widgets. If the string is specified as an additional parameter, it is treated as a page name and only widgets from the page are printed.
+</dd><dt>r
+</dt><dd> Renames an object to a new name, which is passed as additional parameter. Can be either a widget or a page.
+</dd><dt>m
+</dt><dd> If <tt>&quot;object&quot;</tt> is a widget, relocates one or more widgets to a new page. If <tt>&quot;object&quot;</tt> is a page, moves the page before the page specified as an additional parameter, or to the end if no additional page specified.</dd></dl>
 
 <h2>EXAMPLE</h2>
 

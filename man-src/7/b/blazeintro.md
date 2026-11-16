@@ -45,16 +45,16 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <pre> $ blaze-add</pre>
 <p>This will open the external editor with a pre-formatted header and empty body for you to write. Although the most of the header lines are devoted to the exhaustive explanation of what exactly you should and should not fill in, let&#8217;s take a closer look at the five header options just to make sure everything is perfectly clear:</p>
 <dl>
-<dt>title</p>
-<dd>The title of your post; you do not want to omit that one, do you?</p>
-<dt>author</p>
-<dd>The post author. The user name specified in the configuration is used by default, but you are free to change it to whatever name you wish.</p>
-<dt>date</p>
-<dd>Date of the publishing of the post. It has to be in the YYYY-MM-DD form (i.e. 17 July 2009 would look like 2009-07-17 etc.) and it has to be filled. The default option is current date.</p>
-<dt>tags</p>
-<dd>Comma separated list of categories the post belongs to. The exact number of attached tags is not limited as long as they are all listed on the same line. Since tags are completely optional, you can safely leave this option empty, or fill it any time later.</p>
-<dt>url</p>
-<dd>The use of term `<font SIZE="-1">URL</font>&#8216; in this context is quite vague and simply means the part of the <font SIZE="-1">URL</font> representing the particular post. As it is derived from the post title, you usually do not have to bother with it at all. There are however two cases when it might prove useful: (1) when your title contains special characters (typically foreign diacritical marks) that BlazeBlogger strips away and you still want your <font SIZE="-1">URL</font> look pretty, or (2) in case you want your <font SIZE="-1">URL</font> different from the title, for example because of the title length. Remember that the <font SIZE="-1">URL</font> should consist of alphanumeric characters, hyphens and underscores only.</dl>
+<dt>title</dt>
+<dd>The title of your post; you do not want to omit that one, do you?</dd>
+<dt>author</dt>
+<dd>The post author. The user name specified in the configuration is used by default, but you are free to change it to whatever name you wish.</dd>
+<dt>date</dt>
+<dd>Date of the publishing of the post. It has to be in the YYYY-MM-DD form (i.e. 17 July 2009 would look like 2009-07-17 etc.) and it has to be filled. The default option is current date.</dd>
+<dt>tags</dt>
+<dd>Comma separated list of categories the post belongs to. The exact number of attached tags is not limited as long as they are all listed on the same line. Since tags are completely optional, you can safely leave this option empty, or fill it any time later.</dd>
+<dt>url</dt>
+<dd>The use of term `<font SIZE="-1">URL</font>&#8216; in this context is quite vague and simply means the part of the <font SIZE="-1">URL</font> representing the particular post. As it is derived from the post title, you usually do not have to bother with it at all. There are however two cases when it might prove useful: (1) when your title contains special characters (typically foreign diacritical marks) that BlazeBlogger strips away and you still want your <font SIZE="-1">URL</font> look pretty, or (2) in case you want your <font SIZE="-1">URL</font> different from the title, for example because of the title length. Remember that the <font SIZE="-1">URL</font> should consist of alphanumeric characters, hyphens and underscores only.</dd></dl>
 <p> Keeping that in mind, your first post might look somehow like the one below: </p>
 <pre> # This and following lines beginning with `#' are the post header.
  # Please take your time and replace these options with desired val-
@@ -137,16 +137,16 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <p>Next time you invoke <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1), all generated strings should be properly translated.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>.blaze/config</i></p>
-<dd>BlazeBlogger configuration file.</p>
-<dt><i>.blaze/log</i></p>
-<dd>BlazeBlogger repository log file.</p>
-<dt><i>.blaze/theme/</i></p>
-<dd>BlazeBlogger themes directory.</p>
-<dt><i>.blaze/style/</i></p>
-<dd>BlazeBlogger stylesheets directory.</p>
-<dt><i>.blaze/lang/</i></p>
-<dd>BlazeBlogger language files directory.</dl>
+<dt><i>.blaze/config</i></dt>
+<dd>BlazeBlogger configuration file.</dd>
+<dt><i>.blaze/log</i></dt>
+<dd>BlazeBlogger repository log file.</dd>
+<dt><i>.blaze/theme/</i></dt>
+<dd>BlazeBlogger themes directory.</dd>
+<dt><i>.blaze/style/</i></dt>
+<dd>BlazeBlogger stylesheets directory.</dd>
+<dt><i>.blaze/lang/</i></dt>
+<dd>BlazeBlogger language files directory.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-blaze-init/">blaze-init</a></code>(1), <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-blaze-add/">blaze-add</a></code>(1), <code><a href="/docs/linux/man/1-blaze-edit/">blaze-edit</a></code>(1), <code><a href="/docs/linux/man/1-blaze-remove/">blaze-remove</a></code>(1), <code><a href="/docs/linux/man/1-blaze-list/">blaze-list</a></code>(1), <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1), <code><a href="/docs/linux/man/1-blaze-log/">blaze-log</a></code>(1).</p>
 <h2>Author</h2>

@@ -16,7 +16,7 @@ description: "cvs.sh – Bourne shell log-in script for CVS users"
 <pre><code>export CVS_RSH=${CVS_RSH-ssh}</code></pre>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/profile.d/cvs.sh</code></p>
-<dd></dl>
+<dt><code>/etc/profile.d/cvs.sh</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-cvs/">cvs</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1). </p>

@@ -27,7 +27,7 @@ url: "/docs/linux/man/3-mlx5dv_devx_obj_create/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_devx_obj *
 mlx5dv_devx_obj_create(struct ibv_context *context, const void *in, size_t inlen,
@@ -43,7 +43,7 @@ int mlx5dv_devx_obj_modify(struct mlx5dv_devx_obj *obj, const void *in, size_t i
 int mlx5dv_devx_obj_destroy(struct mlx5dv_devx_obj *obj);
 int mlx5dv_devx_general_cmd(struct ibv_context *context, const void *in, size_t inlen,
                             void *out, size_t outlen);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -73,21 +73,21 @@ int mlx5dv_devx_general_cmd(struct ibv_context *context, const void *in, size_t 
 
 <dl>
 <dt>context
-<dd> RDMA device context to create the action on.
-<dt>in
-<dd> A buffer which contains the command's input data provided in a device specification format.
-<dt>inlen
-<dd> The size of in buffer in bytes.
-<dt>out
-<dd> A buffer which contains the command's output data according to the device specification format.
-<dt>outlen
-<dd> The size of out buffer in bytes.
-<dt>obj
-<dd> For query, modify, destroy: the devx object to work on.
-<dt>wr_id
-<dd> The command identifier when working in asynchronous mode.
-<dt>cmd_comp
-<dd> The command completion object to read the response from in asynchronous mode.</dl>
+</dt><dd> RDMA device context to create the action on.
+</dd><dt>in
+</dt><dd> A buffer which contains the command's input data provided in a device specification format.
+</dd><dt>inlen
+</dt><dd> The size of in buffer in bytes.
+</dd><dt>out
+</dt><dd> A buffer which contains the command's output data according to the device specification format.
+</dd><dt>outlen
+</dt><dd> The size of out buffer in bytes.
+</dd><dt>obj
+</dt><dd> For query, modify, destroy: the devx object to work on.
+</dd><dt>wr_id
+</dt><dd> The command identifier when working in asynchronous mode.
+</dd><dt>cmd_comp
+</dt><dd> The command completion object to read the response from in asynchronous mode.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

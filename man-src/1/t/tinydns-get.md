@@ -15,12 +15,12 @@ description: "tinydns-get – get the tinydns server records"
 <p> <code>tinydns-get</code> is used to query the <code>tinydns</code> server records from the data.cdb file in the current directory. If an IP is provided, it simulates the results of a query from the given IP address. This matters if data.cdb is different at different client locations. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
+<dt><code>-h &#8211;help</code></dt>
 <dd>
-&nbsp;<wbr>print this help.</p>
-<dt><code>-v &#8211;version</code></p>
+&nbsp;<wbr>print this help.</dd>
+<dt><code>-v &#8211;version</code></dt>
 <dd>
-&nbsp;<wbr>print version information. </p>
+&nbsp;<wbr>print version information. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;pj.pandit [at] yahoo.co.in&gt; </p>

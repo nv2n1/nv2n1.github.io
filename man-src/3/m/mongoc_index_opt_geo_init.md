@@ -13,8 +13,8 @@ description: "mongoc_index_opt_geo_init() – This function will initialize opt 
 mongoc_index_opt_geo_init (mongoc_index_opt_geo_t *opt);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>opt</code></p>
-<dd>A <code>mongoc_index_opt_geo_t</code> \&amp;.</dl>
+<dt><code>opt</code></dt>
+<dd>A <code>mongoc_index_opt_geo_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function will initialize <code>opt</code> to the default values. It should be called before modifying any fields within the structure. </p>
 <h2>Colophon</h2>

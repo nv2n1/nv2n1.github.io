@@ -17,6 +17,6 @@ description: "QuantLib::Factorial – Factorial numbers calculator"
 <p>Factorial numbers calculator </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against numerical calculations.</dl>
+<dd>the correctness of the returned value is tested by checking it against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

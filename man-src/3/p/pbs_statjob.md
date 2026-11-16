@@ -10,7 +10,6 @@ description: "pbs_statjob – obtain status of pbs batch jobs"
 <p>pbs_statjob &#8211; obtain status of pbs batch jobs</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>struct batch_status *pbs_statjob(int connect, char&nbsp;<wbr>*id,
 struct attrl&nbsp;<wbr>*attrib, char *extend)

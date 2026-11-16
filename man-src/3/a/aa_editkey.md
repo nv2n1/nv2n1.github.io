@@ -18,10 +18,10 @@ description: "aa_editkey – Notify the line editor about keypress."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>struct aa_edit *e</code></p>
-<dd> Editor context to use (see aa_createedit).</p>
-<dt><code>int c</code></p>
-<dd> Key pressed.</dl>
+<dt><code>struct aa_edit *e</code></dt>
+<dd> Editor context to use (see aa_createedit).</dd>
+<dt><code>int c</code></dt>
+<dd> Key pressed.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Notify the line editor about keypress.</p>
 <h2>SEE ALSO</h2>

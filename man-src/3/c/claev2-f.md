@@ -26,10 +26,10 @@ description: "claev2.f –"
  eigenvector for RT1, giving the decomposition
  [ CS1 CONJG(SN1) ] [ A B ] [ CS1 -CONJG(SN1) ] = [ RT1 0 ]
  [-SN1 CS1 ] [ CONJG(B) C ] [ SN1 CS1 ] [ 0 RT2 ].</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>A</i> </p>
+<dd><i>A</i> </dd>
 <pre> A is COMPLEX
  The (1,1) element of the 2-by-2 matrix.</pre>
 <p><i>B</i> </p>
@@ -53,13 +53,13 @@ description: "claev2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -72,7 +72,8 @@ description: "claev2.f –"
  Overflow is possible only if RT1 is within a factor of 5 of overflow.
  Underflow is harmless if the input data is 0 or exceeds
  underflow_threshold / macheps.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 122 of file claev2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

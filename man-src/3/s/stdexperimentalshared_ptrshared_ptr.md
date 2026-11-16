@@ -12,96 +12,58 @@ std::experimental::shared_ptr&lt;T&gt;::shared_ptr - std::experimental::shared_p
 
 <pre><code>constexpr shared_ptr() noexcept;
 (1)
-
     constexpr shared_ptr(std::nullptr_t) noexcept;
 (2)
-
     template &lt;class Y&gt;
     (3)
-
         explicit shared_ptr(Y *ptr);
-
 template &lt;class Y, class Deleter&gt;
 (4)
-
     shared_ptr(Y *ptr, Deleter d);
-
 template &lt;class Deleter&gt;
 (5)
-
     shared_ptr(std::nullptr_t ptr, Deleter d);
-
 template &lt;class Y, class Deleter, class Alloc&gt;
 (6)
-
     shared_ptr(Y *ptr, Deleter d, Alloc alloc);
-
 template &lt;class Deleter, class Alloc&gt;
 (7)
-
     shared_ptr(std::nullptr_t ptr, Deleter d, Alloc alloc);
-
 template &lt;class Y&gt;
 (8)
-
     shared_ptr(const shared_ptr&lt;Y&gt; &amp;r, element_type *ptr) noexcept;
-
 shared_ptr(const shared_ptr &amp;r) noexcept;
 (9)
-
     template &lt;class Y&gt;
     (9)
-
         shared_ptr(const shared_ptr&lt;Y&gt; &amp;r) noexcept;
-
 shared_ptr(shared_ptr &amp;&amp;r) noexcept;
 (10)
-
     template &lt;class Y&gt;
     (10)
-
         shared_ptr(shared_ptr&lt;Y&gt; &amp;&amp;r) noexcept;
-
 template &lt;class Y&gt;
 (11)
-
     explicit shared_ptr(const std::weak_ptr&lt;Y&gt; &amp;r);
-
 template &lt;class Y&gt;
 (12)
-
     shared_ptr(std::auto_ptr&lt;Y&gt; &amp;&amp;r);
-
 template &lt;class Y, class Deleter&gt;
 (13)
-
     shared_ptr(std::unique_ptr&lt;Y, Deleter&gt; &amp;&amp;r);
 Constructs new shared_ptr from a variety of pointer types that refer to an object to manage.
-
 For the purposes of the description below, a pointer type Y* is said to be compatible with a pointer type T* if either Y* is convertible to T* or Y is the array type U[N] and T is U cv [] (where cv is some set of cv-qualifiers).
-
 1-2) Constructs a shared_ptr with no managed object, i.e. empty shared_ptr
-
 3-7) Constructs a shared_ptr with ptr as the pointer to the managed object. If T is an array type U[N], Y(*)[N] must be convertible to T*. If T is an array type U[], Y(*)[] must be convertible to T*. Otherwise, Y* must be convertible to T*. Additionally:
-
 3) Uses a delete-expression (delete ptr, if T is not an array type; delete[] ptr if T is an array type) as the deleter. Y must be a complete type. That delete expression must be well formed, have well-defined behavior and not throw any exceptions.
-
 4-5) Uses the specified deleter d as the deleter. The expression d(ptr) must be well formed, have well-defined behavior and not throw any exceptions. Deleter must be CopyConstructible, and its copy constructor and destructor must not throw exceptions.
-
 6-7) Same as (4-5), but additionally uses a copy of alloc for allocation of data for internal use. Alloc must be a Allocator, and its copy constructor and destructor must not throw exceptions.
-
 8) The aliasing constructor: constructs a shared_ptr which shares ownership information with r, but holds an unrelated and unmanaged pointer ptr. Even if this shared_ptr is the last of the group to go out of scope, it will call the destructor for the object originally managed by r. However, calling get() on this will always return a copy of ptr. It is the responsibility of the programmer to make sure that this ptr remains valid as long as this shared_ptr exists, such as in the typical use cases where ptr is a member of the object managed by r or is an alias (e.g., downcast) of r.get()
-
 9) Constructs a shared_ptr which shares ownership of the object managed by r. If r manages no object, *this manages no object too. The template overload doesn't participate in overload resolution if Y* is not compatible with T*.
-
 10) Move-constructs a shared_ptr from r. After the construction, *this contains a copy of the previous state of r, r is empty. The template overload doesn't participate in overload resolution if Y* is not compatible with T*.
-
 11) Constructs a shared_ptr which shares ownership of the object managed by r. Y* must be compatible with T*. Note that r.lock() may be used for the same purpose: the difference is that this constructor throws an exception if the argument is empty, while weak_ptr&lt;T&gt;::lock() constructs an empty shared_ptr in that case.
-
 12) Constructs a shared_ptr that stores and owns the object formerly owned by r. Y* must be convertible to T*. After construction, r is empty.
-
 13) Constructs a shared_ptr which manages the object currently managed by r. The deleter associated with r is stored for future deletion of the managed object. r manages no object after the call. This overload doesn't participate in overload resolution if Y* is not compatible with T*.
-
 If D is a reference type, equivalent to shared_ptr(r.release(), std::ref(r.get_deleter()). Otherwise, equivalent to shared_ptr(r.release(), r.get_deleter())
 </code></pre>
 

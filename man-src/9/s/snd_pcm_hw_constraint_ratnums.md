@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_ratnums - apply ratnums constraint to a parameter
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>cond</i>
-<dl><dd>condition bits</dl>
+<dl><dd>condition bits</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the ratnums constraint</dl>
+<dl><dd>hw_params variable to apply the ratnums constraint</dd></dl>
  
 
  <i>r</i>
-<dl><dd>struct snd_ratnums constriants</dl>
+<dl><dd>struct snd_ratnums constriants</dd></dl>
 
 <h2>Return</h2>
 

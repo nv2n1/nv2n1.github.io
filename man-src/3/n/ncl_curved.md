@@ -13,13 +13,13 @@ CURVED - Draws a curve through a sequence of points.
 
  void c_curved (float *x, float *y, int n)
 <h2>Description</h2><dl COMPACT><dt>X
-<dd>(an input array of type REAL) defines the X user coordinates of the curve. Array X is of length N.
-<dt>Y
-<dd>(an input array of type REAL) defines the Y user coordinates of the curve. Array Y is of length N.
-<dt>N
-<dd>(an input expression of type INTEGER) specifies the number of points in the curve.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument description.
+</dt><dd>(an input array of type REAL) defines the X user coordinates of the curve. Array X is of length N.
+</dd><dt>Y
+</dt><dd>(an input array of type REAL) defines the Y user coordinates of the curve. Array Y is of length N.
+</dd><dt>N
+</dt><dd>(an input expression of type INTEGER) specifies the number of points in the curve.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument description.
 <h2>Usage</h2>The statement
-<dl COMPACT><dd>CALL CURVED (X,Y,N)</dl>
+<dl COMPACT><dd>CALL CURVED (X,Y,N)</dd></dl>
  
 
  is equivalent to the statements
@@ -28,7 +28,7 @@ CURVED - Draws a curve through a sequence of points.
  CALL VECTD (X(3),Y(3)) 
  ...(et cetera)... 
  CALL VECTD (X(N),Y(N)) 
- CALL LASTD</dl>
+ CALL LASTD</dd></dl>
  
 
  The basic difference is that CURVED requires you to have all of the coordinates defining the curve available at once; sometimes this is convenient and sometimes it is not. 

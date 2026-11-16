@@ -15,11 +15,11 @@ d_instantiate - fill in inode information for a dentry
 <h2>Arguments</h2>
 
 <i>entry</i>
-<dl><dd><dd>dentry to complete</dl>
+<dl><dd></dd><dd>dentry to complete</dd></dl>
  
 
  <i>inode</i>
-<dl><dd>inode to attach to this dentry</dl>
+<dl><dd>inode to attach to this dentry</dd></dl>
 
 <h2>Description</h2>
 

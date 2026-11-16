@@ -15,7 +15,7 @@ pci_try_reset_bus - Try to reset a PCI bus
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>top level PCI bus to reset</dl>
+<dl><dd></dd><dd>top level PCI bus to reset</dd></dl>
 
 <h2>Description</h2>
 

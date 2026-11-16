@@ -18,7 +18,6 @@ description: "allegro_message – Used mainly to show error messages to users. A
 <pre><code>
 if (allegro_init() != 0)
     exit(1);
-
 if (init_my_data() != 0) {
     allegro_message("Sorry, missing game data!
 ");

@@ -15,10 +15,10 @@ description: "radius – nnrpd RADIUS password authenticator"
 <p> By default, <code>radius</code> reads <i>pathetc</i>/inn-radius.conf for configuration information, but a different configuration file can be specified with <code>-f</code>. See <i><a href="/docs/linux/man/5-inn-radius-conf/">inn-radius.conf</a></i>(5) for a description of the configuration file.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code> <i>config</i></p>
-<dd>Read <i>config</i> instead of <i>pathetc</i>/inn-radius.conf for configuration information.</p>
-<dt><code>-h</code></p>
-<dd>Print out a usage message and exit.</dl>
+<dt><code>-f</code> <i>config</i></dt>
+<dd>Read <i>config</i> instead of <i>pathetc</i>/inn-radius.conf for configuration information.</dd>
+<dt><code>-h</code></dt>
+<dd>Print out a usage message and exit.</dd></dl>
 <h2>Example</h2>
 <p>The following <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5) fragment tells nnrpd to authenticate all connections using this authenticator: </p>
 <pre> auth radius {

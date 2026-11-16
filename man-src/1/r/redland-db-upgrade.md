@@ -15,7 +15,7 @@ description: "redland-db-upgrade – upgrade older Redland databases to 0.9.12 f
 <p> <i>redland-db-upgrade</i> converts Redland databases from the format in 0.9.11 and earlier into the new format. It must be run on each Redland database. For example if database <i>a</i> created files <i>a-sp2o.db</i>, <i>a-so2p.db</i> and <i>a-po2s.db</i> it could be converted to a new database <i>b</i> with:</p>
 <dl>
 <dt>
-<dd> redland-db-upgrade a b</dl>
+</dt><dd> redland-db-upgrade a b</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-redland/">redland</a></code>(3),</p>
 <h2>AUTHOR</h2>

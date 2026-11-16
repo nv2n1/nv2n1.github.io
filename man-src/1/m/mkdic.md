@@ -19,23 +19,23 @@ description: "mkdic – Tool for creating a user dictionary"
 <p> Dictionary directory file &#8212; dics.dir &#8212; is rewritten automatically after the registering. The registered dictionary can thus be used by writing the dictionary name into the customize file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</p>
-<dd> Specifies the server machine that contains the dictionary to be created.</p>
-<dt>-s</p>
-<dd> Indicates that the dictionary to be created is an adjunct dictionary. If this option is omitted, the dictionary will be created as an independent-word one.</p>
-<dt>-l <i>local-file</i></p>
-<dd> Registers the input data from <i>local-file</i>.</p>
-<dt>&#8211;</p>
-<dd> The standard input will be used as the dictionary file.</dl>
+<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</dt>
+<dd> Specifies the server machine that contains the dictionary to be created.</dd>
+<dt>-s</dt>
+<dd> Indicates that the dictionary to be created is an adjunct dictionary. If this option is omitted, the dictionary will be created as an independent-word one.</dd>
+<dt>-l <i>local-file</i></dt>
+<dd> Registers the input data from <i>local-file</i>.</dd>
+<dt>&#8211;</dt>
+<dd> The standard input will be used as the dictionary file.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>(1)</p>
-<dd> If you want to creat an empty dictionary file: </p>
+<dt>(1)</dt>
+<dd> If you want to creat an empty dictionary file: </dd>
 <pre>
   % mkdic test
 </pre>
-<dt>(2)</p>
-<dd> If you want to register the input data from the standard input: </p>
+<dt>(2)</dt>
+<dd> If you want to register the input data from the standard input: </dd>
 <pre>
   % mkdic test -
 </pre>
@@ -45,8 +45,8 @@ description: "mkdic – Tool for creating a user dictionary"
           user1.t(.mwd) -test-
 </pre>
 <dl>
-<dt>(3)</p>
-<dd> If the dictionary file is specified: </p>
+<dt>(3)</dt>
+<dd> If the dictionary file is specified: </dd>
 <pre>
   % mkdic test -l test1.t
 </pre>

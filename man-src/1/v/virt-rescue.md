@@ -63,32 +63,32 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> This tool is just designed for quick interactive hacking on a virtual machine. For more structured access to a virtual machine disk image, you should use <i>guestfs</i>(3). To get a structured shell that you can use to make scripted changes to guests, use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;append kernelopts</code></p>
-<dd> Pass additional options to the rescue kernel.</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>&#8211;append kernelopts</code></dt>
+<dd> Pass additional options to the rescue kernel.</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-rescue --format=raw -a disk.img
@@ -99,45 +99,45 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>-m </code><font SIZE="-1"><code>MB</code></font></p>
+<dt><code>-m </code><font SIZE="-1"><code>MB</code></font></dt>
 <dd>
-<dt><code>&#8211;memsize </code><font SIZE="-1"><code>MB</code></font></p>
-<dd> Change the amount of memory allocated to the rescue system. The default is set by libguestfs and is small but adequate for running system tools. The occasional program might need more memory. The parameter is specified in megabytes.</p>
-<dt><code>&#8211;network</code></p>
-<dd> Enable <font SIZE="-1">QEMU</font> user networking in the guest. See &#8220;<font SIZE="-1">NETWORK&#8221;</font>.</p>
-<dt><code>-r</code></p>
+</dd><dt><code>&#8211;memsize </code><font SIZE="-1"><code>MB</code></font></dt>
+<dd> Change the amount of memory allocated to the rescue system. The default is set by libguestfs and is small but adequate for running system tools. The occasional program might need more memory. The parameter is specified in megabytes.</dd>
+<dt><code>&#8211;network</code></dt>
+<dd> Enable <font SIZE="-1">QEMU</font> user networking in the guest. See &#8220;<font SIZE="-1">NETWORK&#8221;</font>.</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>&#8211;ro</code></p>
-<dd> Open the image read-only. </p>
+</dd><dt><code>&#8211;ro</code></dt>
+<dd> Open the image read-only. </dd>
 <p> The option must always be used if the disk image or virtual machine might be running, and is generally recommended in cases where you don&#8217;t need write access to the disk. </p>
 <p> See also &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;scratch</code></p>
+<dt><code>&#8211;scratch</code></dt>
 <dd>
-<dt><code>&#8211;scratch=N</code></p>
-<dd> The <i>&#8211;scratch</i> option adds a large scratch disk to the rescue appliance. <i>&#8211;scratch=N</i> adds <tt>&quot;N&quot;</tt> scratch disks. The scratch disk(s) are deleted automatically when virt-rescue exits. </p>
+</dd><dt><code>&#8211;scratch=N</code></dt>
+<dd> The <i>&#8211;scratch</i> option adds a large scratch disk to the rescue appliance. <i>&#8211;scratch=N</i> adds <tt>&quot;N&quot;</tt> scratch disks. The scratch disk(s) are deleted automatically when virt-rescue exits. </dd>
 <p> You can also mix <i>-a</i>, <i>-d</i> and <i>&#8211;scratch</i> options. The scratch disk(s) are added to the appliance in the order they appear on the command line.</p>
-<dt><code>&#8211;selinux</code></p>
-<dd> This option is provided for backwards compatibility and does nothing.</p>
-<dt><code>&#8211;smp</code> N</p>
-<dd> Enable N ≥ 2 virtual CPUs in the rescue appliance.</p>
-<dt><code>&#8211;suggest</code></p>
-<dd> Inspect the disk image and suggest what mount commands should be used to mount the disks. You should use the <i>&#8211;suggest</i> option in a second terminal, then paste the commands into another virt-rescue. </p>
+<dt><code>&#8211;selinux</code></dt>
+<dd> This option is provided for backwards compatibility and does nothing.</dd>
+<dt><code>&#8211;smp</code> N</dt>
+<dd> Enable N ≥ 2 virtual CPUs in the rescue appliance.</dd>
+<dt><code>&#8211;suggest</code></dt>
+<dd> Inspect the disk image and suggest what mount commands should be used to mount the disks. You should use the <i>&#8211;suggest</i> option in a second terminal, then paste the commands into another virt-rescue. </dd>
 <p> This option implies <i>&#8211;ro</i> and is safe to use even if the guest is up or if another virt-rescue is running.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-w</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-w</code></dt>
 <dd>
-<dt><code>&#8211;rw</code></p>
-<dd> This changes the <i>-a</i> and <i>-d</i> options so that disks are added and mounts are done read-write. </p>
+</dd><dt><code>&#8211;rw</code></dt>
+<dd> This changes the <i>-a</i> and <i>-d</i> options so that disks are added and mounts are done read-write. </dd>
 <p> See &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-rescue allowed you to write either: </p>
 <pre>
@@ -152,12 +152,12 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <h2>NETWORK</h2>
 <p> Adding the <i>&#8211;network</i> option enables <font SIZE="-1">QEMU</font> user networking in the rescue appliance. There are some differences between user networking and ordinary networking:</p>
 <dl>
-<dt>ping does not work</p>
-<dd> Because the <font SIZE="-1">ICMP ECHO_REQUEST</font> protocol generally requires root in order to send the ping packets, and because virt-rescue must be able to run as non-root, <font SIZE="-1">QEMU</font> user networking is not able to emulate the <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) command. The ping command will appear to resolve addresses but will not be able to send or receive any packets. This does not mean that the network is not working.</p>
-<dt>cannot receive connections</p>
-<dd> <font SIZE="-1">QEMU</font> user networking cannot receive incoming connections.</p>
-<dt>making <font SIZE="-1">TCP</font> connections</p>
-<dd> The virt-rescue appliance needs to be small and so does not include many network tools. In particular there is no <i><a href="/docs/linux/man/1-telnet/">telnet</a></i>(1) command. You can make <font SIZE="-1">TCP</font> connections from the shell using the magical <i>/dev/tcp/&lt;hostname&gt;/&lt;port&gt;</i> syntax: </p>
+<dt>ping does not work</dt>
+<dd> Because the <font SIZE="-1">ICMP ECHO_REQUEST</font> protocol generally requires root in order to send the ping packets, and because virt-rescue must be able to run as non-root, <font SIZE="-1">QEMU</font> user networking is not able to emulate the <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) command. The ping command will appear to resolve addresses but will not be able to send or receive any packets. This does not mean that the network is not working.</dd>
+<dt>cannot receive connections</dt>
+<dd> <font SIZE="-1">QEMU</font> user networking cannot receive incoming connections.</dd>
+<dt>making <font SIZE="-1">TCP</font> connections</dt>
+<dd> The virt-rescue appliance needs to be small and so does not include many network tools. In particular there is no <i><a href="/docs/linux/man/1-telnet/">telnet</a></i>(1) command. You can make <font SIZE="-1">TCP</font> connections from the shell using the magical <i>/dev/tcp/&lt;hostname&gt;/&lt;port&gt;</i> syntax: </dd>
 <pre>
  exec 3&lt;&gt;/dev/tcp/redhat.com/80
  echo &quot;GET /&quot; &gt;&amp;3
@@ -167,41 +167,41 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <h2>CAPTURING CORE DUMPS</h2>
 <p> If you are testing a tool inside virt-rescue and the tool (<code>not</code> virt-rescue) segfaults, it can be tricky to capture the core dump outside virt-rescue for later analysis. This section describes one way to do this.</p>
 <dl>
-<dt>1.</p>
-<dd> Create a scratch disk for core dumps: </p>
+<dt>1.</dt>
+<dd> Create a scratch disk for core dumps: </dd>
 <p>truncate &#8211; s 4G / tmp / corefiles virt &#8211; format&#8211; partition = mbr&#8211; filesystem = ext2 &#8211; a / tmp / corefiles virt &#8211; filesystems &#8211; a / tmp / corefiles&#8211; all&#8211; long &#8211; h</p>
-<dt>2.</p>
-<dd> When starting virt-rescue, attach the core files disk last: </p>
+<dt>2.</dt>
+<dd> When starting virt-rescue, attach the core files disk last: </dd>
 <pre>
  virt-rescue --rw [-a ...] -a /tmp/corefiles
 </pre>
 <p> <font SIZE="-1"><code>NB.</code></font> If you use the <i>&#8211;ro</i> option, then virt-rescue will silently not write any core files to <i>/tmp/corefiles</i>.</p>
-<dt>3.</p>
-<dd> Inside virt-rescue, mount the core files disk. Note replace <i>/dev/sdb1</i> with the last disk index. For example if the core files disk is the last of four disks, you would use <i>/dev/sdd1</i>. </p>
+<dt>3.</dt>
+<dd> Inside virt-rescue, mount the core files disk. Note replace <i>/dev/sdb1</i> with the last disk index. For example if the core files disk is the last of four disks, you would use <i>/dev/sdd1</i>. </dd>
 <pre>
  &gt;&lt;rescue&gt; mkdir /tmp/mnt
  &gt;&lt;rescue&gt; mount /dev/sdb1 /tmp/mnt
 </pre>
-<dt>4.</p>
-<dd> Enable core dumps in the rescue kernel: </p>
+<dt>4.</dt>
+<dd> Enable core dumps in the rescue kernel: </dd>
 <pre>
  &gt;&lt;rescue&gt; echo '/tmp/mnt/core.%p' &gt; /proc/sys/kernel/core_pattern
  &gt;&lt;rescue&gt; ulimit -Hc unlimited
  &gt;&lt;rescue&gt; ulimit -Sc unlimited
 </pre>
-<dt>5.</p>
-<dd> Run the tool that caused the core dump. The core dump will be written to <i>/tmp/mnt/core.</i><font SIZE="-1"><i>PID</i></font><i></i>. </p>
+<dt>5.</dt>
+<dd> Run the tool that caused the core dump. The core dump will be written to <i>/tmp/mnt/core.</i><font SIZE="-1"><i>PID</i></font><i></i>. </dd>
 <pre><code>
 &gt; &lt;rescue&gt; ls - l / tmp / mnt total 1628 - rw-- -- -- -1 root root 1941504 Dec 7 13 : 13 core .130 drwx-- -- --2 root root 16384 Dec 7 13 : 00 lost + found
 </code></pre>
-<dt>6.</p>
-<dd> Before exiting virt-rescue, unmount (or at least sync) the disks: </p>
+<dt>6.</dt>
+<dd> Before exiting virt-rescue, unmount (or at least sync) the disks: </dd>
 <pre>
  &gt;&lt;rescue&gt; umount /tmp/mnt
  &gt;&lt;rescue&gt; exit
 </pre>
-<dt>7.</p>
-<dd> Outside virt-rescue, the core dump(s) can be removed from the disk using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). For example: </p>
+<dt>7.</dt>
+<dd> Outside virt-rescue, the core dump(s) can be removed from the disk using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). For example: </dd>
 <pre>
  guestfish --ro -a /tmp/corefiles -m /dev/sda1
  &gt;&lt;fs&gt; ll /
@@ -212,14 +212,14 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> Several environment variables affect virt-rescue. See &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3) for the complete list.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</p>
+<dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</dt>
 <dd>
-<dt>$HOME/.libguestfs-tools.rc</p>
+</dd><dt>$HOME/.libguestfs-tools.rc</dt>
 <dd>
-<dt>$XDG_CONFIG_DIRS/libguestfs/libguestfs-tools.conf</p>
+</dd><dt>$XDG_CONFIG_DIRS/libguestfs/libguestfs-tools.conf</dt>
 <dd>
-<dt>/etc/libguestfs-tools.conf</p>
-<dd> This configuration file controls the default read-only or read-write mode (<i>&#8211;ro</i> or <i>&#8211;rw</i>). </p>
+</dd><dt>/etc/libguestfs-tools.conf</dt>
+<dd> This configuration file controls the default read-only or read-write mode (<i>&#8211;ro</i> or <i>&#8211;rw</i>). </dd>
 <p> See <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5).</dl>
 <h2>SEE ALSO</h2>
 <p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
@@ -236,35 +236,35 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAG">OPTIONS</a></p>
+<dt><a href="#lbAG">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAH">OLD-STYLE COMMAND LINE ARGUMENTS</a></p>
+</dd><dt><a href="#lbAH">OLD-STYLE COMMAND LINE ARGUMENTS</a></dt>
 <dd>
-<dt><a href="#lbAI">NETWORK</a></p>
+</dd><dt><a href="#lbAI">NETWORK</a></dt>
 <dd>
-<dt><a href="#lbAJ">CAPTURING CORE DUMPS</a></p>
+</dd><dt><a href="#lbAJ">CAPTURING CORE DUMPS</a></dt>
 <dd>
-<dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAL">FILES</a></p>
+</dd><dt><a href="#lbAL">FILES</a></dt>
 <dd>
-<dt><a href="#lbAM">SEE ALSO</a></p>
+</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAN">AUTHOR</a></p>
+</dd><dt><a href="#lbAN">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAO">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAO">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAP">LICENSE</a></p>
+</dd><dt><a href="#lbAP">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAQ">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">BUGS</a></dt>
+<dd></dd></dl>

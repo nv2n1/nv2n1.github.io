@@ -16,37 +16,37 @@ description: "delp – The Free Pascal file deletion tool."
 <h2>USAGE</h2>
 <p> <code>delp </code> takes the following options at this time:</p>
 <dl>
-<dt><code>-e</code></p>
-<dd> Delete all executable files as well. This option has no effect on Linux.</p>
-<dt><code>-h </code></p>
-<dd> Displays a short help message.</p>
-<dt><code>-q</code></p>
-<dd> Be more quiet. Normally, delp gives a count of the number of files deleted. If this option is given, no messages are displayed. </p>
+<dt><code>-e</code></dt>
+<dd> Delete all executable files as well. This option has no effect on Linux.</dd>
+<dt><code>-h </code></dt>
+<dd> Displays a short help message.</dd>
+<dt><code>-q</code></dt>
+<dd> Be more quiet. Normally, delp gives a count of the number of files deleted. If this option is given, no messages are displayed. </dd>
 </dl>
 <h2>FILE TYPES:</h2>
 <p> The following file types are recognized by the program and are deleted:</p>
 <dl>
-<dt><i>*.exe</i></p>
-<dd> Executable files under dos and windows. Only deleted if the <i>-e</i> option is given.</p>
-<dt><i>*.so *.dll</i></p>
-<dd> Shared libraries under linux and Windows.</p>
-<dt><i>*.tpu *.tpp *.tpw *.tr</i></p>
-<dd> Turbo Pascal compiled units.</p>
-<dt><i>*.log *.bak</i></p>
-<dd> Backup files and log files.</p>
-<dt><i>*.ppu *.o *.a *.s</i></p>
-<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on Linux or Dos</p>
-<dt><i>*.ppw *.ow *.aw *.sw</i></p>
-<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on Windows.</p>
-<dt><i>*.pp1 *.o1 *.a1 *.s1</i></p>
-<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on the go321v1 platform.</p>
-<dt><i>*.ppo *.oo *.ao *.so</i></p>
-<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on the OS/2 platform.</p>
-<dt><i>ppas.bat ppas.sh link.res fpcmaked</i></p>
-<dd> Batch files, link script and makefile utility files.</dl>
+<dt><i>*.exe</i></dt>
+<dd> Executable files under dos and windows. Only deleted if the <i>-e</i> option is given.</dd>
+<dt><i>*.so *.dll</i></dt>
+<dd> Shared libraries under linux and Windows.</dd>
+<dt><i>*.tpu *.tpp *.tpw *.tr</i></dt>
+<dd> Turbo Pascal compiled units.</dd>
+<dt><i>*.log *.bak</i></dt>
+<dd> Backup files and log files.</dd>
+<dt><i>*.ppu *.o *.a *.s</i></dt>
+<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on Linux or Dos</dd>
+<dt><i>*.ppw *.ow *.aw *.sw</i></dt>
+<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on Windows.</dd>
+<dt><i>*.pp1 *.o1 *.a1 *.s1</i></dt>
+<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on the go321v1 platform.</dd>
+<dt><i>*.ppo *.oo *.ao *.so</i></dt>
+<dd> Compiled units, object files, archives and assembler files created by the Free Pascal compiler on the OS/2 platform.</dd>
+<dt><i>ppas.bat ppas.sh link.res fpcmaked</i></dt>
+<dd> Batch files, link script and makefile utility files.</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-fpcmake/">fpcmake</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-fpcmake/">fpcmake</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

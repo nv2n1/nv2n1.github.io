@@ -15,19 +15,19 @@ get_phy_c45_ids - reads the specified addr for its 802.3-c45 IDs.
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the target MII bus</dl>
+<dl><dd></dd><dd>the target MII bus</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>PHY address on the MII bus</dl>
+<dl><dd>PHY address on the MII bus</dd></dl>
  
 
  <i>phy_id</i>
-<dl><dd>where to store the ID retrieved.</dl>
+<dl><dd>where to store the ID retrieved.</dd></dl>
  
 
  <i>c45_ids</i>
-<dl><dd>where to store the c45 ID information.</dl>
+<dl><dd>where to store the c45 ID information.</dd></dl>
 
 <h2>Description</h2>
 

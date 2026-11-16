@@ -14,7 +14,7 @@ description: "crypto_aead_authsize – obtain maximum authentication data size"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <h2>Description</h2>
 <p>The maximum size of the authentication data for the AEAD cipher referenced by the AEAD cipher handle is returned. The authentication data size may be zero if the cipher implements a hard-coded maximum. </p>
 <p> The authentication data may also be known as &#8220;tag value&#8221;.</p>
@@ -23,8 +23,8 @@ description: "crypto_aead_authsize – obtain maximum authentication data size"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

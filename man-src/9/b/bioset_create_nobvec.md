@@ -14,10 +14,10 @@ description: "bioset_create_nobvec – Create a bio_set without bio_vec mempool"
 <p><i>pool_size</i></p>
 <dl>
 <dd>
-<dd>Number of bio to cache in the mempool</dl>
+</dd><dd>Number of bio to cache in the mempool</dd></dl>
 <p> <i>front_pad</i></p>
 <dl>
-<dd>Number of bytes to allocate in front of the returned bio</dl>
+<dd>Number of bytes to allocate in front of the returned bio</dd></dl>
 <h2>Description</h2>
 <p>Same functionality as <code>bioset_create</code> except that mempool is not created for bio_vecs. Saving some memory for <code>bio_clone_fast</code> users.</p>
 <h2>Copyright</h2>

@@ -13,16 +13,16 @@ description: "oath_hotp_validate – API function"
 int oath_hotp_validate(const char *secret, size_t secret_length, uint64_t start_moving_factor, size_t window, const char *otp);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * secret</p>
-<dd>the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd>length of <i>secret</i></p>
-<dt>uint64_t start_moving_factor</p>
-<dd>start counter in OTP stream</p>
-<dt>size_t window</p>
-<dd>how many OTPs after start counter to test</p>
-<dt>const char * otp</p>
-<dd>the OTP to validate.</dl>
+<dt>const char * secret</dt>
+<dd>the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd>length of <i>secret</i></dd>
+<dt>uint64_t start_moving_factor</dt>
+<dd>start counter in OTP stream</dd>
+<dt>size_t window</dt>
+<dd>how many OTPs after start counter to test</dd>
+<dt>const char * otp</dt>
+<dd>the OTP to validate.</dd></dl>
 <h2>Description</h2>
 <p>Validate an OTP according to OATH HOTP algorithm per RFC 4226. </p>
 <p> Currently only OTP lengths of 6, 7 or 8 digits are supported. This restrictions may be lifted in future versions, although some limitations are inherent in the protocol.</p>

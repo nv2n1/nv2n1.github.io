@@ -14,26 +14,26 @@ description: "thin_metadata_size – thin provisioning metadata device/file size
 <p><code>thin_metadata_size</code> calculates the size of the thin provisioning metadata based on the block size of the thin provisioned devices, the size of the thin provisioning pool and the maximum number of all thin provisioned devices and snapshots. Because thin provisioning pools are holding widely variable contents, this tool is needed to provide sensible initial default size.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-b</code>, <code>&#8211;block-size</code> {BLOCKSIZE[bskKmMgGtTpPeEzZyY]}</p>
-<dd>Set block size.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-b</code>, <code>&#8211;block-size</code> {BLOCKSIZE[bskKmMgGtTpPeEzZyY]}</dt>
+<dd>Set block size.</dd></dl>
 <pre> Block size of thin provisioned devices in units of bytes, sectors,
  kibibytes, kilobytes, ... respectively. Default is in sectors without a
  block size unit specifier. Size/number option arguments can be followed by
  unit specifiers in short one character and long form (eg. -b1m or
  -b1mebibytes).</pre>
 <dl>
-<dt><code>-s</code>, <code>&#8211;pool-size</code> {POOLSIZE[bskKmMgGtTpPeEzZyY]}</p>
-<dd>Set pool size.</dl>
+<dt><code>-s</code>, <code>&#8211;pool-size</code> {POOLSIZE[bskKmMgGtTpPeEzZyY]}</dt>
+<dd>Set pool size.</dd></dl>
 <pre> Thin provisioning pool size in units of bytes, sectors, kibibytes,
  kilobytes, ... respectively. Default is in sectors without a pool size
  unit specifier.</pre>
 <dl>
-<dt><code>-m</code>, <code>&#8211;max-thins</code> {count[bskKmMgGtTpPeEzZyY]}</p>
-<dd>Set max thins.</dl>
+<dt><code>-m</code>, <code>&#8211;max-thins</code> {count[bskKmMgGtTpPeEzZyY]}</dt>
+<dd>Set max thins.</dd></dl>
 <pre> Maximum sum of all thin provisioned devices and snapshots. Unit identifier
  supported to allow for convenient entry of large quantities, eg. 1000000 =
  1M. Default is absolute quantity without a number unit specifier.</pre>
@@ -41,8 +41,8 @@ description: "thin_metadata_size – thin provisioning metadata device/file size
 <pre> Output unit specifier in units of bytes, sectors, kibibytes, kilobytes, ...
  respectively. Default is in sectors without an output unit specifier.</pre>
 <dl>
-<dt><code>-n</code>, <code>&#8211;numeric-only</code> {short|long}</p>
-<dd>Limit output to just the size number.</dl>
+<dt><code>-n</code>, <code>&#8211;numeric-only</code> {short|long}</dt>
+<dd>Limit output to just the size number.</dd></dl>
 <h2>Examples</h2>
 <p>Calculates the thin provisioning metadata device size for block size 64 kibibytes, pool size 1 tebibytes and maximum number of thin provisioned devices and snapshots of 1000 in units of sectors with long output: </p>
 <pre> $ thin_metadata_size -b64k -s1t -m1000</pre>

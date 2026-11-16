@@ -13,16 +13,16 @@ description: "deja-dup-preferences – manual page for deja-dup-preferences 34.3
 <p> <code>deja-dup-preferences</code> [<i>OPTION</i>&#8230;]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-deja-dup/">deja-dup</a></code>(1) </p>
 <h2>Index</h2>

@@ -17,14 +17,14 @@ description: "gajim-history-manager – a tool to manage"
 <p> is a tool to manage Po do some cleanup Pc log file of <a href="/docs/linux/man/1-gajim/">gajim</a>(1). Use this program to delete or export logs. For more information on database logs see &lt;<a rel="nofollow" href="https://trac.gajim.org/wiki/LogsDatabase">https://trac.gajim.org/wiki/LogsDatabase</a>&gt;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>-c &#8211;config-path </code><i>directory</i></p>
-<dd> Where to look for logs file</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-c &#8211;config-path </code><i>directory</i></dt>
+<dd> Where to look for logs file</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>$XDG_DATA_DIR/gajim/logs.db</code></p>
-<dd> The history database log file used when [-<code>c</code> ] is not specified.</dl>
+<dt><code>$XDG_DATA_DIR/gajim/logs.db</code></dt>
+<dd> The history database log file used when [-<code>c</code> ] is not specified.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit is written and maintained by An Yann Leboulanger , and An Denis Fomin , with contributions and patches merged from many individuals around the world. See files AUTHORS and THANKS for a complete list.</p>
 <h2>COPYRIGHT</h2>

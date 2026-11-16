@@ -15,11 +15,11 @@ snd_soc_put_xr_sx - signed multi register get callback
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>mreg control</dl>
+<dl><dd></dd><dd>mreg control</dd></dl>
  
 
  <i>ucontrol</i>
-<dl><dd>control element information</dl>
+<dl><dd>control element information</dd></dl>
 
 <h2>Description</h2>
 

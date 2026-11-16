@@ -14,12 +14,12 @@ description: "ata_gen_ata_sense – generate a SCSI fixed sense block"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Command that we are erroring out</dl>
+</dd><dd>Command that we are erroring out</dd></dl>
 <h2>Description</h2>
 <p>Generate sense block for a failed ATA command <i>qc</i>. Descriptor format is used to accommodate LBA48 block address. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

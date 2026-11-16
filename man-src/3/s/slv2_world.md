@@ -33,8 +33,8 @@ description: "Global library state –"
 <h3>void slv2_world_load_bundle (SLV2Worldworld, SLV2Valuebundle_uri)</h3>
 <p>Load a specific bundle. </p>
 <dl>
-<dt>&bull;</p>
-<dd>bundle_uri A fully qualified URI to the bundle directory, with the trailing slash, eg. file:///usr/lib/lv2/someBundle/</dl>
+<dt>&bull;</dt>
+<dd>bundle_uri A fully qualified URI to the bundle directory, with the trailing slash, eg. file:///usr/lib/lv2/someBundle/</dd></dl>
 <p> Normal hosts should not use this function. </p>
 <p> Hosts should <code>never</code> attach any long-term significance to bundle paths as there are no guarantees they will remain consistent whatsoever. Plugins (and other things) are identified by URIs, <code>not</code> bundle or file names. </p>
 <p> This function should only be used by apps which ship with a special bundle (which it knows exists at some path because the bundle is shipped with the application). </p>

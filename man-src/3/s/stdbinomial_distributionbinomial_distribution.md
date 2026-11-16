@@ -11,10 +11,8 @@ description: "std::binomial_distribution<IntType>::binomial_distribution – std
 <h2>Synopsis</h2>
 <pre><code>binomial_distribution()
     : binomial_distribution(1){}(1)(since C++ 11)
-
           explicit binomial_distribution(IntType t, double p = 0.5);
 (2)(since C++ 11)
-
     explicit binomial_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses t and p as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>

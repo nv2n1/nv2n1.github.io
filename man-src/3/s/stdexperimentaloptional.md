@@ -11,9 +11,7 @@ std::experimental::optional - std::experimental::optional
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/optional&gt;
-
 template&lt; class T &gt;                        (library fundamentals TS)
-
 class optional;</code></pre> 
 The class template std::experimental::optional manages an optional contained value, i.e. a value that may or may not be present. 
 A common use case for optional is the return value of a function that may fail. As opposed to other approaches, such as std::pair&lt;T,bool&gt;, optional handles expensive to construct objects well and is more readable, as the intent is expressed explicitly. 

@@ -15,32 +15,32 @@ description: "hp-makecopies – Make Copies Utility"
 <p> <code>hp-makecopies [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>
-<dt>To specify a device-URI:</p>
-<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</p>
-<dt>To specify a CUPS printer:</p>
-<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dl>
+<dt>To specify a device-URI:</dt>
+<dd> -d&lt;device-uri&gt; or &#8211;device=&lt;device-uri&gt;</dd>
+<dt>To specify a CUPS printer:</dt>
+<dd> -p&lt;printer&gt; or &#8211;printer=&lt;printer&gt;</dd></dl>
 <h2>MODE</h2>
 <dl>
-<dt>Run in non-interactive mode:</p>
-<dd> -n or &#8211;non-interactive</dl>
+<dt>Run in non-interactive mode:</dt>
+<dd> -n or &#8211;non-interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Number of copies:</p>
-<dd> -m&lt;num_copies&gt; or &#8211;copies=&lt;num_copies&gt; or &#8211;num=&lt;num_copies&gt; (1-99)</p>
-<dt>Reduction/enlargement:</p>
-<dd> -r&lt;%&gt; or &#8211;reduction=&lt;%&gt; or &#8211;enlargement=&lt;%&gt; (25-400%)</p>
-<dt>Quality:</p>
-<dd> -q&lt;quality&gt; or &#8211;quality=&lt;quality&gt; (where quality is: &#8216;fast&#8217;, &#8216;draft&#8217;, &#8216;normal&#8217;, &#8216;presentation&#8217;, or &#8216;best&#8217;)</p>
-<dt>Contrast:</p>
-<dd> -c&lt;contrast&gt; or &#8211;contrast=&lt;contrast&gt; (-5 to +5)</p>
-<dt>Fit to page (flatbed only):</p>
-<dd> -f or &#8211;fittopage or &#8211;fit (overrides reduction/enlargement)</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Number of copies:</dt>
+<dd> -m&lt;num_copies&gt; or &#8211;copies=&lt;num_copies&gt; or &#8211;num=&lt;num_copies&gt; (1-99)</dd>
+<dt>Reduction/enlargement:</dt>
+<dd> -r&lt;%&gt; or &#8211;reduction=&lt;%&gt; or &#8211;enlargement=&lt;%&gt; (25-400%)</dd>
+<dt>Quality:</dt>
+<dd> -q&lt;quality&gt; or &#8211;quality=&lt;quality&gt; (where quality is: &#8216;fast&#8217;, &#8216;draft&#8217;, &#8216;normal&#8217;, &#8216;presentation&#8217;, or &#8216;best&#8217;)</dd>
+<dt>Contrast:</dt>
+<dd> -c&lt;contrast&gt; or &#8211;contrast=&lt;contrast&gt; (-5 to +5)</dd>
+<dt>Fit to page (flatbed only):</dt>
+<dd> -f or &#8211;fittopage or &#8211;fit (overrides reduction/enlargement)</dd></dl>
 <h2>AUTHOR</h2>
 <p> HPLIP (Hewlett-Packard Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.</p>
 <h2>REPORTING BUGS</h2>

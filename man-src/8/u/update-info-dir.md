@@ -14,8 +14,8 @@ description: "update-info-dir – update or create index file from all installed
 <p>Update, or create, the index file <i>dir</i> of available documentation in /usr/share/info/ (the default) or in given DIRECTORY. The index file <i>info</i> is the directory is usually presented by info browsers on startup.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h,&#8211;help</code></p>
-<dd>Display help and exit.</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-emacs/">emacs</a>(1) <a href="/docs/linux/man/1-info/">info</a>(1) <a href="/docs/linux/man/1-install-info/">install-info</a>(1)</p>
 <h2>Author</h2>

@@ -11,10 +11,8 @@ std::less&lt;void&gt; - std::less&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class less&lt;void&gt;;</code></pre> 
 std::less&lt;&gt; is a specialization of std::less with parameter and return type deduced. 
 

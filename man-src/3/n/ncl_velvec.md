@@ -29,40 +29,40 @@ VELVEC is obsolete, and is supported only to provide compatibility with old NCAR
 <h2>Description</h2>
 
 <dl><dt>U
-<dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>LU
-<dd>(INTEGER, input): Actual value of the first dimension of array U.
-<dt>V
-<dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>LV
-<dd>LV (INTEGER, input): Actual value of the first dimension of array V.
-<dt>M
-<dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>N
-<dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
-<dt>FLO
-<dd>(REAL, input): Minimum vector magnitude allowed to be displayed in the plot.
-<dt>HI
-<dd>(REAL, input): Maximum vector magnitude allowed to be displayed in the plot. If set to 0.0 there is no upper limit imposed.
-<dt>NSET
-<dd>(INTEGER, input): Flag that controls how and when the SET call is invoked. If NSET is 0, VELVEC makes a SET call to establish a standard viewport and window boundaries coincident with the array coordinate boundaries. PERIM is called to draw a border. If NSET is greater than zero, VELVEC does not call SET or PERIM. If NSET is less than zero, VELVEC calls SET to establish window boundaries coincident with the array grid coordinate boundaries but does not modify the viewport or call PERIM. Unlike the VVINIT/VVECTR interface, when VELVEC does a SET call, it always restores the original coordinate system state before returning.
-<dt>ISPV
-<dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=SPV(1) the vector will not be plotted. 2 means that if the value of V(I,J)=SPV(2) the vector will not be plotted. 3 means that if either U(I,J)=SPV(1) or V(I,J)=SPV(2) then the vector will not be plotted. 4 means that if U(I,J)=SPV(1) and V(I,J)=SPV(2), the vector will not be plotted.
-<dt>SPV
-<dd>(REAL array, dimensioned 2, input): An array of length 2 which gives the value in the U array and the value in the V array which denote special values. This argument is ignored if ISPV=0. The default values are 1.0E12.</dl>
+</dt><dd>(REAL 2-dimensional array, dimensioned LU x n: n &gt;= N, input): By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>LU
+</dt><dd>(INTEGER, input): Actual value of the first dimension of array U.
+</dd><dt>V
+</dt><dd>(REAL 2-dimensional array, dimensioned LV x n: n &gt;= N, input): By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>LV
+</dt><dd>LV (INTEGER, input): Actual value of the first dimension of array V.
+</dd><dt>M
+</dt><dd>(INTEGER, input): Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>N
+</dt><dd>(INTEGER, input): Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, U and V.
+</dd><dt>FLO
+</dt><dd>(REAL, input): Minimum vector magnitude allowed to be displayed in the plot.
+</dd><dt>HI
+</dt><dd>(REAL, input): Maximum vector magnitude allowed to be displayed in the plot. If set to 0.0 there is no upper limit imposed.
+</dd><dt>NSET
+</dt><dd>(INTEGER, input): Flag that controls how and when the SET call is invoked. If NSET is 0, VELVEC makes a SET call to establish a standard viewport and window boundaries coincident with the array coordinate boundaries. PERIM is called to draw a border. If NSET is greater than zero, VELVEC does not call SET or PERIM. If NSET is less than zero, VELVEC calls SET to establish window boundaries coincident with the array grid coordinate boundaries but does not modify the viewport or call PERIM. Unlike the VVINIT/VVECTR interface, when VELVEC does a SET call, it always restores the original coordinate system state before returning.
+</dd><dt>ISPV
+</dt><dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=SPV(1) the vector will not be plotted. 2 means that if the value of V(I,J)=SPV(2) the vector will not be plotted. 3 means that if either U(I,J)=SPV(1) or V(I,J)=SPV(2) then the vector will not be plotted. 4 means that if U(I,J)=SPV(1) and V(I,J)=SPV(2), the vector will not be plotted.
+</dd><dt>SPV
+</dt><dd>(REAL array, dimensioned 2, input): An array of length 2 which gives the value in the U array and the value in the V array which denote special values. This argument is ignored if ISPV=0. The default values are 1.0E12.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions: 
 
 <dl><dt>lu
-<dd>The second dimension of u in the calling program.
-<dt>lv
-<dd>The second dimension of v in the calling program.
-<dt>m
-<dd>Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, u and v.
-<dt>n
-<dd>Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, u and v.</dl>
+</dt><dd>The second dimension of u in the calling program.
+</dd><dt>lv
+</dt><dd>The second dimension of v in the calling program.
+</dd><dt>m
+</dt><dd>Number of contiguous elements along the second dimensional axis containing data to be processed in each of the arrays, u and v.
+</dd><dt>n
+</dt><dd>Number of contiguous elements along the first dimensional axis containing data to be processed in each of the arrays, u and v.</dd></dl>
 
 <h2>Usage</h2>
 

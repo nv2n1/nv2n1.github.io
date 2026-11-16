@@ -14,11 +14,11 @@ description: "piix_check_450nx_errata – Check for problem 450NX setup"
 <p><i>ata_dev</i></p>
 <dl>
 <dd>
-<dd>the PCI device to check</dl>
+</dd><dd>the PCI device to check</dd></dl>
 <h2>Description</h2>
 <p>Check for the present of 450NX errata #19 and errata #25. If they are found return an error code so we can turn off DMA</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

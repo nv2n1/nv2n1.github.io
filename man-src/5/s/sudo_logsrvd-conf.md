@@ -22,153 +22,153 @@ description: "sudo_logsrvd.conf – configuration for sudo_logsrvd"
 <h3>server</h3>
 <p>The <i>server</i> section configures the address and port the server will listen on. The following keys are recognized:</p>
 <dl>
-<dt><code>listen_address = host </code>[: <code>port </code>[(tls)] ]</p>
-<dd>The host name or IP address, optional port to listen on and an optional Transport Layer Security (TLS) flag in parentheses. The host may be a host name, an IPv4 address, an IPv6 address in square brackets or the wild card entry `*&#8217; A host setting of `*&#8217; will cause <code>sudo_logsrvd</code> to listen on all configured network interfaces. If the optional tls flag is present, <code>sudo_logsrvd</code> will secure the connection with TLS version 1.2 or 1.3. Versions of TLS prior to 1.2 are not supported. See sudo_logsrvd8 for details on generating TLS keys and certificates. If a port is specified, it may either be a port number or a known service name as defined by the system service name database. If no port is specified, port 30343 will be used for plaintext connections and port 30344 will be used for TLS connections. The default value is: </p>
+<dt><code>listen_address = host </code>[: <code>port </code>[(tls)] ]</dt>
+<dd>The host name or IP address, optional port to listen on and an optional Transport Layer Security (TLS) flag in parentheses. The host may be a host name, an IPv4 address, an IPv6 address in square brackets or the wild card entry `*&#8217; A host setting of `*&#8217; will cause <code>sudo_logsrvd</code> to listen on all configured network interfaces. If the optional tls flag is present, <code>sudo_logsrvd</code> will secure the connection with TLS version 1.2 or 1.3. Versions of TLS prior to 1.2 are not supported. See sudo_logsrvd8 for details on generating TLS keys and certificates. If a port is specified, it may either be a port number or a known service name as defined by the system service name database. If no port is specified, port 30343 will be used for plaintext connections and port 30344 will be used for TLS connections. The default value is: </dd>
 <blockquote>
 <pre>listen_address = *:30343
 listen_address = *:30344(tls)</pre>
 </blockquote>
 <p> which will listen on all configured network interfaces for both plaintext and TLS connections. Multiple <i>listen_address</i> lines may be specified to listen on more than one port or interface.</p>
-<dt><code>server_log = string</code></p>
-<dd>Where to log server warning and error messages. Supported values are <i>none</i> <i>stderr</i> <i>syslog</i> or a path name beginning with the `/&#8217; character. Note that a value of <i>stderr</i> is only effective when used in conjunction with the &#8211;<code>n</code> option. The default value is <i>syslog</i></p>
-<dt><code>pid_file = path</code></p>
-<dd>The path to the file containing the process ID of the running <code>sudo_logsrvd</code> If set to an empty value, or if <code>sudo_logsrvd</code> is run with the &#8211;<code>n</code> option, no <i>pid_file</i> will be created. If <i>pid_file</i> refers to a symbolic link, it will be ignored. The default value is /run/sudo/sudo_logsrvd.pid</p>
-<dt><code>tcp_keepalive = boolean</code></p>
-<dd>If true, <code>sudo_logsrvd</code> will enable the TCP keepalive socket option on the client connection. This enables the periodic transmission of keepalive messages to the client. If the client does not respond to a message in time, the connection will be closed. Defaults to true.</p>
-<dt><code>timeout = number</code></p>
-<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the client to respond. A value of 0 will disable the timeout. The default value is 30.</p>
-<dt><code>tls_cacert = path</code></p>
-<dd>The path to a certificate authority bundle file, in PEM format, to use instead of the system&#8217;s default certificate authority database when authenticating clients. The default is to use /etc/ssl/sudo/cacert.pem if it exists, otherwise the system&#8217;s default certificate authority database is used.</p>
-<dt><code>tls_cert = path</code></p>
-<dd>The path to the server&#8217;s certificate file, in PEM format. The default value is /etc/ssl/sudo/certs/logsrvd_cert.pem</p>
-<dt><code>tls_checkpeer = bool</code></p>
-<dd>If true, client certificates will be validated by <code>sudo_logsrvd</code> clients without a valid certificate will be unable to connect. If false, no validation of client certificates will be performed. It true and client certificates are created using a private certificate authority, the <i>tls_cacert</i> setting must be set to a CA bundle that contains the CA certificate used to generate the client certificate. The default value is <code>false</code></p>
-<dt><code>tls_ciphers_v12 = string</code></p>
-<dd>A list of ciphers to use for connections secured by TLS version 1.2 only, separated by a colon `:&#8217; See the Sx CIPHER LIST FORMAT section in openssl-ciphers1 for full details. The default value is <code>HIGH:!aNULL</code> which consists of encryption cipher suites with key lengths larger than 128 bits, and some cipher suites with 128-bit keys. Cipher suites that offer no authentication are excluded.</p>
-<dt><code>tls_ciphers_v13 = string</code></p>
-<dd>A list of ciphers to use for connections secured by TLS version 1.3 only, separated by a colon `:&#8217; Supported cipher suites depend on the version of OpenSSL used, but should include the following: </p>
-<dt><code>TLS_AES_128_GCM_SHA256</code></p>
+<dt><code>server_log = string</code></dt>
+<dd>Where to log server warning and error messages. Supported values are <i>none</i> <i>stderr</i> <i>syslog</i> or a path name beginning with the `/&#8217; character. Note that a value of <i>stderr</i> is only effective when used in conjunction with the &#8211;<code>n</code> option. The default value is <i>syslog</i></dd>
+<dt><code>pid_file = path</code></dt>
+<dd>The path to the file containing the process ID of the running <code>sudo_logsrvd</code> If set to an empty value, or if <code>sudo_logsrvd</code> is run with the &#8211;<code>n</code> option, no <i>pid_file</i> will be created. If <i>pid_file</i> refers to a symbolic link, it will be ignored. The default value is /run/sudo/sudo_logsrvd.pid</dd>
+<dt><code>tcp_keepalive = boolean</code></dt>
+<dd>If true, <code>sudo_logsrvd</code> will enable the TCP keepalive socket option on the client connection. This enables the periodic transmission of keepalive messages to the client. If the client does not respond to a message in time, the connection will be closed. Defaults to true.</dd>
+<dt><code>timeout = number</code></dt>
+<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the client to respond. A value of 0 will disable the timeout. The default value is 30.</dd>
+<dt><code>tls_cacert = path</code></dt>
+<dd>The path to a certificate authority bundle file, in PEM format, to use instead of the system&#8217;s default certificate authority database when authenticating clients. The default is to use /etc/ssl/sudo/cacert.pem if it exists, otherwise the system&#8217;s default certificate authority database is used.</dd>
+<dt><code>tls_cert = path</code></dt>
+<dd>The path to the server&#8217;s certificate file, in PEM format. The default value is /etc/ssl/sudo/certs/logsrvd_cert.pem</dd>
+<dt><code>tls_checkpeer = bool</code></dt>
+<dd>If true, client certificates will be validated by <code>sudo_logsrvd</code> clients without a valid certificate will be unable to connect. If false, no validation of client certificates will be performed. It true and client certificates are created using a private certificate authority, the <i>tls_cacert</i> setting must be set to a CA bundle that contains the CA certificate used to generate the client certificate. The default value is <code>false</code></dd>
+<dt><code>tls_ciphers_v12 = string</code></dt>
+<dd>A list of ciphers to use for connections secured by TLS version 1.2 only, separated by a colon `:&#8217; See the Sx CIPHER LIST FORMAT section in openssl-ciphers1 for full details. The default value is <code>HIGH:!aNULL</code> which consists of encryption cipher suites with key lengths larger than 128 bits, and some cipher suites with 128-bit keys. Cipher suites that offer no authentication are excluded.</dd>
+<dt><code>tls_ciphers_v13 = string</code></dt>
+<dd>A list of ciphers to use for connections secured by TLS version 1.3 only, separated by a colon `:&#8217; Supported cipher suites depend on the version of OpenSSL used, but should include the following: </dd>
+<dt><code>TLS_AES_128_GCM_SHA256</code></dt>
 <dd>
-<dt><code>TLS_AES_256_GCM_SHA384</code></p>
+</dd><dt><code>TLS_AES_256_GCM_SHA384</code></dt>
 <dd>
-<dt><code>TLS_CHACHA20_POLY1305_SHA256</code></p>
+</dd><dt><code>TLS_CHACHA20_POLY1305_SHA256</code></dt>
 <dd>
-<dt><code>TLS_AES_128_CCM_SHA256</code></p>
+</dd><dt><code>TLS_AES_128_CCM_SHA256</code></dt>
 <dd>
-<dt><code>TLS_AES_128_CCM_8_SHA256</code></p>
-<dd></dl>
+</dd><dt><code>TLS_AES_128_CCM_8_SHA256</code></dt>
+<dd></dd></dl>
 <p> The default cipher suite is TLS_AES_256_GCM_SHA384.</p>
-<dt><code>tls_dhparams = path</code></p>
-<dd>The path to a file containing custom Diffie-Hellman parameters in PEM format. This file can be created with the following command: </p>
+<dt><code>tls_dhparams = path</code></dt>
+<dd>The path to a file containing custom Diffie-Hellman parameters in PEM format. This file can be created with the following command: </dd>
 <pre>openssl dhparam -out /etc/sudo_logsrvd_dhparams.pem 2048</pre>
 <p>By default, <code>sudo_logsrvd</code> will use the OpenSSL defaults for Diffie-Hellman key generation.</p>
-<dt><code>tls_key = path</code></p>
-<dd>The path to the server&#8217;s private key file, in PEM format. The default value is /etc/ssl/sudo/private/logsrvd_key.pem</p>
-<dt><code>tls_verify = bool</code></p>
-<dd>If true, <code>sudo_logsrvd.conf</code> will validate its own certificate at startup time or when the configuration is changed. If false, no verification is performed of the server certificate. When using self-signed certificates without a certificate authority, this setting should be set to false. The default value is true.</dl>
+<dt><code>tls_key = path</code></dt>
+<dd>The path to the server&#8217;s private key file, in PEM format. The default value is /etc/ssl/sudo/private/logsrvd_key.pem</dd>
+<dt><code>tls_verify = bool</code></dt>
+<dd>If true, <code>sudo_logsrvd.conf</code> will validate its own certificate at startup time or when the configuration is changed. If false, no verification is performed of the server certificate. When using self-signed certificates without a certificate authority, this setting should be set to false. The default value is true.</dd></dl>
 <h3>relay</h3>
 <p>The <i>relay</i> section configures the optional logsrv relay host and port the server will connect to. The TLS configuration keys are optional, by default the corresponding keys in the Sx server section will be used. They are only present in this section to make it possible for the relay connection to use a different set of TLS parameters from the client-facing server. The following keys are recognized:</p>
 <dl>
-<dt><code>connect_timeout = number</code></p>
-<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the connection to a <i>relay_host</i> (see below) to complete. Once the connection is complete, the <i>timeout</i> setting controls the amount of time <code>sudo_logsrvd</code> will wait for the relay to respond. A value of 0 will disable the timeout. The default value is 30.</p>
-<dt><code>relay_dir = path</code></p>
-<dd>The directory in which log messages are temporarily stored before they are sent to the relay host. Messages are stored in the wire format specified by sudo_logsrv.proto5 The default value is /var/log/sudo_logsrvd</p>
-<dt><code>relay_host = host </code>[: <code>port </code>[(tls)] ]</p>
-<dd>The relay host name or IP address, optional port to connect to and an optional Transport Layer Security (TLS) flag in parentheses. The syntax is identical to <i>listen_address</i> in the Sx server section with one exception: the wild card `*&#8217; syntax is not supported. When this setting is enabled, messages from the client will be forwarded to one of the specified relay hosts instead of being stored locally. The <i>host</i> could be running an instance of <code>sudo_logsrvd</code> or another server that supports the sudo_logsrv.proto5 protocol. If multiple <i>relay_host</i> lines are specified, the first available relay host will be used.</p>
-<dt><code>retry_interval = number</code></p>
-<dd>The number of seconds to wait after a connection error before making a new attempt to forward a message to a relay host. The default value is 30 seconds.</p>
-<dt><code>store_first = boolean</code></p>
-<dd>If true, <code>sudo_logsrvd</code> will store logs locally before relaying them. Once the log is complete, a connection to the relay host is opened and the log is relayed. If the network connection is interrupted before the log can be fully transferred, it will be retransmitted later. The default is to relay logs in real-time.</p>
-<dt><code>tcp_keepalive = boolean</code></p>
-<dd>If true, <code>sudo_logsrvd</code> will enable the TCP keepalive socket option on the relay connection. This enables the periodic transmission of keepalive messages to the relay server. If the relay does not respond to a message in time, the connection will be closed.</p>
-<dt><code>timeout = number</code></p>
-<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the relay server to respond after a connection has succeeded. A value of 0 will disable the timeout. The default value is 30.</p>
-<dt><code>tls_cacert = path</code></p>
-<dd>The path to a certificate authority bundle file, in PEM format, to use instead of the system&#8217;s default certificate authority database when authenticating clients. The default is to use the value specified in the Sx server section, or the system&#8217;s default certificate authority database if no value is set.</p>
-<dt><code>tls_cert = path</code></p>
-<dd>The path to the server&#8217;s certificate file, in PEM format. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_checkpeer = bool</code></p>
-<dd>If true, the relay host&#8217;s certificate will be validated by <code>sudo_logsrvd</code> connections to a relay without a valid certificate will fail. If false, no validation of relay certificates will be performed. It true and relay certificates are created using a private certificate authority, the <i>tls_cacert</i> setting must be set to a CA bundle that contains the CA certificate used to generate the relay certificate. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_ciphers_v12 = string</code></p>
-<dd>A list of ciphers to use for connections secured by TLS version 1.2 only, separated by a colon `:&#8217; See the Sx CIPHER LIST FORMAT section in openssl-ciphers1 for full details. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_ciphers_v13 = string</code></p>
-<dd>A list of ciphers to use for connections secured by TLS version 1.3 only, separated by a colon `:&#8217; Supported cipher suites depend on the version of OpenSSL used, see the Sx server section for more information. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_dhparams = path</code></p>
-<dd>The path to a file containing custom Diffie-Hellman parameters in PEM format. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_key = path</code></p>
-<dd>The path to the server&#8217;s private key file, in PEM format. The default is to use the value specified in the Sx server section.</p>
-<dt><code>tls_verify = bool</code></p>
-<dd>If true, the server&#8217;s certificate used for relaying will be verified at startup. If false, no verification is performed of the server certificate. When using self-signed certificates without a certificate authority, this setting should be set to false. The default is to use the value specified in the Sx server section.</dl>
+<dt><code>connect_timeout = number</code></dt>
+<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the connection to a <i>relay_host</i> (see below) to complete. Once the connection is complete, the <i>timeout</i> setting controls the amount of time <code>sudo_logsrvd</code> will wait for the relay to respond. A value of 0 will disable the timeout. The default value is 30.</dd>
+<dt><code>relay_dir = path</code></dt>
+<dd>The directory in which log messages are temporarily stored before they are sent to the relay host. Messages are stored in the wire format specified by sudo_logsrv.proto5 The default value is /var/log/sudo_logsrvd</dd>
+<dt><code>relay_host = host </code>[: <code>port </code>[(tls)] ]</dt>
+<dd>The relay host name or IP address, optional port to connect to and an optional Transport Layer Security (TLS) flag in parentheses. The syntax is identical to <i>listen_address</i> in the Sx server section with one exception: the wild card `*&#8217; syntax is not supported. When this setting is enabled, messages from the client will be forwarded to one of the specified relay hosts instead of being stored locally. The <i>host</i> could be running an instance of <code>sudo_logsrvd</code> or another server that supports the sudo_logsrv.proto5 protocol. If multiple <i>relay_host</i> lines are specified, the first available relay host will be used.</dd>
+<dt><code>retry_interval = number</code></dt>
+<dd>The number of seconds to wait after a connection error before making a new attempt to forward a message to a relay host. The default value is 30 seconds.</dd>
+<dt><code>store_first = boolean</code></dt>
+<dd>If true, <code>sudo_logsrvd</code> will store logs locally before relaying them. Once the log is complete, a connection to the relay host is opened and the log is relayed. If the network connection is interrupted before the log can be fully transferred, it will be retransmitted later. The default is to relay logs in real-time.</dd>
+<dt><code>tcp_keepalive = boolean</code></dt>
+<dd>If true, <code>sudo_logsrvd</code> will enable the TCP keepalive socket option on the relay connection. This enables the periodic transmission of keepalive messages to the relay server. If the relay does not respond to a message in time, the connection will be closed.</dd>
+<dt><code>timeout = number</code></dt>
+<dd>The amount of time, in seconds, <code>sudo_logsrvd</code> will wait for the relay server to respond after a connection has succeeded. A value of 0 will disable the timeout. The default value is 30.</dd>
+<dt><code>tls_cacert = path</code></dt>
+<dd>The path to a certificate authority bundle file, in PEM format, to use instead of the system&#8217;s default certificate authority database when authenticating clients. The default is to use the value specified in the Sx server section, or the system&#8217;s default certificate authority database if no value is set.</dd>
+<dt><code>tls_cert = path</code></dt>
+<dd>The path to the server&#8217;s certificate file, in PEM format. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_checkpeer = bool</code></dt>
+<dd>If true, the relay host&#8217;s certificate will be validated by <code>sudo_logsrvd</code> connections to a relay without a valid certificate will fail. If false, no validation of relay certificates will be performed. It true and relay certificates are created using a private certificate authority, the <i>tls_cacert</i> setting must be set to a CA bundle that contains the CA certificate used to generate the relay certificate. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_ciphers_v12 = string</code></dt>
+<dd>A list of ciphers to use for connections secured by TLS version 1.2 only, separated by a colon `:&#8217; See the Sx CIPHER LIST FORMAT section in openssl-ciphers1 for full details. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_ciphers_v13 = string</code></dt>
+<dd>A list of ciphers to use for connections secured by TLS version 1.3 only, separated by a colon `:&#8217; Supported cipher suites depend on the version of OpenSSL used, see the Sx server section for more information. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_dhparams = path</code></dt>
+<dd>The path to a file containing custom Diffie-Hellman parameters in PEM format. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_key = path</code></dt>
+<dd>The path to the server&#8217;s private key file, in PEM format. The default is to use the value specified in the Sx server section.</dd>
+<dt><code>tls_verify = bool</code></dt>
+<dd>If true, the server&#8217;s certificate used for relaying will be verified at startup. If false, no verification is performed of the server certificate. When using self-signed certificates without a certificate authority, this setting should be set to false. The default is to use the value specified in the Sx server section.</dd></dl>
 <h3>iolog</h3>
 <p>The <i>iolog</i> section configures I/O log parameters. These settings are identical to the I/O configuration in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5). The following keys are recognized:</p>
 <dl>
-<dt><code>iolog_compress = boolean</code></p>
-<dd>If set, I/O logs will be compressed using <code>zlib</code> Enabling compression can make it harder to view the logs in real-time as the program is executing due to buffering. The default value is <code>false</code></p>
-<dt><code>iolog_dir = path</code></p>
-<dd>The top-level directory to use when constructing the path name for the I/O log directory. The session sequence number, if any, is stored in the directory. The default value is /var/log/sudo-io The following percent (`%&#8217; ) escape sequences are supported:</p>
+<dt><code>iolog_compress = boolean</code></dt>
+<dd>If set, I/O logs will be compressed using <code>zlib</code> Enabling compression can make it harder to view the logs in real-time as the program is executing due to buffering. The default value is <code>false</code></dd>
+<dt><code>iolog_dir = path</code></dt>
+<dd>The top-level directory to use when constructing the path name for the I/O log directory. The session sequence number, if any, is stored in the directory. The default value is /var/log/sudo-io The following percent (`%&#8217; ) escape sequences are supported:</dd>
 <dl>
-<dt><code>%{seq}</code></p>
-<dd>expanded to a monotonically increasing base-36 sequence number, such as 0100A5, where every two digits are used to form a new directory, e.g., 01/00/A5</p>
-<dt><code>%{user}</code></p>
-<dd>expanded to the invoking user&#8217;s login name</p>
-<dt><code>%{group}</code></p>
-<dd>expanded to the name of the invoking user&#8217;s real group-ID</p>
-<dt><code>%{runas_user}</code></p>
-<dd>expanded to the login name of the user the command will be run as (e.g., root)</p>
-<dt><code>%{runas_group}</code></p>
-<dd>expanded to the group name of the user the command will be run as (e.g., wheel)</p>
-<dt><code>%{hostname}</code></p>
-<dd>expanded to the local host name without the domain name</p>
-<dt><code>%{command}</code></p>
-<dd>expanded to the base name of the command being run</dl>
+<dt><code>%{seq}</code></dt>
+<dd>expanded to a monotonically increasing base-36 sequence number, such as 0100A5, where every two digits are used to form a new directory, e.g., 01/00/A5</dd>
+<dt><code>%{user}</code></dt>
+<dd>expanded to the invoking user&#8217;s login name</dd>
+<dt><code>%{group}</code></dt>
+<dd>expanded to the name of the invoking user&#8217;s real group-ID</dd>
+<dt><code>%{runas_user}</code></dt>
+<dd>expanded to the login name of the user the command will be run as (e.g., root)</dd>
+<dt><code>%{runas_group}</code></dt>
+<dd>expanded to the group name of the user the command will be run as (e.g., wheel)</dd>
+<dt><code>%{hostname}</code></dt>
+<dd>expanded to the local host name without the domain name</dd>
+<dt><code>%{command}</code></dt>
+<dd>expanded to the base name of the command being run</dd></dl>
 <p> In addition, any escape sequences supported by the system&#8217;s <a href="/docs/linux/man/3-strftime/">strftime</a>(3) function will be expanded. To include a literal `%&#8217; character, the string `%%&#8217; should be used.</p>
-<dt><code>iolog_file = path</code></p>
-<dd>The path name, relative to <i>iolog_dir</i> in which to store I/O logs. Note that <i>iolog_file</i> may contain directory components. The default value is <code>%{seq}</code> See the <i>iolog_dir</i> setting above for a list of supported percent (`%&#8217; ) escape sequences. In addition to the escape sequences, path names that end in six or more <code>X s</code> will have the <code>X s</code> replaced with a unique combination of digits and letters, similar to the <a href="/docs/linux/man/3-mktemp/">mktemp</a>(3) function. If the path created by concatenating <i>iolog_dir</i> and <i>iolog_file</i> already exists, the existing I/O log file will be truncated and overwritten unless <i>iolog_file</i> ends in six or more <code>X s</code></p>
-<dt><code>iolog_flush = boolean</code></p>
-<dd>If set, I/O log data is flushed to disk after each write instead of buffering it. This makes it possible to view the logs in real-time as the program is executing but may significantly reduce the effectiveness of I/O log compression. I/O logs are always flushed before sending a commit point to the client regardless of this setting. The default value is <code>true</code></p>
-<dt><code>iolog_group = name</code></p>
-<dd>The group name to look up when setting the group-ID on new I/O log files and directories. If <i>iolog_group</i> is not set, the primary group-ID of the user specified by <i>iolog_user is used.</i> If neither <i>iolog_group</i> nor <i>iolog_user</i> are set, I/O log files and directories are created with group-ID 0.</p>
-<dt><code>iolog_mode = mode</code></p>
-<dd>The file mode to use when creating I/O log files. Mode bits for read and write permissions for owner, group, or other are honored, everything else is ignored. The file permissions will always include the owner read and write bits, even if they are not present in the specified mode. When creating I/O log directories, search (execute) bits are added to match the read and write bits specified by <i>iolog_mode</i> The default value is <code>0600</code></p>
-<dt><code>iolog_user = name</code></p>
-<dd>The user name to look up when setting the owner of new I/O log files and directories. If <i>iolog_group</i> is set, it will be used instead of the user&#8217;s primary group-ID. By default, I/O log files and directories are created with user and group-ID 0.</p>
-<dt><code>maxseq = number</code></p>
-<dd>The maximum sequence number that will be substituted for the &#8220;<code>%{seq}</code> &#8221; escape in the I/O log file (see the <i>iolog_dir</i> description above for more information). While the value substituted for &#8220;<code>%{seq}</code> &#8221; is in base 36, <i>maxseq</i> itself should be expressed in decimal. Values larger than 2176782336 (which corresponds to the base 36 sequence number &#8220;ZZZZZZ&#8221; will be silently truncated to 2176782336. The default value is 2176782336.</dl>
+<dt><code>iolog_file = path</code></dt>
+<dd>The path name, relative to <i>iolog_dir</i> in which to store I/O logs. Note that <i>iolog_file</i> may contain directory components. The default value is <code>%{seq}</code> See the <i>iolog_dir</i> setting above for a list of supported percent (`%&#8217; ) escape sequences. In addition to the escape sequences, path names that end in six or more <code>X s</code> will have the <code>X s</code> replaced with a unique combination of digits and letters, similar to the <a href="/docs/linux/man/3-mktemp/">mktemp</a>(3) function. If the path created by concatenating <i>iolog_dir</i> and <i>iolog_file</i> already exists, the existing I/O log file will be truncated and overwritten unless <i>iolog_file</i> ends in six or more <code>X s</code></dd>
+<dt><code>iolog_flush = boolean</code></dt>
+<dd>If set, I/O log data is flushed to disk after each write instead of buffering it. This makes it possible to view the logs in real-time as the program is executing but may significantly reduce the effectiveness of I/O log compression. I/O logs are always flushed before sending a commit point to the client regardless of this setting. The default value is <code>true</code></dd>
+<dt><code>iolog_group = name</code></dt>
+<dd>The group name to look up when setting the group-ID on new I/O log files and directories. If <i>iolog_group</i> is not set, the primary group-ID of the user specified by <i>iolog_user is used.</i> If neither <i>iolog_group</i> nor <i>iolog_user</i> are set, I/O log files and directories are created with group-ID 0.</dd>
+<dt><code>iolog_mode = mode</code></dt>
+<dd>The file mode to use when creating I/O log files. Mode bits for read and write permissions for owner, group, or other are honored, everything else is ignored. The file permissions will always include the owner read and write bits, even if they are not present in the specified mode. When creating I/O log directories, search (execute) bits are added to match the read and write bits specified by <i>iolog_mode</i> The default value is <code>0600</code></dd>
+<dt><code>iolog_user = name</code></dt>
+<dd>The user name to look up when setting the owner of new I/O log files and directories. If <i>iolog_group</i> is set, it will be used instead of the user&#8217;s primary group-ID. By default, I/O log files and directories are created with user and group-ID 0.</dd>
+<dt><code>maxseq = number</code></dt>
+<dd>The maximum sequence number that will be substituted for the &#8220;<code>%{seq}</code> &#8221; escape in the I/O log file (see the <i>iolog_dir</i> description above for more information). While the value substituted for &#8220;<code>%{seq}</code> &#8221; is in base 36, <i>maxseq</i> itself should be expressed in decimal. Values larger than 2176782336 (which corresponds to the base 36 sequence number &#8220;ZZZZZZ&#8221; will be silently truncated to 2176782336. The default value is 2176782336.</dd></dl>
 <h3>eventlog</h3>
 <p>The <i>eventlog</i> section configures how (and if) security policy events are logged.</p>
 <dl>
-<dt><code>log_type = string</code></p>
-<dd>Where to log accept, reject, and alert events reported by the policy. Supported values are <i>syslog</i> <i>logfile</i> and <i>none</i> The default value is <i>syslog</i></p>
-<dt><code>log_exit = boolean</code></p>
-<dd>If true, <code>sudo_logsrvd</code> will log an event when a command exits or is terminated by a signal. Defaults to false.</p>
-<dt><code>log_format = string</code></p>
-<dd>The event log format. Supported log formats are &#8220;sudo&#8221; for traditional sudo-style logs and &#8220;json&#8221; for JSON-format logs. The JSON log entries contain the full contents of the accept, reject, exit and alert messages. The default value is <i>sudo</i></dl>
+<dt><code>log_type = string</code></dt>
+<dd>Where to log accept, reject, and alert events reported by the policy. Supported values are <i>syslog</i> <i>logfile</i> and <i>none</i> The default value is <i>syslog</i></dd>
+<dt><code>log_exit = boolean</code></dt>
+<dd>If true, <code>sudo_logsrvd</code> will log an event when a command exits or is terminated by a signal. Defaults to false.</dd>
+<dt><code>log_format = string</code></dt>
+<dd>The event log format. Supported log formats are &#8220;sudo&#8221; for traditional sudo-style logs and &#8220;json&#8221; for JSON-format logs. The JSON log entries contain the full contents of the accept, reject, exit and alert messages. The default value is <i>sudo</i></dd></dl>
 <h3>syslog</h3>
 <p>The <i>syslog</i> section configures how events are logged via <a href="/docs/linux/man/3-syslog/">syslog</a>(3).</p>
 <dl>
-<dt><code>facility = string</code></p>
-<dd>Syslog facility if syslog is being used for logging. Defaults to <code>authpriv</code> The following syslog facilities are supported: <code>authpriv</code> (if your OS supports it), <code>auth</code> <code>daemon</code> <code>user</code> <code>local0</code> <code>local1</code> <code>local2</code> <code>local3</code> <code>local4</code> <code>local5</code> <code>local6</code> and <code>local7</code></p>
-<dt><code>accept_priority = string</code></p>
-<dd>Syslog priority to use when the user is allowed to run a command and authentication is successful. Defaults to <code>notice</code> The following syslog priorities are supported: <code>alert</code> <code>crit</code> <code>debug</code> <code>emerg</code> <code>err</code> <code>info</code> <code>notice</code> <code>warning</code> and <code>none</code> Setting it to a value of <code>none</code> will disable logging of successful commands.</p>
-<dt><code>reject_priority = string</code></p>
-<dd>Syslog priority to use when the user is not allowed to run a command or when authentication is unsuccessful. Defaults to <code>alert</code> See <i>accept_priority</i> for the list of supported syslog priorities.</p>
-<dt><code>alert_priority = string</code></p>
-<dd>Syslog priority to use for event log alert messages received from the client. Defaults to <code>alert</code> See <i>accept_priority</i> for the list of supported syslog priorities.</p>
-<dt><code>maxlen = number</code></p>
-<dd>On many systems, <a href="/docs/linux/man/3-syslog/">syslog</a>(3) has a relatively small log buffer. IETF RFC 5424 states that syslog servers must support messages of at least 480 bytes and should support messages up to 2048 bytes. By default, <code>sudo_logsrvd</code> creates log messages up to 960 bytes which corresponds to the historic BSD syslog implementation which used a 1024 byte buffer to store the message, date, hostname, and program name. To prevent syslog messages from being truncated, <code>sudo_logsrvd</code> will split up sudo-style log messages that are larger than <i>maxlen</i> bytes. When a message is split, additional parts will include the string &#8220;(command continued) &#8221; after the user name and before the continued command line arguments. JSON-format log entries are never split and are not affected by <i>maxlen</i></p>
-<dt><code>server_facility = string</code></p>
-<dd>Syslog facility if syslog is being used for server warning messages. See above for a list of supported facilities. Defaults to <code>daemon</code></dl>
+<dt><code>facility = string</code></dt>
+<dd>Syslog facility if syslog is being used for logging. Defaults to <code>authpriv</code> The following syslog facilities are supported: <code>authpriv</code> (if your OS supports it), <code>auth</code> <code>daemon</code> <code>user</code> <code>local0</code> <code>local1</code> <code>local2</code> <code>local3</code> <code>local4</code> <code>local5</code> <code>local6</code> and <code>local7</code></dd>
+<dt><code>accept_priority = string</code></dt>
+<dd>Syslog priority to use when the user is allowed to run a command and authentication is successful. Defaults to <code>notice</code> The following syslog priorities are supported: <code>alert</code> <code>crit</code> <code>debug</code> <code>emerg</code> <code>err</code> <code>info</code> <code>notice</code> <code>warning</code> and <code>none</code> Setting it to a value of <code>none</code> will disable logging of successful commands.</dd>
+<dt><code>reject_priority = string</code></dt>
+<dd>Syslog priority to use when the user is not allowed to run a command or when authentication is unsuccessful. Defaults to <code>alert</code> See <i>accept_priority</i> for the list of supported syslog priorities.</dd>
+<dt><code>alert_priority = string</code></dt>
+<dd>Syslog priority to use for event log alert messages received from the client. Defaults to <code>alert</code> See <i>accept_priority</i> for the list of supported syslog priorities.</dd>
+<dt><code>maxlen = number</code></dt>
+<dd>On many systems, <a href="/docs/linux/man/3-syslog/">syslog</a>(3) has a relatively small log buffer. IETF RFC 5424 states that syslog servers must support messages of at least 480 bytes and should support messages up to 2048 bytes. By default, <code>sudo_logsrvd</code> creates log messages up to 960 bytes which corresponds to the historic BSD syslog implementation which used a 1024 byte buffer to store the message, date, hostname, and program name. To prevent syslog messages from being truncated, <code>sudo_logsrvd</code> will split up sudo-style log messages that are larger than <i>maxlen</i> bytes. When a message is split, additional parts will include the string &#8220;(command continued) &#8221; after the user name and before the continued command line arguments. JSON-format log entries are never split and are not affected by <i>maxlen</i></dd>
+<dt><code>server_facility = string</code></dt>
+<dd>Syslog facility if syslog is being used for server warning messages. See above for a list of supported facilities. Defaults to <code>daemon</code></dd></dl>
 <h3>logfile</h3>
 <p>The <i>logfile</i> section consists of settings related to logging to a plain file (not syslog).</p>
 <dl>
-<dt><code>path = string</code></p>
-<dd>The path to the file-based event log. This path must be fully-qualified and start with a `/&#8217; character. The default value is /var/log/sudo.log</p>
-<dt><code>time_format = string</code></p>
-<dd>The string used when formatting the date and time for file-based event logs. Formatting is performed via the system&#8217;s <a href="/docs/linux/man/3-strftime/">strftime</a>(3) function so any escape sequences supported by that function will be expanded. The default value is &#8220;<code>%h %e %T</code> &#8221; which produces dates like &#8220;Oct 3 07:15:24&#8221; in the C locale.</dl>
+<dt><code>path = string</code></dt>
+<dd>The path to the file-based event log. This path must be fully-qualified and start with a `/&#8217; character. The default value is /var/log/sudo.log</dd>
+<dt><code>time_format = string</code></dt>
+<dd>The string used when formatting the date and time for file-based event logs. Formatting is performed via the system&#8217;s <a href="/docs/linux/man/3-strftime/">strftime</a>(3) function so any escape sequences supported by that function will be expanded. The default value is &#8220;<code>%h %e %T</code> &#8221; which produces dates like &#8220;Oct 3 07:15:24&#8221; in the C locale.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sudo_logsrvd.conf </code></p>
-<dd>Sudo log server configuration file</dl>
+<dt><code>/etc/sudo_logsrvd.conf </code></dt>
+<dd>Sudo log server configuration file</dd></dl>
 <h2>Examples</h2>
 <pre>#
 # sudo logsrv daemon configuration

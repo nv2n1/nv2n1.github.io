@@ -20,24 +20,24 @@ description: "tangle – translate WEB to Pascal"
 <h2>OPTIONS</h2>
 <p> This version of <code>tangle</code> understands the following options. Note that some of these options may render the output unsuitable for processing by a Pascal compiler.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;length</code><i>&nbsp;number</i></p>
-<dd> Compare only the first <i>number</i> characters of identifiers when checking for collisions. The default is 32, the original <code>tangle</code> used 7.</p>
-<dt><code>&#8211;loose</code></p>
-<dd> When checking for collisions between identifiers, honor the settings of the <code>&#8211;lowercase</code>, <code>&#8211;mixedcase</code>, <code>&#8211;uppercase</code>, and <code>&#8211;underline</code> options. This is the default.</p>
-<dt><code>&#8211;lowercase</code></p>
-<dd> Convert all identifiers to lowercase.</p>
-<dt><code>&#8211;mixedcase</code></p>
-<dd> Retain the case of identifiers. This is the default.</p>
-<dt><code>&#8211;strict</code></p>
-<dd> When checking for collisions between identifiers, strip underlines and convert all identifiers to uppercase first.</p>
-<dt><code>&#8211;underline</code></p>
-<dd> Retain underlines (also known as underscores) in identifiers.</p>
-<dt><code>&#8211;uppercase</code></p>
-<dd> Convert all identifiers to uppercase. This is the behaviour of the original <code>tangle</code>.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;length</code><i>&nbsp;number</i></dt>
+<dd> Compare only the first <i>number</i> characters of identifiers when checking for collisions. The default is 32, the original <code>tangle</code> used 7.</dd>
+<dt><code>&#8211;loose</code></dt>
+<dd> When checking for collisions between identifiers, honor the settings of the <code>&#8211;lowercase</code>, <code>&#8211;mixedcase</code>, <code>&#8211;uppercase</code>, and <code>&#8211;underline</code> options. This is the default.</dd>
+<dt><code>&#8211;lowercase</code></dt>
+<dd> Convert all identifiers to lowercase.</dd>
+<dt><code>&#8211;mixedcase</code></dt>
+<dd> Retain the case of identifiers. This is the default.</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> When checking for collisions between identifiers, strip underlines and convert all identifiers to uppercase first.</dd>
+<dt><code>&#8211;underline</code></dt>
+<dd> Retain underlines (also known as underscores) in identifiers.</dd>
+<dt><code>&#8211;uppercase</code></dt>
+<dd> Convert all identifiers to uppercase. This is the behaviour of the original <code>tangle</code>.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable WEBINPUTS is used to search for the input files, or the system default if WEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>SEE ALSO</h2>

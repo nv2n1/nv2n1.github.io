@@ -34,24 +34,24 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 <p>Retrieves the data associated with the given client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data associated with cl.</dl>
+<dd>The data associated with cl.</dd></dl>
 <h3>EAPI void ecore_con_client_data_set (<code>Ecore_Con_Client</code> * cl, const void * data)</h3>
 <p>Sets the data associated with the given client to data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cl</i> The given client.<br />
- <i>data</i> What to set the data to.</dl>
+ <i>data</i> What to set the data to.</dd></dl>
 <h3>EAPI void* ecore_con_client_del (<code>Ecore_Con_Client</code> * cl)</h3>
 <p>Closes the connection and frees memory allocated to the given client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Data associated with the client.</dl>
+<dd>Data associated with the client.</dd></dl>
 <p> References ecore_list_goto(), ecore_list_remove(), and ecore_main_fd_handler_del(). </p>
 <p> Referenced by ecore_ipc_client_del().</p>
 <h3>EAPI void ecore_con_client_flush (<code>Ecore_Con_Client</code> * cl)</h3>
@@ -59,16 +59,16 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 <p> Will return when done. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> Referenced by ecore_ipc_client_flush().</p>
 <h3>EAPI char* ecore_con_client_ip_get (<code>Ecore_Con_Client</code> * cl)</h3>
 <p>Gets the IP address of a cleint that has connected. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to an internal string that contains the IP address of the connected client in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the cl object. If no IP is known NULL is returned.</dl>
+<dd>A pointer to an internal string that contains the IP address of the connected client in the form &#8216;XXX.YYY.ZZZ.AAA&#8217; IP notation. This string should not be modified or trusted to stay valid after deletion for the cl object. If no IP is known NULL is returned.</dd></dl>
 <p> Referenced by ecore_ipc_client_ip_get().</p>
 <h3>EAPI int ecore_con_client_send (<code>Ecore_Con_Client</code> * cl, const void * data, int size)</h3>
 <p>Sends the given data to the given client. </p>
@@ -76,32 +76,32 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 <dl COMPACT>
 <dd><i>cl</i> The given client.<br />
  <i>data</i> The given data.<br />
- <i>size</i> Length of the data, in bytes, to send.</dl>
+ <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of bytes sent. 0 will be returned if there is an error.</dl>
+<dd>The number of bytes sent. 0 will be returned if there is an error.</dd></dl>
 <p> References ECORE_FD_READ, ECORE_FD_WRITE, and ecore_main_fd_handler_active_set(). </p>
 <p> Referenced by ecore_ipc_client_send().</p>
 <h3>EAPI <code>Ecore_Con_Server</code>* ecore_con_client_server_get (<code>Ecore_Con_Client</code> * cl)</h3>
 <p>Retrieves the server representing the socket the client has connected to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The server that the client connected to.</dl>
+<dd>The server that the client connected to.</dd></dl>
 <p> Referenced by ecore_ipc_client_del(), and ecore_ipc_client_server_get().</p>
 <h3>EAPI int ecore_con_ssl_available_get (void)</h3>
 <p>Returns if SSL support is available. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if SSL is available, 0 if it is not.</dl>
+<dd>1 if SSL is available, 0 if it is not.</dd></dl>
 <p> Referenced by ecore_ipc_ssl_available_get().</p>
 <h3>EAPI int ecore_ipc_ssl_available_get (void)</h3>
 <p>Returns if SSL support is available. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if SSL is available, 0 if it is not.</dl>
+<dd>1 if SSL is available, 0 if it is not.</dd></dl>
 <p> References ecore_con_ssl_available_get().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

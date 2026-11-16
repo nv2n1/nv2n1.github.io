@@ -16,28 +16,28 @@ description: "lighttpd – a fast, secure and flexible web server"
 <h2>Options</h2>
 <p>The following options are supported:</p>
 <dl>
-<dt><code>-f&nbsp;<wbr></code> <i>configfile</i></p>
-<dd>Load configuration file <i>configfile</i>.</p>
-<dt><code>-m&nbsp;<wbr></code> <i>moduledir</i></p>
-<dd>Use <i>moduledir</i> as the directory that contains modules, instead of the default.</p>
-<dt><code>-p</code></p>
-<dd>Print the parsed configuration file in its internal form and exit.</p>
-<dt><code>-t</code></p>
-<dd>Test the configuration file for syntax errors and exit.</p>
-<dt><code>-D</code></p>
-<dd>Do not daemonize (go into background). The default is to daemonize.</p>
-<dt><code>-v</code></p>
-<dd>Show version and exit.</p>
-<dt><code>-V</code></p>
-<dd>Show compile-time features and exit.</p>
-<dt><code>-h</code></p>
-<dd>Show a brief help message and exit.</dl>
+<dt><code>-f&nbsp;<wbr></code> <i>configfile</i></dt>
+<dd>Load configuration file <i>configfile</i>.</dd>
+<dt><code>-m&nbsp;<wbr></code> <i>moduledir</i></dt>
+<dd>Use <i>moduledir</i> as the directory that contains modules, instead of the default.</dd>
+<dt><code>-p</code></dt>
+<dd>Print the parsed configuration file in its internal form and exit.</dd>
+<dt><code>-t</code></dt>
+<dd>Test the configuration file for syntax errors and exit.</dd>
+<dt><code>-D</code></dt>
+<dd>Do not daemonize (go into background). The default is to daemonize.</dd>
+<dt><code>-v</code></dt>
+<dd>Show version and exit.</dd>
+<dt><code>-V</code></dt>
+<dd>Show compile-time features and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>Show a brief help message and exit.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/lighttpd/lighttpd.conf</p>
-<dd>The standard location for the configuration file.</p>
-<dt>/var/run/lighttpd.pid</p>
-<dd>The standard location for the PID of the running <code>lighttpd</code> process.</dl>
+<dt>/etc/lighttpd/lighttpd.conf</dt>
+<dd>The standard location for the configuration file.</dd>
+<dt>/var/run/lighttpd.pid</dt>
+<dd>The standard location for the PID of the running <code>lighttpd</code> process.</dd></dl>
 <h2>See Also</h2>
 <p>Online Documentation: <a rel="nofollow" href="http://wiki.lighttpd.net/">http://wiki.lighttpd.net/</a> </p>
 <p> <a href="/docs/linux/man/1-spawn-fcgi/">spawn-fcgi</a>(1) </p>

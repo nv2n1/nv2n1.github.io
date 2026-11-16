@@ -18,25 +18,25 @@ description: "upsrw – UPS variable administration tool"
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Display the help message.</dl>
+<dd>Display the help message.</dd></dl>
 <p> <code>-s</code> <i>variable</i></p>
 <dl>
-<dd>Specify the variable to be changed inside the UPS. For unattended mode such as in shell scripts, use the format VAR=VALUE to specify both the variable and the value, for example: </p>
+<dd>Specify the variable to be changed inside the UPS. For unattended mode such as in shell scripts, use the format VAR=VALUE to specify both the variable and the value, for example: </dd>
 <dl>
 <dd>
 <pre>-s input.transfer.high=129</pre>
-</dl>
+</dd></dl>
 <p> Without this argument, upsrw will just display the list of the variables and their possible values. </p>
 <p> Some variables are strings, and can be set to any value within the length limit. Others are enumerated types and can only be set to one of those values. Others may be within an allowed range of values. Refer to the list to know what&#8217;s available in your hardware.</dl>
 <p> <code>-u</code> <i>username</i></p>
 <dl>
-<dd>Set the NUT username for the connection to the server. This is optional, and you will be prompted for this when using the -s option if you don&#8217;t specify -u on the command line. NUT usernames are defined in <code><a href="/docs/linux/man/5-upsd-users/">upsd.users</a></code>(5), and are not linked to system usernames.</dl>
+<dd>Set the NUT username for the connection to the server. This is optional, and you will be prompted for this when using the -s option if you don&#8217;t specify -u on the command line. NUT usernames are defined in <code><a href="/docs/linux/man/5-upsd-users/">upsd.users</a></code>(5), and are not linked to system usernames.</dd></dl>
 <p> <code>-p</code> <i>password</i></p>
 <dl>
-<dd>Set the password to authenticate to the server. This is also optional like -u, and you will be prompted for it if necessary.</dl>
+<dd>Set the password to authenticate to the server. This is also optional like -u, and you will be prompted for it if necessary.</dd></dl>
 <p> <i>ups</i></p>
 <dl>
-<dd>View or change the settings on this UPS. The format for this option is upsname[@hostname[:port]]. The default hostname is &quot;localhost&quot;.</dl>
+<dd>View or change the settings on this UPS. The format for this option is upsname[@hostname[:port]]. The default hostname is &quot;localhost&quot;.</dd></dl>
 <h2>Unattended Mode</h2>
 <p>If you run this program inside a shell script or similar to set variables, you will need to specify all of the information on the command line. This means using -s VAR=VALUE, -u and -p. Otherwise it will put up a prompt and your program will hang. </p>
 <p> This is not necessary when displaying the list, as the username and password are not required for read-only mode. </p>

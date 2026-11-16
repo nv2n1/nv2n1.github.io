@@ -14,17 +14,17 @@ description: "trace_irq_handler_entry – called immediately before the irq acti
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>irq number</dl>
+</dd><dd>irq number</dd></dl>
 <p> <i>action</i></p>
 <dl>
-<dd>pointer to struct irqaction</dl>
+<dd>pointer to struct irqaction</dd></dl>
 <h2>Description</h2>
 <p>The struct irqaction pointed to by <i>action</i> contains various information about the handler, including the device name, <i>action</i>-&gt;name, and the device id, <i>action</i>-&gt;dev_id. When used in conjunction with the irq_handler_exit tracepoint, we can figure out irq handler latencies.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

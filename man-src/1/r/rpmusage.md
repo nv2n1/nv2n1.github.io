@@ -46,57 +46,57 @@ description: "rpmusage – display rpm packages last use"
 <p> it can be used without any argument, and then will apply on all packages</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd> Print the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd> Print the program release and exit.</p>
-<dt><code>-verbose</code></p>
-<dd> The program works and print debugging messages.</p>
-<dt><code>-use-cache</code></p>
-<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</p>
-<dt><code>-clear-cache</code></p>
-<dd> to remove cache file. Can be used with -use-cache to write a new cache.</p>
-<dt><code>-exclude</code></p>
-<dd> this option will specify the packages to exclude from the output. Can be used as &#8216;&#8211;exclude pac1 &#8211;exclude pac2&#8217; or &#8216;&#8211;exclude &#8220;pac1, pac2&#8221;&#8217;</p>
-<dt><code>-install-time</code></p>
-<dd> install-time is a filter on the period from the package installation date to now (in days). if set positive, it only allow packages installed before x days. if set negative, it only allow packages installed since x days.</p>
-<dt><code>-access-time</code></p>
-<dd> access-time is designed to filter packages which have not been used since x days. </p>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the program release and exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd> The program works and print debugging messages.</dd>
+<dt><code>-use-cache</code></dt>
+<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</dd>
+<dt><code>-clear-cache</code></dt>
+<dd> to remove cache file. Can be used with -use-cache to write a new cache.</dd>
+<dt><code>-exclude</code></dt>
+<dd> this option will specify the packages to exclude from the output. Can be used as &#8216;&#8211;exclude pac1 &#8211;exclude pac2&#8217; or &#8216;&#8211;exclude &#8220;pac1, pac2&#8221;&#8217;</dd>
+<dt><code>-install-time</code></dt>
+<dd> install-time is a filter on the period from the package installation date to now (in days). if set positive, it only allow packages installed before x days. if set negative, it only allow packages installed since x days.</dd>
+<dt><code>-access-time</code></dt>
+<dd> access-time is designed to filter packages which have not been used since x days. </dd>
 <p> be careful : this option will slow the program</p>
-<dt><code>-fullalgo</code></p>
-<dd> for a small list of packages, rpmusage use a different quicker methode : rpm -e &#8211;test </p>
+<dt><code>-fullalgo</code></dt>
+<dd> for a small list of packages, rpmusage use a different quicker methode : rpm -e &#8211;test </dd>
 <p> this option can be used to force the use of the full algo</p>
-<dt><code>-package</code></p>
-<dd> search if the given package(s) is(are) orphaned. Can be used as &#8216;&#8211;package pac1 &#8211;package pac2&#8217; or &#8216;&#8211;package &#8220;pac1, pac2&#8221;&#8217;</p>
-<dt><code>-all</code></p>
-<dd> apply on all installed packages. The output should be interpreted. For example lilo or grub are orphaned packages, but are necessary to boot &#8230; </p>
+<dt><code>-package</code></dt>
+<dd> search if the given package(s) is(are) orphaned. Can be used as &#8216;&#8211;package pac1 &#8211;package pac2&#8217; or &#8216;&#8211;package &#8220;pac1, pac2&#8221;&#8217;</dd>
+<dt><code>-all</code></dt>
+<dd> apply on all installed packages. The output should be interpreted. For example lilo or grub are orphaned packages, but are necessary to boot &#8230; </dd>
 <p> the &#8220;-install-time&#8221; and &#8220;-access-time&#8221; options may be useful to filter the list</p>
-<dt><code>-guess-perl</code></p>
-<dd> This option tries to find perl modules. It tries to match &#8220;^perl&#8221;</p>
-<dt><code>-guess-python</code></p>
-<dd> This option tries to find python modules. It tries to match &#8220;^python&#8221;</p>
-<dt><code>-guess-pike</code></p>
-<dd> This option tries to find pike modules. It tries to match &#8220;^pike&#8221;</p>
-<dt><code>-guess-ruby</code></p>
-<dd> This option tries to find ruby modules. It tries to match &#8220;^ruby&#8221;</p>
-<dt><code>-guess-common</code></p>
-<dd> This option tries to find common packages. It tries to match &#8220;-common$&#8221;</p>
-<dt><code>-guess-data</code></p>
-<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</p>
-<dt><code>-guess-doc</code></p>
-<dd> This option tries to find documentation packages. It tries to match &#8220;-doc$&#8221;</p>
-<dt><code>-guess-data</code></p>
-<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</p>
-<dt><code>-guess-dev</code></p>
-<dd> This option tries to find development packages. It tries to match &#8220;-devel$&#8221;</p>
-<dt><code>-guess-lib</code></p>
-<dd> This option tries to find library packages. It tries to match &#8220;^lib&#8221;</p>
-<dt><code>-guess-all</code></p>
-<dd> This is a short to tell : Try all of the above (perl, python &#8230;)</p>
-<dt><code>-guess-custom</code></p>
-<dd> this will allow you to specify your own filter. for exemple &#8220;^wh&#8221; will match whois, whatsnewfm &#8230;</dl>
+<dt><code>-guess-perl</code></dt>
+<dd> This option tries to find perl modules. It tries to match &#8220;^perl&#8221;</dd>
+<dt><code>-guess-python</code></dt>
+<dd> This option tries to find python modules. It tries to match &#8220;^python&#8221;</dd>
+<dt><code>-guess-pike</code></dt>
+<dd> This option tries to find pike modules. It tries to match &#8220;^pike&#8221;</dd>
+<dt><code>-guess-ruby</code></dt>
+<dd> This option tries to find ruby modules. It tries to match &#8220;^ruby&#8221;</dd>
+<dt><code>-guess-common</code></dt>
+<dd> This option tries to find common packages. It tries to match &#8220;-common$&#8221;</dd>
+<dt><code>-guess-data</code></dt>
+<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</dd>
+<dt><code>-guess-doc</code></dt>
+<dd> This option tries to find documentation packages. It tries to match &#8220;-doc$&#8221;</dd>
+<dt><code>-guess-data</code></dt>
+<dd> This option tries to find data packages. It tries to match &#8220;-data$&#8221;</dd>
+<dt><code>-guess-dev</code></dt>
+<dd> This option tries to find development packages. It tries to match &#8220;-devel$&#8221;</dd>
+<dt><code>-guess-lib</code></dt>
+<dd> This option tries to find library packages. It tries to match &#8220;^lib&#8221;</dd>
+<dt><code>-guess-all</code></dt>
+<dd> This is a short to tell : Try all of the above (perl, python &#8230;)</dd>
+<dt><code>-guess-custom</code></dt>
+<dd> this will allow you to specify your own filter. for exemple &#8220;^wh&#8221; will match whois, whatsnewfm &#8230;</dd></dl>
 <h2>USAGE</h2>
 <p> display all packages in access date order </p>
 <p> rpmusage.pl | sort -k 2 -n </p>

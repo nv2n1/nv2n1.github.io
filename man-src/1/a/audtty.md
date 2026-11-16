@@ -17,84 +17,84 @@ description: "audtty – Control Audacious from the command line with a friendly
 <p> To negate a short option, use &#8216;<code>+</code>&#8216; instead of &#8216;<code>&#8211;</code>&#8216; (e.g. <code>+a</code>).<br />
  Long-options are negated with <code>no-</code>, (e.g. <code>&#8211;no-read-all</code>).</p>
 <dl>
-<dt><code>The keys for basic control are as follows:</code></p>
+<dt><code>The keys for basic control are as follows:</code></dt>
 <dd> +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />
  | &lt;&lt; &gt; || o &gt;&gt; |<br />
- +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+ </p>
+ +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+ </dd>
 <p>&nbsp;<wbr>z&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&nbsp;<wbr>c&nbsp;<wbr>&nbsp;<wbr>v&nbsp;<wbr>&nbsp;<wbr>b</p>
-<dt><code>-a, &#8211;read-all</code></p>
-<dd> Read all titles and lengths on startup (EXTREMELY SLOW) (default off).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print help message.</p>
-<dt><code>-l, &#8211;length</code></p>
-<dd> Show length of track in playlist (SLOW) (default on).</p>
-<dt><code>-n, &#8211;numbers</code></p>
-<dd> Show numbers in playlist (default on).</p>
-<dt><code>-t, &#8211;title</code></p>
-<dd> Read the title from ID3/ogg-tags (SLOW) (default on).</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information.</dl>
+<dt><code>-a, &#8211;read-all</code></dt>
+<dd> Read all titles and lengths on startup (EXTREMELY SLOW) (default off).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print help message.</dd>
+<dt><code>-l, &#8211;length</code></dt>
+<dd> Show length of track in playlist (SLOW) (default on).</dd>
+<dt><code>-n, &#8211;numbers</code></dt>
+<dd> Show numbers in playlist (default on).</dd>
+<dt><code>-t, &#8211;title</code></dt>
+<dd> Read the title from ID3/ogg-tags (SLOW) (default on).</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
 <p> Tip: Things going slow? Try <code>audtty -ntl</code></p>
 <h2>KEYS</h2>
 <dl>
-<dt><code>Arrow right/left</code></p>
-<dd> Skip forward/backward 5 seconds.</p>
-<dt><code>Arrow up/down</code></p>
-<dd> Move up/down in the playlist or search results.</p>
-<dt><code>Page up/down</code></p>
-<dd> Scroll up/down one page in the playlist or search results.</p>
-<dt><code>Enter</code></p>
-<dd> Select and play file.</p>
-<dt><code>Esc</code></p>
-<dd> Exit from application, or, if in other dialog, go to main view.</p>
-<dt><code>0 or +</code></p>
-<dd> Increase volume.</p>
-<dt><code>9 or &#8211;</code></p>
-<dd> Decrease volume.</p>
-<dt><code>a</code></p>
-<dd> Open a file browser window.</p>
-<dt><code>b</code></p>
-<dd> Jump to next song.</p>
-<dt><code>c</code></p>
-<dd> Pause.</p>
-<dt><code>d</code></p>
-<dd> Remove currently selected item from playlist.</p>
-<dt><code>j</code></p>
-<dd> Search for file to jump to.</p>
-<dt><code>L</code></p>
-<dd> Add URI to playlist.</p>
-<dt><code>q</code></p>
-<dd> Exit from application.</p>
-<dt><code>R</code></p>
-<dd> Reload playlist.</p>
-<dt><code>u</code></p>
-<dd> Save playlist.</p>
-<dt><code>v</code></p>
-<dd> Stop</p>
-<dt><code>x</code></p>
-<dd> Play</p>
-<dt><code>z</code></p>
-<dd> Jump to previuos song</dl>
+<dt><code>Arrow right/left</code></dt>
+<dd> Skip forward/backward 5 seconds.</dd>
+<dt><code>Arrow up/down</code></dt>
+<dd> Move up/down in the playlist or search results.</dd>
+<dt><code>Page up/down</code></dt>
+<dd> Scroll up/down one page in the playlist or search results.</dd>
+<dt><code>Enter</code></dt>
+<dd> Select and play file.</dd>
+<dt><code>Esc</code></dt>
+<dd> Exit from application, or, if in other dialog, go to main view.</dd>
+<dt><code>0 or +</code></dt>
+<dd> Increase volume.</dd>
+<dt><code>9 or &#8211;</code></dt>
+<dd> Decrease volume.</dd>
+<dt><code>a</code></dt>
+<dd> Open a file browser window.</dd>
+<dt><code>b</code></dt>
+<dd> Jump to next song.</dd>
+<dt><code>c</code></dt>
+<dd> Pause.</dd>
+<dt><code>d</code></dt>
+<dd> Remove currently selected item from playlist.</dd>
+<dt><code>j</code></dt>
+<dd> Search for file to jump to.</dd>
+<dt><code>L</code></dt>
+<dd> Add URI to playlist.</dd>
+<dt><code>q</code></dt>
+<dd> Exit from application.</dd>
+<dt><code>R</code></dt>
+<dd> Reload playlist.</dd>
+<dt><code>u</code></dt>
+<dd> Save playlist.</dd>
+<dt><code>v</code></dt>
+<dd> Stop</dd>
+<dt><code>x</code></dt>
+<dd> Play</dd>
+<dt><code>z</code></dt>
+<dd> Jump to previuos song</dd></dl>
 <h2>FILE BROWSER</h2>
 <dl>
-<dt><code>Enter</code></p>
-<dd> Will either add the current selection if it is a file, or change directories if it is a directory.</p>
-<dt><code>a or A</code></p>
-<dd> Will add selected file or directory to the playlist.</p>
-<dt><code>q or Esc</code></p>
-<dd> Exit back to the main playlist window.</dl>
+<dt><code>Enter</code></dt>
+<dd> Will either add the current selection if it is a file, or change directories if it is a directory.</dd>
+<dt><code>a or A</code></dt>
+<dd> Will add selected file or directory to the playlist.</dd>
+<dt><code>q or Esc</code></dt>
+<dd> Exit back to the main playlist window.</dd></dl>
 <h2>CONFIGURATION FILES</h2>
 <dl>
-<dt><code>/etc/audtty.conf</code></p>
-<dd> Global configuration file.</p>
-<dt><code>$HOME/.audtty.conf</code></p>
-<dd> Local configuration file, specific for each user. Can be used to override the global options.</dl>
+<dt><code>/etc/audtty.conf</code></dt>
+<dd> Global configuration file.</dd>
+<dt><code>$HOME/.audtty.conf</code></dt>
+<dd> Local configuration file, specific for each user. Can be used to override the global options.</dd></dl>
 <p> The syntax of the configuration files are long options without the &#8216;&#8211;&#8216;, one on each line.</p>
 <dl>
-<dt><code>Example:</code></p>
+<dt><code>Example:</code></dt>
 <dd> numbers<br />
  title<br />
- length no-read-all</dl>
+ length no-read-all</dd></dl>
 <h2>BUGS</h2>
 <p> The xmms remote controlling library provides no good way of detecting changes in the playlist, and therefore <code>audtty</code> might need to be told to reload the playlist if songs are moved. Do so by pressing <code>L</code>. If the length of the playlist changes, <code>audtty</code> will assume the playlist has changed and reload the entire playlist to make sure it is correct. </p>
 <p> Probably lots more. </p>

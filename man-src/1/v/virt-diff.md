@@ -26,55 +26,55 @@ virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from the first virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from the first virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a</code> <font SIZE="-1">URI</font></p>
+<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;add</code> <font SIZE="-1">URI</font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;all</code></p>
-<dd> Same as <i>&#8211;extra-stats</i> <i>&#8211;times</i> <i>&#8211;uids</i> <i>&#8211;xattrs</i>.</p>
-<dt><code>&#8211;atime</code></p>
-<dd> The default is to ignore changes in file access times, since those are unlikely to be interesting. Using this flag shows atime differences as well.</p>
-<dt><code>-A</code> file</p>
+</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> Same as <i>&#8211;extra-stats</i> <i>&#8211;times</i> <i>&#8211;uids</i> <i>&#8211;xattrs</i>.</dd>
+<dt><code>&#8211;atime</code></dt>
+<dd> The default is to ignore changes in file access times, since those are unlikely to be interesting. Using this flag shows atime differences as well.</dd>
+<dt><code>-A</code> file</dt>
 <dd>
-<dt><code>-A</code> <font SIZE="-1">URI</font></p>
-<dd> Add a disk image from the second virtual machine.</p>
-<dt><code>&#8211;checksum</code></p>
+</dd><dt><code>-A</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a disk image from the second virtual machine.</dd>
+<dt><code>&#8211;checksum</code></dt>
 <dd>
-<dt><code>&#8211;checksum=crc|md5|sha1|sha224|sha256|sha384|sha512</code></p>
-<dd> Use a checksum over file contents to detect when regular files have changed content. </p>
+</dd><dt><code>&#8211;checksum=crc|md5|sha1|sha224|sha256|sha384|sha512</code></dt>
+<dd> Use a checksum over file contents to detect when regular files have changed content. </dd>
 <p> With no argument, this defaults to using <i>md5</i>. Using an argument, you can select the checksum type to use. If the flag is omitted then file times and size are used to determine if a file has changed.</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>&#8211;csv</code></p>
-<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</p>
-<dt><code>&#8211;dir-links</code></p>
-<dd> The default is to ignore changed in the number of links in directory entries, since those are unlikely to be interesting. Using this flag shows changes to the nlink field of directories.</p>
-<dt><code>&#8211;dir-times</code></p>
-<dd> The default is to ignore changed times on directory entries, since those are unlikely to be interesting. Using this flag shows changes to the time fields of directories.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>&#8211;csv</code></dt>
+<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</dd>
+<dt><code>&#8211;dir-links</code></dt>
+<dd> The default is to ignore changed in the number of links in directory entries, since those are unlikely to be interesting. Using this flag shows changes to the nlink field of directories.</dd>
+<dt><code>&#8211;dir-times</code></dt>
+<dd> The default is to ignore changed times on directory entries, since those are unlikely to be interesting. Using this flag shows changes to the time fields of directories.</dd>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest, as the first guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>-D</code> guest</p>
-<dd> Add all the disks from the named libvirt guest, as the second guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;echo-keys</code></p>
-<dd> When prompting for keys and passphrases, virt-diff normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</p>
-<dt><code>&#8211;extra-stats</code></p>
-<dd> Display extra stats.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest, as the first guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>-D</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest, as the second guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;echo-keys</code></dt>
+<dd> When prompting for keys and passphrases, virt-diff normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
+<dt><code>&#8211;extra-stats</code></dt>
+<dd> Display extra stats.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i>/<i>-A</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i>/<i>-A</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i>/<i>-A</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i>/<i>-A</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i>/<i>-A</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i>/<i>-A</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-diff --format=raw -a disk.img [...]
@@ -85,35 +85,35 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 </code></pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;human-readable</code></p>
-<dd> Display file sizes in human-readable format.</p>
-<dt><code>&#8211;keys-from-stdin</code></p>
-<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
-<dt><code>&#8211;times</code></p>
-<dd> Display time fields.</p>
-<dt><code>&#8211;time-days</code></p>
-<dd> Display time fields as days before now (negative if in the future). </p>
+</dd><dt><code>&#8211;human-readable</code></dt>
+<dd> Display file sizes in human-readable format.</dd>
+<dt><code>&#8211;keys-from-stdin</code></dt>
+<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
+<dt><code>&#8211;times</code></dt>
+<dd> Display time fields.</dd>
+<dt><code>&#8211;time-days</code></dt>
+<dd> Display time fields as days before now (negative if in the future). </dd>
 <p> Note that <tt>0</tt> in output means &#8220;up to 1 day before now&#8221;, or that the age of the file is between 0 and 86399 seconds.</p>
-<dt><code>&#8211;time-relative</code></p>
-<dd> Display time fields as seconds before now (negative if in the future).</p>
-<dt><code>&#8211;time-t</code></p>
-<dd> Display time fields as seconds since the Unix epoch.</p>
-<dt><code>&#8211;uids</code></p>
-<dd> Display <font SIZE="-1">UID</font> and <font SIZE="-1">GID</font> fields.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;time-relative</code></dt>
+<dd> Display time fields as seconds before now (negative if in the future).</dd>
+<dt><code>&#8211;time-t</code></dt>
+<dd> Display time fields as seconds since the Unix epoch.</dd>
+<dt><code>&#8211;uids</code></dt>
+<dd> Display <font SIZE="-1">UID</font> and <font SIZE="-1">GID</font> fields.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</p>
-<dt><code>&#8211;xattrs</code></p>
-<dd> Display extended attributes.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd>
+<dt><code>&#8211;xattrs</code></dt>
+<dd> Display extended attributes.</dd></dl>
 <h2>NOTE ABOUT CSV FORMAT</h2>
 <p> Comma-separated values (<font SIZE="-1">CSV</font>) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
 <p> Myth: Just split fields at commas. Reality: This does <i>not</i> work reliably. This example has two columns: </p>
@@ -145,13 +145,13 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

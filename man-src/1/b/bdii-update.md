@@ -16,15 +16,15 @@ description: "bdii-update – the bdii update process"
 &nbsp;<wbr>directory.&nbsp;<wbr> The difference between providers and plugins is that providers return complete entries and plugins provide modifications to existing entries. The process can be run either as a daemon that periodically syncronizes an LDAP database or as a command that will print the result to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d</p>
-<dd> Run as a daemon process.</p>
-<dt>-c config</p>
-<dd> The configuration to use.</dl>
+<dt>-d</dt>
+<dd> Run as a daemon process.</dd>
+<dt>-c config</dt>
+<dd> The configuration to use.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/etc/bdii.conf</i></p>
 <dl>
 <dt>
-<dd> The default configuration file.</dl>
+</dt><dd> The default configuration file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Laurence Field &lt;Laurence.Field at cern dot ch&gt; </p>
 <h2>Index</h2>

@@ -22,7 +22,7 @@ description: "Evas Event Freezing Functions – Functions that deal with the fre
 <p>Freeze all event processing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The canvas to freeze event processing on</dl>
+<dd><i>e</i> The canvas to freeze event processing on</dd></dl>
 <p> This function will indicate to evas that the canvas e is to have all event processing frozen until a matching <code>evas_event_thaw()</code> function is called on the same canvas. Every freeze call must be matched by a thaw call in order to completely thaw out a canvas. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -36,7 +36,7 @@ description: "Evas Event Freezing Functions – Functions that deal with the fre
 <p>Return the freeze count of a given canvas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The canvas to fetch the freeze count from</dl>
+<dd><i>e</i> The canvas to fetch the freeze count from</dd></dl>
 <p> This returns the number of times the canvas has been told to freeze events. It is possible to call <code>evas_event_freeze()</code> multiple times, and these must be matched by <code>evas_event_thaw()</code> calls. This call allows the program to discover just how many times things have been frozen in case it may want to break out of a deep freeze state where the count is high. </p>
 <p> Example: </p>
 <pre> extern Evas *evas;
@@ -46,7 +46,7 @@ description: "Evas Event Freezing Functions – Functions that deal with the fre
 <p>Thaw a canvas out after freezing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The canvas to thaw out</dl>
+<dd><i>e</i> The canvas to thaw out</dd></dl>
 <p> This will thaw out a canvas after a matching <code>evas_event_freeze()</code> call. If this call completely thaws out a canvas, events will start being processed again after this call, but this call will not invole any &#8216;missed&#8217; events to be evaluated. </p>
 <p> See <code>evas_event_freeze()</code> for an example.</p>
 <h2>Author</h2>

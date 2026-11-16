@@ -21,9 +21,9 @@ CALL VECTOR (PX,PY)
 <h2>Description</h2>
 
 <dl><dt>PX
-<dd>(an input expression of type REAL) defines the X user coordinate.
-<dt>PY
-<dd>(an input expression of type REAL) defines the Y user coordinate.</dl>
+</dt><dd>(an input expression of type REAL) defines the X user coordinate.
+</dd><dt>PY
+</dt><dd>(an input expression of type REAL) defines the Y user coordinate.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

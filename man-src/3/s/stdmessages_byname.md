@@ -10,9 +10,7 @@ description: "std::messages_byname – std::messages_byname"
 <p>std::messages_byname &#8211; std::messages_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class messages_byname : public std::messages&lt;CharT&gt;;</code></pre>
 <p>std::messages_byname is a std::messages facet which encapsulates retrieval of strings from message catalogs of the locale specified at its construction.<br />
 Two specializations are provided by the standard library<br />
@@ -68,13 +66,10 @@ close <i>(public member function of std::messages&lt;CharT&gt;)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 void try_with(const std::locale &amp;loc)
-
 {
     const std::messages&lt;char&gt; &amp;facet = std::use_facet&lt;std::messages&lt;char&gt;&gt;(loc)
-
         ;
     std::messages&lt;char&gt;::catalog cat = facet.open(&quot;sed&quot;, std::cout.getloc());
     if (cat &lt; 0)
@@ -89,9 +84,7 @@ void try_with(const std::locale &amp;loc)
 ';
     facet.close(cat);
 }
-
 int main()
-
 {
     std::locale loc(&quot;en_US.utf8&quot;);
     std::cout.imbue(loc);

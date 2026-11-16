@@ -11,11 +11,11 @@ description: "XtGetKeyboardFocusWidget – extension event handling"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Widget XtGetKeyboardFocusWidget(Widget <i>widget</i>);</dl>
+<dd>Widget XtGetKeyboardFocusWidget(Widget <i>widget</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget for this event handler. Must be of class Core or any subclass thereof.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget for this event handler. Must be of class Core or any subclass thereof.</dd></dl>
 <h2>Description</h2>
 <p><code>XtGetKeyboardFocusWidget</code> function returns the widget that would be the end result of keyboard event forwarding for a keyboard event for the specified widget.</p>
 <h2>See Also</h2>

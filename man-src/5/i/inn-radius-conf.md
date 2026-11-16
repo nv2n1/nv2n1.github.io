@@ -20,21 +20,21 @@ This describes the format and attributes of the configuration file for the nnrpd
 
  The available parameters are:
 <dl><dt><i>radhost</i>
-<dd>The hostname of the <font SIZE="-1">RADIUS</font> server to use for authentication. This parameter must be set.
-<dt><i>radport</i>
-<dd>The port to query on the <font SIZE="-1">RADIUS</font> server. Defaults to 1645 if not set.
-<dt><i>lochost</i>
-<dd>The hostname or <font SIZE="-1">IP</font> address making the request. The <font SIZE="-1">RADIUS</font> server expects an <font SIZE="-1">IP</font> address; a hostname will be translated into an <font SIZE="-1">IP</font> address with <i>gethostbyname()</i>. If not given, this information isn't included in the request (not all <font SIZE="-1">RADIUS</font> setups require this information).
-<dt><i>locport</i>
-<dd>The port the client being authenticated is connecting to. If not given, defaults to 119. This doesn't need to be set unless readers are connecting to a non-standard port.
-<dt><i>secret</i>
-<dd>The shared secret with the <font SIZE="-1">RADIUS</font> server. If your secret includes spaces, tabs, or <tt>&quot;#&quot;</tt>, be sure to include it in double quotes. This parameter must be set.
-<dt><i>prefix</i>
-<dd>Prepend the value of this parameter to all usernames before passing them to the <font SIZE="-1">RADIUS</font> server. Can be used to prepend something like <tt>&quot;news-&quot;</tt> to all usernames in order to put news users into a different namespace from other accounts served by the same server. If not set, nothing is prepended.
-<dt><i>suffix</i>
-<dd>Append the value of this parameter to all usernames before passing them to the <font SIZE="-1">RADIUS</font> server. This is often something like <tt>&quot;@example.com&quot;</tt>, depending on how your <font SIZE="-1">RADIUS</font> server is set up. If not set, nothing is appended.
-<dt><i>ignore-source</i>
-<dd>Can be set to <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. If set to false, the <font SIZE="-1">RADIUS</font> authenticator will check to ensure that the response it receives is from the same <font SIZE="-1">IP</font> address as it sent the request to (for some added security). If set to true, it will skip this verification check (if your <font SIZE="-1">RADIUS</font> server has multiple <font SIZE="-1">IP</font> addresses or if other odd things are going on, it may be perfectly normal for the response to come from a different <font SIZE="-1">IP</font> address).</dl>
+</dt><dd>The hostname of the <font SIZE="-1">RADIUS</font> server to use for authentication. This parameter must be set.
+</dd><dt><i>radport</i>
+</dt><dd>The port to query on the <font SIZE="-1">RADIUS</font> server. Defaults to 1645 if not set.
+</dd><dt><i>lochost</i>
+</dt><dd>The hostname or <font SIZE="-1">IP</font> address making the request. The <font SIZE="-1">RADIUS</font> server expects an <font SIZE="-1">IP</font> address; a hostname will be translated into an <font SIZE="-1">IP</font> address with <i>gethostbyname()</i>. If not given, this information isn't included in the request (not all <font SIZE="-1">RADIUS</font> setups require this information).
+</dd><dt><i>locport</i>
+</dt><dd>The port the client being authenticated is connecting to. If not given, defaults to 119. This doesn't need to be set unless readers are connecting to a non-standard port.
+</dd><dt><i>secret</i>
+</dt><dd>The shared secret with the <font SIZE="-1">RADIUS</font> server. If your secret includes spaces, tabs, or <tt>&quot;#&quot;</tt>, be sure to include it in double quotes. This parameter must be set.
+</dd><dt><i>prefix</i>
+</dt><dd>Prepend the value of this parameter to all usernames before passing them to the <font SIZE="-1">RADIUS</font> server. Can be used to prepend something like <tt>&quot;news-&quot;</tt> to all usernames in order to put news users into a different namespace from other accounts served by the same server. If not set, nothing is prepended.
+</dd><dt><i>suffix</i>
+</dt><dd>Append the value of this parameter to all usernames before passing them to the <font SIZE="-1">RADIUS</font> server. This is often something like <tt>&quot;@example.com&quot;</tt>, depending on how your <font SIZE="-1">RADIUS</font> server is set up. If not set, nothing is appended.
+</dd><dt><i>ignore-source</i>
+</dt><dd>Can be set to <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. If set to false, the <font SIZE="-1">RADIUS</font> authenticator will check to ensure that the response it receives is from the same <font SIZE="-1">IP</font> address as it sent the request to (for some added security). If set to true, it will skip this verification check (if your <font SIZE="-1">RADIUS</font> server has multiple <font SIZE="-1">IP</font> addresses or if other odd things are going on, it may be perfectly normal for the response to come from a different <font SIZE="-1">IP</font> address).</dd></dl>
 
 <h2>Example</h2>
 

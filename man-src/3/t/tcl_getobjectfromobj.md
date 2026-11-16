@@ -39,19 +39,19 @@ Tcl_ObjectMapMethodNameProc
 <code>Tcl_ObjectSetMethodNameMapper</code>(<i>object</i>, <i>methodNameMapper</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter providing the context for looking up or creating an object, and into whose result error messages will be written on failure.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) The name of the object to look up.</p>
-<dd>Tcl_Object <i>object</i> (in) Reference to the object to operate upon.</p>
-<dd>Tcl_Class <i>class</i> (in) Reference to the class to operate upon.</p>
-<dd>const char <i>*name</i> (in) The name of the object to create, or NULL if a new unused name is to be automatically selected.</p>
-<dd>const char <i>*nsName</i> (in) The name of the namespace to create for the object&#8217;s private use, or NULL if a new unused name is to be automatically selected.</p>
-<dd>int <i>objc</i> (in) The number of elements in the <i>objv</i> array.</p>
-<dd>Tcl_Obj *const <i>*objv</i> (in) The arguments to the command to create the instance of the class.</p>
-<dd>int <i>skip</i> (in) The number of arguments at the start of the argument array, <i>objv</i>, that are not arguments to any constructors.</p>
-<dd>Tcl_ObjectMetadataType <i>*metaTypePtr</i> (in) The type of <i>metadata</i> being set with <code>Tcl_ClassSetMetadata</code> or retrieved with <code>Tcl_ClassGetMetadata</code>.</p>
-<dd>ClientData <i>metadata</i> (in) An item of metadata to attach to the class, or NULL to remove the metadata associated with a particular <i>metaTypePtr</i>.</p>
+<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter providing the context for looking up or creating an object, and into whose result error messages will be written on failure.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) The name of the object to look up.</dd>
+<dd>Tcl_Object <i>object</i> (in) Reference to the object to operate upon.</dd>
+<dd>Tcl_Class <i>class</i> (in) Reference to the class to operate upon.</dd>
+<dd>const char <i>*name</i> (in) The name of the object to create, or NULL if a new unused name is to be automatically selected.</dd>
+<dd>const char <i>*nsName</i> (in) The name of the namespace to create for the object&#8217;s private use, or NULL if a new unused name is to be automatically selected.</dd>
+<dd>int <i>objc</i> (in) The number of elements in the <i>objv</i> array.</dd>
+<dd>Tcl_Obj *const <i>*objv</i> (in) The arguments to the command to create the instance of the class.</dd>
+<dd>int <i>skip</i> (in) The number of arguments at the start of the argument array, <i>objv</i>, that are not arguments to any constructors.</dd>
+<dd>Tcl_ObjectMetadataType <i>*metaTypePtr</i> (in) The type of <i>metadata</i> being set with <code>Tcl_ClassSetMetadata</code> or retrieved with <code>Tcl_ClassGetMetadata</code>.</dd>
+<dd>ClientData <i>metadata</i> (in) An item of metadata to attach to the class, or NULL to remove the metadata associated with a particular <i>metaTypePtr</i>.</dd>
 <dd>Tcl_ObjectMapMethodNameProc <i>methodNameMapper</i> (in) A pointer to a function to call to adjust the mapping of objects and method names to implementations, or NULL when no such mapping is required.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p>Objects are typed entities that have a set of operations (&quot;methods&quot;) associated with them. Classes are objects that can manufacture objects. Each class can be viewed as an object itself; the object view can be retrieved using <code>Tcl_GetClassAsObject</code> which always returns the object when applied to a non-destroyed class, and an object can be viewed as a class with the aid of the <code>Tcl_GetObjectAsClass</code> (which either returns the class, or NULL if the object is not a class). An object may be looked up using the <code>Tcl_GetObjectFromObj</code> function, which either returns an object or NULL (with an error message in the interpreter result) if the object cannot be found. The correct way to look up a class by name is to look up the object with that name, and then to use <code>Tcl_GetObjectAsClass</code>. </p>
 <p> Every object has its own command and namespace associated with it. The command may be retrieved using the <code>Tcl_GetObjectCommand</code> function, the name of the object (and hence the name of the command) with <code>Tcl_GetObjectName</code>, and the namespace may be retrieved using the <code>Tcl_GetObjectNamespace</code> function. Note that the Tcl_Obj reference returned by <code>Tcl_GetObjectName</code> is a shared reference. </p>
@@ -68,7 +68,7 @@ Tcl_ObjectMapMethodNameProc
  Tcl_ObjectMetadataDeleteProc *<i>deleteProc</i>;
  Tcl_CloneProc *<i>cloneProc</i>;
 } <code>Tcl_ObjectMetadataType</code>;</pre>
-</dl>
+</dd></dl>
 <p> The <i>version</i> field allows for future expansion of the structure, and should always be declared equal to TCL_OO_METADATA_VERSION_CURRENT. The <i>name</i> field provides a human-readable name for the type, and is reserved for debugging. </p>
 <p> The <i>deleteProc</i> field gives a function of type Tcl_ObjectMetadataDeleteProc that is used to delete a particular piece of metadata, and is called when the attached metadata is replaced or removed; the field must not be NULL. </p>
 <p> The <i>cloneProc</i> field gives a function that is used to copy a piece of metadata (used when a copy of an object is created using <code>Tcl_CopyObjectInstance</code>); if NULL, the metadata will be just directly copied.</p>
@@ -78,7 +78,7 @@ Tcl_ObjectMapMethodNameProc
 <dd>
 <pre>typedef void <code>Tcl_ObjectMetadataDeleteProc</code>(
  ClientData <i>metadata</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>metadata</i> argument gives the address of the metadata to be deleted.</p>
 <h3>Tcl_Cloneproc Function Signature</h3>
 <p>Functions matching this signature are used to create copies of metadata associated with a class or object. </p>
@@ -88,7 +88,7 @@ Tcl_ObjectMapMethodNameProc
  Tcl_Interp *<i>interp</i>,
  ClientData <i>srcMetadata</i>,
  ClientData *<i>dstMetadataPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>interp</i> argument gives a place to write an error message when the attempt to clone the object is to fail, in which case the clone procedure must also return TCL_ERROR; it should return TCL_OK otherwise. The <i>srcMetadata</i> argument gives the address of the metadata to be cloned, and the cloned metadata should be written into the variable pointed to by <i>dstMetadataPtr</i>; a NULL should be written if the metadata is to not be cloned but the overall object copy operation is still to succeed.</p>
 <h2>Object Method Name Mapping</h2>
 <p>It is possible to control, on a per-object basis, what methods are invoked when a particular method is invoked. Normally this is done by looking up the method name in the object and then in the class hierarchy, but fine control of exactly what the value used to perform the look up is afforded through the ability to set a method name mapper callback via <code>Tcl_ObjectSetMethodNameMapper</code> (and its introspection counterpart, <code>Tcl_ObjectGetMethodNameMapper</code>, which returns the current mapper). The current mapper (if any) is invoked immediately before looking up what chain of method implementations is to be used.</p>
@@ -101,7 +101,7 @@ Tcl_ObjectMapMethodNameProc
  Tcl_Object <i>object</i>,
  Tcl_Class *<i>startClsPtr</i>,
  Tcl_Obj *<i>methodNameObj</i>);</pre>
-</dl>
+</dd></dl>
 <p> If the result is TCL_OK, the remapping is assumed to have been done. If the result is TCL_ERROR, an error message will have been left in <i>interp</i> and the method call will fail. If the result is TCL_BREAK, the standard method name lookup rules will be used; the behavior of other result codes is currently undefined. The <i>object</i> parameter says which object is being processed. The <i>startClsPtr</i> parameter points to a variable that contains the first class to provide a definition in the method chain to process, or NULL if the whole chain is to be processed (the argument itself is never NULL); this variable may be updated by the callback. The <i>methodNameObj</i> parameter gives an unshared object containing the name of the method being invoked, as provided by the user; this object may be updated by the callback.</p>
 <h2>See Also</h2>
 <p>Method(3), oo::class(n), oo::copy(n), oo::define(n), oo::object(n)</p>

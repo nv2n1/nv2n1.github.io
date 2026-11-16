@@ -22,21 +22,21 @@ Tk_OptionParseProc *<code>Tk_CanvasTagsParseProc</code>;
 Tk_OptionPrintProc *<code>Tk_CanvasTagsPrintProc</code>;</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Canvas <i>canvas</i> (in) A token that identifies a canvas widget.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter to use for error reporting.</p>
-<dd>const char <i>*string</i> (in) Textual description of a canvas coordinate.</p>
-<dd>double <i>*doublePtr</i> (out) Points to place to store a converted coordinate.</p>
-<dd>double <i>x</i> (in) An x coordinate in the space of the canvas.</p>
-<dd>double <i>y</i> (in) A y coordinate in the space of the canvas.</p>
-<dd>short <i>*drawableXPtr</i> (out) Pointer to a location in which to store an x coordinate in the space of the drawable currently being used to redisplay the canvas.</p>
-<dd>short <i>*drawableYPtr</i> (out) Pointer to a location in which to store a y coordinate in the space of the drawable currently being used to redisplay the canvas.</p>
-<dd>GC <i>gc</i> (out) Graphics context to modify.</p>
-<dd>short <i>*screenXPtr</i> (out) Points to a location in which to store the screen coordinate in the canvas window that corresponds to <i>x</i>.</p>
-<dd>short <i>*screenYPtr</i> (out) Points to a location in which to store the screen coordinate in the canvas window that corresponds to <i>y</i>.</p>
-<dd>int <i>x1</i> (in) Left edge of the region that needs redisplay. Only pixels at or to the right of this coordinate need to be redisplayed.</p>
-<dd>int <i>y1</i> (in) Top edge of the region that needs redisplay. Only pixels at or below this coordinate need to be redisplayed.</p>
-<dd>int <i>x2</i> (in) Right edge of the region that needs redisplay. Only pixels to the left of this coordinate need to be redisplayed.</p>
-<dd>int <i>y2</i> (in) Bottom edge of the region that needs redisplay. Only pixels above this coordinate need to be redisplayed. </p>
+<dd>Tk_Canvas <i>canvas</i> (in) A token that identifies a canvas widget.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) Interpreter to use for error reporting.</dd>
+<dd>const char <i>*string</i> (in) Textual description of a canvas coordinate.</dd>
+<dd>double <i>*doublePtr</i> (out) Points to place to store a converted coordinate.</dd>
+<dd>double <i>x</i> (in) An x coordinate in the space of the canvas.</dd>
+<dd>double <i>y</i> (in) A y coordinate in the space of the canvas.</dd>
+<dd>short <i>*drawableXPtr</i> (out) Pointer to a location in which to store an x coordinate in the space of the drawable currently being used to redisplay the canvas.</dd>
+<dd>short <i>*drawableYPtr</i> (out) Pointer to a location in which to store a y coordinate in the space of the drawable currently being used to redisplay the canvas.</dd>
+<dd>GC <i>gc</i> (out) Graphics context to modify.</dd>
+<dd>short <i>*screenXPtr</i> (out) Points to a location in which to store the screen coordinate in the canvas window that corresponds to <i>x</i>.</dd>
+<dd>short <i>*screenYPtr</i> (out) Points to a location in which to store the screen coordinate in the canvas window that corresponds to <i>y</i>.</dd>
+<dd>int <i>x1</i> (in) Left edge of the region that needs redisplay. Only pixels at or to the right of this coordinate need to be redisplayed.</dd>
+<dd>int <i>y1</i> (in) Top edge of the region that needs redisplay. Only pixels at or below this coordinate need to be redisplayed.</dd>
+<dd>int <i>x2</i> (in) Right edge of the region that needs redisplay. Only pixels to the left of this coordinate need to be redisplayed.</dd>
+<dd>int <i>y2</i> (in) Bottom edge of the region that needs redisplay. Only pixels above this coordinate need to be redisplayed. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are called by canvas type managers to perform various utility functions. </p>
@@ -58,6 +58,6 @@ static Tk_ConfigSpec configSpecs[] = {
  (char *) NULL, 0, TK_CONFIG_NULL_OK, &amp;tagsOption},
  ...
 };</pre>
-</dl>
+</dd></dl>
 <h2>Keywords</h2>
 <p>canvas, focus, item type, redisplay, selection, type manager</p>

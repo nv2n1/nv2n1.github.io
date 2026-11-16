@@ -18,18 +18,20 @@ int bson_vsnprintf(char *str,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> A location for the resulting string.</dl>
+<dt><code>str</code></dt>
+<dd> A location for the resulting string.</dd></dl>
 <dl>
-<dt><code>size</code></p>
-<dd> The size of str in bytes.</dl>
+<dt><code>size</code></dt>
+<dd> The size of str in bytes.</dd></dl>
 <dl>
-<dt><code>format</code></p>
-<dd> A printf style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A printf style format string.</dd></dl>
 <dl>
-<dt><code>ap</code></p>
-<dd> A va_list of parameters for the format.</dl>
+<dt><code>ap</code></dt>
+<dd> A va_list of parameters for the format.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Like bson_snprintf() but allows for variadic parameters. </p>
 <h2>RETURNS</h2>
 <p> The number of bytes written to <code>str</code> excluding the <code>
+</p>
+</code>

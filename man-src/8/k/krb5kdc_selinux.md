@@ -109,24 +109,24 @@ description: "krb5kdc_selinux – Security Enhanced Linux Policy for the krb5kdc
 <p> <code>krb5kdc_conf_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_conf_t type, if you want to treat the files as krb5kdc configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/krb5kdc(/.*)?, /usr/var/krb5kdc(/.*)?, /var/kerberos/krb5kdc(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/krb5kdc(/.*)?, /usr/var/krb5kdc(/.*)?, /var/kerberos/krb5kdc(/.*)? </dd>
 </dl>
 <p> <code>krb5kdc_exec_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_exec_t type, if you want to transition an executable to the krb5kdc_t domain. </p>
 <p> <code>krb5kdc_lock_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_lock_t type, if you want to treat the files as krb5kdc lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/kerberos/krb5kdc/principal.*.ok, /var/kerberos/krb5kdc/from_master.* </p>
+<dt>Paths:</dt>
+<dd>/var/kerberos/krb5kdc/principal.*.ok, /var/kerberos/krb5kdc/from_master.* </dd>
 </dl>
 <p> <code>krb5kdc_log_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_log_t type, if you want to treat the data as krb5kdc log data, usually stored under the /var/log directory. </p>
 <p> <code>krb5kdc_principal_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_principal_t type, if you want to treat the files as krb5kdc principal data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/krb5kdc/principal.*, /usr/var/krb5kdc/principal.*, /var/kerberos/krb5kdc/principal.* </p>
+<dt>Paths:</dt>
+<dd>/etc/krb5kdc/principal.*, /usr/var/krb5kdc/principal.*, /var/kerberos/krb5kdc/principal.* </dd>
 </dl>
 <p> <code>krb5kdc_tmp_t</code> </p>
 <p> &#8211; Set files with the krb5kdc_tmp_t type, if you want to store krb5kdc temporary files in the /tmp directories. </p>

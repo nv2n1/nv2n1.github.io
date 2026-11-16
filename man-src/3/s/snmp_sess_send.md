@@ -15,29 +15,20 @@ void *snmp_sess_open(struct snmp_session *session);
 struct snmp_session *snmp_sess_session(void *handle);
 int snmp_sess_send(void *handle, struct snmp_pdu *pdu);
 int snmp_sess_async_send(void *handle,
-
                          struct snmp_pdu *pdu,
-
                          snmp_callback callback,
-
                          void *callbackData);
 int snmp_sess_select_info(void *handle,
-
                           int *numfds, fd_set *fdset,
-
                           struct timeval *timeout,
-
                           int *block);
 int snmp_sess_read(void *handle, fd_set *fdset);
 void snmp_sess_timeout(void *handle);
 int snmp_sess_synch_response(void *handle,
-
                              netsnmp_pdu *pdu,
-
                              netsnmp_pdu **response);
 int snmp_sess_close(void *handle);
 void snmp_sess_error(void *handle, int *pcliberr,
-
                      int *psnmperr, char **pperrstring);</code></pre>
 <h2>Description</h2>
 <p>These functions define a subset of the API that can be used to manage single SNMP sessions in a multi-threaded application. Except for <code>snmp_sess_session()</code>, these functions are single session versions of the traditional SNMP library API. </p>
@@ -59,47 +50,47 @@ void snmp_sess_error(void *handle, int *pcliberr,
 <p> Consult snmp_api.h for the complete set of SNMP library error values. The SNMP library error value <i>snmperr</i> can be one of the following values:</p>
 <dl>
 <dd>
-<dl>
-<dt>SNMPERR_GENERR</p>
-<dd>A generic error occurred.</p>
-<dt>SNMPERR_BAD_LOCPORT</p>
-<dd>The local port was bad because it had already been allocated or permission was denied.</p>
-<dt>SNMPERR_BAD_ADDRESS</p>
-<dd>The host name or address given was not useable.</p>
-<dt>SNMPERR_BAD_SESSION</p>
-<dd>The specified session was not open.</p>
-<dt>SNMPERR_TOO_LONG</p>
+</dd><dl>
+<dt>SNMPERR_GENERR</dt>
+<dd>A generic error occurred.</dd>
+<dt>SNMPERR_BAD_LOCPORT</dt>
+<dd>The local port was bad because it had already been allocated or permission was denied.</dd>
+<dt>SNMPERR_BAD_ADDRESS</dt>
+<dd>The host name or address given was not useable.</dd>
+<dt>SNMPERR_BAD_SESSION</dt>
+<dd>The specified session was not open.</dd>
+<dt>SNMPERR_TOO_LONG</dt>
 <dd>
-<dt>SNMPERR_NO_SOCKET</p>
+</dd><dt>SNMPERR_NO_SOCKET</dt>
 <dd>
-<dt>SNMPERR_V2_IN_V1</p>
+</dd><dt>SNMPERR_V2_IN_V1</dt>
 <dd>
-<dt>SNMPERR_V1_IN_V2</p>
+</dd><dt>SNMPERR_V1_IN_V2</dt>
 <dd>
-<dt>SNMPERR_BAD_REPEATERS</p>
+</dd><dt>SNMPERR_BAD_REPEATERS</dt>
 <dd>
-<dt>SNMPERR_BAD_REPETITIONS</p>
+</dd><dt>SNMPERR_BAD_REPETITIONS</dt>
 <dd>
-<dt>SNMPERR_BAD_ASN1_BUILD</p>
+</dd><dt>SNMPERR_BAD_ASN1_BUILD</dt>
 <dd>
-<dt>SNMPERR_BAD_SENDTO</p>
+</dd><dt>SNMPERR_BAD_SENDTO</dt>
 <dd>
-<dt>SNMPERR_BAD_RCVFROM</p>
+</dd><dt>SNMPERR_BAD_RCVFROM</dt>
 <dd>
-<dt>SNMPERR_BAD_PARSE</p>
+</dd><dt>SNMPERR_BAD_PARSE</dt>
 <dd>
-<dt>SNMPERR_BAD_VERSION</p>
+</dd><dt>SNMPERR_BAD_VERSION</dt>
 <dd>
-<dt>SNMPERR_BAD_COMMUNITY</p>
+</dd><dt>SNMPERR_BAD_COMMUNITY</dt>
 <dd>
-<dt>SNMPERR_NOAUTH_DESPRIV</p>
+</dd><dt>SNMPERR_NOAUTH_DESPRIV</dt>
 <dd>
-<dt>SNMPERR_ABORT</p>
+</dd><dt>SNMPERR_ABORT</dt>
 <dd>
-<dt>SNMPERR_UNKNOWN_PDU</p>
+</dd><dt>SNMPERR_UNKNOWN_PDU</dt>
 <dd>
-<dt>SNMPERR_TIMEOUT</p>
-<dd></dl>
+</dd><dt>SNMPERR_TIMEOUT</dt>
+<dd></dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code>snmp_api.h</code> </p>

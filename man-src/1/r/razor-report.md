@@ -33,43 +33,42 @@ url: "/docs/linux/man/1-razor-report/"
  <tt>&quot;razor-report&quot;</tt> takes following arguments:
 <dl>
 <dt>&quot;-h&quot;
-<dd> Print a usage message and exit.
-<dt>&quot;-v&quot;
-<dd> Print the version number and exit.
-<dt>&quot;-d | --verbose&quot;
-<dd> Print debugging information to stdout.
-<dt>&quot;-debuglevel=n | -dl=n&quot;
-<dd> Set debug level to 'n'. Default is 3 without <tt>&quot;-d&quot;</tt> option, 9 with.
-<dt>&quot;-whitelist=file&quot;
-<dd> Specify file to use for whitelisting. Overrides 'whitelist' option in <tt>&quot;razor-agent.conf&quot;</tt>.
-<dt>&quot;-s&quot;
-<dd> Simulate a check. Do everything except talk to the server.
-<dt>&quot;-conf=filename&quot;
-<dd> Specifies an alternate configuration file. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
-<dt>&quot;-home=dir&quot;
-<dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details.
-<dt>&quot;-logfile=file&quot;
-<dd> Specify file to log to instead of whats in configuration file. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.log&quot;</tt>.
-<dt>&quot;-ident=filename&quot;
-<dd> Specify an identify file to use for authenticating with Razor Servers. If not specified, <tt>&quot;&lt;razorhome&gt;/identity-&lt;user&gt;&quot;</tt> is used.
-<dt>&quot;-rs=razor.server.com&quot;
-<dd> Use this Razor Nomination Server instead of reading <tt>&quot;servers.nomination.lst&quot;</tt>.
-<dt>&quot;-H&quot;
-<dd> Compute and print the signature of the mail contents and exit. If <tt>&quot;-e=integer&quot;</tt> is not specified, all supported engines will be used.
-<dt>&quot;-S=string&quot;
-<dd> Accept a list of pre-computed (with <tt>&quot;-H&quot;</tt>) signatures on the command line, instead of computing one from mail content. Signatures can be submitted in hex or base64, but base64 is preferred. Requires <tt>&quot;-e=integer&quot;</tt>. Usage: 
-
+</dt><dd> Print a usage message and exit.
+</dd><dt>&quot;-v&quot;
+</dt><dd> Print the version number and exit.
+</dd><dt>&quot;-d | --verbose&quot;
+</dt><dd> Print debugging information to stdout.
+</dd><dt>&quot;-debuglevel=n | -dl=n&quot;
+</dt><dd> Set debug level to 'n'. Default is 3 without <tt>&quot;-d&quot;</tt> option, 9 with.
+</dd><dt>&quot;-whitelist=file&quot;
+</dt><dd> Specify file to use for whitelisting. Overrides 'whitelist' option in <tt>&quot;razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-s&quot;
+</dt><dd> Simulate a check. Do everything except talk to the server.
+</dd><dt>&quot;-conf=filename&quot;
+</dt><dd> Specifies an alternate configuration file. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-home=dir&quot;
+</dt><dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details.
+</dd><dt>&quot;-logfile=file&quot;
+</dt><dd> Specify file to log to instead of whats in configuration file. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.log&quot;</tt>.
+</dd><dt>&quot;-ident=filename&quot;
+</dt><dd> Specify an identify file to use for authenticating with Razor Servers. If not specified, <tt>&quot;&lt;razorhome&gt;/identity-&lt;user&gt;&quot;</tt> is used.
+</dd><dt>&quot;-rs=razor.server.com&quot;
+</dt><dd> Use this Razor Nomination Server instead of reading <tt>&quot;servers.nomination.lst&quot;</tt>.
+</dd><dt>&quot;-H&quot;
+</dt><dd> Compute and print the signature of the mail contents and exit. If <tt>&quot;-e=integer&quot;</tt> is not specified, all supported engines will be used.
+</dd><dt>&quot;-S=string&quot;
+</dt><dd> Accept a list of pre-computed (with <tt>&quot;-H&quot;</tt>) signatures on the command line, instead of computing one from mail content. Signatures can be submitted in hex or base64, but base64 is preferred. Requires <tt>&quot;-e=integer&quot;</tt>. Usage: 
  razor-report -e 1 -S a8a3d545adb73f9733675571ffeaf10cba87745b
-<dt>&quot;-e=integer&quot;
-<dd> Specify engine used to create signatures. Must be 1, 2, 3, or 4 in this version. Engine 1, or <tt>&quot;-e=1&quot;</tt>, is used for Razor 1.x signatures. Used only with <tt>&quot;-S=string&quot;</tt> or <tt>&quot;-H&quot;</tt>.
-<dt>&quot;-ep4=string&quot;
-<dd> String used by engine 4 when computing signatures. Published by the Razor Nomination Servers and updated very frequently. Used only when <tt>&quot;-e=4&quot;</tt>.
-<dt>&quot;-i=filename&quot;
-<dd> Use identity from filename instead of reading &lt;razorhome&gt;/identity. Razor Servers compute trust for each unique identity. Razor Agents figure out the identity by a 2 step process. First, check if identity is specified via cmd-line (-i=file). If not there, then look in &lt;razorhome&gt; for identity file. If &lt;razorhome&gt; has no identity file, authentication will fail - you cannot report or revoke. See <i>razor-agents.conf</i>(5) for more on &lt;razorhome&gt;. ---fixme----
-<dt>&quot;-a&quot;
-<dd> Authenticate only. If authenticated, exit 0; if not, exit 1.
-<dt>&quot;-f&quot;
-<dd> Stay in foreground, do not detach and run in background.</dl>
+</dd><dt>&quot;-e=integer&quot;
+</dt><dd> Specify engine used to create signatures. Must be 1, 2, 3, or 4 in this version. Engine 1, or <tt>&quot;-e=1&quot;</tt>, is used for Razor 1.x signatures. Used only with <tt>&quot;-S=string&quot;</tt> or <tt>&quot;-H&quot;</tt>.
+</dd><dt>&quot;-ep4=string&quot;
+</dt><dd> String used by engine 4 when computing signatures. Published by the Razor Nomination Servers and updated very frequently. Used only when <tt>&quot;-e=4&quot;</tt>.
+</dd><dt>&quot;-i=filename&quot;
+</dt><dd> Use identity from filename instead of reading &lt;razorhome&gt;/identity. Razor Servers compute trust for each unique identity. Razor Agents figure out the identity by a 2 step process. First, check if identity is specified via cmd-line (-i=file). If not there, then look in &lt;razorhome&gt; for identity file. If &lt;razorhome&gt; has no identity file, authentication will fail - you cannot report or revoke. See <i>razor-agents.conf</i>(5) for more on &lt;razorhome&gt;. ---fixme----
+</dd><dt>&quot;-a&quot;
+</dt><dd> Authenticate only. If authenticated, exit 0; if not, exit 1.
+</dd><dt>&quot;-f&quot;
+</dt><dd> Stay in foreground, do not detach and run in background.</dd></dl>
 
 <h2>INTEGRATION WITH MUTT</h2>
 

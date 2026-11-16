@@ -15,16 +15,16 @@ description: "db_tuner – analyze and tune btree database"
 <p> The <code>db_tuner</code> utility analyzes the data in a btree database, and suggests a page size that is likely to deliver optimal operation.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>cachesize</i></p>
-<dd> Specify a value of the cachesize, otherwise, the default value will be set.</p>
-<dt><code>-d</code> <i>file</i></p>
-<dd> Display database statistics for the specified file. If the database contains multiple databases and the <code>-s</code> flag is not specified, the statistics are for the internal database that describes the other databases the file contains, and not for the file as a whole.</p>
-<dt><code>-h</code> <i>home</i></p>
-<dd> Specify a home directory for the database environment.</p>
-<dt><code>-s</code> <i>database</i></p>
-<dd> Display page size recommendation for the specified database contained in the file specified with the <code>-d</code> flag.</p>
-<dt><code>-v</code></p>
-<dd> Display verbose information.</dl>
+<dt><code>-c</code> <i>cachesize</i></dt>
+<dd> Specify a value of the cachesize, otherwise, the default value will be set.</dd>
+<dt><code>-d</code> <i>file</i></dt>
+<dd> Display database statistics for the specified file. If the database contains multiple databases and the <code>-s</code> flag is not specified, the statistics are for the internal database that describes the other databases the file contains, and not for the file as a whole.</dd>
+<dt><code>-h</code> <i>home</i></dt>
+<dd> Specify a home directory for the database environment.</dd>
+<dt><code>-s</code> <i>database</i></dt>
+<dd> Display page size recommendation for the specified database contained in the file specified with the <code>-d</code> flag.</dd>
+<dt><code>-v</code></dt>
+<dd> Display verbose information.</dd></dl>
 <h2>NOTES</h2>
 <p> The <code>db_tuner</code> utility assumes that databases are compacted when analysing the data. The analysis is based on a static view of the data and the data access and update patterns are not take into account.</p>
 <h2>SEE ALSO</h2>

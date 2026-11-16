@@ -11,7 +11,6 @@ description: "swab – swap adjacent bytes"
 <h2>Synopsis</h2>
 <pre><code>#define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;unistd.h&gt;
-
 void swab(const void *from, void *to, ssize_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>swab</code>() function copies <i>n</i> bytes from the array pointed to by <i>from</i> to the array pointed to by <i>to</i>, exchanging adjacent even and odd bytes. This function is used to exchange data between machines that have different low/high byte ordering. </p>

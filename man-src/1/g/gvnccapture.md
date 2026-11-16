@@ -20,11 +20,11 @@ url: "/docs/linux/man/1-gvnccapture/"
  Capture a screenshot of the <font SIZE="-1">VNC</font> desktop at <font SIZE="-1">HOST:DISPLAY</font> saving to the image file <font SIZE="-1">FILENAME.</font> If <font SIZE="-1">HOST</font> is omitted it defaults to ``localhost'', if :DISPLAY is omitted, it defaults to ``:1''. <font SIZE="-1">FILENAME</font> must end in a known image format extension (eg ``.png'', ``.jpeg''). Supported options are
 <dl>
 <dt>--help, -?
-<dd> Display command line help information
-<dt>--quiet, -q
-<dd> Do not display information on the console when capturing the screenshot, with the exception of any password prompt.
-<dt>--debug, -d
-<dd> Display verbose debugging information on the console</dl>
+</dt><dd> Display command line help information
+</dd><dt>--quiet, -q
+</dt><dd> Do not display information on the console when capturing the screenshot, with the exception of any password prompt.
+</dd><dt>--debug, -d
+</dt><dd> Display verbose debugging information on the console</dd></dl>
 
 <h2>EXIT STATUS</h2>
 

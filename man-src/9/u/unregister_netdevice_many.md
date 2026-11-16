@@ -14,7 +14,7 @@ description: "unregister_netdevice_many – unregister many devices"
 <p><i>head</i></p>
 <dl>
 <dd>
-<dd>list of devices</dl>
+</dd><dd>list of devices</dd></dl>
 <h2>Note</h2>
 <p>As most callers use a stack allocated list_head, we force a <code>list_del</code> to make sure stack wont be corrupted later.</p>
 <h2>Copyright</h2>

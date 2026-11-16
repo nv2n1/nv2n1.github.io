@@ -58,17 +58,17 @@ description: "Hash Table –"
 <h3>typedef int(* globus_hashtable_hash_func_t)(void *key, int limit)</h3>
 <p> An anonymous hash function providing an onto mapping of (key, limit) pairs to integers, where the result integer is in the range [ 0, limit &#8211; 1 ] .</p>
 <dl>
-<dt>&bull;</p>
-<dd> Note that as a proper function, such hash routines must always compute the same result given the same key and limit value.</dl>
+<dt>&bull;</dt>
+<dd> Note that as a proper function, such hash routines must always compute the same result given the same key and limit value.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>key</i> Value to map<br />
- <i>limit</i> Map range limit</dl>
+</dt><dd> <i>key</i> Value to map<br />
+ <i>limit</i> Map range limit</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Integer hash value of key</dl>
+</dt><dd> Integer hash value of key</dd></dl>
 <h3>typedef int(* globus_hashtable_keyeq_func_t)(void *key1, void *key2)</h3>
 <p> An anonymous predicate that returns true when the keys are equal and false otherwise. Truth and falsity are represented by non-zero and zero (0) integers for use directly in C language conditionals.</p>
 <h2>Function Documentation</h2>
@@ -78,13 +78,13 @@ description: "Hash Table –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>table</i> Hash table to destroy.</dl>
+</dt><dd> <i>table</i> Hash table to destroy.</dd></dl>
 <h3><code>globus_bool_t</code> globus_hashtable_empty (globus_hashtable_t *table)</h3>
 <p> Test hash table emptiness. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_TRUE if hashtable is empty, GLOBUS_FALSE otherwise</dl>
+</dt><dd> GLOBUS_TRUE if hashtable is empty, GLOBUS_FALSE otherwise</dd></dl>
 <h3>int globus_hashtable_init (globus_hashtable_t *table, intsize, <code>globus_hashtable_hash_func_t</code>hash_func, <code>globus_hashtable_keyeq_func_t</code>keyeq_func)</h3>
 <p> Initialize a hash table. Initializes a generic chaining hashtable to represent an empty mapping and returns zero, or returns non-zero on failure. The size parameter specifies the number of chains with which to represent the mapping. This defines the maximum possible number of mappings that can be represented without conflict given a perfect hash, and therefore affects performance as hash conflicts will be resolved by linear chains. </p>
 <p> The hash_func and keyeq_func anonymous functions will be used by the table to manipulate the user&#8217;s keys.</p>
@@ -105,7 +105,7 @@ description: "Hash Table –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Number of entries in hashtable</dl>
+</dt><dd> Number of entries in hashtable</dd></dl>
 <h3>int globus_hashtable_string_hash (void *string, intlimit)</h3>
 <p> Null-terminated string hash function. A decent hash function for null-terminated character arrays.</p>
 <h3>void* globus_hashtable_update (globus_hashtable_t *table, void *key, void *datum)</h3>
@@ -115,5 +115,5 @@ description: "Hash Table –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAX">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAX">Author</a></dt>
+<dd></dd></dl>

@@ -10,7 +10,6 @@ description: "sasl_getsecret_t – The SASL callback for secrets (passwords)"
 <p>sasl_getsecret_t &#8211; The SASL callback for secrets (passwords) </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_getsecret_t(sasl_conn_t *conn,
                      void *context,
                      int id,

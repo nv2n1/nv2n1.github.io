@@ -10,7 +10,6 @@ description: "wcsspn – advance in a wide-character string, skipping any of a s
 <p>wcsspn &#8211; advance in a wide-character string, skipping any of a set of wide characters</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 size_t wcsspn(const wchar_t *wcs, const wchar_t *accept);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcsspn</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strspn/">strspn</a></code>(3) function. It determines the length of the longest initial segment of <i>wcs</i> which consists entirely of wide-characters listed in <i>accept</i>. In other words, it searches for the first occurrence in the wide-character string <i>wcs</i> of a wide-character not contained in the wide-character string <i>accept</i>.</p>

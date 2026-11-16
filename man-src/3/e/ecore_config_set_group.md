@@ -42,80 +42,80 @@ description: "Ecore Config Setters – Functions that set the value of a propert
  <i>a</i> integer 0..255<br />
  <i>r</i> integer 0..255<br />
  <i>g</i> integer 0..255<br />
- <i>b</i> integer 0..255</dl>
+ <i>b</i> integer 0..255</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_RGB, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_argbint_set (const char * key, long argb)</h3>
 <p>Sets the indicated property to a color value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key<br />
- <i>argb</i> ARGB data as long</dl>
+ <i>argb</i> ARGB data as long</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_RGB, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_argbstr_set (const char * key, const char * val)</h3>
 <p>Sets the indicated property to a color value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key<br />
- <i>val</i> Color value in ARGB format.</dl>
+ <i>val</i> Color value in ARGB format.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_RGB, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_as_string_set (const char * key, const char * val)</h3>
 <p>Sets the indicated property to the value given in the string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> String representation of the value.</dl>
+ <i>val</i> String representation of the value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ecore_config_set().</p>
 <h3>EAPI int ecore_config_boolean_set (const char * key, int val)</h3>
 <p>Sets the indicated property to the given boolean. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> Boolean integer to set the property to.</dl>
+ <i>val</i> Boolean integer to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_BLN, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_float_set (const char * key, float val)</h3>
 <p>Sets the indicated property to the given float value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> Float to set the property to.</dl>
+ <i>val</i> Float to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_FLT, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_int_set (const char * key, int val)</h3>
 <p>Sets the indicated property to the given integer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> Integer to set the property to.</dl>
+ <i>val</i> Integer to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_INT, and ecore_config_typed_set().</p>
 <h3>EAPI int ecore_config_set (const char * key, const char * val)</h3>
 <p>Sets the indicated property to the value indicated by <i>val</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> String representation of value to set.</dl>
+ <i>val</i> String representation of value to set.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_BLN, ECORE_CONFIG_FLT, ECORE_CONFIG_INT, ECORE_CONFIG_RGB, and ecore_config_typed_set(). </p>
 <p> Referenced by ecore_config_as_string_set().</p>
 <h3>EAPI int ecore_config_string_set (const char * key, const char * val)</h3>
@@ -123,10 +123,10 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> String to set the property to.</dl>
+ <i>val</i> String to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_STR, and ecore_config_typed_set(). </p>
 <p> Referenced by ecore_config_theme_search_path_append().</p>
 <h3>EAPI int ecore_config_theme_preview_group_set (const char * key, const char * group)</h3>
@@ -134,20 +134,20 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>group</i> The group name.</dl>
+ <i>group</i> The group name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC on success.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC on success.</dd></dl>
 <p> References ecore_config_get(), and ECORE_CONFIG_THM.</p>
 <h3>EAPI int ecore_config_theme_set (const char * key, const char * val)</h3>
 <p>Sets the indicated property to a theme name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>key</i> The property key.<br />
- <i>val</i> String giving the name of the theme.</dl>
+ <i>val</i> String giving the name of the theme.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dl>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
 <p> References ECORE_CONFIG_THM, and ecore_config_typed_set().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

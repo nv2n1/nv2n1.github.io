@@ -14,7 +14,7 @@ description: "register_netdevice – register a network device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to register</dl>
+</dd><dd>device to register</dd></dl>
 <h2>Description</h2>
 <p>Take a completed network device structure and add it to the kernel interfaces. A <code>NETDEV_REGISTER</code> message is sent to the netdev notifier chain. 0 is returned on success. A negative errno code is returned on a failure to set up the device, or if the name is a duplicate. </p>
 <p> Callers must hold the rtnl semaphore. You may want <code>register_netdev</code> instead of this. </p>

@@ -14,30 +14,30 @@ description: "whowatch – console, interactive, process and users monitoring to
 <p> <code>Whowatch</code> has no command line options or configuration file. All actions are performed in real time by pressing following keys: </p>
 <p> Users list mode: </p>
 <dl>
-<dt><code>&#8216;up&#8217; &#8216;down&#8217;</code></p>
-<dd> cursor movement</p>
-<dt><code>&#8216;i&#8217;</code></p>
-<dd> toggle between user command line and idle time</p>
-<dt><code>&#8216;c&#8217;</code></p>
-<dd> full command line on/off. Disabling full command line can save CPU time. It can give you also some additional information about process executable.</p>
-<dt><code>&#8216;enter&#8217;</code></p>
-<dd> view selected user&#8217;s processes tree.</p>
-<dt><code>&#8216;t&#8217;</code></p>
-<dd> all system processes (init tree)</dl>
+<dt><code>&#8216;up&#8217; &#8216;down&#8217;</code></dt>
+<dd> cursor movement</dd>
+<dt><code>&#8216;i&#8217;</code></dt>
+<dd> toggle between user command line and idle time</dd>
+<dt><code>&#8216;c&#8217;</code></dt>
+<dd> full command line on/off. Disabling full command line can save CPU time. It can give you also some additional information about process executable.</dd>
+<dt><code>&#8216;enter&#8217;</code></dt>
+<dd> view selected user&#8217;s processes tree.</dd>
+<dt><code>&#8216;t&#8217;</code></dt>
+<dd> all system processes (init tree)</dd></dl>
 <p> Tree mode:</p>
 <dl>
-<dt><code>&#8216;up&#8217; &#8216;down&#8217;</code></p>
-<dd> cursor movement</p>
-<dt><code>&#8216;enter&#8217;</code></p>
-<dd> go back to users list</p>
-<dt><code>&#8216;o&#8217; </code></p>
-<dd> show processes owners</p>
-<dt><code>&#8216;c&#8217; </code></p>
-<dd> full command line on/off. Disabling full command line can save CPU time. It can give you also some additional information about process executable.</p>
-<dt><code>&#8216;Ctrl-I&#8217;</code></p>
-<dd> send INT signal to selected process</p>
-<dt><code>&#8216;Ctrl-K&#8217;</code></p>
-<dd> send KILL signal to selected process </p>
+<dt><code>&#8216;up&#8217; &#8216;down&#8217;</code></dt>
+<dd> cursor movement</dd>
+<dt><code>&#8216;enter&#8217;</code></dt>
+<dd> go back to users list</dd>
+<dt><code>&#8216;o&#8217; </code></dt>
+<dd> show processes owners</dd>
+<dt><code>&#8216;c&#8217; </code></dt>
+<dd> full command line on/off. Disabling full command line can save CPU time. It can give you also some additional information about process executable.</dd>
+<dt><code>&#8216;Ctrl-I&#8217;</code></dt>
+<dd> send INT signal to selected process</dd>
+<dt><code>&#8216;Ctrl-K&#8217;</code></dt>
+<dd> send KILL signal to selected process </dd>
 </dl>
 <h2>PLUGINS</h2>
 <p> Whowatch has ability to load plugin during program run. Plugin prints information inside details window. Plugins gives flexibility: if some specific information about process, user or system is needed then separate program could be written to obtain such information. Since there are three kinds of deatils window (process, user and system) maximum three plugins can be loaded. Whowatch has very simple API to write plugins. </p>

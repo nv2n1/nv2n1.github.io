@@ -19,22 +19,22 @@ description: "update-ca-certificates – update /etc/ssl/certs and ca-certificat
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Be verbose. Output <code>openssl rehash</code>.</p>
-<dt><code>-f, &#8211;fresh</code></p>
-<dd>Fresh updates. Remove symlinks in /etc/ssl/certs directory.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Be verbose. Output <code>openssl rehash</code>.</dd>
+<dt><code>-f, &#8211;fresh</code></dt>
+<dd>Fresh updates. Remove symlinks in /etc/ssl/certs directory.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/ca-certificates.conf</i></p>
-<dd>A configuration file.</p>
-<dt><i>/etc/ssl/certs/ca-certificates.crt</i></p>
-<dd>A single-file version of CA certificates. This holds all CA certificates that you activated in /etc/ca-certificates.conf.</p>
-<dt><i>/usr/share/ca-certificates</i></p>
-<dd>Directory of CA certificates.</p>
-<dt><i>/usr/local/share/ca-certificates</i></p>
-<dd>Directory of local CA certificates (with .crt extension).</dl>
+<dt><i>/etc/ca-certificates.conf</i></dt>
+<dd>A configuration file.</dd>
+<dt><i>/etc/ssl/certs/ca-certificates.crt</i></dt>
+<dd>A single-file version of CA certificates. This holds all CA certificates that you activated in /etc/ca-certificates.conf.</dd>
+<dt><i>/usr/share/ca-certificates</i></dt>
+<dd>Directory of CA certificates.</dd>
+<dt><i>/usr/local/share/ca-certificates</i></dt>
+<dd>Directory of local CA certificates (with .crt extension).</dd></dl>
 <h2>See Also</h2>
 <p><code>openssl</code>(1)</p>
 <h2>Author</h2>

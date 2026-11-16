@@ -14,14 +14,14 @@ mongoc_find_and_modify_opts_set_sort (mongoc_find_and_modify_opts_t *opts,
  const bson_t *sort);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in mongoc 1.3.0</dl>
+<dd>New in mongoc 1.3.0</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>sort</code></p>
-<dd>Determines which document the operation modifies if the query selects multiple documents. findAndModify modifies the first document in the sort order specified by this argument.</dl>
+<dt><code>sort</code></dt>
+<dd>Determines which document the operation modifies if the query selects multiple documents. findAndModify modifies the first document in the sort order specified by this argument.</dd></dl>
 <h2>Description</h2>
 <p>Adds sort argument to the builder. </p>
 <h2>Returns</h2>

@@ -15,23 +15,23 @@ description: "bct_dump – tegra BCT disassembly tool"
 <p> This program is used to take a binary Tegra Boot Configuration Table (BCT) and disassemble it into a text format suitable to be compiled with <a href="/docs/linux/man/1-cbootimage/">cbootimage</a>(1). </p>
 <h3>Platforms supported</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Tegra20</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra30</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra114</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra124</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra132</code></p>
-<dt>&bull;</p>
-<dd> <code>Tegra210</code> </p>
+<dt>&bull;</dt>
+<dd> <code>Tegra20</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra30</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra114</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra124</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra132</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Tegra210</code> </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>bctfile</i></p>
-<dd> Specify the BCT file to disassemble </p>
+<dt><i>bctfile</i></dt>
+<dd> Specify the BCT file to disassemble </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To disassemble the BCT file for a Tegra124 Jetson-TK1: </p>

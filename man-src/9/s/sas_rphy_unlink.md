@@ -14,14 +14,14 @@ description: "sas_rphy_unlink – unlink SAS remote PHY"
 <p><i>rphy</i></p>
 <dl>
 <dd>
-<dd>SAS remote phy to unlink from its parent port</dl>
+</dd><dd>SAS remote phy to unlink from its parent port</dd></dl>
 <h2>Description</h2>
 <p>Removes port reference to an rphy</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -31,10 +31,10 @@ description: "dlasq2.f –"
  on machines which follow ieee-754 floating-point standard in their
  handling of infinities and NaNs, and false otherwise. This variable
  is passed to DLASQ3.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of rows and columns in the matrix. N &gt;= 0.</pre>
 <p><i>Z</i> </p>
@@ -62,20 +62,21 @@ description: "dlasq2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
 <pre> Local Variables: I0:N0 defines a current unreduced segment of Z.
  The shifts are accumulated in SIGMA. Iteration count is in ITER.
  Ping-pong is controlled by PP (alternates between 0 and 1).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 113 of file dlasq2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

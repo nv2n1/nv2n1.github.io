@@ -22,11 +22,11 @@ git prune - packed[-n | --dry - run][-q | --quiet]
 <p> -n, &#8211;dry-run</p>
 <dl>
 <dt>
-<dd> Don&#8217;t actually remove any objects, only show those that would have been removed.</dl>
+</dt><dd> Don&#8217;t actually remove any objects, only show those that would have been removed.</dd></dl>
 <p> -q, &#8211;quiet</p>
 <dl>
 <dt>
-<dd> Squelch the progress indicator.</dl>
+</dt><dd> Squelch the progress indicator.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-pack-objects/">git-pack-objects</a></code>(1) <code><a href="/docs/linux/man/1-git-repack/">git-repack</a></code>(1)</p>
 <h2>GIT</h2>

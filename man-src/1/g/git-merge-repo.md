@@ -18,21 +18,19 @@ description: "git-merge-repo – Merge two repo histories"
 <p> Merges a local repo&#8217;s <code>frontend</code> branch into the current repo&#8217;s <code>web</code> folder:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git merge-repo ../app/.git frontend web
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Merges a remote repo&#8217;s <code>master</code> branch into the current repo&#8217;s folder:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git merge-repo git [at] github.com:tj/git-extras.git master .
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ivan Malopinsky &lt;<i>hello [at] imsky.co</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

@@ -12,7 +12,6 @@ std::future&lt;T&gt;::operator= - std::future&lt;T&gt;::operator=
 
 <pre><code>future &amp;operator=(future &amp;&amp;other) noexcept;
 (1)(since C++ 11)
-
     future &amp;
     operator=(const future &amp;other) = delete;
 (2)(since C++ 11)</code></pre> 

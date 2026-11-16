@@ -20,13 +20,11 @@ description: "set_cursor_drawer"
 void cd_cons(BITMAP *bmp, int x, int y, int w, int h, int c, bool ins)
 {
     int colour;
-
     // determine colour (defaults to black if no colour specified)
     if (c == -1)
         colour = makecol_depth(bitmap_color_depth(bmp), 0, 0, 0);
     else
         colour = c;
-
     if (ins) // if it is the insert cursor
         rectfill(bmp, x, y + h - 2, x + w - 1, y + h - 1, colour);
     else // else overwrite cursor
@@ -37,9 +35,7 @@ void cd_cons(BITMAP *bmp, int x, int y, int w, int h, int c, bool ins)
 <p> A typedef, &#8216;cursor_drawer&#8217;, in &#8216;gbuf&#8217; makes it easy to declare pointers to this type of functions: </p>
 <pre><code>
 gbuf::cursor_drawer tmp_cd;
-
 //...
-
 tmp_cd = gs1.get_cursor_drawer();
 gs1.set_cursor_drawer(gs2.get_cursor_drawer());
 gs2.set_cursor_drawer(tmp_cd);

@@ -13,30 +13,30 @@ description: "hwloc-annotate – Add info attributes to a XML topology"
 <p> <code>hwloc-annotate</code> [<i>options</i>] <i>&lt;input.xml&gt;</i> <i>&lt;output.xml&gt;</i> <i>&lt;location&gt;</i> <i>&lt;mode&gt;</i> <i>&lt;annotation&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;ri</code></p>
-<dd> Remove all info attributes that exist with the same name before adding the new one. This option is only accepted in &quot;info&quot; mode. If the info value is omitted, existing infos are replaced with nothing.</p>
-<dt><code>&#8211;ci</code></p>
-<dd> Clear the existing info attributes in the target objects before annotating. If no new annotation has to be added after clearing, <i>mode</i> should be set to <i>none</i>.</dl>
+<dt><code>&#8211;ri</code></dt>
+<dd> Remove all info attributes that exist with the same name before adding the new one. This option is only accepted in &quot;info&quot; mode. If the info value is omitted, existing infos are replaced with nothing.</dd>
+<dt><code>&#8211;ci</code></dt>
+<dd> Clear the existing info attributes in the target objects before annotating. If no new annotation has to be added after clearing, <i>mode</i> should be set to <i>none</i>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-annotate loads a topology from a XML file, adds some annotations, and export the resulting topology to another XML file. The input and output files may be the same. </p>
 <p> The annotation may be string info attributes. This is specified by the <i>mode</i>:</p>
 <dl>
-<dt><code>info &lt;name&gt; &lt;value&gt;</code></p>
-<dd> Specifies a new string info attribute whose name is <i>name</i> and value is <i>value</i>.</p>
-<dt><code>misc &lt;name&gt;</code></p>
-<dd> Specifies a new Misc object name.</p>
-<dt><code>none</code></p>
-<dd> No new annotation is added. This is useful when clearing existing attributes.</dl>
+<dt><code>info &lt;name&gt; &lt;value&gt;</code></dt>
+<dd> Specifies a new string info attribute whose name is <i>name</i> and value is <i>value</i>.</dd>
+<dt><code>misc &lt;name&gt;</code></dt>
+<dd> Specifies a new Misc object name.</dd>
+<dt><code>none</code></dt>
+<dd> No new annotation is added. This is useful when clearing existing attributes.</dd></dl>
 <p> Annotations may be added to one specific object in the topology, all of them, or all of a given type. This is specified by the <i>location</i>:</p>
 <dl>
-<dt><code>all</code></p>
-<dd> annotates all objects in the topology.</p>
-<dt><code>root</code></p>
-<dd> annotates the root object of the topology.</p>
-<dt><code>&lt;type&gt;:all</code></p>
-<dd> annotates all objects of the given type.</p>
-<dt><code>&lt;type&gt;:&lt;index&gt;</code></p>
-<dd> annotates the object of the given type and index. The index is logical.</dl>
+<dt><code>all</code></dt>
+<dd> annotates all objects in the topology.</dd>
+<dt><code>root</code></dt>
+<dd> annotates the root object of the topology.</dd>
+<dt><code>&lt;type&gt;:all</code></dt>
+<dd> annotates all objects of the given type.</dd>
+<dt><code>&lt;type&gt;:&lt;index&gt;</code></dt>
+<dd> annotates the object of the given type and index. The index is logical.</dd></dl>
 <p> <code>NOTE:</code> The existing annotations may be listed with hwloc-info. </p>
 <p> <code>NOTE:</code> It is highly recommended that you read the <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) overview page before reading this man page. Most of the concepts described in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) directly apply to the hwloc-annotate utility.</p>
 <h2>EXAMPLES</h2>

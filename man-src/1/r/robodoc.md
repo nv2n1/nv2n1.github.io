@@ -15,32 +15,32 @@ description: "ROBODoc – Extract documentation from source code."
 <p> ROBODoc extracts specially formated documentation from the source code. It allows you to maintain a program and its documentation in a single file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-c</p>
-<dd> Show the copyright message. </p>
-<dt>&#8211;version</p>
-<dd> Print version information and exit. </p>
-<dt>&#8211;doc</p>
-<dd> Define the documentation directory or documentation file. A directory should start with a &#8216;/&#8217; or a &#8216;./&#8217; and should not include any &#8216;..&#8217;. </p>
-<dt>&#8211;src</p>
-<dd> Define the source directory or source file. A directory should start with a &#8216;/&#8217; or a &#8216;./&#8217; and should not include any &#8216;..&#8217;. </p>
-<dt>&#8211;ascii</p>
-<dd> Generate documentation in ASCII format. </p>
-<dt>&#8211;html</p>
-<dd> Generate documentation in HTML format. </p>
-<dt>&#8211;dbxml</p>
-<dd> Generate documentation in XML DocBook format. </p>
-<dt>&#8211;latex</p>
-<dd> Generate documentation in LaTeX format. </p>
-<dt>&#8211;rtf</p>
-<dd> Generate documentation in RTF format. </p>
-<dt>&#8211;index</p>
-<dd> Create an additional master index file. </p>
-<dt>&#8211;multidoc</p>
-<dd> Store all documentation in seperate files. </p>
-<dt>&#8211;singledoc</p>
-<dd> Store all documentation in a single file. </p>
-<dt>&#8211;singlefile</p>
-<dd> Generate a single document from a single file </p>
+<dt>-c</dt>
+<dd> Show the copyright message. </dd>
+<dt>&#8211;version</dt>
+<dd> Print version information and exit. </dd>
+<dt>&#8211;doc</dt>
+<dd> Define the documentation directory or documentation file. A directory should start with a &#8216;/&#8217; or a &#8216;./&#8217; and should not include any &#8216;..&#8217;. </dd>
+<dt>&#8211;src</dt>
+<dd> Define the source directory or source file. A directory should start with a &#8216;/&#8217; or a &#8216;./&#8217; and should not include any &#8216;..&#8217;. </dd>
+<dt>&#8211;ascii</dt>
+<dd> Generate documentation in ASCII format. </dd>
+<dt>&#8211;html</dt>
+<dd> Generate documentation in HTML format. </dd>
+<dt>&#8211;dbxml</dt>
+<dd> Generate documentation in XML DocBook format. </dd>
+<dt>&#8211;latex</dt>
+<dd> Generate documentation in LaTeX format. </dd>
+<dt>&#8211;rtf</dt>
+<dd> Generate documentation in RTF format. </dd>
+<dt>&#8211;index</dt>
+<dd> Create an additional master index file. </dd>
+<dt>&#8211;multidoc</dt>
+<dd> Store all documentation in seperate files. </dd>
+<dt>&#8211;singledoc</dt>
+<dd> Store all documentation in a single file. </dd>
+<dt>&#8211;singlefile</dt>
+<dd> Generate a single document from a single file </dd>
 <p> The complete list of options can be found in the HTML documentation. (Reference at the end of this page.) </p>
 </dl>
 <h2>EXAMPLES</h2>

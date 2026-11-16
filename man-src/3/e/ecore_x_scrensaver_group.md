@@ -48,61 +48,61 @@ description: "X Shape extension – These functions use the shape extension of t
 <p>Get the screen blanking. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The blanking.</dl>
+<dd>The blanking.</dd></dl>
 <p> Get the screen blanking. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_screensaver_blank_set (int blank)</h3>
 <p>Set the screen blanking. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>blank</i> The blank to set.</dl>
+<dd><i>blank</i> The blank to set.</dd></dl>
 <p> blank specifies how to enable screen blanking. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI int ecore_x_screensaver_event_available_get (void)</h3>
 <p>Return whether the X server supports the ScrenSaver Extension. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the X ScrenSaver Extension is available, 0 otherwise.</dl>
+<dd>1 if the X ScrenSaver Extension is available, 0 otherwise.</dd></dl>
 <p> Return 1 if the X server supports the ScrenSaver Extension version 1.0, 0 otherwise.</p>
 <h3>EAPI void ecore_x_screensaver_event_listen_set (int on)</h3>
 <p>Specifies if the Screen Saver NotifyMask event should be generated. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> 0 to disable the generation of the event, otherwise enable it.</dl>
+<dd><i>on</i> 0 to disable the generation of the event, otherwise enable it.</dd></dl>
 <p> Specifies if the Screen Saver NotifyMask event on the screen associated with drawable should be generated for this client. If on is set to 0, the generation is disabled, otherwise, it is enabled.</p>
 <h3>EAPI int ecore_x_screensaver_expose_get (void)</h3>
 <p>Get the screen save control values. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The expose.</dl>
+<dd>The expose.</dd></dl>
 <p> Get the screen save control values. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_screensaver_expose_set (int expose)</h3>
 <p>Set the screen save control values. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>expose</i> The expose to set.</dl>
+<dd><i>expose</i> The expose to set.</dd></dl>
 <p> Set the screen save control values. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI int ecore_x_screensaver_idle_time_get (void)</h3>
 <p>Get the number of seconds since the last input was received. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of seconds.</dl>
+<dd>The number of seconds.</dd></dl>
 <p> Get the number of milliseconds since the last input was received from the user on any of the input devices. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI int ecore_x_screensaver_interval_get (void)</h3>
 <p>Get the interval of the screen saver. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The interval.</dl>
+<dd>The interval.</dd></dl>
 <p> Get the interval, in seconds, between screen saver alterations. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_screensaver_interval_set (int interval)</h3>
 <p>Set the interval of the screen saver. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> The interval to set.</dl>
+<dd><i>interval</i> The interval to set.</dd></dl>
 <p> Set the interval, in seconds, between screen saver alterations. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_screensaver_set (int timeout, int interval, int blank, int expose)</h3>
@@ -112,20 +112,20 @@ description: "X Shape extension – These functions use the shape extension of t
 <dd><i>timeout</i> The timeout, in second.<br />
  <i>interval</i> The interval, in seconds.<br />
  <i>blank</i> 0 to disable screen blanking, otherwise enable it.<br />
- <i>expose</i> Allow Expose generation event or not.</dl>
+ <i>expose</i> Allow Expose generation event or not.</dd></dl>
 <p> Set the parameters of the screen saver. timeout is the timeout, in seconds, until the screen saver turns on. interval is the interval, in seconds, between screen saver alterations. blank specifies how to enable screen blanking. expose specifies the screen save control values.</p>
 <h3>EAPI int ecore_x_screensaver_timeout_get (void)</h3>
 <p>Get the timeout of the screen saver. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The timeout.</dl>
+<dd>The timeout.</dd></dl>
 <p> Get the timeout, in seconds, until the screen saver turns on. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_screensaver_timeout_set (int timeout)</h3>
 <p>Set the timeout of the screen saver. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timeout</i> The timeout to set.</dl>
+<dd><i>timeout</i> The timeout to set.</dd></dl>
 <p> Set the timeout, in seconds, until the screen saver turns on. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_get_screensaver_prefetch()</code>, which sends the GetScreenSaver request, then <code>ecore_x_get_screensaver_fetch()</code>, which gets the reply.</p>
 <h2>Author</h2>

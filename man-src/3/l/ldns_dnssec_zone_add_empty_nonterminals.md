@@ -22,30 +22,30 @@ description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zon
 <p> ldns_status ldns_dnssec_zone_add_empty_nonterminals(ldns_dnssec_zone *zone); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_zone_find_rrset</i>()</p>
-<dd>Find the RRset with the given name and type in the zone </p>
+<dt> <i>ldns_dnssec_zone_find_rrset</i>()</dt>
+<dd>Find the RRset with the given name and type in the zone </dd>
 <p> .br <code>zone</code>: the zone structure to find the RRset in .br <code>dname</code>: the domain name of the RRset to find .br <code>type</code>: the type of the RRset to find .br Returns the RRset, or NULL if not present</dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_new</i>()</p>
-<dd>Creates a new dnssec_zone structure .br Returns the allocated structure</dl>
+<dt> <i>ldns_dnssec_zone_new</i>()</dt>
+<dd>Creates a new dnssec_zone structure .br Returns the allocated structure</dd></dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_free</i>()</p>
-<dd>Frees the given zone structure, and its rbtree of dnssec_names Individual ldns_rr RRs within those names are *not* freed .br <code>*zone</code>: the zone to free</dl>
+<dt> <i>ldns_dnssec_zone_free</i>()</dt>
+<dd>Frees the given zone structure, and its rbtree of dnssec_names Individual ldns_rr RRs within those names are *not* freed .br <code>*zone</code>: the zone to free</dd></dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_add_rr</i>()</p>
-<dd>Adds the given RR to the zone. It find whether there is a dnssec_name with that name present. If so, add it to that, if not create a new one. Special handling of NSEC and RRSIG provided </p>
+<dt> <i>ldns_dnssec_zone_add_rr</i>()</dt>
+<dd>Adds the given RR to the zone. It find whether there is a dnssec_name with that name present. If so, add it to that, if not create a new one. Special handling of NSEC and RRSIG provided </dd>
 <p> .br <code>zone</code>: the zone to add the RR to .br <code>rr</code>: The RR to add .br Returns LDNS_STATUS_OK on success, an error code otherwise</dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_names_print</i>()</p>
-<dd>Prints the rbtree of ldns_dnssec_name structures to the file descriptor </p>
+<dt> <i>ldns_dnssec_zone_names_print</i>()</dt>
+<dd>Prints the rbtree of ldns_dnssec_name structures to the file descriptor </dd>
 <p> .br <code>out</code>: the file descriptor to print the names to .br <code>tree</code>: the tree of ldns_dnssec_name structures to print .br <code>print_soa</code>: if true, print SOA records, if false, skip them</dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_print</i>()</p>
-<dd>Prints the complete zone to the given file descriptor </p>
+<dt> <i>ldns_dnssec_zone_print</i>()</dt>
+<dd>Prints the complete zone to the given file descriptor </dd>
 <p> .br <code>out</code>: the file descriptor to print to .br <code>zone</code>: the dnssec_zone to print</dl>
 <dl>
-<dt> <i>ldns_dnssec_zone_add_empty_nonterminals</i>()</p>
-<dd>Adds explicit dnssec_name structures for the empty nonterminals in this zone. (this is needed for NSEC3 generation) </p>
+<dt> <i>ldns_dnssec_zone_add_empty_nonterminals</i>()</dt>
+<dd>Adds explicit dnssec_name structures for the empty nonterminals in this zone. (this is needed for NSEC3 generation) </dd>
 <p> .br <code>zone</code>: the zone to check for empty nonterminals return LDNS_STATUS_OK on success.</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -59,3 +59,4 @@ description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zon
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

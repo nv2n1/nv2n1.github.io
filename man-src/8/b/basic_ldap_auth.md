@@ -17,85 +17,85 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 <p> The program has two major modes of operation. In the default mode of operation the users DN is constructed using the base DN and user attribute. In the other mode of operation a search filter is used to locate valid user DN&#8217;s below the base DN.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b basedn</code></p>
-<dd><code>REQUIRED.</code> Specifies the base DN under which the users are located.</p>
-<dt><code>-f filter</code></p>
+<dt><code>-b basedn</code></dt>
+<dd><code>REQUIRED.</code> Specifies the base DN under which the users are located.</dd>
+<dt><code>-f filter</code></dt>
 <dd>LDAP search <code>filter</code> to locate the user DN. Required if the users are in a hierarchy below the base DN, or if the login name is not what builds the user specific part of the users DN.<br />
  The search filter can contain up to 15 occurrences of <code>%s</code> which will be replaced by the username, as in <code>for RFC2037 directories. For a detailed description of LDAP search</code> filter syntax see RFC2254.<br />
- Will crash if other <code>%</code> values than <code>%s</code> are used, or if more than 15 <code>%s</code> are used.</p>
-<dt><code>-u userattr</code></p>
+ Will crash if other <code>%</code> values than <code>%s</code> are used, or if more than 15 <code>%s</code> are used.</dd>
+<dt><code>-u userattr</code></dt>
 <dd>Specifies the name of the DN attribute that contains the username/login. Combined with the base DN to construct the users DN when no search filter is specified ( <code>-f</code> option). Defaults to <code>uid</code><br />
- <code>Note:</code> This can only be done if all your users are located directly under the same position in the LDAP tree and the login name is used for naming each user object. If your LDAP tree does not match these criterias or if you want to filter who are valid users then you need to use a search filter to search for your users DN ( <code>-f</code> option).</p>
-<dt><code>-U passwordattr</code></p>
-<dd>Use <i>ldap_compare</i> instead of <i>ldap_simple_bind</i> to verify the users password. <code>passwordattr</code> is the LDAP attribute storing the users password.</p>
-<dt><code>-s base|one|sub</code></p>
-<dd>Search scope when performing user DN searches specified by the <code>-f</code> option. Defaults to <code>sub</code> </p>
-<dd><code>base</code> object only,</p>
-<dd><code>one</code> level below the base object or</p>
-<dd><code>sub</code>tree below the base object</p>
-<dt><code>-D binddn -w password</code></p>
+ <code>Note:</code> This can only be done if all your users are located directly under the same position in the LDAP tree and the login name is used for naming each user object. If your LDAP tree does not match these criterias or if you want to filter who are valid users then you need to use a search filter to search for your users DN ( <code>-f</code> option).</dd>
+<dt><code>-U passwordattr</code></dt>
+<dd>Use <i>ldap_compare</i> instead of <i>ldap_simple_bind</i> to verify the users password. <code>passwordattr</code> is the LDAP attribute storing the users password.</dd>
+<dt><code>-s base|one|sub</code></dt>
+<dd>Search scope when performing user DN searches specified by the <code>-f</code> option. Defaults to <code>sub</code> </dd>
+<dd><code>base</code> object only,</dd>
+<dd><code>one</code> level below the base object or</dd>
+<dd><code>sub</code>tree below the base object</dd>
+<dt><code>-D binddn -w password</code></dt>
 <dd>The DN and password to bind as while performing searches. Required by the <code>-f</code> flag if the directory does not allow anonymous searches.<br />
- As the password needs to be printed in plain text in your Squid configuration it is strongly recommended to use a account with minimal associated privileges. This to limit the damage in case someone could get hold of a copy of your Squid configuration file.</p>
-<dt><code>-D binddn -W secretfile </code></p>
+ As the password needs to be printed in plain text in your Squid configuration it is strongly recommended to use a account with minimal associated privileges. This to limit the damage in case someone could get hold of a copy of your Squid configuration file.</dd>
+<dt><code>-D binddn -W secretfile </code></dt>
 <dd>The DN and the name of a file containing the password to bind as while performing searches.<br />
- Less insecure version of the former parameter pair with two advantages: The password does not occur in the process listing, and the password is not being compromised if someone gets the squid configuration file without getting the secretfile.</p>
-<dt><code>-P</code></p>
-<dd>Use a persistent LDAP connection. Normally the LDAP connection is only open while validating a username to preserve resources at the LDAP server. This option causes the LDAP connection to be kept open, allowing it to be reused for further user validations. Recommended for larger installations.</p>
-<dt><code>-O</code></p>
-<dd>Only bind once per LDAP connection. Some LDAP servers do not allow re-binding as another user after a successful <i>ldap_bind.</i> The use of this option always opens a new connection for each login attempt. If combined with the <code>-P</code> option for persistent LDAP connection then the connection used for searching for the user DN is kept persistent but a new connection is opened to verify each users password once the DN is found.</p>
-<dt><code>-R</code></p>
-<dd>Do not follow referrals</p>
-<dt><code>-a never|always|search|find</code></p>
-<dd>when to dereference aliases. Defaults to <code>never</code></p>
-<dd><code>never</code> dereference aliases (default), <code>always</code> dereference aliases, only while <code>search ing</code> or only to <code>find</code> the base object.</p>
-<dt><code>-H ldap_uri</code></p>
-<dd>Specity the LDAP server to connect to by LDAP URI (requires OpenLDAP libraries). Servers can also be specified last on the command line.</p>
-<dt><code>-h ldap_server</code></p>
-<dd>Specify the LDAP server to connect to. Servers can also be specified last on the command line.</p>
-<dt><code>-p ldap_port</code></p>
-<dd>Specify an alternate TCP port where the LDAP server is listening if other than the default LDAP port 389. Can also be specified within the server specification by using servername:port syntax.</p>
-<dt><code>-v 2|3</code></p>
-<dd>LDAP protocol version. Defaults to <code>3</code> if not specified.</p>
-<dt><code>-Z</code></p>
-<dd>Use TLS encryption</p>
-<dt><code>-S certpath</code></p>
-<dd>Enable LDAP over SSL (requires Netscape LDAP API libraries)</p>
-<dt><code>-c connect_timeout</code></p>
-<dd>Specify <code>timeout</code> used when connecting to LDAP servers (requires Netscape LDAP API libraries)</p>
-<dt><code>-t search_timeout</code></p>
-<dd>Specify time limit on LDAP search operations</p>
-<dt><code>-d</code></p>
-<dd>Debug mode where each step taken will get reported in detail. Useful for understanding what goes wrong if the results is not what is expected.</dl>
+ Less insecure version of the former parameter pair with two advantages: The password does not occur in the process listing, and the password is not being compromised if someone gets the squid configuration file without getting the secretfile.</dd>
+<dt><code>-P</code></dt>
+<dd>Use a persistent LDAP connection. Normally the LDAP connection is only open while validating a username to preserve resources at the LDAP server. This option causes the LDAP connection to be kept open, allowing it to be reused for further user validations. Recommended for larger installations.</dd>
+<dt><code>-O</code></dt>
+<dd>Only bind once per LDAP connection. Some LDAP servers do not allow re-binding as another user after a successful <i>ldap_bind.</i> The use of this option always opens a new connection for each login attempt. If combined with the <code>-P</code> option for persistent LDAP connection then the connection used for searching for the user DN is kept persistent but a new connection is opened to verify each users password once the DN is found.</dd>
+<dt><code>-R</code></dt>
+<dd>Do not follow referrals</dd>
+<dt><code>-a never|always|search|find</code></dt>
+<dd>when to dereference aliases. Defaults to <code>never</code></dd>
+<dd><code>never</code> dereference aliases (default), <code>always</code> dereference aliases, only while <code>search ing</code> or only to <code>find</code> the base object.</dd>
+<dt><code>-H ldap_uri</code></dt>
+<dd>Specity the LDAP server to connect to by LDAP URI (requires OpenLDAP libraries). Servers can also be specified last on the command line.</dd>
+<dt><code>-h ldap_server</code></dt>
+<dd>Specify the LDAP server to connect to. Servers can also be specified last on the command line.</dd>
+<dt><code>-p ldap_port</code></dt>
+<dd>Specify an alternate TCP port where the LDAP server is listening if other than the default LDAP port 389. Can also be specified within the server specification by using servername:port syntax.</dd>
+<dt><code>-v 2|3</code></dt>
+<dd>LDAP protocol version. Defaults to <code>3</code> if not specified.</dd>
+<dt><code>-Z</code></dt>
+<dd>Use TLS encryption</dd>
+<dt><code>-S certpath</code></dt>
+<dd>Enable LDAP over SSL (requires Netscape LDAP API libraries)</dd>
+<dt><code>-c connect_timeout</code></dt>
+<dd>Specify <code>timeout</code> used when connecting to LDAP servers (requires Netscape LDAP API libraries)</dd>
+<dt><code>-t search_timeout</code></dt>
+<dd>Specify time limit on LDAP search operations</dd>
+<dt><code>-d</code></dt>
+<dd>Debug mode where each step taken will get reported in detail. Useful for understanding what goes wrong if the results is not what is expected.</dd></dl>
 <h2>Configuration</h2>
 <p>For directories using the RFC2307 layout with a single domain, all you need to specify is usually the base DN under where your users are located and the server name:</p>
 <dl>
 <dd>
-<dl>
-<dd><code>basic_ldap_auth -b ou=people,dc=your,dc=domain ldapserver</code></dl>
+</dd><dl>
+<dd><code>basic_ldap_auth -b ou=people,dc=your,dc=domain ldapserver</code></dd></dl>
 </dl>
 <p> If you have sub-domains then you need to use a search filter approach to locate your user DNs as these can no longer be constructed directly from the base DN and login name alone:</p>
 <dl>
 <dd>
-<dl>
-<dd><code>basic_ldap_auth -b dc=your,dc=domain -f uid=%s ldapserver</code></dl>
+</dd><dl>
+<dd><code>basic_ldap_auth -b dc=your,dc=domain -f uid=%s ldapserver</code></dd></dl>
 </dl>
 <p> And similarly if you only want to allow access to users having a specific attribute</p>
 <dl>
 <dd>
-<dl>
-<dd><code>basic_ldap_auth -b dc=your,dc=domain -f (&amp;(uid=%s)(specialattribute=value)) ldapserver</code></dl>
+</dd><dl>
+<dd><code>basic_ldap_auth -b dc=your,dc=domain -f (&amp;(uid=%s)(specialattribute=value)) ldapserver</code></dd></dl>
 </dl>
 <p> Or if the user attribute of the user DN is <code>cn</code> instead of <code>uid</code> and you do not want to have to search for the users then you could use something like the following example for Active Directory:</p>
 <dl>
 <dd>
-<dl>
-<dd><code>basic_ldap_auth -u cn -b cn=Users,dc=your,dc=domain ldapserver</code></dl>
+</dd><dl>
+<dd><code>basic_ldap_auth -u cn -b cn=Users,dc=your,dc=domain ldapserver</code></dd></dl>
 </dl>
 <p> If you want to search for the user DN and your directory does not allow anonymous searches then you must also use the <code>-D</code> and <code>-w</code> flags to specify a user DN and password to log in as to perform the searches, as in the following complex Active Directory example</p>
 <dl>
 <dd>
-<dl>
-<dd><code>basic_ldap_auth -P -R -b dc=your,dc=domain -D cn=squid,cn=users,dc=your,dc=domain -w secretsquidpassword -f (&amp;(userPrincipalName=%s)(objectClass=Person)) activedirectoryserver</code></dl>
+</dd><dl>
+<dd><code>basic_ldap_auth -P -R -b dc=your,dc=domain -D cn=squid,cn=users,dc=your,dc=domain -w secretsquidpassword -f (&amp;(userPrincipalName=%s)(objectClass=Person)) activedirectoryserver</code></dd></dl>
 </dl>
 <p> <code>NOTE:</code> When constructing search filters it is strongly recommended to test the filter using <code>ldapsearch</code> before you attempt to use <code>basic_ldap_auth.</code> This to verify that the filter matches what you expect.</p>
 <h2>Author</h2>

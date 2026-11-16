@@ -43,19 +43,15 @@ new[options] filename[template]
 
 <dl>
 <dt>-h, --help
-<dd> Print a list of options 
-
-<dt>-f, --force
-<dd> Overwrite any existing files 
-
-<dt>-l, --list
-<dd> List projects available 
-
-<dt>-g, --global
-<dd> Use global projects instead of personal ones 
+</dt><dd> Print a list of options 
+</dd><dt>-f, --force
+</dt><dd> Overwrite any existing files 
+</dd><dt>-l, --list
+</dt><dd> List projects available 
+</dd><dt>-g, --global
+</dt><dd> Use global projects instead of personal ones 
 &nbsp;<wbr> 
-
-</dl>
+</dd></dl>
 
 <h2>FILES</h2>
 
@@ -77,15 +73,11 @@ new[options] filename[template]
 
 <dl>
 <dt>E-Mail
-<dd> &lt;new_proj [at] flyn.org&gt; 
-
-<dt>HTTP
-<dd> Flyn Computing: <i><a rel="nofollow" HREF="http://www.flyn.org">http://www.flyn.org</a></i> 
+</dt><dd> &lt;new_proj [at] flyn.org&gt; 
+</dd><dt>HTTP
+</dt><dd> Flyn Computing: <i><a rel="nofollow" HREF="http://www.flyn.org">http://www.flyn.org</a></i> 
 &nbsp;<wbr> 
-
- 
-
-</dl>
+</dd></dl>
 
 <h2>Index</h2>
 

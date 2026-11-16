@@ -23,12 +23,12 @@ CALL SET3 (XMIN,XMAX,YMIN,YMAX,UMIN,UMAX,VMIN,VMAX,WMIN,WMAX,PEYE)
 <h2>Description</h2>
 
 <dl><dt>XMIN,XMAX,YMIN,YMAX
-<dd>(input expressions of type REAL) are the fractional coordinates (in NDCs) defining the portion of the plotter frame (the &quot;viewport&quot;) into which 3-D objects are to be projected. Each has a value between 0. and 1., inclusive. Examples: To use the whole plotter frame, set XMIN=0., XMAX=1., YMIN=0., and YMAX=1.; to use the upper left quarter of the plotter frame, set XMIN=0., XMAX=.5, YMIN=.5, and YMAX=1.
-<dt>UMIN,UMAX,VMIN,VMAX,WMIN,WMAX
-<dd>(input expressions of type REAL) are the limiting coordinates, in a 3-D coordinate space of the user's choosing, of the rectangular box that is to be projected. This box normally contains all of the objects whose projections are to be drawn.
-<dt>PEYE
-<dd>(an input array, dimensioned 3, of type REAL) is an array specifying the coordinates, in the user's 3-D coordinate system, of the eye position. The point
-<dl><dd><dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dl></dl><dd>must be outside the box defined by UMIN, UMAX, VMIN, VMAX, WMIN, and WMAX. Objects will be drawn as they appear from this point.</dl>
+</dt><dd>(input expressions of type REAL) are the fractional coordinates (in NDCs) defining the portion of the plotter frame (the &quot;viewport&quot;) into which 3-D objects are to be projected. Each has a value between 0. and 1., inclusive. Examples: To use the whole plotter frame, set XMIN=0., XMAX=1., YMIN=0., and YMAX=1.; to use the upper left quarter of the plotter frame, set XMIN=0., XMAX=.5, YMIN=.5, and YMAX=1.
+</dd><dt>UMIN,UMAX,VMIN,VMAX,WMIN,WMAX
+</dt><dd>(input expressions of type REAL) are the limiting coordinates, in a 3-D coordinate space of the user's choosing, of the rectangular box that is to be projected. This box normally contains all of the objects whose projections are to be drawn.
+</dd><dt>PEYE
+</dt><dd>(an input array, dimensioned 3, of type REAL) is an array specifying the coordinates, in the user's 3-D coordinate system, of the eye position. The point
+</dd><dl><dd></dd><dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dd></dl></dl><dd>must be outside the box defined by UMIN, UMAX, VMIN, VMAX, WMIN, and WMAX. Objects will be drawn as they appear from this point.</dd></dl>
  
 
  The call to SET3 says what portion of the 3-D coordinate system is to be projected, from what point it is to be projected, and where the resulting picture is to be placed on the plotter frame. 
@@ -36,11 +36,11 @@ CALL SET3 (XMIN,XMAX,YMIN,YMAX,UMIN,UMAX,VMIN,VMAX,WMIN,WMAX,PEYE)
  The array PEYE specifies the position of the eye, which may be referred to as the &quot;viewpoint&quot; or &quot;center&quot; of the projection. 
 
  The &quot;line of sight&quot; runs from the point
-<dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dl>
+<dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dd></dl>
  
 
  (the eye position) to the point
-<dl><dd>(.5*(UMIN+UMAX),.5*(VMIN+VMAX),.5*(WMIN+WMAX))</dl>
+<dl><dd>(.5*(UMIN+UMAX),.5*(VMIN+VMAX),.5*(WMIN+WMAX))</dd></dl>
  
 
  (the point at the center of the projected box). 

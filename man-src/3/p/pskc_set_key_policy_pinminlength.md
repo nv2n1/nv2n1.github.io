@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_pinminlength – API function"
 void pskc_set_key_policy_pinminlength(pskc_key_t *key, uint32_t minlength);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint32_t minlength</p>
-<dd>the length to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint32_t minlength</dt>
+<dd>the length to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy PINPolicy MinLength value. This attribute indicates the minimum length of a PIN that can be set to protect the associated key. It MUST NOT be possible to set a PIN shorter than this value. If the &#8216;PINFormat&#8217; attribute is set to the number of digits/ characters. If the &#8216;PINFormat&#8217; attribute is set to &#8216;BASE64&#8217; or &#8216;BINARY&#8217;, this value indicates the number of bytes of the unencoded value.</p>
 <h2>Since</h2>

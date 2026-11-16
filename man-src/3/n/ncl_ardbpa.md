@@ -13,13 +13,12 @@ ARDBPA - Produces a plot showing all of the edge segments in an area map that ha
 
  void c_ardbpa (int *map, int igrp, char *label)
 <h2>Description</h2><dl COMPACT><dt>MAP
-<dd>(an input/output array of type INTEGER) - An array containing an area map that has at least been initialized by a call to ARINAM and to which edges will probably have been added by calls to AREDAM. 
-
+</dt><dd>(an input/output array of type INTEGER) - An array containing an area map that has at least been initialized by a call to ARINAM and to which edges will probably have been added by calls to AREDAM. 
  Note: As part of initializing the area map, ARINAM stores the dimension of MAP in <a HREF="/docs/linux/man/1-map/">MAP</a>(1); therefore, the dimension does not have to be given as an argument in calls to ARDBPA.)
-<dt>IGRP
-<dd>(an input expression of type INTEGER) - The group identifier of the group that you want to examine. If IGRP is less than or equal to zero, edges from all groups will be shown.
-<dt>LABEL
-<dd>(an input constant or variable of type CHARACTER) - The label you want put on the plot.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dd><dt>IGRP
+</dt><dd>(an input expression of type INTEGER) - The group identifier of the group that you want to examine. If IGRP is less than or equal to zero, edges from all groups will be shown.
+</dd><dt>LABEL
+</dt><dd>(an input constant or variable of type CHARACTER) - The label you want put on the plot.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>When ARDBPA is called, it draws the requested picture and then calls FRAME to advance to a new frame. 
 
  By default, each edge segment in the plot appears in one of four different colors, depending on whether the area identifiers to the left and right are less than or equal to zero or greater than zero, as follows: 

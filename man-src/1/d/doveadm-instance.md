@@ -18,31 +18,29 @@ description: "doveadm-instance – Manage the list of running Dovecot instances"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-f&nbsp;<wbr></code><i>formatter</i></p>
-<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</p>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>formatter</i></dt>
+<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>flow</code></p>
-<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</p>
-<dt><code>pager</code></p>
-<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</p>
-<dt><code>tab</code></p>
-<dd> prints a table header followed by tab separated value lines.</p>
-<dt><code>table</code></p>
-<dd> prints a table header followed by adjusted value lines.</dl>
+<dt><code>flow</code></dt>
+<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</dd>
+<dt><code>pager</code></dt>
+<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</dd>
+<dt><code>tab</code></dt>
+<dd> prints a table header followed by tab separated value lines.</dd>
+<dt><code>table</code></dt>
+<dd> prints a table header followed by adjusted value lines.</dd></dl>
 </dl>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>name</i></p>
-<dd> The value of an instance&#8217;s <i>instance_name</i> setting.</p>
-<dt><i>base_dir</i></p>
-<dd> The base directory of a Dovecot instance.</dl>
+<dt><i>name</i></dt>
+<dd> The value of an instance&#8217;s <i>instance_name</i> setting.</dd>
+<dt><i>base_dir</i></dt>
+<dd> The base directory of a Dovecot instance.</dd></dl>
 <h2>COMMANDS</h2>
 <h3>instance list</h3>
 <p> <code>doveadm instance list</code> </p>

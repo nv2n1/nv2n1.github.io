@@ -14,15 +14,15 @@ description: "scsi_device_get – get an additional reference to a scsi_device"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>device to get a reference to</dl>
+</dd><dd>device to get a reference to</dd></dl>
 <h2>Description</h2>
 <p>Gets a reference to the scsi_device and increments the use count of the underlying LLDD module. You must hold host_lock of the parent Scsi_Host or already have a reference when calling this. </p>
 <p> This will fail if a device is deleted or cancelled, or when the LLD module is in the process of being unloaded.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -16,7 +16,7 @@ The file <i>&lt;pathdb in inn.conf&gt;/history</i> keeps a record of all article
 
  Each line consists of two or three fields separated by a tab, shown below as <i>\t</i>:
 <dl><dd><pre>[Hash] \t date
-[Hash] \t date \t token</pre></dl>
+[Hash] \t date \t token</pre></dd></dl>
  
 
  The <i>Hash</i> field is the ASCII representation of the hash of the Message-ID header. This is directly used for the key of the <i><a HREF="/docs/linux/man/3-dbz/">dbz</a></i>(3). 
@@ -28,7 +28,7 @@ The file <i>&lt;pathdb in inn.conf&gt;/history</i> keeps a record of all article
  For example, an article whose Message-ID was &lt;7q2saq$sal$1@isrv4.pa.vix.com&gt;, posted on 26 Aug 1999 08:02:34 GMT and recieved at 26 Aug 1999 08:06:54 GMT, could have a history line (broken into three lines for display) like the following:
 <dl><dd><pre>[E6184A5BC2898A35A3140B149DE91D5C] \t
  935678987~-~935678821 \t
- @030154574F00000000000007CE3B000004BA@</pre></dl>
+ @030154574F00000000000007CE3B000004BA@</pre></dd></dl>
  
 
  In addition to the text file, there is a <i><a HREF="/docs/linux/man/3-dbz/">dbz</a></i>(3) database associated with the file that uses the Message-ID field as a key to determine the offset in the text file where the associated line begins. For historical reasons, the key includes the trailing \0 byte (which is not stored in the text file).

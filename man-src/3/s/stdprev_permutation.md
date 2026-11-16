@@ -10,21 +10,13 @@ description: "std::prev_permutation – std::prev_permutation"
 <p>std::prev_permutation &#8211; std::prev_permutation</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt &gt;                                                            (until C++20)
-
 bool prev_permutation( BidirIt first, BidirIt last);
-
 template&lt; class BidirIt &gt;                                                            (since C++20)
-
 constexpr bool prev_permutation( BidirIt first, BidirIt last);               (1)
-
 template&lt; class BidirIt, class Compare &gt;                                                           (until C++20)
-
 bool prev_permutation( BidirIt first, BidirIt last, Compare comp);               (2)
-
 template&lt; class BidirIt, class Compare &gt;                                                           (since C++20)
-
 constexpr bool prev_permutation( BidirIt first, BidirIt last, Compare comp);</code></pre>
 <p>Transforms the range [first, last) into the previous permutation from the set of all permutations that are lexicographically ordered with respect to operator&lt; or comp. Returns true if such permutation exists, otherwise transforms the range into the last permutation (as if by std::sort(first, last); std::reverse(first, last);) and returns false. </p>
 <h2>Parameters</h2>
@@ -73,15 +65,10 @@ BidirIt must meet the requirements of ValueSwappable and LegacyBidirectionalIter
 <p>The following code prints all six permutations of the string &quot;abc&quot; in reverse order<br />
  // Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
-
 int main()
-
 {
     std::string s = &quot;abc&quot;;
     std::sort(s.begin(), s.end(), std::greater&lt;char&gt;());

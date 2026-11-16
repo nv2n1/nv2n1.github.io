@@ -14,7 +14,7 @@ description: "phy_detach – detach a PHY device from its network device"
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>target phy_device struct</dl>
+</dd><dd>target phy_device struct</dd></dl>
 <h2>Description</h2>
 <p>This detaches the phy device from its network device and the phy driver, and drops the reference count taken in <code>phy_attach_direct</code>.</p>
 <h2>Copyright</h2>

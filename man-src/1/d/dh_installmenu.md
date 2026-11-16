@@ -16,14 +16,14 @@ description: "dh_installmenu – install Debian menu files into package build di
 <p> It also automatically generates the <i>postinst</i> and <i>postrm</i> commands needed to interface with the Debian <code>menu</code> package. These commands are inserted into the maintainer scripts by <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1).</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.menu</p>
-<dd> Debian menu files, installed into usr/share/menu/<i>package</i> in the package build directory. See <i>menufile</i>(5) for its format.</p>
-<dt>debian/<i>package</i>.menu-method</p>
-<dd> Debian menu method files, installed into etc/menu-methods/<i>package</i> in the package build directory.</dl>
+<dt>debian/<i>package</i>.menu</dt>
+<dd> Debian menu files, installed into usr/share/menu/<i>package</i> in the package build directory. See <i>menufile</i>(5) for its format.</dd>
+<dt>debian/<i>package</i>.menu-method</dt>
+<dd> Debian menu method files, installed into etc/menu-methods/<i>package</i> in the package build directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;no-scripts</code></p>
-<dd> Do not modify <i>postinst</i>/<i>postrm</i> scripts.</dl>
+<dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
+<dd> Do not modify <i>postinst</i>/<i>postrm</i> scripts.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) <i>update-menus</i>(1) <i>menufile</i>(5) </p>
 <p> This program is a part of debhelper.</p>

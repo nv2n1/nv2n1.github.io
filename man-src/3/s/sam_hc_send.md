@@ -18,7 +18,8 @@ description: "sam_hc_send – Send health check confirmation"
 <p>This call return CS_OK value if successful, otherwise and error is returned. </p>
 <h2>Errors</h2>
 <dl>
-<dt>CS_ERR_BAD_HANDLE</p>
-<dd>health checking is not in running state (<code><a href="/docs/linux/man/3-sam_start/">sam_start</a>(3)</code> has not been executed) or function is called after stop/finalization of SAM. </p>
+<dt>CS_ERR_BAD_HANDLE</dt>
+<dd>health checking is not in running state (<code><a href="/docs/linux/man/3-sam_start/">sam_start</a>(3)</code> has not been executed) or function is called after stop/finalization of SAM. </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-sam_start/">sam_start</a></code>(3), <code><a href="/docs/linux/man/3-sam_stop/">sam_stop</a></code>(3), <code><a href="/docs/linux/man/3-sam_hc_callback_register/">sam_hc_callback_register</a></code>(3) <code>CS_ERR_TRY_AGAIN</code> Resource temporarily unavailable <code>CS_ERR_INVALID_PARAM</code> Invalid argument <code>CS_ERR_ACCESS</code> Permission denied <code>CS_ERR_LIBRARY</code> The connection failed <code>CS_ERR_INTERRUPT</code> System call inturrupted by a signal <code>CS_ERR_NOT_SUPPORTED</code> The requested protocol/functuality not supported <code>CS_ERR_MESSAGE_ERROR</code> Incorrect auth message received <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
+</dl>

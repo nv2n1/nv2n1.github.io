@@ -23,68 +23,68 @@ description: "oggz-diff — Hexdump the packets of two Ogg files and output diff
 &nbsp;<wbr></p>
 <h3>oggz-dump format options</h3>
 <dl>
-<dt>-b, &#8211;binary</p>
+<dt>-b, &#8211;binary</dt>
 <dd> Generate a binary dump of each packet<br />
-&nbsp;<wbr></p>
-<dt>-x, &#8211;hexadeciaml</p>
+&nbsp;<wbr></dd>
+<dt>-x, &#8211;hexadeciaml</dt>
 <dd> Generate a hexadecimal dump of each packet<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <h3>oggz-dump filtering options</h3>
 <dl>
-<dt>-c <code>content-type</code>, &#8211;content-type <code>content-type</code></p>
+<dt>-c <code>content-type</code>, &#8211;content-type <code>content-type</code></dt>
 <dd> Dump only the logical bitstreams for a specific <code>content-type</code>. Run <code><a href="/docs/linux/man/1-oggz-known-codecs/">oggz-known-codecs</a></code><code>(1)</code> for a full list of codecs known by the installed version of oggz.<br />
-&nbsp;<wbr></p>
-<dt>-s <code>serialno</code>, &#8211;serialno <code>serialno</code></p>
+&nbsp;<wbr></dd>
+<dt>-s <code>serialno</code>, &#8211;serialno <code>serialno</code></dt>
 <dd> Dump only the logical bitstream with specified <code>serialno</code>.<br />
-&nbsp;<wbr></p>
-<dt>-O, &#8211;hide-offset</p>
+&nbsp;<wbr></dd>
+<dt>-O, &#8211;hide-offset</dt>
 <dd> Hide the byte offset field of the preamble for each packet dumped. This is particularly useful when comparing Ogg bitstreams that differ only in page structure.<br />
-&nbsp;<wbr></p>
-<dt>-S, &#8211;hide-serialno</p>
+&nbsp;<wbr></dd>
+<dt>-S, &#8211;hide-serialno</dt>
 <dd> Hide the serialno field of the preamble for each packet dumped. This is particularly useful when comparing Ogg bitstreams that differ only in serialno assignment.<br />
-&nbsp;<wbr></p>
-<dt>-G, &#8211;hide-granulepos</p>
+&nbsp;<wbr></dd>
+<dt>-G, &#8211;hide-granulepos</dt>
 <dd> Hide the granulepos field of the preamble for each packet dumped.<br />
-&nbsp;<wbr></p>
-<dt>-P, &#8211;hide-packetno</p>
+&nbsp;<wbr></dd>
+<dt>-P, &#8211;hide-packetno</dt>
 <dd> Hide the packetno field of the preamble for each packet dumped.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <h3>diff options</h3>
 <p> The -w (&#8211;ignore-all-space) option to <code>diff</code> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>is always implied. </p>
 <p>&nbsp;<wbr></p>
 <dl>
-<dt>-q, &#8211;brief</p>
+<dt>-q, &#8211;brief</dt>
 <dd> Output only whether files differ.<br />
-&nbsp;<wbr></p>
-<dt>-C <code>NUM</code>, &#8211;context[=<code>NUM</code>]</p>
+&nbsp;<wbr></dd>
+<dt>-C <code>NUM</code>, &#8211;context[=<code>NUM</code>]</dt>
 <dd> Output NUM lines of copied context.<br />
-&nbsp;<wbr></p>
-<dt>-u, -U <code>NUM</code>, &#8211;unified[=<code>NUM</code>]</p>
+&nbsp;<wbr></dd>
+<dt>-u, -U <code>NUM</code>, &#8211;unified[=<code>NUM</code>]</dt>
 <dd> Output NUM (default 3) lines of unified context.<br />
-&nbsp;<wbr></p>
-<dt>-e, &#8211;ed</p>
+&nbsp;<wbr></dd>
+<dt>-e, &#8211;ed</dt>
 <dd> Output an ed script.<br />
-&nbsp;<wbr></p>
-<dt>&#8211;normal</p>
+&nbsp;<wbr></dd>
+<dt>&#8211;normal</dt>
 <dd> Output a normal diff.<br />
-&nbsp;<wbr></p>
-<dt>&#8211;rcs</p>
+&nbsp;<wbr></dd>
+<dt>&#8211;rcs</dt>
 <dd> Output an RCS format diff.<br />
-&nbsp;<wbr></p>
-<dt>-y, &#8211;side-by-side</p>
+&nbsp;<wbr></dd>
+<dt>-y, &#8211;side-by-side</dt>
 <dd> Output in two columns.<br />
-&nbsp;<wbr></p>
-<dt>-l, &#8211;paginate</p>
+&nbsp;<wbr></dd>
+<dt>-l, &#8211;paginate</dt>
 <dd> Pass the output through <code>pr</code> to paginate it.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>&#8211;verbose</p>
-<dd> Display verbose messages.</p>
-<dt>-v, &#8211;version</p>
-<dd> Display version information and exit.</p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</dl>
+<dt>&#8211;verbose</dt>
+<dd> Display verbose messages.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Display version information and exit.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker</p>
 <h2>COPYRIGHT</h2>

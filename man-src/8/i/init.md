@@ -116,130 +116,130 @@ description: "init – Upstart process management daemon"
 &nbsp;<wbr>&nbsp;<wbr>state will be&nbsp;<wbr>&#8216;pre-stop&#8217;, else it will be&nbsp;<wbr>&#8216;stopping&#8217;.</p>
 <h3>Job Lifecycle</h3>
 <dl>
-<dt>Starting a Job</p>
+<dt>Starting a Job</dt>
 <dd>
-<dt>step]</p>
-<dd>Initially the job is &quot;at rest&quot; with a goal of &#8216;stop&#8217; and a state of &#8216;waiting&#8217; (shown as &#8216;stop/waiting&#8217; by the <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) <code>list</code> and <code>status</code> commands).</p>
-<dt>step]</p>
-<dd>The goal is changed from &#8216;stop&#8217; to &#8216;start&#8217; indicating the job is attempting to start.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;waiting&#8217; to &#8216;starting&#8217;.</p>
-<dt>step]</p>
-<dd>The <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7) event is emitted denoting the job is &quot;about to start&quot;.</p>
-<dt>step]</p>
-<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job starting are started (or stopped respectively).</p>
-<dt>step]</p>
-<dd>The <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7) event completes.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;starting&#8217; to &#8216;pre-start&#8217;.</p>
-<dt>step]</p>
-<dd>If the <code>pre-start</code> stanza exists, the pre-start process is spawned.</p>
-<dt>step]</p>
-<dd>If the pre-start process fails, the goal is changed from &#8216;start&#8217; to &#8216;stop&#8217;, and the <code><a href="/docs/linux/man/7-stopping/">stopping</a>(7)</code> and <code><a href="/docs/linux/man/7-stopped/">stopped</a>(7)</code> events are emitted with appropriate variables set denoting the error.</p>
-<dt>step]</p>
-<dd>Assuming the pre-start did not fail or did not call &quot;stop&quot;, the main process is spawned.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;pre-start&#8217; to &#8216;spawned&#8217;.</p>
-<dt>step]</p>
-<dd>Upstart then ascertains the <i>final</i> PID for the job which may be a descendent of the immediate child process if <code>expect fork</code> or <code>expect daemon</code> has been specified.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;spawned&#8217; to &#8216;post-start&#8217;.</p>
-<dt>step]</p>
-<dd>If the <code>post-start</code> stanza exists, the post-start process is spawned.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;post-start&#8217; to &#8216;running&#8217;.</p>
-<dt>step]</p>
-<dd>The <code><a href="/docs/linux/man/7-started/">started</a></code>(7) event is emitted. </p>
+</dd><dt>step]</dt>
+<dd>Initially the job is &quot;at rest&quot; with a goal of &#8216;stop&#8217; and a state of &#8216;waiting&#8217; (shown as &#8216;stop/waiting&#8217; by the <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) <code>list</code> and <code>status</code> commands).</dd>
+<dt>step]</dt>
+<dd>The goal is changed from &#8216;stop&#8217; to &#8216;start&#8217; indicating the job is attempting to start.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;waiting&#8217; to &#8216;starting&#8217;.</dd>
+<dt>step]</dt>
+<dd>The <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7) event is emitted denoting the job is &quot;about to start&quot;.</dd>
+<dt>step]</dt>
+<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job starting are started (or stopped respectively).</dd>
+<dt>step]</dt>
+<dd>The <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7) event completes.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;starting&#8217; to &#8216;pre-start&#8217;.</dd>
+<dt>step]</dt>
+<dd>If the <code>pre-start</code> stanza exists, the pre-start process is spawned.</dd>
+<dt>step]</dt>
+<dd>If the pre-start process fails, the goal is changed from &#8216;start&#8217; to &#8216;stop&#8217;, and the <code><a href="/docs/linux/man/7-stopping/">stopping</a>(7)</code> and <code><a href="/docs/linux/man/7-stopped/">stopped</a>(7)</code> events are emitted with appropriate variables set denoting the error.</dd>
+<dt>step]</dt>
+<dd>Assuming the pre-start did not fail or did not call &quot;stop&quot;, the main process is spawned.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;pre-start&#8217; to &#8216;spawned&#8217;.</dd>
+<dt>step]</dt>
+<dd>Upstart then ascertains the <i>final</i> PID for the job which may be a descendent of the immediate child process if <code>expect fork</code> or <code>expect daemon</code> has been specified.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;spawned&#8217; to &#8216;post-start&#8217;.</dd>
+<dt>step]</dt>
+<dd>If the <code>post-start</code> stanza exists, the post-start process is spawned.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;post-start&#8217; to &#8216;running&#8217;.</dd>
+<dt>step]</dt>
+<dd>The <code><a href="/docs/linux/man/7-started/">started</a></code>(7) event is emitted. </dd>
 <p> For services, when this event completes the main process will now be fully running. If the job refers to a task, it will now have completed (successfully or otherwise).</p>
-<dt>step]</p>
-<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job being started are started (or stopped respectively).</p>
-<dt>Stopping a Job</p>
+<dt>step]</dt>
+<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job being started are started (or stopped respectively).</dd>
+<dt>Stopping a Job</dt>
 <dd>
-<dt>step]</p>
-<dd>Assuming the job is fully running, it will have a goal of &#8216;start&#8217; and a state of &#8216;running&#8217; (shown as &#8216;start/running&#8217; by the <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) <code>list</code> and <code>status</code> commands).</p>
-<dt>step]</p>
-<dd>The goal is changed from &#8216;start&#8217; to &#8216;stop&#8217; indicating the job is attempting to stop.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;running&#8217; to &#8216;pre-stop&#8217;.</p>
-<dt>step]</p>
-<dd>If the <code>pre-stop</code> stanza exists, the pre-stop process is spawned.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;pre-stop&#8217; to &#8216;stopping&#8217;.</p>
-<dt>step]</p>
-<dd>The <code><a href="/docs/linux/man/7-stopping/">stopping</a></code>(7) event is emitted.</p>
-<dt>step]</p>
-<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job stopping are started (or stopped respectively).</p>
-<dt>step]</p>
-<dd>The main process is stopped:</p>
+</dd><dt>step]</dt>
+<dd>Assuming the job is fully running, it will have a goal of &#8216;start&#8217; and a state of &#8216;running&#8217; (shown as &#8216;start/running&#8217; by the <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) <code>list</code> and <code>status</code> commands).</dd>
+<dt>step]</dt>
+<dd>The goal is changed from &#8216;start&#8217; to &#8216;stop&#8217; indicating the job is attempting to stop.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;running&#8217; to &#8216;pre-stop&#8217;.</dd>
+<dt>step]</dt>
+<dd>If the <code>pre-stop</code> stanza exists, the pre-stop process is spawned.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;pre-stop&#8217; to &#8216;stopping&#8217;.</dd>
+<dt>step]</dt>
+<dd>The <code><a href="/docs/linux/man/7-stopping/">stopping</a></code>(7) event is emitted.</dd>
+<dt>step]</dt>
+<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job stopping are started (or stopped respectively).</dd>
+<dt>step]</dt>
+<dd>The main process is stopped:</dd>
 <dl>
 <dd>
-<dl>
-<dt>step2]</p>
-<dd>The signal specified by the <code>kill signal</code> stanza is sent to the process group of the main process (such that all processes belonging to the jobs main process are killed). By default this signal is <code>SIGTERM</code>. </p>
+</dd><dl>
+<dt>step2]</dt>
+<dd>The signal specified by the <code>kill signal</code> stanza is sent to the process group of the main process (such that all processes belonging to the jobs main process are killed). By default this signal is <code>SIGTERM</code>. </dd>
 <p> See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) and <code><a href="/docs/linux/man/5-init/">init</a></code>(5).</p>
-<dt>step2]</p>
-<dd>Upstart waits for up to &quot;kill timeout&quot; seconds (default 5 seconds) for the process to end.</p>
-<dt>step2]</p>
-<dd>If the process is still running after the timeout, a <code>SIGKILL</code> signal is sent to the process which cannot be ignored and will forcibly stop the processes in the process group.</dl>
+<dt>step2]</dt>
+<dd>Upstart waits for up to &quot;kill timeout&quot; seconds (default 5 seconds) for the process to end.</dd>
+<dt>step2]</dt>
+<dd>If the process is still running after the timeout, a <code>SIGKILL</code> signal is sent to the process which cannot be ignored and will forcibly stop the processes in the process group.</dd></dl>
 </dl>
-<dt>step]</p>
-<dd>The state is changed from &#8216;killed&#8217; to &#8216;post-stop&#8217;.</p>
-<dt>step]</p>
-<dd>If the <code>post-stop</code> stanza exists, the post-stop process is spawned.</p>
-<dt>step]</p>
-<dd>The state is changed from &#8216;post-stop&#8217; to &#8216;waiting&#8217;.</p>
-<dt>step]</p>
-<dd>The <code><a href="/docs/linux/man/7-stopped/">stopped</a></code>(7) event is emitted. </p>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;killed&#8217; to &#8216;post-stop&#8217;.</dd>
+<dt>step]</dt>
+<dd>If the <code>post-stop</code> stanza exists, the post-stop process is spawned.</dd>
+<dt>step]</dt>
+<dd>The state is changed from &#8216;post-stop&#8217; to &#8216;waiting&#8217;.</dd>
+<dt>step]</dt>
+<dd>The <code><a href="/docs/linux/man/7-stopped/">stopped</a></code>(7) event is emitted. </dd>
 <p> When this event completes, the job is fully stopped.</p>
-<dt>step]</p>
-<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job being stopped are started (or stopped respectively).</dl>
+<dt>step]</dt>
+<dd>Any jobs whose &#8216;start on&#8217; (or &#8216;stop on&#8217;) condition would be satisfied by this job being stopped are started (or stopped respectively).</dd></dl>
 <h3>System V compatibility</h3>
 <p>The Upstart <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon does not keep track of runlevels itself, instead they are implemented entirely by its userspace tools. The event emitted to signify a change of runlevel is the <code><a href="/docs/linux/man/7-runlevel/">runlevel</a></code>(7) event. For more information see its manual page.</p>
 <h2>Options</h2>
 <p>Options are passed to <code><a href="/docs/linux/man/8-init/">init</a></code>(8) by placing them on the kernel command-line.</p>
 <dl>
-<dt><code>&#8211;chroot-sessions</code></p>
-<dd>Enable chroot session support. See <code>Chroot Support</code> in <code><a href="/docs/linux/man/5-init/">init</a></code>(5).</p>
-<dt><code>&#8211;confdir </code><i>directory</i></p>
-<dd>Read job configuration files from a directory other than the default (<i>/etc/init</i> for process ID 1). </p>
+<dt><code>&#8211;chroot-sessions</code></dt>
+<dd>Enable chroot session support. See <code>Chroot Support</code> in <code><a href="/docs/linux/man/5-init/">init</a></code>(5).</dd>
+<dt><code>&#8211;confdir </code><i>directory</i></dt>
+<dd>Read job configuration files from a directory other than the default (<i>/etc/init</i> for process ID 1). </dd>
 <p> When running as process ID 1, the last directory specified will be used. </p>
 <p> In user session mode, multiple directories will be honoured and job configuration files loaded from the directories in the order specified.</p>
-<dt><code>&#8211;default-console </code><i>value</i></p>
-<dd>Default value for jobs that do not specify a &#8216;<code>console</code>&#8216; stanza. This could be used for example to set the default to &#8216;<code>none</code>&#8216; but still honour jobs that specify explicitly &#8216;<code>console log</code>&#8216;. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for all possible values of <code>console</code>.</p>
-<dt><code>&#8211;no-dbus</code></p>
-<dd>Do not connect to a D-Bus bus.</p>
-<dt><code>&#8211;no-inherit-env</code></p>
-<dd>Stop jobs from inheriting the initial environment. Only meaningful when running in user mode.</p>
-<dt><code>&#8211;logdir </code><i>directory</i></p>
-<dd>Write job output log files to a directory other than <i>/var/log/upstart</i> (system mode) or <i>$XDG_CACHE_HOME/upstart</i> (user session mode).</p>
-<dt><code>&#8211;no-log</code></p>
-<dd>Disable logging of job output. Note that jobs specifying &#8216;<code>console log</code>&#8216; will be treated as if they had specified &#8216;<code>console none</code>&#8216;. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</p>
-<dt><code>&#8211;no-sessions</code></p>
-<dd>Disable chroot sessions (default).</p>
-<dt><code>&#8211;no-startup-event</code></p>
-<dd>Suppress emission of the initial startup event. This option should only be used for testing since it will stop the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon from starting <code>any</code> jobs automatically.</p>
-<dt><code>&#8211;session</code></p>
-<dd>Connect to the D-Bus session bus. This should only be used for testing.</p>
-<dt><code>&#8211;startup-event </code><i>event</i></p>
-<dd>Specify a different initial startup event from the standard <code><a href="/docs/linux/man/7-startup/">startup</a></code>(7)<code>.</code></p>
-<dt><code>&#8211;user</code></p>
-<dd>Starts in user mode, as used for user sessions. Upstart will be run as an unprivileged user, reading configuration files from configuration locations as per roughly XDG Base Directory Specification. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Reduces output messages to errors only.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Outputs verbose messages about job state changes and event emissions to the system console or log, useful for debugging boot.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Outputs version information and exits.</dl>
+<dt><code>&#8211;default-console </code><i>value</i></dt>
+<dd>Default value for jobs that do not specify a &#8216;<code>console</code>&#8216; stanza. This could be used for example to set the default to &#8216;<code>none</code>&#8216; but still honour jobs that specify explicitly &#8216;<code>console log</code>&#8216;. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for all possible values of <code>console</code>.</dd>
+<dt><code>&#8211;no-dbus</code></dt>
+<dd>Do not connect to a D-Bus bus.</dd>
+<dt><code>&#8211;no-inherit-env</code></dt>
+<dd>Stop jobs from inheriting the initial environment. Only meaningful when running in user mode.</dd>
+<dt><code>&#8211;logdir </code><i>directory</i></dt>
+<dd>Write job output log files to a directory other than <i>/var/log/upstart</i> (system mode) or <i>$XDG_CACHE_HOME/upstart</i> (user session mode).</dd>
+<dt><code>&#8211;no-log</code></dt>
+<dd>Disable logging of job output. Note that jobs specifying &#8216;<code>console log</code>&#8216; will be treated as if they had specified &#8216;<code>console none</code>&#8216;. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</dd>
+<dt><code>&#8211;no-sessions</code></dt>
+<dd>Disable chroot sessions (default).</dd>
+<dt><code>&#8211;no-startup-event</code></dt>
+<dd>Suppress emission of the initial startup event. This option should only be used for testing since it will stop the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon from starting <code>any</code> jobs automatically.</dd>
+<dt><code>&#8211;session</code></dt>
+<dd>Connect to the D-Bus session bus. This should only be used for testing.</dd>
+<dt><code>&#8211;startup-event </code><i>event</i></dt>
+<dd>Specify a different initial startup event from the standard <code><a href="/docs/linux/man/7-startup/">startup</a></code>(7)<code>.</code></dd>
+<dt><code>&#8211;user</code></dt>
+<dd>Starts in user mode, as used for user sessions. Upstart will be run as an unprivileged user, reading configuration files from configuration locations as per roughly XDG Base Directory Specification. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Reduces output messages to errors only.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Outputs verbose messages about job state changes and event emissions to the system console or log, useful for debugging boot.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Outputs version information and exits.</dd></dl>
 <h2>Notes</h2>
 <p><code>init</code> is not normally executed by a user process, and expects to have a process id of 1. If this is not the case, it will actually execute <code><a href="/docs/linux/man/8-telinit/">telinit</a></code>(8) and pass all arguments to that. See that manual page for further details. However, if the <code>&#8211;user</code> option is specified, it will run as a <code>Session Init</code> and read alternative configuration files and manage the individual user session in a similar fashion. </p>
 <p> Sending a Session Init a <i>SIGTERM</i> signal is taken as a request to shutdown due to an impending system shutdown. In this scenario, the Session Init will emit the <code>session-end</code> event and request all running jobs stop. It will attempt to honour jobs <code>kill timeout</code> values (see <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details). Note however that system policy will prevail: if jobs request timeout values longer than the system policy allows for complete system shutdown, it will not be possible to honour them before the Session Init is killed by the system.</p>
 <h2>Environment Variables</h2>
 <p>When run as a user process, the following variables may be used to find job configuration files: </p>
 <dl>
-<dt>&bull;</p>
-<dd><i>$XDG_CONFIG_HOME</i></p>
-<dt>&bull;</p>
-<dd><i>$XDG_CONFIG_DIRS</i></dl>
+<dt>&bull;</dt>
+<dd><i>$XDG_CONFIG_HOME</i></dd>
+<dt>&bull;</dt>
+<dd><i>$XDG_CONFIG_DIRS</i></dd></dl>
 <p> See <code>User Session Mode</code> in <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</p>
 <h2>Files</h2>
 <p><i>/etc/init.conf</i> </p>

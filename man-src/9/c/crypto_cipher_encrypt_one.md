@@ -14,20 +14,20 @@ description: "crypto_cipher_encrypt_one – encrypt one block of plaintext"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>points to the buffer that will be filled with the ciphertext</dl>
+<dd>points to the buffer that will be filled with the ciphertext</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>buffer holding the plaintext to be encrypted</dl>
+<dd>buffer holding the plaintext to be encrypted</dd></dl>
 <h2>Description</h2>
 <p>Invoke the encryption operation of one block. The caller must ensure that the plaintext and ciphertext buffers are at least one block in size.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,19 +14,19 @@ description: "metasys – Driver for Meta System UPS equipment"
 <p>The <code>metasys</code> driver was written with the &quot;Meta System UPS Protocol Rev.1.12&quot; kindly supplied from Meta System. </p>
 <p> The driver should support all the common features of the ups models: </p>
 <dl>
-<dd>&bull; HF Line (/2) 1-8 boards</dl>
+<dd>&bull; HF Line (/2) 1-8 boards</dd></dl>
 <dl>
-<dd>&bull; HF Millennium (810, 820)</dl>
+<dd>&bull; HF Millennium (810, 820)</dd></dl>
 <dl>
-<dd>&bull; HF TOP Line (910, 920, 930, 940, 950, 970, 980)</dl>
+<dd>&bull; HF TOP Line (910, 920, 930, 940, 950, 970, 980)</dd></dl>
 <dl>
-<dd>&bull; ECO Network (750, 1000, 1050, 1500, 1800, 2000, 2100, 2500, 3000)</dl>
+<dd>&bull; ECO Network (750, 1000, 1050, 1500, 1800, 2000, 2100, 2500, 3000)</dd></dl>
 <dl>
-<dd>&bull; ECO (305, 308, 311, 511, 516, 519, 522, SX, SXI)</dl>
+<dd>&bull; ECO (305, 308, 311, 511, 516, 519, 522, SX, SXI)</dd></dl>
 <dl>
-<dd>&bull; ally HF (800, 1000, 1250, 1600, 2000, 2500)</dl>
+<dd>&bull; ally HF (800, 1000, 1250, 1600, 2000, 2500)</dd></dl>
 <dl>
-<dd>&bull; Megaline (1250, 2500, 3750, 5000, 6250, 7500, 8750, 10000)</dl>
+<dd>&bull; Megaline (1250, 2500, 3750, 5000, 6250, 7500, 8750, 10000)</dd></dl>
 <h2>Cabling</h2>
 <p>The needed cable is a standard pin-to-pin serial cable with at least pins 2, 3, and 5 (on DB9 connector) connected.</p>
 <h2>Extra Arguments</h2>

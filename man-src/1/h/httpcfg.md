@@ -18,18 +18,18 @@ description: "httpcfg – Mono Certificate Management for HttpListener"
 <p> When deleting a certificate (-del or -delete) you need to provide the port number.</p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><i>-add</i></p>
-<dd> Adds a new certificate/private key combination for being used at a given port by the HttpListener API.</p>
-<dt><i>-del, -delete</i></p>
-<dd> Deletes the certificates associated for the port specified (must be specified separatedly).</p>
-<dt><i>-list</i></p>
-<dd> List all known certificates.</p>
-<dt><i>-port PORT</i></p>
-<dd> Specifies the port to add certificates to, or remove certificates from.</p>
-<dt><i>-pvk FILE</i></p>
-<dd> Specifies the Private Key file.</p>
-<dt><i>-cert CERT</i></p>
-<dd> Specifies the certificate file to use.</dl>
+<dt><i>-add</i></dt>
+<dd> Adds a new certificate/private key combination for being used at a given port by the HttpListener API.</dd>
+<dt><i>-del, -delete</i></dt>
+<dd> Deletes the certificates associated for the port specified (must be specified separatedly).</dd>
+<dt><i>-list</i></dt>
+<dd> List all known certificates.</dd>
+<dt><i>-port PORT</i></dt>
+<dd> Specifies the port to add certificates to, or remove certificates from.</dd>
+<dt><i>-pvk FILE</i></dt>
+<dd> Specifies the Private Key file.</dd>
+<dt><i>-cert CERT</i></dt>
+<dd> Specifies the certificate file to use.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 httpcfg -add -port 8081 -pvk myfile.pvk -cert MyCert

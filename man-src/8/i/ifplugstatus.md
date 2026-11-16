@@ -22,16 +22,16 @@ description: "ifplugstatus – A link beat detection tool"
 <h2>Options</h2>
 <p>You may specify an ethernet device on the command line. Otherwise ifplugstatus will check all available network interfaces.</p>
 <dl>
-<dt><code>-a | &#8211;auto</code></p>
-<dd>Enable interface automatically before querying (default: off)</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd>Show help</p>
-<dt><code>-q | &#8211;quiet</code></p>
-<dd>Decrease verbosity by one. If the verbosity is &lt; 0, no text will be shown, only the return value is relevant; if the verbosity is = 0, a terse status will be shown; If the verbosity is &gt; 0, detailed information about the used API is returned. (By default the verbosity is 0)</p>
-<dt><code>-v | &#8211;verbose</code></p>
-<dd>Increase verbosity by one. See option <code>-q</code>.</p>
-<dt><code>-V | &#8211;version</code></p>
-<dd>Show version</dl>
+<dt><code>-a | &#8211;auto</code></dt>
+<dd>Enable interface automatically before querying (default: off)</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd>Show help</dd>
+<dt><code>-q | &#8211;quiet</code></dt>
+<dd>Decrease verbosity by one. If the verbosity is &lt; 0, no text will be shown, only the return value is relevant; if the verbosity is = 0, a terse status will be shown; If the verbosity is &gt; 0, detailed information about the used API is returned. (By default the verbosity is 0)</dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd>Increase verbosity by one. See option <code>-q</code>.</dd>
+<dt><code>-V | &#8211;version</code></dt>
+<dd>Show version</dd></dl>
 <h2>Return Values</h2>
 <p><i>0</i> Success </p>
 <p> <i>1</i> Failure </p>

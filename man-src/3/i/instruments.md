@@ -121,7 +121,6 @@ class FooOption : public Option
 {
   private:
     Foo underlying_;
-
   public:
     void setupArguments(Arguments *args)
     {
@@ -134,10 +133,10 @@ class FooOption : public Option
 <p> which was more difficult to write with setupEngine(). </p>
 <p> Therefore, there are now two ways to inherit from Instrument, namely: </p>
 <dl>
-<dt>1.</p>
-<dd> implement the isExpired method, and completely override the performCalculations method so that it bypasses the pricing-engine machinery. If the class declared any other results beside NPV_ and errorEstimate_, the setupExpired method should also be extended so that those results are set to a value suitable for an expired instrument. This was the migration path taken for all instruments not previously deriving from the Option class.</p>
-<dt>2.</p>
-<dd> define suitable argument and result classes for the instrument and implement the isExpired and setupArguments methods, reusing the pricing-engine machinery provided by the default performCalculations method. The latter can be extended by first calling the default implementation and then performing any additional tasks required by the instrument&#8212;most often, copying additional results from the pricing engine results to the corresponding data members of the instrument. As in the previous case, the setupExpired method can be extended to account for such extra data members.</dl>
+<dt>1.</dt>
+<dd> implement the isExpired method, and completely override the performCalculations method so that it bypasses the pricing-engine machinery. If the class declared any other results beside NPV_ and errorEstimate_, the setupExpired method should also be extended so that those results are set to a value suitable for an expired instrument. This was the migration path taken for all instruments not previously deriving from the Option class.</dd>
+<dt>2.</dt>
+<dd> define suitable argument and result classes for the instrument and implement the isExpired and setupArguments methods, reusing the pricing-engine machinery provided by the default performCalculations method. The latter can be extended by first calling the default implementation and then performing any additional tasks required by the instrument&#8212;most often, copying additional results from the pricing engine results to the corresponding data members of the instrument. As in the previous case, the setupExpired method can be extended to account for such extra data members.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

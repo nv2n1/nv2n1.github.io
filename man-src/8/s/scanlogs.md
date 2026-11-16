@@ -19,8 +19,8 @@ description: "scanlogs – Summarize and rotate INN log files"
 <h2>Options</h2>
 <p>Only one option is currently accepted:</p>
 <dl>
-<dt><code>norotate</code></p>
-<dd>Using this option disables the rotating and cleaning aspect of the log processing: the logs files are only scanned for information and no contents are altered. If <code>scanlogs</code> is invoked more than once a day, the <code>norotate</code> option should be used to prevent premature log cleaning.</dl>
+<dt><code>norotate</code></dt>
+<dd>Using this option disables the rotating and cleaning aspect of the log processing: the logs files are only scanned for information and no contents are altered. If <code>scanlogs</code> is invoked more than once a day, the <code>norotate</code> option should be used to prevent premature log cleaning.</dd></dl>
 <h2>Files</h2>
 <p>See <i><a href="/docs/linux/man/5-newslog/">newslog</a></i>(5) for the list of log files processed by <code>scanlogs</code>.</p>
 <h2>History</h2>

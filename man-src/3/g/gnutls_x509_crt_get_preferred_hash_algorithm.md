@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_get_preferred_hash_algorithm – API function"
 <p> <code>int gnutls_x509_crt_get_preferred_hash_algorithm(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_digest_algorithm_t * </code><i>hash</i><code>, unsigned int * </code><i>mand</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> Holds the certificate</p>
-<dt>gnutls_digest_algorithm_t * hash</p>
-<dd> The result of the call with the hash algorithm used for signature</p>
-<dt>unsigned int * mand</p>
-<dd> If non-zero it means that the algorithm MUST use this hash. May be NULL.</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> Holds the certificate</dd>
+<dt>gnutls_digest_algorithm_t * hash</dt>
+<dd> The result of the call with the hash algorithm used for signature</dd>
+<dt>unsigned int * mand</dt>
+<dd> If non-zero it means that the algorithm MUST use this hash. May be NULL.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will read the certifcate and return the appropriate digest algorithm to use for signing with this certificate. Some certificates (i.e. DSA might not be able to sign without the preferred algorithm).</p>
 <h2>DEPRECATED</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crt_get_preferred_hash_algorithm – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

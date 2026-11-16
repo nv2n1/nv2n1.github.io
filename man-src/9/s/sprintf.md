@@ -14,13 +14,13 @@ description: "sprintf – Format a string and place it in a buffer"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>The buffer to place the result into</dl>
+</dd><dd>The buffer to place the result into</dd></dl>
 <p> <i>fmt</i></p>
 <dl>
-<dd>The format string to use</dl>
+<dd>The format string to use</dd></dl>
 <p> <i>&#8230;</i></p>
 <dl>
-<dd>Arguments for the format string</dl>
+<dd>Arguments for the format string</dd></dl>
 <h2>Description</h2>
 <p>The function returns the number of characters written into <i>buf</i>. Use <code>snprintf</code> or <code>scnprintf</code> in order to avoid buffer overflows. </p>
 <p> See the <code>vsnprintf</code> documentation for format string extensions over C99.</p>

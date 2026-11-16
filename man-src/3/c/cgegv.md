@@ -19,7 +19,7 @@ description: "cgegv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This routine is deprecated and has been replaced by routine CGGEV.
  CGEGV computes the eigenvalues and, optionally, the left and/or right
@@ -37,18 +37,17 @@ description: "cgegv.f –"
  lambda or mu is zero or small, two values alpha and beta are returned
  for each eigenvalue, such that lambda = alpha/beta and
  mu = beta/alpha.
- 
  The vectors x and y in the above equations are right eigenvectors of
  the matrix pair (A,B).  Vectors u and v satisfying
     u**H*A = lambda*u**H*B  or  mu*v**H*A = v**H*B
  are left eigenvectors of (A,B).
  Note: this routine performs &quot;full balancing&quot; on A and B
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVL</i> </p>
+</dt><dd> <i>JOBVL</i> </dd>
 <pre>
           JOBVL is CHARACTER*1
           = 'N':  do not compute the left generalized eigenvectors;
@@ -109,7 +108,6 @@ description: "cgegv.f –"
 <pre>
           BETA is COMPLEX array, dimension (N)
           The complex scalars beta that define the eigenvalues of GNEP.
-          
           Together, the quantities alpha = ALPHA(j) and beta = BETA(j)
           represent the j-th eigenvalue of the matrix pair (A,B), in
           one of the forms lambda = alpha/beta or mu = beta/alpha.
@@ -196,18 +194,18 @@ description: "cgegv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   Balancing
   ---------
@@ -230,8 +228,9 @@ description: "cgegv.f –"
   are computed, then only the diagonal blocks will be correct.
   [*] In other words, upper triangular form.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 282 of file cgegv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

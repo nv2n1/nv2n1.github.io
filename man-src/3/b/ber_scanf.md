@@ -34,55 +34,53 @@ description: "ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, 
 <p> The <code>ber_get_next</code>() routine is used to read the next BER element from the given Sockbuf, <i>sb</i>. It strips off and returns the leading tag, strips off and returns the length of the entire element in <i>len</i>, and sets up <i>ber</i> for subsequent calls to <code>ber_scanf</code>() et al to decode the element. See <code><a href="/docs/linux/man/3-lber-sockbuf/">lber-sockbuf</a></code>(3) for details of the Sockbuf implementation of the <i>sb</i> parameter. </p>
 <p> The <code>ber_scanf</code>() routine is used to decode a BER element in much the same way that <code><a href="/docs/linux/man/3-scanf/">scanf</a></code>(3) works. It reads from <i>ber</i>, a pointer to a BerElement such as returned by <code>ber_get_next</code>(), interprets the bytes according to the format string <i>fmt</i>, and stores the results in its additional arguments. The format string contains conversion specifications which are used to direct the interpretation of the BER element. The format string can contain the following characters.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>a</code></p>
-<dd> Octet string. A char ** should be supplied. Memory is allocated, filled with the contents of the octet string, null-terminated, and returned in the parameter. The caller should free the returned string using <code>ber_memfree</code>().</p>
-<dt><code>A</code></p>
-<dd> Octet string. A variant of &quot;<code>a</code>&quot;. A char ** should be supplied. Memory is allocated, filled with the contents of the octet string, null-terminated, and returned in the parameter, unless a zero-length string would result; in that case, the arg is set to NULL. The caller should free the returned string using <code>ber_memfree</code>().</p>
-<dt><code>s</code></p>
-<dd> Octet string. A char * buffer should be supplied, followed by a pointer to a ber_len_t initialized to the size of the buffer. Upon return, the null-terminated octet string is put into the buffer, and the ber_len_t is set to the actual size of the octet string.</p>
-<dt><code>O</code></p>
-<dd> Octet string. A struct ber_val ** should be supplied, which upon return points to a dynamically allocated struct berval containing the octet string and its length. The caller should free the returned structure using <code>ber_bvfree</code>().</p>
-<dt><code>o</code></p>
-<dd> Octet string. A struct ber_val * should be supplied, which upon return contains the dynamically allocated octet string and its length. The caller should free the returned octet string using <code>ber_memfree</code>().</p>
-<dt><code>m</code></p>
-<dd> Octet string. A struct ber_val * should be supplied, which upon return contains the octet string and its length. The string resides in memory assigned to the BerElement, and must not be freed by the caller.</p>
-<dt><code>b</code></p>
-<dd> Boolean. A pointer to a ber_int_t should be supplied.</p>
-<dt><code>e</code></p>
-<dd> Enumeration. A pointer to a ber_int_t should be supplied.</p>
-<dt><code>i</code></p>
-<dd> Integer. A pointer to a ber_int_t should be supplied.</p>
-<dt><code>B</code></p>
-<dd> Bitstring. A char ** should be supplied which will point to the dynamically allocated bits, followed by a ber_len_t *, which will point to the length (in bits) of the bitstring returned.</p>
-<dt><code>n</code></p>
-<dd> Null. No parameter is required. The element is simply skipped if it is recognized.</p>
-<dt><code>v</code></p>
-<dd> Sequence of octet strings. A char *** should be supplied, which upon return points to a dynamically allocated null-terminated array of char *&#8217;s containing the octet strings. NULL is returned if the sequence is empty. The caller should free the returned array and octet strings using <code>ber_memvfree</code>().</p>
-<dt><code>V</code></p>
-<dd> Sequence of octet strings with lengths. A struct berval *** should be supplied, which upon return points to a dynamically allocated null-terminated array of struct berval *&#8217;s containing the octet strings and their lengths. NULL is returned if the sequence is empty. The caller should free the returned structures using <code>ber_bvecfree</code>().</p>
-<dt><code>W</code></p>
-<dd> Sequence of octet strings with lengths. A BerVarray * should be supplied, which upon return points to a dynamically allocated array of struct berval&#8217;s containing the octet strings and their lengths. The array is terminated by a struct berval with a NULL bv_val string pointer. NULL is returned if the sequence is empty. The caller should free the returned structures using <code>ber_bvarray_free</code>().</p>
-<dt><code>M</code></p>
-<dd> Sequence of octet strings with lengths. This is a generalized form of the previous three formats. A void ** (ptr) should be supplied, followed by a ber_len_t * (len) and a ber_len_t (off). Upon return (ptr) will point to a dynamically allocated array whose elements are all of size (*len). A struct berval will be filled starting at offset (off) in each element. The strings in each struct berval reside in memory assigned to the BerElement and must not be freed by the caller. The array is terminated by a struct berval with a NULL bv_val string pointer. NULL is returned if the sequence is empty. The number of elements in the array is also stored in (*len) on return. The caller should free the returned array using <code>ber_memfree</code>().</p>
-<dt><code>l</code></p>
-<dd> Length of the next element. A pointer to a ber_len_t should be supplied.</p>
-<dt><code>t</code></p>
-<dd> Tag of the next element. A pointer to a ber_tag_t should be supplied.</p>
-<dt><code>T</code></p>
-<dd> Skip element and return its tag. A pointer to a ber_tag_t should be supplied.</p>
-<dt><code>x</code></p>
-<dd> Skip element. The next element is skipped.</p>
-<dt><code>{</code></p>
-<dd> Begin sequence. No parameter is required. The initial sequence tag and length are skipped.</p>
-<dt><code>}</code></p>
-<dd> End sequence. No parameter is required and no action is taken.</p>
-<dt><code>[</code></p>
-<dd> Begin set. No parameter is required. The initial set tag and length are skipped.</p>
-<dt><code>]</code></p>
-<dd> End set. No parameter is required and no action is taken.</dl>
+<dt><code>a</code></dt>
+<dd> Octet string. A char ** should be supplied. Memory is allocated, filled with the contents of the octet string, null-terminated, and returned in the parameter. The caller should free the returned string using <code>ber_memfree</code>().</dd>
+<dt><code>A</code></dt>
+<dd> Octet string. A variant of &quot;<code>a</code>&quot;. A char ** should be supplied. Memory is allocated, filled with the contents of the octet string, null-terminated, and returned in the parameter, unless a zero-length string would result; in that case, the arg is set to NULL. The caller should free the returned string using <code>ber_memfree</code>().</dd>
+<dt><code>s</code></dt>
+<dd> Octet string. A char * buffer should be supplied, followed by a pointer to a ber_len_t initialized to the size of the buffer. Upon return, the null-terminated octet string is put into the buffer, and the ber_len_t is set to the actual size of the octet string.</dd>
+<dt><code>O</code></dt>
+<dd> Octet string. A struct ber_val ** should be supplied, which upon return points to a dynamically allocated struct berval containing the octet string and its length. The caller should free the returned structure using <code>ber_bvfree</code>().</dd>
+<dt><code>o</code></dt>
+<dd> Octet string. A struct ber_val * should be supplied, which upon return contains the dynamically allocated octet string and its length. The caller should free the returned octet string using <code>ber_memfree</code>().</dd>
+<dt><code>m</code></dt>
+<dd> Octet string. A struct ber_val * should be supplied, which upon return contains the octet string and its length. The string resides in memory assigned to the BerElement, and must not be freed by the caller.</dd>
+<dt><code>b</code></dt>
+<dd> Boolean. A pointer to a ber_int_t should be supplied.</dd>
+<dt><code>e</code></dt>
+<dd> Enumeration. A pointer to a ber_int_t should be supplied.</dd>
+<dt><code>i</code></dt>
+<dd> Integer. A pointer to a ber_int_t should be supplied.</dd>
+<dt><code>B</code></dt>
+<dd> Bitstring. A char ** should be supplied which will point to the dynamically allocated bits, followed by a ber_len_t *, which will point to the length (in bits) of the bitstring returned.</dd>
+<dt><code>n</code></dt>
+<dd> Null. No parameter is required. The element is simply skipped if it is recognized.</dd>
+<dt><code>v</code></dt>
+<dd> Sequence of octet strings. A char *** should be supplied, which upon return points to a dynamically allocated null-terminated array of char *&#8217;s containing the octet strings. NULL is returned if the sequence is empty. The caller should free the returned array and octet strings using <code>ber_memvfree</code>().</dd>
+<dt><code>V</code></dt>
+<dd> Sequence of octet strings with lengths. A struct berval *** should be supplied, which upon return points to a dynamically allocated null-terminated array of struct berval *&#8217;s containing the octet strings and their lengths. NULL is returned if the sequence is empty. The caller should free the returned structures using <code>ber_bvecfree</code>().</dd>
+<dt><code>W</code></dt>
+<dd> Sequence of octet strings with lengths. A BerVarray * should be supplied, which upon return points to a dynamically allocated array of struct berval&#8217;s containing the octet strings and their lengths. The array is terminated by a struct berval with a NULL bv_val string pointer. NULL is returned if the sequence is empty. The caller should free the returned structures using <code>ber_bvarray_free</code>().</dd>
+<dt><code>M</code></dt>
+<dd> Sequence of octet strings with lengths. This is a generalized form of the previous three formats. A void ** (ptr) should be supplied, followed by a ber_len_t * (len) and a ber_len_t (off). Upon return (ptr) will point to a dynamically allocated array whose elements are all of size (*len). A struct berval will be filled starting at offset (off) in each element. The strings in each struct berval reside in memory assigned to the BerElement and must not be freed by the caller. The array is terminated by a struct berval with a NULL bv_val string pointer. NULL is returned if the sequence is empty. The number of elements in the array is also stored in (*len) on return. The caller should free the returned array using <code>ber_memfree</code>().</dd>
+<dt><code>l</code></dt>
+<dd> Length of the next element. A pointer to a ber_len_t should be supplied.</dd>
+<dt><code>t</code></dt>
+<dd> Tag of the next element. A pointer to a ber_tag_t should be supplied.</dd>
+<dt><code>T</code></dt>
+<dd> Skip element and return its tag. A pointer to a ber_tag_t should be supplied.</dd>
+<dt><code>x</code></dt>
+<dd> Skip element. The next element is skipped.</dd>
+<dt><code>{</code></dt>
+<dd> Begin sequence. No parameter is required. The initial sequence tag and length are skipped.</dd>
+<dt><code>}</code></dt>
+<dd> End sequence. No parameter is required and no action is taken.</dd>
+<dt><code>[</code></dt>
+<dd> Begin set. No parameter is required. The initial set tag and length are skipped.</dd>
+<dt><code>]</code></dt>
+<dd> End set. No parameter is required and no action is taken.</dd></dl>
 </dl>
 <p> The <code>ber_get_int</code>() routine tries to interpret the next element as an integer, returning the result in <i>num</i>. The tag of whatever it finds is returned on success, LBER_ERROR (-1) on failure. </p>
 <p> The <code>ber_get_stringb</code>() routine is used to read an octet string into a preallocated buffer. The <i>len</i> parameter should be initialized to the size of the buffer, and will contain the length of the octet string read upon return. The buffer should be big enough to take the octet string value plus a terminating NULL byte. </p>

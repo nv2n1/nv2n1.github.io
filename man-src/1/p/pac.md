@@ -35,24 +35,24 @@ description: "pac – Perl Auto Connector"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211; Written in Perl/Gtk (wait, *is* that a feature? Well, it is for me! ;=)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-start_tray</p>
-<dd> Initialise <code>pac</code> minimized to tray.</dl>
+<dt>-start_tray</dt>
+<dd> Initialise <code>pac</code> minimized to tray.</dd></dl>
 <h2>FILES</h2>
 <p> <i>~/.pac/</i></p>
 <dl>
 <dt>
-<dd> Per user configuration directory.</dl>
+</dt><dd> Per user configuration directory.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Uses next Gnome&#8217;s configuration paths:</p>
 <dl>
-<dt>/system/http_proxy/host</p>
-<dd> Takes this proxy path</p>
-<dt>/system/http_proxy/port</p>
-<dd> Takes this proxy port</p>
-<dt>/system/http_proxy/authentication_user</p>
-<dd> Takes this proxy user name</p>
-<dt>/system/http_proxy/authentication_password</p>
-<dd> Takes this proxy password</dl>
+<dt>/system/http_proxy/host</dt>
+<dd> Takes this proxy path</dd>
+<dt>/system/http_proxy/port</dt>
+<dd> Takes this proxy port</dd>
+<dt>/system/http_proxy/authentication_user</dt>
+<dd> Takes this proxy user name</dd>
+<dt>/system/http_proxy/authentication_password</dt>
+<dd> Takes this proxy password</dd></dl>
 <h2>BUGS</h2>
 <p> Well&#8230; I thinks that by this version, there should not be any known bugs but, I&#8217;m sure you &#8216;will&#8217; find some. If so, please, let me know!</p>
 <h2>AUTHOR</h2>

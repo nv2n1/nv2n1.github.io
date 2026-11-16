@@ -22,10 +22,10 @@ description: "ngetlite – retrieve files from NNTP hosts"
  nget -N -G alt.foo -r &quot;\.png&quot;</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>NGETLITE_TIMEOUT</p>
-<dd> Socket timeout value in seconds.</p>
-<dt>NGETLITE_TRIES</p>
-<dd> Max number of attempts per article.</dl>
+<dt>NGETLITE_TIMEOUT</dt>
+<dd> Socket timeout value in seconds.</dd>
+<dt>NGETLITE_TRIES</dt>
+<dd> Max number of attempts per article.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matthew Mueller &lt;donut AT dakotacom.net&gt;</p>
 <h2>SEE ALSO</h2>

@@ -88,8 +88,8 @@ description: "gnomesystemmm_selinux – Security Enhanced Linux Policy for the g
 <p> <code>gnomesystemmm_exec_t</code> </p>
 <p> &#8211; Set files with the gnomesystemmm_exec_t type, if you want to transition an executable to the gnomesystemmm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/kde(3|4)/ksysguardprocesslist_helper, /usr/libexec/gnome-system-monitor-mechanism </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/kde(3|4)/ksysguardprocesslist_helper, /usr/libexec/gnome-system-monitor-mechanism </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

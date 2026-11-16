@@ -10,47 +10,47 @@ description: "dnssec-dsfromkey – DNSSEC DS RR generation tool"
 <p>dnssec-dsfromkey &#8211; DNSSEC DS RR generation tool</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>dnssec-dsfromkey</code> [<code>-v&nbsp;<wbr></code><i>level</i>] [<code>-1</code>] [<code>-2</code>] [<code>-a&nbsp;<wbr></code><i>alg</i>] [<code>-l&nbsp;<wbr></code><i>domain</i>] [<code>-T&nbsp;<wbr></code><i>TTL</i>] {keyfile}</p>
-<dt> <code>dnssec-dsfromkey</code> {-s} [<code>-1</code>] [<code>-2</code>] [<code>-a&nbsp;<wbr></code><i>alg</i>] [<code>-K&nbsp;<wbr></code><i>directory</i>] [<code>-l&nbsp;<wbr></code><i>domain</i>] [<code>-s</code>] [<code>-c&nbsp;<wbr></code><i>class</i>] [<code>-T&nbsp;<wbr></code><i>TTL</i>] [<code>-f&nbsp;<wbr></code><i>file</i>] [<code>-A</code>] [<code>-v&nbsp;<wbr></code><i>level</i>] {dnsname}</dl>
+<dt> <code>dnssec-dsfromkey</code> [<code>-v&nbsp;<wbr></code><i>level</i>] [<code>-1</code>] [<code>-2</code>] [<code>-a&nbsp;<wbr></code><i>alg</i>] [<code>-l&nbsp;<wbr></code><i>domain</i>] [<code>-T&nbsp;<wbr></code><i>TTL</i>] {keyfile}</dt>
+<dt> <code>dnssec-dsfromkey</code> {-s} [<code>-1</code>] [<code>-2</code>] [<code>-a&nbsp;<wbr></code><i>alg</i>] [<code>-K&nbsp;<wbr></code><i>directory</i>] [<code>-l&nbsp;<wbr></code><i>domain</i>] [<code>-s</code>] [<code>-c&nbsp;<wbr></code><i>class</i>] [<code>-T&nbsp;<wbr></code><i>TTL</i>] [<code>-f&nbsp;<wbr></code><i>file</i>] [<code>-A</code>] [<code>-v&nbsp;<wbr></code><i>level</i>] {dnsname}</dt></dl>
 <h2>Description</h2>
 <p><code>dnssec-dsfromkey</code></p>
-<dd>outputs the Delegation Signer (DS) resource record (RR), as defined in RFC 3658 and RFC 4509, for the given key(s).</p>
+<dd>outputs the Delegation Signer (DS) resource record (RR), as defined in RFC 3658 and RFC 4509, for the given key(s).</dd>
 <h2>Options</h2>
 <p>-1</p>
 <dl>
-<dd>Use SHA-1 as the digest algorithm (the default is to use both SHA-1 and SHA-256).</dl>
+<dd>Use SHA-1 as the digest algorithm (the default is to use both SHA-1 and SHA-256).</dd></dl>
 <p> -2</p>
 <dl>
-<dd>Use SHA-256 as the digest algorithm.</dl>
+<dd>Use SHA-256 as the digest algorithm.</dd></dl>
 <p> -a <i>algorithm</i></p>
 <dl>
-<dd>Select the digest algorithm. The value of <code>algorithm</code> must be one of SHA-1 (SHA1), SHA-256 (SHA256), GOST or SHA-384 (SHA384). These values are case insensitive.</dl>
+<dd>Select the digest algorithm. The value of <code>algorithm</code> must be one of SHA-1 (SHA1), SHA-256 (SHA256), GOST or SHA-384 (SHA384). These values are case insensitive.</dd></dl>
 <p> -T <i>TTL</i></p>
 <dl>
-<dd>Specifies the TTL of the DS records.</dl>
+<dd>Specifies the TTL of the DS records.</dd></dl>
 <p> -K <i>directory</i></p>
 <dl>
-<dd>Look for key files (or, in keyset mode, <i>keyset-</i> files) in <code>directory</code>.</dl>
+<dd>Look for key files (or, in keyset mode, <i>keyset-</i> files) in <code>directory</code>.</dd></dl>
 <p> -f <i>file</i></p>
 <dl>
-<dd>Zone file mode: in place of the keyfile name, the argument is the DNS domain name of a zone master file, which can be read from <code>file</code>. If the zone name is the same as <code>file</code>, then it may be omitted. </p>
+<dd>Zone file mode: in place of the keyfile name, the argument is the DNS domain name of a zone master file, which can be read from <code>file</code>. If the zone name is the same as <code>file</code>, then it may be omitted. </dd>
 <p> If <code>file</code> is set to &quot;-&quot;, then the zone data is read from the standard input. This makes it possible to use the output of the <code>dig</code> command as input, as in: </p>
 <p> <code>dig dnskey example.com | dnssec-dsfromkey -f &#8211; example.com</code></dl>
 <p> -A</p>
 <dl>
-<dd>Include ZSK&#8217;s when generating DS records. Without this option, only keys which have the KSK flag set will be converted to DS records and printed. Useful only in zone file mode.</dl>
+<dd>Include ZSK&#8217;s when generating DS records. Without this option, only keys which have the KSK flag set will be converted to DS records and printed. Useful only in zone file mode.</dd></dl>
 <p> -l <i>domain</i></p>
 <dl>
-<dd>Generate a DLV set instead of a DS set. The specified <code>domain</code> is appended to the name for each record in the set. The DNSSEC Lookaside Validation (DLV) RR is described in RFC 4431.</dl>
+<dd>Generate a DLV set instead of a DS set. The specified <code>domain</code> is appended to the name for each record in the set. The DNSSEC Lookaside Validation (DLV) RR is described in RFC 4431.</dd></dl>
 <p> -s</p>
 <dl>
-<dd>Keyset mode: in place of the keyfile name, the argument is the DNS domain name of a keyset file.</dl>
+<dd>Keyset mode: in place of the keyfile name, the argument is the DNS domain name of a keyset file.</dd></dl>
 <p> -c <i>class</i></p>
 <dl>
-<dd>Specifies the DNS class (default is IN). Useful only in keyset or zone file mode.</dl>
+<dd>Specifies the DNS class (default is IN). Useful only in keyset or zone file mode.</dd></dl>
 <p> -v <i>level</i></p>
 <dl>
-<dd>Sets the debugging level.</dl>
+<dd>Sets the debugging level.</dd></dl>
 <h2>Example</h2>
 <p>To build the SHA-256 DS RR from the <code>Kexample.com.+003+26160</code> keyfile name, the following command would be issued: </p>
 <p> <code>dnssec-dsfromkey -2 Kexample.com.+003+26160</code> </p>

@@ -19,8 +19,8 @@ description: "JaxoDraw – A Program for the Interactive Generation of Feynman D
 <p> Most of the documentation for <code>JaxoDraw</code> is in an HTML-based reference guide that is available via the Help menu in <code>JaxoDraw</code> or at our Web page <i><a rel="nofollow" href="http://jaxodraw.sourceforge.net/">http://jaxodraw.sourceforge.net/</a></i>.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.jaxodraw/</i></p>
-<dd> Per user configuration directory where plugins and User Guide are installed, and log records are written. </p>
+<dt><i>~/.jaxodraw/</i></dt>
+<dd> Per user configuration directory where plugins and User Guide are installed, and log records are written. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To run <code>JaxoDraw</code> the standard way, just type: </p>
@@ -32,29 +32,29 @@ description: "JaxoDraw – A Program for the Interactive Generation of Feynman D
 <h2>OPTIONS</h2>
 <p> Currently, the following command line options are supported: </p>
 <dl>
-<dt><code>&#8211;help</code></p>
+<dt><code>&#8211;help</code></dt>
 <dd>
- Print all command-line options for <code>JaxoDraw</code>.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints out the version number of <code>JaxoDraw</code>.</p>
-<dt><code>&#8211;info</code></p>
+ Print all command-line options for <code>JaxoDraw</code>.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints out the version number of <code>JaxoDraw</code>.</dd>
+<dt><code>&#8211;info</code></dt>
 <dd>
- Prints out some information about your system.</p>
-<dt><code>&#8211;convert</code></p>
+ Prints out some information about your system.</dd>
+<dt><code>&#8211;convert</code></dt>
 <dd>
- Used to convert a number of <code>JaxoDraw</code> xml files (given as parameters on the command line) to axodraw4j tex files (and vice versa) without the need of bringing up the user interface. Use like eg:</p>
+ Used to convert a number of <code>JaxoDraw</code> xml files (given as parameters on the command line) to axodraw4j tex files (and vice versa) without the need of bringing up the user interface. Use like eg:</dd>
 <dt>
-<dd> jaxodraw &#8211;convert test1.xml test2.tex</p>
+</dt><dd> jaxodraw &#8211;convert test1.xml test2.tex</dd>
 <dt>
-<dd> This converts test1.xml to test1.tex and test2.tex to test2.xml.</p>
-<dt><code>-verbose</code></p>
-<dd> Turns on verbose error messaging.</p>
-<dt><code>-quiet</code></p>
+</dt><dd> This converts test1.xml to test1.tex and test2.tex to test2.xml.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Turns on verbose error messaging.</dd>
+<dt><code>-quiet</code></dt>
 <dd>
- Turns off verbose error messaging.</p>
-<dt><code>-nosplash</code></p>
+ Turns off verbose error messaging.</dd>
+<dt><code>-nosplash</code></dt>
 <dd>
- Do not show the splash window at start up (default is to show it).</dl>
+ Do not show the splash window at start up (default is to show it).</dd></dl>
 <p> By default, all parameters starting with &#8212; do not pop up the graphical user interface of <code>JaxoDraw</code>.</p>
 <h2>AUTHORS</h2>
 <p> Daniele Binosi &lt;binosi [at] ect.it&gt;, Christian Kaufhold &lt;jaxodraw [at] chka.de&gt; and Lukas Theussl &lt;theussl [at] nbi.dk&gt;.</p>

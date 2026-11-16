@@ -334,8 +334,8 @@ print "\n";
 
 
 <dt><a HREF="#lbAO">SEE ALSO</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAS">AUTHOR &amp; COPYRIGHT</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAS">AUTHOR &amp; COPYRIGHT</a>
+</dt><dd></dd></dl>

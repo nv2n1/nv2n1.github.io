@@ -10,7 +10,6 @@ description: "rotate_sprite_v_flip – Rotates and flips a sprite. Allegro game 
 <p>rotate_sprite_v_flip &#8211; Rotates and flips a sprite. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rotate_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, int y, fixed angle);</code></pre>
 <h2>Description</h2>
 <p>Like rotate_sprite, but flips the image vertically before rotating it. To flip horizontally, use this routine but add itofix(128) to the angle. To flip in both directions, use rotate_sprite() and add itofix(128) to its angle. </p>

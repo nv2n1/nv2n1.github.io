@@ -19,35 +19,35 @@ url: "/docs/linux/man/1-gm_georect/"
 <p> Select <i></i><code>Georectify</code> from the <i></i><code>File</code> menu. </p>
 <p> The Georectify Tool startup lets you select the type of map to georectify, the location/mapset of the map to georectify, the <i>image group</i> of the map to georectify, and a map to use for marking GCPs. </p>
 <dl>
-<dt><code>1</code></p>
+<dt><code>1</code></dt>
 <dd>
-&nbsp;<wbr>click the radio button to georectify either raster or vector maps (you can only georectify raster <code>OR</code> vector maps in a single georectification session),</p>
-<dt><code>2</code></p>
+&nbsp;<wbr>click the radio button to georectify either raster or vector maps (you can only georectify raster <code>OR</code> vector maps in a single georectification session),</dd>
+<dt><code>2</code></dt>
 <dd>
-&nbsp;<wbr>select the source&nbsp;<wbr>(XY)&nbsp;<wbr>location/mapset of the map to be georectified,</p>
-<dt><code>3</code></p>
-<dd> if needed, create an <i>imagery group</i> for the map to georectify. (the <i>imagery group </i><code>target</code> is automatically set to the current location and mapset),</p>
-<dt><code>4</code></p>
+&nbsp;<wbr>select the source&nbsp;<wbr>(XY)&nbsp;<wbr>location/mapset of the map to be georectified,</dd>
+<dt><code>3</code></dt>
+<dd> if needed, create an <i>imagery group</i> for the map to georectify. (the <i>imagery group </i><code>target</code> is automatically set to the current location and mapset),</dd>
+<dt><code>4</code></dt>
 <dd>
-&nbsp;<wbr>select the&nbsp;<wbr><i>imagery group</i>&nbsp;<wbr>containing the map to georectify,</p>
-<dt><code>5</code></p>
+&nbsp;<wbr>select the&nbsp;<wbr><i>imagery group</i>&nbsp;<wbr>containing the map to georectify,</dd>
+<dt><code>5</code></dt>
 <dd>
-&nbsp;<wbr>select the map/image to display for marking GCPs interactively (a raster or vector in the group you want to georectify),</p>
-<dt><code>6</code></p>
+&nbsp;<wbr>select the map/image to display for marking GCPs interactively (a raster or vector in the group you want to georectify),</dd>
+<dt><code>6</code></dt>
 <dd>
-&nbsp;<wbr>click the&nbsp;<wbr>&quot;<code>Start Georectifying</code>&quot;&nbsp;<wbr>button to begin marking GCPs.</dl>
+&nbsp;<wbr>click the&nbsp;<wbr>&quot;<code>Start Georectifying</code>&quot;&nbsp;<wbr>button to begin marking GCPs.</dd></dl>
 <h3>GCP Marking</h3>
 <p> This opens a special map display with an ungeorectified map to use for marking GCPs, and a GCP manager window. The GCP map display can be zoomed and panned like a normal map display. </p>
 <p> The GCP manager window holds the x/y coordinates and geographic coordinates of each GCP, and displays the <i>error</i> for each GCP (i.e., the distance that the actual GCP marked deviates from its expected placement using a transformation equation). </p>
 <dl>
-<dt><code>1</code></p>
+<dt><code>1</code></dt>
 <dd>
-&nbsp;<wbr>Click in an empty x/y entry box in the GCP manager to begin marking a new GCP,</p>
-<dt><code>2</code></p>
+&nbsp;<wbr>Click in an empty x/y entry box in the GCP manager to begin marking a new GCP,</dd>
+<dt><code>2</code></dt>
 <dd>
-&nbsp;<wbr>Click on the ungeorectified map to mark a GCP and automatically enter its x/y coordinates in the entry box. (Your cursor will automatically jump to the corresponding geographic coordinate entry box for the same GCP),</p>
-<dt><code>3</code></p>
-<dd> Enter the corresponding geographic coordinates for the GCP <code>OR</code> click on the same place in a georectified map (in a normal map display) to automatically extract the geographic coordinates and enter them into the geographic coordinate entry box in the GCP manager window (Note: use the <code>pointer tool</code> in the map display window)</dl>
+&nbsp;<wbr>Click on the ungeorectified map to mark a GCP and automatically enter its x/y coordinates in the entry box. (Your cursor will automatically jump to the corresponding geographic coordinate entry box for the same GCP),</dd>
+<dt><code>3</code></dt>
+<dd> Enter the corresponding geographic coordinates for the GCP <code>OR</code> click on the same place in a georectified map (in a normal map display) to automatically extract the geographic coordinates and enter them into the geographic coordinate entry box in the GCP manager window (Note: use the <code>pointer tool</code> in the map display window)</dd></dl>
 <h3><code>GCP Management</code>Continue marking GCPs until you</h3>
 <p> have enough for an accurate georectification. At least 3 GCPs are needed for a simple 1st order (affine) transformation that can shift and rotate a map; at least 6 GCPs are needed for a 2nd order (polynomial) transformation that will do simple warping in addition to shifting and rotating; at least 10 GCPs are needed for a 3rd order (polynomial) transformation that will do complex warping.<br />
  Any GCP can be edited by typing new values or by selecting the appropriate entry box and clicking on the GCP-marking display or georectified map display.<br />
@@ -58,10 +58,10 @@ url: "/docs/linux/man/1-gm_georect/"
 <h3>Georectification</h3>
 <p> When you are satisfied with your selection of GCPs and RMS error&#8230; </p>
 <dl>
-<dt><code>1</code></p>
-<dd> Select the type of georectification you want to perform (1st, 2nd, or 3rd order for rasters; 1st order only for vectors). Remember, at least 3 points are needed for 1st order georectification, 6 points for 2nd order, and 10 points for 3rd order.</p>
-<dt><code>2</code></p>
-<dd> Press the <code>Georectification button</code> on the GCP manager tool bar. Depending on the number of cells in a raster map or nodes in a vector map, georectification may take some time.</dl>
+<dt><code>1</code></dt>
+<dd> Select the type of georectification you want to perform (1st, 2nd, or 3rd order for rasters; 1st order only for vectors). Remember, at least 3 points are needed for 1st order georectification, 6 points for 2nd order, and 10 points for 3rd order.</dd>
+<dt><code>2</code></dt>
+<dd> Press the <code>Georectification button</code> on the GCP manager tool bar. Depending on the number of cells in a raster map or nodes in a vector map, georectification may take some time.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i> gis.m manual<br />
  gis.m: ANIMATION TOOL<br />
@@ -79,7 +79,7 @@ url: "/docs/linux/man/1-gm_georect/"
 <p> <i>Last changed: $Date: 2007-11-18 21:17:33 +0100 (Sun, 18 Nov 2007) $</i> </p>
 <p> Full index </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">SEE ALSO</a></p>
+<dt><a href="#lbAI">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAJ">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAJ">AUTHORS</a></dt>
+<dd></dd></dl>

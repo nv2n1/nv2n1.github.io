@@ -28,35 +28,35 @@ npm.load([configObject,] function (er, npm) {
 <p> To find API documentation for a specific command, run the <code>npm apihelp</code> command.</p>
 <h2>Methods And Properties</h2>
 <dl>
-<dt>&bull;</p>
-<dd><code>npm.load(configs, cb)</code></p>
-<dd>Load the configuration params, and call the <code>cb</code> function once the globalconfig and userconfig files have been loaded as well, or on nextTick if they&#8217;ve already been loaded.</p>
-<dt>&bull;</p>
-<dd><code>npm.config</code></p>
-<dd>An object for accessing npm configuration parameters.</p>
-<dt>&bull;</p>
-<dd><code>npm.config.get(key)</code></p>
-<dt>&bull;</p>
-<dd><code>npm.config.set(key, val)</code></p>
-<dt>&bull;</p>
-<dd><code>npm.config.del(key)</code></p>
+<dt>&bull;</dt>
+<dd><code>npm.load(configs, cb)</code></dd>
+<dd>Load the configuration params, and call the <code>cb</code> function once the globalconfig and userconfig files have been loaded as well, or on nextTick if they&#8217;ve already been loaded.</dd>
+<dt>&bull;</dt>
+<dd><code>npm.config</code></dd>
+<dd>An object for accessing npm configuration parameters.</dd>
+<dt>&bull;</dt>
+<dd><code>npm.config.get(key)</code></dd>
+<dt>&bull;</dt>
+<dd><code>npm.config.set(key, val)</code></dd>
+<dt>&bull;</dt>
+<dd><code>npm.config.del(key)</code></dd>
 <dd>
-<dt>&bull;</p>
-<dd><code>npm.dir</code> or <code>npm.root</code></p>
-<dd>The <code>node_modules</code> directory where npm will operate.</p>
-<dt>&bull;</p>
-<dd><code>npm.prefix</code></p>
-<dd>The prefix where npm is operating. (Most often the current working directory.)</p>
-<dt>&bull;</p>
-<dd><code>npm.cache</code></p>
-<dd>The place where npm keeps JSON and tarballs it fetches from the registry (or uploads to the registry).</p>
-<dt>&bull;</p>
-<dd><code>npm.tmp</code></p>
-<dd>npm&#8217;s temporary working directory.</p>
-<dt>&bull;</p>
-<dd><code>npm.deref</code></p>
-<dd>Get the &quot;real&quot; name for a command that has either an alias or abbreviation.</p>
-<dd></dl>
+</dd><dt>&bull;</dt>
+<dd><code>npm.dir</code> or <code>npm.root</code></dd>
+<dd>The <code>node_modules</code> directory where npm will operate.</dd>
+<dt>&bull;</dt>
+<dd><code>npm.prefix</code></dd>
+<dd>The prefix where npm is operating. (Most often the current working directory.)</dd>
+<dt>&bull;</dt>
+<dd><code>npm.cache</code></dd>
+<dd>The place where npm keeps JSON and tarballs it fetches from the registry (or uploads to the registry).</dd>
+<dt>&bull;</dt>
+<dd><code>npm.tmp</code></dd>
+<dd>npm&#8217;s temporary working directory.</dd>
+<dt>&bull;</dt>
+<dd><code>npm.deref</code></dd>
+<dd>Get the &quot;real&quot; name for a command that has either an alias or abbreviation.</dd>
+<dd></dd></dl>
 <h2>Magic</h2>
 <p>For each of the methods in the <code>npm.commands</code> hash, a method is added to the npm object, which takes a set of positional string arguments rather than an array and a callback. </p>
 <p> If the last argument is a callback, then it will use the supplied callback. However, if no callback is provided, then it will print out the error or results. </p>
@@ -66,7 +66,7 @@ npm.load([configObject,] function (er, npm) {
 <pre>&gt; npm = require(&quot;npm&quot;)
 &gt; npm.load() // wait a sec...
 &gt; npm.install(&quot;dnode&quot;, &quot;express&quot;)</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Note that that <i>won&#8217;t</i> work in a node program, since the <code>install</code> method will get called before the configuration load is completed.</p>
 <h2>Abbrevs</h2>
 <p>In order to support <code>npm ins foo</code> instead of <code>npm install foo</code>, the <code>npm.commands</code> object has a set of abbreviations as well as the full method names. Use the <code>npm.deref</code> method to find the real name. </p>
@@ -74,4 +74,4 @@ npm.load([configObject,] function (er, npm) {
 <dl>
 <dd>
 <pre>var cmd = npm.deref(&quot;unp&quot;) // cmd === &quot;unpublish&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>

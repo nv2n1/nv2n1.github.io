@@ -17,27 +17,27 @@ description: "CURLOPT_QUOTE – (S)FTP commands to run before transfer"
 <p> The valid SFTP commands are:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>chgrp group file</p>
-<dd>The chgrp command sets the group ID of the file named by the file operand to the group ID specified by the group operand. The group operand is a decimal integer group ID.</p>
-<dt>chmod mode file</p>
-<dd>The chmod command modifies the file mode bits of the specified file. The mode operand is an octal integer mode number.</p>
-<dt>chown user file</p>
-<dd>The chown command sets the owner of the file named by the file operand to the user ID specified by the user operand. The user operand is a decimal integer user ID.</p>
-<dt>ln source_file target_file</p>
-<dd>The ln and symlink commands create a symbolic link at the target_file location pointing to the source_file location.</p>
-<dt>mkdir directory_name</p>
-<dd>The mkdir command creates the directory named by the directory_name operand.</p>
-<dt>pwd</p>
-<dd>The pwd command returns the absolute pathname of the current working directory.</p>
-<dt>rename source target</p>
-<dd>The rename command renames the file or directory named by the source operand to the destination path named by the target operand.</p>
-<dt>rm file</p>
-<dd>The rm command removes the file specified by the file operand.</p>
-<dt>rmdir directory</p>
-<dd>The rmdir command removes the directory entry specified by the directory operand, provided it is empty.</p>
-<dt>symlink source_file target_file</p>
-<dd>See ln.</dl>
+</dd><dl COMPACT>
+<dt>chgrp group file</dt>
+<dd>The chgrp command sets the group ID of the file named by the file operand to the group ID specified by the group operand. The group operand is a decimal integer group ID.</dd>
+<dt>chmod mode file</dt>
+<dd>The chmod command modifies the file mode bits of the specified file. The mode operand is an octal integer mode number.</dd>
+<dt>chown user file</dt>
+<dd>The chown command sets the owner of the file named by the file operand to the user ID specified by the user operand. The user operand is a decimal integer user ID.</dd>
+<dt>ln source_file target_file</dt>
+<dd>The ln and symlink commands create a symbolic link at the target_file location pointing to the source_file location.</dd>
+<dt>mkdir directory_name</dt>
+<dd>The mkdir command creates the directory named by the directory_name operand.</dd>
+<dt>pwd</dt>
+<dd>The pwd command returns the absolute pathname of the current working directory.</dd>
+<dt>rename source target</dt>
+<dd>The rename command renames the file or directory named by the source operand to the destination path named by the target operand.</dd>
+<dt>rm file</dt>
+<dd>The rm command removes the file specified by the file operand.</dd>
+<dt>rmdir directory</dt>
+<dd>The rmdir command removes the directory entry specified by the directory operand, provided it is empty.</dd>
+<dt>symlink source_file target_file</dt>
+<dd>See ln.</dd></dl>
 </dl>
 <h2>Default</h2>
 <p>NULL</p>

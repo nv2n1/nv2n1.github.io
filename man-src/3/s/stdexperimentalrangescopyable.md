@@ -11,15 +11,10 @@ std::experimental::ranges::Copyable - std::experimental::ranges::Copyable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T&gt;
-
     concept bool Copyable =
-
         CopyConstructible&lt;T&gt; &amp;&amp; (ranges TS)
-
                                     Movable&lt;T&gt; &amp;&amp;
-
         Assignable&lt;T &amp;, const T &amp;&gt;;</code></pre> 
 The concept Copyable&lt;T&gt; specifies that T is an Movable object type that can also copied (that is, it supports copy construction and copy assignment). 
 

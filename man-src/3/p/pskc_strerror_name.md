@@ -13,8 +13,8 @@ description: "pskc_strerror_name – API function"
 const char *pskc_strerror_name(int err);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>int err</p>
-<dd>error code, a <code>pskc_rc</code> value.</dl>
+<dt>int err</dt>
+<dd>error code, a <code>pskc_rc</code> value.</dd></dl>
 <h2>Description</h2>
 <p>Convert return code to human readable string representing the error code symbol itself. For example, pskc_strerror_name(<code>PSKC_OK</code>) returns the string &quot;PSKC_OK&quot;. </p>
 <p> This string can be used to output a diagnostic message to the user. </p>

@@ -14,38 +14,38 @@ description: "xqilla – run XQuery and XPath 2 expressions"
 <h2>DESCRIPTION</h2>
 <p> Run XQuery and XPath 2 expressions from QUERY-FILE.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show help and exit</p>
-<dt><code>-p</code></p>
-<dd> Parse in XPath 2 mode (default is XQuery mode)</p>
-<dt><code>-P</code></p>
-<dd> Parse in XPath 1.0 compatibility mode (default is XQuery mode)</p>
-<dt><code>-s</code></p>
-<dd> Parse XSLT 2.0</p>
-<dt><code>-f</code></p>
-<dd> Parse using W3C Full-Text extensions</p>
-<dt><code>-u</code></p>
-<dd> Parse using W3C Update extensions</p>
-<dt><code>-e</code></p>
-<dd> Parse using XQilla specific extensions</p>
-<dt><code>-d</code></p>
-<dd> Run the query in interactive debugging mode</p>
-<dt><code>-x</code></p>
-<dd> Use the Xerces-C data model (default is the FastXDM)</p>
-<dt><code>-i</code> <i>file</i></p>
-<dd> Load XML document and bind it as the context item</p>
-<dt><code>-b</code> <i>baseURI</i></p>
-<dd> Set the base URI for the context</p>
-<dt><code>-v</code> <i>name</i> <i>value</i></p>
-<dd> Bind the name value pair as an external variable</p>
-<dt><code>-o</code> <i>file</i></p>
-<dd> Write the result to the specified file</p>
-<dt><code>-n</code> <i>number</i></p>
-<dd> Run the queries a number of times</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode &#8211; no output</p>
-<dt><code>-t</code></p>
-<dd> Output an XML representation of the AST</dl>
+<dt><code>-h</code></dt>
+<dd> Show help and exit</dd>
+<dt><code>-p</code></dt>
+<dd> Parse in XPath 2 mode (default is XQuery mode)</dd>
+<dt><code>-P</code></dt>
+<dd> Parse in XPath 1.0 compatibility mode (default is XQuery mode)</dd>
+<dt><code>-s</code></dt>
+<dd> Parse XSLT 2.0</dd>
+<dt><code>-f</code></dt>
+<dd> Parse using W3C Full-Text extensions</dd>
+<dt><code>-u</code></dt>
+<dd> Parse using W3C Update extensions</dd>
+<dt><code>-e</code></dt>
+<dd> Parse using XQilla specific extensions</dd>
+<dt><code>-d</code></dt>
+<dd> Run the query in interactive debugging mode</dd>
+<dt><code>-x</code></dt>
+<dd> Use the Xerces-C data model (default is the FastXDM)</dd>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Load XML document and bind it as the context item</dd>
+<dt><code>-b</code> <i>baseURI</i></dt>
+<dd> Set the base URI for the context</dd>
+<dt><code>-v</code> <i>name</i> <i>value</i></dt>
+<dd> Bind the name value pair as an external variable</dd>
+<dt><code>-o</code> <i>file</i></dt>
+<dd> Write the result to the specified file</dd>
+<dt><code>-n</code> <i>number</i></dt>
+<dd> Run the queries a number of times</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode &#8211; no output</dd>
+<dt><code>-t</code></dt>
+<dd> Output an XML representation of the AST</dd></dl>
 <p> The <code>xqilla</code> command line tool can be used to run XQuery and XPath 2 expressions. It is also a good example of how to use the <code>Simple API</code> of the <code>XQilla</code> library.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="https://sourceforge.net/projects/xqilla/support">https://sourceforge.net/projects/xqilla/support</a>&gt;.</p>

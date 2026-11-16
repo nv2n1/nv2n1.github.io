@@ -11,23 +11,23 @@ description: "XtGetSelectionParameters – retrieve target parameters for a sele
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtGetSelectionParameters(Widget <i>owner</i>, Atom <i>selection</i>, XtRequestId <i>request_id</i>, Atom *<i>type_return</i>, XtPointer *<i>value_return</i>, unsigned long *<i>length_return</i>, int *<i>format_return</i>);</dl>
+<dd>void XtGetSelectionParameters(Widget <i>owner</i>, Atom <i>selection</i>, XtRequestId <i>request_id</i>, Atom *<i>type_return</i>, XtPointer *<i>value_return</i>, unsigned long *<i>length_return</i>, int *<i>format_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>owner</i></p>
-<dd>Specifies the widget that owns the specified selection.</p>
-<dt><i>selection</i></p>
-<dd>Specifies the selection being processed.</p>
-<dt><i>request_id</i></p>
-<dd>Specifies the requestor id in the case of incremental selections, or NULL in the case of atomic transfers.</p>
-<dt><i>type_return</i></p>
-<dd>Specifies a pointer to an atom in which the property type of the parameters will be stored.</p>
-<dt><i>value_return</i></p>
-<dd>Specifies a pointer into which a pointer to the parameters are to be stored. A NULL will be stored if no parameters accompany the request.</p>
-<dt><i>length_return</i></p>
-<dd>Specifies a pointer into which the number of data elements in <i>value_return</i> of size indicated by <i>format_return</i> will be stored.</p>
-<dt><i>format_return</i></p>
-<dd>Specifies a pointer into which the size in bits of the parameter data in the elements of <i>value_return</i> will be stored.</dl>
+<dt><i>owner</i></dt>
+<dd>Specifies the widget that owns the specified selection.</dd>
+<dt><i>selection</i></dt>
+<dd>Specifies the selection being processed.</dd>
+<dt><i>request_id</i></dt>
+<dd>Specifies the requestor id in the case of incremental selections, or NULL in the case of atomic transfers.</dd>
+<dt><i>type_return</i></dt>
+<dd>Specifies a pointer to an atom in which the property type of the parameters will be stored.</dd>
+<dt><i>value_return</i></dt>
+<dd>Specifies a pointer into which a pointer to the parameters are to be stored. A NULL will be stored if no parameters accompany the request.</dd>
+<dt><i>length_return</i></dt>
+<dd>Specifies a pointer into which the number of data elements in <i>value_return</i> of size indicated by <i>format_return</i> will be stored.</dd>
+<dt><i>format_return</i></dt>
+<dd>Specifies a pointer into which the size in bits of the parameter data in the elements of <i>value_return</i> will be stored.</dd></dl>
 <h2>Description</h2>
 <p><code>XtGetSelectionParameters</code> may only be called from within an <code>XtConvertSelectionProc</code> or from within the last call to an <code>XtConvertSelectionIncrProc</code> with a new request_id.</p>
 <h2>See Also</h2>

@@ -18,7 +18,7 @@ description: "mpeg2enc – MPEG-1/2 encoder"
 <p> Much useful practical information for novices can be found in the mjpeg-HOWTO document that should have been installed with <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1) package. Further information and useful supporting software can be found on the mjpegtools web-site: </p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></code> </p>
+</dt><dd> <code><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></code> </dd>
 </dl>
 <h2>SELECTING THE MPEG PROFILE</h2>
 <p> Set the MPEG profile to use. The MPEG standards support a vast number of options. In practice, different applications of the MPEG format place additional constraints of the form the MPEG stream. Setting this flag selects the kind of stream to produce. </p>
@@ -123,7 +123,7 @@ description: "mpeg2enc – MPEG-1/2 encoder"
 <p>&nbsp;<wbr>4 &#8211; 4&nbsp;<wbr>&nbsp;<wbr>&#8211; 2.21:1 display</p>
 <dl>
 <dt>
-<dd> For MPEG-2 the specified aspect ratios are used directly. For MPEG-1 mpeg2enc infers the MPEG-1 pixel aspect code from the video norm specified and the specified playback aspect ratio.</dl>
+</dt><dd> For MPEG-2 the specified aspect ratios are used directly. For MPEG-1 mpeg2enc infers the MPEG-1 pixel aspect code from the video norm specified and the specified playback aspect ratio.</dd></dl>
 <p> <code>-x|&#8211;display-hsize</code>&nbsp;<wbr>num </p>
 <p> <code>-y|&#8211;display-vsize</code>&nbsp;<wbr>num </p>
 <p> These set the display-horizontal-size and display-vertical-size hints in the MPEG-2. By default these are simply the encode frame dimensions. However, if they are set to different values the player gets a hint that the appropriate &#8216;black bars&#8217; or cropping/scaling should be performed. The main use for these parameters is to set a display-vertical-size of 1080 for HDTV 1080i or 1080p material. Here, since the frame height has to be a multiple of 16, the encoded frame height is forced to be 1088, even though HDTV standards specify only 1080 lines of picture content. Standards committees &#8230; love&#8217; em. </p>
@@ -147,7 +147,7 @@ INFO : [mpeg2enc] Signaling last frame = 499 mpeg2enc : seqencoder.cc : 433 : vo
 <p> Set the sequence picture structure and block encoding type for MPEG-2 streams. By default, this value is inferred from the interlacing tag of the input stream. Setting 0 encodes frame-by-frame with support for interlaced video turned off, and specifies that progressive chroma subsampling has been used. Setting 1 encodes frame-by-frame with interlace-adapted motion compensation and block encoding, and specifies that interlaced chroma subsampling has been used. Setting 2 encodes interlaced material field-by-field, which will produce more accurate results for highly textured interlaced material with lots of motion, at the expense of generally less efficiency.</p>
 <dl>
 <dt>
-<dd> This setting should match the interlaced-ness of the input stream, otherwise chroma artifacts may be generated when the MPEG stream is played back.</dl>
+</dt><dd> This setting should match the interlaced-ness of the input stream, otherwise chroma artifacts may be generated when the MPEG stream is played back.</dd></dl>
 <p> <code>-g|&#8211;min-gop-size</code>&nbsp;<wbr>num </p>
 <p> <code>-G|&#8211;max-gop-size</code>&nbsp;<wbr>num </p>
 <p> These flags set the minimum and maximum group-of-picture (GOP) size for the output MPEG stream. The default values depend on the output format. </p>
@@ -172,7 +172,7 @@ INFO : [mpeg2enc] Signaling last frame = 499 mpeg2enc : seqencoder.cc : 433 : vo
 <p> These options control how radical the encoder is in throwing away apparently poor candidate estimates during motion estimation. A setting of 1 means very few blocks are discarded early which makes for slow encoding but quality as good as it gets. A setting of 4 makes for fast encoding but can impact quality. The -4 flag controls discarding during the initial 4*4 sub-sampled search stage, the -2 flag controls discarding during the secondary 2*2 sub-sampled stage.</p>
 <dl>
 <dt>
-<dd> These flags are useful as the speed quality trade-off is markedly different depending on which CPU you have. On modern machines the impact on speed is around a factor 2 on older machines a factor 3. The impact on quality is around 10% quantisation (0.2 of a bit of precision in encoding textures). For most purposes the default settings will be fine. However on P-III Katmai etc -4 2 -2 1 gives a good near-optimum quality setting with reasonably speed.</dl>
+</dt><dd> These flags are useful as the speed quality trade-off is markedly different depending on which CPU you have. On modern machines the impact on speed is around a factor 2 on older machines a factor 3. The impact on quality is around 10% quantisation (0.2 of a bit of precision in encoding textures). For most purposes the default settings will be fine. However on P-III Katmai etc -4 2 -2 1 gives a good near-optimum quality setting with reasonably speed.</dd></dl>
 <p> <code>-N|&#8211;reduce-hf</code>&nbsp;<wbr>num </p>
 <p> Setting this flag adjusts the way texture detail is quantised to reduce the precision with which of high-frequency information encoded. This is very useful for <i>mildly</i> noisy sources. If you have really noisy material the filtering tools available in mjpegtools are a much better bet. The specified number must be in the range 0.0 to 2.0 gives the maxium quantisation boost. A useful number to use would be 1.5 or 1.0. </p>
 <p> <code>-H|&#8211;keep-hf</code> </p>

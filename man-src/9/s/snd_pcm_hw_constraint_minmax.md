@@ -15,19 +15,19 @@ snd_pcm_hw_constraint_minmax - apply a min/max range constraint to an interval
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the range</dl>
+<dl><dd>hw_params variable to apply the range</dd></dl>
  
 
  <i>min</i>
-<dl><dd>the minimal value</dl>
+<dl><dd>the minimal value</dd></dl>
  
 
  <i>max</i>
-<dl><dd>the maximal value</dl>
+<dl><dd>the maximal value</dd></dl>
 
 <h2>Description</h2>
 

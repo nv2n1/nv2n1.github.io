@@ -22,13 +22,13 @@ description: "hwlocality_linux – Linux-specific helpers"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This is equivalent to calling <code>hwloc_get_proc_cpubind()</code> with <code>HWLOC_CPUBIND_THREAD</code> as flags.</dl>
+</dt><dd> This is equivalent to calling <code>hwloc_get_proc_cpubind()</code> with <code>HWLOC_CPUBIND_THREAD</code> as flags.</dd></dl>
 <h3>int hwloc_linux_get_tid_last_cpu_location (<code>hwloc_topology_t</code> topology, pid_t tid, <code>hwloc_bitmap_t</code> set)</h3>
 <p> Get the last physical CPU where thread tid ran. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This is equivalent to calling <code>hwloc_get_proc_last_cpu_location()</code> with <code>HWLOC_CPUBIND_THREAD</code> as flags.</dl>
+</dt><dd> This is equivalent to calling <code>hwloc_get_proc_last_cpu_location()</code> with <code>HWLOC_CPUBIND_THREAD</code> as flags.</dd></dl>
 <h3>int hwloc_linux_parse_cpumap_file (FILE * file, <code>hwloc_cpuset_t</code> set)</h3>
 <p> Convert a linux kernel cpumap file file into hwloc CPU set. Might be used when reading CPU set from sysfs attributes such as topology and caches for processors, or local_cpus for devices.</p>
 <h3>int hwloc_linux_set_tid_cpubind (<code>hwloc_topology_t</code> topology, pid_t tid, <code>hwloc_const_cpuset_t</code> set)</h3>
@@ -36,9 +36,9 @@ description: "hwlocality_linux – Linux-specific helpers"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This is equivalent to calling <code>hwloc_set_proc_cpubind()</code> with HWLOC_CPUBIND_THREAD as flags.</dl>
+</dt><dd> This is equivalent to calling <code>hwloc_set_proc_cpubind()</code> with HWLOC_CPUBIND_THREAD as flags.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

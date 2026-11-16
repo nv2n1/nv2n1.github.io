@@ -32,10 +32,10 @@ Link with - lnuma.
 <p> On success, <code>get_mempolicy</code>() returns 0; on error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Part of all of the memory range specified by <i>nodemask</i> and <i>maxnode</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value specified by <i>maxnode</i> is less than the number of node IDs supported by the system. Or <i>flags</i> specified values other than <code>MPOL_F_NODE</code> or <code>MPOL_F_ADDR</code>; or <i>flags</i> specified <code>MPOL_F_ADDR</code> and <i>addr</i> is NULL, or <i>flags</i> did not specify <code>MPOL_F_ADDR</code> and <i>addr</i> is not NULL. Or, <i>flags</i> specified <code>MPOL_F_NODE</code> but not <code>MPOL_F_ADDR</code> and the current thread policy is not <code>MPOL_INTERLEAVE</code>. Or, <i>flags</i> specified <code>MPOL_F_MEMS_ALLOWED</code> with either <code>MPOL_F_ADDR</code> or <code>MPOL_F_NODE</code>. (And there are other <code>EINVAL</code> cases.)</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Part of all of the memory range specified by <i>nodemask</i> and <i>maxnode</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified by <i>maxnode</i> is less than the number of node IDs supported by the system. Or <i>flags</i> specified values other than <code>MPOL_F_NODE</code> or <code>MPOL_F_ADDR</code>; or <i>flags</i> specified <code>MPOL_F_ADDR</code> and <i>addr</i> is NULL, or <i>flags</i> did not specify <code>MPOL_F_ADDR</code> and <i>addr</i> is not NULL. Or, <i>flags</i> specified <code>MPOL_F_NODE</code> but not <code>MPOL_F_ADDR</code> and the current thread policy is not <code>MPOL_INTERLEAVE</code>. Or, <i>flags</i> specified <code>MPOL_F_MEMS_ALLOWED</code> with either <code>MPOL_F_ADDR</code> or <code>MPOL_F_NODE</code>. (And there are other <code>EINVAL</code> cases.)</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>get_mempolicy</code>() system call was added to the Linux kernel in version 2.6.7.</p>
 <h2>CONFORMING TO</h2>

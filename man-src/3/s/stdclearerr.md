@@ -11,7 +11,6 @@ std::clearerr - std::clearerr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     void clearerr(std::FILE *stream);</code></pre> 
 Resets the error flags and the EOF indicator for the given file stream. 
 

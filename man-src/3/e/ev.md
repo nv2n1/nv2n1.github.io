@@ -82,33 +82,33 @@ int main(void)<br />
 <h2>GLOBAL FUNCTIONS</h2>
 <p> These functions can be called anytime, even before initialising the library in any way.</p>
 <dl>
-<dt>ev_tstamp ev_time ()</p>
-<dd> Returns the current time as libev would use it. Please note that the <tt>&quot;ev_now&quot;</tt> function is usually faster and also often returns the timestamp you actually want to know.</p>
-<dt>ev_sleep (ev_tstamp interval)</p>
-<dd> Sleep for the given interval: The current thread will be blocked until either it is interrupted or the given time interval has passed. Basically this is a sub-second-resolution <tt>&quot;sleep ()&quot;</tt>.</p>
-<dt>int ev_version_major ()</p>
+<dt>ev_tstamp ev_time ()</dt>
+<dd> Returns the current time as libev would use it. Please note that the <tt>&quot;ev_now&quot;</tt> function is usually faster and also often returns the timestamp you actually want to know.</dd>
+<dt>ev_sleep (ev_tstamp interval)</dt>
+<dd> Sleep for the given interval: The current thread will be blocked until either it is interrupted or the given time interval has passed. Basically this is a sub-second-resolution <tt>&quot;sleep ()&quot;</tt>.</dd>
+<dt>int ev_version_major ()</dt>
 <dd>
-<dt>int ev_version_minor ()</p>
-<dd> You can find out the major and minor <font SIZE="-1">ABI</font> version numbers of the library you linked against by calling the functions <tt>&quot;ev_version_major&quot;</tt> and <tt>&quot;ev_version_minor&quot;</tt>. If you want, you can compare against the global symbols <tt>&quot;EV_VERSION_MAJOR&quot;</tt> and <tt>&quot;EV_VERSION_MINOR&quot;</tt>, which specify the version of the library your program was compiled against. </p>
+</dd><dt>int ev_version_minor ()</dt>
+<dd> You can find out the major and minor <font SIZE="-1">ABI</font> version numbers of the library you linked against by calling the functions <tt>&quot;ev_version_major&quot;</tt> and <tt>&quot;ev_version_minor&quot;</tt>. If you want, you can compare against the global symbols <tt>&quot;EV_VERSION_MAJOR&quot;</tt> and <tt>&quot;EV_VERSION_MINOR&quot;</tt>, which specify the version of the library your program was compiled against. </dd>
 <p> These version numbers refer to the <font SIZE="-1">ABI</font> version of the library, not the release version. </p>
 <p> Usually, it&#8217;s a good idea to terminate if the major versions mismatch, as this indicates an incompatible change. Minor versions are usually compatible to older versions, so a larger minor version alone is usually not a problem. </p>
 <p> Example: Make sure we haven&#8217;t accidentally been linked against the wrong version. </p>
 <p>assert((&#8220;libev version mismatch&#8221;,<br />
         ev_version_major() == EV_VERSION_MAJOR &amp;&amp; ev_version_minor() &gt;= EV_VERSION_MINOR));</p>
-<dt>unsigned int ev_supported_backends ()</p>
-<dd> Return the set of all backends (i.e. their corresponding <tt>&quot;EV_BACKEND_*&quot;</tt> value) compiled into this binary of libev (independent of their availability on the system you are running on). See <tt>&quot;ev_default_loop&quot;</tt> for a description of the set values. </p>
+<dt>unsigned int ev_supported_backends ()</dt>
+<dd> Return the set of all backends (i.e. their corresponding <tt>&quot;EV_BACKEND_*&quot;</tt> value) compiled into this binary of libev (independent of their availability on the system you are running on). See <tt>&quot;ev_default_loop&quot;</tt> for a description of the set values. </dd>
 <p> Example: make sure we have the epoll method, because yeah this is cool and a must have and can we have a torrent of it please!!!11 </p>
 <pre>
    assert ((&quot;sorry, no epoll, no sex&quot;,
             ev_supported_backends () &amp; EVBACKEND_EPOLL));
 </pre>
-<dt>unsigned int ev_recommended_backends ()</p>
-<dd> Return the set of all backends compiled into this binary of libev and also recommended for this platform. This set is often smaller than the one returned by <tt>&quot;ev_supported_backends&quot;</tt>, as for example kqueue is broken on most BSDs and will not be auto-detected unless you explicitly request it (assuming you know what you are doing). This is the set of backends that libev will probe for if you specify no backends explicitly.</p>
-<dt>unsigned int ev_embeddable_backends ()</p>
-<dd> Returns the set of backends that are embeddable in other event loops. This is the theoretical, all-platform, value. To find which backends might be supported on the current system, you would need to look at <tt>&quot;ev_embeddable_backends () &amp; ev_supported_backends ()&quot;</tt>, likewise for recommended ones. </p>
+<dt>unsigned int ev_recommended_backends ()</dt>
+<dd> Return the set of all backends compiled into this binary of libev and also recommended for this platform. This set is often smaller than the one returned by <tt>&quot;ev_supported_backends&quot;</tt>, as for example kqueue is broken on most BSDs and will not be auto-detected unless you explicitly request it (assuming you know what you are doing). This is the set of backends that libev will probe for if you specify no backends explicitly.</dd>
+<dt>unsigned int ev_embeddable_backends ()</dt>
+<dd> Returns the set of backends that are embeddable in other event loops. This is the theoretical, all-platform, value. To find which backends might be supported on the current system, you would need to look at <tt>&quot;ev_embeddable_backends () &amp; ev_supported_backends ()&quot;</tt>, likewise for recommended ones. </dd>
 <p> See the description of <tt>&quot;ev_embed&quot;</tt> watchers for more info.</p>
-<dt>ev_set_allocator (void *(*cb)(void *ptr, long size)) [<font SIZE="-1">NOT</font> <font SIZE="-1">REENTRANT</font>]</p>
-<dd> Sets the allocation function to use (the prototype is similar &#8211; the semantics are identical to the <tt>&quot;realloc&quot;</tt> C89/SuS/POSIX function). It is used to allocate and free memory (no surprises here). If it returns zero when memory needs to be allocated (<tt>&quot;size != 0&quot;</tt>), the library might abort or take some potentially destructive action. </p>
+<dt>ev_set_allocator (void *(*cb)(void *ptr, long size)) [<font SIZE="-1">NOT</font> <font SIZE="-1">REENTRANT</font>]</dt>
+<dd> Sets the allocation function to use (the prototype is similar &#8211; the semantics are identical to the <tt>&quot;realloc&quot;</tt> C89/SuS/POSIX function). It is used to allocate and free memory (no surprises here). If it returns zero when memory needs to be allocated (<tt>&quot;size != 0&quot;</tt>), the library might abort or take some potentially destructive action. </dd>
 <p> Since some systems (at least OpenBSD and Darwin) fail to implement correct <tt>&quot;realloc&quot;</tt> semantics, libev will use a wrapper around the system <tt>&quot;realloc&quot;</tt> and <tt>&quot;free&quot;</tt> functions by default. </p>
 <p> You could override this function in high-availability programs to, say, free some memory if it cannot allocate memory, to use a special allocator, or even to sleep a while and retry until some memory is available. </p>
 <p> Example: Replace the libev allocator with one that waits a bit and then retries (example requires a standards-compliant <tt>&quot;realloc&quot;</tt>). </p>
@@ -123,8 +123,8 @@ persistent_realloc(void *ptr, size_t size)<br />
     }<br />
 }<br />
 &#8230; ev_set_allocator(persistent_realloc);</p>
-<dt>ev_set_syserr_cb (void (*cb)(const char *msg)); [<font SIZE="-1">NOT</font> <font SIZE="-1">REENTRANT</font>]</p>
-<dd> Set the callback function to call on a retryable system call error (such as failed select, poll, epoll_wait). The message is a printable string indicating the system call or subsystem causing the problem. If this callback is set, then libev will expect it to remedy the situation, no matter what, when it returns. That is, libev will generally retry the requested operation, or, if the condition doesn&#8217;t go away, do bad stuff (such as abort). </p>
+<dt>ev_set_syserr_cb (void (*cb)(const char *msg)); [<font SIZE="-1">NOT</font> <font SIZE="-1">REENTRANT</font>]</dt>
+<dd> Set the callback function to call on a retryable system call error (such as failed select, poll, epoll_wait). The message is a printable string indicating the system call or subsystem causing the problem. If this callback is set, then libev will expect it to remedy the situation, no matter what, when it returns. That is, libev will generally retry the requested operation, or, if the condition doesn&#8217;t go away, do bad stuff (such as abort). </dd>
 <p> Example: This is basically the same thing that libev does internally, too. </p>
 <p>static void<br />
 fatal_error(const char *msg)<br />
@@ -138,39 +138,37 @@ fatal_error(const char *msg)<br />
 <p> An event loop is described by a <tt>&quot;struct ev_loop *&quot;</tt> (the <tt>&quot;struct&quot;</tt> is <i>not</i> optional in this case, as there is also an <tt>&quot;ev_loop&quot;</tt> <i>function</i>). </p>
 <p> The library knows two types of such loops, the <i>default</i> loop, which supports signals and child events, and dynamically created loops which do not.</p>
 <dl>
-<dt>struct ev_loop *ev_default_loop (unsigned int flags)</p>
-<dd> This will initialise the default event loop if it hasn&#8217;t been initialised yet and return it. If the default loop could not be initialised, returns false. If it already was initialised it simply returns it (and ignores the flags. If that is troubling you, check <tt>&quot;ev_backend ()&quot;</tt> afterwards). </p>
+<dt>struct ev_loop *ev_default_loop (unsigned int flags)</dt>
+<dd> This will initialise the default event loop if it hasn&#8217;t been initialised yet and return it. If the default loop could not be initialised, returns false. If it already was initialised it simply returns it (and ignores the flags. If that is troubling you, check <tt>&quot;ev_backend ()&quot;</tt> afterwards). </dd>
 <p> If you don&#8217;t know what event loop to use, use the one returned from this function. </p>
 <p> Note that this function is <i>not</i> thread-safe, so if you want to use it from multiple threads, you have to lock (note also that this is unlikely, as loops cannot be shared easily between threads anyway). </p>
 <p> The default loop is the only loop that can handle <tt>&quot;ev_signal&quot;</tt> and <tt>&quot;ev_child&quot;</tt> watchers, and to do this, it always registers a handler for <tt>&quot;SIGCHLD&quot;</tt>. If this is a problem for your application you can either create a dynamic loop with <tt>&quot;ev_loop_new&quot;</tt> that doesn&#8217;t do that, or you can simply overwrite the <tt>&quot;SIGCHLD&quot;</tt> signal handler <i>after</i> calling <tt>&quot;ev_default_init&quot;</tt>. </p>
 <p> The flags argument can be used to specify special behaviour or specific backends to use, and is usually specified as <tt>0</tt> (or <tt>&quot;EVFLAG_AUTO&quot;</tt>). </p>
 <p> The following flags are supported:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>EVFLAG_AUTO</p>
-<dd> The default flags value. Use this if you have no clue (it&#8217;s the right thing, believe me).</p>
-<dt>EVFLAG_NOENV</p>
-<dd> If this flag bit is or&#8217;ed into the flag value (or the program runs setuid or setgid) then libev will <i>not</i> look at the environment variable <tt>&quot;LIBEV_FLAGS&quot;</tt>. Otherwise (the default), this environment variable will override the flags completely if it is found in the environment. This is useful to try out specific backends to test their performance, or to work around bugs.</p>
-<dt>EVFLAG_FORKCHECK</p>
-<dd> Instead of calling <tt>&quot;ev_default_fork&quot;</tt> or <tt>&quot;ev_loop_fork&quot;</tt> manually after a fork, you can also make libev check for a fork in each iteration by enabling this flag. </p>
+<dt>EVFLAG_AUTO</dt>
+<dd> The default flags value. Use this if you have no clue (it&#8217;s the right thing, believe me).</dd>
+<dt>EVFLAG_NOENV</dt>
+<dd> If this flag bit is or&#8217;ed into the flag value (or the program runs setuid or setgid) then libev will <i>not</i> look at the environment variable <tt>&quot;LIBEV_FLAGS&quot;</tt>. Otherwise (the default), this environment variable will override the flags completely if it is found in the environment. This is useful to try out specific backends to test their performance, or to work around bugs.</dd>
+<dt>EVFLAG_FORKCHECK</dt>
+<dd> Instead of calling <tt>&quot;ev_default_fork&quot;</tt> or <tt>&quot;ev_loop_fork&quot;</tt> manually after a fork, you can also make libev check for a fork in each iteration by enabling this flag. </dd>
 <p> This works by calling <tt>&quot;getpid ()&quot;</tt> on every iteration of the loop, and thus this might slow down your event loop if you do a lot of loop iterations and little real work, but is usually not noticeable (on my GNU/Linux system for example, <tt>&quot;getpid&quot;</tt> is actually a simple 5-insn sequence without a system call and thus <i>very</i> fast, but my GNU/Linux system also has <tt>&quot;pthread_atfork&quot;</tt> which is even faster). </p>
 <p> The big advantage of this flag is that you can forget about fork (and forget about forgetting to tell libev about forking) when you use this flag. </p>
 <p> This flag setting cannot be overridden or specified in the <tt>&quot;LIBEV_FLAGS&quot;</tt> environment variable.</p>
-<dt>EVFLAG_NOINOTIFY</p>
-<dd> When this flag is specified, then libev will not attempt to use the <i>inotify</i> <font SIZE="-1">API</font> for it&#8217;s <tt>&quot;ev_stat&quot;</tt> watchers. Apart from debugging and testing, this flag can be useful to conserve inotify file descriptors, as otherwise each loop using <tt>&quot;ev_stat&quot;</tt> watchers consumes one inotify handle.</p>
-<dt>EVFLAG_NOSIGNALFD</p>
-<dd> When this flag is specified, then libev will not attempt to use the <i>signalfd</i> <font SIZE="-1">API</font> for it&#8217;s <tt>&quot;ev_signal&quot;</tt> (and <tt>&quot;ev_child&quot;</tt>) watchers. This is probably only useful to work around any bugs in libev. Consequently, this flag might go away once the signalfd functionality is considered stable, so it&#8217;s useful mostly in environment variables and not in program code.</p>
-<dt>EVBACKEND_SELECT (value 1, portable select backend)</p>
-<dd> This is your standard <i><a href="/docs/linux/man/2-select/">select</a></i>(2) backend. Not <i>completely</i> standard, as libev tries to roll its own fd_set with no limits on the number of fds, but if that fails, expect a fairly low limit on the number of fds when using this backend. It doesn&#8217;t scale too well (O(highest_fd)), but its usually the fastest backend for a low number of (low-numbered :) fds. </p>
+<dt>EVFLAG_NOINOTIFY</dt>
+<dd> When this flag is specified, then libev will not attempt to use the <i>inotify</i> <font SIZE="-1">API</font> for it&#8217;s <tt>&quot;ev_stat&quot;</tt> watchers. Apart from debugging and testing, this flag can be useful to conserve inotify file descriptors, as otherwise each loop using <tt>&quot;ev_stat&quot;</tt> watchers consumes one inotify handle.</dd>
+<dt>EVFLAG_NOSIGNALFD</dt>
+<dd> When this flag is specified, then libev will not attempt to use the <i>signalfd</i> <font SIZE="-1">API</font> for it&#8217;s <tt>&quot;ev_signal&quot;</tt> (and <tt>&quot;ev_child&quot;</tt>) watchers. This is probably only useful to work around any bugs in libev. Consequently, this flag might go away once the signalfd functionality is considered stable, so it&#8217;s useful mostly in environment variables and not in program code.</dd>
+<dt>EVBACKEND_SELECT (value 1, portable select backend)</dt>
+<dd> This is your standard <i><a href="/docs/linux/man/2-select/">select</a></i>(2) backend. Not <i>completely</i> standard, as libev tries to roll its own fd_set with no limits on the number of fds, but if that fails, expect a fairly low limit on the number of fds when using this backend. It doesn&#8217;t scale too well (O(highest_fd)), but its usually the fastest backend for a low number of (low-numbered :) fds. </dd>
 <p> To get good performance out of this backend you need a high amount of parallelism (most of the file descriptors should be busy). If you are writing a server, you should <tt>&quot;accept ()&quot;</tt> in a loop to accept as many connections as possible during one iteration. You might also want to have a look at <tt>&quot;ev_set_io_collect_interval ()&quot;</tt> to increase the amount of readiness notifications you get per iteration. </p>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> to the <tt>&quot;readfds&quot;</tt> set and <tt>&quot;EV_WRITE&quot;</tt> to the <tt>&quot;writefds&quot;</tt> set (and to work around Microsoft Windows bugs, also onto the <tt>&quot;exceptfds&quot;</tt> set on that platform).</p>
-<dt>EVBACKEND_POLL (value 2, poll backend, available everywhere except on windows)</p>
-<dd> And this is your standard <i><a href="/docs/linux/man/2-poll/">poll</a></i>(2) backend. It&#8217;s more complicated than select, but handles sparse fds better and has no artificial limit on the number of fds you can use (except it will slow down considerably with a lot of inactive fds). It scales similarly to select, i.e. O(total_fds). See the entry for <tt>&quot;EVBACKEND_SELECT&quot;</tt>, above, for performance tips. </p>
+<dt>EVBACKEND_POLL (value 2, poll backend, available everywhere except on windows)</dt>
+<dd> And this is your standard <i><a href="/docs/linux/man/2-poll/">poll</a></i>(2) backend. It&#8217;s more complicated than select, but handles sparse fds better and has no artificial limit on the number of fds you can use (except it will slow down considerably with a lot of inactive fds). It scales similarly to select, i.e. O(total_fds). See the entry for <tt>&quot;EVBACKEND_SELECT&quot;</tt>, above, for performance tips. </dd>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> to <tt>&quot;POLLIN | POLLERR | POLLHUP&quot;</tt>, and <tt>&quot;EV_WRITE&quot;</tt> to <tt>&quot;POLLOUT | POLLERR | POLLHUP&quot;</tt>.</p>
-<dt>EVBACKEND_EPOLL (value 4, Linux)</p>
-<dd> For few fds, this backend is a bit little slower than poll and select, but it scales phenomenally better. While poll and select usually scale like O(total_fds) where n is the total number of fds (or the highest fd), epoll scales either O(1) or O(active_fds). </p>
+<dt>EVBACKEND_EPOLL (value 4, Linux)</dt>
+<dd> For few fds, this backend is a bit little slower than poll and select, but it scales phenomenally better. While poll and select usually scale like O(total_fds) where n is the total number of fds (or the highest fd), epoll scales either O(1) or O(active_fds). </dd>
 <p> The epoll mechanism deserves honorable mention as the most misdesigned of the more advanced event mechanisms: mere annoyances include silently dropping file descriptors, requiring a system call per change per file descriptor (and unnecessary guessing of parameters), problems with dup and so on. The biggest issue is fork races, however &#8211; if a program forks then <i>both</i> parent and child process have to recreate the epoll set, which can take considerable time (one syscall per file descriptor) and is of course hard to detect. </p>
 <p> Epoll is also notoriously buggy &#8211; embedding epoll fds <i>should</i> work, but of course <i>doesn&#8217;t</i>, and epoll just loves to report events for totally <i>different</i> file descriptors (even already closed ones, so one cannot even remove them from the set) than registered in the set (especially on <font SIZE="-1">SMP</font> systems). Libev tries to counter these spurious notifications by employing an additional generation counter and comparing that against the events to filter out spurious ones, recreating the set when required. </p>
 <p> While stopping, setting and starting an I/O watcher in the same iteration will result in some caching, there is still a system call per such incident (because the same <i>file descriptor</i> could point to a different <i>file description</i> now), so its best to avoid that. Also, <tt>&quot;dup ()&quot;</tt>&#8216;ed file descriptors might not work very well if you register events for both file descriptors. </p>
@@ -178,28 +176,28 @@ fatal_error(const char *msg)<br />
 <p> All this means that, in practice, <tt>&quot;EVBACKEND_SELECT&quot;</tt> can be as fast or faster than epoll for maybe up to a hundred file descriptors, depending on the usage. So sad. </p>
 <p> While nominally embeddable in other event loops, this feature is broken in all kernel versions tested so far. </p>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> and <tt>&quot;EV_WRITE&quot;</tt> in the same way as <tt>&quot;EVBACKEND_POLL&quot;</tt>.</p>
-<dt>EVBACKEND_KQUEUE (value 8, most <font SIZE="-1">BSD</font> clones)</p>
-<dd> Kqueue deserves special mention, as at the time of this writing, it was broken on all BSDs except NetBSD (usually it doesn&#8217;t work reliably with anything but sockets and pipes, except on Darwin, where of course it&#8217;s completely useless). Unlike epoll, however, whose brokenness is by design, these kqueue bugs can (and eventually will) be fixed without <font SIZE="-1">API</font> changes to existing programs. For this reason it&#8217;s not being &#8220;auto-detected&#8221; unless you explicitly specify it in the flags (i.e. using <tt>&quot;EVBACKEND_KQUEUE&quot;</tt>) or libev was compiled on a known-to-be-good (-enough) system like NetBSD. </p>
+<dt>EVBACKEND_KQUEUE (value 8, most <font SIZE="-1">BSD</font> clones)</dt>
+<dd> Kqueue deserves special mention, as at the time of this writing, it was broken on all BSDs except NetBSD (usually it doesn&#8217;t work reliably with anything but sockets and pipes, except on Darwin, where of course it&#8217;s completely useless). Unlike epoll, however, whose brokenness is by design, these kqueue bugs can (and eventually will) be fixed without <font SIZE="-1">API</font> changes to existing programs. For this reason it&#8217;s not being &#8220;auto-detected&#8221; unless you explicitly specify it in the flags (i.e. using <tt>&quot;EVBACKEND_KQUEUE&quot;</tt>) or libev was compiled on a known-to-be-good (-enough) system like NetBSD. </dd>
 <p> You still can embed kqueue into a normal poll or select backend and use it only for sockets (after having made sure that sockets work with kqueue on the target platform). See <tt>&quot;ev_embed&quot;</tt> watchers for more info. </p>
 <p> It scales in the same way as the epoll backend, but the interface to the kernel is more efficient (which says nothing about its actual speed, of course). While stopping, setting and starting an I/O watcher does never cause an extra system call as with <tt>&quot;EVBACKEND_EPOLL&quot;</tt>, it still adds up to two event changes per incident. Support for <tt>&quot;fork ()&quot;</tt> is very bad (but sane, unlike epoll) and it drops fds silently in similarly hard-to-detect cases </p>
 <p> This backend usually performs well under most conditions. </p>
 <p> While nominally embeddable in other event loops, this doesn&#8217;t work everywhere, so you might need to test for this. And since it is broken almost everywhere, you should only use it when you have a lot of sockets (for which it usually works), by embedding it into another event loop (e.g. <tt>&quot;EVBACKEND_SELECT&quot;</tt> or <tt>&quot;EVBACKEND_POLL&quot;</tt> (but <tt>&quot;poll&quot;</tt> is of course also broken on <font SIZE="-1">OS</font> X)) and, did I mention it, using it only for sockets. </p>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> into an <tt>&quot;EVFILT_READ&quot;</tt> kevent with <tt>&quot;NOTE_EOF&quot;</tt>, and <tt>&quot;EV_WRITE&quot;</tt> into an <tt>&quot;EVFILT_WRITE&quot;</tt> kevent with <tt>&quot;NOTE_EOF&quot;</tt>.</p>
-<dt>EVBACKEND_DEVPOLL (value 16, Solaris 8)</p>
-<dd> This is not implemented yet (and might never be, unless you send me an implementation). According to reports, <tt>&quot;/dev/poll&quot;</tt> only supports sockets and is not embeddable, which would limit the usefulness of this backend immensely.</p>
-<dt>EVBACKEND_PORT (value 32, Solaris 10)</p>
-<dd> This uses the Solaris 10 event port mechanism. As with everything on Solaris, it&#8217;s really slow, but it still scales very well (O(active_fds)). </p>
+<dt>EVBACKEND_DEVPOLL (value 16, Solaris 8)</dt>
+<dd> This is not implemented yet (and might never be, unless you send me an implementation). According to reports, <tt>&quot;/dev/poll&quot;</tt> only supports sockets and is not embeddable, which would limit the usefulness of this backend immensely.</dd>
+<dt>EVBACKEND_PORT (value 32, Solaris 10)</dt>
+<dd> This uses the Solaris 10 event port mechanism. As with everything on Solaris, it&#8217;s really slow, but it still scales very well (O(active_fds)). </dd>
 <p> Please note that Solaris event ports can deliver a lot of spurious notifications, so you need to use non-blocking I/O or other means to avoid blocking when no data (or space) is available. </p>
 <p> While this backend scales well, it requires one system call per active file descriptor per loop iteration. For small and medium numbers of file descriptors a &#8220;slow&#8221; <tt>&quot;EVBACKEND_SELECT&quot;</tt> or <tt>&quot;EVBACKEND_POLL&quot;</tt> backend might perform better. </p>
 <p> On the positive side, with the exception of the spurious readiness notifications, this backend actually performed fully to specification in all tests and is fully embeddable, which is a rare feat among the OS-specific backends (I vastly prefer correctness over speed hacks). </p>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> and <tt>&quot;EV_WRITE&quot;</tt> in the same way as <tt>&quot;EVBACKEND_POLL&quot;</tt>.</p>
-<dt>EVBACKEND_ALL</p>
-<dd> Try all backends (even potentially broken ones that wouldn&#8217;t be tried with <tt>&quot;EVFLAG_AUTO&quot;</tt>). Since this is a mask, you can do stuff such as <tt>&quot;EVBACKEND_ALL &amp; ~EVBACKEND_KQUEUE&quot;</tt>. </p>
+<dt>EVBACKEND_ALL</dt>
+<dd> Try all backends (even potentially broken ones that wouldn&#8217;t be tried with <tt>&quot;EVFLAG_AUTO&quot;</tt>). Since this is a mask, you can do stuff such as <tt>&quot;EVBACKEND_ALL &amp; ~EVBACKEND_KQUEUE&quot;</tt>. </dd>
 <p> It is definitely not recommended to use this flag.</dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> If one or more of the backend flags are or&#8217;ed into the flags value, then only these backends will be tried (in the reverse order as listed here). If none are specified, all backends in <tt>&quot;ev_recommended_backends ()&quot;</tt> will be tried. </p>
 <p> Example: This is the most typical usage. </p>
 <p>if (!ev_default_loop(0))<br />
@@ -212,56 +210,56 @@ fatal_error(const char *msg)<br />
 <pre>
    ev_default_loop (ev_recommended_backends () | EVBACKEND_KQUEUE);
 </pre>
-</dl>
-<dt>struct ev_loop *ev_loop_new (unsigned int flags)</p>
-<dd> Similar to <tt>&quot;ev_default_loop&quot;</tt>, but always creates a new event loop that is always distinct from the default loop. Unlike the default loop, it cannot handle signal and child watchers, and attempts to do so will be greeted by undefined behaviour (or a failed assertion if assertions are enabled). </p>
+</dd></dl>
+<dt>struct ev_loop *ev_loop_new (unsigned int flags)</dt>
+<dd> Similar to <tt>&quot;ev_default_loop&quot;</tt>, but always creates a new event loop that is always distinct from the default loop. Unlike the default loop, it cannot handle signal and child watchers, and attempts to do so will be greeted by undefined behaviour (or a failed assertion if assertions are enabled). </dd>
 <p> Note that this function <i>is</i> thread-safe, and the recommended way to use libev with threads is indeed to create one loop per thread, and using the default loop in the &#8220;main&#8221; or &#8220;initial&#8221; thread. </p>
 <p> Example: Try to create a event loop that uses epoll and nothing else. </p>
 <p>struct ev_loop *epoller = ev_loop_new(EVBACKEND_EPOLL | EVFLAG_NOENV);<br />
 if (!epoller)<br />
     fatal(&#8220;no epoll found here, maybe it hides under your chair&#8221;);</p>
-<dt>ev_default_destroy ()</p>
-<dd> Destroys the default loop again (frees all memory and kernel state etc.). None of the active event watchers will be stopped in the normal sense, so e.g. <tt>&quot;ev_is_active&quot;</tt> might still return true. It is your responsibility to either stop all watchers cleanly yourself <i>before</i> calling this function, or cope with the fact afterwards (which is usually the easiest thing, you can just ignore the watchers and/or <tt>&quot;free ()&quot;</tt> them for example). </p>
+<dt>ev_default_destroy ()</dt>
+<dd> Destroys the default loop again (frees all memory and kernel state etc.). None of the active event watchers will be stopped in the normal sense, so e.g. <tt>&quot;ev_is_active&quot;</tt> might still return true. It is your responsibility to either stop all watchers cleanly yourself <i>before</i> calling this function, or cope with the fact afterwards (which is usually the easiest thing, you can just ignore the watchers and/or <tt>&quot;free ()&quot;</tt> them for example). </dd>
 <p> Note that certain global state, such as signal state (and installed signal handlers), will not be freed by this function, and related watchers (such as signal and child watchers) would need to be stopped manually. </p>
 <p> In general it is not advisable to call this function except in the rare occasion where you really need to free e.g. the signal handling pipe fds. If you need dynamically allocated loops it is better to use <tt>&quot;ev_loop_new&quot;</tt> and <tt>&quot;ev_loop_destroy&quot;</tt>).</p>
-<dt>ev_loop_destroy (loop)</p>
-<dd> Like <tt>&quot;ev_default_destroy&quot;</tt>, but destroys an event loop created by an earlier call to <tt>&quot;ev_loop_new&quot;</tt>.</p>
-<dt>ev_default_fork ()</p>
-<dd> This function sets a flag that causes subsequent <tt>&quot;ev_loop&quot;</tt> iterations to reinitialise the kernel state for backends that have one. Despite the name, you can call it anytime, but it makes most sense after forking, in the child process (or both child and parent, but that again makes little sense). You <i>must</i> call it in the child before using any of the libev functions, and it will only take effect at the next <tt>&quot;ev_loop&quot;</tt> iteration. </p>
+<dt>ev_loop_destroy (loop)</dt>
+<dd> Like <tt>&quot;ev_default_destroy&quot;</tt>, but destroys an event loop created by an earlier call to <tt>&quot;ev_loop_new&quot;</tt>.</dd>
+<dt>ev_default_fork ()</dt>
+<dd> This function sets a flag that causes subsequent <tt>&quot;ev_loop&quot;</tt> iterations to reinitialise the kernel state for backends that have one. Despite the name, you can call it anytime, but it makes most sense after forking, in the child process (or both child and parent, but that again makes little sense). You <i>must</i> call it in the child before using any of the libev functions, and it will only take effect at the next <tt>&quot;ev_loop&quot;</tt> iteration. </dd>
 <p> On the other hand, you only need to call this function in the child process if and only if you want to use the event library in the child. If you just fork+exec, you don&#8217;t have to call it at all. </p>
 <p> The function itself is quite fast and it&#8217;s usually not a problem to call it just in case after a fork. To make this easy, the function will fit in quite nicely into a call to <tt>&quot;pthread_atfork&quot;</tt>: </p>
 <pre>
     pthread_atfork (0, 0, ev_default_fork);
 </pre>
-<dt>ev_loop_fork (loop)</p>
-<dd> Like <tt>&quot;ev_default_fork&quot;</tt>, but acts on an event loop created by <tt>&quot;ev_loop_new&quot;</tt>. Yes, you have to call this on every allocated event loop after fork that you want to re-use in the child, and how you do this is entirely your own problem.</p>
-<dt>int ev_is_default_loop (loop)</p>
-<dd> Returns true when the given loop is, in fact, the default loop, and false otherwise.</p>
-<dt>unsigned int ev_loop_count (loop)</p>
-<dd> Returns the count of loop iterations for the loop, which is identical to the number of times libev did poll for new events. It starts at <tt>0</tt> and happily wraps around with enough iterations. </p>
+<dt>ev_loop_fork (loop)</dt>
+<dd> Like <tt>&quot;ev_default_fork&quot;</tt>, but acts on an event loop created by <tt>&quot;ev_loop_new&quot;</tt>. Yes, you have to call this on every allocated event loop after fork that you want to re-use in the child, and how you do this is entirely your own problem.</dd>
+<dt>int ev_is_default_loop (loop)</dt>
+<dd> Returns true when the given loop is, in fact, the default loop, and false otherwise.</dd>
+<dt>unsigned int ev_loop_count (loop)</dt>
+<dd> Returns the count of loop iterations for the loop, which is identical to the number of times libev did poll for new events. It starts at <tt>0</tt> and happily wraps around with enough iterations. </dd>
 <p> This value can sometimes be useful as a generation counter of sorts (it &#8220;ticks&#8221; the number of loop iterations), as it roughly corresponds with <tt>&quot;ev_prepare&quot;</tt> and <tt>&quot;ev_check&quot;</tt> calls.</p>
-<dt>unsigned int ev_loop_depth (loop)</p>
-<dd> Returns the number of times <tt>&quot;ev_loop&quot;</tt> was entered minus the number of times <tt>&quot;ev_loop&quot;</tt> was exited, in other words, the recursion depth. </p>
+<dt>unsigned int ev_loop_depth (loop)</dt>
+<dd> Returns the number of times <tt>&quot;ev_loop&quot;</tt> was entered minus the number of times <tt>&quot;ev_loop&quot;</tt> was exited, in other words, the recursion depth. </dd>
 <p> Outside <tt>&quot;ev_loop&quot;</tt>, this number is zero. In a callback, this number is <tt>1</tt>, unless <tt>&quot;ev_loop&quot;</tt> was invoked recursively (or from another thread), in which case it is higher. </p>
 <p> Leaving <tt>&quot;ev_loop&quot;</tt> abnormally (setjmp/longjmp, cancelling the thread etc.), doesn&#8217;t count as exit.</p>
-<dt>unsigned int ev_backend (loop)</p>
-<dd> Returns one of the <tt>&quot;EVBACKEND_*&quot;</tt> flags indicating the event backend in use.</p>
-<dt>ev_tstamp ev_now (loop)</p>
-<dd> Returns the current &#8220;event loop time&#8221;, which is the time the event loop received events and started processing them. This timestamp does not change as long as callbacks are being processed, and this is also the base time used for relative timers. You can treat it as the timestamp of the event occurring (or more correctly, libev finding out about it).</p>
-<dt>ev_now_update (loop)</p>
-<dd> Establishes the current time by querying the kernel, updating the time returned by <tt>&quot;ev_now ()&quot;</tt> in the progress. This is a costly operation and is usually done automatically within <tt>&quot;ev_loop ()&quot;</tt>. </p>
+<dt>unsigned int ev_backend (loop)</dt>
+<dd> Returns one of the <tt>&quot;EVBACKEND_*&quot;</tt> flags indicating the event backend in use.</dd>
+<dt>ev_tstamp ev_now (loop)</dt>
+<dd> Returns the current &#8220;event loop time&#8221;, which is the time the event loop received events and started processing them. This timestamp does not change as long as callbacks are being processed, and this is also the base time used for relative timers. You can treat it as the timestamp of the event occurring (or more correctly, libev finding out about it).</dd>
+<dt>ev_now_update (loop)</dt>
+<dd> Establishes the current time by querying the kernel, updating the time returned by <tt>&quot;ev_now ()&quot;</tt> in the progress. This is a costly operation and is usually done automatically within <tt>&quot;ev_loop ()&quot;</tt>. </dd>
 <p> This function is rarely useful, but when some event callback runs for a very long time without entering the event loop, updating libev&#8217;s idea of the current time is a good idea. </p>
 <p> See also &#8220;The special problem of time updates&#8221; in the <tt>&quot;ev_timer&quot;</tt> section.</p>
-<dt>ev_suspend (loop)</p>
+<dt>ev_suspend (loop)</dt>
 <dd>
-<dt>ev_resume (loop)</p>
-<dd> These two functions suspend and resume a loop, for use when the loop is not used for a while and timeouts should not be processed. </p>
+</dd><dt>ev_resume (loop)</dt>
+<dd> These two functions suspend and resume a loop, for use when the loop is not used for a while and timeouts should not be processed. </dd>
 <p> A typical use case would be an interactive program such as a game: When the user presses <tt>&quot;^Z&quot;</tt> to suspend the game and resumes it an hour later it would be best to handle timeouts as if no time had actually passed while the program was suspended. This can be achieved by calling <tt>&quot;ev_suspend&quot;</tt> in your <tt>&quot;SIGTSTP&quot;</tt> handler, sending yourself a <tt>&quot;SIGSTOP&quot;</tt> and calling <tt>&quot;ev_resume&quot;</tt> directly afterwards to resume timer processing. </p>
 <p> Effectively, all <tt>&quot;ev_timer&quot;</tt> watchers will be delayed by the time spend between <tt>&quot;ev_suspend&quot;</tt> and <tt>&quot;ev_resume&quot;</tt>, and all <tt>&quot;ev_periodic&quot;</tt> watchers will be rescheduled (that is, they will lose any events that would have occured while suspended). </p>
 <p> After calling <tt>&quot;ev_suspend&quot;</tt> you <code>must not</code> call <i>any</i> function on the given loop other than <tt>&quot;ev_resume&quot;</tt>, and you <code>must not</code> call <tt>&quot;ev_resume&quot;</tt> without a previous call to <tt>&quot;ev_suspend&quot;</tt>. </p>
 <p> Calling <tt>&quot;ev_suspend&quot;</tt>/<tt>&quot;ev_resume&quot;</tt> has the side effect of updating the event loop time (see <tt>&quot;ev_now_update&quot;</tt>).</p>
-<dt>ev_loop (loop, int flags)</p>
-<dd> Finally, this is it, the event handler. This function usually is called after you initialised all your watchers and you want to start handling events. </p>
+<dt>ev_loop (loop, int flags)</dt>
+<dd> Finally, this is it, the event handler. This function usually is called after you initialised all your watchers and you want to start handling events. </dd>
 <p> If the flags argument is specified as <tt>0</tt>, it will not return until either no event watchers are active anymore or <tt>&quot;ev_unloop&quot;</tt> was called. </p>
 <p> Please note that an explicit <tt>&quot;ev_unloop&quot;</tt> is usually better than relying on all watchers to be stopped when deciding when a program has finished (especially in interactive programs), but having a program that automatically loops as long as it has to and no longer by virtue of relying on its watchers stopping correctly, that is truly a thing of beauty. </p>
 <p> A flags value of <tt>&quot;EVLOOP_NONBLOCK&quot;</tt> will look for new events, will handle those events and any already outstanding ones, but will not block your process in case there are no events and will return after one iteration of the loop. </p>
@@ -297,14 +295,14 @@ if (!epoller)<br />
 <p>&#8230; queue jobs here, make sure they register event watchers as long&#8230; as they still have work to do(even an idle watcher will do..)<br />
                          ev_loop(my_loop, 0);<br />
 &#8230; jobs done or somebody called unloop.yeah !</p>
-<dt>ev_unloop (loop, how)</p>
-<dd> Can be used to make a call to <tt>&quot;ev_loop&quot;</tt> return early (but only after it has processed all outstanding events). The <tt>&quot;how&quot;</tt> argument must be either <tt>&quot;EVUNLOOP_ONE&quot;</tt>, which will make the innermost <tt>&quot;ev_loop&quot;</tt> call return, or <tt>&quot;EVUNLOOP_ALL&quot;</tt>, which will make all nested <tt>&quot;ev_loop&quot;</tt> calls return. </p>
+<dt>ev_unloop (loop, how)</dt>
+<dd> Can be used to make a call to <tt>&quot;ev_loop&quot;</tt> return early (but only after it has processed all outstanding events). The <tt>&quot;how&quot;</tt> argument must be either <tt>&quot;EVUNLOOP_ONE&quot;</tt>, which will make the innermost <tt>&quot;ev_loop&quot;</tt> call return, or <tt>&quot;EVUNLOOP_ALL&quot;</tt>, which will make all nested <tt>&quot;ev_loop&quot;</tt> calls return. </dd>
 <p> This &#8220;unloop state&#8221; will be cleared when entering <tt>&quot;ev_loop&quot;</tt> again. </p>
 <p> It is safe to call <tt>&quot;ev_unloop&quot;</tt> from otuside any <tt>&quot;ev_loop&quot;</tt> calls.</p>
-<dt>ev_ref (loop)</p>
+<dt>ev_ref (loop)</dt>
 <dd>
-<dt>ev_unref (loop)</p>
-<dd> Ref/unref can be used to add or remove a reference count on the event loop: Every watcher keeps one reference, and as long as the reference count is nonzero, <tt>&quot;ev_loop&quot;</tt> will not return on its own. </p>
+</dd><dt>ev_unref (loop)</dt>
+<dd> Ref/unref can be used to add or remove a reference count on the event loop: Every watcher keeps one reference, and as long as the reference count is nonzero, <tt>&quot;ev_loop&quot;</tt> will not return on its own. </dd>
 <p> If you have a watcher you never unregister that should not keep <tt>&quot;ev_loop&quot;</tt> from returning, call <i>ev_unref()</i> after starting, and <i>ev_ref()</i> before stopping it. </p>
 <p> As an example, libev itself uses this for its internal signal pipe: It is not visible to the libev user and should not keep <tt>&quot;ev_loop&quot;</tt> from exiting if no event watchers registered by it are active. It is also an excellent way to do this for generic recurring timers or from within third-party libraries. Just remember to <i>unref after start</i> and <i>ref before stop</i> (but only if the watcher wasn&#8217;t active before, or was active before, respectively. Note also that libev might stop watchers itself (e.g. non-repeating timers) in which case you have to <tt>&quot;ev_ref&quot;</tt> in the callback). </p>
 <p> Example: Create a signal watcher, but keep it from keeping <tt>&quot;ev_loop&quot;</tt> running when nothing else is active. </p>
@@ -315,10 +313,10 @@ evf_unref(loop);</p>
 <p> Example: For some weird reason, unregister the above signal handler again. </p>
 <p>ev_ref(loop);<br />
 ev_signal_stop(loop, &amp;exitsig);</p>
-<dt>ev_set_io_collect_interval (loop, ev_tstamp interval)</p>
+<dt>ev_set_io_collect_interval (loop, ev_tstamp interval)</dt>
 <dd>
-<dt>ev_set_timeout_collect_interval (loop, ev_tstamp interval)</p>
-<dd> These advanced functions influence the time that libev will spend waiting for events. Both time intervals are by default <tt>0</tt>, meaning that libev will try to invoke timer/periodic callbacks and I/O callbacks with minimum latency. </p>
+</dd><dt>ev_set_timeout_collect_interval (loop, ev_tstamp interval)</dt>
+<dd> These advanced functions influence the time that libev will spend waiting for events. Both time intervals are by default <tt>0</tt>, meaning that libev will try to invoke timer/periodic callbacks and I/O callbacks with minimum latency. </dd>
 <p> Setting these to a higher value (the <tt>&quot;interval&quot;</tt> <i>must</i> be &gt;= <tt>0</tt>) allows libev to delay invocation of I/O and timer/periodic callbacks to increase efficiency of loop iterations (or to increase power-saving opportunities). </p>
 <p> The idea is that sometimes your program runs just fast enough to handle one (or very few) event(s) per loop iteration. While this makes the program responsive, it also wastes a lot of <font SIZE="-1">CPU</font> time to poll for new events, especially with backends like <tt>&quot;select ()&quot;</tt> which have a high overhead for the actual polling but can deliver many events at once. </p>
 <p> By setting a higher <i>io collect interval</i> you allow libev to spend more time collecting I/O events, so you can handle more events per iteration, at the cost of increasing latency. Timeouts (both <tt>&quot;ev_periodic&quot;</tt> and <tt>&quot;ev_timer&quot;</tt>) will be not affected. Setting this to a non-null value will introduce an additional <tt>&quot;ev_sleep ()&quot;</tt> call into most loop iterations. The sleep time ensures that libev will not poll for I/O events more often then once per this interval, on average. </p>
@@ -328,28 +326,28 @@ ev_signal_stop(loop, &amp;exitsig);</p>
 <p> Example: we only need 0.1s timeout granularity, and we wish not to poll more often than 100 times per second: </p>
 <p>ev_set_timeout_collect_interval(EV_DEFAULT_UC_ 0.1);<br />
 ev_set_io_collect_interval(EV_DEFAULT_UC_ 0.01);</p>
-<dt>ev_invoke_pending (loop)</p>
-<dd> This call will simply invoke all pending watchers while resetting their pending state. Normally, <tt>&quot;ev_loop&quot;</tt> does this automatically when required, but when overriding the invoke callback this call comes handy.</p>
-<dt>int ev_pending_count (loop)</p>
-<dd> Returns the number of pending watchers &#8211; zero indicates that no watchers are pending.</p>
-<dt>ev_set_invoke_pending_cb (loop, void (*invoke_pending_cb)(<font SIZE="-1">EV_P</font>))</p>
-<dd> This overrides the invoke pending functionality of the loop: Instead of invoking all pending watchers when there are any, <tt>&quot;ev_loop&quot;</tt> will call this callback instead. This is useful, for example, when you want to invoke the actual watchers inside another context (another thread etc.). </p>
+<dt>ev_invoke_pending (loop)</dt>
+<dd> This call will simply invoke all pending watchers while resetting their pending state. Normally, <tt>&quot;ev_loop&quot;</tt> does this automatically when required, but when overriding the invoke callback this call comes handy.</dd>
+<dt>int ev_pending_count (loop)</dt>
+<dd> Returns the number of pending watchers &#8211; zero indicates that no watchers are pending.</dd>
+<dt>ev_set_invoke_pending_cb (loop, void (*invoke_pending_cb)(<font SIZE="-1">EV_P</font>))</dt>
+<dd> This overrides the invoke pending functionality of the loop: Instead of invoking all pending watchers when there are any, <tt>&quot;ev_loop&quot;</tt> will call this callback instead. This is useful, for example, when you want to invoke the actual watchers inside another context (another thread etc.). </dd>
 <p> If you want to reset the callback, use <tt>&quot;ev_invoke_pending&quot;</tt> as new callback.</p>
-<dt>ev_set_loop_release_cb (loop, void (*release)(<font SIZE="-1">EV_P</font>), void (*acquire)(<font SIZE="-1">EV_P</font>))</p>
-<dd> Sometimes you want to share the same loop between multiple threads. This can be done relatively simply by putting mutex_lock/unlock calls around each call to a libev function. </p>
+<dt>ev_set_loop_release_cb (loop, void (*release)(<font SIZE="-1">EV_P</font>), void (*acquire)(<font SIZE="-1">EV_P</font>))</dt>
+<dd> Sometimes you want to share the same loop between multiple threads. This can be done relatively simply by putting mutex_lock/unlock calls around each call to a libev function. </dd>
 <p> However, <tt>&quot;ev_loop&quot;</tt> can run an indefinite time, so it is not feasible to wait for it to return. One way around this is to wake up the loop via <tt>&quot;ev_unloop&quot;</tt> and <tt>&quot;av_async_send&quot;</tt>, another way is to set these <i>release</i> and <i>acquire</i> callbacks on the loop. </p>
 <p> When set, then <tt>&quot;release&quot;</tt> will be called just before the thread is suspended waiting for new events, and <tt>&quot;acquire&quot;</tt> is called just afterwards. </p>
 <p> Ideally, <tt>&quot;release&quot;</tt> will just call your mutex_unlock function, and <tt>&quot;acquire&quot;</tt> will just call the mutex_lock function again. </p>
 <p> While event loop modifications are allowed between invocations of <tt>&quot;release&quot;</tt> and <tt>&quot;acquire&quot;</tt> (that&#8217;s their only purpose after all), no modifications done will affect the event loop, i.e. adding watchers will have no effect on the set of file descriptors being watched, or the time waited. USe an <tt>&quot;ev_async&quot;</tt> watcher to wake up <tt>&quot;ev_loop&quot;</tt> when you want it to take note of any changes you made. </p>
 <p> In theory, threads executing <tt>&quot;ev_loop&quot;</tt> will be async-cancel safe between invocations of <tt>&quot;release&quot;</tt> and <tt>&quot;acquire&quot;</tt>. </p>
 <p> See also the locking example in the <tt>&quot;THREADS&quot;</tt> section later in this document.</p>
-<dt>ev_set_userdata (loop, void *data)</p>
+<dt>ev_set_userdata (loop, void *data)</dt>
 <dd>
-<dt>ev_userdata (loop)</p>
-<dd> Set and retrieve a single <tt>&quot;void *&quot;</tt> associated with a loop. When <tt>&quot;ev_set_userdata&quot;</tt> has never been called, then <tt>&quot;ev_userdata&quot;</tt> returns <tt>0.</tt> </p>
+</dd><dt>ev_userdata (loop)</dt>
+<dd> Set and retrieve a single <tt>&quot;void *&quot;</tt> associated with a loop. When <tt>&quot;ev_set_userdata&quot;</tt> has never been called, then <tt>&quot;ev_userdata&quot;</tt> returns <tt>0.</tt> </dd>
 <p> These two functions can be used to associate arbitrary data with a loop, and are intended solely for the <tt>&quot;invoke_pending_cb&quot;</tt>, <tt>&quot;release&quot;</tt> and <tt>&quot;acquire&quot;</tt> callbacks described above, but of course can be (ab-)used for any other purpose as well.</p>
-<dt>ev_loop_verify (loop)</p>
-<dd> This function only does something when <tt>&quot;EV_VERIFY&quot;</tt> support has been compiled in, which is the default for non-minimal builds. It tries to go through all internal structures and checks them for validity. If anything is found to be inconsistent, it will print an error message to standard error and call <tt>&quot;abort ()&quot;</tt>. </p>
+<dt>ev_loop_verify (loop)</dt>
+<dd> This function only does something when <tt>&quot;EV_VERIFY&quot;</tt> support has been compiled in, which is the default for non-minimal builds. It tries to go through all internal structures and checks them for validity. If anything is found to be inconsistent, it will print an error message to standard error and call <tt>&quot;abort ()&quot;</tt>. </dd>
 <p> This can be used to catch bugs inside libev itself: under normal circumstances, this function will never abort as of course libev keeps its data structures consistent.</dl>
 <h2>ANATOMY OF A WATCHER</h2>
 <p> In the following description, uppercase <tt>&quot;TYPE&quot;</tt> in names stands for the watcher type, e.g. <tt>&quot;ev_TYPE_start&quot;</tt> can mean <tt>&quot;ev_timer_start&quot;</tt> for timer watchers and <tt>&quot;ev_io_start&quot;</tt> for I/O watchers. </p>
@@ -374,88 +372,88 @@ ev_loop(loop, 0);</p>
 <p> Each and every callback receives the event loop pointer as first, the registered watcher structure as second, and a bitset of received events as third argument. </p>
 <p> The received events usually include a single bit per event type received (you can receive multiple events at the same time). The possible bit masks are:</p>
 <dl>
-<dt>EV_READ</p>
+<dt>EV_READ</dt>
 <dd>
-<dt>EV_WRITE</p>
-<dd> The file descriptor in the <tt>&quot;ev_io&quot;</tt> watcher has become readable and/or writable.</p>
-<dt>EV_TIMEOUT</p>
-<dd> The <tt>&quot;ev_timer&quot;</tt> watcher has timed out.</p>
-<dt>EV_PERIODIC</p>
-<dd> The <tt>&quot;ev_periodic&quot;</tt> watcher has timed out.</p>
-<dt>EV_SIGNAL</p>
-<dd> The signal specified in the <tt>&quot;ev_signal&quot;</tt> watcher has been received by a thread.</p>
-<dt>EV_CHILD</p>
-<dd> The pid specified in the <tt>&quot;ev_child&quot;</tt> watcher has received a status change.</p>
-<dt>EV_STAT</p>
-<dd> The path specified in the <tt>&quot;ev_stat&quot;</tt> watcher changed its attributes somehow.</p>
-<dt>EV_IDLE</p>
-<dd> The <tt>&quot;ev_idle&quot;</tt> watcher has determined that you have nothing better to do.</p>
-<dt>EV_PREPARE</p>
+</dd><dt>EV_WRITE</dt>
+<dd> The file descriptor in the <tt>&quot;ev_io&quot;</tt> watcher has become readable and/or writable.</dd>
+<dt>EV_TIMEOUT</dt>
+<dd> The <tt>&quot;ev_timer&quot;</tt> watcher has timed out.</dd>
+<dt>EV_PERIODIC</dt>
+<dd> The <tt>&quot;ev_periodic&quot;</tt> watcher has timed out.</dd>
+<dt>EV_SIGNAL</dt>
+<dd> The signal specified in the <tt>&quot;ev_signal&quot;</tt> watcher has been received by a thread.</dd>
+<dt>EV_CHILD</dt>
+<dd> The pid specified in the <tt>&quot;ev_child&quot;</tt> watcher has received a status change.</dd>
+<dt>EV_STAT</dt>
+<dd> The path specified in the <tt>&quot;ev_stat&quot;</tt> watcher changed its attributes somehow.</dd>
+<dt>EV_IDLE</dt>
+<dd> The <tt>&quot;ev_idle&quot;</tt> watcher has determined that you have nothing better to do.</dd>
+<dt>EV_PREPARE</dt>
 <dd>
-<dt>EV_CHECK</p>
-<dd> All <tt>&quot;ev_prepare&quot;</tt> watchers are invoked just <i>before</i> <tt>&quot;ev_loop&quot;</tt> starts to gather new events, and all <tt>&quot;ev_check&quot;</tt> watchers are invoked just after <tt>&quot;ev_loop&quot;</tt> has gathered them, but before it invokes any callbacks for any received events. Callbacks of both watcher types can start and stop as many watchers as they want, and all of them will be taken into account (for example, a <tt>&quot;ev_prepare&quot;</tt> watcher might start an idle watcher to keep <tt>&quot;ev_loop&quot;</tt> from blocking).</p>
-<dt>EV_EMBED</p>
-<dd> The embedded event loop specified in the <tt>&quot;ev_embed&quot;</tt> watcher needs attention.</p>
-<dt>EV_FORK</p>
-<dd> The event loop has been resumed in the child process after fork (see <tt>&quot;ev_fork&quot;</tt>).</p>
-<dt>EV_ASYNC</p>
-<dd> The given async watcher has been asynchronously notified (see <tt>&quot;ev_async&quot;</tt>).</p>
-<dt>EV_CUSTOM</p>
-<dd> Not ever sent (or otherwise used) by libev itself, but can be freely used by libev users to signal watchers (e.g. via <tt>&quot;ev_feed_event&quot;</tt>).</p>
-<dt>EV_ERROR</p>
-<dd> An unspecified error has occurred, the watcher has been stopped. This might happen because the watcher could not be properly started because libev ran out of memory, a file descriptor was found to be closed or any other problem. Libev considers these application bugs. </p>
+</dd><dt>EV_CHECK</dt>
+<dd> All <tt>&quot;ev_prepare&quot;</tt> watchers are invoked just <i>before</i> <tt>&quot;ev_loop&quot;</tt> starts to gather new events, and all <tt>&quot;ev_check&quot;</tt> watchers are invoked just after <tt>&quot;ev_loop&quot;</tt> has gathered them, but before it invokes any callbacks for any received events. Callbacks of both watcher types can start and stop as many watchers as they want, and all of them will be taken into account (for example, a <tt>&quot;ev_prepare&quot;</tt> watcher might start an idle watcher to keep <tt>&quot;ev_loop&quot;</tt> from blocking).</dd>
+<dt>EV_EMBED</dt>
+<dd> The embedded event loop specified in the <tt>&quot;ev_embed&quot;</tt> watcher needs attention.</dd>
+<dt>EV_FORK</dt>
+<dd> The event loop has been resumed in the child process after fork (see <tt>&quot;ev_fork&quot;</tt>).</dd>
+<dt>EV_ASYNC</dt>
+<dd> The given async watcher has been asynchronously notified (see <tt>&quot;ev_async&quot;</tt>).</dd>
+<dt>EV_CUSTOM</dt>
+<dd> Not ever sent (or otherwise used) by libev itself, but can be freely used by libev users to signal watchers (e.g. via <tt>&quot;ev_feed_event&quot;</tt>).</dd>
+<dt>EV_ERROR</dt>
+<dd> An unspecified error has occurred, the watcher has been stopped. This might happen because the watcher could not be properly started because libev ran out of memory, a file descriptor was found to be closed or any other problem. Libev considers these application bugs. </dd>
 <p> You best act on it by reporting the problem and somehow coping with the watcher being stopped. Note that well-written programs should not receive an error ever, so when your watcher receives it, this usually indicates a bug in your program. </p>
 <p> Libev will usually signal a few &#8220;dummy&#8221; events together with an error, for example it might indicate that a fd is readable or writable, and if your callbacks is well-written it can just attempt the operation and cope with the error from <i>read()</i> or <i>write()</i>. This will not work in multi-threaded programs, though, as the fd could already be closed and reused for another thing, so beware.</dl>
 <h3><font SIZE="-1">GENERIC</font> <font SIZE="-1">WATCHER</font> <font SIZE="-1">FUNCTIONS</font></h3>
 <dl>
-<dt>ev_init (ev_TYPE *watcher, callback)</p>
-<dd> This macro initialises the generic portion of a watcher. The contents of the watcher object can be arbitrary (so <tt>&quot;malloc&quot;</tt> will do). Only the generic parts of the watcher are initialised, you <i>need</i> to call the type-specific <tt>&quot;ev_TYPE_set&quot;</tt> macro afterwards to initialise the type-specific parts. For each type there is also a <tt>&quot;ev_TYPE_init&quot;</tt> macro which rolls both calls into one. </p>
+<dt>ev_init (ev_TYPE *watcher, callback)</dt>
+<dd> This macro initialises the generic portion of a watcher. The contents of the watcher object can be arbitrary (so <tt>&quot;malloc&quot;</tt> will do). Only the generic parts of the watcher are initialised, you <i>need</i> to call the type-specific <tt>&quot;ev_TYPE_set&quot;</tt> macro afterwards to initialise the type-specific parts. For each type there is also a <tt>&quot;ev_TYPE_init&quot;</tt> macro which rolls both calls into one. </dd>
 <p> You can reinitialise a watcher at any time as long as it has been stopped (or never started) and there are no pending events outstanding. </p>
 <p> The callback is always of type <tt>&quot;void (*)(struct ev_loop *loop, ev_TYPE *watcher, int revents)&quot;</tt>. </p>
 <p> Example: Initialise an <tt>&quot;ev_io&quot;</tt> watcher in two steps. </p>
 <p>ev_io w;<br />
 ev_init(&amp;w, my_cb);<br />
 ev_io_set(&amp;w, STDIN_FILENO, EV_READ);</p>
-<dt>ev_TYPE_set (ev_TYPE *, [args])</p>
-<dd> This macro initialises the type-specific parts of a watcher. You need to call <tt>&quot;ev_init&quot;</tt> at least once before you call this macro, but you can call <tt>&quot;ev_TYPE_set&quot;</tt> any number of times. You must not, however, call this macro on a watcher that is active (it can be pending, however, which is a difference to the <tt>&quot;ev_init&quot;</tt> macro). </p>
+<dt>ev_TYPE_set (ev_TYPE *, [args])</dt>
+<dd> This macro initialises the type-specific parts of a watcher. You need to call <tt>&quot;ev_init&quot;</tt> at least once before you call this macro, but you can call <tt>&quot;ev_TYPE_set&quot;</tt> any number of times. You must not, however, call this macro on a watcher that is active (it can be pending, however, which is a difference to the <tt>&quot;ev_init&quot;</tt> macro). </dd>
 <p> Although some watcher types do not have type-specific arguments (e.g. <tt>&quot;ev_prepare&quot;</tt>) you still need to call its <tt>&quot;set&quot;</tt> macro. </p>
 <p> See <tt>&quot;ev_init&quot;</tt>, above, for an example.</p>
-<dt>ev_TYPE_init (ev_TYPE *watcher, callback, [args])</p>
-<dd> This convenience macro rolls both <tt>&quot;ev_init&quot;</tt> and <tt>&quot;ev_TYPE_set&quot;</tt> macro calls into a single call. This is the most convenient method to initialise a watcher. The same limitations apply, of course. </p>
+<dt>ev_TYPE_init (ev_TYPE *watcher, callback, [args])</dt>
+<dd> This convenience macro rolls both <tt>&quot;ev_init&quot;</tt> and <tt>&quot;ev_TYPE_set&quot;</tt> macro calls into a single call. This is the most convenient method to initialise a watcher. The same limitations apply, of course. </dd>
 <p> Example: Initialise and set an <tt>&quot;ev_io&quot;</tt> watcher in one step. </p>
 <pre>
    ev_io_init (&amp;w, my_cb, STDIN_FILENO, EV_READ);
 </pre>
-<dt>ev_TYPE_start (loop *, ev_TYPE *watcher)</p>
-<dd> Starts (activates) the given watcher. Only active watchers will receive events. If the watcher is already active nothing will happen. </p>
+<dt>ev_TYPE_start (loop *, ev_TYPE *watcher)</dt>
+<dd> Starts (activates) the given watcher. Only active watchers will receive events. If the watcher is already active nothing will happen. </dd>
 <p> Example: Start the <tt>&quot;ev_io&quot;</tt> watcher that is being abused as example in this whole section. </p>
 <pre>
    ev_io_start (EV_DEFAULT_UC, &amp;w);
 </pre>
-<dt>ev_TYPE_stop (loop *, ev_TYPE *watcher)</p>
-<dd> Stops the given watcher if active, and clears the pending status (whether the watcher was active or not). </p>
+<dt>ev_TYPE_stop (loop *, ev_TYPE *watcher)</dt>
+<dd> Stops the given watcher if active, and clears the pending status (whether the watcher was active or not). </dd>
 <p> It is possible that stopped watchers are pending &#8211; for example, non-repeating timers are being stopped when they become pending &#8211; but calling <tt>&quot;ev_TYPE_stop&quot;</tt> ensures that the watcher is neither active nor pending. If you want to free or reuse the memory used by the watcher it is therefore a good idea to always call its <tt>&quot;ev_TYPE_stop&quot;</tt> function.</p>
-<dt>bool ev_is_active (ev_TYPE *watcher)</p>
-<dd> Returns a true value iff the watcher is active (i.e. it has been started and not yet been stopped). As long as a watcher is active you must not modify it.</p>
-<dt>bool ev_is_pending (ev_TYPE *watcher)</p>
-<dd> Returns a true value iff the watcher is pending, (i.e. it has outstanding events but its callback has not yet been invoked). As long as a watcher is pending (but not active) you must not call an init function on it (but <tt>&quot;ev_TYPE_set&quot;</tt> is safe), you must not change its priority, and you must make sure the watcher is available to libev (e.g. you cannot <tt>&quot;free ()&quot;</tt> it).</p>
-<dt>callback ev_cb (ev_TYPE *watcher)</p>
-<dd> Returns the callback currently set on the watcher.</p>
-<dt>ev_cb_set (ev_TYPE *watcher, callback)</p>
-<dd> Change the callback. You can change the callback at virtually any time (modulo threads).</p>
-<dt>ev_set_priority (ev_TYPE *watcher, priority)</p>
+<dt>bool ev_is_active (ev_TYPE *watcher)</dt>
+<dd> Returns a true value iff the watcher is active (i.e. it has been started and not yet been stopped). As long as a watcher is active you must not modify it.</dd>
+<dt>bool ev_is_pending (ev_TYPE *watcher)</dt>
+<dd> Returns a true value iff the watcher is pending, (i.e. it has outstanding events but its callback has not yet been invoked). As long as a watcher is pending (but not active) you must not call an init function on it (but <tt>&quot;ev_TYPE_set&quot;</tt> is safe), you must not change its priority, and you must make sure the watcher is available to libev (e.g. you cannot <tt>&quot;free ()&quot;</tt> it).</dd>
+<dt>callback ev_cb (ev_TYPE *watcher)</dt>
+<dd> Returns the callback currently set on the watcher.</dd>
+<dt>ev_cb_set (ev_TYPE *watcher, callback)</dt>
+<dd> Change the callback. You can change the callback at virtually any time (modulo threads).</dd>
+<dt>ev_set_priority (ev_TYPE *watcher, priority)</dt>
 <dd>
-<dt>int ev_priority (ev_TYPE *watcher)</p>
-<dd> Set and query the priority of the watcher. The priority is a small integer between <tt>&quot;EV_MAXPRI&quot;</tt> (default: <tt>2</tt>) and <tt>&quot;EV_MINPRI&quot;</tt> (default: <tt>&quot;-2&quot;</tt>). Pending watchers with higher priority will be invoked before watchers with lower priority, but priority will not keep watchers from being executed (except for <tt>&quot;ev_idle&quot;</tt> watchers). </p>
+</dd><dt>int ev_priority (ev_TYPE *watcher)</dt>
+<dd> Set and query the priority of the watcher. The priority is a small integer between <tt>&quot;EV_MAXPRI&quot;</tt> (default: <tt>2</tt>) and <tt>&quot;EV_MINPRI&quot;</tt> (default: <tt>&quot;-2&quot;</tt>). Pending watchers with higher priority will be invoked before watchers with lower priority, but priority will not keep watchers from being executed (except for <tt>&quot;ev_idle&quot;</tt> watchers). </dd>
 <p> If you need to suppress invocation when higher priority events are pending you need to look at <tt>&quot;ev_idle&quot;</tt> watchers, which provide this functionality. </p>
 <p> You <i>must not</i> change the priority of a watcher as long as it is active or pending. </p>
 <p> Setting a priority outside the range of <tt>&quot;EV_MINPRI&quot;</tt> to <tt>&quot;EV_MAXPRI&quot;</tt> is fine, as long as you do not mind that the priority value you query might or might not have been clamped to the valid range. </p>
 <p> The default priority used by watchers when no priority has been set is always <tt>0</tt>, which is supposed to not be too high and not be too low :). </p>
 <p> See &#8220;<font SIZE="-1">WATCHER</font> <font SIZE="-1">PRIORITY</font> <font SIZE="-1">MODELS</font>&#8221;, below, for a more thorough treatment of priorities.</p>
-<dt>ev_invoke (loop, ev_TYPE *watcher, int revents)</p>
-<dd> Invoke the <tt>&quot;watcher&quot;</tt> with the given <tt>&quot;loop&quot;</tt> and <tt>&quot;revents&quot;</tt>. Neither <tt>&quot;loop&quot;</tt> nor <tt>&quot;revents&quot;</tt> need to be valid as long as the watcher callback can deal with that fact, as both are simply passed through to the callback.</p>
-<dt>int ev_clear_pending (loop, ev_TYPE *watcher)</p>
-<dd> If the watcher is pending, this function clears its pending status and returns its <tt>&quot;revents&quot;</tt> bitset (as if its callback was invoked). If the watcher isn&#8217;t pending it does nothing and returns <tt>0</tt>. </p>
+<dt>ev_invoke (loop, ev_TYPE *watcher, int revents)</dt>
+<dd> Invoke the <tt>&quot;watcher&quot;</tt> with the given <tt>&quot;loop&quot;</tt> and <tt>&quot;revents&quot;</tt>. Neither <tt>&quot;loop&quot;</tt> nor <tt>&quot;revents&quot;</tt> need to be valid as long as the watcher callback can deal with that fact, as both are simply passed through to the callback.</dd>
+<dt>int ev_clear_pending (loop, ev_TYPE *watcher)</dt>
+<dd> If the watcher is pending, this function clears its pending status and returns its <tt>&quot;revents&quot;</tt> bitset (as if its callback was invoked). If the watcher isn&#8217;t pending it does nothing and returns <tt>0</tt>. </dd>
 <p> Sometimes it can be useful to &#8220;poll&#8221; a watcher instead of waiting for its callback to be invoked, which can be accomplished with this function.</dl>
 <h3><font SIZE="-1">ASSOCIATING</font> <font SIZE="-1">CUSTOM</font> <font SIZE="-1">DATA</font> <font SIZE="-1">WITH</font> A <font SIZE="-1">WATCHER</font></h3>
 <p> Each watcher has, by default, a member <tt>&quot;void *data&quot;</tt> that you can change and read at any time: libev will completely ignore it. This can be used to associate arbitrary data with your watcher. If you need more data and don&#8217;t want to allocate memory and store a pointer to it in that data member, you can also &#8220;subclass&#8221; the watcher type and provide your own data: </p>
@@ -557,14 +555,14 @@ ev_io_start(EV_DEFAULT_ &amp;io);</p>
 <p> So when you encounter spurious, unexplained daemon exits, make sure you ignore <font SIZE="-1">SIGPIPE</font> (and maybe make sure you log the exit status of your daemon somewhere, as that would have given you a big clue). </p>
 <p> <i>Watcher-Specific Functions</i></p>
 <dl>
-<dt>ev_io_init (ev_io *, callback, int fd, int events)</p>
+<dt>ev_io_init (ev_io *, callback, int fd, int events)</dt>
 <dd>
-<dt>ev_io_set (ev_io *, int fd, int events)</p>
-<dd> Configures an <tt>&quot;ev_io&quot;</tt> watcher. The <tt>&quot;fd&quot;</tt> is the file descriptor to receive events for and <tt>&quot;events&quot;</tt> is either <tt>&quot;EV_READ&quot;</tt>, <tt>&quot;EV_WRITE&quot;</tt> or <tt>&quot;EV_READ | EV_WRITE&quot;</tt>, to express the desire to receive the given events.</p>
-<dt>int fd [read-only]</p>
-<dd> The file descriptor being watched.</p>
-<dt>int events [read-only]</p>
-<dd> The events being watched.</dl>
+</dd><dt>ev_io_set (ev_io *, int fd, int events)</dt>
+<dd> Configures an <tt>&quot;ev_io&quot;</tt> watcher. The <tt>&quot;fd&quot;</tt> is the file descriptor to receive events for and <tt>&quot;events&quot;</tt> is either <tt>&quot;EV_READ&quot;</tt>, <tt>&quot;EV_WRITE&quot;</tt> or <tt>&quot;EV_READ | EV_WRITE&quot;</tt>, to express the desire to receive the given events.</dd>
+<dt>int fd [read-only]</dt>
+<dd> The file descriptor being watched.</dd>
+<dt>int events [read-only]</dt>
+<dd> The events being watched.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Call <tt>&quot;stdin_readable_cb&quot;</tt> when <font SIZE="-1">STDIN_FILENO</font> has become, well readable, but only once. Since it is likely line-buffered, you could attempt to read a whole line in the callback. </p>
 <p>static void<br />
@@ -587,8 +585,8 @@ ev_loop(loop, 0);</p>
 <p> What follows are some ways to handle this problem, from obvious and inefficient to smart and efficient. </p>
 <p> In the following, a 60 second activity timeout is assumed &#8211; a timeout that gets reset to 60 seconds each time there is activity (e.g. each time some data or other life sign was received).</p>
 <dl>
-<dt>1. Use a timer and stop, reinitialise and start it on activity.</p>
-<dd> This is the most obvious, but not the most simple way: In the beginning, start the watcher: </p>
+<dt>1. Use a timer and stop, reinitialise and start it on activity.</dt>
+<dd> This is the most obvious, but not the most simple way: In the beginning, start the watcher: </dd>
 <p>ev_timer_init(timer, callback, 60., 0.);<br />
 ev_timer_start(loop, timer);</p>
 <p> Then, each time there is some activity, <tt>&quot;ev_timer_stop&quot;</tt> it, initialise it and start it again: </p>
@@ -596,8 +594,8 @@ ev_timer_start(loop, timer);</p>
 ev_timer_set(timer, 60., 0.);<br />
 ev_timer_start(loop, timer);</p>
 <p> This is relatively simple to implement, but means that each time there is some activity, libev will first have to remove the timer from its internal data structure and then add it again. Libev tries to be fast, but it&#8217;s still not a constant-time operation.</p>
-<dt>2. Use a timer and re-start it with ev_timer_again inactivity.</p>
-<dd> This is the easiest way, and involves using <tt>&quot;ev_timer_again&quot;</tt> instead of <tt>&quot;ev_timer_start&quot;</tt>. </p>
+<dt>2. Use a timer and re-start it with ev_timer_again inactivity.</dt>
+<dd> This is the easiest way, and involves using <tt>&quot;ev_timer_again&quot;</tt> instead of <tt>&quot;ev_timer_start&quot;</tt>. </dd>
 <p> To implement this, configure an <tt>&quot;ev_timer&quot;</tt> with a <tt>&quot;repeat&quot;</tt> value of <tt>60</tt> and then call <tt>&quot;ev_timer_again&quot;</tt> at start and each time you successfully read or write some data. If you go into an idle state where you do not expect data to travel on the socket, you can <tt>&quot;ev_timer_stop&quot;</tt> the timer, and <tt>&quot;ev_timer_again&quot;</tt> will automatically restart it if need be. </p>
 <p> That means you can ignore both the <tt>&quot;ev_timer_start&quot;</tt> function and the <tt>&quot;after&quot;</tt> argument to <tt>&quot;ev_timer_set&quot;</tt>, and only ever use the <tt>&quot;repeat&quot;</tt> member and <tt>&quot;ev_timer_again&quot;</tt>. </p>
 <p> At start: </p>
@@ -613,8 +611,8 @@ ev_timer_again(loop, timer);</p>
 ev_timer_again(loop, timer);</p>
 <p> This is slightly more efficient then stopping/starting the timer each time you want to modify its timeout value, as libev does not have to completely remove and re-insert the timer from/into its internal data structure. </p>
 <p> It is, however, even simpler than the &#8220;obvious&#8221; way to do it.</p>
-<dt>3. Let the timer time out, but then re-arm it as required.</p>
-<dd> This method is more tricky, but usually most efficient: Most timeouts are relatively long compared to the intervals between other activity &#8211; in our example, within 60 seconds, there are usually many I/O events with associated activity resets. </p>
+<dt>3. Let the timer time out, but then re-arm it as required.</dt>
+<dd> This method is more tricky, but usually most efficient: Most timeouts are relatively long compared to the intervals between other activity &#8211; in our example, within 60 seconds, there are usually many I/O events with associated activity resets. </dd>
 <p> In this case, it would be more efficient to leave the <tt>&quot;ev_timer&quot;</tt> alone, but remember the time of last activity, and check for a real timeout only within the callback: </p>
 <p>ev_tstamp last_activity; // time of last activity<br />
 static void<br />
@@ -646,8 +644,8 @@ callback(loop, timer, EV_TIMEOUT);</p>
 </pre>
 <p> This technique is slightly more complex, but in most cases where the time-out is unlikely to be triggered, much more efficient. </p>
 <p> Changing the timeout is trivial as well (if it isn&#8217;t hard-coded in the callback :) &#8211; just change the timeout and invoke the callback, which will fix things for you.</p>
-<dt>4. Wee, just use a double-linked list for your timeouts.</p>
-<dd> If there is not one request, but many thousands (millions&#8230;), all employing some kind of timeout with the same timeout value, then one can do even better: </p>
+<dt>4. Wee, just use a double-linked list for your timeouts.</dt>
+<dd> If there is not one request, but many thousands (millions&#8230;), all employing some kind of timeout with the same timeout value, then one can do even better: </dd>
 <p> When starting the timeout, calculate the timeout value and put the timeout at the <i>end</i> of the list. </p>
 <p> Then use an <tt>&quot;ev_timer&quot;</tt> to fire when the timeout at the <i>beginning</i> of the list is expected to fire (for example, using the technique #3). </p>
 <p> When there is some activity, remove the timer from the list, recalculate the timeout, append it to the end of the list again, and make sure to update the <tt>&quot;ev_timer&quot;</tt> if it was taken from the beginning of the list. </p>
@@ -670,22 +668,22 @@ callback(loop, timer, EV_TIMEOUT);</p>
 <p> It might be beneficial for this latter case to call <tt>&quot;ev_suspend&quot;</tt> and <tt>&quot;ev_resume&quot;</tt> in code that handles <tt>&quot;SIGTSTP&quot;</tt>, to at least get deterministic behaviour in this case (you can do nothing against <tt>&quot;SIGSTOP&quot;</tt>). </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_timer_init (ev_timer *, callback, ev_tstamp after, ev_tstamp repeat)</p>
+<dt>ev_timer_init (ev_timer *, callback, ev_tstamp after, ev_tstamp repeat)</dt>
 <dd>
-<dt>ev_timer_set (ev_timer *, ev_tstamp after, ev_tstamp repeat)</p>
-<dd> Configure the timer to trigger after <tt>&quot;after&quot;</tt> seconds. If <tt>&quot;repeat&quot;</tt> is <tt>0.</tt>, then it will automatically be stopped once the timeout is reached. If it is positive, then the timer will automatically be configured to trigger again <tt>&quot;repeat&quot;</tt> seconds later, again, and again, until stopped manually. </p>
+</dd><dt>ev_timer_set (ev_timer *, ev_tstamp after, ev_tstamp repeat)</dt>
+<dd> Configure the timer to trigger after <tt>&quot;after&quot;</tt> seconds. If <tt>&quot;repeat&quot;</tt> is <tt>0.</tt>, then it will automatically be stopped once the timeout is reached. If it is positive, then the timer will automatically be configured to trigger again <tt>&quot;repeat&quot;</tt> seconds later, again, and again, until stopped manually. </dd>
 <p> The timer itself will do a best-effort at avoiding drift, that is, if you configure a timer to trigger every 10 seconds, then it will normally trigger at exactly 10 second intervals. If, however, your program cannot keep up with the timer (because it takes longer than those 10 seconds to do stuff) the timer will not fire more than once per event loop iteration.</p>
-<dt>ev_timer_again (loop, ev_timer *)</p>
-<dd> This will act as if the timer timed out and restart it again if it is repeating. The exact semantics are: </p>
+<dt>ev_timer_again (loop, ev_timer *)</dt>
+<dd> This will act as if the timer timed out and restart it again if it is repeating. The exact semantics are: </dd>
 <p> If the timer is pending, its pending status is cleared. </p>
 <p> If the timer is started but non-repeating, stop it (as if it timed out). </p>
 <p> If the timer is repeating, either start it if necessary (with the <tt>&quot;repeat&quot;</tt> value), or reset the running timer to the <tt>&quot;repeat&quot;</tt> value. </p>
 <p> This sounds a bit complicated, see &#8220;Be smart about timeouts&#8221;, above, for a usage example.</p>
-<dt>ev_timer_remaining (loop, ev_timer *)</p>
-<dd> Returns the remaining time until a timer fires. If the timer is active, then this time is relative to the current event loop time, otherwise it&#8217;s the timeout value currently configured. </p>
+<dt>ev_timer_remaining (loop, ev_timer *)</dt>
+<dd> Returns the remaining time until a timer fires. If the timer is active, then this time is relative to the current event loop time, otherwise it&#8217;s the timeout value currently configured. </dd>
 <p> That is, after an <tt>&quot;ev_timer_set (w, 5, 7)&quot;</tt>, <tt>&quot;ev_timer_remaining&quot;</tt> returns <tt>5</tt>. When the timer is started and one second passes, <tt>&quot;ev_timer_remain&quot;</tt> will return <tt>4</tt>. When the timer expires and is restarted, it will return roughly <tt>7</tt> (likely slightly less as callback invocation takes some time, too), and so on.</p>
-<dt>ev_tstamp repeat [read-write]</p>
-<dd> The current <tt>&quot;repeat&quot;</tt> value. Will be used each time the watcher times out or <tt>&quot;ev_timer_again&quot;</tt> is called, and determines the next timeout (if any), which is also when any modifications are taken into account.</dl>
+<dt>ev_tstamp repeat [read-write]</dt>
+<dd> The current <tt>&quot;repeat&quot;</tt> value. Will be used each time the watcher times out or <tt>&quot;ev_timer_again&quot;</tt> is called, and determines the next timeout (if any), which is also when any modifications are taken into account.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Create a timer that fires after 60 seconds. </p>
 <p>static void<br />
@@ -711,19 +709,17 @@ ev_timer_again(&amp;mytimer);</p>
 <p> As with timers, the callback is guaranteed to be invoked only when the point in time where it is supposed to trigger has passed. If multiple timers become ready during the same loop iteration then the ones with earlier time-out values are invoked before ones with later time-out values (but this is no longer true when a callback calls <tt>&quot;ev_loop&quot;</tt> recursively). </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_periodic_init (ev_periodic *, callback, ev_tstamp offset, ev_tstamp interval, reschedule_cb)</p>
+<dt>ev_periodic_init (ev_periodic *, callback, ev_tstamp offset, ev_tstamp interval, reschedule_cb)</dt>
 <dd>
-<dt>ev_periodic_set (ev_periodic *, ev_tstamp offset, ev_tstamp interval, reschedule_cb)</p>
-<dd> Lots of arguments, let&#8217;s sort it out&#8230; There are basically three modes of operation, and we will explain them from simplest to most complex:</p>
+</dd><dt>ev_periodic_set (ev_periodic *, ev_tstamp offset, ev_tstamp interval, reschedule_cb)</dt>
+<dd> Lots of arguments, let&#8217;s sort it out&#8230; There are basically three modes of operation, and we will explain them from simplest to most complex:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> absolute timer (offset = absolute time, interval = 0, reschedule_cb = 0) </p>
+<dt>*</dt>
+<dd> absolute timer (offset = absolute time, interval = 0, reschedule_cb = 0) </dd>
 <p> In this configuration the watcher triggers an event after the wall clock time <tt>&quot;offset&quot;</tt> has passed. It will not repeat and will not adjust when a time jump occurs, that is, if it is to be run at January 1st 2011 then it will be stopped and invoked when the system clock reaches or surpasses this point in time.</p>
-<dt>*</p>
-<dd> repeating interval timer (offset = offset within interval, interval &gt; 0, reschedule_cb = 0) </p>
+<dt>*</dt>
+<dd> repeating interval timer (offset = offset within interval, interval &gt; 0, reschedule_cb = 0) </dd>
 <p> In this mode the watcher will always be scheduled to time out at the next <tt>&quot;offset + N * interval&quot;</tt> time (for some integer N, which can also be negative) and then repeat, regardless of any time jumps. The <tt>&quot;offset&quot;</tt> argument is merely an offset into the <tt>&quot;interval&quot;</tt> periods. </p>
 <p> This can be used to create timers that do not drift with respect to the system clock, for example, here is an <tt>&quot;ev_periodic&quot;</tt> that triggers each hour, on the hour (with respect to <font SIZE="-1">UTC</font>): </p>
 <pre>
@@ -733,8 +729,8 @@ ev_timer_again(&amp;mytimer);</p>
 <p> Another way to think about it (for the mathematically inclined) is that <tt>&quot;ev_periodic&quot;</tt> will try to run the callback in this mode at the next possible time where <tt>&quot;time = offset (mod interval)&quot;</tt>, regardless of any time jumps. </p>
 <p> For numerical stability it is preferable that the <tt>&quot;offset&quot;</tt> value is near <tt>&quot;ev_now ()&quot;</tt> (the current time), but there is no range requirement for this value, and in fact is often specified as zero. </p>
 <p> Note also that there is an upper limit to how often a timer can fire (<font SIZE="-1">CPU</font> speed for example), so if <tt>&quot;interval&quot;</tt> is very small then timing stability will of course deteriorate. Libev itself tries to be exact to be about one millisecond (if the <font SIZE="-1">OS</font> supports it and the machine is fast enough).</p>
-<dt>*</p>
-<dd> manual reschedule mode (offset ignored, interval ignored, reschedule_cb = callback) </p>
+<dt>*</dt>
+<dd> manual reschedule mode (offset ignored, interval ignored, reschedule_cb = callback) </dd>
 <p> In this mode the values for <tt>&quot;interval&quot;</tt> and <tt>&quot;offset&quot;</tt> are both being ignored. Instead, each time the periodic watcher gets scheduled, the reschedule callback will be called with the watcher as first, and the current time as second argument. </p>
 <p> <font SIZE="-1">NOTE:</font> <i>This callback </i><font SIZE="-1"><i>MUST</i></font><i> </i><font SIZE="-1"><i>NOT</i></font><i> stop or destroy any periodic watcher, ever, or make </i><font SIZE="-1"><i>ANY</i></font><i> other event loop modifications whatsoever, unless explicitly allowed by documentation here</i>. </p>
 <p> If you need to stop it, return <tt>&quot;now + 1e30&quot;</tt> (or so, fudge fudge) and stop it afterwards (e.g. by starting an <tt>&quot;ev_prepare&quot;</tt> watcher, which is the only event loop modification you are allowed to do). </p>
@@ -749,19 +745,18 @@ my_rescheduler(ev_periodic *w, ev_tstamp now)<br />
 <p> This can be used to create very complex timers, such as a timer that triggers on &#8220;next midnight, local time&#8221;. To do this, you would calculate the next midnight after <tt>&quot;now&quot;</tt> and return the timestamp value for this. How you do this is, again, up to you (but it is not trivial, which is the main reason I omitted it as an example).</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>ev_periodic_again (loop, ev_periodic *)</p>
-<dd> Simply stops and restarts the periodic watcher again. This is only useful when you changed some parameters or the reschedule callback would return a different time than the last time it was called (e.g. in a crond like program when the crontabs have changed).</p>
-<dt>ev_tstamp ev_periodic_at (ev_periodic *)</p>
-<dd> When active, returns the absolute time that the watcher is supposed to trigger next. This is not the same as the <tt>&quot;offset&quot;</tt> argument to <tt>&quot;ev_periodic_set&quot;</tt>, but indeed works even in interval and manual rescheduling modes.</p>
-<dt>ev_tstamp offset [read-write]</p>
-<dd> When repeating, this contains the offset value, otherwise this is the absolute point in time (the <tt>&quot;offset&quot;</tt> value passed to <tt>&quot;ev_periodic_set&quot;</tt>, although libev might modify this value for better numerical stability). </p>
+</dl>
+<dt>ev_periodic_again (loop, ev_periodic *)</dt>
+<dd> Simply stops and restarts the periodic watcher again. This is only useful when you changed some parameters or the reschedule callback would return a different time than the last time it was called (e.g. in a crond like program when the crontabs have changed).</dd>
+<dt>ev_tstamp ev_periodic_at (ev_periodic *)</dt>
+<dd> When active, returns the absolute time that the watcher is supposed to trigger next. This is not the same as the <tt>&quot;offset&quot;</tt> argument to <tt>&quot;ev_periodic_set&quot;</tt>, but indeed works even in interval and manual rescheduling modes.</dd>
+<dt>ev_tstamp offset [read-write]</dt>
+<dd> When repeating, this contains the offset value, otherwise this is the absolute point in time (the <tt>&quot;offset&quot;</tt> value passed to <tt>&quot;ev_periodic_set&quot;</tt>, although libev might modify this value for better numerical stability). </dd>
 <p> Can be modified any time, but changes only take effect when the periodic timer fires or <tt>&quot;ev_periodic_again&quot;</tt> is being called.</p>
-<dt>ev_tstamp interval [read-write]</p>
-<dd> The current interval value. Can be modified any time, but changes only take effect when the periodic timer fires or <tt>&quot;ev_periodic_again&quot;</tt> is being called.</p>
-<dt>ev_tstamp (*reschedule_cb)(ev_periodic *w, ev_tstamp now) [read-write]</p>
-<dd> The current reschedule callback, or <tt>0</tt>, if this functionality is switched off. Can be changed any time, but changes only take effect when the periodic timer fires or <tt>&quot;ev_periodic_again&quot;</tt> is being called.</dl>
+<dt>ev_tstamp interval [read-write]</dt>
+<dd> The current interval value. Can be modified any time, but changes only take effect when the periodic timer fires or <tt>&quot;ev_periodic_again&quot;</tt> is being called.</dd>
+<dt>ev_tstamp (*reschedule_cb)(ev_periodic *w, ev_tstamp now) [read-write]</dt>
+<dd> The current reschedule callback, or <tt>0</tt>, if this functionality is switched off. Can be changed any time, but changes only take effect when the periodic timer fires or <tt>&quot;ev_periodic_again&quot;</tt> is being called.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Call a callback every hour, or, more precisely, whenever the system time is divisible by 3600. The callback invocation times have potentially a lot of jitter, but good long-term stability. </p>
 <p>static void<br />
@@ -791,12 +786,12 @@ ev_periodic_start(loop, &amp;hourly_tick);</p>
 <p> If possible and supported, libev will install its handlers with <tt>&quot;SA_RESTART&quot;</tt> (or equivalent) behaviour enabled, so system calls should not be unduly interrupted. If you have a problem with system calls getting interrupted by signals you can block all signals in an <tt>&quot;ev_check&quot;</tt> watcher and unblock them in an <tt>&quot;ev_prepare&quot;</tt> watcher. </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_signal_init (ev_signal *, callback, int signum)</p>
+<dt>ev_signal_init (ev_signal *, callback, int signum)</dt>
 <dd>
-<dt>ev_signal_set (ev_signal *, int signum)</p>
-<dd> Configures the watcher to trigger on the given signal number (usually one of the <tt>&quot;SIGxxx&quot;</tt> constants).</p>
-<dt>int signum [read-only]</p>
-<dd> The signal the watcher watches out for.</dl>
+</dd><dt>ev_signal_set (ev_signal *, int signum)</dt>
+<dd> Configures the watcher to trigger on the given signal number (usually one of the <tt>&quot;SIGxxx&quot;</tt> constants).</dd>
+<dt>int signum [read-only]</dt>
+<dd> The signal the watcher watches out for.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Try to exit cleanly on <font SIZE="-1">SIGINT</font>. </p>
 <p>static void<br />
@@ -819,16 +814,16 @@ ev_signal_start(loop, &amp;signal_watcher);</p>
 <p> Currently, the child watcher never gets stopped, even when the child terminates, so normally one needs to stop the watcher in the callback. Future versions of libev might stop the watcher automatically when a child exit is detected (calling <tt>&quot;ev_child_stop&quot;</tt> twice is not a problem). </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_child_init (ev_child *, callback, int pid, int trace)</p>
+<dt>ev_child_init (ev_child *, callback, int pid, int trace)</dt>
 <dd>
-<dt>ev_child_set (ev_child *, int pid, int trace)</p>
-<dd> Configures the watcher to wait for status changes of process <tt>&quot;pid&quot;</tt> (or <i>any</i> process if <tt>&quot;pid&quot;</tt> is specified as <tt>0</tt>). The callback can look at the <tt>&quot;rstatus&quot;</tt> member of the <tt>&quot;ev_child&quot;</tt> watcher structure to see the status word (use the macros from <tt>&quot;sys/wait.h&quot;</tt> and see your systems <tt>&quot;waitpid&quot;</tt> documentation). The <tt>&quot;rpid&quot;</tt> member contains the pid of the process causing the status change. <tt>&quot;trace&quot;</tt> must be either <tt>0</tt> (only activate the watcher when the process terminates) or <tt>1</tt> (additionally activate the watcher when the process is stopped or continued).</p>
-<dt>int pid [read-only]</p>
-<dd> The process id this watcher watches out for, or <tt>0</tt>, meaning any process id.</p>
-<dt>int rpid [read-write]</p>
-<dd> The process id that detected a status change.</p>
-<dt>int rstatus [read-write]</p>
-<dd> The process exit/trace status caused by <tt>&quot;rpid&quot;</tt> (see your systems <tt>&quot;waitpid&quot;</tt> and <tt>&quot;sys/wait.h&quot;</tt> documentation for details).</dl>
+</dd><dt>ev_child_set (ev_child *, int pid, int trace)</dt>
+<dd> Configures the watcher to wait for status changes of process <tt>&quot;pid&quot;</tt> (or <i>any</i> process if <tt>&quot;pid&quot;</tt> is specified as <tt>0</tt>). The callback can look at the <tt>&quot;rstatus&quot;</tt> member of the <tt>&quot;ev_child&quot;</tt> watcher structure to see the status word (use the macros from <tt>&quot;sys/wait.h&quot;</tt> and see your systems <tt>&quot;waitpid&quot;</tt> documentation). The <tt>&quot;rpid&quot;</tt> member contains the pid of the process causing the status change. <tt>&quot;trace&quot;</tt> must be either <tt>0</tt> (only activate the watcher when the process terminates) or <tt>1</tt> (additionally activate the watcher when the process is stopped or continued).</dd>
+<dt>int pid [read-only]</dt>
+<dd> The process id this watcher watches out for, or <tt>0</tt>, meaning any process id.</dd>
+<dt>int rpid [read-write]</dt>
+<dd> The process id that detected a status change.</dd>
+<dt>int rstatus [read-write]</dt>
+<dd> The process exit/trace status caused by <tt>&quot;rpid&quot;</tt> (see your systems <tt>&quot;waitpid&quot;</tt> and <tt>&quot;sys/wait.h&quot;</tt> documentation for details).</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: <tt>&quot;fork()&quot;</tt> a new process and install a child handler to wait for its completion. </p>
 <p>ev_child cw;<br />
@@ -877,21 +872,21 @@ else {<br />
 <p> The <tt>.02</tt> offset is added to work around small timing inconsistencies of some operating systems (where the second counter of the current time might be be delayed. One such system is the Linux kernel, where a call to <tt>&quot;gettimeofday&quot;</tt> might return a timestamp with a full second later than a subsequent <tt>&quot;time&quot;</tt> call &#8211; if the equivalent of <tt>&quot;time ()&quot;</tt> is used to update file times then there will be a small window where the kernel uses the previous second to update file times but libev might already execute the timer callback). </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_stat_init (ev_stat *, callback, const char *path, ev_tstamp interval)</p>
+<dt>ev_stat_init (ev_stat *, callback, const char *path, ev_tstamp interval)</dt>
 <dd>
-<dt>ev_stat_set (ev_stat *, const char *path, ev_tstamp interval)</p>
-<dd> Configures the watcher to wait for status changes of the given <tt>&quot;path&quot;</tt>. The <tt>&quot;interval&quot;</tt> is a hint on how quickly a change is expected to be detected and should normally be specified as <tt>0</tt> to let libev choose a suitable value. The memory pointed to by <tt>&quot;path&quot;</tt> must point to the same path for as long as the watcher is active. </p>
+</dd><dt>ev_stat_set (ev_stat *, const char *path, ev_tstamp interval)</dt>
+<dd> Configures the watcher to wait for status changes of the given <tt>&quot;path&quot;</tt>. The <tt>&quot;interval&quot;</tt> is a hint on how quickly a change is expected to be detected and should normally be specified as <tt>0</tt> to let libev choose a suitable value. The memory pointed to by <tt>&quot;path&quot;</tt> must point to the same path for as long as the watcher is active. </dd>
 <p> The callback will receive an <tt>&quot;EV_STAT&quot;</tt> event when a change was detected, relative to the attributes at the time the watcher was started (or the last change was detected).</p>
-<dt>ev_stat_stat (loop, ev_stat *)</p>
-<dd> Updates the stat buffer immediately with new values. If you change the watched path in your callback, you could call this function to avoid detecting this change (while introducing a race condition if you are not the only one changing the path). Can also be useful simply to find out the new values.</p>
-<dt>ev_statdata attr [read-only]</p>
-<dd> The most-recently detected attributes of the file. Although the type is <tt>&quot;ev_statdata&quot;</tt>, this is usually the (or one of the) <tt>&quot;struct stat&quot;</tt> types suitable for your system, but you can only rely on the POSIX-standardised members to be present. If the <tt>&quot;st_nlink&quot;</tt> member is <tt>0</tt>, then there was some error while <tt>&quot;stat&quot;</tt>ing the file.</p>
-<dt>ev_statdata prev [read-only]</p>
-<dd> The previous attributes of the file. The callback gets invoked whenever <tt>&quot;prev&quot;</tt> != <tt>&quot;attr&quot;</tt>, or, more precisely, one or more of these members differ: <tt>&quot;st_dev&quot;</tt>, <tt>&quot;st_ino&quot;</tt>, <tt>&quot;st_mode&quot;</tt>, <tt>&quot;st_nlink&quot;</tt>, <tt>&quot;st_uid&quot;</tt>, <tt>&quot;st_gid&quot;</tt>, <tt>&quot;st_rdev&quot;</tt>, <tt>&quot;st_size&quot;</tt>, <tt>&quot;st_atime&quot;</tt>, <tt>&quot;st_mtime&quot;</tt>, <tt>&quot;st_ctime&quot;</tt>.</p>
-<dt>ev_tstamp interval [read-only]</p>
-<dd> The specified interval.</p>
-<dt>const char *path [read-only]</p>
-<dd> The file system path that is being watched.</dl>
+<dt>ev_stat_stat (loop, ev_stat *)</dt>
+<dd> Updates the stat buffer immediately with new values. If you change the watched path in your callback, you could call this function to avoid detecting this change (while introducing a race condition if you are not the only one changing the path). Can also be useful simply to find out the new values.</dd>
+<dt>ev_statdata attr [read-only]</dt>
+<dd> The most-recently detected attributes of the file. Although the type is <tt>&quot;ev_statdata&quot;</tt>, this is usually the (or one of the) <tt>&quot;struct stat&quot;</tt> types suitable for your system, but you can only rely on the POSIX-standardised members to be present. If the <tt>&quot;st_nlink&quot;</tt> member is <tt>0</tt>, then there was some error while <tt>&quot;stat&quot;</tt>ing the file.</dd>
+<dt>ev_statdata prev [read-only]</dt>
+<dd> The previous attributes of the file. The callback gets invoked whenever <tt>&quot;prev&quot;</tt> != <tt>&quot;attr&quot;</tt>, or, more precisely, one or more of these members differ: <tt>&quot;st_dev&quot;</tt>, <tt>&quot;st_ino&quot;</tt>, <tt>&quot;st_mode&quot;</tt>, <tt>&quot;st_nlink&quot;</tt>, <tt>&quot;st_uid&quot;</tt>, <tt>&quot;st_gid&quot;</tt>, <tt>&quot;st_rdev&quot;</tt>, <tt>&quot;st_size&quot;</tt>, <tt>&quot;st_atime&quot;</tt>, <tt>&quot;st_mtime&quot;</tt>, <tt>&quot;st_ctime&quot;</tt>.</dd>
+<dt>ev_tstamp interval [read-only]</dt>
+<dd> The specified interval.</dd>
+<dt>const char *path [read-only]</dt>
+<dd> The file system path that is being watched.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Watch <tt>&quot;/etc/passwd&quot;</tt> for attribute changes. </p>
 <p>static void<br />
@@ -939,8 +934,8 @@ ev_timer_init(&amp;timer, timer_cb, 0., 1.02);</p>
 <p> Apart from keeping your process non-blocking (which is a useful effect on its own sometimes), idle watchers are a good place to do &#8220;pseudo-background processing&#8221;, or delay processing stuff to after the event loop has handled all outstanding events. </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_idle_init (ev_idle *, callback)</p>
-<dd> Initialises and configures the idle watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_idle_set&quot;</tt> macro, but using it is utterly pointless, believe me.</dl>
+<dt>ev_idle_init (ev_idle *, callback)</dt>
+<dd> Initialises and configures the idle watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_idle_set&quot;</tt> macro, but using it is utterly pointless, believe me.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Dynamically allocate an <tt>&quot;ev_idle&quot;</tt> watcher, start it, and in the callback, free it. Also, use no error checking, as usual. </p>
 <p>static void<br />
@@ -963,10 +958,10 @@ ev_idle_start(loop, idle_watcher);</p>
 <p> Also, <tt>&quot;ev_check&quot;</tt> watchers (and <tt>&quot;ev_prepare&quot;</tt> watchers, too) should not activate (&#8220;feed&#8221;) events into libev. While libev fully supports this, they might get executed before other <tt>&quot;ev_check&quot;</tt> watchers did their job. As <tt>&quot;ev_check&quot;</tt> watchers are often used to embed other (non-libev) event loops those other event loops might be in an unusable state until their <tt>&quot;ev_check&quot;</tt> watcher ran (always remind yourself to coexist peacefully with others). </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_prepare_init (ev_prepare *, callback)</p>
+<dt>ev_prepare_init (ev_prepare *, callback)</dt>
 <dd>
-<dt>ev_check_init (ev_check *, callback)</p>
-<dd> Initialises and configures the prepare or check watcher &#8211; they have no parameters of any kind. There are <tt>&quot;ev_prepare_set&quot;</tt> and <tt>&quot;ev_check_set&quot;</tt> macros, but using them is utterly, utterly, utterly and completely pointless.</dl>
+</dd><dt>ev_check_init (ev_check *, callback)</dt>
+<dd> Initialises and configures the prepare or check watcher &#8211; they have no parameters of any kind. There are <tt>&quot;ev_prepare_set&quot;</tt> and <tt>&quot;ev_check_set&quot;</tt> macros, but using them is utterly, utterly, utterly and completely pointless.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> There are a number of principal ways to embed other event loops or modules into libev. Here are some ideas on how to include libadns into libev (there is a Perl module named <tt>&quot;EV::ADNS&quot;</tt> that does this, which you could use as a working example. Another Perl module named <tt>&quot;EV::Glib&quot;</tt> embeds a Glib main context into libev, and finally, <tt>&quot;Glib::EV&quot;</tt> embeds <font SIZE="-1">EV</font> into the Glib event loop). </p>
 <p> Method 1: Add <font SIZE="-1">IO</font> watchers and a timeout watcher in a prepare handler, and in a check watcher, destroy them and call into libadns. What follows is pseudo-code only of course. This requires you to either use a low priority for the check watcher or use <tt>&quot;ev_clear_pending&quot;</tt> explicitly, as the callbacks for the IO/timeout watchers might not have been called yet. </p>
@@ -1067,14 +1062,14 @@ event_poll_func(GPollFD *fds, guint nfds, gint timeout)<br />
 <p> While the <tt>&quot;ev_embed&quot;</tt> watcher is running, forks in the embedding loop will automatically be applied to the embedded loop as well, so no special fork handling is required in that case. When the watcher is not running, however, it is still the task of the libev user to call <tt>&quot;ev_loop_fork ()&quot;</tt> as applicable. </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_embed_init (ev_embed *, callback, struct ev_loop *embedded_loop)</p>
+<dt>ev_embed_init (ev_embed *, callback, struct ev_loop *embedded_loop)</dt>
 <dd>
-<dt>ev_embed_set (ev_embed *, callback, struct ev_loop *embedded_loop)</p>
-<dd> Configures the watcher to embed the given loop, which must be embeddable. If the callback is <tt>0</tt>, then <tt>&quot;ev_embed_sweep&quot;</tt> will be invoked automatically, otherwise it is the responsibility of the callback to invoke it (it will continue to be called until the sweep has been done, if you do not want that, you need to temporarily stop the embed watcher).</p>
-<dt>ev_embed_sweep (loop, ev_embed *)</p>
-<dd> Make a single, non-blocking sweep over the embedded loop. This works similarly to <tt>&quot;ev_loop (embedded_loop, EVLOOP_NONBLOCK)&quot;</tt>, but in the most appropriate way for embedded loops.</p>
-<dt>struct ev_loop *other [read-only]</p>
-<dd> The embedded event loop.</dl>
+</dd><dt>ev_embed_set (ev_embed *, callback, struct ev_loop *embedded_loop)</dt>
+<dd> Configures the watcher to embed the given loop, which must be embeddable. If the callback is <tt>0</tt>, then <tt>&quot;ev_embed_sweep&quot;</tt> will be invoked automatically, otherwise it is the responsibility of the callback to invoke it (it will continue to be called until the sweep has been done, if you do not want that, you need to temporarily stop the embed watcher).</dd>
+<dt>ev_embed_sweep (loop, ev_embed *)</dt>
+<dd> Make a single, non-blocking sweep over the embedded loop. This works similarly to <tt>&quot;ev_loop (embedded_loop, EVLOOP_NONBLOCK)&quot;</tt>, but in the most appropriate way for embedded loops.</dd>
+<dt>struct ev_loop *other [read-only]</dt>
+<dd> The embedded event loop.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Example: Try to get an embeddable event loop and embed it into the default event loop. If that is not possible, use the default loop. The default loop is stored in <tt>&quot;loop_hi&quot;</tt>, while the embeddable loop is stored in <tt>&quot;loop_lo&quot;</tt> (which is <tt>&quot;loop_hi&quot;</tt> in the case no embeddable loop can be used). </p>
 <p>struct ev_loop *loop_hi = ev_default_init(0);<br />
@@ -1115,8 +1110,8 @@ ev_embed embed;</p>
 <p> When this is not possible, or you want to use the default loop for other reasons, then in the process that wants to start &#8220;fresh&#8221;, call <tt>&quot;ev_default_destroy ()&quot;</tt> followed by <tt>&quot;ev_default_loop (...)&quot;</tt>. Destroying the default loop will &#8220;orphan&#8221; (not stop) all registered watchers, so you have to be careful not to execute code that modifies those watchers. Note also that in that case, you have to re-register any signal watchers. </p>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_fork_init (ev_signal *, callback)</p>
-<dd> Initialises and configures the fork watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_fork_set&quot;</tt> macro, but using it is utterly pointless, believe me.</dl>
+<dt>ev_fork_init (ev_signal *, callback)</dt>
+<dd> Initialises and configures the fork watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_fork_set&quot;</tt> macro, but using it is utterly pointless, believe me.</dd></dl>
 <h3>ev_async &#8211; how to wake up another event loop</h3>
 <p> In general, you cannot use an <tt>&quot;ev_loop&quot;</tt> from multiple threads or other asynchronous sources such as signal handlers (as opposed to multiple event loops &#8211; those are of course safe to use in different threads). </p>
 <p> Sometimes, however, you need to wake up another event loop you do not control, for example because it belongs to another thread. This is what <tt>&quot;ev_async&quot;</tt> watchers do: as long as the <tt>&quot;ev_async&quot;</tt> watcher is active, you can signal it by calling <tt>&quot;ev_async_send&quot;</tt>, which is thread- and signal safe. </p>
@@ -1126,8 +1121,8 @@ ev_embed embed;</p>
 <p> <tt>&quot;ev_async&quot;</tt> does not support queueing of data in any way. The reason is that the author does not know of a simple (or any) algorithm for a multiple-writer-single-reader queue that works in all cases and doesn&#8217;t need elaborate support such as pthreads. </p>
 <p> That means that if you want to queue data, you have to provide your own queue. But at least I can tell you how to implement locking around your queue:</p>
 <dl>
-<dt>queueing from a signal handler context</p>
-<dd> To implement race-free queueing, you simply add to the queue in the signal handler but you block the signal handler in the watcher callback. Here is an example that does that for some fictitious <font SIZE="-1">SIGUSR1</font> handler: </p>
+<dt>queueing from a signal handler context</dt>
+<dd> To implement race-free queueing, you simply add to the queue in the signal handler but you block the signal handler in the watcher callback. Here is an example that does that for some fictitious <font SIZE="-1">SIGUSR1</font> handler: </dd>
 <p>static ev_async mysig;<br />
 static void<br />
 sigusr1_handler(void)<br />
@@ -1151,8 +1146,8 @@ mysig_cb(EV_P_ ev_async *w, int revents)<br />
        sigprocmask (SIG_UNBLOCK, &amp;block, 0);<br />
 }</p>
 <p> (Note: pthreads in theory requires you to use <tt>&quot;pthread_setmask&quot;</tt> instead of <tt>&quot;sigprocmask&quot;</tt> when you use threads, but libev doesn&#8217;t do it either&#8230;).</p>
-<dt>queueing from a thread context</p>
-<dd> The strategy for threads is different, as you cannot (easily) block threads but you can easily preempt them, so to queue safely you need to employ a traditional mutex lock, such as in this pthread example: </p>
+<dt>queueing from a thread context</dt>
+<dd> The strategy for threads is different, as you cannot (easily) block threads but you can easily preempt them, so to queue safely you need to employ a traditional mutex lock, such as in this pthread example: </dd>
 <p>static ev_async mysig;<br />
 static pthread_mutex_t mymutex = PTHREAD_MUTEX_INITIALIZER;<br />
 static void<br />
@@ -1175,21 +1170,21 @@ mysig_cb(EV_P_ ev_async *w, int revents)<br />
 </dl>
 <p> <i>Watcher-Specific Functions and Data Members</i></p>
 <dl>
-<dt>ev_async_init (ev_async *, callback)</p>
-<dd> Initialises and configures the async watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_async_set&quot;</tt> macro, but using it is utterly pointless, trust me.</p>
-<dt>ev_async_send (loop, ev_async *)</p>
-<dd> Sends/signals/activates the given <tt>&quot;ev_async&quot;</tt> watcher, that is, feeds an <tt>&quot;EV_ASYNC&quot;</tt> event on the watcher into the event loop. Unlike <tt>&quot;ev_feed_event&quot;</tt>, this call is safe to do from other threads, signal or similar contexts (see the discussion of <tt>&quot;EV_ATOMIC_T&quot;</tt> in the embedding section below on what exactly this means). </p>
+<dt>ev_async_init (ev_async *, callback)</dt>
+<dd> Initialises and configures the async watcher &#8211; it has no parameters of any kind. There is a <tt>&quot;ev_async_set&quot;</tt> macro, but using it is utterly pointless, trust me.</dd>
+<dt>ev_async_send (loop, ev_async *)</dt>
+<dd> Sends/signals/activates the given <tt>&quot;ev_async&quot;</tt> watcher, that is, feeds an <tt>&quot;EV_ASYNC&quot;</tt> event on the watcher into the event loop. Unlike <tt>&quot;ev_feed_event&quot;</tt>, this call is safe to do from other threads, signal or similar contexts (see the discussion of <tt>&quot;EV_ATOMIC_T&quot;</tt> in the embedding section below on what exactly this means). </dd>
 <p> Note that, as with other watchers in libev, multiple events might get compressed into a single callback invocation (another way to look at this is that <tt>&quot;ev_async&quot;</tt> watchers are level-triggered, set on <tt>&quot;ev_async_send&quot;</tt>, reset when the event loop detects that). </p>
 <p> This call incurs the overhead of a system call only once per event loop iteration, so while the overhead might be noticeable, it doesn&#8217;t apply to repeated calls to <tt>&quot;ev_async_send&quot;</tt> for the same event loop.</p>
-<dt>bool = ev_async_pending (ev_async *)</p>
-<dd> Returns a non-zero value when <tt>&quot;ev_async_send&quot;</tt> has been called on the watcher but the event has not yet been processed (or even noted) by the event loop. </p>
+<dt>bool = ev_async_pending (ev_async *)</dt>
+<dd> Returns a non-zero value when <tt>&quot;ev_async_send&quot;</tt> has been called on the watcher but the event has not yet been processed (or even noted) by the event loop. </dd>
 <p> <tt>&quot;ev_async_send&quot;</tt> sets a flag in the watcher and wakes up the loop. When the loop iterates next and checks for the watcher to have become active, it will reset the flag again. <tt>&quot;ev_async_pending&quot;</tt> can be used to very quickly check whether invoking the loop might be a good idea. </p>
 <p> Not that this does <i>not</i> check whether the watcher itself is pending, only whether it has been requested to make this watcher pending: there is a time window between the event loop checking and resetting the async notification, and the callback being invoked.</dl>
 <h2>OTHER FUNCTIONS</h2>
 <p> There are some other functions of possible interest. Described. Here. Now.</p>
 <dl>
-<dt>ev_once (loop, int fd, int events, ev_tstamp timeout, callback)</p>
-<dd> This function combines a simple timer and an I/O watcher, calls your callback on whichever event happens first and automatically stops both watchers. This is useful if you want to wait for a single event on an fd or timeout without having to allocate/configure/start/stop/free one or more watchers yourself. </p>
+<dt>ev_once (loop, int fd, int events, ev_tstamp timeout, callback)</dt>
+<dd> This function combines a simple timer and an I/O watcher, calls your callback on whichever event happens first and automatically stops both watchers. This is useful if you want to wait for a single event on an fd or timeout without having to allocate/configure/start/stop/free one or more watchers yourself. </dd>
 <p> If <tt>&quot;fd&quot;</tt> is less than 0, then no I/O watcher will be started and the <tt>&quot;events&quot;</tt> argument is being ignored. Otherwise, an <tt>&quot;ev_io&quot;</tt> watcher for the given <tt>&quot;fd&quot;</tt> and <tt>&quot;events&quot;</tt> set will be created and started. </p>
 <p> If <tt>&quot;timeout&quot;</tt> is less than 0, then no timeout watcher will be started. Otherwise an <tt>&quot;ev_timer&quot;</tt> watcher with after = <tt>&quot;timeout&quot;</tt> (and repeat = 0) will be started. <tt>0</tt> is a valid timeout. </p>
 <p> The callback has the type <tt>&quot;void (*cb)(int revents, void *arg)&quot;</tt> and gets passed an <tt>&quot;revents&quot;</tt> set like normal event callbacks (a combination of <tt>&quot;EV_ERROR&quot;</tt>, <tt>&quot;EV_READ&quot;</tt>, <tt>&quot;EV_WRITE&quot;</tt> or <tt>&quot;EV_TIMEOUT&quot;</tt>) and the <tt>&quot;arg&quot;</tt> value passed to <tt>&quot;ev_once&quot;</tt>. Note that it is possible to receive <i>both</i> a timeout and an io event at the same time &#8211; you probably should give io events precedence. </p>
@@ -1202,29 +1197,29 @@ mysig_cb(EV_P_ ev_async *w, int revents)<br />
         /* doh, nothing entered */;<br />
 }<br />
 ev_once(STDIN_FILENO, EV_READ, 10., stdin_ready, 0);</p>
-<dt>ev_feed_event (struct ev_loop *, watcher *, int revents)</p>
-<dd> Feeds the given event set into the event loop, as if the specified event had happened for the specified watcher (which must be a pointer to an initialised but not necessarily started event watcher).</p>
-<dt>ev_feed_fd_event (struct ev_loop *, int fd, int revents)</p>
-<dd> Feed an event on the given fd, as if a file descriptor backend detected the given events it.</p>
-<dt>ev_feed_signal_event (struct ev_loop *loop, int signum)</p>
-<dd> Feed an event as if the given signal occurred (<tt>&quot;loop&quot;</tt> must be the default loop!).</dl>
+<dt>ev_feed_event (struct ev_loop *, watcher *, int revents)</dt>
+<dd> Feeds the given event set into the event loop, as if the specified event had happened for the specified watcher (which must be a pointer to an initialised but not necessarily started event watcher).</dd>
+<dt>ev_feed_fd_event (struct ev_loop *, int fd, int revents)</dt>
+<dd> Feed an event on the given fd, as if a file descriptor backend detected the given events it.</dd>
+<dt>ev_feed_signal_event (struct ev_loop *loop, int signum)</dt>
+<dd> Feed an event as if the given signal occurred (<tt>&quot;loop&quot;</tt> must be the default loop!).</dd></dl>
 <h2>LIBEVENT EMULATION</h2>
 <p> Libev offers a compatibility emulation layer for libevent. It cannot emulate the internals of libevent, so here are some usage hints:</p>
 <dl>
-<dt>*</p>
-<dd> Use it by including &lt;<a href="file:/usr/include/event.h">event.h</a>&gt;, as usual.</p>
-<dt>*</p>
-<dd> The following members are fully supported: ev_base, ev_callback, ev_arg, ev_fd, ev_res, ev_events.</p>
-<dt>*</p>
-<dd> Avoid using ev_flags and the EVLIST_*-macros, while it is maintained by libev, it does not work exactly the same way as in libevent (consider it a private <font SIZE="-1">API</font>).</p>
-<dt>*</p>
-<dd> Priorities are not currently supported. Initialising priorities will fail and all watchers will have the same priority, even though there is an ev_pri field.</p>
-<dt>*</p>
-<dd> In libevent, the last base created gets the signals, in libev, the first base created (== the default loop) gets the signals.</p>
-<dt>*</p>
-<dd> Other members are not supported.</p>
-<dt>*</p>
-<dd> The libev emulation is <i>not</i> <font SIZE="-1">ABI</font> compatible to libevent, you need to use the libev header file and library.</dl>
+<dt>*</dt>
+<dd> Use it by including &lt;<a href="file:/usr/include/event.h">event.h</a>&gt;, as usual.</dd>
+<dt>*</dt>
+<dd> The following members are fully supported: ev_base, ev_callback, ev_arg, ev_fd, ev_res, ev_events.</dd>
+<dt>*</dt>
+<dd> Avoid using ev_flags and the EVLIST_*-macros, while it is maintained by libev, it does not work exactly the same way as in libevent (consider it a private <font SIZE="-1">API</font>).</dd>
+<dt>*</dt>
+<dd> Priorities are not currently supported. Initialising priorities will fail and all watchers will have the same priority, even though there is an ev_pri field.</dd>
+<dt>*</dt>
+<dd> In libevent, the last base created gets the signals, in libev, the first base created (== the default loop) gets the signals.</dd>
+<dt>*</dt>
+<dd> Other members are not supported.</dd>
+<dt>*</dt>
+<dd> The libev emulation is <i>not</i> <font SIZE="-1">ABI</font> compatible to libevent, you need to use the libev header file and library.</dd></dl>
 <h2>C<font SIZE="-2">++</font> SUPPORT</h2>
 <p> Libev comes with some simplistic wrapper classes for C<font SIZE="-2">++</font> that mainly allow you to use some convenience methods to start/stop watchers and also change the callback model to a model using method callbacks on objects. </p>
 <p> To use it, </p>
@@ -1234,29 +1229,27 @@ ev_once(STDIN_FILENO, EV_READ, 10., stdin_ready, 0);</p>
 <p> Currently, functions, and static and non-static member functions can be used as callbacks. Other types should be easy to add as long as they only need one additional pointer for context. If you need support for other types of functors please contact the author (preferably after implementing it). </p>
 <p> Here is a list of things available in the <tt>&quot;ev&quot;</tt> namespace:</p>
 <dl>
-<dt>ev::READ, ev::WRITE etc.</p>
-<dd> These are just enum values with the same values as the <tt>&quot;EV_READ&quot;</tt> etc. macros from <i>ev.h</i>.</p>
-<dt>ev::tstamp, ev::now</p>
-<dd> Aliases to the same types/functions as with the <tt>&quot;ev_&quot;</tt> prefix.</p>
-<dt>ev::io, ev::timer, ev::periodic, ev::idle, ev::sig etc.</p>
-<dd> For each <tt>&quot;ev_TYPE&quot;</tt> watcher in <i>ev.h</i> there is a corresponding class of the same name in the <tt>&quot;ev&quot;</tt> namespace, with the exception of <tt>&quot;ev_signal&quot;</tt> which is called <tt>&quot;ev::sig&quot;</tt> to avoid clashes with the <tt>&quot;signal&quot;</tt> macro defines by many implementations. </p>
+<dt>ev::READ, ev::WRITE etc.</dt>
+<dd> These are just enum values with the same values as the <tt>&quot;EV_READ&quot;</tt> etc. macros from <i>ev.h</i>.</dd>
+<dt>ev::tstamp, ev::now</dt>
+<dd> Aliases to the same types/functions as with the <tt>&quot;ev_&quot;</tt> prefix.</dd>
+<dt>ev::io, ev::timer, ev::periodic, ev::idle, ev::sig etc.</dt>
+<dd> For each <tt>&quot;ev_TYPE&quot;</tt> watcher in <i>ev.h</i> there is a corresponding class of the same name in the <tt>&quot;ev&quot;</tt> namespace, with the exception of <tt>&quot;ev_signal&quot;</tt> which is called <tt>&quot;ev::sig&quot;</tt> to avoid clashes with the <tt>&quot;signal&quot;</tt> macro defines by many implementations. </dd>
 <p> All of those classes have these methods:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>ev::TYPE::TYPE ()</p>
+<dt>ev::TYPE::TYPE ()</dt>
 <dd>
-<dt>ev::TYPE::TYPE (struct ev_loop *)</p>
+</dd><dt>ev::TYPE::TYPE (struct ev_loop *)</dt>
 <dd>
-<dt>ev::TYPE::~TYPE</p>
-<dd> The constructor (optionally) takes an event loop to associate the watcher with. If it is omitted, it will use <tt>&quot;EV_DEFAULT&quot;</tt>. </p>
+</dd><dt>ev::TYPE::~TYPE</dt>
+<dd> The constructor (optionally) takes an event loop to associate the watcher with. If it is omitted, it will use <tt>&quot;EV_DEFAULT&quot;</tt>. </dd>
 <p> The constructor calls <tt>&quot;ev_init&quot;</tt> for you, which means you have to call the <tt>&quot;set&quot;</tt> method before starting it. </p>
 <p> It will not set a callback, however: You have to call the templated <tt>&quot;set&quot;</tt> method to set a callback before you can start the watcher. </p>
 <p> (The reason why you have to use a method is a limitation in C<font SIZE="-2">++</font> which does not allow explicit template arguments for constructors). </p>
 <p> The destructor automatically stops the watcher if it is active.</p>
-<dt>w-&gt;set&lt;class, &amp;class::method&gt; (object *)</p>
-<dd> This method sets the callback method to call. The method has to have a signature of <tt>&quot;void (*)(ev_TYPE &amp;, int)&quot;</tt>, it receives the watcher as first argument and the <tt>&quot;revents&quot;</tt> as second. The object must be given as parameter and is stored in the <tt>&quot;data&quot;</tt> member of the watcher. </p>
+<dt>w-&gt;set&lt;class, &amp;class::method&gt; (object *)</dt>
+<dd> This method sets the callback method to call. The method has to have a signature of <tt>&quot;void (*)(ev_TYPE &amp;, int)&quot;</tt>, it receives the watcher as first argument and the <tt>&quot;revents&quot;</tt> as second. The object must be given as parameter and is stored in the <tt>&quot;data&quot;</tt> member of the watcher. </dd>
 <p> This method synthesizes efficient thunking code to call your method from the C callback that libev requires. If your compiler can inline your callback (i.e. it is visible to it at the place of the <tt>&quot;set&quot;</tt> call and your compiler is good :), then the method will be fully inlined into the thunking function, making it as fast as a direct C callback. </p>
 <p> Example: simple class declaration and watcher initialisation </p>
 <p>struct myclass {<br />
@@ -1266,8 +1259,8 @@ ev_once(STDIN_FILENO, EV_READ, 10., stdin_ready, 0);</p>
 } myclass obj;<br />
 ev::io iow;<br />
 iow.set&lt;myclass, &amp;myclass::io_cb&gt;(&amp;obj);</p>
-<dt>w-&gt;set (object *)</p>
-<dd> This is an <code>experimental</code> feature that might go away in a future version. </p>
+<dt>w-&gt;set (object *)</dt>
+<dd> This is an <code>experimental</code> feature that might go away in a future version. </dd>
 <p> This is a variation of a method callback &#8211; leaving out the method to call will default the method to <tt>&quot;operator ()&quot;</tt>, which makes it possible to use functor objects without having to manually specify the <tt>&quot;operator ()&quot;</tt> all the time. Incidentally, you can then also leave out the template argument list. </p>
 <p> The <tt>&quot;operator ()&quot;</tt> method prototype must be <tt>&quot;void operator ()(watcher &amp;w, int revents)&quot;</tt>. </p>
 <p> See the method-<tt>&quot;set&quot;</tt> above for more details. </p>
@@ -1281,8 +1274,8 @@ iow.set&lt;myclass, &amp;myclass::io_cb&gt;(&amp;obj);</p>
 <p>myfunctor f;<br />
 ev::io w;<br />
 w.set(&amp;f);</p>
-<dt>w-&gt;set&lt;function&gt; (void *data = 0)</p>
-<dd> Also sets a callback, but uses a static method or plain function as callback. The optional <tt>&quot;data&quot;</tt> argument will be stored in the watcher&#8217;s <tt>&quot;data&quot;</tt> member and is free for you to use. </p>
+<dt>w-&gt;set&lt;function&gt; (void *data = 0)</dt>
+<dd> Also sets a callback, but uses a static method or plain function as callback. The optional <tt>&quot;data&quot;</tt> argument will be stored in the watcher&#8217;s <tt>&quot;data&quot;</tt> member and is free for you to use. </dd>
 <p> The prototype of the <tt>&quot;function&quot;</tt> must be <tt>&quot;void (*)(ev::TYPE &amp;w, int)&quot;</tt>. </p>
 <p> See the method-<tt>&quot;set&quot;</tt> above for more details. </p>
 <p> Example: Use a plain function as callback. </p>
@@ -1290,24 +1283,23 @@ w.set(&amp;f);</p>
 {<br />
 }<br />
 iow.set&lt;io_cb&gt;();</p>
-<dt>w-&gt;set (struct ev_loop *)</p>
-<dd> Associates a different <tt>&quot;struct ev_loop&quot;</tt> with this watcher. You can only do this when the watcher is inactive (and not pending either).</p>
-<dt>w-&gt;set ([arguments])</p>
-<dd> Basically the same as <tt>&quot;ev_TYPE_set&quot;</tt>, with the same arguments. Must be called at least once. Unlike the C counterpart, an active watcher gets automatically stopped and restarted when reconfiguring it with this method.</p>
-<dt>w-&gt;start ()</p>
-<dd> Starts the watcher. Note that there is no <tt>&quot;loop&quot;</tt> argument, as the constructor already stores the event loop.</p>
-<dt>w-&gt;stop ()</p>
-<dd> Stops the watcher if it is active. Again, no <tt>&quot;loop&quot;</tt> argument.</p>
-<dt>w-&gt;again () (ev::timer, ev::periodic only)</p>
-<dd> For <tt>&quot;ev::timer&quot;</tt> and <tt>&quot;ev::periodic&quot;</tt>, this invokes the corresponding <tt>&quot;ev_TYPE_again&quot;</tt> function.</p>
-<dt>w-&gt;sweep () (ev::embed only)</p>
-<dd> Invokes <tt>&quot;ev_embed_sweep&quot;</tt>.</p>
-<dt>w-&gt;update () (ev::stat only)</p>
-<dd> Invokes <tt>&quot;ev_stat_stat&quot;</tt>.</dl>
+<dt>w-&gt;set (struct ev_loop *)</dt>
+<dd> Associates a different <tt>&quot;struct ev_loop&quot;</tt> with this watcher. You can only do this when the watcher is inactive (and not pending either).</dd>
+<dt>w-&gt;set ([arguments])</dt>
+<dd> Basically the same as <tt>&quot;ev_TYPE_set&quot;</tt>, with the same arguments. Must be called at least once. Unlike the C counterpart, an active watcher gets automatically stopped and restarted when reconfiguring it with this method.</dd>
+<dt>w-&gt;start ()</dt>
+<dd> Starts the watcher. Note that there is no <tt>&quot;loop&quot;</tt> argument, as the constructor already stores the event loop.</dd>
+<dt>w-&gt;stop ()</dt>
+<dd> Stops the watcher if it is active. Again, no <tt>&quot;loop&quot;</tt> argument.</dd>
+<dt>w-&gt;again () (ev::timer, ev::periodic only)</dt>
+<dd> For <tt>&quot;ev::timer&quot;</tt> and <tt>&quot;ev::periodic&quot;</tt>, this invokes the corresponding <tt>&quot;ev_TYPE_again&quot;</tt> function.</dd>
+<dt>w-&gt;sweep () (ev::embed only)</dt>
+<dd> Invokes <tt>&quot;ev_embed_sweep&quot;</tt>.</dd>
+<dt>w-&gt;update () (ev::stat only)</dt>
+<dd> Invokes <tt>&quot;ev_stat_stat&quot;</tt>.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> Example: Define a class with an <font SIZE="-1">IO</font> and idle watcher, start one of them in the constructor. </p>
 <p>class myclass<br />
@@ -1326,43 +1318,43 @@ iow.set&lt;io_cb&gt;();</p>
 <h2>OTHER LANGUAGE BINDINGS</h2>
 <p> Libev does not offer other language bindings itself, but bindings for a number of languages exist in the form of third-party packages. If you know any interesting language binding in addition to the ones listed here, drop me a note.</p>
 <dl>
-<dt>Perl</p>
-<dd> The <font SIZE="-1">EV</font> module implements the full libev <font SIZE="-1">API</font> and is actually used to test libev. <font SIZE="-1">EV</font> is developed together with libev. Apart from the <font SIZE="-1">EV</font> core module, there are additional modules that implement libev-compatible interfaces to <tt>&quot;libadns&quot;</tt> (<tt>&quot;EV::ADNS&quot;</tt>, but <tt>&quot;AnyEvent::DNS&quot;</tt> is preferred nowadays), <tt>&quot;Net::SNMP&quot;</tt> (<tt>&quot;Net::SNMP::EV&quot;</tt>) and the <tt>&quot;libglib&quot;</tt> event core (<tt>&quot;Glib::EV&quot;</tt> and <tt>&quot;EV::Glib&quot;</tt>). </p>
+<dt>Perl</dt>
+<dd> The <font SIZE="-1">EV</font> module implements the full libev <font SIZE="-1">API</font> and is actually used to test libev. <font SIZE="-1">EV</font> is developed together with libev. Apart from the <font SIZE="-1">EV</font> core module, there are additional modules that implement libev-compatible interfaces to <tt>&quot;libadns&quot;</tt> (<tt>&quot;EV::ADNS&quot;</tt>, but <tt>&quot;AnyEvent::DNS&quot;</tt> is preferred nowadays), <tt>&quot;Net::SNMP&quot;</tt> (<tt>&quot;Net::SNMP::EV&quot;</tt>) and the <tt>&quot;libglib&quot;</tt> event core (<tt>&quot;Glib::EV&quot;</tt> and <tt>&quot;EV::Glib&quot;</tt>). </dd>
 <p> It can be found and installed via <font SIZE="-1">CPAN</font>, its homepage is at &lt;<a rel="nofollow" href="http://software.schmorp.de/pkg/EV">http://software.schmorp.de/pkg/EV</a>&gt;.</p>
-<dt>Python</p>
-<dd> Python bindings can be found at &lt;<a rel="nofollow" href="http://code.google.com/p/pyev/">http://code.google.com/p/pyev/</a>&gt;. It seems to be quite complete and well-documented.</p>
-<dt>Ruby</p>
-<dd> Tony Arcieri has written a ruby extension that offers access to a subset of the libev <font SIZE="-1">API</font> and adds file handle abstractions, asynchronous <font SIZE="-1">DNS</font> and more on top of it. It can be found via gem servers. Its homepage is at &lt;<a rel="nofollow" href="http://rev.rubyforge.org/">http://rev.rubyforge.org/</a>&gt;. </p>
+<dt>Python</dt>
+<dd> Python bindings can be found at &lt;<a rel="nofollow" href="http://code.google.com/p/pyev/">http://code.google.com/p/pyev/</a>&gt;. It seems to be quite complete and well-documented.</dd>
+<dt>Ruby</dt>
+<dd> Tony Arcieri has written a ruby extension that offers access to a subset of the libev <font SIZE="-1">API</font> and adds file handle abstractions, asynchronous <font SIZE="-1">DNS</font> and more on top of it. It can be found via gem servers. Its homepage is at &lt;<a rel="nofollow" href="http://rev.rubyforge.org/">http://rev.rubyforge.org/</a>&gt;. </dd>
 <p> Roger Pack reports that using the link order <tt>&quot;-lws2_32 -lmsvcrt-ruby-190&quot;</tt> makes rev work even on mingw.</p>
-<dt>Haskell</p>
-<dd> A haskell binding to libev is available at &lt;<a rel="nofollow" href="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/hlibev">http://hackage.haskell.org/cgi-bin/hackage-scripts/package/hlibev</a>&gt;.</p>
-<dt>D</p>
-<dd> Leandro Lucarella has written a D language binding (<i>ev.d</i>) for libev, to be found at &lt;<a rel="nofollow" href="http://proj.llucax.com.ar/wiki/evd">http://proj.llucax.com.ar/wiki/evd</a>&gt;.</p>
-<dt>Ocaml</p>
-<dd> Erkki Seppala has written Ocaml bindings for libev, to be found at &lt;<a rel="nofollow" href="http://modeemi.cs.tut.fi/~flux/software/ocaml-ev/">http://modeemi.cs.tut.fi/~flux/software/ocaml-ev/</a>&gt;.</p>
-<dt>Lua</p>
-<dd> Brian Maher has written a partial interface to libev for lua (only <tt>&quot;ev_io&quot;</tt> and <tt>&quot;ev_timer&quot;</tt>), to be found at &lt;<a rel="nofollow" href="http://github.com/brimworks/lua-ev">http://github.com/brimworks/lua-ev</a>&gt;.</dl>
+<dt>Haskell</dt>
+<dd> A haskell binding to libev is available at &lt;<a rel="nofollow" href="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/hlibev">http://hackage.haskell.org/cgi-bin/hackage-scripts/package/hlibev</a>&gt;.</dd>
+<dt>D</dt>
+<dd> Leandro Lucarella has written a D language binding (<i>ev.d</i>) for libev, to be found at &lt;<a rel="nofollow" href="http://proj.llucax.com.ar/wiki/evd">http://proj.llucax.com.ar/wiki/evd</a>&gt;.</dd>
+<dt>Ocaml</dt>
+<dd> Erkki Seppala has written Ocaml bindings for libev, to be found at &lt;<a rel="nofollow" href="http://modeemi.cs.tut.fi/~flux/software/ocaml-ev/">http://modeemi.cs.tut.fi/~flux/software/ocaml-ev/</a>&gt;.</dd>
+<dt>Lua</dt>
+<dd> Brian Maher has written a partial interface to libev for lua (only <tt>&quot;ev_io&quot;</tt> and <tt>&quot;ev_timer&quot;</tt>), to be found at &lt;<a rel="nofollow" href="http://github.com/brimworks/lua-ev">http://github.com/brimworks/lua-ev</a>&gt;.</dd></dl>
 <h2>MACRO MAGIC</h2>
 <p> Libev can be compiled with a variety of options, the most fundamental of which is <tt>&quot;EV_MULTIPLICITY&quot;</tt>. This option determines whether (most) functions and callbacks have an initial <tt>&quot;struct ev_loop *&quot;</tt> argument. </p>
 <p> To make it easier to write programs that cope with either variant, the following macros are defined:</p>
 <dl>
-<dt>EV_A, EV_A_</p>
-<dd> This provides the loop <i>argument</i> for functions, if one is required (&#8220;ev loop argument&#8221;). The <tt>&quot;EV_A&quot;</tt> form is used when this is the sole argument, <tt>&quot;EV_A_&quot;</tt> is used when other arguments are following. Example: </p>
+<dt>EV_A, EV_A_</dt>
+<dd> This provides the loop <i>argument</i> for functions, if one is required (&#8220;ev loop argument&#8221;). The <tt>&quot;EV_A&quot;</tt> form is used when this is the sole argument, <tt>&quot;EV_A_&quot;</tt> is used when other arguments are following. Example: </dd>
 <p>ev_unref(EV_A);<br />
 ev_timer_add(EV_A_ watcher);<br />
 ev_loop(EV_A_ 0);</p>
 <p> It assumes the variable <tt>&quot;loop&quot;</tt> of type <tt>&quot;struct ev_loop *&quot;</tt> is in scope, which is often provided by the following macro.</p>
-<dt>EV_P, EV_P_</p>
-<dd> This provides the loop <i>parameter</i> for functions, if one is required (&#8220;ev loop parameter&#8221;). The <tt>&quot;EV_P&quot;</tt> form is used when this is the sole parameter, <tt>&quot;EV_P_&quot;</tt> is used when other parameters are following. Example: </p>
+<dt>EV_P, EV_P_</dt>
+<dd> This provides the loop <i>parameter</i> for functions, if one is required (&#8220;ev loop parameter&#8221;). The <tt>&quot;EV_P&quot;</tt> form is used when this is the sole parameter, <tt>&quot;EV_P_&quot;</tt> is used when other parameters are following. Example: </dd>
 <p>// this is how ev_unref is being declared<br />
 static void ev_unref(EV_P);<br />
 // this is how you can declare your typical callback<br />
 static void cb(EV_P_ ev_timer *w, int revents)</p>
 <p> It declares a parameter <tt>&quot;loop&quot;</tt> of type <tt>&quot;struct ev_loop *&quot;</tt>, quite suitable for use with <tt>&quot;EV_A&quot;</tt>.</p>
-<dt>EV_DEFAULT, EV_DEFAULT_</p>
-<dd> Similar to the other two macros, this gives you the value of the default loop, if multiple loops are supported (&#8220;ev loop default&#8221;).</p>
-<dt>EV_DEFAULT_UC, EV_DEFAULT_UC_</p>
-<dd> Usage identical to <tt>&quot;EV_DEFAULT&quot;</tt> and <tt>&quot;EV_DEFAULT_&quot;</tt>, but requires that the default loop has been initialised (<tt>&quot;UC&quot;</tt> == unchecked). Their behaviour is undefined when the default loop has not been initialised by a previous execution of <tt>&quot;EV_DEFAULT&quot;</tt>, <tt>&quot;EV_DEFAULT_&quot;</tt> or <tt>&quot;ev_default_init (...)&quot;</tt>. </p>
+<dt>EV_DEFAULT, EV_DEFAULT_</dt>
+<dd> Similar to the other two macros, this gives you the value of the default loop, if multiple loops are supported (&#8220;ev loop default&#8221;).</dd>
+<dt>EV_DEFAULT_UC, EV_DEFAULT_UC_</dt>
+<dd> Usage identical to <tt>&quot;EV_DEFAULT&quot;</tt> and <tt>&quot;EV_DEFAULT_&quot;</tt>, but requires that the default loop has been initialised (<tt>&quot;UC&quot;</tt> == unchecked). Their behaviour is undefined when the default loop has not been initialised by a previous execution of <tt>&quot;EV_DEFAULT&quot;</tt>, <tt>&quot;EV_DEFAULT_&quot;</tt> or <tt>&quot;ev_default_init (...)&quot;</tt>. </dd>
 <p> It is often prudent to use <tt>&quot;EV_DEFAULT&quot;</tt> when initialising the first watcher in a function but use <tt>&quot;EV_DEFAULT_UC&quot;</tt> afterwards.</dl>
 <p> Example: Declare and initialise a check watcher, utilising the above macros so it will work regardless of whether multiple loops are supported or not. </p>
 <p>static void<br />
@@ -1421,101 +1413,101 @@ ev_loop(EV_DEFAULT_ 0);</p>
 <h3><font SIZE="-1">PREPROCESSOR</font> <font SIZE="-1">SYMBOLS/MACROS</font></h3>
 <p> Libev can be configured via a variety of preprocessor symbols you have to define before including any of its files. The default in the absence of autoconf is documented for every option.</p>
 <dl>
-<dt><font SIZE="-1">EV_STANDALONE</font></p>
-<dd> Must always be <tt>1</tt> if you do not use autoconf configuration, which keeps libev from including <i>config.h</i>, and it also defines dummy implementations for some libevent functions (such as logging, which is not supported). It will also not define any of the structs usually found in <i>event.h</i> that are not directly supported by the libev core alone. </p>
+<dt><font SIZE="-1">EV_STANDALONE</font></dt>
+<dd> Must always be <tt>1</tt> if you do not use autoconf configuration, which keeps libev from including <i>config.h</i>, and it also defines dummy implementations for some libevent functions (such as logging, which is not supported). It will also not define any of the structs usually found in <i>event.h</i> that are not directly supported by the libev core alone. </dd>
 <p> In standalone mode, libev will still try to automatically deduce the configuration, but has to be more conservative.</p>
-<dt><font SIZE="-1">EV_USE_MONOTONIC</font></p>
-<dd> If defined to be <tt>1</tt>, libev will try to detect the availability of the monotonic clock option at both compile time and runtime. Otherwise no use of the monotonic clock option will be attempted. If you enable this, you usually have to link against librt or something similar. Enabling it when the functionality isn&#8217;t available is safe, though, although you have to make sure you link against any libraries where the <tt>&quot;clock_gettime&quot;</tt> function is hiding in (often <i>-lrt</i>). See also <tt>&quot;EV_USE_CLOCK_SYSCALL&quot;</tt>.</p>
-<dt><font SIZE="-1">EV_USE_REALTIME</font></p>
-<dd> If defined to be <tt>1</tt>, libev will try to detect the availability of the real-time clock option at compile time (and assume its availability at runtime if successful). Otherwise no use of the real-time clock option will be attempted. This effectively replaces <tt>&quot;gettimeofday&quot;</tt> by <tt>&quot;clock_get (CLOCK_REALTIME, ...)&quot;</tt> and will not normally affect correctness. See the note about libraries in the description of <tt>&quot;EV_USE_MONOTONIC&quot;</tt>, though. Defaults to the opposite value of <tt>&quot;EV_USE_CLOCK_SYSCALL&quot;</tt>.</p>
-<dt><font SIZE="-1">EV_USE_CLOCK_SYSCALL</font></p>
-<dd> If defined to be <tt>1</tt>, libev will try to use a direct syscall instead of calling the system-provided <tt>&quot;clock_gettime&quot;</tt> function. This option exists because on GNU/Linux, <tt>&quot;clock_gettime&quot;</tt> is in <tt>&quot;librt&quot;</tt>, but <tt>&quot;librt&quot;</tt> unconditionally pulls in <tt>&quot;libpthread&quot;</tt>, slowing down single-threaded programs needlessly. Using a direct syscall is slightly slower (in theory), because no optimised vdso implementation can be used, but avoids the pthread dependency. Defaults to <tt>1</tt> on GNU/Linux with glibc 2.x or higher, as it simplifies linking (no need for <tt>&quot;-lrt&quot;</tt>).</p>
-<dt><font SIZE="-1">EV_USE_NANOSLEEP</font></p>
-<dd> If defined to be <tt>1</tt>, libev will assume that <tt>&quot;nanosleep ()&quot;</tt> is available and will use it for delays. Otherwise it will use <tt>&quot;select ()&quot;</tt>.</p>
-<dt><font SIZE="-1">EV_USE_EVENTFD</font></p>
-<dd> If defined to be <tt>1</tt>, then libev will assume that <tt>&quot;eventfd ()&quot;</tt> is available and will probe for kernel support at runtime. This will improve <tt>&quot;ev_signal&quot;</tt> and <tt>&quot;ev_async&quot;</tt> performance and reduce resource consumption. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.7 or newer, otherwise disabled.</p>
-<dt><font SIZE="-1">EV_USE_SELECT</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, libev will compile in support for the <tt>&quot;select&quot;</tt>(2) backend. No attempt at auto-detection will be done: if no other method takes over, select will be it. Otherwise the select backend will not be compiled in.</p>
-<dt><font SIZE="-1">EV_SELECT_USE_FD_SET</font></p>
-<dd> If defined to <tt>1</tt>, then the select backend will use the system <tt>&quot;fd_set&quot;</tt> structure. This is useful if libev doesn&#8217;t compile due to a missing <tt>&quot;NFDBITS&quot;</tt> or <tt>&quot;fd_mask&quot;</tt> definition or it mis-guesses the bitset layout on exotic systems. This usually limits the range of file descriptors to some low limit such as 1024 or might have other limitations (winsocket only allows 64 sockets). The <tt>&quot;FD_SETSIZE&quot;</tt> macro, set before compilation, configures the maximum size of the <tt>&quot;fd_set&quot;</tt>.</p>
-<dt><font SIZE="-1">EV_SELECT_IS_WINSOCKET</font></p>
-<dd> When defined to <tt>1</tt>, the select backend will assume that select/socket/connect etc. don&#8217;t understand file descriptors but wants osf handles on win32 (this is the case when the select to be used is the winsock select). This means that it will call <tt>&quot;_get_osfhandle&quot;</tt> on the fd to convert it to an <font SIZE="-1">OS</font> handle. Otherwise, it is assumed that all these functions actually work on fds, even on win32. Should not be defined on non-win32 platforms.</p>
-<dt><font SIZE="-1">EV_FD_TO_WIN32_HANDLE</font></p>
-<dd> If <tt>&quot;EV_SELECT_IS_WINSOCKET&quot;</tt> is enabled, then libev needs a way to map file descriptors to socket handles. When not defining this symbol (the default), then libev will call <tt>&quot;_get_osfhandle&quot;</tt>, which is usually correct. In some cases, programs use their own file descriptor management, in which case they can provide this function to map fds to socket handles.</p>
-<dt><font SIZE="-1">EV_USE_POLL</font></p>
-<dd> If defined to be <tt>1</tt>, libev will compile in support for the <tt>&quot;poll&quot;</tt>(2) backend. Otherwise it will be enabled on non-win32 platforms. It takes precedence over select.</p>
-<dt><font SIZE="-1">EV_USE_EPOLL</font></p>
-<dd> If defined to be <tt>1</tt>, libev will compile in support for the Linux <tt>&quot;epoll&quot;</tt>(7) backend. Its availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for GNU/Linux systems. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.4 or newer, otherwise disabled.</p>
-<dt><font SIZE="-1">EV_USE_KQUEUE</font></p>
-<dd> If defined to be <tt>1</tt>, libev will compile in support for the <font SIZE="-1">BSD</font> style <tt>&quot;kqueue&quot;</tt>(2) backend. Its actual availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for <font SIZE="-1">BSD</font> and BSD-like systems, although on most BSDs kqueue only supports some types of fds correctly (the only platform we found that supports ptys for example was NetBSD), so kqueue might be compiled in, but not be used unless explicitly requested. The best way to use it is to find out whether kqueue supports your type of fd properly and use an embedded kqueue loop.</p>
-<dt><font SIZE="-1">EV_USE_PORT</font></p>
-<dd> If defined to be <tt>1</tt>, libev will compile in support for the Solaris 10 port style backend. Its availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for Solaris 10 systems.</p>
-<dt><font SIZE="-1">EV_USE_DEVPOLL</font></p>
-<dd> Reserved for future expansion, works like the <font SIZE="-1">USE</font> symbols above.</p>
-<dt><font SIZE="-1">EV_USE_INOTIFY</font></p>
-<dd> If defined to be <tt>1</tt>, libev will compile in support for the Linux inotify interface to speed up <tt>&quot;ev_stat&quot;</tt> watchers. Its actual availability will be detected at runtime. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.4 or newer, otherwise disabled.</p>
-<dt><font SIZE="-1">EV_ATOMIC_T</font></p>
-<dd> Libev requires an integer type (suitable for storing <tt>0</tt> or <tt>1</tt>) whose access is atomic with respect to other threads or signal contexts. No such type is easily found in the C language, so you can provide your own type that you know is safe for your purposes. It is used both for signal handler &#8220;locking&#8221; as well as for signal and thread safety in <tt>&quot;ev_async&quot;</tt> watchers. </p>
+<dt><font SIZE="-1">EV_USE_MONOTONIC</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will try to detect the availability of the monotonic clock option at both compile time and runtime. Otherwise no use of the monotonic clock option will be attempted. If you enable this, you usually have to link against librt or something similar. Enabling it when the functionality isn&#8217;t available is safe, though, although you have to make sure you link against any libraries where the <tt>&quot;clock_gettime&quot;</tt> function is hiding in (often <i>-lrt</i>). See also <tt>&quot;EV_USE_CLOCK_SYSCALL&quot;</tt>.</dd>
+<dt><font SIZE="-1">EV_USE_REALTIME</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will try to detect the availability of the real-time clock option at compile time (and assume its availability at runtime if successful). Otherwise no use of the real-time clock option will be attempted. This effectively replaces <tt>&quot;gettimeofday&quot;</tt> by <tt>&quot;clock_get (CLOCK_REALTIME, ...)&quot;</tt> and will not normally affect correctness. See the note about libraries in the description of <tt>&quot;EV_USE_MONOTONIC&quot;</tt>, though. Defaults to the opposite value of <tt>&quot;EV_USE_CLOCK_SYSCALL&quot;</tt>.</dd>
+<dt><font SIZE="-1">EV_USE_CLOCK_SYSCALL</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will try to use a direct syscall instead of calling the system-provided <tt>&quot;clock_gettime&quot;</tt> function. This option exists because on GNU/Linux, <tt>&quot;clock_gettime&quot;</tt> is in <tt>&quot;librt&quot;</tt>, but <tt>&quot;librt&quot;</tt> unconditionally pulls in <tt>&quot;libpthread&quot;</tt>, slowing down single-threaded programs needlessly. Using a direct syscall is slightly slower (in theory), because no optimised vdso implementation can be used, but avoids the pthread dependency. Defaults to <tt>1</tt> on GNU/Linux with glibc 2.x or higher, as it simplifies linking (no need for <tt>&quot;-lrt&quot;</tt>).</dd>
+<dt><font SIZE="-1">EV_USE_NANOSLEEP</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will assume that <tt>&quot;nanosleep ()&quot;</tt> is available and will use it for delays. Otherwise it will use <tt>&quot;select ()&quot;</tt>.</dd>
+<dt><font SIZE="-1">EV_USE_EVENTFD</font></dt>
+<dd> If defined to be <tt>1</tt>, then libev will assume that <tt>&quot;eventfd ()&quot;</tt> is available and will probe for kernel support at runtime. This will improve <tt>&quot;ev_signal&quot;</tt> and <tt>&quot;ev_async&quot;</tt> performance and reduce resource consumption. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.7 or newer, otherwise disabled.</dd>
+<dt><font SIZE="-1">EV_USE_SELECT</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, libev will compile in support for the <tt>&quot;select&quot;</tt>(2) backend. No attempt at auto-detection will be done: if no other method takes over, select will be it. Otherwise the select backend will not be compiled in.</dd>
+<dt><font SIZE="-1">EV_SELECT_USE_FD_SET</font></dt>
+<dd> If defined to <tt>1</tt>, then the select backend will use the system <tt>&quot;fd_set&quot;</tt> structure. This is useful if libev doesn&#8217;t compile due to a missing <tt>&quot;NFDBITS&quot;</tt> or <tt>&quot;fd_mask&quot;</tt> definition or it mis-guesses the bitset layout on exotic systems. This usually limits the range of file descriptors to some low limit such as 1024 or might have other limitations (winsocket only allows 64 sockets). The <tt>&quot;FD_SETSIZE&quot;</tt> macro, set before compilation, configures the maximum size of the <tt>&quot;fd_set&quot;</tt>.</dd>
+<dt><font SIZE="-1">EV_SELECT_IS_WINSOCKET</font></dt>
+<dd> When defined to <tt>1</tt>, the select backend will assume that select/socket/connect etc. don&#8217;t understand file descriptors but wants osf handles on win32 (this is the case when the select to be used is the winsock select). This means that it will call <tt>&quot;_get_osfhandle&quot;</tt> on the fd to convert it to an <font SIZE="-1">OS</font> handle. Otherwise, it is assumed that all these functions actually work on fds, even on win32. Should not be defined on non-win32 platforms.</dd>
+<dt><font SIZE="-1">EV_FD_TO_WIN32_HANDLE</font></dt>
+<dd> If <tt>&quot;EV_SELECT_IS_WINSOCKET&quot;</tt> is enabled, then libev needs a way to map file descriptors to socket handles. When not defining this symbol (the default), then libev will call <tt>&quot;_get_osfhandle&quot;</tt>, which is usually correct. In some cases, programs use their own file descriptor management, in which case they can provide this function to map fds to socket handles.</dd>
+<dt><font SIZE="-1">EV_USE_POLL</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will compile in support for the <tt>&quot;poll&quot;</tt>(2) backend. Otherwise it will be enabled on non-win32 platforms. It takes precedence over select.</dd>
+<dt><font SIZE="-1">EV_USE_EPOLL</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will compile in support for the Linux <tt>&quot;epoll&quot;</tt>(7) backend. Its availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for GNU/Linux systems. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.4 or newer, otherwise disabled.</dd>
+<dt><font SIZE="-1">EV_USE_KQUEUE</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will compile in support for the <font SIZE="-1">BSD</font> style <tt>&quot;kqueue&quot;</tt>(2) backend. Its actual availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for <font SIZE="-1">BSD</font> and BSD-like systems, although on most BSDs kqueue only supports some types of fds correctly (the only platform we found that supports ptys for example was NetBSD), so kqueue might be compiled in, but not be used unless explicitly requested. The best way to use it is to find out whether kqueue supports your type of fd properly and use an embedded kqueue loop.</dd>
+<dt><font SIZE="-1">EV_USE_PORT</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will compile in support for the Solaris 10 port style backend. Its availability will be detected at runtime, otherwise another method will be used as fallback. This is the preferred backend for Solaris 10 systems.</dd>
+<dt><font SIZE="-1">EV_USE_DEVPOLL</font></dt>
+<dd> Reserved for future expansion, works like the <font SIZE="-1">USE</font> symbols above.</dd>
+<dt><font SIZE="-1">EV_USE_INOTIFY</font></dt>
+<dd> If defined to be <tt>1</tt>, libev will compile in support for the Linux inotify interface to speed up <tt>&quot;ev_stat&quot;</tt> watchers. Its actual availability will be detected at runtime. If undefined, it will be enabled if the headers indicate GNU/Linux + Glibc 2.4 or newer, otherwise disabled.</dd>
+<dt><font SIZE="-1">EV_ATOMIC_T</font></dt>
+<dd> Libev requires an integer type (suitable for storing <tt>0</tt> or <tt>1</tt>) whose access is atomic with respect to other threads or signal contexts. No such type is easily found in the C language, so you can provide your own type that you know is safe for your purposes. It is used both for signal handler &#8220;locking&#8221; as well as for signal and thread safety in <tt>&quot;ev_async&quot;</tt> watchers. </dd>
 <p> In the absence of this define, libev will use <tt>&quot;sig_atomic_t volatile&quot;</tt> (from <i>signal.h</i>), which is usually good enough on most platforms.</p>
-<dt><font SIZE="-1">EV_H</font></p>
-<dd> The name of the <i>ev.h</i> header file used to include it. The default if undefined is <tt>&quot;ev.h&quot;</tt> in <i>event.h</i>, <i>ev.c</i> and <i>ev++.h</i>. This can be used to virtually rename the <i>ev.h</i> header file in case of conflicts.</p>
-<dt><font SIZE="-1">EV_CONFIG_H</font></p>
-<dd> If <tt>&quot;EV_STANDALONE&quot;</tt> isn&#8217;t <tt>1</tt>, this variable can be used to override <i>ev.c</i>&#8216;s idea of where to find the <i>config.h</i> file, similarly to <tt>&quot;EV_H&quot;</tt>, above.</p>
-<dt><font SIZE="-1">EV_EVENT_H</font></p>
-<dd> Similarly to <tt>&quot;EV_H&quot;</tt>, this macro can be used to override <i>event.c</i>&#8216;s idea of how the <i>event.h</i> header can be found, the default is <tt>&quot;event.h&quot;</tt>.</p>
-<dt><font SIZE="-1">EV_PROTOTYPES</font></p>
-<dd> If defined to be <tt>0</tt>, then <i>ev.h</i> will not define any function prototypes, but still define all the structs and other symbols. This is occasionally useful if you want to provide your own wrapper functions around libev functions.</p>
-<dt><font SIZE="-1">EV_MULTIPLICITY</font></p>
-<dd> If undefined or defined to <tt>1</tt>, then all event-loop-specific functions will have the <tt>&quot;struct ev_loop *&quot;</tt> as first argument, and you can create additional independent event loops. Otherwise there will be no support for multiple event loops and there is no first event loop pointer argument. Instead, all functions act on the single default loop.</p>
-<dt><font SIZE="-1">EV_MINPRI</font></p>
+<dt><font SIZE="-1">EV_H</font></dt>
+<dd> The name of the <i>ev.h</i> header file used to include it. The default if undefined is <tt>&quot;ev.h&quot;</tt> in <i>event.h</i>, <i>ev.c</i> and <i>ev++.h</i>. This can be used to virtually rename the <i>ev.h</i> header file in case of conflicts.</dd>
+<dt><font SIZE="-1">EV_CONFIG_H</font></dt>
+<dd> If <tt>&quot;EV_STANDALONE&quot;</tt> isn&#8217;t <tt>1</tt>, this variable can be used to override <i>ev.c</i>&#8216;s idea of where to find the <i>config.h</i> file, similarly to <tt>&quot;EV_H&quot;</tt>, above.</dd>
+<dt><font SIZE="-1">EV_EVENT_H</font></dt>
+<dd> Similarly to <tt>&quot;EV_H&quot;</tt>, this macro can be used to override <i>event.c</i>&#8216;s idea of how the <i>event.h</i> header can be found, the default is <tt>&quot;event.h&quot;</tt>.</dd>
+<dt><font SIZE="-1">EV_PROTOTYPES</font></dt>
+<dd> If defined to be <tt>0</tt>, then <i>ev.h</i> will not define any function prototypes, but still define all the structs and other symbols. This is occasionally useful if you want to provide your own wrapper functions around libev functions.</dd>
+<dt><font SIZE="-1">EV_MULTIPLICITY</font></dt>
+<dd> If undefined or defined to <tt>1</tt>, then all event-loop-specific functions will have the <tt>&quot;struct ev_loop *&quot;</tt> as first argument, and you can create additional independent event loops. Otherwise there will be no support for multiple event loops and there is no first event loop pointer argument. Instead, all functions act on the single default loop.</dd>
+<dt><font SIZE="-1">EV_MINPRI</font></dt>
 <dd>
-<dt><font SIZE="-1">EV_MAXPRI</font></p>
-<dd> The range of allowed priorities. <tt>&quot;EV_MINPRI&quot;</tt> must be smaller or equal to <tt>&quot;EV_MAXPRI&quot;</tt>, but otherwise there are no non-obvious limitations. You can provide for more priorities by overriding those symbols (usually defined to be <tt>&quot;-2&quot;</tt> and <tt>2</tt>, respectively). </p>
+</dd><dt><font SIZE="-1">EV_MAXPRI</font></dt>
+<dd> The range of allowed priorities. <tt>&quot;EV_MINPRI&quot;</tt> must be smaller or equal to <tt>&quot;EV_MAXPRI&quot;</tt>, but otherwise there are no non-obvious limitations. You can provide for more priorities by overriding those symbols (usually defined to be <tt>&quot;-2&quot;</tt> and <tt>2</tt>, respectively). </dd>
 <p> When doing priority-based operations, libev usually has to linearly search all the priorities, so having many of them (hundreds) uses a lot of space and time, so using the defaults of five priorities (-2 .. +2) is usually fine. </p>
 <p> If your embedding application does not need any priorities, defining these both to <tt>0</tt> will save some memory and <font SIZE="-1">CPU</font>.</p>
-<dt><font SIZE="-1">EV_PERIODIC_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then periodic timers are supported. If defined to be <tt>0</tt>, then they are not. Disabling them saves a few kB of code.</p>
-<dt><font SIZE="-1">EV_IDLE_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then idle watchers are supported. If defined to be <tt>0</tt>, then they are not. Disabling them saves a few kB of code.</p>
-<dt><font SIZE="-1">EV_EMBED_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then embed watchers are supported. If defined to be <tt>0</tt>, then they are not. Embed watchers rely on most other watcher types, which therefore must not be disabled.</p>
-<dt><font SIZE="-1">EV_STAT_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then stat watchers are supported. If defined to be <tt>0</tt>, then they are not.</p>
-<dt><font SIZE="-1">EV_FORK_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then fork watchers are supported. If defined to be <tt>0</tt>, then they are not.</p>
-<dt><font SIZE="-1">EV_ASYNC_ENABLE</font></p>
-<dd> If undefined or defined to be <tt>1</tt>, then async watchers are supported. If defined to be <tt>0</tt>, then they are not.</p>
-<dt><font SIZE="-1">EV_MINIMAL</font></p>
-<dd> If you need to shave off some kilobytes of code at the expense of some speed (but with the full <font SIZE="-1">API</font>), define this symbol to <tt>1</tt>. Currently this is used to override some inlining decisions, saves roughly 30% code size on amd64. It also selects a much smaller 2-heap for timer management over the default 4-heap. </p>
+<dt><font SIZE="-1">EV_PERIODIC_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then periodic timers are supported. If defined to be <tt>0</tt>, then they are not. Disabling them saves a few kB of code.</dd>
+<dt><font SIZE="-1">EV_IDLE_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then idle watchers are supported. If defined to be <tt>0</tt>, then they are not. Disabling them saves a few kB of code.</dd>
+<dt><font SIZE="-1">EV_EMBED_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then embed watchers are supported. If defined to be <tt>0</tt>, then they are not. Embed watchers rely on most other watcher types, which therefore must not be disabled.</dd>
+<dt><font SIZE="-1">EV_STAT_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then stat watchers are supported. If defined to be <tt>0</tt>, then they are not.</dd>
+<dt><font SIZE="-1">EV_FORK_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then fork watchers are supported. If defined to be <tt>0</tt>, then they are not.</dd>
+<dt><font SIZE="-1">EV_ASYNC_ENABLE</font></dt>
+<dd> If undefined or defined to be <tt>1</tt>, then async watchers are supported. If defined to be <tt>0</tt>, then they are not.</dd>
+<dt><font SIZE="-1">EV_MINIMAL</font></dt>
+<dd> If you need to shave off some kilobytes of code at the expense of some speed (but with the full <font SIZE="-1">API</font>), define this symbol to <tt>1</tt>. Currently this is used to override some inlining decisions, saves roughly 30% code size on amd64. It also selects a much smaller 2-heap for timer management over the default 4-heap. </dd>
 <p> You can save even more by disabling watcher types you do not need and setting <tt>&quot;EV_MAXPRI&quot;</tt> == <tt>&quot;EV_MINPRI&quot;</tt>. Also, disabling <tt>&quot;assert&quot;</tt> (<tt>&quot;-DNDEBUG&quot;</tt>) will usually reduce code size a lot. </p>
 <p> Defining <tt>&quot;EV_MINIMAL&quot;</tt> to <tt>2</tt> will additionally reduce the core <font SIZE="-1">API</font> to provide a bare-bones event library. See <tt>&quot;ev.h&quot;</tt> for details on what parts of the <font SIZE="-1">API</font> are still available, and do not complain if this subset changes over time.</p>
-<dt><font SIZE="-1">EV_NSIG</font></p>
-<dd> The highest supported signal number, +1 (or, the number of signals): Normally, libev tries to deduce the maximum number of signals automatically, but sometimes this fails, in which case it can be specified. Also, using a lower number than detected (<tt>32</tt> should be good for about any system in existance) can save some memory, as libev statically allocates some 12-24 bytes per signal number.</p>
-<dt><font SIZE="-1">EV_PID_HASHSIZE</font></p>
-<dd> <tt>&quot;ev_child&quot;</tt> watchers use a small hash table to distribute workload by pid. The default size is <tt>16</tt> (or <tt>1</tt> with <tt>&quot;EV_MINIMAL&quot;</tt>), usually more than enough. If you need to manage thousands of children you might want to increase this value (<i>must</i> be a power of two).</p>
-<dt><font SIZE="-1">EV_INOTIFY_HASHSIZE</font></p>
-<dd> <tt>&quot;ev_stat&quot;</tt> watchers use a small hash table to distribute workload by inotify watch id. The default size is <tt>16</tt> (or <tt>1</tt> with <tt>&quot;EV_MINIMAL&quot;</tt>), usually more than enough. If you need to manage thousands of <tt>&quot;ev_stat&quot;</tt> watchers you might want to increase this value (<i>must</i> be a power of two).</p>
-<dt><font SIZE="-1">EV_USE_4HEAP</font></p>
-<dd> Heaps are not very cache-efficient. To improve the cache-efficiency of the timer and periodics heaps, libev uses a 4-heap when this symbol is defined to <tt>1</tt>. The 4-heap uses more complicated (longer) code but has noticeably faster performance with many (thousands) of watchers. </p>
+<dt><font SIZE="-1">EV_NSIG</font></dt>
+<dd> The highest supported signal number, +1 (or, the number of signals): Normally, libev tries to deduce the maximum number of signals automatically, but sometimes this fails, in which case it can be specified. Also, using a lower number than detected (<tt>32</tt> should be good for about any system in existance) can save some memory, as libev statically allocates some 12-24 bytes per signal number.</dd>
+<dt><font SIZE="-1">EV_PID_HASHSIZE</font></dt>
+<dd> <tt>&quot;ev_child&quot;</tt> watchers use a small hash table to distribute workload by pid. The default size is <tt>16</tt> (or <tt>1</tt> with <tt>&quot;EV_MINIMAL&quot;</tt>), usually more than enough. If you need to manage thousands of children you might want to increase this value (<i>must</i> be a power of two).</dd>
+<dt><font SIZE="-1">EV_INOTIFY_HASHSIZE</font></dt>
+<dd> <tt>&quot;ev_stat&quot;</tt> watchers use a small hash table to distribute workload by inotify watch id. The default size is <tt>16</tt> (or <tt>1</tt> with <tt>&quot;EV_MINIMAL&quot;</tt>), usually more than enough. If you need to manage thousands of <tt>&quot;ev_stat&quot;</tt> watchers you might want to increase this value (<i>must</i> be a power of two).</dd>
+<dt><font SIZE="-1">EV_USE_4HEAP</font></dt>
+<dd> Heaps are not very cache-efficient. To improve the cache-efficiency of the timer and periodics heaps, libev uses a 4-heap when this symbol is defined to <tt>1</tt>. The 4-heap uses more complicated (longer) code but has noticeably faster performance with many (thousands) of watchers. </dd>
 <p> The default is <tt>1</tt> unless <tt>&quot;EV_MINIMAL&quot;</tt> is set in which case it is <tt>0</tt> (disabled).</p>
-<dt><font SIZE="-1">EV_HEAP_CACHE_AT</font></p>
-<dd> Heaps are not very cache-efficient. To improve the cache-efficiency of the timer and periodics heaps, libev can cache the timestamp (<i>at</i>) within the heap structure (selected by defining <tt>&quot;EV_HEAP_CACHE_AT&quot;</tt> to <tt>1</tt>), which uses 8-12 bytes more per watcher and a few hundred bytes more code, but avoids random read accesses on heap changes. This improves performance noticeably with many (hundreds) of watchers. </p>
+<dt><font SIZE="-1">EV_HEAP_CACHE_AT</font></dt>
+<dd> Heaps are not very cache-efficient. To improve the cache-efficiency of the timer and periodics heaps, libev can cache the timestamp (<i>at</i>) within the heap structure (selected by defining <tt>&quot;EV_HEAP_CACHE_AT&quot;</tt> to <tt>1</tt>), which uses 8-12 bytes more per watcher and a few hundred bytes more code, but avoids random read accesses on heap changes. This improves performance noticeably with many (hundreds) of watchers. </dd>
 <p> The default is <tt>1</tt> unless <tt>&quot;EV_MINIMAL&quot;</tt> is set in which case it is <tt>0</tt> (disabled).</p>
-<dt><font SIZE="-1">EV_VERIFY</font></p>
-<dd> Controls how much internal verification (see <tt>&quot;ev_loop_verify ()&quot;</tt>) will be done: If set to <tt>0</tt>, no internal verification code will be compiled in. If set to <tt>1</tt>, then verification code will be compiled in, but not called. If set to <tt>2</tt>, then the internal verification code will be called once per loop, which can slow down libev. If set to <tt>3</tt>, then the verification code will be called very frequently, which will slow down libev considerably. </p>
+<dt><font SIZE="-1">EV_VERIFY</font></dt>
+<dd> Controls how much internal verification (see <tt>&quot;ev_loop_verify ()&quot;</tt>) will be done: If set to <tt>0</tt>, no internal verification code will be compiled in. If set to <tt>1</tt>, then verification code will be compiled in, but not called. If set to <tt>2</tt>, then the internal verification code will be called once per loop, which can slow down libev. If set to <tt>3</tt>, then the verification code will be called very frequently, which will slow down libev considerably. </dd>
 <p> The default is <tt>1</tt>, unless <tt>&quot;EV_MINIMAL&quot;</tt> is set, in which case it will be <tt>0</tt>.</p>
-<dt><font SIZE="-1">EV_COMMON</font></p>
-<dd> By default, all watchers have a <tt>&quot;void *data&quot;</tt> member. By redefining this macro to a something else you can include more and other types of members. You have to define it each time you include one of the files, though, and it must be identical each time. </p>
+<dt><font SIZE="-1">EV_COMMON</font></dt>
+<dd> By default, all watchers have a <tt>&quot;void *data&quot;</tt> member. By redefining this macro to a something else you can include more and other types of members. You have to define it each time you include one of the files, though, and it must be identical each time. </dd>
 <p> For example, the perl <font SIZE="-1">EV</font> module uses something like this: </p>
 <p>#define EV_COMMON                             \<br />
     SV *self;      /* contains this struct */ \<br />
     SV *cb_sv, *fh /* note no trailing &#8220;;&#8221; */</p>
-<dt><font SIZE="-1">EV_CB_DECLARE</font> (type)</p>
+<dt><font SIZE="-1">EV_CB_DECLARE</font> (type)</dt>
 <dd>
-<dt><font SIZE="-1">EV_CB_INVOKE</font> (watcher, revents)</p>
+</dd><dt><font SIZE="-1">EV_CB_INVOKE</font> (watcher, revents)</dt>
 <dd>
-<dt>ev_set_cb (ev, cb)</p>
-<dd> Can be used to change the callback member declaration in each watcher, and the way callbacks are invoked and set. Must expand to a struct member definition and a statement, respectively. See the <i>ev.h</i> header file for their default definitions. One possible use for overriding these is to avoid the <tt>&quot;struct ev_loop *&quot;</tt> as first argument in all cases, or to use method calls instead of plain function calls in C<font SIZE="-2">++</font>.</dl>
+</dd><dt>ev_set_cb (ev, cb)</dt>
+<dd> Can be used to change the callback member declaration in each watcher, and the way callbacks are invoked and set. Must expand to a struct member definition and a statement, respectively. See the <i>ev.h</i> header file for their default definitions. One possible use for overriding these is to avoid the <tt>&quot;struct ev_loop *&quot;</tt> as first argument in all cases, or to use method calls instead of plain function calls in C<font SIZE="-2">++</font>.</dd></dl>
 <h3><font SIZE="-1">EXPORTED</font> <font SIZE="-1">API</font> <font SIZE="-1">SYMBOLS</font></h3>
 <p> If you need to re-export the <font SIZE="-1">API</font> (e.g. via a <font SIZE="-1">DLL</font>) and you need a list of exported symbols, you can use the provided <i>Symbol.*</i> files which list all public symbols, one per line: </p>
 <pre>
@@ -1554,17 +1546,17 @@ ev_loop(EV_DEFAULT_ 0);</p>
 <p> Specifically to support threads (and signal handlers), libev implements so-called <tt>&quot;ev_async&quot;</tt> watchers, which allow some limited form of concurrency on the same event loop, namely waking it up &#8220;from the outside&#8221;. </p>
 <p> If you want to know which design (one loop, locking, or multiple loops without or something else still) is best for your problem, then I cannot help you, but here is some generic advice:</p>
 <dl>
-<dt>*</p>
-<dd> most applications have a main thread: use the default libev loop in that thread, or create a separate thread running only the default loop. </p>
+<dt>*</dt>
+<dd> most applications have a main thread: use the default libev loop in that thread, or create a separate thread running only the default loop. </dd>
 <p> This helps integrating other libraries or software modules that use libev themselves and don&#8217;t care/know about threading.</p>
-<dt>*</p>
-<dd> one loop per thread is usually a good model. </p>
+<dt>*</dt>
+<dd> one loop per thread is usually a good model. </dd>
 <p> Doing this is almost never wrong, sometimes a better-performance model exists, but it is always a good start.</p>
-<dt>*</p>
-<dd> other models exist, such as the leader/follower pattern, where one loop is handed through multiple threads in a kind of round-robin fashion. </p>
+<dt>*</dt>
+<dd> other models exist, such as the leader/follower pattern, where one loop is handed through multiple threads in a kind of round-robin fashion. </dd>
 <p> Choosing a model is hard &#8211; look around, learn, know that usually you can do better than you currently do :-)</p>
-<dt>*</p>
-<dd> often you need to talk to some other thread which blocks in the event loop. </p>
+<dt>*</dt>
+<dd> often you need to talk to some other thread which blocks in the event loop. </dd>
 <p> <tt>&quot;ev_async&quot;</tt> watchers can be used to wake them up from other threads safely (or from signal contexts&#8230;). </p>
 <p> An example use would be to communicate signals or other events that only work in the default loop by registering the signal watcher with the default loop and triggering an <tt>&quot;ev_async&quot;</tt> watcher from the default loop watcher callback into the event loop interested in the signal.</dl>
 <p> <font SIZE="-1">THREAD</font> <font SIZE="-1">LOCKING</font> <font SIZE="-1">EXAMPLE</font> </p>
@@ -1686,128 +1678,128 @@ pthread_mutex_unlock(&amp;u-&gt;lock);</p>
 <p>#include &#8220;ev.c&#8221;<br />
 #include &#8220;evwrap.h&#8221;</p>
 <dl>
-<dt>The winsocket select function</p>
-<dd> The winsocket <tt>&quot;select&quot;</tt> function doesn&#8217;t follow <font SIZE="-1">POSIX</font> in that it requires socket <i>handles</i> and not socket <i>file descriptors</i> (it is also extremely buggy). This makes select very inefficient, and also requires a mapping from file descriptors to socket handles (the Microsoft C runtime provides the function <tt>&quot;_open_osfhandle&quot;</tt> for this). See the discussion of the <tt>&quot;EV_SELECT_USE_FD_SET&quot;</tt>, <tt>&quot;EV_SELECT_IS_WINSOCKET&quot;</tt> and <tt>&quot;EV_FD_TO_WIN32_HANDLE&quot;</tt> preprocessor symbols for more info. </p>
+<dt>The winsocket select function</dt>
+<dd> The winsocket <tt>&quot;select&quot;</tt> function doesn&#8217;t follow <font SIZE="-1">POSIX</font> in that it requires socket <i>handles</i> and not socket <i>file descriptors</i> (it is also extremely buggy). This makes select very inefficient, and also requires a mapping from file descriptors to socket handles (the Microsoft C runtime provides the function <tt>&quot;_open_osfhandle&quot;</tt> for this). See the discussion of the <tt>&quot;EV_SELECT_USE_FD_SET&quot;</tt>, <tt>&quot;EV_SELECT_IS_WINSOCKET&quot;</tt> and <tt>&quot;EV_FD_TO_WIN32_HANDLE&quot;</tt> preprocessor symbols for more info. </dd>
 <p> The configuration for a &#8220;naked&#8221; win32 using the Microsoft runtime libraries and raw winsocket select is: </p>
 <pre><code>
 #define EV_USE_SELECT 1
 #define EV_SELECT_IS_WINSOCKET 1 /* forces EV_SELECT_USE_FD_SET, too */
 </code></pre>
 <p> Note that winsockets handling of fd sets is O(n), so you can easily get a complexity in the O(nAX) range when using win32.</p>
-<dt>Limited number of file descriptors</p>
-<dd> Windows has numerous arbitrary (and low) limits on things. </p>
+<dt>Limited number of file descriptors</dt>
+<dd> Windows has numerous arbitrary (and low) limits on things. </dd>
 <p> Early versions of winsocket&#8217;s select only supported waiting for a maximum of <tt>64</tt> handles (probably owning to the fact that all windows kernels can only wait for <tt>64</tt> things at the same time internally; Microsoft recommends spawning a chain of threads and wait for 63 handles and the previous thread in each. Sounds great!). </p>
 <p> Newer versions support more handles, but you need to define <tt>&quot;FD_SETSIZE&quot;</tt> to some high number (e.g. <tt>2048</tt>) before compiling the winsocket select call (which might be in libev or elsewhere, for example, perl and many other interpreters do their own select emulation on windows). </p>
 <p> Another limit is the number of file descriptors in the Microsoft runtime libraries, which by default is <tt>64</tt> (there must be a hidden <i>64</i> fetish or something like this inside Microsoft). You can increase this by calling <tt>&quot;_setmaxstdio&quot;</tt>, which can increase this limit to <tt>2048</tt> (another arbitrary limit), but is broken in many versions of the Microsoft runtime libraries. This might get you to about <tt>512</tt> or <tt>2048</tt> sockets (depending on windows version and/or the phase of the moon). To get more, you need to wrap all I/O functions and provide your own fd management, but the cost of calling select (O(nAX)) will likely make this unworkable.</dl>
 <h3><font SIZE="-1">PORTABILITY</font> <font SIZE="-1">REQUIREMENTS</font></h3>
 <p> In addition to a working ISO-C implementation and of course the backend-specific APIs, libev relies on a few additional extensions:</p>
 <dl>
-<dt>void (*)(ev_watcher_type *, int revents) must have compatible calling conventions regardless of ev_watcher_type *.</p>
-<dd> Libev assumes not only that all watcher pointers have the same internal structure (guaranteed by <font SIZE="-1">POSIX</font> but not by <font SIZE="-1">ISO</font> C for example), but it also assumes that the same (machine) code can be used to call any watcher callback: The watcher callbacks have different type signatures, but libev calls them using an <tt>&quot;ev_watcher *&quot;</tt> internally.</p>
-<dt>sig_atomic_t volatile must be thread-atomic as well</p>
-<dd> The type <tt>&quot;sig_atomic_t volatile&quot;</tt> (or whatever is defined as <tt>&quot;EV_ATOMIC_T&quot;</tt>) must be atomic with respect to accesses from different threads. This is not part of the specification for <tt>&quot;sig_atomic_t&quot;</tt>, but is believed to be sufficiently portable.</p>
-<dt>sigprocmask must work in a threaded environment</p>
-<dd> Libev uses <tt>&quot;sigprocmask&quot;</tt> to temporarily block signals. This is not allowed in a threaded program (<tt>&quot;pthread_sigmask&quot;</tt> has to be used). Typical pthread implementations will either allow <tt>&quot;sigprocmask&quot;</tt> in the &#8220;main thread&#8221; or will block signals process-wide, both behaviours would be compatible with libev. Interaction between <tt>&quot;sigprocmask&quot;</tt> and <tt>&quot;pthread_sigmask&quot;</tt> could complicate things, however. </p>
+<dt>void (*)(ev_watcher_type *, int revents) must have compatible calling conventions regardless of ev_watcher_type *.</dt>
+<dd> Libev assumes not only that all watcher pointers have the same internal structure (guaranteed by <font SIZE="-1">POSIX</font> but not by <font SIZE="-1">ISO</font> C for example), but it also assumes that the same (machine) code can be used to call any watcher callback: The watcher callbacks have different type signatures, but libev calls them using an <tt>&quot;ev_watcher *&quot;</tt> internally.</dd>
+<dt>sig_atomic_t volatile must be thread-atomic as well</dt>
+<dd> The type <tt>&quot;sig_atomic_t volatile&quot;</tt> (or whatever is defined as <tt>&quot;EV_ATOMIC_T&quot;</tt>) must be atomic with respect to accesses from different threads. This is not part of the specification for <tt>&quot;sig_atomic_t&quot;</tt>, but is believed to be sufficiently portable.</dd>
+<dt>sigprocmask must work in a threaded environment</dt>
+<dd> Libev uses <tt>&quot;sigprocmask&quot;</tt> to temporarily block signals. This is not allowed in a threaded program (<tt>&quot;pthread_sigmask&quot;</tt> has to be used). Typical pthread implementations will either allow <tt>&quot;sigprocmask&quot;</tt> in the &#8220;main thread&#8221; or will block signals process-wide, both behaviours would be compatible with libev. Interaction between <tt>&quot;sigprocmask&quot;</tt> and <tt>&quot;pthread_sigmask&quot;</tt> could complicate things, however. </dd>
 <p> The most portable way to handle signals is to block signals in all threads except the initial one, and run the default loop in the initial thread as well.</p>
-<dt>long must be large enough for common memory allocation sizes</p>
-<dd> To improve portability and simplify its <font SIZE="-1">API</font>, libev uses <tt>&quot;long&quot;</tt> internally instead of <tt>&quot;size_t&quot;</tt> when allocating its data structures. On non-POSIX systems (Microsoft&#8230;) this might be unexpectedly low, but is still at least 31 bits everywhere, which is enough for hundreds of millions of watchers.</p>
-<dt>double must hold a time value in seconds with enough accuracy</p>
-<dd> The type <tt>&quot;double&quot;</tt> is used to represent timestamps. It is required to have at least 51 bits of mantissa (and 9 bits of exponent), which is good enough for at least into the year 4000. This requirement is fulfilled by implementations implementing <font SIZE="-1">IEEE</font> 754, which is basically all existing ones. With <font SIZE="-1">IEEE</font> 754 doubles, you get microsecond accuracy until at least 2200.</dl>
+<dt>long must be large enough for common memory allocation sizes</dt>
+<dd> To improve portability and simplify its <font SIZE="-1">API</font>, libev uses <tt>&quot;long&quot;</tt> internally instead of <tt>&quot;size_t&quot;</tt> when allocating its data structures. On non-POSIX systems (Microsoft&#8230;) this might be unexpectedly low, but is still at least 31 bits everywhere, which is enough for hundreds of millions of watchers.</dd>
+<dt>double must hold a time value in seconds with enough accuracy</dt>
+<dd> The type <tt>&quot;double&quot;</tt> is used to represent timestamps. It is required to have at least 51 bits of mantissa (and 9 bits of exponent), which is good enough for at least into the year 4000. This requirement is fulfilled by implementations implementing <font SIZE="-1">IEEE</font> 754, which is basically all existing ones. With <font SIZE="-1">IEEE</font> 754 doubles, you get microsecond accuracy until at least 2200.</dd></dl>
 <p> If you know of other additional requirements drop me a note.</p>
 <h2>ALGORITHMIC COMPLEXITIES</h2>
 <p> In this section the complexities of (many of) the algorithms used inside libev will be documented. For complexity discussions about backends see the documentation for <tt>&quot;ev_default_init&quot;</tt>. </p>
 <p> All of the following are about amortised time: If an array needs to be extended, libev needs to realloc and move the whole array, but this happens asymptotically rarer with higher number of elements, so O(1) might mean that libev does a lengthy realloc operation in rare cases, but on average it is much faster and asymptotically approaches constant time.</p>
 <dl>
-<dt>Starting and stopping timer/periodic watchers: O(log skipped_other_timers)</p>
-<dd> This means that, when you have a watcher that triggers in one hour and there are 100 watchers that would trigger before that, then inserting will have to skip roughly seven (<tt>&quot;ld 100&quot;</tt>) of these watchers.</p>
-<dt>Changing timer/periodic watchers (by autorepeat or calling again): O(log skipped_other_timers)</p>
-<dd> That means that changing a timer costs less than removing/adding them, as only the relative motion in the event queue has to be paid for.</p>
-<dt>Starting io/check/prepare/idle/signal/child/fork/async watchers: O(1)</p>
-<dd> These just add the watcher into an array or at the head of a list.</p>
-<dt>Stopping check/prepare/idle/fork/async watchers: O(1)</p>
+<dt>Starting and stopping timer/periodic watchers: O(log skipped_other_timers)</dt>
+<dd> This means that, when you have a watcher that triggers in one hour and there are 100 watchers that would trigger before that, then inserting will have to skip roughly seven (<tt>&quot;ld 100&quot;</tt>) of these watchers.</dd>
+<dt>Changing timer/periodic watchers (by autorepeat or calling again): O(log skipped_other_timers)</dt>
+<dd> That means that changing a timer costs less than removing/adding them, as only the relative motion in the event queue has to be paid for.</dd>
+<dt>Starting io/check/prepare/idle/signal/child/fork/async watchers: O(1)</dt>
+<dd> These just add the watcher into an array or at the head of a list.</dd>
+<dt>Stopping check/prepare/idle/fork/async watchers: O(1)</dt>
 <dd>
-<dt>Stopping an io/signal/child watcher: O(number_of_watchers_for_this_(fd/signal/pid % <font SIZE="-1">EV_PID_HASHSIZE</font>))</p>
-<dd> These watchers are stored in lists, so they need to be walked to find the correct watcher to remove. The lists are usually short (you don&#8217;t usually have many watchers waiting for the same fd or signal: one is typical, two is rare).</p>
-<dt>Finding the next timer in each loop iteration: O(1)</p>
-<dd> By virtue of using a binary or 4-heap, the next timer is always found at a fixed position in the storage array.</p>
-<dt>Each change on a file descriptor per loop iteration: O(number_of_watchers_for_this_fd)</p>
-<dd> A change means an I/O watcher gets started or stopped, which requires libev to recalculate its status (and possibly tell the kernel, depending on backend and whether <tt>&quot;ev_io_set&quot;</tt> was used).</p>
-<dt>Activating one watcher (putting it into the pending state): O(1)</p>
+</dd><dt>Stopping an io/signal/child watcher: O(number_of_watchers_for_this_(fd/signal/pid % <font SIZE="-1">EV_PID_HASHSIZE</font>))</dt>
+<dd> These watchers are stored in lists, so they need to be walked to find the correct watcher to remove. The lists are usually short (you don&#8217;t usually have many watchers waiting for the same fd or signal: one is typical, two is rare).</dd>
+<dt>Finding the next timer in each loop iteration: O(1)</dt>
+<dd> By virtue of using a binary or 4-heap, the next timer is always found at a fixed position in the storage array.</dd>
+<dt>Each change on a file descriptor per loop iteration: O(number_of_watchers_for_this_fd)</dt>
+<dd> A change means an I/O watcher gets started or stopped, which requires libev to recalculate its status (and possibly tell the kernel, depending on backend and whether <tt>&quot;ev_io_set&quot;</tt> was used).</dd>
+<dt>Activating one watcher (putting it into the pending state): O(1)</dt>
 <dd>
-<dt>Priority handling: O(number_of_priorities)</p>
-<dd> Priorities are implemented by allocating some space for each priority. When doing priority-based operations, libev usually has to linearly search all the priorities, but starting/stopping and activating watchers becomes O(1) with respect to priority handling.</p>
-<dt>Sending an ev_async: O(1)</p>
+</dd><dt>Priority handling: O(number_of_priorities)</dt>
+<dd> Priorities are implemented by allocating some space for each priority. When doing priority-based operations, libev usually has to linearly search all the priorities, but starting/stopping and activating watchers becomes O(1) with respect to priority handling.</dd>
+<dt>Sending an ev_async: O(1)</dt>
 <dd>
-<dt>Processing ev_async_send: O(number_of_async_watchers)</p>
+</dd><dt>Processing ev_async_send: O(number_of_async_watchers)</dt>
 <dd>
-<dt>Processing signals: O(max_signal_number)</p>
-<dd> Sending involves a system call <i>iff</i> there were no other <tt>&quot;ev_async_send&quot;</tt> calls in the current loop iteration. Checking for async and signal events involves iterating over all running async watchers or all signal numbers.</dl>
+</dd><dt>Processing signals: O(max_signal_number)</dt>
+<dd> Sending involves a system call <i>iff</i> there were no other <tt>&quot;ev_async_send&quot;</tt> calls in the current loop iteration. Checking for async and signal events involves iterating over all running async watchers or all signal numbers.</dd></dl>
 <h2>GLOSSARY</h2>
 <dl>
-<dt>active</p>
-<dd> A watcher is active as long as it has been started (has been attached to an event loop) but not yet stopped (disassociated from the event loop).</p>
-<dt>application</p>
-<dd> In this document, an application is whatever is using libev.</p>
-<dt>callback</p>
-<dd> The address of a function that is called when some event has been detected. Callbacks are being passed the event loop, the watcher that received the event, and the actual event bitset.</p>
-<dt>callback invocation</p>
-<dd> The act of calling the callback associated with a watcher.</p>
-<dt>event</p>
-<dd> A change of state of some external event, such as data now being available for reading on a file descriptor, time having passed or simply not having any other events happening anymore. </p>
+<dt>active</dt>
+<dd> A watcher is active as long as it has been started (has been attached to an event loop) but not yet stopped (disassociated from the event loop).</dd>
+<dt>application</dt>
+<dd> In this document, an application is whatever is using libev.</dd>
+<dt>callback</dt>
+<dd> The address of a function that is called when some event has been detected. Callbacks are being passed the event loop, the watcher that received the event, and the actual event bitset.</dd>
+<dt>callback invocation</dt>
+<dd> The act of calling the callback associated with a watcher.</dd>
+<dt>event</dt>
+<dd> A change of state of some external event, such as data now being available for reading on a file descriptor, time having passed or simply not having any other events happening anymore. </dd>
 <p> In libev, events are represented as single bits (such as <tt>&quot;EV_READ&quot;</tt> or <tt>&quot;EV_TIMEOUT&quot;</tt>).</p>
-<dt>event library</p>
-<dd> A software package implementing an event model and loop.</p>
-<dt>event loop</p>
-<dd> An entity that handles and processes external events and converts them into callback invocations.</p>
-<dt>event model</p>
-<dd> The model used to describe how an event loop handles and processes watchers and events.</p>
-<dt>pending</p>
-<dd> A watcher is pending as soon as the corresponding event has been detected, and stops being pending as soon as the watcher will be invoked or its pending status is explicitly cleared by the application. </p>
+<dt>event library</dt>
+<dd> A software package implementing an event model and loop.</dd>
+<dt>event loop</dt>
+<dd> An entity that handles and processes external events and converts them into callback invocations.</dd>
+<dt>event model</dt>
+<dd> The model used to describe how an event loop handles and processes watchers and events.</dd>
+<dt>pending</dt>
+<dd> A watcher is pending as soon as the corresponding event has been detected, and stops being pending as soon as the watcher will be invoked or its pending status is explicitly cleared by the application. </dd>
 <p> A watcher can be pending, but not active. Stopping a watcher also clears its pending status.</p>
-<dt>real time</p>
-<dd> The physical time that is observed. It is apparently strictly monotonic :)</p>
-<dt>wall-clock time</p>
-<dd> The time and date as shown on clocks. Unlike real time, it can actually be wrong and jump forwards and backwards, e.g. when the you adjust your clock.</p>
-<dt>watcher</p>
-<dd> A data structure that describes interest in certain events. Watchers need to be started (attached to an event loop) before they can receive events.</p>
-<dt>watcher invocation</p>
-<dd> The act of calling the callback associated with a watcher.</dl>
+<dt>real time</dt>
+<dd> The physical time that is observed. It is apparently strictly monotonic :)</dd>
+<dt>wall-clock time</dt>
+<dd> The time and date as shown on clocks. Unlike real time, it can actually be wrong and jump forwards and backwards, e.g. when the you adjust your clock.</dd>
+<dt>watcher</dt>
+<dd> A data structure that describes interest in certain events. Watchers need to be started (attached to an event loop) before they can receive events.</dd>
+<dt>watcher invocation</dt>
+<dd> The act of calling the callback associated with a watcher.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Marc Lehmann &lt;libev [at] schmorp.de&gt;, with repeated corrections by Mikael Magnusson. </p>
 <h2>Index</h2>
-<dt><a href="#lbAE">ABOUT THIS DOCUMENT</a></p>
+<dt><a href="#lbAE">ABOUT THIS DOCUMENT</a></dt>
 <dd>
-<dt><a href="#lbAF">ABOUT LIBEV</a></p>
+</dd><dt><a href="#lbAF">ABOUT LIBEV</a></dt>
 <dd>
-<dt><a href="#lbAJ">ERROR HANDLING</a></p>
+</dd><dt><a href="#lbAJ">ERROR HANDLING</a></dt>
 <dd>
-<dt><a href="#lbAK">GLOBAL FUNCTIONS</a></p>
+</dd><dt><a href="#lbAK">GLOBAL FUNCTIONS</a></dt>
 <dd>
-<dt><a href="#lbAL">FUNCTIONS CONTROLLING THE EVENT LOOP</a></p>
+</dd><dt><a href="#lbAL">FUNCTIONS CONTROLLING THE EVENT LOOP</a></dt>
 <dd>
-<dt><a href="#lbAM">ANATOMY OF A WATCHER</a></p>
+</dd><dt><a href="#lbAM">ANATOMY OF A WATCHER</a></dt>
 <dd>
-<dt><a href="#lbAQ">WATCHER TYPES</a></p>
+</dd><dt><a href="#lbAQ">WATCHER TYPES</a></dt>
 <dd>
-<dt><a href="#lbBC">OTHER FUNCTIONS</a></p>
+</dd><dt><a href="#lbBC">OTHER FUNCTIONS</a></dt>
 <dd>
-<dt><a href="#lbBD">LIBEVENT EMULATION</a></p>
+</dd><dt><a href="#lbBD">LIBEVENT EMULATION</a></dt>
 <dd>
-<dt><a href="#lbBE">C<font SIZE="-2">++</font> SUPPORT</a></p>
+</dd><dt><a href="#lbBE">C<font SIZE="-2">++</font> SUPPORT</a></dt>
 <dd>
-<dt><a href="#lbBF">OTHER LANGUAGE BINDINGS</a></p>
+</dd><dt><a href="#lbBF">OTHER LANGUAGE BINDINGS</a></dt>
 <dd>
-<dt><a href="#lbBG">MACRO MAGIC</a></p>
+</dd><dt><a href="#lbBG">MACRO MAGIC</a></dt>
 <dd>
-<dt><a href="#lbBH">EMBEDDING</a></p>
+</dd><dt><a href="#lbBH">EMBEDDING</a></dt>
 <dd>
-<dt><a href="#lbBM">INTERACTION WITH OTHER PROGRAMS OR LIBRARIES</a></p>
+</dd><dt><a href="#lbBM">INTERACTION WITH OTHER PROGRAMS OR LIBRARIES</a></dt>
 <dd>
-<dt><a href="#lbBQ">PORTABILITY NOTES</a></p>
+</dd><dt><a href="#lbBQ">PORTABILITY NOTES</a></dt>
 <dd>
-<dt><a href="#lbBT">ALGORITHMIC COMPLEXITIES</a></p>
+</dd><dt><a href="#lbBT">ALGORITHMIC COMPLEXITIES</a></dt>
 <dd>
-<dt><a href="#lbBU">GLOSSARY</a></p>
+</dd><dt><a href="#lbBU">GLOSSARY</a></dt>
 <dd>
-<dt><a href="#lbBV">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBV">AUTHOR</a></dt>
+<dd></dd></dl>

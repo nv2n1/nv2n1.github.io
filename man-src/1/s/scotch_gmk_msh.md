@@ -17,10 +17,10 @@ gmk_msh[options][mfile][gfile]
 <p> The <code>gmk_msh</code> program creates a source graph from a source mesh. The vertices of the graph are the nodes of the mesh, and all mesh elements are turned into cliques, that is, there exists an edge between two vertices in the graph if there exists at least an element in the mesh which comprises the two associated nodes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Create a source graph brol.grf from a source mesh brol.msh: </p>
 <pre>

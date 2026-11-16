@@ -15,19 +15,19 @@ skb_copy_bits - copy bits from skb to kernel buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>source skb</dl>
+<dl><dd></dd><dd>source skb</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>offset in source</dl>
+<dl><dd>offset in source</dd></dl>
  
 
  <i>to</i>
-<dl><dd>destination buffer</dl>
+<dl><dd>destination buffer</dd></dl>
  
 
  <i>len</i>
-<dl><dd>number of bytes to copy</dl>
+<dl><dd>number of bytes to copy</dd></dl>
 
 <h2>Description</h2>
 

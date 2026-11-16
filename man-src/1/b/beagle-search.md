@@ -15,12 +15,12 @@ description: "beagle-search"
 <p> GNOME-based graphical user interface to the Beagle search system </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;icon</code></p>
-<dd> Add an icon to the notification area rather than opening a search window.</p>
-<dt><code>&#8211;search-docs</code></p>
-<dd> Also search the system-wide documentation index.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display a summary of command-line options</dl>
+<dt><code>&#8211;icon</code></dt>
+<dd> Add an icon to the notification area rather than opening a search window.</dd>
+<dt><code>&#8211;search-docs</code></dt>
+<dd> Also search the system-wide documentation index.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a summary of command-line options</dd></dl>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>
 <h2>REPORTING BUGS</h2>

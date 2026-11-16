@@ -50,7 +50,7 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+</dt><dd> This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implements <code>Index</code>.</p>
 <h3><code>Calendar</code> fixingCalendar () const [virtual]</h3>
 <p> Inflation indices do not have fixing calendars. An inflation index value is valid for every day (including weekends) of a calendar period. I.e. it uses the <code>NullCalendar</code> as its fixing calendar. </p>
@@ -71,5 +71,5 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>

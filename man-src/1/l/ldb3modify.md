@@ -11,7 +11,7 @@ ldbmodify - Modify records in a LDB database
 <h2>Synopsis</h2>
 
 <dl>
-<dt> FCldbmodifyF[] [-H LDB-URL] [ldif-file]</dl>
+<dt> FCldbmodifyF[] [-H LDB-URL] [ldif-file]</dt></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -26,9 +26,9 @@ ldbmodify - Modify records in a LDB database
  
 
  -H &lt;ldb-url&gt;
-<dl>
+</dd><dl>
 <dt>
-<dd> LDB URL to connect to. See ldb(7) for details.</dl>
+</dt><dd> LDB URL to connect to. See ldb(7) for details.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -37,7 +37,7 @@ ldbmodify - Modify records in a LDB database
  LDB_URL
 <dl>
 <dt>
-<dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dl>
+</dt><dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dd></dl>
 
 <h2>VERSION</h2>
 

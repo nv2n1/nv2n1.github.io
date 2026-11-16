@@ -17,26 +17,26 @@ description: "me-tv – a digital television (DVB) viewer for GNOME"
 <p> Me TV has a built-in scanner which can autoscan certain countries or use an initial scan file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?|&#8211;help</code></p>
-<dd> Show help options.</p>
-<dt><code>-v|&#8211;verbose</code></p>
-<dd> Show verbose output.</p>
-<dt><code>-s|&#8211;safe-mode</code></p>
-<dd> Show the preferences dialog an don&#8217;t show video upon start.</p>
-<dt><code>-m|&#8211;minimised-mode</code></p>
-<dd> Show minimised in notification area at startup.</p>
-<dt><code>&#8211;disable-epg</code></p>
-<dd> Stops the rendering of the EPG event buttons on the UI.</p>
-<dt><code>&#8211;disable-epg-thread</code></p>
-<dd> Disable the EPG thread. Me TV will stop collecting EPG events.</p>
-<dt><code>&#8211;no-screensaver-inhibit</code></p>
-<dd> Tells Me TV not to call the screensaver Inhibit/UnInhibit methods for GNOME Screensaver.</p>
-<dt><code>&#8211;devices</code></p>
-<dd> Only use the specified frontend devices. You can specify more than one device by using a comma or colon separator. (e.g. &#8211;devices=/dev/dvb/adapter0/frontend1)</p>
-<dt><code>&#8211;read-timeout</code></p>
-<dd> How long to wait (in seconds) before timing out while waiting for data from demuxer (default 5)</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use </p>
+<dt><code>-?|&#8211;help</code></dt>
+<dd> Show help options.</dd>
+<dt><code>-v|&#8211;verbose</code></dt>
+<dd> Show verbose output.</dd>
+<dt><code>-s|&#8211;safe-mode</code></dt>
+<dd> Show the preferences dialog an don&#8217;t show video upon start.</dd>
+<dt><code>-m|&#8211;minimised-mode</code></dt>
+<dd> Show minimised in notification area at startup.</dd>
+<dt><code>&#8211;disable-epg</code></dt>
+<dd> Stops the rendering of the EPG event buttons on the UI.</dd>
+<dt><code>&#8211;disable-epg-thread</code></dt>
+<dd> Disable the EPG thread. Me TV will stop collecting EPG events.</dd>
+<dt><code>&#8211;no-screensaver-inhibit</code></dt>
+<dd> Tells Me TV not to call the screensaver Inhibit/UnInhibit methods for GNOME Screensaver.</dd>
+<dt><code>&#8211;devices</code></dt>
+<dd> Only use the specified frontend devices. You can specify more than one device by using a comma or colon separator. (e.g. &#8211;devices=/dev/dvb/adapter0/frontend1)</dd>
+<dt><code>&#8211;read-timeout</code></dt>
+<dd> How long to wait (in seconds) before timing out while waiting for data from demuxer (default 5)</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Michael Lamothe (2007-2010) &lt;michael.lamothe [at] gmail.com&gt;. </p>

@@ -147,8 +147,8 @@ description: "sssd_selinux – Security Enhanced Linux Policy for the sssd proce
 <p> <code>sssd_public_t</code> </p>
 <p> &#8211; Set files with the sssd_public_t type, if you want to treat the files as sssd public data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/sss/mc(/.*)?, /var/lib/sss/pubconf(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/sss/mc(/.*)?, /var/lib/sss/pubconf(/.*)? </dd>
 </dl>
 <p> <code>sssd_selinux_manager_exec_t</code> </p>
 <p> &#8211; Set files with the sssd_selinux_manager_exec_t type, if you want to transition an executable to the sssd_selinux_manager_t domain. </p>

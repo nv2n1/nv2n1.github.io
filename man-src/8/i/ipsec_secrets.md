@@ -10,10 +10,10 @@ description: "ipsec_secrets – re-read the ipsec.secrets file"
 <p>ipsec_secrets &#8211; re-read the ipsec.secrets file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>secrets</i></dl>
+<dt> <code>ipsec</code> <i>secrets</i></dt></dl>
 <h2>Description</h2>
 <p><i>secrets</i></p>
-<dd>is an alias for <code>ipsec auto &#8211;rereadsecrets</code> and rereads all the secrets in the <i>ipsec.secrets</i> file.</p>
+<dd>is an alias for <code>ipsec auto &#8211;rereadsecrets</code> and rereads all the secrets in the <i>ipsec.secrets</i> file.</dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a></code>(5)</p>
 <h2>History</h2>
@@ -23,4 +23,4 @@ description: "ipsec_secrets – re-read the ipsec.secrets file"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

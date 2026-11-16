@@ -27,6 +27,6 @@ description: "QuantLib::MCDiscreteArithmeticAPEngine – Monte Carlo pricing eng
 <p> Monte Carlo pricing engine for discrete arithmetic average price Asian options. It can use <code>MCDiscreteGeometricAPEngine</code> (Monte Carlo discrete arithmetic average price engine) and <code>AnalyticDiscreteGeometricAveragePriceAsianEngine</code> (analytic discrete arithmetic average price engine) for control variation. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

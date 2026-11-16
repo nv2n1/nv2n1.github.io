@@ -15,10 +15,10 @@ description: "llvm-lib – LLVM lib.exe compatible library tool"
 <p> The <code>llvm-lib</code> command is intended to be a <code>lib.exe</code> compatible tool. See <i><a rel="nofollow" href="https://msdn.microsoft.com/en-us/library/7ykb2k5f">https://msdn.microsoft.com/en-us/library/7ykb2k5f</a></i> for the general description. </p>
 <p> <code>llvm-lib</code> has the following extensions:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Bitcode files in symbol tables. <code>llvm-lib</code> includes symbols from both bitcode files and regular object files in the symbol table.</p>
-<dt>&bull;</p>
-<dd> Creating thin archives. The /llvmlibthin option causes <code>llvm-lib</code> to create thin archive that contain only the symbol table and the header for the various members. These files are much smaller, but are not compatible with link.exe (lld can handle them).</dl>
+<dt>&bull;</dt>
+<dd> Bitcode files in symbol tables. <code>llvm-lib</code> includes symbols from both bitcode files and regular object files in the symbol table.</dd>
+<dt>&bull;</dt>
+<dd> Creating thin archives. The /llvmlibthin option causes <code>llvm-lib</code> to create thin archive that contain only the symbol table and the header for the various members. These files are much smaller, but are not compatible with link.exe (lld can handle them).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

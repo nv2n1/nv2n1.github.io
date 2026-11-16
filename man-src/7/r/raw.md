@@ -10,9 +10,7 @@ description: "raw – Linux IPv4 raw sockets"
 <p>raw &#8211; Linux IPv4 raw sockets</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/socket.h&gt;
-
 #include &lt;netinet/in.h&gt;
-
 raw_socket = socket(AF_INET, SOCK_RAW, int protocol);</code></pre>
 <h2>Description</h2>
 <p>Raw sockets allow new IPv4 protocols to be implemented in user space. A raw socket receives or sends the raw datagram not including link level headers. </p>
@@ -48,7 +46,7 @@ raw_socket = socket(AF_INET, SOCK_RAW, int protocol);</code></pre>
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If <code>IP_HDRINCL</code> is specified and the IP header has a nonzero destination address, then the destination address of the socket is used to route the packet. When <code>MSG_DONTROUTE</code> is specified, the destination address should refer to a local interface, otherwise a routing table lookup is done anyway but gatewayed routes are ignored. </p>
 <p> If <code>IP_HDRINCL</code> isn&#8217;t set, then IP header options can be set on raw sockets with <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2); see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for more information. </p>
 <p> Starting with Linux 2.2, all IP header fields and options can be set using IP socket options. This means raw sockets are usually needed only for new protocols or protocols with no user interface (like ICMP). </p>
@@ -58,27 +56,27 @@ raw_socket = socket(AF_INET, SOCK_RAW, int protocol);</code></pre>
 <h3>Socket options</h3>
 <p>Raw socket options can be set with <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) and read with <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2) by passing the <code>IPPROTO_RAW</code> family flag.</p>
 <dl>
-<dt><code>ICMP_FILTER</code></p>
-<dd>Enable a special filter for raw sockets bound to the <code>IPPROTO_ICMP</code> protocol. The value has a bit set for each ICMP message type which should be filtered out. The default is to filter no ICMP messages.</dl>
+<dt><code>ICMP_FILTER</code></dt>
+<dd>Enable a special filter for raw sockets bound to the <code>IPPROTO_ICMP</code> protocol. The value has a bit set for each ICMP message type which should be filtered out. The default is to filter no ICMP messages.</dd></dl>
 <p> In addition, all <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) <code>IPPROTO_IP</code> socket options valid for datagram sockets are supported.</p>
 <h3>Error handling</h3>
 <p>Errors originating from the network are passed to the user only when the socket is connected or the <code>IP_RECVERR</code> flag is enabled. For connected sockets, only <code>EMSGSIZE</code> and <code>EPROTO</code> are passed for compatibility. With <code>IP_RECVERR</code>, all network errors are saved in the error queue.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>User tried to send to a broadcast address without having the broadcast flag set on the socket.</p>
-<dt><code>EFAULT</code></p>
-<dd>An invalid memory address was supplied.</p>
-<dt><code>EINVAL</code></p>
-<dd>Invalid argument.</p>
-<dt><code>EMSGSIZE</code></p>
-<dd>Packet too big. Either Path MTU Discovery is enabled (the <code>IP_MTU_DISCOVER</code> socket flag) or the packet size exceeds the maximum allowed IPv4 packet size of 64 kB.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd>Invalid flag has been passed to a socket call (like <code>MSG_OOB</code>).</p>
-<dt><code>EPERM</code></p>
-<dd>The user doesn&#8217;t have permission to open raw sockets. Only processes with an effective user ID of 0 or the <code>CAP_NET_RAW</code> attribute may do that.</p>
-<dt><code>EPROTO</code></p>
-<dd>An ICMP error has arrived reporting a parameter problem.</dl>
+<dt><code>EACCES</code></dt>
+<dd>User tried to send to a broadcast address without having the broadcast flag set on the socket.</dd>
+<dt><code>EFAULT</code></dt>
+<dd>An invalid memory address was supplied.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid argument.</dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd>Packet too big. Either Path MTU Discovery is enabled (the <code>IP_MTU_DISCOVER</code> socket flag) or the packet size exceeds the maximum allowed IPv4 packet size of 64 kB.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd>Invalid flag has been passed to a socket call (like <code>MSG_OOB</code>).</dd>
+<dt><code>EPERM</code></dt>
+<dd>The user doesn&#8217;t have permission to open raw sockets. Only processes with an effective user ID of 0 or the <code>CAP_NET_RAW</code> attribute may do that.</dd>
+<dt><code>EPROTO</code></dt>
+<dd>An ICMP error has arrived reporting a parameter problem.</dd></dl>
 <h2>Versions</h2>
 <p><code>IP_RECVERR</code> and <code>ICMP_FILTER</code> are new in Linux 2.2. They are Linux extensions and should not be used in portable programs. </p>
 <p> Linux 2.0 enabled some bug-to-bug compatibility with BSD in the raw socket code when the <code>SO_BSDCOMPAT</code> socket option was set; since Linux 2.2, this option no longer has that effect.</p>

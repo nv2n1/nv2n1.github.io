@@ -10,26 +10,14 @@ description: "ql/math/statistics/sequencestatistics.hpp – Statistics tools for
 <p>ql/math/statistics/sequencestatistics.hpp &#8211; Statistics tools for sequence (vector, list, array) samples. </p>
 <h2>Synopsis</h2>
 <pre><code>#define DEFINE_SEQUENCE_STAT_CONST_METHOD_VOID(METHOD)
-
-
-
 #define DEFINE_SEQUENCE_STAT_CONST_METHOD_DOUBLE(METHOD)
-
-
-
 Typedefs</code></pre>
 <h3>Classes</h3>
 <p>class <code>GenericSequenceStatistics&lt; StatisticsType &gt;</code><br />
  <i>Statistics analysis of N-dimensional (sequence) data. </i></p>
 <h3>Defines</h3>
 <pre><code>#define DEFINE_SEQUENCE_STAT_CONST_METHOD_VOID(METHOD)
-
-
-
 #define DEFINE_SEQUENCE_STAT_CONST_METHOD_DOUBLE(METHOD)
-
-
-
 Typedefs</code></pre>
 <p> typedef GenericSequenceStatistics&lt; Statistics &gt; <code>SequenceStatistics</code><br />
  <i>default multi-dimensional statistics tool </i><br />

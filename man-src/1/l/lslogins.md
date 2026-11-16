@@ -20,117 +20,117 @@ description: "lslogins – display information about known users in the system"
 <p> <code>-a</code>, <code>&#8211;acc-expiration</code></p>
 <dl>
 <dt>
-<dd> Display data about the date of last password change and the account expiration date (see <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) for more info). (Requires root privileges.)</dl>
+</dt><dd> Display data about the date of last password change and the account expiration date (see <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) for more info). (Requires root privileges.)</dd></dl>
 <p> <code>&#8211;btmp-file</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Alternate path for btmp.</dl>
+</dt><dd> Alternate path for btmp.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;colon-separate</code></p>
 <dl>
 <dt>
-<dd> Separate info about each user with a colon instead of a newline.</dl>
+</dt><dd> Separate info about each user with a colon instead of a newline.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;export</code></p>
 <dl>
 <dt>
-<dd> Output data in the format of NAME=VALUE.</dl>
+</dt><dd> Output data in the format of NAME=VALUE.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;failed</code></p>
 <dl>
 <dt>
-<dd> Display data about the users&#8217; last failed login attempts.</dl>
+</dt><dd> Display data about the users&#8217; last failed login attempts.</dd></dl>
 <p> <code>-G</code>, <code>&#8211;supp-groups</code></p>
 <dl>
 <dt>
-<dd> Show information about supplementary groups.</dl>
+</dt><dd> Show information about supplementary groups.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;groups</code>=<i>groups</i></p>
 <dl>
 <dt>
-<dd> Only show data of users belonging to <i>groups</i>. More than one group may be specified; the list has to be comma-separated. Unknown group names are ignored. </p>
+</dt><dd> Only show data of users belonging to <i>groups</i>. More than one group may be specified; the list has to be comma-separated. Unknown group names are ignored. </dd>
 <p> Note that relation between user and group may be invisible for primary group if the user is not explicitly specify as group member (e.g., in <i>/etc/group</i>). If the command <code>lslogins</code> scans for groups than it uses groups database only, and user database with primary GID is not used at all.</dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help information and exit.</dl>
+</dt><dd> Display help information and exit.</dd></dl>
 <p> <code>-L</code>, <code>&#8211;last</code></p>
 <dl>
 <dt>
-<dd> Display data containing information about the users&#8217; last login sessions.</dl>
+</dt><dd> Display data containing information about the users&#8217; last login sessions.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;logins</code>=<i>logins</i></p>
 <dl>
 <dt>
-<dd> Only show data of users with a login specified in <i>logins</i> (user names or user IDS). More than one login may be specified; the list has to be comma-separated. Unknown login names are ignored.</dl>
+</dt><dd> Only show data of users with a login specified in <i>logins</i> (user names or user IDS). More than one login may be specified; the list has to be comma-separated. Unknown login names are ignored.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;newline</code></p>
 <dl>
 <dt>
-<dd> Display each piece of information on a separate line.</dl>
+</dt><dd> Display each piece of information on a separate line.</dd></dl>
 <p> <code>&#8211;noheadings</code></p>
 <dl>
 <dt>
-<dd> Do not print a header line.</dl>
+</dt><dd> Do not print a header line.</dd></dl>
 <p> <code>&#8211;notruncate</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t truncate output.</dl>
+</dt><dd> Don&#8217;t truncate output.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
 <dt>
-<dd> Specify which output columns to print. The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i>.</dl>
+</dt><dd> Specify which output columns to print. The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i>.</dd></dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
 <dt>
-<dd> Output all available columns. <code>&#8211;help</code> to get a list of all supported columns.</dl>
+</dt><dd> Output all available columns. <code>&#8211;help</code> to get a list of all supported columns.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pwd</code></p>
 <dl>
 <dt>
-<dd> Display information related to login by password (see also <code>-afL).</code></dl>
+</dt><dd> Display information related to login by password (see also <code>-afL).</code></dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
 <dt>
-<dd> Raw output (no columnation).</dl>
+</dt><dd> Raw output (no columnation).</dd></dl>
 <p> <code>-s</code>, <code>&#8211;system-accs</code></p>
 <dl>
 <dt>
-<dd> Show system accounts. These are by default all accounts with a UID between 101 and 999 (inclusive), with the exception of either nobody or nfsnobody (UID 65534). This hardcoded default may be overwritten by parameters SYS_UID_MIN and SYS_UID_MAX in the file <i>/etc/login.defs</i>.</dl>
+</dt><dd> Show system accounts. These are by default all accounts with a UID between 101 and 999 (inclusive), with the exception of either nobody or nfsnobody (UID 65534). This hardcoded default may be overwritten by parameters SYS_UID_MIN and SYS_UID_MAX in the file <i>/etc/login.defs</i>.</dd></dl>
 <p> <code>&#8211;time-format</code> <i>type</i></p>
 <dl>
 <dt>
-<dd> Display dates in short, full or iso format. The default is short, this time format is designed to be space efficient and human readable.</dl>
+</dt><dd> Display dates in short, full or iso format. The default is short, this time format is designed to be space efficient and human readable.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;user-accs</code></p>
 <dl>
 <dt>
-<dd> Show user accounts. These are by default all accounts with UID above 1000 (inclusive), with the exception of either nobody or nfsnobody (UID 65534). This hardcoded default maybe overwritten by parameters UID_MIN and UID_MAX in the file <i>/etc/login.defs</i>.</dl>
+</dt><dd> Show user accounts. These are by default all accounts with UID above 1000 (inclusive), with the exception of either nobody or nfsnobody (UID 65534). This hardcoded default maybe overwritten by parameters UID_MIN and UID_MAX in the file <i>/etc/login.defs</i>.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>&#8211;wtmp-file</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Alternate path for wtmp.</dl>
+</dt><dd> Alternate path for wtmp.</dd></dl>
 <p> <code>&#8211;lastlog</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> Alternate path for <code><a href="/docs/linux/man/8-lastlog/">lastlog</a></code>(8).</dl>
+</dt><dd> Alternate path for <code><a href="/docs/linux/man/8-lastlog/">lastlog</a></code>(8).</dd></dl>
 <p> <code>-Z</code>, <code>&#8211;context</code></p>
 <dl>
 <dt>
-<dd> Display the users&#8217; security context.</dl>
+</dt><dd> Display the users&#8217; security context.</dd></dl>
 <p> <code>-z</code>, <code>&#8211;print0</code></p>
 <dl>
 <dt>
-<dd> Delimit user entries with a nul character, instead of a newline.</dl>
+</dt><dd> Delimit user entries with a nul character, instead of a newline.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0</p>
 <dl>
 <dt>
-<dd> if OK,</dl>
+</dt><dd> if OK,</dd></dl>
 <p> 1</p>
 <dl>
 <dt>
-<dd> if incorrect arguments specified,</dl>
+</dt><dd> if incorrect arguments specified,</dd></dl>
 <p> 2</p>
 <dl>
 <dt>
-<dd> if a serious error occurs (e.g., a corrupt log).</dl>
+</dt><dd> if a serious error occurs (e.g., a corrupt log).</dd></dl>
 <h2>NOTES</h2>
 <p> The default UID thresholds are read from <i>/etc/login.defs</i>.</p>
 <h2>HISTORY</h2>

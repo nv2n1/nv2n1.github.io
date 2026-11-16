@@ -12,12 +12,12 @@ description: "cmake-language – CMake Language Reference"
 <p>CMake input files are written in the &quot;CMake Language&quot; in source files named <code>CMakeLists.txt</code> or ending in a <code>.cmake</code> file name extension. </p>
 <p> CMake Language source files in a project are organized into:</p>
 <dl>
-<dt>&bull;</p>
-<dd><i>Directories</i> (<code>CMakeLists.txt</code>),</p>
-<dt>&bull;</p>
-<dd><i>Scripts</i> (<code>&lt;script&gt;.cmake</code>), and</p>
-<dt>&bull;</p>
-<dd><i>Modules</i> (<code>&lt;module&gt;.cmake</code>).</dl>
+<dt>&bull;</dt>
+<dd><i>Directories</i> (<code>CMakeLists.txt</code>),</dd>
+<dt>&bull;</dt>
+<dd><i>Scripts</i> (<code>&lt;script&gt;.cmake</code>), and</dd>
+<dt>&bull;</dt>
+<dd><i>Modules</i> (<code>&lt;module&gt;.cmake</code>).</dd></dl>
 <h3>Directories</h3>
 <p>When CMake processes a project source tree, the entry point is a source file called <code>CMakeLists.txt</code> in the top-level source directory. This file may contain the entire build specification or use the <code>add_subdirectory()</code> command to add subdirectories to the build. Each subdirectory added by the command must also contain a <code>CMakeLists.txt</code> file as the entry point to that directory. For each source directory whose <code>CMakeLists.txt</code> file is processed CMake generates a corresponding directory in the build tree to act as the default working and output directory.</p>
 <h3>Scripts</h3>
@@ -120,10 +120,12 @@ endforeach()</pre>
 <p>An <i>escape sequence</i> is a <code>\</code> followed by one character: </p>
 <pre><code>escape_sequence </code> ::= <i>escape_identity</i> | <i>escape_encoded</i> | <i>escape_semicolon</i>
 <code>escape_identity </code> ::= '\' &lt;match '[^A-Za-z0-9;]'&gt;
-<code>escape_encoded </code> ::= '	' | '' | '
+<code>escape_encoded </code> ::= '	' | '
+' | '
 '
 <code>escape_semicolon</code> ::= '\;'</pre>
-<p>A <code>\</code> followed by a non-alphanumeric character simply encodes the literal character without interpreting it as syntax. A <code>	</code>, <code></code>, or <code>
+<p>A <code>\</code> followed by a non-alphanumeric character simply encodes the literal character without interpreting it as syntax. A <code>	</code>, <code>
+</code>, or <code>
 </code> encodes a tab, carriage return, or newline character, respectively. A <code>\;</code> outside of any <i>Variable References</i> encodes itself but may be used in an <i>Unquoted Argument</i> to encode the <code>;</code> without dividing the argument value on it. A <code>\;</code> inside <i>Variable References</i> encodes the literal <code>;</code> character. (See also policy <code>CMP0053</code> documentation for historical considerations.)</p>
 <h3>Variable References</h3>
 <p>A <i>variable reference</i> has the form <code>${variable_name}</code> and is evaluated inside a <i>Quoted Argument</i> or an <i>Unquoted Argument</i>. A variable reference is replaced by the value of the variable, or by the empty string if the variable is not set. Variable references can nest and are evaluated from the inside out, e.g. <code>${outer_${inner_variable}_variable}</code>. </p>
@@ -161,13 +163,13 @@ message(&quot;First Argument
 <p>Variables are the basic unit of storage in the CMake Language. Their values are always of string type, though some commands may interpret the strings as values of other types. The <code>set()</code> and <code>unset()</code> commands explicitly set or unset a variable, but other commands have semantics that modify variables as well. Variable names are case-sensitive and may consist of almost any text, but we recommend sticking to names consisting only of alphanumeric characters plus <code>_</code> and <code>&#8211;</code>. </p>
 <p> Variables have dynamic scope. Each variable &quot;set&quot; or &quot;unset&quot; creates a binding in the current scope:</p>
 <dl>
-<dt><code>Function Scope</code></p>
-<dd><i>Command Definitions</i> created by the <code>function()</code> command create commands that, when invoked, process the recorded commands in a new variable binding scope. A variable &quot;set&quot; or &quot;unset&quot; binds in this scope and is visible for the current function and any nested calls, but not after the function returns.</p>
-<dt><code>Directory Scope</code></p>
-<dd>Each of the <i>Directories</i> in a source tree has its own variable bindings. Before processing the <code>CMakeLists.txt</code> file for a directory, CMake copies all variable bindings currently defined in the parent directory, if any, to initialize the new directory scope. CMake <i>Scripts</i>, when processed with <code>cmake -P</code>, bind variables in one &quot;directory&quot; scope. </p>
+<dt><code>Function Scope</code></dt>
+<dd><i>Command Definitions</i> created by the <code>function()</code> command create commands that, when invoked, process the recorded commands in a new variable binding scope. A variable &quot;set&quot; or &quot;unset&quot; binds in this scope and is visible for the current function and any nested calls, but not after the function returns.</dd>
+<dt><code>Directory Scope</code></dt>
+<dd>Each of the <i>Directories</i> in a source tree has its own variable bindings. Before processing the <code>CMakeLists.txt</code> file for a directory, CMake copies all variable bindings currently defined in the parent directory, if any, to initialize the new directory scope. CMake <i>Scripts</i>, when processed with <code>cmake -P</code>, bind variables in one &quot;directory&quot; scope. </dd>
 <p> A variable &quot;set&quot; or &quot;unset&quot; not inside a function call binds to the current directory scope.</p>
-<dt><code>Persistent Cache</code></p>
-<dd>CMake stores a separate set of &quot;cache&quot; variables, or &quot;cache entries&quot;, whose values persist across multiple runs within a project build tree. Cache entries have an isolated binding scope modified only by explicit request, such as by the <code>CACHE</code> option of the <code>set()</code> and <code>unset()</code> commands. </p>
+<dt><code>Persistent Cache</code></dt>
+<dd>CMake stores a separate set of &quot;cache&quot; variables, or &quot;cache entries&quot;, whose values persist across multiple runs within a project build tree. Cache entries have an isolated binding scope modified only by explicit request, such as by the <code>CACHE</code> option of the <code>set()</code> and <code>unset()</code> commands. </dd>
 <p> When evaluating <i>Variable References</i>, CMake first searches the function call stack, if any, for a binding and then falls back to the binding in the current directory scope, if any. If a &quot;set&quot; binding is found, its value is used. If an &quot;unset&quot; binding is found, or no binding is found, CMake then searches for a cache entry. If a cache entry is found, its value is used. Otherwise, the variable reference evaluates to an empty string. </p>
 <p> The <code><a href="/docs/linux/man/7-cmake3-variables/">cmake3-variables</a>(7)</code> manual documents many variables that are provided by CMake or have meaning to CMake when set by project code.</dl>
 <h2>Lists</h2>
@@ -178,3 +180,4 @@ message(&quot;First Argument
 <pre>set(x a &quot;b;c&quot;) # sets &quot;x&quot; to &quot;a;b;c&quot;, not &quot;a;b\;c&quot;</pre>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>
+</p>

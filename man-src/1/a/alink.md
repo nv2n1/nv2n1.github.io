@@ -15,23 +15,23 @@ description: "alink – link (reloacatable) object files created by AS"
 <p> alink will one day be a the linker companion tool to asl. It is work in progress, and it won&#8217;t be of much use for most users in its current state. Contact the author (see below) if you want to experiment with it. </p>
 <h2>COMMAND-LINE PARAMETERS</h2>
 <dl>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
 <p> be more verbose while linking. </p>
-</dl>
+</dd></dl>
 <h2>NATIONAL LANGUAGE SUPPORT</h2>
 <p> alink supports national languages in the same way as AS. See the manual page for <a href="/docs/linux/man/1-asl/">asl</a>(1) for maore information about this. </p>
 <h2>RETURN CODES</h2>
 <p> <code>alink</code> may return with the following codes:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> no errors.</p>
-<dt><code>1</code></p>
-<dd> incorrect command line parameters.</p>
-<dt><code>2</code></p>
-<dd> I/O-error.</p>
-<dt><code>3</code></p>
-<dd> An input file had an incorrect format. </p>
+<dt><code>0</code></dt>
+<dd> no errors.</dd>
+<dt><code>1</code></dt>
+<dd> incorrect command line parameters.</dd>
+<dt><code>2</code></dt>
+<dd> I/O-error.</dd>
+<dt><code>3</code></dt>
+<dd> An input file had an incorrect format. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <h2>TIPS</h2>

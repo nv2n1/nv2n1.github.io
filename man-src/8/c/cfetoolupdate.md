@@ -15,26 +15,26 @@ description: "cfetool update – Update the database with a new value"
 <p> The <code>-d</code>, <code>-w</code> and <code>-y</code> options specify the databases to update. If all three options are omitted, only the weekly database will be updated.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;value</code>|<code>-v</code> <i>value</i></p>
-<dd>Specifies a new value to update the database with.</p>
-<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></p>
-<dd>The directory in which the database specified by <i>name</i> can be found.</p>
-<dt><code>&#8211;time</code>|<code>-t</code></p>
-<dd>The time the value was collected, in seconds since epoch (January 1st, 1970). If this argument is omitted, the current time will be used.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Update the daily averages database.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Update the weekly averages database.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Update the yearly averages database.</p>
-<dt><code>&#8211;cfenvd</code>|<code>-c</code></p>
-<dd>Communicate with cfengine. If this option is specified, cfetool will define classes understandable by cfagent. For more information, refer to the documentation for <code>cfenvd</code>.</p>
-<dt><code>&#8211;histograms</code>|<code>-H</code></p>
-<dd>Collect histogram information about the probability distribiution of fluctuations about the mean value over all times of day. Cfetool won&#8217;t write anything to this file for the first four weeks, as it has to have reliable mean values in order to accurately calculate it.</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd>Print details of the command&#8217;s execution to the standard output stream.</p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Print a short help message and then exit.</dl>
+<dt><code>&#8211;value</code>|<code>-v</code> <i>value</i></dt>
+<dd>Specifies a new value to update the database with.</dd>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>The directory in which the database specified by <i>name</i> can be found.</dd>
+<dt><code>&#8211;time</code>|<code>-t</code></dt>
+<dd>The time the value was collected, in seconds since epoch (January 1st, 1970). If this argument is omitted, the current time will be used.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Update the daily averages database.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Update the weekly averages database.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Update the yearly averages database.</dd>
+<dt><code>&#8211;cfenvd</code>|<code>-c</code></dt>
+<dd>Communicate with cfengine. If this option is specified, cfetool will define classes understandable by cfagent. For more information, refer to the documentation for <code>cfenvd</code>.</dd>
+<dt><code>&#8211;histograms</code>|<code>-H</code></dt>
+<dd>Collect histogram information about the probability distribiution of fluctuations about the mean value over all times of day. Cfetool won&#8217;t write anything to this file for the first four weeks, as it has to have reliable mean values in order to accurately calculate it.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Print a short help message and then exit.</dd></dl>
 <h2>Output</h2>
 <p>Before exiting, <tt>&quot;cfetool update&quot;</tt> will print one line to the standard output stream in the following format: </p>
 <p> yrly=<i>ynum</i>,wkly=<i>wnum</i>,dly=<i>dnum</i> </p>
@@ -75,10 +75,10 @@ description: "cfetool update – Update the database with a new value"
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

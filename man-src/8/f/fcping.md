@@ -17,40 +17,40 @@ description: "fcping – Fibre Channel Ping (ELS ECHO) tool"
 <h2>Options</h2>
 <p><code>-f</code></p>
 <dl>
-<dd>Flood ping</dl>
+<dd>Flood ping</dd></dl>
 <p> <code>-q</code></p>
 <dl>
-<dd>Quiet! just print summary</dl>
+<dd>Quiet! just print summary</dd></dl>
 <p> <code>-x</code></p>
 <dl>
-<dd>Hex dump of responses</dl>
+<dd>Hex dump of responses</dd></dl>
 <p> <code>-i</code> <i>interval</i></p>
 <dl>
-<dd>Wait <i>interval</i> seconds between each ping</dl>
+<dd>Wait <i>interval</i> seconds between each ping</dd></dl>
 <p> <code>-c</code> <i>count</i></p>
 <dl>
-<dd>Stop after sending <i>count</i> pings</dl>
+<dd>Stop after sending <i>count</i> pings</dd></dl>
 <p> <code>-h</code> <i>source</i></p>
 <dl>
-<dd>Source is <i>interface</i> like ethX, <i>MAC</i> address, <i>WWPN</i>, or <i>FC-ID</i></dl>
+<dd>Source is <i>interface</i> like ethX, <i>MAC</i> address, <i>WWPN</i>, or <i>FC-ID</i></dd></dl>
 <p> <code>-s</code> <i>size</i></p>
 <dl>
-<dd>Byte-length of ping request payload (max 2108)</dl>
+<dd>Byte-length of ping request payload (max 2108)</dd></dl>
 <p> <code>-F</code> <i>FC-ID</i></p>
 <dl>
-<dd>Destination port ID</dl>
+<dd>Destination port ID</dd></dl>
 <p> <code>-P</code> <i>WWPN</i></p>
 <dl>
-<dd>Destination world-wide port name</dl>
+<dd>Destination world-wide port name</dd></dl>
 <p> <code>-N</code> <i>WWNN</i></p>
 <dl>
-<dd>Destination world-wide node name</dl>
+<dd>Destination world-wide node name</dd></dl>
 <h2>Examples</h2>
 <p>Sends ELS ECHO to Port FC-ID 0xbf0027 from interface n0.170 with max 3 pings. </p>
 <dl>
 <dd>
 <pre>fcping -c 3 -h n0.170 -F 0xbf0027</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>sending echo to 0xBF0027
@@ -58,12 +58,12 @@ echo 1 accepted 16.170 ms
 echo 2 accepted 7.053 ms
 echo 3 accepted 6.803 ms
 3 frames sent, 3 received 0 errors, 0.000% loss, avg. rt time 10.009 ms</pre>
-</dl>
+</dd></dl>
 <p> Sends ELS ECHO to WWNN 0x1000001B213C9DDA from interface n0.170 with max 3 pings and payload size 1500 bytes </p>
 <dl>
 <dd>
 <pre>fcping -c 3 -h n0.170 -s 1500 -N 0x1000001B213C9DDA</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>sending echo to 0xBF0027
@@ -71,12 +71,12 @@ echo 1 accepted 6.597 ms
 echo 2 accepted 6.925 ms
 echo 3 accepted 12.419 ms
 3 frames sent, 3 received 0 errors, 0.000% loss, avg. rt time 8.647 ms</pre>
-</dl>
+</dd></dl>
 <p> Sends ELS ECHO to WWNN 0x1000001B213C9DDA from interface n0.170 continuously with payload of 32 bytes and hex-dump the reply to the screen </p>
 <dl>
 <dd>
 <pre>fcping -x -h n0.170 -s 32 -N 0x1000001B213C9DDA</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>sending echo to 0xBF0027
@@ -84,21 +84,21 @@ echo 1 accepted 6.937 ms
 response length 32
  0 02000000 00000001 00010203 04050607
  10 08090a0b 0c0d0e0f 10111213 14151617</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>echo 2 accepted 6.923 ms
 response length 32
  0 02000000 00000002 00010203 04050607
  10 08090a0b 0c0d0e0f 10111213 14151617</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>echo 3 accepted 84.929 ms
 response length 32
  0 02000000 00000003 00010203 04050607
  10 08090a0b 0c0d0e0f 10111213 14151617</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fcoeadm/">fcoeadm</a></code>(8)</p>
 <h2>Support</h2>

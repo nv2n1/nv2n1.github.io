@@ -19,7 +19,7 @@ description: "dlasq1.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLASQ1 computes the singular values of a real N-by-N bidiagonal
  matrix with diagonal D and off-diagonal E. The singular values
@@ -32,11 +32,11 @@ description: "dlasq1.f –"
  and the present implementation is described in &quot;An implementation of
  the dqds Algorithm (Positive Case)&quot;, LAPACK Working Note.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
         The number of rows and columns in the matrix. N &gt;= 0.
@@ -78,14 +78,14 @@ description: "dlasq1.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 109 of file dlasq1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

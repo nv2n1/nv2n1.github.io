@@ -18,9 +18,6 @@ description: "std::_List_node< _Tp > –"
 <p> void <code>_M_unhook</code> () noexcept</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static void swap (_List_node_base &amp;__x, _List_node_base &amp;__y) noexcept
-
-
-
 Public Attributes</code></pre>
 <p> _Tp <code>_M_data</code> </p>
 <p> _List_node_base * <code>_M_next</code> </p>

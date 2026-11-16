@@ -39,37 +39,37 @@ nvme security - send[&lt;device&gt;][--file = &lt;file&gt; | -f&lt;file&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Target a specific namespace for this security command.</dl>
+</dt><dd> Target a specific namespace for this security command.</dd></dl>
  
 
  -N &lt;nssf&gt;, --nssf=&lt;nssf&gt;
 <dl>
 <dt>
-<dd> NVMe Security Specific field. If using security protocol EAh assigned for NVMe use, the NVMe security specific field indicates which reply memory buffer target.</dl>
+</dt><dd> NVMe Security Specific field. If using security protocol EAh assigned for NVMe use, the NVMe security specific field indicates which reply memory buffer target.</dd></dl>
  
 
  -f &lt;file&gt;, --file=&lt;file&gt;
 <dl>
 <dt>
-<dd> Path to file used as the security protocol's payload. Required argument.</dl>
+</dt><dd> Path to file used as the security protocol's payload. Required argument.</dd></dl>
  
 
  -p &lt;security-protocol&gt;, --secp=&lt;security-protocol&gt;
 <dl>
 <dt>
-<dd> Security Protocol: This field specifies the security protocol as defined in SPC-4. The controller shall fail the command with Invalid Parameter indicated if a reserved value of the Security Protocol is specified.</dl>
+</dt><dd> Security Protocol: This field specifies the security protocol as defined in SPC-4. The controller shall fail the command with Invalid Parameter indicated if a reserved value of the Security Protocol is specified.</dd></dl>
  
 
  -s &lt;security-protocol-specific&gt;, --spsp=&lt;security-protocol-specific&gt;
 <dl>
 <dt>
-<dd> SP Specific: The value of this field is specific to the Security Protocol as defined in SPC-4.</dl>
+</dt><dd> SP Specific: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
  
 
  -t &lt;trans-length&gt;, --tl=&lt;trans-length&gt;
 <dl>
 <dt>
-<dd> Transfer Length: The value of this field is specific to the Security Protocol as defined in SPC-4.</dl>
+</dt><dd> Transfer Length: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

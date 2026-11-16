@@ -23,19 +23,19 @@ The configuration for report_RHTSupport event is read from /etc/libreport/events
  Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are: 
 
  <i>RHTSupport_URL</i>
-<dl><dd>Address of the Red Hat support portal</dl>
+<dl><dd>Address of the Red Hat support portal</dd></dl>
  
 
  <i>RHTSupport_Login</i>
-<dl><dd>Red Hat customer user name</dl>
+<dl><dd>Red Hat customer user name</dd></dl>
  
 
  <i>RHTSupport_Password</i>
-<dl><dd>Red Hat customer user password</dl>
+<dl><dd>Red Hat customer user password</dd></dl>
  
 
  <i>RHTSupport_SSLVerify</i>
-<dl><dd>Use yes/true/on/1 to verify server's SSL certificate. (default: yes)</dl>
+<dl><dd>Use yes/true/on/1 to verify server's SSL certificate. (default: yes)</dd></dl>
 
 <h2>See Also</h2>
 
@@ -43,4 +43,4 @@ The configuration for report_RHTSupport event is read from /etc/libreport/events
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

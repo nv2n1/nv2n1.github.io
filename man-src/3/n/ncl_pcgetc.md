@@ -21,15 +21,15 @@ CALL PCGETC (PNAM,CVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
-<dt>CVAL
-<dd>(an output variable of type CHARACTER) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first two characters of the string. If the internal parameter is one of the two ('BC' and 'CC') that are arrays, the index of the desired array element may appear, enclosed in parentheses, in columns 3 and following. Other characters may be used to document the use of the parameter being retrieved; for example, instead of just 'MA', one can use 'MA - MAPPING FLAG' and, instead of 'CC(10)', one can use 'CC(10) - SPECIAL COLOR 10'.
+</dd><dt>CVAL
+</dt><dd>(an output variable of type CHARACTER) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl><dt>len
-<dd>The size of cval as dimensioned in the calling program.</dl>
+</dt><dd>The size of cval as dimensioned in the calling program.</dd></dl>
 
 <h2>Usage</h2>
 

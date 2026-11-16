@@ -10,9 +10,7 @@ description: "strspn, strcspn – get length of a prefix substring"
 <p>strspn, strcspn &#8211; get length of a prefix substring</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;string.h&gt;
-
 size_t strspn(const char *s, const char *accept);
-
 size_t strcspn(const char *s, const char *reject);</code></pre>
 <h2>Description</h2>
 <p>The <code>strspn</code>() function calculates the length (in bytes) of the initial segment of <i>s</i> which consists entirely of bytes in <i>accept</i>. </p>

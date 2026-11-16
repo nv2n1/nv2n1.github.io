@@ -18,27 +18,27 @@ description: "update-java-alternatives – update alternatives for jre/sdk insta
 <p>update-java-alternatives updates all alternatives belonging to one runtime or development kit for the Java language. A package does provide these information of it&#8217;s alternatives in /usr/lib/jvm/.&lt;jname&gt;.jinfo.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-l|&#8211;list [&lt;jname&gt;]</code></p>
-<dd>List all installed packages (or just &lt;jname&gt;) providing information to set a bunch of java alternatives. Verbose output shows each alternative provided by the packages.</p>
-<dt><code>-a|&#8211;auto</code></p>
-<dd>Switch all alternatives of registered jre/sdk installations to automatic mode.</p>
-<dt><code>-s|&#8211;set &lt;jname&gt;</code></p>
-<dd>Set all alternatives of the registered jre/sdk installation to the program path provided by the &lt;jname&gt; installation.</p>
-<dt><code>&#8211;jre</code></p>
-<dd>Limit the actions to alternatives belong to a runtime environment, not a development kit.</p>
-<dt><code>&#8211;jre-headless</code></p>
-<dd>Limit the actions to alternatives belong to the headless part of a runtime environment.</p>
-<dt><code>&#8211;plugin</code></p>
-<dd>Limit the actions to alternatives providing browser plugins.</p>
-<dt><code>-h|&#8211;help</code></p>
-<dd>Display a help message.</p>
-<dt><code>-v|&#8211;verbose</code></p>
-<dd>Verbose output. </p>
+<dt><code>-l|&#8211;list [&lt;jname&gt;]</code></dt>
+<dd>List all installed packages (or just &lt;jname&gt;) providing information to set a bunch of java alternatives. Verbose output shows each alternative provided by the packages.</dd>
+<dt><code>-a|&#8211;auto</code></dt>
+<dd>Switch all alternatives of registered jre/sdk installations to automatic mode.</dd>
+<dt><code>-s|&#8211;set &lt;jname&gt;</code></dt>
+<dd>Set all alternatives of the registered jre/sdk installation to the program path provided by the &lt;jname&gt; installation.</dd>
+<dt><code>&#8211;jre</code></dt>
+<dd>Limit the actions to alternatives belong to a runtime environment, not a development kit.</dd>
+<dt><code>&#8211;jre-headless</code></dt>
+<dd>Limit the actions to alternatives belong to the headless part of a runtime environment.</dd>
+<dt><code>&#8211;plugin</code></dt>
+<dd>Limit the actions to alternatives providing browser plugins.</dd>
+<dt><code>-h|&#8211;help</code></dt>
+<dd>Display a help message.</dd>
+<dt><code>-v|&#8211;verbose</code></dt>
+<dd>Verbose output. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/jvm/.*.jinfo</i></p>
-<dd>A text file describing a jre/sdk installation. Consists of some variables of the form &lt;var&gt;=&lt;value&gt; and a list of alternatives of the form jre|jdk &lt;name&gt; &lt;path&gt;. </p>
+<dt><i>/usr/lib/jvm/.*.jinfo</i></dt>
+<dd>A text file describing a jre/sdk installation. Consists of some variables of the form &lt;var&gt;=&lt;value&gt; and a list of alternatives of the form jre|jdk &lt;name&gt; &lt;path&gt;. </dd>
 </dl>
 <h2>Author</h2>
 <p>update-java-alternatives and this manual page was written by Matthias Klose &lt;doko [at] ubuntu.com&gt;.</p>

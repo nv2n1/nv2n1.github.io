@@ -11,7 +11,6 @@ description: "sc::StateInBin –"
 <p> Read objects written with <code>StateOutBin</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_bin.h&gt;</code></pre>
 <p> Inherits <code>sc::StateInFile</code>.</p>
 <h3>Public Member Functions</h3>

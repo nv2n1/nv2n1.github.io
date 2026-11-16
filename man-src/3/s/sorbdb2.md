@@ -30,9 +30,8 @@ description: "sorbdb2.f –"
  Householder vectors.
  B11 and B12 are P-by-P bidiagonal matrices represented implicitly by
  angles THETA, PHI..fi
- 
 <code>Parameters:</code>
-<dl><dt><dd><i>M</i> 
+<dl><dt></dt><dd><i>M</i> 
  M is INTEGER
  The number of rows X11 plus the number of rows in X21.</pre>
 <p><i>P</i> </p>
@@ -81,7 +80,6 @@ description: "sorbdb2.f –"
 <p><i>LWORK</i> </p>
 <pre> LWORK is INTEGER
  The dimension of the array WORK. LWORK &gt;= M-Q.
- 
  If LWORK = -1, then a workspace query is assumed; the routine
  only calculates the optimal size of the WORK array, returns
  this value as the first entry of the WORK array, and no error
@@ -90,16 +88,16 @@ description: "sorbdb2.f –"
 <pre> INFO is INTEGER
  = 0: successful exit.
  &lt; 0: if INFO = -i, the i-th argument had an illegal value.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>July 2012</dl>
+<dd>July 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -110,10 +108,10 @@ description: "sorbdb2.f –"
  P1, P2, and Q1 are represented as products of elementary reflectors.
  See SORCSD2BY1 for details on generating P1, P2, and Q1 using SORGQR
  and SORGLQ.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> Definition at line 201 of file sorbdb2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

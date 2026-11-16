@@ -22,21 +22,21 @@ CALL TDMTRI (IMRK, UMRK, VMRK, WMRK, SMRK, RTRI, MTRI, NTRI, IRST, UMIN, VMIN, W
 
 The arguments of TDMTRI are as follows:
 <dl><dt>IMRK
-<dd>(an input expression of type INTEGER) - has an absolute value between 1 and 5, inclusive, specifying the type of marker to be generated. If the value of IMRK is less than zero, the triangles will not be clipped against the sides of the data box, otherwise, they will.
-<dt>UMRK, VMRK, and WMRK
-<dd>(input expressions of type REAL) - the 3-space coordinates of the center point of the marker.
-<dt>SMRK
-<dd>(an input expression of type REAL) - the radius of the marker in 3-space.
-<dt>RTRI
-<dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
-<dt>MTRI
-<dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
-<dt>NTRI
-<dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDMTRI. If NTRI becomes equal to MTRI, TDMTRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDMTRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
-<dt>IRST
-<dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.
-<dt>UMIN, VMIN, WMIN, UMAX, VMAX, and WMAX
-<dd>(input expressions of type REAL) - each of these specifies one of the coordinate values defining the data box in 3-space. The names of these should make it clear what they are.</dl>
+</dt><dd>(an input expression of type INTEGER) - has an absolute value between 1 and 5, inclusive, specifying the type of marker to be generated. If the value of IMRK is less than zero, the triangles will not be clipped against the sides of the data box, otherwise, they will.
+</dd><dt>UMRK, VMRK, and WMRK
+</dt><dd>(input expressions of type REAL) - the 3-space coordinates of the center point of the marker.
+</dd><dt>SMRK
+</dt><dd>(an input expression of type REAL) - the radius of the marker in 3-space.
+</dd><dt>RTRI
+</dt><dd>(an input array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI, and sorted, probably by means of a call to TDOTRI.
+</dd><dt>MTRI
+</dt><dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
+</dd><dt>NTRI
+</dt><dd>(an input/output variable of type INTEGER) - keeps track of the number of triangles currently in the list. It is the user's responsibility to zero this initially and its value is increased by each call to a triangle-generating routine like TDMTRI. If NTRI becomes equal to MTRI, TDMTRI does not take an error exit; instead, it just stops generating triangles. Therefore, it's a good idea, after calling TDMTRI, to check the value of NTRI against the dimension MTRI; if they're equal, it probably means that the triangle list filled up and that the rendered surface will be incomplete.
+</dd><dt>IRST
+</dt><dd>(an input expression of type INTEGER) - specifies the index of the rendering style to to be used for the triangles added to the triangle list by this call.
+</dd><dt>UMIN, VMIN, WMIN, UMAX, VMAX, and WMAX
+</dt><dd>(input expressions of type REAL) - each of these specifies one of the coordinate values defining the data box in 3-space. The names of these should make it clear what they are.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

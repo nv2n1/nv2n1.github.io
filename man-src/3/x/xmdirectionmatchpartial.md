@@ -18,12 +18,12 @@ Boolean XmDirectionMatchPartial (<i>d1, d2, dmask</i>)
 <h2>Description</h2>
 <p><code>XmDirectionMatchPartial</code> compares <i>d1</i> and <i>d2</i> along the direction component specified by <i>dmask</i>. For example, if <i>dmask</i> equals <code>XmVERTICAL_MASK</code>, then the function will compare only the vertical components of <i>d1</i> and <i>d2</i>.</p>
 <dl COMPACT>
-<dt><i>d1</i></p>
-<dd>Specifies an <code>XmDirection</code> value to check.</p>
-<dt><i>d2</i></p>
-<dd>Specifies an <code>XmDirection</code> value to check.</p>
-<dt><i>dmask</i></p>
-<dd>Specifies the direction component along which <i>d1</i> and <i>d2</i> are to be checked. Appropriate values for <i>dmask</i> are <code>XmHORIZONTAL_MASK</code>, <code>XmVERTICAL_MASK</code>, and <code>XmPRECEDENCE_MASK</code>.</dl>
+<dt><i>d1</i></dt>
+<dd>Specifies an <code>XmDirection</code> value to check.</dd>
+<dt><i>d2</i></dt>
+<dd>Specifies an <code>XmDirection</code> value to check.</dd>
+<dt><i>dmask</i></dt>
+<dd>Specifies the direction component along which <i>d1</i> and <i>d2</i> are to be checked. Appropriate values for <i>dmask</i> are <code>XmHORIZONTAL_MASK</code>, <code>XmVERTICAL_MASK</code>, and <code>XmPRECEDENCE_MASK</code>.</dd></dl>
 <h2>Return Values</h2>
 <p>Returns True if the <i>d1</i> and <i>d2</i> match in the component specified by <i>dmask</i>; otherwise, returns False.</p>
 <h2>Related Information</h2>

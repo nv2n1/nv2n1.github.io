@@ -20,17 +20,16 @@ description: "git-count – Show commit count"
 <p> Output commit total:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git count
 total 1844
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Output verbose commit count details:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git count --all
   visionmedia (1285)
@@ -53,8 +52,7 @@ $ git count --all
   Matt Colyer (1)
   total 1844
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Tj Holowaychuk &lt;<i>tj [at] vision-media.ca</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

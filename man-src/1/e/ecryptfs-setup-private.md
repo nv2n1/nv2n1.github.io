@@ -14,28 +14,28 @@ description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 <h2>OPTIONS</h2>
 <p> Options available for the <code>ecryptfs-setup-private</code> command:</p>
 <dl>
-<dt><code>-f, &#8211;force</code></p>
-<dd> Force overwriting of an existing setup</p>
-<dt><code>-w, &#8211;wrapping</code></p>
-<dd> Use an independent wrapping passphrase, different from the login passphrase</p>
-<dt><code>-u, &#8211;username USER</code></p>
-<dd> User to setup, default is current user if omitted</p>
-<dt><code>-l, &#8211;loginpass LOGINPASS</code></p>
-<dd> System passphrase for USER, used to wrap MOUNTPASS, will interactively prompt if omitted</p>
-<dt><code>-m, &#8211;mountpass MOUNTPASS</code></p>
-<dd> Passphrase for mounting the ecryptfs directory, default is 16 bytes from /dev/random if omitted</p>
-<dt><code>-b, &#8211;bootstrap</code></p>
-<dd> Bootstrap a new user&#8217;s entire home directory</p>
-<dt><code>&#8211;undo</code></p>
-<dd> Display instructions on how to undo an encrypted private setup</p>
-<dt><code>-n, &#8211;no-fnek</code></p>
-<dd> Do not encrypt filenames; otherwise, filenames will be encrypted on systems which support filename encryption</p>
-<dt><code>&#8211;nopwcheck</code></p>
-<dd> Do not check the validity of the specified login password (useful for LDAP user accounts)</p>
-<dt><code>&#8211;noautomount</code></p>
-<dd> Setup this user such that the encrypted private directory is not automatically mounted on login</p>
-<dt><code>&#8211;noautoumount</code></p>
-<dd> Setup this user such that the encrypted private directory is not automatically unmounted at logout </p>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> Force overwriting of an existing setup</dd>
+<dt><code>-w, &#8211;wrapping</code></dt>
+<dd> Use an independent wrapping passphrase, different from the login passphrase</dd>
+<dt><code>-u, &#8211;username USER</code></dt>
+<dd> User to setup, default is current user if omitted</dd>
+<dt><code>-l, &#8211;loginpass LOGINPASS</code></dt>
+<dd> System passphrase for USER, used to wrap MOUNTPASS, will interactively prompt if omitted</dd>
+<dt><code>-m, &#8211;mountpass MOUNTPASS</code></dt>
+<dd> Passphrase for mounting the ecryptfs directory, default is 16 bytes from /dev/random if omitted</dd>
+<dt><code>-b, &#8211;bootstrap</code></dt>
+<dd> Bootstrap a new user&#8217;s entire home directory</dd>
+<dt><code>&#8211;undo</code></dt>
+<dd> Display instructions on how to undo an encrypted private setup</dd>
+<dt><code>-n, &#8211;no-fnek</code></dt>
+<dd> Do not encrypt filenames; otherwise, filenames will be encrypted on systems which support filename encryption</dd>
+<dt><code>&#8211;nopwcheck</code></dt>
+<dd> Do not check the validity of the specified login password (useful for LDAP user accounts)</dd>
+<dt><code>&#8211;noautomount</code></dt>
+<dd> Setup this user such that the encrypted private directory is not automatically mounted on login</dd>
+<dt><code>&#8211;noautoumount</code></dt>
+<dd> Setup this user such that the encrypted private directory is not automatically unmounted at logout </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-setup-private</code> is a program that sets up a private cryptographic mountpoint for a non-root user. </p>
@@ -64,13 +64,13 @@ description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 <p> <i>~/.ecryptfs/wrapping-independent</i> &#8211; this file exists if the wrapping passphrase is independent from login passphrase </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-ecryptfs-rewrap-passphrase/">ecryptfs-rewrap-passphrase</a></code>(1), <code><a href="/docs/linux/man/1-mount-ecryptfs_private/">mount.ecryptfs_private</a></code>(1), <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8), <code><a href="/docs/linux/man/1-umount-ecryptfs_private/">umount.ecryptfs_private</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/1-ecryptfs-rewrap-passphrase/">ecryptfs-rewrap-passphrase</a></code>(1), <code><a href="/docs/linux/man/1-mount-ecryptfs_private/">mount.ecryptfs_private</a></code>(1), <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8), <code><a href="/docs/linux/man/1-umount-ecryptfs_private/">umount.ecryptfs_private</a></code>(1)</dt>
 <dd>
-<dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></p>
+</dd><dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></dt>
 <dd>
-<dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></p>
+</dd><dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage and the <code>ecryptfs-setup-private</code> utility was written by Dustin Kirkland &lt;kirkland [at] ubuntu.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian and Ubuntu systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

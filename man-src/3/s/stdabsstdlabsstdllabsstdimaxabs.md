@@ -39,12 +39,9 @@ In 2's complement systems, the absolute value of the most-negative value is out 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;climits&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;abs(+3) = &quot; &lt;&lt; std::abs(3) &lt;&lt; '\n'
               &lt;&lt; &quot;abs(-3) = &quot; &lt;&lt; std::abs(-3) &lt;&lt; '\n';

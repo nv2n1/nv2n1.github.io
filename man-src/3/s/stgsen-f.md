@@ -38,10 +38,10 @@ description: "stgsen.f –"
  the selected cluster and the eigenvalues outside the cluster, resp.,
  and norms of &quot;projections&quot; onto left and right eigenspaces w.r.t.
  the selected cluster in the (1,1)-block.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>IJOB</i> </p>
+<dd><i>IJOB</i> </dd>
 <pre> IJOB is INTEGER
  Specifies whether condition numbers are required for the
  cluster of eigenvalues (PL and PR) or the deflating subspaces
@@ -190,13 +190,13 @@ description: "stgsen.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -271,10 +271,10 @@ description: "stgsen.f –"
  based estimate DIF is not wanted (see SLATDF), then the parameter
  IDIFJB (see below) should be changed from 3 to 4 (routine SLATDF
  (IJOB = 2 will be used)). See STGSYL for more details.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dd>
@@ -295,7 +295,8 @@ description: "stgsen.f –"
  Sweden, December 1993, Revised April 1994, Also as LAPACK Working
  Note 75. To appear in ACM Trans. on Math. Software, Vol 22, No 1,
  1996.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 450 of file stgsen.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

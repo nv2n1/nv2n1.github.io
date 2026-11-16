@@ -21,11 +21,11 @@ description: "booldnf – converts a boolean expression to the DNF"
 <p> The command</p>
 <dl>
 <dt>
-<dd> <code>echo &#8216;a&amp;(!b|c&amp;!d)&#8217; | booldnf</code></dl>
+</dt><dd> <code>echo &#8216;a&amp;(!b|c&amp;!d)&#8217; | booldnf</code></dd></dl>
 <p> should display</p>
 <dl>
 <dt>
-<dd> <code>a&amp;c&amp;!d|a&amp;!b</code></dl>
+</dt><dd> <code>a&amp;c&amp;!d|a&amp;!b</code></dd></dl>
 <h2>LICENSE</h2>
 <p> This program is free software; you may redistribute it under the terms of the GNU General Public License. This program has absolutely no warranty.</p>
 <h2>AUTHOR</h2>

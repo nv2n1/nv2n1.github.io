@@ -17,10 +17,10 @@ description: "gtorrentviewer – BitTorrent metainfo viewer/editor."
 <h2>OPTIONS</h2>
 <p> gtorrentviewer options:</p>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> output version information and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> display a option overview and exit.</dl>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> output version information and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> display a option overview and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> GTorrentViewer was written by Alejandro Claro &lt;ap0lly0n [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Alejandro Claro &lt;ap0lly0n [at] users.sourceforge.net&gt;. </p>

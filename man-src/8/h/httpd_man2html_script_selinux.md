@@ -55,8 +55,8 @@ description: "httpd_man2html_script_selinux – Security Enhanced Linux Policy f
 <p> <code>httpd_man2html_script_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_man2html_script_exec_t type, if you want to transition an executable to the httpd_man2html_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/man2html/cgi-bin/man/mansec, /usr/lib/man2html/cgi-bin/man/man2html, /usr/lib/man2html/cgi-bin/man/manwhatis </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/man2html/cgi-bin/man/mansec, /usr/lib/man2html/cgi-bin/man/man2html, /usr/lib/man2html/cgi-bin/man/manwhatis </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

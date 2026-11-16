@@ -15,8 +15,8 @@ description: "XmCvtCTToXmString — A compound string function that converts com
 <h2>Description</h2>
 <p><code>XmCvtCTToXmString</code> converts a (<code>char *</code>) string in compound text format to a compound string. The application must call <code>XtAppInitialize</code> before calling this function. Conversion of compound text to compound strings is implementation dependent.</p>
 <dl COMPACT>
-<dt><i>text</i></p>
-<dd>Specifies a string in compound text format to be converted to a compound string.</dl>
+<dt><i>text</i></dt>
+<dd>Specifies a string in compound text format to be converted to a compound string.</dd></dl>
 <h2>Return</h2>
 <p>Returns a compound string derived from the compound text. The function allocates space to hold the returned compound string. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XmStringFree</code>. The compound text is assumed to be NULL-terminated; NULLs within the compound text are handled correctly. The handling of HORIZONTAL TABULATION (HT) control characters within the compound text is undefined. The compound text format is described in the X Consortium Standard <i>Compound Text Encoding</i>.</p>
 <h2>Related</h2>

@@ -11,9 +11,7 @@ std::strpbrk - std::strpbrk
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     const char *strpbrk(const char *dest, const char *breakset);
-
 char *strpbrk(char *dest, const char *breakset);</code></pre> 
 Scans the null-terminated byte string pointed to by dest for any character from the null-terminated byte string pointed to by breakset, and returns a pointer to that character. 
 
@@ -33,12 +31,9 @@ The name stands for &quot;string pointer break&quot;, because it returns a point
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;iomanip&gt;
 int main()
-
 {
     const char *str = &quot;hello world, friend of mine!&quot;;
     const char *sep = &quot; ,!&quot;;

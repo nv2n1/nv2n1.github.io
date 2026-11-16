@@ -19,36 +19,36 @@ bool bson_append_regex(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> An ASCII C string containing the name of the field.</dl>
+<dt><code>key</code></dt>
+<dd> An ASCII C string containing the name of the field.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>regex</code></p>
-<dd> An ASCII string containing the regex.</dl>
+<dt><code>regex</code></dt>
+<dd> An ASCII string containing the regex.</dd></dl>
 <dl>
-<dt><code>options</code></p>
-<dd> An optional string containing the regex options as a string.</dl>
+<dt><code>options</code></dt>
+<dd> An optional string containing the regex options as a string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Appends a new field to <code>bson</code> of type BSON_TYPE_REGEX. <code>regex</code> should be the regex string. <code>options</code> should contain the options for the regex. </p>
 <p> Valid characters for <code>options</code> include: </p>
 <dl>
-<dt>\[bu]</p>
-<dd> <code>&#8216;i&#8217;</code> for case-insensitive.</p>
-<dt>\[bu]</p>
-<dd> <code>&#8216;m&#8217;</code> for multiple matching.</p>
-<dt>\[bu]</p>
-<dd> <code>&#8216;x&#8217;</code> for verbose mode.</p>
-<dt>\[bu]</p>
-<dd> <code>&#8216;l&#8217;</code> to make \w and \W locale dependent.</p>
-<dt>\[bu]</p>
-<dd> <code>&#8216;s&#8217;</code> for dotall mode (&#8216;.&#8217; matches everything)</p>
-<dt>\[bu]</p>
-<dd> <code>&#8216;u&#8217;</code> to make \w and \W match unicode. </p>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;i&#8217;</code> for case-insensitive.</dd>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;m&#8217;</code> for multiple matching.</dd>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;x&#8217;</code> for verbose mode.</dd>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;l&#8217;</code> to make \w and \W locale dependent.</dd>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;s&#8217;</code> for dotall mode (&#8216;.&#8217; matches everything)</dd>
+<dt>\[bu]</dt>
+<dd> <code>&#8216;u&#8217;</code> to make \w and \W match unicode. </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

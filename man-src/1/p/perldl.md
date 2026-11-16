@@ -14,7 +14,6 @@ description: "perldl – Simple shell for PDL (see also pdl2)"
 <pre>
   bash$ perldl
   pdl&gt; $a = sequence(10) # or any other perl or PDL command
-  
   bash$ pdl
   pdl&gt; print &quot;Hello, world!
 &quot;;
@@ -52,25 +51,25 @@ description: "perldl – Simple shell for PDL (see also pdl2)"
 <h3>Command execution</h3>
 <p> If you enter a simple command at the <code>perldl</code> command line, it is immediately executed in a Perl <tt>&quot;eval()&quot;</tt>. The environment is almost identical to that within a perl script, with some important exceptions:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>$_</tt> is not preserved across lines </p>
+<dt>&bull;</dt>
+<dd> <tt>$_</tt> is not preserved across lines </dd>
 <p> <tt>$_</tt> is used to hold the command line for initial processing, so at the beginning of processing of each command line, <tt>$_</tt> contains the command itself. Use variables other than <tt>$_</tt> to store values across lines.</p>
-<dt>&bull;</p>
-<dd> Scope is not preserved across lines </p>
+<dt>&bull;</dt>
+<dd> Scope is not preserved across lines </dd>
 <p> Each command line is executed in a separate <tt>&quot;eval&quot;</tt> block within perl, so scoping commands such as <tt>&quot;my&quot;</tt> and <tt>&quot;local&quot;</tt> may not perform exactly as expected &#8212; in particular, if you declare a variable with <tt>&quot;my&quot;</tt>, it is local to the particular command line on which you typed the <tt>&quot;my&quot;</tt> command, which means that it will evaporate before the next prompt is printed. (You can use <tt>&quot;my&quot;</tt> variables in a multi-line block or to isolate values within a single command line, of course). </p>
 <pre>
   NOTE: pdl2 preserves lexical scope between lines.
 </pre>
-<dt>&bull;</p>
-<dd> Execution is immediate </p>
+<dt>&bull;</dt>
+<dd> Execution is immediate </dd>
 <p> Under most circumstances, as soon as you end a line of input the line is parsed and executed. This breaks Perl&#8217;s normal dependence on semicolons as command delimiters. For example, the two-line expression </p>
 <pre>
   print &quot;Hello &quot;,
      &quot;world&quot;;
 </pre>
 <p> prints the phrase <tt>&quot;Hello world&quot;</tt> in Perl, but (under most circumstances) <tt>&quot;Hello &quot;</tt> in <code>perldl</code>.</p>
-<dt>&bull;</p>
-<dd> Multi-line execution </p>
+<dt>&bull;</dt>
+<dd> Multi-line execution </dd>
 <p> In multiline mode (which is enabled by default, see <code>Shell variables</code>, below), <code>perldl</code> searches for searches for block-like constructs with curly braces, parentheses, quotes, and related delimiters. If you leave such a construct open, <code>perldl</code> accepts more lines of input until you close the construct or explictly end the multi-line expression with ^D. Following the example above, the phrase </p>
 <pre>
   { print &quot;Hello &quot;,
@@ -92,8 +91,8 @@ description: "perldl – Simple shell for PDL (see also pdl2)"
 </pre>
 <h3>Shortcuts and aliases</h3>
 <dl>
-<dt>&bull;</p>
-<dd> The shell aliases <tt>&quot;p&quot;</tt> to be a convenient short form of <tt>&quot;print&quot;</tt>, e.g. </p>
+<dt>&bull;</dt>
+<dd> The shell aliases <tt>&quot;p&quot;</tt> to be a convenient short form of <tt>&quot;print&quot;</tt>, e.g. </dd>
 <pre><code>
 pdl &gt; p ones 5, 3
                     [
@@ -101,26 +100,26 @@ pdl &gt; p ones 5, 3
                             [1 1 1 1 1]
                             [1 1 1 1 1]]
 </code></pre>
-<dt>&bull;</p>
-<dd> <tt>&quot;q&quot;</tt> and <tt>&quot;x&quot;</tt> are short-hand for <tt>&quot;quit&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;l&quot;</tt> lists the history buffer </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;q&quot;</tt> and <tt>&quot;x&quot;</tt> are short-hand for <tt>&quot;quit&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;l&quot;</tt> lists the history buffer </dd>
 <pre>
   pdl&gt; l # list last 20 commands
   pdl&gt; l 40 # list last 40 commands
 </pre>
-<dt>&bull;</p>
-<dd> <tt>&quot;?&quot;</tt> is an alias for help </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;?&quot;</tt> is an alias for help </dd>
 <pre>
   pdl&gt; ? pdl2    # get help for new pdl2 shell
 </pre>
-<dt>&bull;</p>
-<dd> <tt>&quot;??&quot;</tt> is an alias for apropos </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;??&quot;</tt> is an alias for apropos </dd>
 <pre>
   pdl&gt; ?? PDL::Doc
 </pre>
-<dt>&bull;</p>
-<dd> help, apropos, usage and sig: all words after these commands are used verbatim and not evaluated by perl. So you can write, e.g., </p>
+<dt>&bull;</dt>
+<dd> help, apropos, usage and sig: all words after these commands are used verbatim and not evaluated by perl. So you can write, e.g., </dd>
 <pre>
   pdl&gt; help help
 </pre>
@@ -132,22 +131,22 @@ pdl &gt; p ones 5, 3
 <h3>Command-line options</h3>
 <p> <code>perldl</code> and <code>pdl</code> support several command-line options to adjust the behavior of the session. Most of them are equivalent to commands that can be entered at the <code>pdl&gt;</code> prompt. They are:</p>
 <dl>
-<dt>-glut</p>
-<dd> Load OpenGL when starting the shell (the perl OpenGL module, which is available from <font SIZE="-1">CPAN</font> must be installed). This enables readline event loop processing. Don&#8217;t use with -tk.</p>
-<dt>-tk</p>
-<dd> Load Tk when starting the shell (the perl Tk module, which is available from <font SIZE="-1">CPAN</font> must be installed). This enables readline event loop processing. Don&#8217;t use with -glut.</p>
-<dt>-f file</p>
-<dd> Loads the file before processing any user input. Any errors during the execution of the file are fatal.</p>
-<dt>-w</p>
-<dd> Runs with warning messages (i.e. the normal perl <tt>&quot;-w&quot;</tt> warnings) turned-on.</p>
-<dt>-M module</p>
-<dd> Loads the module before processing any user input. Compare corresponding <tt>&quot;perl&quot;</tt> switch.</p>
-<dt>-m module</p>
-<dd> Unloads the module before processing any user input.</p>
-<dt>-I directory</p>
-<dd> Adds directory to the include path. (i.e. the <tt>@INC</tt> array) Compare corresponding <tt>&quot;perl&quot;</tt> switch.</p>
-<dt>-V</p>
-<dd> Prints a summary of <font SIZE="-1">PDL</font> config. This information should be included with any <font SIZE="-1">PDL</font> bug report. Compare corresponding <tt>&quot;perl&quot;</tt> switch.</dl>
+<dt>-glut</dt>
+<dd> Load OpenGL when starting the shell (the perl OpenGL module, which is available from <font SIZE="-1">CPAN</font> must be installed). This enables readline event loop processing. Don&#8217;t use with -tk.</dd>
+<dt>-tk</dt>
+<dd> Load Tk when starting the shell (the perl Tk module, which is available from <font SIZE="-1">CPAN</font> must be installed). This enables readline event loop processing. Don&#8217;t use with -glut.</dd>
+<dt>-f file</dt>
+<dd> Loads the file before processing any user input. Any errors during the execution of the file are fatal.</dd>
+<dt>-w</dt>
+<dd> Runs with warning messages (i.e. the normal perl <tt>&quot;-w&quot;</tt> warnings) turned-on.</dd>
+<dt>-M module</dt>
+<dd> Loads the module before processing any user input. Compare corresponding <tt>&quot;perl&quot;</tt> switch.</dd>
+<dt>-m module</dt>
+<dd> Unloads the module before processing any user input.</dd>
+<dt>-I directory</dt>
+<dd> Adds directory to the include path. (i.e. the <tt>@INC</tt> array) Compare corresponding <tt>&quot;perl&quot;</tt> switch.</dd>
+<dt>-V</dt>
+<dd> Prints a summary of <font SIZE="-1">PDL</font> config. This information should be included with any <font SIZE="-1">PDL</font> bug report. Compare corresponding <tt>&quot;perl&quot;</tt> switch.</dd></dl>
 <h3>The startup file <i>~/.perldlrc</i></h3>
 <p> If the file <i>~/.perldlrc</i> is found it is sourced at start-up to load default modules, set shell variables, etc. If it is <font SIZE="-1">NOT</font> found the distribution file <i>PDL/default.perldlrc</i> is read instead. This loads various modules considered useful by default, and which ensure compatibility with v1.11. If you don&#8217;t like this and want a more streamlined set of your own favourite modules simple create your own <i>~/.perldlrc</i>. You may wish to start from the existing <i>PDL/default.perldlrc</i> as a template since it will not be sourced once you replace it with your own version. </p>
 <p> To set even more local defaults the file <i>local.perldlrc</i> (in the current directory) is sourced if found. This lets you load modules and define subroutines for the project in the current directory. </p>
@@ -156,41 +155,40 @@ pdl &gt; p ones 5, 3
 <h3>Shell variables</h3>
 <p> Shell variables: (<i>Note</i>: if you don&#8217;t like the defaults change them in <i>~/.perldlrc</i>)</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::ESCAPE</tt> &#8211; default value &#8216;#&#8217; </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::ESCAPE</tt> &#8211; default value &#8216;#&#8217; </dd>
 <p> Any line starting with this character is treated as a shell escape. The default value is chosen because it escapes the code from the standard perl interpreter.</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::HISTFILESIZE</tt> &#8211; default value 500 </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::HISTFILESIZE</tt> &#8211; default value 500 </dd>
 <p> This is the number of lines of perldl shell command history to keep.</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::PAGER</tt> &#8211; default value <tt>&quot;more&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::PAGER</tt> &#8211; default value <tt>&quot;more&quot;</tt> </dd>
 <p> External program to filter the output of commands. Using <tt>&quot;more&quot;</tt> prints output one screenful at a time. On Unix, setting <tt>page(1)</tt> and <tt>$PERLDL::PAGER</tt> to <tt>&quot;tee -a outfile&quot;</tt> will keep a record of the output generated by subsequent perldl commands (without paging).</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::PROMPT</tt> &#8211; default value &#8216;pdl&gt; &#8216; </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::PROMPT</tt> &#8211; default value &#8216;pdl&gt; &#8216; </dd>
 <p> Enough said But can also be set to a subroutine reference, e.g. <tt>$PERLDL::PROMPT</tt> = sub {join(&#8216;:&#8217;,(gmtime)[2,1,0]).&#8217;&gt; &#8216;} puts the current time into the prompt.</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::MULTI</tt> &#8211; default value 1 </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::MULTI</tt> &#8211; default value 1 </dd>
 <p> If this is set to a true value, then perldl will parse multi-line perl blocks: your input will not be executed until you finish a line with no outstanding group operators (such as quotes, blocks, parenthesis, or brackets) still active. Continuation lines have a different prompt that shows you what delimiters are still active. </p>
 <p> Note that this is not (yet!) a complete perl parser. In particular, Text::Balanced appears to be able to ignore quoting operatores like <tt>&quot;q/ ... /&quot;</tt> within a line, but not to be able to extend them across lines. Likewise, there is no support for the &#8216;&lt;&lt;&#8216; operator. </p>
 <p> Multiline conventional strings and {}, [], and () groupings are well supported.</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::NO_EOF</tt> &#8211; default value 0 / 1 on MSWin32 </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::NO_EOF</tt> &#8211; default value 0 / 1 on MSWin32 </dd>
 <p> Protects against accidental use of &#8220;^D&#8221; from the terminal. If this is set to a true value, then you can&#8217;t accidentally exit perldl by typing &#8220;^D&#8221;. If you set it to a value larger than 1 (and <font SIZE="-1">PERLDL::MULTI</font> is set), then you can&#8217;t use &#8220;^D&#8221; to exit multiline commands either. If you&#8217;re piping commands in from a file or pipe, this variable has no effect.</p>
-<dt>&bull;</p>
-<dd> <tt>$HOME</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>$HOME</tt> </dd>
 <p> The user&#8217;s home directory</p>
-<dt>&bull;</p>
-<dd> <tt>$PERLDL::TERM</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>$PERLDL::TERM</tt> </dd>
 <p> This is the Term::ReadLine object associated with the perldl shell. It can be used by routines called from perldl if your command is interactive.</p>
-<dt>&bull;</p>
-<dd> <tt>$PDL::toolongtoprint</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>$PDL::toolongtoprint</tt> </dd>
 <p> The maximal size pdls to print (defaults to 10,000 elements). This is not just a <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> variable but it is something that is usually needed in an interactive debugging session.</dl>
 <h3>Executing scripts from the perldl prompt</h3>
 <p> A useful idiom for developing perldl scripts or editing functions on-line is </p>
 <pre>
   pdl&gt; # emacs script &amp;
     -- add perldl code to script and save the file
-  
   pdl&gt; do 'script'
 </pre>
 <p> &#8212; substitute your favourite window-based editor for &#8217;emacs&#8217; (you may also need to change the &#8216;&amp;&#8217; on non-Unix systems). </p>
@@ -283,15 +281,12 @@ pdl &gt; p $a(3 : 8 : 2)<br />
 <pre><code>
 pdl &gt; push @PERLDL::AUTO, 'print scalar(gmtime),"
 "'
-
                               pdl &gt; print zeroes(3, 3)
                                         Sun May 3 04 : 49 : 05 1998
-
                                             [
                                                 [0 0 0]
                                                     [0 0 0]
                                                     [0 0 0]]
-
                               pdl
                               &gt; print "Boo" Sun May 3 04 : 49 : 18 1998 Boo
                               pdl
@@ -306,3 +301,4 @@ pdl &gt; push @PERLDL::AUTO, 'print scalar(gmtime),"
 <p> Finally note this is a very powerful facility &#8211; which means it should be used with caution! </p>
 <h2>Index</h2>
 </dl>
+</p>

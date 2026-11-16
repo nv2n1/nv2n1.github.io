@@ -14,14 +14,14 @@ description: "trace_softirq_raise – called immediately when a softirq is raise
 <p><i>vec_nr</i></p>
 <dl>
 <dd>
-<dd>softirq vector number</dl>
+</dd><dd>softirq vector number</dd></dl>
 <h2>Description</h2>
 <p>When used in combination with the softirq_entry tracepoint we can determine the softirq raise to run latency.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

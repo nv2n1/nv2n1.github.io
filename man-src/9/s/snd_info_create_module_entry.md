@@ -14,13 +14,13 @@ description: "snd_info_create_module_entry – create an info entry for the give
 <p><i>module</i></p>
 <dl>
 <dd>
-<dd>the module pointer</dl>
+</dd><dd>the module pointer</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>the file name</dl>
+<dd>the file name</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>the parent directory</dl>
+<dd>the parent directory</dd></dl>
 <h2>Description</h2>
 <p>Creates a new info entry and assigns it to the given module.</p>
 <h2>Return</h2>

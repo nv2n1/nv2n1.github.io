@@ -10,12 +10,12 @@ description: "generic_make_request – hand a buffer to its device driver for I/
 <p>generic_make_request &#8211; hand a buffer to its device driver for I/O</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>blk_qc_t generic_make_request(struct bio&nbsp;<wbr>*&nbsp;<wbr></code><i>bio</i><code>);</code></dl>
+<dt> <code>blk_qc_t generic_make_request(struct bio&nbsp;<wbr>*&nbsp;<wbr></code><i>bio</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>The bio describing the location in memory and on the device.</dl>
+</dd><dd>The bio describing the location in memory and on the device.</dd></dl>
 <h2>Description</h2>
 <p><code>generic_make_request</code> is used to make I/O requests of block devices. It is passed a struct bio, which describes the I/O that needs to be done. </p>
 <p> <code>generic_make_request</code> does not return any status. The success/failure status of the request, along with notification of completion, is delivered asynchronously through the bio-&gt;bi_end_io function described (one day) else where. </p>

@@ -9,12 +9,12 @@ description: "WiredTiger – Getting Started with the API WiredTiger application
 
 <p>WiredTiger &#8211; Getting Started with the API WiredTiger applications will generally use the following classes to access and manage data: </p>
 <dl>
-<dt>&bull;</p>
-<dd>a <code>WT_CONNECTION</code> represents a connection to a database. Most applications will only open one connection to a database for each process. All methods in <code>WT_CONNECTION</code> are thread safe.</p>
-<dt>&bull;</p>
-<dd>a <code>WT_SESSION</code> represents a context in which database operations are performed. Sessions are opened on a specified connection, and applications must open a single session for each thread accessing the database.</p>
-<dt>&bull;</p>
-<dd>a <code>WT_CURSOR</code> represents a cursor over a collection of data. Cursors are opened in the context of a session (which may have an associated transaction), and can query and update records. In the common case, a cursor is used to access records in a table. However, cursors can be used on subsets of tables (such as a single column or a projection of multiple columns), as an interface to statistics, configuration data or application-specific data sources.</dl>
+<dt>&bull;</dt>
+<dd>a <code>WT_CONNECTION</code> represents a connection to a database. Most applications will only open one connection to a database for each process. All methods in <code>WT_CONNECTION</code> are thread safe.</dd>
+<dt>&bull;</dt>
+<dd>a <code>WT_SESSION</code> represents a context in which database operations are performed. Sessions are opened on a specified connection, and applications must open a single session for each thread accessing the database.</dd>
+<dt>&bull;</dt>
+<dd>a <code>WT_CURSOR</code> represents a cursor over a collection of data. Cursors are opened in the context of a session (which may have an associated transaction), and can query and update records. In the common case, a cursor is used to access records in a table. However, cursors can be used on subsets of tables (such as a single column or a projection of multiple columns), as an interface to statistics, configuration data or application-specific data sources.</dd></dl>
 <p> Handles and operations are <code>configured using strings</code>, which keeps the set of methods in the API relatively small and makes the interface very similar regardless of the programming language used in the application. WiredTiger supports the C, C++, Java and Python programming languages (among others). </p>
 <p> By default, WiredTiger works as a traditional key/value store, where the keys and values are raw byte arrays accessed using a <code>WT_ITEM</code> structure. Keys and values may be up to (4GB &#8211; 512B) bytes in size, but depending on how <code>WT_SESSION::create</code> &#8216;maximum item sizes&#8217; are configured, large key and value items will be stored on overflow pages. </p>
 <p> WiredTiger also supports a <code>schema layer</code> so that keys and values types can be chosen from a list, or composite keys or values made up of columns with any combination of types. The size (4GB &#8211; 512B) byte limit on keys and values still applies. </p>

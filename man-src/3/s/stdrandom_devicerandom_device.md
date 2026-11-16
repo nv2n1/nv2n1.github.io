@@ -12,10 +12,8 @@ std::random_device::random_device - std::random_device::random_device
 
 <pre><code>random_device()
     : random_device(/*implementation-defined*/){}(1)(since C++ 11)
-
           explicit random_device(const std::string &amp;token);
 (2)(since C++ 11)
-
     random_device(const random_device &amp;) = delete;
 (3)(since C++ 11)</code></pre> 
 1) Default constructs a new std::random_device object with an implementation-defined token. 
@@ -38,10 +36,8 @@ P0935R0 C++11 default constructor was explicit made implicit
 
 Demonstrates the two commonly available types of std::random_device on Linux 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::uniform_int_distribution&lt;int&gt; d(0, 10);
     std::random_device rd1; // uses RDRND or /dev/urandom

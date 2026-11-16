@@ -14,10 +14,10 @@ description: "pci_find_resource – Return matching PCI device resource"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to query</dl>
+</dd><dd>PCI device to query</dd></dl>
 <p> <i>res</i></p>
 <dl>
-<dd>Resource to look for</dl>
+<dd>Resource to look for</dd></dl>
 <h2>Description</h2>
 <p>Goes over standard PCI resources (BARs) and checks if the given resource is partially or fully contained in any of them. In that case the matching resource is returned, <code>NULL</code> otherwise.</p>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ usb_anchor_suspend_wakeups -
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>the anchor you want to suspend wakeups on</dl>
+<dl><dd></dd><dd>the anchor you want to suspend wakeups on</dd></dl>
 
 <h2>Description</h2>
 

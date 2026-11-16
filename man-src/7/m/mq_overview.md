@@ -76,7 +76,7 @@ description: "mq_overview – overview of POSIX message queues"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h3>Versions</h3>
 <p>POSIX message queues have been supported on Linux since kernel 2.6.6. Glibc support has been provided since version 2.3.4.</p>
 <h3>Kernel configuration</h3>
@@ -88,38 +88,38 @@ description: "mq_overview – overview of POSIX message queues"
 <h3>/proc interfaces</h3>
 <p>The following interfaces can be used to limit the amount of kernel memory consumed by POSIX message queues and to set the default attributes for new message queues:</p>
 <dl>
-<dt><i>/proc/sys/fs/mqueue/msg_default</i> (since Linux 3.5)</p>
-<dd>This file defines the value used for a new queue&#8217;s <i>mq_maxmsg</i> setting when the queue is created with a call to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3) where <i>attr</i> is specified as NULL. The default value for this file is 10. The minimum and maximum are as for <i>/proc/sys/fs/mqueue/msg_max</i>. A new queue&#8217;s default <i>mq_maxmsg</i> value will be the smaller of <i>msg_default</i> and <i>msg_max</i>. Up until Linux 2.6.28, the default <i>mq_maxmsg</i> was 10; from Linux 2.6.28 to Linux 3.4, the default was the value defined for the <i>msg_max</i> limit.</p>
-<dt><i>/proc/sys/fs/mqueue/msg_max</i></p>
-<dd>This file can be used to view and change the ceiling value for the maximum number of messages in a queue. This value acts as a ceiling on the <i>attr-&gt;mq_maxmsg</i> argument given to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). The default value for <i>msg_max</i> is 10. The minimum value is 1 (10 in kernels before 2.6.28). The upper limit is <code>HARD_MSGMAX</code>. The <i>msg_max</i> limit is ignored for privileged processes (<code>CAP_SYS_RESOURCE</code>), but the <code>HARD_MSGMAX</code> ceiling is nevertheless imposed.</p>
-<dd>The definition of <code>HARD_MSGMAX</code> has changed across kernel versions:</p>
+<dt><i>/proc/sys/fs/mqueue/msg_default</i> (since Linux 3.5)</dt>
+<dd>This file defines the value used for a new queue&#8217;s <i>mq_maxmsg</i> setting when the queue is created with a call to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3) where <i>attr</i> is specified as NULL. The default value for this file is 10. The minimum and maximum are as for <i>/proc/sys/fs/mqueue/msg_max</i>. A new queue&#8217;s default <i>mq_maxmsg</i> value will be the smaller of <i>msg_default</i> and <i>msg_max</i>. Up until Linux 2.6.28, the default <i>mq_maxmsg</i> was 10; from Linux 2.6.28 to Linux 3.4, the default was the value defined for the <i>msg_max</i> limit.</dd>
+<dt><i>/proc/sys/fs/mqueue/msg_max</i></dt>
+<dd>This file can be used to view and change the ceiling value for the maximum number of messages in a queue. This value acts as a ceiling on the <i>attr-&gt;mq_maxmsg</i> argument given to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). The default value for <i>msg_max</i> is 10. The minimum value is 1 (10 in kernels before 2.6.28). The upper limit is <code>HARD_MSGMAX</code>. The <i>msg_max</i> limit is ignored for privileged processes (<code>CAP_SYS_RESOURCE</code>), but the <code>HARD_MSGMAX</code> ceiling is nevertheless imposed.</dd>
+<dd>The definition of <code>HARD_MSGMAX</code> has changed across kernel versions:</dd>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>Up to Linux 2.6.32: <i>131072&nbsp;/&nbsp;sizeof(void&nbsp;*)</i></p>
-<dt>*</p>
-<dd>Linux 2.6.33 to 3.4: <i>(32768&nbsp;*&nbsp;sizeof(void&nbsp;*) / 4)</i></p>
-<dt>*</p>
-<dd>Since Linux 3.5: 65,536</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>Up to Linux 2.6.32: <i>131072&nbsp;/&nbsp;sizeof(void&nbsp;*)</i></dd>
+<dt>*</dt>
+<dd>Linux 2.6.33 to 3.4: <i>(32768&nbsp;*&nbsp;sizeof(void&nbsp;*) / 4)</i></dd>
+<dt>*</dt>
+<dd>Since Linux 3.5: 65,536</dd></dl>
 </dl>
-<dt><i>/proc/sys/fs/mqueue/msgsize_default</i> (since Linux 3.5)</p>
-<dd>This file defines the value used for a new queue&#8217;s <i>mq_msgsize</i> setting when the queue is created with a call to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3) where <i>attr</i> is specified as NULL. The default value for this file is 8192 (bytes). The minimum and maximum are as for <i>/proc/sys/fs/mqueue/msgsize_max</i>. If <i>msgsize_default</i> exceeds <i>msgsize_max</i>, a new queue&#8217;s default <i>mq_msgsize</i> value is capped to the <i>msgsize_max</i> limit. Up until Linux 2.6.28, the default <i>mq_msgsize</i> was 8192; from Linux 2.6.28 to Linux 3.4, the default was the value defined for the <i>msgsize_max</i> limit.</p>
-<dt><i>/proc/sys/fs/mqueue/msgsize_max</i></p>
-<dd>This file can be used to view and change the ceiling on the maximum message size. This value acts as a ceiling on the <i>attr-&gt;mq_msgsize</i> argument given to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). The default value for <i>msgsize_max</i> is 8192 bytes. The minimum value is 128 (8192 in kernels before 2.6.28). The upper limit for <i>msgsize_max</i> has varied across kernel versions:</p>
+<dt><i>/proc/sys/fs/mqueue/msgsize_default</i> (since Linux 3.5)</dt>
+<dd>This file defines the value used for a new queue&#8217;s <i>mq_msgsize</i> setting when the queue is created with a call to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3) where <i>attr</i> is specified as NULL. The default value for this file is 8192 (bytes). The minimum and maximum are as for <i>/proc/sys/fs/mqueue/msgsize_max</i>. If <i>msgsize_default</i> exceeds <i>msgsize_max</i>, a new queue&#8217;s default <i>mq_msgsize</i> value is capped to the <i>msgsize_max</i> limit. Up until Linux 2.6.28, the default <i>mq_msgsize</i> was 8192; from Linux 2.6.28 to Linux 3.4, the default was the value defined for the <i>msgsize_max</i> limit.</dd>
+<dt><i>/proc/sys/fs/mqueue/msgsize_max</i></dt>
+<dd>This file can be used to view and change the ceiling on the maximum message size. This value acts as a ceiling on the <i>attr-&gt;mq_msgsize</i> argument given to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). The default value for <i>msgsize_max</i> is 8192 bytes. The minimum value is 128 (8192 in kernels before 2.6.28). The upper limit for <i>msgsize_max</i> has varied across kernel versions:</dd>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>Before Linux 2.6.28, the upper limit is <code>INT_MAX</code>.</p>
-<dt>*</p>
-<dd>From Linux 2.6.28 to 3.4, the limit is 1,048,576.</p>
-<dt>*</p>
-<dd>Since Linux 3.5, the limit is 16,777,216 (<code>HARD_MSGSIZEMAX</code>).</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>Before Linux 2.6.28, the upper limit is <code>INT_MAX</code>.</dd>
+<dt>*</dt>
+<dd>From Linux 2.6.28 to 3.4, the limit is 1,048,576.</dd>
+<dt>*</dt>
+<dd>Since Linux 3.5, the limit is 16,777,216 (<code>HARD_MSGSIZEMAX</code>).</dd></dl>
 </dl>
-<dd>The <i>msgsize_max</i> limit is ignored for privileged process (<code>CAP_SYS_RESOURCE</code>), but, since Linux 3.5, the <code>HARD_MSGSIZEMAX</code> ceiling is enforced for privileged processes.</p>
-<dt><i>/proc/sys/fs/mqueue/queues_max</i></p>
-<dd>This file can be used to view and change the system-wide limit on the number of message queues that can be created. The default value for <i>queues_max</i> is 256. No ceiling is imposed on the <i>queues_max</i> limit; privileged processes (<code>CAP_SYS_RESOURCE</code>) can exceed the limit (but see BUGS).</dl>
+<dd>The <i>msgsize_max</i> limit is ignored for privileged process (<code>CAP_SYS_RESOURCE</code>), but, since Linux 3.5, the <code>HARD_MSGSIZEMAX</code> ceiling is enforced for privileged processes.</dd>
+<dt><i>/proc/sys/fs/mqueue/queues_max</i></dt>
+<dd>This file can be used to view and change the system-wide limit on the number of message queues that can be created. The default value for <i>queues_max</i> is 256. No ceiling is imposed on the <i>queues_max</i> limit; privileged processes (<code>CAP_SYS_RESOURCE</code>) can exceed the limit (but see BUGS).</dd></dl>
 <h3>Resource limit</h3>
 <p>The <code>RLIMIT_MSGQUEUE</code> resource limit, which places a limit on the amount of space that can be consumed by all of the message queues belonging to a process&#8217;s real user ID, is described in <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2).</p>
 <h3>Mounting the message queue filesystem</h3>
@@ -131,14 +131,14 @@ description: "mq_overview – overview of POSIX message queues"
 <p> $<code> cat /dev/mqueue/mymq</code> QSIZE:129 NOTIFY:2 SIGNO:0 NOTIFY_PID:8260 </p>
 <p> These fields are as follows:</p>
 <dl>
-<dt><code>QSIZE</code></p>
-<dd>Number of bytes of data in all messages in the queue (but see BUGS).</p>
-<dt><code>NOTIFY_PID</code></p>
-<dd>If this is nonzero, then the process with this PID has used <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3) to register for asynchronous message notification, and the remaining fields describe how notification occurs.</p>
-<dt><code>NOTIFY</code></p>
-<dd>Notification method: 0 is <code>SIGEV_SIGNAL</code>; 1 is <code>SIGEV_NONE</code>; and 2 is <code>SIGEV_THREAD</code>.</p>
-<dt><code>SIGNO</code></p>
-<dd>Signal number to be used for <code>SIGEV_SIGNAL</code>.</dl>
+<dt><code>QSIZE</code></dt>
+<dd>Number of bytes of data in all messages in the queue (but see BUGS).</dd>
+<dt><code>NOTIFY_PID</code></dt>
+<dd>If this is nonzero, then the process with this PID has used <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3) to register for asynchronous message notification, and the remaining fields describe how notification occurs.</dd>
+<dt><code>NOTIFY</code></dt>
+<dd>Notification method: 0 is <code>SIGEV_SIGNAL</code>; 1 is <code>SIGEV_NONE</code>; and 2 is <code>SIGEV_THREAD</code>.</dd>
+<dt><code>SIGNO</code></dt>
+<dd>Signal number to be used for <code>SIGEV_SIGNAL</code>.</dd></dl>
 <h3>Linux implementation of message queue descriptors</h3>
 <p>On Linux, a message queue descriptor is actually a file descriptor. (POSIX does not require such an implementation.) This means that a message queue descriptor can be monitored using <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), or <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). This is not portable. </p>
 <p> The close-on-exec flag (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) is automatically set on the file descriptor returned by <code><a href="/docs/linux/man/2-mq_open/">mq_open</a></code>(2).</p>

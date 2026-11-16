@@ -14,10 +14,10 @@ description: "gnutls_x509_policies_set – API function"
 <p> <code>int gnutls_x509_policies_set(gnutls_x509_policies_t </code><i>policies</i><code>, const struct gnutls_x509_policy_st * </code><i>policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_policies_t policies</p>
-<dd> An initialized policies structure</p>
-<dt>const struct gnutls_x509_policy_st * policy</p>
-<dd> Contains the policy to set</dl>
+<dt>gnutls_x509_policies_t policies</dt>
+<dd> An initialized policies structure</dd>
+<dt>const struct gnutls_x509_policy_st * policy</dt>
+<dd> Contains the policy to set</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will store the specified policy in the provided <i>policies</i> structure.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_policies_set – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

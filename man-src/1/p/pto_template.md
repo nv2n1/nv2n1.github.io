@@ -19,12 +19,12 @@ description: "pto_template – Apply a template file"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> | &#8211;output=file.pto</p>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_template.pto</p>
-<dt><code>&#8211;template=template.pto</code></p>
-<dd> Apply the given template file.</p>
-<dt><code>-h</code> | &#8211;help</p>
-<dd> Shows this help</dl>
+<dt><code>-o</code> | &#8211;output=file.pto</dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_template.pto</dd>
+<dt><code>&#8211;template=template.pto</code></dt>
+<dd> Apply the given template file.</dd>
+<dt><code>-h</code> | &#8211;help</dt>
+<dd> Shows this help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

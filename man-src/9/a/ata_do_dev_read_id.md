@@ -14,17 +14,17 @@ description: "ata_do_dev_read_id – default ID read method"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device</dl>
+</dd><dd>device</dd></dl>
 <p> <i>tf</i></p>
 <dl>
-<dd>proposed taskfile</dl>
+<dd>proposed taskfile</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>data buffer</dl>
+<dd>data buffer</dd></dl>
 <h2>Description</h2>
 <p>Issue the identify taskfile and hand back the buffer containing identify data. For some RAID controllers and for pre ATA devices this function is wrapped or replaced by the driver</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

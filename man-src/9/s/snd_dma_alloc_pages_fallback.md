@@ -15,19 +15,19 @@ snd_dma_alloc_pages_fallback - allocate the buffer area according to the given t
 <h2>Arguments</h2>
 
 <i>type</i>
-<dl><dd><dd>the DMA buffer type</dl>
+<dl><dd></dd><dd>the DMA buffer type</dd></dl>
  
 
  <i>device</i>
-<dl><dd>the device pointer</dl>
+<dl><dd>the device pointer</dd></dl>
  
 
  <i>size</i>
-<dl><dd>the buffer size to allocate</dl>
+<dl><dd>the buffer size to allocate</dd></dl>
  
 
  <i>dmab</i>
-<dl><dd>buffer allocation record to store the allocated data</dl>
+<dl><dd>buffer allocation record to store the allocated data</dd></dl>
 
 <h2>Description</h2>
 

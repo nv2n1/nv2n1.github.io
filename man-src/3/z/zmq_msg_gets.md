@@ -19,7 +19,7 @@ description: "zmq_msg_gets – get message metadata property"
 <pre>Socket-Type
 Identity
 Resource</pre>
-</dl>
+</dd></dl>
 <p> Additionally, when available for the underlying transport, the <code>Peer-Address</code> property will return the IP address of the remote endpoint as returned by getnameinfo(2). </p>
 <p> Other properties may be defined based on the underlying security mechanism, see ZAP authenticated connection sample below.</p>
 <h2>Return Value</h2>
@@ -27,7 +27,7 @@ Resource</pre>
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
 <dl>
-<dd>The requested <i>property</i> is unknown.</dl>
+<dd>The requested <i>property</i> is unknown.</dd></dl>
 <h2>Example</h2>
 <p><code>Getting the ZAP authenticated user id for a message:</code>. </p>
 <pre><code>zmq_msg_t msg;

@@ -18,8 +18,8 @@ description: "pause – wait for signal"
 <p> <code>pause</code>() returns only when a signal was caught and the signal-catching function returned. In this case, <code>pause</code>() returns -1, and <i>errno</i> is set to <code>EINTR</code>.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINTR</code></p>
-<dd> a signal was caught and the signal-catching function returned.</dl>
+<dt><code>EINTR</code></dt>
+<dd> a signal was caught and the signal-catching function returned.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
 <h2>SEE ALSO</h2>

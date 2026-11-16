@@ -20,20 +20,20 @@ description: "bundle-add – Add gem to the Gemfile and run bundle install"
 <p> bundle add rails &#8211;group &quot;development, test&quot;</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd>Specify version requirements(s) for the added gem.</p>
-<dt><code>&#8211;group</code>, <code>-g</code></p>
-<dd>Specify the group(s) for the added gem. Multiple groups should be separated by commas.</p>
-<dt><code>&#8211;source</code>, , <code>-s</code></p>
-<dd>Specify the source for the added gem.</p>
-<dt><code>&#8211;git</code></p>
-<dd>Specify the git source for the added gem.</p>
-<dt><code>&#8211;branch</code></p>
-<dd>Specify the git branch for the added gem.</p>
-<dt><code>&#8211;skip-install</code></p>
-<dd>Adds the gem to the Gemfile but does not install it.</p>
-<dt><code>&#8211;optimistic</code></p>
-<dd>Adds optimistic declaration of version</p>
-<dt><code>&#8211;strict</code></p>
-<dd>Adds strict declaration of version </p>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd>Specify version requirements(s) for the added gem.</dd>
+<dt><code>&#8211;group</code>, <code>-g</code></dt>
+<dd>Specify the group(s) for the added gem. Multiple groups should be separated by commas.</dd>
+<dt><code>&#8211;source</code>, , <code>-s</code></dt>
+<dd>Specify the source for the added gem.</dd>
+<dt><code>&#8211;git</code></dt>
+<dd>Specify the git source for the added gem.</dd>
+<dt><code>&#8211;branch</code></dt>
+<dd>Specify the git branch for the added gem.</dd>
+<dt><code>&#8211;skip-install</code></dt>
+<dd>Adds the gem to the Gemfile but does not install it.</dd>
+<dt><code>&#8211;optimistic</code></dt>
+<dd>Adds optimistic declaration of version</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>Adds strict declaration of version </dd>
 </dl>

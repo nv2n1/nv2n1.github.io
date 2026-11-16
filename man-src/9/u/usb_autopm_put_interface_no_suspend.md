@@ -15,7 +15,7 @@ usb_autopm_put_interface_no_suspend - decrement a USB interface's PM-usage count
 <h2>Arguments</h2>
 
 <i>intf</i>
-<dl><dd><dd>the usb_interface whose counter should be decremented</dl>
+<dl><dd></dd><dd>the usb_interface whose counter should be decremented</dd></dl>
 
 <h2>Description</h2>
 

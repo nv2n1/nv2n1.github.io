@@ -10,10 +10,8 @@ description: "std::is_null_pointer – std::is_null_pointer"
 <p>std::is_null_pointer &#8211; std::is_null_pointer</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 14)
-
         struct is_null_pointer;</code></pre>
 <p>Checks whether T is the type std::nullptr_t.<br />
 Provides the member constant value that is equal to true, if T is the type std::nullptr_t, const std::nullptr_t, volatile std::nullptr_t, or const volatile std::nullptr_t.<br />
@@ -46,10 +44,8 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; std::is_null_pointer&lt;decltype(nullptr)&gt;::value &lt;&lt; ' '

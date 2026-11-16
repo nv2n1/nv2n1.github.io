@@ -33,15 +33,13 @@ CALL PLOTIT (IX,IY,IP)
 <h2>Description</h2>
 
 <dl><dt>IX
-<dd>(an input expression of type INTEGER) is the X metacode coordinate of the point to which the plotter pen is to be moved.
-<dt>IY
-<dd>(an input expression of type INTEGER) is the Y metacode coordinate of the point to which the plotter pen is to be moved.
-<dt>IP
-<dd>(an input expression of type INTEGER) determines whether the movement of the plotter pen to the point (IX,IY) will occur with the pen up (IP = 0), or with the pen down (IP = 1). If IP = 2, no pen move occurs, but the SPPS polyline buffer is flushed. For historical reasons, a &quot;CALL PLOTIT (0,0,0)&quot; will also flush the buffer. 
-
+</dt><dd>(an input expression of type INTEGER) is the X metacode coordinate of the point to which the plotter pen is to be moved.
+</dd><dt>IY
+</dt><dd>(an input expression of type INTEGER) is the Y metacode coordinate of the point to which the plotter pen is to be moved.
+</dd><dt>IP
+</dt><dd>(an input expression of type INTEGER) determines whether the movement of the plotter pen to the point (IX,IY) will occur with the pen up (IP = 0), or with the pen down (IP = 1). If IP = 2, no pen move occurs, but the SPPS polyline buffer is flushed. For historical reasons, a &quot;CALL PLOTIT (0,0,0)&quot; will also flush the buffer. 
  The size of the SPPS polyline buffer can be changed by calling the parameter-setting routine SETUSV to set the parameter 'PB'. The legal range of 'PB' is between 2 and 50. For example, to set 'PB' to 2, use &quot;CALL SETUSV ('PB',2)&quot;. 
-
- The SPPS polyline buffer is provided to increase drawing efficiency.</dl>
+ The SPPS polyline buffer is provided to increase drawing efficiency.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

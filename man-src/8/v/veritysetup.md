@@ -17,79 +17,79 @@ description: "veritysetup – manage dm-verity (block level verification) volume
 <p> Veritysetup supports these operations: </p>
 <p> <i>format</i> &lt;data_device&gt; &lt;hash_device&gt;</p>
 <dl>
-<dd>Calculates and permanently stores hash verification data for data_device. Hash area can be located on the same device after data if specified by &#8211;hash-offset option. </p>
+<dd>Calculates and permanently stores hash verification data for data_device. Hash area can be located on the same device after data if specified by &#8211;hash-offset option. </dd>
 <p> Note you need to provide root hash string for device verification or activation. Root hash must be trusted. </p>
 <p> The data or hash device argument can be block device or file image. If hash device path doesn&#8217;t exist, it will be created as file. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash, &#8211;no-superblock, &#8211;format, &#8211;data-block-size, &#8211;hash-block-size, &#8211;data-blocks, &#8211;hash-offset, &#8211;salt, &#8211;uuid]</dl>
 <p> <i>open</i> &lt;data_device&gt; &lt;name&gt; &lt;hash_device&gt; &lt;root_hash&gt; <i>create</i> &lt;name&gt; &lt;data_device&gt; &lt;hash_device&gt; &lt;root_hash&gt;</p>
 <dl>
-<dd>Creates a mapping with &lt;name&gt; backed by device &lt;data_device&gt; and using &lt;hash_device&gt; for in-kernel verification. </p>
+<dd>Creates a mapping with &lt;name&gt; backed by device &lt;data_device&gt; and using &lt;hash_device&gt; for in-kernel verification. </dd>
 <p> The &lt;root_hash&gt; is a hexadecimal string. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash-offset, &#8211;no-superblock, &#8211;ignore-corruption or &#8211;restart-on-corruption, &#8211;ignore-zero-blocks] </p>
 <p> If option &#8211;no-superblock is used, you have to use as the same options as in initial format operation.</dl>
 <p> <i>verify</i> &lt;data_device&gt; &lt;hash_device&gt; &lt;root_hash&gt;</p>
 <dl>
-<dd>Verifies data on data_device with use of hash blocks stored on hash_device. </p>
+<dd>Verifies data on data_device with use of hash blocks stored on hash_device. </dd>
 <p> This command performs userspace verification, no kernel device is created. </p>
 <p> The &lt;root_hash&gt; is a hexadecimal string. </p>
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash-offset, &#8211;no-superblock] </p>
 <p> If option &#8211;no-superblock is used, you have to use as the same options as in initial format operation.</dl>
 <p> <i>close</i> &lt;name&gt;</p>
 <dl>
-<dd>Removes existing mapping &lt;name&gt;. </p>
+<dd>Removes existing mapping &lt;name&gt;. </dd>
 <p> For backward compatibility there is <code>remove</code> command alias for <code>close</code> command.</dl>
 <p> <i>status</i> &lt;name&gt;</p>
 <dl>
-<dd>Reports status for the active verity mapping &lt;name&gt;.</dl>
+<dd>Reports status for the active verity mapping &lt;name&gt;.</dd></dl>
 <p> <i>dump</i> &lt;hash_device&gt;</p>
 <dl>
-<dd>Reports parameters of verity device from on-disk stored superblock. </p>
+<dd>Reports parameters of verity device from on-disk stored superblock. </dd>
 <p> <code>&lt;options&gt;</code> can be [&#8211;no-superblock]</dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;verbose, -v</code></p>
-<dd>Print more information on command execution.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Run in debug mode with full diagnostic logs. Debug output lines are always prefixed by &#8216;#&#8217;.</p>
-<dt><code>&#8211;no-superblock</code></p>
-<dd>Create or use dm-verity without permanent on-disk superblock.</p>
-<dt><code>&#8211;format=number</code></p>
-<dd>Specifies the hash version type. Format type 0 is original Chrome OS version. Format type 1 is current version.</p>
-<dt><code>&#8211;data-block-size=bytes</code></p>
-<dd>Used block size for the data device. (Note kernel supports only page-size as maximum here.)</p>
-<dt><code>&#8211;hash-block-size=bytes</code></p>
-<dd>Used block size for the hash device. (Note kernel supports only page-size as maximum here.)</p>
-<dt><code>&#8211;data-blocks=blocks</code></p>
-<dd>Size of data device used in verification. If not specified, the whole device is used.</p>
-<dt><code>&#8211;hash-offset=bytes</code></p>
-<dd>Offset of hash area/superblock on hash_device. Value must be aligned to disk sector offset.</p>
-<dt><code>&#8211;salt=hex string</code></p>
-<dd>Salt used for format or verification. Format is a hexadecimal string.</p>
-<dt><code>&#8211;uuid=UUID</code></p>
-<dd>Use the provided UUID for format command instead of generating new one. </p>
+<dt><code>&#8211;verbose, -v</code></dt>
+<dd>Print more information on command execution.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Run in debug mode with full diagnostic logs. Debug output lines are always prefixed by &#8216;#&#8217;.</dd>
+<dt><code>&#8211;no-superblock</code></dt>
+<dd>Create or use dm-verity without permanent on-disk superblock.</dd>
+<dt><code>&#8211;format=number</code></dt>
+<dd>Specifies the hash version type. Format type 0 is original Chrome OS version. Format type 1 is current version.</dd>
+<dt><code>&#8211;data-block-size=bytes</code></dt>
+<dd>Used block size for the data device. (Note kernel supports only page-size as maximum here.)</dd>
+<dt><code>&#8211;hash-block-size=bytes</code></dt>
+<dd>Used block size for the hash device. (Note kernel supports only page-size as maximum here.)</dd>
+<dt><code>&#8211;data-blocks=blocks</code></dt>
+<dd>Size of data device used in verification. If not specified, the whole device is used.</dd>
+<dt><code>&#8211;hash-offset=bytes</code></dt>
+<dd>Offset of hash area/superblock on hash_device. Value must be aligned to disk sector offset.</dd>
+<dt><code>&#8211;salt=hex string</code></dt>
+<dd>Salt used for format or verification. Format is a hexadecimal string.</dd>
+<dt><code>&#8211;uuid=UUID</code></dt>
+<dd>Use the provided UUID for format command instead of generating new one. </dd>
 <p> The UUID must be provided in standard UUID format, e.g. 12345678-1234-1234-1234-123456789abc.</p>
-<dt><code>&#8211;ignore-corruption, &#8211;restart-on-corruption</code></p>
-<dd>Defines what to do if data integrity problem is detected (data corruption). </p>
+<dt><code>&#8211;ignore-corruption, &#8211;restart-on-corruption</code></dt>
+<dd>Defines what to do if data integrity problem is detected (data corruption). </dd>
 <p> Without these options kernel fails the IO operation with I/O error. With &#8211;ignore-corruption option the corruption is only logged. With &#8211;restart-on-corruption the kernel is restarted immediately. (You have to provide way how to avoid restart loops.) </p>
 <p> <code>WARNING:</code> Use these options only for very specific cases. These options are available since Linux kernel version 4.1.</p>
-<dt><code>&#8211;ignore-zero-blocks</code></p>
-<dd>Instruct kernel to not verify blocks that are expected to contain zeroes and always directly return zeroes instead. </p>
+<dt><code>&#8211;ignore-zero-blocks</code></dt>
+<dd>Instruct kernel to not verify blocks that are expected to contain zeroes and always directly return zeroes instead. </dd>
 <p> <code>WARNING:</code> Use this option only in very specific cases. This option is available since Linux kernel version 4.5.</p>
-<dt><code>&#8211;hash=hash</code></p>
-<dd>Hash algorithm for dm-verity. For default see &#8211;help option.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Show the program version.</p>
-<dt><code>&#8211;fec-device=fec_device</code></p>
-<dd>Use forward error correction (FEC) to recover from corruption if hash verification fails. Use encoding data from the specified device. </p>
+<dt><code>&#8211;hash=hash</code></dt>
+<dd>Hash algorithm for dm-verity. For default see &#8211;help option.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Show the program version.</dd>
+<dt><code>&#8211;fec-device=fec_device</code></dt>
+<dd>Use forward error correction (FEC) to recover from corruption if hash verification fails. Use encoding data from the specified device. </dd>
 <p> The fec device argument can be block device or file image. For format, if fec device path doesn&#8217;t exist, it will be created as file. </p>
 <p> Note: block sizes for data and hash devices must match. Also, if the verity data_device is encrypted the fec_device should be too.</p>
-<dt><code>&#8211;fec-offset=bytes</code></p>
-<dd>This is the offset, in bytes, from the start of the FEC device to the beginning of the encoding data.</p>
-<dt><code>&#8211;fec-roots=num</code></p>
-<dd>Number of generator roots. This equals to the number of parity bytes in the encoding data. In RS(M, N) encoding, the number of roots is M-N. M is 255 and M-N is between 2 and 24 (including).</p>
-<dt></dl>
+<dt><code>&#8211;fec-offset=bytes</code></dt>
+<dd>This is the offset, in bytes, from the start of the FEC device to the beginning of the encoding data.</dd>
+<dt><code>&#8211;fec-roots=num</code></dt>
+<dd>Number of generator roots. This equals to the number of parity bytes in the encoding data. In RS(M, N) encoding, the number of roots is M-N. M is 255 and M-N is between 2 and 24 (including).</dd>
+<dt></dt></dl>
 <h2>Return Codes</h2>
-<dd>Veritysetup returns 0 on success and a non-zero value on error. </p>
+<dd>Veritysetup returns 0 on success and a non-zero value on error. </dd>
 <p> Error codes are:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 wrong parameters<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 no permission<br />

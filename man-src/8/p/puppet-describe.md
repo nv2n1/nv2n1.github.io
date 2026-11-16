@@ -14,16 +14,16 @@ description: "puppet-describe – Display help about resource types"
 <p>puppet describe [-h|&#8211;help] [-s|&#8211;short] [-p|&#8211;providers] [-l|&#8211;list] [-m|&#8211;meta]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Print this help text</p>
-<dt>&#8211;providers</p>
-<dd>Describe providers in detail for each type</p>
-<dt>&#8211;list</p>
-<dd>List all types</p>
-<dt>&#8211;meta</p>
-<dd>List all metaparameters</p>
-<dt>&#8211;short</p>
-<dd>List only parameters without detail</dl>
+<dt>&#8211;help</dt>
+<dd>Print this help text</dd>
+<dt>&#8211;providers</dt>
+<dd>Describe providers in detail for each type</dd>
+<dt>&#8211;list</dt>
+<dd>List all types</dd>
+<dt>&#8211;meta</dt>
+<dd>List all metaparameters</dd>
+<dt>&#8211;short</dt>
+<dd>List only parameters without detail</dd></dl>
 <h2>Example</h2>
 <pre>$ puppet describe --list
 $ puppet describe file --providers

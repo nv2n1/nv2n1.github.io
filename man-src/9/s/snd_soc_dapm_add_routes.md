@@ -14,13 +14,13 @@ description: "snd_soc_dapm_add_routes – Add routes between DAPM widgets"
 <p><i>dapm</i></p>
 <dl>
 <dd>
-<dd>DAPM context</dl>
+</dd><dd>DAPM context</dd></dl>
 <p> <i>route</i></p>
 <dl>
-<dd>audio routes</dl>
+<dd>audio routes</dd></dl>
 <p> <i>num</i></p>
 <dl>
-<dd>number of routes</dl>
+<dd>number of routes</dd></dl>
 <h2>Description</h2>
 <p>Connects 2 dapm widgets together via a named audio path. The sink is the widget receiving the audio signal, whilst the source is the sender of the audio signal. </p>
 <p> Returns 0 for success else error. On error all resources can be freed with a call to <code>snd_soc_card_free</code>.</p>

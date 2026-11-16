@@ -14,14 +14,14 @@ description: "rio_release_inb_mbox – release inbound mailbox message service"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO master port from which to release the mailbox resource</dl>
+</dd><dd>RIO master port from which to release the mailbox resource</dd></dl>
 <p> <i>mbox</i></p>
 <dl>
-<dd>Mailbox number to release</dl>
+<dd>Mailbox number to release</dd></dl>
 <h2>Description</h2>
 <p>Releases ownership of an inbound mailbox resource. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

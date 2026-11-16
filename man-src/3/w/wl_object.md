@@ -15,13 +15,7 @@ wl_object -
 <h3>Public Attributes</h3>
 
 <pre><code>struct wl_interface * interface
-
-
-
 const void * implementation
-
-
-
 uint32_t id
 </code></pre>
 

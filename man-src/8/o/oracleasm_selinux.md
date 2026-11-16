@@ -86,8 +86,8 @@ description: "oracleasm_selinux – Security Enhanced Linux Policy for the oracl
 <p> <code>oracleasm_conf_t</code> </p>
 <p> &#8211; Set files with the oracleasm_conf_t type, if you want to treat the files as oracleasm configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/sysconfig/oracleasm(/.*)?, /etc/sysconfig/oracleasm-_dev_oracleasm </p>
+<dt>Paths:</dt>
+<dd>/etc/sysconfig/oracleasm(/.*)?, /etc/sysconfig/oracleasm-_dev_oracleasm </dd>
 </dl>
 <p> <code>oracleasm_exec_t</code> </p>
 <p> &#8211; Set files with the oracleasm_exec_t type, if you want to transition an executable to the oracleasm_t domain. </p>

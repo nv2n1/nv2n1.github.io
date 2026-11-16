@@ -15,7 +15,7 @@ pci_probe_reset_slot - probe whether a PCI slot can be reset
 <h2>Arguments</h2>
 
 <i>slot</i>
-<dl><dd><dd>PCI slot to probe</dl>
+<dl><dd></dd><dd>PCI slot to probe</dd></dl>
 
 <h2>Description</h2>
 

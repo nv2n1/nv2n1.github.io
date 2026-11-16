@@ -10,7 +10,6 @@ description: "pthread_create – create a new thread"
 <p>pthread_create &#8211; create a new thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
                    void *(*start_routine)(void *), void *arg);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
@@ -18,14 +17,14 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 <p>The <code>pthread_create</code>() function starts a new thread in the calling process. The new thread starts execution by invoking <i>start_routine</i>(); <i>arg</i> is passed as the sole argument of <i>start_routine</i>(). </p>
 <p> The new thread terminates in one of the following ways:</p>
 <dl>
-<dt>*</p>
-<dd>It calls <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), specifying an exit status value that is available to another thread in the same process that calls <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3).</p>
-<dt>*</p>
-<dd>It returns from <i>start_routine</i>(). This is equivalent to calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3) with the value supplied in the <i>return</i> statement.</p>
-<dt>*</p>
-<dd>It is canceled (see <code><a href="/docs/linux/man/3-pthread_cancel/">pthread_cancel</a></code>(3)).</p>
-<dt>*</p>
-<dd>Any of the threads in the process calls <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), or the main thread performs a return from <i>main</i>(). This causes the termination of all threads in the process.</dl>
+<dt>*</dt>
+<dd>It calls <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), specifying an exit status value that is available to another thread in the same process that calls <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3).</dd>
+<dt>*</dt>
+<dd>It returns from <i>start_routine</i>(). This is equivalent to calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3) with the value supplied in the <i>return</i> statement.</dd>
+<dt>*</dt>
+<dd>It is canceled (see <code><a href="/docs/linux/man/3-pthread_cancel/">pthread_cancel</a></code>(3)).</dd>
+<dt>*</dt>
+<dd>Any of the threads in the process calls <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), or the main thread performs a return from <i>main</i>(). This causes the termination of all threads in the process.</dd></dl>
 <p> The <i>attr</i> argument points to a <i>pthread_attr_t</i> structure whose contents are used at thread creation time to determine attributes for the new thread; this structure is initialized using <code><a href="/docs/linux/man/3-pthread_attr_init/">pthread_attr_init</a></code>(3) and related functions. If <i>attr</i> is NULL, then the thread is created with default attributes. </p>
 <p> Before returning, a successful call to <code>pthread_create</code>() stores the ID of the new thread in the buffer pointed to by <i>thread</i>; this identifier is used to refer to the thread in subsequent calls to other pthreads functions. </p>
 <p> The new thread inherits a copy of the creating thread&#8217;s signal mask (<code><a href="/docs/linux/man/3-pthread_sigmask/">pthread_sigmask</a></code>(3)). The set of pending signals for the new thread is empty (<code><a href="/docs/linux/man/2-sigpending/">sigpending</a></code>(2)). The new thread does not inherit the creating thread&#8217;s alternate signal stack (<code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)). </p>
@@ -37,13 +36,13 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 <p>On success, <code>pthread_create</code>() returns 0; on error, it returns an error number, and the contents of <i>*thread</i> are undefined.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd>Insufficient resources to create another thread.</p>
-<dt><code>EAGAIN</code></p>
-<dd>A system-imposed limit on the number of threads was encountered. There are a number of limits that may trigger this error: the <code>RLIMIT_NPROC</code> soft resource limit (set via <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)), which limits the number of processes and threads for a real user ID, was reached; the kernel&#8217;s system-wide limit on the number of processes and threads, <i>/proc/sys/kernel/threads-max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)); or the maximum number of PIDs, <i>/proc/sys/kernel/pid_max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</p>
-<dt><code>EINVAL</code></p>
-<dd>Invalid settings in <i>attr</i>.</p>
-<dd><code>EPERM</code> No permission to set the scheduling policy and parameters specified in <i>attr</i>.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd>Insufficient resources to create another thread.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd>A system-imposed limit on the number of threads was encountered. There are a number of limits that may trigger this error: the <code>RLIMIT_NPROC</code> soft resource limit (set via <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)), which limits the number of processes and threads for a real user ID, was reached; the kernel&#8217;s system-wide limit on the number of processes and threads, <i>/proc/sys/kernel/threads-max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)); or the maximum number of PIDs, <i>/proc/sys/kernel/pid_max</i>, was reached (see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)).</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid settings in <i>attr</i>.</dd>
+<dd><code>EPERM</code> No permission to set the scheduling policy and parameters specified in <i>attr</i>.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>
@@ -110,7 +109,7 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>Bugs</h2>
 <p>In the obsolete LinuxThreads implementation, each of the threads in a process has a different process ID. This is in violation of the POSIX threads specification, and is the source of many other nonconformances to the standard; see <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7).</p>
 <h2>Examples</h2>
@@ -151,3 +150,4 @@ thread_start(void *arg)
     if (uargv == NULL)
         handle_error(&quot;strdup&quot;);
     for (char *p = uargv; *p != '
+</code></pre>

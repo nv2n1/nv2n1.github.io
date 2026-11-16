@@ -10,9 +10,6 @@ description: "QuantLib::EnergyBasisSwap – Energy basis swap."
 <p>QuantLib::EnergyBasisSwap &#8211; Energy basis swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits QuantLib::EnergySwap.</p>
 <h3>Public Member Functions</h3>
@@ -22,9 +19,6 @@ Protected Attributes</code></pre>
 <p> const CommodityUnitCost &amp; <code>basis</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; <code>spreadIndex_</code> </p>
 <p> boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; <code>payIndex_</code> </p>

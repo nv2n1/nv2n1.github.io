@@ -10,7 +10,6 @@ description: "sasl_client_step – Perform a step in the authentication negotiat
 <p>sasl_client_step &#8211; Perform a step in the authentication negotiation </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_client_step(sasl_conn_t *conn,
                      const char *serverin,
                      unsigned serverinlen,

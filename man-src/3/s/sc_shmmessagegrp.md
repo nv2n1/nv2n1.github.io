@@ -11,7 +11,6 @@ description: "sc::ShmMessageGrp –"
 <p> The <code>ShmMessageGrp</code> class is an implementation of <code>MessageGrp</code> that allows multiple process to be started that communicate with shared memory.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;messshm.h&gt;</code></pre>
 <p> Inherits <code>sc::intMessageGrp</code>.</p>
 <h3>Public Member Functions</h3>
@@ -27,55 +26,19 @@ description: "sc::ShmMessageGrp –"
  <i>Returns a copy of this </i><code>MessageGrp</code> specialization that provides an independent communication context.</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void basic_send (int target, int type, const void *data, int nbyte)
-
-
 Must be implemented by specializations.
-
-
 void basic_recv (int type, void *data, int nbyte)
-
-
 Must be implemented by specializations.
-
-
 int basic_probe (int type)
-
-
 Must be implemented by specializations.
-
-
 void initialize (int nprocs)
-
-
-
 void initialize ()
-
-
-
 msgbuf_t * NEXT_MESSAGE (msgbuf_t *m)
-
-
-
 void get_change (int node)
-
-
-
 void put_change (int node)
-
-
-
 void wait_for_write (int node)
-
-
-
 void release_write (int node)
-
-
-
 void print_buffer (int node, int me)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>commbuf_t</code> * <code>commbuf</code> [MAXPROCS] </p>
 <p> int <code>shmid</code> </p>

@@ -10,7 +10,6 @@ description: "wmemcmp – compare two arrays of wide-characters"
 <p>wmemcmp &#8211; compare two arrays of wide-characters</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 int wmemcmp(const wchar_t *s1, const wchar_t *s2, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>wmemcmp</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-memcmp/">memcmp</a></code>(3) function. It compares the <i>n</i> wide-characters starting at <i>s1</i> and the <i>n</i> wide-characters starting at <i>s2</i>.</p>

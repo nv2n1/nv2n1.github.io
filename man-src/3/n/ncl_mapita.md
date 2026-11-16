@@ -32,12 +32,12 @@ RLON must be
 
  MAPITA is called like the EZMAP routine MAPIT, but it has some additional arguments: 
 
-<dl COMPACT><dd>CALL MAPITA (RLAT,RLON,IFST,IAMA,IGID,IAIL,IAIR)</dl>
+<dl COMPACT><dd>CALL MAPITA (RLAT,RLON,IFST,IAMA,IGID,IAIL,IAIR)</dd></dl>
  
 
  Additional arguments are the area map array IAMA, a group identifier IGID, and left and right area identifiers IAIL and IAIR. MAPIQA is called like the EZMAP routine MAPIQ, to terminate a series of calls to MAPITA and to flush the buffers; it has the same additional arguments: 
 
-<dl COMPACT><dd>CALL MAPIQA (IAMA,IGID,IAIL,IAIR)</dl>
+<dl COMPACT><dd>CALL MAPIQA (IAMA,IGID,IAIL,IAIR)</dd></dl>
  
 
  The additional arguments are passed by MAPITA and MAPIQA to the routine AREDAM, in the package named AREAS. 

@@ -12,9 +12,9 @@ GQMKSC (Inquire marker size scale factor) - retrieves the current value for the 
 
  void ginq_marker_size(Gint *err_ind, Gdouble *marker_size);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>MSZSF
-<dd>(Real, Output) - Returns the current value for the marker size scale factor set by default or by a call to GSMKSC.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>MSZSF
+</dt><dd>(Real, Output) - Returns the current value for the marker size scale factor set by default or by a call to GSMKSC.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpm, gsmk, gsmksc, gscr, gspmci, gqmk, gqpmci, point, points, ginq_marker_size 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

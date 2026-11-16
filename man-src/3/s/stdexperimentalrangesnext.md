@@ -10,47 +10,32 @@ description: "std::experimental::ranges::next – std::experimental::ranges::nex
 <p>std::experimental::ranges::next &#8211; std::experimental::ranges::next</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     namespace
 {
     (ranges TS)
-
         constexpr /* unspecified */ next = /* unspecified */;
     (customization point object)
 }
-
 Call signature
-
     template &lt;Iterator I&gt;
     (1)
-
         constexpr I next(I i);
-
 template &lt;Iterator I&gt;
 (2)
-
     constexpr I next(I i, ranges::difference_type_t&lt;I&gt; n);
-
 template &lt;Iterator I, Sentinel&lt;I&gt; S&gt;
 (3)
-
     constexpr I next(I i, S bound);
-
 template &lt;Iterator I, Sentinel&lt;I&gt; S&gt;
 (4)
-
     constexpr I next(I i, ranges::difference_type_t&lt;I&gt; n, S bound);
 Advances the iterator i n times, or until bound is reached, whichever comes first, and returns the advanced iterator.
-
 1) Equivalent to ++i;
 return i;.
-
 2) Equivalent to ranges::advance(i, n);
 return i;.
-
 3) Equivalent to ranges::advance(i, bound);
 return i;.
-
 4) Equivalent to ranges::advance(i, n, bound);
 return i;
 .</code></pre>

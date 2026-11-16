@@ -14,7 +14,7 @@ description: "fc_remove_host – called to terminate any fc_transport-related el
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>Which Scsi_Host</dl>
+</dd><dd>Which Scsi_Host</dd></dl>
 <h2>Description</h2>
 <p>This routine is expected to be called immediately preceding the a driver&#8217;s call to <code>scsi_remove_host</code>. </p>
 <p> WARNING: A driver utilizing the fc_transport, which fails to call this routine prior to <code>scsi_remove_host</code>, will leave dangling objects in /sys/class/fc_remote_ports. Access to any of these objects can result in a system crash !!!</p>
@@ -23,8 +23,8 @@ description: "fc_remove_host – called to terminate any fc_transport-related el
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

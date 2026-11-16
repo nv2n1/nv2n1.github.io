@@ -21,10 +21,10 @@ description: "sgebrd.f –"
 <pre> SGEBRD reduces a general real M-by-N matrix A to upper or lower
  bidiagonal form B by an orthogonal transformation: Q**T * A * P = B.
  If m &gt;= n, B is upper bidiagonal; if m &lt; n, B is lower bidiagonal.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows in the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -88,13 +88,13 @@ description: "sgebrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -127,7 +127,8 @@ description: "sgebrd.f –"
  where d and e denote diagonal and off-diagonal elements of B, vi
  denotes an element of the vector defining H(i), and ui an element of
  the vector defining G(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 205 of file sgebrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

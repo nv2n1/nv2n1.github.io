@@ -11,7 +11,6 @@ std::locale::~locale - std::locale::~locale
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;locale&gt;
-
 ~locale();</code></pre> 
 Non-virtual destructor which decrements reference counts of all facets held by *this. Those facets whose reference count becomes zero are deleted. 
 

@@ -15,24 +15,24 @@ description: "retrace-server-cleanup – Collects garbage from Retrace server."
 <p> The tool collects different kinds of garbage created by Retrace server: </p>
 <dl>
 <dt>
-<dd> &bull; Deletes old tasks. The limit to proclaim task old can be changed in the configuration file (DeleteTaskAfter).</dl>
+</dt><dd> &bull; Deletes old tasks. The limit to proclaim task old can be changed in the configuration file (DeleteTaskAfter).</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Kills tasks running for a long time (&gt; 1 hour).</dl>
+</dt><dd> &bull; Kills tasks running for a long time (&gt; 1 hour).</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Cleans up fakeroots and task directories from jobs finished in an unexpected way.</dl>
+</dt><dd> &bull; Cleans up fakeroots and task directories from jobs finished in an unexpected way.</dd></dl>
 <p> Should be set in root&#8217;s crontab to run every hour.</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-<dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dl>
+</dt><dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> _mtoman [at] redhat.com_</p>
+<dt> 1.</dt>
+<dd> _mtoman [at] redhat.com_</dd>
 <dl>
 <dt>
-<dd> mailto:_mtoman [at] redhat.com_</dl>
+</dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
 <h2>Index</h2>

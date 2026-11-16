@@ -24,32 +24,32 @@ mongoc_client_command (mongoc_client_t           *client,
 <p> This function executes a command on the server using the database and command specification provided. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd> A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd> A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>db_name</code></p>
-<dd> The name of the database to run the command on.</dl>
+<dt><code>db_name</code></dt>
+<dd> The name of the database to run the command on.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd> A <code>mongoc_query_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd> A <code>mongoc_query_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>skip</code></p>
-<dd> The number of result documents to skip.</dl>
+<dt><code>skip</code></dt>
+<dd> The number of result documents to skip.</dd></dl>
 <dl COMPACT>
-<dt><code>limit</code></p>
-<dd> The maximum number of documents to return.</dl>
+<dt><code>limit</code></dt>
+<dd> The maximum number of documents to return.</dd></dl>
 <dl COMPACT>
-<dt><code>batch_size</code></p>
-<dd> The batch size of documents to return from the MongoDB server.</dl>
+<dt><code>batch_size</code></dt>
+<dd> The batch size of documents to return from the MongoDB server.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd> A <code>bson_t</code> containing the command specification.</dl>
+<dt><code>query</code></dt>
+<dd> A <code>bson_t</code> containing the command specification.</dd></dl>
 <dl COMPACT>
-<dt><code>fields</code></p>
-<dd> An optional <code>bson_t</code> containing the fields to return in result documents.</dl>
+<dt><code>fields</code></dt>
+<dd> An optional <code>bson_t</code> containing the fields to return in result documents.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd> An optional <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd> An optional <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <h2>Returns</h2>
 <p> This function will always return a <code>mongoc_cursor_t</code> if valid parameters are passed. </p>
 <p> The cursor should be freed with <code><a href="/docs/linux/man/3-mongoc_cursor_destroy/">mongoc_cursor_destroy</a>(3)</code> \&amp;. </p>

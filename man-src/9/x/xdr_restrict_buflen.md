@@ -15,11 +15,11 @@ xdr_restrict_buflen - decrease available buffer space
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to xdr_stream</dl>
+<dl><dd></dd><dd>pointer to xdr_stream</dd></dl>
  
 
  <i>newbuflen</i>
-<dl><dd>new maximum number of bytes available</dl>
+<dl><dd>new maximum number of bytes available</dd></dl>
 
 <h2>Description</h2>
 

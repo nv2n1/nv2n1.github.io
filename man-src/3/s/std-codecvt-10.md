@@ -6,7 +6,6 @@ letter: "s"
 url: "/docs/linux/man/3-std-codecvt-10/"
 description: "std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::from_bytes – std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::from_bytes"
 ---
-
 <h2 id="name">NAME</h2>
 <p>std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::from_bytes &#8211; std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::from_bytes</p>
 <h2 id="synopsis">SYNOPSIS</h2>
@@ -37,18 +36,15 @@ wide_string from_bytes(const char* first, const char* last);  // (4)</code></pre
 #include &lt;string&gt;
 #include &lt;locale&gt;
 #include &lt;codecvt&gt;
-
 int main()
 {
     std::string utf8 = u8"zß水\U0001d10b"; // or u8"zß水"
                                             // or "\x7a\xc3\x9f\xe6\xb0\xb4\xf0\x9d\x84\x8b";
-
     // the UTF-8 / UTF-16 standard conversion facet
     std::u16string utf16 = std::wstring_convert&lt;std::codecvt_utf8_utf16&lt;char16_t&gt;, char16_t&gt;{}.from_bytes(utf8.data());
     std::cout &lt;&lt; "UTF16 conversion produced " &lt;&lt; utf16.size() &lt;&lt; " code units:\n";
     for (char16_t c : utf16)
         std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; c &lt;&lt; '\n';
-
     // the UTF-8 / UTF-32 standard conversion facet
     std::u32string utf32 = std::wstring_convert&lt;std::codecvt_utf8&lt;char32_t&gt;, char32_t&gt;{}.from_bytes(utf8);
     std::cout &lt;&lt; "UTF32 conversion produced " &lt;&lt; std::dec &lt;&lt; utf32.size() &lt;&lt; " code units:\n";

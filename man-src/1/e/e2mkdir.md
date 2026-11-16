@@ -15,14 +15,14 @@ description: "e2mkdir – creates a directory on an ext2 filesystem"
 <p> The <code>e2mkdir</code> command creates directories on an ext2 filesystem. It behaves similar to `mkdir -p&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-G </code><i>gid</i></p>
-<dd> Set the default group to gid.</p>
-<dt><code>-O </code><i>uid</i></p>
-<dd> Set the default file owner to uid.</p>
-<dt><code>-P </code><i>mode</i></p>
-<dd> Set the file permissions (ie 755, 666).</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</dl>
+<dt><code>-G </code><i>gid</i></dt>
+<dd> Set the default group to gid.</dd>
+<dt><code>-O </code><i>uid</i></dt>
+<dd> Set the default file owner to uid.</dd>
+<dt><code>-P </code><i>mode</i></dt>
+<dd> Set the file permissions (ie 755, 666).</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-e2tools/">e2tools</a></code>(7), <code><a href="/docs/linux/man/1-e2ln/">e2ln</a></code>(1), <code><a href="/docs/linux/man/1-e2ls/">e2ls</a></code>(1), <code><a href="/docs/linux/man/1-e2mv/">e2mv</a></code>(1), <code><a href="/docs/linux/man/1-e2cp/">e2cp</a></code>(1), <code><a href="/docs/linux/man/1-e2rm/">e2rm</a></code>(1), <code><a href="/docs/linux/man/1-e2tail/">e2tail</a></code>(1).</p>
 <h2>AUTHOR</h2>

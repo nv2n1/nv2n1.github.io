@@ -25,27 +25,26 @@ url: "/docs/linux/man/1-exempi/"
 
 <dl>
 <dt>-h: show this help
-<dd>
-<dt>-R: don't reconcile
-<dd>
-<dt>-x: dump XML
-<dd>
-<dt>-X: file(s) is XMP
-<dd>
-<dt>-w: write in place. Only for -s. Not compatible with -o.
-<dd>
-<dt>-o &lt;file&gt;: file to write the output to.
-<dd>
-<dt>-n &lt;ns&gt; &lt;prefix&gt;: set the prefix for a namespace.
-<dd>
-<dt>-g &lt;prop_name&gt;: retrieve the value with prop_name.
-<dd>
-<dt>-s &lt;prop_name&gt; -v &lt;value&gt;: retrieve or get the value.
-<dd>
-<dt>&lt;files&gt; the files to read from.
-<dd> 
-
-</dl>
+</dt><dd>
+</dd><dt>-R: don't reconcile
+</dt><dd>
+</dd><dt>-x: dump XML
+</dt><dd>
+</dd><dt>-X: file(s) is XMP
+</dt><dd>
+</dd><dt>-w: write in place. Only for -s. Not compatible with -o.
+</dt><dd>
+</dd><dt>-o &lt;file&gt;: file to write the output to.
+</dt><dd>
+</dd><dt>-n &lt;ns&gt; &lt;prefix&gt;: set the prefix for a namespace.
+</dt><dd>
+</dd><dt>-g &lt;prop_name&gt;: retrieve the value with prop_name.
+</dt><dd>
+</dd><dt>-s &lt;prop_name&gt; -v &lt;value&gt;: retrieve or get the value.
+</dt><dd>
+</dd><dt>&lt;files&gt; the files to read from.
+</dt><dd> 
+</dd></dl>
 
 <h2>SECURITY</h2>
 

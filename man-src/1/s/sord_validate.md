@@ -13,12 +13,12 @@ description: "sord_validate – Validate RDF data"
 <p> sord_validate [OPTION]&#8230; INPUT&#8230; </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print the command line options. </p>
-<dt><code>-l</code></p>
-<dd> Print errors on a single line. </p>
-<dt><code>-v</code></p>
-<dd> Display version information and exit. </p>
+<dt><code>-h</code></dt>
+<dd> Print the command line options. </dd>
+<dt><code>-l</code></dt>
+<dd> Print errors on a single line. </dd>
+<dt><code>-v</code></dt>
+<dd> Display version information and exit. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> This is a simple validator which checks that all used properties are actually defined, and that the domain and range of properties is explicitly correct. Note that an &quot;error&quot; from this program does not necessarily mean data is invalid, since it is not required to explicitly list types in RDF, however it is a good idea to do so. </p>

@@ -14,17 +14,17 @@ description: "ablkcipher_request_set_tfm – update cipher handle reference in r
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request handle to be modified</dl>
+</dd><dd>request handle to be modified</dd></dl>
 <p> <i>tfm</i></p>
 <dl>
-<dd>cipher handle that shall be added to the request handle</dl>
+<dd>cipher handle that shall be added to the request handle</dd></dl>
 <h2>Description</h2>
 <p>Allow the caller to replace the existing ablkcipher handle in the request data structure with a different one.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

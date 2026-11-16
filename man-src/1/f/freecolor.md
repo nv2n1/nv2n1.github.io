@@ -15,24 +15,24 @@ description: "freecolor – Display amount of free and used memory graphically"
 <p> <code>freecolor</code> displays the total amount of free and used physical and swap memory in the system as a colored bargraph on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Display the amount of memory in bytes.</p>
-<dt><code>-k</code></p>
-<dd> Display the amount of memory in kilobytes. This is the default.</p>
-<dt><code>-m</code></p>
-<dd> Display the amount of memory in megabytes.</p>
-<dt><code>-o</code></p>
-<dd> Display the output in old format, the only difference being this option will disable the display of the &quot;buffer adjusted&quot; line.</p>
-<dt><code>-s</code></p>
-<dd> Continuously display the result delay <i>seconds</i> apart. You may actually specify any floating point number for <i>delay</i>, <code><a href="/docs/linux/man/3-usleep/">usleep</a></code>(3) is used for microsecond resolution delay times.</p>
-<dt><code>-t</code></p>
-<dd> Display a line showing the column totals.</p>
-<dt><code>-V</code></p>
-<dd> Display version information.</dl>
+<dt><code>-b</code></dt>
+<dd> Display the amount of memory in bytes.</dd>
+<dt><code>-k</code></dt>
+<dd> Display the amount of memory in kilobytes. This is the default.</dd>
+<dt><code>-m</code></dt>
+<dd> Display the amount of memory in megabytes.</dd>
+<dt><code>-o</code></dt>
+<dd> Display the output in old format, the only difference being this option will disable the display of the &quot;buffer adjusted&quot; line.</dd>
+<dt><code>-s</code></dt>
+<dd> Continuously display the result delay <i>seconds</i> apart. You may actually specify any floating point number for <i>delay</i>, <code><a href="/docs/linux/man/3-usleep/">usleep</a></code>(3) is used for microsecond resolution delay times.</dd>
+<dt><code>-t</code></dt>
+<dd> Display a line showing the column totals.</dd>
+<dt><code>-V</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/proc/meminfo</p>
-<dd> memory information</dl>
+<dt>/proc/meminfo</dt>
+<dd> memory information</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-free/">free</a></code>(1), <code><a href="/docs/linux/man/1-slabtop/">slabtop</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8).</p>
 <h2>AUTHORS</h2>

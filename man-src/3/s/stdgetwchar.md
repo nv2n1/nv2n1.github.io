@@ -11,7 +11,6 @@ std::getwchar - std::getwchar
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cwchar&gt;
-
 wint_t getwchar();</code></pre> 
 Reads the next wide character from stdin. 
 

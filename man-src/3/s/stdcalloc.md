@@ -11,7 +11,6 @@ std::calloc - std::calloc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void *calloc(std::size_t num, std::size_t size);</code></pre> 
 Allocates memory for an array of num objects of size size and initializes it to all bits zero. 
 If allocation succeeds, returns a pointer to the lowest (first) byte in the allocated memory block that is suitably aligned for any object type. 
@@ -52,10 +51,8 @@ Originally (in C89), support for zero size was added to accommodate code such as
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     int *p1 = (int *)std::calloc(4, sizeof(int));    // allocate and zero out an array of 4 int
     int *p2 = (int *)std::calloc(1, sizeof(int[4])); // same, naming the array type directly

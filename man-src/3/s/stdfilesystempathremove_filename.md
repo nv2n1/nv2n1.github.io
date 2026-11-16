@@ -21,12 +21,9 @@ After this function completes, has_filename returns false. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     std::cout &lt;&lt; fs::path(&quot;foo/bar&quot;).remove_filename() &lt;&lt; '
 '

@@ -11,16 +11,16 @@ description: "XkbAllocDeviceInfo – Obtain an XkbDeviceInfoRec structure"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbDeviceInfoPtr XkbAllocDeviceInfo</code> <code>(unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>n_buttons</i><code>,</code> <code>unsigned int </code><i>sz_leds</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; device_spec</i></p>
+<dt><i>&#8211; device_spec</i></dt>
 <dd>
-<dd>device ID with which structure will be used</p>
-<dt><i>&#8211; n_buttons</i></p>
-<dd>number of button actions to allocate space for</p>
-<dt><i>&#8211; sz_leds</i></p>
-<dd>number of LED feedbacks to allocate space for</dl>
+</dd><dd>device ID with which structure will be used</dd>
+<dt><i>&#8211; n_buttons</i></dt>
+<dd>number of button actions to allocate space for</dd>
+<dt><i>&#8211; sz_leds</i></dt>
+<dd>number of LED feedbacks to allocate space for</dd></dl>
 <h2>Description</h2>
 <p><i>XkbAllocDeviceInfo </i> allocates space for an XkbDeviceInfoRec structure and initializes that structure&#8217;s <i>device_spec </i> field with the device ID specified by <i>device_spec. </i> If <i>n_buttons </i> is nonzero, <i>n_buttons </i> XkbActions are linked into the XkbDeviceInfoRec structure and initialized to zero. If <i>sz_leds </i> is nonzero, <i>sz_leds </i> XkbDeviceLedInfoRec structures are also allocated and linked into the XkbDeviceInfoRec structure. If you request XkbDeviceLedInfoRec structures be allocated using this request, you must initialize them explicitly. </p>
 <p> To obtain an XkbDeviceLedInfoRec structure, use <i>XkbAllocDeviceLedInfo.</i></p>
@@ -41,7 +41,6 @@ description: "XkbAllocDeviceInfo – Obtain an XkbDeviceInfoRec structure"
  unsigned short dflt_led_fb; /* input extension ID of default indicator feedback */
  XkbDeviceLedInfoPtr leds; /* LED descriptions */
  } XkbDeviceInfoRec, *XkbDeviceInfoPtr;
- 
  typedef struct {
  unsigned short led_class; /* class for this LED device*/
  unsigned short led_id; /* ID for this LED device */

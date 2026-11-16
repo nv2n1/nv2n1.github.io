@@ -14,12 +14,12 @@ description: "gnutls_openpgp_keyring_check_id – API function"
 <p> <code>int gnutls_openpgp_keyring_check_id(gnutls_openpgp_keyring_t </code><i>ring</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_keyring_t ring</p>
-<dd> holds the keyring to check against</p>
-<dt>const gnutls_openpgp_keyid_t keyid</p>
-<dd> will hold the keyid to check for.</p>
-<dt>unsigned int flags</p>
-<dd> unused (should be 0)</dl>
+<dt>gnutls_openpgp_keyring_t ring</dt>
+<dd> holds the keyring to check against</dd>
+<dt>const gnutls_openpgp_keyid_t keyid</dt>
+<dd> will hold the keyid to check for.</dd>
+<dt>unsigned int flags</dt>
+<dd> unused (should be 0)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Check if a given key ID exists in the keyring.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_openpgp_keyring_check_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

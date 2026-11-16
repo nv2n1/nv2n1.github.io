@@ -14,10 +14,10 @@ description: "gnutls_dtls_set_mtu – API function"
 <p> <code>void gnutls_dtls_set_mtu(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>mtu</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>unsigned int mtu</p>
-<dd> The maximum transfer unit of the transport</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>unsigned int mtu</dt>
+<dd> The maximum transfer unit of the transport</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the maximum transfer unit of the transport that DTLS packets are sent over. Note that this should exclude the IP (or IPv6) and UDP headers. So for DTLS over IPv6 on an Ethenet device with MTU 1500, the DTLS MTU set with this function would be 1500 &#8211; 40 (IPV6 header) &#8211; 8 (UDP header) = 1452.</p>
 <h2>SINCE</h2>
@@ -31,6 +31,6 @@ description: "gnutls_dtls_set_mtu – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -20,30 +20,30 @@ description: "emacsclient – tells a running Emacs to visit a file"
 <h2>Options</h2>
 <p>Most options follow the usual GNU command line syntax, with long options starting with two dashes (&quot;-&quot;).</p>
 <dl>
-<dt><code>+</code><i>line</i>[<code>:</code>column]</p>
-<dd>Go to the specified <i>line</i> and <i>column</i>. A missing <i>column</i> is treated as column 1. This option applies only to the next file specified.</p>
-<dt><code>-a, &#8211;alternate-editor=COMMAND</code></p>
-<dd>if the Emacs server is not running, run the specified shell command instead. This can also be specified via the ALTERNATE_EDITOR environment variable. If the value of ALTERNATE_EDITOR is the empty string, run &quot;emacs &#8211;daemon&quot; to start Emacs in daemon mode, and try to connect to it.</p>
-<dt><code>-c, &#8211;create-frame</code></p>
-<dd>create a new frame instead of trying to use the current Emacs frame</p>
-<dt><code>-F, &#8211;frame-parameters=ALIST</code></p>
-<dd>set the parameters of a newly-created frame.</p>
-<dt><code>-d, &#8211;display=DISPLAY</code></p>
-<dd>tell the server to display the files on the given display.</p>
-<dt><code>-e, &#8211;eval</code></p>
-<dd>do not visit files but instead evaluate the arguments as Emacs Lisp expressions.</p>
-<dt><code>-f, &#8211;server-file=FILENAME</code></p>
-<dd>use TCP configuration file FILENAME for communication. This can also be specified via the EMACS_SERVER_FILE environment variable.</p>
-<dt><code>-n, &#8211;no-wait</code></p>
-<dd>returns immediately without waiting for you to &quot;finish&quot; the buffer in Emacs.</p>
-<dt><code>-nw, -t, &#8211;tty</code></p>
-<dd>open a new Emacs frame on the current terminal</p>
-<dt><code>-s, &#8211;socket-name=FILENAME</code></p>
-<dd>use socket named FILENAME for communication.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>print version information and exit</p>
-<dt><code>-H, &#8211;help</code></p>
-<dd>print this usage information message and exit</dl>
+<dt><code>+</code><i>line</i>[<code>:</code>column]</dt>
+<dd>Go to the specified <i>line</i> and <i>column</i>. A missing <i>column</i> is treated as column 1. This option applies only to the next file specified.</dd>
+<dt><code>-a, &#8211;alternate-editor=COMMAND</code></dt>
+<dd>if the Emacs server is not running, run the specified shell command instead. This can also be specified via the ALTERNATE_EDITOR environment variable. If the value of ALTERNATE_EDITOR is the empty string, run &quot;emacs &#8211;daemon&quot; to start Emacs in daemon mode, and try to connect to it.</dd>
+<dt><code>-c, &#8211;create-frame</code></dt>
+<dd>create a new frame instead of trying to use the current Emacs frame</dd>
+<dt><code>-F, &#8211;frame-parameters=ALIST</code></dt>
+<dd>set the parameters of a newly-created frame.</dd>
+<dt><code>-d, &#8211;display=DISPLAY</code></dt>
+<dd>tell the server to display the files on the given display.</dd>
+<dt><code>-e, &#8211;eval</code></dt>
+<dd>do not visit files but instead evaluate the arguments as Emacs Lisp expressions.</dd>
+<dt><code>-f, &#8211;server-file=FILENAME</code></dt>
+<dd>use TCP configuration file FILENAME for communication. This can also be specified via the EMACS_SERVER_FILE environment variable.</dd>
+<dt><code>-n, &#8211;no-wait</code></dt>
+<dd>returns immediately without waiting for you to &quot;finish&quot; the buffer in Emacs.</dd>
+<dt><code>-nw, -t, &#8211;tty</code></dt>
+<dd>open a new Emacs frame on the current terminal</dd>
+<dt><code>-s, &#8211;socket-name=FILENAME</code></dt>
+<dd>use socket named FILENAME for communication.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>print version information and exit</dd>
+<dt><code>-H, &#8211;help</code></dt>
+<dd>print this usage information message and exit</dd></dl>
 <h2>Exit Status</h2>
 <p>Normally, the exit status is 0. If emacsclient shuts down due to Emacs signaling an error, the exit status is 1.</p>
 <h2>See Also</h2>

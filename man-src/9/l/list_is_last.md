@@ -15,11 +15,11 @@ list_is_last - tests whether <i>list</i> is the last entry in list <i>head</i>
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>the entry to test</dl>
+<dl><dd></dd><dd>the entry to test</dd></dl>
  
 
  <i>head</i>
-<dl><dd>the head of the list</dl>
+<dl><dd>the head of the list</dd></dl>
 
 <h2>Copyright</h2>
 

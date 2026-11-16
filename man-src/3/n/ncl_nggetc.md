@@ -13,11 +13,11 @@ NGGETC - Used to retrieve the current value of a specified internal parameter.
 
  void c_nggetc (char *cnp, char *cvp, int len)
 <h2>Description</h2><dl COMPACT><dt>CNP
-<dd>(an input expression of type CHARACTER) is the name of an internal parameter of Ngmisc. Only the first two characters of the string are examined.
-<dt>CVP
-<dd>(an output variable of type CHARACTER) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
+</dt><dd>(an input expression of type CHARACTER) is the name of an internal parameter of Ngmisc. Only the first two characters of the string are examined.
+</dd><dt>CVP
+</dt><dd>(an output variable of type CHARACTER) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl COMPACT><dt>len
-<dd>The size of cvp as dimensioned in the calling program.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Ngmisc parameters. For a complete list of parameters available in this utility, see the ngmisc_params man page.
+</dt><dd>The size of cvp as dimensioned in the calling program.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Ngmisc parameters. For a complete list of parameters available in this utility, see the ngmisc_params man page.
 <h2>Access</h2>To use NGGETC or c_nggetc, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: ngmisc_params, ngsetc, ngseti, nggeti, ngsetr, nggetr, ncarg_cbind. 
 

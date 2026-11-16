@@ -27,22 +27,22 @@ description: "heapsort , mergesort – sort functions"
 <h2>ERRORS</h2>
 <p> The Fn heapsort and Fn mergesort functions succeed unless:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The Fa size argument is zero, or, the Fa size argument to Fn mergesort is less than &#8220;sizeof(void *) / 2&#8221;</p>
-<dt><code>Bq </code>Er ENOMEM</p>
-<dd> The Fn heapsort or Fn mergesort functions were unable to allocate memory.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The Fa size argument is zero, or, the Fa size argument to Fn mergesort is less than &#8220;sizeof(void *) / 2&#8221;</dd>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The Fn heapsort or Fn mergesort functions were unable to allocate memory.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sort/">sort</a>(1), <a href="/docs/linux/man/3-radixsort/">radixsort</a>(3)</p>
 <dl>
 <dt>
-<dd> Williams, J.W.J 1964 <i>&quot;Heapsort&quot;</i> <i>&quot;Communications of the ACM&quot;</i> 7:1 pp. 347-348</dl>
+</dt><dd> Williams, J.W.J 1964 <i>&quot;Heapsort&quot;</i> <i>&quot;Communications of the ACM&quot;</i> 7:1 pp. 347-348</dd></dl>
 <dl>
 <dt>
-<dd> Knuth, D.E. 1968 <i>&quot;The Art of Computer Programming&quot;</i> Vol. 3 <i>&quot;Sorting and Searching&quot;</i> pp. 114-123, 145-149</dl>
+</dt><dd> Knuth, D.E. 1968 <i>&quot;The Art of Computer Programming&quot;</i> Vol. 3 <i>&quot;Sorting and Searching&quot;</i> pp. 114-123, 145-149</dd></dl>
 <dl>
 <dt>
-<dd> McIlroy, P.M. <i>&quot;Optimistic Sorting and Information Theoretic Complexity&quot;</i> <i>&quot;Fourth Annual ACM-SIAM Symposium on Discrete Algorithms&quot;</i> January 1992</dl>
+</dt><dd> McIlroy, P.M. <i>&quot;Optimistic Sorting and Information Theoretic Complexity&quot;</i> <i>&quot;Fourth Annual ACM-SIAM Symposium on Discrete Algorithms&quot;</i> January 1992</dd></dl>
 <dl>
 <dt>
-<dd> Bentley, J.L. McIlroy, M.D. <i>&quot;Engineering a Sort Function&quot;</i> <i>&quot;Software&#8211;Practice and Experience&quot;</i> Vol. 23(11) pp. 1249-1265 November 1993</dl>
+</dt><dd> Bentley, J.L. McIlroy, M.D. <i>&quot;Engineering a Sort Function&quot;</i> <i>&quot;Software&#8211;Practice and Experience&quot;</i> Vol. 23(11) pp. 1249-1265 November 1993</dd></dl>
 <h2>Index</h2>

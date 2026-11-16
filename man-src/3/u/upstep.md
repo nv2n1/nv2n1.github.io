@@ -10,9 +10,6 @@ description: "QuantLib::ExtendedEqualProbabilitiesBinomialTree – Base class fo
 <p>QuantLib::ExtendedEqualProbabilitiesBinomialTree &#8211; Base class for equal probabilities binomial tree. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Real upStep (Time stepTime) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>ExtendedBinomialTree&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -21,9 +18,6 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>probability</code> (Size, Size, Size) const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual Real upStep (Time stepTime) const =0
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>up_</code></p>
 <h2>Detailed Description</h2>

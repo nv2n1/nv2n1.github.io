@@ -15,12 +15,12 @@ description: "ldns-nsec3-hash – print out the NSEC3 hash for a domain name"
 <p> <code>ldns-nsec3-hash</code> is used to print out the NSEC3 hash for the given domain name. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> <i>number</i></p>
-<dd> Use the given algorithm number for the hash calculation. Defaults to 1 (SHA-1). </p>
-<dt><code>-s</code> <i>salt</i></p>
-<dd> Use the given salt for the hash calculation. Salt value should be in hexadecimal format. </p>
-<dt><code>-t</code> <i>count</i></p>
-<dd> Use count iterations for the hash calculation. </p>
+<dt><code>-a</code> <i>number</i></dt>
+<dd> Use the given algorithm number for the hash calculation. Defaults to 1 (SHA-1). </dd>
+<dt><code>-s</code> <i>salt</i></dt>
+<dd> Use the given salt for the hash calculation. Salt value should be in hexadecimal format. </dd>
+<dt><code>-t</code> <i>count</i></dt>
+<dd> Use count iterations for the hash calculation. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

@@ -12,19 +12,13 @@ std::chrono::year_month_day::year_month_day - std::chrono::year_month_day::year_
 
 <pre><code>year_month_day() = default;
 (1)(since C++ 20)
-
     constexpr year_month_day(const std::chrono::year &amp;y,
-
                              const std::chrono::month &amp;m, (2)(since C++ 20)
-
                                                               const std::chrono::day &amp;d) noexcept;
-
 constexpr year_month_day(const std::chrono::year_month_day_last &amp;ymdl) noexcept;
 (since C++ 20)
-
     constexpr year_month_day(const std::chrono::sys_days &amp;dp) noexcept;
 (since C++ 20)
-
     explicit constexpr year_month_day(const std::chrono::local_days &amp;dp) noexcept;
 (since C++ 20)</code></pre> 
 Constructs a year_month_day object. 

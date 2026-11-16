@@ -10,16 +10,10 @@ description: "QuantLib::ForwardOptionArguments – Arguments for forward (strike
 <p>QuantLib::ForwardOptionArguments &#8211; Arguments for forward (strike-resetting) option calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits QuantLib::ArgumentsType.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> <code>Real</code> <code>moneyness</code> </p>
 <p> <code>Date</code> <code>resetDate</code></p>

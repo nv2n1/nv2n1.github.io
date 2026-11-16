@@ -17,42 +17,42 @@ description: "m.proj – Convert coordinates from one projection to another (cs2
  <code>m.proj</code> [-<code>iodv</code>] [<code>input</code>=<i>filename</i>] [<code>output</code>=<i>filename</i>] [<code>fs</code>=<i>character</i>] [<code>proj_in</code>=<i>string</i>] [<code>proj_out</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
-<dt><code>-i</code></p>
+<dt><code>-i</code></dt>
 <dd>
- Use LL WGS84 as input and current location as output projection</p>
-<dt><code>-o</code></p>
+ Use LL WGS84 as input and current location as output projection</dd>
+<dt><code>-o</code></dt>
 <dd>
- Use current location as input and LL WGS84 as output projection</p>
-<dt><code>-d</code></p>
+ Use current location as input and LL WGS84 as output projection</dd>
+<dt><code>-d</code></dt>
 <dd>
- Output long/lat in decimal degrees or other projections with many decimal places</p>
-<dt><code>-v</code></p>
+ Output long/lat in decimal degrees or other projections with many decimal places</dd>
+<dt><code>-v</code></dt>
 <dd>
- Verbose mode (print projection parameters and filenames to stderr)</p>
-<dt><code>&#8211;verbose</code></p>
+ Verbose mode (print projection parameters and filenames to stderr)</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd>
- Verbose module output</p>
-<dt><code>&#8211;quiet</code></p>
+ Verbose module output</dd>
+<dt><code>&#8211;quiet</code></dt>
 <dd>
- Quiet module output</dl>
+ Quiet module output</dd></dl>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>input</code>=<i>filename</i></p>
+<dt><code>input</code>=<i>filename</i></dt>
 <dd>
- Input coordinate file (omit to read from stdin)</p>
-<dt><code>output</code>=<i>filename</i></p>
+ Input coordinate file (omit to read from stdin)</dd>
+<dt><code>output</code>=<i>filename</i></dt>
 <dd>
- Output coordinate file (omit to send to stdout)</p>
-<dt><code>fs</code>=<i>character</i></p>
+ Output coordinate file (omit to send to stdout)</dd>
+<dt><code>fs</code>=<i>character</i></dt>
 <dd>
  Field separator<br />
- Default: <i>|</i></p>
-<dt><code>proj_in</code>=<i>string</i></p>
+ Default: <i>|</i></dd>
+<dt><code>proj_in</code>=<i>string</i></dt>
 <dd>
- Input projection parameters (PROJ.4 style)</p>
-<dt><code>proj_out</code>=<i>string</i></p>
+ Input projection parameters (PROJ.4 style)</dd>
+<dt><code>proj_out</code>=<i>string</i></dt>
 <dd>
- Output projection parameters (PROJ.4 style)</dl>
+ Output projection parameters (PROJ.4 style)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This program allows a user to convert coordinates from one projection to another. Coordinates can be read from one file, converted, and results written to another file. Alternatively, if the <code>input</code> and/or <code>output</code> options are omitted, eastings and northings may be passed to the program directly from stdin and results sent directly to stdout. In this way <i>m.proj</i> can be used as a simple frontend to the PROJ.4 <i>cs2cs</i> utility. The <code>-i</code> or <code>-o</code> flags make the task especially easy for the common problem of converting to or from lat/long WGS84. </p>
 <p> <i>Note</i>: This program does not transform GRASS maps, it is designed to determine the equivalent coordinate values of an individual position or list of positions. Use <i>v.proj</i> or <i>r.proj</i> to reproject GRASS maps.</p>

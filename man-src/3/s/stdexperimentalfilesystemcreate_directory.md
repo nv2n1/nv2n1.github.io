@@ -10,20 +10,14 @@ description: "std::experimental::filesystem::create_directory,std::experimental:
 <p>std::experimental::filesystem::create_directory,std::experimental::filesystem::create_directories &#8211; std::experimental::filesystem::create_directory,std::experimental::filesystem::create_directories</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     bool create_directory(const path &amp;p);
 (1)(filesystem TS)
-
     bool create_directory(const path &amp;p, error_code &amp;ec);
-
 bool create_directory(const path &amp;p, const path &amp;existing_p);
 (2)(filesystem TS)
-
     bool create_directory(const path &amp;p, const path &amp;existing_p, error_code &amp;ec);
-
 bool create_directories(const path &amp;p);
 (3)(filesystem TS)
-
     bool create_directories(const path &amp;p, error_code &amp;ec);</code></pre>
 <p>1) Creates the directory p as if by POSIX mkdir() with a second argument of static_cast&lt;int&gt;(fs::perms::all) (the parent directory must already exist). If p already exists and is already a directory, the function does nothing (this condition is not treated as an error).<br />
 2) Same as <code>(1)</code>, except that the attributes of the new directory are copied from existing_p (which must be a directory that exists). It is OS-dependent which attributes are copied: on POSIX systems, the attributes are copied as if by<br />
@@ -51,16 +45,11 @@ noexcept</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/1/2/a&quot;);
     fs::create_directory(&quot;sandbox/1/2/b&quot;);

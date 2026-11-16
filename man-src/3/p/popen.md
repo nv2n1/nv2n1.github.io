@@ -10,14 +10,12 @@ description: "popen, pclose – pipe stream to or from a process"
 <p>popen, pclose &#8211; pipe stream to or from a process</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 FILE *popen(const char *command, const char *type);
-
 int pclose(FILE *stream);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>popen</code>(), <code>pclose</code>():</p>
 <dl>
 <dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>popen</code>() function opens a process by creating a pipe, forking, and invoking the shell. Since a pipe is by definition unidirectional, the <i>type</i> argument may specify only reading or writing, not both; the resulting stream is correspondingly read-only or write-only. </p>
 <p> The <i>command</i> argument is a pointer to a null-terminated string containing a shell command line. This command is passed to <i>/bin/sh</i> using the <code>-c</code> flag; interpretation, if any, is performed by the shell. </p>

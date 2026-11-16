@@ -12,7 +12,6 @@ std::atomic_ref&lt;T&gt;::operator= - std::atomic_ref&lt;T&gt;::operator=
 
 <pre><code>T operator=(T desired) const noexcept;
 (1)
-
     atomic_ref &amp;
     operator=(const atomic_ref &amp;) = delete;
 (2)</code></pre> 

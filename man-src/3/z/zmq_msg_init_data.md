@@ -17,21 +17,17 @@ zmq_msg_init_data - initialise 0MQ message from a supplied buffer
 The <i>zmq_msg_init_data()</i> function shall initialise the message object referenced by <i>msg</i> to represent the content referenced by the buffer located at address <i>data</i>, <i>size</i> bytes long. No copy of <i>data</i> shall be performed and 0MQ shall take ownership of the supplied buffer. If provided, the deallocation function <i>ffn</i> shall be called once the data buffer is no longer required by 0MQ, with the <i>data</i> and <i>hint</i> arguments supplied to <i>zmq_msg_init_data()</i>.
 <dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. 
-<dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
  The deallocation function <i>ffn</i> needs to be thread-safe, since it will be called from an arbitrary thread. 
-<dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
  If the deallocation function is not provided, the allocated memory will not be freed, and this may cause a memory leak. 
-<dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
  The functions <i>zmq_msg_init()</i>, <i>zmq_msg_init_data()</i> and <i>zmq_msg_init_size()</i> are mutually exclusive. Never initialize the same <i>zmq_msg_t</i> twice. 
-
 <h2>Return Value</h2>
-
 The <i>zmq_msg_init_data()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.
-
 <h2>Errors</h2>
-
 <b>ENOMEM</b>
-<dl><dd>Insufficient storage space is available.</dl>
+</dd><dl><dd>Insufficient storage space is available.</dd></dl>
 
 <h2>Example</h2>
 
@@ -39,9 +35,7 @@ The <i>zmq_msg_init_data()</i> function shall return zero if successful. Otherwi
 {
     free(data);
 }
-
 /*  ...  */
-
 void *data = malloc(6);
 assert(data);
 memcpy(data, &quot;ABCDEF&quot;, 6);
@@ -57,3 +51,4 @@ assert(rc == 0);
 <h2>Authors</h2>
 
 This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<b><a rel="nofollow" HREF="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></b>m[].
+</dl></dl></dl></dl>

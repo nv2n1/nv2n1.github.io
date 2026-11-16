@@ -14,20 +14,20 @@ description: "scan_read_oob – [GENERIC] Scan data+OOB region to buffer"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>temporary buffer</dl>
+<dd>temporary buffer</dd></dl>
 <p> <i>offs</i></p>
 <dl>
-<dd>offset at which to scan</dl>
+<dd>offset at which to scan</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of data region to read</dl>
+<dd>length of data region to read</dd></dl>
 <h2>Description</h2>
 <p>Scan read data from data+OOB. May traverse multiple pages, interleaving page,OOB,page,OOB,&#8230; in buf. Completes transfer and returns the &#8220;strongest&#8221; ECC condition (error or bitflip). May quit on the first (non-ECC) error.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

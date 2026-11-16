@@ -10,105 +10,55 @@ description: "std::regex_match – std::regex_match"
 <p>std::regex_match &#8211; std::regex_match</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;regex&gt;
-
     template &lt;class BidirIt,
-
               class Alloc, class CharT, class Traits&gt;
-
     bool regex_match(BidirIt first, BidirIt last,
-
                      std::match_results&lt;BidirIt, Alloc&gt; &amp;m, (1)(since C++ 11)
-
                                                                 const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                      std::regex_constants::match_flag_type flags =
-
                          std::regex_constants::match_default);
-
 template &lt;class BidirIt,
-
           class CharT, class Traits&gt;
-
 bool regex_match(BidirIt first, BidirIt last, (2)(since C++ 11)
-
                                                   const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                  std::regex_constants::match_flag_type flags =
-
                      std::regex_constants::match_default);
-
 template &lt;class CharT, class Alloc, class Traits&gt;
-
 bool regex_match(const CharT *str,
-
                  std::match_results&lt;const CharT *, Alloc&gt; &amp;m, (3)(since C++ 11)
-
                                                                   const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                  std::regex_constants::match_flag_type flags =
-
                      std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class Alloc, class CharT, class Traits&gt;
-
 bool regex_match(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s,
-
                  std::match_results&lt;
-
                      typename std::basic_string&lt;CharT, STraits, SAlloc&gt;::const_iterator, (4)(since C++ 11)
-
                                                                                              Alloc
-
                      &gt; &amp;m,
-
                  const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                  std::regex_constants::match_flag_type flags =
-
                      std::regex_constants::match_default);
-
 template &lt;class CharT, class Traits&gt;
-
 bool regex_match(const CharT *str,
-
                  const std::basic_regex&lt;CharT, Traits&gt; &amp;e, (5)(since C++ 11)
-
                                                                std::regex_constants::match_flag_type flags =
-
                                                                    std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class CharT, class Traits&gt;
-
 bool regex_match(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (6)(since C++ 11)
-
                                                                          const std::basic_regex&lt;CharT, Traits&gt; &amp;e,
-
                  std::regex_constants::match_flag_type flags =
-
                      std::regex_constants::match_default);
-
 template &lt;class STraits, class SAlloc,
-
           class Alloc, class CharT, class Traits&gt;
-
 bool regex_match(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;&amp;,
-
                  std::match_results&lt;
-
                      typename std::basic_string&lt;CharT, STraits, SAlloc&gt;::const_iterator, (7)(since C++ 14)
-
                                                                                              Alloc
-
                      &gt; &amp;,
-
                  const std::basic_regex&lt;CharT, Traits&gt; &amp;,
-
                  std::regex_constants::match_flag_type flags =
-
                      std::regex_constants::match_default) = delete;</code></pre>
 <p>Determines if the regular expression e matches the entire target character sequence, which may be specified as std::string, a C-string, or an iterator pair.<br />
 1) Determines if there is a match between the regular expression e and the entire target character sequence [first,last), taking into account the effect of flags. When determining if there is a match, only potential matches that match the entire character sequence are considered. Match results are returned in m.<br />
@@ -162,12 +112,9 @@ m[n].matched true if sub-expression n participated in the match, false otherwise
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;regex&gt;
 int main()
-
 {
     // Simple regular expression matching
     const std::string fnames[] = {&quot;foo.txt&quot;, &quot;bar.txt&quot;, &quot;baz.dat&quot;, &quot;zoidberg&quot;};

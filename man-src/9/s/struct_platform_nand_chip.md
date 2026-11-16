@@ -22,30 +22,30 @@ description: "struct_platform_nand_chip – chip level device structure"
 <h2>Members</h2>
 <p>nr_chips</p>
 <dl>
-<dd>max. number of chips to scan for</dl>
+<dd>max. number of chips to scan for</dd></dl>
 <p> chip_offset</p>
 <dl>
-<dd>chip number offset</dl>
+<dd>chip number offset</dd></dl>
 <p> nr_partitions</p>
 <dl>
-<dd>number of partitions pointed to by partitions (or zero)</dl>
+<dd>number of partitions pointed to by partitions (or zero)</dd></dl>
 <p> partitions</p>
 <dl>
-<dd>mtd partition list</dl>
+<dd>mtd partition list</dd></dl>
 <p> chip_delay</p>
 <dl>
-<dd>R/B delay value in us</dl>
+<dd>R/B delay value in us</dd></dl>
 <p> options</p>
 <dl>
-<dd>Option flags, e.g. 16bit buswidth</dl>
+<dd>Option flags, e.g. 16bit buswidth</dd></dl>
 <p> bbt_options</p>
 <dl>
-<dd>BBT option flags, e.g. NAND_BBT_USE_FLASH</dl>
+<dd>BBT option flags, e.g. NAND_BBT_USE_FLASH</dd></dl>
 <p> part_probe_types</p>
 <dl>
-<dd>NULL-terminated array of probe types</dl>
+<dd>NULL-terminated array of probe types</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

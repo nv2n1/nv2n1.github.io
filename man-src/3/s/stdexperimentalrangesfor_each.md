@@ -10,21 +10,13 @@ description: "std::experimental::ranges::for_each – std::experimental::ranges:
 <p>std::experimental::ranges::for_each &#8211; std::experimental::ranges::for_each</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class Proj = ranges::identity,
-
 IndirectUnaryInvocable&lt;projected&lt;I, Proj&gt;&gt; Fun &gt;                         (1) (ranges TS)
-
 ranges::tagged_pair&lt;tag::in(I), tag::fun(Fun)&gt;
-
 for_each(I first, S last, Fun f, Proj proj = Proj{});
-
 template&lt; InputRange R, class Proj = ranges::identity,
-
 IndirectUnaryInvocable&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Fun &gt;     (2) (ranges TS)
-
 ranges::tagged_pair&lt;tag::in(ranges::safe_iterator_t&lt;R&gt;), tag::fun(Fun)&gt;
-
 for_each(R&amp;&amp; r, Fun f, Proj proj = Proj{});</code></pre>
 <p>1) Invokes the given function object f to the result of invoking the projection proj on dereferencing every iterator in the range [first, last) (i.e.,ranges::invoke(f, ranges::invoke(proj, *i))), in order.<br />
 2) Same as <code>(1)</code>, but uses r as the source range, as if using ranges::begin(r) as first and ranges::end(r) as last.<br />

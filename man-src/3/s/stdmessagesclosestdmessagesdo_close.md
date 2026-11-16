@@ -11,14 +11,10 @@ std::messages&lt;CharT&gt;::close,std::messages&lt;CharT&gt;::do_close - std::me
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  void close(catalog c) const;
-
 protected:
 (2)
-
     virtual void do_close(catalog c) const;</code></pre> 
 1) public member function, calls the protected virtual member function do_close of the most derived class. 
 2) Releases the implementation-defined resources associated with an open catalog that is designated by the value c of type catalog (inherited from std::messages_base), which was obtained from open(). 
@@ -39,10 +35,8 @@ On POSIX systems, this function call usually translates to a call to catclose().
 
 The following example demonstrated retrieval of messages: on a typical GNU/Linux system it reads from /usr/share/locale/de/LC_MESSAGES/sed.mo 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale loc(&quot;de_DE.utf8&quot;);
     std::cout.imbue(loc);

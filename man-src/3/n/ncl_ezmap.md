@@ -13,79 +13,79 @@ EZMAP - Allows one to plot maps of the earth according to any of ten different p
  EZMAPB is the name of a supplement to the EZMAP utility that provides access to improved map databases (principally one called &quot;Earth..1&quot;, which contains a unified higher-resolution version of everything that was in the old outline datasets). The EZMAPB routines are discussed as part of the EZMAP utility. 
 
 <h2>Synopsis</h2><dl COMPACT><dt>Routines Used to Draw a Simple Map
-<dd>To draw the simple map defined by the current values of EZMAP's internal parameters (assuming no area fills and no access to the new, improved, map database &quot;Earth..1&quot;, which was created in 1998), one need only execute the single FORTRAN statement &quot;CALL MAPDRW&quot;:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPDRW - Draws a complete simple map.</dl></dl><dd>All that MAPDRW does is call four lower-level routines. In some situations, the user may wish to call these routines directly; they are as follows (in the order in which they are called by MAPDRW):
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPINT - Initializes. MAPINT must be called at least once before calling any routine that depends on mapping lat/lon coordinates into u/v coordinates. After one or more of MAPPOS, MAPROJ, and MAPSET has been called, MAPINT must be called again. MAPINT does the call to the SPPS routine SET that defines the mapping from the u/v (projection) plane to the x/y (plotter) plane.
-<dt>&bull;
-<dd>MAPGRD - Draws selected parallels and meridians.
-<dt>&bull;
-<dd>MAPLBL - Labels the international date line, the equator, the Greenwich meridian, and the poles, and draws the perimeter.
-<dt>&bull;
-<dd>MAPLOT - Draws selected geographic outlines. Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNDR.</dl></dl><dt>Routines Used to Change the Values of Internal Parameters
-<dd>The following routines are called to change the values of internal parameters of EZMAP, and thus change the behavior of other EZMAP routines:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPPOS - Determines what portion of the plotter frame is to be used.
-<dt>&bull;
-<dd>MAPROJ - Determines the projection to be used.
-<dt>&bull;
-<dd>MAPSET - Determines what portion of the u/v plane is to be viewed.
-<dt>&bull;
-<dd>MAPSTC - Sets a parameter value of type CHARACTER.
-<dt>&bull;
-<dd>MAPSTI - Sets a parameter value of type INTEGER.
-<dt>&bull;
-<dd>MAPSTL - Sets a parameter value of type LOGICAL.
-<dt>&bull;
-<dd>MAPSTR - Sets a parameter value of type REAL.</dl></dl><dt>Routines Used to Retrieve the Values of Internal Parameters
-<dd>The following routines are used to retrieve the current values of EZMAP parameters:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPGTC - Gets a parameter value of type CHARACTER.
-<dt>&bull;
-<dd>MAPGTI - Gets a parameter value of type INTEGER.
-<dt>&bull;
-<dd>MAPGTL - Gets a parameter value of type LOGICAL.
-<dt>&bull;
-<dd>MAPGTR - Gets a parameter value of type REAL.</dl></dl><dt>Routines Used to Save and Restore Internal Parameters
-<dd>To save/restore the current values of the internal parameters of EZMAP, use the following:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPSAV - Saves the values (by writing a record on a user-specified unit).
-<dt>&bull;
-<dd>MAPRST - Restores saved values (by reading a record from a user-specified unit).</dl></dl><dt>Routines Used to Draw Objects on a Map
-<dd>To draw objects on the map, use the following routines:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPTRA - Computes the u/v coordinates of a point from its latitude and longitude. If the point is unprojectable or its projection lies outside the current perimeter, a special value is returned to signal this.
-<dt>&bull;
-<dd>MAPTRN - Computes the u/v coordinates of a point from its latitude and longitude. If the point is unprojectable, a special value is returned to signal this, but no check is made for the projected value being outside the perimeter.
-<dt>&bull;
-<dd>MAPFST - Does a &quot;pen-up&quot; move defining the start of a line to be projected and drawn. The line is defined by a series of lat/lon coordinates.
-<dt>&bull;
-<dd>MAPVEC - Does a &quot;pen-down&quot; move defining the continuation of a line to be projected and drawn. The line is defined by a series of lat/lon coordinates.
-<dt>&bull;
-<dd>MAPIT - Does &quot;pen-up&quot; or &quot;pen-down&quot; moves. This routine is called by MAPFST and MAPVEC.
-<dt>&bull;
-<dd>MAPIQ - Signals the end of a string of calls to MAPIT and causes its buffers to be flushed.
-<dt>&bull;
-<dd>MAPGCI - Given the latitudes and longitudes of two points on the surface of the globe, this routine returns the latitudes and longitudes of a specified number of points along the great circle route joining them.</dl></dl><dt>Routines Used to Do Inverse Transformations
-<dd>The following routine was added to EZMAP early in 1992:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPTRI - Computes the latitude and longitude of a point from its u/v coordinates. If the point is outside the boundary of the map, a special value is returned.</dl></dl><dd>The example named &quot;mpex10&quot; shows one of the ways in which this routine may be used; it draws what is essentially a colored contour plot of a data field defined on the surface of the globe, using an orthographic projection.
-<dt>Routines Used to Draw Solid-Filled Maps (EZMAPA)
-<dd>In late 1986 or early 1987, a package of routines was written allowing a user to draw solid-filled maps of the globe. This package was named EZMAPA and was first advertised in the NCAR Graphics User's Guide (Version 2.00), published in August, 1987. Conceptually, the routines in this package are really part of EZMAP; they use the same common blocks and many of the same underlying low-level routines and they are affected by the same set of internal parameters as the routines in EZMAP proper. The routines of EZMAPA will be described in this document; to use them effectively, it will be necessary to understand also the package AREAS, which is described in a separate document. The EZMAPA routines are as follows:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPBLA - Adds boundary lines to an existing area map. Routines in the package AREAS may then be used to process that area map in various ways. (Example: drawing a map of Europe with each country in a different color.) Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNAM.
-<dt>&bull;
-<dd>MAPBLM - Draws boundary lines &quot;masked&quot; by an existing area map. (Example: drawing these lines only where they do not overlay CONPACK labels.) Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNDM.
-<dt>&bull;
-<dd>MAPGRM - Draws lines of latitude and longitude &quot;masked&quot; by an existing area map. (Example: drawing these lines over water, but not over land.)
-<dt>&bull;
-<dd>MAPITA and MAPIQA - Adds to an area map the projections of arbitrary lines defined by lat/lon coordinates of points on the surface of the globe. MAPBLA uses these routines to add boundary lines to an area map; they may be called directly by the user to add his/her own set of boundary lines to the area map.
-<dt>&bull;
-<dd>MAPITM and MAPIQM - Draws, masked by an area map, the projections of arbitrary lines defined by lat/lon coordinates of points on the surface of the globe. MAPGRM uses these routines to draw masked lines of latitude and longitude; they may be called directly by the user to draw other masked lines.
-<dt>&bull;
-<dd>MAPACI - A function which, given the &quot;area identifier&quot; for a particular area defined by the boundaries in one of the old EZMAP outline datasets, returns a suggested color index for that area; it is guaranteed that, if the suggested color indices are used, no two areas having a boundary in common will have the same color. Note that this function should not be used to select color indices for areas defined by the new map database &quot;Earth..1&quot;, which was created in 1998; for that purpose, use EZMAPB functions instead (in particular, MPISCI).</dl></dl><dt>Routines Used to Access New Datasets (EZMAPB)
-<dd>In early 1998, a new world map database, called &quot;Earth..1&quot;, was created for use with EZMAP; this database has higher-resolution coastlines, it has been updated to reflect many of the political changes that have taken place over the years since EZMAP came into existence, and it is structured differently, allowing for greater flexibility and ease of use and providing for easier changes and extensions in the future. 
+</dt><dd>To draw the simple map defined by the current values of EZMAP's internal parameters (assuming no area fills and no access to the new, improved, map database &quot;Earth..1&quot;, which was created in 1998), one need only execute the single FORTRAN statement &quot;CALL MAPDRW&quot;:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPDRW - Draws a complete simple map.</dd></dl></dl><dd>All that MAPDRW does is call four lower-level routines. In some situations, the user may wish to call these routines directly; they are as follows (in the order in which they are called by MAPDRW):
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPINT - Initializes. MAPINT must be called at least once before calling any routine that depends on mapping lat/lon coordinates into u/v coordinates. After one or more of MAPPOS, MAPROJ, and MAPSET has been called, MAPINT must be called again. MAPINT does the call to the SPPS routine SET that defines the mapping from the u/v (projection) plane to the x/y (plotter) plane.
+</dd><dt>&bull;
+</dt><dd>MAPGRD - Draws selected parallels and meridians.
+</dd><dt>&bull;
+</dt><dd>MAPLBL - Labels the international date line, the equator, the Greenwich meridian, and the poles, and draws the perimeter.
+</dd><dt>&bull;
+</dt><dd>MAPLOT - Draws selected geographic outlines. Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNDR.</dd></dl></dl><dt>Routines Used to Change the Values of Internal Parameters
+</dt><dd>The following routines are called to change the values of internal parameters of EZMAP, and thus change the behavior of other EZMAP routines:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPPOS - Determines what portion of the plotter frame is to be used.
+</dd><dt>&bull;
+</dt><dd>MAPROJ - Determines the projection to be used.
+</dd><dt>&bull;
+</dt><dd>MAPSET - Determines what portion of the u/v plane is to be viewed.
+</dd><dt>&bull;
+</dt><dd>MAPSTC - Sets a parameter value of type CHARACTER.
+</dd><dt>&bull;
+</dt><dd>MAPSTI - Sets a parameter value of type INTEGER.
+</dd><dt>&bull;
+</dt><dd>MAPSTL - Sets a parameter value of type LOGICAL.
+</dd><dt>&bull;
+</dt><dd>MAPSTR - Sets a parameter value of type REAL.</dd></dl></dl><dt>Routines Used to Retrieve the Values of Internal Parameters
+</dt><dd>The following routines are used to retrieve the current values of EZMAP parameters:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPGTC - Gets a parameter value of type CHARACTER.
+</dd><dt>&bull;
+</dt><dd>MAPGTI - Gets a parameter value of type INTEGER.
+</dd><dt>&bull;
+</dt><dd>MAPGTL - Gets a parameter value of type LOGICAL.
+</dd><dt>&bull;
+</dt><dd>MAPGTR - Gets a parameter value of type REAL.</dd></dl></dl><dt>Routines Used to Save and Restore Internal Parameters
+</dt><dd>To save/restore the current values of the internal parameters of EZMAP, use the following:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPSAV - Saves the values (by writing a record on a user-specified unit).
+</dd><dt>&bull;
+</dt><dd>MAPRST - Restores saved values (by reading a record from a user-specified unit).</dd></dl></dl><dt>Routines Used to Draw Objects on a Map
+</dt><dd>To draw objects on the map, use the following routines:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPTRA - Computes the u/v coordinates of a point from its latitude and longitude. If the point is unprojectable or its projection lies outside the current perimeter, a special value is returned to signal this.
+</dd><dt>&bull;
+</dt><dd>MAPTRN - Computes the u/v coordinates of a point from its latitude and longitude. If the point is unprojectable, a special value is returned to signal this, but no check is made for the projected value being outside the perimeter.
+</dd><dt>&bull;
+</dt><dd>MAPFST - Does a &quot;pen-up&quot; move defining the start of a line to be projected and drawn. The line is defined by a series of lat/lon coordinates.
+</dd><dt>&bull;
+</dt><dd>MAPVEC - Does a &quot;pen-down&quot; move defining the continuation of a line to be projected and drawn. The line is defined by a series of lat/lon coordinates.
+</dd><dt>&bull;
+</dt><dd>MAPIT - Does &quot;pen-up&quot; or &quot;pen-down&quot; moves. This routine is called by MAPFST and MAPVEC.
+</dd><dt>&bull;
+</dt><dd>MAPIQ - Signals the end of a string of calls to MAPIT and causes its buffers to be flushed.
+</dd><dt>&bull;
+</dt><dd>MAPGCI - Given the latitudes and longitudes of two points on the surface of the globe, this routine returns the latitudes and longitudes of a specified number of points along the great circle route joining them.</dd></dl></dl><dt>Routines Used to Do Inverse Transformations
+</dt><dd>The following routine was added to EZMAP early in 1992:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPTRI - Computes the latitude and longitude of a point from its u/v coordinates. If the point is outside the boundary of the map, a special value is returned.</dd></dl></dl><dd>The example named &quot;mpex10&quot; shows one of the ways in which this routine may be used; it draws what is essentially a colored contour plot of a data field defined on the surface of the globe, using an orthographic projection.
+</dd><dt>Routines Used to Draw Solid-Filled Maps (EZMAPA)
+</dt><dd>In late 1986 or early 1987, a package of routines was written allowing a user to draw solid-filled maps of the globe. This package was named EZMAPA and was first advertised in the NCAR Graphics User's Guide (Version 2.00), published in August, 1987. Conceptually, the routines in this package are really part of EZMAP; they use the same common blocks and many of the same underlying low-level routines and they are affected by the same set of internal parameters as the routines in EZMAP proper. The routines of EZMAPA will be described in this document; to use them effectively, it will be necessary to understand also the package AREAS, which is described in a separate document. The EZMAPA routines are as follows:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPBLA - Adds boundary lines to an existing area map. Routines in the package AREAS may then be used to process that area map in various ways. (Example: drawing a map of Europe with each country in a different color.) Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNAM.
+</dd><dt>&bull;
+</dt><dd>MAPBLM - Draws boundary lines &quot;masked&quot; by an existing area map. (Example: drawing these lines only where they do not overlay CONPACK labels.) Note that this routine uses whichever old outline dataset is selected by the value of the internal parameter 'OU'; to access the new map database &quot;Earth..1&quot;, which was created in 1998, one must call instead the EZMAPB routine MPLNDM.
+</dd><dt>&bull;
+</dt><dd>MAPGRM - Draws lines of latitude and longitude &quot;masked&quot; by an existing area map. (Example: drawing these lines over water, but not over land.)
+</dd><dt>&bull;
+</dt><dd>MAPITA and MAPIQA - Adds to an area map the projections of arbitrary lines defined by lat/lon coordinates of points on the surface of the globe. MAPBLA uses these routines to add boundary lines to an area map; they may be called directly by the user to add his/her own set of boundary lines to the area map.
+</dd><dt>&bull;
+</dt><dd>MAPITM and MAPIQM - Draws, masked by an area map, the projections of arbitrary lines defined by lat/lon coordinates of points on the surface of the globe. MAPGRM uses these routines to draw masked lines of latitude and longitude; they may be called directly by the user to draw other masked lines.
+</dd><dt>&bull;
+</dt><dd>MAPACI - A function which, given the &quot;area identifier&quot; for a particular area defined by the boundaries in one of the old EZMAP outline datasets, returns a suggested color index for that area; it is guaranteed that, if the suggested color indices are used, no two areas having a boundary in common will have the same color. Note that this function should not be used to select color indices for areas defined by the new map database &quot;Earth..1&quot;, which was created in 1998; for that purpose, use EZMAPB functions instead (in particular, MPISCI).</dd></dl></dl><dt>Routines Used to Access New Datasets (EZMAPB)
+</dt><dd>In early 1998, a new world map database, called &quot;Earth..1&quot;, was created for use with EZMAP; this database has higher-resolution coastlines, it has been updated to reflect many of the political changes that have taken place over the years since EZMAP came into existence, and it is structured differently, allowing for greater flexibility and ease of use and providing for easier changes and extensions in the future. 
 
  Each area defined by the database has 1) a &quot;area identifier&quot; (an integer uniquely identifying it), 2) an &quot;area type&quot; specifying its level in a hierarchy of areas, 3) a suggested color index, 4) an area identifier specifying its &quot;parent&quot; area (the area of which it is a part), and 5) a name. For example, there is an area named &quot;Madeline Island&quot; which is of type 4 (used for a state or a portion thereof) and has suggested color index 6. Its parent is an area named &quot;Wisconsin&quot;, which is also of type 4 and has suggested color index 6. The parent of &quot;Wisconsin&quot; is &quot;Conterminous US&quot;, which is of type 3 (used for a country or a portion thereof) and has suggested color index 3. The parent of &quot;Conterminous US&quot; is &quot;United States&quot;, which is also of type 3 and has suggested color index 3. The parent of &quot;United States&quot; is &quot;North America&quot;, which is of type 2 and has suggested color index 5. The parent of &quot;North America&quot; is &quot;Land&quot;, which is of type 1 and has suggested color index 2. The area named &quot;Land&quot; is at the top of the hierarchy and therefore has no parent (when you ask for the area identifier of its parent, you get a zero). 
 
@@ -96,45 +96,45 @@ EZMAP - Allows one to plot maps of the earth according to any of ten different p
  A new package of routines is used to access &quot;Earth..1&quot; and other databases in the same format; this package is called EZMAPB. Conceptually, the EZMAPB routines are just part of EZMAP; they use the same common blocks and many of the same underlying low-level routines and they are affected by the same set of internal parameters as the routines in EZMAP proper. 
 
  The principal EZMAPB routines are as follows:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MPLNAM (MaP LiNes, to Area Map) - A routine to extract boundary lines from a specified database and send them to an area map.
-<dt>&bull;
-<dd>MPLNDM (MaP LiNes, Draw Masked) - A routine to extract boundary lines from a specified database and draw them, masked by the contents of an area map.
-<dt>&bull;
-<dd>MPLNDR (MaP LiNes, Draw) - A routine to extract boundary lines from a specified database and draw them.
-<dt>&bull;
-<dd>MPLNRI - A routine to force the reading of certain information from a database into labelled COMMON blocks inside EZMAP, so that subsequent references to some of the functions described below will have that information to work with. (Each of the routines MPLNAM, MPLNDM, and MPLNDR reads this data as a side effect; MPLNRI is provided for use in cases in which none of the other three routines has yet been called.)</dl></dl><dd>As each of the EZMAPB routines MPLNAM, MPLNDM, and MPLNDR processes boundary lines from a specified database, it calls an EZMAPB routine named MPCHLN (the default version of which does nothing):
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MPCHLN - A user-replaceable routine that can be made to change line style, color, line width, and so on as the boundary lines from a database are being drawn; it can also be made to delete particular lines or to change the area identifiers associated with them. The arguments of MPCHLN tell it which of the EZMAPB routines is calling it and whether it's being called before or after the line is processed; they also supply the &quot;line type&quot; of the line being drawn, the area identifiers of the areas on either side of it, and the actual coordinates defining the line. Line types are similar to area types (1 =&gt; land/water, 2 =&gt; continents, 3 =&gt; countries, 4 =&gt; states, and 5 =&gt; counties).</dl></dl><dd>Another EZMAPB routine, named MPGLTY, may be called by the user from within the line-processing routine specified by the final argument in a call to MPLNDM:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MPGLTY - Retrieves the line type of the line being drawn.</dl></dl><dd>There is a group of EZMAPB functions providing access to information about the areas defined by a database being used; these may be referenced at any time the appropriate information has been loaded into EZMAPB's common blocks (that is, after calling one of MPLNAM, MPLNDM, MPLNDR, or MPLNRI), but they are normally to be referenced from within the area-processing routine specified as the final argument in a call to the AREAS routine ARSCAM, in which they may be used to obtain information determining the manner in which the areas are to be rendered:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MPIPAI - A function whose value is non-zero if and only if the area with a specified area identifier is part of the area having a second specified area identifier.
-<dt>&bull;
-<dd>MPIPAN - A function whose value is non-zero if and only if the area with a specified area identifier is part of the area having a specified name.
-<dt>&bull;
-<dd>MPIOAR - A function whose value is the area identifier of the smallest area that is defined at or above a specified level in the area hierarchy and of which the area having a specified area identifier is a part.
-<dt>&bull;
-<dd>MPIATY - A function whose value is the type of the area having a specified area identifier.
-<dt>&bull;
-<dd>MPIPAR - A function whose value is the area identifier of the parent of the area having a specified area identifier.
-<dt>&bull;
-<dd>MPISCI - A function whose value is the suggested color index for an area having a specified area identifier.
-<dt>&bull;
-<dd>MPNAME - A function whose value is the name of the area having a particular area identifier.
-<dt>&bull;
-<dd>MPFNME - A function whose value is the full name of the area having a specified area identifier, up to a specified level in the hierarchy of areas; the full name of an area consists of its own name, preceded by the name of its parent, preceded by the name of its parent's parent, and so on; the various components of the name are separated by the 3-character string ' - ' (a blank, a dash, and another blank).</dl></dl><dd>Two additional EZMAPB functions are provided; these have nothing to do with mapping, really, but can be useful in dealing with character strings:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MPIFNB - A function whose value is the index of the first non-blank character in a character string.
-<dt>&bull;
-<dd>MPILNB - A function whose value is the index of the last non-blank character in a character string.</dl></dl><dt>Miscellaneous Other Routines
-<dd>The following EZMAP routines are used for the purposes stated:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPRS - Re-executes the &quot;CALL SET&quot; done during the last call to MAPINT. This is useful when there has been an intervening call to a utility that calls SET. It is quite common for a background drawn by EZMAP to be placed in a flash buffer (as created by the package &quot;GFLASH&quot;). When the contents of the flash buffer are copied to the metafile being created, if it is desired to draw something on the EZMAP background, MAPRS may first have to be called to ensure that the correct SET call is in effect.
-<dt>&bull;
-<dd>MPRST - Resets the internal state of EZMAP/EZMAPA to the default.
-<dt>&bull;
-<dd>SUPMAP - Draws a map with a single call. An implementation of the routine from which EZMAP grew.</dl></dl>
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MPLNAM (MaP LiNes, to Area Map) - A routine to extract boundary lines from a specified database and send them to an area map.
+</dd><dt>&bull;
+</dt><dd>MPLNDM (MaP LiNes, Draw Masked) - A routine to extract boundary lines from a specified database and draw them, masked by the contents of an area map.
+</dd><dt>&bull;
+</dt><dd>MPLNDR (MaP LiNes, Draw) - A routine to extract boundary lines from a specified database and draw them.
+</dd><dt>&bull;
+</dt><dd>MPLNRI - A routine to force the reading of certain information from a database into labelled COMMON blocks inside EZMAP, so that subsequent references to some of the functions described below will have that information to work with. (Each of the routines MPLNAM, MPLNDM, and MPLNDR reads this data as a side effect; MPLNRI is provided for use in cases in which none of the other three routines has yet been called.)</dd></dl></dl><dd>As each of the EZMAPB routines MPLNAM, MPLNDM, and MPLNDR processes boundary lines from a specified database, it calls an EZMAPB routine named MPCHLN (the default version of which does nothing):
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MPCHLN - A user-replaceable routine that can be made to change line style, color, line width, and so on as the boundary lines from a database are being drawn; it can also be made to delete particular lines or to change the area identifiers associated with them. The arguments of MPCHLN tell it which of the EZMAPB routines is calling it and whether it's being called before or after the line is processed; they also supply the &quot;line type&quot; of the line being drawn, the area identifiers of the areas on either side of it, and the actual coordinates defining the line. Line types are similar to area types (1 =&gt; land/water, 2 =&gt; continents, 3 =&gt; countries, 4 =&gt; states, and 5 =&gt; counties).</dd></dl></dl><dd>Another EZMAPB routine, named MPGLTY, may be called by the user from within the line-processing routine specified by the final argument in a call to MPLNDM:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MPGLTY - Retrieves the line type of the line being drawn.</dd></dl></dl><dd>There is a group of EZMAPB functions providing access to information about the areas defined by a database being used; these may be referenced at any time the appropriate information has been loaded into EZMAPB's common blocks (that is, after calling one of MPLNAM, MPLNDM, MPLNDR, or MPLNRI), but they are normally to be referenced from within the area-processing routine specified as the final argument in a call to the AREAS routine ARSCAM, in which they may be used to obtain information determining the manner in which the areas are to be rendered:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MPIPAI - A function whose value is non-zero if and only if the area with a specified area identifier is part of the area having a second specified area identifier.
+</dd><dt>&bull;
+</dt><dd>MPIPAN - A function whose value is non-zero if and only if the area with a specified area identifier is part of the area having a specified name.
+</dd><dt>&bull;
+</dt><dd>MPIOAR - A function whose value is the area identifier of the smallest area that is defined at or above a specified level in the area hierarchy and of which the area having a specified area identifier is a part.
+</dd><dt>&bull;
+</dt><dd>MPIATY - A function whose value is the type of the area having a specified area identifier.
+</dd><dt>&bull;
+</dt><dd>MPIPAR - A function whose value is the area identifier of the parent of the area having a specified area identifier.
+</dd><dt>&bull;
+</dt><dd>MPISCI - A function whose value is the suggested color index for an area having a specified area identifier.
+</dd><dt>&bull;
+</dt><dd>MPNAME - A function whose value is the name of the area having a particular area identifier.
+</dd><dt>&bull;
+</dt><dd>MPFNME - A function whose value is the full name of the area having a specified area identifier, up to a specified level in the hierarchy of areas; the full name of an area consists of its own name, preceded by the name of its parent, preceded by the name of its parent's parent, and so on; the various components of the name are separated by the 3-character string ' - ' (a blank, a dash, and another blank).</dd></dl></dl><dd>Two additional EZMAPB functions are provided; these have nothing to do with mapping, really, but can be useful in dealing with character strings:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MPIFNB - A function whose value is the index of the first non-blank character in a character string.
+</dd><dt>&bull;
+</dt><dd>MPILNB - A function whose value is the index of the last non-blank character in a character string.</dd></dl></dl><dt>Miscellaneous Other Routines
+</dt><dd>The following EZMAP routines are used for the purposes stated:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPRS - Re-executes the &quot;CALL SET&quot; done during the last call to MAPINT. This is useful when there has been an intervening call to a utility that calls SET. It is quite common for a background drawn by EZMAP to be placed in a flash buffer (as created by the package &quot;GFLASH&quot;). When the contents of the flash buffer are copied to the metafile being created, if it is desired to draw something on the EZMAP background, MAPRS may first have to be called to ensure that the correct SET call is in effect.
+</dd><dt>&bull;
+</dt><dd>MPRST - Resets the internal state of EZMAP/EZMAPA to the default.
+</dd><dt>&bull;
+</dt><dd>SUPMAP - Draws a map with a single call. An implementation of the routine from which EZMAP grew.</dd></dl></dl>
 </dl><h2>C-Binding Synopsis</h2>#include &lt;ncarg/ncargC.h&gt; 
 
  c_mapaci 
@@ -190,12 +190,12 @@ EZMAP - Allows one to plot maps of the earth according to any of ten different p
  c_mprset 
  c_supmap
 <h2>User-Modifiable Internal Routines</h2>The following EZMAP routines are used for the purposes stated:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>MAPUSR - This routine is called by various EZMAP routines just before and just after drawing parts of the map. By default, grid lines are drawn using software dashed lines and geographical outlines are drawn using either solid lines or dotted lines. The dash pattern used for the grid lines, the flag which says whether outlines are solid or dotted, and the color indices of various parts of the map are all user-settable parameters, but more complete control of color indices, spot size, dash pattern, etc., may be achieved by supplying one's own version of MAPUSR; a user version may be as complicated as is required to achieve a desired effect. Note that this routine is not called by any of the EZMAPB routines; they call MPCHLN instead.
-<dt>&bull;
-<dd>MAPEOD - This routine is called by the EZMAP routine MAPLOT and by the EZMAPA routines MAPBLA and MAPBLM; in each case, it is called once for each segment in the outline dataset. The user may supply a version which examines the segment to see if it ought to be plotted and, if not, to delete it. This can be used (for example) to reduce the clutter in northern Canada. Note that this routine is not called by any of the EZMAPB routines; they call MPCHLN instead.
-<dt>&bull;
-<dd>MPCHLN - This routine is called by the EZMAPB routines MPLNAM, MPLNDM, and MPLNDR; in each case, it is called just before and just after the processing of each segment in the map database. The default version does nothing; a user-supplied version can do for the new databases what MAPUSR and MAPEOD did for the old ones.</dl></dl><h2>Access</h2>To use EZMAP Fortran or C routines, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+<dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>MAPUSR - This routine is called by various EZMAP routines just before and just after drawing parts of the map. By default, grid lines are drawn using software dashed lines and geographical outlines are drawn using either solid lines or dotted lines. The dash pattern used for the grid lines, the flag which says whether outlines are solid or dotted, and the color indices of various parts of the map are all user-settable parameters, but more complete control of color indices, spot size, dash pattern, etc., may be achieved by supplying one's own version of MAPUSR; a user version may be as complicated as is required to achieve a desired effect. Note that this routine is not called by any of the EZMAPB routines; they call MPCHLN instead.
+</dd><dt>&bull;
+</dt><dd>MAPEOD - This routine is called by the EZMAP routine MAPLOT and by the EZMAPA routines MAPBLA and MAPBLM; in each case, it is called once for each segment in the outline dataset. The user may supply a version which examines the segment to see if it ought to be plotted and, if not, to delete it. This can be used (for example) to reduce the clutter in northern Canada. Note that this routine is not called by any of the EZMAPB routines; they call MPCHLN instead.
+</dd><dt>&bull;
+</dt><dd>MPCHLN - This routine is called by the EZMAPB routines MPLNAM, MPLNDM, and MPLNDR; in each case, it is called just before and just after the processing of each segment in the map database. The default version does nothing; a user-supplied version can do for the new databases what MAPUSR and MAPEOD did for the old ones.</dd></dl></dl><h2>Access</h2>To use EZMAP Fortran or C routines, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>When error conditions are detected, the support routine SETER is called. By default, SETER writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. It is possible to put SETER into recovery mode and regain control after a recoverable error (which includes all of the possible errors). 
 
  The possible error messages are listed below. All errors are recoverable in the sense that a user program which has called ENTSR to set recovery mode will get control back after one of these errors occurs. 

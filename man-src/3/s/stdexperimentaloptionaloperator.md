@@ -11,18 +11,14 @@ description: "std::experimental::optional<T>::operator= – std::experimental::o
 <h2>Synopsis</h2>
 <pre><code>optional &amp;operator=(std::experimental::nullopt_t) noexcept;
 (1)(library fundamentals TS)
-
     optional &amp;
     operator=(const optional &amp;other);
 (2)(library fundamentals TS)
-
     optional &amp;
     operator=(optional &amp;&amp;other) noexcept(/* see below */);
 (3)(library fundamentals TS)
-
     template &lt;class U&gt;
     (4)(library fundamentals TS)
-
         optional &amp;
         operator=(U &amp;&amp;value);</code></pre>
 <p>Replaces contents of *this with the contents of other<br />
@@ -52,11 +48,8 @@ noexcept(std::is_nothrow_move_assignable&lt;T&gt;::value &amp;&amp; std::is_noth
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;experimental/optional&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::experimental::optional&lt;const char *&gt; s1 = &quot;abc&quot;, s2; // constructor
     s2 = s1;                                                  // assignment

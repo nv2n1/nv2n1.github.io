@@ -13,9 +13,9 @@ description: "wps2text – convert Works document into plain text"
 <p> <code>wps2text</code> [<i>OPTION</i>] <i>&lt;Works Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>:</p>
-<dd> Shows this help message</p>
-<dt><code>-v</code>:</p>
-<dd> Output wps2text version </p>
+<dt><code>-h</code>:</dt>
+<dd> Shows this help message</dd>
+<dt><code>-v</code>:</dt>
+<dd> Output wps2text version </dd>
 </dl>
 <h2>Index</h2>

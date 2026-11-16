@@ -14,10 +14,10 @@ description: "memdup_user – duplicate memory region from user space"
 <p><i>src</i></p>
 <dl>
 <dd>
-<dd>source address in user space</dl>
+</dd><dd>source address in user space</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to copy</dl>
+<dd>number of bytes to copy</dd></dl>
 <h2>Description</h2>
 <p>Returns an <code>ERR_PTR</code> on failure.</p>
 <h2>Copyright</h2>

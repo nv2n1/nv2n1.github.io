@@ -12,100 +12,34 @@ description: "std::__numeric_limits_base –"
 <p> Inherited by <code>std::numeric_limits&lt; _Tp &gt;</code>.</p>
 <h3>Static Public Attributes</h3>
 <pre><code>static constexpr int digits
-
-
-
 static constexpr int digits10
-
-
-
 static constexpr float_denorm_style has_denorm
-
-
-
 static constexpr bool has_denorm_loss
-
-
-
 static constexpr bool has_infinity
-
-
-
 static constexpr bool has_quiet_NaN
-
-
-
 static constexpr bool has_signaling_NaN
-
-
-
 static constexpr bool is_bounded
-
-
-
 static constexpr bool is_exact
-
-
-
 static constexpr bool is_iec559
-
-
-
 static constexpr bool is_integer
-
-
-
 static constexpr bool is_modulo
-
-
-
 static constexpr bool is_signed
-
-
-
 static constexpr bool is_specialized
-
-
-
 static constexpr int max_digits10
-
-
-
 static constexpr int max_exponent
-
-
-
 static constexpr int max_exponent10
-
-
-
 static constexpr int min_exponent
-
-
-
 static constexpr int min_exponent10
-
-
-
 static constexpr int radix
-
-
-
 static constexpr float_round_style round_style
-
-
-
 static constexpr bool tinyness_before
-
-
-
 static constexpr bool traps</code></pre>
 <h2>Detailed Description</h2>
 <p>Part of std::numeric_limits. </p>
 <p> The static const members are usable as integral constant expressions. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This is a separate class for purposes of efficiency; you should only access these members as part of an instantiation of the std::numeric_limits class.</dl>
+<dd>This is a separate class for purposes of efficiency; you should only access these members as part of an instantiation of the std::numeric_limits class.</dd></dl>
 <p> Definition at line 191 of file limits.</p>
 <h2>Member Data Documentation</h2>
 <h3>constexpr int std::__numeric_limits_base::digits [static]</h3>

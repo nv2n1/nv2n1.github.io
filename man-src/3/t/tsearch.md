@@ -10,33 +10,25 @@ description: "tsearch, tfind, tdelete, twalk, tdestroy – manage a binary searc
 <p>tsearch, tfind, tdelete, twalk, tdestroy &#8211; manage a binary search tree</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;search.h&gt;
-
 typedef enum { preorder,
                postorder,
                endorder,
                leaf } VISIT;
-
 void *tsearch(const void *key, void **rootp,
               int (*compar)(const void *, const void *));
-
 void *tfind(const void *key, void *const *rootp,
             int (*compar)(const void *, const void *));
-
 void *tdelete(const void *key, void **rootp,
               int (*compar)(const void *, const void *));
-
 void twalk(const void *root,
            void (*action)(const void *nodep, VISIT which,
                           int depth));
-
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;search.h&gt;
-
 void twalk_r(const void *root,
              void (*action)(const void *nodep, VISIT which,
                             void *closure),
              void *closure);
-
 void tdestroy(void *root, void (*free_node)(void *nodep));</code></pre>
 <h2>Description</h2>
 <p><code>tsearch</code>(), <code>tfind</code>(), <code>twalk</code>(), and <code>tdelete</code>() manage a binary search tree. They are generalized from Knuth (6.2.2) Algorithm T. The first field in each node of the tree is a pointer to the corresponding data item. (The calling program must store the actual data.) <i>compar</i> points to a comparison routine, which takes pointers to two items. It should return an integer which is negative, zero, or positive, depending on whether the first item is less than, equal to, or greater than the second. </p>

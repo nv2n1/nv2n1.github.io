@@ -14,14 +14,14 @@ description: "match_futex – Check whether two futex keys are equal"
 <p><i>key1</i></p>
 <dl>
 <dd>
-<dd>Pointer to key1</dl>
+</dd><dd>Pointer to key1</dd></dl>
 <p> <i>key2</i></p>
 <dl>
-<dd>Pointer to key2</dl>
+<dd>Pointer to key2</dd></dl>
 <h2>Description</h2>
 <p>Return 1 if two futex_keys are equal, 0 otherwise.</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

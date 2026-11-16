@@ -15,15 +15,15 @@ dev_getbyhwaddr_rcu - find a device by its hardware address
 <h2>Arguments</h2>
 
 <i>net</i>
-<dl><dd><dd>the applicable net namespace</dl>
+<dl><dd></dd><dd>the applicable net namespace</dd></dl>
  
 
  <i>type</i>
-<dl><dd>media type of device</dl>
+<dl><dd>media type of device</dd></dl>
  
 
  <i>ha</i>
-<dl><dd>hardware address</dl>
+<dl><dd>hardware address</dd></dl>
 
 <h2>Description</h2>
 

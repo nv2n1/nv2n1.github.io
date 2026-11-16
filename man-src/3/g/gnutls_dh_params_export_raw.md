@@ -14,14 +14,14 @@ description: "gnutls_dh_params_export_raw – API function"
 <p> <code>int gnutls_dh_params_export_raw(gnutls_dh_params_t </code><i>params</i><code>, gnutls_datum_t * </code><i>prime</i><code>, gnutls_datum_t * </code><i>generator</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_dh_params_t params</p>
-<dd> Holds the DH parameters</p>
-<dt>gnutls_datum_t * prime</p>
-<dd> will hold the new prime</p>
-<dt>gnutls_datum_t * generator</p>
-<dd> will hold the new generator</p>
-<dt>unsigned int * bits</p>
-<dd> if non null will hold the secret key&#8217;s number of bits</dl>
+<dt>gnutls_dh_params_t params</dt>
+<dd> Holds the DH parameters</dd>
+<dt>gnutls_datum_t * prime</dt>
+<dd> will hold the new prime</dd>
+<dt>gnutls_datum_t * generator</dt>
+<dd> will hold the new generator</dd>
+<dt>unsigned int * bits</dt>
+<dd> if non null will hold the secret key&#8217;s number of bits</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the pair of prime and generator for use in the Diffie-Hellman key exchange. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_dh_params_export_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -17,7 +17,7 @@ description: "docker-inspect – Return low-level information on Docker objects"
 <p> Get information about an image when image name conflicts with the container name, e.g. both image and container are named rhel7: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker inspect-- type = image rhel7
     [{
@@ -26,12 +26,12 @@ $ docker inspect-- type = image rhel7
         ....
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Getting information on a container</h2>
 <p> To get information on a container use its ID or instance name: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect d2cc496561d6<br />
     [{<br />
         &#8220;Id&#8221; : &#8220;d2cc496561d6d520cbc0236b4ba88c362c446a7619992123f11c809cded25b47&#8221;,<br />
@@ -180,39 +180,39 @@ $ docker inspect-- type = image rhel7
             &#8220;StopSignal&#8221; : &#8220;SIGTERM&#8221;<br />
         }<br />
     }]
-</dl>
+</dd></dl>
 <h2>Getting the IP address of a container instance</h2>
 <p> To get the IP address of a container use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect&#8211; format = &#8216;&#123;&#123;range .NetworkSettings.Networks}}&#123;&#123;.IPAddress}}&#123;&#123;end}}&#8217; d2cc496561d6 172.17.0.2
-</dl>
+</dd></dl>
 <h2>Listing all port bindings</h2>
 <p> One can loop over arrays and maps in the results to produce simple text output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect&#8211; format = &#8216;&#123;&#123;range $p, $conf := .NetworkSettings.Ports}} \<br />
   &#123;&#123;$p}} -&gt; &#123;&#123;(index $conf 0).HostPort}} &#123;&#123;end}}&#8217; d2cc496561d6 80 /<br />
                             tcp-&gt;80
-</dl>
+</dd></dl>
 <p> You can get more information about how to write a Go template from: <a rel="nofollow" href="https://golang.org/pkg/text/template/.">https://golang.org/pkg/text/template/.</a> </p>
 <h2>Getting size information on a container</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker inspect &#8211; s d2cc496561d6<br />
                        [{<br />
                            &#8220;SizeRw&#8221; : 0,<br />
                            &#8220;SizeRootFs&#8221; : 972,<br />
                        }]
-</dl>
+</dd></dl>
 <h2>Getting information on an image</h2>
 <p> Use an image&#8217;s ID or name (e.g., repository/name[:tag]) to get information about the image: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker inspect ded7cd95e059
     [{
@@ -287,7 +287,7 @@ $ docker inspect ded7cd95e059
         }
     }]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Format the output using the given Go template</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for inspect</p>

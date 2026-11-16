@@ -15,55 +15,55 @@ description: "bsetbg – utility to manipulate the appearance of the X11 desktop
 <p> <code>bsetbg</code> is intended to provide a standard method for the <i>Blackbox</i> window manager to alter the background of the root window (although it will work with any other window manager as well). <code>bsetbg</code> acts as a wrapper both to <i>bsetroot</i> and to a flexible variety of third-party applications that it uses when handling images files. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code>, <code>-full</code> <i>image</i></p>
-<dd> <i>image</i> is stretched to fill the entire desktop.</p>
-<dt><code>-t</code>, <code>-tile</code> <i>image</i></p>
-<dd> <i>image</i> is tiled on the desktop.</p>
-<dt><code>-c</code>, <code>-center</code> <i>image</i></p>
-<dd> <i>image</i> is centered on the desktop.</p>
-<dt><code>-e</code>, <code>-exec</code> <i>program</i> <i>options</i> <i>fallback-arg</i> <i>image</i></p>
-<dd> This option tells <code>bsetbg</code> to run a separate command by executing <i>program</i> with <i>options</i>, where <i>options</i> are arguments to <i>program</i>. </p>
+<dt><code>-f</code>, <code>-full</code> <i>image</i></dt>
+<dd> <i>image</i> is stretched to fill the entire desktop.</dd>
+<dt><code>-t</code>, <code>-tile</code> <i>image</i></dt>
+<dd> <i>image</i> is tiled on the desktop.</dd>
+<dt><code>-c</code>, <code>-center</code> <i>image</i></dt>
+<dd> <i>image</i> is centered on the desktop.</dd>
+<dt><code>-e</code>, <code>-exec</code> <i>program</i> <i>options</i> <i>fallback-arg</i> <i>image</i></dt>
+<dd> This option tells <code>bsetbg</code> to run a separate command by executing <i>program</i> with <i>options</i>, where <i>options</i> are arguments to <i>program</i>. </dd>
 <p> If a <i>fallback-arg</i> is supplied (<code>-full</code>, <code>-tile</code>, or <code>-center</code> as described above), <code>bsetbg</code> will assume that the last argument is a filename. In the case that <i>program</i> exits non-zero or isn&#8217;t available on the target system, <code>bsetbg</code> will try to handle the file with the fallback argument. </p>
 <p> See the <code>EXAMPLES</code> section for more information on <code>-exec</code>.</p>
-<dt><code>-p</code>, <code>-post</code> <i>list</i></p>
-<dd> Specifies a list of arguments to pass to the $POST_COMMAND.</p>
-<dt><code>-d</code>, <code>-debug</code></p>
-<dd> Debugging mode. <code>bsetbg</code> will print commands without executing them.</p>
-<dt><code>-g</code>, <code>-generate</code> <i>list</i></p>
-<dd> Output a list of default configuration values, suitable for redirecting into <i>~/.bsetbgrc</i>. Any arguments that are supplied will be considered applications to search for in the system path, overriding <code>bsetbg</code>&#8216;s internal defaults.</p>
-<dt><code>-app</code> <i>imageApp</i></p>
-<dd> Use this flag to specify which image application to use. This application may be one of the pre-defined list or any application capable of displaying an image on the root window. This flag may be used in conjunction with passing application specific parameters to the application, in which case they should be enclosed in double quotes.</p>
-<dt><code>-v</code>, <code>-version</code></p>
-<dd> Output version number.</p>
-<dt><code>-h</code>, <code>-help</code></p>
-<dd> Output a brief usage message. </p>
+<dt><code>-p</code>, <code>-post</code> <i>list</i></dt>
+<dd> Specifies a list of arguments to pass to the $POST_COMMAND.</dd>
+<dt><code>-d</code>, <code>-debug</code></dt>
+<dd> Debugging mode. <code>bsetbg</code> will print commands without executing them.</dd>
+<dt><code>-g</code>, <code>-generate</code> <i>list</i></dt>
+<dd> Output a list of default configuration values, suitable for redirecting into <i>~/.bsetbgrc</i>. Any arguments that are supplied will be considered applications to search for in the system path, overriding <code>bsetbg</code>&#8216;s internal defaults.</dd>
+<dt><code>-app</code> <i>imageApp</i></dt>
+<dd> Use this flag to specify which image application to use. This application may be one of the pre-defined list or any application capable of displaying an image on the root window. This flag may be used in conjunction with passing application specific parameters to the application, in which case they should be enclosed in double quotes.</dd>
+<dt><code>-v</code>, <code>-version</code></dt>
+<dd> Output version number.</dd>
+<dt><code>-h</code>, <code>-help</code></dt>
+<dd> Output a brief usage message. </dd>
 </dl>
 <h2>OTHER OPTIONS</h2>
 <p> <code>bsetbg</code> will also accept all of the arguments for <i>bsetroot</i>. Consult the <i><a href="/docs/linux/man/1-bsetroot/">bsetroot</a></i>(1) man page for further information. </p>
 <h2>CONFIGURATION</h2>
 <p> <code>bsetbg</code> will read its configuration values from the file <i>~/.bsetbgrc</i> if it exists. Otherwise, it will scan the system path for a pre-defined list of image applications to use (currently this list consists of qiv, xli, xv, wmsetbg, Esetroot, display, and xsetbg). <i>~/.bsetbgrc</i> should contain the following variables:</p>
 <dl>
-<dt><code> CENTER=</code><i>&quot;string&quot;</i></p>
-<dd> Application and arguments to be used to center an image on the root window when the <code>-center</code> argument is specified. </p>
-<dt><code> FULL=</code><i>&quot;string&quot;</i></p>
-<dd> Application and arguments to be used to stretch an image to fill the root window when the <code>-full</code> argument is specified. </p>
-<dt><code> TILE=</code><i>&quot;string&quot;</i></p>
-<dd> Application and arguments to be used to tile an image on the root window when the <code>-tile</code> argument is specified. </p>
-<dt><code> DEFAULT=</code><i>&quot;string&quot;</i></p>
-<dd> Action to take place by default if none of the above have been specified. </p>
-<dt>The following variables are optional:</p>
+<dt><code> CENTER=</code><i>&quot;string&quot;</i></dt>
+<dd> Application and arguments to be used to center an image on the root window when the <code>-center</code> argument is specified. </dd>
+<dt><code> FULL=</code><i>&quot;string&quot;</i></dt>
+<dd> Application and arguments to be used to stretch an image to fill the root window when the <code>-full</code> argument is specified. </dd>
+<dt><code> TILE=</code><i>&quot;string&quot;</i></dt>
+<dd> Application and arguments to be used to tile an image on the root window when the <code>-tile</code> argument is specified. </dd>
+<dt><code> DEFAULT=</code><i>&quot;string&quot;</i></dt>
+<dd> Action to take place by default if none of the above have been specified. </dd>
+<dt>The following variables are optional:</dt>
 <dd>
-<dt><code> NO_EXEC=</code><i>&quot;boolean&quot;</i></p>
-<dd> If this variable is set, bsetbg will never modify the root window. </p>
-<dt><code> POST_COMMAND=</code><i>&quot;string&quot;</i></p>
-<dd> This variable specifies a command that <code>bsetbg</code> will run after every successful modification of the root window. </p>
-<dt><code> LOG_LAST_CMD=</code><i>&quot;boolean&quot;</i></p>
-<dd> If this variable is set, <code>bsetbg</code> will keep a logfile of the last two successful commands. </p>
-<dt><code> LOGFILE=</code><i>&quot;string&quot;</i></p>
-<dd> This variable can specify the logfile to be used when $LOG_LAST_CMD is defined. The default is ~/.bsetbg_last_cmd . </p>
-<dt>As mentioned above, <code>bsetbg</code> will function perfectly for the majority of users without having a configuration file. Power users who want more control over <code>bsetbg</code>&#8216;s behavior should run <code>bsetbg -g</code> and use the output to create a <i>~/.bsetbgrc</i> which may then be tweaked by hand.</p>
+</dd><dt><code> NO_EXEC=</code><i>&quot;boolean&quot;</i></dt>
+<dd> If this variable is set, bsetbg will never modify the root window. </dd>
+<dt><code> POST_COMMAND=</code><i>&quot;string&quot;</i></dt>
+<dd> This variable specifies a command that <code>bsetbg</code> will run after every successful modification of the root window. </dd>
+<dt><code> LOG_LAST_CMD=</code><i>&quot;boolean&quot;</i></dt>
+<dd> If this variable is set, <code>bsetbg</code> will keep a logfile of the last two successful commands. </dd>
+<dt><code> LOGFILE=</code><i>&quot;string&quot;</i></dt>
+<dd> This variable can specify the logfile to be used when $LOG_LAST_CMD is defined. The default is ~/.bsetbg_last_cmd . </dd>
+<dt>As mentioned above, <code>bsetbg</code> will function perfectly for the majority of users without having a configuration file. Power users who want more control over <code>bsetbg</code>&#8216;s behavior should run <code>bsetbg -g</code> and use the output to create a <i>~/.bsetbgrc</i> which may then be tweaked by hand.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> In this example, bsetbg will set the image in centered mode: </p>
 <p>&nbsp;<wbr>bsetbg -center foo.png </p>

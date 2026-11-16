@@ -12,9 +12,9 @@ description: "memcached_last_error_message – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>const char *memcached_last_error_message(memcached_st</code><i>&nbsp;<wbr>*</i>)</p>
+<dt><code>const char *memcached_last_error_message(memcached_st</code><i>&nbsp;<wbr>*</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_last_error_message()</i> is used to return the last error message that the server responded too. If this error came from a specific server, its hostname and port will be provided in the error message.</p>
 <h2>RETURN</h2>
@@ -28,3 +28,4 @@ description: "memcached_last_error_message – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

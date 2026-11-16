@@ -35,39 +35,39 @@ description: "docker-image-tag – Create a tag TARGET_IMAGE that refers to SOUR
 <p> To tag a local image with ID &quot;0e5574283393&quot; into the &quot;fedora&quot; repository with &quot;version1.0&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image tag 0e5574283393 fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <h2>Tagging an image referenced by Name</h2>
 <p> To tag a local image with name &quot;httpd&quot; into the &quot;fedora&quot; repository with &quot;version1.0&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image tag httpd fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <p> Note that since the tag name is not specified, the alias is created for an existing local version httpd:latest. </p>
 <h2>Tagging an image referenced by Name and Tag</h2>
 <p> To tag a local image with name &quot;httpd&quot; and tag &quot;test&quot; into the &quot;fedora&quot; repository with &quot;version1.0.test&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image tag httpd:test fedora/httpd:version1.0.test
 </pre>
-</dl>
+</dd></dl>
 <h2>Tagging an image for a private repository</h2>
 <p> Before pushing an image to a private registry and not the central Docker registry you must tag it with the registry hostname and port (if needed). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker image tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for tag</p>
 <h2>SEE ALSO</h2>

@@ -18,7 +18,7 @@ description: "vdltodmx – dmx configuration file parser and printer"
 <p> Given the following VDL-format file:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 0 2
 #
@@ -29,11 +29,11 @@ description: "vdltodmx – dmx configuration file parser and printer"
     2560 2048 Right two -
     thirds [restrict = *:2] 2 : 2.2 1280 2048 0 0 0 0 : 2.3 1280 2048 1280 0 0 0 4 1280 1024 1280 0 1280 1024 1280 1024 1280 1024 2560 0 1280 1024 2560 1024
 </code></pre>
-</dl>
+</dd></dl>
 <p> the following DMX-format file will be produced:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #
 #
@@ -53,7 +53,7 @@ display:
     2.3 1280x2048 @1280x0;
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> If the VDL file is not in the expected format, the program will probably dump core.</p>
 <h2>SEE ALSO</h2>

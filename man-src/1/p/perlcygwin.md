@@ -22,11 +22,11 @@ description: "perlcygwin – Perl for Cygwin"
 <p> While building Perl some changes may be necessary to your Cygwin setup so that Perl builds cleanly. These changes are <code>not</code> required for normal Perl usage. </p>
 <p> <font SIZE="-1"><code>NOTE:</code></font> The binaries that are built will run on all Win32 versions. They do not depend on your host system (WinXP/Win2K/Win7) or your Cygwin configuration (binary/text mounts, cvgserver). The only dependencies come from hard-coded pathnames like <i>/usr/local</i>. However, your host system and Cygwin configuration will affect Perl&#8217;s runtime behavior (see &#8220;<font SIZE="-1">TEST&#8221;</font>).</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;PATH&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PATH&quot;</tt> </dd>
 <p> Set the <tt>&quot;PATH&quot;</tt> environment variable so that Configure finds the Cygwin versions of programs. Any not-needed Windows directories should be removed or moved to the end of your <tt>&quot;PATH&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <i>nroff</i> </p>
+<dt>&bull;</dt>
+<dd> <i>nroff</i> </dd>
 <p> If you do not have <i>nroff</i> (which is part of the <i>groff</i> package), Configure will <code>not</code> prompt you to install <i>man</i> pages.</dl>
 <h2>CONFIGURE PERL ON CYGWIN</h2>
 <p> The default options gathered by Configure with the assistance of <i>hints/cygwin.sh</i> will build a Perl that supports dynamic loading (which requires a shared <i>cygperl5_16.dll</i>). </p>
@@ -49,61 +49,61 @@ Any additional ld flags(NOT including libraries) ? [none] - s
 <h3>Optional Libraries for Perl on Cygwin</h3>
 <p> Several Perl functions and modules depend on the existence of some optional libraries. Configure will find them if they are installed in one of the directories listed as being used for library searches. Pre-built packages for most of these are available from the Cygwin installer.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;-lcrypt&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-lcrypt&quot;</tt> </dd>
 <p> The crypt package distributed with Cygwin is a Linux compatible 56-bit <font SIZE="-1">DES</font> crypt port by Corinna Vinschen. </p>
 <p> Alternatively, the crypt libraries in <font SIZE="-1">GNU</font> libc have been ported to Cygwin. </p>
 <p> As of libcrypt 1.3 (March 2016), you will need to install the libcrypt-devel package for Configure to detect <code>crypt()</code>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-lgdbm_compat&quot;</tt> (<tt>&quot;use GDBM_File&quot;</tt>) </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-lgdbm_compat&quot;</tt> (<tt>&quot;use GDBM_File&quot;</tt>) </dd>
 <p> <font SIZE="-1">GDBM</font> is available for Cygwin. </p>
 <p> <font SIZE="-1">NOTE:</font> The <font SIZE="-1">GDBM</font> library only works on <font SIZE="-1">NTFS</font> partitions.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-ldb&quot;</tt> (<tt>&quot;use DB_File&quot;</tt>) </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-ldb&quot;</tt> (<tt>&quot;use DB_File&quot;</tt>) </dd>
 <p> BerkeleyDB is available for Cygwin. </p>
 <p> <font SIZE="-1">NOTE:</font> The BerkeleyDB library only completely works on <font SIZE="-1">NTFS</font> partitions.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;cygserver&quot;</tt> (<tt>&quot;use IPC::SysV&quot;</tt>) </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;cygserver&quot;</tt> (<tt>&quot;use IPC::SysV&quot;</tt>) </dd>
 <p> A port of SysV <font SIZE="-1">IPC</font> is available for Cygwin. </p>
 <p> <font SIZE="-1">NOTE:</font> This has <code>not</code> been extensively tested. In particular, <tt>&quot;d_semctl_semun&quot;</tt> is undefined because it fails a Configure test and on Win9x the <i>shm*()</i> functions seem to hang. It also creates a compile time dependency because <i>perl.h</i> includes <i>&lt;sys/ipc.h</i>&gt; and <i>&lt;sys/sem.h</i>&gt; (which will be required in the future when compiling <font SIZE="-1">CPAN</font> modules). <font SIZE="-1">CURRENTLY NOT SUPPORTED</font>!</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-lutil&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-lutil&quot;</tt> </dd>
 <p> Included with the standard Cygwin netrelease is the inetutils package which includes libutil.a.</dl>
 <h3>Configure-time Options for Perl on Cygwin</h3>
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> document describes several Configure-time options. Some of these will work with Cygwin, others are not yet possible. Also, some of these are experimental. You can either select an option when Configure prompts you or you can define (undefine) symbols on the command line.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Uusedl&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Uusedl&quot;</tt> </dd>
 <p> Undefining this symbol forces Perl to be compiled statically.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dusemymalloc&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dusemymalloc&quot;</tt> </dd>
 <p> By default Perl does not use the <tt>&quot;malloc()&quot;</tt> included with the Perl source, because it was slower and not entirely thread-safe. If you want to force Perl to build with the old -Dusemymalloc define this.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Uuseperlio&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Uuseperlio&quot;</tt> </dd>
 <p> Undefining this symbol disables the PerlIO abstraction. PerlIO is now the default; it is not recommended to disable PerlIO.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dusemultiplicity&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dusemultiplicity&quot;</tt> </dd>
 <p> Multiplicity is required when embedding Perl in a C program and using more than one interpreter instance. This is only required when you build a not-threaded perl with <tt>&quot;-Uuseithreads&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Uuse64bitint&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Uuse64bitint&quot;</tt> </dd>
 <p> By default Perl uses 64 bit integers. If you want to use smaller 32 bit integers, define this symbol.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Duselongdouble&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Duselongdouble&quot;</tt> </dd>
 <p> <i>gcc</i> supports long doubles (12 bytes). However, several additional long double math functions are necessary to use them within Perl (<i>{atan2, cos, exp, floor, fmod, frexp, isnan, log, modf, pow, sin, sqrt}l, strtold</i>). These are <code>not</code> yet available with newlib, the Cygwin libc.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Uuseithreads&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Uuseithreads&quot;</tt> </dd>
 <p> Define this symbol if you want not-threaded faster perl.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Duselargefiles&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Duselargefiles&quot;</tt> </dd>
 <p> Cygwin uses 64-bit integers for internal size and position calculations, this will be correctly detected and defined by Configure.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dmksymlinks&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dmksymlinks&quot;</tt> </dd>
 <p> Use this to build perl outside of the source tree. Details can be found in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> document. This is the recommended way to build perl from sources.</dl>
 <h3>Suspicious Warnings on Cygwin</h3>
 <p> You may see some messages during Configure that seem suspicious.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Win9x and <tt>&quot;d_eofnblk&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> Win9x and <tt>&quot;d_eofnblk&quot;</tt> </dd>
 <p> Win9x does not correctly report <tt>&quot;EOF&quot;</tt> with a non-blocking read on a closed pipe. You will see the following messages: </p>
 <pre>
  But it also returns -1 to signal EOF, so be careful!
@@ -114,8 +114,8 @@ Any additional ld flags(NOT including libraries) ? [none] - s
      Keep the recommended value? [y]
 </pre>
 <p> At least for consistency with WinNT, you should keep the recommended value.</p>
-<dt>&bull;</p>
-<dd> Compiler/Preprocessor defines </p>
+<dt>&bull;</dt>
+<dd> Compiler/Preprocessor defines </dd>
 <p> The following error occurs because of the Cygwin <tt>&quot;#define&quot;</tt> of <tt>&quot;_LONG_DOUBLE&quot;</tt>: </p>
 <pre>
   Guessing which symbols your C compiler and preprocessor define...
@@ -162,14 +162,14 @@ Any additional ld flags(NOT including libraries) ? [none] - s
 <h3>Script Portability on Cygwin</h3>
 <p> Cygwin does an outstanding job of providing UNIX-like semantics on top of Win32 systems. However, in addition to the items noted above, there are some differences that you should know about. This is a very brief guide to portability, more information can be found in the Cygwin documentation.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Pathnames </p>
+<dt>&bull;</dt>
+<dd> Pathnames </dd>
 <p> Cygwin pathnames are separated by forward (<i>/</i>) slashes, Universal Naming Codes (<i>//UNC</i>) are also supported Since cygwin-1.7 non-POSIX pathnames are discouraged. Names may contain all printable characters. </p>
 <p> File names are case insensitive, but case preserving. A pathname that contains a backslash or drive letter is a Win32 pathname, and not subject to the translations applied to <font SIZE="-1">POSIX</font> style pathnames, but cygwin will warn you, so better convert them to <font SIZE="-1">POSIX.</font> </p>
 <p> For conversion we have <tt>&quot;Cygwin::win_to_posix_path()&quot;</tt> and <tt>&quot;Cygwin::posix_to_win_path()&quot;</tt>. </p>
 <p> Since cygwin-1.7 pathnames are <font SIZE="-1">UTF-8</font> encoded.</p>
-<dt>&bull;</p>
-<dd> Text/Binary </p>
+<dt>&bull;</dt>
+<dd> Text/Binary </dd>
 <p> Since cygwin-1.7 textmounts are deprecated and strongly discouraged. </p>
 <p> When a file is opened it is in either text or binary mode. In text mode a file is subject to CR/LF/Ctrl-Z translations. With Cygwin, the default mode for an <tt>&quot;open()&quot;</tt> is determined by the mode of the mount that underlies the file. See &#8220;Cygwin::is_binmount&#8221;(). Perl provides a <tt>&quot;binmode()&quot;</tt> function to set binary mode on files that otherwise would be treated as text. <tt>&quot;sysopen()&quot;</tt> with the <tt>&quot;O_TEXT&quot;</tt> flag sets text mode on files that otherwise would be treated as binary: </p>
 <pre>
@@ -177,8 +177,8 @@ Any additional ld flags(NOT including libraries) ? [none] - s
 </pre>
 <p> <tt>&quot;lseek()&quot;</tt>, <tt>&quot;tell()&quot;</tt> and <tt>&quot;sysseek()&quot;</tt> only work with files opened in binary mode. </p>
 <p> The text/binary issue is covered at length in the Cygwin documentation.</p>
-<dt>&bull;</p>
-<dd> PerlIO </p>
+<dt>&bull;</dt>
+<dd> PerlIO </dd>
 <p> PerlIO overrides the default Cygwin Text/Binary behaviour. A file will always be treated as binary, regardless of the mode of the mount it lives on, just like it is in <font SIZE="-1">UNIX.</font> So <font SIZE="-1">CR/LF</font> translation needs to be requested in either the <tt>&quot;open()&quot;</tt> call like this: </p>
 <pre>
   open(FH, &quot;&gt;:crlf&quot;, &quot;out.txt&quot;);
@@ -188,17 +188,17 @@ Any additional ld flags(NOT including libraries) ? [none] - s
   export PERLIO=crlf
 </pre>
 <p> which will pull in the crlf PerlIO layer which does <font SIZE="-1">LF</font> -&gt; <font SIZE="-1">CRLF</font> conversion on every output generated by perl.</p>
-<dt>&bull;</p>
-<dd> <i>.exe</i> </p>
+<dt>&bull;</dt>
+<dd> <i>.exe</i> </dd>
 <p> The Cygwin <tt>&quot;stat()&quot;</tt>, <tt>&quot;lstat()&quot;</tt> and <tt>&quot;readlink()&quot;</tt> functions make the <i>.exe</i> extension transparent by looking for <i>foo.exe</i> when you ask for <i>foo</i> (unless a <i>foo</i> also exists). Cygwin does not require a <i>.exe</i> extension, but <i>gcc</i> adds it automatically when building a program. However, when accessing an executable as a normal file (e.g., <i>cp</i> in a makefile) the <i>.exe</i> is not transparent. The <i>install</i> program included with Cygwin automatically appends a <i>.exe</i> when necessary.</p>
-<dt>&bull;</p>
-<dd> Cygwin vs. Windows process ids </p>
+<dt>&bull;</dt>
+<dd> Cygwin vs. Windows process ids </dd>
 <p> Cygwin processes have their own pid, which is different from the underlying windows pid. Most posix compliant Proc functions expect the cygwin pid, but several Win32::Process functions expect the winpid. E.g. <tt>$$</tt> is the cygwin pid of <i>/usr/bin/perl</i>, which is not the winpid. Use <tt>&quot;Cygwin::pid_to_winpid()&quot;</tt> and <tt>&quot;Cygwin::winpid_to_pid()&quot;</tt> to translate between them.</p>
-<dt>&bull;</p>
-<dd> Cygwin vs. Windows errors </p>
+<dt>&bull;</dt>
+<dd> Cygwin vs. Windows errors </dd>
 <p> Under Cygwin, $^E is the same as $!. When using Win32 <font SIZE="-1">API</font> Functions, use <tt>&quot;Win32::GetLastError()&quot;</tt> to get the last Windows error.</p>
-<dt>&bull;</p>
-<dd> rebase errors on fork or system </p>
+<dt>&bull;</dt>
+<dd> rebase errors on fork or system </dd>
 <p> Using <tt>&quot;fork()&quot;</tt> or <tt>&quot;system()&quot;</tt> out to another perl after loading multiple dlls may result on a <font SIZE="-1">DLL</font> baseaddress conflict. The internal cygwin error looks like like the following: </p>
 <pre>
  0 [main] perl 8916 child_info_fork::abort: data segment start:
@@ -206,3 +206,4 @@ Any additional ld flags(NOT including libraries) ? [none] - s
 </pre>
 <p> or: </p>
 <p> 183 [main] perl 3588 C:
+</p></dl>

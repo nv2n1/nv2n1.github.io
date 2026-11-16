@@ -51,16 +51,16 @@ description: "systemd.net-naming-scheme – Network device naming schemes"
 <p> The udev <code>net_id</code> builtin exports the following udev device properties: </p>
 <p> <i>ID_NET_NAME_ONBOARD=</i><i>prefix</i><i></i><code>o</code><i>number</i></p>
 <dl>
-<dd>This name is set based on the numeric ordering information given by the firmware for on-board devices. The name consists of the prefix, letter <code>o</code>, and a number specified by the firmware. This is only available for PCI devices.</dl>
+<dd>This name is set based on the numeric ordering information given by the firmware for on-board devices. The name consists of the prefix, letter <code>o</code>, and a number specified by the firmware. This is only available for PCI devices.</dd></dl>
 <p> <i>ID_NET_LABEL_ONBOARD=</i><i>prefix</i><i> </i><i>label</i></p>
 <dl>
-<dd>This property is set based on textual label given by the firmware for on-board devices. The name consists of the prefix concatenated with the label. This is only available for PCI devices.</dl>
+<dd>This property is set based on textual label given by the firmware for on-board devices. The name consists of the prefix concatenated with the label. This is only available for PCI devices.</dd></dl>
 <p> <i>ID_NET_NAME_MAC=</i><i>prefix</i><i></i><code>x</code><i>AABBCCDDEEFF</i></p>
 <dl>
-<dd>This name consists of the prefix, letter <code>x</code>, and 12 hexadecimal digits of the MAC address. It is available if the device has a fixed MAC address. Because this name is based on an attribute of the card itself, it remains &quot;stable&quot; when the device is moved (even between machines), but will change when the hardware is replaced.</dl>
+<dd>This name consists of the prefix, letter <code>x</code>, and 12 hexadecimal digits of the MAC address. It is available if the device has a fixed MAC address. Because this name is based on an attribute of the card itself, it remains &quot;stable&quot; when the device is moved (even between machines), but will change when the hardware is replaced.</dd></dl>
 <p> <i>ID_NET_NAME_SLOT=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i>, <i>ID_NET_NAME_SLOT=</i><i>prefix</i><i></i><code>v</code><i>slot</i>, <i>ID_NET_NAME_SLOT=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i><i></i><code>b</code><i>number</i>, <i>ID_NET_NAME_SLOT=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i><i></i><code>u</code><i>port</i><i>&#8230;[</i><i></i><code>c</code><i>config</i><i>][</i><i></i><code>i</code><i>interface</i><i>]</i>, <i>ID_NET_NAME_SLOT=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i><i></i><code>v</code><i>slot</i></p>
 <dl>
-<dd>This property describes the slot position. Different schemes are used depending on the bus type, as described in the table below. In case of USB, BCMA, and SR-VIO devices, the full name consists of the prefix, PCI slot identifier, and USB or BCMA or SR-VIO slot identifier. The first two parts are denoted as &quot;&#8230;&quot; in the table below. </p>
+<dd>This property describes the slot position. Different schemes are used depending on the bus type, as described in the table below. In case of USB, BCMA, and SR-VIO devices, the full name consists of the prefix, PCI slot identifier, and USB or BCMA or SR-VIO slot identifier. The first two parts are denoted as &quot;&#8230;&quot; in the table below. </dd>
 <p> <code>Table 2. Slot naming schemes</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -101,7 +101,7 @@ description: "systemd.net-naming-scheme – Network device naming schemes"
 <p> In some configurations a parent PCI bridge of a given network controller may be associated with a slot. In such case we don&#8217;t generate this device property to avoid possible naming conflicts.</dl>
 <p> <i>ID_NET_NAME_PATH=</i><i>prefix</i><i></i><code>c</code><i>bus_id</i>, <i>ID_NET_NAME_PATH=</i><i>prefix</i><i></i><code>a</code><i>vendor</i><i>model</i><i></i><code>i</code><i>instance</i>, <i>ID_NET_NAME_PATH=</i><i>prefix</i><i></i><code>i</code><i>address</i><i></i><code>n</code><i>port_name</i>, <i>ID_NET_NAME_PATH=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>p</code><i>bus</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>phys_port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i>, <i>ID_NET_NAME_PATH=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>p</code><i>bus</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>phys_port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i><i></i><code>b</code><i>number</i>, <i>ID_NET_NAME_PATH=</i><i>prefix</i><i>[</i><i></i><code>P</code><i>domain</i><i>]</i><i></i><code>p</code><i>bus</i><i></i><code>s</code><i>slot</i><i>[</i><i></i><code>f</code><i>function</i><i>][</i><i></i><code>n</code><i>phys_port_name</i><i>|</i><i></i><code>d</code><i>dev_port</i><i>]</i><i></i><code>u</code><i>port</i><i>&#8230;[</i><i></i><code>c</code><i>config</i><i>][</i><i></i><code>i</code><i>interface</i><i>]</i></p>
 <dl>
-<dd>This property describes the device installation location. Different schemes are used depending on the bus type, as described in the table below. For BCMA and USB devices, PCI path information must known, and the full name consists of the prefix, PCI slot identifier, and USB or BCMA location. The first two parts are denoted as &quot;&#8230;&quot; in the table below. </p>
+<dd>This property describes the device installation location. Different schemes are used depending on the bus type, as described in the table below. For BCMA and USB devices, PCI path information must known, and the full name consists of the prefix, PCI slot identifier, and USB or BCMA location. The first two parts are denoted as &quot;&#8230;&quot; in the table below. </dd>
 <p> <code>Table 3. Path naming schemes</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -146,35 +146,35 @@ description: "systemd.net-naming-scheme – Network device naming schemes"
 <p>The following &quot;naming schemes&quot; have been defined (which may be chosen at system boot-up time via the <i>net.naming-scheme=</i> kernel command line switch, see above): </p>
 <p> <code>v238</code></p>
 <dl>
-<dd>This is the naming scheme that was implemented in systemd 238.</dl>
+<dd>This is the naming scheme that was implemented in systemd 238.</dd></dl>
 <p> <code>v239</code></p>
 <dl>
-<dd>Naming was changed for virtual network interfaces created with SR-IOV and NPAR and for devices where the PCI network controller device does not have a slot number associated. </p>
+<dd>Naming was changed for virtual network interfaces created with SR-IOV and NPAR and for devices where the PCI network controller device does not have a slot number associated. </dd>
 <p> SR-IOV virtual devices are named based on the name of the parent interface, with a suffix of &quot;v<i>port</i>&quot;, where <i>port</i> is the virtual device number. Previously those virtual devices were named as if completely independent. </p>
 <p> The ninth and later NPAR virtual devices are named following the scheme used for the first eight NPAR partitions. Previously those devices were not renamed and the kernel default (&quot;eth<i>N</i>&quot;) was used. </p>
 <p> Names are also generated for PCI devices where the PCI network controller device does not have an associated slot number itself, but one of its parents does. Previously those devices were not renamed and the kernel default was used.</dl>
 <p> <code>v240</code></p>
 <dl>
-<dd>The &quot;ib&quot; prefix and stable names for infiniband devices are introduced. Previously those devices were not renamed. </p>
+<dd>The &quot;ib&quot; prefix and stable names for infiniband devices are introduced. Previously those devices were not renamed. </dd>
 <p> The ACPI index field (used in <i>ID_NET_NAME_ONBOARD=</i>) is now also used when 0. </p>
 <p> A new naming policy <i>NamePolicy=keep</i> was introduced. With this policy, if the network device name was already set by userspace, the device will not be renamed again. Previously, this naming policy applied implicitly, and now it must be explicitly requested. Effectively, this means that network devices will be renamed according to the configuration, even if they have been renamed already, if <code>keep</code> is not specified as the naming policy in the .link file. See <code><a href="/docs/linux/man/5-systemd-link/">systemd.link</a></code>(5) for a description of <i>NamePolicy=</i>.</dl>
 <p> <code>v241</code></p>
 <dl>
-<dd><code>MACAddressPolicy=persistent</code> was extended to set MAC addresses based on the device name. Previously addresses were only based on the <i>ID_NET_NAME_*</i> attributes, which meant that interface names would never be generated for virtual devices. Now a persistent address will be generated for most devices, including in particular bridges. </p>
+<dd><code>MACAddressPolicy=persistent</code> was extended to set MAC addresses based on the device name. Previously addresses were only based on the <i>ID_NET_NAME_*</i> attributes, which meant that interface names would never be generated for virtual devices. Now a persistent address will be generated for most devices, including in particular bridges. </dd>
 <p> Note: when userspace does not set a MAC address for a bridge device, the kernel will initially assign a random address, and then change it when the first device is enslaved to the bridge. With this naming policy change, bridges get a persistent MAC address based on the bridge name instead of the first enslaved device.</dl>
 <p> <code>v243</code></p>
 <dl>
-<dd>Support for renaming netdevsim (simulated networking) devices was added. Previously those devices were not renamed. </p>
+<dd>Support for renaming netdevsim (simulated networking) devices was added. Previously those devices were not renamed. </dd>
 <p> Previously two-letter interface type prefix was prepended to <i>ID_NET_LABEL_ONBOARD=</i>. This is not done anymore.</dl>
 <p> <code>v245</code></p>
 <dl>
-<dd>When <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1) derives the name for the host side of the network interface created with <code>&#8211;network-veth</code> from the container name it previously simply truncated the result at 15 characters if longer (since that&#8217;s the maximum length for network interface names). From now on, for any interface name that would be longer than 15 characters the last 4 characters are set to a 24bit hash value of the full interface name. This way network interface name collisions between multiple similarly named containers (who only differ in container name suffix) should be less likely (but still possible, since the 24bit hash value is very small).</dl>
+<dd>When <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1) derives the name for the host side of the network interface created with <code>&#8211;network-veth</code> from the container name it previously simply truncated the result at 15 characters if longer (since that&#8217;s the maximum length for network interface names). From now on, for any interface name that would be longer than 15 characters the last 4 characters are set to a 24bit hash value of the full interface name. This way network interface name collisions between multiple similarly named containers (who only differ in container name suffix) should be less likely (but still possible, since the 24bit hash value is very small).</dd></dl>
 <p> <code>v247</code></p>
 <dl>
-<dd>When a PCI slot is associated with a PCI bridge that has multiple child network controllers, the same value of the <i>ID_NET_NAME_SLOT</i> property might be derived for those controllers. This would cause a naming conflict if the property is selected as the device name. Now, we detect this situation and don&#8217;t produce the <i>ID_NET_NAME_SLOT</i> property.</dl>
+<dd>When a PCI slot is associated with a PCI bridge that has multiple child network controllers, the same value of the <i>ID_NET_NAME_SLOT</i> property might be derived for those controllers. This would cause a naming conflict if the property is selected as the device name. Now, we detect this situation and don&#8217;t produce the <i>ID_NET_NAME_SLOT</i> property.</dd></dl>
 <p> <code>v249</code></p>
 <dl>
-<dd>PCI hotplug slot names for the s390 PCI driver are a hexadecimal representation of the function_id device attribute. This attribute is now used to build the <i>ID_NET_NAME_SLOT</i>. Before that, all slot names were parsed as decimal numbers, which could either result in an incorrect value of the <i>ID_NET_NAME_SLOT</i> property or none at all. </p>
+<dd>PCI hotplug slot names for the s390 PCI driver are a hexadecimal representation of the function_id device attribute. This attribute is now used to build the <i>ID_NET_NAME_SLOT</i>. Before that, all slot names were parsed as decimal numbers, which could either result in an incorrect value of the <i>ID_NET_NAME_SLOT</i> property or none at all. </dd>
 <p> Some firmware and hypervisor implementations report unreasonable high numbers for the onboard index. To prevent the generation of bogus onbard interface names, index numbers greater than 16381 (2^14-1) were ignored. For s390 PCI devices index values up to 65535 (2^16-1) are valid. To account for that, the limit is increased to now 65535. </p>
 <p> The udev rule <i>NAME=</i> replaces &quot;:&quot;, &quot;/&quot;, and &quot;%&quot; with an underscore (&quot;_&quot;), and refuses strings which contain only numerics.</dl>
 <p> Note that <code>latest</code> may be used to denote the latest scheme known (to this particular version of systemd).</p>
@@ -190,13 +190,13 @@ ID_NET_NAME_MAC=enx54ee75cb1dc0
 ID_OUI_FROM_DATABASE=Wistron InfoComm(Kunshan)Co.,Ltd.
 ID_NET_NAME_PATH=enp0s31f6
 ...</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. PCI Ethernet card with firmware index &quot;1&quot;</code> </p>
 <dl>
 <dd>
 <pre>ID_NET_NAME_ONBOARD=eno1
 ID_NET_NAME_ONBOARD_LABEL=Ethernet Port 1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 3. PCI Ethernet card in hotplug slot with firmware index number</code> </p>
 <dl>
 <dd>
@@ -204,7 +204,7 @@ ID_NET_NAME_ONBOARD_LABEL=Ethernet Port 1</pre>
 ID_NET_NAME_MAC=enx000000000466
 ID_NET_NAME_PATH=enp5s0
 ID_NET_NAME_SLOT=ens1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 4. PCI Ethernet multi-function card with 2 ports</code> </p>
 <dl>
 <dd>
@@ -214,14 +214,14 @@ ID_NET_NAME_PATH=enp2s0f0
 # /sys/devices/pci0000:00/0000:00:1c.0/0000:02:00.1/net/enp2s0f1
 ID_NET_NAME_MAC=enx78e7d1ea46dc
 ID_NET_NAME_PATH=enp2s0f1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 5. PCI WLAN card</code> </p>
 <dl>
 <dd>
 <pre># /sys/devices/pci0000:00/0000:00:1c.1/0000:03:00.0/net/wlp3s0
 ID_NET_NAME_MAC=wlx0024d7e31130
 ID_NET_NAME_PATH=wlp3s0</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 6. PCI IB host adapter with 2 ports</code> </p>
 <dl>
 <dd>
@@ -229,33 +229,34 @@ ID_NET_NAME_PATH=wlp3s0</pre>
 ID_NET_NAME_PATH=ibp21s0f0
 # /sys/devices/pci0000:00/0000:00:03.0/0000:15:00.1/net/ibp21s0f1
 ID_NET_NAME_PATH=ibp21s0f1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 7. USB built-in 3G modem</code> </p>
 <dl>
 <dd>
 <pre># /sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.4/2-1.4:1.6/net/wwp0s29u1u4i6
 ID_NET_NAME_MAC=wwx028037ec0200
 ID_NET_NAME_PATH=wwp0s29u1u4i6</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 8. USB Android phone</code> </p>
 <dl>
 <dd>
 <pre># /sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.2/2-1.2:1.0/net/enp0s29u1u2
 ID_NET_NAME_MAC=enxd626b3450fb5
 ID_NET_NAME_PATH=enp0s29u1u2</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 9. s390 grouped CCW interface</code> </p>
 <dl>
 <dd>
 <pre># /sys/devices/css0/0.0.0007/0.0.f5f0/group_device/net/encf5f0
 ID_NET_NAME_MAC=enx026d3c00000a
 ID_NET_NAME_PATH=encf5f0</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8), m[blue]<code>Predictable Network Interface Names</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Predictable Network Interface Names</p>
+<dt> 1.</dt>
+<dd>Predictable Network Interface Names</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/PREDICTABLE_INTERFACE_NAMES">https://systemd.io/PREDICTABLE_INTERFACE_NAMES</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/PREDICTABLE_INTERFACE_NAMES">https://systemd.io/PREDICTABLE_INTERFACE_NAMES</a></dd></dl>
+</dl>

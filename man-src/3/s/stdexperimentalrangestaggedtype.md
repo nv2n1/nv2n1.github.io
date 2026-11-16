@@ -11,9 +11,7 @@ std::experimental::ranges::TaggedType - std::experimental::ranges::TaggedType
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/utility&gt;
-
 template&lt; class T &gt;                                      (ranges TS)
-
 concept bool TaggedType = /* implementation-defined */;</code></pre> 
 The concept TaggedType&lt;T&gt; is satisfied if and only if T is a unary function type of the form R(A), where R is a TagSpecifier. 
 Such types are used with the convenience alias templates tagged_tuple and tagged_pair. 

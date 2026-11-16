@@ -14,8 +14,8 @@ description: "gnutls_pkcs11_obj_flags_get_str – API function"
 <p> <code>char * gnutls_pkcs11_obj_flags_get_str(unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>unsigned int flags</p>
-<dd> holds the flags</dl>
+<dt>unsigned int flags</dt>
+<dd> holds the flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function given an or-sequence of <code>GNUTLS_PKCS11_OBJ_FLAG_MARK</code>, will return an allocated string with its description. The string needs to be deallocated using <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs11_obj_flags_get_str – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

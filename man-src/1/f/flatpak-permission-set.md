@@ -11,28 +11,28 @@ description: "flatpak-permission-set – Set permissions"
 <p> flatpak-permission-set &#8211; Set permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>flatpak permission-set</code> [OPTION&#8230;] TABLE ID APP_ID [PERMISSION&#8230;]</dl>
+<dt> <code>flatpak permission-set</code> [OPTION&#8230;] TABLE ID APP_ID [PERMISSION&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Set the permissions for an application in an entry in the permission store. The entry is identified by TABLE and ID, the application is identified by APP_ID. The PERMISSION strings must be in a format suitable for the table. </p>
+<dd>Set the permissions for an application in an entry in the permission store. The entry is identified by TABLE and ID, the application is identified by APP_ID. The PERMISSION strings must be in a format suitable for the table. </dd>
 <p> The permission store is used by portals. Each portal generally has its own table in the permission store, and the format of the table entries is specific to each portal.</p>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options and exit.</dl>
+</dt><dd> Show help options and exit.</dd></dl>
 <p> <code>&#8211;data=DATA</code></p>
 <dl>
 <dt>
-<dd> Associate DATA with the entry. The data must be a serialized GVariant.</dl>
+</dt><dd> Associate DATA with the entry. The data must be a serialized GVariant.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Print debug information during command processing.</dl>
+</dt><dd> Print debug information during command processing.</dd></dl>
 <p> <code>&#8211;ostree-verbose</code></p>
 <dl>
 <dt>
-<dd> Print OSTree debug information during command processing.</dl>
+</dt><dd> Print OSTree debug information during command processing.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>$ flatpak permission-set &#8211;data &quot;{&#8216;always-ask&#8217;:&lt;true&gt;}&quot; desktop-used-apps text/plain org.mozilla.Firefox org.gnome.gedit 0 3</code></p>
 <h2>SEE ALSO</h2>

@@ -29,10 +29,10 @@ description: "slartg.f –"
  floating point operations (saves work in SBDSQR when
  there are zeros on the diagonal).
  If F exceeds G in magnitude, CS will be positive.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>F</i> </p>
+<dd><i>F</i> </dd>
 <pre> F is REAL
  The first component of vector to be rotated.</pre>
 <p><i>G</i> </p>
@@ -52,13 +52,13 @@ description: "slartg.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 98 of file slartg.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

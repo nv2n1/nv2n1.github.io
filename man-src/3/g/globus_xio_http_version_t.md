@@ -28,12 +28,12 @@ description: "Globus XIO HTTP Driver –"
 <p> Valid HTTP versions, used with the <code>GLOBUS_XIO_HTTP_ATTR_SET_REQUEST_HTTP_VERSION</code> attribute and the <code>GLOBUS_XIO_HTTP_HANDLE_SET_RESPONSE_HTTP_VERSION</code> handle control </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_XIO_HTTP_VERSION_1_0 </i></p>
-<dd> HTTP/1.0</p>
-<dt><i>GLOBUS_XIO_HTTP_VERSION_1_1 </i></p>
-<dd> HTTP/1.1</dl>
+<dt><i>GLOBUS_XIO_HTTP_VERSION_1_0 </i></dt>
+<dd> HTTP/1.0</dd>
+<dt><i>GLOBUS_XIO_HTTP_VERSION_1_1 </i></dt>
+<dd> HTTP/1.1</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

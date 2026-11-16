@@ -20,8 +20,8 @@ description: "getresuid, getresgid – get real, effective and saved user/group 
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> One of the arguments specified an address outside the calling program&#8217;s address space.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> One of the arguments specified an address outside the calling program&#8217;s address space.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls appeared on Linux starting with kernel 2.1.44. </p>
 <p> The prototypes are given by glibc since version 2.3.2, provided <code>_GNU_SOURCE</code> is defined.</p>

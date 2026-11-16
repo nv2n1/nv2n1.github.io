@@ -11,29 +11,29 @@ description: "parallel – run programs in parallel"
 <p> parallel &#8211; run programs in parallel </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>parallel</code> [options] [command]<code>&#8212;</code> [argument &#8230;]</p>
-<dt> <code>parallel</code> [options]<code>&#8212;</code> [command &#8230;]</dl>
+<dt> <code>parallel</code> [options] [command]<code>&#8212;</code> [argument &#8230;]</dt>
+<dt> <code>parallel</code> [options]<code>&#8212;</code> [command &#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>parallel</code></p>
-<dd>runs the specified command, passing it a single one of the specified arguments. This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU. </p>
+<dd>runs the specified command, passing it a single one of the specified arguments. This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU. </dd>
 <p> If no command is specified before the &#8211;, the commands after it are instead run in parallel.</p>
 <h2>OPTIONS</h2>
 <p> <code>-j maxjobs</code></p>
 <dl>
 <dt>
-<dd> Use to limit the number of jobs that are run at the same time.</dl>
+</dt><dd> Use to limit the number of jobs that are run at the same time.</dd></dl>
 <p> <code>-l maxload</code></p>
 <dl>
 <dt>
-<dd> Wait as needed to avoid starting new jobs when the system&#8217;s load average is not below the specified limit.</dl>
+</dt><dd> Wait as needed to avoid starting new jobs when the system&#8217;s load average is not below the specified limit.</dd></dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> Normally the command is passed the argument at the end of its command line. With this option, any instances of &quot;{}&quot; in the command are replaced with the argument.</dl>
+</dt><dd> Normally the command is passed the argument at the end of its command line. With this option, any instances of &quot;{}&quot; in the command are replaced with the argument.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> Number of arguments to pass to a command at a time. Default is 1. Incompatible with -i</dl>
+</dt><dd> Number of arguments to pass to a command at a time. Default is 1. Incompatible with -i</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <code>parallel sh -c &quot;echo hi; sleep 2; echo bye&quot; &#8212; 1 2 3</code> </p>
 <p> This runs three subshells that each print a message, delay, and print another message. If your system has multiple CPUs, parallel will run some of the jobs in parallel, which should be clear from the order the messages are output. </p>

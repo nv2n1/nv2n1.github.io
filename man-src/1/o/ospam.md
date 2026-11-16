@@ -11,72 +11,72 @@ description: "ospam – An SGML/XML markup stream editor"
 <p> ospam &#8211; An SGML/XML markup stream editor </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ospam</code> [<code>-CeghilprRvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>catalog_file</i>] [<code>-D</code><i>directory</i>] [<code>-f</code><i>file</i>] [<code>-m</code><i>markup_option</i>] [<code>-o</code><i>entity_name</i>] [<code>-w</code><i>warning_type</i>] [<i>sysid</i>&#8230;]</dl>
+<dt> <code>ospam</code> [<code>-CeghilprRvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>catalog_file</i>] [<code>-D</code><i>directory</i>] [<code>-f</code><i>file</i>] [<code>-m</code><i>markup_option</i>] [<code>-o</code><i>entity_name</i>] [<code>-w</code><i>warning_type</i>] [<i>sysid</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ospam</code> (OpenSP Add Markup) is an SGML markup stream editor implemented using the OpenSP parser. <code>ospam</code></p>
-<dd>parses the SGML document contained in <i>sysid</i> and copies to the standard output the portion of the document entity containing the document instance, adding or changing markup as specified by the <code>-m</code> options. The <code>-p</code> option can be used to include the SGML declaration and prolog in the output. The <code>-o</code> option can be used to output other entities. The <code>-x</code> option can be used to expand entity references. </p>
+<dd>parses the SGML document contained in <i>sysid</i> and copies to the standard output the portion of the document entity containing the document instance, adding or changing markup as specified by the <code>-m</code> options. The <code>-p</code> option can be used to include the SGML declaration and prolog in the output. The <code>-o</code> option can be used to output other entities. The <code>-x</code> option can be used to expand entity references. </dd>
 <p> Part of an SGML System Conforming to International Standard ISO 8879 &#8212; Standard Generalized Markup Language. An SGML Extended Facilities system conforming to Annex A of Internation Standard ISO/IEC 10744 &#8212; Hypermedia/Time-based Structuring Language. </p>
 <p> The following options are available: </p>
 <p> <code>-a</code><i>name</i>, <code>&#8211;activate=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> Make doctype or linktype <i>name</i> active.</dl>
+</dt><dd> Make doctype or linktype <i>name</i> active.</dd></dl>
 <p> <code>-A</code><i>architecture</i>, <code>&#8211;architecture=</code><i>architecture</i></p>
 <dl>
 <dt>
-<dd> Parse with respect to architecture <i>architecture</i>.</dl>
+</dt><dd> Parse with respect to architecture <i>architecture</i>.</dd></dl>
 <p> <code>-b</code><i>bctf</i>, <code>&#8211;bctf=</code><i>bctf</i></p>
 <dl>
 <dt>
-<dd> Use bctf <i>bctf</i> for output.</dl>
+</dt><dd> Use bctf <i>bctf</i> for output.</dd></dl>
 <p> <code>-c</code><i>sysid</i>, <code>&#8211;catalog=</code><i>sysid</i></p>
 <dl>
 <dt>
-<dd> Use the catalog entry file <i>sysid</i>.</dl>
+</dt><dd> Use the catalog entry file <i>sysid</i>.</dd></dl>
 <p> <code>-C</code>, <code>&#8211;catalogs</code></p>
 <dl>
 <dt>
-<dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-D</code><i>directory</i>, <code>&#8211;directory=</code><i>directory</i></p>
 <dl>
 <dt>
-<dd> Search directory for files specified in system identifiers. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> Search directory for files specified in system identifiers. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;open-entities</code></p>
 <dl>
 <dt>
-<dd> Describe open entities in error messages.</dl>
+</dt><dd> Describe open entities in error messages.</dd></dl>
 <p> <code>-E</code><i>max_errors</i>, <code>&#8211;max-errors=</code><i>max_errors</i></p>
 <dl>
 <dt>
-<dd> Exit after <i>max_errors</i> errors are encountered.</dl>
+</dt><dd> Exit after <i>max_errors</i> errors are encountered.</dd></dl>
 <p> <code>-f</code><i>file</i>, <code>&#8211;error-file=</code><i>file</i></p>
 <dl>
 <dt>
-<dd> Redirect errors to <i>file</i>. This is useful mainly with shells that do not support redirection of stderr.</dl>
+</dt><dd> Redirect errors to <i>file</i>. This is useful mainly with shells that do not support redirection of stderr.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;open-elements</code></p>
 <dl>
 <dt>
-<dd> Show the generic identifiers of open elements in error messages.</dl>
+</dt><dd> Show the generic identifiers of open elements in error messages.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;hoist-omitted-tags</code></p>
 <dl>
 <dt>
-<dd> Hoist omitted tags out from the start of internal entities. If the text at the beginning of an internal entity causes a tag to be implied, the tag will usually be treated as being in that internal entity; this option will instead cause it to be treated as being in the entity that referenced the internal entity. This option makes a difference in conjunction with <code>-momittag</code> or <code>-x</code><code>-x</code>.</dl>
+</dt><dd> Hoist omitted tags out from the start of internal entities. If the text at the beginning of an internal entity causes a tag to be implied, the tag will usually be treated as being in that internal entity; this option will instead cause it to be treated as being in the entity that referenced the internal entity. This option makes a difference in conjunction with <code>-momittag</code> or <code>-x</code><code>-x</code>.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display a help text and exit.</dl>
+</dt><dd> Display a help text and exit.</dd></dl>
 <p> <code>-i</code><i>name</i>, <code>&#8211;include=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;lowercase</code></p>
 <dl>
 <dt>
-<dd> Prefer lower-case. Added names that were subject to upper-case substitution will be converted to lower-case.</dl>
+</dt><dd> Prefer lower-case. Added names that were subject to upper-case substitution will be converted to lower-case.</dd></dl>
 <p> <code>-m</code><i>markup_option</i>, <code>&#8211;markup-option=</code><i>markup_option</i></p>
 <dl>
 <dt>
-<dd> Change the markup in the output according to the value of <i>markup_option</i> as follows: </p>
+</dt><dd> Change the markup in the output according to the value of <i>markup_option</i> as follows: </dd>
 <p> <code>omittag</code> Add tags that were omitted using omitted tag minimization. End tags that were omitted because the element has a declared content of EMPTY or an explicit content reference will not be added. </p>
 <p> <code>shortref</code> Replace short references by named entity references. </p>
 <p> <code>net</code> Change null end-tags into unminimized end-tags, and change net-enabling start-tags into unminimized start-tags. </p>
@@ -94,35 +94,35 @@ description: "ospam – An SGML/XML markup stream editor"
 <p> <code>-n</code>, <code>&#8211;error-numbers</code></p>
 <dl>
 <dt>
-<dd> Show error numbers in error messages.</dl>
+</dt><dd> Show error numbers in error messages.</dd></dl>
 <p> <code>-o</code><i>name</i>, <code>&#8211;output-entity=</code><i>name</i></p>
 <dl>
 <dt>
-<dd> Output the general entity name instead of the document entity. The output will correspond to the first time that the entity is referenced in content.</dl>
+</dt><dd> Output the general entity name instead of the document entity. The output will correspond to the first time that the entity is referenced in content.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;output-prolog</code></p>
 <dl>
 <dt>
-<dd> Output the part of the document entity containing the SGML declaration (if it was explicitly present in the document entity) and the prolog before anything else. If this option is specified two or more times, then all entity references occurring between declarations in the prolog will be expanded; this includes the implicit reference to the entity containing the external subset of the DTD, if there is one. Note that the SGML declaration will not be included if it was specified by an SGMLDECL entry in a catalog.</dl>
+</dt><dd> Output the part of the document entity containing the SGML declaration (if it was explicitly present in the document entity) and the prolog before anything else. If this option is specified two or more times, then all entity references occurring between declarations in the prolog will be expanded; this includes the implicit reference to the entity containing the external subset of the DTD, if there is one. Note that the SGML declaration will not be included if it was specified by an SGMLDECL entry in a catalog.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t perform any conversion on RSs and REs when outputting the entity. The entity would typically have the storage manager attribute records=asis.</dl>
+</dt><dd> Don&#8217;t perform any conversion on RSs and REs when outputting the entity. The entity would typically have the storage manager attribute records=asis.</dd></dl>
 <p> <code>-R</code>, <code>&#8211;restricted</code></p>
 <dl>
 <dt>
-<dd> This as the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code></dl>
+</dt><dd> This as the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code></dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version number.</dl>
+</dt><dd> Print the version number.</dd></dl>
 <p> <code>-w</code><i>type</i>, <code>&#8211;warning=</code><i>type</i></p>
 <dl>
 <dt>
-<dd> Control warnings and errors according to type. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dl>
+</dt><dd> Control warnings and errors according to type. This has the same effect as in <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;expand-references</code></p>
 <dl>
 <dt>
-<dd> Expand references to entities that are changed. If this option is specified two or more times, then all references to entities that contain tags will be expanded.</dl>
+</dt><dd> Expand references to entities that are changed. If this option is specified two or more times, then all references to entities that contain tags will be expanded.</dd></dl>
 <h2>BUGS</h2>
 <p> Omitted tags are added at the point where they are implied by the SGML parser (except as modified by the <code>-h</code> option); this is often not quite where they are wanted. </p>
 <p> The case of general delimiters is not preserved. </p>
@@ -134,10 +134,10 @@ description: "ospam – An SGML/XML markup stream editor"
 <p> <code>James Clark</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <p> <code>Ian Castle</code> &lt;ian.castle [at] openjade.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>Index</h2>

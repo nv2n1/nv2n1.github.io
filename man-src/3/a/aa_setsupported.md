@@ -18,10 +18,10 @@ description: "aa_setsupported – alter the \"supported\" field of hardware_para
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>int supported</code></p>
-<dd> New mask of requested features. Can contain AA_EXTENDED to enable use of all 256 characters and AA_EIGHT to enable use of the character numbered higher than 127.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>int supported</code></dt>
+<dd> New mask of requested features. Can contain AA_EXTENDED to enable use of all 256 characters and AA_EIGHT to enable use of the character numbered higher than 127.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function can be used to alter &quot;supported&quot; field of hardware-params structure used by AA-lib.</p>
 <h2>SEE ALSO</h2>

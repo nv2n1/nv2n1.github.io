@@ -13,18 +13,18 @@ description: "ecryptfs-verify – validate an eCryptfs encrypted home or encrypt
 <p> <code>ecryptfs-verify</code> [-h|&#8211;home] [-p|&#8211;private] [-e|&#8211;filenames-encrypted] [-n|&#8211;filenames-not-encrypted] [-u|&#8211;user USER] [&#8211;help] </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;home</code></p>
-<dd> True if HOME is correctly configured for encryption, False otherwise</p>
-<dt><code>-p, &#8211;private</code></p>
-<dd> True if a non-HOME directory is correctly configured for encryption, False otherwise</p>
-<dt><code>-e, &#8211;filenames-encrypted</code></p>
-<dd> True if filenames are set for encryption, False otherwise</p>
-<dt><code>-n, &#8211;filenames-not-encrypted</code></p>
-<dd> True if filenames are not encrypted, False otherwise</p>
-<dt><code>-u, &#8211;user USER</code></p>
-<dd> By default, the current user&#8217;s configuration is checked, override with this option</p>
-<dt><code>&#8211;help</code></p>
-<dd> This usage information </p>
+<dt><code>-h, &#8211;home</code></dt>
+<dd> True if HOME is correctly configured for encryption, False otherwise</dd>
+<dt><code>-p, &#8211;private</code></dt>
+<dd> True if a non-HOME directory is correctly configured for encryption, False otherwise</dd>
+<dt><code>-e, &#8211;filenames-encrypted</code></dt>
+<dd> True if filenames are set for encryption, False otherwise</dd>
+<dt><code>-n, &#8211;filenames-not-encrypted</code></dt>
+<dd> True if filenames are not encrypted, False otherwise</dd>
+<dt><code>-u, &#8211;user USER</code></dt>
+<dd> By default, the current user&#8217;s configuration is checked, override with this option</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> This usage information </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> Note that options are additive. ALL checks must pass in order for this program to exit 0. Any failing check will cause this program to exit non-zero. </p>

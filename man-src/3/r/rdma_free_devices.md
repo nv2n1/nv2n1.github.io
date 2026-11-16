@@ -12,13 +12,12 @@ rdma_free_devices - Frees the list of devices returned by rdma_get_devices.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 void rdma_free_devices
-
     (struct ibv_context **list);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>list
-<dd>List of devices returned from rdma_get_devices.</dl>
+</dt><dd>List of devices returned from rdma_get_devices.</dd></dl>
 
 <h2>Description</h2>
 

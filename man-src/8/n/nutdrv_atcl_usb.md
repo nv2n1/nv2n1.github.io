@@ -16,7 +16,7 @@ description: "nutdrv_atcl_usb – Driver for ‘ATCL FOR UPS’ equipment"
 <p>This driver supports the following optional setting: </p>
 <p> <code>vendor</code>=<i>name</i></p>
 <dl>
-<dd>In case your iManufacturer (Vendor) string does not exactly match ATCL FOR UPS, you may provide an alternate string here. Note that a more likely case is that your device is handled by another driver for 0001:0000 devices, such as <code><a href="/docs/linux/man/8-nutdrv_qx/">nutdrv_qx</a></code>(8).</dl>
+<dd>In case your iManufacturer (Vendor) string does not exactly match ATCL FOR UPS, you may provide an alternate string here. Note that a more likely case is that your device is handled by another driver for 0001:0000 devices, such as <code><a href="/docs/linux/man/8-nutdrv_qx/">nutdrv_qx</a></code>(8).</dd></dl>
 <h2>Bugs</h2>
 <p>The UPS returns the same code for &quot;load power is off&quot; as for &quot;on line power&quot;. This condition will not be observed if the NUT master is powered by the UPS, but may be an issue if the UPS is monitored by a remote system. </p>
 <p> The time between the shutdown command and removal of power seems to be fixed at 30 seconds. Ensure that the NUT shutdown script is invoked as late as possible in the shutdown procedure (in case some services take longer than others to clean up). </p>

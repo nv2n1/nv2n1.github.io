@@ -25,20 +25,20 @@ description: "Lintian::Relation::Version – Comparison operators on Debian vers
 <p>This module provides five functions for comparing version numbers. The underlying implementation uses <tt>&quot;libapt-pkg-perl&quot;</tt> to ensure that the results match what dpkg will expect.</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>versions_equal(A, B)</p>
-<dd>Returns true if A is equal to B (<tt>&quot;=&quot;</tt>) and false otherwise.</p>
-<dt>versions_lte(A, B)</p>
-<dd>Returns true if A is less than or equal (<tt>&quot;&lt;=&quot;</tt>) to B and false otherwise.</p>
-<dt>versions_gte(A, B)</p>
-<dd>Returns true if A is greater than or equal (<tt>&quot;&gt;=&quot;</tt>) to B and false otherwise.</p>
-<dt>versions_lt(A, B)</p>
-<dd>Returns true if A is less than (<tt>&quot;&lt;&lt;&quot;</tt>) B and false otherwise.</p>
-<dt>versions_gt(A, B)</p>
-<dd>Returns true if A is greater than (<tt>&quot;&gt;&gt;&quot;</tt>) B and false otherwise.</p>
-<dt>versions_compare(A, <font SIZE="-1">OP, B</font>)</p>
-<dd>Returns true if A <font SIZE="-1">OP B,</font> where <font SIZE="-1">OP</font> is one of <tt>&quot;=&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;&lt;&lt;&quot;</tt>, or <tt>&quot;&gt;&gt;&quot;</tt>, and false otherwise.</p>
-<dt>versions_comparator (A, B)</p>
-<dd>Returns -1, 0 or 1 if the version A is (respectively) less than, equal to or greater than B. This is useful for (e.g.) sorting a list of versions: </p>
+<dt>versions_equal(A, B)</dt>
+<dd>Returns true if A is equal to B (<tt>&quot;=&quot;</tt>) and false otherwise.</dd>
+<dt>versions_lte(A, B)</dt>
+<dd>Returns true if A is less than or equal (<tt>&quot;&lt;=&quot;</tt>) to B and false otherwise.</dd>
+<dt>versions_gte(A, B)</dt>
+<dd>Returns true if A is greater than or equal (<tt>&quot;&gt;=&quot;</tt>) to B and false otherwise.</dd>
+<dt>versions_lt(A, B)</dt>
+<dd>Returns true if A is less than (<tt>&quot;&lt;&lt;&quot;</tt>) B and false otherwise.</dd>
+<dt>versions_gt(A, B)</dt>
+<dd>Returns true if A is greater than (<tt>&quot;&gt;&gt;&quot;</tt>) B and false otherwise.</dd>
+<dt>versions_compare(A, <font SIZE="-1">OP, B</font>)</dt>
+<dd>Returns true if A <font SIZE="-1">OP B,</font> where <font SIZE="-1">OP</font> is one of <tt>&quot;=&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;&lt;&lt;&quot;</tt>, or <tt>&quot;&gt;&gt;&quot;</tt>, and false otherwise.</dd>
+<dt>versions_comparator (A, B)</dt>
+<dd>Returns -1, 0 or 1 if the version A is (respectively) less than, equal to or greater than B. This is useful for (e.g.) sorting a list of versions: </dd>
 <pre> foreach my $version (sort versions_comparator @versions) {
  ...
  }</pre>

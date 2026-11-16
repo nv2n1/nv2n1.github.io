@@ -903,24 +903,24 @@ OUTPUT : RETVAL void<br />
              CODE : MY_CXT_CLONE;</p>
 <p> <i></i><font SIZE="-1"><i>MY_CXT REFERENCE</i></font><i></i></p>
 <dl>
-<dt><font SIZE="-1">MY_CXT_KEY</font></p>
-<dd> This macro is used to define a unique key to refer to the static data for an <font SIZE="-1">XS</font> module. The suggested naming scheme, as used by h2xs, is to use a string that consists of the module name, the string &#8220;::_guts&#8221; and the module version number. </p>
+<dt><font SIZE="-1">MY_CXT_KEY</font></dt>
+<dd> This macro is used to define a unique key to refer to the static data for an <font SIZE="-1">XS</font> module. The suggested naming scheme, as used by h2xs, is to use a string that consists of the module name, the string &#8220;::_guts&#8221; and the module version number. </dd>
 <p>#define MY_CXT_KEY &#8220;MyModule::_guts&#8221; XS_VERSION</p>
-<dt>typedef my_cxt_t</p>
-<dd> This struct typedef <i>must</i> always be called <tt>&quot;my_cxt_t&quot;</tt>. The other <tt>&quot;CXT*&quot;</tt> macros assume the existence of the <tt>&quot;my_cxt_t&quot;</tt> typedef name. </p>
+<dt>typedef my_cxt_t</dt>
+<dd> This struct typedef <i>must</i> always be called <tt>&quot;my_cxt_t&quot;</tt>. The other <tt>&quot;CXT*&quot;</tt> macros assume the existence of the <tt>&quot;my_cxt_t&quot;</tt> typedef name. </dd>
 <p> Declare a typedef named <tt>&quot;my_cxt_t&quot;</tt> that is a structure that contains all the data that needs to be interpreter-local. </p>
 <p>typedef struct {<br />
     int some_value;<br />
 } my_cxt_t;</p>
-<dt><font SIZE="-1">START_MY_CXT</font></p>
-<dd> Always place the <font SIZE="-1">START_MY_CXT</font> macro directly after the declaration of <tt>&quot;my_cxt_t&quot;</tt>.</p>
-<dt><font SIZE="-1">MY_CXT_INIT</font></p>
-<dd> The <font SIZE="-1">MY_CXT_INIT</font> macro initializes storage for the <tt>&quot;my_cxt_t&quot;</tt> struct. </p>
+<dt><font SIZE="-1">START_MY_CXT</font></dt>
+<dd> Always place the <font SIZE="-1">START_MY_CXT</font> macro directly after the declaration of <tt>&quot;my_cxt_t&quot;</tt>.</dd>
+<dt><font SIZE="-1">MY_CXT_INIT</font></dt>
+<dd> The <font SIZE="-1">MY_CXT_INIT</font> macro initializes storage for the <tt>&quot;my_cxt_t&quot;</tt> struct. </dd>
 <p> It <i>must</i> be called exactly once, typically in a <font SIZE="-1">BOOT:</font> section. If you are maintaining multiple interpreters, it should be called once in each interpreter instance, except for interpreters cloned from existing ones. (But see &#8220;<font SIZE="-1">MY_CXT_CLONE&#8221;</font> below.)</p>
-<dt>dMY_CXT</p>
-<dd> Use the dMY_CXT macro (a declaration) in all the functions that access <font SIZE="-1">MY_CXT.</font></p>
-<dt><font SIZE="-1">MY_CXT</font></p>
-<dd> Use the <font SIZE="-1">MY_CXT</font> macro to access members of the <tt>&quot;my_cxt_t&quot;</tt> struct. For example, if <tt>&quot;my_cxt_t&quot;</tt> is </p>
+<dt>dMY_CXT</dt>
+<dd> Use the dMY_CXT macro (a declaration) in all the functions that access <font SIZE="-1">MY_CXT.</font></dd>
+<dt><font SIZE="-1">MY_CXT</font></dt>
+<dd> Use the <font SIZE="-1">MY_CXT</font> macro to access members of the <tt>&quot;my_cxt_t&quot;</tt> struct. For example, if <tt>&quot;my_cxt_t&quot;</tt> is </dd>
 <p>typedef struct {<br />
     int index;<br />
 } my_cxt_t;</p>
@@ -929,8 +929,8 @@ OUTPUT : RETVAL void<br />
     dMY_CXT;
     MY_CXT.index = 2;
 </pre>
-<dt>aMY_CXT/pMY_CXT</p>
-<dd> <tt>&quot;dMY_CXT&quot;</tt> may be quite expensive to calculate, and to avoid the overhead of invoking it in each function it is possible to pass the declaration onto other functions using the <tt>&quot;aMY_CXT&quot;</tt>/<tt>&quot;pMY_CXT&quot;</tt> macros, eg </p>
+<dt>aMY_CXT/pMY_CXT</dt>
+<dd> <tt>&quot;dMY_CXT&quot;</tt> may be quite expensive to calculate, and to avoid the overhead of invoking it in each function it is possible to pass the declaration onto other functions using the <tt>&quot;aMY_CXT&quot;</tt>/<tt>&quot;pMY_CXT&quot;</tt> macros, eg </dd>
 <p>void sub1()<br />
 {<br />
     dMY_CXT;<br />
@@ -942,12 +942,12 @@ void sub2(pMY_CXT)<br />
     MY_CXT.index = 2;<br />
 }</p>
 <p> Analogously to <tt>&quot;pTHX&quot;</tt>, there are equivalent forms for when the macro is the first or last in multiple arguments, where an underscore represents a comma, i.e. <tt>&quot;_aMY_CXT&quot;</tt>, <tt>&quot;aMY_CXT_&quot;</tt>, <tt>&quot;_pMY_CXT&quot;</tt> and <tt>&quot;pMY_CXT_&quot;</tt>.</p>
-<dt><font SIZE="-1">MY_CXT_CLONE</font></p>
-<dd> By default, when a new interpreter is created as a copy of an existing one (eg via <tt>&quot;threads-&gt;create()&quot;</tt>), both interpreters share the same physical my_cxt_t structure. Calling <tt>&quot;MY_CXT_CLONE&quot;</tt> (typically via the package&#8217;s <tt>&quot;CLONE()&quot;</tt> function), causes a byte-for-byte copy of the structure to be taken, and any future dMY_CXT will cause the copy to be accessed instead.</p>
-<dt><font SIZE="-1">MY_CXT_INIT_INTERP</font>(my_perl)</p>
+<dt><font SIZE="-1">MY_CXT_CLONE</font></dt>
+<dd> By default, when a new interpreter is created as a copy of an existing one (eg via <tt>&quot;threads-&gt;create()&quot;</tt>), both interpreters share the same physical my_cxt_t structure. Calling <tt>&quot;MY_CXT_CLONE&quot;</tt> (typically via the package&#8217;s <tt>&quot;CLONE()&quot;</tt> function), causes a byte-for-byte copy of the structure to be taken, and any future dMY_CXT will cause the copy to be accessed instead.</dd>
+<dt><font SIZE="-1">MY_CXT_INIT_INTERP</font>(my_perl)</dt>
 <dd>
-<dt>dMY_CXT_INTERP(my_perl)</p>
-<dd> These are versions of the macros which take an explicit interpreter as an argument.</dl>
+</dd><dt>dMY_CXT_INTERP(my_perl)</dt>
+<dd> These are versions of the macros which take an explicit interpreter as an argument.</dd></dl>
 <p> Note that these macros will only work together within the <i>same</i> source file; that is, a dMY_CTX in one source file will access a different structure than a dMY_CTX in another source file.</p>
 <h3>Thread-aware system interfaces</h3>
 <p> Starting from Perl 5.8, in C/C<font SIZE="-2">++</font> level Perl knows how to wrap system/library interfaces that have thread-aware versions (e.g. <code>getpwent_r()</code>) into frontend macros (e.g. <code>getpwent()</code>) that correctly handle the multithreaded interaction with the Perl interpreter. This will happen transparently, the only thing you need to do is to instantiate a Perl interpreter. </p>
@@ -1010,12 +1010,12 @@ print &#8220;netconf = $netconf
 <p> One area where there has been conflict is in regards to C locales. (See perllocale.) perl, with one exception and unless told otherwise, sets up the underlying locale the program is running in to the locale passed into it from the environment. This is an important difference from a generic C language program, where the underlying locale is the &#8220;C&#8221; locale unless the program changes it. As of v5.20, this underlying locale is completely hidden from pure Perl code outside the lexical scope of <tt>&quot;use locale&quot;</tt> except for a couple of function calls in the <font SIZE="-1">POSIX</font> module which of necessity use it. But the underlying locale, with that one exception is exposed to <font SIZE="-1">XS</font> code, affecting all C library routines whose behavior is locale-dependent. Your <font SIZE="-1">XS</font> code better not assume that the underlying locale is &#8220;C&#8221;. The exception is the <tt>&quot;LC_NUMERIC&quot;</tt> locale category, and the reason it is an exception is that experience has shown that it can be problematic for <font SIZE="-1">XS</font> code, whereas we have not had reports of problems with the other locale categories. And the reason for this one category being problematic is that the character used as a decimal point can vary. Many European languages use a comma, whereas English, and hence Perl are expecting a dot (U+002E: <font SIZE="-1">FULL STOP</font>). Many modules can handle only the radix character being a dot, and so perl attempts to make it so. Up through Perl v5.20, the attempt was merely to set <tt>&quot;LC_NUMERIC&quot;</tt> upon startup to the <tt>&quot;C&quot;</tt> locale. Any <code>setlocale()</code> otherwise would change it; this caused some failures. Therefore, starting in v5.22, perl tries to keep <tt>&quot;LC_NUMERIC&quot;</tt> always set to <tt>&quot;C&quot;</tt> for <font SIZE="-1">XS</font> code. </p>
 <p> To summarize, here&#8217;s what to expect and how to handle locales in <font SIZE="-1">XS</font> code:</p>
 <dl>
-<dt>Non-locale-aware <font SIZE="-1">XS</font> code</p>
-<dd> Keep in mind that even if you think your code is not locale-aware, it may call a library function that is. Hopefully the man page for such a function will indicate that dependency, but the documentation is imperfect. </p>
+<dt>Non-locale-aware <font SIZE="-1">XS</font> code</dt>
+<dd> Keep in mind that even if you think your code is not locale-aware, it may call a library function that is. Hopefully the man page for such a function will indicate that dependency, but the documentation is imperfect. </dd>
 <p> The current locale is exposed to <font SIZE="-1">XS</font> code except possibly <tt>&quot;LC_NUMERIC&quot;</tt> (explained in the next paragraph). There have not been reports of problems with the other categories. Perl initializes things on start-up so that the current locale is the one which is indicated by the user&#8217;s environment in effect at that time. See &#8220;<font SIZE="-1">ENVIRONMENT&#8221;</font> in perllocale. </p>
 <p> However, up through v5.20, Perl initialized things on start-up so that <tt>&quot;LC_NUMERIC&quot;</tt> was set to the &#8220;C&#8221; locale. But if any code anywhere changed it, it would stay changed. This means that your module can&#8217;t count on <tt>&quot;LC_NUMERIC&quot;</tt> being something in particular, and you can&#8217;t expect floating point numbers (including version strings) to have dots in them. If you don&#8217;t allow for a non-dot, your code could break if anyone anywhere changed the locale. For this reason, v5.22 changed the behavior so that Perl tries to keep <tt>&quot;LC_NUMERIC&quot;</tt> in the &#8220;C&#8221; locale except around the operations internally where it should be something else. Misbehaving <font SIZE="-1">XS</font> code will always be able to change the locale anyway, but the most common instance of this is checked for and handled.</p>
-<dt>Locale-aware <font SIZE="-1">XS</font> code</p>
-<dd> If the locale from the user&#8217;s environment is desired, there should be no need for <font SIZE="-1">XS</font> code to set the locale except for <tt>&quot;LC_NUMERIC&quot;</tt>, as perl has already set the others up. <font SIZE="-1">XS</font> code should avoid changing the locale, as it can adversely affect other, unrelated, code and may not be thread-safe. To minimize problems, the macros &#8220;<font SIZE="-1">STORE_LC_NUMERIC_SET_TO_NEEDED&#8221;</font> in perlapi, &#8220;<font SIZE="-1">STORE_LC_NUMERIC_FORCE_TO_UNDERLYING&#8221;</font> in perlapi, and &#8220;<font SIZE="-1">RESTORE_LC_NUMERIC&#8221;</font> in perlapi should be used to affect any needed change. </p>
+<dt>Locale-aware <font SIZE="-1">XS</font> code</dt>
+<dd> If the locale from the user&#8217;s environment is desired, there should be no need for <font SIZE="-1">XS</font> code to set the locale except for <tt>&quot;LC_NUMERIC&quot;</tt>, as perl has already set the others up. <font SIZE="-1">XS</font> code should avoid changing the locale, as it can adversely affect other, unrelated, code and may not be thread-safe. To minimize problems, the macros &#8220;<font SIZE="-1">STORE_LC_NUMERIC_SET_TO_NEEDED&#8221;</font> in perlapi, &#8220;<font SIZE="-1">STORE_LC_NUMERIC_FORCE_TO_UNDERLYING&#8221;</font> in perlapi, and &#8220;<font SIZE="-1">RESTORE_LC_NUMERIC&#8221;</font> in perlapi should be used to affect any needed change. </dd>
 <p> But, starting with Perl v5.28, locales are thread-safe on platforms that support this functionality. Windows has this starting with Visual Studio 2005. Many other modern platforms support the thread-safe <font SIZE="-1">POSIX 2008</font> functions. The C <tt>&quot;#define&quot;</tt> <tt>&quot;USE_THREAD_SAFE_LOCALE&quot;</tt> will be defined iff this build is using these. From Perl-space, the read-only variable <tt>&quot;${SAFE_LOCALES}&quot;</tt> is 1 if either the build is not threaded, or if <tt>&quot;USE_THREAD_SAFE_LOCALE&quot;</tt> is defined; otherwise it is 0. </p>
 <p> The way this works under-the-hood is that every thread has a choice of using a locale specific to it (this is the Windows and <font SIZE="-1">POSIX 2008</font> functionality), or the global locale that is accessible to all threads (this is the functionality that has always been there). The implementations for Windows and <font SIZE="-1">POSIX</font> are completely different. On Windows, the runtime can be set up so that the standard <tt><a href="/docs/linux/man/3-setlocale/">setlocale</a>(3)</tt> function either only knows about the global locale or the locale for this thread. On <font SIZE="-1">POSIX,</font> <tt>&quot;setlocale&quot;</tt> always deals with the global locale, and other functions have been created to handle per-thread locales. Perl makes this transparent to perl-space code. It continues to use <tt>&quot;POSIX::setlocale()&quot;</tt>, and the interpreter translates that into the per-thread functions. </p>
 <p> All other locale-senstive functions automatically use the per-thread locale, if that is turned on, and failing that, the global locale. Thus calls to <tt>&quot;setlocale&quot;</tt> are ineffective on <font SIZE="-1">POSIX</font> systems for the current thread if that thread is using a per-thread locale. If perl is compiled for single-thread operation, it does not use the per-thread functions, so <tt>&quot;setlocale&quot;</tt> does work as expected. </p>
@@ -1059,11 +1059,11 @@ print &#8220;netconf = $netconf
 <p> Originally written by Dean Roehrich &lt;<i>roehrich [at] cray.com</i>&gt;. </p>
 <p> Maintained since 1996 by The Perl Porters &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
 <h2>Index</h2>
-<dt><a href="#lbCA">EXAMPLES</a></p>
+<dt><a href="#lbCA">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbCB">CAVEATS</a></p>
+</dd><dt><a href="#lbCB">CAVEATS</a></dt>
 <dd>
-<dt><a href="#lbCC">XS VERSION</a></p>
+</dd><dt><a href="#lbCC">XS VERSION</a></dt>
 <dd>
-<dt><a href="#lbCD">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbCD">AUTHOR</a></dt>
+<dd></dd></dl>

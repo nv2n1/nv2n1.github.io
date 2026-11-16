@@ -10,7 +10,6 @@ description: "set_color_conversion – Tells Allegro how to convert images durin
 <p>set_color_conversion &#8211; Tells Allegro how to convert images during loading time.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_color_conversion(int mode);</code></pre>
 <h2>Description</h2>
 <p>Specifies how to convert images between the various color depths when reading graphics from external bitmap files or datafiles. The mode is a bitmask specifying which types of conversion are allowed. If the appropriate bit is set, data will be converted into the current pixel format (selected by calling the set_color_depth() function), otherwise it will be left in the same format as the disk file, leaving you to convert it manually before the graphic can be displayed. The default mode is total conversion, so that all images will be loaded in the appropriate format for the current video mode. Valid bit flags are: </p>

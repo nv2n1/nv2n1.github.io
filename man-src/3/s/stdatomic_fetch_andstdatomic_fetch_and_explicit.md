@@ -11,33 +11,19 @@ std::atomic_fetch_and,std::atomic_fetch_and_explicit - std::atomic_fetch_and,std
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 T atomic_fetch_and( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg ) noexcept;
-
 template&lt; class T &gt;
-
 T atomic_fetch_and( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg ) noexcept;
-
 template&lt; class T &gt;                                        (1) (since C++11)
-
 T atomic_fetch_and_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg,
-
 std::memory_order order) noexcept;                                           (2) (since C++11)
-
 template&lt; class T &gt;
-
 T atomic_fetch_and_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type arg,
-
 std::memory_order order) noexcept;</code></pre> 
 Atomically replaces the value pointed by obj with the result of bitwise AND between the old value of obj and arg. Returns the value obj held previously. 
 The operation is performed as if the following is executed: 
@@ -66,24 +52,16 @@ The value immediately preceding the effects of this function in the modification
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;functional&gt;
 // Binary semaphore for demonstrative purposes only
-
 // This is a simple yet meaningful example: atomic operations
-
 // are unnecessary without threads.
-
 class Semaphore
 {
     std::atomic_char m_signaled;
-
   public:
     Semaphore(bool initial = false)
     {
@@ -132,7 +110,6 @@ class ThreadedCounter
         } while (!m_done);
         std::cout &lt;&lt; &quot;print_count() done\n&quot;;
     }
-
   public:
     ThreadedCounter()
         : m_done(false)
@@ -147,7 +124,6 @@ class ThreadedCounter
     }
 };
 int main()
-
 {
     ThreadedCounter m_counter;
     m_counter.run();

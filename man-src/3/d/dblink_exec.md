@@ -22,25 +22,25 @@ dblink_exec(text connname, text sql[, bool fail_on_error]) returns text
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use; omit this parameter to use the unnamed connection.</dl>
+</dt><dd> Name of the connection to use; omit this parameter to use the unnamed connection.</dd></dl>
 <p> <i>connstr</i></p>
 <dl>
 <dt>
-<dd> A connection info string, as previously described for <code>dblink_connect</code>.</dl>
+</dt><dd> A connection info string, as previously described for <code>dblink_connect</code>.</dd></dl>
 <p> <i>sql</i></p>
 <dl>
 <dt>
-<dd> The SQL command that you wish to execute in the remote database, for example insert into foo values(0,&#8217;a&#8217;,'{&quot;a0&quot;,&quot;b0&quot;,&quot;c0&quot;}&#8217;).</dl>
+</dt><dd> The SQL command that you wish to execute in the remote database, for example insert into foo values(0,&#8217;a&#8217;,'{&quot;a0&quot;,&quot;b0&quot;,&quot;c0&quot;}&#8217;).</dd></dl>
 <p> <i>fail_on_error</i></p>
 <dl>
 <dt>
-<dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function&#8217;s return value is set to ERROR.</dl>
+</dt><dd> If true (the default when omitted) then an error thrown on the remote side of the connection causes an error to also be thrown locally. If false, the remote error is locally reported as a NOTICE, and the function&#8217;s return value is set to ERROR.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns status, either the command&#8217;s status string or ERROR.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_connect('dbname=dblink_test_standby');
 dblink_connect-- -- -- -- -- -- -- --OK(1 row)
@@ -55,5 +55,5 @@ NOTICE : sql error
              DETAIL : ERROR : null value in column "relnamespace" violates not -null constraint
                                   dblink_exec-- -- -- -- -- -- -ERROR(1 row)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

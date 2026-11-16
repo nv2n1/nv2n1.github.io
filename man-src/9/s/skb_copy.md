@@ -14,10 +14,10 @@ description: "skb_copy – create private copy of an sk_buff"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>buffer to copy</dl>
+</dd><dd>buffer to copy</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>allocation priority</dl>
+<dd>allocation priority</dd></dl>
 <h2>Description</h2>
 <p>Make a copy of both an sk_buff and its data. This is used when the caller wishes to modify the data and needs a private copy of the data to alter. Returns <code>NULL</code> on failure or the pointer to the buffer on success. The returned buffer has a reference count of 1. </p>
 <p> As by-product this function converts non-linear sk_buff to linear one, so that sk_buff becomes completely private and caller is allowed to modify all the data of returned buffer. This means that this function is not recommended for use in circumstances when only header is going to be modified. Use <code>pskb_copy</code> instead.</p>

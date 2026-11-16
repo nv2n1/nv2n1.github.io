@@ -15,19 +15,19 @@ description: "heif-info – show information on HEIC/HEIF file"
 <p> <code>heif-info</code> Show information on HEIC/HEIF file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dump-boxes</code></p>
-<dd> Show a low-level dump of all MP4 file boxes.</p>
-<dt><code>-help</code>, <code>&#8211;help</code></p>
-<dd> Show help.</dl>
+<dt><code>-d</code>, <code>&#8211;dump-boxes</code></dt>
+<dd> Show a low-level dump of all MP4 file boxes.</dd>
+<dt><code>-help</code>, <code>&#8211;help</code></dt>
+<dd> Show help.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Success</dl>
+</dt><dd> Success</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Failure (syntax or usage error; error while loading image).</dl>
+</dt><dd> Failure (syntax or usage error; error while loading image).</dd></dl>
 <h2>BUGS</h2>
 <p> Please reports bugs or issues at <a rel="nofollow" href="https://github.com/strukturag/libheif">https://github.com/strukturag/libheif</a></p>
 <h2>AUTHORS</h2>

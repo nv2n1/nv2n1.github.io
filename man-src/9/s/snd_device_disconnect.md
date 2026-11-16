@@ -14,10 +14,10 @@ description: "snd_device_disconnect – disconnect the device"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>device_data</i></p>
 <dl>
-<dd>the data pointer to disconnect</dl>
+<dd>the data pointer to disconnect</dd></dl>
 <h2>Description</h2>
 <p>Turns the device into the disconnection state, invoking dev_disconnect callback, if the device was already registered. </p>
 <p> Usually called from <code>snd_card_disconnect</code>.</p>

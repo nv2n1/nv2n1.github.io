@@ -25,12 +25,12 @@ description: "pmdanews – sample Usenet news performance metrics domain agent (
 <p> <code>pmdanews</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$PCP_PMDAS_DIR/news/Install</p>
-<dd> installation script for the <code>pmdanews</code> agent</p>
-<dt>$PCP_PMDAS_DIR/news/Remove</p>
-<dd> undo installation script for the <code>pmdanews</code> agent</p>
-<dt>$PCP_LOG_DIR/pmcd/news.log</p>
-<dd> default log file for error messages from <code>pmdanews</code></dl>
+<dt>$PCP_PMDAS_DIR/news/Install</dt>
+<dd> installation script for the <code>pmdanews</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/news/Remove</dt>
+<dd> undo installation script for the <code>pmdanews</code> agent</dd>
+<dt>$PCP_LOG_DIR/pmcd/news.log</dt>
+<dd> default log file for error messages from <code>pmdanews</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1). </p>
 <h2>Index</h2>

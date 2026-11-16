@@ -23,16 +23,18 @@ git for-each-ref [--count=&lt;count&gt;] [--shell|--perl|--python|--tcl]
 <p> &lt;pattern&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> If one or more patterns are given, only refs are shown that match against at least one pattern, either using <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3) or literally, in the latter case matching completely or from the beginning up to a slash.</dl>
+</dt><dd> If one or more patterns are given, only refs are shown that match against at least one pattern, either using <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3) or literally, in the latter case matching completely or from the beginning up to a slash.</dd></dl>
 <p> &#8211;count=&lt;count&gt;</p>
 <dl>
 <dt>
-<dd> By default the command shows all refs that match <code>&lt;pattern&gt;</code>. This option makes it stop after showing that many refs.</dl>
+</dt><dd> By default the command shows all refs that match <code>&lt;pattern&gt;</code>. This option makes it stop after showing that many refs.</dd></dl>
 <p> &#8211;sort=&lt;key&gt;</p>
 <dl>
 <dt>
-<dd> A field name to sort on. Prefix <code>&#8211;</code> to sort in descending order of the value. When unspecified, <code>refname</code> is used. You may use the &#8211;sort=&lt;key&gt; option multiple times, in which case the last key becomes the primary key.</dl>
+</dt><dd> A field name to sort on. Prefix <code>&#8211;</code> to sort in descending order of the value. When unspecified, <code>refname</code> is used. You may use the &#8211;sort=&lt;key&gt; option multiple times, in which case the last key becomes the primary key.</dd></dl>
 <p> &#8211;format=&lt;format&gt;</p>
 <dl>
 <dt>
-<dd> A string that interpolates <code>%(fieldname)</code> from a ref being shown and the object it points at. If <code>fieldname</code> is prefixed with an asterisk (<code>*</code>) and the ref points at a tag object, use the value for the field in the object which the tag object refers to (instead of the field in the tag object). When unspecified, <code>&lt;format&gt;</code> defaults to <code>%(objectname) SPC %(objecttype) TAB %(refname)</code>. It also interpolates <code>%%</code> to <code>%</code>, and <code>%xx</code> where <code>xx</code> are hex digits interpolates to character with hex code <code>xx</code>; for example <code>%00</code> interpolates to <code>
+</dt><dd> A string that interpolates <code>%(fieldname)</code> from a ref being shown and the object it points at. If <code>fieldname</code> is prefixed with an asterisk (<code>*</code>) and the ref points at a tag object, use the value for the field in the object which the tag object refers to (instead of the field in the tag object). When unspecified, <code>&lt;format&gt;</code> defaults to <code>%(objectname) SPC %(objecttype) TAB %(refname)</code>. It also interpolates <code>%%</code> to <code>%</code>, and <code>%xx</code> where <code>xx</code> are hex digits interpolates to character with hex code <code>xx</code>; for example <code>%00</code> interpolates to <code>
+</dd></dl>
+</code>

@@ -12,32 +12,32 @@ description: "fadvise64,fadvise64_64 – Give advice about file access"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>long&nbsp;<wbr><code>fadvise64_64</code> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>);</p>
+</dt><dd>long&nbsp;<wbr><code>fadvise64_64</code> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>);</dd>
 <dt>
-<dd>long&nbsp;<wbr><code>sys_fadvise64</code>&nbsp;<wbr> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>); </p>
+</dt><dd>long&nbsp;<wbr><code>sys_fadvise64</code>&nbsp;<wbr> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>); </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> Allows an application to to tell the kernel how it expects to use a file handle, so that the kernel can choose appropriate read-ahead and caching techniques for access to the corresponding file. This is similar to the POSIX version of the <code>madvise</code> system call, but for file access instead of memory access. The sys_fadvise64() function is obsolete and corresponds to a broken glibc API, sys_fadvise64_64() is the fixed version. The following are the values for the <i>advice</i> parameter: </p>
 <dl>
-<dt>FADV_NORMAL</p>
-<dd> No special treatment. </p>
-<dt>FADV_RANDOM</p>
-<dd> Expect page references in random order. </p>
-<dt>FADV_SEQUENTIAL</p>
-<dd> Expect page references in sequential order. </p>
-<dt>FADV_WILLNEED</p>
-<dd> Expect access in the near future. </p>
-<dt>FADV_DONTNEED</p>
-<dd> Do not expect access in the near future. Subsequent access of pages in this range will succeed, but will result either in reloading of the memory contents from the underlying mapped file or zero-fill-in-demand pages for mappings without an underlying file. </p>
-<dt>FADV_NOREUSE</p>
-<dd> Access data only once. </p>
+<dt>FADV_NORMAL</dt>
+<dd> No special treatment. </dd>
+<dt>FADV_RANDOM</dt>
+<dd> Expect page references in random order. </dd>
+<dt>FADV_SEQUENTIAL</dt>
+<dd> Expect page references in sequential order. </dd>
+<dt>FADV_WILLNEED</dt>
+<dd> Expect access in the near future. </dd>
+<dt>FADV_DONTNEED</dt>
+<dd> Do not expect access in the near future. Subsequent access of pages in this range will succeed, but will result either in reloading of the memory contents from the underlying mapped file or zero-fill-in-demand pages for mappings without an underlying file. </dd>
+<dt>FADV_NOREUSE</dt>
+<dd> Access data only once. </dd>
 </dl>
 <h2>ERRORS</h2>
 <dl>
-<dt>-EBADF</p>
-<dd> An invalid file descriptor was specified. to modify the modules. </p>
-<dt>-EINVAL</p>
-<dd> An invalid <i>f_mapping</i> of <i>file</i>, <i>len</i> value smaller than 0 or <i>advice</i> value unknown. </p>
+<dt>-EBADF</dt>
+<dd> An invalid file descriptor was specified. to modify the modules. </dd>
+<dt>-EINVAL</dt>
+<dd> An invalid <i>f_mapping</i> of <i>file</i>, <i>len</i> value smaller than 0 or <i>advice</i> value unknown. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-madvise/">madvise</a>(2)</code> </p>

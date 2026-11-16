@@ -15,19 +15,19 @@ snd_soc_update_bits - update codec register bits
 <h2>Arguments</h2>
 
 <i>codec</i>
-<dl><dd><dd>audio codec</dl>
+<dl><dd></dd><dd>audio codec</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>codec register</dl>
+<dl><dd>codec register</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>register mask</dl>
+<dl><dd>register mask</dd></dl>
  
 
  <i>value</i>
-<dl><dd>new value</dl>
+<dl><dd>new value</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,7 +15,7 @@ ida_init - initialize ida handle
 <h2>Arguments</h2>
 
 <i>ida</i>
-<dl><dd><dd>ida handle</dl>
+<dl><dd></dd><dd>ida handle</dd></dl>
 
 <h2>Description</h2>
 

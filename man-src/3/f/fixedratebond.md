@@ -23,7 +23,7 @@ description: "QuantLib::FixedRateBond – fixed-rate bond"
 <p>fixed-rate bond </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calculations are tested by checking results against cached values.</dl>
+<dd>calculations are tested by checking results against cached values.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Bonds.cpp</code>, and <code>Repo.cpp</code>. </p>
 <h2>Author</h2>

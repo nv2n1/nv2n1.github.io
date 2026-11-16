@@ -11,9 +11,7 @@ std::experimental::ranges::Integral - std::experimental::ranges::Integral
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T &gt;                                 (ranges TS)
-
 concept bool Integral = std::is_integral&lt;T&gt;::value;</code></pre> 
 The concept Integral&lt;T&gt; is satisfied if and only if T is an integral type. 
 There need not be any subsumption relationship between Integral&lt;T&gt; and std::is_integral&lt;T&gt;::value. 

@@ -30,3 +30,4 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 &nbsp;<wbr>&nbsp;PCRE2_ANCHORED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Force pattern anchoring<br />
 &nbsp;<wbr>&nbsp;PCRE2_ALLOW_EMPTY_CLASS&nbsp;<wbr>&nbsp;Allow empty classes<br />
 &nbsp;<wbr>&nbsp;PCRE2_ALT_BSUX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Alternative handling of&nbsp;
+</p>

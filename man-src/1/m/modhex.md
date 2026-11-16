@@ -18,44 +18,44 @@ description: "modhex – convert data to/from modhex encoding"
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> Decode data (the default is to encode data).</dl>
+</dt><dd> Decode data (the default is to encode data).</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Use hex encoding for all non-modhex data.</dl>
+</dt><dd> Use hex encoding for all non-modhex data.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> ModHex encode ASCII-string &quot;test&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 modhex test
 </pre>
-</dl>
+</dd></dl>
 <p> Decode ModHex data &quot;ifhgieif&quot; into ASCII string: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 modhex -d ifhgieif
 </pre>
-</dl>
+</dd></dl>
 <p> ModHex encode hex-encoded data &quot;b565716f&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 modhex -h b565716f
 </pre>
-</dl>
+</dd></dl>
 <p> Decode ModHex data &quot;nghgibhv&quot; and print hex-encode data: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 modhex -d -h nghgibhv
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
 <h2>Index</h2>

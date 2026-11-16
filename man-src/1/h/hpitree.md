@@ -21,36 +21,36 @@ hpitree[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-acdiorsw][-n nn][-X][-h] hpit
 <p> (No Option) Display all rpts and rdrs</p>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> Display all rpts and rdrs (default)</p>
-<dt><code>-r</code>, <code>&#8211;rpts</code></p>
-<dd> Display only rpts</p>
-<dt><code>-d</code>, <code>&#8211;rdrs</code></p>
-<dd> Display rdr records</p>
-<dt><code>-o</code>, <code>&#8211;overview</code></p>
-<dd> Display system overview: rpt &amp; rdr headers</p>
-<dt><code>-s</code>, <code>&#8211;sensors</code></p>
-<dd> Display only sensors</p>
-<dt><code>-c</code>, <code>&#8211;controls</code></p>
-<dd> Display only controls</p>
-<dt><code>-w</code>, <code>&#8211;watchdogs</code></p>
-<dd> Display only watchdogs</p>
-<dt><code>-i</code>, <code>&#8211;inventories</code></p>
-<dd> Display only inventories</p>
-<dt><code>-n</code> <i>nn</i>, <code>&#8211;resource</code>=<i>nn</i></p>
-<dd> Display only resource <i>nn</i> and its topology</p>
-<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id <i>nn</i></p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</p>
-<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> Display all rpts and rdrs (default)</dd>
+<dt><code>-r</code>, <code>&#8211;rpts</code></dt>
+<dd> Display only rpts</dd>
+<dt><code>-d</code>, <code>&#8211;rdrs</code></dt>
+<dd> Display rdr records</dd>
+<dt><code>-o</code>, <code>&#8211;overview</code></dt>
+<dd> Display system overview: rpt &amp; rdr headers</dd>
+<dt><code>-s</code>, <code>&#8211;sensors</code></dt>
+<dd> Display only sensors</dd>
+<dt><code>-c</code>, <code>&#8211;controls</code></dt>
+<dd> Display only controls</dd>
+<dt><code>-w</code>, <code>&#8211;watchdogs</code></dt>
+<dd> Display only watchdogs</dd>
+<dt><code>-i</code>, <code>&#8211;inventories</code></dt>
+<dd> Display only inventories</dd>
+<dt><code>-n</code> <i>nn</i>, <code>&#8211;resource</code>=<i>nn</i></dt>
+<dd> Display only resource <i>nn</i> and its topology</dd>
+<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id <i>nn</i></dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
          hpi_shell

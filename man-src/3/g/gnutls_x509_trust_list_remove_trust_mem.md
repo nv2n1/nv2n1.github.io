@@ -14,12 +14,12 @@ description: "gnutls_x509_trust_list_remove_trust_mem – API function"
 <p> <code>int gnutls_x509_trust_list_remove_trust_mem(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_datum_t * </code><i>cas</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>const gnutls_datum_t * cas</p>
-<dd> A buffer containing a list of CAs (optional)</p>
-<dt>gnutls_x509_crt_fmt_t type</p>
-<dd> The format of the certificates</dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>const gnutls_datum_t * cas</dt>
+<dd> A buffer containing a list of CAs (optional)</dd>
+<dt>gnutls_x509_crt_fmt_t type</dt>
+<dd> The format of the certificates</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will remove the provided certificate authorities from the trusted list, and add them into a black list when needed. </p>
 <p> See also <code>gnutls_x509_trust_list_remove_cas()</code>.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_trust_list_remove_trust_mem – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

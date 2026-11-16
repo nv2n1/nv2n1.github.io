@@ -17,18 +17,18 @@ description: "mogilefsd — MogileFS tracker daemon"
 <p> The mogilefsd daemon is an event-loop in the parent process, handling with epoll/kqueue/etc (see Danga::Socket) tons of client connections, while managing a bunch of worker processes underneath. </p>
 <p> The worker processes under mogilefsd include:</p>
 <dl>
-<dt><code>Client query processing</code> &#8212; implements the MogileFS client/server protocol</p>
-<dd> See MogileFS::Worker::Query.</p>
-<dt><code>Monitoring</code> &#8212; monitors hosts and devices</p>
-<dd> See MogileFS::Worker::Monitor.</p>
-<dt><code>Replicate</code> &#8212; replicates files</p>
-<dd> See MogileFS::Worker::Replicate.</p>
-<dt><code>Deleter</code> &#8212; deletes files from storage nodes (protocol deletes from namespace are immediate)</p>
-<dd> See MogileFS::Worker::Delete.</p>
-<dt><code>Reaper</code> &#8212; re-enqueues files for replication when disks are marked dead</p>
-<dd> See MogileFS::Worker::Reaper.</p>
-<dt><code>Checker/Fsck</code> &#8212; background filesystem consistency checker</p>
-<dd> See MogileFS::Worker::Checker.</dl>
+<dt><code>Client query processing</code> &#8212; implements the MogileFS client/server protocol</dt>
+<dd> See MogileFS::Worker::Query.</dd>
+<dt><code>Monitoring</code> &#8212; monitors hosts and devices</dt>
+<dd> See MogileFS::Worker::Monitor.</dd>
+<dt><code>Replicate</code> &#8212; replicates files</dt>
+<dd> See MogileFS::Worker::Replicate.</dd>
+<dt><code>Deleter</code> &#8212; deletes files from storage nodes (protocol deletes from namespace are immediate)</dt>
+<dd> See MogileFS::Worker::Delete.</dd>
+<dt><code>Reaper</code> &#8212; re-enqueues files for replication when disks are marked dead</dt>
+<dd> See MogileFS::Worker::Reaper.</dd>
+<dt><code>Checker/Fsck</code> &#8212; background filesystem consistency checker</dt>
+<dd> See MogileFS::Worker::Checker.</dd></dl>
 <h2>Data Storage</h2>
 <p> See MogileFS::Store.</p>
 <h2>AUTHORS</h2>

@@ -36,13 +36,13 @@ OPTIONS
  -c &lt;cntid&gt;, --cntid=&lt;cntid&gt;
 <dl>
 <dt>
-<dd> Retrieve the identify list structure starting with the given controller id.</dl>
+</dt><dd> Retrieve the identify list structure starting with the given controller id.</dd></dl>
  
 
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> If provided, will request the controllers attached to the specified namespace. If no namespace is given, or set to 0, the command requests the controller list for the entire subsystem, whether or not they are attached to namespace(s).</dl>
+</dt><dd> If provided, will request the controllers attached to the specified namespace. If no namespace is given, or set to 0, the command requests the controller list for the entire subsystem, whether or not they are attached to namespace(s).</dd></dl>
 
 <h2>EXAMPLES</h2>
 

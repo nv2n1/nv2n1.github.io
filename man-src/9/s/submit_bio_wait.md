@@ -14,7 +14,7 @@ description: "submit_bio_wait – submit a bio, and wait until it completes"
 <p><i>bio</i></p>
 <dl>
 <dd>
-<dd>The struct bio which describes the I/O</dl>
+</dd><dd>The struct bio which describes the I/O</dd></dl>
 <h2>Description</h2>
 <p>Simple wrapper around <code>submit_bio</code>. Returns 0 on success, or the error from <code>bio_endio</code> on failure.</p>
 <h2>Copyright</h2>

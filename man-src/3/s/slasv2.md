@@ -19,7 +19,7 @@ description: "slasv2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SLASV2 computes the singular value decomposition of a 2-by-2
  triangular matrix
@@ -31,11 +31,11 @@ description: "slasv2.f –"
     [ CSL  SNL ] [  F   G  ] [ CSR -SNR ]  =  [ SSMAX   0   ]
     [-SNL  CSL ] [  0   H  ] [ SNR  CSR ]     [  0    SSMIN ].
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>F</i> </p>
+</dt><dd> <i>F</i> </dd>
 <pre>
           F is REAL
           The (1,1) element of the 2-by-2 matrix.
@@ -84,18 +84,18 @@ description: "slasv2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Any input parameter may be aliased with any output parameter.
   Barring over/underflow and assuming a guard digit in subtraction, all
@@ -111,8 +111,9 @@ description: "slasv2.f –"
   may correspond to a matrix modified by perturbations of size near
   the underflow threshold.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 139 of file slasv2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -26,53 +26,53 @@ description: "stow – software package installation manager"
 <h2>Options</h2>
 <p>The stow directory is assumed to be the value of the <tt>&quot;STOW_DIR&quot;</tt> environment variable or if unset the current directory, and the target directory is assumed to be the parent of the current directory (so it is typical to execute <i>stow</i> from the directory <i>/usr/local/stow</i>). Each <i>package</i> given on the command line is the name of a package in the stow directory (e.g., <i>perl</i>). By default, they are installed into the target directory (but they can be deleted instead using <tt>&quot;-D&quot;</tt>).</p>
 <dl>
-<dt>-n</p>
+<dt>-n</dt>
 <dd>
-<dt>&#8211;no</p>
-<dd>Do not perform any operations that modify the filesystem; merely show what would happen.</p>
-<dt>-d <font SIZE="-1">DIR</font></p>
+</dd><dt>&#8211;no</dt>
+<dd>Do not perform any operations that modify the filesystem; merely show what would happen.</dd>
+<dt>-d <font SIZE="-1">DIR</font></dt>
 <dd>
-<dt>&#8211;dir=DIR</p>
-<dd>Set the stow directory to <tt>&quot;DIR&quot;</tt> instead of the current directory. This also has the effect of making the default target directory be the parent of <tt>&quot;DIR&quot;</tt>.</p>
-<dt>-t <font SIZE="-1">DIR</font></p>
+</dd><dt>&#8211;dir=DIR</dt>
+<dd>Set the stow directory to <tt>&quot;DIR&quot;</tt> instead of the current directory. This also has the effect of making the default target directory be the parent of <tt>&quot;DIR&quot;</tt>.</dd>
+<dt>-t <font SIZE="-1">DIR</font></dt>
 <dd>
-<dt>&#8211;target=DIR</p>
-<dd>Set the target directory to <tt>&quot;DIR&quot;</tt> instead of the parent of the stow directory.</p>
-<dt>-v</p>
+</dd><dt>&#8211;target=DIR</dt>
+<dd>Set the target directory to <tt>&quot;DIR&quot;</tt> instead of the parent of the stow directory.</dd>
+<dt>-v</dt>
 <dd>
-<dt>&#8211;verbose[=N]</p>
-<dd>Send verbose output to standard error describing what Stow is doing. Verbosity levels are 0, 1, 2, 3, and 4; 0 is the default. Using <tt>&quot;-v&quot;</tt> or <tt>&quot;--verbose&quot;</tt> increases the verbosity by one; using `&#8211;verbose=N&#8217; sets it to N.</p>
-<dt>-S</p>
+</dd><dt>&#8211;verbose[=N]</dt>
+<dd>Send verbose output to standard error describing what Stow is doing. Verbosity levels are 0, 1, 2, 3, and 4; 0 is the default. Using <tt>&quot;-v&quot;</tt> or <tt>&quot;--verbose&quot;</tt> increases the verbosity by one; using `&#8211;verbose=N&#8217; sets it to N.</dd>
+<dt>-S</dt>
 <dd>
-<dt>&#8211;stow</p>
-<dd>Stow the packages that follow this option into the target directory. This is the default action and so can be omitted if you are only stowing packages rather than performing a mixture of stow/delete/restow actions.</p>
-<dt>-D</p>
+</dd><dt>&#8211;stow</dt>
+<dd>Stow the packages that follow this option into the target directory. This is the default action and so can be omitted if you are only stowing packages rather than performing a mixture of stow/delete/restow actions.</dd>
+<dt>-D</dt>
 <dd>
-<dt>&#8211;delete</p>
-<dd>Unstow the packages that follow this option from the target directory rather than installing them.</p>
-<dt>-R</p>
+</dd><dt>&#8211;delete</dt>
+<dd>Unstow the packages that follow this option from the target directory rather than installing them.</dd>
+<dt>-R</dt>
 <dd>
-<dt>&#8211;restow</p>
-<dd>Restow packages (first unstow, then stow again). This is useful for pruning obsolete symlinks from the target tree after updating the software in a package.</p>
-<dt>&#8211;adopt</p>
-<dd><code>Warning!</code> This behaviour is specifically intended to alter the contents of your stow directory. If you do not want that, this option is not for you. </p>
+</dd><dt>&#8211;restow</dt>
+<dd>Restow packages (first unstow, then stow again). This is useful for pruning obsolete symlinks from the target tree after updating the software in a package.</dd>
+<dt>&#8211;adopt</dt>
+<dd><code>Warning!</code> This behaviour is specifically intended to alter the contents of your stow directory. If you do not want that, this option is not for you. </dd>
 <p> When stowing, if a target is encountered which already exists but is a plain file (and hence not owned by any existing stow package), then normally Stow will register this as a conflict and refuse to proceed. This option changes that behaviour so that the file is moved to the same relative place within the package&#8217;s installation image within the stow directory, and then stowing proceeds as before. So effectively, the file becomes adopted by the stow package, without its contents changing.</p>
-<dt>&#8211;no-folding</p>
-<dd>Disable folding of newly stowed directories when stowing, and refolding of newly foldable directories when unstowing.</p>
-<dt>&#8211;ignore=REGEX</p>
-<dd>Ignore files ending in this Perl regex.</p>
-<dt>&#8211;defer=REGEX</p>
-<dd>Don&#8217;t stow files beginning with this Perl regex if the file is already stowed to another package.</p>
-<dt>&#8211;override=REGEX</p>
-<dd>Force stowing files beginning with this Perl regex if the file is already stowed to another package.</p>
-<dt>-V</p>
+<dt>&#8211;no-folding</dt>
+<dd>Disable folding of newly stowed directories when stowing, and refolding of newly foldable directories when unstowing.</dd>
+<dt>&#8211;ignore=REGEX</dt>
+<dd>Ignore files ending in this Perl regex.</dd>
+<dt>&#8211;defer=REGEX</dt>
+<dd>Don&#8217;t stow files beginning with this Perl regex if the file is already stowed to another package.</dd>
+<dt>&#8211;override=REGEX</dt>
+<dd>Force stowing files beginning with this Perl regex if the file is already stowed to another package.</dd>
+<dt>-V</dt>
 <dd>
-<dt>&#8211;version</p>
-<dd>Show Stow version number, and exit.</p>
-<dt>-h</p>
+</dd><dt>&#8211;version</dt>
+<dd>Show Stow version number, and exit.</dd>
+<dt>-h</dt>
 <dd>
-<dt>&#8211;help</p>
-<dd>Show Stow command syntax, and exit.</dl>
+</dd><dt>&#8211;help</dt>
+<dd>Show Stow command syntax, and exit.</dd></dl>
 <h2>Installing Packages</h2>
 <p>The default action of Stow is to install a package. This means creating symlinks in the target tree that point into the package tree. Stow attempts to do this with as few symlinks as possible; in other words, if Stow can create a single symlink that points to an entire subtree within the package tree, it will choose to do that rather than create a directory in the target tree and populate it with symlinks. </p>
 <p> For example, suppose that no packages have yet been installed in <i>/usr/local</i>; it&#8217;s completely empty (except for the <i>stow</i> subdirectory, of course). Now suppose the Perl package is installed. Recall that it includes the following directories in its installation image: <i>bin</i>; <i>info</i>; <i>lib/perl</i>; <i>man/man1</i>. Rather than creating the directory <i>/usr/local/bin</i> and populating it with symlinks to <i>../stow/perl/bin/perl</i> and <i>../stow/perl/bin/a2p</i> (and so on), Stow will create a single symlink, <i>/usr/local/bin</i>, which points to <i>stow/perl/bin</i>. In this way, it still works to refer to <i>/usr/local/bin/perl</i> and <i>/usr/local/bin/a2p</i>, and fewer symlinks have been created. This is called &#8220;tree folding&#8221;, since an entire subtree is &#8220;folded&#8221; into a single symlink. </p>
@@ -94,11 +94,11 @@ description: "stow – software package installation manager"
 <p>Please report bugs in Stow using the Debian bug tracking system. </p>
 <p> Currently known bugs include:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The empty-directory problem. </p>
+<dt>&bull;</dt>
+<dd>The empty-directory problem. </dd>
 <p> If package <i>foo</i> includes an empty directory &#8212; say, <i>foo/bar</i> &#8212; then if no other package has a <i>bar</i> subdirectory, everything&#8217;s fine. If another stowed package <i>quux</i>, has a <i>bar</i> subdirectory, then when stowing, <i>targetdir/bar</i> will be &#8220;split open&#8221; and the contents of <i>quux/bar</i> will be individually stowed. So far, so good. But when unstowing <i>quux</i>, <i>targetdir/bar</i> will be removed, even though <i>foo/bar</i> needs it to remain. A workaround for this problem is to create a file in <i>foo/bar</i> as a placeholder. If you name that file <i>.placeholder</i>, it will be easy to find and remove such files when this bug is fixed.</p>
-<dt>&bull;</p>
-<dd>When using multiple stow directories (see &#8220;Multiple stow directories&#8221; in the info manual), Stow fails to &#8220;split open&#8221; tree-folding symlinks (see &#8220;Installing packages&#8221; in the info manual) that point into a stow directory which is not the one in use by the current Stow command. Before failing, it should search the target of the link to see whether any element of the path contains a <i>.stow</i> file. If it finds one, it can &#8220;learn&#8221; about the cooperating stow directory to short-circuit the <i>.stow</i> search the next time it encounters a tree-folding symlink.</dl>
+<dt>&bull;</dt>
+<dd>When using multiple stow directories (see &#8220;Multiple stow directories&#8221; in the info manual), Stow fails to &#8220;split open&#8221; tree-folding symlinks (see &#8220;Installing packages&#8221; in the info manual) that point into a stow directory which is not the one in use by the current Stow command. Before failing, it should search the target of the link to see whether any element of the path contains a <i>.stow</i> file. If it finds one, it can &#8220;learn&#8221; about the cooperating stow directory to short-circuit the <i>.stow</i> search the next time it encounters a tree-folding symlink.</dd></dl>
 <h2>Author</h2>
 <p>This man page was originally constructed by Charles Briscoe-Smith from parts of Stow&#8217;s info manual, and then converted to <font SIZE="-1">POD</font> format by Adam Spiers. The info manual contains the following notice, which, as it says, applies to this manual page, too. The text of the section entitled &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; can be found in the file <i>/usr/share/common-licenses/GPL</i> on any Debian GNU/Linux system. If you don&#8217;t have access to a Debian system, or the <font SIZE="-1">GPL</font> is not there, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, <font SIZE="-1">MA</font>, 02111-1307, <font SIZE="-1">USA</font>.</p>
 <h2>Copyright</h2>

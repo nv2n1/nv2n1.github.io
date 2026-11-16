@@ -23,37 +23,30 @@ description: "rasqlinsert – write argus(8) data into mysql database tables."
 <h2>RASQLINSERT SPECIFIC OPTIONS</h2>
 <p> <code>Rasqlinsert</code>, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. <code><a href="/docs/linux/man/1-rasqlinsert/">Rasqlinsert</a>(1)</code> specific options are:</p>
 <dl>
-<dt><code>-M cache</code></p>
-<dd> This causes <code>rasqlinsert</code> to use the database table as its persistent cache store. This mechanism is used to control memory use when dealing with large amounts of data and flow keys.</p>
-<dt><code>-M drop</code></p>
-<dd> This causes <code>rasqlinsert</code> to drop any pre-existing database table that has the same name as the target table name, on startup. </p>
+<dt><code>-M cache</code></dt>
+<dd> This causes <code>rasqlinsert</code> to use the database table as its persistent cache store. This mechanism is used to control memory use when dealing with large amounts of data and flow keys.</dd>
+<dt><code>-M drop</code></dt>
+<dd> This causes <code>rasqlinsert</code> to drop any pre-existing database table that has the same name as the target table name, on startup. </dd>
 </dl>
 <h2>INVOCATION</h2>
 <p> This invocation writes aggregated <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>file</i> into a database table. The standard 5-tuple fields, &#8216;saddr daddr proto sport dport&#8217; are used as keys for each entry. <code>rasqlinsert</code> will aggregate all the data prior to inserting the data into the database: </p>
 <pre>
- 
    <code>rasqlinsert</code> -r file -w <a href="mysql://user@localhost/db/table">mysql://user@localhost/db/table</a>
 </pre>
 <p> Because aggregation can require a lot of memory, <code>rasqlinsert</code> provides an option &#8216;-M cache&#8217; to have <code>rasqlinsert</code> use the database table as the persistent cache store for the aggregation. With this example, the standard 5-tuple fields, <code>rasqlinsert</code> will aggregate data over short spans of time as it reads the data from the file, and then commit the data to the database. If additional data arrives that matches that unique flow, <code>rasqlinsert</code> will fetch the entry from the database, aggregate, and then update the data entry in the database. </p>
 <pre>
    <code>rasqlinsert</code> -M cache -r file -w <a href="mysql://user@localhost/db/table">mysql://user@localhost/db/table</a> 
- 
 </pre>
 <p> <code>rasqlinsert</code> can provide the same function for streaming data read directly from an argus data source. This allows <code>rasqlinsert</code> to reassemble all status records for an individual flow, such that the resulting table has only a single entry for each communciation relationship seen. </p>
 <pre>
-  
    <code>rasqlinsert</code> -M cache -S argus -w <a href="mysql://user@localhost/db/table">mysql://user@localhost/db/table</a>
-  
 </pre>
 <p> This invocation writes <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>file</i> into a database table, without aggregation, by specifying no relational key in the data. </p>
 <pre>
-  
    <code>rasqlinsert</code> -m none -r file -w <a href="mysql://user@localhost/db/table">mysql://user@localhost/db/table</a>
-  
 </pre>
 <p> This invocation writes <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>stream</i> into a database table, without modification. </p>
 <pre>
- 
    <code>rasqlinsert</code> -m none -S argus -w <a href="mysql://user@localhost/db/table">mysql://user@localhost/db/table</a>
 </pre>
 <p> This invocation writes <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>stream</i> into a daily database table, without modification. <code>rasqlinsert</code> will generate table names based on time and insert its data relative to the timestamps found in the flow records it processes. In this specific example, &quot;-M time 1d&quot; specifies daily tables. </p>

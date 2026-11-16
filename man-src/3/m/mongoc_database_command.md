@@ -20,29 +20,29 @@ mongoc_database_command (mongoc_database_t *database,
  const mongoc_read_prefs_t *read_prefs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>skip</code></p>
-<dd>The number of documents to skip on the server.</dl>
+<dt><code>skip</code></dt>
+<dd>The number of documents to skip on the server.</dd></dl>
 <dl COMPACT>
-<dt><code>limit</code></p>
-<dd>The maximum number of documents to return from the cursor.</dl>
+<dt><code>limit</code></dt>
+<dd>The maximum number of documents to return from the cursor.</dd></dl>
 <dl COMPACT>
-<dt><code>batch_size</code></p>
-<dd>Attempt to batch results from the server in groups of <code>batch_size</code> documents.</dl>
+<dt><code>batch_size</code></dt>
+<dd>Attempt to batch results from the server in groups of <code>batch_size</code> documents.</dd></dl>
 <dl COMPACT>
-<dt><code>command</code></p>
-<dd>A <code>bson_t</code> containing the command.</dl>
+<dt><code>command</code></dt>
+<dd>A <code>bson_t</code> containing the command.</dd></dl>
 <dl COMPACT>
-<dt><code>fields</code></p>
-<dd>An optional <code>bson_t</code> containing the fields to return. <code>NULL</code> for all fields.</dl>
+<dt><code>fields</code></dt>
+<dd>An optional <code>bson_t</code> containing the fields to return. <code>NULL</code> for all fields.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>An optional <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>An optional <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-mongoc_database_command/">mongoc_database_command</a>(3)</code> function shall execute a command on a database. This is performed lazily after calling <code><a href="/docs/linux/man/3-mongoc_cursor_next/">mongoc_cursor_next</a>(3)</code> on the resulting cursor structure. </p>
 <h2>Returns</h2>
 <p>This command returns a <code>mongoc_cursor_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_cursor_destroy/">mongoc_cursor_destroy</a>(3)</code> when no longer in use. </p>

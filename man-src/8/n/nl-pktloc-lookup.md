@@ -15,14 +15,14 @@ description: "nl-pktloc-lookup – Lookup packet location definitions"
 <p>nl-pktloc-lookup searches the packet location database for a matching entry. It is used to resolve packet location aliases to their definition, i.e. alignment, layer, offset, and mask. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Print help text to console and exit.</p>
-<dt><code>-v</code> or <code>&#8211;version</code></p>
-<dd>Print versioning information to console and exit.</p>
-<dt><code>-l</code> or <code>&#8211;list</code></p>
-<dd>List all packet location definitions.</p>
-<dt><code>&#8211;u32=VALUE</code></p>
-<dd>Prints the packet location definition in a special format that is understood by iproute2&#8217;s u32 selector parser. It will output a u32 selector which will compare the provided value with the value specified by the packet location. </p>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Print help text to console and exit.</dd>
+<dt><code>-v</code> or <code>&#8211;version</code></dt>
+<dd>Print versioning information to console and exit.</dd>
+<dt><code>-l</code> or <code>&#8211;list</code></dt>
+<dd>List all packet location definitions.</dd>
+<dt><code>&#8211;u32=VALUE</code></dt>
+<dd>Prints the packet location definition in a special format that is understood by iproute2&#8217;s u32 selector parser. It will output a u32 selector which will compare the provided value with the value specified by the packet location. </dd>
 <p> Please note that due to the limitation of u32, it is not possible to use packet locations based on the link layer. nl-pktloc-lookup will print an error message in this case. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>selector=$(nl-pktloc-lookup &#8211;u32 22 tcp.sport)<br />

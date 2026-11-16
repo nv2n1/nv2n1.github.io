@@ -24,10 +24,10 @@ description: "zlapll.f –"
  and then computes the SVD of the 2-by-2 upper triangular matrix R.
  The smaller singular value of R is returned in SSMIN, which is used
  as the measurement of the linear dependency of the vectors X and Y.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The length of the vectors X and Y.</pre>
 <p><i>X</i> </p>
@@ -50,13 +50,13 @@ description: "zlapll.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 101 of file zlapll.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

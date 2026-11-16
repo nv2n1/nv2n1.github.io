@@ -17,59 +17,59 @@ description: "ocount – Event counting tool for Linux"
 <h2>RUN MODES</h2>
 <p> One (and only one) of the following <font SIZE="-1"><code>run modes</code></font> must be specified. If you run <code>ocount</code> using a run mode other than <code>command </code><i>[args]</i> , press Ctrl-c to stop <code>ocount</code> when finished counting (e.g., when the monitored process ends). If you background <code>ocount</code> (i.e., with &#8216;&amp;&#8217;) while using one these run modes, you <code>must</code> stop it in a controlled manner so that the data collection process can be shut down cleanly and final results can be displayed. Use <code>kill</code> <code>-SIGINT</code> <code>&lt;ocount-PID&gt;</code> for this purpose.</p>
 <dl>
-<dt><code>command </code><i>[args]</i></p>
-<dd> The <i>command</i> is the application for which to count events. <i>args</i> are the input arguments required by the application. The <i>command</i> and its arguments <code>must</code> be positioned at the end of the command line, after all ocount options. </p>
-<dt><code>&#8211;process-list / -p </code><i>pids</i></p>
-<dd> Use this option to count events for one or more already-running applications, specified via a comma-separated list ( <i>pids</i> ). Event counts will be collected for all children of the passed process(es) as well. </p>
-<dt><code>&#8211;thread-list / -r </code><i>tids</i></p>
-<dd> Use this option to count events for one or more already-running threads, specified via a comma-separated list ( <i>tids</i> ). Event counts will <code>not</code> be collected for any children of the passed thread(s). </p>
-<dt><code>&#8211;system-wide / -s</code></p>
-<dd> This option is for counting events for all processes running on your system. You must have root authority to run ocount in this mode. </p>
-<dt><code>&#8211;cpu-list / -C </code><i>cpus</i></p>
-<dd> This option is for counting events on a subset of processors on your system. You must have root authority to run ocount in this mode. This is a comma-separated list, where each element in the list may be either a single processor number or a range of processor numbers; for example: &#8216;-C 2,3,4-11,15&#8217;. </p>
+<dt><code>command </code><i>[args]</i></dt>
+<dd> The <i>command</i> is the application for which to count events. <i>args</i> are the input arguments required by the application. The <i>command</i> and its arguments <code>must</code> be positioned at the end of the command line, after all ocount options. </dd>
+<dt><code>&#8211;process-list / -p </code><i>pids</i></dt>
+<dd> Use this option to count events for one or more already-running applications, specified via a comma-separated list ( <i>pids</i> ). Event counts will be collected for all children of the passed process(es) as well. </dd>
+<dt><code>&#8211;thread-list / -r </code><i>tids</i></dt>
+<dd> Use this option to count events for one or more already-running threads, specified via a comma-separated list ( <i>tids</i> ). Event counts will <code>not</code> be collected for any children of the passed thread(s). </dd>
+<dt><code>&#8211;system-wide / -s</code></dt>
+<dd> This option is for counting events for all processes running on your system. You must have root authority to run ocount in this mode. </dd>
+<dt><code>&#8211;cpu-list / -C </code><i>cpus</i></dt>
+<dd> This option is for counting events on a subset of processors on your system. You must have root authority to run ocount in this mode. This is a comma-separated list, where each element in the list may be either a single processor number or a range of processor numbers; for example: &#8216;-C 2,3,4-11,15&#8217;. </dd>
 </dl>
 <h2>OTHER OPTIONS</h2>
 <dl>
-<dt><code>&#8211;events / -e </code><i>event1[,event2[,&#8230;]]</i></p>
+<dt><code>&#8211;events / -e </code><i>event1[,event2[,&#8230;]]</i></dt>
 <dd> This option is for passing a comma-separated list of event specifications for counting. Each event spec is of the form:<br />
  <i> name[:unitmask[:kernel[:user]]]</i><br />
- <code>Note:</code> Do <code>not</code> include a <i>count</i> value in the event spec, as that parameter is only need when profiling.</dl>
+ <code>Note:</code> Do <code>not</code> include a <i>count</i> value in the event spec, as that parameter is only need when profiling.</dd></dl>
 <dl>
 <dt>
-<dd> You can specify unit mask values using either a numerical value (hex values <i>must</i> begin with &quot;0x&quot;) or a symbolic name (if the <i>name=&lt;um_name&gt;</i> field is shown in the <code>ophelp</code> output). For some named unit masks, the hex value is not unique; thus, OProfile tools enforce specifying such unit masks value by name. If no unit mask is specified, the default unit mask value for the event is used. </p>
+</dt><dd> You can specify unit mask values using either a numerical value (hex values <i>must</i> begin with &quot;0x&quot;) or a symbolic name (if the <i>name=&lt;um_name&gt;</i> field is shown in the <code>ophelp</code> output). For some named unit masks, the hex value is not unique; thus, OProfile tools enforce specifying such unit masks value by name. If no unit mask is specified, the default unit mask value for the event is used. </dd>
 <p> Event names for certain processor types include a <i>_GRP&lt;n&gt;</i> suffix. For such cases, the <i>&#8211;events</i> option may be specified with or without the <i>_GRP&lt;n&gt;</i> suffix. </p>
 <p> When no event specification is given, the default event for the running processor type will be used for counting. Use <code>ophelp</code> to list the available events for your processor type.</dl>
 <dl>
-<dt><code>&#8211;separate-thread / -t</code></p>
-<dd> This option can be used in conjunction with either the <i>&#8211;process-list</i> or <i>&#8211;thread-list</i> option to display event counts on a per-thread (per-process) basis. Without this option, all counts are aggregated.</dl>
+<dt><code>&#8211;separate-thread / -t</code></dt>
+<dd> This option can be used in conjunction with either the <i>&#8211;process-list</i> or <i>&#8211;thread-list</i> option to display event counts on a per-thread (per-process) basis. Without this option, all counts are aggregated.</dd></dl>
 <dl>
 <dt>
-<dd> <code>NOTE:</code> If new threads are started by the process(es) being monitored after counting begins, the counts for those threads are aggregated with their parent&#8217;s counts.</dl>
+</dt><dd> <code>NOTE:</code> If new threads are started by the process(es) being monitored after counting begins, the counts for those threads are aggregated with their parent&#8217;s counts.</dd></dl>
 <dl>
-<dt><code>&#8211;separate-cpu / -c</code></p>
-<dd> This option can be used in conjunction with either the <i>&#8211;system-wide</i> or <i>&#8211;cpu-list</i> option to display event counts on a per-cpu basis. Without this option, all counts are aggregated. </p>
-<dt><code>&#8211;time-interval / -i </code><i>num_seconds[:num_intervals]</i></p>
-<dd> Results collected for each time interval are printed every <i>num_seconds</i> instead of the default of one dump of cumulative event counts at the end of the run. If <i>num_intervals</i> is specified, <code>ocount</code> exits after the specified number of intervals occur. </p>
-<dt><code>&#8211;brief-format / -b</code></p>
-<dd> Use this option to print results in the following brief format: </p>
+<dt><code>&#8211;separate-cpu / -c</code></dt>
+<dd> This option can be used in conjunction with either the <i>&#8211;system-wide</i> or <i>&#8211;cpu-list</i> option to display event counts on a per-cpu basis. Without this option, all counts are aggregated. </dd>
+<dt><code>&#8211;time-interval / -i </code><i>num_seconds[:num_intervals]</i></dt>
+<dd> Results collected for each time interval are printed every <i>num_seconds</i> instead of the default of one dump of cumulative event counts at the end of the run. If <i>num_intervals</i> is specified, <code>ocount</code> exits after the specified number of intervals occur. </dd>
+<dt><code>&#8211;brief-format / -b</code></dt>
+<dd> Use this option to print results in the following brief format: </dd>
 <p>&nbsp;<wbr>[optional cpu or thread,]&lt;event_name&gt;,&lt;count&gt;,&lt;percent_time_enabled&gt; </p>
 <p>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;int&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>,]&lt;&nbsp;<wbr>&nbsp;<wbr>string&nbsp;<wbr>&nbsp;<wbr>&gt;,&lt;&nbsp;<wbr>u64&nbsp;<wbr>&gt;,&lt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>double&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&gt;</dl>
 <dl>
 <dt>
-<dd> If <i>&#8211;timer-interval</i> is specified, a separate line formatted as </p>
+</dt><dd> If <i>&#8211;timer-interval</i> is specified, a separate line formatted as </dd>
 <p>&nbsp;<wbr>timestamp,&lt;num_seconds_since_epoch&gt;<br />
  is printed ahead of each dump of event counts.</dl>
 <dl>
-<dt><code>&#8211;output-file / -f </code><i>outfile_name</i></p>
-<dd> Results are written to <i>outfile_name</i> instead of interactively to the terminal. </p>
-<dt><code>&#8211;verbose / -V</code></p>
-<dd> Use this option to increase the verbosity of the output. </p>
-<dt><code>&#8211;version / -v</code></p>
-<dd> Show ocount version. </p>
-<dt><code>&#8211;help / -h</code></p>
-<dd> Display brief usage message. </p>
-<dt><code>&#8211;usage / -u</code></p>
-<dd> Display brief usage message. </p>
+<dt><code>&#8211;output-file / -f </code><i>outfile_name</i></dt>
+<dd> Results are written to <i>outfile_name</i> instead of interactively to the terminal. </dd>
+<dt><code>&#8211;verbose / -V</code></dt>
+<dd> Use this option to increase the verbosity of the output. </dd>
+<dt><code>&#8211;version / -v</code></dt>
+<dd> Show ocount version. </dd>
+<dt><code>&#8211;help / -h</code></dt>
+<dd> Display brief usage message. </dd>
+<dt><code>&#8211;usage / -u</code></dt>
+<dd> Display brief usage message. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> $ ocount make </p>

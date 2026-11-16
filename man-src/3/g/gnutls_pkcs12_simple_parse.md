@@ -14,24 +14,24 @@ description: "gnutls_pkcs12_simple_parse – API function"
 <p> <code>int gnutls_pkcs12_simple_parse(gnutls_pkcs12_t </code><i>p12</i><code>, const char * </code><i>password</i><code>, gnutls_x509_privkey_t * </code><i>key</i><code>, gnutls_x509_crt_t ** </code><i>chain</i><code>, unsigned int * </code><i>chain_len</i><code>, gnutls_x509_crt_t ** </code><i>extra_certs</i><code>, unsigned int * </code><i>extra_certs_len</i><code>, gnutls_x509_crl_t * </code><i>crl</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs12_t p12</p>
-<dd> should contain a gnutls_pkcs12_t structure</p>
-<dt>const char * password</p>
-<dd> optional password used to decrypt the structure, bags and keys.</p>
-<dt>gnutls_x509_privkey_t * key</p>
-<dd> a structure to store the parsed private key.</p>
-<dt>gnutls_x509_crt_t ** chain</p>
-<dd> the corresponding to key certificate chain (may be <code>NULL</code>)</p>
-<dt>unsigned int * chain_len</p>
-<dd> will be updated with the number of additional (may be <code>NULL</code>)</p>
-<dt>gnutls_x509_crt_t ** extra_certs</p>
-<dd> optional pointer to receive an array of additional certificates found in the PKCS12 structure (may be <code>NULL</code>).</p>
-<dt>unsigned int * extra_certs_len</p>
-<dd> will be updated with the number of additional certs (may be <code>NULL</code>).</p>
-<dt>gnutls_x509_crl_t * crl</p>
-<dd> an optional structure to store the parsed CRL (may be <code>NULL</code>).</p>
-<dt>unsigned int flags</p>
-<dd> should be zero or one of GNUTLS_PKCS12_SP_*</dl>
+<dt>gnutls_pkcs12_t p12</dt>
+<dd> should contain a gnutls_pkcs12_t structure</dd>
+<dt>const char * password</dt>
+<dd> optional password used to decrypt the structure, bags and keys.</dd>
+<dt>gnutls_x509_privkey_t * key</dt>
+<dd> a structure to store the parsed private key.</dd>
+<dt>gnutls_x509_crt_t ** chain</dt>
+<dd> the corresponding to key certificate chain (may be <code>NULL</code>)</dd>
+<dt>unsigned int * chain_len</dt>
+<dd> will be updated with the number of additional (may be <code>NULL</code>)</dd>
+<dt>gnutls_x509_crt_t ** extra_certs</dt>
+<dd> optional pointer to receive an array of additional certificates found in the PKCS12 structure (may be <code>NULL</code>).</dd>
+<dt>unsigned int * extra_certs_len</dt>
+<dd> will be updated with the number of additional certs (may be <code>NULL</code>).</dd>
+<dt>gnutls_x509_crl_t * crl</dt>
+<dd> an optional structure to store the parsed CRL (may be <code>NULL</code>).</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero or one of GNUTLS_PKCS12_SP_*</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function parses a PKCS12 structure in <i>pkcs12</i> and extracts the private key, the corresponding certificate chain, any additional certificates and a CRL. </p>
 <p> The <i>extra_certs</i> and <i>extra_certs_len</i> parameters are optional and both may be set to <code>NULL</code>. If either is non-<code>NULL</code>, then both must be set. The value for <i>extra_certs</i> is allocated using <code>gnutls_malloc()</code>. </p>
@@ -53,6 +53,6 @@ description: "gnutls_pkcs12_simple_parse – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -19,52 +19,52 @@ description: "amanda-client.conf – Client configuration file for Amanda, the A
 <h3>Possible Suffixes</h3>
 <p><code>b byte bytes</code></p>
 <dl>
-<dd>Some number of bytes.</dl>
+<dd>Some number of bytes.</dd></dl>
 <p> <code>bps</code></p>
 <dl>
-<dd>Some number of bytes per second.</dl>
+<dd>Some number of bytes per second.</dd></dl>
 <p> <code>k kb kbyte kbytes kilobyte kilobytes</code></p>
 <dl>
-<dd>Some number of kilobytes (bytes*1024).</dl>
+<dd>Some number of kilobytes (bytes*1024).</dd></dl>
 <p> <code>kps kbps</code></p>
 <dl>
-<dd>Some number of kilobytes per second (bytes*1024).</dl>
+<dd>Some number of kilobytes per second (bytes*1024).</dd></dl>
 <p> <code>m mb meg mbyte mbytes megabyte megabytes</code></p>
 <dl>
-<dd>Some number of megabytes (bytes*1024*1024).</dl>
+<dd>Some number of megabytes (bytes*1024*1024).</dd></dl>
 <p> <code>mps mbps</code></p>
 <dl>
-<dd>Some number of megabytes per second (bytes*1024*1024).</dl>
+<dd>Some number of megabytes per second (bytes*1024*1024).</dd></dl>
 <p> <code>g gb gbyte gbytes gigabyte gigabytes</code></p>
 <dl>
-<dd>Some number of gigabytes (bytes*1024*1024*1024).</dl>
+<dd>Some number of gigabytes (bytes*1024*1024*1024).</dd></dl>
 <p> <code>tape tapes</code></p>
 <dl>
-<dd>Some number of tapes.</dl>
+<dd>Some number of tapes.</dd></dl>
 <p> <code>day days</code></p>
 <dl>
-<dd>Some number of days.</dl>
+<dd>Some number of days.</dd></dl>
 <p> <code>week weeks</code></p>
 <dl>
-<dd>Some number of weeks (days*7). </p>
+<dd>Some number of weeks (days*7). </dd>
 <p> Note The value <code>inf</code> may be used in most places where an integer is expected to mean an infinite amount. </p>
 <p> Boolean arguments may have any of the values <code>y</code>, <code>yes</code>, <code>t</code>, <code>true</code> or <code>on</code> to indicate a true state, or <code>n</code>, <code>no</code>, <code>f</code>, <code>false</code> or <code>off</code> to indicate a false state. If no argument is given, <code>true</code> is assumed.</dl>
 <h3>Parameters</h3>
 <p><code>conf</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>Set by configure</i>. The conf use by amrecover.</dl>
+<dd>Default: <i>Set by configure</i>. The conf use by amrecover.</dd></dl>
 <p> <code>index_server</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>Set by configure</i>. The amindexd server amrecover will connect to.</dl>
+<dd>Default: <i>Set by configure</i>. The amindexd server amrecover will connect to.</dd></dl>
 <p> <code>tape_server</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>Set by configure</i>. The amidxtaped server amrecover will connect to.</dl>
+<dd>Default: <i>Set by configure</i>. The amidxtaped server amrecover will connect to.</dd></dl>
 <p> <code>tapedev</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>Set by configure</i>. The tapedev amrecover will use.</dl>
+<dd>Default: <i>Set by configure</i>. The tapedev amrecover will use.</dd></dl>
 <p> <code>auth</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>bsd</i>. Type of authorization to perform between tape server and backup client hosts. </p>
+<dd>Default: <i>bsd</i>. Type of authorization to perform between tape server and backup client hosts. </dd>
 <p> <code>bsd</code>, bsd authorization with udp initial connection and one tcp connection by data stream. </p>
 <p> <code>bsdtcp</code>, bsd authorization but use only one tcp connection. </p>
 <p> <code>bsdudp</code>, like bsd, but will use only one tcp connection for all data stream. </p>
@@ -75,61 +75,61 @@ description: "amanda-client.conf – Client configuration file for Amanda, the A
 <p> <code>ssh</code> to use OpenSSH authorization.</dl>
 <p> <code>ssh_keys</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>No default</i>. The key file the ssh auth will use, it must be the private key. If this parameter is not specified, then the deafult ssh key will be used.</dl>
+<dd>Default: <i>No default</i>. The key file the ssh auth will use, it must be the private key. If this parameter is not specified, then the deafult ssh key will be used.</dd></dl>
 <p> <code>gnutar_list_dir</code> <i> string</i></p>
 <dl>
-<dd>Default from configure <i>&#8211;with-gnutar-listdir=DIR</i>. The directory where gnutar keep its state file.</dl>
+<dd>Default from configure <i>&#8211;with-gnutar-listdir=DIR</i>. The directory where gnutar keep its state file.</dd></dl>
 <p> <code>amandates</code> <i> string</i></p>
 <dl>
-<dd>Default: <i>/etc/amandates</i>. The file where amanda keep the last date of each dumplevel.</dl>
+<dd>Default: <i>/etc/amandates</i>. The file where amanda keep the last date of each dumplevel.</dd></dl>
 <p> <code>connect_tries</code> int</p>
 <dl>
-<dd>Default: <i>3</i>. How many times the server will try a connection.</dl>
+<dd>Default: <i>3</i>. How many times the server will try a connection.</dd></dl>
 <p> <code>rep_tries</code> int</p>
 <dl>
-<dd>Default: <i>5</i>. How many times amandad will resend a REP packet if it doesn&#8217;t get the ACK packet.</dl>
+<dd>Default: <i>5</i>. How many times amandad will resend a REP packet if it doesn&#8217;t get the ACK packet.</dd></dl>
 <p> <code>debug_amandad</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the amandad process</dl>
+<dd>Default: <i>0</i>. Debug level of the amandad process</dd></dl>
 <p> <code>debug_amidxtaped</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the amidxtaped process</dl>
+<dd>Default: <i>0</i>. Debug level of the amidxtaped process</dd></dl>
 <p> <code>debug_amindexd</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the amindexd process</dl>
+<dd>Default: <i>0</i>. Debug level of the amindexd process</dd></dl>
 <p> <code>debug_amrecover</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the amrecover process</dl>
+<dd>Default: <i>0</i>. Debug level of the amrecover process</dd></dl>
 <p> <code>debug_auth</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the auth module</dl>
+<dd>Default: <i>0</i>. Debug level of the auth module</dd></dl>
 <p> <code>debug_event</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the event module</dl>
+<dd>Default: <i>0</i>. Debug level of the event module</dd></dl>
 <p> <code>debug_holding</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the holdingdisk module</dl>
+<dd>Default: <i>0</i>. Debug level of the holdingdisk module</dd></dl>
 <p> <code>debug_protocol</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the protocol module</dl>
+<dd>Default: <i>0</i>. Debug level of the protocol module</dd></dl>
 <p> <code>debug_selfcheck</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the selfcheck process</dl>
+<dd>Default: <i>0</i>. Debug level of the selfcheck process</dd></dl>
 <p> <code>debug_sendsize</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the sendsize process</dl>
+<dd>Default: <i>0</i>. Debug level of the sendsize process</dd></dl>
 <p> <code>debug_sendbackup</code> int</p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the sendbackup process</dl>
+<dd>Default: <i>0</i>. Debug level of the sendbackup process</dd></dl>
 <p> <code>reserved-udp-port</code> int,int</p>
 <dl>
-<dd>Default: &#8211;with-udpportrange or <i>512,1023</i>. Reserved udp port that will be used (amrecover with bsd or bsdudp)</dl>
+<dd>Default: &#8211;with-udpportrange or <i>512,1023</i>. Reserved udp port that will be used (amrecover with bsd or bsdudp)</dd></dl>
 <p> <code>reserved-tcp-port</code> int,int</p>
 <dl>
-<dd>Default: &#8211;with-low-tcpportrange or <i>512,1023</i>. Reserved tcp port that will be used (amrecover with bsdtcp)</dl>
+<dd>Default: &#8211;with-low-tcpportrange or <i>512,1023</i>. Reserved tcp port that will be used (amrecover with bsdtcp)</dd></dl>
 <p> <code>unreserved-tcp-port</code> int,int</p>
 <dl>
-<dd>Default: &#8211;with-tcpportrange or <i>1025,65536</i>. Unreserved tcp port that will be used (bsd, bsdudp)</dl>
+<dd>Default: &#8211;with-tcpportrange or <i>1025,65536</i>. Unreserved tcp port that will be used (bsd, bsdudp)</dd></dl>
 <h2>Author</h2>
 <p>James da Silva, &lt;jds [at] amanda.org&gt;: Original text </p>
 <p> Stefan G. Weichinger, &lt;sgw [at] amanda.org&gt;, maintainer of the <i>Amanda</i>-documentation: XML-conversion, major update, splitting</p>

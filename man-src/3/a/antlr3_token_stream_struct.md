@@ -44,7 +44,7 @@ description: "ANTLR3_TOKEN_STREAM_struct –"
 <p>Definition of the ANTLR3 common token stream interface. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Much of the documentation for this interface is stolen from Ter&#8217;s Java implementation.</dl>
+<dd>Much of the documentation for this interface is stolen from Ter&#8217;s Java implementation.</dd></dl>
 <h2>Field Documentation</h2>
 <h3><code>pANTLR3_COMMON_TOKEN</code>(* <code>ANTLR3_TOKEN_STREAM_struct::_LT</code>)(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_INT32</code> k)</h3>
 <p>Get Token at current input pointer + i ahead where i=1 is next Token. i&lt;0 indicates tokens in the past. So -1 is previous token and -2 is two tokens ago. LT(0) is undefined. For i&gt;=n, return Token.EOFToken. Return null for LT(0) and any index that results in an absolute address that is negative. </p>

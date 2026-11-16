@@ -13,19 +13,19 @@ description: "EXPLAIN – show the execution plan of a statement"
 <h2>Description</h2>
 <p>This command displays the execution plan that the PostgreSQL planner generates for the supplied statement. The execution plan shows how the table(s) referenced by the statement will be scanned &#8212; by plain sequential scan, index scan, etc. &#8212; and if multiple tables are referenced, what join algorithms will be used to bring together the required rows from each input table. The most critical part of the display is the estimated statement execution cost, which is the planner&#8217;s guess at how long it will take to run the statement (measured in units of disk page fetches). Actually two numbers are shown: the start-up time before the first row can be returned, and the total time to return all the rows. For most queries the total time is what matters, but in contexts such as a subquery in EXISTS, the planner will choose the smallest start-up time instead of the smallest total time (since the executor will stop after getting one row, anyway). Also, if you limit the number of rows to return with a LIMIT clause, the planner makes an appropriate interpolation between the endpoint costs to estimate which plan is really the cheapest. The ANALYZE option causes the statement to be actually executed, not only planned. The total elapsed time expended within each plan node (in milliseconds) and total number of rows it actually returned are added to the display. This is useful for seeing whether the planner&#8217;s estimates are close to reality.</p>
 <dl>
-<dd><code>Important:</code> Keep in mind that the statement is actually executed when the ANALYZE option is used. Although <code>EXPLAIN</code> will discard any output that a <code>SELECT</code> would return, other side effects of the statement will happen as usual. If you wish to use <code>EXPLAIN ANALYZE</code> on an <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>CREATE TABLE AS</code>, or <code>EXECUTE</code> statement without letting the command affect your data, use this approach: </p>
+<dd><code>Important:</code> Keep in mind that the statement is actually executed when the ANALYZE option is used. Although <code>EXPLAIN</code> will discard any output that a <code>SELECT</code> would return, other side effects of the statement will happen as usual. If you wish to use <code>EXPLAIN ANALYZE</code> on an <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>CREATE TABLE AS</code>, or <code>EXECUTE</code> statement without letting the command affect your data, use this approach: </dd>
 <pre>BEGIN;
 EXPLAIN ANALYZE ...;
 ROLLBACK;</pre>
 </dl>
 <h2>Parameters</h2>
 <dl>
-<dt><code>ANALYZE</code></p>
-<dd>Carry out the command and show the actual run times.</p>
-<dt><code>VERBOSE</code></p>
-<dd>Include the output column list for each node in the plan tree.</p>
-<dt><i>statement</i></p>
-<dd>Any <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>VALUES</code>, <code>EXECUTE</code>, <code>DECLARE</code>, or <code>CREATE TABLE AS</code> statement, whose execution plan you wish to see.</dl>
+<dt><code>ANALYZE</code></dt>
+<dd>Carry out the command and show the actual run times.</dd>
+<dt><code>VERBOSE</code></dt>
+<dd>Include the output column list for each node in the plan tree.</dd>
+<dt><i>statement</i></dt>
+<dd>Any <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>VALUES</code>, <code>EXECUTE</code>, <code>DECLARE</code>, or <code>CREATE TABLE AS</code> statement, whose execution plan you wish to see.</dd></dl>
 <h2>Notes</h2>
 <p>There is only sparse documentation on the optimizer&#8217;s use of cost information in PostgreSQL. Refer to in the documentation for more information. </p>
 <p> In order to allow the PostgreSQL query planner to make reasonably informed decisions when optimizing queries, the ANALYZE [<code><a href="/docs/linux/man/7-analyze/">analyze</a></code>(7)] statement should be run to record statistics about the distribution of data within the table. If you have not done this (or if the statistical distribution of the data in the table has changed significantly since the last time <code>ANALYZE</code> was run), the estimated costs are unlikely to conform to the real properties of the query, and consequently an inferior query plan might be chosen. </p>

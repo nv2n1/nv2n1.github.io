@@ -15,7 +15,7 @@ sk_wmem_alloc_get - returns write allocations
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket</dl>
+<dl><dd></dd><dd>socket</dd></dl>
 
 <h2>Description</h2>
 

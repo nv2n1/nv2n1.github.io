@@ -11,18 +11,18 @@ description: "XtParseTranslationTable, XtAugmentTranslations, XtOverrideTranslat
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XtTranslations XtParseTranslationTable(const char *<i>table</i>);</p>
-<dd>void XtAugmentTranslations(Widget <i>w</i>, XtTranslations <i>translations</i>);</p>
-<dd>void XtOverrideTranslations(Widget <i>w</i>, XtTranslations <i>translations</i>);</p>
-<dd>void XtUninstallTranslations(Widget <i>w</i>);</dl>
+<dd>XtTranslations XtParseTranslationTable(const char *<i>table</i>);</dd>
+<dd>void XtAugmentTranslations(Widget <i>w</i>, XtTranslations <i>translations</i>);</dd>
+<dd>void XtOverrideTranslations(Widget <i>w</i>, XtTranslations <i>translations</i>);</dd>
+<dd>void XtUninstallTranslations(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>table</i></p>
-<dd>Specifies the translation table to compile.</p>
-<dt><i>translations</i></p>
-<dd>Specifies the compiled translation table to merge in (must not be NULL).</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget into which the new translations are to be merged or removed.</dl>
+<dt><i>table</i></dt>
+<dd>Specifies the translation table to compile.</dd>
+<dt><i>translations</i></dt>
+<dd>Specifies the compiled translation table to merge in (must not be NULL).</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget into which the new translations are to be merged or removed.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtParseTranslationTable</code> function compiles the translation table into the opaque internal representation of type <code>XtTranslations</code>. Note that if an empty translation table is required for any purpose, one can be obtained by calling <code>XtParseTranslationTable</code> and passing an empty string. </p>
 <p> The <code>XtAugmentTranslations</code> function nondestructively merges the new translations into the existing widget translations. If the new translations contain an event or event sequence that already exists in the widget&#8217;s translations, the new translation is ignored. </p>

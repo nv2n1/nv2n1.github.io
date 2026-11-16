@@ -17,7 +17,7 @@ url: "/docs/linux/man/1-git-latexdiff/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 Usage: git latexdiff [options] OLD [NEW]
        git latexdiff [options] OLD --
        git latexdiff [options] -- OLD
@@ -104,7 +104,7 @@ instead of red+trike/blue+underline diff:
     git latexdiff --type=CHANGEBAR HEAD^
 Use a specific latexdiff configuration file:
     git latexdiff --config /path/to/file HEAD^
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
 <h2>Index</h2>

@@ -21,26 +21,26 @@ description: "vinagre – a remote desktop viewer for the GNOME Desktop"
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
 <dl>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-F</code>, <code>&#8211;file</code>=<i>filename</i></p>
-<dd> Opens a .vnc file</p>
-<dt><code>-f</code>, <code>&#8211;fullscreen</code></p>
-<dd> Open Vinagre in fullscreen mode</p>
-<dt><code>&#8211;geometry</code>=<i>GEOMETRY</i></p>
-<dd> Specify geometry of the Vinagre window in X11 format</p>
-<dt>-n, <code>&#8211;new-window</code></p>
-<dd> Create a new toplevel window in an existing instance of Vinagre</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>-F</code>, <code>&#8211;file</code>=<i>filename</i></dt>
+<dd> Opens a .vnc file</dd>
+<dt><code>-f</code>, <code>&#8211;fullscreen</code></dt>
+<dd> Open Vinagre in fullscreen mode</dd>
+<dt><code>&#8211;geometry</code>=<i>GEOMETRY</i></dt>
+<dd> Specify geometry of the Vinagre window in X11 format</dd>
+<dt>-n, <code>&#8211;new-window</code></dt>
+<dd> Create a new toplevel window in an existing instance of Vinagre</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <p> Run &#8216;vinagre <code>&#8211;help</code>&#8216; to see a full list of available command line options</p>
 <h2>OPERANDS</h2>
 <p> The following operands are supported:</p>
 <dl>
-<dt><i></i>[server][::<i>port|:display</i>]</p>
-<dd> Specifies the VNC server to connect to. The VNC server can be either a hostname, or an IP address. If the server is an IPv6 address, it must be enclosed by square brackets. The address can optionally be followed by two colons (::) and the VNC port number, or alternatively by one colon (:) and the display where Vinagre should run. If a port is not specified, default value of 5900 will be used. If the value is lower than 1024, 5900 will be added to it. For example, &quot;:0&quot; means &quot;5900&quot; and &quot;:1&quot; means &quot;:5901&quot;. If only a port is specified, but not the hostname, localhost will be assumed. Possible values for the display are between 0 and 1024. If a display number greater than 1024 is specified, it will be assumed to be a port. Note that you can&#8217;t specify the port and the display at the same time.</dl>
+<dt><i></i>[server][::<i>port|:display</i>]</dt>
+<dd> Specifies the VNC server to connect to. The VNC server can be either a hostname, or an IP address. If the server is an IPv6 address, it must be enclosed by square brackets. The address can optionally be followed by two colons (::) and the VNC port number, or alternatively by one colon (:) and the display where Vinagre should run. If a port is not specified, default value of 5900 will be used. If the value is lower than 1024, 5900 will be added to it. For example, &quot;:0&quot; means &quot;5900&quot; and &quot;:1&quot; means &quot;:5901&quot;. If only a port is specified, but not the hostname, localhost will be assumed. Possible values for the display are between 0 and 1024. If a display number greater than 1024 is specified, it will be assumed to be a port. Note that you can&#8217;t specify the port and the display at the same time.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>Example 1: Start vinagre from the command line</code> </p>
 <pre>
@@ -75,7 +75,7 @@ example% <code>vinagre -f ::5900
 <h2>AUTHOR</h2>
 <p> Vinagre was written by Jonh Wendell &lt;wendell [at] bani.com.br&gt; and David King &lt;amigadave [at] amigadave.com&gt;</p>
 <dl>
-<dt>This manual page was written by Emilio Pozuelo Monfort &lt;pochu [at] ubuntu.com&gt; and Halton Huo &lt;halton.huo [at] sun.com&gt;.</p>
+<dt>This manual page was written by Emilio Pozuelo Monfort &lt;pochu [at] ubuntu.com&gt; and Halton Huo &lt;halton.huo [at] sun.com&gt;.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

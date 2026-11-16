@@ -14,12 +14,12 @@ description: "gnutls_transport_set_int2 – API function"
 <p> <code>void gnutls_transport_set_int2(gnutls_session_t </code><i>session</i><code>, int </code><i>recv_int</i><code>, int </code><i>send_int</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>int recv_int</p>
-<dd> is the value for the pull function</p>
-<dt>int send_int</p>
-<dd> is the value for the push function</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>int recv_int</dt>
+<dd> is the value for the pull function</dd>
+<dt>int send_int</dt>
+<dd> is the value for the push function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Used to set the first argument of the transport function (for push and pull callbacks), when using the berkeley style sockets. With this function you can set two different pointers for receiving and sending.</p>
 <h2>SINCE</h2>
@@ -33,6 +33,6 @@ description: "gnutls_transport_set_int2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

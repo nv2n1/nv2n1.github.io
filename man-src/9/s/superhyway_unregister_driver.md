@@ -14,11 +14,11 @@ description: "superhyway_unregister_driver – Unregister a SuperHyway driver"
 <p><i>drv</i></p>
 <dl>
 <dd>
-<dd>SuperHyway driver to unregister.</dl>
+</dd><dd>SuperHyway driver to unregister.</dd></dl>
 <h2>Description</h2>
 <p>This cleans up after <code>superhyway_register_driver</code>, and should be invoked in the exit path of any module drivers.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

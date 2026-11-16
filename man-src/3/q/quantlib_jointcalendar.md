@@ -20,6 +20,6 @@ description: "QuantLib::JointCalendar – Joint calendar."
 <p> Depending on the chosen rule, this calendar has a set of business days given by either the union or the intersection of the sets of business days of the given calendars. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned results is tested by reproducing the calculations.</dl>
+<dd>the correctness of the returned results is tested by reproducing the calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

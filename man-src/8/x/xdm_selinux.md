@@ -77,9 +77,9 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> Policy governs the access confined processes have to these ports. SELinux xdm policy is very flexible allowing users to setup their xdm processes in as secure a method as possible. </p>
 <p> The following port types are defined for xdm: </p>
 <dl>
-<dt><code>xdmcp_port_t</code></p>
+<dt><code>xdmcp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 177 udp 177</dl>
+</dd><dd>Default Defined Ports: tcp 177 udp 177</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type xdm_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -314,28 +314,28 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> <code>xdm_exec_t</code> </p>
 <p> &#8211; Set files with the xdm_exec_t type, if you want to transition an executable to the xdm_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/s?bin/gdm(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common </p>
+<dt>Paths:</dt>
+<dd>/usr/s?bin/gdm(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common </dd>
 </dl>
 <p> <code>xdm_home_t</code> </p>
 <p> &#8211; Set files with the xdm_home_t type, if you want to store xdm files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.dmrc.*, /root/.xsession-errors.*, /home/[^/]+/.dmrc.*, /home/[^/]+/.cache/gdm(/.*)?, /home/[^/]+/.xsession-errors.* </p>
+<dt>Paths:</dt>
+<dd>/root/.dmrc.*, /root/.xsession-errors.*, /home/[^/]+/.dmrc.*, /home/[^/]+/.cache/gdm(/.*)?, /home/[^/]+/.xsession-errors.* </dd>
 </dl>
 <p> <code>xdm_lock_t</code> </p>
 <p> &#8211; Set files with the xdm_lock_t type, if you want to treat the files as xdm lock data, stored under the /var/lock directory </p>
 <p> <code>xdm_log_t</code> </p>
 <p> &#8211; Set files with the xdm_log_t type, if you want to treat the data as xdm log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/[mkwx]dm.log.*, /var/log/mdm(/.*)?, /var/log/lxdm.log.*, /var/log/slim.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/[mkwx]dm.log.*, /var/log/mdm(/.*)?, /var/log/lxdm.log.*, /var/log/slim.log.* </dd>
 </dl>
 <p> <code>xdm_rw_etc_t</code> </p>
 <p> &#8211; Set files with the xdm_rw_etc_t type, if you want to store xdm rw files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/X11/wdm(/.*)?, /etc/opt/VirtualGL(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/X11/wdm(/.*)?, /etc/opt/VirtualGL(/.*)? </dd>
 </dl>
 <p> <code>xdm_spool_t</code> </p>
 <p> &#8211; Set files with the xdm_spool_t type, if you want to store the xdm files under the /var/spool directory. </p>
@@ -344,20 +344,20 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> <code>xdm_unconfined_exec_t</code> </p>
 <p> &#8211; Set files with the xdm_unconfined_exec_t type, if you want to transition an executable to the xdm_unconfined_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/[mg]dm/Init(/.*)?, /etc/[mg]dm/PostLogin(/.*)?, /etc/[mg]dm/PreSession(/.*)?, /etc/[mg]dm/PostSession(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/[mg]dm/Init(/.*)?, /etc/[mg]dm/PostLogin(/.*)?, /etc/[mg]dm/PreSession(/.*)?, /etc/[mg]dm/PostSession(/.*)? </dd>
 </dl>
 <p> <code>xdm_var_lib_t</code> </p>
 <p> &#8211; Set files with the xdm_var_lib_t type, if you want to store the xdm files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/[mxkwg]dm(/.*)?, /var/cache/[mg]dm(/.*)?, /var/lib/gdm(3)?(/.*)?, /var/lib/sddm(/.*)?, /var/lib/lxdm(/.*)?, /var/lib/lightdm(/.*)?, /var/cache/lightdm(/.*)?, /var/lib/lightdm-data(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/[mxkwg]dm(/.*)?, /var/cache/[mg]dm(/.*)?, /var/lib/gdm(3)?(/.*)?, /var/lib/sddm(/.*)?, /var/lib/lxdm(/.*)?, /var/lib/lightdm(/.*)?, /var/cache/lightdm(/.*)?, /var/lib/lightdm-data(/.*)? </dd>
 </dl>
 <p> <code>xdm_var_run_t</code> </p>
 <p> &#8211; Set files with the xdm_var_run_t type, if you want to store the xdm files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/kde[34]?/kdm/backgroundrc, /var/run/[kgm]dm(/.*)?, /var/run/gdm(3)?.pid, /var/run/gdm(3)?(/.*)?, /usr/lib/qt-.*/etc/settings(/.*)?, /var/run/slim.*, /var/run/lxdm(/.*)?, /var/run/sddm(/.*)?, /var/run/xauth(/.*)?, /var/run/xdmctl(/.*)?, /var/run/lightdm(/.*)?, /var/run/systemd/multi-session-x(/.*)?, /var/run/xdm.pid, /var/run/lxdm.pid, /var/run/lxdm.auth, /var/run/gdm_socket </p>
+<dt>Paths:</dt>
+<dd>/etc/kde[34]?/kdm/backgroundrc, /var/run/[kgm]dm(/.*)?, /var/run/gdm(3)?.pid, /var/run/gdm(3)?(/.*)?, /usr/lib/qt-.*/etc/settings(/.*)?, /var/run/slim.*, /var/run/lxdm(/.*)?, /var/run/sddm(/.*)?, /var/run/xauth(/.*)?, /var/run/xdmctl(/.*)?, /var/run/lightdm(/.*)?, /var/run/systemd/multi-session-x(/.*)?, /var/run/xdm.pid, /var/run/lxdm.pid, /var/run/lxdm.auth, /var/run/gdm_socket </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -37,35 +37,31 @@ url: "/docs/linux/man/1-projectionintro/"
 <h3>References</h3>
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>ASPRS Grids and Datum
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>Projections Transform List&nbsp;<wbr>(PROJ4)
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>MapRef - The Collection of Map Projections and Reference Systems for Europe
-<dt>
-<dd> 
-&nbsp;<wbr>Information and Service System for European Coordinate Reference Systems - CRS</dl>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>Information and Service System for European Coordinate Reference Systems - CRS</dd></dl>
 </dl>
 
 <h3>See also</h3>
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Introduction to GRASS raster map processing
-<dt>
-<dd> Introduction to GRASS image processing
-<dt>
-<dd> Introduction to GRASS vector map processing</dl>
+</dt><dd> Introduction to GRASS raster map processing
+</dd><dt>
+</dt><dd> Introduction to GRASS image processing
+</dd><dt>
+</dt><dd> Introduction to GRASS vector map processing</dd></dl>
 </dl>
  
 

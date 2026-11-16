@@ -14,7 +14,7 @@ description: "netdev_change_features – recalculate device features"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device to check</dl>
+</dd><dd>the device to check</dd></dl>
 <h2>Description</h2>
 <p>Recalculate dev-&gt;features set and send notifications even if they have not changed. Should be called instead of <code>netdev_update_features</code> if also dev-&gt;vlan_features might have changed to allow the changes to be propagated to stacked VLAN devices.</p>
 <h2>Copyright</h2>

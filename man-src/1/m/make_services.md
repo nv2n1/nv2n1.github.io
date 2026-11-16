@@ -16,14 +16,14 @@ description: "make_services – generate GNUstep services info"
 <p> The <i>Services</i> menu in an application&#8217;s mainmenu is usually updated automatically. However, it may be neccessary to close an open or torn off menu for the changes to appear. Also, the workspace manager may have to be closed and restarted for file association changes to take effect.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;test </code><i>filename</p>
-<dd> check that property list filename</i> contains a valid service information.</p>
-<dt><code>&#8211;quiet</p>
-<dd> suppress warnings (not recommended but useful in login scripts).</p>
-<dt>&#8211;verbose</p>
-<dd> give verbose output.</p>
-<dt>&#8211;help</p>
-<dd> show small help screen.</dl>
+<dt><code>&#8211;test </code><i>filename</dt>
+<dd> check that property list filename</i> contains a valid service information.</dd>
+<dt><code>&#8211;quiet</dt>
+<dd> suppress warnings (not recommended but useful in login scripts).</dd>
+<dt>&#8211;verbose</dt>
+<dd> give verbose output.</dd>
+<dt>&#8211;help</dt>
+<dd> show small help screen.</dd></dl>
 <p> </code></p>
 <h2>EXAMPLES</h2>
 <p> Simply rebuild the cache of service information: </p>

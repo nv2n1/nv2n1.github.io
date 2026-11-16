@@ -11,7 +11,6 @@ description: "sc::MCSearch –"
 <p> This performs line searches with cubic steps.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mcsearch.h&gt;</code></pre>
 <p> Inherits <code>sc::LineOpt</code>.</p>
 <h3>Public Member Functions</h3>
@@ -25,174 +24,48 @@ description: "sc::MCSearch –"
  <i>Initializes the line search object. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void mcstep (double *stx, double *fx, double *dx, double *sty, double *fy, double *dy, double *stp, double *fp, double *dp, bool *brackt, double *stpmin, double *stpmax, int *info)
-
-
-
 void mcsrch (int *n, double *x, double *f, double *g, double *s, double *stp, double *ftol, double *xtol, int *maxfev, int *info, int *nfev, double *wa)
-
-
-
 void mcinit ()
-
-
-
 Protected Attributes
 double gtol_
-
-
-
 double stpmin_
-
-
-
 double stpmax_
-
-
-
 double dg
-
-
-
 double fm
-
-
-
 double fx
-
-
-
 double fy
-
-
-
 double dgm
-
-
-
 double dgx
-
-
-
 double dgy
-
-
-
 double fxm
-
-
-
 double fym
-
-
-
 double stx
-
-
-
 double sty
-
-
-
 double dgxm
-
-
-
 double dgym
-
-
-
 int infoc
-
-
-
 double finit
-
-
-
 double width
-
-
-
 double stmin
-
-
-
 double stmax
-
-
-
 bool stage1
-
-
-
 double width1
-
-
-
 double ftest1
-
-
-
 bool brackt
-
-
-
 double dginit
-
-
-
 double dgtest
-
-
-
 double p
-
-
-
 double q
-
-
-
 double r__
-
-
-
 double s
-
-
-
 double sgnd
-
-
-
 double stpc
-
-
-
 double stpf
-
-
-
 double stpq
-
-
-
 double gamma
-
-
-
 double theta
-
-
-
 bool bound
-
-
-
 int info_
-
-
-
 auto_vec&lt; double &gt; wa_</code></pre>
 <h2>Detailed Description</h2>
 <p>This performs line searches with cubic steps. </p>

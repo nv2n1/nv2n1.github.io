@@ -11,15 +11,10 @@ std::swap(std::deque) - std::swap(std::deque)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T, class Alloc&gt;
-
 void swap(deque&lt;T, Alloc&gt; &amp;lhs, (until C++ 17)
-
                                     deque&lt;T, Alloc&gt; &amp;rhs);
-
 template &lt;class T, class Alloc&gt;
-
 void swap(deque&lt;T, Alloc&gt; &amp;lhs, (since C++ 17)
-
                                     deque&lt;T, Alloc&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the std::swap algorithm for std::deque. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 

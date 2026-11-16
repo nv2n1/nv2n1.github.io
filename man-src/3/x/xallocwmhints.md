@@ -10,17 +10,17 @@ description: "XAllocWMHints, XSetWMHints, XGetWMHints, XWMHints – allocate win
 <p>XAllocWMHints, XSetWMHints, XGetWMHints, XWMHints &#8211; allocate window manager hints structure and set or read a window&#8217;s WM_HINTS property </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XWMHints *XAllocWMHints(void);</p>
-<dd>int XSetWMHints(Display *<i>display</i>, Window <i>w</i>, XWMHints *<i>wmhints</i>);</p>
-<dd>XWMHints *XGetWMHints(Display *<i>display</i>, Window <i>w</i>);</dl>
+<dd>XWMHints *XAllocWMHints(void);</dd>
+<dd>int XSetWMHints(Display *<i>display</i>, Window <i>w</i>, XWMHints *<i>wmhints</i>);</dd>
+<dd>XWMHints *XGetWMHints(Display *<i>display</i>, Window <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</p>
-<dt><i>wmhints</i></p>
-<dd>Specifies the <code>XWMHints</code> structure to be used.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd>
+<dt><i>wmhints</i></dt>
+<dd>Specifies the <code>XWMHints</code> structure to be used.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocWMHints</code> function allocates and returns a pointer to a <code>XWMHints</code> structure. Note that all fields in the <code>XWMHints</code> structure are initially set to zero. If insufficient memory is available, <code>XAllocWMHints</code> returns NULL. To free the memory allocated to this structure, use <code>XFree</code>. </p>
 <p> The <code>XSetWMHints</code> function sets the window manager hints that include icon information and location, the initial state of the window, and whether the application relies on the window manager to get keyboard input. </p>
@@ -29,8 +29,8 @@ description: "XAllocWMHints, XSetWMHints, XGetWMHints, XWMHints – allocate win
 <p> <code>XGetWMHints</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_HINTS</font></p>
-<dd>Additional hints set by the client for use by the window manager. The C type of this property is <code>XWMHints</code>.</dl>
+<dt><font SIZE="-1">WM_HINTS</font></dt>
+<dd>Additional hints set by the client for use by the window manager. The C type of this property is <code>XWMHints</code>.</dd></dl>
 <h2>Structures</h2>
 <p>The <code>XWMHints</code> structure contains: </p>
 <p> /* Window manager hints mask bits */ </p>
@@ -86,7 +86,7 @@ description: "XAllocWMHints, XSetWMHints, XGetWMHints, XWMHints – allocate win
 <tr VALIGN=top>
 <td> #define </td>
 <td> <code>AllHints</code> </td>
-<td> (InputHint| </p>
+<td> (InputHint| 
 <p>&nbsp;StateHint| </p>
 <p>&nbsp;IconPixmapHint| </p>
 <p>&nbsp;IconWindowHint| </p>
@@ -138,10 +138,10 @@ description: "XAllocWMHints, XSetWMHints, XGetWMHints, XWMHints – allocate win
 <p> The <code>UrgencyHint</code> flag, if set in the flags field, indicates that the client deems the window contents to be urgent, requiring the timely response of the user. The window manager will make some effort to draw the user&#8217;s attention to this window while this flag is set. The client must provide some means by which the user can cause the urgency flag to be cleared (either mitigating the condition that made the window urgent or merely shutting off the alarm) or the window to be withdrawn.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface, O&#8217;Reilly and Associates, Sebastopol, 1991.</i></p>

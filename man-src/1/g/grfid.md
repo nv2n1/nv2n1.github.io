@@ -15,10 +15,10 @@ description: "GRFID – A tool to extract the (New)GRF ID from a (New)GRF"
 <p> GRFID tries to find the (New)GRF identifier of that (New)GRF. Upon failure an error message is given, otherwise the NewGRF identifier is printed hexadecimally to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display the help message.</p>
-<dt><code>-v</code></p>
-<dd> Display the version.</dl>
+<dt><code>-h</code></dt>
+<dd> Display the help message.</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The documentation in /usr/share/doc/grfcodec/</p>
 <h2>AUTHOR</h2>

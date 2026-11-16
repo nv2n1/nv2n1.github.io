@@ -14,8 +14,8 @@ description: "gnutls_x509_policy_release – API function"
 <p> <code>void gnutls_x509_policy_release(struct gnutls_x509_policy_st * </code><i>policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>struct gnutls_x509_policy_st * policy</p>
-<dd> a certificate policy</dl>
+<dt>struct gnutls_x509_policy_st * policy</dt>
+<dd> a certificate policy</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will deinitialize all memory associated with the provided<br />
 &nbsp;<wbr><i>policy</i>&nbsp;<wbr>. The policy is allocated using&nbsp;<wbr><code>gnutls_x509_crt_get_policy()</code>.</p>
@@ -30,6 +30,6 @@ description: "gnutls_x509_policy_release – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

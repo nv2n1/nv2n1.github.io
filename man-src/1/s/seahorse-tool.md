@@ -16,31 +16,31 @@ description: "seahorse-tool – PGP/GnuPG file encryption for the GNOME Desktop"
 <h2>OPTIONS</h2>
 <h3>Help options</h3>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of all options and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display brief usage message and exit. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of all options and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message and exit. </dd>
 </dl>
 <h3>Application options</h3>
 <dl>
-<dt><code>-i </code><i>FILE</i>, <code>&#8211;import </code><i>FILE</i></p>
-<dd> Import keys from the FILE.</p>
-<dt><code>-e </code><i>FILE</i>, <code>&#8211;encrypt </code><i>FILE</i></p>
-<dd> Encrypt FILE.</p>
-<dt><code>-s </code><i>FILE</i>, <code>&#8211;sign </code><i>FILE</i></p>
-<dd> Sign FILE with default key.</p>
-<dt><code>-n </code><i>FILE</i>, <code>&#8211;encrypt-sign </code><i>FILE</i></p>
-<dd> Encrypt and sign FILE with default key.</p>
-<dt><code>-d </code><i>FILE</i>, <code>&#8211;decrypt </code><i>FILE</i></p>
-<dd> Decrypt encrypted FILE.</p>
-<dt><code>-v </code><i>FILE</i>, <code>&#8211;verify </code><i>FILE</i></p>
-<dd> Verify signature FILE.</p>
-<dt><code>-T, &#8211;uri-list</code></p>
-<dd> Read list of URIs on standard in.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show help options. </p>
+<dt><code>-i </code><i>FILE</i>, <code>&#8211;import </code><i>FILE</i></dt>
+<dd> Import keys from the FILE.</dd>
+<dt><code>-e </code><i>FILE</i>, <code>&#8211;encrypt </code><i>FILE</i></dt>
+<dd> Encrypt FILE.</dd>
+<dt><code>-s </code><i>FILE</i>, <code>&#8211;sign </code><i>FILE</i></dt>
+<dd> Sign FILE with default key.</dd>
+<dt><code>-n </code><i>FILE</i>, <code>&#8211;encrypt-sign </code><i>FILE</i></dt>
+<dd> Encrypt and sign FILE with default key.</dd>
+<dt><code>-d </code><i>FILE</i>, <code>&#8211;decrypt </code><i>FILE</i></dt>
+<dd> Decrypt encrypted FILE.</dd>
+<dt><code>-v </code><i>FILE</i>, <code>&#8211;verify </code><i>FILE</i></dt>
+<dd> Verify signature FILE.</dd>
+<dt><code>-T, &#8211;uri-list</code></dt>
+<dd> Read list of URIs on standard in.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help options. </dd>
 </dl>
 <h3>Additional options</h3>
 <p> In addition, the usual GTK+ and GNOME command line options apply. See the output of &#8211;help for details. </p>

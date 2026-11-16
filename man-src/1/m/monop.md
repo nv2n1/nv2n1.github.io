@@ -13,26 +13,26 @@ description: "monop, monop2 – Mono Class Outline Viewer"
 <p> <code>monop</code> [-r:assembly] [&#8211;search] class</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-r:assembly</i></p>
-<dd> Specifies the assembly to use for looking up the type</p>
-<dt><i>-a</i></p>
-<dd> Renders all of the types in the specified assembly.</p>
-<dt><i>&#8211;search, -s, -k</i></p>
-<dd> Searches through all known assemblies for types containing `class&#8217;.</p>
-<dt><i>&#8211;refs</i></p>
-<dd> Prints a list of the referenced assemblies for an assembly. Requires an assembly to be specified with -r:assembly.</p>
-<dt><i>&#8211;filter-obsolete, -f</i></p>
-<dd> Do not show obsolete types and members.</p>
-<dt><i>&#8211;declared-only, -d</i></p>
-<dd> Only show members declared in the type.</p>
-<dt><i>&#8211;private, -p</i></p>
-<dd> Show private members.</p>
-<dt><i>&#8211;runtime-version</i></p>
-<dd> Print runtime version.</p>
-<dt><i>-xa</i></p>
-<dd> Sets the lookup path to the Xamarin.Android directory. This will load both the mscorlib from there, and search assemblies in that directory.</p>
-<dt><i>-xi</i></p>
-<dd> Sets the lookup path to the Xamarin.iOS directory. This will load both the mscorlib from there, and search assemblies in that directory.</dl>
+<dt><i>-r:assembly</i></dt>
+<dd> Specifies the assembly to use for looking up the type</dd>
+<dt><i>-a</i></dt>
+<dd> Renders all of the types in the specified assembly.</dd>
+<dt><i>&#8211;search, -s, -k</i></dt>
+<dd> Searches through all known assemblies for types containing `class&#8217;.</dd>
+<dt><i>&#8211;refs</i></dt>
+<dd> Prints a list of the referenced assemblies for an assembly. Requires an assembly to be specified with -r:assembly.</dd>
+<dt><i>&#8211;filter-obsolete, -f</i></dt>
+<dd> Do not show obsolete types and members.</dd>
+<dt><i>&#8211;declared-only, -d</i></dt>
+<dd> Only show members declared in the type.</dd>
+<dt><i>&#8211;private, -p</i></dt>
+<dd> Show private members.</dd>
+<dt><i>&#8211;runtime-version</i></dt>
+<dd> Print runtime version.</dd>
+<dt><i>-xa</i></dt>
+<dd> Sets the lookup path to the Xamarin.Android directory. This will load both the mscorlib from there, and search assemblies in that directory.</dd>
+<dt><i>-xi</i></dt>
+<dd> Sets the lookup path to the Xamarin.iOS directory. This will load both the mscorlib from there, and search assemblies in that directory.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Monop is a tool that allows you to view the outline of a class. You can see the signature of each member of the class. Use <i>monop</i> to explore 1.0 assemblies, use <i>monop2</i> to explore 2.0 assemblies. </p>
 <p> The tool takes one option, the class to view. You must specify the full name of the class, including namespace. </p>

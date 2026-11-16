@@ -17,12 +17,12 @@ Tcl_PathType
 <code>Tcl_GetPathType</code>(<i>path</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>const char <i>*path</i> (in) File path in a form appropriate for the current platform (see the <code>filename</code> manual entry for acceptable forms for path names).</p>
-<dd>int <i>*argcPtr</i> (out) Filled in with number of path elements in <i>path</i>.</p>
-<dd>const char <i>***argvPtr</i> (out) <i>*argvPtr</i> will be filled in with the address of an array of pointers to the strings that are the extracted elements of <i>path</i>. There will be <i>*argcPtr</i> valid entries in the array, followed by a NULL entry.</p>
-<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</p>
-<dd>const char *const <i>*argv</i> (in) Array of path elements to merge together into a single path.</p>
-<dd>Tcl_DString <i>*resultPtr</i> (in/out) A pointer to an initialized <code>Tcl_DString</code> to which the result of <code>Tcl_JoinPath</code> will be appended. </p>
+<dd>const char <i>*path</i> (in) File path in a form appropriate for the current platform (see the <code>filename</code> manual entry for acceptable forms for path names).</dd>
+<dd>int <i>*argcPtr</i> (out) Filled in with number of path elements in <i>path</i>.</dd>
+<dd>const char <i>***argvPtr</i> (out) <i>*argvPtr</i> will be filled in with the address of an array of pointers to the strings that are the extracted elements of <i>path</i>. There will be <i>*argcPtr</i> valid entries in the array, followed by a NULL entry.</dd>
+<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</dd>
+<dd>const char *const <i>*argv</i> (in) Array of path elements to merge together into a single path.</dd>
+<dd>Tcl_DString <i>*resultPtr</i> (in/out) A pointer to an initialized <code>Tcl_DString</code> to which the result of <code>Tcl_JoinPath</code> will be appended. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures have been superceded by the objectified procedures in the <code>FileSystem</code> man page, which are more efficient. </p>
@@ -35,12 +35,12 @@ char *path;
 char **argv;
 ...
 Tcl_SplitPath(string, &amp;argc, &amp;argv);</pre>
-</dl>
+</dd></dl>
 <p> Then you should eventually free the storage with a call like the following:</p>
 <dl COMPACT>
 <dd>
 <pre>Tcl_Free((char *) argv);</pre>
-</dl>
+</dd></dl>
 <p> <code>Tcl_JoinPath</code> is the inverse of <code>Tcl_SplitPath</code>: it takes a collection of path elements given by <i>argc</i> and <i>argv</i> and generates a result string that is a properly constructed path. The result string is appended to <i>resultPtr</i>. <i>ResultPtr</i> must refer to an initialized <code>Tcl_DString</code>. </p>
 <p> If the result of <code>Tcl_SplitPath</code> is passed to <code>Tcl_JoinPath</code>, the result will refer to the same location, but may not be in the same form. This is because <code>Tcl_SplitPath</code> and <code>Tcl_JoinPath</code> eliminate duplicate path separators and return a normalized form for each platform. </p>
 <p> <code>Tcl_GetPathType</code> returns the type of the specified <i>path</i>, where <code>Tcl_PathType</code> is one of <code>TCL_PATH_ABSOLUTE</code>, <code>TCL_PATH_RELATIVE</code>, or <code>TCL_PATH_VOLUME_RELATIVE</code>. See the <code>filename</code> manual entry for a description of the path types for each platform. </p>

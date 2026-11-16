@@ -9,12 +9,12 @@ description: "page_cms – CMS/PKCS7 message functions. CMS is defined in RFC 33
 
 <p>page_cms &#8211; CMS/PKCS7 message functions. CMS is defined in RFC 3369 and is an continuation of the RSA Labs standard PKCS7. The basic messages in CMS is</p>
 <dl>
-<dt>&bull;</p>
-<dd>SignedData Data signed with private key (RSA, DSA, ECDSA) or secret (symmetric) key</p>
-<dt>&bull;</p>
-<dd>EnvelopedData Data encrypted with private key (RSA)</p>
-<dt>&bull;</p>
-<dd>EncryptedData Data encrypted with secret (symmetric) key.</p>
-<dt>&bull;</p>
-<dd>ContentInfo Wrapper structure including type and data.</dl>
+<dt>&bull;</dt>
+<dd>SignedData Data signed with private key (RSA, DSA, ECDSA) or secret (symmetric) key</dd>
+<dt>&bull;</dt>
+<dd>EnvelopedData Data encrypted with private key (RSA)</dd>
+<dt>&bull;</dt>
+<dd>EncryptedData Data encrypted with secret (symmetric) key.</dd>
+<dt>&bull;</dt>
+<dd>ContentInfo Wrapper structure including type and data.</dd></dl>
 <p> See the library functions here: <code>hx509 CMS/pkcs7 functions</code> </p>

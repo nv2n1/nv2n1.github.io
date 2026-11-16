@@ -13,17 +13,17 @@ description: "gupd_ws (Update workstation) – Insures that the workstation is c
 <p> void gupd_ws(Gint ws_id, Gupd_regen_flag upd_regen_flag);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) A number identifying the workstation to be updated. ws_id must be the same as that used in some previous gopen_ws call.</p>
-<dt>upd_regen_flag</p>
-<dd>(Input) A flag to specify if the current picture should be regenerated. The possible values include:</p>
+<dt>ws_id</dt>
+<dd>(Input) A number identifying the workstation to be updated. ws_id must be the same as that used in some previous gopen_ws call.</dd>
+<dt>upd_regen_flag</dt>
+<dd>(Input) A flag to specify if the current picture should be regenerated. The possible values include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GUPD_NOT_PEND</p>
-<dd>Postpone</p>
-<dt>GUPD_PEND</p>
-<dd>Perform</dl>
+</dd><dl COMPACT>
+<dt>GUPD_NOT_PEND</dt>
+<dd>Postpone</dd>
+<dt>GUPD_PEND</dt>
+<dd>Perform</dd></dl>
 </dl>
 <p> For the workstation types supported in NCAR GKS, this flag should always be set to GUPD_PEND.</dl>
 <h2>Usage</h2>
@@ -37,3 +37,4 @@ description: "gupd_ws (Update workstation) – Insures that the workstation is c
 <p>Copyright (C) 1987-2009<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement.</p>
+</p>

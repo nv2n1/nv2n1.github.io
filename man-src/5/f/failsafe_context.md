@@ -12,7 +12,7 @@ description: "failsafe_context – The SELinux fail safe context configuration f
 <p>The <i>failsafe_context</i> file allows SELinux-aware applications such as <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8) to obtain a known valid login context for an administrator if no valid default entries can be found elsewhere. </p>
 <p> <code><a href="/docs/linux/man/3-selinux_failsafe_context_path/">selinux_failsafe_context_path</a></code>(3) will return the active policy path to this file. The default failsafe context file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/failsafe_context</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/failsafe_context</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> The following functions read this file from the active policy path if they cannot obtain a default context: </p>
 <dl>
@@ -23,16 +23,16 @@ description: "failsafe_context – The SELinux fail safe context configuration f
  <code><a href="/docs/linux/man/3-get_default_context_with_role/">get_default_context_with_role</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-get_default_context_with_rolelevel/">get_default_context_with_rolelevel</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-query_user_context/">query_user_context</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dl>
+ <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dd></dl>
 <h2>File Format</h2>
 <p>The file consists of a single line entry as follows:</p>
 <dl>
-<dd><i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>]</dl>
+<dd><i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>]</dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>role</i> <i>type</i> <i>range</i></p>
+<dd><i>role</i> <i>type</i> <i>range</i></dd>
 <dl>
-<dd>A role, type and optional range (for MCS/MLS), separated by colons (:) to form a valid login process context for an administrator to access the system.</dl>
+<dd>A role, type and optional range (for MCS/MLS), separated by colons (:) to form a valid login process context for an administrator to access the system.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># ./contexts/failsafe_context<br />

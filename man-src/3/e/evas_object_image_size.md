@@ -25,7 +25,7 @@ description: "Image Object Image Size Functions – Functions that change the si
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
  <i>w</i> Location to store the width of the image in, or NULL.<br />
- <i>h</i> Location to store the height of the image in, or NULL.</dl>
+ <i>h</i> Location to store the height of the image in, or NULL.</dd></dl>
 <h3>EAPI void evas_object_image_size_set (<code>Evas_Object</code> * obj, int w, int h)</h3>
 <p>Sets the size of the given image object. </p>
 <p> This function will scale down or crop the image so that it is treated as if it were at the given size. If the size given is smaller than the image, it will be cropped. If the size given is larger, then the image will be treated as if it were in the upper left hand corner of a larger image that is otherwise transparent. </p>
@@ -33,15 +33,15 @@ description: "Image Object Image Size Functions – Functions that change the si
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
  <i>w</i> The new width of the image.<br />
- <i>h</i> The new height of the image.</dl>
+ <i>h</i> The new height of the image.</dd></dl>
 <h3>EAPI int evas_object_image_stride_get (const <code>Evas_Object</code> * obj)</h3>
 <p>Retrieves the row stride of the given image object,. </p>
 <p> The row stride is the number of units between the start of a row and the start of the next row. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The stride of the image.</dl>
+<dd>The stride of the image.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

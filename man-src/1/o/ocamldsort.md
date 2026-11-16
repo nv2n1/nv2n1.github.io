@@ -69,26 +69,26 @@ clean:
 <h2>OPTIONS</h2>
 <p> The following command-line options are recognized by <code>ocamlsort</code>(1): </p>
 <dl>
-<dt><code>-I</code><i>&nbsp;<wbr>directory</i></p>
-<dd> Add the given directory to the list of directories searched for source files. </p>
-<dt><code>-pp</code><i>&nbsp;<wbr>pre-command</i></p>
-<dd> Command to preprocess file. </p>
-<dt><code>-d</code><i>&nbsp;<wbr>dep-command</i></p>
-<dd> Command to compute dependencies. <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1) by default. </p>
-<dt><code>-mli</code></p>
-<dd> Sort files using mli dependencies. </p>
-<dt><code>-nox</code></p>
-<dd> Ignore filenames containg `*&#8217; so that unexpanded wildcards are ignored. </p>
-<dt><code>-obj</code></p>
-<dd> Print bytecode filenames (.cmo and .cmi) (deprecated: use -byte). </p>
-<dt><code>-byte</code></p>
-<dd> Print bytecode filenames (.cmo and .cmi). </p>
-<dt><code>-opt</code></p>
-<dd> Print opt filenames (.cmx and .cmi). </p>
-<dt><code>-v</code></p>
-<dd> Output version information and exit. </p>
-<dt><code>-help</code>, <code>&#8211;help</code></p>
-<dd> Output help and exit. </p>
+<dt><code>-I</code><i>&nbsp;<wbr>directory</i></dt>
+<dd> Add the given directory to the list of directories searched for source files. </dd>
+<dt><code>-pp</code><i>&nbsp;<wbr>pre-command</i></dt>
+<dd> Command to preprocess file. </dd>
+<dt><code>-d</code><i>&nbsp;<wbr>dep-command</i></dt>
+<dd> Command to compute dependencies. <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1) by default. </dd>
+<dt><code>-mli</code></dt>
+<dd> Sort files using mli dependencies. </dd>
+<dt><code>-nox</code></dt>
+<dd> Ignore filenames containg `*&#8217; so that unexpanded wildcards are ignored. </dd>
+<dt><code>-obj</code></dt>
+<dd> Print bytecode filenames (.cmo and .cmi) (deprecated: use -byte). </dd>
+<dt><code>-byte</code></dt>
+<dd> Print bytecode filenames (.cmo and .cmi). </dd>
+<dt><code>-opt</code></dt>
+<dd> Print opt filenames (.cmx and .cmi). </dd>
+<dt><code>-v</code></dt>
+<dd> Output version information and exit. </dd>
+<dt><code>-help</code>, <code>&#8211;help</code></dt>
+<dd> Output help and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1). </p>

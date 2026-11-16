@@ -16,12 +16,12 @@ description: "FcPatternBuild, FcPatternVaBuild, FcPatternVapBuild – Create pat
 <h2>Description</h2>
 <p>Builds a pattern using a list of objects, types and values. Each value to be entered in the pattern is specified with three arguments:</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Object name, a string describing the property to be added.</p>
-<dt>2.</p>
-<dd>Object type, one of the FcType enumerated values</p>
-<dt>3.</p>
-<dd>Value, not an FcValue, but the raw type as passed to any of the FcPatternAdd&lt;type&gt; functions. Must match the type of the second argument.</dl>
+<dt>1.</dt>
+<dd>Object name, a string describing the property to be added.</dd>
+<dt>2.</dt>
+<dd>Object type, one of the FcType enumerated values</dd>
+<dt>3.</dt>
+<dd>Value, not an FcValue, but the raw type as passed to any of the FcPatternAdd&lt;type&gt; functions. Must match the type of the second argument.</dd></dl>
 <p> The argument list is terminated by a null object name, no object type nor value need be passed for this. The values are added to `pattern&#8217;, if `pattern&#8217; is null, a new pattern is created. In either case, the pattern is returned. Example </p>
 <pre>pattern = FcPatternBuild (0, FC_FAMILY, FcTypeString, &quot;Times&quot;, (char *) 0);</pre>
 <p>FcPatternVaBuild is used when the arguments are already in the form of a varargs value. FcPatternVapBuild is a macro version of FcPatternVaBuild which returns its result directly in the <i>result</i> variable.</p>

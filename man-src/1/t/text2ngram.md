@@ -13,20 +13,20 @@ description: "text2ngram – generate statistical n-gram data from text"
 <p> <code>text2ngram</code> [<i>,OPTION/</i>]&#8230; <i>,infiles/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>&#8211;output</code>, <code>-o</code> O</p>
-<dd> Output file name O</p>
-<dt><code>&#8211;ngrams</code>, <code>-n</code> N</p>
-<dd> Specify ngram cardinality N</p>
-<dt><code>&#8211;format</code>, <code>-f</code> F</p>
-<dd> Output file format F: sqlite, tsv (tabbed separated values)</p>
-<dt> <code>&#8211;lowercase</code>, <code>-l</code> Enable lowercase conversion mode</p>
-<dt><code>&#8211;append</code>, <code>-a</code></p>
+<dt><code>&#8211;output</code>, <code>-o</code> O</dt>
+<dd> Output file name O</dd>
+<dt><code>&#8211;ngrams</code>, <code>-n</code> N</dt>
+<dd> Specify ngram cardinality N</dd>
+<dt><code>&#8211;format</code>, <code>-f</code> F</dt>
+<dd> Output file format F: sqlite, tsv (tabbed separated values)</dd>
+<dt> <code>&#8211;lowercase</code>, <code>-l</code> Enable lowercase conversion mode</dt>
+<dt><code>&#8211;append</code>, <code>-a</code></dt>
 <dd>
-<dd>Open output file in append mode</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Display this information</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Show version information</dl>
+</dd><dd>Open output file in append mode</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Display this information</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Show version information</dd></dl>
 <p> text2ngram is free software distributed under the GPL. Send bug reports to matteo.vescovi [at] yahoo.co.uk Copyright &#169; Matteo Vescovi</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; Matteo Vescovi<br />

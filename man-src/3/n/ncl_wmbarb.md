@@ -21,13 +21,13 @@ CALL WMBARB (X,Y,U,V)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the position of the base of a wind barb.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the position of the base of a wind barb.
-<dt>U
-<dd>(Real, Input) - The X component of a wind vector.
-<dt>V
-<dd>(Real, Input) - The Y component of a wind vector.</dl>
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the position of the base of a wind barb.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the position of the base of a wind barb.
+</dd><dt>U
+</dt><dd>(Real, Input) - The X component of a wind vector.
+</dd><dt>V
+</dt><dd>(Real, Input) - The Y component of a wind vector.</dd></dl>
 
 <h2>Usage</h2>
 

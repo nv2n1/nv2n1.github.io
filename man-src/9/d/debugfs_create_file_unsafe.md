@@ -14,19 +14,19 @@ description: "debugfs_create_file_unsafe – create a file in the debugfs filesy
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>a pointer to a string containing the name of the file to create.</dl>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>the permission that the file should have.</dl>
+<dd>the permission that the file should have.</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is NULL, then the file will be created in the root of the debugfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is NULL, then the file will be created in the root of the debugfs filesystem.</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>a pointer to something that the caller will want to get to later on. The inode.i_private pointer will point to this value on the <code>open</code> call.</dl>
+<dd>a pointer to something that the caller will want to get to later on. The inode.i_private pointer will point to this value on the <code>open</code> call.</dd></dl>
 <p> <i>fops</i></p>
 <dl>
-<dd>a pointer to a struct file_operations that should be used for this file.</dl>
+<dd>a pointer to a struct file_operations that should be used for this file.</dd></dl>
 <h2>Description</h2>
 <p><code>debugfs_create_file_unsafe</code> is completely analogous to <code>debugfs_create_file</code>, the only difference being that the fops handed it will not get protected against file removals by the debugfs core. </p>
 <p> It is your responsibility to protect your struct file_operation methods against file removals by means of <code>debugfs_use_file_start</code> and <code>debugfs_use_file_finish</code>. -&gt;<code>open</code> is still protected by debugfs though. </p>

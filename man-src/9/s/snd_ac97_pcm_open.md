@@ -15,19 +15,19 @@ snd_ac97_pcm_open - opens the given AC97 pcm
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the ac97 pcm instance</dl>
+<dl><dd></dd><dd>the ac97 pcm instance</dd></dl>
  
 
  <i>rate</i>
-<dl><dd>rate in Hz, if codec does not support VRA, this value must be 48000Hz</dl>
+<dl><dd>rate in Hz, if codec does not support VRA, this value must be 48000Hz</dd></dl>
  
 
  <i>cfg</i>
-<dl><dd>output stream characteristics</dl>
+<dl><dd>output stream characteristics</dd></dl>
  
 
  <i>slots</i>
-<dl><dd>a subset of allocated slots (snd_ac97_pcm_assign) for this pcm</dl>
+<dl><dd>a subset of allocated slots (snd_ac97_pcm_assign) for this pcm</dd></dl>
 
 <h2>Description</h2>
 

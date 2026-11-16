@@ -10,7 +10,6 @@ description: "std::ctype_base – std::ctype_base"
 <p>std::ctype_base &#8211; std::ctype_base</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 class ctype_base;</code></pre>
 <p>The class std::ctype_base lists the character classification categories which are inherited by the std::ctype facets. </p>
 <h2>Member types</h2>

@@ -10,21 +10,9 @@ description: "QuantLib::BoundaryCondition – Abstract boundary condition class 
 <p>QuantLib::BoundaryCondition &#8211; Abstract boundary condition class for finite difference problems. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual void applyBeforeApplying (operator_type &amp;) const =0
-
-
-
 virtual void applyAfterApplying (array_type &amp;) const =0
-
-
-
 virtual void applyBeforeSolving (operator_type &amp;, array_type &amp;rhs) const =0
-
-
-
 virtual void applyAfterSolving (array_type &amp;) const =0
-
-
-
 virtual void setTime (Time t)=0</code></pre>
 <h3>Public Types</h3>
 <p>enum <code>Side</code> { <code>None</code>, <code>Upper</code>, <code>Lower</code> } </p>
@@ -32,21 +20,9 @@ virtual void setTime (Time t)=0</code></pre>
 <p> typedef Operator::array_type <code>array_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual void applyBeforeApplying (operator_type &amp;) const =0
-
-
-
 virtual void applyAfterApplying (array_type &amp;) const =0
-
-
-
 virtual void applyBeforeSolving (operator_type &amp;, array_type &amp;rhs) const =0
-
-
-
 virtual void applyAfterSolving (array_type &amp;) const =0
-
-
-
 virtual void setTime (Time t)=0</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Operator&gt; class QuantLib::BoundaryCondition&lt; Operator &gt;</h3>
@@ -55,7 +31,7 @@ virtual void setTime (Time t)=0</code></pre>
 <h3>enum <code>Side</code></h3>
 <p><code>Possible enhancements</code></p>
 <dl>
-<dd>Generalize for n-dimensional conditions</dl>
+<dd>Generalize for n-dimensional conditions</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual void applyBeforeApplying (operator_type &amp;) const [pure virtual]</h3>
 <p>This method modifies an operator $ L $ before it is applied to an array $ u $ so that $ v = Lu $ will satisfy the given condition. </p>

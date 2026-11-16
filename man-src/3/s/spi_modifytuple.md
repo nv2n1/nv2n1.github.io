@@ -16,28 +16,28 @@ description: "SPI_modifytuple – create a row by replacing selected fields of a
 <h2>Arguments</h2>
 <p>Relation <i>rel</i></p>
 <dl COMPACT>
-<dd>Used only as the source of the row descriptor for the row. (Passing a relation rather than a row descriptor is a misfeature.)</dl>
+<dd>Used only as the source of the row descriptor for the row. (Passing a relation rather than a row descriptor is a misfeature.)</dd></dl>
 <p> HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>row to be modified</dl>
+<dd>row to be modified</dd></dl>
 <p> int <i>ncols</i></p>
 <dl COMPACT>
-<dd>number of column numbers in the array <i>colnum</i></dl>
+<dd>number of column numbers in the array <i>colnum</i></dd></dl>
 <p> int * <i>colnum</i></p>
 <dl COMPACT>
-<dd>array of the numbers of the columns that are to be changed (column numbers start at 1)</dl>
+<dd>array of the numbers of the columns that are to be changed (column numbers start at 1)</dd></dl>
 <p> Datum * <i>values</i></p>
 <dl COMPACT>
-<dd>new values for the specified columns</dl>
+<dd>new values for the specified columns</dd></dl>
 <p> const char * <i>Nulls</i></p>
 <dl COMPACT>
-<dd>which new values are null, if any (see <code>SPI_execute_plan</code> for the format)</dl>
+<dd>which new values are null, if any (see <code>SPI_execute_plan</code> for the format)</dd></dl>
 <h2>Return Value</h2>
 <p>new row with modifications, allocated in the upper executor context; NULL only if <i>row</i> is NULL </p>
 <p> On error, <i>SPI_result</i> is set as follows: </p>
 <p> SPI_ERROR_ARGUMENT</p>
 <dl COMPACT>
-<dd>if <i>rel</i> is NULL, or if <i>row</i> is NULL, or if <i>ncols</i> is less than or equal to 0, or if <i>colnum</i> is NULL, or if <i>values</i> is NULL.</dl>
+<dd>if <i>rel</i> is NULL, or if <i>row</i> is NULL, or if <i>ncols</i> is less than or equal to 0, or if <i>colnum</i> is NULL, or if <i>values</i> is NULL.</dd></dl>
 <p> SPI_ERROR_NOATTRIBUTE</p>
 <dl COMPACT>
-<dd>if <i>colnum</i> contains an invalid column number (less than or equal to 0 or greater than the number of column in <i>row</i>)</dl>
+<dd>if <i>colnum</i> contains an invalid column number (less than or equal to 0 or greater than the number of column in <i>row</i>)</dd></dl>

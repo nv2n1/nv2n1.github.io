@@ -38,17 +38,12 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cstring&gt;</code></pre>
 <p>&nbsp;<wbr>&nbsp;#pragma STDC FENV_ACCESS ON </p>
 <pre><code>int main()
-
 {
     // normal use
     std::cout &lt;&lt; &quot;sqrt(100) = &quot; &lt;&lt; std::sqrt(100) &lt;&lt; '

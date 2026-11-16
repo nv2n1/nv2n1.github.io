@@ -18,18 +18,18 @@ description: "fax2ps – convert a TIFF facsimile to compressed PostScript™"
 <p> <i>fax2ps</i> generates a compressed form of PostScript that is optimized for sending pages of text to a PostScript printer attached to a host through a low-speed link (such as a serial line). Each output page is filled with white and then only the black areas are drawn. The PostScript specification of the black drawing operations is optimized by using a special font that encodes the move-draw operations required to fill the black regions on the page. This compression scheme typically results in a substantially reduced PostScript description, relative to the straightforward imaging of the page with a PostScript <i>image</i> operator. This algorithm can, however, be ineffective for continuous-tone and white-on-black images. For these images, it sometimes is more efficient to send the raster bitmap image directly; see <code><a href="/docs/linux/man/1-tiff2ps/">tiff2ps</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code><i> number</i></p>
-<dd> Print only the indicated page. Multiple pages may be printed by specifying this option more than once.</p>
-<dt><code>-x</code><i> resolution</i></p>
-<dd> Use <i>resolution</i> as the horizontal resolution, in dots/inch, of the image data. By default this value is taken from the file.</p>
-<dt><code>-y</code><i> resolution</i></p>
-<dd> Use <i>resolution</i> as the vertical resolution, in lines/inch, of the image data. By default this value is taken from the file.</p>
-<dt><code>-S</code></p>
-<dd> Scale each page of image data to fill the output page dimensions. By default images are presented according to the dimension information recorded in the <font SIZE="-1">TIFF</font> file.</p>
-<dt><code>-W</code><i> width</i></p>
-<dd> Use <i>width</i> as the width, in inches, of the output page.</p>
-<dt><code>-H</code><i> height</i></p>
-<dd> Use <i>height</i> as the height, in inches, of the output page.</dl>
+<dt><code>-p</code><i> number</i></dt>
+<dd> Print only the indicated page. Multiple pages may be printed by specifying this option more than once.</dd>
+<dt><code>-x</code><i> resolution</i></dt>
+<dd> Use <i>resolution</i> as the horizontal resolution, in dots/inch, of the image data. By default this value is taken from the file.</dd>
+<dt><code>-y</code><i> resolution</i></dt>
+<dd> Use <i>resolution</i> as the vertical resolution, in lines/inch, of the image data. By default this value is taken from the file.</dd>
+<dt><code>-S</code></dt>
+<dd> Scale each page of image data to fill the output page dimensions. By default images are presented according to the dimension information recorded in the <font SIZE="-1">TIFF</font> file.</dd>
+<dt><code>-W</code><i> width</i></dt>
+<dd> Use <i>width</i> as the width, in inches, of the output page.</dd>
+<dt><code>-H</code><i> height</i></dt>
+<dd> Use <i>height</i> as the height, in inches, of the output page.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Some messages about malformed <font SIZE="-1">TIFF</font> images come from the <font SIZE="-1">TIFF</font> library. </p>
 <p> Various messages about badly formatted facsimile images may be generated due to transmission errors in received facsimile. <i>fax2ps</i> attempts to recover from such data errors by resynchronizing decoding at the end of the current scanline. This can result in long horizontal black lines in the resultant PostScript image.</p>

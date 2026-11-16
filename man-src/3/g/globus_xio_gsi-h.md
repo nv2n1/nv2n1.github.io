@@ -61,7 +61,7 @@ description: "globus_xio_gsi.h – XIO GSI Driver."
 <p>XIO GSI Driver. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Meder</dl>
+<dd>Sam Meder</dd></dl>
 <h2>Macro Definition Documentation</h2>
 <h3>#define globus_xio_gsi_attr_cntl globus_xio_attr_cntl</h3>
 <p>doxygen varargs filter stuff</p>

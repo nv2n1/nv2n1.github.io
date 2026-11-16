@@ -15,19 +15,19 @@ snd_ctl_enum_info - fills the info structure for an enumerated control
 <h2>Arguments</h2>
 
 <i>info</i>
-<dl><dd><dd>the structure to be filled</dl>
+<dl><dd></dd><dd>the structure to be filled</dd></dl>
  
 
  <i>channels</i>
-<dl><dd>the number of the control's channels; often one</dl>
+<dl><dd>the number of the control's channels; often one</dd></dl>
  
 
  <i>items</i>
-<dl><dd>the number of control values; also the size of <i>names</i></dl>
+<dl><dd>the number of control values; also the size of <i>names</i></dd></dl>
  
 
  <i>names[]</i>
-<dl><dd>an array containing the names of all control values</dl>
+<dl><dd>an array containing the names of all control values</dd></dl>
 
 <h2>Description</h2>
 

@@ -19,20 +19,20 @@ description: "Scheduler Implementation API –"
 <p> Error types used by the SEG. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_NULL </i></p>
-<dd> NULL Parameter</p>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_ALREADY_SET </i></p>
-<dd> Already called a one-time function</p>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_INVALID_MODULE </i></p>
-<dd> Shared module missing descriptor</p>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_INVALID_FORMAT </i></p>
-<dd> Invalid printf format for SEG protocol message</p>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_OUT_OF_MEMORY </i></p>
-<dd> Out of memory</p>
-<dt><i>GLOBUS_SEG_ERROR_TYPE_LOADING_MODULE </i></p>
-<dd> Unable to load scheduler module</dl>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_NULL </i></dt>
+<dd> NULL Parameter</dd>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_ALREADY_SET </i></dt>
+<dd> Already called a one-time function</dd>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_INVALID_MODULE </i></dt>
+<dd> Shared module missing descriptor</dd>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_INVALID_FORMAT </i></dt>
+<dd> Invalid printf format for SEG protocol message</dd>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_OUT_OF_MEMORY </i></dt>
+<dd> Out of memory</dd>
+<dt><i>GLOBUS_SEG_ERROR_TYPE_LOADING_MODULE </i></dt>
+<dd> Unable to load scheduler module</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_scheduler_event_generator from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

@@ -22,23 +22,21 @@ description: "cddb-tool – Get CDDB information"
 <p> <code>parse</code> <i>[file] option</i> </p>
 <p> Get data out of a cddb file (use &quot;-&quot; for stdin). Options (use one and only one):</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>id</code></p>
-<dd> prints disc id</p>
-<dt><code>album</code></p>
-<dd> prints album title</p>
-<dt><code>track num</code></p>
-<dd> prints title of track num</p>
-<dt><code>artist</code></p>
-<dd> prints artist</p>
-<dt><code>category</code></p>
-<dd> prints category</p>
-<dt><code>cddbgenre</code></p>
-<dd> synonym for category</p>
-<dt><code>all</code></p>
-<dd> parse file and dumps to stdout in a form sourceable by the shell</dl>
+<dt><code>id</code></dt>
+<dd> prints disc id</dd>
+<dt><code>album</code></dt>
+<dd> prints album title</dd>
+<dt><code>track num</code></dt>
+<dd> prints title of track num</dd>
+<dt><code>artist</code></dt>
+<dd> prints artist</dd>
+<dt><code>category</code></dt>
+<dd> prints category</dd>
+<dt><code>cddbgenre</code></dt>
+<dd> synonym for category</dd>
+<dt><code>all</code></dt>
+<dd> parse file and dumps to stdout in a form sourceable by the shell</dd></dl>
 </dl>
 <p> <code>send</code> <i>[file] address</i> </p>
 <p> Mails file file (or stdin of no file specified) to specified address, using correct format. Category should be one of blues, classical, country, data, folk, jazz, newage, reggae, rock, soundtrack, misc. </p>

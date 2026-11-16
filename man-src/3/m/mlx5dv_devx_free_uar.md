@@ -19,12 +19,12 @@ url: "/docs/linux/man/3-mlx5dv_devx_free_uar/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_devx_uar *mlx5dv_devx_alloc_uar(struct ibv_context *context,
                                               uint32_t flags);
 void mlx5dv_devx_free_uar(struct mlx5dv_devx_uar *devx_uar);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -38,15 +38,15 @@ void mlx5dv_devx_free_uar(struct mlx5dv_devx_uar *devx_uar);
 
 <dl>
 <dt>context
-<dd> RDMA device context to work on.
-<dt>flags
-<dd> Allocation flags for the UAR.</dl>
+</dt><dd> RDMA device context to work on.
+</dd><dt>flags
+</dt><dd> Allocation flags for the UAR.</dd></dl>
 
 <h3>devx_uar</h3>
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_devx_uar {
     void *reg_addr;
     void *base_addr;
@@ -55,14 +55,14 @@ struct mlx5dv_devx_uar {
     uint64_t comp_mask;
 };
 </code></pre>
-<dt>reg_addr
-<dd> The write address of DB/BF.
-<dt>base_addr
-<dd> The base address of the UAR.
-<dt>page_id
-<dd> The device page id to be used.
-<dt>mmap_off
-<dd> The mmap offset parameter to be used for re-mapping, to be used by a secondary process.</dl>
+</dd><dt>reg_addr
+</dt><dd> The write address of DB/BF.
+</dd><dt>base_addr
+</dt><dd> The base address of the UAR.
+</dd><dt>page_id
+</dt><dd> The device page id to be used.
+</dd><dt>mmap_off
+</dt><dd> The mmap offset parameter to be used for re-mapping, to be used by a secondary process.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

@@ -11,10 +11,8 @@ std::experimental::erase(std::deque) - std::experimental::erase(std::deque)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / deque&gt;
-
     template &lt;class T, class A, class U&gt;
     (library fundamentals TS v2)
-
         void erase(std::deque&lt;T, A&gt; &amp;c, const U &amp;value);
 Erases all elements that compare equal to value from the container.Equivalent to c.erase(std::remove(c.begin(), c.end(), value), c.end());
 </code></pre>

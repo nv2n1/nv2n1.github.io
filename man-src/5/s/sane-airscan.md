@@ -14,14 +14,14 @@ description: "sane-airscan – SANE backend for AirScan (eSCL) and WSD scanners 
 <dd>
 <pre>1. eSCL, also known as AirScan or AirPrint scan
 2. WSD, also known as WS-Scan</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Configuration</h2>
 <p>The sane-airscan loads its configuration files from the following places:</p>
 <dl>
 <dd>
 <pre>1. /etc/sane.d/airscan.conf
 2. /etc/sane.d/airscan.d/*</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The configuration file syntax is very similar to the .INI file syntax. It consist of sections, each section contains some variables. Comments are started from # or ; characters and continies until end of line</p>
 <dl>
 <dd>
@@ -29,7 +29,7 @@ description: "sane-airscan – SANE backend for AirScan (eSCL) and WSD scanners 
 [section 1]
 variable 1 = value 1 ; and another comment
 variable 2 = value 2</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Leading and trailing spaces of variable name and value are striped. If you want to preserve them, put name or value into quotes (&quot;like this&quot;).</p>
 <h2>Configuration Of Devices</h2>
 <p>If scanner and computer are connected to the same LAN segment, everything expected to &quot;just work&quot; out of box, without any need of manual configuration. </p>
@@ -40,7 +40,7 @@ variable 2 = value 2</pre>
 2. There are a lot of devices on a corporate network, but
  only few of them are interesting
 3. Automatic discovery works unreliable</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> To manually configure a device, add the following section to the configuration file:</p>
 <dl>
 <dd>
@@ -48,7 +48,7 @@ variable 2 = value 2</pre>
 &quot;Kyocera eSCL&quot; = <a rel="nofollow" href="http://192.168.1.102:9095/eSCL,">http://192.168.1.102:9095/eSCL,</a> eSCL
 &quot;Kyocera WSD&quot; = <a rel="nofollow" href="http://192.168.1.102:5358/WSDScanner,">http://192.168.1.102:5358/WSDScanner,</a> WSD
 &quot;Device I do not want to see&quot; = disable</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> The <code>[devices]</code> section contains all manually configured devices, one line per device, and each line contains a device name on a left side of equation and device URL on a rights side, followed by protocol (eSCL or WSD). If protocol is omitted, eSCL is assumed. You may also disable particular device by using the <code>disable</code> keyword instead of URL. </p>
 <p> In addition, you can manually configure a device by directly passing its URL in a device name without adding it to the configuration file. This takes the format <code>protocol:Device Name:URL</code>. The examples above could be written as <code>escl:Kyocera eSCL:<a rel="nofollow" href="http://192.168.1.102:9095/eSCL">http://192.168.1.102:9095/eSCL</a></code> and <code>wsd:Kyocera WSD:<a rel="nofollow" href="http://192.168.1.102:5358/WSDScanner">http://192.168.1.102:5358/WSDScanner</a></code>. </p>
 <p> To figure out URLs of available devices, the simplest way is to run a supplied <code>airscan-discover</code> tool on a computer connected with scanner to the same LAN segment. On success, this program will dump to its standard output a list of discovered devices in a format suitable for inclusion into the configuration file. </p>
@@ -81,7 +81,7 @@ ws-discovery = fast | full | off
 ; socket name (not a full path). The name will be searched for in the
 ; directory specified here. The default is /var/run.
 socket_dir = /path/to/directory</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Blacklisting Devices</h2>
 <p>This feature can be useful, if you are on a very big network and have a lot of devices around you, while interesting only in a few of them.</p>
 <dl>
@@ -91,7 +91,7 @@ model = &quot;Xerox*&quot; ; blacklist by model name
 name = &quot;HP*&quot; ; blacklist by network name
 ip = 192.168.0.1 ; blacklist by address
 ip = 192.168.0.0/24 ; blacklist the whole subnet</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Network names come from DNS-SD, WS-Discovery doesn&#8217;t provide this information. For filtering by network name to work, Avahi must be enabled and device must be discoverable via DNS-SD (not necessarily as a scanner, it&#8217;s enough if WSD scanner is discoverable as a printer via DNS-SD). </p>
 <p> Blacklisting only affects automatic discovery, and doesn&#8217;t affect manually configured devices</p>
 <h2>Debugging</h2>
@@ -110,19 +110,19 @@ enable = false | true
 trace = path
 ; Hex dump all traffic to the trace file (very verbose!)
 hexdump = false | true</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sane.d/airscan.conf</code>, <code>/etc/sane.d/airscan.d/*</code></p>
-<dd>The backend configuration files</p>
-<dt><code>/usr/LIBDIR/sane/libsane-airscan.so</code></p>
-<dd>The shared library implementing this backend</dl>
+<dt><code>/etc/sane.d/airscan.conf</code>, <code>/etc/sane.d/airscan.d/*</code></dt>
+<dd>The backend configuration files</dd>
+<dt><code>/usr/LIBDIR/sane/libsane-airscan.so</code></dt>
+<dd>The shared library implementing this backend</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_AIRSCAN</code></p>
-<dd>This variable if set to <code>true</code> or non-zero numerical value, enables debug messages, that are printed to stdout</p>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This variable alters the search path for configuration files. This is a colon-separated list of directories. These directories are searched for the airscan.conf configuration file and for the airscan.d subdirectory, before the standard path (/etc/sane.d) is searched.</dl>
+<dt><code>SANE_DEBUG_AIRSCAN</code></dt>
+<dd>This variable if set to <code>true</code> or non-zero numerical value, enables debug messages, that are printed to stdout</dd>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This variable alters the search path for configuration files. This is a colon-separated list of directories. These directories are searched for the airscan.conf configuration file and for the airscan.d subdirectory, before the standard path (/etc/sane.d) is searched.</dd></dl>
 <h2>Bugs And Support</h2>
 <p>If you have found a bug, please file a GitHub issue on a GitHub project page: <code><a rel="nofollow" href="https://github.com/alexpevzner/sane-airscan">https://github.com/alexpevzner/sane-airscan</a></code></p>
 <h2>See Also</h2>

@@ -14,10 +14,10 @@ description: "ata_std_prereset – prepare for reset"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to be reset</dl>
+</dd><dd>ATA link to be reset</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <h2>Description</h2>
 <p><i>link</i> is about to be reset. Initialize it. Failure from prereset makes libata abort whole reset sequence and give up that port, so prereset should be best-effort. It does its best to prepare for reset sequence but if things go wrong, it should just whine, not fail. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -26,5 +26,5 @@ description: "ata_std_prereset – prepare for reset"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

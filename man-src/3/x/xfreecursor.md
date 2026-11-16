@@ -10,29 +10,29 @@ description: "XRecolorCursor, XFreeCursor, XQueryBestCursor – manipulate curso
 <p>XRecolorCursor, XFreeCursor, XQueryBestCursor &#8211; manipulate cursors </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XRecolorCursor(Display *<i>display</i>, Cursor <i>cursor</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>);</p>
-<dd>int XFreeCursor(Display *<i>display</i>, Cursor <i>cursor</i>);</p>
-<dd>Status XQueryBestCursor(Display *<i>display</i>, Drawable <i>d</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>);</dl>
+<dd>int XRecolorCursor(Display *<i>display</i>, Cursor <i>cursor</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>);</dd>
+<dd>int XFreeCursor(Display *<i>display</i>, Cursor <i>cursor</i>);</dd>
+<dd>Status XQueryBestCursor(Display *<i>display</i>, Drawable <i>d</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>background_color</i></p>
-<dd>Specifies the RGB values for the background of the source.</p>
-<dt><i>cursor</i></p>
-<dd>Specifies the cursor.</p>
-<dt><i>d</i></p>
-<dd>Specifies the drawable, which indicates the screen.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>foreground_color</i></p>
-<dd>Specifies the RGB values for the foreground of the source.</p>
-<dt><i>width</i></p>
+<dt><i>background_color</i></dt>
+<dd>Specifies the RGB values for the background of the source.</dd>
+<dt><i>cursor</i></dt>
+<dd>Specifies the cursor.</dd>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable, which indicates the screen.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>foreground_color</i></dt>
+<dd>Specifies the RGB values for the foreground of the source.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height of the cursor that you want the size information for.</p>
-<dt><i>width_return</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height of the cursor that you want the size information for.</dd>
+<dt><i>width_return</i></dt>
 <dd>
-<dt><i>height_return</i></p>
-<dd>Return the best width and height that is closest to the specified width and height.</dl>
+</dd><dt><i>height_return</i></dt>
+<dd>Return the best width and height that is closest to the specified width and height.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XRecolorCursor</code> function changes the color of the specified cursor, and if the cursor is being displayed on a screen, the change is visible immediately. The pixel members of the <code>XColor</code> structures are ignored; only the RGB values are used. </p>
 <p> <code>XRecolorCursor</code> can generate a <code>BadCursor</code> error. </p>
@@ -42,10 +42,10 @@ description: "XRecolorCursor, XFreeCursor, XQueryBestCursor – manipulate curso
 <p> <code>XQueryBestCursor</code> can generate a <code>BadDrawable</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadCursor</code></p>
-<dd>A value for a Cursor argument does not name a defined Cursor.</p>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dl>
+<dt><code>BadCursor</code></dt>
+<dd>A value for a Cursor argument does not name a defined Cursor.</dd>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xcreatefontcursor/">XCreateFontCursor</a>(3), <a href="/docs/linux/man/3-xdefinecursor/">XDefineCursor</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -28,18 +28,18 @@ description: "group.conf – configuration file for the pam_group module"
 <dl>
 <dd>
 <pre>xsh;tty*&amp;!ttyp*;us;Al0000-2400;floppy</pre>
-</dl>
+</dd></dl>
 <p> Running &#8216;xsh&#8217; on tty* (any ttyXXX device), the users &#8216;sword&#8217;, &#8216;pike&#8217; and &#8216;shield&#8217; are given access to games (through membership of the floppy group) after work hours. </p>
 <dl>
 <dd>
 <pre>xsh; tty* ;sword|pike|shield;!Wk0900-1800;games, sound
 xsh; tty* ;*;Al0900-1800;floppy</pre>
-</dl>
+</dd></dl>
 <p> Any member of the group &#8216;admin&#8217; running &#8216;xsh&#8217; on tty*, is granted access (at any time) to the group &#8216;plugdev&#8217; </p>
 <dl>
 <dd>
 <pre>xsh; tty* ;%admin;Al0000-2400;plugdev</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-pam_group/">pam_group</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>

@@ -24,18 +24,16 @@ url: "/docs/linux/man/1-gm_animate/"
  A map or map series must be entered in the entry for frame 1. If a map series is only entered for frame 1, a single, full-frame animation will be displayed. If map series are entered for other frames, two to four quarter-frame animations will be displayed (see example image above). Raster maps can be added individually or as a prefix followed by a sequential number suffix. 
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> To enter maps individually, enter each map name separated by a comma (no space) from the previous map name (see the entry for frame 3 in the example image above).
-<dt>
-<dd> For a map series entered in the prefix/suffix format, the suffix can be specified as a range of numbers in side parentheses. In the example image above, &quot;map(1-4)&quot; will specified raster maps map1 through map4.
-<dt>
-<dd> The suffix for a map series also can be specified using Unix-style wildcard matching. In the examle above &quot;rdbuffer[0-1][1-9]&quot; specifies raster maps rdbuffer01 through rdbuffer19.
-<dt>
-<dd> Multiple specification forms can be mixed on a single entry line. For example, you could specify dqrast-a,rast-b,rast-(1-50),rast[0-9][0-9]&quot;. This will specify rast-a, rast-b, rast-1 through rast-50, and rast00 through rast99. 
-</dl>
+</dt><dd> To enter maps individually, enter each map name separated by a comma (no space) from the previous map name (see the entry for frame 3 in the example image above).
+</dd><dt>
+</dt><dd> For a map series entered in the prefix/suffix format, the suffix can be specified as a range of numbers in side parentheses. In the example image above, &quot;map(1-4)&quot; will specified raster maps map1 through map4.
+</dd><dt>
+</dt><dd> The suffix for a map series also can be specified using Unix-style wildcard matching. In the examle above &quot;rdbuffer[0-1][1-9]&quot; specifies raster maps rdbuffer01 through rdbuffer19.
+</dd><dt>
+</dt><dd> Multiple specification forms can be mixed on a single entry line. For example, you could specify dqrast-a,rast-b,rast-(1-50),rast[0-9][0-9]&quot;. This will specify rast-a, rast-b, rast-1 through rast-50, and rast00 through rast99. 
+</dd></dl>
 </dl>
 
 <h3>Controlling the Animation</h3>

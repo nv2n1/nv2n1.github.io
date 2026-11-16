@@ -14,12 +14,12 @@ description: "gnutls_x509_ext_import_crl_dist_points – API function"
 <p> <code>int gnutls_x509_ext_import_crl_dist_points(const gnutls_datum_t * </code><i>ext</i><code>, gnutls_x509_crl_dist_points_t </code><i>cdp</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_datum_t * ext</p>
-<dd> the DER encoded extension data</p>
-<dt>gnutls_x509_crl_dist_points_t cdp</p>
-<dd> A pointer to an initialized CRL distribution points structure.</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>const gnutls_datum_t * ext</dt>
+<dd> the DER encoded extension data</dd>
+<dt>gnutls_x509_crl_dist_points_t cdp</dt>
+<dd> A pointer to an initialized CRL distribution points structure.</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the CRL distribution points extension (2.5.29.31) and store it into the provided structure.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_ext_import_crl_dist_points – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

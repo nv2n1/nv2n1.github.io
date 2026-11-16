@@ -55,9 +55,9 @@ description: "kpropd_selinux – Security Enhanced Linux Policy for the kpropd p
 <p> Policy governs the access confined processes have to these ports. SELinux kpropd policy is very flexible allowing users to setup their kpropd processes in as secure a method as possible. </p>
 <p> The following port types are defined for kpropd: </p>
 <dl>
-<dt><code>kprop_port_t</code></p>
+<dt><code>kprop_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 754</dl>
+</dd><dd>Default Defined Ports: tcp 754</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type kpropd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -114,8 +114,8 @@ description: "kpropd_selinux – Security Enhanced Linux Policy for the kpropd p
 <p> <code>kpropd_exec_t</code> </p>
 <p> &#8211; Set files with the kpropd_exec_t type, if you want to transition an executable to the kpropd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/kpropd, /usr/sbin/_kpropd, /usr/kerberos/sbin/kpropd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/kpropd, /usr/sbin/_kpropd, /usr/kerberos/sbin/kpropd </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

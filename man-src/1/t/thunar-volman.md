@@ -14,15 +14,15 @@ description: "thunar-volman – controls configuration of thunar’s removable m
 <h2>DESCRIPTION</h2>
 <dl>
 <dt>
-<dd> thunar-volman [OPTION&#8230;]</p>
-<dt><code>-a</code>, <code>&#8211;device-added</code> &lt;udi-of-your-device&gt;</p>
-<dd> Manually tell thunar about a device</p>
-<dt><code>-c</code>, <code>&#8211;configure</code></p>
-<dd> Configure management of removable drives and media</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print version information and exit</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+</dt><dd> thunar-volman [OPTION&#8230;]</dd>
+<dt><code>-a</code>, <code>&#8211;device-added</code> &lt;udi-of-your-device&gt;</dt>
+<dd> Manually tell thunar about a device</dd>
+<dt><code>-c</code>, <code>&#8211;configure</code></dt>
+<dd> Configure management of removable drives and media</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print version information and exit</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
 <p> This manual page was written by Simon Huggins &lt;huggie [at] earth.li&gt; (with help from help2man) for the Debian project but may be used by others. </p>

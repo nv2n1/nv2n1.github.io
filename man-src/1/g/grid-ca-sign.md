@@ -20,63 +20,63 @@ description: "grid-ca-sign – Sign a certificate with a SimpleCA for use on a g
 <p> <code>-help, -h, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-ca-sign</code> and exit.</dl>
+</dt><dd> Display the command-line options to <code>grid-ca-sign</code> and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-ca-sign</code> command. The second form includes details about the package containing <code>grid-ca-sign</code>.</dl>
+</dt><dd> Display the version number of the <code>grid-ca-sign</code> command. The second form includes details about the package containing <code>grid-ca-sign</code>.</dd></dl>
 <p> <code>-in </code><i>REQUEST</i></p>
 <dl>
 <dt>
-<dd> Sign the request contained in the <i>REQUEST</i> file.</dl>
+</dt><dd> Sign the request contained in the <i>REQUEST</i> file.</dd></dl>
 <p> <code>-out </code><i>CERTIFICATE</i></p>
 <dl>
 <dt>
-<dd> Write the signed request to the <i>CERTIFICATE</i> file.</dl>
+</dt><dd> Write the signed request to the <i>CERTIFICATE</i> file.</dd></dl>
 <p> <code>-force</code></p>
 <dl>
 <dt>
-<dd> Revoke any previously issued certificate with the same subject name as in the certificate request and issue a new certificate. Otherwise, <code>grid-ca-sign</code> will refuse to sign the request.</dl>
+</dt><dd> Revoke any previously issued certificate with the same subject name as in the certificate request and issue a new certificate. Otherwise, <code>grid-ca-sign</code> will refuse to sign the request.</dd></dl>
 <p> <code>-dir </code><i>DIRECTORY</i></p>
 <dl>
 <dt>
-<dd> Sign the certificate using the Simple CA certificate and configuration located in <i>DIRECTORY</i> instead of the default.</dl>
+</dt><dd> Sign the certificate using the Simple CA certificate and configuration located in <i>DIRECTORY</i> instead of the default.</dd></dl>
 <p> <code>-openssl-help</code></p>
 <dl>
 <dt>
-<dd> Print the command-line options available for the <code>openssl ca</code> command.</dl>
+</dt><dd> Print the command-line options available for the <code>openssl ca</code> command.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Sign a certificate request using the simple CA in $HOME/SimpleCA&#8217; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % *grid-ca-sign* \
     -in usercert_request.pem \
     -out usercert.pem \
     -dir $HOME/SimpleCA
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 To sign the request please enter the password for the CA key:
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 The new signed certificate is at: /home/juser/.globus/simpleCA/newcerts/01.pem
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-ca-sign</code>: </p>
 <p> GLOBUS_LOCATION</p>
 <dl>
 <dt>
-<dd> Non-standard installation path of the Globus Toolkit.</dl>
+</dt><dd> Non-standard installation path of the Globus Toolkit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grid-cert-request/">grid-cert-request</a>(1), <a href="/docs/linux/man/1-grid-ca-create/">grid-ca-create</a>(1), grid-default-ca(1), <a href="/docs/linux/man/1-grid-ca-package/">grid-ca-package</a>(1)</p>
 <h2>AUTHOR</h2>

@@ -26,6 +26,6 @@ description: "globus_libc.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>array</i> an array of strings to concatenate (null entries are skipped)<br />
- <i>count</i> length of array</dl>
+ <i>count</i> length of array</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

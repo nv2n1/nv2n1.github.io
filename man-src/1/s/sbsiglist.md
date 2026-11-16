@@ -14,11 +14,11 @@ description: "sbsiglist – Create EFI_SIGNATURE_LIST signature databases"
 <h2>DESCRIPTION</h2>
 <p> Create an EFI_SIGNATURE_LIST from a signature file Options:</p>
 <dl>
-<dt><code>&#8211;owner</code> &lt;guid&gt;</p>
-<dd> Signature owner GUID</p>
-<dt><code>&#8211;type</code> &lt;type&gt;</p>
-<dd> Signature type. One of: x509 sha256</p>
-<dt><code>&#8211;output</code> &lt;file&gt;</p>
-<dd> write signed data to &lt;file&gt; (default &lt;sig-file&gt;.siglist) </p>
+<dt><code>&#8211;owner</code> &lt;guid&gt;</dt>
+<dd> Signature owner GUID</dd>
+<dt><code>&#8211;type</code> &lt;type&gt;</dt>
+<dd> Signature type. One of: x509 sha256</dd>
+<dt><code>&#8211;output</code> &lt;file&gt;</dt>
+<dd> write signed data to &lt;file&gt; (default &lt;sig-file&gt;.siglist) </dd>
 </dl>
 <h2>Index</h2>

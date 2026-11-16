@@ -22,12 +22,12 @@ pip install pyScss
 </pre>
 <p> It has a handful of pure-Python dependencies, which pip should install for you:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>six</code></p>
-<dt>&bull;</p>
-<dd> <code>enum34</code> (for Python 3.3 and below)</p>
-<dt>&bull;</p>
-<dd> <code>pathlib</code> (for Python 3.3 and below) </p>
+<dt>&bull;</dt>
+<dd> <code>six</code></dd>
+<dt>&bull;</dt>
+<dd> <code>enum34</code> (for Python 3.3 and below)</dd>
+<dt>&bull;</dt>
+<dd> <code>pathlib</code> (for Python 3.3 and below) </dd>
 <p> There&#8217;s also an optional C speedup module, which requires having <code>libpcre</code> and its development headers installed, with UTF-8 support enabled (which it is by default).</dl>
 <h3>Usage</h3>
 <p> Run from the command line by using <code>-m</code>: </p>
@@ -138,8 +138,8 @@ print(compiler.compile_string(&quot;a { color: red + green; }&quot;))
 </pre>
 <p> The most common arguments passed to <i>Compiler</i> are:</p>
 <dl>
-<dt><code>search_path</code></p>
-<dd> A list of paths to search for <code>@import</code>s. May be either strings or <code>pathlib.Path</code> objects.</dl>
+<dt><code>search_path</code></dt>
+<dd> A list of paths to search for <code>@import</code>s. May be either strings or <code>pathlib.Path</code> objects.</dd></dl>
 <h3>Extending pyScss</h3>
 <p> A significant advantage to using pyScss is that you can inject Python values and code into the Sass compilation process.</p>
 <h3>Injecting values</h3>
@@ -349,12 +349,12 @@ margin:<br />
 <h3>Compass support</h3>
 <p> An arbitrary cross-section of Compass 0.11 is supported:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Math functions</code>: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>round</code>, <code>ceil</code>, <code>floor</code>, <code>pi</code>, <code>e</code></p>
-<dt>&bull;</p>
-<dd> <code>Images</code>: <code>image-url</code>, <code>image-width</code>, <code>image-height</code>&#8230;</p>
-<dt>&bull;</p>
-<dd> <code>Embedded (inline) images</code>: <code>inline-image</code> </p>
+<dt>&bull;</dt>
+<dd> <code>Math functions</code>: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>round</code>, <code>ceil</code>, <code>floor</code>, <code>pi</code>, <code>e</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Images</code>: <code>image-url</code>, <code>image-width</code>, <code>image-height</code>&#8230;</dd>
+<dt>&bull;</dt>
+<dd> <code>Embedded (inline) images</code>: <code>inline-image</code> </dd>
 <p> <code>NOTE:</code> Currently, Compass support is provided by default, which has led to some surprising behavior since parts of Compass conflict with parts of CSS3. In the future, Compass will become an extension like it is for Ruby, and you will have to opt in.</dl>
 <h3>Sprites</h3>
 <p> Example: </p>
@@ -496,16 +496,16 @@ margin:
 <h3>Sass 3.3</h3>
 <p> The following Sass 3.3 improvements are not yet implemented, but are planned for the near future:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Use of <code>&amp;</code> in expressions.</p>
-<dt>&bull;</p>
-<dd> <code>@at-root</code></p>
-<dt>&bull;</p>
-<dd> Source map support.</p>
-<dt>&bull;</p>
-<dd> Using <code>&#8230;</code> multiple times in a function call, or passing a map of arguments with <code>&#8230;</code>. Likewise, <code>keywords()</code> is not implemented.</p>
-<dt>&bull;</p>
-<dd> <code>unique-id()</code>, <code>call()</code>, and the various <code>*-exists()</code> functions are not implemented.</dl>
+<dt>&bull;</dt>
+<dd> Use of <code>&amp;</code> in expressions.</dd>
+<dt>&bull;</dt>
+<dd> <code>@at-root</code></dd>
+<dt>&bull;</dt>
+<dd> Source map support.</dd>
+<dt>&bull;</dt>
+<dd> Using <code>&#8230;</code> multiple times in a function call, or passing a map of arguments with <code>&#8230;</code>. Likewise, <code>keywords()</code> is not implemented.</dd>
+<dt>&bull;</dt>
+<dd> <code>unique-id()</code>, <code>call()</code>, and the various <code>*-exists()</code> functions are not implemented.</dd></dl>
 <h2>BACK MATTER</h2>
 <h3>Reporting bugs</h3>
 <p> If you have any suggestions, bug reports, or minor annoyances, please report them to the issue tracker on GitHub: <i><a rel="nofollow" href="http://github.com/Kronuz/pyScss/issues">http://github.com/Kronuz/pyScss/issues</a></i></p>
@@ -527,312 +527,312 @@ py.test scss/tests/files/general/000-smoketest.scss
 <p> Copyright © 2012 German M. Bravo (Kronuz), with additional heavy contributions by Eevee (Alex Munroe). Licensed under the <i>MIT license</i>. </p>
 <p> pyScss is inspired by and partially derived from various projects:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Compass</i> © 2009 Christopher M. Eppstein</p>
-<dt>&bull;</p>
-<dd> <i>Sass</i> © 2006-2009 Hampton Catlin and Nathan Weizenbaum</p>
-<dt>&bull;</p>
-<dd> <i>xCSS</i> © 2010 Anton Pawlik </p>
+<dt>&bull;</dt>
+<dd> <i>Compass</i> © 2009 Christopher M. Eppstein</dd>
+<dt>&bull;</dt>
+<dd> <i>Sass</i> © 2006-2009 Hampton Catlin and Nathan Weizenbaum</dd>
+<dt>&bull;</dt>
+<dd> <i>xCSS</i> © 2010 Anton Pawlik </dd>
 <p> Special thanks to Yelp for allowing Eevee to contribute to pyScss during working hours. Yelp does not claim copyright.</dl>
 <h3>Changelog</h3>
 <h3>1.3.4 (Dec 15, 2014)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> The modulus (<code>%</code>) operator is now supported.</p>
-<dt>&bull;</p>
-<dd> <code>/</code> and <code>&#8211;</code> inside an expression work correctly; this fixes some cases of using vanilla CSS&#8217;s <code>/</code> syntax.</p>
-<dt>&bull;</p>
-<dd> Relative imports have been more fixed.</p>
-<dt>&bull;</p>
-<dd> Line numbers in error messages are&#8230; more likely to be correct.</p>
-<dt>&bull;</p>
-<dd> Sass at-blocks now parse correctly even when there&#8217;s no space after the block name, e.g. <code>@if(foo){&#8230;}</code>.</p>
-<dt>&bull;</p>
-<dd> A few more cases of <code>#{&#8230;}</code> being replaced lexically have been switched to real parsing. </p>
+<dt>&bull;</dt>
+<dd> The modulus (<code>%</code>) operator is now supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>/</code> and <code>&#8211;</code> inside an expression work correctly; this fixes some cases of using vanilla CSS&#8217;s <code>/</code> syntax.</dd>
+<dt>&bull;</dt>
+<dd> Relative imports have been more fixed.</dd>
+<dt>&bull;</dt>
+<dd> Line numbers in error messages are&#8230; more likely to be correct.</dd>
+<dt>&bull;</dt>
+<dd> Sass at-blocks now parse correctly even when there&#8217;s no space after the block name, e.g. <code>@if(foo){&#8230;}</code>.</dd>
+<dt>&bull;</dt>
+<dd> A few more cases of <code>#{&#8230;}</code> being replaced lexically have been switched to real parsing. </dd>
 <p> With these changes, pyScss can now successfully compile Zurb Foundation 5.</dl>
 <h3>1.3.3 (Nov 18, 2014)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> URLs with quotes now parse as the <i>Url</i> type, not as generic functions. Fixes some uses of <code>@import</code>.</p>
-<dt>&bull;</p>
-<dd> A <code>return</code> got lost in the Compass gradient code, which would break some uses of gradients.</p>
-<dt>&bull;</p>
-<dd> Some API work in an attempt to get django-pyscss working against 1.3.</dl>
+<dt>&bull;</dt>
+<dd> URLs with quotes now parse as the <i>Url</i> type, not as generic functions. Fixes some uses of <code>@import</code>.</dd>
+<dt>&bull;</dt>
+<dd> A <code>return</code> got lost in the Compass gradient code, which would break some uses of gradients.</dd>
+<dt>&bull;</dt>
+<dd> Some API work in an attempt to get django-pyscss working against 1.3.</dd></dl>
 <h3>1.3.2 (Oct 17, 2014)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Fix another couple embarrassing bugs, this time with the CLI.</p>
-<dt>&bull;</p>
-<dd> Fix the auto behavior of <code>join()</code> to match Ruby.</p>
-<dt>&bull;</p>
-<dd> Fully allow arbitrary expressions as map keys; previously, this only worked for the first key. LL(1) is hard.</p>
-<dt>&bull;</p>
-<dd> Restore Python 3.2 compatibility.</p>
-<dt>&bull;</p>
-<dd> Travis CI and Coveralls are now enabled.</dl>
+<dt>&bull;</dt>
+<dd> Fix another couple embarrassing bugs, this time with the CLI.</dd>
+<dt>&bull;</dt>
+<dd> Fix the auto behavior of <code>join()</code> to match Ruby.</dd>
+<dt>&bull;</dt>
+<dd> Fully allow arbitrary expressions as map keys; previously, this only worked for the first key. LL(1) is hard.</dd>
+<dt>&bull;</dt>
+<dd> Restore Python 3.2 compatibility.</dd>
+<dt>&bull;</dt>
+<dd> Travis CI and Coveralls are now enabled.</dd></dl>
 <h3>1.3.1 (Oct 16, 2014)</h3>
 <p> Fixes an embarrassing crash when compiling multiple files together.</p>
 <h3>1.3.0 (Oct 15, 2014)</h3>
 <p> This is a somewhat transitional release along the road to 2.0, which will remove a lot of deprecated features.</p>
 <h3>Sass/CSS compatibility</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Importing files from a parent directory with <code>../</code> now works (as long as the imported file is still on the search path).</p>
-<dt>&bull;</p>
-<dd> Multiple CSS imports on the same line are now left unchanged. (Previously, the line would be repeated once for each import.)</p>
-<dt>&bull;</p>
-<dd> CSS 3 character set detection is supported.</p>
-<dt>&bull;</p>
-<dd> CSS escapes within strings are supported (though, unlike Sass, are usually printed literally rather than escaped).</p>
-<dt>&bull;</p>
-<dd> Map keys may now be arbitrary expressions.</p>
-<dt>&bull;</p>
-<dd> Slurpy named arguments are now supported.</p>
-<dt>&bull;</p>
-<dd> <code>!global</code> on variable assignments is now supported (and does nothing, as in Sass).</p>
-<dt>&bull;</p>
-<dd> <i>rebeccapurple</i> is understood as a color name. </p>
+<dt>&bull;</dt>
+<dd> Importing files from a parent directory with <code>../</code> now works (as long as the imported file is still on the search path).</dd>
+<dt>&bull;</dt>
+<dd> Multiple CSS imports on the same line are now left unchanged. (Previously, the line would be repeated once for each import.)</dd>
+<dt>&bull;</dt>
+<dd> CSS 3 character set detection is supported.</dd>
+<dt>&bull;</dt>
+<dd> CSS escapes within strings are supported (though, unlike Sass, are usually printed literally rather than escaped).</dd>
+<dt>&bull;</dt>
+<dd> Map keys may now be arbitrary expressions.</dd>
+<dt>&bull;</dt>
+<dd> Slurpy named arguments are now supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>!global</code> on variable assignments is now supported (and does nothing, as in Sass).</dd>
+<dt>&bull;</dt>
+<dd> <i>rebeccapurple</i> is understood as a color name. </dd>
 <p> Additionally, a great many more constructs should now parse correctly. By default, when pyScss encounters a parse error, it replaces any interpolations and variables, and treats the result as a single opaque string. </p>
 <p> This was the only way syntax like <code>url(<a rel="nofollow" href="http://foo/bar)">http://foo/bar)</a></code> was recognized, since a colon is usually not allowed in the middle of a bareword. As a result, code like <code>background: url(&#8230;) scale-color(&#8230;);</code> didn&#8217;t work, because the url would fail to parse and so pyScss would never even know that <code>scale-color</code> is supposed to be a function call. </p>
 <p> Now, the parser understands most of the unusual quirks of CSS syntax:</p>
-<dt>&bull;</p>
-<dd> <code>()</code> is recognized as an empty list.</p>
-<dt>&bull;</p>
-<dd> <code>url()</code> is fully supported.</p>
-<dt>&bull;</p>
-<dd> <code>expression()</code>, <code>alpha(opacity=&#8230;)</code>, and <code>calc()</code> are supported (and left alone, except for interpolation).</p>
-<dt>&bull;</p>
-<dd> Interpolation is part of the parser, rather than being applied before parsing, so there should be far fewer bugs with it.</p>
-<dt>&bull;</p>
-<dd> CSS escapes within barewords are recognized (and ignored).</p>
-<dt>&bull;</p>
-<dd> <code>!important</code> may have whitespace after the <code>!</code>. </p>
+<dt>&bull;</dt>
+<dd> <code>()</code> is recognized as an empty list.</dd>
+<dt>&bull;</dt>
+<dd> <code>url()</code> is fully supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>expression()</code>, <code>alpha(opacity=&#8230;)</code>, and <code>calc()</code> are supported (and left alone, except for interpolation).</dd>
+<dt>&bull;</dt>
+<dd> Interpolation is part of the parser, rather than being applied before parsing, so there should be far fewer bugs with it.</dd>
+<dt>&bull;</dt>
+<dd> CSS escapes within barewords are recognized (and ignored).</dd>
+<dt>&bull;</dt>
+<dd> <code>!important</code> may have whitespace after the <code>!</code>. </dd>
 <p> Glossing over a bad parse now spits out a deprecation warning, and will be removed entirely in 2.0.</dl>
 <h3>Bug fixes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Old-style pseudo-element selectors (<code>:before</code> and friends, written with only one colon) always stay at the end of the selector.</p>
-<dt>&bull;</p>
-<dd> The CSS3 <code>grayscale(90%)</code> function is now left alone, rather than being treated as a Sass function. (Previously, only unitless numbers would trigger this behavior.)</p>
-<dt>&bull;</p>
-<dd> Placeholder selectors (<code>%foo</code>) no longer end up in the output.</p>
-<dt>&bull;</p>
-<dd> Iterating over a list of lists with a single variable works (again).</p>
-<dt>&bull;</p>
-<dd> File path handling is much more polite with Windows directory separators.</p>
-<dt>&bull;</p>
-<dd> At-rules broken across several lines are now recognized correctly.</p>
-<dt>&bull;</p>
-<dd> <code>@for &#8230; to</code> now excludes the upper bound.</p>
-<dt>&bull;</p>
-<dd> <code>@extend</code> no longer shuffles rules around, and should now produce rules in the same order as Ruby Sass. It also produces rules in the correct order when extending from the same rule more than once. Hopefully it&#8217;s now correct, once and for all.</p>
-<dt>&bull;</p>
-<dd> Fixed a couple more Compass gradient bugs. Probably.</dl>
+<dt>&bull;</dt>
+<dd> Old-style pseudo-element selectors (<code>:before</code> and friends, written with only one colon) always stay at the end of the selector.</dd>
+<dt>&bull;</dt>
+<dd> The CSS3 <code>grayscale(90%)</code> function is now left alone, rather than being treated as a Sass function. (Previously, only unitless numbers would trigger this behavior.)</dd>
+<dt>&bull;</dt>
+<dd> Placeholder selectors (<code>%foo</code>) no longer end up in the output.</dd>
+<dt>&bull;</dt>
+<dd> Iterating over a list of lists with a single variable works (again).</dd>
+<dt>&bull;</dt>
+<dd> File path handling is much more polite with Windows directory separators.</dd>
+<dt>&bull;</dt>
+<dd> At-rules broken across several lines are now recognized correctly.</dd>
+<dt>&bull;</dt>
+<dd> <code>@for &#8230; to</code> now excludes the upper bound.</dd>
+<dt>&bull;</dt>
+<dd> <code>@extend</code> no longer shuffles rules around, and should now produce rules in the same order as Ruby Sass. It also produces rules in the correct order when extending from the same rule more than once. Hopefully it&#8217;s now correct, once and for all.</dd>
+<dt>&bull;</dt>
+<dd> Fixed a couple more Compass gradient bugs. Probably.</dd></dl>
 <h3>New features</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Compatibility with Python 3.2, allegedly.</p>
-<dt>&bull;</p>
-<dd> Support for building SVG font sheets from within stylesheets.</p>
-<dt>&bull;</p>
-<dd> Error messages have been improved once again: parse errors should be somewhat less cryptic, the source of mixins is included in a traceback, and missing closing braces are reported.</dl>
+<dt>&bull;</dt>
+<dd> Compatibility with Python 3.2, allegedly.</dd>
+<dt>&bull;</dt>
+<dd> Support for building SVG font sheets from within stylesheets.</dd>
+<dt>&bull;</dt>
+<dd> Error messages have been improved once again: parse errors should be somewhat less cryptic, the source of mixins is included in a traceback, and missing closing braces are reported.</dd></dl>
 <h3>Backwards-incompatible changes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Missing imports are now fatal.</p>
-<dt>&bull;</p>
-<dd> Much sloppy behavior or reliance on old xCSS features will now produce deprecation warnings. All such behaviors will be removed in pyScss 2.0.</dl>
+<dt>&bull;</dt>
+<dd> Missing imports are now fatal.</dd>
+<dt>&bull;</dt>
+<dd> Much sloppy behavior or reliance on old xCSS features will now produce deprecation warnings. All such behaviors will be removed in pyScss 2.0.</dd></dl>
 <h3>Internals</h3>
 <dl>
-<dt>&bull;</p>
-<dd> The C speedups module is now Unicode-aware, and works under CPython 3.</p>
-<dt>&bull;</p>
-<dd> There&#8217;s no longer a runtime warning if the speedups module is not found.</p>
-<dt>&bull;</p>
-<dd> pyScss is now (a lot more) Unicode-clean; everything internally is treated as text, not bytes.</p>
-<dt>&bull;</p>
-<dd> Compiling the grammar is now much less painful, and doesn&#8217;t require copy-pasting anything.</p>
-<dt>&bull;</p>
-<dd> Several large modules have been broken up further. <code>__init__</code> is, at last, virtually empty.</p>
-<dt>&bull;</p>
-<dd> All the built-in functions have been moved into built-in extensions.</dl>
+<dt>&bull;</dt>
+<dd> The C speedups module is now Unicode-aware, and works under CPython 3.</dd>
+<dt>&bull;</dt>
+<dd> There&#8217;s no longer a runtime warning if the speedups module is not found.</dd>
+<dt>&bull;</dt>
+<dd> pyScss is now (a lot more) Unicode-clean; everything internally is treated as text, not bytes.</dd>
+<dt>&bull;</dt>
+<dd> Compiling the grammar is now much less painful, and doesn&#8217;t require copy-pasting anything.</dd>
+<dt>&bull;</dt>
+<dd> Several large modules have been broken up further. <code>__init__</code> is, at last, virtually empty.</dd>
+<dt>&bull;</dt>
+<dd> All the built-in functions have been moved into built-in extensions.</dd></dl>
 <h3>1.2.0 (Oct 8, 2013)</h3>
 <p> This is a significant release that greatly increases compatibility with the reference compiler; in particular, the Sass port of Bootstrap now compiles. </p>
 <p> There are a lot of changes here, so please feel free to report any bugs you see! The goal is 100% compatibility with the Ruby project.</p>
 <h3>Missing Sass features</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Dashes and underscores are treated as interchangeable in variable, function, and mixin names.</p>
-<dt>&bull;</p>
-<dd> Rule blocks in the form <code>background: red { &#8230; }</code> are now supported.</p>
-<dt>&bull;</p>
-<dd> Colors are output as their shortest representation, and never as <code>hsl()</code>. The separate compiler options for compressing colors have been removed.</p>
-<dt>&bull;</p>
-<dd> The color modification functions (<code>adjust-color</code>, etc.) now work reliably.</p>
-<dt>&bull;</p>
-<dd> <code>transparent</code> is recognized as a color.</p>
-<dt>&bull;</p>
-<dd> Unrecognized units are now supported and treated as opaque.</p>
-<dt>&bull;</p>
-<dd> Arbitrary combinations of units (e.g., <code>px * px</code>) are supported for intermediate values. Unit cancellation now works reliably.</p>
-<dt>&bull;</p>
-<dd> Comparison and addition are now more in line with the Ruby behavior.</p>
-<dt>&bull;</p>
-<dd> <code>/</code> is now left untouched when it appears between literals, as in <code>font: 0 / 0</code>.</p>
-<dt>&bull;</p>
-<dd> <code>null</code> is supported.</p>
-<dt>&bull;</p>
-<dd> <code>zip()</code> is supported.</p>
-<dt>&bull;</p>
-<dd> <code>grayscale()</code> now knows it&#8217;s also a CSS3 filter function, and won&#8217;t be evaluated if its argument is a number.</p>
-<dt>&bull;</p>
-<dd> Slurpy arguments (<code>some-function($args&#8230;)</code>) are supported.</p>
-<dt>&bull;</p>
-<dd> <code>@extend</code> has been greatly improved: it eliminates common ancestors and works in many complex cases that used to produce strange results.</p>
-<dt>&bull;</p>
-<dd> Several Compass functions now adhere more closely to Compass&#8217;s behavior. <code>linear-gradient()</code> is less likely to wreck valid CSS3 syntax.</p>
-<dt>&bull;</p>
-<dd> Compass&#8217;s <code>e()</code>, <code>pow()</code>, <code>log()</code>, and <code>sqrt()</code> are now supported.</dl>
+<dt>&bull;</dt>
+<dd> Dashes and underscores are treated as interchangeable in variable, function, and mixin names.</dd>
+<dt>&bull;</dt>
+<dd> Rule blocks in the form <code>background: red { &#8230; }</code> are now supported.</dd>
+<dt>&bull;</dt>
+<dd> Colors are output as their shortest representation, and never as <code>hsl()</code>. The separate compiler options for compressing colors have been removed.</dd>
+<dt>&bull;</dt>
+<dd> The color modification functions (<code>adjust-color</code>, etc.) now work reliably.</dd>
+<dt>&bull;</dt>
+<dd> <code>transparent</code> is recognized as a color.</dd>
+<dt>&bull;</dt>
+<dd> Unrecognized units are now supported and treated as opaque.</dd>
+<dt>&bull;</dt>
+<dd> Arbitrary combinations of units (e.g., <code>px * px</code>) are supported for intermediate values. Unit cancellation now works reliably.</dd>
+<dt>&bull;</dt>
+<dd> Comparison and addition are now more in line with the Ruby behavior.</dd>
+<dt>&bull;</dt>
+<dd> <code>/</code> is now left untouched when it appears between literals, as in <code>font: 0 / 0</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>null</code> is supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>zip()</code> is supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>grayscale()</code> now knows it&#8217;s also a CSS3 filter function, and won&#8217;t be evaluated if its argument is a number.</dd>
+<dt>&bull;</dt>
+<dd> Slurpy arguments (<code>some-function($args&#8230;)</code>) are supported.</dd>
+<dt>&bull;</dt>
+<dd> <code>@extend</code> has been greatly improved: it eliminates common ancestors and works in many complex cases that used to produce strange results.</dd>
+<dt>&bull;</dt>
+<dd> Several Compass functions now adhere more closely to Compass&#8217;s behavior. <code>linear-gradient()</code> is less likely to wreck valid CSS3 syntax.</dd>
+<dt>&bull;</dt>
+<dd> Compass&#8217;s <code>e()</code>, <code>pow()</code>, <code>log()</code>, and <code>sqrt()</code> are now supported.</dd></dl>
 <h3>Bug fixes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Interactive mode works. Again.</p>
-<dt>&bull;</p>
-<dd> Color names in strings and selectors are no longer replaced with hex equivalents.</p>
-<dt>&bull;</p>
-<dd> Unrecognized <code>@</code>-rule blocks such as <code>@keyframes</code> are left alone, rather than being treated like selectors.</p>
-<dt>&bull;</p>
-<dd> <code>@media</code> blocks aren&#8217;t repeated for every rule inside.</p>
-<dt>&bull;</p>
-<dd> Pound-interpolation always drops quotes on strings.</p>
-<dt>&bull;</p>
-<dd> Single quoted strings no longer lose their quotes when rendered.</p>
-<dt>&bull;</p>
-<dd> <code>+ foo { &#8230; }</code> is now recognized as a nested block, not an include.</p>
-<dt>&bull;</p>
-<dd> <code>color-stop()</code> and several proposed CSS4 functions no longer produce &quot;unrecognized function&quot; warnings.</p>
-<dt>&bull;</p>
-<dd> Several obscure bugs with variable scoping have been fixed, though a couple others remain.</p>
-<dt>&bull;</p>
-<dd> Several bugfixes to the C speedups module to bring it in line with the behavior of the pure-Python scanner.</dl>
+<dt>&bull;</dt>
+<dd> Interactive mode works. Again.</dd>
+<dt>&bull;</dt>
+<dd> Color names in strings and selectors are no longer replaced with hex equivalents.</dd>
+<dt>&bull;</dt>
+<dd> Unrecognized <code>@</code>-rule blocks such as <code>@keyframes</code> are left alone, rather than being treated like selectors.</dd>
+<dt>&bull;</dt>
+<dd> <code>@media</code> blocks aren&#8217;t repeated for every rule inside.</dd>
+<dt>&bull;</dt>
+<dd> Pound-interpolation always drops quotes on strings.</dd>
+<dt>&bull;</dt>
+<dd> Single quoted strings no longer lose their quotes when rendered.</dd>
+<dt>&bull;</dt>
+<dd> <code>+ foo { &#8230; }</code> is now recognized as a nested block, not an include.</dd>
+<dt>&bull;</dt>
+<dd> <code>color-stop()</code> and several proposed CSS4 functions no longer produce &quot;unrecognized function&quot; warnings.</dd>
+<dt>&bull;</dt>
+<dd> Several obscure bugs with variable scoping have been fixed, though a couple others remain.</dd>
+<dt>&bull;</dt>
+<dd> Several bugfixes to the C speedups module to bring it in line with the behavior of the pure-Python scanner.</dd></dl>
 <h3>New features</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Python 3 support. As a result, Python 2.5 no longer works; whether this is a bug or a feature is not yet clear.</p>
-<dt>&bull;</p>
-<dd> It&#8217;s possible to write custom Sass functions in Python, though the API for this is not final.</p>
-<dt>&bull;</p>
-<dd> Experimental support for the map type and destructuring <code>@each</code>, both unreleased additions to the Ruby project.</p>
-<dt>&bull;</p>
-<dd> Support for the new string and list functions in Sass 3.3.</p>
-<dt>&bull;</p>
-<dd> Added <code>background-brushed</code>.</dl>
+<dt>&bull;</dt>
+<dd> Python 3 support. As a result, Python 2.5 no longer works; whether this is a bug or a feature is not yet clear.</dd>
+<dt>&bull;</dt>
+<dd> It&#8217;s possible to write custom Sass functions in Python, though the API for this is not final.</dd>
+<dt>&bull;</dt>
+<dd> Experimental support for the map type and destructuring <code>@each</code>, both unreleased additions to the Ruby project.</dd>
+<dt>&bull;</dt>
+<dd> Support for the new string and list functions in Sass 3.3.</dd>
+<dt>&bull;</dt>
+<dd> Added <code>background-brushed</code>.</dd></dl>
 <h3>Backwards-incompatible changes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Configuration via monkeypatching the <code>scss</code> module no longer works. Monkeypatch <code>scss.config</code> instead.</p>
-<dt>&bull;</p>
-<dd> <code>em</code> and <code>px</code> are no longer compatible.</p>
-<dt>&bull;</p>
-<dd> Unrecognized variable names are now a fatal error.</dl>
+<dt>&bull;</dt>
+<dd> Configuration via monkeypatching the <code>scss</code> module no longer works. Monkeypatch <code>scss.config</code> instead.</dd>
+<dt>&bull;</dt>
+<dd> <code>em</code> and <code>px</code> are no longer compatible.</dd>
+<dt>&bull;</dt>
+<dd> Unrecognized variable names are now a fatal error.</dd></dl>
 <h3>Internals</h3>
 <dl>
-<dt>&bull;</p>
-<dd> No longer a single 5000-line file!</p>
-<dt>&bull;</p>
-<dd> Vastly expanded test suite, including some experimental tests borrowed from the Ruby and C implementations.</p>
-<dt>&bull;</p>
-<dd> Parser now produces an AST rather than evaluating expressions during the parse, which allows for heavier caching and fixes some existing cache bugs.</p>
-<dt>&bull;</p>
-<dd> The type system has been virtually rewritten; types now act much less like Python types, and compilation uses Sass types throughout rather than mixing Python types with Sass types.</dl>
+<dt>&bull;</dt>
+<dd> No longer a single 5000-line file!</dd>
+<dt>&bull;</dt>
+<dd> Vastly expanded test suite, including some experimental tests borrowed from the Ruby and C implementations.</dd>
+<dt>&bull;</dt>
+<dd> Parser now produces an AST rather than evaluating expressions during the parse, which allows for heavier caching and fixes some existing cache bugs.</dd>
+<dt>&bull;</dt>
+<dd> The type system has been virtually rewritten; types now act much less like Python types, and compilation uses Sass types throughout rather than mixing Python types with Sass types.</dd></dl>
 <h3>1.1.5 (Feb 15, 2013)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <code>debug_info</code> now properly produces rules that can be used by FireSass and Google Chrome SASS Source Maps.</p>
-<dt>&bull;</p>
-<dd> Improved memory usage for large sets of files to be used as sprites.</p>
-<dt>&bull;</p>
-<dd> Warns about IE 4095 maximum number of selectors.</p>
-<dt>&bull;</p>
-<dd> <code>debug_info</code> prints info as comments if specified as <code>comments</code>.</p>
-<dt>&bull;</p>
-<dd> Better handling of undefined variables.</p>
-<dt>&bull;</p>
-<dd> Added CSS filter functions and <code>skewX</code> <code>skewY</code>.</p>
-<dt>&bull;</p>
-<dd> Command line tool and entry point fixed.</p>
-<dt>&bull;</p>
-<dd> Fix cache buster URLs when paths already include queries or fragments.</p>
-<dt>&bull;</p>
-<dd> Hashable Values.</dl>
+<dt>&bull;</dt>
+<dd> <code>debug_info</code> now properly produces rules that can be used by FireSass and Google Chrome SASS Source Maps.</dd>
+<dt>&bull;</dt>
+<dd> Improved memory usage for large sets of files to be used as sprites.</dd>
+<dt>&bull;</dt>
+<dd> Warns about IE 4095 maximum number of selectors.</dd>
+<dt>&bull;</dt>
+<dd> <code>debug_info</code> prints info as comments if specified as <code>comments</code>.</dd>
+<dt>&bull;</dt>
+<dd> Better handling of undefined variables.</dd>
+<dt>&bull;</dt>
+<dd> Added CSS filter functions and <code>skewX</code> <code>skewY</code>.</dd>
+<dt>&bull;</dt>
+<dd> Command line tool and entry point fixed.</dd>
+<dt>&bull;</dt>
+<dd> Fix cache buster URLs when paths already include queries or fragments.</dd>
+<dt>&bull;</dt>
+<dd> Hashable Values.</dd></dl>
 <h3>1.1.4 (Aug 8, 2012)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Added <code>&#8211;debug-info</code> command line option (for <i>FireSass</i> output).</p>
-<dt>&bull;</p>
-<dd> Added compass helper function <code>reject()</code>.</p>
-<dt>&bull;</p>
-<dd> Added <code>undefined</code> keyword for undefined variables.</dl>
+<dt>&bull;</dt>
+<dd> Added <code>&#8211;debug-info</code> command line option (for <i>FireSass</i> output).</dd>
+<dt>&bull;</dt>
+<dd> Added compass helper function <code>reject()</code>.</dd>
+<dt>&bull;</dt>
+<dd> Added <code>undefined</code> keyword for undefined variables.</dd></dl>
 <h3>1.1.3 (Jan 9, 2012)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Support for the new Sass 3.2.0 features (<code>@content</code> and placeholder selectors)</p>
-<dt>&bull;</p>
-<dd> Fixed bug with line numbers throwing an exception.</dl>
+<dt>&bull;</dt>
+<dd> Support for the new Sass 3.2.0 features (<code>@content</code> and placeholder selectors)</dd>
+<dt>&bull;</dt>
+<dd> Fixed bug with line numbers throwing an exception.</dd></dl>
 <h3>1.1.2 (Jan 3, 2012)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Regression bug fixed from 1.1.1</dl>
+<dt>&bull;</dt>
+<dd> Regression bug fixed from 1.1.1</dd></dl>
 <h3>1.1.1 (Jan 2, 2012)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Added optional C speedup module for an amazing boost in scanning speed!</p>
-<dt>&bull;</p>
-<dd> Added <code>headings</code>, <code>stylesheet-url</code>, <code>font-url</code>, <code>font-files</code>, <code>inline-font-files</code> and <code>sprite-names</code>.</dl>
+<dt>&bull;</dt>
+<dd> Added optional C speedup module for an amazing boost in scanning speed!</dd>
+<dt>&bull;</dt>
+<dd> Added <code>headings</code>, <code>stylesheet-url</code>, <code>font-url</code>, <code>font-files</code>, <code>inline-font-files</code> and <code>sprite-names</code>.</dd></dl>
 <h3>1.1.0 (Dec 22, 2011)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Added <code>min()</code> and <code>max()</code> for lists.</p>
-<dt>&bull;</p>
-<dd> Removed exception raise.</dl>
+<dt>&bull;</dt>
+<dd> Added <code>min()</code> and <code>max()</code> for lists.</dd>
+<dt>&bull;</dt>
+<dd> Removed exception raise.</dd></dl>
 <h3>1.0.9 (Dec 22, 2011)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Optimizations in the scanner.</p>
-<dt>&bull;</p>
-<dd> Added <code>background-noise()</code> for compass-recipes support.</p>
-<dt>&bull;</p>
-<dd> <code>enumerate()</code> and <code>range()</code> can go backwards. Ex.: <code>range(3, 0)</code> goes from 3 to 0.</p>
-<dt>&bull;</p>
-<dd> Added line numbers and files for errors.</p>
-<dt>&bull;</p>
-<dd> Added support for <i>Firebug</i> with <i>FireSass</i>.</p>
-<dt>&bull;</p>
-<dd> <code>nth(n)</code> is round (returns the <code>nth mod len</code> item of the list).</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;watch</code> added to the command line.</p>
-<dt>&bull;</p>
-<dd> Several bugs fixed.</dl>
+<dt>&bull;</dt>
+<dd> Optimizations in the scanner.</dd>
+<dt>&bull;</dt>
+<dd> Added <code>background-noise()</code> for compass-recipes support.</dd>
+<dt>&bull;</dt>
+<dd> <code>enumerate()</code> and <code>range()</code> can go backwards. Ex.: <code>range(3, 0)</code> goes from 3 to 0.</dd>
+<dt>&bull;</dt>
+<dd> Added line numbers and files for errors.</dd>
+<dt>&bull;</dt>
+<dd> Added support for <i>Firebug</i> with <i>FireSass</i>.</dd>
+<dt>&bull;</dt>
+<dd> <code>nth(n)</code> is round (returns the <code>nth mod len</code> item of the list).</dd>
+<dt>&bull;</dt>
+<dd> <code>&#8211;watch</code> added to the command line.</dd>
+<dt>&bull;</dt>
+<dd> Several bugs fixed.</dd></dl>
 <h3>1.0.8 (May 13, 2011)</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Changed source color (<code>$src-color</code>) default to black.</p>
-<dt>&bull;</p>
-<dd> Moved the module filename to <code>__init__.py</code> and module renamed back to scss.</p>
-<dt>&bull;</p>
-<dd> <i>genindex</i></p>
-<dt>&bull;</p>
-<dd> <i>modindex</i></p>
-<dt>&bull;</p>
-<dd> <i>search</i></dl>
+<dt>&bull;</dt>
+<dd> Changed source color (<code>$src-color</code>) default to black.</dd>
+<dt>&bull;</dt>
+<dd> Moved the module filename to <code>__init__.py</code> and module renamed back to scss.</dd>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>search</i></dd></dl>
 <h2>AUTHOR</h2>
 <p> German M. Bravo (Kronuz)</p>
 <h2>COPYRIGHT</h2>
 <p> 2013, German M. Bravo (Kronuz) </p>
 <h2>Index</h2>
-<dt><a href="#lbBX">BACK MATTER</a></p>
+<dt><a href="#lbBX">BACK MATTER</a></dt>
 <dd>
-<dt><a href="#lbDB">AUTHOR</a></p>
+</dd><dt><a href="#lbDB">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbDC">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbDC">COPYRIGHT</a></dt>
+<dd></dd></dl>

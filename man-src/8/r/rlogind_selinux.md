@@ -69,12 +69,12 @@ description: "rlogind_selinux – Security Enhanced Linux Policy for the rlogind
 <p> Policy governs the access confined processes have to these ports. SELinux rlogind policy is very flexible allowing users to setup their rlogind processes in as secure a method as possible. </p>
 <p> The following port types are defined for rlogind: </p>
 <dl>
-<dt><code>rlogin_port_t</code></p>
+<dt><code>rlogin_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 543,2105 </p>
-<dt><code>rlogind_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 543,2105 </dd>
+<dt><code>rlogind_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 513</dl>
+</dd><dd>Default Defined Ports: tcp 513</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type rlogind_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>auth_cache_t</code> </p>
@@ -183,14 +183,14 @@ description: "rlogind_selinux – Security Enhanced Linux Policy for the rlogind
 <p> <code>rlogind_exec_t</code> </p>
 <p> &#8211; Set files with the rlogind_exec_t type, if you want to transition an executable to the rlogind_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/telnetlogin, /usr/sbin/in.rlogind, /usr/kerberos/sbin/klogind </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/telnetlogin, /usr/sbin/in.rlogind, /usr/kerberos/sbin/klogind </dd>
 </dl>
 <p> <code>rlogind_home_t</code> </p>
 <p> &#8211; Set files with the rlogind_home_t type, if you want to store rlogind files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.rlogin, /root/.rhosts, /home/[^/]+/.rlogin, /home/[^/]+/.rhosts </p>
+<dt>Paths:</dt>
+<dd>/root/.rlogin, /root/.rhosts, /home/[^/]+/.rlogin, /home/[^/]+/.rhosts </dd>
 </dl>
 <p> <code>rlogind_keytab_t</code> </p>
 <p> &#8211; Set files with the rlogind_keytab_t type, if you want to treat the files as kerberos keytab files. </p>

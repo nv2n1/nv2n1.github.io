@@ -17,7 +17,7 @@ description: "guilt-graph – Create a patch dependency graph"
 <p> &lt;patchname&gt;</p>
 <dl>
 <dt>
-<dd> Instead of starting with the topmost applied patch, start with &lt;patchname&gt;.</dl>
+</dt><dd> Instead of starting with the topmost applied patch, start with &lt;patchname&gt;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -26,10 +26,10 @@ description: "guilt-graph – Create a patch dependency graph"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
 <h2>Index</h2>

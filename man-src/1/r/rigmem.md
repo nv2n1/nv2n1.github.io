@@ -19,43 +19,43 @@ description: "rigmem – backup and restore memory of radio transceivers and rec
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
 <p> Here is a summary of the supported options:</p>
 <dl>
-<dt><code>-m, &#8211;model=id</code></p>
+<dt><code>-m, &#8211;model=id</code></dt>
 <dd> Select radio model number. See model list (use &#8216;rigctl -l&#8217;).<br />
- NB: <code>rigmem</code> (or third party software) will use rig model 1901 when using <code>rpc.rigd</code>.</p>
-<dt><code>-r, &#8211;rig-file=device</code></p>
-<dd> Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</p>
-<dt><code>-s, &#8211;serial-speed=baud</code></p>
-<dd> Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</p>
-<dt><code>-c, &#8211;civaddr=id</code></p>
+ NB: <code>rigmem</code> (or third party software) will use rig model 1901 when using <code>rpc.rigd</code>.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd> Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd> Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
 <dd> Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs.<br />
- NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</p>
-<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></p>
+ NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
 <dd> Set config parameter. e.g. stop_bits=2<br />
- Use -L option of <code>rigctl</code> for a list.</p>
-<dt><code>-x, &#8211;xml</code></p>
-<dd> Use XML format instead of CSV, if libxml2 is available.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Set verbose mode, cumulative (see DIAGNOSTICS below).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show a summary of these options and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show version of <code>rigmem</code> and exit.</dl>
+ Use -L option of <code>rigctl</code> for a list.</dd>
+<dt><code>-x, &#8211;xml</code></dt>
+<dd> Use XML format instead of CSV, if libxml2 is available.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Set verbose mode, cumulative (see DIAGNOSTICS below).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show a summary of these options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of <code>rigmem</code> and exit.</dd></dl>
 <p> <code>NOTE!</code> Some options may not be implemented by a given backend and will return an error. This is most likely to occur with the <i>&#8211;set-conf</i> option.</p>
 <h2>COMMANDS</h2>
 <p> Backup and restore are supported for basic CSV file and XML format where available. </p>
 <p> Please note that the backend for the radio to be controlled, or the radio itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error message. </p>
 <p> Here is a summary of the supported commands:</p>
 <dl>
-<dt><code>save</code></p>
-<dd> Save all the content of memory in a CSV (or XML) file given as an argument to the command.</p>
-<dt><code>load</code></p>
-<dd> Load the content into all the memory from a CSV (or XML) file given as an argument to the command.</p>
-<dt><code>save_parm</code></p>
-<dd> Save all the parameters of the radio in a CSV (or XML) file given as an argument to the command.</p>
-<dt><code>load_parm</code></p>
-<dd> Load the parameters of the radio from a CSV (or XML) file given as an argument to the command.</p>
-<dt><code>clear</code></p>
-<dd> This is a very <code>DANGEROUS</code> command, as it will completely clear out everything you have programmed in the memory of your radio. <code>ALL DATA WILL BE LOST</code>. Use at your own risk!</dl>
+<dt><code>save</code></dt>
+<dd> Save all the content of memory in a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>load</code></dt>
+<dd> Load the content into all the memory from a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>save_parm</code></dt>
+<dd> Save all the parameters of the radio in a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>load_parm</code></dt>
+<dd> Load the parameters of the radio from a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>clear</code></dt>
+<dd> This is a very <code>DANGEROUS</code> command, as it will completely clear out everything you have programmed in the memory of your radio. <code>ALL DATA WILL BE LOST</code>. Use at your own risk!</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> The <code>-v</code>, <code>&#8211;version</code> option allows different levels of diagnostics to be output to <code>stderr</code> and correspond to -v for BUG, -vv for ERR, -vvv for WARN, -vvvv for VERBOSE, or -vvvvv for TRACE. </p>
 <p> A given verbose level is useful for providing needed debugging information to the email address below. For example, TRACE output shows all of the values sent to and received from the radio which is very useful for radio backend library development and may be requested by the developers.</p>

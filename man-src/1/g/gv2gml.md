@@ -17,20 +17,20 @@ description: "gml2gv,gv2gml – GML-DOT converters"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Turns on verbose mode</p>
-<dt><code>-?</code></p>
-<dd> Prints usage information and exits.</p>
-<dt><code>-g</code><i>gname</i></p>
-<dd> The string <i>gname</i> is used as the name of the generated graph. If multiple graphs are generated, subsequent graphs use the name <i>gname</i> appended with an integer.</p>
-<dt><code>-o</code><i>outfile</i></p>
-<dd> Prints output to the file <i>outfile</i>. If not given, <code>gml2gv</code> uses stdout.</p>
-<dt></dl>
+<dt><code>-v</code></dt>
+<dd> Turns on verbose mode</dd>
+<dt><code>-?</code></dt>
+<dd> Prints usage information and exits.</dd>
+<dt><code>-g</code><i>gname</i></dt>
+<dd> The string <i>gname</i> is used as the name of the generated graph. If multiple graphs are generated, subsequent graphs use the name <i>gname</i> appended with an integer.</dd>
+<dt><code>-o</code><i>outfile</i></dt>
+<dd> Prints output to the file <i>outfile</i>. If not given, <code>gml2gv</code> uses stdout.</dd>
+<dt></dt></dl>
 <h2>OPERANDS</h2>
-<dd> The following operand is supported:</p>
+<dd> The following operand is supported:</dd>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in GML. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in GML. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>RETURN CODES</h2>
 <p> Return <code>0</code> if there were no problems during conversion; and non-zero if any error occurred.</p>
 <h2>LIMITATIONS</h2>

@@ -37,16 +37,16 @@ int
 <code>Tcl_InitBignumFromDouble</code>(<i>interp, doubleValue, bigValue</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>intValue</i> (in) Integer value used to initialize or set a Tcl object.</p>
-<dd>long <i>longValue</i> (in) Long integer value used to initialize or set a Tcl object.</p>
-<dd>Tcl_WideInt <i>wideValue</i> (in) Wide integer value used to initialize or set a Tcl object.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetIntObj</code>, <code>Tcl_SetLongObj</code>, <code>Tcl_SetWideIntObj</code>, and <code>Tcl_SetBignumObj</code>, this points to the object in which to store an integral value. For <code>Tcl_GetIntFromObj</code>, <code>Tcl_GetLongFromObj</code>, <code>Tcl_GetWideIntFromObj</code>, <code>Tcl_GetBignumFromObj</code>, and <code>Tcl_TakeBignumFromObj</code>, this refers to the object from which to retrieve an integral value.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) When non-NULL, an error message is left here when integral value retrieval fails.</p>
-<dd>int <i>*intPtr</i> (out) Points to place to store the integer value retrieved from <i>objPtr</i>.</p>
-<dd>long <i>*longPtr</i> (out) Points to place to store the long integer value retrieved from <i>objPtr</i>.</p>
-<dd>Tcl_WideInt <i>*widePtr</i> (out) Points to place to store the wide integer value retrieved from <i>objPtr</i>.</p>
-<dd>mp_int <i>*bigValue</i> (in/out) Points to a multi-precision integer structure declared by the LibTomMath library.</p>
-<dd>double <i>doubleValue</i> (in) Double value from which the integer part is determined and used to initialize a multi-precision integer value. </p>
+<dd>int <i>intValue</i> (in) Integer value used to initialize or set a Tcl object.</dd>
+<dd>long <i>longValue</i> (in) Long integer value used to initialize or set a Tcl object.</dd>
+<dd>Tcl_WideInt <i>wideValue</i> (in) Wide integer value used to initialize or set a Tcl object.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetIntObj</code>, <code>Tcl_SetLongObj</code>, <code>Tcl_SetWideIntObj</code>, and <code>Tcl_SetBignumObj</code>, this points to the object in which to store an integral value. For <code>Tcl_GetIntFromObj</code>, <code>Tcl_GetLongFromObj</code>, <code>Tcl_GetWideIntFromObj</code>, <code>Tcl_GetBignumFromObj</code>, and <code>Tcl_TakeBignumFromObj</code>, this refers to the object from which to retrieve an integral value.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) When non-NULL, an error message is left here when integral value retrieval fails.</dd>
+<dd>int <i>*intPtr</i> (out) Points to place to store the integer value retrieved from <i>objPtr</i>.</dd>
+<dd>long <i>*longPtr</i> (out) Points to place to store the long integer value retrieved from <i>objPtr</i>.</dd>
+<dd>Tcl_WideInt <i>*widePtr</i> (out) Points to place to store the wide integer value retrieved from <i>objPtr</i>.</dd>
+<dd>mp_int <i>*bigValue</i> (in/out) Points to a multi-precision integer structure declared by the LibTomMath library.</dd>
+<dd>double <i>doubleValue</i> (in) Double value from which the integer part is determined and used to initialize a multi-precision integer value. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are used to create, modify, and read Tcl objects that hold integral values. </p>

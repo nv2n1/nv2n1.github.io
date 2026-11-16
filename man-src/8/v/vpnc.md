@@ -15,228 +15,228 @@ description: "vpnc – client for Cisco VPN3000 Concentrator, IOS and PIX"
 <h2>Configuration</h2>
 <p>The daemon reads configuration data from the following places:</p>
 <dl>
-<dt>&bull;</p>
-<dd>command line options</p>
-<dt>&bull;</p>
-<dd>config file(s) specified on the command line</p>
-<dt>&bull;</p>
-<dd>/etc/vpnc/default.conf</p>
-<dt>&bull;</p>
-<dd>/etc/vpnc.conf</p>
-<dt>&bull;</p>
-<dd>prompting the user if not found above </p>
+<dt>&bull;</dt>
+<dd>command line options</dd>
+<dt>&bull;</dt>
+<dd>config file(s) specified on the command line</dd>
+<dt>&bull;</dt>
+<dd>/etc/vpnc/default.conf</dd>
+<dt>&bull;</dt>
+<dd>/etc/vpnc.conf</dd>
+<dt>&bull;</dt>
+<dd>prompting the user if not found above </dd>
 </dl>
 <p> vpnc can parse options and <code>configuration files</code> in any order. However the first place to set an option wins. configuration filenames which do not contain a / will be searched at <code>/etc/vpnc/&lt;filename&gt;</code> and <code>/etc/vpnc/&lt;filename&gt;.conf.</code> Otherwise <code>&lt;filename&gt;</code> and <code>&lt;filename&gt;.conf</code> will be used. If no configuration file is specified on the command-line at all, both <code>/etc/vpnc/default.conf</code> and <code>/etc/vpnc.conf</code> will be loaded.</p>
 <h2>Options</h2>
 <p>The program options can be either given as arguments (but not all of them for security reasons) or be stored in a configuration file. </p>
 <dl>
-<dt><code>&#8211;gateway</code><i> &lt;ip/hostname&gt;</i></p>
-<dd>IP/name of your IPSec gateway</dl>
+<dt><code>&#8211;gateway</code><i> &lt;ip/hostname&gt;</i></dt>
+<dd>IP/name of your IPSec gateway</dd></dl>
 <p> conf-variable: <code>IPSec gateway</code><i> &lt;ip/hostname&gt;</i> </p>
 <dl>
-<dt><code>&#8211;id</code><i> &lt;ASCII string&gt;</i></p>
-<dd>your group name</dl>
+<dt><code>&#8211;id</code><i> &lt;ASCII string&gt;</i></dt>
+<dd>your group name</dd></dl>
 <p> conf-variable: <code>IPSec ID</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>(configfile only option)</code></p>
-<dd>your group password (cleartext)</dl>
+<dt><code>(configfile only option)</code></dt>
+<dd>your group password (cleartext)</dd></dl>
 <p> conf-variable: <code>IPSec secret</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>(configfile only option)</code></p>
-<dd>your group password (obfuscated)</dl>
+<dt><code>(configfile only option)</code></dt>
+<dd>your group password (obfuscated)</dd></dl>
 <p> conf-variable: <code>IPSec obfuscated secret</code><i> &lt;hex string&gt;</i> </p>
 <dl>
-<dt><code>&#8211;username</code><i> &lt;ASCII string&gt;</i></p>
-<dd>your username</dl>
+<dt><code>&#8211;username</code><i> &lt;ASCII string&gt;</i></dt>
+<dd>your username</dd></dl>
 <p> conf-variable: <code>Xauth username</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>(configfile only option)</code></p>
-<dd>your password (cleartext)</dl>
+<dt><code>(configfile only option)</code></dt>
+<dd>your password (cleartext)</dd></dl>
 <p> conf-variable: <code>Xauth password</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>(configfile only option)</code></p>
-<dd>your password (obfuscated)</dl>
+<dt><code>(configfile only option)</code></dt>
+<dd>your password (obfuscated)</dd></dl>
 <p> conf-variable: <code>Xauth obfuscated password</code><i> &lt;hex string&gt;</i> </p>
 <dl>
-<dt><code>&#8211;domain</code><i> &lt;ASCII string&gt;</i></p>
-<dd>(NT-) Domain name for authentication</dl>
+<dt><code>&#8211;domain</code><i> &lt;ASCII string&gt;</i></dt>
+<dd>(NT-) Domain name for authentication</dd></dl>
 <p> conf-variable: <code>Domain</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>&#8211;xauth-inter</code></p>
-<dd>enable interactive extended authentication (for challenge response auth)</dl>
+<dt><code>&#8211;xauth-inter</code></dt>
+<dd>enable interactive extended authentication (for challenge response auth)</dd></dl>
 <p> conf-variable: <code>Xauth interactive</code> </p>
 <dl>
-<dt><code>&#8211;vendor</code><i> &lt;cisco/netscreen&gt;</i></p>
-<dd>vendor of your IPSec gateway</p>
-<dd>Default: cisco</dl>
+<dt><code>&#8211;vendor</code><i> &lt;cisco/netscreen&gt;</i></dt>
+<dd>vendor of your IPSec gateway</dd>
+<dd>Default: cisco</dd></dl>
 <p> conf-variable: <code>Vendor</code><i> &lt;cisco/netscreen&gt;</i> </p>
 <dl>
-<dt><code>&#8211;natt-mode</code><i> &lt;natt/none/force-natt/cisco-udp&gt;</i></p>
-<dd>Which NAT-Traversal Method to use:</p>
+<dt><code>&#8211;natt-mode</code><i> &lt;natt/none/force-natt/cisco-udp&gt;</i></dt>
+<dd>Which NAT-Traversal Method to use:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>natt &#8212; NAT-T as defined in RFC3947</p>
-<dt>&bull;</p>
-<dd>none &#8212; disable use of any NAT-T method</p>
-<dt>&bull;</p>
-<dd>force-natt &#8212; always use NAT-T encapsulation even without presence of a NAT device (useful if the OS captures all ESP traffic)</p>
-<dt>&bull;</p>
-<dd>cisco-udp &#8212; Cisco proprietary UDP encapsulation, commonly over Port 10000</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>natt &#8212; NAT-T as defined in RFC3947</dd>
+<dt>&bull;</dt>
+<dd>none &#8212; disable use of any NAT-T method</dd>
+<dt>&bull;</dt>
+<dd>force-natt &#8212; always use NAT-T encapsulation even without presence of a NAT device (useful if the OS captures all ESP traffic)</dd>
+<dt>&bull;</dt>
+<dd>cisco-udp &#8212; Cisco proprietary UDP encapsulation, commonly over Port 10000</dd></dl>
 </dl>
-<dd>Note: cisco-tcp encapsulation is not yet supported</p>
-<dd>Default: natt</dl>
+<dd>Note: cisco-tcp encapsulation is not yet supported</dd>
+<dd>Default: natt</dd></dl>
 <p> conf-variable: <code>NAT Traversal Mode</code><i> &lt;natt/none/force-natt/cisco-udp&gt;</i> </p>
 <dl>
-<dt><code>&#8211;script</code><i> &lt;command&gt;</i></p>
-<dd>command is executed using system() to configure the interface, routing and so on. Device name, IP, etc. are passed using enviroment variables, see README. This script is executed right after ISAKMP is done, but before tunneling is enabled. It is called when vpnc terminates, too</p>
-<dd>Default: /etc/vpnc/vpnc-script</dl>
+<dt><code>&#8211;script</code><i> &lt;command&gt;</i></dt>
+<dd>command is executed using system() to configure the interface, routing and so on. Device name, IP, etc. are passed using enviroment variables, see README. This script is executed right after ISAKMP is done, but before tunneling is enabled. It is called when vpnc terminates, too</dd>
+<dd>Default: /etc/vpnc/vpnc-script</dd></dl>
 <p> conf-variable: <code>Script</code><i> &lt;command&gt;</i> </p>
 <dl>
-<dt><code>&#8211;dh</code><i> &lt;dh1/dh2/dh5&gt;</i></p>
-<dd>name of the IKE DH Group</p>
-<dd>Default: dh2</dl>
+<dt><code>&#8211;dh</code><i> &lt;dh1/dh2/dh5&gt;</i></dt>
+<dd>name of the IKE DH Group</dd>
+<dd>Default: dh2</dd></dl>
 <p> conf-variable: <code>IKE DH Group</code><i> &lt;dh1/dh2/dh5&gt;</i> </p>
 <dl>
-<dt><code>&#8211;pfs</code><i> &lt;nopfs/dh1/dh2/dh5/server&gt;</i></p>
-<dd>Diffie-Hellman group to use for PFS</p>
-<dd>Default: server</dl>
+<dt><code>&#8211;pfs</code><i> &lt;nopfs/dh1/dh2/dh5/server&gt;</i></dt>
+<dd>Diffie-Hellman group to use for PFS</dd>
+<dd>Default: server</dd></dl>
 <p> conf-variable: <code>Perfect Forward Secrecy</code><i> &lt;nopfs/dh1/dh2/dh5/server&gt;</i> </p>
 <dl>
-<dt><code>&#8211;enable-1des</code></p>
-<dd>enables weak single DES encryption</dl>
+<dt><code>&#8211;enable-1des</code></dt>
+<dd>enables weak single DES encryption</dd></dl>
 <p> conf-variable: <code>Enable Single DES</code> </p>
 <dl>
-<dt><code>&#8211;enable-no-encryption</code></p>
-<dd>enables using no encryption for data traffic (key exchanged must be encrypted)</dl>
+<dt><code>&#8211;enable-no-encryption</code></dt>
+<dd>enables using no encryption for data traffic (key exchanged must be encrypted)</dd></dl>
 <p> conf-variable: <code>Enable no encryption</code> </p>
 <dl>
-<dt><code>&#8211;application-version</code><i> &lt;ASCII string&gt;</i></p>
-<dd>Application Version to report. Note: Default string is generated at runtime.</p>
-<dd>Default: Cisco Systems VPN Client 0.5.3:Linux</dl>
+<dt><code>&#8211;application-version</code><i> &lt;ASCII string&gt;</i></dt>
+<dd>Application Version to report. Note: Default string is generated at runtime.</dd>
+<dd>Default: Cisco Systems VPN Client 0.5.3:Linux</dd></dl>
 <p> conf-variable: <code>Application version</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>&#8211;ifname</code><i> &lt;ASCII string&gt;</i></p>
-<dd>visible name of the TUN/TAP interface</dl>
+<dt><code>&#8211;ifname</code><i> &lt;ASCII string&gt;</i></dt>
+<dd>visible name of the TUN/TAP interface</dd></dl>
 <p> conf-variable: <code>Interface name</code><i> &lt;ASCII string&gt;</i> </p>
 <dl>
-<dt><code>&#8211;ifmode</code><i> &lt;tun/tap&gt;</i></p>
-<dd>mode of TUN/TAP interface:</p>
+<dt><code>&#8211;ifmode</code><i> &lt;tun/tap&gt;</i></dt>
+<dd>mode of TUN/TAP interface:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>tun: virtual point to point interface (default)</p>
-<dt>&bull;</p>
-<dd>tap: virtual ethernet interface</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>tun: virtual point to point interface (default)</dd>
+<dt>&bull;</dt>
+<dd>tap: virtual ethernet interface</dd></dl>
 </dl>
-<dd>Default: tun</dl>
+<dd>Default: tun</dd></dl>
 <p> conf-variable: <code>Interface mode</code><i> &lt;tun/tap&gt;</i> </p>
 <dl>
-<dt><code>&#8211;debug</code><i> &lt;0/1/2/3/99&gt;</i></p>
+<dt><code>&#8211;debug</code><i> &lt;0/1/2/3/99&gt;</i></dt>
 <dd>
-<dd>Show verbose debug messages</p>
+</dd><dd>Show verbose debug messages</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>&nbsp;<wbr>0: Do not print debug information.</p>
-<dt>&bull;</p>
-<dd>&nbsp;<wbr>1: Print minimal debug information.</p>
-<dt>&bull;</p>
-<dd>&nbsp;<wbr>2: Show statemachine and packet/payload type information.</p>
-<dt>&bull;</p>
-<dd>&nbsp;<wbr>3: Dump everything exluding authentication data.</p>
-<dt>&bull;</p>
-<dd>99: Dump everything INCLUDING AUTHENTICATION data (e.g. PASSWORDS).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>&nbsp;<wbr>0: Do not print debug information.</dd>
+<dt>&bull;</dt>
+<dd>&nbsp;<wbr>1: Print minimal debug information.</dd>
+<dt>&bull;</dt>
+<dd>&nbsp;<wbr>2: Show statemachine and packet/payload type information.</dd>
+<dt>&bull;</dt>
+<dd>&nbsp;<wbr>3: Dump everything exluding authentication data.</dd>
+<dt>&bull;</dt>
+<dd>99: Dump everything INCLUDING AUTHENTICATION data (e.g. PASSWORDS).</dd></dl>
 </dl>
 </dl>
 <p> conf-variable: <code>Debug</code><i> &lt;0/1/2/3/99&gt;</i> </p>
 <dl>
-<dt><code>&#8211;no-detach</code></p>
+<dt><code>&#8211;no-detach</code></dt>
 <dd>
-<dd>Don&#8217;t detach from the console after login</dl>
+</dd><dd>Don&#8217;t detach from the console after login</dd></dl>
 <p> conf-variable: <code>No Detach</code> </p>
 <dl>
-<dt><code>&#8211;pid-file</code><i> &lt;filename&gt;</i></p>
-<dd>store the pid of background process in &lt;filename&gt;</p>
-<dd>Default: /var/run/vpnc/pid</dl>
+<dt><code>&#8211;pid-file</code><i> &lt;filename&gt;</i></dt>
+<dd>store the pid of background process in &lt;filename&gt;</dd>
+<dd>Default: /var/run/vpnc/pid</dd></dl>
 <p> conf-variable: <code>Pidfile</code><i> &lt;filename&gt;</i> </p>
 <dl>
-<dt><code>&#8211;local-addr</code><i> &lt;ip/hostname&gt;</i></p>
-<dd>local IP to use for ISAKMP / ESP / &#8230; (0.0.0.0 == automatically assign)</p>
-<dd>Default: 0.0.0.0</dl>
+<dt><code>&#8211;local-addr</code><i> &lt;ip/hostname&gt;</i></dt>
+<dd>local IP to use for ISAKMP / ESP / &#8230; (0.0.0.0 == automatically assign)</dd>
+<dd>Default: 0.0.0.0</dd></dl>
 <p> conf-variable: <code>Local Addr</code><i> &lt;ip/hostname&gt;</i> </p>
 <dl>
-<dt><code>&#8211;local-port</code><i> &lt;0-65535&gt;</i></p>
-<dd>local ISAKMP port number to use (0 == use random port)</p>
-<dd>Default: 500</dl>
+<dt><code>&#8211;local-port</code><i> &lt;0-65535&gt;</i></dt>
+<dd>local ISAKMP port number to use (0 == use random port)</dd>
+<dd>Default: 500</dd></dl>
 <p> conf-variable: <code>Local Port</code><i> &lt;0-65535&gt;</i> </p>
 <dl>
-<dt><code>&#8211;udp-port</code><i> &lt;0-65535&gt;</i></p>
-<dd>Local UDP port number to use (0 == use random port). This is only relevant if cisco-udp nat-traversal is used. This is the _local_ port, the remote udp port is discovered automatically. It is especially not the cisco-tcp port.</p>
-<dd>Default: 10000</dl>
+<dt><code>&#8211;udp-port</code><i> &lt;0-65535&gt;</i></dt>
+<dd>Local UDP port number to use (0 == use random port). This is only relevant if cisco-udp nat-traversal is used. This is the _local_ port, the remote udp port is discovered automatically. It is especially not the cisco-tcp port.</dd>
+<dd>Default: 10000</dd></dl>
 <p> conf-variable: <code>Cisco UDP Encapsulation Port</code><i> &lt;0-65535&gt;</i> </p>
 <dl>
-<dt><code>&#8211;dpd-idle</code><i> &lt;0,10-86400&gt;</i></p>
-<dd>Send DPD packet after not receiving anything for &lt;idle&gt; seconds. Use 0 to disable DPD completely (both ways).</p>
-<dd>Default: 600</dl>
+<dt><code>&#8211;dpd-idle</code><i> &lt;0,10-86400&gt;</i></dt>
+<dd>Send DPD packet after not receiving anything for &lt;idle&gt; seconds. Use 0 to disable DPD completely (both ways).</dd>
+<dd>Default: 600</dd></dl>
 <p> conf-variable: <code>DPD idle timeout (our side)</code><i> &lt;0,10-86400&gt;</i> </p>
 <dl>
-<dt><code>&#8211;non-inter</code></p>
-<dd>Don&#8217;t ask anything, exit on missing options</dl>
+<dt><code>&#8211;non-inter</code></dt>
+<dd>Don&#8217;t ask anything, exit on missing options</dd></dl>
 <p> conf-variable: <code>Noninteractive</code> </p>
 <dl>
-<dt><code>&#8211;auth-mode</code><i> &lt;psk/cert/hybrid&gt;</i></p>
-<dd>Authentication mode:</p>
+<dt><code>&#8211;auth-mode</code><i> &lt;psk/cert/hybrid&gt;</i></dt>
+<dd>Authentication mode:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>psk: pre-shared key (default)</p>
-<dt>&bull;</p>
-<dd>cert: server + client certificate (not implemented yet)</p>
-<dt>&bull;</p>
-<dd>hybrid: server certificate + xauth (if built with openssl support)</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>psk: pre-shared key (default)</dd>
+<dt>&bull;</dt>
+<dd>cert: server + client certificate (not implemented yet)</dd>
+<dt>&bull;</dt>
+<dd>hybrid: server certificate + xauth (if built with openssl support)</dd></dl>
 </dl>
-<dd>Default: psk</dl>
+<dd>Default: psk</dd></dl>
 <p> conf-variable: <code>IKE Authmode</code><i> &lt;psk/cert/hybrid&gt;</i> </p>
 <dl>
-<dt><code>&#8211;ca-file</code><i> &lt;filename&gt;</i></p>
+<dt><code>&#8211;ca-file</code><i> &lt;filename&gt;</i></dt>
 <dd>
-<dd>filename and path to the CA-PEM-File</dl>
+</dd><dd>filename and path to the CA-PEM-File</dd></dl>
 <p> conf-variable: <code>CA-File</code><i> &lt;filename&gt;</i> </p>
 <dl>
-<dt><code>&#8211;ca-dir</code><i> &lt;directory&gt;</i></p>
-<dd>path of the trusted CA-Directory</p>
-<dd>Default: /etc/ssl/certs</dl>
+<dt><code>&#8211;ca-dir</code><i> &lt;directory&gt;</i></dt>
+<dd>path of the trusted CA-Directory</dd>
+<dd>Default: /etc/ssl/certs</dd></dl>
 <p> conf-variable: <code>CA-Dir</code><i> &lt;directory&gt;</i> </p>
 <dl>
-<dt><code>&#8211;target-network</code><i> &lt;target network/netmask&gt;</i></p>
-<dd>Target network in dotted decimal or CIDR notation</p>
-<dd>Default: 0.0.0.0/0.0.0.0</dl>
+<dt><code>&#8211;target-network</code><i> &lt;target network/netmask&gt;</i></dt>
+<dd>Target network in dotted decimal or CIDR notation</dd>
+<dd>Default: 0.0.0.0/0.0.0.0</dd></dl>
 <p> conf-variable: <code>IPSEC target network</code><i> &lt;target network/netmask&gt;</i> </p>
 <dl>
-<dt> <code>&#8211;print-config</code></p>
+<dt> <code>&#8211;print-config</code></dt>
 <dd>
-<dd>Prints your configuration; output can be used as vpnc.conf </p>
+</dd><dd>Prints your configuration; output can be used as vpnc.conf </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/vpnc.conf</i> <i>/etc/vpnc/default.conf</i></p>
 <dl>
-<dd>The default configuration file. You can specify the same config directives as with command line options and additionaly <code>IPSec secret</code> and <code>Xauth password</code> both supplying a cleartext password. Scrambled passwords from the Cisco configuration profiles can be used with <code>IPSec obfuscated secret</code> and <code>Xauth obfuscated password.</code> </p>
+<dd>The default configuration file. You can specify the same config directives as with command line options and additionaly <code>IPSec secret</code> and <code>Xauth password</code> both supplying a cleartext password. Scrambled passwords from the Cisco configuration profiles can be used with <code>IPSec obfuscated secret</code> and <code>Xauth obfuscated password.</code> </dd>
 <p> See <code>EXAMPLES</code> for further details.</dl>
 <p> <i>/etc/vpnc/*.conf</i></p>
 <dl>
-<dd>vpnc will read configuration files in this directory when the config filename (with or without .conf) is specified on the command line.</dl>
+<dd>vpnc will read configuration files in this directory when the config filename (with or without .conf) is specified on the command line.</dd></dl>
 <h2>Examples</h2>
 <p>This is an example vpnc.conf with pre-shared keys:</p>
 <dl>
-<dd>IPSec gateway vpn.example.com IPSec ID ExampleVpnPSK IKE Authmode psk IPSec secret PskS3cret! Xauth username user [at] example.com Xauth password USecr3t</dl>
+<dd>IPSec gateway vpn.example.com IPSec ID ExampleVpnPSK IKE Authmode psk IPSec secret PskS3cret! Xauth username user [at] example.com Xauth password USecr3t</dd></dl>
 <p> And another one with hybrid authentication (requires that vpnc was built with openssl support):</p>
 <dl>
-<dd>IPSec gateway vpn.example.com IPSec ID ExampleVpnHybrid IKE Authmode hybrid CA-Dir /etc/vpnc <code>or</code> CA-File /etc/vpnc/vpn-example-com.pem IPSec secret HybS3cret? Xauth username user [at] example.com Xauth password 123456</dl>
+<dd>IPSec gateway vpn.example.com IPSec ID ExampleVpnHybrid IKE Authmode hybrid CA-Dir /etc/vpnc <code>or</code> CA-File /etc/vpnc/vpn-example-com.pem IPSec secret HybS3cret? Xauth username user [at] example.com Xauth password 123456</dd></dl>
 <p> The lines begin with a keyword (no leading spaces!). The values start exactly one space after the keywords, and run to the end of line. This lets you put any kind of weird character (except CR, LF and NUL) in your strings, but it does mean you can&#8217;t add comments after a string, or spaces before them. In case the the <code>CA-Dir</code> option is used, your certificate needs to be named something like 722d15bd.X, where X is a manually assigned number to make sure that files with colliding hashes have different names. The number can be derived from the certificate file itself: openssl x509 -subject_hash -noout -in /etc/vpnc/vpn-example-com.pem See also the <code>&#8211;print-config</code> option to generate a config file, and the example file in the package documentation directory where more advanced usage is demonstrated. Advanced features like manual setting of multiple target routes and disabling /etc/resolv.conf rewriting is documented in the README of the vpnc package. </p>
 <h2>Todo</h2>
 <p>Certificate support (Pre-Shared-Key + XAUTH is known to be insecure). </p>

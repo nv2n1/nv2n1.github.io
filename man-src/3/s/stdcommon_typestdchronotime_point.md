@@ -11,14 +11,10 @@ std::common_type(std::chrono::time_point) - std::common_type(std::chrono::time_p
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Clock, class Duration1, class Duration2&gt;
-
 struct common_type&lt;std::chrono::time_point&lt;Clock, Duration1&gt;,
-
                    std::chrono::time_point&lt;Clock, Duration2&gt;&gt; {
     (since C++ 11)
-
         typedef std::chrono::time_point&lt;
-
             Clock, typename std::common_type&lt;Duration1, Duration2&gt;::type&gt; type;
 };</code></pre> 
 Exposes the type named type, which is the common type of two std::chrono::time_points. 

@@ -14,18 +14,18 @@ description: "ata_link_init – Initialize an ata_link structure"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>ATA port link is attached to</dl>
+</dd><dd>ATA port link is attached to</dd></dl>
 <p> <i>link</i></p>
 <dl>
-<dd>Link structure to initialize</dl>
+<dd>Link structure to initialize</dd></dl>
 <p> <i>pmp</i></p>
 <dl>
-<dd>Port multiplier port number</dl>
+<dd>Port multiplier port number</dd></dl>
 <h2>Description</h2>
 <p>Initialize <i>link</i>. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -11,10 +11,8 @@ std::experimental::erase(std::forward_list) - std::experimental::erase(std::forw
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / forward_list&gt;
-
     template &lt;class T, class A, class U&gt;
     (library fundamentals TS v2)
-
         void erase(std::forward_list&lt;T, A&gt; &amp;c, const U &amp;value);
 Erases all elements that compare equal to value from the container.Equivalent to c.remove_if([&amp;](auto &amp;elem) { return elem == value; });
 </code></pre>

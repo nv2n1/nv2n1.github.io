@@ -14,11 +14,11 @@ description: "rio_add_device – Adds a RIO device to the device model"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <h2>Description</h2>
 <p>Adds the RIO device to the global device list and adds the RIO device to the RIO device list. Creates the generic sysfs nodes for an RIO device.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,36 +13,36 @@ description: "btmon – Bluetooth monitor"
 <p> btmon &#8211; Bluetooth monitor Usage:</p>
 <dl>
 <dt>
-<dd> btmon [options]</dl>
+</dt><dd> btmon [options]</dd></dl>
 <h3>options:</h3>
 <dl>
-<dt><code>-r</code>, <code>&#8211;read</code> &lt;file&gt;</p>
-<dd> Read traces in btsnoop format</p>
-<dt><code>-w</code>, <code>&#8211;write</code> &lt;file&gt;</p>
-<dd> Save traces in btsnoop format</p>
-<dt><code>-a</code>, <code>&#8211;analyze</code> &lt;file&gt;</p>
-<dd> Analyze traces in btsnoop format</p>
-<dt><code>-s</code>, <code>&#8211;server</code> &lt;socket&gt;</p>
-<dd> Start monitor server socket</p>
-<dt> <code>-p</code>, <code>&#8211;priority</code> &lt;level&gt; Show only priority or lower</p>
-<dt><code>-i</code>, <code>&#8211;index</code> &lt;num&gt;</p>
+<dt><code>-r</code>, <code>&#8211;read</code> &lt;file&gt;</dt>
+<dd> Read traces in btsnoop format</dd>
+<dt><code>-w</code>, <code>&#8211;write</code> &lt;file&gt;</dt>
+<dd> Save traces in btsnoop format</dd>
+<dt><code>-a</code>, <code>&#8211;analyze</code> &lt;file&gt;</dt>
+<dd> Analyze traces in btsnoop format</dd>
+<dt><code>-s</code>, <code>&#8211;server</code> &lt;socket&gt;</dt>
+<dd> Start monitor server socket</dd>
+<dt> <code>-p</code>, <code>&#8211;priority</code> &lt;level&gt; Show only priority or lower</dt>
+<dt><code>-i</code>, <code>&#8211;index</code> &lt;num&gt;</dt>
 <dd>
-<dd>Show only specified controller</p>
-<dt><code>-d</code>, <code>&#8211;tty</code> &lt;tty&gt;</p>
-<dd> Read data from TTY</p>
-<dt> <code>-B</code>, <code>&#8211;tty-speed</code> &lt;rate&gt; Set TTY speed (default 115200)</p>
-<dt><code>-t</code>, <code>&#8211;time</code></p>
+</dd><dd>Show only specified controller</dd>
+<dt><code>-d</code>, <code>&#8211;tty</code> &lt;tty&gt;</dt>
+<dd> Read data from TTY</dd>
+<dt> <code>-B</code>, <code>&#8211;tty-speed</code> &lt;rate&gt; Set TTY speed (default 115200)</dt>
+<dt><code>-t</code>, <code>&#8211;time</code></dt>
 <dd>
-<dd>Show time instead of time offset</p>
-<dt><code>-T</code>, <code>&#8211;date</code></p>
-<dd> Show time and date information</p>
-<dt><code>-S</code>, <code>&#8211;sco</code></p>
-<dd> Dump SCO traffic</p>
-<dt><code>-A</code>, <code>&#8211;a2dp</code></p>
-<dd> Dump A2DP stream traffic</p>
-<dt><code>-E</code>, <code>&#8211;ellisys</code> [ip]</p>
-<dd> Send Ellisys HCI Injection</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options </p>
+</dd><dd>Show time instead of time offset</dd>
+<dt><code>-T</code>, <code>&#8211;date</code></dt>
+<dd> Show time and date information</dd>
+<dt><code>-S</code>, <code>&#8211;sco</code></dt>
+<dd> Dump SCO traffic</dd>
+<dt><code>-A</code>, <code>&#8211;a2dp</code></dt>
+<dd> Dump A2DP stream traffic</dd>
+<dt><code>-E</code>, <code>&#8211;ellisys</code> [ip]</dt>
+<dd> Send Ellisys HCI Injection</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options </dd>
 </dl>
 <h2>Index</h2>

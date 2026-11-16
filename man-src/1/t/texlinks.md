@@ -16,22 +16,22 @@ description: "texlinks – maintain symbolic links from format to engine"
 <p> <i>DIRECTORIES</i> is an optional list of directories in which to operate. If no directories are specified the list of directories depends on the <code>&#8211;multiplatform</code> option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cnffile</code> <i>FILE</i> or <code>-f</code> <i>FILE</i></p>
-<dd> use file as configuration file (default: <i>fmtutil.cnf</i>)</p>
-<dt><code>&#8211;help</code> or <code>-h</code></p>
-<dd> show some help text</p>
-<dt><code>&#8211;multiplatform</code> or <code>-m</code></p>
-<dd> operate in all platform-specific directories (default: operate only in the directory for this platform)</p>
-<dt><code>&#8211;silent</code> or <code>-s</code></p>
-<dd> silently skip over existing scripts/binaries instead of printing a warning</p>
-<dt><code>&#8211;unlink</code> or <code>-u</code></p>
-<dd> Unlink previously created symlinks</p>
-<dt><code>&#8211;verbose</code> or <code>-v</code></p>
-<dd> +set verbose mode on (default: off)</dl>
+<dt><code>&#8211;cnffile</code> <i>FILE</i> or <code>-f</code> <i>FILE</i></dt>
+<dd> use file as configuration file (default: <i>fmtutil.cnf</i>)</dd>
+<dt><code>&#8211;help</code> or <code>-h</code></dt>
+<dd> show some help text</dd>
+<dt><code>&#8211;multiplatform</code> or <code>-m</code></dt>
+<dd> operate in all platform-specific directories (default: operate only in the directory for this platform)</dd>
+<dt><code>&#8211;silent</code> or <code>-s</code></dt>
+<dd> silently skip over existing scripts/binaries instead of printing a warning</dd>
+<dt><code>&#8211;unlink</code> or <code>-u</code></dt>
+<dd> Unlink previously created symlinks</dd>
+<dt><code>&#8211;verbose</code> or <code>-v</code></dt>
+<dd> +set verbose mode on (default: off)</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>fmtutil.cnf</i></p>
-<dd> default configuration file</dl>
+<dt><i>fmtutil.cnf</i></dt>
+<dd> default configuration file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fmtutil/">fmtutil</a></code>(1), <code><a href="/docs/linux/man/5-fmtutil-cnf/">fmtutil.cnf</a></code>(5) </p>
 <p> Web page: &lt;<a rel="nofollow" href="http://tug.org/teTeX/">http://tug.org/teTeX/</a>&gt; </p>

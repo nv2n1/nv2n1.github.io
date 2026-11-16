@@ -18,13 +18,13 @@ description: "docker-container-top – Display the running processes of a contai
 <p> Run <code>docker container top</code> with the ps option of -x: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container top 8601afda2b -x
 PID      TTY       STAT       TIME         COMMAND
 16623    ?         Ss         0:00         sleep 99999
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for top</p>
 <h2>SEE ALSO</h2>

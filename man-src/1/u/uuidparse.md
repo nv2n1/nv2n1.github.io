@@ -101,27 +101,27 @@ description: "uuidparse – a utility to parse unique identifiers"
 <p> <code>-J</code>, <code>&#8211;json</code></p>
 <dl>
 <dt>
-<dd> Use JSON output format.</dl>
+</dt><dd> Use JSON output format.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
 <dt>
-<dd> Do not print a header line.</dl>
+</dt><dd> Do not print a header line.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code></p>
 <dl>
 <dt>
-<dd> Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns.</dl>
+</dt><dd> Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;raw</code></p>
 <dl>
 <dt>
-<dd> Use the raw output format.</dl>
+</dt><dd> Use the raw output format.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>AUTHORS</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-uuidgen/">uuidgen</a></code>(1), <code>libuuid</code>(3), <i>RFC 4122</i> &lt;<a rel="nofollow" href="https://tools.ietf.org/html/rfc4122">https://tools.ietf.org/html/rfc4122</a>&gt;</p>

@@ -24,28 +24,26 @@ int fchownat(int dirfd, const char *pathname,
 <p> <code>fchown</code>(), <code>lchown</code>():</p>
 <dl>
 <dt>
-<dd> /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+</dt><dd> /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>fchownat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> These system calls change the owner and group of a file. The <code>chown</code>(), <code>fchown</code>(), and <code>lchown</code>() system calls differ only in how the file is specified:</p>
 <dl>
-<dt>*</p>
-<dd> <code>chown</code>() changes the ownership of the file specified by <i>pathname</i>, which is dereferenced if it is a symbolic link.</p>
-<dt>*</p>
-<dd> <code>fchown</code>() changes the ownership of the file referred to by the open file descriptor <i>fd</i>.</p>
-<dt>*</p>
-<dd> <code>lchown</code>() is like <code>chown</code>(), but does not dereference symbolic links.</dl>
+<dt>*</dt>
+<dd> <code>chown</code>() changes the ownership of the file specified by <i>pathname</i>, which is dereferenced if it is a symbolic link.</dd>
+<dt>*</dt>
+<dd> <code>fchown</code>() changes the ownership of the file referred to by the open file descriptor <i>fd</i>.</dd>
+<dt>*</dt>
+<dd> <code>lchown</code>() is like <code>chown</code>(), but does not dereference symbolic links.</dd></dl>
 <p> Only a privileged process (Linux: one with the <code>CAP_CHOWN</code> capability) may change the owner of a file. The owner of a file may change the group of the file to any group of which that owner is a member. A privileged process (Linux: with <code>CAP_CHOWN</code>) may change the group arbitrarily. </p>
 <p> If the <i>owner</i> or <i>group</i> is specified as -1, then that ID is not changed. </p>
 <p> When the owner or group of an executable file is changed by an unprivileged user, the <code>S_ISUID</code> and <code>S_ISGID</code> mode bits are cleared. POSIX does not specify whether this also should happen when root does the <code>chown</code>(); the Linux behavior depends on the kernel version, and since Linux 2.2.13, root is treated like other users. In case of a non-group-executable file (i.e., one for which the <code>S_IXGRP</code> bit is not set) the <code>S_ISGID</code> bit indicates mandatory locking, and is not cleared by a <code>chown</code>(). </p>
@@ -57,10 +55,10 @@ int fchownat(int dirfd, const char *pathname,
 <p> If <i>pathname</i> is absolute, then <i>dirfd</i> is ignored. </p>
 <p> The <i>flags</i> argument is a bit mask created by ORing together 0 or more of the following values;</p>
 <dl>
-<dt><code>AT_EMPTY_PATH</code> (since Linux 2.6.39)</p>
-<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory. If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</p>
-<dt><code>AT_SYMLINK_NOFOLLOW</code></p>
-<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead operate on the link itself, like <code>lchown</code>(). (By default, <code>fchownat</code>() dereferences symbolic links, like <code>chown</code>().)</dl>
+<dt><code>AT_EMPTY_PATH</code> (since Linux 2.6.39)</dt>
+<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory. If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</dd>
+<dt><code>AT_SYMLINK_NOFOLLOW</code></dt>
+<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead operate on the link itself, like <code>lchown</code>(). (By default, <code>fchownat</code>() dereferences symbolic links, like <code>chown</code>().)</dd></dl>
 <p> See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of the need for <code>fchownat</code>().</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
@@ -68,46 +66,46 @@ int fchownat(int dirfd, const char *pathname,
 <p> Depending on the filesystem, errors other than those listed below can be returned. </p>
 <p> The more general errors for <code>chown</code>() are listed below.</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> points outside your accessible address space.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> The file does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix is not a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process did not have the required permissions (see above) to change owner and/or group.</p>
-<dt><code>EPERM</code></p>
-<dd> The file is marked immutable or append-only. (See <code><a href="/docs/linux/man/2-ioctl_iflags/">ioctl_iflags</a></code>(2).)</p>
-<dt><code>EROFS</code></p>
-<dd> The named file resides on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> points outside your accessible address space.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>pathname</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The file does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix is not a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process did not have the required permissions (see above) to change owner and/or group.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The file is marked immutable or append-only. (See <code><a href="/docs/linux/man/2-ioctl_iflags/">ioctl_iflags</a></code>(2).)</dd>
+<dt><code>EROFS</code></dt>
+<dd> The named file resides on a read-only filesystem.</dd></dl>
 <p> The general errors for <code>fchown</code>() are listed below:</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid open file descriptor.</p>
-<dt><code>EIO</code></p>
-<dd> A low-level I/O error occurred while modifying the inode.</p>
-<dt><code>ENOENT</code></p>
-<dd> See above.</p>
-<dt><code>EPERM</code></p>
-<dd> See above.</p>
-<dt><code>EROFS</code></p>
-<dd> See above.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid open file descriptor.</dd>
+<dt><code>EIO</code></dt>
+<dd> A low-level I/O error occurred while modifying the inode.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> See above.</dd>
+<dt><code>EPERM</code></dt>
+<dd> See above.</dd>
+<dt><code>EROFS</code></dt>
+<dd> See above.</dd></dl>
 <p> The same errors that occur for <code>chown</code>() can also occur for <code>fchownat</code>(). The following additional errors can occur for <code>fchownat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flag specified in <i>flags</i>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flag specified in <i>flags</i>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>fchownat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>
@@ -118,12 +116,12 @@ int fchownat(int dirfd, const char *pathname,
 <h3>Ownership of new files</h3>
 <p> When a new file is created (by, for example, <code><a href="/docs/linux/man/2-open/">open</a></code>(2) or <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2)), its owner is made the same as the filesystem user ID of the creating process. The group of the file depends on a range of factors, including the type of filesystem, the options used to mount the filesystem, and whether or not the set-group-ID mode bit is enabled on the parent directory. If the filesystem supports the <code>-o grpid</code> (or, synonymously <code>-o bsdgroups</code>) and <code>-o nogrpid</code> (or, synonymously <code>-o sysvgroups</code>) <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) options, then the rules are as follows:</p>
 <dl>
-<dt>*</p>
-<dd> If the filesystem is mounted with <code>-o grpid</code>, then the group of a new file is made the same as that of the parent directory.</p>
-<dt>*</p>
-<dd> If the filesystem is mounted with <code>-o nogrpid</code> and the set-group-ID bit is disabled on the parent directory, then the group of a new file is made the same as the process&#8217;s filesystem GID.</p>
-<dt>*</p>
-<dd> If the filesystem is mounted with <code>-o nogrpid</code> and the set-group-ID bit is enabled on the parent directory, then the group of a new file is made the same as that of the parent directory.</dl>
+<dt>*</dt>
+<dd> If the filesystem is mounted with <code>-o grpid</code>, then the group of a new file is made the same as that of the parent directory.</dd>
+<dt>*</dt>
+<dd> If the filesystem is mounted with <code>-o nogrpid</code> and the set-group-ID bit is disabled on the parent directory, then the group of a new file is made the same as the process&#8217;s filesystem GID.</dd>
+<dt>*</dt>
+<dd> If the filesystem is mounted with <code>-o nogrpid</code> and the set-group-ID bit is enabled on the parent directory, then the group of a new file is made the same as that of the parent directory.</dd></dl>
 <p> As at Linux 4.12, the <code>-o grpid</code> and <code>-o nogrpid</code> mount options are supported by ext2, ext3, ext4, and XFS. Filesystems that don&#8217;t support these mount options follow the <code>-o nogrpid</code> rules.</p>
 <h3>Glibc notes</h3>
 <p> On older kernels where <code>fchownat</code>() is unavailable, the glibc wrapper function falls back to the use of <code>chown</code>() and <code>lchown</code>(). When <i>pathname</i> is a relative pathname, glibc constructs a pathname based on the symbolic link in <i>/proc/self/fd</i> that corresponds to the <i>dirfd</i> argument.</p>
@@ -141,3 +139,4 @@ int fchownat(int dirfd, const char *pathname,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct passwd&nbsp;*pwd;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*endptr; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;3 || argv[1][0]&nbsp;==&nbsp;&#8216;
+</p>

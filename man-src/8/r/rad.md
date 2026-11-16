@@ -14,10 +14,10 @@ description: "rad – Router Advertisement Daemon (ratools/rad)"
 <p>rad is a fast, dynamic, multi-threading daemon for sending IPv6 Router Advertisements (RA). It is controlled via ractl.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;socket</code></p>
-<dd>Override default path of the control socket.</p>
-<dt><code>&#8211;loglevel</code></p>
-<dd>Set logging level. Possible values are &#8216;info&#8217;, &#8216;warning&#8217;, and</dl>
+<dt><code>&#8211;socket</code></dt>
+<dd>Override default path of the control socket.</dd>
+<dt><code>&#8211;loglevel</code></dt>
+<dd>Set logging level. Possible values are &#8216;info&#8217;, &#8216;warning&#8217;, and</dd></dl>
 <h2>Availability</h2>
 <p><code>rad</code> is part of the ratools framework available from <a rel="nofollow" href="https://github.com/danrl/ratools">https://github.com/danrl/ratools</a></p>
 <h2>Author</h2>

@@ -15,11 +15,11 @@ relay_switch_subbuf - switch to a new sub-buffer
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>channel buffer</dl>
+<dl><dd></dd><dd>channel buffer</dd></dl>
  
 
  <i>length</i>
-<dl><dd>size of current event</dl>
+<dl><dd>size of current event</dd></dl>
 
 <h2>Description</h2>
 

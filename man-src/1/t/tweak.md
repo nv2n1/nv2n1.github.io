@@ -61,19 +61,19 @@ D0 8E 04 08 34 00 00 00 &amp; nbsp;<br />
 <h2>OPTIONS</h2>
 <p> This section lists the command-line options supported by <code>tweak</code>.</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> Runs <code>tweak</code> in `fix&#8217; mode, i.e. with the insert function entirely disabled. This might be useful if you are editing a file in which the insert mode is of no use (executables, for example, tend to have strong dependencies on precise file offsets which make it almost impossible to insert data in one without rendering it unusable) and you want to avoid turning it on by mistake.</p>
-<dt><code>-l</code></p>
-<dd> Runs <code>tweak</code> in `look&#8217; mode. In this mode <code>tweak</code> does not allow you to modify the data at all; it becomes simply a tool for examining a file in detail.</p>
-<dt><code>-e</code></p>
-<dd> Runs <code>tweak</code> in `eager&#8217; mode. In this mode <code>tweak</code> will read its entire input file when starting up. This causes it to take up more memory, but means that it has no dependency on the input file remaining unmodified, and other programs can alter it if they need to without causing trouble.</p>
-<dt><code>-w</code> <i>width</i></p>
-<dd> Specifies the number of bytes <code>tweak</code> will display per line. The default is 16, which fits neatly in an 80-column screen.</p>
-<dt><code>-o</code> <i>offset</i></p>
-<dd> If this option is specified, <code>tweak</code> will ensure that the given file offset occurs at the start of a line. For example, if you loaded a file using the options <code>-w 8 -o 0x13</code>, you might see a display a bit like this:</p>
+<dt><code>-f</code></dt>
+<dd> Runs <code>tweak</code> in `fix&#8217; mode, i.e. with the insert function entirely disabled. This might be useful if you are editing a file in which the insert mode is of no use (executables, for example, tend to have strong dependencies on precise file offsets which make it almost impossible to insert data in one without rendering it unusable) and you want to avoid turning it on by mistake.</dd>
+<dt><code>-l</code></dt>
+<dd> Runs <code>tweak</code> in `look&#8217; mode. In this mode <code>tweak</code> does not allow you to modify the data at all; it becomes simply a tool for examining a file in detail.</dd>
+<dt><code>-e</code></dt>
+<dd> Runs <code>tweak</code> in `eager&#8217; mode. In this mode <code>tweak</code> will read its entire input file when starting up. This causes it to take up more memory, but means that it has no dependency on the input file remaining unmodified, and other programs can alter it if they need to without causing trouble.</dd>
+<dt><code>-w</code> <i>width</i></dt>
+<dd> Specifies the number of bytes <code>tweak</code> will display per line. The default is 16, which fits neatly in an 80-column screen.</dd>
+<dt><code>-o</code> <i>offset</i></dt>
+<dd> If this option is specified, <code>tweak</code> will ensure that the given file offset occurs at the start of a line. For example, if you loaded a file using the options <code>-w 8 -o 0x13</code>, you might see a display a bit like this:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 00000000 &amp; nbsp;
 &amp;nbsp;
@@ -128,22 +128,22 @@ F.......0000000B &amp; nbsp;
 .4..., ..
 </code></pre>
 <p> By putting only three bytes of the file on the very first line, <code>tweak</code> has arranged that the file offset 0x13 (19 in decimal) appears at the beginning of the fourth line. </p>
-<p> You might use this option if you knew you were editing a file in a particular format. For example, if your file contained a 53-byte header followed by a series of 22-byte records, you might find it useful to specify the options <code>-w 22 -o 53</code>. This would arrange that after the header, each individual record of the file would appear on precisely one line of <code>tweak</code>&#8216;s display.</dl>
-<dt><code>-D</code></p>
-<dd> If this option is specified, <code>tweak</code> will not attempt to load and edit a file at all, but will simply produce its default <code>.tweakrc</code> file on standard output. This is a useful way to give yourself a starting point if you want to begin reconfiguring <code>tweak</code>&#8216;s keyboard layout.</dl>
+<p> You might use this option if you knew you were editing a file in a particular format. For example, if your file contained a 53-byte header followed by a series of 22-byte records, you might find it useful to specify the options <code>-w 22 -o 53</code>. This would arrange that after the header, each individual record of the file would appear on precisely one line of <code>tweak</code>&#8216;s display.</dd></dl>
+<dt><code>-D</code></dt>
+<dd> If this option is specified, <code>tweak</code> will not attempt to load and edit a file at all, but will simply produce its default <code>.tweakrc</code> file on standard output. This is a useful way to give yourself a starting point if you want to begin reconfiguring <code>tweak</code>&#8216;s keyboard layout.</dd></dl>
 <h2>KEYS</h2>
 <p> This section describes all the editing keys supported by <code>tweak</code> by default. The default key bindings for <code>tweak</code> are basically Emacs-like.</p>
 <h3>Movement keys</h3>
 <p> The Emacs cursor movement keys should all work, and their counterparts in ordinary function keys ought to work too:</p>
 <dl>
-<dt><code>&bull;</code></p>
-<dd> <code>^P</code> and <code>^N</code> go to the previous and next lines; Up and Down should do the same.</p>
-<dt><code>&bull;</code></p>
-<dd> <code>^B</code> and <code>^F</code> go back and forward one character; Left and Right should do the same.</p>
-<dt><code>&bull;</code></p>
-<dd> <code>M-v</code> and <code>^V</code> go up and down one screenful at a time; Page Up and Page Down should do the same.</p>
-<dt><code>&bull;</code></p>
-<dd> <code>^A</code> and <code>^E</code> go to the beginning and end of the line; Home and End should do the same.</dl>
+<dt><code>&bull;</code></dt>
+<dd> <code>^P</code> and <code>^N</code> go to the previous and next lines; Up and Down should do the same.</dd>
+<dt><code>&bull;</code></dt>
+<dd> <code>^B</code> and <code>^F</code> go back and forward one character; Left and Right should do the same.</dd>
+<dt><code>&bull;</code></dt>
+<dd> <code>M-v</code> and <code>^V</code> go up and down one screenful at a time; Page Up and Page Down should do the same.</dd>
+<dt><code>&bull;</code></dt>
+<dd> <code>^A</code> and <code>^E</code> go to the beginning and end of the line; Home and End should do the same.</dd></dl>
 <p> Press <code>M-&lt;</code> and <code>M-&gt;</code> go to the beginning and end of the file. </p>
 <p> Press <code>^X g</code> to go to a particular byte position in the file; you will be asked to type in the position you want. You can enter it in decimal, or as a hex number with `<code>0x</code>&#8216; before it.</p>
 <h3>Editing keys</h3>

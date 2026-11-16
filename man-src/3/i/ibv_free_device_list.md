@@ -17,11 +17,11 @@ url: "/docs/linux/man/3-ibv_free_device_list/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_device **ibv_get_device_list(int *num_devices);
 void ibv_free_device_list(struct ibv_device **list);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -43,11 +43,11 @@ void ibv_free_device_list(struct ibv_device **list);
 
 <dl>
 <dt>EPERM
-<dd> Permission denied.
-<dt>ENOSYS
-<dd> No kernel support for RDMA.
-<dt>ENOMEM
-<dd> Insufficient memory to complete the operation.</dl>
+</dt><dd> Permission denied.
+</dd><dt>ENOSYS
+</dt><dd> No kernel support for RDMA.
+</dd><dt>ENOMEM
+</dt><dd> Insufficient memory to complete the operation.</dd></dl>
 
 <h2>NOTES</h2>
 

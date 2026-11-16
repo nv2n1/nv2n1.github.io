@@ -21,8 +21,8 @@ description: "prelude-manager – Collects and normalize events."
 <p> <code>&#8211;server-addr=&lt;address&gt;</code> Address where this sensor should report to (addr:port) </p>
 <p> <code>&#8211;analyzer-name=&lt;name&gt;</code> Name for this analyzer </p>
 <dl>
-<dt><code>&#8211;db=&lt;INAME&gt;</code></p>
-<dd> Options for the libpreludedb plugin </p>
+<dt><code>&#8211;db=&lt;INAME&gt;</code></dt>
+<dd> Options for the libpreludedb plugin </dd>
 <p> <code>-t, &#8211;type=&lt;type&gt;</code> Type of database (mysql/pgsql/sqlite3) </p>
 <p> <code>-l, &#8211;log=&lt;file name&gt;</code> Log all queries in a file, should be only used for debugging purpose </p>
 <p> <code>-h, &#8211;host=&lt;address&gt;</code> The host where the database server is running (in case of client/server database) </p>
@@ -32,20 +32,20 @@ description: "prelude-manager – Collects and normalize events."
 <p> <code>-u, &#8211;user=&lt;user&gt;</code> User of the database (in case of client/server database) </p>
 <p> <code>-P, &#8211;pass=&lt;password&gt;</code> Password for the user (in case of client/server database)</p>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>&#8211;debug=&lt;INAME&gt;</code> Option for the debug plugin </p>
 <p> <code>-o, &#8211;object=&lt;name&gt;</code> Name of IDMEF object to print (no object provided will print the entire message) </p>
 <p> <code>-l, &#8211;logfile=&lt;file name&gt;</code> Specify output file to use (default to stdout)</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>&#8211;relaying=&lt;INAME&gt;</code> Relaying plugin option </p>
 <p> <code>-p, &#8211;parent-managers=&lt;address&gt;</code> List of managers address:port pair where messages should be sent to</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>&#8211;textmod=&lt;INAME&gt;</code> Option for the textmod plugin </p>
 <p> <code>-l, &#8211;logfile=&lt;file name&gt;</code> Specify logfile to use</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>&#8211;xmlmod=&lt;INAME&gt;</code> Option for the xmlmod plugin </p>
 <p> <code>-l, &#8211;logfile=&lt;file name&gt;</code> Specify output file to use </p>
 <p> <code>-v, &#8211;validate=&lt;xml&gt;</code> Validate IDMEF XML output against DTD </p>
@@ -54,25 +54,25 @@ description: "prelude-manager – Collects and normalize events."
 <p> <code>&#8211;idmef-criteria-filter=&lt;INAME&gt;</code> Filter message based on IDMEF criteria </p>
 <p> <code>-r, &#8211;rule=&lt;rule&gt;</code> Filter rule, or filename containing rule </p>
 <p> <code>&#8211;hook=&lt;value&gt;</code> Where the filter should be hooked (reporting|reverse-relaying|plugin name)</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>&#8211;config=&lt;file name&gt;</code> Configuration file to use</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print version number</p>
-<dt><code>-D, &#8211;debug-level=&lt;level&gt;</code></p>
-<dd> Run in debug mode</p>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd> Run in daemon mode</p>
-<dt><code>-P, &#8211;pidfile=&lt;file name&gt;</code></p>
-<dd> Write Prelude PID to pidfile</p>
-<dt><code>-c, &#8211;child-managers=&lt;address&gt;</code></p>
-<dd> List of managers address:port pair where messages should be gathered from</p>
-<dt><code>-l, &#8211;listen=&lt;address&gt;</code></p>
-<dd> Address the sensors server should listen on (addr:port)</p>
-<dt><code>-f, &#8211;failover=&lt;boolean&gt;</code></p>
-<dd> Enable failover for specified report plugin</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print help </p>
+</dd><dt><code>-v, &#8211;version</code></dt>
+<dd> Print version number</dd>
+<dt><code>-D, &#8211;debug-level=&lt;level&gt;</code></dt>
+<dd> Run in debug mode</dd>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd> Run in daemon mode</dd>
+<dt><code>-P, &#8211;pidfile=&lt;file name&gt;</code></dt>
+<dd> Write Prelude PID to pidfile</dd>
+<dt><code>-c, &#8211;child-managers=&lt;address&gt;</code></dt>
+<dd> List of managers address:port pair where messages should be gathered from</dd>
+<dt><code>-l, &#8211;listen=&lt;address&gt;</code></dt>
+<dd> Address the sensors server should listen on (addr:port)</dd>
+<dt><code>-f, &#8211;failover=&lt;boolean&gt;</code></dt>
+<dd> Enable failover for specified report plugin</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print help </dd>
 </dl>
 <h2>FILES</h2>
 <p> <code>/etc/prelude/prelude-manager.conf </code> &#8211; the configuration file </p>

@@ -15,11 +15,11 @@ strrchr - Find the last occurrence of a character in a string
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>The string to be searched</dl>
+<dl><dd></dd><dd>The string to be searched</dd></dl>
  
 
  <i>c</i>
-<dl><dd>The character to search for</dl>
+<dl><dd>The character to search for</dd></dl>
 
 <h2>Copyright</h2>
 

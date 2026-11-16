@@ -14,16 +14,16 @@ description: "gnutls_global_set_mem_functions – API function"
 <p> <code>void gnutls_global_set_mem_functions(gnutls_alloc_function </code><i>alloc_func</i><code>, gnutls_alloc_function </code><i>secure_alloc_func</i><code>, gnutls_is_secure_function </code><i>is_secure_func</i><code>, gnutls_realloc_function </code><i>realloc_func</i><code>, gnutls_free_function </code><i>free_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_alloc_function alloc_func</p>
-<dd> it&#8217;s the default memory allocation function. Like <code>malloc()</code>.</p>
-<dt>gnutls_alloc_function secure_alloc_func</p>
-<dd> This is the memory allocation function that will be used for sensitive data.</p>
-<dt>gnutls_is_secure_function is_secure_func</p>
-<dd> a function that returns 0 if the memory given is not secure. May be NULL.</p>
-<dt>gnutls_realloc_function realloc_func</p>
-<dd> A realloc function</p>
-<dt>gnutls_free_function free_func</p>
-<dd> The function that frees allocated data. Must accept a NULL pointer.</dl>
+<dt>gnutls_alloc_function alloc_func</dt>
+<dd> it&#8217;s the default memory allocation function. Like <code>malloc()</code>.</dd>
+<dt>gnutls_alloc_function secure_alloc_func</dt>
+<dd> This is the memory allocation function that will be used for sensitive data.</dd>
+<dt>gnutls_is_secure_function is_secure_func</dt>
+<dd> a function that returns 0 if the memory given is not secure. May be NULL.</dd>
+<dt>gnutls_realloc_function realloc_func</dt>
+<dd> A realloc function</dd>
+<dt>gnutls_free_function free_func</dt>
+<dd> The function that frees allocated data. Must accept a NULL pointer.</dd></dl>
 <h2>DEPRECATED</h2>
 <p> since 3.3.0 it is no longer possible to replace the internally used memory allocation functions </p>
 <p> This is the function where you set the memory allocation functions gnutls is going to use. By default the libc&#8217;s allocation functions (<code>malloc()</code>, <code>free()</code>), are used by gnutls, to allocate both sensitive and not sensitive data. This function is provided to set the memory allocation functions to something other than the defaults </p>
@@ -37,6 +37,6 @@ description: "gnutls_global_set_mem_functions – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

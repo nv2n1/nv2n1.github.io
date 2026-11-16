@@ -10,8 +10,8 @@ description: "convert – convert between image formats as well as resize an ima
 <p>convert &#8211; convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. </p>
 <h2>Synopsis</h2>
 <dl>
-<dt><code>convert-im6.q16</code> [<i>input-option</i>] <i>input-file</i> [<i>output-option</i>] <i>output-file</i></p>
-<dd></dl>
+<dt><code>convert-im6.q16</code> [<i>input-option</i>] <i>input-file</i> [<i>output-option</i>] <i>output-file</i></dt>
+<dd></dd></dl>
 <h2>Overview</h2>
 <p>The <code>convert-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. </p>
 <p> For more information about the convert command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/convert.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/convert.php.">https://www.imagemagick.org/script/convert.php.</a></p>

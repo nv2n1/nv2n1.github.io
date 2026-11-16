@@ -11,7 +11,6 @@ description: "sc::TorsSimpleCo –"
 <p> The <code>TorsSimpleCo</code> class describes an torsion internal coordinate of a molecule.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;simple.h&gt;</code></pre>
 <p> Inherits <code>sc::SimpleCo</code>.</p>
 <h3>Public Member Functions</h3>

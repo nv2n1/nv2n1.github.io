@@ -16,12 +16,12 @@ description: "check_mk – command line utility for managing Check_MK"
 <h2>GENERIC OPTIONS</h2>
 <p> The following options work in all modes and all situations. </p>
 <dl>
-<dt><code>-v</code></p>
-<dd> More verbose output. In good old Unix tradition check_mk only outputs texts if something goes wrong. By using <code>-v</code> you can get some more information about what&#8217;s going on. </p>
-<dt><code>-vv</code></p>
-<dd> Even more vebose output. Some operations give even more details when this options is used. </p>
-<dt><code>&#8211;debug</code></p>
-<dd> Disables the intern exception handling in Check_MK and let all Python exceptions through. That way you can see the exact location in the code where the actual problem is. This helps finding problems in self written check plugins. </p>
+<dt><code>-v</code></dt>
+<dd> More verbose output. In good old Unix tradition check_mk only outputs texts if something goes wrong. By using <code>-v</code> you can get some more information about what&#8217;s going on. </dd>
+<dt><code>-vv</code></dt>
+<dd> Even more vebose output. Some operations give even more details when this options is used. </dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Disables the intern exception handling in Check_MK and let all Python exceptions through. That way you can see the exact location in the code where the actual problem is. This helps finding problems in self written check plugins. </dd>
 </dl>
 <h2>SERVICE DISCOVERY</h2>
 <p> <code>cmk [&#8211;checks=CHECK_TYPE1,CHECK_TYPE2,&#8230;] -I|-II [HOSTS&#8230;]</code> </p>

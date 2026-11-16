@@ -15,15 +15,15 @@ strncmp - Compare two length-limited strings
 <h2>Arguments</h2>
 
 <i>cs</i>
-<dl><dd><dd>One string</dl>
+<dl><dd></dd><dd>One string</dd></dl>
  
 
  <i>ct</i>
-<dl><dd>Another string</dl>
+<dl><dd>Another string</dd></dl>
  
 
  <i>count</i>
-<dl><dd>The maximum number of bytes to compare</dl>
+<dl><dd>The maximum number of bytes to compare</dd></dl>
 
 <h2>Copyright</h2>
 

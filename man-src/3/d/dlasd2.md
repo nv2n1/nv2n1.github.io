@@ -19,7 +19,7 @@ description: "dlasd2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLASD2 merges the two sets of singular values together into a single
  sorted set.  Then it tries to deflate the size of the problem.
@@ -29,11 +29,11 @@ description: "dlasd2.f –"
  equation problem is reduced by one.
  DLASD2 is called from DLASD1.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>NL</i> </p>
+</dt><dd> <i>NL</i> </dd>
 <pre>
           NL is INTEGER
          The row dimension of the upper block.  NL &gt;= 1.
@@ -208,18 +208,18 @@ and the fourth is dense.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 268 of file dlasd2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

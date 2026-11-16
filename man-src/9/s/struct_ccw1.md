@@ -18,20 +18,20 @@ description: "struct_ccw1 – channel command word"
 <h2>Members</h2>
 <p>cmd_code</p>
 <dl>
-<dd>command code</dl>
+<dd>command code</dd></dl>
 <p> flags</p>
 <dl>
-<dd>flags, like IDA addressing, etc.</dl>
+<dd>flags, like IDA addressing, etc.</dd></dl>
 <p> count</p>
 <dl>
-<dd>byte count</dl>
+<dd>byte count</dd></dl>
 <p> cda</p>
 <dl>
-<dd>data address</dl>
+<dd>data address</dd></dl>
 <h2>Description</h2>
 <p>The ccw is the basic structure to build channel programs that perform operations with the device or the control unit. Only Format-1 channel command words are supported.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

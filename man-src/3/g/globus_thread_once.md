@@ -26,14 +26,14 @@ description: "One-time execution –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>once</i> A pointer to the value used to govern whether the function passed via the <i>init_routine</i> parameter has executed.<br />
- <i>init_routine</i> Function to execute one time. It is called with no parameters.</dl>
+</dt><dd> <i>once</i> A pointer to the value used to govern whether the function passed via the <i>init_routine</i> parameter has executed.<br />
+ <i>init_routine</i> Function to execute one time. It is called with no parameters.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_thread_once()</code> guarantees that the function pointed to by <i>init_routine</i> has run, and that subsequent calls to <code>globus_thread_once()</code> with the same value of <i>once</i> will not execute that function, and returns GLOBUS_SUCCESS. If an error occurs, <code>globus_thread_once()</code> returns an implementation-specific non-zero error value.</dl>
+</dt><dd> On success, <code>globus_thread_once()</code> guarantees that the function pointed to by <i>init_routine</i> has run, and that subsequent calls to <code>globus_thread_once()</code> with the same value of <i>once</i> will not execute that function, and returns GLOBUS_SUCCESS. If an error occurs, <code>globus_thread_once()</code> returns an implementation-specific non-zero error value.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

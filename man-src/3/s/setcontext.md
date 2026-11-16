@@ -11,7 +11,6 @@ description: "getcontext, setcontext – get or set the user context"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ucontext.h&gt;
 int getcontext(ucontext_t *ucp);
-
 int setcontext(const ucontext_t *ucp);</code></pre>
 <h2>Description</h2>
 <p>In a System V-like environment, one has the two types <i>mcontext_t</i> and <i>ucontext_t</i> defined in <i>&lt;ucontext.h&gt;</i> and the four functions <code>getcontext</code>(), <code>setcontext</code>(), <code><a href="/docs/linux/man/3-makecontext/">makecontext</a></code>(3), and <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3) that allow user-level context switching between multiple threads of control within a process. </p>

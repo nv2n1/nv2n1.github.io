@@ -14,7 +14,7 @@ description: "phy_start – start or restart a PHY device"
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>target phy_device struct</dl>
+</dd><dd>target phy_device struct</dd></dl>
 <h2>Description</h2>
 <p>Indicates the attached device&#8217;s readiness to handle PHY-related work. Used during startup to start the PHY, and after a call to <code>phy_stop</code> to resume operation. Also used to indicate the MDIO bus has cleared an error condition.</p>
 <h2>Copyright</h2>

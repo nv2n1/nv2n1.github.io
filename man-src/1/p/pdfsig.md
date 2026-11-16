@@ -17,56 +17,56 @@ description: "pdfsig – Portable Document Format (PDF) digital signatures tool"
 <p> pdfsig also uses the Online Certificate Status Protocol (OCSP) (refer to <a rel="nofollow" href="http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol)">http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol)</a> to look up the certificate online and check if it has been revoked (unless -no-ocsp has been specified). </p>
 <p> The NSS Database is searched for in the following locations:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If the -nssdir option is specified, the directory specified by this option.</p>
-<dt>&bull;</p>
-<dd> The NSS Certificate database in the default Firefox profile. i.e. $HOME/.mozilla/firefox/*.default.</p>
-<dt>&bull;</p>
-<dd> The NSS Certificate database in /etc/pki/nssdb.</dl>
+<dt>&bull;</dt>
+<dd> If the -nssdir option is specified, the directory specified by this option.</dd>
+<dt>&bull;</dt>
+<dd> The NSS Certificate database in the default Firefox profile. i.e. $HOME/.mozilla/firefox/*.default.</dd>
+<dt>&bull;</dt>
+<dd> The NSS Certificate database in /etc/pki/nssdb.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-nssdir [prefix]directory</code></p>
-<dd> Specify the database directory containing the certificate and key database files. See <a href="/docs/linux/man/1-certutil/">certutil</a>(1) -d option for details of the prefix. If not specified the other search locations described in <code>DESCRIPTION</code> are used.</p>
-<dt><code>-nss-pwd password</code></p>
-<dd> Specify the password needed to access the NSS database (if any).</p>
-<dt><code>-nocert</code></p>
-<dd> Do not validate the certificate.</p>
-<dt><code>-no-ocsp</code></p>
-<dd> Do not perform online OCSP certificate revocation check (local Certificate Revocation Lists (CRL) are still used).</p>
-<dt><code>-aia</code></p>
-<dd> Enable the use of Authority Information Access (AIA) extension to fetch missing certificates to build the certificate chain.</p>
-<dt><code>-dump</code></p>
-<dd> Dump all signatures into current directory.</p>
-<dt><code>-add-signature</code></p>
-<dd> Add a new signature to the document.</p>
-<dt><code>-new-signature-field-name name</code></p>
-<dd> Specifies the field name to be used when adding a new signature. A random ID will be used by default.</p>
-<dt><code>-sign n</code></p>
-<dd> Sign the document in the n-th signature field present in the document (must be unsigned).</p>
-<dt><code>-nick nickname</code></p>
-<dd> Use the certificate with the given nickname for signing.</p>
-<dt><code>-kpw password</code></p>
-<dd> Use the given password for the signing key (this might be missing if the key isn&#8217;t password protected).</p>
-<dt><code>-digest algorithm</code></p>
-<dd> Use the given digest algorithm for signing (default: SHA256).</p>
-<dt><code>-reason reason</code></p>
-<dd> Set the given reason string for the signature (default: no reason set).</p>
-<dt><code>-etsi</code></p>
-<dd> Create a signature of type ETSI.CAdES.detached instead of adbe.pkcs7.detached.</p>
-<dt><code>-list-nicks</code></p>
-<dd> List available nicknames in the NSS database.</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-nssdir [prefix]directory</code></dt>
+<dd> Specify the database directory containing the certificate and key database files. See <a href="/docs/linux/man/1-certutil/">certutil</a>(1) -d option for details of the prefix. If not specified the other search locations described in <code>DESCRIPTION</code> are used.</dd>
+<dt><code>-nss-pwd password</code></dt>
+<dd> Specify the password needed to access the NSS database (if any).</dd>
+<dt><code>-nocert</code></dt>
+<dd> Do not validate the certificate.</dd>
+<dt><code>-no-ocsp</code></dt>
+<dd> Do not perform online OCSP certificate revocation check (local Certificate Revocation Lists (CRL) are still used).</dd>
+<dt><code>-aia</code></dt>
+<dd> Enable the use of Authority Information Access (AIA) extension to fetch missing certificates to build the certificate chain.</dd>
+<dt><code>-dump</code></dt>
+<dd> Dump all signatures into current directory.</dd>
+<dt><code>-add-signature</code></dt>
+<dd> Add a new signature to the document.</dd>
+<dt><code>-new-signature-field-name name</code></dt>
+<dd> Specifies the field name to be used when adding a new signature. A random ID will be used by default.</dd>
+<dt><code>-sign n</code></dt>
+<dd> Sign the document in the n-th signature field present in the document (must be unsigned).</dd>
+<dt><code>-nick nickname</code></dt>
+<dd> Use the certificate with the given nickname for signing.</dd>
+<dt><code>-kpw password</code></dt>
+<dd> Use the given password for the signing key (this might be missing if the key isn&#8217;t password protected).</dd>
+<dt><code>-digest algorithm</code></dt>
+<dd> Use the given digest algorithm for signing (default: SHA256).</dd>
+<dt><code>-reason reason</code></dt>
+<dd> Set the given reason string for the signature (default: no reason set).</dd>
+<dt><code>-etsi</code></dt>
+<dd> Create a signature of type ETSI.CAdES.detached instead of adbe.pkcs7.detached.</dd>
+<dt><code>-list-nicks</code></dt>
+<dd> List available nicknames in the NSS database.</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>pdfsig signed_file.pdf</p>
-<dd> Displays signature info for signed_file.pdf.</p>
-<dt>pdfsig input.pdf output.pdf -add-signature -nss-pwd password -nick my-cert -reason &#8216;for fun!&#8217;</p>
-<dd> Creates a new pdf named output.pdf with the contents of input.pdf signed by the &#8216;my-cert&#8217; certificate.</p>
-<dt>pdfsig input.pdf output.pdf -sign 0 -nss-pwd password -nick my-cert -reason &#8216;for fun!&#8217;</p>
-<dd> Creates a new pdf named output.pdf with the contents of input.pdf signed by the &#8216;my-cert&#8217; certificate. input.pdf must have an already existing un-signed signature field.</dl>
+<dt>pdfsig signed_file.pdf</dt>
+<dd> Displays signature info for signed_file.pdf.</dd>
+<dt>pdfsig input.pdf output.pdf -add-signature -nss-pwd password -nick my-cert -reason &#8216;for fun!&#8217;</dt>
+<dd> Creates a new pdf named output.pdf with the contents of input.pdf signed by the &#8216;my-cert&#8217; certificate.</dd>
+<dt>pdfsig input.pdf output.pdf -sign 0 -nss-pwd password -nick my-cert -reason &#8216;for fun!&#8217;</dt>
+<dd> Creates a new pdf named output.pdf with the contents of input.pdf signed by the &#8216;my-cert&#8217; certificate. input.pdf must have an already existing un-signed signature field.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The pdfsig software and documentation are copyright 1996-2004 Glyph &amp; Cog, LLC and copyright 2005-2015 The Poppler Developers &#8211; <a rel="nofollow" href="http://poppler.freedesktop.org">http://poppler.freedesktop.org</a></p>
 <h2>SEE ALSO</h2>

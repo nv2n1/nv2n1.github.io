@@ -15,10 +15,10 @@ description: "xnightview – interactive control center for camera."
 <p> Without options create a frame. A right-click opens a control panel for a CCD. An option will display an image. The options are as follows: </p>
 <p> <code>-i fits</code> load FITS image</p>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> get names of FITS images by reading of std. input</p>
-<dt><code>-h</code></p>
-<dd> print help</dl>
+<dt><code>&#8211;</code></dt>
+<dd> get names of FITS images by reading of std. input</dd>
+<dt><code>-h</code></dt>
+<dd> print help</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Send a email to: F. Hroch &lt;hroch [at] physics.muni.cz&gt;.</p>
 <h2>SEE ALSO</h2>

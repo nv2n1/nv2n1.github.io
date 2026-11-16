@@ -13,11 +13,11 @@ description: "tpm_unloadkey"
 <h2>Description</h2>
 <p>The program unregisters the key associated with the UUID in UUID-FILE.</p>
 <dl>
-<dt>-r HOST</p>
-<dd>Perform operation on remote HOST.</p>
-<dt>-h</p>
-<dd>Display command usage info.</p>
-<dt>-v</p>
-<dd>Display command version info.</dl>
+<dt>-r HOST</dt>
+<dd>Perform operation on remote HOST.</dd>
+<dt>-h</dt>
+<dd>Display command usage info.</dd>
+<dt>-v</dt>
+<dd>Display command version info.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8), <code><a href="/docs/linux/man/8-tpm_loadkey/">tpm_loadkey</a></code>(8) </p>

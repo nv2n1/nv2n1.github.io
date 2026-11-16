@@ -46,65 +46,65 @@ description: "QwtPointPolar –"
 <p>Constructs a null point, with a radius and azimuth set to 0.0. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPointF::isNull()</dl>
+<dd>QPointF::isNull()</dd></dl>
 <h3>QwtPointPolar::QwtPointPolar (doubleazimuth, doubleradius) [inline]</h3>
 <p>Constructs a point with coordinates specified by radius and azimuth. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>azimuth</i> Azimuth<br />
- <i>radius</i> Radius</dl>
+ <i>radius</i> Radius</dd></dl>
 <h3>QwtPointPolar::QwtPointPolar (const <code>QwtPointPolar</code> &amp;other) [inline]</h3>
 <p>Constructs a point using the values of the point specified. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>other</i> Other point</dl>
+<dd><i>other</i> Other point</dd></dl>
 <h3>QwtPointPolar::QwtPointPolar (const QPointF &amp;p)</h3>
 <p>Convert and assign values from a point in Cartesian coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> Point in Cartesian coordinates</dl>
+<dd><i>p</i> Point in Cartesian coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPoint()</code>, <code>toPoint()</code></dl>
+<dd><code>setPoint()</code>, <code>toPoint()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtPointPolar</code> QwtPointPolar::normalized () const</h3>
 <p>Normalize radius and azimuth </p>
 <p> When the radius is &lt; 0.0 it is set to 0.0. The azimuth is a value &gt;= 0.0 and &lt; 2 * M_PI. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Normalized point</dl>
+<dd>Normalized point</dd></dl>
 <h3>bool QwtPointPolar::operator!= (const <code>QwtPointPolar</code> &amp;other) const</h3>
 <p>Compare 2 points </p>
 <p> Two points are equal to each other if radius and azimuth-coordinates are the same. Points are not equal, when the azimuth differs, but other.azimuth() == <code>azimuth()</code> % (2 * PI). </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if the point is not equal to other; otherwise return false.</dl>
+<dd>True if the point is not equal to other; otherwise return false.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>normalized()</code></dl>
+<dd><code>normalized()</code></dd></dl>
 <h3>bool QwtPointPolar::operator== (const <code>QwtPointPolar</code> &amp;other) const</h3>
 <p>Compare 2 points. Two points are equal to each other if radius and azimuth-coordinates are the same. Points are not equal, when the azimuth differs, but other.azimuth() == <code>azimuth()</code> % (2 * PI). </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>True if the point is equal to other; otherwise return false.</dl>
+<dd>True if the point is equal to other; otherwise return false.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>normalized()</code></dl>
+<dd><code>normalized()</code></dd></dl>
 <h3>void QwtPointPolar::setPoint (const QPointF &amp;p)</h3>
 <p>Convert and assign values from a point in Cartesian coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> Point in Cartesian coordinates</dl>
+<dd><i>p</i> Point in Cartesian coordinates</dd></dl>
 <h3>QPointF QwtPointPolar::toPoint () const</h3>
 <p>Convert and return values in Cartesian coordinates </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Converted point in Cartesian coordinates</dl>
+<dd>Converted point in Cartesian coordinates</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Invalid or null points will be returned as QPointF(0.0, 0.0)</dl>
+<dd>Invalid or null points will be returned as QPointF(0.0, 0.0)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isValid()</code>, <code>isNull()</code></dl>
+<dd><code>isValid()</code>, <code>isNull()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

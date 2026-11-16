@@ -10,12 +10,7 @@ description: "xcb_xkb_get_device_info –"
 <p>xcb_xkb_get_device_info &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_xkb_get_device_info_cookie_t xcb_xkb_get_device_info(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint16_t wanted, uint8_t allButtons, uint8_t firstButton, uint8_t nButtons, xcb_xkb_led_class_spec_t ledClass, xcb_xkb_id_spec_t ledID);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_xkb_get_device_info_reply_t {
@@ -41,74 +36,74 @@ xcb_xkb_get_device_info_cookie_t xcb_xkb_get_device_info(xcb_connection_t *conn,
 } <code>xcb_xkb_get_device_info_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_xkb_get_device_info_reply_t *<code>xcb_xkb_get_device_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_device_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_xkb_get_device_info_reply_t *<code>xcb_xkb_get_device_info_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_get_device_info_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_xkb_string8_t *<code>xcb_xkb_get_device_info_name</code>(const xcb_xkb_get_device_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_device_info_name_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_xkb_get_device_info_name_end</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>); uint8_t *xcb_xkb_get_device_info_pad_1 (const xcb_xkb_get_device_info_request_t *reply)</p>
-<dd>xcb_xkb_action_t *<code>xcb_xkb_get_device_info_btn_actions</code>(const xcb_xkb_get_device_info_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_device_info_btn_actions_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</p>
-<dd>xcb_xkb_action_iterator_t <code>xcb_xkb_get_device_info_btn_actions_iterator</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_xkb_get_device_info_leds_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</p>
+<dd>xcb_xkb_string8_t *<code>xcb_xkb_get_device_info_name</code>(const xcb_xkb_get_device_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_device_info_name_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_xkb_get_device_info_name_end</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>); uint8_t *xcb_xkb_get_device_info_pad_1 (const xcb_xkb_get_device_info_request_t *reply)</dd>
+<dd>xcb_xkb_action_t *<code>xcb_xkb_get_device_info_btn_actions</code>(const xcb_xkb_get_device_info_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_device_info_btn_actions_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</dd>
+<dd>xcb_xkb_action_iterator_t <code>xcb_xkb_get_device_info_btn_actions_iterator</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_xkb_get_device_info_leds_length</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);</dd>
 <dd>xcb_xkb_device_led_info_iterator_t <code>xcb_xkb_get_device_info_leds_iterator</code>(const xcb_xkb_get_device_info_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>wanted</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>allButtons</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstButton</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nButtons</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ledClass</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ledID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>wanted</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>allButtons</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstButton</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nButtons</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ledClass</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ledID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_GET_DEVICE_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>deviceID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>present</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>supported</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>unsupported</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nDeviceLedFBs</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstBtnWanted</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nBtnsWanted</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstBtnRtrn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nBtnsRtrn</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalBtns</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>hasOwnState</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>dfltKbdFB</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>dfltLedFB</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>devType</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nameLen</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_GET_DEVICE_INFO</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>deviceID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>present</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>supported</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>unsupported</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nDeviceLedFBs</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstBtnWanted</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nBtnsWanted</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstBtnRtrn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nBtnsRtrn</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalBtns</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>hasOwnState</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>dfltKbdFB</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>dfltLedFB</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>devType</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nameLen</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_get_device_info_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_get_device_info_reply</i>. </p>

@@ -18,20 +18,20 @@ description: "shtool version – GNU shtool maintain version information file"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print verbose information during processing.</p>
-<dt><code>-l</code>, <code>&#8211;language</code> <i>lang</i></p>
-<dd> Choose format of version file <i>file</i>. <i>lang</i>=&quot;<tt>&quot;txt&quot;</tt>&quot;, <font SIZE="-1">ANSI C </font>(<i>lang</i>=&#8220;c&#8221;), M4 (<i>lang</i>=&#8220;m4&#8221;), Perl (<i>lang</i>=&#8220;perl&#8221;) or Python (<i>lang</i>=&#8220;python&#8221;). Default is <tt>&quot;txt&quot;</tt>.</p>
-<dt><code>-n</code>, <code>&#8211;name</code> <i>name</i></p>
-<dd> Name the program the version is maintained for. Default is <tt>&quot;unknown&quot;</tt>.</p>
-<dt><code>-p</code>, <code>&#8211;prefix</code> <i>prefix</i> =item <code>-s</code>, <code>&#8211;set</code> <i>version</i></p>
-<dd> Set the version to <i>version</i>.</p>
-<dt><code>-e</code>, <code>&#8211;edit</code></p>
-<dd> Interactively enter a new version.</p>
-<dt><code>-i</code>, <code>&#8211;increase</code> <i>knob</i></p>
-<dd> When option &#8220;<code>-i</code>&#8221; is used, the current version in <i>file</i> is updated by increasing one element of the version where <i>knob</i> can be one of the following: &#8220;<tt>&quot;v&quot;</tt>&#8221; for increasing the version by 1 (and resetting revision and level to 0), &#8220;<tt>&quot;r&quot;</tt>&#8221; for increasing the revision by 1 (and resetting level to 0) or &#8220;<tt>&quot;l&quot;</tt>&#8221; for increasing the level by 1.</p>
-<dt><code>-d</code>, <code>&#8211;display</code> <i>type</i></p>
-<dd> Control the display type: &quot;<tt>&quot;short&quot;</tt>&#8220; for a short version display, &#8221;<tt>&quot;long&quot;</tt>&#8220; for a longer version display, &#8221;<tt>&quot;hex&quot;</tt>&#8220; for a hexadecimal display of the version and &#8221;<tt>&quot;libtool&quot;</tt>&quot; for a format suitable for use with <font SIZE="-1">GNU</font> libtool.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print verbose information during processing.</dd>
+<dt><code>-l</code>, <code>&#8211;language</code> <i>lang</i></dt>
+<dd> Choose format of version file <i>file</i>. <i>lang</i>=&quot;<tt>&quot;txt&quot;</tt>&quot;, <font SIZE="-1">ANSI C </font>(<i>lang</i>=&#8220;c&#8221;), M4 (<i>lang</i>=&#8220;m4&#8221;), Perl (<i>lang</i>=&#8220;perl&#8221;) or Python (<i>lang</i>=&#8220;python&#8221;). Default is <tt>&quot;txt&quot;</tt>.</dd>
+<dt><code>-n</code>, <code>&#8211;name</code> <i>name</i></dt>
+<dd> Name the program the version is maintained for. Default is <tt>&quot;unknown&quot;</tt>.</dd>
+<dt><code>-p</code>, <code>&#8211;prefix</code> <i>prefix</i> =item <code>-s</code>, <code>&#8211;set</code> <i>version</i></dt>
+<dd> Set the version to <i>version</i>.</dd>
+<dt><code>-e</code>, <code>&#8211;edit</code></dt>
+<dd> Interactively enter a new version.</dd>
+<dt><code>-i</code>, <code>&#8211;increase</code> <i>knob</i></dt>
+<dd> When option &#8220;<code>-i</code>&#8221; is used, the current version in <i>file</i> is updated by increasing one element of the version where <i>knob</i> can be one of the following: &#8220;<tt>&quot;v&quot;</tt>&#8221; for increasing the version by 1 (and resetting revision and level to 0), &#8220;<tt>&quot;r&quot;</tt>&#8221; for increasing the revision by 1 (and resetting level to 0) or &#8220;<tt>&quot;l&quot;</tt>&#8221; for increasing the level by 1.</dd>
+<dt><code>-d</code>, <code>&#8211;display</code> <i>type</i></dt>
+<dd> Control the display type: &quot;<tt>&quot;short&quot;</tt>&#8220; for a short version display, &#8221;<tt>&quot;long&quot;</tt>&#8220; for a longer version display, &#8221;<tt>&quot;hex&quot;</tt>&#8220; for a hexadecimal display of the version and &#8221;<tt>&quot;libtool&quot;</tt>&quot; for a format suitable for use with <font SIZE="-1">GNU</font> libtool.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

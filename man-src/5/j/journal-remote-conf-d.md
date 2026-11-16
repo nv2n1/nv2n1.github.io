@@ -23,18 +23,18 @@ description: "journal-remote.conf, journal-remote.conf.d – Journal remote serv
 <p>All options are configured in the &quot;[Remote]&quot; section: </p>
 <p> <i>Seal=</i></p>
 <dl>
-<dd>Periodically sign the data in the journal using Forward Secure Sealing.</dl>
+<dd>Periodically sign the data in the journal using Forward Secure Sealing.</dd></dl>
 <p> <i>SplitMode=</i></p>
 <dl>
-<dd>One of &quot;host&quot; or &quot;none&quot;.</dl>
+<dd>One of &quot;host&quot; or &quot;none&quot;.</dd></dl>
 <p> <i>ServerKeyFile=</i></p>
 <dl>
-<dd>SSL key in PEM format</dl>
+<dd>SSL key in PEM format</dd></dl>
 <p> <i>ServerCertificateFile=</i></p>
 <dl>
-<dd>SSL CA certificate in PEM format.</dl>
+<dd>SSL CA certificate in PEM format.</dd></dl>
 <p> <i>TrustedCertificateFile=</i></p>
 <dl>
-<dd>SSL CA certificate.</dl>
+<dd>SSL CA certificate.</dd></dl>
 <h2>See Also</h2>
 <p><code>systemd-journal-remote</code>(1), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8) </p>

@@ -65,12 +65,12 @@ description: "perl5180delta – what is new for perl v5.18.0"
 <h3>New DTrace probes</h3>
 <p> The following new DTrace probes have been added:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;op-entry&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;loading-file&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;loaded-file&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;op-entry&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;loading-file&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;loaded-file&quot;</tt></dd></dl>
 <h3>${^LAST_FH}</h3>
 <p> This new variable provides access to the filehandle that was last read. This is the handle used by <tt>$.</tt> and by <tt>&quot;tell&quot;</tt> and <tt>&quot;eof&quot;</tt> without arguments.</p>
 <h3>Regular Expression Set Operations</h3>
@@ -122,3 +122,4 @@ description: "perl5180delta – what is new for perl v5.18.0"
 <p> Unicode 6.0 reused the name &#8220;<font SIZE="-1">BELL&#8221;</font> for a different code point than it traditionally had meant. Since Perl v5.14, use of this name still referred to U+0007, but would raise a deprecation warning. Now, &#8220;<font SIZE="-1">BELL&#8221;</font> refers to U+1F514, and the name for U+0007 is &#8220;<font SIZE="-1">ALERT&#8221;.</font> All the functions in charnames have been correspondingly updated.</p>
 <h3>New Restrictions in Multi-Character Case-Insensitive Matching in Regular Expression Bracketed Character Classes</h3>
 <p> Unicode has now withdrawn their previous recommendation for regular expressions to automatically handle cases where a single character can match multiple characters case-insensitively, for example, the letter <font SIZE="-1">LATIN SMALL LETTER SHARP S</font> and the sequence <tt>&quot;ss&quot;</tt>. This is because it turns out to be impracticable to do this correctly in all circumstances. Because Perl has tried to do this as best it can, it will continue to do so. (We are considering an option to turn it off.) However, a new restriction is being added on such matches when they occur in [bracketed] character classes. People were specifying things such as <tt>&quot;/[
+</p>

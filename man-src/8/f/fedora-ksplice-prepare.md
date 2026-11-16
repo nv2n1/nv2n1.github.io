@@ -15,10 +15,10 @@ description: "fedora-ksplice-prepare – Prepare kernel sources for KSplice"
 <p> If you specified the <i>KERNELVERSION</i> argument, the sources for the specified kernel version will be downloaded.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;clean</code></p>
-<dd>Clean up the directory in which the kernel source RPMs are downloaded</p>
-<dt><code>&#8211;enablerepo</code> <i>&lt;repository&gt;</i></p>
-<dd>Enable repository &lt;repository&gt;</dl>
+<dt><code>&#8211;clean</code></dt>
+<dd>Clean up the directory in which the kernel source RPMs are downloaded</dd>
+<dt><code>&#8211;enablerepo</code> <i>&lt;repository&gt;</i></dt>
+<dd>Enable repository &lt;repository&gt;</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ksplice-create/">ksplice-create</a></i>(8)</p>
 <h2>Author</h2>

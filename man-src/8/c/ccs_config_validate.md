@@ -13,35 +13,35 @@ description: "ccs_config_validate"
 <p> ccs_config_validate [options]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Print this help, then exit</p>
-<dt><code>-V</code></p>
-<dd>Print program version information, then exit</p>
-<dt><code>-v</code></p>
-<dd>Produce verbose output</dl>
+<dt><code>-h</code></dt>
+<dd>Print this help, then exit</dd>
+<dt><code>-V</code></dt>
+<dd>Print program version information, then exit</dd>
+<dt><code>-v</code></dt>
+<dd>Produce verbose output</dd></dl>
 <h3>Validating XML configuraton files:</h3>
 <dl>
-<dt><code>-f</code> configfile</p>
-<dd>Validate an alternate config file without preloading it with default values.</p>
-<dt><code>-l</code> configfile</p>
-<dd>Validate an alternate config file with preloading of default values (recommended option).</dl>
+<dt><code>-f</code> configfile</dt>
+<dd>Validate an alternate config file without preloading it with default values.</dd>
+<dt><code>-l</code> configfile</dt>
+<dd>Validate an alternate config file with preloading of default values (recommended option).</dd></dl>
 <h3>Advanced options:</h3>
 <dl>
-<dt><code>-r</code></p>
-<dd>Force validation of runtime config</p>
-<dt> <code>-C</code> config_loader</p>
-<dd>Override config plugin loader</p>
-<dt><code>-t</code> tempfile</p>
-<dd>Force temporay file to tempfile</p>
-<dt><code>-n</code></p>
-<dd>Do not remove temporary file</p>
-<dt><code>-o</code></p>
-<dd>Overwrite temporary file (dangerous)</dl>
+<dt><code>-r</code></dt>
+<dd>Force validation of runtime config</dd>
+<dt> <code>-C</code> config_loader</dt>
+<dd>Override config plugin loader</dd>
+<dt><code>-t</code> tempfile</dt>
+<dd>Force temporay file to tempfile</dd>
+<dt><code>-n</code></dt>
+<dd>Do not remove temporary file</dd>
+<dt><code>-o</code></dt>
+<dd>Overwrite temporary file (dangerous)</dd></dl>
 <h2>Default</h2>
 <p>Default operation for ccs_config_validate is to load the currently configured environment and verify the outcoming configuration.</p>
 <dl>
-<dt>Example 1: current environment uses a configuration file (/etc/cluster/cluster.conf).</p>
-<dd>The user modifies cluser.conf and executes ccs_config_validate without options. The tool will validate the modified cluster.conf after including default values.</p>
-<dt>Example 2: current environment is set to load the configuration from LDAP. Users</p>
-<dd>modifies LDAP databse and before pushing the change to the nodes, she/he can issue ccs_config_validate to verify the contents o the LDAP database automatically (as long as the correct LDAP environment is set in the cman/cluster sysconfig/defaults files). </p>
+<dt>Example 1: current environment uses a configuration file (/etc/cluster/cluster.conf).</dt>
+<dd>The user modifies cluser.conf and executes ccs_config_validate without options. The tool will validate the modified cluster.conf after including default values.</dd>
+<dt>Example 2: current environment is set to load the configuration from LDAP. Users</dt>
+<dd>modifies LDAP databse and before pushing the change to the nodes, she/he can issue ccs_config_validate to verify the contents o the LDAP database automatically (as long as the correct LDAP environment is set in the cman/cluster sysconfig/defaults files). </dd>
 </dl>

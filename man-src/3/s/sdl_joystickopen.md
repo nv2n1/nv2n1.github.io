@@ -21,7 +21,6 @@ description: "SDL_JoystickOpen – Opens a joystick for use."
 if(SDL_NumJoysticks()&gt;0){
  // Open joystick
  joy=SDL_JoystickOpen(0);
- 
  if(joy)
  {
  printf(&quot;Opened Joystick 0
@@ -38,7 +37,6 @@ if(SDL_NumJoysticks()&gt;0){
  else
  printf(&quot;Couldn't open Joystick 0
 &quot;);
- 
  // Close if opened
  if(SDL_JoystickOpened(0))
  SDL_JoystickClose(joy);

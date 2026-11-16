@@ -11,9 +11,7 @@ description: "ql/experimental/commodities/pricingperiod.hpp – Pricing period."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/experimental/commodities/dateinterval.hpp&gt;
-
 #include &lt;ql/experimental/commodities/quantity.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PricingPeriod</code><br />

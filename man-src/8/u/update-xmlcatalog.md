@@ -20,28 +20,28 @@ description: "update-xmlcatalog – maintain XML catalog files"
 <p><code>update-xmlcatalog</code> add entries to and removes entries from the root <font SIZE="-1">XML</font> catalog file, a package <font SIZE="-1">XML</font> catalog file or a local <font SIZE="-1">XML</font> catalog file.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;add</code></p>
-<dd>Adds the entry to the root <font SIZE="-1">XML</font> catalog file, a package <font SIZE="-1">XML</font> catalog file or a local <font SIZE="-1">XML</font> catalog file. If the <font SIZE="-1">XML</font> catalog file does not exist yet, it is automatically created.</p>
-<dt><code>&#8211;del</code></p>
-<dd>Deletes the entry from the root <font SIZE="-1">XML</font> catalog file, the package <font SIZE="-1">XML</font> catalog file or the local <font SIZE="-1">XML</font> catalog file. A resulting empty <font SIZE="-1">XML</font> catalog is not automatically deleted from the filesystem.</p>
-<dt><code>&#8211;file</code> <i>file</i></p>
-<dd>Indicates a local filename.</p>
-<dt><code>&#8211;id</code> <i>id</i></p>
-<dd>Indicates the <font SIZE="-1">XML</font> catalog file entry identifier.</p>
-<dt><code>&#8211;local</code> <i>local</i></p>
-<dd>Indicates a local <font SIZE="-1">XML</font> catalog file.</p>
-<dt><code>&#8211;package</code> <i>package</i></p>
-<dd>Indicates a package <font SIZE="-1">XML</font> catalog file.</p>
-<dt><code>&#8211;root</code></p>
-<dd>Indicates the root <font SIZE="-1">XML</font> catalog file.</p>
-<dt><code>&#8211;type</code> <i>type</i></p>
-<dd>Indicates the <font SIZE="-1">XML</font> catalog file entry type (public, system, uri).</p>
-<dt><code>&#8211;help</code></p>
-<dd>Displays the usage information.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Optional switch to make a verbose output.</p>
-<dt><code>&#8211;sort</code></p>
-<dd>Optional switch to sort the manipulated catalog content. </p>
+<dt><code>&#8211;add</code></dt>
+<dd>Adds the entry to the root <font SIZE="-1">XML</font> catalog file, a package <font SIZE="-1">XML</font> catalog file or a local <font SIZE="-1">XML</font> catalog file. If the <font SIZE="-1">XML</font> catalog file does not exist yet, it is automatically created.</dd>
+<dt><code>&#8211;del</code></dt>
+<dd>Deletes the entry from the root <font SIZE="-1">XML</font> catalog file, the package <font SIZE="-1">XML</font> catalog file or the local <font SIZE="-1">XML</font> catalog file. A resulting empty <font SIZE="-1">XML</font> catalog is not automatically deleted from the filesystem.</dd>
+<dt><code>&#8211;file</code> <i>file</i></dt>
+<dd>Indicates a local filename.</dd>
+<dt><code>&#8211;id</code> <i>id</i></dt>
+<dd>Indicates the <font SIZE="-1">XML</font> catalog file entry identifier.</dd>
+<dt><code>&#8211;local</code> <i>local</i></dt>
+<dd>Indicates a local <font SIZE="-1">XML</font> catalog file.</dd>
+<dt><code>&#8211;package</code> <i>package</i></dt>
+<dd>Indicates a package <font SIZE="-1">XML</font> catalog file.</dd>
+<dt><code>&#8211;root</code></dt>
+<dd>Indicates the root <font SIZE="-1">XML</font> catalog file.</dd>
+<dt><code>&#8211;type</code> <i>type</i></dt>
+<dd>Indicates the <font SIZE="-1">XML</font> catalog file entry type (public, system, uri).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Displays the usage information.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Optional switch to make a verbose output.</dd>
+<dt><code>&#8211;sort</code></dt>
+<dd>Optional switch to sort the manipulated catalog content. </dd>
 <p> Tip: To sort a catalog without adding or removing an item, just add an already existing item to the catalog.</dl>
 <h2>Notes</h2>
 <p><code>update-xmlcatalog</code> is the de-facto standard tool to be used to maintain <font SIZE="-1">XML</font> catalog files on a Debian system, similar to that <code><a href="/docs/linux/man/8-update-catalog/">update-catalog</a></code>(8) is the standard tool to be used to main <font SIZE="-1">SGML</font> catalog files on a Debian system. A Debian <font SIZE="-1">XML</font> Policy document to this effect is currently under development. </p>
@@ -50,3 +50,4 @@ description: "update-xmlcatalog – maintain XML catalog files"
 <p><i>/usr/share/doc/xml-core/README.Debian</i></p>
 <h2>Author</h2>
 <p><code>Ardo van Rangelrooij</code> &lt;ardo [at] debian.org&gt;</p>
+</p>

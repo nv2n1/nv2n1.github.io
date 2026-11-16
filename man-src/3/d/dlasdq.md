@@ -19,7 +19,7 @@ description: "dlasdq.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DLASDQ computes the singular value decomposition(SVD) of a real
  (upper or lower) bidiagonal matrix with diagonal D and offdiagonal
@@ -34,11 +34,11 @@ DLASDQ computes the singular value decomposition(SVD) of a real
  Guaranteed High Relative Accuracy," by J. Demmel and W. Kahan,
  LAPACK Working Note #3, for a detailed description of the algorithm.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
         On entry, UPLO specifies whether the input bidiagonal matrix
@@ -159,18 +159,18 @@ DLASDQ computes the singular value decomposition(SVD) of a real
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 211 of file dlasdq.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

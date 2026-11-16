@@ -13,31 +13,31 @@ description: "vpStoreRawVolume, vpStoreMinMaxOctree, vpStoreClassifiedVolume, vp
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpStoreRawVolume(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpStoreRawVolume(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpStoreMinMaxOctree(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpStoreMinMaxOctree(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpStoreClassifiedVolume(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpStoreClassifiedVolume(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpStoreContext(</code><i>vpc, fd</i><code>)</code></p>
+<dt> <code>vpStoreContext(</code><i>vpc, fd</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>fd;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>fd;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>fd</i></p>
-<dd>File descriptor from <code><a href="/docs/linux/man/2-open/">open</a></code>(2), open for writing.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>fd</i></dt>
+<dd>File descriptor from <code><a href="/docs/linux/man/2-open/">open</a></code>(2), open for writing.</dd></dl>
 <h2>Description</h2>
 <p>These functions are used to store volume data structures from a rendering context into files in the format read by the VolPack file reading routines (see <a href="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3)). </p>
 <p> <code>vpStoreRawVolume</code> creates a 3D voxel array file. The file includes information about the size of the volume and the layout of the voxels as well as the volume data itself. </p>
@@ -50,13 +50,14 @@ description: "vpStoreRawVolume, vpStoreMinMaxOctree, vpStoreClassifiedVolume, vp
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return values are possible:</p>
 <dl>
-<dt>VPERROR_IO</p>
-<dd>The file writing function returned an error value (in which case the external variable <code>errno</code> should contain an operating-system specific error code), or the file system is full.</p>
-<dt>VPERROR_BAD_VOLUME</p>
-<dd>The volume dimensions are invalid, or there is no voxel data in the context.</p>
-<dt>VPERROR_BAD_SIZE</p>
-<dd>There is no min-max octree in the volume (<code>vpStoreMinMaxOctree</code> only).</p>
-<dt>VPERROR_BAD_VOXEL</p>
-<dd>The voxel fields in the rendering context have not been properly defined.</dl>
+<dt>VPERROR_IO</dt>
+<dd>The file writing function returned an error value (in which case the external variable <code>errno</code> should contain an operating-system specific error code), or the file system is full.</dd>
+<dt>VPERROR_BAD_VOLUME</dt>
+<dd>The volume dimensions are invalid, or there is no voxel data in the context.</dd>
+<dt>VPERROR_BAD_SIZE</dt>
+<dd>There is no min-max octree in the volume (<code>vpStoreMinMaxOctree</code> only).</dd>
+<dt>VPERROR_BAD_VOXEL</dt>
+<dd>The voxel fields in the rendering context have not been properly defined.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3) </p>
+</dl></dl></dl>

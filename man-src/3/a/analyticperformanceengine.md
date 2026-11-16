@@ -18,6 +18,6 @@ description: "QuantLib::AnalyticPerformanceEngine – Pricing engine for perform
 <p>Pricing engine for performance options using analytical formulae. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

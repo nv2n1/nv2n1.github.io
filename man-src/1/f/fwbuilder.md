@@ -18,25 +18,25 @@ description: "fwbuilder – Multiplatform firewall configuration tool"
 <p> Firewall Builder supports firewalls based on iptables (Linux kernel 2.4.x and 2.6.x, see <a href="/docs/linux/man/1-fwb_ipt/">fwb_ipt</a>(1)), ipfilter (variety of platforms including *BSD, Solaris and others, see <a href="/docs/linux/man/1-fwb_ipf/">fwb_ipf</a>(1)), pf (OpenBSD and FreeBSD, see <a href="/docs/linux/man/1-fwb_pf/">fwb_pf</a>(1)), ipfw (FreeBSD and others), Cisco PIX (v6.x and 7.x) and Cisco IOS extended access lists. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-f FILE</p>
-<dd> Specify the name of the file to be loaded when program starts. </p>
-<dt>-r</p>
-<dd> When this command line option is given in combination with -f file, the program automatically opens RCS head revision of the file if file is in RCS. If file is not in RCS, this option does nothing and the file is opened as usual. </p>
-<dt>-d</p>
-<dd> Turns on debug mode. Note that in this mode the program generates lots of output on standard error. This is used for debugging. </p>
-<dt>-h</p>
-<dd> Prints brief help message </p>
-<dt>-o file</p>
-<dd> Specify the name of the file for the print output, see option &quot;-P&quot;. </p>
-<dt>-P object_name</p>
-<dd> Print rules and objects for the firewall object &quot;object_name&quot; and immediately exit. The program does not go into interactive mode and does not need X11. Print output will be placed in the file specified with &quot;-o&quot; option. If file name is not given with option &quot;-o&quot;, print output is stored in the file &quot;print.pdf&quot; in the current directory. </p>
+<dt>-f FILE</dt>
+<dd> Specify the name of the file to be loaded when program starts. </dd>
+<dt>-r</dt>
+<dd> When this command line option is given in combination with -f file, the program automatically opens RCS head revision of the file if file is in RCS. If file is not in RCS, this option does nothing and the file is opened as usual. </dd>
+<dt>-d</dt>
+<dd> Turns on debug mode. Note that in this mode the program generates lots of output on standard error. This is used for debugging. </dd>
+<dt>-h</dt>
+<dd> Prints brief help message </dd>
+<dt>-o file</dt>
+<dd> Specify the name of the file for the print output, see option &quot;-P&quot;. </dd>
+<dt>-P object_name</dt>
+<dd> Print rules and objects for the firewall object &quot;object_name&quot; and immediately exit. The program does not go into interactive mode and does not need X11. Print output will be placed in the file specified with &quot;-o&quot; option. If file name is not given with option &quot;-o&quot;, print output is stored in the file &quot;print.pdf&quot; in the current directory. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt>$HOME/.qt/firewallbuilder2rc</p>
-<dd> Fwbuilder v2.1 stores user preferences in this file. </p>
-<dt>$HOME/.config/netcitadel.com/Firewall Builder.conf</p>
-<dd> Fwbuilder v3.0 stores user preferences in this file. </p>
+<dt>$HOME/.qt/firewallbuilder2rc</dt>
+<dd> Fwbuilder v2.1 stores user preferences in this file. </dd>
+<dt>$HOME/.config/netcitadel.com/Firewall Builder.conf</dt>
+<dd> Fwbuilder v3.0 stores user preferences in this file. </dd>
 </dl>
 <h2>URL</h2>
 <p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>

@@ -16,80 +16,80 @@ description: "clufter – CLUster FilTER"
 <p> While primarily aimed at (CMAN,rgmanager)-&gt;(Corosync/CMAN,Pacemaker) cluster stacks configuration conversion (as per RHEL trend), the command-filter-format framework (capable of XSLT) offers also other uses through its plugin library.</p>
 <h3>Commands (as available, but stable); built-in only, use &#8211;list to get all:</h3>
 <dl>
-<dt>ccs-artefacts</p>
-<dd> Output artefacts referenced in the config. in CVS format</p>
-<dt>ccs-disable-rg</p>
-<dd> Make config. prevent RGManager from (accidentally) starting</p>
-<dt>ccs-obfuscate</p>
-<dd> Obfuscate credentials/IDs in CMAN-based cluster config.</p>
-<dt>ccs-revitalize</p>
-<dd> Migrate deprecated config&#8217;s props (agent params, etc.)</p>
-<dt>ccs2pcs-flatiron</p>
-<dd> (CMAN,rgmanager)-&gt;(Corosync/CMAN,Pacemaker) cluster cfg.</p>
-<dt>ccs2pcs-needle</p>
-<dd> (CMAN,rgmanager)-&gt;(Corosync v2,Pacemaker) cluster cfg.</p>
-<dt>ccs2pcscmd-flatiron</p>
-<dd> (CMAN,rgmanager) cluster cfg. -&gt; equivalent in pcs commands</p>
-<dt>ccs2pcscmd-needle</p>
-<dd> (CMAN,rgmanager) cluster cfg. -&gt; equivalent in pcs commands</p>
-<dt>cib-revitalize</p>
-<dd> Migrate deprecated configuration items in CIB</p>
-<dt>cib2pcscmd</p>
-<dd> CIB -&gt; equivalent in pcs commands</p>
-<dt>cmd-wrap</p>
-<dd> Wrap long lines carrying (fairly) convoluted shell commands</p>
-<dt>pcs2pcscmd-flatiron</p>
-<dd> (Corosync/CMAN,Pacemaker) cluster cfg. -&gt; reinstating pcs commands</p>
-<dt>pcs2pcscmd-needle</p>
-<dd> (Corosync v2,Pacemaker) cluster cfg. -&gt; reinstating pcs commands</dl>
+<dt>ccs-artefacts</dt>
+<dd> Output artefacts referenced in the config. in CVS format</dd>
+<dt>ccs-disable-rg</dt>
+<dd> Make config. prevent RGManager from (accidentally) starting</dd>
+<dt>ccs-obfuscate</dt>
+<dd> Obfuscate credentials/IDs in CMAN-based cluster config.</dd>
+<dt>ccs-revitalize</dt>
+<dd> Migrate deprecated config&#8217;s props (agent params, etc.)</dd>
+<dt>ccs2pcs-flatiron</dt>
+<dd> (CMAN,rgmanager)-&gt;(Corosync/CMAN,Pacemaker) cluster cfg.</dd>
+<dt>ccs2pcs-needle</dt>
+<dd> (CMAN,rgmanager)-&gt;(Corosync v2,Pacemaker) cluster cfg.</dd>
+<dt>ccs2pcscmd-flatiron</dt>
+<dd> (CMAN,rgmanager) cluster cfg. -&gt; equivalent in pcs commands</dd>
+<dt>ccs2pcscmd-needle</dt>
+<dd> (CMAN,rgmanager) cluster cfg. -&gt; equivalent in pcs commands</dd>
+<dt>cib-revitalize</dt>
+<dd> Migrate deprecated configuration items in CIB</dd>
+<dt>cib2pcscmd</dt>
+<dd> CIB -&gt; equivalent in pcs commands</dd>
+<dt>cmd-wrap</dt>
+<dd> Wrap long lines carrying (fairly) convoluted shell commands</dd>
+<dt>pcs2pcscmd-flatiron</dt>
+<dd> (Corosync/CMAN,Pacemaker) cluster cfg. -&gt; reinstating pcs commands</dd>
+<dt>pcs2pcscmd-needle</dt>
+<dd> (Corosync v2,Pacemaker) cluster cfg. -&gt; reinstating pcs commands</dd></dl>
 <h3>Aliases thereof (environment-specific):</h3>
 <dl>
-<dt>ccs2pcs</p>
-<dd> alias for ccs2pcs-needle</p>
-<dt>ccs2pcscmd</p>
-<dd> alias for ccs2pcscmd-needle</p>
-<dt>pcs2pcscmd</p>
-<dd> alias for pcs2pcscmd-needle</dl>
+<dt>ccs2pcs</dt>
+<dd> alias for ccs2pcs-needle</dd>
+<dt>ccs2pcscmd</dt>
+<dd> alias for ccs2pcscmd-needle</dd>
+<dt>pcs2pcscmd</dt>
+<dd> alias for pcs2pcscmd-needle</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> Standalone global options:</p>
+</dt><dd> Standalone global options:</dd>
 <dt>
-<dd> These take precedence over any command.</p>
-<dt><code>-h</code> [CMD], <code>&#8211;help</code>=<i>[CMD]</i></p>
-<dd> show help message (can be command-specific) and exit</p>
-<dt><code>-H</code> [CMD], <code>&#8211;help-full</code>=<i>[CMD]</i></p>
-<dd> full help message (can be command-specific) and exit</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> list commands and exit</p>
-<dt><code>&#8211;list-dists</code>=<i>[VERBOSITY]</i></p>
-<dd> (Advanced) list explicitly supported <code>&#8211;dist</code> option arguments and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> show version details and exit</p>
-<dt><code>-e</code> EXT_USER, <code>&#8211;ext</code>=<i>EXT_USER</i></p>
-<dd> (Advanced) specify dir/s (as PATH/multiplied) scanned for plugins</p>
-<dt><code>-s</code>, <code>&#8211;skip-ext</code></p>
-<dd> do not use standard external plugins</p>
-<dt><code>&#8211;completion-bash</code></p>
-<dd> generate bash completion and exit</p>
+</dt><dd> These take precedence over any command.</dd>
+<dt><code>-h</code> [CMD], <code>&#8211;help</code>=<i>[CMD]</i></dt>
+<dd> show help message (can be command-specific) and exit</dd>
+<dt><code>-H</code> [CMD], <code>&#8211;help-full</code>=<i>[CMD]</i></dt>
+<dd> full help message (can be command-specific) and exit</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> list commands and exit</dd>
+<dt><code>&#8211;list-dists</code>=<i>[VERBOSITY]</i></dt>
+<dd> (Advanced) list explicitly supported <code>&#8211;dist</code> option arguments and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> show version details and exit</dd>
+<dt><code>-e</code> EXT_USER, <code>&#8211;ext</code>=<i>EXT_USER</i></dt>
+<dd> (Advanced) specify dir/s (as PATH/multiplied) scanned for plugins</dd>
+<dt><code>-s</code>, <code>&#8211;skip-ext</code></dt>
+<dd> do not use standard external plugins</dd>
+<dt><code>&#8211;completion-bash</code></dt>
+<dd> generate bash completion and exit</dd>
 <dt>
-<dd> Common options:</p>
+</dt><dd> Common options:</dd>
 <dt>
-<dd> Either in global (before &lt;cmd&gt;) or command scope (after &lt;cmd&gt;).</p>
-<dt><code>&#8211;sys</code>=<i>SYS</i></p>
-<dd> (Advanced) override autodetected system [linux]</p>
-<dt><code>&#8211;dist</code>=<i>DIST</i></p>
-<dd> override target distro (for SYS=linux; see <code>&#8211;list-dists</code>) [centos,7.2.1511,Core]</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> refrain from unnecesary messages (usually on stderr)</p>
-<dt><code>&#8211;color</code>=<i>[WHEN]</i></p>
-<dd> colorize messages if available [auto out of auto, never, always]</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> shortcut for <code>&#8211;loglevel</code>=<i>DEBUG</i></p>
-<dt><code>&#8211;logfile</code>=<i>FILE</i></p>
-<dd> specify log file (instead of stderr)</p>
-<dt><code>&#8211;loglevel</code>=<i>LEVEL</i></p>
-<dd> specify log level [WARNING out of NOTSET, DEBUG, INFO, WARNING, ERROR, CRITICAL]</dl>
+</dt><dd> Either in global (before &lt;cmd&gt;) or command scope (after &lt;cmd&gt;).</dd>
+<dt><code>&#8211;sys</code>=<i>SYS</i></dt>
+<dd> (Advanced) override autodetected system [linux]</dd>
+<dt><code>&#8211;dist</code>=<i>DIST</i></dt>
+<dd> override target distro (for SYS=linux; see <code>&#8211;list-dists</code>) [centos,7.2.1511,Core]</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> refrain from unnecesary messages (usually on stderr)</dd>
+<dt><code>&#8211;color</code>=<i>[WHEN]</i></dt>
+<dd> colorize messages if available [auto out of auto, never, always]</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> shortcut for <code>&#8211;loglevel</code>=<i>DEBUG</i></dd>
+<dt><code>&#8211;logfile</code>=<i>FILE</i></dt>
+<dd> specify log file (instead of stderr)</dd>
+<dt><code>&#8211;loglevel</code>=<i>LEVEL</i></dt>
+<dd> specify log level [WARNING out of NOTSET, DEBUG, INFO, WARNING, ERROR, CRITICAL]</dd></dl>
 <p> To get help for given command, just precede or follow it with <code>&#8211;help</code>.</p>
 <h2>AUTHOR</h2>
 <p> Written by Jan Pokorný &lt;jpokorny+pkg-clufter [at] redhat.com&gt; and plugin authors.</p>

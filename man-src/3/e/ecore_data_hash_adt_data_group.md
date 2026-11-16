@@ -27,39 +27,39 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key to search for.</dl>
+ <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The value corresponding to key on success, NULL otherwise.</dl>
+<dd>The value corresponding to key on success, NULL otherwise.</dd></dl>
 <h3>EAPI void* ecore_hash_get (Ecore_Hash * hash, const void * key)</h3>
 <p>Retrieves the value associated with the given key from the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key to search for.</dl>
+ <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The value corresponding to key on success, NULL otherwise.</dl>
+<dd>The value corresponding to key on success, NULL otherwise.</dd></dl>
 <p> Referenced by ecore_plugin_available_get(), ecore_string_instance(), and ecore_string_release().</p>
 <h3>EAPI int ecore_hash_hash_set (Ecore_Hash * hash, Ecore_Hash * set)</h3>
 <p>Sets all key-value pairs from set in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
- <i>set</i> The hash table to import.</dl>
+ <i>set</i> The hash table to import.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if successful, FALSE if not.</dl>
+<dd>TRUE if successful, FALSE if not.</dd></dl>
 <p> References ecore_hash_init().</p>
 <h3>EAPI void* ecore_hash_remove (Ecore_Hash * hash, const void * key)</h3>
 <p>Removes the value associated with the given key in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key to search for.</dl>
+ <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The value corresponding to the key on success. NULL is returned if there is an error.</dl>
+<dd>The value corresponding to the key on success. NULL is returned if there is an error.</dd></dl>
 <p> Referenced by ecore_string_release().</p>
 <h3>EAPI int ecore_hash_set (Ecore_Hash * hash, void * key, void * value)</h3>
 <p>Sets a key-value pair in the given hash table. </p>
@@ -67,10 +67,10 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <dl COMPACT>
 <dd><i>hash</i> The given hash table.<br />
  <i>key</i> The key.<br />
- <i>value</i> The value.</dl>
+ <i>value</i> The value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if successful, FALSE if not.</dl>
+<dd>TRUE if successful, FALSE if not.</dd></dl>
 <p> Referenced by ecore_plugin_available_get(), and ecore_string_instance().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -23,8 +23,8 @@ description: "pamtopnm – convert PAM image to PBM, PGM, or PPM"
 <p> As with any Netpbm program that reads PAM images, <code>pamtopnm</code> also reads PNM images as if they were PAM. In that case, <code>pamtopnm</code>&#8216;s functions reduces to simply copying the input to the output. But this can be useful in a program that doesn&#8217;t know whether its input is PAM or PNM but needs to feed it to a program that only recognizes PNM. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-assume</code></p>
-<dd> When you specify <code>-assume</code>, you tell <code>pamtopnm</code> that you personally vouch for the fact that the tuples contain the same data as belongs in the channels of a PBM, PGM, or PPM file. The depth must still conform, though, so to truly force a conversion, you may have to run the input through <code>pamchannel</code> first. But be careful with <code>-assume</code>. When you -assume, you make an -ass of u and me. </p>
+<dt><code>-assume</code></dt>
+<dd> When you specify <code>-assume</code>, you tell <code>pamtopnm</code> that you personally vouch for the fact that the tuples contain the same data as belongs in the channels of a PBM, PGM, or PPM file. The depth must still conform, though, so to truly force a conversion, you may have to run the input through <code>pamchannel</code> first. But be careful with <code>-assume</code>. When you -assume, you make an -ass of u and me. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>pbm</code>(1) , <code>pgm</code>(1) , <code>ppm</code>(1) </p>

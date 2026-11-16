@@ -130,12 +130,12 @@ description: "TopLevelShell — The TopLevelShell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNiconic</code></p>
-<dd>If True when the widget is <i>created</i>, specifies that the widget should start as an icon when it is realized. A value of False indicates that the widget is not to be realized as an icon. This resource will only override the <code>XmNinitialState</code> resource when specified in the call that creates the widget.</p>
-<dt><code>XmNiconName</code></p>
-<dd>Specifies the short form of the application name to be displayed by the window manager when the application is iconified. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</p>
-<dt><code>XmNiconNameEncoding</code></p>
-<dd>Specifies a property type that represents the encoding of the <code>XmNiconName</code> string. If a language procedure has been set, the default is None; otherwise, the default is <code>XA_STRING</code>. When the widget is realized, if the value is None, the corresponding name is assumed to be in the current locale. The name is passed to <code>XmbTextListToTextProperty</code> with an encoding style of <code>XStdICCTextStyle</code>. The resulting encoding is <code>STRING</code> if the name is fully convertible to <code>STRING</code>, otherwise <code>COMPOUND_TEXT</code>. The values of the encoding resources are not changed; they remain None.</dl>
+<dt><code>XmNiconic</code></dt>
+<dd>If True when the widget is <i>created</i>, specifies that the widget should start as an icon when it is realized. A value of False indicates that the widget is not to be realized as an icon. This resource will only override the <code>XmNinitialState</code> resource when specified in the call that creates the widget.</dd>
+<dt><code>XmNiconName</code></dt>
+<dd>Specifies the short form of the application name to be displayed by the window manager when the application is iconified. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dd>
+<dt><code>XmNiconNameEncoding</code></dt>
+<dd>Specifies a property type that represents the encoding of the <code>XmNiconName</code> string. If a language procedure has been set, the default is None; otherwise, the default is <code>XA_STRING</code>. When the widget is realized, if the value is None, the corresponding name is assumed to be in the current locale. The name is passed to <code>XmbTextListToTextProperty</code> with an encoding style of <code>XStdICCTextStyle</code>. The resulting encoding is <code>STRING</code> if the name is fully convertible to <code>STRING</code>, otherwise <code>COMPOUND_TEXT</code>. The values of the encoding resources are not changed; they remain None.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>TopLevelShell inherits behavior and resources from the following superclasses. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

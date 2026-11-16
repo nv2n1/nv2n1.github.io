@@ -16,11 +16,11 @@ int
 <code>Tk_ClipboardAppend</code>(<i>interp, tkwin, target, format, buffer</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for reporting errors.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Window that determines which display&#8217;s clipboard to manipulate.</p>
-<dd>Atom <i>target</i> (in) Conversion type for this clipboard item; has same meaning as <i>target</i> argument to <code>Tk_CreateSelHandler</code>.</p>
-<dd>Atom <i>format</i> (in) Representation to use when data is retrieved; has same meaning as <i>format</i> argument to <code>Tk_CreateSelHandler</code>.</p>
-<dd>char <i>*buffer</i> (in) Null terminated string containing the data to be appended to the clipboard. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for reporting errors.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Window that determines which display&#8217;s clipboard to manipulate.</dd>
+<dd>Atom <i>target</i> (in) Conversion type for this clipboard item; has same meaning as <i>target</i> argument to <code>Tk_CreateSelHandler</code>.</dd>
+<dd>Atom <i>format</i> (in) Representation to use when data is retrieved; has same meaning as <i>format</i> argument to <code>Tk_CreateSelHandler</code>.</dd>
+<dd>char <i>*buffer</i> (in) Null terminated string containing the data to be appended to the clipboard. </dd>
 </dl>
 <h2>Description</h2>
 <p>These two procedures manage the clipboard for Tk. The clipboard is typically managed by calling <code>Tk_ClipboardClear</code> once, then calling <code>Tk_ClipboardAppend</code> to add data for any number of targets. </p>

@@ -15,7 +15,7 @@ pci_create_legacy_files - create legacy I/O port and memory files
 <h2>Arguments</h2>
 
 <i>b</i>
-<dl><dd><dd>bus to create files under</dl>
+<dl><dd></dd><dd>bus to create files under</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,12 +16,12 @@ description: "llvm-prof – print execution profile of LLVM program"
 <p> This program is often used in conjunction with the <i>utils/profile.pl</i> script. This script automatically instruments a program, runs it with the <font SIZE="-1">JIT</font>, then runs <code>llvm-prof</code> to format a report. To get more information about <i>utils/profile.pl</i>, execute it with the <code>-help</code> option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;annotated-llvm</code> or <code>-A</code></p>
-<dd> In addition to the normal report printed, print out the code for the program, annotated with execution frequency information. This can be particularly useful when trying to visualize how frequently basic blocks are executed. This is most useful with basic block profiling information or better.</p>
-<dt><code>&#8211;print-all-code</code></p>
-<dd> Using this option enables the <code>&#8211;annotated-llvm</code> option, but it prints the entire module, instead of just the most commonly executed functions.</p>
-<dt><code>&#8211;time-passes</code></p>
-<dd> Record the amount of time needed for each pass and print it to standard error.</dl>
+<dt><code>&#8211;annotated-llvm</code> or <code>-A</code></dt>
+<dd> In addition to the normal report printed, print out the code for the program, annotated with execution frequency information. This can be particularly useful when trying to visualize how frequently basic blocks are executed. This is most useful with basic block profiling information or better.</dd>
+<dt><code>&#8211;print-all-code</code></dt>
+<dd> Using this option enables the <code>&#8211;annotated-llvm</code> option, but it prints the entire module, instead of just the most commonly executed functions.</dd>
+<dt><code>&#8211;time-passes</code></dt>
+<dd> Record the amount of time needed for each pass and print it to standard error.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-prof</code> returns 1 if it cannot load the bitcode file or the profile information. Otherwise, it exits with zero.</p>
 <h2>AUTHOR</h2>

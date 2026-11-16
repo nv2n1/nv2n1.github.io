@@ -11,83 +11,44 @@ std::equal - std::equal
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 bool equal( InputIt1 first1, InputIt1 last1,                                                         (until C++20)
-
 InputIt2 first2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr bool equal( InputIt1 first1, InputIt1 last1,                                               (since C++20)
-
 InputIt2 first2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 bool equal( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                       (2) (since C++17)
-
 ForwardIt2 first2 );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 bool equal( InputIt1 first1, InputIt1 last1,                                                                       (until C++20)
-
 InputIt2 first2, BinaryPredicate p );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 constexpr bool equal( InputIt1 first1, InputIt1 last1,                                                             (since C++20)
-
 InputIt2 first2, BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 bool equal( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                           (4)           (since C++17)
-
 ForwardIt2 first2, BinaryPredicate p );
-
 template&lt; class InputIt1, class InputIt2 &gt;                                                                                       (since C++14)
-
 bool equal( InputIt1 first1, InputIt1 last1,                                                 (1)                                 (until C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr bool equal( InputIt1 first1, InputIt1 last1,                                                                           (since C++20)
-
 InputIt2 first2, InputIt2 last2 );                                                               (3)
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 bool equal( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                                         (6)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 bool equal( InputIt1 first1, InputIt1 last1,                                                         (5)                                        (since C++14)
-
 InputIt2 first2, InputIt2 last2,                                                                                                                (until C++20)
-
 BinaryPredicate p );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 constexpr bool equal( InputIt1 first1, InputIt1 last1,                                                             (7)                          (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 bool equal( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                                                       (8)            (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 BinaryPredicate p );</code></pre> 
 1,3) Returns true if the range [first1, last1) is equal to the range [first2, first2 + (last1 - first1)), and false otherwise 
 5,7) Returns true if the range [first1, last1) is equal to the range [first2, last2), and false otherwise. 
@@ -174,24 +135,19 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 
 The following code uses equal() to test if a string is a palindrome 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
 bool is_palindrome(const std::string &amp;s)
-
 {
     return std::equal(s.begin(), s.begin() + s.size() / 2, s.rbegin());
 }
 void test(const std::string &amp;s)
-
 {
     std::cout &lt;&lt; &quot;\&quot;&quot; &lt;&lt; s &lt;&lt; &quot;\&quot; &quot;
               &lt;&lt; (is_palindrome(s) ? &quot;is&quot; : &quot;is not&quot;)
               &lt;&lt; &quot; a palindrome\n&quot;;
 }
 int main()
-
 {
     test(&quot;radar&quot;);
     test(&quot;hello&quot;);

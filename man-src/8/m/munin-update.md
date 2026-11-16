@@ -24,22 +24,22 @@ description: "munin-update – A program to gather data from machines running mu
  --version View version information.</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;config_file=&lt;file&gt;</code></p>
-<dd>Use &lt;file&gt; as the configuration file. [/etc/munin/munin.conf]</p>
-<dt><code>&#8211;[no]debug</code></p>
-<dd>If set, log debug messages. [&#8211;nodebug]</p>
-<dt><code>&#8211;[no]fork</code></p>
-<dd>If set, will fork off one process for each host. [&#8211;fork]</p>
-<dt><code>&#8211;host &lt;host&gt;</code></p>
-<dd>Limit fetched data to those from &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</p>
-<dt><code>&#8211;service &lt;service&gt;</code></p>
-<dd>Limit fetched data to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</p>
-<dt><code>&#8211;timeout &lt;seconds&gt;</code></p>
-<dd>Set the network timeout to &lt;seconds&gt;. [180]</p>
-<dt><code>&#8211;help</code></p>
-<dd>Print the help message then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print version information then exit.</dl>
+<dt><code>&#8211;config_file=&lt;file&gt;</code></dt>
+<dd>Use &lt;file&gt; as the configuration file. [/etc/munin/munin.conf]</dd>
+<dt><code>&#8211;[no]debug</code></dt>
+<dd>If set, log debug messages. [&#8211;nodebug]</dd>
+<dt><code>&#8211;[no]fork</code></dt>
+<dd>If set, will fork off one process for each host. [&#8211;fork]</dd>
+<dt><code>&#8211;host &lt;host&gt;</code></dt>
+<dd>Limit fetched data to those from &lt;host&lt;gt&gt;. Multiple &#8211;host options may be supplied. [unset]</dd>
+<dt><code>&#8211;service &lt;service&gt;</code></dt>
+<dd>Limit fetched data to those of &lt;service&gt;. Multiple &#8211;service options may be supplied. [unset]</dd>
+<dt><code>&#8211;timeout &lt;seconds&gt;</code></dt>
+<dd>Set the network timeout to &lt;seconds&gt;. [180]</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Print the help message then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print version information then exit.</dd></dl>
 <h2>Description</h2>
 <p>Munin-update is a part of the package Munin, which is used in combination with Munin&#8217;s node. Munin is a group of programs to gather data from Munin&#8217;s nodes, graph them, create html-pages, and optionally warn Nagios about any off-limit values. </p>
 <p> Munin-update does the gathering. It is usually only used from within munin-cron. </p>

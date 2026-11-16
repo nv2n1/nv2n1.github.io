@@ -35,13 +35,13 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 <h3>Check which version of libguestfs, qemu, libvirt, etc is being used.</h3>
 <p> Look at the output of <tt>&quot;libguestfs-test-tool&quot;</tt> and check:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Which version of libguestfs is being used? Near the beginning of the output you&#8217;ll see a line like: </p>
+<dt>&bull;</dt>
+<dd> Which version of libguestfs is being used? Near the beginning of the output you&#8217;ll see a line like: </dd>
 <pre>
  library version: 1.22.0fedora=19,release=1.fc19,libvirt
 </pre>
-<dt>&bull;</p>
-<dd> Is libvirt being used? You can tell the difference by looking for the backend: </p>
+<dt>&bull;</dt>
+<dd> Is libvirt being used? You can tell the difference by looking for the backend: </dd>
 <pre>
  guestfs_get_backend: direct
 </pre>
@@ -49,13 +49,13 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 <pre>
  guestfs_get_backend: libvirt
 </pre>
-<dt>&bull;</p>
-<dd> Which version of qemu is being used? It may be printed out: </p>
+<dt>&bull;</dt>
+<dd> Which version of qemu is being used? It may be printed out: </dd>
 <pre>
  libguestfs: qemu version 1.5
 </pre>
-<dt>&bull;</p>
-<dd> Which kernel is being used? <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) will try to pick the latest kernel installed on your machine. You can see the version in the appliance output, eg: </p>
+<dt>&bull;</dt>
+<dd> Which kernel is being used? <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) will try to pick the latest kernel installed on your machine. You can see the version in the appliance output, eg: </dd>
 <pre><code>
 [0.000000] Linux version 3.9.2 - 200.fc18.x86_64 [...]
 </code></pre>
@@ -126,12 +126,12 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 </pre>
 <p> You can try comparing this to the results from <code><a href="/docs/linux/man/1-df/">df</a></code>(1) inside the guest, but there are some provisos:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The guest must be idle.</p>
-<dt>&bull;</p>
-<dd> The guest disks must be synched using <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1).</p>
-<dt>&bull;</p>
-<dd> Any action such as booting the guest will write log files causing the numbers to change.</dl>
+<dt>&bull;</dt>
+<dd> The guest must be idle.</dd>
+<dt>&bull;</dt>
+<dd> The guest disks must be synched using <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1).</dd>
+<dt>&bull;</dt>
+<dd> Any action such as booting the guest will write log files causing the numbers to change.</dd></dl>
 <p> We don’t guarantee that the numbers will be identical even under these circumstances. They should be similar. It would indicate a bug if you saw greatly differing numbers.</p>
 <h3>Try importing virt-df <font SIZE="-1">CSV</font> output into a spreadsheet or database.</h3>
 <p> Run: </p>
@@ -263,3 +263,4 @@ truncate - s 30G newdisk.img virt - filesystems - a / path / to / olddisk.img-- 
 <p> A recent feature is the ability to dump user registries, so try this, replacing <i>username</i> with the name of a local user in the guest: </p>
 <pre>
  virt-win-reg --unsafe-printable-strings WindowsGuest 'HKEY_USERS
+</pre>

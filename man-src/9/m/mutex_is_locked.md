@@ -14,11 +14,11 @@ description: "mutex_is_locked – is the mutex locked"
 <p><i>lock</i></p>
 <dl>
 <dd>
-<dd>the mutex to be queried</dl>
+</dd><dd>the mutex to be queried</dd></dl>
 <h2>Description</h2>
 <p>Returns 1 if the mutex is locked, 0 if unlocked.</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

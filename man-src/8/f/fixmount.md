@@ -14,25 +14,25 @@ description: "fixmount – fix remote mount entries"
 <p> <code>fixmount</code> is a variant of <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8) that can delete bogus mount entries in remote <code><a href="/docs/linux/man/8-mountd/">mountd</a></code>(8) daemons. The actions specified by the options are performed for each <i>host</i> in turn.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a -d -e</code></p>
-<dd>These options work as in <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8) except that only entries pertaining to the local host are printed.</p>
-<dt><code>-r</code></p>
-<dd>Removes those remote mount entries on <i>host</i> that do not correspond to current mounts, i.e., which are left-over from a crash or are the result of improper mount protocol. The actuality of mounts is verified using the entries in <code>/etc/mtab</code>.</p>
-<dt><code>-v</code></p>
-<dd>Verify remote mounts. Similar to <code>-r</code> except that only a notification message is printed for each bogus entry found. The remote mount table is not changed.</p>
-<dt><code>-A</code></p>
-<dd>Issues a command to the remote mountd declaring that ALL of its filesystems have been unmounted. This should be used with caution, as it removes all remote mount entries pertaining to the local system, whether or not any filesystems are still mounted locally.</p>
-<dt><code>-q</code></p>
-<dd>Be quiet. Suppresses error messages due to timeouts and &quot;Program not registered&quot;, i.e., due to remote hosts not supporting RPC or not running mountd.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>name</i></p>
+<dt><code>-a -d -e</code></dt>
+<dd>These options work as in <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8) except that only entries pertaining to the local host are printed.</dd>
+<dt><code>-r</code></dt>
+<dd>Removes those remote mount entries on <i>host</i> that do not correspond to current mounts, i.e., which are left-over from a crash or are the result of improper mount protocol. The actuality of mounts is verified using the entries in <code>/etc/mtab</code>.</dd>
+<dt><code>-v</code></dt>
+<dd>Verify remote mounts. Similar to <code>-r</code> except that only a notification message is printed for each bogus entry found. The remote mount table is not changed.</dd>
+<dt><code>-A</code></dt>
+<dd>Issues a command to the remote mountd declaring that ALL of its filesystems have been unmounted. This should be used with caution, as it removes all remote mount entries pertaining to the local system, whether or not any filesystems are still mounted locally.</dd>
+<dt><code>-q</code></dt>
+<dd>Be quiet. Suppresses error messages due to timeouts and &quot;Program not registered&quot;, i.e., due to remote hosts not supporting RPC or not running mountd.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>name</i></dt>
 <dd>Pretend the local hostname is <i>name</i>. This is useful after the local hostname has been changed and rmtab entries using the old name remain on a remote machine. Unfortunately, most mountd&#8217;s won&#8217;t be able to successfully handle removal of such entries, so this option is useful in combination with <code>-v</code> only.<br />
- This option also saves time as comparisons of remotely recorded and local hostnames by address are avoided.</dl>
+ This option also saves time as comparisons of remotely recorded and local hostnames by address are avoided.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/mtab</code></p>
-<dd>List of current mounts.</p>
-<dt><code>/etc/rmtab</code></p>
-<dd>Backup file for remote mount entries on NFS server.</dl>
+<dt><code>/etc/mtab</code></dt>
+<dd>List of current mounts.</dd>
+<dt><code>/etc/rmtab</code></dt>
+<dd>Backup file for remote mount entries on NFS server.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8), <code>mtab</code>(5), <code>rmtab</code>(5), <code>mountd</code>(8C). </p>
 <p> &#8220;am-utils&#8221; <code><a href="/docs/linux/man/1-info/">info</a></code>(1) entry. </p>

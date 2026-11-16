@@ -23,19 +23,19 @@ The configuration for report_Mailx event is read from /etc/libreport/events/repo
  Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are: 
 
  <i>Mailx_Subject</i>
-<dl><dd>Message subject</dl>
+<dl><dd>Message subject</dd></dl>
  
 
  <i>Mailx_EmailFrom</i>
-<dl><dd>Sender's email</dl>
+<dl><dd>Sender's email</dd></dl>
  
 
  <i>Mailx_EmailTo</i>
-<dl><dd>Recipient's email</dl>
+<dl><dd>Recipient's email</dd></dl>
  
 
  <i>Mailx_SendBinaryData</i>
-<dl><dd>Send binary files like coredump</dl>
+<dl><dd>Send binary files like coredump</dd></dl>
 
 <h2>See Also</h2>
 
@@ -43,4 +43,4 @@ The configuration for report_Mailx event is read from /etc/libreport/events/repo
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

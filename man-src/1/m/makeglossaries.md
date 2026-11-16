@@ -15,42 +15,42 @@ description: "makeglossaries – Calls makeindex/xindy for LaTeX documents using
 <p> <code>makeglossaries</code> is designed for use with LaTeX documents that use the glossaries package. The mandatory argument <i>basename</i> should be the name of the LaTeX document without the .tex extension. <code>makeglossaries</code> will read the auxiliary file to determine whether <code>makeindex</code> or <code>xindy</code> should be called. All the information required to be passed to the relevant indexing application should also be contained in the auxiliary file, but may be overridden by the option arguments to <code>makeglossaries</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code></p>
-<dd> Quiet mode. Reduces chatter to standard output.</p>
-<dt><code>-Q</code></p>
-<dd> Silences warning about being unable to fork.</p>
-<dt><code>-k</code></p>
-<dd> Don&#8217;t try forking with piped redirection. (Lessens the effect of -q)</p>
-<dt><code>-n</code></p>
-<dd> Print the commands that would normally be executed but don&#8217;t run them.</p>
-<dt><code>-o</code> <i>file</i></p>
-<dd> Use <i>file</i> as the output file. (Only suitable for documents containing a single glossary, otherwise each glossary will be overridden.)</p>
-<dt><code>-s</code> <i>file</i></p>
-<dd> Use <i>file</i> as the style file. Note that if you use this option, you need to know whether <code>makeindex</code> or <code>xindy</code> will be called, as they have different style files.</p>
-<dt><code>-t</code> <i>file</i></p>
-<dd> Use <i>file</i> as the transcript file.</p>
-<dt><code>-l</code></p>
-<dd> Letter ordering.</p>
-<dt><code>-L</code> <i>language</i></p>
-<dd> This option only has an effect if <code>xindy</code> is called. Sets the language. See <code>xindy</code> documentation for further details.</p>
-<dt><code>-c</code></p>
-<dd> Compress intermediate blanks (<code>makeindex</code> only).</p>
-<dt><code>-g</code></p>
-<dd> Employ German word ordering (<code>makeindex</code> only).</p>
-<dt><code>-p</code> <i>num</i></p>
-<dd> Sets the starting page number to be <i>num</i> (<code>makeindex</code> only).</p>
-<dt><code>-r</code></p>
-<dd> Disable implicit page range formation (<code>makeindex</code> only).</p>
-<dt><code>-d</code> <i>aux dir</i></p>
-<dd> Specify the directory the .aux, .glo etc files are located. Defaults to the parent directory of the base file <i>filename</i>.</p>
-<dt><code>-m</code> <i>file</i></p>
-<dd> Specify the full path name for <code>makeindex</code> to <i>file</i> in the event that <code>makeindex</code> isn&#8217;t on the operating system&#8217;s path.</p>
-<dt><code>-x</code> <i>file</i></p>
-<dd> Specify the full path name for <code>xindy</code> to <i>file</i> in the event that <code>xindy</code> isn&#8217;t on the operating system&#8217;s path.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints version number and exits.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints help message and exits.</dl>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. Reduces chatter to standard output.</dd>
+<dt><code>-Q</code></dt>
+<dd> Silences warning about being unable to fork.</dd>
+<dt><code>-k</code></dt>
+<dd> Don&#8217;t try forking with piped redirection. (Lessens the effect of -q)</dd>
+<dt><code>-n</code></dt>
+<dd> Print the commands that would normally be executed but don&#8217;t run them.</dd>
+<dt><code>-o</code> <i>file</i></dt>
+<dd> Use <i>file</i> as the output file. (Only suitable for documents containing a single glossary, otherwise each glossary will be overridden.)</dd>
+<dt><code>-s</code> <i>file</i></dt>
+<dd> Use <i>file</i> as the style file. Note that if you use this option, you need to know whether <code>makeindex</code> or <code>xindy</code> will be called, as they have different style files.</dd>
+<dt><code>-t</code> <i>file</i></dt>
+<dd> Use <i>file</i> as the transcript file.</dd>
+<dt><code>-l</code></dt>
+<dd> Letter ordering.</dd>
+<dt><code>-L</code> <i>language</i></dt>
+<dd> This option only has an effect if <code>xindy</code> is called. Sets the language. See <code>xindy</code> documentation for further details.</dd>
+<dt><code>-c</code></dt>
+<dd> Compress intermediate blanks (<code>makeindex</code> only).</dd>
+<dt><code>-g</code></dt>
+<dd> Employ German word ordering (<code>makeindex</code> only).</dd>
+<dt><code>-p</code> <i>num</i></dt>
+<dd> Sets the starting page number to be <i>num</i> (<code>makeindex</code> only).</dd>
+<dt><code>-r</code></dt>
+<dd> Disable implicit page range formation (<code>makeindex</code> only).</dd>
+<dt><code>-d</code> <i>aux dir</i></dt>
+<dd> Specify the directory the .aux, .glo etc files are located. Defaults to the parent directory of the base file <i>filename</i>.</dd>
+<dt><code>-m</code> <i>file</i></dt>
+<dd> Specify the full path name for <code>makeindex</code> to <i>file</i> in the event that <code>makeindex</code> isn&#8217;t on the operating system&#8217;s path.</dd>
+<dt><code>-x</code> <i>file</i></dt>
+<dd> Specify the full path name for <code>xindy</code> to <i>file</i> in the event that <code>xindy</code> isn&#8217;t on the operating system&#8217;s path.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints version number and exits.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints help message and exits.</dd></dl>
 <h2>REQUIRES</h2>
 <p> Perl, Getopt::Std, and makeindex or xindy (depending on glossaries package options).</p>
 <h2>LICENSE</h2>

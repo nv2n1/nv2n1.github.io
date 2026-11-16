@@ -14,18 +14,18 @@ description: "gnutls_x509_crq_get_extension_by_oid – API function"
 <p> <code>int gnutls_x509_crq_get_extension_by_oid(gnutls_x509_crq_t </code><i>crq</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>const char * oid</p>
-<dd> holds an Object Identifier in a null terminated string</p>
-<dt>int indx</p>
-<dd> In case multiple same OIDs exist in the extensions, this specifies which to get. Use (0) to get the first one.</p>
-<dt>void * buf</p>
-<dd> a pointer to a structure to hold the name (may be null)</p>
-<dt>size_t * buf_size</p>
-<dd> initially holds the size of <i>buf</i></p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>const char * oid</dt>
+<dd> holds an Object Identifier in a null terminated string</dd>
+<dt>int indx</dt>
+<dd> In case multiple same OIDs exist in the extensions, this specifies which to get. Use (0) to get the first one.</dd>
+<dt>void * buf</dt>
+<dd> a pointer to a structure to hold the name (may be null)</dd>
+<dt>size_t * buf_size</dt>
+<dd> initially holds the size of <i>buf</i></dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the extension specified by the OID in the certificate. The extensions will be returned as binary data DER encoded, in the provided buffer.</p>
 <h2>RETURNS</h2>
@@ -41,6 +41,6 @@ description: "gnutls_x509_crq_get_extension_by_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

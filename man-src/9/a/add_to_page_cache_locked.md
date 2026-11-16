@@ -15,19 +15,19 @@ add_to_page_cache_locked - add a locked page to the pagecache
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>page to add</dl>
+<dl><dd></dd><dd>page to add</dd></dl>
  
 
  <i>mapping</i>
-<dl><dd>the page's address_space</dl>
+<dl><dd>the page's address_space</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>page index</dl>
+<dl><dd>page index</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>page allocation mode</dl>
+<dl><dd>page allocation mode</dd></dl>
 
 <h2>Description</h2>
 

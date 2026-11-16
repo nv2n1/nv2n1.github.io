@@ -122,7 +122,7 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>ResolveHostname()</code> takes a hostname and resolves it to one or more IP addresses. As parameters it takes the Linux network interface index to execute the query on, or 0 if it may be done on any suitable interface. The <i>name</i> parameter specifies the hostname to resolve. Note that if required, IDNA conversion is applied to this name unless it is resolved via LLMNR or MulticastDNS. The <i>family</i> parameter limits the results to a specific address family. It may be <code>AF_INET</code>, <code>AF_INET6</code> or <code>AF_UNSPEC</code>. If <code>AF_UNSPEC</code> is specified (recommended), both kinds are retrieved, subject to local network configuration (i.e. if no local, routable IPv6 address is found, no IPv6 address is retrieved; and similarly for IPv4). A 64-bit <i>flags</i> field may be used to alter the behaviour of the resolver operation (see below). The method returns an array of address records. Each address record consists of the interface index the address belongs to, an address family as well as a byte array with the actual IP address data (which either has 4 or 16 elements, depending on the address family). The returned address family will be one of <code>AF_INET</code> or <code>AF_INET6</code>. For IPv6, the returned address interface index should be used to initialize the .sin6_scope_id field of a struct sockaddr_in6 instance to permit support for resolution to link-local IP addresses. The address array is followed by the canonical name of the host, which may or may not be identical to the resolved hostname. Finally, a 64-bit <i>flags</i> field is returned that is defined similarly to the <i>flags</i> field that was passed in, but contains information about the resolved data (see below). If the hostname passed in is an IPv4 or IPv6 address formatted as string, it is parsed, and the result is returned. In this case, no network communication is done. </p>
 <p> <code>ResolveAddress()</code> executes the reverse operation: it takes an IP address and acquires one or more hostnames for it. As parameters it takes the interface index to execute the query on, or <code>0</code> if all suitable interfaces are OK. The <i>family</i> parameter indicates the address family of the IP address to resolve. It may be either <code>AF_INET</code> or <code>AF_INET6</code>. The <i>address</i> parameter takes the raw IP address data (as either a 4 or 16 byte array). The <i>flags</i> input parameter may be used to alter the resolver operation (see below). The method returns an array of name records, each consisting of an interface index and a hostname. The <i>flags</i> output field contains additional information about the resolver operation (see below). </p>
@@ -130,11 +130,11 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <p> Note that currently, the class field has to be specified as IN or ANY. Specifying a different class will return an error indicating that look-ups of this kind are unsupported. Similarly, some special types are not supported either (AXFR, OPT, &#8230;). While systemd-resolved parses and validates resource records of many types, it is crucial that clients using this API understand that the RR data originates from the network and should be thoroughly validated before use. </p>
 <p> <code>ResolveService()</code> may be used to resolve a DNS <code>SRV</code> service record, as well as the hostnames referenced in it, and possibly an accompanying DNS-SD <code>TXT</code> record containing additional service metadata. The primary benefit of using this method over <code>ResolveRecord()</code> specifying the <code>SRV</code> type is that it will resolve the <code>SRV</code> and <code>TXT</code> RRs as well as the hostnames referenced in the SRV in a single operation. As parameters it takes a Linux network interface index, a service name, a service type and a service domain. This method may be invoked in three different modes: </p>
 <dl>
-<dd>1. To resolve a DNS-SD service, specify the service name (e.g. &quot;Lennart&#8217;s Files&quot;), the service type (e.g. &quot;_webdav._tcp&quot;) and the domain to search in (e.g. &quot;local&quot;) as the three service parameters. The service name must be in UTF-8 format, and no IDNA conversion is applied to it in this mode (as mandated by the DNS-SD specifications). However, if necessary, IDNA conversion is applied to the domain parameter.</dl>
+<dd>1. To resolve a DNS-SD service, specify the service name (e.g. &quot;Lennart&#8217;s Files&quot;), the service type (e.g. &quot;_webdav._tcp&quot;) and the domain to search in (e.g. &quot;local&quot;) as the three service parameters. The service name must be in UTF-8 format, and no IDNA conversion is applied to it in this mode (as mandated by the DNS-SD specifications). However, if necessary, IDNA conversion is applied to the domain parameter.</dd></dl>
 <dl>
-<dd>2. To resolve a plain <code>SRV</code> record, set the service name parameter to the empty string and set the service type and domain properly. (IDNA conversion is applied to the domain, if necessary.)</dl>
+<dd>2. To resolve a plain <code>SRV</code> record, set the service name parameter to the empty string and set the service type and domain properly. (IDNA conversion is applied to the domain, if necessary.)</dd></dl>
 <dl>
-<dd>3. Alternatively, leave both the service name and type empty and specify the full domain name of the <code>SRV</code> record (i.e. prefixed with the service type) in the domain parameter. (No IDNA conversion is applied in this mode.)</dl>
+<dd>3. Alternatively, leave both the service name and type empty and specify the full domain name of the <code>SRV</code> record (i.e. prefixed with the service type) in the domain parameter. (No IDNA conversion is applied in this mode.)</dd></dl>
 <p> The <i>family</i> parameter of the <code>ResolveService()</code> method encodes the desired family of the addresses to resolve (use <code>AF_INET</code>, <code>AF_INET6</code>, or <code>AF_UNSPEC</code>). If this is enabled (Use the <code>NO_ADDRESS</code> flag to turn address resolution off, see below). The <i>flags</i> parameter takes a couple of flags that may be used to alter the resolver operation. </p>
 <p> On completion, <code>ResolveService()</code> returns an array of <code>SRV</code> record structures. Each items consisting of the priority, weight and port fields as well as the hostname to contact, as encoded in the <code>SRV</code> record. Immediately following is an array of the addresses of this hostname, with each item consisting of the interface index, the address family and the address data in a byte array. This address array is followed by the canonicalized hostname. After this array of <code>SRV</code> record structures an array of byte arrays follows that encodes the TXT RR strings, in case DNS-SD look-ups are enabled. The next parameters are the canonical service name, type and domain. This may or may not be identical to the parameters passed in. Finally, a <i>flags</i> field is returned that contains information about the resolver operation performed. </p>
 <p> The <code>ResetStatistics()</code> method resets the various statistics counters that systemd-resolved maintains to zero. (For details, see the statistics properties below.) </p>
@@ -152,9 +152,9 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <p> The <code>RevertLink()</code> method may be used to revert all per-link settings described above to the defaults. </p>
 <p> <font SIZE="+1"> <code>The Flags Parameter</code></p>
 <dl>
-<dd>The four methods above accept and return a 64-bit flags value. In most cases passing 0 is sufficient and recommended. However, the following flags are defined to alter the look-up: </p>
+<dd>The four methods above accept and return a 64-bit flags value. In most cases passing 0 is sufficient and recommended. However, the following flags are defined to alter the look-up: </dd>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <pre>#define SD_RESOLVED_DNS (UINT64_C(1) &lt;&lt; 0)
 #define SD_RESOLVED_LLMNR_IPV4 (UINT64_C(1) &lt;&lt; 1)
 #define SD_RESOLVED_LLMNR_IPV6 (UINT64_C(1) &lt;&lt; 2)
@@ -255,7 +255,7 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <p> For each Linux network interface a &quot;Link&quot; object is created which exposes per-link DNS configuration and state. Use <code>GetLink()</code> on the Manager interface to retrieve the object path for a link object given the network interface index (see above).</p>
 <h3>Methods</h3>
 <p>The various methods exposed by the Link interface are equivalent to their similarly named counterparts on the Manager interface. e.g. <code>SetDNS()</code> on the Link object maps to <code>SetLinkDNS()</code> on the Manager object, the main difference being that the later expects an interface index to be specified. Invoking the methods on the Manager interface has the benefit of reducing roundtrips, as it is not necessary to first request the Link object path via <code>GetLink()</code> before invoking the methods. The same relationship holds for <code>SetDNSEx()</code>, <code>SetDomains()</code>, <code>SetDefaultRoute()</code>, <code>SetLLMNR()</code>, <code>SetMulticastDNS()</code>, <code>SetDNSOverTLS()</code>, <code>SetDNSSEC()</code>, <code>SetDNSSECNegativeTrustAnchors()</code>, and <code>Revert()</code>. For further details on these methods see the Manager documentation above.</p>
@@ -268,43 +268,43 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <p>Many bus methods systemd-resolved exposes (in particular the resolver methods such as <code>ResolveHostname()</code> on the Manager interface) may return some of the following errors: </p>
 <p> <code>org.freedesktop.resolve1.NoNameServers</code></p>
 <dl>
-<dd>No suitable DNS servers were found to resolve a request.</dl>
+<dd>No suitable DNS servers were found to resolve a request.</dd></dl>
 <p> <code>org.freedesktop.resolve1.InvalidReply</code></p>
 <dl>
-<dd>A response from the selected DNS server was not understood.</dl>
+<dd>A response from the selected DNS server was not understood.</dd></dl>
 <p> <code>org.freedesktop.resolve1.NoSuchRR</code></p>
 <dl>
-<dd>The requested name exists, but there is no resource record of the requested type for it. (This is the DNS NODATA case).</dl>
+<dd>The requested name exists, but there is no resource record of the requested type for it. (This is the DNS NODATA case).</dd></dl>
 <p> <code>org.freedesktop.resolve1.CNameLoop</code></p>
 <dl>
-<dd>The look-up failed because a CNAME or DNAME loop was detected.</dl>
+<dd>The look-up failed because a CNAME or DNAME loop was detected.</dd></dl>
 <p> <code>org.freedesktop.resolve1.Aborted</code></p>
 <dl>
-<dd>The look-up was aborted because the selected protocol became unavailable while the operation was ongoing.</dl>
+<dd>The look-up was aborted because the selected protocol became unavailable while the operation was ongoing.</dd></dl>
 <p> <code>org.freedesktop.resolve1.NoSuchService</code></p>
 <dl>
-<dd>A service look-up was successful, but the <code>SRV</code> record reported that the service is not available.</dl>
+<dd>A service look-up was successful, but the <code>SRV</code> record reported that the service is not available.</dd></dl>
 <p> <code>org.freedesktop.resolve1.DnssecFailed</code></p>
 <dl>
-<dd>The acquired response did not pass DNSSEC validation.</dl>
+<dd>The acquired response did not pass DNSSEC validation.</dd></dl>
 <p> <code>org.freedesktop.resolve1.NoTrustAnchor</code></p>
 <dl>
-<dd>No chain of trust could be established for the response to a configured DNSSEC trust anchor.</dl>
+<dd>No chain of trust could be established for the response to a configured DNSSEC trust anchor.</dd></dl>
 <p> <code>org.freedesktop.resolve1.ResourceRecordTypeUnsupported</code></p>
 <dl>
-<dd>The requested resource record type is not supported on the selected DNS servers. This error is generated for example when an RRSIG record is requested from a DNS server that does not support DNSSEC.</dl>
+<dd>The requested resource record type is not supported on the selected DNS servers. This error is generated for example when an RRSIG record is requested from a DNS server that does not support DNSSEC.</dd></dl>
 <p> <code>org.freedesktop.resolve1.NoSuchLink</code></p>
 <dl>
-<dd>No network interface with the specified network interface index exists.</dl>
+<dd>No network interface with the specified network interface index exists.</dd></dl>
 <p> <code>org.freedesktop.resolve1.LinkBusy</code></p>
 <dl>
-<dd>The requested configuration change could not be made because <code><a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a></code>(8), already took possession of the interface and supplied configuration data for it.</dl>
+<dd>The requested configuration change could not be made because <code><a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a></code>(8), already took possession of the interface and supplied configuration data for it.</dd></dl>
 <p> <code>org.freedesktop.resolve1.NetworkDown</code></p>
 <dl>
-<dd>The requested look-up failed because the system is currently not connected to any suitable network.</dl>
+<dd>The requested look-up failed because the system is currently not connected to any suitable network.</dd></dl>
 <p> <code>org.freedesktop.resolve1.DnsError.NXDOMAIN</code>, <code>org.freedesktop.resolve1.DnsError.REFUSED</code>, &#8230;</p>
 <dl>
-<dd>The look-up failed with a DNS return code reporting a failure. The error names used as suffixes here are defined in by IANA in m[blue]<code>DNS RCODEs</code>m[]<font SIZE="-2">[4]</font>.</dl>
+<dd>The look-up failed with a DNS return code reporting a failure. The error names used as suffixes here are defined in by IANA in m[blue]<code>DNS RCODEs</code>m[]<font SIZE="-2">[4]</font>.</dd></dl>
 <h2>Examples</h2>
 <p><code>Example 1. Introspect org.freedesktop.resolve1.Manager on the bus</code> </p>
 <dl>
@@ -312,35 +312,36 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.resolve1 \
  --object-path /org/freedesktop/resolve1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Introspect org.freedesktop.resolve1.Link on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.resolve1 \
  --object-path /org/freedesktop/resolve1/link/_11</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[5]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Writing Network Configuration Managers</p>
+<dt> 1.</dt>
+<dd>Writing Network Configuration Managers</dd>
 <dl>
-<dd><a rel="nofollow" href="https://wiki.freedesktop.org/www/Software/systemd/writing-network-configuration-managers">https://wiki.freedesktop.org/www/Software/systemd/writing-network-configuration-managers</a></dl>
-<dt> 2.</p>
-<dd>Writing Resolver Clients</p>
+<dd><a rel="nofollow" href="https://wiki.freedesktop.org/www/Software/systemd/writing-network-configuration-managers">https://wiki.freedesktop.org/www/Software/systemd/writing-network-configuration-managers</a></dd></dl>
+<dt> 2.</dt>
+<dd>Writing Resolver Clients</dd>
 <dl>
-<dd><a rel="nofollow" href="https://wiki.freedesktop.org/www/Software/systemd/writing-resolver-clients">https://wiki.freedesktop.org/www/Software/systemd/writing-resolver-clients</a></dl>
-<dt> 3.</p>
-<dd>RFC 1035</p>
+<dd><a rel="nofollow" href="https://wiki.freedesktop.org/www/Software/systemd/writing-resolver-clients">https://wiki.freedesktop.org/www/Software/systemd/writing-resolver-clients</a></dd></dl>
+<dt> 3.</dt>
+<dd>RFC 1035</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.ietf.org/rfc/rfc1035.txt">https://www.ietf.org/rfc/rfc1035.txt</a></dl>
-<dt> 4.</p>
-<dd>DNS RCODEs</p>
+<dd><a rel="nofollow" href="https://www.ietf.org/rfc/rfc1035.txt">https://www.ietf.org/rfc/rfc1035.txt</a></dd></dl>
+<dt> 4.</dt>
+<dd>DNS RCODEs</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6">https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6</a></dl>
-<dt> 5.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6">https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6</a></dd></dl>
+<dt> 5.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

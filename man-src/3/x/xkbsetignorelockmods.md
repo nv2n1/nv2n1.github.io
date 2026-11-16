@@ -11,22 +11,22 @@ description: "XkbSetIgnoreLockMods – Sets the modifiers that, if locked, are n
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetIgnoreLockMods</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect_real</i><code>,</code> <code>unsigned int </code><i>real_values</i><code>,</code> <code>unsigned int </code><i>affect_virtual</i><code>,</code> <code>unsigned int </code><i>virtual_values</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; affect_real</i></p>
-<dd>mask of real modifiers affected by this call</p>
-<dt><i>&#8211; real_values</i></p>
-<dd>values for affected real modifiers (1=&gt;set, 0=&gt;unset)</p>
-<dt><i>&#8211; affect_virtual</i></p>
-<dd>mask of virtual modifiers affected by this call</p>
-<dt><i>&#8211; virtual_values</i></p>
-<dd>values for affected virtual modifiers (1=&gt;set, 0=&gt;unset)</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; affect_real</i></dt>
+<dd>mask of real modifiers affected by this call</dd>
+<dt><i>&#8211; real_values</i></dt>
+<dd>values for affected real modifiers (1=&gt;set, 0=&gt;unset)</dd>
+<dt><i>&#8211; affect_virtual</i></dt>
+<dd>mask of virtual modifiers affected by this call</dd>
+<dt><i>&#8211; virtual_values</i></dt>
+<dd>values for affected virtual modifiers (1=&gt;set, 0=&gt;unset)</dd></dl>
 <h2>Description</h2>
 <p>The core protocol does not provide a way to exclude specific modifiers from grab calculations, with the result that locking modifiers sometimes have unanticipated side effects. </p>
 <p> The IgnoreLockMods control specifies modifiers that should be excluded from grab calculations. These modifiers are also not reported in any core events except KeyPress and KeyRelease events that do not activate a passive grab and that do not occur while a grab is active. </p>

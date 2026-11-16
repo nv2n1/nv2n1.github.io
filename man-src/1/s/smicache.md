@@ -15,16 +15,16 @@ description: "smicache – caching method for use with libsmi"
 <p> The <code>smicache</code> program can be used by libsmi to fetch MIB modules that cannot be found in regular local MIB directories.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Show the smicache version and exit.</p>
-<dt><code>-h</code></p>
-<dd> Show a help text and exit.</p>
-<dt><code>-d </code><i>dir</i></p>
-<dd> Write fetched module file(s) to directory <i>dir</i>.</p>
-<dt><code>-p </code><i>prefix</i></p>
-<dd> Use the URL prefix <i>prefix</i> for fetching modules.</p>
-<dt><i>mib</i></p>
-<dd> The MIB module to be fetched.</dl>
+<dt><code>-V</code></dt>
+<dd> Show the smicache version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Show a help text and exit.</dd>
+<dt><code>-d </code><i>dir</i></dt>
+<dd> Write fetched module file(s) to directory <i>dir</i>.</dd>
+<dt><code>-p </code><i>prefix</i></dt>
+<dd> Use the URL prefix <i>prefix</i> for fetching modules.</dd>
+<dt><i>mib</i></dt>
+<dd> The MIB module to be fetched.</dd></dl>
 <p> Note that <code>smicache</code> is just a very simple script that builds on the wget program to retrieve files from URLs. It does not handle the file attributes of retrieved modules in any special way, so that you have to care about permissions in multi-user environments.</p>
 <h2>EXAMPLE</h2>
 <p> <code>Smicache</code> can be used by putting the following line into the global configuration file: </p>

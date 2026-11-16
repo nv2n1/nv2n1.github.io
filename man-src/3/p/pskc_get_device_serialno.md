@@ -13,8 +13,8 @@ description: "pskc_get_device_serialno – API function"
 const char *pskc_get_device_serialno(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage DeviceInfo SerialNo value. This element contains the serial number of the device.</p>
 <h2>Returns</h2>

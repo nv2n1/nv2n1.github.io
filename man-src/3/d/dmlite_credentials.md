@@ -34,5 +34,5 @@ description: "dmlite_credentials –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>

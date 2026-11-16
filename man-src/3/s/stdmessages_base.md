@@ -11,7 +11,6 @@ std::messages_base - std::messages_base
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;locale&gt;
-
 class messages_base;</code></pre> 
 The class std::messages_base provides a type definition which is inherited and used by the std::messages facets. 
 

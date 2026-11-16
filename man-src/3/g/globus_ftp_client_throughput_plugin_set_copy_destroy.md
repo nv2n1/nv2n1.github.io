@@ -36,17 +36,15 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The client handle associated with this transfer<br />
+</dt><dd> <i>handle</i> The client handle associated with this transfer<br />
  <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
  <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
- <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)</dl>
+ <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> n/a</dl>
+<dt>&bull;</dt>
+<dd> n/a</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_throughput_plugin_complete_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, globus_bool_t success)</h3>
 <p> Transfer complete callback </p>
@@ -54,16 +52,14 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The client handle associated with this transfer<br />
+</dt><dd> <i>handle</i> The client handle associated with this transfer<br />
  <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
- <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dl>
+ <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> n/a</dl>
+<dt>&bull;</dt>
+<dd> n/a</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_throughput_plugin_stripe_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, int stripe_ndx, globus_off_t bytes, float instantaneous_throughput, float avg_throughput)</h3>
 <p> Stripe performace throughput callback </p>
@@ -71,39 +67,37 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The client handle associated with this transfer<br />
+</dt><dd> <i>handle</i> The client handle associated with this transfer<br />
  <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
  <i>bytes</i> The total number of bytes received on this stripe<br />
  <i>instantaneous_throughput</i> Instanteous throughput on this stripe (bytes / sec)<br />
  <i>avg_throughput</i> Average throughput on this stripe (bytes / sec)<br />
- <i>stripe_ndx</i> This stripe&#8217;s index</dl>
+ <i>stripe_ndx</i> This stripe&#8217;s index</dd></dl>
 <h3>typedef void(* globus_ftp_client_throughput_plugin_total_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, globus_off_t bytes, float instantaneous_throughput, float avg_throughput)</h3>
 <p> Total performace throughput callback </p>
 <p> This callback will be called with every performance callback that is received by the perf plugin. The first callback for will have an instantaneous_throughput based from the time the command was sent. This callback will be called after the per_stripe_cb </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The client handle associated with this transfer<br />
+</dt><dd> <i>handle</i> The client handle associated with this transfer<br />
  <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
  <i>bytes</i> The total number of bytes received on all stripes<br />
  <i>instantaneous_throughput</i> Total instanteous throughput on all stripes (bytes / sec)<br />
- <i>avg_throughput</i> Average total throughput on all stripes (bytes / sec)</dl>
+ <i>avg_throughput</i> Average total throughput on all stripes (bytes / sec)</dd></dl>
 <h3>typedef void*(* globus_ftp_client_throughput_plugin_user_copy_cb_t)(void *user_specific)</h3>
 <p> Copy constructor </p>
 <p> This callback will be called when a copy of this plugin is made, it is intended to allow initialization of a new user_specific data </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>user_specific</i> this is user specific data either created by this copy method, or the value passed to init</dl>
+</dt><dd> <i>user_specific</i> this is user specific data either created by this copy method, or the value passed to init</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> a pointer to a user specific piece of data</p>
-<dt>&bull;</p>
-<dd> GLOBUS_NULL (does not indicate error)</dl>
+<dt>&bull;</dt>
+<dd> a pointer to a user specific piece of data</dd>
+<dt>&bull;</dt>
+<dd> GLOBUS_NULL (does not indicate error)</dd></dl>
 </dl>
 <h3>typedef void(* globus_ftp_client_throughput_plugin_user_destroy_cb_t)(void *user_specific)</h3>
 <p> Destructor </p>
@@ -111,14 +105,12 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>user_specific</i> this is user specific data created by the copy method</dl>
+</dt><dd> <i>user_specific</i> this is user specific data created by the copy method</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> n/a</dl>
+<dt>&bull;</dt>
+<dd> n/a</dd></dl>
 </dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_ftp_client_throughput_plugin_destroy (<code>globus_ftp_client_plugin_t</code> *plugin)</h3>
@@ -127,35 +119,31 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> plugin previously initialized with init (above)</dl>
+</dt><dd> <i>plugin</i> plugin previously initialized with init (above)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd> Error on NULL plugin</dl>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd> Error on NULL plugin</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_throughput_plugin_get_user_specific (<code>globus_ftp_client_plugin_t</code> *plugin, void **user_specific)</h3>
 <p> Retrieve user specific pointer </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> plugin previously initialized with init (above)<br />
- <i>user_specific</i> pointer to storage for user_specific pointer</dl>
+</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br />
+ <i>user_specific</i> pointer to storage for user_specific pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd> Error on NULL plugin</p>
-<dt>&bull;</p>
-<dd> Error on NULL user_specific</dl>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd> Error on NULL plugin</dd>
+<dt>&bull;</dt>
+<dd> Error on NULL user_specific</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_throughput_plugin_init (<code>globus_ftp_client_plugin_t</code> *plugin, <code>globus_ftp_client_throughput_plugin_begin_cb_t</code>begin_cb, <code>globus_ftp_client_throughput_plugin_stripe_cb_t</code>per_stripe_cb, <code>globus_ftp_client_throughput_plugin_total_cb_t</code>total_cb, <code>globus_ftp_client_throughput_plugin_complete_cb_t</code>complete_cb, void *user_specific)</h3>
 <p> Throughput plugin init </p>
@@ -163,23 +151,21 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> a pointer to a plugin type to be initialized<br />
+</dt><dd> <i>plugin</i> a pointer to a plugin type to be initialized<br />
  <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
  <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br />
  <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br />
  <i>complete_cb</i> the callback to be called to indicate transfer completion<br />
- <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks</dl>
+ <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd> Error on NULL plugin</p>
-<dt>&bull;</p>
-<dd> Error on init perf plugin</dl>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd> Error on NULL plugin</dd>
+<dt>&bull;</dt>
+<dd> Error on init perf plugin</dd></dl>
 </dl>
 <h3>globus_result_t globus_ftp_client_throughput_plugin_set_copy_destroy (<code>globus_ftp_client_plugin_t</code> *plugin, <code>globus_ftp_client_throughput_plugin_user_copy_cb_t</code>copy_cb, <code>globus_ftp_client_throughput_plugin_user_destroy_cb_t</code>destroy_cb)</h3>
 <p> Set user copy and destroy callbacks </p>
@@ -187,23 +173,21 @@ description: "Throughput Performance Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> plugin previously initialized with init (above)<br />
+</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br />
  <i>copy_cb</i> func to be called when a copy is needed<br />
- <i>destroy_cb</i> func to be called when a copy is to be destroyed</dl>
+ <i>destroy_cb</i> func to be called when a copy is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Error on NULL arguments</p>
-<dt>&bull;</p>
-<dd> GLOBUS_SUCCESS</dl>
+<dt>&bull;</dt>
+<dd> Error on NULL arguments</dd>
+<dt>&bull;</dt>
+<dd> GLOBUS_SUCCESS</dd></dl>
 </dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAP">Function Documentation</a></p>
+<dt><a href="#lbAP">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAU">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAU">Author</a></dt>
+<dd></dd></dl>

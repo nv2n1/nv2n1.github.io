@@ -11,14 +11,9 @@ description: "wl_listener –"
 <p> A single listener for Wayland signals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;wayland-server.h&gt;
-
 Public Attributes
 struct wl_list link
-
-
-
 wl_notify_func_t notify</code></pre>
 <h2>Detailed Description</h2>
 <p>A single listener for Wayland signals. </p>
@@ -44,6 +39,6 @@ wl_event_loop_add_destroy_listener(loop, &amp;your_listener);</pre>
 * </pre>
 <p><code>See Also:</code></p>
 <dl>
-<dd><code>wl_signal</code></dl>
+<dd><code>wl_signal</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Wayland from the source code.</p>

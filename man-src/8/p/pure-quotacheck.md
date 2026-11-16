@@ -16,14 +16,14 @@ description: "pure-quotacheck – Update virtual quota files for Pure-FTPd"
  It&#8217;s recommended to periodically run pure-quotacheck for every user, in crontabs.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> &lt;<i>directory</i>&gt;</p>
-<dd>Scans the specified &lt;<i>directory</i>&gt;.</p>
-<dt><code>-g</code> &lt;<i>group or gid</i>&gt;</p>
-<dd>Sets the group files will be scanned as. This is optional : if a user name is passed to <code>-u&lt;/fR&gt;, group are automatically retrieved.</p>
-<dt>-u</code> &lt;<i>user or uid</i>&gt;</p>
-<dd>Set the user name files will be scanned as. This is mandatory, and it can&#8217;t be &quot;root&quot;.</p>
-<dt><code>-h</code></p>
-<dd>Output usage information and exit.</dl>
+<dt><code>-d</code> &lt;<i>directory</i>&gt;</dt>
+<dd>Scans the specified &lt;<i>directory</i>&gt;.</dd>
+<dt><code>-g</code> &lt;<i>group or gid</i>&gt;</dt>
+<dd>Sets the group files will be scanned as. This is optional : if a user name is passed to <code>-u&lt;/fR&gt;, group are automatically retrieved.</dd>
+<dt>-u</code> &lt;<i>user or uid</i>&gt;</dt>
+<dd>Set the user name files will be scanned as. This is mandatory, and it can&#8217;t be &quot;root&quot;.</dd>
+<dt><code>-h</code></dt>
+<dd>Output usage information and exit.</dd></dl>
 <h2>Files</h2>
 <p><i>.ftpquota</i></p>
 <h2>Examples</h2>

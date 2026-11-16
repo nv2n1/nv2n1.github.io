@@ -14,10 +14,10 @@ description: "gnutls_psk_set_server_credentials_function – API function"
 <p> <code>void gnutls_psk_set_server_credentials_function(gnutls_psk_server_credentials_t </code><i>cred</i><code>, gnutls_psk_server_credentials_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_psk_server_credentials_t cred</p>
-<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</p>
-<dt>gnutls_psk_server_credentials_function * func</p>
-<dd> is the callback function</dl>
+<dt>gnutls_psk_server_credentials_t cred</dt>
+<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
+<dt>gnutls_psk_server_credentials_function * func</dt>
+<dd> is the callback function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function can be used to set a callback to retrieve the user&#8217;s PSK credentials. The callback&#8217;s function form is: int (*callback)(gnutls_session_t, const char* username, gnutls_datum_t* key); </p>
 <p>&nbsp;<wbr><i>username</i>&nbsp;<wbr>contains the actual username. The <i>key</i> must be filled in using the <code>gnutls_malloc()</code>. </p>
@@ -32,6 +32,6 @@ description: "gnutls_psk_set_server_credentials_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

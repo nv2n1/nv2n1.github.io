@@ -12,23 +12,21 @@ description: "npm"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm install-ci-test
 alias: npm cit
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This command runs an <code>npm ci</code> followed immediately by an <code>npm test</code>.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help ci</p>
-<dt>&bull;</p>
-<dd> npm help test </p>
+<dt>&bull;</dt>
+<dd> npm help ci</dd>
+<dt>&bull;</dt>
+<dd> npm help test </dd>
 </dl>
 </dl>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ snd_ac97_pcm_double_rate_rules - set double rate constraints
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>the runtime of the ac97 front playback pcm</dl>
+<dl><dd></dd><dd>the runtime of the ac97 front playback pcm</dd></dl>
 
 <h2>Description</h2>
 

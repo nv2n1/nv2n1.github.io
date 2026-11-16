@@ -11,10 +11,8 @@ std::experimental::filesystem::hard_link_count - std::experimental::filesystem::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     std::uintmax_t hard_link_count(const path &amp;p);
 (1)(filesystem TS)
-
     std::uintmax_t hard_link_count(const path &amp;p, error_code &amp;ec);</code></pre> 
 Returns the number of hard links for the filesystem object identified by path p. 
 The non-throwing overload returns static_cast&lt;uintmax_t&gt;(-1) on errors. 
@@ -37,13 +35,9 @@ noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     // On a POSIX-style filesystem, each directory has at least 2 hard links:
     // itself and the special member pathname &quot;.&quot;

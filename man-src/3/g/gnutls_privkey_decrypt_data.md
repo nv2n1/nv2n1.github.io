@@ -14,14 +14,14 @@ description: "gnutls_privkey_decrypt_data – API function"
 <p> <code>int gnutls_privkey_decrypt_data(gnutls_privkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>ciphertext</i><code>, gnutls_datum_t * </code><i>plaintext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_privkey_t key</p>
-<dd> Holds the key</p>
-<dt>unsigned int flags</p>
-<dd> zero for now</p>
-<dt>const gnutls_datum_t * ciphertext</p>
-<dd> holds the data to be decrypted</p>
-<dt>gnutls_datum_t * plaintext</p>
-<dd> will contain the decrypted data, allocated with <code>gnutls_malloc()</code></dl>
+<dt>gnutls_privkey_t key</dt>
+<dd> Holds the key</dd>
+<dt>unsigned int flags</dt>
+<dd> zero for now</dd>
+<dt>const gnutls_datum_t * ciphertext</dt>
+<dd> holds the data to be decrypted</dd>
+<dt>gnutls_datum_t * plaintext</dt>
+<dd> will contain the decrypted data, allocated with <code>gnutls_malloc()</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will decrypt the given data using the algorithm supported by the private key.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_privkey_decrypt_data – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -14,10 +14,10 @@ description: "dev_get_by_name – find a device by its name"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>the applicable net namespace</dl>
+</dd><dd>the applicable net namespace</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>name to find</dl>
+<dd>name to find</dd></dl>
 <h2>Description</h2>
 <p>Find an interface by name. This can be called from any context and does its own locking. The returned handle has the usage count incremented and the caller must use <code>dev_put</code> to release it when it is no longer needed. <code>NULL</code> is returned if no matching device is found.</p>
 <h2>Copyright</h2>

@@ -13,10 +13,11 @@ description: "xjc – Java(TM) Architecture for XML Binding Binding Compiler Spe
 <h2>Launching xjc</h2>
 <p>The binding compiler can be launched using the appropriate <i>xjc</i> shell script in the <i>bin</i> directory for your platform. We also provide an Ant task to run the binding complier &#8211; see the instructions for using xjc with Ant. </p>
 <dl COMPACT>
-<dd><code>For Solaris/Linux</code> </p>
+<dd><code>For Solaris/Linux</code> </dd>
 <dl COMPACT>
-<dd><i>% /path/to/jaxb/bin/xjc.sh -help</i> </p>
+<dd><i>% /path/to/jaxb/bin/xjc.sh -help</i> </dd>
 </dl>
 <p> <code>For WindowsNT/2000/XP</code> </p>
 <dl COMPACT>
 <dd><i>&gt; c:\path	o\jaxbin
+</dd></dl></dl>

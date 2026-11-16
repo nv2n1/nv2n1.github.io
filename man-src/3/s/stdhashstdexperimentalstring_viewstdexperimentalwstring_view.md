@@ -11,7 +11,6 @@ std::hash(std::experimental::string_view,std::experimental::wstring_view, - std:
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / string_view&gt;
-
     template &lt;&gt;
     struct hash&lt;std::experimental::string_view&gt;;</code></pre> 
 template&lt;&gt;&nbsp;<wbr>struct hash&lt;std::experimental::wstring_view&gt;;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(library fundamentals 

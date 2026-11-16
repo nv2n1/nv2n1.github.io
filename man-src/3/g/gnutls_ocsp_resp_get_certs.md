@@ -14,12 +14,12 @@ description: "gnutls_ocsp_resp_get_certs – API function"
 <p> <code>int gnutls_ocsp_resp_get_certs(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_x509_crt_t ** </code><i>certs</i><code>, size_t * </code><i>ncerts</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ocsp_resp_t resp</p>
-<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</p>
-<dt>gnutls_x509_crt_t ** certs</p>
-<dd> newly allocated array with <code>gnutls_x509_crt_t</code> certificates</p>
-<dt>size_t * ncerts</p>
-<dd> output variable with number of allocated certs.</dl>
+<dt>gnutls_ocsp_resp_t resp</dt>
+<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd>
+<dt>gnutls_x509_crt_t ** certs</dt>
+<dd> newly allocated array with <code>gnutls_x509_crt_t</code> certificates</dd>
+<dt>size_t * ncerts</dt>
+<dd> output variable with number of allocated certs.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the X.509 certificates found in the Basic OCSP Response. The <i>certs</i> output variable will hold a newly allocated zero-terminated array with X.509 certificates. </p>
 <p> Every certificate in the array needs to be de-allocated with <code>gnutls_x509_crt_deinit()</code> and the array itself must be freed using <code>gnutls_free()</code>. </p>
@@ -35,6 +35,6 @@ description: "gnutls_ocsp_resp_get_certs – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

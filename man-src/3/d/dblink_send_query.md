@@ -20,19 +20,19 @@ dblink_send_query(text connname, text sql) returns int
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to use.</dl>
+</dt><dd> Name of the connection to use.</dd></dl>
 <p> <i>sql</i></p>
 <dl>
 <dt>
-<dd> The SQL statement that you wish to execute in the remote database, for example select * from pg_class.</dl>
+</dt><dd> The SQL statement that you wish to execute in the remote database, for example select * from pg_class.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns 1 if the query was successfully dispatched, 0 otherwise.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SELECT dblink_send_query('dtest1', 'SELECT * FROM foo WHERE f1 &lt; 3');
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

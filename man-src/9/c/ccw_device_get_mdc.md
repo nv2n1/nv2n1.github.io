@@ -14,14 +14,14 @@ description: "ccw_device_get_mdc – accumulate max data count"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device for which the max data count is accumulated</dl>
+</dd><dd>ccw device for which the max data count is accumulated</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>mask of paths to use</dl>
+<dd>mask of paths to use</dd></dl>
 <h2>Description</h2>
 <p>Return the number of 64K-bytes blocks all paths at least support for a transport command. Return values &lt;= 0 indicate failures.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

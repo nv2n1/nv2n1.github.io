@@ -14,26 +14,26 @@ description: "local-submit"
 <p><i>local-submit</i> is the helper which <i>certmonger</i> uses to implement its local signer. It is not normally run interactively, but it can be for troubleshooting purposes. The signing request which is to be submitted should either be in a file whose name is given as an argument, or fed into <i>local-submit</i> via stdin. The local signer is currently hard-coded to generate and use a 2048-bit RSA key and a name and initial serial number based on a UUID, replacing that key and certificate at roughly the midpoint of their useful lifetime. <code>certmonger</code> supports retrieving the list of current and previously-used local CA certificates. See <code><a href="/docs/linux/man/1-getcert-request/">getcert-request</a></code>(1) and <code><a href="/docs/linux/man/1-getcert-resubmit/">getcert-resubmit</a></code>(1) for information about specifying where those certificates should be stored. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> state-directory</p>
-<dd>Identifies the directory which contains the local signer&#8217;s private key, certificates, and other data used by the local signer.</p>
-<dt><code>-v</code></p>
-<dd>Increases the verbosity of the tool&#8217;s diagnostic logging. </p>
+<dt><code>-d</code> state-directory</dt>
+<dd>Identifies the directory which contains the local signer&#8217;s private key, certificates, and other data used by the local signer.</dd>
+<dt><code>-v</code></dt>
+<dd>Increases the verbosity of the tool&#8217;s diagnostic logging. </dd>
 </dl>
 <h2>Exit Status</h2>
 <dl>
-<dt>0</p>
-<dd>if the certificate was issued. The new certificate will be printed.</p>
-<dt>3</p>
-<dd>if the helper needs to be called again. An error message may be printed.</p>
-<dt>4</p>
-<dd>if critical configuration information is missing. An error message may be printed. </p>
+<dt>0</dt>
+<dd>if the certificate was issued. The new certificate will be printed.</dd>
+<dt>3</dt>
+<dd>if the helper needs to be called again. An error message may be printed.</dd>
+<dt>4</dt>
+<dd>if critical configuration information is missing. An error message may be printed. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>creds</i></p>
-<dd>is currently a PKCS#12 bundle containing the local signer&#8217;s current signing key and current and previously-used signer certificates. It should not be modified except by the local signer. A new key is currently generated when ever a new signer certificate is needed.</p>
-<dt><i>serial</i></p>
-<dd>currently contains the serial number which will be used for the next issued certificate. It should not be modified except by the local signer. </p>
+<dt><i>creds</i></dt>
+<dd>is currently a PKCS#12 bundle containing the local signer&#8217;s current signing key and current and previously-used signer certificates. It should not be modified except by the local signer. A new key is currently generated when ever a new signer certificate is needed.</dd>
+<dt><i>serial</i></dt>
+<dd>currently contains the serial number which will be used for the next issued certificate. It should not be modified except by the local signer. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

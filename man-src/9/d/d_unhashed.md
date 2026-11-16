@@ -15,7 +15,7 @@ d_unhashed - is dentry hashed
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>entry to check</dl>
+<dl><dd></dd><dd>entry to check</dd></dl>
 
 <h2>Description</h2>
 

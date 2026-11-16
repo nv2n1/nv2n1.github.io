@@ -18,17 +18,17 @@ description: "axfer-list – dump lists of available sound devices and nodes to 
 <h2>OPTIONS</h2>
 <h3>Direction</h3>
 <dl>
-<dt><code>capture</code></p>
-<dd> Operates for capture transmission. </p>
-<dt><code>playback</code></p>
-<dd> Operates for playback transmission. </p>
+<dt><code>capture</code></dt>
+<dd> Operates for capture transmission. </dd>
+<dt><code>playback</code></dt>
+<dd> Operates for playback transmission. </dd>
 </dl>
 <h3>Target</h3>
 <dl>
-<dt><code>device</code></p>
-<dd> Dumps a list of all soundcards and digital audio devices available in <i>libasound</i> backend for <i>tranfer</i> subcommand. </p>
-<dt><code>pcm</code></p>
-<dd> Dumps a list of all PCM nodes available in alsa-lib configuration space in <i>libasound</i> backend for <i>transfer</i> subcommand. </p>
+<dt><code>device</code></dt>
+<dd> Dumps a list of all soundcards and digital audio devices available in <i>libasound</i> backend for <i>tranfer</i> subcommand. </dd>
+<dt><code>pcm</code></dt>
+<dd> Dumps a list of all PCM nodes available in alsa-lib configuration space in <i>libasound</i> backend for <i>transfer</i> subcommand. </dd>
 </dl>
 <h2>COMPATIBILITY TO APLAY</h2>
 <p> Options of <i>-l</i> , <i>&#8211;list-devices</i> are handled as <i>device</i> operation. Options of <i>-L</i> , <i>&#8211;list-pcms</i> are handled as <i>pcm</i> operation. </p>

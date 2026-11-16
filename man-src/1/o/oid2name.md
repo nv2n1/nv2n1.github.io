@@ -11,13 +11,13 @@ description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data dire
 <p> oid2name &#8211; resolve OIDs and file nodes in a PostgreSQL data directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>oid2name</code> [<i>option</i>&#8230;]</dl>
+<dt> <code>oid2name</code> [<i>option</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>oid2name is a utility program that helps administrators to examine the file structure used by PostgreSQL. To make use of it, you need to be familiar with the database file structure, which is described in Chapter 56, Database Physical Storage, in the documentation. </p>
+<dd>oid2name is a utility program that helps administrators to examine the file structure used by PostgreSQL. To make use of it, you need to be familiar with the database file structure, which is described in Chapter 56, Database Physical Storage, in the documentation. </dd>
 <dl>
 <dt>
-<dd>
- <font SIZE="+1"> <code>Note</code> </font> </p>
+</dt><dd>
+ <font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> The name &#8220;oid2name&#8221; is historical, and is actually rather misleading, since most of the time when you use it, you will really be concerned with tables&#8217; filenode numbers (which are the file names visible in the database directories). Be sure you understand the difference between table OIDs and table filenodes! </p>
 </dl>
 <p> oid2name connects to a target database and extracts OID, filenode, and/or table name information. You can also have it show database OIDs or tablespace OIDs.</p>
@@ -26,64 +26,64 @@ description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data dire
 <p> <code>-f</code> <i>filenode</i></p>
 <dl>
 <dt>
-<dd> show info for table with filenode <i>filenode</i></dl>
+</dt><dd> show info for table with filenode <i>filenode</i></dd></dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> include indexes and sequences in the listing</dl>
+</dt><dd> include indexes and sequences in the listing</dd></dl>
 <p> <code>-o</code> <i>oid</i></p>
 <dl>
 <dt>
-<dd> show info for table with OID <i>oid</i></dl>
+</dt><dd> show info for table with OID <i>oid</i></dd></dl>
 <p> <code>-q</code></p>
 <dl>
 <dt>
-<dd> omit headers (useful for scripting)</dl>
+</dt><dd> omit headers (useful for scripting)</dd></dl>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd> show tablespace OIDs</dl>
+</dt><dd> show tablespace OIDs</dd></dl>
 <p> <code>-S</code></p>
 <dl>
 <dt>
-<dd> include system objects (those in <code>information_schema</code>, <code>pg_toast</code> and <code>pg_catalog</code> schemas)</dl>
+</dt><dd> include system objects (those in <code>information_schema</code>, <code>pg_toast</code> and <code>pg_catalog</code> schemas)</dd></dl>
 <p> <code>-t</code> <i>tablename_pattern</i></p>
 <dl>
 <dt>
-<dd> show info for table(s) matching <i>tablename_pattern</i></dl>
+</dt><dd> show info for table(s) matching <i>tablename_pattern</i></dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the oid2name version and exit.</dl>
+</dt><dd> Print the oid2name version and exit.</dd></dl>
 <p> <code>-x</code></p>
 <dl>
 <dt>
-<dd> display more information about each object shown: tablespace name, schema name, and OID</dl>
+</dt><dd> display more information about each object shown: tablespace name, schema name, and OID</dd></dl>
 <p> <code>-?</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help about oid2name command line arguments, and exit.</dl>
+</dt><dd> Show help about oid2name command line arguments, and exit.</dd></dl>
 <p> oid2name also accepts the following command-line arguments for connection parameters: </p>
 <p> <code>-d</code> <i>database</i></p>
 <dl>
 <dt>
-<dd> database to connect to</dl>
+</dt><dd> database to connect to</dd></dl>
 <p> <code>-H</code> <i>host</i></p>
 <dl>
 <dt>
-<dd> database server&#8217;s host</dl>
+</dt><dd> database server&#8217;s host</dd></dl>
 <p> <code>-p</code> <i>port</i></p>
 <dl>
 <dt>
-<dd> database server&#8217;s port</dl>
+</dt><dd> database server&#8217;s port</dd></dl>
 <p> <code>-U</code> <i>username</i></p>
 <dl>
 <dt>
-<dd> user name to connect as</dl>
+</dt><dd> user name to connect as</dd></dl>
 <p> <code>-P</code> <i>password</i></p>
 <dl>
 <dt>
-<dd> password (deprecated &#8212; putting this on the command line is a security hazard)</dl>
+</dt><dd> password (deprecated &#8212; putting this on the command line is a security hazard)</dd></dl>
 <p> To display specific tables, select which tables to show by using <code>-o</code>, <code>-f</code> and/or <code>-t</code>. <code>-o</code> takes an OID, <code>-f</code> takes a filenode, and <code>-t</code> takes a table name (actually, it&#8217;s a LIKE pattern, so you can use things like foo%). You can use as many of these options as you like, and the listing will include all objects matched by any of the options. But note that these options can only show objects in the database given by <code>-d</code>. </p>
 <p> If you don&#8217;t give any of <code>-o</code>, <code>-f</code> or <code>-t</code>, but do give <code>-d</code>, it will list all tables in the database named by <code>-d</code>. In this mode, the <code>-S</code> and <code>-i</code> options control what gets listed. </p>
 <p> If you don&#8217;t give <code>-d</code> either, it will show a listing of database OIDs. Alternatively you can give <code>-s</code> to get a tablespace listing.</p>
@@ -92,7 +92,7 @@ description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data dire
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ # what's in this database server, anyway?
 $ oid2name
@@ -198,7 +198,7 @@ From database "alvherre":
 ----------------------
     155156         foo
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> B. Palmer &lt;bpalmer [at] crimelabs.net&gt; </p>
 <h2>Index</h2>

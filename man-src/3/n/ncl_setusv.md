@@ -21,10 +21,9 @@ CALL SETUSV (VN,IV)
 <h2>Description</h2>
 
 <dl><dt>VN
-<dd>(an input constant or variable of type CHARACTER) is the name of a parameter; only the first two characters are meaningful. Remember that, in FORTRAN, a constant of type CHARACTER is a string of characters enclosed in apostrophes. 
-
-<dt>IV
-<dd>(an input expression of type INTEGER) is the desired new value of the parameter identified by VN, as described in the following table: <pre>Parameter Description Possible Values of IV
+</dt><dd>(an input constant or variable of type CHARACTER) is the name of a parameter; only the first two characters are meaningful. Remember that, in FORTRAN, a constant of type CHARACTER is a string of characters enclosed in apostrophes. 
+</dd><dt>IV
+</dt><dd>(an input expression of type INTEGER) is the desired new value of the parameter identified by VN, as described in the following table: <pre>Parameter Description Possible Values of IV
 Name (VN)
 --------- ----------- ---------------------
  'LS' Axis scaling 1 = linear X, linear Y
@@ -37,9 +36,7 @@ Name (VN)
  rather than min to max) 4 = both X and Y
  'MU' Metacode output Unit 2
  'PB' Pen-move Buffer size 2 to 50</pre>Both 'LS' and 'MI' are normally set by calling the routine SET, but can be set independently by calling SETUSV. 
-
  The parameter 'MU' is set, prior to calling OPNGKS, to change the FORTRAN logical unit number to be used by GKS for metacode output. 
-
  The parameter 'PB' sets the size of the SPPS polyline buffer. The value &quot;2&quot; effectively turns buffering off. <pre>Obsolete Description
 parameters
 ---------- -----------
@@ -57,12 +54,9 @@ parameters
  (2000 means double the default line width)
  'MS' Marker size in thousandths
  (2000 means double the default marker size)</pre>The values of the parameters 'XF' and 'YF' are the same as the values of the arguments IX and IY in calls to the routines SETI and GETSI. 
-
  The parameters 'IR', 'IG', 'IB', 'IM', 'IN', and 'II' were all part of a color-setting scheme meant to allow overall intensity to be set independently of color. This scheme is now obsolete; it has been replaced by normal GKS color setting through the routines GSCR, GSPLCI, GSFACI, GSPMCI, and GSTXCI. The corresponding GKS inquiry routines to determine current color settings are GQCR, GQPLCI, GQFACI, GQPMCI, and GQTXCI. See Section 6 of &quot;User's Guide for NCAR GKS-0A Graphics.&quot; 
-
  The parameter 'LW' is replaced by the GKS line width scale factor routine, GSLWSC, which has the corresponding query function GQLWSC. 
-
- The parameter 'MS' is replaced by the GKS marker size scale factor routine, GSMKSC, which has the corresponding query function GQMKSC.</dl>
+ The parameter 'MS' is replaced by the GKS marker size scale factor routine, GSMKSC, which has the corresponding query function GQMKSC.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

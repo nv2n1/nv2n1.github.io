@@ -15,15 +15,15 @@ bdev_read_page - Start reading a page from a block device
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>The device to read the page from</dl>
+<dl><dd></dd><dd>The device to read the page from</dd></dl>
  
 
  <i>sector</i>
-<dl><dd>The offset on the device to read the page to (need not be aligned)</dl>
+<dl><dd>The offset on the device to read the page to (need not be aligned)</dd></dl>
  
 
  <i>page</i>
-<dl><dd>The page to read</dl>
+<dl><dd>The page to read</dd></dl>
 
 <h2>Description</h2>
 

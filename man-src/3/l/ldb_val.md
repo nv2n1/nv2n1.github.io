@@ -21,7 +21,7 @@ description: "ldb_val –"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> the data is null (0x00) terminated, but the length does not include the terminator.</dl>
+</dt><dd> the data is null (0x00) terminated, but the length does not include the terminator.</dd></dl>
 <h2>Field Documentation</h2>
 <h3>uint8_t* ldb_val::data</h3>
 <p> result data</p>

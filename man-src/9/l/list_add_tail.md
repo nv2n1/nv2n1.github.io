@@ -15,11 +15,11 @@ list_add_tail - add a new entry
 <h2>Arguments</h2>
 
 <i>new</i>
-<dl><dd><dd>new entry to be added</dl>
+<dl><dd></dd><dd>new entry to be added</dd></dl>
  
 
  <i>head</i>
-<dl><dd>list head to add it before</dl>
+<dl><dd>list head to add it before</dd></dl>
 
 <h2>Description</h2>
 

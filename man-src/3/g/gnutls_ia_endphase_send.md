@@ -14,10 +14,10 @@ description: "gnutls_ia_endphase_send – API function"
 <p> <code>int gnutls_ia_endphase_send(gnutls_session_t </code><i>session</i><code>, int </code><i>final_p</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>int final_p</p>
-<dd> Set iff this should signal the final phase.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>int final_p</dt>
+<dd> Set iff this should signal the final phase.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Send a TLS/IA end phase message. </p>
 <p> In the client, this should only be used to acknowledge an end phase message sent by the server. </p>
@@ -33,6 +33,6 @@ description: "gnutls_ia_endphase_send – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

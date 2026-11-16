@@ -32,6 +32,6 @@ description: "QuantLib::QuantoTermStructure – Quanto term structure."
 <p> Quanto term structure for modelling quanto effect in option pricing. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This term structure will remain linked to the original structures, i.e., any changes in the latters will be reflected in this structure as well.</dl>
+<dd>This term structure will remain linked to the original structures, i.e., any changes in the latters will be reflected in this structure as well.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

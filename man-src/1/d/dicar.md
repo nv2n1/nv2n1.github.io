@@ -17,14 +17,14 @@ description: "dicar – Archive Binary Dictionary"
 <h2>DESCRIPTION</h2>
 <p> <i>dicar</i> archives binary dictionary <i>bindic1.</i> The hyphen of each option may be omitted. [ <code>TIONS</code> ]</p>
 <dl>
-<dt><code>-t</code></p>
-<dd> Displays the dictionaries contained in binary dictionary file <i>bindic1.</i> Each displayed name of the dictionaries consists of the text file name followed by extension &#8216;.d&#8217;. This text file name is that before the dictionary file is converted into the binary file.</p>
-<dt><code>-x</code></p>
-<dd> Fetches dictionary <i>bindic2</i> from <i>bindic1.</i> <i>Bindic2</i> consists of the text file name followed by extension &#8216;.d&#8217;. This text file name is that before the dictionary file is converted into the binary file. The fetched file <i>bindic2</i> becomes a dictionary file in binary format. If <i>bindic2</i> is omitted, all dictionaries within <i>bindic1</i> will be fetched.</p>
-<dt><code>-r</code></p>
-<dd> Adds to <i>bindic1,</i> all dictionaries that are contained in the dictionary file specified in <i>bindic2.</i> Any dictionary in <i>bindic1</i> that is contained in <i>bindic1 is overwritten.</i></p>
-<dt><code>-d</code></p>
-<dd> Deletes <i>bindic2</i> from <i>bindic1.</i> </p>
+<dt><code>-t</code></dt>
+<dd> Displays the dictionaries contained in binary dictionary file <i>bindic1.</i> Each displayed name of the dictionaries consists of the text file name followed by extension &#8216;.d&#8217;. This text file name is that before the dictionary file is converted into the binary file.</dd>
+<dt><code>-x</code></dt>
+<dd> Fetches dictionary <i>bindic2</i> from <i>bindic1.</i> <i>Bindic2</i> consists of the text file name followed by extension &#8216;.d&#8217;. This text file name is that before the dictionary file is converted into the binary file. The fetched file <i>bindic2</i> becomes a dictionary file in binary format. If <i>bindic2</i> is omitted, all dictionaries within <i>bindic1</i> will be fetched.</dd>
+<dt><code>-r</code></dt>
+<dd> Adds to <i>bindic1,</i> all dictionaries that are contained in the dictionary file specified in <i>bindic2.</i> Any dictionary in <i>bindic1</i> that is contained in <i>bindic1 is overwritten.</i></dd>
+<dt><code>-d</code></dt>
+<dd> Deletes <i>bindic2</i> from <i>bindic1.</i> </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <pre>

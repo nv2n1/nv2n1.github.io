@@ -14,25 +14,25 @@ description: "futex_requeue – Requeue waiters from uaddr1 to uaddr2"
 <p><i>uaddr1</i></p>
 <dl>
 <dd>
-<dd>source futex user address</dl>
+</dd><dd>source futex user address</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>futex flags (FLAGS_SHARED, etc.)</dl>
+<dd>futex flags (FLAGS_SHARED, etc.)</dd></dl>
 <p> <i>uaddr2</i></p>
 <dl>
-<dd>target futex user address</dl>
+<dd>target futex user address</dd></dl>
 <p> <i>nr_wake</i></p>
 <dl>
-<dd>number of waiters to wake (must be 1 for requeue_pi)</dl>
+<dd>number of waiters to wake (must be 1 for requeue_pi)</dd></dl>
 <p> <i>nr_requeue</i></p>
 <dl>
-<dd>number of waiters to requeue (0-INT_MAX)</dl>
+<dd>number of waiters to requeue (0-INT_MAX)</dd></dl>
 <p> <i>cmpval</i></p>
 <dl>
-<dd><i>uaddr1</i> expected value (or <code>NULL</code>)</dl>
+<dd><i>uaddr1</i> expected value (or <code>NULL</code>)</dd></dl>
 <p> <i>requeue_pi</i></p>
 <dl>
-<dd>if we are attempting to requeue from a non-pi futex to a pi futex (pi to pi requeue is not supported)</dl>
+<dd>if we are attempting to requeue from a non-pi futex to a pi futex (pi to pi requeue is not supported)</dd></dl>
 <h2>Description</h2>
 <p>Requeue waiters on uaddr1 to uaddr2. In the requeue_pi case, try to acquire uaddr2 atomically on behalf of the top waiter.</p>
 <h2>Return</h2>
@@ -40,5 +40,5 @@ description: "futex_requeue – Requeue waiters from uaddr1 to uaddr2"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

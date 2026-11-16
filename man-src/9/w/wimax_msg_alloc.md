@@ -14,19 +14,19 @@ description: "wimax_msg_alloc – Create a new skb for sending a message to user
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <p> <i>pipe_name</i></p>
 <dl>
-<dd>&quot;named pipe&quot; the message will be sent to</dl>
+<dd>&quot;named pipe&quot; the message will be sent to</dd></dl>
 <p> <i>msg</i></p>
 <dl>
-<dd>pointer to the message data to send</dl>
+<dd>pointer to the message data to send</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the message to send (in bytes), including the header.</dl>
+<dd>size of the message to send (in bytes), including the header.</dd></dl>
 <p> <i>gfp_flags</i></p>
 <dl>
-<dd>flags for memory allocation.</dl>
+<dd>flags for memory allocation.</dd></dl>
 <h2>Return</h2>
 <p><code>0</code> if ok, negative errno code on error</p>
 <h2>Description</h2>

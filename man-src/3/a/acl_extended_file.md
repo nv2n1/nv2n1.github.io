@@ -23,16 +23,16 @@ description: "acl_extended_file, acl_extended_file_nofollow – test for informa
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_extended_file function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EACCES</p>
-<dd> Search permission is denied for a component of the path prefix.</p>
-<dt><code>Bq </code>Er ENAMETOOLONG</p>
-<dd> The length of the argument <i>path_p</i> is too long.</p>
-<dt><code>Bq </code>Er ENOENT</p>
-<dd> The named object does not exist or the argument <i>path_p</i> points to an empty string.</p>
-<dt><code>Bq </code>Er ENOTDIR</p>
-<dd> A component of the path prefix is not a directory.</p>
-<dt><code>Bq </code>Er ENOTSUP</p>
-<dd> The file system on which the file identified by <i>path_p</i> is located does not support ACLs, or ACLs are disabled.</dl>
+<dt><code>Bq </code>Er EACCES</dt>
+<dd> Search permission is denied for a component of the path prefix.</dd>
+<dt><code>Bq </code>Er ENAMETOOLONG</dt>
+<dd> The length of the argument <i>path_p</i> is too long.</dd>
+<dt><code>Bq </code>Er ENOENT</dt>
+<dd> The named object does not exist or the argument <i>path_p</i> points to an empty string.</dd>
+<dt><code>Bq </code>Er ENOTDIR</dt>
+<dd> A component of the path prefix is not a directory.</dd>
+<dt><code>Bq </code>Er ENOTSUP</dt>
+<dd> The file system on which the file identified by <i>path_p</i> is located does not support ACLs, or ACLs are disabled.</dd></dl>
 <h2>STANDARDS</h2>
 <p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
 <h2>SEE ALSO</h2>

@@ -11,7 +11,6 @@ description: "sc::FinDispMolecularHessian –"
 <p> Computes the molecular hessian by finite displacements of gradients.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;fdhess.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>
@@ -45,21 +44,9 @@ description: "sc::FinDispMolecularHessian –"
 <p> <code>RefSCDimension</code> <code>d3natom</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void get_disp (int disp, int &amp;irrep, int &amp;index, double &amp;coef)
-
-
-
 void do_hess_for_irrep (int irrep, const RefSymmSCMatrix &amp;dhessian, const RefSymmSCMatrix &amp;xhessian)
-
-
-
 void init ()
-
-
-
 void restart ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>MolecularEnergy</code> &gt; <code>mole_</code> </p>
 <p> <code>Ref</code>&lt; <code>PointGroup</code> &gt; <code>displacement_point_group_</code> </p>

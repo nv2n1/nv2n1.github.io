@@ -12,10 +12,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <pre><code>#include &lt;pcre.h&gt;
 void pcre_assign_jit_stack(pcre_extra *extra,
                            pcre_jit_callback callback, void *data);
-
 void pcre16_assign_jit_stack(pcre16_extra *extra,
                              pcre16_jit_callback callback, void *data);
-
 void pcre32_assign_jit_stack(pcre32_extra *extra,
                              pcre32_jit_callback callback, void *data);</code></pre>
 <h2>Description</h2>

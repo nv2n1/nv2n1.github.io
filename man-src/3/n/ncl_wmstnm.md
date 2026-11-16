@@ -21,11 +21,11 @@ CALL WMSTNM (X, Y, IMDAT)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the position of the base of the wind barb shaft in the station model display.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the position of the base of the wind barb shaft in the station model display.
-<dt>IMDAT
-<dd>(Character, Input) - A CHARACTER*5 array of dimension 10 encoded as per the WMO/NOAA guidelines.</dl>
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the position of the base of the wind barb shaft in the station model display.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the position of the base of the wind barb shaft in the station model display.
+</dd><dt>IMDAT
+</dt><dd>(Character, Input) - A CHARACTER*5 array of dimension 10 encoded as per the WMO/NOAA guidelines.</dd></dl>
 
 <h2>Usage</h2>
 

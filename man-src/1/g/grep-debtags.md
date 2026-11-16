@@ -25,91 +25,91 @@ description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debta
 <h2>OPTIONS</h2>
 <h3>Specifying the search pattern</h3>
 <dl>
-<dt><code>&#8211;pattern=</code><i>pattern</p>
-<dd> Specify a pattern</i> to be searched. This switch is not generally needed, as the <i>pattern</i> can be given by itself. However, <i>pattern</i>s that start with a dash (<code>&#8211;</code>) must be given using this switch, so that they wouldn&#8217;t be mistaken for switches.</dl>
+<dt><code>&#8211;pattern=</code><i>pattern</dt>
+<dd> Specify a pattern</i> to be searched. This switch is not generally needed, as the <i>pattern</i> can be given by itself. However, <i>pattern</i>s that start with a dash (<code>&#8211;</code>) must be given using this switch, so that they wouldn&#8217;t be mistaken for switches.</dd></dl>
 <h3>Modifiers of simple filters</h3>
 <dl>
-<dt><code>-F </code><i>field</i>,<i>field</i>, &#8230; | <code>&#8211;field=</code><i>field</i>,<i>field</i>, &#8230;</p>
-<dd> Restrict pattern matching to the <i>field</i>s given. Multiple <i>field</i> names in one <code>-F</code> option and multiple <code>-F</code> options in one simple <i>filter </i> are allowed. The search named by the filter will be performed among all the <i>field</i>s named, and as soon as any one of them matches, the whole simple <i>filter</i> is considered matching.</p>
+<dt><code>-F </code><i>field</i>,<i>field</i>, &#8230; | <code>&#8211;field=</code><i>field</i>,<i>field</i>, &#8230;</dt>
+<dd> Restrict pattern matching to the <i>field</i>s given. Multiple <i>field</i> names in one <code>-F</code> option and multiple <code>-F</code> options in one simple <i>filter </i> are allowed. The search named by the filter will be performed among all the <i>field</i>s named, and as soon as any one of them matches, the whole simple <i>filter</i> is considered matching.</dd>
 <dt>
-<dd> A <i>field</i> specification can contain a colon (<code>:</code>). In such a case, the part up to the colon is taken as the name of the field to be searched in, and the part after the colon is taken as the name of the field whose content is to be used if the field to search in is empty.</p>
-<dt><code>-P</p>
-<dd> Shorthand for -FPackage</code>.</p>
-<dt><code>-S</p>
-<dd> Shorthand for -FSource:Package</code>.</p>
-<dt><code>-e</code>, <code>&#8211;eregex</p>
-<dd> Regard the pattern of the current simple filter as an extended POSIX regular expression</p>
-<dt>-r</code>, <code>&#8211;regex</p>
-<dd> Regard the pattern of the current simple filter as a standard POSIX regular expression.</p>
-<dt>-i</code>, <code>&#8211;ignore-case</p>
-<dd> Ignore case when looking for a match in the current simple filter.</p>
-<dt>-X</code>, <code>&#8211;exact-match</p>
-<dd> Do an exact match (as opposed to a substring match) in the current simple filter.</p>
-<dt>-w</code>, <code>&#8211;whole-pkg</p>
-<dd> Do an extended regular expression match on whole package names, assuming the syntax of inter-package relationship fields such as Depends</code>,<code>Recommends</code>, &#8230; When this flag is given you should not worry about sub-package names such as &quot;libpcre3&quot; also matching &quot;libpcre3-dev&quot;. This flag implies (and is incompatible with) <code>-e</code>.</p>
-<dt><code>&#8211;eq</p>
-<dd> Do an equality comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers for equality.</p>
-<dt>&#8211;lt</p>
-<dd> Do an strictly-less-than comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</p>
-<dt>&#8211;le</p>
-<dd> Do an less-than-or-equal comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</p>
-<dt>&#8211;gt</p>
-<dd> Do an strictly-greater-than comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</p>
-<dt>&#8211;ge</p>
-<dd> Do an greater-than-or-equal comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</dl>
+</dt><dd> A <i>field</i> specification can contain a colon (<code>:</code>). In such a case, the part up to the colon is taken as the name of the field to be searched in, and the part after the colon is taken as the name of the field whose content is to be used if the field to search in is empty.</dd>
+<dt><code>-P</dt>
+<dd> Shorthand for -FPackage</code>.</dd>
+<dt><code>-S</dt>
+<dd> Shorthand for -FSource:Package</code>.</dd>
+<dt><code>-e</code>, <code>&#8211;eregex</dt>
+<dd> Regard the pattern of the current simple filter as an extended POSIX regular expression</dd>
+<dt>-r</code>, <code>&#8211;regex</dt>
+<dd> Regard the pattern of the current simple filter as a standard POSIX regular expression.</dd>
+<dt>-i</code>, <code>&#8211;ignore-case</dt>
+<dd> Ignore case when looking for a match in the current simple filter.</dd>
+<dt>-X</code>, <code>&#8211;exact-match</dt>
+<dd> Do an exact match (as opposed to a substring match) in the current simple filter.</dd>
+<dt>-w</code>, <code>&#8211;whole-pkg</dt>
+<dd> Do an extended regular expression match on whole package names, assuming the syntax of inter-package relationship fields such as Depends</code>,<code>Recommends</code>, &#8230; When this flag is given you should not worry about sub-package names such as &quot;libpcre3&quot; also matching &quot;libpcre3-dev&quot;. This flag implies (and is incompatible with) <code>-e</code>.</dd>
+<dt><code>&#8211;eq</dt>
+<dd> Do an equality comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers for equality.</dd>
+<dt>&#8211;lt</dt>
+<dd> Do an strictly-less-than comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</dd>
+<dt>&#8211;le</dt>
+<dd> Do an less-than-or-equal comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</dd>
+<dt>&#8211;gt</dt>
+<dd> Do an strictly-greater-than comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</dd>
+<dt>&#8211;ge</dt>
+<dd> Do an greater-than-or-equal comparison under the Debian version number system. If the pattern or the field to be searched in is not a valid Debian version number, the paragraph is regarded as not matching. As a special case, this is capable of comparing simple nonnegative integers.</dd></dl>
 <p> </code></p>
 <h3>Combining filters</h3>
 <dl>
-<dt><code>-!</code>, <code>&#8211;not</code>, <code>!</p>
-<dd> Match if the following filter does not</code> match.</p>
-<dt><code>-o</code>, <code>&#8211;or</p>
-<dd> Match if either one or both of the preceding and following filters matches.</p>
-<dt>-a</code>, <code>&#8211;and</p>
-<dd> Match if both the preceding and the following filter match.</p>
-<dt>(</code> &#8230; <code>)</p>
-<dd> Parentheses can be used for grouping. Note that they need to be escaped for most shells. Filter modifiers can be given before the opening parentheses; they will be treated as if they had been repeated for each simple filter inside the parentheses.</dl>
+<dt><code>-!</code>, <code>&#8211;not</code>, <code>!</dt>
+<dd> Match if the following filter does not</code> match.</dd>
+<dt><code>-o</code>, <code>&#8211;or</dt>
+<dd> Match if either one or both of the preceding and following filters matches.</dd>
+<dt>-a</code>, <code>&#8211;and</dt>
+<dd> Match if both the preceding and the following filter match.</dd>
+<dt>(</code> &#8230; <code>)</dt>
+<dd> Parentheses can be used for grouping. Note that they need to be escaped for most shells. Filter modifiers can be given before the opening parentheses; they will be treated as if they had been repeated for each simple filter inside the parentheses.</dd></dl>
 <p> </code></p>
 <h3>Output format modifiers</h3>
 <dl>
-<dt><code>-l</code>, <code>&#8211;files-with-matches</p>
-<dd> Output only the file names, each on its own line, of those files that contain at least one matching paragraph. This is incompatible with the -v</code> and <code>-L</code> options, and all other output format modifiers will be ignored.</p>
-<dt><code>-L</code>, <code>&#8211;files-without-matches</p>
-<dd> Output only the file names, each on its own line, of those files that do not contain any matching paragraphs. This is incompatible with the -v</code> and <code>-l</code> options, and all other output format modifiers will be ignored.</p>
-<dt><code>-s </code><i>field</i>,<i>field</i>, &#8230; | <code>&#8211;show-field=</code><i>field</i>,<i>field</i>, &#8230;</p>
-<dd> Show only the body of these <i>field</i>s from the matching paragraphs. The <i>field</i> names must not include any colons or commas. Commas are used to delimit <i>field</i> names in the argument to this option. The <i>field</i>s are shown in the order given here. See also the option <code>-I</code>. Note that in the absence of the <code>&#8211;ensure&#8211;dctrl</code> option, if only one field is selected, no paragraph separator is output.</p>
-<dt><code>-I</code>, <code>&#8211;invert-show</p>
-<dd> Invert the meaning of option -s</code>: show only the fields that have <code>not</code> been named using a <code>-s</code> option. As an artefact of the implementation, the order of the fields in the original paragraph is not preserved.</dl>
+<dt><code>-l</code>, <code>&#8211;files-with-matches</dt>
+<dd> Output only the file names, each on its own line, of those files that contain at least one matching paragraph. This is incompatible with the -v</code> and <code>-L</code> options, and all other output format modifiers will be ignored.</dd>
+<dt><code>-L</code>, <code>&#8211;files-without-matches</dt>
+<dd> Output only the file names, each on its own line, of those files that do not contain any matching paragraphs. This is incompatible with the -v</code> and <code>-l</code> options, and all other output format modifiers will be ignored.</dd>
+<dt><code>-s </code><i>field</i>,<i>field</i>, &#8230; | <code>&#8211;show-field=</code><i>field</i>,<i>field</i>, &#8230;</dt>
+<dd> Show only the body of these <i>field</i>s from the matching paragraphs. The <i>field</i> names must not include any colons or commas. Commas are used to delimit <i>field</i> names in the argument to this option. The <i>field</i>s are shown in the order given here. See also the option <code>-I</code>. Note that in the absence of the <code>&#8211;ensure&#8211;dctrl</code> option, if only one field is selected, no paragraph separator is output.</dd>
+<dt><code>-I</code>, <code>&#8211;invert-show</dt>
+<dd> Invert the meaning of option -s</code>: show only the fields that have <code>not</code> been named using a <code>-s</code> option. As an artefact of the implementation, the order of the fields in the original paragraph is not preserved.</dd></dl>
 <p> A <i>field</i> specification can contain a colon. In such a case, the part up to the colon is taken as the name of the field to be shown, and the part after the colon is taken as the name of the field whose content is to be used if the field to be shown is empty.</p>
 <dl>
-<dt><code>-d</p>
-<dd> Show only the first line of the Description</code> field from the matching paragraphs. If no <code>-s</code> option is specified, this option also effects <code>-s Description;</code> if there is a <code>-s</code> option but it does not include the <code>Description</code> field name, one is appended to the option. Thus the <code>Description</code> field&#8217;s location in the output is determined by the <code>-s</code> option, if any, the last field being the default.</p>
-<dt><code>-n</code>, <code>&#8211;no-field-names</p>
-<dd> Suppress field names when showing specified fields, only their bodies are shown. Each field is printed in its original form without the field name, the colon after it and any whitespace preceding the start of the body.</p>
-<dt>-v</code>, <code>&#8211;invert-match</p>
-<dd> Instead of showing all the paragraphs that match, show those paragraphs that do not</code> match.</p>
-<dt><code>-c</code>, <code>&#8211;count</p>
-<dd> Instead of showing the paragraphs that match (or, with -v</code>, that don&#8217;t match), show the count of those paragraphs.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</p>
-<dd> Output nothing to the standard output stream. Instead, exit immediately after finding the first match.</dl>
+<dt><code>-d</dt>
+<dd> Show only the first line of the Description</code> field from the matching paragraphs. If no <code>-s</code> option is specified, this option also effects <code>-s Description;</code> if there is a <code>-s</code> option but it does not include the <code>Description</code> field name, one is appended to the option. Thus the <code>Description</code> field&#8217;s location in the output is determined by the <code>-s</code> option, if any, the last field being the default.</dd>
+<dt><code>-n</code>, <code>&#8211;no-field-names</dt>
+<dd> Suppress field names when showing specified fields, only their bodies are shown. Each field is printed in its original form without the field name, the colon after it and any whitespace preceding the start of the body.</dd>
+<dt>-v</code>, <code>&#8211;invert-match</dt>
+<dd> Instead of showing all the paragraphs that match, show those paragraphs that do not</code> match.</dd>
+<dt><code>-c</code>, <code>&#8211;count</dt>
+<dd> Instead of showing the paragraphs that match (or, with -v</code>, that don&#8217;t match), show the count of those paragraphs.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</dt>
+<dd> Output nothing to the standard output stream. Instead, exit immediately after finding the first match.</dd></dl>
 <p> </code></p>
 <h3>Miscellaneous</h3>
 <dl>
-<dt><code>&#8211;ensure-dctrl</p>
-<dd> Ensure that the output is in dctrl format, specifically that there always is an empty line separating paragraphs. This option is not honored if the -n</code> option has been selected, as that option deliberately requests a non-dctrl format for the output. In a future version, this option may be made the default behaviour.</p>
-<dt><code>&#8211;compat</p>
-<dd> Override any &#8211;ensure-dctrl</code> option given earlier on the command line.</p>
-<dt><code>&#8211;ignore-parse-errors</p>
-<dd> Ignore errors in parsing input. A paragraph which cannot be parsed is ignored in its entirety, and the next paragraph is assumed to start after the first newline since the location of the error.</p>
-<dt>&#8211;debug-optparse</p>
-<dd> Show how the current command line has been parsed.</p>
-<dt>&#8211;errorlevel=</code><i>level</p>
-<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</p>
-<dt><code>-V</code>, <code>&#8211;version</p>
-<dd> Print out version information.</p>
-<dt>-C</code>, <code>&#8211;copying</p>
-<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</p>
-<dt>-h</code>, <code>&#8211;help</p>
-<dd> Print out a help summary.</dl>
+<dt><code>&#8211;ensure-dctrl</dt>
+<dd> Ensure that the output is in dctrl format, specifically that there always is an empty line separating paragraphs. This option is not honored if the -n</code> option has been selected, as that option deliberately requests a non-dctrl format for the output. In a future version, this option may be made the default behaviour.</dd>
+<dt><code>&#8211;compat</dt>
+<dd> Override any &#8211;ensure-dctrl</code> option given earlier on the command line.</dd>
+<dt><code>&#8211;ignore-parse-errors</dt>
+<dd> Ignore errors in parsing input. A paragraph which cannot be parsed is ignored in its entirety, and the next paragraph is assumed to start after the first newline since the location of the error.</dd>
+<dt>&#8211;debug-optparse</dt>
+<dd> Show how the current command line has been parsed.</dd>
+<dt>&#8211;errorlevel=</code><i>level</dt>
+<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</dd>
+<dt><code>-V</code>, <code>&#8211;version</dt>
+<dd> Print out version information.</dd>
+<dt>-C</code>, <code>&#8211;copying</dt>
+<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</dd>
+<dt>-h</code>, <code>&#8211;help</dt>
+<dd> Print out a help summary.</dd></dl>
 <p> </code></p>
 <h2>EXAMPLES</h2>
 <p> The almost simplest use of this program is to print out the status or available record of a package. In this respect, <code>grep-dctrl</code> is like <code>dpkg -s</code> or <code>dpkg &#8211;print-avail.</code> To print out the status record of the package &quot;mixal&quot;, do </p>
@@ -203,33 +203,33 @@ description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debta
 <p> In the absence of errors, the exit code <code>0</code> is used if at least one match was found, and the exit code <code>1</code> is used if no matches were found. If there were errors, the exit code is <code>2</code>, with one exception. If the <code>-q</code>, <code>&#8211;quiet</code> or <code>&#8211;silent</code> options are used, the exit code <code>0</code> is used when a match is found regardless of whether there have been non-fatal errors. </p>
 <p> These messages are emitted in log levels <code>fatal</code> and <code>important</code>. Additional messages may be provided by the system libraries. <code>This list is incomplete.</code></p>
 <dl>
-<dt><code>A pattern is mandatory</p>
-<dd> You must specify a pattern to be searched for.</p>
-<dt>malformed filter</p>
-<dd> No filter was specified, but one is required.</p>
-<dt>cannot find enough memory</p>
-<dd> More memory was needed than was available. This error may be transient, that is, if you try again, all may go well.</p>
-<dt>cannot suppress field names when showing whole paragraphs</p>
-<dd> When you do not use the -s</code> switch, <code>grep-dctrl</code> just passes the matching paragraphs through, not touching them any way. This means, for example, that you can only use <code>-n</code> when you use <code>-s</code>.</p>
-<dt><code>inconsistent modifiers of simple filters</p>
-<dd> Conflicting modifiers of simple filters were used; for example, perhaps both -X</code> and <code>-e</code> were specified for the same simple filter.</p>
-<dt><code>missing &#8216;)&#8217; in command line</p>
-<dd> There were more opening than closing parentheses in the given filter.</p>
-<dt>no such log level</p>
-<dd> The argument to &#8211;errorlevel</code> was invalid.</p>
-<dt><code>too many file names</p>
-<dd> The number of file names specified in the command line exceeded a compile-time limit.</p>
-<dt>too many output fields</p>
-<dd> The argument to -s</code> had too many field names in it. This number is limited to 256.</p>
-<dt><code>unexpected &#8216;)&#8217; in command line</p>
-<dd> There was no opening parenthesis that would match some closing parenthesis in the command line.</dl>
+<dt><code>A pattern is mandatory</dt>
+<dd> You must specify a pattern to be searched for.</dd>
+<dt>malformed filter</dt>
+<dd> No filter was specified, but one is required.</dd>
+<dt>cannot find enough memory</dt>
+<dd> More memory was needed than was available. This error may be transient, that is, if you try again, all may go well.</dd>
+<dt>cannot suppress field names when showing whole paragraphs</dt>
+<dd> When you do not use the -s</code> switch, <code>grep-dctrl</code> just passes the matching paragraphs through, not touching them any way. This means, for example, that you can only use <code>-n</code> when you use <code>-s</code>.</dd>
+<dt><code>inconsistent modifiers of simple filters</dt>
+<dd> Conflicting modifiers of simple filters were used; for example, perhaps both -X</code> and <code>-e</code> were specified for the same simple filter.</dd>
+<dt><code>missing &#8216;)&#8217; in command line</dt>
+<dd> There were more opening than closing parentheses in the given filter.</dd>
+<dt>no such log level</dt>
+<dd> The argument to &#8211;errorlevel</code> was invalid.</dd>
+<dt><code>too many file names</dt>
+<dd> The number of file names specified in the command line exceeded a compile-time limit.</dd>
+<dt>too many output fields</dt>
+<dd> The argument to -s</code> had too many field names in it. This number is limited to 256.</dd>
+<dt><code>unexpected &#8216;)&#8217; in command line</dt>
+<dd> There was no opening parenthesis that would match some closing parenthesis in the command line.</dd></dl>
 <p> </code></p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/lib/dpkg/available</p>
-<dd> The default input file of </i><code>grep-available</code>.</p>
-<dt><i>/var/lib/dpkg/status</p>
-<dd> The default input file of </i><code>grep-status</code>.</dl>
+<dt><i>/var/lib/dpkg/available</dt>
+<dd> The default input file of </i><code>grep-available</code>.</dd>
+<dt><i>/var/lib/dpkg/status</dt>
+<dd> The default input file of </i><code>grep-status</code>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The program and this manual page were written by Antti-Juhani Kaijanaho &lt;<i>gaia [at] iki.fi</i>&gt;. Bill Allombert &lt;<i>ballombe [at] debian.org</i>&gt; provided one of the examples in the manual page.</p>
 <h2>SEE ALSO</h2>

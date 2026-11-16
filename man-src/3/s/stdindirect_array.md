@@ -11,7 +11,6 @@ std::indirect_array - std::indirect_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;valarray&gt;
-
 template&lt; class T &gt; class indirect_array;</code></pre> 
 std::gslice_array is a helper template used by std::indirect_array subscript operator. It has reference semantics to a subset of the array specified by an indirect array (std::valarray&lt;std::size_t&gt; object). 
 
@@ -44,10 +43,8 @@ operator&gt;&gt;=
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; data = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::valarray&lt;std::size_t&gt; idx = {0, 2, 4, 6, 8};

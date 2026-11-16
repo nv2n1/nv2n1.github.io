@@ -27,54 +27,54 @@ description: "ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnss
 <p> void ldns_dnssec_derive_trust_tree_no_sig( ldns_dnssec_trust_tree *new_tree, ldns_dnssec_data_chain *data_chain); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_new</i>()</p>
-<dd>Creates a new (empty) dnssec_trust_tree structure </p>
+<dt> <i>ldns_dnssec_trust_tree_new</i>()</dt>
+<dd>Creates a new (empty) dnssec_trust_tree structure </dd>
 <p> .br Returns ldns_dnssec_trust_tree *</dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_free</i>()</p>
-<dd>Frees the dnssec_trust_tree recursively </p>
+<dt> <i>ldns_dnssec_trust_tree_free</i>()</dt>
+<dd>Frees the dnssec_trust_tree recursively </dd>
 <p> There is no deep free; all data in the trust tree consists of pointers to a data_chain </p>
 <p> .br <code>tree</code>: The tree to free</dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_depth</i>()</p>
-<dd>returns the depth of the trust tree </p>
+<dt> <i>ldns_dnssec_trust_tree_depth</i>()</dt>
+<dd>returns the depth of the trust tree </dd>
 <p> .br <code>tree</code>: tree to calculate the depth of .br Returns The depth of the tree</dl>
 <dl>
-<dt> <i>ldns_dnssec_derive_trust_tree</i>()</p>
-<dd>Generates a dnssec_trust_tree for the given rr from the given data_chain </p>
+<dt> <i>ldns_dnssec_derive_trust_tree</i>()</dt>
+<dd>Generates a dnssec_trust_tree for the given rr from the given data_chain </dd>
 <p> This does not clone the actual data; Don&#8217;t free the data_chain before you are done with this tree </p>
 <p> .br <code>*data_chain</code>: The chain to derive the trust tree from .br <code>*rr</code>: The RR this tree will be about .br Returns ldns_dnssec_trust_tree *</dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_contains_keys</i>()</p>
-<dd>Returns OK if there is a trusted path in the tree to one of the DNSKEY or DS RRs in the given list </p>
+<dt> <i>ldns_dnssec_trust_tree_contains_keys</i>()</dt>
+<dd>Returns OK if there is a trusted path in the tree to one of the DNSKEY or DS RRs in the given list </dd>
 <p> \param *tree The trust tree so search \param *keys A ldns_rr_list of DNSKEY and DS rrs to look for </p>
 <p> .br Returns LDNS_STATUS_OK if there is a trusted path to one of the keys, or the *first* error encountered if there were no paths</dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_print</i>()</p>
-<dd>Prints the dnssec_trust_tree structure to the given file stream. </p>
+<dt> <i>ldns_dnssec_trust_tree_print</i>()</dt>
+<dd>Prints the dnssec_trust_tree structure to the given file stream. </dd>
 <p> If a link status is not LDNS_STATUS_OK; the status and relevant signatures are printed too </p>
 <p> .br <code>*out</code>: The file stream to print to .br <code>tree</code>: The trust tree to print .br <code>tabs</code>: Prepend each line with tabs*2 spaces .br <code>extended</code>: If true, add little explanation lines to the output</dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_print_sm</i>()</dl>
+<dt> <i>ldns_dnssec_trust_tree_print_sm</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_dnssec_trust_tree_add_parent</i>()</p>
-<dd>Adds a trust tree as a parent for the given trust tree </p>
+<dt> <i>ldns_dnssec_trust_tree_add_parent</i>()</dt>
+<dd>Adds a trust tree as a parent for the given trust tree </dd>
 <p> .br <code>*tree</code>: The tree to add the parent to .br <code>*parent</code>: The parent tree to add .br <code>*parent_signature</code>: The RRSIG relevant to this parent/child connection .br <code>parent_status</code>: The DNSSEC status for this parent, child and RRSIG .br Returns LDNS_STATUS_OK if the addition succeeds, error otherwise</dl>
 <dl>
-<dt> <i>ldns_dnssec_derive_trust_tree_normal_rrset</i>()</p>
-<dd>Sub function for derive_trust_tree that is used for a &#8216;normal&#8217; rrset </p>
+<dt> <i>ldns_dnssec_derive_trust_tree_normal_rrset</i>()</dt>
+<dd>Sub function for derive_trust_tree that is used for a &#8216;normal&#8217; rrset </dd>
 <p> .br <code>new_tree</code>: The trust tree that we are building .br <code>data_chain</code>: The data chain containing the data for the trust tree .br <code>cur_sig_rr</code>: The currently relevant signature</dl>
 <dl>
-<dt> <i>ldns_dnssec_derive_trust_tree_dnskey_rrset</i>()</p>
-<dd>Sub function for derive_trust_tree that is used for DNSKEY rrsets </p>
+<dt> <i>ldns_dnssec_derive_trust_tree_dnskey_rrset</i>()</dt>
+<dd>Sub function for derive_trust_tree that is used for DNSKEY rrsets </dd>
 <p> .br <code>new_tree</code>: The trust tree that we are building .br <code>data_chain</code>: The data chain containing the data for the trust tree .br <code>cur_rr</code>: The currently relevant DNSKEY RR .br <code>cur_sig_rr</code>: The currently relevant signature</dl>
 <dl>
-<dt> <i>ldns_dnssec_derive_trust_tree_ds_rrset</i>()</p>
-<dd>Sub function for derive_trust_tree that is used for DS rrsets </p>
+<dt> <i>ldns_dnssec_derive_trust_tree_ds_rrset</i>()</dt>
+<dd>Sub function for derive_trust_tree that is used for DS rrsets </dd>
 <p> .br <code>new_tree</code>: The trust tree that we are building .br <code>data_chain</code>: The data chain containing the data for the trust tree .br <code>cur_rr</code>: The currently relevant DS RR</dl>
 <dl>
-<dt> <i>ldns_dnssec_derive_trust_tree_no_sig</i>()</p>
-<dd>Sub function for derive_trust_tree that is used when there are no signatures </p>
+<dt> <i>ldns_dnssec_derive_trust_tree_no_sig</i>()</dt>
+<dd>Sub function for derive_trust_tree that is used when there are no signatures </dd>
 <p> .br <code>new_tree</code>: The trust tree that we are building .br <code>data_chain</code>: The data chain containing the data for the trust tree</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -88,3 +88,4 @@ description: "ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnss
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

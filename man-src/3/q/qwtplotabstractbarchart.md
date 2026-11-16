@@ -45,36 +45,36 @@ description: "QwtPlotAbstractBarChart –"
 <p>Mode how to calculate the bar width. <code>setLayoutPolicy()</code>, <code>setLayoutHint()</code>, barWidthHint() </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>AutoAdjustSamples </i></p>
-<dd>The sample width is calculated by dividing the bounding rectangle by the number of samples. The <code>layoutHint()</code> is used as a minimum width in paint device coordinates.</dl>
+<dt><i>AutoAdjustSamples </i></dt>
+<dd>The sample width is calculated by dividing the bounding rectangle by the number of samples. The <code>layoutHint()</code> is used as a minimum width in paint device coordinates.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>boundingRectangle()</dl>
+<dd>boundingRectangle()</dd></dl>
 <dl COMPACT>
-<dt><i>ScaleSamplesToAxes </i></p>
-<dd><code>layoutHint()</code> defines an interval in axis coordinates</p>
-<dt><i>ScaleSampleToCanvas </i></p>
-<dd>The bar width is calculated by multiplying <code>layoutHint()</code> with the height or width of the canvas.</dl>
+<dt><i>ScaleSamplesToAxes </i></dt>
+<dd><code>layoutHint()</code> defines an interval in axis coordinates</dd>
+<dt><i>ScaleSampleToCanvas </i></dt>
+<dd>The bar width is calculated by multiplying <code>layoutHint()</code> with the height or width of the canvas.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>boundingRectangle()</dl>
+<dd>boundingRectangle()</dd></dl>
 <dl COMPACT>
-<dt><i>FixedSampleSize </i></p>
-<dd><code>layoutHint()</code> defines a fixed width in paint device coordinates.</dl>
+<dt><i>FixedSampleSize </i></dt>
+<dd><code>layoutHint()</code> defines a fixed width in paint device coordinates.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotAbstractBarChart::QwtPlotAbstractBarChart (const <code>QwtText</code> &amp;title) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title of the chart</dl>
+<dd><i>title</i> Title of the chart</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtPlotAbstractBarChart::baseline () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value for the origin of the bar chart</dl>
+<dd>Value for the origin of the bar chart</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBaseline()</code>, <code>QwtPlotSeriesItem::orientation()</code></dl>
+<dd><code>setBaseline()</code>, <code>QwtPlotSeriesItem::orientation()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::getCanvasMarginHint (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const [virtual]</h3>
 <p>Calculate a hint for the canvas margin. Bar charts need to reserve some space for displaying the bars for the first and the last sample. The hint is calculated from the <code>layoutHint()</code> depending on the <code>layoutPolicy()</code>. </p>
 <p> The margins are in target device coordinates ( pixels on screen ) </p>
@@ -86,37 +86,37 @@ description: "QwtPlotAbstractBarChart –"
  <i>left</i> Returns the left margin<br />
  <i>top</i> Returns the top margin<br />
  <i>right</i> Returns the right margin<br />
- <i>bottom</i> Returns the bottom margin</dl>
+ <i>bottom</i> Returns the bottom margin</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin</dl>
+<dd>Margin</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>layoutPolicy()</code>, <code>layoutHint()</code>, <code>QwtPlotItem::Margins</code> <code>QwtPlot::getCanvasMarginsHint()</code>, <code>QwtPlot::updateCanvasMargins()</code></dl>
+<dd><code>layoutPolicy()</code>, <code>layoutHint()</code>, <code>QwtPlotItem::Margins</code> <code>QwtPlot::getCanvasMarginsHint()</code>, <code>QwtPlot::updateCanvasMargins()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>double QwtPlotAbstractBarChart::layoutHint () const</h3>
 <p>The combination of <code>layoutPolicy()</code> and <code>layoutHint()</code> define how the width of the bars is calculated </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Layout policy of the chart item</dl>
+<dd>Layout policy of the chart item</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>LayoutPolicy</code>, <code>setLayoutHint()</code>, <code>layoutPolicy()</code></dl>
+<dd><code>LayoutPolicy</code>, <code>setLayoutHint()</code>, <code>layoutPolicy()</code></dd></dl>
 <h3><code>QwtPlotAbstractBarChart::LayoutPolicy</code> QwtPlotAbstractBarChart::layoutPolicy () const</h3>
 <p>The combination of <code>layoutPolicy()</code> and <code>layoutHint()</code> define how the width of the bars is calculated </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Layout policy of the chart item</dl>
+<dd>Layout policy of the chart item</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLayoutPolicy()</code>, <code>layoutHint()</code></dl>
+<dd><code>setLayoutPolicy()</code>, <code>layoutHint()</code></dd></dl>
 <h3>int QwtPlotAbstractBarChart::margin () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin between the outmost bars and the contentsRect() of the canvas.</dl>
+<dd>Margin between the outmost bars and the contentsRect() of the canvas.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMargin()</code>, <code>spacing()</code></dl>
+<dd><code>setMargin()</code>, <code>spacing()</code></dd></dl>
 <h3>double QwtPlotAbstractBarChart::sampleWidth (const <code>QwtScaleMap</code> &amp;map, doublecanvasSize, doubleboundingSize, doublevalue) const [protected]</h3>
 <p>Calculate the width for a sample in paint device coordinates </p>
 <p> <code>Parameters:</code></p>
@@ -124,57 +124,57 @@ description: "QwtPlotAbstractBarChart –"
 <dd><i>map</i> Scale map for the corresponding scale<br />
  <i>canvasSize</i> Size of the canvas in paint device coordinates<br />
  <i>boundingSize</i> Bounding size of the chart in plot coordinates ( used in AutoAdjustSamples mode )<br />
- <i>value</i> Value of the sample</dl>
+ <i>value</i> Value of the sample</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample width</dl>
+<dd>Sample width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>layoutPolicy()</code>, <code>layoutHint()</code></dl>
+<dd><code>layoutPolicy()</code>, <code>layoutHint()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::setBaseline (doublevalue)</h3>
 <p>Set the baseline. The baseline is the origin for the chart. Each bar is painted from the baseline in the direction of the sample value. In case of a horizontal <code>orientation()</code> the baseline is interpreted as x &#8211; otherwise as y &#8211; value. </p>
 <p> The default value for the baseline is 0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value for the baseline</dl>
+<dd><i>value</i> Value for the baseline</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>baseline()</code>, <code>QwtPlotSeriesItem::orientation()</code></dl>
+<dd><code>baseline()</code>, <code>QwtPlotSeriesItem::orientation()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::setLayoutHint (doublehint)</h3>
 <p>The combination of <code>layoutPolicy()</code> and <code>layoutHint()</code> define how the width of the bars is calculated </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hint</i> Layout hint</dl>
+<dd><i>hint</i> Layout hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>LayoutPolicy</code>, <code>layoutPolicy()</code>, <code>layoutHint()</code></dl>
+<dd><code>LayoutPolicy</code>, <code>layoutPolicy()</code>, <code>layoutHint()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::setLayoutPolicy (<code>LayoutPolicy</code>policy)</h3>
 <p>The combination of <code>layoutPolicy()</code> and <code>layoutHint()</code> define how the width of the bars is calculated </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>policy</i> Layout policy</dl>
+<dd><i>policy</i> Layout policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>layoutPolicy()</code>, <code>layoutHint()</code></dl>
+<dd><code>layoutPolicy()</code>, <code>layoutHint()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::setMargin (intmargin)</h3>
 <p>Set the margin. The margin is the distance between the outmost bars and the contentsRect() of the canvas. The default setting is 5 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> Margin</dl>
+<dd><i>margin</i> Margin</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>, <code>margin()</code></dl>
+<dd><code>spacing()</code>, <code>margin()</code></dd></dl>
 <h3>void QwtPlotAbstractBarChart::setSpacing (intspacing)</h3>
 <p>Set the spacing. The spacing is the distance between 2 samples ( bars for <code>QwtPlotBarChart</code> or a group of bars for <code>QwtPlotMultiBarChart</code> ) in paint device coordinates. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code></dl>
+<dd><code>spacing()</code></dd></dl>
 <h3>int QwtPlotAbstractBarChart::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spacing between 2 samples ( bars or groups of bars )</dl>
+<dd>Spacing between 2 samples ( bars or groups of bars )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code>, <code>margin()</code></dl>
+<dd><code>setSpacing()</code>, <code>margin()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

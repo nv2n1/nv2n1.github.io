@@ -11,9 +11,7 @@ description: "ql/instruments/pagodaoption.hpp – Roofed Asian option on a numbe
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instruments/multiassetoption.hpp&gt;
-
 #include &lt;ql/time/date.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>PagodaOption</code><br />

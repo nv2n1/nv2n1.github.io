@@ -13,7 +13,6 @@ description: "std::experimental::pmr::memory_resource::deallocate – std::exper
 (library fundamentals TS)
     Deallocates the storage pointed to by p.p shall have been returned by a prior call to allocate(bytes, alignment)
 on a memory_resource that compares equal to *this, and the storage it points to shall not yet have been deallocated.
-
                                                        Equivalent to return do_deallocate(p, bytes, alignment);
 .
 </code></pre>

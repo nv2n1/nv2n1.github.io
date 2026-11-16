@@ -12,12 +12,12 @@ description: "gtext (Text) – The basic output primitive for drawing text. A nu
 <p>void gtext(const Gpoint *text_pos, const char *char_string);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>text_pos.x</p>
-<dd>(Gfloat, Input) The x world coordinate of the text alignment of the first character in char_string.</p>
-<dt>text_pos.y</p>
-<dd>(Gfloat, Input) The y world coordinate of the text alignment of the first character in char_string.</p>
-<dt>char_string</p>
-<dd>(Input) The characters to be drawn.</dl>
+<dt>text_pos.x</dt>
+<dd>(Gfloat, Input) The x world coordinate of the text alignment of the first character in char_string.</dd>
+<dt>text_pos.y</dt>
+<dd>(Gfloat, Input) The y world coordinate of the text alignment of the first character in char_string.</dd>
+<dt>char_string</dt>
+<dd>(Input) The characters to be drawn.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

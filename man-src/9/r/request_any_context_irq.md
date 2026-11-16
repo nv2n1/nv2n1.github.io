@@ -15,23 +15,23 @@ request_any_context_irq - allocate an interrupt line
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line to allocate</dl>
+<dl><dd></dd><dd>Interrupt line to allocate</dd></dl>
  
 
  <i>handler</i>
-<dl><dd>Function to be called when the IRQ occurs. Threaded handler for threaded interrupts.</dl>
+<dl><dd>Function to be called when the IRQ occurs. Threaded handler for threaded interrupts.</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>Interrupt type flags</dl>
+<dl><dd>Interrupt type flags</dd></dl>
  
 
  <i>name</i>
-<dl><dd>An ascii name for the claiming device</dl>
+<dl><dd>An ascii name for the claiming device</dd></dl>
  
 
  <i>dev_id</i>
-<dl><dd>A cookie passed back to the handler function</dl>
+<dl><dd>A cookie passed back to the handler function</dd></dl>
 
 <h2>Description</h2>
 

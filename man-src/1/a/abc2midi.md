@@ -20,32 +20,32 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 &nbsp;<wbr>is given, the first tune in the file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>refnum</i></p>
-<dd> process the tune with reference number <i>refnum</i></p>
-<dt><code>-c</code></p>
-<dd> selects checking only</p>
-<dt><code>-v</code></p>
-<dd> selects verbose option</p>
-<dt><code>-ver</code></p>
-<dd> prints version number and exits</p>
-<dt><code>-t</code></p>
-<dd> selects filenames derived from tune titles</p>
-<dt><code>-RS</code></p>
-<dd> use 3:1 instead of 2:1 for broken rhythms</p>
-<dt><code>-quiet</code></p>
-<dd> Suppresses some commong warnings.</p>
-<dt><code>-n </code><i> X</i></p>
-<dd> limits the length of the file name stem to X characters</p>
-<dt><code>-Q </code><i> tempo</i></p>
-<dd> sets the default tempo in quarter notes per minute if it was not specified in the abc header.</p>
-<dt><code>-NFNP</code></p>
-<dd> Ignore any dynamic indications !f! !ff! etc.</p>
-<dt><code>-NCOM</code></p>
-<dd> Suppress some comments in the output MIDI file.</p>
-<dt><code>-OCC</code></p>
-<dd> Accept old chord convention (eg +D2G2+ instead of [DG]2).</p>
-<dt><code>-o </code><i>outfile</i></p>
-<dd> write output to <i>outfile</i></dl>
+<dt><i>refnum</i></dt>
+<dd> process the tune with reference number <i>refnum</i></dd>
+<dt><code>-c</code></dt>
+<dd> selects checking only</dd>
+<dt><code>-v</code></dt>
+<dd> selects verbose option</dd>
+<dt><code>-ver</code></dt>
+<dd> prints version number and exits</dd>
+<dt><code>-t</code></dt>
+<dd> selects filenames derived from tune titles</dd>
+<dt><code>-RS</code></dt>
+<dd> use 3:1 instead of 2:1 for broken rhythms</dd>
+<dt><code>-quiet</code></dt>
+<dd> Suppresses some commong warnings.</dd>
+<dt><code>-n </code><i> X</i></dt>
+<dd> limits the length of the file name stem to X characters</dd>
+<dt><code>-Q </code><i> tempo</i></dt>
+<dd> sets the default tempo in quarter notes per minute if it was not specified in the abc header.</dd>
+<dt><code>-NFNP</code></dt>
+<dd> Ignore any dynamic indications !f! !ff! etc.</dd>
+<dt><code>-NCOM</code></dt>
+<dd> Suppress some comments in the output MIDI file.</dd>
+<dt><code>-OCC</code></dt>
+<dd> Accept old chord convention (eg +D2G2+ instead of [DG]2).</dd>
+<dt><code>-o </code><i>outfile</i></dt>
+<dd> write output to <i>outfile</i></dd></dl>
 <h2>FEATURES</h2>
 <p> * Broken rythms (&gt;, &lt;), chords, n-tuples, slurring, ties, staccatto notes, repeats, in-tune tempo/length/time signature changes are all supported. </p>
 <p> * R:hornpipe or r:hornpipe is recognized and note timings are adjusted to give a broken rhythm (ab is converted to a&gt;b). </p>

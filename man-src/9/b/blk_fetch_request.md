@@ -15,7 +15,7 @@ blk_fetch_request - fetch a request from a request queue
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>request queue to fetch a request from</dl>
+<dl><dd></dd><dd>request queue to fetch a request from</dd></dl>
 
 <h2>Description</h2>
 

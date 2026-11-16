@@ -25,12 +25,9 @@ This is an I/O manipulator. It may be called with an expression such as out &lt;
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::cout.imbue(std::locale(&quot;en_US.utf8&quot;));
     std::cout &lt;&lt; &quot;Left fill:
@@ -41,7 +38,6 @@ int main()
               &lt;&lt; std::setw(12) &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; 42 &lt;&lt; '
 '
               &lt;&lt; std::setw(12) &lt;&lt; std::put_money(123, true) &lt;&lt; &quot;
-
 &quot;;
     std::cout &lt;&lt; &quot;Internal fill:
 &quot;
@@ -51,7 +47,6 @@ int main()
               &lt;&lt; std::setw(12) &lt;&lt; 42 &lt;&lt; '
 '
               &lt;&lt; std::setw(12) &lt;&lt; std::put_money(123, true) &lt;&lt; &quot;
-
 &quot;;
     std::cout &lt;&lt; &quot;Right fill:
 &quot;

@@ -14,15 +14,15 @@ description: "rio_set_port_lockout – Sets/clears LOCKOUT bit (RIO EM 1.3) for 
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>Pointer to RIO device control structure</dl>
+</dd><dd>Pointer to RIO device control structure</dd></dl>
 <p> <i>pnum</i></p>
 <dl>
-<dd>Switch port number to set LOCKOUT bit</dl>
+<dd>Switch port number to set LOCKOUT bit</dd></dl>
 <p> <i>lock</i></p>
 <dl>
-<dd>Operation : set (=1) or clear (=0)</dl>
+<dd>Operation : set (=1) or clear (=0)</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

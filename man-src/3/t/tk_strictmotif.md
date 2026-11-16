@@ -14,7 +14,7 @@ int
 <code>Tk_StrictMotif</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window. </dd>
 </dl>
 <h2>Description</h2>
 <p>This procedure returns the current value of the <code>tk_strictMotif</code> variable in the interpreter associated with <i>tkwin</i>&#8216;s application. The value is returned as an integer that is either 0 or 1. 1 means that strict Motif compliance has been requested, so anything that is not part of the Motif specification should be avoided. 0 means that &#8220;Motif-like&#8221; is good enough, and extra features are welcome. </p>

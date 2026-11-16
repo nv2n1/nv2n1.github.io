@@ -16,29 +16,28 @@ description: "php-config – get information about PHP configuration and compile
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dd> <code>&#8211;prefix</code> Directory prefix where PHP is installed, e.g. /usr/local</p>
+</dt><dd> <code>&#8211;prefix</code> Directory prefix where PHP is installed, e.g. /usr/local</dd>
 <dt>
-<dd> <code>&#8211;includes</code> List of -I options with all include files</p>
+</dt><dd> <code>&#8211;includes</code> List of -I options with all include files</dd>
 <dt>
-<dd> <code>&#8211;ldflags</code> LD Flags which PHP was compiled with</p>
+</dt><dd> <code>&#8211;ldflags</code> LD Flags which PHP was compiled with</dd>
 <dt>
-<dd> <code>&#8211;libs</code> Extra libraries which PHP was compiled with</p>
+</dt><dd> <code>&#8211;libs</code> Extra libraries which PHP was compiled with</dd>
 <dt>
-<dd> <code>&#8211;extension-dir</code> Directory where extensions are searched by default</p>
+</dt><dd> <code>&#8211;extension-dir</code> Directory where extensions are searched by default</dd>
 <dt>
-<dd> <code>&#8211;include-dir</code> Directory prefix where header files are installed by default</p>
+</dt><dd> <code>&#8211;include-dir</code> Directory prefix where header files are installed by default</dd>
 <dt>
-<dd> <code>&#8211;php-binary</code> Full path to php CLI or CGI binary</p>
+</dt><dd> <code>&#8211;php-binary</code> Full path to php CLI or CGI binary</dd>
 <dt>
-<dd> <code>&#8211;php-sapis</code> Show all SAPI modules available</p>
+</dt><dd> <code>&#8211;php-sapis</code> Show all SAPI modules available</dd>
 <dt>
-<dd> <code>&#8211;configure-options</code> Configure options to recreate configuration of current PHP installation</p>
+</dt><dd> <code>&#8211;configure-options</code> Configure options to recreate configuration of current PHP installation</dd>
 <dt>
-<dd> <code>&#8211;version</code> PHP version</p>
+</dt><dd> <code>&#8211;version</code> PHP version</dd>
 <dt>
-<dd> <code>&#8211;vernum</code> PHP version as integer</p>
-<dt>
-<dd></dl>
+</dt><dd> <code>&#8211;vernum</code> PHP version as integer</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-php/">php</a></code>(1)</p>
 <h2>VERSION INFORMATION</h2>

@@ -16,28 +16,28 @@ description: "smp_rep_exp_route_tbl – invoke REPORT EXPANDER ROUTE TABLE LIST 
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>reduce the decoded response output.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></p>
-<dd><i>IN</i> is the starting routed SAS address index. The default value is 0.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></p>
-<dd>maximum number of descriptors to fetch (default is 62). Note that maximum SMP frame size is 1028 bytes (including a trailing 4 byte CRC) so 62 descriptors is the maximum number that can fit in one response.</p>
-<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></p>
-<dd>starting phy identifier within bitmap. <i>ID</i> should be one of 0 (the default), or a multiple of 48. Note there is only one expnder route table per expander, not one per phy.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>reduce the decoded response output.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></dt>
+<dd><i>IN</i> is the starting routed SAS address index. The default value is 0.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM</i></dt>
+<dd>maximum number of descriptors to fetch (default is 62). Note that maximum SMP frame size is 1028 bytes (including a trailing 4 byte CRC) so 62 descriptors is the maximum number that can fit in one response.</dd>
+<dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></dt>
+<dd>starting phy identifier within bitmap. <i>ID</i> should be one of 0 (the default), or a multiple of 48. Note there is only one expnder route table per expander, not one per phy.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Conforming To</h2>
 <p>The SMP REPORT EXPANDER ROUTE TABLE LIST function was introduced in SAS-2 .</p>
 <h2>Authors</h2>

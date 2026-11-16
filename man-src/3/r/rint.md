@@ -10,28 +10,26 @@ description: "nearbyint, nearbyintf, nearbyintl, rint, rintf, rintl – round to
 <p>nearbyint, nearbyintf, nearbyintl, rint, rintf, rintl &#8211; round to nearest integer</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double nearbyint(double x);
 float nearbyintf(float x);
 long double nearbyintl(long double x);
-
 double rint(double x);
 float rintf(float x);
 long double rintl(long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>nearbyint</code>(), <code>nearbyintf</code>(), <code>nearbyintl</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L || _ISOC99_SOURCE</dl>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L || _ISOC99_SOURCE</dd></dl>
 <p> <code>rint</code>():</p>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>rintf</code>(), <code>rintl</code>():</p>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>nearbyint</code>(), <code>nearbyintf</code>(), and <code>nearbyintl</code>() functions round their argument to an integer value in floating-point format, using the current rounding direction (see <code><a href="/docs/linux/man/3-fesetround/">fesetround</a></code>(3)) and without raising the <i>inexact</i> exception. When the current rounding direction is to nearest, these functions round halfway cases to the even integer in accordance with IEEE-754. </p>
 <p> The <code>rint</code>(), <code>rintf</code>(), and <code>rintl</code>() functions do the same, but will raise the <i>inexact</i> exception (<code>FE_INEXACT</code>, checkable via <code><a href="/docs/linux/man/3-fetestexcept/">fetestexcept</a></code>(3)) when the result differs in value from the argument.</p>

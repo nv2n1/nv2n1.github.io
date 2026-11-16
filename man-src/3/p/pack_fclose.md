@@ -10,7 +10,6 @@ description: "pack_fclose – Closes a stream previously opened. Allegro game pr
 <p>pack_fclose &#8211; Closes a stream previously opened. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int pack_fclose(PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Closes the stream `f&#8217; previously opened with pack_fopen() or pack_fopen_vtable(). After you have closed the stream, performing operations on it will yield errors in your application (e.g. crash it) or even block your OS.</p>

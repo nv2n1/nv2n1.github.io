@@ -11,25 +11,17 @@ description: "std::experimental::ranges::is_swappable_with,std::experimental::ra
 <h2>Synopsis</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::experimental::ranges::is_nothrow_swappable </p>
 <pre><code>Defined in header&lt;experimental / ranges / type_traits&gt;
-
     template &lt;class T, class U&gt;
     (1)(ranges TS)
-
         struct is_swappable_with;
-
 template &lt;class T&gt;
 (2)(ranges TS)
-
     struct is_swappable;
-
 template &lt;class T, class U&gt;
 (3)(ranges TS)
-
     struct is_nothrow_swappable_with;
-
 template &lt;class T&gt;
 (4)(ranges TS)
-
     struct is_nothrow_swappable;</code></pre>
 <p>1)&nbsp;<wbr>If the expressions ranges::swap(std::declval&lt;T&gt;(), std::declval&lt;U&gt;())&nbsp;<wbr>and<br />
 ranges::swap(std::declval&lt;U&gt;(), std::declval&lt;T&gt;())&nbsp;<wbr>are both well-formed when treated<br />
@@ -47,23 +39,14 @@ T and U shall each be a complete type,&nbsp;<wbr>(possibly cv-qualified)&nbsp;<w
 unknown bound. Otherwise, the behavior is undefined.<br />
 &nbsp;<wbr>&nbsp;<wbr>Helper variable templates </p>
 <pre><code>template &lt;class T, class U&gt;                                          (1) (ranges TS)
-
 constexpr bool is_swappable_with_v = is_swappable_with&lt;T, U&gt;::value;
-
 template &lt;class T&gt;                                                   (2) (ranges TS)
-
 constexpr bool is_swappable_v = is_swappable&lt;T&gt;::value;
-
 template &lt;class T, class U&gt;
-
 constexpr bool is_nothrow_swappable_with_v =                         (3) (ranges TS)
-
 is_nothrow_swappable_with&lt;T, U&gt;::value;
-
 template &lt;class T&gt;
-
 constexpr bool is_nothrow_swappable_v =                              (4) (ranges TS)
-
 is_nothrow_swappable&lt;T&gt;::value;</code></pre>
 <p> Inherited from std::integral_constant </p>
 <h2>Member constants</h2>

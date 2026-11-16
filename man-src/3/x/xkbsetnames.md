@@ -11,20 +11,20 @@ description: "XkbSetNames – Change the symbolic names in the server"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>first_type</i><code>,</code> <code>unsigned int </code><i>num_types</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of names or map components to be changed</p>
-<dt><i>&#8211; first_type</i></p>
-<dd>first type whose name is to be changed</p>
-<dt><i>&#8211; num_types</i></p>
-<dd>number of types for which names are to be changed</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description from which names are to be taken</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of names or map components to be changed</dd>
+<dt><i>&#8211; first_type</i></dt>
+<dd>first type whose name is to be changed</dd>
+<dt><i>&#8211; num_types</i></dt>
+<dd>number of types for which names are to be changed</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description from which names are to be taken</dd></dl>
 <h2>Description</h2>
 <p>To change the symbolic names in the server, first modify a local copy of the keyboard description and then use either <i>XkbSetNames, </i> or, to save network traffic, use a XkbNameChangesRecstructure and call <i>XkbChangeNames </i> to download the changes to the server. <i>XkbSetNames </i> and <i>XkbChangeNames </i> can generate BadAlloc, BadAtom, BadLength, BadMatch, and BadImplementation errors. </p>
 <p> Use <i>XkbSetNames </i> to change many names at the same time. For each bit set in <i>which, XkbSetNames </i> takes the corresponding value (or values in the case of arrays) from the keyboard description <i>xkb </i> and sends it to the server. </p>
@@ -333,15 +333,15 @@ were changed */
 </table>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadAtom</code></p>
-<dd>A name is neither a valid Atom or None</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</p>
-<dt><code>BadLength</code></p>
-<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadAtom</code></dt>
+<dd>A name is neither a valid Atom or None</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd>
+<dt><code>BadLength</code></dt>
+<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbchangenames/">XkbChangeNames</a></code>(3)</p>

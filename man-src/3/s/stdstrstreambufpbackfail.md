@@ -10,7 +10,6 @@ description: "std::strstreambuf::pbackfail – std::strstreambuf::pbackfail"
 <p>std::strstreambuf::pbackfail &#8211; std::strstreambuf::pbackfail</p>
 <h2>Synopsis</h2>
 <pre><code>protected:
-
 virtual int_type pbackfail( int_type c = EOF );</code></pre>
 <p>This protected virtual function is called by the public functions basic_streambuf::sungetc and basic_streambuf::sputbackc (which, in turn, are called by basic_istream::unget and basic_istream::putback).<br />
 1) The caller is requesting that the get area is backed up by one character (pbackfail() is called with no arguments or with EOF as the argument)<br />

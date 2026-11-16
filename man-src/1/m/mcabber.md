@@ -27,42 +27,42 @@ url: "/docs/linux/man/1-mcabber/"
 
 <dl>
 <dt>
-<dd> * <i>SSL support</i>.</dl>
+</dt><dd> * <i>SSL support</i>.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>MUC support</i> (Multi-User Chat).</dl>
+</dt><dd> * <i>MUC support</i> (Multi-User Chat).</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>PGP support</i></dl>
+</dt><dd> * <i>PGP support</i></dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>Chat States</i> support (typing notifications)</dl>
+</dt><dd> * <i>Chat States</i> support (typing notifications)</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>History logging:</i> If enabled (see the CONFIGURATION FILE section), mcabber can save discussions to history log files.</dl>
+</dt><dd> * <i>History logging:</i> If enabled (see the CONFIGURATION FILE section), mcabber can save discussions to history log files.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>Commands completion:</i> If possible, mcabber will try to complete your command line if you hit the Tab key.</dl>
+</dt><dd> * <i>Commands completion:</i> If possible, mcabber will try to complete your command line if you hit the Tab key.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>Input line history:</i> Any message or command entered is in the input line history and can be reused easily.</dl>
+</dt><dd> * <i>Input line history:</i> Any message or command entered is in the input line history and can be reused easily.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> * <i>External actions:</i> Some events (like receiving a message) can trigger an external action such as a shell script if you enable it in your configuration file. A sample events script (&quot;eventcmd&quot;) is provided with mcabber source code, in the contrib directory.</dl>
+</dt><dd> * <i>External actions:</i> Some events (like receiving a message) can trigger an external action such as a shell script if you enable it in your configuration file. A sample events script (&quot;eventcmd&quot;) is provided with mcabber source code, in the contrib directory.</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -71,13 +71,13 @@ url: "/docs/linux/man/1-mcabber/"
  --help, -h
 <dl>
 <dt>
-<dd> Quick help usage message</dl>
+</dt><dd> Quick help usage message</dd></dl>
  
 
  -f configfile
 <dl>
 <dt>
-<dd> Use configuration file <i>configfile</i></dl>
+</dt><dd> Use configuration file <i>configfile</i></dd></dl>
 
 <h2>WINDOWS/PANES</h2>
 
@@ -102,95 +102,41 @@ url: "/docs/linux/man/1-mcabber/"
  Here is a quick description of the key bindings: 
 
  <table> <tr VALIGN=top><td> Esc 
-
  </td><td> Disable chat mode 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-d 
-
  </td><td> Send/terminate a multi-line message 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-p/Ctrl-n 
-
  </td><td> Scroll up/down half a screen in the buffer window (chat mode) 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-Left 
-
  </td><td> Move the cursor back to the start of the current or previous word 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-Right 
-
  </td><td> Move the cursor forward to the end of the current or next word 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-u 
-
  </td><td> Delete from beginning of the line to the cursor 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-k 
-
  </td><td> Delete from the cursor to the end of line 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-w 
-
  </td><td> Backward kill word 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-t 
-
  </td><td> Transpose chars 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-o 
-
  </td><td> Accept line and put the next history line in the input line (accept-line-and-down-history) 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-a 
-
  </td><td> Go to the beginning of the input line 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-e 
-
  </td><td> Go to the end of the input line 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-l 
-
  </td><td> Force a refresh 
-
- 
 </td></tr> <tr VALIGN=top><td> Up/Down 
-
  </td><td> Move in the input line history 
-
- 
 </td></tr> <tr VALIGN=top><td> PgUp/PgDown 
-
  </td><td> Move inside the roster (buddylist) 
-
- 
 </td></tr> <tr VALIGN=top><td> Tab 
-
  </td><td> Complete current word, in the input line 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-g 
-
  </td><td> Cancel completion 
-
- 
 </td></tr> <tr VALIGN=top><td> Ctrl-c 
-
  </td><td> Abort multi-line messages and completions 
-
- 
 </td></tr> </table> 
 
  Additional key bindings may be specified using the <i>/bind</i> command described in the COMMANDS section. 
@@ -206,55 +152,25 @@ url: "/docs/linux/man/1-mcabber/"
  The online status is one of the following: 
 
  <table> <tr VALIGN=top><td> <i>o</i> 
-
  </td><td> online 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>C</i> 
-
  </td><td> a conference room in which you are participating 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>f</i> 
-
  </td><td> free for chat 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>a</i> 
-
  </td><td> away 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>n</i> 
-
  </td><td> not available (labeled <i>extended away</i> in some clients) 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>d</i> 
-
  </td><td> do not disturb 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>i</i> 
-
  </td><td> invisible (displayed only for your resource) 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>_</i> 
-
  </td><td> offline (or invisible to you) 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>?</i> 
-
  </td><td> unknown, usually meaning you are not authorized to see this resource's status 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>x</i> 
-
  </td><td> a conference room in which you are not participating 
-
- 
 </td></tr> </table> 
 
  The authorization status indicates whether a resource is authorized to receive your online status updates, and is displayed by the brackets surrounding the resource's online status. Square brackets, like <i>[o]</i>, indicate that this resource is authorized to receive your status. Curly braces, like <i>{o}</i>, indicate that they are not authorized to receive your status. 
@@ -264,30 +180,15 @@ url: "/docs/linux/man/1-mcabber/"
  Examples: 
 
  <table> <tr VALIGN=top><td> <i> --- Buds</i> 
-
  </td><td> This is a group named <i>Buds</i> 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>#[o] John</i> 
-
  </td><td> John is online, can see your status, and sent you a message that you did not read yet 
-
- 
 </td></tr> <tr VALIGN=top><td> <i> {?} Sally</i> 
-
  </td><td> Neither you nor Sally have authorized each other to see your online status 
-
- 
 </td></tr> <tr VALIGN=top><td> <i> {a} Jane</i> 
-
  </td><td> Jane is away, but she cannot see your online status 
-
- 
 </td></tr> <tr VALIGN=top><td> <i>#[C] x@y.c</i> 
-
  </td><td> You are participating in x@y.c conference room, and there are unread messages 
-
- 
 </td></tr> </table> 
 
 <h2>COMMANDS</h2>
@@ -301,19 +202,19 @@ url: "/docs/linux/man/1-mcabber/"
  /alias [name [= command line]]
 <dl>
 <dt>
-<dd> Add &quot;name&quot; as an alias for &quot;command line&quot;. Aliases are expanded only once, thus they can not be chained. &quot;/alias name&quot; displays the value associated with the &quot;name&quot; alias; &quot;/alias name =&quot; unsets the &quot;name&quot; alias. &quot;/alias&quot; displays a list of the existing aliases. Example: &quot;/alias away = status away&quot;.</dl>
+</dt><dd> Add &quot;name&quot; as an alias for &quot;command line&quot;. Aliases are expanded only once, thus they can not be chained. &quot;/alias name&quot; displays the value associated with the &quot;name&quot; alias; &quot;/alias name =&quot; unsets the &quot;name&quot; alias. &quot;/alias&quot; displays a list of the existing aliases. Example: &quot;/alias away = status away&quot;.</dd></dl>
  
 
  /bind [keycode [= command line]]
 <dl>
 <dt>
-<dd> Bind a command line to the key with the &quot;keycode&quot; code number. Keycodes of unused keys are displayed by mcabber in the log window when pressing the key, for example &quot;Unknown key=265&quot;. &quot;/bind keycode&quot; displays the command line bound to the given keycode; &quot;/bind keycode =&quot; unbinds the given keycode. &quot;/bind&quot; displays a list of the bound keycodes. Note: aliases can be used in key bindings. Example: &quot;/bind 265 = status online&quot; (265 is F1 for me, but it may depend on your ncurses installation).</dl>
+</dt><dd> Bind a command line to the key with the &quot;keycode&quot; code number. Keycodes of unused keys are displayed by mcabber in the log window when pressing the key, for example &quot;Unknown key=265&quot;. &quot;/bind keycode&quot; displays the command line bound to the given keycode; &quot;/bind keycode =&quot; unbinds the given keycode. &quot;/bind&quot; displays a list of the bound keycodes. Note: aliases can be used in key bindings. Example: &quot;/bind 265 = status online&quot; (265 is F1 for me, but it may depend on your ncurses installation).</dd></dl>
  
 
  /buffer clear|close|close_all|purge, /buffer top|bottom|date|%|search_backward|search_forward, /buffer scroll_lock|scroll_unlock|scroll_toggle
 <dl>
 <dt>
-<dd> The <i>buffer</i> command manipulates the current buddy's buffer (chat window). <table> <tr VALIGN=top><td> <i>clear</i> </td><td> clear the current buddy chat window 
+</dt><dd> The <i>buffer</i> command manipulates the current buddy's buffer (chat window). <table> <tr VALIGN=top><td> <i>clear</i> </td><td> clear the current buddy chat window 
 </td></tr> <tr VALIGN=top><td> <i>close</i> </td><td> empty all contents of the buffer and close the current buddy chat window 
 </td></tr> <tr VALIGN=top><td> <i>close_all</i> </td><td> empty all contents of the chat buffers and close the chat windows 
 </td></tr> <tr VALIGN=top><td> <i>purge</i> </td><td> clear the current buddy chat window and empty all contents of the chat buffer 
@@ -329,44 +230,43 @@ url: "/docs/linux/man/1-mcabber/"
 </td></tr> <tr VALIGN=top><td> <i>scroll_unlock</i> </td><td> unlock buffer scrolling 
 </td></tr> <tr VALIGN=top><td> <i>scroll_toggle</i> </td><td> toggle buffer scrolling (lock/unlock) 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /clear
 <dl>
 <dt>
-<dd> The <i>clear</i> command is actually an alias for &quot;/buffer clear&quot;.</dl>
+</dt><dd> The <i>clear</i> command is actually an alias for &quot;/buffer clear&quot;.</dd></dl>
  
 
  /help [command]
 <dl>
 <dt>
-<dd> Display generic help or help about a specific mcabber command.</dl>
+</dt><dd> Display generic help or help about a specific mcabber command.</dd></dl>
  
 
  /quit
 <dl>
 <dt>
-<dd> Disconnect and leave <a HREF="/docs/linux/man/1-mcabber/">mcabber</a>(1).</dl>
+</dt><dd> Disconnect and leave <a HREF="/docs/linux/man/1-mcabber/">mcabber</a>(1).</dd></dl>
  
 
  /set option[=value]
 <dl>
 <dt>
-<dd> Display or set an option value.</dl>
+</dt><dd> Display or set an option value.</dd></dl>
  
 
  /source [file]
 <dl>
 <dt>
-<dd> Read a configuration file.</dl>
+</dt><dd> Read a configuration file.</dd></dl>
  
 
  /version
 <dl>
 <dt>
-<dd> Display mcabber version</dl>
+</dt><dd> Display mcabber version</dd></dl>
 
 <h2>COMMANDS RELATED TO THE SERVER AND CONNECTION</h2>
 
@@ -375,33 +275,31 @@ url: "/docs/linux/man/1-mcabber/"
  /connect
 <dl>
 <dt>
-<dd> Establish connection to the Jabber server.</dl>
+</dt><dd> Establish connection to the Jabber server.</dd></dl>
  
 
  /disconnect
 <dl>
 <dt>
-<dd> Terminate connection to the Jabber server. Note: the roster is only available when the connection to the server is active, so the buddylist is empty when disconnected.</dl>
+</dt><dd> Terminate connection to the Jabber server. Note: the roster is only available when the connection to the server is active, so the buddylist is empty when disconnected.</dd></dl>
  
 
  /event #n|* accept|ignore|reject, /event list
 <dl>
 <dt>
-<dd> Tell mcabber what to do about a pending event. If the first parameter is &quot;*&quot;, the command will apply to all queued events. <table> <tr VALIGN=top><td> <i>accept</i> </td><td> accept the event #n 
+</dt><dd> Tell mcabber what to do about a pending event. If the first parameter is &quot;*&quot;, the command will apply to all queued events. <table> <tr VALIGN=top><td> <i>accept</i> </td><td> accept the event #n 
 </td></tr> <tr VALIGN=top><td> <i>ignore</i> </td><td> remove the event #n from the list 
 </td></tr> <tr VALIGN=top><td> <i>reject</i> </td><td> reject the event #n 
 </td></tr> <tr VALIGN=top><td> <i>list</i> </td><td> list all pending events 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /rawxml send string
 <dl>
 <dt>
-<dd> 
-
- <i>send</i> string: send string (raw XML format) to the Jabber server. No check is done on the string provided. BEWARE! Use this only if you know what you are doing, or you could terminate the connection.</dl>
+</dt><dd> 
+ <i>send</i> string: send string (raw XML format) to the Jabber server. No check is done on the string provided. BEWARE! Use this only if you know what you are doing, or you could terminate the connection.</dd></dl>
 
 <h2>COMMANDS RELATED TO THE ROSTER AND JABBER RESOURCES</h2>
 
@@ -410,54 +308,52 @@ url: "/docs/linux/man/1-mcabber/"
  /add [jid [nickname]]
 <dl>
 <dt>
-<dd> Add the &quot;jid&quot; Jabber user to our roster (default group), and send a notification request to this buddy. If no nickname is specified, the jid is used. If no jid (or an empty string &quot;&quot;) is provided or if jid is &quot;.&quot;, the current buddy is used.</dl>
+</dt><dd> Add the &quot;jid&quot; Jabber user to our roster (default group), and send a notification request to this buddy. If no nickname is specified, the jid is used. If no jid (or an empty string &quot;&quot;) is provided or if jid is &quot;.&quot;, the current buddy is used.</dd></dl>
  
 
  /authorization allow|cancel|request|request_unsubscribe [jid]
 <dl>
 <dt>
-<dd> Manage the presence subscriptions. If no jid is provided, the current buddy is used. <table> <tr VALIGN=top><td> <i>allow</i> </td><td> allow the buddy to receive your presence updates 
+</dt><dd> Manage the presence subscriptions. If no jid is provided, the current buddy is used. <table> <tr VALIGN=top><td> <i>allow</i> </td><td> allow the buddy to receive your presence updates 
 </td></tr> <tr VALIGN=top><td> <i>cancel</i> </td><td> cancel the buddy' subscription to your presence updates 
 </td></tr> <tr VALIGN=top><td> <i>request</i> </td><td> request a subscription to the buddy's presence updates 
 </td></tr> <tr VALIGN=top><td> <i>request_unsubscribe</i> </td><td> request unsubscription from the buddy's presence updates 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /del
 <dl>
 <dt>
-<dd> Delete the current buddy from our roster, unsubscribe from its presence notification and unsubscribe it from ours.</dl>
+</dt><dd> Delete the current buddy from our roster, unsubscribe from its presence notification and unsubscribe it from ours.</dd></dl>
  
 
  /group fold|unfold|toggle
 <dl>
 <dt>
-<dd> The <i>group</i> command changes the current group display. <table> <tr VALIGN=top><td> <i>fold</i> </td><td> fold (shrink) the current group tree in the roster 
+</dt><dd> The <i>group</i> command changes the current group display. <table> <tr VALIGN=top><td> <i>fold</i> </td><td> fold (shrink) the current group tree in the roster 
 </td></tr> <tr VALIGN=top><td> <i>unfold</i> </td><td> unfold (expand) the current group tree in the roster 
 </td></tr> <tr VALIGN=top><td> <i>toggle</i> </td><td> toggle the state (fold/unfold) of the current tree 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /info
 <dl>
 <dt>
-<dd> Display info on the selected entry (user, agent, group...). For users, resources are displayed with the status, priority and status message (if available) of each resource.</dl>
+</dt><dd> Display info on the selected entry (user, agent, group...). For users, resources are displayed with the status, priority and status message (if available) of each resource.</dd></dl>
  
 
  /move [groupname]
 <dl>
 <dt>
-<dd> Move the current buddy to the requested group. If no group is specified, then the buddy is moved to the default group. If the group groupname doesn't exist, it is created. Tip: if the chatmode is enabled, you can use &quot;/roster alternate&quot; to jump to the moved buddy.</dl>
+</dt><dd> Move the current buddy to the requested group. If no group is specified, then the buddy is moved to the default group. If the group groupname doesn't exist, it is created. Tip: if the chatmode is enabled, you can use &quot;/roster alternate&quot; to jump to the moved buddy.</dd></dl>
  
 
  /msay begin|verbatim|send|send_to|toggle|toggle_verbatim|abort
 <dl>
 <dt>
-<dd> Send a multi-line message. To write a single message with several lines, the <i>multi-line mode</i> should be used. In multi-line mode, each line (except command lines) typed in the input line will be added to the multi-line message. Once the message is finished, it can be sent to the current selected buddy with the &quot;/msay send&quot; command (or Ctrl-d). The <i>begin</i> subcommand enables multi-line mode. Note that it allows a message subject to be specified. The <i>verbatim</i> multi-line mode disables commands, so that it is possible to enter lines starting with a slash. Only the &quot;/msay&quot; command (with send or abort parameters) can be used to exit verbatim mode. The <i>toggle</i> and <i>toggle_verbatim</i> subcommands can be bound to a key to use the multi-line mode quickly (for example, &quot;bind M109 = msay toggle&quot; to switch using the Meta-m combination). <table> <tr VALIGN=top><td> <i>begin</i> [subject] </td><td> enter multi-line mode 
+</dt><dd> Send a multi-line message. To write a single message with several lines, the <i>multi-line mode</i> should be used. In multi-line mode, each line (except command lines) typed in the input line will be added to the multi-line message. Once the message is finished, it can be sent to the current selected buddy with the &quot;/msay send&quot; command (or Ctrl-d). The <i>begin</i> subcommand enables multi-line mode. Note that it allows a message subject to be specified. The <i>verbatim</i> multi-line mode disables commands, so that it is possible to enter lines starting with a slash. Only the &quot;/msay&quot; command (with send or abort parameters) can be used to exit verbatim mode. The <i>toggle</i> and <i>toggle_verbatim</i> subcommands can be bound to a key to use the multi-line mode quickly (for example, &quot;bind M109 = msay toggle&quot; to switch using the Meta-m combination). <table> <tr VALIGN=top><td> <i>begin</i> [subject] </td><td> enter multi-line mode 
 </td></tr> <tr VALIGN=top><td> <i>verbatim</i> </td><td> enter verbatim multi-line mode 
 </td></tr> <tr VALIGN=top><td> <i>send</i> </td><td> send the current multi-line message to the currently selected buddy 
 </td></tr> <tr VALIGN=top><td> <i>send_to</i> jid </td><td> send the current multi-line message to &quot;jid&quot; 
@@ -465,39 +361,37 @@ url: "/docs/linux/man/1-mcabber/"
 </td></tr> <tr VALIGN=top><td> <i>toggle_verbatim</i> </td><td> same with verbatim multi-line mode 
 </td></tr> <tr VALIGN=top><td> <i>abort</i> </td><td> leave multi-line mode without sending the message 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /pgp disable|enable|force|info [jid], /pgp setkey [jid [key]]
 <dl>
 <dt>
-<dd> Manipulate PGP settings for the specified jid (by default the currently selected contact). Please note that PGP encryption won't be used if no remote PGP support is detected, even if PGP is enabled with this command. <table> <tr VALIGN=top><td> <i>disable</i> [jid] </td><td> disable PGP encryption for jid (or the currently selected contact) 
+</dt><dd> Manipulate PGP settings for the specified jid (by default the currently selected contact). Please note that PGP encryption won't be used if no remote PGP support is detected, even if PGP is enabled with this command. <table> <tr VALIGN=top><td> <i>disable</i> [jid] </td><td> disable PGP encryption for jid (or the currently selected contact) 
 </td></tr> <tr VALIGN=top><td> <i>enable</i> [jid] </td><td> enable PGP encryption for jid (or the currently selected contact) 
 </td></tr> <tr VALIGN=top><td> <i>force</i> [jid] </td><td> enforce PGP encryption, even for offline messages, and always assume the recipient has PGP support 
 </td></tr> <tr VALIGN=top><td> <i>info</i> [jid] </td><td> show current PGP settings for the contact 
 </td></tr> <tr VALIGN=top><td> <i>setkey</i> [jid [key]] </td><td> set the PGP key to be used to encrypt message for this contact. If no key is provided, the current key is erased. You can use the shortcut-jid &quot;.&quot; for the currently selected contact. 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /rename name
 <dl>
 <dt>
-<dd> Rename current buddy or group to the given name. Please note that a group name change is only done when the server's acknowledgment is received, so a slight delay can be noticed.</dl>
+</dt><dd> Rename current buddy or group to the given name. Please note that a group name change is only done when the server's acknowledgment is received, so a slight delay can be noticed.</dd></dl>
  
 
  /request last|time|vcard|version [jid]
 <dl>
 <dt>
-<dd> Send a &quot;IQ&quot; query to the current buddy, or to the specified Jabber user. If the resource is not provided with the jid, mcabber will send the query to all known resources for this user.</dl>
+</dt><dd> Send a &quot;IQ&quot; query to the current buddy, or to the specified Jabber user. If the resource is not provided with the jid, mcabber will send the query to all known resources for this user.</dd></dl>
  
 
  /room join|leave|names|nick|privmsg|remove|topic|unlock|destroy, /room invite|kick|ban|role|affil, /room bookmark [add|del] [-autojoin|+autojoin]
 <dl>
 <dt>
-<dd> The <i>room</i> command handles Multi-User Chat room actions. <table> <tr VALIGN=top><td> <i>join</i> [room [nick [pass]]] </td><td> join &quot;room&quot;, using &quot;nick&quot; as nickname. If no nickname is provided (or if it is an empty string), the &quot;nickname&quot; option value is used (see sample configuration file). If the currently selected entry is correctly recognized as a room by mcabber, the shortcut &quot;.&quot; can be used instead of the full room id. A password can be provided to enter protected rooms. If your nickname contains space characters, use quotes. 
+</dt><dd> The <i>room</i> command handles Multi-User Chat room actions. <table> <tr VALIGN=top><td> <i>join</i> [room [nick [pass]]] </td><td> join &quot;room&quot;, using &quot;nick&quot; as nickname. If no nickname is provided (or if it is an empty string), the &quot;nickname&quot; option value is used (see sample configuration file). If the currently selected entry is correctly recognized as a room by mcabber, the shortcut &quot;.&quot; can be used instead of the full room id. A password can be provided to enter protected rooms. If your nickname contains space characters, use quotes. 
 </td></tr> <tr VALIGN=top><td> <i>whois</i> nick </td><td> display MUC information about &quot;nick&quot; 
 </td></tr> <tr VALIGN=top><td> <i>ban</i> jid [reason] </td><td> ban jid from the current room 
 </td></tr> <tr VALIGN=top><td> <i>invite</i> jid [reason] </td><td> invite jid to the current room 
@@ -513,14 +407,13 @@ url: "/docs/linux/man/1-mcabber/"
 </td></tr> <tr VALIGN=top><td> <i>unlock</i> </td><td> unlock current room (if you are the owner) 
 </td></tr> <tr VALIGN=top><td> <i>destroy</i> [reason] </td><td> destroy the current room (use with care!) 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /roster bottom|top|up|down|group_prev|group_next, /roster alternate|unread_first|unread_next, /roster search bud, /roster hide_offline|show_offline|toggle_offline, /roster item_lock|item_unlock, /roster hide|show|toggle, /roster note [-|text]
 <dl>
 <dt>
-<dd> The <i>roster</i> command manipulates the roster/buddylist. Here are the available parameters: <table> <tr VALIGN=top><td> <i>bottom</i> </td><td> jump to the bottom of the roster 
+</dt><dd> The <i>roster</i> command manipulates the roster/buddylist. Here are the available parameters: <table> <tr VALIGN=top><td> <i>bottom</i> </td><td> jump to the bottom of the roster 
 </td></tr> <tr VALIGN=top><td> <i>search</i> bud </td><td> search for a buddy with a name or jid containing &quot;bud&quot; (only in the displayed buddylist) 
 </td></tr> <tr VALIGN=top><td> <i>hide_offline</i> </td><td> hide offline buddies 
 </td></tr> <tr VALIGN=top><td> <i>show_offline</i> </td><td> show offline buddies 
@@ -540,32 +433,31 @@ url: "/docs/linux/man/1-mcabber/"
 </td></tr> <tr VALIGN=top><td> <i>unread_first</i> </td><td> jump to the first unread message 
 </td></tr> <tr VALIGN=top><td> <i>unread_next</i> </td><td> jump to the next unread message 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  /say text
 <dl>
 <dt>
-<dd> Send the &quot;text&quot; message to the currently selected buddy. Can be useful if you want to send a message beginning with a slash, for example.</dl>
+</dt><dd> Send the &quot;text&quot; message to the currently selected buddy. Can be useful if you want to send a message beginning with a slash, for example.</dd></dl>
  
 
  /say_to jid text
 <dl>
 <dt>
-<dd> Send the &quot;text&quot; message to the specified jid. Please note that this command doesn't set the default resource for a contact, so if you want to send several messages to a specific resource you will have to use &quot;/say_to&quot; for each message.</dl>
+</dt><dd> Send the &quot;text&quot; message to the specified jid. Please note that this command doesn't set the default resource for a contact, so if you want to send several messages to a specific resource you will have to use &quot;/say_to&quot; for each message.</dd></dl>
  
 
  /status [online|avail|invisible|free|dnd|notavail|away [-|StatusMessage]]
 <dl>
 <dt>
-<dd> Show or set the current status. If no status is specified, display the current status. If a status message is specified, it will overrride the message* variables (these variables can be set in the configuration file). If no relevant message* variable is set and no status message provided, the current status message is kept. If StatusMessage is &quot;-&quot;, the current status message is cleared.</dl>
+</dt><dd> Show or set the current status. If no status is specified, display the current status. If a status message is specified, it will overrride the message* variables (these variables can be set in the configuration file). If no relevant message* variable is set and no status message provided, the current status message is kept. If StatusMessage is &quot;-&quot;, the current status message is cleared.</dd></dl>
  
 
  /status_to jid online|avail|invisible|free|dnd|notavail|away [StatusMessage]
 <dl>
 <dt>
-<dd> Send the requested status to the specified Jabber user. If the specified jid is &quot;.&quot;, the current buddy is used. Note: this status will be overridden by subsequent &quot;/status&quot; commands. If you are using the auto-away feature, the status will overridden too. Note: The jid can include a resource (i.e. user [at] server/resource).</dl>
+</dt><dd> Send the requested status to the specified Jabber user. If the specified jid is &quot;.&quot;, the current buddy is used. Note: this status will be overridden by subsequent &quot;/status&quot; commands. If you are using the auto-away feature, the status will overridden too. Note: The jid can include a resource (i.e. user [at] server/resource).</dd></dl>
 
 <h2>CONFIGURATION FILE</h2>
 
@@ -579,11 +471,11 @@ url: "/docs/linux/man/1-mcabber/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 $HOME/.mcabber/mcabberrc    Default configuration file
 $HOME/.mcabberrc            Configuration file used if no other has been found
 $HOME/.mcabber/histo/       Default directory for storing chat history files, if enabled
-</pre></dl>
+</pre></dd></dl>
 
 <h2>BUGS</h2>
 
@@ -607,28 +499,28 @@ $HOME/.mcabber/histo/       Default directory for storing chat history files, if
 
 <dl>
 <dt> 1.
-<dd> Mikael BERTHE
-<dl>
+</dt><dd> Mikael BERTHE
+</dd><dl>
 <dt>
-<dd> mailto:mcabber [at] lilotux.net</dl>
+</dt><dd> mailto:mcabber [at] lilotux.net</dd></dl>
 
 <dt> 2.
-<dd> Cabber
-<dl>
+</dt><dd> Cabber
+</dd><dl>
 <dt>
-<dd> <a rel="nofollow" HREF="http://cabber.sourceforge.net">http://cabber.sourceforge.net</a></dl>
+</dt><dd> <a rel="nofollow" HREF="http://cabber.sourceforge.net">http://cabber.sourceforge.net</a></dd></dl>
 
 <dt> 3.
-<dd> Main web site
-<dl>
+</dt><dd> Main web site
+</dd><dl>
 <dt>
-<dd> <a rel="nofollow" HREF="http://www.lilotux.net/~mikael/mcabber/">http://www.lilotux.net/~mikael/mcabber/</a></dl>
+</dt><dd> <a rel="nofollow" HREF="http://www.lilotux.net/~mikael/mcabber/">http://www.lilotux.net/~mikael/mcabber/</a></dd></dl>
 
 <dt> 4.
-<dd> cabber [at] ajmacias.com
-<dl>
+</dt><dd> cabber [at] ajmacias.com
+</dd><dl>
 <dt>
-<dd> mailto:cabber [at] ajmacias.com</dl>
+</dt><dd> mailto:cabber [at] ajmacias.com</dd></dl>
  
 
 </dl>

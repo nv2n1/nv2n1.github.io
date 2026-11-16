@@ -17,43 +17,39 @@ description: "dapltest – test for the Direct Access Programming Library (DAPL)
 <p> The -f option allows all arguments to be placed in a file, to ease test automation. </p>
 <p> The following arguments are common to all tests:</p>
 <dl>
-<dt><code>[ -T S|Q|T|P|L ]</code></p>
-<dd> Test function to be performed:</p>
+<dt><code>[ -T S|Q|T|P|L ]</code></dt>
+<dd> Test function to be performed:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>S</code></p>
-<dd> &#8211; server loop</p>
-<dt><code>Q</code></p>
-<dd> &#8211; quit, client requests that server wait for any outstanding tests to complete, then clean up and exit</p>
-<dt><code>T</code></p>
-<dd> &#8211; transaction test, transfers data between client and server</p>
-<dt><code>P</code></p>
-<dd> &#8211; performance test, times DTO operations</p>
-<dt><code>L</code></p>
-<dd> &#8211; limit test, exhausts various resources, runs in client w/o server interaction Default: S</dl>
+<dt><code>S</code></dt>
+<dd> &#8211; server loop</dd>
+<dt><code>Q</code></dt>
+<dd> &#8211; quit, client requests that server wait for any outstanding tests to complete, then clean up and exit</dd>
+<dt><code>T</code></dt>
+<dd> &#8211; transaction test, transfers data between client and server</dd>
+<dt><code>P</code></dt>
+<dd> &#8211; performance test, times DTO operations</dd>
+<dt><code>L</code></dt>
+<dd> &#8211; limit test, exhausts various resources, runs in client w/o server interaction Default: S</dd></dl>
 </dl>
-<dt><code>[ -D device_name ]</code></p>
-<dd> Specifies the interface adapter name as documented in the /etc/dat.conf static configuration file. This name corresponds to the provider library to open. Default: none</p>
-<dt><code>[ -d ]</code></p>
-<dd> Enables extra debug verbosity, primarily tracing of the various DAPL operations as they progress. Repeating this parameter increases debug spew. Errors encountered result in the test spewing some explanatory text and stopping; this flag provides more detail about what lead up to the error. Default: zero</p>
-<dt><code>[ -R BE ]</code></p>
-<dd> Indicate the quality of service (QoS) desired. Choices are:</p>
+<dt><code>[ -D device_name ]</code></dt>
+<dd> Specifies the interface adapter name as documented in the /etc/dat.conf static configuration file. This name corresponds to the provider library to open. Default: none</dd>
+<dt><code>[ -d ]</code></dt>
+<dd> Enables extra debug verbosity, primarily tracing of the various DAPL operations as they progress. Repeating this parameter increases debug spew. Errors encountered result in the test spewing some explanatory text and stopping; this flag provides more detail about what lead up to the error. Default: zero</dd>
+<dt><code>[ -R BE ]</code></dt>
+<dd> Indicate the quality of service (QoS) desired. Choices are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>HT</code></p>
-<dd> &#8211; high throughput</p>
-<dt><code>LL</code></p>
-<dd> &#8211; low latency</p>
-<dt><code>EC</code></p>
-<dd> &#8211; economy (neither HT nor LL)</p>
-<dt><code>PM</code></p>
-<dd> &#8211; premium</p>
-<dt><code>BE</code></p>
-<dd> &#8211; best effort Default: BE</dl>
+<dt><code>HT</code></dt>
+<dd> &#8211; high throughput</dd>
+<dt><code>LL</code></dt>
+<dd> &#8211; low latency</dd>
+<dt><code>EC</code></dt>
+<dd> &#8211; economy (neither HT nor LL)</dd>
+<dt><code>PM</code></dt>
+<dd> &#8211; premium</dd>
+<dt><code>BE</code></dt>
+<dd> &#8211; best effort Default: BE</dd></dl>
 </dl>
 </dl>
 <p> <code>Usage &#8211; Quit test client</code> </p>
@@ -140,7 +136,6 @@ description: "dapltest – test for the Direct Access Programming Library (DAPL)
                         MAX_SEND_DTOS is requested the value will be
                         adjusted down to MAX_SEND_DTOS.
                         Default: MAX_SEND_DTOS
-                        
     OP                  Specifies the operation as follow:                 
                         RR|RW           Indicates the type of transfer:
                                         RR  RDMA read
@@ -223,8 +218,8 @@ Usage - Limit test client
                         validating the data received.
 </pre>
 <dl>
-<dt><code>BUGS</code></p>
-<dd> (and To Do List)</dl>
+<dt><code>BUGS</code></dt>
+<dd> (and To Do List)</dd></dl>
 <pre>
     Use of CNOs (-Q) is not yet supported.
     Further limit tests could be added.

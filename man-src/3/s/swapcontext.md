@@ -11,7 +11,6 @@ description: "makecontext, swapcontext – manipulate user context"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ucontext.h&gt;
 void makecontext(ucontext_t *ucp, void (*func)(),
-
                  int argc, ...);
 int swapcontext(ucontext_t *oucp, const ucontext_t *ucp);</code></pre>
 <h2>Description</h2>
@@ -23,8 +22,8 @@ int swapcontext(ucontext_t *oucp, const ucontext_t *ucp);</code></pre>
 <p>When successful, <code>swapcontext</code>() does not return. (But we may return later, in case <i>oucp</i> is activated, in which case it looks like <code>swapcontext</code>() returns 0.) On error, <code>swapcontext</code>() returns -1 and sets <i>errno</i> appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient stack space left.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient stack space left.</dd></dl>
 <h2>Versions</h2>
 <p><code>makecontext</code>() and <code>swapcontext</code>() are provided in glibc since version 2.1.</p>
 <h2>Attributes</h2>
@@ -57,7 +56,6 @@ int swapcontext(ucontext_t *oucp, const ucontext_t *ucp);</code></pre>
 <h2>Examples</h2>
 <p>The example program below demonstrates the use of <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3), <code>makecontext</code>(), and <code>swapcontext</code>(). Running the program produces the following output: </p>
 <pre><code>$ ./a.out
-
 main: swapcontext(&amp;uctx_main, &amp;uctx_func2)
 func2: started
 func2: swapcontext(&amp;uctx_func2, &amp;uctx_func1)
@@ -66,13 +64,7 @@ func1: swapcontext(&amp;uctx_func1, &amp;uctx_func2)
 func2: returning
 func1: returning
 main: exiting
-
-
-
 Program source
-
-
-
 #include &lt;ucontext.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;

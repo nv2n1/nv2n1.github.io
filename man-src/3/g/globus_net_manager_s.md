@@ -49,5 +49,5 @@ description: "globus_net_manager_s –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAQ">Author</a></dt>
+<dd></dd></dl>

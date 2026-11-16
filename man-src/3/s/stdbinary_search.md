@@ -11,27 +11,19 @@ std::binary_search - std::binary_search
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (until C++ 20)
-
         bool binary_search(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ForwardIt, class T&gt;
 (since C++ 20)
-
     constexpr bool binary_search(ForwardIt first, ForwardIt last, const T &amp;value);
 (1)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
     (until C++ 20)
-
         bool binary_search(ForwardIt first, ForwardIt last, const T &amp;value, Compare comp);
 (2)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
     (since C++ 20)
-
         constexpr bool binary_search(ForwardIt first, ForwardIt last, const T &amp;value, Compare comp);</code></pre> 
 Checks if an element equivalent to value appears within the range [first, last). 
 For std::binary_search to succeed, the range [first, last) must be at least partially ordered with respect to value, i.e. it must satisfy all of the following requirements: 
@@ -92,12 +84,9 @@ The number of comparisons performed is logarithmic in the distance between first
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; haystack{1, 3, 4, 5, 9};
     std::vector&lt;int&gt; needles{1, 2, 3};

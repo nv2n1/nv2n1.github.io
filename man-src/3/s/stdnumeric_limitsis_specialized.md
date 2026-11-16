@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_specialized – std::numeric_limits<T>:
 <h2>Synopsis</h2>
 <pre><code>static const bool is_specialized;
 (until C++ 11)
-
     static constexpr bool is_specialized;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_specialized is true for all T for which there exists a specialization of std::numeric_limits. </p>

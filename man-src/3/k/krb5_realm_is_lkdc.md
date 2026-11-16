@@ -70,76 +70,76 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> returned principal<br />
  <i>rlen</i> length of realm<br />
  <i>realm</i> realm name<br />
- <i>&#8230;</i> a list of components ended with NULL.</dl>
+ <i>&#8230;</i> a list of components ended with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_copy_principal (krb5_contextcontext, krb5_const_principalinprinc, krb5_principal *outprinc)</h3>
 <p> Copy a principal </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>inprinc</i> principal to copy<br />
- <i>outprinc</i> copied principal, free with <code>krb5_free_principal()</code></dl>
+ <i>outprinc</i> copied principal, free with <code>krb5_free_principal()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_principal (krb5_contextcontext, krb5_principalp)</h3>
 <p> Frees a Kerberos principal allocated by the library with <code>krb5_parse_name()</code>, <code>krb5_make_principal()</code> or any other related principal functions. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
- <i>p</i> a principal to free.</dl>
+</dt><dd> <i>context</i> A Kerberos context.<br />
+ <i>p</i> a principal to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_make_principal (krb5_contextcontext, krb5_principal *principal, krb5_const_realmrealm, &#8230;)</h3>
 <p> Build a principal using vararg style building </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> returned principal<br />
  <i>realm</i> realm name<br />
- <i>&#8230;</i> a list of components ended with NULL.</dl>
+ <i>&#8230;</i> a list of components ended with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_parse_name (krb5_contextcontext, const char *name, krb5_principal *principal)</h3>
 <p> Parse a name into a krb5_principal structure </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>name</i> name to parse into a Kerberos principal<br />
- <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dl>
+ <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_parse_name_flags (krb5_contextcontext, const char *name, intflags, krb5_principal *principal)</h3>
 <p> Parse a name into a krb5_principal structure, flags controls the behavior. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>name</i> name to parse into a Kerberos principal<br />
  <i>flags</i> flags to control the behavior<br />
- <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dl>
+ <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_parse_nametype (krb5_contextcontext, const char *str, int32_t *nametype)</h3>
 <p> Parse nametype string and return a nametype integer</p>
 <h3>KRB5_LIB_FUNCTION krb5_boolean KRB5_LIB_CALL krb5_principal_compare (krb5_contextcontext, krb5_const_principalprinc1, krb5_const_principalprinc2)</h3>
@@ -147,64 +147,64 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>princ1</i> first principal to compare<br />
- <i>princ2</i> second principal to compare</dl>
+ <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>krb5_principal_compare_any_realm()</code> </p>
+</dt><dd> <code>krb5_principal_compare_any_realm()</code> </dd>
 <p> <code>krb5_realm_compare()</code></dl>
 <h3>KRB5_LIB_FUNCTION krb5_boolean KRB5_LIB_CALL krb5_principal_compare_any_realm (krb5_contextcontext, krb5_const_principalprinc1, krb5_const_principalprinc2)</h3>
 <p> Return TRUE iff princ1 == princ2 (without considering the realm) </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>princ1</i> first principal to compare<br />
- <i>princ2</i> second principal to compare</dl>
+ <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> non zero if equal, 0 if not</dl>
+</dt><dd> non zero if equal, 0 if not</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>krb5_principal_compare()</code> </p>
+</dt><dd> <code>krb5_principal_compare()</code> </dd>
 <p> <code>krb5_realm_compare()</code></dl>
 <h3>KRB5_LIB_FUNCTION unsigned int KRB5_LIB_CALL krb5_principal_get_num_comp (krb5_contextcontext, krb5_const_principalprincipal)</h3>
 <p> Get number of component is principal. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
- <i>principal</i> principal to query</dl>
+</dt><dd> <i>context</i> Kerberos 5 context<br />
+ <i>principal</i> principal to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> number of components in string</dl>
+</dt><dd> number of components in string</dd></dl>
 <h3>KRB5_LIB_FUNCTION const char *KRB5_LIB_CALL krb5_principal_get_realm (krb5_contextcontext, krb5_const_principalprincipal)</h3>
 <p> Get the realm of the principal </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to get the realm for</dl>
+</dt><dd> <i>context</i> A Kerberos context.<br />
+ <i>principal</i> principal to get the realm for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> realm of the principal, don&#8217;t free or use after krb5_principal is freed</dl>
+</dt><dd> realm of the principal, don&#8217;t free or use after krb5_principal is freed</dd></dl>
 <h3>KRB5_LIB_FUNCTION int KRB5_LIB_CALL krb5_principal_get_type (krb5_contextcontext, krb5_const_principalprincipal)</h3>
 <p> Get the type of the principal </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to get the type for</dl>
+</dt><dd> <i>context</i> A Kerberos context.<br />
+ <i>principal</i> principal to get the type for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the type of principal</dl>
+</dt><dd> the type of principal</dd></dl>
 <h3>krb5_boolean KRB5_LIB_FUNCTION krb5_principal_is_gss_hostbased_service (krb5_contextcontext, krb5_const_principalprincipal)</h3>
 <p> Returns true iff name is an WELLKNOWN:ORG.H5L.HOSTBASED-SERVICE</p>
 <h3>KRB5_LIB_FUNCTION krb5_boolean KRB5_LIB_CALL krb5_principal_is_krbtgt (krb5_contextcontext, krb5_const_principalp)</h3>
@@ -224,37 +224,37 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal set the realm for<br />
- <i>realm</i> the new realm to set</dl>
+ <i>realm</i> the new realm to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_principal_set_type (krb5_contextcontext, krb5_principalprincipal, inttype)</h3>
 <p> Set the type of the principal </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal to set the type for<br />
- <i>type</i> the new type</dl>
+ <i>type</i> the new type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_boolean KRB5_LIB_CALL krb5_realm_compare (krb5_contextcontext, krb5_const_principalprinc1, krb5_const_principalprinc2)</h3>
 <p> return TRUE iff realm(princ1) == realm(princ2) </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>princ1</i> first principal to compare<br />
- <i>princ2</i> second principal to compare</dl>
+ <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>krb5_principal_compare_any_realm()</code> </p>
+</dt><dd> <code>krb5_principal_compare_any_realm()</code> </dd>
 <p> <code>krb5_principal_compare()</code></dl>
 <h3>krb5_boolean KRB5_LIB_FUNCTION krb5_realm_is_lkdc (const char *realm)</h3>
 <p> Returns true if name is Kerberos an LKDC realm</p>
@@ -264,92 +264,92 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>hostname</i> hostname to use<br />
  <i>sname</i> Service name to use<br />
  <i>type</i> name type of pricipal, use KRB5_NT_SRV_HST or KRB5_NT_UNKNOWN.<br />
- <i>ret_princ</i> return principal, free with <code>krb5_free_principal()</code>.</dl>
+ <i>ret_princ</i> return principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name (krb5_contextcontext, krb5_const_principalprincipal, char **name)</h3>
 <p> Unparse the Kerberos name into a string </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>principal</i> principal to query<br />
- <i>name</i> resulting string, free with krb5_xfree()</dl>
+ <i>name</i> resulting string, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name_fixed (krb5_contextcontext, krb5_const_principalprincipal, char *name, size_tlen)</h3>
 <p> Unparse the principal name to a fixed buffer </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal to unparse<br />
  <i>name</i> buffer to write name to<br />
- <i>len</i> length of buffer</dl>
+ <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name_fixed_flags (krb5_contextcontext, krb5_const_principalprincipal, intflags, char *name, size_tlen)</h3>
 <p> Unparse the principal name with unparse flags to a fixed buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal to unparse<br />
  <i>flags</i> unparse flags<br />
  <i>name</i> buffer to write name to<br />
- <i>len</i> length of buffer</dl>
+ <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name_fixed_short (krb5_contextcontext, krb5_const_principalprincipal, char *name, size_tlen)</h3>
 <p> Unparse the principal name to a fixed buffer. The realm is skipped if its a default realm. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal to unparse<br />
  <i>name</i> buffer to write name to<br />
- <i>len</i> length of buffer</dl>
+ <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name_flags (krb5_contextcontext, krb5_const_principalprincipal, intflags, char **name)</h3>
 <p> Unparse the Kerberos name into a string </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br />
  <i>principal</i> principal to query<br />
  <i>flags</i> flag to determine the behavior<br />
- <i>name</i> resulting string, free with krb5_xfree()</dl>
+ <i>name</i> resulting string, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_unparse_name_short (krb5_contextcontext, krb5_const_principalprincipal, char **name)</h3>
 <p> Unparse the principal name to a allocated buffer. The realm is skipped if its a default realm. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br />
  <i>principal</i> principal to unparse<br />
- <i>name</i> returned buffer, free with krb5_xfree()</dl>
+ <i>name</i> returned buffer, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dl>
+</dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

@@ -14,12 +14,12 @@ description: "gnutls_ia_permute_inner_secret – API function"
 <p> <code>int gnutls_ia_permute_inner_secret(gnutls_session_t </code><i>session</i><code>, size_t </code><i>session_keys_size</i><code>, const char * </code><i>session_keys</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>size_t session_keys_size</p>
-<dd> Size of generated session keys (0 if none).</p>
-<dt>const char * session_keys</p>
-<dd> Generated session keys, used to permute inner secret (NULL if none).</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>size_t session_keys_size</dt>
+<dd> Size of generated session keys (0 if none).</dd>
+<dt>const char * session_keys</dt>
+<dd> Generated session keys, used to permute inner secret (NULL if none).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Permute the inner secret using the generated session keys. </p>
 <p> This can be called in the TLS/IA AVP callback to mix any generated session keys with the TLS/IA inner secret.</p>
@@ -34,6 +34,6 @@ description: "gnutls_ia_permute_inner_secret – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

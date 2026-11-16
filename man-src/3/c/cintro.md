@@ -248,16 +248,16 @@ description: "C++Intro – Introduction to the GNU libstdc++ man pages"
 </table>
 <h3>Libraries</h3>
 <dl COMPACT>
-<dt><i>libstdc++.a</i></p>
-<dd>The library implementation in static archive form. If you did not configure libstdc++ to use shared libraries, this will always be used. Otherwise it will only be used if the user requests it.</p>
-<dt><i>libsupc++.a</i></p>
-<dd>This library contains C++ language support routines. Usually you will never need to know about it, but it can be useful. See FAQ 2.5.</p>
-<dt><i>libstdc++.so[.N]</i></p>
-<dd>The library implementation in shared object form. This will be used in preference to the static archive form by default. N will be a number equal to or greater than 3. If N is in the 2.x series, then you are looking at the old libstdc++-v2 library, which we do not maintain.</p>
-<dt><i>libstdc++.la</i></p>
+<dt><i>libstdc++.a</i></dt>
+<dd>The library implementation in static archive form. If you did not configure libstdc++ to use shared libraries, this will always be used. Otherwise it will only be used if the user requests it.</dd>
+<dt><i>libsupc++.a</i></dt>
+<dd>This library contains C++ language support routines. Usually you will never need to know about it, but it can be useful. See FAQ 2.5.</dd>
+<dt><i>libstdc++.so[.N]</i></dt>
+<dd>The library implementation in shared object form. This will be used in preference to the static archive form by default. N will be a number equal to or greater than 3. If N is in the 2.x series, then you are looking at the old libstdc++-v2 library, which we do not maintain.</dd>
+<dt><i>libstdc++.la</i></dt>
 <dd>
-<dt><i>libsupc++.la</i></p>
-<dd>These are Libtool library files, and should only be used when working with that tool.</dl>
+</dd><dt><i>libsupc++.la</i></dt>
+<dd>These are Libtool library files, and should only be used when working with that tool.</dd></dl>
 <h2>Conforming To</h2>
 <p>Almost conforming to <code>International Standard ISO/IEC 14882:1998(E), </code><i>Programming Languages &#8212; C++</i> (aka the C++ standard), in addition to corrections proposed by the Library Working Group, <font SIZE="-1">JTC1/SC22/WG21.</font></p>
 <h2>See Also</h2>

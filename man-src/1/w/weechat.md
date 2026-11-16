@@ -19,130 +19,130 @@ weechat[-a | --no - connect][-d | --dir&lt;path&gt;][-p | --no - plugin][-r | --
 <p> <code>-a</code>, <code>&#8211;no-connect</code></p>
 <dl>
 <dt>
-<dd> Disable auto-connect to servers when WeeChat is starting.</dl>
+</dt><dd> Disable auto-connect to servers when WeeChat is starting.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;colors</code></p>
 <dl>
 <dt>
-<dd> Display default colors in terminal.</dl>
+</dt><dd> Display default colors in terminal.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;dir</code> <i>&lt;path&gt;</i></p>
 <dl>
 <dt>
-<dd> Set path as home for WeeChat (used for configuration files, logs, user plugins and scripts), default value is <i>~/.weechat</i> (note: directory is created if not found by WeeChat). If this option is not given, the environment variable WEECHAT_HOME is used (if not empty).</dl>
+</dt><dd> Set path as home for WeeChat (used for configuration files, logs, user plugins and scripts), default value is <i>~/.weechat</i> (note: directory is created if not found by WeeChat). If this option is not given, the environment variable WEECHAT_HOME is used (if not empty).</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help.</dl>
+</dt><dd> Display help.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;license</code></p>
 <dl>
 <dt>
-<dd> Display WeeChat license.</dl>
+</dt><dd> Display WeeChat license.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;no-plugin</code></p>
 <dl>
 <dt>
-<dd> Disable plugins auto-load.</dl>
+</dt><dd> Disable plugins auto-load.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;run-command</code> <i>&lt;command&gt;</i></p>
 <dl>
 <dt>
-<dd> Run command(s) after startup (many commands can be separated by semicolons).</dl>
+</dt><dd> Run command(s) after startup (many commands can be separated by semicolons).</dd></dl>
 <p> <code>-s</code>, <code>&#8211;no-script</code></p>
 <dl>
 <dt>
-<dd> Disable scripts auto-load.</dl>
+</dt><dd> Disable scripts auto-load.</dd></dl>
 <p> <code>&#8211;upgrade</code></p>
 <dl>
 <dt>
-<dd> Upgrade WeeChat using session files generated with command /upgrade -quit.</dl>
+</dt><dd> Upgrade WeeChat using session files generated with command /upgrade -quit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display WeeChat version.</dl>
+</dt><dd> Display WeeChat version.</dd></dl>
 <p> <code>plugin:option</code></p>
 <dl>
 <dt>
-<dd> Option for a plugin.</dl>
+</dt><dd> Option for a plugin.</dd></dl>
 <h2>PLUGIN OPTIONS</h2>
 <p> For complete doc on plugin options, please look at plugins documentation in WeeChat user&#8217;s guide. </p>
 <p> With irc plugin, you can connect to temporary server with an URL like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 irc[6][s]: //[[nickname][:password]@]server[:port][/#channel1[,#channel2...]]
 </code></pre>
-</dl>
+</dd></dl>
 <p> To join WeeChat IRC channel support with nick &quot;mynick&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a href="irc://mynick@chat.freenode.net/#weechat">irc://mynick@chat.freenode.net/#weechat</a>
 </pre>
-</dl>
+</dd></dl>
 <p> IPv6 address can be enclosed in brackets to add a port after address, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a href="irc://mynick@[2001:db8:0:85a3::ac1f:8001]:6668/#test">irc://mynick@[2001:db8:0:85a3::ac1f:8001]:6668/#test</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> $HOME/.weechat/weechat.conf</p>
 <dl>
 <dt>
-<dd> main WeeChat configuration file</dl>
+</dt><dd> main WeeChat configuration file</dd></dl>
 <p> $HOME/.weechat/plugins.conf</p>
 <dl>
 <dt>
-<dd> plugins configuration file</dl>
+</dt><dd> plugins configuration file</dd></dl>
 <p> $HOME/.weechat/sec.conf</p>
 <dl>
 <dt>
-<dd> configuration file with secured data</dl>
+</dt><dd> configuration file with secured data</dd></dl>
 <p> $HOME/.weechat/alias.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>alias</i> plugin</dl>
+</dt><dd> configuration file for <i>alias</i> plugin</dd></dl>
 <p> $HOME/.weechat/aspell.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>aspell</i> plugin</dl>
+</dt><dd> configuration file for <i>aspell</i> plugin</dd></dl>
 <p> $HOME/.weechat/charset.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>charset</i> plugin</dl>
+</dt><dd> configuration file for <i>charset</i> plugin</dd></dl>
 <p> $HOME/.weechat/exec.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>exec</i> plugin</dl>
+</dt><dd> configuration file for <i>exec</i> plugin</dd></dl>
 <p> $HOME/.weechat/irc.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>irc</i> plugin</dl>
+</dt><dd> configuration file for <i>irc</i> plugin</dd></dl>
 <p> $HOME/.weechat/logger.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>logger</i> plugin</dl>
+</dt><dd> configuration file for <i>logger</i> plugin</dd></dl>
 <p> $HOME/.weechat/relay.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>relay</i> plugin</dl>
+</dt><dd> configuration file for <i>relay</i> plugin</dd></dl>
 <p> $HOME/.weechat/script.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>script</i> plugin</dl>
+</dt><dd> configuration file for <i>script</i> plugin</dd></dl>
 <p> $HOME/.weechat/trigger.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>trigger</i> plugin</dl>
+</dt><dd> configuration file for <i>trigger</i> plugin</dd></dl>
 <p> $HOME/.weechat/xfer.conf</p>
 <dl>
 <dt>
-<dd> configuration file for <i>xfer</i> plugin</dl>
+</dt><dd> configuration file for <i>xfer</i> plugin</dd></dl>
 <p> $HOME/.weechat/weechat.log</p>
 <dl>
 <dt>
-<dd> WeeChat log file</dl>
+</dt><dd> WeeChat log file</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manpage was written by Sébastien Helleu &lt;flashcode [at] flashtux.org&gt;.</p>
 <h2>COPYRIGHT</h2>

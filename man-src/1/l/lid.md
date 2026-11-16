@@ -16,12 +16,12 @@ description: "lid – Display user’s groups or group’s users"
 <p> By default <code>lid</code> lists groups containing user <i>name</i>, or groups containing the invoking user if <i>name</i> is not specified; the mode of operation can be changed using the <code>-g</code> option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-g</code>, <code>&#8211;group</code></p>
-<dd> List users in a group <i>name</i>, or in the invoking user&#8217;s primary group if <i>name</i> is not specified. </p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </p>
-<dt><code>-n</code>, <code>&#8211;onlynames</code></p>
-<dd> List only group or user names. By default the corresponging user or group IDs are listed too. </p>
+<dt><code>-g</code>, <code>&#8211;group</code></dt>
+<dd> List users in a group <i>name</i>, or in the invoking user&#8217;s primary group if <i>name</i> is not specified. </dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
+<dt><code>-n</code>, <code>&#8211;onlynames</code></dt>
+<dd> List only group or user names. By default the corresponging user or group IDs are listed too. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, 1 on error. </p>

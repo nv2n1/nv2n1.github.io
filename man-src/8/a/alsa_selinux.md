@@ -71,14 +71,14 @@ description: "alsa_selinux – Security Enhanced Linux Policy for the alsa proce
 <p> <code>alsa_etc_rw_t</code> </p>
 <p> &#8211; Set files with the alsa_etc_rw_t type, if you want to treat the files as alsa etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/asound(/.*)?, /etc/alsa/pcm(/.*)?, /usr/share/alsa/pcm(/.*)?, /etc/asound.state, /etc/alsa/asound.state, /usr/share/alsa/alsa.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/asound(/.*)?, /etc/alsa/pcm(/.*)?, /usr/share/alsa/pcm(/.*)?, /etc/asound.state, /etc/alsa/asound.state, /usr/share/alsa/alsa.conf </dd>
 </dl>
 <p> <code>alsa_exec_t</code> </p>
 <p> &#8211; Set files with the alsa_exec_t type, if you want to transition an executable to the alsa_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/salsa, /sbin/alsactl, /usr/bin/ainit, /bin/alsaunmute, /usr/sbin/salsa, /usr/sbin/alsactl, /usr/bin/alsaunmute </p>
+<dt>Paths:</dt>
+<dd>/sbin/salsa, /sbin/alsactl, /usr/bin/ainit, /bin/alsaunmute, /usr/sbin/salsa, /usr/sbin/alsactl, /usr/bin/alsaunmute </dd>
 </dl>
 <p> <code>alsa_home_t</code> </p>
 <p> &#8211; Set files with the alsa_home_t type, if you want to store alsa files in the users home directory. </p>

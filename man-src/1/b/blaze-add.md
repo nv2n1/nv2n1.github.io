@@ -16,53 +16,53 @@ description: "blaze-add – add a blog post or a page to the BlazeBlogger reposi
 <p> <code>blaze-add</code> adds new blog posts or pages to the BlazeBlogger repository. If supplied, it tries to read data from the existing <i>file</i>s, otherwise an external editor is opened to let you create a new content. </p>
 <p> Note that inside your posts and pages, you can use several special placeholders to be replaced by appropriate data later, when the static content is being generated; the case is not significant, and supported placeholders are as follows:</p>
 <dl>
-<dt><code>%root%</code></p>
-<dd> Relative path to the root directory of the blog; to be used inside links.</p>
-<dt><code>%home%</code></p>
-<dd> Relative path to the website home (index) page; to be used inside links.</p>
-<dt><code>%page[</code><i>id</i><code>]%</code></p>
-<dd> Relative path to the page with given <i>id</i>; to be used inside links.</p>
-<dt><code>%post[</code><i>id</i><code>]%</code></p>
-<dd> Relative path to the post with given <i>id</i>; to be used inside links.</p>
-<dt><code>%tag[</code><i>name</i><code>]%</code></p>
-<dd> Relative path to the tag with given <i>name</i>; to be used inside links.</dl>
+<dt><code>%root%</code></dt>
+<dd> Relative path to the root directory of the blog; to be used inside links.</dd>
+<dt><code>%home%</code></dt>
+<dd> Relative path to the website home (index) page; to be used inside links.</dd>
+<dt><code>%page[</code><i>id</i><code>]%</code></dt>
+<dd> Relative path to the page with given <i>id</i>; to be used inside links.</dd>
+<dt><code>%post[</code><i>id</i><code>]%</code></dt>
+<dd> Relative path to the post with given <i>id</i>; to be used inside links.</dd>
+<dt><code>%tag[</code><i>name</i><code>]%</code></dt>
+<dd> Relative path to the tag with given <i>name</i>; to be used inside links.</dd></dl>
 <p> You can also use a special form, <code>&lt;!&#8211; break &#8211;&gt;</code>, to mark the end of a part to be displayed on index page.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-t</code>, <code>&#8211;title</code> <i>title</i></p>
-<dd> Specify the post/page <i>title</i>.</p>
-<dt><code>-a</code>, <code>&#8211;author</code> <i>author</i></p>
-<dd> Specify the post/page <i>author</i>.</p>
-<dt><code>-d</code>, <code>&#8211;date</code> <i>date</i></p>
-<dd> Specify the post/page date of publishing; the <i>date</i> has to be in the YYYY-MM-DD form.</p>
-<dt><code>-T</code>, <code>&#8211;tags</code> <i>tags</i></p>
-<dd> Specify the comma separated list of <i>tags</i> attached to the blog post; pages ignore these.</p>
-<dt><code>-u</code>, <code>&#8211;url</code> <i>url</i></p>
-<dd> Specify the post/page <i>url</i> to be used instead of the one based on the post/page title. It should consist of alphanumeric characters, hyphens and underscores only, and it is especially useful if non-ASCII characters are present in the title.</p>
-<dt><code>-p</code>, <code>&#8211;page</code>, <code>&#8211;pages</code></p>
-<dd> Add page instead of blog post.</p>
-<dt><code>-P</code>, <code>&#8211;post</code>, <code>&#8211;posts</code></p>
-<dd> Add blog post; this is the default option.</p>
-<dt><code>-C</code>, <code>&#8211;no-processor</code></p>
-<dd> Disable the use of external processor. Unless the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration, this is the default behaviour.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages. This is the default option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-t</code>, <code>&#8211;title</code> <i>title</i></dt>
+<dd> Specify the post/page <i>title</i>.</dd>
+<dt><code>-a</code>, <code>&#8211;author</code> <i>author</i></dt>
+<dd> Specify the post/page <i>author</i>.</dd>
+<dt><code>-d</code>, <code>&#8211;date</code> <i>date</i></dt>
+<dd> Specify the post/page date of publishing; the <i>date</i> has to be in the YYYY-MM-DD form.</dd>
+<dt><code>-T</code>, <code>&#8211;tags</code> <i>tags</i></dt>
+<dd> Specify the comma separated list of <i>tags</i> attached to the blog post; pages ignore these.</dd>
+<dt><code>-u</code>, <code>&#8211;url</code> <i>url</i></dt>
+<dd> Specify the post/page <i>url</i> to be used instead of the one based on the post/page title. It should consist of alphanumeric characters, hyphens and underscores only, and it is especially useful if non-ASCII characters are present in the title.</dd>
+<dt><code>-p</code>, <code>&#8211;page</code>, <code>&#8211;pages</code></dt>
+<dd> Add page instead of blog post.</dd>
+<dt><code>-P</code>, <code>&#8211;post</code>, <code>&#8211;posts</code></dt>
+<dd> Add blog post; this is the default option.</dd>
+<dt><code>-C</code>, <code>&#8211;no-processor</code></dt>
+<dd> Disable the use of external processor. Unless the <tt>&quot;core.processor&quot;</tt> is enabled in the configuration, this is the default behaviour.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages. This is the default option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>EDITOR</code></font></p>
-<dd> Unless the BlazeBlogger specific option <i>core.editor</i> is set, blaze-edit tries to use system wide settings to decide which editor to run. If neither of these options are supplied, the <code>vi</code> is used instead as a considerably reasonable choice.</dl>
+<dt><font SIZE="-1"><code>EDITOR</code></font></dt>
+<dd> Unless the BlazeBlogger specific option <i>core.editor</i> is set, blaze-edit tries to use system wide settings to decide which editor to run. If neither of these options are supplied, the <code>vi</code> is used instead as a considerably reasonable choice.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>.blaze/config</i></p>
-<dd> BlazeBlogger configuration file.</dl>
+<dt><i>.blaze/config</i></dt>
+<dd> BlazeBlogger configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

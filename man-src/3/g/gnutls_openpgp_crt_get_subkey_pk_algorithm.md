@@ -14,12 +14,12 @@ description: "gnutls_openpgp_crt_get_subkey_pk_algorithm – API function"
 <p> <code>gnutls_pk_algorithm_t gnutls_openpgp_crt_get_subkey_pk_algorithm(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int </code><i>idx</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> is an OpenPGP key</p>
-<dt>unsigned int idx</p>
-<dd> is the subkey index</p>
-<dt>unsigned int * bits</p>
-<dd> if bits is non null it will hold the size of the parameters&#8217; in bits</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> is an OpenPGP key</dd>
+<dt>unsigned int idx</dt>
+<dd> is the subkey index</dd>
+<dt>unsigned int * bits</dt>
+<dd> if bits is non null it will hold the size of the parameters&#8217; in bits</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the public key algorithm of a subkey of an OpenPGP certificate. </p>
 <p> If bits is non null, it should have enough size to hold the parameters size in bits. For RSA the bits returned is the modulus. For DSA the bits returned are of the public exponent.</p>
@@ -36,6 +36,6 @@ description: "gnutls_openpgp_crt_get_subkey_pk_algorithm – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

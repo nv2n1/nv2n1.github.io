@@ -19,14 +19,14 @@ description: "csv2_txt – Description of txt and raw resource records in the cs
 <pre>This is a mix of_unquoted and quoted text!</pre>
 <p>When mixing quoted and unquoted data, it is important to have all whitespace <i>inside</i> quotes. <code>BACKSLASH ESCAPE SEQUENCES</code> In order to accommodate storing non-UTF-8 high bit characters, the single quote character, non-printable ASCII control codes, the aq|aq, aq~aq, and aq#aq characters, and to permit multi-line TXT/RAW records (with comments allowed mid-record), the TXT/RAW RR allows backslashes. These backslashes only have significance <i>outside</i> of quoted text; if they are placed inside single quotes, they are not interpreted and result in a literal backslash being added to the resource record data. The following characters can be backslashed:</p>
 <dl>
-<dt>aq</p>
-<dd>When backslashed, the adds a literal quote to the resource record.</p>
-<dt>whitespace</p>
-<dd>When any whitespace is backslashed (space, newline, cr, and tab), this indicates that the record has not ended, and that more data for this recource will follow. This also allows comments to be placed in TXT and RAW resource records. What happens is that the backslash indicates that any whitespace characters (space, tab, carraige return, and line feed) are to be ignored until the next non-whitespace character that is not a # (hash). If a # is seen, this indicates that we ignore any and all characters until the next carriage return or line feed, and continue to ignore everything until the next non-whitespace character. See the section on multi-line and commented records for examples.</p>
-<dt>0123</p>
-<dd>When a number between 0 and 3 is backslashed, this indicates the beginning of a three-digit octal number.</p>
-<dt>x</p>
-<dd>When an x is backslashed, this indicates the beginning of a two-digit hexadecimal number.</dl>
+<dt>aq</dt>
+<dd>When backslashed, the adds a literal quote to the resource record.</dd>
+<dt>whitespace</dt>
+<dd>When any whitespace is backslashed (space, newline, cr, and tab), this indicates that the record has not ended, and that more data for this recource will follow. This also allows comments to be placed in TXT and RAW resource records. What happens is that the backslash indicates that any whitespace characters (space, tab, carraige return, and line feed) are to be ignored until the next non-whitespace character that is not a # (hash). If a # is seen, this indicates that we ignore any and all characters until the next carriage return or line feed, and continue to ignore everything until the next non-whitespace character. See the section on multi-line and commented records for examples.</dd>
+<dt>0123</dt>
+<dd>When a number between 0 and 3 is backslashed, this indicates the beginning of a three-digit octal number.</dd>
+<dt>x</dt>
+<dd>When an x is backslashed, this indicates the beginning of a two-digit hexadecimal number.</dd></dl>
 <p> Note that, with the exception of the single quote, the backslash character is <i>not</i> used to remove the meta-significance of a given character. In particular, unlike other environments, it is not possible to backslash spaces. Spaces can be represented either as aq aq in quotes,  , or as  . Here are some examples of backslashed data. In this example, we see backslash sequences being used to store non-UTF-8 hi-bit data: </p>
 <pre>e.example.com. TXT ���� ~</pre>
 <p>This same data can also be created as follows: </p>
@@ -59,12 +59,12 @@ description: "csv2_txt – Description of txt and raw resource records in the cs
  aq jumped over the cat.aq ~</pre>
 <p>Some points:</p>
 <dl>
-<dt>*</p>
-<dd>The backslash must be outsize of the quotes (or a literal backslash will be added to the record)</p>
-<dt>*</p>
-<dd>The backslash must be present <i>before</i> any unquoted white space. Usually, the backslash is placed immediately after the quote character.</p>
-<dt>*</p>
-<dd>Unlike other environments, it does not matter whether or not there is invisible whitespace after the backslash.</dl>
+<dt>*</dt>
+<dd>The backslash must be outsize of the quotes (or a literal backslash will be added to the record)</dd>
+<dt>*</dt>
+<dd>The backslash must be present <i>before</i> any unquoted white space. Usually, the backslash is placed immediately after the quote character.</dd>
+<dt>*</dt>
+<dd>Unlike other environments, it does not matter whether or not there is invisible whitespace after the backslash.</dd></dl>
 <p> It is also possible to add comments after such a backslash as follows: </p>
 <pre>k.example.com. TXT aqNot only did the quick brown fox jump aq\ # The fox
  aqover the lazy dog, but the lazy dogaq\ # The dog

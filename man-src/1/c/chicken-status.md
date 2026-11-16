@@ -17,10 +17,10 @@ description: "chicken-status – list installed extension libraries"
 <p> Enter <code>chicken-status -help</code> for a list of supported command-line options. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CHICKEN_PREFIX</code></p>
-<dd> The installation prefix where CHICKEN Scheme and its support files and libraries are located. Defaults to the installation time prefix given when configuring the system. </p>
-<dt><code>CHICKEN_REPOSITORY</code></p>
-<dd> The path where extension libraries are installed. Defaults to the package-library path selected during configuration (usually <code>$prefix/lib/chicken/&lt;binary-version&gt;</code> ) </p>
+<dt><code>CHICKEN_PREFIX</code></dt>
+<dd> The installation prefix where CHICKEN Scheme and its support files and libraries are located. Defaults to the installation time prefix given when configuring the system. </dd>
+<dt><code>CHICKEN_REPOSITORY</code></dt>
+<dd> The path where extension libraries are installed. Defaults to the package-library path selected during configuration (usually <code>$prefix/lib/chicken/&lt;binary-version&gt;</code> ) </dd>
 </dl>
 <h2>DOCUMENTATION</h2>
 <p> More information can be found in the <i>CHICKEN User&#8217;s Manual</i> </p>

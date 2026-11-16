@@ -52,7 +52,7 @@ description: "docker-container-ls – List containers"
 <h2>Display all containers, including non-running</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container ls -a
 CONTAINER ID        IMAGE                 COMMAND                CREATED             STATUS      PORTS    NAMES
@@ -61,11 +61,11 @@ a87ecb4f327c        fedora:20             /bin/sh -c #(nop) MA   20 minutes ago 
 c1d3b0166030        acffc0358b9e          /bin/sh -c yum -y up   2 weeks ago         Exit 1               determined_torvalds
 41d50ecd2f57        fedora:20             /bin/sh -c #(nop) MA   2 weeks ago         Exit 0               drunk_pike
 </pre>
-</dl>
+</dd></dl>
 <h2>Display only IDs of all containers, including non-running</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container ls -a -q
 a87ecb4f327c
@@ -73,73 +73,73 @@ a87ecb4f327c
 c1d3b0166030
 41d50ecd2f57
 </pre>
-</dl>
+</dd></dl>
 <h2>Display only IDs of all containers that have the name determined_torvalds</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container ls -a -q --filter=name=determined_torvalds
 c1d3b0166030
 </pre>
-</dl>
+</dd></dl>
 <h2>Display containers with their commands</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker container ls-- format "&#123;&#123;.ID}}: &#123;&#123;.Command}}" a87ecb4f327c : / bin / sh - c #(nop)MA 01946d9d34d8 : / bin / sh - c #(nop)MA c1d3b0166030 : / bin / sh - c yum - y up 41d50ecd2f57 : / bin / sh - c #(nop)MA
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Display containers with their labels in a table</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker container ls&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Labels}}&#8221; CONTAINER ID LABELS<br />
     a87ecb4f327c com.docker.swarm.node = ubuntu,<br />
                  com.docker.swarm.storage = ssd 01946d9d34d8 c1d3b0166030 com.docker.swarm.node = debian, com.docker.swarm.cpu = 6 41d50ecd2f57 com.docker.swarm.node = fedora, com.docker.swarm.cpu = 3, com.docker.swarm.storage = ssd
-</dl>
+</dd></dl>
 <h2>Display containers with their node label in a table</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker container ls&#8211; format &#8216;table &#123;&#123;.ID}}	&#123;&#123;(.Label &#8220;com.docker.swarm.node&#8221;)}}&#8217; CONTAINER ID NODE<br />
     a87ecb4f327c ubuntu 01946d9d34d8 c1d3b0166030 debian 41d50ecd2f57 fedora
-</dl>
+</dd></dl>
 <h2>Display containers with remote-volume mounted</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker container ls&#8211; filter volume = remote &#8211; volume&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Mounts}}&#8221; CONTAINER ID MOUNTS 9c3527ed70ce remote &#8211; volume
-</dl>
+</dd></dl>
 <h2>Display containers with a volume mounted in /data</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker container ls-- filter volume = / data-- format "table &#123;&#123;.ID}}	&#123;&#123;.Mounts}}" CONTAINER ID MOUNTS 9c3527ed70ce remote - volume
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Display containers that have published port of 80:</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker ps --filter publish=80
 CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                   NAMES
 fc7e477723b7        busybox             &quot;top&quot;               About a minute ago   Up About a minute   0.0.0.0:32768-&gt;80/tcp   admiring_roentgen
 </pre>
-</dl>
+</dd></dl>
 <h2>Display containers that have exposed TCP port in the range of 8000-8080:</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker ps --filter expose=8000-8080/tcp
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 9833437217a5        busybox             &quot;top&quot;               21 seconds ago      Up 19 seconds       8080/tcp            dreamy_mccarthy
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show all containers (default shows just running)</p>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

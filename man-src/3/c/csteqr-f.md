@@ -23,10 +23,10 @@ description: "csteqr.f –"
  The eigenvectors of a full or band complex Hermitian matrix can also
  be found if CHETRD or CHPTRD or CHBTRD has been used to reduce this
  matrix to tridiagonal form.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>COMPZ</i> </p>
+<dd><i>COMPZ</i> </dd>
 <pre> COMPZ is CHARACTER*1
  = 'N': Compute eigenvalues only.
  = 'V': Compute eigenvalues and eigenvectors of the original
@@ -77,13 +77,13 @@ description: "csteqr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 133 of file csteqr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

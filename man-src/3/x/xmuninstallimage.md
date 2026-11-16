@@ -15,8 +15,8 @@ description: "XmUninstallImage — A pixmap caching function that removes an ima
 <h2>Description</h2>
 <p><code>XmUninstallImage</code> removes an image from the image cache.</p>
 <dl COMPACT>
-<dt><i>image</i></p>
-<dd>Points to the image structure given to the XmInstallImage() routine</dl>
+<dt><i>image</i></dt>
+<dd>Points to the image structure given to the XmInstallImage() routine</dd></dl>
 <h2>Return</h2>
 <p>Returns True when successful; returns False if the <i>image</i> is NULL, or if it cannot be found to be uninstalled.</p>
 <h2>Related</h2>

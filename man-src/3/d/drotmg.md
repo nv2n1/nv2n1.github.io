@@ -18,7 +18,7 @@ description: "drotmg.f –"
 <p> <code>DROTMG</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     CONSTRUCT THE MODIFIED GIVENS TRANSFORMATION MATRIX H WHICH ZEROS
     THE SECOND COMPONENT OF THE 2-VECTOR  (DSQRT(DD1)*DX1,DSQRT(DD2)*&gt;    DY2)**T.
@@ -34,11 +34,11 @@ description: "drotmg.f –"
     INEXACT.  THIS IS OK AS THEY ARE ONLY USED FOR TESTING THE SIZE
     OF DD1 AND DD2.  ALL ACTUAL SCALING OF DATA IS DONE USING GAM.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>DD1</i> </p>
+</dt><dd> <i>DD1</i> </dd>
 <pre>
           DD1 is DOUBLE PRECISION
 </pre>
@@ -67,14 +67,14 @@ description: "drotmg.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 91 of file drotmg.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

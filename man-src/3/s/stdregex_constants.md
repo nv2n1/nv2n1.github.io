@@ -106,7 +106,8 @@ description: "std::regex_constants –"
 <h2>Variable Documentation</h2>
 <h3>constexpr <code>syntax_option_type</code> std::regex_constants::awk</h3>
 <p>Specifies that the grammar recognized by the regular expression engine is that used by POSIX utility awk in IEEE Std 1003.1-2001. This option is identical to syntax_option_type extended, except that C-style escape sequences are supported. These sequences are: \, , , , 
-, , 	 , , \&#8217;, &#8216;, and \ddd (where ddd is one, two, or three octal digits). </p>
+, 
+, 	 , , \&#8217;, &#8216;, and \ddd (where ddd is one, two, or three octal digits). </p>
 <p> Definition at line 144 of file regex_constants.h.</p>
 <h3>constexpr <code>syntax_option_type</code> std::regex_constants::basic</h3>
 <p>Specifies that the grammar recognized by the regular expression engine is that used by POSIX basic regular expressions in IEEE Std 1003.1-2001, Portable Operating System Interface (POSIX), Base Definitions and Headers, Section 9, Regular Expressions [IEEE, Information Technology &#8212; Portable Operating System Interface (POSIX), IEEE Standard 1003.1-2001]. </p>
@@ -127,18 +128,18 @@ description: "std::regex_constants –"
 <p>When a regular expression match is to be replaced by a new string, the new string is constructed using the rules used by the ECMAScript replace function in ECMA- 262 [Ecma International, ECMAScript Language Specification, Standard Ecma-262, third edition, 1999], part 15.5.4.11 String.prototype.replace. In addition, during search and replace operations all non-overlapping occurrences of the regular expression are located and replaced, and sections of the input that did not match the expression are copied unchanged to the output string. </p>
 <p> Format strings (from ECMA-262 [15.5.4.11]): </p>
 <dl>
-<dt>&bull;</p>
-<dd>$$ The dollar-sign itself ($)</p>
-<dt>&bull;</p>
-<dd>$&amp; The matched substring.</p>
-<dt>&bull;</p>
-<dd>$` The portion of <i>string</i> that precedes the matched substring. This would be match_results::prefix().</p>
-<dt>&bull;</p>
-<dd>$&#8217; The portion of <i>string</i> that follows the matched substring. This would be match_results::suffix().</p>
-<dt>&bull;</p>
-<dd>$n The nth capture, where n is in [1,9] and $n is not followed by a decimal digit. If n &lt;= match_results::size() and the nth capture is undefined, use the empty string instead. If n &gt; match_results::size(), the result is implementation-defined.</p>
-<dt>&bull;</p>
-<dd>$nn The nnth capture, where nn is a two-digit decimal number on [01, 99]. If nn &lt;= match_results::size() and the nth capture is undefined, use the empty string instead. If nn &gt; match_results::size(), the result is implementation-defined.</dl>
+<dt>&bull;</dt>
+<dd>$$ The dollar-sign itself ($)</dd>
+<dt>&bull;</dt>
+<dd>$&amp; The matched substring.</dd>
+<dt>&bull;</dt>
+<dd>$` The portion of <i>string</i> that precedes the matched substring. This would be match_results::prefix().</dd>
+<dt>&bull;</dt>
+<dd>$&#8217; The portion of <i>string</i> that follows the matched substring. This would be match_results::suffix().</dd>
+<dt>&bull;</dt>
+<dd>$n The nth capture, where n is in [1,9] and $n is not followed by a decimal digit. If n &lt;= match_results::size() and the nth capture is undefined, use the empty string instead. If n &gt; match_results::size(), the result is implementation-defined.</dd>
+<dt>&bull;</dt>
+<dd>$nn The nnth capture, where nn is a two-digit decimal number on [01, 99]. If nn &lt;= match_results::size() and the nth capture is undefined, use the empty string instead. If nn &gt; match_results::size(), the result is implementation-defined.</dd></dl>
 <p> Definition at line 280 of file regex_constants.h.</p>
 <h3>constexpr <code>match_flag_type</code> std::regex_constants::format_first_only</h3>
 <p>When specified during a search and replace operation, only the first occurrence of the regular expression shall be replaced. </p>

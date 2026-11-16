@@ -14,12 +14,12 @@ description: "gnutls_dh_get_group – API function"
 <p> <code>int gnutls_dh_get_group(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>raw_gen</i><code>, gnutls_datum_t * </code><i>raw_prime</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a gnutls session</p>
-<dt>gnutls_datum_t * raw_gen</p>
-<dd> will hold the generator.</p>
-<dt>gnutls_datum_t * raw_prime</p>
-<dd> will hold the prime.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a gnutls session</dd>
+<dt>gnutls_datum_t * raw_gen</dt>
+<dd> will hold the generator.</dd>
+<dt>gnutls_datum_t * raw_prime</dt>
+<dd> will hold the prime.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the group parameters used in the last Diffie-Hellman key exchange with the peer. These are the prime and the generator used. This function should be used for both anonymous and ephemeral Diffie-Hellman. The output parameters must be freed with <code>gnutls_free()</code>. </p>
 <p> Note, that the prime and generator are exported as non-negative integers and may include a leading zero byte.</p>
@@ -34,6 +34,6 @@ description: "gnutls_dh_get_group – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -15,11 +15,11 @@ audit_log_secctx - Converts and logs SELinux context
 <h2>Arguments</h2>
 
 <i>ab</i>
-<dl><dd><dd>audit_buffer</dl>
+<dl><dd></dd><dd>audit_buffer</dd></dl>
  
 
  <i>secid</i>
-<dl><dd>security number</dl>
+<dl><dd>security number</dd></dl>
 
 <h2>Description</h2>
 

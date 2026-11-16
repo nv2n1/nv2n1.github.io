@@ -19,24 +19,24 @@ description: "XmMessageBox — The MessageBox widget class"
 <p> A MessageBox can also be customized by creating and managing new children that are added to the MessageBox children created automatically by the convenience dialogs. In the case of TemplateDialog, only the separator child is created by default. If the callback, string, or pixmap symbol resources are specified, the appropriate child will be created. </p>
 <p> Additional children are laid out in the following manner:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>The first MenuBar child is placed at the top of the window. The <code>XmQTmenuSystem</code> trait is used to check that it is the first MenuBar child.</p>
-<dt> &bull;</p>
-<dd>All widgets or gadgets are placed after the <code>OK</code> button in the order of their creation (this order is checked using the <code>XmQTactivatable</code> trait).</p>
-<dt> &bull;</p>
-<dd>A child that is not in the above categories is placed above the row of buttons. If a message label exists, the child is placed below the label. If a message pixmap exists, but a message label is absent, the child is placed on the same row as the pixmap. The child behaves as a work area and grows or shrinks to fill the space above the row of buttons. The layout of multiple work area children is undefined.</dl>
+<dt> &bull;</dt>
+<dd>The first MenuBar child is placed at the top of the window. The <code>XmQTmenuSystem</code> trait is used to check that it is the first MenuBar child.</dd>
+<dt> &bull;</dt>
+<dd>All widgets or gadgets are placed after the <code>OK</code> button in the order of their creation (this order is checked using the <code>XmQTactivatable</code> trait).</dd>
+<dt> &bull;</dt>
+<dd>A child that is not in the above categories is placed above the row of buttons. If a message label exists, the child is placed below the label. If a message pixmap exists, but a message label is absent, the child is placed on the same row as the pixmap. The child behaves as a work area and grows or shrinks to fill the space above the row of buttons. The layout of multiple work area children is undefined.</dd></dl>
 <p> At initialization, MessageBox looks for the following bitmap files:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>xm_error</code></p>
-<dt> &bull;</p>
-<dd><code>xm_information</code></p>
-<dt> &bull;</p>
-<dd><code>xm_question</code></p>
-<dt> &bull;</p>
-<dd><code>xm_working</code></p>
-<dt> &bull;</p>
-<dd><code>xm_warning</code></dl>
+<dt> &bull;</dt>
+<dd><code>xm_error</code></dd>
+<dt> &bull;</dt>
+<dd><code>xm_information</code></dd>
+<dt> &bull;</dt>
+<dd><code>xm_question</code></dd>
+<dt> &bull;</dt>
+<dd><code>xm_working</code></dd>
+<dt> &bull;</dt>
+<dd><code>xm_warning</code></dd></dl>
 <p> See <code><a href="/docs/linux/man/3-xmgetpixmap/">XmGetPixmap</a></code>(3) for a list of the paths that are searched for these files. </p>
 <p> MessageBox uses the <code>XmQTactivatable</code> and <code>XmQTmenuSystem</code> traits.</p>
 <h3>Descendants</h3>
@@ -500,73 +500,73 @@ description: "XmMessageBox — The MessageBox widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcancelCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user clicks on the cancel button. The reason sent by the callback is <code>XmCR_CANCEL</code>.</p>
-<dt><code>XmNcancelLabelString</code></p>
-<dd>Specifies the string label for the cancel button. The default for this resource depends on the locale. In the C locale the default is <code>Cancel</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNdefaultButtonType</code></p>
-<dd>Specifies the default PushButton. A value of <code>XmDIALOG_NONE</code> means that there should be no default PushButton. The following types are valid:</p>
+<dt><code>XmNcancelCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user clicks on the cancel button. The reason sent by the callback is <code>XmCR_CANCEL</code>.</dd>
+<dt><code>XmNcancelLabelString</code></dt>
+<dd>Specifies the string label for the cancel button. The default for this resource depends on the locale. In the C locale the default is <code>Cancel</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNdefaultButtonType</code></dt>
+<dd>Specifies the default PushButton. A value of <code>XmDIALOG_NONE</code> means that there should be no default PushButton. The following types are valid:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmDIALOG_CANCEL_BUTTON</code></p>
-<dt> &bull;</p>
-<dd><code>XmDIALOG_OK_BUTTON</code></p>
-<dt> &bull;</p>
-<dd><code>XmDIALOG_HELP_BUTTON</code></p>
-<dt> &bull;</p>
-<dd><code>XmDIALOG_NONE</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_CANCEL_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_OK_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_HELP_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_NONE</code></dd></dl>
 </dl>
-<dt><code>XmNdialogType</code></p>
-<dd>Specifies the type of MessageBox dialog, which determines the default message symbol. The following are the possible values for this resource:</p>
+<dt><code>XmNdialogType</code></dt>
+<dd>Specifies the type of MessageBox dialog, which determines the default message symbol. The following are the possible values for this resource:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDIALOG_ERROR</code></p>
-<dd>Indicates an ErrorDialog.</p>
-<dt><code>XmDIALOG_INFORMATION</code></p>
-<dd>Indicates an InformationDialog.</p>
-<dt><code>XmDIALOG_MESSAGE</code></p>
-<dd>Indicates a MessageDialog. This is the default MessageBox dialog type. It does not have an associated message symbol.</p>
-<dt><code>XmDIALOG_QUESTION</code></p>
-<dd>Indicates a QuestionDialog.</p>
-<dt><code>XmDIALOG_TEMPLATE</code></p>
-<dd>Indicates a TemplateDialog. The TemplateDialog contains only a separator child. It does not have an associated message symbol.</p>
-<dt><code>XmDIALOG_WARNING</code></p>
-<dd>Indicates a WarningDialog.</p>
-<dt><code>XmDIALOG_WORKING</code></p>
-<dd>Indicates a WorkingDialog.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDIALOG_ERROR</code></dt>
+<dd>Indicates an ErrorDialog.</dd>
+<dt><code>XmDIALOG_INFORMATION</code></dt>
+<dd>Indicates an InformationDialog.</dd>
+<dt><code>XmDIALOG_MESSAGE</code></dt>
+<dd>Indicates a MessageDialog. This is the default MessageBox dialog type. It does not have an associated message symbol.</dd>
+<dt><code>XmDIALOG_QUESTION</code></dt>
+<dd>Indicates a QuestionDialog.</dd>
+<dt><code>XmDIALOG_TEMPLATE</code></dt>
+<dd>Indicates a TemplateDialog. The TemplateDialog contains only a separator child. It does not have an associated message symbol.</dd>
+<dt><code>XmDIALOG_WARNING</code></dt>
+<dd>Indicates a WarningDialog.</dd>
+<dt><code>XmDIALOG_WORKING</code></dt>
+<dd>Indicates a WorkingDialog.</dd></dl>
 </dl>
-<dd>If this resource is changed with <code>XtSetValues</code>, the symbol bitmap is modified to the new <code>XmNdialogType</code> bitmap unless <code>XmNsymbolPixmap</code> is also being set in the call to <code>XtSetValues</code>. If the dialog type does not have an associated message symbol, then no bitmap will be displayed.</p>
-<dt><code>XmNhelpLabelString</code></p>
-<dd>Specifies the string label for the help button. The default for this resource depends on the locale. In the C locale the default is <code>Help</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNmessageAlignment</code></p>
-<dd>Controls the alignment of the message Label. Possible values include the following:</p>
+<dd>If this resource is changed with <code>XtSetValues</code>, the symbol bitmap is modified to the new <code>XmNdialogType</code> bitmap unless <code>XmNsymbolPixmap</code> is also being set in the call to <code>XtSetValues</code>. If the dialog type does not have an associated message symbol, then no bitmap will be displayed.</dd>
+<dt><code>XmNhelpLabelString</code></dt>
+<dd>Specifies the string label for the help button. The default for this resource depends on the locale. In the C locale the default is <code>Help</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNmessageAlignment</code></dt>
+<dd>Controls the alignment of the message Label. Possible values include the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_BEGINNING</code> (default)</p>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_CENTER</code></p>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_END</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_BEGINNING</code> (default)</dd>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_CENTER</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_END</code></dd></dl>
 </dl>
-<dd>See the description of <code>XmNalignment</code> in the <code>XmLabel</code> reference page for an explanation of these values.</p>
-<dt><code>XmNmessageString</code></p>
-<dd>Specifies the string to be used as the message.</p>
-<dt><code>XmNminimizeButtons</code></p>
-<dd>Sets the buttons to the width of the widest button and height of the tallest button if False. If this resource is True, button width and height are set to the preferred size of each button.</p>
-<dt><code>XmNokCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the user clicks on the OK button. The reason sent by the callback is <code>XmCR_OK</code>.</p>
-<dt><code>XmNokLabelString</code></p>
-<dd>Specifies the string label for the OK button. The default for this resource depends on the locale. In the C locale the default is <code>OK</code>.</p>
-<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</p>
-<dt><code>XmNsymbolPixmap</code></p>
-<dd>Specifies the pixmap label to be used as the message symbol.</dl>
+<dd>See the description of <code>XmNalignment</code> in the <code>XmLabel</code> reference page for an explanation of these values.</dd>
+<dt><code>XmNmessageString</code></dt>
+<dd>Specifies the string to be used as the message.</dd>
+<dt><code>XmNminimizeButtons</code></dt>
+<dd>Sets the buttons to the width of the widest button and height of the tallest button if False. If this resource is True, button width and height are set to the preferred size of each button.</dd>
+<dt><code>XmNokCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the user clicks on the OK button. The reason sent by the callback is <code>XmCR_OK</code>.</dd>
+<dt><code>XmNokLabelString</code></dt>
+<dd>Specifies the string label for the OK button. The default for this resource depends on the locale. In the C locale the default is <code>OK</code>.</dd>
+<dd>Now that some default localized label strings are provided through message catalogs for the children of composite widgets, the <code>labelString</code> resources cannot be set on the child through default resource files. Instead, the resource provided at the parent level must be used.</dd>
+<dt><code>XmNsymbolPixmap</code></dt>
+<dd>Specifies the pixmap label to be used as the message symbol.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>MessageBox inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -2242,31 +2242,31 @@ description: "XmMessageBox — The MessageBox widget class"
  XEvent *<i>event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd></dl>
 <h3>Translations</h3>
 <p><code>XmMessageBox</code> includes the translations from <code>XmManager</code>.</p>
 <h3>Additional Behavior</h3>
 <p>The <code>XmMessageBox</code> widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>Calls the activate callbacks for the cancel button if it is sensitive.</p>
-<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive.</p>
-<dt><code>&lt;Ok Button Activated&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNokCallback</code>.</p>
-<dt><code>&lt;Cancel Button Activated&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNcancelCallback</code>.</p>
-<dt><code>&lt;Help Button Activated&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code>.</p>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNfocusCallback</code>.</p>
-<dt><code>&lt;Map&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNmapCallback</code> if the parent is a DialogShell.</p>
-<dt><code>&lt;Unmap&gt;</code>:</p>
-<dd>Calls the callbacks for <code>XmNunmapCallback</code> if the parent is a DialogShell.</dl>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the cancel button if it is sensitive.</dd>
+<dt><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>Calls the activate callbacks for the button with the keyboard focus. If no button has the keyboard focus, calls the activate callbacks for the default button if it is sensitive.</dd>
+<dt><code>&lt;Ok Button Activated&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNokCallback</code>.</dd>
+<dt><code>&lt;Cancel Button Activated&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNcancelCallback</code>.</dd>
+<dt><code>&lt;Help Button Activated&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code>.</dd>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNfocusCallback</code>.</dd>
+<dt><code>&lt;Map&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNmapCallback</code> if the parent is a DialogShell.</dd>
+<dt><code>&lt;Unmap&gt;</code>:</dt>
+<dd>Calls the callbacks for <code>XmNunmapCallback</code> if the parent is a DialogShell.</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

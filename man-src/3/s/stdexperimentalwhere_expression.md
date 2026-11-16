@@ -11,9 +11,7 @@ std::experimental::where_expression - std::experimental::where_expression
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/simd&gt;
-
 template &lt; class M, class V &gt;
-
 class where_expression;</code></pre> 
 The class template where_expression abstracts the notion of selected elements of a given non-const object of arithmetic or data-parallel type. Selected elements signifies the elements data[i] for all i ∈ {j ∈ ℕ0 | j &lt; M::size() ⋀ mask[j]}. 
 

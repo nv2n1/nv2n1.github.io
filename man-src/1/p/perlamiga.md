@@ -21,14 +21,14 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <h2>DESCRIPTION</h2>
 <h3>Prerequisites for running Perl 5.22.1 under AmigaOS 4.1</h3>
 <dl>
-<dt><code>AmigaOS 4.1 update 6 with all updates applied as of 9th October 2013</code></p>
-<dd> The most important of which is:</p>
-<dt><code>newlib.library version 53.28 or greater</code></p>
+<dt><code>AmigaOS 4.1 update 6 with all updates applied as of 9th October 2013</code></dt>
+<dd> The most important of which is:</dd>
+<dt><code>newlib.library version 53.28 or greater</code></dt>
 <dd>
-<dt><code>AmigaOS </code><font SIZE="-1"><code>SDK</code></font></p>
-<dd> Perl installs into the <font SIZE="-1">SDK</font> directory structure and expects many of the build tools present in the <font SIZE="-1">SDK</font> to be available. So for the best results install the <font SIZE="-1">SDK</font> first.</p>
-<dt><code>abc-shell</code></p>
-<dd> If you do not have the <font SIZE="-1">SDK</font> installed you must at least have abc-shell installed or some other suitable sh port. This is required to run external commands and should be available as &#8216;sh&#8217; in your path.</dl>
+</dd><dt><code>AmigaOS </code><font SIZE="-1"><code>SDK</code></font></dt>
+<dd> Perl installs into the <font SIZE="-1">SDK</font> directory structure and expects many of the build tools present in the <font SIZE="-1">SDK</font> to be available. So for the best results install the <font SIZE="-1">SDK</font> first.</dd>
+<dt><code>abc-shell</code></dt>
+<dd> If you do not have the <font SIZE="-1">SDK</font> installed you must at least have abc-shell installed or some other suitable sh port. This is required to run external commands and should be available as &#8216;sh&#8217; in your path.</dd></dl>
 <h3>Starting Perl programs under AmigaOS 4.1</h3>
 <p> Perl may be run from the AmigaOS shell but for best results should be run under abc-shell. (abc-shell handles file globbing, pattern expansion, and sets up environment variables in the UN*Xy way that Perl expects.) </p>
 <p> For example: </p>
@@ -44,19 +44,19 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 </pre>
 <h3>Limitations of Perl under AmigaOS 4.1</h3>
 <dl>
-<dt><code>Nested Piped programs can crash when run from older abc-shells</code></p>
-<dd> abc-shell version 53.2 has a bug that can cause crashes in the subprocesses used to run piped programs, if a later version is available you should install it instead.</p>
-<dt><code>Incorrect or unexpected command line unescaping</code></p>
+<dt><code>Nested Piped programs can crash when run from older abc-shells</code></dt>
+<dd> abc-shell version 53.2 has a bug that can cause crashes in the subprocesses used to run piped programs, if a later version is available you should install it instead.</dd>
+<dt><code>Incorrect or unexpected command line unescaping</code></dt>
 <dd> newlib.library 53.30 and earlier incorrectly unescape slashed escape sequences e.g. \&quot; 
- 	 etc requiring unusual extra escaping.</p>
-<dt><code>Starting subprocesses via open has limitations</code></p>
+ 	 etc requiring unusual extra escaping.</dd>
+<dt><code>Starting subprocesses via open has limitations</code></dt>
 <dd>
 <pre>
         open FH, &quot;command |&quot;
 </pre>
 <p> Subprocesses started with open use a minimal <code>popen()</code> routine and therefore they do not return pids usable with waitpid etc.</p>
-<dt>If you find any other limitations or bugs then let me know.</p>
-<dd> Please report bugs in this version of perl to andy [at] broad.ology.org.uk in the first instance.</dl>
+</dd><dt>If you find any other limitations or bugs then let me know.</dt>
+<dd> Please report bugs in this version of perl to andy [at] broad.ology.org.uk in the first instance.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> This guide assumes you have obtained a prebuilt archive from os4depot.net. </p>
 <p> Unpack the main archive to a temporary location (<font SIZE="-1">RAM:</font> is fine). </p>
@@ -83,62 +83,53 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <p> This will build the default setup that installs under SDK:local/newlib/lib/</p>
 <h2>CHANGES</h2>
 <dl>
-<dt><code>August 2015</code></p>
+<dt><code>August 2015</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>Port to Perl 5.22</dt>
 <dd>
-<dl>
-<dt>Port to Perl 5.22</p>
+</dd><dt>Add handling of <font SIZE="-1">NIL:</font> to <code>afstat()</code></dt>
 <dd>
-<dt>Add handling of <font SIZE="-1">NIL:</font> to <code>afstat()</code></p>
+</dd><dt>Fix inheritance of environment variables by subprocesses.</dt>
 <dd>
-<dt>Fix inheritance of environment variables by subprocesses.</p>
+</dd><dt>Fix exec, and exit in &quot;forked&quot; subprocesses.</dt>
 <dd>
-<dt>Fix exec, and exit in &quot;forked&quot; subprocesses.</p>
+</dd><dt>Fix issue with newlib&#8217;s unlink, which could cause infinite loops.</dt>
 <dd>
-<dt>Fix issue with newlib&#8217;s unlink, which could cause infinite loops.</p>
+</dd><dt>Add <code>flock()</code> emulation using <font SIZE="-1">IDOS-</font>&gt;LockRecord thanks to Tony Cook for the suggestion.</dt>
 <dd>
-<dt>Add <code>flock()</code> emulation using <font SIZE="-1">IDOS-</font>&gt;LockRecord thanks to Tony Cook for the suggestion.</p>
-<dd>
-<dt>Fix issue where kill was using the wrong kind of process <font SIZE="-1">ID</font></p>
-<dd></dl>
+</dd><dt>Fix issue where kill was using the wrong kind of process <font SIZE="-1">ID</font></dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>27th November 2013</code></p>
+</dl>
+<dt><code>27th November 2013</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>Create new installation system based on installperl links and Amiga protection bits now set correctly.</dt>
 <dd>
-<dl>
-<dt>Create new installation system based on installperl links and Amiga protection bits now set correctly.</p>
+</dd><dt>Pod now defaults to text.</dt>
 <dd>
-<dt>Pod now defaults to text.</p>
-<dd>
-<dt>File::Spec should now recognise an Amiga style absolute path as well as an Unix style one. Relative paths must always be Unix style.</p>
-<dd></dl>
+</dd><dt>File::Spec should now recognise an Amiga style absolute path as well as an Unix style one. Relative paths must always be Unix style.</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>20th November 2013</code></p>
+</dl>
+<dt><code>20th November 2013</code></dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>Configured to use SDK:Local/C/perl to start standard scripts</dt>
 <dd>
-<dl>
-<dt>Configured to use SDK:Local/C/perl to start standard scripts</p>
-<dd>
-<dt>Added Amiga::Exec module with support for <code>Wait()</code> and AmigaOS signal numbers.</p>
-<dd></dl>
+</dd><dt>Added Amiga::Exec module with support for <code>Wait()</code> and AmigaOS signal numbers.</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>10th October 13</code></p>
-<dd> First release of port to 5.16.3.</dl>
+</dl>
+<dt><code>10th October 13</code></dt>
+<dd> First release of port to 5.16.3.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> You like this port? See &lt;<a rel="nofollow" href="http://www.broad.ology.org.uk/amiga/">http://www.broad.ology.org.uk/amiga/</a>&gt; for how you can help. </p>
 <h2>Index</h2>

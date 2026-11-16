@@ -16,58 +16,58 @@ description: "ifplugd – A link detection daemon for ethernet devices"
 <p> ifplugd may be used in &quot;compatibility mode&quot; by specifying -F on the command line. Than ifplugd will treat network drivers which do not support link beat querying as always online.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a | &#8211;no-auto</code></p>
-<dd>Do not enable interface automatically (default: off)</p>
-<dt><code>-n | &#8211;no-daemon</code></p>
-<dd>Do not daemonize (for debugging) (default: off)</p>
-<dt><code>-s | &#8211;no-syslog</code></p>
-<dd>Do not use syslog, use stdout instead (for debugging) (default: off).</p>
-<dt><code>-b | &#8211;no-beep</code></p>
-<dd>Do not beep (off)</p>
-<dt><code>-f | &#8211;ignore-fail</code></p>
-<dd>Ignore detection failure, retry instead. Failure is treated as &quot;no link&quot;. (default: off)</p>
-<dt><code>-F | &#8211;ignore-fail-positive</code></p>
-<dd>Ignore detection failure, retry instead. Failure is treated as &quot;link detected&quot;. (default: off)</p>
-<dt><code>-i | &#8211;iface=</code> <i>IFACE</i></p>
-<dd>Specify ethernet interface (default: eth0)</p>
-<dt><code>-r | &#8211;run=</code> <i>EXEC</i></p>
-<dd>Specify program to execute when link status changes (default: <i>/etc/ifplugd/ifplugd.action</i>)</p>
-<dt><code>-I | &#8211;ignore-retval</code></p>
-<dd>Don&#8217;t exit on nonzero return value of program executed on link change. (default: off)</p>
-<dt><code>-t | &#8211;poll-time=</code> <i>SECS</i></p>
-<dd>Specify poll time in seconds (default: 1)</p>
-<dt><code>-u | &#8211;delay-up=</code> <i>SECS</i></p>
-<dd>Specify delay for configuring interface (default: 0)</p>
-<dt><code>-d | &#8211;delay-down=</code> <i>SECS</i></p>
-<dd>Specify delay for deconfiguring interface (default: 5)</p>
-<dt><code>-m | &#8211;api-mode=</code> <i>MODE</i></p>
-<dd>Force a specific link beat detection ioctl() API. Possible values are auto, iff, wlan, ethtool, mii, and priv for automatic detection, interface flag (IFF_RUNNING), wireless extension, SIOCETHTOOL, SIOCGMIIREG resp. SIOCPRIV. Only the first character of the argument is relevant, case insensitive. (default: auto)</p>
-<dt><code>-p | &#8211;no-startup</code></p>
-<dd>Don&#8217;t call the script to bring up network on deamon start (default: off)</p>
-<dt><code>-q | &#8211;no-shutdown</code></p>
-<dd>Don&#8217;t call the script for network shutdown on deamon quit (default: off)</p>
-<dt><code>-w | &#8211;wait-on-fork</code></p>
-<dd>When daemonizing, wait until the background process finished with the initial link beat detection. When this is enabled, the parent process will return the link status on exit. 1 means link beat detected, 2 stands for link beat not detected, everything else is an error.</p>
-<dt><code>-W | &#8211;wait-on-kill</code></p>
-<dd>When killing a running daemon (with -k) wait until the daemon died.</p>
-<dt><code>-x | &#8211;extra-arg=</code> <i>ARG</i></p>
-<dd>Specify an extra argument to be passed to the action script.</p>
-<dt><code>-M | &#8211;monitor</code></p>
-<dd>Don&#8217;t fail when the network interface is not available, instead use NETLINK to monitor device avaibility. The is useful for PCMCIA devices and similar.</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd>Show help</p>
-<dt><code>-k | &#8211;kill</code></p>
-<dd>Kill a running daemon (Specify -i to select the daemon instance to kill)</p>
-<dt><code>-c | &#8211;check-running</code></p>
-<dd>Check if a daemon is running for a given network interface. Sets the return value to 0 if a daemon is already running or to 255 if not.</p>
-<dt><code>-v | &#8211;version</code></p>
-<dd>Show version</p>
-<dt><code>-S | &#8211;supend</code></p>
-<dd>Suspend a running daemon. The daemon will no longer check the link status until it is resumed (-R) again. (Specify -i to select the daemon instance to suspend.)</p>
-<dt><code>-R | &#8211;resume</code></p>
-<dd>Resume a suspended daemon. (Specify -i to select the daemon instance to resume.)</p>
-<dt><code>-z | &#8211;info</code></p>
-<dd>Request that a running daemon shall write its status information to syslog. (Specify -i to select the daemon instance to send the request to.)</dl>
+<dt><code>-a | &#8211;no-auto</code></dt>
+<dd>Do not enable interface automatically (default: off)</dd>
+<dt><code>-n | &#8211;no-daemon</code></dt>
+<dd>Do not daemonize (for debugging) (default: off)</dd>
+<dt><code>-s | &#8211;no-syslog</code></dt>
+<dd>Do not use syslog, use stdout instead (for debugging) (default: off).</dd>
+<dt><code>-b | &#8211;no-beep</code></dt>
+<dd>Do not beep (off)</dd>
+<dt><code>-f | &#8211;ignore-fail</code></dt>
+<dd>Ignore detection failure, retry instead. Failure is treated as &quot;no link&quot;. (default: off)</dd>
+<dt><code>-F | &#8211;ignore-fail-positive</code></dt>
+<dd>Ignore detection failure, retry instead. Failure is treated as &quot;link detected&quot;. (default: off)</dd>
+<dt><code>-i | &#8211;iface=</code> <i>IFACE</i></dt>
+<dd>Specify ethernet interface (default: eth0)</dd>
+<dt><code>-r | &#8211;run=</code> <i>EXEC</i></dt>
+<dd>Specify program to execute when link status changes (default: <i>/etc/ifplugd/ifplugd.action</i>)</dd>
+<dt><code>-I | &#8211;ignore-retval</code></dt>
+<dd>Don&#8217;t exit on nonzero return value of program executed on link change. (default: off)</dd>
+<dt><code>-t | &#8211;poll-time=</code> <i>SECS</i></dt>
+<dd>Specify poll time in seconds (default: 1)</dd>
+<dt><code>-u | &#8211;delay-up=</code> <i>SECS</i></dt>
+<dd>Specify delay for configuring interface (default: 0)</dd>
+<dt><code>-d | &#8211;delay-down=</code> <i>SECS</i></dt>
+<dd>Specify delay for deconfiguring interface (default: 5)</dd>
+<dt><code>-m | &#8211;api-mode=</code> <i>MODE</i></dt>
+<dd>Force a specific link beat detection ioctl() API. Possible values are auto, iff, wlan, ethtool, mii, and priv for automatic detection, interface flag (IFF_RUNNING), wireless extension, SIOCETHTOOL, SIOCGMIIREG resp. SIOCPRIV. Only the first character of the argument is relevant, case insensitive. (default: auto)</dd>
+<dt><code>-p | &#8211;no-startup</code></dt>
+<dd>Don&#8217;t call the script to bring up network on deamon start (default: off)</dd>
+<dt><code>-q | &#8211;no-shutdown</code></dt>
+<dd>Don&#8217;t call the script for network shutdown on deamon quit (default: off)</dd>
+<dt><code>-w | &#8211;wait-on-fork</code></dt>
+<dd>When daemonizing, wait until the background process finished with the initial link beat detection. When this is enabled, the parent process will return the link status on exit. 1 means link beat detected, 2 stands for link beat not detected, everything else is an error.</dd>
+<dt><code>-W | &#8211;wait-on-kill</code></dt>
+<dd>When killing a running daemon (with -k) wait until the daemon died.</dd>
+<dt><code>-x | &#8211;extra-arg=</code> <i>ARG</i></dt>
+<dd>Specify an extra argument to be passed to the action script.</dd>
+<dt><code>-M | &#8211;monitor</code></dt>
+<dd>Don&#8217;t fail when the network interface is not available, instead use NETLINK to monitor device avaibility. The is useful for PCMCIA devices and similar.</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd>Show help</dd>
+<dt><code>-k | &#8211;kill</code></dt>
+<dd>Kill a running daemon (Specify -i to select the daemon instance to kill)</dd>
+<dt><code>-c | &#8211;check-running</code></dt>
+<dd>Check if a daemon is running for a given network interface. Sets the return value to 0 if a daemon is already running or to 255 if not.</dd>
+<dt><code>-v | &#8211;version</code></dt>
+<dd>Show version</dd>
+<dt><code>-S | &#8211;supend</code></dt>
+<dd>Suspend a running daemon. The daemon will no longer check the link status until it is resumed (-R) again. (Specify -i to select the daemon instance to suspend.)</dd>
+<dt><code>-R | &#8211;resume</code></dt>
+<dd>Resume a suspended daemon. (Specify -i to select the daemon instance to resume.)</dd>
+<dt><code>-z | &#8211;info</code></dt>
+<dd>Request that a running daemon shall write its status information to syslog. (Specify -i to select the daemon instance to send the request to.)</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/ifplugd/ifplugd.conf</i>: this file is sourced by the init script <i>/etc/init.d/ifplugd</i> and contains the interface to be monitored and the options to be used. </p>
 <p> <i>/etc/ifplugd/ifplugd.action</i>: this is the script which will be called by the daemon whenever the state of the interface changes. It takes two areguments: the first is the interface name (eg. eth0), the second either &quot;up&quot; or &quot;down&quot;. </p>

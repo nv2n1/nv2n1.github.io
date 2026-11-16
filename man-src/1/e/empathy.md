@@ -16,18 +16,18 @@ description: "empathy – GNOME multi-protocol chat and call client"
 <p> The main user interface consists of a contact list window and an icon in the notification area.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>,&nbsp;<wbr><code>&#8211;no-connect</code></p>
-<dd> Don&#8217;t connect on startup</p>
-<dt><code>-h</code>,&nbsp;<wbr><code>&#8211;start-hidden</code></p>
-<dd> Don&#8217;t display the contact list or any other dialogs on startup</p>
-<dt><code>-v</code>,&nbsp;<wbr><code>&#8211;version</code></p>
-<dd> Show version</dl>
+<dt><code>-n</code>,&nbsp;<wbr><code>&#8211;no-connect</code></dt>
+<dd> Don&#8217;t connect on startup</dd>
+<dt><code>-h</code>,&nbsp;<wbr><code>&#8211;start-hidden</code></dt>
+<dd> Don&#8217;t display the contact list or any other dialogs on startup</dd>
+<dt><code>-v</code>,&nbsp;<wbr><code>&#8211;version</code></dt>
+<dd> Show version</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>EMPATHY_LOGFILE=</code><i>filename</i></p>
-<dd> If set, debug output will go to the given file rather than to stderr.</p>
-<dt><code>EMPATHY_DEBUG=</code><i>type</i></p>
-<dd> May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dl>
+<dt><code>EMPATHY_LOGFILE=</code><i>filename</i></dt>
+<dd> If set, debug output will go to the given file rather than to stderr.</dd>
+<dt><code>EMPATHY_DEBUG=</code><i>type</i></dt>
+<dd> May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Laurent Bigonville for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>

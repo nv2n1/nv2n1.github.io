@@ -17,8 +17,8 @@ description: "pfifo_fast – three-band first in, first out queue"
 <p> See <code><a href="/docs/linux/man/8-tc-prio/">tc-prio</a></code>(8) for complete details on how TOS bits are translated into bands.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>txqueuelen</p>
-<dd>The length of the three bands depends on the interface txqueuelen, as specified with <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8) or <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8). </p>
+<dt>txqueuelen</dt>
+<dd>The length of the three bands depends on the interface txqueuelen, as specified with <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8) or <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8). </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Does not maintain statistics and does not show up in tc qdisc ls. This is because it is the automatic default in the absence of a configured qdisc. </p>

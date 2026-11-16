@@ -46,10 +46,10 @@ description: "openvpn examples – Secure IP tunnel daemon"
 <h3>Example 3: A tunnel with full TLS-based security</h3>
 <p>For this test, we will designate <code>bob</code> as the TLS client and <code>alice</code> as the TLS server.</p>
 <dl>
-<dt><i>Note:</i></p>
-<dd>The client or server designation only has meaning for the TLS subsystem. It has no bearing on OpenVPN&#8217;s peer-to-peer, UDP-based communication model.* First, build a separate certificate/key pair for both bob and alice (see above where <code>&#8211;cert</code> is discussed for more info). Then construct Diffie Hellman parameters (see above where <code>&#8211;dh</code> is discussed for more info). You can also use the included test files <code>client.crt</code>, <code>client.key</code>, <code>server.crt</code>, <code>server.key</code> and <code>ca.crt</code>. The <code>.crt</code> files are certificates/public-keys, the <code>.key</code> files are private keys, and <code>ca.crt</code> is a certification authority who has signed both <code>client.crt</code> and <code>server.crt</code>. For Diffie Hellman parameters you can use the included file <code>dh2048.pem</code>.</p>
-<dt><i>WARNING:</i></p>
-<dd>All client, server, and certificate authority certificates and keys included in the OpenVPN distribution are totally insecure and should be used for testing only. On bob: </p>
+<dt><i>Note:</i></dt>
+<dd>The client or server designation only has meaning for the TLS subsystem. It has no bearing on OpenVPN&#8217;s peer-to-peer, UDP-based communication model.* First, build a separate certificate/key pair for both bob and alice (see above where <code>&#8211;cert</code> is discussed for more info). Then construct Diffie Hellman parameters (see above where <code>&#8211;dh</code> is discussed for more info). You can also use the included test files <code>client.crt</code>, <code>client.key</code>, <code>server.crt</code>, <code>server.key</code> and <code>ca.crt</code>. The <code>.crt</code> files are certificates/public-keys, the <code>.key</code> files are private keys, and <code>ca.crt</code> is a certification authority who has signed both <code>client.crt</code> and <code>server.crt</code>. For Diffie Hellman parameters you can use the included file <code>dh2048.pem</code>.</dd>
+<dt><i>WARNING:</i></dt>
+<dd>All client, server, and certificate authority certificates and keys included in the OpenVPN distribution are totally insecure and should be used for testing only. On bob: </dd>
 <pre>openvpn --remote alice.example.com --dev tun1 \
  --ifconfig 10.4.0.1 10.4.0.2 \
  --tls-client --ca ca.crt \
@@ -74,3 +74,4 @@ description: "openvpn examples – Secure IP tunnel daemon"
 <p>On alice: </p>
 <pre>route add -net 10.0.0.0 netmask 255.255.255.0 gw 10.4.0.1</pre>
 <p>Now any machine on the <i>10.0.0.0/24</i> subnet can access any machine on the <i>10.0.1.0/24</i> subnet over the secure tunnel (or vice versa). In a production environment, you could put the route command(s) in a script and execute with the <code>&#8211;up</code> option. </p>
+</p>

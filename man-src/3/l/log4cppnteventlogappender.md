@@ -50,14 +50,14 @@ description: "log4cpp::NTEventLogAppender –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> The name of the <code>Appender</code><br />
- <i>sourceName</i> The source name to log</dl>
+ <i>sourceName</i> The source name to log</dd></dl>
 <h3>log4cpp::NTEventLogAppender::~NTEventLogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::NTEventLogAppender::_append (const <code>LoggingEvent</code> &amp;event) [protected], [virtual]</h3>
 <p>Sends a <code>LoggingEvent</code> to NT Event log. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> the <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::NTEventLogAppender::addRegistryInfo (const char *source) [protected]</h3>
 <h3>void log4cpp::NTEventLogAppender::close () [virtual]</h3>
@@ -78,13 +78,13 @@ description: "log4cpp::NTEventLogAppender –"
 <p>The <code>NTEventLogAppender</code> does its own <code>Layout</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false</dl>
+<dd>false</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::NTEventLogAppender::setLayout (<code>Layout</code> *layout) [virtual]</h3>
 <p>Set the <code>Layout</code> for this appender. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>layout</i> The layout to use.</dl>
+<dd><i>layout</i> The layout to use.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h2>Member Data Documentation</h2>
 <h3>HANDLE log4cpp::NTEventLogAppender::_hEventSource [protected]</h3>

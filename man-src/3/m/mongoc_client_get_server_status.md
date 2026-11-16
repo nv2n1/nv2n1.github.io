@@ -17,20 +17,20 @@ mongoc_client_get_server_status (mongoc_client_t *client,
 <p>Queries the server for the current server status. The result is stored in <code>reply</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>reply</code> is always initialized, even in the case of failure. Always call <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> to release it.</dl>
+<dd><code>reply</code> is always initialized, even in the case of failure. Always call <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> to release it.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>A location for the result <code>bson_t</code> \&amp;.</dl>
+<dt><code>reply</code></dt>
+<dd>A location for the result <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

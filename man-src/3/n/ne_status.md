@@ -10,7 +10,6 @@ description: "ne_status – HTTP status structure"
 <p>ne_status &#8211; HTTP status structure</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ne_utils.h&gt;
-
 typedef struct {
     int major_version, minor_version;
     int code, klass;
@@ -21,27 +20,28 @@ typedef struct {
 <p> There are five classes of HTTP status code defined by RFC2616: </p>
 <p> 1xx</p>
 <dl>
-<dd>Informational response.</dl>
+<dd>Informational response.</dd></dl>
 <p> 2xx</p>
 <dl>
-<dd>Success: the operation was successful</dl>
+<dd>Success: the operation was successful</dd></dl>
 <p> 3xx</p>
 <dl>
-<dd>Redirection</dl>
+<dd>Redirection</dd></dl>
 <p> 4xx</p>
 <dl>
-<dd>Client error: the request made was incorrect in some manner.</dl>
+<dd>Client error: the request made was incorrect in some manner.</dd></dl>
 <p> 5xx</p>
 <dl>
-<dd>Server error</dl>
+<dd>Server error</dd></dl>
 <h2>See Also</h2>
 <p>ne_get_status.</p>
 <h2>Author</h2>
 <p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>the field is named &#8220;klass&#8221; not &#8220;class&#8221; so that the header can be used from a C++ program, in which &#8220;class&#8221; is a reserved word) </p>
+<dt> 1.</dt>
+<dd>the field is named &#8220;klass&#8221; not &#8220;class&#8221; so that the header can be used from a C++ program, in which &#8220;class&#8221; is a reserved word) </dd>
+</dl>

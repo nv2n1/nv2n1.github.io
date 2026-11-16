@@ -15,7 +15,7 @@ skb_tx_error - report an sk_buff xmit error
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer that triggered an error</dl>
+<dl><dd></dd><dd>buffer that triggered an error</dd></dl>
 
 <h2>Description</h2>
 

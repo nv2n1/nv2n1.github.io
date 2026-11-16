@@ -19,26 +19,26 @@ description: "fbgs – Poor man’s PostScript/pdf viewer for the linux framebuf
 <p> <code>Fbgs</code> understands all <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1) options (they are passed through), except: store, list, text, (no)comments, e, (no)edit, (no)backup, (no)preserve, (no)readahead, cachemem, blend. </p>
 <p> Additionally you can specify:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print usage info (overwrites fbi option).</p>
-<dt><code>-b, &#8211;bell</code></p>
-<dd> Emit a beep when the document is ready.</p>
-<dt><code>-c, &#8211;color</code></p>
-<dd> To render the pages in color (default is N&amp;B).</p>
-<dt><code>-l</code></p>
-<dd> To get the pages rendered with 100 dpi (default is 75).</p>
-<dt><code>-xl</code></p>
-<dd> To get the pages rendered with 120 dpi.</p>
-<dt><code>-xxl</code></p>
-<dd> To get the pages rendered with 150 dpi.</p>
-<dt><code>-r</code><i>&nbsp;<wbr>n</i><code>, &#8211;resolution</code><i>&nbsp;<wbr>n</i></p>
-<dd> To get the pages rendered with <i>n</i> dpi (overwrites fbi option).</p>
-<dt><code>-fp</code><i>&nbsp;<wbr>number</i><code>, &#8211;firstpage</code><i>&nbsp;<wbr>number</i></p>
-<dd> Begins interpreting on the designated page of the document.</p>
-<dt><code>-lp</code><i>&nbsp;<wbr>number</i><code>, &#8211;lastpage</code><i>&nbsp;<wbr>number</i></p>
-<dd> Stops interpreting after the designated page of the document.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>password</i><code>, &#8211;password</code><i>&nbsp;<wbr>password</i></p>
-<dd> You can use this option if your PDF file requires a <i>password</i>. # #</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print usage info (overwrites fbi option).</dd>
+<dt><code>-b, &#8211;bell</code></dt>
+<dd> Emit a beep when the document is ready.</dd>
+<dt><code>-c, &#8211;color</code></dt>
+<dd> To render the pages in color (default is N&amp;B).</dd>
+<dt><code>-l</code></dt>
+<dd> To get the pages rendered with 100 dpi (default is 75).</dd>
+<dt><code>-xl</code></dt>
+<dd> To get the pages rendered with 120 dpi.</dd>
+<dt><code>-xxl</code></dt>
+<dd> To get the pages rendered with 150 dpi.</dd>
+<dt><code>-r</code><i>&nbsp;<wbr>n</i><code>, &#8211;resolution</code><i>&nbsp;<wbr>n</i></dt>
+<dd> To get the pages rendered with <i>n</i> dpi (overwrites fbi option).</dd>
+<dt><code>-fp</code><i>&nbsp;<wbr>number</i><code>, &#8211;firstpage</code><i>&nbsp;<wbr>number</i></dt>
+<dd> Begins interpreting on the designated page of the document.</dd>
+<dt><code>-lp</code><i>&nbsp;<wbr>number</i><code>, &#8211;lastpage</code><i>&nbsp;<wbr>number</i></dt>
+<dd> Stops interpreting after the designated page of the document.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>password</i><code>, &#8211;password</code><i>&nbsp;<wbr>password</i></dt>
+<dd> You can use this option if your PDF file requires a <i>password</i>. # #</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) # #</p>
 <h2>AUTHOR</h2>

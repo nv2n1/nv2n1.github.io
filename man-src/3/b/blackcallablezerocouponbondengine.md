@@ -21,6 +21,6 @@ description: "QuantLib::BlackCallableZeroCouponBondEngine – Black-formula call
 <p> Callable zero coupon bond, where the embedded (European) option price is assumed to obey the Black formula. Follows &#8216;European bond option&#8217; treatment in Hull, Fourth Edition, Chapter 20. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class has yet to be tested.</dl>
+<dd>This class has yet to be tested.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -14,12 +14,12 @@ description: "arptables-save – dump arptables rules to stdout (nft-based)"
 <h2>Description</h2>
 <p><code>arptables-save</code> is used to dump the contents of an ARP Table in easily parseable format to STDOUT. Use I/O-redirection provided by your shell to write to a file.</p>
 <dl>
-<dt><code>-M</code>, <code>&#8211;modprobe</code> <i>modprobe_program</i></p>
-<dd>Specify the path to the modprobe program. By default, arptables-save will inspect /proc/sys/kernel/modprobe to determine the executable&#8217;s path.</p>
-<dt><code>-c</code>, <code>&#8211;counters</code></p>
-<dd>Include the current values of all packet and byte counters in the output.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</dl>
+<dt><code>-M</code>, <code>&#8211;modprobe</code> <i>modprobe_program</i></dt>
+<dd>Specify the path to the modprobe program. By default, arptables-save will inspect /proc/sys/kernel/modprobe to determine the executable&#8217;s path.</dd>
+<dt><code>-c</code>, <code>&#8211;counters</code></dt>
+<dd>Include the current values of all packet and byte counters in the output.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd></dl>
 <h2>Author</h2>
 <p>Jesper Dangaard Brouer &lt;brouer [at] redhat.com&gt;</p>
 <h2>See Also</h2>

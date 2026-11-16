@@ -27,6 +27,6 @@ description: "QuantLib::LfmHullWhiteParameterization – Libor market model para
 <p> Hull, John, White, Alan, 1999, <code>Forward</code> Rate Volatilities, <code>Swap</code> Rate Volatilities and the Implementation of the <code>Libor</code> Market Model (&lt;<a rel="nofollow" href="http://www.rotman.utoronto.ca/~amackay/fin/libormktmodel2.pdf">http://www.rotman.utoronto.ca/~amackay/fin/libormktmodel2.pdf</a>&gt;) </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet npvs and comparison with Black pricing.</dl>
+<dd>the correctness is tested by Monte-Carlo reproduction of caplet &amp; ratchet npvs and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

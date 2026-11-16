@@ -21,8 +21,8 @@ description: "setsid – creates a session and sets the process group ID"
 <p> On success, the (new) session ID of the calling process is returned. On error, <i>(pid_t)&nbsp;-1</i> is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> The process group ID of any process equals the PID of the calling process. Thus, in particular, <code>setsid</code>() fails if the calling process is already a process group leader.</dl>
+<dt><code>EPERM</code></dt>
+<dd> The process group ID of any process equals the PID of the calling process. Thus, in particular, <code>setsid</code>() fails if the calling process is already a process group leader.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4.</p>
 <h2>NOTES</h2>

@@ -17,15 +17,15 @@ description: "struct_rio_scan_node – list node to register RapidIO enumeration
 <h2>Members</h2>
 <p>mport_id</p>
 <dl>
-<dd>ID of an mport (net) serviced by this enumerator</dl>
+<dd>ID of an mport (net) serviced by this enumerator</dd></dl>
 <p> node</p>
 <dl>
-<dd>node in global list of registered enumerators</dl>
+<dd>node in global list of registered enumerators</dd></dl>
 <p> ops</p>
 <dl>
-<dd>RIO enumeration and discovery operations</dl>
+<dd>RIO enumeration and discovery operations</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

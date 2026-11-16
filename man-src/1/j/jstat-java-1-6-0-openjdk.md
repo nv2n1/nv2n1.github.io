@@ -12,18 +12,18 @@ description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 <pre><code>jstat</code> [ <i>generalOption</i> | <i>outputOptions</i><i>vmid</i> [<i>interval</i>[s|ms] [<i>count</i>]] ]</pre>
 <h2>Parameters</h2>
 <dl>
-<dt>generalOption</p>
-<dd>A single general command-line option (-help, -options, or -version)</p>
-<dt>outputOptions</p>
-<dd>One or more output options, consisting of a single <i>statOption</i>, plus any of the -t, -h, and -J options.</p>
-<dt>vmid</p>
-<dd>Virtual machine identifier, a string indicating the target Java virtual machine (JVM). The general syntax is </p>
+<dt>generalOption</dt>
+<dd>A single general command-line option (-help, -options, or -version)</dd>
+<dt>outputOptions</dt>
+<dd>One or more output options, consisting of a single <i>statOption</i>, plus any of the -t, -h, and -J options.</dd>
+<dt>vmid</dt>
+<dd>Virtual machine identifier, a string indicating the target Java virtual machine (JVM). The general syntax is </dd>
 <pre><code>[</code><tt>protocol</tt><code>:][//]</code><tt>lvmid</tt>[@<i>hostname</i>[:<i>port</i>]/<i>servername</i>]</pre>
 <p>The syntax of the vmid string largely corresponds to the syntax of a URI. The <i>vmid</i> can vary from a simple integer representing a local JVM to a more complex construction specifying a communications protocol, port number, and other implementation-specific values. See Virtual Machine Identifier for details.</p>
-<dt>interval[s|ms]</p>
-<dd>Sampling interval in the specified units, seconds (s) or milliseconds (ms). Default units are milliseconds.&nbsp;<wbr> Must be a positive integer.&nbsp;<wbr> If specified, <code>jstat</code> will produce its output at each interval.</p>
-<dt>count</p>
-<dd>Number of samples to display. Default value is infinity; that is, <code>jstat</code> displays statistics until the target JVM terminates or the <code>jstat</code> command is terminated.&nbsp;<wbr> Must be a positive integer.</dl>
+<dt>interval[s|ms]</dt>
+<dd>Sampling interval in the specified units, seconds (s) or milliseconds (ms). Default units are milliseconds.&nbsp;<wbr> Must be a positive integer.&nbsp;<wbr> If specified, <code>jstat</code> will produce its output at each interval.</dd>
+<dt>count</dt>
+<dd>Number of samples to display. Default value is infinity; that is, <code>jstat</code> displays statistics until the target JVM terminates or the <code>jstat</code> command is terminated.&nbsp;<wbr> Must be a positive integer.</dd></dl>
 <h2>Description</h2>
 <p>The <code>jstat</code> tool displays performance statistics for an instrumented HotSpot Java virtual machine (JVM). The target JVM is identified by its virtual machine identifier, or <i>vmid</i> option described below. </p>
 <p> <code>NOTE</code>: This utility is unsupported and may not be available in future versions of the JDK. It is not currently available on Windows 98 and Windows ME. platforms. </p>
@@ -31,16 +31,16 @@ description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 <p>The syntax of the <i>vmid</i> string largely corresponds to the syntax of a URI: </p>
 <pre><code>[</code><tt>protocol</tt><code>:][//]</code><tt>lvmid</tt>[@<i>hostname</i>][:<i>port</i>][/<i>servername</i>]</pre>
 <dl>
-<dt>protocol</p>
-<dd>The communications protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is not specified, the default protocol is a platform specific optimized local protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is specified, then the default protocol is <code>rmi</code>.</p>
-<dt>lvmid</p>
-<dd>The local virtual machine identifier for the target JVM. The <i>lvmid</i> is a platform-specific value that uniquely identifies a JVM on a system. The <i>lvmid</i> is the only required component of a virtual machine identifier. The <i>lvmid</i> is typically, but not necessarily, the operating system&#8217;s process identifier for the target JVM process. You can use the <code>jps</code> command to determine the <i>lvmid</i>. Also, you can determine <i>lvmid</i> on Unix platforms with the <code>ps</code> command, and on Windows with the Windows Task Manager.</p>
-<dt>hostname</p>
-<dd>A hostname or IP address indicating the target host. If <i>hostname</i> is omitted, then the target host is the local host.</p>
-<dt>port</p>
-<dd>The default port for communicating with the remote server. If the <i>hostname</i> is omitted or the <i>protocol</i> specifies an optimized, local protocol, then <i>port</i> is ignored. Otherwise, treatment of the <i>port</i> parameter is implementation specific. For the default <code>rmi</code> protocol, the <i>port</i> indicates the port number for the rmiregistry on the remote host. If <i>port</i> is omitted, and <i>protocol</i> indicates <code>rmi</code>, then the default rmiregistry port (1099) is used.</p>
-<dt>servername</p>
-<dd>The treatment of this parameter depends on implementation. For the optimized local protocol, this field is ignored. For the <code>rmi</code> protocol, it represents the name of the RMI remote object on the remote host.</dl>
+<dt>protocol</dt>
+<dd>The communications protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is not specified, the default protocol is a platform specific optimized local protocol. If the <i>protocol</i> is omitted and a <i>hostname</i> is specified, then the default protocol is <code>rmi</code>.</dd>
+<dt>lvmid</dt>
+<dd>The local virtual machine identifier for the target JVM. The <i>lvmid</i> is a platform-specific value that uniquely identifies a JVM on a system. The <i>lvmid</i> is the only required component of a virtual machine identifier. The <i>lvmid</i> is typically, but not necessarily, the operating system&#8217;s process identifier for the target JVM process. You can use the <code>jps</code> command to determine the <i>lvmid</i>. Also, you can determine <i>lvmid</i> on Unix platforms with the <code>ps</code> command, and on Windows with the Windows Task Manager.</dd>
+<dt>hostname</dt>
+<dd>A hostname or IP address indicating the target host. If <i>hostname</i> is omitted, then the target host is the local host.</dd>
+<dt>port</dt>
+<dd>The default port for communicating with the remote server. If the <i>hostname</i> is omitted or the <i>protocol</i> specifies an optimized, local protocol, then <i>port</i> is ignored. Otherwise, treatment of the <i>port</i> parameter is implementation specific. For the default <code>rmi</code> protocol, the <i>port</i> indicates the port number for the rmiregistry on the remote host. If <i>port</i> is omitted, and <i>protocol</i> indicates <code>rmi</code>, then the default rmiregistry port (1099) is used.</dd>
+<dt>servername</dt>
+<dd>The treatment of this parameter depends on implementation. For the optimized local protocol, this field is ignored. For the <code>rmi</code> protocol, it represents the name of the RMI remote object on the remote host.</dd></dl>
 <h2>Options</h2>
 <p>The <code>jstat</code> command supports two types of options, general options and output options. General options cause <code>jstat</code> to display simple usage and version information. Output options determine the content and format of the statistical output. </p>
 <p> <code>NOTE</code>: All options, and their functionality are subject to change or removal in future releases.</p>
@@ -48,12 +48,12 @@ description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 <p>OPTIONS </p>
 <p> If you specify one of the general options, you cannot specify any other option or parameter.</p>
 <dl>
-<dt>-help</p>
-<dd>Display help message.</p>
-<dt>-version</p>
-<dd>Display version information.</p>
-<dt>-options</p>
-<dd>Display list of statistics options. See the Output Options section below.</dl>
+<dt>-help</dt>
+<dd>Display help message.</dd>
+<dt>-version</dt>
+<dd>Display version information.</dd>
+<dt>-options</dt>
+<dd>Display list of statistics options. See the Output Options section below.</dd></dl>
 <h3>Output</h3>
 <p>OPTIONS </p>
 <p> If you do not specify a general option, then you can specify output options. Output options determine the content and format of <code>jstat</code>&#8216;s output, and consist of a single <i>statOption</i>, plus any of the other output options (-h, -t, and -J).&nbsp;<wbr> The <i>statOption</i> must come first. </p>
@@ -62,8 +62,8 @@ description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 <p> Use the <i>interval</i> and <i>count</i> parameters to determine how frequently and how many times, respectively, <code>jstat</code> displays its output. </p>
 <p> <code>NOTE</code>: You are advised not to write scripts to parse <code>jstat&#8217;s</code> output since the format may change in future releases. If you choose to write scripts that parse <code>jstat</code> output, expect to modify them for future releases of this tool.</p>
 <dl>
-<dt>-statOption</p>
-<dd>Determines the statistics information that <code>jstat</code> displays. The following table lists the available options.&nbsp;<wbr> Use the <code>-options</code> general option to display the list of options for a particular platform installation. </p>
+<dt>-statOption</dt>
+<dd>Determines the statistics information that <code>jstat</code> displays. The following table lists the available options.&nbsp;<wbr> Use the <code>-options</code> general option to display the list of options for a particular platform installation. </dd>
 <pre><br>
 <br>
 <br>
@@ -89,15 +89,15 @@ gcoldcapacity
 gcpermcapacity
 gcutil
 printcompilation
-<dt>-hn<dd>Display a column header every <i>n</i> samples (output rows), where <i>n</i> is a positive integer. Default value is 0, which displays the column header above the first row of data.
-<dt>-tn<dd>Display a timestamp column as the first column of output. The timestamp is the the time since the start time of the target JVM.
-<dt>-JjavaOption<dd>Pass <i>javaOption</i> to the <code>java</code> application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. For a complete list of options, see the following documents: 
-<dl><dt><dd><dl><dt>*<dd><i>java - the Java application launcher (Solaris)</i> @</pre>
+<dt>-hn</dt><dd>Display a column header every <i>n</i> samples (output rows), where <i>n</i> is a positive integer. Default value is 0, which displays the column header above the first row of data.
+</dd><dt>-tn</dt><dd>Display a timestamp column as the first column of output. The timestamp is the the time since the start time of the target JVM.
+</dd><dt>-JjavaOption</dt><dd>Pass <i>javaOption</i> to the <code>java</code> application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. For a complete list of options, see the following documents: 
+</dd><dl><dl><dt>*</dt><dd><i>java - the Java application launcher (Solaris)</i> @</pre>
 <p><a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/java.html</a></p>
-<dt>*</p>
-<dd><i>java &#8211; the Java application launcher (Linux)</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/linux/java.html">http://java.sun.com/javase/6/docs/technotes/tools/linux/java.html</a></p>
-<dt>*</p>
-<dd>java &#8211; the Java application launcher (Windows)</dl>
+</dd><dt>*</dt>
+<dd><i>java &#8211; the Java application launcher (Linux)</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/linux/java.html">http://java.sun.com/javase/6/docs/technotes/tools/linux/java.html</a></dd>
+<dt>*</dt>
+<dd>java &#8211; the Java application launcher (Windows)</dd></dl>
 </dl>
 </dl>
 <h3>Statoptions And</h3>
@@ -1021,14 +1021,14 @@ Timestamp OGCMN OGCMX OGC OC YGC FGC FGCT GCT
 <h2>See Also</h2>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>java &#8211; the Java Application Launcher</p>
-<dt>*</p>
-<dd>jps &#8211; the Java Process Status Application</p>
-<dt>*</p>
-<dd>jstatd &#8211; the jvmstat daemon</p>
-<dt>*</p>
-<dd>rmiregistry &#8211; the Java Remote Object Registry</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>java &#8211; the Java Application Launcher</dd>
+<dt>*</dt>
+<dd>jps &#8211; the Java Process Status Application</dd>
+<dt>*</dt>
+<dd>jstatd &#8211; the jvmstat daemon</dd>
+<dt>*</dt>
+<dd>rmiregistry &#8211; the Java Remote Object Registry</dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

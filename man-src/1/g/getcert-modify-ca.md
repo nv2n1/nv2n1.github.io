@@ -15,12 +15,12 @@ description: "getcert"
 <p> Modifies the helper command in a <i>certmonger</i> CA configuration. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> The nickname of the CA configuration to modify.</p>
-<dt><code>-e</code> COMMAND</p>
-<dd> The new helper command to run for communicating with the CA.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> The nickname of the CA configuration to modify.</dd>
+<dt><code>-e</code> COMMAND</dt>
+<dd> The new helper command to run for communicating with the CA.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

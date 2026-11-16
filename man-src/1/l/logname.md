@@ -14,10 +14,10 @@ description: "logname – print user’s login name"
 <h2>DESCRIPTION</h2>
 <p> Print the name of the current user.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by FIXME: unknown.</p>
 <h2>REPORTING BUGS</h2>

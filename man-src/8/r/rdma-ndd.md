@@ -30,6 +30,6 @@ description: "RDMA-NDD – RDMA device Node Description update daemon"
 <p> <code>-d, &#8211;debugging</code> Log additional debugging information to syslog</p>
 <h2>Author</h2>
 <dl>
-<dt><code>Ira Weiny</code></p>
-<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </p>
+<dt><code>Ira Weiny</code></dt>
+<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </dd>
 </dl>

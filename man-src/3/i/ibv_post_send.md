@@ -91,16 +91,16 @@ OPCODE | IBV_QPT_UD | IBV_QPT_UC | IBV_QPT_RC | IBV_QPT_XRC_SEND | IBV_QPT_RAW_P
 </code></pre>
 <p> The attribute send_flags describes the properties of the <font SIZE="-1">WR</font>. It is either 0 or the bitwise <font SIZE="-1">OR</font> of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_SEND_FENCE </code> Set the fence indicator. Valid only for QPs with Transport Service Type <code>IBV_QPT_RC</code></p>
+<dt><code>IBV_SEND_FENCE </code> Set the fence indicator. Valid only for QPs with Transport Service Type <code>IBV_QPT_RC</code></dt>
 <dd>
-<dt><code>IBV_SEND_SIGNALED </code> Set the completion notification indicator. Relevant only if QP was created with sq_sig_all=0</p>
+</dd><dt><code>IBV_SEND_SIGNALED </code> Set the completion notification indicator. Relevant only if QP was created with sq_sig_all=0</dt>
 <dd>
-<dt><code>IBV_SEND_SOLICITED </code> Set the solicited event indicator. Valid only for Send and RDMA Write with immediate</p>
+</dd><dt><code>IBV_SEND_SOLICITED </code> Set the solicited event indicator. Valid only for Send and RDMA Write with immediate</dt>
 <dd>
-<dt><code>IBV_SEND_INLINE </code> Send data in given gather list as inline data</p>
-<dd> in a send WQE. Valid only for Send and RDMA Write. The L_Key will not be checked.</p>
-<dt><code>IBV_SEND_IP_CSUM </code> Offload the IPv4 and TCP/UDP checksum calculation.</p>
-<dd> Valid only when <code>device_cap_flags</code> in device_attr indicates current QP is supported by checksum offload.</dl>
+</dd><dt><code>IBV_SEND_INLINE </code> Send data in given gather list as inline data</dt>
+<dd> in a send WQE. Valid only for Send and RDMA Write. The L_Key will not be checked.</dd>
+<dt><code>IBV_SEND_IP_CSUM </code> Offload the IPv4 and TCP/UDP checksum calculation.</dt>
+<dd> Valid only when <code>device_cap_flags</code> in device_attr indicates current QP is supported by checksum offload.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_post_send()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>NOTES</h2>
@@ -111,11 +111,11 @@ OPCODE | IBV_QPT_UD | IBV_QPT_UC | IBV_QPT_RC | IBV_QPT_XRC_SEND | IBV_QPT_RAW_P
 <p> <code>ibv_create_qp</code>(3), <code>ibv_create_ah</code>(3), <code>ibv_post_recv</code>(3), <code>ibv_post_srq_recv</code>(3), <code>ibv_poll_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>
+</dd><dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

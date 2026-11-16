@@ -10,69 +10,67 @@ description: "xcb_fill_poly –"
 <p>xcb_fill_poly &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_fill_poly(xcb_connection_t *conn, xcb_drawable_t drawable, xcb_gcontext_t gc, uint8_t shape, uint8_t coordinate_mode, uint32_t points_len, const xcb_point_t *points);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>gc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>shape</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>gc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>shape</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_POLY_SHAPE_COMPLEX</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_POLY_SHAPE_NONCONVEX</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_POLY_SHAPE_CONVEX</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_POLY_SHAPE_COMPLEX</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_POLY_SHAPE_NONCONVEX</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_POLY_SHAPE_CONVEX</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>coordinate_mode</i></p>
-<dd>One of the following values:</p>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>coordinate_mode</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_COORD_MODE_ORIGIN</i></p>
-<dd>Treats all coordinates as relative to the origin.</p>
-<dt><i>XCB_COORD_MODE_PREVIOUS</i></p>
-<dd>Treats all coordinates after the first as relative to the previous coordinate.</dl>
+</dd><dl>
+<dt><i>XCB_COORD_MODE_ORIGIN</i></dt>
+<dd>Treats all coordinates as relative to the origin.</dd>
+<dt><i>XCB_COORD_MODE_PREVIOUS</i></dt>
+<dd>Treats all coordinates after the first as relative to the previous coordinate.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>points_len</i></p>
-<dd>One of the following values:</p>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>points_len</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_COORD_MODE_ORIGIN</i></p>
-<dd>Treats all coordinates as relative to the origin.</p>
-<dt><i>XCB_COORD_MODE_PREVIOUS</i></p>
-<dd>Treats all coordinates after the first as relative to the previous coordinate.</dl>
+</dd><dl>
+<dt><i>XCB_COORD_MODE_ORIGIN</i></dt>
+<dd>Treats all coordinates as relative to the origin.</dd>
+<dt><i>XCB_COORD_MODE_PREVIOUS</i></dt>
+<dd>Treats all coordinates after the first as relative to the previous coordinate.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>points</i></p>
-<dd>One of the following values:</p>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>points</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_COORD_MODE_ORIGIN</i></p>
-<dd>Treats all coordinates as relative to the origin.</p>
-<dt><i>XCB_COORD_MODE_PREVIOUS</i></p>
-<dd>Treats all coordinates after the first as relative to the previous coordinate.</dl>
+</dd><dl>
+<dt><i>XCB_COORD_MODE_ORIGIN</i></dt>
+<dd>Treats all coordinates as relative to the origin.</dd>
+<dt><i>XCB_COORD_MODE_PREVIOUS</i></dt>
+<dd>Treats all coordinates after the first as relative to the previous coordinate.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <h2>Description</h2>
 <h2>Return Value</h2>

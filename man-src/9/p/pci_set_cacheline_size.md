@@ -15,7 +15,7 @@ pci_set_cacheline_size - ensure the CACHE_LINE_SIZE register is programmed
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device for which MWI is to be enabled</dl>
+<dl><dd></dd><dd>the PCI device for which MWI is to be enabled</dd></dl>
 
 <h2>Description</h2>
 

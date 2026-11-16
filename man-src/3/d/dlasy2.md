@@ -19,18 +19,18 @@ description: "dlasy2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLASY2 solves for the N1 by N2 matrix X, 1 &lt;= N1,N2 &lt;= 2, in
         op(TL)*X + ISGN*X*op(TR) = SCALE*B,
  where TL is N1 by N1, TR is N2 by N2, B is N1 by N2, and ISGN = 1 or
  -1.  op(T) = T or T**T, where T**T denotes the transpose of T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>LTRANL</i> </p>
+</dt><dd> <i>LTRANL</i> </dd>
 <pre>
           LTRANL is LOGICAL
           On entry, LTRANL specifies the op(TL):
@@ -128,14 +128,14 @@ description: "dlasy2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 174 of file dlasy2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

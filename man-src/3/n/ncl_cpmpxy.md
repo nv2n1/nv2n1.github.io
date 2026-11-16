@@ -10,29 +10,28 @@ CPMPXY - Maps Conpack output from a rectangular coordinate system superimposed o
 
 <h2>Synopsis</h2>CALL CPMPXY (IMAP, XINP, YINP, XOTP, YOTP)
 <h2>Description</h2><dl COMPACT><dt>IMAP
-<dd>(INTEGER, input) is zero if the object of the call is to ask CPMPXY about its mapping capabilities, greater than zero if the object of the call is to do a forward mapping, and less than zero if the object of the call is to do an inverse mapping. When IMAP is non-zero, its absolute value matches the current value of the parameter 'MAP' and identifies the mapping to be used.
-<dt>XINP
-<dd>(REAL, input) is used in one of three ways:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>When IMAP is zero, the value INT(XINP) is the index of a mapping about which CPMPXY is being asked to supply information.
-<dt>&bull;
-<dd>When IMAP is greater than zero, XINP is the X coordinate of a point on the contour plot. If 'XC1' = 'XCM' (the default situation), then XINP will lie in the range from 1 to M, where M is the first dimension of the array being contoured (equal to the value of the parameter 'ZDM'); in this case, the X coordinate will have the same range as the first index of the data array. If the user sets 'XC1' unequal to 'XCM', then XINP will lie in the range from 'XC1' (corresponding to an index value of 1) to 'XCM' (corresponding to an index value of M).
-<dt>&bull;
-<dd>When IMAP is less than zero, XINP is the X coordinate of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.</dl></dl><dt>YINP
-<dd>(REAL, input/output) is used in one of three ways:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>When IMAP is zero, CPMPXY is expected to return one of the following values of YINP: YINP = 0. indicates that neither the forward nor the inverse transformation is defined. YINP = 1. indicates that the forward transformation is defined, but the inverse is not. YINP = 2. indicates that the forward transformation is not defined, but the inverse is. YINP = 3. indicates that both the forward and the inverse transformations are defined.
-<dt>&bull;
-<dd>When IMAP is greater than zero, YINP is the Y coordinate of a point on the contour plot. If 'YC1' = 'YCN' (the default situation), then YINP will lie in the range from 1 to N, where N is the second dimension of the array being contoured (equal to the value of the parameter 'ZDN'); in this case, the Y coordinate will have the same range as the second index of the data array. If the user sets 'YC1' unequal to 'YCN', then YINP will lie in the range from 'YC1' (corresponding to an index value of 1) to 'YCN' (corresponding to an index value of N).
-<dt>&bull;
-<dd>When IMAP is less than zero, YINP is the Y coordinate of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.</dl></dl><dt>XOTP and YOTP
-<dd>(REAL, output) are used in one of two ways:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>If IMAP is greater than zero, XOTP and YOTP are the X and Y coordinates of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.
-<dt>&bull;
-<dd>When IMAP is less than zero, XOTP and YOTP are the X and Y coordinates of a point on the contour plot. If 'XC1' = 'XCM' (the default situation), then XOTP will lie in the range from 1 to M, where M is the first dimension of the array being contoured (equal to the value of the parameter 'ZDM'); in this case, the X coordinate will have the same range as the first index of the data array. If the user sets 'XC1' unequal to 'XCM', then XOTP will lie in the range from 'XC1' (corresponding to an index value of 1) to 'XCM' (corresponding to an index value of M). Similarly, if 'YC1' = 'YCN' (the default situation), then YOTP will lie in the range from 1 to N, where N is the second dimension of the array being contoured (equal to the value of the parameter 'ZDN'); in this case, the Y coordinate will have the same range as the second index of the data array. If the user sets 'YC1' unequal to 'YCN', then YOTP will lie in the range from 'YC1' (corresponding to an index value of 1) to 'YCN' (corresponding to an index value of N). 
-
- In any case, if the point (XINP,YINP) cannot be mapped for any reason, some recognizable impossible value should be returned for both of XOTP and YOTP and the internal parameter 'ORV' should be given that value, thereby allowing Conpack routines that call CPMPXY to determine whether or not a point being projected is visible or not. The value used for this purpose by the Ezmap routines MAPTRA and MAPTRI is 1.E12.</dl></dl>
+</dt><dd>(INTEGER, input) is zero if the object of the call is to ask CPMPXY about its mapping capabilities, greater than zero if the object of the call is to do a forward mapping, and less than zero if the object of the call is to do an inverse mapping. When IMAP is non-zero, its absolute value matches the current value of the parameter 'MAP' and identifies the mapping to be used.
+</dd><dt>XINP
+</dt><dd>(REAL, input) is used in one of three ways:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>When IMAP is zero, the value INT(XINP) is the index of a mapping about which CPMPXY is being asked to supply information.
+</dd><dt>&bull;
+</dt><dd>When IMAP is greater than zero, XINP is the X coordinate of a point on the contour plot. If 'XC1' = 'XCM' (the default situation), then XINP will lie in the range from 1 to M, where M is the first dimension of the array being contoured (equal to the value of the parameter 'ZDM'); in this case, the X coordinate will have the same range as the first index of the data array. If the user sets 'XC1' unequal to 'XCM', then XINP will lie in the range from 'XC1' (corresponding to an index value of 1) to 'XCM' (corresponding to an index value of M).
+</dd><dt>&bull;
+</dt><dd>When IMAP is less than zero, XINP is the X coordinate of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.</dd></dl></dl><dt>YINP
+</dt><dd>(REAL, input/output) is used in one of three ways:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>When IMAP is zero, CPMPXY is expected to return one of the following values of YINP: YINP = 0. indicates that neither the forward nor the inverse transformation is defined. YINP = 1. indicates that the forward transformation is defined, but the inverse is not. YINP = 2. indicates that the forward transformation is not defined, but the inverse is. YINP = 3. indicates that both the forward and the inverse transformations are defined.
+</dd><dt>&bull;
+</dt><dd>When IMAP is greater than zero, YINP is the Y coordinate of a point on the contour plot. If 'YC1' = 'YCN' (the default situation), then YINP will lie in the range from 1 to N, where N is the second dimension of the array being contoured (equal to the value of the parameter 'ZDN'); in this case, the Y coordinate will have the same range as the second index of the data array. If the user sets 'YC1' unequal to 'YCN', then YINP will lie in the range from 'YC1' (corresponding to an index value of 1) to 'YCN' (corresponding to an index value of N).
+</dd><dt>&bull;
+</dt><dd>When IMAP is less than zero, YINP is the Y coordinate of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.</dd></dl></dl><dt>XOTP and YOTP
+</dt><dd>(REAL, output) are used in one of two ways:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>If IMAP is greater than zero, XOTP and YOTP are the X and Y coordinates of a point on the contour plot, in a coordinate system consistent with the current window, as specified by arguments 5 through 8 of the last call to the SPPS routine SET or by the equivalent call to GKS.
+</dd><dt>&bull;
+</dt><dd>When IMAP is less than zero, XOTP and YOTP are the X and Y coordinates of a point on the contour plot. If 'XC1' = 'XCM' (the default situation), then XOTP will lie in the range from 1 to M, where M is the first dimension of the array being contoured (equal to the value of the parameter 'ZDM'); in this case, the X coordinate will have the same range as the first index of the data array. If the user sets 'XC1' unequal to 'XCM', then XOTP will lie in the range from 'XC1' (corresponding to an index value of 1) to 'XCM' (corresponding to an index value of M). Similarly, if 'YC1' = 'YCN' (the default situation), then YOTP will lie in the range from 1 to N, where N is the second dimension of the array being contoured (equal to the value of the parameter 'ZDN'); in this case, the Y coordinate will have the same range as the second index of the data array. If the user sets 'YC1' unequal to 'YCN', then YOTP will lie in the range from 'YC1' (corresponding to an index value of 1) to 'YCN' (corresponding to an index value of N). 
+ In any case, if the point (XINP,YINP) cannot be mapped for any reason, some recognizable impossible value should be returned for both of XOTP and YOTP and the internal parameter 'ORV' should be given that value, thereby allowing Conpack routines that call CPMPXY to determine whether or not a point being projected is visible or not. The value used for this purpose by the Ezmap routines MAPTRA and MAPTRI is 1.E12.</dd></dl></dl>
 </dl><h2>Usage</h2>CPMPXY is not to be called by the user. It is called by Conpack when the parameter 'MAP' is non-zero. Each call is intended 1) to inquire whether a given mapping is defined by CPMPXY, or 2) to map the X and Y coordinates of a single point, whose position is known relative to the data grid, to X and Y coordinates in some other coordinate system or 3) (as of version 3.1.3) to do the inverse mapping. The default version of CPMPXY is as follows: 
 
 <dl COMPACT><dd><pre>SUBROUTINE CPMPXY (IMAP,XINP,YINP,XOTP,YOTP)
@@ -62,7 +61,7 @@ CPMPXY - Maps Conpack output from a rectangular coordinate system superimposed o
  END IF
  RETURN
 END
-</dl>
+</dd></dl>
 When CPMPXY is called with IMAP = 0, it assumes it is being 
 asked to return information about its mapping capabilities. 
 XINP is assumed to have been given the value REAL(I), where 

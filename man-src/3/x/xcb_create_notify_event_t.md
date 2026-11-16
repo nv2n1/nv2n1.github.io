@@ -27,26 +27,26 @@ description: "xcb_create_notify_event_t –"
 } <code>xcb_create_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_CREATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>parent</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>window</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>x</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>y</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>width</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>height</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>border_width</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>override_redirect</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_CREATE_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>parent</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>window</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>x</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>y</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>width</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>height</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>border_width</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>override_redirect</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

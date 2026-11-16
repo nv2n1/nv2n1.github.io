@@ -32,12 +32,10 @@ description: "pmdaFetch, pmdaSetFetchCallBack – fill a pmResult structure with
 <p>The following code fragments are for a hypothetical PMDA has with metrics (A, B, C and D) and an instance domain (X) with two instances (X1 and X2). The instance domain and metrics description tables (see <code><a href="/docs/linux/man/3-pmdainit/">pmdaInit</a></code>(3)) could be defined as: </p>
 <pre><code>static pmdaInstid _X[] = {
     {0, &quot;X1&quot;}, {1, &quot;X2&quot;}};
-
 static pmdaIndom indomtab[] = {
 #define X_INDOM 0
     {0, 2, _X},
 };
-
 static pmdaMetric metrictab[] = {
     /* A */
     {
@@ -65,7 +63,6 @@ static pmdaMetric metrictab[] = {
 {
     static char sbuf[20]; // reuse this buffer
     char *dbuf;           // malloc'd
-
     switch (pmid_item(mdesc-&gt;m_desc.pmid)) {
     case 0:
         /* assign some value for metric A */;
@@ -91,7 +88,6 @@ static pmdaMetric metrictab[] = {
         /* place value in avp-&gt;cp */
         snprintf(avp-&gt;cp, somesize, ...);
         return PMDA_FETCH_DYNAMIC;
-
     default:
         return PM_ERR_PMID;
     }
@@ -101,16 +97,16 @@ static pmdaMetric metrictab[] = {
 <h2>Diagnostics</h2>
 <p>The following error messages indicate that there is discrepancy between the namespace, <code>pmdaMetric</code> and <code>pmdaIndom</code> tables passed to <code><a href="/docs/linux/man/3-pmdainit/">pmdaInit</a></code>(3), and the registered fetch callback:</p>
 <dl>
-<dt><code>pmdaFetch: Requested metric </code><i>metric</i><code> is not defined</code></p>
-<dd>A requested metric <i>metric</i> is not listed in the <code>pmdaMetric</code> table. The namespace for this <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) may contain additional metrics.</p>
-<dt><code>pmdaFetch: PMID </code><i>pmid</i><code> not handled by fetch callback</code></p>
-<dd>The <code>pmdaFetchCallBack</code> method has returned <code>PM_ERR_PMID</code>. This indicates that a metric may be listed in the <code>pmdaMetric</code> table, but is not supported by the callback method.</p>
-<dt><code>pmdaFetch: Instance </code><i>inst</i><code> of PMID </code><i>pmid</i><code> not handled by fetch callback</code></p>
-<dd>The <code>pmdaFetchCallBack</code> method has returned <code>PM_ERR_INST</code>. This indicates that an instance of metric is listed in the <code>pmdaIndom</code> table, but is not supported by the callback method.</p>
-<dt><code>pmdaFetch: Fetch callback error:</code></p>
-<dd>The <code>pmdaFetchCallBack</code> method returned a result other than <code>PMDA_FETCH_NOVALUES</code>, <code>PMDA_FETCH_STATIC</code>, <code>PMDA_FETCH_DYNAMIC</code>, <code>PM_ERR_PMID</code> or <code>PM_ERR_INST</code>.</p>
-<dt><code>pmdaFetch: Descriptor type (</code><i>type</i><code>) for metric </code><i>pmid</i><code> is bad</code></p>
-<dd>The data type <i>type</i> specified for the metric <i>pmid</i> in the <code>pmdaMetric</code> table is illegal.</dl>
+<dt><code>pmdaFetch: Requested metric </code><i>metric</i><code> is not defined</code></dt>
+<dd>A requested metric <i>metric</i> is not listed in the <code>pmdaMetric</code> table. The namespace for this <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) may contain additional metrics.</dd>
+<dt><code>pmdaFetch: PMID </code><i>pmid</i><code> not handled by fetch callback</code></dt>
+<dd>The <code>pmdaFetchCallBack</code> method has returned <code>PM_ERR_PMID</code>. This indicates that a metric may be listed in the <code>pmdaMetric</code> table, but is not supported by the callback method.</dd>
+<dt><code>pmdaFetch: Instance </code><i>inst</i><code> of PMID </code><i>pmid</i><code> not handled by fetch callback</code></dt>
+<dd>The <code>pmdaFetchCallBack</code> method has returned <code>PM_ERR_INST</code>. This indicates that an instance of metric is listed in the <code>pmdaIndom</code> table, but is not supported by the callback method.</dd>
+<dt><code>pmdaFetch: Fetch callback error:</code></dt>
+<dd>The <code>pmdaFetchCallBack</code> method returned a result other than <code>PMDA_FETCH_NOVALUES</code>, <code>PMDA_FETCH_STATIC</code>, <code>PMDA_FETCH_DYNAMIC</code>, <code>PM_ERR_PMID</code> or <code>PM_ERR_INST</code>.</dd>
+<dt><code>pmdaFetch: Descriptor type (</code><i>type</i><code>) for metric </code><i>pmid</i><code> is bad</code></dt>
+<dd>The data type <i>type</i> specified for the metric <i>pmid</i> in the <code>pmdaMetric</code> table is illegal.</dd></dl>
 <p> <code>pmdaFetch</code> will return <code>-errno</code> if an error occurred while allocating the <code>pmResult</code> structure or copying the value from the <code>pmAtomValue</code>.</p>
 <h2>Caveat</h2>
 <p>The PMDA must be using <code>PMDA_INTERFACE_2 </code> or later, as specified in the call to <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3).</p>

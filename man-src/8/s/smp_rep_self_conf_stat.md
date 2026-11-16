@@ -15,28 +15,28 @@ description: "smp_rep_self_conf_stat – invoke REPORT SELF-CONFIGURATION STATUS
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;brief</code></p>
-<dd>lessen the amount of header information output and compress each self confuration status descriptor to one line of output.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;index</code>=<i>SDI</i></p>
-<dd><i>SDI</i> is the starting self-configuration status descriptor index, an integer in the range 0 to 65535. The default value is 1 . If <i>SDI</i> is 0 then no descriptors are placed in the response plus the &quot;starting self-configuration status descriptor index&quot; and &quot;total number of self-configuration status descriptors&quot; fields in the response are both set to 0. That makes setting <i>SDI</i> to 0 a lot less useful tha it could have been. <i>SDI</i> may be decimal (default) or hexadecimal prefixed by &#8216;0x&#8217; (or &#8216;0X&#8217;) or with a &#8216;h&#8217; (or &#8216;H&#8217;) suffix.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-l</code>, <code>&#8211;last</code></p>
-<dd>Sends a REPORT SELF-CONFIGURATION STATUS request to find out the contents of the &quot;last self-configuration status descriptor index&quot; field in the response. If it is different from <i>SDI</i> then it re-issues that request with the &quot;starting self-configuration status descriptor index&quot; field set to the &quot;last&quot; value. Often only the last (i.e. most recent) recorded descriptor is of interest and that is what this option should show. In cases there may be more than one descriptor starting at the last index.</p>
-<dt><code>-o</code>, <code>&#8211;one</code></p>
-<dd>If multiple self-configuration status descriptors are found, then only output the first one.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-b</code>, <code>&#8211;brief</code></dt>
+<dd>lessen the amount of header information output and compress each self confuration status descriptor to one line of output.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;index</code>=<i>SDI</i></dt>
+<dd><i>SDI</i> is the starting self-configuration status descriptor index, an integer in the range 0 to 65535. The default value is 1 . If <i>SDI</i> is 0 then no descriptors are placed in the response plus the &quot;starting self-configuration status descriptor index&quot; and &quot;total number of self-configuration status descriptors&quot; fields in the response are both set to 0. That makes setting <i>SDI</i> to 0 a lot less useful tha it could have been. <i>SDI</i> may be decimal (default) or hexadecimal prefixed by &#8216;0x&#8217; (or &#8216;0X&#8217;) or with a &#8216;h&#8217; (or &#8216;H&#8217;) suffix.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-l</code>, <code>&#8211;last</code></dt>
+<dd>Sends a REPORT SELF-CONFIGURATION STATUS request to find out the contents of the &quot;last self-configuration status descriptor index&quot; field in the response. If it is different from <i>SDI</i> then it re-issues that request with the &quot;starting self-configuration status descriptor index&quot; field set to the &quot;last&quot; value. Often only the last (i.e. most recent) recorded descriptor is of interest and that is what this option should show. In cases there may be more than one descriptor starting at the last index.</dd>
+<dt><code>-o</code>, <code>&#8211;one</code></dt>
+<dd>If multiple self-configuration status descriptors are found, then only output the first one.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. The mpt interface needs this option and it will typically be an expander&#8217;s SAS address. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>The &quot;last self-configuration status descriptor index&quot; field in the response may indicate the lowest index of the last recorded (i.e. most recent) &quot;clump&quot; of status descriptors placed in the expander&#8217;s storage. </p>
 <p> This utility flags the &quot;last self-configuration status descriptor index&quot; descriptor in its output with a &quot;&gt;&gt;&gt;&quot; indication. For brief output the descriptor line starts with &quot;&gt;&gt;&gt;&quot; while for normal output (i.e. when <i>&#8211;brief</i> not given) the index has &quot;&gt;&gt;&gt;&quot; placed in front of it.</p>

@@ -17,44 +17,44 @@ description: "kpsewhich – standalone path lookup and and expansion for kpathse
 <h2>OPTIONS</h2>
 <p> <code>kpsewhich</code> accepts the following options:</p>
 <dl>
-<dt><code>-debug</code><i>&nbsp;num</i></p>
-<dd> Set debugging flags.</p>
-<dt><code>-D</code><i>&nbsp;num</i></p>
-<dd> Use a base resolution of <i>num</i>; the default, set by the installer, is typically 600.</p>
-<dt><code>-dpi</code><i>&nbsp;num</i></p>
-<dd> As <code>-D.</code></p>
-<dt><code>-engine</code><i>&nbsp;string</i></p>
-<dd> Set <i>$engine</i> in the environment, which is used in some search paths.</p>
-<dt><code>-expand-braces</code><i>&nbsp;string</i></p>
-<dd> Print variable and brace expansion of <i>string</i>.</p>
-<dt><code>-expand-path</code><i>&nbsp;string</i></p>
-<dd> Print complete path expansion of <i>string</i>.</p>
-<dt><code>-expand-var</code><i>&nbsp;string</i></p>
-<dd> Print variable expansion of <i>string</i>.</p>
-<dt><code>-format</code><i>&nbsp;name</i></p>
-<dd> Use file type <i>name</i>. See the info manual for a list of valid names, or use the <code>-help</code> option to print the list.</p>
-<dt><code>-help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>-interactive</code></p>
-<dd> Ask for additional filenames to look up.</p>
-<dt><code>-mktex</code><i>&nbsp;fmt</i></p>
-<dd> enable mktex<i>fmt</i> generation. (<i>fmt</i>=pk/mf/tex/tfm)</p>
-<dt><code>-mode</code><i>&nbsp;string</i></p>
-<dd> Set device name for <i>$MAKETEX_MODE</i> to <i>string</i>; no default.</p>
-<dt><code>-must-exist</code></p>
-<dd> Search the disk as well as ls-R if necessary.</p>
-<dt><code>-no-mktex</code><i>&nbsp;fmt</i></p>
-<dd> disable mktex<i>fmt</i> generation. (<i>fmt</i>=pk/mf/tex/tfm)</p>
-<dt><code>-path</code><i>&nbsp;string</i></p>
-<dd> Search in the path <i>string</i>.</p>
-<dt><code>-progname</code><i>&nbsp;string</i></p>
-<dd> Set program name to <i>string</i>.</p>
-<dt><code>-show-path</code><i>&nbsp;name</i></p>
-<dd> Output search path for file type <i>name</i>. See the info manual for a list of valid names, or use the <code>-help</code> option to print the list.</p>
-<dt><code>-var-value</code><i>&nbsp;variable</i></p>
-<dd> Print the expansion of <i>variable</i>.</p>
-<dt><code>-version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-debug</code><i>&nbsp;num</i></dt>
+<dd> Set debugging flags.</dd>
+<dt><code>-D</code><i>&nbsp;num</i></dt>
+<dd> Use a base resolution of <i>num</i>; the default, set by the installer, is typically 600.</dd>
+<dt><code>-dpi</code><i>&nbsp;num</i></dt>
+<dd> As <code>-D.</code></dd>
+<dt><code>-engine</code><i>&nbsp;string</i></dt>
+<dd> Set <i>$engine</i> in the environment, which is used in some search paths.</dd>
+<dt><code>-expand-braces</code><i>&nbsp;string</i></dt>
+<dd> Print variable and brace expansion of <i>string</i>.</dd>
+<dt><code>-expand-path</code><i>&nbsp;string</i></dt>
+<dd> Print complete path expansion of <i>string</i>.</dd>
+<dt><code>-expand-var</code><i>&nbsp;string</i></dt>
+<dd> Print variable expansion of <i>string</i>.</dd>
+<dt><code>-format</code><i>&nbsp;name</i></dt>
+<dd> Use file type <i>name</i>. See the info manual for a list of valid names, or use the <code>-help</code> option to print the list.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>-interactive</code></dt>
+<dd> Ask for additional filenames to look up.</dd>
+<dt><code>-mktex</code><i>&nbsp;fmt</i></dt>
+<dd> enable mktex<i>fmt</i> generation. (<i>fmt</i>=pk/mf/tex/tfm)</dd>
+<dt><code>-mode</code><i>&nbsp;string</i></dt>
+<dd> Set device name for <i>$MAKETEX_MODE</i> to <i>string</i>; no default.</dd>
+<dt><code>-must-exist</code></dt>
+<dd> Search the disk as well as ls-R if necessary.</dd>
+<dt><code>-no-mktex</code><i>&nbsp;fmt</i></dt>
+<dd> disable mktex<i>fmt</i> generation. (<i>fmt</i>=pk/mf/tex/tfm)</dd>
+<dt><code>-path</code><i>&nbsp;string</i></dt>
+<dd> Search in the path <i>string</i>.</dd>
+<dt><code>-progname</code><i>&nbsp;string</i></dt>
+<dd> Set program name to <i>string</i>.</dd>
+<dt><code>-show-path</code><i>&nbsp;name</i></dt>
+<dd> Output search path for file type <i>name</i>. See the info manual for a list of valid names, or use the <code>-help</code> option to print the list.</dd>
+<dt><code>-var-value</code><i>&nbsp;variable</i></dt>
+<dd> Print the expansion of <i>variable</i>.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mktexlsr/">mktexlsr</a></code>(1), <code><a href="/docs/linux/man/1-mktexmf/">mktexmf</a></code>(1), <code><a href="/docs/linux/man/1-mktexpk/">mktexpk</a></code>(1), <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1). </p>
 <h2>Index</h2>

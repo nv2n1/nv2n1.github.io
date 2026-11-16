@@ -15,13 +15,13 @@ description: "qemu-make-debian-root – Create a debian root image for qemu"
 <dl>
 <dd>
 <pre><code>qemu disk.img -kernel /boot/vmlinuz</code></pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-k</code></p>
-<dd>Keep file system.</p>
-<dt><code>-s</code></p>
-<dd>Create a sparse image.</dl>
+<dt><code>-k</code></dt>
+<dd>Keep file system.</dd>
+<dt><code>-s</code></dt>
+<dd>Create a sparse image.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-qemu/">qemu</a></code>(1), <code><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></code>(1).</p>
 <h2>Author</h2>

@@ -10,7 +10,6 @@ description: "show_video_bitmap – Flips the hardware screen to use the specifi
 <p>show_video_bitmap &#8211; Flips the hardware screen to use the specified page. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int show_video_bitmap(BITMAP *bitmap);</code></pre>
 <h2>Description</h2>
 <p>Attempts to page flip the hardware screen to display the specified video bitmap object, which must be the same size as the physical screen, and should have been obtained by calling the create_video_bitmap() function. Allegro will handle any necessary vertical retrace synchronisation when page flipping, so you don&#8217;t need to call vsync() before it. This means that show_video_bitmap() has the same time delay effects as vsync() by default. This can be adjusted with the &quot;disable_vsync&quot; config key in the [graphics] section of allegro.cfg. Example: </p>

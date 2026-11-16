@@ -18,47 +18,47 @@ description: "erb – Ruby Templating"
 <p> is a part of <code>Ruby</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd>Prints the version of <code>.</code> </p>
-<dt><code>-E </code><i>external </i>[: <i>internal</i> ]</p>
+<dt><code>&#8211;version</code></dt>
+<dd>Prints the version of <code>.</code> </dd>
+<dt><code>-E </code><i>external </i>[: <i>internal</i> ]</dt>
 <dd>
-<dt><code>&#8211;encoding </code><i>external </i>[: <i>internal</i> ]</p>
-<dd>Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:). </p>
+</dd><dt><code>&#8211;encoding </code><i>external </i>[: <i>internal</i> ]</dt>
+<dd>Specifies the default value(s) for external encodings and internal encoding. Values should be separated with colon (:). </dd>
 <p> You can omit the one for internal encodings, then the value ( <code>Encoding.default_internal ) will be nil.</code> </p>
-<dt><code>-P</code></p>
-<dd>Disables ruby code evaluation for lines beginning with <code>%</code> </p>
-<dt><code>-S </code><i>level</i></p>
-<dd>Specifies the safe level in which eRuby script will run. </p>
-<dt><code>-T </code><i>mode</i></p>
-<dd>Specifies trim mode (default 0). <i>mode</i> can be one of</p>
+<dt><code>-P</code></dt>
+<dd>Disables ruby code evaluation for lines beginning with <code>%</code> </dd>
+<dt><code>-S </code><i>level</i></dt>
+<dd>Specifies the safe level in which eRuby script will run. </dd>
+<dt><code>-T </code><i>mode</i></dt>
+<dd>Specifies trim mode (default 0). <i>mode</i> can be one of</dd>
 <dl>
-<dt><code>0</code></p>
-<dd>EOL remains after the embedded ruby script is evaluated. </p>
-<dt><code>1</code></p>
-<dd>EOL is removed if the line ends with <code>%&gt;</code> </p>
-<dt><code>2</code></p>
-<dd>EOL is removed if the line starts with <code>&lt;%</code> and ends with <code>%&gt;</code> </p>
-<dt><code>&#8211;</code></p>
-<dd>EOL is removed if the line ends with <code>-%&gt;</code> And leading whitespaces are removed if the erb directive starts with <code>&lt;%-</code> </p>
+<dt><code>0</code></dt>
+<dd>EOL remains after the embedded ruby script is evaluated. </dd>
+<dt><code>1</code></dt>
+<dd>EOL is removed if the line ends with <code>%&gt;</code> </dd>
+<dt><code>2</code></dt>
+<dd>EOL is removed if the line starts with <code>&lt;%</code> and ends with <code>%&gt;</code> </dd>
+<dt><code>&#8211;</code></dt>
+<dd>EOL is removed if the line ends with <code>-%&gt;</code> And leading whitespaces are removed if the erb directive starts with <code>&lt;%-</code> </dd>
 </dl>
-<dt><code>-r</code></p>
-<dd>Load a library </p>
-<dt><code>-U</code></p>
-<dd>can be one of Sets the default value for internal encodings ( <code>Encoding.default_internal ) to UTF-8.</code> </p>
-<dt><code>-d</code></p>
+<dt><code>-r</code></dt>
+<dd>Load a library </dd>
+<dt><code>-U</code></dt>
+<dd>can be one of Sets the default value for internal encodings ( <code>Encoding.default_internal ) to UTF-8.</code> </dd>
+<dt><code>-d</code></dt>
 <dd>
-<dt><code>&#8211;debug</code></p>
-<dd>Turns on debug mode. <code>$DEBUG</code> will be set to true. </p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;debug</code></dt>
+<dd>Turns on debug mode. <code>$DEBUG</code> will be set to true. </dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd>Prints a summary of the options. </p>
-<dt><code>-n</code></p>
-<dd>Used with &#8211;<code>x</code> Prepends the line number to each line in the output. </p>
-<dt><code>-v</code></p>
-<dd>Enables verbose mode. <code>$VERBOSE</code> will be set to true. </p>
-<dt><code>-x</code></p>
-<dd>Converts the eRuby script into Ruby script and prints it without line numbers. </p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd>Prints a summary of the options. </dd>
+<dt><code>-n</code></dt>
+<dd>Used with &#8211;<code>x</code> Prepends the line number to each line in the output. </dd>
+<dt><code>-v</code></dt>
+<dd>Enables verbose mode. <code>$VERBOSE</code> will be set to true. </dd>
+<dt><code>-x</code></dt>
+<dd>Converts the eRuby script into Ruby script and prints it without line numbers. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Here is an eRuby script </p>

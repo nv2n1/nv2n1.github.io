@@ -11,7 +11,6 @@ description: "malloc, free, calloc, realloc, reallocarray – allocate and free 
 <p>malloc, free, calloc, realloc, reallocarray &#8211; allocate and free dynamic memory</p>
 <h2 id="synopsis">SYNOPSIS</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 void *malloc(size_t size);
 void free(void *ptr);
 void *calloc(size_t nmemb, size_t size);

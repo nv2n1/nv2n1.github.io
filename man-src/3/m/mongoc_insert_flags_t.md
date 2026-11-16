@@ -19,13 +19,13 @@ description: "mongoc_insert_flags_t – Flags for deletion operations"
 <p>These flags correspond to the MongoDB wire protocol. They may be bitwise or&#8217;d together. They may modify how an insert happens on the MongoDB server. </p>
 <h2>Flag Values</h2>
 <dl COMPACT>
-<dt><code>MONGOC_INSERT_NONE</code></p>
-<dd>Specify no insert flags.</dl>
+<dt><code>MONGOC_INSERT_NONE</code></dt>
+<dd>Specify no insert flags.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_INSERT_CONTINUE_ON_ERROR</code></p>
-<dd>Continue inserting documents from the insertion set even if one insert fails.</dl>
+<dt><code>MONGOC_INSERT_CONTINUE_ON_ERROR</code></dt>
+<dd>Continue inserting documents from the insertion set even if one insert fails.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_INSERT_NO_VALIDATE</code></p>
-<dd>Do not validate insertion documents before performing an insert. Validation can be expensive, so this can save some time if you know your documents are already valid.</dl>
+<dt><code>MONGOC_INSERT_NO_VALIDATE</code></dt>
+<dd>Do not validate insertion documents before performing an insert. Validation can be expensive, so this can save some time if you know your documents are already valid.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

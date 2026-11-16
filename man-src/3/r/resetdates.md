@@ -10,16 +10,10 @@ description: "QuantLib::CliquetOption::arguments – Arguments for cliquet optio
 <p>QuantLib::CliquetOption::arguments &#8211; Arguments for cliquet option calculation </p>
 <h2>Synopsis</h2>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> Inherits <code>QuantLib::Option::arguments</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void validate () const
-
-
-
 Public Attributes</code></pre>
 <p> <code>Real</code> <code>accruedCoupon</code> </p>
 <p> <code>Real</code> <code>lastFixing</code> </p>

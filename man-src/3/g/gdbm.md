@@ -13,39 +13,23 @@ description: "GDBM – The GNU database manager. Includes dbm and ndbm compatabi
 <pre><code>
 #include &lt;gdbm.h&gt;
 extern gdbm_error gdbm_errno;
-
 extern char *gdbm_version;
-
 GDBM_FILE gdbm_open(const char *name, int block_size,
-
                     &amp;nbsp;
                     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int flags, int mode,
-
                                                                                                                                                                 &amp;nbsp;
                     &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; void (*fatal_func)(const char *));
-
 void gdbm_close(GDBM_FILE dbf);
-
 int gdbm_store(GDBM_FILE dbf, datum key, datum content, int flag);
-
 datum gdbm_fetch(GDBM_FILE dbf, datum key);
-
 int gdbm_delete(GDBM_FILE dbf, datum key);
-
 datum gdbm_firstkey(GDBM_FILE dbf);
-
 datum gdbm_nextkey(GDBM_FILE dbf, datum key);
-
 int gdbm_reorganize(GDBM_FILE dbf);
-
 void gdbm_sync(GDBM_FILE dbf);
-
 int gdbm_exists(GDBM_FILE dbf, datum key);
-
 const char *gdbm_strerror(gdbm_error errno);
-
 int gdbm_setopt(GDBM_FILE dbf, int option, int value, int size);
-
 int gdbm_fdesc(GDBM_FILE dbf);
 </code></pre>
 <h3>DBM Compatability routines:</h3>
@@ -81,21 +65,21 @@ int gdbm_fdesc(GDBM_FILE dbf);
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>void (*</code><i>fatal_func</i><code>)(const char *));</code> </p>
 <p> <i>Name</i> is the name of the file (the complete name, gdbm does not append any characters to this name). <i>Block_size</i> is the size of a single transfer from disk to memory. This parameter is ignored unless the file is a new file. The minimum size is 512. If it is less than 512, dbm will use the stat block size for the file system. <i>Read_write</i> can have one of the following values:</p>
 <dl>
-<dt><code>GDBM_READER</code></p>
-<dd> reader</p>
-<dt><code>GDBM_WRITER</code></p>
-<dd> writer</p>
-<dt><code>GDBM_WRCREAT</code></p>
-<dd> writer &#8211; if database does not exist create new one</p>
-<dt><code>GDBM_NEWDB</code></p>
-<dd> writer &#8211; create new database regardless if one exists</dl>
+<dt><code>GDBM_READER</code></dt>
+<dd> reader</dd>
+<dt><code>GDBM_WRITER</code></dt>
+<dd> writer</dd>
+<dt><code>GDBM_WRCREAT</code></dt>
+<dd> writer &#8211; if database does not exist create new one</dd>
+<dt><code>GDBM_NEWDB</code></dt>
+<dd> writer &#8211; create new database regardless if one exists</dd></dl>
 <p> The <code>GDBM_NOMMAP</code> added to <i>read_write</i> by bitwise or instructs <code>gdbm_open</code> to disable the use of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). </p>
 <p> For the last three (writers of the database) the following may be added added to <i>read_write</i> by bitwise or:</p>
 <dl>
-<dt><code>GDBM_SYNC</code></p>
-<dd> Causes all database operations to be synchronized to the disk,</p>
-<dt><code>GDBM_NOLOCK</code></p>
-<dd> Pevents the library from performing any locking on the database file.</dl>
+<dt><code>GDBM_SYNC</code></dt>
+<dd> Causes all database operations to be synchronized to the disk,</dd>
+<dt><code>GDBM_NOLOCK</code></dt>
+<dd> Pevents the library from performing any locking on the database file.</dd></dl>
 <p> The option <code>GDBM_FAST</code> is now obsolete, since gdbm defaults to no-sync mode. </p>
 <p> <i>Mode</i> is the file mode (see <code><a href="/docs/linux/man/2-chmod/">chmod</a>(2)</code> and <code><a href="/docs/linux/man/2-open/">open</a>(2)</code>) if the file is created. <i>(*Fatal_func) ()</i> is a function for dbm to call if it detects a fatal error. The only parameter of this function is a string. If the value of 0 is provided, <code>gdbm</code> will use a default function. </p>
 <p> The return value is the pointer needed by all other routines to access that gdbm file. If the return is the NULL pointer, <code>gdbm_open</code> was not successful. The errors can be found in <i>gdbm_errno</i> for gdbm errors and in <i>errno</i> for system errors. (For error codes, see gdbmerrno.h.) </p>
@@ -106,10 +90,10 @@ int gdbm_fdesc(GDBM_FILE dbf);
 <p> <code>int gdbm_store (GDBM_FILE </code><i>dbf</i><code>, datum </code><i>key</i><code>, datum </code><i>content</i><code>, int </code><i>flag</i><code>);</code> </p>
 <p> <i>Dbf</i> is the pointer returned by <code>gdbm_open</code>. <i>Key</i> is the key data. <i>Content</i> is the data to be associated with the <i>key</i>. <i>Flag</i> can have one of the following values:</p>
 <dl>
-<dt><code>GDBM_INSERT</code></p>
-<dd> Insert only, generate an error if key exists;</p>
-<dt><code>GDBM_REPLACE</code></p>
-<dd> Replace contents if key exists.</dl>
+<dt><code>GDBM_INSERT</code></dt>
+<dd> Insert only, generate an error if key exists;</dd>
+<dt><code>GDBM_REPLACE</code></dt>
+<dd> Replace contents if key exists.</dd></dl>
 <p> If a reader calls <code>gdbm_store</code>, the return value will be -1. If called with <code>GDBM_INSERT</code> and <i>key</i> is in the database, the return value will be 1. Otherwise, the return value is 0. </p>
 <p> <i>NOTICE: If you store data for a key that is already in the data base, </i><code>gdbm</code><i> replaces the old data with the new data if called with </i><code>GDBM_REPLACE</code><i>. You do not get two data items for the same key and you do not get an error from </i><code>gdbm_store</code><i>. </p>
 <p> NOTICE: The size in </i><code>gdbm</code><i> is not restricted like in </i><code>dbm</code><i> or </i><code>ndbm</code><i>. Your data can be as large as you want.</i> </p>
@@ -152,22 +136,21 @@ while (key.dptr) {<br />
 <p> <code>int gdbm_setopt (GDBM_FILE </code><i>dbf</i><code>, int </code><i>option</i><code>, int </code><i>value</i><code>, int </code><i>size</i><code>);</code> </p>
 <p> Where <i>dbf</i> is the return value from a previous call to <code>gdbm_open</code>, and <i>option</i> specifies which option to set. The valid options are currently:</p>
 <dl>
-<dt><code>GDBM_CACHESIZE</code></p>
-<dd> Set the size of the internal bucket cache. This option may only be set once on each <i>GDBM_FILE</i> descriptor, and is set automatically to 100 upon the first access to the database.</p>
-<dt><code>GDBM_FASTMODE</code></p>
+<dt><code>GDBM_CACHESIZE</code></dt>
+<dd> Set the size of the internal bucket cache. This option may only be set once on each <i>GDBM_FILE</i> descriptor, and is set automatically to 100 upon the first access to the database.</dd>
+<dt><code>GDBM_FASTMODE</code></dt>
 <dd>
-&nbsp;<wbr>Set&nbsp;<wbr><code>fast mode</code>&nbsp;<wbr>to either on or off.&nbsp;<wbr>&nbsp;<wbr>This allows&nbsp;<wbr><code>fast mode</code>&nbsp;<wbr>to be toggled on an already open and active database. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>This option is now obsolete.</i></p>
-<dt><code>GDBM_SYNCMODE</code></p>
-<dd> Turn on or off file system synchronization operations. This setting defaults to off; <i>value</i> (see below) should be set to either TRUE or FALSE.</p>
-<dt><code>GDBM_CENTFREE</code></p>
-<dd> Set <code>central free block pool</code> to either on or off. The default is off, which is how previous versions of <code>Gdbm</code> handled free blocks. If set, this option causes all subsequent free blocks to be placed in the <code>global</code> pool, allowing (in thoery) more file space to be reused more quickly. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>NOTICE: This feature is still under study.</i></p>
-<dt><code>GDBM_COALESCEBLKS</code></p>
-<dd> Set <code>free block merging</code> to either on or off. The default is off, which is how previous versions of <code>Gdbm</code> handled free blocks. If set, this option causes adjacent free blocks to be merged. This can become a CPU expensive process with time, though, especially if used in conjunction with <code>GDBM_CENTFREE</code>. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>NOTICE: This feature is still under study.</i></dl>
+&nbsp;<wbr>Set&nbsp;<wbr><code>fast mode</code>&nbsp;<wbr>to either on or off.&nbsp;<wbr>&nbsp;<wbr>This allows&nbsp;<wbr><code>fast mode</code>&nbsp;<wbr>to be toggled on an already open and active database. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>This option is now obsolete.</i></dd>
+<dt><code>GDBM_SYNCMODE</code></dt>
+<dd> Turn on or off file system synchronization operations. This setting defaults to off; <i>value</i> (see below) should be set to either TRUE or FALSE.</dd>
+<dt><code>GDBM_CENTFREE</code></dt>
+<dd> Set <code>central free block pool</code> to either on or off. The default is off, which is how previous versions of <code>Gdbm</code> handled free blocks. If set, this option causes all subsequent free blocks to be placed in the <code>global</code> pool, allowing (in thoery) more file space to be reused more quickly. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>NOTICE: This feature is still under study.</i></dd>
+<dt><code>GDBM_COALESCEBLKS</code></dt>
+<dd> Set <code>free block merging</code> to either on or off. The default is off, which is how previous versions of <code>Gdbm</code> handled free blocks. If set, this option causes adjacent free blocks to be merged. This can become a CPU expensive process with time, though, especially if used in conjunction with <code>GDBM_CENTFREE</code>. <i>value</i> (see below) should be set to either TRUE or FALSE. <i>NOTICE: This feature is still under study.</i></dd></dl>
 <p> <i>value</i> is the value to set <i>option</i> to, specified as an integer pointer. <i>size</i> is the size of the data pointed to by <i>value</i>. The return value will be -1 upon failure, or 0 upon success. The global variable <i>gdbm_errno</i> will be set upon failure. </p>
 <p> For instance, to set a database to use a cache of 10, after opening it with <code>gdbm_open</code>, but prior to accessing it in any way, the following code could be used: </p>
 <pre><code>
 int value = 10;
-
 ret = gdbm_setopt(dbf, GDBM_CACHESIZE, &amp;value, sizeof(int));
 </code></pre>
 <p> If the database was opened with the <code>GDBM_NOLOCK</code> flag, the user may wish to perform their own file locking on the database file in order to prevent multiple writers operating on the same file simultaneously. </p>

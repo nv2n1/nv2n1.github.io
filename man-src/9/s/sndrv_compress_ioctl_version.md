@@ -10,9 +10,9 @@ description: "SNDRV_COMPRESS_IOCTL_VERSION –"
 <p>SNDRV_COMPRESS_IOCTL_VERSION &#8211;</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>SNDRV_COMPRESS_IOCTL_VERSION(void);</code></dl>
+<dt> <code>SNDRV_COMPRESS_IOCTL_VERSION(void);</code></dt></dl>
 <h2>Arguments</h2>
-<dd>None</p>
+<dd>None</dd>
 <h2>Description</h2>
 <p>SNDRV_COMPRESS_GET_CAPS: Query capability of DSP SNDRV_COMPRESS_GET_CODEC_CAPS: Query capability of a codec SNDRV_COMPRESS_SET_PARAMS: Set codec and stream parameters</p>
 <h2>Note</h2>

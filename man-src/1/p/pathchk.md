@@ -14,16 +14,16 @@ description: "pathchk – check whether file names are valid or portable"
 <h2>DESCRIPTION</h2>
 <p> Diagnose invalid or unportable file names.</p>
 <dl>
-<dt><code>-p</code></p>
-<dd> check for most POSIX systems</p>
-<dt><code>-P</code></p>
-<dd> check for empty names and leading &quot;-&quot;</p>
-<dt><code>&#8211;portability</code></p>
-<dd> check for all POSIX systems (equivalent to <code>-p</code> <code>-P</code>)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-p</code></dt>
+<dd> check for most POSIX systems</dd>
+<dt><code>-P</code></dt>
+<dd> check for empty names and leading &quot;-&quot;</dd>
+<dt><code>&#8211;portability</code></dt>
+<dd> check for all POSIX systems (equivalent to <code>-p</code> <code>-P</code>)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Paul Eggert, David MacKenzie, and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>

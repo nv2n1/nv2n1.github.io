@@ -16,37 +16,37 @@ description: "ninpaths – Report Usenet Path: statistics (new inpaths)"
 <p> Some central sites accumulate the Path: data from many news servers running this program or one like it, and then report statistics on the most frequently seen news servers in Usenet article Path: lines. The <code>sendinpaths</code> script can be run daily to mail the accumulated statistics to such a site and remove the old dump files. </p>
 <p> You can get a working setup by doing the following:</p>
 <dl>
-<dt>1.</p>
-<dd>Create a directory at <i>pathlog</i>/path (replacing <i>pathlog</i> here and in all steps that follow with the full path to your <font SIZE="-1">INN</font> log directory). Do not change the name of the <tt>&quot;path&quot;</tt> subdirectory because it is used by <code>sendinpaths</code>.</p>
-<dt>2.</p>
-<dd>Set up a channel feed using an entry like: </p>
+<dt>1.</dt>
+<dd>Create a directory at <i>pathlog</i>/path (replacing <i>pathlog</i> here and in all steps that follow with the full path to your <font SIZE="-1">INN</font> log directory). Do not change the name of the <tt>&quot;path&quot;</tt> subdirectory because it is used by <code>sendinpaths</code>.</dd>
+<dt>2.</dt>
+<dd>Set up a channel feed using an entry like: </dd>
 <pre> inpaths!:*:Tc,WP:&lt;pathbin&gt;/ninpaths -p -d &lt;pathlog&gt;/path/inpaths.%d</pre>
 <p>if your version of <font SIZE="-1">INN</font> supports <tt>&quot;WP&quot;</tt> (2.0 and later all do). Replace &lt;pathbin&gt; with the full path to your <font SIZE="-1">INN</font> binaries directory, and &lt;pathlog&gt; with the full path to your <font SIZE="-1">INN</font> log directory. </p>
 <p> Note that the naming convention of the generated inpaths dump files should not be changed. <code>sendinpaths</code> explicitly searches files whose name starts with <tt>&quot;inpaths.&quot;</tt> in the &lt;pathlog&gt;/path directory.</p>
-<dt>3.</p>
-<dd>Run the following command to start logging these statistics: </p>
+<dt>3.</dt>
+<dd>Run the following command to start logging these statistics: </dd>
 <pre> ctlinnd reload newsfeeds 'inpaths feed setup'</pre>
-<dt>4.</p>
-<dd>Enter into your news user crontab these two lines: </p>
+<dt>4.</dt>
+<dd>Enter into your news user crontab these two lines: </dd>
 <pre> 6 6 * * * &lt;pathbin&gt;/ctlinnd flush inpaths!
  10 6 * * * &lt;pathbin&gt;/sendinpaths</pre>
 <p>(the actual time doesn&#8217;t matter). This will force <code>ninpaths</code> to generate a dump file once a day. Then, a few minutes later, <code>sendinpaths</code> collects the dumps, makes a report, sends the collected statistics, and deletes the old dumps. </p>
 <p> Note that you can manually generate a report without mailing it, and without deleting processed dump files, with <tt>&quot;sendinpaths -n&quot;</tt>. Another useful command is <tt>&quot;sendinpaths -c&quot;</tt> so as to receive a copy of the e-mail sent by <code>sendinpaths</code> and therefore make sure that everything is properly set.</p>
-<dt>5.</p>
-<dd>In a couple of days, check that your daily statistics properly appear in &lt;<a rel="nofollow" href="http://top1000.anthologeek.net/">http://top1000.anthologeek.net/</a>&gt;.</dl>
+<dt>5.</dt>
+<dd>In a couple of days, check that your daily statistics properly appear in &lt;<a rel="nofollow" href="http://top1000.anthologeek.net/">http://top1000.anthologeek.net/</a>&gt;.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> <i>dumpfile</i></p>
-<dd>Save dumps in <i>dumpfile</i>. Any <tt>%d</tt> in <i>dumpfile</i> will be replaced with the current system time when the dump is made. This option should be used with <code>-p</code>. </p>
+<dt><code>-d</code> <i>dumpfile</i></dt>
+<dd>Save dumps in <i>dumpfile</i>. Any <tt>%d</tt> in <i>dumpfile</i> will be replaced with the current system time when the dump is made. This option should be used with <code>-p</code>. </dd>
 <p> The format of these dump files is described below.</p>
-<dt><code>-p</code></p>
-<dd>Read Path: lines from standard input.</p>
-<dt><code>-r</code> <i>site</i></p>
-<dd>Generate a report for <i>site</i>. Generally <i>site</i> should be the value of <i>pathhost</i> from <i>inn.conf</i>.</p>
-<dt><code>-u</code> <i>dumpfile</i></p>
-<dd>Read data from <i>dumpfile</i>. This option can be repeated to read data from multiple dump files.</p>
-<dt><code>-v</code> <i>level</i></p>
-<dd>Set the verbosity level of the report. Valid values for <i>level</i> are <tt>0</tt>, <tt>1</tt>, and <tt>2</tt>, with <tt>2</tt> being the default.</dl>
+<dt><code>-p</code></dt>
+<dd>Read Path: lines from standard input.</dd>
+<dt><code>-r</code> <i>site</i></dt>
+<dd>Generate a report for <i>site</i>. Generally <i>site</i> should be the value of <i>pathhost</i> from <i>inn.conf</i>.</dd>
+<dt><code>-u</code> <i>dumpfile</i></dt>
+<dd>Read data from <i>dumpfile</i>. This option can be repeated to read data from multiple dump files.</dd>
+<dt><code>-v</code> <i>level</i></dt>
+<dd>Set the verbosity level of the report. Valid values for <i>level</i> are <tt>0</tt>, <tt>1</tt>, and <tt>2</tt>, with <tt>2</tt> being the default.</dd></dl>
 <h2>Dump File Format</h2>
 <p>The format of the generated dump files is: </p>
 <pre> !!NINP &lt;version&gt; &lt;start-time&gt; &lt;end-time&gt; &lt;nb-sites&gt; &lt;nb-articles&gt; &lt;average-time&gt;

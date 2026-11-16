@@ -12,17 +12,17 @@ GQLN (Inquire line type) - retrieves the current setting for linetype.
 
  void ginq_linetype(Gint *err_ind, Gint *linetype);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>LTYPE
-<dd>(Integer, Output) - Returns the current value for the line type as set by default or by a call to GSLN.
-<dl COMPACT><dd><dl COMPACT><dt>1
-<dd>Solid
-<dt>2
-<dd>Dashed
-<dt>3
-<dd>Dotted
-<dt>4
-<dd>Dot-dash</dl></dl>
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>LTYPE
+</dt><dd>(Integer, Output) - Returns the current value for the line type as set by default or by a call to GSLN.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>1
+</dt><dd>Solid
+</dd><dt>2
+</dt><dd>Dashed
+</dd><dt>3
+</dt><dd>Dotted
+</dd><dt>4
+</dt><dd>Dot-dash</dd></dl></dl>
 </dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpl, gsln, gslwsc, gscr, gsplci, gqlwsc, gqplci, dashline, ginq_linetype 
 

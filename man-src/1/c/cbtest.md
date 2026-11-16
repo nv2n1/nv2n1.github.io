@@ -19,22 +19,22 @@ description: "cbtest – test cases for QDBM Cabin"
 <h2>DESCRIPTION</h2>
 <p> The command `cbtest&#8217; is a utility for facility test and performance test. Measure the execution time of the command. This command is used in the following format. `rnum&#8217; specifies the number of records. </p>
 <dl>
-<dt><code>cbtest sort [-d] rnum</code></p>
-<dd> Perform test of sorting algorithms.</p>
-<dt><code>cbtest sort [-d] rnum</code></p>
-<dd> Perform test of string locating algorithms.</p>
-<dt><code>cbtest list [-d] rnum</code></p>
-<dd> Perform writing test of list.</p>
-<dt><code>cbtest map [-d] rnum</code></p>
-<dd> Perform writing test of map.</p>
-<dt><code>cbtest wicked rnum</code></p>
-<dd> Perform updating operations of list and map selected at random.</p>
-<dt><code>cbtest misc</code></p>
-<dd> Perform test of miscellaneous routines.</dl>
+<dt><code>cbtest sort [-d] rnum</code></dt>
+<dd> Perform test of sorting algorithms.</dd>
+<dt><code>cbtest sort [-d] rnum</code></dt>
+<dd> Perform test of string locating algorithms.</dd>
+<dt><code>cbtest list [-d] rnum</code></dt>
+<dd> Perform writing test of list.</dd>
+<dt><code>cbtest map [-d] rnum</code></dt>
+<dd> Perform writing test of map.</dd>
+<dt><code>cbtest wicked rnum</code></dt>
+<dd> Perform updating operations of list and map selected at random.</dd>
+<dt><code>cbtest misc</code></dt>
+<dd> Perform test of miscellaneous routines.</dd></dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-d</code> : read and show data of the result.</dl>
+</dt><dd> <code>-d</code> : read and show data of the result.</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code>cabin</code>(3) </p>

@@ -14,18 +14,18 @@ description: "maple_getcond_callback – setup handling MAPLE_COMMAND_GETCOND"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device responding</dl>
+</dd><dd>device responding</dd></dl>
 <p> <i>callback</i></p>
 <dl>
-<dd>handler callback</dl>
+<dd>handler callback</dd></dl>
 <p> <i>interval</i></p>
 <dl>
-<dd>interval in jiffies between callbacks</dl>
+<dd>interval in jiffies between callbacks</dd></dl>
 <p> <i>function</i></p>
 <dl>
-<dd>the function code for the device</dl>
+<dd>the function code for the device</dd></dl>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

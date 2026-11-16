@@ -18,20 +18,20 @@ description: "tracker-stats – Provides statistics on the data indexed"
 <p> The RDF classes are detailed by the <code>Nepomuk</code> ontology specification. These classes can be used to further query more information using <code>SparQL</code> with <code>tracker-sparql.</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show a brief help message.</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd> Display statistics about ALL RDF classes that exist in the database. Without this option only the common RDF classes will be shown, for example nfo:Document and nfo:FileDataObject. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show a brief help message.</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd> Display statistics about ALL RDF classes that exist in the database. Without this option only the common RDF classes will be shown, for example nfo:Document and nfo:FileDataObject. </dd>
 <p> This option is implied if search terms are provided to filter ALL possible statistics.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print version. </p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print version. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-control/">tracker-control</a></code>(1), <code><a href="/docs/linux/man/1-tracker-sparql/">tracker-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker-info/">tracker-info</a></code>(1).</p>
 <dl>
-<dt><code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code></p>
+<dt><code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code></dt>
 <dd>
-<dt><code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></p>
+</dd><dt><code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

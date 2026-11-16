@@ -14,10 +14,10 @@ description: "snd_soc_codec_force_bias_level – Set the CODEC DAPM bias level"
 <p><i>codec</i></p>
 <dl>
 <dd>
-<dd>The CODEC for which to set the level</dl>
+</dd><dd>The CODEC for which to set the level</dd></dl>
 <p> <i>level</i></p>
 <dl>
-<dd>The level to set to</dl>
+<dd>The level to set to</dd></dl>
 <h2>Description</h2>
 <p>Forces the CODEC bias level to a specific state. See <code>snd_soc_dapm_force_bias_level</code>.</p>
 <h2>Copyright</h2>

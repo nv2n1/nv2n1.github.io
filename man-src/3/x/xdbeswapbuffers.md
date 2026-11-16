@@ -27,15 +27,15 @@ XdbeSwapBuffers - swaps front and back DBE buffers.
  <i>swap_action</i> determines what will happen to the new back buffer of the <i>swap_window</i> it is paired with in the list in addition to making the old back buffer become visible. The defined actions are as follows: 
 
 <dl COMPACT><dt>XdbeUndefined
-<dd>The contents of the new back buffer become undefined. This may be the most efficient action since it allows the implementation to discard the contents of the buffer if it needs to.
-<dt>XdbeBackground
-<dd>The unobscured region of the new back buffer will be tiled with the window background. The background action allows devices to use a fast clear capability during a swap.
-<dt>XdbeUntouched
-<dd>The unobscured region of the new back buffer will be unmodified by the swap.
-<dt>XdbeCopied
-<dd>The unobscured region of the new back buffer will be the contents of the old back buffer</dl><h2>Errors</h2><dl COMPACT><dt>BadMatch
-<dd>A non-double-buffered window was specified or a window was specified twice.
-<dt>BadWindow
-<dd>An invalid window was specified.
-<dt>BadValue
-<dd>An invalid swap action was specified.</dl><h2>See Also</h2>DBE, <i>XdbeAllocateBackBufferName(),</i> <i>XdbeBeginIdiom(),</i> <i>XdbeDeallocateBackBufferName(),</i> <i>XdbeEndIdiom(),</i> <i>XdbeFreeVisualInfo(),</i> <i>XdbeGetBackBufferAttributes(),</i> <i>XdbeGetVisualInfo(),</i> <i>XdbeQueryExtension().</i>
+</dt><dd>The contents of the new back buffer become undefined. This may be the most efficient action since it allows the implementation to discard the contents of the buffer if it needs to.
+</dd><dt>XdbeBackground
+</dt><dd>The unobscured region of the new back buffer will be tiled with the window background. The background action allows devices to use a fast clear capability during a swap.
+</dd><dt>XdbeUntouched
+</dt><dd>The unobscured region of the new back buffer will be unmodified by the swap.
+</dd><dt>XdbeCopied
+</dt><dd>The unobscured region of the new back buffer will be the contents of the old back buffer</dd></dl><h2>Errors</h2><dl COMPACT><dt>BadMatch
+</dt><dd>A non-double-buffered window was specified or a window was specified twice.
+</dd><dt>BadWindow
+</dt><dd>An invalid window was specified.
+</dd><dt>BadValue
+</dt><dd>An invalid swap action was specified.</dd></dl><h2>See Also</h2>DBE, <i>XdbeAllocateBackBufferName(),</i> <i>XdbeBeginIdiom(),</i> <i>XdbeDeallocateBackBufferName(),</i> <i>XdbeEndIdiom(),</i> <i>XdbeFreeVisualInfo(),</i> <i>XdbeGetBackBufferAttributes(),</i> <i>XdbeGetVisualInfo(),</i> <i>XdbeQueryExtension().</i>

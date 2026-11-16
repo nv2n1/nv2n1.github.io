@@ -16,45 +16,45 @@ description: "logcheck-test – test new logcheck rules easily"
 <p> <code>logcheck-test</code> parses a log file for matching lines specified by a single rule or a rule file. If using a single <i>RULE</i> you can set a <i>PREFIX</i> and a <i>SUFFIX</i> to write new rules easily. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show usage information</p>
-<dt><code>-a, &#8211;auth.log</code></p>
-<dd> Parse /var/log/auth.log for matching lines</p>
-<dt><code>-s, &#8211;syslog</code></p>
-<dd> Parse /var/log/syslog for matching lines</p>
-<dt><code>-l, &#8211;log-file FILE</code></p>
-<dd> Parse FILE for matching lines</p>
-<dt><code>-i, &#8211;invert-match</code></p>
-<dd> Show line that don&#8217;t match the RULE or the RULEFILE</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress rule summary at the end of output</p>
-<dt><code>-e, &#8211;surround-rule</code></p>
-<dd> Surround RULE with standard prefix and suffix: </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show usage information</dd>
+<dt><code>-a, &#8211;auth.log</code></dt>
+<dd> Parse /var/log/auth.log for matching lines</dd>
+<dt><code>-s, &#8211;syslog</code></dt>
+<dd> Parse /var/log/syslog for matching lines</dd>
+<dt><code>-l, &#8211;log-file FILE</code></dt>
+<dd> Parse FILE for matching lines</dd>
+<dt><code>-i, &#8211;invert-match</code></dt>
+<dd> Show line that don&#8217;t match the RULE or the RULEFILE</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress rule summary at the end of output</dd>
+<dt><code>-e, &#8211;surround-rule</code></dt>
+<dd> Surround RULE with standard prefix and suffix: </dd>
 <p> ^[[:alpha:]]{3} [ :[:digit:]]{11} [._[:alnum:]-]+ <i>RULE</i>$</p>
-<dt><code>-P, &#8211;append-prefix PREFIX</code></p>
-<dd> Append PREFIX to rule prefix. Option can be given multiple times</p>
-<dt><code>-S, &#8211;prepend-suffix SUFFIX</code></p>
-<dd> Prepend SUFFIX to rule suffix. Option can be given multiple times</p>
-<dt><code>-r, &#8211;rule-file RULEFILE</code></p>
-<dd> Use file RULEFILE for rule input</dl>
+<dt><code>-P, &#8211;append-prefix PREFIX</code></dt>
+<dd> Append PREFIX to rule prefix. Option can be given multiple times</dd>
+<dt><code>-S, &#8211;prepend-suffix SUFFIX</code></dt>
+<dd> Prepend SUFFIX to rule suffix. Option can be given multiple times</dd>
+<dt><code>-r, &#8211;rule-file RULEFILE</code></dt>
+<dd> Use file RULEFILE for rule input</dd></dl>
 <h2>EXAMPLES</h2>
 <p> With <code>logcheck-test</code> you can easily write and test new rules. </p>
 <p> Test a single rule against /var/log/syslog:</p>
 <dl>
 <dt>
-<dd> logcheck-test -s &quot;RULE&quot;</dl>
+</dt><dd> logcheck-test -s &quot;RULE&quot;</dd></dl>
 <p> Test a single rule against ~/log, surround the rule with standard prefix and suffix and append &quot;kernel &quot; to prefix:</p>
 <dl>
 <dt>
-<dd> logcheck-test -l ~/log -e -P &quot;kernel &quot; &quot;RULE&quot;</dl>
+</dt><dd> logcheck-test -l ~/log -e -P &quot;kernel &quot; &quot;RULE&quot;</dd></dl>
 <p> Test the rules in rulefiles/linux/ignore.d.server/kernel against ~/log:</p>
 <dl>
 <dt>
-<dd> logcheck-test -l ~/log -r rulefiles/linux/ignore.d.server/kernel</dl>
+</dt><dd> logcheck-test -l ~/log -r rulefiles/linux/ignore.d.server/kernel</dd></dl>
 <p> Test which lines the rules in rulefiles/linux/ignore.d.server/kernel doesn&#8217;t match:</p>
 <dl>
 <dt>
-<dd> logcheck-test -l ~/log -r rulefiles/linux/ignore.d.server/kernel -i</dl>
+</dt><dd> logcheck-test -l ~/log -r rulefiles/linux/ignore.d.server/kernel -i</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> On successful matching <code>logcheck-test</code> will complete with exit code 0. An exit code of 1 indicates no successful matching. </p>
 <p> An exit code greater then 1 indicates an error occurred. Textual errors are written to the standard error stream.</p>

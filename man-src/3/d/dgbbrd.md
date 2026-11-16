@@ -19,18 +19,18 @@ description: "dgbbrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGBBRD reduces a real general m-by-n band matrix A to upper
  bidiagonal form B by an orthogonal transformation: Q**T * A * P = B.
  The routine computes B, and optionally forms Q or P**T, or computes
  Q**T*C for a given matrix C.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>VECT</i> </p>
+</dt><dd> <i>VECT</i> </dd>
 <pre>
           VECT is CHARACTER*1
           Specifies whether or not the matrices Q and P**T are to be
@@ -140,14 +140,14 @@ LDC &gt;= 1 if NCC = 0.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 187 of file dgbbrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

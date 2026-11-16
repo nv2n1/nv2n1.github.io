@@ -17,18 +17,18 @@ description: "irexec – run programs with one button press"
 <p> The config string consists of the command to be run. Potential uses are shutting down the computer, starting a dial-up connection etc.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display usage summary</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display version</p>
-<dt><code>-d, &#8211;daemon</code></p>
-<dd> Make irexec fork to background. That way you can easily start irexec from an init script. In this case you should specify a config file on the command line as irexec won&#8217;t be able to find your home directory.</p>
-<dt><code>-n, &#8211;name &lt;name&gt;</code></p>
-<dd> Use this program name instead of the default &#8216;irexec&#8217; as identifier in the lircd.conf file.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display usage summary</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display version</dd>
+<dt><code>-d, &#8211;daemon</code></dt>
+<dd> Make irexec fork to background. That way you can easily start irexec from an init script. In this case you should specify a config file on the command line as irexec won&#8217;t be able to find your home directory.</dd>
+<dt><code>-n, &#8211;name &lt;name&gt;</code></dt>
+<dd> Use this program name instead of the default &#8216;irexec&#8217; as identifier in the lircd.conf file.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>LIRC_SOCKET_PATH</p>
-<dd> Path to the lircd socket irexec reads from, defaults to /var/run/lirc/lircd. </p>
+<dt>LIRC_SOCKET_PATH</dt>
+<dd> Path to the lircd socket irexec reads from, defaults to /var/run/lirc/lircd. </dd>
 </dl>
 <h2>NOTE</h2>
 <p> If you start irexec, it reads your ~/.config/lircrc and reacts only on prog= entries that point to irexec. If you have included more than one program in your .lircrc, then start all these programs, they react itself only to their according entries in .lircrc. </p>

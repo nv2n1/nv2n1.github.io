@@ -15,11 +15,11 @@ phy_find_setting - find a PHY settings array entry that matches speed &amp; dupl
 <h2>Arguments</h2>
 
 <i>speed</i>
-<dl><dd><dd>speed to match</dl>
+<dl><dd></dd><dd>speed to match</dd></dl>
  
 
  <i>duplex</i>
-<dl><dd>duplex to match</dl>
+<dl><dd>duplex to match</dd></dl>
 
 <h2>Description</h2>
 

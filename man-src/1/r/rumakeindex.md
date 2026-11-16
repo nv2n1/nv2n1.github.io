@@ -16,16 +16,13 @@ description: "rumakeindex – process a LaTeX index using Russian Cyrillic chara
 <p> <code>rumakeindex</code> runs <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) on the <tt>idx</tt> file to convert Cyrillic character commands to 8-bit ASCII characters; pipes the results through <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1); and then through <code><a href="/docs/linux/man/1-tr/">tr</a></code>(1) to do some final conversions. The results are placed in a KOI8-R encoded <tt>ind</tt> file. </p>
 <h2>FILES</h2>
 <dl>
-<dt>
-<dd>
-<dt><i>basename.idx</i></p>
-<dd> LaTeX index entry file</p>
-<dt><i>basename.ilg</i></p>
-<dd> LaTeX index log file</p>
-<dt><i>basename.ind</i></p>
-<dd> LaTeX processed index file</p>
-<dt>
-<dd></dl>
+<dt><i>basename.idx</i></dt>
+<dd> LaTeX index entry file</dd>
+<dt><i>basename.ilg</i></dt>
+<dd> LaTeX index log file</dd>
+<dt><i>basename.ind</i></dt>
+<dd> LaTeX processed index file</dd>
+</dl>
 <h2>BUGS</h2>
 <p> None known, but report any bugs found to the authors. </p>
 <h2>COPYRIGHT</h2>

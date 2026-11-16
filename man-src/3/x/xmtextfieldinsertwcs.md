@@ -18,12 +18,12 @@ description: "XmTextFieldInsertWcs — A TextField function that inserts a wide 
 <p><code>XmTextFieldInsertWcs</code> inserts a wide character string into the TextField widget at a specified location. The character positions begin at 0 (zero) and are numbered sequentially from the beginning of the text. For example, to insert a string after the fourth character, the <i>position</i> parameter must be 4. </p>
 <p> This routine calls the widget&#8217;s <code>XmNvalueChangedCallback</code> and verification callbacks, either <code>XmNmodifyVerifyCallback</code> or <code>XmNmodifyVerifyCallbackWcs</code>, or both. If both verification callback lists are registered, the procedures of the <code>XmNmodifyVerifyCallback</code> list are executed first and the resulting data is passed to the <code>XmNmodifyVerifyCallbackWcs</code> callbacks. If the <code>XmNcursorPosition</code> resource is greater than or is the same value as <i>position</i>, the <code>XmNmotionVerifyCallback</code> is called.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</p>
-<dt><i>position</i></p>
-<dd>Specifies the position in the text string where the new character string is to be inserted</p>
-<dt><i>wcstring</i></p>
-<dd>Specifies the wide character string value to be added to the TextField widget</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position in the text string where the new character string is to be inserted</dd>
+<dt><i>wcstring</i></dt>
+<dd>Specifies the wide character string value to be added to the TextField widget</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextfieldinsert/">XmTextFieldInsert</a></code>(3).</p>

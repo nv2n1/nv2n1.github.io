@@ -11,51 +11,51 @@ description: "inode – file inode information"
 <h2>Description</h2>
 <p>Each file has an inode containing metadata about the file. An application can retrieve this metadata using <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) (or related calls), which returns a <i>stat</i> structure, or <code><a href="/docs/linux/man/2-statx/">statx</a></code>(2), which returns a <i>statx</i> structure. The following is a list of the information typically found in, or associated with, the file inode, with the names of the corresponding structure fields returned by <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) and <code><a href="/docs/linux/man/2-statx/">statx</a></code>(2):</p>
 <dl>
-<dt>Device where inode resides</p>
-<dd><i>stat.st_dev</i>; <i>statx.stx_dev_minor</i> and <i>statx.stx_dev_major</i></p>
-<dd>Each inode (as well as the associated file) resides in a filesystem that is hosted on a device. That device is identified by the combination of its major ID (which identifies the general class of device) and minor ID (which identifies a specific instance in the general class).</p>
-<dt>Inode number</p>
-<dd><i>stat.st_ino</i>; <i>statx.stx_ino</i></p>
-<dd>Each file in a filesystem has a unique inode number. Inode numbers are guaranteed to be unique only within a filesystem (i.e., the same inode numbers may be used by different filesystems, which is the reason that hard links may not cross filesystem boundaries). This field contains the file&#8217;s inode number.</p>
-<dt>File type and mode</p>
-<dd><i>stat.st_mode</i>; <i>statx.stx_mode</i></p>
-<dd>See the discussion of file type and mode, below.</p>
-<dt>Link count</p>
-<dd><i>stat.st_nlink</i>; <i>statx.stx_nlink</i></p>
-<dd>This field contains the number of hard links to the file. Additional links to an existing file are created using <code><a href="/docs/linux/man/2-link/">link</a></code>(2).</p>
-<dt>User ID</p>
-<dd><i>st_uid</i> <i>stat.st_uid</i>; <i>statx.stx_uid</i></p>
-<dd>This field records the user ID of the owner of the file. For newly created files, the file user ID is the effective user ID of the creating process. The user ID of a file can be changed using <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2).</p>
-<dt>Group ID</p>
-<dd><i>stat.st_gid</i>; <i>statx.stx_gid</i></p>
-<dd>The inode records the ID of the group owner of the file. For newly created files, the file group ID is either the group ID of the parent directory or the effective group ID of the creating process, depending on whether or not the set-group-ID bit is set on the parent directory (see below). The group ID of a file can be changed using <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2).</p>
-<dt>Device represented by this inode</p>
-<dd><i>stat.st_rdev</i>; <i>statx.stx_rdev_minor</i> and <i>statx.stx_rdev_major</i></p>
-<dd>If this file (inode) represents a device, then the inode records the major and minor ID of that device.</p>
-<dt>File size</p>
-<dd><i>stat.st_size</i>; <i>statx.stx_size</i></p>
-<dd>This field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</p>
-<dt>Preferred block size for I/O</p>
-<dd><i>stat.st_blksize</i>; <i>statx.stx_blksize</i></p>
-<dd>This field gives the &quot;preferred&quot; blocksize for efficient filesystem I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</p>
-<dt>Number of blocks allocated to the file</p>
-<dd><i>stat.st_blocks</i>; <i>statx.stx_size</i></p>
-<dd>This field indicates the number of blocks allocated to the file, 512-byte units, (This may be smaller than <i>st_size</i>/512 when the file has holes.)</p>
-<dd>The POSIX.1 standard notes that the unit for the <i>st_blocks</i> member of the <i>stat</i> structure is not defined by the standard. On many implementations it is 512 bytes; on a few systems, a different unit is used, such as 1024. Furthermore, the unit may differ on a per-filesystem basis.</p>
-<dt>Last access timestamp (atime)</p>
-<dd><i>stat.st_atime</i>; <i>statx.stx_atime</i></p>
-<dd>This is the file&#8217;s last access timestamp. It is changed by file accesses, for example, by <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2), <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2), <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2), and <code><a href="/docs/linux/man/2-read/">read</a></code>(2) (of more than zero bytes). Other interfaces, such as <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), may or may not update the atime timestamp</p>
-<dd>Some filesystem types allow mounting in such a way that file and/or directory accesses do not cause an update of the atime timestamp. (See <i>noatime</i>, <i>nodiratime</i>, and <i>relatime</i> in <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), and related information in <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).) In addition, the atime timestamp is not updated if a file is opened with the <code>O_NOATIME</code> flag; see <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
-<dt>File creation (birth) timestamp (btime)</p>
-<dd>(not returned in the <i>stat</i> structure); <i>statx.stx_btime</i></p>
-<dd>The file&#8217;s creation timestamp. This is set on file creation and not changed subsequently.</p>
-<dd>The btime timestamp was not historically present on UNIX systems and is not currently supported by most Linux filesystems.</p>
-<dt>Last modification timestamp (mtime)</p>
-<dd><i>stat.st_mtime</i>; <i>statx.stx_mtime</i></p>
-<dd>This is the file&#8217;s last modification timestamp. It is changed by file modifications, for example, by <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2), <code><a href="/docs/linux/man/2-truncate/">truncate</a></code>(2), <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2), and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) (of more than zero bytes). Moreover, the mtime timestamp of a directory is changed by the creation or deletion of files in that directory. The mtime timestamp is <i>not</i> changed for changes in owner, group, hard link count, or mode.</p>
-<dt>Last status change timestamp (ctime)</p>
-<dd><i>stat.st_ctime</i>; <i>statx.stx_ctime</i></p>
-<dd>This is the file&#8217;s last status change timestamp. It is changed by writing or by setting inode information (i.e., owner, group, link count, mode, etc.).</dl>
+<dt>Device where inode resides</dt>
+<dd><i>stat.st_dev</i>; <i>statx.stx_dev_minor</i> and <i>statx.stx_dev_major</i></dd>
+<dd>Each inode (as well as the associated file) resides in a filesystem that is hosted on a device. That device is identified by the combination of its major ID (which identifies the general class of device) and minor ID (which identifies a specific instance in the general class).</dd>
+<dt>Inode number</dt>
+<dd><i>stat.st_ino</i>; <i>statx.stx_ino</i></dd>
+<dd>Each file in a filesystem has a unique inode number. Inode numbers are guaranteed to be unique only within a filesystem (i.e., the same inode numbers may be used by different filesystems, which is the reason that hard links may not cross filesystem boundaries). This field contains the file&#8217;s inode number.</dd>
+<dt>File type and mode</dt>
+<dd><i>stat.st_mode</i>; <i>statx.stx_mode</i></dd>
+<dd>See the discussion of file type and mode, below.</dd>
+<dt>Link count</dt>
+<dd><i>stat.st_nlink</i>; <i>statx.stx_nlink</i></dd>
+<dd>This field contains the number of hard links to the file. Additional links to an existing file are created using <code><a href="/docs/linux/man/2-link/">link</a></code>(2).</dd>
+<dt>User ID</dt>
+<dd><i>st_uid</i> <i>stat.st_uid</i>; <i>statx.stx_uid</i></dd>
+<dd>This field records the user ID of the owner of the file. For newly created files, the file user ID is the effective user ID of the creating process. The user ID of a file can be changed using <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2).</dd>
+<dt>Group ID</dt>
+<dd><i>stat.st_gid</i>; <i>statx.stx_gid</i></dd>
+<dd>The inode records the ID of the group owner of the file. For newly created files, the file group ID is either the group ID of the parent directory or the effective group ID of the creating process, depending on whether or not the set-group-ID bit is set on the parent directory (see below). The group ID of a file can be changed using <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2).</dd>
+<dt>Device represented by this inode</dt>
+<dd><i>stat.st_rdev</i>; <i>statx.stx_rdev_minor</i> and <i>statx.stx_rdev_major</i></dd>
+<dd>If this file (inode) represents a device, then the inode records the major and minor ID of that device.</dd>
+<dt>File size</dt>
+<dd><i>stat.st_size</i>; <i>statx.stx_size</i></dd>
+<dd>This field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</dd>
+<dt>Preferred block size for I/O</dt>
+<dd><i>stat.st_blksize</i>; <i>statx.stx_blksize</i></dd>
+<dd>This field gives the &quot;preferred&quot; blocksize for efficient filesystem I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</dd>
+<dt>Number of blocks allocated to the file</dt>
+<dd><i>stat.st_blocks</i>; <i>statx.stx_size</i></dd>
+<dd>This field indicates the number of blocks allocated to the file, 512-byte units, (This may be smaller than <i>st_size</i>/512 when the file has holes.)</dd>
+<dd>The POSIX.1 standard notes that the unit for the <i>st_blocks</i> member of the <i>stat</i> structure is not defined by the standard. On many implementations it is 512 bytes; on a few systems, a different unit is used, such as 1024. Furthermore, the unit may differ on a per-filesystem basis.</dd>
+<dt>Last access timestamp (atime)</dt>
+<dd><i>stat.st_atime</i>; <i>statx.stx_atime</i></dd>
+<dd>This is the file&#8217;s last access timestamp. It is changed by file accesses, for example, by <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2), <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2), <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2), and <code><a href="/docs/linux/man/2-read/">read</a></code>(2) (of more than zero bytes). Other interfaces, such as <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), may or may not update the atime timestamp</dd>
+<dd>Some filesystem types allow mounting in such a way that file and/or directory accesses do not cause an update of the atime timestamp. (See <i>noatime</i>, <i>nodiratime</i>, and <i>relatime</i> in <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), and related information in <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2).) In addition, the atime timestamp is not updated if a file is opened with the <code>O_NOATIME</code> flag; see <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd>
+<dt>File creation (birth) timestamp (btime)</dt>
+<dd>(not returned in the <i>stat</i> structure); <i>statx.stx_btime</i></dd>
+<dd>The file&#8217;s creation timestamp. This is set on file creation and not changed subsequently.</dd>
+<dd>The btime timestamp was not historically present on UNIX systems and is not currently supported by most Linux filesystems.</dd>
+<dt>Last modification timestamp (mtime)</dt>
+<dd><i>stat.st_mtime</i>; <i>statx.stx_mtime</i></dd>
+<dd>This is the file&#8217;s last modification timestamp. It is changed by file modifications, for example, by <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2), <code><a href="/docs/linux/man/2-truncate/">truncate</a></code>(2), <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2), and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) (of more than zero bytes). Moreover, the mtime timestamp of a directory is changed by the creation or deletion of files in that directory. The mtime timestamp is <i>not</i> changed for changes in owner, group, hard link count, or mode.</dd>
+<dt>Last status change timestamp (ctime)</dt>
+<dd><i>stat.st_ctime</i>; <i>statx.stx_ctime</i></dd>
+<dd>This is the file&#8217;s last status change timestamp. It is changed by writing or by setting inode information (i.e., owner, group, link count, mode, etc.).</dd></dl>
 <p> The timestamp fields report time measured with a zero point at the <i>Epoch</i>, 1970-01-02 00:00:00 +0000, UTC (see <code><a href="/docs/linux/man/7-time/">time</a></code>(7)). Nanosecond timestamps are supported on XFS, JFS, Btrfs, and ext4 (since Linux 2.6.23). Nanosecond timestamps are not supported in ext2, ext3, and Reiserfs. In order to return timestamps with nanosecond precision, the timestamp fields in the <i>stat</i> and <i>statx</i> structures are defined as structures that include a nanosecond component. See <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) and <code><a href="/docs/linux/man/2-statx/">statx</a></code>(2) for details. On filesystems that do not support subsecond timestamps, the nanosecond fields in the <i>stat</i> and <i>statx</i> structures are returned with the value 0.</p>
 <h3>The file type and mode</h3>
 <p>The <i>stat.st_mode</i> field (for <code><a href="/docs/linux/man/2-statx/">statx</a></code>(2), the <i>statx.stx_mode</i> field) contains the file type and mode. POSIX refers to the <i>stat.st_mode</i> bits corresponding to the mask <code>S_IFMT</code> (see below) as the <i>file type</i>, the 12 bits corresponding to the mask 07777 as the <i>file mode bits</i> and the least significant 9 bits (0777) as the <i>file permission bits</i>. The following mask values are defined for the file type: </p>
@@ -123,21 +123,21 @@ if ((sb.st_mode &amp; S_IFMT) == S_IFREG) {
 <p> Because tests of the above form are common, additional macros are defined by POSIX to allow the test of the file type in <i>st_mode</i> to be written more concisely:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>S_ISREG</code>(m)</p>
-<dd>is it a regular file?</p>
-<dt><code>S_ISDIR</code>(m)</p>
-<dd>directory?</p>
-<dt><code>S_ISCHR</code>(m)</p>
-<dd>character device?</p>
-<dt><code>S_ISBLK</code>(m)</p>
-<dd>block device?</p>
-<dt><code>S_ISFIFO</code>(m)</p>
-<dd>FIFO (named pipe)?</p>
-<dt><code>S_ISLNK</code>(m)</p>
-<dd>symbolic link? (Not in POSIX.1-1996.)</p>
-<dt><code>S_ISSOCK</code>(m)</p>
-<dd>socket? (Not in POSIX.1-1996.)</dl>
+</dd><dl>
+<dt><code>S_ISREG</code>(m)</dt>
+<dd>is it a regular file?</dd>
+<dt><code>S_ISDIR</code>(m)</dt>
+<dd>directory?</dd>
+<dt><code>S_ISCHR</code>(m)</dt>
+<dd>character device?</dd>
+<dt><code>S_ISBLK</code>(m)</dt>
+<dd>block device?</dd>
+<dt><code>S_ISFIFO</code>(m)</dt>
+<dd>FIFO (named pipe)?</dd>
+<dt><code>S_ISLNK</code>(m)</dt>
+<dd>symbolic link? (Not in POSIX.1-1996.)</dd>
+<dt><code>S_ISSOCK</code>(m)</dt>
+<dd>socket? (Not in POSIX.1-1996.)</dd></dl>
 </dl>
 <p> The preceding code snippet could thus be rewritten as: </p>
 <pre><code>stat(pathname, &amp;sb);
@@ -263,3 +263,4 @@ if (S_ISREG(sb.st_mode)) {
 <p> UNIX V7 (and later systems) had <code>S_IREAD</code>, <code>S_IWRITE</code>, <code>S_IEXEC</code>, where POSIX prescribes the synonyms <code>S_IRUSR</code>, <code>S_IWUSR</code>, <code>S_IXUSR</code>.</p>
 <h2>Notes</h2>
 <p>For pseudofiles that are autogenerated by the kernel, the file size (<i>stat.st_size</i>; <i>statx.stx_size</i>) reported by the kernel is not accurate. For example, the value 0 is returned for many files under the <i>/proc</i> directory, while various files under <i>/sys</i> report a size of 4096 bytes, even though the file content is smaller. For such files, one should simply try to read as many bytes as possible (and append &#8216;
+</p>

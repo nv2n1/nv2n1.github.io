@@ -18,15 +18,15 @@ description: "migratecred – Migrate credentials from one instance of Directory
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-o OldInstancePath</code></p>
-<dd> Path to the source instance</p>
-<dt><code>-n NewInstancePath</code></p>
-<dd> Path to the destination instance</p>
-<dt><code>-c OldCredential</code></p>
-<dd> Old credential</p>
-<dt><code>-p NewPluginPath</code></p>
+<dt><code>-o OldInstancePath</code></dt>
+<dd> Path to the source instance</dd>
+<dt><code>-n NewInstancePath</code></dt>
+<dd> Path to the destination instance</dd>
+<dt><code>-c OldCredential</code></dt>
+<dd> Old credential</dd>
+<dt><code>-p NewPluginPath</code></dt>
 <dd> New plugin path (of the new instance)
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> migratecred was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

@@ -19,61 +19,61 @@ description: "ltrace – A library call tracer"
 <p> Its use is very similar to <code><a href="/docs/linux/man/1-strace/">strace</a>(1)</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a, &#8211;align <i>column</p>
-<dd> Align return values in a specific column</i> (default column is 5/8 of screen width).</p>
-<dt>-A <i>maxelts</p>
-<dd> Maximum number of array elements to print before suppressing the rest with an ellipsis (&quot;&#8230;&quot;). This also limits number of recursive structure expansions.</p>
-<dt>-b, &#8211;no-signals</p>
-<dd> Disable printing of signals recieved by the traced process.</p>
-<dt>-c</p>
-<dd> Count time and calls for each library call and report a summary on program exit.</p>
-<dt>-C, &#8211;demangle</p>
-<dd> Decode (demangle) low-level symbol names into user-level names. Besides removing any initial underscore prefix used by the system, this makes C++ function names readable.</p>
-<dt>-D, &#8211;debug </i>mask<i></p>
-<dd> Show debugging output of </i><code>ltrace</code> itself. <i>mask</i> is a number with internal meaning that&#8217;s not really well defined at all. <i>mask</i> of 77 shows all debug messages, which is what you usually need.</p>
-<dt>-e <i>filter</p>
-<dd> A qualifying expression which modifies which library calls to trace. The format of the filter expression is described in the section </i><code>FILTER EXPRESSIONS</code>. If more than one -e option appears on the command line, the library calls that match any of them are traced. If no -e is given, <code>@MAIN</code> is assumed as a default.</p>
-<dt>-f</p>
-<dd> Trace child processes as they are created by currently traced processes as a result of the <a href="/docs/linux/man/2-fork/">fork</a>(2) or <a href="/docs/linux/man/2-clone/">clone</a>(2) system calls. The new process is attached immediately.</p>
-<dt>-F <i>filename</p>
-<dd> Load an alternate config file. Normally, /etc/ltrace.conf and ~/.ltrace.conf will be read (the latter only if it exists). Use this option to load the given file or files instead of those two default files. See <a href="/docs/linux/man/5-ltrace-conf/">ltrace.conf</a>(5) for details on the syntax of ltrace configuration files.</p>
-<dt>-h, &#8211;help</p>
-<dd> Show a summary of the options to ltrace and exit.</p>
-<dt>-i</p>
-<dd> Print the instruction pointer at the time of the library call.</p>
-<dt>-l, &#8211;library library_pattern</p>
-<dd> Display only calls to functions implemented by libraries that match library_pattern.</i> Multiple library patters can be specified with several instances of this option. Syntax of library_pattern is described in section <code>FILTER EXPRESSIONS</code>. </p>
+<dt>-a, &#8211;align <i>column</dt>
+<dd> Align return values in a specific column</i> (default column is 5/8 of screen width).</dd>
+<dt>-A <i>maxelts</dt>
+<dd> Maximum number of array elements to print before suppressing the rest with an ellipsis (&quot;&#8230;&quot;). This also limits number of recursive structure expansions.</dd>
+<dt>-b, &#8211;no-signals</dt>
+<dd> Disable printing of signals recieved by the traced process.</dd>
+<dt>-c</dt>
+<dd> Count time and calls for each library call and report a summary on program exit.</dd>
+<dt>-C, &#8211;demangle</dt>
+<dd> Decode (demangle) low-level symbol names into user-level names. Besides removing any initial underscore prefix used by the system, this makes C++ function names readable.</dd>
+<dt>-D, &#8211;debug </i>mask<i></dt>
+<dd> Show debugging output of </i><code>ltrace</code> itself. <i>mask</i> is a number with internal meaning that&#8217;s not really well defined at all. <i>mask</i> of 77 shows all debug messages, which is what you usually need.</dd>
+<dt>-e <i>filter</dt>
+<dd> A qualifying expression which modifies which library calls to trace. The format of the filter expression is described in the section </i><code>FILTER EXPRESSIONS</code>. If more than one -e option appears on the command line, the library calls that match any of them are traced. If no -e is given, <code>@MAIN</code> is assumed as a default.</dd>
+<dt>-f</dt>
+<dd> Trace child processes as they are created by currently traced processes as a result of the <a href="/docs/linux/man/2-fork/">fork</a>(2) or <a href="/docs/linux/man/2-clone/">clone</a>(2) system calls. The new process is attached immediately.</dd>
+<dt>-F <i>filename</dt>
+<dd> Load an alternate config file. Normally, /etc/ltrace.conf and ~/.ltrace.conf will be read (the latter only if it exists). Use this option to load the given file or files instead of those two default files. See <a href="/docs/linux/man/5-ltrace-conf/">ltrace.conf</a>(5) for details on the syntax of ltrace configuration files.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Show a summary of the options to ltrace and exit.</dd>
+<dt>-i</dt>
+<dd> Print the instruction pointer at the time of the library call.</dd>
+<dt>-l, &#8211;library library_pattern</dt>
+<dd> Display only calls to functions implemented by libraries that match library_pattern.</i> Multiple library patters can be specified with several instances of this option. Syntax of library_pattern is described in section <code>FILTER EXPRESSIONS</code>. </dd>
 <p> Note that while this option selects calls that might be directed to the selected libraries, there&#8217;s no actual guarantee that the call won&#8217;t be directed elsewhere due to e.g. LD_PRELOAD or simply dependency ordering. If you want to make sure that symbols in given library are actually called, use <code>-x @</code><i>library_pattern</i> instead.</p>
-<dt>-L</p>
-<dd> When no -e option is given, don&#8217;t assume the default action of <code>@MAIN</code>.</p>
-<dt>-n, &#8211;indent <i>nr</p>
-<dd> Indent trace output by nr</i> spaces for each level of call nesting. Using this option makes the program flow visualization easy to follow. This indents uselessly also functions that never return, such as service functions for throwing exceptions in the C++ runtime.</p>
-<dt>-o, &#8211;output <i>filename</p>
-<dd> Write the trace output to the file filename</i> rather than to stderr.</p>
-<dt>-p <i>pid</p>
-<dd> Attach to the process with the process ID pid</i> and begin tracing. This option can be used together with passing a command to execute. It is possible to attach to several processes by passing more than one option -p.</p>
-<dt>-r</p>
-<dd> Print a relative timestamp with each line of the trace. This records the time difference between the beginning of successive lines.</p>
-<dt>-s <i>strsize</p>
-<dd> Specify the maximum string size to print (the default is 32).</p>
-<dt>-S</p>
-<dd> Display system calls as well as library calls</p>
-<dt>-t</p>
-<dd> Prefix each line of the trace with the time of day.</p>
-<dt>-tt</p>
-<dd> If given twice, the time printed will include the microseconds.</p>
-<dt>-ttt</p>
-<dd> If given thrice, the time printed will include the microseconds and the leading portion will be printed as the number of seconds since the epoch.</p>
-<dt>-T</p>
-<dd> Show the time spent inside each call. This records the time difference between the beginning and the end of each call.</p>
-<dt>-u username</p>
-<dd> Run command with the userid, groupid and supplementary groups of username</i>. This option is only useful when running as root and enables the correct execution of setuid and/or setgid binaries.</p>
-<dt>-w, &#8211;where <i>nr</p>
-<dd> Show backtrace of nr</i> stack frames for each traced function. This option enabled only if libunwind support was enabled at compile time.</p>
-<dt>-x <i>filter</p>
-<dd> A qualifying expression which modifies which symbol table entry points to trace. The format of the filter expression is described in the section </i><code>FILTER EXPRESSIONS</code>. If more than one -x option appears on the command line, the symbols that match any of them are traced. No entry points are traced if no -x is given.</p>
-<dt>-V, &#8211;version</p>
-<dd> Show the version number of ltrace and exit. </p>
+<dt>-L</dt>
+<dd> When no -e option is given, don&#8217;t assume the default action of <code>@MAIN</code>.</dd>
+<dt>-n, &#8211;indent <i>nr</dt>
+<dd> Indent trace output by nr</i> spaces for each level of call nesting. Using this option makes the program flow visualization easy to follow. This indents uselessly also functions that never return, such as service functions for throwing exceptions in the C++ runtime.</dd>
+<dt>-o, &#8211;output <i>filename</dt>
+<dd> Write the trace output to the file filename</i> rather than to stderr.</dd>
+<dt>-p <i>pid</dt>
+<dd> Attach to the process with the process ID pid</i> and begin tracing. This option can be used together with passing a command to execute. It is possible to attach to several processes by passing more than one option -p.</dd>
+<dt>-r</dt>
+<dd> Print a relative timestamp with each line of the trace. This records the time difference between the beginning of successive lines.</dd>
+<dt>-s <i>strsize</dt>
+<dd> Specify the maximum string size to print (the default is 32).</dd>
+<dt>-S</dt>
+<dd> Display system calls as well as library calls</dd>
+<dt>-t</dt>
+<dd> Prefix each line of the trace with the time of day.</dd>
+<dt>-tt</dt>
+<dd> If given twice, the time printed will include the microseconds.</dd>
+<dt>-ttt</dt>
+<dd> If given thrice, the time printed will include the microseconds and the leading portion will be printed as the number of seconds since the epoch.</dd>
+<dt>-T</dt>
+<dd> Show the time spent inside each call. This records the time difference between the beginning and the end of each call.</dd>
+<dt>-u username</dt>
+<dd> Run command with the userid, groupid and supplementary groups of username</i>. This option is only useful when running as root and enables the correct execution of setuid and/or setgid binaries.</dd>
+<dt>-w, &#8211;where <i>nr</dt>
+<dd> Show backtrace of nr</i> stack frames for each traced function. This option enabled only if libunwind support was enabled at compile time.</dd>
+<dt>-x <i>filter</dt>
+<dd> A qualifying expression which modifies which symbol table entry points to trace. The format of the filter expression is described in the section </i><code>FILTER EXPRESSIONS</code>. If more than one -x option appears on the command line, the symbols that match any of them are traced. No entry points are traced if no -x is given.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Show the version number of ltrace and exit. </dd>
 </dl>
 <h2>FILTER EXPRESSIONS</h2>
 <p> Filter expression is a chain of glob- or regexp-based rules that are used to pick symbols for tracing from libraries that the process uses. Most of it is intuitive, so as an example, the following would trace calls to malloc and free, except those done by libc: </p>
@@ -93,10 +93,10 @@ description: "ltrace – A library call tracer"
 <p> If you would like to report a bug, send a message to the mailing list (ltrace-devel [at] lists.alioth.debian.org), or use the <code>reportbug(1)</code> program if you are under the Debian GNU/Linux distribution. </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/ltrace.conf</i></p>
-<dd> System configuration file</p>
-<dt><i>~/.ltrace.conf</i></p>
-<dd> Personal config file, overrides <i>/etc/ltrace.conf</i> </p>
+<dt><i>/etc/ltrace.conf</i></dt>
+<dd> System configuration file</dd>
+<dt><i>~/.ltrace.conf</i></dt>
+<dd> Personal config file, overrides <i>/etc/ltrace.conf</i> </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Juan Cespedes &lt;cespedes [at] debian.org&gt;<br />

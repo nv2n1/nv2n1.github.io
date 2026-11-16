@@ -15,11 +15,11 @@ snd_pcm_rate_mask_intersect - computes the intersection between two rate masks
 <h2>Arguments</h2>
 
 <i>rates_a</i>
-<dl><dd><dd>The first rate mask</dl>
+<dl><dd></dd><dd>The first rate mask</dd></dl>
  
 
  <i>rates_b</i>
-<dl><dd>The second rate mask</dl>
+<dl><dd>The second rate mask</dd></dl>
 
 <h2>Description</h2>
 

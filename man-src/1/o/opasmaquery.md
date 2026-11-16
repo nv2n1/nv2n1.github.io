@@ -14,371 +14,303 @@ description: "opasmaquery"
 <p> opasmaquery [-v] [-d <i>detail</i>][-g] [-l <i>lid</i>] [-h <i>hfi</i>] [-p <i>port</i>] [-K <i>mkey</i>] [-o <i>otype</i>] [-m <i>port</i>| <i>port1,port2</i>] [-f <i>flid</i>] [-b <i>block[,count]</i>] [hop hop &#8230;]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd> Produces full help text. </p>
-<dt>-v</p>
-<dd> Returns verbose output. Can be specified more than once for additional openib and libibumad debugging. </p>
-<dt>-d <i>detail</i></p>
-<dd> Output detail level for cableinfo only. Range = 0 &#8211; n. Default = 2. An upper limit for detail level is not enforced. After a maximum amount of output is reached, a larger detail value has no effect. </p>
-<dt>-g</p>
-<dd> Displays line-by-line format. Default is summary format. </p>
-<dt>-l <i>lid</i></p>
-<dd> Destination LID. Default is local port. </p>
-<dt>-h <i>hfi</i></p>
-<dd> HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </p>
-<dt>-p <i>port</i></p>
-<dd> Port, numbered 1..n. If -h <i>hfi</i> is 0, then <i>port</i> is a system-wide port number. Default is 1. </p>
-<dt>-K <i>mkey</i></p>
-<dd> SM management key to access remote ports. </p>
-<dt>-o <i>otype</i></p>
-<dd> Output type. Default is nodeinfo. </p>
+<dt>&#8211;help</dt>
+<dd> Produces full help text. </dd>
+<dt>-v</dt>
+<dd> Returns verbose output. Can be specified more than once for additional openib and libibumad debugging. </dd>
+<dt>-d <i>detail</i></dt>
+<dd> Output detail level for cableinfo only. Range = 0 &#8211; n. Default = 2. An upper limit for detail level is not enforced. After a maximum amount of output is reached, a larger detail value has no effect. </dd>
+<dt>-g</dt>
+<dd> Displays line-by-line format. Default is summary format. </dd>
+<dt>-l <i>lid</i></dt>
+<dd> Destination LID. Default is local port. </dd>
+<dt>-h <i>hfi</i></dt>
+<dd> HFI, numbered 1..n. Using 0 specifies that the -p <i>port</i> port is a system-wide port number. Default is 0. </dd>
+<dt>-p <i>port</i></dt>
+<dd> Port, numbered 1..n. If -h <i>hfi</i> is 0, then <i>port</i> is a system-wide port number. Default is 1. </dd>
+<dt>-K <i>mkey</i></dt>
+<dd> SM management key to access remote ports. </dd>
+<dt>-o <i>otype</i></dt>
+<dd> Output type. Default is nodeinfo. </dd>
 <dt>
-<dd> Valid output types are:</p>
+</dt><dd> Valid output types are:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> bfrctrl Buffer control tables. </p>
-<dt>
-<dd> [-m dest_port] [-m port1,port2]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-m port1,port2]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> cableinfo Cable information. </p>
-<dt>
-<dd> [-d detail] [-m dest_port] [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-d detail] [-m dest_port] [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> conginfo Congestion information. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> desc or nodedesc Node descriptions/names. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> hficongcon HFI congestion control settings. </p>
-<dt>
-<dd> [-b block[,count]] [-f flid]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]] [-f flid]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> hficonglog HFI congestion logs. </p>
-<dt>
-<dd> [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> hficongset HFI congestion settings. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> linfdb Switch linear forwarding database (FDB) tables. </p>
-<dt>
-<dd> [-b block[,count]] [-f flid]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]] [-f flid]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> mcfdb Switch multicast FDB tables. </p>
-<dt>
-<dd> [-m dest_port] [-b block[,count]] [-f flid]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-b block[,count]] [-f flid]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> portgroup Adaptive Routing port groups. </p>
-<dt>
-<dd> [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> portgroupfdb Adaptive Routing port group FWD tables. </p>
-<dt>
-<dd> [-b block[,count]] [-f flid]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]] [-f flid]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> nodeaggr Node information and node descriptions. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> node or nodeinfo Node information. </p>
-<dt>
-<dd> [-m dest_port]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> portinfo Port information. </p>
-<dt>
-<dd> [-m dest_port]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> pstateinfo Switch port state information. </p>
-<dt>
-<dd> [-m dest_port] [-m port1,port2]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-m port1,port2]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> pkey P-Key tables. </p>
-<dt>
-<dd> [-m dest_port] [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> slsc SL to SC mapping tables. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> scsl SC to SL mapping tables. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> scsc SC to SC mapping tables. </p>
-<dt>
-<dd> [-m dest_port] [-m port1,port2]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-m port1,port2]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> scvlt SC to VLt tables. </p>
-<dt>
-<dd> [-m dest_port] [-m port1,port2]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-m port1,port2]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> scvlnt SC to VLnt tables. </p>
-<dt>
-<dd> [-m dest_port] [-m port1,port2]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port] [-m port1,port2]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> sminfo SM information. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> swaggr Node information and switch information. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> swconglog Switch congestion logs. </p>
-<dt>
-<dd> [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> swcongset Switch congestion settings. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> swinfo Switch information. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> swportcong Switch congestion settings. </p>
-<dt>
-<dd> [-b block[,count]]</dl>
+</dd><dt>
+</dt><dd> [-b block[,count]]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> vlarb VL arbitration tables. </p>
-<dt>
-<dd> [-m dest_port]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> ibnodeinfo IB node information. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> ledinfo LED information. </p>
-<dt>
-<dd> [-m dest_port]</dl>
+</dd><dt>
+</dt><dd> [-m dest_port]</dd></dl>
 </dl>
 </dl>
 <h2>-h and -p options permit a variety of selections:</h2>
 <dl>
-<dt>-h 0</p>
-<dd> First active port in system (default). </p>
-<dt>-h 0 -p 0</p>
-<dd> First active port in system. </p>
-<dt>-h <i>x</i></p>
-<dd> First active port on HFI <i>x</i>. </p>
-<dt>-h <i>x</i>#8217#160;-p 0</p>
-<dd> First active port on HFI <i>x</i>. </p>
-<dt>-h 0 -p <i>y</i></p>
-<dd> Port <i>y#8217#160;</i> within system (no matter which ports are active). </p>
-<dt>-h <i>x</i>#8217#160;-p <i>y</i></p>
-<dd> HFI <i>x</i>, port <i>y</i> </p>
+<dt>-h 0</dt>
+<dd> First active port in system (default). </dd>
+<dt>-h 0 -p 0</dt>
+<dd> First active port in system. </dd>
+<dt>-h <i>x</i></dt>
+<dd> First active port on HFI <i>x</i>. </dd>
+<dt>-h <i>x</i>#8217#160;-p 0</dt>
+<dd> First active port on HFI <i>x</i>. </dd>
+<dt>-h 0 -p <i>y</i></dt>
+<dd> Port <i>y#8217#160;</i> within system (no matter which ports are active). </dd>
+<dt>-h <i>x</i>#8217#160;-p <i>y</i></dt>
+<dd> HFI <i>x</i>, port <i>y</i> </dd>
 </dl>
 <h2>otype Options Vary by Report</h2>
 <dl>
-<dt>-m <i>port</i></p>
-<dd> Port in destination device to query. </p>
-<dt>-m <i>port1,port2</i></p>
-<dd> For some reports, a range of ports between <i>port1</i> and <i>port2</i>. For others, this describes an inport/outport pair. </p>
-<dt>-f <i>flid</i></p>
-<dd> LID to look up in forwarding table to select which LFT or MFT block to display. Default is to show entire table. </p>
-<dt>-b <i>block[,count]</i></p>
-<dd> Block number of either GUIDs or pkey, and the number of blocks to display. Default is to show entire table. </p>
+<dt>-m <i>port</i></dt>
+<dd> Port in destination device to query. </dd>
+<dt>-m <i>port1,port2</i></dt>
+<dd> For some reports, a range of ports between <i>port1</i> and <i>port2</i>. For others, this describes an inport/outport pair. </dd>
+<dt>-f <i>flid</i></dt>
+<dd> LID to look up in forwarding table to select which LFT or MFT block to display. Default is to show entire table. </dd>
+<dt>-b <i>block[,count]</i></dt>
+<dd> Block number of either GUIDs or pkey, and the number of blocks to display. Default is to show entire table. </dd>
 <dt>
-<dd> For example:</p>
-<dt>
-<dd>
+</dt><dd> For example:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> -b <i>block</i> Displays all of block <i>block</i> of a larger table. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -b <i>block,count</i> Displays <i>count</i> blocks of data starting with block <i>block</i>. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> -b, <i>count</i> Displays <i>count</i> blocks of data starting with block 0. </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>Examples</h2>

@@ -11,7 +11,6 @@ std::mktime - std::mktime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 std::time_t mktime( std::tm* time );</code></pre> 
 Converts local calendar time to a time since epoch as a time_t object. time-&gt;tm_wday and time-&gt;tm_yday are ignored. The values in time are permitted to be outside their normal ranges. 
 A negative value of time-&gt;tm_isdst causes mktime to attempt to determine if Daylight Saving Time was in effect. 
@@ -33,14 +32,10 @@ If the std::tm object was obtained from std::get_time or the POSIX strptime, the
 
 Display the time 100 months ago. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;stdlib.h&gt;
 int main()
-
 {
     setenv(&quot;TZ&quot;, &quot;/usr/share/zoneinfo/America/New_York&quot;, 1); // POSIX-specific
     std::time_t t = std::time(nullptr);

@@ -19,17 +19,17 @@ bson_uint32_to_string(uint32_t value,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>value</code></p>
-<dd> A uint32_t.</dl>
+<dt><code>value</code></dt>
+<dd> A uint32_t.</dd></dl>
 <dl>
-<dt><code>strptr</code></p>
-<dd> A location for the resulting string pointer.</dl>
+<dt><code>strptr</code></dt>
+<dd> A location for the resulting string pointer.</dd></dl>
 <dl>
-<dt><code>str</code></p>
-<dd> A location to buffer the string.</dl>
+<dt><code>str</code></dt>
+<dd> A location to buffer the string.</dd></dl>
 <dl>
-<dt><code>size</code></p>
-<dd> A size_t containing the size of <code>str</code> \&amp;.</dl>
+<dt><code>size</code></dt>
+<dd> A size_t containing the size of <code>str</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Converts <code>value</code> to a string. </p>
 <p> If <code>value</code> is from 0 to 999, it will use a constant string in the data section of the library. </p>

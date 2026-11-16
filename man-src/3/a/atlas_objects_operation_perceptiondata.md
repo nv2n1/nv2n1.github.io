@@ -50,14 +50,14 @@ description: "Atlas::Objects::Operation::PerceptionData – Character perceives 
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::InfoData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::SightData</code>, <code>Atlas::Objects::Operation::AppearanceData</code>, <code>Atlas::Objects::Operation::DisappearanceData</code>, <code>Atlas::Objects::Operation::SoundData</code>, <code>Atlas::Objects::Operation::SmellData</code>, and <code>Atlas::Objects::Operation::FeelData</code>.</p>
 <h3>static <code>PerceptionData</code>* Atlas::Objects::Operation::PerceptionData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::InfoData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::SightData</code>, <code>Atlas::Objects::Operation::AppearanceData</code>, <code>Atlas::Objects::Operation::DisappearanceData</code>, <code>Atlas::Objects::Operation::SoundData</code>, <code>Atlas::Objects::Operation::SmellData</code>, and <code>Atlas::Objects::Operation::FeelData</code>. </p>
 <h2>Author</h2>

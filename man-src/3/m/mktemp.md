@@ -17,15 +17,13 @@ char *mktemp(char *template);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>mktemp</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.12:</p>
+<dt>Since glibc 2.12:</dt>
 <dd> (_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500) &amp;&amp; ! (_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</p>
-<dt>Before glibc 2.12:</p>
-<dd> _BSD_SOURCE || _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd>
+<dt>Before glibc 2.12:</dt>
+<dd> _BSD_SOURCE || _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>Never use this function</i>; see BUGS. </p>
@@ -34,8 +32,8 @@ char *mktemp(char *template);
 <p> The <code>mktemp</code>() function always returns <i>template</i>. If a unique name was created, the last six bytes of <i>template</i> will have been modified in such a way that the resulting name is unique (i.e., does not exist already) If a unique name could not be created, <i>template</i> is made an empty string, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The last six characters of <i>template</i> were not XXXXXX.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The last six characters of <i>template</i> were not XXXXXX.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

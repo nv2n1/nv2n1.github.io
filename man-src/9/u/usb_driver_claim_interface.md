@@ -14,13 +14,13 @@ description: "usb_driver_claim_interface – bind a driver to an interface"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>the driver to be bound</dl>
+</dd><dd>the driver to be bound</dd></dl>
 <p> <i>iface</i></p>
 <dl>
-<dd>the interface to which it will be bound; must be in the usb device&#8217;s active configuration</dl>
+<dd>the interface to which it will be bound; must be in the usb device&#8217;s active configuration</dd></dl>
 <p> <i>priv</i></p>
 <dl>
-<dd>driver data associated with that interface</dl>
+<dd>driver data associated with that interface</dd></dl>
 <h2>Description</h2>
 <p>This is used by usb device drivers that need to claim more than one interface on a device when probing (audio and acm are current examples). No device driver should directly modify internal usb_interface or usb_device structure members. </p>
 <p> Few drivers should need to use this routine, since the most natural way to bind to an interface is to return the private data from the driver&#8217;s <code>probe</code> method. </p>

@@ -24,9 +24,7 @@ The character to use as decimal point character is determined by the numpunct fa
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;1.0 with showpoint: &quot; &lt;&lt; std::showpoint &lt;&lt; 1.0 &lt;&lt; '
 '

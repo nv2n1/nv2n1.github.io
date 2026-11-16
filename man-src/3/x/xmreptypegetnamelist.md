@@ -16,10 +16,10 @@ description: "XmRepTypeGetNameList — A representation type manager function th
 <h2>Description</h2>
 <p><code>XmRepTypeGetNameList</code> generates a NULL-terminated list of the value names associated with the specified representation type. Each value name is a NULL-terminated string. This routine allocates memory for the returned data. The application must free this memory using <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>rep_type_id</i></p>
-<dd>Specifies the identification number of the representation type.</p>
-<dt><i>use_uppercase_format</i></p>
-<dd>Specifies a Boolean value that controls the format of the name list. If the value is True, each value name is in uppercase characters prefixed by <code>Xm</code>; if it is False, the names are in lowercase characters.</dl>
+<dt><i>rep_type_id</i></dt>
+<dd>Specifies the identification number of the representation type.</dd>
+<dt><i>use_uppercase_format</i></dt>
+<dd>Specifies a Boolean value that controls the format of the name list. If the value is True, each value name is in uppercase characters prefixed by <code>Xm</code>; if it is False, the names are in lowercase characters.</dd></dl>
 <h2>Return</h2>
 <p>Returns a pointer to an array of the value names.</p>
 <h2>Related</h2>

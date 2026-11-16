@@ -15,11 +15,11 @@ usb_for_each_dev - iterate over all USB devices in the system
 <h2>Arguments</h2>
 
 <i>data</i>
-<dl><dd><dd>data pointer that will be handed to the callback function</dl>
+<dl><dd></dd><dd>data pointer that will be handed to the callback function</dd></dl>
  
 
  <i>fn</i>
-<dl><dd>callback function to be called for each USB device</dl>
+<dl><dd>callback function to be called for each USB device</dd></dl>
 
 <h2>Description</h2>
 

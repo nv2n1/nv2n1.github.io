@@ -18,18 +18,18 @@ description: "rngtest – Check the randomness of data using FIPS 140-2 tests"
 <p> Statistics are dumped to <i>stderr</i> when the program exits. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code>, <code>&#8211;pipe</code></p>
-<dd> Enable <i>pipe mode</i>. All data blocks that pass the FIPS tests are echoed to <i>stdout</i>, and <i>rngtest</i> operates in silent mode.</p>
-<dt><code>-c</code> <i>n</i>, <code>&#8211;blockcount=</code><i>n</i> (default: 0)</p>
-<dd> Exit after processing n input blocks, if n is not zero.</p>
-<dt><code>-b</code> <i>n</i>, <code>&#8211;blockstats=</code><i>n</i> (default: 0)</p>
-<dd> Dump statistics every n blocks, if n is not zero.</p>
-<dt><code>-t</code> <i>n</i>, <code>&#8211;timedstats=</code><i>n</i> (default: 0)</p>
-<dd> Dump statistics every n seconds, if n is not zero.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Give a short summary of all program options.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version </p>
+<dt><code>-p</code>, <code>&#8211;pipe</code></dt>
+<dd> Enable <i>pipe mode</i>. All data blocks that pass the FIPS tests are echoed to <i>stdout</i>, and <i>rngtest</i> operates in silent mode.</dd>
+<dt><code>-c</code> <i>n</i>, <code>&#8211;blockcount=</code><i>n</i> (default: 0)</dt>
+<dd> Exit after processing n input blocks, if n is not zero.</dd>
+<dt><code>-b</code> <i>n</i>, <code>&#8211;blockstats=</code><i>n</i> (default: 0)</dt>
+<dd> Dump statistics every n blocks, if n is not zero.</dd>
+<dt><code>-t</code> <i>n</i>, <code>&#8211;timedstats=</code><i>n</i> (default: 0)</dt>
+<dd> Dump statistics every n seconds, if n is not zero.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Give a short summary of all program options.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version </dd>
 </dl>
 <h2>STATISTICS</h2>
 <p> <i>rngtest</i> will dump statistics to <i>stderr</i> when it exits, and when told to by <i>blockstats</i> or <i>timedstats</i>. </p>
@@ -37,22 +37,22 @@ description: "rngtest – Check the randomness of data using FIPS 140-2 tests"
 <p> The speed statistics are taken for every 20000-bit block transferred or processed. </p>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code> if no errors happen, and no blocks fail the FIPS tests.</p>
+<dt><code>0</code> if no errors happen, and no blocks fail the FIPS tests.</dt>
 <dd>
-<dt><code>1</code> if no errors happen, but at least one block fails the FIPS tests.</p>
+</dd><dt><code>1</code> if no errors happen, but at least one block fails the FIPS tests.</dt>
 <dd>
-<dt><code>10</code> if there are problems with the parameters.</p>
+</dd><dt><code>10</code> if there are problems with the parameters.</dt>
 <dd>
-<dt><code>11</code> if an input/output error happens.</p>
+</dd><dt><code>11</code> if an input/output error happens.</dt>
 <dd>
-<dt><code>12</code> if an operating system or resource starvation error happens.</p>
+</dd><dt><code>12</code> if an operating system or resource starvation error happens.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/4-random/">random</a>(4), <a href="/docs/linux/man/8-rngd/">rngd</a>(8)</p>
 <dl>
-<dt>FIPS PUB 140-2 Security Requirements for Cryptographic Modules, NIST,</p>
-<dd> <a rel="nofollow" href="http://csrc.nist.gov/groups/STM/cmvp/standards.html">http://csrc.nist.gov/groups/STM/cmvp/standards.html</a> </p>
+<dt>FIPS PUB 140-2 Security Requirements for Cryptographic Modules, NIST,</dt>
+<dd> <a rel="nofollow" href="http://csrc.nist.gov/groups/STM/cmvp/standards.html">http://csrc.nist.gov/groups/STM/cmvp/standards.html</a> </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Henrique de Moraes Holschuh &lt;hmh [at] debian.org&gt; </p>

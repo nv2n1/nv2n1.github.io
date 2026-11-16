@@ -15,10 +15,10 @@ description: "mksmbpasswd – formats a /etc/passwd entry for a smbpasswd file"
 <p> Please note that passwords are not transferred automatically from /etc/passwd to the new /etc/samba/smbpasswd file. After running <code>mksmbpasswd</code> all accounts are disabled so the system administrator must run smbpasswd for each account that needs to be enable.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/passwd</p>
-<dd>System wide accounts file</p>
-<dt>/etc/samba/smbpasswd</p>
-<dd>Encrypted passwords file for the Samba daemons</dl>
+<dt>/etc/passwd</dt>
+<dd>System wide accounts file</dd>
+<dt>/etc/samba/smbpasswd</dt>
+<dd>Encrypted passwords file for the Samba daemons</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/7-samba/">samba</a>(7), <a href="/docs/linux/man/8-nmbd/">nmbd</a>(8), <a href="/docs/linux/man/8-smbd/">smbd</a>(8)</p>
 <h2>Author</h2>

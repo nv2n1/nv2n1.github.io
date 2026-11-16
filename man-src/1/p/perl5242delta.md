@@ -33,15 +33,15 @@ url: "/docs/linux/man/1-perl5242delta/"
 
 <dl>
 <dt>&bull;
-<dd> base has been upgraded from version 2.23 to 2.23_01.
-<dt>&bull;
-<dd> Module::CoreList has been upgraded from version 5.20170114_24 to 5.20170715_24.</dl>
+</dt><dd> base has been upgraded from version 2.23 to 2.23_01.
+</dd><dt>&bull;
+</dt><dd> Module::CoreList has been upgraded from version 5.20170114_24 to 5.20170715_24.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> Fixed a crash with <tt>&quot;s///l&quot;</tt> where it thought it was dealing with <font SIZE="-1">UTF-8</font> when it wasn't. [perl #129038] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=129038">https://rt.perl.org/Ticket/Display.html?id=129038</a>&gt;</dl>
+</dt><dd> Fixed a crash with <tt>&quot;s///l&quot;</tt> where it thought it was dealing with <font SIZE="-1">UTF-8</font> when it wasn't. [perl #129038] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=129038">https://rt.perl.org/Ticket/Display.html?id=129038</a>&gt;</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -82,14 +82,14 @@ url: "/docs/linux/man/1-perl5242delta/"
 
 
 <dt><a HREF="#lbAG">Modules and Pragmata</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAI">Selected Bug Fixes</a>
-<dd>
-<dt><a HREF="#lbAJ">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAK">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAL">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAI">Selected Bug Fixes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">SEE ALSO</a>
+</dt><dd></dd></dl>

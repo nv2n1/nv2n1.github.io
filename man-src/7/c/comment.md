@@ -45,40 +45,40 @@ description: "COMMENT – define or change the comment of an object"
 <p> Comments can be viewed using <code>psql</code>&#8216;s <code>\d</code> family of commands. Other user interfaces to retrieve comments can be built atop the same built-in functions that <code>psql</code> uses, namely <code>obj_description</code>, <code>col_description</code>, and <code>shobj_description</code> (see in the documentation).</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>object_name</i></p>
+<dt><i>object_name</i></dt>
 <dd>
-<dt><i>table_name.column_name</i></p>
+</dd><dt><i>table_name.column_name</i></dt>
 <dd>
-<dt><i>agg_name</i></p>
+</dd><dt><i>agg_name</i></dt>
 <dd>
-<dt><i>constraint_name</i></p>
+</dd><dt><i>constraint_name</i></dt>
 <dd>
-<dt><i>func_name</i></p>
+</dd><dt><i>func_name</i></dt>
 <dd>
-<dt><i>op</i></p>
+</dd><dt><i>op</i></dt>
 <dd>
-<dt><i>rule_name</i></p>
+</dd><dt><i>rule_name</i></dt>
 <dd>
-<dt><i>trigger_name</i></p>
-<dd>The name of the object to be commented. Names of tables, aggregates, domains, functions, indexes, operators, operator classes, operator families, sequences, text search objects, types, and views can be schema-qualified.</p>
-<dt><i>agg_type</i></p>
-<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</p>
-<dt><i>sourcetype</i></p>
-<dd>The name of the source data type of the cast.</p>
-<dt><i>targettype</i></p>
-<dd>The name of the target data type of the cast.</p>
-<dt><i>argmode</i></p>
-<dd>The mode of a function argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Note that <code>COMMENT ON FUNCTION</code> does not actually pay any attention to OUT arguments, since only the input arguments are needed to determine the function&#8217;s identity. So it is sufficient to list the IN, INOUT, and VARIADIC arguments.</p>
-<dt><i>argname</i></p>
-<dd>The name of a function argument. Note that <code>COMMENT ON FUNCTION</code> does not actually pay any attention to argument names, since only the argument data types are needed to determine the function&#8217;s identity.</p>
-<dt><i>argtype</i></p>
-<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any.</p>
-<dt><i>large_object_oid</i></p>
-<dd>The OID of the large object.</p>
-<dt><code>PROCEDURAL</code></p>
-<dd>This is a noise word.</p>
-<dt><i>text</i></p>
-<dd>The new comment, written as a string literal; or NULL to drop the comment.</dl>
+</dd><dt><i>trigger_name</i></dt>
+<dd>The name of the object to be commented. Names of tables, aggregates, domains, functions, indexes, operators, operator classes, operator families, sequences, text search objects, types, and views can be schema-qualified.</dd>
+<dt><i>agg_type</i></dt>
+<dd>An input data type on which the aggregate function operates. To reference a zero-argument aggregate function, write * in place of the list of input data types.</dd>
+<dt><i>sourcetype</i></dt>
+<dd>The name of the source data type of the cast.</dd>
+<dt><i>targettype</i></dt>
+<dd>The name of the target data type of the cast.</dd>
+<dt><i>argmode</i></dt>
+<dd>The mode of a function argument: IN, OUT, INOUT, or VARIADIC. If omitted, the default is IN. Note that <code>COMMENT ON FUNCTION</code> does not actually pay any attention to OUT arguments, since only the input arguments are needed to determine the function&#8217;s identity. So it is sufficient to list the IN, INOUT, and VARIADIC arguments.</dd>
+<dt><i>argname</i></dt>
+<dd>The name of a function argument. Note that <code>COMMENT ON FUNCTION</code> does not actually pay any attention to argument names, since only the argument data types are needed to determine the function&#8217;s identity.</dd>
+<dt><i>argtype</i></dt>
+<dd>The data type(s) of the function&#8217;s arguments (optionally schema-qualified), if any.</dd>
+<dt><i>large_object_oid</i></dt>
+<dd>The OID of the large object.</dd>
+<dt><code>PROCEDURAL</code></dt>
+<dd>This is a noise word.</dd>
+<dt><i>text</i></dt>
+<dd>The new comment, written as a string literal; or NULL to drop the comment.</dd></dl>
 <h2>Notes</h2>
 <p>There is presently no security mechanism for comments: any user connected to a database can see all the comments for objects in that database (although only superusers can change comments for objects that they don&#8217;t own). For shared objects such as databases, roles, and tablespaces comments are stored globally and any user connected to any database can see all the comments for shared objects. Therefore, don&#8217;t put security-critical information in comments.</p>
 <h2>Examples</h2>

@@ -23,14 +23,14 @@ description: "pmns – the performance metrics name space"
 <h2>Processing Framework</h2>
 <p>The PMNS specification is initially passed through <code><a href="/docs/linux/man/1-pmcpp/">pmcpp</a></code>(1). This means the following facilities may be used in the specification</p>
 <dl>
-<dt>+</p>
-<dd>C-style comments</p>
-<dt>+</p>
-<dd><i>#include</i> directives</p>
-<dt>+</p>
-<dd><i>#define</i> directives and macro substitution</p>
-<dt>+</p>
-<dd>conditional processing via <i>#ifdef</i> &#8230; <i>#endif</i>, etc.</dl>
+<dt>+</dt>
+<dd>C-style comments</dd>
+<dt>+</dt>
+<dd><i>#include</i> directives</dd>
+<dt>+</dt>
+<dd><i>#define</i> directives and macro substitution</dd>
+<dt>+</dt>
+<dd>conditional processing via <i>#ifdef</i> &#8230; <i>#endif</i>, etc.</dd></dl>
 <p> When <code><a href="/docs/linux/man/1-pmcpp/">pmcpp</a></code>(1) is executed, the &#8220;standard&#8221; include directories are the current directory and <i>$PCP_VAR_DIR/pmns</i>. </p>
 <p> The pre-processing with <code><a href="/docs/linux/man/1-pmcpp/">pmcpp</a></code>(1) may be omitted in some cases where the PMNS is known to <code>not</code> contain any C-style comments, preprocessor directives or macros. Refer to the descriptions of <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3) and <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) for details.</p>
 <h2>Syntax</h2>
@@ -174,28 +174,23 @@ root {
     cpu
     dynamic     FOO:*:*
 }
-
 #define NETWORK 26
 network {
     intrate     KERNEL:NETWORK:1
     packetrate
 }
-
 network.packetrate {
     in          KERNEL:NETWORK:35
     out         KERNEL:NETWORK:36
 }
-
 #define CPU 10
 cpu {
     syscallrate KERNEL:CPU:10
     util
 }
-
 #define USER 20
 #define SYSTEM 21
 #define IDLE 22
-
 cpu.util {
     user        KERNEL:CPU:USER
     sys         KERNEL:CPU:SYSTEM

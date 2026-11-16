@@ -66,8 +66,8 @@ description: "lessfile, lesspipe – \"input preprocessor\" for less."
 &nbsp;<wbr>&nbsp;exit 0 </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.lessfilter</i></p>
-<dd> Executable file that can do user defined processing. See section USER DEFINED FILTERS for more information.</dl>
+<dt><i>~/.lessfilter</i></dt>
+<dd> Executable file that can do user defined processing. See section USER DEFINED FILTERS for more information.</dd></dl>
 <h2>BUGS</h2>
 <p> Sometimes, less does not display the contents file you want to view but output that is produced by your login scripts (~/.bashrc or ~/.bash_profile). This happens because less uses your current shell to run the lesspipe filter. Bash first looks for the variable $BASH_ENV in the environment expands its value and uses the expanded value as the name of a file to read and execute. If this file produces any output less will display this. A way to solve this problem is to put the following lines on the top of your login script that produces output: </p>
 <p>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;-z&nbsp;&quot;$PS1&quot;&nbsp;];&nbsp;then<br />

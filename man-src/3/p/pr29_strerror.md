@@ -13,8 +13,8 @@ description: "pr29_strerror – API function"
 const char *pr29_strerror(Pr29_rc rc);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>Pr29_rc rc</p>
-<dd>an <code>Pr29_rc</code> return code.</dl>
+<dt>Pr29_rc rc</dt>
+<dd>an <code>Pr29_rc</code> return code.</dd></dl>
 <h2>Description</h2>
 <p>Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
 <h2>Pr29_Success</h2>
@@ -33,5 +33,5 @@ const char *pr29_strerror(Pr29_rc rc);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

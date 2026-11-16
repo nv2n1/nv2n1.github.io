@@ -20,10 +20,10 @@ description: "krb5_mk_req krb5_mk_req_exact krb5_mk_req_extended krb5_rd_req krb
 <p> The input data Fa in_data will have a checksum calculated over it and checksum will be transported in the message to the server. </p>
 <p> Fa ap_req_options can be set to one or more of the following flags: </p>
 <dl>
-<dt><code>AP_OPTS_USE_SESSION_KEY</code></p>
-<dd> Use the session key when creating the request, used for user to user authentication.</p>
-<dt><code>AP_OPTS_MUTUAL_REQUIRED</code></p>
-<dd> Mark the request as mutual authenticate required so that the receiver returns a mutual authentication packet.</dl>
+<dt><code>AP_OPTS_USE_SESSION_KEY</code></dt>
+<dd> Use the session key when creating the request, used for user to user authentication.</dd>
+<dt><code>AP_OPTS_MUTUAL_REQUIRED</code></dt>
+<dd> Mark the request as mutual authenticate required so that the receiver returns a mutual authentication packet.</dd></dl>
 <p> The <code>krb5_rd_req</code> read the AP_REQ in Fa inbuf and verify and extract the content. If Fa server is specified, that server will be fetched from the Fa keytab and used unconditionally. If Fa server is <code>NULL</code> the Fa keytab will be search for a matching principal. </p>
 <p> The Fa keytab argument specifies what keytab to search for receiving principals. The arguments Fa ap_req_options and Fa ticket returns the content. </p>
 <p> When the AS-REQ is a user to user request, neither of Fa keytab or Fa principal are used, instead Fn krb5_rd_req expects the session key to be set in Fa auth_context . </p>

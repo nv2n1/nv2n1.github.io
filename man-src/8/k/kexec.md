@@ -16,12 +16,12 @@ description: "kexec – directly boot into a new kernel"
 <h2>Usage</h2>
 <p>Using <code>kexec</code> consists of </p>
 <dl>
-<dd>(1) loading the kernel to be rebooted to into memory, and</dl>
+<dd>(1) loading the kernel to be rebooted to into memory, and</dd></dl>
 <dl>
-<dd>(2) actually rebooting to the pre-loaded kernel.</dl>
+<dd>(2) actually rebooting to the pre-loaded kernel.</dd></dl>
 <p> To load a kernel, the syntax is as follows: </p>
 <dl>
-<dd><code>kexec</code> -l&nbsp;<wbr><i>kernel-image</i> &#8211;append=<i>command-line-options</i> &#8211;initrd=<i>initrd-image</i></dl>
+<dd><code>kexec</code> -l&nbsp;<wbr><i>kernel-image</i> &#8211;append=<i>command-line-options</i> &#8211;initrd=<i>initrd-image</i></dd></dl>
 <p> where <i>kernel-image</i> is the kernel file that you intend to reboot to. </p>
 <p> Insert the command-line parameters that must be passed to the new kernel into <i>command-line-options</i>. Passing the exact contents of /proc/cmdline into <i>command-line-options</i> is the safest way to ensure that correct values are passed to the rebooting kernel. </p>
 <p> The optional <i>initrd-image</i> is the initrd image to be used during boot. </p>
@@ -29,116 +29,116 @@ description: "kexec – directly boot into a new kernel"
 <h2>Example</h2>
 <p>For example, if the kernel image you want to reboot to is <code>/boot/vmlinux</code>, the contents of /proc/cmdline is <code>root=/dev/hda1</code>, and the path to the initrd is <code>/boot/initrd</code>, then you would use the following command to load the kernel:</p>
 <dl>
-<dd><code>kexec</code> -l&nbsp;<wbr><code>/boot/vmlinux</code> &#8211;append=<code>root=/dev/hda1</code>&nbsp;<wbr>&#8211;initrd=<code>/boot/initrd</code></dl>
+<dd><code>kexec</code> -l&nbsp;<wbr><code>/boot/vmlinux</code> &#8211;append=<code>root=/dev/hda1</code>&nbsp;<wbr>&#8211;initrd=<code>/boot/initrd</code></dd></dl>
 <p> After this kernel is loaded, it can be booted to at any time using the command:</p>
 <dl>
-<dd><code>kexec</code>&nbsp;<wbr>-e</dl>
+<dd><code>kexec</code>&nbsp;<wbr>-e</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d&nbsp;<wbr>(&#8211;debug)</code></p>
-<dd>Enable debugging messages.</p>
-<dt><code>-e&nbsp;<wbr>(&#8211;exec)</code></p>
-<dd>Run the currently loaded kernel. Note that it will reboot into the loaded kernel without calling <a href="/docs/linux/man/8-shutdown/">shutdown</a>(8).</p>
-<dt><code>-f&nbsp;<wbr>(&#8211;force)</code></p>
-<dd>Force an immediate <code>kexec</code> call, do not call <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8) (contrary to the default action without any option parameter). This option performs the same actions like executing <i>-l</i> and <i>-e</i> in one call.</p>
-<dt><code>-h&nbsp;<wbr>(&#8211;help)</code></p>
-<dd>Open a help file for <code>kexec</code>.</p>
-<dt><code>-l&nbsp;<wbr>(&#8211;load)</code><i>&nbsp;<wbr>kernel</i></p>
-<dd>Load the specified <i>kernel</i> into the current kernel.</p>
-<dt><code>-p&nbsp;<wbr>(&#8211;load-panic)</code></p>
-<dd>Load the new kernel for use on panic.</p>
-<dt><code>-t&nbsp;<wbr>(&#8211;type=</code><i>type</i><code>)</code></p>
-<dd>Specify that the new kernel is of this <i>type.</i></p>
-<dt><code>-u&nbsp;<wbr>(&#8211;unload)</code></p>
-<dd>Unload the current <code>kexec</code> target kernel. If a capture kernel is being unloaded then specify -p with -u.</p>
-<dt><code>-v&nbsp;<wbr>(&#8211;version)</code></p>
-<dd>Return the version number of the installed utility.</p>
-<dt><code>-x&nbsp;<wbr>(&#8211;no-ifdown)</code></p>
-<dd>Shut down the running kernel, but restore the interface on reload.</p>
-<dt><code>-y&nbsp;<wbr>(&#8211;no-sync)</code></p>
-<dd>Shut down the running kernel, but skip syncing the filesystems.</p>
-<dt><code>&#8211;mem-min=</code><i>addr</i></p>
-<dd>Specify the lowest memory address <i>addr</i> to load code into.</p>
-<dt><code>&#8211;mem-max=</code><i>addr</i></p>
-<dd>Specify the highest memory address <i>addr</i> to load code into.</p>
-<dt><code>&#8211;entry=</code><i>addr</i></p>
-<dd>Specify the jump back address. (0 means it&#8217;s not jump back or preserve context)</p>
-<dt><code>&#8211;load-preserve-context</code></p>
-<dd>Load the new kernel and preserve context of current kernel during kexec.</p>
-<dt><code>&#8211;load-jump-back-helper</code></p>
-<dd>Load a helper image to jump back to original kernel.</p>
-<dt><code>&#8211;reuseinitrd</code></p>
-<dd>Reuse initrd from first boot. </p>
+<dt><code>-d&nbsp;<wbr>(&#8211;debug)</code></dt>
+<dd>Enable debugging messages.</dd>
+<dt><code>-e&nbsp;<wbr>(&#8211;exec)</code></dt>
+<dd>Run the currently loaded kernel. Note that it will reboot into the loaded kernel without calling <a href="/docs/linux/man/8-shutdown/">shutdown</a>(8).</dd>
+<dt><code>-f&nbsp;<wbr>(&#8211;force)</code></dt>
+<dd>Force an immediate <code>kexec</code> call, do not call <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8) (contrary to the default action without any option parameter). This option performs the same actions like executing <i>-l</i> and <i>-e</i> in one call.</dd>
+<dt><code>-h&nbsp;<wbr>(&#8211;help)</code></dt>
+<dd>Open a help file for <code>kexec</code>.</dd>
+<dt><code>-l&nbsp;<wbr>(&#8211;load)</code><i>&nbsp;<wbr>kernel</i></dt>
+<dd>Load the specified <i>kernel</i> into the current kernel.</dd>
+<dt><code>-p&nbsp;<wbr>(&#8211;load-panic)</code></dt>
+<dd>Load the new kernel for use on panic.</dd>
+<dt><code>-t&nbsp;<wbr>(&#8211;type=</code><i>type</i><code>)</code></dt>
+<dd>Specify that the new kernel is of this <i>type.</i></dd>
+<dt><code>-u&nbsp;<wbr>(&#8211;unload)</code></dt>
+<dd>Unload the current <code>kexec</code> target kernel. If a capture kernel is being unloaded then specify -p with -u.</dd>
+<dt><code>-v&nbsp;<wbr>(&#8211;version)</code></dt>
+<dd>Return the version number of the installed utility.</dd>
+<dt><code>-x&nbsp;<wbr>(&#8211;no-ifdown)</code></dt>
+<dd>Shut down the running kernel, but restore the interface on reload.</dd>
+<dt><code>-y&nbsp;<wbr>(&#8211;no-sync)</code></dt>
+<dd>Shut down the running kernel, but skip syncing the filesystems.</dd>
+<dt><code>&#8211;mem-min=</code><i>addr</i></dt>
+<dd>Specify the lowest memory address <i>addr</i> to load code into.</dd>
+<dt><code>&#8211;mem-max=</code><i>addr</i></dt>
+<dd>Specify the highest memory address <i>addr</i> to load code into.</dd>
+<dt><code>&#8211;entry=</code><i>addr</i></dt>
+<dd>Specify the jump back address. (0 means it&#8217;s not jump back or preserve context)</dd>
+<dt><code>&#8211;load-preserve-context</code></dt>
+<dd>Load the new kernel and preserve context of current kernel during kexec.</dd>
+<dt><code>&#8211;load-jump-back-helper</code></dt>
+<dd>Load a helper image to jump back to original kernel.</dd>
+<dt><code>&#8211;reuseinitrd</code></dt>
+<dd>Reuse initrd from first boot. </dd>
 </dl>
 <h2>Supported Kernel File Types And Options</h2>
 <p><code>Beoboot-x86</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>&#8211;args-elf</code></p>
-<dd>Pass ELF boot notes.</p>
-<dt><code>&#8211;args-linux</code></p>
-<dd>Pass Linux kernel style options.</p>
-<dt><code>&#8211;real-mode</code></p>
-<dd>Use the kernel&#8217;s real mode entry point.</dl>
+</dd><dl>
+<dt><code>&#8211;args-elf</code></dt>
+<dd>Pass ELF boot notes.</dd>
+<dt><code>&#8211;args-linux</code></dt>
+<dd>Pass Linux kernel style options.</dd>
+<dt><code>&#8211;real-mode</code></dt>
+<dd>Use the kernel&#8217;s real mode entry point.</dd></dl>
 </dl>
 <p> <code>elf-x86</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>&#8211;append=</code><i>string</i></p>
-<dd>Append <i>string</i> to the kernel command line.</p>
-<dt><code>&#8211;command-line=</code><i>string</i></p>
-<dd>Set the kernel command line to <i>string</i>.</p>
-<dt><code>&#8211;reuse-cmdline</code></p>
-<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</p>
-<dt><code>&#8211;initrd=</code><i>file</i></p>
-<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</p>
-<dt><code>&#8211;ramdisk=</code><i>file</i></p>
-<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</dl>
+</dd><dl>
+<dt><code>&#8211;append=</code><i>string</i></dt>
+<dd>Append <i>string</i> to the kernel command line.</dd>
+<dt><code>&#8211;command-line=</code><i>string</i></dt>
+<dd>Set the kernel command line to <i>string</i>.</dd>
+<dt><code>&#8211;reuse-cmdline</code></dt>
+<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</dd>
+<dt><code>&#8211;initrd=</code><i>file</i></dt>
+<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</dd>
+<dt><code>&#8211;ramdisk=</code><i>file</i></dt>
+<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</dd></dl>
 </dl>
 <p> <code>bzImage-x86</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>&#8211;append=</code><i>string</i></p>
-<dd>Append <i>string</i> to the kernel command line.</p>
-<dt><code>&#8211;command-line=</code><i>string</i></p>
-<dd>Set the kernel command line to <i>string</i>.</p>
-<dt><code>&#8211;reuse-cmdline</code></p>
-<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</p>
-<dt><code>&#8211;initrd=</code><i>file</i></p>
-<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</p>
-<dt><code>&#8211;ramdisk=</code><i>file</i></p>
-<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</p>
-<dt><code>&#8211;real-mode</code></p>
-<dd>Use real-mode entry point.</dl>
+</dd><dl>
+<dt><code>&#8211;append=</code><i>string</i></dt>
+<dd>Append <i>string</i> to the kernel command line.</dd>
+<dt><code>&#8211;command-line=</code><i>string</i></dt>
+<dd>Set the kernel command line to <i>string</i>.</dd>
+<dt><code>&#8211;reuse-cmdline</code></dt>
+<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</dd>
+<dt><code>&#8211;initrd=</code><i>file</i></dt>
+<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</dd>
+<dt><code>&#8211;ramdisk=</code><i>file</i></dt>
+<dd>Use <i>file</i> as the kernel&#8217;s initial ramdisk.</dd>
+<dt><code>&#8211;real-mode</code></dt>
+<dd>Use real-mode entry point.</dd></dl>
 </dl>
 <p> <code>multiboot-x86</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>&#8211;command-line=</code><i>string</i></p>
-<dd>Set the kernel command line to <i>string</i>.</p>
-<dt><code>&#8211;reuse-cmdline</code></p>
-<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</p>
-<dt><code>&#8211;module=</code><i>mod arg1 arg2 &#8230;</i></p>
-<dd>Load module <i>mod</i> with command-line arguments <i>arg1 arg2 &#8230;</i> This parameter can be specified multiple times.</dl>
+</dd><dl>
+<dt><code>&#8211;command-line=</code><i>string</i></dt>
+<dd>Set the kernel command line to <i>string</i>.</dd>
+<dt><code>&#8211;reuse-cmdline</code></dt>
+<dd>Use the command line from the running system. When a panic kernel is loaded, it strips the <i>crashkernel</i> parameter automatically. The <i>BOOT_IMAGE</i> parameter is also stripped.</dd>
+<dt><code>&#8211;module=</code><i>mod arg1 arg2 &#8230;</i></dt>
+<dd>Load module <i>mod</i> with command-line arguments <i>arg1 arg2 &#8230;</i> This parameter can be specified multiple times.</dd></dl>
 </dl>
 <h2>Architecture Options</h2>
 <dl>
-<dt><code>&#8211;console-serial</code></p>
-<dd>Enable the serial console.</p>
-<dt><code>&#8211;console-vga</code></p>
-<dd>Enable the VGA console.</p>
-<dt><code>&#8211;elf32-core-headers</code></p>
-<dd>Prepare core headers in ELF32 format.</p>
-<dt><code>&#8211;elf64-core-headers</code></p>
-<dd>Prepare core headers in ELF64 format.</p>
-<dt><code>&#8211;reset-vga</code></p>
-<dd>Attempt to reset a standard VGA device.</p>
-<dt><code>&#8211;serial=</code><i>port</i></p>
-<dd>Specify the serial <i>port</i> for debug output.</p>
-<dt><code>&#8211;serial-baud=</code><i>baud_rate</i></p>
-<dd>Specify the <i>baud rate</i> of the serial port. </p>
+<dt><code>&#8211;console-serial</code></dt>
+<dd>Enable the serial console.</dd>
+<dt><code>&#8211;console-vga</code></dt>
+<dd>Enable the VGA console.</dd>
+<dt><code>&#8211;elf32-core-headers</code></dt>
+<dd>Prepare core headers in ELF32 format.</dd>
+<dt><code>&#8211;elf64-core-headers</code></dt>
+<dd>Prepare core headers in ELF64 format.</dd>
+<dt><code>&#8211;reset-vga</code></dt>
+<dd>Attempt to reset a standard VGA device.</dd>
+<dt><code>&#8211;serial=</code><i>port</i></dt>
+<dd>Specify the serial <i>port</i> for debug output.</dd>
+<dt><code>&#8211;serial-baud=</code><i>baud_rate</i></dt>
+<dd>Specify the <i>baud rate</i> of the serial port. </dd>
 </dl>

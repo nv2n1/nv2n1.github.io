@@ -17,12 +17,12 @@ description: "XmListDeleteItemsPos — A List function that deletes items from t
 <h2>Description</h2>
 <p><code>XmListDeleteItemsPos</code> deletes the specified number of items from the list starting at the specified position.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List from whose list an item is deleted.</p>
-<dt><i>item_count</i></p>
-<dd>Specifies the number of items to be deleted. This number must be nonnegative.</p>
-<dt><i>position</i></p>
-<dd>Specifies the position in the list of the first item to be deleted. A value of 1 indicates that the first deleted item is the first item in the list; a value of 2 indicates that it is the second item; and so on.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List from whose list an item is deleted.</dd>
+<dt><i>item_count</i></dt>
+<dd>Specifies the number of items to be deleted. This number must be nonnegative.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position in the list of the first item to be deleted. A value of 1 indicates that the first deleted item is the first item in the list; a value of 2 indicates that it is the second item; and so on.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

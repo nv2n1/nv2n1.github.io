@@ -19,36 +19,36 @@ description: "ntp_clock – Reference Clock Options"
 <h2>Reference Clock Commands</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>server 127.127.</code><i>t.u</i><code> [prefer] [mode </code><i>int</i><code>] [minpoll </code><i>int</i><code>] [maxpoll </code><i>int</i><code>]</code></p>
-<dd>This command can be used to configure reference clocks in special ways. The options are interpreted as follows:</p>
+</dd><dl>
+<dt><code>server 127.127.</code><i>t.u</i><code> [prefer] [mode </code><i>int</i><code>] [minpoll </code><i>int</i><code>] [maxpoll </code><i>int</i><code>]</code></dt>
+<dd>This command can be used to configure reference clocks in special ways. The options are interpreted as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>prefer</code></p>
-<dd>Marks the reference clock as preferred. All other things being equal, this host will be chosen for synchronization among a set of correctly operating hosts. See the Mitigation Rules and the <code>prefer</code> Keyword page for further information.</p>
-<dt><code>mode </code><i>int</i></p>
-<dd>Specifies a mode number which is interpreted in a device-specific fashion. For instance, it selects a dialing protocol in the ACTS driver and a device subtype in the <code>parse</code> drivers.</p>
-<dt><code>minpoll </code><i>int</i></p>
+</dd><dl>
+<dt><code>prefer</code></dt>
+<dd>Marks the reference clock as preferred. All other things being equal, this host will be chosen for synchronization among a set of correctly operating hosts. See the Mitigation Rules and the <code>prefer</code> Keyword page for further information.</dd>
+<dt><code>mode </code><i>int</i></dt>
+<dd>Specifies a mode number which is interpreted in a device-specific fashion. For instance, it selects a dialing protocol in the ACTS driver and a device subtype in the <code>parse</code> drivers.</dd>
+<dt><code>minpoll </code><i>int</i></dt>
 <dd>
-<dt><code>maxpoll </code><i>int</i></p>
-<dd>These options specify the minimum and maximum polling interval for reference clock messages in seconds, interpreted as dual logarithms (2 ^ x). For most directly connected reference clocks, both <code>minpoll</code> and <code>maxpoll</code> default to 6 (2^16 = 64 s). For modem reference clocks, <code>minpoll</code> defaults to 10 (2^10 = 1024 s = 17.1 m) and <code>maxpoll</code> defaults to 14 (2^14 = 16384 s = 4.5 h). The allowable range is 4 (16 s) to 17 (36.4 h) inclusive.</dl>
+</dd><dt><code>maxpoll </code><i>int</i></dt>
+<dd>These options specify the minimum and maximum polling interval for reference clock messages in seconds, interpreted as dual logarithms (2 ^ x). For most directly connected reference clocks, both <code>minpoll</code> and <code>maxpoll</code> default to 6 (2^16 = 64 s). For modem reference clocks, <code>minpoll</code> defaults to 10 (2^10 = 1024 s = 17.1 m) and <code>maxpoll</code> defaults to 14 (2^14 = 16384 s = 4.5 h). The allowable range is 4 (16 s) to 17 (36.4 h) inclusive.</dd></dl>
 </dl>
-<dt><code>fudge 127.127.</code><i>t.u</i><code> [time1 </code><i>sec</i><code>] [time2 </code><i>sec</i><code>] [stratum </code><i>int</i><code>] [refid </code><i>string</i><code>] [flag1 0|1] [flag2 0|1] [flag3 0|1] [flag4 0|1]</code></p>
-<dd>This command can be used to configure reference clocks in special ways. It must immediately follow the <code>server</code> command which configures the driver. Note that the same capability is possible at run time using the <code>ntpdc</code> program. The options are interpreted as follows:</p>
+<dt><code>fudge 127.127.</code><i>t.u</i><code> [time1 </code><i>sec</i><code>] [time2 </code><i>sec</i><code>] [stratum </code><i>int</i><code>] [refid </code><i>string</i><code>] [flag1 0|1] [flag2 0|1] [flag3 0|1] [flag4 0|1]</code></dt>
+<dd>This command can be used to configure reference clocks in special ways. It must immediately follow the <code>server</code> command which configures the driver. Note that the same capability is possible at run time using the <code>ntpdc</code> program. The options are interpreted as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>time1 </code><i>sec</i></p>
-<dd>Specifies a constant to be added to the time offset produced by the driver, a fixed-point decimal number in seconds. This is used as a calibration constant to adjust the nominal time offset of a particular clock to agree with an external standard, such as a precision PPS signal. It also provides a way to correct a systematic error or bias due to serial port or operating system latencies, different cable lengths or receiver internal delay. The specified offset is in addition to the propagation delay provided by other means, such as internal DIPswitches. Where a calibration for an individual system and driver is available, an approximate correction is noted in the driver documentation pages. Note: in order to facilitate calibration when more than one radio clock or PPS signal is supported, a special calibration feature is available. It takes the form of an argument to the <code>enable</code> command described in the Miscellaneous Options page and operates as described in the Reference Clock Drivers page.</p>
-<dt><code>time2 </code><i>secs</i></p>
-<dd>Specifies a fixed-point decimal number in seconds, which is interpreted in a driver-dependent way. See the descriptions of specific drivers in the reference clock drivers page.</p>
-<dt><code>stratum </code><i>int</i></p>
-<dd>Specifies the stratum number assigned to the driver, an integer between 0 and 15. This number overrides the default stratum number ordinarily assigned by the driver itself, usually zero.</p>
-<dt><code>refid </code><i>string</i></p>
-<dd>Specifies an ASCII string of from one to four characters which defines the reference identifier used by the driver. This string overrides the default identifier ordinarily assigned by the driver itself.</p>
-<dt><code>flag1 flag2 flag3 flag4</code></p>
-<dd>These four flags are used for customizing the clock driver. The interpretation of these values, and whether they are used at all, is a function of the particular clock driver. However, by convention <code>flag4</code> is used to enable recording monitoring data to the <code>clockstats</code> file configured with the <code>filegen</code> command. Further information on the <code>filegen</code> command can be found in the Monitoring Options page.</dl>
+</dd><dl>
+<dt><code>time1 </code><i>sec</i></dt>
+<dd>Specifies a constant to be added to the time offset produced by the driver, a fixed-point decimal number in seconds. This is used as a calibration constant to adjust the nominal time offset of a particular clock to agree with an external standard, such as a precision PPS signal. It also provides a way to correct a systematic error or bias due to serial port or operating system latencies, different cable lengths or receiver internal delay. The specified offset is in addition to the propagation delay provided by other means, such as internal DIPswitches. Where a calibration for an individual system and driver is available, an approximate correction is noted in the driver documentation pages. Note: in order to facilitate calibration when more than one radio clock or PPS signal is supported, a special calibration feature is available. It takes the form of an argument to the <code>enable</code> command described in the Miscellaneous Options page and operates as described in the Reference Clock Drivers page.</dd>
+<dt><code>time2 </code><i>secs</i></dt>
+<dd>Specifies a fixed-point decimal number in seconds, which is interpreted in a driver-dependent way. See the descriptions of specific drivers in the reference clock drivers page.</dd>
+<dt><code>stratum </code><i>int</i></dt>
+<dd>Specifies the stratum number assigned to the driver, an integer between 0 and 15. This number overrides the default stratum number ordinarily assigned by the driver itself, usually zero.</dd>
+<dt><code>refid </code><i>string</i></dt>
+<dd>Specifies an ASCII string of from one to four characters which defines the reference identifier used by the driver. This string overrides the default identifier ordinarily assigned by the driver itself.</dd>
+<dt><code>flag1 flag2 flag3 flag4</code></dt>
+<dd>These four flags are used for customizing the clock driver. The interpretation of these values, and whether they are used at all, is a function of the particular clock driver. However, by convention <code>flag4</code> is used to enable recording monitoring data to the <code>clockstats</code> file configured with the <code>filegen</code> command. Further information on the <code>filegen</code> command can be found in the Monitoring Options page.</dd></dl>
 </dl>
 </dl>
 </dl>

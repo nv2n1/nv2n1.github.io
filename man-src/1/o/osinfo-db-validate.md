@@ -16,29 +16,29 @@ description: "osinfo-db-validate – Validate libosinfo XML data files"
 <h2>DESCRIPTION</h2>
 <p> The <code>osinfo-db-validate</code> tool is able to validate <font SIZE="-1">XML</font> files in one of the osinfo database locations for compliance with the <font SIZE="-1">RNG</font> schema.</p>
 <dl>
-<dt><code>system</code></p>
-<dd> This is the primary system-wide database location, intended for use by operating system vendors distributing database files in the native package format. The <font SIZE="-1">RNG</font> schema is expected to be present in this location.</p>
-<dt><code>local</code></p>
-<dd> This is the secondary system-wide database location, intended for use by system administrators wishing to provide an updated database for all users. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the system location will be used.</p>
-<dt><code>user</code></p>
-<dd> This is the user private database location, intended for use by unprivileged local users wishing to provide applications they use with an updated database. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the local location will be used, or failing that the system location.</dl>
+<dt><code>system</code></dt>
+<dd> This is the primary system-wide database location, intended for use by operating system vendors distributing database files in the native package format. The <font SIZE="-1">RNG</font> schema is expected to be present in this location.</dd>
+<dt><code>local</code></dt>
+<dd> This is the secondary system-wide database location, intended for use by system administrators wishing to provide an updated database for all users. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the system location will be used.</dd>
+<dt><code>user</code></dt>
+<dd> This is the user private database location, intended for use by unprivileged local users wishing to provide applications they use with an updated database. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the local location will be used, or failing that the system location.</dd></dl>
 <p> If run by a privileged account (ie root), the <code>local</code> database location will be validate by default, otherwise the <code>user</code> location will be validated. </p>
 <p> Alternatively it is possible to directly provide a list of files to be validated using the (<tt>&quot;LOCAL-PATH1&quot;</tt> or <tt>&quot;URI1&quot;</tt>) arguments. </p>
 <p> Any validation errors will be displayed on the console when detected.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;user</code></p>
-<dd> Override the default behaviour to force validating files from the <code>user</code> database location.</p>
-<dt><code>&#8211;local</code></p>
-<dd> Override the default behaviour to force validating files from the <code>local</code> database location.</p>
-<dt><code>&#8211;system</code></p>
-<dd> Override the default behaviour to force validating files from the <code>system</code> database location.</p>
-<dt><code>&#8211;dir=PATH</code></p>
-<dd> Override the default behaviour to force validating files from the custom directory <font SIZE="-1"><code>PATH</code></font>.</p>
-<dt><code>&#8211;root=PATH</code></p>
-<dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to validate files that are in a chroot environment or equivalent.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display verbose progress information when validating files</dl>
+<dt><code>&#8211;user</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>user</code> database location.</dd>
+<dt><code>&#8211;local</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>local</code> database location.</dd>
+<dt><code>&#8211;system</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>system</code> database location.</dd>
+<dt><code>&#8211;dir=PATH</code></dt>
+<dd> Override the default behaviour to force validating files from the custom directory <font SIZE="-1"><code>PATH</code></font>.</dd>
+<dt><code>&#8211;root=PATH</code></dt>
+<dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to validate files that are in a chroot environment or equivalent.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display verbose progress information when validating files</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status will be 0 if all files passed validation, or 1 if a validation error was hit.</p>
 <h2>SEE ALSO</h2>

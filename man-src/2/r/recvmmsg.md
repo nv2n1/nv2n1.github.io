@@ -27,8 +27,8 @@ int recvmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
 <p> The <i>msg_hdr</i> field is a <i>msghdr</i> structure, as described in <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2). The <i>msg_len</i> field is the number of bytes returned for the message in the entry. This field has the same value as the return value of a single <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) on the header. </p>
 <p> The <i>flags</i> argument contains flags ORed together. The flags are the same as documented for <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), with the following addition:</p>
 <dl>
-<dt><code>MSG_WAITFORONE</code> (since Linux 2.6.34)</p>
-<dd> Turns on <code>MSG_DONTWAIT</code> after the first message has been received.</dl>
+<dt><code>MSG_WAITFORONE</code> (since Linux 2.6.34)</dt>
+<dd> Turns on <code>MSG_DONTWAIT</code> after the first message has been received.</dd></dl>
 <p> The <i>timeout</i> argument points to a <i>struct timespec</i> (see <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2)) defining a timeout (seconds plus nanoseconds) for the receive operation (<i>but see BUGS!</i>). (This interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount.) If <i>timeout</i> is NULL, then the operation blocks indefinitely. </p>
 <p> A blocking <code>recvmmsg</code>() call blocks until <i>vlen</i> messages have been received or until the timeout expires. A nonblocking call reads as many messages as are available (up to the limit specified by <i>vlen</i>) and returns immediately. </p>
 <p> On return from <code>recvmmsg</code>(), successive elements of <i>msgvec</i> are updated to contain information about each received message: <i>msg_len</i> contains the size of the received message; the subfields of <i>msg_hdr</i> are updated as described in <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2). The return value of the call indicates the number of elements of <i>msgvec</i> that have been updated.</p>
@@ -37,8 +37,8 @@ int recvmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
 <h2>ERRORS</h2>
 <p> Errors are as for <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2). In addition, the following error can occur:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>timeout</i> is invalid.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>timeout</i> is invalid.</dd></dl>
 <p> See also BUGS.</p>
 <h2>VERSIONS</h2>
 <p> The <code>recvmmsg</code>() system call was added in Linux 2.6.33. Support in glibc was added in version 2.12.</p>

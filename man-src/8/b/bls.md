@@ -15,34 +15,34 @@ description: "bls – Bacula’s ‘Tape LS’"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</p>
-<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></p>
-<dd>Specify a bootstrap file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>Specify configuration file.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output</p>
-<dt><code>-e&nbsp;<wbr>&lt;file&gt;</code></p>
-<dd>Specify exclude list file.</p>
-<dt><code>-i&nbsp;<wbr></code><i>&lt;file&gt;</i></p>
-<dd>Specify include list file.</p>
-<dt><code>-j</code></p>
-<dd>List jobs.</p>
-<dt><code>-k</code></p>
-<dd>List blocks.</p>
-<dt><i>(no -j or -k option)</i></p>
-<dd>List saved files</p>
-<dt><code>-L</code></p>
-<dd>Dump label.</p>
-<dt><code>-p</code></p>
-<dd>Proceed in spite of errors.</p>
-<dt><code>-V&nbsp;<wbr></code><i>volumes</i></p>
-<dd>Specify volume names (separated by &#8216;|&#8217;).</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</dl>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></dt>
+<dd>Specify a bootstrap file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output</dd>
+<dt><code>-e&nbsp;<wbr>&lt;file&gt;</code></dt>
+<dd>Specify exclude list file.</dd>
+<dt><code>-i&nbsp;<wbr></code><i>&lt;file&gt;</i></dt>
+<dd>Specify include list file.</dd>
+<dt><code>-j</code></dt>
+<dd>List jobs.</dd>
+<dt><code>-k</code></dt>
+<dd>List blocks.</dd>
+<dt><i>(no -j or -k option)</i></dt>
+<dd>List saved files</dd>
+<dt><code>-L</code></dt>
+<dd>Dump label.</dd>
+<dt><code>-p</code></dt>
+<dd>Proceed in spite of errors.</dd>
+<dt><code>-V&nbsp;<wbr></code><i>volumes</i></dt>
+<dd>Specify volume names (separated by &#8216;|&#8217;).</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-bscan/">bscan</a></code>(8), <code><a href="/docs/linux/man/8-bextract/">bextract</a></code>(8).</p>
 <h2>Author</h2>

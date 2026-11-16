@@ -17,7 +17,7 @@ description: "namei – follow a pathname until a terminal point is found"
 <p> For each line of output, <code>namei</code> uses the following characters to identify the file type found: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    f: = the pathname currently being resolved
     d = directory
@@ -29,41 +29,41 @@ description: "namei – follow a pathname until a terminal point is found"
     - = regular file
     ? = an error of some kind
 </pre>
-</dl>
+</dd></dl>
 <p> <code>namei</code> prints an informative message when the maximum number of symbolic links this system can have has been exceeded.</p>
 <h2>OPTIONS</h2>
 <p> <code>-l</code>, <code>&#8211;long</code></p>
 <dl>
 <dt>
-<dd> Use the long listing format (same as <code>-m -o -v</code>).</dl>
+</dt><dd> Use the long listing format (same as <code>-m -o -v</code>).</dd></dl>
 <p> <code>-m</code>, <code>&#8211;modes</code></p>
 <dl>
 <dt>
-<dd> Show the mode bits of each file type in the style of <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), for example &#8216;rwxr-xr-x&#8217;.</dl>
+</dt><dd> Show the mode bits of each file type in the style of <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), for example &#8216;rwxr-xr-x&#8217;.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;nosymlinks</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t follow symlinks.</dl>
+</dt><dd> Don&#8217;t follow symlinks.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;owners</code></p>
 <dl>
 <dt>
-<dd> Show owner and group name of each file.</dl>
+</dt><dd> Show owner and group name of each file.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;vertical</code></p>
 <dl>
 <dt>
-<dd> Vertically align the modes and owners.</dl>
+</dt><dd> Vertically align the modes and owners.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;mountpoints</code></p>
 <dl>
 <dt>
-<dd> Show mountpoint directories with a &#8216;D&#8217; rather than a &#8216;d&#8217;.</dl>
+</dt><dd> Show mountpoint directories with a &#8216;D&#8217; rather than a &#8216;d&#8217;.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> To be discovered.</p>
 <h2>AUTHORS</h2>

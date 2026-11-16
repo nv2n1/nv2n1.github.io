@@ -11,7 +11,6 @@ description: "sc::Function –"
 <p> The <code>Function</code> class is an abstract base class that, given a set of coordinates, will compute a value and possibly a gradient and hessian at that <code>point</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;function.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>, and <code>sc::Compute</code>. Inherited by <code>sc::MolecularEnergy</code>, and <code>sc::Volume</code>.</p>
 <h3>Public Member Functions</h3>
@@ -107,14 +106,14 @@ description: "sc::Function –"
 <h3>sc::Function::Function (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, double funcacc = DBL_EPSILON, double gradacc = DBL_EPSILON, double hessacc = DBL_EPSILON)</h3>
 <p>The keyval constructor reads the following keywords:. .IP &quot;matrixkit&quot; 1c Gives a <code>SCMatrixKit</code> object. If it is not specified, a default <code>SCMatrixKit</code> is selected. </p>
 <dl>
-<dt>value_accuracy</p>
-<dd>Sets the accuracy to which values are computed. The default is the machine accuracy.</dl>
+<dt>value_accuracy</dt>
+<dd>Sets the accuracy to which values are computed. The default is the machine accuracy.</dd></dl>
 <dl>
-<dt>gradient_accuracy</p>
-<dd>Sets the accuracy to which gradients are computed. The default is the machine accuracy.</dl>
+<dt>gradient_accuracy</dt>
+<dd>Sets the accuracy to which gradients are computed. The default is the machine accuracy.</dd></dl>
 <dl>
-<dt>hessian_accuracy</p>
-<dd>Sets the accuracy to which hessians are computed. The default is the machine accuracy.</dl>
+<dt>hessian_accuracy</dt>
+<dd>Sets the accuracy to which hessians are computed. The default is the machine accuracy.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual <code>Ref</code>&lt;<code>NonlinearTransform</code>&gt; sc::Function::change_coordinates () [virtual]</h3>
 <p>An optimizer can call change coordinates periodically to give the function an opportunity to change its coordinate system. A return value of 0 means the coordinates were not changed. Otherwise, a transform object to the new coordinate system is return. The function object applies the transform to any objects it contains. This will obsolete the function data. </p>

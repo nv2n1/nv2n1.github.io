@@ -15,28 +15,28 @@ description: "systemd.time – Time and date specifications"
 <dl>
 <dd>
 <pre>2h 30min</pre>
-</dl>
+</dd></dl>
 <p> All specified time values are meant to be added up. The above hence refers to 150 minutes.</p>
 <h2>Parsing Time Spans</h2>
 <p>When parsing, systemd will accept the same time span syntax. Separating spaces may be omitted. The following time units are understood: </p>
 <dl>
-<dd>&bull; usec, us</dl>
+<dd>&bull; usec, us</dd></dl>
 <dl>
-<dd>&bull; msec, ms</dl>
+<dd>&bull; msec, ms</dd></dl>
 <dl>
-<dd>&bull; seconds, second, sec, s</dl>
+<dd>&bull; seconds, second, sec, s</dd></dl>
 <dl>
-<dd>&bull; minutes, minute, min, m</dl>
+<dd>&bull; minutes, minute, min, m</dd></dl>
 <dl>
-<dd>&bull; hours, hour, hr, h</dl>
+<dd>&bull; hours, hour, hr, h</dd></dl>
 <dl>
-<dd>&bull; days, day, d</dl>
+<dd>&bull; days, day, d</dd></dl>
 <dl>
-<dd>&bull; weeks, week, w</dl>
+<dd>&bull; weeks, week, w</dd></dl>
 <dl>
-<dd>&bull; months, month</dl>
+<dd>&bull; months, month</dd></dl>
 <dl>
-<dd>&bull; years, year, y</dl>
+<dd>&bull; years, year, y</dd></dl>
 <p> If no time unit is specified, generally seconds are assumed, but some exceptions exist and are marked as such. In a few cases &quot;ns&quot;, &quot;nsec&quot; is accepted too, where the granularity of the time span allows for this. </p>
 <p> Examples for valid time span specifications: </p>
 <dl>
@@ -47,13 +47,13 @@ description: "systemd.time – Time and date specifications"
 1y 12month
 55s500ms
 300ms20s 5day</pre>
-</dl>
+</dd></dl>
 <h2>Displaying Timestamps</h2>
 <p>Timestamps refer to specific, unique points in time. On display, systemd will format these in the local timezone as follows: </p>
 <dl>
 <dd>
 <pre>Fri 2012-11-23 23:02:15 CET</pre>
-</dl>
+</dd></dl>
 <p> The weekday is printed according to the locale choice of the user.</p>
 <h2>Parsing Timestamps</h2>
 <p>When parsing systemd will accept a similar timestamp syntax, but excluding any timezone specification (this limitation might be removed eventually). The weekday specification is optional, but when the weekday is specified it must either be in the abbreviated (&quot;Wed&quot;) or non-abbreviated (&quot;Wednesday&quot;) English language form (case does not matter), and is not subject to the locale choice of the user. Either the date, or the time part may be omitted, in which case the current date or 00:00:00, resp., is assumed. The seconds component of the time may also be omitted, in which case &quot;:00&quot; is assumed. Year numbers may be specified in full or may be abbreviated (omitting the century). </p>
@@ -78,7 +78,7 @@ description: "systemd.time – Time and date specifications"
  -5s → Fri 2012-11-23 18:15:17
  11min ago → Fri 2012-11-23 18:04:22
  @1395716396 → Tue 2014-03-25 03:59:56</pre>
-</dl>
+</dd></dl>
 <p> Note that timestamps printed by systemd will not be parsed correctly by systemd, as the timezone specification is not accepted, and printing timestamps is subject to locale settings for the weekday while parsing only accepts English weekday names. </p>
 <p> In some cases, systemd will display a relative timestamp (relative to the current time, or the time of invocation of the command) instead or in addition to an absolute timestamp as described above. A relative timestamp is formatted as follows: </p>
 <p> 2 months 5 days ago </p>
@@ -88,7 +88,7 @@ description: "systemd.time – Time and date specifications"
 <dl>
 <dd>
 <pre>Thu,Fri 2012-*-1,5 11:12:13</pre>
-</dl>
+</dd></dl>
 <p> The above refers to 11:12:13 of the first or fifth day of any month of the year 2012, given that it is a Thursday or Friday. </p>
 <p> The weekday specification is optional. If specified, it should consist of one or more English language weekday names, either in the abbreviated (Wed) or non-abbreviated (Wednesday) form (case does not matter), separated by commas. Specifying two weekdays separated by &quot;-&quot; refers to a range of continuous weekdays. &quot;,&quot; and &quot;-&quot; may be combined freely. </p>
 <p> In the date and time specifications, any component may be specified as &quot;*&quot; in which case any value will match. Alternatively, each component can be specified as a list of values separated by commas. Values may also be suffixed with &quot;/&quot; and a repetition value, which indicates that the value and all values plus multiples of the repetition value are matched. </p>
@@ -125,7 +125,7 @@ Wed-Sat,Tue 12-10-15 1:2:3 → Tue-Sat 2012-10-15 01:02:03
  yearly → *-01-01 00:00:00
  annually → *-01-01 00:00:00
  *:2/3 → *-*-* *:02/3:00</pre>
-</dl>
+</dd></dl>
 <p> Calendar events are used by timer units, see <code><a href="/docs/linux/man/5-systemd-timer/">systemd.timer</a></code>(5) for details.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-timer/">systemd.timer</a></code>(5), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/7-systemd-directives/">systemd.directives</a></code>(7) </p>

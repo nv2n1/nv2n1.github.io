@@ -38,131 +38,131 @@ git update - index
 <p> &#8211;add</p>
 <dl>
 <dt>
-<dd> If a specified file isn&#8217;t in the index already then it&#8217;s added. Default behaviour is to ignore new files.</dl>
+</dt><dd> If a specified file isn&#8217;t in the index already then it&#8217;s added. Default behaviour is to ignore new files.</dd></dl>
 <p> &#8211;remove</p>
 <dl>
 <dt>
-<dd> If a specified file is in the index but is missing then it&#8217;s removed. Default behavior is to ignore removed file.</dl>
+</dt><dd> If a specified file is in the index but is missing then it&#8217;s removed. Default behavior is to ignore removed file.</dd></dl>
 <p> &#8211;refresh</p>
 <dl>
 <dt>
-<dd> Looks at the current index and checks to see if merges or updates are needed by checking stat() information.</dl>
+</dt><dd> Looks at the current index and checks to see if merges or updates are needed by checking stat() information.</dd></dl>
 <p> -q</p>
 <dl>
 <dt>
-<dd> Quiet. If &#8211;refresh finds that the index needs an update, the default behavior is to error out. This option makes <i>git update-index</i> continue anyway.</dl>
+</dt><dd> Quiet. If &#8211;refresh finds that the index needs an update, the default behavior is to error out. This option makes <i>git update-index</i> continue anyway.</dd></dl>
 <p> &#8211;ignore-submodules</p>
 <dl>
 <dt>
-<dd> Do not try to update submodules. This option is only respected when passed before &#8211;refresh.</dl>
+</dt><dd> Do not try to update submodules. This option is only respected when passed before &#8211;refresh.</dd></dl>
 <p> &#8211;unmerged</p>
 <dl>
 <dt>
-<dd> If &#8211;refresh finds unmerged changes in the index, the default behavior is to error out. This option makes <i>git update-index</i> continue anyway.</dl>
+</dt><dd> If &#8211;refresh finds unmerged changes in the index, the default behavior is to error out. This option makes <i>git update-index</i> continue anyway.</dd></dl>
 <p> &#8211;ignore-missing</p>
 <dl>
 <dt>
-<dd> Ignores missing files during a &#8211;refresh</dl>
+</dt><dd> Ignores missing files during a &#8211;refresh</dd></dl>
 <p> &#8211;cacheinfo &lt;mode&gt;,&lt;object&gt;,&lt;path&gt;, &#8211;cacheinfo &lt;mode&gt; &lt;object&gt; &lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Directly insert the specified info into the index. For backward compatibility, you can also give these three arguments as three separate parameters, but new users are encouraged to use a single-parameter form.</dl>
+</dt><dd> Directly insert the specified info into the index. For backward compatibility, you can also give these three arguments as three separate parameters, but new users are encouraged to use a single-parameter form.</dd></dl>
 <p> &#8211;index-info</p>
 <dl>
 <dt>
-<dd> Read index information from stdin.</dl>
+</dt><dd> Read index information from stdin.</dd></dl>
 <p> &#8211;chmod=(+|-)x</p>
 <dl>
 <dt>
-<dd> Set the execute permissions on the updated files.</dl>
+</dt><dd> Set the execute permissions on the updated files.</dd></dl>
 <p> &#8211;[no-]assume-unchanged</p>
 <dl>
 <dt>
-<dd> When this flag is specified, the object names recorded for the paths are not updated. Instead, this option sets/unsets the &quot;assume unchanged&quot; bit for the paths. When the &quot;assume unchanged&quot; bit is on, the user promises not to change the file and allows Git to assume that the working tree file matches what is recorded in the index. If you want to change the working tree file, you need to unset the bit to tell Git. This is sometimes helpful when working with a big project on a filesystem that has very slow <a href="/docs/linux/man/2-lstat/">lstat</a>(2) system call (e.g. cifs). </p>
+</dt><dd> When this flag is specified, the object names recorded for the paths are not updated. Instead, this option sets/unsets the &quot;assume unchanged&quot; bit for the paths. When the &quot;assume unchanged&quot; bit is on, the user promises not to change the file and allows Git to assume that the working tree file matches what is recorded in the index. If you want to change the working tree file, you need to unset the bit to tell Git. This is sometimes helpful when working with a big project on a filesystem that has very slow <a href="/docs/linux/man/2-lstat/">lstat</a>(2) system call (e.g. cifs). </dd>
 <p> Git will fail (gracefully) in case it needs to modify this file in the index e.g. when merging in a commit; thus, in case the assumed-untracked file is changed upstream, you will need to handle the situation manually.</dl>
 <p> &#8211;really-refresh</p>
 <dl>
 <dt>
-<dd> Like <code>&#8211;refresh</code>, but checks stat information unconditionally, without regard to the &quot;assume unchanged&quot; setting.</dl>
+</dt><dd> Like <code>&#8211;refresh</code>, but checks stat information unconditionally, without regard to the &quot;assume unchanged&quot; setting.</dd></dl>
 <p> &#8211;[no-]skip-worktree</p>
 <dl>
 <dt>
-<dd> When one of these flags is specified, the object name recorded for the paths are not updated. Instead, these options set and unset the &quot;skip-worktree&quot; bit for the paths. See section &quot;Skip-worktree bit&quot; below for more information.</dl>
+</dt><dd> When one of these flags is specified, the object name recorded for the paths are not updated. Instead, these options set and unset the &quot;skip-worktree&quot; bit for the paths. See section &quot;Skip-worktree bit&quot; below for more information.</dd></dl>
 <p> &#8211;[no-]ignore-skip-worktree-entries</p>
 <dl>
 <dt>
-<dd> Do not remove skip-worktree (AKA &quot;index-only&quot;) entries even when the <code>&#8211;remove</code> option was specified.</dl>
+</dt><dd> Do not remove skip-worktree (AKA &quot;index-only&quot;) entries even when the <code>&#8211;remove</code> option was specified.</dd></dl>
 <p> &#8211;[no-]fsmonitor-valid</p>
 <dl>
 <dt>
-<dd> When one of these flags is specified, the object name recorded for the paths are not updated. Instead, these options set and unset the &quot;fsmonitor valid&quot; bit for the paths. See section &quot;File System Monitor&quot; below for more information.</dl>
+</dt><dd> When one of these flags is specified, the object name recorded for the paths are not updated. Instead, these options set and unset the &quot;fsmonitor valid&quot; bit for the paths. See section &quot;File System Monitor&quot; below for more information.</dd></dl>
 <p> -g, &#8211;again</p>
 <dl>
 <dt>
-<dd> Runs <i>git update-index</i> itself on the paths whose index entries are different from those from the <code>HEAD</code> commit.</dl>
+</dt><dd> Runs <i>git update-index</i> itself on the paths whose index entries are different from those from the <code>HEAD</code> commit.</dd></dl>
 <p> &#8211;unresolve</p>
 <dl>
 <dt>
-<dd> Restores the <i>unmerged</i> or <i>needs updating</i> state of a file during a merge if it was cleared by accident.</dl>
+</dt><dd> Restores the <i>unmerged</i> or <i>needs updating</i> state of a file during a merge if it was cleared by accident.</dd></dl>
 <p> &#8211;info-only</p>
 <dl>
 <dt>
-<dd> Do not create objects in the object database for all &lt;file&gt; arguments that follow this flag; just insert their object IDs into the index.</dl>
+</dt><dd> Do not create objects in the object database for all &lt;file&gt; arguments that follow this flag; just insert their object IDs into the index.</dd></dl>
 <p> &#8211;force-remove</p>
 <dl>
 <dt>
-<dd> Remove the file from the index even when the working directory still has such a file. (Implies &#8211;remove.)</dl>
+</dt><dd> Remove the file from the index even when the working directory still has such a file. (Implies &#8211;remove.)</dd></dl>
 <p> &#8211;replace</p>
 <dl>
 <dt>
-<dd> By default, when a file <code>path</code> exists in the index, <i>git update-index</i> refuses an attempt to add <code>path/file</code>. Similarly if a file <code>path/file</code> exists, a file <code>path</code> cannot be added. With &#8211;replace flag, existing entries that conflict with the entry being added are automatically removed with warning messages.</dl>
+</dt><dd> By default, when a file <code>path</code> exists in the index, <i>git update-index</i> refuses an attempt to add <code>path/file</code>. Similarly if a file <code>path/file</code> exists, a file <code>path</code> cannot be added. With &#8211;replace flag, existing entries that conflict with the entry being added are automatically removed with warning messages.</dd></dl>
 <p> &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Instead of taking list of paths from the command line, read list of paths from the standard input. Paths are separated by LF (i.e. one path per line) by default.</dl>
+</dt><dd> Instead of taking list of paths from the command line, read list of paths from the standard input. Paths are separated by LF (i.e. one path per line) by default.</dd></dl>
 <p> &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Report what is being added and removed from index.</dl>
+</dt><dd> Report what is being added and removed from index.</dd></dl>
 <p> &#8211;index-version &lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Write the resulting index out in the named on-disk format version. Supported versions are 2, 3 and 4. The current default version is 2 or 3, depending on whether extra features are used, such as <code>git add -N</code>. </p>
+</dt><dd> Write the resulting index out in the named on-disk format version. Supported versions are 2, 3 and 4. The current default version is 2 or 3, depending on whether extra features are used, such as <code>git add -N</code>. </dd>
 <p> Version 4 performs a simple pathname compression that reduces index size by 30%-50% on large repositories, which results in faster load time. Version 4 is relatively young (first released in 1.8.0 in October 2012). Other Git implementations such as JGit and libgit2 may not support it yet.</dl>
 <p> -z</p>
 <dl>
 <dt>
-<dd> Only meaningful with <code>&#8211;stdin</code> or <code>&#8211;index-info</code>; paths are separated with NUL character instead of LF.</dl>
+</dt><dd> Only meaningful with <code>&#8211;stdin</code> or <code>&#8211;index-info</code>; paths are separated with NUL character instead of LF.</dd></dl>
 <p> &#8211;split-index, &#8211;no-split-index</p>
 <dl>
 <dt>
-<dd> Enable or disable split index mode. If split-index mode is already enabled and <code>&#8211;split-index</code> is given again, all changes in $GIT_DIR/index are pushed back to the shared index file. </p>
+</dt><dd> Enable or disable split index mode. If split-index mode is already enabled and <code>&#8211;split-index</code> is given again, all changes in $GIT_DIR/index are pushed back to the shared index file. </dd>
 <p> These options take effect whatever the value of the <code>core.splitIndex</code> configuration variable (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). But a warning is emitted when the change goes against the configured value, as the configured value will take effect next time the index is read and this will remove the intended effect of the option.</dl>
 <p> &#8211;untracked-cache, &#8211;no-untracked-cache</p>
 <dl>
 <dt>
-<dd> Enable or disable untracked cache feature. Please use <code>&#8211;test-untracked-cache</code> before enabling it. </p>
+</dt><dd> Enable or disable untracked cache feature. Please use <code>&#8211;test-untracked-cache</code> before enabling it. </dd>
 <p> These options take effect whatever the value of the <code>core.untrackedCache</code> configuration variable (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). But a warning is emitted when the change goes against the configured value, as the configured value will take effect next time the index is read and this will remove the intended effect of the option.</dl>
 <p> &#8211;test-untracked-cache</p>
 <dl>
 <dt>
-<dd> Only perform tests on the working directory to make sure untracked cache can be used. You have to manually enable untracked cache using <code>&#8211;untracked-cache</code> or <code>&#8211;force-untracked-cache</code> or the <code>core.untrackedCache</code> configuration variable afterwards if you really want to use it. If a test fails the exit code is 1 and a message explains what is not working as needed, otherwise the exit code is 0 and OK is printed.</dl>
+</dt><dd> Only perform tests on the working directory to make sure untracked cache can be used. You have to manually enable untracked cache using <code>&#8211;untracked-cache</code> or <code>&#8211;force-untracked-cache</code> or the <code>core.untrackedCache</code> configuration variable afterwards if you really want to use it. If a test fails the exit code is 1 and a message explains what is not working as needed, otherwise the exit code is 0 and OK is printed.</dd></dl>
 <p> &#8211;force-untracked-cache</p>
 <dl>
 <dt>
-<dd> Same as <code>&#8211;untracked-cache</code>. Provided for backwards compatibility with older versions of Git where <code>&#8211;untracked-cache</code> used to imply <code>&#8211;test-untracked-cache</code> but this option would enable the extension unconditionally.</dl>
+</dt><dd> Same as <code>&#8211;untracked-cache</code>. Provided for backwards compatibility with older versions of Git where <code>&#8211;untracked-cache</code> used to imply <code>&#8211;test-untracked-cache</code> but this option would enable the extension unconditionally.</dd></dl>
 <p> &#8211;fsmonitor, &#8211;no-fsmonitor</p>
 <dl>
 <dt>
-<dd> Enable or disable files system monitor feature. These options take effect whatever the value of the <code>core.fsmonitor</code> configuration variable (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). But a warning is emitted when the change goes against the configured value, as the configured value will take effect next time the index is read and this will remove the intended effect of the option.</dl>
+</dt><dd> Enable or disable files system monitor feature. These options take effect whatever the value of the <code>core.fsmonitor</code> configuration variable (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). But a warning is emitted when the change goes against the configured value, as the configured value will take effect next time the index is read and this will remove the intended effect of the option.</dd></dl>
 <p> &#8212;</p>
 <dl>
 <dt>
-<dd> Do not interpret any more arguments as options.</dl>
+</dt><dd> Do not interpret any more arguments as options.</dd></dl>
 <p> &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Files to act on. Note that files beginning with <i>.</i> are discarded. This includes <code>./file</code> and <code>dir/./file</code>. If you don&#8217;t want this, then use cleaner names. The same applies to directories ending <i>/</i> and paths with <i>//</i></dl>
+</dt><dd> Files to act on. Note that files beginning with <i>.</i> are discarded. This includes <code>./file</code> and <code>dir/./file</code>. If you don&#8217;t want this, then use cleaner names. The same applies to directories ending <i>/</i> and paths with <i>//</i></dd></dl>
 <h2>USING &#8211;REFRESH</h2>
 <p> <code>&#8211;refresh</code> does not calculate a new sha1 file or bring the index up to date for mode/content changes. But what it <code>does</code> do is to &quot;re-match&quot; the stat information of a file with the index, so that you can refresh the index for a file that hasn&#8217;t been changed but where the stat entry is out of date. </p>
 <p> For example, you&#8217;d want to do this after doing a <i>git read-tree</i>, to link up the stat index details with the proper files.</p>
@@ -171,58 +171,58 @@ git update - index
 <p> To pretend you have a file at path with mode and sha1, say: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git update-index --add --cacheinfo &lt;mode&gt;,&lt;sha1&gt;,&lt;path&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;info-only</code> is used to register files without placing them in the object database. This is useful for status-only repositories. </p>
 <p> Both <code>&#8211;cacheinfo</code> and <code>&#8211;info-only</code> behave similarly: the index is updated but the object database isn&#8217;t. <code>&#8211;cacheinfo</code> is useful when the object is in the database but the file isn&#8217;t available locally. <code>&#8211;info-only</code> is useful when the file is available, but you do not wish to update the object database.</p>
 <h2>USING &#8211;INDEX-INFO</h2>
 <p> <code>&#8211;index-info</code> is a more powerful mechanism that lets you feed multiple entry definitions from the standard input, and designed specifically for scripts. It can take inputs of three formats: </p>
 <dl>
 <dt>
-<dd> 1. mode SP type SP sha1 TAB path </p>
+</dt><dd> 1. mode SP type SP sha1 TAB path </dd>
 <p> This format is to stuff <code>git ls-tree</code> output into the index.</dl>
 <dl>
 <dt>
-<dd> 2. mode SP sha1 SP stage TAB path </p>
+</dt><dd> 2. mode SP sha1 SP stage TAB path </dd>
 <p> This format is to put higher order stages into the index file and matches <i>git ls-files &#8211;stage</i> output.</dl>
 <dl>
 <dt>
-<dd> 3. mode SP sha1 TAB path </p>
+</dt><dd> 3. mode SP sha1 TAB path </dd>
 <p> This format is no longer produced by any Git command, but is and will continue to be supported by <code>update-index &#8211;index-info</code>.</dl>
 <p> To place a higher stage entry to the index, the path should first be removed by feeding a mode=0 entry for the path, and then feeding necessary input lines in the third format. </p>
 <p> For example, starting with this index: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ls-files -s
 100644 8a1218a1024a212bb3db30becd860315f9f3ac52 0       frotz
 </pre>
-</dl>
+</dd></dl>
 <p> you can feed the following input to <code>&#8211;index-info</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git update-index --index-info
 0 0000000000000000000000000000000000000000      frotz
 100644 8a1218a1024a212bb3db30becd860315f9f3ac52 1       frotz
 100755 8a1218a1024a212bb3db30becd860315f9f3ac52 2       frotz
 </pre>
-</dl>
+</dd></dl>
 <p> The first line of the input feeds 0 as the mode to remove the path; the SHA-1 does not matter as long as it is well formatted. Then the second and third line feeds stage 1 and stage 2 entries for that path. After the above, we would end up with this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git ls-files -s
 100644 8a1218a1024a212bb3db30becd860315f9f3ac52 1       frotz
 100755 8a1218a1024a212bb3db30becd860315f9f3ac52 2       frotz
 </pre>
-</dl>
+</dd></dl>
 <h2>USING &#8220;ASSUME UNCHANGED&#8221; BIT</h2>
 <p> Many operations in Git depend on your filesystem to have an efficient <code><a href="/docs/linux/man/2-lstat/">lstat</a>(2)</code> implementation, so that <code>st_mtime</code> information for working tree files can be cheaply checked to see if the file contents have changed from the version recorded in the index file. Unfortunately, some filesystems have inefficient <code><a href="/docs/linux/man/2-lstat/">lstat</a>(2)</code>. If your filesystem is one of them, you can set &quot;assume unchanged&quot; bit to paths you have not changed to cause Git not to do this check. Note that setting this bit on a path does not mean Git will check the contents of the file to see if it has changed &#8212; it makes Git to omit any checking and assume it has <code>not</code> changed. When you make changes to working tree files, you have to explicitly tell Git about it by dropping &quot;assume unchanged&quot; bit, either before or after you modify them. </p>
 <p> In order to set &quot;assume unchanged&quot; bit, use <code>&#8211;assume-unchanged</code> option. To unset, use <code>&#8211;no-assume-unchanged</code>. To see which files have the &quot;assume unchanged&quot; bit set, use <code>git ls-files -v</code> (see <code><a href="/docs/linux/man/1-git-ls-files/">git-ls-files</a></code>(1)). </p>
@@ -231,22 +231,20 @@ $ git ls-files -s
 <p> To update and refresh only the files already checked out: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git checkout-index -n -f -a &amp;&amp; git update-index --ignore-missing --refresh
 </pre>
-</dl>
+</dd></dl>
 <p> On an inefficient filesystem with <code>core.ignorestat</code> set</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git update - index-- really - refresh(1) $ git update - index-- no - assume - unchanged foo.c(2) $ git diff-- name - only(3) $ edit foo.c $ git diff-- name - only(4) M foo.c $ git update - index foo.c(5) $ git diff-- name - only(6) $ edit foo.c $ git diff-- name - only(7) $ git update - index-- no - assume - unchanged foo.c(8) $ git diff-- name - only(9) M foo.c
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>forces <a href="/docs/linux/man/2-lstat/">lstat</a>(2) to set &quot;assume unchanged&quot; bits for paths that match index.<br />
  <code>2. </code>mark the path to be edited.<br />
  <code>3. </code>this does <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds index matches the path.<br />
@@ -276,11 +274,11 @@ $ git update - index-- really - refresh(1) $ git update - index-- no - assume - 
 <p> Before 2.17, the untracked cache had a bug where replacing a directory with a symlink to another directory could cause it to incorrectly show files tracked by git as untracked. See the &quot;status: add a failing test showing a core.untrackedCache bug&quot; commit to git.git. A workaround for that is (and this might work for other undiscovered bugs in the future): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git -c core.untrackedCache=false status
 </pre>
-</dl>
+</dd></dl>
 <p> This bug has also been shown to affect non-symlink cases of replacing a directory with a file when it comes to the internal structures of the untracked cache, but no case has been reported where this resulted in wrong &quot;git status&quot; output. </p>
 <p> There are also cases where existing indexes written by git versions before 2.17 will reference directories that don&#8217;t exist anymore, potentially causing many &quot;could not open directory&quot; warnings to be printed on &quot;git status&quot;. These are new warnings for existing issues that were previously silently discarded. </p>
 <p> As with the bug described above the solution is to one-off do a &quot;git status&quot; run with <code>core.untrackedCache=false</code> to flush out the leftover bad data.</p>

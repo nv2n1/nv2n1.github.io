@@ -21,7 +21,7 @@ CALL VECT3 (U,V,W)
 <h2>Description</h2>
 
 <dl><dt>U,V,W
-<dd>(input expressions of type REAL) are the coordinates of a point in 3-space to the projection of which a line is to be drawn.</dl>
+</dt><dd>(input expressions of type REAL) are the coordinates of a point in 3-space to the projection of which a line is to be drawn.</dd></dl>
  
 
  Each call to FRST3 moves a conceptual &quot;pen&quot; to the new starting point for a sequence of line draws. Each call to VECT3 draws a line from the current pen position to a new pen position and then makes that the current pen position. 

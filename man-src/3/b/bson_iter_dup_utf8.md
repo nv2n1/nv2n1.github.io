@@ -17,11 +17,11 @@ bson_iter_dup_utf8(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> An optional location for the length of the UTF-8 encoded string.</dl>
+<dt><code>length</code></dt>
+<dd> An optional location for the length of the UTF-8 encoded string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is similar to <code><a href="/docs/linux/man/3-bson_iter_utf8/">bson_iter_utf8</a>(3)</code> except that it calls <code><a href="/docs/linux/man/3-bson_strndup/">bson_strndup</a>(3)</code> on the result. </p>
 <h2>RETURNS</h2>

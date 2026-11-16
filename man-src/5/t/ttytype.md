@@ -14,8 +14,8 @@ description: "ttytype – terminal device to default terminal type mapping"
 <p> This facility was designed for a traditional time-sharing environment featuring character-cell terminals hardwired to a UNIX minicomputer. It is little used on modern workstation and personal UNIX systems.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/ttytype</i></p>
-<dd>the tty definitions file.</dl>
+<dt><i>/etc/ttytype</i></dt>
+<dd>the tty definitions file.</dd></dl>
 <h2>Examples</h2>
 <p>A typical <i>/etc/ttytype</i> is: </p>
 <p> con80x25 tty1 vt320 ttys0</p>

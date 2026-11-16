@@ -14,10 +14,10 @@ description: "gnutls_openpgp_privkey_get_subkey_revoked_status – API function"
 <p> <code>int gnutls_openpgp_privkey_get_subkey_revoked_status(gnutls_openpgp_privkey_t </code><i>key</i><code>, unsigned int </code><i>idx</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_privkey_t key</p>
-<dd> the structure that contains the OpenPGP private key.</p>
-<dt>unsigned int idx</p>
-<dd> is the subkey index</dl>
+<dt>gnutls_openpgp_privkey_t key</dt>
+<dd> the structure that contains the OpenPGP private key.</dd>
+<dt>unsigned int idx</dt>
+<dd> is the subkey index</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get revocation status of key.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_openpgp_privkey_get_subkey_revoked_status – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

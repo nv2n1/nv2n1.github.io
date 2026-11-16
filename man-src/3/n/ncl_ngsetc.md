@@ -21,9 +21,9 @@ CALL NGSETC (CNP, CVP)
 <h2>Description</h2>
 
 <dl><dt>CNP
-<dd>(an input expression of type CHARACTER) is the name of an internal parameter of Ngmisc. Only the first two characters will be examined.
-<dt>CVP
-<dd>(an input expression of type CHARACTER) is the desired new value of the parameter specified by CNP. This value will be used until the next call resetting it.</dl>
+</dt><dd>(an input expression of type CHARACTER) is the name of an internal parameter of Ngmisc. Only the first two characters will be examined.
+</dd><dt>CVP
+</dt><dd>(an input expression of type CHARACTER) is the desired new value of the parameter specified by CNP. This value will be used until the next call resetting it.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

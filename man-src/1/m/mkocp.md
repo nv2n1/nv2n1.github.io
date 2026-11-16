@@ -17,8 +17,8 @@ description: "mkocp – frontend to otp2ocp(1)"
 <p> OTPs are defined in text files, and compiled into binary code (OCPs) using <code>mkocp</code> (this script) or directly with <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1). </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>OTPFILE</i></p>
-<dd> An Omega Typesetting Process filter file.</dl>
+<dt><i>OTPFILE</i></dt>
+<dd> An Omega Typesetting Process filter file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-omega/">omega</a></code>(1), <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1). </p>
 <p> &lt;<a rel="nofollow" href="https://ctan.org/pkg/omega">https://ctan.org/pkg/omega</a>&gt; </p>

@@ -16,22 +16,21 @@ description: "softhsm2-keyconv – converting from BIND to PKCS#8 key file forma
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code>, <code>-h</code> Shows the help screen.</p>
 <dl>
-<dt><code>&#8211;in </code><i>path</i></p>
-<dd> The <i>path</i> to the input file.</p>
-<dt><code>&#8211;out </code><i>path</i></p>
-<dd> The <i>path</i> to the output file.</p>
-<dt><code>&#8211;pin </code><i>PIN</i></p>
-<dd> The <i>PIN</i> will be used to encrypt the PKCS#8 file. If not given then the PKCS#8 file will be unencrypted.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Show the version info.</dl>
+<dt><code>&#8211;in </code><i>path</i></dt>
+<dd> The <i>path</i> to the input file.</dd>
+<dt><code>&#8211;out </code><i>path</i></dt>
+<dd> The <i>path</i> to the output file.</dd>
+<dt><code>&#8211;pin </code><i>PIN</i></dt>
+<dd> The <i>PIN</i> will be used to encrypt the PKCS#8 file. If not given then the PKCS#8 file will be unencrypted.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Show the version info.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following command can be used to convert a BIND .private-key file to a PKCS#8 file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 softhsm2 - keyconv-- in Kexample.com.+ 007 + 05474.private
-
     &amp; nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -41,7 +40,7 @@ softhsm2 - keyconv-- in Kexample.com.+ 007 + 05474.private
 &amp;nbsp;
 --out rsa.pem
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Rickard Bellgrim, Francis Dupont, René Post, and Roland van Rijswijk.</p>
 <h2>SEE ALSO</h2>

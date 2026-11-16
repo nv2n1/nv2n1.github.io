@@ -14,41 +14,41 @@ description: "kpartx – Create device maps from partition tables."
 <p>This tool, derived from util-linux&#8217; partx, reads partition tables on specified device and create device maps over partitions segments detected. It is called from hotplug upon device maps creation and deletion.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Add partition mappings.</p>
-<dt><code>-d</code></p>
-<dd>Delete partition mappings.</p>
-<dt><code>-u</code></p>
-<dd>Update partition mappings.</p>
-<dt><code>-l</code></p>
-<dd>List partition mappings that would be added -a.</p>
-<dt><code>-r</code></p>
-<dd>Read-only partition mappings.</p>
-<dt><code>-p</code></p>
-<dd>Set device name-partition number delimiter.</p>
-<dt><code>-f</code></p>
-<dd>Force creation of mappings; overrides &#8216;no_partitions&#8217; feature.</p>
-<dt><code>-g</code></p>
-<dd>Force GUID partition table (GPT).</p>
-<dt><code>-s</code></p>
-<dd>Sync mode (Default). Don&#8217;t return until the partitions are created.</p>
-<dt><code>-n</code></p>
-<dd>Nosync mode. Return before the partitions are created.</p>
-<dt><code>-v</code></p>
-<dd>Operate verbosely.</dl>
+<dt><code>-a</code></dt>
+<dd>Add partition mappings.</dd>
+<dt><code>-d</code></dt>
+<dd>Delete partition mappings.</dd>
+<dt><code>-u</code></dt>
+<dd>Update partition mappings.</dd>
+<dt><code>-l</code></dt>
+<dd>List partition mappings that would be added -a.</dd>
+<dt><code>-r</code></dt>
+<dd>Read-only partition mappings.</dd>
+<dt><code>-p</code></dt>
+<dd>Set device name-partition number delimiter.</dd>
+<dt><code>-f</code></dt>
+<dd>Force creation of mappings; overrides &#8216;no_partitions&#8217; feature.</dd>
+<dt><code>-g</code></dt>
+<dd>Force GUID partition table (GPT).</dd>
+<dt><code>-s</code></dt>
+<dd>Sync mode (Default). Don&#8217;t return until the partitions are created.</dd>
+<dt><code>-n</code></dt>
+<dd>Nosync mode. Return before the partitions are created.</dd>
+<dt><code>-v</code></dt>
+<dd>Operate verbosely.</dd></dl>
 <h2>Example</h2>
 <p>To mount all the partitions in a raw disk image:</p>
 <dl>
-<dd>kpartx -av disk.img</dl>
+<dd>kpartx -av disk.img</dd></dl>
 <p> This will output lines such as:</p>
 <dl>
-<dd>add map loop1p1 (254:4): 0 409597 linear 7:1 3</dl>
+<dd>add map loop1p1 (254:4): 0 409597 linear 7:1 3</dd></dl>
 <p> The <i>loop1p1</i> is the name of a device file under <i>/dev/mapper</i> which you can use to access the partition, for example to fsck it:</p>
 <dl>
-<dd>fsck /dev/mapper/loop1p1</dl>
+<dd>fsck /dev/mapper/loop1p1</dd></dl>
 <p> When you&#8217;re done, you need to remove the devices:</p>
 <dl>
-<dd>kpartx -d disk.img</dl>
+<dd>kpartx -d disk.img</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8) <code>hotplug</code>(8)</p>
 <h2>Authors</h2>

@@ -18,15 +18,15 @@ description: "fence_sanlock – fence agent using watchdog and shared storage le
 &nbsp;<wbr>The agent action: </p>
 <dl>
 <dd><code>on</code><br />
- Enable the local node to be fenced. Used by unfencing. </p>
+ Enable the local node to be fenced. Used by unfencing. </dd>
 <dd><code>off</code><br />
- Disable another node. </p>
+ Disable another node. </dd>
 <dd><code>status</code><br />
- Test if a node is on or off. A node is on if it&#8217;s lease is held, and off is it&#8217;s lease is free. </p>
+ Test if a node is on or off. A node is on if it&#8217;s lease is held, and off is it&#8217;s lease is free. </dd>
 <dd><code>metadata</code><br />
- Print xml description of required parameters. </p>
+ Print xml description of required parameters. </dd>
 <dd><code>sanlock_init</code><br />
- Initialize sanlock leases on shared storage. </p>
+ Initialize sanlock leases on shared storage. </dd>
 </dl>
 <p> <code>-p</code><i> path</i><br />
 &nbsp;<wbr>The path to shared storage with sanlock leases. </p>

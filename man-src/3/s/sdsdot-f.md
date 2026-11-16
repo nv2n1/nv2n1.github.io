@@ -16,16 +16,16 @@ description: "sdsdot.f –"
 <h3>REAL function sdsdot (integerN, realSB, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY)</h3>
 <p><code>SDSDOT</code> <code>Purpose: </code></p>
 <dl>
-<dd>&nbsp;<wbr></dl>
+<dd>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 141 of file sdsdot.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

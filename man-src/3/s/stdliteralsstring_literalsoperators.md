@@ -16,15 +16,10 @@ u16string operator &quot;&quot; s(const char16_t *str, std::size_t len); <code>(
 u32string operator &quot;&quot; s(const char32_t *str, std::size_t len); <code>(4)</code> <i>(since C++14)</i><br />
 wstring operator &quot;&quot; s(const wchar_t *str, std::size_t len); <code>(5)</code> <i>(since C++14)</i> </p>
 <pre><code>Forms a string literal of the desired type.
-
 1) returns std::string{str, len}
-
 2) returns std::u8string{str, len}
-
 3) returns std::u16string{str, len}
-
 4) returns std::u32string{str, len}
-
 5) returns std::wstring{str, len}
 </code></pre>
 <h2>Parameters</h2>
@@ -38,10 +33,9 @@ std::chrono::duration also defines operator&quot;&quot;s, to represent literal s
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     using namespace std::string_literals;
     std::string s1 = &quot;abc
+</code></pre>

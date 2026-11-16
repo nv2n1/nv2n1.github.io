@@ -19,40 +19,40 @@ description: "sg_senddiag – performs a SCSI SEND DIAGNOSTIC command"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;doff</code></p>
-<dd>set the Device Offline (DevOffL) bit (default is clear). Only significant when <i>&#8211;test</i> option is set for the default self-test. When set other operations on any logical units controlled by the this device server (target) may be affected (delayed) while a default self-test is underway.</p>
-<dt><code>-e</code>, <code>&#8211;extdur</code></p>
-<dd>outputs the expected extended self-test duration. The duration is given in seconds (and minutes in parentheses). This figure is obtained from mode page 0xa (i.e. the control mode page).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd>when a <i>DEVICE</i> is also given lists the names of all diagnostic pages supported by this device. The request is sent via a SEND DIAGNOSTIC command (with the &quot;pF&quot; bit set) and the response is fetched by a RECEIVE DIAGNOSTIC RESULTS command. When used in the absence of a <i>&#8211;list</i> argument then a list of diagnostic page names and their numbers, known by this utility, are listed.</p>
-<dt><code>-O</code>, <code>&#8211;old</code></p>
-<dd>switch to older style options.</p>
-<dt><code>-p</code>, <code>&#8211;pf</code></p>
-<dd>set Page Format (PF) bit. By default it is clear (i.e. 0) unless the list <i>&#8211;list</i> option is given in which case the Page Format bit is set (as required by SPC-3).</p>
-<dt><code>-r</code>, <code>&#8211;raw</code>=<i>H,H&#8230;</i></p>
-<dd>string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex bytes is also allowed but the list needs to be in quotes. This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>&#8211;pf</i> option should also be given.</p>
-<dt><code>-r</code>, <code>&#8211;raw=-</code></p>
-<dd>reads sequence of bytes from stdin. The sequence may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>&#8211;pf</i> option should also be given.</p>
-<dt><code>-s</code>, <code>&#8211;selftest</code>=<i>ST</i></p>
-<dd>where <i>ST</i> is the self-test code. The default value is 0 which is inactive. Some other values: </p>
+<dt><code>-d</code>, <code>&#8211;doff</code></dt>
+<dd>set the Device Offline (DevOffL) bit (default is clear). Only significant when <i>&#8211;test</i> option is set for the default self-test. When set other operations on any logical units controlled by the this device server (target) may be affected (delayed) while a default self-test is underway.</dd>
+<dt><code>-e</code>, <code>&#8211;extdur</code></dt>
+<dd>outputs the expected extended self-test duration. The duration is given in seconds (and minutes in parentheses). This figure is obtained from mode page 0xa (i.e. the control mode page).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>when a <i>DEVICE</i> is also given lists the names of all diagnostic pages supported by this device. The request is sent via a SEND DIAGNOSTIC command (with the &quot;pF&quot; bit set) and the response is fetched by a RECEIVE DIAGNOSTIC RESULTS command. When used in the absence of a <i>&#8211;list</i> argument then a list of diagnostic page names and their numbers, known by this utility, are listed.</dd>
+<dt><code>-O</code>, <code>&#8211;old</code></dt>
+<dd>switch to older style options.</dd>
+<dt><code>-p</code>, <code>&#8211;pf</code></dt>
+<dd>set Page Format (PF) bit. By default it is clear (i.e. 0) unless the list <i>&#8211;list</i> option is given in which case the Page Format bit is set (as required by SPC-3).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code>=<i>H,H&#8230;</i></dt>
+<dd>string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex bytes is also allowed but the list needs to be in quotes. This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>&#8211;pf</i> option should also be given.</dd>
+<dt><code>-r</code>, <code>&#8211;raw=-</code></dt>
+<dd>reads sequence of bytes from stdin. The sequence may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>&#8211;pf</i> option should also be given.</dd>
+<dt><code>-s</code>, <code>&#8211;selftest</code>=<i>ST</i></dt>
+<dd>where <i>ST</i> is the self-test code. The default value is 0 which is inactive. Some other values: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>1</code>&nbsp;<wbr>: background short self-test </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: background extended self-test </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>4</code>&nbsp;<wbr>: aborts a&nbsp;<wbr>(background)&nbsp;<wbr>self-test that is in progress </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>5</code>&nbsp;<wbr>: foreground short self-test </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>6</code>&nbsp;<wbr>: foreground extended self-test<br />
  This option is mutually exclusive with default self-test (i.e. can&#8217;t have (<i>ST</i> &gt; 0) and <i>&#8211;test</i>).</p>
-<dt><code>-t</code>, <code>&#8211;test</code></p>
-<dd>sets the _default_ Self Test (SelfTest) bit. By default this is clear (0). The <i>&#8211;selftest=ST</i> option should not be active together with this option. Both the <i>&#8211;doff</i> and/or <i>&#8211;uoff</i> options can be used with this option.</p>
-<dt><code>-u</code>, <code>&#8211;uoff</code></p>
-<dd>set the Unit Offline (UnitOffL) bit (default is clear). Only significant when <i>&#8211;test</i> option is set for the default self-test. When set other operations on this logical unit may be affected (delayed) while a default self-test is underway. Some devices (e.g. Fujitsu disks) do more tests when this bit is set.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase level of verbosity. Can be used multiple times.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print out version string then exit.</dl>
+<dt><code>-t</code>, <code>&#8211;test</code></dt>
+<dd>sets the _default_ Self Test (SelfTest) bit. By default this is clear (0). The <i>&#8211;selftest=ST</i> option should not be active together with this option. Both the <i>&#8211;doff</i> and/or <i>&#8211;uoff</i> options can be used with this option.</dd>
+<dt><code>-u</code>, <code>&#8211;uoff</code></dt>
+<dd>set the Unit Offline (UnitOffL) bit (default is clear). Only significant when <i>&#8211;test</i> option is set for the default self-test. When set other operations on this logical unit may be affected (delayed) while a default self-test is underway. Some devices (e.g. Fujitsu disks) do more tests when this bit is set.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase level of verbosity. Can be used multiple times.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print out version string then exit.</dd></dl>
 <h2>Notes</h2>
 <p>All devices should support the default self-test. The &#8216;short&#8217; self-test codes should complete in 2 minutes or less. The &#8216;extended&#8217; self-test codes&#8217; maximum duration is vendor specific (e.g. a little over 10 minutes with the author&#8217;s disks). The foreground self-test codes wait until they are completed while the background self-test codes return immediately. The results of both foreground and background self-test codes are placed in the &#8216;self-test results&#8217; log page (see <a href="/docs/linux/man/8-sg_logs/">sg_logs</a>(8)). The SCSI command timeout for this utility is set to 60 minutes to allow for slow foreground extended self-tests. </p>
 <p> If the <i>DEVICE</i> is a disk then no file systems residing on that disk should be mounted during a foreground self-test. The reason is that other SCSI commands may become queued behind the foreground self-test and timeout. </p>
@@ -66,36 +66,36 @@ description: "sg_senddiag – performs a SCSI SEND DIAGNOSTIC command"
 <h2>Older Command Line Options</h2>
 <p>The options in this section were the only ones available prior to sg3_utils version 1.23 . In sg3_utils version 1.23 and later these older options can be selected by either setting the SG3_UTILS_OLD_OPTS environment variable or using &#8216;&#8211;old&#8217; (or &#8216;-O) as the first option.</p>
 <dl>
-<dt><code>-doff</code></p>
-<dd>set the Device Offline (DevOffL) bit (default is clear). Only significant when <i>-t</i> option is set for the default self-test. Equivalent to <i>&#8211;doff</i> in the main description.</p>
-<dt><code>-e</code></p>
-<dd>outputs the expected extended self-test duration. Equivalent to <i>&#8211;extdur</i> in the main description.</p>
-<dt><code>-h</code></p>
-<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</p>
-<dt><code>-H</code></p>
-<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</p>
-<dt><code>-l</code></p>
-<dd>when a <i>DEVICE</i> is also given lists the names of all diagnostic pages supported by this device. The request is sent via a SEND DIAGNOSTIC command (with the &quot;pf&quot; bit set) and the response is fetched by a RECEIVE DIAGNOSTIC RESULTS command. When used in the absence of a <i>DEVICE</i> argument then a list of diagnostic page names and their numbers, known by this utility, are listed.</p>
-<dt><code>-N</code></p>
-<dd>switch to the newer style options.</p>
-<dt><code>-pf</code></p>
-<dd>set Page Format (PF) bit. By default it is clear (i.e. 0) unless the <i>-l</i> option is given in which case the Page Format bit is set (as required by SPC-3).</p>
-<dt><code>-raw</code>=<i>H,H&#8230;</i></p>
-<dd>string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>-pf</i> option should also be given.</p>
-<dt><code>-raw=-</code></p>
-<dd>reads sequence of bytes from stdin. The sequence may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>-pf</i> option should also be given.</p>
-<dt><code>-s</code>=<i>ST</i></p>
-<dd>where <i>ST</i> is the self-test code. The default value is 0 which is inactive. A value of 1 selects a background short self-test; 2 selects a background extended self-test; 5 selects a foreground short self-test; 6 selects a foreground extended test. A value of 4 will abort a (background) self-test that is in progress. This option is mutually exclusive with default self-test (i.e. <i>-t</i>).</p>
-<dt><code>-t</code></p>
-<dd>sets the _default_ Self Test (SelfTest) bit. By default this is clear (0). The <i>-s=ST</i> option should not be active together with this option. Both the <i>-doff</i> and/or <i>-uoff</i> options can be used with this option.</p>
-<dt><code>-uoff</code></p>
-<dd>set the Unit Offline (UnitOffL) bit (default is clear). Equivalent to <i>&#8211;uoff</i> in the main description.</p>
-<dt><code>-v</code></p>
-<dd>increase level of verbosity. Can be used multiple times.</p>
-<dt><code>-V</code></p>
-<dd>print out version string then exit.</p>
-<dt><code>-?</code></p>
-<dd>output usage message. Ignore all other parameters.</dl>
+<dt><code>-doff</code></dt>
+<dd>set the Device Offline (DevOffL) bit (default is clear). Only significant when <i>-t</i> option is set for the default self-test. Equivalent to <i>&#8211;doff</i> in the main description.</dd>
+<dt><code>-e</code></dt>
+<dd>outputs the expected extended self-test duration. Equivalent to <i>&#8211;extdur</i> in the main description.</dd>
+<dt><code>-h</code></dt>
+<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</dd>
+<dt><code>-H</code></dt>
+<dd>outputs response from RECEIVE DIAGNOSTIC RESULTS in hex rather than decode it.</dd>
+<dt><code>-l</code></dt>
+<dd>when a <i>DEVICE</i> is also given lists the names of all diagnostic pages supported by this device. The request is sent via a SEND DIAGNOSTIC command (with the &quot;pf&quot; bit set) and the response is fetched by a RECEIVE DIAGNOSTIC RESULTS command. When used in the absence of a <i>DEVICE</i> argument then a list of diagnostic page names and their numbers, known by this utility, are listed.</dd>
+<dt><code>-N</code></dt>
+<dd>switch to the newer style options.</dd>
+<dt><code>-pf</code></dt>
+<dd>set Page Format (PF) bit. By default it is clear (i.e. 0) unless the <i>-l</i> option is given in which case the Page Format bit is set (as required by SPC-3).</dd>
+<dt><code>-raw</code>=<i>H,H&#8230;</i></dt>
+<dd>string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>-pf</i> option should also be given.</dd>
+<dt><code>-raw=-</code></dt>
+<dd>reads sequence of bytes from stdin. The sequence may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This sequence forms a diagnostic page to be sent with the SCSI SEND DIAGNOSTIC command. Mostly likely the <i>-pf</i> option should also be given.</dd>
+<dt><code>-s</code>=<i>ST</i></dt>
+<dd>where <i>ST</i> is the self-test code. The default value is 0 which is inactive. A value of 1 selects a background short self-test; 2 selects a background extended self-test; 5 selects a foreground short self-test; 6 selects a foreground extended test. A value of 4 will abort a (background) self-test that is in progress. This option is mutually exclusive with default self-test (i.e. <i>-t</i>).</dd>
+<dt><code>-t</code></dt>
+<dd>sets the _default_ Self Test (SelfTest) bit. By default this is clear (0). The <i>-s=ST</i> option should not be active together with this option. Both the <i>-doff</i> and/or <i>-uoff</i> options can be used with this option.</dd>
+<dt><code>-uoff</code></dt>
+<dd>set the Unit Offline (UnitOffL) bit (default is clear). Equivalent to <i>&#8211;uoff</i> in the main description.</dd>
+<dt><code>-v</code></dt>
+<dd>increase level of verbosity. Can be used multiple times.</dd>
+<dt><code>-V</code></dt>
+<dd>print out version string then exit.</dd>
+<dt><code>-?</code></dt>
+<dd>output usage message. Ignore all other parameters.</dd></dl>
 <h2>Examples</h2>
 <p>The examples sub-directory in the sg3_utils packages contains two example scripts that turn on the CJTPAT (jitter pattern) on some SAS disks (one script for each phy). One possible invocation for phy 1 is: </p>
 <pre><code>sg_senddiag --pf --raw=- /dev/sg2 &lt; sdiag_sas_p1_cjtpat.txt</code></pre>

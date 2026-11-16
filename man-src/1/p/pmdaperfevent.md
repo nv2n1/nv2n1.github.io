@@ -18,20 +18,20 @@ description: "pmdaperfevent – hardware performance counter performance metrics
 <p> Note that <code>pmdaperfevent</code> is affected by the value of the <i>kernel.perf_event_paranoid</i> setting, which can be adjusted by <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8). </p>
 <p> A brief description of the <code>pmdaperfevent</code> command line options follows:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the same PMDA on all hosts.</p>
-<dt><code>-l</code></p>
-<dd> Location of the log file. By default, a log file named <i>perfevent.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdaperfevent</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</p>
-<dt><code>-U</code></p>
-<dd> User account under which to run the agent. The default is the privileged &quot;root&quot; account.</p>
-<dt><code>-i</code></p>
-<dd> listen on given port number for connection from <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1)</p>
-<dt><code>-p</code></p>
-<dd> communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via stdin/stdout</p>
-<dt><code>-u</code></p>
-<dd> expect <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) to connect on given unix domain socket</p>
-<dt><code>-6</code></p>
-<dd> expect <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) to connect on given ipv6 port (number or name)</dl>
+<dt><code>-d</code></dt>
+<dd> It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the same PMDA on all hosts.</dd>
+<dt><code>-l</code></dt>
+<dd> Location of the log file. By default, a log file named <i>perfevent.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdaperfevent</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</dd>
+<dt><code>-U</code></dt>
+<dd> User account under which to run the agent. The default is the privileged &quot;root&quot; account.</dd>
+<dt><code>-i</code></dt>
+<dd> listen on given port number for connection from <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1)</dd>
+<dt><code>-p</code></dt>
+<dd> communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via stdin/stdout</dd>
+<dt><code>-u</code></dt>
+<dd> expect <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) to connect on given unix domain socket</dd>
+<dt><code>-6</code></dt>
+<dd> expect <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) to connect on given ipv6 port (number or name)</dd></dl>
 <h2>INSTALLATION</h2>
 <p> The <code>perfevent</code> PMDA is not activated by default To install the PMDA, do the following as root: </p>
 <pre>
@@ -46,18 +46,18 @@ description: "pmdaperfevent – hardware performance counter performance metrics
 <p> <code>pmdaperfevent</code> is launched by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and should never be executed directly. The Install and Remove scripts notify <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMCDCONF_PATH</code></p>
-<dd> command line options used to launch <code>pmdaperfevent</code></p>
-<dt><code>$PCP_PMDAS_DIR/perfevent/perfevent.conf</code></p>
-<dd> default configuration file for the PMDA. See <code><a href="/docs/linux/man/5-perfevent-conf/">perfevent.conf</a></code>(5) for detailed information.</p>
-<dt><code>$PCP_PMDAS_DIR/perfevent/help</code></p>
-<dd> default help text file for the perfevent metrics</p>
-<dt><code>$PCP_PMDAS_DIR/perfevent/Install</code></p>
-<dd> installation script for the <code>pmdaperfevent</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/perfevent/Remove</code></p>
-<dd> undo installation script for the <code>pmdaperfevent</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/perfevent.log</code></p>
-<dd> default log file for error messages and other information from <code>pmdaperfevent</code></dl>
+<dt><code>$PCP_PMCDCONF_PATH</code></dt>
+<dd> command line options used to launch <code>pmdaperfevent</code></dd>
+<dt><code>$PCP_PMDAS_DIR/perfevent/perfevent.conf</code></dt>
+<dd> default configuration file for the PMDA. See <code><a href="/docs/linux/man/5-perfevent-conf/">perfevent.conf</a></code>(5) for detailed information.</dd>
+<dt><code>$PCP_PMDAS_DIR/perfevent/help</code></dt>
+<dd> default help text file for the perfevent metrics</dd>
+<dt><code>$PCP_PMDAS_DIR/perfevent/Install</code></dt>
+<dd> installation script for the <code>pmdaperfevent</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/perfevent/Remove</code></dt>
+<dd> undo installation script for the <code>pmdaperfevent</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/perfevent.log</code></dt>
+<dd> default log file for error messages and other information from <code>pmdaperfevent</code></dd></dl>
 <h2>UPGRADING</h2>
 <p> Some metric names have changed starting in version 3.10.8 to better conform to PMNS conventions. <code><a href="/docs/linux/man/1-pmlogrewrite/">pmlogrewrite</a></code>(1) can be used to update old archives. A helper utility, <code>$PCP_PMDAS_DIR/perfevent/perfevent-makerewrite.pl</code> will generate a config file that is suitable for use with <code><a href="/docs/linux/man/1-pmlogrewrite/">pmlogrewrite</a></code>(1) to update the metric names in existing archives.</p>
 <h2>BUGS</h2>

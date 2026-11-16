@@ -15,7 +15,7 @@ rpc_alloc_iostats - allocate an rpc_iostats structure
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC program, version, and xprt</dl>
+<dl><dd></dd><dd>RPC program, version, and xprt</dd></dl>
 
 <h2>Copyright</h2>
 

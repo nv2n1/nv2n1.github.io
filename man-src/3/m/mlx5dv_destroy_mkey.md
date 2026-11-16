@@ -19,7 +19,7 @@ url: "/docs/linux/man/3-mlx5dv_destroy_mkey/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct mlx5dv_mkey_init_attr {
     struct ibv_pd *pd;
@@ -33,7 +33,7 @@ struct mlx5dv_mkey {
 struct mlx5dv_mkey *
 mlx5dv_create_mkey(struct mlx5dv_mkey_init_attr *mkey_init_attr);
 int mlx5dv_destroy_mkey(struct mlx5dv_mkey *mkey);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -50,11 +50,11 @@ int mlx5dv_destroy_mkey(struct mlx5dv_mkey *mkey);
  ##mkey_init_attr##
 <dl>
 <dt>pd
-<dd> ibv protection domain.
-<dt>create_flags
-<dd> MLX5DV_MKEY_INIT_ATTR_FLAGS_INDIRECT: Indirect mkey is being created.
-<dt>max_entries
-<dd> Requested max number of pointed entries by this indirect mkey. The function will update the mkey_init_attr-&gt;max_entries with the actual mkey value that was created; it will be greater than or equal to the value requested.</dl>
+</dt><dd> ibv protection domain.
+</dd><dt>create_flags
+</dt><dd> MLX5DV_MKEY_INIT_ATTR_FLAGS_INDIRECT: Indirect mkey is being created.
+</dd><dt>max_entries
+</dt><dd> Requested max number of pointed entries by this indirect mkey. The function will update the mkey_init_attr-&gt;max_entries with the actual mkey value that was created; it will be greater than or equal to the value requested.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

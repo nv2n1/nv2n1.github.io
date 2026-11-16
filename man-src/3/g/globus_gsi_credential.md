@@ -17,16 +17,16 @@ description: "Globus GSI Credential –"
 <h2>Detailed Description</h2>
 <p> The Globus GSI Credential library. This library contains functions that provide support for handling X.509 based PKI credentials </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>Activation</code></p>
-<dt>&bull;</p>
-<dd> <code>Credential Handle Management</code></p>
-<dt>&bull;</p>
-<dd> <code>Credential Handle Attributes</code></p>
-<dt>&bull;</p>
-<dd> <code>Credential Operations</code></p>
-<dt>&bull;</p>
-<dd> <code>Credential Constants</code></dl>
+<dt>&bull;</dt>
+<dd> <code>Activation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Credential Handle Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Credential Handle Attributes</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Credential Operations</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Credential Constants</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_credential from the source code. </p>
 <h2>Index</h2>

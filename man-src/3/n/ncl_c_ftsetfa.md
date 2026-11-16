@@ -10,11 +10,11 @@ Set float valued array parameters
 <h2>Function Prototype</h2>int c_ftsetfa(char *pnam, int n, float *far);
 <h2>Synopsis</h2>int c_ftsetfa (pnam, n, far);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>The name of the control parameter to be assigned a float array value.
-<dt>n
-<dd>The number of float values in the array.
-<dt>far
-<dd>A pointer to the n-element input array.</dl><h2>Usage</h2>c_ftsetra is used to set values for any of the control parameters that take floating arrays. The values set by c_ftsetfa remain in effect until changed by subsequent calls to c_ftsetfa .
+</dt><dd>The name of the control parameter to be assigned a float array value.
+</dd><dt>n
+</dt><dd>The number of float values in the array.
+</dd><dt>far
+</dt><dd>A pointer to the n-element input array.</dd></dl><h2>Usage</h2>c_ftsetra is used to set values for any of the control parameters that take floating arrays. The values set by c_ftsetfa remain in effect until changed by subsequent calls to c_ftsetfa .
 <h2>Access</h2>To use c_ftsetfa, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>fitgrid_params, c_ftsetfa, c_ftgetfa_size, c_ftgetfa_data 
 

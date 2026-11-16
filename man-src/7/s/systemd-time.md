@@ -15,28 +15,28 @@ description: "systemd.time – Time and date specifications"
 <dl>
 <dd>
 <pre>2h 30min</pre>
-</dl>
+</dd></dl>
 <p> All specified time values are meant to be added up. The above hence refers to 150 minutes. Display is locale-independent, only English names for the time units are used.</p>
 <h2>Parsing Time Spans</h2>
 <p>When parsing, systemd will accept the same time span syntax. Separating spaces may be omitted. The following time units are understood: </p>
 <dl>
-<dd>&bull; usec, us, &micro;s</dl>
+<dd>&bull; usec, us, &micro;s</dd></dl>
 <dl>
-<dd>&bull; msec, ms</dl>
+<dd>&bull; msec, ms</dd></dl>
 <dl>
-<dd>&bull; seconds, second, sec, s</dl>
+<dd>&bull; seconds, second, sec, s</dd></dl>
 <dl>
-<dd>&bull; minutes, minute, min, m</dl>
+<dd>&bull; minutes, minute, min, m</dd></dl>
 <dl>
-<dd>&bull; hours, hour, hr, h</dl>
+<dd>&bull; hours, hour, hr, h</dd></dl>
 <dl>
-<dd>&bull; days, day, d</dl>
+<dd>&bull; days, day, d</dd></dl>
 <dl>
-<dd>&bull; weeks, week, w</dl>
+<dd>&bull; weeks, week, w</dd></dl>
 <dl>
-<dd>&bull; months, month, M (defined as 30.44 days)</dl>
+<dd>&bull; months, month, M (defined as 30.44 days)</dd></dl>
 <dl>
-<dd>&bull; years, year, y (defined as 365.25 days)</dl>
+<dd>&bull; years, year, y (defined as 365.25 days)</dd></dl>
 <p> If no time unit is specified, generally seconds are assumed, but some exceptions exist and are marked as such. In a few cases &quot;ns&quot;, &quot;nsec&quot; is accepted too, where the granularity of the time span permits this. Parsing is generally locale-independent, non-English names for the time units are not accepted. </p>
 <p> Examples for valid time span specifications: </p>
 <dl>
@@ -47,7 +47,7 @@ description: "systemd.time – Time and date specifications"
 1y 12month
 55s500ms
 300ms20s 5day</pre>
-</dl>
+</dd></dl>
 <p> One can use the <code>timespan</code> command of <code><a href="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></code>(1) to normalise a textual time span for testing and validation purposes. </p>
 <p> Internally, systemd generally operates with microsecond time granularity, while the default time unit in user-configurable time spans is usually seconds (see above). This disparity becomes visible when comparing the same settings in the (high-level) unit file syntax with the matching (more low-level) D-Bus properties (which are what <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1)&#8217;s <code>show</code> command displays). The former typically are suffixed with &quot;&#8230;Sec&quot; to indicate the default unit of seconds, the latter are typically suffixed with &quot;&#8230;USec&quot; to indicate the underlying low-level time unit, even if they both encapsulate the very same settings.</p>
 <h2>Displaying Timestamps</h2>
@@ -55,7 +55,7 @@ description: "systemd.time – Time and date specifications"
 <dl>
 <dd>
 <pre>Fri 2012-11-23 23:02:15 CET</pre>
-</dl>
+</dd></dl>
 <p> The weekday is printed in the abbreviated English language form. The formatting is locale-independent. </p>
 <p> In some cases timestamps are shown in the UTC timezone instead of the local timezone, which is indicated via the &quot;UTC&quot; timezone specifier in the output. </p>
 <p> In some cases timestamps are shown with microsecond granularity. In this case the sub-second remainder is separated by a full stop from the seconds component.</p>
@@ -85,18 +85,18 @@ tomorrow Pacific/Auckland → Thu 2012-11-23 19:00:00
  -5s → Fri 2012-11-23 18:15:17
  11min ago → Fri 2012-11-23 18:04:22
  @1395716396 → Tue 2014-03-25 03:59:56</pre>
-</dl>
+</dd></dl>
 <p> Note that timestamps displayed by remote systems with a non-matching timezone are usually not parsable locally, as the timezone component is not understood (unless it happens to be &quot;UTC&quot;). </p>
 <p> Timestamps may also be specified with microsecond granularity. The sub-second remainder is expected separated by a full stop from the seconds component. Example: </p>
 <dl>
 <dd>
 <pre>2014-03-25 03:59:56.654563</pre>
-</dl>
+</dd></dl>
 <p> In some cases, systemd will display a relative timestamp (relative to the current time, or the time of invocation of the command) instead of or in addition to an absolute timestamp as described above. A relative timestamp is formatted as follows: </p>
 <dl>
 <dd>
 <pre>2 months 5 days ago</pre>
-</dl>
+</dd></dl>
 <p> Note that a relative timestamp is also accepted where a timestamp is expected (see above). </p>
 <p> Use the <code>timestamp</code> command of <code><a href="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></code>(1) to validate and normalize timestamps for testing purposes.</p>
 <h2>Calendar Events</h2>
@@ -104,7 +104,7 @@ tomorrow Pacific/Auckland → Thu 2012-11-23 19:00:00
 <dl>
 <dd>
 <pre>Thu,Fri 2012-*-1,5 11:12:13</pre>
-</dl>
+</dd></dl>
 <p> The above refers to 11:12:13 of the first or fifth day of any month of the year 2012, but only if that day is a Thursday or Friday. </p>
 <p> The weekday specification is optional. If specified, it should consist of one or more English language weekday names, either in the abbreviated (Wed) or non-abbreviated (Wednesday) form (case does not matter), separated by commas. Specifying two weekdays separated by &quot;..&quot; refers to a range of continuous weekdays. &quot;,&quot; and &quot;..&quot; may be combined freely. </p>
 <p> In the date and time specifications, any component may be specified as &quot;*&quot; in which case any value will match. Alternatively, each component can be specified as a list of values separated by commas. Values may be suffixed with &quot;/&quot; and a repetition value, which indicates that the value itself and the value plus all multiples of the repetition value are matched. Two values separated by &quot;..&quot; may be used to indicate a range of values; ranges may also be followed with &quot;/&quot; and a repetition value, in which case the expression matches all times starting with the start value, and continuing with all multiples of the repetition value relative to the start value, ending at the end value the latest. </p>
@@ -123,7 +123,7 @@ tomorrow Pacific/Auckland → Thu 2012-11-23 19:00:00
  yearly → *-01-01 00:00:00
  quarterly → *-01,04,07,10-01 00:00:00
 semiannually → *-01,07-01 00:00:00</pre>
-</dl>
+</dd></dl>
 <p> Examples for valid timestamps and their normalized form: </p>
 <dl>
 <dd>
@@ -160,7 +160,7 @@ Wed..Sat,Tue 12-10-15 1:2:3 → Tue..Sat 2012-10-15 01:02:03
  yearly → *-01-01 00:00:00
  annually → *-01-01 00:00:00
  *:2/3 → *-*-* *:02/3:00</pre>
-</dl>
+</dd></dl>
 <p> Calendar events are used by timer units, see <code><a href="/docs/linux/man/5-systemd-timer/">systemd.timer</a></code>(5) for details. </p>
 <p> Use the <code>calendar</code> command of <code><a href="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></code>(1) to validate and normalize calendar time specifications for testing purposes. The tool also calculates when a specified calendar event would occur next.</p>
 <h2>See Also</h2>

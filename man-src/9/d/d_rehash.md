@@ -15,7 +15,7 @@ d_rehash - add an entry back to the hash
 <h2>Arguments</h2>
 
 <i>entry</i>
-<dl><dd><dd>dentry to add to the hash</dl>
+<dl><dd></dd><dd>dentry to add to the hash</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,10 +16,10 @@ description: "XmTextSetInsertionPosition — A Text function that sets the posit
 <h2>Description</h2>
 <p><code>XmTextSetInsertionPosition</code> sets the insertion cursor position of the Text widget. This routine also calls the widget&#8217;s <code>XmNmotionVerifyCallback</code> callbacks if the insertion cursor position changes.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</p>
-<dt><i>position</i></p>
-<dd>Specifies the position of the insertion cursor. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position of the insertion cursor. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>

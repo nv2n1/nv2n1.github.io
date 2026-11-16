@@ -12,8 +12,8 @@ description: "cons.saver – general-purpose Linux console screen save and resto
 <pre>cons.saver <i>TTY</i></pre>
 <h2>Description</h2>
 <dl>
-<dt>Invoke this helper program with the Ctrl-o key combination to save and restore the user session on the screen.</p>
-<dd></dl>
+<dt>Invoke this helper program with the Ctrl-o key combination to save and restore the user session on the screen.</dt>
+<dd></dd></dl>
 <h2>Options</h2>
 <p>cons.saver takes only one argument, the <i>TTY</i> <i>NAME</i> from which the system will save and restore.</p>
 <h2>Security</h2>

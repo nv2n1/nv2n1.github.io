@@ -14,10 +14,10 @@ void
 <code>Tcl_RegisterConfig</code>(<i>interp, pkgName, configuration, valEncoding</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Refers to the interpreter the embedded configuration information is registered for. Must not be NULL.</p>
-<dd>const char <i>*pkgName</i> (in) Contains the name of the package registering the embedded configuration as ASCII string. This means that this information is in UTF-8 too. Must not be NULL.</p>
-<dd>Tcl_Config <i>*configuration</i> (in) Refers to an array of Tcl_Config entries containing the information embedded in the binary library. Must not be NULL. The end of the array is signaled by either a key identical to NULL, or a key referring to the empty string.</p>
-<dd>const char <i>*valEncoding</i> (in) Contains the name of the encoding used to store the configuration values as ASCII string. This means that this information is in UTF-8 too. Must not be NULL. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Refers to the interpreter the embedded configuration information is registered for. Must not be NULL.</dd>
+<dd>const char <i>*pkgName</i> (in) Contains the name of the package registering the embedded configuration as ASCII string. This means that this information is in UTF-8 too. Must not be NULL.</dd>
+<dd>Tcl_Config <i>*configuration</i> (in) Refers to an array of Tcl_Config entries containing the information embedded in the binary library. Must not be NULL. The end of the array is signaled by either a key identical to NULL, or a key referring to the empty string.</dd>
+<dd>const char <i>*valEncoding</i> (in) Contains the name of the encoding used to store the configuration values as ASCII string. This means that this information is in UTF-8 too. Must not be NULL. </dd>
 </dl>
 <h2>Description</h2>
 <p>The function described here has its base in TIP 59 and provides extensions with support for the embedding of configuration information into their binary library and the generation of a Tcl-level interface for querying this information. </p>
@@ -27,18 +27,18 @@ void
 <p> Each element of the <i>configuration</i> array refers to two strings containing the key and the value associated with that key. The end of the array is signaled by either an empty key or a key identical to NULL. The function makes <code>no</code> copy of the <i>configuration</i> array. This means that the caller has to make sure that the memory holding this array is never released. This is the meaning behind the word <code>non-volatile</code> used earlier. The easiest way to accomplish this is to define a global static array of Tcl_Config entries. See the file &#8220;generic/tclPkgConfig.c&#8221; in the sources of the Tcl core for an example. </p>
 <p> When called <code>Tcl_RegisterConfig</code> will</p>
 <dl COMPACT>
-<dt>(1)</p>
-<dd>create a namespace having the provided <i>pkgName</i>, if not yet existing.</p>
-<dt>(2)</p>
-<dd>create the command <code>pkgconfig</code> in that namespace and link it to the provided information so that the keys from _configuration_ and their associated values can be retrieved through calls to <code>pkgconfig</code>.</dl>
+<dt>(1)</dt>
+<dd>create a namespace having the provided <i>pkgName</i>, if not yet existing.</dd>
+<dt>(2)</dt>
+<dd>create the command <code>pkgconfig</code> in that namespace and link it to the provided information so that the keys from _configuration_ and their associated values can be retrieved through calls to <code>pkgconfig</code>.</dd></dl>
 <p> The command <code>pkgconfig</code> will provide two subcommands, <code>list</code> and <code>get</code>:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>::<i>pkgName</i>::<code>pkgconfig</code> list</p>
-<dd>Returns a list containing the names of all defined keys.</p>
-<dt>::<i>pkgName</i>::<code>pkgconfig</code> get <i>key</i></p>
-<dd>Returns the configuration value associated with the specified <i>key</i>.</dl>
+</dd><dl COMPACT>
+<dt>::<i>pkgName</i>::<code>pkgconfig</code> list</dt>
+<dd>Returns a list containing the names of all defined keys.</dd>
+<dt>::<i>pkgName</i>::<code>pkgconfig</code> get <i>key</i></dt>
+<dd>Returns the configuration value associated with the specified <i>key</i>.</dd></dl>
 </dl>
 <h2>Tcl_Config</h2>
 <p>The <code>Tcl_Config</code> structure contains the following fields: </p>
@@ -48,6 +48,6 @@ void
  const char* key;
  const char* value;
 } Tcl_Config;</pre>
-</dl>
+</dd></dl>
 <h2>Keywords</h2>
 <p>embedding, configuration, binary library</p>

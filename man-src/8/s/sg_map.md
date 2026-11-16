@@ -15,26 +15,26 @@ description: "sg_map – displays mapping between Linux sg and other SCSI device
 <p> This utility is deprecated and has not been updated for years, only very obvious bugs will be fixed. Unless a very old version of Linux is being used (e.g. 2.4 series or earlier), then please use a utility like <a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8) or the facilities offered by udev(8).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>assume the sg devices have alphabetical device names and loop through /dev/sga, /dev/sgb, etc. Default is numeric scan. Note that sg device nodes with an alphabetical index have been deprecated since the Linux kernel 2.2 series.</p>
-<dt><code>-h</code></p>
-<dd>print usage message then exit.</p>
-<dt><code>-i</code></p>
-<dd>in addition do a standard INQUIRY and output vendor, product and revision strings for devices that are found.</p>
-<dt><code>-n</code></p>
-<dd>assume the sg devices have numeric device names and loop through /dev/sg0, /dev/sg1, etc. Default is numeric scan</p>
-<dt><code>-scd</code></p>
-<dd>display mappings to SCSI cdrom device names of the form /dev/scd0, /dev/scd1 etc</p>
-<dt><code>-sd</code></p>
-<dd>display mappings to SCSI disk device names</p>
-<dt><code>-sr</code></p>
-<dd>display mappings to SCSI cdrom device names of the form /dev/sr0, /dev/sr1 etc</p>
-<dt><code>-st</code></p>
-<dd>display mappings to SCSI tape device names</p>
-<dt><code>-V</code></p>
-<dd>print out version string then exit (without further ado).</p>
-<dt><code>-x</code></p>
-<dd>after each active sg device name is displayed there are five digits: &lt;host_number&gt; &lt;bus&gt; &lt;scsi_id&gt; &lt;lun&gt; &lt;scsi_type&gt;</dl>
+<dt><code>-a</code></dt>
+<dd>assume the sg devices have alphabetical device names and loop through /dev/sga, /dev/sgb, etc. Default is numeric scan. Note that sg device nodes with an alphabetical index have been deprecated since the Linux kernel 2.2 series.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage message then exit.</dd>
+<dt><code>-i</code></dt>
+<dd>in addition do a standard INQUIRY and output vendor, product and revision strings for devices that are found.</dd>
+<dt><code>-n</code></dt>
+<dd>assume the sg devices have numeric device names and loop through /dev/sg0, /dev/sg1, etc. Default is numeric scan</dd>
+<dt><code>-scd</code></dt>
+<dd>display mappings to SCSI cdrom device names of the form /dev/scd0, /dev/scd1 etc</dd>
+<dt><code>-sd</code></dt>
+<dd>display mappings to SCSI disk device names</dd>
+<dt><code>-sr</code></dt>
+<dd>display mappings to SCSI cdrom device names of the form /dev/sr0, /dev/sr1 etc</dd>
+<dt><code>-st</code></dt>
+<dd>display mappings to SCSI tape device names</dd>
+<dt><code>-V</code></dt>
+<dd>print out version string then exit (without further ado).</dd>
+<dt><code>-x</code></dt>
+<dd>after each active sg device name is displayed there are five digits: &lt;host_number&gt; &lt;bus&gt; &lt;scsi_id&gt; &lt;lun&gt; &lt;scsi_type&gt;</dd></dl>
 <h2>Notes</h2>
 <p>If no options starting with &quot;-s&quot; are given then the mapping to all SCSI disk, cdrom and tape device names is shown. </p>
 <p> If the device file system (devfs) is present a line noting this is output. The &quot;native&quot; devfs scsi hierarchy makes the relationship between a sg device name and any corresponding disk, cdrom or tape device name easy to establish. This replaces the need for this command. However many applications will continue to look for Linux SCSI device names in their traditional places. [Devfs supplies a compatibility daemon called devfsd whose default configuration adds back the Linux device names in their traditional positions. </p>

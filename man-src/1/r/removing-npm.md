@@ -13,21 +13,19 @@ description: "npm-removal – Cleaning the Slate"
 <p> So sad to see you go.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 sudo npm uninstall npm -g
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Or, if that fails, get the npm source code, and do:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 sudo make uninstall
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>More Severe Uninstalling</h2>
 <p> Usually, the above instructions are sufficient. That will remove npm, but leave behind anything you&#8217;ve installed. </p>
 <p> If that doesn&#8217;t work, or if you require more drastic measures, continue reading. </p>
@@ -36,23 +34,21 @@ sudo make uninstall
 <p> To remove everything npm-related manually:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 rm - rf / usr / local / {lib / node{, /.npm, _modules}, bin, share / man} / npm *
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> If you installed things <i>with</i> npm, then your best bet is to uninstall them with npm first, and then install them again once you have a proper install. This can help find any symlinks that are lying around:</p>
 <dl>
 <dt>
-<dd>
-ls &#8211; laF / usr / local / {lib / node{, /.npm}, bin, share / man} | grep npm</p>
-<dt>
-<dd></dl>
+</dt><dd>
+ls &#8211; laF / usr / local / {lib / node{, /.npm}, bin, share / man} | grep npm</dd>
+</dl>
 <p> Prior to version 0.3, npm used shim files for executables and node modules. To track those down, you can do the following:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 find / usr / local / {lib / node, bin} - exec grep - l npm \
 {
@@ -61,18 +57,15 @@ find / usr / local / {lib / node, bin} - exec grep - l npm \
 \;
 ;
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> (This is also in the README file.)</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> README</p>
-<dt>&bull;</p>
-<dd> npm help uninstall</p>
-<dt>&bull;</p>
-<dd> npm help prune</p>
-<dt>
-<dd>
+<dt>&bull;</dt>
+<dd> README</dd>
+<dt>&bull;</dt>
+<dd> npm help uninstall</dd>
+<dt>&bull;</dt>
+<dd> npm help prune</dd>
 </dl>
 <h2>Index</h2>

@@ -69,14 +69,11 @@ unlock_shared <i>(public member function)</i>
 &nbsp;Reason: build a motivating example 
 A copy assignment operator for a class that holds resources that can handle multiple readers, but only one writer 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;shared_mutex&gt;
 class R
-
 {
     mutable std::shared_timed_mutex mut;
     /* data */
-
   public:
     R &amp;operator=(const R &amp;other)
     {

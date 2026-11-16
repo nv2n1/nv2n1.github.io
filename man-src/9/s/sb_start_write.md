@@ -14,7 +14,7 @@ description: "sb_start_write – get write access to a superblock"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>the super we write to</dl>
+</dd><dd>the super we write to</dd></dl>
 <h2>Description</h2>
 <p>When a process wants to write data or metadata to a file system (i.e. dirty a page or an inode), it should embed the operation in a <code>sb_start_write</code> &#8211; <code>sb_end_write</code> pair to get exclusion against file system freezing. This function increments number of writers preventing freezing. If the file system is already frozen, the function waits until the file system is thawed. </p>
 <p> Since freeze protection behaves as a lock, users have to preserve ordering of freeze protection and other filesystem locks. Generally, freeze protection should be the outermost lock. In particular, we have: </p>

@@ -15,106 +15,87 @@ description: "fts-rest-delete-submit"
 <p> This command can be used to submit a deletion job to FTS3. It supports simple and bulk submissions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h/&#8211;help</code></p>
-<dd> Show this help message and exit</p>
+<dt><code>-h/&#8211;help</code></dt>
+<dd> Show this help message and exit</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v/&#8211;verbose</code></p>
-<dd> Verbose output.</p>
+</dl>
+<dt><code>-v/&#8211;verbose</code></dt>
+<dd> Verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-s/&#8211;endpoint</code></p>
-<dd> Fts3 rest endpoint.</p>
+</dl>
+<dt><code>-s/&#8211;endpoint</code></dt>
+<dd> Fts3 rest endpoint.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-j/&#8211;json</code></p>
-<dd> Print the output in json format.</p>
+</dl>
+<dt><code>-j/&#8211;json</code></dt>
+<dd> Print the output in json format.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;key</code></p>
-<dd> The user certificate private key.</p>
+</dl>
+<dt><code>&#8211;key</code></dt>
+<dd> The user certificate private key.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;cert</code></p>
-<dd> The user certificate.</p>
+</dl>
+<dt><code>&#8211;cert</code></dt>
+<dd> The user certificate.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;capath</code></p>
-<dd> Use the specified directory to verify the peer</p>
+</dl>
+<dt><code>&#8211;capath</code></dt>
+<dd> Use the specified directory to verify the peer</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;insecure</code></p>
-<dd> Do not validate the server certificate</p>
+</dl>
+<dt><code>&#8211;insecure</code></dt>
+<dd> Do not validate the server certificate</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;access-token</code></p>
-<dd> Oauth2 access token (supported only by some endpoints, takes precedence)</p>
+</dl>
+<dt><code>&#8211;access-token</code></dt>
+<dd> Oauth2 access token (supported only by some endpoints, takes precedence)</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-b/&#8211;blocking</code></p>
-<dd> Blocking mode. Wait until the operation completes.</p>
+</dl>
+<dt><code>-b/&#8211;blocking</code></dt>
+<dd> Blocking mode. Wait until the operation completes.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-i/&#8211;interval</code></p>
-<dd> Interval between two poll operations in blocking mode.</p>
+</dl>
+<dt><code>-i/&#8211;interval</code></dt>
+<dd> Interval between two poll operations in blocking mode.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-e/&#8211;expire</code></p>
-<dd> Expiration time of the delegation in minutes.</p>
+</dl>
+<dt><code>-e/&#8211;expire</code></dt>
+<dd> Expiration time of the delegation in minutes.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;job-metadata</code></p>
-<dd> Transfer job metadata.</p>
+</dl>
+<dt><code>&#8211;job-metadata</code></dt>
+<dd> Transfer job metadata.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;file-metadata</code></p>
-<dd> File metadata.</p>
+</dl>
+<dt><code>&#8211;file-metadata</code></dt>
+<dd> File metadata.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-S/&#8211;spacetoken</code></p>
-<dd> The space token or its description.</p>
+</dl>
+<dt><code>-S/&#8211;spacetoken</code></dt>
+<dd> The space token or its description.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;dry-run</code></p>
-<dd> Do not send anything, just print the json message.</p>
+</dl>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> Do not send anything, just print the json message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-f/&#8211;file</code></p>
-<dd> Name of configuration file</p>
+</dl>
+<dt><code>-f/&#8211;file</code></dt>
+<dd> Name of configuration file</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;retry</code></p>
-<dd> Number of retries. If 0, the server default will be used. If negative, there will be no retries.</p>
+</dl>
+<dt><code>&#8211;retry</code></dt>
+<dd> Number of retries. If 0, the server default will be used. If negative, there will be no retries.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;cloud-credentials</code></p>
-<dd> Use cloud credentials for the job (i. E. Dropbox).</p>
+</dl>
+<dt><code>&#8211;cloud-credentials</code></dt>
+<dd> Use cloud credentials for the job (i. E. Dropbox).</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ &amp;nbsp;
 fts - rest - delete - submit - s &amp;nbsp;
@@ -126,7 +107,7 @@ https : // fts3-devel.cern.ch:8446&amp;nbsp;-f bulk.list
         Job successfully submitted.Job id : 9fee8c1e-c46d -
     11e3 - 8299 - 02163e00a17a
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> fts-devel [at] cern.ch. </p>
 <h2>Index</h2>

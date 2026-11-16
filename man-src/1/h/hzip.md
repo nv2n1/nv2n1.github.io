@@ -16,10 +16,10 @@ description: "hunzip – compress and encrypt dictionary files"
 <p> The compression algorithm uses 16-bit Huffman encoding and line-oriented prefix-suffix compression. It has good compression ratio for huge sorted word lists.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display short help description.</p>
-<dt><code>-P</p>
-<dd> Encrypted compression by an arbitrary length password.</dl>
+<dt><code>-h</code></dt>
+<dd> Display short help description.</dd>
+<dt><code>-P</dt>
+<dd> Encrypted compression by an arbitrary length password.</dd></dl>
 <p> </code></p>
 <h2>SEE ALSO</h2>
 <p> <code>hzip (1), <a href="/docs/linux/man/1-hunspell/">hunspell</a>(1)</code></p>

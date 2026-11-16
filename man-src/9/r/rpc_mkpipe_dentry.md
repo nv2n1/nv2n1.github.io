@@ -14,16 +14,16 @@ description: "rpc_mkpipe_dentry – make an rpc_pipefs file for kernel<->userspa
 <p><i>parent</i></p>
 <dl>
 <dd>
-<dd>dentry of directory to create new &#8220;pipe&#8221; in</dl>
+</dd><dd>dentry of directory to create new &#8220;pipe&#8221; in</dd></dl>
 <p> <i>name</i></p>
 <dl>
-<dd>name of pipe</dl>
+<dd>name of pipe</dd></dl>
 <p> <i>private</i></p>
 <dl>
-<dd>private data to associate with the pipe, for the caller&#8217;s use</dl>
+<dd>private data to associate with the pipe, for the caller&#8217;s use</dd></dl>
 <p> <i>pipe</i></p>
 <dl>
-<dd>rpc_pipe containing input parameters</dl>
+<dd>rpc_pipe containing input parameters</dd></dl>
 <h2>Description</h2>
 <p>Data is made available for userspace to read by calls to <code>rpc_queue_upcall</code>. The actual reads will result in calls to <i>ops</i>-&gt;upcall, which will be called with the file pointer, message, and userspace buffer to copy to. </p>
 <p> Writes can come at any time, and do not necessarily have to be responses to upcalls. They will result in calls to <i>msg</i>-&gt;downcall. </p>

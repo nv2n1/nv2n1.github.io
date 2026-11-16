@@ -14,27 +14,27 @@ description: "apcaccess – retrieve status information from"
 <h2>Description</h2>
 <p>is a program which prints out the complete status of most American Power Conversion Corp. (APC) UPSes provided you have the <a href="/docs/linux/man/8-apcupsd/">apcupsd</a>(8) daemon installed, properly configured and running. It can access status information from any APC UPS attached to the localhost or attached to any computer on the network which is running apcuspd in NIS mode. The command line options are:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>configuration file of apcupsd (default is usually /etc/apcupsd/apcupsd.conf)</p>
-<dt><code>-h </code></p>
-<dd>hostname and port of apcupsd to communicate with. The default hostname and port are obtained from the configuration file.</p>
-<dt><code>-p</code></p>
-<dd>Report only the value of the named parameter instead of all parameters and values.</p>
-<dt><code>-u</code></p>
-<dd>Remove units field for easier parsing by scripts.</p>
-<dt><code>&lt;command&gt;</code></p>
-<dd>An optional command, unless a hostname is also being specified. The only implemented command is <i>status</i> Shorthand for <i>status localhost:3551</i> This produces a full printout of the available status information for the associated UPS.</p>
-<dt><code>&lt;host&gt;</code></p>
-<dd>An optional hostname which may be a bare machine name, fully qualified domain name or IP address.</p>
-<dt><code>:&lt;port&gt;</code></p>
-<dd>An optional port number where a hostname argument has been specified. The default is 3551, the official port number assigned by <code>IANA </code> for the apcupsd NIS server. The default hostname and port are obtained from the configuration file.</dl>
+<dt><code>-f</code></dt>
+<dd>configuration file of apcupsd (default is usually /etc/apcupsd/apcupsd.conf)</dd>
+<dt><code>-h </code></dt>
+<dd>hostname and port of apcupsd to communicate with. The default hostname and port are obtained from the configuration file.</dd>
+<dt><code>-p</code></dt>
+<dd>Report only the value of the named parameter instead of all parameters and values.</dd>
+<dt><code>-u</code></dt>
+<dd>Remove units field for easier parsing by scripts.</dd>
+<dt><code>&lt;command&gt;</code></dt>
+<dd>An optional command, unless a hostname is also being specified. The only implemented command is <i>status</i> Shorthand for <i>status localhost:3551</i> This produces a full printout of the available status information for the associated UPS.</dd>
+<dt><code>&lt;host&gt;</code></dt>
+<dd>An optional hostname which may be a bare machine name, fully qualified domain name or IP address.</dd>
+<dt><code>:&lt;port&gt;</code></dt>
+<dd>An optional port number where a hostname argument has been specified. The default is 3551, the official port number assigned by <code>IANA </code> for the apcupsd NIS server. The default hostname and port are obtained from the configuration file.</dd></dl>
 <p> uses apcupsd&#8217;s inbuilt Network Information Server (NIS) &#8212; no relation to Sun&#8217;s NIS/YP service &#8212; to obtain the current status information from the UPS on the local or remote computer. It is therefore necessary to have the following configuration directives: </p>
 <dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETSERVER on</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETSERVER on</code></dt>
 <dd>
-<dt><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NISPORT 3551</code></p>
-<dd></dl>
+</dd><dt><code><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NISPORT 3551</code></dt>
+<dd></dd></dl>
 <p> in the /etc/apcupsd/apcupsd.conf configuration file so that the Network Information Server will be accessible. Firewall rules for appropriate network access may also be needed.</p>
 <h2>Status Report Format</h2>
 <p>The status report output format is simple ASCII. Generally there is a single piece of information on each line of output. The content varies based on the model of UPS being used and, in some cases, the firmware version.</p>
@@ -42,324 +42,324 @@ description: "apcaccess – retrieve status information from"
 <p>Set out below is a sample of the status output which may be generated for the specified UPS models.</p>
 <h3>All models</h3>
 <dl>
-<dt><code>APC</code></p>
-<dd>: version, number of records and number of bytes following</p>
-<dt><code>DATE</code></p>
-<dd>: Date and time of last update from UPS</p>
-<dt><code>HOSTNAME</code></p>
-<dd>: hostname of computer running apcupsd</p>
-<dt><code>VERSION</code></p>
-<dd>: apcupsd version number, date and operating system</p>
-<dt><code>UPSNAME</code></p>
-<dd>: UPS name from configuration file (dumb) or EEPROM (smart)</p>
-<dt><code>CABLE</code></p>
-<dd>: Cable type specified in the configuration file</p>
-<dt><code>MODEL</code></p>
-<dd>: UPS model derived from UPS information</p>
-<dt><code>UPSMODE</code></p>
-<dd>: Mode in which UPS is operating</p>
-<dt><code>STARTTIME</code></p>
-<dd>: Date and time apcupsd was started</p>
-<dt><code>STATUS</code></p>
+<dt><code>APC</code></dt>
+<dd>: version, number of records and number of bytes following</dd>
+<dt><code>DATE</code></dt>
+<dd>: Date and time of last update from UPS</dd>
+<dt><code>HOSTNAME</code></dt>
+<dd>: hostname of computer running apcupsd</dd>
+<dt><code>VERSION</code></dt>
+<dd>: apcupsd version number, date and operating system</dd>
+<dt><code>UPSNAME</code></dt>
+<dd>: UPS name from configuration file (dumb) or EEPROM (smart)</dd>
+<dt><code>CABLE</code></dt>
+<dd>: Cable type specified in the configuration file</dd>
+<dt><code>MODEL</code></dt>
+<dd>: UPS model derived from UPS information</dd>
+<dt><code>UPSMODE</code></dt>
+<dd>: Mode in which UPS is operating</dd>
+<dt><code>STARTTIME</code></dt>
+<dd>: Date and time apcupsd was started</dd>
+<dt><code>STATUS</code></dt>
 <dd>: UPS status. One or more of the following (space-separated): CAL TRIM BOOST ONLINE ONBATT OVERLOAD LOWBATT REPLACEBATT NOBATT SLAVE SLAVEDOWN<br />
  or<br />
  COMMLOST<br />
  or<br />
- SHUTTING DOWN</p>
-<dt><code>MASTERUPD</code></p>
-<dd>: Last time the master sent an update to the slave</p>
-<dt><code>ENDAPC</code></p>
-<dd>: Date and time of status information was written</dl>
+ SHUTTING DOWN</dd>
+<dt><code>MASTERUPD</code></dt>
+<dd>: Last time the master sent an update to the slave</dd>
+<dt><code>ENDAPC</code></dt>
+<dd>: Date and time of status information was written</dd></dl>
 <h3>Smart-UPS and Matrix-UPS (Smart Signalling)</h3>
 <dl>
-<dt><code>LINEV</code></p>
-<dd>: Current input line voltage</p>
-<dt><code>LOADPCT</code></p>
-<dd>: Percentage of UPS load capacity used as estimated by UPS</p>
-<dt><code>BCHARGE</code></p>
-<dd>: Current battery capacity charge percentage</p>
-<dt><code>TIMELEFT</code></p>
-<dd>: Remaining runtime left on battery as estimated by the UPS</p>
-<dt><code>MBATTCHG</code></p>
-<dd>: Min battery charge % (BCHARGE) required for system shutdown</p>
-<dt><code>MINTIMEL</code></p>
-<dd>: Min battery runtime (MINUTES) required for system shutdown</p>
-<dt><code>MAXTIME</code></p>
-<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</p>
-<dt><code>MAXLINEV</code></p>
-<dd>: Maximum input line voltage since apcupsd started</p>
-<dt><code>MINLINEV</code></p>
-<dd>: Min (observed) input line voltage since apcupsd started</p>
-<dt><code>OUTPUTV</code></p>
-<dd>: Current UPS output voltage</p>
-<dt><code>SENSE</code></p>
-<dd>: Current UPS sensitivity setting for voltage fluctuations</p>
-<dt><code>DWAKE</code></p>
-<dd>: Time UPS waits after power off when the power is restored</p>
-<dt><code>DSHUTD</code></p>
-<dd>: Delay before UPS powers down after command received</p>
-<dt><code>DLOWBATT</code></p>
-<dd>: Low battery signal sent when this much runtime remains</p>
-<dt><code>LOTRANS</code></p>
-<dd>: Input line voltage below which UPS will switch to battery</p>
-<dt><code>HITRANS</code></p>
-<dd>: Input line voltage above which UPS will switch to battery</p>
-<dt><code>RETPCT</code></p>
-<dd>: Battery charge % required after power off to restore power</p>
-<dt><code>ITEMP</code></p>
-<dd>: UPS internal temperature in degrees Celcius</p>
-<dt><code>ALARMDEL</code></p>
-<dd>: Delay period before UPS starts sounding alarm</p>
-<dt><code>BATTV</code></p>
-<dd>: Current battery voltage</p>
-<dt><code>LINEFREQ</code></p>
-<dd>: Current line frequency in Hertz</p>
-<dt><code>LASTXFER</code></p>
-<dd>: Reason for last transfer to battery since apcupsd startup</p>
-<dt><code>NUMXFERS</code></p>
-<dd>: Number of transfers to battery since apcupsd startup</p>
-<dt><code>XONBATT</code></p>
-<dd>: Date, time of last transfer to battery since apcupsd startup</p>
-<dt><code>TONBATT</code></p>
-<dd>: Seconds currently on battery</p>
-<dt><code>CUMONBATT</code></p>
-<dd>: Cumulative seconds on battery since apcupsd startup</p>
-<dt><code>XOFFBAT</code></p>
-<dd>: Date, time of last transfer off battery since apcupsd startup</p>
-<dt><code>SELFTEST</code></p>
-<dd>: Date and time of last self test since apcupsd startup</p>
-<dt><code>STESTI</code></p>
-<dd>: Self-test interval</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex</p>
-<dt><code>DIPSW</code></p>
-<dd>: Current UPS DIP switch settings</p>
-<dt><code>REG1</code></p>
-<dd>: Fault register 1 in hex</p>
-<dt><code>REG2</code></p>
-<dd>: Fault register 2 in hex</p>
-<dt><code>REG3</code></p>
-<dd>: Fault register 3 in hex</p>
-<dt><code>MANDATE</code></p>
-<dd>: UPS date of manufacture</p>
-<dt><code>SERIALNO</code></p>
-<dd>: UPS serial number</p>
-<dt><code>BATTDATE</code></p>
-<dd>: Date battery last replaced (if set)</p>
-<dt><code>NOMOUTV</code></p>
-<dd>: Nominal output voltage to supply when on battery power</p>
-<dt><code>NOMBATTV</code></p>
-<dd>: Nominal battery voltage</p>
-<dt><code>EXTBATTS</code></p>
-<dd>: Number of external batteries (for XL models)</p>
-<dt><code>BADBATTS</code></p>
-<dd>: Number of bad external battery packs (for XL models)</p>
-<dt><code>FIRMWARE</code></p>
-<dd>: UPS firmware version</p>
-<dt><code>APCMODEL</code></p>
-<dd>: APC model information</dl>
+<dt><code>LINEV</code></dt>
+<dd>: Current input line voltage</dd>
+<dt><code>LOADPCT</code></dt>
+<dd>: Percentage of UPS load capacity used as estimated by UPS</dd>
+<dt><code>BCHARGE</code></dt>
+<dd>: Current battery capacity charge percentage</dd>
+<dt><code>TIMELEFT</code></dt>
+<dd>: Remaining runtime left on battery as estimated by the UPS</dd>
+<dt><code>MBATTCHG</code></dt>
+<dd>: Min battery charge % (BCHARGE) required for system shutdown</dd>
+<dt><code>MINTIMEL</code></dt>
+<dd>: Min battery runtime (MINUTES) required for system shutdown</dd>
+<dt><code>MAXTIME</code></dt>
+<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</dd>
+<dt><code>MAXLINEV</code></dt>
+<dd>: Maximum input line voltage since apcupsd started</dd>
+<dt><code>MINLINEV</code></dt>
+<dd>: Min (observed) input line voltage since apcupsd started</dd>
+<dt><code>OUTPUTV</code></dt>
+<dd>: Current UPS output voltage</dd>
+<dt><code>SENSE</code></dt>
+<dd>: Current UPS sensitivity setting for voltage fluctuations</dd>
+<dt><code>DWAKE</code></dt>
+<dd>: Time UPS waits after power off when the power is restored</dd>
+<dt><code>DSHUTD</code></dt>
+<dd>: Delay before UPS powers down after command received</dd>
+<dt><code>DLOWBATT</code></dt>
+<dd>: Low battery signal sent when this much runtime remains</dd>
+<dt><code>LOTRANS</code></dt>
+<dd>: Input line voltage below which UPS will switch to battery</dd>
+<dt><code>HITRANS</code></dt>
+<dd>: Input line voltage above which UPS will switch to battery</dd>
+<dt><code>RETPCT</code></dt>
+<dd>: Battery charge % required after power off to restore power</dd>
+<dt><code>ITEMP</code></dt>
+<dd>: UPS internal temperature in degrees Celcius</dd>
+<dt><code>ALARMDEL</code></dt>
+<dd>: Delay period before UPS starts sounding alarm</dd>
+<dt><code>BATTV</code></dt>
+<dd>: Current battery voltage</dd>
+<dt><code>LINEFREQ</code></dt>
+<dd>: Current line frequency in Hertz</dd>
+<dt><code>LASTXFER</code></dt>
+<dd>: Reason for last transfer to battery since apcupsd startup</dd>
+<dt><code>NUMXFERS</code></dt>
+<dd>: Number of transfers to battery since apcupsd startup</dd>
+<dt><code>XONBATT</code></dt>
+<dd>: Date, time of last transfer to battery since apcupsd startup</dd>
+<dt><code>TONBATT</code></dt>
+<dd>: Seconds currently on battery</dd>
+<dt><code>CUMONBATT</code></dt>
+<dd>: Cumulative seconds on battery since apcupsd startup</dd>
+<dt><code>XOFFBAT</code></dt>
+<dd>: Date, time of last transfer off battery since apcupsd startup</dd>
+<dt><code>SELFTEST</code></dt>
+<dd>: Date and time of last self test since apcupsd startup</dd>
+<dt><code>STESTI</code></dt>
+<dd>: Self-test interval</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex</dd>
+<dt><code>DIPSW</code></dt>
+<dd>: Current UPS DIP switch settings</dd>
+<dt><code>REG1</code></dt>
+<dd>: Fault register 1 in hex</dd>
+<dt><code>REG2</code></dt>
+<dd>: Fault register 2 in hex</dd>
+<dt><code>REG3</code></dt>
+<dd>: Fault register 3 in hex</dd>
+<dt><code>MANDATE</code></dt>
+<dd>: UPS date of manufacture</dd>
+<dt><code>SERIALNO</code></dt>
+<dd>: UPS serial number</dd>
+<dt><code>BATTDATE</code></dt>
+<dd>: Date battery last replaced (if set)</dd>
+<dt><code>NOMOUTV</code></dt>
+<dd>: Nominal output voltage to supply when on battery power</dd>
+<dt><code>NOMBATTV</code></dt>
+<dd>: Nominal battery voltage</dd>
+<dt><code>EXTBATTS</code></dt>
+<dd>: Number of external batteries (for XL models)</dd>
+<dt><code>BADBATTS</code></dt>
+<dd>: Number of bad external battery packs (for XL models)</dd>
+<dt><code>FIRMWARE</code></dt>
+<dd>: UPS firmware version</dd>
+<dt><code>APCMODEL</code></dt>
+<dd>: APC model information</dd></dl>
 <h3>Newer Back-UPS Pro (Smart Signalling)</h3>
 <dl>
-<dt><code>LINEV</code></p>
-<dd>: Current input line voltage</p>
-<dt><code>LOADPCT</code></p>
-<dd>: Percentage of UPS load capacity used</p>
-<dt><code>MBATTCHG</code></p>
-<dd>: Min battery charge % (BCHARGE) required for system shutdown</p>
-<dt><code>MINTIMEL</code></p>
-<dd>: Min battery runtime (MINUTES) required for system shutdown</p>
-<dt><code>MAXTIME</code></p>
-<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</p>
-<dt><code>MAXLINEV</code></p>
-<dd>: Maximum input line voltage since apcupsd startup</p>
-<dt><code>MINLINEV</code></p>
-<dd>: Minimum input line voltage since apcupsd startup</p>
-<dt><code>OUTPUTV</code></p>
-<dd>: Current UPS output voltage</p>
-<dt><code>BATTV</code></p>
-<dd>: Current battery charge voltage</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex</dl>
+<dt><code>LINEV</code></dt>
+<dd>: Current input line voltage</dd>
+<dt><code>LOADPCT</code></dt>
+<dd>: Percentage of UPS load capacity used</dd>
+<dt><code>MBATTCHG</code></dt>
+<dd>: Min battery charge % (BCHARGE) required for system shutdown</dd>
+<dt><code>MINTIMEL</code></dt>
+<dd>: Min battery runtime (MINUTES) required for system shutdown</dd>
+<dt><code>MAXTIME</code></dt>
+<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</dd>
+<dt><code>MAXLINEV</code></dt>
+<dd>: Maximum input line voltage since apcupsd startup</dd>
+<dt><code>MINLINEV</code></dt>
+<dd>: Minimum input line voltage since apcupsd startup</dd>
+<dt><code>OUTPUTV</code></dt>
+<dd>: Current UPS output voltage</dd>
+<dt><code>BATTV</code></dt>
+<dd>: Current battery charge voltage</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex</dd></dl>
 <h3>Back-UPS RS 1500 (USB)</h3>
 <dl>
-<dt><code>LINEV</code></p>
-<dd>: Current input line voltage</p>
-<dt><code>LOADPCT</code></p>
-<dd>: Percentage of UPS load capacity used</p>
-<dt><code>BCHARGE</code></p>
-<dd>: Current battery capacity charge percentage</p>
-<dt><code>TIMELEFT</code></p>
-<dd>: Remaining runtime left on battery as estimated by UPS</p>
-<dt><code>MBATTCHG</code></p>
-<dd>: Min battery charge % (BCHARGE) required for system shutdown</p>
-<dt><code>MINTIMEL</code></p>
-<dd>: Min battery runtime (MINUTES) required for system shutdown</p>
-<dt><code>MAXTIME</code></p>
-<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</p>
-<dt><code>*OUTPUTV</code></p>
-<dd>: Current UPS output voltage</p>
-<dt><code>*DWAKE</code></p>
-<dd>: Time UPS waits after power off when the power is restored</p>
-<dt><code>*DSHUTD</code></p>
-<dd>: Delay before UPS powers down after command received</p>
-<dt><code>LOTRANS</code></p>
-<dd>: Input line voltage below which UPS will switch to battery</p>
-<dt><code>HITRANS</code></p>
-<dd>: Input line voltage above which UPS will switch to battery</p>
-<dt><code>*RETPCT</code></p>
-<dd>: Battery charge % required after power off to restore power</p>
-<dt><code>*ITEMP</code></p>
-<dd>: UPS internal temperature in degrees Celcius</p>
-<dt><code>ALARMDEL</code></p>
-<dd>: Delay period before UPS starts sounding alarm</p>
-<dt><code>BATTV</code></p>
-<dd>: Current battery voltage</p>
-<dt><code>*LINEFREQ</code></p>
-<dd>: Current line frequency in Hertz</p>
-<dt><code>*LASTXFER</code></p>
-<dd>: Reason for last transfer to battery since apcupsd startup</p>
-<dt><code>NUMXFERS</code></p>
-<dd>: Number of transfers to battery since apcupsd startup</p>
-<dt><code>XONBATT</code></p>
-<dd>: Date, time of last transfer to battery since apcupsd startup</p>
-<dt><code>TONBATT</code></p>
-<dd>: Seconds currently on battery</p>
-<dt><code>CUMONBATT</code></p>
-<dd>: Cumulative seconds on battery since apcupsd startup</p>
-<dt><code>XOFFBAT</code></p>
-<dd>: Date, time of last transfer off battery since apcupsd startup</p>
-<dt><code>SELFTEST</code></p>
-<dd>: Date and time of last self test since apcupsd startup</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex</p>
-<dt><code>MANDATE</code></p>
-<dd>: UPS date of manufacture</p>
-<dt><code>SERIALNO</code></p>
-<dd>: UPS serial number</p>
-<dt><code>BATTDATE</code></p>
-<dd>: Date battery last replaced (if set)</p>
-<dt><code>NOMBATTV</code></p>
-<dd>: Nominal battery voltage</p>
-<dt><code>FIRMWARE</code></p>
-<dd>: UPS firmware version</p>
-<dt><code>APCMODEL</code></p>
-<dd>: APC model information</p>
-<dt><code>* presence dependant on USB firmware version.</code></p>
-<dd></dl>
+<dt><code>LINEV</code></dt>
+<dd>: Current input line voltage</dd>
+<dt><code>LOADPCT</code></dt>
+<dd>: Percentage of UPS load capacity used</dd>
+<dt><code>BCHARGE</code></dt>
+<dd>: Current battery capacity charge percentage</dd>
+<dt><code>TIMELEFT</code></dt>
+<dd>: Remaining runtime left on battery as estimated by UPS</dd>
+<dt><code>MBATTCHG</code></dt>
+<dd>: Min battery charge % (BCHARGE) required for system shutdown</dd>
+<dt><code>MINTIMEL</code></dt>
+<dd>: Min battery runtime (MINUTES) required for system shutdown</dd>
+<dt><code>MAXTIME</code></dt>
+<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</dd>
+<dt><code>*OUTPUTV</code></dt>
+<dd>: Current UPS output voltage</dd>
+<dt><code>*DWAKE</code></dt>
+<dd>: Time UPS waits after power off when the power is restored</dd>
+<dt><code>*DSHUTD</code></dt>
+<dd>: Delay before UPS powers down after command received</dd>
+<dt><code>LOTRANS</code></dt>
+<dd>: Input line voltage below which UPS will switch to battery</dd>
+<dt><code>HITRANS</code></dt>
+<dd>: Input line voltage above which UPS will switch to battery</dd>
+<dt><code>*RETPCT</code></dt>
+<dd>: Battery charge % required after power off to restore power</dd>
+<dt><code>*ITEMP</code></dt>
+<dd>: UPS internal temperature in degrees Celcius</dd>
+<dt><code>ALARMDEL</code></dt>
+<dd>: Delay period before UPS starts sounding alarm</dd>
+<dt><code>BATTV</code></dt>
+<dd>: Current battery voltage</dd>
+<dt><code>*LINEFREQ</code></dt>
+<dd>: Current line frequency in Hertz</dd>
+<dt><code>*LASTXFER</code></dt>
+<dd>: Reason for last transfer to battery since apcupsd startup</dd>
+<dt><code>NUMXFERS</code></dt>
+<dd>: Number of transfers to battery since apcupsd startup</dd>
+<dt><code>XONBATT</code></dt>
+<dd>: Date, time of last transfer to battery since apcupsd startup</dd>
+<dt><code>TONBATT</code></dt>
+<dd>: Seconds currently on battery</dd>
+<dt><code>CUMONBATT</code></dt>
+<dd>: Cumulative seconds on battery since apcupsd startup</dd>
+<dt><code>XOFFBAT</code></dt>
+<dd>: Date, time of last transfer off battery since apcupsd startup</dd>
+<dt><code>SELFTEST</code></dt>
+<dd>: Date and time of last self test since apcupsd startup</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex</dd>
+<dt><code>MANDATE</code></dt>
+<dd>: UPS date of manufacture</dd>
+<dt><code>SERIALNO</code></dt>
+<dd>: UPS serial number</dd>
+<dt><code>BATTDATE</code></dt>
+<dd>: Date battery last replaced (if set)</dd>
+<dt><code>NOMBATTV</code></dt>
+<dd>: Nominal battery voltage</dd>
+<dt><code>FIRMWARE</code></dt>
+<dd>: UPS firmware version</dd>
+<dt><code>APCMODEL</code></dt>
+<dd>: APC model information</dd>
+<dt><code>* presence dependant on USB firmware version.</code></dt>
+<dd></dd></dl>
 <h3>Web/SNMP (AP9716) or PowerNet SNMP (AP9605) SmartSlot Card</h3>
 <dl>
-<dt><code>LINEV</code></p>
-<dd>: Current input line voltage</p>
-<dt><code>LOADPCT</code></p>
-<dd>: Percentage of UPS load capacity used as estimated by UPS</p>
-<dt><code>BCHARGE</code></p>
-<dd>: Current battery capacity charge percentage</p>
-<dt><code>TIMELEFT</code></p>
-<dd>: Remaining runtime left on battery as estimated by UPS</p>
-<dt><code>MBATTCHG</code></p>
-<dd>: Min battery charge % (BCHARGE) required for system shutdown</p>
-<dt><code>MINTIMEL</code></p>
-<dd>: Min battery runtime (MINUTES) required for system shutdown</p>
-<dt><code>MAXTIME</code></p>
-<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</p>
-<dt><code>MAXLINEV</code></p>
-<dd>: Maximum input line voltage since apcupsd startup</p>
-<dt><code>MINLINEV</code></p>
-<dd>: Minimum input line voltage since apcupsd startup</p>
-<dt><code>OUTPUTV</code></p>
-<dd>: UPS output voltage</p>
-<dt><code>SENSE</code></p>
-<dd>: Current UPS sensitivity setting for voltage fluctuations</p>
-<dt><code>DWAKE</code></p>
-<dd>: Time UPS waits after power off when the power is restored</p>
-<dt><code>DSHUTD</code></p>
-<dd>: Delay before UPS powers down after command received</p>
-<dt><code>DLOWBATT</code></p>
-<dd>: Low battery signal sent when this much runtime remains</p>
-<dt><code>LOTRANS</code></p>
-<dd>: Input line voltage below which UPS will switch to battery</p>
-<dt><code>HITRANS</code></p>
-<dd>: Input line voltage above which UPS will switch to battery</p>
-<dt><code>RETPCT</code></p>
-<dd>: Battery charge % required after power off to restore power</p>
-<dt><code>ITEMP</code></p>
-<dd>: UPS internal temperature in degrees Celcius</p>
-<dt><code>ALARMDEL</code></p>
-<dd>: Delay period before UPS starts sounding alarm</p>
-<dt><code>LINEFREQ</code></p>
-<dd>: Current line frequency in Hertz</p>
-<dt><code>NUMXFERS</code></p>
-<dd>: Number of transfers to battery since apcupsd startup</p>
-<dt><code>TONBATT</code></p>
-<dd>: Seconds currently on battery</p>
-<dt><code>CUMONBATT</code></p>
-<dd>: Cumulative seconds on battery since apcupsd startup</p>
-<dt><code>XOFFBATT</code></p>
-<dd>: Date, time of last transfer off battery since apcupsd startup</p>
-<dt><code>STESTI</code></p>
-<dd>: Self-test interval</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex</p>
-<dt><code>DIPSW</code></p>
-<dd>: Current UPS DIP switch settings</p>
-<dt><code>MANDATE</code></p>
-<dd>: UPS date of manufacture</p>
-<dt><code>SERIALNO</code></p>
-<dd>: UPS serial number</p>
-<dt><code>BATTDATE</code></p>
-<dd>: Date battery last replaced (if set)</p>
-<dt><code>NOMOUTV</code></p>
-<dd>: Nominal output voltage to supply when on battery power</p>
-<dt><code>NOMPOWER</code></p>
-<dd>: Nominal power output in watts</p>
-<dt><code>EXTBATTS</code></p>
-<dd>: Number of external batteries (for XL models)</p>
-<dt><code>BADBATTS</code></p>
-<dd>: Number of bad external battery packs (for XL models)</p>
-<dt><code>FIRMWARE</code></p>
-<dd>: UPS firmware version</p>
-<dt><code>APCMODEL</code></p>
-<dd>: APC model information</dl>
+<dt><code>LINEV</code></dt>
+<dd>: Current input line voltage</dd>
+<dt><code>LOADPCT</code></dt>
+<dd>: Percentage of UPS load capacity used as estimated by UPS</dd>
+<dt><code>BCHARGE</code></dt>
+<dd>: Current battery capacity charge percentage</dd>
+<dt><code>TIMELEFT</code></dt>
+<dd>: Remaining runtime left on battery as estimated by UPS</dd>
+<dt><code>MBATTCHG</code></dt>
+<dd>: Min battery charge % (BCHARGE) required for system shutdown</dd>
+<dt><code>MINTIMEL</code></dt>
+<dd>: Min battery runtime (MINUTES) required for system shutdown</dd>
+<dt><code>MAXTIME</code></dt>
+<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</dd>
+<dt><code>MAXLINEV</code></dt>
+<dd>: Maximum input line voltage since apcupsd startup</dd>
+<dt><code>MINLINEV</code></dt>
+<dd>: Minimum input line voltage since apcupsd startup</dd>
+<dt><code>OUTPUTV</code></dt>
+<dd>: UPS output voltage</dd>
+<dt><code>SENSE</code></dt>
+<dd>: Current UPS sensitivity setting for voltage fluctuations</dd>
+<dt><code>DWAKE</code></dt>
+<dd>: Time UPS waits after power off when the power is restored</dd>
+<dt><code>DSHUTD</code></dt>
+<dd>: Delay before UPS powers down after command received</dd>
+<dt><code>DLOWBATT</code></dt>
+<dd>: Low battery signal sent when this much runtime remains</dd>
+<dt><code>LOTRANS</code></dt>
+<dd>: Input line voltage below which UPS will switch to battery</dd>
+<dt><code>HITRANS</code></dt>
+<dd>: Input line voltage above which UPS will switch to battery</dd>
+<dt><code>RETPCT</code></dt>
+<dd>: Battery charge % required after power off to restore power</dd>
+<dt><code>ITEMP</code></dt>
+<dd>: UPS internal temperature in degrees Celcius</dd>
+<dt><code>ALARMDEL</code></dt>
+<dd>: Delay period before UPS starts sounding alarm</dd>
+<dt><code>LINEFREQ</code></dt>
+<dd>: Current line frequency in Hertz</dd>
+<dt><code>NUMXFERS</code></dt>
+<dd>: Number of transfers to battery since apcupsd startup</dd>
+<dt><code>TONBATT</code></dt>
+<dd>: Seconds currently on battery</dd>
+<dt><code>CUMONBATT</code></dt>
+<dd>: Cumulative seconds on battery since apcupsd startup</dd>
+<dt><code>XOFFBATT</code></dt>
+<dd>: Date, time of last transfer off battery since apcupsd startup</dd>
+<dt><code>STESTI</code></dt>
+<dd>: Self-test interval</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex</dd>
+<dt><code>DIPSW</code></dt>
+<dd>: Current UPS DIP switch settings</dd>
+<dt><code>MANDATE</code></dt>
+<dd>: UPS date of manufacture</dd>
+<dt><code>SERIALNO</code></dt>
+<dd>: UPS serial number</dd>
+<dt><code>BATTDATE</code></dt>
+<dd>: Date battery last replaced (if set)</dd>
+<dt><code>NOMOUTV</code></dt>
+<dd>: Nominal output voltage to supply when on battery power</dd>
+<dt><code>NOMPOWER</code></dt>
+<dd>: Nominal power output in watts</dd>
+<dt><code>EXTBATTS</code></dt>
+<dd>: Number of external batteries (for XL models)</dd>
+<dt><code>BADBATTS</code></dt>
+<dd>: Number of bad external battery packs (for XL models)</dd>
+<dt><code>FIRMWARE</code></dt>
+<dd>: UPS firmware version</dd>
+<dt><code>APCMODEL</code></dt>
+<dd>: APC model information</dd></dl>
 <h3>Share-UPS (AP9270) (Basic port)</h3>
 <dl>
-<dt><code>MBATTCHG</code></p>
-<dd>: Min battery charge % (BCHARGE) required for system shutdown</p>
-<dt><code>MINTIMEL</code></p>
-<dd>: Min battery runtime (MINUTES) required for system shutdown</p>
-<dt><code>MAXTIME</code></p>
-<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</p>
-<dt><code>NUMXFERS</code></p>
-<dd>: Number of transfers to battery since apcupsd startup</p>
-<dt><code>TONBATT</code></p>
-<dd>: Seconds currently on battery</p>
-<dt><code>CUMONBATT</code></p>
-<dd>: Cumulative seconds on battery since apcupsd startup</p>
-<dt><code>XOFFBATT</code></p>
-<dd>: Date, time of last transfer off battery since apcupsd startup</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex</dl>
+<dt><code>MBATTCHG</code></dt>
+<dd>: Min battery charge % (BCHARGE) required for system shutdown</dd>
+<dt><code>MINTIMEL</code></dt>
+<dd>: Min battery runtime (MINUTES) required for system shutdown</dd>
+<dt><code>MAXTIME</code></dt>
+<dd>: Max battery runtime (TIMEOUT) after which system is shutdown</dd>
+<dt><code>NUMXFERS</code></dt>
+<dd>: Number of transfers to battery since apcupsd startup</dd>
+<dt><code>TONBATT</code></dt>
+<dd>: Seconds currently on battery</dd>
+<dt><code>CUMONBATT</code></dt>
+<dd>: Cumulative seconds on battery since apcupsd startup</dd>
+<dt><code>XOFFBATT</code></dt>
+<dd>: Date, time of last transfer off battery since apcupsd startup</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex</dd></dl>
 <h3>UPS Environmental Monitoring SmartSlot Card (AP9612TH)</h3>
 <dl>
-<dt><code>HUMIDITY</code></p>
-<dd>: Ambient humidity</p>
-<dt><code>AMBTEMP</code></p>
-<dd>: Ambient temperature</dl>
+<dt><code>HUMIDITY</code></dt>
+<dd>: Ambient humidity</dd>
+<dt><code>AMBTEMP</code></dt>
+<dd>: Ambient temperature</dd></dl>
 <h3>Back-UPS Pro and Smart-UPS v/s (Smart Signalling)</h3>
 <dl>
-<dt><code>LINEFAIL</code></p>
-<dd>: Input line voltage status.</p>
-<dt><code>BATTSTAT</code></p>
-<dd>: Battery status.</p>
-<dt><code>LASTXFER</code></p>
-<dd>: Last (observed) transfer to battery.</dl>
+<dt><code>LINEFAIL</code></dt>
+<dd>: Input line voltage status.</dd>
+<dt><code>BATTSTAT</code></dt>
+<dd>: Battery status.</dd>
+<dt><code>LASTXFER</code></dt>
+<dd>: Last (observed) transfer to battery.</dd></dl>
 <h3>Back-UPS and Net-UPS (Simple Signalling)</h3>
 <dl>
-<dt><code>LINEFAIL</code></p>
-<dd>: Input line voltage status.</p>
-<dt><code>BATTSTAT</code></p>
-<dd>: Battery status.</p>
-<dt><code>STATFLAG</code></p>
-<dd>: UPS status flag in hex.</dl>
+<dt><code>LINEFAIL</code></dt>
+<dd>: Input line voltage status.</dd>
+<dt><code>BATTSTAT</code></dt>
+<dd>: Battery status.</dd>
+<dt><code>STATFLAG</code></dt>
+<dd>: UPS status flag in hex.</dd></dl>
 <h2>Files</h2>
 <p>/etc/apcupsd/apcupsd.conf</p>
 <h2>See Also</h2>

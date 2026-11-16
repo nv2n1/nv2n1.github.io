@@ -19,49 +19,49 @@ description: "crash – Analyze Linux crash dump data or a live system"
 <p> The <code>crash </code> utility is designed to be independent of Linux version dependencies. When new kernel source code impacts the correct functionality of <code>crash</code> and its command set, the utility will be updated to recognize new kernel code changes, while maintaining backwards compatibility with earlier releases.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>NAMELIST</code></p>
-<dd>This is a pathname to an uncompressed kernel image (a <i>vmlinux </i> file), or a Xen hypervisor image (a <i>xen-syms</i> file) which has been compiled with the &quot;-g&quot; option. If using the <i>dumpfile form,</i> a <i>vmlinux </i> file may be compressed in either gzip or bzip2 formats.</p>
-<dt><code>MEMORY-IMAGE[@ADDRESS]</code></p>
-<dd>A kernel core dump file created by the <i>netdump,</i> <i>diskdump,</i> <i>LKCD</i> <i>kdump,</i> <i>xendump</i> or <i>kvmdump</i> facilities. </p>
+<dt><code>NAMELIST</code></dt>
+<dd>This is a pathname to an uncompressed kernel image (a <i>vmlinux </i> file), or a Xen hypervisor image (a <i>xen-syms</i> file) which has been compiled with the &quot;-g&quot; option. If using the <i>dumpfile form,</i> a <i>vmlinux </i> file may be compressed in either gzip or bzip2 formats.</dd>
+<dt><code>MEMORY-IMAGE[@ADDRESS]</code></dt>
+<dd>A kernel core dump file created by the <i>netdump,</i> <i>diskdump,</i> <i>LKCD</i> <i>kdump,</i> <i>xendump</i> or <i>kvmdump</i> facilities. </dd>
 <p> If a MEMORY-IMAGE argument is not entered, the session will be invoked on the live system, which typically requires root privileges because of the device file used to access system RAM. By default, <i>/dev/crash</i> will be used if it exists. If it does not exist, then <i>/dev/mem </i> will be used; but if the kernel has been configured with <code>CONFIG_STRICT_DEVMEM, </code> then <i>/proc/kcore </i> will be used. It is permissible to explicitly enter <i>/dev/crash, </i> <i>/dev/mem</i> or <i>/proc/kcore.</i> </p>
 <p> An @ADDRESS value must be appended to the MEMORY-IMAGE if the dumpfile is a raw RAM dumpfile that has no header information describing the file contents. Multiple MEMORY-IMAGE [at] ADDRESS ordered pairs may be entered, with each dumpfile containing a contiguous block of RAM, where the ADDRESS value is the physical start address of the block expressed in hexadecimal. The physical address value(s) will be used to create a temporary ELF header in /var/tmp, which will only exist during the crash session. If a raw RAM dumpile represents a live memory source, such as that specified by the QEMU mem-path argument of a memory-backend-file object, then &quot;live:&quot; must be prepended to the MEMORY-IMAGE name.</p>
-<dt><code>mapfile</code></p>
-<dd>If the NAMELIST file is not the same kernel that is running (live system form), or the kernel that was running when the system crashed (dumpfile form), then the <i>System.map</i> file of the original kernel should be entered on the command line.</dl>
+<dt><code>mapfile</code></dt>
+<dd>If the NAMELIST file is not the same kernel that is running (live system form), or the kernel that was running when the system crashed (dumpfile form), then the <i>System.map</i> file of the original kernel should be entered on the command line.</dd></dl>
 <p> <code>-h</code><i>&nbsp;<wbr>[option]</i><br />
  <code>&#8211;help</code><i>&nbsp;<wbr>[option]</i></p>
 <dl>
-<dd>Without an <i>option</i> argument, display a <code>crash</code> usage help message. If the <i>option</i> argument is a <code>crash</code> command name, the help page for that command is displayed. If it is the string &quot;input&quot;, a page describing the various <code>crash</code> command line input options is displayed. If it is the string &quot;output&quot;, a page describing command line output options is displayed. If it is the string &quot;all&quot;, then all of the possible help messages are displayed. After the help message is displayed, <code>crash</code> exits.</dl>
+<dd>Without an <i>option</i> argument, display a <code>crash</code> usage help message. If the <i>option</i> argument is a <code>crash</code> command name, the help page for that command is displayed. If it is the string &quot;input&quot;, a page describing the various <code>crash</code> command line input options is displayed. If it is the string &quot;output&quot;, a page describing command line output options is displayed. If it is the string &quot;all&quot;, then all of the possible help messages are displayed. After the help message is displayed, <code>crash</code> exits.</dd></dl>
 <dl>
-<dt><code>-s</code></p>
-<dd>Silently proceed directly to the &quot;crash&gt;&quot; prompt without displaying any version, GPL, or <code>crash</code> initialization data during startup, and by default, runtime command output is not passed to any scrolling command.</p>
-<dt><code>-i</code><i>&nbsp;<wbr>file</i></p>
-<dd>Execute the command(s) contained in <i>file</i> prior to displaying the &quot;crash&gt;&quot; prompt for interactive user input.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>num</i></p>
-<dd>Set the internal debug level. The higher the number, the more debugging data will be printed when <code>crash</code> initializes and runs.</p>
-<dt><code>-S</code></p>
-<dd>Use <i>/boot/System.map</i> as the <i>mapfile</i>.</p>
-<dt><code>-e </code><i>vi | emacs</i></p>
-<dd>Set the <code><a href="/docs/linux/man/3-readline/">readline</a>(3) </code> command line editing mode to &quot;vi&quot; or &quot;emacs&quot;. The default editing mode is &quot;vi&quot;.</p>
-<dt><code>-f</code></p>
-<dd>Force the usage of a compressed <i>vmlinux </i> file if its original name does not start with &quot;vmlinux&quot;.</p>
-<dt><code>-k</code></p>
-<dd>Indicate that the NAMELIST file is an LKCD &quot;Kerntypes&quot; debuginfo file.</p>
-<dt><code>-g</code><i>&nbsp;<wbr>[namelist]</i></p>
-<dd>Determine if a <i>vmlinux </i> or <i>xen-syms </i> namelist file contains debugging data.</p>
-<dt><code>-t</code></p>
-<dd>Display the system-crash timestamp and exit.</p>
-<dt><code>-L</code></p>
-<dd>Attempt to lock all of its virtual address space into memory by calling mlockall(MCL_CURRENT|MCL_FUTURE) during initialization. If the system call fails, an error message will be displayed, but the session continues.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>tty-device</i></p>
-<dd>Open the <i>tty-device </i> as the console used for debug messages.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>page-size</i></p>
-<dd>If a processor&#8217;s page size cannot be determined by the dumpfile, and the processor default cannot be used, use <i>page-size.</i></p>
-<dt><code>-o</code><i>&nbsp;<wbr>filename</i></p>
-<dd>Only used with the MEMORY-IMAGE [at] ADDRESS format for raw RAM dumpfiles, specifies a filename of a new ELF vmcore that will be created and used as the dumpfile. It will be saved to allow future use as a standalone vmcore, replacing the original raw RAM dumpfile.</dl>
+<dt><code>-s</code></dt>
+<dd>Silently proceed directly to the &quot;crash&gt;&quot; prompt without displaying any version, GPL, or <code>crash</code> initialization data during startup, and by default, runtime command output is not passed to any scrolling command.</dd>
+<dt><code>-i</code><i>&nbsp;<wbr>file</i></dt>
+<dd>Execute the command(s) contained in <i>file</i> prior to displaying the &quot;crash&gt;&quot; prompt for interactive user input.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>num</i></dt>
+<dd>Set the internal debug level. The higher the number, the more debugging data will be printed when <code>crash</code> initializes and runs.</dd>
+<dt><code>-S</code></dt>
+<dd>Use <i>/boot/System.map</i> as the <i>mapfile</i>.</dd>
+<dt><code>-e </code><i>vi | emacs</i></dt>
+<dd>Set the <code><a href="/docs/linux/man/3-readline/">readline</a>(3) </code> command line editing mode to &quot;vi&quot; or &quot;emacs&quot;. The default editing mode is &quot;vi&quot;.</dd>
+<dt><code>-f</code></dt>
+<dd>Force the usage of a compressed <i>vmlinux </i> file if its original name does not start with &quot;vmlinux&quot;.</dd>
+<dt><code>-k</code></dt>
+<dd>Indicate that the NAMELIST file is an LKCD &quot;Kerntypes&quot; debuginfo file.</dd>
+<dt><code>-g</code><i>&nbsp;<wbr>[namelist]</i></dt>
+<dd>Determine if a <i>vmlinux </i> or <i>xen-syms </i> namelist file contains debugging data.</dd>
+<dt><code>-t</code></dt>
+<dd>Display the system-crash timestamp and exit.</dd>
+<dt><code>-L</code></dt>
+<dd>Attempt to lock all of its virtual address space into memory by calling mlockall(MCL_CURRENT|MCL_FUTURE) during initialization. If the system call fails, an error message will be displayed, but the session continues.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>tty-device</i></dt>
+<dd>Open the <i>tty-device </i> as the console used for debug messages.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>page-size</i></dt>
+<dd>If a processor&#8217;s page size cannot be determined by the dumpfile, and the processor default cannot be used, use <i>page-size.</i></dd>
+<dt><code>-o</code><i>&nbsp;<wbr>filename</i></dt>
+<dd>Only used with the MEMORY-IMAGE [at] ADDRESS format for raw RAM dumpfiles, specifies a filename of a new ELF vmcore that will be created and used as the dumpfile. It will be saved to allow future use as a standalone vmcore, replacing the original raw RAM dumpfile.</dd></dl>
 <p> <code>-m </code><i>option=value</i><br />
  <code>&#8211;machdep </code><i>option=value</i></p>
 <dl>
-<dd>Pass an option and value pair to machine-dependent code. These architecture-specific option/pairs should only be required in very rare circumstances: </p>
+<dd>Pass an option and value pair to machine-dependent code. These architecture-specific option/pairs should only be required in very rare circumstances: </dd>
 <pre>X86_64:
  phys_base=&lt;physical-address&gt;
  irq_eframe_link=&lt;value&gt;
@@ -87,231 +87,231 @@ X86:
  page_offset=&lt;CONFIG_PAGE_OFFSET-value&gt;</pre>
 </dl>
 <dl>
-<dt><code>-x</code></p>
-<dd>Automatically load extension modules from a particular directory. If a directory is specified in the <code>CRASH_EXTENSIONS</code> shell environment variable, then that directory will be used. Otherwise <i>/usr/lib64/crash/extensions</i> (64-bit architectures) or <i>/usr/lib/crash/extensions</i> (32-bit architectures) will be used; if they do not exist, then the <i>./extensions directory will be used.</i></p>
-<dt><code>&#8211;active</code></p>
-<dd>Track only the active task on each cpu.</p>
-<dt><code>&#8211;buildinfo</code></p>
-<dd>Display the crash binary&#8217;s build date, the user ID of the builder, the hostname of the machine where the build was done, the target architecture, the version number, and the compiler version.</p>
-<dt><code>&#8211;memory_module</code><i>&nbsp;<wbr>modname</i></p>
-<dd>Use the <i>modname</i> as an alternative kernel module to the <i>crash.ko</i> module that creates the <i>/dev/crash</i> device.</p>
-<dt><code>&#8211;memory_device</code><i>&nbsp;<wbr>device</i></p>
-<dd>Use <i>device</i> as an alternative device to the <i>/dev/crash, /dev/mem</i> or <i>/proc/kcore</i> devices.</p>
-<dt><code>&#8211;log</code><i>&nbsp;<wbr>dumpfile</i></p>
-<dd>Dump the contents of the kernel log buffer. A kernel namelist argument is not necessary, but the dumpfile must contain the VMCOREINFO data taken from the original /proc/vmcore ELF header.</p>
-<dt><code>&#8211;no_kallsyms</code></p>
-<dd>Do not use kallsyms-generated symbol information contained within kernel module object files.</p>
-<dt><code>&#8211;no_modules</code></p>
-<dd>Do not access or display any kernel module related information.</p>
-<dt><code>&#8211;no_ikconf</code></p>
-<dd>Do not attempt to read configuration data that was built into kernels configured with <code>CONFIG_IKCONFIG.</code></p>
-<dt><code>&#8211;no_data_debug</code></p>
-<dd>Do not verify the validity of all structure member offsets and structure sizes that it uses.</p>
-<dt><code>&#8211;no_kmem_cache</code></p>
-<dd>Do not initialize the kernel&#8217;s slab cache infrastructure, and commands that use kmem_cache-related data will not work.</p>
-<dt><code>&#8211;no_elf_notes</code></p>
-<dd>Do not use the registers from the ELF NT_PRSTATUS notes saved in a compressed kdump header for backtraces.</p>
-<dt><code>&#8211;kmem_cache_delay</code></p>
-<dd>Delay the initialization of the kernel&#8217;s slab cache infrastructure until it is required by a run-time command.</p>
-<dt><code>&#8211;readnow</code></p>
-<dd>Pass this flag to the embedded <code>gdb</code> module, which will override its two-stage strategy that it uses for reading symbol tables from the NAMELIST.</p>
-<dt><code>&#8211;smp</code></p>
-<dd>Specify that the system being analyzed is an SMP kernel.</dl>
+<dt><code>-x</code></dt>
+<dd>Automatically load extension modules from a particular directory. If a directory is specified in the <code>CRASH_EXTENSIONS</code> shell environment variable, then that directory will be used. Otherwise <i>/usr/lib64/crash/extensions</i> (64-bit architectures) or <i>/usr/lib/crash/extensions</i> (32-bit architectures) will be used; if they do not exist, then the <i>./extensions directory will be used.</i></dd>
+<dt><code>&#8211;active</code></dt>
+<dd>Track only the active task on each cpu.</dd>
+<dt><code>&#8211;buildinfo</code></dt>
+<dd>Display the crash binary&#8217;s build date, the user ID of the builder, the hostname of the machine where the build was done, the target architecture, the version number, and the compiler version.</dd>
+<dt><code>&#8211;memory_module</code><i>&nbsp;<wbr>modname</i></dt>
+<dd>Use the <i>modname</i> as an alternative kernel module to the <i>crash.ko</i> module that creates the <i>/dev/crash</i> device.</dd>
+<dt><code>&#8211;memory_device</code><i>&nbsp;<wbr>device</i></dt>
+<dd>Use <i>device</i> as an alternative device to the <i>/dev/crash, /dev/mem</i> or <i>/proc/kcore</i> devices.</dd>
+<dt><code>&#8211;log</code><i>&nbsp;<wbr>dumpfile</i></dt>
+<dd>Dump the contents of the kernel log buffer. A kernel namelist argument is not necessary, but the dumpfile must contain the VMCOREINFO data taken from the original /proc/vmcore ELF header.</dd>
+<dt><code>&#8211;no_kallsyms</code></dt>
+<dd>Do not use kallsyms-generated symbol information contained within kernel module object files.</dd>
+<dt><code>&#8211;no_modules</code></dt>
+<dd>Do not access or display any kernel module related information.</dd>
+<dt><code>&#8211;no_ikconf</code></dt>
+<dd>Do not attempt to read configuration data that was built into kernels configured with <code>CONFIG_IKCONFIG.</code></dd>
+<dt><code>&#8211;no_data_debug</code></dt>
+<dd>Do not verify the validity of all structure member offsets and structure sizes that it uses.</dd>
+<dt><code>&#8211;no_kmem_cache</code></dt>
+<dd>Do not initialize the kernel&#8217;s slab cache infrastructure, and commands that use kmem_cache-related data will not work.</dd>
+<dt><code>&#8211;no_elf_notes</code></dt>
+<dd>Do not use the registers from the ELF NT_PRSTATUS notes saved in a compressed kdump header for backtraces.</dd>
+<dt><code>&#8211;kmem_cache_delay</code></dt>
+<dd>Delay the initialization of the kernel&#8217;s slab cache infrastructure until it is required by a run-time command.</dd>
+<dt><code>&#8211;readnow</code></dt>
+<dd>Pass this flag to the embedded <code>gdb</code> module, which will override its two-stage strategy that it uses for reading symbol tables from the NAMELIST.</dd>
+<dt><code>&#8211;smp</code></dt>
+<dd>Specify that the system being analyzed is an SMP kernel.</dd></dl>
 <p> <code>-v</code><br />
  <code>&#8211;version</code></p>
 <dl>
-<dd>Display the version of the <code>crash</code> utility, the version of the embedded <code>gdb</code> module, GPL information, and copyright notices.</dl>
+<dd>Display the version of the <code>crash</code> utility, the version of the embedded <code>gdb</code> module, GPL information, and copyright notices.</dd></dl>
 <dl>
-<dt><code>&#8211;cpus</code><i>&nbsp;<wbr>number</i></p>
-<dd>Specify the <i>number </i> of cpus in the SMP system being analyzed.</p>
-<dt><code>&#8211;osrelease</code><i>&nbsp;<wbr>dumpfile</i></p>
-<dd>Display the OSRELEASE vmcoreinfo string from a kdump <i>dumpfile </i> header.</p>
-<dt><code>&#8211;hyper</code></p>
-<dd>Force the session to be that of a Xen hypervisor.</p>
-<dt><code>&#8211;p2m_mfn</code><i>&nbsp;<wbr>pfn</i></p>
-<dd>When a Xen Hypervisor or its dom0 kernel crashes, the dumpfile is typically analyzed with either the Xen hypervisor or the dom0 kernel. It is also possible to analyze any of the guest domU kernels if the pfn_to_mfn_list_list <i>pfn </i> value of the guest kernel is passed on the command line along with its NAMELIST and the dumpfile.</p>
-<dt><code>&#8211;xen_phys_start</code><i>&nbsp;<wbr>physical-address</i></p>
-<dd>Supply the base physical address of the Xen hypervisor&#8217;s text and static data for older xendump dumpfiles that did not pass that information in the dumpfile header.</p>
-<dt><code>&#8211;zero_excluded</code></p>
-<dd>If the <a href="/docs/linux/man/8-makedumpfile/">makedumpfile</a>(8) facility has filtered a compressed kdump dumpfile to exclude various types of non-essential pages, or has marked a compressed or ELF kdump dumpfile as incomplete due to an ENOSPC or other error during its creation, any attempt to read missing pages will fail. With this flag, reads from any of those pages will return zero-filled memory.</p>
-<dt><code>&#8211;no_panic</code></p>
-<dd>Do not attempt to find the task that was running when the kernel crashed. Set the initial context to that of the &quot;swapper&quot; task on cpu 0.</p>
-<dt><code>&#8211;more</code></p>
-<dd>Use <i>/bin/more </i> as the command output scroller, overriding the default of <i>/usr/bin/less</i> and any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc. </i></p>
-<dt><code>&#8211;less</code></p>
-<dd>Use <i>/usr/bin/less </i> as the command output scroller, overriding any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc. </i></p>
-<dt><code>&#8211;hex</code></p>
-<dd>Set the default command output radix to 16, overriding the default radix of 10, and any radix settings in either <i>./.crashrc</i> or <i>$HOME/.crashrc.</i></p>
-<dt><code>&#8211;dec</code></p>
-<dd>Set the default command output radix to 10, overriding any radix settings in either <i>./.crashrc</i> or <i>$HOME/.crashrc. This is the default radix setting.</i></p>
-<dt><code>&#8211;CRASHPAGER</code></p>
-<dd>Use the output paging command defined in the <code>CRASHPAGER</code> shell environment variable, overriding any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc.</i></p>
-<dt><code>&#8211;no_scroll</code></p>
-<dd>Do not pass run-time command output to any scrolling command.</p>
-<dt><code>&#8211;no_strip</code></p>
-<dd>Do not strip cloned kernel text symbol names.</p>
-<dt><code>&#8211;no_crashrc</code></p>
-<dd>Do not execute the commands in either <i>$HOME/.crashrc</i> or <i>./.crashrc.</i></p>
-<dt><code>&#8211;mod</code><i>&nbsp;<wbr>directory</i></p>
-<dd>When loading the debuginfo data of kernel modules with the <i>mod -S</i> command, search for their object files in <i>directory</i> instead of in the standard location.</p>
-<dt><code>&#8211;kaslr</code><i>&nbsp;<wbr>offset</i><code>|</code><i>auto</i></p>
-<dd>If an x86_64 kernel was configured with <code>CONFIG_RANDOMIZE_BASE,</code> the offset value is equal to the difference between the symbol values compiled into the vmlinux file and their relocated KASLR values. If set to auto, the KASLR offset value will be automatically calculated.</p>
-<dt><code>&#8211;reloc</code><i>&nbsp;<wbr>size</i></p>
-<dd>When analyzing live x86 kernels that were configured with a <code>CONFIG_PHYSICAL_START</code> value that is larger than its <code>CONFIG_PHYSICAL_ALIGN</code> value, then it will be necessary to enter a relocation size equal to the difference between the two values.</p>
-<dt><code>&#8211;hash</code><i>&nbsp;<wbr>count</i></p>
-<dd>Set the number of internal hash queue heads used for list gathering and verification. The default count is 32768.</p>
-<dt><code>&#8211;minimal</code></p>
-<dd>Bring up a session that is restricted to the <i>log, dis, rd, sym, eval, set</i> and <i>exit</i> commands. This option may provide a way to extract some minimal/quick information from a corrupted or truncated dumpfile, or in situations where one of the several kernel subsystem initialization routines would abort the <code>crash</code> session.</p>
-<dt><code>&#8211;kvmhost</code><i>&nbsp;<wbr>[32|64]</i></p>
-<dd>When examining an x86 KVM guest dumpfile, this option specifies that the KVM host that created the dumpfile was an x86 (32-bit) or an x86_64 (64-bit) machine, overriding the automatically determined value.</p>
-<dt><code>&#8211;kvmio</code><i>&nbsp;<wbr>&lt;size&gt;</i></p>
-<dd>override the automatically-calculated KVM guest I/O hole size.</p>
-<dt><code>&#8211;offline</code><i>&nbsp;<wbr>[show|hide]</i></p>
-<dd>Show or hide command output that is related to offline cpus. The default setting is show.</dl>
+<dt><code>&#8211;cpus</code><i>&nbsp;<wbr>number</i></dt>
+<dd>Specify the <i>number </i> of cpus in the SMP system being analyzed.</dd>
+<dt><code>&#8211;osrelease</code><i>&nbsp;<wbr>dumpfile</i></dt>
+<dd>Display the OSRELEASE vmcoreinfo string from a kdump <i>dumpfile </i> header.</dd>
+<dt><code>&#8211;hyper</code></dt>
+<dd>Force the session to be that of a Xen hypervisor.</dd>
+<dt><code>&#8211;p2m_mfn</code><i>&nbsp;<wbr>pfn</i></dt>
+<dd>When a Xen Hypervisor or its dom0 kernel crashes, the dumpfile is typically analyzed with either the Xen hypervisor or the dom0 kernel. It is also possible to analyze any of the guest domU kernels if the pfn_to_mfn_list_list <i>pfn </i> value of the guest kernel is passed on the command line along with its NAMELIST and the dumpfile.</dd>
+<dt><code>&#8211;xen_phys_start</code><i>&nbsp;<wbr>physical-address</i></dt>
+<dd>Supply the base physical address of the Xen hypervisor&#8217;s text and static data for older xendump dumpfiles that did not pass that information in the dumpfile header.</dd>
+<dt><code>&#8211;zero_excluded</code></dt>
+<dd>If the <a href="/docs/linux/man/8-makedumpfile/">makedumpfile</a>(8) facility has filtered a compressed kdump dumpfile to exclude various types of non-essential pages, or has marked a compressed or ELF kdump dumpfile as incomplete due to an ENOSPC or other error during its creation, any attempt to read missing pages will fail. With this flag, reads from any of those pages will return zero-filled memory.</dd>
+<dt><code>&#8211;no_panic</code></dt>
+<dd>Do not attempt to find the task that was running when the kernel crashed. Set the initial context to that of the &quot;swapper&quot; task on cpu 0.</dd>
+<dt><code>&#8211;more</code></dt>
+<dd>Use <i>/bin/more </i> as the command output scroller, overriding the default of <i>/usr/bin/less</i> and any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc. </i></dd>
+<dt><code>&#8211;less</code></dt>
+<dd>Use <i>/usr/bin/less </i> as the command output scroller, overriding any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc. </i></dd>
+<dt><code>&#8211;hex</code></dt>
+<dd>Set the default command output radix to 16, overriding the default radix of 10, and any radix settings in either <i>./.crashrc</i> or <i>$HOME/.crashrc.</i></dd>
+<dt><code>&#8211;dec</code></dt>
+<dd>Set the default command output radix to 10, overriding any radix settings in either <i>./.crashrc</i> or <i>$HOME/.crashrc. This is the default radix setting.</i></dd>
+<dt><code>&#8211;CRASHPAGER</code></dt>
+<dd>Use the output paging command defined in the <code>CRASHPAGER</code> shell environment variable, overriding any settings in either <i>./.crashrc </i> or <i>$HOME/.crashrc.</i></dd>
+<dt><code>&#8211;no_scroll</code></dt>
+<dd>Do not pass run-time command output to any scrolling command.</dd>
+<dt><code>&#8211;no_strip</code></dt>
+<dd>Do not strip cloned kernel text symbol names.</dd>
+<dt><code>&#8211;no_crashrc</code></dt>
+<dd>Do not execute the commands in either <i>$HOME/.crashrc</i> or <i>./.crashrc.</i></dd>
+<dt><code>&#8211;mod</code><i>&nbsp;<wbr>directory</i></dt>
+<dd>When loading the debuginfo data of kernel modules with the <i>mod -S</i> command, search for their object files in <i>directory</i> instead of in the standard location.</dd>
+<dt><code>&#8211;kaslr</code><i>&nbsp;<wbr>offset</i><code>|</code><i>auto</i></dt>
+<dd>If an x86_64 kernel was configured with <code>CONFIG_RANDOMIZE_BASE,</code> the offset value is equal to the difference between the symbol values compiled into the vmlinux file and their relocated KASLR values. If set to auto, the KASLR offset value will be automatically calculated.</dd>
+<dt><code>&#8211;reloc</code><i>&nbsp;<wbr>size</i></dt>
+<dd>When analyzing live x86 kernels that were configured with a <code>CONFIG_PHYSICAL_START</code> value that is larger than its <code>CONFIG_PHYSICAL_ALIGN</code> value, then it will be necessary to enter a relocation size equal to the difference between the two values.</dd>
+<dt><code>&#8211;hash</code><i>&nbsp;<wbr>count</i></dt>
+<dd>Set the number of internal hash queue heads used for list gathering and verification. The default count is 32768.</dd>
+<dt><code>&#8211;minimal</code></dt>
+<dd>Bring up a session that is restricted to the <i>log, dis, rd, sym, eval, set</i> and <i>exit</i> commands. This option may provide a way to extract some minimal/quick information from a corrupted or truncated dumpfile, or in situations where one of the several kernel subsystem initialization routines would abort the <code>crash</code> session.</dd>
+<dt><code>&#8211;kvmhost</code><i>&nbsp;<wbr>[32|64]</i></dt>
+<dd>When examining an x86 KVM guest dumpfile, this option specifies that the KVM host that created the dumpfile was an x86 (32-bit) or an x86_64 (64-bit) machine, overriding the automatically determined value.</dd>
+<dt><code>&#8211;kvmio</code><i>&nbsp;<wbr>&lt;size&gt;</i></dt>
+<dd>override the automatically-calculated KVM guest I/O hole size.</dd>
+<dt><code>&#8211;offline</code><i>&nbsp;<wbr>[show|hide]</i></dt>
+<dd>Show or hide command output that is related to offline cpus. The default setting is show.</dd></dl>
 <h2>Commands</h2>
 <p>Each <code>crash</code> command generally falls into one of the following categories:</p>
 <dl>
-<dt><i>Symbolic display</i></p>
-<dd>Displays of kernel text/data, which take full advantage of the power of <code>gdb</code> to format and display data structures symbolically.</p>
-<dt><i>System state</i></p>
-<dd>The majority of <code>crash</code> commands consist of a set of &quot;kernel-aware&quot; commands, which delve into various kernel subsystems on a system-wide or per-task basis.</p>
-<dt><i>Utility functions</i></p>
-<dd>A set of useful helper commands serving various purposes, some simple, others quite powerful.</p>
-<dt><i>Session control</i></p>
-<dd>Commands that control the <code>crash</code> session itself.</dl>
+<dt><i>Symbolic display</i></dt>
+<dd>Displays of kernel text/data, which take full advantage of the power of <code>gdb</code> to format and display data structures symbolically.</dd>
+<dt><i>System state</i></dt>
+<dd>The majority of <code>crash</code> commands consist of a set of &quot;kernel-aware&quot; commands, which delve into various kernel subsystems on a system-wide or per-task basis.</dd>
+<dt><i>Utility functions</i></dt>
+<dd>A set of useful helper commands serving various purposes, some simple, others quite powerful.</dd>
+<dt><i>Session control</i></dt>
+<dd>Commands that control the <code>crash</code> session itself.</dd></dl>
 <p> The following alphabetical list consists of a very simple overview of each <code>crash</code> command. However, since individual commands often have several options resulting in significantly different output, it is suggested that the full description of each command be viewed by executing <i>crash -h&nbsp;<wbr>&lt;command&gt;</i>, or during a <code>crash</code> session by simply entering <i>help command</i>.</p>
 <dl>
-<dt><i>*</i></p>
-<dd>&quot;pointer to&quot; is shorthand for either the <i>struct</i> or <i>union</i> commands. It displays the contents of a kernel structure or union.</p>
-<dt><i>alias</i></p>
-<dd>creates a single-word alias for a command.</p>
-<dt><i>ascii</i></p>
-<dd>displays an ascii chart or translates a numeric value into its ascii components.</p>
-<dt><i>bt</i></p>
-<dd>displays a task&#8217;s kernel-stack backtrace. If it is given the <i>-a</i> option, it displays the stack traces of the active tasks on all CPUs. It is often used with the <i>foreach</i> command to display the backtraces of all tasks with one command.</p>
-<dt><i>btop</i></p>
-<dd>translates a byte value (physical offset) to its page number.</p>
-<dt><i>dev</i></p>
-<dd>displays data concerning the character and block device assignments, I/O port usage, I/O memory usage, and PCI device data.</p>
-<dt><i>dis</i></p>
-<dd>disassembles memory, either entire kernel functions, from a location for a specified number of instructions, or from the start of a function up to a specified memory location.</p>
-<dt><i>eval</i></p>
-<dd>evaluates an expression or numeric type and displays the result in hexadecimal, decimal, octal and binary.</p>
-<dt><i>exit</i></p>
-<dd>causes <code>crash</code> to exit.</p>
-<dt><i>extend</i></p>
-<dd>dynamically loads or unloads <code>crash</code> shared object extension modules.</p>
-<dt><i>files</i></p>
-<dd>displays information about open files in a context.</p>
-<dt><i>foreach</i></p>
-<dd>repeats a specified command for the specified (or all) tasks in the system.</p>
-<dt><i>fuser</i></p>
-<dd>displays the tasks using the specified file or socket.</p>
-<dt><i>gdb</i></p>
-<dd>passes its argument to the embedded <code>gdb</code> module. It is useful for executing <code>gdb </code> commands that have the same name as <code>crash</code> commands.</p>
-<dt><i>help</i></p>
-<dd>alone displays the command menu; if followed by a command name, a full description of a command, its options, and examples are displayed. Its output is far more complete and useful than this man page.</p>
-<dt><i>ipcs</i></p>
-<dd>displays data about the System V IPC facilities.</p>
-<dt><i>irq</i></p>
-<dd>displays data concerning interrupt request numbers and bottom-half interrupt handling.</p>
-<dt><i>kmem</i></p>
-<dd>displays information about the use of kernel memory.</p>
-<dt><i>list</i></p>
-<dd>displays the contents of a linked list.</p>
-<dt><i>log</i></p>
-<dd>displays the kernel log_buf contents in chronological order.</p>
-<dt><i>mach</i></p>
-<dd>displays data specific to the machine type.</p>
-<dt><i>mod</i></p>
-<dd>displays information about the currently installed kernel modules, or adds or deletes symbolic or debugging information about specified kernel modules.</p>
-<dt><i>mount</i></p>
-<dd>displays information about the currently-mounted filesystems.</p>
-<dt><i>net</i></p>
-<dd>display various network related data.</p>
-<dt><i>p</i></p>
-<dd>passes its arguments to the <code>gdb</code> &quot;print&quot; command for evaluation and display.</p>
-<dt><i>ps</i></p>
-<dd>displays process status for specified, or all, processes in the system.</p>
-<dt><i>pte</i></p>
-<dd>translates the hexadecimal contents of a PTE into its physical page address and page bit settings.</p>
-<dt><i>ptob</i></p>
-<dd>translates a page frame number to its byte value.</p>
-<dt><i>ptov</i></p>
-<dd>translates a hexadecimal physical address into a kernel virtual address.</p>
-<dt><i>q</i></p>
-<dd>is an alias for the &quot;exit&quot; command.</p>
-<dt><i>rd</i></p>
-<dd>displays the contents of memory, with the output formatted in several different manners.</p>
-<dt><i>repeat</i></p>
-<dd>repeats a command indefinitely, optionally delaying a given number of seconds between each command execution.</p>
-<dt><i>runq</i></p>
-<dd>displays the tasks on the run queue.</p>
-<dt><i>search</i></p>
-<dd>searches a range of user or kernel memory space for given value.</p>
-<dt><i>set</i></p>
-<dd>either sets a new context, or gets the current context for display.</p>
-<dt><i>sig</i></p>
-<dd>displays signal-handling data of one or more tasks.</p>
-<dt><i>struct</i></p>
-<dd>displays either a structure definition or the contents of a kernel structure at a specified address.</p>
-<dt><i>swap</i></p>
-<dd>displays information about each configured swap device.</p>
-<dt><i>sym</i></p>
-<dd>translates a symbol to its virtual address, or a static kernel virtual address to its symbol &#8212; or to a symbol-plus-offset value, if appropriate.</p>
-<dt><i>sys</i></p>
-<dd>displays system-specific data.</p>
-<dt><i>task</i></p>
-<dd>displays the contents of a task_struct.</p>
-<dt><i>tree</i></p>
-<dd>displays the contents of a red-black tree or a radix tree.</p>
-<dt><i>timer</i></p>
-<dd>displays the timer queue entries, both old- and new-style, in chronological order.</p>
-<dt><i>union</i></p>
-<dd>is similar to the <i>struct</i> command, except that it works on kernel unions.</p>
-<dt><i>vm</i></p>
-<dd>displays basic virtual memory information of a context.</p>
-<dt><i>vtop</i></p>
-<dd>translates a user or kernel virtual address to its physical address.</p>
-<dt><i>waitq</i></p>
-<dd>walks the wait queue list displaying the tasks which are blocked on the specified wait queue.</p>
-<dt><i>whatis</i></p>
-<dd>displays the definition of structures, unions, typedefs or text/data symbols.</p>
-<dt><i>wr</i></p>
-<dd>modifies the contents of memory on a live system. It can only be used if <i>/dev/mem</i> is the device file being used to access system RAM, and should obviously be used with great care.</dl>
+<dt><i>*</i></dt>
+<dd>&quot;pointer to&quot; is shorthand for either the <i>struct</i> or <i>union</i> commands. It displays the contents of a kernel structure or union.</dd>
+<dt><i>alias</i></dt>
+<dd>creates a single-word alias for a command.</dd>
+<dt><i>ascii</i></dt>
+<dd>displays an ascii chart or translates a numeric value into its ascii components.</dd>
+<dt><i>bt</i></dt>
+<dd>displays a task&#8217;s kernel-stack backtrace. If it is given the <i>-a</i> option, it displays the stack traces of the active tasks on all CPUs. It is often used with the <i>foreach</i> command to display the backtraces of all tasks with one command.</dd>
+<dt><i>btop</i></dt>
+<dd>translates a byte value (physical offset) to its page number.</dd>
+<dt><i>dev</i></dt>
+<dd>displays data concerning the character and block device assignments, I/O port usage, I/O memory usage, and PCI device data.</dd>
+<dt><i>dis</i></dt>
+<dd>disassembles memory, either entire kernel functions, from a location for a specified number of instructions, or from the start of a function up to a specified memory location.</dd>
+<dt><i>eval</i></dt>
+<dd>evaluates an expression or numeric type and displays the result in hexadecimal, decimal, octal and binary.</dd>
+<dt><i>exit</i></dt>
+<dd>causes <code>crash</code> to exit.</dd>
+<dt><i>extend</i></dt>
+<dd>dynamically loads or unloads <code>crash</code> shared object extension modules.</dd>
+<dt><i>files</i></dt>
+<dd>displays information about open files in a context.</dd>
+<dt><i>foreach</i></dt>
+<dd>repeats a specified command for the specified (or all) tasks in the system.</dd>
+<dt><i>fuser</i></dt>
+<dd>displays the tasks using the specified file or socket.</dd>
+<dt><i>gdb</i></dt>
+<dd>passes its argument to the embedded <code>gdb</code> module. It is useful for executing <code>gdb </code> commands that have the same name as <code>crash</code> commands.</dd>
+<dt><i>help</i></dt>
+<dd>alone displays the command menu; if followed by a command name, a full description of a command, its options, and examples are displayed. Its output is far more complete and useful than this man page.</dd>
+<dt><i>ipcs</i></dt>
+<dd>displays data about the System V IPC facilities.</dd>
+<dt><i>irq</i></dt>
+<dd>displays data concerning interrupt request numbers and bottom-half interrupt handling.</dd>
+<dt><i>kmem</i></dt>
+<dd>displays information about the use of kernel memory.</dd>
+<dt><i>list</i></dt>
+<dd>displays the contents of a linked list.</dd>
+<dt><i>log</i></dt>
+<dd>displays the kernel log_buf contents in chronological order.</dd>
+<dt><i>mach</i></dt>
+<dd>displays data specific to the machine type.</dd>
+<dt><i>mod</i></dt>
+<dd>displays information about the currently installed kernel modules, or adds or deletes symbolic or debugging information about specified kernel modules.</dd>
+<dt><i>mount</i></dt>
+<dd>displays information about the currently-mounted filesystems.</dd>
+<dt><i>net</i></dt>
+<dd>display various network related data.</dd>
+<dt><i>p</i></dt>
+<dd>passes its arguments to the <code>gdb</code> &quot;print&quot; command for evaluation and display.</dd>
+<dt><i>ps</i></dt>
+<dd>displays process status for specified, or all, processes in the system.</dd>
+<dt><i>pte</i></dt>
+<dd>translates the hexadecimal contents of a PTE into its physical page address and page bit settings.</dd>
+<dt><i>ptob</i></dt>
+<dd>translates a page frame number to its byte value.</dd>
+<dt><i>ptov</i></dt>
+<dd>translates a hexadecimal physical address into a kernel virtual address.</dd>
+<dt><i>q</i></dt>
+<dd>is an alias for the &quot;exit&quot; command.</dd>
+<dt><i>rd</i></dt>
+<dd>displays the contents of memory, with the output formatted in several different manners.</dd>
+<dt><i>repeat</i></dt>
+<dd>repeats a command indefinitely, optionally delaying a given number of seconds between each command execution.</dd>
+<dt><i>runq</i></dt>
+<dd>displays the tasks on the run queue.</dd>
+<dt><i>search</i></dt>
+<dd>searches a range of user or kernel memory space for given value.</dd>
+<dt><i>set</i></dt>
+<dd>either sets a new context, or gets the current context for display.</dd>
+<dt><i>sig</i></dt>
+<dd>displays signal-handling data of one or more tasks.</dd>
+<dt><i>struct</i></dt>
+<dd>displays either a structure definition or the contents of a kernel structure at a specified address.</dd>
+<dt><i>swap</i></dt>
+<dd>displays information about each configured swap device.</dd>
+<dt><i>sym</i></dt>
+<dd>translates a symbol to its virtual address, or a static kernel virtual address to its symbol &#8212; or to a symbol-plus-offset value, if appropriate.</dd>
+<dt><i>sys</i></dt>
+<dd>displays system-specific data.</dd>
+<dt><i>task</i></dt>
+<dd>displays the contents of a task_struct.</dd>
+<dt><i>tree</i></dt>
+<dd>displays the contents of a red-black tree or a radix tree.</dd>
+<dt><i>timer</i></dt>
+<dd>displays the timer queue entries, both old- and new-style, in chronological order.</dd>
+<dt><i>union</i></dt>
+<dd>is similar to the <i>struct</i> command, except that it works on kernel unions.</dd>
+<dt><i>vm</i></dt>
+<dd>displays basic virtual memory information of a context.</dd>
+<dt><i>vtop</i></dt>
+<dd>translates a user or kernel virtual address to its physical address.</dd>
+<dt><i>waitq</i></dt>
+<dd>walks the wait queue list displaying the tasks which are blocked on the specified wait queue.</dd>
+<dt><i>whatis</i></dt>
+<dd>displays the definition of structures, unions, typedefs or text/data symbols.</dd>
+<dt><i>wr</i></dt>
+<dd>modifies the contents of memory on a live system. It can only be used if <i>/dev/mem</i> is the device file being used to access system RAM, and should obviously be used with great care.</dd></dl>
 <p> When <code>crash</code> is invoked with a Xen hypervisor binary as the NAMELIST, the command set is slightly modified. The <i>*, alias, ascii, bt, dis, eval, exit, extend,</i> <i>gdb, help, list, log, p, pte, rd, repeat,</i> <i>search, set, struct, sym, sys, union,</i> <i>whatis, wr</i> and <i>q</i> commands are the same as above. The following commands are specific to the Xen hypervisor:</p>
 <dl>
-<dt><i>domain</i></p>
-<dd>displays the contents of the domain structure for selected, or all, domains.</p>
-<dt><i>doms</i></p>
-<dd>displays domain status for selected, or all, domains.</p>
-<dt><i>dumpinfo</i></p>
-<dd>displays Xen dump information for selected, or all, cpus.</p>
-<dt><i>pcpus</i></p>
-<dd>displays physical cpu information for selected, or all, cpus.</p>
-<dt><i>vcpus</i></p>
-<dd>displays vcpu status for selected, or all, vcpus.</dl>
+<dt><i>domain</i></dt>
+<dd>displays the contents of the domain structure for selected, or all, domains.</dd>
+<dt><i>doms</i></dt>
+<dd>displays domain status for selected, or all, domains.</dd>
+<dt><i>dumpinfo</i></dt>
+<dd>displays Xen dump information for selected, or all, cpus.</dd>
+<dt><i>pcpus</i></dt>
+<dd>displays physical cpu information for selected, or all, cpus.</dd>
+<dt><i>vcpus</i></dt>
+<dd>displays vcpu status for selected, or all, vcpus.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>.crashrc</i></p>
-<dd>Initialization commands. The file can be located in the user&#8217;s <code>HOME </code> directory and/or the current directory. Commands found in the <i>.crashrc</i> file in the <code>HOME</code> directory are executed before those in the current directory&#8217;s <i>.crashrc</i> file.</dl>
+<dt><i>.crashrc</i></dt>
+<dd>Initialization commands. The file can be located in the user&#8217;s <code>HOME </code> directory and/or the current directory. Commands found in the <i>.crashrc</i> file in the <code>HOME</code> directory are executed before those in the current directory&#8217;s <i>.crashrc</i> file.</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>EDITOR</code></p>
-<dd>Command input is read using <code><a href="/docs/linux/man/3-readline/">readline</a>(3).</code> If <code>EDITOR</code> is set to <i>emacs</i> or <i>vi</i> then suitable keybindings are used. If <code>EDITOR</code> is not set, then <i>vi</i> is used. This can be overridden by <code>set vi</code> or <code>set emacs</code> commands located in a <i>.crashrc</i> file, or by entering <code>-e emacs</code> on the <code>crash</code> command line.</p>
-<dt><code>CRASHPAGER</code></p>
-<dd>If <code>CRASHPAGER</code> is set, its value is used as the name of the program to which command output will be sent. If not, then command output is sent to <code>/usr/bin/less -E -X </code> by default.</p>
-<dt><code>CRASH_MODULE_PATH</code></p>
-<dd>Specifies an alternative directory tree to search for kernel module object files.</p>
-<dt><code>CRASH_EXTENSIONS</code></p>
-<dd>Specifies a directory containing extension modules that will be loaded automatically if the <code>-x</code> command line option is used.</dl>
+<dt><code>EDITOR</code></dt>
+<dd>Command input is read using <code><a href="/docs/linux/man/3-readline/">readline</a>(3).</code> If <code>EDITOR</code> is set to <i>emacs</i> or <i>vi</i> then suitable keybindings are used. If <code>EDITOR</code> is not set, then <i>vi</i> is used. This can be overridden by <code>set vi</code> or <code>set emacs</code> commands located in a <i>.crashrc</i> file, or by entering <code>-e emacs</code> on the <code>crash</code> command line.</dd>
+<dt><code>CRASHPAGER</code></dt>
+<dd>If <code>CRASHPAGER</code> is set, its value is used as the name of the program to which command output will be sent. If not, then command output is sent to <code>/usr/bin/less -E -X </code> by default.</dd>
+<dt><code>CRASH_MODULE_PATH</code></dt>
+<dd>Specifies an alternative directory tree to search for kernel module object files.</dd>
+<dt><code>CRASH_EXTENSIONS</code></dt>
+<dd>Specifies a directory containing extension modules that will be loaded automatically if the <code>-x</code> command line option is used.</dd></dl>
 <h2>Notes</h2>
 <p>If <code>crash</code> does not work, look for a newer version: kernel evolution frequently makes <code>crash</code> updates necessary. </p>
 <p> The command <code>set scroll off</code> will cause output to be sent directly to the terminal rather than through a paging program. This is useful, for example, if you are running <code>crash</code> in a window of <code>emacs</code>.</p>
 <h2>Author</h2>
 <p>Dave Anderson &lt;anderson [at] redhat.com&gt; wrote <code>crash.</code></p>
 <dl>
-<dt>Jay Fenlason &lt;fenlason [at] redhat.com&gt; and Dave Anderson &lt;anderson [at] redhat.com&gt; wrote this man page.</p>
-<dd></dl>
+<dt>Jay Fenlason &lt;fenlason [at] redhat.com&gt; and Dave Anderson &lt;anderson [at] redhat.com&gt; wrote this man page.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p>The <i>help</i> command within <code>crash</code> provides more complete and accurate documentation than this man page. <i><a rel="nofollow" href="http://people.redhat.com/anderson">http://people.redhat.com/anderson</a></i> &#8211; the home page of the <code>crash</code> utility. <code>netdump</code>(8), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/8-makedumpfile/">makedumpfile</a>(8)</code> </p>

@@ -16,12 +16,12 @@ ALTER TABLESPACE <i>name</i> OWNER TO <i>newowner</i></pre>
 <p> You must own the tablespace to use <code>ALTER TABLESPACE</code>. To alter the owner, you must also be a direct or indirect member of the new owning role. (Note that superusers have these privileges automatically.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of an existing tablespace.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the tablespace. The new name cannot begin with pg_, as such names are reserved for system tablespaces.</p>
-<dt><i>newowner</i></p>
-<dd>The new owner of the tablespace.</dl>
+<dt><i>name</i></dt>
+<dd>The name of an existing tablespace.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the tablespace. The new name cannot begin with pg_, as such names are reserved for system tablespaces.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the tablespace.</dd></dl>
 <h2>Examples</h2>
 <p>Rename tablespace index_space to fast_raid: </p>
 <pre>ALTER TABLESPACE index_space RENAME TO fast_raid;</pre>

@@ -28,38 +28,38 @@ description: "deb-changelog – dpkg source packages’ changelog file format"
 <p> The change details may in fact be any series of lines starting with at least two spaces (U+0020 <font SIZE="-1"><code>SPACE</code></font>), but conventionally each change starts with an asterisk and a separating space and continuation lines are indented so as to bring them in line with the start of the text above. Blank lines may be used here to separate groups of changes, if desired. </p>
 <p> If this upload resolves bugs recorded in the distribution bug tracking system, they may be automatically closed on the inclusion of this package into the distribution archive by including the string: </p>
 <dl>
-<dd><code>Closes: Bug#</code><i>nnnnn</i></dl>
+<dd><code>Closes: Bug#</code><i>nnnnn</i></dd></dl>
 <p> in the change details (the exact Perl regular expression is <code>/closes:\s*(?:bug)?\#?\s?\d+(?:,\s*(?:bug)?\#?\s?\d+)*/i</code>). This information is conveyed via the <code>Closes</code> field in the <i>.changes</i> file. </p>
 <p> The maintainer name and email address used in the changelog should be the details of the person who prepared this release of the package. They are <code>not</code> necessarily those of the uploader or usual package maintainer. The information here will be copied to the <code>Changed-By</code> field in the <i>.changes</i> file, and then later might be used to send an acknowledgment when the upload has been installed in the distribution archive. </p>
 <p> The <i>date</i> has the following format (compatible and with the same semantics of <font SIZE="-1">RFC2822</font> and <font SIZE="-1">RFC5322,</font> or what &laquo;date -R&raquo; generates): </p>
 <dl>
-<dd><i>day-of-week</i><code>,</code> <i>dd</i> <i>month</i> <i>yyyy</i> <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i> <code>+</code><i>zzzz</i></dl>
+<dd><i>day-of-week</i><code>,</code> <i>dd</i> <i>month</i> <i>yyyy</i> <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i> <code>+</code><i>zzzz</i></dd></dl>
 <p> where:</p>
 <dl>
-<dt><i>day-of-week</i></p>
-<dd>Is one of: <code>Mon</code>, <code>Tue</code>, <code>Wed</code>, <code>Thu</code>, <code>Fri</code>, <code>Sat</code>, <code>Sun</code>.</p>
-<dt><i>dd</i></p>
-<dd>Is a one- or two-digit day of the month (<code>01</code>&#8211;<code>31</code>), where the leading zero is optional, but conventionally does not get omitted.</p>
-<dt><i>month</i></p>
-<dd>Is one of: <code>Jan</code>, <code>Feb</code>, <code>Mar</code>, <code>Apr</code>, <code>May</code>, <code>Jun</code>, <code>Jul</code>, <code>Aug</code>, <code>Sep</code>, <code>Oct</code>, <code>Nov</code>, <code>Dec</code>.</p>
-<dt><i>yyyy</i></p>
-<dd>Is the four-digit year (e.g. 2010).</p>
-<dt><i>hh</i></p>
-<dd>Is the two-digit hour (<code>00</code>&#8211;<code>23</code>).</p>
-<dt><i>mm</i></p>
-<dd>Is the two-digit minutes (<code>00</code>&#8211;<code>59</code>).</p>
-<dt><i>ss</i></p>
-<dd>Is the two-digit seconds (<code>00</code>&#8211;<code>60</code>).</p>
-<dt>[<code>+-</code>]<i>zzzz</i></p>
-<dd>Is the time zone offset from Coordinated Universal Time (<font SIZE="-1">UTC</font>). &#8216;<code>+</code>&#8216; indicates that the time is ahead of (i.e., east of) <font SIZE="-1">UTC</font> and &#8216;<code>&#8211;</code>&#8216; indicates that the time is behind (i.e., west of) <font SIZE="-1">UTC.</font> The first two digits indicate the hour difference from <font SIZE="-1">UTC</font> and the last two digits indicate the number of additional minutes difference from <font SIZE="-1">UTC.</font> The last two digits must be in the range <code>00</code>&#8211;<code>59</code>.</dl>
+<dt><i>day-of-week</i></dt>
+<dd>Is one of: <code>Mon</code>, <code>Tue</code>, <code>Wed</code>, <code>Thu</code>, <code>Fri</code>, <code>Sat</code>, <code>Sun</code>.</dd>
+<dt><i>dd</i></dt>
+<dd>Is a one- or two-digit day of the month (<code>01</code>&#8211;<code>31</code>), where the leading zero is optional, but conventionally does not get omitted.</dd>
+<dt><i>month</i></dt>
+<dd>Is one of: <code>Jan</code>, <code>Feb</code>, <code>Mar</code>, <code>Apr</code>, <code>May</code>, <code>Jun</code>, <code>Jul</code>, <code>Aug</code>, <code>Sep</code>, <code>Oct</code>, <code>Nov</code>, <code>Dec</code>.</dd>
+<dt><i>yyyy</i></dt>
+<dd>Is the four-digit year (e.g. 2010).</dd>
+<dt><i>hh</i></dt>
+<dd>Is the two-digit hour (<code>00</code>&#8211;<code>23</code>).</dd>
+<dt><i>mm</i></dt>
+<dd>Is the two-digit minutes (<code>00</code>&#8211;<code>59</code>).</dd>
+<dt><i>ss</i></dt>
+<dd>Is the two-digit seconds (<code>00</code>&#8211;<code>60</code>).</dd>
+<dt>[<code>+-</code>]<i>zzzz</i></dt>
+<dd>Is the time zone offset from Coordinated Universal Time (<font SIZE="-1">UTC</font>). &#8216;<code>+</code>&#8216; indicates that the time is ahead of (i.e., east of) <font SIZE="-1">UTC</font> and &#8216;<code>&#8211;</code>&#8216; indicates that the time is behind (i.e., west of) <font SIZE="-1">UTC.</font> The first two digits indicate the hour difference from <font SIZE="-1">UTC</font> and the last two digits indicate the number of additional minutes difference from <font SIZE="-1">UTC.</font> The last two digits must be in the range <code>00</code>&#8211;<code>59</code>.</dd></dl>
 <p> The first &#8220;title&#8221; line with the package name must start at the left hand margin. The &#8220;trailer&#8221; line with the maintainer and date details must be preceded by exactly one space (U+0020 <font SIZE="-1"><code>SPACE</code></font>). The maintainer details and the date must be separated by exactly two spaces (U+0020 <font SIZE="-1"><code>SPACE</code></font>). Each part of the <i>date</i> can be separated by one or more spaces (U+0020 <font SIZE="-1"><code>SPACE</code></font>), except after the comma where it can be separated by zero or more spaces (U+0020 <font SIZE="-1"><code>SPACE</code></font>). </p>
 <p> Any line that consists entirely (i.e., no leading whitespace) of <code>#</code> or <code>/* */</code> style comments or <font SIZE="-1">RCS</font> keywords. </p>
 <p> Vim modelines or Emacs local variables, and ancient changelog entries with other formats at the end of the file should be accepted and preserved on output, but their contents might be otherwise ignored and parsing stopped at that point. </p>
 <p> The entire changelog must be encoded in <font SIZE="-1">UTF-8.</font></p>
 <h2>Files</h2>
 <dl>
-<dt><i>debian/changelog</i></p>
-<dd></dl>
+<dt><i>debian/changelog</i></dt>
+<dd></dd></dl>
 <h2>Examples</h2>
 <pre> dpkg (1.17.18) unstable; urgency=low
  [ Guillem Jover ]

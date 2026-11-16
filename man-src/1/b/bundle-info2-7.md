@@ -14,6 +14,6 @@ description: "bundle-info – Show information for the given gem in your bundle"
 <p>Print the basic information about the provided GEM such as homepage, version, path and summary.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;path</code></p>
-<dd>Print the path of the given gem </p>
+<dt><code>&#8211;path</code></dt>
+<dd>Print the path of the given gem </dd>
 </dl>

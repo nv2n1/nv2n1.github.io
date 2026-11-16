@@ -14,12 +14,12 @@ description: "gnutls_pkcs11_token_get_mechanism – API function"
 <p> <code>int gnutls_pkcs11_token_get_mechanism(const char * </code><i>url</i><code>, unsigned int </code><i>idx</i><code>, unsigned long * </code><i>mechanism</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * url</p>
-<dd> should contain a PKCS 11 URL</p>
-<dt>unsigned int idx</p>
-<dd> The index of the mechanism</p>
-<dt>unsigned long * mechanism</p>
-<dd> The PKCS <code>11</code> mechanism ID</dl>
+<dt>const char * url</dt>
+<dd> should contain a PKCS 11 URL</dd>
+<dt>unsigned int idx</dt>
+<dd> The index of the mechanism</dd>
+<dt>unsigned long * mechanism</dt>
+<dd> The PKCS <code>11</code> mechanism ID</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the names of the supported mechanisms by the token. It should be called with an increasing index until it return GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pkcs11_token_get_mechanism – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

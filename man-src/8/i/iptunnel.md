@@ -23,38 +23,38 @@ KEY  := { DOTTED_QUAD | NUMBER }
 <p><code>iptunnel</code> can be used to add, change, delete and show IP tunnels on the machine. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>help</code></p>
-<dd>Show the help text. </p>
-<dt><code>show</code></p>
-<dd>List existing IP tunnels. </p>
-<dt><code>{ add | change | del } [ NAME ]</code></p>
-<dd>Specify an action (<code>add</code>, <code>change</code> or <code>delete</code> an IP tunnel) to be executed by <code>iptunnel</code> on the tunnel named <code>NAME</code>, which must be a string. You must specify one action. </p>
-<dt><code>mode PROTOCOL</code></p>
-<dd>Specify the <code>PROTOCOL</code> to be used for the IP tunnel. It can be <code>ipip</code> for TCP/IP, <code>gre</code> for Cisco GRE tunnel (RFCs 1701 and 1702), or <code>sit</code> for IPv6-in-IPv4 tunneling. </p>
-<dt><code>remote ADDR</code></p>
-<dd>Set the remote (i.e., destination) address of the tunnel. <code>ADDR</code> must be an IP address or the word <code>any</code>. </p>
-<dt><code>local ADDR</code></p>
-<dd>Set the local (i.e., source) address of the tunnel. <code>ADDR</code> must be an IP address or the word <code>any</code>. </p>
-<dt><code>iseq</code></p>
-<dd>Require that all incoming packets are serialized. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>oseq</code></p>
-<dd>Enable serialization (sequencing) for all outgoing packets. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>ikey KEY</code></p>
-<dd>Specify the input key for the Cisco GRE tunnel. <code>KEY</code> must be either in dotted quad (dotted decimal) or a number. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>okey KEY</code></p>
-<dd>Same as <code>ikey</code>, but set the output key instead. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>icsum</code></p>
-<dd>Require that all incoming packets have the correct checksum. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>ocsum</code></p>
-<dd>Calculate checksums for all outgoing packets. Only applicable for <code>GRE</code> tunnels. </p>
-<dt><code>ttl TTL</code></p>
-<dd>Specify the <code>Time-To-Live</code> value for the IP tunnel. <code>TTL</code> must be a value between <code>1</code> and <code>255</code>, or the word <code>inherit</code>, which causes the field to be copied from the original IP header. </p>
-<dt><code>tos TOS</code></p>
-<dd>Specify the <code>Type-Of-Service</code> value for the IP tunnel. <code>TOS</code> must be a value between <code>1</code> and <code>255</code>, or the word <code>inherit</code>, which causes the field to be copied from the original IP header. </p>
-<dt><code>nopmtudisc</code></p>
-<dd>Disable <code>Path MTU Discovery</code> on this tunnel. Note that a fixed <code>ttl</code> is incompatible with this option. </p>
-<dt><code>dev PHYS_DEV</code></p>
-<dd>Bind the tunnel to the device <code>PHYS_DEV</code>. </p>
+<dt><code>help</code></dt>
+<dd>Show the help text. </dd>
+<dt><code>show</code></dt>
+<dd>List existing IP tunnels. </dd>
+<dt><code>{ add | change | del } [ NAME ]</code></dt>
+<dd>Specify an action (<code>add</code>, <code>change</code> or <code>delete</code> an IP tunnel) to be executed by <code>iptunnel</code> on the tunnel named <code>NAME</code>, which must be a string. You must specify one action. </dd>
+<dt><code>mode PROTOCOL</code></dt>
+<dd>Specify the <code>PROTOCOL</code> to be used for the IP tunnel. It can be <code>ipip</code> for TCP/IP, <code>gre</code> for Cisco GRE tunnel (RFCs 1701 and 1702), or <code>sit</code> for IPv6-in-IPv4 tunneling. </dd>
+<dt><code>remote ADDR</code></dt>
+<dd>Set the remote (i.e., destination) address of the tunnel. <code>ADDR</code> must be an IP address or the word <code>any</code>. </dd>
+<dt><code>local ADDR</code></dt>
+<dd>Set the local (i.e., source) address of the tunnel. <code>ADDR</code> must be an IP address or the word <code>any</code>. </dd>
+<dt><code>iseq</code></dt>
+<dd>Require that all incoming packets are serialized. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>oseq</code></dt>
+<dd>Enable serialization (sequencing) for all outgoing packets. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>ikey KEY</code></dt>
+<dd>Specify the input key for the Cisco GRE tunnel. <code>KEY</code> must be either in dotted quad (dotted decimal) or a number. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>okey KEY</code></dt>
+<dd>Same as <code>ikey</code>, but set the output key instead. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>icsum</code></dt>
+<dd>Require that all incoming packets have the correct checksum. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>ocsum</code></dt>
+<dd>Calculate checksums for all outgoing packets. Only applicable for <code>GRE</code> tunnels. </dd>
+<dt><code>ttl TTL</code></dt>
+<dd>Specify the <code>Time-To-Live</code> value for the IP tunnel. <code>TTL</code> must be a value between <code>1</code> and <code>255</code>, or the word <code>inherit</code>, which causes the field to be copied from the original IP header. </dd>
+<dt><code>tos TOS</code></dt>
+<dd>Specify the <code>Type-Of-Service</code> value for the IP tunnel. <code>TOS</code> must be a value between <code>1</code> and <code>255</code>, or the word <code>inherit</code>, which causes the field to be copied from the original IP header. </dd>
+<dt><code>nopmtudisc</code></dt>
+<dd>Disable <code>Path MTU Discovery</code> on this tunnel. Note that a fixed <code>ttl</code> is incompatible with this option. </dd>
+<dt><code>dev PHYS_DEV</code></dt>
+<dd>Bind the tunnel to the device <code>PHYS_DEV</code>. </dd>
 </dl>
 <h2>Homepage</h2>
 <p><code>&lt;<a rel="nofollow" href="https://sourceforge.net/projects/net-tools/">https://sourceforge.net/projects/net-tools/</a>&gt;</code></p>

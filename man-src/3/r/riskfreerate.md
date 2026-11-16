@@ -10,13 +10,7 @@ description: "QuantLib::TsiveriotisFernandesLattice – Binomial lattice approxi
 <p>QuantLib::TsiveriotisFernandesLattice &#8211; Binomial lattice approximating the Tsiveriotis-Fernandes model. </p>
 <h2>Synopsis</h2>
 <pre><code>void stepback (Size i, const Array &amp;values, const Array &amp;conversionProbability, const Array &amp;spreadAdjustedRate, Array &amp;newValues, Array &amp;newConversionProbability, Array &amp;newSpreadAdjustedRate) const
-
-
-
 void rollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 void partialRollback (DiscretizedAsset &amp;, Time to) const</code></pre>
 <p> Inherits <code>BlackScholesLattice&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -26,13 +20,7 @@ void partialRollback (DiscretizedAsset &amp;, Time to) const</code></pre>
 <p> Real <code>dt</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void stepback (Size i, const Array &amp;values, const Array &amp;conversionProbability, const Array &amp;spreadAdjustedRate, Array &amp;newValues, Array &amp;newConversionProbability, Array &amp;newSpreadAdjustedRate) const
-
-
-
 void rollback (DiscretizedAsset &amp;, Time to) const
-
-
-
 void partialRollback (DiscretizedAsset &amp;, Time to) const</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class QuantLib::TsiveriotisFernandesLattice&lt; T &gt;</h3>
@@ -45,7 +33,7 @@ void partialRollback (DiscretizedAsset &amp;, Time to) const</code></pre>
 <p>Roll back an asset until the given time, but do not perform the final adjustment. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dl>
+<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
 <pre> method-&gt;rollAlmostBack(asset,t);</pre>
 <p>&nbsp;<wbr>with the two statements:&nbsp;<wbr> </p>
 <pre> method-&gt;partialRollback(asset,t);

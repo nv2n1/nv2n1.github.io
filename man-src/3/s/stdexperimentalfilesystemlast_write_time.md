@@ -10,15 +10,11 @@ description: "std::experimental::filesystem::last_write_time – std::experiment
 <p>std::experimental::filesystem::last_write_time &#8211; std::experimental::filesystem::last_write_time</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     file_time_type last_write_time(const path &amp;p);
 (1)(filesystem TS)
-
     file_time_type last_write_time(const path &amp;p, error_code &amp;ec)
-
         void last_write_time(const path &amp;p, file_time_type new_time);
 (2)(filesystem TS)
-
     void last_write_time(const path &amp;p, file_time_type new_time, error_code &amp;ec);</code></pre>
 <p>1) Returns the time of the last modification of p, determined as if by accessing the member st_mtime of the POSIX stat (symlinks are followed) The non-throwing overload returns file_time_type::min() on errors.<br />
 2) Changes the time of the last modification of p, as if by POSIX futimens (symlinks are followed) </p>
@@ -38,21 +34,13 @@ noexcept</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 using namespace std::chrono_literals;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p.c_str()).put('a'); // create file

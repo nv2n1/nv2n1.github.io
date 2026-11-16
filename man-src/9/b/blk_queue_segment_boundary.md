@@ -15,11 +15,11 @@ blk_queue_segment_boundary - set boundary rules for segment merging
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>the memory boundary mask</dl>
+<dl><dd>the memory boundary mask</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -36,62 +36,62 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when entering an idle state.<br />
- <i>data</i> The data to be passed to the func call</dl>
+ <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A handle to the idle enterer callback if successful. Otherwise, NULL is returned.</dl>
+<dd>A handle to the idle enterer callback if successful. Otherwise, NULL is returned.</dd></dl>
 <h3>EAPI <code>Ecore_Idle_Enterer</code>* ecore_idle_enterer_before_add (int(*)(void *data) func, const void * data)</h3>
 <p>Add an idle enterer handler at the start of the list so it gets called earlier than others. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when entering an idle state.<br />
- <i>data</i> The data to be passed to the func call</dl>
+ <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A handle to the idle enterer callback if successful. Otherwise, NULL is returned.</dl>
+<dd>A handle to the idle enterer callback if successful. Otherwise, NULL is returned.</dd></dl>
 <h3>EAPI void* ecore_idle_enterer_del (<code>Ecore_Idle_Enterer</code> * idle_enterer)</h3>
 <p>Delete an idle enterer callback. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>idle_enterer</i> The idle enterer to delete</dl>
+<dd><i>idle_enterer</i> The idle enterer to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer passed to the idler enterer callback on success. NULL otherwise.</dl>
+<dd>The data pointer passed to the idler enterer callback on success. NULL otherwise.</dd></dl>
 <h3>EAPI <code>Ecore_Idle_Exiter</code>* ecore_idle_exiter_add (int(*)(void *data) func, const void * data)</h3>
 <p>Add an idle exiter handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when exiting an idle state.<br />
- <i>data</i> The data to be passed to the func call</dl>
+ <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A handle to the idle exiter callback on success. NULL otherwise.</dl>
+<dd>A handle to the idle exiter callback on success. NULL otherwise.</dd></dl>
 <h3>EAPI void* ecore_idle_exiter_del (<code>Ecore_Idle_Exiter</code> * idle_exiter)</h3>
 <p>Delete an idle exiter handler from the list to be run on exiting idle state. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>idle_exiter</i> The idle exiter to delete</dl>
+<dd><i>idle_exiter</i> The idle exiter to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer that was being being passed to the handler if successful. NULL otherwise.</dl>
+<dd>The data pointer that was being being passed to the handler if successful. NULL otherwise.</dd></dl>
 <h3>EAPI <code>Ecore_Idler</code>* ecore_idler_add (int(*)(void *data) func, const void * data)</h3>
 <p>Add an idler handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when idling.<br />
- <i>data</i> The data to be passed to this func call.</dl>
+ <i>data</i> The data to be passed to this func call.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A idler handle if successfully added. NULL otherwise.</dl>
+<dd>A idler handle if successfully added. NULL otherwise.</dd></dl>
 <p> Add an idler handle to the event loop, returning a handle on success and NULL otherwise. The function func will be called repeatedly while no other events are ready to be processed, as long as it returns 1 (or ECORE_CALLBACK_RENEW). A return of 0 (or ECORE_CALLBACK_CANCEL) deletes the idler. </p>
 <p> Idlers are useful for progressively prossessing data without blocking.</p>
 <h3>EAPI void* ecore_idler_del (<code>Ecore_Idler</code> * idler)</h3>
 <p>Delete an idler callback from the list to be executed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>idler</i> The handle of the idler callback to delete</dl>
+<dd><i>idler</i> The handle of the idler callback to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer passed to the idler callback on success. NULL otherwise.</dl>
+<dd>The data pointer passed to the idler callback on success. NULL otherwise.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

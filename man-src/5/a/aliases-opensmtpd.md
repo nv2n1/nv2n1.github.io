@@ -14,28 +14,28 @@ description: "aliases – aliases file for smtpd"
 <p> <i>key</i> is always folded to lowercase before alias lookups to ensure that there can be no ambiguity. The key is expanded to the corresponding values, which consist of one or more of the following:</p>
 <dl>
 <dd>
-<dl>
-<dt><i>user</i></p>
-<dd>A user on the host machine. The user must have a valid entry in the <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) database file.</p>
-<dt><i>/path/to/file</i></p>
-<dd>Append messages to <i>file</i>, specified by its absolute pathname.</p>
-<dt>| <i>command</i></p>
-<dd>Pipe the message to <i>command</i> on its standard input. The command is run under the privileges of the daemon&#8217;s unprivileged account.</p>
-<dt>: <i>include</i>: <i>/path/to/file</i></p>
-<dd>Include any definitions in <i>file</i> as alias entries. The format of the file is identical to this one.</p>
-<dt><i>user-part [at] domain-part</i></p>
-<dd>An email address in RFC 5322 format (see <code><a href="/docs/linux/man/7-mailaddr/">mailaddr</a></code>(7)). If an address extension is appended to the user-part, it is first compared for an exact match. It is then stripped so that an address such as user+ext [at] example.com will only use the part that precedes Sq + as a <i>key.</i></p>
-<dt><i>error</i>: <i>code</i> <i>message</i></p>
-<dd>A status code and message to return. The code must be 3 digits, starting 4XX (TempFail) or 5XX (PermFail). The message must be present and can be freely chosen.</p>
-<dt><i>maildir</i>: <i>/path</i></p>
-<dd>Deliver messages to Maildir at the <i>path</i>.</dl>
+</dd><dl>
+<dt><i>user</i></dt>
+<dd>A user on the host machine. The user must have a valid entry in the <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) database file.</dd>
+<dt><i>/path/to/file</i></dt>
+<dd>Append messages to <i>file</i>, specified by its absolute pathname.</dd>
+<dt>| <i>command</i></dt>
+<dd>Pipe the message to <i>command</i> on its standard input. The command is run under the privileges of the daemon&#8217;s unprivileged account.</dd>
+<dt>: <i>include</i>: <i>/path/to/file</i></dt>
+<dd>Include any definitions in <i>file</i> as alias entries. The format of the file is identical to this one.</dd>
+<dt><i>user-part [at] domain-part</i></dt>
+<dd>An email address in RFC 5322 format (see <code><a href="/docs/linux/man/7-mailaddr/">mailaddr</a></code>(7)). If an address extension is appended to the user-part, it is first compared for an exact match. It is then stripped so that an address such as user+ext [at] example.com will only use the part that precedes Sq + as a <i>key.</i></dd>
+<dt><i>error</i>: <i>code</i> <i>message</i></dt>
+<dd>A status code and message to return. The code must be 3 digits, starting 4XX (TempFail) or 5XX (PermFail). The message must be present and can be freely chosen.</dd>
+<dt><i>maildir</i>: <i>/path</i></dt>
+<dd>Deliver messages to Maildir at the <i>path</i>.</dd></dl>
 </dl>
 <h2>Files</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>/etc/opensmtpd/aliases</code></p>
-<dd>Default <code>aliases</code> file.</dl>
+</dd><dl>
+<dt><code>/etc/opensmtpd/aliases</code></dt>
+<dd>Default <code>aliases</code> file.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-smtpd-conf/">smtpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8), <code><a href="/docs/linux/man/8-newaliases/">newaliases</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>

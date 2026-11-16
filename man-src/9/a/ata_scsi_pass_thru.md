@@ -14,7 +14,7 @@ description: "ata_scsi_pass_thru – convert ATA pass-thru CDB to taskfile"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>command structure to be initialized</dl>
+</dd><dd>command structure to be initialized</dd></dl>
 <h2>Description</h2>
 <p>Handles either 12 or 16-byte versions of the CDB.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ata_scsi_pass_thru – convert ATA pass-thru CDB to taskfile"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

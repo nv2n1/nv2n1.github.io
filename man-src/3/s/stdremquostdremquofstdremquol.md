@@ -44,23 +44,16 @@ On some platforms this operation is supported by hardware (and, for example, on 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 const double pi = std::acos(-1);
-
 double cos_pi_x_naive(double x)
 {
     return std::cos(pi * x);
 }
-
 // the period is 2, values are (0;0.5) positive, (0.5;1.5) negative, (1.5,2) positive
-
 double cos_pi_x_smart(double x)
-
 {
     int quadrant;
     double rem = std::remquo(x, 1, &amp;quadrant);
@@ -72,9 +65,7 @@ double cos_pi_x_smart(double x)
         return -std::cos(pi * rem);
     };
 }
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;cos(pi * 0.25) = &quot; &lt;&lt; cos_pi_x_naive(0.25) &lt;&lt; '
 '

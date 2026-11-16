@@ -15,11 +15,11 @@ blk_cloned_rq_check_limits - Helper function to check a cloned request for new t
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue</dl>
+<dl><dd></dd><dd>the queue</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>the request being checked</dl>
+<dl><dd>the request being checked</dd></dl>
 
 <h2>Description</h2>
 

@@ -36,19 +36,19 @@ config_data-- module Foo::Bar-- feature bazzable
  This script functions as a basic getter/setter wrapper around the configuration of a single module. On the command line, specify which module's configuration you're interested in, and pass options to get or set <tt>&quot;config&quot;</tt> or <tt>&quot;feature&quot;</tt> values. The following options are supported:
 <dl>
 <dt>module
-<dd> Specifies the name of the module to configure (required).
-<dt>feature
-<dd> When passed the name of a <tt>&quot;feature&quot;</tt>, shows its value. The value will be 1 if the feature is enabled, 0 if the feature is not enabled, or empty if the feature is unknown. When no feature name is supplied, the names and values of all known features will be shown.
-<dt>config
-<dd> When passed the name of a <tt>&quot;config&quot;</tt> entry, shows its value. The value will be displayed using <tt>&quot;Data::Dumper&quot;</tt> (or similar) as perl code. When no config name is supplied, the names and values of all known config entries will be shown.
-<dt>set_feature
-<dd> Sets the given <tt>&quot;feature&quot;</tt> to the given boolean value. Specify the value as either 1 or 0.
-<dt>set_config
-<dd> Sets the given <tt>&quot;config&quot;</tt> entry to the given value.
-<dt>eval
-<dd> If the <tt>&quot;--eval&quot;</tt> option is used, the values in <tt>&quot;set_config&quot;</tt> will be evaluated as perl code before being stored. This allows moderately complicated data structures to be stored. For really complicated structures, you probably shouldn't use this command-line interface, just use the Perl <font SIZE="-1">API</font> instead.
-<dt>help
-<dd> Prints a help message, including a few examples, and exits.</dl>
+</dt><dd> Specifies the name of the module to configure (required).
+</dd><dt>feature
+</dt><dd> When passed the name of a <tt>&quot;feature&quot;</tt>, shows its value. The value will be 1 if the feature is enabled, 0 if the feature is not enabled, or empty if the feature is unknown. When no feature name is supplied, the names and values of all known features will be shown.
+</dd><dt>config
+</dt><dd> When passed the name of a <tt>&quot;config&quot;</tt> entry, shows its value. The value will be displayed using <tt>&quot;Data::Dumper&quot;</tt> (or similar) as perl code. When no config name is supplied, the names and values of all known config entries will be shown.
+</dd><dt>set_feature
+</dt><dd> Sets the given <tt>&quot;feature&quot;</tt> to the given boolean value. Specify the value as either 1 or 0.
+</dd><dt>set_config
+</dt><dd> Sets the given <tt>&quot;config&quot;</tt> entry to the given value.
+</dd><dt>eval
+</dt><dd> If the <tt>&quot;--eval&quot;</tt> option is used, the values in <tt>&quot;set_config&quot;</tt> will be evaluated as perl code before being stored. This allows moderately complicated data structures to be stored. For really complicated structures, you probably shouldn't use this command-line interface, just use the Perl <font SIZE="-1">API</font> instead.
+</dd><dt>help
+</dt><dd> Prints a help message, including a few examples, and exits.</dd></dl>
 
 <h2>AUTHOR</h2>
 

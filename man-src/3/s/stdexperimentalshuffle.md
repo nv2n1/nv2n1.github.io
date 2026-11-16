@@ -11,10 +11,8 @@ std::experimental::shuffle - std::experimental::shuffle
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (library fundamentals TS v2)
-
         void shuffle(RandomIt first, RandomIt last);</code></pre> 
 Reorders the elements in the given range [first, last) such that each possible permutation of those elements has equal probability of appearance, using the per-thread_random_number_engine as the random number generator. 
 

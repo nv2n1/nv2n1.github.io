@@ -40,8 +40,8 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code>, <code>&#8211;format</code>=<i>FORMAT</i></p>
-<dd> Specifies the documentation format used within <i>PATHS</i>. Valid <i>FORMAT</i> values include: <i>ecma</i>, <i>ecmaspec</i>, <i>error</i>, <i>hb</i>, <i>man</i>, <i>simple</i>, and <i>xhtml</i>. </p>
+<dt><code>-f</code>, <code>&#8211;format</code>=<i>FORMAT</i></dt>
+<dd> Specifies the documentation format used within <i>PATHS</i>. Valid <i>FORMAT</i> values include: <i>ecma</i>, <i>ecmaspec</i>, <i>error</i>, <i>hb</i>, <i>man</i>, <i>simple</i>, and <i>xhtml</i>. </dd>
 <p> See the <i>FORMATS</i> section below for more information about these formats. </p>
 <p> The default format (if none is specifed) is <i>ecma</i>. </p>
 <p> The <i>&#8211;format</i> option may be interleaved with <i>PATHS</i> to change the format used for the remaining parameters (until the next <i>&#8211;format</i> option is seen), e.g.: </p>
@@ -49,10 +49,10 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
   mdoc assemble -o PREFIX A B --format=man C D --format=xhtml E
 </pre>
 <p> will assemble directories <i>A</i> and <i>B</i> with the <i>ecma</i> format, files <i>C</i> and <i>D</i> with the <i>man</i> formt, and directory <i>E</i> with the <i>xhtml</i> format.</p>
-<dt><code>-o</code>, <code>&#8211;out</code>=<i>PREFIX</i></p>
-<dd> Specify the output file prefix. <code>mdoc assemble</code> creates the files <i>PREFIX.zip</i> and <i>PREFIX.tree</i>.</p>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit.</dl>
+<dt><code>-o</code>, <code>&#8211;out</code>=<i>PREFIX</i></dt>
+<dd> Specify the output file prefix. <code>mdoc assemble</code> creates the files <i>PREFIX.zip</i> and <i>PREFIX.tree</i>.</dd>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd></dl>
 <h2>FORMATS</h2>
 <p> The following documentation formats are supported:</p>
 <h3>ecma</h3>
@@ -74,16 +74,16 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 </pre>
 <p> The elements mean:</p>
 <dl>
-<dt><i>/ErrorProviderConfig/FilesPath</i></p>
-<dd> Specifies where to look for files.</p>
-<dt><i>/ErrorProviderConfig/Match</i></p>
-<dd> Specifies the filename pattern to look for within the <i>/ErrorProviderConfig/FilesPath</i> directory.</p>
-<dt><i>/ErrorProviderConfig/ErrorNumSubstringStart</i></p>
-<dd> Specifies where within the filename the error number starts.</p>
-<dt><i>/ErrorProviderConfig/ErrorNumSubstringLength</i></p>
-<dd> Specifies how many characters after <i>/ErrorProviderConfig/ErrorNumSubstringStart</i> to use for the error number.</p>
-<dt><i>/ErrorProviderConfig/FriendlyFormatString</i></p>
-<dd> Specifies the formatting/display of the node in the <code>monodoc</code>(1) tree.</dl>
+<dt><i>/ErrorProviderConfig/FilesPath</i></dt>
+<dd> Specifies where to look for files.</dd>
+<dt><i>/ErrorProviderConfig/Match</i></dt>
+<dd> Specifies the filename pattern to look for within the <i>/ErrorProviderConfig/FilesPath</i> directory.</dd>
+<dt><i>/ErrorProviderConfig/ErrorNumSubstringStart</i></dt>
+<dd> Specifies where within the filename the error number starts.</dd>
+<dt><i>/ErrorProviderConfig/ErrorNumSubstringLength</i></dt>
+<dd> Specifies how many characters after <i>/ErrorProviderConfig/ErrorNumSubstringStart</i> to use for the error number.</dd>
+<dt><i>/ErrorProviderConfig/FriendlyFormatString</i></dt>
+<dd> Specifies the formatting/display of the node in the <code>monodoc</code>(1) tree.</dd></dl>
 <p> For each file found, it is converted to HTML with C# syntax coloring applied.</p>
 <h3>simple</h3>
 <p> The <i>Simple Documentation Format</i> file format recursively adds all files and directories underneath <i>PATHS</i>. When displayed, HTML files are displayed as-is. Text files are converted into HTML by translating each newline into an HTML <i>&lt;br&gt;</i> element. No other file type is supported.</p>
@@ -105,8 +105,8 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 <p> <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1), <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5), <code>monodoc</code>(1)</p>
 <h2>MAILING LISTS</h2>
 <dl>
-<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>
-<dd></dl>
+<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</dt>
+<dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> See also: <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdoc/">http://www.mono-project.com/docs/tools+libraries/tools/mdoc/</a> </p>
 <h2>Index</h2>

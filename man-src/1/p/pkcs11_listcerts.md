@@ -15,8 +15,8 @@ description: "pkcs11_listcerts – SmartCard PKCS#11 certificates listing"
 <p> pkcs11_listcerts display all the certificates.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>debug</code></p>
-<dd> Enable debugging output.</dl>
+<dt><code>debug</code></dt>
+<dd> Enable debugging output.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>

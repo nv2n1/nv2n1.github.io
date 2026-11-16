@@ -15,32 +15,32 @@ description: "QmcDesc – container for a metric description"
 <p>A <code>QmcDesc</code> object is a container for a metric descriptor (<code>pmDesc</code>, see <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3)) and units.</p>
 <h2>CONSTRUCTORS &amp; DESTRUCTOR</h2>
 <dl COMPACT>
-<dt><code>~QmcDesc();</code></p>
-<dd>Destructor.</p>
-<dt><code>QmcDesc(pmID pmid);</code></p>
-<dd>Construct a container for the descriptor for <i>pmid</i>. The descriptor is obtained from the current <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) context using <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3).</dl>
+<dt><code>~QmcDesc();</code></dt>
+<dd>Destructor.</dd>
+<dt><code>QmcDesc(pmID pmid);</code></dt>
+<dd>Construct a container for the descriptor for <i>pmid</i>. The descriptor is obtained from the current <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) context using <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3).</dd></dl>
 <h2>Description</h2>
 <dl COMPACT>
-<dt><code>int status() const;</code></p>
-<dd>A status less than zero indicates that the descriptor could not be obtained, the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) error is encoded in the result.</p>
-<dt><code>pmID id() const;</code></p>
-<dd>Return the <code>pmID</code> for this descriptor.</p>
-<dt><code>pmDesc desc() const;</code></p>
-<dd>Return a copy of the actual metric descriptor.</p>
-<dt><code>const pmDesc *descPtr() const;</code></p>
-<dd>Return a pointer to the actual descriptor to avoid using a pointer to a temporary.</dl>
+<dt><code>int status() const;</code></dt>
+<dd>A status less than zero indicates that the descriptor could not be obtained, the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) error is encoded in the result.</dd>
+<dt><code>pmID id() const;</code></dt>
+<dd>Return the <code>pmID</code> for this descriptor.</dd>
+<dt><code>pmDesc desc() const;</code></dt>
+<dd>Return a copy of the actual metric descriptor.</dd>
+<dt><code>const pmDesc *descPtr() const;</code></dt>
+<dd>Return a pointer to the actual descriptor to avoid using a pointer to a temporary.</dd></dl>
 <h2>Units</h2>
 <dl COMPACT>
-<dt><code>const QString &amp;units() const;</code></p>
-<dd>The complete unit string for this descriptor.</p>
-<dt><code>const QString &amp;abvUnits() const;</code></p>
-<dd>The unit string using abbreviations.</p>
-<dt><code>bool useScaleUnits() const;</code></p>
-<dd>Returns <code>true</code> if the units have been set by a call to <code>QmcDesc::setScaleUnits</code>.</p>
-<dt><code>const pmUnits &amp;scaleUnits() const;</code></p>
-<dd>Return the scaling units for this descriptor.</p>
-<dt><code>void setScaleUnits(const pmUnits &amp;units);</code></p>
-<dd>Set the scaling units for this descriptor.</dl>
+<dt><code>const QString &amp;units() const;</code></dt>
+<dd>The complete unit string for this descriptor.</dd>
+<dt><code>const QString &amp;abvUnits() const;</code></dt>
+<dd>The unit string using abbreviations.</dd>
+<dt><code>bool useScaleUnits() const;</code></dt>
+<dd>Returns <code>true</code> if the units have been set by a call to <code>QmcDesc::setScaleUnits</code>.</dd>
+<dt><code>const pmUnits &amp;scaleUnits() const;</code></dt>
+<dd>Return the scaling units for this descriptor.</dd>
+<dt><code>void setScaleUnits(const pmUnits &amp;units);</code></dt>
+<dd>Set the scaling units for this descriptor.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-qmc/">QMC</a></code>(3), <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3) and <code>pmprintf</code>(3).</p>
 <h2>Diagnostics</h2>

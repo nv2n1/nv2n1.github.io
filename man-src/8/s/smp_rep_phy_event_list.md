@@ -16,32 +16,32 @@ description: "smp_rep_phy_event_list – invoke REPORT PHY EVENT LIST SMP functi
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;desc</code></p>
-<dd>precede each phy event descriptor with a line announcing its descriptor index number. Index numbers start at 1.</p>
-<dt><code>-e</code>, <code>&#8211;enumerate</code></p>
-<dd>enumerate all of the known Phy Event Source names, one per line preceded by its value in hex. Ignores <i>SMP_DEVICE</i> if it is given; most other options are also ignored. Exits after displaying the names.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>force the report to continue after the last descriptor index has been exceeded. The default action is too stop the report when the last descriptor index has been exceeded. at 1.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></p>
-<dd>starting phy event list descriptor index. <i>IN</i> is a value between 0 and 65535. The default is 1. If <i>IN</i> is 0 then the response should contain no phy event list descriptors but the &#8216;last phy event list descriptor index&#8217; and &#8216;phy event list descriptor length&#8217; fields in the response should be set appropriately. The last point was clarified in SPL-2 revision 3.</p>
-<dt><code>-l</code>, <code>&#8211;long</code></p>
-<dd>prefix each phy event source string with its numeric identifier in hex. Also place &quot;phy_id=&quot; in front of the phy identifier number. For example: &quot;phy_id=3: [0x1]: Invalid word count: 29&quot;; without this option this line would be: &quot;3: Invalid word count: 29&quot;.</p>
-<dt><code>-n</code>, <code>&#8211;nonz</code></p>
-<dd>only show phy events with non-zero counts or peak values. The default is to show all phy events in the response.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-d</code>, <code>&#8211;desc</code></dt>
+<dd>precede each phy event descriptor with a line announcing its descriptor index number. Index numbers start at 1.</dd>
+<dt><code>-e</code>, <code>&#8211;enumerate</code></dt>
+<dd>enumerate all of the known Phy Event Source names, one per line preceded by its value in hex. Ignores <i>SMP_DEVICE</i> if it is given; most other options are also ignored. Exits after displaying the names.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>force the report to continue after the last descriptor index has been exceeded. The default action is too stop the report when the last descriptor index has been exceeded. at 1.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></dt>
+<dd>starting phy event list descriptor index. <i>IN</i> is a value between 0 and 65535. The default is 1. If <i>IN</i> is 0 then the response should contain no phy event list descriptors but the &#8216;last phy event list descriptor index&#8217; and &#8216;phy event list descriptor length&#8217; fields in the response should be set appropriately. The last point was clarified in SPL-2 revision 3.</dd>
+<dt><code>-l</code>, <code>&#8211;long</code></dt>
+<dd>prefix each phy event source string with its numeric identifier in hex. Also place &quot;phy_id=&quot; in front of the phy identifier number. For example: &quot;phy_id=3: [0x1]: Invalid word count: 29&quot;; without this option this line would be: &quot;3: Invalid word count: 29&quot;.</dd>
+<dt><code>-n</code>, <code>&#8211;nonz</code></dt>
+<dd>only show phy events with non-zero counts or peak values. The default is to show all phy events in the response.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>Similar information is maintained for SAS SSP target phys (e.g. on a SAS disk). It can be obtained from the Protocol Specific Port log page with the sg_logs utility. </p>
 <p> Similar information may be obtained for SAS initiator phys (e.g. on a SAS HBA). As an example in Linux 2.6.28 error information can be found in this directory /sys/class/sas_phy/phy-4:0 (for the phy 0 in SCSI/SAS host 4). </p>

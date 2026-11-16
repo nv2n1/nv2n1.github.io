@@ -14,11 +14,11 @@ description: "rio_name – Get the unique RIO device identifier"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <h2>Description</h2>
 <p>Get the unique RIO device identifier. Returns the device identifier string.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

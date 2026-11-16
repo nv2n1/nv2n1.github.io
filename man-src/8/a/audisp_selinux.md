@@ -54,14 +54,14 @@ description: "audisp_selinux – Security Enhanced Linux Policy for the audisp p
 <p> <code>audisp_exec_t</code> </p>
 <p> &#8211; Set files with the audisp_exec_t type, if you want to transition an executable to the audisp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/audispd, /usr/sbin/audispd </p>
+<dt>Paths:</dt>
+<dd>/sbin/audispd, /usr/sbin/audispd </dd>
 </dl>
 <p> <code>audisp_remote_exec_t</code> </p>
 <p> &#8211; Set files with the audisp_remote_exec_t type, if you want to transition an executable to the audisp_remote_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/audisp-remote, /usr/sbin/audisp-remote </p>
+<dt>Paths:</dt>
+<dd>/sbin/audisp-remote, /usr/sbin/audisp-remote </dd>
 </dl>
 <p> <code>audisp_var_run_t</code> </p>
 <p> &#8211; Set files with the audisp_var_run_t type, if you want to store the audisp files under the /run or /var/run directory. </p>

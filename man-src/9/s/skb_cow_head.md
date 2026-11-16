@@ -15,11 +15,11 @@ skb_cow_head - skb_cow but only making the head writable
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to cow</dl>
+<dl><dd></dd><dd>buffer to cow</dd></dl>
  
 
  <i>headroom</i>
-<dl><dd>needed headroom</dl>
+<dl><dd>needed headroom</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,10 +14,10 @@ description: "gnutls_transport_set_lowat – Used to set the lowat value in orde
 <p> <code>void gnutls_transport_set_lowat(gnutls_session_t </code><i>session</i><code>, int </code><i>num</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>int num</p>
-<dd> is the low water value.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>int num</dt>
+<dd> is the low water value.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Used to set the lowat value in order for select to check if there are pending data to socket buffer. Used only if you have changed the default low water value (default is 1). Normally you will not need that function. This function is only useful if using berkeley style sockets. Otherwise it must be called and set lowat to zero.</p>
 <h2>REPORTING BUGS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_transport_set_lowat – Used to set the lowat value in orde
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

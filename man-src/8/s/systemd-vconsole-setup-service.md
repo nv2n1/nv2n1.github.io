@@ -18,10 +18,10 @@ description: "systemd-vconsole-setup.service, systemd-vconsole-setup – Configu
 <p>A few configuration parameters from vconsole.conf may be overridden on the kernel command line: </p>
 <p> <i>vconsole.keymap=</i>, <i>vconsole.keymap.toggle=</i></p>
 <dl>
-<dd>Overrides the key mapping table for the keyboard and the second toggle keymap.</dl>
+<dd>Overrides the key mapping table for the keyboard and the second toggle keymap.</dd></dl>
 <p> <i>vconsole.font=</i>, <i>vconsole.font.map=</i>, <i>vconsole.font.unimap=</i></p>
 <dl>
-<dd>Configures the console font, the console map, and the unicode font map.</dl>
+<dd>Configures the console font, the console map, and the unicode font map.</dd></dl>
 <p> See <code><a href="/docs/linux/man/5-vconsole-conf/">vconsole.conf</a></code>(5) for information about these settings.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-vconsole-conf/">vconsole.conf</a></code>(5), <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code><a href="/docs/linux/man/8-systemd-localed-service/">systemd-localed.service</a></code>(8) </p>

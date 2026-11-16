@@ -37,13 +37,12 @@ url: "/docs/linux/man/1-nvme-subsystem-reset/"
 
 <dl>
 <dt>
-<dd> &bull; Resets the subsystem. 
-
-<dl>
+</dt><dd> &bull; Resets the subsystem. 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme subsystem-reset /dev/nvme0
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

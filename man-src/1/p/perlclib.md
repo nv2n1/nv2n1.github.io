@@ -15,14 +15,14 @@ description: "perlclib – Internal replacements for standard C library function
 <h3>Conventions</h3>
 <p> In the following tables:</p>
 <dl>
-<dt>&quot;t&quot;</p>
-<dd> is a type.</p>
-<dt>&quot;p&quot;</p>
-<dd> is a pointer.</p>
-<dt>&quot;n&quot;</p>
-<dd> is a number.</p>
-<dt>&quot;s&quot;</p>
-<dd> is a string.</dl>
+<dt>&quot;t&quot;</dt>
+<dd> is a type.</dd>
+<dt>&quot;p&quot;</dt>
+<dd> is a pointer.</dd>
+<dt>&quot;n&quot;</dt>
+<dd> is a number.</dd>
+<dt>&quot;s&quot;</dt>
+<dd> is a string.</dd></dl>
 <p> <tt>&quot;sv&quot;</tt>, <tt>&quot;av&quot;</tt>, <tt>&quot;hv&quot;</tt>, etc. represent variables of their respective types.</p>
 <h3>File Operations</h3>
 <p> Instead of the <i>stdio.h</i> functions, you should use the Perl abstraction layer. Instead of <tt>&quot;FILE*&quot;</tt> types, you need to be handling <tt>&quot;PerlIO*&quot;</tt> types. Don&#8217;t forget that with the new PerlIO layered I/O abstraction <tt>&quot;FILE*&quot;</tt> types may not even be available. See also the <tt>&quot;perlapio&quot;</tt> documentation for more information about the following functions: </p>
@@ -170,5 +170,5 @@ exit(n) my_exit(n)
 <h2>SEE ALSO</h2>
 <p> perlapi, perlapio, perlguts </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">SEE ALSO</a></p>
-<dd></dl>
+<dt><a href="#lbAL">SEE ALSO</a></dt>
+<dd></dd></dl>

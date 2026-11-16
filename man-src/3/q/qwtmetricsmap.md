@@ -48,18 +48,18 @@ description: "QwtMetricsMap – A Map to translate between layout, screen and pa
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>m</i> Matrix<br />
- <i>rect</i> Rectangle to translate</dl>
+ <i>rect</i> Rectangle to translate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Translated rectangle</dl>
+<dd>Translated rectangle</dd></dl>
 <h3>QwtPolygon QwtMetricsMap::translate (const QMatrix &amp; m, const QwtPolygon &amp; pa) [static]</h3>
 <p>Wrapper for QMatrix::map. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>m</i> Matrix<br />
- <i>pa</i> Polygon to translate</dl>
+ <i>pa</i> Polygon to translate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Translated polygon</dl>
+<dd>Translated polygon</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

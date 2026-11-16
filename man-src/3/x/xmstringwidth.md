@@ -16,10 +16,10 @@ description: "XmStringWidth — A compound string function that returns the widt
 <h2>Description</h2>
 <p><code>XmStringWidth</code> returns the width, in pixels, of the widest line in the provided compound string.</p>
 <dl COMPACT>
-<dt><i>rendertable</i></p>
-<dd>Specifies the render table</p>
-<dt><i>string</i></p>
-<dd>Specifies the string</dl>
+<dt><i>rendertable</i></dt>
+<dd>Specifies the render table</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the string</dd></dl>
 <h2>Return</h2>
 <p>Returns the width of the compound string.</p>
 <h2>Related</h2>

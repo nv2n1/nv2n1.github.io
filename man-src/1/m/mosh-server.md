@@ -20,26 +20,26 @@ description: "mosh-server – server-side helper for mosh"
 <h2>OPTIONS</h2>
 <p> The argument &quot;new&quot; must be first on the command line to use command-line options. </p>
 <dl>
-<dt><code>-s</code></p>
-<dd> bind to the local interface used for an incoming SSH connection, given in the <code>SSH_CONNECTION</code> environment variable (for multihomed hosts) </p>
-<dt><code>-v</code></p>
-<dd> Print some debugging information even after detaching. </p>
-<dt><code>-i </code><i>IP</i></p>
-<dd> IP address of the local interface to bind (for multihomed hosts) </p>
-<dt><code>-p </code><i>PORT</i>[:<i>PORT2</i>]</p>
-<dd> UDP port number or port-range to bind </p>
-<dt><code>-c </code><i>COLORS</i></p>
-<dd> Number of colors to advertise to applications through TERM (e.g. 8, 256) </p>
-<dt><code>-l </code><i>NAME=VALUE</i></p>
-<dd> Locale-related environment variable to try as part of a fallback environment, if the startup environment does not specify a character set of UTF-8. </p>
+<dt><code>-s</code></dt>
+<dd> bind to the local interface used for an incoming SSH connection, given in the <code>SSH_CONNECTION</code> environment variable (for multihomed hosts) </dd>
+<dt><code>-v</code></dt>
+<dd> Print some debugging information even after detaching. </dd>
+<dt><code>-i </code><i>IP</i></dt>
+<dd> IP address of the local interface to bind (for multihomed hosts) </dd>
+<dt><code>-p </code><i>PORT</i>[:<i>PORT2</i>]</dt>
+<dd> UDP port number or port-range to bind </dd>
+<dt><code>-c </code><i>COLORS</i></dt>
+<dd> Number of colors to advertise to applications through TERM (e.g. 8, 256) </dd>
+<dt><code>-l </code><i>NAME=VALUE</i></dt>
+<dd> Locale-related environment variable to try as part of a fallback environment, if the startup environment does not specify a character set of UTF-8. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> These variables allow server-side configuration of Mosh&#8217;s behavior. They may be set by administrators in system login/rc files, /etc/login.conf, or similar mechanisms, or users in their shell&#8217;s login/rc files. <code>mosh-server</code> passes these variables to the login session and shell that it starts, but changing them there will have no effect. </p>
 <dl>
-<dt><code>MOSH_SERVER_NETWORK_TMOUT</code></p>
-<dd> If this variable is set to a positive integer number, it specifies how long (in seconds) <code>mosh-server</code> will wait to receive an update from the client before exiting. Since mosh is very useful for mobile clients with intermittent operation and connectivity, we suggest setting this variable to a high value, such as 604800 (one week) or 2592000 (30 days). Otherwise, <code>mosh-server</code> will wait indefinitely for a client to reappear. This variable is somewhat similar to the <code>TMOUT</code> variable found in many Bourne shells. However, it is not a login-session inactivity timeout; it only applies to network connectivity. </p>
-<dt><code>MOSH_SERVER_SIGNAL_TMOUT</code></p>
-<dd> If this variable is set to a positive integer number, it specifies how long (in seconds) <code>mosh-server</code> will ignore SIGUSR1 while waiting to receive an update from the client. Otherwise, <code>SIGUSR1</code> will always terminate <code>mosh-server</code>. Users and administrators may implement scripts to clean up disconnected Mosh sessions. With this variable set, a user or administrator can issue </p>
+<dt><code>MOSH_SERVER_NETWORK_TMOUT</code></dt>
+<dd> If this variable is set to a positive integer number, it specifies how long (in seconds) <code>mosh-server</code> will wait to receive an update from the client before exiting. Since mosh is very useful for mobile clients with intermittent operation and connectivity, we suggest setting this variable to a high value, such as 604800 (one week) or 2592000 (30 days). Otherwise, <code>mosh-server</code> will wait indefinitely for a client to reappear. This variable is somewhat similar to the <code>TMOUT</code> variable found in many Bourne shells. However, it is not a login-session inactivity timeout; it only applies to network connectivity. </dd>
+<dt><code>MOSH_SERVER_SIGNAL_TMOUT</code></dt>
+<dd> If this variable is set to a positive integer number, it specifies how long (in seconds) <code>mosh-server</code> will ignore SIGUSR1 while waiting to receive an update from the client. Otherwise, <code>SIGUSR1</code> will always terminate <code>mosh-server</code>. Users and administrators may implement scripts to clean up disconnected Mosh sessions. With this variable set, a user or administrator can issue </dd>
 <pre>
 $ pkill -SIGUSR1 mosh-server
 </pre>

@@ -10,51 +10,51 @@ description: "XReadBitmapFile, XReadBitmapFileData, XWriteBitmapFile, XCreatePix
 <p>XReadBitmapFile, XReadBitmapFileData, XWriteBitmapFile, XCreatePixmapFromBitmapData, XCreateBitmapFromData &#8211; manipulate bitmaps </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XReadBitmapFile(Display *<i>display</i>, Drawable <i>d</i>, char *<i>filename</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, Pixmap *<i>bitmap_return</i>, int *<i>x_hot_return</i>, int *<i>y_hot_return</i>);</p>
-<dd>int XReadBitmapFileData(char *<i>filename</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, unsigned char *<i>data_return</i>, int *<i>x_hot_return</i>, int *<i>y_hot_return</i>);</p>
-<dd>int XWriteBitmapFile(Display *<i>display</i>, char *<i>filename</i>, Pixmap <i>bitmap</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>x_hot</i>, int <i>y_hot</i>);</p>
-<dd>Pixmap XCreatePixmapFromBitmapData(Display *<i>display</i>, Drawable <i>d</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>fg</i>, unsigned long <i>bg</i>, unsigned int <i>depth</i>);</p>
-<dd>Pixmap XCreateBitmapFromData(Display *<i>display</i>, Drawable <i>d</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>);</dl>
+<dd>int XReadBitmapFile(Display *<i>display</i>, Drawable <i>d</i>, char *<i>filename</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, Pixmap *<i>bitmap_return</i>, int *<i>x_hot_return</i>, int *<i>y_hot_return</i>);</dd>
+<dd>int XReadBitmapFileData(char *<i>filename</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, unsigned char *<i>data_return</i>, int *<i>x_hot_return</i>, int *<i>y_hot_return</i>);</dd>
+<dd>int XWriteBitmapFile(Display *<i>display</i>, char *<i>filename</i>, Pixmap <i>bitmap</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, int <i>x_hot</i>, int <i>y_hot</i>);</dd>
+<dd>Pixmap XCreatePixmapFromBitmapData(Display *<i>display</i>, Drawable <i>d</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>, unsigned long <i>fg</i>, unsigned long <i>bg</i>, unsigned int <i>depth</i>);</dd>
+<dd>Pixmap XCreateBitmapFromData(Display *<i>display</i>, Drawable <i>d</i>, char *<i>data</i>, unsigned int <i>width</i>, unsigned int <i>height</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>bitmap</i></p>
-<dd>Specifies the bitmap.</p>
-<dt><i>bitmap_return</i></p>
-<dd>Returns the bitmap that is created.</p>
-<dt><i>d</i></p>
-<dd>Specifies the drawable that indicates the screen.</p>
-<dt><i>data</i></p>
-<dd>Specifies the data in bitmap format.</p>
-<dt><i>data</i></p>
-<dd>Specifies the location of the bitmap data.</p>
-<dt><i>data_return</i></p>
-<dd>Returns the bitmap data.</p>
-<dt><i>depth</i></p>
-<dd>Specifies the depth of the pixmap.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>fg</i></p>
+<dt><i>bitmap</i></dt>
+<dd>Specifies the bitmap.</dd>
+<dt><i>bitmap_return</i></dt>
+<dd>Returns the bitmap that is created.</dd>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable that indicates the screen.</dd>
+<dt><i>data</i></dt>
+<dd>Specifies the data in bitmap format.</dd>
+<dt><i>data</i></dt>
+<dd>Specifies the location of the bitmap data.</dd>
+<dt><i>data_return</i></dt>
+<dd>Returns the bitmap data.</dd>
+<dt><i>depth</i></dt>
+<dd>Specifies the depth of the pixmap.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>fg</i></dt>
 <dd>
-<dt><i>bg</i></p>
-<dd>Specify the foreground and background pixel values to use.</p>
-<dt><i>filename</i></p>
-<dd>Specifies the file name to use. The format of the file name is operating-system dependent.</p>
-<dt><i>width</i></p>
+</dd><dt><i>bg</i></dt>
+<dd>Specify the foreground and background pixel values to use.</dd>
+<dt><i>filename</i></dt>
+<dd>Specifies the file name to use. The format of the file name is operating-system dependent.</dd>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
-<dd>Specify the width and height.</p>
-<dt><i>width_return</i></p>
+</dd><dt><i>height</i></dt>
+<dd>Specify the width and height.</dd>
+<dt><i>width_return</i></dt>
 <dd>
-<dt><i>height_return</i></p>
-<dd>Return the width and height values of the read in bitmap file.</p>
-<dt><i>x_hot</i></p>
+</dd><dt><i>height_return</i></dt>
+<dd>Return the width and height values of the read in bitmap file.</dd>
+<dt><i>x_hot</i></dt>
 <dd>
-<dt><i>y_hot</i></p>
-<dd>Specify where to place the hotspot coordinates (or -1,-1 if none are present) in the file.</p>
-<dt><i>x_hot_return</i></p>
+</dd><dt><i>y_hot</i></dt>
+<dd>Specify where to place the hotspot coordinates (or -1,-1 if none are present) in the file.</dd>
+<dt><i>x_hot_return</i></dt>
 <dd>
-<dt><i>y_hot_return</i></p>
-<dd>Return the hotspot coordinates.</dl>
+</dd><dt><i>y_hot_return</i></dt>
+<dd>Return the hotspot coordinates.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XReadBitmapFile</code> function reads in a file containing a bitmap. The file is parsed in the encoding of the current locale. The ability to read other than the standard format is implementation-dependent. If the file cannot be opened, <code>XReadBitmapFile</code> returns <code>BitmapOpenFailed</code>. If the file can be opened but does not contain valid bitmap data, it returns <code>BitmapFileInvalid</code>. If insufficient working storage is allocated, it returns <code>BitmapNoMemory</code>. If the file is readable and valid, it returns <code>BitmapSuccess</code>. </p>
 <p> <code>XReadBitmapFile</code> returns the bitmap&#8217;s height and width, as read from the file, to width_return and height_return. It then creates a pixmap of the appropriate size, reads the bitmap data from the file into the pixmap, and assigns the pixmap to the caller&#8217;s variable bitmap. The caller must free the bitmap using <code>XFreePixmap</code> when finished. If <i>name</i>_x_hot and <i>name</i>_y_hot exist, <code>XReadBitmapFile</code> returns them to x_hot_return and y_hot_return; otherwise, it returns -1,-1. </p>
@@ -71,12 +71,12 @@ description: "XReadBitmapFile, XReadBitmapFileData, XWriteBitmapFile, XCreatePix
 <p> <code>XCreateBitmapFromData</code> can generate a <code>BadAlloc</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</p>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreatepixmap/">XCreatePixmap</a>(3), <a href="/docs/linux/man/3-xputimage/">XPutImage</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

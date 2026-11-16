@@ -19,12 +19,12 @@ description: "QuantLib::BivariateCumulativeNormalDistributionWe04DP – Cumulati
 <p> The algorithm is based on the near double-precision algorithm described in &#8216;Numerical Computation of Rectangular Bivariate an Trivariate Normal and t Probabilities&#8217;, Genz (2004), Statistics and Computing 14, 151-160. (available at <a rel="nofollow" href="http://www.sci.wsu.edu">www.sci.wsu.edu</a>/math/faculty/henz/homepage) </p>
 <p> The QuantLib implementation mainly differs from the original code in two regards;</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>The implementation of the cumulative normal distribution is <code>QuantLib::CumulativeNormalDistribution</code></p>
-<dt>*</p>
-<dd>The arrays XX and W are zero-based</dl>
+<dt>*</dt>
+<dd>The implementation of the cumulative normal distribution is <code>QuantLib::CumulativeNormalDistribution</code></dd>
+<dt>*</dt>
+<dd>The arrays XX and W are zero-based</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by checking it against known good results.</dl>
+<dd>the correctness of the returned value is tested by checking it against known good results.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -30,22 +30,16 @@ The notifying thread does not need to hold the lock on the same mutex as the one
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;condition_variable&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 std::condition_variable_any cv;
-
 std::mutex cv_m; // This mutex is used for three purposes:
                  // 1) to synchronize accesses to i
                  // 2) to synchronize accesses to std::cerr
                  // 3) for the condition variable cv
-
 int i = 0;
 void waits()
-
 {
     std::unique_lock&lt;std::mutex&gt; lk(cv_m);
     std::cerr &lt;&lt; &quot;Waiting... \n&quot;;
@@ -53,7 +47,6 @@ void waits()
     std::cerr &lt;&lt; &quot;...finished waiting. i == 1\n&quot;;
 }
 void signals()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     {
@@ -70,7 +63,6 @@ void signals()
     cv.notify_all();
 }
 int main()
-
 {
     std::thread t1(waits), t2(waits), t3(waits), t4(signals);
     t1.join();

@@ -13,14 +13,14 @@ description: "dnf.plugin.builddep – DNF builddep Plugin"
 <p><code>dnf builddep &lt;file&gt;&#8230;</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt><code>&lt;file&gt;</code></p>
-<dd>The path to .src.rpm, .nosrc.rpm or .spec file, to read the needed build requirements from.</dl>
+<dt><code>&lt;file&gt;</code></dt>
+<dd>The path to .src.rpm, .nosrc.rpm or .spec file, to read the needed build requirements from.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt><code>dnf builddep foobar.spec</code></p>
-<dd>Install the needed build requirements, defined in the foobar.spec file.</p>
-<dt><code>dnf builddep foobar-1.0-1.src.rpm</code></p>
-<dd>Install the needed build requirements, defined in the foobar-1.0-1.src.rpm file.</dl>
+<dt><code>dnf builddep foobar.spec</code></dt>
+<dd>Install the needed build requirements, defined in the foobar.spec file.</dd>
+<dt><code>dnf builddep foobar-1.0-1.src.rpm</code></dt>
+<dd>Install the needed build requirements, defined in the foobar-1.0-1.src.rpm file.</dd></dl>
 <h2>Author</h2>
 <p>See AUTHORS in your Core DNF Plugins distribution</p>
 <h2>Copyright</h2>

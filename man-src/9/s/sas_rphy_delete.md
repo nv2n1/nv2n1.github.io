@@ -14,14 +14,14 @@ description: "sas_rphy_delete – remove and free SAS remote PHY"
 <p><i>rphy</i></p>
 <dl>
 <dd>
-<dd>SAS remote PHY to remove and free</dl>
+</dd><dd>SAS remote PHY to remove and free</dd></dl>
 <h2>Description</h2>
 <p>Removes the specified SAS remote PHY and frees it.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -136,191 +136,185 @@ SAFE-GROUP=nobody
 <p> For each function you can bind two keys, i.e. you could bind both Enter and Cursor Right to the FollowLink-function. As you can see in the example above, the two key names are KEY_FOLLOWLINK_1 and KEY_FOLLOWLINK_2. </p>
 <p> Here&#8217;s an explanation of the key names:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>KEY_TOTALSEARCH_1</code></p>
-<dd> Key for searching through all nodes of info file.</p>
-<dt><code>KEY_TOTALSEARCH_2</code></p>
-<dd> Alternate key for searching through all nodes of info file.</p>
-<dt><code>KEY_SEARCH_1</code></p>
-<dd> Key for searching through current node (or manual).</p>
-<dt><code>KEY_SEARCH_2</code></p>
-<dd> Alternate key for searching through current node (or manual).</p>
-<dt><code>KEY_SEARCH_AGAIN_1</code></p>
-<dd> Key for repeating the last search.</p>
-<dt><code>KEY_SEARCH_AGAIN_2</code></p>
-<dd> Alternate key for repeating the last search.</p>
-<dt><code>KEY_GOTO_1</code></p>
-<dd> Key for explicitly going to a node (by specifying it&#8217;s name).</p>
-<dt><code>KEY_GOTO_2</code></p>
-<dd> Alternate key for explicitly going to a node (by specifying it&#8217;s name).</p>
-<dt><code>KEY_PREVNODE_1</code></p>
-<dd> Key for going to a node marked as &#8216;Prev&#8217; in the header. In man page viewer this goes to the previous man section.</p>
-<dt><code>KEY_PREVNODE_2</code></p>
-<dd> Alternate key for going to a node marked as &#8216;Prev&#8217; in the header. In man page viewer this goes to the previous man section.</p>
-<dt><code>KEY_NEXTNODE_1</code></p>
-<dd> Key for going to a node marked as &#8216;Next&#8217; in the header. In man page viewer this goes to the next man section.</p>
-<dt><code>KEY_NEXTNODE_2</code></p>
-<dd> Alternate key for going to a node marked as &#8216;Next&#8217; in the header. In man page viewer this goes to the next man section.</p>
-<dt><code>KEY_UP_1</code></p>
-<dd> Key for scrolling text one line up.</p>
-<dt><code>KEY_UP_2</code></p>
-<dd> Alternate key for scrolling text one line up.</p>
-<dt><code>KEY_END_1</code></p>
-<dd> Key for going to the end of the node.</p>
-<dt><code>KEY_END_2</code></p>
-<dd> Alternate key for going to the end of the node.</p>
-<dt><code>KEY_PGDN_1</code></p>
-<dd> Key for going one page down in the viewed node.</p>
-<dt><code>KEY_PGDN_2</code></p>
-<dd> Alternate key for going one page down in the viewed node.</p>
-<dt><code>KEY_PGDN_AUTO_1</code></p>
-<dd> Key for going to the next node when you&#8217;re at the end of node (default is zero &#8212; turned off).</p>
-<dt><code>KEY_PGDN_AUTO_2</code></p>
-<dd> Alternate key for going to the next node when you&#8217;re at the end of node (default is space, as for pgdn_2).</p>
-<dt><code>KEY_HOME_1</code></p>
-<dd> Key for going to the beginning of the node.</p>
-<dt><code>KEY_HOME_2</code></p>
-<dd> Alternate key for going to the beginning of the node.</p>
-<dt><code>KEY_PGUP_1</code></p>
-<dd> Key for going one page up in the viewed node.</p>
-<dt><code>KEY_PGUP_2</code></p>
-<dd> Alternate key for going one page up in the viewed node.</p>
-<dt><code>KEY_PGUP_AUTO_1</code></p>
-<dd> Key for going to the `up&#8217; node, when being at the top of node. (Default value is zero &#8212; turned off).</p>
-<dt><code>KEY_PGUP_AUTO_2</code></p>
-<dd> Alternate key for going to the `up&#8217; node, when being at the top of node. (Default value is `-&#8216;, as for pgup_2).</p>
-<dt><code>KEY_DOWN_1</code></p>
-<dd> Key for scrolling the text down one line.</p>
-<dt><code>KEY_DOWN_2</code></p>
-<dd> Alternate key for scrolling the text down one line.</p>
-<dt><code>KEY_TOP_1</code></p>
-<dd> Key for going to the top (first) node.</p>
-<dt><code>KEY_TOP_2</code></p>
-<dd> Alternate key for going to the top (first) node.</p>
-<dt><code>KEY_BACK_1</code></p>
-<dd> Key for going back (in the history of viewed nodes).</p>
-<dt><code>KEY_BACK_2</code></p>
-<dd> Alternate key for going back (in the history of viewed nodes).</p>
-<dt><code>KEY_FOLLOWLINK_1</code></p>
-<dd> Key for following a hypertext link.</p>
-<dt><code>KEY_FOLLOWLINK_2</code></p>
-<dd> Alternate key for following a hypertext link.</p>
-<dt><code>KEY_REFRESH_1</code></p>
-<dd> Key for refreshing the screen (hard coded is the ^L value).</p>
-<dt><code>KEY_REFRESH_2</code></p>
-<dd> Alternate key for refreshing the screen.</p>
-<dt><code>KEY_SHELLFEED_1</code></p>
-<dd> Key for calling a shell command, and passing the viewed node to the stdin of that command.</p>
-<dt><code>KEY_SHELLFEED_2</code></p>
-<dd> Alternate key for calling a shell command, and passing the viewed node to the stdin of that command.</p>
-<dt><code>KEY_QUIT_1</code></p>
-<dd> Key for exiting the program.</p>
-<dt><code>KEY_QUIT_2</code></p>
-<dd> Alternate key for exiting the program.</p>
-<dt><code>KEY_GOLINE_1</code></p>
-<dd> Key for going to a specified line in file.</p>
-<dt><code>KEY_GOLINE_2</code></p>
-<dd> Alternate key for going to a specified line in file.</p>
-<dt><code>KEY_PRINT_1</code></p>
-<dd> Key for printing viewed node or man page.</p>
-<dt><code>KEY_PRINT_2</code></p>
-<dd> Alternate key for printing viewed node or man page. </p>
+<dt><code>KEY_TOTALSEARCH_1</code></dt>
+<dd> Key for searching through all nodes of info file.</dd>
+<dt><code>KEY_TOTALSEARCH_2</code></dt>
+<dd> Alternate key for searching through all nodes of info file.</dd>
+<dt><code>KEY_SEARCH_1</code></dt>
+<dd> Key for searching through current node (or manual).</dd>
+<dt><code>KEY_SEARCH_2</code></dt>
+<dd> Alternate key for searching through current node (or manual).</dd>
+<dt><code>KEY_SEARCH_AGAIN_1</code></dt>
+<dd> Key for repeating the last search.</dd>
+<dt><code>KEY_SEARCH_AGAIN_2</code></dt>
+<dd> Alternate key for repeating the last search.</dd>
+<dt><code>KEY_GOTO_1</code></dt>
+<dd> Key for explicitly going to a node (by specifying it&#8217;s name).</dd>
+<dt><code>KEY_GOTO_2</code></dt>
+<dd> Alternate key for explicitly going to a node (by specifying it&#8217;s name).</dd>
+<dt><code>KEY_PREVNODE_1</code></dt>
+<dd> Key for going to a node marked as &#8216;Prev&#8217; in the header. In man page viewer this goes to the previous man section.</dd>
+<dt><code>KEY_PREVNODE_2</code></dt>
+<dd> Alternate key for going to a node marked as &#8216;Prev&#8217; in the header. In man page viewer this goes to the previous man section.</dd>
+<dt><code>KEY_NEXTNODE_1</code></dt>
+<dd> Key for going to a node marked as &#8216;Next&#8217; in the header. In man page viewer this goes to the next man section.</dd>
+<dt><code>KEY_NEXTNODE_2</code></dt>
+<dd> Alternate key for going to a node marked as &#8216;Next&#8217; in the header. In man page viewer this goes to the next man section.</dd>
+<dt><code>KEY_UP_1</code></dt>
+<dd> Key for scrolling text one line up.</dd>
+<dt><code>KEY_UP_2</code></dt>
+<dd> Alternate key for scrolling text one line up.</dd>
+<dt><code>KEY_END_1</code></dt>
+<dd> Key for going to the end of the node.</dd>
+<dt><code>KEY_END_2</code></dt>
+<dd> Alternate key for going to the end of the node.</dd>
+<dt><code>KEY_PGDN_1</code></dt>
+<dd> Key for going one page down in the viewed node.</dd>
+<dt><code>KEY_PGDN_2</code></dt>
+<dd> Alternate key for going one page down in the viewed node.</dd>
+<dt><code>KEY_PGDN_AUTO_1</code></dt>
+<dd> Key for going to the next node when you&#8217;re at the end of node (default is zero &#8212; turned off).</dd>
+<dt><code>KEY_PGDN_AUTO_2</code></dt>
+<dd> Alternate key for going to the next node when you&#8217;re at the end of node (default is space, as for pgdn_2).</dd>
+<dt><code>KEY_HOME_1</code></dt>
+<dd> Key for going to the beginning of the node.</dd>
+<dt><code>KEY_HOME_2</code></dt>
+<dd> Alternate key for going to the beginning of the node.</dd>
+<dt><code>KEY_PGUP_1</code></dt>
+<dd> Key for going one page up in the viewed node.</dd>
+<dt><code>KEY_PGUP_2</code></dt>
+<dd> Alternate key for going one page up in the viewed node.</dd>
+<dt><code>KEY_PGUP_AUTO_1</code></dt>
+<dd> Key for going to the `up&#8217; node, when being at the top of node. (Default value is zero &#8212; turned off).</dd>
+<dt><code>KEY_PGUP_AUTO_2</code></dt>
+<dd> Alternate key for going to the `up&#8217; node, when being at the top of node. (Default value is `-&#8216;, as for pgup_2).</dd>
+<dt><code>KEY_DOWN_1</code></dt>
+<dd> Key for scrolling the text down one line.</dd>
+<dt><code>KEY_DOWN_2</code></dt>
+<dd> Alternate key for scrolling the text down one line.</dd>
+<dt><code>KEY_TOP_1</code></dt>
+<dd> Key for going to the top (first) node.</dd>
+<dt><code>KEY_TOP_2</code></dt>
+<dd> Alternate key for going to the top (first) node.</dd>
+<dt><code>KEY_BACK_1</code></dt>
+<dd> Key for going back (in the history of viewed nodes).</dd>
+<dt><code>KEY_BACK_2</code></dt>
+<dd> Alternate key for going back (in the history of viewed nodes).</dd>
+<dt><code>KEY_FOLLOWLINK_1</code></dt>
+<dd> Key for following a hypertext link.</dd>
+<dt><code>KEY_FOLLOWLINK_2</code></dt>
+<dd> Alternate key for following a hypertext link.</dd>
+<dt><code>KEY_REFRESH_1</code></dt>
+<dd> Key for refreshing the screen (hard coded is the ^L value).</dd>
+<dt><code>KEY_REFRESH_2</code></dt>
+<dd> Alternate key for refreshing the screen.</dd>
+<dt><code>KEY_SHELLFEED_1</code></dt>
+<dd> Key for calling a shell command, and passing the viewed node to the stdin of that command.</dd>
+<dt><code>KEY_SHELLFEED_2</code></dt>
+<dd> Alternate key for calling a shell command, and passing the viewed node to the stdin of that command.</dd>
+<dt><code>KEY_QUIT_1</code></dt>
+<dd> Key for exiting the program.</dd>
+<dt><code>KEY_QUIT_2</code></dt>
+<dd> Alternate key for exiting the program.</dd>
+<dt><code>KEY_GOLINE_1</code></dt>
+<dd> Key for going to a specified line in file.</dd>
+<dt><code>KEY_GOLINE_2</code></dt>
+<dd> Alternate key for going to a specified line in file.</dd>
+<dt><code>KEY_PRINT_1</code></dt>
+<dd> Key for printing viewed node or man page.</dd>
+<dt><code>KEY_PRINT_2</code></dt>
+<dd> Alternate key for printing viewed node or man page. </dd>
 </dl>
 </dl>
 <p> The special mnemonics for keys (which are defined at present) are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>KEY_BREAK</code></p>
+<dt><code>KEY_BREAK</code></dt>
 <dd>
-<dt><code>KEY_DOWN</code></p>
+</dd><dt><code>KEY_DOWN</code></dt>
 <dd>
-<dt><code>KEY_UP</code></p>
+</dd><dt><code>KEY_UP</code></dt>
 <dd>
-<dt><code>KEY_LEFT</code></p>
+</dd><dt><code>KEY_LEFT</code></dt>
 <dd>
-<dt><code>KEY_RIGHT</code></p>
+</dd><dt><code>KEY_RIGHT</code></dt>
 <dd>
-<dt><code>KEY_DOWN</code></p>
+</dd><dt><code>KEY_DOWN</code></dt>
 <dd>
-<dt><code>KEY_HOME</code></p>
+</dd><dt><code>KEY_HOME</code></dt>
 <dd>
-<dt><code>KEY_BACKSPACE</code></p>
+</dd><dt><code>KEY_BACKSPACE</code></dt>
 <dd>
-<dt><code>KEY_NPAGE</code></p>
+</dd><dt><code>KEY_NPAGE</code></dt>
 <dd>
-<dt><code>KEY_PPAGE</code></p>
+</dd><dt><code>KEY_PPAGE</code></dt>
 <dd>
-<dt><code>KEY_END</code> [Note: this works probably <code>ONLY</code> with Linux ncurses]</p>
+</dd><dt><code>KEY_END</code> [Note: this works probably <code>ONLY</code> with Linux ncurses]</dt>
 <dd>
-<dt><code>KEY_F(x)</code></p>
+</dd><dt><code>KEY_F(x)</code></dt>
 <dd>
-<dt><code>KEY_CTRL(&#8216;c&#8217;)</code></p>
-<dd> &#8211; this assigns the key value to a <i>ctrl+c</i> combination. <i>c</i> may be any letter you wish.</p>
-<dt><code>KEY_ALT(&#8216;c&#8217;)</code></p>
-<dd> &#8211; this assigns the key value to a <i>alt+c</i> combination. <i>c</i> may be any letter you wish. If <i>alt</i> key won&#8217;t work, you may use <i>ESC+key</i> combination.</p>
-<dt><code>&#8216;c&#8217;</code></p>
-<dd> &#8211; this means a printable character <i>c</i>. The syntax is just like in C/C++ ;).</p>
-<dt><code>[number]</code></p>
-<dd> &#8211; you can also specify key as it&#8217;s code number. It is useful e.g. when specifying control keys, and some nonstandard keys. A numerical value of zero turns given key binding off. </p>
+</dd><dt><code>KEY_CTRL(&#8216;c&#8217;)</code></dt>
+<dd> &#8211; this assigns the key value to a <i>ctrl+c</i> combination. <i>c</i> may be any letter you wish.</dd>
+<dt><code>KEY_ALT(&#8216;c&#8217;)</code></dt>
+<dd> &#8211; this assigns the key value to a <i>alt+c</i> combination. <i>c</i> may be any letter you wish. If <i>alt</i> key won&#8217;t work, you may use <i>ESC+key</i> combination.</dd>
+<dt><code>&#8216;c&#8217;</code></dt>
+<dd> &#8211; this means a printable character <i>c</i>. The syntax is just like in C/C++ ;).</dd>
+<dt><code>[number]</code></dt>
+<dd> &#8211; you can also specify key as it&#8217;s code number. It is useful e.g. when specifying control keys, and some nonstandard keys. A numerical value of zero turns given key binding off. </dd>
 </dl>
 </dl>
 <p> See manual page for curs_getch (3x) for description of their meaning. </p>
 <p> Warning! Try not to create some serious key binding conflicts! </p>
 <p> The options in the last part of the example configuration file should be fairly self-explanatory. The variables that can be set to true or false do the same things as the command line arguments with the same names.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>MANUAL </code></p>
-<dd> If this is set to <code>true</code> the default is to first check for a man page, instead of a texinfo file.</p>
-<dt><code>CUT-MAN-HEADERS </code></p>
-<dd> If set to true, then pinfo tries to cut off the repeated headers throughout man pages.</p>
-<dt><code>CUT-EMPTY-MAN-LINES</code></p>
-<dd> If set to true, then pinfo tries to cut off the repeated newlines (i.e. it will shorten each set of consecutive newlines to one newline).</p>
-<dt><code>RAW-FILENAME</code></p>
-<dd> If set to true, the file argument is taken to be the name of a file in the current working directory, i.e. the directories in <code>INFOPATH</code> will only be searched if a file with this name is not in the working directory.</p>
-<dt><code>APROPOS</code></p>
-<dd> If set to true, <code>apropos</code> is called if no info or man page is found.</p>
-<dt><code>DONT-HANDLE-WITHOUT-TAG-TABLE</code></p>
-<dd> If set to <code>true</code> , pinfo will not attempt to display texinfo pages without tag tables.</p>
-<dt><code>HTTPVIEWER</code></p>
-<dd> Set this to the program you want to use to follow http links in documents.</p>
-<dt><code>FTPVIEWER</code></p>
-<dd> Set this to the program you want to use to follow ftp links in documents.</p>
-<dt><code>MAILEDITOR</code></p>
-<dd> Set this to your favorite email program, and it will be started if you follow an email link in a document.</p>
-<dt><code>PRINTUTILITY</code></p>
-<dd> Utility, which you use for printing. I.e. `lpr&#8217;. If you don&#8217;t use any, you may also try something like `cat &gt;/dev/lp1&#8242;, or sth. ;)</p>
-<dt><code>MANLINKS</code></p>
-<dd> This specifies the section names, which may be referenced in your man pages (i.e. Xtoolkit man pages match the section 3Xt (see for example XtVaCreateWidget) manpage), Xlib function pages match section 3X11, etc. Such extensions may not be recognized by default, so it is a good idea to add them).</p>
-<dt><code>INFOPATH</code></p>
-<dd> This allows you to override the default search path for info pages. The paths should be separated by colons.</p>
-<dt><code>MAN-OPTIONS</code></p>
-<dd> This specifies the options, which should be passed to the `man&#8217; program. (see <a href="/docs/linux/man/1-man/">man</a>(1) for description of what they&#8217;re like).</p>
-<dt><code>STDERR-REDIRECTION</code></p>
-<dd> Pinfo allows you to redirect the stderr output of called programs. For example if you don&#8217;t want to see man&#8217;s error messages about manual page formatting, you can use <i>STDER-REDIRECTION=&quot;2&gt; /dev/null&quot;. This is the default.</p>
-<dt></i><code>LONG-MANUAL-LINKS</code></p>
-<dd> This is another true/false option, which decides whether your system supports long manual section names, or not. (i.e. &quot;3ncurses&quot; instead of &quot;3&quot;).</p>
-<dt><code>FILTER-0xB7</code></p>
-<dd> This decides, whether you want to convert 0xb7 chars to `o&#8217;, or not. For example for iso-8859-2 fonts this makes man&#8217;s list marks a bit nicer ;) (look for example at perl&#8217;s man page, to see how those marks look like).</p>
-<dt><code>QUIT-CONFIRMATION</code></p>
-<dd> This decides whether you want to use quit confirmation on exit, or not.</p>
-<dt><code>QUIT-CONFIRM-DEFAULT</code></p>
-<dd> This yes/no option determines the default answer to the QUIT-CONFIRMATION dialog. (default answer is when you press a key, that does not match the asked question).</p>
-<dt><code>CLEAR-SCREEN-AT-EXIT</code></p>
-<dd> This true/false option determines if you want to have your screen cleared at exit, or no.</p>
-<dt><code>CALL-READLINE-HISTORY</code></p>
-<dd> This true/false option determines if you want to have a prompt of last history entry whenever calling readline wrapper, eg. in subsequent searches.</p>
-<dt><code>HIGHLIGHTREGEXP</code></p>
-<dd> This is an option, through which you may pass to pinfo regexps, which should be highlighted when working with document. Warning! This may turn very slow if you use it without care!</p>
-<dt><code>SAFE-USER</code></p>
-<dd> This option is used to pass the name of user, to which suid when pinfo is run with root privileges.</p>
-<dt><code>SAFE-GROUP</code></p>
-<dd> This option is used to pass the name of group, to which suid when pinfo is run with root privileges. </p>
+<dt><code>MANUAL </code></dt>
+<dd> If this is set to <code>true</code> the default is to first check for a man page, instead of a texinfo file.</dd>
+<dt><code>CUT-MAN-HEADERS </code></dt>
+<dd> If set to true, then pinfo tries to cut off the repeated headers throughout man pages.</dd>
+<dt><code>CUT-EMPTY-MAN-LINES</code></dt>
+<dd> If set to true, then pinfo tries to cut off the repeated newlines (i.e. it will shorten each set of consecutive newlines to one newline).</dd>
+<dt><code>RAW-FILENAME</code></dt>
+<dd> If set to true, the file argument is taken to be the name of a file in the current working directory, i.e. the directories in <code>INFOPATH</code> will only be searched if a file with this name is not in the working directory.</dd>
+<dt><code>APROPOS</code></dt>
+<dd> If set to true, <code>apropos</code> is called if no info or man page is found.</dd>
+<dt><code>DONT-HANDLE-WITHOUT-TAG-TABLE</code></dt>
+<dd> If set to <code>true</code> , pinfo will not attempt to display texinfo pages without tag tables.</dd>
+<dt><code>HTTPVIEWER</code></dt>
+<dd> Set this to the program you want to use to follow http links in documents.</dd>
+<dt><code>FTPVIEWER</code></dt>
+<dd> Set this to the program you want to use to follow ftp links in documents.</dd>
+<dt><code>MAILEDITOR</code></dt>
+<dd> Set this to your favorite email program, and it will be started if you follow an email link in a document.</dd>
+<dt><code>PRINTUTILITY</code></dt>
+<dd> Utility, which you use for printing. I.e. `lpr&#8217;. If you don&#8217;t use any, you may also try something like `cat &gt;/dev/lp1&#8242;, or sth. ;)</dd>
+<dt><code>MANLINKS</code></dt>
+<dd> This specifies the section names, which may be referenced in your man pages (i.e. Xtoolkit man pages match the section 3Xt (see for example XtVaCreateWidget) manpage), Xlib function pages match section 3X11, etc. Such extensions may not be recognized by default, so it is a good idea to add them).</dd>
+<dt><code>INFOPATH</code></dt>
+<dd> This allows you to override the default search path for info pages. The paths should be separated by colons.</dd>
+<dt><code>MAN-OPTIONS</code></dt>
+<dd> This specifies the options, which should be passed to the `man&#8217; program. (see <a href="/docs/linux/man/1-man/">man</a>(1) for description of what they&#8217;re like).</dd>
+<dt><code>STDERR-REDIRECTION</code></dt>
+<dd> Pinfo allows you to redirect the stderr output of called programs. For example if you don&#8217;t want to see man&#8217;s error messages about manual page formatting, you can use <i>STDER-REDIRECTION=&quot;2&gt; /dev/null&quot;. This is the default.</dd>
+<dt></i><code>LONG-MANUAL-LINKS</code></dt>
+<dd> This is another true/false option, which decides whether your system supports long manual section names, or not. (i.e. &quot;3ncurses&quot; instead of &quot;3&quot;).</dd>
+<dt><code>FILTER-0xB7</code></dt>
+<dd> This decides, whether you want to convert 0xb7 chars to `o&#8217;, or not. For example for iso-8859-2 fonts this makes man&#8217;s list marks a bit nicer ;) (look for example at perl&#8217;s man page, to see how those marks look like).</dd>
+<dt><code>QUIT-CONFIRMATION</code></dt>
+<dd> This decides whether you want to use quit confirmation on exit, or not.</dd>
+<dt><code>QUIT-CONFIRM-DEFAULT</code></dt>
+<dd> This yes/no option determines the default answer to the QUIT-CONFIRMATION dialog. (default answer is when you press a key, that does not match the asked question).</dd>
+<dt><code>CLEAR-SCREEN-AT-EXIT</code></dt>
+<dd> This true/false option determines if you want to have your screen cleared at exit, or no.</dd>
+<dt><code>CALL-READLINE-HISTORY</code></dt>
+<dd> This true/false option determines if you want to have a prompt of last history entry whenever calling readline wrapper, eg. in subsequent searches.</dd>
+<dt><code>HIGHLIGHTREGEXP</code></dt>
+<dd> This is an option, through which you may pass to pinfo regexps, which should be highlighted when working with document. Warning! This may turn very slow if you use it without care!</dd>
+<dt><code>SAFE-USER</code></dt>
+<dd> This option is used to pass the name of user, to which suid when pinfo is run with root privileges.</dd>
+<dt><code>SAFE-GROUP</code></dt>
+<dd> This option is used to pass the name of group, to which suid when pinfo is run with root privileges. </dd>
 </dl>
 </dl>
 <h2>INTERNATIONALIZATION SUPPORT</h2>

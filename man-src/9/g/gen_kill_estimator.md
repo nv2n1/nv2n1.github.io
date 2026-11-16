@@ -15,11 +15,11 @@ gen_kill_estimator - remove a rate estimator
 <h2>Arguments</h2>
 
 <i>bstats</i>
-<dl><dd><dd>basic statistics</dl>
+<dl><dd></dd><dd>basic statistics</dd></dl>
  
 
  <i>rate_est</i>
-<dl><dd>rate estimator statistics</dl>
+<dl><dd>rate estimator statistics</dd></dl>
 
 <h2>Description</h2>
 

@@ -24,7 +24,7 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 <p>Get the object clipping this one (if any). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to get the clipper from</dl>
+<dd><i>obj</i> The object to get the clipper from</dd></dl>
 <p> This function returns the the object clipping obj. If obj not being clipped, NULL is returned. The object obj must be a valid object. </p>
 <p> See also <code>evas_object_clip_set()</code>, <code>evas_object_clip_unset()</code> and <code>evas_object_clipees_get()</code>. </p>
 <p> Example: </p>
@@ -38,7 +38,7 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The object to be clipped<br />
- <i>clip</i> The object to clip obj by</dl>
+ <i>clip</i> The object to clip obj by</dd></dl>
 <p> This function will clip the object obj to the area occupied by the object clipper. This means the object obj will only be visible within the area occupied by the clipping object (clip). The color of the object being clipped will be multiplied by the color of the clipping object, so the resulting color for the clipped object is RESULT = (OBJ * CLIP) / (255 * 255) per color element (red, green, blue and alpha). Clipping is recursive, so clip objects may be clipped by other objects, and their color will in tern be multiplied. You may NOT set up circular clipping lists (i.e. object 1 clips object 2 which clips object 1). The behavior of Evas is undefined in this case. Objects which do not clip others are visible as normal, those that clip 1 or more objects become invisible themselves, only affecting what they clip. If an object ceases to have other objects being clipped by it, it will become visible again. The visibility of an object affects the objects that are clipped by it, so if the object clipping others is not shown, the objects clipped will not be shown either. If the object was being clipped by another object when this function is called, it is implicitly removed from the clipper it is being clipped to, and now is made to clip its new clipper. </p>
 <p> At the moment the only objects that can validly be used to clip other objects are rectangle objects. All other object types are invalid and the result of using them is undefined. </p>
 <p> The clip object clip must be a valid object, but may also be NULL in which case the effect of this function is the same as calling <code>evas_object_clip_unset()</code> on the obj object. </p>
@@ -59,7 +59,7 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 <p>Disable clipping for an object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to cease clipping on</dl>
+<dd><i>obj</i> The object to cease clipping on</dd></dl>
 <p> This function disables clipping for the object obj, if it was already clipped. If it wasn&#8217;t, this has no effect. The object obj must be a valid object. </p>
 <p> See also <code>evas_object_clip_set()</code>, <code>evas_object_clipees_get()</code> and <code>evas_object_clip_get()</code>. </p>
 <p> Example: </p>
@@ -78,7 +78,7 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 <p>Return a list of objects currently clipped by a specific object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to get a list of clippees from</dl>
+<dd><i>obj</i> The object to get a list of clippees from</dd></dl>
 <p> This returns the inernal list handle that contains all objects clipped by the object obj. If none are clipped, it returns NULL. This list is only valid until the clip list is changed and should be fetched again with another call to <code>evas_object_clipees_get()</code> if any objects being clipped by this object are unclipped, clipped by a new object, are deleted or the clipper is deleted. These operations will invalidate the list returned so it should not be used anymore after that point. Any use of the list after this may have undefined results, not limited just to strange behavior but possible segfaults and other strange memory errors. The object obj must be a valid object. </p>
 <p> See also <code>evas_object_clip_set()</code>, <code>evas_object_clip_unset()</code> and <code>evas_object_clip_get()</code>. </p>
 <p> Example: </p>

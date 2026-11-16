@@ -36,37 +36,37 @@ description: "nsdb-jumpstart – Administer a basic FedFS NSDB using OpenLDAP"
 <h3>Subcommands</h3>
 <p>Valid <code><a href="/docs/linux/man/8-nsdb-jumpstart/">nsdb-jumpstart</a></code>(8) subcommands are:</p>
 <dl>
-<dt><code>install</code></p>
-<dd>Replace the OpenLDAP configuration on the local system with a ready-built NSDB. The user is asked to confirm before action is taken.</p>
-<dd>Specifying the <code>&#8211;security=</code> option sets the transport security that the NSDB requires clients to use when communicating with it.</p>
-<dt><code>status</code></p>
-<dd>Display the status of the NSDB on the local system. This subcommand takes no arguments.</p>
-<dt><code>backup</code></p>
-<dd>Generate an LDIF containing the NSDB information stored on the local LDAP server. The LDIF is stored in a dated file under <i>/var/lib/fedfs/nsdb-backup</i>. This subcommand takes no arguments.</p>
-<dt><code>restore</code></p>
-<dd>Replace the NSDB information on the local LDAP server with the contents of an LDIF. This subcommand takes a backup name as an argument. If no backup name is given, a list of backups that can be restored is displayed. The user is asked to confirm before action is taken.</dl>
+<dt><code>install</code></dt>
+<dd>Replace the OpenLDAP configuration on the local system with a ready-built NSDB. The user is asked to confirm before action is taken.</dd>
+<dd>Specifying the <code>&#8211;security=</code> option sets the transport security that the NSDB requires clients to use when communicating with it.</dd>
+<dt><code>status</code></dt>
+<dd>Display the status of the NSDB on the local system. This subcommand takes no arguments.</dd>
+<dt><code>backup</code></dt>
+<dd>Generate an LDIF containing the NSDB information stored on the local LDAP server. The LDIF is stored in a dated file under <i>/var/lib/fedfs/nsdb-backup</i>. This subcommand takes no arguments.</dd>
+<dt><code>restore</code></dt>
+<dd>Replace the NSDB information on the local LDAP server with the contents of an LDIF. This subcommand takes a backup name as an argument. If no backup name is given, a list of backups that can be restored is displayed. The user is asked to confirm before action is taken.</dd></dl>
 <h3>Command line options</h3>
 <p>The following options are specified before the subcommand on the command line.</p>
 <dl>
-<dt><code>&#8211;help</p>
-<dd>Displays usage and copyright information, then exit.</p>
-<dt>&#8211;version</p>
-<dd>Displays fedfs-utils version information, then exit.</p>
-<dt>&#8211;stateidr=</code><i>pathname</i></p>
-<dd>Specifies the pathname of the local directory under which NSDB data is maintained. By default, this directory is <i>/var/lib/fedfs</i>.</dl>
+<dt><code>&#8211;help</dt>
+<dd>Displays usage and copyright information, then exit.</dd>
+<dt>&#8211;version</dt>
+<dd>Displays fedfs-utils version information, then exit.</dd>
+<dt>&#8211;stateidr=</code><i>pathname</i></dt>
+<dd>Specifies the pathname of the local directory under which NSDB data is maintained. By default, this directory is <i>/var/lib/fedfs</i>.</dd></dl>
 <h3>Subcommand options</h3>
 <dl>
-<dt><code>&#8211;security=</code><i>mode</i></p>
-<dd>Selects the security mode of the NSDB. This option may be specified only on the <code>install</code> subcommand. Valid <i>mode</i> values are <code>none</code> and <code>tls</code>.</dl>
+<dt><code>&#8211;security=</code><i>mode</i></dt>
+<dd>Selects the security mode of the NSDB. This option may be specified only on the <code>install</code> subcommand. Valid <i>mode</i> values are <code>none</code> and <code>tls</code>.</dd></dl>
 <p> If <code>none</code> is specified, or the <code>&#8211;security=</code> option is not specified, clients can connect to this NSDB in the clear. </p>
 <p> If <code>tls</code> is specified, the <code>install</code> subcommand creates a self-signed x.509 certificate, and configures the NSDB so that clients are required to use TLS when connecting to the NSDB.</p>
 <h2>Exit Codes</h2>
 <p>The <code><a href="/docs/linux/man/8-nsdb-jumpstart/">nsdb-jumpstart</a></code>(8) command returns one of two values upon exit.</p>
 <dl>
-<dt><code>0</code></p>
-<dd>The subcommand succeeded.</p>
-<dt><code>1</code></p>
-<dd>The subcommand failed.</dl>
+<dt><code>0</code></dt>
+<dd>The subcommand succeeded.</dd>
+<dt><code>1</code></dt>
+<dd>The subcommand failed.</dd></dl>
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. After you have chosen a reliable server in the <i>example.net</i> domain to act as your NSDB, log in on that server as root, ensure that OpenLDAP is installed, and that any configuration can be discarded. To create a new NSDB with a self-signed certificate for the <i>example.net</i> domain, use:</p>
 <dl>
@@ -85,7 +85,7 @@ description: "nsdb-jumpstart – Administer a basic FedFS NSDB using OpenLDAP"
  Re-enter new password:<br />
  Last chance: about to replace the OpenLDAP configuration on this system.<br />
  Continue? [y/N] y<br />
- Setting up a self-signed x.509 certificate. Please answer the following questions: </p>
+ Setting up a self-signed x.509 certificate. Please answer the following questions: </dd>
 <p> Country (C)? US<br />
  State or province (ST)? Massachusetts<br />
  City (L)? Boston<br />
@@ -93,11 +93,8 @@ description: "nsdb-jumpstart – Administer a basic FedFS NSDB using OpenLDAP"
  Organizational unit (OU)? Fans </p>
 <p> NSDB configuration was successful. </p>
 <pre><code>Slapd is enabled and running
-
 The LDAP administrator DN is: cn=admin,cn=config
-
 The NSDB administrator DN is: cn=NSDB Manager,dc=example,dc=net
-
 The NCE is: ou=fedfs,dc=example,dc=net</code></pre>
 <p> Distribute the NSDB&#8217;s certificate in /etc/openldap/nsdb-cert.pem<br />
  #</dl>
@@ -110,14 +107,14 @@ The NCE is: ou=fedfs,dc=example,dc=net</code></pre>
 <p> The use of a transport encryption mechanism such as TLS is strongly recommended to protect NSDB requests on untrusted networks. SASL is currently not supported for the NSDB protocol.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/lib/fedfs/nsdb-jumpstart.log</i></p>
-<dd>Log file created during subcommand processing</p>
-<dt><i>/etc/openldap/nsdb-cert.pem</i></p>
-<dd>File containing the server&#8217;s x.509 certificate, in PEM format</p>
-<dt><i>/etc/openldap/nsdb-key.pem</i></p>
-<dd>File containing the server&#8217;s private key, in PEM format</p>
-<dt><i>/var/lib/fedfs/nsdb-db</i></p>
-<dd>Directory containing back-end database for the LDAP server&#8217;s domain controller root suffix</dl>
+<dt><i>/var/lib/fedfs/nsdb-jumpstart.log</i></dt>
+<dd>Log file created during subcommand processing</dd>
+<dt><i>/etc/openldap/nsdb-cert.pem</i></dt>
+<dd>File containing the server&#8217;s x.509 certificate, in PEM format</dd>
+<dt><i>/etc/openldap/nsdb-key.pem</i></dt>
+<dd>File containing the server&#8217;s private key, in PEM format</dd>
+<dt><i>/var/lib/fedfs/nsdb-db</i></dt>
+<dd>Directory containing back-end database for the LDAP server&#8217;s domain controller root suffix</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-nfsref/">nfsref</a></code>(8), <code><a href="/docs/linux/man/8-nsdb-create-fsn/">nsdb-create-fsn</a></code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) </p>
 <p> RFC 5716 for FedFS requirements and overview</p>

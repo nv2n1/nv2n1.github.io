@@ -10,27 +10,27 @@ description: "XStringToKeysym, XKeysymToString, XKeycodeToKeysym, XKeysymToKeyco
 <p>XStringToKeysym, XKeysymToString, XKeycodeToKeysym, XKeysymToKeycode, XConvertCase &#8211; convert keysyms </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>KeySym XStringToKeysym(char *<i>string</i>);</p>
-<dd>char *XKeysymToString(KeySym <i>keysym</i>);</p>
-<dd>KeySym XKeycodeToKeysym(Display *<i>display</i>, KeyCode <i>keycode</i>, int <i>index</i>);</p>
-<dd>KeyCode XKeysymToKeycode(Display *<i>display</i>, KeySym <i>keysym</i>);</p>
-<dd>void XConvertCase(KeySym <i>keysym</i>, KeySym *<i>lower_return</i>, KeySym *<i>upper_return</i>);</dl>
+<dd>KeySym XStringToKeysym(char *<i>string</i>);</dd>
+<dd>char *XKeysymToString(KeySym <i>keysym</i>);</dd>
+<dd>KeySym XKeycodeToKeysym(Display *<i>display</i>, KeyCode <i>keycode</i>, int <i>index</i>);</dd>
+<dd>KeyCode XKeysymToKeycode(Display *<i>display</i>, KeySym <i>keysym</i>);</dd>
+<dd>void XConvertCase(KeySym <i>keysym</i>, KeySym *<i>lower_return</i>, KeySym *<i>upper_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>index</i></p>
-<dd>Specifies the element of KeyCode vector.</p>
-<dt><i>keycode</i></p>
-<dd>Specifies the KeyCode.</p>
-<dt><i>keysym</i></p>
-<dd>Specifies the KeySym that is to be searched for or converted.</p>
-<dt><i>lower_return</i></p>
-<dd>Returns the lowercase form of keysym, or keysym.</p>
-<dt><i>string</i></p>
-<dd>Specifies the name of the KeySym that is to be converted.</p>
-<dt><i>upper_return</i></p>
-<dd>Returns the uppercase form of keysym, or keysym.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>index</i></dt>
+<dd>Specifies the element of KeyCode vector.</dd>
+<dt><i>keycode</i></dt>
+<dd>Specifies the KeyCode.</dd>
+<dt><i>keysym</i></dt>
+<dd>Specifies the KeySym that is to be searched for or converted.</dd>
+<dt><i>lower_return</i></dt>
+<dd>Returns the lowercase form of keysym, or keysym.</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the name of the KeySym that is to be converted.</dd>
+<dt><i>upper_return</i></dt>
+<dd>Returns the uppercase form of keysym, or keysym.</dd></dl>
 <h2>Description</h2>
 <p>Standard KeySym names are obtained from by removing the XK_ prefix from each name. KeySyms that are not part of the Xlib standard also may be obtained with this function. The set of KeySyms that are available in this manner and the mechanisms by which Xlib obtains them is implementation-dependent. </p>
 <p> If the KeySym name is not in the Host Portable Character Encoding, the result is implementation-dependent. If the specified string does not match a valid KeySym, <code>XStringToKeysym</code> returns <code>NoSymbol</code>. </p>

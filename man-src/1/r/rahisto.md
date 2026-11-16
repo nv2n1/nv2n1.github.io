@@ -16,52 +16,50 @@ description: "rahisto – print histogram of metrics from argus(8) data."
 <h2>OPTIONS</h2>
 <p> Rahisto, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rahisto/">rahisto</a>(1)</code> specific options are: </p>
 <dl>
-<dt><code>-M nozero</code></p>
-<dd> Don&#8217;t print bins that have zero frequencies.</p>
-<dt><code>-M outlayer</code></p>
-<dd> Print accumulated stats for outlayer values, i.e. the values that are outside the histogram range.</p>
-<dt><code>-H</code><i> metric bin[L]:range | size</i></p>
+<dt><code>-M nozero</code></dt>
+<dd> Don&#8217;t print bins that have zero frequencies.</dd>
+<dt><code>-M outlayer</code></dt>
+<dd> Print accumulated stats for outlayer values, i.e. the values that are outside the histogram range.</dd>
+<dt><code>-H</code><i> metric bin[L]:range | size</i></dt>
 <dd>
-<dt>Supported metrics are:</p>
-<dd></dl>
+</dd><dt>Supported metrics are:</dt>
+<dd></dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>dur</code></p>
-<dd> record total duration.</p>
-<dt><code>avgdur</code></p>
-<dd> record average duration.</p>
-<dt><code>proto</code></p>
-<dd> transaction protocol.</p>
-<dt><code>sport</code></p>
-<dd> source port number.</p>
-<dt><code>dport</code></p>
-<dd> destination port number.</p>
-<dt><code>stos</code></p>
-<dd> source TOS byte value.</p>
-<dt><code>dtos</code></p>
-<dd> destination TOS byte value.</p>
-<dt><code>sttl</code></p>
-<dd> src -&gt; dst TTL value.</p>
-<dt><code>dttl</code></p>
-<dd> dst -&gt; src TTL value.</p>
-<dt><code>[s|d]bytes</code></p>
-<dd> [src | dst] transaction bytes.</p>
-<dt><code>[s|d]appbytes</code></p>
-<dd> [src | dst] application bytes.</p>
-<dt><code>[s|d]pkts</code></p>
-<dd> [src | dst] packet count.</p>
-<dt><code>[s|d]meansz</code></p>
-<dd> [src | dst] mean packet size.</p>
-<dt><code>[s|d]load</code></p>
-<dd> packets per second.</p>
-<dt><code>[s|d]loss</code></p>
-<dd> pkts retransmitted or dropped.</p>
-<dt><code>[s|d]ploss</code></p>
-<dd> percent pkts retransmitted or dropped.</p>
-<dt><code>[s|d]rate</code></p>
-<dd> bits per second.</dl>
+<dt><code>dur</code></dt>
+<dd> record total duration.</dd>
+<dt><code>avgdur</code></dt>
+<dd> record average duration.</dd>
+<dt><code>proto</code></dt>
+<dd> transaction protocol.</dd>
+<dt><code>sport</code></dt>
+<dd> source port number.</dd>
+<dt><code>dport</code></dt>
+<dd> destination port number.</dd>
+<dt><code>stos</code></dt>
+<dd> source TOS byte value.</dd>
+<dt><code>dtos</code></dt>
+<dd> destination TOS byte value.</dd>
+<dt><code>sttl</code></dt>
+<dd> src -&gt; dst TTL value.</dd>
+<dt><code>dttl</code></dt>
+<dd> dst -&gt; src TTL value.</dd>
+<dt><code>[s|d]bytes</code></dt>
+<dd> [src | dst] transaction bytes.</dd>
+<dt><code>[s|d]appbytes</code></dt>
+<dd> [src | dst] application bytes.</dd>
+<dt><code>[s|d]pkts</code></dt>
+<dd> [src | dst] packet count.</dd>
+<dt><code>[s|d]meansz</code></dt>
+<dd> [src | dst] mean packet size.</dd>
+<dt><code>[s|d]load</code></dt>
+<dd> packets per second.</dd>
+<dt><code>[s|d]loss</code></dt>
+<dd> pkts retransmitted or dropped.</dd>
+<dt><code>[s|d]ploss</code></dt>
+<dd> percent pkts retransmitted or dropped.</dd>
+<dt><code>[s|d]rate</code></dt>
+<dd> bits per second.</dd></dl>
 </dl>
 <h2>INVOCATION</h2>
 <p> A sample invocation of <code><a href="/docs/linux/man/1-rahisto/">rahisto</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and generates a frequency distribution histogram for the transaction duration for HTTP traffic. </p>

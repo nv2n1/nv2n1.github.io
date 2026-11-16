@@ -12,7 +12,6 @@ std::filesystem::directory_entry::hard_link_count - std::filesystem::directory_e
 
 <pre><code>std::uintmax_t hard_link_count() const;
 (since C++ 17)
-
     std::uintmax_t hard_link_count(std::error_code &amp;ec) const noexcept;</code></pre> 
 If the number of hard links is cached in this directory_entry, returns the cached value. Otherwise, returns std::filesystem::hard_link_count(path()) or std::filesystem::hard_link_count(path(), ec), respectively 
 

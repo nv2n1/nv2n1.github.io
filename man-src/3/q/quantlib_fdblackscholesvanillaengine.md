@@ -18,6 +18,6 @@ description: "QuantLib::FdBlackScholesVanillaEngine – Finite-Differences Black
 <p>Finite-Differences Black Scholes vanilla option engine. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

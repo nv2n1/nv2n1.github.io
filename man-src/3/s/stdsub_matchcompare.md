@@ -12,10 +12,8 @@ std::sub_match&lt;BidirIt&gt;::compare - std::sub_match&lt;BidirIt&gt;::compare
 
 <pre><code>int compare(const sub_match &amp;m) const;
 (1)(since C++ 11)
-
     int compare(const string_type &amp;s) const;
 (2)(since C++ 11)
-
     int compare(const value_type *c) const;
 (3)(since C++ 11)</code></pre> 
 1) Compares two sub_match directly by comparing their underlying character sequences. Equivalent to str().compare(m.str()). 

@@ -10,7 +10,6 @@ description: "putenv – change or add an environment variable"
 <p>putenv &#8211; change or add an environment variable</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int putenv(char *string);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>putenv</code>(): _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
@@ -21,8 +20,8 @@ int putenv(char *string);</code></pre>
 <p>The <code>putenv</code>() function returns zero on success, or nonzero if an error occurs. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient space to allocate new environment.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient space to allocate new environment.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

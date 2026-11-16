@@ -14,10 +14,10 @@ description: "gnutls_dtls_set_data_mtu – API function"
 <p> <code>int gnutls_dtls_set_data_mtu(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>mtu</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>unsigned int mtu</p>
-<dd> The maximum unencrypted transfer unit of the session</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>unsigned int mtu</dt>
+<dd> The maximum unencrypted transfer unit of the session</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the maximum size of the *unencrypted* records which will be sent over a DTLS session. It is equivalent to calculating the DTLS packet overhead with the current encryption parameters, and calling <code>gnutls_dtls_set_mtu()</code> with that value. In particular, this means that you may need to call this function again after any negotiation or renegotiation, in order to ensure that the MTU is still sufficient to account for the new protocol overhead. </p>
 <p> In most cases you only need to call <code>gnutls_dtls_set_mtu()</code> with the maximum MTU of your transport layer.</p>
@@ -34,6 +34,6 @@ description: "gnutls_dtls_set_data_mtu – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

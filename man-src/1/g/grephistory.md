@@ -16,22 +16,22 @@ description: "grephistory – Query the INN history database"
 <p> Be sure to escape any special characters in the message <font SIZE="-1">ID</font> from the shell. Single quotes are recommended for this purpose since many message-IDs contain dollar signs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e</code></p>
-<dd> Only print the storage token if the article is stored on the system. (In other words, suppress the <tt>&quot;/dev/null&quot;</tt> or <tt>&quot;not found&quot;</tt> output for missing or remembered articles.)</p>
-<dt><code>-f</code> <i>db</i></p>
-<dd> Query the history database <i>db</i> rather than the default history database.</p>
-<dt><code>-i</code></p>
-<dd> Rather than expecting a message-ID on the command line, <code>grephistory</code> will read a list of message-IDs on standard input, one per line. Leading and trailing whitespace is ignored, as are any malformed lines. It will print on standard output those message-IDs which are not found in the history database. This is used when processing <tt>&quot;ihave&quot;</tt> control messages.</p>
-<dt><code>-l</code></p>
-<dd> Display the entire line from the history database, rather than just the storage <font SIZE="-1">API</font> token. If the message-ID is present in the history database but has no storage <font SIZE="-1">API</font> token, <code>grephistory</code> does not print anything.</p>
-<dt><code>-n</code></p>
-<dd> If the message-ID is present in the history database but has no storage <font SIZE="-1">API</font> token, print <tt>&quot;/dev/null&quot;</tt> and exit successfully. This can happen if an article has been cancelled or expired, but history information has still been retained. This is the default behavior.</p>
-<dt><code>-q</code></p>
-<dd> Don&#8217;t print any message, but still exit with the appropriate status.</p>
-<dt><code>-s</code></p>
-<dd> Rather than expecting a message-ID on the command line, <code>grephistory</code> will read a list of message-IDs on standard input, one per line. Leading and trailing whitespace is ignored, as are any malformed lines. It will print on standard output the storage <font SIZE="-1">API</font> tokens for any articles that are still available, one per line. This flag is used when processing <tt>&quot;sendme&quot;</tt> control messages.</p>
-<dt><code>-v</code></p>
-<dd> Print out the hash of the message-ID for diagnostic purposes, as well as any other requested information. This flag is not useful with <code>-i</code> or <code>-s</code>.</dl>
+<dt><code>-e</code></dt>
+<dd> Only print the storage token if the article is stored on the system. (In other words, suppress the <tt>&quot;/dev/null&quot;</tt> or <tt>&quot;not found&quot;</tt> output for missing or remembered articles.)</dd>
+<dt><code>-f</code> <i>db</i></dt>
+<dd> Query the history database <i>db</i> rather than the default history database.</dd>
+<dt><code>-i</code></dt>
+<dd> Rather than expecting a message-ID on the command line, <code>grephistory</code> will read a list of message-IDs on standard input, one per line. Leading and trailing whitespace is ignored, as are any malformed lines. It will print on standard output those message-IDs which are not found in the history database. This is used when processing <tt>&quot;ihave&quot;</tt> control messages.</dd>
+<dt><code>-l</code></dt>
+<dd> Display the entire line from the history database, rather than just the storage <font SIZE="-1">API</font> token. If the message-ID is present in the history database but has no storage <font SIZE="-1">API</font> token, <code>grephistory</code> does not print anything.</dd>
+<dt><code>-n</code></dt>
+<dd> If the message-ID is present in the history database but has no storage <font SIZE="-1">API</font> token, print <tt>&quot;/dev/null&quot;</tt> and exit successfully. This can happen if an article has been cancelled or expired, but history information has still been retained. This is the default behavior.</dd>
+<dt><code>-q</code></dt>
+<dd> Don&#8217;t print any message, but still exit with the appropriate status.</dd>
+<dt><code>-s</code></dt>
+<dd> Rather than expecting a message-ID on the command line, <code>grephistory</code> will read a list of message-IDs on standard input, one per line. Leading and trailing whitespace is ignored, as are any malformed lines. It will print on standard output the storage <font SIZE="-1">API</font> tokens for any articles that are still available, one per line. This flag is used when processing <tt>&quot;sendme&quot;</tt> control messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Print out the hash of the message-ID for diagnostic purposes, as well as any other requested information. This flag is not useful with <code>-i</code> or <code>-s</code>.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> In case the requested article is not listed in the history database: </p>
 <pre><code>

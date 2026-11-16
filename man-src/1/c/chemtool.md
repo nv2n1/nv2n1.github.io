@@ -11,11 +11,11 @@ description: "chemtool – chemical structures editor"
 <p> chemtool &#8211; chemical structures editor</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>chemtool</code> [<i>filename</i>] </p>
+<dt> <code>chemtool</code> [<i>filename</i>] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>chemtool</code></p>
-<dd>is a program for drawing organic molecules and exporting them as a X bitmap, PNG, PicTeX, Xfig, SVG, SXD, MDL or EPS file. It runs under the X Window System using the GTK widget set. </p>
+<dd>is a program for drawing organic molecules and exporting them as a X bitmap, PNG, PicTeX, Xfig, SVG, SXD, MDL or EPS file. It runs under the X Window System using the GTK widget set. </dd>
 <p> The program offers essentially unlimited undo/redo, two text fonts plus symbols, seven colors, drawing at several zoom scales, and square and hexagonal backdrop grids for easier alignment. </p>
 <h2>EXAMPLES</h2>
 <p> In all drawing and editing modes, mouse button one (usually the left button) is used to mark or draw objects, while button three (the right button) can be used to delete objects of the current type. The middle button is mainly used in the bond drawing modes where it allows fast changing of bondtypes. Starting with version 1.5, the default storage directory for datafiles, and the filename extension to use, can be saved via a configuration dialog.</p>
@@ -25,45 +25,43 @@ description: "chemtool – chemical structures editor"
 <p> Using the third (usually the right) mouse button deletes the bond next to the cursor position. </p>
 <p> The available bond types are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> single bond</p>
-<dt>&bull;</p>
-<dd> double bond</p>
-<dt>&bull;</p>
-<dd> double bond (shorter line on the other side)</p>
-<dt>&bull;</p>
-<dd> centered double bond</p>
-<dt>&bull;</p>
-<dd> triple bond (flanking lines shorter than central)</p>
-<dt>&bull;</p>
-<dd> triple bond (with equal line lengths)</p>
-<dt>&bull;</p>
-<dd> quadruple bond</p>
-<dt>&bull;</p>
-<dd> wedge-shaped bond</p>
-<dt>&bull;</p>
-<dd> dashed wedge-shaped bond</p>
-<dt>&bull;</p>
-<dd> wavy line</p>
-<dt>&bull;</p>
-<dd> half arrow</p>
-<dt>&bull;</p>
-<dd> regular arrow</p>
-<dt>&bull;</p>
-<dd> wide bond</p>
-<dt>&bull;</p>
-<dd> circle</p>
-<dt>&bull;</p>
-<dd> dotted line</p>
-<dt>&bull;</p>
-<dd> overlapping single bond (which cuts out a segment from any bond it crosses)</p>
-<dt>&bull;</p>
-<dd> light pi orbital lobe</p>
-<dt>&bull;</p>
-<dd> dark pi orbital lobe</dl>
+<dt>&bull;</dt>
+<dd> single bond</dd>
+<dt>&bull;</dt>
+<dd> double bond</dd>
+<dt>&bull;</dt>
+<dd> double bond (shorter line on the other side)</dd>
+<dt>&bull;</dt>
+<dd> centered double bond</dd>
+<dt>&bull;</dt>
+<dd> triple bond (flanking lines shorter than central)</dd>
+<dt>&bull;</dt>
+<dd> triple bond (with equal line lengths)</dd>
+<dt>&bull;</dt>
+<dd> quadruple bond</dd>
+<dt>&bull;</dt>
+<dd> wedge-shaped bond</dd>
+<dt>&bull;</dt>
+<dd> dashed wedge-shaped bond</dd>
+<dt>&bull;</dt>
+<dd> wavy line</dd>
+<dt>&bull;</dt>
+<dd> half arrow</dd>
+<dt>&bull;</dt>
+<dd> regular arrow</dd>
+<dt>&bull;</dt>
+<dd> wide bond</dd>
+<dt>&bull;</dt>
+<dd> circle</dd>
+<dt>&bull;</dt>
+<dd> dotted line</dd>
+<dt>&bull;</dt>
+<dd> overlapping single bond (which cuts out a segment from any bond it crosses)</dd>
+<dt>&bull;</dt>
+<dd> light pi orbital lobe</dd>
+<dt>&bull;</dt>
+<dd> dark pi orbital lobe</dd></dl>
 </dl>
 <h3>Semiautomatic drawing of rings:</h3>
 <p> Rings of 3 to 12 members can be drawn easily by holding down the Ctrl key while drawing a line. This line will then become the first segment of a ring that is automatically drawn in clockwise direction. The size of the ring defaults to that appropriate for the selected drawing mode (i.e. 5, 6 or 8 sides), but it can be set on a per-ring basis by pressing Ctlr-&lt;number&gt; before drawing the ring, where numbers 3-9 correspond to 3 to 9-membered rings, while 0 to 2 select 10, 11 and 12-membered rings, respectively. </p>
@@ -75,14 +73,14 @@ description: "chemtool – chemical structures editor"
 <p> The additional bond type available in the pulldown menu, </p>
 <dl>
 <dt>
-<dd> curved arrow</dl>
+</dt><dd> curved arrow</dd></dl>
 <p> is only available for drawing. It is actually a shortcut for one of the curve drawing functions described above, with the second and third control points automatically generated. As such, it can not be converted to or from any of the conventional bond types. </p>
 <p> (One can, however, convert it to any of the other curve types, e.g. to change the type of arrowhead). The shape of the arrow will usually need to be adjusted by shifting the control point that appears alongside it in &#8216;Move&#8217; mode. </p>
 <h3>Inserting text</h3>
 <p> Text written into the text box can be positioned with the cursor and may appear left, middle or right-aligned in the drawing. Text size and color is selectable from a fixed list of choices. There are two special characters to be used for sub- and superscripting the following character: </p>
 <dl>
 <dt>
-<dd> &#8216;^&#8217; to shift up <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(e.g. N^+)</p>
+</dt><dd> &#8216;^&#8217; to shift up <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(e.g. N^+)</dd>
 <p> &#8216;_&#8217; to shift down<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(e.g. CH_3)
 </dl>
 <p> The control character &#8216;|&#8217; is used to italicise the following character, as in |t-Bu. </p>
@@ -90,17 +88,17 @@ description: "chemtool – chemical structures editor"
 <p> The special character &#8216;@&#8217; switches to symbol mode, which uses the standard X11 symbol font. All alphabetic keys produce the corresponding Greek characters in this mode, and several other symbols are available if their standard Latin1 equivalents are already mapped onto the keyboard: </p>
 <dl>
 <dt>
-<dd> yen -&gt; infinity </p>
+</dt><dd> yen -&gt; infinity </dd>
 <p> hyphen -&gt; uparrow </p>
 <p> macron -&gt; downarrow</dl>
 <p> The symbols &#8216;plusminus&#8217; and &#8216;registered&#8217; (trademark) are already in the standard font, although they are not normally available on the keyboard. Use the following commands (or add the declarations to your <i>.xmodmaprc</i> ) to make them available via &lt;AltGr&gt;+&lt;Key&gt; (&lt;RightAlt&gt;+&lt;Key&gt;): </p>
 <dl>
 <dt>
-<dd> xmodmap -e &#8216;keysym r = r R registered&#8217; \<br />
+</dt><dd> xmodmap -e &#8216;keysym r = r R registered&#8217; \<br />
 &nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym o&nbsp;<wbr>=&nbsp;<wbr>o O yen&#8217;&nbsp;<wbr>\<br />
 &nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym p&nbsp;<wbr>=&nbsp;<wbr>p P plusminus&#8217;&nbsp;<wbr>\<br />
 &nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym u&nbsp;<wbr>=&nbsp;<wbr>u U hyphen&#8217;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym d&nbsp;<wbr>=&nbsp;<wbr>d D macron&#8217;</dl>
+&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym d&nbsp;<wbr>=&nbsp;<wbr>d D macron&#8217;</dd></dl>
 <p> (this leads to AltGr-P = plusminus, AltGr-R = registered in normal mode and AltGr-O = infinity, AltGr-U = uparrow, AltGr-D = downarrow in symbol font). </p>
 <p> For &#8216;dots-and-crosses&#8217; diagrams, the following mappings to the symbol font might be useful: acute -&gt; cross (e.g. keysym x = x X acute) middle dot -&gt; filled dot (e.g. keysym d = d D periodcentered) (using the degree sign for the open dot). </p>
 <p> Circled versions of the plus and minus signs for denoting ionic charge are available as @+ and @- . </p>
@@ -128,22 +126,22 @@ description: "chemtool – chemical structures editor"
 <p> If you need to add atoms outside of the rectangular area to your selection, simply draw another rubberband around them while holding down the Ctrl key. </p>
 <p> The selected parts will appear highlighted in blue and are immediately available for </p>
 <dl>
-<dt><i>moving</i></p>
-<dd> simply drag the fragment to the desired position with the mouse while holding down the left mouse button. (If you only need to move individual atoms or bonds, you can simply pick and drag them in &#8216;Move&#8217; mode without having to mark them first).</p>
-<dt><i>rotating</i></p>
-<dd> horizontal movement of the mouse translates to smooth rotation around the pivot point selected when pressing the mouse button</p>
-<dt><i>flipping </i></p>
-<dd> (mirroring) the fragment about a horizontal or vertical mirror plane through its center: this is performed by clicking on the appropriate menu button</p>
-<dt><i>copying</i></p>
-<dd> clicking on the &#8216;Copy&#8217; menu button creates an exact copy of the selected fragment slightly offset to the original. The mark is automatically transferred to the new copy.</p>
-<dt><i>rescaling</i></p>
-<dd> horizontal mouse movement is translated into a smooth increase or decrease of size of the marked fragment</p>
-<dt><i>deleting</i></p>
-<dd> to delete the marked fragment, simply click the third (usually the right) mouse button after it is highlighted.</p>
-<dt><i>framing</i></p>
-<dd> choosing one of the icons from the drop-down list of frame and bracket styles draws the corresponding object, e.g. a pair of round parentheses, around the highlighted fragment.</p>
-<dt><i>optimizing</i></p>
-<dd> clicking on the &#8216;bucket and broom&#8217; symbol invokes a function that removes overlapping (duplicate) bonds and labels from the drawing and straightens lines that are almost horizontal or vertical. </p>
+<dt><i>moving</i></dt>
+<dd> simply drag the fragment to the desired position with the mouse while holding down the left mouse button. (If you only need to move individual atoms or bonds, you can simply pick and drag them in &#8216;Move&#8217; mode without having to mark them first).</dd>
+<dt><i>rotating</i></dt>
+<dd> horizontal movement of the mouse translates to smooth rotation around the pivot point selected when pressing the mouse button</dd>
+<dt><i>flipping </i></dt>
+<dd> (mirroring) the fragment about a horizontal or vertical mirror plane through its center: this is performed by clicking on the appropriate menu button</dd>
+<dt><i>copying</i></dt>
+<dd> clicking on the &#8216;Copy&#8217; menu button creates an exact copy of the selected fragment slightly offset to the original. The mark is automatically transferred to the new copy.</dd>
+<dt><i>rescaling</i></dt>
+<dd> horizontal mouse movement is translated into a smooth increase or decrease of size of the marked fragment</dd>
+<dt><i>deleting</i></dt>
+<dd> to delete the marked fragment, simply click the third (usually the right) mouse button after it is highlighted.</dd>
+<dt><i>framing</i></dt>
+<dd> choosing one of the icons from the drop-down list of frame and bracket styles draws the corresponding object, e.g. a pair of round parentheses, around the highlighted fragment.</dd>
+<dt><i>optimizing</i></dt>
+<dd> clicking on the &#8216;bucket and broom&#8217; symbol invokes a function that removes overlapping (duplicate) bonds and labels from the drawing and straightens lines that are almost horizontal or vertical. </dd>
 </dl>
 <h3>Adding previously saved figures:</h3>
 <p> To add another molecule from a previously saved chemtool drawing, select it in the file selection window that comes up when you press the &#8216;Add&#8217; button. Single clicking on any filename in the list displays a small preview of the molecule to aid in selection. The newly added molecule is automatically made active so that it can be repositioned as desired. </p>
@@ -164,10 +162,10 @@ description: "chemtool – chemical structures editor"
 <p> <code>chemtool</code> and its companion program <code>cht</code> are available under the terms of the GNU General Public License (see the file &#8216;COPYING&#8217; in the package). This software comes with ABSOLUTELY NO WARRANTY. </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt><code>Thomas Volk</code></p>
-<dd> Original author and maintainer up to 1.1.1.</p>
-<dt><code>Dr. Martin Kroeker </code>&lt;martin [at] ruby.chemie.uni-freiburg.de&gt;</p>
-<dd> Maintainer and primary author since 1.1.2.</dl>
+<dt><code>Thomas Volk</code></dt>
+<dd> Original author and maintainer up to 1.1.1.</dd>
+<dt><code>Dr. Martin Kroeker </code>&lt;martin [at] ruby.chemie.uni-freiburg.de&gt;</dt>
+<dd> Maintainer and primary author since 1.1.2.</dd></dl>
 <p> <code>Radek Liboska, PhD </code>&lt;liboska [at] uochb.cas.cz&gt; </p>
 <p> <code>Michael Banck </code>&lt;mbanck [at] gmx.net&gt; </p>
 <p> and many others. </p>

@@ -10,7 +10,6 @@ description: "uisok – Low level helper function for testing Unicode text data.
 <p>uisok &#8211; Low level helper function for testing Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uisok(int c);</code></pre>
 <h2>Description</h2>
 <p>Low level helper function for testing Unicode text data. Finds out if the character value `c&#8217; can be encoded correctly in the current format, which can be useful if you are converting from Unicode to ASCII or another encoding format where the range of valid characters is limited.</p>

@@ -21,55 +21,27 @@ CALL WMLABS (X, Y, SYMTYP)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the symbol type in SYMTYP.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the symbol type in SYMTYP.
-<dt>SYMTYP
-<dd>(Character, Input) - A character variable that indicates the desired symbol.
-<dl><dd><dl><dt>Legal values for SYMTYP are:
-<dd>&nbsp;<wbr>'HI'&nbsp;<wbr>for high pressure symbols. 
-
- 
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the symbol type in SYMTYP.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the symbol type in SYMTYP.
+</dd><dt>SYMTYP
+</dt><dd>(Character, Input) - A character variable that indicates the desired symbol.
+</dd><dl><dd></dd><dl><dt>Legal values for SYMTYP are:
+</dt><dd>&nbsp;<wbr>'HI'&nbsp;<wbr>for high pressure symbols. 
 &nbsp;<wbr>'LOW'&nbsp;<wbr>for low pressure symbols. 
-
- 
 &nbsp;<wbr>'ARROW'&nbsp;<wbr>for arrows. 
-
- 
 &nbsp;<wbr>'DOT'&nbsp;<wbr>for dots. 
-
- 
 &nbsp;<wbr>'CLOUD'&nbsp;<wbr>for a cloud daily weather icon. 
-
- 
 &nbsp;<wbr>'ICE'&nbsp;<wbr>for an ice daily weather icon. 
-
- 
 &nbsp;<wbr>'IS'&nbsp;<wbr>for the intermittent shower daily weather icon. 
-
- 
 &nbsp;<wbr>'IT'&nbsp;<wbr>for the sunny, chance of T-storms daily weather icon. 
-
- 
 &nbsp;<wbr>'MC'&nbsp;<wbr>for the mostly cloudy daily weather icon. 
-
- 
 &nbsp;<wbr>'RAIN'&nbsp;<wbr>for the daily weather icon indicating rain. 
-
- 
 &nbsp;<wbr>'RS'&nbsp;<wbr>for the daily weather icon indicating rain and snow. 
-
- 
 &nbsp;<wbr>'SNOWFLAKES'&nbsp;<wbr>for the daily weather icon indicating snow. 
-
- 
 &nbsp;<wbr>'SUN'&nbsp;<wbr>for the sunny daily weather icon. 
-
- 
 &nbsp;<wbr>'THUNDERSTROM'&nbsp;<wbr>for the daily weather icon indicating thunderstorms. 
-
- 
-&nbsp;<wbr>'WIND'&nbsp;<wbr>for the windy daily weather icon.</dl></dl>
+&nbsp;<wbr>'WIND'&nbsp;<wbr>for the windy daily weather icon.</dd></dl></dl>
 </dl>
 
 <h2>Usage</h2>

@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_openpgp_keyring_file – API function"
 <p> <code>int gnutls_certificate_set_openpgp_keyring_file(gnutls_certificate_credentials_t </code><i>c</i><code>, const char * </code><i>file</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t c</p>
-<dd> A certificate credentials structure</p>
-<dt>const char * file</p>
-<dd> filename of the keyring.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> format of keyring.</dl>
+<dt>gnutls_certificate_credentials_t c</dt>
+<dd> A certificate credentials structure</dd>
+<dt>const char * file</dt>
+<dd> filename of the keyring.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> format of keyring.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function is used to set keyrings that will be used internally by various OpenPGP functions. For example to find a key when it is needed for an operations. The keyring will also be used at the verification functions.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_certificate_set_openpgp_keyring_file – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

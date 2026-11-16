@@ -23,17 +23,17 @@ description: "firewalld.ipset – firewalld ipset configuration files"
  &lt;entry&gt;<i>1.2.3.5</i>&lt;/entry&gt;
  &lt;entry&gt;<i>1.2.3.6</i>&lt;/entry&gt;
 &lt;/ipset&gt;</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <p>The config can contain these tags and attributes. Some of them are mandatory, others optional.</p>
 <h3>ipset</h3>
 <p>The mandatory ipset start and end tag defines the ipset. This tag can only be used once in a ipset configuration file. There is one mandatory and also optional attributes for ipsets: </p>
 <p> type=&quot;<i>string</i>&quot;</p>
 <dl>
-<dd>The mandatory type of the ipset. To get the list of supported types, use <code>firewall-cmd &#8211;get-ipset-types</code>.</dl>
+<dd>The mandatory type of the ipset. To get the list of supported types, use <code>firewall-cmd &#8211;get-ipset-types</code>.</dd></dl>
 <p> version=&quot;<i>string</i>&quot;</p>
 <dl>
-<dd>To give the ipset a version.</dl>
+<dd>To give the ipset a version.</dd></dl>
 <h3>short</h3>
 <p>Is an optional start and end tag and is used to give an ipset a more readable name.</p>
 <h3>description</h3>
@@ -42,10 +42,10 @@ description: "firewalld.ipset – firewalld ipset configuration files"
 <p>Is an optional empty-element tag and can be used several times to have more than one option. Mostly all attributes of an option entry are mandatory: </p>
 <p> name=&quot;<i>string</i>&quot;</p>
 <dl>
-<dd>The mandatory option name <i>string</i>.</dl>
+<dd>The mandatory option name <i>string</i>.</dd></dl>
 <p> value=&quot;<i>string</i>&quot;</p>
 <dl>
-<dd>The optional value of the option.</dl>
+<dd>The optional value of the option.</dd></dl>
 <p> The supported options are: family: <i>&quot;inet&quot;</i>|<i>&quot;inet6&quot;</i>, timeout: <i>integer</i>, hashsize: <i>integer</i>, maxelem: <i>integer</i>. For more information on these options, please have a look at the ipset documentation.</p>
 <h3>entry</h3>
 <p>Is an optional start and end tag and can be used several times to have more than one entry entry. An entry entry does not have attributes.</p>
@@ -54,14 +54,14 @@ description: "firewalld.ipset – firewalld ipset configuration files"
 <h2>Notes</h2>
 <p>firewalld home page:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dd></dl>
 <p> More documentation with examples:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Woerner</code> &lt;twoerner [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Jiri Popelka</code> &lt;jpopelka [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

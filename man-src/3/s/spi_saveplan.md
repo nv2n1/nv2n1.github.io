@@ -15,15 +15,15 @@ description: "SPI_saveplan – save a prepared statement"
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>the prepared statement to be saved</dl>
+<dd>the prepared statement to be saved</dd></dl>
 <h2>Return Value</h2>
 <p>Pointer to the copied statement; or NULL if unsuccessful. On error, <i>SPI_result</i> is set thus: </p>
 <p> SPI_ERROR_ARGUMENT</p>
 <dl COMPACT>
-<dd>if <i>plan</i> is NULL or invalid</dl>
+<dd>if <i>plan</i> is NULL or invalid</dd></dl>
 <p> SPI_ERROR_UNCONNECTED</p>
 <dl COMPACT>
-<dd>if called from an unconnected procedure</dl>
+<dd>if called from an unconnected procedure</dd></dl>
 <h2>Notes</h2>
 <p>The originally passed-in statement is not freed, so you might wish to do <code>SPI_freeplan</code> on it to avoid leaking memory until <code>SPI_finish</code>. </p>
 <p> In most cases, <code>SPI_keepplan</code> is preferred to this function, since it accomplishes largely the same result without needing to physically copy the prepared statement&#8217;s data structures.</p>

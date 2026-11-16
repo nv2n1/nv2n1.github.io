@@ -18,36 +18,36 @@ description: "UnRTF – converts document in RTF format to other formats"
 <p> Code page conversion is performed with the iconv(3) package.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;nopict</p>
-<dd> disables the automatic storing of embedded pictures to the current directory.</p>
-<dt>&#8211;noremap</p>
-<dd> disables charset conversion (currently only works for 8-bit charsets).</p>
-<dt>&#8211;html</p>
-<dd> selects HTML output (default).</p>
-<dt>&#8211;rtf</p>
-<dd> selects RTF output. The resulting output will often be much smaller than the input.</p>
-<dt>&#8211;text</p>
-<dd> selects plain ASCII text output.</p>
-<dt>&#8211;vt</p>
-<dd> selects text output with VT100 escape codes.</p>
-<dt>&#8211;latex</p>
-<dd> selects output of a LaTeX document.</p>
-<dt>&#8211;verbose</p>
-<dd> prints additional information.</p>
-<dt>&#8211;quiet</p>
-<dd> suppress output of leading comments</p>
-<dt>&#8211;version</p>
-<dd> prints the program version.</p>
-<dt>-t tags_file</p>
-<dd> specifies the tags output configuration file to be used. The command &quot;unrtf -t html&quot; is functionally identical to &quot;unrtf &#8211;html&quot;. The configuration files are a simple format. To change the behaviour of unrtf, a local copy of a system configuration file can be be made and edited. The most complete configuration file and hence the best starting point is /usr/share/unrtf/html.conf.</p>
-<dt>-P config_search_path</p>
-<dd> specifies the directories in which the configuration file for the specified format will be sought. The path can be provided as a single directory or a list of colon separated directories. The default is /usr/share/unrtf where distributed output configuration files are installed.</dl>
+<dt>&#8211;nopict</dt>
+<dd> disables the automatic storing of embedded pictures to the current directory.</dd>
+<dt>&#8211;noremap</dt>
+<dd> disables charset conversion (currently only works for 8-bit charsets).</dd>
+<dt>&#8211;html</dt>
+<dd> selects HTML output (default).</dd>
+<dt>&#8211;rtf</dt>
+<dd> selects RTF output. The resulting output will often be much smaller than the input.</dd>
+<dt>&#8211;text</dt>
+<dd> selects plain ASCII text output.</dd>
+<dt>&#8211;vt</dt>
+<dd> selects text output with VT100 escape codes.</dd>
+<dt>&#8211;latex</dt>
+<dd> selects output of a LaTeX document.</dd>
+<dt>&#8211;verbose</dt>
+<dd> prints additional information.</dd>
+<dt>&#8211;quiet</dt>
+<dd> suppress output of leading comments</dd>
+<dt>&#8211;version</dt>
+<dd> prints the program version.</dd>
+<dt>-t tags_file</dt>
+<dd> specifies the tags output configuration file to be used. The command &quot;unrtf -t html&quot; is functionally identical to &quot;unrtf &#8211;html&quot;. The configuration files are a simple format. To change the behaviour of unrtf, a local copy of a system configuration file can be be made and edited. The most complete configuration file and hence the best starting point is /usr/share/unrtf/html.conf.</dd>
+<dt>-P config_search_path</dt>
+<dd> specifies the directories in which the configuration file for the specified format will be sought. The path can be provided as a single directory or a list of colon separated directories. The default is /usr/share/unrtf where distributed output configuration files are installed.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/usr/share/unrtf/*.conf</p>
-<dd> &#8211; run time output configuration files.</p>
-<dt>/usr/share/unrtf/SYMBOL.charmap</p>
-<dd> &#8211; UTF encoding of the SYMBOL font used in many RTF files. Unfortunately the iconv package does not include font encodings. The format is identical to iconv code page files.</dl>
+<dt>/usr/share/unrtf/*.conf</dt>
+<dd> &#8211; run time output configuration files.</dd>
+<dt>/usr/share/unrtf/SYMBOL.charmap</dt>
+<dd> &#8211; UTF encoding of the SYMBOL font used in many RTF files. Unfortunately the iconv package does not include font encodings. The format is identical to iconv code page files.</dd></dl>
 <h2>WEBSITE</h2>
 <h2>NOTES</h2>
 <p> Report bugs in the program to <a rel="nofollow" href="http://savannah.gnu.org/projects/unrtf/">http://savannah.gnu.org/projects/unrtf/</a> </p>

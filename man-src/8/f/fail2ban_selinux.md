@@ -111,8 +111,8 @@ description: "fail2ban_selinux – Security Enhanced Linux Policy for the fail2b
 <p> <code>fail2ban_exec_t</code> </p>
 <p> &#8211; Set files with the fail2ban_exec_t type, if you want to transition an executable to the fail2ban_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/fail2ban, /usr/bin/fail2ban-server </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/fail2ban, /usr/bin/fail2ban-server </dd>
 </dl>
 <p> <code>fail2ban_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the fail2ban_initrc_exec_t type, if you want to transition an executable to the fail2ban_initrc_t domain. </p>

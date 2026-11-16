@@ -11,7 +11,6 @@ std::wcscmp - std::wcscmp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int wcscmp(const wchar_t *lhs, const wchar_t *rhs);</code></pre> 
 Compares two null-terminated wide strings lexicographically. 
 The sign of the result is the sign of the difference between the values of the first pair of wide characters that differ in the strings being compared. 
@@ -34,14 +33,10 @@ This function is not locale-sensitive, unlike std::wcscoll, and the order may no
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;const wchar_t *&gt; leaders{L&quot;Ленин&quot;, L&quot;Сталин&quot;, L&quot;Маленков&quot;,
                                          L&quot;Хрущёв&quot;, L&quot;Брежнев&quot;, L&quot;Андропов&quot;, L&quot;Черненко&quot;, L&quot;Горбачёв&quot;};

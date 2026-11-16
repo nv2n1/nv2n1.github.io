@@ -24,25 +24,23 @@ description: "git-missing – Show commits missing from another branch"
 <p> Show commits on either my current branch or master but not both:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git missing master
 &lt; d14b8f0 only on current checked out branch
 &gt; 97ef387 only on master
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Show commits on either branch foo or branch bar but not both:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git missing foo bar
 &lt; b8f0d14 only on foo
 &gt; f38797e only on bar
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Nate Jones &lt;<i>nate [at] endot.org</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

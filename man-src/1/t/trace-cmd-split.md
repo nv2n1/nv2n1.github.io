@@ -18,118 +18,118 @@ description: "trace-cmd-split – split a trace.dat file into smaller files"
 <p> <code>-i</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> If this option is not specified, then the split command will look for the file named <i>trace.dat</i>. This options will allow the reading of another file other than <i>trace.dat</i>.</dl>
+</dt><dd> If this option is not specified, then the split command will look for the file named <i>trace.dat</i>. This options will allow the reading of another file other than <i>trace.dat</i>.</dd></dl>
 <p> <code>-o</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> By default, the split command will use the input file name as a basis of where to write the split files. The output file will be the input file with an attached &#8216;.#\&#8217; to the end: trace.dat.1, trace.dat.2, etc. </p>
+</dt><dd> By default, the split command will use the input file name as a basis of where to write the split files. The output file will be the input file with an attached &#8216;.#\&#8217; to the end: trace.dat.1, trace.dat.2, etc. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This option will change the name of the base file used.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -o file  will create file.1, file.2, etc.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-s</code> <i>seconds</i></p>
 <dl>
 <dt>
-<dd> This specifies how many seconds should be recorded before the new file should stop.</dl>
+</dt><dd> This specifies how many seconds should be recorded before the new file should stop.</dd></dl>
 <p> <code>-m</code> <i>milliseconds</i></p>
 <dl>
 <dt>
-<dd> This specifies how many milliseconds should be recorded before the new file should stop.</dl>
+</dt><dd> This specifies how many milliseconds should be recorded before the new file should stop.</dd></dl>
 <p> <code>-u</code> <i>microseconds</i></p>
 <dl>
 <dt>
-<dd> This specifies how many microseconds should be recorded before the new file should stop.</dl>
+</dt><dd> This specifies how many microseconds should be recorded before the new file should stop.</dd></dl>
 <p> <code>-e</code> <i>events</i></p>
 <dl>
 <dt>
-<dd> This specifies how many events should be recorded before the new file should stop.</dl>
+</dt><dd> This specifies how many events should be recorded before the new file should stop.</dd></dl>
 <p> <code>-p</code> <i>pages</i></p>
 <dl>
 <dt>
-<dd> This specifies the number of pages that should be recorded before the new file should stop. </p>
+</dt><dd> This specifies the number of pages that should be recorded before the new file should stop. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Note: only one of *-p*, *-e*, *-u*, *-m*, *-s* may be specified at a time.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 If *-p* is specified, then *-c* is automatically set.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> This option causes the break up to repeat until end-time is reached (or end of the input if end-time is not specified). </p>
+</dt><dd> This option causes the break up to repeat until end-time is reached (or end of the input if end-time is not specified). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 trace-cmd split -r -e 10000
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This will break up trace.dat into several smaller files, each with at most
 10,000 events in it.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> This option causes the above break up to be per CPU. </p>
+</dt><dd> This option causes the above break up to be per CPU. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 trace-cmd split -c -p 10
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This will create a file that has 10 pages per each CPU from the input.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>-C</code> <i>cpu</i></p>
 <dl>
 <dt>
-<dd> This option will split for a single CPU. Only the cpu named will be extracted from the file. </p>
+</dt><dd> This option will split for a single CPU. Only the cpu named will be extracted from the file. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 trace-cmd split -C 1
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This will split out all the events for cpu 1 in the file.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>
@@ -141,10 +141,10 @@ This will split out all the events for cpu 1 in the file.
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

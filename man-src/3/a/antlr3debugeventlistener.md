@@ -28,7 +28,7 @@ description: "include/antlr3debugeventlistener.h –"
 <p> <code>Remarks:</code></p>
 <dl>
 <dt>
-<dd> From the java implementation by Terence Parr&#8230; I did not create a separate AST debugging interface as it would create lots of extra classes and DebugParser has a dbg var defined, which makes it hard to change to ASTDebugEventListener. I looked hard at this issue and it is easier to understand as one monolithic event interface for all possible events. Hopefully, adding ST debugging stuff won&#8217;t be bad. Leave for future. 4/26/2006.</dl>
+</dt><dd> From the java implementation by Terence Parr&#8230; I did not create a separate AST debugging interface as it would create lots of extra classes and DebugParser has a dbg var defined, which makes it hard to change to ASTDebugEventListener. I looked hard at this issue and it is easier to understand as one monolithic event interface for all possible events. Hopefully, adding ST debugging stuff won&#8217;t be bad. Leave for future. 4/26/2006.</dd></dl>
 <h2>Define Documentation</h2>
 <h3>#define DEFAULT_DEBUGGER_PORT 0xBFCC;</h3>
 <p> Default debugging port. </p>
@@ -40,5 +40,5 @@ description: "include/antlr3debugeventlistener.h –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

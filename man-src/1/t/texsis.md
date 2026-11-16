@@ -17,3 +17,4 @@ description: "TeXsis – TeX macros for Physicists"
 <p> TeXsis is stored as a pre-loaded format so that it loads quickly (see the man pages for <code><a href="/docs/linux/man/1-initex/">initex</a></code>(1), and/or &quot;preloaded formats&quot; in <i>The TeXbook</i> ). To run TeXsis simply give the command <code>texsis</code> in place of the <code>tex</code> command, i.e. </p>
 <p> <code>texsis </code> [ filename ] </p>
 <p> where <i>filename.tex </i> is the name of a file containing TeX and/or TeXsis 
+</p>

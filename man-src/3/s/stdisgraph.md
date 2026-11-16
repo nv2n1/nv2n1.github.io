@@ -11,7 +11,6 @@ std::isgraph - std::isgraph
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isgraph(int ch);</code></pre> 
 Checks if the given character is graphic (has a graphical representation) as classified by the currently installed C locale. In the default C locale, the following characters are graphic: 
 * digits (0123456789) 
@@ -50,12 +49,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xb6'; // the character ¶ in ISO-8859-1
     std::cout &lt;&lt; &quot;isgraph(\'\\xb6\', default C locale) returned &quot;

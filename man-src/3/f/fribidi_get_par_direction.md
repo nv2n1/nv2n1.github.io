@@ -27,11 +27,10 @@ url: "/docs/linux/man/3-fribidi_get_par_direction/"
 
 <dl>
 <dt><b>const FriBidiCharType *bidi_types</b>
-<dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
-
+</dt><dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
  Since there are 23 possible values for a <b>const FriBidiCharType</b>, they are not all listed here.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.</dl>
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -45,19 +44,17 @@ url: "/docs/linux/man/3-fribidi_get_par_direction/"
 
  Possible values for an <b>extern FriBidiParType</b> are as follows:
 <dl>
-<dt>
-<dd>
 <dl>
 <dt><b>FRIBIDI_PAR_LTR</b>
-<dd> Left-To-Right paragraph.
-<dt><b>FRIBIDI_PAR_RTL</b>
-<dd> Right-To-Left paragraph.
-<dt><b>FRIBIDI_PAR_ON</b>
-<dd> DirectiOn-Neutral paragraph.
-<dt><b>FRIBIDI_PAR_WLTR</b>
-<dd> Weak Left To Right paragraph.
-<dt><b>FRIBIDI_PAR_WRTL</b>
-<dd> Weak Right To Left paragraph.</dl>
+</dt><dd> Left-To-Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_RTL</b>
+</dt><dd> Right-To-Left paragraph.
+</dd><dt><b>FRIBIDI_PAR_ON</b>
+</dt><dd> DirectiOn-Neutral paragraph.
+</dd><dt><b>FRIBIDI_PAR_WLTR</b>
+</dt><dd> Weak Left To Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_WRTL</b>
+</dt><dd> Weak Right To Left paragraph.</dd></dl>
 </dl>
 
 <h2>SEE ALSO</h2>

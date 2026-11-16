@@ -14,13 +14,13 @@ description: "match_string – matches given string in an array"
 <p><i>array</i></p>
 <dl>
 <dd>
-<dd>array of strings</dl>
+</dd><dd>array of strings</dd></dl>
 <p> <i>n</i></p>
 <dl>
-<dd>number of strings in the array or -1 for NULL terminated arrays</dl>
+<dd>number of strings in the array or -1 for NULL terminated arrays</dd></dl>
 <p> <i>string</i></p>
 <dl>
-<dd>string to match with</dl>
+<dd>string to match with</dd></dl>
 <h2>Return</h2>
 <p>index of a <i>string</i> in the <i>array</i> if matches, or <code>-EINVAL</code> otherwise.</p>
 <h2>Copyright</h2>

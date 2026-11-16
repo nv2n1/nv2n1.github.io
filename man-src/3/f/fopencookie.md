@@ -20,12 +20,12 @@ FILE *fopencookie(void *cookie, const char *mode,
 <p> The <code>fopencookie</code>() function allows the programmer to create a custom implementation for a standard I/O stream. This implementation can store the stream&#8217;s data at a location of its own choosing; for example, <code>fopencookie</code>() is used to implement <code><a href="/docs/linux/man/3-fmemopen/">fmemopen</a></code>(3), which provides a stream interface to data that is stored in a buffer in memory. </p>
 <p> In order to create a custom stream the programmer must:</p>
 <dl>
-<dt>*</p>
-<dd> Implement four &quot;hook&quot; functions that are used internally by the standard I/O library when performing I/O on the stream.</p>
-<dt>*</p>
-<dd> Define a &quot;cookie&quot; data type, a structure that provides bookkeeping information (e.g., where to store data) used by the aforementioned hook functions. The standard I/O package knows nothing about the contents of this cookie (thus it is typed as <i>void&nbsp;*</i> when passed to <code>fopencookie</code>()), but automatically supplies the cookie as the first argument when calling the hook functions.</p>
-<dt>*</p>
-<dd> Call <code>fopencookie</code>() to open a new stream and associate the cookie and hook functions with that stream.</dl>
+<dt>*</dt>
+<dd> Implement four &quot;hook&quot; functions that are used internally by the standard I/O library when performing I/O on the stream.</dd>
+<dt>*</dt>
+<dd> Define a &quot;cookie&quot; data type, a structure that provides bookkeeping information (e.g., where to store data) used by the aforementioned hook functions. The standard I/O package knows nothing about the contents of this cookie (thus it is typed as <i>void&nbsp;*</i> when passed to <code>fopencookie</code>()), but automatically supplies the cookie as the first argument when calling the hook functions.</dd>
+<dt>*</dt>
+<dd> Call <code>fopencookie</code>() to open a new stream and associate the cookie and hook functions with that stream.</dd></dl>
 <p> The <code>fopencookie</code>() function serves a purpose similar to <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3): it opens a new stream and returns a pointer to a <i>FILE</i> object that is used to operate on that stream. </p>
 <p> The <i>cookie</i> argument is a pointer to the caller&#8217;s cookie structure that is to be associated with the new stream. This pointer is supplied as the first argument when the standard I/O library invokes any of the hook functions described below. </p>
 <p> The <i>mode</i> argument serves the same purpose as for <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3). The following modes are supported: <i>r</i>, <i>w</i>, <i>a</i>, <i>r+</i>, <i>w+</i>, and <i>a+</i>. See <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3) for details. </p>
@@ -37,59 +37,57 @@ FILE *fopencookie(void *cookie, const char *mode,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cookie_close_function_t&nbsp;*close; } cookie_io_functions_t; </p>
 <p> The four fields are as follows:</p>
 <dl>
-<dt><i>cookie_read_function_t *read</i></p>
-<dd> This function implements read operations for the stream. When called, it receives three arguments:</p>
+<dt><i>cookie_read_function_t *read</i></dt>
+<dd> This function implements read operations for the stream. When called, it receives three arguments:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t read(void&nbsp;*cookie, char&nbsp;*buf, size_t size);</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t read(void&nbsp;*cookie, char&nbsp;*buf, size_t size);</dd>
 <dt>
-<dd> The <i>buf</i> and <i>size</i> arguments are, respectively, a buffer into which input data can be placed and the size of that buffer. As its function result, the <i>read</i> function should return the number of bytes copied into <i>buf</i>, 0 on end of file, or -1 on error. The <i>read</i> function should update the stream offset appropriately.</p>
+</dt><dd> The <i>buf</i> and <i>size</i> arguments are, respectively, a buffer into which input data can be placed and the size of that buffer. As its function result, the <i>read</i> function should return the number of bytes copied into <i>buf</i>, 0 on end of file, or -1 on error. The <i>read</i> function should update the stream offset appropriately.</dd>
 <dt>
-<dd> If <i>*read</i> is a null pointer, then reads from the custom stream always return end of file.</p>
-<dt><i>cookie_write_function_t *write</i></p>
-<dd> This function implements write operations for the stream. When called, it receives three arguments:</p>
+</dt><dd> If <i>*read</i> is a null pointer, then reads from the custom stream always return end of file.</dd>
+<dt><i>cookie_write_function_t *write</i></dt>
+<dd> This function implements write operations for the stream. When called, it receives three arguments:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t write(void&nbsp;*cookie, const char&nbsp;*buf, size_t size);</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t write(void&nbsp;*cookie, const char&nbsp;*buf, size_t size);</dd>
 <dt>
-<dd> The <i>buf</i> and <i>size</i> arguments are, respectively, a buffer of data to be output to the stream and the size of that buffer. As its function result, the <i>write</i> function should return the number of bytes copied from <i>buf</i>, or 0 on error. (The function must not return a negative value.) The <i>write</i> function should update the stream offset appropriately.</p>
+</dt><dd> The <i>buf</i> and <i>size</i> arguments are, respectively, a buffer of data to be output to the stream and the size of that buffer. As its function result, the <i>write</i> function should return the number of bytes copied from <i>buf</i>, or 0 on error. (The function must not return a negative value.) The <i>write</i> function should update the stream offset appropriately.</dd>
 <dt>
-<dd> If <i>*write</i> is a null pointer, then output to the stream is discarded.</p>
-<dt><i>cookie_seek_function_t *seek</i></p>
-<dd> This function implements seek operations on the stream. When called, it receives three arguments:</p>
+</dt><dd> If <i>*write</i> is a null pointer, then output to the stream is discarded.</dd>
+<dt><i>cookie_seek_function_t *seek</i></dt>
+<dd> This function implements seek operations on the stream. When called, it receives three arguments:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int seek(void&nbsp;*cookie, off64_t&nbsp;*offset, int whence);</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int seek(void&nbsp;*cookie, off64_t&nbsp;*offset, int whence);</dd>
 <dt>
-<dd> The <i>*offset</i> argument specifies the new file offset depending on which of the following three values is supplied in <i>whence</i>:</p>
+</dt><dd> The <i>*offset</i> argument specifies the new file offset depending on which of the following three values is supplied in <i>whence</i>:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>SEEK_SET</code></p>
-<dd> The stream offset should be set <i>*offset</i> bytes from the start of the stream.</p>
-<dt><code>SEEK_CUR</code></p>
-<dd> <i>*offset</i> should be added to the current stream offset.</p>
-<dt><code>SEEK_END</code></p>
-<dd> The stream offset should be set to the size of the stream plus <i>*offset</i>.</dl>
+<dt><code>SEEK_SET</code></dt>
+<dd> The stream offset should be set <i>*offset</i> bytes from the start of the stream.</dd>
+<dt><code>SEEK_CUR</code></dt>
+<dd> <i>*offset</i> should be added to the current stream offset.</dd>
+<dt><code>SEEK_END</code></dt>
+<dd> The stream offset should be set to the size of the stream plus <i>*offset</i>.</dd></dl>
 </dl>
 <dt>
-<dd> Before returning, the <i>seek</i> function should update <i>*offset</i> to indicate the new stream offset.</p>
+</dt><dd> Before returning, the <i>seek</i> function should update <i>*offset</i> to indicate the new stream offset.</dd>
 <dt>
-<dd> As its function result, the <i>seek</i> function should return 0 on success, and -1 on error.</p>
+</dt><dd> As its function result, the <i>seek</i> function should return 0 on success, and -1 on error.</dd>
 <dt>
-<dd> If <i>*seek</i> is a null pointer, then it is not possible to perform seek operations on the stream.</p>
-<dt><i>cookie_close_function_t *close</i></p>
-<dd> This function closes the stream. The hook function can do things such as freeing buffers allocated for the stream. When called, it receives one argument:</p>
+</dt><dd> If <i>*seek</i> is a null pointer, then it is not possible to perform seek operations on the stream.</dd>
+<dt><i>cookie_close_function_t *close</i></dt>
+<dd> This function closes the stream. The hook function can do things such as freeing buffers allocated for the stream. When called, it receives one argument:</dd>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int close(void&nbsp;*cookie);</p>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int close(void&nbsp;*cookie);</dd>
 <dt>
-<dd> The <i>cookie</i> argument is the cookie that the programmer supplied when calling <code>fopencookie</code>().</p>
+</dt><dd> The <i>cookie</i> argument is the cookie that the programmer supplied when calling <code>fopencookie</code>().</dd>
 <dt>
-<dd> As its function result, the <i>close</i> function should return 0 on success, and <code>EOF</code> on error.</p>
+</dt><dd> As its function result, the <i>close</i> function should return 0 on success, and <code>EOF</code> on error.</dd>
 <dt>
-<dd> If <i>*close</i> is NULL, then no special action is performed when the stream is closed.</dl>
+</dt><dd> If <i>*close</i> is NULL, then no special action is performed when the stream is closed.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success <code>fopencookie</code>() returns a pointer to the new stream. On error, NULL is returned.</p>
 <h2>ATTRIBUTES</h2>

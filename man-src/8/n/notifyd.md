@@ -19,31 +19,31 @@ description: "notifyd – Cyrus notification server"
 <p> <code>Notifyd</code> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>. The <i>notifysocket</i> option is used to specify the Unix domain socket to listen on for notifications.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-U</code><i> uses</i></p>
-<dd>The maximum number of times that the process should be used for new connections before shutting down. The default is 250.</p>
-<dt><code>-T</code><i> timeout</i></p>
-<dd>The number of seconds that the process will wait for a new connection before shutting down. Note that a value of 0 (zero) will disable the timeout. The default is 60.</p>
-<dt><code>-D</code></p>
-<dd>Run external debugger specified in debug_command.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-U</code><i> uses</i></dt>
+<dd>The maximum number of times that the process should be used for new connections before shutting down. The default is 250.</dd>
+<dt><code>-T</code><i> timeout</i></dt>
+<dd>The number of seconds that the process will wait for a new connection before shutting down. Note that a value of 0 (zero) will disable the timeout. The default is 60.</dd>
+<dt><code>-D</code></dt>
+<dd>Run external debugger specified in debug_command.</dd></dl>
 <h2>Notification Methods</h2>
 <dl>
-<dt><code>null</code></p>
-<dd>Ignore the notification request.</p>
-<dt><code>log</code></p>
-<dd>Log the notification to syslog (for testing).</p>
-<dt><code>mailto</code></p>
-<dd>Email the notification. This method can ONLY be used in a Sieve &#8216;notify&#8217; action as it requires a <i>mailto:</i> URL to be specified as an <i>:option</i>.</p>
-<dt><code>zephyr</code></p>
-<dd>Send the notification as a zephyrgram. If used in a Sieve &#8216;notify&#8217; action, additional recipients can be specified as <i>:options</i>.</p>
-<dt><code>external</code></p>
-<dd>Send the notification via an external program. The path to the program is specified using the <i>notify_external</i> option in the configuration file.</dl>
+<dt><code>null</code></dt>
+<dd>Ignore the notification request.</dd>
+<dt><code>log</code></dt>
+<dd>Log the notification to syslog (for testing).</dd>
+<dt><code>mailto</code></dt>
+<dd>Email the notification. This method can ONLY be used in a Sieve &#8216;notify&#8217; action as it requires a <i>mailto:</i> URL to be specified as an <i>:option</i>.</dd>
+<dt><code>zephyr</code></dt>
+<dd>Send the notification as a zephyrgram. If used in a Sieve &#8216;notify&#8217; action, additional recipients can be specified as <i>:options</i>.</dd>
+<dt><code>external</code></dt>
+<dd>Send the notification via an external program. The path to the program is specified using the <i>notify_external</i> option in the configuration file.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd>Default configuration file.</p>
-<dt><code>/etc/cyrus.conf</code></p>
-<dd>Cyrus Master process configuration file.</dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd>Default configuration file.</dd>
+<dt><code>/etc/cyrus.conf</code></dt>
+<dd>Cyrus Master process configuration file.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code>cyrus.conf</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code>, <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code> </p>

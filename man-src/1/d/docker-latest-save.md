@@ -23,7 +23,7 @@ Write to a file, instead of STDOUT </p>
 <p> Save all fedora repository images to a fedora-all.tar and save the latest fedora image to a fedora-latest.tar: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker save fedora &gt; fedora-all.tar
 $ docker save --output=fedora-latest.tar fedora:latest
@@ -32,7 +32,7 @@ $ ls -sh fedora-all.tar
 $ ls -sh fedora-latest.tar
 367M fedora-latest.tar
 </pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-load/">docker-load</a>(1)</code> to load an image from a tar archive on STDIN. </p>
 <h2>HISTORY</h2>

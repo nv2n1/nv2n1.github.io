@@ -11,7 +11,6 @@ description: "sc::PW86XFunctional –"
 <p> Implements the Perdew-Wang 1986 (PW86) Exchange functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -23,22 +22,10 @@ description: "sc::PW86XFunctional –"
 <p> void <code>point</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_constants ()
-
-
-
 Protected Attributes
 double a_
-
-
-
 double b_
-
-
-
 double c_
-
-
-
 double m_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the Perdew-Wang 1986 (PW86) Exchange functional. </p>

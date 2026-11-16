@@ -21,11 +21,11 @@ description: "virt-v2v-copy-to-local – Copy a remote guest to the local machin
 <p> This tool is not usually necessary, but there are a few special cases (see list below) where you might need it. </p>
 <p> If your case does not fit one of these special cases, then ignore this tool and read <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1) instead. The virt-v2v-copy-to-local process is slower than using virt-v2v directly, because it has to copy unused parts of the guest disk.</p>
 <dl>
-<dt>&bull;</p>
-<dd> You have a Xen guest using host block devices. Virt-v2v cannot convert such guests directly. </p>
+<dt>&bull;</dt>
+<dd> You have a Xen guest using host block devices. Virt-v2v cannot convert such guests directly. </dd>
 <p> See &#8220;<font SIZE="-1">XEN OR SSH CONVERSIONS FROM BLOCK DEVICES&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</p>
-<dt>&bull;</p>
-<dd> You have VMware ESXi hypervisors, and are not using VMware vCenter to manage them. Virt-v2v cannot directly access ESXi hypervisor, so you either have to export the guest as an <font SIZE="-1">OVA </font>(eg. using VMware&#8217;s <tt>&quot;ovftool&quot;</tt>); or you can use this tool to copy the guest to a local file on the conversion server, from where virt-v2v will be able to access it. </p>
+<dt>&bull;</dt>
+<dd> You have VMware ESXi hypervisors, and are not using VMware vCenter to manage them. Virt-v2v cannot directly access ESXi hypervisor, so you either have to export the guest as an <font SIZE="-1">OVA </font>(eg. using VMware&#8217;s <tt>&quot;ovftool&quot;</tt>); or you can use this tool to copy the guest to a local file on the conversion server, from where virt-v2v will be able to access it. </dd>
 <p> See &#8220;<font SIZE="-1">INPUT FROM VMWARE</font> ESXi <font SIZE="-1">HYPERVISOR&#8221;</font> in <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1).</dl>
 <h3>How this tool works</h3>
 <p> This tool uses libvirt to get the libvirt <font SIZE="-1">XML </font>(metadata) of the remote guest, essentially equivalent to running <tt>&quot;virsh dumpxml guest&quot;</tt>. </p>
@@ -54,25 +54,25 @@ description: "virt-v2v-copy-to-local – Copy a remote guest to the local machin
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>-ic</code> libvirtURI</p>
-<dd> Specify a libvirt connection <font SIZE="-1">URI</font></p>
-<dt><code>&#8211;password-file</code> file</p>
-<dd> Instead of asking for password(s) interactively, pass the password through a file. Note the file should contain the whole password, <code>without any trailing newline</code>, and for security the file should have mode <tt>0600</tt> so that others cannot read it. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>-ic</code> libvirtURI</dt>
+<dd> Specify a libvirt connection <font SIZE="-1">URI</font></dd>
+<dt><code>&#8211;password-file</code> file</dt>
+<dd> Instead of asking for password(s) interactively, pass the password through a file. Note the file should contain the whole password, <code>without any trailing newline</code>, and for security the file should have mode <tt>0600</tt> so that others cannot read it. </dd>
 <p> Currently this option does not have any effect on xen+ssh transfers, but that is a bug.</p>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> This disables progress bars and other unnecessary output.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> This disables progress bars and other unnecessary output.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="https://libvirt.org/uri.html,">https://libvirt.org/uri.html,</a> <a rel="nofollow" href="https://libvirt.org/remote.html,">https://libvirt.org/remote.html,</a> <a rel="nofollow" href="https://libvirt.org/drvesx.html.">https://libvirt.org/drvesx.html.</a></p>
 <h2>AUTHORS</h2>
@@ -88,13 +88,13 @@ description: "virt-v2v-copy-to-local – Copy a remote guest to the local machin
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

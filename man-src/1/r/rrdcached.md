@@ -16,8 +16,8 @@ description: "rrdcached – Data caching daemon for rrdtool"
 <p> The daemon was written with big setups in mind. Those setups usually run into <font SIZE="-1">IO</font>&nbsp;<wbr>related problems sooner or later for reasons that are beyond the scope of this document. Check the wiki at the RRDtool homepage for details. Also check &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; below before using this daemon! A detailed description of how the daemon operates can be found in the &#8220;<font SIZE="-1">HOW</font> <font SIZE="-1">IT</font> <font SIZE="-1">WORKS</font>&#8221; section below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code> <i>address</i></p>
-<dd> Tells the daemon to bind to <i>address</i> and accept incoming connections on that socket. If <i>address</i> begins with <tt>&quot;unix:&quot;</tt>, everything following that prefix is interpreted as the path to a <font SIZE="-1">UNIX</font> domain socket. Otherwise the address or node name are resolved using <tt>&quot;getaddrinfo()&quot;</tt>. </p>
+<dt><code>-l</code> <i>address</i></dt>
+<dd> Tells the daemon to bind to <i>address</i> and accept incoming connections on that socket. If <i>address</i> begins with <tt>&quot;unix:&quot;</tt>, everything following that prefix is interpreted as the path to a <font SIZE="-1">UNIX</font> domain socket. Otherwise the address or node name are resolved using <tt>&quot;getaddrinfo()&quot;</tt>. </dd>
 <p> For network sockets, a port may be specified by using the form <tt>&quot;</tt>[<tt></tt>address<tt></tt>]:<tt></tt>port<tt>&quot;</tt>. If the address is an IPv4 address or a fully qualified domain name (i. e. the address contains at least one dot (<tt>&quot;.&quot;</tt>)), the square brackets can be omitted, resulting in the (simpler) <tt>&quot;</tt>address<tt></tt>:<tt></tt>port<tt>&quot;</tt> pattern. The default port is <code>42217/tcp</code>. If you specify a network socket, it is mandatory to read the &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; section. </p>
 <p> The following formats are accepted. Please note that the address of the <font SIZE="-1">UNIX</font> domain socket <code>must</code> start with a slash in the second case! </p>
 <pre>
@@ -28,17 +28,17 @@ description: "rrdcached – Data caching daemon for rrdtool"
    &lt;hostname-or-ipv4&gt;:&lt;port&gt;
 </pre>
 <p> If the <code>-l</code> option is not specified the default address, <tt>&quot;unix:/tmp/rrdcached.sock&quot;</tt>, will be used.</p>
-<dt><code>-s</code> <i>group_name</i>|<i>gid</i></p>
-<dd> Set the group permissions of a <font SIZE="-1">UNIX</font> domain socket. The option accepts either a numeric group id or group name. That group will then have both read and write permissions (the socket will have file permissions 0750) for the socket and, therefore, is able to send commands to the daemon. This may be useful in cases where you cannot easily run all <font SIZE="-1">RRD</font> processes with the same user privileges (e.g. graph generating <font SIZE="-1">CGI</font> scripts that typically run in the permission context of the web server). </p>
+<dt><code>-s</code> <i>group_name</i>|<i>gid</i></dt>
+<dd> Set the group permissions of a <font SIZE="-1">UNIX</font> domain socket. The option accepts either a numeric group id or group name. That group will then have both read and write permissions (the socket will have file permissions 0750) for the socket and, therefore, is able to send commands to the daemon. This may be useful in cases where you cannot easily run all <font SIZE="-1">RRD</font> processes with the same user privileges (e.g. graph generating <font SIZE="-1">CGI</font> scripts that typically run in the permission context of the web server). </dd>
 <p> This option affects the <i>following</i> <font SIZE="-1">UNIX</font> socket addresses (the following <code>-l</code> options) or the default socket (if no <code>-l</code> options have been specified), i.e., you may specify different settings for different sockets. </p>
 <p> The default is not to change ownership or permissions of the socket and, thus, use the system default.</p>
-<dt><code>-m</code> <i>mode</i></p>
-<dd> Set the file permissions of a <font SIZE="-1">UNIX</font> domain socket. The option accepts an octal number representing the bit pattern for the mode (see <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1) for details). </p>
+<dt><code>-m</code> <i>mode</i></dt>
+<dd> Set the file permissions of a <font SIZE="-1">UNIX</font> domain socket. The option accepts an octal number representing the bit pattern for the mode (see <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1) for details). </dd>
 <p> Please note that not all systems honor this setting. On Linux, read/write permissions are required to connect to a <font SIZE="-1">UNIX</font> socket. However, many BSD-derived systems ignore permissions for <font SIZE="-1">UNIX</font> sockets. See <i><a href="/docs/linux/man/7-unix/">unix</a></i>(7) for details. </p>
 <p> This option affects the <i>following</i> <font SIZE="-1">UNIX</font> socket addresses (the following <code>-l</code> options) or the default socket (if no <code>-l</code> options have been specified), i.e., you may specify different settings for different sockets. </p>
 <p> The default is not to change ownership or permissions of the socket and, thus, use the system default.</p>
-<dt><code>-P</code> <i>command</i>[,<i>command</i>[,&#8230;]]</p>
-<dd> Specifies the commands accepted via a network socket. This allows administrators of <i>RRDCacheD</i> to control the actions accepted from various sources. </p>
+<dt><code>-P</code> <i>command</i>[,<i>command</i>[,&#8230;]]</dt>
+<dd> Specifies the commands accepted via a network socket. This allows administrators of <i>RRDCacheD</i> to control the actions accepted from various sources. </dd>
 <p> The arguments given to the <code>-P</code> option is a comma separated list of commands. For example, to allow the <tt>&quot;FLUSH&quot;</tt> and <tt>&quot;PENDING&quot;</tt> commands one could specify: </p>
 <pre>
   rrdcached -P FLUSH,PENDING $MORE_ARGUMENTS
@@ -49,40 +49,38 @@ description: "rrdcached – Data caching daemon for rrdtool"
 </pre>
 <p> A complete list of available commands can be found in the section &#8220;Valid Commands&#8221; below. There are two minor special exceptions:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;HELP&quot;</tt> and <tt>&quot;QUIT&quot;</tt> commands are always allowed.</p>
-<dt>&bull;</p>
-<dd> If the <tt>&quot;BATCH&quot;</tt> command is accepted, the <code>.</code>&nbsp;<wbr>command will automatically be accepted, too.</dl>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;HELP&quot;</tt> and <tt>&quot;QUIT&quot;</tt> commands are always allowed.</dd>
+<dt>&bull;</dt>
+<dd> If the <tt>&quot;BATCH&quot;</tt> command is accepted, the <code>.</code>&nbsp;<wbr>command will automatically be accepted, too.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> Please also read &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; below.</dl>
-<dt><code>-w</code> <i>timeout</i></p>
-<dd> Data is written to disk every <i>timeout</i> seconds. If this option is not specified the default interval of 300 seconds will be used.</p>
-<dt><code>-z</code> <i>delay</i></p>
-<dd> If specified, rrdcached will delay writing of each <font SIZE="-1">RRD</font> for a random number of seconds in the range&nbsp;<wbr>[0,<i>delay</i>). This will avoid too many writes being queued simultaneously. This value should be no greater than the value specified in <code>-w</code>. By default, there is no delay.</p>
-<dt><code>-f</code> <i>timeout</i></p>
-<dd> Every <i>timeout</i> seconds the entire cache is searched for old values which are written to disk. This only concerns files to which updates have stopped, so setting this to a high value, such as 3600 seconds, is acceptable in most cases. This timeout defaults to 3600 seconds.</p>
-<dt><code>-p</code> <i>file</i></p>
-<dd> Sets the name and location of the PID-file. If not specified, the default, <tt>&quot;</tt>$localststedir<tt>/run/rrdcached.pid&quot;</tt> will be used.</p>
-<dt><code>-t</code> <i>write_threads</i></p>
-<dd> Specifies the number of threads used for writing <font SIZE="-1">RRD</font> files. The default is 4. Increasing this number will allow rrdcached to have more simultaneous I/O requests into the kernel. This may allow the kernel to re-order disk writes, resulting in better disk throughput.</p>
-<dt><code>-j</code> <i>dir</i></p>
-<dd> Write updates to a journal in <i>dir</i>. In the event of a program or system crash, this will allow the daemon to write any updates that were pending at the time of the crash. </p>
+</dt><dd>
+<p> Please also read &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; below.</dd></dl>
+<dt><code>-w</code> <i>timeout</i></dt>
+<dd> Data is written to disk every <i>timeout</i> seconds. If this option is not specified the default interval of 300 seconds will be used.</dd>
+<dt><code>-z</code> <i>delay</i></dt>
+<dd> If specified, rrdcached will delay writing of each <font SIZE="-1">RRD</font> for a random number of seconds in the range&nbsp;<wbr>[0,<i>delay</i>). This will avoid too many writes being queued simultaneously. This value should be no greater than the value specified in <code>-w</code>. By default, there is no delay.</dd>
+<dt><code>-f</code> <i>timeout</i></dt>
+<dd> Every <i>timeout</i> seconds the entire cache is searched for old values which are written to disk. This only concerns files to which updates have stopped, so setting this to a high value, such as 3600 seconds, is acceptable in most cases. This timeout defaults to 3600 seconds.</dd>
+<dt><code>-p</code> <i>file</i></dt>
+<dd> Sets the name and location of the PID-file. If not specified, the default, <tt>&quot;</tt>$localststedir<tt>/run/rrdcached.pid&quot;</tt> will be used.</dd>
+<dt><code>-t</code> <i>write_threads</i></dt>
+<dd> Specifies the number of threads used for writing <font SIZE="-1">RRD</font> files. The default is 4. Increasing this number will allow rrdcached to have more simultaneous I/O requests into the kernel. This may allow the kernel to re-order disk writes, resulting in better disk throughput.</dd>
+<dt><code>-j</code> <i>dir</i></dt>
+<dd> Write updates to a journal in <i>dir</i>. In the event of a program or system crash, this will allow the daemon to write any updates that were pending at the time of the crash. </dd>
 <p> On startup, the daemon will check for journal files in this directory. If found, all updates therein will be read into memory before the daemon starts accepting new connections. </p>
 <p> The journal will be rotated with the same frequency as the flush timer given by <code>-f</code>. </p>
 <p> When journaling is enabled, the daemon will use a fast shutdown procedure. Rather than flushing all files to disk, it will make sure the journal is properly written and exit immediately. Although the <font SIZE="-1">RRD</font> data files are not fully up-to-date, no information is lost; all pending updates will be replayed from the journal next time the daemon starts up. </p>
 <p> To disable fast shutdown, use the <code>-F</code> option.</p>
-<dt><code>-F</code></p>
-<dd> <font SIZE="-1">ALWAYS</font> flush all updates to the <font SIZE="-1">RRD</font> data files when the daemon is shut down, regardless of journal setting.</p>
-<dt><code>-g</code></p>
-<dd> Run in the foreground. The daemon will not <i>fork()</i>.</p>
-<dt><code>-b</code> <i>dir</i></p>
-<dd> The daemon will change into a specific directory at startup. All files passed to the daemon, that are specified by a <code>relative</code> path, will be interpreted to be relative to this directory. If not given the default, <tt>&quot;/tmp&quot;</tt>, will be used. </p>
+<dt><code>-F</code></dt>
+<dd> <font SIZE="-1">ALWAYS</font> flush all updates to the <font SIZE="-1">RRD</font> data files when the daemon is shut down, regardless of journal setting.</dd>
+<dt><code>-g</code></dt>
+<dd> Run in the foreground. The daemon will not <i>fork()</i>.</dd>
+<dt><code>-b</code> <i>dir</i></dt>
+<dd> The daemon will change into a specific directory at startup. All files passed to the daemon, that are specified by a <code>relative</code> path, will be interpreted to be relative to this directory. If not given the default, <tt>&quot;/tmp&quot;</tt>, will be used. </dd>
 <pre><code>
 + -- -- -- -- -- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- --+!Command line !File updated !+-- -- -- -- -- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- --+!foo.rrd ! / tmp / foo.rrd !!foo / bar.rrd ! / tmp / foo / bar.rrd !! / var / lib / rrd / foo.rrd ! / var / lib / rrd / foo.rrd !+-- -- -- -- -- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- --+Paths given on the command line and paths actually
                                                                                                                                                                                                                                                                                                                                                                                                                                   updated by the daemon,
@@ -99,31 +97,31 @@ description: "rrdcached – Data caching daemon for rrdtool"
     /base/dir
     /base/dir/somewhere
 </pre>
-<dt><code>-B</code></p>
-<dd> Only permit writes into the base directory specified in <code>-b</code> (and any sub-directories). This does <font SIZE="-1"><code>NOT</code></font> detect symbolic links. Paths containing <tt>&quot;../&quot;</tt> will also be blocked.</dl>
+<dt><code>-B</code></dt>
+<dd> Only permit writes into the base directory specified in <code>-b</code> (and any sub-directories). This does <font SIZE="-1"><code>NOT</code></font> detect symbolic links. Paths containing <tt>&quot;../&quot;</tt> will also be blocked.</dd></dl>
 <h2>AFFECTED RRDTOOL COMMANDS</h2>
 <p> The following commands may be made aware of the <code>rrdcached</code> using the command line argument <code>&#8211;daemon</code> or the environment variable <font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font>:</p>
 <dl>
-<dt>&bull;</p>
-<dd> dump</p>
-<dt>&bull;</p>
-<dd> fetch</p>
-<dt>&bull;</p>
-<dd> flush</p>
-<dt>&bull;</p>
-<dd> graph</p>
-<dt>&bull;</p>
-<dd> graphv</p>
-<dt>&bull;</p>
-<dd> info</p>
-<dt>&bull;</p>
-<dd> last</p>
-<dt>&bull;</p>
-<dd> lastupdate</p>
-<dt>&bull;</p>
-<dd> update</p>
-<dt>&bull;</p>
-<dd> xport</dl>
+<dt>&bull;</dt>
+<dd> dump</dd>
+<dt>&bull;</dt>
+<dd> fetch</dd>
+<dt>&bull;</dt>
+<dd> flush</dd>
+<dt>&bull;</dt>
+<dd> graph</dd>
+<dt>&bull;</dt>
+<dd> graphv</dd>
+<dt>&bull;</dt>
+<dd> info</dd>
+<dt>&bull;</dt>
+<dd> last</dd>
+<dt>&bull;</dt>
+<dd> lastupdate</dd>
+<dt>&bull;</dt>
+<dd> update</dd>
+<dt>&bull;</dt>
+<dd> xport</dd></dl>
 <p> The <code>update</code> command can send values to the daemon instead of writing them to the disk itself. All other commands can send a <font SIZE="-1"><code>FLUSH</code></font> command (see below) to the daemon before accessing the files, so they work with up-to-date data even if the cache timeout is large.</p>
 <h2>ERROR REPORTING</h2>
 <p> The daemon reports errors in one of two ways: During startup, error messages are printed to <tt>&quot;STDERR&quot;</tt>. One of the steps when starting up is to fork to the background and closing <tt>&quot;STDERR&quot;</tt> &#8211; after this writing directly to the user is no longer possible. Once this has happened, the daemon will send log messages to the system logging daemon using <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). The facility used is <tt>&quot;LOG_DAEMON&quot;</tt>.</p>
@@ -143,18 +141,18 @@ description: "rrdcached – Data caching daemon for rrdtool"
                                                                                                                                                                                                                                                Value:1, 2 !+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+</p>
 <p> The above diagram demonstrates:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Files/values are stored in a (balanced) tree.</p>
-<dt>&bull;</p>
-<dd> Tree nodes and entries in the update queue are the same data structure.</p>
-<dt>&bull;</p>
-<dd> The local time (&#8220;First&#8221;) and the time specified in updates (&#8220;Time&#8221;) may differ.</p>
-<dt>&bull;</p>
-<dd> Timed out values are inserted at the &#8220;tail&#8221;.</p>
-<dt>&bull;</p>
-<dd> Explicitly flushed values are inserted at the &#8220;head&#8221;.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">ASCII</font> art rocks.</dl>
+<dt>&bull;</dt>
+<dd> Files/values are stored in a (balanced) tree.</dd>
+<dt>&bull;</dt>
+<dd> Tree nodes and entries in the update queue are the same data structure.</dd>
+<dt>&bull;</dt>
+<dd> The local time (&#8220;First&#8221;) and the time specified in updates (&#8220;Time&#8221;) may differ.</dd>
+<dt>&bull;</dt>
+<dd> Timed out values are inserted at the &#8220;tail&#8221;.</dd>
+<dt>&bull;</dt>
+<dd> Explicitly flushed values are inserted at the &#8220;head&#8221;.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">ASCII</font> art rocks.</dd></dl>
 <h2>SECURITY CONSIDERATIONS</h2>
 <h3>Authentication</h3>
 <p> If your rrdtool installation was built without libwrap there is no form of authentication for clients connecting to the rrdcache daemon! </p>
@@ -172,12 +170,12 @@ description: "rrdcached – Data caching daemon for rrdtool"
 <p> The daemon will blindly write to any file it gets told, so you really should create a separate user just for this daemon. Also it does not do any sanity checks, so if it gets told to write values for a time far in the future, your files will be messed up good!</p>
 <h3>Conclusion</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Security is the job of the administrator.</p>
-<dt>&bull;</p>
-<dd> We recommend to allow write access via <font SIZE="-1">UNIX</font> domain sockets only.</p>
-<dt>&bull;</p>
-<dd> You have been warned.</dl>
+<dt>&bull;</dt>
+<dd> Security is the job of the administrator.</dd>
+<dt>&bull;</dt>
+<dd> We recommend to allow write access via <font SIZE="-1">UNIX</font> domain sockets only.</dd>
+<dt>&bull;</dt>
+<dd> You have been warned.</dd></dl>
 <h2>PROTOCOL</h2>
 <p> The daemon communicates with clients using a line based <font SIZE="-1">ASCII</font> protocol which is easy to read and easy to type. This makes it easy for scripts to implement the protocol and possible for users to use telnet to connect to the daemon and test stuff &#8220;by hand&#8221;. </p>
 <p> The protocol is line based, this means that each record consists of one or more lines. A line is terminated by the line feed character <tt>0x0A</tt>, commonly written as <tt>&quot;
@@ -198,23 +196,23 @@ description: "rrdcached – Data caching daemon for rrdtool"
 <h3>Valid Commands</h3>
 <p> The following commands are understood by the daemon:</p>
 <dl>
-<dt><font SIZE="-1"><code>FLUSH</code></font> <i>filename</i></p>
-<dd> Causes the daemon to put <i>filename</i> to the <code>head</code> of the update queue (possibly moving it there if the node is already enqueued). The answer will be sent <code>after</code> the node has been dequeued.</p>
-<dt><font SIZE="-1"><code>FLUSHALL</code></font></p>
-<dd> Causes the daemon to start flushing <font SIZE="-1">ALL</font> pending values to disk. This returns immediately, even though the writes may take a long time.</p>
-<dt><font SIZE="-1"><code>PENDING</code></font> <i>filename</i></p>
-<dd> Shows any &#8220;pending&#8221; updates for a file, in order. The updates shown have not yet been written to the underlying <font SIZE="-1">RRD</font> file.</p>
-<dt><font SIZE="-1"><code>FORGET</code></font> <i>filename</i></p>
-<dd> Removes <i>filename</i> from the cache. Any pending updates <font SIZE="-1"><code>WILL</code></font><font SIZE="-1"><code>BE</code></font><font SIZE="-1"><code>LOST</code></font>.</p>
-<dt><font SIZE="-1"><code>QUEUE</code></font></p>
-<dd> Shows the files that are on the output queue. Returns zero or more lines in the following format, where &lt;num_vals&gt; is the number of values to be written for the &lt;file&gt;: </p>
+<dt><font SIZE="-1"><code>FLUSH</code></font> <i>filename</i></dt>
+<dd> Causes the daemon to put <i>filename</i> to the <code>head</code> of the update queue (possibly moving it there if the node is already enqueued). The answer will be sent <code>after</code> the node has been dequeued.</dd>
+<dt><font SIZE="-1"><code>FLUSHALL</code></font></dt>
+<dd> Causes the daemon to start flushing <font SIZE="-1">ALL</font> pending values to disk. This returns immediately, even though the writes may take a long time.</dd>
+<dt><font SIZE="-1"><code>PENDING</code></font> <i>filename</i></dt>
+<dd> Shows any &#8220;pending&#8221; updates for a file, in order. The updates shown have not yet been written to the underlying <font SIZE="-1">RRD</font> file.</dd>
+<dt><font SIZE="-1"><code>FORGET</code></font> <i>filename</i></dt>
+<dd> Removes <i>filename</i> from the cache. Any pending updates <font SIZE="-1"><code>WILL</code></font><font SIZE="-1"><code>BE</code></font><font SIZE="-1"><code>LOST</code></font>.</dd>
+<dt><font SIZE="-1"><code>QUEUE</code></font></dt>
+<dd> Shows the files that are on the output queue. Returns zero or more lines in the following format, where &lt;num_vals&gt; is the number of values to be written for the &lt;file&gt;: </dd>
 <pre>
     &lt;num_vals&gt; &lt;file&gt;
 </pre>
-<dt><font SIZE="-1"><code>HELP</code></font> [<i>command</i>]</p>
-<dd> Returns a short usage message. If no command is given, or <i>command</i> is <font SIZE="-1"><code>HELP</code></font>, a list of commands supported by the daemon is returned. Otherwise a short description, possibly containing a pointer to a manual page, is returned. Obviously, this is meant for interactive usage and the format in which the commands and usage summaries are returned is not well defined.</p>
-<dt><font SIZE="-1"><code>STATS</code></font></p>
-<dd> Returns a list of metrics which can be used to measure the daemons performance and check its status. For a description of the values returned, see &#8220;Performance Values&#8221; below. </p>
+<dt><font SIZE="-1"><code>HELP</code></font> [<i>command</i>]</dt>
+<dd> Returns a short usage message. If no command is given, or <i>command</i> is <font SIZE="-1"><code>HELP</code></font>, a list of commands supported by the daemon is returned. Otherwise a short description, possibly containing a pointer to a manual page, is returned. Obviously, this is meant for interactive usage and the format in which the commands and usage summaries are returned is not well defined.</dd>
+<dt><font SIZE="-1"><code>STATS</code></font></dt>
+<dd> Returns a list of metrics which can be used to measure the daemons performance and check its status. For a description of the values returned, see &#8220;Performance Values&#8221; below. </dd>
 <p> The format in which the values are returned is similar to many other line based protocols: Each value is printed on a separate line, each consisting of the name of the value, a colon, one or more spaces and the actual value. </p>
 <p> Example: </p>
 <pre>
@@ -229,13 +227,13 @@ description: "rrdcached – Data caching daemon for rrdtool"
  JournalBytes: 190
  JournalRotate: 0
 </pre>
-<dt><font SIZE="-1"><code>UPDATE</code></font> <i>filename</i> <i>values</i> [<i>values</i> &#8230;]</p>
-<dd> Adds more data to a filename. This is <code>the</code> operation the daemon was designed for, so describing the mechanism again is unnecessary. Read &#8220;<font SIZE="-1">HOW</font> <font SIZE="-1">IT</font> <font SIZE="-1">WORKS</font>&#8221; above for a detailed explanation. </p>
+<dt><font SIZE="-1"><code>UPDATE</code></font> <i>filename</i> <i>values</i> [<i>values</i> &#8230;]</dt>
+<dd> Adds more data to a filename. This is <code>the</code> operation the daemon was designed for, so describing the mechanism again is unnecessary. Read &#8220;<font SIZE="-1">HOW</font> <font SIZE="-1">IT</font> <font SIZE="-1">WORKS</font>&#8221; above for a detailed explanation. </dd>
 <p> Note that rrdcached only accepts absolute timestamps in the update values. Updates strings like &#8220;N:1:2:3&#8221; are automatically converted to absolute time by the <font SIZE="-1">RRD</font> client library before sending to rrdcached.</p>
-<dt><font SIZE="-1"><code>WROTE</code></font> <i>filename</i></p>
-<dd> This command is written to the journal after a file is successfully written out to disk. It is used during journal replay to determine which updates have already been applied. It is <i>only</i> valid in the journal; it is not accepted from the other command channels.</p>
-<dt><font SIZE="-1"><code>BATCH</code></font></p>
-<dd> This command initiates the bulk load of multiple commands. This is designed for installations with extremely high update rates, since it permits more than one command to be issued per <i>read()</i> and <i>write()</i>. </p>
+<dt><font SIZE="-1"><code>WROTE</code></font> <i>filename</i></dt>
+<dd> This command is written to the journal after a file is successfully written out to disk. It is used during journal replay to determine which updates have already been applied. It is <i>only</i> valid in the journal; it is not accepted from the other command channels.</dd>
+<dt><font SIZE="-1"><code>BATCH</code></font></dt>
+<dd> This command initiates the bulk load of multiple commands. This is designed for installations with extremely high update rates, since it permits more than one command to be issued per <i>read()</i> and <i>write()</i>. </dd>
 <p> All commands are executed just as they would be if given individually, except for output to the user. Messages indicating success are suppressed, and error messages are delayed until the client is finished. </p>
 <p> Command processing is finished when the client sends a dot (&#8220;.&#8221;) on its own line. After the client has finished, the server responds with an error count and the list of error messages (if any). Each error messages indicates the number of the command to which it corresponds, and the error message itself. The first user command after <font SIZE="-1"><code>BATCH</code></font> is command number one. </p>
 <pre><code>
@@ -249,37 +247,37 @@ description: "rrdcached – Data caching daemon for rrdtool"
     server:  1 message for command 1
     server:  12 message for command 12
 </code></pre>
-<dt><font SIZE="-1"><code>QUIT</code></font></p>
-<dd> Disconnect from rrdcached.</dl>
+<dt><font SIZE="-1"><code>QUIT</code></font></dt>
+<dd> Disconnect from rrdcached.</dd></dl>
 <h3>Performance Values</h3>
 <p> The following counters are returned by the <font SIZE="-1"><code>STATS</code></font> command:</p>
 <dl>
-<dt><code>QueueLength</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Number of nodes currently enqueued in the update queue.</p>
-<dt><code>UpdatesReceived</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Number of <font SIZE="-1">UPDATE</font> commands received.</p>
-<dt><code>FlushesReceived</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Number of <font SIZE="-1">FLUSH</font> commands received.</p>
-<dt><code>UpdatesWritten</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Total number of updates, i. e. calls to <tt>&quot;rrd_update_r&quot;</tt>, since the daemon was started.</p>
-<dt><code>DataSetsWritten</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Total number of &#8220;data sets&#8221; written to disk since the daemon was started. A data set is one or more values passed to the <font SIZE="-1"><code>UPDATE</code></font> command. For example: <tt>&quot;1223661439:123:456&quot;</tt> is one data set with two values. The term &#8220;data set&#8221; is used to prevent confusion whether individual values or groups of values are counted.</p>
-<dt><code>TreeNodesNumber</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Number of nodes in the cache.</p>
-<dt><code>TreeDepth</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Depth of the tree used for fast key lookup.</p>
-<dt><code>JournalBytes</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Total number of bytes written to the journal since startup.</p>
-<dt><code>JournalRotate</code> <i>(unsigned 64bit integer)</i></p>
-<dd> Number of times the journal has been rotated since startup.</dl>
+<dt><code>QueueLength</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Number of nodes currently enqueued in the update queue.</dd>
+<dt><code>UpdatesReceived</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Number of <font SIZE="-1">UPDATE</font> commands received.</dd>
+<dt><code>FlushesReceived</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Number of <font SIZE="-1">FLUSH</font> commands received.</dd>
+<dt><code>UpdatesWritten</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Total number of updates, i. e. calls to <tt>&quot;rrd_update_r&quot;</tt>, since the daemon was started.</dd>
+<dt><code>DataSetsWritten</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Total number of &#8220;data sets&#8221; written to disk since the daemon was started. A data set is one or more values passed to the <font SIZE="-1"><code>UPDATE</code></font> command. For example: <tt>&quot;1223661439:123:456&quot;</tt> is one data set with two values. The term &#8220;data set&#8221; is used to prevent confusion whether individual values or groups of values are counted.</dd>
+<dt><code>TreeNodesNumber</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Number of nodes in the cache.</dd>
+<dt><code>TreeDepth</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Depth of the tree used for fast key lookup.</dd>
+<dt><code>JournalBytes</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Total number of bytes written to the journal since startup.</dd>
+<dt><code>JournalRotate</code> <i>(unsigned 64bit integer)</i></dt>
+<dd> Number of times the journal has been rotated since startup.</dd></dl>
 <h2>SIGNALS</h2>
 <dl>
-<dt><font SIZE="-1">SIGINT</font> and <font SIZE="-1">SIGTERM</font></p>
-<dd> The daemon exits normally on receipt of either of these signals. Pending updates are handled in accordance with the <code>-j</code> and <code>-F</code> options.</p>
-<dt><font SIZE="-1">SIGUSR1</font></p>
-<dd> The daemon exits <font SIZE="-1">AFTER</font> flushing all updates out to disk. This may take a while.</p>
-<dt><font SIZE="-1">SIGUSR2</font></p>
-<dd> The daemon exits immediately, without flushing updates out to disk. Pending updates will be replayed from the journal when the daemon starts up again. <font SIZE="-1"><code>WARNING:</code></font><code> if journaling (-j) is </code><font SIZE="-1"><code>NOT</code></font><code> enabled, any pending updates </code><font SIZE="-1"><code>WILL</code></font><font SIZE="-1"><code>BE</code></font><font SIZE="-1"><code>LOST</code></font>.</dl>
+<dt><font SIZE="-1">SIGINT</font> and <font SIZE="-1">SIGTERM</font></dt>
+<dd> The daemon exits normally on receipt of either of these signals. Pending updates are handled in accordance with the <code>-j</code> and <code>-F</code> options.</dd>
+<dt><font SIZE="-1">SIGUSR1</font></dt>
+<dd> The daemon exits <font SIZE="-1">AFTER</font> flushing all updates out to disk. This may take a while.</dd>
+<dt><font SIZE="-1">SIGUSR2</font></dt>
+<dd> The daemon exits immediately, without flushing updates out to disk. Pending updates will be replayed from the journal when the daemon starts up again. <font SIZE="-1"><code>WARNING:</code></font><code> if journaling (-j) is </code><font SIZE="-1"><code>NOT</code></font><code> enabled, any pending updates </code><font SIZE="-1"><code>WILL</code></font><font SIZE="-1"><code>BE</code></font><font SIZE="-1"><code>LOST</code></font>.</dd></dl>
 <h2>BUGS</h2>
 <p> No known bugs at the moment.</p>
 <h2>SEE ALSO</h2>

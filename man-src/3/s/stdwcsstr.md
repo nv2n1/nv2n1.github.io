@@ -11,9 +11,7 @@ std::wcsstr - std::wcsstr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     const wchar_t *wcsstr(const wchar_t *dest, const wchar_t *src);
-
 wchar_t *wcsstr(wchar_t *dest, const wchar_t *src);</code></pre> 
 Finds the first occurrence of the wide string src in the wide string pointed to by dest. The terminating null characters are not compared. 
 

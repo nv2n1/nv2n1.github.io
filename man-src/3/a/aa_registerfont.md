@@ -14,8 +14,8 @@ description: "aa_registerfont – add new font specification to aa_fonts array."
 <p> int aa_registerfont(const struct aa_font *f); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>const struct aa_font *f</code></p>
-<dd> Font specification structure.</dl>
+<dt><code>const struct aa_font *f</code></dt>
+<dd> Font specification structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Add new font specification to aa_fonts array.</p>
 <h2>RETURNS</h2>

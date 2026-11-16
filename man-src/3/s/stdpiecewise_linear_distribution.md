@@ -11,9 +11,7 @@ std::piecewise_linear_distribution - std::piecewise_linear_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;   (since C++11)
-
 class piecewise_linear_distribution;</code></pre> 
 std::piecewise_linear_distribution produces random floating-point numbers, which are distributed according to a linear probability density function within each of the several subintervals [b 
 i, b 
@@ -96,16 +94,11 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

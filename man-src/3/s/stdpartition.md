@@ -10,23 +10,14 @@ description: "std::partition – std::partition"
 <p>std::partition &#8211; std::partition</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class BidirIt, class UnaryPredicate &gt;                                             (until C++11)
-
 BidirIt partition( BidirIt first, BidirIt last, UnaryPredicate p );
-
 template&lt; class ForwardIt, class UnaryPredicate &gt;                                           (since C++11)
-
 ForwardIt partition( ForwardIt first, ForwardIt last, UnaryPredicate p );                   (until C++20)
-
 template&lt; class ForwardIt, class UnaryPredicate &gt;                                   (1)     (since C++20)
-
 constexpr ForwardIt partition( ForwardIt first, ForwardIt last, UnaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class UnaryPredicate &gt;
-
 ForwardIt partition( ExecutionPolicy&amp;&amp; policy,                                          (2) (since C++17)
-
 ForwardIt first, ForwardIt last, UnaryPredicate p );</code></pre>
 <p>1) Reorders the elements in the range [first, last) in such a way that all elements for which the predicate p returns true precede the elements for which predicate p returns false. Relative order of the elements is not preserved.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -71,13 +62,9 @@ UnaryPredicate must meet the requirements of Predicate.</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;forward_list&gt;
 template &lt;class ForwardIt&gt;
 void quicksort(ForwardIt first, ForwardIt last)
@@ -93,7 +80,6 @@ void quicksort(ForwardIt first, ForwardIt last)
     quicksort(middle2, last);
 }
 int main()
-
 {
     std::vector&lt;int&gt; v = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::cout &lt;&lt; &quot;Original vector:

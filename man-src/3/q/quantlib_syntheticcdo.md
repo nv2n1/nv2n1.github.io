@@ -34,11 +34,11 @@ description: "QuantLib::SyntheticCDO – Synthetic Collateralized Debt Obligatio
 <p> For purchased protection, the instrument value is given by the difference of the protection value $ V_1 $ and premium value $ V_2 $, </p>
 <p> [ V = V_1 &#8211; V_2. ].PP The protection leg is priced as follows: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Build the probability distribution for volume of defaults $ L $ (before recovery) or Loss Given Default $ LGD = (1-r),L $ at times/dates $ t_i, i=1, &#8230;, N$ (premium schedule times with intermediate steps)</dl>
+<dt>*</dt>
+<dd>Build the probability distribution for volume of defaults $ L $ (before recovery) or Loss Given Default $ LGD = (1-r),L $ at times/dates $ t_i, i=1, &#8230;, N$ (premium schedule times with intermediate steps)</dd></dl>
 <dl COMPACT>
-<dt>*</p>
-<dd>Determine the expected value $ E_i = E_{t_i},</p>
+<dt>*</dt>
+<dd>Determine the expected value $ E_i = E_{t_i},</dd>
 <hr>
 <p> protection payoff $ Pay(LGD) $ at each time $ t_i$ where [ Pay(L) = min (D_1, LGD) &#8211; min (D_2, LGD) = </p>
 <hr>
@@ -52,7 +52,7 @@ description: "QuantLib::SyntheticCDO – Synthetic Collateralized Debt Obligatio
 <p> The pricing algorithm allows for varying notional amounts and default termstructures of the underlyings. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Investigate and fix cases $ E_{i+1} &lt; E_i. $</dl>
+<dd>Investigate and fix cases $ E_{i+1} &lt; E_i. $</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Real remainingNotional () const</h3>
 <p>Total outstanding tranche notional, not wiped out</p>

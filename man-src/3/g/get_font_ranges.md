@@ -19,7 +19,6 @@ FONT *f;
 int range;
 int n;
 ...
-
     range = get_font_ranges(f);
 printf("The font has %d character ranges:
 ", range);

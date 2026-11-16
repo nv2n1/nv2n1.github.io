@@ -14,13 +14,13 @@ description: "sata_link_resume – resume SATA link"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to resume SATA</dl>
+</dd><dd>ATA link to resume SATA</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>timing parameters { interval, duration, timeout } in msec</dl>
+<dd>timing parameters { interval, duration, timeout } in msec</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <h2>Description</h2>
 <p>Resume SATA phy <i>link</i> and debounce it. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -29,5 +29,5 @@ description: "sata_link_resume – resume SATA link"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,8 +14,8 @@ description: "gnutls_auth_get_type – API function"
 <p> <code>gnutls_credentials_type_t gnutls_auth_get_type(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns type of credentials for the current authentication schema. The returned information is to be used to distinguish the function used to access authentication data. </p>
 <p> Eg. for CERTIFICATE ciphersuites (key exchange algorithms: <code>GNUTLS_KX_RSA</code>, <code>GNUTLS_KX_DHE_RSA</code>), the same function are to be used to access the authentication data.</p>
@@ -30,6 +30,6 @@ description: "gnutls_auth_get_type – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

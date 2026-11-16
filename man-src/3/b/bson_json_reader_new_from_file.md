@@ -17,11 +17,11 @@ bson_json_reader_new_from_file(const char *filename,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>filename</code></p>
-<dd> A file-name in the system file-name encoding.</dl>
+<dt><code>filename</code></dt>
+<dd> A file-name in the system file-name encoding.</dd></dl>
 <dl>
-<dt><code>error</code></p>
-<dd> A <code>bson_error_t</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new bson_json_reader_t using the underlying file found at <code>filename</code> \&amp;. </p>
 <h2>ERRORS</h2>

@@ -11,26 +11,24 @@ CURVP1 - calculate values for CURVP2 usage.
 
  This subroutine calculates certain values that are used by CURVP2 in order to compute an interpolatory spline under tension through a sequence of functional values for a periodic function. The actual computation of the interpolated values must be done using CURVP2 .
 <h2>Description</h2><dl COMPACT><dt>N
-<dd>(integer, input) The number of input data values. (N &gt; 1)
-<dt>X
-<dd>(real, input) An array containing the abscissae for the input function.
-<dt>Y
-<dd>(real, input) An array containing the functional values of the input function -- Y(K) is the functional value at X(K) for K=1,N.
-<dt>P
-<dd>(real, input) The period of the function. P must be greater than X(N)-X(1).
-<dt>YP
-<dd>(real, output) Contains values for the second derivative (these are calculated by CURVP1).
-<dt>TEMP
-<dd>(real, input) Scratch space.
-<dt>SIGMA
-<dd>(integer, input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.
-<dt>IER
-<dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. 
-
- 
+</dt><dd>(integer, input) The number of input data values. (N &gt; 1)
+</dd><dt>X
+</dt><dd>(real, input) An array containing the abscissae for the input function.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing the functional values of the input function -- Y(K) is the functional value at X(K) for K=1,N.
+</dd><dt>P
+</dt><dd>(real, input) The period of the function. P must be greater than X(N)-X(1).
+</dd><dt>YP
+</dt><dd>(real, output) Contains values for the second derivative (these are calculated by CURVP1).
+</dd><dt>TEMP
+</dt><dd>(real, input) Scratch space.
+</dd><dt>SIGMA
+</dt><dd>(integer, input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.
+</dd><dt>IER
+</dt><dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. 
  = 1 if N is less than 2. 
  = 2 if P is less than or equal to X(N)-X(1). 
- = 3 if the X values are not strictly increasing.</dl><h2>Access</h2>To use CURVP1, load the NCAR Graphics library ngmath.
+ = 3 if the X values are not strictly increasing.</dd></dl><h2>Access</h2>To use CURVP1, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>curvp2, fitgrid_params. 
 
  Complete documentation for Fitgrid is available at URL 

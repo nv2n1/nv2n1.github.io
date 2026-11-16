@@ -24,57 +24,56 @@ description: "softhsm2-util – support tool for libsofthsm2"
 <p> The <code>PKCS#11</code> API can be used to handle and store cryptographic keys. This interface specifies how to communicate with cryptographic devices such as HSMs (Hardware Security Modules) and smart cards. The purpose of these devices is, among others, to generate cryptographic keys and sign information without revealing private-key material to the outside world. They are often designed to perform well on these specific tasks compared to ordinary processes in a normal computer. </p>
 <h2>ACTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Show the help information.</p>
-<dt><code>&#8211;import </code><i>path</i></p>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Show the help information.</dd>
+<dt><code>&#8211;import </code><i>path</i></dt>
 <dd> Import a key pair from the given <i>path</i>. The file must be in PKCS#8-format.<br />
- Use with <code>&#8211;file-pin</code>, <code>&#8211;slot</code>, <code>&#8211;pin</code>, <code>&#8211;no-public-key</code>, <code>&#8211;label</code>, and <code>&#8211;id</code>.</p>
-<dt><code>&#8211;init-token</code></p>
+ Use with <code>&#8211;file-pin</code>, <code>&#8211;slot</code>, <code>&#8211;pin</code>, <code>&#8211;no-public-key</code>, <code>&#8211;label</code>, and <code>&#8211;id</code>.</dd>
+<dt><code>&#8211;init-token</code></dt>
 <dd> Initialize the token at a given slot. If the token is already initialized then this command will reinitialize it, thus erasing all the objects in the token. The matching Security Officer (SO) PIN must also be provided when doing reinitialization.<br />
- Use with <code>&#8211;slot</code> or <code>&#8211;free</code>, <code>&#8211;label</code>, <code>&#8211;so-pin</code>, and <code>&#8211;pin</code>.</dl>
+ Use with <code>&#8211;slot</code> or <code>&#8211;free</code>, <code>&#8211;label</code>, <code>&#8211;so-pin</code>, and <code>&#8211;pin</code>.</dd></dl>
 <dl>
-<dt><code>&#8211;show-slots</code></p>
-<dd> Display all the available slots and their current status.</p>
-<dt><code>&#8211;version</code>, <code>-v</code></p>
-<dd> Show the version info.</dl>
+<dt><code>&#8211;show-slots</code></dt>
+<dd> Display all the available slots and their current status.</dd>
+<dt><code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Show the version info.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;file-pin </code><i>PIN</i></p>
-<dd> The <i>PIN</i> will be used to decrypt the PKCS#8 file. If not given then the PKCS#8 file is assumed to be unencrypted.</p>
-<dt><code>&#8211;force </code></p>
-<dd> Use this option to override the warnings and force the given action.</p>
-<dt><code>&#8211;free</code></p>
-<dd> Initialize the first free token.</p>
-<dt><code>&#8211;id </code><i>hex</i></p>
-<dd> Choose an ID of the key pair. The ID is in hexadecimal with a variable length. Use with <code>&#8211;force </code> when importing a key pair if the ID already exists.</p>
-<dt><code>&#8211;label </code><i>text</i></p>
-<dd> Defines the <i>label</i> of the object or the token.</p>
-<dt><code>&#8211;module </code><i>path</i></p>
-<dd> Use another PKCS#11 library than SoftHSM.</p>
-<dt><code>&#8211;no-public-key</code></p>
-<dd> Do not import the public key.</p>
-<dt><code>&#8211;pin </code><i>PIN</i></p>
-<dd> The <i>PIN</i> for the normal user.</p>
-<dt><code>&#8211;slot </code><i>number</i></p>
-<dd> The slot where the token is located.</p>
-<dt><code>&#8211;so-pin </code><i>PIN</i></p>
-<dd> The <i>PIN</i> for the Security Officer (SO).</dl>
+<dt><code>&#8211;file-pin </code><i>PIN</i></dt>
+<dd> The <i>PIN</i> will be used to decrypt the PKCS#8 file. If not given then the PKCS#8 file is assumed to be unencrypted.</dd>
+<dt><code>&#8211;force </code></dt>
+<dd> Use this option to override the warnings and force the given action.</dd>
+<dt><code>&#8211;free</code></dt>
+<dd> Initialize the first free token.</dd>
+<dt><code>&#8211;id </code><i>hex</i></dt>
+<dd> Choose an ID of the key pair. The ID is in hexadecimal with a variable length. Use with <code>&#8211;force </code> when importing a key pair if the ID already exists.</dd>
+<dt><code>&#8211;label </code><i>text</i></dt>
+<dd> Defines the <i>label</i> of the object or the token.</dd>
+<dt><code>&#8211;module </code><i>path</i></dt>
+<dd> Use another PKCS#11 library than SoftHSM.</dd>
+<dt><code>&#8211;no-public-key</code></dt>
+<dd> Do not import the public key.</dd>
+<dt><code>&#8211;pin </code><i>PIN</i></dt>
+<dd> The <i>PIN</i> for the normal user.</dd>
+<dt><code>&#8211;slot </code><i>number</i></dt>
+<dd> The slot where the token is located.</dd>
+<dt><code>&#8211;so-pin </code><i>PIN</i></dt>
+<dd> The <i>PIN</i> for the Security Officer (SO).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The token can be initialized using this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 softhsm2-util --init-token --slot 1 --label &quot;A token&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> A key pair can be imported using the softhsm tool where you specify the path to the key file, slot number, label and ID of the new objects, and the user PIN. The file must be in PKCS#8 format. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 softhsm2 - util-- import key1.pem-- slot 1 --label "My key"
-
     &amp; nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -84,9 +83,10 @@ softhsm2 - util-- import key1.pem-- slot 1 --label "My key"
 &amp;nbsp;
 --id A1B2-- pin 123456
 </code></pre>
-<p> (Add, &#8211;file-pin <i>PIN</i>, if the key file is encrypted.)</dl>
+<p> (Add, &#8211;file-pin <i>PIN</i>, if the key file is encrypted.)</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Rickard Bellgrim, Francis Dupont, René Post, and Roland van Rijswijk. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-softhsm2-keyconv/">softhsm2-keyconv</a></i>(1), <i><a href="/docs/linux/man/1-softhsm2-migrate/">softhsm2-migrate</a></i>(1), <i><a href="/docs/linux/man/5-softhsm2-conf/">softhsm2.conf</a></i>(5) </p>
 <h2>Index</h2>
+</p>

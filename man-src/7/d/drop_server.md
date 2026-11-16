@@ -14,14 +14,14 @@ description: "DROP SERVER – remove a foreign server descriptor"
 <p><code>DROP SERVER</code> removes an existing foreign server descriptor. To execute this command, the current user must be the owner of the server.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the server does not exist. A notice is issued in this case.</p>
-<dt><i>servername</i></p>
-<dd>The name of an existing server.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the server (such as user mappings).</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the server if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the server does not exist. A notice is issued in this case.</dd>
+<dt><i>servername</i></dt>
+<dd>The name of an existing server.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the server (such as user mappings).</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the server if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Drop a server foo if it exists: </p>
 <pre>DROP SERVER IF EXISTS foo;</pre>

@@ -17,24 +17,24 @@ description: "dbcheck – Bacula’s Catalog Database Check/Clean program"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</p>
-<dt><code>-b</code></p>
-<dd>If specified, dbcheck will run in batch mode, and it will proceed to examine and fix (if -f is set) all programmed inconsistency checks. By default, dbcheck will enter interactive mode (see below).</p>
-<dt><code>-C&nbsp;<wbr></code><i>catalog</i></p>
-<dd>catalog name in the director conf file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>If the -c option is given with the Director&#8217;s conf file, there is no need to enter any of the command line arguments, in particular the working directory as dbcheck will read them from the file.</p>
-<dt><code>-B</code></p>
-<dd>print catalog configuration and exit.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>print timestamp in debug output.</p>
-<dt><code>-f</code></p>
-<dd>If specified, dbcheck will repair (fix) the inconsistencies it finds. Otherwise, it will report only.</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</dl>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd>
+<dt><code>-b</code></dt>
+<dd>If specified, dbcheck will run in batch mode, and it will proceed to examine and fix (if -f is set) all programmed inconsistency checks. By default, dbcheck will enter interactive mode (see below).</dd>
+<dt><code>-C&nbsp;<wbr></code><i>catalog</i></dt>
+<dd>catalog name in the director conf file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>If the -c option is given with the Director&#8217;s conf file, there is no need to enter any of the command line arguments, in particular the working directory as dbcheck will read them from the file.</dd>
+<dt><code>-B</code></dt>
+<dd>print catalog configuration and exit.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>print timestamp in debug output.</dd>
+<dt><code>-f</code></dt>
+<dd>If specified, dbcheck will repair (fix) the inconsistencies it finds. Otherwise, it will report only.</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd></dl>
 <h2>Interactive Mode</h2>
 <p>In interactive mode dbcheck will prompt with the following: </p>
 <p> Hello, this is the database check/correct program. Please select the function you want to perform.<br />

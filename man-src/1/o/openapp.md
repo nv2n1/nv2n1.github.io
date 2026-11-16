@@ -18,14 +18,14 @@ description: "openapp – launch applications from the command line"
 <p> <code>openapp</code> first checks whether the application is in the current working directory. If not then searches the GNUstep domains&#8217; Applications folders in the following order: User (i.e. <i>~/GNUstep/Applications</i>), Local, Network, System. First match wins. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;find</code><i> application</i></p>
-<dd> will print out the full path of the application executable which would be executed, without actually executing it. It will also list all paths that are attempted.</p>
-<dt><code>&#8211;debug</code><i> application</i></p>
-<dd> starts the application in the debugger. By default <code>gdb</code>, but this can be changed with the <code>&#8211;gdb=</code> argument or through the <code>GDB</code> shell variable.</p>
-<dt><code>&#8211;library-combo=</code><i>library-combo</i></p>
-<dd> Starts the application with the specified library combo. This is a rarely used option in a non-flattened setup. See the <code><a href="/docs/linux/man/7-library-combo/">library-combo</a></code>(7) man-page for more information about the different library combinations.</p>
-<dt><code>&#8211;help</code></p>
-<dd> print above usage description. </p>
+<dt><code>&#8211;find</code><i> application</i></dt>
+<dd> will print out the full path of the application executable which would be executed, without actually executing it. It will also list all paths that are attempted.</dd>
+<dt><code>&#8211;debug</code><i> application</i></dt>
+<dd> starts the application in the debugger. By default <code>gdb</code>, but this can be changed with the <code>&#8211;gdb=</code> argument or through the <code>GDB</code> shell variable.</dd>
+<dt><code>&#8211;library-combo=</code><i>library-combo</i></dt>
+<dd> Starts the application with the specified library combo. This is a rarely used option in a non-flattened setup. See the <code><a href="/docs/linux/man/7-library-combo/">library-combo</a></code>(7) man-page for more information about the different library combinations.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print above usage description. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Start <code>Ink.app</code> without additional parameters: </p>
@@ -37,10 +37,10 @@ description: "openapp – launch applications from the command line"
 <p> The output of the above command might be something like: <i>/usr/GNUstep/Local/Applications/Ink.app/Ink</i> </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>GNUSTEP_CONFIG_FILE</code></p>
-<dd> is used to determine where the <code>GNUstep.sh</code> configuration file is located. If the variable is not set <code>openapp</code> tries to locate it in the folder where <code>openapp</code> was started, then in the user domain, and as a last resort in the system domain (or actually the place you configured (<i>&#8211;with-config-file=</i>) during building).</p>
-<dt><code>GDB</code></p>
-<dd> Sets the debugger to use when <code>&#8211;debug</code> is used. </p>
+<dt><code>GNUSTEP_CONFIG_FILE</code></dt>
+<dd> is used to determine where the <code>GNUstep.sh</code> configuration file is located. If the variable is not set <code>openapp</code> tries to locate it in the folder where <code>openapp</code> was started, then in the user domain, and as a last resort in the system domain (or actually the place you configured (<i>&#8211;with-config-file=</i>) during building).</dd>
+<dt><code>GDB</code></dt>
+<dd> Sets the debugger to use when <code>&#8211;debug</code> is used. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-debugapp/">debugapp</a>(1), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), <a href="/docs/linux/man/1-gopen/">gopen</a>(1), <a href="/docs/linux/man/7-library-combo/">library-combo</a>(7), <a href="/docs/linux/man/1-opentool/">opentool</a>(1) </p>

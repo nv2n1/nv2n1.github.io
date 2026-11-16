@@ -13,8 +13,8 @@ description: "mongoc_collection_get_read_prefs() – Fetches the default read pr
 mongoc_collection_get_read_prefs (const mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the default read preferences to use for <code>collection</code> \&amp;. Operations without specified read-preferences will default to this. </p>
 <h2>Returns</h2>

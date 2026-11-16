@@ -16,12 +16,12 @@ description: "gts2stl – converts a GTS file to STL format"
 <h2>OPTIONS</h2>
 <p> This program follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-r</code>,&nbsp;<code>&#8211;revert</code></p>
-<dd> Revert face normals.</p>
-<dt><code>-v</code>,&nbsp;<code>&#8211;verbose</code></p>
-<dd> Display surface statistics.</p>
-<dt><code>-h</code>,&nbsp;<code>&#8211;help</code></p>
-<dd> Display the help and exit. </p>
+<dt><code>-r</code>,&nbsp;<code>&#8211;revert</code></dt>
+<dd> Revert face normals.</dd>
+<dt><code>-v</code>,&nbsp;<code>&#8211;verbose</code></dt>
+<dd> Display surface statistics.</dd>
+<dt><code>-h</code>,&nbsp;<code>&#8211;help</code></dt>
+<dd> Display the help and exit. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> gts2stl was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>

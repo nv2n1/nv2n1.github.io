@@ -19,32 +19,32 @@ description: "zone2sql – Convert ISC Bind zones to SQL"
 <h2>OPTIONS</h2>
 <p> Input options:</p>
 <dl>
-<dt><code>&#8211;named-conf=</code><i>&lt;filename&gt;</i></p>
-<dd> Read <i>&lt;filename&gt;</i> to get the bind configuration</p>
-<dt><code>&#8211;zone=</code><i>&lt;zone-file&gt;</i></p>
-<dd> Parse only this zone file. Conflicts with <code>&#8211;named-conf</code> parameter.</p>
-<dt><code>&#8211;zone-name=</code><i>&lt;name&gt;</i></p>
-<dd> When parsing a single zone without $ORIGIN statement, set this as the zone name.</dl>
+<dt><code>&#8211;named-conf=</code><i>&lt;filename&gt;</i></dt>
+<dd> Read <i>&lt;filename&gt;</i> to get the bind configuration</dd>
+<dt><code>&#8211;zone=</code><i>&lt;zone-file&gt;</i></dt>
+<dd> Parse only this zone file. Conflicts with <code>&#8211;named-conf</code> parameter.</dd>
+<dt><code>&#8211;zone-name=</code><i>&lt;name&gt;</i></dt>
+<dd> When parsing a single zone without $ORIGIN statement, set this as the zone name.</dd></dl>
 <p> Output options:</p>
 <dl>
-<dt><code>&#8211;gmysql</code></p>
-<dd> Output in format suitable for the default configuration of the Generic MySQL backend.</p>
-<dt><code>&#8211;gpgsql</code></p>
-<dd> Output in format suitable for the default configuration of the Generic PostgreSQL backend.</p>
-<dt><code>&#8211;oracle</code></p>
-<dd> Output in format suitable for the default configuration of the Generic Oracle backend.</p>
-<dt><code>&#8211;transactions</code></p>
-<dd> For Oracle and PostgreSQL output, wrap each domain in a transaction for higher speed and integrity.</dl>
+<dt><code>&#8211;gmysql</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic MySQL backend.</dd>
+<dt><code>&#8211;gpgsql</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic PostgreSQL backend.</dd>
+<dt><code>&#8211;oracle</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic Oracle backend.</dd>
+<dt><code>&#8211;transactions</code></dt>
+<dd> For Oracle and PostgreSQL output, wrap each domain in a transaction for higher speed and integrity.</dd></dl>
 <p> Other options:</p>
 <dl>
-<dt><code>&#8211;slave</code></p>
-<dd> Maintain slave status of zones listed in named.conf as being slaves. The default behaviour is to convert all zones to native operation.</p>
-<dt><code>&#8211;on-error-resume-next</code></p>
-<dd> Ignore missing files during parsing. Dangerous.</p>
-<dt><code>&#8211;help</code></p>
-<dd> List all options</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Be verbose during conversion.</dl>
+<dt><code>&#8211;slave</code></dt>
+<dd> Maintain slave status of zones listed in named.conf as being slaves. The default behaviour is to convert all zones to native operation.</dd>
+<dt><code>&#8211;on-error-resume-next</code></dt>
+<dd> Ignore missing files during parsing. Dangerous.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> List all options</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Be verbose during conversion.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pdns_server</code>(8) </p>
 <h2>Index</h2>

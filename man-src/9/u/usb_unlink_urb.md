@@ -14,7 +14,7 @@ description: "usb_unlink_urb – abort/cancel a transfer request for an endpoint
 <p><i>urb</i></p>
 <dl>
 <dd>
-<dd>pointer to urb describing a previously submitted request, may be NULL</dl>
+</dd><dd>pointer to urb describing a previously submitted request, may be NULL</dd></dl>
 <h2>Description</h2>
 <p>This routine cancels an in-progress request. URBs complete only once per submission, and may be canceled only once per submission. Successful cancellation means termination of <i>urb</i> will be expedited and the completion handler will be called with a status code indicating that the request has been canceled (rather than any other code). </p>
 <p> Drivers should not call this routine or related routines, such as <code>usb_kill_urb</code> or <code>usb_unlink_anchored_urbs</code>, after their disconnect method has returned. The disconnect function should synchronize with a driver&#8217;s I/O routines to insure that all URB-related activity has completed before it returns. </p>

@@ -62,7 +62,7 @@ description: "sge_types – xxQS_NAMExx type descriptions"
 <pre><i>userset_name</i> := <i>object_name</i></pre>
 <h3><code>date_time</code></h3>
 <p>A <i>date_time</i> value must conform to [[<i>CC</i>]<i>YY</i>]<i>MMDDhhmm</i>[<code>.</code><i>SS</i>], where: </p>
-<pre><dl><dt><dd><i>CC</i> denotes the century in 2 digits.
+<pre><dl><dt></dt><dd><i>CC</i> denotes the century in 2 digits.
 <i>YY</i> denotes the year in 2 digits.
 <i>MM</i> denotes the month in 2 digits.
 <i>DD</i> denotes the day in 2 digits.
@@ -70,14 +70,14 @@ description: "sge_types – xxQS_NAMExx type descriptions"
 <i>mm</i> denotes the minute in 2 digits.
 <i>ss</i> denotes the seconds in 2 digits (default 00).</pre>
 <p>If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If <i>CC</i> is not specified, a <i>YY</i> of &lt;70 means 20<i>YY</i>.<br />
- Use of this option may cause unexpected results if the clocks of the hosts in the xxQS_NAMExx pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see <i><a href="/docs/linux/man/1-date/">date</a></i>(1) for details), when the xxQS_NAMExx daemons and are invoked.</dl>
+ Use of this option may cause unexpected results if the clocks of the hosts in the xxQS_NAMExx pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see <i><a href="/docs/linux/man/1-date/">date</a></i>(1) for details), when the xxQS_NAMExx daemons and are invoked.</dd></dl>
 <h3><code>time</code></h3>
 <p>A <i>time</i> value must conform to <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i>, or <i>seconds</i> where: </p>
-<pre><dl><dt><dd><i>hh</i> denotes the hour in 2 digits.
+<pre><dl><dt></dt><dd><i>hh</i> denotes the hour in 2 digits.
 <i>mm</i> denotes the minute in 2 digits.
 <i>ss</i> denotes the seconds in 2 digits (default 00).
 <i>seconds</i> is a number of seconds (used for duration values)</pre>
-</dl>
+</dd></dl>
 <h3><code>name</code></h3>
 <p>A <i>name</i> is an arbitrary string of ASCII printing characters, but may not contain &quot;/&quot;, &quot;:&quot;, &quot;@&quot;, &quot;\&quot;, &quot;*&quot;, or &quot;?&quot;.</p>
 <h3><code>account_name</code></h3>
@@ -109,7 +109,7 @@ AND_OR = &quot;&amp;&quot; | &quot;|&quot;</pre>
  &quot;sol&quot; and containing &quot;64&quot;
 &quot;rh_3*&amp;!rh_3.1&quot; any string beginning with &quot;rh_3&quot;, except
  &quot;rh_3.1&quot;</pre>
-</dl>
+</dd></dl>
 <h3><code>pattern</code></h3>
 <p>When patterns are used the following definitions apply: </p>
 <pre>&quot;*&quot; matches any character and any number of characters 
@@ -138,16 +138,16 @@ AND_OR = &quot;&amp;&quot; | &quot;|&quot;</pre>
 <h3><code>wc_host</code></h3>
 <p>A wildcard host specification (<i>wc_host</i>) is a wildcard expression which might match one or more hosts used in the cluster. The first character of that string never begins with an at-character (&#8216;@&#8217;), even if the expression begins with a wildcard character. </p>
 <pre>e.g.
-<dl><dt><dd>* all hosts
+<dl><dt></dt><dd>* all hosts
 a* all host beginning with an 'a'</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_hostgroup</code></h3>
 <p>A wildcard hostgroup specification (<i>wc_hostgroup</i>) is a wildcard expression which might match one or more hostgroups. The first character of that string is always an at-character (&#8216;@&#8217;). </p>
 <p> More information concerning hostgroups can be found in </p>
 <pre>e.g.
-<dl><dt><dd>@* all hostgroups in the cluster
+<dl><dt></dt><dd>@* all hostgroups in the cluster
 @solaris the @solaris hostgroup</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_job</code></h3>
 <p>The wildcard job specification is a placeholder for job ids, and job names including job name patterns. A job id always references one job, while the name and pattern might reference multiple jobs. </p>
 <p> <i>wc_job</i> := <i>job-id</i> | <i>job_name</i> | <i>pattern</i></p>
@@ -166,48 +166,48 @@ a* all host beginning with an 'a'</pre>
 <p> A wildcard expression queue domain specification (<i>wc_qdomain</i>) starts with a wildcard expression cluster queue name (<i>wc_cqueue</i>) followed by an at-character &#8216;@&#8217; and a wildcard expression hostgroup specification (<i>wc_hostgroup</i>). </p>
 <p> A <i>wc_qdomain</i> is used to address a group of queue instances. All queue instances residing on a host which is part of matching hostgroups will be addressed. Please note, that <i>wc_hostgroup</i> always begins with an at-character. </p>
 <pre>e.g.
-<dl><dt><dd>*@@* all queue instances whose underlying
+<dl><dt></dt><dd>*@@* all queue instances whose underlying
  host is part of at least one hostgroup
 a*@@e* all queue instances beginning with a whose underlying
  host is part of at least one hostgroup beginning with e
 *@@solaris all queue instances on hosts in
  the @solaris hostgroup</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_cqueue</code></h3>
 <p>A wildcard expression cluster queue specification (<i>wc_cqueue</i>) is a wildcard expression which might match one or more cluster queues used in the cluster. That string never contains an at-character (&#8216;@&#8217;), even if the expression begins with a wildcard character. </p>
 <pre>e.g.
-<dl><dt><dd>* all cluster queues
+<dl><dt></dt><dd>* all cluster queues
 a* all cluster queues beginning with an 'a'
 a*&amp;!adam all cluster queues beginning with an 'a', but not adam</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_qinstance</code></h3>
 <p><i>wc_qinstance</i> := <i>wc_cqueue</i> &quot;@&quot; <i>wc_host</i> </p>
 <p> A wildcard expression queue instance specification (<i>wc_qinstance</i>) starts with a wildcard expression cluster queue name (<i>wc_cqueue</i>) followed by an at-character &#8216;@&#8217; and a wildcard expression hostname (<i>wc_host</i>). </p>
 <p> <i>wc_qinstance</i> expressions are used to address a group of queue instances whose underlying hostname matches the given expression. Please note that the first character of <i>wc_host</i> never matches the at-character &#8216;@&#8217;. </p>
 <pre>e.g.
-<dl><dt><dd>*@* all queue instances in the cluster
+<dl><dt></dt><dd>*@* all queue instances in the cluster
 *@b* all queue instances whose 
  hostname begins with a 'b'
 *@b*|c* all queue instances whose 
  hostname begins with a 'b' or 'c'</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_queue</code></h3>
 <p><i>wc_queue</i> := <i>wc_cqueue</i> | <i>wc_qdomain</i> | <i>wc_qinstance</i> </p>
 <p> A wildcard queue expression (<i>wc_queue</i>) might either be a wildcard expression, cluster queue specification (<i>wc_cqueue</i>), a wildcard expression queue domain specification (<i>wc_qdomain</i>), or a wildcard expression queue instance specification (<i>wc_qinstance</i>). </p>
 <pre>e.g.
-<dl><dt><dd>big_*1 cluster queues which begin with 
+<dl><dt></dt><dd>big_*1 cluster queues which begin with 
  &quot;big_&quot; and end with &quot;1&quot; 
 big_*&amp;!*1 cluster queues which begin with 
  &quot;big_&quot;, but do not end with &quot;1&quot;
 *@fangorn all qinstances residing on host 
  fangorn</pre>
-</dl>
+</dd></dl>
 <h3><code>wc_queue_list</code></h3>
 <p><i>wc_queue_list</i> := <i>wc_queue</i> [&quot;,&quot; <i>wc_queue</i> &quot;,&quot; &#8230;] </p>
 <p> Comma-separated list of <i>wc_queue</i> elements. </p>
 <p> e.g.</p>
 <dl>
-<dd>big, medium_*@@sol*, *@fangorn.sun.com </p>
+<dd>big, medium_*@@sol*, *@fangorn.sun.com </dd>
 </dl>
 <h3><code>wc_user</code></h3>
 <p>A wildcard user name pattern is either a wildcard user name specification or a full user name. </p>

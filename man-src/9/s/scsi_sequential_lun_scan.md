@@ -14,24 +14,24 @@ description: "scsi_sequential_lun_scan – sequentially scan a SCSI target"
 <p><i>starget</i></p>
 <dl>
 <dd>
-<dd>pointer to target structure to scan</dl>
+</dd><dd>pointer to target structure to scan</dd></dl>
 <p> <i>bflags</i></p>
 <dl>
-<dd>black/white list flag for LUN 0</dl>
+<dd>black/white list flag for LUN 0</dd></dl>
 <p> <i>scsi_level</i></p>
 <dl>
-<dd>Which version of the standard does this device adhere to</dl>
+<dd>Which version of the standard does this device adhere to</dd></dl>
 <p> <i>rescan</i></p>
 <dl>
-<dd>passed to <code>scsi_probe_add_lun</code></dl>
+<dd>passed to <code>scsi_probe_add_lun</code></dd></dl>
 <h2>Description</h2>
 <p>Generally, scan from LUN 1 (LUN 0 is assumed to already have been scanned) to some maximum lun until a LUN is found with no device attached. Use the bflags to figure out any oddities. </p>
 <p> Modifies sdevscan-&gt;lun.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

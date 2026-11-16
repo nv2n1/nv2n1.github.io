@@ -25,7 +25,7 @@ description: "hwlocality_object_strings – Manipulating Object Type, Sets and A
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function may be used to enforce object colors in the lstopo graphical output by using &#8216;lstopoStyle&#8217; as a name and &#8216;Background=#rrggbb&#8217; as a value. See CUSTOM COLORS in the lstopo(1) manpage for details. </p>
+</dt><dd> This function may be used to enforce object colors in the lstopo graphical output by using &#8216;lstopoStyle&#8217; as a name and &#8216;Background=#rrggbb&#8217; as a value. See CUSTOM COLORS in the lstopo(1) manpage for details. </dd>
 <p> If value contains some non-printable characters, they will be dropped when exporting to XML, see <code>hwloc_topology_export_xml()</code>.</dl>
 <h3>int hwloc_obj_attr_snprintf (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, const char *restrict separator, int verbose)</h3>
 <p> Stringify the attributes of a given topology object into a human-readable form. Attribute values are separated by separator. </p>
@@ -34,4 +34,5 @@ description: "hwlocality_object_strings – Manipulating Object Type, Sets and A
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending 
+</dt><dd> the number of character that were actually written if not truncating, or that would have been written (not including the ending 
+</dd></dl>

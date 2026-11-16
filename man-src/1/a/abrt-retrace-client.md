@@ -33,10 +33,10 @@ url: "/docs/linux/man/1-abrt-retrace-client/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=analyze analyzer=CCpp
         abrt-retrace-client
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPERATIONS</h2>
 
@@ -45,31 +45,31 @@ EVENT=analyze analyzer=CCpp
  create
 <dl>
 <dt>
-<dd> Creates a new task. Prints task ID and password to stdout. Either -d or -c is required.</dl>
+</dt><dd> Creates a new task. Prints task ID and password to stdout. Either -d or -c is required.</dd></dl>
  
 
  status
 <dl>
 <dt>
-<dd> Prints task's status to stdout. Both -t and -p are required.</dl>
+</dt><dd> Prints task's status to stdout. Both -t and -p are required.</dd></dl>
  
 
  log
 <dl>
 <dt>
-<dd> Prints finished task's log to stdout. Both -t and -p are required.</dl>
+</dt><dd> Prints finished task's log to stdout. Both -t and -p are required.</dd></dl>
  
 
  backtrace
 <dl>
 <dt>
-<dd> Print finished task's backtrace to stdout. Both -t and -p are required.</dl>
+</dt><dd> Print finished task's backtrace to stdout. Both -t and -p are required.</dd></dl>
  
 
  batch
 <dl>
 <dt>
-<dd> Runs all operations in one step: creates a new task, periodically asks for status (the period is specified by --status-delay option) and downloads the result when finished. If the task was successful backtrace file is saved, otherwise log is printed to stdout. Either -c or -d is required.</dl>
+</dt><dd> Runs all operations in one step: creates a new task, periodically asks for status (the period is specified by --status-delay option) and downloads the result when finished. If the task was successful backtrace file is saved, otherwise log is printed to stdout. Either -c or -d is required.</dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -78,67 +78,67 @@ EVENT=analyze analyzer=CCpp
  -v, --verbose
 <dl>
 <dt>
-<dd> be verbose</dl>
+</dt><dd> be verbose</dd></dl>
  
 
  -s, --syslog
 <dl>
 <dt>
-<dd> log to syslog</dl>
+</dt><dd> log to syslog</dd></dl>
  
 
  -k, --insecure
 <dl>
 <dt>
-<dd> allow insecure connection to retrace server</dl>
+</dt><dd> allow insecure connection to retrace server</dd></dl>
  
 
  --url URL
 <dl>
 <dt>
-<dd> retrace server URL</dl>
+</dt><dd> retrace server URL</dd></dl>
  
 
  --headers
 <dl>
 <dt>
-<dd> (debug) show received HTTP headers</dl>
+</dt><dd> (debug) show received HTTP headers</dd></dl>
  
 
  -d, --dir DIR
 <dl>
 <dt>
-<dd> read data from ABRT problem directory</dl>
+</dt><dd> read data from ABRT problem directory</dd></dl>
  
 
  -c, --core COREDUMP
 <dl>
 <dt>
-<dd> read data from coredump</dl>
+</dt><dd> read data from coredump</dd></dl>
  
 
  -l, --status-delay
 <dl>
 <dt>
-<dd> delay for polling operations (seconds)</dl>
+</dt><dd> delay for polling operations (seconds)</dd></dl>
  
 
  --no-unlink
 <dl>
 <dt>
-<dd> (debug) do not delete temporary archive created in /tmp</dl>
+</dt><dd> (debug) do not delete temporary archive created in /tmp</dd></dl>
  
 
  -t, --task ID
 <dl>
 <dt>
-<dd> ID of the task on server</dl>
+</dt><dd> ID of the task on server</dd></dl>
  
 
  -p, --password PWD
 <dl>
 <dt>
-<dd> password of the task on server</dl>
+</dt><dd> password of the task on server</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -146,7 +146,7 @@ EVENT=analyze analyzer=CCpp
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

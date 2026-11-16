@@ -14,14 +14,14 @@ description: "rio_enum_mport – Start enumeration through a master port"
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port to send transactions</dl>
+</dd><dd>Master port to send transactions</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>Enumeration control flags</dl>
+<dd>Enumeration control flags</dd></dl>
 <h2>Description</h2>
 <p>Starts the enumeration process. If somebody has enumerated our master port device, then give up. If not and we have an active link, then start recursive peer enumeration. Returns <code>0</code> if enumeration succeeds or <code>-EBUSY</code> if enumeration fails.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

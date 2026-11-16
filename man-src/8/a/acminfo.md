@@ -14,7 +14,7 @@ description: "acminfo – display the header info of a TXT ACM"
 <p><code>acminfo</code> is used to display the header information for a TXT Authenticated Code Module (ACM) and match it with the current system.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>acm-file-name</i></p>
-<dd>ACM file name</dl>
+<dt><i>acm-file-name</i></dt>
+<dd>ACM file name</dd></dl>
 <h2>Examples</h2>
 <p><code>acminfo </code><i>i7_QUAD_SINIT_20.BIN </p>

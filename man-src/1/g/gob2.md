@@ -15,48 +15,48 @@ description: "GOB2 – The GObject Builder"
 <p> GObject Builder is a simple preprocessor for easily creating GObject objects. It does not parse any C code and ignores any C errors. It is in spirit similar to things like lex or yacc. In some ways it also resembles java. But it is really just a simple preprocessor for creating GObjects for use in C or C++ and it is not a programming language. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-? -h &#8211;help</code></p>
-<dd> Display a simple help screen.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information</p>
-<dt><code>-w &#8211;exit-on-warn</code></p>
-<dd> Exit with an error code even when you encounter a warning.</p>
-<dt><code>&#8211;no-exit-on-warn</code></p>
-<dd> Exit with an error only on errors, not on warnings, this is the default.</p>
-<dt><code>&#8211;for-cpp</code></p>
-<dd> Generate C++ code.</p>
-<dt><code>&#8211;no-extern-c</code></p>
-<dd> Never add the extern &quot;C&quot; to the header.</p>
-<dt><code>&#8211;no-gnu</code></p>
-<dd> Never generate any code with GNU C extensions. However all the GNU C extensions are always wrapped in #ifdef __GNUC__, so code using them compiles correctly even on non-GNU compilers. This option is for purists only. (using GNU extensions some warnings are eliminated, some ugly hacks and there is better argument type safety, so it&#8217;s good to use them)</p>
-<dt><code>&#8211;no-touch</code></p>
-<dd> Don&#8217;t touch output files unless they really changed (implies &#8211;no-touch-headers). Be careful with automake, see section PREVENTING SPURIOUS BUILDS.</p>
-<dt><code>&#8211;no-touch-headers</code></p>
-<dd> Don&#8217;t touch the generated header file unless it really changed, this avoids spurious rebuilds, but can confuse some make systems (automake in particular), so it is not enabled by default. Private header is still touched even if unchanged however.</p>
-<dt><code>&#8211;always-private-header</code></p>
-<dd> Always create a <code>&lt;basename&gt;-private.h</code> file, even if it would be empty.</p>
-<dt><code>&#8211;ondemand-private-header</code></p>
-<dd> Create the private header only if it would have something in it, that is, if there are some private data members or protected methods. This is the default.</p>
-<dt><code>&#8211;no-private-header</code></p>
-<dd> Never create a private header file. If we use any private data members, define the private data structure at the point in the .c source where the class definition begins.</p>
-<dt><code>&#8211;m4</code></p>
-<dd> Preprocess source with m4. Following args will be passed to m4.</p>
-<dt><code>&#8211;m4-dir</code></p>
-<dd> Print directory that will be searched for m4 files.</p>
-<dt><code>-n &#8211;no-write</code></p>
-<dd> Do not write any output files, just check syntax of the input file.</p>
-<dt><code>&#8211;no-lines</code></p>
-<dd> Do not print out the &#8216;#line&#8217; statements into the output. Useful for debugging the auto-generated generated code.</p>
-<dt><code>&#8211;no-self-alias</code></p>
-<dd> Do not create the Self and SelfClass type aliases and the SELF, IS_SELF and SELF_CLASS macros.</p>
-<dt><code>&#8211;no-kill-underscores</code></p>
-<dd> Do not remove the initial underscore from method names.</p>
-<dt><code>&#8211;always-private-struct</code></p>
-<dd> Always include the private pointer in the public header file. This is useful for files which are part of a library and you want to reserve the right to add some private data members without breaking binary compatibility.</p>
-<dt><code>-o &#8211;output-dir</code></p>
-<dd> The directory into which output should be placed.</p>
-<dt><code>&#8211;file-sep[=c]</code></p>
-<dd> Replace default &#8216;-&#8216; file name separator. If no separator character is given then none is used. Only one character can be used. </p>
+<dt><code>-? -h &#8211;help</code></dt>
+<dd> Display a simple help screen.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information</dd>
+<dt><code>-w &#8211;exit-on-warn</code></dt>
+<dd> Exit with an error code even when you encounter a warning.</dd>
+<dt><code>&#8211;no-exit-on-warn</code></dt>
+<dd> Exit with an error only on errors, not on warnings, this is the default.</dd>
+<dt><code>&#8211;for-cpp</code></dt>
+<dd> Generate C++ code.</dd>
+<dt><code>&#8211;no-extern-c</code></dt>
+<dd> Never add the extern &quot;C&quot; to the header.</dd>
+<dt><code>&#8211;no-gnu</code></dt>
+<dd> Never generate any code with GNU C extensions. However all the GNU C extensions are always wrapped in #ifdef __GNUC__, so code using them compiles correctly even on non-GNU compilers. This option is for purists only. (using GNU extensions some warnings are eliminated, some ugly hacks and there is better argument type safety, so it&#8217;s good to use them)</dd>
+<dt><code>&#8211;no-touch</code></dt>
+<dd> Don&#8217;t touch output files unless they really changed (implies &#8211;no-touch-headers). Be careful with automake, see section PREVENTING SPURIOUS BUILDS.</dd>
+<dt><code>&#8211;no-touch-headers</code></dt>
+<dd> Don&#8217;t touch the generated header file unless it really changed, this avoids spurious rebuilds, but can confuse some make systems (automake in particular), so it is not enabled by default. Private header is still touched even if unchanged however.</dd>
+<dt><code>&#8211;always-private-header</code></dt>
+<dd> Always create a <code>&lt;basename&gt;-private.h</code> file, even if it would be empty.</dd>
+<dt><code>&#8211;ondemand-private-header</code></dt>
+<dd> Create the private header only if it would have something in it, that is, if there are some private data members or protected methods. This is the default.</dd>
+<dt><code>&#8211;no-private-header</code></dt>
+<dd> Never create a private header file. If we use any private data members, define the private data structure at the point in the .c source where the class definition begins.</dd>
+<dt><code>&#8211;m4</code></dt>
+<dd> Preprocess source with m4. Following args will be passed to m4.</dd>
+<dt><code>&#8211;m4-dir</code></dt>
+<dd> Print directory that will be searched for m4 files.</dd>
+<dt><code>-n &#8211;no-write</code></dt>
+<dd> Do not write any output files, just check syntax of the input file.</dd>
+<dt><code>&#8211;no-lines</code></dt>
+<dd> Do not print out the &#8216;#line&#8217; statements into the output. Useful for debugging the auto-generated generated code.</dd>
+<dt><code>&#8211;no-self-alias</code></dt>
+<dd> Do not create the Self and SelfClass type aliases and the SELF, IS_SELF and SELF_CLASS macros.</dd>
+<dt><code>&#8211;no-kill-underscores</code></dt>
+<dd> Do not remove the initial underscore from method names.</dd>
+<dt><code>&#8211;always-private-struct</code></dt>
+<dd> Always include the private pointer in the public header file. This is useful for files which are part of a library and you want to reserve the right to add some private data members without breaking binary compatibility.</dd>
+<dt><code>-o &#8211;output-dir</code></dt>
+<dd> The directory into which output should be placed.</dd>
+<dt><code>&#8211;file-sep[=c]</code></dt>
+<dd> Replace default &#8216;-&#8216; file name separator. If no separator character is given then none is used. Only one character can be used. </dd>
 </dl>
 <h2>TYPENAMES</h2>
 <p> Because we need to parse out different parts of the typename, sometimes you need to specify the typename with some special syntax. Types are specified in capitalized form and words are separated by &#8216;:&#8217;. The first word of the type (which can be empty) is the &quot;namespace&quot;. This fact is for example used for the type checking macro and the type macro. For &quot;Gtk:New:Button&quot;, the macros will be GTK_IS_NEW_BUTTON and GTK_TYPE_NEW_BUTTON. This colon separated format of typenames is used in the class declaration header and for method argument types. </p>
@@ -240,7 +240,6 @@ or
 </pre>
 <p> The checks are glib type preconditions, and can be the following: &quot;null&quot;, which tests pointers for being NULL, &quot;type&quot; which checks GTK+ object pointers for being the right type, &quot;&lt;test&gt; &lt;number&gt;&quot; which tests numeric arguments for being a certain value. The test can be a &lt;,&gt;,&lt;=,&gt;= != or ==. Example: </p>
 <pre>
-  
   public int
   foo (self,
        int h (check &gt; 0 &lt; 11),

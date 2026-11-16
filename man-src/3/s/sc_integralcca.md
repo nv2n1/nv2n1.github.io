@@ -11,7 +11,6 @@ description: "sc::IntegralCCA –"
 <p> <code>IntegralCCA</code> provides an SC client for CCA IntegralEvaluator components.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;intcca.h&gt;</code></pre>
 <p> Inherits <code>sc::Integral</code>.</p>
 <h3>Public Member Functions</h3>
@@ -72,14 +71,14 @@ description: "sc::IntegralCCA –"
 <h3>sc::IntegralCCA::IntegralCCA (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. This constructor is used when the framework is embedded. The following keywords are read: </p>
 <dl>
-<dt>evaluator_factory</p>
-<dd>This gives the symbol name of a CCA IntegralEvaluatorFactory component. This symbol name should also appear in the cca-load argument. The default is MPQC.IntegralEvaluatorFactory.</dl>
+<dt>evaluator_factory</dt>
+<dd>This gives the symbol name of a CCA IntegralEvaluatorFactory component. This symbol name should also appear in the cca-load argument. The default is MPQC.IntegralEvaluatorFactory.</dd></dl>
 <dl>
-<dt>integral_package</p>
-<dd>If the default MPQC.IntegralEvaluatorFactory is used, then this option may be used to specify the integrals package to use (intv3 or cints). The default is intv3.</dl>
+<dt>integral_package</dt>
+<dd>If the default MPQC.IntegralEvaluatorFactory is used, then this option may be used to specify the integrals package to use (intv3 or cints). The default is intv3.</dd></dl>
 <dl>
-<dt>molecule</p>
-<dd>This gives a molecule object, it is required.</dl>
+<dt>molecule</dt>
+<dd>This gives a molecule object, it is required.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Ref</code>&lt;<code>OneBodyInt</code>&gt; sc::IntegralCCA::dipole (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp; = 0) [virtual]</h3>
 <p>Return a <code>OneBodyInt</code> that computes electric dipole moment integrals. The canonical order of integrals in a set is x, y, z. </p>

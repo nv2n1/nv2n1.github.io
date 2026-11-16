@@ -23,66 +23,66 @@ description: "vlock – Virtual Console lock program"
 <p> <code>-a,&#8211;all</code></p>
 <dl>
 <dt>
-<dd> Lock all console sessions and disable VC switching.</dl>
+</dt><dd> Lock all console sessions and disable VC switching.</dd></dl>
 <p> <code>-c,&#8211;current</code></p>
 <dl>
 <dt>
-<dd> Lock the current session (this is the default).</dl>
+</dt><dd> Lock the current session (this is the default).</dd></dl>
 <p> <code>-n,&#8211;new</code></p>
 <dl>
 <dt>
-<dd> Switch to a new virtual console before locking all console sessions.</dl>
+</dt><dd> Switch to a new virtual console before locking all console sessions.</dd></dl>
 <p> <code>-s,&#8211;disable-sysrq</code></p>
 <dl>
 <dt>
-<dd> Disable the SysRq mechanism while consoles are locked. This option only works if the <code>-a,&#8211;all</code> option given.</dl>
+</dt><dd> Disable the SysRq mechanism while consoles are locked. This option only works if the <code>-a,&#8211;all</code> option given.</dd></dl>
 <p> <code>-t,&#8211;timeout &lt;seconds&gt;</code></p>
 <dl>
 <dt>
-<dd> Specify the timeout for the screensaver plugins. See <a href="/docs/linux/man/5-vlock-plugins/">vlock-plugins</a>(5) for more information.</dl>
+</dt><dd> Specify the timeout for the screensaver plugins. See <a href="/docs/linux/man/5-vlock-plugins/">vlock-plugins</a>(5) for more information.</dd></dl>
 <p> <code>-h,&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print a brief help message.</dl>
+</dt><dd> Print a brief help message.</dd></dl>
 <p> <code>-v,&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print the version number.</dl>
+</dt><dd> Print the version number.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables can be used to change vlock&#8217;s behavior: </p>
 <p> <code>USER</code></p>
 <dl>
 <dt>
-<dd> If this variable is when <code>vlock</code> is run as root (uid 0) vlock locks the screen as this user instead of root. The root password will still be able to unlock the session, unless disabled at compile time.</dl>
+</dt><dd> If this variable is when <code>vlock</code> is run as root (uid 0) vlock locks the screen as this user instead of root. The root password will still be able to unlock the session, unless disabled at compile time.</dd></dl>
 <p> <code>VLOCK_ALL_MESSAGE</code></p>
 <dl>
 <dt>
-<dd> If this variable is set and all consoles are locked its contents will be used as the locking message instead of the default message.</dl>
+</dt><dd> If this variable is set and all consoles are locked its contents will be used as the locking message instead of the default message.</dd></dl>
 <p> <code>VLOCK_CURRENT_MESSAGE</code></p>
 <dl>
 <dt>
-<dd> If this variable is set and only the current consoles is locked its contents will be used as the locking message instead of the default message.</dl>
+</dt><dd> If this variable is set and only the current consoles is locked its contents will be used as the locking message instead of the default message.</dd></dl>
 <p> <code>VLOCK_MESSAGE</code></p>
 <dl>
 <dt>
-<dd> If this variable is set its contents will be used as the locking message instead of the default. This overrides the former two variables.</dl>
+</dt><dd> If this variable is set its contents will be used as the locking message instead of the default. This overrides the former two variables.</dd></dl>
 <p> <code>VLOCK_PLUGINS</code></p>
 <dl>
 <dt>
-<dd> If this variable is set it is interpreted as a space separated list of plugins that will be loaded when vlock starts additionally to the ones listed on the command line.</dl>
+</dt><dd> If this variable is set it is interpreted as a space separated list of plugins that will be loaded when vlock starts additionally to the ones listed on the command line.</dd></dl>
 <p> <code>VLOCK_TIMEOUT</code></p>
 <dl>
 <dt>
-<dd> Set this variable to specify the timeout (in seconds) after which the screen saver plugins (if any) will be invoked. If this variable is unset or set to an invalid value or 0 no timeout is used. See <a href="/docs/linux/man/5-vlock-plugins/">vlock-plugins</a>(5) for more information about plugins.</dl>
+</dt><dd> Set this variable to specify the timeout (in seconds) after which the screen saver plugins (if any) will be invoked. If this variable is unset or set to an invalid value or 0 no timeout is used. See <a href="/docs/linux/man/5-vlock-plugins/">vlock-plugins</a>(5) for more information about plugins.</dd></dl>
 <p> <code>VLOCK_PROMPT_TIMEOUT</code></p>
 <dl>
 <dt>
-<dd> Set this variable to specify the amount of time (in seconds) you will have to enter your password at the password prompt. If this variable is unset or set to an invalid value or 0 no timeout is used. <code>Warning</code>: If this value is too low, you may not be able to unlock your session.</dl>
+</dt><dd> Set this variable to specify the amount of time (in seconds) you will have to enter your password at the password prompt. If this variable is unset or set to an invalid value or 0 no timeout is used. <code>Warning</code>: If this value is too low, you may not be able to unlock your session.</dd></dl>
 <h2>FILES</h2>
 <p> <code>~/.vlockrc</code></p>
 <dl>
 <dt>
-<dd> This file is read by <code>vlock</code> on startup if it exists. All the variables mentioned above can be set here.</dl>
+</dt><dd> This file is read by <code>vlock</code> on startup if it exists. All the variables mentioned above can be set here.</dd></dl>
 <h2>SECURITY</h2>
 <p> See the SECURITY file in the <code>vlock</code> distribution for more information. </p>
 <h2>SEE ALSO</h2>

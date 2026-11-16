@@ -11,7 +11,6 @@ description: "sc::ThreadLock –"
 <p> The <code>ThreadLock</code> abstract class provides mutex locks to be used in conjunction with ThreadGrp&#8217;s.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thread.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>

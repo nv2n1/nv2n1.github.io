@@ -10,17 +10,16 @@ description: "sched_getcpu – determine CPU on which the calling thread is runn
 <p>sched_getcpu &#8211; determine CPU on which the calling thread is running</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sched.h&gt;
-
 int sched_getcpu(void);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sched_getcpu</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.14:</p>
-<dd>_GNU_SOURCE</p>
-<dt>Before glibc 2.14:</p>
+</dd><dl>
+<dt>Since glibc 2.14:</dt>
+<dd>_GNU_SOURCE</dd>
+<dt>Before glibc 2.14:</dt>
 <dd>_BSD_SOURCE || _SVID_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;_GNU_SOURCE also suffices&nbsp;*/</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;_GNU_SOURCE also suffices&nbsp;*/</dd></dl>
 </dl>
 <h2>Description</h2>
 <p><code>sched_getcpu</code>() returns the number of the CPU on which the calling thread is currently executing.</p>
@@ -28,8 +27,8 @@ int sched_getcpu(void);</code></pre>
 <p>On success, <code>sched_getcpu</code>() returns a nonnegative CPU number. On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd>This kernel does not implement <code><a href="/docs/linux/man/2-getcpu/">getcpu</a></code>(2).</dl>
+<dt><code>ENOSYS</code></dt>
+<dd>This kernel does not implement <code><a href="/docs/linux/man/2-getcpu/">getcpu</a></code>(2).</dd></dl>
 <h2>Versions</h2>
 <p>This function is available since glibc 2.6.</p>
 <h2>Attributes</h2>

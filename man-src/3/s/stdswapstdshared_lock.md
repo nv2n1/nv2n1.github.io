@@ -11,9 +11,7 @@ std::swap(std::shared_lock) - std::swap(std::shared_lock)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Mutex&gt;
-
 void swap(shared_lock&lt;Mutex&gt; &amp;lhs, (since C++ 14)
-
                                        shared_lock&lt;Mutex&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::shared_lock. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

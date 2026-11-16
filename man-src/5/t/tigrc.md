@@ -25,32 +25,32 @@ description: "tigrc – Tig configuration file"
 <pre>[tig] show-changes = true
 [tig &quot;color&quot;] cursor = yellow red bold
 [tig &quot;bind&quot;] generic = P parent</pre>
-</dl>
+</dd></dl>
 <p> In addition to tig-specific options, the following Git options are read from the Git configuration: </p>
 <p> <i>color.*</i></p>
 <dl>
-<dd>Colors for the various UI types. Can be configured via the <i>git-colors</i> setting.</dl>
+<dd>Colors for the various UI types. Can be configured via the <i>git-colors</i> setting.</dd></dl>
 <p> <i>core.abbrev</i></p>
 <dl>
-<dd>The width of the commit ID. See also <i>id-width</i> option.</dl>
+<dd>The width of the commit ID. See also <i>id-width</i> option.</dd></dl>
 <p> <i>core.editor</i></p>
 <dl>
-<dd>The editor command. Can be overridden by setting GIT_EDITOR.</dl>
+<dd>The editor command. Can be overridden by setting GIT_EDITOR.</dd></dl>
 <p> <i>core.worktree</i></p>
 <dl>
-<dd>The path to the root of the working tree.</dl>
+<dd>The path to the root of the working tree.</dd></dl>
 <p> <i>gui.encoding</i></p>
 <dl>
-<dd>The encoding to use for displaying of file content.</dl>
+<dd>The encoding to use for displaying of file content.</dd></dl>
 <p> <i>i18n.commitencoding</i></p>
 <dl>
-<dd>The encoding used for commits. The default is UTF-8.</dl>
+<dd>The encoding used for commits. The default is UTF-8.</dd></dl>
 <h2>Set Command</h2>
 <p>A few selective variables can be configured via the set command. The syntax is: </p>
 <dl>
 <dd>
 <pre><code>set</code> variables <code>=</code> value</pre>
-</dl>
+</dd></dl>
 <p> Examples: </p>
 <dl>
 <dd>
@@ -67,159 +67,159 @@ set blame-view = \
  file-name:auto \
  id:yes,color \
  line-number:yes,interval=5 text</pre>
-</dl>
+</dd></dl>
 <p> Or in the Git configuration files: </p>
 <dl>
 <dd>
 <pre>[tig]
  line-graphics = no # Disable graphics characters
  tab-size = 8 # Number of spaces per tab</pre>
-</dl>
+</dd></dl>
 <p> The type of variables is either bool, int, string, or mixed. </p>
 <p> Valid bool values</p>
 <dl>
-<dd>To set a bool variable to true use either &quot;1&quot;, &quot;true&quot;, or &quot;yes&quot;. Any other value will set the variable to false.</dl>
+<dd>To set a bool variable to true use either &quot;1&quot;, &quot;true&quot;, or &quot;yes&quot;. Any other value will set the variable to false.</dd></dl>
 <p> Valid int values</p>
 <dl>
-<dd>A non-negative integer.</dl>
+<dd>A non-negative integer.</dd></dl>
 <p> Valid string values</p>
 <dl>
-<dd>A string of characters. Optionally, use either &#8216; or &quot; as delimiters.</dl>
+<dd>A string of characters. Optionally, use either &#8216; or &quot; as delimiters.</dd></dl>
 <p> Valid mixed values</p>
 <dl>
-<dd>These values are composites of the above types. The valid values are specified in the description.</dl>
+<dd>These values are composites of the above types. The valid values are specified in the description.</dd></dl>
 <h3>Variables</h3>
 <p>The following variables can be set: </p>
 <p> <i>diff-options</i> (string)</p>
 <dl>
-<dd>A space-separated string of diff options to use in the diff view. <a href="/docs/linux/man/1-git-show/">git-show</a>(1) is used for formatting and always passes &#8211;patch-with-stat. Can control display of commit header metadata, passing option &#8211;format. This option overrides any options specified in the TIG_DIFF_OPTS environment variable (described in <code><a href="/docs/linux/man/1-tig/">tig</a></code>(1)), but is itself overridden by diff flags given on the command line invocation.</dl>
+<dd>A space-separated string of diff options to use in the diff view. <a href="/docs/linux/man/1-git-show/">git-show</a>(1) is used for formatting and always passes &#8211;patch-with-stat. Can control display of commit header metadata, passing option &#8211;format. This option overrides any options specified in the TIG_DIFF_OPTS environment variable (described in <code><a href="/docs/linux/man/1-tig/">tig</a></code>(1)), but is itself overridden by diff flags given on the command line invocation.</dd></dl>
 <p> <i>blame-options</i> (string)</p>
 <dl>
-<dd>A space-separated string of default blame options. Can be used for telling <a href="/docs/linux/man/1-git-blame/">git-blame</a>(1) how to detect the origin of lines. The options are ignored when Tig is started in blame mode and given blame options on the command line.</dl>
+<dd>A space-separated string of default blame options. Can be used for telling <a href="/docs/linux/man/1-git-blame/">git-blame</a>(1) how to detect the origin of lines. The options are ignored when Tig is started in blame mode and given blame options on the command line.</dd></dl>
 <p> <i>log-options</i> (string)</p>
 <dl>
-<dd>A space-separated string of default options that should be passed to the <a href="/docs/linux/man/1-git-log/">git-log</a>(1) command used by the log view. Options can be overridden by command line options. Used internally override custom &#8216;pretty.format&#8217; settings that break the log view.</dl>
+<dd>A space-separated string of default options that should be passed to the <a href="/docs/linux/man/1-git-log/">git-log</a>(1) command used by the log view. Options can be overridden by command line options. Used internally override custom &#8216;pretty.format&#8217; settings that break the log view.</dd></dl>
 <p> <i>main-options</i> (string)</p>
 <dl>
-<dd>A space-separated string of default options that should be passed to the <a href="/docs/linux/man/1-git-log/">git-log</a>(1) command used by the main view. Options can be overridden by command line options.</dl>
+<dd>A space-separated string of default options that should be passed to the <a href="/docs/linux/man/1-git-log/">git-log</a>(1) command used by the main view. Options can be overridden by command line options.</dd></dl>
 <p> <i>reference-format</i> (string)</p>
 <dl>
-<dd>A space-separated string of format strings used for formatting reference names. Wrap the name of the reference type with the characters you would like to use for formatting, e.g. [tag] and &lt;remote&gt;. If no format is specified for local-tag, the format for tag is used. Similarly, if no format is specified for tracked-remote the remote format is used. Prefix with hide: to not show that reference type, e.g. hide:remote. Supported reference types are: </p>
+<dd>A space-separated string of format strings used for formatting reference names. Wrap the name of the reference type with the characters you would like to use for formatting, e.g. [tag] and &lt;remote&gt;. If no format is specified for local-tag, the format for tag is used. Similarly, if no format is specified for tracked-remote the remote format is used. Prefix with hide: to not show that reference type, e.g. hide:remote. Supported reference types are: </dd>
 <dl>
-<dd>&bull; head : The current HEAD.</dl>
+<dd>&bull; head : The current HEAD.</dd></dl>
 <dl>
-<dd>&bull; tag : A signed tag.</dl>
+<dd>&bull; tag : A signed tag.</dd></dl>
 <dl>
-<dd>&bull; local-tag : An unsigned tag.</dl>
+<dd>&bull; local-tag : An unsigned tag.</dd></dl>
 <dl>
-<dd>&bull; remote : A remote.</dl>
+<dd>&bull; remote : A remote.</dd></dl>
 <dl>
-<dd>&bull; tracked-remote : The remote tracked by current HEAD.</dl>
+<dd>&bull; tracked-remote : The remote tracked by current HEAD.</dd></dl>
 <dl>
-<dd>&bull; replace : A replaced reference.</dl>
+<dd>&bull; replace : A replaced reference.</dd></dl>
 <dl>
-<dd>&bull; branch : Any other reference.</dl>
+<dd>&bull; branch : Any other reference.</dd></dl>
 </dl>
 <p> <i>line-graphics</i> (mixed) [ascii|default|utf-8|&lt;bool&gt;]</p>
 <dl>
-<dd>What type of character graphics for line drawing.</dl>
+<dd>What type of character graphics for line drawing.</dd></dl>
 <p> <i>truncation-delimiter</i> (mixed) [utf-8|&lt;string&gt;]</p>
 <dl>
-<dd>A single character to draw where columns are truncated. The default is &quot;~&quot;. The special value &quot;utf-8&quot; refers to the character &quot;&#8230;&quot; (&quot;Midline Horizontal Ellipsis&quot;).</dl>
+<dd>A single character to draw where columns are truncated. The default is &quot;~&quot;. The special value &quot;utf-8&quot; refers to the character &quot;&#8230;&quot; (&quot;Midline Horizontal Ellipsis&quot;).</dd></dl>
 <p> <i>horizontal-scroll</i> (mixed)</p>
 <dl>
-<dd>Interval to scroll horizontally in each step. Can be specified either as the number of columns, e.g. <i>5</i>, or as a percentage of the view width, e.g. <i>33%</i>, where the maximum is 100%. For percentages it is always ensured that at least one column is scrolled. The default is to scroll <i>50%</i> of the view width.</dl>
+<dd>Interval to scroll horizontally in each step. Can be specified either as the number of columns, e.g. <i>5</i>, or as a percentage of the view width, e.g. <i>33%</i>, where the maximum is 100%. For percentages it is always ensured that at least one column is scrolled. The default is to scroll <i>50%</i> of the view width.</dd></dl>
 <p> <i>git-colors</i> (list)</p>
 <dl>
-<dd>A space-separated list of &quot;key=value&quot; pairs where the key is a Git color name and the value is a Tig color name, e.g. &quot;branch.current=main-head&quot; and &quot;grep.filename=grep.file&quot;. Set to &quot;no&quot; to disable.</dl>
+<dd>A space-separated list of &quot;key=value&quot; pairs where the key is a Git color name and the value is a Tig color name, e.g. &quot;branch.current=main-head&quot; and &quot;grep.filename=grep.file&quot;. Set to &quot;no&quot; to disable.</dd></dl>
 <p> <i>show-notes</i> (mixed) [&lt;reference&gt;|&lt;bool&gt;]</p>
 <dl>
-<dd>Whether to show notes for a commit. When set to a note reference the reference is passed to git show &#8211;notes=. Notes are enabled by default.</dl>
+<dd>Whether to show notes for a commit. When set to a note reference the reference is passed to git show &#8211;notes=. Notes are enabled by default.</dd></dl>
 <p> <i>show-changes</i> (bool)</p>
 <dl>
-<dd>Whether to show staged and unstaged changes in the main view.</dl>
+<dd>Whether to show staged and unstaged changes in the main view.</dd></dl>
 <p> <i>show-untracked</i> (bool)</p>
 <dl>
-<dd>Whether to show also untracked changes in the main view.</dl>
+<dd>Whether to show also untracked changes in the main view.</dd></dl>
 <p> <i>vertical-split</i> (mixed) [auto|&lt;bool&gt;]</p>
 <dl>
-<dd>Whether to split the view horizontally or vertically. &quot;auto&quot; (which is the default) means that it will depend on the window dimensions. When true vertical orientation is used, and false sets the orientation to horizontal.</dl>
+<dd>Whether to split the view horizontally or vertically. &quot;auto&quot; (which is the default) means that it will depend on the window dimensions. When true vertical orientation is used, and false sets the orientation to horizontal.</dd></dl>
 <p> <i>split-view-height</i> (mixed)</p>
 <dl>
-<dd>The height of the bottom view in a horizontally split display. Can be specified either as the number of rows, e.g. <i>5</i>, or as a percentage of the view height, e.g. <i>80%</i>, where the maximum is 100%. It is always ensured that the smaller of the views is at least four rows high. The default is <i>67%</i>.</dl>
+<dd>The height of the bottom view in a horizontally split display. Can be specified either as the number of rows, e.g. <i>5</i>, or as a percentage of the view height, e.g. <i>80%</i>, where the maximum is 100%. It is always ensured that the smaller of the views is at least four rows high. The default is <i>67%</i>.</dd></dl>
 <p> <i>split-view-width</i> (mixed)</p>
 <dl>
-<dd>Width of the right-most view in a vertically split display. Can be specified either as the number of column, e.g. <i>5</i>, or as a percentage of the view width, e.g. <i>80%</i>, where the maximum is 100%. It is always ensured that the smaller of the views is at least four columns wide. The default is <i>50%</i>.</dl>
+<dd>Width of the right-most view in a vertically split display. Can be specified either as the number of column, e.g. <i>5</i>, or as a percentage of the view width, e.g. <i>80%</i>, where the maximum is 100%. It is always ensured that the smaller of the views is at least four columns wide. The default is <i>50%</i>.</dd></dl>
 <p> <i>status-show-untracked-dirs</i> (bool)</p>
 <dl>
-<dd>Show untracked directories contents in the status view (analog to git ls-files &#8211;directory option). On by default.</dl>
+<dd>Show untracked directories contents in the status view (analog to git ls-files &#8211;directory option). On by default.</dd></dl>
 <p> <i>status-show-untracked-files</i> (bool)</p>
 <dl>
-<dd>Show untracked files in the status view (mirrors Git&#8217;s status.showUntrackedFiles option). On by default.</dl>
+<dd>Show untracked files in the status view (mirrors Git&#8217;s status.showUntrackedFiles option). On by default.</dd></dl>
 <p> <i>tab-size</i> (int)</p>
 <dl>
-<dd>Number of spaces per tab. The default is 8 spaces.</dl>
+<dd>Number of spaces per tab. The default is 8 spaces.</dd></dl>
 <p> <i>diff-context</i> (int)</p>
 <dl>
-<dd>Number of context lines to show for diffs.</dl>
+<dd>Number of context lines to show for diffs.</dd></dl>
 <p> <i>diff-highlight</i> (mixed)</p>
 <dl>
-<dd>Whether to highlight diffs using Git&#8217;s <i>diff-highlight</i> program. Defaults to false. When set to true then <i>diff-highlight</i> is used, else the option value is used as the path. When this option is in effect, highlighted regions are governed by color diff-add-highlight and color diff-del-highlight.</dl>
+<dd>Whether to highlight diffs using Git&#8217;s <i>diff-highlight</i> program. Defaults to false. When set to true then <i>diff-highlight</i> is used, else the option value is used as the path. When this option is in effect, highlighted regions are governed by color diff-add-highlight and color diff-del-highlight.</dd></dl>
 <p> <i>ignore-space</i> (mixed) [no|all|some|at-eol|&lt;bool&gt;]</p>
 <dl>
-<dd>Ignore space changes in diff view. By default no space changes are ignored. Changing this to &quot;all&quot;, &quot;some&quot; or &quot;at-eol&quot; is equivalent to passing &quot;&#8211;ignore-all-space&quot;, &quot;&#8211;ignore-space&quot; or &quot;&#8211;ignore-space-at-eol&quot; respectively to git diff or git show. </p>
+<dd>Ignore space changes in diff view. By default no space changes are ignored. Changing this to &quot;all&quot;, &quot;some&quot; or &quot;at-eol&quot; is equivalent to passing &quot;&#8211;ignore-all-space&quot;, &quot;&#8211;ignore-space&quot; or &quot;&#8211;ignore-space-at-eol&quot; respectively to git diff or git show. </dd>
 <p> <code>Warning:</code> when ignore-space is set to some, all or at-eol, then the <code>status-update</code> and <code>status-revert</code> may fail when updating or reverting chunks containing lines with space changes. Similarly, <code>stage-update-line</code> may fail when updating a line adjacent to a line with space changes</dl>
 <p> <i>commit-order</i> (enum) [auto|default|topo|date|author-date|reverse]</p>
 <dl>
-<dd>Commit ordering using the default (chronological reverse) order, topological order, date order or reverse order. When set to &quot;auto&quot; (which is the default), topological order is automatically used in the main view when the commit graph is enabled. In repositories with a long commit history it is advised to set this option to &quot;default&quot; to speed up loading of the main view.</dl>
+<dd>Commit ordering using the default (chronological reverse) order, topological order, date order or reverse order. When set to &quot;auto&quot; (which is the default), topological order is automatically used in the main view when the commit graph is enabled. In repositories with a long commit history it is advised to set this option to &quot;default&quot; to speed up loading of the main view.</dd></dl>
 <p> <i>ignore-case</i> (enum) [no|yes|smart-case]</p>
 <dl>
-<dd>Ignore case in searches. &quot;smart-case&quot; ignores case if the search string doesn&#8217;t contain any uppercase letters. By default, the search is case sensitive.</dl>
+<dd>Ignore case in searches. &quot;smart-case&quot; ignores case if the search string doesn&#8217;t contain any uppercase letters. By default, the search is case sensitive.</dd></dl>
 <p> <i>mailmap</i> (bool)</p>
 <dl>
-<dd>Read canonical name and email addresses for authors and committers from .mailmap. Off by default. See <a href="/docs/linux/man/1-git-shortlog/">git-shortlog</a>(1).</dl>
+<dd>Read canonical name and email addresses for authors and committers from .mailmap. Off by default. See <a href="/docs/linux/man/1-git-shortlog/">git-shortlog</a>(1).</dd></dl>
 <p> <i>wrap-lines</i> (bool)</p>
 <dl>
-<dd>Wrap long lines. By default, lines are not wrapped. Not compatible with line numbers enabled.</dl>
+<dd>Wrap long lines. By default, lines are not wrapped. Not compatible with line numbers enabled.</dd></dl>
 <p> <i>focus-child</i> (bool)</p>
 <dl>
-<dd>Whether to focus the child view when it is opened. When disabled the focus will remain in the parent view, avoiding reloads of the child view when navigating the parent view. True by default.</dl>
+<dd>Whether to focus the child view when it is opened. When disabled the focus will remain in the parent view, avoiding reloads of the child view when navigating the parent view. True by default.</dd></dl>
 <p> <i>send-child-enter</i> (bool)</p>
 <dl>
-<dd>Whether to send &quot;enter&quot; key presses to the child view, even if parent view is active. When disabled the child view has to be explicitly focused to receive the &quot;enter&quot; key presses. In practice only relevant when set focus-child = no. True by default.</dl>
+<dd>Whether to send &quot;enter&quot; key presses to the child view, even if parent view is active. When disabled the child view has to be explicitly focused to receive the &quot;enter&quot; key presses. In practice only relevant when set focus-child = no. True by default.</dd></dl>
 <p> <i>editor-line-number</i> (bool)</p>
 <dl>
-<dd>Whether to pass the selected line number to the editor command. The line number is passed as +&lt;line-number&gt; in front of the file name. Example: vim +10 tig.c</dl>
+<dd>Whether to pass the selected line number to the editor command. The line number is passed as +&lt;line-number&gt; in front of the file name. Example: vim +10 tig.c</dd></dl>
 <p> <i>history-size</i> (int)</p>
 <dl>
-<dd>Size of the persistent ~/.tig_history file when compiled with readline support. Default is 500. Set to 0 to disable.</dl>
+<dd>Size of the persistent ~/.tig_history file when compiled with readline support. Default is 500. Set to 0 to disable.</dd></dl>
 <p> <i>mouse</i> (bool)</p>
 <dl>
-<dd>Whether to enable mouse support. Off by default since it makes selecting text from the terminal less intuitive. When enabled hold down Shift (or Option on Mac) to select text. Mouse support requires that ncurses itself support mouse events.</dl>
+<dd>Whether to enable mouse support. Off by default since it makes selecting text from the terminal less intuitive. When enabled hold down Shift (or Option on Mac) to select text. Mouse support requires that ncurses itself support mouse events.</dd></dl>
 <p> <i>mouse-scroll</i> (int)</p>
 <dl>
-<dd>Interval to scroll up or down using the mouse. The default is 3 lines. Mouse support requires that ncurses itself support mouse events and that you have enabled mouse support in ~/.tigrc with set mouse = true.</dl>
+<dd>Interval to scroll up or down using the mouse. The default is 3 lines. Mouse support requires that ncurses itself support mouse events and that you have enabled mouse support in ~/.tigrc with set mouse = true.</dd></dl>
 <p> <i>mouse-wheel-cursor</i> (bool)</p>
 <dl>
-<dd>Whether to prefer moving the cursor to scrolling the view when using the mouse wheel. Off by default. Combines well with set mouse-scroll = 1. Mouse support requires that ncurses itself support mouse events and that you have enabled mouse support in ~/.tigrc with set mouse = true.</dl>
+<dd>Whether to prefer moving the cursor to scrolling the view when using the mouse wheel. Off by default. Combines well with set mouse-scroll = 1. Mouse support requires that ncurses itself support mouse events and that you have enabled mouse support in ~/.tigrc with set mouse = true.</dd></dl>
 <p> <i>pgrp</i> (bool)</p>
 <dl>
-<dd>Make tig process-group leader when starting and clean all processes when exiting. Off by default. Do not enable this option if you are using a Zsh version affected by zsh-workers/43379. Run xclip with setsid to keep clipboard content after exiting tig. If you are using git-credential-cache helper, set option credentialCache.ignoreSIGHUP.</dl>
+<dd>Make tig process-group leader when starting and clean all processes when exiting. Off by default. Do not enable this option if you are using a Zsh version affected by zsh-workers/43379. Run xclip with setsid to keep clipboard content after exiting tig. If you are using git-credential-cache helper, set option credentialCache.ignoreSIGHUP.</dd></dl>
 <p> <i>start-on-head</i> (bool)</p>
 <dl>
-<dd>Start with cursor on HEAD commit.</dl>
+<dd>Start with cursor on HEAD commit.</dd></dl>
 <p> <i>refresh-mode</i> (mixed) [manual|auto|after-command|periodic|&lt;bool&gt;]</p>
 <dl>
-<dd>Configures how views are refreshed based on modifications to watched files in the repository. When set to <i>manual</i>, nothing is refreshed automatically. When set to <i>auto</i>, views are refreshed when a modification is detected in another view. When set to <i>after-command</i> only refresh after returning from an external command. When set to <i>periodic</i>, visible views are refreshed periodically using <i>refresh-interval</i>.</dl>
+<dd>Configures how views are refreshed based on modifications to watched files in the repository. When set to <i>manual</i>, nothing is refreshed automatically. When set to <i>auto</i>, views are refreshed when a modification is detected in another view. When set to <i>after-command</i> only refresh after returning from an external command. When set to <i>periodic</i>, visible views are refreshed periodically using <i>refresh-interval</i>.</dd></dl>
 <p> <i>refresh-interval</i> (int)</p>
 <dl>
-<dd>Interval in seconds between view refresh update checks when <i>refresh-mode</i> is set to <i>periodic</i>.</dl>
+<dd>Interval in seconds between view refresh update checks when <i>refresh-mode</i> is set to <i>periodic</i>.</dd></dl>
 <p> <i>file-args</i> (args)</p>
 <dl>
-<dd>Command line arguments referring to files. These are filtered using <a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a>(1).</dl>
+<dd>Command line arguments referring to files. These are filtered using <a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a>(1).</dd></dl>
 <p> <i>rev-args</i> (args)</p>
 <dl>
-<dd>Command line arguments referring to revisions. These are filtered using <a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a>(1).</dl>
+<dd>Command line arguments referring to revisions. These are filtered using <a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a>(1).</dd></dl>
 <h3>View settings</h3>
 <p>The view settings define the order and options for the different columns of a view. Each view setting expects a space-separated list of column specifications. Column specifications starts with the column type, and can optionally be followed by a colon (:) and a list of column options. E.g. the following column specification defines an <i>author</i> column displaying the author email and with a fixed width of 20 characters: author:email,width=20. </p>
 <p> The first option value in a column specification is always the <i>display</i> option. When no <i>display</i> value is given, <i>yes</i> is assumed. For <i>display</i> options expecting an enumerated value this will automatically resolve to the default enum value. For example, file-name will automatically have its <i>display</i> setting resolve to <i>auto</i>. </p>
@@ -243,130 +243,130 @@ set main-view-date-format = &quot;%Y-%m-%d %H:%M&quot;
 set blame-view-line-number = no
 # Use Git's default commit order, even when the commit graph is enabled.
 set commit-order = default</pre>
-</dl>
+</dd></dl>
 <p> The following list shows which the available view settings and what column types they support: </p>
 <p> blob-view, diff-view, log-view, pager-view, stage-view</p>
 <dl>
-<dd>line-number, text</dl>
+<dd>line-number, text</dd></dl>
 <p> blame-view</p>
 <dl>
-<dd>author, date, file-name, id, line-number, text</dl>
+<dd>author, date, file-name, id, line-number, text</dd></dl>
 <p> grep-view</p>
 <dl>
-<dd>file-name, line-number, text</dl>
+<dd>file-name, line-number, text</dd></dl>
 <p> main-view, reflog-view</p>
 <dl>
-<dd>author, date, commit-title, id, line-number, ref</dl>
+<dd>author, date, commit-title, id, line-number, ref</dd></dl>
 <p> refs-view</p>
 <dl>
-<dd>author, date, commit-title, id, line-number, ref</dl>
+<dd>author, date, commit-title, id, line-number, ref</dd></dl>
 <p> stash-view</p>
 <dl>
-<dd>author, date, commit-title, id, line-number</dl>
+<dd>author, date, commit-title, id, line-number</dd></dl>
 <p> status-view</p>
 <dl>
-<dd>file-name, line-number, status</dl>
+<dd>file-name, line-number, status</dd></dl>
 <p> tree-view</p>
 <dl>
-<dd>author, date, id, file-name, file-size, line-number, mode</dl>
+<dd>author, date, id, file-name, file-size, line-number, mode</dd></dl>
 <p> Supported column types and their respective column options: </p>
 <p> author</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (mixed) [full|abbreviated|email|email-user|&lt;bool&gt;]: How to display author names. If set to &quot;abbreviated&quot; author initials will be shown.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (mixed) [full|abbreviated|email|email-user|&lt;bool&gt;]: How to display author names. If set to &quot;abbreviated&quot; author initials will be shown.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to a value between 1 and 10, the author name will be abbreviated to the author&#8217;s initials. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 <dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to a value between 1 and 10, the author name will be abbreviated to the author&#8217;s initials. When set to zero, the width is automatically sized to fit the content.</dl>
-<dl>
-<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dl>
+<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dd></dl>
 </dl>
 <p> commit-title</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>graph</i> (mixed) [no|v2|v1]: Whether to show the revision graph in the main view on start-up. &quot;v1&quot; refers to the old graph rendering, which is less accurate but faster and thus recommended in large repositories. See also the <i>line-graphics</i> options.</dd></dl>
 <dl>
-<dd>&bull; <i>graph</i> (mixed) [no|v2|v1]: Whether to show the revision graph in the main view on start-up. &quot;v1&quot; refers to the old graph rendering, which is less accurate but faster and thus recommended in large repositories. See also the <i>line-graphics</i> options.</dl>
+<dd>&bull; <i>refs</i> (bool): Whether to show references (branches, tags, and remotes) in the main view. Can be toggled.</dd></dl>
 <dl>
-<dd>&bull; <i>refs</i> (bool): Whether to show references (branches, tags, and remotes) in the main view. Can be toggled.</dl>
-<dl>
-<dd>&bull; <i>overflow</i> (bool or int): Whether to highlight text in commit titles exceeding a given width. When set to a boolean, it enables or disables the highlighting using the default width of 50 character. When set to an int, the assigned value is used as the maximum character width.</dl>
+<dd>&bull; <i>overflow</i> (bool or int): Whether to highlight text in commit titles exceeding a given width. When set to a boolean, it enables or disables the highlighting using the default width of 50 character. When set to an int, the assigned value is used as the maximum character width.</dd></dl>
 </dl>
 <p> date</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (mixed) [relative|relative-compact|custom|default|&lt;bool&gt;]: How to display dates. If set to &quot;relative&quot; or &quot;relative-compact&quot; a relative date will be used, e.g. &quot;2 minutes ago&quot; or &quot;2m&quot;. If set to &quot;custom&quot;, the <a href="/docs/linux/man/3-strftime/">strftime</a>(3) string format specified in the &quot;format&quot; option is used.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (mixed) [relative|relative-compact|custom|default|&lt;bool&gt;]: How to display dates. If set to &quot;relative&quot; or &quot;relative-compact&quot; a relative date will be used, e.g. &quot;2 minutes ago&quot; or &quot;2m&quot;. If set to &quot;custom&quot;, the <a href="/docs/linux/man/3-strftime/">strftime</a>(3) string format specified in the &quot;format&quot; option is used.</dl>
+<dd>&bull; <i>local</i> (bool): If true, use <a href="/docs/linux/man/3-localtime/">localtime</a>(3) to convert to local timezone. Note that relative dates always use local offsets.</dd></dl>
 <dl>
-<dd>&bull; <i>local</i> (bool): If true, use <a href="/docs/linux/man/3-localtime/">localtime</a>(3) to convert to local timezone. Note that relative dates always use local offsets.</dl>
+<dd>&bull; <i>format</i> (string): format string to pass to <a href="/docs/linux/man/3-strftime/">strftime</a>(3) when <i>custom</i> display mode has been selected.</dd></dl>
 <dl>
-<dd>&bull; <i>format</i> (string): format string to pass to <a href="/docs/linux/man/3-strftime/">strftime</a>(3) when <i>custom</i> display mode has been selected.</dl>
-<dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 </dl>
 <p> file-name</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (mixed) [auto|always|&lt;bool&gt;]: When to display file names. If set to &quot;auto&quot; file names are shown only when needed, e.g. when running: tig blame -C &lt;file&gt;.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (mixed) [auto|always|&lt;bool&gt;]: When to display file names. If set to &quot;auto&quot; file names are shown only when needed, e.g. when running: tig blame -C &lt;file&gt;.</dl>
+<dd>&bull; <i>width</i> (int): Width of the column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 <dl>
-<dd>&bull; <i>width</i> (int): Width of the column. When set to zero, the width is automatically sized to fit the content.</dl>
-<dl>
-<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dl>
+<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dd></dl>
 </dl>
 <p> file-size</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (mixed) [default|units|&lt;bool&gt;]: How to display file sizes. When set to &quot;units&quot;, sizes are shown using binary prefixes, e.g. 12524 bytes is shown as &quot;12.2K&quot;.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (mixed) [default|units|&lt;bool&gt;]: How to display file sizes. When set to &quot;units&quot;, sizes are shown using binary prefixes, e.g. 12524 bytes is shown as &quot;12.2K&quot;.</dl>
-<dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the filename column. When set to zero, the width is automatically sized to fit the content.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the filename column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 </dl>
 <p> id</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (bool): Whether to show commit IDs in the main view.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (bool): Whether to show commit IDs in the main view.</dl>
-<dl>
-<dd>&bull; <i>width</i> (int) : Fixed width for the commit ID column. When unset Tig will use the value of <i>core.abbrev</i> if found. See <a href="/docs/linux/man/1-git-config/">git-config</a>(1) on how to set <i>core.abbrev</i>. When set to zero the width is automatically sized to fit the content of reflog (e.g. ref/stash@{4}) IDs and otherwise default to 7.</dl>
+<dd>&bull; <i>width</i> (int) : Fixed width for the commit ID column. When unset Tig will use the value of <i>core.abbrev</i> if found. See <a href="/docs/linux/man/1-git-config/">git-config</a>(1) on how to set <i>core.abbrev</i>. When set to zero the width is automatically sized to fit the content of reflog (e.g. ref/stash@{4}) IDs and otherwise default to 7.</dd></dl>
 </dl>
 <p> line-number</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (bool): Whether to show line numbers.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (bool): Whether to show line numbers.</dl>
+<dd>&bull; <i>interval</i> (int): Interval between line numbers.</dd></dl>
 <dl>
-<dd>&bull; <i>interval</i> (int): Interval between line numbers.</dl>
-<dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 </dl>
 <p> mode</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (bool): Whether to show file modes.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (bool): Whether to show file modes.</dl>
-<dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 </dl>
 <p> ref</p>
 <dl>
 <dd>
+</dd><dl>
+<dd>&bull; <i>display</i> (bool): Whether to show the reference name.</dd></dl>
 <dl>
-<dd>&bull; <i>display</i> (bool): Whether to show the reference name.</dl>
+<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dd></dl>
 <dl>
-<dd>&bull; <i>width</i> (int): Fixed width for the column. When set to zero, the width is automatically sized to fit the content.</dl>
-<dl>
-<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dl>
+<dd>&bull; <i>maxwidth</i> (int): Maximum width of the column. Permit automatically sizing content, up to this limit.</dd></dl>
 </dl>
 <p> status</p>
 <dl>
 <dd>
-<dl>
-<dd>&bull; <i>display</i> (mixed) [no|short|long|&lt;bool&gt;]: How to display the status label.</dl>
+</dd><dl>
+<dd>&bull; <i>display</i> (mixed) [no|short|long|&lt;bool&gt;]: How to display the status label.</dd></dl>
 </dl>
 <p> text</p>
 <dl>
 <dd>
-<dl>
-<dd>&bull; <i>commit-title-overflow</i> (bool or int): Whether to highlight commit titles exceeding a given width in the diff view. When set to a boolean, it enables or disables the highlighting using the default width of 50 character. When set to an int, the assigned value is used as the maximum character width.</dl>
+</dd><dl>
+<dd>&bull; <i>commit-title-overflow</i> (bool or int): Whether to highlight commit titles exceeding a given width in the diff view. When set to a boolean, it enables or disables the highlighting using the default width of 50 character. When set to an int, the assigned value is used as the maximum character width.</dd></dl>
 </dl>
 <p> All column options can be toggled. For <i>display</i> options, use the option name as the prefix followed by a dash and the column name. E.g. :toggle author-display will toggle the <i>display</i> option in the <i>author</i> column. For all other options use the column name followed by a dash and then the option name as the suffix. E.g. :toggle commit-title-graph will toggle the <i>graph</i> option in the <i>commit-title</i> column. Alternatively, use the option menu to manipulate options.</p>
 <h2>Bind Command</h2>
@@ -374,7 +374,7 @@ set commit-order = default</pre>
 <dl>
 <dd>
 <pre><code>bind</code> <i>keymap</i> <i>key</i> <i>action</i></pre>
-</dl>
+</dd></dl>
 <p> Examples: </p>
 <dl>
 <dd>
@@ -388,7 +388,7 @@ bind status + !git commit --amend
 bind generic S :source ~/.tigrc
 # UTF8-encoded characters can be used as key values.
 bind generic &oslash; @sh -c &quot;printf '%s' %(commit) | pbcopy&quot;</pre>
-</dl>
+</dd></dl>
 <p> Or in the Git configuration files: </p>
 <dl>
 <dd>
@@ -397,15 +397,15 @@ bind generic &oslash; @sh -c &quot;printf '%s' %(commit) | pbcopy&quot;</pre>
  main = Q none
  # Cherry-pick current commit onto current branch
  generic = C !git cherry-pick %(commit)</pre>
-</dl>
+</dd></dl>
 <p> Keys are mapped by first searching the keybindings for the current view, then the keybindings for the <code>generic</code> keymap, and last the default keybindings. Thus, the view keybindings override the generic keybindings which override the built-in keybindings. </p>
 <p> Keybindings at the line-entry prompt are typically governed by the readline library, and are configured separately in ~/.inputrc. See <i>readline(1)</i>. Tig respects but does not require an $if tig section in ~/.inputrc. </p>
 <p> Keymaps</p>
 <dl>
-<dd>Valid keymaps are: <code>main</code>, <code>diff</code>, <code>log</code>, <code>reflog</code>, <code>help</code>, <code>pager</code>, <code>status</code>, <code>stage</code>, <code>tree</code>, <code>blob</code>, <code>blame</code>, <code>refs</code>, <code>stash</code>, <code>grep</code> and <code>generic</code>. Use <code>generic</code> to set key mapping in all keymaps. Use <code>search</code> to define keys for navigating search results during search.</dl>
+<dd>Valid keymaps are: <code>main</code>, <code>diff</code>, <code>log</code>, <code>reflog</code>, <code>help</code>, <code>pager</code>, <code>status</code>, <code>stage</code>, <code>tree</code>, <code>blob</code>, <code>blame</code>, <code>refs</code>, <code>stash</code>, <code>grep</code> and <code>generic</code>. Use <code>generic</code> to set key mapping in all keymaps. Use <code>search</code> to define keys for navigating search results during search.</dd></dl>
 <p> Key values</p>
 <dl>
-<dd>Key values should never be quoted. Use either an ASCII or UTF8-encoded character or one of the following symbolic key names. Symbolic key names are case insensitive and starts with &quot;&lt;&quot; and ends with &quot;&gt;&quot;. Use <code>&lt;Hash&gt;</code> to bind to the # key, since the hash mark is used as a comment character. Use <code>&lt;LessThan&gt;</code> to bind to the &lt; key.</dl>
+<dd>Key values should never be quoted. Use either an ASCII or UTF8-encoded character or one of the following symbolic key names. Symbolic key names are case insensitive and starts with &quot;&lt;&quot; and ends with &quot;&gt;&quot;. Use <code>&lt;Hash&gt;</code> to bind to the # key, since the hash mark is used as a comment character. Use <code>&lt;LessThan&gt;</code> to bind to the &lt; key.</dd></dl>
 <p> <code>&lt;Enter&gt;</code>, <code>&lt;Space&gt;</code>, <code>&lt;Backspace&gt;</code>, <code>&lt;Tab&gt;</code>, <code>&lt;Escape&gt;</code> or <code>&lt;Esc&gt;</code>, <code>&lt;Left&gt;</code>, <code>&lt;Right&gt;</code>, <code>&lt;Up&gt;</code>, <code>&lt;Down&gt;</code>, <code>&lt;Insert&gt;</code> or <code>&lt;Ins&gt;</code>, <code>&lt;Delete&gt;</code> or <code>&lt;Del&gt;</code>, <code>&lt;Hash&gt;</code>, <code>&lt;LessThan&gt;</code> or <code>&lt;LT&gt;</code>, <code>&lt;Home&gt;</code>, <code>&lt;End&gt;</code>, <code>&lt;PageUp&gt;</code> or <code>&lt;PgUp&gt;</code>, <code>&lt;PageDown&gt;</code> or <code>&lt;PgDown&gt;</code>, <code>&lt;ScrollBack&gt;</code> or <code>&lt;SBack&gt;</code>, <code>&lt;ScrollFwd&gt;</code> or <code>&lt;SFwd&gt;</code>, <code>&lt;ShiftTab&gt;</code> or <code>&lt;BackTab&gt;</code>, <code>&lt;ShiftLeft&gt;</code>, <code>&lt;ShiftRight&gt;</code>, <code>&lt;ShiftDelete&gt;</code> or <code>&lt;ShiftDel&gt;</code>, <code>&lt;ShiftHome&gt;</code>, <code>&lt;ShiftEnd&gt;</code>, <code>&lt;SingleQuote&gt;</code>, <code>&lt;DoubleQuote&gt;</code>, <code>&lt;F1&gt;</code> &#8230; <code>&lt;F19&gt;</code> </p>
 <p> To define key mappings with the Ctrl key, use &lt;Ctrl-key&gt;. In addition, key combos consisting of an initial Escape key followed by a normal key value can be bound using &lt;Esc&gt;key. </p>
 <p> Examples: </p>
@@ -416,23 +416,23 @@ bind main &lt;Down&gt; next
 bind main &lt;Ctrl-f&gt; scroll-page-down
 bind main &lt;Esc&gt;o options
 bind main &lt;ShiftTab&gt; parent</pre>
-</dl>
+</dd></dl>
 <p> Notes </p>
 <dl>
-<dd>&bull; Tig reads keystrokes via ncurses and is subject to various limitations. See <i>ncurses(3x)</i> and <i><a href="/docs/linux/man/5-terminfo/">terminfo</a>(5)</i> (or termcap).</dl>
+<dd>&bull; Tig reads keystrokes via ncurses and is subject to various limitations. See <i>ncurses(3x)</i> and <i><a href="/docs/linux/man/5-terminfo/">terminfo</a>(5)</i> (or termcap).</dd></dl>
 <dl>
-<dd>&bull; Ctrl-m and Ctrl-i cannot be bound as they conflict with <i>Enter</i> and <i>Tab</i> respectively.</dl>
+<dd>&bull; Ctrl-m and Ctrl-i cannot be bound as they conflict with <i>Enter</i> and <i>Tab</i> respectively.</dd></dl>
 <dl>
-<dd>&bull; Case differences cannot be distinguished in control sequences such as Ctrl-f and Ctrl-F.</dl>
+<dd>&bull; Case differences cannot be distinguished in control sequences such as Ctrl-f and Ctrl-F.</dd></dl>
 <dl>
-<dd>&bull; Ctrl-&lt;Space&gt; is typically translated to Ctrl-@, which is available for binding.</dl>
+<dd>&bull; Ctrl-&lt;Space&gt; is typically translated to Ctrl-@, which is available for binding.</dd></dl>
 <dl>
-<dd>&bull; Only some subset of special symbolic keys such as &lt;ShiftTab&gt; will be available in any given terminal emulator.</dl>
+<dd>&bull; Only some subset of special symbolic keys such as &lt;ShiftTab&gt; will be available in any given terminal emulator.</dd></dl>
 <dl>
-<dd>&bull; Ctrl-z is automatically used for process control and will suspend Tig and open a subshell (use fg to reenter Tig). </p>
+<dd>&bull; Ctrl-z is automatically used for process control and will suspend Tig and open a subshell (use fg to reenter Tig). </dd>
 <p> Actions</p>
 <dl>
-<dd>Actions are either specified as user-defined commands (external or internal) or using action names as described in the following sections.</dl>
+<dd>Actions are either specified as user-defined commands (external or internal) or using action names as described in the following sections.</dd></dl>
 </dl>
 <h3>External user-defined command</h3>
 <p>These actions start with one or more of the following option flags followed by the command that should be executed. </p>
@@ -483,7 +483,7 @@ bind main &lt;ShiftTab&gt; parent</pre>
 <p> Unless otherwise specified, commands are run in the foreground with their console output shown (as if <i>!</i> was specified). When multiple command options are specified their behavior are combined, e.g. &quot;?&lt;git commit&quot; will prompt the user whether to execute the command and will exit Tig after completion. </p>
 <p> <font SIZE="+1"> <code>Browsing state variables</code></p>
 <dl>
-<dd>User-defined commands can optionally refer to Tig&#8217;s internal state using the following variable names, which are substituted before commands are run: </font></p>
+<dd>User-defined commands can optionally refer to Tig&#8217;s internal state using the following variable names, which are substituted before commands are run: </font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -692,7 +692,7 @@ bind main &lt;ShiftTab&gt; parent</pre>
 <p> <font SIZE="+1"> </p>
 <p> Examples: </p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <pre># Save the current commit as a patch file when the user selects a commit
 # in the main view and presses 'S'.
 bind main S !git format-patch -1 %(commit)
@@ -704,10 +704,10 @@ bind main U +sh -c 'git --no-pager shortlog -s --author=&quot;$(git show -s --fo
 </dl>
 <p> <font SIZE="+1"> <code>Advanced shell-like commands</code></p>
 <dl>
-<dd>If your command requires use of dynamic features, such as subshells, expansion of environment variables and process control, this can be achieved by using a shell command: </p>
+<dd>If your command requires use of dynamic features, such as subshells, expansion of environment variables and process control, this can be achieved by using a shell command: </dd>
 <p> <code>Example 1. Configure a binding to copy the current commit ID to the clipboard.</code> </p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <pre>bind generic I @sh -c &quot;echo -n %(commit) | xclip -selection c&quot;</pre>
 </dl>
 <p> Or by using a combination of Git aliases and Tig external commands. The following example entries can be put in either the .gitconfig or .git/config file: </p>
@@ -721,7 +721,7 @@ bind main U +sh -c 'git --no-pager shortlog -s --author=&quot;$(git show -s --fo
  # @-prefix means that the console output will not be shown.
  generic = V !@git gitk-bg
  generic = &gt; !git publish</pre>
-</dl>
+</dd></dl>
 </dl>
 <h3>Internal user-defined commands</h3>
 <p>Actions beginning with a <i>:</i> will be run and interpreted as internal commands and act similar to commands run via Tig&#8217;s prompt. Valid internal commands are configuration file options (as described in this document) and pager view commands. Examples: </p>
@@ -741,13 +741,13 @@ bind diff D :toggle diff-options --minimal # Use minimal diff algorithm
 bind diff [ :toggle diff-context -3 # Decrease context (-U arg)
 bind diff ] :toggle diff-context +3 # Increase context
 bind generic V :toggle split-view-height -10% # Decrease split height</pre>
-</dl>
+</dd></dl>
 <p> Similar to external commands, pager view commands can contain variable names that will be substituted before the command is run.</p>
 <h3>Action names</h3>
 <p>Valid action names are described below. Note, all action names are case-insensitive, and you may use <i>&#8211;</i>, <i>_</i>, and <i>.</i> interchangeably, e.g. &quot;view-main&quot;, &quot;View.Main&quot;, and &quot;VIEW_MAIN&quot; are the same. </p>
 <p> <font SIZE="+1"> <code>View switching</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -852,7 +852,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+2"> <code>View manipulation</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -936,7 +936,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+3"> <code>View-specific actions</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -978,7 +978,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+4"> <code>Cursor navigation</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1055,7 +1055,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+5"> <code>Scrolling</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1111,7 +1111,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+6"> <code>Searching</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1146,7 +1146,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </dl>
 <p> </font><font SIZE="+7"> <code>Misc</code></p>
 <dl>
-<dd></font></p>
+<dd></font></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1206,7 +1206,7 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 <dl>
 <dd>
 <pre><code>color</code> <i>area</i> <i>fgcolor</i> <i>bgcolor</i> <i>[attributes]</i></pre>
-</dl>
+</dd></dl>
 <p> Examples: </p>
 <dl>
 <dd>
@@ -1219,7 +1219,7 @@ color diff-chunk magenta default
 color &quot;Reported-by:&quot; green default
 # View-specific color
 color tree.date black cyan bold</pre>
-</dl>
+</dd></dl>
 <p> Or in the Git configuration files: </p>
 <dl>
 <dd>
@@ -1232,17 +1232,17 @@ color tree.date black cyan bold</pre>
 # View-specific color
 [tig &quot;color.tree&quot;]
  date = cyan default bold</pre>
-</dl>
+</dd></dl>
 <p> Area names</p>
 <dl>
-<dd>Can be either a built-in area name or a custom quoted string. The latter allows custom color rules to be added for lines matching a quoted string. Valid built-in area names are described below. Note, all names are case-insensitive, and you may use <i>&#8211;</i>, and <i>_</i> interchangeably, e.g. &quot;Diff-Header&quot; and &quot;DIFF_HEADER&quot; are the same. View-specific colors can be defined by prefixing the view name to the area name, e.g. &quot;stage.diff-chunk&quot; and &quot;diff.diff-chunk&quot;.</dl>
+<dd>Can be either a built-in area name or a custom quoted string. The latter allows custom color rules to be added for lines matching a quoted string. Valid built-in area names are described below. Note, all names are case-insensitive, and you may use <i>&#8211;</i>, and <i>_</i> interchangeably, e.g. &quot;Diff-Header&quot; and &quot;DIFF_HEADER&quot; are the same. View-specific colors can be defined by prefixing the view name to the area name, e.g. &quot;stage.diff-chunk&quot; and &quot;diff.diff-chunk&quot;.</dd></dl>
 <p> Color names</p>
 <dl>
-<dd>Valid colors include: <code>white</code>, <code>black</code>, <code>green</code>, <code>magenta</code>, <code>blue</code>, <code>cyan</code>, <code>yellow</code>, <code>red</code>, <code>default</code>. Use <code>default</code> to refer to the default terminal colors, for example, to keep the background transparent when you are using a terminal with a transparent background. </p>
+<dd>Valid colors include: <code>white</code>, <code>black</code>, <code>green</code>, <code>magenta</code>, <code>blue</code>, <code>cyan</code>, <code>yellow</code>, <code>red</code>, <code>default</code>. Use <code>default</code> to refer to the default terminal colors, for example, to keep the background transparent when you are using a terminal with a transparent background. </dd>
 <p> Colors can also be specified using the keywords <code>color0</code>, <code>color1</code>, &#8230;, <code>colorN-1</code> (where <code>N</code> is the number of colors supported by your terminal). This is useful when you remap the colors for your display or want to enable colors supported by 88-color and 256-color terminals. Note that the <i>color</i> prefix is optional. If you prefer, you can specify colors directly by their numbers <code>0</code>, <code>1</code>, &#8230;, <code>N-1</code> instead, just like in the configuration file of Git.</dl>
 <p> Attribute names</p>
 <dl>
-<dd>Valid attributes include: <code>normal</code>, <code>blink</code>, <code>bold</code>, <code>dim</code>, <code>reverse</code>, <code>standout</code>, and <code>underline</code>. Note, not all attributes may be supported by the terminal.</dl>
+<dd>Valid attributes include: <code>normal</code>, <code>blink</code>, <code>bold</code>, <code>dim</code>, <code>reverse</code>, <code>standout</code>, and <code>underline</code>. Note, not all attributes may be supported by the terminal.</dd></dl>
 <h3>UI colors</h3>
 <p>The colors and attributes to be used for the text that is not highlighted or that specify the use of the default terminal colors can be controlled by setting the <code>default</code> color option. </p>
 <p> <code>Table 1. General</code> </p>
@@ -1498,26 +1498,26 @@ color tree.date black cyan bold</pre>
 <h3>Highlighting</h3>
 <p>Diff markup</p>
 <dl>
-<dd>Options concerning diff start, chunks and lines added and deleted.</dl>
+<dd>Options concerning diff start, chunks and lines added and deleted.</dd></dl>
 <p> <code>diff-header</code>, <code>diff-chunk</code>, <code>diff-add</code>, <code>diff-add2</code>, <code>diff-del</code>, <code>diff-del2</code>, <code>diff-add-highlight</code>, <code>diff-del-highlight</code> </p>
 <p> Enhanced Git diff markup</p>
 <dl>
-<dd>Extra diff information emitted by the Git diff machinery, such as mode changes, rename detection, and similarity.</dl>
+<dd>Extra diff information emitted by the Git diff machinery, such as mode changes, rename detection, and similarity.</dd></dl>
 <p> <code>diff-oldmode</code>, <code>diff-newmode</code>, <code>diff-copy-from</code>, <code>diff-copy-to</code>, <code>diff-similarity</code>, <code>diff-index</code> </p>
 <p> Pretty print commit headers</p>
 <dl>
-<dd>Commit diffs and the revision logs are usually formatted using pretty printed headers , unless &#8211;pretty=raw was given. This includes lines, such as merge info, commit ID, and author and committer date.</dl>
+<dd>Commit diffs and the revision logs are usually formatted using pretty printed headers , unless &#8211;pretty=raw was given. This includes lines, such as merge info, commit ID, and author and committer date.</dd></dl>
 <p> <code>pp-refs</code>, <code>pp-reflog</code>, <code>pp-reflogmsg</code>, <code>pp-merge</code> </p>
 <p> Raw commit header</p>
 <dl>
-<dd>Usually shown when &#8211;pretty=raw is given, however <i>commit</i> is pretty much omnipresent.</dl>
+<dd>Usually shown when &#8211;pretty=raw is given, however <i>commit</i> is pretty much omnipresent.</dd></dl>
 <p> <code>commit</code>, <code>parent</code>, <code>tree</code>, <code>author</code>, <code>committer</code> </p>
 <p> Commit message</p>
 <dl>
-<dd>Signed-off-by, Acked-by, Reviewed-by and Tested-by lines are colorized. Characters in the commit title exceeding a predefined width can be highlighted.</dl>
+<dd>Signed-off-by, Acked-by, Reviewed-by and Tested-by lines are colorized. Characters in the commit title exceeding a predefined width can be highlighted.</dd></dl>
 <p> Tree markup</p>
 <dl>
-<dd>Colors for information of the tree view.</dl>
+<dd>Colors for information of the tree view.</dd></dl>
 <p> <code>tree-dir</code>, <code>tree-file</code></p>
 <h2>Source Command</h2>
 <p>Source commands make it possible to read additional configuration files. Sourced files are included in-place, meaning when a <i>source</i> command is encountered the file will be immediately read. Any commands later in the current configuration file will take precedence. </p>
@@ -1526,13 +1526,13 @@ color tree.date black cyan bold</pre>
 <dl>
 <dd>
 <pre><code>source</code> <i>[-q]</i> <i>path</i></pre>
-</dl>
+</dd></dl>
 <p> Examples: </p>
 <dl>
 <dd>
 <pre>source ~/.tig/colorscheme.tigrc
 source ~/.tig/keybindings.tigrc</pre>
-</dl>
+</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
@@ -1540,7 +1540,8 @@ source ~/.tig/keybindings.tigrc</pre>
 <p><code><a href="/docs/linux/man/1-tig/">tig</a></code>(1), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), git(7), <a href="/docs/linux/man/1-git-config/">git-config</a>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>jonas.fonseca [at] gmail.com</p>
+<dt> 1.</dt>
+<dd>jonas.fonseca [at] gmail.com</dd>
 <dl>
-<dd>mailto:jonas.fonseca [at] gmail.com</dl>
+<dd>mailto:jonas.fonseca [at] gmail.com</dd></dl>
+</dl>

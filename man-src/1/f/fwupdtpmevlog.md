@@ -13,16 +13,16 @@ description: "fwupdtpmevlog – Debugging utility for the TPM event log"
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> fwupdtpmevlog [OPTION?]</dl>
+</dt><dd> fwupdtpmevlog [OPTION?]</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Show extra debugging information</p>
-<dt><code>-p</code>, <code>&#8211;pcr</code></p>
-<dd> Only show single PCR value</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Show extra debugging information</dd>
+<dt><code>-p</code>, <code>&#8211;pcr</code></dt>
+<dd> Only show single PCR value</dd></dl>
 <p> This tool will read and parse the TPM event log from the system firwmare. </p>
 <h2>Index</h2>

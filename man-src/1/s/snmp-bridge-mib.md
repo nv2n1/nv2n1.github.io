@@ -11,72 +11,67 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
 <p> snmp-bridge-mib &#8211; provide Linux bridge information via SNMP </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>snmp-bridge-mib</code> {bridge}</dl>
+<dt> <code>snmp-bridge-mib</code> {bridge}</dt></dl>
 <h2>ARGUMENTS</h2>
-<dd>The following arguments are required: </p>
+<dd>The following arguments are required: </dd>
 <p> <code>bridge</code></p>
 <dl>
 <dt>
-<dd> The name of the Linux bridge for which you want to provide information via SNMP, e.g. br0.</dl>
+</dt><dd> The name of the Linux bridge for which you want to provide information via SNMP, e.g. br0.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The snmp-bridge-mib is an extension to net-snmp. It collects information about a bridge in a Linux system and exports them for query from other (remote) systems for management purposes.</p>
 <h2>CONFIGURATION:</h2>
 <p> The preferred method of snmp-bridge-mib to attach to net-snmp is agentx. For this to work, you will have to add the following line to /etc/snmp/snmpd.conf, </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     master agentx
-    
 </pre>
-</dl>
+</dd></dl>
 <p> restart snmpd and start snmp-bridge-mib. snmp-bridge-mib will then connect to the running snmpd daemon. </p>
 <p> Another way of attaching snmp-bridge-mib to is to run it as an embedded perl module. You have to add </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     perl do &quot;path to location of snmp-bridge-mib&quot;
-    
 </pre>
-</dl>
+</dd></dl>
 <p> and restart snmpd.</p>
 <h2>EXAMPLE:</h2>
 <p> Follow the instructions in this manpage and type </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     perl /usr/bin/snmp-bridge-mib br0
-    
 </pre>
-</dl>
+</dd></dl>
 <p> You&#8217;ll get the following output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
      registering at .1.3.6.1.2.1.17
      running as a subagent.
      dot1qbridge agent started.
      NET-SNMP version 5.4.2.1 AgentX subagent connected
-     
 </pre>
-</dl>
+</dd></dl>
 <p> Now it&#8217;s time for a first test: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     $ export MIBS=+BRIDGE-MIB
     $ snmpwalk localhost .1.3.6.1.2.1.17
-    
 </pre>
-</dl>
+</dd></dl>
 <p> The output produced should look like </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     BRIDGE-MIB::dot1dStpBridgeHelloTime = INTEGER: 199 centi-seconds
     BRIDGE-MIB::dot1dStpBridgeForwardDelay = INTEGER: 1499 centi-seconds
@@ -118,23 +113,22 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
     BRIDGE-MIB::dot1dTpPortOutFrames.3 = Counter32: 10988 frames
     BRIDGE-MIB::dot1dTpPortInDiscards.1 = Counter32: 0 frames
     BRIDGE-MIB::dot1dTpPortInDiscards.3 = Counter32: 0 frames
-    
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <dl>
 <dt>
-<dd> 1. snmp-bridge-mib currently only supports one bridge which has to be specified on the commandline.</dl>
+</dt><dd> 1. snmp-bridge-mib currently only supports one bridge which has to be specified on the commandline.</dd></dl>
 <dl>
 <dt>
-<dd> 2. Not all elements of RFC 4188 because they are either not available in sysfs or difficult to extract from the existing data.</dl>
+</dt><dd> 2. Not all elements of RFC 4188 because they are either not available in sysfs or difficult to extract from the existing data.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a></code>(5), <code>Net::SNMP</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Jens Osterkamp</code> &lt;jens [at] linux.vnet.ibm.com&gt;</p>
 <dl>
 <dt>
-<dd> Developer</dl>
+</dt><dd> Developer</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009, 2010 IBM Corp., All Rights Reserved </p>
 <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>

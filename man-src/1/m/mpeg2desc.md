@@ -15,20 +15,20 @@ description: "mpeg2desc – multiplex audio/video streams"
 <p> <code>mpeg2desc</code> multiplexes audio and video streams</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code><i>stream</i></p>
-<dd> Output audio <i>stream</i> (0 .. 31) to stdout</p>
-<dt><code>-v </code><i>stream</i></p>
-<dd> Output video <i>stream</i> (0 .. 15) to stdout</p>
-<dt><code>-o </code><i>FILE</i></p>
-<dd> output the previous stream to <i>FILE</i> instead of stdout</p>
-<dt><code>-s</code></p>
-<dd> skip to first valid header &#8212; ensures mplex can handle output</p>
-<dt><code>-m</code></p>
-<dd> output mplex offset to stdout</p>
-<dt><code>-u</code></p>
-<dd> do not output messages about unrecognized headers</p>
-<dt><code>-h</code></p>
-<dd> show short help</dl>
+<dt><code>-a </code><i>stream</i></dt>
+<dd> Output audio <i>stream</i> (0 .. 31) to stdout</dd>
+<dt><code>-v </code><i>stream</i></dt>
+<dd> Output video <i>stream</i> (0 .. 15) to stdout</dd>
+<dt><code>-o </code><i>FILE</i></dt>
+<dd> output the previous stream to <i>FILE</i> instead of stdout</dd>
+<dt><code>-s</code></dt>
+<dd> skip to first valid header &#8212; ensures mplex can handle output</dd>
+<dt><code>-m</code></dt>
+<dd> output mplex offset to stdout</dd>
+<dt><code>-u</code></dt>
+<dd> do not output messages about unrecognized headers</dd>
+<dt><code>-h</code></dt>
+<dd> show short help</dd></dl>
 <h2>USAGE</h2>
 <p> <code>mpeg2desc</code> mpeg2desc [options] &lt; movie.mpg</p>
 <h2>CAVEATS</h2>

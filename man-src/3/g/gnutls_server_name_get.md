@@ -14,16 +14,16 @@ description: "gnutls_server_name_get – API function"
 <p> <code>int gnutls_server_name_get(gnutls_session_t </code><i>session</i><code>, void * </code><i>data</i><code>, size_t * </code><i>data_length</i><code>, unsigned int * </code><i>type</i><code>, unsigned int </code><i>indx</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>void * data</p>
-<dd> will hold the data</p>
-<dt>size_t * data_length</p>
-<dd> will hold the data length. Must hold the maximum size of data.</p>
-<dt>unsigned int * type</p>
-<dd> will hold the server name indicator type</p>
-<dt>unsigned int indx</p>
-<dd> is the index of the server_name</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>void * data</dt>
+<dd> will hold the data</dd>
+<dt>size_t * data_length</dt>
+<dd> will hold the data length. Must hold the maximum size of data.</dd>
+<dt>unsigned int * type</dt>
+<dd> will hold the server name indicator type</dd>
+<dt>unsigned int indx</dt>
+<dd> is the index of the server_name</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will allow you to get the name indication (if any), a client has sent. The name indication may be any of the enumeration gnutls_server_name_type_t. </p>
 <p> If <i>type</i> is GNUTLS_NAME_DNS, then this function is to be used by servers that support virtual hosting, and the data will be a null terminated UTF-8 string. </p>
@@ -40,6 +40,6 @@ description: "gnutls_server_name_get – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::has_denorm – std::numeric_limits<T>::has
 <h2>Synopsis</h2>
 <pre><code>static const std::float_denorm_style has_denorm;
 (until C++ 11)
-
     static constexpr std::float_denorm_style has_denorm;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::has_denorm identifies the floating-point types that support subnormal_values. </p>

@@ -40,12 +40,9 @@ std::future_error on the following conditions:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;future&gt;
 int main()
-
 {
     std::promise&lt;int&gt; p;
     std::future&lt;int&gt; f = p.get_future();

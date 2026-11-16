@@ -13,10 +13,10 @@ description: "tuned-profiles-origin-node – description of profiles provided fo
 <h2>Profiles</h2>
 <p>The following profiles are provided: </p>
 <dl>
-<dt><code>origin-node-host</code></p>
-<dd>Profile optimized for OpenShift hosts (bare metal). It is based on throughput-performance profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </p>
-<dt><code>origin-node-guest</code></p>
-<dd>Profile optimized for virtual OpenShift guests. It is based on virtual-guest profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </p>
+<dt><code>origin-node-host</code></dt>
+<dd>Profile optimized for OpenShift hosts (bare metal). It is based on throughput-performance profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
+<dt><code>origin-node-guest</code></dt>
+<dd>Profile optimized for virtual OpenShift guests. It is based on virtual-guest profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>

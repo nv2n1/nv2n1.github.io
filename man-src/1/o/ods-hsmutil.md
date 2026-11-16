@@ -16,33 +16,33 @@ description: "ods-hsmutil – OpenDNSSEC HSM utility"
 <p> The repositories are configured by the user in the OpenDNSSEC configuration file. The configuration contains the name of the repository, the token label, the user PIN, and the path to its shared library.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>login</code></p>
-<dd> If there is no PIN in conf.xml, then this command will ask for it and login. The PINs are stored in a shared memory and are accessible to the other daemons.</p>
-<dt><code>logout</code></p>
-<dd> Will erase the semaphore and the shared memory containing any credentials. Authenticated processes will still be able to interact with the HSM.</p>
-<dt><code>list</code> [<i>repository</i>]</p>
-<dd> List the keys that are available in all or one <i>repository</i></p>
-<dt><code>generate</code> <i>repository</i> <code>rsa</code> <i>keysize</i></p>
-<dd> Generate a new RSA key with the given <i>keysize</i> in the <i>repository</i></p>
-<dt><code>remove</code> <i>id</i></p>
-<dd> Delete the key with the given <i>id</i></p>
-<dt><code>purge</code> <i>repository</i></p>
-<dd> Delete all keys in one <i>repository</i></p>
-<dt><code>dnskey</code> <i>id</i> <i>name</i></p>
-<dd> Create a DNSKEY RR for the given owner <i>name</i> based on the key with this <i>id</i></p>
-<dt><code>test</code> <i>repository</i></p>
-<dd> Perform a number of tests on a <i>repository</i></p>
-<dt><code>info</code></p>
-<dd> Show detailed information about all repositories</dl>
+<dt><code>login</code></dt>
+<dd> If there is no PIN in conf.xml, then this command will ask for it and login. The PINs are stored in a shared memory and are accessible to the other daemons.</dd>
+<dt><code>logout</code></dt>
+<dd> Will erase the semaphore and the shared memory containing any credentials. Authenticated processes will still be able to interact with the HSM.</dd>
+<dt><code>list</code> [<i>repository</i>]</dt>
+<dd> List the keys that are available in all or one <i>repository</i></dd>
+<dt><code>generate</code> <i>repository</i> <code>rsa</code> <i>keysize</i></dt>
+<dd> Generate a new RSA key with the given <i>keysize</i> in the <i>repository</i></dd>
+<dt><code>remove</code> <i>id</i></dt>
+<dd> Delete the key with the given <i>id</i></dd>
+<dt><code>purge</code> <i>repository</i></dt>
+<dd> Delete all keys in one <i>repository</i></dd>
+<dt><code>dnskey</code> <i>id</i> <i>name</i></dt>
+<dd> Create a DNSKEY RR for the given owner <i>name</i> based on the key with this <i>id</i></dd>
+<dt><code>test</code> <i>repository</i></dt>
+<dd> Perform a number of tests on a <i>repository</i></dd>
+<dt><code>info</code></dt>
+<dd> Show detailed information about all repositories</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>config</i></p>
-<dd> Path to an OpenDNSSEC configuration file </p>
+<dt><code>-c</code> <i>config</i></dt>
+<dd> Path to an OpenDNSSEC configuration file </dd>
 <p> (defaults to /etc/opendnssec/conf.xml)</p>
-<dt><code>-h</code></p>
-<dd> Show the help screen</p>
-<dt><code>-v</code></p>
-<dd> Output more information by increasing the verbosity level</dl>
+<dt><code>-h</code></dt>
+<dd> Show the help screen</dd>
+<dt><code>-v</code></dt>
+<dd> Output more information by increasing the verbosity level</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ods-auditor(1), <a href="/docs/linux/man/8-ods-control/">ods-control</a>(8), <a href="/docs/linux/man/8-ods-enforcerd/">ods-enforcerd</a>(8), <a href="/docs/linux/man/1-ods-hsmspeed/">ods-hsmspeed</a>(1), <a href="/docs/linux/man/1-ods-kaspcheck/">ods-kaspcheck</a>(1), <a href="/docs/linux/man/1-ods-ksmutil/">ods-ksmutil</a>(1), <a href="/docs/linux/man/8-ods-signer/">ods-signer</a>(8), <a href="/docs/linux/man/8-ods-signerd/">ods-signerd</a>(8), <a href="/docs/linux/man/5-ods-timing/">ods-timing</a>(5), <a href="/docs/linux/man/7-opendnssec/">opendnssec</a>(7), <code><a rel="nofollow" href="http://www.opendnssec.org/">http://www.opendnssec.org/</a></code></p>
 <h2>AUTHORS</h2>

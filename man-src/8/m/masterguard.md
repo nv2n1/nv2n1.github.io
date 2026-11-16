@@ -15,7 +15,7 @@ description: "masterguard – Driver for Masterguard UPS equipment"
 <h2>Extra Arguments</h2>
 <p><code>CS</code></p>
 <dl>
-<dd>Cancel the shutdown procedure.</dl>
+<dd>Cancel the shutdown procedure.</dd></dl>
 <h2>Author</h2>
 <p>Michael Spanier &lt;mail [at] michael-spanier.de&gt;</p>
 <h2>See Also</h2>

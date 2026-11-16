@@ -13,22 +13,22 @@ description: "opaxmlgenerate"
 <p>opaxmlgenerate [-v] [-d <i>delimiter</i>] [-i <i>number</i>] [-g <i>element</i>] [-h <i>element</i>] [-e <i>element</i>] [-X <i>input_file</i>] [-P <i>param_file</i>]</p>
 <h2>Options</h2>
 <dl>
-<dt>-g/&#8211;generate <i>element</i></p>
-<dd>Generates value for <i>element</i> using value in next field from the input file. Can be used multiple times on the command line. Values are assigned to elements in order. </p>
-<dt>-h/&#8211;header <i>element</i></p>
-<dd>Name of the XML element that is the enclosing header start tag. </p>
-<dt>-e/&#8211;end <i>element</i></p>
-<dd>Name of the XML element that is the enclosing header end tag. </p>
-<dt>-d/&#8211;delimit <i>delimiter</i></p>
-<dd>Specifies the delimiter character that separates values in the input file. Default is semicolon. </p>
-<dt>-i/&#8211;indent <i>number</i></p>
-<dd>Number of spaces to indent each level of XML output. Default is 0. </p>
-<dt>-X/&#8211;infile <i>input_file</i></p>
-<dd>File to read delimited input data from. One record per line with fields in each record separated by the specified delimiter. </p>
-<dt>-P/&#8211;pfile <i>param_file</i></p>
-<dd>Uses input command line options (parameters) from param_file. </p>
-<dt>-v/&#8211;verbose</p>
-<dd>Produces verbose output. Includes output progress reports during extraction. </p>
+<dt>-g/&#8211;generate <i>element</i></dt>
+<dd>Generates value for <i>element</i> using value in next field from the input file. Can be used multiple times on the command line. Values are assigned to elements in order. </dd>
+<dt>-h/&#8211;header <i>element</i></dt>
+<dd>Name of the XML element that is the enclosing header start tag. </dd>
+<dt>-e/&#8211;end <i>element</i></dt>
+<dd>Name of the XML element that is the enclosing header end tag. </dd>
+<dt>-d/&#8211;delimit <i>delimiter</i></dt>
+<dd>Specifies the delimiter character that separates values in the input file. Default is semicolon. </dd>
+<dt>-i/&#8211;indent <i>number</i></dt>
+<dd>Number of spaces to indent each level of XML output. Default is 0. </dd>
+<dt>-X/&#8211;infile <i>input_file</i></dt>
+<dd>File to read delimited input data from. One record per line with fields in each record separated by the specified delimiter. </dd>
+<dt>-P/&#8211;pfile <i>param_file</i></dt>
+<dd>Uses input command line options (parameters) from param_file. </dd>
+<dt>-v/&#8211;verbose</dt>
+<dd>Produces verbose output. Includes output progress reports during extraction. </dd>
 </dl>
 <h2>Details</h2>
 <p>opaxmlgenerate takes the CSV data from an input file. It generates fragments of XML, and in combination with a script, can be used to generate complete XML sequences. opaxmlgenerate does not use nor require a connection to an Intel(R) Omni-Path Fabric. </p>
@@ -40,16 +40,16 @@ description: "opaxmlgenerate"
 <p>opaxmlgenerate can be used to create scripts to translate from user-specific format into the opareport topology_input file format. opaxmlgenerate itself works against a CSV style file with one line per record. Given such a file it can produce hierarchical XML output of arbitrary complexity and depth. </p>
 <p> The typical flow for a script which translates from a user-specific format into opareport topology_input would be:</p>
 <dl>
-<dt>&bull;</p>
-<dd>As needed, reorganize the data into link and node data CSV files, in a sequencing similar to that used by opareport topology_input. One link record per line in one temporary file, one node record per line in another temporary file and one SM per line in a third temporary file.</p>
-<dt>&bull;</p>
-<dd>The script must directly output the boilerplate for XML version, etc.</p>
-<dt>&bull;</p>
-<dd>opaxmlgenerate can be used to output the Link section of the topology_input, using the link record temporary file.</p>
-<dt>&bull;</p>
-<dd>opaxmlgenerate can be used to output the Node sections of the topology_input using the node record temporary file. If desired, there could be separate node record temporary files for HFIs, Switches, and Routers.</p>
-<dt>&bull;</p>
-<dd>opaxmlgenerate can be used to output the SM section of the topology_input, if desired.</p>
-<dt>&bull;</p>
-<dd>The script must directly output the closing XML tags to complete the topology_input file. </p>
+<dt>&bull;</dt>
+<dd>As needed, reorganize the data into link and node data CSV files, in a sequencing similar to that used by opareport topology_input. One link record per line in one temporary file, one node record per line in another temporary file and one SM per line in a third temporary file.</dd>
+<dt>&bull;</dt>
+<dd>The script must directly output the boilerplate for XML version, etc.</dd>
+<dt>&bull;</dt>
+<dd>opaxmlgenerate can be used to output the Link section of the topology_input, using the link record temporary file.</dd>
+<dt>&bull;</dt>
+<dd>opaxmlgenerate can be used to output the Node sections of the topology_input using the node record temporary file. If desired, there could be separate node record temporary files for HFIs, Switches, and Routers.</dd>
+<dt>&bull;</dt>
+<dd>opaxmlgenerate can be used to output the SM section of the topology_input, if desired.</dd>
+<dt>&bull;</dt>
+<dd>The script must directly output the closing XML tags to complete the topology_input file. </dd>
 </dl>

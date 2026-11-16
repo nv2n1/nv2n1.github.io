@@ -13,76 +13,76 @@ description: "kchashmgr – command line interface to manage the file hash datab
 <p> The command `<code>kchashmgr</code>&#8216; is a utility for test and debugging of the file hash database and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>file</i>&#8216; specifies the input/output file. </p>
 <dl>
 <dt>
-<dd>
- <code>kchashmgr create </code>[<code>-otr</code>][<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-apow </code><i>num</i>][<code>-fpow </code><i>num</i>][<code>-ts</code>][<code>-tl</code>][<code>-tc</code>][<code>-bnum </code><i>num</i>]<i>path</i></p>
+</dt><dd>
+ <code>kchashmgr create </code>[<code>-otr</code>][<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-apow </code><i>num</i>][<code>-fpow </code><i>num</i>][<code>-ts</code>][<code>-tl</code>][<code>-tc</code>][<code>-bnum </code><i>num</i>]<i>path</i></dd>
 <dl>
 <dt>
-<dd> Creates a database file.</dl>
+</dt><dd> Creates a database file.</dd></dl>
 <p> <code>kchashmgr inform </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-st</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Prints status information.</dl>
+</dt><dd> Prints status information.</dd></dl>
 <p> <code>kchashmgr set </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-add</code>|<code>-app</code>|<code>-rep</code>|<code>-inci</code>|<code>-incd</code>][<code>-sx</code>]<i>path</i><i>key</i><i>value</i></p>
 <dl>
 <dt>
-<dd> Stores a record.</dl>
+</dt><dd> Stores a record.</dd></dl>
 <p> <code>kchashmgr remove </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-sx</code>]<i>path</i><i>key</i></p>
 <dl>
 <dt>
-<dd> Removes a record.</dl>
+</dt><dd> Removes a record.</dd></dl>
 <p> <code>kchashmgr get </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-rm</code>][<code>-sx</code>][<code>-px</code>][<code>-pz</code>]<i>path</i><i>key</i></p>
 <dl>
 <dt>
-<dd> Prints the value of a record.</dl>
+</dt><dd> Prints the value of a record.</dd></dl>
 <p> <code>kchashmgr list </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-max </code><i>num</i>][<code>-rm</code>][<code>-sx</code>][<code>-pv</code>][<code>-px</code>]<i>path</i>[<i>key</i>]</p>
 <dl>
 <dt>
-<dd> Prints keys of all records, separated by line feeds.</dl>
+</dt><dd> Prints keys of all records, separated by line feeds.</dd></dl>
 <p> <code>kchashmgr clear </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Removes all records of a database.</dl>
+</dt><dd> Removes all records of a database.</dd></dl>
 <p> <code>kchashmgr import </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-sx</code>]<i>path</i>[<i>file</i>]</p>
 <dl>
 <dt>
-<dd> Imports records from a TSV file.</dl>
+</dt><dd> Imports records from a TSV file.</dd></dl>
 <p> <code>kchashmgr copy </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i><i>file</i></p>
 <dl>
 <dt>
-<dd> Copies the whole database.</dl>
+</dt><dd> Copies the whole database.</dd></dl>
 <p> <code>kchashmgr dump </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i>[<i>file</i>]</p>
 <dl>
 <dt>
-<dd> Dumps records into a snapshot file.</dl>
+</dt><dd> Dumps records into a snapshot file.</dd></dl>
 <p> <code>kchashmgr load </code>[<code>-otr</code>][<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i>[<i>file</i>]</p>
 <dl>
 <dt>
-<dd> Loads records from a snapshot file.</dl>
+</dt><dd> Loads records from a snapshot file.</dd></dl>
 <p> <code>kchashmgr defrag </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Performs defragmentation.</dl>
+</dt><dd> Performs defragmentation.</dd></dl>
 <p> <code>kchashmgr setbulk </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i><i>key</i><i>value</i><code> &#8230;</code></p>
 <dl>
 <dt>
-<dd> Store records at once.</dl>
+</dt><dd> Store records at once.</dd></dl>
 <p> <code>kchashmgr removebulk </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-sx</code>]<i>path</i><i>key</i><code> &#8230;</code></p>
 <dl>
 <dt>
-<dd> Remove records at once.</dl>
+</dt><dd> Remove records at once.</dd></dl>
 <p> <code>kchashmgr getbulk </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-sx</code>][<code>-px</code>]<i>path</i><i>key</i><code> &#8230;</code></p>
 <dl>
 <dt>
-<dd> Retrieve records at once.</dl>
+</dt><dd> Retrieve records at once.</dd></dl>
 <p> <code>kchashmgr check </code>[<code>-onl</code>|<code>-otl</code>|<code>-onr</code>]<i>path</i></p>
 <dl>
 <dt>
-<dd> Checks consistency.</dl>
+</dt><dd> Checks consistency.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-otr</code> : opens the database with the truncation option.<br />
+</dt><dd> <code>-otr</code> : opens the database with the truncation option.<br />
  <code>-onl</code> : opens the database with the no locking option.<br />
  <code>-otl</code> : opens the database with the try locking option.<br />
  <code>-onr</code> : opens the database with the no auto repair option.<br />
@@ -104,7 +104,7 @@ description: "kchashmgr – command line interface to manage the file hash datab
  <code>-pz</code> : does not append line feed at the end of the output.<br />
  <code>-max </code><i>num</i> : specifies the maximum number of shown records.<br />
  <code>-pv</code> : prints values of records also.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kchashtest/">kchashtest</a></code>(1) </p>

@@ -19,18 +19,18 @@ description: "p7zip – Wrapper on 7-Zip file archiver with high compression rat
 <p> When used without any <i>file</i> argument, <code>p7zip</code> reads data from the standard input and compresses (or decompresses in case of <code>-d</code>) it into the standard output.</p>
 <h2>SWITCHES</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;stdout</code>, <code>&#8211;to-stdout</code></p>
-<dd> Write output on standard output.</p>
-<dt><code>-d</code>, <code>&#8211;decompress</code>, <code>&#8211;uncompress</code></p>
-<dd> Decompress file.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Skip some checks and force compression or decompression.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print usage.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Do not delete input file.</p>
-<dt><code>&#8212;</code></p>
-<dd> Treat all subsequent arguments as file names, even if they start with a dash.</dl>
+<dt><code>-c</code>, <code>&#8211;stdout</code>, <code>&#8211;to-stdout</code></dt>
+<dd> Write output on standard output.</dd>
+<dt><code>-d</code>, <code>&#8211;decompress</code>, <code>&#8211;uncompress</code></dt>
+<dd> Decompress file.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Skip some checks and force compression or decompression.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Do not delete input file.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Treat all subsequent arguments as file names, even if they start with a dash.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1), <code><a href="/docs/linux/man/1-7za/">7za</a></code>(1), <code><a href="/docs/linux/man/1-7zr/">7zr</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1)</p>
 <h2>AUTHOR</h2>

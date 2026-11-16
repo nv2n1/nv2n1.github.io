@@ -15,49 +15,49 @@ description: "arccp – copy files"
 <p> <code>arccp [options] source destination</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code>, <code>&#8211;passive</code></p>
-<dd> use passive transfer (off by default if secure is on, on by default if secure is not requested)</p>
-<dt><code>-n</code>, <code>&#8211;nopassive</code></p>
-<dd> do not try to force passive transfer</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> if the destination is an indexing service and not the same as the source and the destination is already registered, then the copy is normally not done. However, if this option is specified the source is assumed to be a replica of the destination created in an uncontrolled way and the copy is done like in case of replication. Using this option also skips validation of completed transfers.</p>
-<dt><code>-i</code>, <code>&#8211;indicate</code></p>
-<dd> show progress indicator. Using this option forces a check of the source file before trying to transfer it, in order to find its size. Depending on other information obtained about the source, there may be side-effects of using this option, for example checksum verification or pre-staging data from tape.</p>
-<dt><code>-T</code>, <code>&#8211;notransfer</code></p>
-<dd> do not transfer, but register source into destination. destination must be a meta-url. If destination already exists then meta-information of source must match meta-information of destination. This can be overridden using the &#8211;force option.</p>
-<dt><code>-3</code>, <code>&#8211;thirdparty</code></p>
-<dd> perform third party transfer, where the destination pulls from the source (only available with GFAL plugin)</p>
-<dt><code>-u</code>, <code>&#8211;secure</code></p>
-<dd> use secure transfer (insecure by default)</p>
-<dt><code>-y</code>, <code>&#8211;cache</code>=<i>path</i></p>
-<dd> path to local cache (use to put file into cache)</p>
-<dt><code>-r</code>, <code>&#8211;recursive</code></p>
-<dd> operate recursively</p>
-<dt><code>-D</code>, <code>&#8211;depth</code>=<i>level</i></p>
-<dd> operate recursively up to specified level</p>
-<dt><code>-R</code>, <code>&#8211;retries</code>=<i>number</i></p>
-<dd> number of retries before failing file transfer</p>
-<dt><code>-L</code>, <code>&#8211;location</code>=<i>URL</i></p>
-<dd> physical file to write to when destination is an indexing service. Must be specified for indexing services which do not automatically generate physical locations. Can be specified multiple times &#8211; locations will be tried in order until one succeeds.</p>
-<dt><code>-P</code>, <code>&#8211;listplugins</code></p>
-<dd> list the available plugins (protocols supported)</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></p>
-<dd> timeout in seconds (default 20). This timeout applies to connections to remote services and indicates the maximum allowed idle time of the transfer.</p>
-<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></p>
-<dd> configuration file (default ~/.arc/client.conf)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version information</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> print help </p>
+<dt><code>-p</code>, <code>&#8211;passive</code></dt>
+<dd> use passive transfer (off by default if secure is on, on by default if secure is not requested)</dd>
+<dt><code>-n</code>, <code>&#8211;nopassive</code></dt>
+<dd> do not try to force passive transfer</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> if the destination is an indexing service and not the same as the source and the destination is already registered, then the copy is normally not done. However, if this option is specified the source is assumed to be a replica of the destination created in an uncontrolled way and the copy is done like in case of replication. Using this option also skips validation of completed transfers.</dd>
+<dt><code>-i</code>, <code>&#8211;indicate</code></dt>
+<dd> show progress indicator. Using this option forces a check of the source file before trying to transfer it, in order to find its size. Depending on other information obtained about the source, there may be side-effects of using this option, for example checksum verification or pre-staging data from tape.</dd>
+<dt><code>-T</code>, <code>&#8211;notransfer</code></dt>
+<dd> do not transfer, but register source into destination. destination must be a meta-url. If destination already exists then meta-information of source must match meta-information of destination. This can be overridden using the &#8211;force option.</dd>
+<dt><code>-3</code>, <code>&#8211;thirdparty</code></dt>
+<dd> perform third party transfer, where the destination pulls from the source (only available with GFAL plugin)</dd>
+<dt><code>-u</code>, <code>&#8211;secure</code></dt>
+<dd> use secure transfer (insecure by default)</dd>
+<dt><code>-y</code>, <code>&#8211;cache</code>=<i>path</i></dt>
+<dd> path to local cache (use to put file into cache)</dd>
+<dt><code>-r</code>, <code>&#8211;recursive</code></dt>
+<dd> operate recursively</dd>
+<dt><code>-D</code>, <code>&#8211;depth</code>=<i>level</i></dt>
+<dd> operate recursively up to specified level</dd>
+<dt><code>-R</code>, <code>&#8211;retries</code>=<i>number</i></dt>
+<dd> number of retries before failing file transfer</dd>
+<dt><code>-L</code>, <code>&#8211;location</code>=<i>URL</i></dt>
+<dd> physical file to write to when destination is an indexing service. Must be specified for indexing services which do not automatically generate physical locations. Can be specified multiple times &#8211; locations will be tried in order until one succeeds.</dd>
+<dt><code>-P</code>, <code>&#8211;listplugins</code></dt>
+<dd> list the available plugins (protocols supported)</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
+<dd> timeout in seconds (default 20). This timeout applies to connections to remote services and indicates the maximum allowed idle time of the transfer.</dd>
+<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></dt>
+<dd> configuration file (default ~/.arc/client.conf)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version information</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> print help </dd>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>source</code></p>
-<dd> the source of the transfer</p>
-<dt><code>destination</code></p>
-<dd> the destination of the transfer</dl>
+<dt><code>source</code></dt>
+<dd> the source of the transfer</dd>
+<dt><code>destination</code></dt>
+<dd> the destination of the transfer</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> The <code>arccp</code> command copies files to, from and between grid storage elements. It can also be used to register files in file index catalogues, either automatically as the result of a file transfer, or by using the <code>&#8211;notransfer</code> option. For more information on ARC URL syntax please read &quot;Protocols, Uniform Resource Locators (URL) and Extensions Supported in ARC&quot; [NORDUGRID-TECH-7]. </p>
 <p> If <code>source</code> and/or <code>destination</code> start from &#8216;@&#8217;, the remaining argument is assumed to be a path to a local file containing a list of URLs, one per line. In this case <code>arccp</code> performs like it were called multiple times &#8211; once for every URL. </p>
@@ -66,17 +66,17 @@ description: "arccp – copy files"
 <p> Depending on the installed libraries (check with <code>-P</code> ), the following protocols may be used: file (file:// prefix may be omitted), http, https, httpg, ftp, gsiftp, srm, root. To connect source or destination to standard input/output use &#8216;-&#8216; instead of URL. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.arc/client.conf</code></p>
-<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </p>
+<dt><code>~/.arc/client.conf</code></dt>
+<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>X509_USER_PROXY</code></p>
-<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </p>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
-<dt><code>ARC_PLUGIN_PATH</code></p>
-<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </p>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </dd>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
+<dt><code>ARC_PLUGIN_PATH</code></dt>
+<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> arccp -i <a href="gsiftp://example.com/grid/file1.dat">gsiftp://example.com/grid/file1.dat</a> /tmp/file1.dat </p>

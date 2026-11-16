@@ -33,6 +33,6 @@ description: "QuantLib::IndexManager – global repository for past index fixing
 <p>global repository for past index fixings </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>index names are case insensitive</dl>
+<dd>index names are case insensitive</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

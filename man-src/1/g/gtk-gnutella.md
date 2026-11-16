@@ -18,57 +18,57 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 <h2>OPTIONS</h2>
 <p> All the options can be abbreviated as long as the supplied name is not ambiguous.</p>
 <dl>
-<dt><code>&#8211;cleanup</code></p>
-<dd> For developers mostly: this requests a final memory cleanup sequence at exit time in an attempt to be able to spot memory leaks by looking at all the remaining allocated blocks, letting the developpers figuring out, perhaps, why they were not cleaned-up properly.</p>
-<dt><code>&#8211;compile-info</code></p>
-<dd> Tell <i>gtk-gnutella</i> to output a list of variables describing compile-time configuration information that was gathered when the program was built.</p>
-<dt><code>&#8211;daemonize</code></p>
-<dd> This options causes <i>gtk-gnutella</i> to become a daemon. It detaches from the terminal (if started from one) and forks itself into the background. It also changes it working directory to the root directory i.e., &quot;/&quot; so that it doesn&#8217;t block a mount point for example. This is mainly meant for headless mode but you can also use it if the Gtk+ GUI is enabled. </p>
+<dt><code>&#8211;cleanup</code></dt>
+<dd> For developers mostly: this requests a final memory cleanup sequence at exit time in an attempt to be able to spot memory leaks by looking at all the remaining allocated blocks, letting the developpers figuring out, perhaps, why they were not cleaned-up properly.</dd>
+<dt><code>&#8211;compile-info</code></dt>
+<dd> Tell <i>gtk-gnutella</i> to output a list of variables describing compile-time configuration information that was gathered when the program was built.</dd>
+<dt><code>&#8211;daemonize</code></dt>
+<dd> This options causes <i>gtk-gnutella</i> to become a daemon. It detaches from the terminal (if started from one) and forks itself into the background. It also changes it working directory to the root directory i.e., &quot;/&quot; so that it doesn&#8217;t block a mount point for example. This is mainly meant for headless mode but you can also use it if the Gtk+ GUI is enabled. </dd>
 <p> For example, if you do not start gtk-gnutella from a terminal but from a window manager menu, there&#8217;s little reason to not daemonize gtk-gnutella. Thus you might want to add the &#8211;daemonize option in this case. </p>
 <p> Please note that when <i>gtk-gnutella</i> is started as a daemon all output which is normally send to the standard output and standard error output (usually your terminal or a common log file such as ~/.xsession-errors), is sent to /dev/null. The options <code>&#8211;log-stderr</code> and <code>&#8211;log-stdout</code> can be used to redirect log output in this case.</p>
-<dt><code>&#8211;exec-on-crash </code><i>path</i></p>
-<dd> Execute command specified in <i>path</i> when <i>gtk-gnutella</i> crashes.</p>
-<dt><code>&#8211;geometry</code></p>
-<dd> This option can be used to force the main window of the GUI to a certain location on your screen and/or give it certain dimensions. </p>
+<dt><code>&#8211;exec-on-crash </code><i>path</i></dt>
+<dd> Execute command specified in <i>path</i> when <i>gtk-gnutella</i> crashes.</dd>
+<dt><code>&#8211;geometry</code></dt>
+<dd> This option can be used to force the main window of the GUI to a certain location on your screen and/or give it certain dimensions. </dd>
 <p> For example, the following would position the window in the lower right corner with a width of 800 pixels and a height of 600 pixels: </p>
 <p>&nbsp;<wbr>gtk-gnutella &#8211;geometry 800&#215;600-0-0 </p>
 <p> Note that none of this can be guaranteed, your window manager has the last word on this. This option is a traditional command-line switch supported by most X11 applications.</p>
-<dt><code>&#8211;minimized</code></p>
-<dd> Launches <i>gtk-gnutella</i> with a minimized main window. Recommended when starting <i>gtk-gnutella in</i> the background on login.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of all supported options.</p>
-<dt><code>&#8211;log-stderr, &#8211;log-stdout</code></p>
-<dd> These options allow you to log everything which is written to stderr respectively stdout to some files. A typical use would look like this: </p>
+<dt><code>&#8211;minimized</code></dt>
+<dd> Launches <i>gtk-gnutella</i> with a minimized main window. Recommended when starting <i>gtk-gnutella in</i> the background on login.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a summary of all supported options.</dd>
+<dt><code>&#8211;log-stderr, &#8211;log-stdout</code></dt>
+<dd> These options allow you to log everything which is written to stderr respectively stdout to some files. A typical use would look like this: </dd>
 <p>gtk-gnutella &#8211;daemonize&nbsp;<wbr>&nbsp;<wbr>\<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211;log-stderr&nbsp;<wbr>~/logs/gtkg.stderr&nbsp;<wbr>\<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211;log-stdout&nbsp;<wbr>~/logs/gtkg.stdout </p>
 <p> Redirecting these log messages also works without <code>&#8211;daemonize.</code> Of course, log files can become large and you might want to archive them or delete them periodically. After moving or deleting the log files, you can send <i>gtk-gnutella</i> a SIGHUP signal to create new log files.</p>
-<dt><code>&#8211;log-supervise</code></p>
-<dd> Redirects the logs for the supervisor process.</p>
-<dt><code>&#8211;no-dbus</code></p>
-<dd> Disable notifications of <i>gtk-gnutella</i> events to D-BUS.</p>
-<dt><code>&#8211;no-restart</code></p>
-<dd> Prevents <i>gtk-gnutella</i> from auto-restarting itself when crashing on a platform where core dumps are not possible or disabled.</p>
-<dt><code>&#8211;no-supervise</code></p>
-<dd> Prevents <i>gtk-gnutella</i> from starting a supervising process that will monitor the main process and automatically restart a new instance when the previous one exits abnormally.</p>
-<dt><code>&#8211;no-xshm</code></p>
-<dd> Disable MIT shared memory extension, when running with the X graphical user-interface.</p>
-<dt><code>&#8211;pause-on-crash</code></p>
-<dd> Pause the process on crash, so that a debugger may be attached to inspect the current state for instance.</p>
-<dt><code>&#8211;ping</code></p>
-<dd> This option allows you to check whether <i>gtk-gnutella</i> is currently running. This option returns with a success code when <i>gtk-gnutella</i> is already running, and with a failure code when it is not. </p>
+<dt><code>&#8211;log-supervise</code></dt>
+<dd> Redirects the logs for the supervisor process.</dd>
+<dt><code>&#8211;no-dbus</code></dt>
+<dd> Disable notifications of <i>gtk-gnutella</i> events to D-BUS.</dd>
+<dt><code>&#8211;no-restart</code></dt>
+<dd> Prevents <i>gtk-gnutella</i> from auto-restarting itself when crashing on a platform where core dumps are not possible or disabled.</dd>
+<dt><code>&#8211;no-supervise</code></dt>
+<dd> Prevents <i>gtk-gnutella</i> from starting a supervising process that will monitor the main process and automatically restart a new instance when the previous one exits abnormally.</dd>
+<dt><code>&#8211;no-xshm</code></dt>
+<dd> Disable MIT shared memory extension, when running with the X graphical user-interface.</dd>
+<dt><code>&#8211;pause-on-crash</code></dt>
+<dd> Pause the process on crash, so that a debugger may be attached to inspect the current state for instance.</dd>
+<dt><code>&#8211;ping</code></dt>
+<dd> This option allows you to check whether <i>gtk-gnutella</i> is currently running. This option returns with a success code when <i>gtk-gnutella</i> is already running, and with a failure code when it is not. </dd>
 <p> This allows you to use the following code to start <i>gtk-gnutella </i> from a cron job or window manager menu and avoid starting it twice: </p>
 <p>&nbsp;<wbr>gtk-gnutella &#8211;ping || gtk-gnutella</p>
-<dt><code>&#8211;restart-on-crash</code></p>
-<dd> Asks <i>gtk-gnutella</i> to auto-restart itself after crashing on a platform where core dumps are allowed. </p>
+<dt><code>&#8211;restart-on-crash</code></dt>
+<dd> Asks <i>gtk-gnutella</i> to auto-restart itself after crashing on a platform where core dumps are allowed. </dd>
 <p> Regardless of core dumping options, <code>&#8211;no-restart</code> will always prevent a restart whilst <code>&#8211;restart-on-crash</code> will always request one if possible. It is not allowed to supply both options at the same time.</p>
-<dt><code>&#8211;shell</code></p>
-<dd> When this option is used to connect to an already running <i>gtk-gnutella</i> process over a local unix domain socket. This socket is located at &quot;$GTK_GNUTELLA_DIR/ipc/socket&quot;, thus normally &quot;~/.gtk-gnutella/ipc/socket&quot;. The socket is only accessible by the user running gtk-gnutella which is enforced by filesystem permissions. The socket is in a dedicated directory because apparently not all systems honor the access permissions on sockets as seen through the filesystem. </p>
+<dt><code>&#8211;shell</code></dt>
+<dd> When this option is used to connect to an already running <i>gtk-gnutella</i> process over a local unix domain socket. This socket is located at &quot;$GTK_GNUTELLA_DIR/ipc/socket&quot;, thus normally &quot;~/.gtk-gnutella/ipc/socket&quot;. The socket is only accessible by the user running gtk-gnutella which is enforced by filesystem permissions. The socket is in a dedicated directory because apparently not all systems honor the access permissions on sockets as seen through the filesystem. </dd>
 <p> You can disable this feature by setting the property &quot;enable_local_socket&quot; to FALSE. It is recommendable to use this local socket whenever possible instead of the TCP socket to access the shell interface remotely. The reason is that the authentication token is passed non-encrypted over the network and everyone who can sniff the network is able to connect to the remote shell. This may not matter over the loopback interface or a LAN, but it&#8217;s a bad idea to use this over the Internet.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the user-agent string used on the Gnutella network which also holds the version information.</p>
-<dt><code>&#8211;topless</code></p>
-<dd> Starts gtk-gnutella without the graphical user-interface.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the user-agent string used on the Gnutella network which also holds the version information.</dd>
+<dt><code>&#8211;topless</code></dt>
+<dd> Starts gtk-gnutella without the graphical user-interface.</dd></dl>
 <h2>GETTING STARTED</h2>
 <p> When <i>gtk-gnutella</i> is first started, it will attempt to connect to a well-known hosts server for some hosts to connect to. If you know a host you want to connect to, you can enter it in the box on the GnutellaNet tab and push the Add button. When first connecting to the gnutella network, it can take some time to establish a stable connection. Be patient.</p>
 <h2>SEARCHING</h2>
@@ -83,66 +83,66 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 <p> If you linger your mouse over each configuration parameter, a tooltip window will popup explaining the meaning of that parameter. You may have to press &quot;Enter&quot; after a text input, or move the focus to another parameter to validate your entry. Items configured via spin buttons normally take effect immediately, unless you type text instead of using the spin buttons.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>$GTK_GNUTELLA_DIR/config_gnet</i></p>
+<dt><i>$GTK_GNUTELLA_DIR/config_gnet</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Per-user configuration file, for core settings. This can be edited when the program is not running, but it is best to use the GUI to change configuration variables. <code>gtk-gnutella</code> saves this file every time the program is exited normally.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/config_gui</i></p>
+</dt><dd> Per-user configuration file, for core settings. This can be edited when the program is not running, but it is best to use the GUI to change configuration variables. <code>gtk-gnutella</code> saves this file every time the program is exited normally.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/config_gui</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> GUI configuration. It is best to not edit this file.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/dmesh</i></p>
+</dt><dd> GUI configuration. It is best to not edit this file.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/dmesh</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is where the download mesh is persisted. You don&#8217;t need to worry about this.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/dmesh_ban</i></p>
+</dt><dd> This is where the download mesh is persisted. You don&#8217;t need to worry about this.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/dmesh_ban</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is where temporarily banned download mesh entries are stored.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/done.namesize</i></p>
+</dt><dd> This is where temporarily banned download mesh entries are stored.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/done.namesize</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This file holds the name and size of files completely downloaded by <code>gtk-gnutella</code> and which will now be ignored.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/done.sha1</i></p>
+</dt><dd> This file holds the name and size of files completely downloaded by <code>gtk-gnutella</code> and which will now be ignored.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/done.sha1</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This file holds the SHA1 of files completely downloaded by <code>gtk-gnutella</code> and which will now be ignored.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/downloads</i></p>
+</dt><dd> This file holds the SHA1 of files completely downloaded by <code>gtk-gnutella</code> and which will now be ignored.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/downloads</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is where the download queue is persisted. Only the direct downloads (i.e. non-pushed) can be saved, since they don&#8217;t need routing information.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/hosts</i></p>
+</dt><dd> This is where the download queue is persisted. Only the direct downloads (i.e. non-pushed) can be saved, since they don&#8217;t need routing information.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/hosts</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is the host cache. This is saved by <code>gtk-gnutella</code> on exit and should not be edited by hand.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/searches.xml</i></p>
+</dt><dd> This is the host cache. This is saved by <code>gtk-gnutella</code> on exit and should not be edited by hand.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/searches.xml</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is where the open searches and all the search filters are saved.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/sha1_cache</i></p>
+</dt><dd> This is where the open searches and all the search filters are saved.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/sha1_cache</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is where the cache of all the computed SHA1 is stored.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/tth_cache</i></p>
+</dt><dd> This is where the cache of all the computed SHA1 is stored.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/tth_cache</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is the directory under which all the computed TTH trees are stored. These files are binary data.</dl>
-<dt><i>$GTK_GNUTELLA_DIR/upload_stats</i></p>
+</dt><dd> This is the directory under which all the computed TTH trees are stored. These files are binary data.</dd></dl>
+<dt><i>$GTK_GNUTELLA_DIR/upload_stats</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This file keeps track of the upload statistics.</dl>
+</dt><dd> This file keeps track of the upload statistics.</dd></dl>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> <i>gtk-gnutella</i> searches <code>GTK_GNUTELLA_DIR</code> for configuration files. If this variable is not set, <code>HOME</code> is used instead. If <code>HOME</code> is not set, then no configuration information will be saved when <i>gtk-gnutella</i> exits.</p>

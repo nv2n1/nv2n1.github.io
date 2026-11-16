@@ -18,35 +18,35 @@ mongoc_collection_aggregate (mongoc_collection_t *collection,
  BSON_GNUC_WARN_UNUSED_RESULT;</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A <code>mongoc_query_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>pipeline</code></p>
-<dd>A <code>bson_t</code> containing the pipeline array.</dl>
+<dt><code>pipeline</code></dt>
+<dd>A <code>bson_t</code> containing the pipeline array.</dd></dl>
 <dl COMPACT>
-<dt><code>options</code></p>
-<dd>A <code>bson_t</code> containing options for the pipeline, or <code>NULL</code> \&amp;.</dl>
+<dt><code>options</code></dt>
+<dd>A <code>bson_t</code> containing options for the pipeline, or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall execute an aggregation query on the underlying &#8216;collection&#8217;. The bson &#8216;pipeline&#8217; is not validated, simply passed along as appropriate to the server. As such, compatibility and errors should be validated in the appropriate server documentation. </p>
 <p> In the case of older server versions, &lt; v2.5, the returned cursor is a synthetic iterator over the result set. This provides a limitation insofar as returned documents can be no larger than 16MB. When connecting to newer servers this limitation doesn&#8217;t exist. The specific test is for wire_version &gt; 0. </p>
 <p> For more information on building MongoDB pipelines, see <code>MongoDB Aggregation Command</code> on the MongoDB website. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>The <code>pipeline</code> parameter should contain a field named <code>pipeline</code> containing a BSON array of pipeline stages.</dl>
+<dd>The <code>pipeline</code> parameter should contain a field named <code>pipeline</code> containing a BSON array of pipeline stages.</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>The <code>mongoc_read_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dl>
+<dd>The <code>mongoc_read_concern_t</code> specified on the <code>mongoc_collection_t</code> will be used, if any.</dd></dl>
 <h2>Returns</h2>
 <p>This function returns a newly allocated <code>mongoc_cursor_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_cursor_destroy/">mongoc_cursor_destroy</a>(3)</code> when no longer in use. <code>NULL</code> may be returned if parameters are invalid. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>Failure to handle the result of this function is a programming error.</dl>
+<dd>Failure to handle the result of this function is a programming error.</dd></dl>
 <h2>Example</h2>
 <pre>#include &lt;bcon.h&gt;
 #include &lt;mongoc.h&gt;

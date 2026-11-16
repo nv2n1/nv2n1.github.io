@@ -17,7 +17,8 @@ size_t mbstowcs(wchar_t *dest, const char *src, size_t n);
 <h2>DESCRIPTION</h2>
 <p> If <i>dest</i> is not NULL, the <code>mbstowcs</code>() function converts the multibyte string <i>src</i> to a wide-character string starting at <i>dest</i>. At most <i>n</i> wide characters are written to <i>dest</i>. The sequence of characters in the string <i>src</i> shall begin in the initial shift state. The conversion can stop for three reasons:</p>
 <dl>
-<dt>1.</p>
-<dd> An invalid multibyte sequence has been encountered. In this case, <i>(size_t)&nbsp;-1</i> is returned.</p>
-<dt>2.</p>
+<dt>1.</dt>
+<dd> An invalid multibyte sequence has been encountered. In this case, <i>(size_t)&nbsp;-1</i> is returned.</dd>
+<dt>2.</dt>
 <dd> <i>n</i> non-L&#8217;
+</dd></dl>

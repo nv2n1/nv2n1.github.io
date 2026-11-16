@@ -18,30 +18,30 @@ description: "muniphot – CCD photometry"
 <p> The list of input files is usualy entered directly on the command line. If you are going to process a large set of files, you can use the question marks (for a single chars) or the asterisk (for a strings of chars). </p>
 <p> The alternate way, how to process a large set of files, is the batch mode. In this mode, the list of input files is read from a given file or from the standard input. The directory file, for example named <i>dirfile</i>, must have the text format and the names of the input files are written on the separate lines. If the files are placed not in the current working directory, you have to specify the proper path in full or shortened form. </p>
 <dl>
-<dt><code>@</code><i>dirfile</i></p>
-<dd> The program will read the list of source files from specified file.</p>
-<dt><code>@</code></p>
-<dd> The program will read the list of source files from stdin.</p>
-<dt><code>par=</code><i>file</i></p>
-<dd> Optional parameter file. Default is <i>muniphot.ini</i>.</p>
-<dt><code>ap=</code><i>file</i></p>
-<dd> Optional name of file with definitions of apertures. Default is <i>apertures.ini</i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints short help.</p>
-<dt><code>&#8211;license</code></p>
-<dd> Prints the license.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the program name and its version.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode &#8212; inhibits the screen printouts.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Debug mode &#8212; extends the screen printouts. </p>
+<dt><code>@</code><i>dirfile</i></dt>
+<dd> The program will read the list of source files from specified file.</dd>
+<dt><code>@</code></dt>
+<dd> The program will read the list of source files from stdin.</dd>
+<dt><code>par=</code><i>file</i></dt>
+<dd> Optional parameter file. Default is <i>muniphot.ini</i>.</dd>
+<dt><code>ap=</code><i>file</i></dt>
+<dd> Optional name of file with definitions of apertures. Default is <i>apertures.ini</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints short help.</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Prints the license.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the program name and its version.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode &#8212; inhibits the screen printouts.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Debug mode &#8212; extends the screen printouts. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The following command computes photometry of &#8216;fout0001.fts&#8217; and stores the output to</p>
 <dl>
 <dt>
-<dd> <code>muniphot tmp0001.fts</code> </p>
+</dt><dd> <code>muniphot tmp0001.fts</code> </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> muniphot returns a zero exist status if it succeeds to convert all specified file. Otherwise, it will stop immediately when the error occurs and returns nonzero code. </p>

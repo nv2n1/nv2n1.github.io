@@ -16,17 +16,17 @@ description: "tickadj – set time-related kernel variables"
 <h2>Command Line Options</h2>
 <dl>
 <dd>
-<dl>
-<dt><code>-a </code><i>tickadj</i></p>
-<dd>Set the kernel variable <code>tickadj</code> to the value <i></i><code>tickadj</code><i></i>specified.</p>
-<dt><code>-A</code></p>
-<dd>Set the kernel variable <code>tickadj</code> to an internally computed &quot;optimal&quot; value.</p>
-<dt><code>-t </code><i>tick</i></p>
-<dd>Set the kernel variable <code>tick</code> to the value <i></i><code>tick</code><i></i> specified.</p>
-<dt><code>-s</code></p>
-<dd>Set the kernel variable <code>dosynctodr</code> to zero, which disables the hardware time-of-year clock, a prerequisite for running the <code>ntpd</code> daemon under SunOS 4.x.</p>
-<dt><code>-q</code></p>
-<dd>Normally, <code>tickadj</code> is quite verbose about what it is doing. The <code>-q</code> flag tells it to shut up about everything except errors.</dl>
+</dd><dl>
+<dt><code>-a </code><i>tickadj</i></dt>
+<dd>Set the kernel variable <code>tickadj</code> to the value <i></i><code>tickadj</code><i></i>specified.</dd>
+<dt><code>-A</code></dt>
+<dd>Set the kernel variable <code>tickadj</code> to an internally computed &quot;optimal&quot; value.</dd>
+<dt><code>-t </code><i>tick</i></dt>
+<dd>Set the kernel variable <code>tick</code> to the value <i></i><code>tick</code><i></i> specified.</dd>
+<dt><code>-s</code></dt>
+<dd>Set the kernel variable <code>dosynctodr</code> to zero, which disables the hardware time-of-year clock, a prerequisite for running the <code>ntpd</code> daemon under SunOS 4.x.</dd>
+<dt><code>-q</code></dt>
+<dd>Normally, <code>tickadj</code> is quite verbose about what it is doing. The <code>-q</code> flag tells it to shut up about everything except errors.</dd></dl>
 </dl>
 <h2>Files</h2>
 <p><code>/vmunix /unix /dev/kmem</code></p>

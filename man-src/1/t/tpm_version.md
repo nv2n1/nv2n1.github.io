@@ -16,12 +16,12 @@ description: "tpm_version – report TPM version and manufacturer information"
 <h2>DESCRIPTION</h2>
 <p> <code>tpm_version</code> reports the system&#8217;s TPM version and manufacturer information. The information reported is manufacturer specific. </p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display command usage info.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display command version info.</p>
-<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</p>
-<dd> Set logging level. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display command usage info.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display command version info.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</dt>
+<dd> Set logging level. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-tpm_selftest/">tpm_selftest</a></code>(8), <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/8-tpm_setownable/">tpm_setownable</a></code>(8), <code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8) </p>

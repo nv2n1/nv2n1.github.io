@@ -15,7 +15,7 @@ mdiobus_alloc_size - allocate a mii_bus structure
 <h2>Arguments</h2>
 
 <i>size</i>
-<dl><dd><dd>extra amount of memory to allocate for private storage. If non-zero, then bus-&gt;priv is points to that memory.</dl>
+<dl><dd></dd><dd>extra amount of memory to allocate for private storage. If non-zero, then bus-&gt;priv is points to that memory.</dd></dl>
 
 <h2>Description</h2>
 

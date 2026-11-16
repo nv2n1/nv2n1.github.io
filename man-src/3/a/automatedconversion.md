@@ -56,12 +56,12 @@ description: "QuantLib::Quantity – Amount of a commodity."
 <h3>enum <code>ConversionType</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>NoConversion </i></p>
-<dd>do not perform conversions</p>
-<dt><i>BaseUnitOfMeasureConversion </i></p>
-<dd>convert both operands to the base unitOfMeasure before converting</p>
-<dt><i>AutomatedConversion </i></p>
-<dd>return the result in the unitOfMeasure of the first operand</dl>
+<dt><i>NoConversion </i></dt>
+<dd>do not perform conversions</dd>
+<dt><i>BaseUnitOfMeasureConversion </i></dt>
+<dd>convert both operands to the base unitOfMeasure before converting</dd>
+<dt><i>AutomatedConversion </i></dt>
+<dd>return the result in the unitOfMeasure of the first operand</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3><code>Quantity</code> operator+ (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
 <h3><code>Quantity</code> operator- (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>

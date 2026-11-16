@@ -10,9 +10,7 @@ description: "std::integer_sequence – std::integer_sequence"
 <p>std::integer_sequence &#8211; std::integer_sequence</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;utility&gt;
-
 template&lt; class T, T... Ints &gt;  (since C++14)
-
 class integer_sequence;</code></pre>
 <p>The class template std::integer_sequence represents a compile-time sequence of integers. When used as an argument to a function_template, the parameter_pack Ints can be deduced and used in pack expansion. </p>
 <h2>Template parameters</h2>
@@ -61,26 +59,21 @@ template &lt;typename T, std::size_t N, typename Indices = std::make_index_seque
 }<br />
 &nbsp;<wbr>&nbsp;// pretty-print a tuple </p>
 <pre><code>template &lt;class Ch, class Tr, class Tuple, std::size_t... Is&gt;
-
 void print_tuple_impl(std::basic_ostream&lt;Ch, Tr&gt; &amp;os,
                       const Tuple &amp;t,
                       std::index_sequence&lt;Is...&gt;)
-
 {
     ((os &lt;&lt; (Is == 0 ? &quot;&quot; : &quot;, &quot;) &lt;&lt; std::get&lt;Is&gt;(t)), ...);
 }
 template &lt;class Ch, class Tr, class... Args&gt;
-
 auto &amp;operator&lt;&lt;(std::basic_ostream&lt;Ch, Tr&gt; &amp;os,
                  const std::tuple&lt;Args...&gt; &amp;t)
-
 {
     os &lt;&lt; &quot;(&quot;;
     print_tuple_impl(os, t, std::index_sequence_for&lt;Args...&gt;{});
     return os &lt;&lt; &quot;)&quot;;
 }
 int main()
-
 {
     std::array&lt;int, 4&gt; array = {1, 2, 3, 4};
     // convert an array into a tuple

@@ -10,10 +10,10 @@ url: "/docs/linux/man/1-fmttest/"
 <p> fmttest &#8211; test tool for the <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) language</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>fmttest</code> [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>formatstring</i>] [<code>-address</code> | <code>-raw</code> | <code>-date</code> | <code>-message</code>] [<code>-file</code> | <code>-nofile</code>] [<code>&#8211;component</code> <i>component-text</i>] [<code>-dupaddrs</code> | <code>-nodupaddrs</code>] [<code>-ccme</code> | <code>-noccme</code>] [<code>-outsize</code> <i>size-in-characters</i>] [<code>-bufsize</code> <i>size-in-bytes</i>] [<code>-width</code> <i>column-width</i>] [<code>-msgnum</code> <i>number</i>] [<code>-msgcur</code> <i>flag</i>] [<code>-msgsize</code> <i>size</i>] [<code>-unseen</code> <i>flag</i>] [<code>-dump</code> | <code>-nodump</code>] [<code>-trace</code> | <code>-notrace</code>] [<i>+folder</i>] [<i>msgs</i> | <i>strings</i>]</dl>
+<dt> <code>fmttest</code> [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>formatstring</i>] [<code>-address</code> | <code>-raw</code> | <code>-date</code> | <code>-message</code>] [<code>-file</code> | <code>-nofile</code>] [<code>&#8211;component</code> <i>component-text</i>] [<code>-dupaddrs</code> | <code>-nodupaddrs</code>] [<code>-ccme</code> | <code>-noccme</code>] [<code>-outsize</code> <i>size-in-characters</i>] [<code>-bufsize</code> <i>size-in-bytes</i>] [<code>-width</code> <i>column-width</i>] [<code>-msgnum</code> <i>number</i>] [<code>-msgcur</code> <i>flag</i>] [<code>-msgsize</code> <i>size</i>] [<code>-unseen</code> <i>flag</i>] [<code>-dump</code> | <code>-nodump</code>] [<code>-trace</code> | <code>-notrace</code>] [<i>+folder</i>] [<i>msgs</i> | <i>strings</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Fmttest</code></p>
-<dd>is used to test programs written for the <code>nmh</code> format language as specified by <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5). It is also intended to replace the <code>ap</code>, <code>dp</code>, and <code>fmtdump</code> programs. </p>
+<dd>is used to test programs written for the <code>nmh</code> format language as specified by <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5). It is also intended to replace the <code>ap</code>, <code>dp</code>, and <code>fmtdump</code> programs. </dd>
 <h3>FORMAT PROGRAM SELECTION</h3>
 <p> The <code>-format</code> <i>string</i> and <code>-form</code> <i>formatfile</i> switches may be used to specify a format string or a format file to read. If given a format string, it must be specified as a single argument to the <code>-format</code> switch. If given a format file name with <code>-form</code>, the file is searched for using the normal <code>nmh</code> rules: absolute pathnames are accessed directly, tilde expansion is done on usernames, and files are searched for in the user&#8217;s <i>Mail</i> directory as specified in their profile. If not found there, the directory &#8220;<i>/etc/nmh</i>&#8221; is checked.</p>
 <h3>MODE SELECTION AND COMPONENT SPECIFICATION</h3>
@@ -21,37 +21,37 @@ url: "/docs/linux/man/1-fmttest/"
 <p> Address mode treats every argument as an email address and processes it with nmh&#8217;s email parser. Each argument is processed with the specified format program with the parsed email address available as a special %{<i>text</i>} component escape, and the output from the program is printed on standard output. If there was an error parsing the email address the error message is stored in the %{<i>error</i>} component escape. If no format program is given on the command line, the following default program is used: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 % &lt;{error} % {error} : % {text} % | % (putstr(proper{text})) %&gt;
 </code></pre>
-</dl>
+</dd></dl>
 <p> In this mode <code>fmttest</code> is equivalent to <i><a href="/docs/linux/man/8-ap/">ap</a></i>(8). </p>
 <p> In raw mode, no processing of the specified arguments is done. Each argument is run against the specified format program with the argument text available in the %{<i>text</i>} component. You must specify a format with <code>-form</code> or <code>-format</code> when using raw mode. </p>
 <p> Date mode is identical to raw mode, with one exception: if no format is specified, the following format string is used: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 % &lt;(nodate{text})error : % {text} % | % (putstr(pretty{text})) %&gt;
-</dl>
+</dd></dl>
 <p> Date mode is equivalent to <i><a href="/docs/linux/man/8-dp/">dp</a></i>(8). </p>
 <p> In message mode the arguments to <code>fmttest</code> are interpreted as an optional folder and messages. <code>Fmttest</code> will read each specified message and make all of the components in the message available to the format program. Also, the appropriate information for the %(<i>msg</i>), %(<i>cur</i>), %(<i>unseen</i>), and %(<i>size</i>) function escapes will be made available for each message. If the <code>-file</code> switch is given, the arguments are interpreted as filenames instead of message numbers, but otherwise the behavior is the same (except that the %(<i>msg</i>), %(<i>cur</i>), and %(<i>unseen</i>) function escapes will not provide any useful information). </p>
 <p> The default format used in address mode is the default format used by <code>scan</code>. The following command can replicate the functionality of the <code>repl</code> command. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fmttest -nodupaddrs -form replcomps -outsize max [+folder] message
 </pre>
-</dl>
+</dd></dl>
 <p> Regardless of the mode, other components can be provided to the format program by the use of the <code>&#8211;component</code> switch. For example, the following program will test out the use of the &#8220;<code>encrypted</code>&#8221; component: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fmttest --encrypted yes -message cur
 </pre>
-</dl>
+</dd></dl>
 <p> In message mode components supplied on the command line will override components from messages.</p>
 <h3>ADDITIONAL SWITCHES</h3>
 <p> The <code>-dupaddrs</code> and <code>-nodupaddrs</code> switches control whether duplicate addresses are allowed or suppressed by the <code>FORMATADDR</code> instruction, which is used by the `%(<i>formataddr</i>)&#8217; function escape. In normal operation duplicate addresses are only suppressed by <code>repl</code>. </p>
@@ -158,11 +158,11 @@ of addr component to str<br />
 <p> The <code>LV_DAT</code> instruction is a bit special. Callers of the format library pass in an array of integers that are used by certain format escapes. The current list of format escapes and the indexes they use are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 dat[0] % (num)dat[1] % (cur)dat[2] % (size)dat[3] % (width)dat[4] % (unseen)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5), <i><a href="/docs/linux/man/1-repl/">repl</a></i>(1), <i><a href="/docs/linux/man/8-ap/">ap</a></i>(8), <i><a href="/docs/linux/man/8-dp/">dp</a></i>(8),</p>
 <h2>DEFAULTS</h2>

@@ -17,56 +17,56 @@ description: "initctl – init daemon control tool"
 <p> You may also create symbolic or hard links to <code>initctl</code> named after commands. When invoked through these links the tool will behave only as that command, with global and command-specific options intermixed. The default installation supplies such links for the <code>start</code>, <code>stop</code>, <code>restart</code>, <code>reload</code> and <code>status</code> commands.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;user</code></p>
-<dd>User mode. In this mode, initctl will talk to the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon using the D-Bus private socket defined in the <code>UPSTART_SESSION</code> environment variable. </p>
+<dt><code>&#8211;user</code></dt>
+<dd>User mode. In this mode, initctl will talk to the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon using the D-Bus private socket defined in the <code>UPSTART_SESSION</code> environment variable. </dd>
 <p> Note that if the <code>UPSTART_SESSION</code> variable is defined, this option is implied.</p>
-<dt><code>&#8211;session</code></p>
-<dd>Connect to <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon using the existing D-Bus session bus (for testing purposes only).</p>
-<dt><code>&#8211;system</code></p>
-<dd>Communication with the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon is normally performed over a private socket connection. This has the advantage of speed and robustness, when issuing commands to start or stop services or even reboot the system you do not want to be affected by changes to the D-Bus system bus daemon. </p>
+<dt><code>&#8211;session</code></dt>
+<dd>Connect to <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon using the existing D-Bus session bus (for testing purposes only).</dd>
+<dt><code>&#8211;system</code></dt>
+<dd>Communication with the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon is normally performed over a private socket connection. This has the advantage of speed and robustness, when issuing commands to start or stop services or even reboot the system you do not want to be affected by changes to the D-Bus system bus daemon. </dd>
 <p> The disadvantage to using the private socket however is security, <code><a href="/docs/linux/man/8-init/">init</a></code>(8) only permits the root user to communicate over this socket which means that read-only commands such as <code>status</code> and <code>list</code> cannot be made by other users. </p>
 <p> The <code>&#8211;system</code> option instructs <code>initctl</code> to communicate via the D-Bus system bus rather than over the private socket. </p>
 <p> This is only possible if the system bus daemon is running and if <code><a href="/docs/linux/man/8-init/">init</a></code>(8) is connected to it. The advantage is that the default security configuration allows non-root users to use read-only commands.</p>
-<dt><code>&#8211;dest</code></p>
-<dd>Specifies the well-known name of the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon when using <code>&#8211;system</code>. </p>
+<dt><code>&#8211;dest</code></dt>
+<dd>Specifies the well-known name of the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon when using <code>&#8211;system</code>. </dd>
 <p> There is normally no need to use this option since the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon uses the default <code>com.ubuntu.Upstart</code> name. However it may be useful for debugging.</p>
-<dt><code>&#8211;no-wait</code></p>
-<dd>Applies to the <code>start</code>, <code>stop</code>, <code>restart</code> and <code>emit</code> commands. </p>
+<dt><code>&#8211;no-wait</code></dt>
+<dd>Applies to the <code>start</code>, <code>stop</code>, <code>restart</code> and <code>emit</code> commands. </dd>
 <p> Normally <code>initctl</code> will wait for the command to finish before returning. </p>
 <p> For the <code>start</code>, <code>stop</code> and <code>restart</code> commands, finishing means that the named job is running (or has finished for tasks) or has been fully stopped. </p>
 <p> For the <code>emit</code> command, finishing means that all of the jobs affected by the event are running (or have finished for tasks) or have been fully stopped. </p>
 <p> This option instead causes these commands to only wait for the goal change or event to be queued.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Reduces output of all commands to errors only.</dl>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Reduces output of all commands to errors only.</dd></dl>
 <h2>Commands</h2>
 <dl>
-<dt><code>start</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>start</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Requests that a new instance of the named <i>JOB</i> be started by changing its goal to <code>start</code>. The status of the job is displayed on standard output when the command completes. </p>
 <p> See <code>status</code> for a description of the output format. </p>
 <p> The optional <i>KEY=VALUE</i> arguments specify environment variables to be passed to the starting job, and placed in its environment. They also serve to specify which instance of multi-instance jobs should be started. </p>
 <p> Most jobs only permit a single instance; those that use the <code>instance</code> stanza in their configuration define a string expanded from environment variables to name the instance. As many unique instances may be started as unique names may be generated by the stanza. Thus the environment variables also serve to select which instance of <i>JOB</i> is to be acted upon. </p>
 <p> If the job is already running, <code>start</code> will return an error. </p>
 <p> When called from the <i>pre-stop</i> stanza of a job configuration, <code>start</code> may be called without argument to cancel the <code>stop.</code></p>
-<dt><code>stop</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>stop</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Requests that an instance of the named <i>JOB</i> be stopped by changing its goal to <code>stop</code>. The status of the job is displayed on standard output when the command completes. </p>
 <p> See <code>status</code> for a description of the output format and <code>start</code> for a discussion on instances. </p>
 <p> When called from the <i>pre-start</i> stanza of a job configuration, <code>stop</code> may be called without an argument to cancel the <code>start.</code> </p>
 <p> By default <code>SIGTERM</code> is sent to the job process. If it does not respond within a reasonable period, it will be forcibly stopped by sending <code>SIGKILL.</code> </p>
 <p> This behaviour can be changed using the <code>kill signal</code> and <code>kill timeout</code> stanzas. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</p>
-<dt><code>restart</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>restart</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Requests that an instance of the named <i>JOB</i> be restarted by first changing its goal to <code>stop</code>, and then changing its goal to <code>start</code>. The status of the job is displayed on standard output when the command completes. </p>
 <p> This command is <i>similar</i> to running <code>stop</code> followed by <code>start</code> with one exception: the job instance being restarted will retain its original configuration. To have the new instance run with the latest job configuration, <code>stop</code> the job and then <code>start</code> it again instead. </p>
 <p> See <code>status</code> for a description of the output format and <code>start</code> for a discussion on instances. </p>
 <p> Note that this command can only be used when there is an instance of <i>JOB</i>, if there is none then it returns an error instead of starting a new one.</p>
-<dt><code>reload</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>reload</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Sends the <i>SIGHUP</i> signal to running process of the named <i>JOB</i> instance. </p>
 <p> See <code>start</code> for a discussion on instances.</p>
-<dt><code>status</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>status</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Requests the status an instance of the named <i>JOB</i>, outputting to standard output. </p>
 <p> See <code>start</code> for a discussion on instances. </p>
 <p> For a single-instance job a line like the following is output: </p>
@@ -83,31 +83,31 @@ description: "initctl – init daemon control tool"
 <p>Jobs that permit multiple instances have names for each instance, the output is otherwise identical to the above except that the instance name follows the job name in parentheses: </p>
 <pre> job (tty1) start/post-start, process 1234
  post-start process 1357</pre>
-<dt><code>list</code></p>
-<dd>Requests a list of the known jobs and instances, outputs the status of each to standard output. </p>
+<dt><code>list</code></dt>
+<dd>Requests a list of the known jobs and instances, outputs the status of each to standard output. </dd>
 <p> Note that this command includes in the enumeration as-yet-to-run jobs (in other words configuration files for which no job instances have yet been created) in the output with status &quot;stop/waiting&quot;. In effect such entries denote configuration files which represent potential future jobs. </p>
 <p> See <code>status</code> for a description of the output format and <code>start</code> for a discussion on instances. </p>
 <p> No particular order is used for the output, and there is no difference in the output (other than the instance name appearing in parentheses) between single-instance and multiple-instance jobs.</p>
-<dt><code>emit</code></p>
-<dd><i>EVENT</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>emit</code></dt>
+<dd><i>EVENT</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Requests that the named <i>EVENT</i> be emitted, potentially causing jobs to be started and stopped depending on their use of the <code>start on</code> and <code>stop on</code> stanzas in their configuration. </p>
 <p> The optional <i>KEY=VALUE</i> arguments specify environment variables to be included with the event and thus exported into the environment of any jobs started and stopped by the event. </p>
 <p> The environment may also serve to specify which instance of multi-instance jobs should be started or stopped. See <code>start</code> for a discussion on instances. </p>
 <p> There is no limitation on the event names that may be emitted with this command, you are free to invent new events and use them in your job configurations. </p>
 <p> The most well-known event used by the default Upstart configuration is the <code><a href="/docs/linux/man/7-runlevel/">runlevel</a></code>(7) event. This is normally emitted by the <code><a href="/docs/linux/man/8-telinit/">telinit</a></code>(8) and <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8) tools.</p>
-<dt><code>reload-configuration</code></p>
-<dd>Requests that the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon reloads its configuration. </p>
+<dt><code>reload-configuration</code></dt>
+<dd>Requests that the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon reloads its configuration. </dd>
 <p> This command is generally not necessary since <code><a href="/docs/linux/man/8-init/">init</a></code>(8) watches its configuration directories with <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) and automatically reloads in cases of changes. </p>
 <p> No jobs will be started by this command.</p>
-<dt><code>version</code></p>
-<dd>Requests and outputs the version of the running init daemon.</p>
-<dt><code>log-priority</code></p>
-<dd>[<i>PRIORITY</i>] </p>
+<dt><code>version</code></dt>
+<dd>Requests and outputs the version of the running init daemon.</dd>
+<dt><code>log-priority</code></dt>
+<dd>[<i>PRIORITY</i>] </dd>
 <p> When called with a <i>PRIORITY</i> argument, it requests that the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon log all messages with that priority or greater. This may be used to both increase and decrease the volume of logged messages. </p>
 <p> <i>PRIORITY</i> may be one of <i>debug</i>, <i>info</i>, <i>message</i>, <i>warn</i>, <i>error</i> or <i>fatal</i>. </p>
 <p> When called without argument, it requests the current minimum message priority that the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon will log and outputs to standard output.</p>
-<dt><code>show-config</code></p>
-<dd>[<i>OPTIONS</i>] [<i>CONF</i>] </p>
+<dt><code>show-config</code></dt>
+<dd>[<i>OPTIONS</i>] [<i>CONF</i>] </dd>
 <p> Display emits, start on and stop on job configuration details (in that order) for specified job configuration, <i>CONF</i>. If <i>CONF</i> is not specified, list information for all valid job configurations. </p>
 <p> Note that a job configuration is the name of a job configuration file, without the extension. Note too that this information is static: it does not refer to any running job. </p>
 <p> For each event emitted, a separate line is displayed beginning with two space characters followed by, &#8217;emits <i>event</i>&#8216; where &#8216;<i>event</i>&#8216; denotes a single emitted event. </p>
@@ -123,9 +123,9 @@ description: "initctl – init daemon control tool"
 <p><code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-e</code>, <code>&#8211;enumerate</code></p>
-<dd>If specified, rather than listing the precise <code>start on</code> and <code>stop on</code> conditions, outputs the emits lines along with one line for each event or job the <i>CONF</i> in question <i>may</i> be started or stopped by if it were to become a job. If the start on condition specifies a non-job event, this will be listed verbatim, whereas for a job event, the name of the <i>job</i> as opposed to the event the job emits will be listed. </p>
+</dd><dl>
+<dt><code>-e</code>, <code>&#8211;enumerate</code></dt>
+<dd>If specified, rather than listing the precise <code>start on</code> and <code>stop on</code> conditions, outputs the emits lines along with one line for each event or job the <i>CONF</i> in question <i>may</i> be started or stopped by if it were to become a job. If the start on condition specifies a non-job event, this will be listed verbatim, whereas for a job event, the name of the <i>job</i> as opposed to the event the job emits will be listed. </dd>
 <p> The type of entity, its triggering event (if appropriate) and its full environment is displayed in brackets following its name for clarity. </p>
 <p> This option is useful for tools which generate graphs of relationships between jobs and events. It is also instructive since it shows how the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon has parsed the job configuration file. </p>
 <p> Example output (an analog of the default output format above): </p>
@@ -139,8 +139,8 @@ description: "initctl – init daemon control tool"
  stop on stopping (job: wibble, event: stopping, env:)</pre>
 </dl>
 </dl>
-<dt><code>check-config</code></p>
-<dd>[<i>OPTIONS</i>] [<i>CONF</i>] </p>
+<dt><code>check-config</code></dt>
+<dd>[<i>OPTIONS</i>] [<i>CONF</i>] </dd>
 <p> Considers all job configurations looking for jobs that cannot be started or stopped, given the currently available job configurations. This is achieved by considering the start on, stop on and emits stanzas for each job configuration and identifying unreachable scenarios. </p>
 <p> This option is useful for determining the impact of adding or removing job configuration files. </p>
 <p> Note that to use this command, it is necessary to ensure that all job configuration files advertise the events they emit correctly. </p>
@@ -164,101 +164,101 @@ description: "initctl – init daemon control tool"
 <p><code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-i</code> <i>[EVENTS]</i>, <code>&#8211;ignore-events</code> <i>[EVENTS]</i></p>
-<dd>If specified, the argument should be a list of comma-separated events to ignore when checking the job configuration files. </p>
+</dd><dl>
+<dt><code>-i</code> <i>[EVENTS]</i>, <code>&#8211;ignore-events</code> <i>[EVENTS]</i></dt>
+<dd>If specified, the argument should be a list of comma-separated events to ignore when checking the job configuration files. </dd>
 <p> This option may be useful to ignore errors if a particular job configuration file does not advertise it emits an event. </p>
 <p> Note that internal events (such as <code><a href="/docs/linux/man/7-startup/">startup</a></code>(7) and <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7)) are automatically ignored.</p>
-<dt><code>-w</code>, <code>&#8211;warn</code></p>
-<dd>If specified, treat <i>any</i> unknown jobs and events as errors.</dl>
+<dt><code>-w</code>, <code>&#8211;warn</code></dt>
+<dd>If specified, treat <i>any</i> unknown jobs and events as errors.</dd></dl>
 </dl>
-<dt><code>notify-disk-writeable</code></p>
-<dd>Notify the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon that the disk is now writeable. This currently causes the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon to flush its internal cache of &#8216;early job&#8217; output data. An early job is any job which <i>finishes</i> before the log disk becomes writeable. If job logging is not disabled, this command should be called once the log disk becomes writeable to ensure that output from all early jobs is flushed. If the data is written successfully to disk, the internal cache is deleted.</p>
-<dt><code>notify-dbus-address</code></p>
-<dd>Notify the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon of the D-Bus address it should use to connect to. </p>
+<dt><code>notify-disk-writeable</code></dt>
+<dd>Notify the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon that the disk is now writeable. This currently causes the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon to flush its internal cache of &#8216;early job&#8217; output data. An early job is any job which <i>finishes</i> before the log disk becomes writeable. If job logging is not disabled, this command should be called once the log disk becomes writeable to ensure that output from all early jobs is flushed. If the data is written successfully to disk, the internal cache is deleted.</dd>
+<dt><code>notify-dbus-address</code></dt>
+<dd>Notify the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon of the D-Bus address it should use to connect to. </dd>
 <p> This command is only permitted when running in <code>User Session Mode.</code> See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</p>
-<dt><code>list-env</code></p>
-<dd>[<i>OPTIONS</i>] </p>
+<dt><code>list-env</code></dt>
+<dd>[<i>OPTIONS</i>] </dd>
 <p> Display a lexicographically sorted list of all variables and their values in a job environment table. </p>
 <p> When run from within a job, this command will automatically query the job-specific environment table; otherwise the global environment table that is applied to all jobs when they first start is queried. </p>
 <p> Note that the global job environment table comprises those variables already set in the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemons environment at startup, the minimal set of standard system variables added by the <code><a href="/docs/linux/man/8-init/">init</a></code>(8) daemon, and any variables set using <code>set-env</code>. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-g</code>, <code>&#8211;global</code></p>
-<dd>Operate on the global job environment table. This option is implied when not run from within a job.</dl>
+</dd><dl>
+<dt><code>-g</code>, <code>&#8211;global</code></dt>
+<dd>Operate on the global job environment table. This option is implied when not run from within a job.</dd></dl>
 </dl>
-<dt><code>get-env</code></p>
-<dd>[<i>OPTIONS</i>] <i>VARIABLE</i> </p>
+<dt><code>get-env</code></dt>
+<dd>[<i>OPTIONS</i>] <i>VARIABLE</i> </dd>
 <p> Display the value of the specified variable in a job environment table. </p>
 <p> When run from within a job, this command will automatically query the job-specific environment table; otherwise the global environment table that is applied to all jobs when they first start is queried. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-g</code>, <code>&#8211;global</code></p>
-<dd>Operate on the global job environment table. This option is implied when not run from within a job.</dl>
+</dd><dl>
+<dt><code>-g</code>, <code>&#8211;global</code></dt>
+<dd>Operate on the global job environment table. This option is implied when not run from within a job.</dd></dl>
 </dl>
-<dt><code>set-env</code></p>
-<dd>[<i>OPTIONS</i>] <i>VARIABLE[=VALUE]</i> </p>
+<dt><code>set-env</code></dt>
+<dd>[<i>OPTIONS</i>] <i>VARIABLE[=VALUE]</i> </dd>
 <p> Adds or updates a variable in a job environment table. Variables set in this way will apply to all the subsequently-starting processes for a job. </p>
 <p> This command is only permitted when running in <code>User Session Mode.</code> See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>If the specified variable is already set, do not modify it.</dl>
+</dd><dl>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>If the specified variable is already set, do not modify it.</dd></dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dt><code>-g</code>, <code>&#8211;global</code></p>
-<dd>Operate on the global job environment table and all existing running job environment tables. This option is implied when not run from within a job. </p>
+</dd><dl>
+<dt><code>-g</code>, <code>&#8211;global</code></dt>
+<dd>Operate on the global job environment table and all existing running job environment tables. This option is implied when not run from within a job. </dd>
 <p> This is an advanced option whose use is discouraged since it can change the environment of a job as it moves between different process stages (for example between <code>pre-start</code> and the main process). See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</dl>
 </dl>
-<dt><code>unset-env</code></p>
-<dd>[<i>OPTIONS</i>] <i>VARIABLE</i> </p>
+<dt><code>unset-env</code></dt>
+<dd>[<i>OPTIONS</i>] <i>VARIABLE</i> </dd>
 <p> Remove the specified variable from a job environment table. If the variable does not already exist in the table, no change will be made. </p>
 <p> This command is only permitted when running in <code>User Session Mode.</code> See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>If the specified variable is already set, do not modify it.</dl>
+</dd><dl>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>If the specified variable is already set, do not modify it.</dd></dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dt><code>-g</code>, <code>&#8211;global</code></p>
-<dd>Operate on the global job environment table and all existing running jobenvironment tables. This option is implied when not run from within a job. </p>
+</dd><dl>
+<dt><code>-g</code>, <code>&#8211;global</code></dt>
+<dd>Operate on the global job environment table and all existing running jobenvironment tables. This option is implied when not run from within a job. </dd>
 <p> This is an advanced option whose use is discouraged since it can change the environment of a job as it moves between different process stages (for example between <code>pre-start</code> and the main process). See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details.</dl>
 </dl>
-<dt><code>reset-env</code></p>
-<dd>[<i>OPTIONS</i>] </p>
+<dt><code>reset-env</code></dt>
+<dd>[<i>OPTIONS</i>] </dd>
 <p> Discards all changes make to a job environment table, setting it back to its default set of variables and values. </p>
 <p> This command is only permitted when running in <code>User Session Mode.</code> See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details. </p>
 <p> Note that the effect of the Session Init process that manages the User Session Mode restarting is equivalent to this command having been called. </p>
 <p> <code>OPTIONS</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>If the specified variable is already set, do not modify it.</dl>
+</dd><dl>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>If the specified variable is already set, do not modify it.</dd></dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dt><code>-g</code>, <code>&#8211;global</code></p>
-<dd>Operate on the global job environment table. This option is implied when not run from within a job. </p>
+</dd><dl>
+<dt><code>-g</code>, <code>&#8211;global</code></dt>
+<dd>Operate on the global job environment table. This option is implied when not run from within a job. </dd>
 <p> Note that unlike <code>set-env</code> and <code>unset-env</code>, this option does not modify running job environment tables.</dl>
 </dl>
-<dt><code>list-sessions</code></p>
-<dd>List the pid of the Session Init process followed by the value of <code>UPSTART_SESSION</code> in use for that session separted by a space character. Session files relating to non-longer running Session Init processes are considered &#8216;stale&#8217; and are not listed (although when run using <code>&#8211;verbose</code>, the full path of the stale session file is displayed).</p>
-<dt><code>usage</code></p>
-<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </p>
+<dt><code>list-sessions</code></dt>
+<dd>List the pid of the Session Init process followed by the value of <code>UPSTART_SESSION</code> in use for that session separted by a space character. Session files relating to non-longer running Session Init processes are considered &#8216;stale&#8217; and are not listed (although when run using <code>&#8211;verbose</code>, the full path of the stale session file is displayed).</dd>
+<dt><code>usage</code></dt>
+<dd><i>JOB</i> [<i>KEY=VALUE</i>]&#8230; </dd>
 <p> Show usage information for the named <i>JOB</i>. If the job specified does not define the <code>usage</code> stanza, a blank usage will be displayed. </p>
 <p> Example output for a job that specifies the <code>usage</code> stanza is shown below. See <code><a href="/docs/linux/man/5-init/">init</a></code>(5) for further details of the <code>usage</code> stanza: </p>
 <pre> Usage: tty DEV=ttyX - where X is console id</pre>

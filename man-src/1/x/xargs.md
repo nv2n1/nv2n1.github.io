@@ -18,50 +18,50 @@ description: "xargs – build and execute command lines from standard input"
 <p> If any invocation of the command exits with a status of 255, <code>xargs</code> will stop immediately without reading any further input. An error message is issued on stderr when this happens.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-0, &#8211;null</code></p>
-<dd> Input items are terminated by a null character instead of by whitespace, and the quotes and backslash are not special (every character is taken literally). Disables the end of file string, which is treated like any other argument. Useful when input items might contain white space, quote marks, or backslashes. The GNU find -print0 option produces input suitable for this mode. </p>
-<dt><code>-a </code><i>file</i><code>, &#8211;arg-file=</code><i>file</i></p>
-<dd> Read items from <i>file</i> instead of standard input. If you use this option, stdin remains unchanged when commands are run. Otherwise, stdin is redirected from <i>/dev/null</i>. </p>
-<dt><code>&#8211;delimiter=</code><i>delim</i><code>, -d</code><i> delim</i></p>
+<dt><code>-0, &#8211;null</code></dt>
+<dd> Input items are terminated by a null character instead of by whitespace, and the quotes and backslash are not special (every character is taken literally). Disables the end of file string, which is treated like any other argument. Useful when input items might contain white space, quote marks, or backslashes. The GNU find -print0 option produces input suitable for this mode. </dd>
+<dt><code>-a </code><i>file</i><code>, &#8211;arg-file=</code><i>file</i></dt>
+<dd> Read items from <i>file</i> instead of standard input. If you use this option, stdin remains unchanged when commands are run. Otherwise, stdin is redirected from <i>/dev/null</i>. </dd>
+<dt><code>&#8211;delimiter=</code><i>delim</i><code>, -d</code><i> delim</i></dt>
 <dd> Input items are terminated by the specified character. The specified delimiter may be a single character, a C-style character escape such as <code>
-</code>, or an octal or hexadecimal escape code. Octal and hexadecimal escape codes are understood as for the <code>printf</code> command. Multibyte characters are not supported. When processing the input, quotes and backslash are not special; every character in the input is taken literally. The <code>-d</code> option disables any end-of-file string, which is treated like any other argument. You can use this option when the input consists of simply newline-separated items, although it is almost always better to design your program to use <code>&#8211;null</code> where this is possible. </p>
-<dt><code>-E</code><i> eof-str</i></p>
-<dd> Set the end of file string to <i>eof-str</i>. If the end of file string occurs as a line of input, the rest of the input is ignored. If neither <code>-E</code> nor <code>-e</code> is used, no end of file string is used.</p>
-<dt><code>-e</code>[<i>eof-str</i>], <code>&#8211;eof</code>[<i>=eof-str</i>]</p>
-<dd> This option is a synonym for the <code>-E</code> option. Use <code>-E</code> instead, because it is POSIX compliant while this option is not. If <i>eof-str</i> is omitted, there is no end of file string. If neither <code>-E</code> nor <code>-e</code> is used, no end of file string is used.</p>
-<dt><code>-I</code><i> replace-str</i></p>
-<dd> Replace occurrences of <i>replace-str</i> in the initial-arguments with names read from standard input. Also, unquoted blanks do not terminate input items; instead the separator is the newline character. Implies <code>-x</code> and <code>-L</code> 1.</p>
-<dt><code>-i</code>[<i>replace-str</i>], <code>&#8211;replace</code>[<i>=replace-str</i>]</p>
-<dd> This option is a synonym for <code>-I</code><i>replace-str</i> if <i>replace-str</i> is specified. If the <i>replace-str</i> argument is missing, the effect is the same as <code>-I</code>{}. This option is deprecated; use <code>-I</code> instead.</p>
-<dt><code>-L</code><i> max-lines</i></p>
-<dd> Use at most <i>max-lines</i> nonblank input lines per command line. Trailing blanks cause an input line to be logically continued on the next input line. Implies <code>-x</code>.</p>
-<dt><code>-l</code>[<i>max-lines</i>], <code>&#8211;max-lines</code>[=<i>max-lines</i>]</p>
-<dd> Synonym for the <code>-L</code> option. Unlike <code>-L</code>, the <i>max-lines</i> argument is optional. If <i>max-lines</i> is not specified, it defaults to one. The <code>-l</code> option is deprecated since the POSIX standard specifies <code>-L</code> instead.</p>
-<dt><code>-n</code><i> max-args</i><code>, </code><i></i><code>&#8211;max-args</code><i></i>=<i>max-args</i></p>
-<dd> Use at most <i>max-args</i> arguments per command line. Fewer than <i>max-args</i> arguments will be used if the size (see the <code>-s</code> option) is exceeded, unless the <code>-x</code> option is given, in which case <code>xargs will exit.</code></p>
-<dt><code>-P</code><i> max-procs</i>, <i></i><code>&#8211;max-procs</code><i></i>=<i>max-procs</i></p>
-<dd> Run up to <i>max-procs</i> processes at a time; the default is 1. If <i>max-procs</i> is 0, <code>xargs</code> will run as many processes as possible at a time. Use the <code>-n</code> option or the <code>-L</code> option with <code>-P</code>; otherwise chances are that only one exec will be done. While <code>xargs</code> is running, you can send its process a SIGUSR1 signal to increase the number of commands to run simultaneously, or a SIGUSR2 to decrease the number. You cannot increase it above an implementation-defined limit (which is shown with &#8211;show-limits). You cannot decrease it below 1. <code>xargs</code> never terminates its commands; when asked to decrease, it merely waits for more than one existing command to terminate before starting another. </p>
+</code>, or an octal or hexadecimal escape code. Octal and hexadecimal escape codes are understood as for the <code>printf</code> command. Multibyte characters are not supported. When processing the input, quotes and backslash are not special; every character in the input is taken literally. The <code>-d</code> option disables any end-of-file string, which is treated like any other argument. You can use this option when the input consists of simply newline-separated items, although it is almost always better to design your program to use <code>&#8211;null</code> where this is possible. </dd>
+<dt><code>-E</code><i> eof-str</i></dt>
+<dd> Set the end of file string to <i>eof-str</i>. If the end of file string occurs as a line of input, the rest of the input is ignored. If neither <code>-E</code> nor <code>-e</code> is used, no end of file string is used.</dd>
+<dt><code>-e</code>[<i>eof-str</i>], <code>&#8211;eof</code>[<i>=eof-str</i>]</dt>
+<dd> This option is a synonym for the <code>-E</code> option. Use <code>-E</code> instead, because it is POSIX compliant while this option is not. If <i>eof-str</i> is omitted, there is no end of file string. If neither <code>-E</code> nor <code>-e</code> is used, no end of file string is used.</dd>
+<dt><code>-I</code><i> replace-str</i></dt>
+<dd> Replace occurrences of <i>replace-str</i> in the initial-arguments with names read from standard input. Also, unquoted blanks do not terminate input items; instead the separator is the newline character. Implies <code>-x</code> and <code>-L</code> 1.</dd>
+<dt><code>-i</code>[<i>replace-str</i>], <code>&#8211;replace</code>[<i>=replace-str</i>]</dt>
+<dd> This option is a synonym for <code>-I</code><i>replace-str</i> if <i>replace-str</i> is specified. If the <i>replace-str</i> argument is missing, the effect is the same as <code>-I</code>{}. This option is deprecated; use <code>-I</code> instead.</dd>
+<dt><code>-L</code><i> max-lines</i></dt>
+<dd> Use at most <i>max-lines</i> nonblank input lines per command line. Trailing blanks cause an input line to be logically continued on the next input line. Implies <code>-x</code>.</dd>
+<dt><code>-l</code>[<i>max-lines</i>], <code>&#8211;max-lines</code>[=<i>max-lines</i>]</dt>
+<dd> Synonym for the <code>-L</code> option. Unlike <code>-L</code>, the <i>max-lines</i> argument is optional. If <i>max-lines</i> is not specified, it defaults to one. The <code>-l</code> option is deprecated since the POSIX standard specifies <code>-L</code> instead.</dd>
+<dt><code>-n</code><i> max-args</i><code>, </code><i></i><code>&#8211;max-args</code><i></i>=<i>max-args</i></dt>
+<dd> Use at most <i>max-args</i> arguments per command line. Fewer than <i>max-args</i> arguments will be used if the size (see the <code>-s</code> option) is exceeded, unless the <code>-x</code> option is given, in which case <code>xargs will exit.</code></dd>
+<dt><code>-P</code><i> max-procs</i>, <i></i><code>&#8211;max-procs</code><i></i>=<i>max-procs</i></dt>
+<dd> Run up to <i>max-procs</i> processes at a time; the default is 1. If <i>max-procs</i> is 0, <code>xargs</code> will run as many processes as possible at a time. Use the <code>-n</code> option or the <code>-L</code> option with <code>-P</code>; otherwise chances are that only one exec will be done. While <code>xargs</code> is running, you can send its process a SIGUSR1 signal to increase the number of commands to run simultaneously, or a SIGUSR2 to decrease the number. You cannot increase it above an implementation-defined limit (which is shown with &#8211;show-limits). You cannot decrease it below 1. <code>xargs</code> never terminates its commands; when asked to decrease, it merely waits for more than one existing command to terminate before starting another. </dd>
 <p> <code>Please note</code> that it is up to the called processes to properly manage parallel access to shared resources. For example, if more than one of them tries to print to stdout, the output will be produced in an indeterminate order (and very likely mixed up) unless the processes collaborate in some way to prevent this. Using some kind of locking scheme is one way to prevent such problems. In general, using a locking scheme will help ensure correct output but reduce performance. If you don&#8217;t want to tolerate the performance difference, simply arrange for each process to produce a separate output file (or otherwise use separate resources).</p>
-<dt><code>-o, &#8211;open-tty</code></p>
-<dd> Reopen stdin as <i>/dev/tty</i> in the child process before executing the command. This is useful if you want <code>xargs</code> to run an interactive application.</p>
-<dt><code>-p, &#8211;interactive</code></p>
-<dd> Prompt the user about whether to run each command line and read a line from the terminal. Only run the command line if the response starts with `y&#8217; or `Y&#8217;. Implies <code>-t</code>.</p>
-<dt><code>&#8211;process-slot-var</code>=<i>name</i></p>
-<dd> Set the environment variable <i>name</i> to a unique value in each running child process. Values are reused once child processes exit. This can be used in a rudimentary load distribution scheme, for example.</p>
-<dt><code>-r, &#8211;no-run-if-empty</code></p>
-<dd> If the standard input does not contain any nonblanks, do not run the command. Normally, the command is run once even if there is no input. This option is a GNU extension.</p>
-<dt><code>-s</code><i> max-chars</i>, <i></i><code>&#8211;max-chars</code><i>=max-chars</i></p>
-<dd> Use at most <i>max-chars</i> characters per command line, including the command and initial-arguments and the terminating nulls at the ends of the argument strings. The largest allowed value is system-dependent, and is calculated as the argument length limit for exec, less the size of your environment, less 2048 bytes of headroom. If this value is more than 128KiB, 128Kib is used as the default value; otherwise, the default value is the maximum. 1KiB is 1024 bytes. <code>xargs</code> automatically adapts to tighter constraints.</p>
-<dt><code>&#8211;show\-limits</code></p>
-<dd> Display the limits on the command-line length which are imposed by the operating system, <code>xargs</code>&#8216; choice of buffer size and the <code>-s</code> option. Pipe the input from <i>/dev/null</i> (and perhaps specify <code>&#8211;no-run-if-empty</code>) if you don&#8217;t want <code>xargs</code> to do anything.</p>
-<dt><code>-t, &#8211;verbose</code></p>
-<dd> Print the command line on the standard error output before executing it.</p>
-<dt><code>-x, &#8211;exit</code></p>
-<dd> Exit if the size (see the <code>-s</code> option) is exceeded.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of the options to <code>xargs</code> and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number of <code>xargs</code> and exit.</dl>
+<dt><code>-o, &#8211;open-tty</code></dt>
+<dd> Reopen stdin as <i>/dev/tty</i> in the child process before executing the command. This is useful if you want <code>xargs</code> to run an interactive application.</dd>
+<dt><code>-p, &#8211;interactive</code></dt>
+<dd> Prompt the user about whether to run each command line and read a line from the terminal. Only run the command line if the response starts with `y&#8217; or `Y&#8217;. Implies <code>-t</code>.</dd>
+<dt><code>&#8211;process-slot-var</code>=<i>name</i></dt>
+<dd> Set the environment variable <i>name</i> to a unique value in each running child process. Values are reused once child processes exit. This can be used in a rudimentary load distribution scheme, for example.</dd>
+<dt><code>-r, &#8211;no-run-if-empty</code></dt>
+<dd> If the standard input does not contain any nonblanks, do not run the command. Normally, the command is run once even if there is no input. This option is a GNU extension.</dd>
+<dt><code>-s</code><i> max-chars</i>, <i></i><code>&#8211;max-chars</code><i>=max-chars</i></dt>
+<dd> Use at most <i>max-chars</i> characters per command line, including the command and initial-arguments and the terminating nulls at the ends of the argument strings. The largest allowed value is system-dependent, and is calculated as the argument length limit for exec, less the size of your environment, less 2048 bytes of headroom. If this value is more than 128KiB, 128Kib is used as the default value; otherwise, the default value is the maximum. 1KiB is 1024 bytes. <code>xargs</code> automatically adapts to tighter constraints.</dd>
+<dt><code>&#8211;show\-limits</code></dt>
+<dd> Display the limits on the command-line length which are imposed by the operating system, <code>xargs</code>&#8216; choice of buffer size and the <code>-s</code> option. Pipe the input from <i>/dev/null</i> (and perhaps specify <code>&#8211;no-run-if-empty</code>) if you don&#8217;t want <code>xargs</code> to do anything.</dd>
+<dt><code>-t, &#8211;verbose</code></dt>
+<dd> Print the command line on the standard error output before executing it.</dd>
+<dt><code>-x, &#8211;exit</code></dt>
+<dd> Exit if the size (see the <code>-s</code> option) is exceeded.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of the options to <code>xargs</code> and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number of <code>xargs</code> and exit.</dd></dl>
 <p> The options <code>&#8211;max-lines</code> (<code>-L</code>, <code>-l</code>), <code>&#8211;replace</code> (<code>-I</code>, <code>-i</code>) and <code>&#8211;max-args</code> (<code>-n</code>) are mutually exclusive. If some of them are specified at the same time, then <code>xargs</code> will generally use the option specified last on the command line, i.e., it will reset the value of the offending option (given before) to its default value. Additionally, <code>xargs</code> will issue a warning diagnostic on <i>stderr</i>. The exception to this rule is that the special <i>max-args</i> value <i>1</i> (&#8216;<code>-n</code><i>1</i>&#8216;) is ignored after the <code>&#8211;replace</code> option and its aliases <code>-I</code> and <code>-i</code>, because it would not actually conflict. </p>
 <h2>EXAMPLES</h2>
 <pre>
@@ -79,23 +79,21 @@ description: "xargs – build and execute command lines from standard input"
 <h2>EXIT STATUS</h2>
 <p> <code>xargs</code> exits with the following status:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0</p>
-<dd> if it succeeds</p>
-<dt>123</p>
-<dd> if any invocation of the command exited with status 1-125</p>
-<dt>124</p>
-<dd> if the command exited with status 255</p>
-<dt>125</p>
-<dd> if the command is killed by a signal</p>
-<dt>126</p>
-<dd> if the command cannot be run</p>
-<dt>127</p>
-<dd> if the command is not found</p>
-<dt>1</p>
-<dd> if some other error occurred.</dl>
+<dt>0</dt>
+<dd> if it succeeds</dd>
+<dt>123</dt>
+<dd> if any invocation of the command exited with status 1-125</dd>
+<dt>124</dt>
+<dd> if the command exited with status 255</dd>
+<dt>125</dt>
+<dd> if the command is killed by a signal</dd>
+<dt>126</dt>
+<dd> if the command cannot be run</dd>
+<dt>127</dt>
+<dd> if the command is not found</dd>
+<dt>1</dt>
+<dd> if some other error occurred.</dd></dl>
 </dl>
 <p> Exit codes greater than 128 are used by the shell to indicate that a program died due to a fatal signal.</p>
 <h2>STANDARDS CONFORMANCE</h2>
@@ -114,11 +112,11 @@ description: "xargs – build and execute command lines from standard input"
 <p> Report any other issue via the form at the GNU Savannah bug tracker:</p>
 <dl>
 <dt>
-<dd> &lt;<a rel="nofollow" href="https://savannah.gnu.org/bugs/?group=findutils">https://savannah.gnu.org/bugs/?group=findutils</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" href="https://savannah.gnu.org/bugs/?group=findutils">https://savannah.gnu.org/bugs/?group=findutils</a>&gt;</dd></dl>
 <p> General topics about the GNU findutils package are discussed at the <i>bug-findutils</i> mailing list:</p>
 <dl>
 <dt>
-<dd> &lt;<a rel="nofollow" href="https://lists.gnu.org/mailman/listinfo/bug-findutils">https://lists.gnu.org/mailman/listinfo/bug-findutils</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" href="https://lists.gnu.org/mailman/listinfo/bug-findutils">https://lists.gnu.org/mailman/listinfo/bug-findutils</a>&gt;</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>

@@ -16,8 +16,8 @@ description: "ldns_rdf_address_reverse"
 <p> ldns_rdf* ldns_rdf_address_reverse(ldns_rdf *rd); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rdf_address_reverse</i>()</p>
-<dd>reverses an rdf, only actually useful for AAAA and A records. The returned rdf has the type LDNS_RDF_TYPE_DNAME! .br <code>*rd</code>: rdf to be reversed .br Returns the reversed rdf (a newly created rdf)</dl>
+<dt> <i>ldns_rdf_address_reverse</i>()</dt>
+<dd>reverses an rdf, only actually useful for AAAA and A records. The returned rdf has the type LDNS_RDF_TYPE_DNAME! .br <code>*rd</code>: rdf to be reversed .br Returns the reversed rdf (a newly created rdf)</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

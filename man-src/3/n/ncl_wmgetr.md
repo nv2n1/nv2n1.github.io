@@ -21,9 +21,9 @@ CALL WMGETR (PNAM,RVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first three characters of the string.
-<dt>RVAL
-<dd>(an output variable of type REAL) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dl>
+</dt><dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. The name must appear as the first three characters of the string.
+</dd><dt>RVAL
+</dt><dd>(an output variable of type REAL) is the name of the variable into which the value of the internal parameter specified by PNAM is to be retrieved.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

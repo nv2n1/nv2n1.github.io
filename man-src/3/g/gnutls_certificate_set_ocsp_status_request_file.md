@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_ocsp_status_request_file – API function"
 <p> <code>int gnutls_certificate_set_ocsp_status_request_file(gnutls_certificate_credentials_t </code><i>sc</i><code>, const char * </code><i>response_file</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t sc</p>
-<dd> is a credentials structure.</p>
-<dt>const char * response_file</p>
-<dd> a filename of the OCSP response</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>gnutls_certificate_credentials_t sc</dt>
+<dd> is a credentials structure.</dd>
+<dt>const char * response_file</dt>
+<dd> a filename of the OCSP response</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the filename of an OCSP response, that will be sent to the client if requests an OCSP certificate status. This is a convenience function which is inefficient on busy servers since the file is opened on every access. Use <code>gnutls_certificate_set_ocsp_status_request_function()</code> to fine-tune file accesses.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_certificate_set_ocsp_status_request_file – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

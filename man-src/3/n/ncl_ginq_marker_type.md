@@ -13,23 +13,23 @@ description: "ginq_marker_type (Inquire marker type) – retrieves the current v
 <p> void ginq_marker_type(Gint *err_ind, Gint *marker_type);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>marker_type</p>
-<dd>(Output) &#8211; Returns the current value for the polymarker type as set by default or by a call to gset_marker_type.</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>marker_type</dt>
+<dd>(Output) &#8211; Returns the current value for the polymarker type as set by default or by a call to gset_marker_type.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>1</p>
-<dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)</p>
-<dt>2</p>
-<dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)</p>
-<dt>3</p>
-<dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default</p>
-<dt>4</p>
-<dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)</p>
-<dt>5</p>
-<dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)</dl>
+</dd><dl COMPACT>
+<dt>1</dt>
+<dd>&nbsp;<wbr>.&nbsp;<wbr>(dot)</dd>
+<dt>2</dt>
+<dd>&nbsp;<wbr>+&nbsp;<wbr>(plus)</dd>
+<dt>3</dt>
+<dd>&nbsp;<wbr>*&nbsp;<wbr>(asterisk)&nbsp;<wbr>This is the default</dd>
+<dt>4</dt>
+<dd>&nbsp;<wbr>o&nbsp;<wbr>(circle)</dd>
+<dt>5</dt>
+<dd>&nbsp;<wbr>X&nbsp;<wbr>(cross)</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

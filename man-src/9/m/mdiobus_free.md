@@ -15,7 +15,7 @@ mdiobus_free - free a struct mii_bus
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>mii_bus to free</dl>
+<dl><dd></dd><dd>mii_bus to free</dd></dl>
 
 <h2>Description</h2>
 

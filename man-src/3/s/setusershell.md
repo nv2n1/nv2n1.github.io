@@ -10,11 +10,8 @@ description: "getusershell, setusershell, endusershell – get permitted user sh
 <p>getusershell, setusershell, endusershell &#8211; get permitted user shells</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
-
 char *getusershell(void);
-
 void setusershell(void);
-
 void endusershell(void);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getusershell</code>(), <code>setusershell</code>(), <code>endusershell</code>(): </p>
 <pre> Since glibc 2.21:

@@ -15,19 +15,19 @@ ipc_init_proc_interface - create a proc interface for sysipc types using a seq_f
 <h2>Arguments</h2>
 
 <i>path</i>
-<dl><dd><dd>Path in procfs</dl>
+<dl><dd></dd><dd>Path in procfs</dd></dl>
  
 
  <i>header</i>
-<dl><dd>Banner to be printed at the beginning of the file.</dl>
+<dl><dd>Banner to be printed at the beginning of the file.</dd></dl>
  
 
  <i>ids</i>
-<dl><dd>ipc id table to iterate.</dl>
+<dl><dd>ipc id table to iterate.</dd></dl>
  
 
  <i>show</i>
-<dl><dd>show routine.</dl>
+<dl><dd>show routine.</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -12,13 +12,12 @@ rdma_destroy_ep - Release a communication identifier.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 void rdma_destroy_ep
-
     (struct rdma_cm_id *id);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>The communication identifier to destroy.</dl>
+</dt><dd>The communication identifier to destroy.</dd></dl>
 
 <h2>Description</h2>
 

@@ -11,8 +11,6 @@ description: "zpbsv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zpbsv (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)
-
-
 ZPBSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpbsv (characterUPLO, integerN, integerKD, integerNRHS, complex*16, dimension( ldab, * )AB, integerLDAB, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
@@ -31,10 +29,10 @@ ZPBSV computes the solution to system of linear equations A * X = B for OTHER ma
  triangular band matrix, with the same number of superdiagonals or
  subdiagonals as A. The factored form of A is then used to solve the
  system of equations A * X = B.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -82,13 +80,13 @@ ZPBSV computes the solution to system of linear equations A * X = B for OTHER ma
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -104,7 +102,8 @@ ZPBSV computes the solution to system of linear equations A * X = B for OTHER ma
  a21 a32 a43 a54 a65 * l21 l32 l43 l54 l65 *
  a31 a42 a53 a64 * * l31 l42 l53 l64 * *
  Array elements marked * are not used by the routine.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 165 of file zpbsv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

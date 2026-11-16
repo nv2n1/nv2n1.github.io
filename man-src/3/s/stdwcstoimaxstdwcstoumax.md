@@ -13,7 +13,6 @@ description: "std::wcstoimax,std::wcstoumax – std::wcstoimax,std::wcstoumax"
 std::intmax_t wcstoimax( const wchar_t* nptr, wchar_t** endptr, int base ); <i>(since C++11)</i><br />
 std::uintmax_t wcstoumax( const wchar_t* nptr, wchar_t** endptr, int base ); <i>(since C++11)</i> </p>
 <pre><code>Interprets an unsigned integer value in a wide string pointed to by nptr.
-
 Discards any whitespace characters (as identified by calling isspace()) until the first non-whitespace character is found, then takes as many characters as possible to form a valid base-n (where n=base) unsigned integer number representation and converts them to an integer value. The valid unsigned integer value consists of the following parts:</code></pre>
 <p>* (optional) plus or minus sign<br />
 * (optional) prefix <code>(0)</code> indicating octal base (applies only when the base is 8 or 0)<br />
@@ -33,12 +32,9 @@ base &#8211; base of the interpreted integer value</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cinttypes&gt;
 int main()
-
 {
     std::wstring str = L&quot;helloworld&quot;;
     std::intmax_t val = std::wcstoimax(str.c_str(), nullptr, 36);

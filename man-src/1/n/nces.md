@@ -18,14 +18,14 @@ description: "nces – netCDF Ensemble Statistics"
 <p> Consider a model experiment which generated five realizations of one year of data, say 1985. You can imagine that the experimenter slightly perturbs the initial conditions of the problem before generating each new solution. Assume each file contains all twelve months (a seasonal cycle) of data and we want to produce a single file containing the ensemble average (mean) seasonal cycle. Here the numeric filename suffix denotes the experiment number (<i>not</i> the month):</p>
 <dl>
 <dt>
-<dd> nces 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br />
+</dt><dd> nces 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br />
  nces 85_0[1-5].nc 85.nc<br />
- nces -n 5,2,1 85_01.nc 85.nc</dl>
+ nces -n 5,2,1 85_01.nc 85.nc</dd></dl>
 <p> These three commands produce identical answers. The output file, <code>85.nc</code>, is the same size as the inputs files. It contains 12 months of data (which might or might not be stored in the record dimension, depending on the input files), but each value in the output file is the average of the five values in the input files. </p>
 <p> In the previous example, the user could have obtained the ensemble average values in a particular spatio-temporal region by adding a hyperslab argument to the command, e.g.,</p>
 <dl>
 <dt>
-<dd> nces -d time,0,2 -d lat,-23.5,23.5 85_??.nc 85.nc</dl>
+</dt><dd> nces -d time,0,2 -d lat,-23.5,23.5 85_??.nc 85.nc</dd></dl>
 <p> In this case the output file would contain only three slices of data in the <i>time</i> dimension. These three slices are the average of the first three slices from the input files. Additionally, only data inside the tropics is included. </p>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
@@ -39,7 +39,7 @@ description: "nces – netCDF Ensemble Statistics"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <h2>HOMEPAGE</h2>
 <p> The <code>NCO</code> homepage at &lt;<a rel="nofollow" href="http://nco.sf.net">http://nco.sf.net</a>&gt; contains more information. </p>

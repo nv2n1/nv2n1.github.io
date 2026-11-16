@@ -14,10 +14,10 @@ description: "avcstat – Display SELinux AVC statistics"
 <p>Display SELinux AVC statistics. If the <i>interval</i> parameter is specified, the program will loop, displaying updated statistics every <i>interval</i> seconds. Relative values are displayed by default.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Display the cumulative values.</p>
-<dt><code>-f</code></p>
-<dd>Specifies the location of the AVC statistics file, defaulting to <i>/sys/fs/selinux/avc/cache_stats</i>.</dl>
+<dt><code>-c</code></dt>
+<dd>Display the cumulative values.</dd>
+<dt><code>-f</code></dt>
+<dd>Specifies the location of the AVC statistics file, defaulting to <i>/sys/fs/selinux/avc/cache_stats</i>.</dd></dl>
 <h2>Author</h2>
 <p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;. The program was written by James Morris &lt;jmorris [at] redhat.com&gt;.</p>
 <h2>See Also</h2>

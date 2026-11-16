@@ -15,19 +15,19 @@ bitmap_to_u32array - copy the contents of bitmap to a u32 array of bits
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>array of u32 (in host byte order), the dest bitmap, non NULL</dl>
+<dl><dd></dd><dd>array of u32 (in host byte order), the dest bitmap, non NULL</dd></dl>
  
 
  <i>nwords</i>
-<dl><dd>number of u32 words in <i>buf</i></dl>
+<dl><dd>number of u32 words in <i>buf</i></dd></dl>
  
 
  <i>bitmap</i>
-<dl><dd>array of unsigned longs, the source bitmap, non NULL</dl>
+<dl><dd>array of unsigned longs, the source bitmap, non NULL</dd></dl>
  
 
  <i>nbits</i>
-<dl><dd>number of bits in <i>bitmap</i></dl>
+<dl><dd>number of bits in <i>bitmap</i></dd></dl>
 
 <h2>Description</h2>
 

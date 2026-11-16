@@ -17,12 +17,12 @@ description: "ksflatten — flatten a kickstart file"
 <p> <code>ksflatten</code> returns 0 on success, and 1 if INFILE does not exist or there is an error parsing the kickstart file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config INFILE</code></p>
-<dd> The name of the input kickstart file.</p>
-<dt><code>-o</code>, <code>&#8211;output OUTFILE</code></p>
-<dd> Write the flattened kickstart file to OUTFILE, or stdout if no filename is given.</p>
-<dt><code>-v</code>, <code>&#8211;version VERSION</code></p>
-<dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dl>
+<dt><code>-c</code>, <code>&#8211;config INFILE</code></dt>
+<dd> The name of the input kickstart file.</dd>
+<dt><code>-o</code>, <code>&#8211;output OUTFILE</code></dt>
+<dd> Write the flattened kickstart file to OUTFILE, or stdout if no filename is given.</dd>
+<dt><code>-v</code>, <code>&#8211;version VERSION</code></dt>
+<dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksvalidator (1), ksverdiff (1) </p>
 <h2>Index</h2>

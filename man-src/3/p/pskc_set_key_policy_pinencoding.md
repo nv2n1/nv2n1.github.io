@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_pinencoding – API function"
 void pskc_set_key_policy_pinencoding(pskc_key_t *key, pskc_valueformat pinencoding);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>pskc_valueformat pinencoding</p>
-<dd>the <code>pskc_valueformat</code> encoding to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>pskc_valueformat pinencoding</dt>
+<dd>the <code>pskc_valueformat</code> encoding to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy PINPolicy PINEncoding value. This attribute indicates the encoding of the PIN and MUST be one of the <code>pskc_valueformat</code> values.</p>
 <h2>Since</h2>

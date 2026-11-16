@@ -11,7 +11,6 @@ description: "sc::SlaterXFunctional –"
 <p> Implements the Slater exchange functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>

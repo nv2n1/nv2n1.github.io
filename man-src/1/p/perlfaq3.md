@@ -16,154 +16,127 @@ description: "perlfaq3 – Programming Tools"
 <h3>How do I do (anything)?</h3>
 <p> Have you looked at <font SIZE="-1">CPAN</font> (see perlfaq2)? The chances are that someone has already written a module that can solve your problem. Have you read the appropriate manpages? Here&#8217;s a brief index:</p>
 <dl>
-<dt>Basics</p>
+<dt>Basics</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perldata &#8211; Perl data types</dt>
 <dd>
-<dl>
-<dt>perldata &#8211; Perl data types</p>
+</dd><dt>perlvar &#8211; Perl pre-defined variables</dt>
 <dd>
-<dt>perlvar &#8211; Perl pre-defined variables</p>
+</dd><dt>perlsyn &#8211; Perl syntax</dt>
 <dd>
-<dt>perlsyn &#8211; Perl syntax</p>
+</dd><dt>perlop &#8211; Perl operators and precedence</dt>
 <dd>
-<dt>perlop &#8211; Perl operators and precedence</p>
-<dd>
-<dt>perlsub &#8211; Perl subroutines</p>
-<dd></dl>
+</dd><dt>perlsub &#8211; Perl subroutines</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Execution</p>
+</dl>
+<dt>Execution</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlrun &#8211; how to execute the Perl interpreter</dt>
 <dd>
-<dl>
-<dt>perlrun &#8211; how to execute the Perl interpreter</p>
-<dd>
-<dt>perldebug &#8211; Perl debugging</p>
-<dd></dl>
+</dd><dt>perldebug &#8211; Perl debugging</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Functions</p>
+</dl>
+<dt>Functions</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>perlfunc &#8211; Perl builtin functions</p>
-<dd></dl>
+<dt>perlfunc &#8211; Perl builtin functions</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Objects</p>
+</dl>
+<dt>Objects</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlref &#8211; Perl references and nested data structures</dt>
 <dd>
-<dl>
-<dt>perlref &#8211; Perl references and nested data structures</p>
+</dd><dt>perlmod &#8211; Perl modules (packages and symbol tables)</dt>
 <dd>
-<dt>perlmod &#8211; Perl modules (packages and symbol tables)</p>
+</dd><dt>perlobj &#8211; Perl objects</dt>
 <dd>
-<dt>perlobj &#8211; Perl objects</p>
-<dd>
-<dt>perltie &#8211; how to hide an object class in a simple variable</p>
-<dd></dl>
+</dd><dt>perltie &#8211; how to hide an object class in a simple variable</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Data Structures</p>
+</dl>
+<dt>Data Structures</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlref &#8211; Perl references and nested data structures</dt>
 <dd>
-<dl>
-<dt>perlref &#8211; Perl references and nested data structures</p>
+</dd><dt>perllol &#8211; Manipulating arrays of arrays in Perl</dt>
 <dd>
-<dt>perllol &#8211; Manipulating arrays of arrays in Perl</p>
-<dd>
-<dt>perldsc &#8211; Perl Data Structures Cookbook</p>
-<dd></dl>
+</dd><dt>perldsc &#8211; Perl Data Structures Cookbook</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Modules</p>
+</dl>
+<dt>Modules</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlmod &#8211; Perl modules (packages and symbol tables)</dt>
 <dd>
-<dl>
-<dt>perlmod &#8211; Perl modules (packages and symbol tables)</p>
-<dd>
-<dt>perlmodlib &#8211; constructing new Perl modules and finding existing ones</p>
-<dd></dl>
+</dd><dt>perlmodlib &#8211; constructing new Perl modules and finding existing ones</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Regexes</p>
+</dl>
+<dt>Regexes</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlre &#8211; Perl regular expressions</dt>
 <dd>
-<dl>
-<dt>perlre &#8211; Perl regular expressions</p>
+</dd><dt>perlfunc &#8211; Perl builtin functions&gt;</dt>
 <dd>
-<dt>perlfunc &#8211; Perl builtin functions&gt;</p>
+</dd><dt>perlop &#8211; Perl operators and precedence</dt>
 <dd>
-<dt>perlop &#8211; Perl operators and precedence</p>
-<dd>
-<dt>perllocale &#8211; Perl locale handling (internationalization and localization)</p>
-<dd></dl>
+</dd><dt>perllocale &#8211; Perl locale handling (internationalization and localization)</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Moving to perl5</p>
+</dl>
+<dt>Moving to perl5</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perltrap &#8211; Perl traps for the unwary</dt>
 <dd>
-<dl>
-<dt>perltrap &#8211; Perl traps for the unwary</p>
-<dd>
-<dt>perl</p>
-<dd></dl>
+</dd><dt>perl</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Linking with C</p>
+</dl>
+<dt>Linking with C</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
+<dt>perlxstut &#8211; Tutorial for writing XSUBs</dt>
 <dd>
-<dl>
-<dt>perlxstut &#8211; Tutorial for writing XSUBs</p>
+</dd><dt>perlxs &#8211; <font SIZE="-1">XS</font> language reference manual</dt>
 <dd>
-<dt>perlxs &#8211; <font SIZE="-1">XS</font> language reference manual</p>
+</dd><dt>perlcall &#8211; Perl calling conventions from C</dt>
 <dd>
-<dt>perlcall &#8211; Perl calling conventions from C</p>
+</dd><dt>perlguts &#8211; Introduction to the Perl <font SIZE="-1">API</font></dt>
 <dd>
-<dt>perlguts &#8211; Introduction to the Perl <font SIZE="-1">API</font></p>
-<dd>
-<dt>perlembed &#8211; how to embed perl in your C program</p>
-<dd></dl>
+</dd><dt>perlembed &#8211; how to embed perl in your C program</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Various</p>
-<dd> &lt;<a rel="nofollow" href="http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz">http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz</a>&gt; (not a man-page but still useful, a collection of various essays on Perl techniques)</dl>
+</dl>
+<dt>Various</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz">http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz</a>&gt; (not a man-page but still useful, a collection of various essays on Perl techniques)</dd></dl>
 <p> A crude table of contents for the Perl manpage set is found in perltoc.</p>
 <h3>How can I use Perl interactively?</h3>
 <p> The typical approach uses the Perl debugger, described in the <code><a href="/docs/linux/man/1-perldebug/">perldebug</a></code>(1) manpage, on an &#8220;empty&#8221; program, like this: </p>
@@ -267,81 +240,81 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
 <p> If you&#8217;re on Unix, you already have an IDE&#8212;Unix itself. The Unix philosophy is the philosophy of several small tools that each do one thing and do it well. It&#8217;s like a carpenter&#8217;s toolbox. </p>
 <p> If you want an <font SIZE="-1">IDE,</font> check the following (in alphabetical order, not order of preference):</p>
 <dl>
-<dt>Eclipse</p>
-<dd> &lt;<a rel="nofollow" href="http://e-p-i-c.sf.net/">http://e-p-i-c.sf.net/</a>&gt; </p>
+<dt>Eclipse</dt>
+<dd> &lt;<a rel="nofollow" href="http://e-p-i-c.sf.net/">http://e-p-i-c.sf.net/</a>&gt; </dd>
 <p> The Eclipse Perl Integration Project integrates Perl editing/debugging with Eclipse.</p>
-<dt>Enginsite</p>
-<dd> &lt;<a rel="nofollow" href="http://www.enginsite.com/">http://www.enginsite.com/</a>&gt; </p>
+<dt>Enginsite</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.enginsite.com/">http://www.enginsite.com/</a>&gt; </dd>
 <p> Perl Editor by EngInSite is a complete integrated development environment (<font SIZE="-1">IDE</font>) for creating, testing, and debugging Perl scripts; the tool runs on Windows 9x/NT/2000/XP or later.</p>
-<dt>IntelliJ <font SIZE="-1">IDEA</font></p>
-<dd> &lt;<a rel="nofollow" href="https://plugins.jetbrains.com/plugin/7796">https://plugins.jetbrains.com/plugin/7796</a>&gt; </p>
+<dt>IntelliJ <font SIZE="-1">IDEA</font></dt>
+<dd> &lt;<a rel="nofollow" href="https://plugins.jetbrains.com/plugin/7796">https://plugins.jetbrains.com/plugin/7796</a>&gt; </dd>
 <p> Camelcade plugin provides Perl5 support in IntelliJ <font SIZE="-1">IDEA</font> and other JetBrains IDEs.</p>
-<dt>Kephra</p>
-<dd> &lt;<a rel="nofollow" href="http://kephra.sf.net">http://kephra.sf.net</a>&gt; </p>
+<dt>Kephra</dt>
+<dd> &lt;<a rel="nofollow" href="http://kephra.sf.net">http://kephra.sf.net</a>&gt; </dd>
 <p> <font SIZE="-1">GUI</font> editor written in Perl using wxWidgets and Scintilla with lots of smaller features. Aims for a <font SIZE="-1">UI</font> based on Perl principles like <font SIZE="-1">TIMTOWTDI</font> and &#8220;easy things should be easy, hard things should be possible&#8221;.</p>
-<dt>Komodo</p>
-<dd> &lt;<a rel="nofollow" href="http://www.ActiveState.com/Products/Komodo/">http://www.ActiveState.com/Products/Komodo/</a>&gt; </p>
+<dt>Komodo</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.ActiveState.com/Products/Komodo/">http://www.ActiveState.com/Products/Komodo/</a>&gt; </dd>
 <p> ActiveState&#8217;s cross-platform (as of October 2004, that&#8217;s Windows, Linux, and Solaris), multi-language <font SIZE="-1">IDE</font> has Perl support, including a regular expression debugger and remote debugging.</p>
-<dt>Notepad++</p>
-<dd> &lt;<a rel="nofollow" href="http://notepad-plus.sourceforge.net/">http://notepad-plus.sourceforge.net/</a>&gt;</p>
-<dt>Open Perl <font SIZE="-1">IDE</font></p>
-<dd> &lt;<a rel="nofollow" href="http://open-perl-ide.sourceforge.net/">http://open-perl-ide.sourceforge.net/</a>&gt; </p>
+<dt>Notepad++</dt>
+<dd> &lt;<a rel="nofollow" href="http://notepad-plus.sourceforge.net/">http://notepad-plus.sourceforge.net/</a>&gt;</dd>
+<dt>Open Perl <font SIZE="-1">IDE</font></dt>
+<dd> &lt;<a rel="nofollow" href="http://open-perl-ide.sourceforge.net/">http://open-perl-ide.sourceforge.net/</a>&gt; </dd>
 <p> Open Perl <font SIZE="-1">IDE</font> is an integrated development environment for writing and debugging Perl scripts with ActiveState&#8217;s ActivePerl distribution under Windows 95/98/NT/2000.</p>
-<dt>OptiPerl</p>
-<dd> &lt;<a rel="nofollow" href="http://www.optiperl.com/">http://www.optiperl.com/</a>&gt; </p>
+<dt>OptiPerl</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.optiperl.com/">http://www.optiperl.com/</a>&gt; </dd>
 <p> OptiPerl is a Windows <font SIZE="-1">IDE</font> with simulated <font SIZE="-1">CGI</font> environment, including debugger and syntax-highlighting editor.</p>
-<dt>Padre</p>
-<dd> &lt;<a rel="nofollow" href="http://padre.perlide.org/">http://padre.perlide.org/</a>&gt; </p>
+<dt>Padre</dt>
+<dd> &lt;<a rel="nofollow" href="http://padre.perlide.org/">http://padre.perlide.org/</a>&gt; </dd>
 <p> Padre is cross-platform <font SIZE="-1">IDE</font> for Perl written in Perl using wxWidgets to provide a native look and feel. It&#8217;s open source under the Artistic License. It is one of the newer Perl IDEs.</p>
-<dt>PerlBuilder</p>
-<dd> &lt;<a rel="nofollow" href="http://www.solutionsoft.com/perl.htm">http://www.solutionsoft.com/perl.htm</a>&gt; </p>
+<dt>PerlBuilder</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.solutionsoft.com/perl.htm">http://www.solutionsoft.com/perl.htm</a>&gt; </dd>
 <p> PerlBuilder is an integrated development environment for Windows that supports Perl development.</p>
-<dt>visiPerl+</p>
-<dd> &lt;<a rel="nofollow" href="http://helpconsulting.net/visiperl/index.html">http://helpconsulting.net/visiperl/index.html</a>&gt; </p>
+<dt>visiPerl+</dt>
+<dd> &lt;<a rel="nofollow" href="http://helpconsulting.net/visiperl/index.html">http://helpconsulting.net/visiperl/index.html</a>&gt; </dd>
 <p> From Help Consulting, for Windows.</p>
-<dt>Visual Perl</p>
-<dd> &lt;<a rel="nofollow" href="http://www.activestate.com/Products/Visual_Perl/">http://www.activestate.com/Products/Visual_Perl/</a>&gt; </p>
+<dt>Visual Perl</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.activestate.com/Products/Visual_Perl/">http://www.activestate.com/Products/Visual_Perl/</a>&gt; </dd>
 <p> Visual Perl is a Visual Studio.NET plug-in from ActiveState.</p>
-<dt>Zeus</p>
-<dd> &lt;<a rel="nofollow" href="http://www.zeusedit.com/lookmain.html">http://www.zeusedit.com/lookmain.html</a>&gt; </p>
+<dt>Zeus</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.zeusedit.com/lookmain.html">http://www.zeusedit.com/lookmain.html</a>&gt; </dd>
 <p> Zeus for Windows is another Win32 multi-language editor/IDE that comes with support for Perl.</dl>
 <p> For editors: if you&#8217;re on Unix you probably have vi or a vi clone already, and possibly an emacs too, so you may not need to download anything. In any emacs the cperl-mode (M-x cperl-mode) gives you perhaps the best available Perl editing mode in any editor. </p>
 <p> If you are using Windows, you can use any editor that lets you work with plain text, such as NotePad or WordPad. Word processors, such as Microsoft Word or WordPerfect, typically do not work since they insert all sorts of behind-the-scenes information, although some allow you to save files as &#8220;Text Only&#8221;. You can also download text editors designed specifically for programming, such as Textpad ( &lt;<a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a>&gt; ) and UltraEdit ( &lt;<a rel="nofollow" href="http://www.ultraedit.com/">http://www.ultraedit.com/</a>&gt; ), among others. </p>
 <p> If you are using MacOS, the same concerns apply. MacPerl (for Classic environments) comes with a simple editor. Popular external editors are BBEdit ( &lt;<a rel="nofollow" href="http://www.barebones.com/products/bbedit/">http://www.barebones.com/products/bbedit/</a>&gt; ) or Alpha ( &lt;<a rel="nofollow" href="http://www.his.com/~jguyer/Alpha/Alpha8.html">http://www.his.com/~jguyer/Alpha/Alpha8.html</a>&gt; ). MacOS X users can use Unix editors as well.</p>
 <dl>
-<dt><font SIZE="-1">GNU</font> Emacs</p>
-<dd> &lt;<a rel="nofollow" href="http://www.gnu.org/software/emacs/windows/ntemacs.html">http://www.gnu.org/software/emacs/windows/ntemacs.html</a>&gt;</p>
-<dt>MicroEMACS</p>
-<dd> &lt;<a rel="nofollow" href="http://www.microemacs.de/">http://www.microemacs.de/</a>&gt;</p>
-<dt>XEmacs</p>
-<dd> &lt;<a rel="nofollow" href="http://www.xemacs.org/Download/index.html">http://www.xemacs.org/Download/index.html</a>&gt;</p>
-<dt>Jed</p>
-<dd> &lt;<a rel="nofollow" href="http://space.mit.edu/~davis/jed/">http://space.mit.edu/~davis/jed/</a>&gt;</dl>
+<dt><font SIZE="-1">GNU</font> Emacs</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.gnu.org/software/emacs/windows/ntemacs.html">http://www.gnu.org/software/emacs/windows/ntemacs.html</a>&gt;</dd>
+<dt>MicroEMACS</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.microemacs.de/">http://www.microemacs.de/</a>&gt;</dd>
+<dt>XEmacs</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.xemacs.org/Download/index.html">http://www.xemacs.org/Download/index.html</a>&gt;</dd>
+<dt>Jed</dt>
+<dd> &lt;<a rel="nofollow" href="http://space.mit.edu/~davis/jed/">http://space.mit.edu/~davis/jed/</a>&gt;</dd></dl>
 <p> or a vi clone such as</p>
 <dl>
-<dt>Vim</p>
-<dd> &lt;<a rel="nofollow" href="http://www.vim.org/">http://www.vim.org/</a>&gt;</p>
-<dt>Vile</p>
-<dd> &lt;<a rel="nofollow" href="http://dickey.his.com/vile/vile.html">http://dickey.his.com/vile/vile.html</a>&gt;</dl>
+<dt>Vim</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.vim.org/">http://www.vim.org/</a>&gt;</dd>
+<dt>Vile</dt>
+<dd> &lt;<a rel="nofollow" href="http://dickey.his.com/vile/vile.html">http://dickey.his.com/vile/vile.html</a>&gt;</dd></dl>
 <p> The following are Win32 multilanguage editor/IDEs that support Perl:</p>
 <dl>
-<dt>MultiEdit</p>
-<dd> &lt;<a rel="nofollow" href="http://www.MultiEdit.com/">http://www.MultiEdit.com/</a>&gt;</p>
-<dt>SlickEdit</p>
-<dd> &lt;<a rel="nofollow" href="http://www.slickedit.com/">http://www.slickedit.com/</a>&gt;</p>
-<dt>ConTEXT</p>
-<dd> &lt;<a rel="nofollow" href="http://www.contexteditor.org/">http://www.contexteditor.org/</a>&gt;</dl>
+<dt>MultiEdit</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.MultiEdit.com/">http://www.MultiEdit.com/</a>&gt;</dd>
+<dt>SlickEdit</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.slickedit.com/">http://www.slickedit.com/</a>&gt;</dd>
+<dt>ConTEXT</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.contexteditor.org/">http://www.contexteditor.org/</a>&gt;</dd></dl>
 <p> There is also a toyedit Text widget based editor written in Perl that is distributed with the Tk module on <font SIZE="-1">CPAN.</font> The ptkdb ( &lt;<a rel="nofollow" href="http://ptkdb.sourceforge.net/">http://ptkdb.sourceforge.net/</a>&gt; ) is a Perl/Tk-based debugger that acts as a development environment of sorts. Perl Composer ( &lt;<a rel="nofollow" href="http://perlcomposer.sourceforge.net/">http://perlcomposer.sourceforge.net/</a>&gt; ) is an <font SIZE="-1">IDE</font> for Perl/Tk <font SIZE="-1">GUI</font> creation. </p>
 <p> In addition to an editor/IDE you might be interested in a more powerful shell environment for Win32. Your options include</p>
 <dl>
-<dt>bash</p>
-<dd> from the Cygwin package ( &lt;<a rel="nofollow" href="http://cygwin.com/">http://cygwin.com/</a>&gt; )</p>
-<dt>zsh</p>
-<dd> &lt;<a rel="nofollow" href="http://www.zsh.org/">http://www.zsh.org/</a>&gt;</dl>
+<dt>bash</dt>
+<dd> from the Cygwin package ( &lt;<a rel="nofollow" href="http://cygwin.com/">http://cygwin.com/</a>&gt; )</dd>
+<dt>zsh</dt>
+<dd> &lt;<a rel="nofollow" href="http://www.zsh.org/">http://www.zsh.org/</a>&gt;</dd></dl>
 <p> Cygwin is covered by the <font SIZE="-1">GNU</font> General Public License (but that shouldn&#8217;t matter for Perl use). Cygwin contains (in addition to the shell) a comprehensive set of standard Unix toolkit utilities.</p>
 <dl>
-<dt>BBEdit and TextWrangler</p>
-<dd> are text editors for <font SIZE="-1">OS X</font> that have a Perl sensitivity mode ( &lt;<a rel="nofollow" href="http://www.barebones.com/">http://www.barebones.com/</a>&gt; ).</dl>
+<dt>BBEdit and TextWrangler</dt>
+<dd> are text editors for <font SIZE="-1">OS X</font> that have a Perl sensitivity mode ( &lt;<a rel="nofollow" href="http://www.barebones.com/">http://www.barebones.com/</a>&gt; ).</dd></dl>
 <h3>Where can I get Perl macros for vi?</h3>
 <p> For a complete version of Tom Christiansen&#8217;s vi configuration file, see &lt;<a rel="nofollow" href="http://www.cpan.org/authors/Tom_Christiansen/scripts/toms.exrc.gz">http://www.cpan.org/authors/Tom_Christiansen/scripts/toms.exrc.gz</a>&gt; , the standard benchmark file for vi emulators. The file runs best with nvi, the current version of vi out of Berkeley, which incidentally can be built with an embedded Perl interpreter&#8212;see &lt;<a rel="nofollow" href="http://www.cpan.org/src/misc/">http://www.cpan.org/src/misc/</a>&gt; .</p>
 <h3>Where can I get perl-mode or cperl-mode for emacs?</h3>
@@ -354,20 +327,20 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
 <p> (contributed by Ben Morrow) </p>
 <p> There are a number of modules which let you write GUIs in Perl. Most <font SIZE="-1">GUI</font> toolkits have a perl interface: an incomplete list follows.</p>
 <dl>
-<dt>Tk</p>
-<dd> This works under Unix and Windows, and the current version doesn&#8217;t look half as bad under Windows as it used to. Some of the gui elements still don&#8217;t &#8216;feel&#8217; quite right, though. The interface is very natural and &#8216;perlish&#8217;, making it easy to use in small scripts that just need a simple gui. It hasn&#8217;t been updated in a while.</p>
-<dt>Wx</p>
-<dd> This is a Perl binding for the cross-platform wxWidgets toolkit ( &lt;<a rel="nofollow" href="http://www.wxwidgets.org">http://www.wxwidgets.org</a>&gt; ). It works under Unix, Win32 and Mac <font SIZE="-1">OS X,</font> using native widgets (Gtk under Unix). The interface follows the C<font SIZE="-2">++</font> interface closely, but the documentation is a little sparse for someone who doesn&#8217;t know the library, mostly just referring you to the C<font SIZE="-2">++</font> documentation.</p>
-<dt>Gtk and Gtk2</p>
-<dd> These are Perl bindings for the Gtk toolkit ( &lt;<a rel="nofollow" href="http://www.gtk.org">http://www.gtk.org</a>&gt; ). The interface changed significantly between versions 1 and 2 so they have separate Perl modules. It runs under Unix, Win32 and Mac <font SIZE="-1">OS X</font> (currently it requires an X server on Mac <font SIZE="-1">OS,</font> but a &#8216;native&#8217; port is underway), and the widgets look the same on every platform: i.e., they don&#8217;t match the native widgets. As with Wx, the Perl bindings follow the C <font SIZE="-1">API</font> closely, and the documentation requires you to read the C documentation to understand it.</p>
-<dt>Win32::GUI</p>
-<dd> This provides access to most of the Win32 <font SIZE="-1">GUI</font> widgets from Perl. Obviously, it only runs under Win32, and uses native widgets. The Perl interface doesn&#8217;t really follow the C interface: it&#8217;s been made more Perlish, and the documentation is pretty good. More advanced stuff may require familiarity with the C Win32 APIs, or reference to <font SIZE="-1">MSDN.</font></p>
-<dt>CamelBones</p>
-<dd> CamelBones ( &lt;<a rel="nofollow" href="http://camelbones.sourceforge.net">http://camelbones.sourceforge.net</a>&gt; ) is a Perl interface to Mac <font SIZE="-1">OS X</font>&#8216;s Cocoa <font SIZE="-1">GUI</font> toolkit, and as such can be used to produce native GUIs on Mac <font SIZE="-1">OS X.</font> It&#8217;s not on <font SIZE="-1">CPAN,</font> as it requires frameworks that <font SIZE="-1">CPAN</font>.pm doesn&#8217;t know how to install, but installation is via the standard <font SIZE="-1">OSX</font> package installer. The Perl <font SIZE="-1">API</font> is, again, very close to the ObjC <font SIZE="-1">API</font> it&#8217;s wrapping, and the documentation just tells you how to translate from one to the other.</p>
-<dt>Qt</p>
-<dd> There is a Perl interface to TrollTech&#8217;s Qt toolkit, but it does not appear to be maintained.</p>
-<dt>Athena</p>
-<dd> Sx is an interface to the Athena widget set which comes with X, but again it appears not to be much used nowadays.</dl>
+<dt>Tk</dt>
+<dd> This works under Unix and Windows, and the current version doesn&#8217;t look half as bad under Windows as it used to. Some of the gui elements still don&#8217;t &#8216;feel&#8217; quite right, though. The interface is very natural and &#8216;perlish&#8217;, making it easy to use in small scripts that just need a simple gui. It hasn&#8217;t been updated in a while.</dd>
+<dt>Wx</dt>
+<dd> This is a Perl binding for the cross-platform wxWidgets toolkit ( &lt;<a rel="nofollow" href="http://www.wxwidgets.org">http://www.wxwidgets.org</a>&gt; ). It works under Unix, Win32 and Mac <font SIZE="-1">OS X,</font> using native widgets (Gtk under Unix). The interface follows the C<font SIZE="-2">++</font> interface closely, but the documentation is a little sparse for someone who doesn&#8217;t know the library, mostly just referring you to the C<font SIZE="-2">++</font> documentation.</dd>
+<dt>Gtk and Gtk2</dt>
+<dd> These are Perl bindings for the Gtk toolkit ( &lt;<a rel="nofollow" href="http://www.gtk.org">http://www.gtk.org</a>&gt; ). The interface changed significantly between versions 1 and 2 so they have separate Perl modules. It runs under Unix, Win32 and Mac <font SIZE="-1">OS X</font> (currently it requires an X server on Mac <font SIZE="-1">OS,</font> but a &#8216;native&#8217; port is underway), and the widgets look the same on every platform: i.e., they don&#8217;t match the native widgets. As with Wx, the Perl bindings follow the C <font SIZE="-1">API</font> closely, and the documentation requires you to read the C documentation to understand it.</dd>
+<dt>Win32::GUI</dt>
+<dd> This provides access to most of the Win32 <font SIZE="-1">GUI</font> widgets from Perl. Obviously, it only runs under Win32, and uses native widgets. The Perl interface doesn&#8217;t really follow the C interface: it&#8217;s been made more Perlish, and the documentation is pretty good. More advanced stuff may require familiarity with the C Win32 APIs, or reference to <font SIZE="-1">MSDN.</font></dd>
+<dt>CamelBones</dt>
+<dd> CamelBones ( &lt;<a rel="nofollow" href="http://camelbones.sourceforge.net">http://camelbones.sourceforge.net</a>&gt; ) is a Perl interface to Mac <font SIZE="-1">OS X</font>&#8216;s Cocoa <font SIZE="-1">GUI</font> toolkit, and as such can be used to produce native GUIs on Mac <font SIZE="-1">OS X.</font> It&#8217;s not on <font SIZE="-1">CPAN,</font> as it requires frameworks that <font SIZE="-1">CPAN</font>.pm doesn&#8217;t know how to install, but installation is via the standard <font SIZE="-1">OSX</font> package installer. The Perl <font SIZE="-1">API</font> is, again, very close to the ObjC <font SIZE="-1">API</font> it&#8217;s wrapping, and the documentation just tells you how to translate from one to the other.</dd>
+<dt>Qt</dt>
+<dd> There is a Perl interface to TrollTech&#8217;s Qt toolkit, but it does not appear to be maintained.</dd>
+<dt>Athena</dt>
+<dd> Sx is an interface to the Athena widget set which comes with X, but again it appears not to be much used nowadays.</dd></dl>
 <h3>How can I make my Perl program run faster?</h3>
 <p> The best way to do this is to come up with a better algorithm. This can often make a dramatic difference. Jon Bentley&#8217;s book <i>Programming Pearls</i> (that&#8217;s not a misspelling!) has some good tips on optimization, too. Advice on benchmarking boils down to: benchmark and profile to make sure you&#8217;re optimizing the right part, look for better algorithms instead of microtuning your code, and when all else fails consider just buying faster hardware. You will probably want to read the answer to the earlier question &#8220;How do I profile my Perl programs?&#8221; if you haven&#8217;t done so already. </p>
 <p> A different approach is to autoload seldom-used Perl code. See the AutoSplit and AutoLoader modules in the standard distribution for that. Or you could locate the bottleneck and think about writing just that part in C, the way we used to take bottlenecks in C code and write them in assembler. Similar to rewriting in C, modules that have critical sections can be written in C (for instance, the <font SIZE="-1">PDL</font> module from <font SIZE="-1">CPAN</font>). </p>
@@ -379,8 +352,8 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
 <p> Another thing to try is learning whether your Perl was compiled with the system malloc or with Perl&#8217;s builtin malloc. Whichever one it is, try using the other one and see whether this makes a difference. Information about malloc is in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file in the source distribution. You can find out whether you are using perl&#8217;s malloc by typing <tt>&quot;perl -V:usemymalloc&quot;</tt>. </p>
 <p> Of course, the best way to save memory is to not do anything to waste it in the first place. Good programming practices can go a long way toward this:</p>
 <dl>
-<dt>Don&#8217;t slurp!</p>
-<dd> Don&#8217;t read an entire file into memory if you can process it line by line. Or more concretely, use a loop like this: </p>
+<dt>Don&#8217;t slurp!</dt>
+<dd> Don&#8217;t read an entire file into memory if you can process it line by line. Or more concretely, use a loop like this: </dd>
 <pre>
     #
     # Good Idea
@@ -400,8 +373,8 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
     }
 </pre>
 <p> When the files you&#8217;re processing are small, it doesn&#8217;t much matter which way you do it, but it makes a huge difference when they start getting larger.</p>
-<dt>Use map and grep selectively</p>
-<dd> Remember that both map and grep expect a <font SIZE="-1">LIST</font> argument, so doing this: </p>
+<dt>Use map and grep selectively</dt>
+<dd> Remember that both map and grep expect a <font SIZE="-1">LIST</font> argument, so doing this: </dd>
 <pre>
         @wanted = grep {/pattern/} &lt;$file_handle&gt;;
 </pre>
@@ -409,8 +382,8 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
 <p>while (&lt;$file_handle&gt;) {<br />
     push(@wanted, $_) if / pattern / ;<br />
 }</p>
-<dt>Avoid unnecessary quotes and stringification</p>
-<dd> Don&#8217;t quote large strings unless absolutely necessary: </p>
+<dt>Avoid unnecessary quotes and stringification</dt>
+<dd> Don&#8217;t quote large strings unless absolutely necessary: </dd>
 <pre>
         my $copy = &quot;$large_string&quot;;
 </pre>
@@ -436,10 +409,10 @@ print STDERR &#8220;The hash is &#8220;.Dumper( \% hash).&#8221;
  &#8220;;<br />
         print &#8220;@big_array&#8221;;<br />
 }</p>
-<dt>Pass by reference</p>
-<dd> Pass arrays and hashes by reference, not by value. For one thing, it&#8217;s the only way to pass multiple lists or hashes (or both) in a single call/return. It also avoids creating a copy of all the contents. This requires some judgement, however, because any changes will be propagated back to the original data. If you really want to mangle (er, modify) a copy, you&#8217;ll have to sacrifice the memory needed to make one.</p>
-<dt>Tie large variables to disk</p>
-<dd> For &#8220;big&#8221; data stores (i.e. ones that exceed available memory) consider using one of the <font SIZE="-1">DB</font> modules to store it on disk instead of in <font SIZE="-1">RAM.</font> This will incur a penalty in access time, but that&#8217;s probably better than causing your hard disk to thrash due to massive swapping.</dl>
+<dt>Pass by reference</dt>
+<dd> Pass arrays and hashes by reference, not by value. For one thing, it&#8217;s the only way to pass multiple lists or hashes (or both) in a single call/return. It also avoids creating a copy of all the contents. This requires some judgement, however, because any changes will be propagated back to the original data. If you really want to mangle (er, modify) a copy, you&#8217;ll have to sacrifice the memory needed to make one.</dd>
+<dt>Tie large variables to disk</dt>
+<dd> For &#8220;big&#8221; data stores (i.e. ones that exceed available memory) consider using one of the <font SIZE="-1">DB</font> modules to store it on disk instead of in <font SIZE="-1">RAM.</font> This will incur a penalty in access time, but that&#8217;s probably better than causing your hard disk to thrash due to massive swapping.</dd></dl>
 <h3>Is it safe to return a reference to local or lexical data?</h3>
 <p> Yes. Perl&#8217;s garbage collection system takes care of this so everything works out right. </p>
 <p>sub makeone<br />
@@ -587,5 +560,5 @@ perl program 2 &gt; diag.out
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the <font SIZE="-1">FAQ</font> would be courteous but is not required. </p>
 <h2>Index</h2>
-<dt><a href="#lbBG">AUTHOR AND COPYRIGHT</a></p>
-<dd></dl>
+<dt><a href="#lbBG">AUTHOR AND COPYRIGHT</a></dt>
+<dd></dd></dl>

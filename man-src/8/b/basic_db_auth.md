@@ -13,32 +13,32 @@ url: "/docs/linux/man/8-basic_db_auth/"
 <p>This program verifies username &amp; password to a database</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd>Write debug info to stderr.</p>
-<dt><code>&#8211;dsn</code></p>
-<dd>Database <font SIZE="-1">DSN.</font> Default &#8220;DBI:mysql:database=squid&#8221;</p>
-<dt><code>&#8211;user</code></p>
-<dd>Database User</p>
-<dt><code>&#8211;password</code></p>
-<dd>Database password</p>
-<dt><code>&#8211;table</code></p>
-<dd>Database table. Default &#8220;passwd&#8221;.</p>
-<dt><code>&#8211;usercol</code></p>
-<dd>Username column. Default &#8220;user&#8221;.</p>
-<dt><code>&#8211;passwdcol</code></p>
-<dd>Password column. Default &#8220;password&#8221;.</p>
-<dt><code>&#8211;cond</code></p>
-<dd>Condition, defaults to enabled=1. Specify 1 or &quot;&quot; for no condition If you use &#8211;joomla flag, this condition will be changed to block=0</p>
-<dt><code>&#8211;plaintext</code></p>
-<dd>Database contains plain-text passwords</p>
-<dt><code>&#8211;md5</code></p>
-<dd>Database contains unsalted md5 passwords</p>
-<dt><code>&#8211;salt</code></p>
-<dd>Selects the correct salt to evaluate passwords</p>
-<dt><code>&#8211;persist</code></p>
-<dd>Keep a persistent database connection open between queries.</p>
-<dt><code>&#8211;joomla</code></p>
-<dd>Tells helper that user database is Joomla <font SIZE="-1">DB. </font> So their unusual salt hashing is understood.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd>Write debug info to stderr.</dd>
+<dt><code>&#8211;dsn</code></dt>
+<dd>Database <font SIZE="-1">DSN.</font> Default &#8220;DBI:mysql:database=squid&#8221;</dd>
+<dt><code>&#8211;user</code></dt>
+<dd>Database User</dd>
+<dt><code>&#8211;password</code></dt>
+<dd>Database password</dd>
+<dt><code>&#8211;table</code></dt>
+<dd>Database table. Default &#8220;passwd&#8221;.</dd>
+<dt><code>&#8211;usercol</code></dt>
+<dd>Username column. Default &#8220;user&#8221;.</dd>
+<dt><code>&#8211;passwdcol</code></dt>
+<dd>Password column. Default &#8220;password&#8221;.</dd>
+<dt><code>&#8211;cond</code></dt>
+<dd>Condition, defaults to enabled=1. Specify 1 or &quot;&quot; for no condition If you use &#8211;joomla flag, this condition will be changed to block=0</dd>
+<dt><code>&#8211;plaintext</code></dt>
+<dd>Database contains plain-text passwords</dd>
+<dt><code>&#8211;md5</code></dt>
+<dd>Database contains unsalted md5 passwords</dd>
+<dt><code>&#8211;salt</code></dt>
+<dd>Selects the correct salt to evaluate passwords</dd>
+<dt><code>&#8211;persist</code></dt>
+<dd>Keep a persistent database connection open between queries.</dd>
+<dt><code>&#8211;joomla</code></dt>
+<dd>Tells helper that user database is Joomla <font SIZE="-1">DB. </font> So their unusual salt hashing is understood.</dd></dl>
 <h2>Author</h2>
 <p>This program was written by <i>Henrik Nordstrom &lt;henrik [at] henriknordstrom.net</i>&gt; and <i>Luis Daniel Lucio Quiroz &lt;dlucio [at] okay.com.mx</i>&gt; </p>
 <p> This manual was written by <i>Henrik Nordstrom &lt;henrik [at] henriknordstrom.net</i>&gt;</p>

@@ -14,14 +14,14 @@ description: "gnutls_x509_crl_dist_points_set – API function"
 <p> <code>int gnutls_x509_crl_dist_points_set(gnutls_x509_crl_dist_points_t </code><i>cdp</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>san</i><code>, unsigned int </code><i>reasons</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crl_dist_points_t cdp</p>
-<dd> The CRL distribution points structure</p>
-<dt>gnutls_x509_subject_alt_name_t type</p>
-<dd> The type of the name (of <code>gnutls_subject_alt_names_t</code>)</p>
-<dt>const gnutls_datum_t * san</p>
-<dd> The point name data</p>
-<dt>unsigned int reasons</p>
-<dd> Revocation reasons. An ORed sequence of flags from <code>gnutls_x509_crl_reason_flags_t</code>.</dl>
+<dt>gnutls_x509_crl_dist_points_t cdp</dt>
+<dd> The CRL distribution points structure</dd>
+<dt>gnutls_x509_subject_alt_name_t type</dt>
+<dd> The type of the name (of <code>gnutls_subject_alt_names_t</code>)</dd>
+<dt>const gnutls_datum_t * san</dt>
+<dd> The point name data</dd>
+<dt>unsigned int reasons</dt>
+<dd> Revocation reasons. An ORed sequence of flags from <code>gnutls_x509_crl_reason_flags_t</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will store the specified CRL distibution point value the <i>cdp</i> structure.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crl_dist_points_set – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

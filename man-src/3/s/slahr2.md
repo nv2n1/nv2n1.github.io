@@ -19,7 +19,7 @@ description: "slahr2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAHR2 reduces the first NB columns of A real general n-BY-(n-k+1)
  matrix A so that elements below the k-th subdiagonal are zero. The
@@ -28,11 +28,11 @@ description: "slahr2.f –"
  Q as a block reflector I - V*T*V**T, and also the matrix Y = A * V * T.
  This is an auxiliary routine called by SGEHRD.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>N</i> </p>
+</dt><dd> <i>N</i> </dd>
 <pre>
           N is INTEGER
           The order of the matrix A.
@@ -95,18 +95,18 @@ description: "slahr2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The matrix Q is represented as a product of nb elementary reflectors
      Q = H(1) H(2) . . . H(nb).
@@ -137,12 +137,12 @@ description: "slahr2.f –"
   returned by the original LAPACK-3.0's DLAHRD routine. (This
   subroutine is not backward compatible with LAPACK-3.0's DLAHRD.)
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
-&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dl>
+</dt><dd> Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
+&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dd></dl>
 <p> Definition at line 182 of file slahr2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

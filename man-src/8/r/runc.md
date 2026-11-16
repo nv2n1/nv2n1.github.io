@@ -17,64 +17,64 @@ description: "runc – Open Container Initiative runtime"
 <p> Where <i>container-id</i> is your name for the instance of the container that you are starting. The name you provide for the container instance must be unique on your host. Providing the bundle directory using <code>-b</code> is optional. The default value for <i>bundle</i> is the current directory. </p>
 <h2>Commands</h2>
 <dl>
-<dt><code>checkpoint</code></p>
-<dd>Checkpoint a running container. See <code><a href="/docs/linux/man/8-runc-checkpoint/">runc-checkpoint</a></code>(8). </p>
-<dt><code>create</code></p>
-<dd>Create a container. See <code><a href="/docs/linux/man/8-runc-create/">runc-create</a></code>(8). </p>
-<dt><code>delete</code></p>
-<dd>Delete any resources held by the container often used with detached containers. See <code><a href="/docs/linux/man/8-runc-delete/">runc-delete</a></code>(8). </p>
-<dt><code>events</code></p>
-<dd>Display container events such as OOM notifications, cpu, memory, IO and network stats. See <code><a href="/docs/linux/man/8-runc-events/">runc-events</a></code>(8). </p>
-<dt><code>exec</code></p>
-<dd>Execute a new process inside the container. See <code><a href="/docs/linux/man/8-runc-exec/">runc-exec</a></code>(8). </p>
-<dt><code>init</code></p>
-<dd>Initialize the namespaces and launch the container init process. This command is not supposed to be used directly. </p>
-<dt><code>kill</code></p>
-<dd>Send a specified signal to the container&#8217;s init process. See <code><a href="/docs/linux/man/8-runc-kill/">runc-kill</a></code>(8). </p>
-<dt><code>list</code></p>
-<dd>List containers started by runc with the given <code>&#8211;root</code>. See <code><a href="/docs/linux/man/8-runc-list/">runc-list</a></code>(8). </p>
-<dt><code>pause</code></p>
-<dd>Suspend all processes inside the container. See <code><a href="/docs/linux/man/8-runc-pause/">runc-pause</a></code>(8). </p>
-<dt><code>ps</code></p>
-<dd>Show processes running inside the container. See <code><a href="/docs/linux/man/8-runc-ps/">runc-ps</a></code>(8). </p>
-<dt><code>restore</code></p>
-<dd>Restore a container from a previous checkpoint. See <code><a href="/docs/linux/man/8-runc-restore/">runc-restore</a></code>(8). </p>
-<dt><code>resume</code></p>
-<dd>Resume all processes that have been previously paused. See <code><a href="/docs/linux/man/8-runc-resume/">runc-resume</a></code>(8). </p>
-<dt><code>run</code></p>
-<dd>Create and start a container. See <code><a href="/docs/linux/man/8-runc-run/">runc-run</a></code>(8). </p>
-<dt><code>spec</code></p>
-<dd>Create a new specification file (<i>config.json</i>). See <code><a href="/docs/linux/man/8-runc-spec/">runc-spec</a></code>(8). </p>
-<dt><code>start</code></p>
-<dd>Start a container previously created by <code>runc create</code>. See <code><a href="/docs/linux/man/8-runc-start/">runc-start</a></code>(8). </p>
-<dt><code>state</code></p>
-<dd>Show the container state. See <code><a href="/docs/linux/man/8-runc-state/">runc-state</a></code>(8). </p>
-<dt><code>update</code></p>
-<dd>Update container resource constraints. See <code><a href="/docs/linux/man/8-runc-update/">runc-update</a></code>(8). </p>
-<dt><code>help</code>, <code>h</code></p>
-<dd>Show a list of commands or help for a particular command. </p>
+<dt><code>checkpoint</code></dt>
+<dd>Checkpoint a running container. See <code><a href="/docs/linux/man/8-runc-checkpoint/">runc-checkpoint</a></code>(8). </dd>
+<dt><code>create</code></dt>
+<dd>Create a container. See <code><a href="/docs/linux/man/8-runc-create/">runc-create</a></code>(8). </dd>
+<dt><code>delete</code></dt>
+<dd>Delete any resources held by the container often used with detached containers. See <code><a href="/docs/linux/man/8-runc-delete/">runc-delete</a></code>(8). </dd>
+<dt><code>events</code></dt>
+<dd>Display container events such as OOM notifications, cpu, memory, IO and network stats. See <code><a href="/docs/linux/man/8-runc-events/">runc-events</a></code>(8). </dd>
+<dt><code>exec</code></dt>
+<dd>Execute a new process inside the container. See <code><a href="/docs/linux/man/8-runc-exec/">runc-exec</a></code>(8). </dd>
+<dt><code>init</code></dt>
+<dd>Initialize the namespaces and launch the container init process. This command is not supposed to be used directly. </dd>
+<dt><code>kill</code></dt>
+<dd>Send a specified signal to the container&#8217;s init process. See <code><a href="/docs/linux/man/8-runc-kill/">runc-kill</a></code>(8). </dd>
+<dt><code>list</code></dt>
+<dd>List containers started by runc with the given <code>&#8211;root</code>. See <code><a href="/docs/linux/man/8-runc-list/">runc-list</a></code>(8). </dd>
+<dt><code>pause</code></dt>
+<dd>Suspend all processes inside the container. See <code><a href="/docs/linux/man/8-runc-pause/">runc-pause</a></code>(8). </dd>
+<dt><code>ps</code></dt>
+<dd>Show processes running inside the container. See <code><a href="/docs/linux/man/8-runc-ps/">runc-ps</a></code>(8). </dd>
+<dt><code>restore</code></dt>
+<dd>Restore a container from a previous checkpoint. See <code><a href="/docs/linux/man/8-runc-restore/">runc-restore</a></code>(8). </dd>
+<dt><code>resume</code></dt>
+<dd>Resume all processes that have been previously paused. See <code><a href="/docs/linux/man/8-runc-resume/">runc-resume</a></code>(8). </dd>
+<dt><code>run</code></dt>
+<dd>Create and start a container. See <code><a href="/docs/linux/man/8-runc-run/">runc-run</a></code>(8). </dd>
+<dt><code>spec</code></dt>
+<dd>Create a new specification file (<i>config.json</i>). See <code><a href="/docs/linux/man/8-runc-spec/">runc-spec</a></code>(8). </dd>
+<dt><code>start</code></dt>
+<dd>Start a container previously created by <code>runc create</code>. See <code><a href="/docs/linux/man/8-runc-start/">runc-start</a></code>(8). </dd>
+<dt><code>state</code></dt>
+<dd>Show the container state. See <code><a href="/docs/linux/man/8-runc-state/">runc-state</a></code>(8). </dd>
+<dt><code>update</code></dt>
+<dd>Update container resource constraints. See <code><a href="/docs/linux/man/8-runc-update/">runc-update</a></code>(8). </dd>
+<dt><code>help</code>, <code>h</code></dt>
+<dd>Show a list of commands or help for a particular command. </dd>
 </dl>
 <h2>Global Options</h2>
 <p>These options can be used with any command, and must precede the <code>command</code>. </p>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd>Enable debug logging. </p>
-<dt><code>&#8211;log</code> <i>path</i></p>
-<dd>Set the log destination to <i>path</i>. The default is to log to stderr. </p>
-<dt><code>&#8211;log-format</code> <code>text</code>|<code>json</code></p>
-<dd>Set the log format (default is <code>text</code>). </p>
-<dt><code>&#8211;root</code> <i>path</i></p>
-<dd>Set the root directory to store containers&#8217; state. The <i>path</i> should be located on tmpfs. Default is <i>/run/runc</i>, or <i>$XDG_RUNTIME_DIR/runc</i> for rootless containers. </p>
-<dt><code>&#8211;criu</code> <i>path</i></p>
-<dd>Set the path to the <code><a href="/docs/linux/man/8-criu/">criu</a></code>(8) binary used for checkpoint and restore. Default is <code>criu</code>. </p>
-<dt><code>&#8211;systemd-cgroup</code></p>
-<dd>Enable systemd cgroup support. If this is set, the container spec (<i>config.json</i>) is expected to have <code>cgroupsPath</code> value in the <i>slice:prefix:name</i> form (e.g. <code>system.slice:runc:434234</code>). </p>
-<dt><code>&#8211;rootless</code> <code>true</code>|<code>false</code>|<code>auto</code></p>
-<dd>Enable or disable rootless mode. Default is <code>auto</code>, meaning to auto-detect whether rootless should be enabled. </p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Show help. </p>
-<dt><code>&#8211;version</code>|<code>-v</code></p>
-<dd>Show version. </p>
+<dt><code>&#8211;debug</code></dt>
+<dd>Enable debug logging. </dd>
+<dt><code>&#8211;log</code> <i>path</i></dt>
+<dd>Set the log destination to <i>path</i>. The default is to log to stderr. </dd>
+<dt><code>&#8211;log-format</code> <code>text</code>|<code>json</code></dt>
+<dd>Set the log format (default is <code>text</code>). </dd>
+<dt><code>&#8211;root</code> <i>path</i></dt>
+<dd>Set the root directory to store containers&#8217; state. The <i>path</i> should be located on tmpfs. Default is <i>/run/runc</i>, or <i>$XDG_RUNTIME_DIR/runc</i> for rootless containers. </dd>
+<dt><code>&#8211;criu</code> <i>path</i></dt>
+<dd>Set the path to the <code><a href="/docs/linux/man/8-criu/">criu</a></code>(8) binary used for checkpoint and restore. Default is <code>criu</code>. </dd>
+<dt><code>&#8211;systemd-cgroup</code></dt>
+<dd>Enable systemd cgroup support. If this is set, the container spec (<i>config.json</i>) is expected to have <code>cgroupsPath</code> value in the <i>slice:prefix:name</i> form (e.g. <code>system.slice:runc:434234</code>). </dd>
+<dt><code>&#8211;rootless</code> <code>true</code>|<code>false</code>|<code>auto</code></dt>
+<dd>Enable or disable rootless mode. Default is <code>auto</code>, meaning to auto-detect whether rootless should be enabled. </dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Show help. </dd>
+<dt><code>&#8211;version</code>|<code>-v</code></dt>
+<dd>Show version. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-runc-checkpoint/">runc-checkpoint</a></code>(8), <code><a href="/docs/linux/man/8-runc-create/">runc-create</a></code>(8), <code><a href="/docs/linux/man/8-runc-delete/">runc-delete</a></code>(8), <code><a href="/docs/linux/man/8-runc-events/">runc-events</a></code>(8), <code><a href="/docs/linux/man/8-runc-exec/">runc-exec</a></code>(8), <code><a href="/docs/linux/man/8-runc-kill/">runc-kill</a></code>(8), <code><a href="/docs/linux/man/8-runc-list/">runc-list</a></code>(8), <code><a href="/docs/linux/man/8-runc-pause/">runc-pause</a></code>(8), <code><a href="/docs/linux/man/8-runc-ps/">runc-ps</a></code>(8), <code><a href="/docs/linux/man/8-runc-restore/">runc-restore</a></code>(8), <code><a href="/docs/linux/man/8-runc-resume/">runc-resume</a></code>(8), <code><a href="/docs/linux/man/8-runc-run/">runc-run</a></code>(8), <code><a href="/docs/linux/man/8-runc-spec/">runc-spec</a></code>(8), <code><a href="/docs/linux/man/8-runc-start/">runc-start</a></code>(8), <code><a href="/docs/linux/man/8-runc-state/">runc-state</a></code>(8), <code><a href="/docs/linux/man/8-runc-update/">runc-update</a></code>(8). </p>

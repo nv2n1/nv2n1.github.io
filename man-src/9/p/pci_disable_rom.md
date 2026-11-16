@@ -15,7 +15,7 @@ pci_disable_rom - disable ROM decoding for a PCI device
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device to disable</dl>
+<dl><dd></dd><dd>PCI device to disable</dd></dl>
 
 <h2>Description</h2>
 

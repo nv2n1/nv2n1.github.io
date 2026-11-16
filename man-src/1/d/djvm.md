@@ -22,14 +22,14 @@ description: "djvm – Manipulate bundled multi-page DjVu documents."
 <p> This program creates or modifies a bundled multi-page DjVu document. Multi-page bundled documents can be used directly or converted to indirect document using command <code>djvmcvt</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c[reate]</code></p>
-<dd> Create a bundled DjVu document named <i>doc.djvu</i> by collecting files <i>page1.djvu</i> to <i>pageN.djvu</i>.</p>
-<dt><code>-i[nsert]</code></p>
-<dd> Modify the bundled DjVu document named <i>doc.djvu</i> by inserting file <i>page.djvu</i> as page <i>pagenum</i>. Omitting argument <i>pagenum</i> means that the page should be appended at the end of the document. File <i>page.djvu</i> also can be a multi-page DjVu document. All pages will be inserted at the specified location.</p>
-<dt><code>-d[elete]</code></p>
-<dd> Remove page <i>pagenum</i> from the bundled multi-page DjVu document <i>doc.djvu</i>.</p>
-<dt><code>-l[ist]</code></p>
-<dd> List all component files in the multi-page DjVu document <i>doc.djvu</i>. </p>
+<dt><code>-c[reate]</code></dt>
+<dd> Create a bundled DjVu document named <i>doc.djvu</i> by collecting files <i>page1.djvu</i> to <i>pageN.djvu</i>.</dd>
+<dt><code>-i[nsert]</code></dt>
+<dd> Modify the bundled DjVu document named <i>doc.djvu</i> by inserting file <i>page.djvu</i> as page <i>pagenum</i>. Omitting argument <i>pagenum</i> means that the page should be appended at the end of the document. File <i>page.djvu</i> also can be a multi-page DjVu document. All pages will be inserted at the specified location.</dd>
+<dt><code>-d[elete]</code></dt>
+<dd> Remove page <i>pagenum</i> from the bundled multi-page DjVu document <i>doc.djvu</i>.</dd>
+<dt><code>-l[ist]</code></dt>
+<dd> List all component files in the multi-page DjVu document <i>doc.djvu</i>. </dd>
 </dl>
 <h2>CREDITS</h2>
 <p> This program was initially written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>

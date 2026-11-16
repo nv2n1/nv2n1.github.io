@@ -17,14 +17,14 @@ description: "varnishadm – Control a running Varnish instance"
 <p> If no command argument is given varnishadm will pass commands and replies between the CLI socket and stdin/stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-t</code><i>&nbsp;<wbr>timeout</i></p>
-<dd> Wait no longer than this many seconds for an operation to finish.</p>
-<dt><code>-S</code><i>&nbsp;<wbr>secret_file</i></p>
-<dd> Specify the authentication secret file. This should be the same -S argument as was given to varnishd. Only processes which can read the contents of this file, will be able to authenticate the CLI connection.</p>
-<dt><code>-n</code><i>&nbsp;<wbr>name</i></p>
-<dd> Connect to the instance of varnishd with this name.</p>
-<dt><code>-T address:port</code></p>
-<dd> Connect to the management interface at the specified address and port. </p>
+<dt><code>-t</code><i>&nbsp;<wbr>timeout</i></dt>
+<dd> Wait no longer than this many seconds for an operation to finish.</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>secret_file</i></dt>
+<dd> Specify the authentication secret file. This should be the same -S argument as was given to varnishd. Only processes which can read the contents of this file, will be able to authenticate the CLI connection.</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>name</i></dt>
+<dd> Connect to the instance of varnishd with this name.</dd>
+<dt><code>-T address:port</code></dt>
+<dd> Connect to the management interface at the specified address and port. </dd>
 <p> The syntax and operation of the actual CLI interface is described in the <a href="/docs/linux/man/7-varnish-cli/">varnish-cli</a>(7) manual page. Parameteres are described in <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) manual page. </p>
 <p> Additionally, a summary of commands can be obtained by issuing the <i>help</i> command, and a summary of parameters can be obtained by issuing the <i>param.show</i> command.</dl>
 <h2>EXIT STATUS</h2>
@@ -38,14 +38,14 @@ echo vcl.use foo | ssh vhost varnishadm -T localhost:999 -S /var/db/secret
 </pre>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1)</dl>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1)</dd></dl>
 <h2>HISTORY</h2>
 <p> The varnishadm utility and this manual page were written by Cecilie Fritzvold. Converted to reStructuredText and updated in 2010 by Per Buer.</p>
 <h2>COPYRIGHT</h2>
 <p> This document is licensed under the same licence as Varnish itself. See LICENCE for details.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Copyright (c) 2007-2014 Varnish Software AS </p>
+<dt>&bull;</dt>
+<dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
 </dl>
 <h2>Index</h2>

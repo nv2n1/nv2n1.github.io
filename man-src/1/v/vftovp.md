@@ -17,11 +17,11 @@ description: "vftovp – convert virtual font (vf) files to virtual property lis
 <p> The filenames are extended with the appropriate extension if necessary.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-charcode-format=</code><i>format</i></p>
-<dd> The argument <i>format</i> specifies how character codes are output in the VPL file. By default, only letters and digits are output using the <code>C</code> integer code (i.e., in ASCII); the others are output in octal. (Unless the font&#8217;s coding scheme starts with <code>TeX math sy</code> or <code>TeX math ex</code>, when all are output in octal.) If <i>format</i> is <code>ascii</code>, all character codes that correspond to graphic characters, besides the left and right parentheses, are output in ASCII. On the other hand, if <i>format</i> is <code>octal</code>, all character codes are output in octal.</dl>
+<dt><code>-charcode-format=</code><i>format</i></dt>
+<dd> The argument <i>format</i> specifies how character codes are output in the VPL file. By default, only letters and digits are output using the <code>C</code> integer code (i.e., in ASCII); the others are output in octal. (Unless the font&#8217;s coding scheme starts with <code>TeX math sy</code> or <code>TeX math ex</code>, when all are output in octal.) If <i>format</i> is <code>ascii</code>, all character codes that correspond to graphic characters, besides the left and right parentheses, are output in ASCII. On the other hand, if <i>format</i> is <code>octal</code>, all character codes are output in octal.</dd></dl>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Without this option, <code>vftovp</code> operates silently. With it, a banner and progress report are printed on <i>stdout</i>.</dl>
+<dt><code>-verbose</code></dt>
+<dd> Without this option, <code>vftovp</code> operates silently. With it, a banner and progress report are printed on <i>stdout</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>vftovp</code> looks for <i>vf_name</i> using the environment variable VFFONTS. If that is not set, it uses the variable TEXFONTS. If that is not set, it uses the system default. </p>
 <p> See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>

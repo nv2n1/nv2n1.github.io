@@ -19,15 +19,15 @@ description: "slist – Lists available NetWare Servers"
 <p> <code>pattern</code></p>
 <dl>
 <dt>
-<dd> <code>pattern</code> is used to list only servers whose names match the specified pattern. For a server to be listed, the pattern must match the full server name. You can use wildcards for the pattern, but you must protect these wildcards from any command line expansion by quoting. Case doesn&#8217;t matter.</dl>
+</dt><dd> <code>pattern</code> is used to list only servers whose names match the specified pattern. For a server to be listed, the pattern must match the full server name. You can use wildcards for the pattern, but you must protect these wildcards from any command line expansion by quoting. Case doesn&#8217;t matter.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
-<dt>slist &quot;I*&quot;</p>
+<dt>slist &quot;I*&quot;</dt>
 <dd>
-<dt>or</p>
+</dd><dt>or</dt>
 <dd>
-<dt>slist &quot;i*&quot;</p>
-<dd> List all available Netware servers on your Network, that begin with an &quot;I&quot;. </p>
+</dd><dt>slist &quot;i*&quot;</dt>
+<dd> List all available Netware servers on your Network, that begin with an &quot;I&quot;. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/1-pqlist/">pqlist</a>(1), <a href="/docs/linux/man/1-nprint/">nprint</a>(1) </code> </p>

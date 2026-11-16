@@ -24,32 +24,32 @@ description: "write – write to a file descriptor"
 <p> If <i>count</i> is zero and <i>fd</i> refers to a regular file, then <code>write</code>() may return a failure status if one of the errors below is detected. If no errors are detected, or error detection is not performed, 0 will be returned without causing any other effect. If <i>count</i> is zero and <i>fd</i> refers to a file other than a regular file, the results are not specified.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The file descriptor <i>fd</i> refers to a file other than a socket and has been marked nonblocking (<code>O_NONBLOCK</code>), and the write would block. See <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for further details on the <code>O_NONBLOCK</code> flag.</p>
-<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></p>
-<dd> The file descriptor <i>fd</i> refers to a socket and has been marked nonblocking (<code>O_NONBLOCK</code>), and the write would block. POSIX.1-2001 allows either error to be returned for this case, and does not require these constants to have the same value, so a portable application should check for both possibilities.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor or is not open for writing.</p>
-<dt><code>EDESTADDRREQ</code></p>
-<dd> <i>fd</i> refers to a datagram socket for which a peer address has not been set using <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2).</p>
-<dt><code>EDQUOT</code></p>
-<dd> The user&#8217;s quota of disk blocks on the filesystem containing the file referred to by <i>fd</i> has been exhausted.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>buf</i> is outside your accessible address space.</p>
-<dt><code>EFBIG</code></p>
-<dd> An attempt was made to write a file that exceeds the implementation-defined maximum file size or the process&#8217;s file size limit, or to write at a position past the maximum allowed offset.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was interrupted by a signal before any data was written; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> is attached to an object which is unsuitable for writing; or the file was opened with the <code>O_DIRECT</code> flag, and either the address specified in <i>buf</i>, the value specified in <i>count</i>, or the file offset is not suitably aligned.</p>
-<dt><code>EIO</code></p>
-<dd> A low-level I/O error occurred while modifying the inode. This error may relate to the write-back of data written by an earlier <code>write</code>(), which may have been issued to a different file descriptor on the same file. Since Linux 4.13, errors from write-back come with a promise that they <i>may</i> be reported by subsequent. <code>write</code>() requests, and <i>will</i> be reported by a subsequent <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2) (whether or not they were also reported by <code>write</code>()). An alternate cause of <code>EIO</code> on networked filesystems is when an advisory lock had been taken out on the file descriptor and this lock has been lost. See the <i>Lost locks</i> section of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) for further details.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The device containing the file referred to by <i>fd</i> has no room for the data.</p>
-<dt><code>EPERM</code></p>
-<dd> The operation was prevented by a file seal; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</p>
-<dt><code>EPIPE</code></p>
-<dd> <i>fd</i> is connected to a pipe or socket whose reading end is closed. When this happens the writing process will also receive a <code>SIGPIPE</code> signal. (Thus, the write return value is seen only if the program catches, blocks or ignores this signal.)</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The file descriptor <i>fd</i> refers to a file other than a socket and has been marked nonblocking (<code>O_NONBLOCK</code>), and the write would block. See <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for further details on the <code>O_NONBLOCK</code> flag.</dd>
+<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></dt>
+<dd> The file descriptor <i>fd</i> refers to a socket and has been marked nonblocking (<code>O_NONBLOCK</code>), and the write would block. POSIX.1-2001 allows either error to be returned for this case, and does not require these constants to have the same value, so a portable application should check for both possibilities.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor or is not open for writing.</dd>
+<dt><code>EDESTADDRREQ</code></dt>
+<dd> <i>fd</i> refers to a datagram socket for which a peer address has not been set using <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2).</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> The user&#8217;s quota of disk blocks on the filesystem containing the file referred to by <i>fd</i> has been exhausted.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>buf</i> is outside your accessible address space.</dd>
+<dt><code>EFBIG</code></dt>
+<dd> An attempt was made to write a file that exceeds the implementation-defined maximum file size or the process&#8217;s file size limit, or to write at a position past the maximum allowed offset.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was interrupted by a signal before any data was written; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> is attached to an object which is unsuitable for writing; or the file was opened with the <code>O_DIRECT</code> flag, and either the address specified in <i>buf</i>, the value specified in <i>count</i>, or the file offset is not suitably aligned.</dd>
+<dt><code>EIO</code></dt>
+<dd> A low-level I/O error occurred while modifying the inode. This error may relate to the write-back of data written by an earlier <code>write</code>(), which may have been issued to a different file descriptor on the same file. Since Linux 4.13, errors from write-back come with a promise that they <i>may</i> be reported by subsequent. <code>write</code>() requests, and <i>will</i> be reported by a subsequent <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2) (whether or not they were also reported by <code>write</code>()). An alternate cause of <code>EIO</code> on networked filesystems is when an advisory lock had been taken out on the file descriptor and this lock has been lost. See the <i>Lost locks</i> section of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) for further details.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The device containing the file referred to by <i>fd</i> has no room for the data.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The operation was prevented by a file seal; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2).</dd>
+<dt><code>EPIPE</code></dt>
+<dd> <i>fd</i> is connected to a pipe or socket whose reading end is closed. When this happens the writing process will also receive a <code>SIGPIPE</code> signal. (Thus, the write return value is seen only if the program catches, blocks or ignores this signal.)</dd></dl>
 <p> Other errors may occur, depending on the object connected to <i>fd</i>.</p>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.3BSD, POSIX.1-2001. </p>
@@ -64,7 +64,7 @@ description: "write – write to a file descriptor"
 <p> According to POSIX.1-2008/SUSv4 Section XSI 2.9.7 (&quot;Thread Interactions with Regular File Operations&quot;): </p>
 <dl>
 <dt>
-<dd> All of the following functions shall be atomic with respect to each other in the effects specified in POSIX.1-2008 when they operate on regular files or symbolic links: &#8230;</dl>
+</dt><dd> All of the following functions shall be atomic with respect to each other in the effects specified in POSIX.1-2008 when they operate on regular files or symbolic links: &#8230;</dd></dl>
 <p> Among the APIs subsequently listed are <code>write</code>() and <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2). And among the effects that should be atomic across threads (and processes) are updates of the file offset. However, on Linux before version 3.14, this was not the case: if two processes that share an open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) perform a <code>write</code>() (or <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2)) at the same time, then the I/O operations were not atomic with respect updating the file offset, with the result that the blocks of data output by the two processes might (incorrectly) overlap. This problem was fixed in Linux 3.14.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-close/">close</a></code>(2), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2), <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2), <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2), <code><a href="/docs/linux/man/3-fwrite/">fwrite</a></code>(3)</p>

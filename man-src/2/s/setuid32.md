@@ -23,14 +23,14 @@ description: "setuid – set user identity"
 <p> <i>Note</i>: there are cases where <code>setuid</code>() can fail even when the caller is UID 0; it is a grave security error to omit checking for a failure return from <code>setuid</code>().</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The call would change the caller&#8217;s real UID (i.e., <i>uid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</p>
-<dt><code>EAGAIN</code></p>
-<dd> <i>uid</i> does not match the real user ID of the caller and this call would bring the number of processes belonging to the real user ID <i>uid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt><code>EINVAL</code></p>
-<dd> The user ID specified in <i>uid</i> is not valid in this user namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> The user is not privileged (Linux: does not have the <code>CAP_SETUID</code> capability in its user namespace) and <i>uid</i> does not match the real UID or saved set-user-ID of the calling process.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The call would change the caller&#8217;s real UID (i.e., <i>uid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd> <i>uid</i> does not match the real user ID of the caller and this call would bring the number of processes belonging to the real user ID <i>uid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The user ID specified in <i>uid</i> is not valid in this user namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The user is not privileged (Linux: does not have the <code>CAP_SETUID</code> capability in its user namespace) and <i>uid</i> does not match the real UID or saved set-user-ID of the calling process.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4. Not quite compatible with the 4.4BSD call, which sets all of the real, saved, and effective user IDs.</p>
 <h2>NOTES</h2>

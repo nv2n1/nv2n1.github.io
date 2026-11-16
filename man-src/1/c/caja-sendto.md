@@ -17,8 +17,8 @@ description: "caja-sendto – convenience application to send a file via email o
 <p> The application is intented to integrate with caja and is written for the MATE graphical desktop.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show a help message listing all the options and their meanings.</dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show a help message listing all the options and their meanings.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Roberto Majadas &lt;roberto.majadas [at] openshine.com&gt; </p>
 <p> This manual page was originally written by Oystein Gisnas for the Debian system. </p>

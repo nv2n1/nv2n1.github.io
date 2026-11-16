@@ -55,7 +55,7 @@ description: "src/drmaa.h –"
 <p>DRMAA library for Torque/PBS. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Lukasz Ciesnik lukasz.ciesnik [at] gmail.com</dl>
+<dd>Lukasz Ciesnik lukasz.ciesnik [at] gmail.com</dd></dl>
 <p> Copyright (C) 2006 Poznan Supercomputing and Networking Center DSP team dsp-devel [at] hedera.man.poznan.pl </p>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. </p>
 <p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>
@@ -73,39 +73,39 @@ description: "src/drmaa.h –"
 <h3>int drmaa_control (const char *job_id, intaction, char *error_diagnosis, size_terror_diag_len)</h3>
 <p>The <code>drmaa_control()</code> function SHALL enact the action indicated by <i>action</i> on the job specified by the job identifier, <i>jobid</i>. The action parameter&#8217;s value may be one of the following:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>DRMAA_CONTROL_SUSPEND</p>
-<dt>&bull;</p>
-<dd>DRMAA_CONTROL_RESUME</p>
-<dt>&bull;</p>
-<dd>DRMAA_CONTROL_HOLD</p>
-<dt>&bull;</p>
-<dd>DRMAA_CONTROL_RELEASE</p>
-<dt>&bull;</p>
-<dd>DRMAA_CONTROL_TERMINATE The <code>drmaa_control()</code> function SHALL return after the DRM system has acknowledged the command, not necessarily after the desired action has been performed. If <i>jobid</i> is DRMAA_JOB_IDS_SESSION_ALL, this function SHALL perform the specified action on all jobs submitted during this session as of this function is called.</dl>
+<dt>&bull;</dt>
+<dd>DRMAA_CONTROL_SUSPEND</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_CONTROL_RESUME</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_CONTROL_HOLD</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_CONTROL_RELEASE</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_CONTROL_TERMINATE The <code>drmaa_control()</code> function SHALL return after the DRM system has acknowledged the command, not necessarily after the desired action has been performed. If <i>jobid</i> is DRMAA_JOB_IDS_SESSION_ALL, this function SHALL perform the specified action on all jobs submitted during this session as of this function is called.</dd></dl>
 <h3>int drmaa_job_ps (const char *job_id, int *remote_ps, char *error_diagnosis, size_terror_diag_len)</h3>
 <p>The <code>drmaa_job_ps()</code> function SHALL store in <i>remote_ps</i> the program status of the job identified by <i>job_id</i>. The possible values of a program&#8217;s staus are:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>DRMAA_PS_UNDETERMINED</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_QUEUED_ACTIVE</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_SYSTEM_ON_HOLD</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_USER_ON_HOLD</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_USER_SYSTEM_ON_HOLD</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_RUNNING</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_SYSTEM_SUSPENDED</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_USER_SUSPENDED</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_DONE</p>
-<dt>&bull;</p>
-<dd>DRMAA_PS_FAILED</dl>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_UNDETERMINED</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_QUEUED_ACTIVE</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_SYSTEM_ON_HOLD</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_USER_ON_HOLD</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_USER_SYSTEM_ON_HOLD</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_RUNNING</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_SYSTEM_SUSPENDED</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_USER_SUSPENDED</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_DONE</dd>
+<dt>&bull;</dt>
+<dd>DRMAA_PS_FAILED</dd></dl>
 <p> Terminated jobs have a status of DRMAA_PS_FAILED.</p>
 <h3>int drmaa_synchronize (const char *job_ids[], signed longtimeout, intdispose, char *error_diagnosis, size_terror_diag_len)</h3>
 <p>The <code>drmaa_synchronize()</code> function SHALL cause the calling thread to block until all jobs specified by <i>job_ids</i> have finished execution. If <i>job_ids</i> contains DRMAA_JOB_IDS_SESSION_ALL, then this function SHALL wait for all jobs submitted during this DRMAA session as of the point in time when <code>drmaa_synchronize()</code> is called. To avoid thread race conditions in multithreaded applications, the DRMAA implementation user should explicitly synchronize this call with any other job submission calls or control calls that may change the number of remote jobs. </p>
@@ -126,6 +126,6 @@ description: "src/drmaa.h –"
 <p>Specify place where goes log messages from library when they were enabled at configure time. By default they are written to standard error stream. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> File to write to.</dl>
+<dd><i>file</i> File to write to.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for torque from the source code.</p>

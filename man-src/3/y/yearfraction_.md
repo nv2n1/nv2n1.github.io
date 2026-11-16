@@ -10,9 +10,6 @@ description: "QuantLib::GarmanKlassAbstract – Garman-Klass volatility model."
 <p>QuantLib::GarmanKlassAbstract &#8211; Garman-Klass volatility model. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Real calculatePoint (const IntervalPrice &amp;p)=0
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits QuantLib::LocalVolatilityEstimator&lt;IntervalPrice&gt;. Inherited by GarmanKlassSigma4, GarmanKlassSigma5, GarmanKlassSimpleSigma, and ParkinsonSigma.</p>
 <h3>Public Member Functions</h3>
@@ -20,9 +17,6 @@ Protected Attributes</code></pre>
 <p> <code>TimeSeries</code>&lt; <code>Volatility</code> &gt; <code>calculate</code> (const <code>TimeSeries</code>&lt; <code>IntervalPrice</code> &gt; &amp;quoteSeries)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual Real calculatePoint (const IntervalPrice &amp;p)=0
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>yearFraction_</code></p>
 <h2>Detailed Description</h2>

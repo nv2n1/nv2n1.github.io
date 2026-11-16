@@ -11,25 +11,17 @@ std::make_optional - std::make_optional
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;optional&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 17)
-
         constexpr std::optional&lt;std::decay_t&lt;T&gt;&gt; make_optional(T &amp;&amp;value);
-
 template &lt;class T, class... Args&gt;
 (2)(since C++ 17)
-
     constexpr std::optional&lt;T&gt; make_optional(Args &amp;&amp;...args);
-
 template &lt;class T, class U, class... Args&gt;
 (3)(since C++ 17)
-
     constexpr std::optional&lt;T&gt; make_optional(std::initializer_list&lt;U&gt; il, Args &amp;&amp;...args);
 1) Creates an optional object from value. Effectively calls std::optional&lt;std::decay_t&lt;T&gt;&gt;(std::forward&lt;T&gt;(value))
-
 2) Creates an optional object constructed in-place from args.... Equivalent to return std::optional&lt;T&gt;(std::in_place, std::forward&lt;Args&gt;(args)...);.
-
 3) Creates an optional object constructed in-place from il and args.... Equivalent to return std::optional&lt;T&gt;(std::in_place, il, std::forward&lt;Args&gt;(args)...);
 .
 </code></pre>

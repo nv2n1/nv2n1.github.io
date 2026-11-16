@@ -11,7 +11,6 @@ description: "sc::MsgMemoryGrp –"
 <p> A <code>MsgMemoryGrp</code> that initializes its data using a messagegrp.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memmsg.h&gt;</code></pre>
 <p> Inherits <code>sc::MemoryGrp</code>. Inherited by <code>sc::ActiveMsgMemoryGrp</code>, <code>sc::RDMAMemoryGrp</code>, and <code>sc::ShmMemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>

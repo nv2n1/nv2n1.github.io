@@ -18,21 +18,21 @@ description: "ssindex – generate index data for spreadsheet files"
 <p> This program follows the usual GNU command line syntax, with single letter options starting with a single dash (`-&#8216;) and longer options starting with two dashes (`&#8211;&#8216;). </p>
 <h3>Main options</h3>
 <dl>
-<dt><code>-E, &#8211;import-encoding=</code><i>ENCODING</i></p>
-<dd> Specify an encoding for imported content</p>
-<dt><code>-i, &#8211;index</code></p>
-<dd> Index the given files</p>
-<dt><code>-m, &#8211;list-mime-types</code></p>
-<dd> List the MIME types which ssindex is able to read </p>
+<dt><code>-E, &#8211;import-encoding=</code><i>ENCODING</i></dt>
+<dd> Specify an encoding for imported content</dd>
+<dt><code>-i, &#8211;index</code></dt>
+<dd> Index the given files</dd>
+<dt><code>-m, &#8211;list-mime-types</code></dt>
+<dd> List the MIME types which ssindex is able to read </dd>
 </dl>
 <h3>Help options</h3>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display ssindex&#8217;s version</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Display the supported options</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display a brief usage message </p>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display ssindex&#8217;s version</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Display the supported options</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display a brief usage message </dd>
 </dl>
 <h2>LICENSE</h2>
 <p> <code>ssindex</code> is licensed under the terms of the General Public License (GPL), version 2 or 3. For information on this license look at the source code that came with the software or see the GNU project page &lt;URL: <a rel="nofollow" href="http://www.gnu.org">http://www.gnu.org</a> &gt;. </p>

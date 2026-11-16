@@ -19,7 +19,8 @@ description: "systemd-remount-fs.service, systemd-remount-fs – Remount root an
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></code>(8), <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>API File Systems</p>
+<dt> 1.</dt>
+<dd>API File Systems</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems">https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems</a></dl>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems">https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems</a></dd></dl>
+</dl>

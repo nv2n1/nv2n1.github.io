@@ -20,258 +20,258 @@ description: "latrace – LD_AUDIT 2.4+ libc frontend"
 <p> -l, &#8211;libs lib1[,lib2,&#8230;]</p>
 <dl>
 <dt>
-<dd> audit from and to lib1, lib2 &#8230;</dl>
+</dt><dd> audit from and to lib1, lib2 &#8230;</dd></dl>
 <p> -t, &#8211;libs-to lib1[,lib2,&#8230;]</p>
 <dl>
 <dt>
-<dd> audit to lib1, lib2 &#8230;</dl>
+</dt><dd> audit to lib1, lib2 &#8230;</dd></dl>
 <p> -f, &#8211;libs-from lib1[,lib2,&#8230;]</p>
 <dl>
 <dt>
-<dd> audit from lib1, lib2 &#8230;</dl>
+</dt><dd> audit from lib1, lib2 &#8230;</dd></dl>
 <p> -s, &#8211;sym sym1[,sym2,&#8230;]</p>
 <dl>
 <dt>
-<dd> audit symbols sym1, sym2 &#8230;</dl>
+</dt><dd> audit symbols sym1, sym2 &#8230;</dd></dl>
 <p> -n, &#8211;sym-omit sym1[,sym2,&#8230;]</p>
 <dl>
 <dt>
-<dd> omit symbols sym1, sym2 &#8230;</dl>
+</dt><dd> omit symbols sym1, sym2 &#8230;</dd></dl>
 <p> -L, &#8211;lib-subst s1[,s2,&#8230;]</p>
 <dl>
 <dt>
-<dd> objsearch LD_AUDIT interface (See the section called &#8220;OBJSEARCH&#8221;)</dl>
+</dt><dd> objsearch LD_AUDIT interface (See the section called &#8220;OBJSEARCH&#8221;)</dd></dl>
 <p> -c, &#8211;counts</p>
 <dl>
 <dt>
-<dd> display statistics counts of symbols &#8211; implies pipe mode (see the section called &#8220;PIPE mode&#8221;) an no symbol output is displayed</dl>
+</dt><dd> display statistics counts of symbols &#8211; implies pipe mode (see the section called &#8220;PIPE mode&#8221;) an no symbol output is displayed</dd></dl>
 <p> -C, &#8211;sort-counts stat</p>
 <dl>
 <dt>
-<dd> implies -c, plus sort the statistics by stat with following values: time,per,call,ucall,lib,sym (default is call)</dl>
+</dt><dd> implies -c, plus sort the statistics by stat with following values: time,per,call,ucall,lib,sym (default is call)</dd></dl>
 <p> -p, &#8211;pipe</p>
 <dl>
 <dt>
-<dd> use pipe to latrace process to send audit data (see the section called &#8220;PIPE mode&#8221;)</dl>
+</dt><dd> use pipe to latrace process to send audit data (see the section called &#8220;PIPE mode&#8221;)</dd></dl>
 <p> -N, &#8211;conf</p>
 <dl>
 <dt>
-<dd> config file (see the section called &#8220;CONFIG&#8221;)</dl>
+</dt><dd> config file (see the section called &#8220;CONFIG&#8221;)</dd></dl>
 <p> -A, &#8211;enable-args</p>
 <dl>
 <dt>
-<dd> enable arguments output (definitions from /etc/latrace.conf)</dl>
+</dt><dd> enable arguments output (definitions from /etc/latrace.conf)</dd></dl>
 <p> -D, &#8211;detail-args</p>
 <dl>
 <dt>
-<dd> display struct arguments in more detail</dl>
+</dt><dd> display struct arguments in more detail</dd></dl>
 <p> -a, &#8211;args file</p>
 <dl>
 <dt>
-<dd> specify arguments definition file, implies -A (without the default definition file of course)</dl>
+</dt><dd> specify arguments definition file, implies -A (without the default definition file of course)</dd></dl>
 <p> -y, &#8211;framesize number</p>
 <dl>
 <dt>
-<dd> framesize for storing the stack before pltexit (default 100)</dl>
+</dt><dd> framesize for storing the stack before pltexit (default 100)</dd></dl>
 <p> -Y, &#8211;no-framesize-check</p>
 <dl>
 <dt>
-<dd> disable framesize check</dl>
+</dt><dd> disable framesize check</dd></dl>
 <p> -F, &#8211;no-follow-fork</p>
 <dl>
 <dt>
-<dd> dont follow fork calls (childs). This is just supressing the latrace output from new childs. The nature of the <code>LD_AUDIT</code> feature prevents to disable it completely.</dl>
+</dt><dd> dont follow fork calls (childs). This is just supressing the latrace output from new childs. The nature of the <code>LD_AUDIT</code> feature prevents to disable it completely.</dd></dl>
 <p> -E, &#8211;no-follow-exec</p>
 <dl>
 <dt>
-<dd> dont follow exec calls</dl>
+</dt><dd> dont follow exec calls</dd></dl>
 <p> -S, &#8211;timestamp</p>
 <dl>
 <dt>
-<dd> display timestamp for each symbol</dl>
+</dt><dd> display timestamp for each symbol</dd></dl>
 <p> -b, &#8211;flow-below sym1[,sym2,&#8230;]</p>
 <dl>
 <dt>
-<dd> display flow for sym1, sym2 &#8230;</dl>
+</dt><dd> display flow for sym1, sym2 &#8230;</dd></dl>
 <p> -I, &#8211;no-indent-sym</p>
 <dl>
 <dt>
-<dd> do no indent symbols based on the their stack depth</dl>
+</dt><dd> do no indent symbols based on the their stack depth</dd></dl>
 <p> -i, &#8211;indent-sym indent_size</p>
 <dl>
 <dt>
-<dd> indent size specification in indent_size</dl>
+</dt><dd> indent size specification in indent_size</dd></dl>
 <p> -B, &#8211;braces</p>
 <dl>
 <dt>
-<dd> allways display <i>{</i><i>}</i> for the around the symbol body</dl>
+</dt><dd> allways display <i>{</i><i>}</i> for the around the symbol body</dd></dl>
 <p> -d, &#8211;demangle</p>
 <dl>
 <dt>
-<dd> C++ demangle symbols on the output</dl>
+</dt><dd> C++ demangle symbols on the output</dd></dl>
 <p> -T, &#8211;hide-tid</p>
 <dl>
 <dt>
-<dd> dont display thread id</dl>
+</dt><dd> dont display thread id</dd></dl>
 <p> -o, &#8211;output file</p>
 <dl>
 <dt>
-<dd> store output to file</dl>
+</dt><dd> store output to file</dd></dl>
 <p> -R, &#8211;ctl-config</p>
 <dl>
 <dt>
-<dd> controled config feature</dl>
+</dt><dd> controled config feature</dd></dl>
 <p> -q, &#8211;disable</p>
 <dl>
 <dt>
-<dd> run with disabled auditing</dl>
+</dt><dd> run with disabled auditing</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> verbose output</dl>
+</dt><dd> verbose output</dd></dl>
 <p> -V, &#8211;version</p>
 <dl>
 <dt>
-<dd> display version</dl>
+</dt><dd> display version</dd></dl>
 <p> -h, &#8211;help</p>
 <dl>
 <dt>
-<dd> display help</dl>
+</dt><dd> display help</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> &bull; The simplest way to run latrace is like this: </p>
+</dt><dd> &bull; The simplest way to run latrace is like this: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace cat
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To see the argument values specified by default config file run: </p>
+</dt><dd> &bull; To see the argument values specified by default config file run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -A cat
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Same as above but using the pipe mode to get all the end symbols printed: </p>
+</dt><dd> &bull; Same as above but using the pipe mode to get all the end symbols printed: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -Ap cat
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To see the argument values specified by specified config file run: </p>
+</dt><dd> &bull; To see the argument values specified by specified config file run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -a latrace.conf cat
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get output only for specified symbol (eg. read and write) run: </p>
+</dt><dd> &bull; To get output only for specified symbol (eg. read and write) run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -A -s read,write cat
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get flow under the specified symbol (eg. sysconf) run: </p>
+</dt><dd> &bull; To get flow under the specified symbol (eg. sysconf) run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -b sysconf kill
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get output only for specified library (eg. libproc) run: </p>
+</dt><dd> &bull; To get output only for specified library (eg. libproc) run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -Al libproc w
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get symbol statistics run: </p>
+</dt><dd> &bull; To get symbol statistics run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -c ls
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get symbol statistics sorted by time run: </p>
+</dt><dd> &bull; To get symbol statistics sorted by time run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -C time ls
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To get output stored to the text file run: </p>
+</dt><dd> &bull; To get output stored to the text file run: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -o output.latrace ls
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; To change the libkrava1.so dependency to the libkrava2.so run one of these: </p>
+</dt><dd> &bull; To change the libkrava1.so dependency to the libkrava2.so run one of these: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -L krava1%krava2 ex
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -L krava1~libkrava2.so ex
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 latrace -L libkrava1.so=libkrava2.so ex
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>DISCUSSION</h2>
 <h3>NAMES CHECK</h3>
@@ -279,25 +279,25 @@ latrace -L libkrava1.so=libkrava2.so ex
 <p> Examples: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -s &quot;*krava&quot; checks for symbols with &quot;krava&quot; substring.
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 -s &quot;krava&quot;  checks only for &quot;krava&quot; symbol
 </pre>
-</dl>
+</dd></dl>
 <h3>LD_AUDIT</h3>
 <p> This is just a brief and vague description of the <code>LD_AUDIT</code> feature. For more information look to <code><a href="/docs/linux/man/7-rtld-audit/">rtld-audit</a>(7)</code> man done by Petr Baudis or study the glibc/latrace source code. Very brief explanation follows. </p>
 <p> The libc dynamic linker audit feature allows to trace/audit program&#8217;s symbols/libraries. The feature is enabled by the <code>LD_AUDIT</code> environment variable. This variable must contain path to the audit shared library. This audit library needs to follow specific interface. The interface functions will be then called by the dynamic linker appropriatelly. </p>
 <p> The audit library needs to export following symbols (the &quot;la_PLTENTER&quot; and &quot;la_PLTEXIT&quot; names are architecture dependent). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;la_activity&quot;
 &quot;la_objsearch&quot;
@@ -309,7 +309,7 @@ latrace -L libkrava1.so=libkrava2.so ex
 &quot;la_PLTEXIT&quot;
 &quot;la_objclose&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> As for the latrace package the audit shared library is called libltaudit.so.</p>
 <h3>OBJSEARCH</h3>
 <p> The objsearch <code>LD_AUDIT</code> interface provide means for changing traced program shared object names/locations. The -L option argument should have following form: </p>
@@ -323,20 +323,20 @@ latrace -L libkrava1.so=libkrava2.so ex
 <p> Comparing src with the library name. If matched, replace the library name with dst.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 library name         - /lib/krava1.so
 src                  - /lib/krava1.so
 dst                  - /lib/krava2.so
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 final library name   - /lib/krava2.so
 </pre>
-</dl>
+</dd></dl>
 </td>
 </tr>
 <tr VALIGN=top>
@@ -346,20 +346,20 @@ final library name   - /lib/krava2.so
 <p> Looking for the src in the library name. If found, replace the src with dst part.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 library name         - /lib/krava1.so
 src                  - krava1
 dst                  - krava2
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 final library name   - /lib/krava2.so
 </pre>
-</dl>
+</dd></dl>
 </td>
 </tr>
 <tr VALIGN=top>
@@ -369,20 +369,20 @@ final library name   - /lib/krava2.so
 <p> Looking for the src in the library name. If found, replace the library name with dst.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 library name         - /lib/krava1.so
 src                  - krava1
 dst                  - /lib/krava2.so
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 final library name   - /lib/krava2.so
 </pre>
-</dl>
+</dd></dl>
 </td>
 </tr>
 </table>
@@ -393,16 +393,16 @@ final library name   - /lib/krava2.so
 <p> The latrace provide possibility to enable/disable some of the options by means of configuration file. Some of the options are linked to the command line arguments some of them are not. When latrace starts the global configuration file is read. This file is usually being placed in here: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 /etc/latrace.d/latrace.conf
 </pre>
-</dl>
+</dd></dl>
 <p> Having default values read from this file, user can overload any of them by command line options or by supling another config file via <code>-N, &#8211;conf</code> option. </p>
 <p> The configuration file syntax is roughly: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 INCLUDE &lt;anotherconfigfile&gt;
 OPTIONS {
@@ -413,114 +413,108 @@ OPTIONS {
 }
 # comment
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Configuration file options</code> </p>
 <p> HEADERS = FILE</p>
 <dl>
 <dt>
-<dd> -a, &#8211;args</dl>
+</dt><dd> -a, &#8211;args</dd></dl>
 <p> INDENT_SYM = VALUE</p>
 <dl>
 <dt>
-<dd> -i, &#8211;indent-sym</dl>
+</dt><dd> -i, &#8211;indent-sym</dd></dl>
 <p> PIPE = BOOL</p>
 <dl>
 <dt>
-<dd> -p, &#8211;pipe</dl>
+</dt><dd> -p, &#8211;pipe</dd></dl>
 <p> TIMESTAMP = BOOL</p>
 <dl>
 <dt>
-<dd> -S, &#8211;timestamp</dl>
+</dt><dd> -S, &#8211;timestamp</dd></dl>
 <p> FRAMESIZE = VALUE</p>
 <dl>
 <dt>
-<dd> -y, &#8211;framesize</dl>
+</dt><dd> -y, &#8211;framesize</dd></dl>
 <p> FRAMESIZE_CHECK = BOOL</p>
 <dl>
 <dt>
-<dd> -Y, &#8211;no-framesize-check</dl>
+</dt><dd> -Y, &#8211;no-framesize-check</dd></dl>
 <p> HIDE_TID = BOOL</p>
 <dl>
 <dt>
-<dd> -T, &#8211;hide-tid</dl>
+</dt><dd> -T, &#8211;hide-tid</dd></dl>
 <p> FOLLOW_FORK = BOOL</p>
 <dl>
 <dt>
-<dd> -F, &#8211;no-follow-fork</dl>
+</dt><dd> -F, &#8211;no-follow-fork</dd></dl>
 <p> FOLLOW_EXEC = BOOL</p>
 <dl>
 <dt>
-<dd> -E, &#8211;no-follow-exec</dl>
+</dt><dd> -E, &#8211;no-follow-exec</dd></dl>
 <p> DEMANGLE = BOOL</p>
 <dl>
 <dt>
-<dd> -d, &#8211;demangle</dl>
+</dt><dd> -d, &#8211;demangle</dd></dl>
 <p> BRACES = BOOL</p>
 <dl>
 <dt>
-<dd> -B, &#8211;braces</dl>
+</dt><dd> -B, &#8211;braces</dd></dl>
 <p> ENABLE_ARGS = BOOL</p>
 <dl>
 <dt>
-<dd> -A, &#8211;enable-args</dl>
+</dt><dd> -A, &#8211;enable-args</dd></dl>
 <p> DETAIL_ARGS = BOOL</p>
 <dl>
 <dt>
-<dd> -D, &#8211;detail-args</dl>
+</dt><dd> -D, &#8211;detail-args</dd></dl>
 <p> OUTPUT_TTY = FILE</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; stores tracee terminal output to the file</dl>
+</dt><dd> &bull; stores tracee terminal output to the file</dd></dl>
 </dl>
 <p> LIBS = LIB1[,LIB2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -l, &#8211;libs</dl>
+</dt><dd> -l, &#8211;libs</dd></dl>
 <p> LIBS_TO = LIB1[,LIB2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -t, &#8211;libs-to</dl>
+</dt><dd> -t, &#8211;libs-to</dd></dl>
 <p> LIBS_FROM = LIB1[,LIB2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -f, &#8211;libs-from</dl>
+</dt><dd> -f, &#8211;libs-from</dd></dl>
 <p> SYM = SYM1[,SYM2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -s, &#8211;sym</dl>
+</dt><dd> -s, &#8211;sym</dd></dl>
 <p> SYM_OMIT = SYM1[,SYM2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -n, &#8211;sym-omit</dl>
+</dt><dd> -n, &#8211;sym-omit</dd></dl>
 <p> SYM_BELOW = SYM1[,SYM2,&#8230;]</p>
 <dl>
 <dt>
-<dd> -b, &#8211;flow-below</dl>
+</dt><dd> -b, &#8211;flow-below</dd></dl>
 <p> SYM_NOEXIT = SYM1[,SYM2,&#8230;]</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; symbols which do no run exit callback (plt_exit)</dl>
+</dt><dd> &bull; symbols which do no run exit callback (plt_exit)</dd></dl>
 </dl>
 <p> ARGS_STRING_POINTER_LENGTH = BOOL</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> &bull; function arguments &#8211; display string length and pointer value</dl>
+</dt><dd> &bull; function arguments &#8211; display string length and pointer value</dd></dl>
 </dl>
 <h3>HEADERS</h3>
 <p> The latrace header file allows user to define symbols as an classic C functions with arguments. Argument names will be displayed together with values as the latrace output. The more arguments are defined, the more performance and memory penalties should be expected. </p>
 <p> The package is delivered with several predefined header files for the most commonly used functions. List of the glibc header files used follows (the list mostly follows the ltrace header files list, and author is willing to update it according to the needs) </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ctype.h dirent.h dlfcn.h fcntl.h getopt.h inet.h ioctl.h
 libintl.h libio.h locale.h misc.h mman.h ncurses.h netdb.h
@@ -528,53 +522,53 @@ pthread.h pwd.h resource.h signal.h socket.h stat.h stdio.h
 stdlib.h string.h syslog.h term.h termios.h time.h typedefs.h
 unistd.h utmp.h wait.h
 </pre>
-</dl>
+</dd></dl>
 <p> The latrace header files are usually stored under directory: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 /etc/latrace.d/headers/
 </pre>
-</dl>
+</dd></dl>
 <p> User can specify single header file using command line option or configuration file. This file then can include other needed headers. As already mentioned, the latrace config file syntax lightly follows the C language syntax. Following part describes the latrace config file language. </p>
 <dl>
 <dt>
-<dd> &bull; Several <code>POD types</code> (plain old data), are hardcoded in latrace. Size of those arguments is determined by the sizeof macro. The list follows. </p>
+</dt><dd> &bull; Several <code>POD types</code> (plain old data), are hardcoded in latrace. Size of those arguments is determined by the sizeof macro. The list follows. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 void char u_char short u_short int u_int long u_long
     llong u_llong #(long long)float double
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; The <code>typedef</code> keyword allows to specify new type based on the already existing one (POD or typedefed). Eventhough there&#8217;s a way for multiple pointer layers in the type definition (*), only one is taken. </p>
+</dt><dd> &bull; The <code>typedef</code> keyword allows to specify new type based on the already existing one (POD or typedefed). Eventhough there&#8217;s a way for multiple pointer layers in the type definition (*), only one is taken. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 typedef base_type new_type;<br />
 typedef base_type *new_type;<br />
 typedef base_type **new_type;
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; <code>Comments</code> follow the C style /\* \*/ logic. </p>
+</dt><dd> &bull; <code>Comments</code> follow the C style /\* \*/ logic. </dd>
 <p> /\* comments \*/</dl>
 <dl>
 <dt>
-<dd> &bull; The <code>include</code> keyword allows to include another config file. </p>
+</dt><dd> &bull; The <code>include</code> keyword allows to include another config file. </dd>
 <p> #include &quot;filename&quot;</dl>
 <dl>
 <dt>
-<dd> &bull; The <code>struct</code> keyword allows to define the structure. The syntax folows following grammar rules. </p>
+</dt><dd> &bull; The <code>struct</code> keyword allows to define the structure. The syntax folows following grammar rules. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 START::struct NAME {<br />
     STRUCT_DEF<br />
 };<br />
@@ -583,39 +577,39 @@ STRUCT_DEF::DEF | EMPTY DEF::NAME NAME |<br />
     struct NAME NAME |<br />
     struct NAME &#8216;*&#8217; NAME<br />
             NAME::[-0 &#8211; 9a &#8211; zA &#8211; Z_] +
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; The <code>function</code> definition follows following syntax (DEF and NAME are the same as for struct definition). </p>
+</dt><dd> &bull; The <code>function</code> definition follows following syntax (DEF and NAME are the same as for struct definition). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 START::         DEF '(' ARGS ')' ';'
 ARGS::          ARGS ',' DEF | DEF | EMPTY
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; The <code>enum</code> definition follows following syntax (NAME is same as for struct definition). </p>
+</dt><dd> &bull; The <code>enum</code> definition follows following syntax (NAME is same as for struct definition). </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 START::         ENUM NAME '{' ENUM_DEF '}' ';'
 ENUM_DEF::      ENUM_DEF ',' ENUM_ELEM | ENUM_ELEM
 ENUM_ELEM::     NAME '=' NAME | NAME
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Example of a simple latrace config file. </p>
+</dt><dd> &bull; Example of a simple latrace config file. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 -- -[cut here]-- -- -- -- -- -- -- -- -- -- -- -- -- -- -enum krava {
     krava1 = 1,
@@ -634,14 +628,14 @@ int f2(char *name, struct ex_st k, int k = krava);
 struct ex_st *f3(pid_t *p, struct ex_st k);
 -- -[cut here]-- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Arrays are not supported yet, so there&#8217;s no way to define some structures. For such a structures use void* type where the structure argu- ment is passed by pointer. If it is passed by value, there&#8217;s no workaround so far (aside from filling the structure body with POD types up to the actual length of the structure :).</dl>
+</dt><dd> &bull; Arrays are not supported yet, so there&#8217;s no way to define some structures. For such a structures use void* type where the structure argu- ment is passed by pointer. If it is passed by value, there&#8217;s no workaround so far (aside from filling the structure body with POD types up to the actual length of the structure :).</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Variable argument lists (va_list/&#8230;) are not supported yet. The function definition needs to stop before the first variable argument list argument.</dl>
+</dt><dd> &bull; Variable argument lists (va_list/&#8230;) are not supported yet. The function definition needs to stop before the first variable argument list argument.</dd></dl>
 <h2>PORTS</h2>
 <p> The latrace should work on any glibc system with LD_AUDIT support. However arguments details are architecture specific and need special support inside latrace itself. </p>
 <p> Author is willing to port the latrace to any architecture, as long as he got an access to corresponding system. Currently functional ports are: </p>
@@ -674,31 +668,31 @@ struct ex_st *f3(pid_t *p, struct ex_st k);
 <p> LD_AUDIT related glibc bugs: </p>
 <dl>
 <dt>
-<dd> &bull; <code>Bug 7055 (no longer reproducible)</code></dl>
+</dt><dd> &bull; <code>Bug 7055 (no longer reproducible)</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Bug 9893 (FIXED in 2.10)</code></dl>
+</dt><dd> &bull; <code>Bug 9893 (FIXED in 2.10)</code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>Bug 3924 (FIXED in 2.7-2)</code></dl>
+</dt><dd> &bull; <code>Bug 3924 (FIXED in 2.7-2)</code></dd></dl>
 <h2>AUTHOR</h2>
 <p> Jiri Olsa &lt;m[blue]<code>olsajiri [at] gmail.com</code>m[]<font SIZE="-2">[2]</font>&gt;</p>
 <h2>CONTRIBUTORS</h2>
 <dl>
 <dt>
-<dd> &bull; Nix &lt;m[blue]<code>nix [at] esperi.org.uk</code>m[]<font SIZE="-2">[3]</font>&gt;</dl>
+</dt><dd> &bull; Nix &lt;m[blue]<code>nix [at] esperi.org.uk</code>m[]<font SIZE="-2">[3]</font>&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Akos Pasztory &lt;m[blue]<code>akos.pasztory [at] gmail.com</code>m[]<font SIZE="-2">[4]</font>&gt;</dl>
+</dt><dd> &bull; Akos Pasztory &lt;m[blue]<code>akos.pasztory [at] gmail.com</code>m[]<font SIZE="-2">[4]</font>&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Artur Skawina &lt;m[blue]<code>art.08.09 [at] gmail.com</code>m[]<font SIZE="-2">[5]</font>&gt;</dl>
+</dt><dd> &bull; Artur Skawina &lt;m[blue]<code>art.08.09 [at] gmail.com</code>m[]<font SIZE="-2">[5]</font>&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Dr. David Alan Gilbert &lt;m[blue]<code>david.gilbert [at] linaro.org</code>m[]<font SIZE="-2">[6]</font>&gt;</dl>
+</dt><dd> &bull; Dr. David Alan Gilbert &lt;m[blue]<code>david.gilbert [at] linaro.org</code>m[]<font SIZE="-2">[6]</font>&gt;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Sebastian Pipping &lt;m[blue]<code>sping [at] gentoo.org</code>m[]<font SIZE="-2">[7]</font>&gt;</dl>
+</dt><dd> &bull; Sebastian Pipping &lt;m[blue]<code>sping [at] gentoo.org</code>m[]<font SIZE="-2">[7]</font>&gt;</dd></dl>
 <h2>LICENSE</h2>
 <p> This is free software, distributed under the <code>GPLv3</code> license.</p>
 <h2>SEE ALSO</h2>
@@ -707,43 +701,43 @@ struct ex_st *f3(pid_t *p, struct ex_st k);
 <p> <code>Jiri Olsa</code> &lt;olsajiri [at] gmail.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> latrace [at] lists.fedorahosted.org</p>
+<dt> 1.</dt>
+<dd> latrace [at] lists.fedorahosted.org</dd>
 <dl>
 <dt>
-<dd> mailto:latrace [at] lists.fedorahosted.org</dl>
-<dt> 2.</p>
-<dd> olsajiri [at] gmail.com</p>
+</dt><dd> mailto:latrace [at] lists.fedorahosted.org</dd></dl>
+<dt> 2.</dt>
+<dd> olsajiri [at] gmail.com</dd>
 <dl>
 <dt>
-<dd> mailto:olsajiri [at] gmail.com</dl>
-<dt> 3.</p>
-<dd> nix [at] esperi.org.uk</p>
+</dt><dd> mailto:olsajiri [at] gmail.com</dd></dl>
+<dt> 3.</dt>
+<dd> nix [at] esperi.org.uk</dd>
 <dl>
 <dt>
-<dd> mailto:nix [at] esperi.org.uk</dl>
-<dt> 4.</p>
-<dd> akos.pasztory [at] gmail.com</p>
+</dt><dd> mailto:nix [at] esperi.org.uk</dd></dl>
+<dt> 4.</dt>
+<dd> akos.pasztory [at] gmail.com</dd>
 <dl>
 <dt>
-<dd> mailto:akos.pasztory [at] gmail.com</dl>
-<dt> 5.</p>
-<dd> art.08.09 [at] gmail.com</p>
+</dt><dd> mailto:akos.pasztory [at] gmail.com</dd></dl>
+<dt> 5.</dt>
+<dd> art.08.09 [at] gmail.com</dd>
 <dl>
 <dt>
-<dd> mailto:art.08.09 [at] gmail.com</dl>
-<dt> 6.</p>
-<dd> david.gilbert [at] linaro.org</p>
+</dt><dd> mailto:art.08.09 [at] gmail.com</dd></dl>
+<dt> 6.</dt>
+<dd> david.gilbert [at] linaro.org</dd>
 <dl>
 <dt>
-<dd> mailto:david.gilbert [at] linaro.org</dl>
-<dt> 7.</p>
-<dd> sping [at] gentoo.org</p>
+</dt><dd> mailto:david.gilbert [at] linaro.org</dd></dl>
+<dt> 7.</dt>
+<dd> sping [at] gentoo.org</dd>
 <dl>
 <dt>
-<dd> mailto:sping [at] gentoo.org</dl>
+</dt><dd> mailto:sping [at] gentoo.org</dd></dl>
 </dl>
 <h2>Index</h2>

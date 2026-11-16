@@ -10,13 +10,9 @@ description: "std::uninitialized_default_construct_n – std::uninitialized_defa
 <p>std::uninitialized_default_construct_n &#8211; std::uninitialized_default_construct_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;memory&gt;
-
 template&lt; class ForwardIt, class Size &gt;                                                           (1) (since C++17)
-
 ForwardIt uninitialized_default_construct_n( ForwardIt first, Size n );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Size &gt;                                    (2) (since C++17)
-
 ForwardIt uninitialized_default_construct_n( ExecutionPolicy&amp;&amp; policy, ForwardIt first, Size n );</code></pre>
 <p>1) Constructs n objects of type typename iterator_traits&lt;ForwardIt&gt;::value_type in the uninitialized storage starting at first by default-initialization, as if by </p>
 <pre><code>for (; n &gt; 0; (void)++first, --n)

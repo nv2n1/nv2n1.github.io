@@ -48,12 +48,12 @@ description: "cmake-env-variables – CMake Environment Variables Reference"
 <p> Specifies the CMake default generator to use when no generator is supplied with <code>-G</code>. If the provided value doesn&#8217;t name a generator known by CMake, the internal default is used. Either way the resulting generator selection is stored in the <code>CMAKE_GENERATOR</code> variable. </p>
 <p> Some generators may be additionally configured using the environment variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_GENERATOR_PLATFORM</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_GENERATOR_TOOLSET</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_GENERATOR_INSTANCE</code></dl>
+<dt>&bull;</dt>
+<dd><code>CMAKE_GENERATOR_PLATFORM</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_GENERATOR_TOOLSET</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_GENERATOR_INSTANCE</code></dd></dl>
 <h3>Cmake_Generator_Instance</h3>
 <p>New in version 3.15. </p>
 <p> This is a CMake Environment Variable. Its initial value is taken from the calling process environment. </p>
@@ -74,55 +74,55 @@ description: "cmake-env-variables – CMake Environment Variables Reference"
 <h3>Usage Scenarios</h3>
 <p>Installing symbolic links rather than copying files can help in the following ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Conserving storage space because files do not have to be duplicated on disk.</p>
-<dt>&bull;</p>
-<dd>Changes to the source of the symbolic link are seen at the install destination without having to re-run the install step.</p>
-<dt>&bull;</p>
-<dd>Editing through the link at the install destination will modify the source of the link. This may be useful when dealing with CMake project hierarchies, i.e. using <code>ExternalProject</code> and consistent source navigation and refactoring is desired across projects.</dl>
+<dt>&bull;</dt>
+<dd>Conserving storage space because files do not have to be duplicated on disk.</dd>
+<dt>&bull;</dt>
+<dd>Changes to the source of the symbolic link are seen at the install destination without having to re-run the install step.</dd>
+<dt>&bull;</dt>
+<dd>Editing through the link at the install destination will modify the source of the link. This may be useful when dealing with CMake project hierarchies, i.e. using <code>ExternalProject</code> and consistent source navigation and refactoring is desired across projects.</dd></dl>
 <h3>Allowed Values</h3>
 <p>The following values are allowed for <code>CMAKE_INSTALL_MODE</code>:</p>
 <dl>
-<dt><code>COPY</code>, empty or unset</p>
-<dd>Duplicate the file at its destination. This is the default behavior.</p>
-<dt><code>ABS_SYMLINK</code></p>
-<dd>Create an <i>absolute</i> symbolic link to the source file at the destination. Halt with an error if the link cannot be created.</p>
-<dt><code>ABS_SYMLINK_OR_COPY</code></p>
-<dd>Like <code>ABS_SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created.</p>
-<dt><code>REL_SYMLINK</code></p>
-<dd>Create a <i>relative</i> symbolic link to the source file at the destination. Halt with an error if the link cannot be created.</p>
-<dt><code>REL_SYMLINK_OR_COPY</code></p>
-<dd>Like <code>REL_SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created.</p>
-<dt><code>SYMLINK</code></p>
-<dd>Try as if through <code>REL_SYMLINK</code> and fall back to <code>ABS_SYMLINK</code> if the referenced file cannot be expressed using a relative path. Halt with an error if the link cannot be created.</p>
-<dt><code>SYMLINK_OR_COPY</code></p>
-<dd>Like <code>SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created. </p>
+<dt><code>COPY</code>, empty or unset</dt>
+<dd>Duplicate the file at its destination. This is the default behavior.</dd>
+<dt><code>ABS_SYMLINK</code></dt>
+<dd>Create an <i>absolute</i> symbolic link to the source file at the destination. Halt with an error if the link cannot be created.</dd>
+<dt><code>ABS_SYMLINK_OR_COPY</code></dt>
+<dd>Like <code>ABS_SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created.</dd>
+<dt><code>REL_SYMLINK</code></dt>
+<dd>Create a <i>relative</i> symbolic link to the source file at the destination. Halt with an error if the link cannot be created.</dd>
+<dt><code>REL_SYMLINK_OR_COPY</code></dt>
+<dd>Like <code>REL_SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created.</dd>
+<dt><code>SYMLINK</code></dt>
+<dd>Try as if through <code>REL_SYMLINK</code> and fall back to <code>ABS_SYMLINK</code> if the referenced file cannot be expressed using a relative path. Halt with an error if the link cannot be created.</dd>
+<dt><code>SYMLINK_OR_COPY</code></dt>
+<dd>Like <code>SYMLINK</code> but fall back to silently copying if the symlink couldn&#8217;t be created. </dd>
 <p> <code>NOTE:</code> A symbolic link consists of a reference file path rather than contents of its own, hence there are two ways to express the relation, either by a <i>relative</i> or an <i>absolute</i> path.</dl>
 <h3>When To Set The Environment Variable</h3>
 <p>For the environment variable to take effect, it must be set during the correct build phase(s).</p>
 <dl>
-<dt>&bull;</p>
-<dd>If the project calls <code>file(INSTALL)</code> directly, the environment variable must be set during the configuration phase.</p>
-<dt>&bull;</p>
-<dd>In order to apply to <code>install()</code>, the environment variable must be set during installation. This could be during a build if using the <code>install</code> or <code>package</code> build targets, or separate from the build when invoking an install or running <code>cpack</code> from the command line.</p>
-<dt>&bull;</p>
-<dd>When using <code>ExternalProject</code>, it might be required during the build phase, since the external project&#8217;s own configure, build and install steps will execute during the main project&#8217;s build phase. </p>
+<dt>&bull;</dt>
+<dd>If the project calls <code>file(INSTALL)</code> directly, the environment variable must be set during the configuration phase.</dd>
+<dt>&bull;</dt>
+<dd>In order to apply to <code>install()</code>, the environment variable must be set during installation. This could be during a build if using the <code>install</code> or <code>package</code> build targets, or separate from the build when invoking an install or running <code>cpack</code> from the command line.</dd>
+<dt>&bull;</dt>
+<dd>When using <code>ExternalProject</code>, it might be required during the build phase, since the external project&#8217;s own configure, build and install steps will execute during the main project&#8217;s build phase. </dd>
 <p> Given the above, it is recommended to set the environment variable consistently across all phases (configure, build and install).</dl>
 <h3>Caveats</h3>
 <p>Use this environment variable with caution. The following highlights some points to be considered:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_INSTALL_MODE</code> only affects files, not directories.</p>
-<dt>&bull;</p>
-<dd>Symbolic links are not available on all platforms.</p>
-<dt>&bull;</p>
-<dd>The way this environment variable interacts with the install step of <code>ExternalProject</code> is more complex. For further details, see that module&#8217;s documentation.</p>
-<dt>&bull;</p>
-<dd>A symbolic link ties the destination to the source in a persistent way. Writing to either of the two affects both file system objects. This is in contrast to normal install behavior which only copies files as they were at the time the install was performed, with no enduring relationship between the source and destination of the install.</p>
-<dt>&bull;</p>
-<dd>Combining <code>CMAKE_INSTALL_MODE</code> with <code>IOS_INSTALL_COMBINED</code> is not supported.</p>
-<dt>&bull;</p>
-<dd>Changing <code>CMAKE_INSTALL_MODE</code> from what it was on a previous run can lead to unexpected results. Moving from a non-symlinking mode to a symlinking mode will discard any previous file at the destination, but the reverse is not true. Once a symlink exists at the destination, even if you switch to a non-symlink mode, the symlink will continue to exist at the destination and will not be replaced by an actual file.</dl>
+<dt>&bull;</dt>
+<dd><code>CMAKE_INSTALL_MODE</code> only affects files, not directories.</dd>
+<dt>&bull;</dt>
+<dd>Symbolic links are not available on all platforms.</dd>
+<dt>&bull;</dt>
+<dd>The way this environment variable interacts with the install step of <code>ExternalProject</code> is more complex. For further details, see that module&#8217;s documentation.</dd>
+<dt>&bull;</dt>
+<dd>A symbolic link ties the destination to the source in a persistent way. Writing to either of the two affects both file system objects. This is in contrast to normal install behavior which only copies files as they were at the time the install was performed, with no enduring relationship between the source and destination of the install.</dd>
+<dt>&bull;</dt>
+<dd>Combining <code>CMAKE_INSTALL_MODE</code> with <code>IOS_INSTALL_COMBINED</code> is not supported.</dd>
+<dt>&bull;</dt>
+<dd>Changing <code>CMAKE_INSTALL_MODE</code> from what it was on a previous run can lead to unexpected results. Moving from a non-symlinking mode to a symlinking mode will discard any previous file at the destination, but the reverse is not true. Once a symlink exists at the destination, even if you switch to a non-symlink mode, the symlink will continue to exist at the destination and will not be replaced by an actual file.</dd></dl>
 <h3>CMAKE_&lt;LANG&gt;_COMPILER_LAUNCHER</h3>
 <p>New in version 3.17. </p>
 <p> This is a CMake Environment Variable. Its initial value is taken from the calling process environment. </p>
@@ -306,16 +306,16 @@ description: "cmake-env-variables – CMake Environment Variables Reference"
 <p> Determines what colors are used by the CMake curses interface, when run on a terminal that supports colors. The syntax follows the same conventions as <code>LS_COLORS</code>; that is, a list of key/value pairs separated by <code>:</code>. </p>
 <p> Keys are a single letter corresponding to a CMake cache variable type:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>s</code>: A <code>STRING</code>.</p>
-<dt>&bull;</p>
-<dd><code>p</code>: A <code>FILEPATH</code>.</p>
-<dt>&bull;</p>
-<dd><code>c</code>: A value which has an associated list of choices.</p>
-<dt>&bull;</p>
-<dd><code>y</code>: A <code>BOOL</code> which has a true-like value (e.g. <code>ON</code>, <code>YES</code>).</p>
-<dt>&bull;</p>
-<dd><code>n</code>: A <code>BOOL</code> which has a false-like value (e.g. <code>OFF</code>, <code>NO</code>). </p>
+<dt>&bull;</dt>
+<dd><code>s</code>: A <code>STRING</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>p</code>: A <code>FILEPATH</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>c</code>: A value which has an associated list of choices.</dd>
+<dt>&bull;</dt>
+<dd><code>y</code>: A <code>BOOL</code> which has a true-like value (e.g. <code>ON</code>, <code>YES</code>).</dd>
+<dt>&bull;</dt>
+<dd><code>n</code>: A <code>BOOL</code> which has a false-like value (e.g. <code>OFF</code>, <code>NO</code>). </dd>
 <p> Values are an integer number that specifies what color to use. <code>0</code> is black (you probably don&#8217;t want to use that). Others are determined by your terminal&#8217;s color support. Most (color) terminals will support at least 8 or 16 colors. Some will support up to 256 colors. The colors will likely match <i>this chart</i>, although the first 16 colors may match the original <i>CGA color palette</i>. (Many modern terminal emulators also allow their color palette, at least for the first 16 colors, to be configured by the user.) </p>
 <p> Note that fairly minimal checking is done for bad colors (although a value higher than what curses believes your terminal supports will be silently ignored) or bad syntax. </p>
 <p> For example: </p>

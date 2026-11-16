@@ -25,7 +25,7 @@ description: "systemd-pstore.service, systemd-pstore – A service to archive co
 <dl>
 <dd>
 <pre>Storage=none</pre>
-</dl>
+</dd></dl>
 <p> in <code><a href="/docs/linux/man/5-pstore-conf/">pstore.conf</a></code>(5).</p>
 <h3>Kernel parameters</h3>
 <p>The kernel has two parameters, /sys/module/kernel/parameters/crash_kexec_post_notifiers and /sys/module/printk/parameters/always_kmsg_dump, that control writes into pstore. The first enables storing of the kernel log (including stack trace) into pstore upon a panic or crash, and the second enables storing of the kernel log upon a normal shutdown (shutdown, reboot, halt). These parameters can be managed via the <code><a href="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></code>(5) mechanism, specifically the file /usr/lib/tmpfiles/systemd-pstore.conf.</p>

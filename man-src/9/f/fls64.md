@@ -15,7 +15,7 @@ fls64 - find last set bit in a 64-bit word
 <h2>Arguments</h2>
 
 <i>x</i>
-<dl><dd><dd>the word to search</dl>
+<dl><dd></dd><dd>the word to search</dd></dl>
 
 <h2>Description</h2>
 

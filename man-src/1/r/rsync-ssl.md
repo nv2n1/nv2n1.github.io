@@ -23,51 +23,51 @@ rsync-ssl [--type=SSL_TYPE] RSYNC_ARGS
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The ssl helper scripts are affected by the following environment variables: </p>
 <dl>
-<dt><code>RSYNC_SSL_TYPE</code></p>
-<dd> Specifies the program type that should be used to open the ssl connection. It must be one of <code>openssl</code> or <code>stunnel</code>. The <code>&#8211;type=SSL_TYPE</code> option overrides this, when specified.</p>
-<dt><code>RSYNC_SSL_PORT</code></p>
-<dd> If specified, the value is the port number that is used as the default when the user does not specify a port in their rsync command. When not specified, the default port number is 874. (Note that older rsync versions (prior to 3.2.0) did not communicate an overriding port number value to the helper script.)</p>
-<dt><code>RSYNC_SSL_CERT</code></p>
-<dd> If specified, the value is a filename that contains a certificate to use for the connection.</p>
-<dt><code>RSYNC_SSL_KEY</code></p>
-<dd> If specified, the value is a filename that contains a key for the provided certificate to use for the connection.</p>
-<dt><code>RSYNC_SSL_CA_CERT</code></p>
-<dd> If specified, the value is a filename that contains a certificate authority certificate that is used to validate the connection.</p>
-<dt><code>RSYNC_SSL_OPENSSL</code></p>
-<dd> Specifies the openssl executable to run when the connection type is set to openssl. If unspecified, the $PATH is searched for &quot;openssl&quot;.</p>
-<dt><code>RSYNC_SSL_GNUTLS</code></p>
-<dd> Specifies the gnutls-cli executable to run when the connection type is set to gnutls. If unspecified, the $PATH is searched for &quot;gnutls-cli&quot;.</p>
-<dt><code>RSYNC_SSL_STUNNEL</code></p>
-<dd> Specifies the stunnel executable to run when the connection type is set to stunnel. If unspecified, the $PATH is searched first for &quot;stunnel4&quot; and then for &quot;stunnel&quot;.</dl>
+<dt><code>RSYNC_SSL_TYPE</code></dt>
+<dd> Specifies the program type that should be used to open the ssl connection. It must be one of <code>openssl</code> or <code>stunnel</code>. The <code>&#8211;type=SSL_TYPE</code> option overrides this, when specified.</dd>
+<dt><code>RSYNC_SSL_PORT</code></dt>
+<dd> If specified, the value is the port number that is used as the default when the user does not specify a port in their rsync command. When not specified, the default port number is 874. (Note that older rsync versions (prior to 3.2.0) did not communicate an overriding port number value to the helper script.)</dd>
+<dt><code>RSYNC_SSL_CERT</code></dt>
+<dd> If specified, the value is a filename that contains a certificate to use for the connection.</dd>
+<dt><code>RSYNC_SSL_KEY</code></dt>
+<dd> If specified, the value is a filename that contains a key for the provided certificate to use for the connection.</dd>
+<dt><code>RSYNC_SSL_CA_CERT</code></dt>
+<dd> If specified, the value is a filename that contains a certificate authority certificate that is used to validate the connection.</dd>
+<dt><code>RSYNC_SSL_OPENSSL</code></dt>
+<dd> Specifies the openssl executable to run when the connection type is set to openssl. If unspecified, the $PATH is searched for &quot;openssl&quot;.</dd>
+<dt><code>RSYNC_SSL_GNUTLS</code></dt>
+<dd> Specifies the gnutls-cli executable to run when the connection type is set to gnutls. If unspecified, the $PATH is searched for &quot;gnutls-cli&quot;.</dd>
+<dt><code>RSYNC_SSL_STUNNEL</code></dt>
+<dd> Specifies the stunnel executable to run when the connection type is set to stunnel. If unspecified, the $PATH is searched first for &quot;stunnel4&quot; and then for &quot;stunnel&quot;.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rsync-ssl -aiv example.com::mod/ dest
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rsync-ssl --type=openssl -aiv example.com::mod/ dest
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rsync-ssl -aiv --port 9874 example.com::mod/ dest
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 rsync-ssl -aiv <a href="rsync://example.com:9874/mod/">rsync://example.com:9874/mod/</a> dest
 </pre>
-</dl>
+</dd></dl>
 <h2>THE SERVER SIDE</h2>
 <p> For help setting up an SSL/TLS supporting rsync, see the instructions in rsyncd.conf. </p>
 <h2>SEE ALSO</h2>

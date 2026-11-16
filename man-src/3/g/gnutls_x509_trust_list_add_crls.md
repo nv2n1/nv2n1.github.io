@@ -14,16 +14,16 @@ description: "gnutls_x509_trust_list_add_crls – API function"
 <p> <code>int gnutls_x509_trust_list_add_crls(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_x509_crl_t * </code><i>crl_list</i><code>, int </code><i>crl_size</i><code>, unsigned int </code><i>flags</i><code>, unsigned int </code><i>verification_flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_trust_list_t list</p>
-<dd> The structure of the list</p>
-<dt>const gnutls_x509_crl_t * crl_list</p>
-<dd> A list of CRLs</p>
-<dt>int crl_size</p>
-<dd> The length of the CRL list</p>
-<dt>unsigned int flags</p>
-<dd> if GNUTLS_TL_VERIFY_CRL is given the CRLs will be verified before being added.</p>
-<dt>unsigned int verification_flags</p>
-<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dl>
+<dt>gnutls_x509_trust_list_t list</dt>
+<dd> The structure of the list</dd>
+<dt>const gnutls_x509_crl_t * crl_list</dt>
+<dd> A list of CRLs</dd>
+<dt>int crl_size</dt>
+<dd> The length of the CRL list</dd>
+<dt>unsigned int flags</dt>
+<dd> if GNUTLS_TL_VERIFY_CRL is given the CRLs will be verified before being added.</dd>
+<dt>unsigned int verification_flags</dt>
+<dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will add the given certificate revocation lists to the trusted list. The list of CRLs must not be deinitialized during this structure&#8217;s lifetime. </p>
 <p> This function must be called after <code>gnutls_x509_trust_list_add_cas()</code> to allow verifying the CRLs for validity. If the flag <code>GNUTLS_TL_NO_DUPLICATES</code> is given, then any provided CRLs that are a duplicate, will be deinitialized and not added to the list (that assumes that <code>gnutls_x509_trust_list_deinit()</code> will be called with all=1).</p>
@@ -40,6 +40,6 @@ description: "gnutls_x509_trust_list_add_crls – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

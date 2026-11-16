@@ -15,27 +15,27 @@ snd_soc_card_jack_new - Create a new jack
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>ASoC card</dl>
+<dl><dd></dd><dd>ASoC card</dd></dl>
  
 
  <i>id</i>
-<dl><dd>an identifying string for this jack</dl>
+<dl><dd>an identifying string for this jack</dd></dl>
  
 
  <i>type</i>
-<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this jack</dl>
+<dl><dd>a bitmask of enum snd_jack_type values that can be detected by this jack</dd></dl>
  
 
  <i>jack</i>
-<dl><dd>structure to use for the jack</dl>
+<dl><dd>structure to use for the jack</dd></dl>
  
 
  <i>pins</i>
-<dl><dd>Array of jack pins to be added to the jack or NULL</dl>
+<dl><dd>Array of jack pins to be added to the jack or NULL</dd></dl>
  
 
  <i>num_pins</i>
-<dl><dd>Number of elements in the <i>pins</i> array</dl>
+<dl><dd>Number of elements in the <i>pins</i> array</dd></dl>
 
 <h2>Description</h2>
 

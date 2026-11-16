@@ -14,13 +14,13 @@ description: "crypto_alloc_ahash – allocate ahash cipher handle"
 <p><i>alg_name</i></p>
 <dl>
 <dd>
-<dd>is the cra_name / name or cra_driver_name / driver name of the ahash cipher</dl>
+</dd><dd>is the cra_name / name or cra_driver_name / driver name of the ahash cipher</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>specifies the type of the cipher</dl>
+<dd>specifies the type of the cipher</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>specifies the mask for the cipher</dl>
+<dd>specifies the mask for the cipher</dd></dl>
 <h2>Description</h2>
 <p>Allocate a cipher handle for an ahash. The returned struct crypto_ahash is the cipher handle that is required for any subsequent API invocation for that ahash.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "crypto_alloc_ahash – allocate ahash cipher handle"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

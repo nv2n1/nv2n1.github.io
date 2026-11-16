@@ -14,16 +14,16 @@ description: "chroot – run command or interactive shell with special root dire
 <h2>Description</h2>
 <p>Run COMMAND with root directory set to NEWROOT.</p>
 <dl>
-<dt><code>&#8211;groups</code>=<i>,G_LIST/</i></p>
-<dd>specify supplementary groups as g1,g2,..,gN</p>
-<dt><code>&#8211;userspec</code>=<i>,USER/</i>:GROUP</p>
-<dd>specify user and group (ID or name) to use</p>
-<dt><code>&#8211;skip-chdir</code></p>
-<dd>do not change working directory to &#8216;/&#8217;</p>
-<dt><code>&#8211;help</code></p>
-<dd>display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+<dt><code>&#8211;groups</code>=<i>,G_LIST/</i></dt>
+<dd>specify supplementary groups as g1,g2,..,gN</dd>
+<dt><code>&#8211;userspec</code>=<i>,USER/</i>:GROUP</dt>
+<dd>specify user and group (ID or name) to use</dd>
+<dt><code>&#8211;skip-chdir</code></dt>
+<dd>do not change working directory to &#8216;/&#8217;</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <p> If no command is given, run &#8216;&quot;$SHELL&quot; <code>-i</code>&#8216; (default: &#8216;/bin/sh <code>-i</code>&#8216;).</p>
 <h2>Author</h2>
 <p>Written by Roland McGrath.</p>

@@ -16,16 +16,16 @@ description: "slabtop – display kernel slab cache information in real time"
 <h2>OPTIONS</h2>
 <p> Normal invocation of <code>slabtop</code> does not require any options. The behavior, however, can be fine-tuned by specifying one or more of the following flags:</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;delay</code>=<i>N</i></p>
-<dd> Refresh the display every <i>n</i> in seconds. By default, <code>slabtop</code> refreshes the display every three seconds. To exit the program, hit <code>q.</code></p>
-<dt><code>-s</code>, <code>&#8211;sort</code>=<i>S</i></p>
-<dd> Sort by <i>S</i>, where <i>S</i> is one of the sort criteria.</p>
-<dt><code>-o</code>, <code>&#8211;once</code></p>
-<dd> Display the output once and then exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</dl>
+<dt><code>-d</code>, <code>&#8211;delay</code>=<i>N</i></dt>
+<dd> Refresh the display every <i>n</i> in seconds. By default, <code>slabtop</code> refreshes the display every three seconds. To exit the program, hit <code>q.</code></dd>
+<dt><code>-s</code>, <code>&#8211;sort</code>=<i>S</i></dt>
+<dd> Sort by <i>S</i>, where <i>S</i> is one of the sort criteria.</dd>
+<dt><code>-o</code>, <code>&#8211;once</code></dt>
+<dd> Display the output once and then exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd></dl>
 <h2>SORT CRITERIA</h2>
 <p> The following are valid sort criteria used to sort the individual slab caches and thereby determine what are the &quot;top&quot; slab caches to display. The default sort criteria is to sort by the number of objects (&quot;o&quot;). </p>
 <p> The sort criteria can also be changed while <code>slabtop</code> is running by pressing the associated character. </p>
@@ -101,14 +101,14 @@ description: "slabtop – display kernel slab cache information in real time"
 <p> <code>slabtop</code> accepts keyboard commands from the user during use. The following are supported. In the case of letters, both cases are accepted. </p>
 <p> Each of the valid sort characters are also accepted, to change the sort routine. See the section <code>SORT CRITERIA</code>.</p>
 <dl>
-<dt><code>&lt;SPACEBAR&gt;</code></p>
-<dd> Refresh the screen.</p>
-<dt><code>Q</code></p>
-<dd> Quit the program.</dl>
+<dt><code>&lt;SPACEBAR&gt;</code></dt>
+<dd> Refresh the screen.</dd>
+<dt><code>Q</code></dt>
+<dd> Quit the program.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/proc/slabinfo</i></p>
-<dd> slab information</dl>
+<dt><i>/proc/slabinfo</i></dt>
+<dd> slab information</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-free/">free</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8)</p>
 <h2>NOTES</h2>

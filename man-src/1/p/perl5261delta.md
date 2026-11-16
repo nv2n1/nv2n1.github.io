@@ -24,67 +24,61 @@ description: "perl5261delta – what is new for perl v5.26.1"
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> base has been upgraded from version 2.25 to 2.26. </p>
+<dt>&bull;</dt>
+<dd> base has been upgraded from version 2.25 to 2.26. </dd>
 <p> The effects of dotless <tt>@INC</tt> on this module have been limited by the introduction of a more refined and accurate solution for removing <tt>'.'</tt> from <tt>@INC</tt> while reducing the false positives.</p>
-<dt>&bull;</p>
-<dd> charnames has been upgraded from version 1.44 to 1.45.</p>
-<dt>&bull;</p>
-<dd> Module::CoreList has been upgraded from version 5.20170530 to 5.20170922_26.</dl>
+<dt>&bull;</dt>
+<dd> charnames has been upgraded from version 1.44 to 1.45.</dd>
+<dt>&bull;</dt>
+<dd> Module::CoreList has been upgraded from version 5.20170530 to 5.20170922_26.</dd></dl>
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt>FreeBSD</p>
+<dt>FreeBSD</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>&bull;</p>
-<dd> Building with <code>g++</code> on FreeBSD-11.0 has been fixed. [perl #131337] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131337">https://rt.perl.org/Public/Bug/Display.html?id=131337</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> Building with <code>g++</code> on FreeBSD-11.0 has been fixed. [perl #131337] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131337">https://rt.perl.org/Public/Bug/Display.html?id=131337</a>&gt;</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Windows</p>
+</dl>
+<dt>Windows</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>&bull;</p>
-<dd> Support for compiling perl on Windows using Microsoft Visual Studio 2017 (containing Visual C<font SIZE="-2">++</font> 14.1) has been added.</p>
-<dt>&bull;</p>
-<dd> Building <font SIZE="-1">XS</font> modules with <font SIZE="-1">GCC 6</font> in a 64-bit build of Perl failed due to incorrect mapping of <tt>&quot;strtoll&quot;</tt> and <tt>&quot;strtoull&quot;</tt>. This has now been fixed. [perl #131726] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131726">https://rt.perl.org/Public/Bug/Display.html?id=131726</a>&gt; [cpan #121683] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=121683">https://rt.cpan.org/Public/Bug/Display.html?id=121683</a>&gt; [cpan #122353] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=122353">https://rt.cpan.org/Public/Bug/Display.html?id=122353</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> Support for compiling perl on Windows using Microsoft Visual Studio 2017 (containing Visual C<font SIZE="-2">++</font> 14.1) has been added.</dd>
+<dt>&bull;</dt>
+<dd> Building <font SIZE="-1">XS</font> modules with <font SIZE="-1">GCC 6</font> in a 64-bit build of Perl failed due to incorrect mapping of <tt>&quot;strtoll&quot;</tt> and <tt>&quot;strtoull&quot;</tt>. This has now been fixed. [perl #131726] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131726">https://rt.perl.org/Public/Bug/Display.html?id=131726</a>&gt; [cpan #121683] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=121683">https://rt.cpan.org/Public/Bug/Display.html?id=121683</a>&gt; [cpan #122353] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=122353">https://rt.cpan.org/Public/Bug/Display.html?id=122353</a>&gt;</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Several built-in functions previously had bugs that could cause them to write to the internal stack without allocating room for the item being written. In rare situations, this could have led to a crash. These bugs have now been fixed, and if any similar bugs are introduced in future, they will be detected automatically in debugging builds. [perl #131732] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131732">https://rt.perl.org/Public/Bug/Display.html?id=131732</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Using a symbolic ref with postderef syntax as the key in a hash lookup was yielding an assertion failure on debugging builds. [perl #131627] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131627">https://rt.perl.org/Public/Bug/Display.html?id=131627</a>&gt;</p>
-<dt>&bull;</p>
-<dd> List assignment (<tt>&quot;aassign&quot;</tt>) could in some rare cases allocate an entry on the mortal stack and leave the entry uninitialized. [perl #131570] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131570">https://rt.perl.org/Public/Bug/Display.html?id=131570</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Attempting to apply an attribute to an <tt>&quot;our&quot;</tt> variable where a function of that name already exists could result in a <font SIZE="-1">NULL</font> pointer being supplied where an <font SIZE="-1">SV</font> was expected, crashing perl. [perl #131597] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131597">https://rt.perl.org/Public/Bug/Display.html?id=131597</a>&gt;</p>
-<dt>&bull;</p>
-<dd> The code that vivifies a typeglob out of a code ref made some false assumptions that could lead to a crash in cases such as <tt>$::{&quot;A&quot;} = sub {}; \&amp;{&quot;A&quot;}</tt>. This has now been fixed. [perl #131085] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131085">https://rt.perl.org/Public/Bug/Display.html?id=131085</a>&gt;</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;my_atof2&quot;</tt> no longer reads beyond the terminating <font SIZE="-1">NUL,</font> which previously occurred if the decimal point is immediately before the <font SIZE="-1">NUL.</font> [perl #131526] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131526">https://rt.perl.org/Public/Bug/Display.html?id=131526</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Occasional &#8220;Malformed <font SIZE="-1">UTF-8</font> character&#8221; crashes in <tt>&quot;s//&quot;</tt> on utf8 strings have been fixed. [perl #131575] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131575">https://rt.perl.org/Public/Bug/Display.html?id=131575</a>&gt;</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;perldoc -f s&quot;</tt> now finds <tt>&quot;s///&quot;</tt>. [perl #131371] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131371">https://rt.perl.org/Public/Bug/Display.html?id=131371</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Some erroneous warnings after utf8 conversion have been fixed. [perl #131190] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131190">https://rt.perl.org/Public/Bug/Display.html?id=131190</a>&gt;</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;jmpenv&quot;</tt> frame to catch Perl exceptions is set up lazily, and this used to be a bit too lazy. The catcher is now set up earlier, preventing some possible crashes. [perl #105930] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=105930">https://rt.perl.org/Public/Bug/Display.html?id=105930</a>&gt;</p>
-<dt>&bull;</p>
-<dd> Spurious &#8220;Assuming <font SIZE="-1">NOT</font> a <font SIZE="-1">POSIX</font> class&#8221; warnings have been removed. [perl #131522] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131522">https://rt.perl.org/Public/Bug/Display.html?id=131522</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> Several built-in functions previously had bugs that could cause them to write to the internal stack without allocating room for the item being written. In rare situations, this could have led to a crash. These bugs have now been fixed, and if any similar bugs are introduced in future, they will be detected automatically in debugging builds. [perl #131732] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131732">https://rt.perl.org/Public/Bug/Display.html?id=131732</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Using a symbolic ref with postderef syntax as the key in a hash lookup was yielding an assertion failure on debugging builds. [perl #131627] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131627">https://rt.perl.org/Public/Bug/Display.html?id=131627</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> List assignment (<tt>&quot;aassign&quot;</tt>) could in some rare cases allocate an entry on the mortal stack and leave the entry uninitialized. [perl #131570] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131570">https://rt.perl.org/Public/Bug/Display.html?id=131570</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Attempting to apply an attribute to an <tt>&quot;our&quot;</tt> variable where a function of that name already exists could result in a <font SIZE="-1">NULL</font> pointer being supplied where an <font SIZE="-1">SV</font> was expected, crashing perl. [perl #131597] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131597">https://rt.perl.org/Public/Bug/Display.html?id=131597</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> The code that vivifies a typeglob out of a code ref made some false assumptions that could lead to a crash in cases such as <tt>$::{&quot;A&quot;} = sub {}; \&amp;{&quot;A&quot;}</tt>. This has now been fixed. [perl #131085] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131085">https://rt.perl.org/Public/Bug/Display.html?id=131085</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;my_atof2&quot;</tt> no longer reads beyond the terminating <font SIZE="-1">NUL,</font> which previously occurred if the decimal point is immediately before the <font SIZE="-1">NUL.</font> [perl #131526] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131526">https://rt.perl.org/Public/Bug/Display.html?id=131526</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Occasional &#8220;Malformed <font SIZE="-1">UTF-8</font> character&#8221; crashes in <tt>&quot;s//&quot;</tt> on utf8 strings have been fixed. [perl #131575] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131575">https://rt.perl.org/Public/Bug/Display.html?id=131575</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;perldoc -f s&quot;</tt> now finds <tt>&quot;s///&quot;</tt>. [perl #131371] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131371">https://rt.perl.org/Public/Bug/Display.html?id=131371</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Some erroneous warnings after utf8 conversion have been fixed. [perl #131190] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131190">https://rt.perl.org/Public/Bug/Display.html?id=131190</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;jmpenv&quot;</tt> frame to catch Perl exceptions is set up lazily, and this used to be a bit too lazy. The catcher is now set up earlier, preventing some possible crashes. [perl #105930] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=105930">https://rt.perl.org/Public/Bug/Display.html?id=105930</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> Spurious &#8220;Assuming <font SIZE="-1">NOT</font> a <font SIZE="-1">POSIX</font> class&#8221; warnings have been removed. [perl #131522] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131522">https://rt.perl.org/Public/Bug/Display.html?id=131522</a>&gt;</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.26.1 represents approximately 4 months of development since Perl 5.26.0 and contains approximately 8,900 lines of changes across 85 files from 23 authors. </p>
 <p> Excluding auto-generated files, documentation and release tools, there were approximately 990 lines of changes to 38 .pm, .t, .c and .h files. </p>
@@ -109,19 +103,19 @@ description: "perl5261delta – what is new for perl v5.26.1"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Incompatible Changes</a></p>
+<dt><a href="#lbAH">Incompatible Changes</a></dt>
 <dd>
-<dt><a href="#lbAI">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAI">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAK">Platform Support</a></p>
+</dd><dt><a href="#lbAK">Platform Support</a></dt>
 <dd>
-<dt><a href="#lbAM">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbAM">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbAN">Acknowledgements</a></p>
+</dd><dt><a href="#lbAN">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbAO">Reporting Bugs</a></p>
+</dd><dt><a href="#lbAO">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbAP">Give Thanks</a></p>
+</dd><dt><a href="#lbAP">Give Thanks</a></dt>
 <dd>
-<dt><a href="#lbAQ">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAQ">SEE ALSO</a></dt>
+<dd></dd></dl>

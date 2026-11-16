@@ -11,7 +11,6 @@ std::variant_npos - std::variant_npos
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;variant&gt;
-
 inline constexpr std::size_t variant_npos = -1;  (since C++17)</code></pre> 
 This is a special value equal to the largest value representable by the type std::size_t, used as the return type of index() when valueless_by_exception() is true 
 

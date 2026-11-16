@@ -15,11 +15,11 @@ pci_find_ht_capability - query a device's Hypertransport capabilities
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to query</dl>
+<dl><dd></dd><dd>PCI device to query</dd></dl>
  
 
  <i>ht_cap</i>
-<dl><dd>Hypertransport capability code</dl>
+<dl><dd>Hypertransport capability code</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,14 +14,14 @@ description: "scsi_complete_async_scans – Wait for asynchronous scans to compl
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Description</h2>
 <p>When this function returns, any host which started scanning before this function was called will have finished its scan. Hosts which started scanning after this function was called may or may not have finished.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

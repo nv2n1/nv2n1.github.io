@@ -15,16 +15,16 @@ description: "DROP OPERATOR FAMILY – remove an operator family"
 <p> <code>DROP OPERATOR FAMILY</code> includes dropping any operator classes contained in the family, but it does not drop any of the operators or functions referenced by the family. If there are any indexes depending on operator classes within the family, you will need to specify CASCADE for the drop to complete.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the operator family does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing operator family.</p>
-<dt><i>index_method</i></p>
-<dd>The name of the index access method the operator family is for.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the operator family.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the operator family if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the operator family does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator family.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index access method the operator family is for.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the operator family.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the operator family if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Remove the B-tree operator family float_ops: </p>
 <pre>DROP OPERATOR FAMILY float_ops USING btree;</pre>

@@ -25,39 +25,39 @@ description: "struct_sublog – subchannel logout area"
 <h2>Members</h2>
 <p>res0</p>
 <dl>
-<dd>reserved</dl>
+<dd>reserved</dd></dl>
 <p> esf</p>
 <dl>
-<dd>extended status flags</dl>
+<dd>extended status flags</dd></dl>
 <p> lpum</p>
 <dl>
-<dd>last path used mask</dl>
+<dd>last path used mask</dd></dl>
 <p> arep</p>
 <dl>
-<dd>ancillary report</dl>
+<dd>ancillary report</dd></dl>
 <p> fvf</p>
 <dl>
-<dd>field-validity flags</dl>
+<dd>field-validity flags</dd></dl>
 <p> sacc</p>
 <dl>
-<dd>storage access code</dl>
+<dd>storage access code</dd></dl>
 <p> termc</p>
 <dl>
-<dd>termination code</dl>
+<dd>termination code</dd></dl>
 <p> devsc</p>
 <dl>
-<dd>device-status check</dl>
+<dd>device-status check</dd></dl>
 <p> serr</p>
 <dl>
-<dd>secondary error</dl>
+<dd>secondary error</dd></dl>
 <p> ioerr</p>
 <dl>
-<dd>i/o-error alert</dl>
+<dd>i/o-error alert</dd></dl>
 <p> seqc</p>
 <dl>
-<dd>sequence code</dl>
+<dd>sequence code</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

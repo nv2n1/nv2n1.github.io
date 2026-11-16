@@ -117,22 +117,22 @@ description: "rpcd_selinux – Security Enhanced Linux Policy for the rpcd proce
 <p> <code>rpcd_exec_t</code> </p>
 <p> &#8211; Set files with the rpcd_exec_t type, if you want to transition an executable to the rpcd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/rpc..*, /usr/sbin/rpc..*, /sbin/sm-notify, /usr/sbin/sm-notify, /usr/sbin/rpc.idmapd, /usr/sbin/rpc.rquotad </p>
+<dt>Paths:</dt>
+<dd>/sbin/rpc..*, /usr/sbin/rpc..*, /sbin/sm-notify, /usr/sbin/sm-notify, /usr/sbin/rpc.idmapd, /usr/sbin/rpc.rquotad </dd>
 </dl>
 <p> <code>rpcd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the rpcd_initrc_exec_t type, if you want to transition an executable to the rpcd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/nfslock, /etc/rc.d/init.d/rpcidmapd </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/nfslock, /etc/rc.d/init.d/rpcidmapd </dd>
 </dl>
 <p> <code>rpcd_unit_file_t</code> </p>
 <p> &#8211; Set files with the rpcd_unit_file_t type, if you want to treat the files as rpcd unit content. </p>
 <p> <code>rpcd_var_run_t</code> </p>
 <p> &#8211; Set files with the rpcd_var_run_t type, if you want to store the rpcd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/sm-notify.*, /var/run/rpc.statd(/.*)?, /var/run/rpc.statd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/sm-notify.*, /var/run/rpc.statd(/.*)?, /var/run/rpc.statd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

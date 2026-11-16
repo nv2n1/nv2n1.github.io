@@ -15,18 +15,18 @@ description: "transmission-create – command-line utility to create .torrent fi
 <p> creates BitTorrent .torrent files from the command line</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show a short help page and exit.</p>
-<dt><code>-o &#8211;outfile</code></p>
-<dd> Save the generated .torrent to this filename.</p>
-<dt><code>-p &#8211;private</code></p>
-<dd> Flag the torrent as intended for use on private trackers.</p>
-<dt><code>-c &#8211;comment</code></p>
-<dd> Add a comment to the torrent file.</p>
-<dt><code>-s &#8211;piecesize</code></p>
-<dd> Set how many KiB each piece should be, overriding the preferred default</p>
-<dt><code>-t &#8211;tracker</code></p>
-<dd> Add a tracker&#8217;s <i>announce URL</i> to the .torrent. Most torrents will have at least one <i>announce URL.</i> To add more than one, use this option multiple times.</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show a short help page and exit.</dd>
+<dt><code>-o &#8211;outfile</code></dt>
+<dd> Save the generated .torrent to this filename.</dd>
+<dt><code>-p &#8211;private</code></dt>
+<dd> Flag the torrent as intended for use on private trackers.</dd>
+<dt><code>-c &#8211;comment</code></dt>
+<dd> Add a comment to the torrent file.</dd>
+<dt><code>-s &#8211;piecesize</code></dt>
+<dd> Set how many KiB each piece should be, overriding the preferred default</dd>
+<dt><code>-t &#8211;tracker</code></dt>
+<dd> Add a tracker&#8217;s <i>announce URL</i> to the .torrent. Most torrents will have at least one <i>announce URL.</i> To add more than one, use this option multiple times.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit An Jordan Lee</p>
 <h2>SEE ALSO</h2>

@@ -104,41 +104,41 @@ XF86VidModeGetGammaRampSize(
  Display *<i>display</i>,
  int <i>screen</i>,
  int *<i>size</i>);</pre><h2>Arguments</h2><dl COMPACT><dt><i>display</i>
-<dd>Specifies the connection to the X server.
-<dt><i>screen</i>
-<dd>Specifies which screen number the setting apply to.
-<dt><i>event_base_return</i>
-<dd>Returns the base event number for the extension.
-<dt><i>error_base_return</i>
-<dd>Returns the base error number for the extension.
-<dt><i>major_version_return</i>
-<dd>Returns the major version number of the extension.
-<dt><i>minor_version_return</i>
-<dd>Returns the minor version number of the extension.
-<dt><i>dotclock_return</i>
-<dd>Returns the clock for the mode line.
-<dt><i>modecount_return</i>
-<dd>Returns the number of video modes available in the server.
-<dt><i>zoom</i>
-<dd>If greater than zero, indicates that the server should switch to the next mode, otherwise switch to the previous mode.
-<dt><i>lock</i>
-<dd>Indicates that mode switching should be locked, if non-zero.
-<dt><i>modeline</i>
-<dd>Specifies or returns the timing values for a video mode.
-<dt><i>aftermode</i>
-<dd>Specifies the timing values for the video mode after which the new mode will added.
-<dt><i>modesinfo</i>
-<dd>Returns the timing values and dotclocks for all of the available video modes.
-<dt><i>monitor</i>
-<dd>Returns information about the monitor.
-<dt><i>x</i>
-<dd>Specifies the desired X location for the viewport.
-<dt><i>x_return</i>
-<dd>Returns the current X location of the viewport.
-<dt><i>y</i>
-<dd>Specifies the desired Y location for the viewport.
-<dt><i>y_return</i>
-<dd>Returns the current Y location of the viewport.</dl><h2>Structures</h2><i>Video Mode Settings:</i>
+</dt><dd>Specifies the connection to the X server.
+</dd><dt><i>screen</i>
+</dt><dd>Specifies which screen number the setting apply to.
+</dd><dt><i>event_base_return</i>
+</dt><dd>Returns the base event number for the extension.
+</dd><dt><i>error_base_return</i>
+</dt><dd>Returns the base error number for the extension.
+</dd><dt><i>major_version_return</i>
+</dt><dd>Returns the major version number of the extension.
+</dd><dt><i>minor_version_return</i>
+</dt><dd>Returns the minor version number of the extension.
+</dd><dt><i>dotclock_return</i>
+</dt><dd>Returns the clock for the mode line.
+</dd><dt><i>modecount_return</i>
+</dt><dd>Returns the number of video modes available in the server.
+</dd><dt><i>zoom</i>
+</dt><dd>If greater than zero, indicates that the server should switch to the next mode, otherwise switch to the previous mode.
+</dd><dt><i>lock</i>
+</dt><dd>Indicates that mode switching should be locked, if non-zero.
+</dd><dt><i>modeline</i>
+</dt><dd>Specifies or returns the timing values for a video mode.
+</dd><dt><i>aftermode</i>
+</dt><dd>Specifies the timing values for the video mode after which the new mode will added.
+</dd><dt><i>modesinfo</i>
+</dt><dd>Returns the timing values and dotclocks for all of the available video modes.
+</dd><dt><i>monitor</i>
+</dt><dd>Returns information about the monitor.
+</dd><dt><i>x</i>
+</dt><dd>Specifies the desired X location for the viewport.
+</dd><dt><i>x_return</i>
+</dt><dd>Returns the current X location of the viewport.
+</dd><dt><i>y</i>
+</dt><dd>Specifies the desired Y location for the viewport.
+</dd><dt><i>y_return</i>
+</dt><dd>Returns the current Y location of the viewport.</dd></dl><h2>Structures</h2><i>Video Mode Settings:</i>
 <dl COMPACT><dd><pre>typedef struct {
  unsigned short hdisplay; /* Number of display pixels horizontally */
  unsigned short hsyncstart; /* Horizontal sync start */
@@ -165,7 +165,7 @@ typedef struct {
  unsigned int flags; /* Mode flags */
  int privsize; /* Size of private */
  INT32 *private; /* Server privates */
-} XF86VidModeModeInfo;</pre></dl>
+} XF86VidModeModeInfo;</pre></dd></dl>
  
 
  <i>Monitor information:</i>
@@ -197,7 +197,7 @@ typedef struct {
  float red; /* Red Gamma value */
  float green; /* Green Gamma value */
  float blue; /* Blue Gamma value */
-} XF86VidModeGamma;</pre></dl><h2>Description</h2>These functions provide an interface to the server extension <i>XFree86-VidModeExtension</i> which allows the video modes to be queried and adjusted dynamically and mode switching to be controlled. Applications that use these functions must be linked with <i>-lXxf86vm</i>
+} XF86VidModeGamma;</pre></dd></dl><h2>Description</h2>These functions provide an interface to the server extension <i>XFree86-VidModeExtension</i> which allows the video modes to be queried and adjusted dynamically and mode switching to be controlled. Applications that use these functions must be linked with <i>-lXxf86vm</i>
 <h3>Modeline Functions</h3>The <i>XF86VidModeGetModeLine</i> function is used to query the settings for the currently selected video mode. The calling program should pass a pointer to a <i>XF86VidModeModeLine</i> structure that it has already allocated. The function fills in the fields of the structure. 
 
  If there are any server private values (currently only applicable to the S3 server) the function will allocate storage for them. Therefore, if the <i>privsize</i> field is non-zero, the calling program should call <i>Xfree(private)</i> to free the storage. 

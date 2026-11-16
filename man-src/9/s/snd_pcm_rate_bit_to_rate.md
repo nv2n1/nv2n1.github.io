@@ -15,7 +15,7 @@ snd_pcm_rate_bit_to_rate - converts SNDRV_PCM_RATE_xxx bit to sample rate
 <h2>Arguments</h2>
 
 <i>rate_bit</i>
-<dl><dd><dd>the rate bit to convert</dl>
+<dl><dd></dd><dd>the rate bit to convert</dd></dl>
 
 <h2>Return</h2>
 

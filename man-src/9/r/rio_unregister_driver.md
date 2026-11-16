@@ -14,11 +14,11 @@ description: "rio_unregister_driver – unregister a RIO driver"
 <p><i>rdrv</i></p>
 <dl>
 <dd>
-<dd>the RIO driver structure to unregister</dl>
+</dd><dd>the RIO driver structure to unregister</dd></dl>
 <h2>Description</h2>
 <p>Deletes the struct rio_driver from the list of registered RIO drivers, gives it a chance to clean up by calling its <code>remove</code> function for each device it was responsible for, and marks those devices as driverless.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

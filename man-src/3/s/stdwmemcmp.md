@@ -11,7 +11,6 @@ std::wmemcmp - std::wmemcmp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int wmemcmp(const wchar_t *lhs, const wchar_t *rhs, std::size_t count);</code></pre> 
 Compares the first count wide characters of the wide character arrays pointed to by lhs and rhs. The comparison is done lexicographically. 
 The sign of the result is the sign of the difference between the values of the first pair of wide characters that differ in the arrays being compared. 
@@ -35,16 +34,11 @@ This function is not locale-sensitive and pays no attention to the values of the
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;clocale&gt;
 void demo(const wchar_t *lhs, const wchar_t *rhs, std::size_t sz)
-
 {
     std::wcout &lt;&lt; std::wstring(lhs, sz);
     int rc = std::wmemcmp(lhs, rhs, sz);
@@ -57,7 +51,6 @@ void demo(const wchar_t *lhs, const wchar_t *rhs, std::size_t sz)
     std::wcout &lt;&lt; std::wstring(rhs, sz) &lt;&lt; &quot; in lexicographical order\n&quot;;
 }
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::wcout.imbue(std::locale(&quot;en_US.utf8&quot;));

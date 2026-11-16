@@ -11,10 +11,8 @@ std::bit_cast - std::bit_cast
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;bit&gt;
-
     template &lt;class To, class From&gt;
     (since C++ 20)
-
         constexpr To bit_cast(const From &amp;from) noexcept;</code></pre> 
 Obtain a value of type To by reinterpreting the object representation of from. Every bit in the value representation of the returned To object is equal to the corresponding bit in the object representation of from. The values of padding bits in the returned To object are unspecified. 
 If there is no value of type To corresponding to the value representation produced, the behavior is undefined. If there are multiple such values, which value is produced is unspecified. 
@@ -56,18 +54,13 @@ bit_cast(const From &amp;src) noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdint&gt;
-
 #include &lt;bit&gt;
-
 #include &lt;iostream&gt;
 constexpr double f64v = 19880124.0;
-
 constexpr auto u64v = std::bit_cast&lt;std::uint64_t&gt;(f64v);
 constexpr std::uint64_t u64v2 = 0x3fe9000000000000ull;
-
 constexpr auto f64v2 = std::bit_cast&lt;double&gt;(u64v2);
 int main()
-
 {
     std::cout
         &lt;&lt; std::fixed &lt;&lt; f64v &lt;&lt; &quot;f64.to_bits() == 0x&quot;

@@ -11,7 +11,6 @@ description: "ql/math/distributions/normaldistribution.hpp – normal, cumulativ
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/errorfunction.hpp&gt;
-
 #include &lt;ql/errors.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>NormalDistribution</code><br />

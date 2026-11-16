@@ -16,57 +16,57 @@ description: "broctl – interactive shell for managing Bro installations"
 <p> When running <code>broctl</code> for the first time, you must run the <code>broctl</code> <code>deploy</code> command before running any other commands in order to apply the configuration settings. You must also run <code>broctl deploy</code> each time you change the configuration (including any Bro scripts) or upgrade Bro.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>capstats</code> [&lt;nodes&gt;] [&lt;secs&gt;]</p>
-<dd>Report interface statistics with capstats</p>
-<dt><code>check</code> [&lt;nodes&gt;]</p>
-<dd>Check configuration before installing it</p>
-<dt><code>cleanup</code> [&#8211;all] [&lt;nodes&gt;]</p>
-<dd>Delete working dirs (flush state) on nodes</p>
-<dt><code>config</code></p>
-<dd>Print broctl configuration</p>
-<dt><code>cron</code> [&#8211;no-watch]</p>
-<dd>Perform jobs intended to run from cron</p>
-<dt><code>cron</code> enable|disable|?</p>
-<dd>Enable/disable &quot;cron&quot; jobs</p>
-<dt><code>deploy</code></p>
-<dd>Check, install, and restart</p>
-<dt><code>df</code> [&lt;nodes&gt;]</p>
-<dd>Print nodes&#8217; current disk usage</p>
-<dt><code>diag</code> [&lt;nodes&gt;]</p>
-<dd>Output diagnostics for nodes</p>
-<dt><code>exec</code> &lt;shell cmd&gt;</p>
-<dd>Execute shell command on all hosts</p>
-<dt><code>exit</code></p>
-<dd>Exit from the interactive interface</p>
-<dt><code>install</code></p>
-<dd>Update broctl installation/configuration</p>
-<dt><code>netstats</code> [&lt;nodes&gt;]</p>
-<dd>Print nodes&#8217; current packet counters</p>
-<dt><code>nodes</code></p>
-<dd>Print node configuration</p>
-<dt><code>peerstatus</code> [&lt;nodes&gt;]</p>
-<dd>Print status of nodes&#8217; remote connections</p>
-<dt><code>print</code> &lt;id&gt; [&lt;nodes&gt;]</p>
-<dd>Print values of script variable at nodes</p>
-<dt><code>process</code> &lt;trace&gt; [&lt;op&gt;] [&#8211; &lt;sc&gt;]</p>
-<dd>Run Bro (with options and scripts) on trace</p>
-<dt><code>restart</code> [&#8211;clean] [&lt;nodes&gt;]</p>
-<dd>Stop and then restart processing</p>
-<dt><code>scripts</code> [-c] [&lt;nodes&gt;]</p>
-<dd>List the Bro scripts the nodes will load</p>
-<dt><code>start</code> [&lt;nodes&gt;]</p>
-<dd>Start processing</p>
-<dt><code>status</code> [&lt;nodes&gt;]</p>
-<dd>Summarize node status</p>
-<dt><code>stop</code> [&lt;nodes&gt;]</p>
-<dd>Stop processing</p>
-<dt><code>top</code> [&lt;nodes&gt;]</p>
-<dd>Show Bro processes ala top</p>
-<dt><code>update</code> [&lt;nodes&gt;]</p>
-<dd>Update configuration of nodes on the fly</dl>
+<dt><code>capstats</code> [&lt;nodes&gt;] [&lt;secs&gt;]</dt>
+<dd>Report interface statistics with capstats</dd>
+<dt><code>check</code> [&lt;nodes&gt;]</dt>
+<dd>Check configuration before installing it</dd>
+<dt><code>cleanup</code> [&#8211;all] [&lt;nodes&gt;]</dt>
+<dd>Delete working dirs (flush state) on nodes</dd>
+<dt><code>config</code></dt>
+<dd>Print broctl configuration</dd>
+<dt><code>cron</code> [&#8211;no-watch]</dt>
+<dd>Perform jobs intended to run from cron</dd>
+<dt><code>cron</code> enable|disable|?</dt>
+<dd>Enable/disable &quot;cron&quot; jobs</dd>
+<dt><code>deploy</code></dt>
+<dd>Check, install, and restart</dd>
+<dt><code>df</code> [&lt;nodes&gt;]</dt>
+<dd>Print nodes&#8217; current disk usage</dd>
+<dt><code>diag</code> [&lt;nodes&gt;]</dt>
+<dd>Output diagnostics for nodes</dd>
+<dt><code>exec</code> &lt;shell cmd&gt;</dt>
+<dd>Execute shell command on all hosts</dd>
+<dt><code>exit</code></dt>
+<dd>Exit from the interactive interface</dd>
+<dt><code>install</code></dt>
+<dd>Update broctl installation/configuration</dd>
+<dt><code>netstats</code> [&lt;nodes&gt;]</dt>
+<dd>Print nodes&#8217; current packet counters</dd>
+<dt><code>nodes</code></dt>
+<dd>Print node configuration</dd>
+<dt><code>peerstatus</code> [&lt;nodes&gt;]</dt>
+<dd>Print status of nodes&#8217; remote connections</dd>
+<dt><code>print</code> &lt;id&gt; [&lt;nodes&gt;]</dt>
+<dd>Print values of script variable at nodes</dd>
+<dt><code>process</code> &lt;trace&gt; [&lt;op&gt;] [&#8211; &lt;sc&gt;]</dt>
+<dd>Run Bro (with options and scripts) on trace</dd>
+<dt><code>restart</code> [&#8211;clean] [&lt;nodes&gt;]</dt>
+<dd>Stop and then restart processing</dd>
+<dt><code>scripts</code> [-c] [&lt;nodes&gt;]</dt>
+<dd>List the Bro scripts the nodes will load</dd>
+<dt><code>start</code> [&lt;nodes&gt;]</dt>
+<dd>Start processing</dd>
+<dt><code>status</code> [&lt;nodes&gt;]</dt>
+<dd>Summarize node status</dd>
+<dt><code>stop</code> [&lt;nodes&gt;]</dt>
+<dd>Stop processing</dd>
+<dt><code>top</code> [&lt;nodes&gt;]</dt>
+<dd>Show Bro processes ala top</dd>
+<dt><code>update</code> [&lt;nodes&gt;]</dt>
+<dd>Update configuration of nodes on the fly</dd></dl>
 <p> Commands provided by plugins:</p>
 <dl>
-<dt><code>ps.bro</code> [&lt;nodes&gt;]</p>
-<dd>Show Bro processes on nodes&#8217; systems</dl>
+<dt><code>ps.bro</code> [&lt;nodes&gt;]</dt>
+<dd>Show Bro processes on nodes&#8217; systems</dd></dl>
 <h2>Author</h2>
 <p><code>broctl</code> was written by The Bro Project &lt;info [at] bro.org&gt;.</p>

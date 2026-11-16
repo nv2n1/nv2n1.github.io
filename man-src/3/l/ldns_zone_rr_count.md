@@ -16,8 +16,8 @@ description: "ldns_zone_rr_count"
 <p> size_t ldns_zone_rr_count(const ldns_zone *z); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_rr_count</i>()</p>
-<dd>Returns the number of resource records in the zone, NOT counting the SOA record .br <code>z</code>: the zone to read from .br Returns the number of rr&#8217;s in the zone</dl>
+<dt> <i>ldns_zone_rr_count</i>()</dt>
+<dd>Returns the number of resource records in the zone, NOT counting the SOA record .br <code>z</code>: the zone to read from .br Returns the number of rr&#8217;s in the zone</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

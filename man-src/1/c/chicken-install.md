@@ -17,14 +17,14 @@ description: "chicken-install – download and install extension libraries for C
 <p> Enter <code>chicken-install -help</code> for a list of supported command-line options. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CHICKEN_PREFIX</code></p>
-<dd> The installation prefix where CHICKEN Scheme and its support files and libraries are located. Defaults to the installation time prefix given when configuring the system. </p>
-<dt><code>CHICKEN_INSTALL_PREFIX</code></p>
-<dd> An alternative installation prefix that will be prepended to extension installation paths if specified. </p>
-<dt><code>CHICKEN_REPOSITORY</code></p>
-<dd> The path where extension libraries are installed. Defaults to the package-library path selected during configuration (usually <code>$prefix/lib/chicken/&lt;binary-version&gt;</code> ) </p>
-<dt><code>SUDO</code></p>
-<dd> The command to execute when using -s flag in command. If not provided, defaults to the <a href="/docs/linux/man/1-sudo/">sudo</a>(1). </p>
+<dt><code>CHICKEN_PREFIX</code></dt>
+<dd> The installation prefix where CHICKEN Scheme and its support files and libraries are located. Defaults to the installation time prefix given when configuring the system. </dd>
+<dt><code>CHICKEN_INSTALL_PREFIX</code></dt>
+<dd> An alternative installation prefix that will be prepended to extension installation paths if specified. </dd>
+<dt><code>CHICKEN_REPOSITORY</code></dt>
+<dd> The path where extension libraries are installed. Defaults to the package-library path selected during configuration (usually <code>$prefix/lib/chicken/&lt;binary-version&gt;</code> ) </dd>
+<dt><code>SUDO</code></dt>
+<dd> The command to execute when using -s flag in command. If not provided, defaults to the <a href="/docs/linux/man/1-sudo/">sudo</a>(1). </dd>
 </dl>
 <h2>DOCUMENTATION</h2>
 <p> More information can be found in the <i>CHICKEN User&#8217;s Manual</i> </p>

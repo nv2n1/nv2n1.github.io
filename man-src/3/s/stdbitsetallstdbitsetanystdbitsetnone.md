@@ -27,10 +27,8 @@ Checks if all, any or none of the bits are set to true.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;4&gt; b1(&quot;0000&quot;);
     std::bitset&lt;4&gt; b2(&quot;0101&quot;);

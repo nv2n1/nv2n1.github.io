@@ -15,12 +15,12 @@ Pixmap
 <code>Tk_FreePixmap(</code><i>display, pixmap</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Display <i>*display</i> (in) X display for the pixmap.</p>
-<dd>Drawable <i>d</i> (in) Pixmap or window where the new pixmap will be used for drawing.</p>
-<dd>int <i>width</i> (in) Width of pixmap.</p>
-<dd>int <i>height</i> (in) Height of pixmap.</p>
-<dd>int <i>depth</i> (in) Number of bits per pixel in pixmap.</p>
-<dd>Pixmap <i>pixmap</i> (in) Pixmap to destroy. </p>
+<dd>Display <i>*display</i> (in) X display for the pixmap.</dd>
+<dd>Drawable <i>d</i> (in) Pixmap or window where the new pixmap will be used for drawing.</dd>
+<dd>int <i>width</i> (in) Width of pixmap.</dd>
+<dd>int <i>height</i> (in) Height of pixmap.</dd>
+<dd>int <i>depth</i> (in) Number of bits per pixel in pixmap.</dd>
+<dd>Pixmap <i>pixmap</i> (in) Pixmap to destroy. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are identical to the Xlib procedures <code>XCreatePixmap</code> and <code>XFreePixmap</code>, except that they have extra code to manage X resource identifiers so that identifiers for deleted pixmaps can be reused in the future. It is important for Tk applications to use these procedures rather than <code>XCreatePixmap</code> and <code>XFreePixmap</code>; otherwise long-running applications may run out of resource identifiers. </p>

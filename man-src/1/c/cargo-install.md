@@ -22,112 +22,92 @@ description: "cargo-install – Install a Rust binary"
 <h2>OPTIONS</h2>
 <h3>Query options</h3>
 <dl>
-<dt><code>&#8211;list</code></p>
-<dd> List all installed packages (and their versions).</p>
+<dt><code>&#8211;list</code></dt>
+<dd> List all installed packages (and their versions).</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>Specifying what crate to install</h3>
 <dl>
-<dt><code>&#8211;vers </code>VERS</p>
-<dd> Specify a version to install from crates.io.</p>
+<dt><code>&#8211;vers </code>VERS</dt>
+<dd> Specify a version to install from crates.io.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;git </code>URL</p>
-<dd> Git URL to install the specified crate from.</p>
+</dl>
+<dt><code>&#8211;git </code>URL</dt>
+<dd> Git URL to install the specified crate from.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;branch </code>BRANCH</p>
-<dd> Branch to use when installing from git.</p>
+</dl>
+<dt><code>&#8211;branch </code>BRANCH</dt>
+<dd> Branch to use when installing from git.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;tag </code>TAG</p>
-<dd> Tag to use when installing from git.</p>
+</dl>
+<dt><code>&#8211;tag </code>TAG</dt>
+<dd> Tag to use when installing from git.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;rev </code>SHA</p>
-<dd> Specific commit to use when installing from git.</p>
+</dl>
+<dt><code>&#8211;rev </code>SHA</dt>
+<dd> Specific commit to use when installing from git.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;path </code>PATH</p>
-<dd> Filesystem path to local crate to install.</p>
+</dl>
+<dt><code>&#8211;path </code>PATH</dt>
+<dd> Filesystem path to local crate to install.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3>Built and install options</h3>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-j </code>N, &#8211;jobs N</p>
-<dd> Number of parallel jobs, defaults to # of CPUs.</p>
+</dl>
+<dt><code>-j </code>N, &#8211;jobs N</dt>
+<dd> Number of parallel jobs, defaults to # of CPUs.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;features </code>FEATURES</p>
-<dd> Space-separated list of features to activate.</p>
+</dl>
+<dt><code>&#8211;features </code>FEATURES</dt>
+<dd> Space-separated list of features to activate.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;all-features</code></p>
-<dd> Build all available features.</p>
+</dl>
+<dt><code>&#8211;all-features</code></dt>
+<dd> Build all available features.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-f, &#8211;force</code></p>
-<dd> Force overwriting existing crates or binaries</p>
+</dl>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> Force overwriting existing crates or binaries</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;no-default-features</code></p>
-<dd> Do not build the default feature.</p>
+</dl>
+<dt><code>&#8211;no-default-features</code></dt>
+<dd> Do not build the default feature.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Build in debug mode instead of release mode.</p>
+</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Build in debug mode instead of release mode.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;bin </code>NAME</p>
-<dd> Only install the binary NAME.</p>
+</dl>
+<dt><code>&#8211;bin </code>NAME</dt>
+<dd> Only install the binary NAME.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;example </code>EXAMPLE</p>
-<dd> Install the example EXAMPLE instead of binaries.</p>
+</dl>
+<dt><code>&#8211;example </code>EXAMPLE</dt>
+<dd> Install the example EXAMPLE instead of binaries.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;root </code>DIR</p>
-<dd> Directory to install packages into.</p>
+</dl>
+<dt><code>&#8211;root </code>DIR</dt>
+<dd> Directory to install packages into.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No output printed to stdout.</p>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No output printed to stdout.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-search/">cargo-search</a>(1), <a href="/docs/linux/man/1-cargo-publish/">cargo-publish</a>(1)</p>

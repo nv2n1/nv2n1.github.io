@@ -17,26 +17,26 @@ description: "pinentry-curses – PIN or pass-phrase entry dialog for GnuPG"
 <p> <code>pinentry-curses</code> is typically used internally by <code>gpg-agent</code>. Users don&#8217;t normally have a reason to call it directly.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the program version and licensing information.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a usage message summarizing the most useful command-line options.</p>
-<dt><code>&#8211;debug</code>, <code>-d</code></p>
-<dd> Turn on some debugging. Mostly useful for the maintainers. Note that this may reveal sensitive information like the entered pass phrase.</p>
-<dt><code>&#8211;enhanced</code>, <code>-e</code></p>
-<dd> Ask for timeouts and insurance, too. Note that this is currently not fully supported.</p>
-<dt><code>&#8211;no-global-grab</code>, <code>-g</code></p>
-<dd> Grab the keyboard only when the window is focused. Use this option if you are debugging software using <code>pinentry-curses</code>; otherwise you may not be able to to access your X session anymore (unless you have other means to connect to the machine to kill <code>pinentry-curses</code>).</p>
-<dt><code>&#8211;parent-wid</code> <i>N</i></p>
-<dd> Use window ID <i>N</i> as the parent window for positioning the window. Note, that this is not fully supported by all flavors of <code>pinentry</code>.</p>
-<dt><code>&#8211;display</code> <i>STRING</i>, <code>&#8211;ttyname</code> <i>STRING</i>, <code>&#8211;ttytype</code> <i>STRING</i>, <code>&#8211;lc-type</code> <i>STRING</i>, <code>&#8211;lc-messages</code> <i>STRING</i></p>
-<dd> These options are used to pass localization information to <code>pinentry-curses</code>. They are required because <code>pinentry-curses</code> is usually called by some background process which does not have any information on the locale and terminal to use. Assuan protocol options are an alternative way to pass these information.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the program version and licensing information.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a usage message summarizing the most useful command-line options.</dd>
+<dt><code>&#8211;debug</code>, <code>-d</code></dt>
+<dd> Turn on some debugging. Mostly useful for the maintainers. Note that this may reveal sensitive information like the entered pass phrase.</dd>
+<dt><code>&#8211;enhanced</code>, <code>-e</code></dt>
+<dd> Ask for timeouts and insurance, too. Note that this is currently not fully supported.</dd>
+<dt><code>&#8211;no-global-grab</code>, <code>-g</code></dt>
+<dd> Grab the keyboard only when the window is focused. Use this option if you are debugging software using <code>pinentry-curses</code>; otherwise you may not be able to to access your X session anymore (unless you have other means to connect to the machine to kill <code>pinentry-curses</code>).</dd>
+<dt><code>&#8211;parent-wid</code> <i>N</i></dt>
+<dd> Use window ID <i>N</i> as the parent window for positioning the window. Note, that this is not fully supported by all flavors of <code>pinentry</code>.</dd>
+<dt><code>&#8211;display</code> <i>STRING</i>, <code>&#8211;ttyname</code> <i>STRING</i>, <code>&#8211;ttytype</code> <i>STRING</i>, <code>&#8211;lc-type</code> <i>STRING</i>, <code>&#8211;lc-messages</code> <i>STRING</i></dt>
+<dd> These options are used to pass localization information to <code>pinentry-curses</code>. They are required because <code>pinentry-curses</code> is usually called by some background process which does not have any information on the locale and terminal to use. Assuan protocol options are an alternative way to pass these information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pinentry-gtk-2</code>(1), <code>pinentry-qt</code>(1), <code>pinentry-fltk</code>(1), <code><a href="/docs/linux/man/1-pinentry-gnome3/">pinentry-gnome3</a></code>(1), <code>pinentry-tty</code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1) </p>
 <p> The full documentation for <code>pinentry-curses</code> is maintained as a Texinfo manual. If the <code>pinentry-doc</code> package is installed, the command</p>
 <dl>
 <dt>
-<dd> <code>info pinentry</code></dl>
+</dt><dd> <code>info pinentry</code></dd></dl>
 <p> should give you access to the complete manual.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Peter Eisentraut for the Debian project. </p>

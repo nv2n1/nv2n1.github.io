@@ -18,11 +18,13 @@ bool bson_init_from_json(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> A UTF-8 encoded string containing valid JSON.</dl>
+<dt><code>data</code></dt>
+<dd> A UTF-8 encoded string containing valid JSON.</dd></dl>
 <dl>
-<dt><code>len</code></p>
+<dt><code>len</code></dt>
 <dd> The length of <code>data</code> in bytes excluding a trailing <code>
+</dd></dl>
+</code>

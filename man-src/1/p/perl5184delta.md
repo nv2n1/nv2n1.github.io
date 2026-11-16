@@ -15,41 +15,38 @@ description: "perl5184delta – what is new for perl v5.18.4"
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Digest::SHA has been upgraded from 5.84_01 to 5.84_02.</p>
-<dt>&bull;</p>
-<dd> perl5db.pl has been upgraded from version 1.39_10 to 1.39_11. </p>
+<dt>&bull;</dt>
+<dd> Digest::SHA has been upgraded from 5.84_01 to 5.84_02.</dd>
+<dt>&bull;</dt>
+<dd> perl5db.pl has been upgraded from version 1.39_10 to 1.39_11. </dd>
 <p> This fixes a crash in tab completion, where available. [perl #120827] Also, filehandle information is properly reset after a pager is run. [perl #121456]</dl>
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt>Win32</p>
+<dt>Win32</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>&bull;</p>
-<dd> Introduced by perl #113536 &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled pseudo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer <font SIZE="-1">OS.</font> The leak does not appear on WinXP <font SIZE="-1">SP3.</font> [perl #121676 &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dl>
+<dt>&bull;</dt>
+<dd> Introduced by perl #113536 &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled pseudo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer <font SIZE="-1">OS.</font> The leak does not appear on WinXP <font SIZE="-1">SP3.</font> [perl #121676 &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The debugger now properly resets filehandles as needed. [perl #121456]</p>
-<dt>&bull;</p>
-<dd> A segfault in Digest::SHA has been addressed. [perl #121421]</p>
-<dt>&bull;</p>
-<dd> perl can again be built with <font SIZE="-1">USE_64_BIT_INT,</font> with Visual C 2003, 32 bit. [perl #120925]</p>
-<dt>&bull;</p>
-<dd> A leading { (brace) in formats is properly parsed again. [perl #119973]</p>
-<dt>&bull;</p>
-<dd> Copy the values used to perturb hash iteration when cloning an interpreter. This was fairly harmless but caused <tt>&quot;valgrind&quot;</tt> to complain. [perl #121336]</p>
-<dt>&bull;</p>
-<dd> In Perl v5.18 <tt>&quot;undef *_; goto &amp;sub&quot;</tt> and <tt>&quot;local *_; goto &amp;sub&quot;</tt> started crashing. This has been fixed. [perl #119949]</dl>
+<dt>&bull;</dt>
+<dd> The debugger now properly resets filehandles as needed. [perl #121456]</dd>
+<dt>&bull;</dt>
+<dd> A segfault in Digest::SHA has been addressed. [perl #121421]</dd>
+<dt>&bull;</dt>
+<dd> perl can again be built with <font SIZE="-1">USE_64_BIT_INT,</font> with Visual C 2003, 32 bit. [perl #120925]</dd>
+<dt>&bull;</dt>
+<dd> A leading { (brace) in formats is properly parsed again. [perl #119973]</dd>
+<dt>&bull;</dt>
+<dd> Copy the values used to perturb hash iteration when cloning an interpreter. This was fairly harmless but caused <tt>&quot;valgrind&quot;</tt> to complain. [perl #121336]</dd>
+<dt>&bull;</dt>
+<dd> In Perl v5.18 <tt>&quot;undef *_; goto &amp;sub&quot;</tt> and <tt>&quot;local *_; goto &amp;sub&quot;</tt> started crashing. This has been fixed. [perl #119949]</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.18.4 represents approximately 9 months of development since Perl 5.18.2 and contains approximately 2,000 lines of changes across 53 files from 13 authors. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.18.4: </p>

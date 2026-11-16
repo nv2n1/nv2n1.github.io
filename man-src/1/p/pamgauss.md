@@ -27,14 +27,14 @@ description: "pamgauss – create a two dimensional gaussian function as a PAM i
 <p> The output image is PAM. To make it usable with <code>pnmconvol</code>, specify <code>-tupletype=GRAYSCALE</code> so <code>pnmconvol</code> can use it as if it were PGM. You must use the <code>-nooffset</code> option on <code>pnmconvol</code> because zero means zero in the PAM that <code>pamgauss</code> generates. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-sigma=</code><i>number</i></p>
-<dd> This is the sigma parameter of the Gaussian function (if it were a Gaussian probability function, this would be its standard deviation). The higher the number, the more spread out the function is. Normally, you want to make this number low enough that the function reaches zero value before the edge of your image. </p>
+<dt><code>-sigma=</code><i>number</i></dt>
+<dd> This is the sigma parameter of the Gaussian function (if it were a Gaussian probability function, this would be its standard deviation). The higher the number, the more spread out the function is. Normally, you want to make this number low enough that the function reaches zero value before the edge of your image. </dd>
 <p> <i>number</i> is in units of pixels. </p>
 <p> This option is required. There is no default. </p>
-<dt><code>-maxval=</code><i>number</i></p>
-<dd> This is the maxval for the output image. It defaults to 255. </p>
-<dt><code>-tupletype=</code><i>string</i></p>
-<dd> This is the value of the &quot;tuple_type&quot; attribute of the created PAM image. It can be any string up to 255 characters. If you don&#8217;t specify this, <code>pamgauss</code> generates a PAM with unspecified tuple type. </p>
+<dt><code>-maxval=</code><i>number</i></dt>
+<dd> This is the maxval for the output image. It defaults to 255. </dd>
+<dt><code>-tupletype=</code><i>string</i></dt>
+<dd> This is the value of the &quot;tuple_type&quot; attribute of the created PAM image. It can be any string up to 255 characters. If you don&#8217;t specify this, <code>pamgauss</code> generates a PAM with unspecified tuple type. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmkernel/">pgmkernel</a></code>(1) , <code><a href="/docs/linux/man/1-pamseq/">pamseq</a></code>(1) , <code>pam</code>(1) </p>

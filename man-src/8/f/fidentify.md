@@ -17,8 +17,8 @@ If given no arguments, fidentify will output type of files under current directo
 fidentify is similar to&nbsp;<wbr><a href="/docs/linux/man/1-file/">file</a>(1).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd>check the file format like PhotoRec does by default</dl>
+<dt><code>&#8211;check</code></dt>
+<dd>check the file format like PhotoRec does by default</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-photorec/">photorec</a>(8),</code><a href="/docs/linux/man/8-testdisk/">testdisk</a>(8),<code><a href="/docs/linux/man/1-file/">file</a>(1)</code></p>
 <h2>Author</h2>

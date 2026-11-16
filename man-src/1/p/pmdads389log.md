@@ -14,20 +14,20 @@ description: "pmdads389log – 389 Directory Server Log PMDA"
 <h2>INSTALLATION</h2>
 <p> <code>pmdads389log</code> uses a configuration file</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>$PCP_PMDAS_DIR/ds389log/ds389log.conf</i></dl>
+<dt>&bull;</dt>
+<dd> <i>$PCP_PMDAS_DIR/ds389log/ds389log.conf</i></dd></dl>
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of <i>pmdads389log.pl</i>, namely:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>logconv.pl</code> parameters</p>
-<dt>&bull;</p>
-<dd> minimal query interval</p>
-<dt>&bull;</p>
-<dd> 389 <font SIZE="-1">DS</font> access log to use</p>
-<dt>&bull;</p>
-<dd> 389 <font SIZE="-1">DS</font> log directory to use (used if no file specified)</p>
-<dt>&bull;</p>
-<dd> non-root user having read access to the access log file</dl>
+<dt>&bull;</dt>
+<dd> <code>logconv.pl</code> parameters</dd>
+<dt>&bull;</dt>
+<dd> minimal query interval</dd>
+<dt>&bull;</dt>
+<dd> 389 <font SIZE="-1">DS</font> access log to use</dd>
+<dt>&bull;</dt>
+<dd> 389 <font SIZE="-1">DS</font> log directory to use (used if no file specified)</dd>
+<dt>&bull;</dt>
+<dd> non-root user having read access to the access log file</dd></dl>
 <p> Once this is setup, you can access the names and values for the 389 DS performance metrics by doing the following as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/ds389log </p>
 <p>#&nbsp;<wbr>./Install </p>
@@ -37,16 +37,16 @@ description: "pmdads389log – 389 Directory Server Log PMDA"
 <p> <code>pmdads389log</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMDAS_DIR/ds389log/ds389log.conf</code></p>
-<dd> configuration file for the <code>pmdads389log</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/ds389log/Install</code></p>
-<dd> installation script for the <code>pmdads389log</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/ds389log/Remove</code></p>
-<dd> undo installation script for the <code>pmdads389log</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/ds389log.log</code></p>
-<dd> default log file for error messages from <code>pmdads389log</code></p>
-<dt><code>/var/log/dirsrv/slapd-&#8230;/access</code></p>
-<dd> 389 Directory Server access log parsed by <code>logconv.pl</code></dl>
+<dt><code>$PCP_PMDAS_DIR/ds389log/ds389log.conf</code></dt>
+<dd> configuration file for the <code>pmdads389log</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/ds389log/Install</code></dt>
+<dd> installation script for the <code>pmdads389log</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/ds389log/Remove</code></dt>
+<dd> undo installation script for the <code>pmdads389log</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/ds389log.log</code></dt>
+<dd> default log file for error messages from <code>pmdads389log</code></dd>
+<dt><code>/var/log/dirsrv/slapd-&#8230;/access</code></dt>
+<dd> 389 Directory Server access log parsed by <code>logconv.pl</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

@@ -27,73 +27,73 @@ description: "Cert Utils Constants –"
 <p> In addition to enumerations for the concrete renderings of certificate format and type combined, there are default, formats-without-types and types-without-formats so that application logic which uses the proxy library can request default proxy formats which are compatible with the issuing certificate. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_DEFAULT </i></p>
-<dd>Default proxy type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_EEC </i></p>
-<dd>A end entity certificate</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_CA </i></p>
-<dd>A CA certificate</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2 </i></p>
-<dd>Legacy Proxy Format</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3 </i></p>
-<dd>X.509 Proxy Certificate Profile (draft) Proxy Format</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC </i></p>
-<dd>X.509 Proxy Certificate Profile Compliant Proxy Format</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_FORMAT_MASK </i></p>
-<dd>Proxy certificate formats mask</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_IMPERSONATION_PROXY </i></p>
-<dd>Impersonation proxy type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_LIMITED_PROXY </i></p>
-<dd>Limited proxy type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RESTRICTED_PROXY </i></p>
-<dd>Restricted proxy type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_INDEPENDENT_PROXY </i></p>
-<dd>Independent proxy type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_PROXY_MASK </i></p>
-<dd>Proxy types mask</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_IMPERSONATION_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant impersonation proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_INDEPENDENT_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant independent proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_LIMITED_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant limited proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_RESTRICTED_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant restricted proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2_PROXY </i></p>
-<dd>A legacy Globus impersonation proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2_LIMITED_PROXY </i></p>
-<dd>A legacy Globus limited impersonation proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_IMPERSONATION_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile RFC compliant impersonation proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_INDEPENDENT_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile RFC compliant independent proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_LIMITED_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile RFC compliant limited proxy</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_RESTRICTED_PROXY </i></p>
-<dd>A X.509 Proxy Certificate Profile RFC compliant restricted proxy</dl>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_DEFAULT </i></dt>
+<dd>Default proxy type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_EEC </i></dt>
+<dd>A end entity certificate</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_CA </i></dt>
+<dd>A CA certificate</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2 </i></dt>
+<dd>Legacy Proxy Format</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3 </i></dt>
+<dd>X.509 Proxy Certificate Profile (draft) Proxy Format</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC </i></dt>
+<dd>X.509 Proxy Certificate Profile Compliant Proxy Format</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_FORMAT_MASK </i></dt>
+<dd>Proxy certificate formats mask</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_IMPERSONATION_PROXY </i></dt>
+<dd>Impersonation proxy type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_LIMITED_PROXY </i></dt>
+<dd>Limited proxy type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RESTRICTED_PROXY </i></dt>
+<dd>Restricted proxy type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_INDEPENDENT_PROXY </i></dt>
+<dd>Independent proxy type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_PROXY_MASK </i></dt>
+<dd>Proxy types mask</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_IMPERSONATION_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant impersonation proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_INDEPENDENT_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant independent proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_LIMITED_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant limited proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_3_RESTRICTED_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile (pre-RFC) compliant restricted proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2_PROXY </i></dt>
+<dd>A legacy Globus impersonation proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_GSI_2_LIMITED_PROXY </i></dt>
+<dd>A legacy Globus limited impersonation proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_IMPERSONATION_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile RFC compliant impersonation proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_INDEPENDENT_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile RFC compliant independent proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_LIMITED_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile RFC compliant limited proxy</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_TYPE_RFC_RESTRICTED_PROXY </i></dt>
+<dd>A X.509 Proxy Certificate Profile RFC compliant restricted proxy</dd></dl>
 <h3>enum <code>globus_gsi_cert_utils_error_t</code></h3>
 <p>Cert Utils Error Codes </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_SUCCESS </i></p>
-<dd>Success &#8211; never used</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_NAME_ENTRY_OF_SUBJECT </i></p>
-<dd>Failed to retrieve a subcomponent of the subject</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_COPYING_SUBJECT </i></p>
-<dd>A error occured while trying to copy a X.509 subject</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_CN_ENTRY </i></p>
-<dd>Failed to retrieve a CN subcomponent of the subject</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_ADDING_CN_TO_SUBJECT </i></p>
-<dd>Failed to add a CN component to a X.509 subject name</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_OUT_OF_MEMORY </i></p>
-<dd>Out of memory</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_UNEXPECTED_FORMAT </i></p>
-<dd>Something unexpected happen while converting a string subject to a X509_NAME structure</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_NON_COMPLIANT_PROXY </i></p>
-<dd>Proxy does not comply with the expected format</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_DETERMINING_CERT_TYPE </i></p>
-<dd>Couldn&#8217;t dtermine the certificate type</p>
-<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_LAST </i></p>
-<dd>Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_SUCCESS </i></dt>
+<dd>Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_NAME_ENTRY_OF_SUBJECT </i></dt>
+<dd>Failed to retrieve a subcomponent of the subject</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_COPYING_SUBJECT </i></dt>
+<dd>A error occured while trying to copy a X.509 subject</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_CN_ENTRY </i></dt>
+<dd>Failed to retrieve a CN subcomponent of the subject</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_ADDING_CN_TO_SUBJECT </i></dt>
+<dd>Failed to add a CN component to a X.509 subject name</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_OUT_OF_MEMORY </i></dt>
+<dd>Out of memory</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_UNEXPECTED_FORMAT </i></dt>
+<dd>Something unexpected happen while converting a string subject to a X509_NAME structure</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_NON_COMPLIANT_PROXY </i></dt>
+<dd>Proxy does not comply with the expected format</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_DETERMINING_CERT_TYPE </i></dt>
+<dd>Couldn&#8217;t dtermine the certificate type</dd>
+<dt><i>GLOBUS_GSI_CERT_UTILS_ERROR_LAST </i></dt>
+<dd>Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_cert_utils from the source code.</p>

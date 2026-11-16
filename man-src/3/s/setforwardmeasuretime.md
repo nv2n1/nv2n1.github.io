@@ -10,24 +10,12 @@ description: "QuantLib::ForwardMeasureProcess – forward-measure stochastic pro
 <p>QuantLib::ForwardMeasureProcess &#8211; forward-measure stochastic process </p>
 <h2>Synopsis</h2>
 <pre><code>void setForwardMeasureTime (Time)
-
-
-
 Time getForwardMeasureTime () const
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::StochasticProcess</code>. Inherited by <code>G2ForwardProcess</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void setForwardMeasureTime (Time)
-
-
-
 Time getForwardMeasureTime () const
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>ForwardMeasureProcess</code> (<code>Time</code> T) </p>
 <p> <code>ForwardMeasureProcess</code> (const boost::shared_ptr&lt; <code>discretization</code> &gt; &amp;)</p>

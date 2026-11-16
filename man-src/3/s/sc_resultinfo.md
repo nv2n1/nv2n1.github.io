@@ -11,7 +11,6 @@ description: "sc::ResultInfo –"
 <p> This is a base class for all of Compute&#8217;s result types.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;compute.h&gt;</code></pre>
 <p> Inherited by <code>sc::AccResultInfo</code>, <code>sc::NCResult&lt; T &gt;</code>, and <code>sc::Result&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,38 +23,14 @@ description: "sc::ResultInfo –"
 <p> virtual int <code>needed</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void update ()
-
-
-
 ResultInfo (StateIn &amp;, Compute *)
-
-
-
 ResultInfo (const ResultInfo &amp;, Compute *)
-
-
-
 virtual void save_data_state (StateOut &amp;)
-
-
-
 virtual void restore_state (StateIn &amp;)
-
-
-
 ResultInfo &amp; operator= (const ResultInfo &amp;)
-
-
-
 Protected Attributes
 int _compute
-
-
-
 int _computed
-
-
-
 Compute * _c</code></pre>
 <h2>Detailed Description</h2>
 <p>This is a base class for all of Compute&#8217;s result types. </p>

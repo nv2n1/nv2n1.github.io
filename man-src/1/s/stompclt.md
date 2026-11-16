@@ -16,125 +16,125 @@ description: "stompclt – versatile STOMP client"
 <p> It receives messages (see Messaging::Message) from an incoming module, optionally massaging them (i.e. filtering and/or modifying), and sends them to an outgoing module. Depending on which modules are used, the tool can perform different operations. </p>
 <p> Here are the supported incoming modules:</p>
 <dl>
-<dt>&bull;</p>
-<dd> broker: connect to a messaging broker using <font SIZE="-1">STOMP,</font> subscribe to one or more destinations and receive the messages sent by the broker</p>
-<dt>&bull;</p>
-<dd> queue: read messages from a message queue on disk</dl>
+<dt>&bull;</dt>
+<dd> broker: connect to a messaging broker using <font SIZE="-1">STOMP,</font> subscribe to one or more destinations and receive the messages sent by the broker</dd>
+<dt>&bull;</dt>
+<dd> queue: read messages from a message queue on disk</dd></dl>
 <p> Here are the supported outgoing modules:</p>
 <dl>
-<dt>&bull;</p>
-<dd> broker: connect to a messaging broker using <font SIZE="-1">STOMP</font> and send the messages</p>
-<dt>&bull;</p>
-<dd> queue: store the messages in a message queue on disk</dl>
+<dt>&bull;</dt>
+<dd> broker: connect to a messaging broker using <font SIZE="-1">STOMP</font> and send the messages</dd>
+<dt>&bull;</dt>
+<dd> queue: store the messages in a message queue on disk</dd></dl>
 <p> Here are some frequently used combinations:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>incoming broker + outgoing queue</i>: drain some destinations, storing the messages on disk</p>
-<dt>&bull;</p>
-<dd> <i>incoming queue + outgoing broker</i>: (re-)send messages that have been previously stored on disk, optionally with modifications (such as altering the destination)</p>
-<dt>&bull;</p>
-<dd> <i>incoming broker + outgoing broker</i>: shovel messages from one broker to another</dl>
+<dt>&bull;</dt>
+<dd> <i>incoming broker + outgoing queue</i>: drain some destinations, storing the messages on disk</dd>
+<dt>&bull;</dt>
+<dd> <i>incoming queue + outgoing broker</i>: (re-)send messages that have been previously stored on disk, optionally with modifications (such as altering the destination)</dd>
+<dt>&bull;</dt>
+<dd> <i>incoming broker + outgoing broker</i>: shovel messages from one broker to another</dd></dl>
 <p> See the &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> sections for concrete examples.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;callback-code</code> <i></i><font SIZE="-1"><i>CODE</i></font><i></i></p>
-<dd> execute the given Perl code on each message, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</p>
-<dt><code>&#8211;callback-data</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> pass this data to the user supplied callback code, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</p>
-<dt><code>&#8211;callback-path</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></p>
-<dd> execute the Perl code in the given file on each message, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</p>
-<dt><code>&#8211;config</code>, <code>&#8211;conf</code>, <code>&#8211;cfg</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></p>
-<dd> use the given configuration file, see the &#8220;<font SIZE="-1">CONFIGURATION FILE&#8221;</font> section below for more information</p>
-<dt><code>&#8211;config-general</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use the given Config::General options when creating the configuration parser</p>
-<dt><code>&#8211;count</code>, <code>-c</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></p>
-<dd> process at most the given number of messages; note: when using an incoming broker, to avoid consuming more messages, it is recommended to enable the <code>&#8211;reliable</code> option</p>
-<dt><code>&#8211;daemon</code> | <code>&#8211;no-daemon</code></p>
-<dd> detach <code>stompclt</code> so that it becomes a daemon running in the background; debug, warning and error messages will get sent to syslog; this option can be negated</p>
-<dt><code>&#8211;debug</code>, <code>-d</code></p>
-<dd> show debugging information</p>
-<dt><code>&#8211;duration</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> process messages during at most the given number of seconds and then stop; can be fractional</p>
-<dt><code>&#8211;heart-beat</code> | <code>&#8211;no-heart-beat</code></p>
-<dd> enable <font SIZE="-1">STOMP 1.1</font> heart-beats between <code>stompclt</code> and the broker(s); this option can be negated</p>
-<dt><code>&#8211;help</code>, <code>-h</code>, <code>-?</code></p>
-<dd> show some help</p>
-<dt><code>&#8211;incoming-broker-auth</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> use this authentication string (see Authen::Credential) to authenticate to the incoming broker; this option can be given multiple times</p>
-<dt><code>&#8211;incoming-broker-connect</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these options in the <font SIZE="-1">STOMP CONNECT</font> frame sent to the incoming broker</p>
-<dt><code>&#8211;incoming-broker-sockopts</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these socket options when connecting to the incoming broker</p>
-<dt><code>&#8211;incoming-broker-stomp-debug</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> set the <font SIZE="-1">STOMP</font> debug flags (see Net::STOMP::Client) when interacting with the incoming broker</p>
-<dt><code>&#8211;incoming-broker-type</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> set the incoming broker type; this can be useful when using <font SIZE="-1">STOMP</font> features which are broker specific</p>
-<dt><code>&#8211;incoming-broker-uri</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></p>
-<dd> use this connection <font SIZE="-1">URI </font>(see Net::STOMP::Client) to connect to the incoming broker</p>
-<dt><code>&#8211;incoming-queue</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> read incoming messages from the given message queue (see Messaging::Message::Queue)</p>
-<dt><code>&#8211;lazy</code> | <code>&#8211;no-lazy</code></p>
-<dd> initialize the outgoing module only after having received the first message; this option can be negated</p>
-<dt><code>&#8211;list</code>, <code>-l</code></p>
-<dd> show all supported options</p>
-<dt><code>&#8211;loop</code> | <code>&#8211;no-loop</code></p>
-<dd> when using an incoming message queue, loop over it; this option can be negated</p>
-<dt><code>&#8211;manual</code>, <code>-m</code></p>
-<dd> show this manual</p>
-<dt><code>&#8211;outgoing-broker-auth</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> use this authentication string (see Authen::Credential) to authenticate to the outgoing broker; this option can be given multiple times</p>
-<dt><code>&#8211;outgoing-broker-connect</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these options in the <font SIZE="-1">STOMP CONNECT</font> frame sent to the outgoing broker</p>
-<dt><code>&#8211;outgoing-broker-sockopts</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these socket options when connecting to the outgoing broker</p>
-<dt><code>&#8211;outgoing-broker-stomp-debug</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> set the <font SIZE="-1">STOMP</font> debug flags (see Net::STOMP::Client) when interacting with the outgoing broker</p>
-<dt><code>&#8211;outgoing-broker-type</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></p>
-<dd> set the outgoing broker type; this can be useful when using <font SIZE="-1">STOMP</font> features which are broker specific</p>
-<dt><code>&#8211;outgoing-broker-uri</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></p>
-<dd> use this connection <font SIZE="-1">URI </font>(see Net::STOMP::Client) to connect to the outgoing broker</p>
-<dt><code>&#8211;outgoing-queue</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> store outgoing messages into the given message queue (see Messaging::Message::Queue)</p>
-<dt><code>&#8211;pidfile</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></p>
-<dd> use this pid file</p>
-<dt><code>&#8211;prefetch</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></p>
-<dd> set the prefetch value (i.e. the maximum number of messages to received without acknowledging them) on the incoming broker</p>
-<dt><code>&#8211;quit</code></p>
-<dd> tell another instance of <code>stompclt</code> (identified by its pid file, as specified by the <code>&#8211;pidfile</code> option) to quit</p>
-<dt><code>&#8211;reliable</code> | <code>&#8211;no-reliable</code></p>
-<dd> use <font SIZE="-1">STOMP</font> features for more reliable messaging (i.e. client side acknowledgments and receipts) at the cost of less performance; this option can be negated</p>
-<dt><code>&#8211;remove</code> | <code>&#8211;no-remove</code></p>
-<dd> when using an incoming message queue, remove the processed messages; this option can be negated</p>
-<dt><code>&#8211;statistics</code>, <code>-s</code> | <code>&#8211;no-statistics</code></p>
-<dd> report statistics at the end of the execution; this option can be negated</p>
-<dt><code>&#8211;status</code></p>
-<dd> get the status of another instance of <code>stompclt</code> (identified by its pid file, as specified by the <code>&#8211;pidfile</code> option); the exit code will be zero if the instance is alive and non-zero otherwise</p>
-<dt><code>&#8211;subscribe</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these options in the <font SIZE="-1">STOMP SUBSCRIBE</font> frame used with the incoming broker; this option can be given multiple times</p>
-<dt><code>&#8211;timeout-broker</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout when interacting with the broker (e.g. getting receipts back); can be fractional</p>
-<dt><code>&#8211;timeout-client</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout for the client heart-beat; can be fractional (default: 40)</p>
-<dt><code>&#8211;timeout-connect</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout when connecting to the broker; can be fractional</p>
-<dt><code>&#8211;timeout-disconnect</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout when disconnecting from the broker; can be fractional (default: 60)</p>
-<dt><code>&#8211;timeout-flush</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout when attempting to send the last bytes to the broker just before disconnecting; can be fractional (default: 60)</p>
-<dt><code>&#8211;timeout-inactivity</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout in the incoming module to stop <code>stompclt</code> when no new messages have been received (aka drain mode); can be fractional</p>
-<dt><code>&#8211;timeout-linger</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> when stopping <code>stompclt</code>, use this timeout to finish interacting with the broker; can be fractional</p>
-<dt><code>&#8211;timeout-server</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout for the server heart-beat; can be fractional (default: 10)</p>
-<dt><code>&#8211;timeout-status</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></p>
-<dd> use this timeout when checking the status with <code>&#8211;status</code>; can be fractional</p>
-<dt><code>&#8211;unsubscribe</code> <i>KEY=VALUE&#8230;</i></p>
-<dd> use these options in the <font SIZE="-1">STOMP UNSUBSCRIBE</font> frame used with the incoming broker; this option can be given multiple times and should match the <code>&#8211;subscribe</code> options</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version information</p>
-<dt><code>&#8211;window</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></p>
-<dd> keep at most the given number of not-yet-acknowledged messages in memory</dl>
+<dt><code>&#8211;callback-code</code> <i></i><font SIZE="-1"><i>CODE</i></font><i></i></dt>
+<dd> execute the given Perl code on each message, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</dd>
+<dt><code>&#8211;callback-data</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> pass this data to the user supplied callback code, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</dd>
+<dt><code>&#8211;callback-path</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dd> execute the Perl code in the given file on each message, see the &#8220;<font SIZE="-1">CALLBACK&#8221;</font> section below for more information</dd>
+<dt><code>&#8211;config</code>, <code>&#8211;conf</code>, <code>&#8211;cfg</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dd> use the given configuration file, see the &#8220;<font SIZE="-1">CONFIGURATION FILE&#8221;</font> section below for more information</dd>
+<dt><code>&#8211;config-general</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use the given Config::General options when creating the configuration parser</dd>
+<dt><code>&#8211;count</code>, <code>-c</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></dt>
+<dd> process at most the given number of messages; note: when using an incoming broker, to avoid consuming more messages, it is recommended to enable the <code>&#8211;reliable</code> option</dd>
+<dt><code>&#8211;daemon</code> | <code>&#8211;no-daemon</code></dt>
+<dd> detach <code>stompclt</code> so that it becomes a daemon running in the background; debug, warning and error messages will get sent to syslog; this option can be negated</dd>
+<dt><code>&#8211;debug</code>, <code>-d</code></dt>
+<dd> show debugging information</dd>
+<dt><code>&#8211;duration</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> process messages during at most the given number of seconds and then stop; can be fractional</dd>
+<dt><code>&#8211;heart-beat</code> | <code>&#8211;no-heart-beat</code></dt>
+<dd> enable <font SIZE="-1">STOMP 1.1</font> heart-beats between <code>stompclt</code> and the broker(s); this option can be negated</dd>
+<dt><code>&#8211;help</code>, <code>-h</code>, <code>-?</code></dt>
+<dd> show some help</dd>
+<dt><code>&#8211;incoming-broker-auth</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> use this authentication string (see Authen::Credential) to authenticate to the incoming broker; this option can be given multiple times</dd>
+<dt><code>&#8211;incoming-broker-connect</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these options in the <font SIZE="-1">STOMP CONNECT</font> frame sent to the incoming broker</dd>
+<dt><code>&#8211;incoming-broker-sockopts</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these socket options when connecting to the incoming broker</dd>
+<dt><code>&#8211;incoming-broker-stomp-debug</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> set the <font SIZE="-1">STOMP</font> debug flags (see Net::STOMP::Client) when interacting with the incoming broker</dd>
+<dt><code>&#8211;incoming-broker-type</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> set the incoming broker type; this can be useful when using <font SIZE="-1">STOMP</font> features which are broker specific</dd>
+<dt><code>&#8211;incoming-broker-uri</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
+<dd> use this connection <font SIZE="-1">URI </font>(see Net::STOMP::Client) to connect to the incoming broker</dd>
+<dt><code>&#8211;incoming-queue</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> read incoming messages from the given message queue (see Messaging::Message::Queue)</dd>
+<dt><code>&#8211;lazy</code> | <code>&#8211;no-lazy</code></dt>
+<dd> initialize the outgoing module only after having received the first message; this option can be negated</dd>
+<dt><code>&#8211;list</code>, <code>-l</code></dt>
+<dd> show all supported options</dd>
+<dt><code>&#8211;loop</code> | <code>&#8211;no-loop</code></dt>
+<dd> when using an incoming message queue, loop over it; this option can be negated</dd>
+<dt><code>&#8211;manual</code>, <code>-m</code></dt>
+<dd> show this manual</dd>
+<dt><code>&#8211;outgoing-broker-auth</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> use this authentication string (see Authen::Credential) to authenticate to the outgoing broker; this option can be given multiple times</dd>
+<dt><code>&#8211;outgoing-broker-connect</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these options in the <font SIZE="-1">STOMP CONNECT</font> frame sent to the outgoing broker</dd>
+<dt><code>&#8211;outgoing-broker-sockopts</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these socket options when connecting to the outgoing broker</dd>
+<dt><code>&#8211;outgoing-broker-stomp-debug</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> set the <font SIZE="-1">STOMP</font> debug flags (see Net::STOMP::Client) when interacting with the outgoing broker</dd>
+<dt><code>&#8211;outgoing-broker-type</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dd> set the outgoing broker type; this can be useful when using <font SIZE="-1">STOMP</font> features which are broker specific</dd>
+<dt><code>&#8211;outgoing-broker-uri</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
+<dd> use this connection <font SIZE="-1">URI </font>(see Net::STOMP::Client) to connect to the outgoing broker</dd>
+<dt><code>&#8211;outgoing-queue</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> store outgoing messages into the given message queue (see Messaging::Message::Queue)</dd>
+<dt><code>&#8211;pidfile</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dd> use this pid file</dd>
+<dt><code>&#8211;prefetch</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></dt>
+<dd> set the prefetch value (i.e. the maximum number of messages to received without acknowledging them) on the incoming broker</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> tell another instance of <code>stompclt</code> (identified by its pid file, as specified by the <code>&#8211;pidfile</code> option) to quit</dd>
+<dt><code>&#8211;reliable</code> | <code>&#8211;no-reliable</code></dt>
+<dd> use <font SIZE="-1">STOMP</font> features for more reliable messaging (i.e. client side acknowledgments and receipts) at the cost of less performance; this option can be negated</dd>
+<dt><code>&#8211;remove</code> | <code>&#8211;no-remove</code></dt>
+<dd> when using an incoming message queue, remove the processed messages; this option can be negated</dd>
+<dt><code>&#8211;statistics</code>, <code>-s</code> | <code>&#8211;no-statistics</code></dt>
+<dd> report statistics at the end of the execution; this option can be negated</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> get the status of another instance of <code>stompclt</code> (identified by its pid file, as specified by the <code>&#8211;pidfile</code> option); the exit code will be zero if the instance is alive and non-zero otherwise</dd>
+<dt><code>&#8211;subscribe</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these options in the <font SIZE="-1">STOMP SUBSCRIBE</font> frame used with the incoming broker; this option can be given multiple times</dd>
+<dt><code>&#8211;timeout-broker</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout when interacting with the broker (e.g. getting receipts back); can be fractional</dd>
+<dt><code>&#8211;timeout-client</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout for the client heart-beat; can be fractional (default: 40)</dd>
+<dt><code>&#8211;timeout-connect</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout when connecting to the broker; can be fractional</dd>
+<dt><code>&#8211;timeout-disconnect</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout when disconnecting from the broker; can be fractional (default: 60)</dd>
+<dt><code>&#8211;timeout-flush</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout when attempting to send the last bytes to the broker just before disconnecting; can be fractional (default: 60)</dd>
+<dt><code>&#8211;timeout-inactivity</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout in the incoming module to stop <code>stompclt</code> when no new messages have been received (aka drain mode); can be fractional</dd>
+<dt><code>&#8211;timeout-linger</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> when stopping <code>stompclt</code>, use this timeout to finish interacting with the broker; can be fractional</dd>
+<dt><code>&#8211;timeout-server</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout for the server heart-beat; can be fractional (default: 10)</dd>
+<dt><code>&#8211;timeout-status</code> <i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
+<dd> use this timeout when checking the status with <code>&#8211;status</code>; can be fractional</dd>
+<dt><code>&#8211;unsubscribe</code> <i>KEY=VALUE&#8230;</i></dt>
+<dd> use these options in the <font SIZE="-1">STOMP UNSUBSCRIBE</font> frame used with the incoming broker; this option can be given multiple times and should match the <code>&#8211;subscribe</code> options</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version information</dd>
+<dt><code>&#8211;window</code> <i></i><font SIZE="-1"><i>INTEGER</i></font><i></i></dt>
+<dd> keep at most the given number of not-yet-acknowledged messages in memory</dd></dl>
 <p> To list all the available options in a compact form, type: </p>
 <pre>
   $ stompclt -l
@@ -172,24 +172,24 @@ description: "stompclt – versatile STOMP client"
 <h2>CALLBACK</h2>
 <p> <code>stompclt</code> can be given Perl code to execute on all processed messages. This can be used for different purposes:</p>
 <dl>
-<dt>&bull;</p>
-<dd> massaging: the code can change any part of the message, including setting or removing header fields</p>
-<dt>&bull;</p>
-<dd> filtering: the code can decide if the message must be given to the outgoing module or not</p>
-<dt>&bull;</p>
-<dd> displaying: the code can print any part of the message</p>
-<dt>&bull;</p>
-<dd> copying: the code can store a copy of the message into files or message queues</dl>
+<dt>&bull;</dt>
+<dd> massaging: the code can change any part of the message, including setting or removing header fields</dd>
+<dt>&bull;</dt>
+<dd> filtering: the code can decide if the message must be given to the outgoing module or not</dd>
+<dt>&bull;</dt>
+<dd> displaying: the code can print any part of the message</dd>
+<dt>&bull;</dt>
+<dd> copying: the code can store a copy of the message into files or message queues</dd></dl>
 <p> To use callbacks, the <code>&#8211;callback-path</code> or <code>&#8211;callback-code</code> option must be used. The Perl code must provide functions with the following signature:</p>
 <dl>
-<dt>start(<font SIZE="-1">DATA</font>)</p>
-<dd> (optional) this will be called when the program starts, with the supplied data (see the <code>&#8211;callback-data</code> option) as a hash reference</p>
-<dt>check(<font SIZE="-1">MESSAGE</font>)</p>
-<dd> (mandatory) this will be called when the program has one message to process; it will be given the message (see Messaging::Message) and must return either a message (it could be the same one or a new one) or a string describing why the message has been dropped</p>
-<dt><i>idle()</i></p>
-<dd> (optional) this will be called when the program has no message to process</p>
-<dt><i>stop()</i></p>
-<dd> (optional) this will be called when the program stops</dl>
+<dt>start(<font SIZE="-1">DATA</font>)</dt>
+<dd> (optional) this will be called when the program starts, with the supplied data (see the <code>&#8211;callback-data</code> option) as a hash reference</dd>
+<dt>check(<font SIZE="-1">MESSAGE</font>)</dt>
+<dd> (mandatory) this will be called when the program has one message to process; it will be given the message (see Messaging::Message) and must return either a message (it could be the same one or a new one) or a string describing why the message has been dropped</dd>
+<dt><i>idle()</i></dt>
+<dd> (optional) this will be called when the program has no message to process</dd>
+<dt><i>stop()</i></dt>
+<dd> (optional) this will be called when the program stops</dd></dl>
 <p> The code can be put in a file, on the command line or in the <code>stompclt</code> configuration file, using the &#8220;here document&#8221; syntax. </p>
 <p> Here is an example (to be put in the <code>stompclt</code> configuration file) that prints on stdout a <font SIZE="-1">JSON</font> array of messages: </p>
 <pre><code>
@@ -332,7 +332,7 @@ EOF
 <p> Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt; </p>
 <p> Copyright (C) <font SIZE="-1">CERN 2012-2016</font> </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">SEE ALSO</a></p>
+<dt><a href="#lbAO">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAP">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">AUTHOR</a></dt>
+<dd></dd></dl>

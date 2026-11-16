@@ -13,21 +13,18 @@ description: "cargo-version – Show version information"
 <p> cargo version [OPTIONS]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1)</p>

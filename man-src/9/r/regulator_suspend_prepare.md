@@ -14,16 +14,16 @@ description: "regulator_suspend_prepare – prepare regulators for system wide s
 <p><i>state</i></p>
 <dl>
 <dd>
-<dd>system suspend state</dl>
+</dd><dd>system suspend state</dd></dl>
 <h2>Description</h2>
 <p>Configure each regulator with it&#8217;s suspend operating parameters for state. This will usually be called by machine suspend code prior to supending.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

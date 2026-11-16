@@ -15,11 +15,11 @@ blk_insert_cloned_request - Helper for stacking drivers to submit a request
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the queue to submit the request</dl>
+<dl><dd></dd><dd>the queue to submit the request</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>the request being queued</dl>
+<dl><dd>the request being queued</dd></dl>
 
 <h2>Copyright</h2>
 

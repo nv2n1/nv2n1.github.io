@@ -11,9 +11,9 @@ description: "mysqldbcompare – Compare Two Databases and Identify Differences"
 <p> mysqldbcompare &#8211; Compare Two Databases and Identify Differences </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqldbcompare [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dl>
+<dt> <code>mysqldbcompare [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility compares the objects and data from two databases to find differences. It identifies objects having different definitions in the two databases and presents them in a diff-style format of choice. Differences in the data are shown using a similar diff-style format. Changed or missing rows are shown in a standard format of GRID, CSV, TAB, or VERTICAL. </p>
+<dd>This utility compares the objects and data from two databases to find differences. It identifies objects having different definitions in the two databases and presents them in a diff-style format of choice. Differences in the data are shown using a similar diff-style format. Changed or missing rows are shown in a standard format of GRID, CSV, TAB, or VERTICAL. </dd>
 <p> Use the notation db1:db2 to name two databases to compare, or, alternatively just db1 to compare two databases with the same name. The latter case is a convenience notation for comparing same-named databases on different servers. </p>
 <p> The comparison may be run against two databases of different names on a single server by specifying only the <code>&#8211;server1</code> option. The user can also connect to another server by specifying the <code>&#8211;server2</code> option. In this case, db1 is taken from server1 and db2 from server2. </p>
 <p> Those objects considered in the database include tables, views, triggers, procedures, functions, and events. A count for each object type can be shown with the <code>-vv</code> option. </p>
@@ -22,96 +22,96 @@ description: "mysqldbcompare – Compare Two Databases and Identify Differences"
 <p> The tests include the following: </p>
 <dl>
 <dt>
-<dd> 1. Check database definitions </p>
+</dt><dd> 1. Check database definitions </dd>
 <p> A database existence precondition check ensures that both databases exist. If they do not, no further processing is possible and the <code>&#8211;run-all-tests</code> option is ignored.</dl>
 <dl>
 <dt>
-<dd> 2. Check existence of objects in both databases </p>
+</dt><dd> 2. Check existence of objects in both databases </dd>
 <p> The test for objects in both databases identifies those objects missing from one or another database. The remaining tests apply only to those objects that appear in both databases. To skip this test, use the <code>&#8211;skip-object-compare</code> option. That can be useful when there are known missing objects among the databases.</dl>
 <dl>
 <dt>
-<dd> 3. Compare object definitions </p>
+</dt><dd> 3. Compare object definitions </dd>
 <p> The definitions (the <code>CREATE</code> statements) are compared and differences are presented. To skip this test, use the <code>&#8211;skip-diff</code> option. That can be useful when there are object name differences only that you want to ignore.</dl>
 <dl>
 <dt>
-<dd> 4. Check table row counts </p>
+</dt><dd> 4. Check table row counts </dd>
 <p> This check ensures that both tables have the same number of rows. This does not ensure that the table data is consistent. It is merely a cursory check to indicate possible missing rows in one table or the other. The data consistency check identifies the missing rows. To skip this test, use the <code>&#8211;skip-row-count</code> option.</dl>
 <dl>
 <dt>
-<dd> 5. Check table data consistency </p>
+</dt><dd> 5. Check table data consistency </dd>
 <p> This check identifies both changed rows as well as missing rows from one or another of the tables in the databases. Changed rows are displayed as a diff-style report with the format chosen (<code>GRID</code> by default) and missing rows are also displayed using the format chosen. To skip this test, use the <code>&#8211;skip-data-check</code> option.</dl>
 <p> You may want to use the &#8211;skip-xxx options to run only one of the tests. This might be helpful when working to bring two databases into synchronization, to avoid running all of the tests repeatedly during the process. </p>
 <p> Each test completes with one of the following states: </p>
 <dl>
 <dt>
-<dd> &bull; <code>pass</code> </p>
+</dt><dd> &bull; <code>pass</code> </dd>
 <p> The test succeeded.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>FAIL</code> </p>
+</dt><dd> &bull; <code>FAIL</code> </dd>
 <p> The test failed. Errors are displayed following the test state line.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>SKIP</code> </p>
+</dt><dd> &bull; <code>SKIP</code> </dd>
 <p> The test was skipped due to a missing prerequisite or a skip option.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>WARN</code> </p>
+</dt><dd> &bull; <code>WARN</code> </dd>
 <p> The test encountered an unusual but not fatal error.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;</code> </p>
+</dt><dd> &bull; <code>&#8211;</code> </dd>
 <p> The test is not applicable to this object.</dl>
 <p> To specify how to display diff-style output, use one of the following values with the <code>&#8211;difftype</code> option: </p>
 <dl>
 <dt>
-<dd> &bull; <code>unified</code> (default) </p>
+</dt><dd> &bull; <code>unified</code> (default) </dd>
 <p> Display unified format output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>context</code> </p>
+</dt><dd> &bull; <code>context</code> </dd>
 <p> Display context format output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>differ</code> </p>
+</dt><dd> &bull; <code>differ</code> </dd>
 <p> Display differ-style format output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>sql</code> </p>
+</dt><dd> &bull; <code>sql</code> </dd>
 <p> Display SQL transformation statement output.</dl>
 <p> To specify how to display output for changed or missing rows, use one of the following values with the <code>&#8211;format</code> option: </p>
 <dl>
 <dt>
-<dd> &bull; <code>grid</code> (default) </p>
+</dt><dd> &bull; <code>grid</code> (default) </dd>
 <p> Display output in grid or table format like that of the <code>mysql</code> monitor.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>csv</code> </p>
+</dt><dd> &bull; <code>csv</code> </dd>
 <p> Display output in comma-separated values format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>tab</code> </p>
+</dt><dd> &bull; <code>tab</code> </dd>
 <p> Display output in tab-separated format.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>vertical</code> </p>
+</dt><dd> &bull; <code>vertical</code> </dd>
 <p> Display output in single-column format like that of the \G command for the <code>mysql</code> monitor.</dl>
 <p> The <code>&#8211;changes-for</code> option controls the direction of the difference (by specifying the object to be transformed) in either the difference report (default) or the transformation report (designated with the <code>&#8211;difftype=sql</code> option). Consider the following command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 mysqldbcompare-- server1 = root[at] host1-- server2 = root[at] host2-- difftype = sql
     db1 : dbx
 </code></pre>
-</dl>
+</dd></dl>
 <p> The leftmost database (db1) exists on the server designated by the <code>&#8211;server1</code> option (host1). The rightmost database (dbx) exists on the server designated by the <code>&#8211;server2</code> option (host2). </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;changes-for=server1</code>: Produce output that shows how to make the definitions of objects on server1 like the definitions of the corresponding objects on server2.</dl>
+</dt><dd> &bull; <code>&#8211;changes-for=server1</code>: Produce output that shows how to make the definitions of objects on server1 like the definitions of the corresponding objects on server2.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;changes-for=server2</code>: Produce output that shows how to make the definitions of objects on server2 like the definitions of the corresponding objects on server1.</dl>
+</dt><dd> &bull; <code>&#8211;changes-for=server2</code>: Produce output that shows how to make the definitions of objects on server2 like the definitions of the corresponding objects on server1.</dd></dl>
 <p> The default direction is server1. </p>
 <p> You must provide connection parameters (user, host, password, and so forth) for an account that has the appropriate privileges to access all objects in the operation. </p>
 <p> If the utility is to be run on a server that has binary logging enabled, and you do not want the comparison steps logged, use the <code>&#8211;disable-binary-logging</code> option.<br />
@@ -119,76 +119,76 @@ OPTIONS </p>
 <p> <code>mysqldbcompare</code> accepts the following command-line options: </p>
 <dl>
 <dt>
-<dd> &bull; &#8211;help </p>
+</dt><dd> &bull; &#8211;help </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;changes-for=&lt;direction&gt; </p>
+</dt><dd> &bull; &#8211;changes-for=&lt;direction&gt; </dd>
 <p> Specify the server to show transformations to match the other server. For example, to see the transformation for transforming object definitions on server1 to match the corresponding definitions on server2, use <code>&#8211;changes-for=server1</code>. Permitted values are <code>server1</code> and <code>server2</code>. The default is <code>server1</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;difftype=&lt;difftype&gt;, -d&lt;difftype&gt; </p>
+</dt><dd> &bull; &#8211;difftype=&lt;difftype&gt;, -d&lt;difftype&gt; </dd>
 <p> Specify the difference display format. Permitted format values are <code>unified</code>, <code>context</code>, <code>differ</code>, and <code>sql</code>. The default is <code>unified</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;disable-binary-logging </p>
+</dt><dd> &bull; &#8211;disable-binary-logging </dd>
 <p> If binary logging is enabled, disable it during the operation to prevent comparison operations from being written to the binary log. Note: Disabling binary logging requires the <code>SUPER</code> privilege.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </p>
+</dt><dd> &bull; &#8211;format=&lt;format&gt;, -f&lt;format&gt; </dd>
 <p> Specify the display format for changed or missing rows. Permitted format values are <code>grid</code>, <code>csv</code>, <code>tab</code>, and <code>vertical</code>. The default is <code>grid</code>.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;quiet, -q </p>
+</dt><dd> &bull; &#8211;quiet, -q </dd>
 <p> Do not print anything. Return only an exit code of success or failure.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;run-all-tests, -a </p>
+</dt><dd> &bull; &#8211;run-all-tests, -a </dd>
 <p> Do not halt at the first difference found. Process all objects.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;server1=&lt;source&gt; </p>
+</dt><dd> &bull; &#8211;server1=&lt;source&gt; </dd>
 <p> Connection information for the first server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;server2=&lt;source&gt; </p>
+</dt><dd> &bull; &#8211;server2=&lt;source&gt; </dd>
 <p> Connection information for the second server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;] or &lt;<i>login-path</i>&gt;[::&lt;<i>port</i>&gt;][::&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;show-reverse </p>
+</dt><dd> &bull; &#8211;show-reverse </dd>
 <p> Produce a transformation report containing the SQL statements to conform the object definitions specified in reverse. For example, if &#8211;changes-for is set to server1, also generate the transformation for server2. Note: The reverse changes are annotated and marked as comments.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-data-check </p>
+</dt><dd> &bull; &#8211;skip-data-check </dd>
 <p> Skip the data consistency check.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-diff </p>
+</dt><dd> &bull; &#8211;skip-diff </dd>
 <p> Skip the object definition difference check.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-object-compare </p>
+</dt><dd> &bull; &#8211;skip-object-compare </dd>
 <p> Skip the object comparison check.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;skip-row-count </p>
+</dt><dd> &bull; &#8211;skip-row-count </dd>
 <p> Skip the row count check.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;span-key-size=&lt;number of bytes to use for key&gt; </p>
+</dt><dd> &bull; &#8211;span-key-size=&lt;number of bytes to use for key&gt; </dd>
 <p> Change the size of the key used for compare table contents. A higher value can help to get more accurate results comparing large databases, but may slow the algorithm. </p>
 <p> Default value is 8.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;verbose, -v </p>
+</dt><dd> &bull; &#8211;verbose, -v </dd>
 <p> Specify how much information to display. Use this option multiple times to increase the amount of information. For example, <code>-v</code> = verbose, <code>-vv</code> = more verbose, <code>-vvv</code> = debug.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;version </p>
+</dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;width=&lt;number&gt; </p>
+</dt><dd> &bull; &#8211;width=&lt;number&gt; </dd>
 <p> Change the display width of the test report. The default is 75 characters.</dl>
 <p>NOTES </p>
 <p> The login user must have the appropriate permissions to read all databases and tables listed. </p>
@@ -199,7 +199,7 @@ EXAMPLES </p>
 <p> Use the following command to compare the emp1 and emp2 databases on the local server, and run all tests even if earlier tests fail: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqldbcompare&#8211; server1 = root[at] localhost emp1 : emp2&#8211; run &#8211; all &#8211; tests<br />
 #server1 on localhost : &#8230; connected.<br />
 #Checking databases emp1 on server1 and emp2 on server2<br />
@@ -210,11 +210,11 @@ $ mysqldbcompare&#8211; server1 = root[at] localhost emp1 : emp2&#8211; run &#82
                                                                                                                                                                                              @ @-1,<br />
                    4 + 1, 4 @ @ ************************ * 1. row *************************dept_no : d002 &#8211; dept_name : dunno + dept_name : Finance 1 rows.Rows in emp1.departments not in emp2.departments * ************************1. row * ************************dept_no : d008 dept_name : Research 1 rows.Rows in emp2.departments not in emp1.departments * ************************1. row * ************************dept_no : d100 dept_name : stupid 1 rows.TABLE dept_manager pass pass pass Database consistency check failed.<br />
 #&#8230; done
-</dl>
+</dd></dl>
 <p> Given: two databases with the same table layout. Data for each table contains: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 mysql &gt; select *from db1.t1;<br />
 + &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | a | b |<br />
     +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 1 | Test 789 |<br />
@@ -230,11 +230,11 @@ mysql &gt; select *from db1.t1;<br />
     | 3 | Test 789 |<br />
     | 5 | New row &#8211; db2 |<br />
     +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+4 rows in set(0.00 sec)
-</dl>
+</dd></dl>
 <p> To generate the SQL statements for data transformations to make db1.t1 the same as db2.t1, use the <code>&#8211;changes-for=server1</code> option. We must also include the <code>-a</code> option to ensure that the data consistency test is run. The following command illustrates the options used and an excerpt from the results generated: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqldbcompare &#8211;server1=root:root [at] localhost \<br />
     &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server1 -a \<br />
     &#8211;difftype=sql<br />
@@ -252,11 +252,11 @@ DELETE<br />
 FROM db1.t1 WHERE a = &#8216;4&#8217;; INSERT INTO db1.t1 (a, b) VALUES(&#8216;5&#8217;, &#8216;New<br />
 row &#8211; db2&#8217;);<br />
 #Database consistency check failed.# #&#8230; done
-</dl>
+</dd></dl>
 <p> Similarly, when the same command is run with <code>&#8211;changes-for=server2</code> and <code>&#8211;difftype=sql</code>, the following report is generated: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ mysqldbcompare &#8211;server1=root:root [at] localhost \<br />
     &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server2 -a \<br />
     &#8211;difftype=sql<br />
@@ -273,11 +273,11 @@ UPDATE db2.t1 SET b = &#8216;Test 123&#8217; WHERE a = &#8216;3&#8217;;<br />
 DELETE<br />
 FROM db2.t1 WHERE a = &#8216;5&#8217;; INSERT INTO db2.t1 (a, b) VALUES(&#8216;4&#8217;, &#8216;New<br />
 row &#8211; db1&#8217;);
-</dl>
+</dd></dl>
 <p> With the <code>&#8211;difftype=sql</code> SQL generation option set, <code>&#8211;show-reverse</code> shows the object transformations in both directions. Here is an excerpt of the results: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqldbcompare --server1=root:root [at] localhost \
 --server2=root:root [at] localhost db1:db2 --changes-for=server1 \
@@ -302,7 +302,7 @@ FROM db2.t1 WHERE a = '5'; INSERT INTO db2.t1 (a, b) VALUES('4', 'New
 row - db1');
 #Database consistency check failed.# #... done
 </code></pre>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Utilities section of the MySQL Workbench Reference Manual, which is available online at <a rel="nofollow" href="http://dev.mysql.com/doc/workbench/en/.">http://dev.mysql.com/doc/workbench/en/.</a></p>

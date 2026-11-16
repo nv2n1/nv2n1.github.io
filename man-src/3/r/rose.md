@@ -10,11 +10,8 @@ description: "rose_aton, rose_ntoa, rose_cmp – ROSE Address manipulation routi
 <p>rose_aton, rose_ntoa, rose_cmp &#8211; ROSE Address manipulation routines</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netrose/rose.h&gt;
-
 int rose_aton(const char *cp, char *inp);
-
 char *rose_ntoa(rose_address *cp);
-
 int rose_cmp(rose_address *a1, rose_address *a2);</code></pre>
 <h2>Description</h2>
 <p><code>rose_aton()</code> converts the ROSE address <i>cp</i> from an ASCII representation into network format. </p>

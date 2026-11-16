@@ -19,7 +19,7 @@ description: "slaed7.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SLAED7 computes the updated eigensystem of a diagonal
  matrix after modification by a rank-one symmetric matrix. This
@@ -48,11 +48,11 @@ description: "slaed7.f –"
        the current problem are multiplied with the eigenvectors from
        the overall problem.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ICOMPQ</i> </p>
+</dt><dd> <i>ICOMPQ</i> </dd>
 <pre>
           ICOMPQ is INTEGER
           = 0:  Compute eigenvalues only.
@@ -192,18 +192,18 @@ description: "slaed7.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 258 of file slaed7.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

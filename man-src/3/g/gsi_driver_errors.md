@@ -17,7 +17,7 @@ description: "Error Types –"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> globus_xio_driver_error_match() </p>
+</dt><dd> globus_xio_driver_error_match() </dd>
 <p> globus_error_gssapi_match() </p>
 <p> globus_error_match_openssl_error()</dl>
 <h2>Enumeration Type Documentation</h2>
@@ -25,20 +25,20 @@ description: "Error Types –"
 <p> GSI driver specific error types. </p>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL </i></p>
-<dd> Indicates that the established context does not meet the required protecetion level.</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI </i></p>
-<dd> Wraps a GSSAPI error.</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME </i></p>
-<dd> Indicates that GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION is set but that the target name is empty.</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME </i></p>
-<dd> Indicates that GLOBUS_XIO_GSI_HOST_AUTHORIZATION is set but that no host name is available.</p>
-<dt><i>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED </i></p>
-<dd> Indicates that the peer is not authorized.</p>
-<dt><i>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG </i></p>
-<dd> Indicates the the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dl>
+<dt><i>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL </i></dt>
+<dd> Indicates that the established context does not meet the required protecetion level.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI </i></dt>
+<dd> Wraps a GSSAPI error.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION is set but that the target name is empty.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_HOST_AUTHORIZATION is set but that no host name is available.</dd>
+<dt><i>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED </i></dt>
+<dd> Indicates that the peer is not authorized.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG </i></dt>
+<dd> Indicates the the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

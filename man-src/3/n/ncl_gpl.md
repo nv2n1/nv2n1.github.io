@@ -12,11 +12,11 @@ GPL (Polyline) - This output primitive draws line segments connecting a sequence
 
  void gpolyline(const Gpoint_list *point_list);
 <h2>Description</h2><dl COMPACT><dt>N
-<dd>(Integer, Input) - The number of points in the line to be drawn. N must be larger than one.
-<dt>X (N)
-<dd>(Real Array, Input) - The X coordinates (specified in world coordinates) of the N points to be connected by line segments.
-<dt>Y (N)
-<dd>(Real Array, Input) - The Y coordinates (specified in world coordinates) of the N points to be connected by line segments.</dl><h2>Usage</h2>Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the SET call and the SPPS functions for drawing lines are not applicable here.
+</dt><dd>(Integer, Input) - The number of points in the line to be drawn. N must be larger than one.
+</dd><dt>X (N)
+</dt><dd>(Real Array, Input) - The X coordinates (specified in world coordinates) of the N points to be connected by line segments.
+</dd><dt>Y (N)
+</dt><dd>(Real Array, Input) - The Y coordinates (specified in world coordinates) of the N points to be connected by line segments.</dd></dl><h2>Usage</h2>Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the SET call and the SPPS functions for drawing lines are not applicable here.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gsln, gslwsc, gscr, gsplci, gqln, gqlwsc, gqplci, dashline, set, gpolyline 
 

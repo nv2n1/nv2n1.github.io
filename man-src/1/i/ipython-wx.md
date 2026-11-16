@@ -17,8 +17,8 @@ description: "ipython-wx – Graphical frontend that embeds a multithreaded IPyt
 <p> ipython-wx is, compared to ipythonx, a more advanced graphical frontend to IPython. It is implemented using WxWidgets.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>ipython-wx does not accept any command line options.</code></p>
-<dd></dl>
+<dt><code>ipython-wx does not accept any command line options.</code></dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipython/">ipython</a>(1),</code><a href="/docs/linux/man/1-ipythonx/">ipythonx</a>(1) </p>
 <h2>AUTHOR</h2>

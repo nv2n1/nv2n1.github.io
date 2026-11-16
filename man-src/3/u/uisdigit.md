@@ -10,7 +10,6 @@ description: "uisdigit – Tells if a character is a digit. Allegro game program
 <p>uisdigit &#8211; Tells if a character is a digit. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uisdigit(int c);</code></pre>
 <h2>Description</h2>
 <p>Returns nonzero if `c&#8217; is a digit. </p>

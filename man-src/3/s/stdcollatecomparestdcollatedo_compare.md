@@ -11,18 +11,13 @@ std::collate&lt;CharT&gt;::compare,std::collate&lt;CharT&gt;::do_compare - std::
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public :
-
     int
     compare(const CharT *low1, const CharT *high1, (1)
-
                                                        const CharT *low2,
             const CharT *high2) const;
-
 protected:
 virtual int do_compare(const CharT *low1, const CharT *high1, (2)
-
                                                                   const CharT *low2,
                        const CharT *high2) const;</code></pre> 
 1) Public member function, calls the protected virtual member function do_compare of the most derived class. 
@@ -47,14 +42,10 @@ Collation order is the dictionary order: the position of the letter in the natio
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;locale&gt;
 template &lt;typename CharT&gt;
-
 void try_compare(const std::locale &amp;l, const CharT *p1, const CharT *p2)
-
 {
     auto &amp;f = std::use_facet&lt;std::collate&lt;CharT&gt;&gt;(l);
     std::basic_string&lt;CharT&gt; s1(p1), s2(p2);
@@ -65,7 +56,6 @@ void try_compare(const std::locale &amp;l, const CharT *p1, const CharT *p2)
         std::wcout &lt;&lt; p2 &lt;&lt; &quot; before &quot; &lt;&lt; p1 &lt;&lt; '\n';
 }
 int main()
-
 {
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
     std::wcout.imbue(std::locale());

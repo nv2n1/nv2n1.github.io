@@ -18,19 +18,19 @@ description: "choom – display and adjust OOM-killer score."
 <p> <code>-p</code>, <code>&#8211;pid</code> <i>pid</i></p>
 <dl>
 <dt>
-<dd> Specifies process ID.</dl>
+</dt><dd> Specifies process ID.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;adjust</code> <i>value</i></p>
 <dl>
 <dt>
-<dd> Specify the adjust score value.</dl>
+</dt><dd> Specify the adjust score value.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> Linux kernel uses the badness heuristic to select which process gets killed in out of memory conditions. </p>
 <p> The badness heuristic assigns a value to each candidate task ranging from 0 (never kill) to 1000 (always kill) to determine which process is targeted. The units are roughly a proportion along that range of allowed memory the process may allocate from based on an estimation of its current memory and swap use. For example, if a task is using all allowed memory, its badness score will be 1000. If it is using half of its allowed memory, its score will be 500. </p>

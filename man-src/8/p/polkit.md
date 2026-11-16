@@ -14,7 +14,7 @@ description: "polkit – Authorization Framework"
 <h2>System Architecture</h2>
 <p>The system architecture of PolicyKit is comprised of the <i>Authority</i> (implemented as a service on the system message bus) and a <i>Authentication Agent</i> per user session (provided and started by the user session e.g. GNOME or KDE). Additionally, PolicyKit supports a number of extension points &#8211; specifically, vendors and/or sites can write extensions to completely control authorization policy. In a block diagram, the architecture looks like this: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[1]</font> </p>
+<dd>[IMAGE]<font SIZE="-2">[1]</font> </dd>
 <dl>
 <dd>
 <pre> +-------------------+
@@ -49,7 +49,7 @@ System Context | |
 | Backends and |
 | Extensions |
 +------------------+</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> For convenience, the libpolkit-gobject-1 library wraps the PolicyKit D-Bus API using GObject. However, a mechanism can also use the D-Bus API or the <code><a href="/docs/linux/man/1-pkcheck/">pkcheck</a></code>(1) command to check authorizations. </p>
 <p> The libpolkit-agent-1 library provides an abstraction of the native authentication system, e.g. <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8) and also facilities registration and communication with the PolicyKit D-Bus service. </p>
@@ -58,7 +58,7 @@ System Context | |
 <h2>Authentication Agents</h2>
 <p>An authentication agent is used to make the user of a session prove that the user of the session really is the user (by authenticating as the user) or an administrative user (by authenticating as a administrator). In order to integrate well with the rest of the user session (e.g. match the look and feel), authentication agents are meant to be provided by the user session that the user uses. For example, an authentication agent may look like this: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[3]</font> </p>
+<dd>[IMAGE]<font SIZE="-2">[3]</font> </dd>
 <dl>
 <dd>
 <pre>+----------------------------------------------------------+
@@ -83,11 +83,11 @@ System Context | |
 | |
 | [Cancel] [Authenticate] |
 +----------------------------------------------------------+</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> If the system is configured without a <i>root</i> account it may allow you to select the administrative user who is authenticating: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[4]</font> </p>
+<dd>[IMAGE]<font SIZE="-2">[4]</font> </dd>
 <dl>
 <dd>
 <pre>+----------------------------------------------------------+
@@ -114,7 +114,7 @@ System Context | |
 | |
 | [Cancel] [Authenticate] |
 +----------------------------------------------------------+</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> See <code><a href="/docs/linux/man/8-pklocalauthority/">pklocalauthority</a></code>(8) on how to set up the local authority implemention for systems without a root account. </p>
 <p> Applications that do not run under a desktop environment (for example, if launched from a <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) login) may not have have an authentication agent associated with them. Such applications may use the PolkitAgentTextListener type or the <code><a href="/docs/linux/man/1-pkttyagent/">pkttyagent</a></code>(1) helper so the user can authenticate using a textual interface.</p>
@@ -127,72 +127,72 @@ System Context | |
 <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE policyconfig PUBLIC &quot;-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN&quot;
 &quot;<a rel="nofollow" href="http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd</a>&quot;&gt;</pre>
-</dl>
+</dd></dl>
 <p> The <i>policyconfig</i> element must be present exactly once. Elements that can be used inside <i>policyconfig</i> includes: </p>
 <p> <i>vendor</i></p>
 <dl>
-<dd>The name of the project or vendor that is supplying the actions in the XML document. Optional.</dl>
+<dd>The name of the project or vendor that is supplying the actions in the XML document. Optional.</dd></dl>
 <p> <i>vendor_url</i></p>
 <dl>
-<dd>A URL to the project or vendor that is supplying the actions in the XML document. Optional.</dl>
+<dd>A URL to the project or vendor that is supplying the actions in the XML document. Optional.</dd></dl>
 <p> <i>icon_name</i></p>
 <dl>
-<dd>An icon representing the project or vendor that is supplying the actions in the XML document. The icon name must adhere to the m[blue]<code>Freedesktop.org Icon Naming Specification</code>m[]<font SIZE="-2">[5]</font>. Optional.</dl>
+<dd>An icon representing the project or vendor that is supplying the actions in the XML document. The icon name must adhere to the m[blue]<code>Freedesktop.org Icon Naming Specification</code>m[]<font SIZE="-2">[5]</font>. Optional.</dd></dl>
 <p> <i>action</i></p>
 <dl>
-<dd>Declares an action. The action name is specified using the id attribute and can only contain the characters [a-z][0-9].- e.g. lower-case ASCII, digits, period and hyphen.</dl>
+<dd>Declares an action. The action name is specified using the id attribute and can only contain the characters [a-z][0-9].- e.g. lower-case ASCII, digits, period and hyphen.</dd></dl>
 <p> Elements that can be used inside <i>action</i> includes: </p>
 <p> <i>description</i></p>
 <dl>
-<dd>A human readable description of the action, e.g. &#8220;Install unsigned software&#8221;.</dl>
+<dd>A human readable description of the action, e.g. &#8220;Install unsigned software&#8221;.</dd></dl>
 <p> <i>message</i></p>
 <dl>
-<dd>A human readable message displayed to the user when asking for credentials when authentication is needed, e.g. &#8220;Installing unsigned software requires authentication&#8221;.</dl>
+<dd>A human readable message displayed to the user when asking for credentials when authentication is needed, e.g. &#8220;Installing unsigned software requires authentication&#8221;.</dd></dl>
 <p> <i>defaults</i></p>
 <dl>
-<dd>This element is used to specify implicit authorizations for clients. </p>
+<dd>This element is used to specify implicit authorizations for clients. </dd>
 <p> Elements that can be used inside <i>defaults</i> includes: </p>
 <p> <i>allow_any</i></p>
 <dl>
-<dd>Implicit authorizations that apply to any client. Optional.</dl>
+<dd>Implicit authorizations that apply to any client. Optional.</dd></dl>
 <p> <i>allow_inactive</i></p>
 <dl>
-<dd>Implicit authorizations that apply to clients in inactive sessions on local consoles. Optional.</dl>
+<dd>Implicit authorizations that apply to clients in inactive sessions on local consoles. Optional.</dd></dl>
 <p> <i>allow_active</i></p>
 <dl>
-<dd>Implicit authorizations that apply to clients in active sessions on local consoles. Optional.</dl>
+<dd>Implicit authorizations that apply to clients in active sessions on local consoles. Optional.</dd></dl>
 <p> Each of the <i>allow_any</i>, <i>allow_inactive</i> and <i>allow_active</i> elements can contain the following values: </p>
 <p> no</p>
 <dl>
-<dd>Not authorized.</dl>
+<dd>Not authorized.</dd></dl>
 <p> yes</p>
 <dl>
-<dd>Authorized.</dl>
+<dd>Authorized.</dd></dl>
 <p> auth_self</p>
 <dl>
-<dd>Authentication by the owner of the session that the client originates from is required.</dl>
+<dd>Authentication by the owner of the session that the client originates from is required.</dd></dl>
 <p> auth_admin</p>
 <dl>
-<dd>Authentication by an administrative user is required.</dl>
+<dd>Authentication by an administrative user is required.</dd></dl>
 <p> auth_self_keep</p>
 <dl>
-<dd>Like auth_self but the authorization is kept for a brief period.</dl>
+<dd>Like auth_self but the authorization is kept for a brief period.</dd></dl>
 <p> auth_admin_keep</p>
 <dl>
-<dd>Like auth_admin but the authorization is kept for a brief period.</dl>
+<dd>Like auth_admin but the authorization is kept for a brief period.</dd></dl>
 </dl>
 <p> <i>annotate</i></p>
 <dl>
-<dd>Used for annotating an action with a key/value pair. The key is specified using the the key attribute and the value is specified using the value attribute. This element may appear zero or more times. See below for known annotations.</dl>
+<dd>Used for annotating an action with a key/value pair. The key is specified using the the key attribute and the value is specified using the value attribute. This element may appear zero or more times. See below for known annotations.</dd></dl>
 <p> <i>vendor</i></p>
 <dl>
-<dd>Used for overriding the vendor on a per-action basis. Optional.</dl>
+<dd>Used for overriding the vendor on a per-action basis. Optional.</dd></dl>
 <p> <i>vendor_url</i></p>
 <dl>
-<dd>Used for overriding the vendor URL on a per-action basis. Optional.</dl>
+<dd>Used for overriding the vendor URL on a per-action basis. Optional.</dd></dl>
 <p> <i>icon_name</i></p>
 <dl>
-<dd>Used for overriding the icon name on a per-action basis. Optional.</dl>
+<dd>Used for overriding the icon name on a per-action basis. Optional.</dd></dl>
 <p> For localization, <i>description</i> and <i>message</i> elements may occur multiple times with different xml:lang attributes. </p>
 <p> To list installed PolicyKit actions, use the <code><a href="/docs/linux/man/1-pkaction/">pkaction</a></code>(1) command.</p>
 <h3>Known annotations</h3>
@@ -207,17 +207,18 @@ System Context | |
 <p><code><a href="/docs/linux/man/8-pklocalauthority/">pklocalauthority</a></code>(8) <code><a href="/docs/linux/man/8-polkitd/">polkitd</a></code>(8) <code><a href="/docs/linux/man/1-pkaction/">pkaction</a></code>(1), <code><a href="/docs/linux/man/1-pkcheck/">pkcheck</a></code>(1), <code><a href="/docs/linux/man/1-pkexec/">pkexec</a></code>(1), <code><a href="/docs/linux/man/1-pkttyagent/">pkttyagent</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>/usr/share/gtk-doc/html/polkit-1/polkit-architecture.png</p>
-<dt> 2.</p>
-<dd>developer documentation</p>
+<dt> 1.</dt>
+<dd>/usr/share/gtk-doc/html/polkit-1/polkit-architecture.png</dd>
+<dt> 2.</dt>
+<dd>developer documentation</dd>
 <dl>
-<dd>file:///usr/share/gtk-doc/html/polkit-1/index.html</dl>
-<dt> 3.</p>
-<dd>/usr/share/gtk-doc/html/polkit-1/polkit-authentication-agent-example.png</p>
-<dt> 4.</p>
-<dd>/usr/share/gtk-doc/html/polkit-1/polkit-authentication-agent-example-wheel.png</p>
-<dt> 5.</p>
-<dd>Freedesktop.org Icon Naming Specification</p>
+<dd>file:///usr/share/gtk-doc/html/polkit-1/index.html</dd></dl>
+<dt> 3.</dt>
+<dd>/usr/share/gtk-doc/html/polkit-1/polkit-authentication-agent-example.png</dd>
+<dt> 4.</dt>
+<dd>/usr/share/gtk-doc/html/polkit-1/polkit-authentication-agent-example-wheel.png</dd>
+<dt> 5.</dt>
+<dd>Freedesktop.org Icon Naming Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></dl>
+<dd><a rel="nofollow" href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></dd></dl>
+</dl>

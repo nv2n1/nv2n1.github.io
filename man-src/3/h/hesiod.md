@@ -34,18 +34,18 @@ cc file.c -lhesiod
 <h2>ERRORS</h2>
 <p> Hesiod calls may fail because of:</p>
 <dl>
-<dt>ENOMEM</p>
-<dd> Insufficient memory was available to carry out the requested operation.</p>
-<dt>ENOEXEC</p>
-<dd> <i>hesiod_init</i> failed because the Hesiod configuration file was invalid.</p>
-<dt>ECONNREFUSED</p>
-<dd> <i>hesiod_resolve</i> failed because no name server could be contacted to answer the query.</p>
-<dt>EMSGSIZE</p>
-<dd> <i>hesiod_resolve</i> or <i>hesiod_to_bind</i> failed because the query or response was too big to fit into the packet buffers.</p>
-<dt>ENOENT</p>
-<dd> <i>hesiod_resolve</i> failed because the name server had no text records matching <i>name</i> and <i>type</i>, or <i>hesiod_to_bind</i> failed because the <i>name</i> argument had a domain extension which could not be resolved with type &#8220;rhs-extension&#8221; in the local Hesiod domain.</p>
-<dt>EINVAL</p>
-<dd> <i>hesiod_to_bind</i> failed to convert the resulting domain name from UTF-8 to an internationalized domain name.</dl>
+<dt>ENOMEM</dt>
+<dd> Insufficient memory was available to carry out the requested operation.</dd>
+<dt>ENOEXEC</dt>
+<dd> <i>hesiod_init</i> failed because the Hesiod configuration file was invalid.</dd>
+<dt>ECONNREFUSED</dt>
+<dd> <i>hesiod_resolve</i> failed because no name server could be contacted to answer the query.</dd>
+<dt>EMSGSIZE</dt>
+<dd> <i>hesiod_resolve</i> or <i>hesiod_to_bind</i> failed because the query or response was too big to fit into the packet buffers.</dd>
+<dt>ENOENT</dt>
+<dd> <i>hesiod_resolve</i> failed because the name server had no text records matching <i>name</i> and <i>type</i>, or <i>hesiod_to_bind</i> failed because the <i>name</i> argument had a domain extension which could not be resolved with type &#8220;rhs-extension&#8221; in the local Hesiod domain.</dd>
+<dt>EINVAL</dt>
+<dd> <i>hesiod_to_bind</i> failed to convert the resulting domain name from UTF-8 to an internationalized domain name.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Steve Dyer, IBM/Project Athena<br />
  Greg Hudson, MIT Team Athena<br />

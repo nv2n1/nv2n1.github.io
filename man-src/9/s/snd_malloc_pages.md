@@ -14,10 +14,10 @@ description: "snd_malloc_pages – allocate pages with the given size"
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>the size to allocate in bytes</dl>
+</dd><dd>the size to allocate in bytes</dd></dl>
 <p> <i>gfp_flags</i></p>
 <dl>
-<dd>the allocation conditions, GFP_XXX</dl>
+<dd>the allocation conditions, GFP_XXX</dd></dl>
 <h2>Description</h2>
 <p>Allocates the physically contiguous pages with the given size.</p>
 <h2>Return</h2>

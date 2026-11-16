@@ -13,30 +13,30 @@ description: "WML — The widget meta-language file format for creating uil comp
 <h3>File</h3>
 <p>WML files are ASCII files that you can modify with any standard text editor. They are accessed in the <code>tools/wml</code> directory by WML. By convention WML files have the suffix <code>.wml</code>. The Motif widget set is described in the <code>motif.wml</code> file. This is also the default WML file when using the WML facility. When adding new widgets or changing widget characteristics, you should start with a copy of the <code>motif.wml</code> file. If you are creating a new widget set for use with UIL, you should start from scratch. In either case the <code>motif.wml</code> file is a good example of WML syntax, and you should familiarize yourself with it before writing your own WML file. WML files have a simple syntax, similar in structure to UIL. It is made up of the following elements:</p>
 <dl>
-<dt> &bull;</p>
-<dd>Comments</p>
-<dt> &bull;</p>
-<dd>Data Type Definitions</p>
-<dt> &bull;</p>
-<dd>Character Set Definitions</p>
-<dt> &bull;</p>
-<dd>Enumeration Set Definitions</p>
-<dt> &bull;</p>
-<dd>Control List Definitions</p>
-<dt> &bull;</p>
-<dd>Class Definitions</p>
-<dt> &bull;</p>
-<dd>Child Definitions</p>
-<dt> &bull;</p>
-<dd>Resource Definitions</dl>
+<dt> &bull;</dt>
+<dd>Comments</dd>
+<dt> &bull;</dt>
+<dd>Data Type Definitions</dd>
+<dt> &bull;</dt>
+<dd>Character Set Definitions</dd>
+<dt> &bull;</dt>
+<dd>Enumeration Set Definitions</dd>
+<dt> &bull;</dt>
+<dd>Control List Definitions</dd>
+<dt> &bull;</dt>
+<dd>Class Definitions</dd>
+<dt> &bull;</dt>
+<dd>Child Definitions</dd>
+<dt> &bull;</dt>
+<dd>Resource Definitions</dd></dl>
 <p> You can use space, tabs, or newlines anywhere in the syntax, as long as you do not split up keywords or strings, except that comments end at a newline. The order of elements is not important to the syntax. This description uses the following additional conventions to describe the syntax of the widget meta-language:</p>
 <dl>
-<dt>[&nbsp;<wbr>&nbsp;<wbr>]</p>
-<dd>Indicates optional elements.</p>
-<dt>&#8230;</p>
-<dd>Indicates where an element of syntax can be repeated.</p>
-<dt>|</p>
-<dd>Indicates a choice among multiple items.</dl>
+<dt>[&nbsp;<wbr>&nbsp;<wbr>]</dt>
+<dd>Indicates optional elements.</dd>
+<dt>&#8230;</dt>
+<dd>Indicates where an element of syntax can be repeated.</dd>
+<dt>|</dt>
+<dd>Indicates a choice among multiple items.</dd></dl>
 <h3>Comments</h3>
 <p>You can include comments in the WML file. Comments have the following syntax: </p>
 <pre>[any.element]!any.comment</pre>
@@ -52,10 +52,10 @@ DataType !This is a comment following code.</tt></pre>
  [...]</pre>
 <p>A data type definition begins with the keyword <code>DataType</code>. Following the <code>DataType</code> keyword is a list of data types that can be further modified with</p>
 <dl>
-<dt><code>InternalLiteral</code></p>
-<dd>This forces the value of the internal symbol table literal definition of the data type name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</p>
-<dt><code>DocName</code></p>
-<dd>This gives an arbitrary string for use in the documentation. This string is meant to supply a different name for the data type for use in the documentation, or a single name for the data type if the data type has aliases.</dl>
+<dt><code>InternalLiteral</code></dt>
+<dd>This forces the value of the internal symbol table literal definition of the data type name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</dd>
+<dt><code>DocName</code></dt>
+<dd>This gives an arbitrary string for use in the documentation. This string is meant to supply a different name for the data type for use in the documentation, or a single name for the data type if the data type has aliases.</dd></dl>
 <p> For example: </p>
 <pre><code>DataType OddNumber {DocName=&quot;OddNumber&quot;;};
 NewString;</code></pre>
@@ -72,16 +72,16 @@ NewString;</code></pre>
  [ ... ]</pre>
 <p>A character set definition begins with the keyword <code>CharacterSet</code>. Following the <code>CharacterSet</code> keyword is a list of character sets that can be further modified with</p>
 <dl>
-<dt><code>FontListElementTag</code>&nbsp;<wbr>|&nbsp;<wbr><code>XmStringCharsetName</code></p>
-<dd>Specifies the name of the character set, which will become the character set component of a compound string segment created using this character set. This modifier is required.</p>
-<dt><code>Alias</code></p>
-<dd>Specifies one or more aliases for the character set name. Each alias can be used within UIL to refer to the same character set.</p>
-<dt><code>Direction</code></p>
-<dd>Specifies the direction of a compound string segment created using this character set. The default is <code>LeftToRight</code>.</p>
-<dt><code>ParseDirection</code></p>
-<dd>Specifies the direction in which an input string is parsed when a compound string segment is created using this character set. The default is whatever <code>Direction</code> is specified.</p>
-<dt><code>CharacterSize</code></p>
-<dd>Specifies the number of bytes in each character of a compound string segment created using this character set. The default is <code>OneByte</code>.</dl>
+<dt><code>FontListElementTag</code>&nbsp;<wbr>|&nbsp;<wbr><code>XmStringCharsetName</code></dt>
+<dd>Specifies the name of the character set, which will become the character set component of a compound string segment created using this character set. This modifier is required.</dd>
+<dt><code>Alias</code></dt>
+<dd>Specifies one or more aliases for the character set name. Each alias can be used within UIL to refer to the same character set.</dd>
+<dt><code>Direction</code></dt>
+<dd>Specifies the direction of a compound string segment created using this character set. The default is <code>LeftToRight</code>.</dd>
+<dt><code>ParseDirection</code></dt>
+<dd>Specifies the direction in which an input string is parsed when a compound string segment is created using this character set. The default is whatever <code>Direction</code> is specified.</dd>
+<dt><code>CharacterSize</code></dt>
+<dd>Specifies the number of bytes in each character of a compound string segment created using this character set. The default is <code>OneByte</code>.</dd></dl>
 <p> For example: CharacterSet<br />
 iso_latin1<br />
 { XmStringCharsetName = &quot;ISO8859-1&quot;;<br />
@@ -138,36 +138,36 @@ Children { any.child.name; [&#8230;] };<br />
 [&#8230;]<br />
 ]}]; Class definitions start with the <code>Class</code> keyword. For each class defined, the name of the class and whether the class is a metaclass, widget, or gadget is listed. Each class definition can be further modified with the keywords described in the following list.</p>
 <dl>
-<dt><code>SuperClass</code></p>
-<dd>This indicates the name of the parent class. Only the root of the hierarchy does not specify a SuperClass.</p>
-<dt><code>ParentClass</code></p>
-<dd>This indicates the name of the widget&#8217;s automatically created parent class if one exists. This allows resources for that automatically created class to be used in instances of this class. For example, <code>XmBulletinBoardDialog</code> creates both an <code>XmBulletinBoard</code> and an <code>XmDialogShell</code>. To access the resources of the <code>XmDialogShell</code> parent class it must be specified here.</p>
-<dt><code>InternalLiteral</code></p>
-<dd>This forces the value of the internal symbol table literal definition of the class name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</p>
-<dt><code>Alias</code></p>
-<dd>This indicates alternate names for the class for use in a UIL specification.</p>
-<dt><code>ConvenienceFunction</code></p>
-<dd>This indicates the name of the creation convenience function for this class. All widget and gadget classes must have a <code>ConvenienceFunction.</code></p>
-<dt><code>WidgetClass</code></p>
-<dd>This indicates the associated widget class of gadget type classes. Presently, nothing is done with this value.</p>
-<dt><code>DocName</code></p>
-<dd>This defines an arbitrary string for use in the documentation. Presently, nothing is done with this value.</p>
-<dt><code>DialogClass</code></p>
-<dd>This indicates whether the class is a dialog class. Presently, nothing is done with this value.</p>
-<dt><code>Resources</code></p>
-<dd>This lists the resources of the widget class. This keyword can be further modified with</p>
+<dt><code>SuperClass</code></dt>
+<dd>This indicates the name of the parent class. Only the root of the hierarchy does not specify a SuperClass.</dd>
+<dt><code>ParentClass</code></dt>
+<dd>This indicates the name of the widget&#8217;s automatically created parent class if one exists. This allows resources for that automatically created class to be used in instances of this class. For example, <code>XmBulletinBoardDialog</code> creates both an <code>XmBulletinBoard</code> and an <code>XmDialogShell</code>. To access the resources of the <code>XmDialogShell</code> parent class it must be specified here.</dd>
+<dt><code>InternalLiteral</code></dt>
+<dd>This forces the value of the internal symbol table literal definition of the class name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</dd>
+<dt><code>Alias</code></dt>
+<dd>This indicates alternate names for the class for use in a UIL specification.</dd>
+<dt><code>ConvenienceFunction</code></dt>
+<dd>This indicates the name of the creation convenience function for this class. All widget and gadget classes must have a <code>ConvenienceFunction.</code></dd>
+<dt><code>WidgetClass</code></dt>
+<dd>This indicates the associated widget class of gadget type classes. Presently, nothing is done with this value.</dd>
+<dt><code>DocName</code></dt>
+<dd>This defines an arbitrary string for use in the documentation. Presently, nothing is done with this value.</dd>
+<dt><code>DialogClass</code></dt>
+<dd>This indicates whether the class is a dialog class. Presently, nothing is done with this value.</dd>
+<dt><code>Resources</code></dt>
+<dd>This lists the resources of the widget class. This keyword can be further modified with</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Default</code></p>
-<dd>This specifies a new default value for this resource. Resource default values are usually set in the resource definition. If an inherited resource&#8217;s default value is changed by the class, the new default value should be noted here.</p>
-<dt><code>Exclude</code></p>
-<dd>This specifies whether an inherited resource should be excluded from the resource list of the class. <code>Exclude</code> is False by default.</dl>
+</dd><dl>
+<dt><code>Default</code></dt>
+<dd>This specifies a new default value for this resource. Resource default values are usually set in the resource definition. If an inherited resource&#8217;s default value is changed by the class, the new default value should be noted here.</dd>
+<dt><code>Exclude</code></dt>
+<dd>This specifies whether an inherited resource should be excluded from the resource list of the class. <code>Exclude</code> is False by default.</dd></dl>
 </dl>
-<dt><code>Children</code></p>
-<dd>This lists the names of the automatically created children of this class, so that those children can be accessed in the UIL file.</p>
-<dt><code>Controls</code></p>
-<dd>This lists the controls that the widget class allows. The controls can be other classes or a control list from the control list definition.</dl>
+<dt><code>Children</code></dt>
+<dd>This lists the names of the automatically created children of this class, so that those children can be accessed in the UIL file.</dd>
+<dt><code>Controls</code></dt>
+<dd>This lists the controls that the widget class allows. The controls can be other classes or a control list from the control list definition.</dd></dl>
 <p> The following example uses the examples from the data type definitions and control list definitions above. Class<br />
 TopLevelWidget: MetaClass<br />
 {<br />
@@ -214,30 +214,30 @@ NewWidget: Widget<br />
  [...]</pre>
 <p>Resource definitions start with the <code>Resource</code> keyword. For each resource definition, the name of the resource and whether the resource is an argument, reason, constraint or subresource is listed.</p>
 <dl>
-<dt><code>Argument</code></p>
-<dd>Indicates a standard resource</p>
-<dt><code>Reason</code></p>
-<dd>Indicates a callback resource</p>
-<dt><code>Constraint</code></p>
-<dd>Indicates a constraint resource</p>
-<dt><code>SubResource</code></p>
-<dd>Presently, nothing is done with this value</dl>
+<dt><code>Argument</code></dt>
+<dd>Indicates a standard resource</dd>
+<dt><code>Reason</code></dt>
+<dd>Indicates a callback resource</dd>
+<dt><code>Constraint</code></dt>
+<dd>Indicates a constraint resource</dd>
+<dt><code>SubResource</code></dt>
+<dd>Presently, nothing is done with this value</dd></dl>
 <p> The resource definition can be further modified with the following keywords:</p>
 <dl>
-<dt><code>Type</code></p>
-<dd>This indicates the data type of the resource. It must be listed in the data type definition.</p>
-<dt><code>ResourceLiteral</code></p>
-<dd>This indicates the keyword used in the UIL file to reference the resource. In Motif, the resource name is the same as the <code>ResourceLiteral</code>.</p>
-<dt><code>InternalLiteral</code></p>
-<dd>This forces the value of the internal symbol table literal definition of the resource name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</p>
-<dt><code>Alias</code></p>
-<dd>This indicates alternate names for the resource for use in a UIL specification.</p>
-<dt><code>Related</code></p>
-<dd>This is a special purpose field that allows resources that act as a counter for the current resources to be related to the resource. UIL automatically sets the value of this related resource to the number of items in the compiled instance of type <code>resource.name</code>.</p>
-<dt><code>Default</code></p>
-<dd>This indicates the default value of the resource.</p>
-<dt><code>DocName</code></p>
-<dd>This defines an arbitrary string for use in the documentation. Presently, nothing is done with this value.</dl>
+<dt><code>Type</code></dt>
+<dd>This indicates the data type of the resource. It must be listed in the data type definition.</dd>
+<dt><code>ResourceLiteral</code></dt>
+<dd>This indicates the keyword used in the UIL file to reference the resource. In Motif, the resource name is the same as the <code>ResourceLiteral</code>.</dd>
+<dt><code>InternalLiteral</code></dt>
+<dd>This forces the value of the internal symbol table literal definition of the resource name. This modifier is only used to get around symbol table definitions hard coded into the UIL compiler. It should rarely be used.</dd>
+<dt><code>Alias</code></dt>
+<dd>This indicates alternate names for the resource for use in a UIL specification.</dd>
+<dt><code>Related</code></dt>
+<dd>This is a special purpose field that allows resources that act as a counter for the current resources to be related to the resource. UIL automatically sets the value of this related resource to the number of items in the compiled instance of type <code>resource.name</code>.</dd>
+<dt><code>Default</code></dt>
+<dd>This indicates the default value of the resource.</dd>
+<dt><code>DocName</code></dt>
+<dd>This defines an arbitrary string for use in the documentation. Presently, nothing is done with this value.</dd></dl>
 <p> The following example uses the examples from the data type definitions, control list definitions and class definitions above. </p>
 <pre><code>Resource
 XtbNfirstResource: Argument
@@ -249,5 +249,4 @@ XtbNsecondResource: Argument
 XtbNnewResource: Argument
 { Type = OddNumber;
     Default = &quot;XtbODD_NUMBER&quot;; };
-
 </code></pre>

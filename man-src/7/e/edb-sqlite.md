@@ -13,17 +13,17 @@ description: "edb-sqlite – eurephia SQLite3 database driver"
 <p> The database driver takes only one argument, which is a full path to the database file.b</p>
 <h2>Examples</h2>
 <dl>
-<dt><code>eurephia-auth</code> &#8211; This is configured via the OpenVPN configuration file.</p>
+<dt><code>eurephia-auth</code> &#8211; This is configured via the OpenVPN configuration file.</dt>
 <dd>
-<dd>plugin eurephia-auth.so &quot;-i edb-sqlite.so &#8212; &lt;full path to database file&gt;&quot;</p>
-<dd>Plese notice the double dashes. They are separating the arguments between the eurephia-auth module and the database driver.</p>
-<dt><code>eurephia_init</code> &#8211; This is set via the command line</p>
+</dd><dd>plugin eurephia-auth.so &quot;-i edb-sqlite.so &#8212; &lt;full path to database file&gt;&quot;</dd>
+<dd>Plese notice the double dashes. They are separating the arguments between the eurephia-auth module and the database driver.</dd>
+<dt><code>eurephia_init</code> &#8211; This is set via the command line</dt>
 <dd>
-<dd>user [at] server:~ $ eurephia_init &#8211;database-driver edb-sqlite.so \ &#8211;database-args &quot;&lt;full path to DB file&gt;&quot;</p>
-<dt><code>eurephiadm</code> &#8211; This is configured in the <code>~/.eurephia/eurephiadm.cfg</code> file</p>
+</dd><dd>user [at] server:~ $ eurephia_init &#8211;database-driver edb-sqlite.so \ &#8211;database-args &quot;&lt;full path to DB file&gt;&quot;</dd>
+<dt><code>eurephiadm</code> &#8211; This is configured in the <code>~/.eurephia/eurephiadm.cfg</code> file</dt>
 <dd>
-<dd>database_driver = edb-sqlite.so<br />
- database_params = &lt;full path to DB file&gt;</dl>
+</dd><dd>database_driver = edb-sqlite.so<br />
+ database_params = &lt;full path to DB file&gt;</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-eurephia-auth/">eurephia-auth</a></code>(7), <code><a href="/docs/linux/man/7-eurephiadm/">eurephiadm</a></code>(7), <code><a href="/docs/linux/man/7-eurephia_init/">eurephia_init</a></code>(7) </p>
 <h2>Author</h2>

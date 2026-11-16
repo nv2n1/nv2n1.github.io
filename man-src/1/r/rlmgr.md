@@ -21,18 +21,18 @@ description: "rlmgr – administration utility for QDBM Relic"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#reliccli.</p>
 <dl>
-<dt><code>-kx</code></p>
-<dd> treat <i>key</i> as a binary expression of hexadecimal notation.</p>
-<dt><code>-vx</code></p>
-<dd> treat <i>val</i> as a binary expression of hexadecimal notation.</p>
-<dt><code>-vf</code></p>
-<dd> read the value from a file specified with <i>val</i>.</p>
-<dt><code>-insert</code></p>
-<dd> specify the storing mode for `DBM_INSERT&#8217;.</p>
-<dt><code>-ox</code></p>
-<dd> treat the output as a binary expression of hexadecimal notation.</p>
-<dt><code>-n</code></p>
-<dd> do not output the tailing newline.</dl>
+<dt><code>-kx</code></dt>
+<dd> treat <i>key</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-vx</code></dt>
+<dd> treat <i>val</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-vf</code></dt>
+<dd> read the value from a file specified with <i>val</i>.</dd>
+<dt><code>-insert</code></dt>
+<dd> specify the storing mode for `DBM_INSERT&#8217;.</dd>
+<dt><code>-ox</code></dt>
+<dd> treat the output as a binary expression of hexadecimal notation.</dd>
+<dt><code>-n</code></dt>
+<dd> do not output the tailing newline.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code>relic</code>(3).</p>
 <h2>AUTHOR</h2>

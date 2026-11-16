@@ -13,10 +13,10 @@ description: "pskc_set_cryptomodule_id – API function"
 void pskc_set_cryptomodule_id(pskc_key_t *key, const char *cid);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const char * cid</p>
-<dd>the cryptomodule id to set</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const char * cid</dt>
+<dd>the cryptomodule id to set</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage CryptoModule Id value. This element carries a unique identifier for the CryptoModule and is implementation specific. As such, it helps to identify a specific CryptoModule to which the key is being or was provisioned. </p>
 <p> The pointer is stored in <i>container</i>, not a copy of the data, so you must not deallocate the data before another call to this function or the last call to any function using <i>container</i>.</p>

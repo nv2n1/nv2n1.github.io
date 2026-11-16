@@ -13,14 +13,14 @@ description: "tld_check_4t – API function"
 int tld_check_4t(const uint32_t *in, size_t inlen, size_t *errpos, const Tld_table *tld);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const uint32_t * in</p>
-<dd>Array of unicode code points to process. Does not need to be zero terminated.</p>
-<dt>size_t inlen</p>
-<dd>Number of unicode code points.</p>
-<dt>size_t * errpos</p>
-<dd>Position of offending character is returned here.</p>
-<dt>const Tld_table * tld</p>
-<dd>A <code>Tld_table</code> data structure representing the restrictions for which the input should be tested.</dl>
+<dt>const uint32_t * in</dt>
+<dd>Array of unicode code points to process. Does not need to be zero terminated.</dd>
+<dt>size_t inlen</dt>
+<dd>Number of unicode code points.</dd>
+<dt>size_t * errpos</dt>
+<dd>Position of offending character is returned here.</dd>
+<dt>const Tld_table * tld</dt>
+<dd>A <code>Tld_table</code> data structure representing the restrictions for which the input should be tested.</dd></dl>
 <h2>Description</h2>
 <p>Test each of the code points in <i>in</i> for whether or not they are allowed by the data structure in <i>tld</i>, return the position of the first character for which this is not the case in <i>errpos</i>.</p>
 <h2>Return Value</h2>
@@ -33,5 +33,5 @@ int tld_check_4t(const uint32_t *in, size_t inlen, size_t *errpos, const Tld_tab
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

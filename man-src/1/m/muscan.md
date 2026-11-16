@@ -17,24 +17,24 @@ description: "Muscan – File scanner for Museek"
 <h2>OPTIONS</h2>
 <p> Muscan accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file.</p>
-<dt><code>-b, &#8211;buddy</code></p>
-<dd> Select Buddy-Only Shares.</p>
-<dt><code>-s &lt;</code><i>directory</i>&gt;, &#8211;share &lt;<i>directory</i>&gt;</p>
-<dd> Add directory to shares.</p>
-<dt><code>-u &lt;</code><i>directory</i>&gt;, &#8211;unshare &lt;<i>directory</i>&gt;</p>
-<dd> Remove directory from shares.</p>
-<dt><code>-r, &#8211;rescan</code></p>
-<dd> Rescan shares.</p>
-<dt><code>-n, &#8211;noscan</code></p>
-<dd> Do not rescan shares.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Be verbose while scanning shares.</p>
-<dt><code>-l, &#8211;list</code></p>
-<dd> Display list of shared directories.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help, version and exit.</dl>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-b, &#8211;buddy</code></dt>
+<dd> Select Buddy-Only Shares.</dd>
+<dt><code>-s &lt;</code><i>directory</i>&gt;, &#8211;share &lt;<i>directory</i>&gt;</dt>
+<dd> Add directory to shares.</dd>
+<dt><code>-u &lt;</code><i>directory</i>&gt;, &#8211;unshare &lt;<i>directory</i>&gt;</dt>
+<dd> Remove directory from shares.</dd>
+<dt><code>-r, &#8211;rescan</code></dt>
+<dd> Rescan shares.</dd>
+<dt><code>-n, &#8211;noscan</code></dt>
+<dd> Do not rescan shares.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be verbose while scanning shares.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> Display list of shared directories.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help, version and exit.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To run a quick shares update, run: </p>
 <p> <code>muscan</code> or <code>muscan -b</code> </p>
@@ -45,20 +45,20 @@ description: "Muscan – File scanner for Museek"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.xml</i></p>
-<dd> The default location for the <code>museekd</code> config file.</p>
+&nbsp;<wbr><i>~/.museekd/config.xml</i></dt>
+<dd> The default location for the <code>museekd</code> config file.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.shares</i></p>
-<dd> The default location for the Normal shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.shares</i></dt>
+<dd> The default location for the Normal shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.shares.state</i></p>
-<dd> The default location for the active Normal shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.shares.state</i></dt>
+<dd> The default location for the active Normal shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.buddyshares</i></p>
-<dd> The default location for the Buddy shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares</i></dt>
+<dd> The default location for the Buddy shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.buddyshares.state</i></p>
-<dd> The default location for the active Buddy shares database&#8217;s.</dl>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares.state</i></dt>
+<dd> The default location for the active Buddy shares database&#8217;s.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>

@@ -11,7 +11,6 @@ std::memset - std::memset
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     void *memset(void *dest, int ch, std::size_t count);</code></pre> 
 Converts the value ch to unsigned char and copies it into each of the first count characters of the object pointed to by dest. If the object is a potentially-overlapping_subobject or is not TriviallyCopyable (e.g., scalar, C-compatible struct, or an array of trivially copyable type), the behavior is undefined. If count is greater than the size of the object pointed to by dest, the behavior is undefined. 
 
@@ -32,10 +31,8 @@ std::memset may be optimized away (under the as-if rules) if the object modified
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     int a[20];
     std::memset(a, 0, sizeof a);

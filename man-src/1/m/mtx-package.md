@@ -15,8 +15,8 @@ description: "mtx-package – Distribution Related Goodies"
 <p> <code>Distribution Related Goodies</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;merge</code></p>
-<dd> merge &#8216;loadmodule&#8217; into merge file</dl>
+<dt><code>&#8211;merge</code></dt>
+<dd> merge &#8216;loadmodule&#8217; into merge file</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

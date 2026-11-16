@@ -17,7 +17,7 @@ description: "xmlparse – error-check and validate XML documents"
 <h2>HISTORY</h2>
 <dl>
 <dt>
-<dd> Written in 2003. </p>
+</dt><dd> Written in 2003. </dd>
 <p> This manual page first appeared in gnustep-base 1.9.2 (March 2004). </p>
 </dl>
 <h2>AUTHORS</h2>

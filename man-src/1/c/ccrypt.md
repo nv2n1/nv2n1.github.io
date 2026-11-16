@@ -20,67 +20,67 @@ ccrypt[mode][options][file...] ccencrypt[options][file...] ccdecrypt[options][fi
 <h2>MODES</h2>
 <p> <code>ccrypt</code> can operate in five different modes. If more than one mode is specified, the last one specified takes precedence. The aliases <code>ccencrypt</code>, <code>ccdecrypt</code>, and <code>ccat</code> are provided as a convenience; they are equivalent to <code>ccrypt -e</code>, <code>ccrypt -d</code>, and <code>ccrypt -c</code>, respectively.</p>
 <dl>
-<dt><code>-e, &#8211;encrypt</code></p>
-<dd> Encrypt. This is the default mode. If filename arguments are given, encrypt the files and append the suffix <code>.cpt</code> to their names. Otherwise, run as a filter.</p>
-<dt><code>-d, &#8211;decrypt</code></p>
-<dd> Decrypt. If filename arguments are given, decrypt the files and strip the suffix <code>.cpt</code> from the filenames, if present. Otherwise, run as a filter.</p>
-<dt><code>-c, &#8211;cat</code></p>
-<dd> Decrypt one or more files to standard output. If no filename arguments are given, decrypt as a filter. Implies <code>-l</code>.</p>
-<dt><code>-x, &#8211;keychange</code></p>
-<dd> Change the key of encrypted data. In this mode, <code>ccrypt</code> prompts for two passwords: the old one and the new one. If filename arguments are given, modify the files. Otherwise, run as a filter.</p>
-<dt><code>-u, &#8211;unixcrypt</code></p>
-<dd> Simulate the old unix crypt command. Note: the cipher used by unix crypt has been broken and is not secure. Please use this option only to decrypt existing files. If filename arguments are given, decrypt the files to stdout. Otherwise, run as a filter. Note that for the unix crypt format, there is no easy way to detect whether a given key matches or not; thus, for safety, this mode does not overwrite files.</dl>
+<dt><code>-e, &#8211;encrypt</code></dt>
+<dd> Encrypt. This is the default mode. If filename arguments are given, encrypt the files and append the suffix <code>.cpt</code> to their names. Otherwise, run as a filter.</dd>
+<dt><code>-d, &#8211;decrypt</code></dt>
+<dd> Decrypt. If filename arguments are given, decrypt the files and strip the suffix <code>.cpt</code> from the filenames, if present. Otherwise, run as a filter.</dd>
+<dt><code>-c, &#8211;cat</code></dt>
+<dd> Decrypt one or more files to standard output. If no filename arguments are given, decrypt as a filter. Implies <code>-l</code>.</dd>
+<dt><code>-x, &#8211;keychange</code></dt>
+<dd> Change the key of encrypted data. In this mode, <code>ccrypt</code> prompts for two passwords: the old one and the new one. If filename arguments are given, modify the files. Otherwise, run as a filter.</dd>
+<dt><code>-u, &#8211;unixcrypt</code></dt>
+<dd> Simulate the old unix crypt command. Note: the cipher used by unix crypt has been broken and is not secure. Please use this option only to decrypt existing files. If filename arguments are given, decrypt the files to stdout. Otherwise, run as a filter. Note that for the unix crypt format, there is no easy way to detect whether a given key matches or not; thus, for safety, this mode does not overwrite files.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The following options are supported in addition to the modes described above:</p>
 <dl>
-<dt><code>-b, &#8211;brave</code></p>
-<dd> When reading an encryption key from the terminal, ask the user only once for the key. By default, <code>ccrypt</code> will ask the user to enter such keys twice, as a safeguard against accidentally destroying data due to a mistyped key. Using the <code>&#8211;brave</code> option disables this safety check. Never use it, unless you know what you are doing. See also <code>&#8211;timid</code>.</p>
-<dt><code>-E </code><i>var</i>, &#8211;envvar <i>var</i></p>
-<dd> Read the keyword from the environment variable <i>var</i>. Note that this might be unsafe on certain systems, namely where users can use the <code>ps</code> command to see the environment of a process owner by another user. On most modern systems, however, such behavior of <code>ps</code> is disabled and the <code>-E</code> option should be safe there. Also, as an added security measure, <code>ccrypt</code> erases the keyword from its environment immediately after reading it.</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd> Overwrite existing files or operate on write-protected files without asking any questions. Also, override <code>ccrypt</code>&#8216;s reluctance to write or read encrypted data to or from a terminal.</p>
-<dt><code>-F </code><i>var</i>, &#8211;envvar2 <i>var</i></p>
-<dd> Same as <code>-E</code>, except for second keyword (in keychange mode).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Help. Print usage information and exit.</p>
-<dt><code>-H </code><i>key</i>, &#8211;key2 <i>key</i></p>
-<dd> Same as <code>-K</code>, except for second keyword (in keychange mode).</p>
-<dt><code>-k </code><i>file</i>, &#8211;keyfile <i>file</i></p>
-<dd> Read the keyword as the first line from the named file. In keychange mode, two keywords are read as the first two lines of the file. The filename &quot;-&quot; may be given for reading keywords from standard input. Using the <code>-k &#8211;</code> option and sending the keyword on stdin is probably the safest way to pass a keyword to <code>ccrypt</code> from another program or script.</p>
-<dt><code>-K </code><i>key</i>, &#8211;key <i>key</i></p>
-<dd> Specify the keyword on the command line. This is unsafe, because any other user can see the command line by running the <code>ps</code> command. Only use this option for testing purposes, and never with a real keyword.</p>
-<dt><code>-y </code><i>file</i>, &#8211;keyref <i>file</i></p>
-<dd> In encryption or keychange mode, check the encryption key against the named file, which must have been previously encrypted with the same key. Exit with an error message if the key does not match. This option is useful as an alternative to <code>&#8211;timid</code>, to guard against mistyped keys in situations where several files are encrypted with the same key. This option implies <code>&#8211;brave</code>, unless the <code>&#8211;timid</code> option is explicitly given after the <code>&#8211;keyref</code> option.</p>
-<dt><code>-l, &#8211;symlinks</code></p>
-<dd> Force encryption/decryption of symbolic links. By default, symbolic links are ignored except in cat or unixcrypt mode. Note that with the <code>-l</code> option, encryption/decryption of a symbolic link causes the suffix <code>.cpt</code> to be added/removed from the name of the link, not the name of the file pointed to.</p>
-<dt><code>-L, &#8211;license</code></p>
-<dd> Print license info and exit.</p>
-<dt><code>-m, &#8211;mismatch</code></p>
-<dd> Normally, <code>ccrypt</code> refuses to decrypt data with a key that does not seem to match. The <code>-m</code> option overrides this restriction. This can sometimes be useful in recovering data from a corrupted file (see RECOVERING DATA FROM CORRUPTED FILES). To avoid irretrievable loss of data when decrypting with a wrong key, this option cannot be used with modes that overwrite the input file.</p>
-<dt><code>-P </code><i>prompt</i>, &#8211;prompt <i>prompt</i></p>
-<dd> Use <i>prompt</i> instead of the default prompt &quot;Enter encryption/decryption key: &quot;. This may be useful in some shell scripts.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Suppress most warnings.</p>
-<dt><code>-Q </code><i>prompt</i>, &#8211;prompt2 <i>prompt</i></p>
-<dd> Same as <code>-P</code>, except for second keyword (in keychange mode).</p>
-<dt><code>-r, &#8211;recursive</code></p>
-<dd> Traverse subdirectories recursively.</p>
-<dt><code>-R, &#8211;rec-symlinks</code></p>
-<dd> Traverse subdirectories recursively, and also follow symbolic links to subdirectories.</p>
-<dt><code>-s, &#8211;strictsuffix</code></p>
-<dd> Refuse to encrypt files that already have the <code>.cpt</code> suffix (or that selected with <code>-S</code>). This can be useful when adding some files to a directory of already encrypted files. This option has no effect in decryption or keychange mode.</p>
-<dt><code>-S </code><i>.suf</i>, &#8211;suffix <i>.suf</i></p>
-<dd> Use the suffix <i>.suf</i> instead of the default suffix <code>.cpt</code>.</p>
-<dt><code>-t, &#8211;timid</code></p>
-<dd> When reading an encryption key from the terminal, ask the user to enter the key twice. If the two entered keys are not identical, abort. This is a safeguard against accidentally destroying data by encrypting it with a mistyped key. Note: this behavior is now the default, and can be overridden with the <code>&#8211;brave</code> option.</p>
-<dt><code>-T, &#8211;tmpfiles</code></p>
-<dd> This option causes <code>ccrypt</code> to use temporary files during encryption/decryption, rather than overwriting the file contents destructively. This method leaves the original file contents lying around in unused sectors of the file system, and thus is less secure than the default behavior. However, in situations where this loss of security is not important, the <code>&#8211;tmpfiles</code> option can provide a measure of protection against data being corrupted due to a system crash in the middle of overwriting a file.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Print progress information to stderr.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print version info and exit.</p>
-<dt><code>&#8212;</code></p>
-<dd> End of options. Any remaining arguments are interpreted as filenames. This also turns off filter mode, even if zero filenames follow. This might be useful in the context of shell pattern expansion; <code>ccrypt &#8212; *</code> will behave correctly even if no files match the pattern <code>*</code>.</dl>
+<dt><code>-b, &#8211;brave</code></dt>
+<dd> When reading an encryption key from the terminal, ask the user only once for the key. By default, <code>ccrypt</code> will ask the user to enter such keys twice, as a safeguard against accidentally destroying data due to a mistyped key. Using the <code>&#8211;brave</code> option disables this safety check. Never use it, unless you know what you are doing. See also <code>&#8211;timid</code>.</dd>
+<dt><code>-E </code><i>var</i>, &#8211;envvar <i>var</i></dt>
+<dd> Read the keyword from the environment variable <i>var</i>. Note that this might be unsafe on certain systems, namely where users can use the <code>ps</code> command to see the environment of a process owner by another user. On most modern systems, however, such behavior of <code>ps</code> is disabled and the <code>-E</code> option should be safe there. Also, as an added security measure, <code>ccrypt</code> erases the keyword from its environment immediately after reading it.</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> Overwrite existing files or operate on write-protected files without asking any questions. Also, override <code>ccrypt</code>&#8216;s reluctance to write or read encrypted data to or from a terminal.</dd>
+<dt><code>-F </code><i>var</i>, &#8211;envvar2 <i>var</i></dt>
+<dd> Same as <code>-E</code>, except for second keyword (in keychange mode).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Help. Print usage information and exit.</dd>
+<dt><code>-H </code><i>key</i>, &#8211;key2 <i>key</i></dt>
+<dd> Same as <code>-K</code>, except for second keyword (in keychange mode).</dd>
+<dt><code>-k </code><i>file</i>, &#8211;keyfile <i>file</i></dt>
+<dd> Read the keyword as the first line from the named file. In keychange mode, two keywords are read as the first two lines of the file. The filename &quot;-&quot; may be given for reading keywords from standard input. Using the <code>-k &#8211;</code> option and sending the keyword on stdin is probably the safest way to pass a keyword to <code>ccrypt</code> from another program or script.</dd>
+<dt><code>-K </code><i>key</i>, &#8211;key <i>key</i></dt>
+<dd> Specify the keyword on the command line. This is unsafe, because any other user can see the command line by running the <code>ps</code> command. Only use this option for testing purposes, and never with a real keyword.</dd>
+<dt><code>-y </code><i>file</i>, &#8211;keyref <i>file</i></dt>
+<dd> In encryption or keychange mode, check the encryption key against the named file, which must have been previously encrypted with the same key. Exit with an error message if the key does not match. This option is useful as an alternative to <code>&#8211;timid</code>, to guard against mistyped keys in situations where several files are encrypted with the same key. This option implies <code>&#8211;brave</code>, unless the <code>&#8211;timid</code> option is explicitly given after the <code>&#8211;keyref</code> option.</dd>
+<dt><code>-l, &#8211;symlinks</code></dt>
+<dd> Force encryption/decryption of symbolic links. By default, symbolic links are ignored except in cat or unixcrypt mode. Note that with the <code>-l</code> option, encryption/decryption of a symbolic link causes the suffix <code>.cpt</code> to be added/removed from the name of the link, not the name of the file pointed to.</dd>
+<dt><code>-L, &#8211;license</code></dt>
+<dd> Print license info and exit.</dd>
+<dt><code>-m, &#8211;mismatch</code></dt>
+<dd> Normally, <code>ccrypt</code> refuses to decrypt data with a key that does not seem to match. The <code>-m</code> option overrides this restriction. This can sometimes be useful in recovering data from a corrupted file (see RECOVERING DATA FROM CORRUPTED FILES). To avoid irretrievable loss of data when decrypting with a wrong key, this option cannot be used with modes that overwrite the input file.</dd>
+<dt><code>-P </code><i>prompt</i>, &#8211;prompt <i>prompt</i></dt>
+<dd> Use <i>prompt</i> instead of the default prompt &quot;Enter encryption/decryption key: &quot;. This may be useful in some shell scripts.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Suppress most warnings.</dd>
+<dt><code>-Q </code><i>prompt</i>, &#8211;prompt2 <i>prompt</i></dt>
+<dd> Same as <code>-P</code>, except for second keyword (in keychange mode).</dd>
+<dt><code>-r, &#8211;recursive</code></dt>
+<dd> Traverse subdirectories recursively.</dd>
+<dt><code>-R, &#8211;rec-symlinks</code></dt>
+<dd> Traverse subdirectories recursively, and also follow symbolic links to subdirectories.</dd>
+<dt><code>-s, &#8211;strictsuffix</code></dt>
+<dd> Refuse to encrypt files that already have the <code>.cpt</code> suffix (or that selected with <code>-S</code>). This can be useful when adding some files to a directory of already encrypted files. This option has no effect in decryption or keychange mode.</dd>
+<dt><code>-S </code><i>.suf</i>, &#8211;suffix <i>.suf</i></dt>
+<dd> Use the suffix <i>.suf</i> instead of the default suffix <code>.cpt</code>.</dd>
+<dt><code>-t, &#8211;timid</code></dt>
+<dd> When reading an encryption key from the terminal, ask the user to enter the key twice. If the two entered keys are not identical, abort. This is a safeguard against accidentally destroying data by encrypting it with a mistyped key. Note: this behavior is now the default, and can be overridden with the <code>&#8211;brave</code> option.</dd>
+<dt><code>-T, &#8211;tmpfiles</code></dt>
+<dd> This option causes <code>ccrypt</code> to use temporary files during encryption/decryption, rather than overwriting the file contents destructively. This method leaves the original file contents lying around in unused sectors of the file system, and thus is less secure than the default behavior. However, in situations where this loss of security is not important, the <code>&#8211;tmpfiles</code> option can provide a measure of protection against data being corrupted due to a system crash in the middle of overwriting a file.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Print progress information to stderr.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print version info and exit.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> End of options. Any remaining arguments are interpreted as filenames. This also turns off filter mode, even if zero filenames follow. This might be useful in the context of shell pattern expansion; <code>ccrypt &#8212; *</code> will behave correctly even if no files match the pattern <code>*</code>.</dd></dl>
 <h2>NOTES ON USAGE</h2>
 <p> The user interface of <code>ccrypt</code> intentionally resembles that of GNU <code>gzip</code>, although it is not identical. When invoked with filename arguments, <code>ccrypt</code> normally modifies the files in place, overwriting their old content. Unlike <code>gzip</code>, the output is not first written to a temporary file; instead, the data is literally overwritten. For encryption, this is usually the desired behavior, since one does not want copies of the unencrypted data to remain in hidden places in the file system. The disadvantage is that if <code>ccrypt</code> is interrupted in the middle of writing to a file, the file will end up in a corrupted, partially encrypted state. However, in such cases it is possible to recover most of the data; see RECOVERING DATA FROM CORRUPTED FILES below. If you want to force <code>ccrypt</code> to use temporary files, use the <code>&#8211;tmpfiles</code> option. </p>
 <p> When <code>ccrypt</code> receives an interrupt signal (Ctrl-C) while updating a file in place, it does not exit immediately, but rather delays the exit until after it finishes writing to the current file. This is to prevent files from being partially overwritten and thus corrupted. If you want to force <code>ccrypt</code> to exit immediately, just press Ctrl-C twice quickly. </p>
@@ -101,11 +101,11 @@ ccrypt[mode][options][file...] ccencrypt[options][file...] ccdecrypt[options][fi
 <p> Let <i>P[i]</i> and <i>C[i]</i> be the <i>i</i>th block of the plaintext and ciphertext, respectively. CFB mode specifies that</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 C[i] = P[i] ^ E(k, C[i - 1])
 </code></pre>
-</dl>
+</dd></dl>
 <p> Here <i>^</i> denotes the bitwise exclusive or function, and <i>E(k,x)</i> denotes the encryption of the block <i>x</i> under the key <i>k</i> using the block cipher. Thus, each block of the ciphertext is calculated from the corresponding block of plaintext and the previous block of ciphertext. Note that in fact, each byte of <i>P[i]</i> can be calculated from the corresponding byte of <i>C[i]</i>, so that the stream cipher can be applied to one byte at a time. In particular, the stream length need not be a multiple of the block size. </p>
 <p> Assuming that blocks are numbered starting from <i>0</i>, a special &quot;initial&quot; ciphertext block <i>C[-1]</i> is needed to provide the base case for the above formula. This value <i>C[-1]</i> is called the <i>initialization vector</i> or <i>seed</i>. The seed is chosen at encryption time and written as the first block of the encrypted stream. It is important that the seed is unpredictable; in particular, the same seed should never by used more than once. Otherwise, the two resulting ciphertext blocks <i>C[0]</i> could be related by a simple xor to obtain information about the corresponding plaintext blocks <i>P[0]</i>. If unpredictable seeds are used, CFB is provably as secure as the underlying block cipher. </p>
 <p> In <code>ccrypt</code>, the seed is constructed as follows: first, a nonce is contructed by hashing a combination of the host name, current time, process id, and an internal counter into a 28-byte value, using a cryptographic hash function. The nonce is combined with a fixed four-byte &quot;magic number&quot;, and the resulting 32-byte value is encrypted by one round of the Rijndael block cipher with the given key. This encrypted block is used as the seed and appended to the beginning of the ciphertext. The use of the magic number allows <code>ccrypt</code> to detect non-matching keys before decryption.</p>
@@ -122,12 +122,12 @@ C[i] = P[i] ^ E(k, C[i - 1])
 <p> The simplest way to use this package is to include the lines</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 (setq load-path (cons &quot;<i>path</i>&quot; load-path)) 
 (require 'ps-ccrypt &quot;ps-ccrypt.el&quot;)
 </pre>
-</dl>
+</dd></dl>
 <p> in your .emacs file, where <i>path</i> is the directory that holds the file ps-ccrypt.el. </p>
 <p> Limitations of the emacs package: there is no guarantee that unencrypted information cannot leak to the file system; in fact, the package sometimes writes unencrypted data to temporary files. However, auto-saved files are normally treated correctly (i.e., encrypted). For details, see the comments in the file ps-ccrypt.el.</p>
 <h2>EXIT STATUS</h2>

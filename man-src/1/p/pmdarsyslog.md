@@ -26,16 +26,16 @@ description: "pmdarsyslog – rsyslog (reliable and extended syslog) PMDA"
 <p> to your <i><a href="/docs/linux/man/5-rsyslog-conf/">rsyslog.conf</a></i>(5) configuration file after installing the <font SIZE="-1">PMDA</font>. Take care to ensure the syslog.info messages do not get logged in any other file, as this could unexpectedly fill your filesystem. Syntax useful for this is syslog.!=info for explicitly excluding these.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_LOG_DIR/rsyslog/stats</code></p>
-<dd> named pipe containing statistics exported from rsyslog, usually created by the <font SIZE="-1">PMDA</font> Install script.</p>
-<dt><code>$PCP_PMDAS_DIR/rsyslog/rsyslog.conf</code></p>
-<dd> optional configuration file for <code>pmdarsyslog</code></p>
-<dt><code>$PCP_PMDAS_DIR/rsyslog/Install</code></p>
-<dd> installation script for the <code>pmdarsyslog</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/rsyslog/Remove</code></p>
-<dd> undo installation script for the <code>pmdarsyslog</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/rsyslog.log</code></p>
-<dd> default log file for error messages from <code>pmdarsyslog</code></dl>
+<dt><code>$PCP_LOG_DIR/rsyslog/stats</code></dt>
+<dd> named pipe containing statistics exported from rsyslog, usually created by the <font SIZE="-1">PMDA</font> Install script.</dd>
+<dt><code>$PCP_PMDAS_DIR/rsyslog/rsyslog.conf</code></dt>
+<dd> optional configuration file for <code>pmdarsyslog</code></dd>
+<dt><code>$PCP_PMDAS_DIR/rsyslog/Install</code></dt>
+<dd> installation script for the <code>pmdarsyslog</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/rsyslog/Remove</code></dt>
+<dd> undo installation script for the <code>pmdarsyslog</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/rsyslog.log</code></dt>
+<dd> default log file for error messages from <code>pmdarsyslog</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

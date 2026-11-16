@@ -13,8 +13,8 @@ description: "mongoc_collection_get_write_concern() – Fetches the default writ
 mongoc_collection_get_write_concern (const mongoc_collection_t *collection);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the default write concern to be used on write operations originating from <code>collection</code> and not specifying a write concern. </p>
 <h2>Returns</h2>

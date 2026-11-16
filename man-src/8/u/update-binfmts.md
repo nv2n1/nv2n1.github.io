@@ -24,43 +24,44 @@ description: "update-binfmts – maintain registry of executable binary formats"
 <p>Exactly one action must be specified; this may be accompanied by any one of the common options.</p>
 <h3>Common Options</h3>
 <dl>
-<dt><code>&#8211;package </code><i>package-name</i></p>
-<dd>Specifies the name of the current package, to be used by package post-installation and pre-removal scripts. System administrators installing binary formats for local use should probably ignore this option. </p>
+<dt><code>&#8211;package </code><i>package-name</i></dt>
+<dd>Specifies the name of the current package, to be used by package post-installation and pre-removal scripts. System administrators installing binary formats for local use should probably ignore this option. </dd>
 <p> When installing new formats, the &#8211;<code>-import</code> action should be used instead. Similarly, when removing old formats, the &#8211;<code>-unimport</code> action should be used instead.</p>
-<dt><code>&#8211;admindir </code><i>directory</i></p>
-<dd>Specifies the administrative directory, when this is to be different from the default of /var/lib/binfmts</p>
-<dt><code>&#8211;importdir </code><i>directory</i></p>
-<dd>Specifies the directory from which packaged binary formats are imported, when this is to be different from the default of /usr/share/binfmts</p>
-<dt><code>&#8211;test</code></p>
-<dd>Don&#8217;t do anything, just demonstrate what would be done.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display some usage information.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version information.</dl>
+<dt><code>&#8211;admindir </code><i>directory</i></dt>
+<dd>Specifies the administrative directory, when this is to be different from the default of /var/lib/binfmts</dd>
+<dt><code>&#8211;importdir </code><i>directory</i></dt>
+<dd>Specifies the directory from which packaged binary formats are imported, when this is to be different from the default of /usr/share/binfmts</dd>
+<dt><code>&#8211;test</code></dt>
+<dd>Don&#8217;t do anything, just demonstrate what would be done.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display some usage information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version information.</dd></dl>
 <h3>Actions</h3>
 <dl>
-<dt><code>&#8211;install </code><i>name path spec</i></p>
-<dd>Install a binary format identified by <i>name</i> with interpreter <i>path</i> into the database. After registration, this format will be used when the kernel tries to execute a file matching <i>spec</i> (see Sx BINARY FORMAT SPECIFICATIONS below). </p>
+<dt><code>&#8211;install </code><i>name path spec</i></dt>
+<dd>Install a binary format identified by <i>name</i> with interpreter <i>path</i> into the database. After registration, this format will be used when the kernel tries to execute a file matching <i>spec</i> (see Sx BINARY FORMAT SPECIFICATIONS below). </dd>
 <p> &#8211;<code>-install</code> will attempt to enable this binary format in the kernel as well as adding it to its own database; see &#8211;<code>-enable</code> below. </p>
 <p> You cannot install a format with any of the names &quot;.&quot;, &quot;..&quot;, &quot;register&quot;, or &quot;status&quot;, as these are used by the filesystem or the binfmt_misc module.</p>
-<dt><code>&#8211;remove </code><i>name path</i></p>
-<dd>Remove the binary format identified by <i>name</i> with interpreter <i>path</i> from the database. This will also attempt to disable the binary format in the kernel; see &#8211;<code>-disable</code> below.</p>
-<dt><code>&#8211;import </code>[<i>name</i> ]</p>
-<dd>Import a packaged format file called <i>name</i> or import all format files currently on the system if no <i>name</i> is given. If <i>name</i> is not a full path, it is assumed to be a file in the import directory ( /usr/share/binfmts by default). See Sx FORMAT FILES below for the required contents of these files. </p>
+<dt><code>&#8211;remove </code><i>name path</i></dt>
+<dd>Remove the binary format identified by <i>name</i> with interpreter <i>path</i> from the database. This will also attempt to disable the binary format in the kernel; see &#8211;<code>-disable</code> below.</dd>
+<dt><code>&#8211;import </code>[<i>name</i> ]</dt>
+<dd>Import a packaged format file called <i>name</i> or import all format files currently on the system if no <i>name</i> is given. If <i>name</i> is not a full path, it is assumed to be a file in the import directory ( /usr/share/binfmts by default). See Sx FORMAT FILES below for the required contents of these files. </dd>
 <p> For packages, this is preferable to using the &#8211;<code>-install</code> option, as a format file can be installed without <code>update\-binfmts</code> needing to be available.</p>
-<dt><code>&#8211;unimport </code>[<i>name</i> ]</p>
-<dd>Unimport a packaged format file called <i>name</i> or unimport all format files currently on the system if no <i>name</i> is given. If <i>name</i> is not a full path, it is assumed to be a file in the import directory ( /usr/share/binfmts by default). See Sx FORMAT FILES below for the required contents of these files. </p>
+<dt><code>&#8211;unimport </code>[<i>name</i> ]</dt>
+<dd>Unimport a packaged format file called <i>name</i> or unimport all format files currently on the system if no <i>name</i> is given. If <i>name</i> is not a full path, it is assumed to be a file in the import directory ( /usr/share/binfmts by default). See Sx FORMAT FILES below for the required contents of these files. </dd>
 <p> For packages, this is preferable to using the &#8211;<code>-remove</code> option, for symmetry with &#8211;<code>-import</code></p>
-<dt><code>&#8211;display </code>[<i>name</i> ]</p>
-<dd>Display any information held in the database about the binary format identifier <i>name</i> or about all known binary formats if no <i>name</i> is given. Also show whether displayed binary formats are enabled or disabled.</p>
-<dt><code>&#8211;enable </code>[<i>name</i> ]</p>
-<dd>Enable binary format <i>name</i> or all known binary formats if no <i>name</i> is given, in the kernel, thus enabling direct execution of matching files. You must have binfmt_misc compiled into the kernel or loaded as a module for this to work.</p>
-<dt><code>&#8211;disable </code>[<i>name</i> ]</p>
-<dd>Disable binary format <i>name</i> or all known binary formats if no <i>name</i> is given, in the kernel, thus disabling direct execution of matching files. You must have binfmt_misc compiled into the kernel or loaded as a module for this to work.</p>
-<dt><code>&#8211;find </code>[<i>path</i> ]</p>
-<dd>Print the list of interpreters that will be tried in sequence when attempting to execute <i>path</i> one per line. The first one for which <a href="/docs/linux/man/3-execvp/">execvp</a>(3) succeeds will be used. </p>
+<dt><code>&#8211;display </code>[<i>name</i> ]</dt>
+<dd>Display any information held in the database about the binary format identifier <i>name</i> or about all known binary formats if no <i>name</i> is given. Also show whether displayed binary formats are enabled or disabled.</dd>
+<dt><code>&#8211;enable </code>[<i>name</i> ]</dt>
+<dd>Enable binary format <i>name</i> or all known binary formats if no <i>name</i> is given, in the kernel, thus enabling direct execution of matching files. You must have binfmt_misc compiled into the kernel or loaded as a module for this to work.</dd>
+<dt><code>&#8211;disable </code>[<i>name</i> ]</dt>
+<dd>Disable binary format <i>name</i> or all known binary formats if no <i>name</i> is given, in the kernel, thus disabling direct execution of matching files. You must have binfmt_misc compiled into the kernel or loaded as a module for this to work.</dd>
+<dt><code>&#8211;find </code>[<i>path</i> ]</dt>
+<dd>Print the list of interpreters that will be tried in sequence when attempting to execute <i>path</i> one per line. The first one for which <a href="/docs/linux/man/3-execvp/">execvp</a>(3) succeeds will be used. </dd>
 <p> Note that if multiple formats match an executable, then the order is in general not defined, and may not be preserved between <code>update\-binfmts</code> operations, so you should generally try to ensure that this option prints at most one line for any given <i>path</i> The exception to this is that any format with a userspace detector will be run before any format without a userspace detector.</dl>
 <h3>Binary Format Specifications</h3>
 <dl>
-<dt><code>&#8211;magic </code><i>byte-sequence</i></p>
+<dt><code>&#8211;magic </code><i>byte-sequence</i></dt>
 <dd>This matches all files with the magic number <i>byte-sequence</i> Hexadecimal escapes may be included in the <i>byte-sequence</i> by preceding them with 
+</dd></dl>

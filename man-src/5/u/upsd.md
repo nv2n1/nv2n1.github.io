@@ -25,22 +25,22 @@ description: "upsd.users – Administrative user definitions for NUT upsd"
  [monslave]
  password = abcd
  upsmon slave</pre>
-</dl>
+</dd></dl>
 <h2>Fields</h2>
 <dl>
-<dt>password</p>
-<dd>Set the password for this user. </p>
-<dt>actions</p>
-<dd>Allow the user to do certain things with upsd. Valid actions are: </p>
+<dt>password</dt>
+<dd>Set the password for this user. </dd>
+<dt>actions</dt>
+<dd>Allow the user to do certain things with upsd. Valid actions are: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>SET &#8211; change the value of certain variables in the UPS</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>FSD &#8211; set the forced shutdown flag in the UPS. This is<br />
  equivalent to an &quot;on battery + low battery&quot; situation for the purposes of monitoring. </p>
 <p> The list of actions is expected to grow in the future. </p>
-<dt>instcmds</p>
-<dd>Let a user initiate specific instant commands. Use &quot;ALL&quot; to grant all commands automatically. For the full list of what your UPS supports, use &quot;upscmd -l&quot;. </p>
+<dt>instcmds</dt>
+<dd>Let a user initiate specific instant commands. Use &quot;ALL&quot; to grant all commands automatically. For the full list of what your UPS supports, use &quot;upscmd -l&quot;. </dd>
 <p> The <code>cmdvartab</code> file supplied with the distribution contains a list of most of the known command names. </p>
-<dt>upsmon</p>
-<dd>Add the necessary actions for a upsmon process to work. This is either set to &quot;master&quot; or &quot;slave&quot;. </p>
+<dt>upsmon</dt>
+<dd>Add the necessary actions for a upsmon process to work. This is either set to &quot;master&quot; or &quot;slave&quot;. </dd>
 <p> Do not attempt to assign actions to upsmon by hand, as you may miss something important. This method of designating a &quot;upsmon user&quot; was created so internal capabilities could be changed later on without breaking existing installations. </p>
 </dl>
 <h2>Upgrading From Older Versions</h2>

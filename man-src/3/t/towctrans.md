@@ -10,7 +10,6 @@ description: "towctrans – wide-character transliteration"
 <p>towctrans &#8211; wide-character transliteration</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wctype.h&gt;
-
 wint_t towctrans(wint_t wc, wctrans_t desc);</code></pre>
 <h2>Description</h2>
 <p>If <i>wc</i> is a wide character, the <code>towctrans</code>() function translates it according to the transliteration descriptor <i>desc</i>. If <i>wc</i> is <code>WEOF</code>, <code>WEOF</code> is returned. </p>

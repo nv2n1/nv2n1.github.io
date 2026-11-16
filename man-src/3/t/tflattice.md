@@ -11,7 +11,6 @@ description: "ql/methods/lattices/tflattice.hpp – Binomial Tsiveriotis-Fernand
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/methods/lattices/bsmlattice.hpp&gt;
-
 #include &lt;ql/pricingengines/hybrid/discretizedconvertible.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TsiveriotisFernandesLattice&lt; T &gt;</code><br />

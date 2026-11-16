@@ -19,9 +19,9 @@ description: "XmImRegister — An input manager function that registers a widget
 <p> The application is responsible for unregistering a widget by calling <code>XmImUnregister</code>. </p>
 <p> Note that the Text, TextField, and List widgets already call the <code>XmImRegister</code> function internally. You should not call this function for these widgets before calling <code>XmImUnregister</code> first.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget to be registered.</p>
-<dt><i>reserved</i></p>
-<dd>This argument is not used in the current release of Motif. The value should always be 0 (zero).</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget to be registered.</dd>
+<dt><i>reserved</i></dt>
+<dd>This argument is not used in the current release of Motif. The value should always be 0 (zero).</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmimgetxim/">XmImGetXIM</a></code>(3), <code><a href="/docs/linux/man/3-xmimmblookupstring/">XmImMbLookupString</a></code>(3), and <code><a href="/docs/linux/man/3-xmimunregister/">XmImUnregister</a></code>(3).</p>

@@ -69,9 +69,9 @@ description: "mpd_selinux – Security Enhanced Linux Policy for the mpd process
 <p> Policy governs the access confined processes have to these ports. SELinux mpd policy is very flexible allowing users to setup their mpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for mpd: </p>
 <dl>
-<dt><code>mpd_port_t</code></p>
+<dt><code>mpd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6600</dl>
+</dd><dd>Default Defined Ports: tcp 6600</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type mpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -130,8 +130,8 @@ description: "mpd_selinux – Security Enhanced Linux Policy for the mpd process
 <p> <code>mpd_data_t</code> </p>
 <p> &#8211; Set files with the mpd_data_t type, if you want to treat the files as mpd content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/mpd/music(/.*)?, /var/lib/mpd/playlists(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/mpd/music(/.*)?, /var/lib/mpd/playlists(/.*)? </dd>
 </dl>
 <p> <code>mpd_etc_t</code> </p>
 <p> &#8211; Set files with the mpd_etc_t type, if you want to store mpd files in the /etc directories. </p>

@@ -27,10 +27,10 @@ description: "dgesvj.f –"
  matrix, and V is an N-by-N orthogonal matrix. The diagonal elements
  of SIGMA are the singular values of A. The columns of U and V are the
  left and the right singular vectors of A, respectively.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOBA</i> </p>
+<dd><i>JOBA</i> </dd>
 <pre> JOBA is CHARACTER* 1
  Specifies the structure of A.
  = 'L': The input matrix A is lower triangular;
@@ -190,13 +190,13 @@ description: "dgesvj.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -218,13 +218,13 @@ description: "dgesvj.f –"
  number interval ( UNDERFLOW , OVERFLOW ). In extreme cases, even
  denormalized singular values can be computed with the corresponding
  gradual loss of accurate digits.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
 <dd>
 <pre> ============
  Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dd>
@@ -246,14 +246,15 @@ description: "dgesvj.f –"
  [7] Z. Drmac: SIGMA - mathematical software library for accurate SVD, PSV,
  QSVD, (H,K)-SVD computations.
  Department of Mathematics, University of Zagreb, 2008.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Bugs, examples and comments: </code></p>
 <dl COMPACT>
 <dd>
 <pre> ===========================
  Please report all bugs and send interesting test examples and comments to
  drmac [at] math.hr. Thank you.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 335 of file dgesvj.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

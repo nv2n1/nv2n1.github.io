@@ -14,9 +14,9 @@ description: "ata_sas_port_destroy – Destroy a SATA port allocated by ata_sas_
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>SATA port to destroy</dl>
+</dd><dd>SATA port to destroy</dd></dl>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

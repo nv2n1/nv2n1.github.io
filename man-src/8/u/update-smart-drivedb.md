@@ -14,27 +14,27 @@ description: "update-smart-drivedb – update smartmontools drive database"
 <p>[This man page is generated for the Linux version of smartmontools. It does not contain info specific to other platforms.] <code>update-smart-drivedb</code> updates <code>/var/lib/smartmontools/drivedb/drivedb.h</code> or <i>DESTFILE</i> from smartmontools SVN repository. It tries to download first from the current branch and then from trunk. The tools used for downloading are either <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), or <code><a href="/docs/linux/man/1-svn/">svn</a></code>(1). The old file is kept if the downloaded file is identical (ignoring the differences in Id string) otherwise it is moved to <code>drivedb.h.old</code>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s SMARTCTL</code></p>
-<dd>Use the <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8) executable at path SMARTCTL for drive database syntax check. The form &#8216;-s -&#8216; disables the syntax check. The default is <code>/usr/sbin/smartctl</code>.</p>
-<dt><code>-t TOOL</code></p>
-<dd>Use TOOL for download. TOOL is one of: <i>curl wget lynx</i> <i>svn</i>. The default is the first one found in PATH.</p>
-<dt><code>-u LOCATION</code></p>
+<dt><code>-s SMARTCTL</code></dt>
+<dd>Use the <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8) executable at path SMARTCTL for drive database syntax check. The form &#8216;-s -&#8216; disables the syntax check. The default is <code>/usr/sbin/smartctl</code>.</dd>
+<dt><code>-t TOOL</code></dt>
+<dd>Use TOOL for download. TOOL is one of: <i>curl wget lynx</i> <i>svn</i>. The default is the first one found in PATH.</dd>
+<dt><code>-u LOCATION</code></dt>
 <dd>Use URL of LOCATION for download. LOCATION is one of:<br />
  <i>sf</i> (Sourceforge code browser via HTTPS),<br />
  <i>svn</i> (SVN repository via HTTPS),<br />
  <i>svni</i> (SVN repository via HTTP),<br />
  <i>trac</i> (Trac code browser via HTTPS).<br />
- The default is <i>svn</i>.</p>
-<dt><code>&#8211;cacert FILE</code></p>
-<dd>Use CA certificates from FILE to verify the peer.</p>
-<dt><code>&#8211;capath DIR</code></p>
-<dd>Use CA certificate files from DIR to verify the peer.</p>
-<dt><code>&#8211;insecure</code></p>
-<dd>Don&#8217;t abort download if certificate verification fails. This option is also required if a HTTP URL is selected with &#8216;-u&#8217; option.</p>
-<dt><code>&#8211;dryrun</code></p>
-<dd>Print download commands only.</p>
-<dt><code>-v</code></p>
-<dd>Verbose output. </p>
+ The default is <i>svn</i>.</dd>
+<dt><code>&#8211;cacert FILE</code></dt>
+<dd>Use CA certificates from FILE to verify the peer.</dd>
+<dt><code>&#8211;capath DIR</code></dt>
+<dd>Use CA certificate files from DIR to verify the peer.</dd>
+<dt><code>&#8211;insecure</code></dt>
+<dd>Don&#8217;t abort download if certificate verification fails. This option is also required if a HTTP URL is selected with &#8216;-u&#8217; option.</dd>
+<dt><code>&#8211;dryrun</code></dt>
+<dd>Print download commands only.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output. </dd>
 </dl>
 <h2>Examples</h2>
 <pre># update-smart-drivedb
@@ -43,18 +43,18 @@ description: "update-smart-drivedb – update smartmontools drive database"
 <p>The exit status is 0 if the database has been successfully updated. If an error occurs the exit status is 1.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/sbin/update-smart-drivedb</code></p>
-<dd>full path of this script.</p>
-<dt><code>/usr/sbin/smartctl</code></p>
-<dd>used to check syntax of new drive database.</p>
-<dt><code>/var/lib/smartmontools/drivedb/drivedb.h</code></p>
-<dd>current drive database.</p>
-<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.old</code></p>
-<dd>previous drive database.</p>
-<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.error</code></p>
-<dd>new drive database if rejected due to syntax errors.</p>
-<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.lastcheck</code></p>
-<dd>empty file created if downloaded file was identical. </p>
+<dt><code>/usr/sbin/update-smart-drivedb</code></dt>
+<dd>full path of this script.</dd>
+<dt><code>/usr/sbin/smartctl</code></dt>
+<dd>used to check syntax of new drive database.</dd>
+<dt><code>/var/lib/smartmontools/drivedb/drivedb.h</code></dt>
+<dd>current drive database.</dd>
+<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.old</code></dt>
+<dd>previous drive database.</dd>
+<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.error</code></dt>
+<dd>new drive database if rejected due to syntax errors.</dd>
+<dt><code>/var/lib/smartmontools/drivedb/drivedb.h.lastcheck</code></dt>
+<dd>empty file created if downloaded file was identical. </dd>
 </dl>
 <h2>Authors</h2>
 <p><code>Christian Franke</code>.<br />

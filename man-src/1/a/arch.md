@@ -14,10 +14,10 @@ description: "arch – print machine hardware name (same as uname -m)"
 <h2>DESCRIPTION</h2>
 <p> Print machine architecture.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Karel Zak.</p>
 <h2>REPORTING BUGS</h2>

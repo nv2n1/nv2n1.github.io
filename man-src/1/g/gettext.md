@@ -16,24 +16,24 @@ description: "gettext – translate message"
 <p> The <code>gettext</code> program translates a natural language message into the user&#8217;s language, by looking up the translation in a message catalog. </p>
 <p> Display native language translation of a textual message.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;domain</code>=<i>,TEXTDOMAIN/</i></p>
-<dd> retrieve translated messages from TEXTDOMAIN</p>
-<dt><code>-c</code>, <code>&#8211;context</code>=<i>,CONTEXT/</i></p>
-<dd> specify context for MSGID</p>
-<dt><code>-e</code></p>
-<dd> enable expansion of some escape sequences</p>
-<dt><code>-n</code></p>
-<dd> suppress trailing newline</p>
-<dt><code>-E</code></p>
-<dd> (ignored for compatibility)</p>
-<dt>[TEXTDOMAIN] MSGID</p>
-<dd> retrieve translated message corresponding to MSGID from TEXTDOMAIN</dl>
+<dt><code>-d</code>, <code>&#8211;domain</code>=<i>,TEXTDOMAIN/</i></dt>
+<dd> retrieve translated messages from TEXTDOMAIN</dd>
+<dt><code>-c</code>, <code>&#8211;context</code>=<i>,CONTEXT/</i></dt>
+<dd> specify context for MSGID</dd>
+<dt><code>-e</code></dt>
+<dd> enable expansion of some escape sequences</dd>
+<dt><code>-n</code></dt>
+<dd> suppress trailing newline</dd>
+<dt><code>-E</code></dt>
+<dd> (ignored for compatibility)</dd>
+<dt>[TEXTDOMAIN] MSGID</dt>
+<dd> retrieve translated message corresponding to MSGID from TEXTDOMAIN</dd></dl>
 <h3>Informative output:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> display version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> display version information and exit</dd></dl>
 <p> If the TEXTDOMAIN parameter is not given, the domain is determined from the environment variable TEXTDOMAIN. If the message catalog is not found in the regular directory, another location can be specified with the environment variable TEXTDOMAINDIR. When used with the <code>-s</code> option the program behaves like the &#8216;echo&#8217; command. But it does not simply copy its arguments to stdout. Instead those messages found in the selected catalog are translated. Standard search directory: /usr/share/locale</p>
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper.</p>
@@ -46,6 +46,6 @@ description: "gettext – translate message"
 <p> The full documentation for <code>gettext</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gettext</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gettext</code></dl>
+</dt><dd> <code>info gettext</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

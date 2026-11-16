@@ -14,11 +14,11 @@ mongoc_write_concern_set_journal (mongoc_write_concern_t *write_concern,
  bool journal);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>journal</code></p>
-<dd>A boolean.</dl>
+<dt><code>journal</code></dt>
+<dd>A boolean.</dd></dl>
 <h2>Description</h2>
 <p>Sets if the write must have been journaled before indicating success. </p>
 <h2>Colophon</h2>

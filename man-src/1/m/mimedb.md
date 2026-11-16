@@ -19,25 +19,25 @@ url: "/docs/linux/man/1-mimedb/"
 
 <dl>
 <dt>*
-<dd> FILES is a list of files to analyse
-<dt>*
-<dd> -t, --input-file-data the specified files type should be determined both by their filename and by their contents (Default)
-<dt>*
-<dd> -f, --input-filename the specified files type should be determined by their filename
-<dt>*
-<dd> -i, --input-mime the arguments are not files but mimetypes
-<dt>*
-<dd> -m, --output-mime the output will be the mimetype of each file (Default)
-<dt>*
-<dd> -f, --output-description the output will be the description of each mimetype
-<dt>*
-<dd> -a, --output-action the output will be the default action of each mimetype
-<dt>*
-<dd> -l, --launch launch the default action for the specified file(s)
-<dt>*
-<dd> -h, --help display a help message and exit
-<dt>*
-<dd> -v, --version display version number and exit</dl>
+</dt><dd> FILES is a list of files to analyse
+</dd><dt>*
+</dt><dd> -t, --input-file-data the specified files type should be determined both by their filename and by their contents (Default)
+</dd><dt>*
+</dt><dd> -f, --input-filename the specified files type should be determined by their filename
+</dd><dt>*
+</dt><dd> -i, --input-mime the arguments are not files but mimetypes
+</dd><dt>*
+</dt><dd> -m, --output-mime the output will be the mimetype of each file (Default)
+</dd><dt>*
+</dt><dd> -f, --output-description the output will be the description of each mimetype
+</dd><dt>*
+</dt><dd> -a, --output-action the output will be the default action of each mimetype
+</dd><dt>*
+</dt><dd> -l, --launch launch the default action for the specified file(s)
+</dd><dt>*
+</dt><dd> -h, --help display a help message and exit
+</dd><dt>*
+</dt><dd> -v, --version display version number and exit</dd></dl>
  
 
  

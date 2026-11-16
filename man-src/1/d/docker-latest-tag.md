@@ -36,39 +36,39 @@ dash and may contain a maximum of 128 characters. </p>
 <p> To tag a local image with ID &quot;0e5574283393&quot; into the &quot;fedora&quot; repository with &quot;version1.0&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker tag 0e5574283393 fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <h2>Tagging an image referenced by Name</h2>
 <p> To tag a local image with name &quot;httpd&quot; into the &quot;fedora&quot; repository with &quot;version1.0&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker tag httpd fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <p> Note that since the tag name is not specified, the alias is created for an existing local version httpd:latest. </p>
 <h2>Tagging an image referenced by Name and Tag</h2>
 <p> To tag a local image with name &quot;httpd&quot; and tag &quot;test&quot; into the &quot;fedora&quot; repository with &quot;version1.0.test&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker tag httpd:test fedora/httpd:version1.0.test
 </pre>
-</dl>
+</dd></dl>
 <h2>Tagging an image for a private repository</h2>
 <p> To push an image to a private registry and not the central Docker registry you must tag it with the registry hostname and port (if needed). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Mary Anthony for v2 &lt;mary [at] docker.com&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
 <h2>Index</h2>

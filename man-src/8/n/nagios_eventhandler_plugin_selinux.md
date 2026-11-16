@@ -64,8 +64,8 @@ description: "nagios_eventhandler_plugin_selinux – Security Enhanced Linux Pol
 <p> <code>nagios_eventhandler_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the nagios_eventhandler_plugin_exec_t type, if you want to transition an executable to the nagios_eventhandler_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/nagios/plugins/eventhandlers(/.*), /usr/lib/icinga/plugins/eventhandlers(/.*) </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/nagios/plugins/eventhandlers(/.*), /usr/lib/icinga/plugins/eventhandlers(/.*) </dd>
 </dl>
 <p> <code>nagios_eventhandler_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the nagios_eventhandler_plugin_tmp_t type, if you want to store nagios eventhandler plugin temporary files in the /tmp directories. </p>

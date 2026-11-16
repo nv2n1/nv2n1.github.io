@@ -110,7 +110,8 @@ spinner = ['\', '|', '/', '-']
 try:
  while True:
  time.sleep(0.1)
- print('{0}'.format(spinner[i]), end='')
+ print('{0}
+'.format(spinner[i]), end='')
  i += 1
  i = i % len(spinner)
  sys.stdout.flush()
@@ -130,60 +131,60 @@ for prob in problem.list():
 print(bugs)</pre>
 <h2>Stable Api Documentation</h2>
 <dl>
-<dt><code>class problem.Problem(typ, reason)</code></p>
-<dd>Base class for the other problem types. </p>
+<dt><code>class problem.Problem(typ, reason)</code></dt>
+<dd>Base class for the other problem types. </dd>
 <p> No need to use this class directly, use one of the specific problem classes.</p>
-<dt><code>add_current_environment()</code></p>
-<dd>Add environment of current process to this problem object</p>
-<dt><code>add_current_process_data()</code></p>
-<dd>Add pid, gid and executable of current process to this problem object</p>
-<dt><code>delete()</code></p>
-<dd>Delete this problem</p>
-<dt><code>save()</code></p>
-<dd>Create this problem or update modified data </p>
+<dt><code>add_current_environment()</code></dt>
+<dd>Add environment of current process to this problem object</dd>
+<dt><code>add_current_process_data()</code></dt>
+<dd>Add pid, gid and executable of current process to this problem object</dd>
+<dt><code>delete()</code></dt>
+<dd>Delete this problem</dd>
+<dt><code>save()</code></dt>
+<dd>Create this problem or update modified data </dd>
 <p> Create or update the project if some of its fields were modified. </p>
 <p> Return <code>None</code> in case of modification, identifier if new problem was created.</p>
-<dt><code>problem.list(auth=False)</code></p>
-<dd>Return the list of the problems </p>
+<dt><code>problem.list(auth=False)</code></dt>
+<dd>Return the list of the problems </dd>
 <p> Use <code>auth=True</code> if authentication should be attempted. </p>
 <p> If authentication via polkit fails, function behaves as if <code>auth=False</code> was specified (only users problems are returned).</p>
-<dt><code>problem.get(identifier, auth=False)</code></p>
-<dd>Return problem object matching <code>identifier</code> </p>
+<dt><code>problem.get(identifier, auth=False)</code></dt>
+<dd>Return problem object matching <code>identifier</code> </dd>
 <p> Return <code>None</code> in case the problem does not exist. </p>
 <p> Use <code>auth=True</code> if authentication should be attempted.</p>
-<dt><code>problem.get_problem_watcher(auth=False)</code></p>
-<dd>Return <code>ProblemWatcher</code> object which can be used to attach callbacks called when new problem is created </p>
+<dt><code>problem.get_problem_watcher(auth=False)</code></dt>
+<dd>Return <code>ProblemWatcher</code> object which can be used to attach callbacks called when new problem is created </dd>
 <p> Use <code>auth=True</code> if authentication should be attempted for new problem that doesn&#8217;t belong to current user. If not set such a problem is ignored.</dl>
 <h3>Specific problem types</h3>
 <dl>
-<dt><code>class problem.Ccpp(reason)</code></p>
-<dd>C, C++ problem</p>
-<dt><code>class problem.Java(reason)</code></p>
-<dd>Java problem</p>
-<dt><code>class problem.Kerneloops(reason)</code></p>
-<dd>Kerneloops problem</p>
-<dt><code>class problem.Python(reason)</code></p>
-<dd>Python problem</p>
-<dt><code>class problem.Runtime(reason)</code></p>
-<dd>Runtime problem</p>
-<dt><code>class problem.Selinux(reason)</code></p>
-<dd>Selinux problem</p>
-<dt><code>class problem.Unknown(reason)</code></p>
-<dd>Unknown problem</p>
-<dt><code>class problem.Xorg(reason)</code></p>
-<dd>Xorg problem</dl>
+<dt><code>class problem.Ccpp(reason)</code></dt>
+<dd>C, C++ problem</dd>
+<dt><code>class problem.Java(reason)</code></dt>
+<dd>Java problem</dd>
+<dt><code>class problem.Kerneloops(reason)</code></dt>
+<dd>Kerneloops problem</dd>
+<dt><code>class problem.Python(reason)</code></dt>
+<dd>Python problem</dd>
+<dt><code>class problem.Runtime(reason)</code></dt>
+<dd>Runtime problem</dd>
+<dt><code>class problem.Selinux(reason)</code></dt>
+<dd>Selinux problem</dd>
+<dt><code>class problem.Unknown(reason)</code></dt>
+<dd>Unknown problem</dd>
+<dt><code>class problem.Xorg(reason)</code></dt>
+<dd>Xorg problem</dd></dl>
 <h3>ProblemWatcher</h3>
 <dl>
-<dt><code>class problem.watch.ProblemWatcher(auth)</code></p>
-<dd>New problem signal handler attached to DBus signal </p>
+<dt><code>class problem.watch.ProblemWatcher(auth)</code></dt>
+<dd>New problem signal handler attached to DBus signal </dd>
 <p> Use <code>auth=True</code> if authentication should be attempted for new problem that doesn&#8217;t belong to current user. If not set such a problem is ignored.</p>
-<dt><code>add_callback(fun)</code></p>
-<dd>Add callback to be called when new problem occurs. </p>
+<dt><code>add_callback(fun)</code></dt>
+<dd>Add callback to be called when new problem occurs. </dd>
 <p> Each callback function receives <code>Problem</code> instance</p>
-<dt><code>quit()</code></p>
-<dd>Stop event listener loop</p>
-<dt><code>run()</code></p>
-<dd>Start event listener loop</dl>
+<dt><code>quit()</code></dt>
+<dd>Stop event listener loop</dd>
+<dt><code>run()</code></dt>
+<dd>Start event listener loop</dd></dl>
 <h2>Problem Object Properties</h2>
 <p>Currently, there is no strict specification of problem properties and you are free to add your own data as you see fit (log files, process data) provided you are planning to use them for reporting. </p>
 <p> Mandatory properties required prior saving: <center></p>
@@ -662,12 +663,12 @@ print(bugs)</pre>
 </table>
 <p></center></p>
 <dl>
-<dt>&bull;</p>
-<dd><i>genindex</i></p>
-<dt>&bull;</p>
-<dd><i>modindex</i></p>
-<dt>&bull;</p>
-<dd><i>search</i></dl>
+<dt>&bull;</dt>
+<dd><i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd><i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd><i>search</i></dd></dl>
 <h2>Author</h2>
 <p>Richard Marko</p>
 <h2>Copyright</h2>

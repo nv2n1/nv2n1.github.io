@@ -10,15 +10,15 @@ CPCHLL - Called by Conpack routines as contour line labels are drawn. The defaul
 
 <h2>Synopsis</h2>CALL CPCHLL (IFLG)
 <h2>Description</h2><dl COMPACT><dt>IFLG
-<dd>(INTEGER, input) is positive if an action is about to be taken, negative if an action has just been completed. The action in question is defined by the absolute value of IFLG, as follows:
-<dl COMPACT><dd><dl COMPACT><dt>&bull;
-<dd>The value 1 implies the determination of the size of the label (by means of a call to PLCHHQ, in the package Plotchar, with ANGD=360.).
-<dt>&bull;
-<dd>The value 2 implies the filling of the box around the label, which is done before the drawing of the label itself.
-<dt>&bull;
-<dd>The value 3 implies the drawing of the label (by means of a call to PLCHHQ, in the package Plotchar).
-<dt>&bull;
-<dd>The value 4 implies the drawing of the box around the label, which is done after the drawing of the label itself.</dl></dl>
+</dt><dd>(INTEGER, input) is positive if an action is about to be taken, negative if an action has just been completed. The action in question is defined by the absolute value of IFLG, as follows:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
+</dt><dd>The value 1 implies the determination of the size of the label (by means of a call to PLCHHQ, in the package Plotchar, with ANGD=360.).
+</dd><dt>&bull;
+</dt><dd>The value 2 implies the filling of the box around the label, which is done before the drawing of the label itself.
+</dd><dt>&bull;
+</dt><dd>The value 3 implies the drawing of the label (by means of a call to PLCHHQ, in the package Plotchar).
+</dd><dt>&bull;
+</dt><dd>The value 4 implies the drawing of the box around the label, which is done after the drawing of the label itself.</dd></dl></dl>
 </dl><h2>Usage</h2>The routine CPCHLL is not to be called by the user. It is called several times by CPLBAM and/or CPLBDR while each contour-line label is positioned and drawn. The default version of CPCHLL does nothing. A user-supplied replacement may change attributes such as color and line width (by calling the SPPS routine SETUSV or the appropriate GKS routines). The text of the label may be retrieved by means of a &quot;CALL CPGETC ('CTM',CVAL)&quot;. The text of the label may be changed by means of a &quot;CALL CPSETC ('CTM',CVAL)&quot;; this should only be done during a call with IFLG = 1 or 3 and, if it is done for one of those values, it should be done for the other. 
 
  When CPCHLL is called, the parameter 'PAI' will have been set to the index of the appropriate contour level. Thus, parameters associated with that level may easily be retrieved by calls to CPGETx.

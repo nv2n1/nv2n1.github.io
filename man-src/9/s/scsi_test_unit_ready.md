@@ -14,23 +14,23 @@ description: "scsi_test_unit_ready – test if unit is ready"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device to change the state of.</dl>
+</dd><dd>scsi device to change the state of.</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>command timeout</dl>
+<dd>command timeout</dd></dl>
 <p> <i>retries</i></p>
 <dl>
-<dd>number of retries before failing</dl>
+<dd>number of retries before failing</dd></dl>
 <p> <i>sshdr_external</i></p>
 <dl>
-<dd>Optional pointer to struct scsi_sense_hdr for returning sense. Make sure that this is cleared before passing in.</dl>
+<dd>Optional pointer to struct scsi_sense_hdr for returning sense. Make sure that this is cleared before passing in.</dd></dl>
 <h2>Description</h2>
 <p>Returns zero if unsuccessful or an error if TUR failed. For removable media, UNIT_ATTENTION sets -&gt;changed flag.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

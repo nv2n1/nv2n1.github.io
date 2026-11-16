@@ -16,12 +16,12 @@ description: "lsdic – Display the user dictionary list"
 <p> To display the list of another user, specify the user name by -u option. To display the system dictionary list, specify the -i option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</p>
-<dd> Specifies the name of the server machine that contains the dictionaries to be listed.</p>
-<dt>-i</p>
-<dd> Displays the list of system dictionaries.</p>
-<dt>-u <i>user-name</i></p>
-<dd> Displays the dictionary list of the specified user.</dl>
+<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</dt>
+<dd> Specifies the name of the server machine that contains the dictionaries to be listed.</dd>
+<dt>-i</dt>
+<dd> Displays the list of system dictionaries.</dd>
+<dt>-u <i>user-name</i></dt>
+<dd> Displays the dictionary list of the specified user.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpdic/">cpdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1), <a href="/docs/linux/man/1-mvdic/">mvdic</a>(1), <a href="/docs/linux/man/1-rmdic/">rmdic</a>(1), </p>
 <h2>Index</h2>

@@ -15,11 +15,11 @@ description: "pyhtmlizer – pretty-print Python source as HTML"
 <p> This generates a HTML document with Python source marked up with span elements. To colorize, provide a stylesheet.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;stylesheet, -s</code> &lt;<i>url</i>&gt;</p>
-<dd> Links to the stylesheet at &lt;<i>url</i>&gt;.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Output help information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Output version information and exit. </p>
+<dt><code>&#8211;stylesheet, -s</code> &lt;<i>url</i>&gt;</dt>
+<dd> Links to the stylesheet at &lt;<i>url</i>&gt;.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Output help information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>Index</h2>

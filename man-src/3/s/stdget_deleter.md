@@ -12,7 +12,6 @@ std::get_deleter - std::get_deleter
 
 <pre><code>template &lt;class Deleter, class T&gt;
 (since C++ 11)
-
     Deleter *get_deleter(const std::shared_ptr&lt;T&gt; &amp;p) noexcept;</code></pre> 
 Access to the p's deleter. If the shared pointer p owns a deleter of type cv-unqualified Deleter (e.g. if it was created with one of the constructors that take a deleter as a parameter), then returns a pointer to the deleter. Otherwise, returns a null pointer. 
 
@@ -32,20 +31,16 @@ The returned pointer may outlive the last shared_ptr if, for example, std::weak_
 
 demonstrates that shared_ptr deleter is independent of the shared_ptr's type 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Foo {
     int i;
 };
-
 void foo_deleter(Foo *p)
-
 {
     std::cout &lt;&lt; &quot;foo_deleter called!\n&quot;;
     delete p;
 }
 int main()
-
 {
     std::shared_ptr&lt;int&gt; aptr;
     {
@@ -62,7 +57,6 @@ int main()
             std::cout &lt;&lt; &quot;...and it equals &amp;foo_deleter\n&quot;;
     } else
         std::cout &lt;&lt; &quot;The deleter of shared_ptr&lt;int&gt; is null!\n&quot;;
-
 } // deleter called here
 </code></pre>
 

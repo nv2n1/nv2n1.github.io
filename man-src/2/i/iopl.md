@@ -20,12 +20,12 @@ description: "iopl – change I/O privilege level"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>level</i> is greater than 3.</p>
-<dt><code>ENOSYS</code></p>
-<dd> This call is unimplemented.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling thread has insufficient privilege to call <code>iopl</code>(); the <code>CAP_SYS_RAWIO</code> capability is required to raise the I/O privilege level above its current value.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>level</i> is greater than 3.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> This call is unimplemented.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling thread has insufficient privilege to call <code>iopl</code>(); the <code>CAP_SYS_RAWIO</code> capability is required to raise the I/O privilege level above its current value.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>iopl</code>() is Linux-specific and should not be used in programs that are intended to be portable.</p>
 <h2>NOTES</h2>

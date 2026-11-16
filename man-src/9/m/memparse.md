@@ -15,11 +15,11 @@ memparse - parse a string with mem suffixes into a number
 <h2>Arguments</h2>
 
 <i>ptr</i>
-<dl><dd><dd>Where parse begins</dl>
+<dl><dd></dd><dd>Where parse begins</dd></dl>
  
 
  <i>retptr</i>
-<dl><dd>(output) Optional pointer to next char after parse completes</dl>
+<dl><dd>(output) Optional pointer to next char after parse completes</dd></dl>
 
 <h2>Description</h2>
 

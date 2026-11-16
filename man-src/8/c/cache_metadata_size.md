@@ -12,18 +12,18 @@ description: "cache_metadata_size – Estimate the size of the metadata device n
 <pre><code>cache_metadata_size</code> [<i>options</i>]</pre>
 <h2>Description</h2>
 <dl>
-<dt><code>cache_metadata_size</code> estimates the size of the metadata.</p>
-<dd>Either <code>&#8211;nr-blocks</code>, or <code>&#8211;block-size</code> and <code>&#8211;device-size</code> must be specified.</dl>
+<dt><code>cache_metadata_size</code> estimates the size of the metadata.</dt>
+<dd>Either <code>&#8211;nr-blocks</code>, or <code>&#8211;block-size</code> and <code>&#8211;device-size</code> must be specified.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;nr-blocks</code> {natural}</p>
-<dd>Specify the number of cache blocks.</p>
-<dt><code>&#8211;block-size</code> {sectors}</p>
-<dd>Specify the size of each cache block in 512 byte sectors.</p>
-<dt><code>&#8211;device-size</code> {sectors}</p>
-<dd>Specify total size of the fast device used in the cache. In 512 byte sectors.</p>
-<dt><code>&#8211;max-hint-width</code> {nr bytes}</p>
-<dd>Specify hint width.</dl>
+<dt><code>&#8211;nr-blocks</code> {natural}</dt>
+<dd>Specify the number of cache blocks.</dd>
+<dt><code>&#8211;block-size</code> {sectors}</dt>
+<dd>Specify the size of each cache block in 512 byte sectors.</dd>
+<dt><code>&#8211;device-size</code> {sectors}</dt>
+<dd>Specify total size of the fast device used in the cache. In 512 byte sectors.</dd>
+<dt><code>&#8211;max-hint-width</code> {nr bytes}</dt>
+<dd>Specify hint width.</dd></dl>
 <pre> Cache policies use a per block 'hint' to record extra info (for instance
  hit counts). At the moment all policies use a 4 byte hint
  width. If you want to use a different hint width specify it with this

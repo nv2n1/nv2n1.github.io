@@ -95,6 +95,6 @@ description: "globus_gsi_system_config.h – Globus GSI System Config Library."
 <p>Globus GSI System Config Library. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Lang, Sam Meder</dl>
+<dd>Sam Lang, Sam Meder</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gsi_sysconfig from the source code.</p>

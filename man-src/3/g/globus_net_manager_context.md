@@ -52,159 +52,159 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Pointer to the context to destroy.</dl>
+</dt><dd> <i>context</i> Pointer to the context to destroy.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_end_listen (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array)</h3>
 <p> Call Context End Listen. Call the chain of end_listen() functions in a context with the given task_id, transport, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of the socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.</dl>
+ <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the end_listen calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the end_listen calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_init (<code>globus_net_manager_context_t</code> *context, const <code>globus_net_manager_attr_t</code> *attrs)</h3>
 <p> Initialize Context. This functions initializes <i>context</i> with the attribute list <i>attrs</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> A pointer to the context to initialize.<br />
- <i>attrs</i> An array of attributes to initialize the context with.</dl>
+</dt><dd> <i>context</i> A pointer to the context to initialize.<br />
+ <i>attrs</i> An array of attributes to initialize the context with.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On error, the &#8216;context&#8217; is set to NULL and this function returns an error object. Otherwise this function returns &#8216;GLOBUS_SUCCESS&#8217;</dl>
+</dt><dd> On error, the &#8216;context&#8217; is set to NULL and this function returns an error object. Otherwise this function returns &#8216;GLOBUS_SUCCESS&#8217;</dd></dl>
 <h3>globus_result_t globus_net_manager_context_post_accept (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Post Accept. Call the chain of post_accept() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. The attributes are chained through all the calls, with any changed values returned from a manager passed to subsequent managers in the chain. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of the socket.<br />
  <i>remote_contact</i> The string representation of the remote address of the socket.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_accept calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_accept calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_post_close (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)</h3>
 <p> Call Context Post Close. Call the chain of post_close() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of the socket.<br />
  <i>remote_contact</i> The string representation of the remote address of the socket<br />
- <i>attr_array</i> The set of attributes to pass to the managers.</dl>
+ <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_close calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_close calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_post_connect (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Post Connect. Call the chain of post_connect() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of the socket.<br />
  <i>remote_contact</i> The string representation of the remote address of the socket.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_connect calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_connect calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_post_listen (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **local_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Post Listen. Call the chain of post_listen() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of the socket.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
  <i>local_contact_out</i> The resulting local contact from the managers. This will be set to NULL if no manager modifies the local contact.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_listen() calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the post_listen() calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_pre_accept (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Pre Accept. Call the chain of pre_accept() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of socket.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_accept() calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_accept() calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_pre_close (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)</h3>
 <p> Call Context Pre Close. Call the chain of pre_close() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>local_contact</i> The string representation of the local address of socket.<br />
  <i>remote_contact</i> The string representation of the remote address of socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.</dl>
+ <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_close() calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_close() calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_pre_connect (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **remote_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Pre Connect. Call the chain of pre_connect() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>remote_contact</i> The string representation of the remote address of socket.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
  <i>remote_contact_out</i> The resulting string representation of the remote address. This will be set to NULL if no manager modifies the address.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_connect() calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_connect() calls stop and the error is returned to the caller.</dd></dl>
 <h3>globus_result_t globus_net_manager_context_pre_listen (<code>globus_net_manager_context_t</code>context, const char *task_id, const char *transport, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)</h3>
 <p> Call Context Pre Listen. Call the chain of pre_listen() functions in a context with the given task_id, transport, contact information, and attributes. If any manager in the context returns an error, the subsequent managers will not be called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> The context to call functions in.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br />
  <i>task_id</i> The task_id associated with this network operation.<br />
  <i>transport</i> The transport driver associated with this network operation.<br />
  <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dl>
+ <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_listen() calls stop and the error is returned to the caller.</dl>
+</dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_listen() calls stop and the error is returned to the caller.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAT">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAT">Author</a></dt>
+<dd></dd></dl>

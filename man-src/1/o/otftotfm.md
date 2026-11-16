@@ -19,7 +19,9 @@ description: "otftotfm – create TeX font metrics from OpenType fonts"
     ont\myfont=<i>texname</i> at 10pt
     {\myfont This text uses the OpenType font.}
 </pre>
-<p> LaTeX users will generally make a &quot;.fd&quot; input file so that commands like &quot;enewcommand{mdefault}{TeXName}&quot; work correctly. See the EXAMPLE section for more; check the DIAGNOSTICS and FREQUENTLY ASKED QUESTIONS sections if you have trouble.</p>
+<p> LaTeX users will generally make a &quot;.fd&quot; input file so that commands like &quot;
+enewcommand{
+mdefault}{TeXName}&quot; work correctly. See the EXAMPLE section for more; check the DIAGNOSTICS and FREQUENTLY ASKED QUESTIONS sections if you have trouble.</p>
 <h3>OpenType Features</h3>
 <p> OpenType fonts support optional <i>features</i> that change their appearance. Use the <code>-f</code> option to turn on selected features. For example, &quot;<code>-f</code>smcp&quot; replaces lower-case letters with the corresponding small capitals, in fonts that support this. </p>
 <p> You&#8217;ll generally provide at least the &quot;<code>-f</code>kern&quot; and &quot;<code>-f</code>liga&quot; options, which activate pair kerns and f-ligatures. Other interesting features include &quot;<code>-f</code>cpsp&quot;, for capital spacing; &quot;<code>-f</code>dlig&quot;, for optional ligatures; &quot;<code>-f</code>lnum&quot;, &quot;<code>-f</code>onum&quot;, &quot;<code>-f</code>pnum&quot;, and &quot;<code>-f</code>tnum&quot;, to control digit glyphs; &quot;<code>-f</code>smcp&quot;, for small capitals; &quot;<code>-f</code>swsh&quot;, for swash variants; and &quot;<code>-f</code>cswh&quot;, for contextual swash. See the FEATURE DIRECTORY section below for more. The program will report which features a font supports; run &quot;<code>otfinfo</code> <code>-f</code> <i>fontfile</i>&quot;. </p>
@@ -176,8 +178,8 @@ description: "otftotfm – create TeX font metrics from OpenType fonts"
 <p> Our first task is to decide how to encode the fonts. The &quot;encoding scheme&quot; is used by TeX to decide how to typeset accents and symbols like &quot;$&quot;. The &quot;LY1&quot; encoding scheme has reasonable accent support and is a good choice for many OpenType fonts. LY1 corresponds to the &quot;texnansx.enc&quot; encoding file, so we will supply <code>otftotfm</code> with the &quot;<code>-e</code> texnansx&quot; option.</p>
 <dl>
 <dt>
-<dd>
-<p> Expert note: Strictly speaking, LY1 corresponds to the &quot;texnansi.enc&quot; encoding file. Since the &quot;texnansx.enc&quot; version omits duplicate characters, it has more room for font-specific glyphs and is generally a better choice; but if you plan to type characters like &quot;ae&quot; directly into your editor, rather than using TeX commands like e, you should use &quot;texnansi.enc&quot;.</dl>
+</dt><dd>
+<p> Expert note: Strictly speaking, LY1 corresponds to the &quot;texnansi.enc&quot; encoding file. Since the &quot;texnansx.enc&quot; version omits duplicate characters, it has more room for font-specific glyphs and is generally a better choice; but if you plan to type characters like &quot;ae&quot; directly into your editor, rather than using TeX commands like e, you should use &quot;texnansi.enc&quot;.</dd></dl>
 <p> Next, we decide on a naming scheme for the font metric files. Let&#8217;s use the OpenType font names as a base. (There&#8217;s generally no need to follow the six-character &quot;Karl Berry&quot; naming scheme.) Just in case we come back later and add a different encoding scheme, we&#8217;ll prepend &quot;LY1&#8211;&quot; to each name. </p>
 <p> We&#8217;re now ready to run <code>otftotfm</code> for the first set of fonts. Note the &quot;<code>-f</code>kern <code>-f</code>liga&quot; options, which access pair kerns and the default &quot;f&quot; ligatures. </p>
 <pre><code>
@@ -238,3 +240,4 @@ otftotfm - a - e texnansx MinionPro - Regular.otf - fkern - fliga LY1-- MinionPr
 }</p>
 <p> We&#8217;re now ready to use MinionPro in LaTeX, with lines like this in the document preamble: </p>
 <p>
+</p></p>

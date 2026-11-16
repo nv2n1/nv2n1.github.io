@@ -110,14 +110,14 @@ description: "dlm_controld_selinux – Security Enhanced Linux Policy for the dl
 <p> <code>dlm_controld_var_log_t</code> </p>
 <p> &#8211; Set files with the dlm_controld_var_log_t type, if you want to treat the data as dlm controld var log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/dlm_controld(/.*)?, /var/log/cluster/dlm_controld.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/dlm_controld(/.*)?, /var/log/cluster/dlm_controld.log.* </dd>
 </dl>
 <p> <code>dlm_controld_var_run_t</code> </p>
 <p> &#8211; Set files with the dlm_controld_var_run_t type, if you want to store the dlm controld files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/dlm_controld(/.*)?, /var/run/dlm_controld.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/dlm_controld(/.*)?, /var/run/dlm_controld.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -19,18 +19,18 @@ description: "kissattach, spattach – Attach a KISS or 6PACK interface"
 <p> The optional inetaddr argument is the IP address of the new interface. Some time it was mandatory argument (although due to historical reasons this restriction is lifted if the old -i option is used). But there&#8217;s really not a need for the interface to have an IP address assigned to.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-6</code></p>
-<dd>Use the 6PACK line discipline instead of KISS. This is the default if the program is called as spattach.</p>
-<dt><code>-i inetaddr</code></p>
-<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name. This option is now depreciated and the program will complain about it, though still work.</p>
-<dt><code>-l</code></p>
-<dd>Log messages to the system log, the default is not to.</p>
-<dt><code>-b</code></p>
-<dd>Allow broadcasts on the interface (default no &#8211; because for e.g. samba broadcasts are a pain..)</p>
-<dt><code>-m mtu</code></p>
-<dd>Sets the mtu of the interface. If this value is not given then the value is taken from the paclen parameter in axports.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-6</code></dt>
+<dd>Use the 6PACK line discipline instead of KISS. This is the default if the program is called as spattach.</dd>
+<dt><code>-i inetaddr</code></dt>
+<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name. This option is now depreciated and the program will complain about it, though still work.</dd>
+<dt><code>-l</code></dt>
+<dd>Log messages to the system log, the default is not to.</dd>
+<dt><code>-b</code></dt>
+<dd>Allow broadcasts on the interface (default no &#8211; because for e.g. samba broadcasts are a pain..)</dd>
+<dt><code>-m mtu</code></dt>
+<dd>Sets the mtu of the interface. If this value is not given then the value is taken from the paclen parameter in axports.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code>axparms</code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
 <h2>Author</h2>

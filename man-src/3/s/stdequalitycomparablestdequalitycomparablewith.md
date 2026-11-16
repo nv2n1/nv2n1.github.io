@@ -11,58 +11,36 @@ std::EqualityComparable,std::EqualityComparableWith - std::EqualityComparable,st
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class T, class U&gt;
-
     concept __WeaklyEqualityComparableWith = // exposition only
-
     requires(const std::remove_reference_t&lt;T&gt; &amp;t,
-
              const std::remove_reference_t&lt;U&gt; &amp;u)
 {
-
     t == u;
     requires std::Boolean&lt;decltype(t == u)&gt;;
     (1)
-
             t != u;
     requires std::Boolean&lt;decltype(t != u)&gt;;
-
     u == t;
     requires std::Boolean&lt;decltype(u == t)&gt;;
-
     u != t;
     requires std::Boolean&lt;decltype(u != t)&gt;;
 };
-
 template &lt;class T&gt;
 (2)(since C++ 20)
-
     concept EqualityComparable = __WeaklyEqualityComparableWith&lt;T, T&gt;;
-
 template &lt;class T, class U&gt;
-
 concept EqualityComparableWith =
-
     std::EqualityComparable&lt;T&gt; &amp;&amp;
-
     std::EqualityComparable&lt;U&gt; &amp;&amp;
-
     std::CommonReference &lt;
-
     const std::remove_reference_t&lt;T&gt;
 &amp;, (3)(since C++ 20)
-
            const std::remove_reference_t&lt;U&gt; &amp; &gt; &amp;&amp;
-
                                                 std::EqualityComparable&lt;
-
                                                     std::common_reference_t&lt;
-
                                                         const std::remove_reference_t&lt;T&gt; &amp;,
-
                                                         const std::remove_reference_t&lt;U&gt; &amp;&gt;&gt; &amp;&amp;
-
                                                 __WeaklyEqualityComparableWith&lt;T, U&gt;;</code></pre> 
 1) The exposition-only concept __WeaklyEqualityComparableWith&lt;T, U&gt; specifies that an object of type T and an object of type U can be compared for equality with each other (in either order) using both == and !=, and the results of the comparisons are consistent. 
 More formally, __WeaklyEqualityComparableWith&lt;T, U&gt; is satisfied only if given 

@@ -11,7 +11,6 @@ std::mask_array - std::mask_array
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;valarray&gt;
-
 template&lt; class T &gt; class mask_array;</code></pre> 
 std::mask_array is a helper template used by the valarray_subscript_operator with std::valarray&lt;bool&gt; argument. It has reference semantics and provides access to the subset of the valarray consisting of the elements whose indices correspond to true values in the std::valarray&lt;bool&gt; mask. 
 
@@ -44,10 +43,8 @@ operator&gt;&gt;=
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; data = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::cout &lt;&lt; &quot;Initial valarray: &quot;;

@@ -93,23 +93,23 @@ url: "/docs/linux/man/3-hunspell/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 char **result, result2;
 int n1 = analyze(&amp;result, "words");
 int n2 = stem(&amp;result2, result, n1);
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  The morphological annotation of the Hunspell library has fixed (two letter and a colon) field identifiers, see the <b><a HREF="/docs/linux/man/4-hunspell/">hunspell</a></b>(4) manual page. 
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 char **result;
 char *affix = "is:plural"; // description depends from dictionaries, too
 int n = generate(&amp;result, "word", &amp;affix, 1);
 for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
 <h3>Memory deallocation</h3>
@@ -136,12 +136,12 @@ for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;?xml?&gt;
 &lt;query type=&quot;analyze&quot;&gt;
 &lt;word&gt;dogs&lt;/word&gt;
 &lt;/query&gt;
-</pre></dl>
+</pre></dd></dl>
  
 
  
@@ -150,12 +150,12 @@ for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;?xml?&gt;
 &lt;query type=&quot;stem&quot;&gt;
 &lt;word&gt;dogs&lt;/word&gt;
 &lt;/query&gt;
-</pre></dl>
+</pre></dd></dl>
  
 
  
@@ -164,13 +164,13 @@ for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;?xml?&gt;
 &lt;query type=&quot;generate&quot;&gt;
 &lt;word&gt;dog&lt;/word&gt;
 &lt;word&gt;cats&lt;/word&gt;
 &lt;/query&gt;
-</pre></dl>
+</pre></dd></dl>
  
 
  
@@ -179,13 +179,13 @@ for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 &lt;?xml?&gt;
 &lt;query type=&quot;generate&quot;&gt;
 &lt;word&gt;dog&lt;/word&gt;
 &lt;code&gt;&lt;a&gt;is:pl&lt;/a&gt;&lt;a&gt;is:poss&lt;/a&gt;&lt;/code&gt;
 &lt;/query&gt;
-</pre></dl>
+</pre></dd></dl>
  
 
  

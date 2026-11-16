@@ -19,22 +19,22 @@ description: "jbig2dec – File format converter specialized in JBIG2 decoding"
 <h2>OPTIONS</h2>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-o</code><i> file</i></p>
-<dd> Store the decoded output in <i>file</i>. Defaults to the input with a different extension. Set to <i>&#8211;</i> for standard output.</p>
-<dt><code>-t</code><i> type</i></p>
-<dd> Force a particular output file format. Supported are <i>png</i> and <i>pbm</i>.</p>
-<dt><code>-d</code> or <code>&#8211;dump</code></p>
-<dd> Print the structure of the JBIG2 file rather than explicitly decoding it.</p>
-<dt><code>&#8211;hash</code></p>
-<dd> Print a hash of the decoded document.</p>
-<dt><code>-q</code> or <code>&#8211;quiet</code></p>
-<dd> Suppress warnings and other diagnostic output.</p>
-<dt><code>-v</code> or <code>&#8211;verbose</code></p>
-<dd> Report additional information about the decoding process. Pass just <code>-v</code> for information about the file as it&#8217;s being decoded. This is the same as <code>&#8211;verbose=2</code>. Pass <code>&#8211;verbose=3</code> or higher for debugging information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show program version information.</p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd> Show usage summary. </p>
+<dt><code>-o</code><i> file</i></dt>
+<dd> Store the decoded output in <i>file</i>. Defaults to the input with a different extension. Set to <i>&#8211;</i> for standard output.</dd>
+<dt><code>-t</code><i> type</i></dt>
+<dd> Force a particular output file format. Supported are <i>png</i> and <i>pbm</i>.</dd>
+<dt><code>-d</code> or <code>&#8211;dump</code></dt>
+<dd> Print the structure of the JBIG2 file rather than explicitly decoding it.</dd>
+<dt><code>&#8211;hash</code></dt>
+<dd> Print a hash of the decoded document.</dd>
+<dt><code>-q</code> or <code>&#8211;quiet</code></dt>
+<dd> Suppress warnings and other diagnostic output.</dd>
+<dt><code>-v</code> or <code>&#8211;verbose</code></dt>
+<dd> Report additional information about the decoding process. Pass just <code>-v</code> for information about the file as it&#8217;s being decoded. This is the same as <code>&#8211;verbose=2</code>. Pass <code>&#8211;verbose=3</code> or higher for debugging information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show program version information.</dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd> Show usage summary. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> jbig2-dev &lt;jbig2-dev [at] ghostscript.com&gt; This manpage was initially written by Sebastian Rasmussen &lt;sebras [at] hotmail.com&gt; for jbig2dec and the Debian Project. </p>

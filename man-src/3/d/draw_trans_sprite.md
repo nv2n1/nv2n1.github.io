@@ -22,7 +22,6 @@ create_trans_table(&amp;global_trans_table, my_palette,
 ... if (get_color_depth() == 8)
     color_map = &amp;global_trans_table;
 else set_trans_blender(128, 128, 128, 128);
-
 draw_trans_sprite(buffer, ghost_sprite, x, y);
 </code></pre>
 <p> The bitmap and sprite must normally be in the same color depth, but as a special case you can draw 32 bit RGBA format sprites onto any hicolor or truecolor bitmap, as long as you call set_alpha_blender() first, and you can draw 8-bit alpha images onto a 32-bit RGBA destination, as long as you call set_write_alpha_blender() first. As draw_sprite() this function skips transparent pixels, except if the source sprite is an 8-bit image; if this is the case, you should pay attention to properly set up your color map table for index 0. </p>

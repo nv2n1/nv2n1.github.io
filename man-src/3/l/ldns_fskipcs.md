@@ -17,11 +17,11 @@ description: "ldns_fget_token, ldns_fskipcs"
 <p> void ldns_fskipcs(FILE *fp, const char *s); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_fget_token</i>()</p>
-<dd>returns a token/char from the stream F. This function deals with ( and ) in the stream, and ignores them when encountered .br <code>*f</code>: the file to read from .br <code>*token</code>: the read token is put here .br <code>*delim</code>: chars at which the parsing should stop .br <code>*limit</code>: how much to read. If 0 the builtin maximum is used .br Returns 0 on error of EOF of the stream F. Otherwise return the length of what is read</dl>
+<dt> <i>ldns_fget_token</i>()</dt>
+<dd>returns a token/char from the stream F. This function deals with ( and ) in the stream, and ignores them when encountered .br <code>*f</code>: the file to read from .br <code>*token</code>: the read token is put here .br <code>*delim</code>: chars at which the parsing should stop .br <code>*limit</code>: how much to read. If 0 the builtin maximum is used .br Returns 0 on error of EOF of the stream F. Otherwise return the length of what is read</dd></dl>
 <dl>
-<dt> <i>ldns_fskipcs</i>()</p>
-<dd>skips all of the characters in the given string in the fp, moving the position to the first character that is not in *s. .br <code>*fp</code>: file to use .br <code>*s</code>: characters to skip .br Returns void</dl>
+<dt> <i>ldns_fskipcs</i>()</dt>
+<dd>skips all of the characters in the given string in the fp, moving the position to the first character that is not in *s. .br <code>*fp</code>: file to use .br <code>*s</code>: characters to skip .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

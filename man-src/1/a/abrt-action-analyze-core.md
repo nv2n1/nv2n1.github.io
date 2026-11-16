@@ -30,25 +30,25 @@ url: "/docs/linux/man/1-abrt-action-analyze-core/"
  -c COREFILE
 <dl>
 <dt>
-<dd> Path to a core dump.</dl>
+</dt><dd> Path to a core dump.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -o OUTFILE
 <dl>
 <dt>
-<dd> Output file</dl>
+</dt><dd> Output file</dd></dl>
  
 
  -h, --help
 <dl>
 <dt>
-<dd> Prints help text</dl>
+</dt><dd> Prints help text</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -56,7 +56,7 @@ url: "/docs/linux/man/1-abrt-action-analyze-core/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

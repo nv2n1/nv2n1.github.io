@@ -14,32 +14,32 @@ description: "lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbareq
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
 <dl>
-<dt> <code>lwres_result_t lwres_gnbarequest_render(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbarequest_t&nbsp;<wbr>*</code><i>req</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>);</code></p>
-<dt> <code>lwres_result_t lwres_gnbaresponse_render(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>*</code><i>req</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>);</code></p>
-<dt> <code>lwres_result_t lwres_gnbarequest_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gnbarequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></p>
-<dt> <code>lwres_result_t lwres_gnbaresponse_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></p>
-<dt> <code>void lwres_gnbaresponse_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></p>
-<dt> <code>void lwres_gnbarequest_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbarequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dl>
+<dt> <code>lwres_result_t lwres_gnbarequest_render(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbarequest_t&nbsp;<wbr>*</code><i>req</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>);</code></dt>
+<dt> <code>lwres_result_t lwres_gnbaresponse_render(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>*</code><i>req</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>);</code></dt>
+<dt> <code>lwres_result_t lwres_gnbarequest_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gnbarequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
+<dt> <code>lwres_result_t lwres_gnbaresponse_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
+<dt> <code>void lwres_gnbaresponse_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
+<dt> <code>void lwres_gnbarequest_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbarequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>These are low-level routines for creating and parsing lightweight resolver address-to-name lookup request and response messages. </p>
+<dd>These are low-level routines for creating and parsing lightweight resolver address-to-name lookup request and response messages. </dd>
 <p> There are four main functions for the getnamebyaddr opcode. One render function converts a getnamebyaddr request structure &#8212; <code>lwres_gnbarequest_t</code> &#8212; to the lightweight resolver&#8217;s canonical format. It is complemented by a parse function that converts a packet in this canonical format to a getnamebyaddr request structure. Another render function converts the getnamebyaddr response structure &#8212; <code>lwres_gnbaresponse_t</code> to the canonical format. This is complemented by a parse function which converts a packet in canonical format to a getnamebyaddr response structure. </p>
 <p> These structures are defined in <i>lwres/lwres.h</i>. They are shown below. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 #define LWRES_OPCODE_GETNAMEBYADDR 0x00010002U
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 typedef struct {<br />
     lwres_uint32_t flags;<br />
     lwres_addr_t addr;<br />
 } lwres_gnbarequest_t;
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef struct {
     lwres_uint32_t flags;
@@ -52,7 +52,7 @@ typedef struct {
     size_t baselen;
 } lwres_gnbaresponse_t;
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>lwres_gnbarequest_render()</code> uses resolver context <i>ctx</i> to convert getnamebyaddr request structure <i>req</i> to canonical format. The packet header structure <i>pkt</i> is initialised and transferred to buffer <i>b</i>. The contents of <i>*req</i> are then appended to the buffer in canonical format. <code>lwres_gnbaresponse_render()</code> performs the same task, except it converts a getnamebyaddr response structure <code>lwres_gnbaresponse_t</code> to the lightweight resolver&#8217;s canonical format. </p>
 <p> <code>lwres_gnbarequest_parse()</code> uses context <i>ctx</i> to convert the contents of packet <i>pkt</i> to a <code>lwres_gnbarequest_t</code> structure. Buffer <i>b</i> provides space to be used for storing this structure. When the function succeeds, the resulting <code>lwres_gnbarequest_t</code> is made available through <i>*structp</i>. <code>lwres_gnbaresponse_parse()</code> offers the same semantics as <code>lwres_gnbarequest_parse()</code> except it yields a <code>lwres_gnbaresponse_t</code> structure. </p>
 <p> <code>lwres_gnbaresponse_free()</code> and <code>lwres_gnbarequest_free()</code> release the memory in resolver context <i>ctx</i> that was allocated to the <code>lwres_gnbaresponse_t</code> or <code>lwres_gnbarequest_t</code> structures referenced via <i>structp</i>. Any memory associated with ancillary buffers and strings for those structures is also discarded.</p>

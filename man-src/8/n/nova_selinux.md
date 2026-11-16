@@ -95,8 +95,8 @@ description: "nova_selinux – Security Enhanced Linux Policy for the nova proce
 <p> <code>nova_exec_t</code> </p>
 <p> &#8211; Set files with the nova_exec_t type, if you want to transition an executable to the nova_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nova-console.*, /usr/bin/nova-api, /usr/bin/nova-cert, /usr/bin/nova-cells, /usr/bin/nova-volume, /usr/bin/nova-network, /usr/bin/nova-vncproxy, /usr/bin/nova-conductor, /usr/bin/nova-scheduler, /usr/bin/nova-direct-api, /usr/bin/nova-novncproxy, /usr/bin/nova-objectstore, /usr/bin/nova-xvpvncproxy, /usr/bin/nova-serialproxy, /usr/bin/nova-api-metadata, /usr//bin/nova-api-metadata, /usr/bin/nova-ajax-console-proxy </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nova-console.*, /usr/bin/nova-api, /usr/bin/nova-cert, /usr/bin/nova-cells, /usr/bin/nova-volume, /usr/bin/nova-network, /usr/bin/nova-vncproxy, /usr/bin/nova-conductor, /usr/bin/nova-scheduler, /usr/bin/nova-direct-api, /usr/bin/nova-novncproxy, /usr/bin/nova-objectstore, /usr/bin/nova-xvpvncproxy, /usr/bin/nova-serialproxy, /usr/bin/nova-api-metadata, /usr//bin/nova-api-metadata, /usr/bin/nova-ajax-console-proxy </dd>
 </dl>
 <p> <code>nova_log_t</code> </p>
 <p> &#8211; Set files with the nova_log_t type, if you want to treat the data as nova log data, usually stored under the /var/log directory. </p>

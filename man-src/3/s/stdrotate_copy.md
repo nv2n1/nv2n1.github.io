@@ -10,23 +10,14 @@ description: "std::rotate_copy – std::rotate_copy"
 <p>std::rotate_copy &#8211; std::rotate_copy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt, class OutputIt &gt;
-
 OutputIt rotate_copy( ForwardIt first, ForwardIt n_first,                                       (until C++20)
-
 ForwardIt last, OutputIt d_first );
-
 template&lt; class ForwardIt, class OutputIt &gt;
-
 constexpr OutputIt rotate_copy( ForwardIt first, ForwardIt n_first,                     (1)     (since C++20)
-
 ForwardIt last, OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt2 rotate_copy( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 n_first,     (2) (since C++17)
-
 ForwardIt1 last, ForwardIt2 d_first );</code></pre>
 <p>1) Copies the elements from the range [first, last), to another range beginning at d_first in such a way, that the element n_first becomes the first element of the new range and n_first &#8211; 1 becomes the last element.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -58,12 +49,9 @@ OutputIt must meet the requirements of LegacyOutputIterator.</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; src = {1, 2, 3, 4, 5};
     auto pivot = std::find(src.begin(), src.end(), 3);

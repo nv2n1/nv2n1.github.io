@@ -42,10 +42,10 @@ description: "globus_error_generic.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>error</i> The error chain that originated from this module. The top error object in the chain will be one created by this module and have a type of &#8216;type&#8217;; The remaining objects are the same as the cause chain used at creation time. The user can use globus_error_get_type(error) to get the error code (for GLOBUS_ERROR_TYPE_GLOBUS objects)<br />
- <i>type</i> The error object type for the top object in the error chain (e.g. GLOBUS_ERROR_TYPE_GLOBUS, GLOBUS_ERROR_TYPE_ERRNO)</dl>
+ <i>type</i> The error object type for the top object in the error chain (e.g. GLOBUS_ERROR_TYPE_GLOBUS, GLOBUS_ERROR_TYPE_ERRNO)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The function should return a newly allocated string with a friendly error message explaining the error in more detail. This string should be considered the only message a user will see. If the module has nothing nice to say, it should return NULL so the next module in the error chain can be tried.</dl>
+<dd>The function should return a newly allocated string with a friendly error message explaining the error in more detail. This string should be considered the only message a user will see. If the module has nothing nice to say, it should return NULL so the next module in the error chain can be tried.</dd></dl>
 <p> If you think a friendly error from causes beneath you should be included, you may use globus_error_print_friendly(globus_error_get_cause(error)) within this handler to append to your message.</p>
 <h2>Function Documentation</h2>
 <h3>globus_object_t* globus_error_construct_multiple (<code>globus_module_descriptor_t</code> *base_source, inttype, const char *fmt, &#8230;)</h3>
@@ -55,27 +55,27 @@ description: "globus_error_generic.h –"
 <dl COMPACT>
 <dd><i>base_source</i> Pointer to the originating module.<br />
  <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module. <code>globus_error_match()</code> will match against this type, but not of the contained chains.<br />
- <i>fmt</i> a printf style format string describing the multiple errors</dl>
+ <i>fmt</i> a printf style format string describing the multiple errors</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dl>
+<dd>The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dd></dl>
 <h3>globus_object_t* globus_error_multiple_remove_chain (globus_object_t *multiple_error)</h3>
 <p>Remove an error chain from a multiple error object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>multiple_error</i> The error from which to remove a chain. Must have been created with <code>globus_error_construct_multiple()</code></dl>
+<dd><i>multiple_error</i> The error from which to remove a chain. Must have been created with <code>globus_error_construct_multiple()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The removed error chain, or NULL if none found.</dl>
+<dd>The removed error chain, or NULL if none found.</dd></dl>
 <h3>void globus_error_mutliple_add_chain (globus_object_t *multiple_error, globus_object_t *chain, const char *fmt, &#8230;)</h3>
 <p>Add an error chain to a multiple error object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>multiple_error</i> The error to add the chain to. Must have been created with <code>globus_error_construct_multiple()</code><br />
  <i>chain</i> The chain to add to this error. This error object assumes control over &#8216;chain&#8221;s memory after this call.<br />
- <i>fmt</i> a printf style format string describing this chain</dl>
+ <i>fmt</i> a printf style format string describing this chain</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>void</dl>
+<dd>void</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

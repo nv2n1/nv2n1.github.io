@@ -19,10 +19,10 @@ description: "anxinfo — Display information about annodexed media"
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-v, &#8211;verbose</p>
-<dd> Display verbose information about file</p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</dl>
+<dt>-v, &#8211;verbose</dt>
+<dd> Display verbose information about file</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker November 17, 2003;</p>
 <h2>COPYRIGHT</h2>

@@ -606,165 +606,165 @@ description: "XmScreen — The Screen widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNbitmapConversionModel</code></p>
-<dd>Provides a policy for the conversion of xbm and xpm files to the <code>Pixmap</code> type. This resource takes the following values:</p>
+<dt><code>XmNbitmapConversionModel</code></dt>
+<dd>Provides a policy for the conversion of xbm and xpm files to the <code>Pixmap</code> type. This resource takes the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmMATCH_DEPTH</code></p>
-<dd>From a supplied xbm or xpm file, generates a converted pixmap file having the same depth as the widget.</p>
-<dt><code>XmDYNAMIC_DEPTH</code></p>
-<dd>Converts an input xbm file to a <code>Pixmap</code> of depth 1, or converts an input xpm file to a <code>Pixmap</code> having the same depth as the widget.</dl>
+</dd><dl COMPACT>
+<dt><code>XmMATCH_DEPTH</code></dt>
+<dd>From a supplied xbm or xpm file, generates a converted pixmap file having the same depth as the widget.</dd>
+<dt><code>XmDYNAMIC_DEPTH</code></dt>
+<dd>Converts an input xbm file to a <code>Pixmap</code> of depth 1, or converts an input xpm file to a <code>Pixmap</code> having the same depth as the widget.</dd></dl>
 </dl>
-<dt><code>XmNcolorAllocationProc</code></p>
-<dd>Identifies the procedure to be used for color allocation. Normally, this procedure is an application-defined color allocation procedure. However, if no application-defined color allocation procedure is set, the system uses Motif&#8217;s predefined color allocation procedure.</p>
-<dt><code>XmNcolorCalculationProc</code></p>
-<dd>Identifies the procedure to be used for per-widget color calculation. Normally, this procedure is an application-defined color calculation procedure. However, if no application-defined color calculation procedure is set, the system uses Motif&#8217;s predefined color calculation procedure.</p>
-<dt><code>XmNdarkThreshold</code></p>
-<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is below this level, Motif treats the background as &quot;dark&quot; when computing default shadow and select colors. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise it applies to widgets created on all screens. The default value is implementation specific.</p>
-<dt><code>XmNdefaultCopyCursorIcon</code></p>
-<dd>Specifies the DragIcon used during a drag operation when the operation is a copy and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultInvalidCursorIcon</code></p>
-<dd>Specifies the DragIcon used to indicate that the cursor is over an invalid drop site during a drag operation when no other pixmap symbol is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultLinkCursorIcon</code></p>
-<dd>Specifies the DragIcon used during a drag operation when the operation is a link and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultMoveCursorIcon</code></p>
-<dd>Specifies the DragIcon used during a drag operation when the operation is a move and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultNoneCursorIcon</code></p>
-<dd>Specifies the DragIcon used to indicate that the cursor is not over a drop site during a drag operation when no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultSourceCursorIcon</code></p>
-<dd>Specifies the depth-1 pixmap used as a cursor when an <code>XmNsourceCursorIcon</code> is not provided by the DragContext, or it is not usable. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNdefaultValidCursorIcon</code></p>
-<dd>Specifies the DragIcon used to indicate that the cursor is over a valid drop site during a drag operation when no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</p>
-<dt><code>XmNfont</code></p>
-<dd>Specifies a font for use in computing values for <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>. When an application is initialized, this resource can be supplied in a resource file or through the standard command line options <code>-fn</code>, <code>-font</code>, and <code>-xrm</code>. Note that this resource is used only for the calculation of the font unit values. To specify a font to be used to display text, use a widget&#8217;s render table resource (<code>XmNrenderTable</code>).</p>
-<dt><code>XmNforegroundThreshold</code></p>
-<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is equal to or below this level, Motif treats the background as &quot;dark&quot; when computing the default foreground and highlight colors. If the perceived brightness of the background color is above this level, Motif treats the background as &quot;light&quot; when computing the default foreground and highlight colors. When the background is &quot;dark,&quot; the default foreground and highlight is white; when the background is &quot;light,&quot; the default foreground and highlight is black. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise, it applies to widgets created on all screens. The default value is implementation specific.</p>
-<dt><code>XmNhorizontalFontUnit</code></p>
-<dd>Specifies the horizontal component of the font units used by <code>XmConvertUnits</code>, and is used to interpret the values of geometry resources when the <code>XmNshellUnitType</code> resource of VendorShell or the <code>XmNunitType</code> resource of Gadget, Manager, or Primitive has the value <code>Xm100TH_FONT_UNITS</code>. If no initial value is supplied for this resource, the default is computed from the font specified in <code>XmNfont</code>. If no initial value is supplied for this resource or for <code>XmNfont</code>, the default is 10.</p>
-<dd>If a call to <code>XtSetValues</code> specifies a value for <code>XmNhorizontalFontUnit</code>, this resource is set to that value. If a call to <code>XtSetValues</code> specifies a value for <code>XmNfont</code> but not for <code>XmNhorizontalFontUnit</code>, this resource is set to a value computed from the new <code>XmNfont</code>.</p>
-<dd>A horizontal font unit is derived from a font as follows:</p>
+<dt><code>XmNcolorAllocationProc</code></dt>
+<dd>Identifies the procedure to be used for color allocation. Normally, this procedure is an application-defined color allocation procedure. However, if no application-defined color allocation procedure is set, the system uses Motif&#8217;s predefined color allocation procedure.</dd>
+<dt><code>XmNcolorCalculationProc</code></dt>
+<dd>Identifies the procedure to be used for per-widget color calculation. Normally, this procedure is an application-defined color calculation procedure. However, if no application-defined color calculation procedure is set, the system uses Motif&#8217;s predefined color calculation procedure.</dd>
+<dt><code>XmNdarkThreshold</code></dt>
+<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is below this level, Motif treats the background as &quot;dark&quot; when computing default shadow and select colors. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise it applies to widgets created on all screens. The default value is implementation specific.</dd>
+<dt><code>XmNdefaultCopyCursorIcon</code></dt>
+<dd>Specifies the DragIcon used during a drag operation when the operation is a copy and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultInvalidCursorIcon</code></dt>
+<dd>Specifies the DragIcon used to indicate that the cursor is over an invalid drop site during a drag operation when no other pixmap symbol is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultLinkCursorIcon</code></dt>
+<dd>Specifies the DragIcon used during a drag operation when the operation is a link and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultMoveCursorIcon</code></dt>
+<dd>Specifies the DragIcon used during a drag operation when the operation is a move and no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultNoneCursorIcon</code></dt>
+<dd>Specifies the DragIcon used to indicate that the cursor is not over a drop site during a drag operation when no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultSourceCursorIcon</code></dt>
+<dd>Specifies the depth-1 pixmap used as a cursor when an <code>XmNsourceCursorIcon</code> is not provided by the DragContext, or it is not usable. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNdefaultValidCursorIcon</code></dt>
+<dd>Specifies the DragIcon used to indicate that the cursor is over a valid drop site during a drag operation when no other pixmap is specified by the application. If this resource is NULL, a system default icon is used. The system default icon is determined by the Display resource <code>XmNenableDragIcon</code>.</dd>
+<dt><code>XmNfont</code></dt>
+<dd>Specifies a font for use in computing values for <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>. When an application is initialized, this resource can be supplied in a resource file or through the standard command line options <code>-fn</code>, <code>-font</code>, and <code>-xrm</code>. Note that this resource is used only for the calculation of the font unit values. To specify a font to be used to display text, use a widget&#8217;s render table resource (<code>XmNrenderTable</code>).</dd>
+<dt><code>XmNforegroundThreshold</code></dt>
+<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is equal to or below this level, Motif treats the background as &quot;dark&quot; when computing the default foreground and highlight colors. If the perceived brightness of the background color is above this level, Motif treats the background as &quot;light&quot; when computing the default foreground and highlight colors. When the background is &quot;dark,&quot; the default foreground and highlight is white; when the background is &quot;light,&quot; the default foreground and highlight is black. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise, it applies to widgets created on all screens. The default value is implementation specific.</dd>
+<dt><code>XmNhorizontalFontUnit</code></dt>
+<dd>Specifies the horizontal component of the font units used by <code>XmConvertUnits</code>, and is used to interpret the values of geometry resources when the <code>XmNshellUnitType</code> resource of VendorShell or the <code>XmNunitType</code> resource of Gadget, Manager, or Primitive has the value <code>Xm100TH_FONT_UNITS</code>. If no initial value is supplied for this resource, the default is computed from the font specified in <code>XmNfont</code>. If no initial value is supplied for this resource or for <code>XmNfont</code>, the default is 10.</dd>
+<dd>If a call to <code>XtSetValues</code> specifies a value for <code>XmNhorizontalFontUnit</code>, this resource is set to that value. If a call to <code>XtSetValues</code> specifies a value for <code>XmNfont</code> but not for <code>XmNhorizontalFontUnit</code>, this resource is set to a value computed from the new <code>XmNfont</code>.</dd>
+<dd>A horizontal font unit is derived from a font as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>If the font has an <code>AVERAGE_WIDTH</code> property, the horizontal font unit is the <code>AVERAGE_WIDTH</code> property divided by 10.</p>
-<dt> &bull;</p>
-<dd>If the font has no <code>AVERAGE_WIDTH</code> property but has a <code>QUAD_WIDTH</code> property, the horizontal font unit is the <code>QUAD_WIDTH</code> property.</p>
-<dt> &bull;</p>
-<dd>If the font has no <code>AVERAGE_WIDTH</code> or <code>QUAD_WIDTH</code> property, the horizontal font unit is the sum of the font structure&#8217;s <i>min_bounds.width</i> and <i>max_bounds.width</i> divided by 2.3.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>If the font has an <code>AVERAGE_WIDTH</code> property, the horizontal font unit is the <code>AVERAGE_WIDTH</code> property divided by 10.</dd>
+<dt> &bull;</dt>
+<dd>If the font has no <code>AVERAGE_WIDTH</code> property but has a <code>QUAD_WIDTH</code> property, the horizontal font unit is the <code>QUAD_WIDTH</code> property.</dd>
+<dt> &bull;</dt>
+<dd>If the font has no <code>AVERAGE_WIDTH</code> or <code>QUAD_WIDTH</code> property, the horizontal font unit is the sum of the font structure&#8217;s <i>min_bounds.width</i> and <i>max_bounds.width</i> divided by 2.3.</dd></dl>
 </dl>
-<dt><code>XmNinsensitiveStippleBitmap</code></p>
-<dd>Provides widgets with the bitmap to use when generating the insensitive visual. This bitmap is to be used as the stipple for the rendering of insensitive visuals.</p>
-<dt><code>XmNlightThreshold</code></p>
-<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is above this level, Motif treats the background as &quot;light&quot; when computing default shadow and select colors. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise, it applies to widgets created on all screens. The default value is implementation specific.</p>
-<dt><code>XmNmenuCursor</code></p>
-<dd>Sets a variable that controls the cursor used whenever this application posts a menu. This resource can be specified only once at application startup time, either by placing it within a defaults file or by using the <code>-xrm</code> command line argument. For example:</p>
-<dd><code>myProg -xrm &quot;*menuCursor: arrow&quot;</code></p>
-<dd>The menu cursor can also be selected in the program through the function <code>XmSetMenuCursor</code>. The following list shows acceptable cursor names. If the application does not specify a cursor or if an invalid name is supplied, the default cursor (an arrow pointing up and to the right) is used.</p>
+<dt><code>XmNinsensitiveStippleBitmap</code></dt>
+<dd>Provides widgets with the bitmap to use when generating the insensitive visual. This bitmap is to be used as the stipple for the rendering of insensitive visuals.</dd>
+<dt><code>XmNlightThreshold</code></dt>
+<dd>An integer between 0 (zero) and 100, inclusive, that specifies a level of perceived brightness for a color. If the perceived brightness of the background color is above this level, Motif treats the background as &quot;light&quot; when computing default shadow and select colors. If this resource is specified for a particular screen, it applies to widgets created on that screen; otherwise, it applies to widgets created on all screens. The default value is implementation specific.</dd>
+<dt><code>XmNmenuCursor</code></dt>
+<dd>Sets a variable that controls the cursor used whenever this application posts a menu. This resource can be specified only once at application startup time, either by placing it within a defaults file or by using the <code>-xrm</code> command line argument. For example:</dd>
+<dd><code>myProg -xrm &quot;*menuCursor: arrow&quot;</code></dd>
+<dd>The menu cursor can also be selected in the program through the function <code>XmSetMenuCursor</code>. The following list shows acceptable cursor names. If the application does not specify a cursor or if an invalid name is supplied, the default cursor (an arrow pointing up and to the right) is used.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>X_cursor</code></p>
-<dd><i>leftbutton</i></p>
-<dt><i>arrow</i></p>
-<dd><code>ll_angle</code></p>
-<dt><code>based_arrow_down</code></p>
-<dd><code>lr_angle</code></p>
-<dt><code>based_arrow_up</code></p>
-<dd><i>man</i></p>
-<dt><i>boat</i></p>
-<dd><i>middlebutton</i></p>
-<dt><i>bogosity</i></p>
-<dd><i>mouse</i></p>
-<dt><code>bottom_left_corner</code></p>
-<dd><i>pencil</i></p>
-<dt><code>bottom_right_corner</code></p>
-<dd><i>pirate</i></p>
-<dt><code>bottom_side</code></p>
-<dd><i>plus</i></p>
-<dt><code>bottom_tee</code></p>
-<dd><code>question_arrow</code></p>
-<dt><code>box_spiral</code></p>
-<dd><code>right_ptr</code></p>
-<dt><code>center_ptr</code></p>
-<dd><code>right_side</code></p>
-<dt><i>circle</i></p>
-<dd><code>right_tee</code></p>
-<dt><i>clock</i></p>
-<dd><i>rightbutton</i></p>
-<dt><code>coffee_mug</code></p>
-<dd><code>rtl_logo</code></p>
-<dt><i>cross</i></p>
-<dd><i>sailboat</i></p>
-<dt><code>cross_reverse</code></p>
-<dd><code>sb_down_arrow</code></p>
-<dt><i>crosshair</i></p>
-<dd><code>sb_h_double_arrow</code></p>
-<dt><code>diamond_cross</code></p>
-<dd><code>sb_left_arrow</code></p>
-<dt><i>dot</i></p>
-<dd><code>sb_right_arrow</code></p>
-<dt><i>dotbox</i></p>
-<dd><code>sb_up_arrow</code></p>
-<dt><code>double_arrow</code></p>
-<dd><code>sb_v_double_arrow</code></p>
-<dt><code>draft_large</code></p>
-<dd><i>shuttle</i></p>
-<dt><code>draft_small</code></p>
-<dd><i>sizing</i></p>
-<dt><code>draped_box</code></p>
-<dd><i>spider</i></p>
-<dt><i>exchange</i></p>
-<dd><i>spraycan</i></p>
-<dt><i>fleur</i></p>
-<dd><i>star</i></p>
-<dt><i>gobbler</i></p>
-<dd><i>target</i></p>
-<dt><i>gumby</i></p>
-<dd><i>tcross</i></p>
-<dt><code>hand1</code></p>
-<dd><code>top_left_arrow</code></p>
-<dt><code>hand2</code></p>
-<dd><code>top_left_corner</code></p>
-<dt><i>heart</i></p>
-<dd><code>top_right_corner</code></p>
-<dt><i>icon</i></p>
-<dd><code>top_side</code></p>
-<dt><code>iron_cross</code></p>
-<dd><code>left_ptr</code></p>
-<dt><code>left_side</code></p>
-<dd><code>top_tee</code></p>
-<dt><code>left_tee</code></p>
-<dd><i>trek</i></p>
-<dt><code>ul_angle</code></p>
-<dd><i>umbrella</i></p>
-<dt><code>ur_angle</code></p>
-<dd><i>watch</i></p>
-<dt><code>xterm</code></p>
-<dd></dl>
+</dd><dl COMPACT>
+<dt><code>X_cursor</code></dt>
+<dd><i>leftbutton</i></dd>
+<dt><i>arrow</i></dt>
+<dd><code>ll_angle</code></dd>
+<dt><code>based_arrow_down</code></dt>
+<dd><code>lr_angle</code></dd>
+<dt><code>based_arrow_up</code></dt>
+<dd><i>man</i></dd>
+<dt><i>boat</i></dt>
+<dd><i>middlebutton</i></dd>
+<dt><i>bogosity</i></dt>
+<dd><i>mouse</i></dd>
+<dt><code>bottom_left_corner</code></dt>
+<dd><i>pencil</i></dd>
+<dt><code>bottom_right_corner</code></dt>
+<dd><i>pirate</i></dd>
+<dt><code>bottom_side</code></dt>
+<dd><i>plus</i></dd>
+<dt><code>bottom_tee</code></dt>
+<dd><code>question_arrow</code></dd>
+<dt><code>box_spiral</code></dt>
+<dd><code>right_ptr</code></dd>
+<dt><code>center_ptr</code></dt>
+<dd><code>right_side</code></dd>
+<dt><i>circle</i></dt>
+<dd><code>right_tee</code></dd>
+<dt><i>clock</i></dt>
+<dd><i>rightbutton</i></dd>
+<dt><code>coffee_mug</code></dt>
+<dd><code>rtl_logo</code></dd>
+<dt><i>cross</i></dt>
+<dd><i>sailboat</i></dd>
+<dt><code>cross_reverse</code></dt>
+<dd><code>sb_down_arrow</code></dd>
+<dt><i>crosshair</i></dt>
+<dd><code>sb_h_double_arrow</code></dd>
+<dt><code>diamond_cross</code></dt>
+<dd><code>sb_left_arrow</code></dd>
+<dt><i>dot</i></dt>
+<dd><code>sb_right_arrow</code></dd>
+<dt><i>dotbox</i></dt>
+<dd><code>sb_up_arrow</code></dd>
+<dt><code>double_arrow</code></dt>
+<dd><code>sb_v_double_arrow</code></dd>
+<dt><code>draft_large</code></dt>
+<dd><i>shuttle</i></dd>
+<dt><code>draft_small</code></dt>
+<dd><i>sizing</i></dd>
+<dt><code>draped_box</code></dt>
+<dd><i>spider</i></dd>
+<dt><i>exchange</i></dt>
+<dd><i>spraycan</i></dd>
+<dt><i>fleur</i></dt>
+<dd><i>star</i></dd>
+<dt><i>gobbler</i></dt>
+<dd><i>target</i></dd>
+<dt><i>gumby</i></dt>
+<dd><i>tcross</i></dd>
+<dt><code>hand1</code></dt>
+<dd><code>top_left_arrow</code></dd>
+<dt><code>hand2</code></dt>
+<dd><code>top_left_corner</code></dd>
+<dt><i>heart</i></dt>
+<dd><code>top_right_corner</code></dd>
+<dt><i>icon</i></dt>
+<dd><code>top_side</code></dd>
+<dt><code>iron_cross</code></dt>
+<dd><code>left_ptr</code></dd>
+<dt><code>left_side</code></dt>
+<dd><code>top_tee</code></dd>
+<dt><code>left_tee</code></dt>
+<dd><i>trek</i></dd>
+<dt><code>ul_angle</code></dt>
+<dd><i>umbrella</i></dd>
+<dt><code>ur_angle</code></dt>
+<dd><i>watch</i></dd>
+<dt><code>xterm</code></dt>
+<dd></dd></dl>
 </dl>
-<dt><code>XmNmoveOpaque</code></p>
-<dd>Specifies whether an interactive operation that moves a window, such as tearing off and dragging a tear-off menu or moving a window in MWM, displays an outline of the window or a representation of the window itself during the move. If the value is True, the operation displays a representation of the window during the move. If the value is False, the operation displays an outline of the window.</p>
-<dt><code>XmNunpostBehavior</code></p>
-<dd>Specifies the behavior of an active menu posted in traversal mode when a subsequent menu button selection is made outside the posted menu. When the value is <code>XmUNPOST_AND_REPLAY</code>, the resource unposts the menu hierarchy and causes the server to replay the event to the window in which the pointer is located. When the value is <code>XmUNPOST</code>, the resource unposts the hierarchy without replaying the event.</p>
-<dt><code>XmNuseColorObject</code></p>
-<dd>Enables and disables the sharing of colors between widgets, and the dynamic changing of colors. A value of False disables this, and a value of True enables it.</p>
-<dt><code>XmNuserData</code></p>
-<dd>Allows the application to attach any necessary specific data to the widget. This is an internally unused resource.</p>
-<dt><code>XmNverticalFontUnit</code></p>
-<dd>Specifies the vertical component of the font units used by <code>XmConvertUnits</code> and used to interpret the values of geometry resources when the <code>XmNshellUnitType</code> resource of VendorShell or the <code>XmNunitType</code> resource of Gadget, Manager, or Primitive has the value <code>Xm100TH_FONT_UNITS</code>. If no initial value is supplied for this resource, the default is computed from the font specified in <code>XmNfont</code>. If no initial value is supplied for this resource or for <code>XmNfont</code>, the default is 10.</p>
-<dd>If a call to <code>XtSetValues</code> specifies a value for <code>XmNverticalFontUnit</code>, this resource is set to that value. If a call to <code>XtSetValues</code> specifies a value for <code>XmNfont</code> but not for <code>XmNverticalFontUnit</code>, this resource is set to a value computed from the new <code>XmNfont</code>.</p>
-<dd>A vertical font unit is derived from a font as follows:</p>
+<dt><code>XmNmoveOpaque</code></dt>
+<dd>Specifies whether an interactive operation that moves a window, such as tearing off and dragging a tear-off menu or moving a window in MWM, displays an outline of the window or a representation of the window itself during the move. If the value is True, the operation displays a representation of the window during the move. If the value is False, the operation displays an outline of the window.</dd>
+<dt><code>XmNunpostBehavior</code></dt>
+<dd>Specifies the behavior of an active menu posted in traversal mode when a subsequent menu button selection is made outside the posted menu. When the value is <code>XmUNPOST_AND_REPLAY</code>, the resource unposts the menu hierarchy and causes the server to replay the event to the window in which the pointer is located. When the value is <code>XmUNPOST</code>, the resource unposts the hierarchy without replaying the event.</dd>
+<dt><code>XmNuseColorObject</code></dt>
+<dd>Enables and disables the sharing of colors between widgets, and the dynamic changing of colors. A value of False disables this, and a value of True enables it.</dd>
+<dt><code>XmNuserData</code></dt>
+<dd>Allows the application to attach any necessary specific data to the widget. This is an internally unused resource.</dd>
+<dt><code>XmNverticalFontUnit</code></dt>
+<dd>Specifies the vertical component of the font units used by <code>XmConvertUnits</code> and used to interpret the values of geometry resources when the <code>XmNshellUnitType</code> resource of VendorShell or the <code>XmNunitType</code> resource of Gadget, Manager, or Primitive has the value <code>Xm100TH_FONT_UNITS</code>. If no initial value is supplied for this resource, the default is computed from the font specified in <code>XmNfont</code>. If no initial value is supplied for this resource or for <code>XmNfont</code>, the default is 10.</dd>
+<dd>If a call to <code>XtSetValues</code> specifies a value for <code>XmNverticalFontUnit</code>, this resource is set to that value. If a call to <code>XtSetValues</code> specifies a value for <code>XmNfont</code> but not for <code>XmNverticalFontUnit</code>, this resource is set to a value computed from the new <code>XmNfont</code>.</dd>
+<dd>A vertical font unit is derived from a font as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>If the font has a <code>PIXEL_SIZE</code> property, the vertical font unit is the <code>PIXEL_SIZE</code> property divided by 1.8.</p>
-<dt> &bull;</p>
-<dd>If the font has no <code>PIXEL_SIZE</code> property but has <code>POINT_SIZE</code> and <code>RESOLUTION_Y</code> properties, the vertical font unit is the product of the <code>POINT_SIZE</code> and <code>RESOLUTION_Y</code> properties divided by 1400.</p>
-<dt> &bull;</p>
-<dd>If the font has no <code>PIXEL_SIZE</code>, <code>POINT_SIZE</code>, or <code>RESOLUTION_Y</code> properties, the vertical font unit is the sum of the font structure&#8217;s <i>max_bounds.ascent</i> and <i>max_bounds.descent</i> divided by 2.2.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>If the font has a <code>PIXEL_SIZE</code> property, the vertical font unit is the <code>PIXEL_SIZE</code> property divided by 1.8.</dd>
+<dt> &bull;</dt>
+<dd>If the font has no <code>PIXEL_SIZE</code> property but has <code>POINT_SIZE</code> and <code>RESOLUTION_Y</code> properties, the vertical font unit is the product of the <code>POINT_SIZE</code> and <code>RESOLUTION_Y</code> properties divided by 1400.</dd>
+<dt> &bull;</dt>
+<dd>If the font has no <code>PIXEL_SIZE</code>, <code>POINT_SIZE</code>, or <code>RESOLUTION_Y</code> properties, the vertical font unit is the sum of the font structure&#8217;s <i>max_bounds.ascent</i> and <i>max_bounds.descent</i> divided by 2.2.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>

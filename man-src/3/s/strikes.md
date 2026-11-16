@@ -10,21 +10,9 @@ description: "QuantLib::CapFloorTermVolSurface – Cap/floor smile volatility su
 <p>QuantLib::CapFloorTermVolSurface &#8211; Cap/floor smile volatility surface. </p>
 <h2>Synopsis</h2>
 <pre><code>const std::vector&lt; Period &gt; &amp; optionTenors () const
-
-
-
 const std::vector&lt; Date &gt; &amp; optionDates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; optionTimes () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; strikes () const
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::CapFloorTermVolatilityStructure</code>, and <code>QuantLib::LazyObject</code>.</p>
 <h3>Public Member Functions</h3>
@@ -45,21 +33,9 @@ Protected Member Functions</code></pre>
 <p>const std::vector&lt; Rate &gt; &amp; strikes () const</p>
 <p>Protected Member Functions <code>some inspectors</code> </p>
 <pre><code>const std::vector&lt; Period &gt; &amp; optionTenors () const
-
-
-
 const std::vector&lt; Date &gt; &amp; optionDates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; optionTimes () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; strikes () const
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>Volatility</code> <code>volatilityImpl</code> (Time t, Rate strike) const<br />
  <i>implements the actual volatility calculation in derived classes </i></p>

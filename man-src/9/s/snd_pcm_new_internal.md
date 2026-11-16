@@ -14,22 +14,22 @@ description: "snd_pcm_new_internal – create a new internal PCM instance"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>the id string</dl>
+<dd>the id string</dd></dl>
 <p> <i>device</i></p>
 <dl>
-<dd>the device index (zero based &#8211; shared with normal PCMs)</dl>
+<dd>the device index (zero based &#8211; shared with normal PCMs)</dd></dl>
 <p> <i>playback_count</i></p>
 <dl>
-<dd>the number of substreams for playback</dl>
+<dd>the number of substreams for playback</dd></dl>
 <p> <i>capture_count</i></p>
 <dl>
-<dd>the number of substreams for capture</dl>
+<dd>the number of substreams for capture</dd></dl>
 <p> <i>rpcm</i></p>
 <dl>
-<dd>the pointer to store the new pcm instance</dl>
+<dd>the pointer to store the new pcm instance</dd></dl>
 <h2>Description</h2>
 <p>Creates a new internal PCM instance with no userspace device or procfs entries. This is used by ASoC Back End PCMs in order to create a PCM that will only be used internally by kernel drivers. i.e. it cannot be opened by userspace. It provides existing ASoC components drivers with a substream and access to any private data. </p>
 <p> The pcm operators have to be set afterwards to the new instance via <code>snd_pcm_set_ops</code>.</p>

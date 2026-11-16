@@ -10,13 +10,13 @@ description: "remotectl – Remote Access Configuration"
 <p>remotectl &#8211; Remote Access Configuration</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>remotectl</code> {COMMAND} [OPTIONS&#8230;]</dl>
+<dt> <code>remotectl</code> {COMMAND} [OPTIONS&#8230;]</dt></dl>
 <h2>Description</h2>
-<dd>The <code>remotectl</code> program will configure remote access to the system. Currently it manages cockpit&#8217;s SSL certificate.</p>
+<dd>The <code>remotectl</code> program will configure remote access to the system. Currently it manages cockpit&#8217;s SSL certificate.</dd>
 <h2>Commands</h2>
 <p><code>certificate</code></p>
 <dl>
-<dd>Manage Cockpit&#8217;s SSL certificate. If used without options will check if cockpit has a valid certificate without making any changes. </p>
+<dd>Manage Cockpit&#8217;s SSL certificate. If used without options will check if cockpit has a valid certificate without making any changes. </dd>
 <p> <code>&#8211;ensure</code> Ensure that a certificate exists and can be loaded. Certificate will be created if it does not already exist. </p>
 <p> <code>&#8211;user username</code> The unix user that should own the certificate. Only takes effect if used with <code>&#8211;ensure</code>. </p>
 <p> <code>&#8211;group groupname</code> The unix group that should read the certificate. Only takes effect if used with <code>&#8211;ensure</code>. </p>
@@ -26,10 +26,10 @@ description: "remotectl – Remote Access Configuration"
 <h2>Options</h2>
 <p><code>&#8211;help</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <p> <code>&#8211;verbose</code></p>
 <dl>
-<dd>Print verbose messages about the task</dl>
+<dd>Print verbose messages about the task</dd></dl>
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Author</h2>
@@ -38,11 +38,12 @@ description: "remotectl – Remote Access Configuration"
 <p><code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>upstream bug tracker</p>
+<dt> 1.</dt>
+<dd>upstream bug tracker</dd>
 <dl>
-<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dl>
-<dt> 2.</p>
-<dd>contributors</p>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dd></dl>
+<dt> 2.</dt>
+<dd>contributors</dd>
 <dl>
-<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dl>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
+</dl>

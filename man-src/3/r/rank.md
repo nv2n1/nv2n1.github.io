@@ -10,76 +10,26 @@ description: "QuantLib::NthToDefault – N-th to default swap."
 <p>QuantLib::NthToDefault &#8211; N-th to default swap. </p>
 <h2>Synopsis</h2>
 <pre><code>NthToDefault (Size n, const std::vector&lt; Issuer &gt; &amp;basket, const Handle&lt; OneFactorCopula &gt; &amp;copula, Protection::Side side, Real nominal, const Schedule &amp;premiumSchedule, Rate premiumRate, const DayCounter &amp;dayCounter, bool settlePremiumAccrual, const Handle&lt; YieldTermStructure &gt; &amp;yieldTS, const Period &amp;integrationStepSize, boost::shared_ptr&lt; Claim &gt; claim=boost::shared_ptr&lt; Claim &gt;())
-
-
-
 bool isExpired () const
-
-
 returns whether the instrument is still tradable.
-
-
 Rate fairPremium () const
-
-
-
 Rate premium () const
-
-
-
 Real nominal () const
-
-
-
 DayCounter dayCounter () const
-
-
-
 Protection::Side side () const
-
-
-
 Size rank () const
-
-
-
 Size basketSize () const</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>NthToDefault (Size n, const std::vector&lt; Issuer &gt; &amp;basket, const Handle&lt; OneFactorCopula &gt; &amp;copula, Protection::Side side, Real nominal, const Schedule &amp;premiumSchedule, Rate premiumRate, const DayCounter &amp;dayCounter, bool settlePremiumAccrual, const Handle&lt; YieldTermStructure &gt; &amp;yieldTS, const Period &amp;integrationStepSize, boost::shared_ptr&lt; Claim &gt; claim=boost::shared_ptr&lt; Claim &gt;())
-
-
-
 bool isExpired () const
-
-
 returns whether the instrument is still tradable.
-
-
 Rate fairPremium () const
-
-
-
 Rate premium () const
-
-
-
 Real nominal () const
-
-
-
 DayCounter dayCounter () const
-
-
-
 Protection::Side side () const
-
-
-
 Size rank () const
-
-
-
 Size basketSize () const</code></pre>
 <h2>Detailed Description</h2>
 <p>N-th to default swap. </p>

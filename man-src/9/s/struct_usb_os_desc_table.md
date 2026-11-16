@@ -16,14 +16,14 @@ description: "struct_usb_os_desc_table – describes OS descriptors associated w
 <h2>Members</h2>
 <p>if_id</p>
 <dl>
-<dd>Interface id</dl>
+<dd>Interface id</dd></dl>
 <p> os_desc</p>
 <dl>
-<dd>&quot;Extended Compatibility ID&#8221; and &#8220;Extended Properties&quot; of the interface</dl>
+<dd>&quot;Extended Compatibility ID&#8221; and &#8220;Extended Properties&quot; of the interface</dd></dl>
 <h2>Description</h2>
 <p>Each interface can have at most one &#8220;Extended Compatibility ID&#8221; and a number of &#8220;Extended Properties&#8221;.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

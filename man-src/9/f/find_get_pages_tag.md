@@ -15,23 +15,23 @@ find_get_pages_tag - find and return pages that match <i>tag</i>
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the address_space to search</dl>
+<dl><dd></dd><dd>the address_space to search</dd></dl>
  
 
  <i>index</i>
-<dl><dd>the starting page index</dl>
+<dl><dd>the starting page index</dd></dl>
  
 
  <i>tag</i>
-<dl><dd>the tag index</dl>
+<dl><dd>the tag index</dd></dl>
  
 
  <i>nr_pages</i>
-<dl><dd>the maximum number of pages</dl>
+<dl><dd>the maximum number of pages</dd></dl>
  
 
  <i>pages</i>
-<dl><dd>where the resulting pages are placed</dl>
+<dl><dd>where the resulting pages are placed</dd></dl>
 
 <h2>Description</h2>
 

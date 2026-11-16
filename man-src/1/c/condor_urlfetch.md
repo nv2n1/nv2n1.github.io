@@ -22,11 +22,8 @@ description: "condor_urlfetch fetch configuration given a URL"
 <p> <code>-&lt;daemon&gt;</code></p>
 <dl>
 <dt>
-<dd> The upper case name of the daemon issuing the request for the configuration output. If -MASTER , then the URL query always occurs. If a daemon other than -MASTER , for example STARTD or SCHEDD , then the URL query only occurs if the file defined by <i>local-url-cache-file</i> does not exist.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> The upper case name of the daemon issuing the request for the configuration output. If -MASTER , then the URL query always occurs. If a daemon other than -MASTER , for example STARTD or SCHEDD , then the URL query only occurs if the file defined by <i>local-url-cache-file</i> does not exist.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_urlfetch</i> will exit with a status value of 0 (zero) upon success and non zero otherwise. </p>
 <h2>Author</h2>

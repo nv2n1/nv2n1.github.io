@@ -19,7 +19,7 @@ description: "sigemptyset, sigfillset, sigaddset, sigdelset, sigismember – POS
 <p> <code>sigemptyset</code>(), <code>sigfillset</code>(), <code>sigaddset</code>(), <code>sigdelset</code>(), <code>sigismember</code>():</p>
 <dl COMPACT>
 <dt>
-<dd> _POSIX_C_SOURCE</dl>
+</dt><dd> _POSIX_C_SOURCE</dd></dl>
 <h2>Description</h2>
 <p> These functions allow the manipulation of POSIX signal sets. </p>
 <p> <code>sigemptyset</code>() initializes the signal set given by <i>set</i> to empty, with all signals excluded from the set. </p>
@@ -33,8 +33,8 @@ description: "sigemptyset, sigfillset, sigaddset, sigdelset, sigismember – POS
 <p> On error, these functions set <i>errno</i> to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EINVAL</code></p>
-<dd> <i>signum</i> is not a valid signal.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>signum</i> is not a valid signal.</dd></dl>
 <h2>Attributes</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

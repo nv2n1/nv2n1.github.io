@@ -46,23 +46,23 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
 <h2>Options</h2>
 <p>Options that make sense together can generally be combined. ettercap will warn the user about unsupported option combinations.</p>
 <dl>
-<dt><code>SNIFFING AND ATTACK OPTIONS</code></p>
-<dd></dl>
+<dt><code>SNIFFING AND ATTACK OPTIONS</code></dt>
+<dd></dd></dl>
 <p> ettercap NG has a new unified sniffing method. This implies that ip_forwarding in the kernel is always disabled and the forwarding is done by ettercap. Every packet with destination mac address equal to the host&#8217;s mac address and destination ip address different for the one bound to the iface will be forwarded by ettercap. Before forwarding them, ettercap can content filter, sniff, log or drop them. It does not matter how these packets are hijacked, ettercap will process them. You can even use external programs to hijack packet.<br />
  You have full control of what ettercap should receive. You can use the internal mitm attacks, set the interface in promisc mode, use plugins or use every method you want. </p>
 <p> IMPORTANT NOTE: if you run ettercap on a gateway, remember to re-enable the ip_forwarding after you have killed ettercap. Since ettercap drops its privileges, it cannot restore the ip_forwarding for you.</p>
 <dl>
-<dt><code>-M</code>, <code>&#8211;mitm &lt;METHOD:ARGS&gt;</code></p>
+<dt><code>-M</code>, <code>&#8211;mitm &lt;METHOD:ARGS&gt;</code></dt>
 <dd>MITM attack<br />
  This option will activate the man in the middle attack. The mimt attack is totally independent from the sniffing. The aim of the attack is to hijack packets and redirect them to ettercap. The sniffing engine will forward them if necessary.<br />
  You can choose the mitm attack that you prefer and also combine some of them to perform different attacks at the same time.<br />
- If a mitm method requires some parameters you can specify them after the colon. (e.g. -M dhcp:ip_pool,netmask,etc ) </p>
+ If a mitm method requires some parameters you can specify them after the colon. (e.g. -M dhcp:ip_pool,netmask,etc ) </dd>
 <p> The following mitm attacks are available:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>arp</code> ([remote],[oneway])</p>
-<dd>This method implements the ARP poisoning mitm attack. ARP requests/replies are sent to the victims to poison their ARP cache. Once the cache has been poisoned the victims will send all packets to the attacker which, in turn, can modify and forward them to the real destination. </p>
+</dd><dl>
+<dt><code>arp</code> ([remote],[oneway])</dt>
+<dd>This method implements the ARP poisoning mitm attack. ARP requests/replies are sent to the victims to poison their ARP cache. Once the cache has been poisoned the victims will send all packets to the attacker which, in turn, can modify and forward them to the real destination. </dd>
 <p> In silent mode (-z option) only the first target is selected, if you want to poison multiple target in silent mode use the -j option to load a list from a file. </p>
 <p> You can select empty targets and they will be expanded as &#8216;ANY&#8217; (all the hosts in the LAN). The target list is joined with the hosts list (created by the arp scan) and the result is used to determine the victims of the attack. </p>
 <p> The parameter &quot;remote&quot; is optional and you have to specify it if you want to sniff remote ip address poisoning a gateway. Indeed if you specify a victim and the gw in the TARGETS, ettercap will sniff only connection between them, but to enable ettercap to sniff connections that pass thru the gw, you have to use this parameter. </p>
@@ -74,17 +74,17 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
  1 and 16, 1 and 18, 3 and 16, 3 and 18 </p>
 <p> if the targets overlap each other, the association with identical ip address will be skipped. </p>
 <p> NOTE: if you manage to poison a client, you have to set correct routing table in the kernel specifying the GW. If your routing table is incorrect, the poisoned clients will not be able to navigate the Internet. </p>
-<dt><code>icmp</code> (MAC/IP)</p>
+<dt><code>icmp</code> (MAC/IP)</dt>
 <dd>This attack implements ICMP redirection. It sends a spoofed icmp redirect message to the hosts in the lan pretending to be a better route for internet. All connections to internet will be redirected to the attacker which, in turn, will forward them to the real gateway. The resulting attack is a HALF-DUPLEX mitm. Only the client is redirected, since the gateway will not accept redirect messages for a directly connected network. BE SURE TO NOT USE FILTERS THAT MODIFY THE PAYLOAD LENGTH. you can use a filter to modify packets, but the length must be the same since the tcp sequences cannot be updated in both ways.<br />
  You have to pass as argument the MAC and the IP address of the real gateway for the lan.<br />
- Obviously you have to be able to sniff all the traffic. If you are on a switch you have to use a different mitm attack such as arp poisoning. </p>
+ Obviously you have to be able to sniff all the traffic. If you are on a switch you have to use a different mitm attack such as arp poisoning. </dd>
 <p> NOTE: to restrict the redirection to a given target, specify it as a TARGET </p>
 <p> Example: </p>
 <p> -M icmp:00:11:22:33:44:55/10.0.0.1 </p>
 <p> will redirect all the connections that pass thru that gateway. </p>
-<dt><code>dhcp</code> (ip_pool/netmask/dns)</p>
+<dt><code>dhcp</code> (ip_pool/netmask/dns)</dt>
 <dd>This attack implements DHCP spoofing. It pretends to be a DHCP server and tries to win the race condition with the real one to force the client to accept the attacker&#8217;s reply. This way ettercap is able to manipulate the GW parameter and hijack all the outgoing traffic generated by the clients.<br />
- The resulting attack is a HALF-DUPLEX mitm. So be sure to use appropriate filters (see above in the ICMP section). </p>
+ The resulting attack is a HALF-DUPLEX mitm. So be sure to use appropriate filters (see above in the ICMP section). </dd>
 <p> You have to pass the ip pool to be used, the netmask and the ip of the dns server. Since ettercap tries to win the race with the real server, it DOES NOT CHECK if the ip is already assigned. You have to specify an ip pool of FREE addresses to be used. The ip pool has the same form of the target specification. </p>
 <p> If the client sends a dhcp request (suggesting an ip address) ettercap will ack on that ip and modify only the gw option. If the client makes a dhcp discovery, ettercap will use the first unused ip address of the list you have specified on command line. Every discovery consumes an ip address. When the list is over, ettercap stops offering new ip addresses and will reply only to dhcp requests.<br />
  If you don&#8217;t want to offer any ip address, but only change the router information of dhcp request/ack, you can specify an empty ip_pool. </p>
@@ -94,8 +94,8 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
  reply to DHCP offer and request. </p>
 <p> -M dhcp:/255.255.255.0/192.168.0.1<br />
  reply only to DHCP request. </p>
-<dt><code>port</code> ([remote],[tree])</p>
-<dd>This attack implements Port Stealing. This technique is useful to sniff in a switched environment when ARP poisoning is not effective (for example where static mapped ARPs are used). </p>
+<dt><code>port</code> ([remote],[tree])</dt>
+<dd>This attack implements Port Stealing. This technique is useful to sniff in a switched environment when ARP poisoning is not effective (for example where static mapped ARPs are used). </dd>
 <p> It floods the LAN (based on port_steal_delay option in etter.conf) with ARP packets. If you don&#8217;t specify the &quot;tree&quot; option, the destination MAC address of each &quot;stealing&quot; packet is the same as the attacker&#8217;s one (other NICs won&#8217;t see these packets), the source MAC address will be one of the MACs in the host list. This process &quot;steals&quot; the switch port of each victim host in the host list. Using low delays, packets destined to &quot;stolen&quot; MAC addresses will be received by the attacker, winning the race condition with the real port owner. When the attacker receives packets for &quot;stolen&quot; hosts, it stops the flooding process and performs an ARP request for the real destination of the packet. When it receives the ARP reply it&#8217;s sure that the victim has &quot;taken back&quot; his port, so ettercap can re-send the packet to the destination as is. Now we can re-start the flooding process waiting for new packets. </p>
 <p> If you use the &quot;tree&quot; option, the destination MAC address of each stealing packet will be a bogus one, so these packets will be propagated to other switches (not only the directly connected one). This way you will be able to steal ports on other switches in the tree (if any), but you will generate a huge amount of traffic (according to port_steal_delay). The &quot;remote&quot; option has the same meaning as in &quot;arp&quot; mitm method. </p>
 <p> When you stop the attack, ettercap will send an ARP request to each stolen host giving back their switch ports.<br />
@@ -111,188 +111,188 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
  You will intercept and visualize all the traffic for 10.0.0.1. </p>
 </dl>
 </dl>
-<dt><code>-o</code>, <code>&#8211;only-mitm</code></p>
-<dd>This options disables the sniffing thread and enables only the mitm attack. Useful if you want to use ettercap to perform mitm attacks and another sniffer (such as ethereal) to sniff the traffic. Keep in mind that the packets are not forwarded by ettercap. The kernel will be responsible for the forwarding. Remember to activate the &quot;ip forwarding&quot; feature in your kernel. </p>
-<dt><code>-f</code>, <code>&#8211;pcapfilter &lt;FILTER&gt;</code></p>
+<dt><code>-o</code>, <code>&#8211;only-mitm</code></dt>
+<dd>This options disables the sniffing thread and enables only the mitm attack. Useful if you want to use ettercap to perform mitm attacks and another sniffer (such as ethereal) to sniff the traffic. Keep in mind that the packets are not forwarded by ettercap. The kernel will be responsible for the forwarding. Remember to activate the &quot;ip forwarding&quot; feature in your kernel. </dd>
+<dt><code>-f</code>, <code>&#8211;pcapfilter &lt;FILTER&gt;</code></dt>
 <dd>Set a capturing filter in the pcap library. The format is the same as tcpdump(1). Remember that this kind of filter will not sniff packets out of the wire, so if you want to perform a mitm attack, ettercap will not be able to forward hijacked packets.<br />
- These filters are useful to decrease the network load impact into ettercap decoding module. </p>
-<dt><code>-B</code>, <code>&#8211;bridge &lt;IFACE&gt;</code></p>
+ These filters are useful to decrease the network load impact into ettercap decoding module. </dd>
+<dt><code>-B</code>, <code>&#8211;bridge &lt;IFACE&gt;</code></dt>
 <dd>BRIDGED sniffing<br />
  You need two network interfaces. ettercap will forward form one to the other all the traffic it sees. It is useful for man in the middle at the physical layer. It is totally stealthy since it is passive and there is no way for an user to see the attacker.<br />
- You can content filter all the traffic as you were a transparent proxy for the &quot;cable&quot;. </p>
-<dt><code>OFF LINE SNIFFING</code></p>
+ You can content filter all the traffic as you were a transparent proxy for the &quot;cable&quot;. </dd>
+<dt><code>OFF LINE SNIFFING</code></dt>
 <dd>
-<dt><code>-r</code>, <code>&#8211;read &lt;FILE&gt;</code></p>
+</dd><dt><code>-r</code>, <code>&#8211;read &lt;FILE&gt;</code></dt>
 <dd>OFF LINE sniffing<br />
  With this option enabled, ettercap will sniff packets from a pcap compatible file instead of capturing from the wire.<br />
  This is useful if you have a file dumped from tcpdump or ethereal and you want to make an analysis (search for passwords or passive fingerprint) on it.<br />
- Obviously you cannot use &quot;active&quot; sniffing (arp poisoning or bridging) while sniffing from a file.</p>
-<dt><code>-w</code>, <code>&#8211;write &lt;FILE&gt;</code></p>
+ Obviously you cannot use &quot;active&quot; sniffing (arp poisoning or bridging) while sniffing from a file.</dd>
+<dt><code>-w</code>, <code>&#8211;write &lt;FILE&gt;</code></dt>
 <dd>WRITE packet to a pcap file<br />
- This is useful if you have to use &quot;active&quot; sniffing (arp poison) on a switched LAN but you want to analyze the packets with tcpdump or ethereal. You can use this option to dump the packets to a file and then load it into your favourite application. </p>
+ This is useful if you have to use &quot;active&quot; sniffing (arp poison) on a switched LAN but you want to analyze the packets with tcpdump or ethereal. You can use this option to dump the packets to a file and then load it into your favourite application. </dd>
 <p> NOTE: dump file collect ALL the packets disregarding the TARGET. This is done because you may want to log even protocols not supported by ettercap, so you can analyze them with other tools. </p>
 <p> TIP: you can use the -w option in conjunction with the -r one. This way you will be able to filter the payload of the dumped packets or decrypt WEP-encrypted WiFi traffic and dump them to another file. </p>
-<dt><code>USER INTERFACES OPTIONS</code></p>
+<dt><code>USER INTERFACES OPTIONS</code></dt>
 <dd>
-<dt><code>-T</code>, <code>&#8211;text</code></p>
+</dd><dt><code>-T</code>, <code>&#8211;text</code></dt>
 <dd>The text only interface, only printf ;)<br />
- It is quite interactive, press &#8216;h&#8217; in every moment to get help on what you can do. </p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Quiet mode. It can be used only in conjunction with the console interface. It does not print packet content. It is useful if you want to convert pcap file to ettercap log files. </p>
+ It is quite interactive, press &#8216;h&#8217; in every moment to get help on what you can do. </dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Quiet mode. It can be used only in conjunction with the console interface. It does not print packet content. It is useful if you want to convert pcap file to ettercap log files. </dd>
 <p> example: </p>
 <p> ettercap -Tq -L dumpfile -r pcapfile </p>
-<dt><code>-s</code>, <code>&#8211;script &lt;COMMANDS&gt;</code></p>
-<dd>With this option you can feed ettercap with command as they were typed on the keyboard by the user. This way you can use ettercap within your favourite scripts. There is a special command you can issue thru this command: s(x). this command will sleep for x seconds. </p>
+<dt><code>-s</code>, <code>&#8211;script &lt;COMMANDS&gt;</code></dt>
+<dd>With this option you can feed ettercap with command as they were typed on the keyboard by the user. This way you can use ettercap within your favourite scripts. There is a special command you can issue thru this command: s(x). this command will sleep for x seconds. </dd>
 <p> example: </p>
 <p> ettercap -T -s &#8216;lq&#8217; will print the list of the hosts and exit<br />
  ettercap -T -s &#8216;s(300)olqq&#8217; will collect the infos for 5 minutes, print the list of the local profiles and exit </p>
-<dt><code>-C</code>, <code>&#8211;curses</code></p>
-<dd>Ncurses based GUI. See <a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8) for a full description. </p>
-<dt><code>-G</code>, <code>&#8211;gtk</code></p>
-<dd>The nice GTK2 interface (thanks Daten&#8230;). </p>
-<dt><code>-D</code>, <code>&#8211;daemonize</code></p>
-<dd>Daemonize ettercap. This option will detach ettercap from the current controlling terminal and set it as a daemon. You can combine this feature with the &quot;log&quot; option to log all the traffic in the background. If the daemon fails for any reason, it will create the file &quot;./ettercap_daemonized.log&quot; in which the error caught by ettercap will be reported. Furthermore, if you want to have a complete debug of the daemon process, you are encouraged to recompile ettercap in debug mode. </p>
-<dt><code>GENERAL OPTIONS</code></p>
+<dt><code>-C</code>, <code>&#8211;curses</code></dt>
+<dd>Ncurses based GUI. See <a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8) for a full description. </dd>
+<dt><code>-G</code>, <code>&#8211;gtk</code></dt>
+<dd>The nice GTK2 interface (thanks Daten&#8230;). </dd>
+<dt><code>-D</code>, <code>&#8211;daemonize</code></dt>
+<dd>Daemonize ettercap. This option will detach ettercap from the current controlling terminal and set it as a daemon. You can combine this feature with the &quot;log&quot; option to log all the traffic in the background. If the daemon fails for any reason, it will create the file &quot;./ettercap_daemonized.log&quot; in which the error caught by ettercap will be reported. Furthermore, if you want to have a complete debug of the daemon process, you are encouraged to recompile ettercap in debug mode. </dd>
+<dt><code>GENERAL OPTIONS</code></dt>
 <dd>
-<dt><code>-i</code>, <code>&#8211;iface &lt;IFACE&gt;</code></p>
-<dd>Use this &lt;IFACE&gt; instead of the default one. The interface can be unconfigured (requires libnet &gt;= 1.1.2), but in this case you cannot use MITM attacks and you should set the unoffensive flag. </p>
-<dt><code>-I</code>, <code>&#8211;iflist</code></p>
-<dd>This option will print the list of all available network interfaces that can be used within ettercap. The option is particulary usefull under windows where the name of the interface is not so obvious as under *nix. </p>
-<dt><code>-n</code>, <code>&#8211;netmask &lt;NETMASK&gt;</code></p>
-<dd>Use this &lt;NETMASK&gt; instead of the one associated with the current iface. This option is useful if you have the NIC with an associated netmask of class B and you want to scan (with the arp scan) only a class C. </p>
-<dt><code>-R</code>, <code>&#8211;reversed</code></p>
-<dd>Reverse the matching in the TARGET selection. It means not(TARGET). All but the selected TARGET. </p>
-<dt><code>-t</code>, <code>&#8211;proto &lt;PROTO&gt;</code></p>
+</dd><dt><code>-i</code>, <code>&#8211;iface &lt;IFACE&gt;</code></dt>
+<dd>Use this &lt;IFACE&gt; instead of the default one. The interface can be unconfigured (requires libnet &gt;= 1.1.2), but in this case you cannot use MITM attacks and you should set the unoffensive flag. </dd>
+<dt><code>-I</code>, <code>&#8211;iflist</code></dt>
+<dd>This option will print the list of all available network interfaces that can be used within ettercap. The option is particulary usefull under windows where the name of the interface is not so obvious as under *nix. </dd>
+<dt><code>-n</code>, <code>&#8211;netmask &lt;NETMASK&gt;</code></dt>
+<dd>Use this &lt;NETMASK&gt; instead of the one associated with the current iface. This option is useful if you have the NIC with an associated netmask of class B and you want to scan (with the arp scan) only a class C. </dd>
+<dt><code>-R</code>, <code>&#8211;reversed</code></dt>
+<dd>Reverse the matching in the TARGET selection. It means not(TARGET). All but the selected TARGET. </dd>
+<dt><code>-t</code>, <code>&#8211;proto &lt;PROTO&gt;</code></dt>
 <dd>Sniff only PROTO packets (default is TCP + UDP).<br />
  This is useful if you want to select a port via the TARGET specification but you want to differentiate between tcp or udp.<br />
- PROTO can be &quot;tcp&quot;, &quot;udp&quot; or &quot;all&quot; for both. </p>
-<dt><code>-z</code>, <code>&#8211;silent</code></p>
-<dd>Do not perform the initial ARP scan of the LAN. </p>
+ PROTO can be &quot;tcp&quot;, &quot;udp&quot; or &quot;all&quot; for both. </dd>
+<dt><code>-z</code>, <code>&#8211;silent</code></dt>
+<dd>Do not perform the initial ARP scan of the LAN. </dd>
 <p> NOTE: you will not have the hosts list, so you can&#8217;t use the multipoison feature. you can only select two hosts for an ARP poisoning attack, specifying them through the TARGETs </p>
-<dt><code>-p</code>, <code>&#8211;nopromisc</code></p>
-<dd>Usually, ettercap will put the interface in promisc mode to sniff all the traffic on the wire. If you want to sniff only your connections, use this flag to NOT enable the promisc mode. </p>
-<dt><code>-u</code>, <code>&#8211;unoffensive</code></p>
+<dt><code>-p</code>, <code>&#8211;nopromisc</code></dt>
+<dd>Usually, ettercap will put the interface in promisc mode to sniff all the traffic on the wire. If you want to sniff only your connections, use this flag to NOT enable the promisc mode. </dd>
+<dt><code>-u</code>, <code>&#8211;unoffensive</code></dt>
 <dd>Every time ettercap starts, it disables ip forwarding in the kernel and begins to forward packets itself. This option prevent to do that, so the responsibility of ip forwarding is left to the kernel.<br />
  This options is useful if you want to run multiple ettercap instances. You will have one instance (the one without the -u option) forwarding the packets, and all the other instances doing their work without forwarding them. Otherwise you will get packet duplicates.<br />
  It also disables the internal creation of the sessions for each connection. It increases performances, but you will not be able to modify packets on the fly.<br />
  If you want to use a mitm attack you have to use a separate instance.<br />
  You have to use this option if the interface is unconfigured (without an ip address.)<br />
- This is also useful if you want to run ettercap on the gateway. It will not disable the forwarding and the gateway will correctly route the packets. </p>
-<dt><code>-j</code>, <code>&#8211;load-hosts &lt;FILENAME&gt;</code></p>
-<dd>It can be used to load a hosts list from a file created by the -k option. (see below) </p>
-<dt><code>-k</code>, <code>&#8211;save-hosts &lt;FILENAME&gt;</code></p>
-<dd>Saves the hosts list to a file. Useful when you have many hosts and you don&#8217;t want to do an ARP storm at startup any time you use ettercap. Simply use this options and dump the list to a file, then to load the information from it use the -j &lt;filename&gt; option. </p>
-<dt><code>-P</code>, <code>&#8211;plugin &lt;PLUGIN&gt;</code></p>
+ This is also useful if you want to run ettercap on the gateway. It will not disable the forwarding and the gateway will correctly route the packets. </dd>
+<dt><code>-j</code>, <code>&#8211;load-hosts &lt;FILENAME&gt;</code></dt>
+<dd>It can be used to load a hosts list from a file created by the -k option. (see below) </dd>
+<dt><code>-k</code>, <code>&#8211;save-hosts &lt;FILENAME&gt;</code></dt>
+<dd>Saves the hosts list to a file. Useful when you have many hosts and you don&#8217;t want to do an ARP storm at startup any time you use ettercap. Simply use this options and dump the list to a file, then to load the information from it use the -j &lt;filename&gt; option. </dd>
+<dt><code>-P</code>, <code>&#8211;plugin &lt;PLUGIN&gt;</code></dt>
 <dd>Run the selected PLUGIN. Many plugins need target specification, use TARGET as always.<br />
  In console mode (-C option), standalone plugins are executed and then the application exits. Hook plugins are activated and the normal sniffing is performed.<br />
- To have a list of the available external plugins use &quot;list&quot; (without quotes) as plugin name (e.g. ./ettercap -P list). </p>
+ To have a list of the available external plugins use &quot;list&quot; (without quotes) as plugin name (e.g. ./ettercap -P list). </dd>
 <p> NOTE: you can also activate plugins directly from the interfaces (always press &quot;h&quot; to get the inline help) </p>
 <p> More detailed info about plugins and about how to write your own are found in the man page ettercap_plugin(8) </p>
-<dt><code>-F</code>, <code>&#8211;filter &lt;FILE&gt;</code></p>
+<dt><code>-F</code>, <code>&#8211;filter &lt;FILE&gt;</code></dt>
 <dd>Load the filter from the file &lt;FILE&gt;. The filter must be compiled with <a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8). The utility will compile the filter script and produce an ettercap-compliant binary filter file. Read the <a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8) man page for the list of functions you can use inside a filter script.<br />
  NOTE: these filters are different from those set with &#8211;pcapfilter. An ettercap filter is a content filter and can modify the payload of a packet before forwarding it. Pcap filter are used to capture only certain packets.<br />
- NOTE: you can use filters on pcapfile to modify them and save to another file, but in this case you have to pay attention on what you are doing, since ettercap will not recalculate checksums, nor split packets exceeding the mtu (snaplen) nor anything like that. </p>
-<dt><code>-W</code>, <code>&#8211;wep-key &lt;KEY&gt;</code></p>
+ NOTE: you can use filters on pcapfile to modify them and save to another file, but in this case you have to pay attention on what you are doing, since ettercap will not recalculate checksums, nor split packets exceeding the mtu (snaplen) nor anything like that. </dd>
+<dt><code>-W</code>, <code>&#8211;wep-key &lt;KEY&gt;</code></dt>
 <dd>You can specify a WEP key to decrypt WiFi packets. Only the packets decrypted successfully will be passed to the decoders stack, the others will be skipped with a message.<br />
- The parameter has the following syntax: N:T:KEY. Where N is the bit length of the wep key (64, 128 or 256), T is the type of the string (&#8216;s&#8217; for string and &#8216;p&#8217; for passphrase). KEY can be a string or an escaped hex sequences. </p>
+ The parameter has the following syntax: N:T:KEY. Where N is the bit length of the wep key (64, 128 or 256), T is the type of the string (&#8216;s&#8217; for string and &#8216;p&#8217; for passphrase). KEY can be a string or an escaped hex sequences. </dd>
 <p> example:<br />
  &#8211;wep-key 128:p:secret<br />
  &#8211;wep-key 128:s:ettercapwep0<br />
  &#8211;wep-key &#8217;64:s:&#8242; </p>
-<dt><code>-a</code>, <code>&#8211;config &lt;CONFIG&gt;</code></p>
-<dd>Loads an alternative config file instead of the default in /etc/etter.conf. This is useful if you have many preconfigured files for different situations. </p>
-<dt><code>VISUALIZATION OPTIONS</code></p>
+<dt><code>-a</code>, <code>&#8211;config &lt;CONFIG&gt;</code></dt>
+<dd>Loads an alternative config file instead of the default in /etc/etter.conf. This is useful if you have many preconfigured files for different situations. </dd>
+<dt><code>VISUALIZATION OPTIONS</code></dt>
 <dd>
-<dt><code>-e</code>, <code>&#8211;regex &lt;REGEX&gt;</code></p>
+</dd><dt><code>-e</code>, <code>&#8211;regex &lt;REGEX&gt;</code></dt>
 <dd>Handle only packets that match the regex.<br />
  This option is useful in conjunction with -L. It logs only packets that match the posix regex REGEX.<br />
- It impacts even the visualization of the sniffed packets. If it is set only packets matching the regex will be displayed. </p>
-<dt><code>-V</code>, <code>&#8211;visual &lt;FORMAT&gt;</code></p>
-<dd>Use this option to set the visualization method for the packets to be displayed. </p>
+ It impacts even the visualization of the sniffed packets. If it is set only packets matching the regex will be displayed. </dd>
+<dt><code>-V</code>, <code>&#8211;visual &lt;FORMAT&gt;</code></dt>
+<dd>Use this option to set the visualization method for the packets to be displayed. </dd>
 <p> FORMAT may be one of the following: </p>
 <dl>
 <dd>
-<dl>
-<dt><code>hex</code></p>
-<dd>Print the packets in hex format. </p>
+</dd><dl>
+<dt><code>hex</code></dt>
+<dd>Print the packets in hex format. </dd>
 <p> example: </p>
 <p> the string &quot;HTTP/1.1 304 Not Modified&quot; becomes: </p>
 <p> 0000: 4854 5450 2f31 2e31 2033 3034 204e 6f74 HTTP/1.1 304 Not<br />
  0010: 204d 6f64 6966 6965 64 Modified </p>
-<dt><code>ascii</code></p>
-<dd>Print only &quot;printable&quot; characters, the others are displayed as dots &#8216;.&#8217; </p>
-<dt><code>text</code></p>
-<dd>Print only the &quot;printable&quot; characters and skip the others. </p>
-<dt><code>ebcdic</code></p>
-<dd>Convert an EBCDIC text to ASCII. </p>
-<dt><code>html</code></p>
-<dd>Strip all the html tags from the text. A tag is every string between &lt; and &gt;. </p>
+<dt><code>ascii</code></dt>
+<dd>Print only &quot;printable&quot; characters, the others are displayed as dots &#8216;.&#8217; </dd>
+<dt><code>text</code></dt>
+<dd>Print only the &quot;printable&quot; characters and skip the others. </dd>
+<dt><code>ebcdic</code></dt>
+<dd>Convert an EBCDIC text to ASCII. </dd>
+<dt><code>html</code></dt>
+<dd>Strip all the html tags from the text. A tag is every string between &lt; and &gt;. </dd>
 <p> example: </p>
 <p> &lt;title&gt;This is the title&lt;/title&gt;, but the following &lt;string&gt; will not be displayed. </p>
 <p> This is the title, but the following will not be displayed. </p>
-<dt><code>utf8</code></p>
-<dd>Print the packets in UTF-8 format. The encoding used while performing the conversion is declared in the etter.conf(5) file. </p>
+<dt><code>utf8</code></dt>
+<dd>Print the packets in UTF-8 format. The encoding used while performing the conversion is declared in the etter.conf(5) file. </dd>
 </dl>
 </dl>
-<dt><code>-d</code>, <code>&#8211;dns</code></p>
-<dd>Resolve ip addresses into hostnames. </p>
+<dt><code>-d</code>, <code>&#8211;dns</code></dt>
+<dd>Resolve ip addresses into hostnames. </dd>
 <p> NOTE: this may seriously slow down ettercap while logging passive information. Every time a new host is found, a query to the dns is performed. Ettercap keeps a cache for already resolved host to increase the speed, but new hosts need a new query and the dns may take up to 2 or 3 seconds to respond for an unknown host. </p>
 <p> HINT: ettercap collects the dns replies it sniffs in the resolution table, so even if you specify to not resolve the hostnames, some of them will be resolved because the reply was previously sniffed. think about it as a passive dns resolution for free&#8230; ;) </p>
-<dt><code>-E</code>, <code>&#8211;ext-headers</code></p>
-<dd>Print extended headers for every displayed packet. (e.g. mac addresses) </p>
-<dt><code>-Q</code>, <code>&#8211;superquiet</code></p>
+<dt><code>-E</code>, <code>&#8211;ext-headers</code></dt>
+<dd>Print extended headers for every displayed packet. (e.g. mac addresses) </dd>
+<dt><code>-Q</code>, <code>&#8211;superquiet</code></dt>
 <dd>Super quiet mode. Do not print users and passwords as they are collected. Only store them in the profiles. It can be useful to run ettercap in text only mode but you don&#8217;t want to be flooded with dissectors messages. Useful when using plugins because the sniffing process is always active, it will print all the collected infos, with this option you can suppress these messages.<br />
- NOTE: this options automatically sets the -q option. </p>
+ NOTE: this options automatically sets the -q option. </dd>
 <p> example: </p>
 <p> ettercap -TzQP finger /192.168.0.1/22 </p>
-<dt><code>LOGGING OPTIONS</code></p>
+<dt><code>LOGGING OPTIONS</code></dt>
 <dd>
-<dt><code>-L</code>, <code>&#8211;log &lt;LOGFILE&gt;</code></p>
-<dd>Log all the packets to binary files. These files can be parsed by <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8) to extract human readable data. With this option, all packets sniffed by ettercap will be logged, together with all the passive info (host info + user &amp; pass) it can collect. Given a LOGFILE, ettercap will create LOGFILE.ecp (for packets) and LOGFILE.eci (for the infos). </p>
+</dd><dt><code>-L</code>, <code>&#8211;log &lt;LOGFILE&gt;</code></dt>
+<dd>Log all the packets to binary files. These files can be parsed by <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8) to extract human readable data. With this option, all packets sniffed by ettercap will be logged, together with all the passive info (host info + user &amp; pass) it can collect. Given a LOGFILE, ettercap will create LOGFILE.ecp (for packets) and LOGFILE.eci (for the infos). </dd>
 <p> NOTE: if you specify this option on command line you don&#8217;t have to take care of privileges since the log file is opened in the startup phase (with high privs). But if you enable the log option while ettercap is already started, you have to be in a directory where uid = 65535 or uid = EC_UID can write. </p>
 <p> NOTE: the logfiles can be compressed with the deflate algorithm using the -c option. </p>
-<dt><code>-l</code>, <code>&#8211;log-info &lt;LOGFILE&gt;</code></p>
-<dd>Very similar to -L but it logs only passive information + users and passwords for each host. The file will be named LOGFILE.eci </p>
-<dt><code>-m</code>, <code>&#8211;log-msg &lt;LOGFILE&gt;</code></p>
-<dd>It stores in &lt;LOGFILE&gt; all the user messages printed by ettercap. This can be useful when you are using ettercap in daemon mode or if you want to track down all the messages. Indeed, some dissectors print messages but their information is not stored anywhere, so this is the only way to keep track of them. </p>
-<dt><code>-c</code>, <code>&#8211;compress</code></p>
-<dd>Compress the logfile with the gzip algorithm while it is dumped. <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8) is capable of handling both compressed and uncompressed log files. </p>
-<dt><code>-o</code>, <code>&#8211;only-local</code></p>
-<dd>Stores profiles information belonging only to the LAN hosts. </p>
+<dt><code>-l</code>, <code>&#8211;log-info &lt;LOGFILE&gt;</code></dt>
+<dd>Very similar to -L but it logs only passive information + users and passwords for each host. The file will be named LOGFILE.eci </dd>
+<dt><code>-m</code>, <code>&#8211;log-msg &lt;LOGFILE&gt;</code></dt>
+<dd>It stores in &lt;LOGFILE&gt; all the user messages printed by ettercap. This can be useful when you are using ettercap in daemon mode or if you want to track down all the messages. Indeed, some dissectors print messages but their information is not stored anywhere, so this is the only way to keep track of them. </dd>
+<dt><code>-c</code>, <code>&#8211;compress</code></dt>
+<dd>Compress the logfile with the gzip algorithm while it is dumped. <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8) is capable of handling both compressed and uncompressed log files. </dd>
+<dt><code>-o</code>, <code>&#8211;only-local</code></dt>
+<dd>Stores profiles information belonging only to the LAN hosts. </dd>
 <p> NOTE: this option is effective only against the profiles collected in memory. While logging to a file ALL the hosts are logged. If you want to split them, use the related <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8) option. </p>
-<dt><code>-O</code>, <code>&#8211;only-remote</code></p>
-<dd>Stores profiles information belonging only to remote hosts. </p>
-<dt><code>STANDARD OPTIONS</code></p>
+<dt><code>-O</code>, <code>&#8211;only-remote</code></dt>
+<dd>Stores profiles information belonging only to remote hosts. </dd>
+<dt><code>STANDARD OPTIONS</code></dt>
 <dd>
-<dt><code>-U</code>, <code>&#8211;update</code></p>
+</dd><dt><code>-U</code>, <code>&#8211;update</code></dt>
 <dd>Connects to the ettercap website (ettercap.sf.net) and retrieve the latest databases used by ettercap.<br />
- If you want only to check if an update is available, prepend the -z option. The order does matter: ettercap -zU </p>
+ If you want only to check if an update is available, prepend the -z option. The order does matter: ettercap -zU </dd>
 <p> <code>SECURITY NOTE: </code> The updates are not signed so an attacker may poison your DNS server and force the updateNG.php to feed ettercap with fake databases. This can harm to your system since it can overwrite any file containing the string &quot;Revision: &quot;.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> </p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print the version and exit. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>prints the help screen with a short summary of the available options. </p>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print the version and exit. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>prints the help screen with a short summary of the available options. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Here are some examples of using ettercap.</p>
 <dl>
-<dt><code>ettercap -Tp</code></p>
-<dd>Use the console interface and do not put the interface in promisc mode. You will see only your traffic.</p>
-<dt><code>ettercap -Tzq</code></p>
-<dd>Use the console interface, do not ARP scan the net and be quiet. The packet content will not be displayed, but user and passwords, as well as other messages, will be displayed.</p>
-<dt><code>ettercap -T -j /tmp/victims -M arp /10.0.0.1-7/ /10.0.0.10-20/</code></p>
-<dd>Will load the hosts list from /tmp/victims and perform an ARP poisoning attack against the two target. The list will be joined with the target and the resulting list is used for ARP poisoning.</p>
-<dt><code>ettercap -T -M arp // //</code></p>
-<dd>Perform the ARP poisoning attack against all the hosts in the LAN. BE CAREFUL !!</p>
-<dt><code>ettercap -T -M arp:remote /192.168.1.1/ /192.168.1.2-10/</code></p>
-<dd>Perform the ARP poisoning against the gateway and the host in the lan between 2 and 10. The &#8216;remote&#8217; option is needed to be able to sniff the remote traffic the hosts make through the gateway.</p>
-<dt><code>ettercap -Tzq //110</code></p>
-<dd>Sniff only the pop3 protocol from every hosts.</p>
-<dt><code>ettercap -Tzq /10.0.0.1/21,22,23 </code></p>
-<dd>Sniff telnet, ftp and ssh connections to 10.0.0.1.</p>
-<dt><code>ettercap -P list</code></p>
-<dd>Prints the list of all available plugins </p>
+<dt><code>ettercap -Tp</code></dt>
+<dd>Use the console interface and do not put the interface in promisc mode. You will see only your traffic.</dd>
+<dt><code>ettercap -Tzq</code></dt>
+<dd>Use the console interface, do not ARP scan the net and be quiet. The packet content will not be displayed, but user and passwords, as well as other messages, will be displayed.</dd>
+<dt><code>ettercap -T -j /tmp/victims -M arp /10.0.0.1-7/ /10.0.0.10-20/</code></dt>
+<dd>Will load the hosts list from /tmp/victims and perform an ARP poisoning attack against the two target. The list will be joined with the target and the resulting list is used for ARP poisoning.</dd>
+<dt><code>ettercap -T -M arp // //</code></dt>
+<dd>Perform the ARP poisoning attack against all the hosts in the LAN. BE CAREFUL !!</dd>
+<dt><code>ettercap -T -M arp:remote /192.168.1.1/ /192.168.1.2-10/</code></dt>
+<dd>Perform the ARP poisoning against the gateway and the host in the lan between 2 and 10. The &#8216;remote&#8217; option is needed to be able to sniff the remote traffic the hosts make through the gateway.</dd>
+<dt><code>ettercap -Tzq //110</code></dt>
+<dd>Sniff only the pop3 protocol from every hosts.</dd>
+<dt><code>ettercap -Tzq /10.0.0.1/21,22,23 </code></dt>
+<dd>Sniff telnet, ftp and ssh connections to 10.0.0.1.</dd>
+<dt><code>ettercap -P list</code></dt>
+<dd>Prints the list of all available plugins </dd>
 <h2>Authors</h2>
 <p>Alberto Ornaghi (ALoR) &lt;alor [at] users.sf.net&gt;<br />
  Marco Valleri (NaGA) &lt;naga [at] antifork.org&gt;</p>
@@ -315,3 +315,4 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
 <p>&nbsp;<wbr>one Ring to bring them all and in the darkness sniff them.&quot;</p>
 <h2>Last words</h2>
 <p>&quot;Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.&quot; &#8211; Rich Cook</p>
+</dl>

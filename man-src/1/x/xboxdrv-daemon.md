@@ -13,18 +13,18 @@ description: "xboxdrv-daemon – A simple daemon that automatically launches xbo
 <p> <code>xboxdrv</code> [OPTION]&#8230; [&#8211;] {XBOXDRV} [ARGS]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help text and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Be verbose with printed output.</p>
-<dt><code>-a FILENAME, &#8211;attach=FILENAME</code></p>
-<dd> Launch EXE when a new controller is connected</p>
-<dt><code>-d FILENAME, &#8211;detach=FILENAME</code></p>
-<dd> Launch EXE when a controller is detached</p>
-<dt><code>-x FILENAME, &#8211;xboxdrv=FILENAME</code></p>
-<dd> Set the location of the xboxdrv executable</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help text and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Be verbose with printed output.</dd>
+<dt><code>-a FILENAME, &#8211;attach=FILENAME</code></dt>
+<dd> Launch EXE when a new controller is connected</dd>
+<dt><code>-d FILENAME, &#8211;detach=FILENAME</code></dt>
+<dd> Launch EXE when a controller is detached</dd>
+<dt><code>-x FILENAME, &#8211;xboxdrv=FILENAME</code></dt>
+<dd> Set the location of the xboxdrv executable</dd></dl>
 <h2>RUNNING XBOXDRV VIA XBOXDRV-DAEMON</h2>
 <p> <code>xboxdrv-daemon</code> allows you to run xboxdrv automatically whenever you plug in a gamepad. Since xboxdrv-daemon.py needs to know where xboxdrv is located you need to supply the location of the xboxdrv binary manually if its not located in <code>PATH</code>: </p>
 <pre>

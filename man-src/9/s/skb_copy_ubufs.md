@@ -14,10 +14,10 @@ description: "skb_copy_ubufs – copy userspace skb frags buffers to kernel"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>the skb to modify</dl>
+</dd><dd>the skb to modify</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>allocation priority</dl>
+<dd>allocation priority</dd></dl>
 <h2>Description</h2>
 <p>This must be called on SKBTX_DEV_ZEROCOPY skb. It will copy all frags into kernel and drop the reference to userspace pages. </p>
 <p> If this function is called from an interrupt <code>gfp_mask</code> must be <code>GFP_ATOMIC</code>. </p>

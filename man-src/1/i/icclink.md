@@ -16,36 +16,36 @@ description: "icclink – little cms device link generator."
 <p> Links two or more profiles into a single devicelink profile. Colorspaces must be paired except Lab/XYZ, that can be interchanged.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-8</code></p>
-<dd> Creates 8-bit devicelink.</p>
-<dt><code>-b </code></p>
-<dd> Black point compensation.</p>
-<dt><code>-c &lt;0,1,2,3&gt;</code></p>
-<dd> Precision (0=LowRes, 1=Normal, 2=Hi-res). [defaults to 1]</p>
-<dt><code>-d&nbsp;<wbr></code><i>description</i></p>
-<dd> Description text (quotes can be used).</p>
-<dt><code>-h &lt;0,1,2,3&gt;</code></p>
-<dd> Show summary of options and examples.</p>
-<dt><code>-i&nbsp;<wbr></code><i>profile</i></p>
-<dd> Input profile (defaults to sRGB).</p>
-<dt><code>-k &lt;0..400&gt; </code></p>
-<dd> Ink-limiting in % (CMYK only)</p>
-<dt><code>-o&nbsp;<wbr></code><i>profile</i></p>
-<dd> Output devicelink profile. [defaults to &#8216;devicelink.icm&#8217;]</p>
-<dt><code>-t &lt;0,1,2,3&gt;</code></p>
-<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</p>
-<dt><code>-x </code></p>
-<dd> Creatively, guess deviceclass of resulting profile.</p>
+<dt><code>-8</code></dt>
+<dd> Creates 8-bit devicelink.</dd>
+<dt><code>-b </code></dt>
+<dd> Black point compensation.</dd>
+<dt><code>-c &lt;0,1,2,3&gt;</code></dt>
+<dd> Precision (0=LowRes, 1=Normal, 2=Hi-res). [defaults to 1]</dd>
+<dt><code>-d&nbsp;<wbr></code><i>description</i></dt>
+<dd> Description text (quotes can be used).</dd>
+<dt><code>-h &lt;0,1,2,3&gt;</code></dt>
+<dd> Show summary of options and examples.</dd>
+<dt><code>-i&nbsp;<wbr></code><i>profile</i></dt>
+<dd> Input profile (defaults to sRGB).</dd>
+<dt><code>-k &lt;0..400&gt; </code></dt>
+<dd> Ink-limiting in % (CMYK only)</dd>
+<dt><code>-o&nbsp;<wbr></code><i>profile</i></dt>
+<dd> Output devicelink profile. [defaults to &#8216;devicelink.icm&#8217;]</dd>
+<dt><code>-t &lt;0,1,2,3&gt;</code></dt>
+<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</dd>
+<dt><code>-x </code></dt>
+<dd> Creatively, guess deviceclass of resulting profile.</dd>
 <dt>
 <pre>
-<dd>Built-in profiles:
+</dt><dd>Built-in profiles:
         *Lab  -- D50-based CIEL*a*b (PCS)
         *XYZ  -- CIE XYZ (PCS)
         *sRGB -- sRGB color space
         *Gray22- Monochrome of Gamma 2.2
         *Lin2222- CMYK linearization of gamma 2.2 on each channel
 </pre>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 To create 'devicelink.icm' from a.icc to b.icc:

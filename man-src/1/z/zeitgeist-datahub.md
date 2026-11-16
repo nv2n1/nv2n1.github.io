@@ -17,9 +17,9 @@ description: "zeitgeist-datahub – passive loggers for Zeitgeist"
 <h2>OPTIONS</h2>
 <p> The program follows the usual GNU command line syntax, with options starting with two dashes (`&#8211;&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>Currently there are no options available.</code></p>
+<dt><code>Currently there are no options available.</code></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>zeitgeist-daemon</code> </p>
 <h2>BUGS</h2>

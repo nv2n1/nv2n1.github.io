@@ -24,21 +24,21 @@ description: "mscore – Full featured WYSIWYG score editor"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Show version of program.</p>
-<dt><code>-d</code></p>
-<dd> Debug mode.</p>
-<dt><code>-s</code></p>
-<dd> Disable the synthesizer.</p>
-<dt><code>-m</code></p>
-<dd> Disable MIDI I/O support.</p>
-<dt><code>-i</code></p>
-<dd> Dump MIDI input.</p>
-<dt><code>-L</code></p>
-<dd> Layout debug mode.</p>
-<dt><code>-o file</code></p>
+<dt><code>-v</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>-d</code></dt>
+<dd> Debug mode.</dd>
+<dt><code>-s</code></dt>
+<dd> Disable the synthesizer.</dd>
+<dt><code>-m</code></dt>
+<dd> Disable MIDI I/O support.</dd>
+<dt><code>-i</code></dt>
+<dd> Dump MIDI input.</dd>
+<dt><code>-L</code></dt>
+<dd> Layout debug mode.</dd>
+<dt><code>-o file</code></dt>
 <dd> Export to file, format dependent on extension.
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> mscore was written by Werner Schweer &lt;ws [at] seh.de&gt;. </p>
 <p> This manual page was written by Toby Smithe &lt;tsmithe [at] ubuntu.com&gt;, for the Ubuntu project (but may be used by others). </p>

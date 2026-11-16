@@ -20,8 +20,8 @@ description: "fgetwln – get a line of wide characters from a stream"
 <p> The text to which the returned pointer points may be modified, provided that no changes are made beyond the returned size. These changes are lost as soon as the pointer becomes invalid.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>Bq </code>Er EBADF</p>
-<dd> The argument Fa stream is not a stream open for reading.</dl>
+<dt><code>Bq </code>Er EBADF</dt>
+<dd> The argument Fa stream is not a stream open for reading.</dd></dl>
 <p> The Fn fgetwln function may also fail and set <i>errno</i> for any of the errors specified for the routines <a href="/docs/linux/man/3-mbrtowc/">mbrtowc</a>(3), <a href="/docs/linux/man/3-realloc/">realloc</a>(3), or <a href="/docs/linux/man/2-read/">read</a>(2).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-ferror/">ferror</a>(3), <a href="/docs/linux/man/3-fgetln/">fgetln</a>(3), <a href="/docs/linux/man/3-fgetws/">fgetws</a>(3), <a href="/docs/linux/man/3-fopen/">fopen</a>(3) </p>

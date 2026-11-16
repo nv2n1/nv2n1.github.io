@@ -21,9 +21,9 @@ CALL SLGETI (PNAM,IVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first three characters of the string are examined.
-<dt>IVAL
-<dd>(an output variable of type INTEGER) is the current value of the internal parameter. If the internal parameter is of type INTEGER and has the value &quot;i&quot;, IVAL = i. If the internal parameter is of type REAL and has the value &quot;r&quot;, IVAL = INT(r).</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first three characters of the string are examined.
+</dd><dt>IVAL
+</dt><dd>(an output variable of type INTEGER) is the current value of the internal parameter. If the internal parameter is of type INTEGER and has the value &quot;i&quot;, IVAL = i. If the internal parameter is of type REAL and has the value &quot;r&quot;, IVAL = INT(r).</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -14,7 +14,7 @@ description: "usb_gadget_unregister_driver – unregister a gadget driver"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>the driver being unregistered</dl>
+</dd><dd>the driver being unregistered</dd></dl>
 <h2>Context</h2>
 <p>can sleep</p>
 <h2>Description</h2>
@@ -22,5 +22,5 @@ description: "usb_gadget_unregister_driver – unregister a gadget driver"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

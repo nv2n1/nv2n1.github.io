@@ -11,9 +11,7 @@ std::experimental::propagate_const - std::experimental::propagate_const
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/propagate_const&gt;
-
 template&lt;class T&gt;                                 (library fundamentals TS v2)
-
 class propagate_const;</code></pre> 
 std::experimental::propagate_const is a const-propagating wrapper for pointers and pointer-like objects. It treats the wrapped pointer as a pointer to const when accessed through a const access path, hence the name. 
 The class satisfies the requirements of MoveConstructible and MoveAssignable if the underlying pointer-like type satisfies the corresponding requirement, but propagate_const is neither CopyConstructible nor CopyAssignable. 
@@ -116,12 +114,9 @@ std::greater_equal&lt;std::experimental::propagate_const&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;experimental/propagate_const&gt;
 struct X
-
 {
     void g() const
     {
@@ -133,7 +128,6 @@ struct X
     }
 };
 struct Y
-
 {
     Y()
         : m_ptrX(std::make_unique&lt;X&gt;())
@@ -152,7 +146,6 @@ struct Y
     std::experimental::propagate_const&lt;std::unique_ptr&lt;X&gt;&gt; m_ptrX;
 };
 int main()
-
 {
     Y y;
     y.f();

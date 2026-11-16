@@ -18,10 +18,10 @@ description: "pbmtopsg3 – convert PBM images to Postscript with G3 fax compres
 <p> <code>cat faxpage* | pbmtopsg3 &gt;fax.ps</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-title</code></p>
-<dd> The Postscript title value. Default is no title.</p>
-<dt><code>-dpi</code></p>
-<dd> The resolution of the Postscript output. Default is 72 dpi. </p>
+<dt><code>-title</code></dt>
+<dd> The Postscript title value. Default is no title.</dd>
+<dt><code>-dpi</code></dt>
+<dd> The resolution of the Postscript output. Default is 72 dpi. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1), <code><a href="/docs/linux/man/1-pbmtog3/">pbmtog3</a></code>(1), <code><a href="/docs/linux/man/1-g3topbm/">g3topbm</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>

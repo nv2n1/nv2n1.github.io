@@ -15,11 +15,11 @@ list_move_tail - delete from one list and add as another's tail
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>the entry to move</dl>
+<dl><dd></dd><dd>the entry to move</dd></dl>
  
 
  <i>head</i>
-<dl><dd>the head that will follow our entry</dl>
+<dl><dd>the head that will follow our entry</dd></dl>
 
 <h2>Copyright</h2>
 

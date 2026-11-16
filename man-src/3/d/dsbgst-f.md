@@ -25,10 +25,10 @@ description: "dsbgst.f –"
  split Cholesky factorization. A is overwritten by C = X**T*A*X, where
  X = S**(-1)*Q and Q is an orthogonal matrix chosen to preserve the
  bandwidth of A.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>VECT</i> </p>
+<dd><i>VECT</i> </dd>
 <pre> VECT is CHARACTER*1
  = 'N': do not form the transformation matrix X;
  = 'V': form X.</pre>
@@ -85,13 +85,13 @@ description: "dsbgst.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 159 of file dsbgst.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

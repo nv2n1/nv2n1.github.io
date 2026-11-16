@@ -17,164 +17,164 @@ description: "ansible-playbook – run an ansible playbook"
 <p> <code>filename.yml</code></p>
 <dl>
 <dt>
-<dd> The names of one or more YAML format files to run as ansible playbooks.</dl>
+</dt><dd> The names of one or more YAML format files to run as ansible playbooks.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-b</code>, <code>&#8211;become</code></p>
 <dl>
 <dt>
-<dd> Use privilege escalation (specific one depends on become_method), this does not imply prompting for passwords.</dl>
+</dt><dd> Use privilege escalation (specific one depends on become_method), this does not imply prompting for passwords.</dd></dl>
 <p> <code>-K</code>, <code>&#8211;ask-become-pass</code></p>
 <dl>
 <dt>
-<dd> Ask for privilege escalation password.</dl>
+</dt><dd> Ask for privilege escalation password.</dd></dl>
 <p> <code>-k</code>, <code>&#8211;ask-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for the connection password, if it is needed for the transport used. For example, using ssh and not having a key-based authentication with ssh-agent.</dl>
+</dt><dd> Prompt for the connection password, if it is needed for the transport used. For example, using ssh and not having a key-based authentication with ssh-agent.</dd></dl>
 <p> <code>&#8211;ask-su-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for su password, used with &#8211;su (deprecated, use become).</dl>
+</dt><dd> Prompt for su password, used with &#8211;su (deprecated, use become).</dd></dl>
 <p> <code>&#8211;ask-sudo-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for the password to use with &#8211;sudo, if any (deprecated, use become).</dl>
+</dt><dd> Prompt for the password to use with &#8211;sudo, if any (deprecated, use become).</dd></dl>
 <p> <code>&#8211;ask-vault-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for vault password.</dl>
+</dt><dd> Prompt for vault password.</dd></dl>
 <p> <code>-C</code>, <code>&#8211;check</code></p>
 <dl>
 <dt>
-<dd> Do not make any changes on the remote system, but test resources to see what might have changed. Note this can not scan all possible resource types and is only a simulation.</dl>
+</dt><dd> Do not make any changes on the remote system, but test resources to see what might have changed. Note this can not scan all possible resource types and is only a simulation.</dd></dl>
 <p> <code>-c</code> <i>CONNECTION</i>, <code>&#8211;connection=</code><i>CONNECTION</i></p>
 <dl>
 <dt>
-<dd> Connection type to use. Most common options are <i>paramiko</i> (SSH), <i>ssh</i>, <i>winrm</i> and <i>local</i>. <i>local</i> is mostly useful for crontab or kickstarts.</dl>
+</dt><dd> Connection type to use. Most common options are <i>paramiko</i> (SSH), <i>ssh</i>, <i>winrm</i> and <i>local</i>. <i>local</i> is mostly useful for crontab or kickstarts.</dd></dl>
 <p> <code>-D</code>, <code>&#8211;diff</code></p>
 <dl>
 <dt>
-<dd> When changing any templated files, show the unified diffs of how they changed. When used with &#8211;check, shows how the files would have changed if &#8211;check were not used.</dl>
+</dt><dd> When changing any templated files, show the unified diffs of how they changed. When used with &#8211;check, shows how the files would have changed if &#8211;check were not used.</dd></dl>
 <p> <code>-e</code> <i>EXTRA_VARS</i>, <code>&#8211;extra-vars=</code><i>EXTRA_VARS</i></p>
 <dl>
 <dt>
-<dd> Extra variables to inject into a playbook, in key=value key=value format or as quoted YAML/JSON (hashes and arrays). To load variables from a file, specify the file preceded by @ (e.g. @vars.yml).</dl>
+</dt><dd> Extra variables to inject into a playbook, in key=value key=value format or as quoted YAML/JSON (hashes and arrays). To load variables from a file, specify the file preceded by @ (e.g. @vars.yml).</dd></dl>
 <p> <code>&#8211;flush-cache</code></p>
 <dl>
 <dt>
-<dd> Clear the fact cache.</dl>
+</dt><dd> Clear the fact cache.</dd></dl>
 <p> <code>&#8211;force-handlers</code></p>
 <dl>
 <dt>
-<dd> Run handlers even if a task fails.</dl>
+</dt><dd> Run handlers even if a task fails.</dd></dl>
 <p> <code>-f</code> <i>NUM</i>, <code>&#8211;forks=</code><i>NUM</i></p>
 <dl>
 <dt>
-<dd> Level of parallelism. <i>NUM</i> is specified as an integer, the default is 5.</dl>
+</dt><dd> Level of parallelism. <i>NUM</i> is specified as an integer, the default is 5.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help page and exit.</dl>
+</dt><dd> Show help page and exit.</dd></dl>
 <p> <code>-i</code> <i>PATH</i>, <code>&#8211;inventory=</code><i>PATH</i></p>
 <dl>
 <dt>
-<dd> The <i>PATH</i> to the inventory, which defaults to <i>/etc/ansible/hosts</i>. Alternatively, you can use a comma-separated list of hosts or a single host with a trailing comma <i>host,</i>.</dl>
+</dt><dd> The <i>PATH</i> to the inventory, which defaults to <i>/etc/ansible/hosts</i>. Alternatively, you can use a comma-separated list of hosts or a single host with a trailing comma <i>host,</i>.</dd></dl>
 <p> <code>-l</code> <i>SUBSET</i>, <code>&#8211;limit=</code><i>SUBSET</i></p>
 <dl>
 <dt>
-<dd> Further limits the selected host/group patterns. You can prefix it with <i>~</i> to indicate that the pattern is a regex.</dl>
+</dt><dd> Further limits the selected host/group patterns. You can prefix it with <i>~</i> to indicate that the pattern is a regex.</dd></dl>
 <p> <code>&#8211;list-hosts</code></p>
 <dl>
 <dt>
-<dd> Outputs a list of matching hosts; does not execute anything else.</dl>
+</dt><dd> Outputs a list of matching hosts; does not execute anything else.</dd></dl>
 <p> <code>&#8211;list-tags</code></p>
 <dl>
 <dt>
-<dd> List all available tags; does not execute anything else.</dl>
+</dt><dd> List all available tags; does not execute anything else.</dd></dl>
 <p> <code>&#8211;list-tasks</code></p>
 <dl>
 <dt>
-<dd> List all tasks that would be executed; does not execute anything else.</dl>
+</dt><dd> List all tasks that would be executed; does not execute anything else.</dd></dl>
 <p> <code>-M</code> <i>DIRECTORY</i>, <code>&#8211;module-path=</code><i>DIRECTORY</i></p>
 <dl>
 <dt>
-<dd> The <i>DIRECTORY</i> search path to load modules from. The default is <i>/usr/share/ansible</i>. This can also be set with the ANSIBLE_LIBRARY environment variable.</dl>
+</dt><dd> The <i>DIRECTORY</i> search path to load modules from. The default is <i>/usr/share/ansible</i>. This can also be set with the ANSIBLE_LIBRARY environment variable.</dd></dl>
 <p> <code>&#8211;private-key=</code><i>PRIVATE_KEY_FILE</i></p>
 <dl>
 <dt>
-<dd> Use this file to authenticate the connection.</dl>
+</dt><dd> Use this file to authenticate the connection.</dd></dl>
 <p> <code>&#8211;start-at-task=</code><i>START_AT</i></p>
 <dl>
 <dt>
-<dd> Start the playbook at the task matching this name.</dl>
+</dt><dd> Start the playbook at the task matching this name.</dd></dl>
 <p> <code>&#8211;step</code></p>
 <dl>
 <dt>
-<dd> One-step-at-a-time: confirm each task before running.</dl>
+</dt><dd> One-step-at-a-time: confirm each task before running.</dd></dl>
 <p> <code>-S</code>, &#8211;su*</p>
 <dl>
 <dt>
-<dd> Run operations with su (deprecated, use become).</dl>
+</dt><dd> Run operations with su (deprecated, use become).</dd></dl>
 <p> <code>-R SU-USER</code>, <code>&#8211;su-user=</code><i>SU_USER</i></p>
 <dl>
 <dt>
-<dd> Run operations with su as this user (default=root) (deprecated, use become).</dl>
+</dt><dd> Run operations with su as this user (default=root) (deprecated, use become).</dd></dl>
 <p> <code>-s</code>, <code>&#8211;sudo</code></p>
 <dl>
 <dt>
-<dd> Run the command as the user given by -u and sudo to root (deprecated, use become).</dl>
+</dt><dd> Run the command as the user given by -u and sudo to root (deprecated, use become).</dd></dl>
 <p> <code>&#8211;ssh-common-args=</code><i>&#8216;-o ProxyCommand=&quot;ssh -W %h:%p &#8230;&quot; &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any sftp/scp/ssh command-line. Useful to set a ProxyCommand to use a jump host, but any arguments that are accepted by all three programs may be specified.</dl>
+</dt><dd> Add the specified arguments to any sftp/scp/ssh command-line. Useful to set a ProxyCommand to use a jump host, but any arguments that are accepted by all three programs may be specified.</dd></dl>
 <p> <code>&#8211;sftp-extra-args=</code><i>&#8216;-f &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any sftp command-line.</dl>
+</dt><dd> Add the specified arguments to any sftp command-line.</dd></dl>
 <p> <code>&#8211;scp-extra-args=</code><i>&#8216;-l &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any scp command-line.</dl>
+</dt><dd> Add the specified arguments to any scp command-line.</dd></dl>
 <p> <code>&#8211;ssh-extra-args=</code><i>&#8216;-R &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any ssh command-line.</dl>
+</dt><dd> Add the specified arguments to any ssh command-line.</dd></dl>
 <p> <code>-U</code> <i>SUDO_USERNAME</i>, <code>&#8211;sudo-user=</code><i>SUDO_USERNAME</i></p>
 <dl>
 <dt>
-<dd> Sudo to <i>SUDO_USERNAME</i> default is root. (deprecated, use become).</dl>
+</dt><dd> Sudo to <i>SUDO_USERNAME</i> default is root. (deprecated, use become).</dd></dl>
 <p> <code>&#8211;skip-tags=</code><i>SKIP_TAGS</i></p>
 <dl>
 <dt>
-<dd> Only run plays and tasks whose tags do not match these values.</dl>
+</dt><dd> Only run plays and tasks whose tags do not match these values.</dd></dl>
 <p> <code>&#8211;syntax-check</code></p>
 <dl>
 <dt>
-<dd> Look for syntax errors in the playbook, but don&#8217;t run anything.</dl>
+</dt><dd> Look for syntax errors in the playbook, but don&#8217;t run anything.</dd></dl>
 <p> <code>-t</code>, <i>TAGS</i>, <code>&#8211;tags=</code><i>TAGS</i></p>
 <dl>
 <dt>
-<dd> Only run plays and tasks tagged with these values.</dl>
+</dt><dd> Only run plays and tasks tagged with these values.</dd></dl>
 <p> <code>-T</code> <i>SECONDS</i>, <code>&#8211;timeout=</code><i>SECONDS</i></p>
 <dl>
 <dt>
-<dd> Connection timeout to use when trying to talk to hosts, in <i>SECONDS</i>.</dl>
+</dt><dd> Connection timeout to use when trying to talk to hosts, in <i>SECONDS</i>.</dd></dl>
 <p> <code>-u</code> <i>USERNAME</i>, <code>&#8211;user=</code><i>USERNAME</i></p>
 <dl>
 <dt>
-<dd> Use this <i>USERNAME</i> to login to the target host, instead of the current user.</dl>
+</dt><dd> Use this <i>USERNAME</i> to login to the target host, instead of the current user.</dd></dl>
 <p> <code>&#8211;vault-password-file=</code><i>VAULT_PASSWORD_FILE</i></p>
 <dl>
 <dt>
-<dd> Vault password file.</dl>
+</dt><dd> Vault password file.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Verbose mode, more output from successful actions will be shown. Give up to three times for more output.</dl>
+</dt><dd> Verbose mode, more output from successful actions will be shown. Give up to three times for more output.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Show program&#8217;s version number and exit.</dl>
+</dt><dd> Show program&#8217;s version number and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code> &#8212; OK or no hosts matched </p>
 <p> <code>1</code> &#8212; Error </p>

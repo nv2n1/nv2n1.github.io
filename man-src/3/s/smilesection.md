@@ -11,13 +11,9 @@ description: "ql/termstructures/volatility/smilesection.hpp – Smile section ba
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/patterns/observable.hpp&gt;
-
 #include &lt;ql/time/date.hpp&gt;
-
 #include &lt;ql/time/daycounters/actual365fixed.hpp&gt;
-
 #include &lt;ql/utilities/null.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>SmileSection</code><br />

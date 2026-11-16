@@ -15,18 +15,18 @@ description: "mtx-evohome – Evohome Fetcher"
 <p> <code>Evohome Fetcher</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;collect</code></p>
-<dd> collect data from device</p>
-<dt><code>&#8211;update</code></p>
-<dd> update data from device</p>
-<dt><code>&#8211;presets</code></p>
-<dd> file with authentication data</p>
-<dt><code>&#8211;auto</code></p>
-<dd> fetch temperature data every hour</p>
-<dt><code>&#8211;port</code></p>
-<dd> server port when running the service, default: 8068</p>
-<dt><code>&#8211;host</code></p>
-<dd> server host when running the service, default: localhost</dl>
+<dt><code>&#8211;collect</code></dt>
+<dd> collect data from device</dd>
+<dt><code>&#8211;update</code></dt>
+<dd> update data from device</dd>
+<dt><code>&#8211;presets</code></dt>
+<dd> file with authentication data</dd>
+<dt><code>&#8211;auto</code></dt>
+<dd> fetch temperature data every hour</dd>
+<dt><code>&#8211;port</code></dt>
+<dd> server port when running the service, default: 8068</dd>
+<dt><code>&#8211;host</code></dt>
+<dd> server host when running the service, default: localhost</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

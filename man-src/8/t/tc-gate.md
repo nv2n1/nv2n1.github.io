@@ -20,14 +20,14 @@ description: "gate – Stream Gate Action"
 <p>GATE action allows specified ingress frames can be passed at specific time slot, or be dropped at specific time slot. Tc filter filters the ingress frames, then tc gate action would specify which time slot and how many bytes these frames can be passed to device and which time slot frames would be dropped. Gate action also assign a base-time to tell when the entry list start. Then gate action would start to repeat the gate entry list cyclically at the start base-time. For the software simulation, gate action requires the user assign reference time clock type. </p>
 <h2>Parameters</h2>
 <dl>
-<dt>base-time</p>
-<dd>Specifies the instant in nanoseconds, defining the time when the schedule starts. If &#8216;base-time&#8217; is a time in the past, the schedule will start at </p>
+<dt>base-time</dt>
+<dd>Specifies the instant in nanoseconds, defining the time when the schedule starts. If &#8216;base-time&#8217; is a time in the past, the schedule will start at </dd>
 <p> base-time + (N * cycle-time) </p>
 <p> where N is the smallest integer so the resulting time is greater than &quot;now&quot;, and &quot;cycle-time&quot; is the sum of all the intervals of the entries in the schedule. Without base-time specified, will default to be 0. </p>
-<dt>clockid</p>
-<dd>Specifies the clock to be used by qdisc&#8217;s internal timer for measuring time and scheduling events. Not valid if gate action is used for offloading filter. For example, tc filter command with <code>skip_sw</code> parameter. </p>
-<dt>sched-entry</p>
-<dd>There may multiple <code>sched-entry</code> parameters in a single schedule. Each one has the format: </p>
+<dt>clockid</dt>
+<dd>Specifies the clock to be used by qdisc&#8217;s internal timer for measuring time and scheduling events. Not valid if gate action is used for offloading filter. For example, tc filter command with <code>skip_sw</code> parameter. </dd>
+<dt>sched-entry</dt>
+<dd>There may multiple <code>sched-entry</code> parameters in a single schedule. Each one has the format: </dd>
 <p> sched-entry &lt;gate state&gt; &lt;interval&gt; [ &lt;internal priority&gt; &lt;max octets&gt; ] </p>
 <p> &lt;gate state&gt; means gate states. &#8216;open&#8217; keep gate open, &#8216;close&#8217; keep gate close.<br />
  &lt;interval&gt; means how much nano seconds for this time slot.<br />

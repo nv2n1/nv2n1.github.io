@@ -52,88 +52,88 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
 <p> Do not create a new ftp client handle, use this handle instead. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ftp_handle</i> Specifies the pointer to globus ftp client handle. Note: this handle will not be destroyed.</dl>
+<dd><i>ftp_handle</i> Specifies the pointer to globus ftp client handle. Note: this handle will not be destroyed.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_HANDLE</code>, globus_ftp_client_handle_t **ftp_handle_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the ftp client handle on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ftp_handle_out</i> The ftp client handle pointer will be stored here. If none is set, NULL will be set.</dl>
+<dd><i>ftp_handle_out</i> The ftp client handle pointer will be stored here. If none is set, NULL will be set.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_APPEND</code>, globus_bool_tappend)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Enable or disable opening the file in append mode. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>append</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default).</dl>
+<dd><i>append</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default).</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_APPEND</code>, globus_bool_t *append_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the append flag on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>append_out</i> The append flag will be stored here.</dl>
+<dd><i>append_out</i> The append flag will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_ERET</code>, const char *eret_alg_str)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the ERET algorithm string. This string contains information needed to invoke a server-specific data reduction algorithm on the file being retrieved. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>eret_alg_str</i> Specifies the ERET algorithm string.</dl>
+<dd><i>eret_alg_str</i> Specifies the ERET algorithm string.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_ERET</code>, char **eret_alg_str_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the ERET algorithm string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>eret_alg_str_out</i> The ERET algorithm string will be stored here. It is the responsibility of the user to free the memory allocated for this string.</dl>
+<dd><i>eret_alg_str_out</i> The ERET algorithm string will be stored here. It is the responsibility of the user to free the memory allocated for this string.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_ESTO</code>, const char *esto_alg_str)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the ESTO algorithm string. This string contains information needed to invoke a server-specific data reduction algorithm on the file being stored. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>esto_alg_str</i> Specifies the ESTO algorithm string.</dl>
+<dd><i>esto_alg_str</i> Specifies the ESTO algorithm string.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_ESTO</code>, char **esto_alg_str_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the ESTO algorithm string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>esto_alg_str_out</i> The ESTO algorithm string will be stored here. It is the responsibility of the user to free the memory allocated for this string.</dl>
+<dd><i>esto_alg_str_out</i> The ESTO algorithm string will be stored here. It is the responsibility of the user to free the memory allocated for this string.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_PARTIAL_TRANSFER</code>, globus_bool_tpartial_xfer)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Enable or disable partial transfer (associate a transfer with each read/write) on the GridFTP handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>partial_xfer</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default).</dl>
+<dd><i>partial_xfer</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default).</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_PARTIAL_TRANSFER</code>, globus_bool_t *partial_xfer_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the partial transfer flag on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>partial_xfer_out</i> The partial xfer flag will be stored here.</dl>
+<dd><i>partial_xfer_out</i> The partial xfer flag will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_NUM_STREAMS</code>, intnum_streams)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the number of TCP streams to be used between the client and the server. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>num_streams</i> Specifies the number of streams to use.</dl>
+<dd><i>num_streams</i> Specifies the number of streams to use.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_NUM_STREAMS</code>, int *num_streams_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the number of TCP streams on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>num_streams_out</i> The stream count will be stored here.</dl>
+<dd><i>num_streams_out</i> The stream count will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_TCP_BUFFER</code>, intbuf_size)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the TCP socket send/recv buffer size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>buf_size</i> The send/recv buffer size in bytes to use. (default is system specific)</dl>
+<dd><i>buf_size</i> The send/recv buffer size in bytes to use. (default is system specific)</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_TCP_BUFFER</code>, int *buf_size_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the TCP socket send/recv buffer size on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>buf_size_out</i> The send/recv buffer size will be stored here.</dl>
+<dd><i>buf_size_out</i> The send/recv buffer size will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_MODE</code>, intmode)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the transmission mode used for data transfer </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Specifies the data transmission mode. (default is stream mode)</dl>
+<dd><i>mode</i> Specifies the data transmission mode. (default is stream mode)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_l_xio_gridftp_mode_t</code></dl>
+<dd><code>globus_l_xio_gridftp_mode_t</code></dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_MODE</code>, int *mode_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the data transmission mode on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode_out</i> The data transmission mode will be stored here.</dl>
+<dd><i>mode_out</i> The data transmission mode will be stored here.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_l_xio_gridftp_mode_t</code></dl>
+<dd><code>globus_l_xio_gridftp_mode_t</code></dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_AUTH</code>, gss_cred_id_tcredential, const char *user, const char *password, const char *account, const char *subject)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the authentication information used to authenticate with the GridFTP server </p>
 <p> <code>Parameters:</code></p>
@@ -142,7 +142,7 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
  <i>user</i> The user name to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL, and the default gridmap entry for the user&#8217;s GSI identity will be used<br />
  <i>password</i> The password to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL.<br />
  <i>account</i> The account to use for the data transfer.<br />
- <i>subject</i> The subject name of the GridFTP server. This is only used when doing a GSI transfer, and then only when the security subject name does not match the hostname of the server (ie, when the server is being run by a user).</dl>
+ <i>subject</i> The subject name of the GridFTP server. This is only used when doing a GSI transfer, and then only when the security subject name does not match the hostname of the server (ie, when the server is being run by a user).</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_AUTH</code>, gss_cred_id_t *credential_out, const char **user_out, const char **password_out, const char **account_out, const char **subject_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the authentication information on the attr. </p>
 <p> <code>Parameters:</code></p>
@@ -151,59 +151,59 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
  <i>user_out</i> The user name will be stored here.<br />
  <i>password_out</i> The password will be stored here.<br />
  <i>account_out</i> The account information will be stored here.<br />
- <i>subject_out</i> The subject name will be stored here.</dl>
+ <i>subject_out</i> The subject name will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_DCAU</code>, intdcau_mode)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the mode of authentication to be performed on GridFTP data channels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dcau_mode</i> Specifies the authentication mode.</dl>
+<dd><i>dcau_mode</i> Specifies the authentication mode.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_dcau_mode_t</dl>
+<dd>globus_l_xio_gridftp_dcau_mode_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_DCAU</code>, int *dcau_mode_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the data channel authentication mode on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dcau_mode_out</i> The data channel authentication mode will be stored here.</dl>
+<dd><i>dcau_mode_out</i> The data channel authentication mode will be stored here.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_dcau_mode_t</dl>
+<dd>globus_l_xio_gridftp_dcau_mode_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_DATA_PROTECTION</code>, intprotection)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set protection level on the data channel. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>protection</i> Specifies the protection level.</dl>
+<dd><i>protection</i> Specifies the protection level.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_protection_t</dl>
+<dd>globus_l_xio_gridftp_protection_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_DATA_PROTECTION</code>, int *protection_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the data channel protection level on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>protection_out</i> The data channel protection level will be stored here.</dl>
+<dd><i>protection_out</i> The data channel protection level will be stored here.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_dcau_mode_t</dl>
+<dd>globus_l_xio_gridftp_dcau_mode_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_CONTROL_PROTECTION</code>, intprotection)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set protection level on the control channel. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>protection</i> Specifies the protection level.</dl>
+<dd><i>protection</i> Specifies the protection level.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_protection_t</dl>
+<dd>globus_l_xio_gridftp_protection_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_CONTROL_PROTECTION</code>, int *protection_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the control channel protection level on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>protection_out</i> The control channel protection level will be stored here.</dl>
+<dd><i>protection_out</i> The control channel protection level will be stored here.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>globus_l_xio_gridftp_protection_t</dl>
+<dd>globus_l_xio_gridftp_protection_t</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_handle_cntl (handle, driver, <code>GLOBUS_XIO_GRIDFTP_SEEK</code>, globus_off_tseek_offset)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Reposition the offset of the file being read/written. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>seek_offset</i> Specifies the desired offset.</dl>
+<dd><i>seek_offset</i> Specifies the desired offset.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_xio_gridftp_driver from the source code.</p>

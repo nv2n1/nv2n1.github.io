@@ -11,7 +11,6 @@ description: "pm_system – run a Netpbm program with program input and output"
 <p> pm_system &#8211; run a Netpbm program with program input and output </p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;netpbm/pm_system.h&gt;
 pm_system(void stdinFeeder(int, void *),
           void *const feederParm,

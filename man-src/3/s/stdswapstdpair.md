@@ -11,16 +11,12 @@ std::swap(std::pair) - std::swap(std::pair)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     template &lt;class T1, class T2&gt;
     (since C++ 11)
-
         void swap(pair&lt;T1, T2&gt; &amp;x, pair&lt;T1, T2&gt; &amp;y) noexcept(/* see below */);
 (until C++ 20)
-
     template &lt;class T1, class T2&gt;
     (since C++ 20)
-
         constexpr void swap(pair&lt;T1, T2&gt; &amp;x, pair&lt;T1, T2&gt; &amp;y) noexcept(/* see below */);</code></pre> 
 Swaps the contents of x and y. Equivalent to x.swap(y). 
 This function does not participate in overload resolution unless std::is_swappable_v&lt;first_type&gt; &amp;&amp; std::is_swappable_v&lt;second_type&gt; is true. <i>(since C++17)</i> 

@@ -14,13 +14,13 @@ description: "netdev_completed_queue – report bytes and packets completed by d
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>network device</dl>
+</dd><dd>network device</dd></dl>
 <p> <i>pkts</i></p>
 <dl>
-<dd>actual number of packets sent over the medium</dl>
+<dd>actual number of packets sent over the medium</dd></dl>
 <p> <i>bytes</i></p>
 <dl>
-<dd>actual number of bytes sent over the medium</dl>
+<dd>actual number of bytes sent over the medium</dd></dl>
 <h2>Description</h2>
 <p>Report the number of bytes and packets transmitted by the network device hardware queue over the physical medium, <i>bytes</i> must exactly match the <i>bytes</i> amount passed to <code>netdev_sent_queue</code></p>
 <h2>Copyright</h2>

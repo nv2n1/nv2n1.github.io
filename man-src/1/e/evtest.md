@@ -30,11 +30,11 @@ evtest --query /dev/input/eventX &lt;type&gt; &lt;value&gt;
 <p> The following command shows the processes with an open file descriptor on the device: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fuser -v /dev/input/eventX
 </pre>
-</dl>
+</dd></dl>
 <h2>EXIT CODE</h2>
 <p> evtest returns 1 on error. </p>
 <p> When used to query state, evtest returns 0 if the state bit is unset and 10 if the state bit is set.</p>
@@ -45,15 +45,15 @@ fuser -v /dev/input/eventX
 <p> This manual page was written by Stephen Kitt &lt;m[blue]<code>steve [at] sk2.org</code>m[]<font SIZE="-2">[2]</font>&gt;, based on that present in the lineakd package, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> vojtech [at] suse.cz</p>
+<dt> 1.</dt>
+<dd> vojtech [at] suse.cz</dd>
 <dl>
 <dt>
-<dd> mailto:vojtech [at] suse.cz</dl>
-<dt> 2.</p>
-<dd> steve [at] sk2.org</p>
+</dt><dd> mailto:vojtech [at] suse.cz</dd></dl>
+<dt> 2.</dt>
+<dd> steve [at] sk2.org</dd>
 <dl>
 <dt>
-<dd> mailto:steve [at] sk2.org</dl>
+</dt><dd> mailto:steve [at] sk2.org</dd></dl>
 </dl>
 <h2>Index</h2>

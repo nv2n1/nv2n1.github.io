@@ -16,9 +16,9 @@ description: "ldns_key"
 <p>&nbsp;<wbr>ldns_key(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key</i>()</dl>
+<dt> <i>ldns_key</i>()</dt></dl>
 <h2>AUTHOR</h2>
-<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<dd>The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </dd>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
 <h2>COPYRIGHT</h2>

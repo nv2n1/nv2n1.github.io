@@ -18,25 +18,25 @@ description: "struct_regulator_linear_range – specify linear voltage ranges"
 <h2>Members</h2>
 <p>min_uV</p>
 <dl>
-<dd>Lowest voltage in range</dl>
+<dd>Lowest voltage in range</dd></dl>
 <p> min_sel</p>
 <dl>
-<dd>Lowest selector for range</dl>
+<dd>Lowest selector for range</dd></dl>
 <p> max_sel</p>
 <dl>
-<dd>Highest selector for range</dl>
+<dd>Highest selector for range</dd></dl>
 <p> uV_step</p>
 <dl>
-<dd>Step size</dl>
+<dd>Step size</dd></dl>
 <h2>Description</h2>
 <p>Specify a range of voltages for <code>regulator_map_linar_range</code> and <code>regulator_list_linear_range</code>.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

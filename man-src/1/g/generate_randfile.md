@@ -15,12 +15,12 @@ description: "generate_randfile – a program to generate a file of random data"
 <p> Produces a file comprised of random integers in network-byte-order from the <a href="/docs/linux/man/3-rand/">rand</a>(3) library call. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> the seed to use to create the random numbers.</p>
-<dt><code>-f</code></p>
-<dd> the file to create for writing the output (default is to use standard output).</p>
-<dt><code>count</code></p>
-<dd> the number of integers to write. </p>
+<dt><code>-s</code></dt>
+<dd> the seed to use to create the random numbers.</dd>
+<dt><code>-f</code></dt>
+<dd> the file to create for writing the output (default is to use standard output).</dd>
+<dt><code>count</code></dt>
+<dd> the number of integers to write. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-rand/">rand</a></code>(3) </p>

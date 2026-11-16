@@ -11,9 +11,9 @@ description: "flatpak-enter – Enter an application or runtime’s sandbox"
 <p> flatpak-enter &#8211; Enter an application or runtime&#8217;s sandbox </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>flatpak enter</code> [OPTION&#8230;] INSTANCE COMMAND [ARG&#8230;]</dl>
+<dt> <code>flatpak enter</code> [OPTION&#8230;] INSTANCE COMMAND [ARG&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Enter a running sandbox. </p>
+<dd>Enter a running sandbox. </dd>
 <p> INSTANCE must be either the pid of a process running in a flatpak sandbox, or the ID of a running application, or the instance ID of a running sandbox. You can use <code>flatpak ps</code> to find the instance IDs of running flatpaks. </p>
 <p> COMMAND is the command to run in the sandbox. Extra arguments are passed on to the command. </p>
 <p> This creates a new process within the running sandbox, with the same environment. This is useful when you want to debug a problem with a running application. </p>
@@ -23,15 +23,15 @@ description: "flatpak-enter – Enter an application or runtime’s sandbox"
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options and exit.</dl>
+</dt><dd> Show help options and exit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Print debug information during command processing.</dl>
+</dt><dd> Print debug information during command processing.</dd></dl>
 <p> <code>&#8211;ostree-verbose</code></p>
 <dl>
 <dt>
-<dd> Print OSTree debug information during command processing.</dl>
+</dt><dd> Print OSTree debug information during command processing.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>$ flatpak enter 15345 sh</code></p>
 <h2>SEE ALSO</h2>

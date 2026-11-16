@@ -11,7 +11,6 @@ description: "sc::RedundMolecularCoor –"
 <p> The <code>RedundMolecularCoor</code> class provides a redundant set of simple internal coordinates.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;coor.h&gt;</code></pre>
 <p> Inherits <code>sc::IntMolecularCoor</code>.</p>
 <h3>Public Member Functions</h3>

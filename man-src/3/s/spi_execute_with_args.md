@@ -20,26 +20,26 @@ description: "SPI_execute_with_args – execute a command with out-of-line param
 <h2>Arguments</h2>
 <p>const char * <i>command</i></p>
 <dl COMPACT>
-<dd>command string</dl>
+<dd>command string</dd></dl>
 <p> int <i>nargs</i></p>
 <dl COMPACT>
-<dd>number of input parameters ($1, $2, etc.)</dl>
+<dd>number of input parameters ($1, $2, etc.)</dd></dl>
 <p> Oid * <i>argtypes</i></p>
 <dl COMPACT>
-<dd>an array containing the OIDs of the data types of the parameters</dl>
+<dd>an array containing the OIDs of the data types of the parameters</dd></dl>
 <p> Datum * <i>values</i></p>
 <dl COMPACT>
-<dd>an array of actual parameter values</dl>
+<dd>an array of actual parameter values</dd></dl>
 <p> const char * <i>nulls</i></p>
 <dl COMPACT>
-<dd>an array describing which parameters are null </p>
+<dd>an array describing which parameters are null </dd>
 <p> If <i>nulls</i> is NULL then <code>SPI_execute_with_args</code> assumes that no parameters are null.</dl>
 <p> bool <i>read_only</i></p>
 <dl COMPACT>
-<dd>true for read-only execution</dl>
+<dd>true for read-only execution</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to return, or 0 for no limit</dl>
+<dd>maximum number of rows to return, or 0 for no limit</dd></dl>
 <h2>Return Value</h2>
 <p>The return value is the same as for <code>SPI_execute</code>. </p>
 <p> <i>SPI_processed</i> and <i>SPI_tuptable</i> are set as in <code>SPI_execute</code> if successful.</p>

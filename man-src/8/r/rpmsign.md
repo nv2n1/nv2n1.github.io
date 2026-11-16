@@ -15,8 +15,8 @@ description: "rpmsign – RPM Package Signing"
 <h3>Using Gpg To Sign Packages</h3>
 <p>In order to sign packages using GPG, <code>rpm</code> must be configured to run GPG and be able to find a key ring with the appropriate keys. By default, <code>rpm</code> uses the same conventions as GPG to find key rings, namely the <code>$GNUPGHOME</code> environment variable. If your key rings are not located where GPG expects them to be, you will need to configure the macro <code>%_gpg_path</code> to be the location of the GPG key rings to use. If you want to be able to sign packages you create yourself, you also need to create your own public and secret key pair (see the GPG manual). You will also need to configure the <code>rpm</code> macros</p>
 <dl>
-<dt><code>%_gpg_name</code></p>
-<dd>The name of the &quot;user&quot; whose key you wish to use to sign your packages.</dl>
+<dt><code>%_gpg_name</code></dt>
+<dd>The name of the &quot;user&quot; whose key you wish to use to sign your packages.</dd></dl>
 <p> For example, to be able to use GPG to sign packages as the user <i>&quot;John Doe &lt;jdoe [at] foo.com&gt;&quot;</i> from the key rings located in <i>/etc/rpm/.gpg</i> using the executable <i>/usr/bin/gpg</i> you would include </p>
 <pre>%_gpg_path /etc/rpm/.gpg
 %_gpg_name John Doe &lt;jdoe [at] foo.com&gt;

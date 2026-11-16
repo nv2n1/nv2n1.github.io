@@ -18,34 +18,34 @@ description: "upsmon – UPS monitor and shutdown controller"
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Display the help message.</dl>
+<dd>Display the help message.</dd></dl>
 <p> <code>-c</code> <i>command</i></p>
 <dl>
-<dd>Send the command <i>command</i> to the existing upsmon process. Valid commands are: </p>
+<dd>Send the command <i>command</i> to the existing upsmon process. Valid commands are: </dd>
 <p> <code>fsd</code></p>
 <dl>
-<dd>shutdown all master UPSes (use with caution)</dl>
+<dd>shutdown all master UPSes (use with caution)</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>stop monitoring and exit</dl>
+<dd>stop monitoring and exit</dd></dl>
 <p> <code>reload</code></p>
 <dl>
-<dd>reread <code><a href="/docs/linux/man/5-upsmon-conf/">upsmon.conf</a></code>(5) configuration file. See &quot;reloading nuances&quot; below if this doesn&#8217;t work.</dl>
+<dd>reread <code><a href="/docs/linux/man/5-upsmon-conf/">upsmon.conf</a></code>(5) configuration file. See &quot;reloading nuances&quot; below if this doesn&#8217;t work.</dd></dl>
 </dl>
 <p> <code>-D</code></p>
 <dl>
-<dd>Raise the debugging level. upsmon will run in the foreground and prints information on stdout about the monitoring process. Use this multiple times for more details.</dl>
+<dd>Raise the debugging level. upsmon will run in the foreground and prints information on stdout about the monitoring process. Use this multiple times for more details.</dd></dl>
 <p> <code>-K</code></p>
 <dl>
-<dd>Test for the shutdown flag. If it exists and contains the magic string from upsmon, then upsmon will exit with EXIT_SUCCESS. Any other condition will make upsmon exit with EXIT_FAILURE. </p>
+<dd>Test for the shutdown flag. If it exists and contains the magic string from upsmon, then upsmon will exit with EXIT_SUCCESS. Any other condition will make upsmon exit with EXIT_FAILURE. </dd>
 <p> You can test for a successful exit from upsmon -K in your shutdown scripts to know when to call <code><a href="/docs/linux/man/8-upsdrvctl/">upsdrvctl</a></code>(8) to shut down the UPS.</dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>Run privileged all the time. Normally upsmon will split into two processes. The majority of the code runs as an unprivileged user, and only a tiny stub runs as root. This switch will disable that mode, and run the old &quot;all root all the time&quot; system. </p>
+<dd>Run privileged all the time. Normally upsmon will split into two processes. The majority of the code runs as an unprivileged user, and only a tiny stub runs as root. This switch will disable that mode, and run the old &quot;all root all the time&quot; system. </dd>
 <p> This is not the recommended mode, and you should not use this unless you have a very good reason.</dl>
 <p> <code>-u</code> <i>user</i></p>
 <dl>
-<dd>Set the user for the unprivileged monitoring process. This has no effect when using -p. </p>
+<dd>Set the user for the unprivileged monitoring process. This has no effect when using -p. </dd>
 <p> The default user is set at configure time with <i>configure &#8211;with-user=&#8230;</i>. Typically this is <i>nobody</i>, but other distributions will probably have a specific <i>nut</i> user for this task. If your notification scripts need to run as a specific user, set it here. </p>
 <p> You can also set this in the <code><a href="/docs/linux/man/5-upsmon-conf/">upsmon.conf</a></code>(5) file with the RUN_AS_USER directive.</dl>
 <h2>Ups Definitions</h2>
@@ -53,12 +53,12 @@ description: "upsmon – UPS monitor and shutdown controller"
 <dl>
 <dd>
 <pre>MONITOR 'system' 'powervalue' 'username' 'password' 'type'</pre>
-</dl>
+</dd></dl>
 <p> The <i>system</i> refers to a <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) server, in the form upsname[@hostname[:port]]. The default hostname is &quot;localhost&quot;. Some examples follow: </p>
 <dl>
-<dd>&bull; &quot;su700 [at] mybox&quot; means a UPS called &quot;su700&quot; on a system called &quot;mybox&quot;. This is the normal form.</dl>
+<dd>&bull; &quot;su700 [at] mybox&quot; means a UPS called &quot;su700&quot; on a system called &quot;mybox&quot;. This is the normal form.</dd></dl>
 <dl>
-<dd>&bull; &quot;fenton [at] bigbox:5678&quot; is a UPS called &quot;fenton&quot; on a system called &quot;bigbox&quot; which runs <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) on port &quot;5678&quot;.</dl>
+<dd>&bull; &quot;fenton [at] bigbox:5678&quot; is a UPS called &quot;fenton&quot; on a system called &quot;bigbox&quot; which runs <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) on port &quot;5678&quot;.</dd></dl>
 <p> The <i>powervalue</i> refers to how many power supplies on this system are being driven this UPS. This is typically set to 1, but see the section on power values below. </p>
 <p> The <i>username</i> is a section in your <code><a href="/docs/linux/man/5-upsd-users/">upsd.users</a></code>(5) file. Whatever password you set in that section must match the <i>password</i> set in this file. </p>
 <p> The type set in that section must also match the <i>type</i> here&#8211; <code>master</code> or <code>slave</code>. In general, a master process is one running on the system with the UPS actually plugged into a serial port, and a slave is drawing power from the UPS but can&#8217;t talk to it directly. See the section on UPS types for more.</p>
@@ -66,31 +66,31 @@ description: "upsmon – UPS monitor and shutdown controller"
 <p><code>upsmon</code> senses several events as it monitors each UPS. They are called notify events as they can be used to tell the users and admins about the change in status. See the additional NOTIFY-related sections below for information on customizing the delivery of these messages. </p>
 <p> <code>ONLINE</code></p>
 <dl>
-<dd>The UPS is back on line.</dl>
+<dd>The UPS is back on line.</dd></dl>
 <p> <code>ONBATT</code></p>
 <dl>
-<dd>The UPS is on battery.</dl>
+<dd>The UPS is on battery.</dd></dl>
 <p> <code>LOWBATT</code></p>
 <dl>
-<dd>The UPS battery is low (as determined by the driver).</dl>
+<dd>The UPS battery is low (as determined by the driver).</dd></dl>
 <p> <code>FSD</code></p>
 <dl>
-<dd>The UPS has been commanded into the &quot;forced shutdown&quot; mode.</dl>
+<dd>The UPS has been commanded into the &quot;forced shutdown&quot; mode.</dd></dl>
 <p> <code>COMMOK</code></p>
 <dl>
-<dd>Communication with the UPS has been established.</dl>
+<dd>Communication with the UPS has been established.</dd></dl>
 <p> <code>COMMBAD</code></p>
 <dl>
-<dd>Communication with the UPS was just lost.</dl>
+<dd>Communication with the UPS was just lost.</dd></dl>
 <p> <code>SHUTDOWN</code></p>
 <dl>
-<dd>The local system is being shut down.</dl>
+<dd>The local system is being shut down.</dd></dl>
 <p> <code>REPLBATT</code></p>
 <dl>
-<dd>The UPS needs to have its battery replaced.</dl>
+<dd>The UPS needs to have its battery replaced.</dd></dl>
 <p> <code>NOCOMM</code></p>
 <dl>
-<dd>The UPS can&#8217;t be contacted for monitoring.</dl>
+<dd>The UPS can&#8217;t be contacted for monitoring.</dd></dl>
 <h2>Notify Command</h2>
 <p>In <code><a href="/docs/linux/man/5-upsmon-conf/">upsmon.conf</a></code>(5), you can configure a program called the NOTIFYCMD that will handle events that occur. </p>
 <p> NOTIFYCMD &quot;<i>path to program</i>&quot; </p>
@@ -103,37 +103,37 @@ description: "upsmon – UPS monitor and shutdown controller"
 <p> NOTIFYFLAG <i>notifytype</i> <i>flags</i> </p>
 <p> Examples: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> NOTIFYFLAG ONLINE SYSLOG</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> NOTIFYFLAG ONBATT SYSLOG+WALL</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> NOTIFYFLAG LOWBATT SYSLOG+WALL+EXEC</dl>
 <p> The flags that can be set on a given notify event are: </p>
 <p> <code>SYSLOG</code></p>
 <dl>
-<dd>Write this message to the syslog.</dl>
+<dd>Write this message to the syslog.</dd></dl>
 <p> <code>WALL</code></p>
 <dl>
-<dd>Send this message to all users on the system via <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1).</dl>
+<dd>Send this message to all users on the system via <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1).</dd></dl>
 <p> <code>EXEC</code></p>
 <dl>
-<dd>Execute the NOTIFYCMD.</dl>
+<dd>Execute the NOTIFYCMD.</dd></dl>
 <p> <code>IGNORE</code></p>
 <dl>
-<dd>Don&#8217;t do anything. If you use this, don&#8217;t use any of the other flags.</dl>
+<dd>Don&#8217;t do anything. If you use this, don&#8217;t use any of the other flags.</dd></dl>
 <p> You can mix these flags. &quot;SYSLOG+WALL+EXEC&quot; does all three for a given event.</p>
 <h2>Notify Messages</h2>
 <p>upsmon comes with default messages for each of the NOTIFY events. These can be changed with the NOTIFYMSG directive. </p>
 <p> NOTIFYMSG <i>type</i> &quot;<i>message</i>&quot; </p>
 <p> Examples: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> NOTIFYMSG ONLINE &quot;UPS %s is getting line power&quot;</dl>
 <dl>
-<dd>&bull; ` NOTIFYMSG ONBATT &quot;Someone pulled the plug on %s&quot;`</dl>
+<dd>&bull; ` NOTIFYMSG ONBATT &quot;Someone pulled the plug on %s&quot;`</dd></dl>
 <p> The first instance of %s is replaced with the identifier of the UPS that generated the event. These messages are used when sending walls to the users directly from upsmon, and are also passed to the NOTIFYCMD.</p>
 <h2>Power Values</h2>
 <p>The &quot;current overall power value&quot; is the sum of all UPSes that are currently able to supply power to the system hosting upsmon. Any UPS that is either on line or just on battery contributes to this number. If a UPS is critical (on battery and low battery) or has been put into &quot;forced shutdown&quot; mode, it no longer contributes. </p>

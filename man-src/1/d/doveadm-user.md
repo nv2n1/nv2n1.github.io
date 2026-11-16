@@ -23,42 +23,40 @@ userdb {
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-a&nbsp;<wbr></code><i>userdb_socket_path</i></p>
-<dd> This option is used to specify an absolute path to an alternative UNIX domain socket. </p>
+<dt><code>-a&nbsp;<wbr></code><i>userdb_socket_path</i></dt>
+<dd> This option is used to specify an absolute path to an alternative UNIX domain socket. </dd>
 <p> By default <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will use the socket <i>/var/run/dovecot/auth-userdb</i>. The socket may be located in another directory, when the default <i>base_dir</i> setting was overridden in <i>/etc/dovecot/dovecot.conf</i>.</p>
-<dt><code>-f&nbsp;<wbr></code><i>field</i></p>
-<dd> When this option and the name of a userdb field is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will show only the value of the specified field.</p>
-<dt><code>-u</code></p>
-<dd> When this option is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will only show values from the <i>userdb</i>. Without -u parameter if any of the <i>uid</i>, <i>gid</i>, <i>home</i> or <i>mail</i> fields are missing, their defaults are taken from configuration file.</p>
-<dt><code>-x&nbsp;<wbr></code><i>auth_info</i></p>
+<dt><code>-f&nbsp;<wbr></code><i>field</i></dt>
+<dd> When this option and the name of a userdb field is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will show only the value of the specified field.</dd>
+<dt><code>-u</code></dt>
+<dd> When this option is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will only show values from the <i>userdb</i>. Without -u parameter if any of the <i>uid</i>, <i>gid</i>, <i>home</i> or <i>mail</i> fields are missing, their defaults are taken from configuration file.</dd>
+<dt><code>-x&nbsp;<wbr></code><i>auth_info</i></dt>
 <dd> <i>auth_info</i> specifies additional conditions for the <code>user</code> command. The <i>auth_info</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple conditions the <code>-x</code> option could be supplied multiple times.<br />
- Possible names for the <i>auth_info</i> are:</p>
+ Possible names for the <i>auth_info</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>service</code></p>
-<dd> The service for which the userdb lookup should be tested. The value may be the name of a service, commonly used with Dovecot. For example: <code>imap</code>, <code>pop3&nbsp;<wbr></code>or <code>smtp</code>.</p>
-<dt><code>lip</code></p>
-<dd> The local IP address (server) for the test.</p>
-<dt><code>rip</code></p>
-<dd> The remote IP address (client) for the test.</p>
-<dt><code>lport</code></p>
-<dd> The local port, e.g. 143</p>
-<dt><code>rport</code></p>
-<dd> The remote port, e.g. 24567</dl>
+<dt><code>service</code></dt>
+<dd> The service for which the userdb lookup should be tested. The value may be the name of a service, commonly used with Dovecot. For example: <code>imap</code>, <code>pop3&nbsp;<wbr></code>or <code>smtp</code>.</dd>
+<dt><code>lip</code></dt>
+<dd> The local IP address (server) for the test.</dd>
+<dt><code>rip</code></dt>
+<dd> The remote IP address (client) for the test.</dd>
+<dt><code>lport</code></dt>
+<dd> The local port, e.g. 143</dd>
+<dt><code>rport</code></dt>
+<dd> The remote port, e.g. 24567</dd></dl>
 </dl>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>user</i></p>
-<dd> Is a <i>user</i>&#8216;s login name. Depending on the configuration, a login name may be for example <code>jane</code> or <code>john [at] example.com</code>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).</dl>
+<dt><i>user</i></dt>
+<dd> Is a <i>user</i>&#8216;s login name. Depending on the configuration, a login name may be for example <code>jane</code> or <code>john [at] example.com</code>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Perform a user lookup for the users jane and john [at] example.com. </p>
 <pre><code>

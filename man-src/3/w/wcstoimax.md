@@ -11,7 +11,6 @@ description: "wcstoimax, wcstoumax – convert wide-character string to integer"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;inttypes.h&gt;
 #include &lt;stddef.h&gt;
-
 intmax_t wcstoimax(const wchar_t *nptr, wchar_t **endptr, int base);
 uintmax_t wcstoumax(const wchar_t *nptr, wchar_t **endptr, int base);</code></pre>
 <h2>Description</h2>

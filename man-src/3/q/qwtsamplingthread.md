@@ -31,44 +31,44 @@ description: "QwtSamplingThread –"
 <p> <code>QwtSamplingThread</code> starts a thread calling periodically <code>sample()</code>, to collect and store ( or emit ) a single sample. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve</code>, <code>QwtPlotSeriesItem</code></dl>
+<dd><code>QwtPlotCurve</code>, <code>QwtPlotSeriesItem</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtSamplingThread::elapsed () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Time (in ms) since the thread was started</dl>
+<dd>Time (in ms) since the thread was started</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QThread::start(), <code>run()</code></dl>
+<dd>QThread::start(), <code>run()</code></dd></dl>
 <h3>double QwtSamplingThread::interval () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Interval (in ms), between 2 calls of <code>sample()</code></dl>
+<dd>Interval (in ms), between 2 calls of <code>sample()</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setInterval()</code></dl>
+<dd><code>setInterval()</code></dd></dl>
 <h3>void QwtSamplingThread::run () [protected], [virtual]</h3>
 <p>Loop collecting samples started from QThread::start() </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>stop()</code></dl>
+<dd><code>stop()</code></dd></dl>
 <h3>virtual void QwtSamplingThread::sample (doubleelapsed) [protected], [pure virtual]</h3>
 <p>Collect a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>elapsed</i> Time since the thread was started in milliseconds</dl>
+<dd><i>elapsed</i> Time since the thread was started in milliseconds</dd></dl>
 <h3>void QwtSamplingThread::setInterval (doubleinterval) [slot]</h3>
 <p>Change the interval (in ms), when <code>sample()</code> is called. The default interval is 1000.0 ( = 1s ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval</dl>
+<dd><i>interval</i> Interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>interval()</code></dl>
+<dd><code>interval()</code></dd></dl>
 <h3>void QwtSamplingThread::stop () [slot]</h3>
 <p>Terminate the collecting thread </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QThread::start(), <code>run()</code></dl>
+<dd>QThread::start(), <code>run()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

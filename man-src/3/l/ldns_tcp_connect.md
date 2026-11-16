@@ -18,16 +18,16 @@ description: "ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect"
 <p> int ldns_tcp_connect(const struct sockaddr_storage *to, socklen_t tolen, struct timeval timeout); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_tcp_send_query</i>()</p>
-<dd>send a query via tcp to a server. Don&#8217;t want for the answer </p>
+<dt> <i>ldns_tcp_send_query</i>()</dt>
+<dd>send a query via tcp to a server. Don&#8217;t want for the answer </dd>
 <p> .br <code>qbin</code>: the buffer to send .br <code>sockfd</code>: the socket to use .br <code>to</code>: which ip to send it .br <code>tolen</code>: socketlen .br Returns number of bytes sent</dl>
 <dl>
-<dt> <i>ldns_tcp_read_wire</i>()</p>
-<dd>This routine may block. Use ldns_tcp_read_wire_timeout, it checks timeouts. Gives back a raw packet from the wire and reads the header data from the given socket. Allocates the data (of size size) itself, so don&#8217;t forget to free </p>
+<dt> <i>ldns_tcp_read_wire</i>()</dt>
+<dd>This routine may block. Use ldns_tcp_read_wire_timeout, it checks timeouts. Gives back a raw packet from the wire and reads the header data from the given socket. Allocates the data (of size size) itself, so don&#8217;t forget to free </dd>
 <p> .br <code>sockfd</code>: the socket to read from .br <code>size</code>: the number of bytes that are read .br Returns the data read</dl>
 <dl>
-<dt> <i>ldns_tcp_connect</i>()</p>
-<dd>Create a tcp socket to the specified address .br <code>to</code>: ip and family .br <code>tolen</code>: length of to .br <code>timeout</code>: timeout for the connect attempt .br Returns a socket descriptor</dl>
+<dt> <i>ldns_tcp_connect</i>()</dt>
+<dd>Create a tcp socket to the specified address .br <code>to</code>: ip and family .br <code>tolen</code>: length of to .br <code>timeout</code>: timeout for the connect attempt .br Returns a socket descriptor</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

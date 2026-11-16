@@ -15,11 +15,9 @@ description: "cpg_iteration_next – Return next item in iteration of CPG"
 <h2>DESCRIPTION</h2>
 <p> The <code>cpg_iter_next</code> function is used to get next value in iteration. The <i>handle</i> argument is iterator handle obtained by <code>cpg_iteration_initalize(3)</code> function. <i>description</i> is pointer to structure with following definition:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct cpg_iteration_description_t {
     struct cpg_name group;
@@ -27,9 +25,8 @@ struct cpg_iteration_description_t {
     uint32_t pid;
 };
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> where <code>group</code> is name of group, <code>nodeid</code> is ID of connected node and <code>pid</code> is pid of connected process. If iteration was initialized with <code>CPG_ITERATION_NAME_ONLY</code> iteration type, both <code>nodeid</code> and <code>pid</code> are 0. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful. If there are no more items to iterate, CS_NO_SECTION error code is returned. </p>

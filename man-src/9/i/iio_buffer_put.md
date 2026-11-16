@@ -14,9 +14,9 @@ description: "iio_buffer_put – Release the reference to the buffer"
 <p><i>buffer</i></p>
 <dl>
 <dd>
-<dd>The buffer to release the reference for, may be NULL</dl>
+</dd><dd>The buffer to release the reference for, may be NULL</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

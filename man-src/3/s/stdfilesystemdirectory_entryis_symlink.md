@@ -12,7 +12,6 @@ std::filesystem::directory_entry::is_symlink - std::filesystem::directory_entry:
 
 <pre><code>bool is_symlink() const;
 (since C++ 17)
-
     bool is_symlink(std::error_code &amp;ec) const noexcept;</code></pre> 
 Checks whether the pointed-to object is a symlink. Effectively returns std::filesystem::is_symlink(symlink_status()) or std::filesystem::is_symlink(symlink_status(ec)), respectively 
 

@@ -15,9 +15,9 @@ description: "SPI_exec – execute a read/write command"
 <h2>Arguments</h2>
 <p>const char * <i>command</i></p>
 <dl COMPACT>
-<dd>string containing command to execute</dl>
+<dd>string containing command to execute</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to return, or 0 for no limit</dl>
+<dd>maximum number of rows to return, or 0 for no limit</dd></dl>
 <h2>Return Value</h2>
 <p>See <code>SPI_execute</code>.</p>

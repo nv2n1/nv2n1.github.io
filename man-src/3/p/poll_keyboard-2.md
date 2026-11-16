@@ -10,7 +10,6 @@ description: "poll_keyboard – Polls the keyboard. Allegro game programming lib
 <p>poll_keyboard &#8211; Polls the keyboard. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int poll_keyboard();</code></pre>
 <h2>Description</h2>
 <p>Wherever possible, Allegro will read the keyboard input asynchronously (ie. from inside an interrupt handler), but on some platforms that may not be possible, in which case you must call this routine at regular intervals to update the keyboard state variables. </p>

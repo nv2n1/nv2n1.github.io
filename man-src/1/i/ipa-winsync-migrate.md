@@ -19,11 +19,11 @@ description: "ipa-winsync-migrate – Seamless migration of AD users created by 
 <p> After the migration, any PassSync agreements need to be removed from Active Directory Domain Controllers, otherwise they might attempt to update passwords for accounts that no longer exist on the IPA server. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;realm</code></p>
-<dd> The Active Directory realm the winsynced users belong to.</p>
-<dt><code>&#8211;server</code></p>
-<dd> The hostname of Active Directory Domain Controller the winsync replication agreement is established with.</p>
-<dt><code>&#8211;unattended</code></p>
-<dd> Never prompts for user input. </p>
+<dt><code>&#8211;realm</code></dt>
+<dd> The Active Directory realm the winsynced users belong to.</dd>
+<dt><code>&#8211;server</code></dt>
+<dd> The hostname of Active Directory Domain Controller the winsync replication agreement is established with.</dd>
+<dt><code>&#8211;unattended</code></dt>
+<dd> Never prompts for user input. </dd>
 </dl>
 <h2>Index</h2>

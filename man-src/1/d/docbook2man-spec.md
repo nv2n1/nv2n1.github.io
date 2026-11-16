@@ -31,16 +31,16 @@ manpage&gt;</i>
 <h2>TO DO</h2>
 <p> Obvious stuff:</p>
 <dl>
-<dt>*</p>
-<dd> Fix <code>docbook2man</code> breakages found in the test documents, especially <i>weird.sgml</i>.</p>
-<dt>*</p>
-<dd> Add new element handling and fix existing handling. Be robust.</p>
-<dt>*</p>
-<dd> Produce cleanest, readable man output as possible (unlike some other converters). Follow Linux <code><a href="/docs/linux/man/7-man/">man</a></code>(7) convention. As conversion to man pages is usually not done very often, it is better to be slower/more complicated than to produce wrong output. Also if someone wants to give up using DocBook for whatever reason, the last-converted man pages can then be maintained manually.</p>
-<dt>*</p>
-<dd> Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</p>
-<dt>*</p>
-<dd> Support other (human) languages. But what to do with non-ASCII charsets? SGMLSpm doesn&#8217;t report them and <code>roff</code> does not grok them. [Comment: text after enclosed lists (and SS blocks) will break docbook2man] If we do this, more people can use DocBook.</dl>
+<dt>*</dt>
+<dd> Fix <code>docbook2man</code> breakages found in the test documents, especially <i>weird.sgml</i>.</dd>
+<dt>*</dt>
+<dd> Add new element handling and fix existing handling. Be robust.</dd>
+<dt>*</dt>
+<dd> Produce cleanest, readable man output as possible (unlike some other converters). Follow Linux <code><a href="/docs/linux/man/7-man/">man</a></code>(7) convention. As conversion to man pages is usually not done very often, it is better to be slower/more complicated than to produce wrong output. Also if someone wants to give up using DocBook for whatever reason, the last-converted man pages can then be maintained manually.</dd>
+<dt>*</dt>
+<dd> Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</dd>
+<dt>*</dt>
+<dd> Support other (human) languages. But what to do with non-ASCII charsets? SGMLSpm doesn&#8217;t report them and <code>roff</code> does not grok them. [Comment: text after enclosed lists (and SS blocks) will break docbook2man] If we do this, more people can use DocBook.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1998-1999 Steve Cheng &lt;steve [at] ggi-project.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>

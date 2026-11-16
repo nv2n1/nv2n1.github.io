@@ -16,13 +16,9 @@ Leap seconds are not inserted into TAI. Thus, every time a leap second is insert
 tai_clock meets the Clock requirements. It does not meet the TrivialClock requirements unless the implementation can guarantee that now() does not throw an exception.<br />
 Time point family </p>
 <pre><code>Defined in namespace std::chrono
-
 template&lt;class Duration&gt;                                                     (since C++20)
-
 using tai_time = std::chrono::time_point&lt;std::chrono::tai_clock, Duration&gt;;
-
 using tai_seconds = tai_time&lt;std::chrono::seconds&gt;;                          (since C++20)
-
 </code></pre>
 <p>operator&lt;&lt;_(std::chrono::tai_time) performs stream output on a tai_time<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />

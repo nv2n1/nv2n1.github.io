@@ -15,14 +15,14 @@ description: "totem-audio-preview – play audio files"
 <p> <code>totem-audio-preview </code> is primarily used by GNOME applications for audio preview purposes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>&#8211;help-gst</code></p>
-<dd> Display GStreamer options.</p>
-<dt><code>-m, &#8211;mimetype</code></p>
-<dd> Display supported mime-types.</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>&#8211;help-gst</code></dt>
+<dd> Display GStreamer options.</dd>
+<dt><code>-m, &#8211;mimetype</code></dt>
+<dd> Display supported mime-types.</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal.</dd></dl>
 <p> When no FILE is specified, read standard input.</p>
 <h2>AUTHOR</h2>
 <p> <code>totem-audio-preview </code> was written by Bastien Nocera &lt;hadess [at] hadess.net&gt;. </p>

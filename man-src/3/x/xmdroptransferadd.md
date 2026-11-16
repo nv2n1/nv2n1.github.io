@@ -17,12 +17,12 @@ description: "XmDropTransferAdd — A Drag and Drop function that enables additi
 <h2>Description</h2>
 <p><code>XmDropTransferAdd</code> identifies a list of additional drop transfer entries to be processed after a drop transfer is started.</p>
 <dl COMPACT>
-<dt><i>drop_transfer</i></p>
-<dd>Specifies the ID of the DropTransfer widget returned by <code>XmDropTransferStart</code></p>
-<dt><i>transfers</i></p>
-<dd>Specifies the additional drop transfer entries that the receiver wants processed</p>
-<dt><i>num_transfers</i></p>
-<dd>Specifies the number of items in the <i>transfers</i> array</dl>
+<dt><i>drop_transfer</i></dt>
+<dd>Specifies the ID of the DropTransfer widget returned by <code>XmDropTransferStart</code></dd>
+<dt><i>transfers</i></dt>
+<dd>Specifies the additional drop transfer entries that the receiver wants processed</dd>
+<dt><i>num_transfers</i></dt>
+<dd>Specifies the number of items in the <i>transfers</i> array</dd></dl>
 <p> For a complete definition of DropTransfer and its associated resources, see <code><a href="/docs/linux/man/3-xmdroptransfer/">XmDropTransfer</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmdragcontext/">XmDragContext</a></code>(3), <code><a href="/docs/linux/man/3-xmdroptransfer/">XmDropTransfer</a></code>(3), and <code><a href="/docs/linux/man/3-xmdroptransferstart/">XmDropTransferStart</a></code>(3).</p>

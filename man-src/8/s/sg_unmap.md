@@ -18,24 +18,24 @@ description: "sg_unmap – send SCSI UNMAP command (known as ‘trim’ in ATA s
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;anchor</code></p>
-<dd>sets the &#8216;Anchor&#8217; bit in the command (introduced in sbc3r22).</p>
-<dt><code>-g</code>, <code>&#8211;grpnum</code>=<i>GN</i></p>
-<dd>sets the &#8216;Group number&#8217; field to <i>GN</i>. Defaults to a value of zero. <i>GN</i> should be a value between 0 and 31.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-I</code>, <code>&#8211;in</code>=<i>FILE</i></p>
-<dd>where <i>FILE</i> is a file name containing pairs of values. The first member of each pair is a starting LBA and the second member of the pair is the number of logical blocks to unmap from and including that starting LBA. Values are interpreted as decimal unless indicated otherwise. This option cannot be present with the &#8216;&#8211;lba=&#8217; option.</p>
-<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA,LBA&#8230;</i></p>
-<dd>where <i>LBA,LBA&#8230;</i> is a string of comma (or space) separated values that are interpreted as starting logical block addresses. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). An argument that contains any space separators needs to be quoted (or otherwise escaped). When this option is given then the &#8216;&#8211;num=&#8217; option must also be given and they must contain the same number of elements in their arguments.</p>
-<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM,NUM&#8230;</i></p>
-<dd>where <i>NUM,NUM&#8230;</i> is a string of comma (or space) separated values that are interpreted as a number of logical blocks to unmap. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). Note that 0 blocks is acceptable. An argument that contains any space separators needs to be quoted (or otherwise escaped). When this option is given then the &#8216;&#8211;lba=&#8217; option must also be given and they must contain the same number of elements in their arguments.</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>TO</i></p>
-<dd>where <i>TO</i> is a timeout value (in seconds) for the UNMAP command. The default value is 60 seconds.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-a</code>, <code>&#8211;anchor</code></dt>
+<dd>sets the &#8216;Anchor&#8217; bit in the command (introduced in sbc3r22).</dd>
+<dt><code>-g</code>, <code>&#8211;grpnum</code>=<i>GN</i></dt>
+<dd>sets the &#8216;Group number&#8217; field to <i>GN</i>. Defaults to a value of zero. <i>GN</i> should be a value between 0 and 31.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-I</code>, <code>&#8211;in</code>=<i>FILE</i></dt>
+<dd>where <i>FILE</i> is a file name containing pairs of values. The first member of each pair is a starting LBA and the second member of the pair is the number of logical blocks to unmap from and including that starting LBA. Values are interpreted as decimal unless indicated otherwise. This option cannot be present with the &#8216;&#8211;lba=&#8217; option.</dd>
+<dt><code>-l</code>, <code>&#8211;lba</code>=<i>LBA,LBA&#8230;</i></dt>
+<dd>where <i>LBA,LBA&#8230;</i> is a string of comma (or space) separated values that are interpreted as starting logical block addresses. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). An argument that contains any space separators needs to be quoted (or otherwise escaped). When this option is given then the &#8216;&#8211;num=&#8217; option must also be given and they must contain the same number of elements in their arguments.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code>=<i>NUM,NUM&#8230;</i></dt>
+<dd>where <i>NUM,NUM&#8230;</i> is a string of comma (or space) separated values that are interpreted as a number of logical blocks to unmap. Each number is interpreted as decimal unless prefixed by &#8216;0x&#8217; or &#8216;0X&#8217; (or it has a trailing &#8216;h&#8217; or &#8216;H&#8217;). Note that 0 blocks is acceptable. An argument that contains any space separators needs to be quoted (or otherwise escaped). When this option is given then the &#8216;&#8211;lba=&#8217; option must also be given and they must contain the same number of elements in their arguments.</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code>=<i>TO</i></dt>
+<dd>where <i>TO</i> is a timeout value (in seconds) for the UNMAP command. The default value is 60 seconds.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>Some limits: an LBA can be up to 64 bits, a NUM up to 32 bits (imposed by structure of UNMAP SCSI command parameter data). The NUM is further constrained by the MAXIMUM UNMAP LBA COUNT field in the BLOCK LIMITS VPD page (0xb0). The maximum number of LBA,NUM pairs is limited to 128 by this utility and may be further constrained by the MAXIMUM UNMAP BLOCK DESCRIPTOR COUNT field in the BLOCK LIMITS VPD page. </p>
 <p> Since it is unclear how long the UNMAP command will take to execute a &#8216;&#8211;timeout=&quot; option has been provided. The default timeout period is 60 seconds. If all the logical blocks on a logical unit (e.g. a disk drive) are to be unmapped then the FORMAT UNIT SCSI command (see the sg_format utility) may be considered as an alternative. </p>

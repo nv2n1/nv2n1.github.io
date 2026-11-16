@@ -27,28 +27,28 @@ ALTER OPERATOR FAMILY <i>name</i> USING <i>index_method</i> OWNER TO <i>newowner
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing operator family.</p>
-<dt><i>index_method</i></p>
-<dd>The name of the index method this operator family is for.</p>
-<dt><i>strategy_number</i></p>
-<dd>The index method&#8217;s strategy number for an operator associated with the operator family.</p>
-<dt><i>operator_name</i></p>
-<dd>The name (optionally schema-qualified) of an operator associated with the operator family.</p>
-<dt><i>op_type</i></p>
-<dd>In an OPERATOR clause, the operand data type(s) of the operator, or NONE to signify a left-unary or right-unary operator. Unlike the comparable syntax in <code>CREATE OPERATOR CLASS</code>, the operand data types must always be specified. </p>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator family.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index method this operator family is for.</dd>
+<dt><i>strategy_number</i></dt>
+<dd>The index method&#8217;s strategy number for an operator associated with the operator family.</dd>
+<dt><i>operator_name</i></dt>
+<dd>The name (optionally schema-qualified) of an operator associated with the operator family.</dd>
+<dt><i>op_type</i></dt>
+<dd>In an OPERATOR clause, the operand data type(s) of the operator, or NONE to signify a left-unary or right-unary operator. Unlike the comparable syntax in <code>CREATE OPERATOR CLASS</code>, the operand data types must always be specified. </dd>
 <p> In an ADD FUNCTION clause, the operand data type(s) the function is intended to support, if different from the input data type(s) of the function. For B-tree and hash indexes it is not necessary to specify <i>op_type</i> since the function&#8217;s input data type(s) are always the correct ones to use. For GIN and GiST indexes it is necessary to specify the input data type the function is to be used with. </p>
 <p> In a DROP FUNCTION clause, the operand data type(s) the function is intended to support must be specified.</p>
-<dt><i>support_number</i></p>
-<dd>The index method&#8217;s support procedure number for a function associated with the operator family.</p>
-<dt><i>funcname</i></p>
-<dd>The name (optionally schema-qualified) of a function that is an index method support procedure for the operator family.</p>
-<dt><i>argument_types</i></p>
-<dd>The parameter data type(s) of the function.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the operator family.</p>
-<dt><i>newowner</i></p>
-<dd>The new owner of the operator family.</dl>
+<dt><i>support_number</i></dt>
+<dd>The index method&#8217;s support procedure number for a function associated with the operator family.</dd>
+<dt><i>funcname</i></dt>
+<dd>The name (optionally schema-qualified) of a function that is an index method support procedure for the operator family.</dd>
+<dt><i>argument_types</i></dt>
+<dd>The parameter data type(s) of the function.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the operator family.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the operator family.</dd></dl>
 <p> The OPERATOR and FUNCTION clauses can appear in any order.</p>
 <h2>Notes</h2>
 <p>Notice that the DROP syntax only specifies the &#8220;slot&#8221; in the operator family, by strategy or support number and input data type(s). The name of the operator or function occupying the slot is not mentioned. Also, for DROP FUNCTION the type(s) to specify are the input data type(s) the function is intended to support; for GIN and GiST indexes this might have nothing to do with the actual input argument types of the function. </p>
@@ -58,7 +58,6 @@ ALTER OPERATOR FAMILY <i>name</i> USING <i>index_method</i> OWNER TO <i>newowner
 <h2>Examples</h2>
 <p>The following example command adds cross-data-type operators and support functions to an operator family that already contains B-tree operator classes for data types <code>int4</code> and <code>int2</code>. </p>
 <pre><code>ALTER OPERATOR FAMILY integer_ops USING btree ADD
-
 -- int4 vs int2
 OPERATOR 1 &lt; (int4, int2) ,
 OPERATOR 2 &lt;= (int4, int2) ,
@@ -66,7 +65,6 @@ OPERATOR 3 = (int4, int2) ,
 OPERATOR 4 &gt;= (int4, int2) ,
 OPERATOR 5 &gt; (int4, int2) ,
 FUNCTION 1 btint42cmp(int4, int2) ,
-
 -- int2 vs int4
 OPERATOR 1 &lt; (int2, int4) ,
 OPERATOR 2 &lt;= (int2, int4) ,

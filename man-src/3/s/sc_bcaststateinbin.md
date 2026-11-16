@@ -11,7 +11,6 @@ description: "sc::BcastStateInBin –"
 <p> BcastStateBin reads a file in written by <code>StateInBin</code> on node 0 and broadcasts it to all nodes so state can be simultaneously restored on all nodes.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateBufRecv</code>.</p>
 <h3>Public Member Functions</h3>
@@ -31,24 +30,11 @@ description: "sc::BcastStateInBin –"
  <i>Returns true of this object uses a directory. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void next_buffer ()
-
-
 Specializations must implement next_buffer().
-
-
 int get_array_void (void *, int)
-
-
-
 Protected Attributes
 int opened_
-
-
-
 int file_position_
-
-
-
 std::streambuf * buf_</code></pre>
 <h2>Detailed Description</h2>
 <p>BcastStateBin reads a file in written by <code>StateInBin</code> on node 0 and broadcasts it to all nodes so state can be simultaneously restored on all nodes.</p>

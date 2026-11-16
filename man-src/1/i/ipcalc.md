@@ -16,31 +16,30 @@ description: "ipcalc – perform simple manipulation of IP addresses"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
+</dt><dt><code>-c</code>, <code>&#8211;check</code></dt>
 <dd>
-<dd> Validate the IP address under the specified family. If no address family is specified, IPv4 is assumed. </p>
-<dt><code>-4</code>, <code>&#8211;ipv4</code></p>
-<dd> Specify IPv4 address family (default). </p>
-<dt><code>-6</code>, <code>&#8211;ipv6</code></p>
-<dd> Specify IPv6 address family. </p>
-<dt><code>-b</code>, <code>&#8211;broadcast</code></p>
-<dd> Display the broadcast address for the given IP address and netmask. </p>
-<dt><code>-h</code>, <code>&#8211;hostname</code></p>
-<dd> Display the hostname for the given IP address. </p>
-<dt><code>-m</code>, <code>&#8211;netmask</code></p>
-<dd> Calculate the netmask for the given IP address. It assumes that the IP address is in a complete class A, B, or C network. Many networks do not use the default netmasks, in which case an inappropriate value will be returned. </p>
-<dt><code>-p</code>, <code>&#8211;prefix</code></p>
-<dd> Show the prefix for the given mask/IP address. </p>
-<dt><code>-n</code>, <code>&#8211;network</code></p>
-<dd> Display the network address for the given IP address and netmask. </p>
-<dt><code>-s</code>, <code>&#8211;silent</code></p>
-<dd> Don&#8217;t ever display error messages. </p>
+</dd><dd> Validate the IP address under the specified family. If no address family is specified, IPv4 is assumed. </dd>
+<dt><code>-4</code>, <code>&#8211;ipv4</code></dt>
+<dd> Specify IPv4 address family (default). </dd>
+<dt><code>-6</code>, <code>&#8211;ipv6</code></dt>
+<dd> Specify IPv6 address family. </dd>
+<dt><code>-b</code>, <code>&#8211;broadcast</code></dt>
+<dd> Display the broadcast address for the given IP address and netmask. </dd>
+<dt><code>-h</code>, <code>&#8211;hostname</code></dt>
+<dd> Display the hostname for the given IP address. </dd>
+<dt><code>-m</code>, <code>&#8211;netmask</code></dt>
+<dd> Calculate the netmask for the given IP address. It assumes that the IP address is in a complete class A, B, or C network. Many networks do not use the default netmasks, in which case an inappropriate value will be returned. </dd>
+<dt><code>-p</code>, <code>&#8211;prefix</code></dt>
+<dd> Show the prefix for the given mask/IP address. </dd>
+<dt><code>-n</code>, <code>&#8211;network</code></dt>
+<dd> Display the network address for the given IP address and netmask. </dd>
+<dt><code>-s</code>, <code>&#8211;silent</code></dt>
+<dd> Don&#8217;t ever display error messages. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <pre><code>
 Erik Troan&lt;ewt[at] redhat.com&gt;
     Preston Brown&lt;pbrown[at] redhat.com&gt;
-
         IPv6 supported wedged in by David Cantrell&lt;dcantrell[at] redhat.com&gt;</code></pre>
 </dl>
 <h2>REPORTING BUGS</h2>

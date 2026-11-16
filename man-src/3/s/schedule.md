@@ -11,13 +11,9 @@ description: "ql/time/schedule.hpp – date schedule"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/time/calendars/nullcalendar.hpp&gt;
-
 #include &lt;ql/utilities/null.hpp&gt;
-
 #include &lt;ql/time/period.hpp&gt;
-
 #include &lt;ql/time/dategenerationrule.hpp&gt;
-
 #include &lt;ql/errors.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>Schedule</code><br />

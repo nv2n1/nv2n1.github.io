@@ -22,17 +22,17 @@ description: "Image Object Image Alpha Functions – Functions that change the a
 <p> See <code>evas_object_image_alpha_set</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether the alpha channel data is being used.</dl>
+<dd>Whether the alpha channel data is being used.</dd></dl>
 <h3>EAPI void evas_object_image_alpha_set (<code>Evas_Object</code> * obj, Evas_Bool has_alpha)</h3>
 <p>Enable or disable alpha channel of the given image object. </p>
 <p> This function sets a flag on an image object indicating whether or not to use alpha channel data. A value of 1 indicates to use alpha channel data, and 0 indicates to ignore any alpha channel data. Note that this has nothing to do with an object&#8217;s color as manipulated by <code>evas_object_color_set()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>has_alpha</i> Whether to use alpha channel data or not.</dl>
+ <i>has_alpha</i> Whether to use alpha channel data or not.</dd></dl>
 <p> References evas_object_image_data_update_add().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

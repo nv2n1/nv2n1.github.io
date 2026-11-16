@@ -10,14 +10,8 @@ description: "mipv6 – Linux Mobile IPv6 protocol extensions"
 <p>mipv6 &#8211; Linux Mobile IPv6 protocol extensions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netinet/in.h&gt;
-
-
 #include &lt;netinet/ip6.h&gt;
-
-
 #include &lt;netinet/icmp6.h&gt;
-
-
 #include &lt;netinet/ip6mh.h&gt;
 </code></pre>
 <h2>Description</h2>

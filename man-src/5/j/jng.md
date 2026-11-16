@@ -17,13 +17,9 @@ JNG (JPEG Network Graphics) is a sub-format of the MNG (Multiple-image Network G
 
 <i><a HREF="/docs/linux/man/5-png/">png</a>(5)</i>, <i><a HREF="/docs/linux/man/5-mng/">mng</a>(5)</i>, <i><a HREF="/docs/linux/man/3-libmng/">libmng</a>(3)</i> MNG 1.00, February 9, 2001:
 <dl><dd><a rel="nofollow" HREF="http://www.libpng.org/pub/mng">http://www.libpng.org/pub/mng</a> 
-
 <h2>Authors</h2>
-
 This man page: Gerard Juyn 
-
  Multiple-image Network Graphics (MNG) Specification Version 1.00 (Februari 9, 2001): Glenn Randers-Pehrson and others (png-list [at] ccrc.wustl.edu).
-
 <h2>Copyright Notice</h2>
-
 The MNG-1.00 specification is copyright (c) 1998-2001 Glenn Randers-Pehrson. See the specification for conditions of use and distribution.
+</dd></dl>

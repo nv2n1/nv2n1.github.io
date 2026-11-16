@@ -23,42 +23,42 @@ description: "quotaon, quotaoff – turn filesystem quotas on and off"
 <h2>Options</h2>
 <h3>quotaon</h3>
 <dl>
-<dt><code>-F, &#8211;format=</code><i>format-name</i></p>
-<dd>Report quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> Original quota format with 16-bit UIDs / GIDs, <code>vfsv0</code> Quota format with 32-bit UIDs / GIDs, 64-bit space usage, 32-bit inode usage and limits, <code>vfsv1</code> Quota format with 64-bit quota limits and usage, <code>xfs</code> (quota on XFS filesystem)</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd>All automatically mounted (no <code>noauto</code> option) non-NFS filesystems in <code>/etc/fstab</code> with quotas will have their quotas turned on. This is normally used at boot time to enable quotas.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Display a message for each filesystem where quotas are turned on.</p>
-<dt><code>-u, &#8211;user</code></p>
-<dd>Manipulate user quotas. This is the default.</p>
-<dt><code>-g, &#8211;group</code></p>
-<dd>Manipulate group quotas.</p>
-<dt><code>-p, &#8211;print-state</code></p>
-<dd>Instead of turning quotas on just print state of quotas (ie. whether. quota is on or off)</p>
-<dt><code>-x, &#8211;xfs-command enforce</code></p>
-<dd>Switch on limit enforcement for XFS filesystems. This is the default action for any XFS filesystem. This option is only applicable to XFS, and is silently ignored for other filesystem types.</p>
-<dt><code>-f, &#8211;off</code></p>
-<dd>Make <code>quotaon</code> behave like being called as <code>quotaoff</code>.</dl>
+<dt><code>-F, &#8211;format=</code><i>format-name</i></dt>
+<dd>Report quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> Original quota format with 16-bit UIDs / GIDs, <code>vfsv0</code> Quota format with 32-bit UIDs / GIDs, 64-bit space usage, 32-bit inode usage and limits, <code>vfsv1</code> Quota format with 64-bit quota limits and usage, <code>xfs</code> (quota on XFS filesystem)</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd>All automatically mounted (no <code>noauto</code> option) non-NFS filesystems in <code>/etc/fstab</code> with quotas will have their quotas turned on. This is normally used at boot time to enable quotas.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Display a message for each filesystem where quotas are turned on.</dd>
+<dt><code>-u, &#8211;user</code></dt>
+<dd>Manipulate user quotas. This is the default.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd>Manipulate group quotas.</dd>
+<dt><code>-p, &#8211;print-state</code></dt>
+<dd>Instead of turning quotas on just print state of quotas (ie. whether. quota is on or off)</dd>
+<dt><code>-x, &#8211;xfs-command enforce</code></dt>
+<dd>Switch on limit enforcement for XFS filesystems. This is the default action for any XFS filesystem. This option is only applicable to XFS, and is silently ignored for other filesystem types.</dd>
+<dt><code>-f, &#8211;off</code></dt>
+<dd>Make <code>quotaon</code> behave like being called as <code>quotaoff</code>.</dd></dl>
 <h3>quotaoff</h3>
 <dl>
-<dt><code>-F, &#8211;format=</code><i>format-name</i></p>
-<dd>Report quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> (version 1 quota), <code>vfsv0</code> (version 2 quota), <code>xfs</code> (quota on XFS filesystem)</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd>Force all filesystems in <code>/etc/fstab</code> to have their quotas disabled.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Display a message for each filesystem affected.</p>
-<dt><code>-u, &#8211;user</code></p>
-<dd>Manipulate user quotas. This is the default.</p>
-<dt><code>-g, &#8211;group</code></p>
-<dd>Manipulate group quotas.</p>
-<dt><code>-p, &#8211;print-state</code></p>
-<dd>Instead of turning quotas off just print state of quotas (ie. whether. quota is on or off)</p>
-<dt><code>-x, &#8211;xfs-command delete</code></p>
-<dd>Free up the space used to hold quota information (maintained internally) within XFS. This option is only applicable to XFS, and is silently ignored for other filesystem types. It can only be used on a filesystem with quota previously turned off.</p>
-<dt><code>-x, &#8211;xfs-command enforce</code></p>
-<dd>Switch off limit enforcement for XFS filesystems (perform quota accounting only). This is the default action for any XFS filesystem. This option is only applicable to XFS, and is silently ignored for other filesystem types.</p>
-<dt><code>-x, &#8211;xfs-command account</code></p>
-<dd>This option can be used to disable quota accounting. It is not possible to enable quota accounting by quota tools. Use <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8) for that. This option is only applicable to XFS filesystems, and is silently ignored for other filesystem types.</dl>
+<dt><code>-F, &#8211;format=</code><i>format-name</i></dt>
+<dd>Report quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> (version 1 quota), <code>vfsv0</code> (version 2 quota), <code>xfs</code> (quota on XFS filesystem)</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd>Force all filesystems in <code>/etc/fstab</code> to have their quotas disabled.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Display a message for each filesystem affected.</dd>
+<dt><code>-u, &#8211;user</code></dt>
+<dd>Manipulate user quotas. This is the default.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd>Manipulate group quotas.</dd>
+<dt><code>-p, &#8211;print-state</code></dt>
+<dd>Instead of turning quotas off just print state of quotas (ie. whether. quota is on or off)</dd>
+<dt><code>-x, &#8211;xfs-command delete</code></dt>
+<dd>Free up the space used to hold quota information (maintained internally) within XFS. This option is only applicable to XFS, and is silently ignored for other filesystem types. It can only be used on a filesystem with quota previously turned off.</dd>
+<dt><code>-x, &#8211;xfs-command enforce</code></dt>
+<dd>Switch off limit enforcement for XFS filesystems (perform quota accounting only). This is the default action for any XFS filesystem. This option is only applicable to XFS, and is silently ignored for other filesystem types.</dd>
+<dt><code>-x, &#8211;xfs-command account</code></dt>
+<dd>This option can be used to disable quota accounting. It is not possible to enable quota accounting by quota tools. Use <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8) for that. This option is only applicable to XFS filesystems, and is silently ignored for other filesystem types.</dd></dl>
 <h2>Notes On Xfs Filesystems</h2>
 <p>To enable quotas on an XFS filesystem, use <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8) or <code>/etc/fstab</code> quota option to enable both accounting and limit enforcement. <code>quotaon</code> utility cannot be used for this purpose. </p>
 <p> Turning on quotas on an XFS root filesystem requires the quota mount options be passed into the kernel at boot time through the Linux <code>rootflags</code> boot option. </p>
@@ -66,11 +66,11 @@ description: "quotaon, quotaoff – turn filesystem quotas on and off"
 <p> Turning on quota limit enforcement on an XFS filesystem is achieved using <code>quotaon -v</code> <i>filesystem</i>. This may be done while the filesystem is mounted.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>aquota.user or aquota.group</code></p>
-<dd>quota file at the filesystem root (version 2 quota, non-XFS filesystems)</p>
-<dt><code>quota.user or quota.group</code></p>
-<dd>quota file at the filesystem root (version 1 quota, non-XFS filesystems)</p>
-<dt><code>/etc/fstab</code></p>
-<dd>default filesystems</dl>
+<dt><code>aquota.user or aquota.group</code></dt>
+<dd>quota file at the filesystem root (version 2 quota, non-XFS filesystems)</dd>
+<dt><code>quota.user or quota.group</code></dt>
+<dd>quota file at the filesystem root (version 1 quota, non-XFS filesystems)</dd>
+<dt><code>/etc/fstab</code></dt>
+<dd>default filesystems</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-quota_nld/">quota_nld</a></code>(8), <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8), <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8) </p>

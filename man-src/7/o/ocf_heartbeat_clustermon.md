@@ -10,46 +10,45 @@ description: "ocf_heartbeat_ClusterMon – Runs crm_mon in the background, recor
 <p>ocf_heartbeat_ClusterMon &#8211; Runs crm_mon in the background, recording the cluster status to an HTML file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ClusterMon</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>ClusterMon</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This is a ClusterMon Resource Agent. It outputs current cluster status to the html.</p>
+<dd>This is a ClusterMon Resource Agent. It outputs current cluster status to the html.</dd>
 <h2>Supported Parameters</h2>
 <p><code>user</code></p>
 <dl>
-<dd>The user we want to run crm_mon as (optional, string, default root)</dl>
+<dd>The user we want to run crm_mon as (optional, string, default root)</dd></dl>
 <p> <code>update</code></p>
 <dl>
-<dd>How frequently should we update the cluster status (optional, integer, default 15)</dl>
+<dd>How frequently should we update the cluster status (optional, integer, default 15)</dd></dl>
 <p> <code>extra_options</code></p>
 <dl>
-<dd>Additional options to pass to crm_mon. Eg. -n -r (optional, string, no default)</dl>
+<dd>Additional options to pass to crm_mon. Eg. -n -r (optional, string, no default)</dd></dl>
 <p> <code>pidfile</code></p>
 <dl>
-<dd>PID file location to ensure only one instance is running (optional, string, default /tmp/ClusterMon_default.pid)</dl>
+<dd>PID file location to ensure only one instance is running (optional, string, default /tmp/ClusterMon_default.pid)</dd></dl>
 <p> <code>htmlfile</code></p>
 <dl>
-<dd>Location to write HTML output to. (optional, string, default /tmp/ClusterMon_default.html)</dl>
+<dd>Location to write HTML output to. (optional, string, default /tmp/ClusterMon_default.html)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 30.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 30.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a ClusterMon resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_ClusterMon ocf:heartbeat:ClusterMon \
-
 op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot;</code></pre>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/ClusterMon_(resource_agent)">http://www.linux-ha.org/wiki/ClusterMon_(resource_agent)</a></code>m[]</p>

@@ -23,10 +23,10 @@ description: "zsymm.f –"
  C := alpha*B*A + beta*C,
  where alpha and beta are scalars, A is a symmetric matrix and B and
  C are m by n matrices.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  On entry, SIDE specifies whether the symmetric matrix A
  appears on the left or right in the operation as follows:
@@ -109,13 +109,13 @@ description: "zsymm.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -125,7 +125,8 @@ description: "zsymm.f –"
  Iain Duff, AERE Harwell.
  Jeremy Du Croz, Numerical Algorithms Group Ltd.
  Sven Hammarling, Numerical Algorithms Group Ltd.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 190 of file zsymm.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

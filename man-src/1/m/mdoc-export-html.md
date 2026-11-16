@@ -15,21 +15,21 @@ description: "mdoc export-html – Convert mdoc(5) XML to HTML."
 <p> <code>mdoc export-html</code> creates HTML files from the <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5)-formatted documentation XML files within <i>DIRECTORIES</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;default-template</code></p>
-<dd> Writes the default XSLT used to <i>stdout</i>.</p>
-<dt><code>&#8211;ext</code>=<i>EXTENSION</i></p>
-<dd> The file extension to use for created files. </p>
+<dt><code>&#8211;default-template</code></dt>
+<dd> Writes the default XSLT used to <i>stdout</i>.</dd>
+<dt><code>&#8211;ext</code>=<i>EXTENSION</i></dt>
+<dd> The file extension to use for created files. </dd>
 <p> This defaults to <i>html</i>.</p>
-<dt><code>&#8211;force-update</code></p>
-<dd> Always generate new files. If not specified, will only generate a new output file if the source documentation file is newer than the target output file.</p>
-<dt><code>-o</code>, <code>&#8211;out</code>=<i>DIRECTORY</i></p>
-<dd> Write the created files within directory <i>DIRECTORY</i>.</p>
-<dt><code>&#8211;template</code>=<i>FILE</i></p>
-<dd> An XSLT file to use to generate the created files. </p>
+<dt><code>&#8211;force-update</code></dt>
+<dd> Always generate new files. If not specified, will only generate a new output file if the source documentation file is newer than the target output file.</dd>
+<dt><code>-o</code>, <code>&#8211;out</code>=<i>DIRECTORY</i></dt>
+<dd> Write the created files within directory <i>DIRECTORY</i>.</dd>
+<dt><code>&#8211;template</code>=<i>FILE</i></dt>
+<dd> An XSLT file to use to generate the created files. </dd>
 <p> If not specified, uses the template produced by <i>&#8211;dump-template</i>. </p>
 <p> See the <i>TEMPLATE FORMAT</i> section below for more information.</p>
-<dt><code>&#8211;with-profile</code>=<i>PROFILE</i></p>
-<dd> Only process types and members within the .NET profile <i>PROFILE</i>. May be specified multiple times. If not specified, all types and members, regardless of version, are processed. </p>
+<dt><code>&#8211;with-profile</code>=<i>PROFILE</i></dt>
+<dd> Only process types and members within the .NET profile <i>PROFILE</i>. May be specified multiple times. If not specified, all types and members, regardless of version, are processed. </dd>
 <p> Valid profiles are: </p>
 <pre>
         monotouch
@@ -41,11 +41,11 @@ description: "mdoc export-html – Convert mdoc(5) XML to HTML."
         net_4_0
         silverlight
 </pre>
-<dt><code>&#8211;with-version</code>=<i>VERSION</i></p>
-<dd> Only process types and members within the assembly version <i>VERSION</i>. May be specified multiple times. If not specified, all types and members, regardless of version, are processed. </p>
+<dt><code>&#8211;with-version</code>=<i>VERSION</i></dt>
+<dd> Only process types and members within the assembly version <i>VERSION</i>. May be specified multiple times. If not specified, all types and members, regardless of version, are processed. </dd>
 <p> <i>VERSION</i> is an assembly version, e.g. 2.0.5.0.</p>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd></dl>
 <h2>TEMPLATE FORMAT</h2>
 <p> The template file is an XSLT which needs to process the following input XML document: </p>
 <pre>
@@ -61,63 +61,61 @@ description: "mdoc export-html – Convert mdoc(5) XML to HTML."
 </pre>
 <p> The generated HTML also makes use of several CSS classes. You can either use the <i>create-default-style</i> named template found within the <i>&#8211;default-template</i> output to generate these classes, or explicitly define the following CSS classes:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>.CollectionTitle</i></p>
+<dt><i>.CollectionTitle</i></dt>
 <dd>
-<dt><i>.PageTitle</i></p>
+</dd><dt><i>.PageTitle</i></dt>
 <dd>
-<dt><i>.Summary</i></p>
+</dd><dt><i>.Summary</i></dt>
 <dd>
-<dt><i>.Signature</i></p>
+</dd><dt><i>.Signature</i></dt>
 <dd>
-<dt><i>.Remarks</i></p>
+</dd><dt><i>.Remarks</i></dt>
 <dd>
-<dt><i>.Members</i></p>
+</dd><dt><i>.Members</i></dt>
 <dd>
-<dt><i>.Copyright</i></p>
+</dd><dt><i>.Copyright</i></dt>
 <dd>
-<dt><i>.Section</i></p>
+</dd><dt><i>.Section</i></dt>
 <dd>
-<dt><i>.SectionBox</i></p>
+</dd><dt><i>.SectionBox</i></dt>
 <dd>
-<dt><i>.NamespaceName</i></p>
+</dd><dt><i>.NamespaceName</i></dt>
 <dd>
-<dt><i>.NamespaceSummary</i></p>
+</dd><dt><i>.NamespaceSummary</i></dt>
 <dd>
-<dt><i>.MemberName</i></p>
+</dd><dt><i>.MemberName</i></dt>
 <dd>
-<dt><i>.MemberSignature</i></p>
+</dd><dt><i>.MemberSignature</i></dt>
 <dd>
-<dt><i>.MemberBox</i></p>
+</dd><dt><i>.MemberBox</i></dt>
 <dd>
-<dt><i>.Subsection</i></p>
+</dd><dt><i>.Subsection</i></dt>
 <dd>
-<dt><i>.SubsectionBox</i></p>
+</dd><dt><i>.SubsectionBox</i></dt>
 <dd>
-<dt><i>.SignatureTable</i></p>
+</dd><dt><i>.SignatureTable</i></dt>
 <dd>
-<dt><i>.EnumerationsTable</i></p>
+</dd><dt><i>.EnumerationsTable</i></dt>
 <dd>
-<dt><i>.CodeExampleTable</i></p>
+</dd><dt><i>.CodeExampleTable</i></dt>
 <dd>
-<dt><i>.MembersListing</i></p>
+</dd><dt><i>.MembersListing</i></dt>
 <dd>
-<dt><i>.TypesListing</i></p>
+</dd><dt><i>.TypesListing</i></dt>
 <dd>
-<dt><i>.InnerSignatureTable</i></p>
+</dd><dt><i>.InnerSignatureTable</i></dt>
 <dd>
-<dt><i>.TypePermissionsTable</i></p>
-<dd></dl>
+</dd><dt><i>.TypePermissionsTable</i></dt>
+<dd></dd></dl>
 </dl>
 <h2>HTML LINKS</h2>
 <p> All members within the HTML file have an <i>id</i> attribute to permit linking to a specific member. The value of the <i>id</i> attribute is the String ID of the specified member. </p>
 <p> See the <i>CREF FORMAT</i> section of <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) for more information.</p>
 <h2>MAILING LISTS</h2>
 <dl>
-<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>
-<dd></dl>
+<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</dt>
+<dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdoc/">http://www.mono-project.com/docs/tools+libraries/tools/mdoc/</a> for details </p>
 <h2>Index</h2>

@@ -19,22 +19,22 @@ description: "shtool scpp – GNU shtool C source file pre-processor"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-p</code>, <code>&#8211;preserve</code></p>
-<dd> Preserves <i>ofile</i> independent of the generated &#8220;#line&#8221; lines. This is useful for Makefiles if the real contents of <i>ofile</i> will not change, just line numbers. Default is to overwrite.</p>
-<dt><code>-f</code>, <code>&#8211;filter</code> <i>filter</i></p>
-<dd> Apply one or more pre-processing <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) <i>filter</i> commands (usually of type &#8220;<tt>&quot;s/.../.../&quot;</tt>&#8221;) to each input file before their input is parsed. This option can occur multiple times.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>ofile</i></p>
-<dd> Output file name. Default is <tt>&quot;lib.h&quot;</tt>.</p>
-<dt><code>-t</code>, <code>&#8211;template</code> <i>tfile</i></p>
-<dd> Template file name. Default is <tt>&quot;lib.h.in&quot;</tt>.</p>
-<dt><code>-M</code>, <code>&#8211;mark</code> <i>mark</i></p>
-<dd> Mark to be replaced by generated constructs. Default is <tt>&quot;%%MARK%%&quot;</tt>.</p>
-<dt><code>-D</code>, <code>&#8211;define</code> <i>dname</i></p>
-<dd> <font SIZE="-1">FIXME.</font> Default is <tt>&quot;cpp&quot;</tt>.</p>
-<dt><code>-C</code>, <code>&#8211;class</code> <i>cname</i></p>
-<dd> <font SIZE="-1">FIXME.</font> Default is <tt>&quot;intern&quot;</tt>.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-p</code>, <code>&#8211;preserve</code></dt>
+<dd> Preserves <i>ofile</i> independent of the generated &#8220;#line&#8221; lines. This is useful for Makefiles if the real contents of <i>ofile</i> will not change, just line numbers. Default is to overwrite.</dd>
+<dt><code>-f</code>, <code>&#8211;filter</code> <i>filter</i></dt>
+<dd> Apply one or more pre-processing <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) <i>filter</i> commands (usually of type &#8220;<tt>&quot;s/.../.../&quot;</tt>&#8221;) to each input file before their input is parsed. This option can occur multiple times.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>ofile</i></dt>
+<dd> Output file name. Default is <tt>&quot;lib.h&quot;</tt>.</dd>
+<dt><code>-t</code>, <code>&#8211;template</code> <i>tfile</i></dt>
+<dd> Template file name. Default is <tt>&quot;lib.h.in&quot;</tt>.</dd>
+<dt><code>-M</code>, <code>&#8211;mark</code> <i>mark</i></dt>
+<dd> Mark to be replaced by generated constructs. Default is <tt>&quot;%%MARK%%&quot;</tt>.</dd>
+<dt><code>-D</code>, <code>&#8211;define</code> <i>dname</i></dt>
+<dd> <font SIZE="-1">FIXME.</font> Default is <tt>&quot;cpp&quot;</tt>.</dd>
+<dt><code>-C</code>, <code>&#8211;class</code> <i>cname</i></dt>
+<dd> <font SIZE="-1">FIXME.</font> Default is <tt>&quot;intern&quot;</tt>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre><code>
 #Makefile

@@ -13,67 +13,67 @@ description: "opaxlattopology Generates a topology XML file of a cluster using t
  [source [dest]]</p>
 <h2>Options</h2>
 <dl>
-<dt>-d <i>level</i></p>
-<dd>Output detail level. Default = 0. Levels are additive. </p>
-<dd>By default, the top level is always produced. Switch, rack, and rack group topology files can be added to the output by choosing the appropriate level. If the output at the group or rack level is specified, then group or rack names must be provided in the spreadsheet. Detailed output can be specified in any combination. A directory for each topology XML file is created hierarchically, with group directories (if specified) at the highest level, followed by rack and switch directories (if specified).</p>
+<dt>-d <i>level</i></dt>
+<dd>Output detail level. Default = 0. Levels are additive. </dd>
+<dd>By default, the top level is always produced. Switch, rack, and rack group topology files can be added to the output by choosing the appropriate level. If the output at the group or rack level is specified, then group or rack names must be provided in the spreadsheet. Detailed output can be specified in any combination. A directory for each topology XML file is created hierarchically, with group directories (if specified) at the highest level, followed by rack and switch directories (if specified).</dd>
 <dl>
 <dd>
-<dl>
-<dd>1 Intel(R) Omni-Path Edge Switch 100 Series topology files. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>2 Rack topology files. </p>
+</dd><dl>
+<dd>1 Intel(R) Omni-Path Edge Switch 100 Series topology files. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>4 Rack group topology files. </p>
-</dl>
-</dl>
-<dt>-v <i>level</i></p>
-<dd>Verbose level. Range = 0 &#8211; 8. Default = 2. </p>
-<dl>
-<dd>
-<dl>
-<dd>0 No output. </p>
+</dd><dl>
+<dd>2 Rack topology files. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>4 Rack group topology files. </dd>
+</dl>
+</dl>
+<dt>-v <i>level</i></dt>
+<dd>Verbose level. Range = 0 &#8211; 8. Default = 2. </dd>
 <dl>
-<dd>1 Progress output. </p>
+<dd>
+</dd><dl>
+<dd>0 No output. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>2 Reserved. </p>
+</dd><dl>
+<dd>1 Progress output. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>4 Time stamps. </p>
+</dd><dl>
+<dd>2 Reserved. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>4 Time stamps. </dd>
+</dl>
+</dl>
 <dl>
-<dd>8 Reserved. </p>
+<dd>
+</dd><dl>
+<dd>8 Reserved. </dd>
 </dl>
 </dl>
-<dt>-i <i>level</i></p>
-<dd>Output indent level. Range = 0 &#8211; 15. Default = 0. </p>
-<dt>-c <i>char</i></p>
-<dd>NodeDesc concatenation character. Used when creating NodeDesc values (that is, Name to Name-2, Name to HFI-1, and so on). A space is used by default, but another character, such as underscore, can be specified. </p>
-<dt>-K</p>
-<dd>Does not clean temporary files. Prevents temporary files in each topology directory from being removed. Temporary files contain CSV formatted lists of links, HFIs, and switches used to create a topology XML file. Temporary files are not typically needed after a topology file is created, however they are used for creating linksum_swd06.csv and linksum_swd24.csv files, or can be retained for subsequent inspection or processing. </p>
-<dt>-?</p>
-<dd>Prints this output. </p>
+<dt>-i <i>level</i></dt>
+<dd>Output indent level. Range = 0 &#8211; 15. Default = 0. </dd>
+<dt>-c <i>char</i></dt>
+<dd>NodeDesc concatenation character. Used when creating NodeDesc values (that is, Name to Name-2, Name to HFI-1, and so on). A space is used by default, but another character, such as underscore, can be specified. </dd>
+<dt>-K</dt>
+<dd>Does not clean temporary files. Prevents temporary files in each topology directory from being removed. Temporary files contain CSV formatted lists of links, HFIs, and switches used to create a topology XML file. Temporary files are not typically needed after a topology file is created, however they are used for creating linksum_swd06.csv and linksum_swd24.csv files, or can be retained for subsequent inspection or processing. </dd>
+<dt>-?</dt>
+<dd>Prints this output. </dd>
 </dl>
 <h2>Description</h2>
 <p>The opaxlattopology script reads the topology.csv file from the local directory, and reads the other files from /usr/lib/opa-ff/samples/linksum_swd06.csv and /usr/lib/opa-ff/samples/linksum_swd24.csv. The topology.csv file is created from the topology.xlsx spreadsheet by saving the Fabric Links tab as a .CSV file to topology.csv. A sample topology.xlsx is located in the /usr/lib/opa-ff/samples/ directory. Inspect the topology.csv file to ensure that each row contains the correct and same number of comma separators. Any extraneous entries in the spreadsheet can cause the CSV output to have extra fields. </p>
@@ -88,26 +88,26 @@ description: "opaxlattopology Generates a topology XML file of a cluster using t
 <h2>Environment Variables</h2>
 <p>The following environment variables allow user-specified MTU.</p>
 <dl>
-<dt><code>MTU_SW_SW</code></p>
-<dd>If set, it overrides default MTU on switch-to-switch links. Default = 10240 </p>
-<dt><code>MTU_SW_HFI</code></p>
-<dd>If set, it overrides default MTU on switch-to-HFI links. Default = 8192 </p>
+<dt><code>MTU_SW_SW</code></dt>
+<dd>If set, it overrides default MTU on switch-to-switch links. Default = 10240 </dd>
+<dt><code>MTU_SW_HFI</code></dt>
+<dd>If set, it overrides default MTU on switch-to-HFI links. Default = 8192 </dd>
 </dl>
 <h2>Creating linksum Files</h2>
 <p>The linksum_swd06.csv and linksum_swd24.csv files are provided as stand-alone files in the /usr/lib/opa-ff/samples directory. However, they can be recreated (or modified) from the spreadsheet, if needed, by performing the following steps: </p>
 <dl>
-<dt>1)</p>
-<dd>Save each of the following from the topology.xlsx file as individual .csv files:</p>
-<dt>&bull;</p>
-<dd>Internal SWD06 Links tab as linksum_swd06.csv</p>
-<dt>&bull;</p>
-<dd>Internal SWD24 Links tab as linksum_swd24.csv</p>
-<dt>&bull;</p>
-<dd>Fabric Links tab as topology.csv </p>
-<dt>2)</p>
-<dd>For each saved topology.csv file, run the script with the -K option. </p>
-<dt>3)</p>
-<dd>Upon completion of the script, save the top level linksum.csv file as linksum_swd06.csv or linksum_swd24.csv as appropriate. </p>
+<dt>1)</dt>
+<dd>Save each of the following from the topology.xlsx file as individual .csv files:</dd>
+<dt>&bull;</dt>
+<dd>Internal SWD06 Links tab as linksum_swd06.csv</dd>
+<dt>&bull;</dt>
+<dd>Internal SWD24 Links tab as linksum_swd24.csv</dd>
+<dt>&bull;</dt>
+<dd>Fabric Links tab as topology.csv </dd>
+<dt>2)</dt>
+<dd>For each saved topology.csv file, run the script with the -K option. </dd>
+<dt>3)</dt>
+<dd>Upon completion of the script, save the top level linksum.csv file as linksum_swd06.csv or linksum_swd24.csv as appropriate. </dd>
 </dl>
 <h2>Including SM Blocks in Topology</h2>
 <p>You must manually edit the /etc/sysconfig/opa/topology.0:0.xml file to include SM blocks for each SM in your fabric. opaxlattopology translates the topology.csv file which does not include SM blocks in the xml file by default. If manual edits are not completed, then the command opareport -o verifyall -T topology.0:0.xml fails with errors similar to the following:# opareport -o verifyall -T topology.0:0.xml<br />

@@ -27,3 +27,4 @@ description: "star – tape archive file format"
 #define TMTMLEN 12
 #define TCKSLEN 8
 #define TMAGIC &quot;ustar&quot; /* ustar magic 6 chars + '
+</pre>

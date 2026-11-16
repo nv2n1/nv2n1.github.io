@@ -14,10 +14,10 @@ description: "skb_peek_next – peek skb following the given one from a queue"
 <p><i>skb</i></p>
 <dl>
 <dd>
-<dd>skb to start from</dl>
+</dd><dd>skb to start from</dd></dl>
 <p> <i>list_</i></p>
 <dl>
-<dd>list to peek at</dl>
+<dd>list to peek at</dd></dl>
 <h2>Description</h2>
 <p>Returns <code>NULL</code> when the end of the list is met or a pointer to the next element. The reference count is not incremented and the reference is therefore volatile. Use with caution.</p>
 <h2>Copyright</h2>

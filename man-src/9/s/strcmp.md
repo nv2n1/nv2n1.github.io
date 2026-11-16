@@ -15,11 +15,11 @@ strcmp - Compare two strings
 <h2>Arguments</h2>
 
 <i>cs</i>
-<dl><dd><dd>One string</dl>
+<dl><dd></dd><dd>One string</dd></dl>
  
 
  <i>ct</i>
-<dl><dd>Another string</dl>
+<dl><dd>Another string</dd></dl>
 
 <h2>Copyright</h2>
 

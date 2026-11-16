@@ -28,28 +28,27 @@ url: "/docs/linux/man/1-vdcomp/"
 
 <dl>
 <dt>
-<dd> The name of compressed image file.</dl>
+</dt><dd> The name of compressed image file.</dd></dl>
  
 
  <i>outfile</i> 
 
 <dl>
 <dt>
-<dd> The name of uncompressed image file.</dl>
+</dt><dd> The name of uncompressed image file.</dd></dl>
  
 
  <i>format-code</i> 
 
 <dl>
 <dt>
-<dd> Select from the following list: 
-
-<dl>
+</dt><dd> Select from the following list: 
+</dd><dl>
 <dt>
-<dd> <i>1</i> - SFDU/PDS format [default] 
+</dt><dd> <i>1</i> - SFDU/PDS format [default] 
  <i>2</i> - FITS format 
  <i>3</i> - VICAR format 
- <i>4</i> - unlabelled binary array</dl>
+ <i>4</i> - unlabelled binary array</dd></dl>
 </dl>
 
 <h2>Limitations</h2>

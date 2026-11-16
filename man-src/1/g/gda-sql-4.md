@@ -22,28 +22,28 @@ description: "gda-sql – an SQL console based on Libgda"
 <h2>OPTIONS</h2>
 <p> gda-sql accepts the following options: </p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show command-line options.</p>
-<dt><code>-o, &#8211;output-file </code><i>&lt;filename&gt;</i></p>
-<dd> Specifies a file to which outputs are redirected.</p>
-<dt><code>-C, &#8211;command</code></p>
-<dd> Run only single command (SQL or internal) and exit.</p>
-<dt><code>-f, &#8211;commands-file </code><i>&lt;filename&gt;</i></p>
-<dd> Execute commands from <i>&lt;filename&gt;</i>, then exit (except if -i specified).</p>
-<dt><code>-i, &#8211;interactive</code></p>
-<dd> Keep the console opened after executing a file (used with the -f option).</p>
-<dt><code>-l, &#8211;list-dsn</code></p>
-<dd> List configured data sources and exit.</p>
-<dt><code>-L, &#8211;list-providers</code></p>
-<dd> List installed database providers and exit</p>
-<dt><code>-s, &#8211;http-port </code><i>&lt;port&gt;</i></p>
-<dd> Starts the embedded HTTP server on port <i>&lt;port&gt;</i></p>
-<dt><code>-t, &#8211;http-token </code><i>&lt;token phrase&gt;</i></p>
-<dd> Requires HTTP clients to authenticate by providing the <i>&lt;token phrase&gt;</i> (empty phrase by default)</p>
-<dt><code>&#8211;data-files-list</code></p>
-<dd> Lists all the files used to hold information related to each connection (ie. information gathered by the tool about the connection such as meta data, defined statements,&#8230;)</p>
-<dt><code>&#8211;data-files-purge </code><i>&lt;criteria&gt;</i></p>
-<dd> Removes file used to hold information related to each connection for the criteria passed as argument (note that adding <code>&quot;list-only&quot;</code> to the criteria, either before or after it using a comma, will not actually remove the file): </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Show command-line options.</dd>
+<dt><code>-o, &#8211;output-file </code><i>&lt;filename&gt;</i></dt>
+<dd> Specifies a file to which outputs are redirected.</dd>
+<dt><code>-C, &#8211;command</code></dt>
+<dd> Run only single command (SQL or internal) and exit.</dd>
+<dt><code>-f, &#8211;commands-file </code><i>&lt;filename&gt;</i></dt>
+<dd> Execute commands from <i>&lt;filename&gt;</i>, then exit (except if -i specified).</dd>
+<dt><code>-i, &#8211;interactive</code></dt>
+<dd> Keep the console opened after executing a file (used with the -f option).</dd>
+<dt><code>-l, &#8211;list-dsn</code></dt>
+<dd> List configured data sources and exit.</dd>
+<dt><code>-L, &#8211;list-providers</code></dt>
+<dd> List installed database providers and exit</dd>
+<dt><code>-s, &#8211;http-port </code><i>&lt;port&gt;</i></dt>
+<dd> Starts the embedded HTTP server on port <i>&lt;port&gt;</i></dd>
+<dt><code>-t, &#8211;http-token </code><i>&lt;token phrase&gt;</i></dt>
+<dd> Requires HTTP clients to authenticate by providing the <i>&lt;token phrase&gt;</i> (empty phrase by default)</dd>
+<dt><code>&#8211;data-files-list</code></dt>
+<dd> Lists all the files used to hold information related to each connection (ie. information gathered by the tool about the connection such as meta data, defined statements,&#8230;)</dd>
+<dt><code>&#8211;data-files-purge </code><i>&lt;criteria&gt;</i></dt>
+<dd> Removes file used to hold information related to each connection for the criteria passed as argument (note that adding <code>&quot;list-only&quot;</code> to the criteria, either before or after it using a comma, will not actually remove the file): </dd>
 <p> <code>&quot;non-dsn&quot;</code>: remove all the files which do not correspond to a DSN (data source name). These are the files created when a connection is specified using connection parameters instead of using a DSN </p>
 <p> <code>&quot;non-exist-dsn&quot;</code>: same as <code>&quot;non-dsn&quot;</code> except it also removes the files which were for DSN which don&#8217;t exist anymore </p>
 <p> <code>&quot;all&quot;</code>: remove all the files, for a complete cleanup </p>
@@ -52,32 +52,32 @@ description: "gda-sql – an SQL console based on Libgda"
 <h2>ENVIRONMENT</h2>
 <p> gda-sql can be configured through some environment variables: </p>
 <dl>
-<dt><code>GDA_SQL_CNC</code></p>
-<dd> to define a connection to systematically be opened when the program starts.</p>
-<dt><code>PAGER</code></p>
-<dd> to define a text pager program to use (by default determined by the system).</p>
-<dt><code>GDA_NO_PAGER</code></p>
-<dd> to specify that no text pager should be used.</p>
-<dt><code>GDA_SQL_EDITOR EDITOR VISUAL</code></p>
-<dd> to define a text editor to be used (variables are examined in this order).</p>
-<dt><code>GDA_SQL_VIEWER_PNG</code></p>
-<dd> to define a PNG viewer.</p>
-<dt><code>GDA_SQL_VIEWER_PDF</code></p>
-<dd> to define a PDF viewer.</p>
-<dt><code>GDA_SQL_HISTFILE</code></p>
-<dd> to define the history file name to use (by default .gdasql_history), set to NO_HISTORY to disable history logging.</p>
-<dt><code>GDA_DATA_MODEL_DUMP_ROW_NUMBERS</code></p>
-<dd> if set, the first column of the output will contain row numbers</p>
-<dt><code>GDA_DATA_MODEL_DUMP_ATTRIBUTES</code></p>
-<dd> if set, also dump the data model&#8217;s columns&#8217; types and value&#8217;s attributes</p>
-<dt><code>GDA_DATA_MODEL_DUMP_TITLE</code></p>
-<dd> if set, also dump the data model&#8217;s title</p>
-<dt><code>GDA_DATA_MODEL_NULL_AS_EMPTY</code></p>
-<dd> if set, replace the &#8216;NULL&#8217; string with an empty string for NULL values</p>
-<dt><code>GDA_DATA_MODEL_DUMP_TRUNCATE</code></p>
-<dd> if set to a numeric value, truncates the output to the width specified by the value. If the value is -1 then the actual terminal size (if it can be determined) is used </p>
-<dt>gda-sql can be compiled with support for binary relocatibility.</p>
-<dd> This will cause data, plug-ins and configuration files to be searched relative to the location of the gda-sql executable file. </p>
+<dt><code>GDA_SQL_CNC</code></dt>
+<dd> to define a connection to systematically be opened when the program starts.</dd>
+<dt><code>PAGER</code></dt>
+<dd> to define a text pager program to use (by default determined by the system).</dd>
+<dt><code>GDA_NO_PAGER</code></dt>
+<dd> to specify that no text pager should be used.</dd>
+<dt><code>GDA_SQL_EDITOR EDITOR VISUAL</code></dt>
+<dd> to define a text editor to be used (variables are examined in this order).</dd>
+<dt><code>GDA_SQL_VIEWER_PNG</code></dt>
+<dd> to define a PNG viewer.</dd>
+<dt><code>GDA_SQL_VIEWER_PDF</code></dt>
+<dd> to define a PDF viewer.</dd>
+<dt><code>GDA_SQL_HISTFILE</code></dt>
+<dd> to define the history file name to use (by default .gdasql_history), set to NO_HISTORY to disable history logging.</dd>
+<dt><code>GDA_DATA_MODEL_DUMP_ROW_NUMBERS</code></dt>
+<dd> if set, the first column of the output will contain row numbers</dd>
+<dt><code>GDA_DATA_MODEL_DUMP_ATTRIBUTES</code></dt>
+<dd> if set, also dump the data model&#8217;s columns&#8217; types and value&#8217;s attributes</dd>
+<dt><code>GDA_DATA_MODEL_DUMP_TITLE</code></dt>
+<dd> if set, also dump the data model&#8217;s title</dd>
+<dt><code>GDA_DATA_MODEL_NULL_AS_EMPTY</code></dt>
+<dd> if set, replace the &#8216;NULL&#8217; string with an empty string for NULL values</dd>
+<dt><code>GDA_DATA_MODEL_DUMP_TRUNCATE</code></dt>
+<dd> if set to a numeric value, truncates the output to the width specified by the value. If the value is -1 then the actual terminal size (if it can be determined) is used </dd>
+<dt>gda-sql can be compiled with support for binary relocatibility.</dt>
+<dd> This will cause data, plug-ins and configuration files to be searched relative to the location of the gda-sql executable file. </dd>
 </dl>
 <h2>FILES</h2>
 <p> gda-sql stores data source definitions (DSN) in Libgda defined files ($HOME/.local/share/libgda and /etc/libgda-4.0/config where ${prefix} is typically /usr). </p>
@@ -88,98 +88,98 @@ description: "gda-sql – an SQL console based on Libgda"
 <h2>Internal commands</h2>
 <p> In addition to SQL commands, gda-sql supports internal commands which differ from SQL commands because they start with the &quot;.&quot; or &quot;\&quot; character. These commands are: </p>
 <dl>
-<dt><code>.?</code></p>
-<dd> Lists all internal commands</p>
-<dt><code>.bind</code></p>
-<dd> Bind two or more connections into a single new one (allowing SQL commands to be executed across multiple connections). <code>.bind &lt;CNC_NAME&gt; &lt;CNC_NAME1&gt; &lt;CNC_NAME2&gt; [&lt;CNC_NAME&gt; &#8230;]</code> creates a new connection named <i>&lt;CNC_NAME&gt;</i> which binds the tables of the <i>&lt;CNC_NAME1&gt;</i>, <i>&lt;CNC_NAME2&gt;</i> and any other connection specified.</p>
-<dt><code>.c</code></p>
-<dd> Opens a connection or sets the current connection. Username and password can pe specified using the <code>&lt;USERNAME&gt;[:&lt;PASSWORD&gt;]@&lt;DSN_NAME&gt;</code> or <code>&lt;USERNAME&gt;[:&lt;PASSWORD&gt;]@&lt;CNC_DEFINITION&gt;</code> syntax, and if a username or a password is required but not specified, it will ba asked interactively. </p>
+<dt><code>.?</code></dt>
+<dd> Lists all internal commands</dd>
+<dt><code>.bind</code></dt>
+<dd> Bind two or more connections into a single new one (allowing SQL commands to be executed across multiple connections). <code>.bind &lt;CNC_NAME&gt; &lt;CNC_NAME1&gt; &lt;CNC_NAME2&gt; [&lt;CNC_NAME&gt; &#8230;]</code> creates a new connection named <i>&lt;CNC_NAME&gt;</i> which binds the tables of the <i>&lt;CNC_NAME1&gt;</i>, <i>&lt;CNC_NAME2&gt;</i> and any other connection specified.</dd>
+<dt><code>.c</code></dt>
+<dd> Opens a connection or sets the current connection. Username and password can pe specified using the <code>&lt;USERNAME&gt;[:&lt;PASSWORD&gt;]@&lt;DSN_NAME&gt;</code> or <code>&lt;USERNAME&gt;[:&lt;PASSWORD&gt;]@&lt;CNC_DEFINITION&gt;</code> syntax, and if a username or a password is required but not specified, it will ba asked interactively. </dd>
 <p> <code>.c &lt;CNC_NAME&gt; &lt;DSN_NAME&gt;</code> opens a connection internally known as <i>&lt;CNC_NAME&gt;</i>, using the specified DSN. </p>
 <p> <code>.c &lt;CNC_NAME&gt; &lt;CNC_DEFINITION&gt; </code> opens a connection internally known as <i>&lt;CNC_NAME&gt;</i>, using a connection specified by <i>&lt;CNC_DEFINITION&gt;</i> which is similar to the <i>&lt;DSN_DEFINITION&gt;</i> parameter of the <code>.lc</code> command. </p>
 <p> <code>.c &lt;CNC_NAME&gt;</code> sets the current connection to the connection known as <i>&lt;CNC_NAME&gt;</i>. </p>
 <p> <code>.c ~</code> or <code>.c ~&lt;CNC_NAME&gt;</code> set the current connection to the meta data corresponding to the current connection (for the first notation) or to the meta data corresponding to the <i>&lt;CNC_NAME&gt;</i> connection.</p>
-<dt><code>.close</code></p>
-<dd> Closes a connection. Full syntax is: <code>.close &lt;CNC_NAME&gt;</code>.</p>
-<dt><code>.cd</code></p>
-<dd> Changes the current working directory. Full syntax is: <code>.cd &lt;DIR_NAME&gt;</code>.</p>
-<dt><code>.copyright</code></p>
-<dd> Displays copyright information.</p>
-<dt><code>.d</code></p>
-<dd> Lists all database objects if no argument is provided. <code>.d &lt;OBJ_NAME&gt;</code> gives details about the specified object and <code>.d &lt;SCHEMA&gt;.*</code> lists all objects in specified schema.</p>
-<dt><code>.dn</code></p>
-<dd> Lists all schemas if no argument is provided. <code>.d &lt;SCHEMA_NAME&gt;</code> lists specified schema.</p>
-<dt><code>.dt</code></p>
-<dd> Lists all tables if no argument is provided. <code>.d &lt;TABLE_NAME&gt;</code> lists specified table.</p>
-<dt><code>.dv</code></p>
-<dd> Lists all views if no argument is provided. <code>.d &lt;VIEW_NAME&gt;</code> lists specified view.</p>
-<dt><code>.fkdeclare</code></p>
-<dd> Declares a new foreign key (no constraint is added to the database). The meta data is modified to take into account a foreign key constraint. The foreign key specification is <code> &lt;fkname&gt; &lt;tableA&gt;(&lt;colA&gt;,&#8230;) &lt;tableB&gt;(&lt;colB&gt;,&#8230;)</code> where <code>&lt;fkname&gt;</code> is the name given to the foreign key constraint and <code>&lt;tableA&gt;</code> references <code>&lt;tableB&gt;</code> using the columns mentionned between the parenthesis. Note that the (<code>&lt;fkname&gt;</code>, <code>&lt;tableA&gt;</code>, <code>&lt;tableB&gt;</code>) triplet uniquely identifies a declared foreign key (declaring a new foreign key with the same triplet will remove any previously declared one). <i>Note:</i> any actual foreign key constraint will always have precedence over any declared foreign key.</p>
-<dt><code>.fkundeclare</code></p>
-<dd> Un-declares a foreign key (does the opposite of <code>.fkdeclare</code>).</p>
-<dt><code>.e</code></p>
-<dd> Edits the query buffer with external editor, if no argument is provided. <code>.e &lt;FILE_NAME&gt;</code> edits the specified file name. The external editor can be specified using environment variables.</p>
-<dt><code>.echo</code></p>
-<dd> Sends output to stdout, full command is: <code>.echo [&lt;TEXT&gt;]</code>.</p>
-<dt><code>.export</code></p>
-<dd> Exports internal parameter or table&#8217;s value to the FILE file. Internal parameters are named values used when SQL statement containing variables are executed. </p>
+<dt><code>.close</code></dt>
+<dd> Closes a connection. Full syntax is: <code>.close &lt;CNC_NAME&gt;</code>.</dd>
+<dt><code>.cd</code></dt>
+<dd> Changes the current working directory. Full syntax is: <code>.cd &lt;DIR_NAME&gt;</code>.</dd>
+<dt><code>.copyright</code></dt>
+<dd> Displays copyright information.</dd>
+<dt><code>.d</code></dt>
+<dd> Lists all database objects if no argument is provided. <code>.d &lt;OBJ_NAME&gt;</code> gives details about the specified object and <code>.d &lt;SCHEMA&gt;.*</code> lists all objects in specified schema.</dd>
+<dt><code>.dn</code></dt>
+<dd> Lists all schemas if no argument is provided. <code>.d &lt;SCHEMA_NAME&gt;</code> lists specified schema.</dd>
+<dt><code>.dt</code></dt>
+<dd> Lists all tables if no argument is provided. <code>.d &lt;TABLE_NAME&gt;</code> lists specified table.</dd>
+<dt><code>.dv</code></dt>
+<dd> Lists all views if no argument is provided. <code>.d &lt;VIEW_NAME&gt;</code> lists specified view.</dd>
+<dt><code>.fkdeclare</code></dt>
+<dd> Declares a new foreign key (no constraint is added to the database). The meta data is modified to take into account a foreign key constraint. The foreign key specification is <code> &lt;fkname&gt; &lt;tableA&gt;(&lt;colA&gt;,&#8230;) &lt;tableB&gt;(&lt;colB&gt;,&#8230;)</code> where <code>&lt;fkname&gt;</code> is the name given to the foreign key constraint and <code>&lt;tableA&gt;</code> references <code>&lt;tableB&gt;</code> using the columns mentionned between the parenthesis. Note that the (<code>&lt;fkname&gt;</code>, <code>&lt;tableA&gt;</code>, <code>&lt;tableB&gt;</code>) triplet uniquely identifies a declared foreign key (declaring a new foreign key with the same triplet will remove any previously declared one). <i>Note:</i> any actual foreign key constraint will always have precedence over any declared foreign key.</dd>
+<dt><code>.fkundeclare</code></dt>
+<dd> Un-declares a foreign key (does the opposite of <code>.fkdeclare</code>).</dd>
+<dt><code>.e</code></dt>
+<dd> Edits the query buffer with external editor, if no argument is provided. <code>.e &lt;FILE_NAME&gt;</code> edits the specified file name. The external editor can be specified using environment variables.</dd>
+<dt><code>.echo</code></dt>
+<dd> Sends output to stdout, full command is: <code>.echo [&lt;TEXT&gt;]</code>.</dd>
+<dt><code>.export</code></dt>
+<dd> Exports internal parameter or table&#8217;s value to the FILE file. Internal parameters are named values used when SQL statement containing variables are executed. </dd>
 <p> <code>.export &lt;NAME&gt; &lt;FILE_NAME&gt;</code> exports the contents of the <i>&lt;NAME&gt;</i> parameter to the specified file. </p>
 <p> <code>.export &lt;TABLE&gt; &lt;COLUMN&gt; &lt;ROW_CONDITION&gt; &lt;FILE_NAME&gt;</code> exports the value of the <i>&lt;TABLE&gt;</i> table, column <i>&lt;COLUMN&gt;</i> for the row selected by <i>&lt;ROW_CONDITION&gt;</i> to the specified file. This is most useful to export BLOBs.</p>
-<dt><code>.g</code></p>
-<dd> Executes the contents of the query buffer, if no parameter is provided. <code>.g &lt;QUERY_BUFFER_NAME&gt;</code> Executes the contents of the specified query buffer. A named query buffer is created using the <code>.qs</code> command.</p>
-<dt><code>.graph</code></p>
-<dd> Creates a graph of tables showing their relations (based on foreign key constraints). If no argument is provided, the graph lists all tables. <code>.graph &lt;TABLE_NAME&gt; [&lt;TABLE_NAME&gt;&#8230;]</code> creates a graph listing the specified tables. </p>
+<dt><code>.g</code></dt>
+<dd> Executes the contents of the query buffer, if no parameter is provided. <code>.g &lt;QUERY_BUFFER_NAME&gt;</code> Executes the contents of the specified query buffer. A named query buffer is created using the <code>.qs</code> command.</dd>
+<dt><code>.graph</code></dt>
+<dd> Creates a graph of tables showing their relations (based on foreign key constraints). If no argument is provided, the graph lists all tables. <code>.graph &lt;TABLE_NAME&gt; [&lt;TABLE_NAME&gt;&#8230;]</code> creates a graph listing the specified tables. </dd>
 <p> The generated graph is created as the &quot;gdaph.dot&quot; file. If the <code>GDA_SQL_VIEWER_PNG</code> or <code>GDA_SQL_VIEWER_PDF</code> environment variables are set and if the &quot;dot&quot; program (from GraphViz) is found, then the graph is displayed (if a display is available).</p>
-<dt><code>.H</code></p>
-<dd> Set output format. Full syntax is: <code>.H [HTML|XML|CSV|DEFAULT]</code>.</p>
-<dt><code>.http</code></p>
-<dd> Starts/stops the embedded HTTP server. Full syntax is <code>.http [&lt;port&gt; [&lt;authentication_token&gt;]]</code>, where <i>&lt;authentication_token&gt;</i> is an optional token phrase which HTTP clients are required to send to authenticate.</p>
-<dt><code>.i</code></p>
-<dd> Executes commands from file the specified file: <code>.i &lt;FILE_NAME&gt;</code>.</p>
-<dt><code>.l</code></p>
-<dd> Lists all data sources if no argument is provided. <code>.l &lt;DSN&gt;</code> lists information about the specified DSN.</p>
-<dt><code>.lp</code></p>
-<dd> Lists all available database providers if no argument is provided. <code>.lp &lt;provider&gt;</code> lists information about the specified provider.</p>
-<dt><code>.lc</code></p>
-<dd> Declares a DSN. Full syntax is: <code>.lc &lt;DSN_NAME&gt; &lt;DSN_DEFINITION&gt; [&lt;DESCRIPTION&gt;]</code>. The <i>&lt;DSN_DEFINITION&gt;</i> format is: <i>&lt;provider&gt;://[&lt;username&gt;[:&lt;password&gt;]@]&lt;connection_params&gt;</i> where <i>&lt;connection_params&gt;</i> is a semi-colon (&quot;;&quot;) separated list of &lt;key&gt;=&lt;value&gt; pairs where <i>&lt;key&gt;</i> is defined when using <code>.lp &lt;provider&gt;</code> (if <i>&lt;value&gt;</i> contains non alphanumeric characters, they should be represented as specified by the RFC 1738). </p>
+<dt><code>.H</code></dt>
+<dd> Set output format. Full syntax is: <code>.H [HTML|XML|CSV|DEFAULT]</code>.</dd>
+<dt><code>.http</code></dt>
+<dd> Starts/stops the embedded HTTP server. Full syntax is <code>.http [&lt;port&gt; [&lt;authentication_token&gt;]]</code>, where <i>&lt;authentication_token&gt;</i> is an optional token phrase which HTTP clients are required to send to authenticate.</dd>
+<dt><code>.i</code></dt>
+<dd> Executes commands from file the specified file: <code>.i &lt;FILE_NAME&gt;</code>.</dd>
+<dt><code>.l</code></dt>
+<dd> Lists all data sources if no argument is provided. <code>.l &lt;DSN&gt;</code> lists information about the specified DSN.</dd>
+<dt><code>.lp</code></dt>
+<dd> Lists all available database providers if no argument is provided. <code>.lp &lt;provider&gt;</code> lists information about the specified provider.</dd>
+<dt><code>.lc</code></dt>
+<dd> Declares a DSN. Full syntax is: <code>.lc &lt;DSN_NAME&gt; &lt;DSN_DEFINITION&gt; [&lt;DESCRIPTION&gt;]</code>. The <i>&lt;DSN_DEFINITION&gt;</i> format is: <i>&lt;provider&gt;://[&lt;username&gt;[:&lt;password&gt;]@]&lt;connection_params&gt;</i> where <i>&lt;connection_params&gt;</i> is a semi-colon (&quot;;&quot;) separated list of &lt;key&gt;=&lt;value&gt; pairs where <i>&lt;key&gt;</i> is defined when using <code>.lp &lt;provider&gt;</code> (if <i>&lt;value&gt;</i> contains non alphanumeric characters, they should be represented as specified by the RFC 1738). </dd>
 <p> If a DSN with a similar name already exists, it is first removed. </p>
 <p> For example: &quot;.lc mydsn PostgreSQL://HOST=moon;DB_NAME=mydb&quot;.</p>
-<dt><code>.lr</code></p>
-<dd> Removes a DSN declaration. Full syntax is: <code>.lc &lt;DSN_NAME&gt;</code>.</p>
-<dt><code>.meta</code></p>
-<dd> Updates the current connection&#8217;s meta data (use this command after having modified the database&#8217;s schema).</p>
-<dt><code>.o</code></p>
-<dd> Sends output to a file or |pipe. Full syntax is: <code>.o &lt;FILE_NAME&gt;</code> or <code>.o |&lt;COMMAND&gt;</code>.</p>
-<dt><code>.q</code></p>
-<dd> Quits the application.</p>
-<dt><code>.qecho</code></p>
-<dd> Sends output to the output stream (stdout). Full syntax is: <code>.qecho &lt;TEXT&gt;</code>.</p>
-<dt><code>.qa</code></p>
-<dd> Lists all saved query buffers in dictionary.</p>
-<dt><code>.qd</code></p>
-<dd> Deletes a query buffer from the dictionary. Full syntax is: <code>.qd &lt;QUERY_BUFFER_NAME&gt;</code></p>
-<dt><code>.ql</code></p>
-<dd> Loads query buffer from dictionary into the current query buffer. Full syntax is: <code>.ql &lt;QUERY_BUFFER_NAME&gt;</code>.</p>
-<dt><code>.qp</code></p>
-<dd> Shows the contents of the current query buffer.</p>
-<dt><code>.qr</code></p>
-<dd> Resets the query buffer to empty if no argument is provided. <code>.qr &lt;FILE _NAME&gt;</code> loads the specified file into the query buffer.</p>
-<dt><code>.qs</code></p>
-<dd> Saves query buffer to dictionary, full syntax is <code>.qs &lt;QUERY_BUFFER_NAME&gt;</code>. This creates a new query buffer with the specified name in the dictionary, containing the current query buffer.</p>
-<dt><code>.qw</code></p>
-<dd> Writes the query buffer to the specified file, full syntax is <code>.qw &lt;FILE_NAME&gt;</code>.</p>
-<dt><code>.s</code></p>
-<dd> Show commands history. <code>.s &lt;FILE_NAME&gt;</code> saves command history to specified file.</p>
-<dt><code>.set</code></p>
-<dd> Sets, shows or lists internal parameters. </p>
+<dt><code>.lr</code></dt>
+<dd> Removes a DSN declaration. Full syntax is: <code>.lc &lt;DSN_NAME&gt;</code>.</dd>
+<dt><code>.meta</code></dt>
+<dd> Updates the current connection&#8217;s meta data (use this command after having modified the database&#8217;s schema).</dd>
+<dt><code>.o</code></dt>
+<dd> Sends output to a file or |pipe. Full syntax is: <code>.o &lt;FILE_NAME&gt;</code> or <code>.o |&lt;COMMAND&gt;</code>.</dd>
+<dt><code>.q</code></dt>
+<dd> Quits the application.</dd>
+<dt><code>.qecho</code></dt>
+<dd> Sends output to the output stream (stdout). Full syntax is: <code>.qecho &lt;TEXT&gt;</code>.</dd>
+<dt><code>.qa</code></dt>
+<dd> Lists all saved query buffers in dictionary.</dd>
+<dt><code>.qd</code></dt>
+<dd> Deletes a query buffer from the dictionary. Full syntax is: <code>.qd &lt;QUERY_BUFFER_NAME&gt;</code></dd>
+<dt><code>.ql</code></dt>
+<dd> Loads query buffer from dictionary into the current query buffer. Full syntax is: <code>.ql &lt;QUERY_BUFFER_NAME&gt;</code>.</dd>
+<dt><code>.qp</code></dt>
+<dd> Shows the contents of the current query buffer.</dd>
+<dt><code>.qr</code></dt>
+<dd> Resets the query buffer to empty if no argument is provided. <code>.qr &lt;FILE _NAME&gt;</code> loads the specified file into the query buffer.</dd>
+<dt><code>.qs</code></dt>
+<dd> Saves query buffer to dictionary, full syntax is <code>.qs &lt;QUERY_BUFFER_NAME&gt;</code>. This creates a new query buffer with the specified name in the dictionary, containing the current query buffer.</dd>
+<dt><code>.qw</code></dt>
+<dd> Writes the query buffer to the specified file, full syntax is <code>.qw &lt;FILE_NAME&gt;</code>.</dd>
+<dt><code>.s</code></dt>
+<dd> Show commands history. <code>.s &lt;FILE_NAME&gt;</code> saves command history to specified file.</dd>
+<dt><code>.set</code></dt>
+<dd> Sets, shows or lists internal parameters. </dd>
 <p> <code>.set</code> lists all the defined internal parameters. </p>
 <p> <code>.set &lt;NAME&gt; &lt;VALUE&gt;</code> (re)defines the internal parameter named <i>&lt;NAME&gt;</i> to the specified value (which can be the <i>_null_</i> literal to set it to NULL). </p>
 <p> <code>.set &lt;NAME&gt;</code> shows the contents of the internal parameter named <i>&lt;NAME&gt;</i>.</p>
-<dt><code>.setex</code></p>
-<dd> Set internal parameter as the contents of the FILE file or from an existing table&#8217;s value. </p>
+<dt><code>.setex</code></dt>
+<dd> Set internal parameter as the contents of the FILE file or from an existing table&#8217;s value. </dd>
 <p> <code>.setex &lt;NAME&gt; &lt;FILE_NAME&gt;</code> (re)defines the the internal parameter named <i>&lt;NAME&gt;</i> with the contents of the specified file name. </p>
 <p> <code>.setex &lt;NAME&gt; &lt;TABLE&gt; &lt;COLUMN&gt; &lt;ROW_CONDITION&gt;</code> (re)defines the the internal parameter named <i>&lt;NAME&gt;</i> with the value of the <i>&lt;TABLE&gt;</i> table, column <i>&lt;COLUMN&gt;</i> for the row selected by <i>&lt;ROW_CONDITION&gt;</i>.This is most useful to export BLOBs.</p>
-<dt><code>.unset</code></p>
-<dd> Unset (delete) internal parameter. </p>
+<dt><code>.unset</code></dt>
+<dd> Unset (delete) internal parameter. </dd>
 <p> <code>.unset</code> unsets all the internal parameters. </p>
 <p> <code>.unset &lt;NAME&gt;</code> unsets the internal parameter named <i>&lt;NAME&gt;</i>.</dl>
 <h2>SUGGESTIONS AND BUG REPORTS</h2>
@@ -192,3 +192,4 @@ description: "gda-sql – an SQL console based on Libgda"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-psql/">psql</a></code>(1), <code><a href="/docs/linux/man/1-mysql/">mysql</a></code>(1), <code><a href="/docs/linux/man/1-sqlite3/">sqlite3</a></code>(1) </p>
 <h2>Index</h2>
+</p>

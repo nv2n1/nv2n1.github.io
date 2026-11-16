@@ -14,7 +14,7 @@ description: "ata_hpa_resize – Resize a device with an HPA set"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to resize</dl>
+</dd><dd>Device to resize</dd></dl>
 <h2>Description</h2>
 <p>Read the size of an LBA28 or LBA48 disk with HPA features and resize it if required to the full size of the media. The caller must check the drive has the HPA feature set enabled.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ata_hpa_resize – Resize a device with an HPA set"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

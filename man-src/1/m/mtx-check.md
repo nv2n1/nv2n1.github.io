@@ -15,8 +15,8 @@ description: "mtx-check – Basic ConTeXt Syntax Checking"
 <p> <code>Basic ConTeXt Syntax Checking</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd> check tex file for errors</dl>
+<dt><code>&#8211;check</code></dt>
+<dd> check tex file for errors</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -13,12 +13,12 @@ description: "pskc_parse_from_memory – API function"
 int pskc_parse_from_memory(pskc_t *container, size_t len, const char *buffer);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>size_t len</p>
-<dd>length of <i>buffer</i>.</p>
-<dt>const char * buffer</p>
-<dd>XML data to parse.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>size_t len</dt>
+<dd>length of <i>buffer</i>.</dd>
+<dt>const char * buffer</dt>
+<dd>XML data to parse.</dd></dl>
 <h2>Description</h2>
 <p>This function will parse the XML data in <i>buffer</i> of <i>len</i> size into <i>container</i>. If <code>PSKC_PARSE_ERROR</code> is returned, parsing of some elements have failed but the <i>container</i> is still valid and contain partially parsed information. In this situation, you may continue but raise a warning.</p>
 <h2>Returns</h2>

@@ -18,22 +18,21 @@ node-gyp &lt;command&gt; [args]
 <p> Multiple target versions of node are supported (from node 0.6 to the next released version), regardless of what version of node is actually installed on your system; <code>node-gyp</code> downloads the necessary development files for the target version.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <code>build</code> Invokes <code>make</code>/<code>msbuild.exe</code> and builds the native addon</p>
-<dt>&bull;</p>
-<dd> <code>clean</code> Removes any the <code>build</code> dir if it exists</p>
-<dt>&bull;</p>
-<dd> <code>configure</code> Generates project build files for the current platform</p>
-<dt>&bull;</p>
-<dd> <code>rebuild</code> Runs <code>clean</code>, <code>configure</code> and <code>build</code> all in a row</p>
-<dt>&bull;</p>
-<dd> <code>install</code> &lt;version&gt; Installs node development header files for the given version</p>
-<dt>&bull;</p>
-<dd> <code>list</code> Lists the currently installed node development file versions</p>
-<dt>&bull;</p>
-<dd> <code>remove</code> &lt;version&gt; Removes the node development header files for the given version</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> <code>build</code> Invokes <code>make</code>/<code>msbuild.exe</code> and builds the native addon</dd>
+<dt>&bull;</dt>
+<dd> <code>clean</code> Removes any the <code>build</code> dir if it exists</dd>
+<dt>&bull;</dt>
+<dd> <code>configure</code> Generates project build files for the current platform</dd>
+<dt>&bull;</dt>
+<dd> <code>rebuild</code> Runs <code>clean</code>, <code>configure</code> and <code>build</code> all in a row</dd>
+<dt>&bull;</dt>
+<dd> <code>install</code> &lt;version&gt; Installs node development header files for the given version</dd>
+<dt>&bull;</dt>
+<dd> <code>list</code> Lists the currently installed node development file versions</dd>
+<dt>&bull;</dt>
+<dd> <code>remove</code> &lt;version&gt; Removes the node development header files for the given version</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> README.md </p>
 <h2>Index</h2>

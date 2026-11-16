@@ -13,33 +13,33 @@ description: "YAPS – converts an abc file to a PostScript file"
 <p> yaps abc file [-d] [-e&nbsp;<wbr>&lt;list&gt;] [-E] [-l] [-M XXXxYYY] [-N] [-k nn] [-o file name] [-P -ss] [-s XX] [-V][-ver] [-x] [-OCC] </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> For debugging only. Displays the internal data structures used in the program.</p>
-<dt><code>-e </code>&lt;list&gt;</p>
-<dd> Draws tunes with reference numbers in a comma separated list. Spaces are not allowed but a range of reference numbers can be specified. For example, 1,3,7-10.</p>
-<dt><code>-E</code></p>
-<dd> Generates Encapsulated Postscript output.</p>
-<dt><code>-M </code>XXXxYYY</p>
-<dd> Set margin sizes in points where 28.3 points = 1cm and 72 points = 1 inch.</p>
-<dt><code>-N</code></p>
-<dd> Adds page numbering.</p>
-<dt><code>-k [nn]</code></p>
-<dd> Adds bar numbering. If number nn is included, then every nn&#8217;th bar is numbered. Otherwise all bars are numbered.</p>
-<dt><code>-o </code>filename</p>
-<dd> Specifies the output postscript file name.</p>
-<dt><code>-P </code>ss</p>
+<dt><code>-d</code></dt>
+<dd> For debugging only. Displays the internal data structures used in the program.</dd>
+<dt><code>-e </code>&lt;list&gt;</dt>
+<dd> Draws tunes with reference numbers in a comma separated list. Spaces are not allowed but a range of reference numbers can be specified. For example, 1,3,7-10.</dd>
+<dt><code>-E</code></dt>
+<dd> Generates Encapsulated Postscript output.</dd>
+<dt><code>-M </code>XXXxYYY</dt>
+<dd> Set margin sizes in points where 28.3 points = 1cm and 72 points = 1 inch.</dd>
+<dt><code>-N</code></dt>
+<dd> Adds page numbering.</dd>
+<dt><code>-k [nn]</code></dt>
+<dd> Adds bar numbering. If number nn is included, then every nn&#8217;th bar is numbered. Otherwise all bars are numbered.</dd>
+<dt><code>-o </code>filename</dt>
+<dd> Specifies the output postscript file name.</dd>
+<dt><code>-P </code>ss</dt>
 <dd> Specifies the paper size where 0 is A4 and 1 is US Letter or XXXxYYY sets the paper size in point units.<br />
-&nbsp;<wbr>units.</p>
-<dt><code>-s </code>XX</p>
-<dd> Specifies the scaling factor (default is 0.7)</p>
-<dt><code>-V</code></p>
-<dd> Voices are printed out seperately for a multi-voice tune. Otherwise they are interleaved.</p>
-<dt><code>-ver</code></p>
-<dd> Prints version number and exits.</p>
-<dt><code>-x</code></p>
-<dd> Print tune number in X: field</p>
-<dt><code>-OCC</code></p>
-<dd> Required if the tune uses the old convention for chords delineated with +..+ instead of [&#8230;]. </p>
+&nbsp;<wbr>units.</dd>
+<dt><code>-s </code>XX</dt>
+<dd> Specifies the scaling factor (default is 0.7)</dd>
+<dt><code>-V</code></dt>
+<dd> Voices are printed out seperately for a multi-voice tune. Otherwise they are interleaved.</dd>
+<dt><code>-ver</code></dt>
+<dd> Prints version number and exits.</dd>
+<dt><code>-x</code></dt>
+<dd> Print tune number in X: field</dd>
+<dt><code>-OCC</code></dt>
+<dd> Required if the tune uses the old convention for chords delineated with +..+ instead of [&#8230;]. </dd>
 </dl>
 <h2>FEATURES</h2>
 <p> * Uses the abc2midi parsing code, so hopefully compatibility with abc2midi will be good. </p>

@@ -21,23 +21,23 @@ struct_snd_enc_vorbis -
 <h2>Members</h2>
 
 quality
-<dl><dd>Sets encoding quality to n, between -1 (low) and 10 (high). In the default mode of operation, the quality level is 3. Normal quality range is 0 - 10.</dl>
+<dl><dd>Sets encoding quality to n, between -1 (low) and 10 (high). In the default mode of operation, the quality level is 3. Normal quality range is 0 - 10.</dd></dl>
  
 
  managed
-<dl><dd>Boolean. Set bitrate management mode. This turns off the normal VBR encoding, but allows hard or soft bitrate constraints to be enforced by the encoder. This mode can be slower, and may also be lower quality. It is primarily useful for streaming.</dl>
+<dl><dd>Boolean. Set bitrate management mode. This turns off the normal VBR encoding, but allows hard or soft bitrate constraints to be enforced by the encoder. This mode can be slower, and may also be lower quality. It is primarily useful for streaming.</dd></dl>
  
 
  max_bit_rate
-<dl><dd>Enabled only if managed is TRUE</dl>
+<dl><dd>Enabled only if managed is TRUE</dd></dl>
  
 
  min_bit_rate
-<dl><dd>Enabled only if managed is TRUE</dl>
+<dl><dd>Enabled only if managed is TRUE</dd></dl>
  
 
  downmix
-<dl><dd>Boolean. Downmix input from stereo to mono (has no effect on non-stereo streams). Useful for lower-bitrate encoding.</dl>
+<dl><dd>Boolean. Downmix input from stereo to mono (has no effect on non-stereo streams). Useful for lower-bitrate encoding.</dd></dl>
 
 <h2>Description</h2>
 

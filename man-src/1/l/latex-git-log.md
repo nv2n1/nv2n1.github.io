@@ -17,13 +17,13 @@ description: "latex-git-log – Generates the version history of a git project a
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;width</code></p>
-<dd> Set the width in cm of the commit message field in the LaTeX table. If this parameter is not set then the table is not vertically limited. That means that if you have a very long commit message then the table will probably not fit on the page and you will get a &#8220;Overfull&#8221; error message from TeX. </p>
+<dt><code>&#8211;width</code></dt>
+<dd> Set the width in cm of the commit message field in the LaTeX table. If this parameter is not set then the table is not vertically limited. That means that if you have a very long commit message then the table will probably not fit on the page and you will get a &#8220;Overfull&#8221; error message from TeX. </dd>
 <p> In this case you should specify the width of the column containing the commit messages. I normally use something like &#8211;width=14 for <font SIZE="-1">DIN</font> A4 in landscape.</p>
-<dt><code>&#8211;git-c-add</code></p>
-<dd> Set an base <font SIZE="-1">URL</font> to link to a commit. This script will automatically try to use the base <font SIZE="-1">URL</font> for github.</p>
-<dt><code>&#8211;lang</code></p>
-<dd> Set the language of the legend and all strings in the output. Be default the language of your system is used but you can overwrite this with this parameter. </p>
+<dt><code>&#8211;git-c-add</code></dt>
+<dd> Set an base <font SIZE="-1">URL</font> to link to a commit. This script will automatically try to use the base <font SIZE="-1">URL</font> for github.</dd>
+<dt><code>&#8211;lang</code></dt>
+<dd> Set the language of the legend and all strings in the output. Be default the language of your system is used but you can overwrite this with this parameter. </dd>
 <p> Currently this script only supports English and German. If you need a translation to another language then you can either create a .po file or I can register this project on one of those websites for online translation.</dl>
 <h2>Example</h2>
 <p> You can use it like this: </p>
@@ -61,3 +61,4 @@ description: "latex-git-log – Generates the version history of a git project a
 <p> Dieses Programm wird in der Hoffnung, dass es nA~Xtzlich sein wird, aber <font SIZE="-1">OHNE</font> <font SIZE="-1">JEDE</font> GEWA~XHRLEISTUNG, bereitgestellt; sogar ohne die implizite GewA~Xhrleistung der MARKTFA~XHIGKEIT oder <font SIZE="-1">EIGNUNG</font> FA~XR <font SIZE="-1">EINEN</font> <font SIZE="-1">BESTIMMTEN</font> <font SIZE="-1">ZWECK</font>. Siehe die <font SIZE="-1">GNU</font> General Public License fA~Xr weitere Details. </p>
 <p> Sie sollten eine Kopie der <font SIZE="-1">GNU</font> General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
 <h2>Index</h2>
+</p>

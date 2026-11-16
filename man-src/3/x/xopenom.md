@@ -10,26 +10,26 @@ description: "XOpenOM, XCloseOM, XSetOMValues, XGetOMValues, XDisplayOfOM, XLoca
 <p>XOpenOM, XCloseOM, XSetOMValues, XGetOMValues, XDisplayOfOM, XLocaleOfOM &#8211; open output methods </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XOM XOpenOM(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>);</p>
-<dd>Status XCloseOM(XOM <i>om</i>);</p>
-<dd>char *XSetOMValues(XOM <i>om</i>);</p>
-<dd>char *XGetOMValues(XOM <i>om</i>);</p>
-<dd>Display *XDisplayOfOM(XOM <i>om</i>);</p>
-<dd>char *XLocaleOfOM(XOM <i>om</i>);</dl>
+<dd>XOM XOpenOM(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>);</dd>
+<dd>Status XCloseOM(XOM <i>om</i>);</dd>
+<dd>char *XSetOMValues(XOM <i>om</i>);</dd>
+<dd>char *XGetOMValues(XOM <i>om</i>);</dd>
+<dd>Display *XDisplayOfOM(XOM <i>om</i>);</dd>
+<dd>char *XLocaleOfOM(XOM <i>om</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>db</i></p>
-<dd>Specifies a pointer to the resource database.</p>
-<dt><i>res_name</i></p>
-<dd>Specifies the full resource name of the application.</p>
-<dt><i>res_class</i></p>
-<dd>Specifies the full class name of the application.</p>
-<dt><i>om</i></p>
-<dd>Specifies the output method.</p>
-<dt>&#8230;</p>
-<dd>Specifies the variable length argument list to set or get XOM values.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>db</i></dt>
+<dd>Specifies a pointer to the resource database.</dd>
+<dt><i>res_name</i></dt>
+<dd>Specifies the full resource name of the application.</dd>
+<dt><i>res_class</i></dt>
+<dd>Specifies the full class name of the application.</dd>
+<dt><i>om</i></dt>
+<dd>Specifies the output method.</dd>
+<dt>&#8230;</dt>
+<dd>Specifies the variable length argument list to set or get XOM values.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XOpenOM</code> function opens an output method matching the current locale and modifiers specification. The current locale and modifiers are bound to the output method when <code>XOpenOM</code> is called. The locale associated with an output method cannot be changed. </p>
 <p> The specific output method to which this call will be routed is identified on the basis of the current locale and modifiers. <code>XOpenOM</code> will identify a default output method corresponding to the current locale. That default can be modified using <code>XSetLocaleModifiers</code> to set the output method modifier. </p>

@@ -16,22 +16,22 @@ description: "tangerine – Perl dependency metadata tool"
 <p> In the <code>diff</code> mode it reports differences between two directories or perl distribution archives.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;all|-a</code></p>
-<dd> Examine all recursively discovered files. By default, only perl files are considered.</p>
-<dt><code>&#8211;compact|-c</code></p>
-<dd> Do not list dependencies provides by the examined set.</p>
-<dt><code>&#8211;diff|-d </code><font SIZE="-1"><code>FOO BAR</code></font></p>
-<dd> Examine <i></i><font SIZE="-1"><i>FOO</i></font><i></i> and <i></i><font SIZE="-1"><i>BAR</i></font><i></i> and report metadata differences, ignoring line numbers. These can be directories or distribution tarballs.</p>
-<dt><code>&#8211;files|-f</code></p>
-<dd> Report findings per file instead of per module. This option has no effect with <code>&#8211;compact</code>.</p>
-<dt><code>&#8211;jobs|-j </code><font SIZE="-1"><code>NUM</code></font></p>
-<dd> Defines the number of workers used for parallel processing. By default, the optimal number of workers is determined automatically.</p>
-<dt><code>&#8211;help|-h</code></p>
-<dd> Display this help.</p>
-<dt><code>&#8211;mode|-m </code><font SIZE="-1"><code>MODE</code></font></p>
-<dd> Only look for this specific metadata. Valid options are <i>compile</i> (modules required at compile time), <i>runtime</i> (modules required at runtime), <i>package</i> (modules provided) and <i>all</i>. For backwards compatibility, <i>p|prov</i>, <i>r|req</i> and <i>u|use</i> are also understood. This option is automatically set to <i>all</i> if <code>&#8211;compact</code> is also used. Defaults to <i>all</i>.</p>
-<dt><code>&#8211;verbose|-v</code></p>
-<dd> Be a little more verbose where it makes sense.</dl>
+<dt><code>&#8211;all|-a</code></dt>
+<dd> Examine all recursively discovered files. By default, only perl files are considered.</dd>
+<dt><code>&#8211;compact|-c</code></dt>
+<dd> Do not list dependencies provides by the examined set.</dd>
+<dt><code>&#8211;diff|-d </code><font SIZE="-1"><code>FOO BAR</code></font></dt>
+<dd> Examine <i></i><font SIZE="-1"><i>FOO</i></font><i></i> and <i></i><font SIZE="-1"><i>BAR</i></font><i></i> and report metadata differences, ignoring line numbers. These can be directories or distribution tarballs.</dd>
+<dt><code>&#8211;files|-f</code></dt>
+<dd> Report findings per file instead of per module. This option has no effect with <code>&#8211;compact</code>.</dd>
+<dt><code>&#8211;jobs|-j </code><font SIZE="-1"><code>NUM</code></font></dt>
+<dd> Defines the number of workers used for parallel processing. By default, the optimal number of workers is determined automatically.</dd>
+<dt><code>&#8211;help|-h</code></dt>
+<dd> Display this help.</dd>
+<dt><code>&#8211;mode|-m </code><font SIZE="-1"><code>MODE</code></font></dt>
+<dd> Only look for this specific metadata. Valid options are <i>compile</i> (modules required at compile time), <i>runtime</i> (modules required at runtime), <i>package</i> (modules provided) and <i>all</i>. For backwards compatibility, <i>p|prov</i>, <i>r|req</i> and <i>u|use</i> are also understood. This option is automatically set to <i>all</i> if <code>&#8211;compact</code> is also used. Defaults to <i>all</i>.</dd>
+<dt><code>&#8211;verbose|-v</code></dt>
+<dd> Be a little more verbose where it makes sense.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
     tangerine -c Makefile.PL lib/ t/

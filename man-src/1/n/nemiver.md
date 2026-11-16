@@ -17,24 +17,24 @@ description: "nemiver – graphical debugger for GNOME"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show help options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program.</p>
-<dt><code>&#8211;env=&nbsp;<wbr>var0=val0 var1=val1 var2=val2 &#8230;</code><i> </i></p>
-<dd> Display the value of an expression.</p>
-<dt><code>&#8211;attach=</code><i>&lt;pid|process_name&gt;</i></p>
-<dd> Attach to a process.</p>
-<dt><code>&#8211;listsessions</code></p>
-<dd> List the saved debugging sessions.</p>
-<dt><code>&#8211;purgesessions</code></p>
-<dd> Erase the saved debugging sessions.</p>
-<dt><code>&#8211;executesession=</code><i>N</i></p>
-<dd> Debug the program that was of session number <i>N</i></p>
-<dt><code>&#8211;log-domains=</code><i>DOMAINS</i></p>
-<dd> Enable logging domains <i>DOMAINS</i></p>
-<dt><code>&#8211;logdebuggeroutput</code></p>
-<dd> Log the debugger output.</dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show help options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>&#8211;env=&nbsp;<wbr>var0=val0 var1=val1 var2=val2 &#8230;</code><i> </i></dt>
+<dd> Display the value of an expression.</dd>
+<dt><code>&#8211;attach=</code><i>&lt;pid|process_name&gt;</i></dt>
+<dd> Attach to a process.</dd>
+<dt><code>&#8211;listsessions</code></dt>
+<dd> List the saved debugging sessions.</dd>
+<dt><code>&#8211;purgesessions</code></dt>
+<dd> Erase the saved debugging sessions.</dd>
+<dt><code>&#8211;executesession=</code><i>N</i></dt>
+<dd> Debug the program that was of session number <i>N</i></dd>
+<dt><code>&#8211;log-domains=</code><i>DOMAINS</i></dt>
+<dd> Enable logging domains <i>DOMAINS</i></dd>
+<dt><code>&#8211;logdebuggeroutput</code></dt>
+<dd> Log the debugger output.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find a bug, please report it at <a rel="nofollow" href="http://bugzilla.gnome.org/enter_bug.cgi?product=nemiver.">http://bugzilla.gnome.org/enter_bug.cgi?product=nemiver.</a></p>
 <h2>AUTHOR</h2>

@@ -15,15 +15,15 @@ usb_make_path - returns stable device path in the usb tree
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the device whose path is being constructed</dl>
+<dl><dd></dd><dd>the device whose path is being constructed</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>where to put the string</dl>
+<dl><dd>where to put the string</dd></dl>
  
 
  <i>size</i>
-<dl><dd>how big is "buf"?</dl>
+<dl><dd>how big is "buf"?</dd></dl>
 
 <h2>Return</h2>
 

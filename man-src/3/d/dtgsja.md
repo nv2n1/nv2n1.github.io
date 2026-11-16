@@ -19,7 +19,7 @@ description: "dtgsja.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DTGSJA computes the generalized singular value decomposition(GSVD)
 of two real upper triangular(or trapezoidal) matrices A and B.On entry, it is assumed that matrices A and B have the following forms, which may be obtained by the preprocessing subroutine DGGSVP from a general M - by - N matrix A and P - by - N matrix B : N - K - L K L A = K(0 A12 A13) if M - K - L &gt;= 0;
@@ -69,11 +69,11 @@ A23 is L - by - L upper triangular if M - K - L &gt;= 0,
                  may be postmultiplied into input matrices U1,
              V1, or Q1.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU</i> </p>
+</dt><dd> <i>JOBU</i> </dd>
 <pre>
           JOBU is CHARACTER*1
           = 'U':  U must contain an orthogonal matrix U1 on entry, and
@@ -244,16 +244,12 @@ Internal Parameters == == == == == == == == == =
                                             the routine fails to
                                                 converge,
                                             we return INFO = 1..fi
-
                                                              Author : Univ.of Tennessee
                                                                           Univ.of California Berkeley
                                                                               Univ.of Colorado Denver
                                                                                   NAG Ltd.
-
                                                                       Date : November 2011
-
                                                                              Further Details :
-
     DTGSJA essentially uses a variant of Kogbetliantz algorithm to reduce
         min(L, M - K) - by - L triangular(or trapezoidal) matrix A23 and L -
                                                              by - L matrix B13 to the form : U1 **T *A13 *Q1 = C1 * R1;
@@ -266,3 +262,4 @@ V1 **T *B13 *Q1 = S1 * R1,
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

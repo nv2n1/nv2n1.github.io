@@ -17,11 +17,11 @@ description: "neon – HTTP and WebDAV client library"
 <p> To allow thread-safe use of SSL in the OpenSSL and GnuTLS libraries neon must be configured using the &#8211;enable-threadsafe-ssl; if this is done, locking callbacks will be registered by ne_sock_init; note that care must be exercised if neon is used in conjunction with another library which uses OpenSSL or GnuTLS. </p>
 <p> Some platforms and libraries used by neon require global initialization before use; notably: </p>
 <dl>
-<dd>&bull; The SIGPIPE signal disposition must be set to <i>ignored</i> or otherwise handled to avoid process termination when writing to a socket which has been shutdown by the peer.</dl>
+<dd>&bull; The SIGPIPE signal disposition must be set to <i>ignored</i> or otherwise handled to avoid process termination when writing to a socket which has been shutdown by the peer.</dd></dl>
 <dl>
-<dd>&bull; OpenSSL and GnuTLS require global initialization to load shared lookup tables.</dl>
+<dd>&bull; OpenSSL and GnuTLS require global initialization to load shared lookup tables.</dd></dl>
 <dl>
-<dd>&bull; The Win32 socket library requires initialization before use.</dl>
+<dd>&bull; The Win32 socket library requires initialization before use.</dd></dl>
 <p> The ne_sock_init function should be called before any other use of neon to perform any necessary initialization needed for the particular platform. Applications wishing to perform all the necessary process-global initialization steps themselves may omit to call ne_sock_init (and ne_sock_exit); neon neither checks whether these functions are called nor calls them itself. </p>
 <p> For some applications and configurations it may be necessary to call ne_i18n_init to initialize the support for internationalization in neon.</p>
 <h3>Asynchronous signal safety</h3>
@@ -30,38 +30,38 @@ description: "neon – HTTP and WebDAV client library"
 <p>Any function in neon may modify the errno global variable as a side-effect. Except where explicitly documented, the value of errno is unspecified after any neon function call. </p>
 <p> Other than in the use of errno, the only functions which use or modify process-global state in neon are as follows: </p>
 <dl>
-<dd>&bull; ne_sock_init, ne_i18n_init, and ne_sock_exit, as described above</dl>
+<dd>&bull; ne_sock_init, ne_i18n_init, and ne_sock_exit, as described above</dd></dl>
 <dl>
-<dd>&bull; <code>ne_debug_init</code> and <code>ne_debug</code>, if enabled at compile time; for debugging output</dl>
+<dd>&bull; <code>ne_debug_init</code> and <code>ne_debug</code>, if enabled at compile time; for debugging output</dd></dl>
 <dl>
-<dd>&bull; ne_oom_callback for installing a process-global callback to be invoked on <code>malloc</code> failure</dl>
+<dd>&bull; ne_oom_callback for installing a process-global callback to be invoked on <code>malloc</code> failure</dd></dl>
 <h3>Namespaces</h3>
 <p>To avoid possible collisions between names used for symbols and preprocessor macros by an application and the libraries it uses, it is good practice for each library to reserve a particular <i>namespace prefix</i>. An application which ensures it uses no names with these prefixes is then guaranteed to avoid such collisions. </p>
 <p> The neon library reserves the use of the namespace prefixes ne_ and NE_. The libraries used by neon may also reserve certain namespaces; collisions between these libraries and a neon-based application will not be detected at compile time, since the underlying library interfaces are not exposed through the neon header files. Such collisions can only be detected at link time, when the linker attempts to resolve symbols. The following list documents some of the namespaces claimed by libraries used by neon; this list may be incomplete. </p>
 <p> SSL, ssl, TLS, tls, ERR_, BIO_, d2i_, i2d_, ASN1_</p>
 <dl>
-<dd>Some of the many prefixes used by the OpenSSL library; little attempt has been made to keep exported symbols within any particular prefixes for this library.</dl>
+<dd>Some of the many prefixes used by the OpenSSL library; little attempt has been made to keep exported symbols within any particular prefixes for this library.</dd></dl>
 <p> gnutls_, gcry_, gpg_</p>
 <dl>
-<dd>Namespaces used by the GnuTLS library (and dependencies thereof)</dl>
+<dd>Namespaces used by the GnuTLS library (and dependencies thereof)</dd></dl>
 <p> XML_, Xml[A-Z]</p>
 <dl>
-<dd>Namespaces used by the expat library.</dl>
+<dd>Namespaces used by the expat library.</dd></dl>
 <p> xml[A-Z], html[A-Z], docb[A-Z]</p>
 <dl>
-<dd>Namespaces used by the libxml2 library; a relatively small number of symbols are used without these prefixes.</dl>
+<dd>Namespaces used by the libxml2 library; a relatively small number of symbols are used without these prefixes.</dd></dl>
 <p> inflate, deflate, crc32, compress, uncompres, adler32, zlib</p>
 <dl>
-<dd>Namespaces used by the zlib library; a relatively small number of symbols are used without these prefixes.</dl>
+<dd>Namespaces used by the zlib library; a relatively small number of symbols are used without these prefixes.</dd></dl>
 <p> krb5, gss, GSS, asn1, decode_krb5, encode_krb5, profile, mit</p>
 <dl>
-<dd>Some of the prefixes used by the MIT GSSAPI library and dependencies thereof; a number of symbols lie outside these prefixes.</dl>
+<dd>Some of the prefixes used by the MIT GSSAPI library and dependencies thereof; a number of symbols lie outside these prefixes.</dd></dl>
 <p> pakchois_</p>
 <dl>
-<dd>Namespace used by the pakchois library.</dl>
+<dd>Namespace used by the pakchois library.</dd></dl>
 <p> px_</p>
 <dl>
-<dd>Namespace used by the libproxy library.</dl>
+<dd>Namespace used by the libproxy library.</dd></dl>
 <h3>Argument validation</h3>
 <p>neon does not attempt to validate that the parameters passed to functions conform to the API (for instance, checking that pointer arguments are not NULL). Any use of the neon API which is not documented to produce a certain behaviour results is said to produce <i>undefined behaviour</i>; it is likely that neon will segfault under these conditions.</p>
 <h3>URI paths, WebDAV metadata</h3>
@@ -80,5 +80,5 @@ description: "neon – HTTP and WebDAV client library"
 <h2>Author</h2>
 <p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

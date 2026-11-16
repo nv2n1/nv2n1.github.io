@@ -48,22 +48,22 @@ description: "nfsometer – NFS performance measurement tool"
 <p>&nbsp;<wbr>Show examples from man page</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code> -r &lt;dir&gt;</code>, <code>&#8211;resultdir=&lt;dir&gt;</code></p>
-<dd> The directory used to save results. default: &#8216;/home/dros/nfsometer_results&#8217; </p>
-<dt><code> -o &lt;mount.nfs options&gt;</code>, <code>&#8211;options=&lt;mount.nfs options&gt;</code></p>
-<dd> Mount options to iterate through. This option may be used multiple times. Each mount option must have a version specified. </p>
-<dt><code> -a &lt;mount.nfs options&gt;</code>, <code>&#8211;always-options=&lt;mount.nfs options&gt;</code></p>
-<dd> Options added to every trace. This option may be used multiple times. </p>
-<dt><code> -t &lt;tags&gt;</code>, <code>&#8211;tag=&lt;tags&gt;</code></p>
-<dd> Tag all new traces with &#8216;tags&#8217;. This option may be used multiple times. </p>
-<dt><code> -n &lt;num runs&gt;</code>, <code>&#8211;num-runs=&lt;num runs&gt;</code></p>
-<dd> Number of runs for each trace of &lt;options&gt; X &lt;tags&gt; X &lt;workloads&gt; default: 1 </p>
-<dt><code> &#8211;serial-graphs</code></p>
-<dd> Generate graphs inline while generating reports. Useful for debugging graphing issues. </p>
-<dt><code> &#8211;rand</code></p>
-<dd> Randomize the order of traces </p>
-<dt><code> -h</code>, <code>&#8211;help</code></p>
-<dd> Show the help message</dl>
+<dt><code> -r &lt;dir&gt;</code>, <code>&#8211;resultdir=&lt;dir&gt;</code></dt>
+<dd> The directory used to save results. default: &#8216;/home/dros/nfsometer_results&#8217; </dd>
+<dt><code> -o &lt;mount.nfs options&gt;</code>, <code>&#8211;options=&lt;mount.nfs options&gt;</code></dt>
+<dd> Mount options to iterate through. This option may be used multiple times. Each mount option must have a version specified. </dd>
+<dt><code> -a &lt;mount.nfs options&gt;</code>, <code>&#8211;always-options=&lt;mount.nfs options&gt;</code></dt>
+<dd> Options added to every trace. This option may be used multiple times. </dd>
+<dt><code> -t &lt;tags&gt;</code>, <code>&#8211;tag=&lt;tags&gt;</code></dt>
+<dd> Tag all new traces with &#8216;tags&#8217;. This option may be used multiple times. </dd>
+<dt><code> -n &lt;num runs&gt;</code>, <code>&#8211;num-runs=&lt;num runs&gt;</code></dt>
+<dd> Number of runs for each trace of &lt;options&gt; X &lt;tags&gt; X &lt;workloads&gt; default: 1 </dd>
+<dt><code> &#8211;serial-graphs</code></dt>
+<dd> Generate graphs inline while generating reports. Useful for debugging graphing issues. </dd>
+<dt><code> &#8211;rand</code></dt>
+<dd> Randomize the order of traces </dd>
+<dt><code> -h</code>, <code>&#8211;help</code></dt>
+<dd> Show the help message</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Example 1: See what workloads are available </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>$&nbsp;<wbr>nfsometer workloads</code> </p>

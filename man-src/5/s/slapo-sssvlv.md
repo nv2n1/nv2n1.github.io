@@ -15,18 +15,18 @@ description: "slapo-sssvlv – Server Side Sorting and Virtual List View overlay
 <h2>Configuration</h2>
 <p>These <code>slapd.conf</code> options apply to the SSSVLV overlay. They should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>sssvlv-max &lt;num&gt;</code></p>
-<dd>Set the maximum number of concurrent sort requests allowed across all connections. The default is one half of the number of server threads.</p>
-<dt><code>sssvlv-maxkeys &lt;num&gt;</code></p>
-<dd>Set the maximum number of keys allowed in a sort request. The default is 5.</p>
-<dt><code>sssvlv-maxperconn &lt;num&gt;</code></p>
-<dd>Set the maximum number of concurrent paged search requests per connection. The default is 5. The number of concurrent requests remains limited by <code>sssvlv-max.</code></dl>
+<dt><code>sssvlv-max &lt;num&gt;</code></dt>
+<dd>Set the maximum number of concurrent sort requests allowed across all connections. The default is one half of the number of server threads.</dd>
+<dt><code>sssvlv-maxkeys &lt;num&gt;</code></dt>
+<dd>Set the maximum number of keys allowed in a sort request. The default is 5.</dd>
+<dt><code>sssvlv-maxperconn &lt;num&gt;</code></dt>
+<dd>Set the maximum number of concurrent paged search requests per connection. The default is 5. The number of concurrent requests remains limited by <code>sssvlv-max.</code></dd></dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</p>
-<dt>/etc/openldap/slapd.d</p>
-<dd>default slapd configuration directory</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd>
+<dt>/etc/openldap/slapd.d</dt>
+<dd>default slapd configuration directory</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5). </p>
 <p> &quot;OpenLDAP Administrator&#8217;s Guide&quot; (<a rel="nofollow" href="http://www.OpenLDAP.org/doc/admin/)">http://www.OpenLDAP.org/doc/admin/)</a> </p>

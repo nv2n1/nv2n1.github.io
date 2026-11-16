@@ -10,8 +10,6 @@ description: "sasl_server_userdb_checkpass_t – Plaintext Password Verification
 <p>sasl_server_userdb_checkpass_t &#8211; Plaintext Password Verification Callback </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_canon_user_t(sasl_conn_t *conn,
 void *context,
 const char *user, unsigned ulen,

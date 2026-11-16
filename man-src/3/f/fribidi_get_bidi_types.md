@@ -29,13 +29,12 @@ url: "/docs/linux/man/3-fribidi_get_bidi_types/"
 
 <dl>
 <dt><b>const FriBidiChar *str</b>
-<dd> Input string.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>FriBidiCharType *btypes</b>
-<dd> Output bidi types. 
-
- Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dl>
+</dt><dd> Input string.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>FriBidiCharType *btypes</b>
+</dt><dd> Output bidi types. 
+ Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

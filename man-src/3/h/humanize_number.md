@@ -27,21 +27,20 @@ url: "/docs/linux/man/3-humanize_number/"
 
  The prefixes are:
 <dl> 
-
 <dt><b>Prefix Ta </b><b>Description Ta </b><b>Multiplier</b>
-<dd>
-<dt><b>k<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>kilo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1024</b>
-<dd>
-<dt><b>M<tt>&nbsp;<wbr></tt>mega<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1048576</b>
-<dd>
-<dt><b>G<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>giga1073741824</b>
-<dd>
-<dt><b>Ttera1099511627776</b>
-<dd>
-<dt><b>Ppeta1125899906842624</b>
-<dd>
-<dt><b>Eexa1152921504606846976</b>
-<dd></dl>
+</dt><dd>
+</dd><dt><b>k<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>kilo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1024</b>
+</dt><dd>
+</dd><dt><b>M<tt>&nbsp;<wbr></tt>mega<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1048576</b>
+</dt><dd>
+</dd><dt><b>G<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>giga1073741824</b>
+</dt><dd>
+</dd><dt><b>Ttera1099511627776</b>
+</dt><dd>
+</dd><dt><b>Ppeta1125899906842624</b>
+</dt><dd>
+</dd><dt><b>Eexa1152921504606846976</b>
+</dt><dd></dd></dl>
  
 
  
@@ -51,26 +50,24 @@ url: "/docs/linux/man/3-humanize_number/"
 
  The following flags may be passed in scale
 <dl> 
-
 <dt><b>HN_AUTOSCALE</b>
-<dd> Format the buffer using the lowest multiplier possible.
-<dt><b>HN_GETSCALE</b>
-<dd> Return the prefix index number (the number of times Fa number must be divided to fit) instead of formatting it to the buffer.</dl>
+</dt><dd> Format the buffer using the lowest multiplier possible.
+</dd><dt><b>HN_GETSCALE</b>
+</dt><dd> Return the prefix index number (the number of times Fa number must be divided to fit) instead of formatting it to the buffer.</dd></dl>
  
 
  
 
  The following flags may be passed in flags
 <dl> 
-
 <dt><b>HN_DECIMAL</b>
-<dd> If the final result is less than 10, display it using one digit.
-<dt><b>HN_NOSPACE</b>
-<dd> Do not put a space between Fa number and the prefix.
-<dt><b>HN_B</b>
-<dd> Use 'B' (bytes) as prefix if the original result does not have a prefix.
-<dt><b>HN_DIVISOR_1000</b>
-<dd> Divide Fa number with 1000 instead of 1024.</dl>
+</dt><dd> If the final result is less than 10, display it using one digit.
+</dd><dt><b>HN_NOSPACE</b>
+</dt><dd> Do not put a space between Fa number and the prefix.
+</dd><dt><b>HN_B</b>
+</dt><dd> Use 'B' (bytes) as prefix if the original result does not have a prefix.
+</dd><dt><b>HN_DIVISOR_1000</b>
+</dt><dd> Divide Fa number with 1000 instead of 1024.</dd></dl>
  
 
  
@@ -87,11 +84,10 @@ url: "/docs/linux/man/3-humanize_number/"
 
  Fn dehumanize_number will fail and no number will be stored in Fa result if:
 <dl> 
-
 <dt><b>Bq </b>Er EINVAL
-<dd> The string in Fa str was empty or carried an unknown suffix.
-<dt><b>Bq </b>Er ERANGE
-<dd> The string in Fa str represented a number that does not fit in Fa result .</dl>
+</dt><dd> The string in Fa str was empty or carried an unknown suffix.
+</dd><dt><b>Bq </b>Er ERANGE
+</dt><dd> The string in Fa str represented a number that does not fit in Fa result .</dd></dl>
  
 
 <h2>SEE ALSO</h2>

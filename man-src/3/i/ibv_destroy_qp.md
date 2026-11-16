@@ -50,7 +50,7 @@ struct ibv_qp_cap {
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

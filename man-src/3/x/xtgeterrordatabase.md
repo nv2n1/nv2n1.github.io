@@ -11,22 +11,22 @@ description: "XtGetErrorDatabase, XtGetErrorDatabaseText – obtain error databa
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>XrmDatabase *XtGetErrorDatabase(void);</p>
-<dd>void XtGetErrorDatabaseText(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, char *<i>buffer_return</i>, int <i>nbytes</i>);</dl>
+<dd>XrmDatabase *XtGetErrorDatabase(void);</dd>
+<dd>void XtGetErrorDatabaseText(const char *<i>name</i>, const char *<i>type</i>, const char *<i>class</i>, const char *<i>defaultMsg</i>, char *<i>buffer_return</i>, int <i>nbytes</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>buffer_return</i></p>
-<dd>Specifies the buffer into which the error message is to be returned.</p>
-<dt><i>class</i></p>
-<dd>Specifies the resource class of the error message.</p>
-<dt><i>default</i></p>
-<dd>Specifies the default message to use.</p>
-<dt><i>name</i></p>
+<dt><i>buffer_return</i></dt>
+<dd>Specifies the buffer into which the error message is to be returned.</dd>
+<dt><i>class</i></dt>
+<dd>Specifies the resource class of the error message.</dd>
+<dt><i>default</i></dt>
+<dd>Specifies the default message to use.</dd>
+<dt><i>name</i></dt>
 <dd>
-<dt><i>type</i></p>
-<dd>Specifies the name and type that are concatenated to form the resource name of the error message.</p>
-<dt><i>nbytes</i></p>
-<dd>Specifies the size of the buffer in bytes.</dl>
+</dd><dt><i>type</i></dt>
+<dd>Specifies the name and type that are concatenated to form the resource name of the error message.</dd>
+<dt><i>nbytes</i></dt>
+<dd>Specifies the size of the buffer in bytes.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtGetErrorDatabase</code> function has been superceded by <code>XtAppGetErrorDatabase</code>. </p>
 <p> The <code>XtGetErrorDatabaseText</code> function has been superceded by <code>XtAppGetErrorDatabaseText</code>.</p>

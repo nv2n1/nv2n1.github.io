@@ -14,10 +14,10 @@ description: "gnutls_db_set_retrieve_function – API function"
 <p> <code>void gnutls_db_set_retrieve_function(gnutls_session_t </code><i>session</i><code>, gnutls_db_retr_func </code><i>retr_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_db_retr_func retr_func</p>
-<dd> is the function.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_db_retr_func retr_func</dt>
+<dd> is the function.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Sets the function that will be used to retrieve data from the resumed sessions database. This function must return a gnutls_datum_t containing the data on success, or a gnutls_datum_t containing null and 0 on failure. </p>
 <p> The datum&#8217;s data must be allocated using the function <code>gnutls_malloc()</code>. </p>
@@ -31,6 +31,6 @@ description: "gnutls_db_set_retrieve_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

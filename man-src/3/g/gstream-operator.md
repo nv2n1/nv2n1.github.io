@@ -19,14 +19,12 @@ description: "operator, operator"
    fix a_number = 0.3;
    cout &lt;&lt; a_number;
    cin &gt;&gt; a_number;
-   
 </pre>
 <p> in conjuction with the standard stream system. And, by the way, consequently also in conjuction with a gstream: </p>
 <pre>
    gstream gs;
    gs &lt;&lt; a_number;
    gs &gt;&gt; a_number;
-   
 </pre>
 <p> You are probably not interested in calling them with their function names, only with the &lt;&lt;/&gt;&gt; operators, so this paragraph is written just to make you aware of the possibility of doing that. </p>
 <h2>Index</h2>

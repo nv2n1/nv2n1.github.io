@@ -14,8 +14,8 @@ description: "COMMIT PREPARED – commit a transaction that was earlier prepared
 <p><code>COMMIT PREPARED</code> commits a transaction that is in prepared state.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>transaction_id</i></p>
-<dd>The transaction identifier of the transaction that is to be committed.</dl>
+<dt><i>transaction_id</i></dt>
+<dd>The transaction identifier of the transaction that is to be committed.</dd></dl>
 <h2>Notes</h2>
 <p>To commit a prepared transaction, you must be either the same user that executed the transaction originally, or a superuser. But you do not have to be in the same session that executed the transaction. </p>
 <p> This command cannot be executed inside a transaction block. The prepared transaction is committed immediately. </p>

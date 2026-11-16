@@ -53,7 +53,7 @@ description: "rrdgraph_data – preparing data for graphing in rrdtool graph"
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">SEE ALSO</a></p>
+<dt><a href="#lbAJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAK">AUTHOR</a></dt>
+<dd></dd></dl>

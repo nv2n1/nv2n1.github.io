@@ -15,16 +15,16 @@ description: "knock – port-knock client"
 <p> <code>knock</code> is a <i>port-knock</i> client. It sends TCP/UDP packets to each specified <i>port</i> on <i>host</i>, creating a special knock sequence on the listening server (see the <code>knockd</code> manpage for more info on this).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u, &#8211;udp</code></p>
-<dd> Make all port hits use UDP (default is TCP). If you want each port to use a different protocol (TCP or UDP), then you can specify the protocol on a per-port basis. See the example below.</p>
-<dt><code>-d &lt;t&gt;, &#8211;delay &lt;t&gt;</code></p>
-<dd> Wait &lt;t&gt; milliseconds between each port hit. This can be used in situations where a router mistakes your stream of SYN packets as a port scan and blocks them. If the packet rate is slowed with &#8211;delay, then the router should let the packets through.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Output verbose status messages.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display the version.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Syntax help.</dl>
+<dt><code>-u, &#8211;udp</code></dt>
+<dd> Make all port hits use UDP (default is TCP). If you want each port to use a different protocol (TCP or UDP), then you can specify the protocol on a per-port basis. See the example below.</dd>
+<dt><code>-d &lt;t&gt;, &#8211;delay &lt;t&gt;</code></dt>
+<dd> Wait &lt;t&gt; milliseconds between each port hit. This can be used in situations where a router mistakes your stream of SYN packets as a port scan and blocks them. If the packet rate is slowed with &#8211;delay, then the router should let the packets through.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Output verbose status messages.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display the version.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Syntax help.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 knock myserver.example.com 123:tcp 456:udp 789:tcp

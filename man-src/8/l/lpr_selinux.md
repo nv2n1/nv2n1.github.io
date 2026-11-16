@@ -69,8 +69,8 @@ description: "lpr_selinux – Security Enhanced Linux Policy for the lpr process
 <p> <code>lpr_exec_t</code> </p>
 <p> &#8211; Set files with the lpr_exec_t type, if you want to transition an executable to the lpr_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/lp(.cups)?, /usr/bin/lpq(.cups)?, /usr/bin/lpr(.cups)?, /usr/bin/lprm(.cups)?, /usr/sbin/lpc(.cups)?, /usr/bin/cancel(.cups)?, /usr/bin/lpstat(.cups)?, /opt/gutenprint/bin(/.*)?, /opt/gutenprint/sbin(/.*)?, /usr/linuxprinter/bin/l?lpr, /usr/local/linuxprinter/bin/l?lpr, /usr/sbin/accept, /usr/sbin/lpinfo, /usr/sbin/lpmove, /usr/sbin/lpadmin, /usr/bin/lpoptions </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/lp(.cups)?, /usr/bin/lpq(.cups)?, /usr/bin/lpr(.cups)?, /usr/bin/lprm(.cups)?, /usr/sbin/lpc(.cups)?, /usr/bin/cancel(.cups)?, /usr/bin/lpstat(.cups)?, /opt/gutenprint/bin(/.*)?, /opt/gutenprint/sbin(/.*)?, /usr/linuxprinter/bin/l?lpr, /usr/local/linuxprinter/bin/l?lpr, /usr/sbin/accept, /usr/sbin/lpinfo, /usr/sbin/lpmove, /usr/sbin/lpadmin, /usr/bin/lpoptions </dd>
 </dl>
 <p> <code>lpr_tmp_t</code> </p>
 <p> &#8211; Set files with the lpr_tmp_t type, if you want to store lpr temporary files in the /tmp directories. </p>

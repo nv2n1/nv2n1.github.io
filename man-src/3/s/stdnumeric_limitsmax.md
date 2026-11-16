@@ -39,13 +39,9 @@ long double LDBL_MAX </p>
 <p>Demonstrates the use of max() with some fundamental types and some standard library typedefs (the output is system-specific)<br />
  // Run this code </p>
 <pre><code>#include &lt;limits&gt;
-
 #include &lt;cstddef&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;short: &quot; &lt;&lt; std::dec &lt;&lt; std::numeric_limits&lt;short&gt;::max()
               &lt;&lt; &quot; or &quot; &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; std::numeric_limits&lt;short&gt;::max() &lt;&lt; '

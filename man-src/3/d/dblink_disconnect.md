@@ -20,18 +20,18 @@ dblink_disconnect(text connname) returns text
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> The name of a named connection to be closed.</dl>
+</dt><dd> The name of a named connection to be closed.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns status, which is always OK (since any error causes the function to throw an error instead of returning).</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_disconnect();
 dblink_disconnect-- -- -- -- -- -- -- -- -- -OK(1 row)
     SELECT dblink_disconnect('myconn');
 dblink_disconnect-- -- -- -- -- -- -- -- -- -OK(1 row)
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

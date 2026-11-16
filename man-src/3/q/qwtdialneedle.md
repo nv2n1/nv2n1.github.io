@@ -30,7 +30,7 @@ description: "QwtDialNeedle –"
 <p> <code>QwtDialNeedle</code> is a pointer that indicates a value by pointing to a specific direction. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDial</code>, <code>QwtCompass</code></dl>
+<dd><code>QwtDial</code>, <code>QwtCompass</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtDialNeedle::draw (QPainter *painter, const QPointF &amp;center, doublelength, doubledirection, QPalette::ColorGroupcolorGroup = QPalette::Active) const [virtual]</h3>
 <p>Draw the needle </p>
@@ -40,7 +40,7 @@ description: "QwtDialNeedle –"
  <i>center</i> Center of the dial, start position for the needle<br />
  <i>length</i> Length of the needle<br />
  <i>direction</i> Direction of the needle, in degrees counter clockwise<br />
- <i>colorGroup</i> Color group, used for painting</dl>
+ <i>colorGroup</i> Color group, used for painting</dd></dl>
 <h3>virtual void QwtDialNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [pure virtual]</h3>
 <p>Draw the needle. The origin of the needle is at position (0.0, 0.0 ) pointing in direction 0.0 ( = east ). </p>
 <p> The painter is already initialized with translation and rotation. </p>
@@ -48,19 +48,19 @@ description: "QwtDialNeedle –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>length</i> Length of the needle<br />
- <i>colorGroup</i> Color group, used for painting</dl>
+ <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPalette()</code>, <code>palette()</code></dl>
+<dd><code>setPalette()</code>, <code>palette()</code></dd></dl>
 <p> Implemented in <code>QwtCompassWindArrow</code>, <code>QwtCompassMagnetNeedle</code>, and <code>QwtDialSimpleNeedle</code>.</p>
 <h3>const QPalette &amp; QwtDialNeedle::palette () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the palette of the needle.</dl>
+<dd>the palette of the needle.</dd></dl>
 <h3>void QwtDialNeedle::setPalette (const QPalette &amp;palette) [virtual]</h3>
 <p>Sets the palette for the needle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>palette</i> New Palette</dl>
+<dd><i>palette</i> New Palette</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

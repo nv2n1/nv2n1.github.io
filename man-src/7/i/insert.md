@@ -21,22 +21,22 @@ description: "INSERT – create new rows in a table"
 <p> You must have INSERT privilege on a table in order to insert into it. If a column list is specified, you only need INSERT privilege on the listed columns. Use of the RETURNING clause requires SELECT privilege on all columns mentioned in RETURNING. If you use the <i>query</i> clause to insert rows from a query, you of course need to have SELECT privilege on any table or column used in the query.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of an existing table.</p>
-<dt><i>column</i></p>
-<dd>The name of a column in <i>table</i>. The column name can be qualified with a subfield name or array subscript, if needed. (Inserting into only some fields of a composite column leaves the other fields null.)</p>
-<dt><code>DEFAULT VALUES</code></p>
-<dd>All columns will be filled with their default values.</p>
-<dt><i>expression</i></p>
-<dd>An expression or value to assign to the corresponding <i>column</i>.</p>
-<dt><code>DEFAULT</code></p>
-<dd>The corresponding <i>column</i> will be filled with its default value.</p>
-<dt><i>query</i></p>
-<dd>A query (<code>SELECT</code> statement) that supplies the rows to be inserted. Refer to the SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] statement for a description of the syntax.</p>
-<dt><i>output_expression</i></p>
-<dd>An expression to be computed and returned by the <code>INSERT</code> command after each row is inserted. The expression can use any column names of the <i>table</i>. Write * to return all columns of the inserted row(s).</p>
-<dt><i>output_name</i></p>
-<dd>A name to use for a returned column.</dl>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of an existing table.</dd>
+<dt><i>column</i></dt>
+<dd>The name of a column in <i>table</i>. The column name can be qualified with a subfield name or array subscript, if needed. (Inserting into only some fields of a composite column leaves the other fields null.)</dd>
+<dt><code>DEFAULT VALUES</code></dt>
+<dd>All columns will be filled with their default values.</dd>
+<dt><i>expression</i></dt>
+<dd>An expression or value to assign to the corresponding <i>column</i>.</dd>
+<dt><code>DEFAULT</code></dt>
+<dd>The corresponding <i>column</i> will be filled with its default value.</dd>
+<dt><i>query</i></dt>
+<dd>A query (<code>SELECT</code> statement) that supplies the rows to be inserted. Refer to the SELECT [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] statement for a description of the syntax.</dd>
+<dt><i>output_expression</i></dt>
+<dd>An expression to be computed and returned by the <code>INSERT</code> command after each row is inserted. The expression can use any column names of the <i>table</i>. Write * to return all columns of the inserted row(s).</dd>
+<dt><i>output_name</i></dt>
+<dd>A name to use for a returned column.</dd></dl>
 <h2>Outputs</h2>
 <p>On successful completion, an <code>INSERT</code> command returns a command tag of the form </p>
 <pre>INSERT <i>oid</i> <i>count</i></pre>

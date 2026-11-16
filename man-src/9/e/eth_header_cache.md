@@ -15,15 +15,15 @@ eth_header_cache - fill cache entry from neighbour
 <h2>Arguments</h2>
 
 <i>neigh</i>
-<dl><dd><dd>source neighbour</dl>
+<dl><dd></dd><dd>source neighbour</dd></dl>
  
 
  <i>hh</i>
-<dl><dd>destination cache entry</dl>
+<dl><dd>destination cache entry</dd></dl>
  
 
  <i>type</i>
-<dl><dd>Ethernet type field</dl>
+<dl><dd>Ethernet type field</dd></dl>
 
 <h2>Description</h2>
 

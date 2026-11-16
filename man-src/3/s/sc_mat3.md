@@ -11,57 +11,18 @@ description: "sc::mat3 –"
 <h2>Synopsis</h2>
 <h3>Public Member Functions</h3>
 <pre><code>mat3 (const vec3 &amp;v0, const vec3 &amp;v1, const vec3 &amp;v2)
-
-
-
 mat3 (const double d)
-
-
-
 mat3 (const mat3 &amp;m)
-
-
-
 mat3 &amp; operator= (const mat3 &amp;m)
-
-
-
 mat3 &amp; operator+= (const mat3 &amp;m)
-
-
-
 mat3 &amp; operator-= (const mat3 &amp;m)
-
-
-
 mat3 &amp; operator*= (const double d)
-
-
-
 mat3 &amp; operator/= (const double d)
-
-
-
 vec3 &amp; operator[] (int i)
-
-
-
 const vec3 &amp; operator[] (int i) const
-
-
-
 mat3 transpose () const
-
-
-
 mat3 inverse ()
-
-
-
 mat3 &amp; apply (V_FCT_PTR fct)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>vec3</code> <code>v</code> [3]</p>
 <h3>Friends</h3>

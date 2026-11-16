@@ -10,7 +10,6 @@ description: "usetat – Replaces a character in a string. Allegro game programm
 <p>usetat &#8211; Replaces a character in a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int usetat(char *s, int index, int c);</code></pre>
 <h2>Description</h2>
 <p>Replaces the character at the specified index in the string with value `c&#8217;, handling any adjustments for variable width data (ie. if `c&#8217; encodes to a different width than the previous value at that location). If `index&#8217; is negative, it counts backward from the end of the string. Example: </p>

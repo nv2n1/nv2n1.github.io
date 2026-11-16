@@ -11,21 +11,21 @@ description: "jstatd – Monitors Java Virtual Machines (JVMs) and enables remot
 <h2>Synopsis</h2>
 <pre><code>jstatd</code> [ <i>options</i> ]</pre>
 <dl>
-<dt><i>options</i></p>
-<dd>The command-line options. See Options.</dl>
+<dt><i>options</i></dt>
+<dd>The command-line options. See Options.</dd></dl>
 <h2>Description</h2>
 <p>The <code>jstatd</code> command is an RMI server application that monitors for the creation and termination of instrumented Java HotSpot VMs and provides an interface to enable remote monitoring tools to attach to JVMs that are running on the local host. </p>
 <p> The <code>jstatd</code> server requires an RMI registry on the local host. The <code>jstatd</code> server attempts to attach to the RMI registry on the default port, or on the port you specify with the <code>-p</code><code>port</code> option. If an RMI registry is not found, then one is created within the <code>jstatd</code> application that is bound to the port that is indicated by the <code>-p</code><code>port</code> option or to the default RMI registry port when the <code>-p</code><code>port</code> option is omitted. You can stop the creation of an internal RMI registry by specifying the <code>-nr</code> option.</p>
 <h2>Options</h2>
 <dl>
-<dt>-nr</p>
-<dd>Does not attempt to create an internal RMI registry within the <code>jstatd</code> process when an existing RMI registry is not found.</p>
-<dt>-p <i>port</i></p>
-<dd>The port number where the RMI registry is expected to be found, or when not found, created if the <code>-nr</code> option is not specified.</p>
-<dt>-n <i>rminame</i></p>
-<dd>Name to which the remote RMI object is bound in the RMI registry. The default name is <code>JStatRemoteHost</code>. If multiple <code>jstatd</code> servers are started on the same host, then the name of the exported RMI object for each server can be made unique by specifying this option. However, doing so requires that the unique server name be included in the monitoring client&#8217;s <code>hostid</code> and <code>vmid</code> strings.</p>
-<dt>-J<i>option</i></p>
-<dd>Passes <code>option</code> to the JVM, where option is one of the <code>options</code> described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+<dt>-nr</dt>
+<dd>Does not attempt to create an internal RMI registry within the <code>jstatd</code> process when an existing RMI registry is not found.</dd>
+<dt>-p <i>port</i></dt>
+<dd>The port number where the RMI registry is expected to be found, or when not found, created if the <code>-nr</code> option is not specified.</dd>
+<dt>-n <i>rminame</i></dt>
+<dd>Name to which the remote RMI object is bound in the RMI registry. The default name is <code>JStatRemoteHost</code>. If multiple <code>jstatd</code> servers are started on the same host, then the name of the exported RMI object for each server can be made unique by specifying this option. However, doing so requires that the unique server name be included in the monitoring client&#8217;s <code>hostid</code> and <code>vmid</code> strings.</dd>
+<dt>-J<i>option</i></dt>
+<dd>Passes <code>option</code> to the JVM, where option is one of the <code>options</code> described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dd></dl>
 <h2>Security</h2>
 <p>The <code>jstatd</code> server can only monitor JVMs for which it has the appropriate native access permissions. Therefore, the <code>jstatd</code> process must be running with the same user credentials as the target JVMs. Some user credentials, such as the root user in UNIX-based systems, have permission to access the instrumentation exported by any JVM on the system. A <code>jstatd</code> process running with such credentials can monitor any JVM on the system, but introduces additional security concerns. </p>
 <p> The <code>jstatd</code> server does not provide any authentication of remote clients. Therefore, running a <code>jstatd</code> server process exposes the instrumentation export by all JVMs for which the <code>jstatd</code> process has access permissions to any user on the network. This exposure might be undesirable in your environment, and therefore, local security policies should be considered before you start the <code>jstatd</code> process, particularly in production environments or on networks that are not secure. </p>
@@ -64,12 +64,12 @@ description: "jstatd – Monitors Java Virtual Machines (JVMs) and enables remot
 <pre><code> -J-Djava.rmi.server.logCalls=true</code></pre>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-java/">java</a>(1)</p>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-jps/">jps</a>(1)</p>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-jstat/">jstat</a>(1)</p>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) </p>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-java/">java</a>(1)</dd>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-jps/">jps</a>(1)</dd>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-jstat/">jstat</a>(1)</dd>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) </dd>
 </dl>

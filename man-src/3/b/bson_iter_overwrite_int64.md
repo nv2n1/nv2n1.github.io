@@ -17,11 +17,11 @@ bson_iter_overwrite_int64 (bson_iter_t *iter,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>value</code></p>
-<dd> A int64_t.</dl>
+<dt><code>value</code></dt>
+<dd> A int64_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_overwrite_int64/">bson_iter_overwrite_int64</a>(3)</code> function shall overwite the contents of a BSON_TYPE_INT64 element in place. </p>
 <p> This may only be done when the underlying bson document allows mutation. </p>

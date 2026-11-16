@@ -17,16 +17,16 @@ description: "XmSpinBox — The SpinBox widget class"
 <p> Arrow size is specified by the SpinBox resource <code>XmNarrowSize</code>. This value sets both width and height of each arrow in pixels. </p>
 <p> The programmer can display SpinBox arrows in one of several layouts, as specified by the <code>XmNarrowLayout</code> resource:</p>
 <dl COMPACT>
-<dt><code>XmARROWS_BEGINNING</code></p>
-<dd>Places a pair of left and right arrows before the children.</p>
-<dt><code>XmARROWS_END</code></p>
-<dd>Places a pair of left and right arrows after the children.</p>
-<dt><code>XmARROWS_SPLIT</code></p>
-<dd>Places one arrow on each side of the children.</p>
-<dt><code>XmARROWS_FLAT_BEGINNING</code></p>
-<dd>Places a pair of arrows side by side before the <code>XmSpinBox</code> children.</p>
-<dt><code>XmARROWS_FLAT_BEGINNING</code></p>
-<dd>Places a pair of arrows side by side after the <code>XmSpinBox</code> children.</dl>
+<dt><code>XmARROWS_BEGINNING</code></dt>
+<dd>Places a pair of left and right arrows before the children.</dd>
+<dt><code>XmARROWS_END</code></dt>
+<dd>Places a pair of left and right arrows after the children.</dd>
+<dt><code>XmARROWS_SPLIT</code></dt>
+<dd>Places one arrow on each side of the children.</dd>
+<dt><code>XmARROWS_FLAT_BEGINNING</code></dt>
+<dd>Places a pair of arrows side by side before the <code>XmSpinBox</code> children.</dd>
+<dt><code>XmARROWS_FLAT_BEGINNING</code></dt>
+<dd>Places a pair of arrows side by side after the <code>XmSpinBox</code> children.</dd></dl>
 <p> Positions for <code>XmARROWS_BEGINNING</code> and <code>XmARROWS_END</code> are dependent on the <code>VendorShell</code> resource <code>XmNlayoutDirection</code>. When layout direction is left-to-right, beginning arrows are positioned to the left of the children. When layout direction is right-to-left, beginning arrows are positioned to the right. </p>
 <p> The actions of the arrows are determined by the <code>VendorShell</code> resource <code>XmNlayoutDirection</code>. For left-to-right layouts, the right arrow is the increment arrow and the left arrow is the decrement arrow. For right-to-left layouts, the right arrow is the decrement arrow and the left arrow is the increment arrow. </p>
 <p> For a numeric type child, the increment arrow increases the displayed value by the incremental value up to the maximum. The decrement arrow decreases the displayed value by the given incremental value down to the minimum. </p>
@@ -166,54 +166,54 @@ description: "XmSpinBox — The SpinBox widget class"
 </tr>
 </table>
 <dl COMPACT>
-<dt><code>XmNarrowLayout</code></p>
-<dd>Specifies placement of the two arrows in the widget. Possible layouts are as follows:</p>
+<dt><code>XmNarrowLayout</code></dt>
+<dd>Specifies placement of the two arrows in the widget. Possible layouts are as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmARROWS_BEGINNING</code></p>
-<dd>Places left and right arrows beside each other, before the child(ren). Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></p>
-<dt><code>XmARROWS_END</code></p>
-<dd>Places left and right arrows beside each other, after the child(ren). Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection</code>.</p>
-<dt><code>XmARROWS_FLAT_BEGINNING</code></p>
-<dd>Places a pair of arrows side by side before the <code>XmSpinBox</code> children. Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></p>
-<dt><code>XmARROWS_FLAT_END</code></p>
-<dd>Places a pair of arrows side by side after the <code>XmSpinBox</code> children. Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></p>
-<dt><code>XmARROWS_SPLIT</code></p>
-<dd>Places a left arrow on the left side and a right arrow on the right side of the child(ren).</dl>
+</dd><dl COMPACT>
+<dt><code>XmARROWS_BEGINNING</code></dt>
+<dd>Places left and right arrows beside each other, before the child(ren). Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></dd>
+<dt><code>XmARROWS_END</code></dt>
+<dd>Places left and right arrows beside each other, after the child(ren). Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection</code>.</dd>
+<dt><code>XmARROWS_FLAT_BEGINNING</code></dt>
+<dd>Places a pair of arrows side by side before the <code>XmSpinBox</code> children. Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></dd>
+<dt><code>XmARROWS_FLAT_END</code></dt>
+<dd>Places a pair of arrows side by side after the <code>XmSpinBox</code> children. Positioning for this layout is dependent on the VendorShell resource <code>XmNlayoutDirection.</code></dd>
+<dt><code>XmARROWS_SPLIT</code></dt>
+<dd>Places a left arrow on the left side and a right arrow on the right side of the child(ren).</dd></dl>
 </dl>
-<dt><code>XmNarrowSize</code></p>
-<dd>Specifies both the width and height of the arrow in pixels.</p>
-<dt><code>XmNdefaultArrowSensitivity</code></p>
-<dd>Specifies the default sensitivity of the arrows in the widget. Insensitive arrows change color, cannot be depressed, and perform no action. (This resource may be overridden by the constraint resource <code>XmNarrowSensitivity</code> for individual traversable text children of the SpinBox.) Possible default sensitivity values are as follows:</p>
+<dt><code>XmNarrowSize</code></dt>
+<dd>Specifies both the width and height of the arrow in pixels.</dd>
+<dt><code>XmNdefaultArrowSensitivity</code></dt>
+<dd>Specifies the default sensitivity of the arrows in the widget. Insensitive arrows change color, cannot be depressed, and perform no action. (This resource may be overridden by the constraint resource <code>XmNarrowSensitivity</code> for individual traversable text children of the SpinBox.) Possible default sensitivity values are as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmARROWS_SENSITIVE</code></p>
-<dd>Both arrows are sensitive.</p>
-<dt><code>XmARROWS_DECREMENT_SENSITIVE</code></p>
-<dd>Only the decrement arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive. The increment arrow is insensitive.</p>
-<dt><code>XmARROWS_INCREMENT_SENSITIVE</code></p>
-<dd>Only the increment arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive. The decrement arrow is insensitive.</p>
-<dt><code>XmARROWS_INSENSITIVE</code></p>
-<dd>Both arrows are insensitive.</dl>
+</dd><dl COMPACT>
+<dt><code>XmARROWS_SENSITIVE</code></dt>
+<dd>Both arrows are sensitive.</dd>
+<dt><code>XmARROWS_DECREMENT_SENSITIVE</code></dt>
+<dd>Only the decrement arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive. The increment arrow is insensitive.</dd>
+<dt><code>XmARROWS_INCREMENT_SENSITIVE</code></dt>
+<dd>Only the increment arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive. The decrement arrow is insensitive.</dd>
+<dt><code>XmARROWS_INSENSITIVE</code></dt>
+<dd>Both arrows are insensitive.</dd></dl>
 </dl>
-<dt><code>XmNdetailShadowThickness</code></p>
-<dd>Specifies the thickness of the inside arrow shadows. The default thickness is 2 pixels.</p>
-<dt><code>XmNinitialDelay</code></p>
-<dd>Specifies how long, in milliseconds, the mouse button must be held down before automatic spinning begins. In other words, when the user selects the increment or decrement arrow and keeps it depressed, this delay occurs before the choices start spinning. If <code>XmNinitialDelay</code> is 0, then <code>XmNrepeatDelay</code> is used as the initial delay.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the amount of blank space between the top edge of the SpinBox widget and the first item in each column, and the bottom edge of the SpinBox widget and the last item in each column.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the amount of blank space between the left edge of the SpinBox widget and the first item in each row, and the right edge of the SpinBox widget and the last item in each row.</p>
-<dt><code>XmNmodifyVerifyCallback</code></p>
-<dd>This callback is called before the SpinBox position changes (see the Constraint resource <code>XmNposition</code>). The application can use this callback to set the next position, change SpinBox resources, or cancel the impending action. For example, this callback can be used to stop the spinning just before wrapping at the upper and lower position boundaries. If the <i>doit</i> member is set to False, nothing happens. Otherwise the position changes. Reasons sent by the callback are <code>XmCR_SPIN_NEXT</code>, <code>XmCR_SPIN_PRIOR</code>, <code>XmCR_SPIN_FIRST</code>, or <code>XmCR_SPIN_LAST</code>.</p>
-<dt><code>XmNrepeatDelay</code></p>
-<dd>When the user selects and keeps an arrow button depressed by pressing and holding <code>&lt;Btn1&gt;</code>, spinning begins. After the time specified in <code>XmNinitialDelay</code> elapses, the SpinBox position changes automatically until the arrow button is released. The <code>XmNrepeatDelay</code> resource specifies the delay in milliseconds between each automatic change. If <code>XmNrepeatDelay</code> is set to 0 (zero), automatic spinning is turned off and <code>XmNinitialDelay</code> is ignored.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the horizontal and vertical spacing between items contained within the SpinBox widget.</p>
-<dt><code>XmNvalueChangedCallback</code></p>
-<dd>This is called <i>n</i>+1 times for <i>n</i> SpinBox position changes (see the Constraint resource <code>XmNposition</code>). Reasons sent by the callback are <code>XmCR_OK</code>, <code>XmCR_SPIN_NEXT</code>, <code>XmCR_SPIN_PRIOR</code>, <code>XmCR_SPIN_FIRST</code>, or <code>XmCR_SPIN_LAST</code>. Other members are detailed in the callback structure description. </p>
+<dt><code>XmNdetailShadowThickness</code></dt>
+<dd>Specifies the thickness of the inside arrow shadows. The default thickness is 2 pixels.</dd>
+<dt><code>XmNinitialDelay</code></dt>
+<dd>Specifies how long, in milliseconds, the mouse button must be held down before automatic spinning begins. In other words, when the user selects the increment or decrement arrow and keeps it depressed, this delay occurs before the choices start spinning. If <code>XmNinitialDelay</code> is 0, then <code>XmNrepeatDelay</code> is used as the initial delay.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the amount of blank space between the top edge of the SpinBox widget and the first item in each column, and the bottom edge of the SpinBox widget and the last item in each column.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the amount of blank space between the left edge of the SpinBox widget and the first item in each row, and the right edge of the SpinBox widget and the last item in each row.</dd>
+<dt><code>XmNmodifyVerifyCallback</code></dt>
+<dd>This callback is called before the SpinBox position changes (see the Constraint resource <code>XmNposition</code>). The application can use this callback to set the next position, change SpinBox resources, or cancel the impending action. For example, this callback can be used to stop the spinning just before wrapping at the upper and lower position boundaries. If the <i>doit</i> member is set to False, nothing happens. Otherwise the position changes. Reasons sent by the callback are <code>XmCR_SPIN_NEXT</code>, <code>XmCR_SPIN_PRIOR</code>, <code>XmCR_SPIN_FIRST</code>, or <code>XmCR_SPIN_LAST</code>.</dd>
+<dt><code>XmNrepeatDelay</code></dt>
+<dd>When the user selects and keeps an arrow button depressed by pressing and holding <code>&lt;Btn1&gt;</code>, spinning begins. After the time specified in <code>XmNinitialDelay</code> elapses, the SpinBox position changes automatically until the arrow button is released. The <code>XmNrepeatDelay</code> resource specifies the delay in milliseconds between each automatic change. If <code>XmNrepeatDelay</code> is set to 0 (zero), automatic spinning is turned off and <code>XmNinitialDelay</code> is ignored.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the horizontal and vertical spacing between items contained within the SpinBox widget.</dd>
+<dt><code>XmNvalueChangedCallback</code></dt>
+<dd>This is called <i>n</i>+1 times for <i>n</i> SpinBox position changes (see the Constraint resource <code>XmNposition</code>). Reasons sent by the callback are <code>XmCR_OK</code>, <code>XmCR_SPIN_NEXT</code>, <code>XmCR_SPIN_PRIOR</code>, <code>XmCR_SPIN_FIRST</code>, or <code>XmCR_SPIN_LAST</code>. Other members are detailed in the callback structure description. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>XmSpinBox Constraint</code></td>
@@ -320,52 +320,52 @@ description: "XmSpinBox — The SpinBox widget class"
 </td>
 </tr>
 </table>
-<dt><code>XmNarrowSensitivity</code></p>
-<dd>Specifies the sensitivity of the arrows for a SpinBox child. By using this resource in the definition of a SpinBox child, the application programmer can override the default SpinBox sensitivity (set by <code>XmNdefaultArrowSensitivity</code>) for a particular child. This allows each traversable child to have a different arrow sensitivity. The arrow sensitivity values are as follows:</p>
+<dt><code>XmNarrowSensitivity</code></dt>
+<dd>Specifies the sensitivity of the arrows for a SpinBox child. By using this resource in the definition of a SpinBox child, the application programmer can override the default SpinBox sensitivity (set by <code>XmNdefaultArrowSensitivity</code>) for a particular child. This allows each traversable child to have a different arrow sensitivity. The arrow sensitivity values are as follows:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmARROWS_SENSITIVE</code></p>
-<dd>Both arrows are sensitive.</p>
-<dt><code>XmARROWS_DECREMENT_SENSITIVE</code></p>
-<dd>Only the decrement arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive.</p>
-<dt><code>XmARROWS_INCREMENT_SENSITIVE</code></p>
-<dd>Only the increment arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive.</p>
-<dt><code>XmARROWS_INSENSITIVE</code></p>
-<dd>Both arrows are insensitive.</p>
-<dt><code>XmARROWS_DEFAULT_SENSITIVITY</code></p>
-<dd>Use the sensitivity specified in the <code>XmNdefaultArrowSensitivity</code> resource.</dl>
+</dd><dl COMPACT>
+<dt><code>XmARROWS_SENSITIVE</code></dt>
+<dd>Both arrows are sensitive.</dd>
+<dt><code>XmARROWS_DECREMENT_SENSITIVE</code></dt>
+<dd>Only the decrement arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive.</dd>
+<dt><code>XmARROWS_INCREMENT_SENSITIVE</code></dt>
+<dd>Only the increment arrow (as determined by <code>XmNlayoutDirection</code>) is sensitive.</dd>
+<dt><code>XmARROWS_INSENSITIVE</code></dt>
+<dd>Both arrows are insensitive.</dd>
+<dt><code>XmARROWS_DEFAULT_SENSITIVITY</code></dt>
+<dd>Use the sensitivity specified in the <code>XmNdefaultArrowSensitivity</code> resource.</dd></dl>
 </dl>
-<dt><code>XmNdecimalPoints</code></p>
-<dd>Specifies the number of decimal places used when displaying the value of a SpinBox numeric type child. If the number of decimal places specified is greater than the number of digits in a displayed value, the value is padded with 0 (zeros). For example, when <code>XmNinitialValue</code> is 1 and <code>XmNmaximumValue</code> is 1000 and <code>XmNdecimalPoints</code> is 3, the range of values displayed in the SpinBox is 0.001 to 1.000. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNincrementValue</code></p>
-<dd>Specifies the amount by which to increment or decrement a SpinBox numeric type child. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNmaximumValue</code></p>
-<dd>Specifies the highest possible value for a numeric SpinBox. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNminimumValue</code></p>
-<dd>Specifies the lowest possible value for a numeric SpinBox. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNnumValues</code></p>
-<dd>Specifies the number of strings in <code>XmNvalues</code>. The application must change this value when strings are added or removed from <code>XmNvalues</code>. This is used only when <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>.</p>
-<dt><code>XmNposition</code></p>
-<dd>Specifies the position of the currently displayed item. The interpritation of <code>XmNposition</code> is dependent upon the value of the <code>XmNpositionType</code> resource.</p>
-<dd>When <code>XmNpositionType</code> is <code>XmPOSITION_INDEX</code> the <code>XmNposition</code> value is interpreted as follows: For <code>XmSpinBox</code> children of type <code>XmNUMERIC</code>, the <code>XmNposition</code> resource is interpreted as an index into an array of items. The minimum allowable value for <code>XmNposition</code> is 0. The maximum allowable value for <code>XmNposition</code> is <code>(XmNmaximumValue-XmNminimumValue)/XmNincrementValue</code>. The value display by the <code>XmSpinBox</code> child is <code>XmNminimumValue+(XmNposition*XmNincrementValue)</code>. For <code>XmSpinBox</code> children of type <code>XmSTRING</code>, the <code>XmNposition</code> resource is interpreted as an index into an array of <code>XmNnumValues</code> items. The minimum allowable value for <code>XmNposition</code> is 0. The maximum allowable value for <code>XmNposition</code> is <code>XmNnumValues &#8211; 1</code>. The value displayed by the <code>XmSpinBox</code> is the <code>XmNposition</code>&#8216;th value in the <code>XmNvalues</code> array.</p>
-<dd>When <code>XmNpositionType</code> is <code>XmPOSITION_VALUE</code> the <code>XmNposition</code> value is interpreted as follows:</p>
-<dd>For <code>XmSpinBox</code> children of type <code>XmNUMERIC</code>, the <code>XmNposition</code> resource is interpreted as the actual value to be displayed. The minimum allowable value for <code>XmNposition</code> is <code>XmNminimumValue</code>. The maximum allowable value for <code>XmNposition</code> is <code>XmNmaximumValue</code>. The value displayed by the <code>XmSpinBox</code> child is <code>XmNposition</code>. For <code>XmSpinBox</code> children of type <code>XmSTRING</code>, the interpretation is the same for <code>XmPOSITION_VALUE</code> as for <code>XmPOSITION_INDEX</code>.</p>
-<dd>Position values falling outside the specified range are invalid. When an application assigns a value to <code>XmNposition</code> which is less than the minimum, <code>XmNposition</code> is set to the minimum and an error message is displayed. When an application assigns a value to <code>XmNposition</code> which is greater than the maximum, <code>XmNposition</code> is set to the maximum and an error message is displayed.</p>
-<dt><code>XmNpositionType</code></p>
-<dd>Specifies how values the <code>XmNposition</code> resource are to be interpreted. Valid values include <code>XmPOSITION_INDEX</code> and <code>XmPOSITION_VALUE</code>.</p>
-<dt><code>XmNspinBoxChildType</code></p>
-<dd>Specifies the type of data displayed in the child:</p>
+<dt><code>XmNdecimalPoints</code></dt>
+<dd>Specifies the number of decimal places used when displaying the value of a SpinBox numeric type child. If the number of decimal places specified is greater than the number of digits in a displayed value, the value is padded with 0 (zeros). For example, when <code>XmNinitialValue</code> is 1 and <code>XmNmaximumValue</code> is 1000 and <code>XmNdecimalPoints</code> is 3, the range of values displayed in the SpinBox is 0.001 to 1.000. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNincrementValue</code></dt>
+<dd>Specifies the amount by which to increment or decrement a SpinBox numeric type child. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNmaximumValue</code></dt>
+<dd>Specifies the highest possible value for a numeric SpinBox. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNminimumValue</code></dt>
+<dd>Specifies the lowest possible value for a numeric SpinBox. This is used only when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNnumValues</code></dt>
+<dd>Specifies the number of strings in <code>XmNvalues</code>. The application must change this value when strings are added or removed from <code>XmNvalues</code>. This is used only when <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>.</dd>
+<dt><code>XmNposition</code></dt>
+<dd>Specifies the position of the currently displayed item. The interpritation of <code>XmNposition</code> is dependent upon the value of the <code>XmNpositionType</code> resource.</dd>
+<dd>When <code>XmNpositionType</code> is <code>XmPOSITION_INDEX</code> the <code>XmNposition</code> value is interpreted as follows: For <code>XmSpinBox</code> children of type <code>XmNUMERIC</code>, the <code>XmNposition</code> resource is interpreted as an index into an array of items. The minimum allowable value for <code>XmNposition</code> is 0. The maximum allowable value for <code>XmNposition</code> is <code>(XmNmaximumValue-XmNminimumValue)/XmNincrementValue</code>. The value display by the <code>XmSpinBox</code> child is <code>XmNminimumValue+(XmNposition*XmNincrementValue)</code>. For <code>XmSpinBox</code> children of type <code>XmSTRING</code>, the <code>XmNposition</code> resource is interpreted as an index into an array of <code>XmNnumValues</code> items. The minimum allowable value for <code>XmNposition</code> is 0. The maximum allowable value for <code>XmNposition</code> is <code>XmNnumValues &#8211; 1</code>. The value displayed by the <code>XmSpinBox</code> is the <code>XmNposition</code>&#8216;th value in the <code>XmNvalues</code> array.</dd>
+<dd>When <code>XmNpositionType</code> is <code>XmPOSITION_VALUE</code> the <code>XmNposition</code> value is interpreted as follows:</dd>
+<dd>For <code>XmSpinBox</code> children of type <code>XmNUMERIC</code>, the <code>XmNposition</code> resource is interpreted as the actual value to be displayed. The minimum allowable value for <code>XmNposition</code> is <code>XmNminimumValue</code>. The maximum allowable value for <code>XmNposition</code> is <code>XmNmaximumValue</code>. The value displayed by the <code>XmSpinBox</code> child is <code>XmNposition</code>. For <code>XmSpinBox</code> children of type <code>XmSTRING</code>, the interpretation is the same for <code>XmPOSITION_VALUE</code> as for <code>XmPOSITION_INDEX</code>.</dd>
+<dd>Position values falling outside the specified range are invalid. When an application assigns a value to <code>XmNposition</code> which is less than the minimum, <code>XmNposition</code> is set to the minimum and an error message is displayed. When an application assigns a value to <code>XmNposition</code> which is greater than the maximum, <code>XmNposition</code> is set to the maximum and an error message is displayed.</dd>
+<dt><code>XmNpositionType</code></dt>
+<dd>Specifies how values the <code>XmNposition</code> resource are to be interpreted. Valid values include <code>XmPOSITION_INDEX</code> and <code>XmPOSITION_VALUE</code>.</dd>
+<dt><code>XmNspinBoxChildType</code></dt>
+<dd>Specifies the type of data displayed in the child:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmNUMERIC</code></p>
-<dd>The SpinBox choice range is defined by numeric minimum, maximum, and incremental values.</p>
-<dt><code>XmSTRING</code></p>
-<dd>The SpinBox choices are alphanumeric.</dl>
+</dd><dl COMPACT>
+<dt><code>XmNUMERIC</code></dt>
+<dd>The SpinBox choice range is defined by numeric minimum, maximum, and incremental values.</dd>
+<dt><code>XmSTRING</code></dt>
+<dd>The SpinBox choices are alphanumeric.</dd></dl>
 </dl>
-<dt><code>XmNvalues</code></p>
-<dd>Specifies the array of <code>XmString</code>s to be displayed in a SpinBox string type child. The application must change <code>XmNnumValues</code> when strings are added to or removed from <code>XmNvalues</code>. This is used only when <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>.</dl>
+<dt><code>XmNvalues</code></dt>
+<dd>Specifies the array of <code>XmString</code>s to be displayed in a SpinBox string type child. The application must change <code>XmNnumValues</code> when strings are added to or removed from <code>XmNvalues</code>. This is used only when <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>SpinBox inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table>
@@ -763,297 +763,297 @@ description: "XmSpinBox — The SpinBox widget class"
  Boolean <i>crossed_boundary</i>;
 } XmSpinBoxCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked. Reasons may be the following:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked. Reasons may be the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCR_OK</code></p>
-<dd>Spinning has stopped because the SpinBox arrow has been disarmed. <code>XmCR_OK</code> is either the last or only call.</p>
-<dt><code>XmCR_SPIN_NEXT</code></p>
-<dd>The increment arrow has been armed and position is increasing. Further callbacks will come. For a numeric type child, the values displayed are approaching the maximum. For a string SpinBox, the values displayed are approaching the last entry in the array of <code>XmString</code> s.</p>
-<dt><code>XmCR_SPIN_PRIOR</code></p>
-<dd>The decrement arrow has been armed and position is decreasing. Further callbacks will come. For a numeric type child, the values displayed are approaching the minimum. For a string type child, the values displayed are approaching the first entry in the array of <code>XmString</code>s.</p>
-<dt><code>XmCR_SPIN_FIRST</code></p>
-<dd>The begin data (<code>&lt;osfBeginData&gt;</code>) key sequence has been pressed. The SpinBox is at its first position, displaying the lowest value or the first entry in the array of <code>XmString</code>s.</p>
-<dt><code>XmCR_SPIN_LAST</code></p>
-<dd>The end data (<code>&lt;osfEndData&gt;</code>) key sequence has been pressed. The SpinBox is at its last position, displaying the highest value or the last entry in the array of <code>XmString</code>s.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCR_OK</code></dt>
+<dd>Spinning has stopped because the SpinBox arrow has been disarmed. <code>XmCR_OK</code> is either the last or only call.</dd>
+<dt><code>XmCR_SPIN_NEXT</code></dt>
+<dd>The increment arrow has been armed and position is increasing. Further callbacks will come. For a numeric type child, the values displayed are approaching the maximum. For a string SpinBox, the values displayed are approaching the last entry in the array of <code>XmString</code> s.</dd>
+<dt><code>XmCR_SPIN_PRIOR</code></dt>
+<dd>The decrement arrow has been armed and position is decreasing. Further callbacks will come. For a numeric type child, the values displayed are approaching the minimum. For a string type child, the values displayed are approaching the first entry in the array of <code>XmString</code>s.</dd>
+<dt><code>XmCR_SPIN_FIRST</code></dt>
+<dd>The begin data (<code>&lt;osfBeginData&gt;</code>) key sequence has been pressed. The SpinBox is at its first position, displaying the lowest value or the first entry in the array of <code>XmString</code>s.</dd>
+<dt><code>XmCR_SPIN_LAST</code></dt>
+<dd>The end data (<code>&lt;osfEndData&gt;</code>) key sequence has been pressed. The SpinBox is at its last position, displaying the highest value or the last entry in the array of <code>XmString</code>s.</dd></dl>
 </dl>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered this callback.</p>
-<dt><i>widget</i></p>
-<dd>Specifies the child widget affected by this callback.</p>
-<dt><i>doit</i></p>
-<dd>When the callback is <code>XmNmodifyVerifyCallback</code>, <i>doit</i> indicates whether or not an action will be performed before the SpinBox position changes. If the callback leaves <i>doit</i> set to True (the default), the spinning action is performed. If the callback sets <i>doit</i> to False, the spinning action is not performed. When the callback is <code>XmNvalueChangedCallback</code>, <i>doit</i> is ignored.</p>
-<dt><i>position</i></p>
-<dd>Specifies the next value of the SpinBox position (same as <code>XmNposition</code>). This is an output field for the <code>XmNmodifyVerifyCallback</code>, which may change the next position as dictated by the needs of an application.</p>
-<dt><i>value</i></p>
-<dd>Specifies the new <code>XmString</code> value in the text child widget. The user program must copy this string if it is to be used outside the callback routine.</p>
-<dt><i>crossed_boundary</i></p>
-<dd>Specifies whether or not the SpinBox has crossed the upper or lower boundary (the last or first compound string, or the maximum or minimum value). The <i>crossed_boundary</i> value is True if the SpinBox has just crossed a boundary, and False if it has not.</dl>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered this callback.</dd>
+<dt><i>widget</i></dt>
+<dd>Specifies the child widget affected by this callback.</dd>
+<dt><i>doit</i></dt>
+<dd>When the callback is <code>XmNmodifyVerifyCallback</code>, <i>doit</i> indicates whether or not an action will be performed before the SpinBox position changes. If the callback leaves <i>doit</i> set to True (the default), the spinning action is performed. If the callback sets <i>doit</i> to False, the spinning action is not performed. When the callback is <code>XmNvalueChangedCallback</code>, <i>doit</i> is ignored.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the next value of the SpinBox position (same as <code>XmNposition</code>). This is an output field for the <code>XmNmodifyVerifyCallback</code>, which may change the next position as dictated by the needs of an application.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the new <code>XmString</code> value in the text child widget. The user program must copy this string if it is to be used outside the callback routine.</dd>
+<dt><i>crossed_boundary</i></dt>
+<dd>Specifies whether or not the SpinBox has crossed the upper or lower boundary (the last or first compound string, or the maximum or minimum value). The <i>crossed_boundary</i> value is True if the SpinBox has just crossed a boundary, and False if it has not.</dd></dl>
 <h3>Translations</h3>
 <p>The <code>XmSpinBox</code> translations are as follows: </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&lt;Btn1Down&gt;</code>:</p>
-<dd>SpinBArm()</p>
-<dt><code>&lt;Btn1Up&gt;</code>:</p>
-<dd>SpinBDisarm()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code> :</p>
-<dd>SpinBPrior()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code> :</p>
-<dd>SpinBNext()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code> :</p>
-<dd>SpinBLeft()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code> :</p>
-<dd>SpinBRight()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code> :</p>
-<dd>SpinBFirst()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code> :</p>
-<dd>SpinBLast()</dl>
+<dt><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>SpinBArm()</dd>
+<dt><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>SpinBDisarm()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code> :</dt>
+<dd>SpinBPrior()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code> :</dt>
+<dd>SpinBNext()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code> :</dt>
+<dd>SpinBLeft()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code> :</dt>
+<dd>SpinBRight()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfBeginData&gt;</code> :</dt>
+<dd>SpinBFirst()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfEndData&gt;</code> :</dt>
+<dd>SpinBLast()</dd></dl>
 <h3>Accelerators</h3>
 <p>The <code>XmNaccelerators</code> resource of a SpinBox are added to each traversable text child. The default <code>XmNaccelerators</code> are defined in the following list. The bindings for <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code> and <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code> cannot be changed.</p>
 <dl COMPACT>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfUp&gt;</code>:</p>
-<dd>SpinBPrior()</p>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfDown&gt;</code>:</p>
-<dd>SpinBNext()</p>
-<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfUp&gt;</code>:</p>
-<dd>SpinBDisarm()</p>
-<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfDown&gt;</code>:</p>
-<dd>SpinBDisarm()</p>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfLeft&gt;</code>:</p>
-<dd>SpinBLeft()</p>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfRight&gt;</code>:</p>
-<dd>SpinBRight()</p>
-<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfLeft&gt;</code>:</p>
-<dd>SpinBDisarm()</p>
-<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfRight&gt;</code>:</p>
-<dd>SpinBDisarm()</p>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfBeginData&gt;</code>:</p>
-<dd>SpinBFirst()</p>
-<dt><code>&lt;Key&gt;</code> <code>&lt;osfEndData&gt;</code>:</p>
-<dd>SpinBLast()</dl>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfUp&gt;</code>:</dt>
+<dd>SpinBPrior()</dd>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfDown&gt;</code>:</dt>
+<dd>SpinBNext()</dd>
+<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfUp&gt;</code>:</dt>
+<dd>SpinBDisarm()</dd>
+<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfDown&gt;</code>:</dt>
+<dd>SpinBDisarm()</dd>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SpinBLeft()</dd>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfRight&gt;</code>:</dt>
+<dd>SpinBRight()</dd>
+<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SpinBDisarm()</dd>
+<dt><code>&lt;KeyUp&gt;</code> <code>&lt;osfRight&gt;</code>:</dt>
+<dd>SpinBDisarm()</dd>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfBeginData&gt;</code>:</dt>
+<dd>SpinBFirst()</dd>
+<dt><code>&lt;Key&gt;</code> <code>&lt;osfEndData&gt;</code>:</dt>
+<dd>SpinBLast()</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmSpinBox</code> action routines are as follows:</p>
 <dl COMPACT>
-<dt>SpinBArm():</p>
-<dd>Visually arms the SpinBox by drawing the armed arrow so that it appears to be depressed. This action is initiated when the user presses <code>&lt;Btn1&gt;</code> while the pointer is within the boundaries of either the increment or decrement arrow. The arrow remains visually armed as long as <code>&lt;Btn1&gt;</code> remains depressed.</p>
-<dd>If the time period specified by <code>XmNrepeatDelay</code> is not greater than zero milliseconds, nothing else happens while <code>&lt;Btn1&gt;</code> remains depressed.</p>
-<dd>If the time period specified by <code>XmNrepeatDelay</code> is greater than zero milliseconds, and the arrow is disarmed before the time period specified by <code>XmNinitialDelay</code> has elapsed, nothing else happens in this action.</p>
-<dd>If the time period specified by <code>XmNrepeatDelay</code> is greater than zero milliseconds, and the arrow is still armed after the time period specified by <code>XmNinitialDelay</code> has elapsed, the following occurs:</p>
+<dt>SpinBArm():</dt>
+<dd>Visually arms the SpinBox by drawing the armed arrow so that it appears to be depressed. This action is initiated when the user presses <code>&lt;Btn1&gt;</code> while the pointer is within the boundaries of either the increment or decrement arrow. The arrow remains visually armed as long as <code>&lt;Btn1&gt;</code> remains depressed.</dd>
+<dd>If the time period specified by <code>XmNrepeatDelay</code> is not greater than zero milliseconds, nothing else happens while <code>&lt;Btn1&gt;</code> remains depressed.</dd>
+<dd>If the time period specified by <code>XmNrepeatDelay</code> is greater than zero milliseconds, and the arrow is disarmed before the time period specified by <code>XmNinitialDelay</code> has elapsed, nothing else happens in this action.</dd>
+<dd>If the time period specified by <code>XmNrepeatDelay</code> is greater than zero milliseconds, and the arrow is still armed after the time period specified by <code>XmNinitialDelay</code> has elapsed, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or to <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the next position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or to <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the next position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dd>These events are repeated each time the <code>XmNrepeatDelay</code> period elapses and the arrow remains armed.</p>
-<dt>SpinBDisarm():</p>
-<dd>Visually disarms the SpinBox by drawing the previously armed arrow so that it no longer appears to be depressed.</p>
-<dd>If the time period specified by <code>XmNrepeatDelay</code> is not greater than zero milliseconds, or the time period specified by <code>XmNinitialDelay</code> has not elapsed, the following then occurs:</p>
+<dd>These events are repeated each time the <code>XmNrepeatDelay</code> period elapses and the arrow remains armed.</dd>
+<dt>SpinBDisarm():</dt>
+<dd>Visually disarms the SpinBox by drawing the previously armed arrow so that it no longer appears to be depressed.</dd>
+<dd>If the time period specified by <code>XmNrepeatDelay</code> is not greater than zero milliseconds, or the time period specified by <code>XmNinitialDelay</code> has not elapsed, the following then occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or to <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the next position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd>The <code>XmNmodifyVerifyCallback</code>, if there is one, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or to <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the next position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd>The <code>XmNmodifyVerifyCallback</code>, if there is one, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by an <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code> if the increment arrow is armed, or <code>XmCR_SPIN_PRIOR</code> if the decrement arrow is armed.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by an <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dd>If an <code>XmNvalueChangedCallback</code> procedure is issued after the button has been armed, regardless of the value of <code>XmNrepeatDelay</code> or whether the <code>XmNinitialDelay</code> has expired:</p>
+<dd>If an <code>XmNvalueChangedCallback</code> procedure is issued after the button has been armed, regardless of the value of <code>XmNrepeatDelay</code> or whether the <code>XmNinitialDelay</code> has expired:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dd></dl>
 </dl>
-<dt>SpinBFirst():</p>
-<dd>The following occurs:</p>
+<dt>SpinBFirst():</dt>
+<dd>The following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_FIRST</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the first (0) position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_FIRST</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the first (0) position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_FIRST</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) <code>XmNposition</code> value.</p>
-<dt> &bull;</p>
-<dd>The <code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_FIRST</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) <code>XmNposition</code> value.</dd>
+<dt> &bull;</dt>
+<dd>The <code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dt>SpinBLast():</p>
-<dd>The following occurs:</p>
+<dt>SpinBLast():</dt>
+<dd>The following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_LAST</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the last position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_LAST</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the last position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_LAST</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to the <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_LAST</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to the <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dt>SpinBLeft():</p>
-<dd>If the VendorShell resource <code>XmNlayoutDirection</code> is left-to-right, the <code>SpinBPrior</code> action is invoked. Otherwise, the <code>SpinBNext</code> action is invoked.</p>
-<dt>SpinBNext():</p>
-<dd>Visually arms the SpinBox by drawing the increment arrow so that it appears to be depressed. The following occurs:</p>
+<dt>SpinBLeft():</dt>
+<dd>If the VendorShell resource <code>XmNlayoutDirection</code> is left-to-right, the <code>SpinBPrior</code> action is invoked. Otherwise, the <code>SpinBNext</code> action is invoked.</dd>
+<dt>SpinBNext():</dt>
+<dd>Visually arms the SpinBox by drawing the increment arrow so that it appears to be depressed. The following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the next position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_NEXT</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the next position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd>The <code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_NEXT</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dt>SpinBPrior():</p>
-<dd>Visually arms the SpinBox by drawing the decrement arrow so that it appears to be depressed. The following occurs:</p>
+<dt>SpinBPrior():</dt>
+<dd>Visually arms the SpinBox by drawing the decrement arrow so that it appears to be depressed. The following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_PRIOR</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the next position.</p>
-<dt> &bull;</p>
-<dd>The <i>doit</i> member is set to True.</p>
-<dt> &bull;</p>
-<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure, <code>XmSpinBoxCallbackStruct</code>, is set to <code>XmCR_SPIN_PRIOR</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the next position.</dd>
+<dt> &bull;</dt>
+<dd>The <i>doit</i> member is set to True.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNmodifyVerifyCallback</code>, if it exists, is invoked. The application may change the value of <i>position</i> and <i>doit</i>. If the application sets <i>doit</i> to False, nothing else happens until the <code>XmNrepeatDelay</code> period has elapsed, or until <code>&lt;Btn1&gt;</code> is released.</dd></dl>
 </dl>
-<dd>If <i>doit</i> remains set to True, the following occurs:</p>
+<dd>If <i>doit</i> remains set to True, the following occurs:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</p>
-<dt> &bull;</p>
-<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_PRIOR</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</p>
-<dt> &bull;</p>
-<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</p>
-<dt> &bull;</p>
-<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</p>
-<dt> &bull;</p>
-<dd><code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>The value of <code>XmNposition</code> is changed to the value of <i>position</i> in the SpinBox callback structure.</dd>
+<dt> &bull;</dt>
+<dd>The text corresponding to the new position is displayed in the traversable text child that currently has focus.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_SPIN_PRIOR</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code>, if it exists, is called.</dd>
+<dt> &bull;</dt>
+<dd>The <i>reason</i> member of the SpinBox callback structure is set to <code>XmCR_OK</code>.</dd>
+<dt> &bull;</dt>
+<dd>The <i>position</i> member is set to the current (new) value of <code>XmNposition</code>.</dd>
+<dt> &bull;</dt>
+<dd><code>XmNvalueChangedCallback</code> is called again. SpinBox ignores any changes to <i>position</i> or <i>doit</i> members made by <code>XmNvalueChangedCallback</code>.</dd></dl>
 </dl>
-<dt>SpinBRight():</p>
-<dd>If the VendorShell resource <code>XmNlayoutDirection</code> is left-to-right, the <code>SpinBNext</code> action is invoked. Otherwise, the <code>SpinBPrior</code> action is invoked.</dl>
+<dt>SpinBRight():</dt>
+<dd>If the VendorShell resource <code>XmNlayoutDirection</code> is left-to-right, the <code>SpinBNext</code> action is invoked. Otherwise, the <code>SpinBPrior</code> action is invoked.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-constraint/">Constraint</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatespinbox/">XmCreateSpinBox</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatespinbox/">XmVaCreateSpinBox</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanagedspinbox/">XmVaCreateManagedSpinBox</a></code>(3).</p>

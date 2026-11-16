@@ -13,20 +13,20 @@ description: "libtalloc_debugging – Chapter 6: Debugging Although talloc makes
 <h2>Talloc log and abort</h2>
 <p> We have already encountered the abort function in section <code>Dynamic type system</code>. In that case it was used when a type mismatch was detected. However, talloc calls this abort function in several more situations: </p>
 <dl>
-<dt>&bull;</p>
-<dd> when the provided pointer is not a valid talloc context,</p>
-<dt>&bull;</p>
-<dd> when the meta data is invalid &#8211; probably due to memory corruption,</p>
-<dt>&bull;</p>
-<dd> and when an access after free is detected.</dl>
+<dt>&bull;</dt>
+<dd> when the provided pointer is not a valid talloc context,</dd>
+<dt>&bull;</dt>
+<dd> when the meta data is invalid &#8211; probably due to memory corruption,</dd>
+<dt>&bull;</dt>
+<dd> and when an access after free is detected.</dd></dl>
 <p> The third one is probably the most interesting. It can help us with detecting an attempt to double-free a context or any other manipulation with it via talloc functions (using it as a parent, stealing it, etc.). </p>
 <p> Before the context is freed talloc sets a flag in the meta data. This is then used to detect the access after free. It basically works on the assumption that the memory stays unchanged (at least for a while) even when it is properly deallocated. This will work even if the memory is filled with the value specified in TALLOC_FREE_FILL environment variable, because it fills only the data part and leaves the meta data intact. </p>
 <p> Apart from the abort function, talloc uses a log function to provide additional information to the aforementioned violations. To enable logging we shall set the log function with one of: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>talloc_set_log_fn()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_set_log_stderr()</code></dl>
+<dt>&bull;</dt>
+<dd> <code>talloc_set_log_fn()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_set_log_stderr()</code></dd></dl>
 <p> The following code is a sample output of accessing a context after it has been freed: </p>
 <pre><code>
 talloc_set_log_stderr();
@@ -44,10 +44,10 @@ results in : Bad talloc magic value &#8211; unknown value</p>
 <h2>Memory usage reports</h2>
 <p> Talloc can print reports of memory usage of a specified talloc context to a file (to stdout or stderr). The report can be simple or full. The simple report provides information only about the context itself and its direct descendants. The full report goes recursively through the entire context tree. See: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>talloc_report()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_report_full()</code></dl>
+<dt>&bull;</dt>
+<dd> <code>talloc_report()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_report_full()</code></dd></dl>
 <p> We will use the following code to retrieve the sample report: </p>
 <pre><code>
 struct foo {
@@ -72,12 +72,12 @@ full talloc report on 'talloc_new: ../src/main.c:82' (total 46 bytes in 5 blocks
 <p> We can notice in this report that something is wrong with the context containing struct foo. We know that the structure has only one string element. However, we can see in the report that it has two children. This indicates that we have either violated the memory hierarchy or forgotten to free it as temporary data. Looking into the code, we can see that &#8216;Foo is my parent&#8217; should be attached to ctx. </p>
 <p> See also: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>talloc_enable_null_tracking()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_disable_null_tracking()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_enable_leak_report()</code></p>
-<dt>&bull;</p>
-<dd> <code>talloc_enable_leak_report_full()</code></dl>
+<dt>&bull;</dt>
+<dd> <code>talloc_enable_null_tracking()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_disable_null_tracking()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_enable_leak_report()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>talloc_enable_leak_report_full()</code></dd></dl>
 <h2>Index</h2>

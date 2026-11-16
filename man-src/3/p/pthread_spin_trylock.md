@@ -10,13 +10,12 @@ description: "pthread_spin_lock, pthread_spin_trylock, pthread_spin_unlock – l
 <p>pthread_spin_lock, pthread_spin_trylock, pthread_spin_unlock &#8211; lock and unlock a spin lock</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_spin_lock(pthread_spinlock_t *lock);
 int pthread_spin_trylock(pthread_spinlock_t *lock);
 int pthread_spin_unlock(pthread_spinlock_t *lock);</code></pre>
 <p> Compile and link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_spin_lock</code>(), <code>pthread_spin_trylock</code>(): </p>
 <dl>
-<dd>_POSIX_C_SOURCE &gt;= 200112L</dl>
+<dd>_POSIX_C_SOURCE &gt;= 200112L</dd></dl>
 <h2>Description</h2>
 <p>The <code>pthread_spin_lock</code>() function locks the spin lock referred to by <i>lock</i>. If the spin lock is currently unlocked, the calling thread acquires the lock immediately. If the spin lock is currently locked by another thread, the calling thread spins, testing the lock until it becomes available, at which point the calling thread acquires the lock. </p>
 <p> Calling <code>pthread_spin_lock</code>() on a lock that is already held by the caller or a lock that has not been initialized with <code><a href="/docs/linux/man/3-pthread_spin_init/">pthread_spin_init</a></code>(3) results in undefined behavior. </p>
@@ -28,12 +27,12 @@ int pthread_spin_unlock(pthread_spinlock_t *lock);</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_spin_lock</code>() may fail with the following errors:</p>
 <dl>
-<dt><code>EDEADLOCK</code></p>
-<dd>The system detected a deadlock condition.</dl>
+<dt><code>EDEADLOCK</code></dt>
+<dd>The system detected a deadlock condition.</dd></dl>
 <p> <code>pthread_spin_trylock</code>() fails with the following errors:</p>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd>The spin lock is currently locked by another thread.</dl>
+<dt><code>EBUSY</code></dt>
+<dd>The spin lock is currently locked by another thread.</dd></dl>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.2.</p>
 <h2>Conforming To</h2>

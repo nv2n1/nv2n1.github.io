@@ -12,31 +12,13 @@ description: "std::_Fwd_list_node< _Tp > –"
 <p> Inherits <code>std::_Fwd_list_node_base</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void _M_reverse_after () noexcept
-
-
-
 _Fwd_list_node_base * _M_transfer_after (_Fwd_list_node_base *__begin, _Fwd_list_node_base *__end)
-
-
-
 _Tp * _M_valptr () noexcept
-
-
-
 const _Tp * _M_valptr () const noexcept
-
-
-
 Public Attributes
 _Fwd_list_node_base * _M_next
-
-
-
 aligned_storage&lt; sizeof(_Tp),
-
-
 alignment_of&lt; _Tp &gt;::value &gt;
-
 ::type _M_storage&quot;</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _Tp&gt;struct std::_Fwd_list_node&lt; _Tp &gt;</h3>

@@ -11,11 +11,8 @@ description: "ql/models/parameter.hpp – Model parameter classes."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/qldefines.hpp&gt;
-
 #include &lt;ql/handle.hpp&gt;
-
 #include &lt;ql/math/optimization/constraint.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>Parameter</code><br />

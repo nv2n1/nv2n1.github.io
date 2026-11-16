@@ -56,15 +56,15 @@ description: "NetEm – Network Emulator"
 <h2>Examples</h2>
 <p>tc qdisc add dev eth0 root netem rate 5kbit 20 100 5</p>
 <dl>
-<dd>delay all outgoing packets on device eth0 with a rate of 5kbit, a per packet overhead of 20 byte, a cellsize of 100 byte and a per celloverhead of 5 byte:</dl>
+<dd>delay all outgoing packets on device eth0 with a rate of 5kbit, a per packet overhead of 20 byte, a cellsize of 100 byte and a per celloverhead of 5 byte:</dd></dl>
 <h2>Sources</h2>
 <dl>
-<dt> 1.</p>
-<dd>Hemminger S. , &quot;Network Emulation with NetEm&quot;, Open Source Development Lab, April 2005 (<a rel="nofollow" href="http://devresources.linux-foundation.org/shemminger/netem/LCA2005_paper.pdf)">http://devresources.linux-foundation.org/shemminger/netem/LCA2005_paper.pdf)</a> </p>
-<dt> 2.</p>
-<dd>Netem page from Linux foundation, (<a rel="nofollow" href="https://wiki.linuxfoundation.org/networking/netem)">https://wiki.linuxfoundation.org/networking/netem)</a> </p>
-<dt> 3.</p>
-<dd>Salsano S., Ludovici F., Ordine A., &quot;Definition of a general and intuitive loss model for packet networks and its implementation in the Netem module in the Linux kernel&quot;, available at <a rel="nofollow" href="http://netgroup.uniroma2.it/NetemCLG">http://netgroup.uniroma2.it/NetemCLG</a> </p>
+<dt> 1.</dt>
+<dd>Hemminger S. , &quot;Network Emulation with NetEm&quot;, Open Source Development Lab, April 2005 (<a rel="nofollow" href="http://devresources.linux-foundation.org/shemminger/netem/LCA2005_paper.pdf)">http://devresources.linux-foundation.org/shemminger/netem/LCA2005_paper.pdf)</a> </dd>
+<dt> 2.</dt>
+<dd>Netem page from Linux foundation, (<a rel="nofollow" href="https://wiki.linuxfoundation.org/networking/netem)">https://wiki.linuxfoundation.org/networking/netem)</a> </dd>
+<dt> 3.</dt>
+<dd>Salsano S., Ludovici F., Ordine A., &quot;Definition of a general and intuitive loss model for packet networks and its implementation in the Netem module in the Linux kernel&quot;, available at <a rel="nofollow" href="http://netgroup.uniroma2.it/NetemCLG">http://netgroup.uniroma2.it/NetemCLG</a> </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-tbf/">tc-tbf</a></code>(8) </p>

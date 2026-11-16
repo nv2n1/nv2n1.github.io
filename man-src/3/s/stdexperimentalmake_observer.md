@@ -11,9 +11,7 @@ std::experimental::make_observer - std::experimental::make_observer
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/memory&gt;
-
 template &lt;class W&gt;                                                (library fundamentals TS v2)
-
 std::experimental::observer_ptr&lt;W&gt; make_observer(W* p) noexcept;</code></pre> 
 Creates an observer_ptr object, deducing the template argument from the type of the function argument. 
 

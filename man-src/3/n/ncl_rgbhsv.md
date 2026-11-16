@@ -22,17 +22,17 @@ CALL RGBHSV (R, G, B, H, S, V)
 <h2>Description</h2>
 
 <dl><dt>R
-<dd>(REAL, input, range [0.,1.]) represents the red intensity component of the input point in RGB color space.
-<dt>G
-<dd>(REAL, input, range [0.,1.]) represents the green intensity component of the input point in RGB color space.
-<dt>B
-<dd>(REAL, input, range [0.,1.]) represents the blue intensity component of the input point in RGB color space.
-<dt>H
-<dd>(REAL, output, range [0.,360.) ) represents the hue of the input point in HSV color space. A value of (R,0.,0.) in the input space will result in a hue of 0. in the output space.
-<dt>S
-<dd>(REAL, output, range [0.,1.]) represents the saturation value of the input point in HSV color space. Saturation is a measure of how much white light is mixed with the color. Saturation values of 0. represent grays (with a gray value equal to V). Saturation values of 1. are fully saturated colors. The hue is technically undefined when S=0.; the code leaves H at its previous value when S=0. (0. initially). The fully saturated pure hues occur when S=1. and V=1.
-<dt>V
-<dd>(REAL, output, range [0.,1.]) represents the value in HSV space.</dl>
+</dt><dd>(REAL, input, range [0.,1.]) represents the red intensity component of the input point in RGB color space.
+</dd><dt>G
+</dt><dd>(REAL, input, range [0.,1.]) represents the green intensity component of the input point in RGB color space.
+</dd><dt>B
+</dt><dd>(REAL, input, range [0.,1.]) represents the blue intensity component of the input point in RGB color space.
+</dd><dt>H
+</dt><dd>(REAL, output, range [0.,360.) ) represents the hue of the input point in HSV color space. A value of (R,0.,0.) in the input space will result in a hue of 0. in the output space.
+</dd><dt>S
+</dt><dd>(REAL, output, range [0.,1.]) represents the saturation value of the input point in HSV color space. Saturation is a measure of how much white light is mixed with the color. Saturation values of 0. represent grays (with a gray value equal to V). Saturation values of 1. are fully saturated colors. The hue is technically undefined when S=0.; the code leaves H at its previous value when S=0. (0. initially). The fully saturated pure hues occur when S=1. and V=1.
+</dd><dt>V
+</dt><dd>(REAL, output, range [0.,1.]) represents the value in HSV space.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

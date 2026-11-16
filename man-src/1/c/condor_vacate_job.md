@@ -23,69 +23,58 @@ description: "condor_vacate_job vacate jobs in the HTCondor queue from the hosts
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>scheddname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>scheddname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>scheddname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <i>cluster</i></p>
 <dl>
 <dt>
-<dd> Vacate all jobs in the specified cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Vacate all jobs in the specified cluster</dd>
+</dl>
 <p> <i>cluster.process</i></p>
 <dl>
 <dt>
-<dd> Vacate the specific job in the cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Vacate the specific job in the cluster</dd>
+</dl>
 <p> <i>user</i></p>
 <dl>
 <dt>
-<dd> Vacate jobs belonging to specified user</p>
-<dt>
-<dd></dl>
+</dt><dd> Vacate jobs belonging to specified user</dd>
+</dl>
 <p> <code>-constraint </code> <i>expression</i></p>
 <dl>
 <dt>
-<dd> Vacate all jobs which match the job ClassAd expression constraint</p>
-<dt>
-<dd></dl>
+</dt><dd> Vacate all jobs which match the job ClassAd expression constraint</dd>
+</dl>
 <p> <i>-all</i></p>
 <dl>
 <dt>
-<dd> Vacate all the jobs in the queue</p>
-<dt>
-<dd></dl>
+</dt><dd> Vacate all the jobs in the queue</dd>
+</dl>
 <p> <i>-fast</i></p>
 <dl>
 <dt>
-<dd> Perform a fast vacate and hard kill the jobs</p>
-<dt>
-<dd></dl>
+</dt><dd> Perform a fast vacate and hard kill the jobs</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> Do not confuse <i>condor_vacate_job</i> with <i>condor_vacate</i> . <i>condor_vacate</i> is given a list of hosts to vacate, regardless of what jobs happen to be running on them. Only machine owners and administrators have permission to use <i>condor_vacate</i> to evict jobs from a given host. <i>condor_vacate_job</i> is given a list of job to vacate, regardless of which hosts they happen to be running on. Only the owner of the jobs or queue super users have permission to use <i>condor_vacate_job</i> . </p>
 <h2>Examples</h2>

@@ -13,29 +13,29 @@ description: "sassc: – Sass compiles CSS from SASS or SCSS files"
 <p> <code>sassc</code> [<i>,options/</i>] [<i>,INPUT/</i>] [<i>,OUTPUT/</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code>, <code>&#8211;stdin</code></p>
-<dd> Read input from standard input instead of an input file.</p>
-<dt><code>-t</code>, <code>&#8211;style</code> NAME</p>
-<dd> Output style. Can be: nested, expanded, compact, compressed.</p>
-<dt><code>-l</code>, <code>&#8211;line-numbers</code></p>
-<dd> Emit comments showing original line numbers.</p>
-<dt> <code>&#8211;line-comments</code></p>
-<dt><code>-I</code>, <code>&#8211;load-path</code> PATH</p>
+<dt><code>-s</code>, <code>&#8211;stdin</code></dt>
+<dd> Read input from standard input instead of an input file.</dd>
+<dt><code>-t</code>, <code>&#8211;style</code> NAME</dt>
+<dd> Output style. Can be: nested, expanded, compact, compressed.</dd>
+<dt><code>-l</code>, <code>&#8211;line-numbers</code></dt>
+<dd> Emit comments showing original line numbers.</dd>
+<dt> <code>&#8211;line-comments</code></dt>
+<dt><code>-I</code>, <code>&#8211;load-path</code> PATH</dt>
 <dd>
-<dd>Set Sass import path.</p>
-<dt><code>-P</code>, <code>&#8211;plugin-path</code> PATH</p>
-<dd> Set path to autoload plugins.</p>
-<dt><code>-m</code>, <code>&#8211;sourcemap</code>[=<i>,TYPE/</i>]</p>
-<dd> Emit source map (auto or inline).</p>
-<dt><code>-M</code>, <code>&#8211;omit-map-comment</code></p>
-<dd> Omits the source map url comment.</p>
-<dt><code>-p</code>, <code>&#8211;precision</code></p>
-<dd> Set the precision for numbers.</p>
-<dt><code>-a</code>, <code>&#8211;sass</code></p>
-<dd> Treat input as indented syntax.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display compiled versions.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display this help message.</dl>
+</dd><dd>Set Sass import path.</dd>
+<dt><code>-P</code>, <code>&#8211;plugin-path</code> PATH</dt>
+<dd> Set path to autoload plugins.</dd>
+<dt><code>-m</code>, <code>&#8211;sourcemap</code>[=<i>,TYPE/</i>]</dt>
+<dd> Emit source map (auto or inline).</dd>
+<dt><code>-M</code>, <code>&#8211;omit-map-comment</code></dt>
+<dd> Omits the source map url comment.</dd>
+<dt><code>-p</code>, <code>&#8211;precision</code></dt>
+<dd> Set the precision for numbers.</dd>
+<dt><code>-a</code>, <code>&#8211;sass</code></dt>
+<dd> Treat input as indented syntax.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display compiled versions.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display this help message.</dd></dl>
 <p> libsass: 3.6.5 sass2scss: 1.1.1 sass: 3.5 </p>
 <h2>Index</h2>

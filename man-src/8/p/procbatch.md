@@ -23,26 +23,26 @@ description: "procbatch – Process an INN funnel file or innfeed-dropped file"
 <p> After running <code>procbatch</code>, you may want to make sure that every generated backlog file has a corresponding <tt>&quot;.lock&quot;</tt> file. Otherwise, <code>innfeed</code> doesn&#8217;t have that site configured as a peer, meaning your <i>innfeed.conf</i> may need fixing.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Check for the existence of an article before writing references to it to the tape files. Currently, this option can only be used with a tradspool article store. Using it with any other spool format will lead to all articles being dropped.</p>
-<dt><code>-d</code> <i>outdir</i></p>
-<dd>Put the output file(s) into the directory <i>outdir</i> (defaults to <i>pathtmp</i> as set in <i>inn.conf</i>). When also specifying <code>-m</code>, the temporary output files will still be put here before being moved into their final location.</p>
-<dt><code>-e</code> <i>peer</i></p>
-<dd>Only process entries for <i>peer</i>.</p>
-<dt><code>-h</code></p>
-<dd>Display a short help screen.</p>
-<dt><code>-m</code></p>
-<dd>Directly append to tape files in <code>innfeed</code>&#8216;s backlog directory.</p>
-<dt><code>-q</code></p>
-<dd>Quiet mode: only display error messages.</p>
-<dt><code>-s</code> <i>spooldir</i></p>
-<dd>Use <i>spooldir</i> as the location of the article spool (defaults to <i>patharticles</i> as set in <i>inn.conf</i>). This option has an effect only on a tradspool storage system when also specifying <code>-c</code>.</p>
-<dt><code>-t</code> <i>backlogdir</i></p>
-<dd>Use <i>backlogdir</i> as the location of the <code>innfeed</code> backlog directory (the directory where the created tape files will be put). Defaults to <i>pathspool</i>/innfeed. This option has an effect only when also specifying <code>-m</code>.</p>
-<dt><code>-u</code></p>
-<dd>Unlink the input batchfile after processing.</p>
-<dt><code>-v</code></p>
-<dd>Add verbosity.</dl>
+<dt><code>-c</code></dt>
+<dd>Check for the existence of an article before writing references to it to the tape files. Currently, this option can only be used with a tradspool article store. Using it with any other spool format will lead to all articles being dropped.</dd>
+<dt><code>-d</code> <i>outdir</i></dt>
+<dd>Put the output file(s) into the directory <i>outdir</i> (defaults to <i>pathtmp</i> as set in <i>inn.conf</i>). When also specifying <code>-m</code>, the temporary output files will still be put here before being moved into their final location.</dd>
+<dt><code>-e</code> <i>peer</i></dt>
+<dd>Only process entries for <i>peer</i>.</dd>
+<dt><code>-h</code></dt>
+<dd>Display a short help screen.</dd>
+<dt><code>-m</code></dt>
+<dd>Directly append to tape files in <code>innfeed</code>&#8216;s backlog directory.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet mode: only display error messages.</dd>
+<dt><code>-s</code> <i>spooldir</i></dt>
+<dd>Use <i>spooldir</i> as the location of the article spool (defaults to <i>patharticles</i> as set in <i>inn.conf</i>). This option has an effect only on a tradspool storage system when also specifying <code>-c</code>.</dd>
+<dt><code>-t</code> <i>backlogdir</i></dt>
+<dd>Use <i>backlogdir</i> as the location of the <code>innfeed</code> backlog directory (the directory where the created tape files will be put). Defaults to <i>pathspool</i>/innfeed. This option has an effect only when also specifying <code>-m</code>.</dd>
+<dt><code>-u</code></dt>
+<dd>Unlink the input batchfile after processing.</dd>
+<dt><code>-v</code></dt>
+<dd>Add verbosity.</dd></dl>
 <h2>Examples</h2>
 <p>Take the file <i>innfeed-dropped.B012345</i>, process its lines appending to tapefiles in <code>innfeed</code>&#8216;s backlog directory, and remove it when done. Be verbose while doing so: </p>
 <pre> procbatch -umv innfeed-dropped.B012345</pre>

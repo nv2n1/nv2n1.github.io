@@ -27,51 +27,49 @@ description: "gpg-wks-client – Client for the Web Key Service"
 <p> <code>gpg-wks-client</code> is not commonly invoked directly and thus it is not installed in the bin directory. Here is an example how it can be invoked manually to check for a Web Key Directory entry for &#8216;<i>foo [at] example.org</i>&#8216;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $(gpgconf-- list - dirs libexecdir) / gpg - wks - client-- check foo[at] example.net
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>gpg-wks-client</code> understands these options: </p>
 <dl>
-<dt><code>&#8211;send</code></p>
-<dd> Directly send created mails using the <code>sendmail</code> command. Requires installation of that command. </p>
-<dt><code>&#8211;with-colons</code></p>
-<dd> This option has currently only an effect on the <code>&#8211;supported</code> command. If it is used all arguments on the command line are taken as domain names and tested for WKD support. The output format is one line per domain with colon delimited fields. The currently specified fields are (future versions may specify additional fields): </p>
+<dt><code>&#8211;send</code></dt>
+<dd> Directly send created mails using the <code>sendmail</code> command. Requires installation of that command. </dd>
+<dt><code>&#8211;with-colons</code></dt>
+<dd> This option has currently only an effect on the <code>&#8211;supported</code> command. If it is used all arguments on the command line are taken as domain names and tested for WKD support. The output format is one line per domain with colon delimited fields. The currently specified fields are (future versions may specify additional fields): </dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>1 &#8211; domain</code></p>
-<dd> This is the domain name. Although quoting is not required for valid domain names this field is specified to be quoted in standard C manner. </p>
-<dt><code>2 &#8211; WKD</code></p>
-<dd> If the value is true the domain supports the Web Key Directory. </p>
-<dt><code>3 &#8211; WKS</code></p>
-<dd> If the value is true the domain supports the Web Key Service protocol to upload keys to the directory. </p>
-<dt><code>4 &#8211; error-code</code></p>
-<dd> This may contain an gpg-error code to describe certain failures. Use &#8216;gpg-error CODE&#8217; to explain the code. </p>
-<dt><code>5 &#8211; protocol-version</code></p>
-<dd> The minimum protocol version supported by the server. </p>
-<dt><code>6 &#8211; auth-submit</code></p>
-<dd> The auth-submit flag from the policy file of the server. </p>
-<dt><code>7 &#8211; mailbox-only</code></p>
-<dd> The mailbox-only flag from the policy file of the server.</dl>
+<dt><code>1 &#8211; domain</code></dt>
+<dd> This is the domain name. Although quoting is not required for valid domain names this field is specified to be quoted in standard C manner. </dd>
+<dt><code>2 &#8211; WKD</code></dt>
+<dd> If the value is true the domain supports the Web Key Directory. </dd>
+<dt><code>3 &#8211; WKS</code></dt>
+<dd> If the value is true the domain supports the Web Key Service protocol to upload keys to the directory. </dd>
+<dt><code>4 &#8211; error-code</code></dt>
+<dd> This may contain an gpg-error code to describe certain failures. Use &#8216;gpg-error CODE&#8217; to explain the code. </dd>
+<dt><code>5 &#8211; protocol-version</code></dt>
+<dd> The minimum protocol version supported by the server. </dd>
+<dt><code>6 &#8211; auth-submit</code></dt>
+<dd> The auth-submit flag from the policy file of the server. </dd>
+<dt><code>7 &#8211; mailbox-only</code></dt>
+<dd> The mailbox-only flag from the policy file of the server.</dd></dl>
 </dl>
-<dt><code>&#8211;output </code><i>file</i></p>
-<dd> <code>-o</code> Write the created mail to <i>file</i> instead of stdout. Note that the value <code>&#8211;</code> for <i>file</i> is the same as writing to stdout. </p>
-<dt><code>&#8211;status-fd </code><i>n</i></p>
-<dd> Write special status strings to the file descriptor <i>n</i>. This program returns only the status messages SUCCESS or FAILURE which are helpful when the caller uses a double fork approach and can&#8217;t easily get the return code of the process. </p>
-<dt><code>-C </code><i>dir</i></p>
-<dd> <code>&#8211;directory </code><i>dir</i> Use <i>dir</i> as top level directory for the commands <code>&#8211;install-key</code> and <code>&#8211;remove-key</code>. The default is &#8216;<i>openpgpkey</i>&#8216;. </p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable extra informational output. </p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Disable almost all informational output. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version of the program and exit. </p>
-<dt><code>&#8211;help</code></p>
-<dd> Display a brief help page and exit. </p>
+<dt><code>&#8211;output </code><i>file</i></dt>
+<dd> <code>-o</code> Write the created mail to <i>file</i> instead of stdout. Note that the value <code>&#8211;</code> for <i>file</i> is the same as writing to stdout. </dd>
+<dt><code>&#8211;status-fd </code><i>n</i></dt>
+<dd> Write special status strings to the file descriptor <i>n</i>. This program returns only the status messages SUCCESS or FAILURE which are helpful when the caller uses a double fork approach and can&#8217;t easily get the return code of the process. </dd>
+<dt><code>-C </code><i>dir</i></dt>
+<dd> <code>&#8211;directory </code><i>dir</i> Use <i>dir</i> as top level directory for the commands <code>&#8211;install-key</code> and <code>&#8211;remove-key</code>. The default is &#8216;<i>openpgpkey</i>&#8216;. </dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Enable extra informational output. </dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Disable almost all informational output. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version of the program and exit. </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a brief help page and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gpg-wks-server/">gpg-wks-server</a></code>(1) </p>

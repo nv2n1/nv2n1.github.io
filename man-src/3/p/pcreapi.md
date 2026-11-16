@@ -109,7 +109,8 @@ pcre.h&gt;</code></pre>
 <p> At compile time, the newline convention can be specified by the <i>options</i> argument of <code>pcre_compile()</code>, or it can be specified by special text at the start of the pattern itself; this overrides any other settings. See the <code>pcrepattern</code> page for details of the special character sequences. </p>
 <p> In the PCRE documentation the word &quot;newline&quot; is used to mean &quot;the character or pair of characters that indicate a line break&quot;. The choice of newline convention affects the handling of the dot, circumflex, and dollar metacharacters, the handling of #-comments in /x mode, and, when CRLF is a recognized line ending sequence, the match position advancement for a non-anchored pattern. There is more detail about this in the section on <code>pcre_exec()</code> options below. </p>
 <p> The choice of newline convention does not affect the interpretation of the 
- or  escape sequences, nor does it affect what \R matches, which is controlled in a similar way, but by separate options.</p>
+ or 
+ escape sequences, nor does it affect what \R matches, which is controlled in a similar way, but by separate options.</p>
 <h2>Multithreading</h2>
 <p>The PCRE functions can be used in multi-threading applications, with the proviso that the memory management functions pointed to by <code>pcre_malloc</code>, <code>pcre_free</code>, <code>pcre_stack_malloc</code>, and <code>pcre_stack_free</code>, and the callout and stack-checking functions pointed to by <code>pcre_callout</code> and <code>pcre_stack_guard</code>, are shared by all threads. </p>
 <p> The compiled form of a regular expression is not altered during matching, so the same compiled pattern can safely be used by several threads at once. </p>
@@ -205,3 +206,4 @@ pcre.h&gt;</code></pre>
 <p> (1) A lone closing square bracket in a pattern causes a compile-time error, because this is illegal in JavaScript (by default it is treated as a data character). Thus, the pattern AB]CD becomes illegal when this option is set. </p>
 <p> (2) At run time, a back reference to an unset subpattern group matches an empty string (by default this causes the current matching alternative to fail). A pattern such as (\1)(a) succeeds when this option is set (assuming it can find an &quot;a&quot; in the subject), whereas it fails by default, for Perl compatibility. </p>
 <p> (3) 
+</p>

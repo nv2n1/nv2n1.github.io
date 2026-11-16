@@ -15,8 +15,8 @@ description: "XmDataFieldGetStringWcs — A DataField function that retrieves a 
 <h2>Description</h2>
 <p><code>XmDataFieldGetStringWcs</code> retrieves a copy of the wide character string value of the DataField widget. The application is responsible for freeing the storage associated with the string by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the DataField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the DataField widget ID</dd></dl>
 <p> For a complete definition of DataField and its associated resources, see <code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the wide character string value of the DataField widget. The function returns an empty string if the length of the DataField widget&#8217;s string is 0 (zero).</p>

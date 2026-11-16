@@ -15,11 +15,11 @@ lock_two_nondirectories - take two i_mutexes on non-directory objects
 <h2>Arguments</h2>
 
 <i>inode1</i>
-<dl><dd><dd>first inode to lock</dl>
+<dl><dd></dd><dd>first inode to lock</dd></dl>
  
 
  <i>inode2</i>
-<dl><dd>second inode to lock</dl>
+<dl><dd>second inode to lock</dd></dl>
 
 <h2>Description</h2>
 

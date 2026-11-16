@@ -14,15 +14,15 @@ description: "ata_scsiop_read_cap – Simulate READ CAPACITY[ 16] commands"
 <p><i>args</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data / SCSI command of interest.</dl>
+</dd><dd>device IDENTIFY data / SCSI command of interest.</dd></dl>
 <p> <i>rbuf</i></p>
 <dl>
-<dd>Response buffer, to which simulated SCSI cmd output is sent.</dl>
+<dd>Response buffer, to which simulated SCSI cmd output is sent.</dd></dl>
 <h2>Description</h2>
 <p>Simulate READ CAPACITY commands. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

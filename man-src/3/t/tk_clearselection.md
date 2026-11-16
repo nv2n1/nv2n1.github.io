@@ -13,8 +13,8 @@ description: "Tk_ClearSelection – Deselect a selection"
 <code>Tk_ClearSelection</code>(<i>tkwin, selection</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) The selection will be cleared from the display containing this window.</p>
-<dd>Atom <i>selection</i> (in) The name of selection to be cleared. </p>
+<dd>Tk_Window <i>tkwin</i> (in) The selection will be cleared from the display containing this window.</dd>
+<dd>Atom <i>selection</i> (in) The name of selection to be cleared. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_ClearSelection</code> cancels the selection specified by the atom <i>selection</i> for the display containing <i>tkwin</i>. The selection need not be in <i>tkwin</i> itself or even in <i>tkwin</i>&#8216;s application. If there is a window anywhere on <i>tkwin</i>&#8216;s display that owns <i>selection</i>, the window will be notified and the selection will be cleared. If there is no owner for <i>selection</i> on the display, then the procedure has no effect. </p>

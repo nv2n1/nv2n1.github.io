@@ -16,72 +16,72 @@ description: "soapcpp2 – the gSOAP Stub and Skeleton Compiler for C and C++"
 <p> Create stubs and client and server code from input <i>INPUT</i> or standard input if <i>INPUT</i> is not specified.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-1</code></p>
-<dd> Generate SOAP 1.1 bindings.</p>
-<dt><code>-2</code></p>
-<dd> Generate SOAP 1.2 bindings.</p>
-<dt><code>-0</code></p>
-<dd> Remove SOAP bindings, use REST.</p>
-<dt><code>-C</code></p>
-<dd> Generate client-side code only.</p>
-<dt><code>-S</code></p>
-<dd> Generate server-side code only.</p>
-<dt><code>-T</code></p>
-<dd> Generate server-side auto-test code.</p>
-<dt><code>-L</code></p>
-<dd> Do not generate <code>soapClientLib</code>/<code>soapServerLib</code>.</p>
-<dt><code>-a</code></p>
-<dd> Use <code>SOAPAction</code> with WS-Addressing to invoke server-side operations.</p>
-<dt><code>-A</code></p>
-<dd> Require <code>SOAPAction</code> to invoke server-side operations.</p>
-<dt><code>-b</code></p>
-<dd> Serialize byte arrays char[N] as string.</p>
-<dt><code>-c</code></p>
-<dd> Generate C source code.</p>
-<dt><code>-d</code><i>path</i></p>
-<dd> Use <i>path</i> to save files.</p>
-<dt><code>-e</code></p>
-<dd> Generate SOAP RPC encoding style bindings.</p>
-<dt><code>-f</code><i>N</i></p>
-<dd> File split of <i>N</i> XML serializer implementations per file (N&gt;=10).</p>
-<dt><code>-h</code></p>
-<dd> Display help info.</p>
-<dt><code>-I</code><i>path</i></p>
-<dd> use <i>path</i>(s) for <code>#import</code> (paths separated with &#8216;:&#8217;).</p>
-<dt><code>-i</code></p>
-<dd> Generate C++ service proxies and objects inherited from <code>soap</code> struct.</p>
-<dt><code>-j</code></p>
-<dd> Generate C++ service proxies and objects that share a <code>soap</code> struct.</p>
-<dt><code>-k</code></p>
-<dd> Generate data structure walkers (experimental).</p>
-<dt><code>-l</code></p>
-<dd> Generate linkable modules (experimental).</p>
-<dt><code>-m</code></p>
-<dd> Generate Matlab(tm) code for MEX compiler.</p>
-<dt><code>-n</code></p>
-<dd> Use service name to rename service functions and namespace table.</p>
-<dt><code>-p</code><i>name</i></p>
-<dd> Save files with new prefix <i>name</i> instead of <code>soap</code>.</p>
-<dt><code>-Q</code><i>name</i></p>
-<dd> Use <i>name</i> as the C++ namespace for decls, including custom serializers.</p>
-<dt><code>-q</code><i>name</i></p>
-<dd> Use <i>name</i> as the C++ namespace for decls, excluding custom serializers.</p>
-<dt><code>-s</code></p>
-<dd> Generate deserialization code with strict XML validation checks.</p>
-<dt><code>-t</code></p>
-<dd> Generate code for fully <code>xsi:type</code> typed SOAP/XML messaging.</p>
-<dt><code>-u</code></p>
-<dd> Uncomment comments in WSDL/schema output by suppressing XML comments.</p>
-<dt><code>-v</code></p>
-<dd> Display version info.</p>
-<dt><code>-w</code></p>
-<dd> Do not generate WSDL and schema files.</p>
-<dt><code>-x</code></p>
-<dd> Do not generate sample XML message files.</p>
-<dt><code>-y</code></p>
-<dd> Include C/C++ type access information in sample XML messages.</p>
-<dt><code>-z1</code></p>
-<dd> Generate deprecated old-style C++ service proxies and objects.</dl>
+<dt><code>-1</code></dt>
+<dd> Generate SOAP 1.1 bindings.</dd>
+<dt><code>-2</code></dt>
+<dd> Generate SOAP 1.2 bindings.</dd>
+<dt><code>-0</code></dt>
+<dd> Remove SOAP bindings, use REST.</dd>
+<dt><code>-C</code></dt>
+<dd> Generate client-side code only.</dd>
+<dt><code>-S</code></dt>
+<dd> Generate server-side code only.</dd>
+<dt><code>-T</code></dt>
+<dd> Generate server-side auto-test code.</dd>
+<dt><code>-L</code></dt>
+<dd> Do not generate <code>soapClientLib</code>/<code>soapServerLib</code>.</dd>
+<dt><code>-a</code></dt>
+<dd> Use <code>SOAPAction</code> with WS-Addressing to invoke server-side operations.</dd>
+<dt><code>-A</code></dt>
+<dd> Require <code>SOAPAction</code> to invoke server-side operations.</dd>
+<dt><code>-b</code></dt>
+<dd> Serialize byte arrays char[N] as string.</dd>
+<dt><code>-c</code></dt>
+<dd> Generate C source code.</dd>
+<dt><code>-d</code><i>path</i></dt>
+<dd> Use <i>path</i> to save files.</dd>
+<dt><code>-e</code></dt>
+<dd> Generate SOAP RPC encoding style bindings.</dd>
+<dt><code>-f</code><i>N</i></dt>
+<dd> File split of <i>N</i> XML serializer implementations per file (N&gt;=10).</dd>
+<dt><code>-h</code></dt>
+<dd> Display help info.</dd>
+<dt><code>-I</code><i>path</i></dt>
+<dd> use <i>path</i>(s) for <code>#import</code> (paths separated with &#8216;:&#8217;).</dd>
+<dt><code>-i</code></dt>
+<dd> Generate C++ service proxies and objects inherited from <code>soap</code> struct.</dd>
+<dt><code>-j</code></dt>
+<dd> Generate C++ service proxies and objects that share a <code>soap</code> struct.</dd>
+<dt><code>-k</code></dt>
+<dd> Generate data structure walkers (experimental).</dd>
+<dt><code>-l</code></dt>
+<dd> Generate linkable modules (experimental).</dd>
+<dt><code>-m</code></dt>
+<dd> Generate Matlab(tm) code for MEX compiler.</dd>
+<dt><code>-n</code></dt>
+<dd> Use service name to rename service functions and namespace table.</dd>
+<dt><code>-p</code><i>name</i></dt>
+<dd> Save files with new prefix <i>name</i> instead of <code>soap</code>.</dd>
+<dt><code>-Q</code><i>name</i></dt>
+<dd> Use <i>name</i> as the C++ namespace for decls, including custom serializers.</dd>
+<dt><code>-q</code><i>name</i></dt>
+<dd> Use <i>name</i> as the C++ namespace for decls, excluding custom serializers.</dd>
+<dt><code>-s</code></dt>
+<dd> Generate deserialization code with strict XML validation checks.</dd>
+<dt><code>-t</code></dt>
+<dd> Generate code for fully <code>xsi:type</code> typed SOAP/XML messaging.</dd>
+<dt><code>-u</code></dt>
+<dd> Uncomment comments in WSDL/schema output by suppressing XML comments.</dd>
+<dt><code>-v</code></dt>
+<dd> Display version info.</dd>
+<dt><code>-w</code></dt>
+<dd> Do not generate WSDL and schema files.</dd>
+<dt><code>-x</code></dt>
+<dd> Do not generate sample XML message files.</dd>
+<dt><code>-y</code></dt>
+<dd> Include C/C++ type access information in sample XML messages.</dd>
+<dt><code>-z1</code></dt>
+<dd> Generate deprecated old-style C++ service proxies and objects.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wsdl2h/">wsdl2h</a></code>(1).</p>
 <h2>AUTHOR</h2>

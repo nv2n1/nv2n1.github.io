@@ -14,11 +14,8 @@ description: "memkind_hugetlb.h – hugetlb memory memkind operations. Note: Thi
 <pre><code>
 #include &lt;memkind/internal/memkind_hugetlb.h&gt;
 Link with - lmemkind int memkind_hugetlb_check_available_2mb(struct memkind *kind);
-
 int memkind_hugetlb_check_available_1gb(struct memkind *kind);
-
 int memkind_hugetlb_get_mmap_flags(struct memkind *kind, int *flags);
-
 void memkind_hugetlb_init_once(void);
 </code></pre>
 <h2>DESCRIPTION</h2>

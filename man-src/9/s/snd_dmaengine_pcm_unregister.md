@@ -15,7 +15,7 @@ snd_dmaengine_pcm_unregister - Removes a dmaengine based PCM device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Parent device the PCM was register with</dl>
+<dl><dd></dd><dd>Parent device the PCM was register with</dd></dl>
 
 <h2>Description</h2>
 

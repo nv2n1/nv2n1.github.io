@@ -13,12 +13,12 @@ description: "pskc_sign_x509 – API function"
 int pskc_sign_x509(pskc_t *container, const char *key_file, const char *cert_file);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>const char * key_file</p>
-<dd>filename of file containing private key.</p>
-<dt>const char * cert_file</p>
-<dd>filename of file containing corresponding X.509 certificate.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>const char * key_file</dt>
+<dd>filename of file containing private key.</dd>
+<dt>const char * cert_file</dt>
+<dd>filename of file containing corresponding X.509 certificate.</dd></dl>
 <h2>Description</h2>
 <p>Sign PSKC data using X.509 certificate and private key.</p>
 <h2>Returns</h2>

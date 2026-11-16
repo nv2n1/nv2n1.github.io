@@ -14,13 +14,9 @@ description: "memkind_pmem.h – file-backed memory memkind operations. Note: Th
 <pre><code>
 #include &lt;memkind/internal/memkind_pmem.h&gt;
 Link with - lmemkind int memkind_pmem_create(struct memkind *kind, const struct memkind_ops *ops, const char *name);
-
 int memkind_pmem_destroy(struct memkind *kind);
-
 void *memkind_pmem_mmap(struct memkind *kind, void *addr, size_t size);
-
 int memkind_pmem_get_mmap_flags(struct memkind *kind, int *flags);
-
 int memkind_pmem_get_size(struct memkind *kind, size_t *total, size_t *free);
 </code></pre>
 <h2>DESCRIPTION</h2>
@@ -33,8 +29,8 @@ int memkind_pmem_get_size(struct memkind *kind, size_t *total, size_t *free);
 <p> <code>memkind_pmem_get_mmap_flags</code>() sets <i>flags</i> to <code>MAP_SHARED</code>. See <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) for more information about these flags. </p>
 <p> <code>memkind_pmem_get_size</code>() sets <i>total</i> to the number of bytes of the entire usable space in the memory-mapped file associated with the specified kind, and sets <i>free</i> to the number of unused bytes available in the memory-mapped file.</p>
 <dl>
-<dt><code>MEMKIND_PMEM_MIN_SIZE</code></p>
-<dd> The minimum size of the file-backed memory partition.</dl>
+<dt><code>MEMKIND_PMEM_MIN_SIZE</code></dt>
+<dd> The minimum size of the file-backed memory partition.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2015 &#8211; 2016 Intel Corporation. All rights reserved.</p>
 <h2>SEE ALSO</h2>

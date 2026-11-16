@@ -227,53 +227,53 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p>Activate (set focus to, via the window manager) an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to activate.</dl>
+<dd><i>ee</i> The Ecore_Evas to activate.</dd></dl>
 <p> This functions activates the Ecore_Evas.</p>
 <h3>EAPI int ecore_evas_alpha_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas has an alpha channel. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to query.</dl>
+<dd><i>ee</i> The Ecore_Evas to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee has an alpha channel, 0 if it does not.</dl>
+<dd>1 if ee has an alpha channel, 0 if it does not.</dd></dl>
 <p> This function returns 1 if ee has an alpha channel, and 0 if it does not.</p>
 <h3>EAPI void ecore_evas_alpha_set (Ecore_Evas * ee, int alpha)</h3>
 <p>Set whether an Ecore_Evas has an alpha channel or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to shape<br />
- <i>alpha</i> 1 to enable the alpha channel, 0 to disable it</dl>
+ <i>alpha</i> 1 to enable the alpha channel, 0 to disable it</dd></dl>
 <p> This function allows you to make an Ecore_Evas translucent using an alpha channel. See <code>ecore_evas_shaped_set()</code> for details. The difference between a shaped window and a window with an alpha channel is that an alpha channel supports multiple levels of transpararency, as opposed to the 1 bit transparency of a shaped window (a pixel is either opaque, or it&#8217;s transparent).</p>
 <h3>EAPI Ecore_Evas_Avoid_Damage_Type ecore_evas_avoid_damage_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window avoids damage or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee avoids damage, 0 if not.</dl>
+<dd>1 if ee avoids damage, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_avoid_damage_set (Ecore_Evas * ee, Ecore_Evas_Avoid_Damage_Type on)</h3>
 <p>Set whether or not an Ecore_Evas&#8217; window should avoid damage. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 to avoid damage, 0 to not</dl>
+ <i>on</i> 1 to avoid damage, 0 to not</dd></dl>
 <p> This function causes ee to be drawn to a pixmap to avoid recalculations. On expose events it will copy from the pixmap to the window.</p>
 <h3>EAPI int ecore_evas_borderless_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is borderless or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee is borderless, 0 if not.</dl>
+<dd>1 if ee is borderless, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_borderless_set (Ecore_Evas * ee, int on)</h3>
 <p>Set whether an Ecore_Evas&#8217; window is borderless or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 for borderless, 0 for bordered.</dl>
+ <i>on</i> 1 for borderless, 0 for bordered.</dd></dl>
 <p> This function makes ee borderless if on is 1, or bordered if on is 0.</p>
 <h3>EAPI Ecore_Evas* ecore_evas_buffer_new (int w, int h)</h3>
 <p>To be documented. </p>
@@ -285,98 +285,98 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee gets a delete request.</p>
 <h3>EAPI void ecore_evas_callback_destroy_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas destroy events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee is destroyed.</p>
 <h3>EAPI void ecore_evas_callback_focus_in_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas focus in events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee gets focus.</p>
 <h3>EAPI void ecore_evas_callback_focus_out_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas focus out events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee loses focus.</p>
 <h3>EAPI void ecore_evas_callback_hide_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas hide events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee is hidden.</p>
 <h3>EAPI void ecore_evas_callback_mouse_in_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas mouse in events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever the mouse enters ee.</p>
 <h3>EAPI void ecore_evas_callback_mouse_out_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas mouse out events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever the mouse leaves ee.</p>
 <h3>EAPI void ecore_evas_callback_move_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas move events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee is moved.</p>
 <h3>EAPI void ecore_evas_callback_post_render_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas mouse post render events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called just after the evas in ee is rendered.</p>
 <h3>EAPI void ecore_evas_callback_pre_render_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas mouse pre render events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called just before the evas in ee is rendered.</p>
 <h3>EAPI void ecore_evas_callback_resize_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas resize events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee is resized.</p>
 <h3>EAPI void ecore_evas_callback_show_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas show events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee is shown.</p>
 <h3>EAPI void ecore_evas_callback_sticky_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas sticky events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee becomes sticky.</p>
 <h3>EAPI void ecore_evas_callback_unsticky_set (Ecore_Evas * ee, void(*)(Ecore_Evas *ee) func)</h3>
 <p>Set a callback for Ecore_Evas un-sticky events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set callbacks on<br />
- <i>func</i> The function to call</dl>
+ <i>func</i> The function to call</dd></dl>
 <p> A call to this function will set a callback on an Ecore_Evas, causing func to be called whenever ee becomes un-sticky.</p>
 <h3>EAPI void ecore_evas_cursor_get (Ecore_Evas * ee, Evas_Object ** obj, int * layer, int * hot_x, int * hot_y)</h3>
 <p>Get information about an Ecore_Evas&#8217; cursor. </p>
@@ -386,7 +386,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>obj</i> A pointer to an Evas_Object to place the cursor Evas_Object.<br />
  <i>layer</i> A pointer to an int to place the cursor&#8217;s layer in..<br />
  <i>hot_x</i> A pointer to an int to place the cursor&#8217;s hot_x coordinate in.<br />
- <i>hot_y</i> A pointer to an int to place the cursor&#8217;s hot_y coordinate in.</dl>
+ <i>hot_y</i> A pointer to an int to place the cursor&#8217;s hot_y coordinate in.</dd></dl>
 <p> This function queries information about an Ecore_Evas&#8217; cursor.</p>
 <h3>EAPI void ecore_evas_cursor_set (Ecore_Evas * ee, const char * file, int layer, int hot_x, int hot_y)</h3>
 <p>Set the cursor of an Ecore_Evas. </p>
@@ -396,57 +396,57 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>file</i> The path to an image file for the cursor<br />
  <i>layer</i><br />
  <i>hot_x</i> The x coordinate of the cursor&#8217;s hot spot<br />
- <i>hot_y</i> The y coordinate of the cursor&#8217;s hot spot</dl>
+ <i>hot_y</i> The y coordinate of the cursor&#8217;s hot spot</dd></dl>
 <p> This function makes the mouse cursor over ee be the image specified by file. The actual point within the image that the mouse is at is specified by hot_x and hot_y, which are coordinates with respect to the top left corner of the cursor image.</p>
 <h3>EAPI void* ecore_evas_data_get (Ecore_Evas * ee, const char * key)</h3>
 <p>Retrieve user data associated with an Ecore_Evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to retrieve the user data from.<br />
- <i>key</i> The key which the user data to be retrieved is associated with.</dl>
+ <i>key</i> The key which the user data to be retrieved is associated with.</dd></dl>
 <p> This function retrieves user specific data that has been stored within an Ecore_Evas structure with <code>ecore_evas_data_set()</code>. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>NULL on error or no data found, A pointer to the user data on success.</dl>
+<dd>NULL on error or no data found, A pointer to the user data on success.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>ecore_evas_data_set</code></dl>
+<dd><code>ecore_evas_data_set</code></dd></dl>
 <h3>EAPI void ecore_evas_data_set (Ecore_Evas * ee, const char * key, const void * data)</h3>
 <p>Store user data in an Ecore_Evas structure. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>eeThe</i> Ecore_Evas to store the user data in.<br />
  <i>keyA</i> unique string to associate the user data against. Cannot be NULL.<br />
- <i>dataA</i> pointer to the user data to store.</dl>
+ <i>dataA</i> pointer to the user data to store.</dd></dl>
 <p> This function associates the data with a key which is stored by the Ecore_Evas ee. Be aware that a call to <code>ecore_evas_free()</code> will not free any memory for the associated user data, this is the responsibility of the caller. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>ecore_evas_free</code></dl>
+<dd><code>ecore_evas_free</code></dd></dl>
 <h3>EAPI Ecore_Evas* ecore_evas_ecore_evas_get (Evas * e)</h3>
 <p>Return the Ecore_Evas for this Evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The Evas to get the Ecore_Evas from</dl>
+<dd><i>e</i> The Evas to get the Ecore_Evas from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Ecore_Evas that holds this Evas</dl>
+<dd>The Ecore_Evas that holds this Evas</dd></dl>
 <h3>EAPI int ecore_evas_engine_type_supported_get (Ecore_Evas_Engine_Type engine)</h3>
 <p>Query if a particular renginering engine target has support. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>engine</i> The engine to check support for</dl>
+<dd><i>engine</i> The engine to check support for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the particualr engine is supported, 0 if it is not</dl>
+<dd>1 if the particualr engine is supported, 0 if it is not</dd></dl>
 <p> Query if engine </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>engine</i> is supported by ecore_evas. 1 is returned if it is, and 0 is returned if it is not supported.</dl>
+<dd><i>engine</i> is supported by ecore_evas. 1 is returned if it is, and 0 is returned if it is not supported.</dd></dl>
 <h3>EAPI Evas_List* ecore_evas_engines_get (void)</h3>
 <p>Returns a list of supported engines names. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>newly allocated list with engines names. Engines names strings are internal and should be considered constants, do not free them, to avoid problems use <code>ecore_evas_engines_free()</code></dl>
+<dd>newly allocated list with engines names. Engines names strings are internal and should be considered constants, do not free them, to avoid problems use <code>ecore_evas_engines_free()</code></dd></dl>
 <h3>EAPI Ecore_Evas* ecore_evas_fb_new (char * disp_name, int rotation, int w, int h)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed. </p>
@@ -456,37 +456,37 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p>Query whether an Ecore_Evas&#8217; window is focused or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee if focused, 0 if not.</dl>
+<dd>1 if ee if focused, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_focus_set (Ecore_Evas * ee, int on)</h3>
 <p>Set the focus of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 for focus, 0 to defocus.</dl>
+ <i>on</i> 1 for focus, 0 to defocus.</dd></dl>
 <p> This function focuses ee if on is 1, or defocuses ee if on is 0.</p>
 <h3>EAPI void ecore_evas_free (Ecore_Evas * ee)</h3>
 <p>Free an Ecore_Evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to free</dl>
+<dd><i>ee</i> The Ecore_Evas to free</dd></dl>
 <p> This frees up any memory used by the Ecore_Evas.</p>
 <h3>EAPI int ecore_evas_fullscreen_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is fullscreen or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee is fullscreen, 0 if not.</dl>
+<dd>1 if ee is fullscreen, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_fullscreen_set (Ecore_Evas * ee, int on)</h3>
 <p>Set whether or not an Ecore_Evas&#8217; window is fullscreen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 fullscreen, 0 not.</dl>
+ <i>on</i> 1 fullscreen, 0 not.</dd></dl>
 <p> This function causes ee to be fullscreen if on is 1, or not if on is 0.</p>
 <h3>EAPI void ecore_evas_geometry_get (Ecore_Evas * ee, int * x, int * y, int * w, int * h)</h3>
 <p>Get the geometry of an Ecore_Evas. </p>
@@ -496,7 +496,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>x</i> A pointer to an int to place the x coordinate in<br />
  <i>y</i> A pointer to an int to place the y coordinate in<br />
  <i>w</i> A pointer to an int to place the w size in<br />
- <i>h</i> A pointer to an int to place the h size in</dl>
+ <i>h</i> A pointer to an int to place the h size in</dd></dl>
 <p> This function takes four pointers to (already allocated) ints, and places the geometry of ee in them. </p>
 <pre> int x, y, w, h;
  ecore_evas_geometry_get(ee, &amp;x, &amp;y, &amp;w, &amp;h);</pre>
@@ -505,10 +505,10 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p>Get an Ecore_Evas&#8217;s Evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas whose Evas you wish to get</dl>
+<dd><i>ee</i> The Ecore_Evas whose Evas you wish to get</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Evas wrapped by ee</dl>
+<dd>The Evas wrapped by ee</dd></dl>
 <p> This function returns the Evas contained within ee.</p>
 <h3>EAPI int ecore_evas_gl_x11_direct_resize_get (Ecore_Evas * ee)</h3>
 <p>To be documented. </p>
@@ -544,64 +544,64 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p>Hide an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to show.</dl>
+<dd><i>ee</i> The Ecore_Evas to show.</dd></dl>
 <p> This function makes ee hidden.</p>
 <h3>EAPI int ecore_evas_iconified_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is iconified or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee is iconified, 0 if not.</dl>
+<dd>1 if ee is iconified, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_iconified_set (Ecore_Evas * ee, int on)</h3>
 <p>Iconify or uniconify an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 to iconify, 0 to uniconify.</dl>
+ <i>on</i> 1 to iconify, 0 to uniconify.</dd></dl>
 <p> This function iconifies ee if on is 1, or uniconifies ee if on is 0.</p>
 <h3>EAPI int ecore_evas_ignore_events_get (Ecore_Evas * ee)</h3>
 <p>Returns the ignore state of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas whose window&#8217;s ignore events state is returned.</dl>
+<dd><i>ee</i> The Ecore_Evas whose window&#8217;s ignore events state is returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Ecore_Evas window&#8217;s ignore state.</dl>
+<dd>The Ecore_Evas window&#8217;s ignore state.</dd></dl>
 <h3>EAPI void ecore_evas_ignore_events_set (Ecore_Evas * ee, int ignore)</h3>
 <p>Set if this evas should ignore events. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas whose window&#8217;s to ignore events<br />
- <i>sticky</i> The Ecore_Evas new ignore state</dl>
+ <i>sticky</i> The Ecore_Evas new ignore state</dd></dl>
 <h3>EAPI int ecore_evas_init (void)</h3>
 <p>Init the Evas system. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>greater than 0 on success, 0 on failure</dl>
+<dd>greater than 0 on success, 0 on failure</dd></dl>
 <p> Set up the Evas wrapper system. </p>
 <p> References ECORE_FD_READ, and ecore_main_fd_handler_add().</p>
 <h3>EAPI int ecore_evas_layer_get (Ecore_Evas * ee)</h3>
 <p>Get the layer of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the layer ee&#8217;s window is on.</dl>
+<dd>the layer ee&#8217;s window is on.</dd></dl>
 <h3>EAPI void ecore_evas_layer_set (Ecore_Evas * ee, int layer)</h3>
 <p>Set the layer of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>layer</i> The layer to put ee on.</dl>
+ <i>layer</i> The layer to put ee on.</dd></dl>
 <p> This function moves ee to the layer layer.</p>
 <h3>EAPI void ecore_evas_lower (Ecore_Evas * ee)</h3>
 <p>Lower an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to raise.</dl>
+<dd><i>ee</i> The Ecore_Evas to raise.</dd></dl>
 <p> This functions lowers the Ecore_Evas to the back.</p>
 <h3>EAPI void ecore_evas_managed_move (Ecore_Evas * ee, int x, int y)</h3>
 <p>Provide Managed move co-ordinates for an Ecore_Evas. </p>
@@ -609,22 +609,22 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to move<br />
  <i>x</i> The x coordinate to set as the managed location<br />
- <i>y</i> The y coordinate to set as the managed location</dl>
+ <i>y</i> The y coordinate to set as the managed location</dd></dl>
 <p> This sets the managed geometry position of the ee to (x, y)</p>
 <h3>EAPI int ecore_evas_maximized_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is maximized or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee is maximized, 0 if not.</dl>
+<dd>1 if ee is maximized, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_maximized_set (Ecore_Evas * ee, int on)</h3>
 <p>Maximize (or unmaximize) an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 to maximize, 0 to unmaximize.</dl>
+ <i>on</i> 1 to maximize, 0 to unmaximize.</dd></dl>
 <p> This function maximizes ee if on is 1, or unmaximizes ee if on is 0.</p>
 <h3>EAPI void ecore_evas_move (Ecore_Evas * ee, int x, int y)</h3>
 <p>Move an Ecore_Evas. </p>
@@ -632,7 +632,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to move<br />
  <i>x</i> The x coordinate to move to<br />
- <i>y</i> The y coordinate to move to</dl>
+ <i>y</i> The y coordinate to move to</dd></dl>
 <p> This moves ee to the screen coordinates (x, y)</p>
 <h3>EAPI void ecore_evas_move_resize (Ecore_Evas * ee, int x, int y, int w, int h)</h3>
 <p>Resize an Ecore_Evas. </p>
@@ -642,7 +642,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>x</i> The x coordinate to move to<br />
  <i>y</i> The y coordinate to move to<br />
  <i>w</i> The w coordinate to resize to<br />
- <i>h</i> The h coordinate to resize to</dl>
+ <i>h</i> The h coordinate to resize to</dd></dl>
 <p> This moves ee to the screen coordinates (x, y) and resizes it to w x h.</p>
 <h3>EAPI void ecore_evas_name_class_get (Ecore_Evas * ee, const char ** n, const char ** c)</h3>
 <p>Get the name and class of an Ecore_Evas&#8217; window ee The Ecore_Evas to query n A pointer to a string to place the name in. </p>
@@ -654,7 +654,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> the Ecore_Evas<br />
  <i>n</i> the name<br />
- <i>c</i> the class</dl>
+ <i>c</i> the class</dd></dl>
 <p> This function sets the name of ee to n, and its class to c.</p>
 <h3>EAPI Ecore_Evas* ecore_evas_new (const char * engine_name, int x, int y, int w, int h, const char * extra_options)</h3>
 <p>Creates a new Ecore_Evas based on engine name and common parameters. </p>
@@ -666,7 +666,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>w</i> width of window<br />
  <i>h</i> height of window<br />
  <i>extra_options</i> string with extra parameter, dependent on engines or NULL. String is usually in the form: &#8216;key1=value1;key2=value2&#8217;. Pay attention that when getting that from shell commands, most consider &#8216;;&#8217; as the command terminator, so you need to escape it or use quotes.<br />
- <i>Ecore_Evas</i> instance or NULL if creation failed.</dl>
+ <i>Ecore_Evas</i> instance or NULL if creation failed.</dd></dl>
 <h3>EAPI void ecore_evas_object_cursor_set (Ecore_Evas * ee, Evas_Object * obj, int layer, int hot_x, int hot_y)</h3>
 <p>Set the cursor of an Ecore_Evas. </p>
 <p> <code>Parameters:</code></p>
@@ -675,28 +675,28 @@ description: "Ecore_Evas.h – Evas wrapper functions."
  <i>obj</i> The Evas_Object for the cursor<br />
  <i>layer</i><br />
  <i>hot_x</i> The x coordinate of the cursor&#8217;s hot spot<br />
- <i>hot_y</i> The y coordinate of the cursor&#8217;s hot spot</dl>
+ <i>hot_y</i> The y coordinate of the cursor&#8217;s hot spot</dd></dl>
 <p> This function makes the mouse cursor over ee be the image specified by file. The actual point within the image that the mouse is at is specified by hot_x and hot_y, which are coordinates with respect to the top left corner of the cursor image.</p>
 <h3>EAPI int ecore_evas_override_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is overridden or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to set</dl>
+<dd><i>ee</i> The Ecore_Evas to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if ee is overridden, 0 if not.</dl>
+<dd>1 if ee is overridden, 0 if not.</dd></dl>
 <h3>EAPI void ecore_evas_override_set (Ecore_Evas * ee, int on)</h3>
 <p>Tell the WM whether or not to ignore an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>on</i> 1 to ignore, 0 to not.</dl>
+ <i>on</i> 1 to ignore, 0 to not.</dd></dl>
 <p> This function causes the window manager to ignore ee if on is 1, or not ignore ee if on is 0.</p>
 <h3>EAPI void ecore_evas_raise (Ecore_Evas * ee)</h3>
 <p>Raise and Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to raise.</dl>
+<dd><i>ee</i> The Ecore_Evas to raise.</dd></dl>
 <p> This functions raises the Ecore_Evas to the front.</p>
 <h3>EAPI void ecore_evas_resize (Ecore_Evas * ee, int w, int h)</h3>
 <p>Resize an Ecore_Evas. </p>
@@ -704,50 +704,50 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to move<br />
  <i>w</i> The w coordinate to resize to<br />
- <i>h</i> The h coordinate to resize to</dl>
+ <i>h</i> The h coordinate to resize to</dd></dl>
 <p> This resizes ee to w x h</p>
 <h3>EAPI int ecore_evas_rotation_get (Ecore_Evas * ee)</h3>
 <p>Set the rotation of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas</dl>
+<dd><i>ee</i> The Ecore_Evas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the angle (in degrees) of rotation.</dl>
+<dd>the angle (in degrees) of rotation.</dd></dl>
 <h3>EAPI void ecore_evas_rotation_set (Ecore_Evas * ee, int rot)</h3>
 <p>Set the rotation of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas<br />
- <i>rot</i> the angle (in degrees) of rotation.</dl>
+ <i>rot</i> the angle (in degrees) of rotation.</dd></dl>
 <p> The allowed values of rot depend on the engine being used. Most only allow multiples of 90.</p>
 <h3>EAPI int ecore_evas_shaped_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas is shaped or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to query.</dl>
+<dd><i>ee</i> The Ecore_Evas to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if shaped, 0 if not.</dl>
+<dd>1 if shaped, 0 if not.</dd></dl>
 <p> This function returns 1 if ee is shaped, and 0 if not.</p>
 <h3>EAPI void ecore_evas_shaped_set (Ecore_Evas * ee, int shaped)</h3>
 <p>Set whether an Ecore_Evas is shaped or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to shape<br />
- <i>shaped</i> 1 to shape, 0 to not</dl>
+ <i>shaped</i> 1 to shape, 0 to not</dd></dl>
 <p> This function allows one to make an Ecore_Evas shaped to the contents of the evas. If shaped is 1, ee will be transparent in parts of the evas that contain no objects. If shaped is 0, then ee will be rectangular, and and parts with no data will show random framebuffer artifacting. For non-shaped Ecore_Evases, it is recommend to cover the entire evas with a background object.</p>
 <h3>EAPI void ecore_evas_show (Ecore_Evas * ee)</h3>
 <p>Show an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to show.</dl>
+<dd><i>ee</i> The Ecore_Evas to show.</dd></dl>
 <p> This function makes ee visible.</p>
 <h3>EAPI int ecore_evas_shutdown (void)</h3>
 <p>Shut down the Evas system. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 if ecore evas is fully shut down, or &gt; 0 if it still needs to be shut down</dl>
+<dd>0 if ecore evas is fully shut down, or &gt; 0 if it still needs to be shut down</dd></dl>
 <p> This closes the Evas system down. </p>
 <p> References ecore_main_fd_handler_del().</p>
 <h3>EAPI void ecore_evas_size_base_get (Ecore_Evas * ee, int * w, int * h)</h3>
@@ -756,7 +756,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> A pointer to an int to place the base width in.<br />
- <i>h</i> A pointer to an int to place the base height in.</dl>
+ <i>h</i> A pointer to an int to place the base height in.</dd></dl>
 <p> This function puts the base size of ee into w and h.</p>
 <h3>EAPI void ecore_evas_size_base_set (Ecore_Evas * ee, int w, int h)</h3>
 <p>Set the base size of an Ecore_Evas&#8217; window. </p>
@@ -764,7 +764,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> The base width<br />
- <i>h</i> The base height</dl>
+ <i>h</i> The base height</dd></dl>
 <p> This function sets the base size of ee to w x h.</p>
 <h3>EAPI void ecore_evas_size_max_get (Ecore_Evas * ee, int * w, int * h)</h3>
 <p>Get the max size of an Ecore_Evas&#8217; window. </p>
@@ -772,7 +772,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> A pointer to an int to place the max width in.<br />
- <i>h</i> A pointer to an int to place the max height in.</dl>
+ <i>h</i> A pointer to an int to place the max height in.</dd></dl>
 <p> This function puts the maximum size of ee into w and h.</p>
 <h3>EAPI void ecore_evas_size_max_set (Ecore_Evas * ee, int w, int h)</h3>
 <p>Set the max size of an Ecore_Evas&#8217; window. </p>
@@ -780,7 +780,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> The maximum width<br />
- <i>h</i> The maximum height</dl>
+ <i>h</i> The maximum height</dd></dl>
 <p> This function sets the maximum size of ee to w x h.</p>
 <h3>EAPI void ecore_evas_size_min_get (Ecore_Evas * ee, int * w, int * h)</h3>
 <p>Get the min size of an Ecore_Evas&#8217; window. </p>
@@ -788,7 +788,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> A pointer to an int to place the min width in.<br />
- <i>h</i> A pointer to an int to place the min height in.</dl>
+ <i>h</i> A pointer to an int to place the min height in.</dd></dl>
 <p> This function puts the minimum size of ee into w and h.</p>
 <h3>EAPI void ecore_evas_size_min_set (Ecore_Evas * ee, int w, int h)</h3>
 <p>Set the min size of an Ecore_Evas&#8217; window. </p>
@@ -796,7 +796,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> The minimum width<br />
- <i>h</i> The minimum height</dl>
+ <i>h</i> The minimum height</dd></dl>
 <p> This function sets the minimum size of ee to w x h.</p>
 <h3>EAPI void ecore_evas_size_step_get (Ecore_Evas * ee, int * w, int * h)</h3>
 <p>Get the step size of an Ecore_Evas&#8217; window. </p>
@@ -804,7 +804,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> A pointer to an int to place the step width in.<br />
- <i>h</i> A pointer to an int to place the step height in.</dl>
+ <i>h</i> A pointer to an int to place the step height in.</dd></dl>
 <p> This function puts the step size of ee into w and h.</p>
 <h3>EAPI void ecore_evas_size_step_set (Ecore_Evas * ee, int w, int h)</h3>
 <p>Set the step size of an Ecore_Evas. </p>
@@ -812,7 +812,7 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas to set<br />
  <i>w</i> The step width<br />
- <i>h</i> The step height</dl>
+ <i>h</i> The step height</dd></dl>
 <p> This function sets the step size of ee to w x h. This limits the size of an Ecore_Evas to always being an integer multiple of the step size.</p>
 <h3>EAPI int ecore_evas_software_x11_16_direct_resize_get (Ecore_Evas * ee)</h3>
 <p>To be documented. </p>
@@ -878,55 +878,55 @@ description: "Ecore_Evas.h – Evas wrapper functions."
 <p>Returns the sticky state of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas whose window&#8217;s sticky state is returned.</dl>
+<dd><i>ee</i> The Ecore_Evas whose window&#8217;s sticky state is returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Ecore_Evas window&#8217;s sticky state.</dl>
+<dd>The Ecore_Evas window&#8217;s sticky state.</dd></dl>
 <h3>EAPI void ecore_evas_sticky_set (Ecore_Evas * ee, int sticky)</h3>
 <p>Set the sticky state of an Ecore_Evas window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas whose window&#8217;s sticky state is set.<br />
- <i>sticky</i> The Ecore_Evas window&#8217;s new sticky state.</dl>
+ <i>sticky</i> The Ecore_Evas window&#8217;s new sticky state.</dd></dl>
 <h3>EAPI const char* ecore_evas_title_get (Ecore_Evas * ee)</h3>
 <p>Get the title of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas whose title you wish to get.</dl>
+<dd><i>ee</i> The Ecore_Evas whose title you wish to get.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The title of ee.</dl>
+<dd>The title of ee.</dd></dl>
 <p> This function returns the title of ee.</p>
 <h3>EAPI void ecore_evas_title_set (Ecore_Evas * ee, const char * t)</h3>
 <p>Set the title of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas whose title you wish to set.<br />
- <i>t</i> The title</dl>
+ <i>t</i> The title</dd></dl>
 <p> This function sets the title of ee to t.</p>
 <h3>EAPI int ecore_evas_visibility_get (Ecore_Evas * ee)</h3>
 <p>Query whether an Ecore_Evas&#8217; window is visible or not. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas to query.</dl>
+<dd><i>ee</i> The Ecore_Evas to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if visible, 0 if not.</dl>
+<dd>1 if visible, 0 if not.</dd></dl>
 <p> This function queries ee and returns 1 if it is visible, and 0 if not.</p>
 <h3>EAPI int ecore_evas_withdrawn_get (Ecore_Evas * ee)</h3>
 <p>Returns the withdrawn state of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ee</i> The Ecore_Evas whose window&#8217;s withdrawn state is returned.</dl>
+<dd><i>ee</i> The Ecore_Evas whose window&#8217;s withdrawn state is returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The Ecore_Evas window&#8217;s withdrawn state.</dl>
+<dd>The Ecore_Evas window&#8217;s withdrawn state.</dd></dl>
 <h3>EAPI void ecore_evas_withdrawn_set (Ecore_Evas * ee, int withdrawn)</h3>
 <p>Set the withdrawn state of an Ecore_Evas&#8217; window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ee</i> The Ecore_Evas whose window&#8217;s withdrawn state is set.<br />
- <i>withdrawn</i> The Ecore_Evas window&#8217;s new withdrawn state.</dl>
+ <i>withdrawn</i> The Ecore_Evas window&#8217;s new withdrawn state.</dd></dl>
 <h3>EAPI int ecore_evas_xrender_x11_direct_resize_get (Ecore_Evas * ee)</h3>
 <p>To be documented. </p>
 <p> FIXME: To be fixed. </p>

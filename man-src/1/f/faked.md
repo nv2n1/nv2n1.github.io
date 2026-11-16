@@ -15,22 +15,22 @@ description: "faked – daemon that remembers fake ownership/permissions of file
 <p> If a fakeroot process wants to change the ownership of a file, then <code>faked</code> is the process that remembers that new owner. If later the same fakeroot process does a stat() for that filename, then the libfakeroot wrapped stat() call will first ask faked for the fake ownership etc of that file, and then report it. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Print debugging information on stderr.</p>
-<dt><code>&#8211;foreground</code></p>
-<dd> Don&#8217;t fork into the background.</p>
-<dt><code>&#8211;cleanup &nbsp;number</code></p>
-<dd> Cleanup the semaphores.</p>
-<dt><code>&#8211;key &nbsp;key-number</code></p>
-<dd> Don&#8217;t allocate a new communication channel, but use channel specified by key. (If the specified channel doesn&#8217;t exist, it&#8217;s created).</p>
-<dt><code>&#8211;save-file &nbsp;save-file</code></p>
-<dd> Save the environment to save-file on exit.</p>
-<dt><code>&#8211;load</code></p>
-<dd> Load a previously saved environment from the standard input.</p>
-<dt><code>&#8211;unknown-is-real</code></p>
-<dd> Use real ownership of previously-unknown files instead of setting them to root:root.</p>
-<dt><code>&#8211;port &nbsp;tcp-port</code></p>
-<dd> Use TCP port tcp-port. </p>
+<dt><code>&#8211;debug</code></dt>
+<dd> Print debugging information on stderr.</dd>
+<dt><code>&#8211;foreground</code></dt>
+<dd> Don&#8217;t fork into the background.</dd>
+<dt><code>&#8211;cleanup &nbsp;number</code></dt>
+<dd> Cleanup the semaphores.</dd>
+<dt><code>&#8211;key &nbsp;key-number</code></dt>
+<dd> Don&#8217;t allocate a new communication channel, but use channel specified by key. (If the specified channel doesn&#8217;t exist, it&#8217;s created).</dd>
+<dt><code>&#8211;save-file &nbsp;save-file</code></dt>
+<dd> Save the environment to save-file on exit.</dd>
+<dt><code>&#8211;load</code></dt>
+<dd> Load a previously saved environment from the standard input.</dd>
+<dt><code>&#8211;unknown-is-real</code></dt>
+<dd> Use real ownership of previously-unknown files instead of setting them to root:root.</dd>
+<dt><code>&#8211;port &nbsp;tcp-port</code></dt>
+<dd> Use TCP port tcp-port. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> None so far. Be warned, though: although I&#8217;ve written quite a few much larger (and smaller) programs, I&#8217;ve never written anything that was as tiny as <code>fakeroot</code>, had as many bugs as <code>fakeroot</code>, and still was as usable as, say, <code>fakeroot</code> version 0.0_3, the first version that could be used to build itself.</p>
@@ -38,12 +38,12 @@ description: "faked – daemon that remembers fake ownership/permissions of file
 <p> <code>fakeroot</code> is distributed under the GNU General Public License. (GPL 2.0 or greater).</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>joost witteveen</p>
-<dd> &lt;<i>joostje [at] debian.org</i>&gt;</p>
-<dt>Clint Adams</p>
-<dd> &lt;<i>clint [at] debian.org</i>&gt;</p>
-<dt>Timo Savola</p>
-<dd></dl>
+<dt>joost witteveen</dt>
+<dd> &lt;<i>joostje [at] debian.org</i>&gt;</dd>
+<dt>Clint Adams</dt>
+<dd> &lt;<i>clint [at] debian.org</i>&gt;</dd>
+<dt>Timo Savola</dt>
+<dd></dd></dl>
 <h2>MANUAL PAGE</h2>
 <p> mostly by J.H.M. Dassen &lt;jdassen [at] debian.org&gt; mods/additions by joost and Clint.</p>
 <h2>SEE ALSO</h2>

@@ -10,13 +10,9 @@ description: "std::basic_istream – std::basic_istream"
 <p>std::basic_istream &#8211; std::basic_istream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;istream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_istream : virtual public std::basic_ios&lt;CharT, Traits&gt;</code></pre>
 <p>The class template basic_istream provides support for high level input operations on character streams. The supported operations include formatted input (e.g. integer values or whitespace-separated characters and characters strings) and unformatted input (e.g. raw characters and character arrays). This functionality is implemented in terms of the interface provided by the underlying basic_streambuf class, accessed through the basic_ios base class. The only non-inherited data member of basic_istream, in most implementations, is the value returned by basic_istream::gcount().<br />
 &nbsp;std-basic istream-inheritance.svg<br />

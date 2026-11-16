@@ -15,11 +15,11 @@ pci_set_power_state - Set the power state of a PCI device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>PCI device to handle.</dl>
+<dl><dd></dd><dd>PCI device to handle.</dd></dl>
  
 
  <i>state</i>
-<dl><dd>PCI power state (D0, D1, D2, D3hot) to put the device into.</dl>
+<dl><dd>PCI power state (D0, D1, D2, D3hot) to put the device into.</dd></dl>
 
 <h2>Description</h2>
 

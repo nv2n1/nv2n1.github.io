@@ -13,16 +13,16 @@ description: "po-debconf – introduction"
 <h2>Adding I18N Support To Debconf Templates Files</h2>
 <p>If you are adding debconf support to your package, you have written a templates file containing English text. To add proper i18n support into your package, you need to:</p>
 <dl>
-<dt>&#8211; Create <i>debian/po/POTFILES.in</i></p>
-<dd>This file contains the list of master templates. It typically contains a single line: </p>
+<dt>&#8211; Create <i>debian/po/POTFILES.in</i></dt>
+<dd>This file contains the list of master templates. It typically contains a single line: </dd>
 <pre> [type: gettext/rfc822deb] templates</pre>
 <p>Paths are relative to the parent directory.</p>
-<dt>&#8211; Prepend an underscore before translatable fields in each template</p>
-<dd>Normally <tt>&quot;Description&quot;</tt>, <tt>&quot;Choices&quot;</tt> and sometimes <tt>&quot;Default&quot;</tt> fields can be translated.</p>
-<dt>&#8211; Run <code>debconf-updatepo</code></p>
-<dd>This will create the <i>debian/po/templates.pot</i> file that translators will translate into their language.</p>
-<dt>&#8211; Add a build dependency on &quot;po-debconf&quot; in <i>debian/control</i></p>
-<dd></dl>
+<dt>&#8211; Prepend an underscore before translatable fields in each template</dt>
+<dd>Normally <tt>&quot;Description&quot;</tt>, <tt>&quot;Choices&quot;</tt> and sometimes <tt>&quot;Default&quot;</tt> fields can be translated.</dd>
+<dt>&#8211; Run <code>debconf-updatepo</code></dt>
+<dd>This will create the <i>debian/po/templates.pot</i> file that translators will translate into their language.</dd>
+<dt>&#8211; Add a build dependency on &quot;po-debconf&quot; in <i>debian/control</i></dt>
+<dd></dd></dl>
 <h2>Update Templates</h2>
 <p>In order to help translators, <font SIZE="-1">PO</font> files in your package should always be up-to-date, otherwise they may waste their time translating unused strings. For that, simply call the following command without arguments: </p>
 <pre> $ debconf-updatepo</pre>
@@ -31,10 +31,10 @@ description: "po-debconf – introduction"
 <p> The <code>debconf-updatepo</code> program is idempotent, it modifies <font SIZE="-1">PO</font> files only if their content has been updated. Thus the best way to provide up-to-date <font SIZE="-1">PO</font> files in your source package is to call this command from the <tt>&quot;clean&quot;</tt> target of the <i>debian/rules</i> file. </p>
 <p> Please note that you need to run <code>debconf-updatepo</code> even if you use <code>dh_installdebconf</code>. The latter calls <code>po2debconf</code> which used to call <code>debconf-updatepo</code> if outdated files were detected, but this is no more the case because it was not a good solution for at least two reasons:</p>
 <dl>
-<dt>1.</p>
-<dd><code>po2debconf</code> relied on timestamps to detect outdated files, and may be abused when using <tt>&quot;pbuilder&quot;</tt> or if an outdated translation has been stored on disk after templates have been modified</p>
-<dt>2.</p>
-<dd><code>dh_installdebconf</code> is called long after <tt>&quot;.diff.gz&quot;</tt> file has been generated</dl>
+<dt>1.</dt>
+<dd><code>po2debconf</code> relied on timestamps to detect outdated files, and may be abused when using <tt>&quot;pbuilder&quot;</tt> or if an outdated translation has been stored on disk after templates have been modified</dd>
+<dt>2.</dt>
+<dd><code>dh_installdebconf</code> is called long after <tt>&quot;.diff.gz&quot;</tt> file has been generated</dd></dl>
 <h2>Merge Translations And Original</h2>
 <p>You have to make sure that when your package is compiled, translations will get into the built package. You can do that manually, or automatically using the <code>dh_installdebconf</code> script (make sure to have a versioned build dependency against <tt>&quot;debhelper (&gt;= 4.1.16)&quot;</tt>). </p>
 <p> To do that manually, you&#8217;ll have to merge the templates and the translations at compile time (and to have a build depend against <tt>&quot;po-debconf&quot;</tt>) like this: </p>
@@ -77,8 +77,8 @@ description: "po-debconf – introduction"
  _Description: Yes</pre>
 <p>Special comments have been introduced in <tt>&quot;po-debconf&quot;</tt> 1.0 to deal with strings which are composed of several items (as with <i>Choices</i> field) or paragraphs (like <i>Description</i>). With these directives, developers have a better control over what is exposed to translators. They are in the form <tt>&quot;#flag:</tt>directive<tt>&quot;</tt>; directives are detailed below.</p>
 <dl>
-<dt><code>translate:</code><i>spec</i>, <code>translate!:</code><i>spec</i></p>
-<dd>Mark only some items as translatable; <i>spec</i> is a comma separated list of numbers, it specifies which strings will be printed into <font SIZE="-1">PO</font> files. Ranges can also be defined via a minus sign (for instance <tt>&quot;2-6&quot;</tt>), and a star (<tt>&quot;*&quot;</tt>) means all strings. For instance, with </p>
+<dt><code>translate:</code><i>spec</i>, <code>translate!:</code><i>spec</i></dt>
+<dd>Mark only some items as translatable; <i>spec</i> is a comma separated list of numbers, it specifies which strings will be printed into <font SIZE="-1">PO</font> files. Ranges can also be defined via a minus sign (for instance <tt>&quot;2-6&quot;</tt>), and a star (<tt>&quot;*&quot;</tt>) means all strings. For instance, with </dd>
 <pre> Template: partman-basicfilesystems/fat_mountpoint
  Type: select
  #flag:translate:3,4
@@ -100,8 +100,8 @@ description: "po-debconf – introduction"
  .
  ${ITEMS}</pre>
 <p>But this is hazardous because context may be dropped from <font SIZE="-1">PO</font> files, please add comments in this case so that translators are not confused.</p>
-<dt><code>comment:</code><i>spec</i>, <code>comment!:</code><i>spec</i></p>
-<dd>The comment just below this directive applies to the strings specified by <i>spec</i>, which is defined above. By default, a comment written before a translatable field is printed along with all strings belonging to this field. (Note: with <tt>&quot;po-debconf&quot;</tt> &lt; 1.0, the comment was printed only with the first string) </p>
+<dt><code>comment:</code><i>spec</i>, <code>comment!:</code><i>spec</i></dt>
+<dd>The comment just below this directive applies to the strings specified by <i>spec</i>, which is defined above. By default, a comment written before a translatable field is printed along with all strings belonging to this field. (Note: with <tt>&quot;po-debconf&quot;</tt> &lt; 1.0, the comment was printed only with the first string) </dd>
 <pre> Template: arcboot-installer/prom-variables
  Type: note
  # Translators, the 4th string of this description has been dropped
@@ -126,8 +126,8 @@ description: "po-debconf – introduction"
  command or reboot the system to proceed to the next stage of the
  installation.</pre>
 <p>The example above has a comment without <tt>&quot;#flag:comment&quot;</tt> directive, where an implicit <tt>&quot;#flag:comment:*&quot;</tt> is added. This comment appears with all strings, but the one about <i>Stop for Maintenance</i> is printed only before the relevant string.</p>
-<dt><code>partial</code></p>
-<dd>This keyword tells <code>po2debconf</code> to keep translated strings even if all strings have not been translated. Please use with caution, this keyword has been introduced for very specific purposes.</dl>
+<dt><code>partial</code></dt>
+<dd>This keyword tells <code>po2debconf</code> to keep translated strings even if all strings have not been translated. Please use with caution, this keyword has been introduced for very specific purposes.</dd></dl>
 <h3><font SIZE="-1">GIVING NOTICES TO TRANSLATORS BEFORE UPLOADING</font></h3>
 <p>Usually translators notice on the status web pages (see below) that translations are outdated, and send patches which will be included in future uploads. But developers are encouraged to ask maintainers of outdated translations for an update before an upload, for instance one week in advance. A dedicated tool, <code>podebconf-report-po</code>, has been written for this purpose. Do not hesitate to abuse it!</p>
 <h2>Debugging</h2>
@@ -142,18 +142,18 @@ description: "po-debconf – introduction"
  DEBIAN_PRIORITY=low debconf -freadline debian/config configure 28.0</pre>
 <h2>Caveats</h2>
 <dl>
-<dt>&bull;</p>
-<dd><tt>&quot;Debconf&quot;</tt> 1.2.0 recognizes fields in the form <i>Name</i>&#8211;<i>lang</i>.<i>encoding</i>, e.g. <tt>&quot;Description-de.ISO-8859-1&quot;</tt> or <tt>&quot;Choices-ru.KOI8-R&quot;</tt>. By default <code>po2debconf</code> writes templates files in that new format. Older <tt>&quot;debconf&quot;</tt> will ignore these fields, and English text is displayed. See <code><a href="/docs/linux/man/1-po2debconf/">po2debconf</a></code>(1) to know how to change encoding and output format.</p>
-<dt>&bull;</p>
-<dd>A given English string may be given only one unique translation in a given language. It is impossible to give two different translations, depending on the context. To solve this issue, you have to add special markups to the different occurrences of a given string to make them different. (These markers will only be visible to translators, and they will be removed from the string before being displayed to user) </p>
+<dt>&bull;</dt>
+<dd><tt>&quot;Debconf&quot;</tt> 1.2.0 recognizes fields in the form <i>Name</i>&#8211;<i>lang</i>.<i>encoding</i>, e.g. <tt>&quot;Description-de.ISO-8859-1&quot;</tt> or <tt>&quot;Choices-ru.KOI8-R&quot;</tt>. By default <code>po2debconf</code> writes templates files in that new format. Older <tt>&quot;debconf&quot;</tt> will ignore these fields, and English text is displayed. See <code><a href="/docs/linux/man/1-po2debconf/">po2debconf</a></code>(1) to know how to change encoding and output format.</dd>
+<dt>&bull;</dt>
+<dd>A given English string may be given only one unique translation in a given language. It is impossible to give two different translations, depending on the context. To solve this issue, you have to add special markups to the different occurrences of a given string to make them different. (These markers will only be visible to translators, and they will be removed from the string before being displayed to user) </dd>
 <p> Such markers must be added to the end of the strings to translate, they must start with <tt>&quot;[ &quot;</tt> (a left bracket followed by a space) and end with <tt>&quot;]&quot;</tt> (right bracket), and may contain any character but brackets or new lines. For example <tt>&quot;[ blahblah]&quot;</tt> is a valid marker while <tt>&quot;[ bla[bla]bla]&quot;</tt> isn&#8217;t. For Perl regexp addicts, the markers are recognized (and removed) using this rule: </p>
 <pre> $msg =~ s/\[\s[^\[\]]*\]$//s;</pre>
-<dt>&bull;</p>
-<dd>Spacing is not handled exactly the same way by <tt>&quot;po-debconf&quot;</tt> and <tt>&quot;debconf-utils&quot;</tt>; with the latter, paragraphs are reformatted when updating and merging translations, so <tt>&quot;debconf-utils&quot;</tt> is very smart and spaces are not considered as being part of strings when determining fuzzy entries. (i.e., the ones needing translator&#8217;s attention because the original changed) </p>
+<dt>&bull;</dt>
+<dd>Spacing is not handled exactly the same way by <tt>&quot;po-debconf&quot;</tt> and <tt>&quot;debconf-utils&quot;</tt>; with the latter, paragraphs are reformatted when updating and merging translations, so <tt>&quot;debconf-utils&quot;</tt> is very smart and spaces are not considered as being part of strings when determining fuzzy entries. (i.e., the ones needing translator&#8217;s attention because the original changed) </dd>
 <p> On the other hand <tt>&quot;po-debconf&quot;</tt> relies on <tt>&quot;gettext&quot;</tt> to detect fuzzy entries, and it does not treat spaces as special characters. Thus superfluous spaces must be removed at end of lines in master templates files, or they will appear in <font SIZE="-1">PO</font> and <font SIZE="-1">POT</font> files. </p>
 <p> For the same reason, <code>debconf-gettextize</code> can mark text fuzzy because of mismatch with space characters, and translators have to manually unfuzzy such strings. This only happens once when converting templates to <tt>&quot;po-debconf&quot;</tt> format, unless you randomly change spaces in master templates files, which will be painful for translators.</p>
-<dt>&bull;</p>
-<dd>Normally the <i>Default:</i> field must not be translated when template type is <code>Select</code> or <code>Multiselect</code>. Under rare circumstances (e.g. when selecting the default language for an application) localized values may be meaningful. </p>
+<dt>&bull;</dt>
+<dd>Normally the <i>Default:</i> field must not be translated when template type is <code>Select</code> or <code>Multiselect</code>. Under rare circumstances (e.g. when selecting the default language for an application) localized values may be meaningful. </dd>
 <p> The localized value must not be translated, but chosen from the English values listed in the <i>Choices</i> field. The best way to achieve this goal is to insert a comment in your templates file which will be copied into <font SIZE="-1">PO</font> files. </p>
 <pre> Template: geneweb/lang
  Type: select
@@ -184,3 +184,4 @@ description: "po-debconf – introduction"
 <h2>Authors</h2>
 <pre> Martin Quinson &lt;Martin.Quinson [at] ens-lyon.fr&gt;
  Denis Barbier &lt;barbier [at] linuxfr.org&gt;</pre>
+</p>

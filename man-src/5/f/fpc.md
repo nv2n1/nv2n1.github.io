@@ -39,105 +39,105 @@ description: "fpc.cfg – Free Pascal Compiler (FPC) configuration file, name de
  #SECTION<br />
  They work the same way as their $&#8230; directive counterparts in Pascal: </p>
 <dl>
-<dt><i>#IFDEF</i></p>
+<dt><i>#IFDEF</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#IFDEF name </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#IFDEF name </dd>
 <p> Lines following #IFDEF are skipped read if the keyword &quot;name&quot; following it is not defined. </p>
 <p> They are read until the keywords #ELSE or #ENDIF are encountered, after which normal processing is resumed. </p>
-<dt><i>Example</i></p>
+<dt><i>Example</i></dt>
 <dd>#IFDEF VER0_99_12<br />
  -Fu/usr/lib/fpc/0.99.12/rtl<br />
  #ENDIF
-</dl>
+</dd></dl>
 <p> In the above example, /usr/lib/fpc/0.99.12/rtl will be added to the path if you&#8217;re compiling with version 0.99.12 of the compiler.</dl>
-<dt><i>#IFNDEF</i></p>
+<dt><i>#IFNDEF</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#IFNDEF name </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#IFNDEF name </dd>
 <p> Lines following #IFDEF are skipped read if the keyword &quot;name&quot; following it is defined. </p>
 <p> They are read until the keywords #ELSE or #ENDIF are encountered, after which normal processing is resumed. </p>
-<dt><i>Example</i></p>
+<dt><i>Example</i></dt>
 <dd>#IFNDEF VER0_99_12<br />
  -Fu/usr/lib/fpc/0.99.13/rtl<br />
- #ENDIF</dl>
+ #ENDIF</dd></dl>
 <p> In the above example, /usr/lib/fpc/0.99.13/rtl will be added to the path if you&#8217;re NOT compiling with version 0.99.12 of the compiler.</dl>
-<dt><i>#ELSE</i></p>
+<dt><i>#ELSE</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#ELSE </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#ELSE </dd>
 <p> #ELSE can be specified after a #IFDEF or #IFNDEF directive as an alternative. Lines following #ELSE are skipped read if the preceding #IFDEF #IFNDEF was accepted. </p>
 <p> They are skipped until the keyword #ENDIF is encountered, after which normal processing is resumed. </p>
-<dt><i>Example</i></p>
+<dt><i>Example</i></dt>
 <dd>#IFDEF VER0_99_12<br />
  -Fu/usr/lib/fpc/0.99.12/rtl<br />
  #ELSE<br />
  -Fu/usr/lib/fpc/0.99.13/rtl<br />
  #ENDIF
-</dl>
+</dd></dl>
 <p> In the above example, /usr/lib/fpc/0.99.12/rtl will be added to the path if you&#8217;re compiling with version 0.99.12 of the compiler, otherwise /usr/lib/fpc/0.99.13/rtl will be added to the path.</dl>
-<dt><i>#ENDIF</i></p>
+<dt><i>#ENDIF</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#ENDIF</dl>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#ENDIF</dd></dl>
 <p> #ENDIF marks the end of a block that started with #IF(N)DEF, possibly with an #ELSE between it.</dl>
-<dt><i>#DEFINE</i></p>
+<dt><i>#DEFINE</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#DEFINE name</dl>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#DEFINE name</dd></dl>
 <p> #DEFINE defines a new keyword. This has the same effect as a &quot;-dname&quot; command-line option.</dl>
-<dt><i>#UNDEF</i></p>
+<dt><i>#UNDEF</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#UNDEF name </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#UNDEF name </dd>
 <p> #UNDEF un-defines a keyword if it existed. This has the same effect as a &quot;-uname&quot; command-line option.</dl>
 </dl>
-<dt><i>#WRITE</i></p>
+<dt><i>#WRITE</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#WRITE Message Text </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#WRITE Message Text </dd>
 <p> #WRITE writes &quot;Message Text&quot; to the screen. This can be useful to display warnings if certain options are set. </p>
-<dt><i>Example</i></p>
+<dt><i>Example</i></dt>
 <dd>#IFDEF DEBUG<br />
  #WRITE Setting debugging ON&#8230;<br />
  -g<br />
- #ENDIF </p>
+ #ENDIF </dd>
 </dl>
 <p> if &quot;DEBUG is defined, this will produce a line </p>
 <p> Setting debugging ON&#8230; </p>
 <p> and will then switch on debugging information in the compiler.</dl>
-<dt><i>#INCLUDE</i></p>
+<dt><i>#INCLUDE</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#INCLUDE filename </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#INCLUDE filename </dd>
 <p> #INCLUDE instructs the compiler to read the contents of &quot;filename&quot; before continuing to process options in the current file. </p>
 <p> This can be useful if you want to have a particular configuration file for a project (or, under Unix like systems (such as Linux), in your home directory), but still want to have the global options that are set in a global configuration file. </p>
-<dt><i>Example</i></p>
-<dd>#IFDEF LINUX </p>
+<dt><i>Example</i></dt>
+<dd>#IFDEF LINUX </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>#INCLUDE&nbsp;<wbr>/etc/fpc.cfg<br />
  #ELSE </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#IFDEF GO32V2 </p>
@@ -146,13 +146,13 @@ description: "fpc.cfg – Free Pascal Compiler (FPC) configuration file, name de
  #ENDIF
 </dl>
 <p> This will include /etc/fpc.cfg if you&#8217;re on a unix like machine (like linux), and will include c:\ppinpc.cfg on a dos machine.</dl>
-<dt><i>#SECTION</i></p>
+<dt><i>#SECTION</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>Syntax</i></p>
-<dd>#SECTION name </p>
+</dd><dl>
+<dt><i>Syntax</i></dt>
+<dd>#SECTION name </dd>
 <p> The #SECTION directive acts as a #IFDEF directive, only it doesn&#8217;t require an #ENDIF directive. the special name COMMON always exists, i.e. lines following #SECTION COMMON are always read.</dl>
 </dl>
 </dl>
@@ -172,3 +172,4 @@ description: "fpc.cfg – Free Pascal Compiler (FPC) configuration file, name de
  #ENDIF The block is copied into the fpc.cfg file for each version you use (normally the latest release and the lastest developpers snapshot. </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-fpc/">fpc</a></code>(1) </p>
+</p>

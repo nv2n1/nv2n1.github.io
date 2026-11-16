@@ -10,9 +10,7 @@ description: "ntp_gettime, ntp_gettimex – get time parameters (NTP daemon inte
 <p>ntp_gettime, ntp_gettimex &#8211; get time parameters (NTP daemon interface)</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/timex.h&gt;
-
 int ntp_gettime(struct ntptimeval *ntv);
-
 int ntp_gettimex(struct ntptimeval *ntv);</code></pre>
 <h2>Description</h2>
 <p>Both of these APIs return information to the caller via the <i>ntv</i> argument, a structure of the following type: struct ntptimeval {<br />
@@ -25,17 +23,17 @@ int ntp_gettimex(struct ntptimeval *ntv);</code></pre>
 ;</code></pre>
 <p> The fields of this structure are as follows:</p>
 <dl>
-<dt><i>time</i></p>
-<dd>The current time, expressed as a <i>timeval</i> structure:</p>
+<dt><i>time</i></dt>
+<dd>The current time, expressed as a <i>timeval</i> structure:</dd>
 <dd>struct timeval {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since the Epoch&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;suseconds_t tv_usec;&nbsp;<wbr>&nbsp;/*&nbsp;Microseconds&nbsp;*/ };</p>
-<dt><i>maxerror</i></p>
-<dd>Maximum error, in microseconds. This value can be initialized by <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3), and is increased periodically (on Linux: each second), but is clamped to an upper limit (the kernel constant <code>NTP_PHASE_MAX</code>, with a value of 16,000).</p>
-<dt><i>esterror</i></p>
-<dd>Estimated error, in microseconds. This value can be set via <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3) to contain an estimate of the difference between the system clock and the true time. This value is not used inside the kernel.</p>
-<dt><i>tai</i></p>
-<dd>TAI (Atomic International Time) offset.</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;suseconds_t tv_usec;&nbsp;<wbr>&nbsp;/*&nbsp;Microseconds&nbsp;*/ };</dd>
+<dt><i>maxerror</i></dt>
+<dd>Maximum error, in microseconds. This value can be initialized by <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3), and is increased periodically (on Linux: each second), but is clamped to an upper limit (the kernel constant <code>NTP_PHASE_MAX</code>, with a value of 16,000).</dd>
+<dt><i>esterror</i></dt>
+<dd>Estimated error, in microseconds. This value can be set via <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3) to contain an estimate of the difference between the system clock and the true time. This value is not used inside the kernel.</dd>
+<dt><i>tai</i></dt>
+<dd>TAI (Atomic International Time) offset.</dd></dl>
 <p> <code>ntp_gettime</code>() returns an <i>ntptimeval</i> structure in which the <i>time</i>, <i>maxerror</i>, and <i>esterror</i> fields are filled in. <code>ntp_gettimex</code>() performs the same task as <code>ntp_gettime</code>(), but also returns information in the <i>tai</i> field.</p>
 <h2>Return Value</h2>
 <p>The return values for <code>ntp_gettime</code>() and <code>ntp_gettimex</code>() are as for <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2). Given a correct pointer argument, these functions always succeed.</p>

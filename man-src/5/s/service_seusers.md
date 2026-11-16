@@ -13,35 +13,35 @@ description: "service_seusers – The SELinux GNU/Linux user and service to SELi
 <p> There is one file for each GNU/Linux user name that will be required to run a service with a specific SELinux user name. </p>
 <p> The path for each configuration file is formed by the path returned by <code><a href="/docs/linux/man/3-selinux_policy_root/">selinux_policy_root</a></code>(3) with <i>/logins/username</i> appended (where <i>username</i> is a file representing the GNU/Linux user name). The default services directory is located at:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/logins</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/logins</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> <code>getseuser</code>(3) reads this file to map services to an SELinux user.</p>
 <h2>File Format</h2>
 <p>Each line within the <i>username</i> file is formatted as follows with each component separated by a colon:</p>
 <dl>
-<dd><i>service</i><code>:</code><i>seuser</i>[<code>:</code><i>range</i>]</dl>
+<dd><i>service</i><code>:</code><i>seuser</i>[<code>:</code><i>range</i>]</dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>service</i></p>
+<dd><i>service</i></dd>
 <dl>
-<dd>The service name used by the application.</dl>
+<dd>The service name used by the application.</dd></dl>
 <p> <i>seuser</i></p>
 <dl>
-<dd>The SELinux user name.</dl>
+<dd>The SELinux user name.</dd></dl>
 <p> <i>range</i></p>
 <dl>
-<dd>The range for MCS/MLS policies.</dl>
+<dd>The range for MCS/MLS policies.</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>Example 1 &#8211; for the &#8216;root&#8217; user:</p>
 <dl>
 <dd># ./logins/root<br />
  ipa:user_u:s0<br />
- this_service:unconfined_u:s0</dl>
+ this_service:unconfined_u:s0</dd></dl>
 <p> Example 2 &#8211; for GNU/Linux user &#8216;rch&#8217;:</p>
 <dl>
 <dd># ./logins/rch<br />
  ipa:unconfined_u:s0<br />
- that_service:unconfined_u:s0</dl>
+ that_service:unconfined_u:s0</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_policy_root/">selinux_policy_root</a></code>(3), <code>getseuser</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

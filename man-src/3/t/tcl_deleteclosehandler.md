@@ -16,9 +16,9 @@ void
 <code>Tcl_DeleteCloseHandler</code>(<i>channel, proc, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Channel <i>channel</i> (in) The channel for which to create or delete a close callback.</p>
-<dd>Tcl_CloseProc <i>*proc</i> (in) The procedure to call as the callback.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>Tcl_Channel <i>channel</i> (in) The channel for which to create or delete a close callback.</dd>
+<dd>Tcl_CloseProc <i>*proc</i> (in) The procedure to call as the callback.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_CreateCloseHandler</code> arranges for <i>proc</i> to be called when <i>channel</i> is closed with <code>Tcl_Close</code> or <code>Tcl_UnregisterChannel</code>, or using the Tcl <code>close</code> command. <i>Proc</i> should match the following prototype: </p>
@@ -26,7 +26,7 @@ void
 <dd>
 <pre>typedef void Tcl_CloseProc(
  ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> is the same as the value provided in the call to <code>Tcl_CreateCloseHandler</code>. </p>
 <p> <code>Tcl_DeleteCloseHandler</code> removes a close callback for <i>channel</i>. The <i>proc</i> and <i>clientData</i> identify which close callback to remove; <code>Tcl_DeleteCloseHandler</code> does nothing if its <i>proc</i> and <i>clientData</i> arguments do not match the <i>proc</i> and <i>clientData</i> for a close handler for <i>channel</i>. </p>
 <h2>See Also</h2>

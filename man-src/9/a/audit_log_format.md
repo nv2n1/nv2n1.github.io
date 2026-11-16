@@ -15,15 +15,15 @@ audit_log_format - format a message into the audit buffer.
 <h2>Arguments</h2>
 
 <i>ab</i>
-<dl><dd><dd>audit_buffer</dl>
+<dl><dd></dd><dd>audit_buffer</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>format string</dl>
+<dl><dd>format string</dd></dl>
  
 
  <i>...</i>
-<dl><dd>optional parameters matching <i>fmt</i> string</dl>
+<dl><dd>optional parameters matching <i>fmt</i> string</dd></dl>
 
 <h2>Description</h2>
 

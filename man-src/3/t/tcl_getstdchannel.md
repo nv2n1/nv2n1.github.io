@@ -15,8 +15,8 @@ Tcl_Channel
 <code>Tcl_SetStdChannel</code>(<i>channel, type</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>type</i> (in) The identifier for the standard channel to retrieve or modify. Must be one of <code>TCL_STDIN</code>, <code>TCL_STDOUT</code>, or <code>TCL_STDERR</code>.</p>
-<dd>Tcl_Channel <i>channel</i> (in) The channel to use as the new value for the specified standard channel. </p>
+<dd>int <i>type</i> (in) The identifier for the standard channel to retrieve or modify. Must be one of <code>TCL_STDIN</code>, <code>TCL_STDOUT</code>, or <code>TCL_STDERR</code>.</dd>
+<dd>Tcl_Channel <i>channel</i> (in) The channel to use as the new value for the specified standard channel. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl defines three special channels that are used by various I/O related commands if no other channels are specified. The standard input channel has a channel name of <code>stdin</code> and is used by <code>read</code> and <code>gets</code>. The standard output channel is named <code>stdout</code> and is used by <code>puts</code>. The standard error channel is named <code>stderr</code> and is used for reporting errors. In addition, the standard channels are inherited by any child processes created using <code>exec</code> or <code>open</code> in the absence of any other redirections. </p>
@@ -26,7 +26,7 @@ Tcl_Channel
 <dl COMPACT>
 <dd>
 <pre>Tcl_RegisterChannel(NULL, channel);</pre>
-</dl>
+</dd></dl>
 <p> This is a workaround for a misfeature in <code>Tcl_SetStdChannel</code> that it fails to do some reference counting housekeeping. This misfeature cannot be corrected without contradicting the assumptions of some existing code that calls <code>Tcl_SetStdChannel</code>. </p>
 <p> If <code>Tcl_GetStdChannel</code> is called before <code>Tcl_SetStdChannel</code>, Tcl will construct a new channel to wrap the appropriate platform-specific standard file handle. If <code>Tcl_SetStdChannel</code> is called before <code>Tcl_GetStdChannel</code>, then the default channel will not be created. </p>
 <p> If one of the standard channels is set to NULL, either by calling <code>Tcl_SetStdChannel</code> with a NULL <i>channel</i> argument, or by calling <code>Tcl_Close</code> on the channel, then the next call to <code>Tcl_CreateChannel</code> will automatically set the standard channel with the newly created channel. If more than one standard channel is NULL, then the standard channels will be assigned starting with standard input, followed by standard output, with standard error being last. </p>

@@ -16,31 +16,31 @@ description: "WildMidi_SetOption – Set a library option for a specific midi"
 <h2>Description</h2>
 <p>Set a library option for a specific midi. </p>
 <dl COMPACT>
-<dt><i>handle</i></p>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dl>
+<dt><i>handle</i></dt>
+<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
 <p> <i>options</i> The option or options you wish to change. </p>
 <dl COMPACT>
 <dd>
+</dd><dl COMPACT>
+<dt>WM_MO_LOG_VOLUME</dt>
+<dd>By default the library uses linear volume levels typically used in computer MIDI players. These can differ somewhat to volume levels found on some midi hardware which may use a volume curve based on decibels. This option sets the volume levels to what you&#8217;d expect on such devices.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_LOG_VOLUME</p>
-<dd>By default the library uses linear volume levels typically used in computer MIDI players. These can differ somewhat to volume levels found on some midi hardware which may use a volume curve based on decibels. This option sets the volume levels to what you&#8217;d expect on such devices.</dl>
+<dt>WM_MO_ENHANCED_RESAMPLING</dt>
+<dd>By default libWildMidi uses linear interpolation for the resampling of the sound samples. Setting this option enables the library to use a resampling method that attempts to fill in the gaps giving richer sound.</dd></dl>
 <dl COMPACT>
-<dt>WM_MO_ENHANCED_RESAMPLING</p>
-<dd>By default libWildMidi uses linear interpolation for the resampling of the sound samples. Setting this option enables the library to use a resampling method that attempts to fill in the gaps giving richer sound.</dl>
-<dl COMPACT>
-<dt>WM_MO_REVERB</p>
-<dd>libWildMidi has an 8 reflection reverb engine. Use this option to give more depth to the output.</dl>
+<dt>WM_MO_REVERB</dt>
+<dd>libWildMidi has an 8 reflection reverb engine. Use this option to give more depth to the output.</dd></dl>
 </dl>
 <dl COMPACT>
-<dt>setting</p>
-<dd>To turn on an option, repeat that option here. To turn off an option, do not put the option here.</dl>
+<dt>setting</dt>
+<dd>To turn on an option, repeat that option here. To turn off an option, do not put the option here.</dd></dl>
 <dl COMPACT>
-<dt>Example: To turn on Reverb</p>
-<dd>WildMidi_SetOption(handle, WM_MO_REVERB, WM_MO_REVERB);</p>
-<dt>Example: To turn off Reverb</p>
-<dd>WildMidi_SetOption(handle, WM_MO_REVERB, 0);</p>
-<dt>Example: To turn on Reverb and Enhanced Resampling</p>
-<dd>WildMidi_SetOption(handle, (WM_MO_REVERB | WM_MO_ENHANCED_RESAMPLING), (WM_MO_REVERB | WM_MO_ENHANCED_RESAMPLING));</dl>
+<dt>Example: To turn on Reverb</dt>
+<dd>WildMidi_SetOption(handle, WM_MO_REVERB, WM_MO_REVERB);</dd>
+<dt>Example: To turn off Reverb</dt>
+<dd>WildMidi_SetOption(handle, WM_MO_REVERB, 0);</dd>
+<dt>Example: To turn on Reverb and Enhanced Resampling</dt>
+<dd>WildMidi_SetOption(handle, (WM_MO_REVERB | WM_MO_ENHANCED_RESAMPLING), (WM_MO_REVERB | WM_MO_ENHANCED_RESAMPLING));</dd></dl>
 <h2>Return Value</h2>
 <p>Returns -1 on error, otherwise returns 0.</p>
 <h2>See Also</h2>

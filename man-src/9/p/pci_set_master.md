@@ -14,7 +14,7 @@ description: "pci_set_master – enables bus-mastering for device dev"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the PCI device to enable</dl>
+</dd><dd>the PCI device to enable</dd></dl>
 <h2>Description</h2>
 <p>Enables bus-mastering on the device and calls <code>pcibios_set_master</code> to do the needed arch specific settings.</p>
 <h2>Copyright</h2>

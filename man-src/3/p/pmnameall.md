@@ -22,10 +22,10 @@ description: "pmNameAll – translate a PMID to a set of performance metric name
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetchildren/">pmGetChildren</a></code>(3), <code><a href="/docs/linux/man/3-pmgetchildrenstatus/">pmGetChildrenStatus</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3), <code><a href="/docs/linux/man/3-pmnameid/">pmNameID</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOPMNS</code></p>
-<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) and wants to use the distributed PMNS, then a call to <code>pmNameAll</code> must be made after the creation of a context (see <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3)).</p>
-<dt><code>PM_ERR_PMID</code></p>
-<dd><i>pmid</i> does not correspond to a defined PMID in the PMNS.</p>
-<dt><code>PM_ERR_*</code></p>
-<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </p>
+<dt><code>PM_ERR_NOPMNS</code></dt>
+<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) and wants to use the distributed PMNS, then a call to <code>pmNameAll</code> must be made after the creation of a context (see <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3)).</dd>
+<dt><code>PM_ERR_PMID</code></dt>
+<dd><i>pmid</i> does not correspond to a defined PMID in the PMNS.</dd>
+<dt><code>PM_ERR_*</code></dt>
+<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </dd>
 </dl>

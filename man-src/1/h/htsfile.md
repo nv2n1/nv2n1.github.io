@@ -20,7 +20,8 @@ description: "htsfile – identify high-throughput sequencing data files"
 <p> Alternatively, when <code>&#8211;copy</code> is used, <code>htsfile</code> takes exactly two arguments and performs a byte-for-byte copy from <i>FILE</i> to <i>DESTFILE</i>. This is similar to <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1), but HTSlib&#8217;s remote file access facilities are available for both source and destination. </p>
 <p> The following options are accepted:</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;view</code></p>
-<dd> Instead of identifying the specified files, display a textual representation of their contents on standard output.</p>
+<dt><code>-c</code>, <code>&#8211;view</code></dt>
+<dd> Instead of identifying the specified files, display a textual representation of their contents on standard output.</dd>
 <dt>
-<dd> By default, <code>&#8211;view</code> refuses to display files in unknown formats. When <code>&#8211;verbose</code> is also given, the raw contents of such files are displayed, with non-printable characters shown via C-style &quot;
+</dt><dd> By default, <code>&#8211;view</code> refuses to display files in unknown formats. When <code>&#8211;verbose</code> is also given, the raw contents of such files are displayed, with non-printable characters shown via C-style &quot;
+</dd></dl>

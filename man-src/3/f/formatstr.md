@@ -88,27 +88,23 @@ Override original method to return "" when the positional argument or named argu
 <h3>int_units(value)</h3>
 <p> Convert string value with units to an integer </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>value:</code></p>
-<dd> String to convert</dl>
+<dt><code>value:</code></dt>
+<dd> String to convert</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> Examples:</dl>
+</dt><dd>
+<p> Examples:</dd></dl>
 <h3>out = num_units(1MB) # out = 1048576</h3>
 <h3>str_units(value, precision=2)</h3>
 <p> Convert number to a string value with units </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>value:</code></p>
-<dd> Number to convert</p>
-<dt><code>precision:</code></p>
-<dd> Return string value with the following floating point precision. By default no trailing zeros are returned but if the precision is given as a negative number the precision is enforced [default: 2]</dl>
+<dt><code>value:</code></dt>
+<dd> Number to convert</dd>
+<dt><code>precision:</code></dt>
+<dd> Return string value with the following floating point precision. By default no trailing zeros are returned but if the precision is given as a negative number the precision is enforced [default: 2]</dd></dl>
 </dl>
 <h2>BUGS</h2>
 <p> No known bugs.</p>

@@ -21,15 +21,15 @@ CALL SLOGAP (TIME,MTST)
 <h2>Description</h2>
 
 <dl><dt>TIME
-<dd>(an input expression of type REAL) specifies the number of seconds worth of blank frames to be generated.
-<dt>MTST
-<dd>(an input expression of type INTEGER) is a switch to indicate whether this is a &quot;real&quot; run or a &quot;practice&quot; run.
-<dl><dd><dl><dt>0
-<dd>means &quot;real run&quot;.
-<dt>1
-<dd>means &quot;practice run&quot;.</dl></dl><dd>During real runs, the blank frames themselves are created. 
+</dt><dd>(an input expression of type REAL) specifies the number of seconds worth of blank frames to be generated.
+</dd><dt>MTST
+</dt><dd>(an input expression of type INTEGER) is a switch to indicate whether this is a &quot;real&quot; run or a &quot;practice&quot; run.
+</dd><dl><dd></dd><dl><dt>0
+</dt><dd>means &quot;real run&quot;.
+</dd><dt>1
+</dt><dd>means &quot;practice run&quot;.</dd></dl></dl><dd>During real runs, the blank frames themselves are created. 
 
- During practice runs, a single frame is created with a legend saying how many seconds of blank frames it stands for.</dl>
+ During practice runs, a single frame is created with a legend saying how many seconds of blank frames it stands for.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

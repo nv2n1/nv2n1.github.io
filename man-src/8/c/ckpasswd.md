@@ -17,8 +17,8 @@ description: "ckpasswd – nnrpd password authenticator"
 <p> When using any method other than <font SIZE="-1">PAM</font>, <code>ckpasswd</code> expects all passwords to be stored encrypted by the system <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3) function and calls <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3) on the supplied password before comparing it to the expected password. If you&#8217;re using a different password hash scheme (like <font SIZE="-1">MD5</font>), you must use <font SIZE="-1">PAM</font>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> <i>database</i></p>
-<dd>Read passwords from a database (ndbm, gdbm or dbm format depending on what your system has) rather than by using <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). <code>ckpasswd</code> expects <i>database</i>.dir and <i>database</i>.pag to exist and to be a database keyed by username with the encrypted passwords as the values. </p>
+<dt><code>-d</code> <i>database</i></dt>
+<dd>Read passwords from a database (ndbm, gdbm or dbm format depending on what your system has) rather than by using <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). <code>ckpasswd</code> expects <i>database</i>.dir and <i>database</i>.pag to exist and to be a database keyed by username with the encrypted passwords as the values. </dd>
 <p> While <font SIZE="-1">INN</font> doesn&#8217;t come with a program intended specifically to create such databases, on most systems it&#8217;s fairly easy to write a Perl script to do so. Something like: </p>
 <pre> #!/usr/bin/perl
  use NDBM_File;
@@ -39,8 +39,8 @@ description: "ckpasswd – nnrpd password authenticator"
  untie %db;</pre>
 <p>Note that this will echo back the password when typed; there are obvious improvements that could be made to this, but it should be a reasonable start. Sometimes a program like this will be available with the name <code>dbmpasswd</code>. </p>
 <p> This option will not be available on systems without ndbm, gdbm or dbm libraries.</p>
-<dt><code>-f</code> <i>filename</i></p>
-<dd>Read passwords from the given file rather than using <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). The file is expected to be formatted like a system password file, at least vaguely. That means each line should look something like: </p>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd>Read passwords from the given file rather than using <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). The file is expected to be formatted like a system password file, at least vaguely. That means each line should look something like: </dd>
 <pre> username:pdIh9NCNslkq6</pre>
 <p>(and each line may have an additional colon after the encrypted password and additional data; that data will be ignored by <code>ckpasswd</code>). Lines starting with a number sign (<tt>&quot;#&quot;</tt>) are ignored. <font SIZE="-1">INN</font> does not come with a utility to create the encrypted passwords, but <code>htpasswd</code> (which comes with Apache) can do so and it&#8217;s a quick job with Perl (see the example script under <code>-d</code>, or also below). If using Apache&#8217;s <code>htpasswd</code> program, be sure to give it the <code>-d</code> option so that it will use <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3). </p>
 <p> A line in <i>filename</i> for the user <tt>&quot;user&quot;</tt> with the password <tt>&quot;pass&quot;</tt> would be <tt>&quot;user:LIfOpbjNaEQYE&quot;</tt> as obtained by the following commands: </p>
@@ -49,16 +49,16 @@ description: "ckpasswd – nnrpd password authenticator"
  % perl -e 'print &quot;user:&quot;.crypt(&quot;pass&quot;, &quot;LI&quot;).&quot;
 &quot;;'
  user:LIfOpbjNaEQYE</pre>
-<dt><code>-g</code></p>
-<dd>Attempt to look up system group corresponding to username and return a string like <tt>&quot;user [at] group&quot;</tt> to be matched against in <i>readers.conf</i>. This option is incompatible with the <code>-d</code> and <code>-f</code> options.</p>
-<dt><code>-p</code> <i>password</i></p>
-<dd>Use <i>password</i> as the password for authentication rather than reading a password using the <code>nnrpd</code> authenticator protocol. This option is useful only for testing your authentication system (particularly since it involves putting a password on the command line), and does not work when <code>ckpasswd</code> is run by <code>nnrpd</code>. If this option is given, <code>-u</code> must also be given.</p>
-<dt><code>-s</code></p>
-<dd>Check passwords against the result of <i><a href="/docs/linux/man/3-getspnam/">getspnam</a></i>(3) instead of <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). This function, on those systems that supports it, reads from <i>/etc/shadow</i> or similar more restricted files. If you want to check passwords supplied to <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) against system account passwords, you will probably have to use this option on most systems. </p>
+<dt><code>-g</code></dt>
+<dd>Attempt to look up system group corresponding to username and return a string like <tt>&quot;user [at] group&quot;</tt> to be matched against in <i>readers.conf</i>. This option is incompatible with the <code>-d</code> and <code>-f</code> options.</dd>
+<dt><code>-p</code> <i>password</i></dt>
+<dd>Use <i>password</i> as the password for authentication rather than reading a password using the <code>nnrpd</code> authenticator protocol. This option is useful only for testing your authentication system (particularly since it involves putting a password on the command line), and does not work when <code>ckpasswd</code> is run by <code>nnrpd</code>. If this option is given, <code>-u</code> must also be given.</dd>
+<dt><code>-s</code></dt>
+<dd>Check passwords against the result of <i><a href="/docs/linux/man/3-getspnam/">getspnam</a></i>(3) instead of <i><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></i>(3). This function, on those systems that supports it, reads from <i>/etc/shadow</i> or similar more restricted files. If you want to check passwords supplied to <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) against system account passwords, you will probably have to use this option on most systems. </dd>
 <p> Most systems require special privileges to call <i><a href="/docs/linux/man/3-getspnam/">getspnam</a></i>(3), so in order to use this option you may need to make <code>ckpasswd</code> setgid to some group (like group <tt>&quot;shadow&quot;</tt>) or even setuid root. <code>ckpasswd</code> has not been specifically audited for such uses! It is, however, a very small program that you should be able to check by hand for security. </p>
 <p> This configuration is not recommended if it can be avoided, for serious security reasons. See &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; in <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5) for discussion.</p>
-<dt><code>-u</code> <i>username</i></p>
-<dd>Authenticate as <i>username</i>. This option is useful only for testing (so that you can test your authentication system easily) and does not work when <code>ckpasswd</code> is run by <code>nnrpd</code>. If this option is given, <code>-p</code> must also be given.</dl>
+<dt><code>-u</code> <i>username</i></dt>
+<dd>Authenticate as <i>username</i>. This option is useful only for testing (so that you can test your authentication system easily) and does not work when <code>ckpasswd</code> is run by <code>nnrpd</code>. If this option is given, <code>-p</code> must also be given.</dd></dl>
 <h2>Examples</h2>
 <p>See <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5) for examples of <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) authentication configuration that uses <code>ckpasswd</code> to check passwords. </p>
 <p> An example <font SIZE="-1">PAM</font> configuration for <i>/etc/pam.conf</i> that tells <code>ckpasswd</code> to check usernames and passwords against system accounts is: </p>

@@ -35,41 +35,41 @@ description: "gpt-config – Configure the current installation of GPT"
 <p> Configuration information for <font SIZE="-1">GPT</font> is stored in the module <tt>$GPT_LOCATION</tt>/lib/perl/Grid/GPT/LocalEnv.pm. This module is regenerated when gpt-config is used to change the configuration.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>-builddir</i></p>
-<dd>Specifies the where the source tar files should be untarred and the code is built.</p>
-<dt><i>-location</i></p>
+<dt><i>-builddir</i></dt>
+<dd>Specifies the where the source tar files should be untarred and the code is built.</dd>
+<dt><i>-location</i></dt>
 <dd>
-<dt><i>-perl</i></p>
+</dd><dt><i>-perl</i></dt>
 <dd>
-<dt><i>-gtar</i></p>
+</dd><dt><i>-gtar</i></dt>
 <dd>
-<dt><i>-gunzip</i></p>
+</dd><dt><i>-gunzip</i></dt>
 <dd>
-<dt><i>-gmake</i></p>
+</dd><dt><i>-gmake</i></dt>
 <dd>
-<dt><i>-rpm</i></p>
+</dd><dt><i>-rpm</i></dt>
 <dd>
-<dt><i>-rpmbuild</i></p>
-<dd>Location of various programs that <font SIZE="-1">GPT</font> uses. These switches will override any searching done by the -probe switch..</p>
-<dt><i>-license</i></p>
+</dd><dt><i>-rpmbuild</i></dt>
+<dd>Location of various programs that <font SIZE="-1">GPT</font> uses. These switches will override any searching done by the -probe switch..</dd>
+<dt><i>-license</i></dt>
 <dd>
-<dt><i>-vendor</i></p>
+</dd><dt><i>-vendor</i></dt>
 <dd>
-<dt><i>-ftpsite</i></p>
+</dd><dt><i>-ftpsite</i></dt>
 <dd>
-<dt><i>-url</i></p>
+</dd><dt><i>-url</i></dt>
 <dd>
-<dt><i>-packager</i></p>
+</dd><dt><i>-packager</i></dt>
 <dd>
-<dt><i>-prefix</i></p>
-<dd>Values that are used by <font SIZE="-1">GPT</font> when generating <font SIZE="-1">RPM</font> packages. These values are not configured when the platform does not support <font SIZE="-1">RPM</font>.</p>
-<dt><i>-list</i></p>
-<dd>List the current configuration.</p>
-<dt><i>-probe</i></p>
-<dd>Probe for the various programs that <font SIZE="-1">GPT</font> needs. The probe examines each directory listed in the $PATH variable for these programs.</p>
-<dt><i>-use-archive-tar</i></p>
-<dd>Skip the probes for a system tar and unzip programs. Use Archive::Tar module to untar source packages. Using this modules slows down the build noticably.</p>
-<dt><i>-ignore</i></p>
-<dd>Ignore any missing programs and continue with the configuring.</dl>
+</dd><dt><i>-prefix</i></dt>
+<dd>Values that are used by <font SIZE="-1">GPT</font> when generating <font SIZE="-1">RPM</font> packages. These values are not configured when the platform does not support <font SIZE="-1">RPM</font>.</dd>
+<dt><i>-list</i></dt>
+<dd>List the current configuration.</dd>
+<dt><i>-probe</i></dt>
+<dd>Probe for the various programs that <font SIZE="-1">GPT</font> needs. The probe examines each directory listed in the $PATH variable for these programs.</dd>
+<dt><i>-use-archive-tar</i></dt>
+<dd>Skip the probes for a system tar and unzip programs. Use Archive::Tar module to untar source packages. Using this modules slows down the build noticably.</dd>
+<dt><i>-ignore</i></dt>
+<dd>Ignore any missing programs and continue with the configuring.</dd></dl>
 <h2>Author</h2>
 <p>Written by Chase Phillips and Michael Bletzinger.</p>

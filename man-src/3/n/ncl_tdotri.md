@@ -30,17 +30,17 @@ This routine, given a list of NTRI triangles in the array RTRI and a real scratc
 
  The arguments of TDOTRI are as follows:
 <dl><dt>RTRI
-<dd>(an input/output array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI. As described above, the number of triangles in the list may increase as a result of calling TDOTRI.
-<dt>MTRI
-<dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
-<dt>NTRI
-<dd>(an input/output variable of type INTEGER) - specifies the number of triangles currently in the list. It is the user's responsibility to zero this initially; its value is increased by each call to a triangle-generating routine like TDSTRI or TDITRI and may be increased by a call to TDOTRI.
-<dt>RTWK
-<dd>(a scratch array of type REAL, dimensioned at least MTRI x 2).
-<dt>ITWK
-<dd>(an output array, of type INTEGER, dimensioned at least MTRI) - returned containing a permutation of the integers from 1 to NTRI, specifying the order in which the triangles ought to be rendered.
-<dt>IORD
-<dd>(an input expression of type INTEGER) - says how the triangles are to be ordered. The value 0 implies ordering by decreasing distance of the triangle midpoints from the eye, -1 implies ordering by decreasing distance of the triangle farpoints from the eye, and +1 implies ordering by decreasing distance of the triangle farpoints from the eye, with adjustments made by running an algorithm from the reference &quot;Computer Graphics Principles and Practice&quot;, by Foley and Van Dam.</dl>
+</dt><dd>(an input/output array, of type REAL, dimensioned 10 x MTRI) - a list of triangles, probably created by means of calls to TDSTRI, TDITRI, and/or TDMTRI. As described above, the number of triangles in the list may increase as a result of calling TDOTRI.
+</dd><dt>MTRI
+</dt><dd>(an input expression of type INTEGER) - the second dimension of RTRI and thus the maximum number of triangles the triangle list will hold.
+</dd><dt>NTRI
+</dt><dd>(an input/output variable of type INTEGER) - specifies the number of triangles currently in the list. It is the user's responsibility to zero this initially; its value is increased by each call to a triangle-generating routine like TDSTRI or TDITRI and may be increased by a call to TDOTRI.
+</dd><dt>RTWK
+</dt><dd>(a scratch array of type REAL, dimensioned at least MTRI x 2).
+</dd><dt>ITWK
+</dt><dd>(an output array, of type INTEGER, dimensioned at least MTRI) - returned containing a permutation of the integers from 1 to NTRI, specifying the order in which the triangles ought to be rendered.
+</dd><dt>IORD
+</dt><dd>(an input expression of type INTEGER) - says how the triangles are to be ordered. The value 0 implies ordering by decreasing distance of the triangle midpoints from the eye, -1 implies ordering by decreasing distance of the triangle farpoints from the eye, and +1 implies ordering by decreasing distance of the triangle farpoints from the eye, with adjustments made by running an algorithm from the reference &quot;Computer Graphics Principles and Practice&quot;, by Foley and Van Dam.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

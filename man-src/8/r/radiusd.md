@@ -17,40 +17,40 @@ description: "radiusd – Authentication, Authorization and Accounting server"
 <h2>Options</h2>
 <p>The following command-line options are accepted by the server:</p>
 <dl>
-<dt>-C</p>
-<dd>Check the configuration and exit immediately. If there is a problem reading the configuration, then the server will exit with a non-zero status code. If the configuration appears to be acceptable, then the server will exit with a zero status code. </p>
+<dt>-C</dt>
+<dd>Check the configuration and exit immediately. If there is a problem reading the configuration, then the server will exit with a non-zero status code. If the configuration appears to be acceptable, then the server will exit with a zero status code. </dd>
 <p> Note that there are limitations to this check. Due to the complexities involved in <i>almost</i> starting a RADIUS server, these checks are necessarily incomplete. The server can return a zero status code when run with -C, but may still exit with an error when run normally. </p>
 <p> See the output of <code>radiusd -XC</code> for an informative list of which modules are checked for correct configuration, and which modules are skipped, and therefore not checked.</p>
-<dt>-d <i>config directory</i></p>
-<dd>Defaults to <i>/etc/raddb</i>. <code>Radiusd</code> looks here for its configuration files such as the <i>dictionary</i> and the <i>users</i> files.</p>
-<dt>-f</p>
-<dd>Do not fork, stay running as a foreground process.</p>
-<dt>-h</p>
-<dd>Print usage help information.</p>
-<dt>-i <i>ip-address</i></p>
-<dd>Defines which IP address that the server uses for sending and receiving packets. </p>
+<dt>-d <i>config directory</i></dt>
+<dd>Defaults to <i>/etc/raddb</i>. <code>Radiusd</code> looks here for its configuration files such as the <i>dictionary</i> and the <i>users</i> files.</dd>
+<dt>-f</dt>
+<dd>Do not fork, stay running as a foreground process.</dd>
+<dt>-h</dt>
+<dd>Print usage help information.</dd>
+<dt>-i <i>ip-address</i></dt>
+<dd>Defines which IP address that the server uses for sending and receiving packets. </dd>
 <p> If this command-line option is given, then the &quot;bind_address&quot; and all &quot;listen{}&quot; entries in <i>radiusd.conf</i> are ignored. </p>
 <p> This option MUST be used in conjunction with &quot;-p&quot;.</p>
-<dt>-l <i>log_file</i></p>
-<dd>Defaults to <i>${logdir}/radius.log</i>. <code>Radiusd</code> writes it&#8217;s logging information to this file. If log_file is the string &quot;stdout&quot; logging will be written to stdout.</p>
-<dt>-m</p>
-<dd>On SIGINT or SIGQUIT exit cleanly instead of immediately. This is most useful for when running the server with &quot;valgrind&quot;.</p>
-<dt>-n <i>name</i></p>
-<dd>Read <i>raddb/name.conf</i> instead of <i>raddb/radiusd.conf</i>.</p>
-<dt>-p <i>port</i></p>
-<dd>Defines which port is used for receiving authentication packets. Accounting packets are received on &quot;port + 1&quot;. </p>
+<dt>-l <i>log_file</i></dt>
+<dd>Defaults to <i>${logdir}/radius.log</i>. <code>Radiusd</code> writes it&#8217;s logging information to this file. If log_file is the string &quot;stdout&quot; logging will be written to stdout.</dd>
+<dt>-m</dt>
+<dd>On SIGINT or SIGQUIT exit cleanly instead of immediately. This is most useful for when running the server with &quot;valgrind&quot;.</dd>
+<dt>-n <i>name</i></dt>
+<dd>Read <i>raddb/name.conf</i> instead of <i>raddb/radiusd.conf</i>.</dd>
+<dt>-p <i>port</i></dt>
+<dd>Defines which port is used for receiving authentication packets. Accounting packets are received on &quot;port + 1&quot;. </dd>
 <p> When this command-line option is given, all &quot;listen&quot; sections in <i>radiusd.conf</i> are ignored. </p>
 <p> This option MUST be used in conjunction with &quot;-i&quot;.</p>
-<dt>-s</p>
-<dd>Run in &quot;single server&quot; mode. The server normally runs with multiple threads and/or processes, which can lower its response time to requests. Some systems have issues with threading, however, so running in &quot;single server&quot; mode may help to address those issues. In single server mode, the server will also not &quot;daemonize&quot; (auto-background) itself.</p>
-<dt>-t</p>
-<dd>Do not spawn threads.</p>
-<dt>-v</p>
-<dd>Print server version information and exit.</p>
-<dt>-X</p>
-<dd>Debugging mode. Equivalent to &quot;-sfxx -l stdout&quot;. When trying to understand how the server works, ALWAYS run it with &quot;radiusd -X&quot;. For production servers, use &quot;raddebug&quot;</p>
-<dt>-x</p>
-<dd>Finer-grained debug mode. In this mode the server will print details of every request on it&#8217;s <code>stdout</code> output. You can specify this option multiple times (-x -x or -xx) to get more detailed output.</dl>
+<dt>-s</dt>
+<dd>Run in &quot;single server&quot; mode. The server normally runs with multiple threads and/or processes, which can lower its response time to requests. Some systems have issues with threading, however, so running in &quot;single server&quot; mode may help to address those issues. In single server mode, the server will also not &quot;daemonize&quot; (auto-background) itself.</dd>
+<dt>-t</dt>
+<dd>Do not spawn threads.</dd>
+<dt>-v</dt>
+<dd>Print server version information and exit.</dd>
+<dt>-X</dt>
+<dd>Debugging mode. Equivalent to &quot;-sfxx -l stdout&quot;. When trying to understand how the server works, ALWAYS run it with &quot;radiusd -X&quot;. For production servers, use &quot;raddebug&quot;</dd>
+<dt>-x</dt>
+<dd>Finer-grained debug mode. In this mode the server will print details of every request on it&#8217;s <code>stdout</code> output. You can specify this option multiple times (-x -x or -xx) to get more detailed output.</dd></dl>
 <h2>Debugging</h2>
 <p>The default configuration is set to work in the widest possible circumstances. It requires minimal changes for your system. </p>
 <p> However, your needs may be complex, and may require significant changes to the server configuration. Making random changes is a guaranteed method of failure. Instead, we STRONGLY RECOMMEND proceeding via the following steps: </p>
@@ -75,16 +75,16 @@ description: "radiusd – Authentication, Authorization and Accounting server"
 <h2>Configuration</h2>
 <p><code>Radiusd</code> uses a number of configuration files. Each file has it&#8217;s own manpage describing the format of the file. These files are:</p>
 <dl>
-<dt>radiusd.conf</p>
-<dd>The main configuration file, which sets the administrator-controlled items.</p>
-<dt>dictionary</p>
-<dd>This file is usually static. It defines all the possible RADIUS attributes used in the other configuration files. You don&#8217;t have to modify it. It includes other dictionary files in the same directory.</p>
-<dt>hints</p>
-<dd>Defines certain hints to the radius server based on the users&#8217;s loginname or other attributes sent by the access server. It also provides for mapping user names (such as Pusername -&gt; username). This provides the functionality that the <i>Livingston 2.0</i> server has as &quot;Prefix&quot; and &quot;Suffix&quot; support in the <i>users</i> file, but is more general. Ofcourse the Livingston way of doing things is also supported, and you can even use both at the same time (within certain limits).</p>
-<dt>huntgroups</p>
-<dd>Defines the huntgroups that you have, and makes it possible to restrict access to certain huntgroups to certain (groups of) users.</p>
-<dt>users</p>
-<dd>Here the users are defined. On a typical setup, this file mainly contains DEFAULT entries to process the different types of logins, based on hints from the hints file. Authentication is then based on the contents of the UNIX <i>/etc/passwd</i> file. However it is also possible to define all users, and their passwords, in this file.</dl>
+<dt>radiusd.conf</dt>
+<dd>The main configuration file, which sets the administrator-controlled items.</dd>
+<dt>dictionary</dt>
+<dd>This file is usually static. It defines all the possible RADIUS attributes used in the other configuration files. You don&#8217;t have to modify it. It includes other dictionary files in the same directory.</dd>
+<dt>hints</dt>
+<dd>Defines certain hints to the radius server based on the users&#8217;s loginname or other attributes sent by the access server. It also provides for mapping user names (such as Pusername -&gt; username). This provides the functionality that the <i>Livingston 2.0</i> server has as &quot;Prefix&quot; and &quot;Suffix&quot; support in the <i>users</i> file, but is more general. Ofcourse the Livingston way of doing things is also supported, and you can even use both at the same time (within certain limits).</dd>
+<dt>huntgroups</dt>
+<dd>Defines the huntgroups that you have, and makes it possible to restrict access to certain huntgroups to certain (groups of) users.</dd>
+<dt>users</dt>
+<dd>Here the users are defined. On a typical setup, this file mainly contains DEFAULT entries to process the different types of logins, based on hints from the hints file. Authentication is then based on the contents of the UNIX <i>/etc/passwd</i> file. However it is also possible to define all users, and their passwords, in this file.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5), <a href="/docs/linux/man/5-users/">users</a>(5), huntgroups(5), hints(5), <a href="/docs/linux/man/5-dictionary/">dictionary</a>(5), <a href="/docs/linux/man/8-raddebug/">raddebug</a>(8)</p>
 <h2>Author</h2>

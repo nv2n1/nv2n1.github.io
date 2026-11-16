@@ -11,15 +11,10 @@ std::future_status - std::future_status
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;future&gt;
-
 enum class future_status {
-
     ready,
-
     timeout,                    (since C++11)
-
     deferred
-
 };</code></pre> 
 Specifies state of a future as returned by wait_for and wait_until functions of std::future and std::shared_future. 
 Constant Explanation 

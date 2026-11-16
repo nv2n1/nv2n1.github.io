@@ -21,16 +21,16 @@ description: "pamstretch – scale up a PNM or PAM image by interpolating betwee
 <p> The <i>N</i> parameter is the scale factor. It is valid only if you <i>don&#8217;t</i> specify <code>-xscale</code> or <code>-yscale</code>. In that case, <code>pamstretch</code> scales in both dimensions and by the scale factor <i>N</i>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-xscale=</code><i>X</i></p>
-<dd> This is the horizontal scale factor. If you don&#8217;t specify this, but do specify a vertical scale factor, the horizontal scale factor is 1. </p>
-<dt><code>-yscale=</code><i>Y</i></p>
-<dd> This is the vertical scale factor. If you don&#8217;t specify this, but do specify a horizontal scale factor, the vertical scale factor is 1. </p>
+<dt><code>-xscale=</code><i>X</i></dt>
+<dd> This is the horizontal scale factor. If you don&#8217;t specify this, but do specify a vertical scale factor, the horizontal scale factor is 1. </dd>
+<dt><code>-yscale=</code><i>Y</i></dt>
+<dd> This is the vertical scale factor. If you don&#8217;t specify this, but do specify a horizontal scale factor, the vertical scale factor is 1. </dd>
 </dl>
 <dl>
-<dt><code>-blackedge</code></p>
-<dd> interpolate to black at right/bottom edges.</p>
-<dt><code>-dropedge</code></p>
-<dd> drop one (source) pixel at right/bottom edges. This is arguably more logical than the default behaviour, but it means producing output which is a slightly odd size. </p>
+<dt><code>-blackedge</code></dt>
+<dd> interpolate to black at right/bottom edges.</dd>
+<dt><code>-dropedge</code></dt>
+<dd> drop one (source) pixel at right/bottom edges. This is arguably more logical than the default behaviour, but it means producing output which is a slightly odd size. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Usually produces fairly ugly output for PBMs. For most PBM input you&#8217;ll probably want to reduce the `noise&#8217; first using something like <code><a href="/docs/linux/man/1-pnmnlfilt/">pnmnlfilt</a></code>(1). </p>

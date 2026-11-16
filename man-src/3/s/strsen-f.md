@@ -29,10 +29,10 @@ description: "strsen.f –"
  block upper triangular with 1-by-1 and 2-by-2 diagonal blocks; each
  2-by-2 diagonal block has its diagonal elements equal and its
  off-diagonal elements of opposite sign.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  Specifies whether condition numbers are required for the
  cluster of eigenvalues (S) or the invariant subspace (SEP):
@@ -144,13 +144,13 @@ description: "strsen.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -202,7 +202,8 @@ description: "strsen.f –"
  the invariant subspace. An approximate bound on the maximum angular
  error in the computed right invariant subspace is
  EPS * norm(T) / SEP</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 314 of file strsen.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

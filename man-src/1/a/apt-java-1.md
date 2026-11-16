@@ -14,13 +14,11 @@ description: "apt – annotation processing tool"
 <h2>PARAMETERS</h2>
 <p> Options may be in any order. For a discussion of parameters which apply to a specific option, see OPTIONS below. </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>sourcefiles</p>
-<dd> Zero or more source files to be processed.</p>
-<dt>@files</p>
-<dd> One or more files that list source files or other options</dl>
+<dt>sourcefiles</dt>
+<dd> Zero or more source files to be processed.</dd>
+<dt>@files</dt>
+<dd> One or more files that list source files or other options</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Note</code>: The <i>apt</i> tool and its associated API contained in the package <i>com.sun.mirror</i> have been deprecated since JDK 7 and are planned to be removed in the next major JDK release. Use the options available in the <i><a href="/docs/linux/man/1-javac/">javac</a>(1)</i> tool and the APIs contained in the packages <i>javax.annotation.processing</i> and <i>javax.lang.model</i> to process annotations. </p>
@@ -29,63 +27,55 @@ description: "apt – annotation processing tool"
 <h2>OPTIONS</h2>
 <h3>apt specific options</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-s dir</p>
-<dd> Specify the directory root under which processor-generated source files will be placed; files are placed in subdirectories based on package namespace.</p>
-<dt>-nocompile</p>
-<dd> Do not compile source files to class files.</p>
-<dt>-print</p>
-<dd> Print out textual representation of specified types; perform no annotation processing or compilation.</p>
-<dt>-A[key[=val]]</p>
-<dd> Options to pass to annotation processors &#8212; these are not interpreted by <i>apt</i> directly, but are made available for use by individual processors</p>
-<dt>-factorypath path</p>
-<dd> Specify where to find annotation processor factories; if this option is used, the classpath is <i>not</i> searched for factories.</p>
-<dt>-factory classname</p>
-<dd> Name of annotation processor factory to use; bypasses default discovery process</p>
-<dt>-version</p>
-<dd> Print version information.</p>
-<dt>-X</p>
-<dd> Display information about non-standard options.</dl>
+<dt>-s dir</dt>
+<dd> Specify the directory root under which processor-generated source files will be placed; files are placed in subdirectories based on package namespace.</dd>
+<dt>-nocompile</dt>
+<dd> Do not compile source files to class files.</dd>
+<dt>-print</dt>
+<dd> Print out textual representation of specified types; perform no annotation processing or compilation.</dd>
+<dt>-A[key[=val]]</dt>
+<dd> Options to pass to annotation processors &#8212; these are not interpreted by <i>apt</i> directly, but are made available for use by individual processors</dd>
+<dt>-factorypath path</dt>
+<dd> Specify where to find annotation processor factories; if this option is used, the classpath is <i>not</i> searched for factories.</dd>
+<dt>-factory classname</dt>
+<dd> Name of annotation processor factory to use; bypasses default discovery process</dd>
+<dt>-version</dt>
+<dd> Print version information.</dd>
+<dt>-X</dt>
+<dd> Display information about non-standard options.</dd></dl>
 </dl>
 <h3>Options shared with javac</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-d dir</p>
-<dd> Specify where to place processor and javac generated class files</p>
-<dt>-cp path or -classpath path</p>
-<dd> Specify where to find user class files and annotation processor factories. If <i>-factorypath</i> is given, the classpath is not searched for factories.</dl>
+<dt>-d dir</dt>
+<dd> Specify where to place processor and javac generated class files</dd>
+<dt>-cp path or -classpath path</dt>
+<dd> Specify where to find user class files and annotation processor factories. If <i>-factorypath</i> is given, the classpath is not searched for factories.</dd></dl>
 </dl>
 <p> Consult the <a href="/docs/linux/man/1-javac/">javac</a>(1) man page for information on <i>javac</i> options. </p>
 <h3>Non-Standard Options</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-XListAnnotationTypes</p>
-<dd> List found annotation types.</p>
-<dt>-XListDeclarations</p>
-<dd> List specified and included declarations.</p>
-<dt>-XPrintAptRounds</p>
-<dd> Print information about initial and recursive <i>apt</i> rounds.</p>
-<dt>-XPrintFactoryInfo</p>
-<dd> Print information about which annotations a factory is asked to process.</p>
-<dt>-XclassesAsDecls</p>
-<dd> Treat both class and source files as declarations to process.</dl>
+<dt>-XListAnnotationTypes</dt>
+<dd> List found annotation types.</dd>
+<dt>-XListDeclarations</dt>
+<dd> List specified and included declarations.</dd>
+<dt>-XPrintAptRounds</dt>
+<dd> Print information about initial and recursive <i>apt</i> rounds.</dd>
+<dt>-XPrintFactoryInfo</dt>
+<dd> Print information about which annotations a factory is asked to process.</dd>
+<dt>-XclassesAsDecls</dt>
+<dd> Treat both class and source files as declarations to process.</dd></dl>
 </dl>
 <p> <code>Note</code>: Because these options are non-standard, they are subject to change without notice. </p>
 <h2>NOTES</h2>
 <p> The <i>apt</i> tool and its associated API contained in the package <i>com.sun.mirror</i> have been deprecated since JDK 7 and are planned to be removed in the next major JDK release. Use the options available in the <i><a href="/docs/linux/man/1-javac/">javac</a>(1)</i> tool and the APIs contained in the packages <i>javax.annotation.processing</i> and <i>javax.lang.model</i> to process annotations. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1)</dl>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1)</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
 <h2>Index</h2>

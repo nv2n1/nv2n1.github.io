@@ -15,11 +15,11 @@ snd_pcm_lib_default_mmap - Default PCM data mmap function
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>area</i>
-<dl><dd>VMA</dl>
+<dl><dd>VMA</dd></dl>
 
 <h2>Description</h2>
 

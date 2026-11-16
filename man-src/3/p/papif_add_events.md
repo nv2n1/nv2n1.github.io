@@ -14,9 +14,9 @@ description: "PAPIF_add_events –"
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
 <dd>#include &#8216;fpapi.h&#8217;<br />
- <code>PAPIF_add_events</code>( C_INT EventSet, C_INT(*) EventCodes, C_INT number, C_INT check )</dl>
+ <code>PAPIF_add_events</code>( C_INT EventSet, C_INT(*) EventCodes, C_INT number, C_INT check )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_add_events</code></dl>
+<dd><code>PAPI_add_events</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

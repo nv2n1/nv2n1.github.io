@@ -28,69 +28,69 @@ int fmtmsg(long classification, const char *label,
 <p> The <i>classification</i> argument is the sum of values describing 4 types of information. </p>
 <p> The first value defines the output channel.</p>
 <dl>
-<dt><code>MM_PRINT</code></p>
-<dd> Output to <i>stderr</i>.</p>
-<dt><code>MM_CONSOLE</code></p>
-<dd> Output to the system console.</p>
-<dt><code>MM_PRINT | MM_CONSOLE</code></p>
-<dd> Output to both.</dl>
+<dt><code>MM_PRINT</code></dt>
+<dd> Output to <i>stderr</i>.</dd>
+<dt><code>MM_CONSOLE</code></dt>
+<dd> Output to the system console.</dd>
+<dt><code>MM_PRINT | MM_CONSOLE</code></dt>
+<dd> Output to both.</dd></dl>
 <p> The second value is the source of the error:</p>
 <dl>
-<dt><code>MM_HARD</code></p>
-<dd> A hardware error occurred.</p>
-<dt><code>MM_FIRM</code></p>
-<dd> A firmware error occurred.</p>
-<dt><code>MM_SOFT</code></p>
-<dd> A software error occurred.</dl>
+<dt><code>MM_HARD</code></dt>
+<dd> A hardware error occurred.</dd>
+<dt><code>MM_FIRM</code></dt>
+<dd> A firmware error occurred.</dd>
+<dt><code>MM_SOFT</code></dt>
+<dd> A software error occurred.</dd></dl>
 <p> The third value encodes the detector of the problem:</p>
 <dl>
-<dt><code>MM_APPL</code></p>
-<dd> It is detected by an application.</p>
-<dt><code>MM_UTIL</code></p>
-<dd> It is detected by a utility.</p>
-<dt><code>MM_OPSYS</code></p>
-<dd> It is detected by the operating system.</dl>
+<dt><code>MM_APPL</code></dt>
+<dd> It is detected by an application.</dd>
+<dt><code>MM_UTIL</code></dt>
+<dd> It is detected by a utility.</dd>
+<dt><code>MM_OPSYS</code></dt>
+<dd> It is detected by the operating system.</dd></dl>
 <p> The fourth value shows the severity of the incident:</p>
 <dl>
-<dt><code>MM_RECOVER</code></p>
-<dd> It is a recoverable error.</p>
-<dt><code>MM_NRECOV</code></p>
-<dd> It is a nonrecoverable error.</dl>
+<dt><code>MM_RECOVER</code></dt>
+<dd> It is a recoverable error.</dd>
+<dt><code>MM_NRECOV</code></dt>
+<dd> It is a nonrecoverable error.</dd></dl>
 <h3>The severity argument</h3>
 <p> The <i>severity</i> argument can take one of the following values:</p>
 <dl>
-<dt><code>MM_NOSEV</code></p>
-<dd> No severity is printed.</p>
-<dt><code>MM_HALT</code></p>
-<dd> This value is printed as HALT.</p>
-<dt><code>MM_ERROR</code></p>
-<dd> This value is printed as ERROR.</p>
-<dt><code>MM_WARNING</code></p>
-<dd> This value is printed as WARNING.</p>
-<dt><code>MM_INFO</code></p>
-<dd> This value is printed as INFO.</dl>
+<dt><code>MM_NOSEV</code></dt>
+<dd> No severity is printed.</dd>
+<dt><code>MM_HALT</code></dt>
+<dd> This value is printed as HALT.</dd>
+<dt><code>MM_ERROR</code></dt>
+<dd> This value is printed as ERROR.</dd>
+<dt><code>MM_WARNING</code></dt>
+<dd> This value is printed as WARNING.</dd>
+<dt><code>MM_INFO</code></dt>
+<dd> This value is printed as INFO.</dd></dl>
 <p> The numeric values are between 0 and 4. Using <code><a href="/docs/linux/man/3-addseverity/">addseverity</a></code>(3) or the environment variable <code>SEV_LEVEL</code> you can add more levels and strings to print.</p>
 <h2>RETURN VALUE</h2>
 <p> The function can return 4 values:</p>
 <dl>
-<dt><code>MM_OK</code></p>
-<dd> Everything went smooth.</p>
-<dt><code>MM_NOTOK</code></p>
-<dd> Complete failure.</p>
-<dt><code>MM_NOMSG</code></p>
-<dd> Error writing to <i>stderr</i>.</p>
-<dt><code>MM_NOCON</code></p>
-<dd> Error writing to the console.</dl>
+<dt><code>MM_OK</code></dt>
+<dd> Everything went smooth.</dd>
+<dt><code>MM_NOTOK</code></dt>
+<dd> Complete failure.</dd>
+<dt><code>MM_NOMSG</code></dt>
+<dd> Error writing to <i>stderr</i>.</dd>
+<dt><code>MM_NOCON</code></dt>
+<dd> Error writing to the console.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable <code>MSGVERB</code> (&quot;message verbosity&quot;) can be used to suppress parts of the output to <i>stderr</i>. (It does not influence output to the console.) When this variable is defined, is non-NULL, and is a colon-separated list of valid keywords, then only the parts of the message corresponding to these keywords is printed. Valid keywords are &quot;label&quot;, &quot;severity&quot;, &quot;text&quot;, &quot;action&quot; and &quot;tag&quot;. </p>
 <p> The environment variable <code>SEV_LEVEL</code> can be used to introduce new severity levels. By default, only the five severity levels described above are available. Any other numeric value would make <code>fmtmsg</code>() print nothing. If the user puts <code>SEV_LEVEL</code> with a format like </p>
 <dl>
 <dt>
-<dd> SEV_LEVEL=[description[:description[:&#8230;]]]</dl>
+</dt><dd> SEV_LEVEL=[description[:description[:&#8230;]]]</dd></dl>
 <p> in the environment of the process before the first call to <code>fmtmsg</code>(), where each description is of the form </p>
 <dl>
 <dt>
-<dd> severity-keyword,level,printstring</dl>
+</dt><dd> severity-keyword,level,printstring</dd></dl>
 <p> then <code>fmtmsg</code>() will also accept the indicated values for the level (in addition to the standard levels 0-4), and use the indicated printstring when such a level occurs. </p>
 <p> The severity-keyword part is not used by <code>fmtmsg</code>() but it has to be present. The level part is a string representation of a number. The numeric value must be a number greater than 4. This value must be used in the severity argument of <code>fmtmsg</code>() to select this class. It is not possible to overwrite any of the predefined classes. The printstring is the string printed when a message of this class is processed by <code>fmtmsg</code>().</p>
 <h2>VERSIONS</h2>

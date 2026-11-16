@@ -61,66 +61,67 @@ description: "readelf – display information about ELF files"
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent. At least one option besides <code>-v</code> or <code>-H</code> must be given.</p>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;all</code></p>
-<dd> Equivalent to specifying <code>&#8211;file-header</code>, <code>&#8211;program-headers</code>, <code>&#8211;sections</code>, <code>&#8211;symbols</code>, <code>&#8211;relocs</code>, <code>&#8211;dynamic</code>, <code>&#8211;notes</code>, <code>&#8211;version-info</code>, <code>&#8211;arch-specific</code>, <code>&#8211;unwind</code>, <code>&#8211;section-groups</code> and <code>&#8211;histogram</code>. </p>
+</dd><dt><code>&#8211;all</code></dt>
+<dd> Equivalent to specifying <code>&#8211;file-header</code>, <code>&#8211;program-headers</code>, <code>&#8211;sections</code>, <code>&#8211;symbols</code>, <code>&#8211;relocs</code>, <code>&#8211;dynamic</code>, <code>&#8211;notes</code>, <code>&#8211;version-info</code>, <code>&#8211;arch-specific</code>, <code>&#8211;unwind</code>, <code>&#8211;section-groups</code> and <code>&#8211;histogram</code>. </dd>
 <p> Note &#8211; this option does not enable <code>&#8211;use-dynamic</code> itself, so if that option is not present on the command line then dynamic symbols and dynamic relocs will not be displayed.</p>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;file-header</code></p>
-<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</p>
-<dt><code>-l</code></p>
+</dd><dt><code>&#8211;file-header</code></dt>
+<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</dd>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;program-headers</code></p>
+</dd><dt><code>&#8211;program-headers</code></dt>
 <dd>
-<dt><code>&#8211;segments</code></p>
-<dd> Displays the information contained in the file&#8217;s segment headers, if it has any.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Suppress &#8220;no symbols&#8221; diagnostic.</p>
-<dt><code>-S</code></p>
+</dd><dt><code>&#8211;segments</code></dt>
+<dd> Displays the information contained in the file&#8217;s segment headers, if it has any.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Suppress &#8220;no symbols&#8221; diagnostic.</dd>
+<dt><code>-S</code></dt>
 <dd>
-<dt><code>&#8211;sections</code></p>
+</dd><dt><code>&#8211;sections</code></dt>
 <dd>
-<dt><code>&#8211;section-headers</code></p>
-<dd> Displays the information contained in the file&#8217;s section headers, if it has any.</p>
-<dt><code>-g</code></p>
+</dd><dt><code>&#8211;section-headers</code></dt>
+<dd> Displays the information contained in the file&#8217;s section headers, if it has any.</dd>
+<dt><code>-g</code></dt>
 <dd>
-<dt><code>&#8211;section-groups</code></p>
-<dd> Displays the information contained in the file&#8217;s section groups, if it has any.</p>
-<dt><code>-t</code></p>
+</dd><dt><code>&#8211;section-groups</code></dt>
+<dd> Displays the information contained in the file&#8217;s section groups, if it has any.</dd>
+<dt><code>-t</code></dt>
 <dd>
-<dt><code>&#8211;section-details</code></p>
-<dd> Displays the detailed section information. Implies <code>-S</code>.</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;section-details</code></dt>
+<dd> Displays the detailed section information. Implies <code>-S</code>.</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;symbols</code></p>
+</dd><dt><code>&#8211;symbols</code></dt>
 <dd>
-<dt><code>&#8211;syms</code></p>
-<dd> Displays the entries in symbol table section of the file, if it has one. If a symbol has version information associated with it then this is displayed as well. The version string is displayed as a suffix to the symbol name, preceded by an @ character. For example <code>foo [at] VER_1</code>. If the version is the default version to be used when resolving unversioned references to the symbol then it is displayed as a suffix preceded by two @ characters. For example <code>foo@@VER_2</code>.</p>
-<dt><code>&#8211;dyn-syms</code></p>
-<dd> Displays the entries in dynamic symbol table section of the file, if it has one. The output format is the same as the format used by the <code>&#8211;syms</code> option.</p>
-<dt><code>&#8211;lto-syms</code></p>
-<dd> Displays the contents of any <font SIZE="-1">LTO</font> symbol tables in the file.</p>
-<dt><code>&#8211;sym-base=[0|8|10|16]</code></p>
-<dd> Forces the size field of the symbol table to use the given base. Any unrecognized options will be treated as <code>0</code>. <code>&#8211;sym-base=0</code> represents the default and legacy behaviour. This will output sizes as decimal for numbers less than 100000. For sizes 100000 and greater hexadecimal notation will be used with a 0x prefix. <code>&#8211;sym-base=8</code> will give the symbol sizes in octal. <code>&#8211;sym-base=10</code> will always give the symbol sizes in decimal. <code>&#8211;sym-base=16</code> will always give the symbol sizes in hexadecimal with a 0x prefix.</p>
-<dt><code>-C</code></p>
+</dd><dt><code>&#8211;syms</code></dt>
+<dd> Displays the entries in symbol table section of the file, if it has one. If a symbol has version information associated with it then this is displayed as well. The version string is displayed as a suffix to the symbol name, preceded by an @ character. For example <code>foo [at] VER_1</code>. If the version is the default version to be used when resolving unversioned references to the symbol then it is displayed as a suffix preceded by two @ characters. For example <code>foo@@VER_2</code>.</dd>
+<dt><code>&#8211;dyn-syms</code></dt>
+<dd> Displays the entries in dynamic symbol table section of the file, if it has one. The output format is the same as the format used by the <code>&#8211;syms</code> option.</dd>
+<dt><code>&#8211;lto-syms</code></dt>
+<dd> Displays the contents of any <font SIZE="-1">LTO</font> symbol tables in the file.</dd>
+<dt><code>&#8211;sym-base=[0|8|10|16]</code></dt>
+<dd> Forces the size field of the symbol table to use the given base. Any unrecognized options will be treated as <code>0</code>. <code>&#8211;sym-base=0</code> represents the default and legacy behaviour. This will output sizes as decimal for numbers less than 100000. For sizes 100000 and greater hexadecimal notation will be used with a 0x prefix. <code>&#8211;sym-base=8</code> will give the symbol sizes in octal. <code>&#8211;sym-base=10</code> will always give the symbol sizes in decimal. <code>&#8211;sym-base=16</code> will always give the symbol sizes in hexadecimal with a 0x prefix.</dd>
+<dt><code>-C</code></dt>
 <dd>
-<dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></p>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. This makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</p>
-<dt><code>&#8211;no-demangle</code></p>
-<dd> Do not demangle low-level symbol names. This is the default.</p>
-<dt><code>&#8211;recurse-limit</code></p>
+</dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. This makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dt><code>&#8211;no-demangle</code></dt>
+<dd> Do not demangle low-level symbol names. This is the default.</dd>
+<dt><code>&#8211;recurse-limit</code></dt>
 <dd>
-<dt><code>&#8211;no-recurse-limit</code></p>
+</dd><dt><code>&#8211;no-recurse-limit</code></dt>
 <dd>
-<dt><code>&#8211;recursion-limit</code></p>
+</dd><dt><code>&#8211;recursion-limit</code></dt>
 <dd>
-<dt><code>&#8211;no-recursion-limit</code></p>
-<dd> Enables or disables a limit on the amount of recursion performed whilst demangling strings. Since the name mangling formats allow for an infinite level of recursion it is possible to create strings whose decoding will exhaust the amount of stack space available on the host machine, triggering a memory fault. The limit tries to prevent this from happening by restricting recursion to 2048 levels of nesting. </p>
+</dd><dt><code>&#8211;no-recursion-limit</code></dt>
+<dd> Enables or disables a limit on the amount of recursion performed whilst demangling strings. Since the name mangling formats allow for an infinite level of recursion it is possible to create strings whose decoding will exhaust the amount of stack space available on the host machine, triggering a memory fault. The limit tries to prevent this from happening by restricting recursion to 2048 levels of nesting. </dd>
 <p> The default is for this limit to be enabled, but disabling it may be necessary in order to demangle truly complicated names. Note however that if the recursion limit is disabled then stack exhaustion is possible and any bug reports about such an event will be rejected.</p>
-<dt><code>-U</code> <i>[d|i|l|e|x|h]</i></p>
+<dt><code>-U</code> <i>[d|i|l|e|x|h]</i></dt>
 <dd>
-<dt><code>&#8211;unicode=[default|invalid|locale|escape|hex|highlight]</code></p>
-<dd> Controls the display of non-ASCII characters in identifier names. The default (<code>&#8211;unicode=locale</code> or <code>&#8211;unicode=default</code>) is to treat them as multibyte characters and display them in the current locale. All other versions of this option treat the bytes as <font SIZE="-1">UTF-8</font> encoded values and attempt to interpret them. If they cannot be interpreted or if the <code>&#8211;unicode=invalid</code> option is used then they are displayed as a sequence of hex bytes, encloses in curly parethesis characters. </p>
+</dd><dt><code>&#8211;unicode=[default|invalid|locale|escape|hex|highlight]</code></dt>
+<dd> Controls the display of non-ASCII characters in identifier names. The default (<code>&#8211;unicode=locale</code> or <code>&#8211;unicode=default</code>) is to treat them as multibyte characters and display them in the current locale. All other versions of this option treat the bytes as <font SIZE="-1">UTF-8</font> encoded values and attempt to interpret them. If they cannot be interpreted or if the <code>&#8211;unicode=invalid</code> option is used then they are displayed as a sequence of hex bytes, encloses in curly parethesis characters. </dd>
 <p> Using the <code>&#8211;unicode=escape</code> option will display the characters as as unicode escape sequences (<i>
+</p></dl>

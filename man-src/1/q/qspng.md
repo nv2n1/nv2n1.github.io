@@ -25,11 +25,11 @@ url: "/docs/linux/man/1-qspng/"
 
 <dl>
 <dt>-i &lt;stats_log_file&gt;
-<dd> Input file to read data from.
-<dt>-p &lt;parameter&gt;
-<dd> Parameter name, e.g. r/s or usr.
-<dt>-o &lt;out_file&gt;
-<dd> Output file name, e.g. stat.png.</dl>
+</dt><dd> Input file to read data from.
+</dd><dt>-p &lt;parameter&gt;
+</dt><dd> Parameter name, e.g. r/s or usr.
+</dd><dt>-o &lt;out_file&gt;
+</dt><dd> Output file name, e.g. stat.png.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

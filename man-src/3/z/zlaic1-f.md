@@ -38,10 +38,10 @@ description: "zlaic1.f –"
  diag(sest*sest, 0) + [alpha gamma] * [ conjg(alpha) ]
  [ conjg(gamma) ]
  where alpha = x**H * w.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is INTEGER
  = 1: an estimate for the largest singular value is computed.
  = 2: an estimate for the smallest singular value is computed.</pre>
@@ -72,13 +72,13 @@ description: "zlaic1.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 136 of file zlaic1.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

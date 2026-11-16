@@ -21,8 +21,8 @@ description: "acl_set_permset – set the permission set in an ACL entry"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_set_permset function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry. </dd>
 <p> The argument <i>permset_d</i> is not a valid descriptor for a permission set within an ACL entry. </p>
 <p> The argument <i>permset_d</i> contains values which are not valid <i>acl_permset_t</i> values.</dl>
 <h2>STANDARDS</h2>
@@ -32,3 +32,4 @@ description: "acl_set_permset – set the permission set in an ACL entry"
 <h2>AUTHOR</h2>
 <p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
 <h2>Index</h2>
+</p>

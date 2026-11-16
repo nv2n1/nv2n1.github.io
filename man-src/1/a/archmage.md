@@ -32,8 +32,8 @@ description: "archmage – CHM(Compiled HTML) Decompressor."
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://yourserver/sample.chm/">http://yourserver/sample.chm/</a> (note trailing slash)</p>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/archmage/arch.conf</p>
-<dd> System-wide configuration file.</dl>
+<dt>/etc/archmage/arch.conf</dt>
+<dd> System-wide configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> arCHMage Home Page: <a rel="nofollow" href="http://archmage.sf.net">http://archmage.sf.net</a></p>
 <h2>AUTHOR</h2>

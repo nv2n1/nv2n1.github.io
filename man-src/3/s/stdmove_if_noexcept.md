@@ -11,31 +11,19 @@ std::move_if_noexcept - std::move_if_noexcept
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;utility&gt;
-
     template &lt;class T&gt;
-
     typename std::conditional&lt;
-
         !std::is_nothrow_move_constructible&lt;T&gt;::value &amp;&amp; std::is_copy_constructible&lt;T&gt;::value, (since C++ 11)
-
                                                                                                    const T &amp;,
         (until C++ 14)
-
             T &amp;&amp;
-
         &gt;::type
     move_if_noexcept(T &amp;x) noexcept;
-
 template &lt;class T&gt;
-
 constexpr typename std::conditional&lt;
-
     !std::is_nothrow_move_constructible&lt;T&gt;::value &amp;&amp; std::is_copy_constructible&lt;T&gt;::value, (since C++ 14)
-
                                                                                                const T &amp;,
-
     T &amp;&amp;
-
     &gt;::type
 move_if_noexcept(T &amp;x) noexcept;</code></pre> 
 move_if_noexcept obtains an rvalue reference to its argument if its move constructor does not throw exceptions or if there is no copy constructor (move-only type), otherwise obtains an lvalue reference to its argument. It is typically used to combine move semantics with strong exception guarantee. 
@@ -55,10 +43,8 @@ This is used, for example, by std::vector::resize, which may have to allocate ne
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
 struct Bad
-
 {
     Bad()
     {
@@ -73,7 +59,6 @@ struct Bad
     }
 };
 struct Good
-
 {
     Good()
     {
@@ -88,7 +73,6 @@ struct Good
     }
 };
 int main()
-
 {
     Good g;
     Bad b;

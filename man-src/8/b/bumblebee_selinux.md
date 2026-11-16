@@ -98,8 +98,8 @@ description: "bumblebee_selinux – Security Enhanced Linux Policy for the bumbl
 <p> <code>bumblebee_unit_file_t</code> </p>
 <p> &#8211; Set files with the bumblebee_unit_file_t type, if you want to treat the files as bumblebee unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/systemd/system/bumblebeed.*, /usr/lib/systemd/system/bumblebeed.* </p>
+<dt>Paths:</dt>
+<dd>/etc/systemd/system/bumblebeed.*, /usr/lib/systemd/system/bumblebeed.* </dd>
 </dl>
 <p> <code>bumblebee_var_run_t</code> </p>
 <p> &#8211; Set files with the bumblebee_var_run_t type, if you want to store the bumblebee files under the /run or /var/run directory. </p>

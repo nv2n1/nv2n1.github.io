@@ -16,16 +16,16 @@ pct2rgb.py[-of format][-b band][-rgba] source_file dest_file
 <h2>DESCRIPTION</h2>
 <p> This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format. </p>
 <dl>
-<dt><code>-of</code> <i>format</i>:</p>
-<dd> Format to generated (defaults to GeoTIFF).</p>
-<dt><code>-b</code> <i>band</i>:</p>
-<dd> Band to convert to RGB, defaults to 1.</p>
-<dt><code>-rgba:</code></p>
-<dd> Generate a RGBA file (instead of a RGB file by default).</p>
-<dt><i>source_file</i>:</p>
-<dd> The input file.</p>
-<dt><i>dest_file</i>:</p>
-<dd> The output RGB file that will be created.</dl>
+<dt><code>-of</code> <i>format</i>:</dt>
+<dd> Format to generated (defaults to GeoTIFF).</dd>
+<dt><code>-b</code> <i>band</i>:</dt>
+<dd> Band to convert to RGB, defaults to 1.</dd>
+<dt><code>-rgba:</code></dt>
+<dd> Generate a RGBA file (instead of a RGB file by default).</dd>
+<dt><i>source_file</i>:</dt>
+<dd> The input file.</dd>
+<dt><i>dest_file</i>:</dt>
+<dd> The output RGB file that will be created.</dd></dl>
 <p> NOTE: pct2rgb.py is a Python script, and will only work if GDAL was built with Python support. </p>
 <p> The new &#8216;-expand rgb|rgba&#8217; option of gdal_translate obsoletes that utility.</p>
 <h2>AUTHORS</h2>

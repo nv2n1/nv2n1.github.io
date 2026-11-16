@@ -17,16 +17,16 @@ description: "Muscand – File scanner daemon for Museek"
 <h2>OPTIONS</h2>
 <p> Muscand accepts the following options:</p>
 <dl>
-<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</p>
-<dd> Use a different config file.</p>
-<dt><code>-b, &#8211;buddy</code></p>
-<dd> Select Buddy-Only Shares.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help, version and exit.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Be verbose while scanning shares.</p>
-<dt><code>&#8211;no-reload</code></p>
-<dd> Don&#8217;t ask museekd to reload the database</dl>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-b, &#8211;buddy</code></dt>
+<dd> Select Buddy-Only Shares.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help, version and exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be verbose while scanning shares.</dd>
+<dt><code>&#8211;no-reload</code></dt>
+<dd> Don&#8217;t ask museekd to reload the database</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
 <p> muscand </p>
@@ -37,20 +37,20 @@ description: "Muscand – File scanner daemon for Museek"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.xml</i></p>
-<dd> The default location for the <code>museekd</code> config file.</p>
+&nbsp;<wbr><i>~/.museekd/config.xml</i></dt>
+<dd> The default location for the <code>museekd</code> config file.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.shares</i></p>
-<dd> The default location for the Normal shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.shares</i></dt>
+<dd> The default location for the Normal shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.shares.state</i></p>
-<dd> The default location for the active Normal shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.shares.state</i></dt>
+<dd> The default location for the active Normal shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.buddyshares</i></p>
-<dd> The default location for the Buddy shares database.</p>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares</i></dt>
+<dd> The default location for the Buddy shares database.</dd>
 <dt>
-&nbsp;<wbr><i>~/.museekd/config.buddyshares.state</i></p>
-<dd> The default location for the active Buddy shares database&#8217;s.</dl>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares.state</i></dt>
+<dd> The default location for the active Buddy shares database&#8217;s.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>

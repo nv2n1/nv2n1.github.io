@@ -17,40 +17,40 @@ description: "d.zoom – Allows the user to change the current geographic region
  <code>d.zoom</code> [-<code>fphjr</code>] <code>rast</code>=<i>string</i>[,<i>string</i>,&#8230;] [<code>vector</code>=<i>string</i>[,<i>string</i>,&#8230;]] [<code>zoom</code>=<i>float</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
-<dt><code>-f</code></p>
+<dt><code>-f</code></dt>
 <dd>
- Full menu (zoom + pan) &amp; Quit menu</p>
-<dt><code>-p</code></p>
+ Full menu (zoom + pan) &amp; Quit menu</dd>
+<dt><code>-p</code></dt>
 <dd>
- Pan mode</p>
-<dt><code>-h</code></p>
+ Pan mode</dd>
+<dt><code>-h</code></dt>
 <dd>
- Handheld mode</p>
-<dt><code>-j</code></p>
+ Handheld mode</dd>
+<dt><code>-j</code></dt>
 <dd>
- Just redraw given maps using default colors</p>
-<dt><code>-r</code></p>
+ Just redraw given maps using default colors</dd>
+<dt><code>-r</code></dt>
 <dd>
- Return to previous zoom</p>
-<dt><code>&#8211;verbose</code></p>
+ Return to previous zoom</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd>
- Verbose module output</p>
-<dt><code>&#8211;quiet</code></p>
+ Verbose module output</dd>
+<dt><code>&#8211;quiet</code></dt>
 <dd>
- Quiet module output</dl>
+ Quiet module output</dd></dl>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>rast</code>=<i>string[,string</i>,&#8230;]</p>
+<dt><code>rast</code>=<i>string[,string</i>,&#8230;]</dt>
 <dd>
- Name of raster map</p>
-<dt><code>vector</code>=<i>string[,string</i>,&#8230;]</p>
+ Name of raster map</dd>
+<dt><code>vector</code>=<i>string[,string</i>,&#8230;]</dt>
 <dd>
- Name of vector map</p>
-<dt><code>zoom</code>=<i>float</i></p>
+ Name of vector map</dd>
+<dt><code>zoom</code>=<i>float</i></dt>
 <dd>
  Magnification: &gt;1.0 zooms in, &lt;1.0 zooms out<br />
  Options: <i>0.001-1000.0</i><br />
- Default: <i>0.75</i></dl>
+ Default: <i>0.75</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>d.zoom</i> allows the user to interactively adjust the settings of the current geographic region using a pointing device such as a mouse. Like <i>g.region</i>, <i>d.zoom</i> re-defines the settings of the geographic region. However, <i>d.zoom</i> allows the user to change the current region settings interactively, by either outlining the new region perimeter with a mouse, unzoom or pan the region. The graphics display is updated by the module. </p>
 <p> After the user types the command <code>d.zoom</code> a mouse-button menu will appear directing the user. </p>

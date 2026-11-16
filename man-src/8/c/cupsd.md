@@ -14,20 +14,20 @@ description: "cupsd – cups scheduler"
 <p><code>cupsd</code> is the scheduler for CUPS. It implements a printing system based upon the Internet Printing Protocol, version 2.1, and supports most of the requirements for IPP Everywhere. If no options are specified on the command-line then the default configuration file <i>/etc/cups/cupsd.conf</i> will be used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i>&nbsp;cupsd.conf</i></p>
-<dd>Uses the named cupsd.conf configuration file.</p>
-<dt><code>-f</code></p>
-<dd>Run <code>cupsd</code> in the foreground; the default is to run in the background as a &quot;daemon&quot;.</p>
-<dt><code>-F</code></p>
-<dd>Run <code>cupsd</code> in the foreground but detach the process from the controlling terminal and current directory. This is useful for running <code>cupsd</code> from <code><a href="/docs/linux/man/8-init/">init</a></code>(8).</p>
-<dt><code>-h</code></p>
-<dd>Shows the program usage.</p>
-<dt><code>-l</code></p>
-<dd>This option is passed to <code>cupsd</code> when it is run from <code>launchd</code>(8) or <code>systemd</code>(8).</p>
-<dt><code>-s</code><i>&nbsp;cups-files.conf</i></p>
-<dd>Uses the named cups-files.conf configuration file.</p>
-<dt><code>-t</code></p>
-<dd>Test the configuration file for syntax errors.</dl>
+<dt><code>-c</code><i>&nbsp;cupsd.conf</i></dt>
+<dd>Uses the named cupsd.conf configuration file.</dd>
+<dt><code>-f</code></dt>
+<dd>Run <code>cupsd</code> in the foreground; the default is to run in the background as a &quot;daemon&quot;.</dd>
+<dt><code>-F</code></dt>
+<dd>Run <code>cupsd</code> in the foreground but detach the process from the controlling terminal and current directory. This is useful for running <code>cupsd</code> from <code><a href="/docs/linux/man/8-init/">init</a></code>(8).</dd>
+<dt><code>-h</code></dt>
+<dd>Shows the program usage.</dd>
+<dt><code>-l</code></dt>
+<dd>This option is passed to <code>cupsd</code> when it is run from <code>launchd</code>(8) or <code>systemd</code>(8).</dd>
+<dt><code>-s</code><i>&nbsp;cups-files.conf</i></dt>
+<dd>Uses the named cups-files.conf configuration file.</dd>
+<dt><code>-t</code></dt>
+<dd>Test the configuration file for syntax errors.</dd></dl>
 <h2>Files</h2>
 <pre><i>/etc/cups/classes.conf</i>
 <i>/etc/cups/cups-files.conf</i>

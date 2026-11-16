@@ -11,33 +11,33 @@ description: "sss_ssh_knownhostsproxy – get OpenSSH host keys"
 <p> sss_ssh_knownhostsproxy &#8211; get OpenSSH host keys </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>sss_ssh_knownhostsproxy</code> [<i>options</i>] <i>HOST</i> [<i>PROXY_COMMAND</i>]</dl>
+<dt> <code>sss_ssh_knownhostsproxy</code> [<i>options</i>] <i>HOST</i> [<i>PROXY_COMMAND</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>sss_ssh_knownhostsproxy</code></p>
-<dd>acquires SSH host public keys for host <i>HOST</i>, stores them in a custom OpenSSH known_hosts file (see the &#8220;SSH_KNOWN_HOSTS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information) /var/lib/sss/pubconf/known_hosts and establishes the connection to the host. </p>
+<dd>acquires SSH host public keys for host <i>HOST</i>, stores them in a custom OpenSSH known_hosts file (see the &#8220;SSH_KNOWN_HOSTS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information) /var/lib/sss/pubconf/known_hosts and establishes the connection to the host. </dd>
 <p> If <i>PROXY_COMMAND</i> is specified, it is used to create the connection to the host instead of opening a socket. </p>
 <p> <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) can be configured to use <code>sss_ssh_knownhostsproxy</code> for host key authentication by using the following directives for <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) configuration: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ProxyCommand /usr/bin/sss_ssh_knownhostsproxy -p %p %h
 GlobalKnownHostsFile /var/lib/sss/pubconf/known_hosts
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-p</code>,<code>&#8211;port</code> <i>PORT</i></p>
 <dl>
 <dt>
-<dd> Use port <i>PORT</i> to connect to the host. By default, port 22 is used.</dl>
+</dt><dd> Use port <i>PORT</i> to connect to the host. By default, port 22 is used.</dd></dl>
 <p> <code>-d</code>,<code>&#8211;domain</code> <i>DOMAIN</i></p>
 <dl>
 <dt>
-<dd> Search for host public keys in SSSD domain <i>DOMAIN</i>.</dl>
+</dt><dd> Search for host public keys in SSSD domain <i>DOMAIN</i>.</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help message and exit.</dl>
+</dt><dd> Display help message and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> In case of success, an exit value of 0 is returned. Otherwise, 1 is returned.</p>
 <h2>SEE ALSO</h2>

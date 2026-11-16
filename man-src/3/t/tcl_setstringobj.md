@@ -60,24 +60,24 @@ Tcl_Obj *
 <code>Tcl_ConcatObj</code>(<i>objc, objv</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>const char <i>*bytes</i> (in) Points to the first byte of an array of UTF-8-encoded bytes used to set or append to a string object. This byte array may contain embedded null characters unless <i>numChars</i> is negative. (Applications needing null bytes should represent them as the two-byte sequence <i>\700\600</i>, use <code>Tcl_ExternalToUtf</code> to convert, or <code>Tcl_NewByteArrayObj</code> if the string is a collection of uninterpreted bytes.)</p>
-<dd>int <i>length</i> (in) The number of bytes to copy from <i>bytes</i> when initializing, setting, or appending to a string object. If negative, all bytes up to the first null are used.</p>
-<dd>const Tcl_UniChar <i>*unicode</i> (in) Points to the first byte of an array of Unicode characters used to set or append to a string object. This byte array may contain embedded null characters unless <i>numChars</i> is negative.</p>
-<dd>int <i>numChars</i> (in) The number of Unicode characters to copy from <i>unicode</i> when initializing, setting, or appending to a string object. If negative, all characters up to the first null character are used.</p>
-<dd>int <i>index</i> (in) The index of the Unicode character to return.</p>
-<dd>int <i>first</i> (in) The index of the first Unicode character in the Unicode range to be returned as a new object.</p>
-<dd>int <i>last</i> (in) The index of the last Unicode character in the Unicode range to be returned as a new object.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) Points to an object to manipulate.</p>
-<dd>Tcl_Obj <i>*appendObjPtr</i> (in) The object to append to <i>objPtr</i> in <code>Tcl_AppendObjToObj</code>.</p>
-<dd>int <i>*lengthPtr</i> (out) If non-NULL, the location where <code>Tcl_GetStringFromObj</code> will store the length of an object&#8217;s string representation.</p>
-<dd>const char <i>*string</i> (in) Null-terminated string value to append to <i>objPtr</i>.</p>
-<dd>va_list <i>argList</i> (in) An argument list which must have been initialised using <code>va_start</code>, and cleared using <code>va_end</code>.</p>
-<dd>int <i>limit</i> (in) Maximum number of bytes to be appended.</p>
-<dd>const char <i>*ellipsis</i> (in) Suffix to append when the limit leads to string truncation. If NULL is passed then the suffix &quot;&#8230;&quot; is used.</p>
-<dd>const char <i>*format</i> (in) Format control string including % conversion specifiers.</p>
-<dd>int <i>objc</i> (in) The number of elements to format or concatenate.</p>
-<dd>Tcl_Obj <i>*objv[]</i> (in) The array of objects to format or concatenate.</p>
-<dd>int <i>newLength</i> (in) New length for the string value of <i>objPtr</i>, not including the final null character. </p>
+<dd>const char <i>*bytes</i> (in) Points to the first byte of an array of UTF-8-encoded bytes used to set or append to a string object. This byte array may contain embedded null characters unless <i>numChars</i> is negative. (Applications needing null bytes should represent them as the two-byte sequence <i>\700\600</i>, use <code>Tcl_ExternalToUtf</code> to convert, or <code>Tcl_NewByteArrayObj</code> if the string is a collection of uninterpreted bytes.)</dd>
+<dd>int <i>length</i> (in) The number of bytes to copy from <i>bytes</i> when initializing, setting, or appending to a string object. If negative, all bytes up to the first null are used.</dd>
+<dd>const Tcl_UniChar <i>*unicode</i> (in) Points to the first byte of an array of Unicode characters used to set or append to a string object. This byte array may contain embedded null characters unless <i>numChars</i> is negative.</dd>
+<dd>int <i>numChars</i> (in) The number of Unicode characters to copy from <i>unicode</i> when initializing, setting, or appending to a string object. If negative, all characters up to the first null character are used.</dd>
+<dd>int <i>index</i> (in) The index of the Unicode character to return.</dd>
+<dd>int <i>first</i> (in) The index of the first Unicode character in the Unicode range to be returned as a new object.</dd>
+<dd>int <i>last</i> (in) The index of the last Unicode character in the Unicode range to be returned as a new object.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) Points to an object to manipulate.</dd>
+<dd>Tcl_Obj <i>*appendObjPtr</i> (in) The object to append to <i>objPtr</i> in <code>Tcl_AppendObjToObj</code>.</dd>
+<dd>int <i>*lengthPtr</i> (out) If non-NULL, the location where <code>Tcl_GetStringFromObj</code> will store the length of an object&#8217;s string representation.</dd>
+<dd>const char <i>*string</i> (in) Null-terminated string value to append to <i>objPtr</i>.</dd>
+<dd>va_list <i>argList</i> (in) An argument list which must have been initialised using <code>va_start</code>, and cleared using <code>va_end</code>.</dd>
+<dd>int <i>limit</i> (in) Maximum number of bytes to be appended.</dd>
+<dd>const char <i>*ellipsis</i> (in) Suffix to append when the limit leads to string truncation. If NULL is passed then the suffix &quot;&#8230;&quot; is used.</dd>
+<dd>const char <i>*format</i> (in) Format control string including % conversion specifiers.</dd>
+<dd>int <i>objc</i> (in) The number of elements to format or concatenate.</dd>
+<dd>Tcl_Obj <i>*objv[]</i> (in) The array of objects to format or concatenate.</dd>
+<dd>int <i>newLength</i> (in) New length for the string value of <i>objPtr</i>, not including the final null character. </dd>
 </dl>
 <h2>Description</h2>
 <p>The procedures described in this manual entry allow Tcl objects to be manipulated as string values. They use the internal representation of the object to store additional information to make the string manipulations more efficient. In particular, they make a series of append operations efficient by allocating extra storage space for the string so that it does not have to be copied for each append. Also, indexing and length computations are optimized because the Unicode string representation is calculated and cached as needed. When using the <code>Tcl_Append*</code> family of functions where the interpreter&#8217;s result is the object being appended to, it is important to call Tcl_ResetResult first to ensure you are not unintentionally appending to existing data in the result object. </p>
@@ -97,7 +97,7 @@ Tcl_Obj *
 <dl COMPACT>
 <dd>
 <pre>Tcl_Format(interp, Tcl_GetString(objv[1]), objc-2, objv+2);</pre>
-</dl>
+</dd></dl>
 <p> The <i>objc</i> Tcl_Obj values in <i>objv</i> are formatted into a string according to the conversion specification in <i>format</i> argument, following the documentation for the <code>format</code> command. The resulting formatted string is converted to a new Tcl_Obj with refcount of zero and returned. If some error happens during production of the formatted string, NULL is returned, and an error message is recorded in <i>interp</i>, if <i>interp</i> is non-NULL. </p>
 <p> <code>Tcl_AppendFormatToObj</code> is an appending alternative form of <code>Tcl_Format</code> with functionality equivalent to</p>
 <dl COMPACT>
@@ -106,7 +106,7 @@ Tcl_Obj *
 if (newPtr == NULL) return TCL_ERROR;
 Tcl_AppendObjToObj(objPtr, newPtr);
 return TCL_OK;</pre>
-</dl>
+</dd></dl>
 <p> but with greater convenience and efficiency when the appending functionality is needed. </p>
 <p> <code>Tcl_ObjPrintf</code> serves as a replacement for the common sequence</p>
 <dl COMPACT>
@@ -114,19 +114,19 @@ return TCL_OK;</pre>
 <pre>char buf[SOME_SUITABLE_LENGTH];
 sprintf(buf, format, ...);
 Tcl_NewStringObj(buf, -1);</pre>
-</dl>
+</dd></dl>
 <p> but with greater convenience and no need to determine <code>SOME_SUITABLE_LENGTH</code>. The formatting is done with the same core formatting engine used by <code>Tcl_Format</code>. This means the set of supported conversion specifiers is that of the <code>format</code> command and not that of the <code>sprintf</code> routine where the two sets differ. When a conversion specifier passed to <code>Tcl_ObjPrintf</code> includes a precision, the value is taken as a number of bytes, as <code>sprintf</code> does, and not as a number of characters, as <code>format</code> does. This is done on the assumption that C code is more likely to know how many bytes it is passing around than the number of encoded characters those bytes happen to represent. The variable number of arguments passed in should be of the types that would be suitable for passing to <code>sprintf</code>. Note in this example usage, <i>x</i> is of type <code>long</code>.</p>
 <dl COMPACT>
 <dd>
 <pre>long x = 5;
 Tcl_Obj *objPtr = Tcl_ObjPrintf(&quot;Value is %d&quot;, x);</pre>
-</dl>
+</dd></dl>
 <p> If the value of <i>format</i> contains internal inconsistencies or invalid specifier formats, the formatted string result produced by <code>Tcl_ObjPrintf</code> will be an error message describing the error. </p>
 <p> <code>Tcl_AppendPrintfToObj</code> is an appending alternative form of <code>Tcl_ObjPrintf</code> with functionality equivalent to</p>
 <dl COMPACT>
 <dd>
 <pre>Tcl_AppendObjToObj(objPtr, Tcl_ObjPrintf(format, ...));</pre>
-</dl>
+</dd></dl>
 <p> but with greater convenience and efficiency when the appending functionality is needed. </p>
 <p> The <code>Tcl_SetObjLength</code> procedure changes the length of the string value of its <i>objPtr</i> argument. If the <i>newLength</i> argument is greater than the space allocated for the object&#8217;s string, then the string space is reallocated and the old value is copied to the new space; the bytes between the old length of the string and the new length may have arbitrary values. If the <i>newLength</i> argument is less than the current length of the object&#8217;s string, with <i>objPtr-&gt;length</i> is reduced without reallocating the string space; the original allocated size for the string is recorded in the object, so that the string length can be enlarged in a subsequent call to <code>Tcl_SetObjLength</code> without reallocating storage. In all cases <code>Tcl_SetObjLength</code> leaves a null character at <i>objPtr-&gt;bytes[newLength]</i>. </p>
 <p> <code>Tcl_AttemptSetObjLength</code> is identical in function to <code>Tcl_SetObjLength</code> except that if sufficient memory to satisfy the request cannot be allocated, it does not cause the Tcl interpreter to <code>panic</code>. Thus, if <i>newLength</i> is greater than the space allocated for the object&#8217;s string, and there is not enough memory available to satisfy the request, <code>Tcl_AttemptSetObjLength</code> will take no action and return 0 to indicate failure. If there is enough memory to satisfy the request, <code>Tcl_AttemptSetObjLength</code> behaves just like <code>Tcl_SetObjLength</code> and returns 1 to indicate success. </p>

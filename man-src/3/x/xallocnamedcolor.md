@@ -10,51 +10,51 @@ description: "XAllocColor, XAllocNamedColor, XAllocColorCells, XAllocColorPlanes
 <p>XAllocColor, XAllocNamedColor, XAllocColorCells, XAllocColorPlanes, XFreeColors &#8211; allocate and free colors </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XAllocColor(Display *<i>display</i>, Colormap <i>colormap</i>, XColor *<i>screen_in_out</i>);</p>
-<dd>Status XAllocNamedColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>color_name</i>, XColor *<i>screen_def_return</i>, XColor *<i>exact_def_return</i>);</p>
-<dd>Status XAllocColorCells(Display *<i>display</i>, Colormap <i>colormap</i>, Bool <i>contig</i>, unsigned long <i>plane_masks_return</i>[], unsigned int <i>nplanes</i>, unsigned long <i>pixels_return</i>[], unsigned int <i>npixels</i>);</p>
-<dd>Status XAllocColorPlanes(Display *<i>display</i>, Colormap <i>colormap</i>, Bool <i>contig</i>, unsigned long <i>pixels_return</i>[], int <i>ncolors</i>, int <i>nreds</i>, int <i>ngreens</i>, int <i>nblues</i>, unsigned long *<i>rmask_return</i>, unsigned long *<i>gmask_return</i>, unsigned long *<i>bmask_return</i>);</p>
-<dd>int XFreeColors(Display *<i>display</i>, Colormap <i>colormap</i>, unsigned long <i>pixels</i>[], int <i>npixels</i>, unsigned long <i>planes</i>);</p>
-<dt><i>color_name</i></p>
-<dd>Specifies the color name string (for example, red) whose color definition structure you want returned.</p>
-<dt><i>colormap</i></p>
-<dd>Specifies the colormap.</p>
-<dt><i>contig</i></p>
-<dd>Specifies a Boolean value that indicates whether the planes must be contiguous.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>exact_def_return</i></p>
-<dd>Returns the exact RGB values.</p>
-<dt><i>ncolors</i></p>
-<dd>Specifies the number of pixel values that are to be returned in the pixels_return array.</p>
-<dt><i>npixels</i></p>
-<dd>Specifies the number of pixels.</p>
-<dt><i>nplanes</i></p>
-<dd>Specifies the number of plane masks that are to be returned in the plane masks array.</p>
-<dt><i>nreds</i></p>
+<dd>Status XAllocColor(Display *<i>display</i>, Colormap <i>colormap</i>, XColor *<i>screen_in_out</i>);</dd>
+<dd>Status XAllocNamedColor(Display *<i>display</i>, Colormap <i>colormap</i>, char *<i>color_name</i>, XColor *<i>screen_def_return</i>, XColor *<i>exact_def_return</i>);</dd>
+<dd>Status XAllocColorCells(Display *<i>display</i>, Colormap <i>colormap</i>, Bool <i>contig</i>, unsigned long <i>plane_masks_return</i>[], unsigned int <i>nplanes</i>, unsigned long <i>pixels_return</i>[], unsigned int <i>npixels</i>);</dd>
+<dd>Status XAllocColorPlanes(Display *<i>display</i>, Colormap <i>colormap</i>, Bool <i>contig</i>, unsigned long <i>pixels_return</i>[], int <i>ncolors</i>, int <i>nreds</i>, int <i>ngreens</i>, int <i>nblues</i>, unsigned long *<i>rmask_return</i>, unsigned long *<i>gmask_return</i>, unsigned long *<i>bmask_return</i>);</dd>
+<dd>int XFreeColors(Display *<i>display</i>, Colormap <i>colormap</i>, unsigned long <i>pixels</i>[], int <i>npixels</i>, unsigned long <i>planes</i>);</dd>
+<dt><i>color_name</i></dt>
+<dd>Specifies the color name string (for example, red) whose color definition structure you want returned.</dd>
+<dt><i>colormap</i></dt>
+<dd>Specifies the colormap.</dd>
+<dt><i>contig</i></dt>
+<dd>Specifies a Boolean value that indicates whether the planes must be contiguous.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>exact_def_return</i></dt>
+<dd>Returns the exact RGB values.</dd>
+<dt><i>ncolors</i></dt>
+<dd>Specifies the number of pixel values that are to be returned in the pixels_return array.</dd>
+<dt><i>npixels</i></dt>
+<dd>Specifies the number of pixels.</dd>
+<dt><i>nplanes</i></dt>
+<dd>Specifies the number of plane masks that are to be returned in the plane masks array.</dd>
+<dt><i>nreds</i></dt>
 <dd>
-<dt><i>ngreens</i></p>
+</dd><dt><i>ngreens</i></dt>
 <dd>
-<dt><i>nblues</i></p>
-<dd>Specify the number of red, green, and blue planes. The value you pass must be nonnegative.</p>
-<dt><i>pixels</i></p>
-<dd>Specifies an array of pixel values.</p>
-<dt><i>pixels_return</i></p>
-<dd>Returns an array of pixel values.</p>
-<dt><i>plane_mask_return</i></p>
-<dd>Returns an array of plane masks.</p>
-<dt><i>planes</i></p>
-<dd>Specifies the planes you want to free.</p>
-<dt><i>rmask_return</i></p>
+</dd><dt><i>nblues</i></dt>
+<dd>Specify the number of red, green, and blue planes. The value you pass must be nonnegative.</dd>
+<dt><i>pixels</i></dt>
+<dd>Specifies an array of pixel values.</dd>
+<dt><i>pixels_return</i></dt>
+<dd>Returns an array of pixel values.</dd>
+<dt><i>plane_mask_return</i></dt>
+<dd>Returns an array of plane masks.</dd>
+<dt><i>planes</i></dt>
+<dd>Specifies the planes you want to free.</dd>
+<dt><i>rmask_return</i></dt>
 <dd>
-<dt><i>gmask_return</i></p>
+</dd><dt><i>gmask_return</i></dt>
 <dd>
-<dt><i>bmask_return</i></p>
-<dd>Return bit masks for the red, green, and blue planes.</p>
-<dt><i>screen_def_return</i></p>
-<dd>Returns the closest RGB values provided by the hardware.</p>
-<dt><i>screen_in_out</i></p>
-<dd>Specifies and returns the values actually used in the colormap.</dl>
+</dd><dt><i>bmask_return</i></dt>
+<dd>Return bit masks for the red, green, and blue planes.</dd>
+<dt><i>screen_def_return</i></dt>
+<dd>Returns the closest RGB values provided by the hardware.</dd>
+<dt><i>screen_in_out</i></dt>
+<dd>Specifies and returns the values actually used in the colormap.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocColor</code> function allocates a read-only colormap entry corresponding to the closest RGB value supported by the hardware. <code>XAllocColor</code> returns the pixel value of the color closest to the specified RGB elements supported by the hardware and returns the RGB value actually used. The corresponding colormap cell is read-only. In addition, <code>XAllocColor</code> returns nonzero if it succeeded or zero if it failed. Multiple clients that request the same effective RGB value can be assigned the same read-only entry, thus allowing entries to be shared. When the last client deallocates a shared cell, it is deallocated. <code>XAllocColor</code> does not use or affect the flags in the <code>XColor</code> structure. </p>
 <p> <code>XAllocColor</code> can generate a <code>BadColor</code> error. </p>
@@ -69,14 +69,14 @@ description: "XAllocColor, XAllocNamedColor, XAllocColorCells, XAllocColorPlanes
 <p> <code>XFreeColors</code> can generate <code>BadAccess</code>, <code>BadColor</code>, and <code>BadValue</code> errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAccess</code></p>
-<dd>A client attempted to free a color map entry that it did not already allocate.</p>
-<dt><code>BadAccess</code></p>
-<dd>A client attempted to store into a read-only color map entry.</p>
-<dt><code>BadColor</code></p>
-<dd>A value for a Colormap argument does not name a defined Colormap.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAccess</code></dt>
+<dd>A client attempted to free a color map entry that it did not already allocate.</dd>
+<dt><code>BadAccess</code></dt>
+<dd>A client attempted to store into a read-only color map entry.</dd>
+<dt><code>BadColor</code></dt>
+<dd>A value for a Colormap argument does not name a defined Colormap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xquerycolor/">XQueryColor</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

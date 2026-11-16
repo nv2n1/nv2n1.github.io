@@ -25,15 +25,16 @@ description: "iok– Indic Onscreen Keyboard"
 <p> This project is available at <a rel="nofollow" href="http://fedorahosted.org/iok/">http://fedorahosted.org/iok/</a> or <a href="http://iok.sourceforge.net">http://iok.sourceforge.net</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> It shows the menus and combo box in iok UI</p>
-<dt><code>-h</code></p>
-<dd> It show the help</p>
-<dt><code>-d</code><i> 1</i></p>
-<dd> This will enable Drag and Drop feature only for the single iok invocation. Otherwise iok has disabled Drag and Drop by default.</p>
-<dt><code>-n</code><i> LANGCODE</i></p>
-<dd> In the place of LANGCODE,you need to specify a particular language code. Shows iok UI for that particular language. This will also requires language script code. e.g. for Bodo, Dogri, Kokani, Nepali, Sindhi use its langcode and &quot;-deva&quot; as a language script code. </p>
+<dt><code>-a</code></dt>
+<dd> It shows the menus and combo box in iok UI</dd>
+<dt><code>-h</code></dt>
+<dd> It show the help</dd>
+<dt><code>-d</code><i> 1</i></dt>
+<dd> This will enable Drag and Drop feature only for the single iok invocation. Otherwise iok has disabled Drag and Drop by default.</dd>
+<dt><code>-n</code><i> LANGCODE</i></dt>
+<dd> In the place of LANGCODE,you need to specify a particular language code. Shows iok UI for that particular language. This will also requires language script code. e.g. for Bodo, Dogri, Kokani, Nepali, Sindhi use its langcode and &quot;-deva&quot; as a language script code. </dd>
 <p> To start iok using Kokani keymap, run &quot;iok -n kok-deva&quot;</dl>
 <h2>AUTHOR</h2>
 <p> Suji A &lt;suji87.msc [at] gmail.com&gt; , Parag &lt;pnemade [at] fedoraproject.org&gt; </p>
 <h2>Index</h2>
+</p>

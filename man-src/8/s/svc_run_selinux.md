@@ -39,8 +39,8 @@ description: "svc_run_selinux – Security Enhanced Linux Policy for the svc_run
 <p> <code>svc_run_exec_t</code> </p>
 <p> &#8211; Set files with the svc_run_exec_t type, if you want to transition an executable to the svc_run_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/service/.*/run.*, /var/service/.*/log/run, /var/qmail/supervise/.*/run, /var/qmail/supervise/.*/log/run, /usr/bin/envdir, /usr/bin/fghack, /usr/bin/setlock, /var/axfrdns/run, /var/tinydns/run, /usr/bin/pgrphack, /var/dnscache/run, /usr/bin/envuidgid, /usr/bin/setuidgid, /usr/bin/softlimit, /var/axfrdns/log/run, /var/tinydns/log/run, /var/dnscache/log/run </p>
+<dt>Paths:</dt>
+<dd>/var/service/.*/run.*, /var/service/.*/log/run, /var/qmail/supervise/.*/run, /var/qmail/supervise/.*/log/run, /usr/bin/envdir, /usr/bin/fghack, /usr/bin/setlock, /var/axfrdns/run, /var/tinydns/run, /usr/bin/pgrphack, /var/dnscache/run, /usr/bin/envuidgid, /usr/bin/setuidgid, /usr/bin/softlimit, /var/axfrdns/log/run, /var/tinydns/log/run, /var/dnscache/log/run </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

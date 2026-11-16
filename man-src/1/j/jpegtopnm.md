@@ -23,43 +23,43 @@ description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap
 <h2>OPTIONS</h2>
 <p> The options are only for advanced users:</p>
 <dl>
-<dt><code>-dct int</code></p>
-<dd> Use integer DCT method (default).</p>
-<dt><code>-dct fast</code></p>
-<dd> Use fast integer DCT (less accurate).</p>
-<dt><code>-dct float</code></p>
-<dd> Use floating-point DCT method. The float method is very slightly more accurate than the int method, but is much slower unless your machine has very fast floating-point hardware. Also note that results of the floating-point method may vary slightly across machines, while the integer methods should give the same results everywhere. The fast integer method is much less accurate than the other two.</p>
-<dt><code>-nosmooth</code></p>
-<dd> Use a faster, lower-quality upsampling routine.</p>
-<dt><code>-maxmemory</code><i> N</i></p>
-<dd> Set limit on the amount of memory <code>jpegtopnm</code> uses in processing large images. Value is in thousands of bytes, or millions of bytes if &quot;M&quot; is suffixed to the number. For example, <code>-maxmemory 4m</code> selects 4000000 bytes. If <code>jpegtopnm</code> needs more space, it uses temporary files.</p>
-<dt><code>-adobe</code></p>
+<dt><code>-dct int</code></dt>
+<dd> Use integer DCT method (default).</dd>
+<dt><code>-dct fast</code></dt>
+<dd> Use fast integer DCT (less accurate).</dd>
+<dt><code>-dct float</code></dt>
+<dd> Use floating-point DCT method. The float method is very slightly more accurate than the int method, but is much slower unless your machine has very fast floating-point hardware. Also note that results of the floating-point method may vary slightly across machines, while the integer methods should give the same results everywhere. The fast integer method is much less accurate than the other two.</dd>
+<dt><code>-nosmooth</code></dt>
+<dd> Use a faster, lower-quality upsampling routine.</dd>
+<dt><code>-maxmemory</code><i> N</i></dt>
+<dd> Set limit on the amount of memory <code>jpegtopnm</code> uses in processing large images. Value is in thousands of bytes, or millions of bytes if &quot;M&quot; is suffixed to the number. For example, <code>-maxmemory 4m</code> selects 4000000 bytes. If <code>jpegtopnm</code> needs more space, it uses temporary files.</dd>
+<dt><code>-adobe</code></dt>
 <dd>
-<dt><code>-notadobe</code></p>
-<dd> There are two variations on the CMYK (and likewise YCCK) color space that may be used in the JFIF input. In the normal one, a zero value for a color components indicates absence of ink. In the other, a zero value means the maximum ink coverage. The latter is used by Adobe Photoshop when it creates a bare JFIF output file (but not when it creates JFIF output as part of Encapsulated Postscript output). </p>
+</dd><dt><code>-notadobe</code></dt>
+<dd> There are two variations on the CMYK (and likewise YCCK) color space that may be used in the JFIF input. In the normal one, a zero value for a color components indicates absence of ink. In the other, a zero value means the maximum ink coverage. The latter is used by Adobe Photoshop when it creates a bare JFIF output file (but not when it creates JFIF output as part of Encapsulated Postscript output). </dd>
 <p> These options tell <code>jpegtopnm</code> which version of the CMYK or YCCK color space the image uses. If you specify neither, <code>jpegtopnm</code> tries to figure it out on its own. In the present version, it doesn&#8217;t try very hard at all: It just assumes the Photoshop version, since Photoshop and its emulators seem to be the main source of CMYK and YCCK images. But with experience of use, future versions might be more sophisticated. </p>
 <p> If the JFIF image does not indicate that it is CMYK or YCCK, these options have no effect. </p>
 <p> If you don&#8217;t use the right one of these options, the symptom is output that looks like a negative. </p>
-<dt><code>-dumpexif</code></p>
-<dd> Print the interpreted contents of any Exif header in the input file to the Standard Error file. Similar to the program <code>jhead</code> (not part of the Netpbm package).</p>
-<dt><code>-exif=</code><i>filespec</i></p>
-<dd> Extract the contents of the EXIF header from the input image and write it to the file <i>filespec</i>. <i>filespec </i> = <code>&#8211;</code> means write it to Standard Output. In this case, <code>jpegtopnm</code> does not output the converted image at all. </p>
+<dt><code>-dumpexif</code></dt>
+<dd> Print the interpreted contents of any Exif header in the input file to the Standard Error file. Similar to the program <code>jhead</code> (not part of the Netpbm package).</dd>
+<dt><code>-exif=</code><i>filespec</i></dt>
+<dd> Extract the contents of the EXIF header from the input image and write it to the file <i>filespec</i>. <i>filespec </i> = <code>&#8211;</code> means write it to Standard Output. In this case, <code>jpegtopnm</code> does not output the converted image at all. </dd>
 <p> <code>jpegtopnm</code> writes the contents of the EXIF header byte-for-byte, starting with the two byte length field (which length includes those two bytes). </p>
 <p> You can use this file as input to <code>ppmtojpeg</code> to insert an identical EXIF header into a new JFIF image. </p>
 <p> If there is no EXIF header, <code>jpegtopnm</code> writes two bytes of binary zero and nothing else. </p>
 <p> An EXIF header takes the form of a JFIF APP1 marker. Only the first such marker within the JFIF header counts. </p>
-<dt><code>-comments</code></p>
-<dd> Print any comments in the input file to the Standard Error file.</p>
-<dt><code>-verbose</code></p>
-<dd> Print details about the conversion to the Standard Error file.</p>
-<dt><code>-tracelevel</code><i> n</i></p>
-<dd> Turn on the JPEG library&#8217;s trace messages to the Standard Error file. A higher value of <i>n</i> gets more trace information. <code>-verbose</code> implies a trace level of at least 1. </p>
+<dt><code>-comments</code></dt>
+<dd> Print any comments in the input file to the Standard Error file.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print details about the conversion to the Standard Error file.</dd>
+<dt><code>-tracelevel</code><i> n</i></dt>
+<dd> Turn on the JPEG library&#8217;s trace messages to the Standard Error file. A higher value of <i>n</i> gets more trace information. <code>-verbose</code> implies a trace level of at least 1. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> This example converts the color JFIF file foo.jpg to a PPM file named foo.ppm:</p>
 <dl>
 <dt>
-<dd> <code>jpegtopnm foo.jpg &gt;foo.ppm</code> </p>
+</dt><dd> <code>jpegtopnm foo.jpg &gt;foo.ppm</code> </dd>
 </dl>
 <h2>HINTS</h2>
 <p> You can use <code>ppmquant</code> to color quantize the result, i.e. to reduce the number of distinct colors in the image. In fact, you may have to if you want to convert the PPM file to certain other formats. <code>ppmdither</code> Does a more sophisticated quantization. </p>
@@ -68,16 +68,16 @@ description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap
 <p> You can easily use these converters together. E.g.:</p>
 <dl>
 <dt>
-<dd> <code>jpegtopnm foo.jpg | ppmtopgm | pnmscale .25 </code><br />
- <code>&gt;foo.pgm</code></dl>
+</dt><dd> <code>jpegtopnm foo.jpg | ppmtopgm | pnmscale .25 </code><br />
+ <code>&gt;foo.pgm</code></dd></dl>
 <p> <code>-dct fast</code> and/or <code>-nosmooth</code> gain speed at a small sacrifice in quality. </p>
 <p> If you are fortunate enough to have very fast floating point hardware, <code>-dct float</code> may be even faster than <code>-dct fast</code>. But on most machines <code>-dct float</code> is slower than <code>-dct int</code>; in this case it is not worth using, because its theoretical accuracy advantage is too small to be significant in practice. </p>
 <p> Another program, <code>djpeg</code>, is similar. <code>djpeg</code> is maintained by the Independent JPEG Group and packaged with the JPEG library which <code>jpegtopnm</code> uses for all its JPEG work. Because of that, you may expect it to exploit more current JPEG features. Also, since you have to have the library to run <code>jpegtopnm</code>, but not vice versa, <code>cjpeg</code> may be more commonly available. </p>
 <p> On the other hand, <code>djpeg</code> does not use the NetPBM libraries to generate its output, as all the NetPBM tools such as <code>jpegtopnm</code> do. This means it is less likely to be consistent with all the other programs that deal with the NetPBM formats. Also, the command syntax of <code>jpegtopnm</code> is consistent with that of the other Netpbm tools, unlike <code>djpeg</code>. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>JPEGMEM</code></p>
-<dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>-maxmemory</code> option. An explicit <code>-maxmemory </code> option overrides any <code>JPEGMEM</code>.</dl>
+<dt><code>JPEGMEM</code></dt>
+<dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>-maxmemory</code> option. An explicit <code>-maxmemory </code> option overrides any <code>JPEGMEM</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1), <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1),<br />
  <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-jhead/">jhead</a></code>(1)<br />

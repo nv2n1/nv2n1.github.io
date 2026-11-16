@@ -15,8 +15,8 @@ description: "run-with-aspell – script to help use GNU Aspell as an ispell rep
 <p> The recommended way to use <code>Aspell</code> as a replacement for <code>Ispell</code> is to change the <code>Ispell</code> command from within the program being used. If that is not possible, the <code>run-with-aspell</code> script may be used instead.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&lt;command&gt;</code></p>
-<dd> is the name of the program with any optional arguments.</dl>
+<dt><code>&lt;command&gt;</code></dt>
+<dd> is the name of the program with any optional arguments.</dd></dl>
 <p> The old method of mapping ispell to Aspell is discouraged because it can create compatibility problems with programs that actually require ispell such as ispell&#8217;s own scripts.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aspell/">aspell</a></code>(1), <code><a href="/docs/linux/man/1-aspell-import/">aspell-import</a></code>(1), <code><a href="/docs/linux/man/1-word-list-compress/">word-list-compress</a></code>(1) </p>

@@ -18,20 +18,20 @@ description: "libinput-record – record kernel events"
 <h2>OPTIONS</h2>
 <p> If one or more device nodes are given, this tool opens those device nodes. Otherwise, a list of devices is presented and the user can select the device to record. If unsure, run without any arguments.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</p>
-<dt><code>&#8211;all</code></p>
-<dd> Record all <i>/dev/input/event*</i> devices available on the system. This option should be used in exceptional cases only, the output file is almost always too noisy and replaying the recording may not be possible. This option requires <code>&#8211;output-file</code> and no device nodes may be provided on the commandline.</p>
-<dt><code>&#8211;autorestart=s</code></p>
-<dd> Terminate the current recording after <i>s</i> seconds of device inactivity. This option requires that a <code>&#8211;output-file</code> is specified. The output filename is used as prefix, suffixed with the date and time of the recording. The timeout must be greater than 0.</p>
-<dt><code>-o filename.yml</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> Record all <i>/dev/input/event*</i> devices available on the system. This option should be used in exceptional cases only, the output file is almost always too noisy and replaying the recording may not be possible. This option requires <code>&#8211;output-file</code> and no device nodes may be provided on the commandline.</dd>
+<dt><code>&#8211;autorestart=s</code></dt>
+<dd> Terminate the current recording after <i>s</i> seconds of device inactivity. This option requires that a <code>&#8211;output-file</code> is specified. The output filename is used as prefix, suffixed with the date and time of the recording. The timeout must be greater than 0.</dd>
+<dt><code>-o filename.yml</code></dt>
 <dd>
-<dt><code>&#8211;output-file=filename.yml</code></p>
-<dd> Specifies the output file to use. If <code>&#8211;autorestart</code> is given, the filename is used as prefix only.</p>
-<dt><code>&#8211;show-keycodes</code></p>
-<dd> Show keycodes as-is in the recording. By default, common keys are obfuscated and printed as <code>KEY_A</code> to avoid information leaks.</p>
-<dt><code>&#8211;with-libinput</code></p>
-<dd> Record libinput events alongside device events. <code>THIS FEATURE IS EXPERIMENTAL.</code> See section <code>RECORDING LIBINPUT EVENTS</code> for more details. </p>
+</dd><dt><code>&#8211;output-file=filename.yml</code></dt>
+<dd> Specifies the output file to use. If <code>&#8211;autorestart</code> is given, the filename is used as prefix only.</dd>
+<dt><code>&#8211;show-keycodes</code></dt>
+<dd> Show keycodes as-is in the recording. By default, common keys are obfuscated and printed as <code>KEY_A</code> to avoid information leaks.</dd>
+<dt><code>&#8211;with-libinput</code></dt>
+<dd> Record libinput events alongside device events. <code>THIS FEATURE IS EXPERIMENTAL.</code> See section <code>RECORDING LIBINPUT EVENTS</code> for more details. </dd>
 </dl>
 <h2>RECORDING MULTIPLE DEVICES</h2>
 <p> Sometimes it is necessary to record the events from multiple devices simultaneously, e.g. when an interaction between a touchpad and a keyboard causes a bug. <code>libinput record</code> records multiple devices with an identical time offset, allowing for correct replay of the interaction. </p>
@@ -63,69 +63,69 @@ version : 1 ndevices : 2 libinput : version : 1.10.0 system : os : "fedora:26" k
 </code></pre>
 <p> Top-level keys are listed below, see the respective subsection for details on each key. </p>
 <dl>
-<dt><code>version: int</code></p>
-<dd> The file format version. This version is only increased for backwards-incompatible changes. A parser must ignore unknown keys to be forwards-compatible.</p>
-<dt><code>ndevices: int</code></p>
-<dd> The number of device recordings in this file. Always 1 unless recorded with <code>&#8211;multiple</code></p>
-<dt><code>libinput: {&#8230;}</code></p>
-<dd> A dictionary with libinput-specific information.</p>
-<dt><code>system: {&#8230;}</code></p>
-<dd> A dictionary with system information.</p>
-<dt><code>devices: {&#8230;}</code></p>
-<dd> A list of devices containing the description and and events of each device. </p>
+<dt><code>version: int</code></dt>
+<dd> The file format version. This version is only increased for backwards-incompatible changes. A parser must ignore unknown keys to be forwards-compatible.</dd>
+<dt><code>ndevices: int</code></dt>
+<dd> The number of device recordings in this file. Always 1 unless recorded with <code>&#8211;multiple</code></dd>
+<dt><code>libinput: {&#8230;}</code></dt>
+<dd> A dictionary with libinput-specific information.</dd>
+<dt><code>system: {&#8230;}</code></dt>
+<dd> A dictionary with system information.</dd>
+<dt><code>devices: {&#8230;}</code></dt>
+<dd> A list of devices containing the description and and events of each device. </dd>
 </dl>
 <h3>libinput</h3>
 <dl>
-<dt><code>version: string</code></p>
-<dd> libinput version </p>
+<dt><code>version: string</code></dt>
+<dd> libinput version </dd>
 </dl>
 <h3>system</h3>
 <p> Information about the system</p>
 <dl>
-<dt><code>os: string</code></p>
-<dd> Distribution ID and version, see <i><a href="/docs/linux/man/5-os-release/">os-release</a>(5)</i></p>
-<dt><code>kernel: string</code></p>
-<dd> Kernel version, see <i><a href="/docs/linux/man/1-uname/">uname</a>(1)</i></p>
-<dt><code>dmi: string</code></p>
-<dd> DMI modalias, see <i>/sys/class/dmi/id/modalias</i> </p>
+<dt><code>os: string</code></dt>
+<dd> Distribution ID and version, see <i><a href="/docs/linux/man/5-os-release/">os-release</a>(5)</i></dd>
+<dt><code>kernel: string</code></dt>
+<dd> Kernel version, see <i><a href="/docs/linux/man/1-uname/">uname</a>(1)</i></dd>
+<dt><code>dmi: string</code></dt>
+<dd> DMI modalias, see <i>/sys/class/dmi/id/modalias</i> </dd>
 </dl>
 <h3>devices</h3>
 <p> Information about and events from the recorded device nodes</p>
 <dl>
-<dt><code>node: string</code></p>
-<dd> the device node recorded</p>
-<dt><code>evdev</code></p>
-<dd> A dictionary with the evdev device information.</p>
-<dt><code>hid</code></p>
-<dd> A list of integers representing the HID report descriptor bytes.</p>
-<dt><code>udev</code></p>
-<dd> A dictionary with the udev device information.</p>
-<dt><code>events</code></p>
-<dd> A list of dictionaries with the recorded events</dl>
+<dt><code>node: string</code></dt>
+<dd> the device node recorded</dd>
+<dt><code>evdev</code></dt>
+<dd> A dictionary with the evdev device information.</dd>
+<dt><code>hid</code></dt>
+<dd> A list of integers representing the HID report descriptor bytes.</dd>
+<dt><code>udev</code></dt>
+<dd> A dictionary with the udev device information.</dd>
+<dt><code>events</code></dt>
+<dd> A list of dictionaries with the recorded events</dd></dl>
 <h3>evdev</h3>
 <dl>
-<dt><code>name: string</code></p>
-<dd> The device name</p>
-<dt><code>id: [bustype, vendor, product, version]</code></p>
-<dd> The data from the <code>struct input_id</code>, bustype, vendor, product, version.</p>
-<dt><code>codes: {type: [a, b, c ], &#8230;}</code></p>
-<dd> All evdev types and codes as nested dictionary. The evdev type is the key, the codes are a list.</p>
-<dt><code>absinfo: {code: [min, max, fuzz, flat, resolution], &#8230;}</code></p>
-<dd> An array of arrays with 6 decimal elements each, denoting the contents of a <code>struct input_absinfo</code>. The first element is the code (e.g. <code>ABS_X</code>) in decimal format.</p>
-<dt><code>properties: [0, 1, &#8230;]</code></p>
-<dd> Array with all <code>INPUT_PROP_FOO</code> constants. May be an empty array.</dl>
+<dt><code>name: string</code></dt>
+<dd> The device name</dd>
+<dt><code>id: [bustype, vendor, product, version]</code></dt>
+<dd> The data from the <code>struct input_id</code>, bustype, vendor, product, version.</dd>
+<dt><code>codes: {type: [a, b, c ], &#8230;}</code></dt>
+<dd> All evdev types and codes as nested dictionary. The evdev type is the key, the codes are a list.</dd>
+<dt><code>absinfo: {code: [min, max, fuzz, flat, resolution], &#8230;}</code></dt>
+<dd> An array of arrays with 6 decimal elements each, denoting the contents of a <code>struct input_absinfo</code>. The first element is the code (e.g. <code>ABS_X</code>) in decimal format.</dd>
+<dt><code>properties: [0, 1, &#8230;]</code></dt>
+<dd> Array with all <code>INPUT_PROP_FOO</code> constants. May be an empty array.</dd></dl>
 <h3>udev</h3>
 <dl>
-<dt><code>properties: list of strings</code></p>
-<dd> A list of udev properties in the <code>key=value</code> format. This is not the complete list of properties assigned to the device but a subset that is relevant to libinput. These properties may include properties set on a parent device.</p>
-<dt><code>quirks: list of strings</code></p>
-<dd> A list of device quirks the <code>key=value</code> format. </p>
+<dt><code>properties: list of strings</code></dt>
+<dd> A list of udev properties in the <code>key=value</code> format. This is not the complete list of properties assigned to the device but a subset that is relevant to libinput. These properties may include properties set on a parent device.</dd>
+<dt><code>quirks: list of strings</code></dt>
+<dd> A list of device quirks the <code>key=value</code> format. </dd>
 </dl>
 <h3>events</h3>
 <p> A list of the recorded events. The list contains dictionaries Information about the events. The content is a list of dictionaries, with the string identifying the type of event sequence.</p>
 <dl>
-<dt><code>{ evdev: [ {data: [sec, usec, type, code, value]}, &#8230;] }</code></p>
-<dd> Each <code>input_event</code> dictionary contains the contents of a <code>struct input_event</code> in decimal format. The last item in the list is always the <code>SYN_REPORT</code> of this event frame. The next event frame starts a new <code>evdev</code> dictionary entry in the parent <code>events</code> list. </p>
+<dt><code>{ evdev: [ {data: [sec, usec, type, code, value]}, &#8230;] }</code></dt>
+<dd> Each <code>input_event</code> dictionary contains the contents of a <code>struct input_event</code> in decimal format. The last item in the list is always the <code>SYN_REPORT</code> of this event frame. The next event frame starts a new <code>evdev</code> dictionary entry in the parent <code>events</code> list. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> This tool records events from the kernel and is independent of libinput. In other words, updating or otherwise changing libinput will not alter the output from this tool. libinput itself does not need to be in use to record events.</p>

@@ -15,21 +15,19 @@ description: "getpagesize – get memory page size"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>getpagesize</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.19:</p>
+<dt>Since glibc 2.19:</dt>
 <dd>
 <pre><code>
 _DEFAULT_SOURCE || !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 </code></pre>
-<dt>From glibc 2.12 to 2.19:</p>
+</dd><dt>From glibc 2.12 to 2.19:</dt>
 <dd>
 <pre><code>
 _BSD_SOURCE || !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 </code></pre>
-<dt>Before glibc 2.12:</p>
-<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>getpagesize</code>() returns the number of bytes in a memory page, where &quot;page&quot; is a fixed-length block, the unit for memory allocation and file mapping performed by <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>

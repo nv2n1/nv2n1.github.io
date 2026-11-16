@@ -26,10 +26,10 @@ struct ibv_xrcd_init_attr {
 </code></pre>
 <p> <i>fd</i> is the file descriptor to associate with the XRCD. <i>oflag</i> describes the desired creation attributes. It is a bitwise OR of zero or more of the following flags: </p>
 <dl>
-<dt><code>O_CREAT</code></p>
-<dd> Indicates that an XRCD should be created and associated with the inode referenced by the given fd. If the XRCD exists, this flag has no effect except as noted under <code>O_EXCL</code> below.</p>
-<dt><code>O_EXCL</code></p>
-<dd> If <code>O_EXCL</code> and <code>O_CREAT</code> are set, open will fail if an XRCD associated with the inode exists.</dl>
+<dt><code>O_CREAT</code></dt>
+<dd> Indicates that an XRCD should be created and associated with the inode referenced by the given fd. If the XRCD exists, this flag has no effect except as noted under <code>O_EXCL</code> below.</dd>
+<dt><code>O_EXCL</code></dt>
+<dd> If <code>O_EXCL</code> and <code>O_CREAT</code> are set, open will fail if an XRCD associated with the inode exists.</dd></dl>
 <p> If <i>fd</i> equals -1, no inode is associated with the XRCD. To indicate that XRCD should be created, use <i>oflag</i> = <code>O_CREAT</code>. </p>
 <p> <code>ibv_close_xrcd()</code> closes the XRCD <i>xrcd</i>. If this is the last reference, the XRCD will be destroyed.</p>
 <h2>RETURN VALUE</h2>
@@ -41,7 +41,7 @@ struct ibv_xrcd_init_attr {
 <p> <code>ibv_create_srq_ex</code>(3), <code>ibv_create_qp_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</p>
+<dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

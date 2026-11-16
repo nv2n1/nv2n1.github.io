@@ -17,12 +17,12 @@ description: "make-ssl-cert – Debconf wrapper for openssl"
 <h2>Options</h2>
 <p>A summary of options are included below.</p>
 <dl>
-<dt><code>&#8211;force-overwrite</code></p>
-<dd>Always create a new certificate, even if the file already exists. For backwards compatibility with 1.0.x, this option can be given as last argument, too.</p>
-<dt><code>&#8211;no-overwrite</code></p>
-<dd>Never overwrite an existing file, even if the old certificate&#8217;s key length is too small or if it uses an obsoltete signature algorithm.</p>
-<dt><code>&#8211;expiration-days </code><i>N</i></p>
-<dd>Make the new certificate expire in <i>N</i> days. Default is 3650.</dl>
+<dt><code>&#8211;force-overwrite</code></dt>
+<dd>Always create a new certificate, even if the file already exists. For backwards compatibility with 1.0.x, this option can be given as last argument, too.</dd>
+<dt><code>&#8211;no-overwrite</code></dt>
+<dd>Never overwrite an existing file, even if the old certificate&#8217;s key length is too small or if it uses an obsoltete signature algorithm.</dd>
+<dt><code>&#8211;expiration-days </code><i>N</i></dt>
+<dd>Make the new certificate expire in <i>N</i> days. Default is 3650.</dd></dl>
 <h2>See Also</h2>
 <p><i>openssl</i>(1)</p>
 <h2>Author</h2>

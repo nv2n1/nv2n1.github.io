@@ -14,7 +14,7 @@ description: "snd_ctl_free_one – release the control instance"
 <p><i>kcontrol</i></p>
 <dl>
 <dd>
-<dd>the control instance</dl>
+</dd><dd>the control instance</dd></dl>
 <h2>Description</h2>
 <p>Releases the control instance created via <code>snd_ctl_new</code> or <code>snd_ctl_new1</code>. Don&#8217;t call this after the control was added to the card.</p>
 <h2>Copyright</h2>

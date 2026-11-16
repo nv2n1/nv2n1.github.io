@@ -31,10 +31,10 @@ evemu - event / dev / input / eventX[--sync]-- type&lt;type&gt; --code&lt;code&g
 <p> evemu was written by Henrik Rydberg &lt;m[blue]<code>rydberg [at] euromail.se</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rydberg [at] euromail.se</p>
+<dt> 1.</dt>
+<dd> rydberg [at] euromail.se</dd>
 <dl>
 <dt>
-<dd> mailto:rydberg [at] euromail.se</dl>
+</dt><dd> mailto:rydberg [at] euromail.se</dd></dl>
 </dl>
 <h2>Index</h2>

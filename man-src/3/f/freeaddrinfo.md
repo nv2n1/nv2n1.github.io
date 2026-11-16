@@ -38,14 +38,14 @@ const char *gai_strerror(int errcode);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct addrinfo&nbsp;*ai_next; }; </p>
 <p> The <i>hints</i> argument points to an <i>addrinfo</i> structure that specifies criteria for selecting the socket address structures returned in the list pointed to by <i>res</i>. If <i>hints</i> is not NULL it points to an <i>addrinfo</i> structure whose <i>ai_family</i>, <i>ai_socktype</i>, and <i>ai_protocol</i> specify criteria that limit the set of socket addresses returned by <code>getaddrinfo</code>(), as follows:</p>
 <dl>
-<dt><i>ai_family</i></p>
-<dd> This field specifies the desired address family for the returned addresses. Valid values for this field include <code>AF_INET</code> and <code>AF_INET6</code>. The value <code>AF_UNSPEC</code> indicates that <code>getaddrinfo</code>() should return socket addresses for any address family (either IPv4 or IPv6, for example) that can be used with <i>node</i> and <i>service</i>.</p>
-<dt><i>ai_socktype</i></p>
-<dd> This field specifies the preferred socket type, for example <code>SOCK_STREAM</code> or <code>SOCK_DGRAM</code>. Specifying 0 in this field indicates that socket addresses of any type can be returned by <code>getaddrinfo</code>().</p>
-<dt><i>ai_protocol</i></p>
-<dd> This field specifies the protocol for the returned socket addresses. Specifying 0 in this field indicates that socket addresses with any protocol can be returned by <code>getaddrinfo</code>().</p>
-<dt><i>ai_flags</i></p>
-<dd> This field specifies additional options, described below. Multiple flags are specified by bitwise OR-ing them together.</dl>
+<dt><i>ai_family</i></dt>
+<dd> This field specifies the desired address family for the returned addresses. Valid values for this field include <code>AF_INET</code> and <code>AF_INET6</code>. The value <code>AF_UNSPEC</code> indicates that <code>getaddrinfo</code>() should return socket addresses for any address family (either IPv4 or IPv6, for example) that can be used with <i>node</i> and <i>service</i>.</dd>
+<dt><i>ai_socktype</i></dt>
+<dd> This field specifies the preferred socket type, for example <code>SOCK_STREAM</code> or <code>SOCK_DGRAM</code>. Specifying 0 in this field indicates that socket addresses of any type can be returned by <code>getaddrinfo</code>().</dd>
+<dt><i>ai_protocol</i></dt>
+<dd> This field specifies the protocol for the returned socket addresses. Specifying 0 in this field indicates that socket addresses with any protocol can be returned by <code>getaddrinfo</code>().</dd>
+<dt><i>ai_flags</i></dt>
+<dd> This field specifies additional options, described below. Multiple flags are specified by bitwise OR-ing them together.</dd></dl>
 <p> All the other fields in the structure pointed to by <i>hints</i> must contain either 0 or a null pointer, as appropriate. </p>
 <p> Specifying <i>hints</i> as NULL is equivalent to setting <i>ai_socktype</i> and <i>ai_protocol</i> to 0; <i>ai_family</i> to <code>AF_UNSPEC</code>; and <i>ai_flags</i> to <code>(AI_V4MAPPED | AI_ADDRCONFIG)</code>. (POSIX specifies different defaults for <i>ai_flags</i>; see NOTES.) <i>node</i> specifies either a numerical network address (for IPv4, numbers-and-dots notation as supported by <code>inet_aton</code>(3); for IPv6, hexadecimal string format as supported by <code>inet_pton</code>(3)), or a network hostname, whose network addresses are looked up and resolved. If <i>hints.ai_flags</i> contains the <code>AI_NUMERICHOST</code> flag, then <i>node</i> must be a numerical network address. The <code>AI_NUMERICHOST</code> flag suppresses any potentially lengthy network host address lookups. </p>
 <p> If the <code>AI_PASSIVE</code> flag is specified in <i>hints.ai_flags</i>, and <i>node</i> is NULL, then the returned socket addresses will be suitable for <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2)ing a socket that will <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2) connections. The returned socket address will contain the &quot;wildcard address&quot; (<code>INADDR_ANY</code> for IPv4 addresses, <code>IN6ADDR_ANY_INIT</code> for IPv6 address). The wildcard address is used by applications (typically servers) that intend to accept connections on any of the host&#8217;s network addresses. If <i>node</i> is not NULL, then the <code>AI_PASSIVE</code> flag is ignored. </p>
@@ -57,51 +57,51 @@ const char *gai_strerror(int errcode);
 <p> If <i>hints.ai_flags</i> includes the <code>AI_CANONNAME</code> flag, then the <i>ai_canonname</i> field of the first of the <i>addrinfo</i> structures in the returned list is set to point to the official name of the host. </p>
 <p> The remaining fields of each returned <i>addrinfo</i> structure are initialized as follows:</p>
 <dl>
-<dt>*</p>
-<dd> The <i>ai_family</i>, <i>ai_socktype</i>, and <i>ai_protocol</i> fields return the socket creation parameters (i.e., these fields have the same meaning as the corresponding arguments of <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2)). For example, <i>ai_family</i> might return <code>AF_INET</code> or <code>AF_INET6</code>; <i>ai_socktype</i> might return <code>SOCK_DGRAM</code> or <code>SOCK_STREAM</code>; and <i>ai_protocol</i> returns the protocol for the socket.</p>
-<dt>*</p>
-<dd> A pointer to the socket address is placed in the <i>ai_addr</i> field, and the length of the socket address, in bytes, is placed in the <i>ai_addrlen</i> field.</dl>
+<dt>*</dt>
+<dd> The <i>ai_family</i>, <i>ai_socktype</i>, and <i>ai_protocol</i> fields return the socket creation parameters (i.e., these fields have the same meaning as the corresponding arguments of <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2)). For example, <i>ai_family</i> might return <code>AF_INET</code> or <code>AF_INET6</code>; <i>ai_socktype</i> might return <code>SOCK_DGRAM</code> or <code>SOCK_STREAM</code>; and <i>ai_protocol</i> returns the protocol for the socket.</dd>
+<dt>*</dt>
+<dd> A pointer to the socket address is placed in the <i>ai_addr</i> field, and the length of the socket address, in bytes, is placed in the <i>ai_addrlen</i> field.</dd></dl>
 <p> If <i>hints.ai_flags</i> includes the <code>AI_ADDRCONFIG</code> flag, then IPv4 addresses are returned in the list pointed to by <i>res</i> only if the local system has at least one IPv4 address configured, and IPv6 addresses are returned only if the local system has at least one IPv6 address configured. The loopback address is not considered for this case as valid as a configured address. This flag is useful on, for example, IPv4-only systems, to ensure that <code>getaddrinfo</code>() does not return IPv6 socket addresses that would always fail in <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) or <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2). </p>
 <p> If <i>hints.ai_flags</i> specifies the <code>AI_V4MAPPED</code> flag, and <i>hints.ai_family</i> was specified as <code>AF_INET6</code>, and no matching IPv6 addresses could be found, then return IPv4-mapped IPv6 addresses in the list pointed to by <i>res</i>. If both <code>AI_V4MAPPED</code> and <code>AI_ALL</code> are specified in <i>hints.ai_flags</i>, then return both IPv6 and IPv4-mapped IPv6 addresses in the list pointed to by <i>res</i>. <code>AI_ALL</code> is ignored if <code>AI_V4MAPPED</code> is not also specified. </p>
 <p> The <code>freeaddrinfo</code>() function frees the memory that was allocated for the dynamically allocated linked list <i>res</i>.</p>
 <h3>Extensions to getaddrinfo() for Internationalized Domain Names</h3>
 <p> Starting with glibc 2.3.4, <code>getaddrinfo</code>() has been extended to selectively allow the incoming and outgoing hostnames to be transparently converted to and from the Internationalized Domain Name (IDN) format (see RFC 3490, <i>Internationalizing Domain Names in Applications (IDNA)</i>). Four new flags are defined:</p>
 <dl>
-<dt><code>AI_IDN</code></p>
-<dd> If this flag is specified, then the node name given in <i>node</i> is converted to IDN format if necessary. The source encoding is that of the current locale.</p>
+<dt><code>AI_IDN</code></dt>
+<dd> If this flag is specified, then the node name given in <i>node</i> is converted to IDN format if necessary. The source encoding is that of the current locale.</dd>
 <dt>
-<dd> If the input name contains non-ASCII characters, then the IDN encoding is used. Those parts of the node name (delimited by dots) that contain non-ASCII characters are encoded using ASCII Compatible Encoding (ACE) before being passed to the name resolution functions.</p>
-<dt><code>AI_CANONIDN</code></p>
-<dd> After a successful name lookup, and if the <code>AI_CANONNAME</code> flag was specified, <code>getaddrinfo</code>() will return the canonical name of the node corresponding to the <i>addrinfo</i> structure value passed back. The return value is an exact copy of the value returned by the name resolution function.</p>
+</dt><dd> If the input name contains non-ASCII characters, then the IDN encoding is used. Those parts of the node name (delimited by dots) that contain non-ASCII characters are encoded using ASCII Compatible Encoding (ACE) before being passed to the name resolution functions.</dd>
+<dt><code>AI_CANONIDN</code></dt>
+<dd> After a successful name lookup, and if the <code>AI_CANONNAME</code> flag was specified, <code>getaddrinfo</code>() will return the canonical name of the node corresponding to the <i>addrinfo</i> structure value passed back. The return value is an exact copy of the value returned by the name resolution function.</dd>
 <dt>
-<dd> If the name is encoded using ACE, then it will contain the <i>xn--</i> prefix for one or more components of the name. To convert these components into a readable form the <code>AI_CANONIDN</code> flag can be passed in addition to <code>AI_CANONNAME</code>. The resulting string is encoded using the current locale&#8217;s encoding.</p>
-<dt><code>AI_IDN_ALLOW_UNASSIGNED</code>, <code>AI_IDN_USE_STD3_ASCII_RULES</code></p>
-<dd> Setting these flags will enable the IDNA_ALLOW_UNASSIGNED (allow unassigned Unicode code points) and IDNA_USE_STD3_ASCII_RULES (check output to make sure it is a STD3 conforming hostname) flags respectively to be used in the IDNA handling.</dl>
+</dt><dd> If the name is encoded using ACE, then it will contain the <i>xn--</i> prefix for one or more components of the name. To convert these components into a readable form the <code>AI_CANONIDN</code> flag can be passed in addition to <code>AI_CANONNAME</code>. The resulting string is encoded using the current locale&#8217;s encoding.</dd>
+<dt><code>AI_IDN_ALLOW_UNASSIGNED</code>, <code>AI_IDN_USE_STD3_ASCII_RULES</code></dt>
+<dd> Setting these flags will enable the IDNA_ALLOW_UNASSIGNED (allow unassigned Unicode code points) and IDNA_USE_STD3_ASCII_RULES (check output to make sure it is a STD3 conforming hostname) flags respectively to be used in the IDNA handling.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>getaddrinfo</code>() returns 0 if it succeeds, or one of the following nonzero error codes:</p>
 <dl>
-<dt><code>EAI_ADDRFAMILY</code></p>
-<dd> The specified network host does not have any network addresses in the requested address family.</p>
-<dt><code>EAI_AGAIN</code></p>
-<dd> The name server returned a temporary failure indication. Try again later.</p>
-<dt><code>EAI_BADFLAGS</code></p>
-<dd> <i>hints.ai_flags</i> contains invalid flags; or, <i>hints.ai_flags</i> included <code>AI_CANONNAME</code> and <i>name</i> was NULL.</p>
-<dt><code>EAI_FAIL</code></p>
-<dd> The name server returned a permanent failure indication.</p>
-<dt><code>EAI_FAMILY</code></p>
-<dd> The requested address family is not supported.</p>
-<dt><code>EAI_MEMORY</code></p>
-<dd> Out of memory.</p>
-<dt><code>EAI_NODATA</code></p>
-<dd> The specified network host exists, but does not have any network addresses defined.</p>
-<dt><code>EAI_NONAME</code></p>
-<dd> The <i>node</i> or <i>service</i> is not known; or both <i>node</i> and <i>service</i> are NULL; or <code>AI_NUMERICSERV</code> was specified in <i>hints.ai_flags</i> and <i>service</i> was not a numeric port-number string.</p>
-<dt><code>EAI_SERVICE</code></p>
-<dd> The requested service is not available for the requested socket type. It may be available through another socket type. For example, this error could occur if <i>service</i> was &quot;shell&quot; (a service available only on stream sockets), and either <i>hints.ai_protocol</i> was <code>IPPROTO_UDP</code>, or <i>hints.ai_socktype</i> was <code>SOCK_DGRAM</code>; or the error could occur if <i>service</i> was not NULL, and <i>hints.ai_socktype</i> was <code>SOCK_RAW</code> (a socket type that does not support the concept of services).</p>
-<dt><code>EAI_SOCKTYPE</code></p>
-<dd> The requested socket type is not supported. This could occur, for example, if <i>hints.ai_socktype</i> and <i>hints.ai_protocol</i> are inconsistent (e.g., <code>SOCK_DGRAM</code> and <code>IPPROTO_TCP</code>, respectively).</p>
-<dt><code>EAI_SYSTEM</code></p>
-<dd> Other system error, check <i>errno</i> for details.</dl>
+<dt><code>EAI_ADDRFAMILY</code></dt>
+<dd> The specified network host does not have any network addresses in the requested address family.</dd>
+<dt><code>EAI_AGAIN</code></dt>
+<dd> The name server returned a temporary failure indication. Try again later.</dd>
+<dt><code>EAI_BADFLAGS</code></dt>
+<dd> <i>hints.ai_flags</i> contains invalid flags; or, <i>hints.ai_flags</i> included <code>AI_CANONNAME</code> and <i>name</i> was NULL.</dd>
+<dt><code>EAI_FAIL</code></dt>
+<dd> The name server returned a permanent failure indication.</dd>
+<dt><code>EAI_FAMILY</code></dt>
+<dd> The requested address family is not supported.</dd>
+<dt><code>EAI_MEMORY</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EAI_NODATA</code></dt>
+<dd> The specified network host exists, but does not have any network addresses defined.</dd>
+<dt><code>EAI_NONAME</code></dt>
+<dd> The <i>node</i> or <i>service</i> is not known; or both <i>node</i> and <i>service</i> are NULL; or <code>AI_NUMERICSERV</code> was specified in <i>hints.ai_flags</i> and <i>service</i> was not a numeric port-number string.</dd>
+<dt><code>EAI_SERVICE</code></dt>
+<dd> The requested service is not available for the requested socket type. It may be available through another socket type. For example, this error could occur if <i>service</i> was &quot;shell&quot; (a service available only on stream sockets), and either <i>hints.ai_protocol</i> was <code>IPPROTO_UDP</code>, or <i>hints.ai_socktype</i> was <code>SOCK_DGRAM</code>; or the error could occur if <i>service</i> was not NULL, and <i>hints.ai_socktype</i> was <code>SOCK_RAW</code> (a socket type that does not support the concept of services).</dd>
+<dt><code>EAI_SOCKTYPE</code></dt>
+<dd> The requested socket type is not supported. This could occur, for example, if <i>hints.ai_socktype</i> and <i>hints.ai_protocol</i> are inconsistent (e.g., <code>SOCK_DGRAM</code> and <code>IPPROTO_TCP</code>, respectively).</dd>
+<dt><code>EAI_SYSTEM</code></dt>
+<dd> Other system error, check <i>errno</i> for details.</dd></dl>
 <p> The <code>gai_strerror</code>() function translates these error codes to a human readable string, suitable for error reporting.</p>
 <h2>FILES</h2>
 <p> <i>/etc/gai.conf</i></p>

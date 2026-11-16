@@ -14,13 +14,13 @@ description: "ida_get_new_above – allocate new ID above or equal to a start id
 <p><i>ida</i></p>
 <dl>
 <dd>
-<dd>ida handle</dl>
+</dd><dd>ida handle</dd></dl>
 <p> <i>starting_id</i></p>
 <dl>
-<dd>id to start search at</dl>
+<dd>id to start search at</dd></dl>
 <p> <i>p_id</i></p>
 <dl>
-<dd>pointer to the allocated handle</dl>
+<dd>pointer to the allocated handle</dd></dl>
 <h2>Description</h2>
 <p>Allocate new ID above or equal to <i>starting_id</i>. It should be called with any required locks. </p>
 <p> If memory is required, it will return <code>-EAGAIN</code>, you should unlock and go back to the <code>ida_pre_get</code> call. If the ida is full, it will return <code>-ENOSPC</code>. </p>

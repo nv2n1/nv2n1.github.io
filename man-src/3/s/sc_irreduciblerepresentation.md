@@ -11,103 +11,38 @@ description: "sc::IrreducibleRepresentation –"
 <p> The <code>IrreducibleRepresentation</code> class provides information associated with a particular irreducible representation of a <code>point</code> group.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pointgrp.h&gt;
-
 Public Member Functions
 IrreducibleRepresentation (const IrreducibleRepresentation &amp;)
-
-
-
 IrreducibleRepresentation (int, int, const char *, const char *=0)
-
-
 This constructor takes as arguments the order of the point group, the degeneracy of the irrep, and the Mulliken symbol of the irrep.
-
-
 IrreducibleRepresentation &amp; operator= (const IrreducibleRepresentation &amp;)
-
-
-
 void init (int=0, int=0, const char *=0, const char *=0)
-
-
 Initialize the order, degeneracy, and Mulliken symbol of the irrep.
-
-
 int order () const
-
-
 Returns the order of the group.
-
-
 int degeneracy () const
-
-
 Returns the degeneracy of the irrep.
-
-
 int complex () const
-
-
 Returns the value of complex_.
-
-
 int nproj () const
-
-
 Returns the number of projection operators for the irrep.
-
-
 int nrot () const
-
-
 Returns the number of rotations associated with the irrep.
-
-
 int ntrans () const
-
-
 Returns the number of translations associated with the irrep.
-
-
 const char * symbol () const
-
-
 Returns the Mulliken symbol for the irrep.
-
-
 const char * symbol_ns () const
-
-
 Returns the Mulliken symbol for the irrep without special characters.
-
-
 double character (int i) const
-
-
 Returns the character for the i'th symmetry operation of the point group.
-
-
 double p (int x1, int x2, int i) const
-
-
 Returns the element (x1,x2) of the i'th representation matrix.
-
-
 double p (int d, int i) const
-
-
 Returns the character for the d'th contribution to the i'th representation matrix.
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 This prints the irrep to the given file, or stdout if none is given.
-
-
-
 Friends</code></pre>
 <p> class <code>CharacterTable</code></p>
 <h2>Detailed Description</h2>

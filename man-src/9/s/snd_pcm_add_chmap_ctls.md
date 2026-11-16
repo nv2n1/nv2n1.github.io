@@ -15,27 +15,27 @@ snd_pcm_add_chmap_ctls - create channel-mapping control elements
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the assigned PCM instance</dl>
+<dl><dd></dd><dd>the assigned PCM instance</dd></dl>
  
 
  <i>stream</i>
-<dl><dd>stream direction</dl>
+<dl><dd>stream direction</dd></dl>
  
 
  <i>chmap</i>
-<dl><dd>channel map elements (for query)</dl>
+<dl><dd>channel map elements (for query)</dd></dl>
  
 
  <i>max_channels</i>
-<dl><dd>the max number of channels for the stream</dl>
+<dl><dd>the max number of channels for the stream</dd></dl>
  
 
  <i>private_value</i>
-<dl><dd>the value passed to each kcontrol's private_value field</dl>
+<dl><dd>the value passed to each kcontrol's private_value field</dd></dl>
  
 
  <i>info_ret</i>
-<dl><dd>store struct snd_pcm_chmap instance if non-NULL</dl>
+<dl><dd>store struct snd_pcm_chmap instance if non-NULL</dd></dl>
 
 <h2>Description</h2>
 

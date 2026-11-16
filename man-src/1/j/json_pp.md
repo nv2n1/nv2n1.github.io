@@ -36,20 +36,20 @@ json_pp[-v][-f from_format][-t to_format][-json_opt options_to_json1[, options_t
  Format types:
 <dl>
 <dt>json
-<dd> as <font SIZE="-1">JSON</font>
-<dt>eval
-<dd> as Perl code</dl>
+</dt><dd> as <font SIZE="-1">JSON</font>
+</dd><dt>eval
+</dt><dd> as Perl code</dd></dl>
 
 <h3>-t</h3>
 
  Writes a data in the given format to <font SIZE="-1">STDOUT.</font>
 <dl>
 <dt>null
-<dd> no action.
-<dt>json
-<dd> as <font SIZE="-1">JSON</font>
-<dt>dumper
-<dd> as Data::Dumper</dl>
+</dt><dd> no action.
+</dd><dt>json
+</dt><dd> as <font SIZE="-1">JSON</font>
+</dd><dt>dumper
+</dt><dd> as Data::Dumper</dd></dl>
 
 <h3>-json_opt</h3>
 
@@ -83,7 +83,6 @@ json_pp[-v][-f from_format][-t to_format][-json_opt options_to_json1[, options_t
 $ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
     json_pp - f json - t dumper - json_opt pretty,
     utf8, allow_bignum
-
               $VAR1 = {'bar' = &gt; bless({'value' = &gt; [
                                             '0000000',
                                             '0000000',
@@ -95,7 +94,6 @@ $ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
                        'foo' = &gt; "\x{3042}\x{3044}"};
 $ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
     json_pp - f json - t dumper - json_opt pretty
-
                                       $VAR1 = {
     'bar' = &gt; '1234567890000000000000000',
     'foo' = &gt; "\x{e3}\x{81}\x{82}\x{e3}\x{81}\x{84}"};

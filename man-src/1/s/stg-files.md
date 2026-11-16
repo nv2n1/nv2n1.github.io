@@ -19,15 +19,15 @@ stg files[options][--][[&lt;branch&gt;:]&lt;patch&gt;]
 <p> -s, &#8211;stat</p>
 <dl>
 <dt>
-<dd> Show the diffstat.</dl>
+</dt><dd> Show the diffstat.</dd></dl>
 <p> &#8211;bare</p>
 <dl>
 <dt>
-<dd> Bare file names (useful for scripting).</dl>
+</dt><dd> Bare file names (useful for scripting).</dd></dl>
 <p> -O OPTIONS, &#8211;diff-opts OPTIONS</p>
 <dl>
 <dt>
-<dd> Extra options to pass to &quot;git diff&quot;.</dl>
+</dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

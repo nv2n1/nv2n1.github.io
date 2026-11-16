@@ -16,8 +16,8 @@ description: "ldns_rr_uncompressed_size"
 <p> size_t ldns_rr_uncompressed_size(const ldns_rr *r); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_uncompressed_size</i>()</p>
-<dd>calculates the uncompressed size of an RR. .br <code>r</code>: the rr to operate on .br Returns size of the rr</dl>
+<dt> <i>ldns_rr_uncompressed_size</i>()</dt>
+<dd>calculates the uncompressed size of an RR. .br <code>r</code>: the rr to operate on .br Returns size of the rr</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

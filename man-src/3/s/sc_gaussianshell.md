@@ -11,7 +11,6 @@ description: "sc::GaussianShell –"
 <p> A Gaussian orbital shell.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;gaussshell.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Types</h3>
@@ -94,22 +93,22 @@ description: "sc::GaussianShell –"
 <h3>sc::GaussianShell::GaussianShell (int ncn, int nprm, double * e, int * am, int * pure, double ** c, PrimitiveType pt = GaussianShell::Normalized, bool do_normalize_shell = true)</h3>
 <p>A <code>GaussianShell</code> constructor. Users of <code>GaussianShell</code> must pass pointers to newed memory that is kept by <code>GaussianShell</code> and deleted by the destructor. The arguments for the following ctor are: </p>
 <dl>
-<dt>*</p>
-<dd>ncn is the number of contracted functions (1 except for SP and gen. con.)</p>
-<dt>*</p>
-<dd>nprm is the number of primitives</p>
-<dt>*</p>
-<dd>e gives the exponents (length nprm)</p>
-<dt>*</p>
-<dd>am gives the angular momentum (length ncn)</p>
-<dt>*</p>
-<dd>pure is 1 for pure am and 0 for cartesian (length ncn)</p>
-<dt>*</p>
-<dd>c are the contraction coefficients (length ncn by nprm)</p>
-<dt>*</p>
-<dd>pt describes whether the primitive functions are to be considered normalized or unnormalized. This effects whether or not c is manipulated to give the correct normalization.</p>
-<dt>*</p>
-<dd>If do_normalize_shell is true (the default), then the shell normalization constants will be folded into the coefficients.</dl>
+<dt>*</dt>
+<dd>ncn is the number of contracted functions (1 except for SP and gen. con.)</dd>
+<dt>*</dt>
+<dd>nprm is the number of primitives</dd>
+<dt>*</dt>
+<dd>e gives the exponents (length nprm)</dd>
+<dt>*</dt>
+<dd>am gives the angular momentum (length ncn)</dd>
+<dt>*</dt>
+<dd>pure is 1 for pure am and 0 for cartesian (length ncn)</dd>
+<dt>*</dt>
+<dd>c are the contraction coefficients (length ncn by nprm)</dd>
+<dt>*</dt>
+<dd>pt describes whether the primitive functions are to be considered normalized or unnormalized. This effects whether or not c is manipulated to give the correct normalization.</dd>
+<dt>*</dt>
+<dd>If do_normalize_shell is true (the default), then the shell normalization constants will be folded into the coefficients.</dd></dl>
 <h3>sc::GaussianShell::GaussianShell (int ncn, int nprm, double * e, int * am, GaussianType pure, double ** c, PrimitiveType pt = GaussianShell::Normalized)</h3>
 <p>A <code>GaussianShell</code> constructor. In this ctor pure is either GaussianShell::Cartesian or Gaussian::Pure and all of the contracted functions are treated in that way. (The user doesn\&#8217;t need to compute generate a int*pure vector in this case.)</p>
 <h3>sc::GaussianShell::GaussianShell (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int pure)</h3>

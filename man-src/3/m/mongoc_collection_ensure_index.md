@@ -18,21 +18,21 @@ mongoc_collection_ensure_index (mongoc_collection_t *collection,
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>This function is deprecated and should not be used in new code.</dl>
+<dd>This function is deprecated and should not be used in new code.</dd></dl>
 <p> Please use <code><a href="/docs/linux/man/3-mongoc_collection_create_index/">mongoc_collection_create_index</a>(3)</code> instead. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>keys</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>keys</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opt</code></p>
-<dd>A mongoc_index_opt_t.</dl>
+<dt><code>opt</code></dt>
+<dd>A mongoc_index_opt_t.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Colophon</h2>

@@ -10,7 +10,6 @@ description: "utoupper – Converts a letter to upper case. Allegro game program
 <p>utoupper &#8211; Converts a letter to upper case. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int utoupper(int c);</code></pre>
 <h2>Description</h2>
 <p>This function returns `c&#8217;, converting it to upper case if it is lower case. </p>

@@ -69,8 +69,8 @@ description: "mount_ecryptfs_selinux – Security Enhanced Linux Policy for the 
 <p> <code>mount_ecryptfs_exec_t</code> </p>
 <p> &#8211; Set files with the mount_ecryptfs_exec_t type, if you want to transition an executable to the mount_ecryptfs_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/mount.ecryptfs, /usr/sbin/umount.ecryptfs, /usr/sbin/mount.ecryptfs_private, /usr/sbin/umount.ecryptfs_private </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/mount.ecryptfs, /usr/sbin/umount.ecryptfs, /usr/sbin/mount.ecryptfs_private, /usr/sbin/umount.ecryptfs_private </dd>
 </dl>
 <p> <code>mount_ecryptfs_tmpfs_t</code> </p>
 <p> &#8211; Set files with the mount_ecryptfs_tmpfs_t type, if you want to store mount ecryptfs files on a tmpfs file system. </p>

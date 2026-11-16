@@ -11,19 +11,13 @@ std::experimental::ranges::View - std::experimental::ranges::View
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / range&gt;
-
     template &lt;class T&gt;
-
     concept bool View = Range&lt;T&gt; &amp;&amp; Semiregular&lt;T&gt;(ranges TS)
-
                                         &amp;&amp; /* view-predicate&lt;T&gt; */;
-
 template &lt;class T&gt;
 (ranges TS)
-
     struct enable_view {
 };
-
 struct view_base {
 };
 (ranges TS)</code></pre> 

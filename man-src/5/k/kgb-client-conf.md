@@ -21,14 +21,14 @@ description: "kgb-client.conf — KGB client configuration file"
 <h3>servers</h3>
 <p>A list of maps, describing the servers to try to send ntifications to. Each server map can have the following members:</p>
 <dl>
-<dt><code>uri</code></p>
-<dd>The <font SIZE="-1">URI</font> of the server. Something like <tt>&quot;<a rel="nofollow" href="http://kgb.server.org:port/">http://kgb.server.org:port/</a>&quot;</tt>.</p>
-<dt><code>proxy</code></p>
-<dd><font SIZE="-1">SOAP</font> proxy to use. Mandatory if using <font SIZE="-1">SOAP</font> protocol. Defaults to to the value of the <code>uri</code> setting, with <tt>&quot;?session=KGB&quot;</tt> appended.</p>
-<dt><code>password</code></p>
-<dd>Per-server pass phrase. Defaults to the global <code>password</code> setting.</p>
-<dt><code>timeout</code></p>
-<dd>Timeout of the request. Defaults to the global <code>timeout</code> setting.</dl>
+<dt><code>uri</code></dt>
+<dd>The <font SIZE="-1">URI</font> of the server. Something like <tt>&quot;<a rel="nofollow" href="http://kgb.server.org:port/">http://kgb.server.org:port/</a>&quot;</tt>.</dd>
+<dt><code>proxy</code></dt>
+<dd><font SIZE="-1">SOAP</font> proxy to use. Mandatory if using <font SIZE="-1">SOAP</font> protocol. Defaults to to the value of the <code>uri</code> setting, with <tt>&quot;?session=KGB&quot;</tt> appended.</dd>
+<dt><code>password</code></dt>
+<dd>Per-server pass phrase. Defaults to the global <code>password</code> setting.</dd>
+<dt><code>timeout</code></dt>
+<dd>Timeout of the request. Defaults to the global <code>timeout</code> setting.</dd></dl>
 <h3><code>status_dir</code></h3>
 <p>Directory to store information about the last successfuly contacted server. If the request is soon after the last contact, the last server is tried first. This way related notifications tend to come out of the same server.</p>
 <h2>Content configuration</h2>
@@ -48,12 +48,12 @@ description: "kgb-client.conf — KGB client configuration file"
 <h3><code>single-line-commits</code></h3>
 <p>Send only a single line of the commit message to the channel. Possible values: auto|force|off.</p>
 <dl>
-<dt><code>auto</code></p>
-<dd><code>(default)</code> Uses single line notification if the commit log&#8217;s second line is an empty string. Otherwise uses the whole commit log (as if set to <code>off</code>).</p>
-<dt><code>force</code></p>
-<dd>Uses only the first line of the commit log, ignoring the rest.</p>
-<dt><code>off</code></p>
-<dd>Uses the whole commit log, ignoring any empty lines.</dl>
+<dt><code>auto</code></dt>
+<dd><code>(default)</code> Uses single line notification if the commit log&#8217;s second line is an empty string. Otherwise uses the whole commit log (as if set to <code>off</code>).</dd>
+<dt><code>force</code></dt>
+<dd>Uses only the first line of the commit log, ignoring the rest.</dd>
+<dt><code>off</code></dt>
+<dd>Uses the whole commit log, ignoring any empty lines.</dd></dl>
 <h3><code>use-irc-notices</code></h3>
 <p>If set to a true value will make the <font SIZE="-1">IRC</font> bot use <font SIZE="-1">IRC </font><tt>&quot;notice&quot;</tt> messages instead of the ordinary <tt>&quot;privmsg&quot;</tt> messages.</p>
 <h3><code>use-color</code></h3>
@@ -85,8 +85,8 @@ description: "kgb-client.conf — KGB client configuration file"
 <p><i><a href="/docs/linux/man/1-kgb-client/">kgb-client</a></i>(1), App::KGB::Client, WWW::Shorten, WWW::Shorten::Debli, <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1)</p>
 <h2>Author</h2>
 <dl>
-<dt>Damyan Ivanov dmn [at] debian.org</p>
-<dd></dl>
+<dt>Damyan Ivanov dmn [at] debian.org</dt>
+<dd></dd></dl>
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p>Copyright (C) 2012, 2013 Damyan Ivanov </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

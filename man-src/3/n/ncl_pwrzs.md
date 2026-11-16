@@ -22,32 +22,32 @@ CALL PWRZS (X,Y,Z,ID,N,ISIZE,LINE,ITOP,ICNT)
 <h2>Description</h2>
 
 <dl><dt>X,Y,Z
-<dd>Positioning coordinates for the characters to be drawn. These are floating point numbers in the same three-space as used in SRFACE.
-<dt>ID
-<dd>Character string to be drawn. ID is of type CHARACTER.
-<dt>N
-<dd>The number of characters in ID.
-<dt>ISIZE
-<dd>Size of the character:
-<dl><dd><dl><dt>&bull;
-<dd>If between 0 and 3, ISIZE is 1., 1.5, 2., or 3. times a standard width equal to 1/128th of the screen width.
-<dt>&bull;
-<dd>If greater than 3, ISIZE is the character width in plotter address units.</dl></dl><dt>LINE
-<dd>The direction in which the characters are to be written. 
+</dt><dd>Positioning coordinates for the characters to be drawn. These are floating point numbers in the same three-space as used in SRFACE.
+</dd><dt>ID
+</dt><dd>Character string to be drawn. ID is of type CHARACTER.
+</dd><dt>N
+</dt><dd>The number of characters in ID.
+</dd><dt>ISIZE
+</dt><dd>Size of the character:
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>If between 0 and 3, ISIZE is 1., 1.5, 2., or 3. times a standard width equal to 1/128th of the screen width.
+</dd><dt>&bull;
+</dt><dd>If greater than 3, ISIZE is the character width in plotter address units.</dd></dl></dl><dt>LINE
+</dt><dd>The direction in which the characters are to be written. 
 
  1 = +X -1 = -X 
  2 = +Y -2 = -Y 
  3 = +Z -3 = -Z
-<dt>ITOP
-<dd>The direction from the center of the first character to the top of the first character (the potential values for ITOP are the same as those for LINE as given above). Note that LINE cannot equal ITOP even in absolute value.
-<dt>ICNT
-<dd>Centering option.
-<dl><dd><dl><dt>-1 (X,Y,Z)
-<dd>is the center of the left edge of the first character.
-<dt>0 (X,Y,Z)
-<dd>is the center of the entire string.
-<dt>1 (X,Y,Z)
-<dd>is the center of the right edge of the last character.</dl></dl><dd>Note that the hidden character problem is solved correctly for characters near, but not inside, the three-space object.</dl>
+</dd><dt>ITOP
+</dt><dd>The direction from the center of the first character to the top of the first character (the potential values for ITOP are the same as those for LINE as given above). Note that LINE cannot equal ITOP even in absolute value.
+</dd><dt>ICNT
+</dt><dd>Centering option.
+</dd><dl><dd></dd><dl><dt>-1 (X,Y,Z)
+</dt><dd>is the center of the left edge of the first character.
+</dd><dt>0 (X,Y,Z)
+</dt><dd>is the center of the entire string.
+</dd><dt>1 (X,Y,Z)
+</dt><dd>is the center of the right edge of the last character.</dd></dl></dl><dd>Note that the hidden character problem is solved correctly for characters near, but not inside, the three-space object.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

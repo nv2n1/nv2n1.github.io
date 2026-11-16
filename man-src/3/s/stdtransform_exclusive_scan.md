@@ -10,27 +10,16 @@ description: "std::transform_exclusive_scan – std::transform_exclusive_scan"
 <p>std::transform_exclusive_scan &#8211; std::transform_exclusive_scan</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt, class OutputIt, class T,
-
 class BinaryOperation, class UnaryOperation&gt;                                              (1) (since C++17)
-
 OutputIt transform_exclusive_scan( InputIt first, InputIt last, OutputIt d_first, T init,
-
 BinaryOperation binary_op, UnaryOperation unary_op);
-
 template&lt; class ExecutionPolicy,
-
 class ForwardIt1, class ForwardIt2,
-
 class T, class BinaryOperation, class UnaryOperation &gt;
-
 ForwardIt2 transform_exclusive_scan( ExecutionPolicy&amp;&amp; policy,                            (2) (since C++17)
-
 ForwardIt1 first, ForwardIt1 last,
-
 ForwardIt2 d_first, T init,
-
 BinaryOperation binary_op, UnaryOperation unary_op );</code></pre>
 <p>Transforms each element in the range [first, last) with unary_op, then computes an exclusive prefix sum operation using binary_op over the resulting range, with init as the initial value, and writes the results to the range beginning at d_first. &quot;exclusive&quot; means that the i-th input element is not included in the i-th sum.<br />
 Formally, assigns through each iterator i in [d_first, d_first + (last &#8211; first)) the value of the generalized noncommutative sum of init, unary_op(*j)&#8230; for every j in [first, first + (i &#8211; d_first)) over binary_op,<br />
@@ -75,35 +64,25 @@ T must meet the requirements of MoveConstructible. All of binary_op(init, unary_
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;vector&gt;
 int times_10(int x)
-
 {
     return x * 10;
 }
 int main()
-
 {
     std::vector data{3, 1, 4, 1, 5, 9, 2, 6};
     std::cout &lt;&lt; &quot;10 times exclusive sum: &quot;;
     std::transform_exclusive_scan(data.begin(), data.end(),
-
                                   std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                                   0, std::plus&lt;int&gt;{}, times_10);
     std::cout &lt;&lt; &quot;
 10 times inclusive sum: &quot;;
     std::transform_inclusive_scan(data.begin(), data.end(),
-
                                   std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
-
                                   std::plus&lt;int&gt;{}, times_10);
 }
 </code></pre>

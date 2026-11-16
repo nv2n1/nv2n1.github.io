@@ -28,42 +28,42 @@ description: "pcp-vmstat, pmstat – high-level system performance overview"
 <p> The <code>-x</code> option (extended CPU metrics) causes two additional CPU metrics to be reported, namely wait for I/O (&quot;wa&quot;) and virtualisation steal time (&quot;st&quot;). </p>
 <p> The output from <code>pmstat</code> is directed to standard output, and the columns in the report are interpreted as follows: </p>
 <dl>
-<dt><code>loadavg</code></p>
-<dd> The <i>1 minute</i> load average.</p>
-<dt><code>memory</code></p>
-<dd> The <code>swpd</code> column indicates average swap space used during the interval, in Kbytes. The <code>free</code> column indicates average free memory during the interval, in Kbytes. The <code>buff</code> column indicates average buffer memory in use during the interval, in Kbytes. The <code>cache</code> column indicates average cached memory in use during the interval, in Kbytes.</p>
+<dt><code>loadavg</code></dt>
+<dd> The <i>1 minute</i> load average.</dd>
+<dt><code>memory</code></dt>
+<dd> The <code>swpd</code> column indicates average swap space used during the interval, in Kbytes. The <code>free</code> column indicates average free memory during the interval, in Kbytes. The <code>buff</code> column indicates average buffer memory in use during the interval, in Kbytes. The <code>cache</code> column indicates average cached memory in use during the interval, in Kbytes.</dd>
 <dl>
 <dt>
-<dd>
-<p> If the values become large, they are reported as Mbytes (<code>m</code> suffix) or Gbytes (<code>g</code> suffix).</dl>
-<dt><code>swap</code></p>
-<dd> The metrics in this area of the kernel instrumentation are of varying value. We try to report the average number of <code>pages</code> that are paged in (<code>pi</code>) and out (<code>po</code>) per second during the interval. If the corresponding page swapping metrics are unavailable, we report the average rate per second of swap <code>operations</code> in (<code>si</code>) and out (<code>so</code>) during the interval. It is normal for the &#8220;in&#8221; values to be non-zero, but the system is suffering memory stress if the &#8220;out&#8221; values are non-zero over an extended period.</p>
+</dt><dd>
+<p> If the values become large, they are reported as Mbytes (<code>m</code> suffix) or Gbytes (<code>g</code> suffix).</dd></dl>
+<dt><code>swap</code></dt>
+<dd> The metrics in this area of the kernel instrumentation are of varying value. We try to report the average number of <code>pages</code> that are paged in (<code>pi</code>) and out (<code>po</code>) per second during the interval. If the corresponding page swapping metrics are unavailable, we report the average rate per second of swap <code>operations</code> in (<code>si</code>) and out (<code>so</code>) during the interval. It is normal for the &#8220;in&#8221; values to be non-zero, but the system is suffering memory stress if the &#8220;out&#8221; values are non-zero over an extended period.</dd>
 <dl>
 <dt>
-<dd>
-<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dl>
-<dt><code>io</code></p>
-<dd> The <code>bi</code> and <code>bo</code> columns indicate the average rate per second of block input and block output operations (respectfully) during the interval. Unless all file systems have a 1 Kbyte block size, these rates do not directly indicate Kbytes transferred.</p>
+</dt><dd>
+<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dd></dl>
+<dt><code>io</code></dt>
+<dd> The <code>bi</code> and <code>bo</code> columns indicate the average rate per second of block input and block output operations (respectfully) during the interval. Unless all file systems have a 1 Kbyte block size, these rates do not directly indicate Kbytes transferred.</dd>
 <dl>
 <dt>
-<dd>
-<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dl>
-<dt><code>system</code></p>
-<dd> Interrupt rate (<code>in</code>) and context switch rate (<code>cs</code>). Rates are expressed as average operations per second during the interval. Note that the interrupt rate is normally at least <i>HZ</i> (the clock interrupt rate, usually 100) interrupts per second.</p>
+</dt><dd>
+<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dd></dl>
+<dt><code>system</code></dt>
+<dd> Interrupt rate (<code>in</code>) and context switch rate (<code>cs</code>). Rates are expressed as average operations per second during the interval. Note that the interrupt rate is normally at least <i>HZ</i> (the clock interrupt rate, usually 100) interrupts per second.</dd>
 <dl>
 <dt>
-<dd>
-<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dl>
-<dt><code>cpu</code></p>
-<dd> Percentage of CPU time spent executing user and &quot;nice user&quot; code (<code>us</code>), system and interrupt processing code (<code>sy</code>), idle loop (<code>id</code>).</dl>
+</dt><dd>
+<p> If the values become large, they are reported as thousands of operations per second (<code>K</code> suffix) or millions of operations per second (<code>M</code> suffix).</dd></dl>
+<dt><code>cpu</code></dt>
+<dd> Percentage of CPU time spent executing user and &quot;nice user&quot; code (<code>us</code>), system and interrupt processing code (<code>sy</code>), idle loop (<code>id</code>).</dd></dl>
 <p> If any values for the associated performance metrics are unavailable, the value appears as &#8220;?&#8221; in the output. </p>
 <p> By default, <code>pmstat</code> reports the time of day according to the local timezone on the system where <code>pmstat</code> is run. The <code>-Z</code> option changes the timezone to <i>timezone</i> in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7). The <code>-z</code> option changes the timezone to the local timezone at the host that is the source of the performance metrics, as identified via either the <code>-h</code> or <code>-a</code> options.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
-<dd> default PMNS specification files</p>
-<dt><code>$PCP_VAR_DIR/config/pmlogger/config.pmstat</code></p>
-<dd> <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) configuration for creating an archive suitable for replay with <code>pmstat</code></dl>
+<dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></dt>
+<dd> default PMNS specification files</dd>
+<dt><code>$PCP_VAR_DIR/config/pmlogger/config.pmstat</code></dt>
+<dd> <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) configuration for creating an archive suitable for replay with <code>pmstat</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

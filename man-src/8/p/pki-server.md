@@ -15,10 +15,10 @@ description: "pki-server – Command-Line Interface for performing administrativ
 <h2>Cli Options</h2>
 <p><code>&#8211;help</code> Prints additional help information.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Displays debug information.</p>
-<dt><code>-v</code></p>
-<dd>Displays verbose information. </p>
+<dt><code>-d</code></dt>
+<dd>Displays debug information.</dd>
+<dt><code>-v</code></dt>
+<dd>Displays verbose information. </dd>
 </dl>
 <h2>Operations</h2>
 <p>To view available commands and options, simply type <code>pki-server</code>. </p>
@@ -28,16 +28,16 @@ description: "pki-server – Command-Line Interface for performing administrativ
 <h2>See Also</h2>
 <p><code>pki-server-instance</code>(1)</p>
 <dl>
-<dd>Certificate Server instance management commands</dl>
+<dd>Certificate Server instance management commands</dd></dl>
 <p> <code>pki-server-subsystem</code>(1)</p>
 <dl>
-<dd>Certificate Server subsystem management commands</dl>
+<dd>Certificate Server subsystem management commands</dd></dl>
 <p> <code>pki-server-migrate</code>(1)</p>
 <dl>
-<dd>Certificate server migration script management commands</dl>
+<dd>Certificate server migration script management commands</dd></dl>
 <p> <code>pki-server-nuxwdog</code>(1)</p>
 <dl>
-<dd>Commands to enable/disable startup using <code>nuxwdog</code>.</dl>
+<dd>Commands to enable/disable startup using <code>nuxwdog</code>.</dd></dl>
 <h2>Authors</h2>
 <p>Ade Lee &lt;alee [at] redhat.com&gt;.</p>
 <h2>Copyright</h2>

@@ -162,24 +162,24 @@ my $factorial = sub<br />
 <p> The behavior of <tt>&quot;__SUB__&quot;</tt> within a regex code block (such as <tt>&quot;/(?{...})/&quot;</tt>) is subject to change. </p>
 <p> Subroutines whose names are in all upper case are reserved to the Perl core, as are modules whose names are in all lower case. A subroutine in all capitals is a loosely-held convention meaning it will be called indirectly by the run-time system itself, usually due to a triggered event. Subroutines whose name start with a left parenthesis are also reserved the same way. The following is a list of some subroutines that currently do special, pre-defined things.</p>
 <dl>
-<dt>documented later in this document</p>
-<dd> <tt>&quot;AUTOLOAD&quot;</tt></p>
-<dt>documented in perlmod</p>
-<dd> <tt>&quot;CLONE&quot;</tt>, <tt>&quot;CLONE_SKIP&quot;</tt></p>
-<dt>documented in perlobj</p>
-<dd> <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;DOES&quot;</tt></p>
-<dt>documented in perltie</p>
-<dd> <tt>&quot;BINMODE&quot;</tt>, <tt>&quot;CLEAR&quot;</tt>, <tt>&quot;CLOSE&quot;</tt>, <tt>&quot;DELETE&quot;</tt>, <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;EOF&quot;</tt>, <tt>&quot;EXISTS&quot;</tt>, <tt>&quot;EXTEND&quot;</tt>, <tt>&quot;FETCH&quot;</tt>, <tt>&quot;FETCHSIZE&quot;</tt>, <tt>&quot;FILENO&quot;</tt>, <tt>&quot;FIRSTKEY&quot;</tt>, <tt>&quot;GETC&quot;</tt>, <tt>&quot;NEXTKEY&quot;</tt>, <tt>&quot;OPEN&quot;</tt>, <tt>&quot;POP&quot;</tt>, <tt>&quot;PRINT&quot;</tt>, <tt>&quot;PRINTF&quot;</tt>, <tt>&quot;PUSH&quot;</tt>, <tt>&quot;READ&quot;</tt>, <tt>&quot;READLINE&quot;</tt>, <tt>&quot;SCALAR&quot;</tt>, <tt>&quot;SEEK&quot;</tt>, <tt>&quot;SHIFT&quot;</tt>, <tt>&quot;SPLICE&quot;</tt>, <tt>&quot;STORE&quot;</tt>, <tt>&quot;STORESIZE&quot;</tt>, <tt>&quot;TELL&quot;</tt>, <tt>&quot;TIEARRAY&quot;</tt>, <tt>&quot;TIEHANDLE&quot;</tt>, <tt>&quot;TIEHASH&quot;</tt>, <tt>&quot;TIESCALAR&quot;</tt>, <tt>&quot;UNSHIFT&quot;</tt>, <tt>&quot;UNTIE&quot;</tt>, <tt>&quot;WRITE&quot;</tt></p>
-<dt>documented in PerlIO::via</p>
-<dd> <tt>&quot;BINMODE&quot;</tt>, <tt>&quot;CLEARERR&quot;</tt>, <tt>&quot;CLOSE&quot;</tt>, <tt>&quot;EOF&quot;</tt>, <tt>&quot;ERROR&quot;</tt>, <tt>&quot;FDOPEN&quot;</tt>, <tt>&quot;FILENO&quot;</tt>, <tt>&quot;FILL&quot;</tt>, <tt>&quot;FLUSH&quot;</tt>, <tt>&quot;OPEN&quot;</tt>, <tt>&quot;POPPED&quot;</tt>, <tt>&quot;PUSHED&quot;</tt>, <tt>&quot;READ&quot;</tt>, <tt>&quot;SEEK&quot;</tt>, <tt>&quot;SETLINEBUF&quot;</tt>, <tt>&quot;SYSOPEN&quot;</tt>, <tt>&quot;TELL&quot;</tt>, <tt>&quot;UNREAD&quot;</tt>, <tt>&quot;UTF8&quot;</tt>, <tt>&quot;WRITE&quot;</tt></p>
-<dt>documented in perlfunc</p>
-<dd> <tt>&quot;import&quot;</tt> , <tt>&quot;unimport&quot;</tt> , <tt>&quot;INC&quot;</tt></p>
-<dt>documented in <font SIZE="-1">UNIVERSAL</font></p>
-<dd> <tt>&quot;VERSION&quot;</tt></p>
-<dt>documented in perldebguts</p>
-<dd> <tt>&quot;DB::DB&quot;</tt>, <tt>&quot;DB::sub&quot;</tt>, <tt>&quot;DB::lsub&quot;</tt>, <tt>&quot;DB::goto&quot;</tt>, <tt>&quot;DB::postponed&quot;</tt></p>
-<dt>undocumented, used internally by the overload feature</p>
-<dd> any starting with <tt>&quot;(&quot;</tt></dl>
+<dt>documented later in this document</dt>
+<dd> <tt>&quot;AUTOLOAD&quot;</tt></dd>
+<dt>documented in perlmod</dt>
+<dd> <tt>&quot;CLONE&quot;</tt>, <tt>&quot;CLONE_SKIP&quot;</tt></dd>
+<dt>documented in perlobj</dt>
+<dd> <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;DOES&quot;</tt></dd>
+<dt>documented in perltie</dt>
+<dd> <tt>&quot;BINMODE&quot;</tt>, <tt>&quot;CLEAR&quot;</tt>, <tt>&quot;CLOSE&quot;</tt>, <tt>&quot;DELETE&quot;</tt>, <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;EOF&quot;</tt>, <tt>&quot;EXISTS&quot;</tt>, <tt>&quot;EXTEND&quot;</tt>, <tt>&quot;FETCH&quot;</tt>, <tt>&quot;FETCHSIZE&quot;</tt>, <tt>&quot;FILENO&quot;</tt>, <tt>&quot;FIRSTKEY&quot;</tt>, <tt>&quot;GETC&quot;</tt>, <tt>&quot;NEXTKEY&quot;</tt>, <tt>&quot;OPEN&quot;</tt>, <tt>&quot;POP&quot;</tt>, <tt>&quot;PRINT&quot;</tt>, <tt>&quot;PRINTF&quot;</tt>, <tt>&quot;PUSH&quot;</tt>, <tt>&quot;READ&quot;</tt>, <tt>&quot;READLINE&quot;</tt>, <tt>&quot;SCALAR&quot;</tt>, <tt>&quot;SEEK&quot;</tt>, <tt>&quot;SHIFT&quot;</tt>, <tt>&quot;SPLICE&quot;</tt>, <tt>&quot;STORE&quot;</tt>, <tt>&quot;STORESIZE&quot;</tt>, <tt>&quot;TELL&quot;</tt>, <tt>&quot;TIEARRAY&quot;</tt>, <tt>&quot;TIEHANDLE&quot;</tt>, <tt>&quot;TIEHASH&quot;</tt>, <tt>&quot;TIESCALAR&quot;</tt>, <tt>&quot;UNSHIFT&quot;</tt>, <tt>&quot;UNTIE&quot;</tt>, <tt>&quot;WRITE&quot;</tt></dd>
+<dt>documented in PerlIO::via</dt>
+<dd> <tt>&quot;BINMODE&quot;</tt>, <tt>&quot;CLEARERR&quot;</tt>, <tt>&quot;CLOSE&quot;</tt>, <tt>&quot;EOF&quot;</tt>, <tt>&quot;ERROR&quot;</tt>, <tt>&quot;FDOPEN&quot;</tt>, <tt>&quot;FILENO&quot;</tt>, <tt>&quot;FILL&quot;</tt>, <tt>&quot;FLUSH&quot;</tt>, <tt>&quot;OPEN&quot;</tt>, <tt>&quot;POPPED&quot;</tt>, <tt>&quot;PUSHED&quot;</tt>, <tt>&quot;READ&quot;</tt>, <tt>&quot;SEEK&quot;</tt>, <tt>&quot;SETLINEBUF&quot;</tt>, <tt>&quot;SYSOPEN&quot;</tt>, <tt>&quot;TELL&quot;</tt>, <tt>&quot;UNREAD&quot;</tt>, <tt>&quot;UTF8&quot;</tt>, <tt>&quot;WRITE&quot;</tt></dd>
+<dt>documented in perlfunc</dt>
+<dd> <tt>&quot;import&quot;</tt> , <tt>&quot;unimport&quot;</tt> , <tt>&quot;INC&quot;</tt></dd>
+<dt>documented in <font SIZE="-1">UNIVERSAL</font></dt>
+<dd> <tt>&quot;VERSION&quot;</tt></dd>
+<dt>documented in perldebguts</dt>
+<dd> <tt>&quot;DB::DB&quot;</tt>, <tt>&quot;DB::sub&quot;</tt>, <tt>&quot;DB::lsub&quot;</tt>, <tt>&quot;DB::goto&quot;</tt>, <tt>&quot;DB::postponed&quot;</tt></dd>
+<dt>undocumented, used internally by the overload feature</dt>
+<dd> any starting with <tt>&quot;(&quot;</tt></dd></dl>
 <p> The <tt>&quot;BEGIN&quot;</tt>, <tt>&quot;UNITCHECK&quot;</tt>, <tt>&quot;CHECK&quot;</tt>, <tt>&quot;INIT&quot;</tt> and <tt>&quot;END&quot;</tt> subroutines are not so much subroutines as named special code blocks, of which you can have more than one in a package, and which you can <code>not</code> call explicitly. See &#8220;<font SIZE="-1">BEGIN, UNITCHECK, CHECK, INIT</font> and <font SIZE="-1">END&#8221;</font> in perlmod</p>
 <h3>Signatures</h3>
 <p> <font SIZE="-1"><code>WARNING</code></font>: Subroutine signatures are experimental. The feature may be modified or removed in future versions of Perl. </p>
@@ -694,8 +694,8 @@ doubleary(*bar);</p>
 <h3>When to Still Use <code>local()</code></h3>
 <p> Despite the existence of <tt>&quot;my&quot;</tt>, there are still three places where the <tt>&quot;local&quot;</tt> operator still shines. In fact, in these three places, you <i>must</i> use <tt>&quot;local&quot;</tt> instead of <tt>&quot;my&quot;</tt>.</p>
 <dl>
-<dt>1.</p>
-<dd> You need to give a global variable a temporary value, especially <tt>$_</tt>. </p>
+<dt>1.</dt>
+<dd> You need to give a global variable a temporary value, especially <tt>$_</tt>. </dd>
 <p> The global variables, like <tt>@ARGV</tt> or the punctuation variables, must be <tt>&quot;local&quot;</tt>ized with <tt>&quot;local()&quot;</tt>. This block reads in <i>/etc/motd</i>, and splits it up into chunks separated by lines of equal signs, which are placed in <tt>@Fields</tt>. </p>
 <p>{<br />
     local @ARGV = (&#8220;/etc/motd&#8221;);<br />
@@ -704,8 +704,8 @@ doubleary(*bar);</p>
     @Fields = split / ^\s *= +\s *$ / ;<br />
 }</p>
 <p> It particular, it&#8217;s important to <tt>&quot;local&quot;</tt>ize <tt>$_</tt> in any routine that assigns to it. Look out for implicit assignments in <tt>&quot;while&quot;</tt> conditionals.</p>
-<dt>2.</p>
-<dd> You need to create a local file or directory handle or a local function. </p>
+<dt>2.</dt>
+<dd> You need to create a local file or directory handle or a local function. </dd>
 <p> A function that needs a filehandle of its own must use <tt>&quot;local()&quot;</tt> on a complete typeglob. This can be used to create new symbol table entries: </p>
 <p>sub ioqueue<br />
 {<br />
@@ -727,8 +727,8 @@ doubleary(*bar);</p>
 grow();<br />
 #get the real grow() again</p>
 <p> See &#8220;Function Templates&#8221; in perlref for more about manipulating functions by name in this way.</p>
-<dt>3.</p>
-<dd> You want to temporarily change just one element of an array or hash. </p>
+<dt>3.</dt>
+<dd> You want to temporarily change just one element of an array or hash. </dd>
 <p> You can <tt>&quot;local&quot;</tt>ize just one element of an aggregate. Usually this is done on dynamics: </p>
 <p>{<br />
     local $SIG{INT} = &#8216;IGNORE&#8217;;<br />
@@ -1142,5 +1142,5 @@ ls &#8216;-l&#8217;;</p>
 <h2>SEE ALSO</h2>
 <p> See &#8220;Function Templates&#8221; in perlref for more about references and closures. See perlxs if you&#8217;d like to learn about calling C subroutines from Perl. See perlembed if you&#8217;d like to learn about calling Perl subroutines from C. See perlmod to learn about bundling up your functions in separate files. See perlmodlib to learn what library modules come standard on your system. See perlootut to learn how to make object method calls. </p>
 <h2>Index</h2>
-<dt><a href="#lbAS">SEE ALSO</a></p>
-<dd></dl>
+<dt><a href="#lbAS">SEE ALSO</a></dt>
+<dd></dd></dl>

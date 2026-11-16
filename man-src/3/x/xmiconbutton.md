@@ -66,22 +66,14 @@ The Icon Button widget
 <h2>Callback Routines</h2>Whenever the user selects the icon button the activate callbacks will be called. When- ever the user double clicks on this widget the first click will call the activateCallback, and if the second occurs within MultiClickTime it will call the doubleClickCallback.. These callbacks have the following parameters: 
 
 <dl COMPACT><dd>void (activate_callback)(Widget w, XtPointer client_data, XtPointer call_data) 
-
-<dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Icon Button widget
-
-<dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
-
-<dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an XmIconButtonCallbackInfo structure
- 
-
-<dd>void (double_click_callback)(Widget w, XtPointer client_data, XtPointer call_data) 
-
-<dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Icon Button widget
-
-<dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
-
-<dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an XmIconButtonCallbackInfo structure
-</dl>
+</dd><dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Icon Button widget
+</dd><dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
+</dd><dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an XmIconButtonCallbackInfo structure
+</dd><dd>void (double_click_callback)(Widget w, XtPointer client_data, XtPointer call_data) 
+</dd><dd>w<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the Icon Button widget
+</dd><dd>client_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the client data specified by the application
+</dd><dd>call_data<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>a pointer to an XmIconButtonCallbackInfo structure
+</dd></dl>
  
 
  All procedures on the Icon Button's activateCallback and doubleClickCallback lists will have a pointer to an IconButtonCallbackInfo structure passed to them in the call_data field. This structure is defined in the Icon Button widget's public header file as follows: 
@@ -98,9 +90,9 @@ The Icon Button widget
 
 <dl COMPACT><dd>state<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the current state of the icon button. When this is used as a push 
  button (the default) the state variable will always be True.
-<dd>event<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the X Event that caused this action, see Translations and Actions 
- below for details on the events that can cause these callbacks to be called.</dl><h2>Convenience Routine</h2><h2>
-<dt></h2></dl><h2>XmCreateIconButton - Widget creation convenience routine</h2><pre><dd>Widget XmCreateIconButton( 
+</dd><dd>event<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>the X Event that caused this action, see Translations and Actions 
+ below for details on the events that can cause these callbacks to be called.</dd></dl><h2>Convenience Routine</h2><h2>
+<dt></h2></dt></dl><h2>XmCreateIconButton - Widget creation convenience routine</h2><pre><dd>Widget XmCreateIconButton( 
  Widget parent,/* Widget id of parent for IconButton */
  String name, /* Name of the created widget */
  ArgList args,/* argument list */
@@ -116,12 +108,12 @@ The following are the default translation bindings used by the icon button:</pre
 </td></tr><tr VALIGN=top><td>None&lt;Key&gt;Return:</td><td>XmArmAndActivate()
 </td></tr><tr VALIGN=top><td>&lt;Btn1Down&gt;,&lt;Leave&gt;</td><td>XmToggle()
 </td></tr> </table> <pre>The following actions are supported by the icon button:
-<dl COMPACT><dt><dd>XmToggle() Toggles the state of the icon button.
-<dt><dd>XmNotify() Calls all routines on activateCallback list.
-<dt><dd>XmDoubleNotify()Calls all routines on the doubleClickCallback list. 
-<dt><dd>XmArmAndActivated()This action will arm the button, call the actions on the activateCallback 
+</dd><dl COMPACT><dt></dt><dd>XmToggle() Toggles the state of the icon button.
+</dd><dt></dt><dd>XmNotify() Calls all routines on activateCallback list.
+</dd><dt></dt><dd>XmDoubleNotify()Calls all routines on the doubleClickCallback list. 
+</dd><dt></dt><dd>XmArmAndActivated()This action will arm the button, call the actions on the activateCallback 
 list, wait a fraction of a second and then disarm the button.
-</dl>
+</dd></dl>
 To use this button as a toggle button rather than a push button, replace the default 
 translation table with the following table.</pre><table> <tr VALIGN=top><td>&lt;Btn1Down&gt;:</td><td>XmToggle() XmNotify()
 </td></tr><tr VALIGN=top><td>&lt;Btn1Up&gt;(2):</td><td>XmDoubleNotify()

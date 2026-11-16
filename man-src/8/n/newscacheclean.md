@@ -15,18 +15,18 @@ description: "test – Purge the NewsCache to SpoolSize (newscache.conf paramete
 <h2>Options</h2>
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Show version of program.</p>
-<dt><code>-c &#8211;configuration config-file</code></p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-c &#8211;configuration config-file</code></dt>
 <dd>
-<dt><code>-s &#8211;statistic</code></p>
-<dd>Show statistic informations.</p>
-<dt><code>-p &#8211;print-purgetable</code></p>
-<dd>Print the sorted purge table.</p>
-<dt><code>-t &#8211;try</code></p>
-<dd>Try, not really removing files. </p>
+</dd><dt><code>-s &#8211;statistic</code></dt>
+<dd>Show statistic informations.</dd>
+<dt><code>-p &#8211;print-purgetable</code></dt>
+<dd>Print the sorted purge table.</dd>
+<dt><code>-t &#8211;try</code></dt>
+<dd>Try, not really removing files. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/newscache.conf<br />

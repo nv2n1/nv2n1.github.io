@@ -23,96 +23,96 @@ description: "ragraph – graph argus(8) data."
 <p> Ragraph, when using rrdtool as the graphing backend, will pass rrdgraph specific options to the appropriate rrdtool module. These are the specific rrdtool options that are supported.</p>
 <h2>Appearance</h2>
 <dl>
-<dt><code>-fill</code></p>
-<dd> Turn off area fill.</p>
-<dt><code>-stack</code></p>
-<dd> Turn off data stacking.</p>
-<dt><code>-split</code></p>
-<dd> Turn off axis splitting for src/dst(in/out) traffic.</p>
-<dt><code>-invert</code></p>
-<dd> Invert a split graph, so that src and dest data are flipped.</p>
-<dt><code>-rigid</code></p>
-<dd> Pass rrdtool rigid parameter to rrdgraph.</dl>
+<dt><code>-fill</code></dt>
+<dd> Turn off area fill.</dd>
+<dt><code>-stack</code></dt>
+<dd> Turn off data stacking.</dd>
+<dt><code>-split</code></dt>
+<dd> Turn off axis splitting for src/dst(in/out) traffic.</dd>
+<dt><code>-invert</code></dt>
+<dd> Invert a split graph, so that src and dest data are flipped.</dd>
+<dt><code>-rigid</code></dt>
+<dd> Pass rrdtool rigid parameter to rrdgraph.</dd></dl>
 <h2>Labels</h2>
 <dl>
-<dt><code>-title string</code></p>
-<dd> Specify a graph title.</p>
-<dt><code>-vertical-label string</code></p>
-<dd> Specify a vertically placed yaxis label.</dl>
+<dt><code>-title string</code></dt>
+<dd> Specify a graph title.</dd>
+<dt><code>-vertical-label string</code></dt>
+<dd> Specify a vertically placed yaxis label.</dd></dl>
 <h2>Size</h2>
 <dl>
-<dt><code>-height pixels</code></p>
-<dd> Specify height in pixels for the graph (275 pixels)</p>
-<dt><code>-width pixels</code></p>
-<dd> Specify width in pixels for the graph (800 pixels)</p>
-<dt><code>-only-graph</code></p>
-<dd> Generate only the graph with out any borders, title, labels, legend.</dl>
+<dt><code>-height pixels</code></dt>
+<dd> Specify height in pixels for the graph (275 pixels)</dd>
+<dt><code>-width pixels</code></dt>
+<dd> Specify width in pixels for the graph (800 pixels)</dd>
+<dt><code>-only-graph</code></dt>
+<dd> Generate only the graph with out any borders, title, labels, legend.</dd></dl>
 <h2>Limits</h2>
 <dl>
-<dt><code>-upper value</code></p>
-<dd> Specify upper bounds for graphing data (automatic).</p>
-<dt><code>-lower value</code></p>
-<dd> Specify lower bounds for graphing data (automatic). When data is split, you need to specify the value as a negative number.</p>
-<dt><code>-alt-autoscale</code></p>
+<dt><code>-upper value</code></dt>
+<dd> Specify upper bounds for graphing data (automatic).</dd>
+<dt><code>-lower value</code></dt>
+<dd> Specify lower bounds for graphing data (automatic). When data is split, you need to specify the value as a negative number.</dd>
+<dt><code>-alt-autoscale</code></dt>
 <dd>
-<dt><code>-alt-autoscale-max</code></p>
-<dd> Use rrdtool alternate y-axis autoscale algorithm. See rrdgraph manpage for information.</p>
-<dt><code>-no-gridfit</code></p>
-<dd> Disable rrdtool grid scale modification strategies. See rrdgraph manpage for information.</dl>
+</dd><dt><code>-alt-autoscale-max</code></dt>
+<dd> Use rrdtool alternate y-axis autoscale algorithm. See rrdgraph manpage for information.</dd>
+<dt><code>-no-gridfit</code></dt>
+<dd> Disable rrdtool grid scale modification strategies. See rrdgraph manpage for information.</dd></dl>
 <h2>Grid</h2>
 <dl>
-<dt><code>-x-grid GTM:GST:MTM:MST:LTM:LST:LPR:LFM | none</code></p>
-<dd> Modify rrdtool x-axis label definition. See rrdgraph manpage for information.</p>
-<dt><code>-y-grid &#8216;grid step:label factor&#8217; | none</code></p>
-<dd> Modify rrdtool y-axis label definition. The use of &#8216; is important to parsing the option correctly. See rrdgraph manpage for information.</p>
-<dt><code>-alt-y-grid</code></p>
-<dd> Modify rrdtool default y-grid behavior. See rrdgraph manpage for information.</p>
-<dt><code>-log</code></p>
-<dd> Use logarithmic scale for y-axis.</p>
-<dt><code>-units-exponent value</code></p>
-<dd> Set the 10** exponent scaling of the y-axis. See rrdgraph manpage for information.</p>
-<dt><code>-units-length value</code></p>
-<dd> Set the width of the y-axis border. See rrdgraph manpage for information.</p>
-<dt><code>-units=si</code></p>
-<dd> Turn off expoenential notation for logarithmic graphs. See rrdgraph manpage for information.</dl>
+<dt><code>-x-grid GTM:GST:MTM:MST:LTM:LST:LPR:LFM | none</code></dt>
+<dd> Modify rrdtool x-axis label definition. See rrdgraph manpage for information.</dd>
+<dt><code>-y-grid &#8216;grid step:label factor&#8217; | none</code></dt>
+<dd> Modify rrdtool y-axis label definition. The use of &#8216; is important to parsing the option correctly. See rrdgraph manpage for information.</dd>
+<dt><code>-alt-y-grid</code></dt>
+<dd> Modify rrdtool default y-grid behavior. See rrdgraph manpage for information.</dd>
+<dt><code>-log</code></dt>
+<dd> Use logarithmic scale for y-axis.</dd>
+<dt><code>-units-exponent value</code></dt>
+<dd> Set the 10** exponent scaling of the y-axis. See rrdgraph manpage for information.</dd>
+<dt><code>-units-length value</code></dt>
+<dd> Set the width of the y-axis border. See rrdgraph manpage for information.</dd>
+<dt><code>-units=si</code></dt>
+<dd> Turn off expoenential notation for logarithmic graphs. See rrdgraph manpage for information.</dd></dl>
 <h2>Miscellaneous</h2>
 <dl>
-<dt><code>-imginfo printfstr</code></p>
-<dd> Adds img information to the graph. See rrdgraph manpage for information.</p>
-<dt><code>-zoom factor</code></p>
-<dd> Zoom the graphics by the given factor. See rrdgraph manpage for information.</p>
-<dt><code>-font FONTTAG:size:[font]</code></p>
-<dd> Modify rrdgraph default font. See rrdgraph manpage for information.</p>
-<dt><code>-font-render-mode {normal,light,mono}</code></p>
-<dd> Modify rrdgraph font smoothing strength. See rrdgraph manpage for information.</p>
-<dt><code>-font-smoothing-threshold size</code></p>
-<dd> Modify rrdgraph font smoothing font size. See rrdgraph manpage for information.</p>
-<dt><code>-slope-mode</code></p>
-<dd> Modify rrdgraph slope-mode option. See rrdgraph manpage for information.</p>
-<dt><code>-no-legend</code></p>
-<dd> Supress generation of the legend.</p>
-<dt><code>-watermark string</code></p>
-<dd> Adds the given string as a watermark. See rrdgraph manpage for information.</p>
-<dt><code>-norrdwmark</code></p>
-<dd> Disables the default rrdtool watermark from appearing on the graph. </p>
+<dt><code>-imginfo printfstr</code></dt>
+<dd> Adds img information to the graph. See rrdgraph manpage for information.</dd>
+<dt><code>-zoom factor</code></dt>
+<dd> Zoom the graphics by the given factor. See rrdgraph manpage for information.</dd>
+<dt><code>-font FONTTAG:size:[font]</code></dt>
+<dd> Modify rrdgraph default font. See rrdgraph manpage for information.</dd>
+<dt><code>-font-render-mode {normal,light,mono}</code></dt>
+<dd> Modify rrdgraph font smoothing strength. See rrdgraph manpage for information.</dd>
+<dt><code>-font-smoothing-threshold size</code></dt>
+<dd> Modify rrdgraph font smoothing font size. See rrdgraph manpage for information.</dd>
+<dt><code>-slope-mode</code></dt>
+<dd> Modify rrdgraph slope-mode option. See rrdgraph manpage for information.</dd>
+<dt><code>-no-legend</code></dt>
+<dd> Supress generation of the legend.</dd>
+<dt><code>-watermark string</code></dt>
+<dd> Adds the given string as a watermark. See rrdgraph manpage for information.</dd>
+<dt><code>-norrdwmark</code></dt>
+<dd> Disables the default rrdtool watermark from appearing on the graph. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To graph the total load for the data in an <i>argus-file</i> argus.data at 10 second intervals:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ragraph bytes -M 10s -r argus.data -title &quot;Total Load&quot;
 </code></pre>
-</dl>
+</dd></dl>
 <p> To graph the rate (pkt/sec) on a destination port basis for the data from a specific probe in an <i>argus-file</i> argus.data at 1 minute intervals:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>ragraph bytes dport -M 1m -r argus.data - srcid 192.168.0.10
 </code></pre>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved.</p>
 <h2>AUTHORS</h2>

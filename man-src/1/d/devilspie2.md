@@ -14,20 +14,20 @@ description: "Devilspie2 – perform scripted actions on windows as they are cre
 <p> More details in /usr/share/doc/devilspie2. </p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> Displays the version of Devilspie2.</p>
-<dt>&#8211;folder folder</p>
-<dd> Sets the folder where the LUA scripts are loaded from.</p>
-<dt>&#8211;debug</p>
-<dd> Shows debug information from the LUA scripts. If debug_print is used in the LUA scripts, that output will only be printed to stdout if this option is used.</p>
-<dt>&#8211;emulate</p>
-<dd> Emulate script behaviour. Using this option only emulates a scripts behaviour, and doesn&#8217;t affect the windows that the scripts otherwise would modify.</p>
-<dt>&#8211;wnck-version</p>
-<dd> Show version of the libwnck used. (Only availible on GTK3 or later)</dl>
+<dt>&#8211;version</dt>
+<dd> Displays the version of Devilspie2.</dd>
+<dt>&#8211;folder folder</dt>
+<dd> Sets the folder where the LUA scripts are loaded from.</dd>
+<dt>&#8211;debug</dt>
+<dd> Shows debug information from the LUA scripts. If debug_print is used in the LUA scripts, that output will only be printed to stdout if this option is used.</dd>
+<dt>&#8211;emulate</dt>
+<dd> Emulate script behaviour. Using this option only emulates a scripts behaviour, and doesn&#8217;t affect the windows that the scripts otherwise would modify.</dd>
+<dt>&#8211;wnck-version</dt>
+<dd> Show version of the libwnck used. (Only availible on GTK3 or later)</dd></dl>
 <h2>Script Commands</h2>
 <dl>
-<dt>See the README or the manual linked from the homepage for a detailed description</p>
-<dd> of the commands recognized by the LUA script. </p>
+<dt>See the README or the manual linked from the homepage for a detailed description</dt>
+<dd> of the commands recognized by the LUA script. </dd>
 </dl>
 <h2>Author</h2>
 <p> <code>Devilspie2</code> was written by Andreas Rönnquist &lt;devilspie2 [at] gusnan.se&gt;, and is based on Devilspie by Ross Burton. </p>

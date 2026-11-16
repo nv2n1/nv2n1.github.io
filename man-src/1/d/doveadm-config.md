@@ -18,49 +18,47 @@ description: "doveconf – Dovecot’s configuration dumping utility"
 <p> For system administrators, <code>doveconf</code> is mainly useful for dumping the configuration in easy human readable output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Show all settings with their currently configured values.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>config-file</i></p>
-<dd> read configuration from the given <i>config-file</i>. By default <i>/etc/dovecot/dovecot.conf</i> will be used.</p>
-<dt><code>-d</code></p>
-<dd> Show the setting&#8217;s default value instead of the one currently configured.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>filter</i></p>
+<dt><code>-a</code></dt>
+<dd> Show all settings with their currently configured values.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>config-file</i></dt>
+<dd> read configuration from the given <i>config-file</i>. By default <i>/etc/dovecot/dovecot.conf</i> will be used.</dd>
+<dt><code>-d</code></dt>
+<dd> Show the setting&#8217;s default value instead of the one currently configured.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>filter</i></dt>
 <dd> Show the matching configuration for the specified <i>filter</i> condition. The <i>filter</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple filter conditions the <code>-f</code> option can be supplied multiple times.<br />
- Possible names for the <i>filter</i> are:</p>
+ Possible names for the <i>filter</i> are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>lname</code></p>
+<dt><code>lname</code></dt>
 <dd> The local hostname, e.g. mail.example.com. This will only match hostnames which were configured like:<br />
- <code>local_name mail.example.com { # special settings }</code></p>
-<dt><code>local</code></p>
+ <code>local_name mail.example.com { # special settings }</code></dd>
+<dt><code>local</code></dt>
 <dd> The server&#8217;s hostname or IP address. This will also match hostnames which were configured like:<br />
- <code>local imap.example.net { # special settings }</code></p>
-<dt><code>protocol, service</code></p>
-<dd> The protocol, e.g. imap or pop3</p>
-<dt><code>remote</code></p>
-<dd> The client&#8217;s hostname or IP address.</dl>
+ <code>local imap.example.net { # special settings }</code></dd>
+<dt><code>protocol, service</code></dt>
+<dd> The protocol, e.g. imap or pop3</dd>
+<dt><code>remote</code></dt>
+<dd> The client&#8217;s hostname or IP address.</dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd> Hide the setting&#8217;s name, show only the setting&#8217;s value.</p>
-<dt><code>-m&nbsp;<wbr></code><i>module</i></p>
-<dd> Show only settings for the given <i>module</i>.</p>
+<dt><code>-h</code></dt>
+<dd> Hide the setting&#8217;s name, show only the setting&#8217;s value.</dd>
+<dt><code>-m&nbsp;<wbr></code><i>module</i></dt>
+<dd> Show only settings for the given <i>module</i>.</dd>
 <dl>
 <dt>
-<dd> e.g. <code>imap</code>, <code>imap-login</code>, <code>lmtp</code>, <code>pop3&nbsp;<wbr></code>or <code>pop3-login</code></dl>
-<dt><code>-n</code></p>
-<dd> Show only settings with non-default values.</p>
-<dt><code>-N</code></p>
-<dd> Show settings with non-default values and explicitly set default values.</p>
-<dt><code>-S</code></p>
-<dd> Dump settings in simplified machine parsable/readable format.</p>
-<dt><code>-x</code></p>
-<dd> Expand configuration variables (e.g. $mail_plugins &rArr; quota) and show file contents (from e.g. ssl_cert = &lt;/etc/ssl/certs/dovecot.pem).</p>
-<dt><i>section_name</i></p>
-<dd> Show only the current configuration of one or more specified sections.</p>
-<dt><i>setting_name</i></p>
-<dd> Show only the setting of one or more <i>setting_name</i>(s) with the currently configured value. You can show a setting inside a section using &#8216;/&#8217; as the section separator, e.g. service/imap/executable.</dl>
+</dt><dd> e.g. <code>imap</code>, <code>imap-login</code>, <code>lmtp</code>, <code>pop3&nbsp;<wbr></code>or <code>pop3-login</code></dd></dl>
+<dt><code>-n</code></dt>
+<dd> Show only settings with non-default values.</dd>
+<dt><code>-N</code></dt>
+<dd> Show settings with non-default values and explicitly set default values.</dd>
+<dt><code>-S</code></dt>
+<dd> Dump settings in simplified machine parsable/readable format.</dd>
+<dt><code>-x</code></dt>
+<dd> Expand configuration variables (e.g. $mail_plugins &rArr; quota) and show file contents (from e.g. ssl_cert = &lt;/etc/ssl/certs/dovecot.pem).</dd>
+<dt><i>section_name</i></dt>
+<dd> Show only the current configuration of one or more specified sections.</dd>
+<dt><i>setting_name</i></dt>
+<dd> Show only the setting of one or more <i>setting_name</i>(s) with the currently configured value. You can show a setting inside a section using &#8216;/&#8217; as the section separator, e.g. service/imap/executable.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> When Dovecot was configured to use different settings for some networks/subnets it is possible to show which settings will be applied for a specific connection. </p>
 <pre>

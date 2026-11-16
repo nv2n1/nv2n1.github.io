@@ -16,58 +16,58 @@ description: "GlusterFS – Clustered Filesystem."
 <p>Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h3>Basic options</h3>
 <dl>
-<dd><code>-f, &#8211;volfile=VOLUME-FILE</code> File to use as VOLUME-FILE [default:/etc/glusterfs/glusterfs.vol]</p>
-<dt><code>-l, &#8211;log-file=LOGFILE</code></p>
-<dd>File to use for logging [default:/var/log/glusterfs/glusterfs.log]</p>
-<dt><code>-L, &#8211;log-level=LOGLEVEL</code></p>
-<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL [default: WARNING]</p>
-<dt><code>-s, &#8211;volfile-server=SERVER</code></p>
-<dd>Server to get the volume from. This option overrides <code>&#8211;volfile option </p>
+<dd><code>-f, &#8211;volfile=VOLUME-FILE</code> File to use as VOLUME-FILE [default:/etc/glusterfs/glusterfs.vol]</dd>
+<dt><code>-l, &#8211;log-file=LOGFILE</code></dt>
+<dd>File to use for logging [default:/var/log/glusterfs/glusterfs.log]</dd>
+<dt><code>-L, &#8211;log-level=LOGLEVEL</code></dt>
+<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL [default: WARNING]</dd>
+<dt><code>-s, &#8211;volfile-server=SERVER</code></dt>
+<dd>Server to get the volume from. This option overrides <code>&#8211;volfile option </dd>
 </dl>
 <p> </code></p>
 <h3>Advanced options</h3>
 <dl>
-<dd><code>&#8211;debug</code> Run in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG and <code>&#8211;log-file</code> to console</p>
-<dt><code>-N, &#8211;no-daemon</code></p>
-<dd>Run in foreground</p>
-<dt><code>&#8211;read-only</code></p>
-<dd>Makes the filesystem read-only</p>
-<dt><code>-p, &#8211;pid-file=PIDFILE</code></p>
-<dd>File to use as pid file</p>
-<dt><code>-S SOCKFILE</p>
-<dd>Socket file to used for inter-process communication</p>
-<dt>&#8211;brick-name DIRECTORY</p>
-<dd>Directory to be used as export directory for GlusterFS</p>
-<dt>&#8211;brick-port PORT</p>
-<dd>Brick Port to be registered with Gluster portmapper</p>
-<dt>&#8211;volfile-id=KEY</code></p>
-<dd>KEY of the volume file to be fetched from server</p>
-<dt><code>&#8211;volfile-server-port=PORT</code></p>
-<dd>Port number of volfile server</p>
-<dt><code>&#8211;volfile-server-transport=TRANSPORT</code></p>
-<dd>Transport type to get volume file from server [default: tcp]</p>
-<dt><code>&#8211;volume-name=VOLUME-NAME</code></p>
-<dd>Volume name to be used for MOUNT-POINT [default: top most volume in VOLUME-FILE]</p>
-<dt><code>&#8211;xlator-option=VOLUME-NAME.OPTION=VALUE</code></p>
-<dd>Add/override a translator option for a volume with the specified value </p>
+<dd><code>&#8211;debug</code> Run in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG and <code>&#8211;log-file</code> to console</dd>
+<dt><code>-N, &#8211;no-daemon</code></dt>
+<dd>Run in foreground</dd>
+<dt><code>&#8211;read-only</code></dt>
+<dd>Makes the filesystem read-only</dd>
+<dt><code>-p, &#8211;pid-file=PIDFILE</code></dt>
+<dd>File to use as pid file</dd>
+<dt><code>-S SOCKFILE</dt>
+<dd>Socket file to used for inter-process communication</dd>
+<dt>&#8211;brick-name DIRECTORY</dt>
+<dd>Directory to be used as export directory for GlusterFS</dd>
+<dt>&#8211;brick-port PORT</dt>
+<dd>Brick Port to be registered with Gluster portmapper</dd>
+<dt>&#8211;volfile-id=KEY</code></dt>
+<dd>KEY of the volume file to be fetched from server</dd>
+<dt><code>&#8211;volfile-server-port=PORT</code></dt>
+<dd>Port number of volfile server</dd>
+<dt><code>&#8211;volfile-server-transport=TRANSPORT</code></dt>
+<dd>Transport type to get volume file from server [default: tcp]</dd>
+<dt><code>&#8211;volume-name=VOLUME-NAME</code></dt>
+<dd>Volume name to be used for MOUNT-POINT [default: top most volume in VOLUME-FILE]</dd>
+<dt><code>&#8211;xlator-option=VOLUME-NAME.OPTION=VALUE</code></dt>
+<dd>Add/override a translator option for a volume with the specified value </dd>
 </dl>
 <h3>Fuse options</h3>
 <dl>
-<dd><code>&#8211;attribute-timeout=SECONDS</code> Set attribute timeout to SECONDS for inodes in fuse kernel module [default: 1]</p>
-<dt><code>&#8211;entry-timeout=SECONDS</code></p>
-<dd>Set entry timeout to SECONDS in fuse kernel module [default: 1]</p>
-<dt><code>&#8211;direct-io-mode=BOOL</code></p>
-<dd>Enable/Disable direct-io mode in fuse module [default: enable]</p>
-<dt><code>&#8211;resolve-gids</code></p>
-<dd>Resolve all auxiliary groups in fuse translator (max 32 otherwise) </p>
+<dd><code>&#8211;attribute-timeout=SECONDS</code> Set attribute timeout to SECONDS for inodes in fuse kernel module [default: 1]</dd>
+<dt><code>&#8211;entry-timeout=SECONDS</code></dt>
+<dd>Set entry timeout to SECONDS in fuse kernel module [default: 1]</dd>
+<dt><code>&#8211;direct-io-mode=BOOL</code></dt>
+<dd>Enable/Disable direct-io mode in fuse module [default: enable]</dd>
+<dt><code>&#8211;resolve-gids</code></dt>
+<dd>Resolve all auxiliary groups in fuse translator (max 32 otherwise) </dd>
 </dl>
 <h3>Miscellaneous Options</h3>
 <dl>
-<dd><code>-?, &#8211;help</code> Give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Give a short usage message</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print program version </p>
+<dd><code>-?, &#8211;help</code> Give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Give a short usage message</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print program version </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/glusterfs/*.vol</p>

@@ -15,115 +15,115 @@ description: "snmptrapd.conf – configuration file for the Net-SNMP notificatio
 <p> As with the agent configuration, the <i>snmptrapd.conf</i> directives can be divided into four distinct groups.</p>
 <h2>Trapd Behaviour</h2>
 <dl>
-<dt>snmpTrapdAddr [&lt;transport-specifier&gt;:]&lt;transport-address&gt;[,&#8230;]</p>
-<dd>defines a list of listening addresses, on which to receive incoming SNMP notifications. See the section <code>LISTENING ADDRESSES</code> in the <i><a href="/docs/linux/man/8-snmpd/">snmpd</a>(8)</i> manual page for more information about the format of listening addresses.</p>
-<dd>The default behaviour is to listen on UDP port 162 on all IPv4 interfaces.</p>
-<dt>doNotRetainNotificationLogs yes</p>
-<dd>disables support for the NOTIFICATION-LOG-MIB. Normally the snmptrapd program keeps a record of the traps received, which can be retrieved by querying the nlmLogTable and nlmLogvariableTable tables. This directive can be used to suppress this behaviour.</p>
-<dd>See the <i><a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8) </i> manual page and the NOTIFICATION-LOG-MIB for details.</p>
-<dt>doNotLogTraps yes</p>
-<dd>disables the logging of notifications altogether. This is useful if the <code>snmptrapd</code> application should only run traphandle hooks and should not log traps to any location.</p>
-<dt>doNotFork yes</p>
-<dd>do not fork from the calling shell.</p>
-<dt>pidFile PATH</p>
-<dd>defines a file in which to store the process ID of the notification receiver. By default, this ID is not saved.</dl>
+<dt>snmpTrapdAddr [&lt;transport-specifier&gt;:]&lt;transport-address&gt;[,&#8230;]</dt>
+<dd>defines a list of listening addresses, on which to receive incoming SNMP notifications. See the section <code>LISTENING ADDRESSES</code> in the <i><a href="/docs/linux/man/8-snmpd/">snmpd</a>(8)</i> manual page for more information about the format of listening addresses.</dd>
+<dd>The default behaviour is to listen on UDP port 162 on all IPv4 interfaces.</dd>
+<dt>doNotRetainNotificationLogs yes</dt>
+<dd>disables support for the NOTIFICATION-LOG-MIB. Normally the snmptrapd program keeps a record of the traps received, which can be retrieved by querying the nlmLogTable and nlmLogvariableTable tables. This directive can be used to suppress this behaviour.</dd>
+<dd>See the <i><a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8) </i> manual page and the NOTIFICATION-LOG-MIB for details.</dd>
+<dt>doNotLogTraps yes</dt>
+<dd>disables the logging of notifications altogether. This is useful if the <code>snmptrapd</code> application should only run traphandle hooks and should not log traps to any location.</dd>
+<dt>doNotFork yes</dt>
+<dd>do not fork from the calling shell.</dd>
+<dt>pidFile PATH</dt>
+<dd>defines a file in which to store the process ID of the notification receiver. By default, this ID is not saved.</dd></dl>
 <h2>Access Control</h2>
 <p>Starting with release 5.3, it is necessary to explicitly specify who is authorised to send traps and informs to the notification receiver (and what types of processing these are allowed to trigger). This uses an extension of the VACM model, used in the main SNMP agent. </p>
 <p> There are currently three types of processing that can be specified:</p>
 <dl>
 <dd>
-<dl>
-<dt>log</p>
-<dd>log the details of the notification &#8211; either in a specified file, to standard output (or stderr), or via <i>syslog</i> (or similar).</p>
-<dt>execute</p>
-<dd>pass the details of the trap to a specified handler program, including embedded perl.</p>
-<dt>net</p>
-<dd>forward the trap to another notification receiver.</dl>
+</dd><dl>
+<dt>log</dt>
+<dd>log the details of the notification &#8211; either in a specified file, to standard output (or stderr), or via <i>syslog</i> (or similar).</dd>
+<dt>execute</dt>
+<dd>pass the details of the trap to a specified handler program, including embedded perl.</dd>
+<dt>net</dt>
+<dd>forward the trap to another notification receiver.</dd></dl>
 </dl>
 <p> In the following directives, <i>TYPES</i> will be a (comma-separated) list of one or more of these tokens. Most commonly, this will typically be <i>log,execute,net</i> to cover any style of processing for a particular category of notification. But it is perfectly possible (even desirable) to limit certain notification sources to selected processing only.</p>
 <dl>
-<dt>authCommunity TYPES COMMUNITY [SOURCE [OID | -v VIEW ]]</p>
-<dd>authorises traps (and SNMPv2c INFORM requests) with the specified community to trigger the types of processing listed. By default, this will allow any notification using this community to be processed. The SOURCE field can be used to specify that the configuration should only apply to notifications received from particular sources &#8211; see <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> for more details.</p>
-<dt>authUser TYPES [-s MODEL] USER [LEVEL [OID | -v VIEW ]]</p>
-<dd>authorises SNMPv3 notifications with the specified user to trigger the types of processing listed. By default, this will accept authenticated requests. (<i>authNoPriv</i> or <i>authPriv</i>). The LEVEL field can be used to allow unauthenticated notifications (<i>noauth</i>), or to require encryption (<i>priv</i>), just as for the SNMP agent.</p>
-<dd>With both of these directives, the OID (or <i>-v VIEW</i>) field can be used to retrict this configuration to the processing of particular notifications.</p>
+<dt>authCommunity TYPES COMMUNITY [SOURCE [OID | -v VIEW ]]</dt>
+<dd>authorises traps (and SNMPv2c INFORM requests) with the specified community to trigger the types of processing listed. By default, this will allow any notification using this community to be processed. The SOURCE field can be used to specify that the configuration should only apply to notifications received from particular sources &#8211; see <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> for more details.</dd>
+<dt>authUser TYPES [-s MODEL] USER [LEVEL [OID | -v VIEW ]]</dt>
+<dd>authorises SNMPv3 notifications with the specified user to trigger the types of processing listed. By default, this will accept authenticated requests. (<i>authNoPriv</i> or <i>authPriv</i>). The LEVEL field can be used to allow unauthenticated notifications (<i>noauth</i>), or to require encryption (<i>priv</i>), just as for the SNMP agent.</dd>
+<dd>With both of these directives, the OID (or <i>-v VIEW</i>) field can be used to retrict this configuration to the processing of particular notifications.</dd>
 <dl>
 <dd>
-<dl>
-<dt>Note:</p>
-<dd>Unlike the VACM processing described in RFC 3415, this view is <code>only</code> matched against the snmpTrapOID value of the incoming notification. It is not applied to the payload varbinds held within that notification.</dl>
+</dd><dl>
+<dt>Note:</dt>
+<dd>Unlike the VACM processing described in RFC 3415, this view is <code>only</code> matched against the snmpTrapOID value of the incoming notification. It is not applied to the payload varbinds held within that notification.</dd></dl>
 </dl>
-<dt>authGroup TYPES [-s MODEL] GROUP [LEVEL [OID | -v VIEW ]]</p>
+<dt>authGroup TYPES [-s MODEL] GROUP [LEVEL [OID | -v VIEW ]]</dt>
 <dd>
-<dt>authAccess TYPES [-s MODEL] GROUP VIEW [LEVEL [CONTEXT]]</p>
+</dd><dt>authAccess TYPES [-s MODEL] GROUP VIEW [LEVEL [CONTEXT]]</dt>
 <dd>
-<dt>setAccess GROUP CONTEXT MODEL LEVEL PREFIX VIEW TYPES</p>
-<dd>authorise notifications in the specified GROUP (configured using the <i>group</i> directive) to trigger the types of processing listed. See <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> for more details.</p>
-<dt>createUser [-e ENGINEID] username (MD5|SHA) authpassphrase [DES|AES]</p>
-<dd>See the <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> manual page for a description of how to create SNMPv3 users. This is roughly the same, but the file name changes to snmptrapd.conf from snmpd.conf.</p>
-<dt>disableAuthorization yes</p>
-<dd>will disable the above access control checks, and revert to the previous behaviour of accepting all incoming notifications.</p>
-<dd></dl>
+</dd><dt>setAccess GROUP CONTEXT MODEL LEVEL PREFIX VIEW TYPES</dt>
+<dd>authorise notifications in the specified GROUP (configured using the <i>group</i> directive) to trigger the types of processing listed. See <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> for more details.</dd>
+<dt>createUser [-e ENGINEID] username (MD5|SHA) authpassphrase [DES|AES]</dt>
+<dd>See the <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> manual page for a description of how to create SNMPv3 users. This is roughly the same, but the file name changes to snmptrapd.conf from snmpd.conf.</dd>
+<dt>disableAuthorization yes</dt>
+<dd>will disable the above access control checks, and revert to the previous behaviour of accepting all incoming notifications.</dd>
+<dd></dd></dl>
 <h2>Logging</h2>
 <dl>
-<dt>format1 FORMAT</p>
+<dt>format1 FORMAT</dt>
 <dd>
-<dt>format2 FORMAT</p>
-<dd>specify the format used to display SNMPv1 TRAPs and SNMPv2 notifications respectively. Note that SNMPv2c and SNMPv3 both use the same SNMPv2 PDU format.</p>
-<dd>See <i><a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8)</i> for the layout characters available.</p>
-<dt>ignoreAuthFailure yes</p>
-<dd>instructs the receiver to ignore <i>authenticationFailure</i> traps.</p>
+</dd><dt>format2 FORMAT</dt>
+<dd>specify the format used to display SNMPv1 TRAPs and SNMPv2 notifications respectively. Note that SNMPv2c and SNMPv3 both use the same SNMPv2 PDU format.</dd>
+<dd>See <i><a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8)</i> for the layout characters available.</dd>
+<dt>ignoreAuthFailure yes</dt>
+<dd>instructs the receiver to ignore <i>authenticationFailure</i> traps.</dd>
 <dl>
 <dd>
-<dl>
-<dt>Note:</p>
-<dd>This currently only affects the logging of such notifications. <i>authenticationFailure</i> traps will still be passed to trap handler scripts, and forwarded to other notification receivers. This behaviour should not be relied on, as it is likely to change in future versions.</dl>
+</dd><dl>
+<dt>Note:</dt>
+<dd>This currently only affects the logging of such notifications. <i>authenticationFailure</i> traps will still be passed to trap handler scripts, and forwarded to other notification receivers. This behaviour should not be relied on, as it is likely to change in future versions.</dd></dl>
 </dl>
-<dt>logOption string</p>
-<dd>specifies where notifications should be logged &#8211; to standard output, standard error, a specified file or via <i>syslog</i>. See the section LOGGING OPTIONS in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page for details.</p>
-<dt>outputOption string</p>
-<dd>specifies various characteristics of how OIDs and other values should be displayed. See the section OUTPUT OPTIONS in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page for details.</dl>
+<dt>logOption string</dt>
+<dd>specifies where notifications should be logged &#8211; to standard output, standard error, a specified file or via <i>syslog</i>. See the section LOGGING OPTIONS in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page for details.</dd>
+<dt>outputOption string</dt>
+<dd>specifies various characteristics of how OIDs and other values should be displayed. See the section OUTPUT OPTIONS in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page for details.</dd></dl>
 <h2>MySQL Logging</h2>
 <p>There are two configuration variables that work together to control when queued traps are logged to the MySQL database. A non-zero value must be specified for sqlSaveInterval to enable MySQL logging.</p>
 <dl>
-<dt>sqlMaxQueue max</p>
-<dd>specifies the maximum number of traps to queue before a forced flush to the MySQL database.</p>
-<dt>sqlSaveInterval seconds</p>
-<dd>specified the number of seconds between periodic queue flushes. A value of 0 for will disable MySQL logging.</dl>
+<dt>sqlMaxQueue max</dt>
+<dd>specifies the maximum number of traps to queue before a forced flush to the MySQL database.</dd>
+<dt>sqlSaveInterval seconds</dt>
+<dd>specified the number of seconds between periodic queue flushes. A value of 0 for will disable MySQL logging.</dd></dl>
 <h2>Notification Processing</h2>
 <p>As well as logging incoming notifications, they can also be forwarded on to another notification receiver, or passed to an external program for specialised processing.</p>
 <dl>
-<dt>traphandle OID|default PROGRAM [ARGS &#8230;]</p>
-<dd>invokes the specified program (with the given arguments) whenever a notification is received that matches the OID token. For SNMPv2c and SNMPv3 notifications, this token will be compared against the snmpTrapOID value taken from the notification. For SNMPv1 traps, the generic and specific trap values and the enterprise OID will be converted into the equivalent OID (following RFC 2576).</p>
-<dd>Typically, the OID token will be the name (or numeric OID) of a NOTIFICATION-TYPE object, and the specified program will be invoked for notifications that match this OID exactly. However this token also supports a simple form of wildcard suffixing. By appending the character &#8216;*&#8217; to the OID token, the corresponding program will be invoked for any notification based within subtree rooted at the specified OID. For example, an OID token of .1.3.6.1.4.1* would match any enterprise specific notification (including the specified OID itself). An OID token of .1.3.6.1.4.1.* would would work in much the same way, but would not match this exact OID &#8211; just notifications that lay strictly below this root. Note that this syntax does not support full regular expressions or wildcards &#8211; an OID token of the form oid.*.subids is <code>not</code> valid.</p>
-<dd>If the OID field is the token <i>default</i> then the program will be invoked for any notification not matching another (OID specific) <i>traphandle</i> entry.</dl>
+<dt>traphandle OID|default PROGRAM [ARGS &#8230;]</dt>
+<dd>invokes the specified program (with the given arguments) whenever a notification is received that matches the OID token. For SNMPv2c and SNMPv3 notifications, this token will be compared against the snmpTrapOID value taken from the notification. For SNMPv1 traps, the generic and specific trap values and the enterprise OID will be converted into the equivalent OID (following RFC 2576).</dd>
+<dd>Typically, the OID token will be the name (or numeric OID) of a NOTIFICATION-TYPE object, and the specified program will be invoked for notifications that match this OID exactly. However this token also supports a simple form of wildcard suffixing. By appending the character &#8216;*&#8217; to the OID token, the corresponding program will be invoked for any notification based within subtree rooted at the specified OID. For example, an OID token of .1.3.6.1.4.1* would match any enterprise specific notification (including the specified OID itself). An OID token of .1.3.6.1.4.1.* would would work in much the same way, but would not match this exact OID &#8211; just notifications that lay strictly below this root. Note that this syntax does not support full regular expressions or wildcards &#8211; an OID token of the form oid.*.subids is <code>not</code> valid.</dd>
+<dd>If the OID field is the token <i>default</i> then the program will be invoked for any notification not matching another (OID specific) <i>traphandle</i> entry.</dd></dl>
 <p> Details of the notification are fed to the program via its standard input. Note that this will always use the SNMPv2-style notification format, with SNMPv1 traps being converted as per RFC 2576, before being passed to the program. The input format is as follows, one entry per line:</p>
 <dl>
 <dd>
+</dd><dl>
+<dt>HOSTNAME</dt>
+<dd>The name of the host that sent the notification, as determined by <i><a href="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a>(3)</i>. </dd>
+<dt>IPADDRESS</dt>
+<dd>The IP address of the host that sent the notification.</dd>
+<dt>VARBINDS</dt>
+<dd>A list of variable bindings describing the contents of the notification, one per line. The first token on each line (up until a space) is the OID of the varind, and the remainder of the line is its value. The format of both of these are controlled by the <i>outputOption</i> directive (or similar configuration).</dd>
+<dd>The first OID should always be SNMPv2-MIB::sysUpTime.0, and the second should be SNMPv2-MIB::snmpTrapOID.0. The remaining lines will contain the payload varbind list. For SNMPv1 traps, the final OID will be SNMPv2-MIB::snmpTrapEnterprise.0. </dd>
+<dt>Example:</dt>
+<dd>A <code>traptoemail</code> script has been included in the Net-SNMP package that can be used within a <i>traphandle</i> directive: </dd>
 <dl>
-<dt>HOSTNAME</p>
-<dd>The name of the host that sent the notification, as determined by <i><a href="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a>(3)</i>. </p>
-<dt>IPADDRESS</p>
-<dd>The IP address of the host that sent the notification.</p>
-<dt>VARBINDS</p>
-<dd>A list of variable bindings describing the contents of the notification, one per line. The first token on each line (up until a space) is the OID of the varind, and the remainder of the line is its value. The format of both of these are controlled by the <i>outputOption</i> directive (or similar configuration).</p>
-<dd>The first OID should always be SNMPv2-MIB::sysUpTime.0, and the second should be SNMPv2-MIB::snmpTrapOID.0. The remaining lines will contain the payload varbind list. For SNMPv1 traps, the final OID will be SNMPv2-MIB::snmpTrapEnterprise.0. </p>
-<dt>Example:</p>
-<dd>A <code>traptoemail</code> script has been included in the Net-SNMP package that can be used within a <i>traphandle</i> directive: </p>
-<dl>
-<dd>traphandle default /usr/bin/perl /usr/bin/traptoemail -s mysmtp.somewhere.com -f admin [at] somewhere.com me [at] somewhere.com</dl>
+<dd>traphandle default /usr/bin/perl /usr/bin/traptoemail -s mysmtp.somewhere.com -f admin [at] somewhere.com me [at] somewhere.com</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt>forward OID|default DESTINATION</p>
-<dd>forwards notifications that match the specified OID to another receiver listening on DESTINATION. The interpretation of OID (and <i>default</i>) is the same as for the <i>traphandle</i> directive).</p>
-<dd>See the section <code>LISTENING ADDRESSES</code> in the <i><a href="/docs/linux/man/8-snmpd/">snmpd</a>(8)</i> manual page for more information about the format of listening addresses.</dl>
+<dt>forward OID|default DESTINATION</dt>
+<dd>forwards notifications that match the specified OID to another receiver listening on DESTINATION. The interpretation of OID (and <i>default</i>) is the same as for the <i>traphandle</i> directive).</dd>
+<dd>See the section <code>LISTENING ADDRESSES</code> in the <i><a href="/docs/linux/man/8-snmpd/">snmpd</a>(8)</i> manual page for more information about the format of listening addresses.</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt>o</p>
-<dd>The daemon blocks while executing the <i>traphandle</i> commands. (This should be fixed in the future with an appropriate signal catch and wait() combination).</p>
-<dt>o</p>
-<dd>All directives listed with a value of &quot;yes&quot; actually accept a range of boolean values. These will accept any of <i>1</i>, <i>yes</i> or <i>true</i> to enable the corresponding behaviour, or any of <i>0</i>, <i>no</i> or <i>false</i> to disable it. The default in each case is for the feature to be turned off, so these directives are typically only used to enable the appropriate behaviour.</dl>
+<dt>o</dt>
+<dd>The daemon blocks while executing the <i>traphandle</i> commands. (This should be fixed in the future with an appropriate signal catch and wait() combination).</dd>
+<dt>o</dt>
+<dd>All directives listed with a value of &quot;yes&quot; actually accept a range of boolean values. These will accept any of <i>1</i>, <i>yes</i> or <i>true</i> to enable the corresponding behaviour, or any of <i>0</i>, <i>no</i> or <i>false</i> to disable it. The default in each case is for the feature to be turned off, so these directives are typically only used to enable the appropriate behaviour.</dd></dl>
 <h2>Files</h2>
 <p>/etc/snmp/snmptrapd.conf</p>
 <h2>See Also</h2>

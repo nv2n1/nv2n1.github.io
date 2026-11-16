@@ -9,11 +9,11 @@ url: "/docs/linux/man/3-ncl_tick3/"
 TICK43 - Gives user control of tick mark length in PERIM3. 
 
  NOTE: At one time, the Threed routine TICK3 was used to set tick-mark length. TICK3 has been superseded by TICK43 and is therefore considered obsolete. If you call TICK3, it will call TICK43 for you. The statement
-<dl><dd>CALL TICK3 (MAJOR,MINOR)</dl>
+<dl><dd>CALL TICK3 (MAJOR,MINOR)</dd></dl>
  
 
  should be replaced by the equivalent statement
-<dl><dd>CALL TICK43 (MAJOR,MINOR,MAJOR,MINOR,MAJOR,MINOR)</dl>
+<dl><dd>CALL TICK43 (MAJOR,MINOR,MAJOR,MINOR,MAJOR,MINOR)</dd></dl>
 
 <h2>Synopsis</h2>
 
@@ -29,13 +29,13 @@ CALL TICK43 (MAJORU,MINORU,MAJORV,MINORV,MAJORW,MINORW)
 <h2>Description</h2>
 
 <dl><dt>MAJORU
-<dd>(an input expression of type INTEGER) specifies the length of major ticks to be used on perimeter sides that are parallel to the U axis.
-<dt>MINORU
-<dd>(an input expression of type INTEGER) specifies the length of minor ticks to be used on perimeter sides that are parallel to the U axis.
-<dt>MAJORV,MINORV
-<dd>(input expressions of type INTEGER) specify the lengths of major and minor ticks for perimeter sides parallel to the V axis.
-<dt>MAJORW,MINORW
-<dd>(input expressions of type INTEGER) specify the lengths of major and minor ticks for perimeter sides parallel to the W axis.</dl>
+</dt><dd>(an input expression of type INTEGER) specifies the length of major ticks to be used on perimeter sides that are parallel to the U axis.
+</dd><dt>MINORU
+</dt><dd>(an input expression of type INTEGER) specifies the length of minor ticks to be used on perimeter sides that are parallel to the U axis.
+</dd><dt>MAJORV,MINORV
+</dt><dd>(input expressions of type INTEGER) specify the lengths of major and minor ticks for perimeter sides parallel to the V axis.
+</dd><dt>MAJORW,MINORW
+</dt><dd>(input expressions of type INTEGER) specify the lengths of major and minor ticks for perimeter sides parallel to the W axis.</dd></dl>
  
 
  All tick lengths are specified as integers between 0 and 1024. The value &quot;n&quot; produces a tick that is n/1024ths as long as the longest side of the box defined by the arguments UMIN, UMAX, VMIN, VMAX, WMIN, and WMAX in the last call to SET3. The default values are 12 for a major tick and 8 for a minor tick.

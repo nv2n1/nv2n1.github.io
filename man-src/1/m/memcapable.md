@@ -17,21 +17,21 @@ description: "memcapable – libmemcached Documentation"
 <p> The current version of memcapable will only verify the binary protocol.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h hostname</code></p>
+<dt><code>-h hostname</code></dt>
 <dd>
 <p> Specify the hostname to connect to. The default is <i>localhost</i></p>
-<dt><code>-p port</code></p>
+</dd><dt><code>-p port</code></dt>
 <dd>
 <p> Specify the port number to connect to. The default is <i>11211</i></p>
-<dt><code>-c</code></p>
+</dd><dt><code>-c</code></dt>
 <dd>
 <p> Generate a coredump when it detects an error from the server.</p>
-<dt><code>-v</code></p>
+</dd><dt><code>-v</code></dt>
 <dd>
 <p> Print out the comparison when it detects an error from the server.</p>
-<dt><code>-t n</code></p>
+</dd><dt><code>-t n</code></dt>
 <dd>
-<p> Set the timeout from an IO operation to/from the server to <i>n</i> seconds.</dl>
+<p> Set the timeout from an IO operation to/from the server to <i>n</i> seconds.</dd></dl>
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>AUTHOR</h2>
@@ -43,3 +43,4 @@ description: "memcapable – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

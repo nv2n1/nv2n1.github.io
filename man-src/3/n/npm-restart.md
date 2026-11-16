@@ -16,8 +16,9 @@ description: "npm-restart — Start a package"
 <p> npm can run tests on multiple packages. Just specify multiple packages in the <code>packages</code> parameter.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm apihelp start</p>
-<dt>&bull;</p>
-<dd>npm apihelp stop</p>
+<dt>&bull;</dt>
+<dd>npm apihelp start</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp stop</dd>
 <dd>
+</dd></dl>

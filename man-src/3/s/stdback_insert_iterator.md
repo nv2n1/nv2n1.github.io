@@ -11,17 +11,12 @@ std::back_insert_iterator - std::back_insert_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class Container&gt;
-
     class back_insert_iterator : public std::iterator&lt;std::output_iterator_tag, (until C++ 17)
-
                                                                                     void,
                                                       void, void, void&gt;
-
                                  template &lt;class Container&gt;
                                  (since C++ 17)
-
                                      class back_insert_iterator;</code></pre> 
 std::back_insert_iterator is an LegacyOutputIterator that appends to a container for which it was constructed. The container's push_back() member function is called whenever the iterator (whether dereferenced or not) is assigned to. Incrementing the std::back_insert_iterator is a no-op. 
 
@@ -64,14 +59,10 @@ These member types are required to be obtained by inheriting from std::iterator&
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v;
     std::generate_n(std::back_insert_iterator&lt;std::vector&lt;int&gt;&gt;(v), // can be simplified

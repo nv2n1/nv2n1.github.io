@@ -16,60 +16,60 @@ description: "geoclue.conf – geoclue configuration parameters"
 <h2>Agent Configuration Options</h2>
 <p><i>[agent]</i> is used to begin the agent configuration.</p>
 <dl>
-<dt><code>whitelist</p>
-<dd>Whitelist of desktop IDs (without .desktop part) of all agents we recognise, separated by a &#8216;;&#8217;.</p>
-<dd>whitelist=geoclue-demo-agent;gnome-shell;io.elementary.desktop.agent-geoclue2</code> </p>
-<dt><code>[network-nmea]</p>
-<dd>Network NMEA source configuration options</p>
+<dt><code>whitelist</dt>
+<dd>Whitelist of desktop IDs (without .desktop part) of all agents we recognise, separated by a &#8216;;&#8217;.</dd>
+<dd>whitelist=geoclue-demo-agent;gnome-shell;io.elementary.desktop.agent-geoclue2</code> </dd>
+<dt><code>[network-nmea]</dt>
+<dd>Network NMEA source configuration options</dd>
 <dd>enable=true </code><br />
- Fetch location from NMEA sources on local network? </p>
-<dt><code>[3G]</p>
-<dd>3G source configuration options</p>
+ Fetch location from NMEA sources on local network? </dd>
+<dt><code>[3G]</dt>
+<dd>3G source configuration options</dd>
 <dd>enable=true </code><br />
- Enable 3G source </p>
-<dt><code>[cdma]</p>
-<dd>CDMA source configuration options</p>
+ Enable 3G source </dd>
+<dt><code>[cdma]</dt>
+<dd>CDMA source configuration options</dd>
 <dd>enable=true </code><br />
- Enable CDMA source </p>
-<dt><code>[modem-gps]</p>
-<dd>Modem GPS source configuration options</p>
+ Enable CDMA source </dd>
+<dt><code>[modem-gps]</dt>
+<dd>Modem GPS source configuration options</dd>
 <dd>enable=true </code><br />
- Enable Modem-GPS source </p>
-<dt><code>[wifi]</p>
-<dd>WiFi source configuration options</p>
+ Enable Modem-GPS source </dd>
+<dt><code>[wifi]</dt>
+<dd>WiFi source configuration options</dd>
 <dd>enable=true </code><br />
- Enable WiFi source</p>
+ Enable WiFi source</dd>
 <dd><code>url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/geolocate?key=geoclue">https://location.services.mozilla.com/v1/geolocate?key=geoclue</a></i><br />
- URL to the wifi geolocation service. The key can currenty be anything, just needs to be present but that is likely going to change in future.</p>
+ URL to the wifi geolocation service. The key can currenty be anything, just needs to be present but that is likely going to change in future.</dd>
 <dd><code>submit-data=false</code> Submit data to Mozilla Location Service<br />
- If set to true, geoclue will automatically submit network data to Mozilla each time it gets a GPS lock.</p>
+ If set to true, geoclue will automatically submit network data to Mozilla each time it gets a GPS lock.</dd>
 <dd><code>submission-url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/submit?key=geoclue">https://location.services.mozilla.com/v1/submit?key=geoclue</a></i><br />
- URL to submission API of Mozilla Location Service</p>
+ URL to submission API of Mozilla Location Service</dd>
 <dd><code>submission-nick=geoclue</code><br />
  A nickname to submit network data with. A nickname must be 2-32 characters long.
-</dl>
+</dd></dl>
 <h2>Application Configuration Options</h2>
 <p>Having an entry here for an application with <code>allowed=true</code> means that geoclue will not ask agent to authorize the application. This is to ensure that applications with built-in authorization mechanism (e.g web browsers) do not have to be bound to agents. </p>
 <p> If your application is denied access to location information and your operating system doesn&#8217;t provide any mechanism to change that, it is likely a bug in your operation system (or geoclue). The solution is to report the issue with all details, rather than adding your application to this list.</p>
 <dl>
-<dt>Format:</p>
+<dt>Format:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd><code>[random-app]</code><br />
- Desktop ID of application without .desktop part </p>
+ Desktop ID of application without .desktop part </dd>
 <p> <code>allowed=true|false</code><br />
  Allowed access to location information? </p>
 <p> <code>system=true|false</code><br />
  Is application a system component? </p>
 <p> <code>users=</code><br />
  List of UIDs of all users for which this application is allowed location info access, separate by &#8216;;&#8217;. Keep it empty for allowing it for all users.</dl>
-<dt>Examples:</p>
+<dt>Examples:</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd><code>[gnome-datetime-panel]</code><br />
  allowed=true<br />
  system=true<br />
- users= </p>
+ users= </dd>
 <p> <code>[gnome-color-panel]</code><br />
  allowed=true<br />
  system=true<br />
@@ -94,3 +94,4 @@ description: "geoclue.conf – geoclue configuration parameters"
 </dl>
 <h2>Author</h2>
 <pre>Sachin Chand</pre>
+</p>

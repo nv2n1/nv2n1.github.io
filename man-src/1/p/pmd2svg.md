@@ -15,10 +15,10 @@ description: "pmd2svg – manual page for pmd2svg 0.0.3"
 <p> `pmd2svg&#8217; converts Adobe PageMaker documents to SVG.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> show this help message</p>
-<dt><code>&#8211;version</code></p>
-<dd> show version information and exit</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> show this help message</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show version information and exit</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="https://bugs.documentfoundation.org/">https://bugs.documentfoundation.org/</a>&gt;. </p>
 <h2>Index</h2>

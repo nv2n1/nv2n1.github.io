@@ -13,11 +13,11 @@ DPCURV - Used to draw a complete curve defined by a sequence of points in the us
 
  void c_dpcurv (float *xcpu, float *ycpu, int npts);
 <h2>Description</h2><dl COMPACT><dt>XCPU
-<dd>(an input array of type REAL) specifies the X coordinates of points in the user coordinate system defining a curve to be drawn.
-<dt>YCPU
-<dd>(an input array of type REAL) specifies the Y coordinates of points in the user coordinate system defining a curve to be drawn.
-<dt>NPTS
-<dd>(an input expression of type INTEGER) specifies the number of points defining the curve.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input array of type REAL) specifies the X coordinates of points in the user coordinate system defining a curve to be drawn.
+</dd><dt>YCPU
+</dt><dd>(an input array of type REAL) specifies the Y coordinates of points in the user coordinate system defining a curve to be drawn.
+</dd><dt>NPTS
+</dt><dd>(an input expression of type INTEGER) specifies the number of points defining the curve.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>The FORTRAN statement &quot;CALL DPCURV(XCPU,YCPU,NPTS)&quot; draws a complete curve by connecting the point (XCPU(1),YCPU(1)) to the point (XCPU(2),YCPU(2)), connecting that point to the point (XCPU(3),YCPU(3)), and so on, through the last point, (XCPU(NPTS),YCPU(NPTS)), in a manner described by the current values of the internal parameters of DASHPACK. 
 
  DPCURV maps the input coordinates to the fractional system and then passes them on to lower-level routines. If smoothing is turned off, DPCURV calls DPDRAW; if smoothing is turned on, it calls DPSMTH.

@@ -16,7 +16,7 @@ description: "tripplitesu – Driver for Tripp-Lite SmartOnline (SU) UPS equipme
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>lowbatt</code>=<i>num</i></p>
 <dl>
-<dd>Set the low battery warning threshold in percent at which shutdown is initiated by <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8). By default, the UPS may not report low battery until there are only a few seconds left. Common values are around 25&#8212;30.</dl>
+<dd>Set the low battery warning threshold in percent at which shutdown is initiated by <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8). By default, the UPS may not report low battery until there are only a few seconds left. Common values are around 25&#8212;30.</dd></dl>
 <h2>Author</h2>
 <p>Allan N. Hessenflow &lt;allanh [at] kallisti.com&gt;</p>
 <h2>See Also</h2>

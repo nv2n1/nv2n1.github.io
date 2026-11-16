@@ -54,10 +54,10 @@ tpchanger &quot;aggregate&quot;</pre>
 <h3>Properties</h3>
 <p>LOCK-TIMEOUT</p>
 <dl>
-<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dl>
+<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dd></dl>
 <p> STATE_FILENAME</p>
 <dl>
-<dd>The name of the state file (default: &quot;$CONFIG_DIR/$changer_name.state&quot;.</dl>
+<dd>The name of the state file (default: &quot;$CONFIG_DIR/$changer_name.state&quot;.</dd></dl>
 <h3>chg-disk:VTAPEROOT (new)</h3>
 <pre>tpchanger &quot;chg-disk:/var/mnt/vtapes&quot;
 property &quot;num-slot&quot; &quot;10&quot;
@@ -72,28 +72,28 @@ property &quot;umount-idle&quot; &quot;1&quot;</pre>
 <h3>Properties</h3>
 <p>AUTO-CREATE-SLOT</p>
 <dl>
-<dd>If a slotN directory in the range 1 to NUM-SLOT does not already exist, and this property is true, then the changer will create the directory.</dl>
+<dd>If a slotN directory in the range 1 to NUM-SLOT does not already exist, and this property is true, then the changer will create the directory.</dd></dl>
 <p> LOCK-TIMEOUT</p>
 <dl>
-<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dl>
+<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dd></dl>
 <p> MOUNT</p>
 <dl>
-<dd>If this property is true, the changer try to mount the removable disk if nothing is mounted. The system must be configured to allow the amanda user to mount it.</dl>
+<dd>If this property is true, the changer try to mount the removable disk if nothing is mounted. The system must be configured to allow the amanda user to mount it.</dd></dl>
 <p> NUM-SLOT</p>
 <dl>
-<dd>The minimum number of slots in the changer, where the first slot is slot1. If additional slot directories exist, they will also be used.</dl>
+<dd>The minimum number of slots in the changer, where the first slot is slot1. If additional slot directories exist, they will also be used.</dd></dl>
 <p> REMOVABLE</p>
 <dl>
-<dd>If this property is true, then the changer will verify that the changer directory (e.g., /var/mnt/vtapes) is on a different filesystem from its parent directory (e.g., /var/mnt). This is useful for removable disks, as it will prevent Amanda from creating slot directories when the removable disk is not mounted.</dl>
+<dd>If this property is true, then the changer will verify that the changer directory (e.g., /var/mnt/vtapes) is on a different filesystem from its parent directory (e.g., /var/mnt). This is useful for removable disks, as it will prevent Amanda from creating slot directories when the removable disk is not mounted.</dd></dl>
 <p> UMOUNT</p>
 <dl>
-<dd>If this property is true, the changer try to umount the removable disk when it exit. The system must be configured to allow the amanda user to umount it.</dl>
+<dd>If this property is true, the changer try to umount the removable disk when it exit. The system must be configured to allow the amanda user to umount it.</dd></dl>
 <p> UMOUNT-LOCKFILE</p>
 <dl>
-<dd>If UMOUNT is set, it require a lockfile outside of the mount point to prevent race.</dl>
+<dd>If UMOUNT is set, it require a lockfile outside of the mount point to prevent race.</dd></dl>
 <p> UMOUNT-IDLE</p>
 <dl>
-<dd>If set, the changer try to umount the removable disk when it is not in use. The umount-idle value is a delay in second to wait before doing the umount. A value &gt;= 1 is required to prevent useless mount/umount.</dl>
+<dd>If set, the changer try to umount the removable disk when it is not in use. The umount-idle value is a delay in second to wait before doing the umount. A value &gt;= 1 is required to prevent useless mount/umount.</dd></dl>
 <h3>chg-disk (old)</h3>
 <pre>tapedev &quot;file:/u01/vtapes&quot;
 tpchanger &quot;chg-disk&quot;
@@ -111,10 +111,10 @@ changerfile &quot;chg-multi-state&quot;</pre>
 <h3>Properties</h3>
 <p>FIRST-SLOT</p>
 <dl>
-<dd>This property gives the number of the first slot. The default value is &quot;1&quot;.</dl>
+<dd>This property gives the number of the first slot. The default value is &quot;1&quot;.</dd></dl>
 <p> LOCK-TIMEOUT</p>
 <dl>
-<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dl>
+<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dd></dl>
 <h3>Special Operations</h3>
 <p>A number of special operations are available for <code>chg-multi</code> via <code><a href="/docs/linux/man/8-amtape/">amtape</a></code>(8) subcommands. </p>
 <p> The <code>reset</code> subcommand will change the current slot to the first available slot, but does not erase any stored state maintained by the changer. </p>
@@ -134,16 +134,16 @@ changerfile &quot;chg-multi-state&quot;</pre>
 <p> The configuration file has simple lines with a parameter and its value separated by a space. The # character introduces a comment. The configuration parameters are: </p>
 <p> multieject</p>
 <dl>
-<dd>If this is 1, use an &#8216;mt offline&#8217; command to change to the next tape, or multiple such commands for skipping several tapes at a time.</dl>
+<dd>If this is 1, use an &#8216;mt offline&#8217; command to change to the next tape, or multiple such commands for skipping several tapes at a time.</dd></dl>
 <p> needeject</p>
 <dl>
-<dd>This option is incompatible with &#8216;multieject&#8217;. This should be 1 for changers accessed through several virtual tape devices, when the changer needs the current tape to be ejected before changing to another device.</dl>
+<dd>This option is incompatible with &#8216;multieject&#8217;. This should be 1 for changers accessed through several virtual tape devices, when the changer needs the current tape to be ejected before changing to another device.</dd></dl>
 <p> gravity</p>
 <dl>
-<dd>Set this to 1 if the changer/stacker is unable to loop back to the first tape after unloading the last one, or if you don&#8217;t want amanda to go through the tape stack looking for the exact tape it wants instead of using the first acceptable one.</dl>
+<dd>Set this to 1 if the changer/stacker is unable to loop back to the first tape after unloading the last one, or if you don&#8217;t want amanda to go through the tape stack looking for the exact tape it wants instead of using the first acceptable one.</dd></dl>
 <p> slot X</p>
 <dl>
-<dd>The configuration file should list as many &#8216;slot X&#8217; statements as the number of slots supported by the changer or the number of separate tape drives used.</dl>
+<dd>The configuration file should list as many &#8216;slot X&#8217; statements as the number of slots supported by the changer or the number of separate tape drives used.</dd></dl>
 <p> This changer is not fast-search capable.</p>
 <h3>chg-manual</h3>
 <pre>tpchanger &quot;chg-manual&quot;
@@ -200,7 +200,7 @@ tpchanger &quot;chg-rait:{vtape,robot}&quot;</pre>
 <p> This changer is fast-search capable only if all of its child changers are fast-search capable. </p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- The old chg-rait script is no longer supported nor shipped with Amanda, although the old script will continue to function via <code>chg-compat</code>, giving users time to upgrade their configuration. </p>
+ The old chg-rait script is no longer supported nor shipped with Amanda, although the old script will continue to function via <code>chg-compat</code>, giving users time to upgrade their configuration. </dd>
 </dl>
 <h3>chg-null:</h3>
 <pre>tpchanger &quot;chg-null:&quot;</pre>
@@ -235,22 +235,22 @@ tpchanger &quot;robot&quot;</pre>
 <h3>Properties</h3>
 <p>DRIVE-CHOICE</p>
 <dl>
-<dd>This property controls the algorithm used to select a drive in which to load a tape. If set to the default (&quot;lru&quot;), the changer attempts to use the least recently used drive, resulting in a round-robin behavior. The &quot;firstavail&quot; algorithm selects the first available drive, thus preferring the first drive specified via the TAPE-DEVICE property.</dl>
+<dd>This property controls the algorithm used to select a drive in which to load a tape. If set to the default (&quot;lru&quot;), the changer attempts to use the least recently used drive, resulting in a round-robin behavior. The &quot;firstavail&quot; algorithm selects the first available drive, thus preferring the first drive specified via the TAPE-DEVICE property.</dd></dl>
 <p> EJECT-BEFORE-UNLOAD</p>
 <dl>
-<dd>Set this boolean property to true if the library requires an <code>offline</code> operation be performed on the tape drive before it can be unloaded. If set, then <code>mt</code> will be invoked to perform this operation. Most libraries do not require this workaround.</dl>
+<dd>Set this boolean property to true if the library requires an <code>offline</code> operation be performed on the tape drive before it can be unloaded. If set, then <code>mt</code> will be invoked to perform this operation. Most libraries do not require this workaround.</dd></dl>
 <p> EJECT-DELAY</p>
 <dl>
-<dd>This is the time between ejecting a tape and unloading the volume to a storage slot, and defaults to 0 seconds. It is only used if EJECT-BEFORE-UNLOAD is true. See &quot;Timing&quot;, below.</dl>
+<dd>This is the time between ejecting a tape and unloading the volume to a storage slot, and defaults to 0 seconds. It is only used if EJECT-BEFORE-UNLOAD is true. See &quot;Timing&quot;, below.</dd></dl>
 <p> FAST-SEARCH</p>
 <dl>
-<dd>This boolean property indicates whether the changer advertises the ability to find volumes without sequential scanning. The traditional taperscan algorithm alters its behavior based on this flag, so it is sometimes necessary to adjust it, although the changer will always search for a desired tape using the most efficient means available. The default value is true.</dl>
+<dd>This boolean property indicates whether the changer advertises the ability to find volumes without sequential scanning. The traditional taperscan algorithm alters its behavior based on this flag, so it is sometimes necessary to adjust it, although the changer will always search for a desired tape using the most efficient means available. The default value is true.</dd></dl>
 <p> IGNORE-BARCODES</p>
 <dl>
-<dd>If this boolean property is true, then chg-robot will ignore any barcode information that the library provides. This property is probably only useful when the library returns incorrect barcodes, for example due to a malfunction in the barcode reader.</dl>
+<dd>If this boolean property is true, then chg-robot will ignore any barcode information that the library provides. This property is probably only useful when the library returns incorrect barcodes, for example due to a malfunction in the barcode reader.</dd></dl>
 <p> LOAD-POLL</p>
 <dl>
-<dd>This property specifies the timing of Amanda&#8217;s polling for the tape drive to be ready after loading a new tape. See &quot;Timing&quot;, below. </p>
+<dd>This property specifies the timing of Amanda&#8217;s polling for the tape drive to be ready after loading a new tape. See &quot;Timing&quot;, below. </dd>
 <p> The script &quot;polls&quot; by trying to open the tape device repeatedly until no error is encountered. The property specifies the time to wait before the first poll (D), the frequency at which to poll and retry on errors (P); and the time after which it should give up (U). The format is </p>
 <pre>&quot;D [poll P [until U]]&quot;</pre>
 <p>For a simple delay with no polling, use e.g., </p>
@@ -262,22 +262,22 @@ tpchanger &quot;robot&quot;</pre>
 <p>The default value is <code>&quot;0s poll 3s until 2m&quot;</code>.</dl>
 <p> LOCK-TIMEOUT</p>
 <dl>
-<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dl>
+<dd>The time in seconds amanda wait to lock the statefile (default:1000)</dd></dl>
 <p> MTX</p>
 <dl>
-<dd>The path to the &#8216;mtx&#8217; binary. The default value is defined at compile time.</dl>
+<dd>The path to the &#8216;mtx&#8217; binary. The default value is defined at compile time.</dd></dl>
 <p> STATUS-INTERVAL</p>
 <dl>
-<dd>This is the minimum time between invocations of <code>mtx status</code> to determine the state of the changer library. The default value, 2 seconds, avoids back-to-back status invocations but ensures that the metadata is up to date. For operating systems or libraries where the <code>mtx status</code> takes a considerable time to complete, this value should be increased. See &quot;Timing&quot;, below.</dl>
+<dd>This is the minimum time between invocations of <code>mtx status</code> to determine the state of the changer library. The default value, 2 seconds, avoids back-to-back status invocations but ensures that the metadata is up to date. For operating systems or libraries where the <code>mtx status</code> takes a considerable time to complete, this value should be increased. See &quot;Timing&quot;, below.</dd></dl>
 <p> TAPE-DEVICE</p>
 <dl>
-<dd>This property describes the correspondance of drive numbers in the library to Amanda devices, in the format <i>DRIVE=DEVICE</i>. The property can be specified multiple times to describe multiple devices. The device will usually be a tape device name starting with <code>tape:</code>, but may also refer to a device alias (see <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7)). As a shortcut, if the <code>tapedev</code> parameter is specified in the changer definition, then it is assumed to be the device name for drive 0.</dl>
+<dd>This property describes the correspondance of drive numbers in the library to Amanda devices, in the format <i>DRIVE=DEVICE</i>. The property can be specified multiple times to describe multiple devices. The device will usually be a tape device name starting with <code>tape:</code>, but may also refer to a device alias (see <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7)). As a shortcut, if the <code>tapedev</code> parameter is specified in the changer definition, then it is assumed to be the device name for drive 0.</dd></dl>
 <p> UNLOAD-DELAY</p>
 <dl>
-<dd>This specifies the minimum time between an unload operation any any subsequent operation. The default value is 0 seconds. See &quot;Timing&quot;, below.</dl>
+<dd>This specifies the minimum time between an unload operation any any subsequent operation. The default value is 0 seconds. See &quot;Timing&quot;, below.</dd></dl>
 <p> USE-SLOTS</p>
 <dl>
-<dd>This property, if specifies, enumerates the slots to which this changer should limit itself. The slots are specified as a comma-separated list of ranges, e.g., &quot;1-5,11-15,19,22&quot;. The property can be specified more than once, and the resulting sets will be combined. The changer will refuse to load tapes not found in these slots, except for import/export purposes.</dl>
+<dd>This property, if specifies, enumerates the slots to which this changer should limit itself. The slots are specified as a comma-separated list of ranges, e.g., &quot;1-5,11-15,19,22&quot;. The property can be specified more than once, and the resulting sets will be combined. The changer will refuse to load tapes not found in these slots, except for import/export purposes.</dd></dl>
 <h3>Timing</h3>
 <p>Tape libraries are fickle, and in many cases will report that an operation is complete when it is still in progress. Chg-robot takes several timing-related properties to accomodate such behavior. </p>
 <p> A typical sequence of operations performed during a load are: get library status, eject a tape, unload the tape back to a storage slot, load a new tape, and read the label on that tape to ensure the drive is ready. </p>
@@ -300,16 +300,16 @@ tpchanger &quot;robot&quot;</pre>
 <p>This changer supports all of the properties supported by <code>chg-robot</code>, although the value of <code>MTX</code> is ignored. The following properties are also recognized: </p>
 <p> NDMP_AUTH</p>
 <dl>
-<dd>Authentication method to use to connect to the NDMP server. One of &quot;md5&quot; (default), &quot;text&quot;, &quot;none&quot; (for an empty authentication attempt) or &quot;void&quot; (for no authentication attempt at all).</dl>
+<dd>Authentication method to use to connect to the NDMP server. One of &quot;md5&quot; (default), &quot;text&quot;, &quot;none&quot; (for an empty authentication attempt) or &quot;void&quot; (for no authentication attempt at all).</dd></dl>
 <p> NDMP-PASSWORD</p>
 <dl>
-<dd>The password for the NDMP server.</dl>
+<dd>The password for the NDMP server.</dd></dl>
 <p> NDMP-USERNAME</p>
 <dl>
-<dd>The username for the NDMP server.</dl>
+<dd>The username for the NDMP server.</dd></dl>
 <p> VERBOSE</p>
 <dl>
-<dd>If true, enables the NDMJOB library&#8217;s verbose (packet-level) debugging.</dl>
+<dd>If true, enables the NDMJOB library&#8217;s verbose (packet-level) debugging.</dd></dl>
 <h3>chg-single:DEVICE</h3>
 <pre>tpchanger &quot;chg-single:tape:/dev/nst0&quot;</pre>
 <p>This changer is for use with standalone drive, it can work with any device. The device (<code>tape:/dev/nst0</code>) must be set in the tpchanger definition. </p>
@@ -322,4 +322,4 @@ tpchanger &quot;robot&quot;</pre>
 <h2>Author</h2>
 <p><code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

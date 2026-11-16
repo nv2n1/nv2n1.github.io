@@ -15,56 +15,56 @@ description: "getcert"
 <p> Tells <i>certmonger</i> to use an existing key pair (or to generate one if one is not already found in the specified location), to generate a signing request using the key pair, and to submit them for signing to a CA. </p>
 <h2>KEY AND CERTIFICATE STORAGE OPTIONS</h2>
 <dl>
-<dt><code>-d</code> DIR</p>
-<dd> Use an NSS database in the specified directory for storing this certificate and key.</p>
-<dt><code>-n</code> NAME</p>
-<dd> Use the key with this nickname to generate the signing request. If no such key is found, generate one. Give the enrolled certificate this nickname, too. Only valid with <code>-d</code>.</p>
-<dt><code>-t</code> TOKEN</p>
-<dd> If the NSS database has more than one token available, use the token with this name for storing and accessing the certificate and key. This argument only rarely needs to be specified. Only valid with <code>-d</code>.</p>
-<dt><code>-f</code> FILE</p>
-<dd> Store the issued certificate in this file. For safety&#8217;s sake, do not use the same file specified with the <code>-k</code> option.</p>
-<dt><code>-k</code> FILE</p>
-<dd> Use the key stored in this file to generate the signing request. If no such file is found, generate a new key pair and store them in the file. Only valid with <code>-f</code>. </p>
+<dt><code>-d</code> DIR</dt>
+<dd> Use an NSS database in the specified directory for storing this certificate and key.</dd>
+<dt><code>-n</code> NAME</dt>
+<dd> Use the key with this nickname to generate the signing request. If no such key is found, generate one. Give the enrolled certificate this nickname, too. Only valid with <code>-d</code>.</dd>
+<dt><code>-t</code> TOKEN</dt>
+<dd> If the NSS database has more than one token available, use the token with this name for storing and accessing the certificate and key. This argument only rarely needs to be specified. Only valid with <code>-d</code>.</dd>
+<dt><code>-f</code> FILE</dt>
+<dd> Store the issued certificate in this file. For safety&#8217;s sake, do not use the same file specified with the <code>-k</code> option.</dd>
+<dt><code>-k</code> FILE</dt>
+<dd> Use the key stored in this file to generate the signing request. If no such file is found, generate a new key pair and store them in the file. Only valid with <code>-f</code>. </dd>
 </dl>
 <h2>KEY ENCRYPTION OPTIONS</h2>
 <dl>
-<dt><code>-p</code> FILE</p>
-<dd> Encrypt private key files or databases using the PIN stored in the named file as the passphrase.</p>
-<dt><code>-P</code> PIN</p>
-<dd> Encrypt private key files or databases using the specified PIN as the passphrase. Because command-line arguments to running processes are trivially discoverable, use of this option is not recommended except for testing. </p>
+<dt><code>-p</code> FILE</dt>
+<dd> Encrypt private key files or databases using the PIN stored in the named file as the passphrase.</dd>
+<dt><code>-P</code> PIN</dt>
+<dd> Encrypt private key files or databases using the specified PIN as the passphrase. Because command-line arguments to running processes are trivially discoverable, use of this option is not recommended except for testing. </dd>
 </dl>
 <h2>KEY GENERATION OPTIONS</h2>
 <dl>
-<dt><code>-G</code> TYPE</p>
-<dd> In case a new key pair needs to be generated, this option specifies the type of the keys to be generated. If not specified, a reasonable default (currently <i>RSA</i>) will be used.</p>
-<dt><code>-g</code> BITS</p>
-<dd> In case a new key pair needs to be generated, this option specifies the size of the key. If not specified, a reasonable default (currently 2048 bits) will be used. </p>
+<dt><code>-G</code> TYPE</dt>
+<dd> In case a new key pair needs to be generated, this option specifies the type of the keys to be generated. If not specified, a reasonable default (currently <i>RSA</i>) will be used.</dd>
+<dt><code>-g</code> BITS</dt>
+<dd> In case a new key pair needs to be generated, this option specifies the size of the key. If not specified, a reasonable default (currently 2048 bits) will be used. </dd>
 </dl>
 <h2>TRACKING OPTIONS</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> Attempt to obtain a new certificate from the CA when the expiration date of a certificate nears. This is the default setting.</p>
-<dt><code>-R</code></p>
-<dd> Don&#8217;t attempt to obtain a new certificate from the CA when the expiration date of a certificate nears. If this option is specified, an expired certificate will simply stay expired.</p>
-<dt><code>-I</code> NAME</p>
-<dd> Assign the specified nickname to this task. If this option is not specified, a name will be assigned automatically. </p>
+<dt><code>-r</code></dt>
+<dd> Attempt to obtain a new certificate from the CA when the expiration date of a certificate nears. This is the default setting.</dd>
+<dt><code>-R</code></dt>
+<dd> Don&#8217;t attempt to obtain a new certificate from the CA when the expiration date of a certificate nears. If this option is specified, an expired certificate will simply stay expired.</dd>
+<dt><code>-I</code> NAME</dt>
+<dd> Assign the specified nickname to this task. If this option is not specified, a name will be assigned automatically. </dd>
 </dl>
 <h2>ENROLLMENT OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> Enroll with the specified CA rather than a possible default. The name of the CA should correspond to one listed by <i>getcert list-cas</i>.</p>
-<dt><code>-T</code> NAME</p>
-<dd> Request a certificate using the named profile, template, or certtype, from the specified CA.</p>
-<dt><code>-X</code> NAME</p>
-<dd> Request a certificate using the named issuer from the specified CA. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> Enroll with the specified CA rather than a possible default. The name of the CA should correspond to one listed by <i>getcert list-cas</i>.</dd>
+<dt><code>-T</code> NAME</dt>
+<dd> Request a certificate using the named profile, template, or certtype, from the specified CA.</dd>
+<dt><code>-X</code> NAME</dt>
+<dd> Request a certificate using the named issuer from the specified CA. </dd>
 </dl>
 <h2>SIGNING REQUEST OPTIONS</h2>
 <p> If none of <code>-N</code>, <code>-U</code>, <code>-K</code>, <code>-E</code>, and <code>-D</code> are specified, a default group of settings will be used to request an SSL server certificate for the current host, with the <i>host</i> Kerberos service as an additional name. </p>
 <dl>
-<dt><code>-N</code> NAME</p>
-<dd> Set the subject name to include in the signing request. The default used is CN=<i>hostname</i>, where <i>hostname</i> is the local hostname.</p>
-<dt><code>-u</code> keyUsage</p>
-<dd> Add an extensionRequest for the specified keyUsage to the signing request. The keyUsage value is expected to be one of these names: </p>
+<dt><code>-N</code> NAME</dt>
+<dd> Set the subject name to include in the signing request. The default used is CN=<i>hostname</i>, where <i>hostname</i> is the local hostname.</dd>
+<dt><code>-u</code> keyUsage</dt>
+<dd> Add an extensionRequest for the specified keyUsage to the signing request. The keyUsage value is expected to be one of these names: </dd>
 <p> digitalSignature </p>
 <p> nonRepudiation </p>
 <p> keyEncipherment </p>
@@ -74,8 +74,8 @@ description: "getcert"
 <p> cRLSign </p>
 <p> encipherOnly </p>
 <p> decipherOnly</p>
-<dt><code>-U</code> EKU</p>
-<dd> Add an extensionRequest for the specified extendedKeyUsage to the signing request. The EKU value is expected to be an object identifier (OID), but some specific names are also recognized. These are some names and their associated OID values: </p>
+<dt><code>-U</code> EKU</dt>
+<dd> Add an extensionRequest for the specified extendedKeyUsage to the signing request. The EKU value is expected to be an object identifier (OID), but some specific names are also recognized. These are some names and their associated OID values: </dd>
 <p> id-kp-serverAuth 1.3.6.1.5.5.7.3.1 </p>
 <p> id-kp-clientAuth 1.3.6.1.5.5.7.3.2 </p>
 <p> id-kp-codeSigning 1.3.6.1.5.5.7.3.3 </p>
@@ -85,33 +85,33 @@ description: "getcert"
 <p> id-pkinit-KPClientAuth 1.3.6.1.5.2.3.4 </p>
 <p> id-pkinit-KPKdc 1.3.6.1.5.2.3.5 </p>
 <p> id-ms-kp-sc-logon 1.3.6.1.4.1.311.20.2.2</p>
-<dt><code>-K</code> NAME</p>
-<dd> Add an extensionRequest for a subjectAltName, with the specified Kerberos principal name as its value, to the signing request.</p>
-<dt><code>-E</code> EMAIL</p>
-<dd> Add an extensionRequest for a subjectAltName, with the specified email address as its value, to the signing request.</p>
-<dt><code>-D</code> DNSNAME</p>
-<dd> Add an extensionRequest for a subjectAltName, with the specified DNS name as its value, to the signing request.</p>
-<dt><code>-A</code> ADDRESS</p>
-<dd> Add an extensionRequest for a subjectAltName, with the specified IP address as its value, to the signing request.</p>
-<dt><code>-l</code> FILE</p>
-<dd> Add an optional ChallengePassword value, read from the file, to the signing request. A ChallengePassword is often required when the CA is accessed using SCEP.</p>
-<dt><code>-L</code> PIN</p>
-<dd> Add the argument value to the signing request as a ChallengePassword attribute. A ChallengePassword is often required when the CA is accessed using SCEP. </p>
+<dt><code>-K</code> NAME</dt>
+<dd> Add an extensionRequest for a subjectAltName, with the specified Kerberos principal name as its value, to the signing request.</dd>
+<dt><code>-E</code> EMAIL</dt>
+<dd> Add an extensionRequest for a subjectAltName, with the specified email address as its value, to the signing request.</dd>
+<dt><code>-D</code> DNSNAME</dt>
+<dd> Add an extensionRequest for a subjectAltName, with the specified DNS name as its value, to the signing request.</dd>
+<dt><code>-A</code> ADDRESS</dt>
+<dd> Add an extensionRequest for a subjectAltName, with the specified IP address as its value, to the signing request.</dd>
+<dt><code>-l</code> FILE</dt>
+<dd> Add an optional ChallengePassword value, read from the file, to the signing request. A ChallengePassword is often required when the CA is accessed using SCEP.</dd>
+<dt><code>-L</code> PIN</dt>
+<dd> Add the argument value to the signing request as a ChallengePassword attribute. A ChallengePassword is often required when the CA is accessed using SCEP. </dd>
 </dl>
 <h2>OTHER OPTIONS</h2>
 <dl>
-<dt><code>-B</code> COMMAND</p>
-<dd> When ever the certificate or the CA&#8217;s certificates are saved to the specified locations, run the specified command as the client user before saving the certificates.</p>
-<dt><code>-C</code> COMMAND</p>
-<dd> When ever the certificate or the CA&#8217;s certificates are saved to the specified locations, run the specified command as the client user after saving the certificates.</p>
-<dt><code>-a</code> DIR</p>
-<dd> When ever the certificate is saved to the specified location, if root certificates for the CA are available, save them to the specified NSS database.</p>
-<dt><code>-F</code> FILE</p>
-<dd> When ever the certificate is saved to the specified location, if root certificates for the CA are available, and when the local copies of the CA&#8217;s root certificates are updated, save them to the specified file.</p>
-<dt><code>-w</code></p>
-<dd> Wait for the certificate to be issued and saved, or for the attempt to obtain one to fail.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-B</code> COMMAND</dt>
+<dd> When ever the certificate or the CA&#8217;s certificates are saved to the specified locations, run the specified command as the client user before saving the certificates.</dd>
+<dt><code>-C</code> COMMAND</dt>
+<dd> When ever the certificate or the CA&#8217;s certificates are saved to the specified locations, run the specified command as the client user after saving the certificates.</dd>
+<dt><code>-a</code> DIR</dt>
+<dd> When ever the certificate is saved to the specified location, if root certificates for the CA are available, save them to the specified NSS database.</dd>
+<dt><code>-F</code> FILE</dt>
+<dd> When ever the certificate is saved to the specified location, if root certificates for the CA are available, and when the local copies of the CA&#8217;s root certificates are updated, save them to the specified file.</dd>
+<dt><code>-w</code></dt>
+<dd> Wait for the certificate to be issued and saved, or for the attempt to obtain one to fail.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> Locations specified for key and certificate storage need to be accessible to the <i>certmonger</i> daemon process. When run as a system daemon on a system which uses a mandatory access control mechanism such as SELinux, the system policy must ensure that the daemon is allowed to access the locations where certificates and keys that it will manage will be stored (these locations are typically labeled as <i>cert_t</i> or an equivalent). More SELinux-specific information can be found in the <i>selinux.txt</i> documentation file for this package. </p>

@@ -17,20 +17,20 @@ mongoc_collection_command_simple (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>command</code></p>
-<dd>A <code>bson_t</code> containing the command to execute.</dl>
+<dt><code>command</code></dt>
+<dd>A <code>bson_t</code> containing the command to execute.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>A location to initialize a <code>bson_t</code> \&amp;. This should be on the stack.</dl>
+<dt><code>reply</code></dt>
+<dd>A location to initialize a <code>bson_t</code> \&amp;. This should be on the stack.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This is a simplified version of <code><a href="/docs/linux/man/3-mongoc_collection_command/">mongoc_collection_command</a>(3)</code> that returns the first result document in <code>reply</code> \&amp;. The parameter <code>reply</code> is initialized even upon failure to simplify memory management. </p>
 <p> This function tries to unwrap an embedded error in the command when possible. The unwrapped error will be propagated via the <code>error</code> parameter. Additionally, the result document is set in <code>reply</code> \&amp;. </p>

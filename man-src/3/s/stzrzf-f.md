@@ -24,10 +24,10 @@ description: "stzrzf.f –"
  A = ( R 0 ) * Z,
  where Z is an N-by-N orthogonal matrix and R is an M-by-M upper
  triangular matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -66,16 +66,16 @@ description: "stzrzf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -88,7 +88,8 @@ description: "stzrzf.f –"
  I is the M-by-M identity matrix, A(:,M+1:N) 
  is the output stored in A on exit from DTZRZF,
  and tau(k) is the kth element of the array TAU.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 152 of file stzrzf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

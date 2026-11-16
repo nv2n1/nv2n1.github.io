@@ -18,7 +18,7 @@ description: "sane-artec – SANE backend for Artec flatbed scanners"
  * Artec ViewStation AT6<br />
  * Artec ViewStation AT12<br />
  * Artec AM12S<br />
- * Plustek 19200S (rebadged Artec AM12S)</dl>
+ * Plustek 19200S (rebadged Artec AM12S)</dd></dl>
 <p> Although this manual page is generally updated with each release, up-to-date information on new releases and extraneous helpful hints are available from the backend homepage: <i><a rel="nofollow" href="http://www4.infi.net/~cpinkham/sane">http://www4.infi.net/~cpinkham/sane</a></i>. </p>
 <h2>Configuration</h2>
 <p>The contents of the <i>artec.conf</i> file are a list of device names that correspond to Artec scanners. Empty lines and lines starting with a hash mark (#) are ignored. See <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5) on details of what constitutes a valid device name. </p>
@@ -55,19 +55,19 @@ model AT3
  I do not have any information on the PCI SCSI adapter included with some newer Artec scanners.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/artec.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-artec.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-artec.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/artec.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-artec.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-artec.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_ARTEC</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity: <code>SANE_DEBUG_ARTEC</code> values: </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_ARTEC</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity: <code>SANE_DEBUG_ARTEC</code> values: </dd>
 <pre>Number Remark
  0 print important errors
  1 print errors

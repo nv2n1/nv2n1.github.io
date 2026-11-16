@@ -38,26 +38,26 @@ description: "QwtLinearColorMap –"
 <p>Mode of color map </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMode()</code>, <code>mode()</code></dl>
+<dd><code>setMode()</code>, <code>mode()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>FixedColors </i></p>
-<dd>Return the color from the next lower color stop.</p>
-<dt><i>ScaledColors </i></p>
-<dd>Interpolating the colors of the adjacent stops.</dl>
+<dt><i>FixedColors </i></dt>
+<dd>Return the color from the next lower color stop.</dd>
+<dt><i>ScaledColors </i></dt>
+<dd>Interpolating the colors of the adjacent stops.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtLinearColorMap::QwtLinearColorMap (<code>QwtColorMap::Format</code>format = <code>QwtColorMap::RGB</code>)</h3>
 <p>Build a color map with two stops at 0.0 and 1.0. The color at 0.0 is Qt::blue, at 1.0 it is Qt::yellow. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>format</i> Preferred format of the color map</dl>
+<dd><i>format</i> Preferred format of the color map</dd></dl>
 <h3>QwtLinearColorMap::QwtLinearColorMap (const QColor &amp;color1, const QColor &amp;color2, <code>QwtColorMap::Format</code>format = <code>QwtColorMap::RGB</code>)</h3>
 <p>Build a color map with two stops at 0.0 and 1.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>color1</i> Color used for the minimum value of the value interval<br />
  <i>color2</i> Color used for the maximum value of the value interval<br />
- <i>format</i> Preferred format for the color map</dl>
+ <i>format</i> Preferred format for the color map</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtLinearColorMap::addColorStop (doublevalue, const QColor &amp;color)</h3>
 <p>Add a color stop </p>
@@ -65,51 +65,51 @@ description: "QwtLinearColorMap –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>value</i> Value between [0.0, 1.0]<br />
- <i>color</i> Color stop</dl>
+ <i>color</i> Color stop</dd></dl>
 <h3>QColor QwtLinearColorMap::color1 () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the first color of the color range</dl>
+<dd>the first color of the color range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setColorInterval()</code></dl>
+<dd><code>setColorInterval()</code></dd></dl>
 <h3>QColor QwtLinearColorMap::color2 () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the second color of the color range</dl>
+<dd>the second color of the color range</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setColorInterval()</code></dl>
+<dd><code>setColorInterval()</code></dd></dl>
 <h3>unsigned char QwtLinearColorMap::colorIndex (const <code>QwtInterval</code> &amp;interval, doublevalue) const [virtual]</h3>
 <p>Map a value of a given interval into a color index. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Range for all values<br />
- <i>value</i> Value to map into a color index</dl>
+ <i>value</i> Value to map into a color index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Index, between 0 and 255</dl>
+<dd>Index, between 0 and 255</dd></dl>
 <p> Implements <code>QwtColorMap</code>.</p>
 <h3>QVector&lt; double &gt; QwtLinearColorMap::colorStops () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Positions of color stops in increasing order</dl>
+<dd>Positions of color stops in increasing order</dd></dl>
 <h3><code>QwtLinearColorMap::Mode</code> QwtLinearColorMap::mode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode of the color map</dl>
+<dd>Mode of the color map</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMode()</code></dl>
+<dd><code>setMode()</code></dd></dl>
 <h3>QRgb QwtLinearColorMap::rgb (const <code>QwtInterval</code> &amp;interval, doublevalue) const [virtual]</h3>
 <p>Map a value of a given interval into a RGB value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>interval</i> Range for all values<br />
- <i>value</i> Value to map into a RGB value</dl>
+ <i>value</i> Value to map into a RGB value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>RGB value for value</dl>
+<dd>RGB value for value</dd></dl>
 <p> Implements <code>QwtColorMap</code>.</p>
 <h3>void QwtLinearColorMap::setColorInterval (const QColor &amp;color1, const QColor &amp;color2)</h3>
 <p>Set the color range </p>
@@ -117,14 +117,14 @@ description: "QwtLinearColorMap –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>color1</i> Color used for the minimum value of the value interval<br />
- <i>color2</i> Color used for the maximum value of the value interval</dl>
+ <i>color2</i> Color used for the maximum value of the value interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>color1()</code>, <code>color2()</code></dl>
+<dd><code>color1()</code>, <code>color2()</code></dd></dl>
 <h3>void QwtLinearColorMap::setMode (<code>Mode</code>mode)</h3>
 <p>Set the mode of the color map. FixedColors means the color is calculated from the next lower color stop. ScaledColors means the color is calculated by interpolating the colors of the adjacent stops. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mode()</code></dl>
+<dd><code>mode()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

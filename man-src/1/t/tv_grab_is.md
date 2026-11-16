@@ -37,7 +37,7 @@ description: "tv_grab_is – Grab TV listings for Iceland."
 <h2>POD ERRORS</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>
-<dt>Around line 64:</p>
-<dd> Non-ASCII character seen before =encoding in &#8216;<font SIZE="+2">I</font>oor&#8217;. Assuming <font SIZE="-1">UTF-8</font> </p>
+<dt>Around line 64:</dt>
+<dd> Non-ASCII character seen before =encoding in &#8216;<font SIZE="+2">I</font>oor&#8217;. Assuming <font SIZE="-1">UTF-8</font> </dd>
 </dl>
 <h2>Index</h2>

@@ -25,42 +25,42 @@ description: "munge_encode, munge_decode, munge_strerror – MUNGE core function
 <p> The <code>munge_strerror</code>() function returns a pointer to a NUL-terminated constant text string; this string should not be freed or modified by the caller. </p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EMUNGE_SUCCESS</code></p>
-<dd>Success.</p>
-<dt><code>EMUNGE_SNAFU</code></p>
-<dd>Internal error.</p>
-<dt><code>EMUNGE_BAD_ARG</code></p>
-<dd>Invalid argument.</p>
-<dt><code>EMUNGE_BAD_LENGTH</code></p>
-<dd>Exceeded the maximum message length as specified by the <code>munged</code> configuration.</p>
-<dt><code>EMUNGE_OVERFLOW</code></p>
-<dd>Exceeded the maximum length of a buffer.</p>
-<dt><code>EMUNGE_NO_MEMORY</code></p>
-<dd>Unable to allocate the requisite memory.</p>
-<dt><code>EMUNGE_SOCKET</code></p>
-<dd>Unable to communicate with the daemon on the domain socket.</p>
-<dt><code>EMUNGE_BAD_CRED</code></p>
-<dd>The credential does not match the specified format.</p>
-<dt><code>EMUNGE_BAD_VERSION</code></p>
-<dd>The credential contains an unsupported version number.</p>
-<dt><code>EMUNGE_BAD_CIPHER</code></p>
-<dd>The credential contains an unsupported cipher type.</p>
-<dt><code>EMUNGE_BAD_MAC</code></p>
-<dd>The credential contains an unsupported MAC type.</p>
-<dt><code>EMUNGE_BAD_ZIP</code></p>
-<dd>The credential contains an unsupported compression type.</p>
-<dt><code>EMUNGE_BAD_REALM</code></p>
-<dd>The credential contains an unrecognized security realm.</p>
-<dt><code>EMUNGE_CRED_INVALID</code></p>
-<dd>The credential is invalid. This means the credential could not be successfully decoded. More than likely, the secret keys on the encoding and decoding hosts do not match. Another possibility is that the credential has been altered since it was encoded.</p>
-<dt><code>EMUNGE_CRED_EXPIRED</code></p>
-<dd>The credential has expired. This means more than TTL seconds have elapsed since the credential was encoded. Another possibility is that the clocks on the encoding and decoding hosts are out of sync.</p>
-<dt><code>EMUNGE_CRED_REWOUND</code></p>
-<dd>The credential appears to have been encoded at some point in the future. This means the clock on the decoding host is slower than that of the encoding host by more than the allowable clock skew. More than likely, the clocks on the encoding and decoding hosts are out of sync.</p>
-<dt><code>EMUNGE_CRED_REPLAYED</code></p>
-<dd>The credential has been previously decoded on this host.</p>
-<dt><code>EMUNGE_CRED_UNAUTHORIZED</code></p>
-<dd>The client is not authorized to decode the credential based upon the effective user and/or group ID of the process. </p>
+<dt><code>EMUNGE_SUCCESS</code></dt>
+<dd>Success.</dd>
+<dt><code>EMUNGE_SNAFU</code></dt>
+<dd>Internal error.</dd>
+<dt><code>EMUNGE_BAD_ARG</code></dt>
+<dd>Invalid argument.</dd>
+<dt><code>EMUNGE_BAD_LENGTH</code></dt>
+<dd>Exceeded the maximum message length as specified by the <code>munged</code> configuration.</dd>
+<dt><code>EMUNGE_OVERFLOW</code></dt>
+<dd>Exceeded the maximum length of a buffer.</dd>
+<dt><code>EMUNGE_NO_MEMORY</code></dt>
+<dd>Unable to allocate the requisite memory.</dd>
+<dt><code>EMUNGE_SOCKET</code></dt>
+<dd>Unable to communicate with the daemon on the domain socket.</dd>
+<dt><code>EMUNGE_BAD_CRED</code></dt>
+<dd>The credential does not match the specified format.</dd>
+<dt><code>EMUNGE_BAD_VERSION</code></dt>
+<dd>The credential contains an unsupported version number.</dd>
+<dt><code>EMUNGE_BAD_CIPHER</code></dt>
+<dd>The credential contains an unsupported cipher type.</dd>
+<dt><code>EMUNGE_BAD_MAC</code></dt>
+<dd>The credential contains an unsupported MAC type.</dd>
+<dt><code>EMUNGE_BAD_ZIP</code></dt>
+<dd>The credential contains an unsupported compression type.</dd>
+<dt><code>EMUNGE_BAD_REALM</code></dt>
+<dd>The credential contains an unrecognized security realm.</dd>
+<dt><code>EMUNGE_CRED_INVALID</code></dt>
+<dd>The credential is invalid. This means the credential could not be successfully decoded. More than likely, the secret keys on the encoding and decoding hosts do not match. Another possibility is that the credential has been altered since it was encoded.</dd>
+<dt><code>EMUNGE_CRED_EXPIRED</code></dt>
+<dd>The credential has expired. This means more than TTL seconds have elapsed since the credential was encoded. Another possibility is that the clocks on the encoding and decoding hosts are out of sync.</dd>
+<dt><code>EMUNGE_CRED_REWOUND</code></dt>
+<dd>The credential appears to have been encoded at some point in the future. This means the clock on the decoding host is slower than that of the encoding host by more than the allowable clock skew. More than likely, the clocks on the encoding and decoding hosts are out of sync.</dd>
+<dt><code>EMUNGE_CRED_REPLAYED</code></dt>
+<dd>The credential has been previously decoded on this host.</dd>
+<dt><code>EMUNGE_CRED_UNAUTHORIZED</code></dt>
+<dd>The client is not authorized to decode the credential based upon the effective user and/or group ID of the process. </dd>
 </dl>
 <h2>Example</h2>
 <p>The following example program illustrates the use of a MUNGE credential to ascertain the effective user and group ID of the encoding process. </p>

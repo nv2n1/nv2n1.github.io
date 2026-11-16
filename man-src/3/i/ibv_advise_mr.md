@@ -17,14 +17,14 @@ url: "/docs/linux/man/3-ibv_advise_mr/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_advise_mr(struct ibv_pd *pd,
                   enum ibv_advise_mr_advice advice,
                   uint32_t flags,
                   struct ibv_sge *sg_list,
                   uint32_t num_sge)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -35,23 +35,23 @@ int ibv_advise_mr(struct ibv_pd *pd,
  Conventional advice values
 <dl>
 <dt>IBV_ADVISE_MR_ADVICE_PREFETCH
-<dd> Pre-fetch a range of an on-demand paging MR. Make pages present with read-only permission before the actual IO is conducted. This would provide a way to reduce latency by overlapping paging-in and either compute time or IO to other ranges.
-<dt>IBV_ADVISE_MR_ADVICE_PREFETCH_WRITE
-<dd> Like IBV_ADVISE_MR_ADVICE_PREFETCH but with read-access and write-access permission to the fetched memory.</dl>
+</dt><dd> Pre-fetch a range of an on-demand paging MR. Make pages present with read-only permission before the actual IO is conducted. This would provide a way to reduce latency by overlapping paging-in and either compute time or IO to other ranges.
+</dd><dt>IBV_ADVISE_MR_ADVICE_PREFETCH_WRITE
+</dt><dd> Like IBV_ADVISE_MR_ADVICE_PREFETCH but with read-access and write-access permission to the fetched memory.</dd></dl>
 
 <h2>ARGUMENTS</h2>
 
 <dl>
 <dt>pd
-<dd> The protection domain (PD) associated with the MR.
-<dt>advice
-<dd> The requested advise value (as listed above).
-<dt>flags
-<dd> Describes the properties of the advise operation Conventional advice values IBV_ADVISE_MR_FLAG_FLUSH : Request to be a synchronized operation. Return to the caller after the operation is completed.
-<dt>sg_list
-<dd> Pointer to the s/g array When using IBV_ADVISE_OP_PREFETCH advise value, all the lkeys of all the scatter gather elements (SGEs) must be associated with ODP MRs (MRs that were registered with IBV_ACCESS_ON_DEMAND).
-<dt>num_sge
-<dd> Number of elements in the s/g array</dl>
+</dt><dd> The protection domain (PD) associated with the MR.
+</dd><dt>advice
+</dt><dd> The requested advise value (as listed above).
+</dd><dt>flags
+</dt><dd> Describes the properties of the advise operation Conventional advice values IBV_ADVISE_MR_FLAG_FLUSH : Request to be a synchronized operation. Return to the caller after the operation is completed.
+</dd><dt>sg_list
+</dt><dd> Pointer to the s/g array When using IBV_ADVISE_OP_PREFETCH advise value, all the lkeys of all the scatter gather elements (SGEs) must be associated with ODP MRs (MRs that were registered with IBV_ACCESS_ON_DEMAND).
+</dd><dt>num_sge
+</dt><dd> Number of elements in the s/g array</dd></dl>
 
 <h2>RETURN VALUE</h2>
 
@@ -60,13 +60,13 @@ int ibv_advise_mr(struct ibv_pd *pd,
  ibv_advise_mr() returns 0 when the call was successful, or the value of errno on failure (which indicates the failure reason).
 <dl>
 <dt>EOPNOTSUPP
-<dd> libibverbs or provider driver doesn't support the ibv_advise_mr() verb (ENOSYS may sometimes be returned by old versions of libibverbs).
-<dt>ENOTSUP
-<dd> The advise operation isn't supported.
-<dt>EFAULT
-<dd> In one of the following: o When the range requested is out of the MR bounds, or when parts of it are not part of the process address space. o One of the lkeys provided in the scatter gather list is invalid or with wrong write access.
-<dt>EINVAL
-<dd> In one of the following: o The PD is invalid. o The flags are invalid.</dl>
+</dt><dd> libibverbs or provider driver doesn't support the ibv_advise_mr() verb (ENOSYS may sometimes be returned by old versions of libibverbs).
+</dd><dt>ENOTSUP
+</dt><dd> The advise operation isn't supported.
+</dd><dt>EFAULT
+</dt><dd> In one of the following: o When the range requested is out of the MR bounds, or when parts of it are not part of the process address space. o One of the lkeys provided in the scatter gather list is invalid or with wrong write access.
+</dd><dt>EINVAL
+</dt><dd> In one of the following: o The PD is invalid. o The flags are invalid.</dd></dl>
 
 <h2>NOTES</h2>
 

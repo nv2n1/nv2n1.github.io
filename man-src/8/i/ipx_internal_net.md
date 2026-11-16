@@ -15,10 +15,10 @@ description: "ipx_internal_net – add or delete the IPX internal network"
 <p><code>ipx_internal_net</code> adds or deletes the IPX internal network. An IPX internal network is a special kind of IPX interface that does not have a physical device or frame type. It is used to provide a route-independent address for service providers. Internal networks are optional; however, when one is present it is also the Primary Interface. There can only be one internal network per host.</p>
 <h3>Options</h3>
 <dl>
-<dt><i>add</i></p>
-<dd>This option is used to create the IPX internal network.</p>
-<dt><i>del</i></p>
-<dd>This option is used to delete the IPX internal network.</dl>
+<dt><i>add</i></dt>
+<dd>This option is used to create the IPX internal network.</dd>
+<dt><i>del</i></dt>
+<dd>This option is used to delete the IPX internal network.</dd></dl>
 <h2>Files</h2>
 <p><i>/proc/net/ipx_interface /proc/net/ipx_route</i></p>
 <h2>Bugs</h2>

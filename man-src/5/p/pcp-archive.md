@@ -13,12 +13,12 @@ description: "pcp-archive – Archive Files for Performance Co-Pilot"
 <h2>Description</h2>
 <p>PCP log archives store volumes of historical values of arbitrary Performance Co-Pilot metrics recorded from a single host. Archives are self-contained in the sense that they contain all the important metadata that would be required for off-line or off-site analysis. The format is intended to be stable in order to allow long-term historical storage and processing by current tools. (Compatibility in the other direction &#8211; new files, old tools &#8211; is not as fully assured.) Archives may be read by most PCP client tools, using the <i>-a ARCHIVE</i> option, or dumped raw by <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1). Archives may be created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) and bulk-import tools. Archives may be merged, analyzed, and subsampled using specialized tools such as <code><a href="/docs/linux/man/1-pmlogsummary/">pmlogsummary</a></code>(1), <code><a href="/docs/linux/man/1-pmlogreduce/">pmlogreduce</a></code>(1), <code><a href="/docs/linux/man/1-pmlogrewrite/">pmlogrewrite</a></code>(1), and <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1). In addition, PCP archives may examined in sets or grouped together into PCP &quot;archive folios&quot;, which are managed by the <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1) tool. PCP archives consist of several physical files that share a common arbitrary prefix, e.g., <i>myarchive</i>.</p>
 <dl>
-<dt>myarchive.0, myarchive.1, &#8230;</p>
-<dd>Metric values. May grow rapidly.</p>
-<dt>myarchive.meta</p>
-<dd>Information for PMAPI functions such as <i><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></i>(3) and <i><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></i>(3). May grow in fits and spurts, as logged instances and instance domains vary.</p>
-<dt>myarchive.index</p>
-<dd>A temporal index, mapping timestamps to offsets in the other files. Grows slowly. </p>
+<dt>myarchive.0, myarchive.1, &#8230;</dt>
+<dd>Metric values. May grow rapidly.</dd>
+<dt>myarchive.meta</dt>
+<dd>Information for PMAPI functions such as <i><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></i>(3) and <i><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></i>(3). May grow in fits and spurts, as logged instances and instance domains vary.</dd>
+<dt>myarchive.index</dt>
+<dd>A temporal index, mapping timestamps to offsets in the other files. Grows slowly. </dd>
 <h2>Common Features</h2>
 <p>All three types of files have a similar record-based structure, a convention of network-byte-order (big-endian) encoding, and 32-bit fields for tagging/padding for those records. Strings are stored as 8-bit characters without assuming a specific encoding, so normally ASCII. See also the <code>__pmLog*</code> types in <i>include/pcp/impl.h</i>.</p>
 <h3>Record Framing</h3>
@@ -594,3 +594,4 @@ description: "pcp-archive – Archive Files for Performance Co-Pilot"
 <p> Since temporal indexes are optional, and exist only to speed up time-wise random access of metrics and their metadata, index records are emitted only intermittently. An archive reader program should not presume any particular rate of data flow into the index. However, common events that may trigger a new temporal-index record include changes in instance-domains, switching over to a new archive volume, just starting or stopping logging. One reliable invariant however is that, for each index entry, there are to be no meta or archive-volume records with a timestamp after that in the index, but physically before the byte-offset in the index.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
+</dl>

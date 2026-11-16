@@ -87,22 +87,22 @@ description: "lwregd_selinux – Security Enhanced Linux Policy for the lwregd p
 <p> <code>lwregd_exec_t</code> </p>
 <p> &#8211; Set files with the lwregd_exec_t type, if you want to transition an executable to the lwregd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/lwregd, /opt/likewise/sbin/lwregd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/lwregd, /opt/likewise/sbin/lwregd </dd>
 </dl>
 <p> <code>lwregd_var_lib_t</code> </p>
 <p> &#8211; Set files with the lwregd_var_lib_t type, if you want to store the lwregd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/regsd.err, /var/lib/likewise/db/registry.db, /var/lib/likewise-open/regsd.err, /var/lib/likewise-open/db/registry.db </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/regsd.err, /var/lib/likewise/db/registry.db, /var/lib/likewise-open/regsd.err, /var/lib/likewise-open/db/registry.db </dd>
 </dl>
 <p> <code>lwregd_var_run_t</code> </p>
 <p> &#8211; Set files with the lwregd_var_run_t type, if you want to store the lwregd files under the /run or /var/run directory. </p>
 <p> <code>lwregd_var_socket_t</code> </p>
 <p> &#8211; Set files with the lwregd_var_socket_t type, if you want to treat the files as lwregd var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.regsd, /var/lib/likewise-open/.regsd </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.regsd, /var/lib/likewise-open/.regsd </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

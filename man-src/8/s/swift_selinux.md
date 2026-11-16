@@ -57,9 +57,9 @@ description: "swift_selinux – Security Enhanced Linux Policy for the swift pro
 <p> Policy governs the access confined processes have to these ports. SELinux swift policy is very flexible allowing users to setup their swift processes in as secure a method as possible. </p>
 <p> The following port types are defined for swift: </p>
 <dl>
-<dt><code>swift_port_t</code></p>
+<dt><code>swift_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 6200-6203</dl>
+</dd><dd>Default Defined Ports: tcp 6200-6203</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type swift_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -112,14 +112,14 @@ description: "swift_selinux – Security Enhanced Linux Policy for the swift pro
 <p> <code>swift_data_t</code> </p>
 <p> &#8211; Set files with the swift_data_t type, if you want to treat the files as swift content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/srv/node(/.*)?, /var/lib/swift(/.*)?, /srv/loopback-device(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/srv/node(/.*)?, /var/lib/swift(/.*)?, /srv/loopback-device(/.*)? </dd>
 </dl>
 <p> <code>swift_exec_t</code> </p>
 <p> &#8211; Set files with the swift_exec_t type, if you want to transition an executable to the swift_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/swift-object-info, /usr/bin/swift-proxy-server, /usr/bin/swift-object-server, /usr/bin/swift-account-reaper, /usr/bin/swift-account-server, /usr/bin/swift-container-sync, /usr/bin/swift-object-auditor, /usr/bin/swift-object-expirer, /usr/bin/swift-object-updater, /usr/bin/swift-account-auditor, /usr/bin/swift-container-server, /usr/bin/swift-container-auditor, /usr/bin/swift-container-updater, /usr/bin/swift-object-replicator, /usr/bin/swift-account-replicator, /usr/bin/swift-container-replicator, /usr/bin/swift-container-reconciler </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/swift-object-info, /usr/bin/swift-proxy-server, /usr/bin/swift-object-server, /usr/bin/swift-account-reaper, /usr/bin/swift-account-server, /usr/bin/swift-container-sync, /usr/bin/swift-object-auditor, /usr/bin/swift-object-expirer, /usr/bin/swift-object-updater, /usr/bin/swift-account-auditor, /usr/bin/swift-container-server, /usr/bin/swift-container-auditor, /usr/bin/swift-container-updater, /usr/bin/swift-object-replicator, /usr/bin/swift-account-replicator, /usr/bin/swift-container-replicator, /usr/bin/swift-container-reconciler </dd>
 </dl>
 <p> <code>swift_lock_t</code> </p>
 <p> &#8211; Set files with the swift_lock_t type, if you want to treat the files as swift lock data, stored under the /var/lock directory </p>

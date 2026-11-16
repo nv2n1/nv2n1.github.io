@@ -19,12 +19,12 @@ debconf - show packagename[...][--db = dbname] debconf - show-- listowners[--db 
 <p> This can be useful as a debugging aid, and especially handy in bug reports involving a package&#8217;s use of debconf.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;db=</code><i>dbname</i></p>
-<dd> Specify the database to query. By default, debconf-show queries the main database.</p>
-<dt><code>&#8211;listowners</code></p>
-<dd> Lists all owners of questions in the database. Generally an owner is equivalent to a debian package name.</p>
-<dt><code>&#8211;listdbs</code></p>
-<dd> Lists all available databases.</dl>
+<dt><code>&#8211;db=</code><i>dbname</i></dt>
+<dd> Specify the database to query. By default, debconf-show queries the main database.</dd>
+<dt><code>&#8211;listowners</code></dt>
+<dd> Lists all owners of questions in the database. Generally an owner is equivalent to a debian package name.</dd>
+<dt><code>&#8211;listdbs</code></dt>
+<dd> Lists all available databases.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; and Sylvain Ferriol </p>
 <h2>Index</h2>

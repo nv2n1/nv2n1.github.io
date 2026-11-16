@@ -21,18 +21,18 @@ description: "socketpair – create a pair of connected sockets"
 <p> On Linux (and other systems), <code>socketpair</code>() does not modify <i>sv</i> on failure. A requirement standardizing this behavior was added in POSIX.1-2008 TC2.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAFNOSUPPORT</code></p>
-<dd> The specified address family is not supported on this machine.</p>
-<dt><code>EFAULT</code></p>
-<dd> The address <i>sv</i> does not specify a valid part of the process address space.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The specified protocol does not support creation of socket pairs.</p>
-<dt><code>EPROTONOSUPPORT</code></p>
-<dd> The specified protocol is not supported on this machine.</dl>
+<dt><code>EAFNOSUPPORT</code></dt>
+<dd> The specified address family is not supported on this machine.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The address <i>sv</i> does not specify a valid part of the process address space.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The specified protocol does not support creation of socket pairs.</dd>
+<dt><code>EPROTONOSUPPORT</code></dt>
+<dd> The specified protocol is not supported on this machine.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.4BSD. <code>socketpair</code>() first appeared in 4.2BSD. It is generally portable to/from non-BSD systems supporting clones of the BSD socket layer (including System V variants).</p>
 <h2>NOTES</h2>

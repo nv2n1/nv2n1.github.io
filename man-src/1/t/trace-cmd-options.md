@@ -23,10 +23,10 @@ description: "trace-cmd-options – list available options from trace-cmd plugin
 <p> Copyright (C) 2011 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

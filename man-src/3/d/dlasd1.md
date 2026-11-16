@@ -19,7 +19,7 @@ description: "dlasd1.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DLASD1 computes the SVD of an upper bidiagonal N - by - M matrix B,
     where N = NL + NR + 1 and M = N + SQRE.DLASD1 is called from DLASD0.A related subroutine DLASD7 handles the case in which the singular
@@ -48,11 +48,11 @@ where Z **T = (Z1 * *T a Z2 * *T b) = u * *T VT * *T, and u is a vector of dimen
     for the current problem are multiplied with the singular vectors
     from the overall problem.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>NL</i> </p>
+</dt><dd> <i>NL</i> </dd>
 <pre>
           NL is INTEGER
          The row dimension of the upper block.  NL &gt;= 1.
@@ -144,18 +144,18 @@ where Z **T = (Z1 * *T a Z2 * *T b) = u * *T VT * *T, and u is a vector of dimen
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 204 of file dlasd1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

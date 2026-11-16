@@ -24,7 +24,7 @@ description: "QuantLib::DiscretizedDiscountBond – Useful discretized discount 
 <p>This method returns the times at which the numerical method should stop while rolling back the asset. Typical examples include payment times, exercise times and such. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The returned values are not guaranteed to be sorted.</dl>
+<dd>The returned values are not guaranteed to be sorted.</dd></dl>
 <p> Implements <code>DiscretizedAsset</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -19,17 +19,17 @@ description: "slarzb.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLARZB applies a real block reflector H or its transpose H**T to
  a real distributed M-by-N  C from the left or the right.
  Currently, only STOREV = 'R' and DIRECT = 'B' are supported.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'L': apply H or H**T from the Left
@@ -131,24 +131,25 @@ if SIDE
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+</dt><dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
-<p>&nbsp;<wbr></dl>
+</dt><dd>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 183 of file slarzb.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

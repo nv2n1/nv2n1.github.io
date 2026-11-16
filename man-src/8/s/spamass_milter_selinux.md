@@ -97,8 +97,8 @@ description: "spamass_milter_selinux – Security Enhanced Linux Policy for the 
 <p> <code>spamass_milter_data_t</code> </p>
 <p> &#8211; Set files with the spamass_milter_data_t type, if you want to treat the files as spamass milter content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/spamass(/.*)?, /var/run/spamass-milter(/.*)?, /var/spool/postfix/spamass(/.*)?, /var/run/spamass-milter.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/spamass(/.*)?, /var/run/spamass-milter(/.*)?, /var/spool/postfix/spamass(/.*)?, /var/run/spamass-milter.pid </dd>
 </dl>
 <p> <code>spamass_milter_exec_t</code> </p>
 <p> &#8211; Set files with the spamass_milter_exec_t type, if you want to transition an executable to the spamass_milter_t domain. </p>

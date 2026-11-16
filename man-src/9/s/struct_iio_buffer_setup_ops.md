@@ -19,21 +19,21 @@ description: "struct_iio_buffer_setup_ops – buffer setup related callbacks"
 <h2>Members</h2>
 <p>preenable</p>
 <dl>
-<dd>[DRIVER] function to run prior to marking buffer enabled</dl>
+<dd>[DRIVER] function to run prior to marking buffer enabled</dd></dl>
 <p> postenable</p>
 <dl>
-<dd>[DRIVER] function to run after marking buffer enabled</dl>
+<dd>[DRIVER] function to run after marking buffer enabled</dd></dl>
 <p> predisable</p>
 <dl>
-<dd>[DRIVER] function to run prior to marking buffer disabled</dl>
+<dd>[DRIVER] function to run prior to marking buffer disabled</dd></dl>
 <p> postdisable</p>
 <dl>
-<dd>[DRIVER] function to run after marking buffer disabled</dl>
+<dd>[DRIVER] function to run after marking buffer disabled</dd></dl>
 <p> validate_scan_mask</p>
 <dl>
-<dd>[DRIVER] function callback to check whether a given scan mask is valid for the device.</dl>
+<dd>[DRIVER] function callback to check whether a given scan mask is valid for the device.</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,14 +14,14 @@ description: "gnutls_pkcs11_token_set_pin – API function"
 <p> <code>int gnutls_pkcs11_token_set_pin(const char * </code><i>token_url</i><code>, const char * </code><i>oldpin</i><code>, const char * </code><i>newpin</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * token_url</p>
-<dd> A PKCS <code>11</code> URL specifying a token</p>
-<dt>const char * oldpin</p>
-<dd> old user&#8217;s PIN</p>
-<dt>const char * newpin</p>
-<dd> new user&#8217;s PIN</p>
-<dt>unsigned int flags</p>
-<dd> one of <code>gnutls_pin_flag_t</code>.</dl>
+<dt>const char * token_url</dt>
+<dd> A PKCS <code>11</code> URL specifying a token</dd>
+<dt>const char * oldpin</dt>
+<dd> old user&#8217;s PIN</dd>
+<dt>const char * newpin</dt>
+<dd> new user&#8217;s PIN</dd>
+<dt>unsigned int flags</dt>
+<dd> one of <code>gnutls_pin_flag_t</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will modify or set a user&#8217;s PIN for the given token. If it is called to set a user pin for first time the oldpin must be NULL.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pkcs11_token_set_pin – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

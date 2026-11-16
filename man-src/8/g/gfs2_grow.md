@@ -18,16 +18,16 @@ description: "gfs2_grow – Expand a GFS2 filesystem"
 <p> The gfs2_grow tool uses the resource group (RG) size that was originally calculated when mkfs.gfs2 was done. This allows tools like fsck.gfs2 to better ensure the integrity of the file system. Since the new free space often does not lie on even boundaries based on that RG size, there may be some unused space on the device after gfs2_grow is run.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd>Print out debugging information about the filesystem layout.</p>
-<dt><code>-h</code></p>
-<dd>Prints out a short usage message and exits.</p>
-<dt><code>-q</code></p>
-<dd>Be quiet. Don&#8217;t print anything.</p>
-<dt><code>-T</code></p>
-<dd>Test. Do all calculations, but do not write any data to the disk and do not expand the filesystem. This is used to discover what the tool would have done were it run without this flag.</p>
-<dt><code>-V</code></p>
-<dd>Version. Print out version information, then exit. </p>
+<dt><code>-D</code></dt>
+<dd>Print out debugging information about the filesystem layout.</dd>
+<dt><code>-h</code></dt>
+<dd>Prints out a short usage message and exits.</dd>
+<dt><code>-q</code></dt>
+<dd>Be quiet. Don&#8217;t print anything.</dd>
+<dt><code>-T</code></dt>
+<dd>Test. Do all calculations, but do not write any data to the disk and do not expand the filesystem. This is used to discover what the tool would have done were it run without this flag.</dd>
+<dt><code>-V</code></dt>
+<dd>Version. Print out version information, then exit. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>There is no way to shrink a GFS2 filesystem. </p>

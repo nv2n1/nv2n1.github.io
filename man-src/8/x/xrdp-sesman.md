@@ -15,12 +15,12 @@ description: "xrdp-sesman – xrdp(8) session manager"
  It manages user sessions by authenticating the user and starting the appropriate Xserver. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;nodaemon</code></p>
-<dd>Starts <code>xrdp-sesman</code> in foreground instead of starting it as a daemon.</p>
-<dt><code>-k</code>, <code>&#8211;kill</code></p>
-<dd>Kills running <code>xrdp-sesman</code> daemon.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Output help information and exit. </p>
+<dt><code>-n</code>, <code>&#8211;nodaemon</code></dt>
+<dd>Starts <code>xrdp-sesman</code> in foreground instead of starting it as a daemon.</dd>
+<dt><code>-k</code>, <code>&#8211;kill</code></dt>
+<dd>Kills running <code>xrdp-sesman</code> daemon.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Output help information and exit. </dd>
 </dl>
 <h2>Files</h2>
 <p>${SESMAN_BIN_DIR}/sesman<br />

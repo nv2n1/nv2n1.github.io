@@ -19,13 +19,13 @@ description: "go-vet – report likely mistakes in packages"
  For details of a specific checker such as &#8216;printf&#8217;, see &#8216;go tool vet help printf&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> The -n flag prints commands that would be executed.</p>
-<dt><code>-x</code></p>
-<dd> The -x flag prints commands as they are executed.</p>
-<dt><code>-vettool=</code><i>prog</i></p>
+<dt><code>-n</code></dt>
+<dd> The -n flag prints commands that would be executed.</dd>
+<dt><code>-x</code></dt>
+<dd> The -x flag prints commands as they are executed.</dd>
+<dt><code>-vettool=</code><i>prog</i></dt>
 <dd> The -vettool=prog flag selects a different analysis tool with alternative or additional checks.<br />
- For example, the &#8216;shadow&#8217; analyzer can be built and run using these commands: </p>
+ For example, the &#8216;shadow&#8217; analyzer can be built and run using these commands: </dd>
 <pre>
   go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
   go vet -vettool=$(which shadow)

@@ -19,10 +19,10 @@ description: "inotify_rm_watch – remove an existing watch from an inotify inst
 <p> On success, <code>inotify_rm_watch</code>() returns zero. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> The watch descriptor <i>wd</i> is not valid; or <i>fd</i> is not an inotify file descriptor.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The watch descriptor <i>wd</i> is not valid; or <i>fd</i> is not an inotify file descriptor.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Inotify was merged into the 2.6.13 Linux kernel.</p>
 <h2>CONFORMING TO</h2>

@@ -15,9 +15,10 @@ description: "ddupdate.conf – ddupdate configuration file."
 <p> The actual options available are documented in <code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code>.</p>
 <h2>See Also</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code></p>
+<dt><code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code></dt>
 <dd>
-<dt><code><a rel="nofollow" href="https://github.com/leamas/ddupdate">https://github.com/leamas/ddupdate</a></code></p>
-<dd>Project homesite and README</p>
-<dt><code><a rel="nofollow" href="https://docs.python.org/3/library/configparser.html">https://docs.python.org/3/library/configparser.html</a></code></p>
-<dd>More info on file format. </p>
+</dd><dt><code><a rel="nofollow" href="https://github.com/leamas/ddupdate">https://github.com/leamas/ddupdate</a></code></dt>
+<dd>Project homesite and README</dd>
+<dt><code><a rel="nofollow" href="https://docs.python.org/3/library/configparser.html">https://docs.python.org/3/library/configparser.html</a></code></dt>
+<dd>More info on file format. </dd>
+</dl>

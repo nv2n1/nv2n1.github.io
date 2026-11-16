@@ -15,15 +15,15 @@ skb_checksum_trimmed - validate checksum of an skb
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the skb to check</dl>
+<dl><dd></dd><dd>the skb to check</dd></dl>
  
 
  <i>transport_len</i>
-<dl><dd>the data length beyond the network header</dl>
+<dl><dd>the data length beyond the network header</dd></dl>
  
 
  <i>skb_chkf</i>
-<dl><dd>checksum function to use</dl>
+<dl><dd>checksum function to use</dd></dl>
 
 <h2>Description</h2>
 

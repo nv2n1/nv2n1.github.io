@@ -16,10 +16,10 @@ description: "qmsg – send message to pbs batch jobs"
 <p> The <code>qmsg</code> command writes messages into the files of jobs by sending a <i>Message Job</i> batch request to the batch server that owns the job. The qmsg command does not directly write the message into the files of the job.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-E</p>
-<dd> Specifies that the message is written to the standard error of each job.</p>
-<dt>-O</p>
-<dd> Specifies that the message is written to the standard output of each job.</dl>
+<dt>-E</dt>
+<dd> Specifies that the message is written to the standard error of each job.</dd>
+<dt>-O</dt>
+<dd> Specifies that the message is written to the standard output of each job.</dd></dl>
 <p> If neither the <i> nor the option is specified, the message will be written to the standard error of the job. </i></p>
 <h2>OPERANDS</h2>
 <p> The first operand, <i> is the message to be written. If the string contains blanks, the string must be quoted. If the final character of the string is not a newline, a newline character will be added when written to the job&#8217;s file. </p>

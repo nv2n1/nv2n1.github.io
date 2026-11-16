@@ -15,10 +15,10 @@ description: "cpupower idle-info – Utility to retrieve cpu idle kernel informa
 <p> A tool which prints out per cpu idle information helpful to developers and interested users.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> <code>&#8211;silent</code></p>
-<dd> Only print a summary of all available C-states in the system.</p>
-<dt><code>-e</code> <code>&#8211;proc</code></p>
-<dd> deprecated. Prints out idle information in old /proc/acpi/processor/*/power format. This interface has been removed from the kernel for quite some time, do not let further code depend on this option, best do not use it. </p>
+<dt><code>-f</code> <code>&#8211;silent</code></dt>
+<dd> Only print a summary of all available C-states in the system.</dd>
+<dt><code>-e</code> <code>&#8211;proc</code></dt>
+<dd> deprecated. Prints out idle information in old /proc/acpi/processor/*/power format. This interface has been removed from the kernel for quite some time, do not let further code depend on this option, best do not use it. </dd>
 </dl>
 <h2>IDLE-INFO DESCRIPTIONS</h2>
 <p> CPU sleep state statistics and descriptions are retrieved from sysfs files, exported by the cpuidle kernel subsystem. The kernel only updates these statistics when it enters or leaves an idle state, therefore on a very idle or a very busy system, these statistics may not be accurate. They still provide a good overview about the usage and availability of processor sleep states on the platform. </p>

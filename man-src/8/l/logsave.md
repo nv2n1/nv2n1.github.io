@@ -16,12 +16,12 @@ description: "logsave – save the output of a command in a logfile"
 <p> <code>logsave</code> is useful for saving the output of initial boot scripts until the /var partition is mounted, so the output can be written to /var/log.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>This option will cause the output to be appended to <i>logfile</i>, instead of replacing its current contents.</p>
-<dt><code>-s</code></p>
-<dd>This option will cause <code>logsave</code> to skip writing to the log file text which is bracketed with a control-A (ASCII 001 or Start of Header) and control-B (ASCII 002 or Start of Text). This allows progress bar information to be visible to the user on the console, while not being written to the log file.</p>
-<dt><code>-v</code></p>
-<dd>This option will make <code>logsave</code> to be more verbose in its output to the user.</dl>
+<dt><code>-a</code></dt>
+<dd>This option will cause the output to be appended to <i>logfile</i>, instead of replacing its current contents.</dd>
+<dt><code>-s</code></dt>
+<dd>This option will cause <code>logsave</code> to skip writing to the log file text which is bracketed with a control-A (ASCII 001 or Start of Header) and control-B (ASCII 002 or Start of Text). This allows progress bar information to be visible to the user on the console, while not being written to the log file.</dd>
+<dt><code>-v</code></dt>
+<dd>This option will make <code>logsave</code> to be more verbose in its output to the user.</dd></dl>
 <h2>Author</h2>
 <p>Theodore Ts&#8217;o (tytso [at] mit.edu)</p>
 <h2>See Also</h2>

@@ -49,8 +49,8 @@ description: "w3c_validator_script_selinux – Security Enhanced Linux Policy fo
 <p> <code>w3c_validator_script_exec_t</code> </p>
 <p> &#8211; Set files with the w3c_validator_script_exec_t type, if you want to transition an executable to the w3c_validator_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/w3c-markup-validator/cgi-bin(/.*)?, /usr/lib/cgi-bin/check </p>
+<dt>Paths:</dt>
+<dd>/usr/share/w3c-markup-validator/cgi-bin(/.*)?, /usr/lib/cgi-bin/check </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -11,28 +11,19 @@ std::filesystem::path::generic_string,std::filesystem::path::generic_wstring, - 
 <h2>Synopsis</h2>
 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::filesystem::path::generic_u32string <pre><code>template &lt;class CharT, class Traits =
-
                            std::char_traits&lt;CharT&gt;,
           (since
-
            class Alloc = std::allocator&lt;CharT&gt; &gt; (1)C++ 17)
-
               std::basic_string&lt;CharT, Traits, Alloc&gt;
                   generic_string(const Alloc &amp;a = Alloc()) const;
-
 std::string generic_string() const;
-
 std::wstring generic_wstring() const;
-
 std::u16string generic_u16string() const;
-
 std::u32string generic_u32string() const;
 (2)(since(since
-
               std::string generic_u8string() const;
           C++ 17) C++ 17)(3)(until
                                  C++ 20)
-
     std::u8string generic_u8string() const;
 (since
      C++ 20)</code></pre> 

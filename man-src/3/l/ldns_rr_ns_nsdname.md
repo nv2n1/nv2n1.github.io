@@ -16,8 +16,8 @@ description: "ldns_rr_ns_nsdname"
 <p> ldns_rdf* ldns_rr_ns_nsdname(const ldns_rr *r); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_ns_nsdname</i>()</p>
-<dd>returns the name of a LDNS_RR_TYPE_NS rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the name or NULL on failure</dl>
+<dt> <i>ldns_rr_ns_nsdname</i>()</dt>
+<dd>returns the name of a LDNS_RR_TYPE_NS rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the name or NULL on failure</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

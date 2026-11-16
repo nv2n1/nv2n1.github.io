@@ -15,15 +15,15 @@ copy_to_user_fromio - copy data from mmio-space to user-space
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>the destination pointer on user-space</dl>
+<dl><dd></dd><dd>the destination pointer on user-space</dd></dl>
  
 
  <i>src</i>
-<dl><dd>the source pointer on mmio</dl>
+<dl><dd>the source pointer on mmio</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the data size to copy in bytes</dl>
+<dl><dd>the data size to copy in bytes</dd></dl>
 
 <h2>Description</h2>
 

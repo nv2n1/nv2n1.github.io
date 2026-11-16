@@ -11,15 +11,15 @@ description: "XkbGetControlsChanges – Updates a local copy of a keyboard descr
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dd>XkbGetControlsChanges <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbNameChangesPtr </code><i>changes</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
-<dd>connection to X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>xkb-&gt;ctrls will be updated</p>
-<dt><i>&#8211; changes</i></p>
-<dd>indicates which parts of xkb-&gt;ctrls to update</dl>
+<dt><i>&#8211; dpy</i></dt>
+<dd>connection to X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>xkb-&gt;ctrls will be updated</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>indicates which parts of xkb-&gt;ctrls to update</dd></dl>
 <h2>Description</h2>
 <p>Whenever a field in the controls structure changes in the server&#8217;s keyboard description, the server sends an XkbControlsNotify event to all interested clients.To receive XkbControlsNotify events under all possible conditions, use <i>XkbSelectEvents </i> and pass XkbControlsNotifyMask in both <i>bits_to_change </i> and <i>values_for_bits.</i> </p>
 <p> To receive XkbControlsNotify events only under certain conditions, use <i>XkbSelectEventDetails </i> using XkbControlsNotify as the <i>event_type </i> and specifying the desired state changes in <i>bits_to_change </i> and <i>values_for_bits </i> using mask bits from Table 1. </p>
@@ -216,8 +216,8 @@ description: "XkbGetControlsChanges – Updates a local copy of a keyboard descr
 <p> <i>XkbGetControlsChanges </i> returns Success if successful and can generate BadAlloc, BadImplementation, and BadMatch errors.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>Success</p>
-<dd>The <i>XkbGetControlsChanges </i> function returns Success if the query of the server was successful.</dl>
+<dt>Success</dt>
+<dd>The <i>XkbGetControlsChanges </i> function returns Success if the query of the server was successful.</dd></dl>
 <h2>Structures</h2>
 <pre>The structure for the XkbControlsNotify event is defined as follows:
 typedef struct {
@@ -241,11 +241,11 @@ controls */
 } XkbControlsNotifyEvent;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbfreecontrols/">XkbFreeControls</a></code>(3), <code><a href="/docs/linux/man/3-xkbnotecontrolschanges/">XkbNoteControlsChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3)</p>

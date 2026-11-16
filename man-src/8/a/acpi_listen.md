@@ -14,16 +14,16 @@ description: "acpi_listen – ACPI event listener"
 <p><code>acpid</code> is the system-wide ACPI event catcher. <code>acpi_listen</code> is a simple shell-friendly tool which connects to acpid and listens for events. When an event occurs, acpi_listen will print it on stdout. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i></i>, <code>&#8211;count</code><i> events</i></p>
-<dd>Receive up to a maximum number of ACPI events, then exit.</p>
-<dt><code>-s</code><i></i>, <code>&#8211;socketfile</code><i> filename</i></p>
-<dd>This option changes the name of the UNIX domain socket which <code>acpid</code> opens. Default is <i>/var/run/acpid.socket</i>.</p>
-<dt><code>-t</code><i></i>, <code>&#8211;time</code><i> seconds</i></p>
-<dd>Listen for the specified time in seconds, before exiting.</p>
-<dt><code>-v</code><i></i>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-h</code><i></i>, <code>&#8211;help</code></p>
-<dd>Show help and exit. </p>
+<dt><code>-c</code><i></i>, <code>&#8211;count</code><i> events</i></dt>
+<dd>Receive up to a maximum number of ACPI events, then exit.</dd>
+<dt><code>-s</code><i></i>, <code>&#8211;socketfile</code><i> filename</i></dt>
+<dd>This option changes the name of the UNIX domain socket which <code>acpid</code> opens. Default is <i>/var/run/acpid.socket</i>.</dd>
+<dt><code>-t</code><i></i>, <code>&#8211;time</code><i> seconds</i></dt>
+<dd>Listen for the specified time in seconds, before exiting.</dd>
+<dt><code>-v</code><i></i>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-h</code><i></i>, <code>&#8211;help</code></dt>
+<dd>Show help and exit. </dd>
 </dl>
 <h2>Files</h2>
 <p><code>/var/run/acpid.socket</code></p>

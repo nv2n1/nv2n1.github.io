@@ -12,24 +12,24 @@ description: "cvs – Concurrent Versions System support files"
 <p>This documentation may no longer be up to date. Please consult the Cederqvist (CVS Manual) as specified in <code>cvs</code>(<code>1</code>).</p>
 <h2>Synopsis</h2>
 <dl>
-<dt><code>$CVSROOT/CVSROOT/commitinfo,v</code></p>
+<dt><code>$CVSROOT/CVSROOT/commitinfo,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/cvsignore,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/cvsignore,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/cvswrappers,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/cvswrappers,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/editinfo,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/editinfo,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/history</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/history</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/loginfo,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/loginfo,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/modules,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/modules,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/rcsinfo,v</code></p>
+</dd><dt><code>$CVSROOT/CVSROOT/rcsinfo,v</code></dt>
 <dd>
-<dt><code>$CVSROOT/CVSROOT/taginfo,v</code></p>
-<dd></dl>
+</dd><dt><code>$CVSROOT/CVSROOT/taginfo,v</code></dt>
+<dd></dd></dl>
 <h2>Description</h2>
 <p><code>cvs</code> is a system for providing source control to hierarchical collections of source directories. Commands and procedures for using <code>cvs</code> are described in <code>cvs</code>(<code>1</code>). </p>
 <p> <code>cvs</code> manages <i>source repositories</i>, the directories containing master copies of the revision-controlled files, by copying particular revisions of the files to (and modifications back from) developers&#8217; private <i>working directories</i>. In terms of file structure, each individual source repository is an immediate subdirectory of <code>$CVSROOT</code>. </p>
@@ -45,8 +45,8 @@ description: "cvs – Concurrent Versions System support files"
 <p> You can use the `history&#8217; file to record the <code>cvs</code> commands that affect the repository. The creation of this file enables history logging.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>modules</code></p>
-<dd>The `modules&#8217; file records your definitions of names for collections of source code. <code>cvs</code> will use these definitions if you use <code>cvs</code> to check in a file with the right format to `<code>$CVSROOT/CVSROOT/modules,v</code>&#8216;. </p>
+<dt><code>modules</code></dt>
+<dd>The `modules&#8217; file records your definitions of names for collections of source code. <code>cvs</code> will use these definitions if you use <code>cvs</code> to check in a file with the right format to `<code>$CVSROOT/CVSROOT/modules,v</code>&#8216;. </dd>
 <p> The `modules&#8217; file may contain blank lines and comments (lines beginning with `<code>#</code>&#8216;) as well as module definitions. Long lines can be continued on the next line by specifying a backslash (&#8220;\&#8221;) as the last character on the line. </p>
 <p> A <i>module definition</i> is a single line of the `modules&#8217; file, in either of two formats. In both cases, <i>mname</i> represents the symbolic module name, and the remainder of the line is its definition. </p>
 <p> <i>mname</i> <code>-a</code> <i>aliases</i>&#8230;<br />
@@ -67,8 +67,8 @@ description: "cvs – Concurrent Versions System support files"
 <p> `<code>-e</code> <i>prog</i>&#8216; allows you to specify a program <i>prog</i> to run whenever files in a module are exported. <i>prog</i> runs with a single argument, the module name. </p>
 <p> `<code>-t</code> <i>prog</i>&#8216; allows you to specify a program <i>prog</i> to run whenever files in a module are tagged. <i>prog</i> runs with two arguments: the module name and the symbolic tag specified to <code>rtag</code>. </p>
 <p> `<code>-u</code> <i>prog</i>&#8216; allows you to specify a program <i>prog</i> to run whenever `<code>cvs update</code>&#8216; is executed from the top-level directory of the checked-out module. <i>prog</i> runs with a single argument, the full path to the source repository for this module.</p>
-<dt><code>commitinfo</code>, <code>loginfo</code>, <code>rcsinfo</code>, <code>editinfo</code></p>
-<dd>These files all specify programs to call at different points in the `<code>cvs commit</code>&#8216; process. They have a common structure. Each line is a pair of fields: a regular expression, separated by whitespace from a filename or command-line template. Whenever one of the regular expression matches a directory name in the repository, the rest of the line is used. If the line begins with a <code>#</code> character, the entire line is considered a comment and is ignored. Whitespace between the fields is also ignored. </p>
+<dt><code>commitinfo</code>, <code>loginfo</code>, <code>rcsinfo</code>, <code>editinfo</code></dt>
+<dd>These files all specify programs to call at different points in the `<code>cvs commit</code>&#8216; process. They have a common structure. Each line is a pair of fields: a regular expression, separated by whitespace from a filename or command-line template. Whenever one of the regular expression matches a directory name in the repository, the rest of the line is used. If the line begins with a <code>#</code> character, the entire line is considered a comment and is ignored. Whitespace between the fields is also ignored. </dd>
 <p> For `loginfo&#8217;, the rest of the line is a command-line template to execute. The templates can include not only a program name, but whatever list of arguments you wish. If you write `<code>%s</code>&#8216; somewhere on the argument list, <code>cvs</code> supplies, at that point, the list of files affected by the <code>commit</code>. The first entry in the list is the relative path within the source repository where the change is being made. The remaining arguments list the files that are being modified, added, or removed by this <code>commit</code> invocation. </p>
 <p> For `taginfo&#8217;, the rest of the line is a command-line template to execute. The arguments passed to the command are, in order, the <i>tagname ,</i> <i>operation</i> (i.e. <code>add</code> for `tag&#8217;, <code>mov</code> for `tag -F&#8217;, and <code>del</code> for `tag -d`), <i>repository ,</i> and any remaining are pairs of <code>filename revision .</code> A non-zero exit of the filter program will cause the tag to be aborted. </p>
 <p> For `commitinfo&#8217;, the rest of the line is a command-line template to execute. The template can include not only a program name, but whatever list of arguments you wish. The full path to the current source repository is appended to the template, followed by the file names of any files involved in the commit (added, removed, and modified files). </p>
@@ -79,10 +79,10 @@ description: "cvs – Concurrent Versions System support files"
 <p> The `rcsinfo&#8217; file allows you to specify <i>log templates</i> for the <code>commit</code> logging session; you can use this to provide a form to edit when filling out the <code>commit</code> log. The field after the regular expression, in this file, contains filenames (of files containing the logging forms) rather than command templates. </p>
 <p> The `editinfo&#8217; file allows you to execute a script <i>before the commit starts</i>, but after the log information is recorded. These &quot;edit&quot; scripts can verify information recorded in the log file. If the edit script exits with a non-zero exit status, the commit is aborted. </p>
 <p> The `loginfo&#8217; file contains commands to execute <i>at the end</i> of a commit. The text specified as a commit log message is piped through the command; typical uses include sending mail, filing an article in a newsgroup, or appending to a central file.</p>
-<dt><code>cvsignore</code>, <code>.cvsignore</code></p>
-<dd>The default list of files (or <code>sh</code>(<code>1</code>) file name patterns) to ignore during `<code>cvs update</code>&#8216;. At startup time, <code>cvs</code> loads the compiled in default list of file name patterns (see <code>cvs</code>(<code>1</code>)). Then the per-repository list included in <code>$CVSROOT/CVSROOT/cvsignore</code> is loaded, if it exists. Then the per-user list is loaded from `$HOME/.cvsignore&#8217;. Finally, as <code>cvs</code> traverses through your directories, it will load any per-directory `.cvsignore&#8217; files whenever it finds one. These per-directory files are only valid for exactly the directory that contains them, not for any sub-directories.</p>
-<dt><code>history</code></p>
-<dd>Create this file in <code>$CVSROOT/CVSROOT</code> to enable history logging (see the description of `<code>cvs history</code>&#8216;).</dl>
+<dt><code>cvsignore</code>, <code>.cvsignore</code></dt>
+<dd>The default list of files (or <code>sh</code>(<code>1</code>) file name patterns) to ignore during `<code>cvs update</code>&#8216;. At startup time, <code>cvs</code> loads the compiled in default list of file name patterns (see <code>cvs</code>(<code>1</code>)). Then the per-repository list included in <code>$CVSROOT/CVSROOT/cvsignore</code> is loaded, if it exists. Then the per-user list is loaded from `$HOME/.cvsignore&#8217;. Finally, as <code>cvs</code> traverses through your directories, it will load any per-directory `.cvsignore&#8217; files whenever it finds one. These per-directory files are only valid for exactly the directory that contains them, not for any sub-directories.</dd>
+<dt><code>history</code></dt>
+<dd>Create this file in <code>$CVSROOT/CVSROOT</code> to enable history logging (see the description of `<code>cvs history</code>&#8216;).</dd></dl>
 <h2>See Also</h2>
 <p><code>cvs</code>(<code>1</code>),</p>
 <h2>Copying</h2>

@@ -14,11 +14,11 @@ mongoc_read_prefs_add_tag (mongoc_read_prefs_t *read_prefs,
  const bson_t *tag);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>tag</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>tag</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function shall add a tag to a read preference. </p>
 <h2>Colophon</h2>

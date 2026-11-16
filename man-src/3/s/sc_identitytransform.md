@@ -11,7 +11,6 @@ description: "sc::IdentityTransform –"
 <p> The <code>IdentityTransform</code> is a special case of <code>NonlinearTransform</code> were no transformation takes place.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform.h&gt;</code></pre>
 <p> Inherits <code>sc::NonlinearTransform</code>.</p>
 <h3>Public Member Functions</h3>

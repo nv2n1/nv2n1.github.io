@@ -14,74 +14,74 @@ description: "multipath – Device mapper target autoconfig"
 <p><code>multipath</code> is used to detect multiple paths to devices for fail-over or performance reasons and coalesces them</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v level</code></p>
-<dd>verbosity, print all paths and multipaths</p>
+<dt><code>-v level</code></dt>
+<dd>verbosity, print all paths and multipaths</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>no output</p>
-<dt><code>1</code></p>
-<dd>print the created or updated multipath names only, for use to feed other tools like kpartx</p>
-<dt><code>2 +</code></p>
-<dd>print all info : detected paths, coalesced paths (ie multipaths) and device maps</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>no output</dd>
+<dt><code>1</code></dt>
+<dd>print the created or updated multipath names only, for use to feed other tools like kpartx</dd>
+<dt><code>2 +</code></dt>
+<dd>print all info : detected paths, coalesced paths (ie multipaths) and device maps</dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd>print usage text</p>
-<dt><code>-d</code></p>
-<dd>dry run, do not create or update devmaps</p>
-<dt><code>-l</code></p>
-<dd>show the current multipath topology from information fetched in sysfs and the device mapper</p>
-<dt><code>-ll</code></p>
-<dd>show the current multipath topology from all available information (sysfs, the device mapper, path checkers &#8230;)</p>
-<dt><code>-f</code></p>
-<dd>flush a multipath device map specified as parameter, if unused</p>
-<dt><code>-F</code></p>
-<dd>flush all unused multipath device maps</p>
-<dt><code>-t</code></p>
-<dd>print internal hardware table to stdout</p>
-<dt><code>-r</code></p>
-<dd>force devmap reload</p>
-<dt><code>-i</code></p>
-<dd>ignore wwids file when processing devices</p>
-<dt><code>-B</code></p>
-<dd>treat the bindings file as read only</p>
-<dt><code>-b bindings_file</code></p>
-<dd>set user_friendly_names bindings file location. The default is /etc/multipath/bindings</p>
-<dt><code>-c</code></p>
-<dd>check if a block device should be a path in a multipath device</p>
-<dt><code>-q</code></p>
-<dd>allow device tables with queue_if_no_path when multipathd is not running</p>
-<dt><code>-a</code></p>
-<dd>add the wwid for the specified device to the wwids file</p>
-<dt><code>-A</code></p>
-<dd>add wwids from any kernel command line mpath.wwid parameters to the wwids file</p>
-<dt><code>-w</code></p>
-<dd>remove the wwid for the specified device from the wwids file</p>
-<dt><code>-W</code></p>
-<dd>reset the wwids file to only include the current multipath devices</p>
-<dt><code>-T tm:valid</code></p>
-<dd>check if <i>tm</i> matches the multipathd configuration timestamp value from <i>/run/multipathd/timestamp</i> If so, return success if <i>valid</i> is 1. Otherwise, return failure. If the timestamp doesn&#8217;t match continue with multipath execution. This option is designed to be used with -c by the udev rules.</p>
-<dt><code>-p</code><i> policy</i></p>
-<dd>force new maps to use the specified policy:</p>
+<dt><code>-h</code></dt>
+<dd>print usage text</dd>
+<dt><code>-d</code></dt>
+<dd>dry run, do not create or update devmaps</dd>
+<dt><code>-l</code></dt>
+<dd>show the current multipath topology from information fetched in sysfs and the device mapper</dd>
+<dt><code>-ll</code></dt>
+<dd>show the current multipath topology from all available information (sysfs, the device mapper, path checkers &#8230;)</dd>
+<dt><code>-f</code></dt>
+<dd>flush a multipath device map specified as parameter, if unused</dd>
+<dt><code>-F</code></dt>
+<dd>flush all unused multipath device maps</dd>
+<dt><code>-t</code></dt>
+<dd>print internal hardware table to stdout</dd>
+<dt><code>-r</code></dt>
+<dd>force devmap reload</dd>
+<dt><code>-i</code></dt>
+<dd>ignore wwids file when processing devices</dd>
+<dt><code>-B</code></dt>
+<dd>treat the bindings file as read only</dd>
+<dt><code>-b bindings_file</code></dt>
+<dd>set user_friendly_names bindings file location. The default is /etc/multipath/bindings</dd>
+<dt><code>-c</code></dt>
+<dd>check if a block device should be a path in a multipath device</dd>
+<dt><code>-q</code></dt>
+<dd>allow device tables with queue_if_no_path when multipathd is not running</dd>
+<dt><code>-a</code></dt>
+<dd>add the wwid for the specified device to the wwids file</dd>
+<dt><code>-A</code></dt>
+<dd>add wwids from any kernel command line mpath.wwid parameters to the wwids file</dd>
+<dt><code>-w</code></dt>
+<dd>remove the wwid for the specified device from the wwids file</dd>
+<dt><code>-W</code></dt>
+<dd>reset the wwids file to only include the current multipath devices</dd>
+<dt><code>-T tm:valid</code></dt>
+<dd>check if <i>tm</i> matches the multipathd configuration timestamp value from <i>/run/multipathd/timestamp</i> If so, return success if <i>valid</i> is 1. Otherwise, return failure. If the timestamp doesn&#8217;t match continue with multipath execution. This option is designed to be used with -c by the udev rules.</dd>
+<dt><code>-p</code><i> policy</i></dt>
+<dd>force new maps to use the specified policy:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>failover</code></p>
-<dd>1 path per priority group</p>
-<dt><code>multibus</code></p>
-<dd>all paths in 1 priority group</p>
-<dt><code>group_by_serial</code></p>
-<dd>1 priority group per serial</p>
-<dt><code>group_by_prio</code></p>
-<dd>1 priority group per priority value. Priorities are determined by callout programs specified as a global, per-controller or per-multipath option in the configuration file</p>
-<dt><code>group_by_node_name</code></p>
-<dd>1 priority group per target node name. Target node names are fetched in /sys/class/fc_transport/target*/node_name.</p>
-<dt></dl>
+</dd><dl>
+<dt><code>failover</code></dt>
+<dd>1 path per priority group</dd>
+<dt><code>multibus</code></dt>
+<dd>all paths in 1 priority group</dd>
+<dt><code>group_by_serial</code></dt>
+<dd>1 priority group per serial</dd>
+<dt><code>group_by_prio</code></dt>
+<dd>1 priority group per priority value. Priorities are determined by callout programs specified as a global, per-controller or per-multipath option in the configuration file</dd>
+<dt><code>group_by_node_name</code></dt>
+<dd>1 priority group per target node name. Target node names are fetched in /sys/class/fc_transport/target*/node_name.</dd>
+<dt></dt></dl>
 </dl>
-<dd>Existing maps are not modified.</p>
-<dt><code>device</code></p>
-<dd>update only the devmap the path pointed by <i>device</i> is in. <i>device</i> is in the /dev/sdb (as shown by udev in the $DEVNAME variable) or major:minor format. <i>device</i> may alternatively be a multipath mapname</dl>
+<dd>Existing maps are not modified.</dd>
+<dt><code>device</code></dt>
+<dd>update only the devmap the path pointed by <i>device</i> is in. <i>device</i> is in the /dev/sdb (as shown by udev in the $DEVNAME variable) or major:minor format. <i>device</i> may alternatively be a multipath mapname</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8), <code><a href="/docs/linux/man/5-multipath-conf/">multipath.conf</a></code>(5), <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8), <code>udev</code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code>hotplug</code>(8)</p>
 <h2>Authors</h2>

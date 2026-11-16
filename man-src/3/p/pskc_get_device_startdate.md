@@ -13,8 +13,8 @@ description: "pskc_get_device_startdate – API function"
 const struct tm *pskc_get_device_startdate(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage DeviceInfo StartDate. This element denote the start date of a device (such as the one on a payment card, used when issue numbers are not printed on cards).</p>
 <h2>Returns</h2>

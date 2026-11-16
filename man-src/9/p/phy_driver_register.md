@@ -15,11 +15,11 @@ phy_driver_register - register a phy_driver with the PHY layer
 <h2>Arguments</h2>
 
 <i>new_driver</i>
-<dl><dd><dd>new phy_driver to register</dl>
+<dl><dd></dd><dd>new phy_driver to register</dd></dl>
  
 
  <i>owner</i>
-<dl><dd>module owning this PHY</dl>
+<dl><dd>module owning this PHY</dd></dl>
 
 <h2>Copyright</h2>
 

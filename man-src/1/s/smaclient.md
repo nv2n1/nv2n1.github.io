@@ -16,51 +16,51 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 <h2>DESCRIPTION</h2>
 <p> <code>smaclient</code> is a tool which provides a line-mode interface to the z/VM System Management API (SMAPI) for most Unix-compatible systems such as Linux. Smaclient can exercise all the VM management interfaces to create, modify and destroy virtual machines without ever logging into z/VM.</p>
 <dl>
-<dt>Executing smaclient without any arguments will print a list of available arguments and options.</p>
-<dd></dl>
+<dt>Executing smaclient without any arguments will print a list of available arguments and options.</dt>
+<dd></dd></dl>
 <h2>REQUIRED OPTIONS</h2>
 <dl>
-<dt><code>-T</code>, <code>&#8211;target</code>=<i>TARGET</i></p>
-<dd> set the target image or authorization entry name</dl>
+<dt><code>-T</code>, <code>&#8211;target</code>=<i>TARGET</i></dt>
+<dd> set the target image or authorization entry name</dd></dl>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>-H</code>, <code>&#8211;smhost</code>=<i>HOST</i></p>
-<dd> hostname/port of SMAPI server. Specify IUCV if SMAPI IUCV is desired</p>
-<dt><code>-U</code>, <code>&#8211;smuser</code>=<i>USER</i></p>
-<dd> authorized SMAPI userid</p>
-<dt><code>-P</code>, <code>&#8211;smpass</code>=<i>PASS</i></p>
-<dd> authorized SMAPI password</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> output usage information</dl>
+<dt><code>-H</code>, <code>&#8211;smhost</code>=<i>HOST</i></dt>
+<dd> hostname/port of SMAPI server. Specify IUCV if SMAPI IUCV is desired</dd>
+<dt><code>-U</code>, <code>&#8211;smuser</code>=<i>USER</i></dt>
+<dd> authorized SMAPI userid</dd>
+<dt><code>-P</code>, <code>&#8211;smpass</code>=<i>PASS</i></dt>
+<dd> authorized SMAPI password</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> output usage information</dd></dl>
 <h2>FUNCTIONS</h2>
 <dl>
-<dt>supported long function names MUST match SMAPI function name. For a list of supported functions, execute smaclient without arguments.</p>
-<dd></dl>
+<dt>supported long function names MUST match SMAPI function name. For a list of supported functions, execute smaclient without arguments.</dt>
+<dd></dd></dl>
 <h2>FILES</h2>
 <p> /etc/smaclient.conf<br />
  ~/.smaclient</p>
 <dl>
-<dt>For /etc/smaclient.conf and ~/.smaclient, you can specify any or all of the following variables:</p>
-<dd></dl>
+<dt>For /etc/smaclient.conf and ~/.smaclient, you can specify any or all of the following variables:</dt>
+<dd></dd></dl>
 <p> <code>smhost</code> </p>
 <dl>
 <dt>
-<dd> For TCP/IP, specify the SMAPI host and port number. The format is:</p>
+</dt><dd> For TCP/IP, specify the SMAPI host and port number. The format is:</dd>
 <dl>
 <dt>
-<dd> hostname/portnumber</dl>
+</dt><dd> hostname/portnumber</dd></dl>
 <p> For IUCV, specify the literal &quot;IUCV&quot;.</dl>
 <dl>
-<dt><code>smuser</code></p>
+<dt><code>smuser</code></dt>
 <dd>
  For TCP/IP, specify the userid authorized to use SMAPPI.<br />
- For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</p>
-<dt><code>smpass</code></p>
+ For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</dd>
+<dt><code>smpass</code></dt>
 <dd>
  For TCP/IP, specify the corresponding password.<br />
- For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</p>
-<dt>An example ~/.smaclient:</p>
-<dd></dl>
+ For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</dd>
+<dt>An example ~/.smaclient:</dt>
+<dd></dd></dl>
 <p> smhost=&quot;myzvm/44444&quot;<br />
  smuser=&quot;vsmuser&quot;<br />
  smpass=&quot;secret&quot;</p>

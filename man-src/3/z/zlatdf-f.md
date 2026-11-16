@@ -26,10 +26,10 @@ description: "zlatdf.f –"
  The factorization of Z returned by ZGETC2 has the form
  Z = P * L * U * Q, where P and Q are permutation matrices. L is lower
  triangular with unit diagonal elements and U is upper triangular.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>IJOB</i> </p>
+<dd><i>IJOB</i> </dd>
 <pre> IJOB is INTEGER
  IJOB = 2: First compute an approximative null-vector e
  of Z using ZGECON, e is normalized and solve for
@@ -81,26 +81,26 @@ description: "zlatdf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
-<dd>This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dl>
+<dd>This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Bo Kagstrom and Lars Westin, Generalized Schur Methods with Condition Estimators for Solving the Generalized Sylvester Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7, July 1989, pp 745-751. </p>
+<dd>[1] Bo Kagstrom and Lars Westin, Generalized Schur Methods with Condition Estimators for Solving the Generalized Sylvester Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7, July 1989, pp 745-751. </dd>
 <p>&nbsp;<wbr>[2]&nbsp;<wbr>Peter Poromaa, On Efficient and Robust Estimators for the Separation between two Regular Matrix Pairs with Applications in Condition Estimation. Report UMINF-95.05, Department of Computing Science, Umea University, S-901 87 Umea, Sweden,</p>
 <dl>
-<dt>1995.</p>
-<dd></dl>
+<dt>1995.</dt>
+<dd></dd></dl>
 </dl>
 <p> Definition at line 169 of file zlatdf.f.</p>
 <h2>Author</h2>

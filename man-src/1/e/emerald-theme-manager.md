@@ -14,8 +14,8 @@ description: "emerald-theme-manager – The Emerald Theme Manager"
 <h2>DESCRIPTION</h2>
 <p> <i>emerald-theme-manager</i> is the theme manager of emerald. .</p>
 <dl>
-<dt>$HOME/.emerald/settings.ini</p>
-<dd> Here are the settings stored.</dl>
+<dt>$HOME/.emerald/settings.ini</dt>
+<dd> Here are the settings stored.</dd></dl>
 <h2>AUTHORS</h2>
 <p> &#8211; Quinn Storm (livinglatexkali [at] gmail.com)</p>
 <h2>SEE ALSO</h2>

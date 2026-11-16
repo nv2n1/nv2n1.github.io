@@ -44,21 +44,13 @@ There is a non-standard function named gamma in various implementations, but its
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
 const double pi = std::acos(-1);
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;lgamma(10) = &quot; &lt;&lt; std::lgamma(10)
               &lt;&lt; &quot;,  log(9!) = &quot; &lt;&lt; std::log(2 * 3 * 4 * 5 * 6 * 7 * 8 * 9) &lt;&lt; '

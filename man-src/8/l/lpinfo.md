@@ -16,26 +16,26 @@ description: "lpinfo – show available devices or drivers (deprecated)"
 <h2>Options</h2>
 <p><code>lpinfo</code> accepts the following options:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd>Forces encryption when connecting to the server.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd>Selects an alternate server.</p>
-<dt><code>-l</code></p>
-<dd>Shows a &quot;long&quot; listing of devices or drivers.</p>
-<dt><code>&#8211;device-id </code><i>device-id-string</i></p>
-<dd>Specifies the IEEE-1284 device ID to match when listing drivers with the <i>-m</i> option.</p>
-<dt><code>&#8211;exclude-schemes </code><i>scheme-list</i></p>
-<dd>Specifies a comma-delimited list of device or PPD schemes that should be excluded from the results. Static PPD files use the &quot;file&quot; scheme.</p>
-<dt><code>&#8211;include-schemes </code><i>scheme-list</i></p>
-<dd>Specifies a comma-delimited list of device or PPD schemes that should be included in the results. Static PPD files use the &quot;file&quot; scheme.</p>
-<dt><code>&#8211;language </code><i>locale</i></p>
-<dd>Specifies the language to match when listing drivers with the <i>-m</i> option.</p>
-<dt><code>&#8211;make-and-model </code><i>name</i></p>
-<dd>Specifies the make and model to match when listing drivers with the <i>-m</i> option.</p>
-<dt><code>&#8211;product </code><i>name</i></p>
-<dd>Specifies the product to match when listing drivers with the <i>-m</i> option.</p>
-<dt><code>&#8211;timeout </code><i>seconds</i></p>
-<dd>Specifies the timeout when listing devices with the <i>-v</i> option.</dl>
+<dt><code>-E</code></dt>
+<dd>Forces encryption when connecting to the server.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd>Selects an alternate server.</dd>
+<dt><code>-l</code></dt>
+<dd>Shows a &quot;long&quot; listing of devices or drivers.</dd>
+<dt><code>&#8211;device-id </code><i>device-id-string</i></dt>
+<dd>Specifies the IEEE-1284 device ID to match when listing drivers with the <i>-m</i> option.</dd>
+<dt><code>&#8211;exclude-schemes </code><i>scheme-list</i></dt>
+<dd>Specifies a comma-delimited list of device or PPD schemes that should be excluded from the results. Static PPD files use the &quot;file&quot; scheme.</dd>
+<dt><code>&#8211;include-schemes </code><i>scheme-list</i></dt>
+<dd>Specifies a comma-delimited list of device or PPD schemes that should be included in the results. Static PPD files use the &quot;file&quot; scheme.</dd>
+<dt><code>&#8211;language </code><i>locale</i></dt>
+<dd>Specifies the language to match when listing drivers with the <i>-m</i> option.</dd>
+<dt><code>&#8211;make-and-model </code><i>name</i></dt>
+<dd>Specifies the make and model to match when listing drivers with the <i>-m</i> option.</dd>
+<dt><code>&#8211;product </code><i>name</i></dt>
+<dd>Specifies the product to match when listing drivers with the <i>-m</i> option.</dd>
+<dt><code>&#8211;timeout </code><i>seconds</i></dt>
+<dd>Specifies the timeout when listing devices with the <i>-v</i> option.</dd></dl>
 <h2>Conforming To</h2>
 <p>The <i>lpinfo</i> command is unique to CUPS.</p>
 <h2>Examples</h2>

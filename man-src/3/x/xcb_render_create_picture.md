@@ -10,25 +10,23 @@ description: "xcb_render_create_picture –"
 <p>xcb_render_create_picture &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/render.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_render_create_picture(xcb_connection_t *conn, xcb_render_picture_t pid, xcb_drawable_t drawable, xcb_render_pictformat_t format, uint32_t value_mask, const void *value_list);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>pid</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>drawable</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>format</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>value_mask</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>value_list</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>pid</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>drawable</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>format</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>value_mask</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>value_list</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

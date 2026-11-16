@@ -15,9 +15,10 @@ description: "SDL_UpdateRects – Makes sure the given list of rectangles is upd
 <p>Makes sure the given list of rectangles is updated on the given screen. The rectangles must all be confined within the screen boundaries (no clipping is done). </p>
 <p> This function should not be called while <code>screen</code> is <i>locked</i>. </p>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> It is adviced to call this function only once per frame, since each call has some processing overhead. This is no restriction since you can pass any number of rectangles each time. </p>
 <p> The rectangles are not automatically merged or checked for overlap. In general, the programmer can use his knowledge about his particular rectangles to merge them in an efficient way, to avoid overdraw.</dl>
 <p> </code></p>
 <h2>See Also</h2>
 <p><i></i><code>SDL_UpdateRect</code>, <i></i><code>SDL_Rect</code>, <i></i><code>SDL_Surface</code>, <i></i><code>SDL_LockSurface</code></p>
+</p>

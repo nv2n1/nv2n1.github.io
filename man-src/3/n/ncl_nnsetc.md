@@ -15,9 +15,9 @@ CALL NNSETC (PNAM, CVAL);
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>A character string that specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
-<dt>CVAL
-<dd>A character string that is the value to be assigned to the internal parameter specified by pnam.</dl>
+</dt><dd>A character string that specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
+</dd><dt>CVAL
+</dt><dd>A character string that is the value to be assigned to the internal parameter specified by pnam.</dd></dl>
 
 <h2>Usage</h2>
 

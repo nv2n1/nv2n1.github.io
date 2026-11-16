@@ -14,64 +14,64 @@ description: "ipsec__updown – kernel and routing manipulation script"
 <p>The <i>_updown</i> is passed along a number of variables which can be used to act differently based on the information: </p>
 <p> <code>PLUTO_VERSION</code></p>
 <dl>
-<dd>indicates what version of this interface is being used. This document describes version 1.1. This is upwardly compatible with version 1.0.</dl>
+<dd>indicates what version of this interface is being used. This document describes version 1.1. This is upwardly compatible with version 1.0.</dd></dl>
 <p> <code>PLUTO_VERB</code></p>
 <dl>
-<dd>specifies the name of the operation to be performed, which can be one of <code>prepare-host</code>, <code>prepare-client</code>, <code>up-host</code>, <code>up-client</code>, <code>down-host</code> or <code>down-client</code>. If the address family for security gateway to security gateway communications is IPv6, then a suffix of -v6 is added to this verb.</dl>
+<dd>specifies the name of the operation to be performed, which can be one of <code>prepare-host</code>, <code>prepare-client</code>, <code>up-host</code>, <code>up-client</code>, <code>down-host</code> or <code>down-client</code>. If the address family for security gateway to security gateway communications is IPv6, then a suffix of -v6 is added to this verb.</dd></dl>
 <p> <code>PLUTO_CONNECTION</code></p>
 <dl>
-<dd>is the name of the connection for which we are routing.</dl>
+<dd>is the name of the connection for which we are routing.</dd></dl>
 <p> <code>PLUTO_NEXT_HOP</code></p>
 <dl>
-<dd>is the next hop to which packets bound for the peer must be sent.</dl>
+<dd>is the next hop to which packets bound for the peer must be sent.</dd></dl>
 <p> <code>PLUTO_INTERFACE</code></p>
 <dl>
-<dd>is the name of the ipsec interface to be used.</dl>
+<dd>is the name of the ipsec interface to be used.</dd></dl>
 <p> <code>PLUTO_ME</code></p>
 <dl>
-<dd>is the IP address of our host.</dl>
+<dd>is the IP address of our host.</dd></dl>
 <p> <code>PLUTO_MY_CLIENT</code></p>
 <dl>
-<dd>is the IP address / count of our client subnet. If the client is just the host, this will be the host&#8217;s own IP address / max (where max is 32 for IPv4 and 128 for IPv6).</dl>
+<dd>is the IP address / count of our client subnet. If the client is just the host, this will be the host&#8217;s own IP address / max (where max is 32 for IPv4 and 128 for IPv6).</dd></dl>
 <p> <code>PLUTO_MY_CLIENT_NET</code></p>
 <dl>
-<dd>is the IP address of our client net. If the client is just the host, this will be the host&#8217;s own IP address.</dl>
+<dd>is the IP address of our client net. If the client is just the host, this will be the host&#8217;s own IP address.</dd></dl>
 <p> <code>PLUTO_MY_CLIENT_MASK</code></p>
 <dl>
-<dd>is the mask for our client net. If the client is just the host, this will be 255.255.255.255.</dl>
+<dd>is the mask for our client net. If the client is just the host, this will be 255.255.255.255.</dd></dl>
 <p> <code>PLUTO_PEER</code></p>
 <dl>
-<dd>is the IP address of our peer.</dl>
+<dd>is the IP address of our peer.</dd></dl>
 <p> <code>PLUTO_PEER_CLIENT</code></p>
 <dl>
-<dd>is the IP address / count of the peer&#8217;s client subnet. If the client is just the peer, this will be the peer&#8217;s own IP address / max (where max is 32 for IPv4 and 128 for IPv6).</dl>
+<dd>is the IP address / count of the peer&#8217;s client subnet. If the client is just the peer, this will be the peer&#8217;s own IP address / max (where max is 32 for IPv4 and 128 for IPv6).</dd></dl>
 <p> <code>PLUTO_PEER_CLIENT_NET</code></p>
 <dl>
-<dd>is the IP address of the peer&#8217;s client net. If the client is just the peer, this will be the peer&#8217;s own IP address.</dl>
+<dd>is the IP address of the peer&#8217;s client net. If the client is just the peer, this will be the peer&#8217;s own IP address.</dd></dl>
 <p> <code>PLUTO_PEER_CLIENT_MASK</code></p>
 <dl>
-<dd>is the mask for the peer&#8217;s client net. If the client is just the peer, this will be 255.255.255.255.</dl>
+<dd>is the mask for the peer&#8217;s client net. If the client is just the peer, this will be 255.255.255.255.</dd></dl>
 <p> <code>PLUTO_MY_PROTOCOL</code></p>
 <dl>
-<dd>lists the protocols allowed over this IPsec SA.</dl>
+<dd>lists the protocols allowed over this IPsec SA.</dd></dl>
 <p> <code>PLUTO_PEER_PROTOCOL</code></p>
 <dl>
-<dd>lists the protocols the peer allows over this IPsec SA.</dl>
+<dd>lists the protocols the peer allows over this IPsec SA.</dd></dl>
 <p> <code>PLUTO_MY_PORT</code></p>
 <dl>
-<dd>lists the ports allowed over this IPsec SA.</dl>
+<dd>lists the ports allowed over this IPsec SA.</dd></dl>
 <p> <code>PLUTO_PEER_PORT</code></p>
 <dl>
-<dd>lists the ports the peer allows over this IPsec SA.</dl>
+<dd>lists the ports the peer allows over this IPsec SA.</dd></dl>
 <p> <code>PLUTO_MY_ID</code></p>
 <dl>
-<dd>lists our id.</dl>
+<dd>lists our id.</dd></dl>
 <p> <code>PLUTO_PEER_ID</code></p>
 <dl>
-<dd>lists our peer&#8217;s id.</dl>
+<dd>lists our peer&#8217;s id.</dd></dl>
 <p> <code>PLUTO_PEER_CA</code></p>
 <dl>
-<dd>lists the peer&#8217;s CA.</dl>
+<dd>lists the peer&#8217;s CA.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_pluto/">ipsec_pluto</a></code>(8).</p>
 <h2>History</h2>
@@ -79,4 +79,4 @@ description: "ipsec__updown – kernel and routing manipulation script"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

@@ -15,8 +15,8 @@ void bson_strfreev(char **strv);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>strv</code></p>
-<dd> A NULL-terminated array of strings to free, including the array.</dl>
+<dt><code>strv</code></dt>
+<dd> A NULL-terminated array of strings to free, including the array.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This will free each string in a NULL-terminated array of strings and then the array itself. </p>
 <h2>COLOPHON</h2>

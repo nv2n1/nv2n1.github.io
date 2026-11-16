@@ -159,8 +159,8 @@ description: "rhsmcertd_selinux – Security Enhanced Linux Policy for the rhsmc
 <p> <code>rhsmcertd_exec_t</code> </p>
 <p> &#8211; Set files with the rhsmcertd_exec_t type, if you want to transition an executable to the rhsmcertd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/rhsmcertd, /usr/libexec/rhsmd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/rhsmcertd, /usr/libexec/rhsmd </dd>
 </dl>
 <p> <code>rhsmcertd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the rhsmcertd_initrc_exec_t type, if you want to transition an executable to the rhsmcertd_initrc_t domain. </p>

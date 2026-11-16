@@ -49,12 +49,12 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
 <p> The ASCII-to-binary error-reporting convention lends itself to slightly obscure code, because many readers will not think of NULL as signifying success. A good way to make it clearer is to write something like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 const char *error;
 error = atoaddr(/* ... */);
 if (error != NULL) {
 /* something went wrong */
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -15,42 +15,42 @@ description: "pungi – anaconda-based installation spin tool"
 <h2>Options</h2>
 <p><code>pungi</code> is entirely command line oriented. All input to the program is given by command line options. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Display a help message and then quit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display program&#8217;s version number and then quit.</p>
-<dt><code>&#8211;name=string</code></p>
-<dd>Set the name for your distribution (defaults to &quot;Fedora&quot;).</p>
-<dt><code>&#8211;ver=string</code></p>
-<dd>Set the version for your distribution (defaults to datestamp, used for $releasever in yum).</p>
-<dt><code>&#8211;flavor=string</code></p>
-<dd>Set the flavor of your spin (optional).</p>
-<dt><code>&#8211;destdir=pathspec</code></p>
-<dd>Path specifying the destination directory (defaults to current directory).</p>
-<dt><code>&#8211;cachedir=pathspec</code></p>
-<dd>Package cache directory (defaults to /var/cache/pungi).</p>
-<dt><code>&#8211;bugurl=urlspec</code></p>
-<dd>The URL for your bug reporting system (defaults to <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>).</p>
-<dt><code>&#8211;discs=integer</code></p>
-<dd>The number of discs you want to create (defaults to 1).</p>
-<dt><code>&#8211;nosource</code></p>
-<dd>Disable gathering of source packages (optional).</p>
-<dt><code>&#8211;sourceisos</code></p>
-<dd>Create the source media images (other arch runs must be done).</p>
-<dt><code>&#8211;force</code></p>
-<dd>Force reuse of an existing destination directory (will overwrite files).</p>
-<dt><code>-c ksfile, &#8211;config=ksfile</code></p>
-<dd>Path to kickstart configuration file.</p>
-<dt><code>&#8211;all-stages</code></p>
-<dd>Enable ALL stages.</p>
-<dt><code>-G</code></p>
-<dd>Enable the Gather stage.</p>
-<dt><code>-C</code></p>
-<dd>Enable the Createrepo stage.</p>
-<dt><code>-B</code></p>
-<dd>Enable the BuildInstall stage.</p>
-<dt><code>-I</code></p>
-<dd>Enable the CreateISO stage. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Display a help message and then quit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display program&#8217;s version number and then quit.</dd>
+<dt><code>&#8211;name=string</code></dt>
+<dd>Set the name for your distribution (defaults to &quot;Fedora&quot;).</dd>
+<dt><code>&#8211;ver=string</code></dt>
+<dd>Set the version for your distribution (defaults to datestamp, used for $releasever in yum).</dd>
+<dt><code>&#8211;flavor=string</code></dt>
+<dd>Set the flavor of your spin (optional).</dd>
+<dt><code>&#8211;destdir=pathspec</code></dt>
+<dd>Path specifying the destination directory (defaults to current directory).</dd>
+<dt><code>&#8211;cachedir=pathspec</code></dt>
+<dd>Package cache directory (defaults to /var/cache/pungi).</dd>
+<dt><code>&#8211;bugurl=urlspec</code></dt>
+<dd>The URL for your bug reporting system (defaults to <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>).</dd>
+<dt><code>&#8211;discs=integer</code></dt>
+<dd>The number of discs you want to create (defaults to 1).</dd>
+<dt><code>&#8211;nosource</code></dt>
+<dd>Disable gathering of source packages (optional).</dd>
+<dt><code>&#8211;sourceisos</code></dt>
+<dd>Create the source media images (other arch runs must be done).</dd>
+<dt><code>&#8211;force</code></dt>
+<dd>Force reuse of an existing destination directory (will overwrite files).</dd>
+<dt><code>-c ksfile, &#8211;config=ksfile</code></dt>
+<dd>Path to kickstart configuration file.</dd>
+<dt><code>&#8211;all-stages</code></dt>
+<dd>Enable ALL stages.</dd>
+<dt><code>-G</code></dt>
+<dd>Enable the Gather stage.</dd>
+<dt><code>-C</code></dt>
+<dd>Enable the Createrepo stage.</dd>
+<dt><code>-B</code></dt>
+<dd>Enable the BuildInstall stage.</dd>
+<dt><code>-I</code></dt>
+<dd>Enable the CreateISO stage. </dd>
 </dl>
 <h2>Examples</h2>
 <pre>pungi -c /usr/share/pungi/f8-fedora.ks --destdir=/data/Fedora8 --name Fedora --ver 8</pre>

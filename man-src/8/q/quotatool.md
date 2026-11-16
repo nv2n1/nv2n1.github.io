@@ -16,44 +16,44 @@ description: "quotatool – manipulate filesystem quotas"
 <p><code>quotatool</code> is a tool for manipulating filesystem quotas. Depending on the commandline options given, it can set hard or soft limits on block and inode usage, set and reset grace periods, for both users and (if your system supports this) groups. The filesystem to set the quota on is given as the first (and only) non-option element, and it is either the block special file (i.e /dev/sda3) or the mount point (i.e. /home) for the filesystem.</p>
 <h2>Options</h2>
 <dl>
-<dt>-u [[:]uid]</p>
-<dd>Set user quotas</p>
-<dt>-g [[:]gid]</p>
-<dd>Set group quotas</dl>
+<dt>-u [[:]uid]</dt>
+<dd>Set user quotas</dd>
+<dt>-g [[:]gid]</dt>
+<dd>Set group quotas</dd></dl>
 <p> <i>uid</i> and <i>gid</i> are either the numerical ID of the user or group, or its name in the <code>/etc/passwd</code> and <code>/etc/group</code> files. Prefix <i>:</i> allows using numerical uid/gid not present in /etc/passwd or /etc/group.</p>
 <dl>
-<dt>-b</p>
-<dd>Set block quotas [default]</p>
-<dt>-i</p>
-<dd>Set inode quotas</dl>
+<dt>-b</dt>
+<dd>Set block quotas [default]</dd>
+<dt>-i</dt>
+<dd>Set inode quotas</dd></dl>
 <p> The -b and -i options are persistent &#8212; they stay in effect until they are overridden.</p>
 <dl>
-<dt>-R</p>
-<dd>Only raise quotas, never lower. Makes sure you don&#8217;t accidentally lower quotas for a user/group.</p>
-<dt>-t TIME</p>
-<dd>Set the system-wide grace period to TIME. TIME consists of an optional &#8216;-&#8216; or &#8216;+&#8217; character, a number, and optionally one of the following modifiers: &quot;seconds&quot;, &quot;minutes&quot;, &quot;hours&quot;, &quot;days&quot;, &quot;weeks&quot;, or &quot;months&quot;. Unique abbreviations (e.g. &quot;s&quot;, &quot;mo&quot;) are also accepted. The default is &quot;seconds&quot;. The argument should be preceded by -u|-g and -b|-i</p>
-<dt>-r</p>
-<dd>Reset the grace period</p>
-<dt>-l NUM</p>
-<dd>Set hard limit to NUM</p>
-<dt>-q NUM</p>
-<dd>Set soft limit (quota) to NUM</dl>
+<dt>-R</dt>
+<dd>Only raise quotas, never lower. Makes sure you don&#8217;t accidentally lower quotas for a user/group.</dd>
+<dt>-t TIME</dt>
+<dd>Set the system-wide grace period to TIME. TIME consists of an optional &#8216;-&#8216; or &#8216;+&#8217; character, a number, and optionally one of the following modifiers: &quot;seconds&quot;, &quot;minutes&quot;, &quot;hours&quot;, &quot;days&quot;, &quot;weeks&quot;, or &quot;months&quot;. Unique abbreviations (e.g. &quot;s&quot;, &quot;mo&quot;) are also accepted. The default is &quot;seconds&quot;. The argument should be preceded by -u|-g and -b|-i</dd>
+<dt>-r</dt>
+<dd>Reset the grace period</dd>
+<dt>-l NUM</dt>
+<dd>Set hard limit to NUM</dd>
+<dt>-q NUM</dt>
+<dd>Set soft limit (quota) to NUM</dd></dl>
 <p> NUM consists of an optional &#8216;-&#8216; or &#8216;+&#8217; character, a number (integer or floating point), and optionally one of the following modifiers: &quot;Kb&quot;, &quot;Mb&quot;, &quot;Gb&quot;, &quot;Tb&quot;, &quot;bytes&quot;, or &quot;blocks&quot;. Unique abbreviations are also accepted. The default is &quot;blocks&quot;. Modifiers are base 2 for block quotas (1k = 1024), and base 10 for inode quotas (1k = 1000) </p>
 <p> If +/- is supplied, the existing quota is increased or reduced by the specified amount.</p>
 <dl>
-<dt><i>-d</i></p>
-<dd>Dump quota info for user/group in a machine readable format:</p>
+<dt><i>-d</i></dt>
+<dd>Dump quota info for user/group in a machine readable format:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&#8212;&#8212;- BLOCKS &#8212;&#8212;&#8211;| |&#8212;&#8212;&#8211; FILES &#8212;&#8212;&#8211;|<br />
- <code>uid/gid mountpoint current quota limit grace current quota limit grace</code></p>
-<dd><code>grace</code> is the number of seconds from now until the grace time ends. May be negative = time already passed. When quota is not passed, grace is zero.</p>
-<dt>-n</p>
-<dd>dry-run: show what would have been done but don&#8217;t change anything. Use together with -v</p>
-<dt>-v</p>
-<dd>Verbose output. Use twice or thrice for even more output (debugging)</p>
-<dt><i>-h</i></p>
-<dd>Print a usage message to stdout and exit successfully</p>
-<dt><i>-V</i></p>
-<dd>Print version information to stdout and exit successfully</dl>
+ <code>uid/gid mountpoint current quota limit grace current quota limit grace</code></dd>
+<dd><code>grace</code> is the number of seconds from now until the grace time ends. May be negative = time already passed. When quota is not passed, grace is zero.</dd>
+<dt>-n</dt>
+<dd>dry-run: show what would have been done but don&#8217;t change anything. Use together with -v</dd>
+<dt>-v</dt>
+<dd>Verbose output. Use twice or thrice for even more output (debugging)</dd>
+<dt><i>-h</i></dt>
+<dd>Print a usage message to stdout and exit successfully</dd>
+<dt><i>-V</i></dt>
+<dd>Print version information to stdout and exit successfully</dd></dl>
 <h2>Filesystems / Formats</h2>
 <p>On Linux, <code>quotatool</code> works with both &quot;old&quot;, &quot;vfsv0&quot; and &quot;vfsv1&quot; + &quot;generic&quot; kernel-quota formats. Supported filesystems: ext2, ext3, ext4, ReiserFS and XFS. </p>
 <p> Mac OS X: hfs </p>

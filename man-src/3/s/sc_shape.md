@@ -11,7 +11,6 @@ description: "sc::Shape –"
 <p> A <code>Shape</code> is a <code>Volume</code> represents an 3D solid.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;shape.h&gt;</code></pre>
 <p> Inherits <code>sc::Volume</code>. Inherited by <code>sc::ConnollyShape</code>, <code>sc::SphereShape</code>, <code>sc::Uncapped5SphereExclusionShape</code>, <code>sc::UncappedTorusHoleShape</code>, and <code>sc::UnionShape</code>.</p>
 <h3>Public Member Functions</h3>

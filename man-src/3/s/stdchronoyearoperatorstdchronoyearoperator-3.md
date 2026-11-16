@@ -12,13 +12,10 @@ std::chrono::year::operator+=,std::chrono::year::operator-= - std::chrono::year:
 
 <pre><code>constexpr std::chrono::year &amp;operator+=(const std::chrono::years &amp;y) noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::year &amp;
     operator-=(const std::chrono::years &amp;y) noexcept; (2) (since C++20)
 Adds or subtracts y.count() years from the year value.
-
 1) Equivalent to *this = *this + y;
-
 2) Equivalent to *this = *this - y;
 </code></pre>
 

@@ -11,11 +11,8 @@ std::filesystem::read_symlink - std::filesystem::read_symlink
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;filesystem&gt;
-
     std::filesystem::path read_symlink(const std::filesystem::path &amp;p);
-
 std::filesystem::path read_symlink(const std::filesystem::path &amp;p, (since C++ 17)
-
                                                                        std::error_code &amp;ec);</code></pre> 
 If the path p refers to a symbolic link, returns a new path object which refers to the target of that symbolic link. 
 It is an error if p does not refer to a symbolic link. 
@@ -37,11 +34,9 @@ The overload that does not take a std::error_code&amp; parameter throws filesyst
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
 namespace fs = std::filesystem;
 int main()
-
 {
     // on a typical Linux system, /lib/libc.so.6 is a symlink
     fs::path p = &quot;/lib/libc.so.6&quot;;

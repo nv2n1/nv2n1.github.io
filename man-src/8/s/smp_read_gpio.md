@@ -17,28 +17,28 @@ description: "smp_read_gpio – invoke READ GPIO REGISTER (ENHANCED) SMP functio
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;count</code>=<i>CO</i></p>
-<dd>where <i>CO</i> is the register count. This is the number of (4 byte) registers to request. The default value is 1.</p>
-<dt><code>-E</code>, <code>&#8211;enhanced</code></p>
-<dd>sends a READ GPIO REGISTER ENHANCED function request (default: send a READ GPIO REGISTER function request).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></p>
-<dd>where <i>IN</i> is the register index. This value is origin zero and its default value is 0. If the request succeeds, then <i>&#8211;count=CO</i> registers starting from <i>&#8211;index=IN</i> of the given <i>&#8211;type=TY</i> should be in the response.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-t</code>, <code>&#8211;type</code>=<i>TY</i></p>
-<dd>where <i>TY</i> is the register type. The default value is 0 (GPIO_CFG). If the request succeeds, then <i>&#8211;count=CO</i> registers starting from <i>&#8211;index=IN</i> of the given <i>&#8211;type=TY</i> should be in the response.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-c</code>, <code>&#8211;count</code>=<i>CO</i></dt>
+<dd>where <i>CO</i> is the register count. This is the number of (4 byte) registers to request. The default value is 1.</dd>
+<dt><code>-E</code>, <code>&#8211;enhanced</code></dt>
+<dd>sends a READ GPIO REGISTER ENHANCED function request (default: send a READ GPIO REGISTER function request).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;index</code>=<i>IN</i></dt>
+<dd>where <i>IN</i> is the register index. This value is origin zero and its default value is 0. If the request succeeds, then <i>&#8211;count=CO</i> registers starting from <i>&#8211;index=IN</i> of the given <i>&#8211;type=TY</i> should be in the response.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-t</code>, <code>&#8211;type</code>=<i>TY</i></dt>
+<dd>where <i>TY</i> is the register type. The default value is 0 (GPIO_CFG). If the request succeeds, then <i>&#8211;count=CO</i> registers starting from <i>&#8211;index=IN</i> of the given <i>&#8211;type=TY</i> should be in the response.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Enhanced Function</h2>
 <p>In the technical review of SAS-2 prior to standardization in this t10 document: 08-212r8.pdf (page 871 or 552) there is a comment that the READ GPIO REGISTER and WRITE GPIO REGISTER function headers (i.e. first 4 bytes) do not comply with all the other SMP functions in SAS-2. </p>
 <p> There is a suggestion that enhanced variants be introduced in the next version of the SFF-8485 document. If that ever happened then it has not been made public. In SAS-2.1 both the READ and WRITE GPIO REGISTER functions have been made obsolete and the corresponding ENHANCED function numbers are &quot;restricted&quot; for SFF-8485. </p>

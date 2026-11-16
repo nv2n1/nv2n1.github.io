@@ -14,21 +14,21 @@ description: "init_rs – Find a matching or allocate a new rs control structure
 <p><i>symsize</i></p>
 <dl>
 <dd>
-<dd>the symbol size (number of bits)</dl>
+</dd><dd>the symbol size (number of bits)</dd></dl>
 <p> <i>gfpoly</i></p>
 <dl>
-<dd>the extended Galois field generator polynomial coefficients, with the 0th coefficient in the low order bit. The polynomial must be primitive;</dl>
+<dd>the extended Galois field generator polynomial coefficients, with the 0th coefficient in the low order bit. The polynomial must be primitive;</dd></dl>
 <p> <i>fcr</i></p>
 <dl>
-<dd>the first consecutive root of the rs code generator polynomial in index form</dl>
+<dd>the first consecutive root of the rs code generator polynomial in index form</dd></dl>
 <p> <i>prim</i></p>
 <dl>
-<dd>primitive element to generate polynomial roots</dl>
+<dd>primitive element to generate polynomial roots</dd></dl>
 <p> <i>nroots</i></p>
 <dl>
-<dd>RS code generator polynomial degree (number of roots)</dl>
+<dd>RS code generator polynomial degree (number of roots)</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

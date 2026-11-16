@@ -21,62 +21,62 @@ description: "include_server.py – conservative approximation of include depend
 <h2>OPTION SUMMARY</h2>
 <p> The following options are understood by include_server.py.</p>
 <dl>
-<dt><code>-dPAT, &#8211;debug_pattern=PAT </code></p>
+<dt><code>-dPAT, &#8211;debug_pattern=PAT </code></dt>
 <dd> Bit vector for turning on warnings and debugging<br />
 &nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>warnings<br />
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>trace some functions<br />
-&nbsp;<wbr>other powers of two: see include_server/basics.py.</p>
-<dt><code>-e, &#8211;email</code></p>
-<dd> Send email to &#8216;distcc-pump-errors&#8217; or if defined, the value of enviroment variable DISTCC_EMAILLOG_WHOM_TO_BLAME, when include server gets in trouble. The default is to not send email.</p>
-<dt><code>&#8211;email_bound NUMBER</code></p>
-<dd> Maximal number of emails to send (in addition to a final email). Default: 3.</p>
-<dt><code>&#8211;no-email</code></p>
-<dd> Do not send email. This is the default.</p>
-<dt><code>&#8211;path_observation_re=RE </code></p>
-<dd> Issue warning message whenever a filename is resolved to a realpath that is matched by RE, which is a regular expression in Python syntax. This is useful for finding out where files included actually come from. Use RE=&quot;&quot; to find them all. Note: warnings must be enabled with at least -d1.</p>
-<dt><code>&#8211;pid_file FILEPATH</code></p>
-<dd> The pid of the include server is written to file FILEPATH. This allows a script such a <code>pump</code> to tear down the include server.</p>
-<dt><code>-s, &#8211;statistics</code></p>
-<dd> Print information to stdout about include analysis.</p>
-<dt><code>&#8211;stat_reset_triggers=LIST </code></p>
-<dd> Flush stat caches when the timestamp of any filepath in LIST changes or the filepath comes in or out of existence. LIST is a colon separated string of filepaths, possibly containing simple globs (as allowed by Python&#8217;s glob module). Print a warning whenever such a change happens (if warnings are enabled). This option allows limited exceptions to distcc_pump&#8217;s normal assumption that source files are not modified during the build.</p>
-<dt><code>-t, &#8211;time </code></p>
-<dd> Print elapsed, user, and system time to stderr.</p>
-<dt><code>&#8211;unsafe_absolute_includes </code></p>
-<dd> Do preprocessing on the compilation server even if includes of absolute filepaths are encountered. Normally the include-server will fall back on local preprocessing if it detects any absolute includes. Thus, this flag is useful for preventing such fallbacks when the absolute includes are a false alarm, either because the absolute include is discarded during preprocessing or because the absolutely included file exists on the compilation servers.</p>
+&nbsp;<wbr>other powers of two: see include_server/basics.py.</dd>
+<dt><code>-e, &#8211;email</code></dt>
+<dd> Send email to &#8216;distcc-pump-errors&#8217; or if defined, the value of enviroment variable DISTCC_EMAILLOG_WHOM_TO_BLAME, when include server gets in trouble. The default is to not send email.</dd>
+<dt><code>&#8211;email_bound NUMBER</code></dt>
+<dd> Maximal number of emails to send (in addition to a final email). Default: 3.</dd>
+<dt><code>&#8211;no-email</code></dt>
+<dd> Do not send email. This is the default.</dd>
+<dt><code>&#8211;path_observation_re=RE </code></dt>
+<dd> Issue warning message whenever a filename is resolved to a realpath that is matched by RE, which is a regular expression in Python syntax. This is useful for finding out where files included actually come from. Use RE=&quot;&quot; to find them all. Note: warnings must be enabled with at least -d1.</dd>
+<dt><code>&#8211;pid_file FILEPATH</code></dt>
+<dd> The pid of the include server is written to file FILEPATH. This allows a script such a <code>pump</code> to tear down the include server.</dd>
+<dt><code>-s, &#8211;statistics</code></dt>
+<dd> Print information to stdout about include analysis.</dd>
+<dt><code>&#8211;stat_reset_triggers=LIST </code></dt>
+<dd> Flush stat caches when the timestamp of any filepath in LIST changes or the filepath comes in or out of existence. LIST is a colon separated string of filepaths, possibly containing simple globs (as allowed by Python&#8217;s glob module). Print a warning whenever such a change happens (if warnings are enabled). This option allows limited exceptions to distcc_pump&#8217;s normal assumption that source files are not modified during the build.</dd>
+<dt><code>-t, &#8211;time </code></dt>
+<dd> Print elapsed, user, and system time to stderr.</dd>
+<dt><code>&#8211;unsafe_absolute_includes </code></dt>
+<dd> Do preprocessing on the compilation server even if includes of absolute filepaths are encountered. Normally the include-server will fall back on local preprocessing if it detects any absolute includes. Thus, this flag is useful for preventing such fallbacks when the absolute includes are a false alarm, either because the absolute include is discarded during preprocessing or because the absolutely included file exists on the compilation servers.</dd>
 <dt>
-<dd> More precisely, with &#8211;unsafe_absolute_includes absolute includes are ignored for the purposes of gathering the include closure. Using this option may lead to incorrect results because (1) the header may actually be included on the compilation server and it may not be the same as on the client, (2) the include directives of the header are not further analyzed.</p>
+</dt><dd> More precisely, with &#8211;unsafe_absolute_includes absolute includes are ignored for the purposes of gathering the include closure. Using this option may lead to incorrect results because (1) the header may actually be included on the compilation server and it may not be the same as on the client, (2) the include directives of the header are not further analyzed.</dd>
 <dt>
-<dd> The option is useful for compiling code that has such hardcoded absolute locations of header files inside conditional directives (e.g. &quot;#ifdef&quot;) that render the includes irrelevant. More precisely, these includes must be eliminated during preprocessing for the actual configuration. Then the question of existence of the header file is moot and the remote compilation is sound. This is often the case if such includes are meant for unusual configurations different from the actual configuration.</p>
-<dt><code>-v, &#8211;verify</code></p>
-<dd> Verify that files in CPP closure are contained in closure calculated by include processor.</p>
-<dt><code>-w, &#8211;write_include_closure </code></p>
-<dd> Write a .d_approx file which lists all the included files calculated by the include server; with -x, additionally write the included files as calculated by CPP to a .d_exact file.</p>
-<dt><code>-x, &#8211;exact_analysis</code></p>
-<dd> Use CPP instead, do not omit system headers files. </p>
+</dt><dd> The option is useful for compiling code that has such hardcoded absolute locations of header files inside conditional directives (e.g. &quot;#ifdef&quot;) that render the includes irrelevant. More precisely, these includes must be eliminated during preprocessing for the actual configuration. Then the question of existence of the header file is moot and the remote compilation is sound. This is often the case if such includes are meant for unusual configurations different from the actual configuration.</dd>
+<dt><code>-v, &#8211;verify</code></dt>
+<dd> Verify that files in CPP closure are contained in closure calculated by include processor.</dd>
+<dt><code>-w, &#8211;write_include_closure </code></dt>
+<dd> Write a .d_approx file which lists all the included files calculated by the include server; with -x, additionally write the included files as calculated by CPP to a .d_exact file.</dd>
+<dt><code>-x, &#8211;exact_analysis</code></dt>
+<dd> Use CPP instead, do not omit system headers files. </dd>
 </dl>
 <h2>INCLUDE SERVER SYMPTOMS AND ISSUES</h2>
 <p> The most likely messages and warnings to come from the include processor are listed below. </p>
 <dl>
-<dt><code>Preprocessing locally. Include server not covering: Couldn&#8217;t determine default system include directories</code></p>
-<dd> To determine the default system header directories, the include server runs the compiler once for each language needed during its session. This message indicates that the compiler specified to distcc is not present on the client.</dl>
+<dt><code>Preprocessing locally. Include server not covering: Couldn&#8217;t determine default system include directories</code></dt>
+<dd> To determine the default system header directories, the include server runs the compiler once for each language needed during its session. This message indicates that the compiler specified to distcc is not present on the client.</dd></dl>
 <dl>
-<dt><code>Preprocessing locally. Include server not covering: Bailing out because include server spent more than &#8230;s user time handling request</code></p>
-<dd> In uncommon situations, the include server fails to analyze very complicated macro expressions. The distcc client will use plain distcc mode.</dl>
+<dt><code>Preprocessing locally. Include server not covering: Bailing out because include server spent more than &#8230;s user time handling request</code></dt>
+<dd> In uncommon situations, the include server fails to analyze very complicated macro expressions. The distcc client will use plain distcc mode.</dd></dl>
 <dl>
-<dt><code>Warning: Filepath must be relative but isn&#8217;t</code></p>
-<dd> The include server does not accept absolute filepaths, such as /usr/include/stdio.h, in include directives, because there is no guarantee that this header on the compilation server machine will be the same as that on the client. The include server gives up analyzing the include closure. The distcc client cannot use pump-mode.</p>
+<dt><code>Warning: Filepath must be relative but isn&#8217;t</code></dt>
+<dd> The include server does not accept absolute filepaths, such as /usr/include/stdio.h, in include directives, because there is no guarantee that this header on the compilation server machine will be the same as that on the client. The include server gives up analyzing the include closure. The distcc client cannot use pump-mode.</dd>
 <dt>
-<dd> To overcome this problem in a not always reliable way, set the environment variable INCLUDE_SERVER_ARGS=&#8217;&#8211;unsafe_absolute_includes&#8217; when invoking the pump script to pass the &#8211;unsafe_absolute_includes option to the include server.</dl>
+</dt><dd> To overcome this problem in a not always reliable way, set the environment variable INCLUDE_SERVER_ARGS=&#8217;&#8211;unsafe_absolute_includes&#8217; when invoking the pump script to pass the &#8211;unsafe_absolute_includes option to the include server.</dd></dl>
 <dl>
-<dt><code>Warning: Absolute filepath &#8230; was IGNORED</code></p>
-<dd> The &#8211;unsafe_absolute_includes is in use. This situation happens under the same circumstances as when &quot;Filepath must be relative but isn&#8217;t&quot; is issued, but in this case the include will provide an answer to the distcc client.</dl>
+<dt><code>Warning: Absolute filepath &#8230; was IGNORED</code></dt>
+<dd> The &#8211;unsafe_absolute_includes is in use. This situation happens under the same circumstances as when &quot;Filepath must be relative but isn&#8217;t&quot; is issued, but in this case the include will provide an answer to the distcc client.</dd></dl>
 <dl>
-<dt><code>Warning: Path &#8216;/PATH/FILE&#8217; changed/came into existence/no longer exists</code></p>
-<dd> These warnings are issued when using stat reset triggers. Because /PATH/FILE changed, the include server clears its caches; the new version of the file (or the lack of it) renders the include analysis invalid. This message can usually be ignored; it does signify a somewhat precarious use of files by the build system. It is recommended to fix the build system so that files are not rewritten.</dl>
+<dt><code>Warning: Path &#8216;/PATH/FILE&#8217; changed/came into existence/no longer exists</code></dt>
+<dd> These warnings are issued when using stat reset triggers. Because /PATH/FILE changed, the include server clears its caches; the new version of the file (or the lack of it) renders the include analysis invalid. This message can usually be ignored; it does signify a somewhat precarious use of files by the build system. It is recommended to fix the build system so that files are not rewritten.</dd></dl>
 <dl>
-<dt><code>Warning: For translation unit &#8230;, lookup of file &#8230; resolved to &#8230; whose realpath is &#8230;</code></p>
-<dd> This warning occurs with &#8211;path_observation_re when a new realpath matching a source or header file is observed. </p>
+<dt><code>Warning: For translation unit &#8230;, lookup of file &#8230; resolved to &#8230; whose realpath is &#8230;</code></dt>
+<dd> This warning occurs with &#8211;path_observation_re when a new realpath matching a source or header file is observed. </dd>
 </dl>
 <h2>DISTCC DISCREPANCY SYMPTOMS</h2>
 <p> The interactions between the build system, distcc, and the include server is somewhat complex. When a distcc commands receives a failing compilation from the remote server it retries the compilation locally. This section discusses the causes of discrepancies between remote and local compilation. These are flagged by the demotion message: </p>
@@ -89,21 +89,21 @@ description: "include_server.py – conservative approximation of include depend
 <p> The fallback behavior for distcc-pump mode to local compilation can be disabled by setting the environment variable DISTCC_FALLBACK to 0, which makes the distcc command fail as soon as the remote compilation has failed. This setting is very useful for debugging why the remote compilation went wrong, because now the output from the server will be printed. </p>
 <p> Next we discuss the possible causes of discrepancies. </p>
 <dl>
-<dt><code>The user changed a source or header file during the build.</code></p>
-<dd> This yields inconsistent results of course.</dl>
+<dt><code>The user changed a source or header file during the build.</code></dt>
+<dd> This yields inconsistent results of course.</dd></dl>
 <dl>
-<dt><code>A source or header file changed during the build.</code></p>
-<dd> The build system rewrites a file. For Linux kernel 2.6, this happens for &#8216;include/linux/compile.h&#8217; and &#8216;include/asm/asm-offsets.h&#8217;. This condition is fixed by letting the include server know that it must reset its caches when a stat of any of the files changes. Practically, this is done by gathering the files in a colon-separated list and then setting the INCLUDE_SERVER_ARGS environment variable when invoking the pump script, so that it passes the <code>&#8211;stat_reset_triggers</code> option; for example, </p>
+<dt><code>A source or header file changed during the build.</code></dt>
+<dd> The build system rewrites a file. For Linux kernel 2.6, this happens for &#8216;include/linux/compile.h&#8217; and &#8216;include/asm/asm-offsets.h&#8217;. This condition is fixed by letting the include server know that it must reset its caches when a stat of any of the files changes. Practically, this is done by gathering the files in a colon-separated list and then setting the INCLUDE_SERVER_ARGS environment variable when invoking the pump script, so that it passes the <code>&#8211;stat_reset_triggers</code> option; for example, </dd>
 <p>INCLUDE_SERVER_ARGS=&quot;&#8211;stat_reset_triggers=include/linux/compile.h:include/asm/asm-offsets.h&quot;</dl>
 <dl>
-<dt><code>A header file is potentially included, but does not exist, and is then later included.</code></p>
-<dd> This occurs when some header foo.h includes another header file trick.h, but the trick.h file has not yet been generated and the inclusion is actually ignored because of preprocessing directives. The include server will probe for the existence of trick.h, because it overapproximates all possible ways directives actually evaluate. The file trick.h is determined not to exist. If it is later generated, and then really included, then the include server will falsely believe that the file still does not exist. The solution to this problem is to make the build system generate trick.h before the first time any header file is included that makes a syntactic reference to trick.h</dl>
+<dt><code>A header file is potentially included, but does not exist, and is then later included.</code></dt>
+<dd> This occurs when some header foo.h includes another header file trick.h, but the trick.h file has not yet been generated and the inclusion is actually ignored because of preprocessing directives. The include server will probe for the existence of trick.h, because it overapproximates all possible ways directives actually evaluate. The file trick.h is determined not to exist. If it is later generated, and then really included, then the include server will falsely believe that the file still does not exist. The solution to this problem is to make the build system generate trick.h before the first time any header file is included that makes a syntactic reference to trick.h</dd></dl>
 <dl>
-<dt><code>The include server was started with &#8211;unsafe_absolute_includes</code>.</p>
-<dd> This is a problem if there are header files locally that do not exist remotely and that are actually used. Such includes are often protected by conditional directives that evaluate so that are actually used on only specific and often uncommon platforms. If you are not compiling for such a platform, then it may be correct to use <code>&#8211;unsafe_absolute_include</code>.</dl>
+<dt><code>The include server was started with &#8211;unsafe_absolute_includes</code>.</dt>
+<dd> This is a problem if there are header files locally that do not exist remotely and that are actually used. Such includes are often protected by conditional directives that evaluate so that are actually used on only specific and often uncommon platforms. If you are not compiling for such a platform, then it may be correct to use <code>&#8211;unsafe_absolute_include</code>.</dd></dl>
 <dl>
-<dt><code>The include server has calculated the wrong includes.</code></p>
-<dd> We do not know of such a situation. </p>
+<dt><code>The include server has calculated the wrong includes.</code></dt>
+<dd> We do not know of such a situation. </dd>
 </dl>
 <h2>EXIT CODES</h2>
 <p> The exit code of include_server.py is usually 0. That the include server has been started properly is communicated through the existence of the pid_file. </p>

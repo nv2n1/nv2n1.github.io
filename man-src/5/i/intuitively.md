@@ -31,17 +31,17 @@ default_gw = 192.168.199.4
 description = Home
 #script = /usr/share/intuitively/home.sh</pre>
 <dl>
-<dt><code>myip</code></p>
-<dd>The ip address you want for this interface, either on the form a.b.c.d, or with netmask, like a.b.c.d/e, where e represents how many bits you want masked off or on the form fff.ggg.hhh.iii, which allows for strange stuff like having 255.255.243.0 as your netmask (not recommended).</p>
-<dt><code>netmask</code></p>
-<dd>if the netmask isn&#8217;t set in myip, it must be set here. Allowed forms are single digit, specifying how many bits are to be masked off, or a full ip address whose bits will be masked off.</p>
-<dt><code>other_ip</code></p>
-<dd>The ip address of one of the peers you are looking for. Good choices include such things as file servers, NIS servers, routers and other equipment which you are sure that is always up. Note that it needs to be on the same LAN, since ARP requests are normally not routed. It may also include the MAC address of the machine, quite useful if you have multiple networks with overlapping IP addresses</p>
-<dt><code>othermac</code></p>
-<dd>The mac address of the previous other_ip. See otherip for more information.</p>
-<dt><code>defaultlocation</code></p>
-<dd>If this flag is set, this location is used as default location. That means if none of the descriped location is found, this location is used. other location matches, this is used. If several locations are marked with the flag defaultlocation, the first one defined in the configuration is chosen.</p>
-<dt><code>dontsetip</code></p>
-<dd>If this flag is set, and this location is detected, no interface configuration is done. You still have to provide myip, but it may be any ip in the subnet, even an ip already in use.</dl>
+<dt><code>myip</code></dt>
+<dd>The ip address you want for this interface, either on the form a.b.c.d, or with netmask, like a.b.c.d/e, where e represents how many bits you want masked off or on the form fff.ggg.hhh.iii, which allows for strange stuff like having 255.255.243.0 as your netmask (not recommended).</dd>
+<dt><code>netmask</code></dt>
+<dd>if the netmask isn&#8217;t set in myip, it must be set here. Allowed forms are single digit, specifying how many bits are to be masked off, or a full ip address whose bits will be masked off.</dd>
+<dt><code>other_ip</code></dt>
+<dd>The ip address of one of the peers you are looking for. Good choices include such things as file servers, NIS servers, routers and other equipment which you are sure that is always up. Note that it needs to be on the same LAN, since ARP requests are normally not routed. It may also include the MAC address of the machine, quite useful if you have multiple networks with overlapping IP addresses</dd>
+<dt><code>othermac</code></dt>
+<dd>The mac address of the previous other_ip. See otherip for more information.</dd>
+<dt><code>defaultlocation</code></dt>
+<dd>If this flag is set, this location is used as default location. That means if none of the descriped location is found, this location is used. other location matches, this is used. If several locations are marked with the flag defaultlocation, the first one defined in the configuration is chosen.</dd>
+<dt><code>dontsetip</code></dt>
+<dd>If this flag is set, and this location is detected, no interface configuration is done. You still have to provide myip, but it may be any ip in the subnet, even an ip already in use.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/intuitively/intuitively.conf</i></p>

@@ -16,4 +16,4 @@ description: "SPI_pfree – free memory in the upper executor context"
 <h2>Arguments</h2>
 <p>void * <i>pointer</i></p>
 <dl COMPACT>
-<dd>pointer to existing storage to free</dl>
+<dd>pointer to existing storage to free</dd></dl>

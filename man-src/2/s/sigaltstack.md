@@ -16,19 +16,19 @@ description: "sigaltstack – set and/or get signal stack context"
 <p> <code>sigaltstack</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>sigaltstack</code>() allows a thread to define a new alternate signal stack and/or retrieve the state of an existing alternate signal stack. An alternate signal stack is used during the execution of a signal handler if the establishment of that handler (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) requested it. </p>
 <p> The normal sequence of events for using an alternate signal stack is the following:</p>
 <dl>
-<dt>1.</p>
-<dd> Allocate an area of memory to be used for the alternate signal stack.</p>
-<dt>2.</p>
-<dd> Use <code>sigaltstack</code>() to inform the system of the existence and location of the alternate signal stack.</p>
-<dt>3.</p>
-<dd> When establishing a signal handler using <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), inform the system that the signal handler should be executed on the alternate signal stack by specifying the <code>SA_ONSTACK</code> flag.</dl>
+<dt>1.</dt>
+<dd> Allocate an area of memory to be used for the alternate signal stack.</dd>
+<dt>2.</dt>
+<dd> Use <code>sigaltstack</code>() to inform the system of the existence and location of the alternate signal stack.</dd>
+<dt>3.</dt>
+<dd> When establishing a signal handler using <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), inform the system that the signal handler should be executed on the alternate signal stack by specifying the <code>SA_ONSTACK</code> flag.</dd></dl>
 <p> The <i>ss</i> argument is used to specify a new alternate signal stack, while the <i>old_ss</i> argument is used to retrieve information about the currently established signal stack. If we are interested in performing just one of these tasks, then the other argument can be specified as NULL. </p>
 <p> The <i>stack_t</i> type used to type the arguments of this function is defined as follows: </p>
 <p> typedef struct {<br />
@@ -37,45 +37,43 @@ description: "sigaltstack – set and/or get signal stack context"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t ss_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes in stack&nbsp;*/ } stack_t; </p>
 <p> To establish a new alternate signal stack, the fields of this structure are set as follows:</p>
 <dl>
-<dt><i>ss.ss_flags</i></p>
-<dd> This field contains either 0, or the following flag:</p>
+<dt><i>ss.ss_flags</i></dt>
+<dd> This field contains either 0, or the following flag:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>SS_AUTODISARM</code> (since Linux 4.7)</p>
-<dd> Clear the alternate signal stack settings on entry to the signal handler. When the signal handler returns, the previous alternate signal stack settings are restored.</p>
+<dt><code>SS_AUTODISARM</code> (since Linux 4.7)</dt>
+<dd> Clear the alternate signal stack settings on entry to the signal handler. When the signal handler returns, the previous alternate signal stack settings are restored.</dd>
 <dt>
-<dd> This flag was added in order make it safe to switch away from the signal handler with <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3). Without this flag, a subsequently handled signal will corrupt the state of the switched-away signal handler. On kernels where this flag is not supported, <code>sigaltstack</code>() fails with the error <code>EINVAL</code> when this flag is supplied.</dl>
+</dt><dd> This flag was added in order make it safe to switch away from the signal handler with <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3). Without this flag, a subsequently handled signal will corrupt the state of the switched-away signal handler. On kernels where this flag is not supported, <code>sigaltstack</code>() fails with the error <code>EINVAL</code> when this flag is supplied.</dd></dl>
 </dl>
-<dt><i>ss.ss_sp</i></p>
-<dd> This field specifies the starting address of the stack. When a signal handler is invoked on the alternate stack, the kernel automatically aligns the address given in <i>ss.ss_sp</i> to a suitable address boundary for the underlying hardware architecture.</p>
-<dt><i>ss.ss_size</i></p>
-<dd> This field specifies the size of the stack. The constant <code>SIGSTKSZ</code> is defined to be large enough to cover the usual size requirements for an alternate signal stack, and the constant <code>MINSIGSTKSZ</code> defines the minimum size required to execute a signal handler.</dl>
+<dt><i>ss.ss_sp</i></dt>
+<dd> This field specifies the starting address of the stack. When a signal handler is invoked on the alternate stack, the kernel automatically aligns the address given in <i>ss.ss_sp</i> to a suitable address boundary for the underlying hardware architecture.</dd>
+<dt><i>ss.ss_size</i></dt>
+<dd> This field specifies the size of the stack. The constant <code>SIGSTKSZ</code> is defined to be large enough to cover the usual size requirements for an alternate signal stack, and the constant <code>MINSIGSTKSZ</code> defines the minimum size required to execute a signal handler.</dd></dl>
 <p> To disable an existing stack, specify <i>ss.ss_flags</i> as <code>SS_DISABLE</code>. In this case, the kernel ignores any other flags in <i>ss.ss_flags</i> and the remaining fields in <i>ss</i>. </p>
 <p> If <i>old_ss</i> is not NULL, then it is used to return information about the alternate signal stack which was in effect prior to the call to <code>sigaltstack</code>(). The <i>old_ss.ss_sp</i> and <i>old_ss.ss_size</i> fields return the starting address and size of that stack. The <i>old_ss.ss_flags</i> may return either of the following values:</p>
 <dl>
-<dt><code>SS_ONSTACK</code></p>
-<dd> The thread is currently executing on the alternate signal stack. (Note that it is not possible to change the alternate signal stack if the thread is currently executing on it.)</p>
-<dt><code>SS_DISABLE</code></p>
-<dd> The alternate signal stack is currently disabled.</p>
+<dt><code>SS_ONSTACK</code></dt>
+<dd> The thread is currently executing on the alternate signal stack. (Note that it is not possible to change the alternate signal stack if the thread is currently executing on it.)</dd>
+<dt><code>SS_DISABLE</code></dt>
+<dd> The alternate signal stack is currently disabled.</dd>
 <dt>
-<dd> Alternatively, this value is returned if the thread is currently executing on an alternate signal stack that was established using the <code>SS_AUTODISARM</code> flag. In this case, it is safe to switch away from the signal handler with <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3). It is also possible to set up a different alternative signal stack using a further call to <code>sigaltstack</code>().</p>
-<dt><code>SS_AUTODISARM</code></p>
-<dd> The alternate signal stack has been marked to be autodisarmed as described above.</dl>
+</dt><dd> Alternatively, this value is returned if the thread is currently executing on an alternate signal stack that was established using the <code>SS_AUTODISARM</code> flag. In this case, it is safe to switch away from the signal handler with <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3). It is also possible to set up a different alternative signal stack using a further call to <code>sigaltstack</code>().</dd>
+<dt><code>SS_AUTODISARM</code></dt>
+<dd> The alternate signal stack has been marked to be autodisarmed as described above.</dd></dl>
 <p> By specifying <i>ss</i> as NULL, and <i>old_ss</i> as a non-NULL value, one can obtain the current settings for the alternate signal stack without changing them.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>sigaltstack</code>() returns 0 on success, or -1 on failure with <i>errno</i> set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Either <i>ss</i> or <i>old_ss</i> is not NULL and points to an area outside of the process&#8217;s address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>ss</i> is not NULL and the <i>ss_flags</i> field contains an invalid flag.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The specified size of the new alternate signal stack <i>ss.ss_size</i> was less than <code>MINSIGSTKSZ</code>.</p>
-<dt><code>EPERM</code></p>
-<dd> An attempt was made to change the alternate signal stack while it was active (i.e., the thread was already executing on the current alternate signal stack).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Either <i>ss</i> or <i>old_ss</i> is not NULL and points to an area outside of the process&#8217;s address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>ss</i> is not NULL and the <i>ss_flags</i> field contains an invalid flag.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The specified size of the new alternate signal stack <i>ss.ss_size</i> was less than <code>MINSIGSTKSZ</code>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> An attempt was made to change the alternate signal stack while it was active (i.e., the thread was already executing on the current alternate signal stack).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

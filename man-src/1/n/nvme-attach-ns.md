@@ -33,13 +33,13 @@ nvme attach - ns&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> The namespace identifier to attach.</dl>
+</dt><dd> The namespace identifier to attach.</dd></dl>
  
 
  -c &lt;ctrl-list,&gt;, -controllers=&lt;ctrl-list,&gt;
 <dl>
 <dt>
-<dd> The comma separated list of controller identifiers to attach the namesapce too.</dl>
+</dt><dd> The comma separated list of controller identifiers to attach the namesapce too.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

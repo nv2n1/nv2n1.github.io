@@ -100,7 +100,7 @@ Time since last timestamp updating.
 <p> The output is written to stdout. The environment variable &quot;SGE_QPING_OUTPUT_FORMAT&quot; can be set to hide columns, set a default column width, or to set a hostname output format. The value of the environment variable can be set to any combination of the following specifiers separated by a space character:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 "h:X"-&gt;hide column X
     "s:X"-&gt;show column X
@@ -108,7 +108,7 @@ Time since last timestamp updating.
     "hn:X"-&gt;set hostname output parameter X.X values are "long" or
     "short"
 </code></pre>
-</dl>
+</dd></dl>
 <p> Run <code>qping -help</code> to see which columns are available.</p>
 <h3><code>-dump_tag</code> <i>tag</i> [<i>param</i>]</h3>
 <p> This option has the same meaning as -dump, but can provide more information by specifying the debug level and message types <i>qping</i> should print: <code>-dump_tag ALL</code> <i>debug level </i> This option shows all possible debug messages (APP+MSG) for the debug levels, ERROR, WARNING, INFO, DEBUG and DPRINTF. The contacted service must support this kind of debugging. This option is not currently implemented. <code>-dump_tag APP</code> <i>debug level </i> This option shows only application debug messages for the debug levels, ERROR, WARNING, INFO, DEBUG and DPRINTF. The contacted service must support this kind of debugging. This option is not currently implemented. <code>-dump_tag MSG</code> This option has the same behavior as the <code>-dump</code> option.</p>
@@ -155,31 +155,31 @@ info:                     ok
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell.</p>
-<dt><code>SGE_QPING_OUTPUT_FORMAT</code></p>
-<dd> See <code>-dump</code> option above.</dl>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell.</dd>
+<dt><code>SGE_QPING_OUTPUT_FORMAT</code></dt>
+<dd> See <code>-dump</code> option above.</dd></dl>
 <p> The following apply when CSP security is used and can override the values deduced from the bootstrap file.</p>
 <dl>
-<dt><code>SSL_CA_CERT_FILE</code></p>
-<dd> CA certificate file</p>
-<dt><code>SSL_CERT_FILE</code></p>
-<dd> Certificates file</p>
-<dt><code>SSL_KEY_FILE</code></p>
-<dd> Key file</p>
-<dt><code>SSL_RAND_FILE</code></p>
-<dd> Random seed file</dl>
+<dt><code>SSL_CA_CERT_FILE</code></dt>
+<dd> CA certificate file</dd>
+<dt><code>SSL_CERT_FILE</code></dt>
+<dd> Certificates file</dd>
+<dt><code>SSL_KEY_FILE</code></dt>
+<dd> Key file</dd>
+<dt><code>SSL_RAND_FILE</code></dt>
+<dd> Random seed file</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
 <h2>Index</h2>
-<dt><a href="#lbAT">EXAMPLES</a></p>
+<dt><a href="#lbAT">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAU">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAU">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAV">SEE ALSO</a></p>
+</dd><dt><a href="#lbAV">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAW">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAW">COPYRIGHT</a></dt>
+<dd></dd></dl>

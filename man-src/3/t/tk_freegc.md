@@ -15,11 +15,11 @@ GC
 <code>Tk_FreeGC(</code><i>display, gc</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window in which the graphics context will be used.</p>
-<dd>unsigned long <i>valueMask</i> (in) Mask of bits (such as <code>GCForeground</code> or <code>GCStipple</code>) indicating which fields of <i>*valuePtr</i> are valid.</p>
-<dd>XGCValues <i>*valuePtr</i> (in) Pointer to structure describing the desired values for the graphics context.</p>
-<dd>Display <i>*display</i> (in) Display for which <i>gc</i> was allocated.</p>
-<dd>GC <i>gc</i> (in) X identifier for graphics context that is no longer needed. Must have been allocated by <code>Tk_GetGC</code>. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window in which the graphics context will be used.</dd>
+<dd>unsigned long <i>valueMask</i> (in) Mask of bits (such as <code>GCForeground</code> or <code>GCStipple</code>) indicating which fields of <i>*valuePtr</i> are valid.</dd>
+<dd>XGCValues <i>*valuePtr</i> (in) Pointer to structure describing the desired values for the graphics context.</dd>
+<dd>Display <i>*display</i> (in) Display for which <i>gc</i> was allocated.</dd>
+<dd>GC <i>gc</i> (in) X identifier for graphics context that is no longer needed. Must have been allocated by <code>Tk_GetGC</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_GetGC</code> and <code>Tk_FreeGC</code> manage a collection of graphics contexts being used by an application. The procedures allow graphics contexts to be shared, thereby avoiding the server overhead that would be incurred if a separate GC were created for each use. <code>Tk_GetGC</code> takes arguments describing the desired graphics context and returns an X identifier for a GC that fits the description. The graphics context that is returned will have default values in all of the fields not specified explicitly by <i>valueMask</i> and <i>valuePtr</i>. </p>

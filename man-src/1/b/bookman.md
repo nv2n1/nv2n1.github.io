@@ -18,28 +18,28 @@ bookman[-pPxn][-o outfile][-a author][-d date][-r release]
 <p> <code>bookman</code> compiles a set of man pages files specified by <i>manfile</i> arguments, or if no <i>manfile</i> is given, filenames are read from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p</code></p>
-<dd> PDF output format.</p>
-<dt><code>-P</code></p>
-<dd> Postscript output format.</p>
-<dt><code>-x</code></p>
-<dd> X11 previewing, using <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1).</p>
-<dt><code>-n</code></p>
-<dd> no format, output is direct gtroff intermediate format.</p>
-<dt><code>-o</code> <i>outfile</i></p>
-<dd> Output in file <i>outfile</i>. Default is standard output.</p>
-<dt><code>-a</code> <i>author</i></p>
-<dd> Set the <i>author</i>, on the cover page.</p>
-<dt><code>-d</code> <i>date</i></p>
-<dd> Set the <i>date</i> on the cover page.</p>
-<dt><code>-r</code> <i>release</i></p>
-<dd> Set the book name and <i>release</i> on the cover page.</p>
-<dt><code>-t</code> <i>title</i></p>
-<dd> Set the <i>title</i> on the cover page.</p>
-<dt><code>-v</code> <i>volume</i></p>
-<dd> Specify the name of the <i>volume</i>.</p>
-<dt><code>-c</code> <i>coverfile</i></p>
-<dd> Uses the file <i>coverfile</i> to generate the cover page, i.e. all pages preceding the table of content. <i>coverfile</i> must be in <code><a href="/docs/linux/man/7-groff_ms/">groff_ms</a></code>(7) format.</dl>
+<dt><code>-p</code></dt>
+<dd> PDF output format.</dd>
+<dt><code>-P</code></dt>
+<dd> Postscript output format.</dd>
+<dt><code>-x</code></dt>
+<dd> X11 previewing, using <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1).</dd>
+<dt><code>-n</code></dt>
+<dd> no format, output is direct gtroff intermediate format.</dd>
+<dt><code>-o</code> <i>outfile</i></dt>
+<dd> Output in file <i>outfile</i>. Default is standard output.</dd>
+<dt><code>-a</code> <i>author</i></dt>
+<dd> Set the <i>author</i>, on the cover page.</dd>
+<dt><code>-d</code> <i>date</i></dt>
+<dd> Set the <i>date</i> on the cover page.</dd>
+<dt><code>-r</code> <i>release</i></dt>
+<dd> Set the book name and <i>release</i> on the cover page.</dd>
+<dt><code>-t</code> <i>title</i></dt>
+<dd> Set the <i>title</i> on the cover page.</dd>
+<dt><code>-v</code> <i>volume</i></dt>
+<dd> Specify the name of the <i>volume</i>.</dd>
+<dt><code>-c</code> <i>coverfile</i></dt>
+<dd> Uses the file <i>coverfile</i> to generate the cover page, i.e. all pages preceding the table of content. <i>coverfile</i> must be in <code><a href="/docs/linux/man/7-groff_ms/">groff_ms</a></code>(7) format.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To build a reference manual from section 2 man, do: </p>
 <pre>

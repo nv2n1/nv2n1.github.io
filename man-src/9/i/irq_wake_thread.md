@@ -15,11 +15,11 @@ irq_wake_thread - wake the irq thread for the action identified by dev_id
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line</dl>
+<dl><dd></dd><dd>Interrupt line</dd></dl>
  
 
  <i>dev_id</i>
-<dl><dd>Device identity for which the thread should be woken</dl>
+<dl><dd>Device identity for which the thread should be woken</dd></dl>
 
 <h2>Copyright</h2>
 

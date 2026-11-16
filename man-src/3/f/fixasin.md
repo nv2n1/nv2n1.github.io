@@ -17,7 +17,6 @@ description: "fixasin – Fixed point inverse sine lookup table. Allegro game pr
 <pre><code>
 float angle;
 fixed val;
-
 /* Sets `val' to a right binary angle (`64'). */
 val = fixasin(itofix(1));
 /* Sets `angle' to 0.2405. */

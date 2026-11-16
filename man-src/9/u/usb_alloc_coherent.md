@@ -14,16 +14,16 @@ description: "usb_alloc_coherent – allocate dma-consistent buffer for URB_NO_x
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device the buffer will be used with</dl>
+</dd><dd>device the buffer will be used with</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>requested buffer size</dl>
+<dd>requested buffer size</dd></dl>
 <p> <i>mem_flags</i></p>
 <dl>
-<dd>affect whether allocation may block</dl>
+<dd>affect whether allocation may block</dd></dl>
 <p> <i>dma</i></p>
 <dl>
-<dd>used to return DMA address of buffer</dl>
+<dd>used to return DMA address of buffer</dd></dl>
 <h2>Return</h2>
 <p>Either null (indicating no buffer could be allocated), or the cpu-space pointer to a buffer that may be used to perform DMA to the specified device. Such cpu-space buffers are returned along with the DMA address (through the pointer provided).</p>
 <h2>Note</h2>

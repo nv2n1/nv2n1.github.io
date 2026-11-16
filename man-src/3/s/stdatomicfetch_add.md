@@ -11,23 +11,14 @@ std::atomic&lt;T&gt;::fetch_add - std::atomic&lt;T&gt;::fetch_add
 <h2>Synopsis</h2>
 
 <pre><code>member only of atomic&lt;Integral&gt;(C++11) and atomic&lt;Floating&gt;(C++20) template specializations
-
 T fetch_add( T arg,
-
 std::memory_order order = std::memory_order_seq_cst ) noexcept;
-
 T fetch_add( T arg,
-
 std::memory_order order = std::memory_order_seq_cst ) volatile noexcept;
-
 member only of atomic&lt;T*&gt; template specialization                                           (1)
-
 T* fetch_add( std::ptrdiff_t arg,
-
 std::memory_order order = std::memory_order_seq_cst ) noexcept;                                 (2)
-
 T* fetch_add( std::ptrdiff_t arg,
-
 std::memory_order order = std::memory_order_seq_cst ) volatile noexcept;</code></pre> 
 Atomically replaces the current value with the result of arithmetic addition of the value and arg. The operation is read-modify-write operation. Memory is affected according to the value of order. 
 For signed Integral types, arithmetic is defined to use two’s complement representation. There are no undefined results. 
@@ -46,19 +37,14 @@ The value immediately preceding the effects of this function in the modification
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;atomic&gt;
 std::atomic&lt;long long&gt; data;
-
 void do_work()
-
 {
     data.fetch_add(1, std::memory_order_relaxed);
 }
 int main()
-
 {
     std::thread th1(do_work);
     std::thread th2(do_work);

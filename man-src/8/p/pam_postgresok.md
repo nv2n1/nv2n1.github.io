@@ -14,8 +14,8 @@ description: "pam_postgresok – simple check of real UID and corresponding acco
 <p>pam_postgresok.so is designed to check that the real UID of the calling process belongs to the &quot;postgres&quot; user and equal to 26 (the value assigned to that user on Red Hat Linux systems). </p>
 <h2>Arguments</h2>
 <dl>
-<dt>debug</p>
-<dd>Enable module debugging. The module will log its progress to syslog. </p>
+<dt>debug</dt>
+<dd>Enable module debugging. The module will log its progress to syslog. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Let&#8217;s hope not, but if you find any, please report them via the &quot;Bug Track&quot; link at <a rel="nofollow" href="http://bugzilla.redhat.com/bugzilla/">http://bugzilla.redhat.com/bugzilla/</a> </p>

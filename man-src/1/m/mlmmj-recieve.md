@@ -12,13 +12,13 @@ description: "mlmmj-recieve – recieve mails for an mlmmj managed mailinglist"
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-recieve</code> <i>-L /path/to/listdir </i>[<i>-h</i>] [<i>-V</i>] [<i>-P</i>] [<i>-F</i>]</p>
 <dl>
-<dt> <code>-h</code>: This help</p>
-<dt> <code>-F</code>: Don&#8217;t fork in the background (debugging only)</p>
-<dt> <code>-L</code>: Full path to list directory</p>
-<dt> <code>-P</code>: Don&#8217;t execute mlmmj-process (debugging only)</p>
-<dt> <code>-V</code>: Print version</dl>
+<dt> <code>-h</code>: This help</dt>
+<dt> <code>-F</code>: Don&#8217;t fork in the background (debugging only)</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-P</code>: Don&#8217;t execute mlmmj-process (debugging only)</dt>
+<dt> <code>-V</code>: Print version</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The mlmmj-recieve binary is the one specified in the mailserver configuration file (aliases file), which writes the mail to the &lt;listdir&gt;/incoming directory and invokes mlmmj-process unless the <code>-P</code> option is specified. On systems using mailservers supporting the <code>/etc/aliases</code> file, a line to activate an mlmmj managed mailinglist would look like this: </p>
+<dd>The mlmmj-recieve binary is the one specified in the mailserver configuration file (aliases file), which writes the mail to the &lt;listdir&gt;/incoming directory and invokes mlmmj-process unless the <code>-P</code> option is specified. On systems using mailservers supporting the <code>/etc/aliases</code> file, a line to activate an mlmmj managed mailinglist would look like this: </dd>
 <p> list: &quot;|/usr/bin/mlmmj-recieve -L /var/spool/mlmmj/list/&quot; </p>
 <p> It&#8217;s very important to specify the full path to the binary, or the mailinglist will not function. </p>
 <p> When the <code>-F</code> option is used, it will not fork in the background. The reason it forks is that if delivery of a mail takes longer time than the mail server will allow a command to be idle before presumed dead, the mail server would kill it. </p>
@@ -28,8 +28,8 @@ description: "mlmmj-recieve – recieve mails for an mlmmj managed mailinglist"
 <p> This manual page was written by the following persons:</p>
 <dl>
 <dt>
-<dd>S�ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</p>
+</dt><dd>S�ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</dd>
 <dt>
-<dd>Mads Martin J�rgensen &lt;mmj [at] mmj.dk&gt; </p>
+</dt><dd>Mads Martin J�rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
 <h2>Index</h2>

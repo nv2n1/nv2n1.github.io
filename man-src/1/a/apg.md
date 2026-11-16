@@ -20,58 +20,56 @@ description: "apg – generates several random passwords"
 <h2>OPTIONS</h2>
 <h3>Password generation modes options</h3>
 <dl>
-<dt><code>-a algorithm</code></p>
-<dd> Use <code>algorithm</code> for password generation.</p>
+<dt><code>-a algorithm</code></dt>
+<dd> Use <code>algorithm</code> for password generation.</dd>
 <dl>
 <dt>
-<dd> <code>0</code> &#8211; pronounceable password generation (default)<br />
- <code>1</code> &#8211; random character password generation</dl>
-<dt><code>-n num_of_pass</code></p>
-<dd> Generate <code>num_of_pass</code> number of passwords. Default is 6.</p>
-<dt><code>-m min_pass_len</code></p>
-<dd> Generate password with minimum length <code>min_pass_len.</code> If <code>min_pass_len &gt; max_pass_len</code> then <code>max_pass_len = min_pass_len</code>. Default minimum password length is 8.</p>
-<dt><code>-x max_pass_len</code></p>
-<dd> Generate password with maximum length <code>max_pass_len.</code> If <code>min_pass_len &gt; max_pass_len</code> then <code>max_pass_len = min_pass_len</code>. Default maximum password length is 10.</p>
-<dt><code>-M mode</code></p>
-<dd> Use symbolsets specified with <code>mode</code> for password generation. <code>mode</code> is a text string consisting of characters <code>S</code>, <code>s</code>, <code>N</code>, <code>n</code>, <code>C</code>, <code>c</code>, <code>L</code>, <code>l</code>. Where:</p>
+</dt><dd> <code>0</code> &#8211; pronounceable password generation (default)<br />
+ <code>1</code> &#8211; random character password generation</dd></dl>
+<dt><code>-n num_of_pass</code></dt>
+<dd> Generate <code>num_of_pass</code> number of passwords. Default is 6.</dd>
+<dt><code>-m min_pass_len</code></dt>
+<dd> Generate password with minimum length <code>min_pass_len.</code> If <code>min_pass_len &gt; max_pass_len</code> then <code>max_pass_len = min_pass_len</code>. Default minimum password length is 8.</dd>
+<dt><code>-x max_pass_len</code></dt>
+<dd> Generate password with maximum length <code>max_pass_len.</code> If <code>min_pass_len &gt; max_pass_len</code> then <code>max_pass_len = min_pass_len</code>. Default maximum password length is 10.</dd>
+<dt><code>-M mode</code></dt>
+<dd> Use symbolsets specified with <code>mode</code> for password generation. <code>mode</code> is a text string consisting of characters <code>S</code>, <code>s</code>, <code>N</code>, <code>n</code>, <code>C</code>, <code>c</code>, <code>L</code>, <code>l</code>. Where:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>S</code></p>
-<dd> Generator <code>must</code> use special symbol set for every generated password.</p>
-<dt><code>s</code></p>
-<dd> Generator <code>should</code> use special symbol set for password generation.</p>
-<dt><code>N</code></p>
-<dd> Generator <code>must</code> use numeral symbol set for every generated password.</p>
-<dt><code>n</code></p>
-<dd> Generator <code>should</code> use numeral symbol set for password generation.</p>
-<dt><code>C</code></p>
-<dd> Generator <code>must</code> use capital symbol set for every generated password.</p>
-<dt><code>c</code></p>
-<dd> Generator <code>should</code> use capital symbol set for password generation.</p>
-<dt><code>L</code></p>
-<dd> Generator <code>must</code> use small letters symbol set for every generated password (always present if pronounceable password generation algorithm is used).</p>
-<dt><code>l</code></p>
-<dd> Generator <code>should</code> use small letters symbol set for password generation.</p>
-<dt><code>R,r</code></p>
-<dd> Not supported any more. Use <code>-E char_string</code> option instead.</dl>
+<dt><code>S</code></dt>
+<dd> Generator <code>must</code> use special symbol set for every generated password.</dd>
+<dt><code>s</code></dt>
+<dd> Generator <code>should</code> use special symbol set for password generation.</dd>
+<dt><code>N</code></dt>
+<dd> Generator <code>must</code> use numeral symbol set for every generated password.</dd>
+<dt><code>n</code></dt>
+<dd> Generator <code>should</code> use numeral symbol set for password generation.</dd>
+<dt><code>C</code></dt>
+<dd> Generator <code>must</code> use capital symbol set for every generated password.</dd>
+<dt><code>c</code></dt>
+<dd> Generator <code>should</code> use capital symbol set for password generation.</dd>
+<dt><code>L</code></dt>
+<dd> Generator <code>must</code> use small letters symbol set for every generated password (always present if pronounceable password generation algorithm is used).</dd>
+<dt><code>l</code></dt>
+<dd> Generator <code>should</code> use small letters symbol set for password generation.</dd>
+<dt><code>R,r</code></dt>
+<dd> Not supported any more. Use <code>-E char_string</code> option instead.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
- <code>mode</code> can not be more than 4 characters in length. </p>
+</dt><dd>
+ <code>mode</code> can not be more than 4 characters in length. </dd>
 <p> <code>Note:</code><br />
  Usage of L, M, S, C will slow down password generation process. </p>
 <p> <code>Examples:</code><br />
  <code>-M sncl</code><br />
  <code>-M SNCL</code><br />
  <code>-M Cn</code></dl>
-<dt><code>-E char_string</code></p>
-<dd> Exclude characters in <code>char_string</code> from password generation process (in pronounceable password generation mode you can not exclude small letters). To include special symbols that can be recognized by shell (apostrophe, quotes, dollar sign, etc.) in <code>char_string</code> use the backslashed versions.</p>
+<dt><code>-E char_string</code></dt>
+<dd> Exclude characters in <code>char_string</code> from password generation process (in pronounceable password generation mode you can not exclude small letters). To include special symbols that can be recognized by shell (apostrophe, quotes, dollar sign, etc.) in <code>char_string</code> use the backslashed versions.</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>Examples:</code> </p>
 <p> Command <code>apg -a 1 -M n -n 3 -m 8 -E 23456789</code> will generate a set of passwords that will look like this:<br />
  <code>10100110</code><br />
@@ -81,47 +79,47 @@ description: "apg – generates several random passwords"
  <code>16A1653CD4DE5E7BD9584A3476</code><br />
  <code>C8F78E06944AFD57FB9CB882BC</code><br />
  <code>8C8DF37CD792D36D056BBD5002</code>
-</dl>
+</dd></dl>
 </dl>
 <h3>Password quality control options</h3>
 <dl>
-<dt><code>-r </code><i>dictfile</i></p>
-<dd> Check generated passwords for their appearance in <i>dictfile</i></p>
-<dt><code>-b </code><i>filter_file</i></p>
-<dd> Check generated passwords for their appearance in <i>filter_file</i>. <i>filter_file</i> should be created with the <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1) utility.</p>
-<dt><code>-p min_substr_len</code></p>
-<dd> This option tells <code><a href="/docs/linux/man/1-apg/">apg</a></code>(1) to check every substring of the generated password for appearance in <i>filter_file</i>. If any of such substrings would be found in the <i>filter_file</i> then generated password would be rejected and <a href="/docs/linux/man/1-apg/">apg</a>(1) will generate another one. <code>min_substr_len</code> specifies minimum substring length to check. This option is active only if <code>-b</code> option is defined.</dl>
+<dt><code>-r </code><i>dictfile</i></dt>
+<dd> Check generated passwords for their appearance in <i>dictfile</i></dd>
+<dt><code>-b </code><i>filter_file</i></dt>
+<dd> Check generated passwords for their appearance in <i>filter_file</i>. <i>filter_file</i> should be created with the <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1) utility.</dd>
+<dt><code>-p min_substr_len</code></dt>
+<dd> This option tells <code><a href="/docs/linux/man/1-apg/">apg</a></code>(1) to check every substring of the generated password for appearance in <i>filter_file</i>. If any of such substrings would be found in the <i>filter_file</i> then generated password would be rejected and <a href="/docs/linux/man/1-apg/">apg</a>(1) will generate another one. <code>min_substr_len</code> specifies minimum substring length to check. This option is active only if <code>-b</code> option is defined.</dd></dl>
 <h3>Pseudo random number generator options</h3>
 <dl>
-<dt><code>-s</code></p>
-<dd> Ask user for random sequence for password generation</p>
-<dt><code>-c cl_seed</code></p>
-<dd> Use <code>cl_seed</code> as a random seed for password generation. I use it when i have to generate passwords in a shell script.</p>
+<dt><code>-s</code></dt>
+<dd> Ask user for random sequence for password generation</dd>
+<dt><code>-c cl_seed</code></dt>
+<dd> Use <code>cl_seed</code> as a random seed for password generation. I use it when i have to generate passwords in a shell script.</dd>
 <dl>
 <dt>
-<dd> <code>Examples:</code><br />
+</dt><dd> <code>Examples:</code><br />
  <code>-c /dev/urandom</code><br />
- <code>-c /tmp/seed_file</code></dl>
+ <code>-c /tmp/seed_file</code></dd></dl>
 </dl>
 <h3>Password output options</h3>
 <dl>
-<dt><code>-d</code></p>
-<dd> Do NOT use any delimiters between generated passwords. I use it when i have to generate passwords in a shell script.</p>
-<dt><code>-y</code></p>
-<dd> Print generated passwords and crypted passwords (see <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3))</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode (do not print warnings)</p>
-<dt><code>-l</code></p>
-<dd> Spell generated passwords. Useful when you want to read generated password by telephone.</p>
+<dt><code>-d</code></dt>
+<dd> Do NOT use any delimiters between generated passwords. I use it when i have to generate passwords in a shell script.</dd>
+<dt><code>-y</code></dt>
+<dd> Print generated passwords and crypted passwords (see <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3))</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode (do not print warnings)</dd>
+<dt><code>-l</code></dt>
+<dd> Spell generated passwords. Useful when you want to read generated password by telephone.</dd>
 <dl>
 <dt>
-<dd> <code>WARNING:</code> Think twice before read your password by phone.</dl>
-<dt><code>-t</code></p>
-<dd> Print pronunciation for generated pronounceable password. Ignored if <code>-a 1</code> is set.</p>
-<dt><code>-h</code></p>
-<dd> Print help information and exit</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit</dl>
+</dt><dd> <code>WARNING:</code> Think twice before read your password by phone.</dd></dl>
+<dt><code>-t</code></dt>
+<dd> Print pronunciation for generated pronounceable password. Ignored if <code>-a 1</code> is set.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help information and exit</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit</dd></dl>
 <h2>DEFAULT OPTIONS</h2>
 <p> <code>apg -a 0 -M sncl -n 6 -x 10 -m 8</code> (new style) </p>
 <p> If you want to generate really secure passwords, you should use option <code>-s</code>. To simplify <code>apg</code> usage, you can write a small shell script. For example:<br />

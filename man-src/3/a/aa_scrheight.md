@@ -14,8 +14,8 @@ description: "aa_scrheight – returns height of the output screen in characters
 <p> int aa_scrheight(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns height of the output screen in characters.</p>
 <h2>SEE ALSO</h2>

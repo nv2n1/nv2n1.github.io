@@ -16,8 +16,8 @@ bson_iter_next (bson_iter_t *iter);
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Advances <code>iter</code> to the next element in the document if one exists. </p>
 <h2>RETURNS</h2>

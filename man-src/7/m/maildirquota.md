@@ -10,10 +10,10 @@ description: "maildirquota – voluntary Maildir quotas"
 <p>maildirquota &#8211; voluntary Maildir quotas</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>maildirmake</code> {-q} {10000000S} {./Maildir}</dl>
+<dt> <code>maildirmake</code> {-q} {10000000S} {./Maildir}</dt></dl>
 <h2>Description</h2>
 <p><code>maildrop</code></p>
-<dd>has a manual quota enforcement implementation that does use the quota facilities of the host operating system (filesystem-based quotas). This is an option that is set at configuration time, and may be disabled. </p>
+<dd>has a manual quota enforcement implementation that does use the quota facilities of the host operating system (filesystem-based quotas). This is an option that is set at configuration time, and may be disabled. </dd>
 <p> Using filesystem quotas sometimes leads to problems. After a hard quota is hit, most commands issued by mail clients fail, including some commands that poorly-written mail software may not expect to fail, and therefore be unable to gracefully handle the unexpected failure. </p>
 <p> With manual quotas, the only operations that fail are the ones that most mail clients expect to fail, when the mailbox is full. However, filesystem-based quotas cannot be used in some situations, such as virtual mailboxes. If this experimental feature is enabled, approximate quota enforcement can be implemented by <code>maildrop</code> or <code>deliverquota</code> to whatever extent it&#8217;s possible to do so. Quotas are enabled by the <code>-q</code> option to <code>maildirmake</code>. Both <code>maildrop</code> and <code>deliverquota</code> will observe any <code>maildirmake</code>-requested quota.</p>
 <h3>Limitations</h3>
@@ -29,22 +29,23 @@ description: "maildirquota – voluntary Maildir quotas"
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd><code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)</p>
+<dt> 1.</dt>
+<dd><code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildrop.html</dl>
-<dt> 2.</p>
-<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</p>
+<dd>[set $man.base.url.for.relative.links]/maildrop.html</dd></dl>
+<dt> 2.</dt>
+<dd><code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dl>
-<dt> 3.</p>
-<dd><code>maildropfilter</code>(5)</p>
+<dd>[set $man.base.url.for.relative.links]/maildirmake.html</dd></dl>
+<dt> 3.</dt>
+<dd><code>maildropfilter</code>(5)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/maildropfilter.html</dl>
-<dt> 4.</p>
-<dd><code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)</p>
+<dd>[set $man.base.url.for.relative.links]/maildropfilter.html</dd></dl>
+<dt> 4.</dt>
+<dd><code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)</dd>
 <dl>
-<dd>[set $man.base.url.for.relative.links]/deliverquota.html</dl>
+<dd>[set $man.base.url.for.relative.links]/deliverquota.html</dd></dl>
+</dl>

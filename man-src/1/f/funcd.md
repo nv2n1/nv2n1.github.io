@@ -11,19 +11,19 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 <p> <code>funcd</code> &#8211; deaemon for the Fedora Universal Network Controller</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt>funcd [&#8211;daemon]</p>
+<dt>funcd [&#8211;daemon]</dt>
 <dd>
-<dt>funcd &#8211;list-modules</p>
-<dd></dl>
+</dd><dt>funcd &#8211;list-modules</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> funcd registers itself to a certificate server (certmaster) listed in /etc/certmaster/minion.conf and takes orders from the command line func when that program is run from that certificate server. </p>
 <p> Modules and capabilities provided by funcd are specified at <a rel="nofollow" href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;daemon</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>daemonize the server on startup</p>
+<dt><code>&#8211;daemon</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>daemonize the server on startup</dt>
 <dd>
-<dt><code>&#8211;list-modules</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>list modules that would be loaded and exit</p>
-<dd></dl>
+</dd><dt><code>&#8211;list-modules</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>list modules that would be loaded and exit</dt>
+<dd></dd></dl>
 <h2>CONFIGURATION</h2>
 <p> See /etc/certmaster/minion.conf for other configuration options.</p>
 <h2>ACCESS CONTROLS</h2>
@@ -35,14 +35,14 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 <p> See <a rel="nofollow" href="https://fedorahosted.org/func/wiki/FuncSecurity">https://fedorahosted.org/func/wiki/FuncSecurity</a> for additional details.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/certmaster/minion.conf</code><tt>&nbsp;<wbr>&nbsp;<wbr></tt>certmaster config for this minion</p>
+<dt><code>/etc/certmaster/minion.conf</code><tt>&nbsp;<wbr>&nbsp;<wbr></tt>certmaster config for this minion</dt>
 <dd>
-<dt><code>/etc/func/minion.conf</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>minion configuration</p>
+</dd><dt><code>/etc/func/minion.conf</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>minion configuration</dt>
 <dd>
-<dt><code>/etc/func/async_methods.conf</code><tt>&nbsp;<wbr></tt>configuration for async methods</p>
+</dd><dt><code>/etc/func/async_methods.conf</code><tt>&nbsp;<wbr></tt>configuration for async methods</dt>
 <dd>
-<dt><code>/etc/func/minion-acl.d/</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>directory for <font SIZE="-1">ACL</font> files</p>
-<dd></dl>
+</dd><dt><code>/etc/func/minion-acl.d/</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>directory for <font SIZE="-1">ACL</font> files</dt>
+<dd></dd></dl>
 <h2>ADDITONAL RESOURCES</h2>
 <p> See the project wiki at <a rel="nofollow" href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></p>
 <h2>SEE ALSO</h2>

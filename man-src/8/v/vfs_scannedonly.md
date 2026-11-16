@@ -10,7 +10,7 @@ description: "vfs_scannedonly – Ensures that only files that have been scanned
 <p>vfs_scannedonly &#8211; Ensures that only files that have been scanned for viruses are visible and accessible to the end user.</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = scannedonly</dl>
+<dd>vfs objects = scannedonly</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8) suite. </p>
 <p> The vfs_scannedonly VFS module ensures that only files that have been scanned for viruses are visible and accessible to the end user. If non-scanned files are found an anti-virus scanning daemon is notified. The anti-virus scanning daemon is not part of the Samba suite. </p>
@@ -23,43 +23,43 @@ description: "vfs_scannedonly – Ensures that only files that have been scanned
 <h2>Options</h2>
 <p>scannedonly:domain_socket = True</p>
 <dl>
-<dd>Whether to use a unix domain socket or not (false reverts to use udp)</dl>
+<dd>Whether to use a unix domain socket or not (false reverts to use udp)</dd></dl>
 <p> scannedonly:socketname = /var/lib/scannedonly/scan</p>
 <dl>
-<dd>The location of the unix domain socket to connect to</dl>
+<dd>The location of the unix domain socket to connect to</dd></dl>
 <p> scannedonly:portnum = 2020</p>
 <dl>
-<dd>The udp port number to connect to</dl>
+<dd>The udp port number to connect to</dd></dl>
 <p> scannedonly:scanhost = localhost</p>
 <dl>
-<dd>When using UDP the host that runs the scanning daemon (this host needs access to the files!)</dl>
+<dd>When using UDP the host that runs the scanning daemon (this host needs access to the files!)</dd></dl>
 <p> scannedonly:show_special_files = True</p>
 <dl>
-<dd>Whether sockets, devices and fifo&#8217;s (all not scanned for viruses) should be visible to the user</dl>
+<dd>Whether sockets, devices and fifo&#8217;s (all not scanned for viruses) should be visible to the user</dd></dl>
 <p> scannedonly:rm_hidden_files_on_rmdir = True</p>
 <dl>
-<dd>Whether files that are not visible (.scanned: files, .failed: files and .virus: files) should be deleted if the user tries to remove the directory. If false, the user will get the &quot;directory is not empty&quot; error.</dl>
+<dd>Whether files that are not visible (.scanned: files, .failed: files and .virus: files) should be deleted if the user tries to remove the directory. If false, the user will get the &quot;directory is not empty&quot; error.</dd></dl>
 <p> scannedonly:hide_nonscanned_files = True</p>
 <dl>
-<dd>If false, all non-scanned files are visible in directory listings. If such files are found in a directory listing the scanning daemon is notified that scanning is required. Access to non-scanned files is still denied (see scannedonly:allow_nonscanned_files).</dl>
+<dd>If false, all non-scanned files are visible in directory listings. If such files are found in a directory listing the scanning daemon is notified that scanning is required. Access to non-scanned files is still denied (see scannedonly:allow_nonscanned_files).</dd></dl>
 <p> scannedonly:scanning_message = is being scanned for viruses</p>
 <dl>
-<dd>If non-scanned files are hidden (if scannedonly:hide_nonscanned_files = True), a fake 0 byte file is shown. The filename is the original filename with the message as suffix.</dl>
+<dd>If non-scanned files are hidden (if scannedonly:hide_nonscanned_files = True), a fake 0 byte file is shown. The filename is the original filename with the message as suffix.</dd></dl>
 <p> scannedonly:recheck_time_open = 50</p>
 <dl>
-<dd>If a non-scanned file is opened, the vfs module will wait recheck_tries_open times for recheck_time_open milliseconds for the scanning daemon to create a .scanned: file. For small files that are scanned by the daemon within the time (tries * time) the behavior will be just like on-access scanning.</dl>
+<dd>If a non-scanned file is opened, the vfs module will wait recheck_tries_open times for recheck_time_open milliseconds for the scanning daemon to create a .scanned: file. For small files that are scanned by the daemon within the time (tries * time) the behavior will be just like on-access scanning.</dd></dl>
 <p> scannedonly:recheck_tries_open = 100</p>
 <dl>
-<dd>See recheck_time_open.</dl>
+<dd>See recheck_time_open.</dd></dl>
 <p> scannedonly:recheck_time_readdir = 50</p>
 <dl>
-<dd>If a non-scanned file is in a directory listing the vfs module notifies the daemon (once for all files that need scanning in that directory), and waits recheck_tries_readdir times for recheck_time_readdir milliseconds. Only used when hide_nonscanned_files is false.</dl>
+<dd>If a non-scanned file is in a directory listing the vfs module notifies the daemon (once for all files that need scanning in that directory), and waits recheck_tries_readdir times for recheck_time_readdir milliseconds. Only used when hide_nonscanned_files is false.</dd></dl>
 <p> scannedonly:recheck_tries_readdir = 20</p>
 <dl>
-<dd>See recheck_time_readdir.</dl>
+<dd>See recheck_time_readdir.</dd></dl>
 <p> scannedonly:allow_nonscanned_files = False</p>
 <dl>
-<dd>Allow access to non-scanned files. The daemon is notified, however, and special files such as .scanned: files. .virus: files and .failed: files are not listed.</dl>
+<dd>Allow access to non-scanned files. The daemon is notified, however, and special files such as .scanned: files. .virus: files and .failed: files are not listed.</dd></dl>
 <h2>Examples</h2>
 <p>Enable anti-virus scanning: </p>
 <dl>
@@ -67,7 +67,7 @@ description: "vfs_scannedonly – Ensures that only files that have been scanned
 <pre> <i>[homes]</i>
  m[blue]<code>vfs objects = scannedonly</code>m[]
  m[blue]<code>scannedonly:hide_nonscanned_files = False</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Caveats</h2>
 <p>This is not true on-access scanning. However, it is very fast for files that have been scanned already.</p>
 <h2>Version</h2>

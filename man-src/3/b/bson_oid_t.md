@@ -21,14 +21,14 @@ typedef struct
 <p> The <code>bson_oid_t</code> structure contains the 12-byte ObjectId notation defined by the <code>BSON ObjectID specificiation</code> \&amp;. </p>
 <p> ObjectId is a 12-byte BSON type, constructed using: </p>
 <dl>
-<dt>\[bu]</p>
-<dd> a 4-byte value representing the seconds since the Unix epoch (in Big Endian)</p>
-<dt>\[bu]</p>
-<dd> a 3-byte machine identifier</p>
-<dt>\[bu]</p>
-<dd> a 2-byte process id (Big Endian), and</p>
-<dt>\[bu]</p>
-<dd> a 3-byte counter (Big Endian), starting with a random value. </p>
+<dt>\[bu]</dt>
+<dd> a 4-byte value representing the seconds since the Unix epoch (in Big Endian)</dd>
+<dt>\[bu]</dt>
+<dd> a 3-byte machine identifier</dd>
+<dt>\[bu]</dt>
+<dd> a 2-byte process id (Big Endian), and</dd>
+<dt>\[bu]</dt>
+<dd> a 3-byte counter (Big Endian), starting with a random value. </dd>
 </dl>
 <h2>STRING CONVERSION</h2>
 <p> You can convert an Object ID to a string using <code><a href="/docs/linux/man/3-bson_oid_to_string/">bson_oid_to_string</a>(3)</code> and back with <code><a href="/docs/linux/man/3-bson_oid_init_from_string/">bson_oid_init_from_string</a>(3)</code> \&amp;. </p>

@@ -13,30 +13,30 @@ description: "buffer – very fast reblocking program"
 <p> <code>buffer</code> [<code>-S size</code>] [<code>-b blocks</code>] [<code>-s size</code>] [<code>-m size</code>] [<code>-p percentage</code>] [<code>-u microseconds</code>] [<code>-B</code>] [<code>-t</code>] [<code>-Z</code>] [<code>-i filename</code>] [<code>-o filename</code>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i filename</code></p>
-<dd> Use the given file as the input file. The default is stdin.</p>
-<dt><code>-o filename</code></p>
-<dd> Use the given file as the output file. The default is stdout.</p>
-<dt><code>-S size</code></p>
-<dd> After every chunk of this size has been written, print out how much has been written so far. Also prints the total througput. By default this is not set.</p>
-<dt><code>-s size</code></p>
-<dd> Size in bytes of each block. The default blocksize is 10k to match the normal output of the <i><a href="/docs/linux/man/1-tar/">tar</a>(1)</i> program.</p>
-<dt><code>-z size</code></p>
-<dd> Combines the <code>-S</code> and <code>-s</code> flags.</p>
-<dt><code>-b blocks</code></p>
-<dd> Number of blocks to allocate to shared memory circular buffer. Defaults to the number required to fill up the shared memory requested.</p>
-<dt><code>-m size</code></p>
-<dd> Maximum size of the shared memory chunk to allocate for the circular queue. Defaults to one megabyte.</p>
-<dt><code>-p percentage</code></p>
-<dd> Only start a write when the given percentage of the internal queue is full. A percentage around 75 often proves best. Defaults to zero.</p>
-<dt><code>-u microseconds</code></p>
-<dd> After every write pause for this many microseconds. Defaults to zero. (Suprisingly a small sleep, 100 usecs, after each write can greatly enhance throughput on some drives.)</p>
-<dt><code>-B</code></p>
-<dd> Force each block written to be padded out to the blocksize. This is needed by some tape and cartridge drives. Defaults to unpadded. This only affects the last block written.</p>
-<dt><code>-t</code></p>
-<dd> On exiting print to stderr a brief message showing the total number of bytes written.</p>
-<dt><code>-Z</code></p>
-<dd> If reading/writing directly to a character device (like a tape drive) then after each gigabyte perform an lseek to the start of the file. Use this flag with extreme care. It can only be used on devices where an lseek does not rewind the tape but does reset the kernels position flags. It is used to allow more than 2 gigabytes to be written.</dl>
+<dt><code>-i filename</code></dt>
+<dd> Use the given file as the input file. The default is stdin.</dd>
+<dt><code>-o filename</code></dt>
+<dd> Use the given file as the output file. The default is stdout.</dd>
+<dt><code>-S size</code></dt>
+<dd> After every chunk of this size has been written, print out how much has been written so far. Also prints the total througput. By default this is not set.</dd>
+<dt><code>-s size</code></dt>
+<dd> Size in bytes of each block. The default blocksize is 10k to match the normal output of the <i><a href="/docs/linux/man/1-tar/">tar</a>(1)</i> program.</dd>
+<dt><code>-z size</code></dt>
+<dd> Combines the <code>-S</code> and <code>-s</code> flags.</dd>
+<dt><code>-b blocks</code></dt>
+<dd> Number of blocks to allocate to shared memory circular buffer. Defaults to the number required to fill up the shared memory requested.</dd>
+<dt><code>-m size</code></dt>
+<dd> Maximum size of the shared memory chunk to allocate for the circular queue. Defaults to one megabyte.</dd>
+<dt><code>-p percentage</code></dt>
+<dd> Only start a write when the given percentage of the internal queue is full. A percentage around 75 often proves best. Defaults to zero.</dd>
+<dt><code>-u microseconds</code></dt>
+<dd> After every write pause for this many microseconds. Defaults to zero. (Suprisingly a small sleep, 100 usecs, after each write can greatly enhance throughput on some drives.)</dd>
+<dt><code>-B</code></dt>
+<dd> Force each block written to be padded out to the blocksize. This is needed by some tape and cartridge drives. Defaults to unpadded. This only affects the last block written.</dd>
+<dt><code>-t</code></dt>
+<dd> On exiting print to stderr a brief message showing the total number of bytes written.</dd>
+<dt><code>-Z</code></dt>
+<dd> If reading/writing directly to a character device (like a tape drive) then after each gigabyte perform an lseek to the start of the file. Use this flag with extreme care. It can only be used on devices where an lseek does not rewind the tape but does reset the kernels position flags. It is used to allow more than 2 gigabytes to be written.</dd></dl>
 <p> Sizes are a number with an optional trailing character. A &#8216;b&#8217; multiplies the size by 512, a &#8216;k&#8217; by 1024 and an &#8216;m&#8217; by a meg.</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Buffer</i> reads from standard input reblocking to the given blocksize and writes each block to standard output. </p>

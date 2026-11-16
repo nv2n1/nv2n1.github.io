@@ -52,14 +52,14 @@ description: "hwloc_obj –"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3><code>hwloc_nodeset_t</code> hwloc_obj::allowed_nodeset</h3>
 <p> The set of allowed NUMA memory nodes. This includes the NUMA memory nodes contained in this object which are allowed for memory allocation, i.e. passing them to NUMA node-directed memory allocation should not return permission errors. This is usually restricted by administration rules. </p>
 <p> If there are no NUMA nodes in the machine, all the memory is close to this object, so allowed_nodeset is full. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3>unsigned hwloc_obj::arity</h3>
 <p> Number of children.</p>
 <h3>union <code>hwloc_obj_attr_u</code>* hwloc_obj::attr</h3>
@@ -71,21 +71,21 @@ description: "hwloc_obj –"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3><code>hwloc_nodeset_t</code> hwloc_obj::complete_nodeset</h3>
 <p> The complete NUMA node set of this object,. This includes not only the same as the nodeset field, but also the NUMA nodes for which topology information is unknown or incomplete, and the nodes that are ignored when the <code>HWLOC_TOPOLOGY_FLAG_WHOLE_SYSTEM</code> flag is not set. Thus no corresponding NODE object may be found in the topology, because the precise position is undefined. It is however known that it would be somewhere under this object. </p>
 <p> If there are no NUMA nodes in the machine, all the memory is close to this object, so complete_nodeset is full. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3><code>hwloc_cpuset_t</code> hwloc_obj::cpuset</h3>
 <p> CPUs covered by this object. This is the set of CPUs for which there are PU objects in the topology under this object, i.e. which are known to be physically contained in this object and known how (the children path between this object and the PU objects). </p>
 <p> If the <code>HWLOC_TOPOLOGY_FLAG_WHOLE_SYSTEM</code> configuration flag is set, some of these CPUs may be offline, or not allowed for binding, see online_cpuset and allowed_cpuset. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3>unsigned hwloc_obj::depth</h3>
 <p> Vertical index in the hierarchy. If the topology is symmetric, this is equal to the parent depth plus one, and also equal to the number of parent/child links from the root object to here.</p>
 <h3>struct <code>hwloc_distances_s</code>** hwloc_obj::distances</h3>
@@ -117,13 +117,13 @@ description: "hwloc_obj –"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3><code>hwloc_cpuset_t</code> hwloc_obj::online_cpuset</h3>
 <p> The CPU set of online logical processors. This includes the CPUs contained in this object that are online, i.e. draw power and can execute threads. It may however not be allowed to bind to them due to administration rules, see allowed_cpuset. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dl>
+</dt><dd> Its value must not be changed, <code>hwloc_bitmap_dup()</code> must be used instead.</dd></dl>
 <h3>unsigned hwloc_obj::os_index</h3>
 <p> OS-provided physical index number. It is not guaranteed unique across the entire machine, except for PUs and NUMA nodes.</p>
 <h3>signed hwloc_obj::os_level</h3>
@@ -145,5 +145,5 @@ description: "hwloc_obj –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBL">Author</a></dt>
+<dd></dd></dl>

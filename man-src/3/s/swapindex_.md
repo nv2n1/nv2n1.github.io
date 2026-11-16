@@ -10,18 +10,9 @@ description: "QuantLib::ForwardSwapQuote – Quote for a forward starting swap."
 <p>QuantLib::ForwardSwapQuote &#8211; <code>Quote</code> for a forward starting swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void update ()
-
-
-
 Protected Member Functions
 void initializeDates ()
-
-
-
 void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Quote</code>, and <code>QuantLib::LazyObject</code>.</p>
 <h3>Public Member Functions</h3>
@@ -35,18 +26,9 @@ Protected Attributes</code></pre>
  bool <code>isValid</code> () const<br />
  <i>returns true if the </i><code>Quote</code> holds a valid value <code>Observer interface</code> </p>
 <pre><code>void update ()
-
-
-
 Protected Member Functions
 void initializeDates ()
-
-
-
 void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; <code>SwapIndex</code> &gt; <code>swapIndex_</code> </p>
 <p> <code>Handle</code>&lt; <code>Quote</code> &gt; <code>spread_</code> </p>

@@ -11,19 +11,19 @@ description: "msql2mysql – convert mSQL programs for use with MySQL"
 <p> msql2mysql &#8211; convert mSQL programs for use with MySQL </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>msql2mysql</code><i>C-source-file</i><code> &#8230;</code></dl>
+<dt> <code>msql2mysql</code><i>C-source-file</i><code> &#8230;</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Initially, the MySQL C API was developed to be very similar to that for the mSQL database system. Because of this, mSQL programs often can be converted relatively easily for use with MySQL by changing the names of the C API functions. </p>
+<dd>Initially, the MySQL C API was developed to be very similar to that for the mSQL database system. Because of this, mSQL programs often can be converted relatively easily for use with MySQL by changing the names of the C API functions. </dd>
 <p> The <code>msql2mysql</code> utility performs the conversion of mSQL C API function calls to their MySQL equivalents. <code>msql2mysql</code> converts the input file in place, so make a copy of the original before converting it. For example, use <code>msql2mysql</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>cp client-prog.c client-prog.c.orig</code>
 shell&gt; <code>msql2mysql client-prog.c</code>
 client-prog.c converted
 </pre>
-</dl>
+</dd></dl>
 <p> Then examine client-prog.c and make any post-conversion revisions that may be necessary. </p>
 <p> <code>msql2mysql</code> uses the <code>replace</code> utility to make the function name substitutions. See <code><a href="/docs/linux/man/1-replace/">replace</a></code>(1).</p>
 <h2>COPYRIGHT</h2>

@@ -14,13 +14,13 @@ description: "ata_dev_set_feature – Issue SET FEATURES – SATA FEATURES"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to which command will be sent</dl>
+</dd><dd>Device to which command will be sent</dd></dl>
 <p> <i>enable</i></p>
 <dl>
-<dd>Whether to enable or disable the feature</dl>
+<dd>Whether to enable or disable the feature</dd></dl>
 <p> <i>feature</i></p>
 <dl>
-<dd>The sector count represents the feature to set</dl>
+<dd>The sector count represents the feature to set</dd></dl>
 <h2>Description</h2>
 <p>Issue SET FEATURES &#8211; SATA FEATURES command to device <i>dev</i> on port <i>ap</i> with sector count </p>
 <p> LOCKING: PCI/etc. bus probe sem.</p>
@@ -29,5 +29,5 @@ description: "ata_dev_set_feature – Issue SET FEATURES – SATA FEATURES"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

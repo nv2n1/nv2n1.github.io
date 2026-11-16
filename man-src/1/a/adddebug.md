@@ -11,27 +11,27 @@ description: "adddebug – Modifies Makefile(s) to add debug info"
 <p> adddebug &#8211; Modifies Makefile(s) to add debug info </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>adddebug</code> [<code>-k</code>] [<code>-r</code>] [<code>-n</code>]</dl>
+<dt> <code>adddebug</code> [<code>-k</code>] [<code>-r</code>] [<code>-n</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>adddebug</code></p>
-<dd>modifies the Makefile in the current directory (and optionally in its subdirectories) to add debug info (<code>-g3</code>). It will also remove optimisations (<code>-O[1-9]</code>). </p>
+<dd>modifies the Makefile in the current directory (and optionally in its subdirectories) to add debug info (<code>-g3</code>). It will also remove optimisations (<code>-O[1-9]</code>). </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>
 <h2>OPTIONS</h2>
 <p> <code>-k</code></p>
 <dl>
 <dt>
-<dd> Keep optimisations (do not remove <code>-O[1-9]?</code> flags which are removed by default).</dl>
+</dt><dd> Keep optimisations (do not remove <code>-O[1-9]?</code> flags which are removed by default).</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> Recursively search through all subdirectories of the current directory and operate on every Makefile that is found.</dl>
+</dt><dd> Recursively search through all subdirectories of the current directory and operate on every Makefile that is found.</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> compile without NDEBUG and NO_DEBUG being defined (makes <code>kDebug</code> calls work)</dl>
+</dt><dd> compile without NDEBUG and NO_DEBUG being defined (makes <code>kDebug</code> calls work)</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

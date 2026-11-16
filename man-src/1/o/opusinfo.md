@@ -18,14 +18,14 @@ description: "opusinfo – gives information about Opus files and does extensive
 <p> Opusinfo is a fork of <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code>(1) with the non-opus parts largely removed. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Show a help and usage message.</p>
-<dt>-q</p>
-<dd> Quiet mode. This may be specified multiple times. Doing so once will remove the detailed informative messages; twice will remove warnings as well.</p>
-<dt>-v</p>
-<dd> Verbose mode. At the current time, this does not do anything.</p>
-<dt>-V</p>
-<dd> Show program version info and exit. </p>
+<dt>-h</dt>
+<dd> Show a help and usage message.</dd>
+<dt>-q</dt>
+<dd> Quiet mode. This may be specified multiple times. Doing so once will remove the detailed informative messages; twice will remove warnings as well.</dd>
+<dt>-v</dt>
+<dd> Verbose mode. At the current time, this does not do anything.</dd>
+<dt>-V</dt>
+<dd> Show program version info and exit. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> There are many kinds of errored, invalid, non-normative, or otherwise unwise stream constructions which opusinfo will not produce warnings on. Passing opusinfo with flying colors is not certification of the correctness of a stream. Future versions may detect more error conditions. </p>

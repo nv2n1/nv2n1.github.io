@@ -13,16 +13,16 @@ description: "keyring – Python-Keyring command-line utility"
 <p> <code>keyring</code> [<i>,get|set|del/</i>] <i>,SERVICE USERNAME/</i> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show the help message and exit.</p>
-<dt><code>-p</code> KEYRING_PATH, <code>&#8211;keyring-path</code>=<i>,KEYRING_PATH/</i></p>
-<dd> Specify path to the keyring backend to use.</p>
-<dt><code>-b</code> KEYRING_BACKEND, <code>&#8211;keyring-backend</code>=<i>,KEYRING_BACKEND/</i></p>
-<dd> Specify name of the keyring backend to use.</p>
-<dt><code>&#8211;list-backends</code></p>
-<dd> List the available keyring backends and exit.</p>
-<dt><code>&#8211;disable</code></p>
-<dd> Create a configuration file disabling keyring and exit. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show the help message and exit.</dd>
+<dt><code>-p</code> KEYRING_PATH, <code>&#8211;keyring-path</code>=<i>,KEYRING_PATH/</i></dt>
+<dd> Specify path to the keyring backend to use.</dd>
+<dt><code>-b</code> KEYRING_BACKEND, <code>&#8211;keyring-backend</code>=<i>,KEYRING_BACKEND/</i></dt>
+<dd> Specify name of the keyring backend to use.</dd>
+<dt><code>&#8211;list-backends</code></dt>
+<dd> List the available keyring backends and exit.</dd>
+<dt><code>&#8211;disable</code></dt>
+<dd> Create a configuration file disabling keyring and exit. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>keyring</code> provides a way to store, lookup and delete passwords in various backends supported by Python-Keyring. </p>

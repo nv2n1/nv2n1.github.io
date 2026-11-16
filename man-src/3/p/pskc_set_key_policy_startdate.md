@@ -13,10 +13,10 @@ description: "pskc_set_key_policy_startdate – API function"
 void pskc_set_key_policy_startdate(pskc_key_t *key, const struct tm *startdate);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>const struct tm * startdate</p>
-<dd>pointer to a tm struct with key policy starting date to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>const struct tm * startdate</dt>
+<dd>pointer to a tm struct with key policy starting date to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Policy StartDate. This element denote the start of the validity period of a key.</p>
 <h2>Since</h2>

@@ -14,16 +14,16 @@ description: "netif_tx_napi_add – initialize a NAPI context"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>network device</dl>
+</dd><dd>network device</dd></dl>
 <p> <i>napi</i></p>
 <dl>
-<dd>NAPI context</dl>
+<dd>NAPI context</dd></dl>
 <p> <i>poll</i></p>
 <dl>
-<dd>polling function</dl>
+<dd>polling function</dd></dl>
 <p> <i>weight</i></p>
 <dl>
-<dd>default weight</dl>
+<dd>default weight</dd></dl>
 <h2>Description</h2>
 <p>This variant of <code>netif_napi_add</code> should be used from drivers using NAPI to exclusively poll a TX queue. This will avoid we add it into napi_hash[], thus polluting this hash table.</p>
 <h2>Copyright</h2>

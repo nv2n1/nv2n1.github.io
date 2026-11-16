@@ -19,7 +19,7 @@ description: "cgeev.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGEEV computes for an N-by-N complex nonsymmetric matrix A, the
  eigenvalues and, optionally, the left and/or right eigenvectors.
@@ -32,11 +32,11 @@ description: "cgeev.f –"
  The computed eigenvectors are normalized to have Euclidean norm
  equal to 1 and largest component real.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVL</i> </p>
+</dt><dd> <i>JOBVL</i> </dd>
 <pre>
           JOBVL is CHARACTER*1
           = 'N': left eigenvectors of A are not computed;
@@ -134,14 +134,14 @@ if JOBVR
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 177 of file cgeev.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

@@ -19,7 +19,7 @@ description: "sgesdd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SGESDD computes the singular value decomposition (SVD) of a real
  M-by-N matrix A, optionally computing the left and right singular
@@ -41,11 +41,11 @@ description: "sgesdd.f –"
  Cray-2. It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBZ</i> </p>
+</dt><dd> <i>JOBZ</i> </dd>
 <pre><code>
           JOBZ is CHARACTER*1
           Specifies options for computing all or part of the matrix U:
@@ -154,18 +154,18 @@ LWORK is INTEGER
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+</dt><dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 216 of file sgesdd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

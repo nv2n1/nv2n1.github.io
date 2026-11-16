@@ -15,11 +15,11 @@ dentry_update_name_case - update case insensitive dentry with a new name
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>dentry to be updated</dl>
+<dl><dd></dd><dd>dentry to be updated</dd></dl>
  
 
  <i>name</i>
-<dl><dd>new name</dl>
+<dl><dd>new name</dd></dl>
 
 <h2>Description</h2>
 

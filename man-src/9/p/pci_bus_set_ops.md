@@ -15,11 +15,11 @@ pci_bus_set_ops - Set raw operations of pci bus
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>pci bus struct</dl>
+<dl><dd></dd><dd>pci bus struct</dd></dl>
  
 
  <i>ops</i>
-<dl><dd>new raw operations</dl>
+<dl><dd>new raw operations</dd></dl>
 
 <h2>Description</h2>
 

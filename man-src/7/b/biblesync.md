@@ -10,83 +10,44 @@ description: "biblesync – multicast navigation synchronization in Bible progra
 <p>biblesync &#8211; multicast navigation synchronization in Bible programs</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;biblesync.hh&gt;
-
 typedef enum_BibleSync_mode{
-
     BSP_MODE_DISABLE,
-
     BSP_MODE_PERSONAL,
-
     BSP_MODE_SPEAKER,
-
     BSP_MODE_AUDIENCE,
-
     N_BSP_MODE
-
 } BibleSync_mode;
-
 typedef enum_BibleSync_xmit_status{
-
     BSP_XMIT_OK,
-
     BSP_XMIT_FAILED,
-
     BSP_XMIT_NO_SOCKET,
-
     BSP_XMIT_BAD_TYPE,
-
     BSP_XMIT_NO_AUDIENCE_XMIT,
-
     BSP_XMIT_RECEIVING,
-
     N_BSP_XMIT
-
 } BibleSync_xmit_status;
-
 #define BSP_ANNOUNCE 1
-
 #define BSP_SYNC 2
-
 #define BSP_BEACON 3
-
 typedef void (*BibleSync_navigate)(char cmd, string speakerkey,
-
                                    string bible, string ref, string alt,
-
                                    string group, string domain,
-
                                    string info, string dump);
-
 Public interface :
-
     BibleSync *object = new BibleSync(string application,
-
                                       string version,
-
                                       string user);
-
 BibleSync_mode BibleSync::setMode(BibleSync_mode mode,
-
                                   BibleSync_navigate *nav_func,
-
                                   string passPhrase);
-
 BibleSync_mode BibleSync::getMode(void);
-
 string BibleSync::getVersion(void);
-
 string BibleSync::getPassphrase(void);
-
 BibleSync_xmit_status BibleSync::Transmit(char type,
-
                                           string bible, string ref, string alt,
-
                                           string group, string domain);
-
 static int BibleSync::Receive(void *object);
-
 bool BibleSync::setPrivate(bool privacy);
-
 void BibleSync::listenToSpeaker(bool listen, string speakerkey);</code></pre>
 <h2>Description</h2>
 <p><i>BibleSync</i> is a published protocol specification by which cooperating Bible programs navigate together. It is implemented as a C++ class providing a small, clean interface including basic setup, take-down, transmit, polled receive, and a bare few utility methods. </p>

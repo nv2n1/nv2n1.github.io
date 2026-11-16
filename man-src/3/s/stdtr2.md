@@ -13,37 +13,13 @@ description: "std::tr2 –"
 <p><code>__detail</code></p>
 <h3>Classes</h3>
 <pre><code>struct __dynamic_bitset_base
-
-
-
 struct __reflection_typelist
-
-
-
 struct __reflection_typelist&lt; _First, _Rest...&gt;
-
-
-
 struct __reflection_typelist&lt;&gt;
-
-
-
 struct bases
-
-
-
 class bool_set
-
-
-
 struct direct_bases
-
-
-
 class dynamic_bitset
-
-
-
 Functions</code></pre>
 <p> bool <code>certainly</code> (<code>bool_set</code> __b) </p>
 <p> bool <code>contains</code> (<code>bool_set</code> __s, <code>bool_set</code> __t) </p>
@@ -82,14 +58,8 @@ Functions</code></pre>
 <p> template&lt;typename _WordT , typename _Alloc &gt; <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; <code>operator-</code> (const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__x, const <code>dynamic_bitset</code>&lt; _WordT, _Alloc &gt; &amp;__y) </p>
 <pre><code>
 template&lt;typename _CharT , typename _Traits , typename _WordT , typename _Alloc &gt; std::basic_istream&lt; _CharT,
-
-
 _Traits &gt; &amp; operator&gt;&gt; (std::basic_istream&lt; _CharT, _Traits &gt; &amp;__is, dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__x)&quot;
-
-
 template&lt;typename _CharT , typename _Traits , typename _WordT , typename _Alloc &gt; std::basic_ostream&lt; _CharT,
-
-
 _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt; &amp;__os, const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__x)&quot;</code></pre>
 <h2>Detailed Description</h2>
 <p>ISO C++ TR2 entities toplevel namespace is std::tr2.</p>
@@ -102,10 +72,10 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A bitset.<br />
- <i>__y</i> A bitset of the same size as <i>__x</i>.</dl>
+ <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new bitset.</dl>
+<dd>A new bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 1332 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT , typename _Alloc &gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt; std::tr2::operator- (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__x, const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__y) [inline]</h3>
@@ -113,10 +83,10 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A bitset.<br />
- <i>__y</i> A bitset of the same size as <i>__x</i>.</dl>
+ <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new bitset.</dl>
+<dd>A new bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 1362 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT , typename _Alloc &gt; bool std::tr2::operator&lt; (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__lhs, const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__rhs)</h3>
@@ -147,10 +117,10 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A bitset.<br />
- <i>__y</i> A bitset of the same size as <i>__x</i>.</dl>
+ <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new bitset.</dl>
+<dd>A new bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 1352 of file dynamic_bitset.</p>
 <h3>template&lt;typename _WordT , typename _Alloc &gt; <code>dynamic_bitset</code>&lt;_WordT, _Alloc&gt; std::tr2::operator| (const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__x, const dynamic_bitset&lt; _WordT, _Alloc &gt; &amp;__y) [inline]</h3>
@@ -158,10 +128,10 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A bitset.<br />
- <i>__y</i> A bitset of the same size as <i>__x</i>.</dl>
+ <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A new bitset.</dl>
+<dd>A new bitset.</dd></dl>
 <p> These should be self-explanatory. </p>
 <p> Definition at line 1342 of file dynamic_bitset.</p>
 <h2>Author</h2>

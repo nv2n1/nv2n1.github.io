@@ -15,11 +15,11 @@ skb_orphan_frags - orphan the frags contained in a buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to orphan frags from</dl>
+<dl><dd></dd><dd>buffer to orphan frags from</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation mask for replacement pages</dl>
+<dl><dd>allocation mask for replacement pages</dd></dl>
 
 <h2>Description</h2>
 

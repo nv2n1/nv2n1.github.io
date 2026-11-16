@@ -16,17 +16,17 @@ description: "bglpp – a Scheme Pretty Printer"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-o &lt;file&gt;</code></p>
+</dt><dt><code>-o &lt;file&gt;</code></dt>
 <dd>
-<dd> Output files to <i>file</i>. </p>
-<dt><code>-comment</code></p>
-<dd> Don&#8217;t output any Scheme comments. </p>
-<dt><code>-upper</code></p>
-<dd> Translate identifiers to upper case. </p>
-<dt><code>-lower</code></p>
-<dd> Translate identifiers to lower case. </p>
-<dt><code>-w&lt;width&gt;</code></p>
-<dd> Set output device column <i>width</i>. </p>
+</dd><dd> Output files to <i>file</i>. </dd>
+<dt><code>-comment</code></dt>
+<dd> Don&#8217;t output any Scheme comments. </dd>
+<dt><code>-upper</code></dt>
+<dd> Translate identifiers to upper case. </dd>
+<dt><code>-lower</code></dt>
+<dd> Translate identifiers to lower case. </dd>
+<dt><code>-w&lt;width&gt;</code></dt>
+<dd> Set output device column <i>width</i>. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To pretty print the file &#8220;foo.scm&#8221; translating identifier to lower case, for an output device with 50 columns: </p>

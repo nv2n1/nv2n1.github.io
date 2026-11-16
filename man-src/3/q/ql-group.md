@@ -13,29 +13,29 @@ group - The QuantLib Group
 The QuantLib Group members are: 
 
 <dl><dt>*
-<dd>Ferdinando Ametrano, Banca IMI SpA, administrator
-<dt>*
-<dd>Luigi Ballabio, StatPro Italia srl, administrator
-<dt>*
-<dd>Marco Bianchetti, Banca IMI SpA
-<dt>*
-<dd>Nicolas Di Ceare
-<dt>*
-<dd>Dirk Eddelbuettel
-<dt>*
-<dd>Neil Firth, Mathematical Institute, University of Oxford
-<dt>*
-<dd>Nicola Jean, StatPro Italia srl
-<dt>*
-<dd>Chris Kenyon
-<dt>*
-<dd>Roland Lichters
-<dt>*
-<dd>Marco Marchioro, StatPro Italia srl
-<dt>*
-<dd>Klaus Spanderen
-<dt>*
-<dd>Joseph Wang</dl>
+</dt><dd>Ferdinando Ametrano, Banca IMI SpA, administrator
+</dd><dt>*
+</dt><dd>Luigi Ballabio, StatPro Italia srl, administrator
+</dd><dt>*
+</dt><dd>Marco Bianchetti, Banca IMI SpA
+</dd><dt>*
+</dt><dd>Nicolas Di Ceare
+</dd><dt>*
+</dt><dd>Dirk Eddelbuettel
+</dd><dt>*
+</dt><dd>Neil Firth, Mathematical Institute, University of Oxford
+</dd><dt>*
+</dt><dd>Nicola Jean, StatPro Italia srl
+</dd><dt>*
+</dt><dd>Chris Kenyon
+</dd><dt>*
+</dt><dd>Roland Lichters
+</dd><dt>*
+</dt><dd>Marco Marchioro, StatPro Italia srl
+</dd><dt>*
+</dt><dd>Klaus Spanderen
+</dd><dt>*
+</dt><dd>Joseph Wang</dd></dl>
 
 <h2>Contributors</h2>
 

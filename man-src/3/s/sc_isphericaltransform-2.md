@@ -11,7 +11,6 @@ description: "sc::ISphericalTransform –"
 <p> This describes a solid harmonic to Cartesian transform.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform.h&gt;</code></pre>
 <p> Inherits <code>sc::SphericalTransform</code>. Inherited by <code>sc::ISphericalTransformCCA</code>, <code>sc::ISphericalTransformCints</code>, and <code>sc::ISphericalTransformV3</code>.</p>
 <h3>Protected Member Functions</h3>

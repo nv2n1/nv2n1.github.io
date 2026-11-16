@@ -10,7 +10,6 @@ description: "uatof – Converts a string into a double. Allegro game programmin
 <p>uatof &#8211; Converts a string into a double. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 double uatof(const char *s);</code></pre>
 <h2>Description</h2>
 <p>Convert as much of the string as possible to an equivalent double precision real number. This function is almost like `ustrtod(s, NULL)&#8217;.</p>

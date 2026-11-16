@@ -22,14 +22,14 @@ description: "raw – bind a Linux raw character device"
 <p> Because raw I/O involves direct hardware access to a process&#8217;s memory, a few extra restrictions must be observed. All I/Os must be correctly aligned in memory and on disk: they must start at a sector offset on disk, they must be an exact number of sectors long, and the data buffer in virtual memory must also be aligned to a multiple of the sector size. The sector size is 512 bytes for most devices.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-q</code>, <code>&#8211;query</code></p>
-<dd>Set query mode. <code>raw</code> will query an existing binding instead of setting a new one.</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd>With <code>-q</code> , specify that all bound raw devices should be queried.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display help text and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information and exit. </p>
+<dt><code>-q</code>, <code>&#8211;query</code></dt>
+<dd>Set query mode. <code>raw</code> will query an existing binding instead of setting a new one.</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd>With <code>-q</code> , specify that all bound raw devices should be queried.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help text and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information and exit. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>The Linux <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1) command should be used without the <code>bs=</code> option, or the blocksize needs to be a multiple of the sector size of the device (512 bytes usually), otherwise it will fail with &quot;Invalid Argument&quot; messages (EINVAL). </p>

@@ -23,12 +23,12 @@ description: "k_hasafs k_hasafs_recheck k_pioctl k_unlog k_setpag k_afs_cell_of_
 <p> Fn krb5_afslog , and Fn krb5_afslog_uid are the Kerberos 5 equivalents of Fn krb_afslog , and Fn krb_afslog_uid . </p>
 <p> Fn krb5_afslog , Fn kafs_settoken5 can be configured to behave differently via a <code>krb5_appdefault</code> option <code>afs-use-524</code> in krb5.conf Possible values for <code>afs-use-524</code> are:</p>
 <dl>
-<dt><code>yes</code></p>
-<dd> use the 524 server in the realm to convert the ticket</p>
-<dt><code>no</code></p>
-<dd> use the Kerberos 5 ticket directly, can be used with if the afs cell support 2b token.</p>
-<dt><code>local, 2b</code></p>
-<dd> convert the Kerberos 5 credential to a 2b token locally (the same work as a 2b 524 server should have done).</dl>
+<dt><code>yes</code></dt>
+<dd> use the 524 server in the realm to convert the ticket</dd>
+<dt><code>no</code></dt>
+<dd> use the Kerberos 5 ticket directly, can be used with if the afs cell support 2b token.</dd>
+<dt><code>local, 2b</code></dt>
+<dd> convert the Kerberos 5 credential to a 2b token locally (the same work as a 2b 524 server should have done).</dd></dl>
 <p> Example: </p>
 <pre><code>
 [appdefaults] SU.SE = {afs - use - 524 = local} PDC.KTH.SE = {afs - use - 524 = yes} afs - use - 524 = yes
@@ -44,8 +44,8 @@ description: "k_hasafs k_hasafs_recheck k_pioctl k_unlog k_setpag k_afs_cell_of_
 <h2>ENVIRONMENT</h2>
 <p> The following environment variable affect the mode of operation of <code>kafs</code></p>
 <dl>
-<dt><code>AFS_SYSCALL</code></p>
-<dd> Normally, <code>kafs</code> will try to figure out the correct system call(s) that are used by AFS by itself. If it does not manage to do that, or does it incorrectly, you can set this variable to the system call number or list of system call numbers that should be used.</dl>
+<dt><code>AFS_SYSCALL</code></dt>
+<dd> Normally, <code>kafs</code> will try to figure out the correct system call(s) that are used by AFS by itself. If it does not manage to do that, or does it incorrectly, you can set this variable to the system call number or list of system call numbers that should be used.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following code from <code>login</code> will obtain a new PAG and tokens for the local cell and the cell of the users home directory. </p>
 <pre><code>
@@ -63,7 +63,7 @@ if (k_hasafs()) {
 <p> krb5_appdefault3, krb5.conf5</p>
 <dl>
 <dt>
-<dd> Transarc Corporation <i>AFS-3 Programmer&#8217;s Reference</i> <i>File Server/Cache Manager Interface</i> 1991</dl>
+</dt><dd> Transarc Corporation <i>AFS-3 Programmer&#8217;s Reference</i> <i>File Server/Cache Manager Interface</i> 1991</dd></dl>
 <h2>FILES</h2>
 <p> libkafs will search for ThisCell and TheseCells in the following locations: /usr/vice/etc /etc/openafs /var/db/openafs/etc /usr/arla/etc /etc/arla and /etc/afs</p>
 <h2>BUGS</h2>

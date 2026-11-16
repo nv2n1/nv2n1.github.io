@@ -10,7 +10,6 @@ description: "ugetx, ugetxc – Low level helper function for reading Unicode te
 <p>ugetx, ugetxc &#8211; Low level helper function for reading Unicode text data. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ugetx(char **s);
 int ugetxc(const char **s);</code></pre>
 <h2>Description</h2>

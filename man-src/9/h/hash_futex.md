@@ -14,11 +14,11 @@ description: "hash_futex – Return the hash bucket in the global hash"
 <p><i>key</i></p>
 <dl>
 <dd>
-<dd>Pointer to the futex key for which the hash is calculated</dl>
+</dd><dd>Pointer to the futex key for which the hash is calculated</dd></dl>
 <h2>Description</h2>
 <p>We hash on the keys returned from get_futex_key (see below) and return the corresponding hash bucket in the global hash.</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

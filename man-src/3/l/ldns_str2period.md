@@ -16,8 +16,8 @@ description: "ldns_str2period"
 <p> uint32_t ldns_str2period(const char *nptr, const char **endptr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_str2period</i>()</p>
-<dd>converts a ttl value (like 5d2h) to a long. .br <code>nptr</code>: the start of the string .br <code>endptr</code>: points to the last char in case of error .br Returns the convert duration value</dl>
+<dt> <i>ldns_str2period</i>()</dt>
+<dd>converts a ttl value (like 5d2h) to a long. .br <code>nptr</code>: the start of the string .br <code>endptr</code>: points to the last char in case of error .br Returns the convert duration value</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -10,9 +10,9 @@ c_csseti - set int valued parameters
 <h2>Function Prototype</h2>void c_csseti(char *, int);
 <h2>Synopsis</h2>void c_csseti (pnam, ival);
 <h2>Description</h2><dl COMPACT><dt>pnam
-<dd>A string that specifies the name of the parameter to be set.
-<dt>ival
-<dd>An int value to be assigned to the internal parameter specified by pnam.</dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the csgrid_params man page.
+</dt><dd>A string that specifies the name of the parameter to be set.
+</dd><dt>ival
+</dt><dd>An int value to be assigned to the internal parameter specified by pnam.</dd></dl><h2>Usage</h2>This routine allows you to set the current value of Cssgrid parameters. For a complete list of parameters available in this utility, see the csgrid_params man page.
 <h2>Access</h2>To use c_csseti, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>c_csgrid, c_csgeti, csgrid_params. 
 

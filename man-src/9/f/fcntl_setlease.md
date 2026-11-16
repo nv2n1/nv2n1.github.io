@@ -14,13 +14,13 @@ description: "fcntl_setlease – sets a lease on an open file"
 <p><i>fd</i></p>
 <dl>
 <dd>
-<dd>open file descriptor</dl>
+</dd><dd>open file descriptor</dd></dl>
 <p> <i>filp</i></p>
 <dl>
-<dd>file pointer</dl>
+<dd>file pointer</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>type of lease to obtain</dl>
+<dd>type of lease to obtain</dd></dl>
 <h2>Description</h2>
 <p>Call this fcntl to establish a lease on the file. Note that you also need to call <code>F_SETSIG</code> to receive a signal when the lease is broken.</p>
 <h2>Copyright</h2>

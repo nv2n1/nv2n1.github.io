@@ -15,12 +15,12 @@ description: "ax25d – General purpose AX.25, NET/ROM and Rose daemon"
 <p> <code>AX25d</code> has the facility to log information about incoming connections to the system log file. By default no logging is done. When <code>ax25d</code> is running, and a change in the configuration file is made, <code>ax25d</code> can be forced to re-read its configuration file by sending it a SIGHUP.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c altconffile</code></p>
-<dd>Specifies an alternate configuration file name.</p>
-<dt><code>-l</code></p>
-<dd>Specifies that messages should be logged into the system log file. By default no messages are logged.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-c altconffile</code></dt>
+<dd>Specifies an alternate configuration file name.</dd>
+<dt><code>-l</code></dt>
+<dd>Specifies that messages should be logged into the system log file. By default no messages are logged.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ax25/ax25d.conf</p>
 <h2>See Also</h2>

@@ -19,32 +19,32 @@ description: "cannaserver – Kana-Kanji conversion server"
 <p> /var/lib/canna/dic/*/dics.dir includes the list of dictionaries which are available to clients. Users (i.e. clients) can choose which to use and specify them in ~/.canna.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>ddpath</i></p>
-<dd> Specifies the directory that contains dictionaries.</p>
-<dt>-inet</p>
-<dd> This option lets cannaserver(1M) accept connections from remote hosts using inet domain socket (IPv4). By default, the cannaserver(1M) uses only UNIX domain socket, i.e. only clients in your local machine can connect to the server.</p>
-<dt>-inet6</p>
-<dd> Enable IPv6. If this option is used solely, IPv4 access is disabled. If you want to use IPv4 at the same time, use both -inet and -inet6.</p>
-<dt>-l <i>n</i></p>
-<dd> Outputs the cannaserver(1M) log to /tmp/canna.log. n (1 to 5) specifies the log level.</p>
-<dt>-d</p>
-<dd> Starts cannaserver(1M) in debug mode. It is executed as the foreground process. Log data at log level 5 is output to the standard output.</p>
-<dt>-u <i>userid</i></p>
-<dd> Specifies which user cannaserver(1M) runs as. By default, cannaserver(1M) runs as the user who started cannaserver(1M).</p>
-<dt>-syslog</p>
-<dd> Outputs the cannaserver(1M) log to syslogd(8). If you specify this option, logs are not output to /var/log/canna/CANNA?msgs.</p>
-<dt>-p <i>num</i></p>
-<dd> By this option cannaserver(1M) uses the port number 5680 + num. The default port number is 5680. This option also has an effect on the filename of the socket and the log file. See below.</dl>
+<dt><i>ddpath</i></dt>
+<dd> Specifies the directory that contains dictionaries.</dd>
+<dt>-inet</dt>
+<dd> This option lets cannaserver(1M) accept connections from remote hosts using inet domain socket (IPv4). By default, the cannaserver(1M) uses only UNIX domain socket, i.e. only clients in your local machine can connect to the server.</dd>
+<dt>-inet6</dt>
+<dd> Enable IPv6. If this option is used solely, IPv4 access is disabled. If you want to use IPv4 at the same time, use both -inet and -inet6.</dd>
+<dt>-l <i>n</i></dt>
+<dd> Outputs the cannaserver(1M) log to /tmp/canna.log. n (1 to 5) specifies the log level.</dd>
+<dt>-d</dt>
+<dd> Starts cannaserver(1M) in debug mode. It is executed as the foreground process. Log data at log level 5 is output to the standard output.</dd>
+<dt>-u <i>userid</i></dt>
+<dd> Specifies which user cannaserver(1M) runs as. By default, cannaserver(1M) runs as the user who started cannaserver(1M).</dd>
+<dt>-syslog</dt>
+<dd> Outputs the cannaserver(1M) log to syslogd(8). If you specify this option, logs are not output to /var/log/canna/CANNA?msgs.</dd>
+<dt>-p <i>num</i></dt>
+<dd> By this option cannaserver(1M) uses the port number 5680 + num. The default port number is 5680. This option also has an effect on the filename of the socket and the log file. See below.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/var/run/.iroha_unix/IROHA[:num]</p>
-<dd> Socket. [:num] part is added only when you specify -p.</p>
-<dt>/var/lib/canna/dic/*/dics.dir</p>
-<dd> Dictionary directory</p>
-<dt>/etc/hosts.canna</p>
-<dd> Access control file</p>
-<dt>/var/log/canna/CANNA?msgs</p>
-<dd> Log file. &quot;?&quot; is replaced with <i>num</i> specified with -p, and defaults to 0 without -p <i>num</i>. Log messages are not output to this file when -syslog is specified.</dl>
+<dt>/var/run/.iroha_unix/IROHA[:num]</dt>
+<dd> Socket. [:num] part is added only when you specify -p.</dd>
+<dt>/var/lib/canna/dic/*/dics.dir</dt>
+<dd> Dictionary directory</dd>
+<dt>/etc/hosts.canna</dt>
+<dd> Access control file</dd>
+<dt>/var/log/canna/CANNA?msgs</dt>
+<dd> Log file. &quot;?&quot; is replaced with <i>num</i> specified with -p, and defaults to 0 without -p <i>num</i>. Log messages are not output to this file when -syslog is specified.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cannakill(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1), <a href="/docs/linux/man/1-cannacheck/">cannacheck</a>(1), <a href="/docs/linux/man/1-cshost/">cshost</a>(1) </p>
 <h2>Index</h2>

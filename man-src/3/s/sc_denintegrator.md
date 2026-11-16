@@ -11,106 +11,40 @@ description: "sc::DenIntegrator –"
 <p> An abstract base class for integrating the electron density.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::RadialAngularIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>DenIntegrator ()
-
-
 Construct a new DenIntegrator.
-
-
 DenIntegrator (const Ref&lt; KeyVal &gt; &amp;)
-
-
 Construct a new DenIntegrator given the KeyVal input.
-
-
 DenIntegrator (StateIn &amp;)
-
-
 Construct a new DenIntegrator given the StateIn data.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 Ref&lt; Wavefunction &gt; wavefunction () const
-
-
 Returns the wavefunction used for the integration.
-
-
 double value () const
-
-
 Returns the result of the integration.
-
-
 void set_accuracy (double a)
-
-
 Sets the accuracy to use in the integration.
-
-
 double get_accuracy (void)
-
-
-
 void set_compute_potential_integrals (int)
-
-
 Call with non zero if the potential integrals are to be computed.
-
-
 const double * alpha_vmat () const
-
-
 Returns the alpha potential integrals.
-
-
 const double * beta_vmat () const
-
-
 Returns the beta potential integrals.
-
-
 virtual void init (const Ref&lt; Wavefunction &gt; &amp;)
-
-
 Called before integrate.
-
-
 virtual void done ()
-
-
 Must be called between calls to init.
-
-
 virtual void integrate (const Ref&lt; DenFunctional &gt; &amp;, const RefSymmSCMatrix &amp;densa=0, const RefSymmSCMatrix &amp;densb=0, double *nuclear_grad=0)=0
-
-
 Performs the integration of the given functional using the given alpha and beta density matrices.
-
-
-
 Protected Member Functions
 void init_integration (const Ref&lt; DenFunctional &gt; &amp;func, const RefSymmSCMatrix &amp;densa, const RefSymmSCMatrix &amp;densb, double *nuclear_gradient)
-
-
-
 void done_integration ()
-
-
-
 void init_object ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>Wavefunction</code> &gt; <code>wfn_</code> </p>
 <p> <code>Ref</code>&lt; <code>BatchElectronDensity</code> &gt; <code>den_</code> </p>

@@ -11,32 +11,23 @@ description: "snmp_alarm_register, snmp_alarm_register_hr, snmp_alarm_unregister
 <h2>Synopsis</h2>
 <pre><code>#include &lt;net-snmp/utilities.h&gt;
 unsigned int
-
 snmp_alarm_register(unsigned int seconds,
-
                     unsigned int flags,
-
                     SNMPAlarmCallback *f_callback,
-
                     void *clientarg);
 unsigned int
-
 snmp_alarm_register_hr(struct timeval t,
-
                        unsigned int flags,
-
                        SNMPAlarmCallback *f_callback,
-
                        void *clientarg);
 void
-
 snmp_alarm_unregister(unsigned int reg);</code></pre>
 <h2>Description</h2>
 <p>These functions implement support for a generic timer handling mechanism for multiple parts of an application to register function callbacks to happen at a particular time in the future.</p>
 <h2>Usage</h2>
 <p>The usage is fairly simple and straight-forward: Simply create a function you want called back at some point in the future. The function definition should be similar to:</p>
 <dl>
-<dd><code>void my_callback(unsigned int </code><i>reg</i><code>, void *</code><i>clientarg</i><code>);</code></dl>
+<dd><code>void my_callback(unsigned int </code><i>reg</i><code>, void *</code><i>clientarg</i><code>);</code></dd></dl>
 <p> Then, call <code>snmp_alarm_register()</code> to register your callback to be called <i>seconds</i> from now. The <i>flags</i> field should either be <i>SA_REPEAT</i> or <i>NULL.</i> If flags is set with <i>SA_REPEAT,</i> then the registered callback function will be called every <i>seconds.</i> If <i>flags</i> is <i>NULL</i> then the function will only be called once and then removed from the alarm system registration. </p>
 <p> The <i>clientarg</i> parameter in the registration function is used only by the client function and is stored and passed back directly to them on every call to the system. </p>
 <p> The <code>snmp_alarm_register()</code> function returns a unique <i>unsigned int</i> (which is also passed as the first argument of each callback), which can then be used to remove the callback from the queue at a later point in the future using the <code>snmp_alarm_unregister()</code> function. If the <code>snmp_alarm_register()</code> call fails it returns zero. In particular, note that it is entirely permissible for an alarm function to unregister itself. </p>

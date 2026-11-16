@@ -15,23 +15,23 @@ blk_add_trace_bio_remap - Add a trace for a bio-remap operation
 <h2>Arguments</h2>
 
 <i>ignore</i>
-<dl><dd><dd>trace callback data parameter (not used)</dl>
+<dl><dd></dd><dd>trace callback data parameter (not used)</dd></dl>
  
 
  <i>q</i>
-<dl><dd>queue the io is for</dl>
+<dl><dd>queue the io is for</dd></dl>
  
 
  <i>bio</i>
-<dl><dd>the source bio</dl>
+<dl><dd>the source bio</dd></dl>
  
 
  <i>dev</i>
-<dl><dd>target device</dl>
+<dl><dd>target device</dd></dl>
  
 
  <i>from</i>
-<dl><dd>source sector</dl>
+<dl><dd>source sector</dd></dl>
 
 <h2>Description</h2>
 

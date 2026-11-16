@@ -16,18 +16,18 @@ description: "pbm2g3 – convert portable bitmaps (PBM) into G3 fax files"
 <p> <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) uses <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1) internally to convert various bitmap formats into fax g3 format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> byte-aligns the end-of-line codes, inserting padding bits as necessary.</p>
-<dt><code>-w &lt;page width&gt;</code></p>
-<dd> sets the width of the resulting G3 page. Default is 1728. If you want to be able to fax it with sendfax, don&#8217;t use anything else. For other fax programs, 2048, 2432, 864 and 1216 may be useful. For other purposes, use what you like. </p>
+<dt><code>-a</code></dt>
+<dd> byte-aligns the end-of-line codes, inserting padding bits as necessary.</dd>
+<dt><code>-w &lt;page width&gt;</code></dt>
+<dd> sets the width of the resulting G3 page. Default is 1728. If you want to be able to fax it with sendfax, don&#8217;t use anything else. For other fax programs, 2048, 2432, 864 and 1216 may be useful. For other purposes, use what you like. </dd>
 <p> If you set it to 0, the width of the pbm file will be used.</p>
-<dt><code>-h &lt;blank lines&gt;</code></p>
-<dd> specifies the number of blank lines <i>pbm2g3</i> should prepend to each page. Default is 0. </p>
+<dt><code>-h &lt;blank lines&gt;</code></dt>
+<dd> specifies the number of blank lines <i>pbm2g3</i> should prepend to each page. Default is 0. </dd>
 <p> To produce identical output as pbmplus&#8217; pbm2g3 program (with my patch!) does, use &#8220;-h 4&#8221;.</p>
-<dt><code>-r</code></p>
-<dd> reverse the bit order in the bytes.</p>
-<dt><code>-d</code></p>
-<dd> will one day make pbm2g3 prepend a digifax header to the page. </p>
+<dt><code>-r</code></dt>
+<dd> reverse the bit order in the bytes.</dd>
+<dt><code>-d</code></dt>
+<dd> will one day make pbm2g3 prepend a digifax header to the page. </dd>
 </dl>
 <h2>REFERENCES</h2>
 <p> The standard for Group 3 fax is defined in CCITT Recommendation T.4.</p>

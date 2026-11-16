@@ -27,51 +27,51 @@ SP-10/10C M3099A/EH/EX S1300/S1100
 SP-15C/300C fi-60F/65F
 SP-600C/620C fi-5015C
  SP-2x/3x</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <p>Effort has been made to expose all hardware options, including: </p>
 <p> <code>source s</code></p>
 <dl>
-<dd>Selects the source for the scan. Options may include &quot;Flatbed&quot;, &quot;ADF Front&quot;, &quot;ADF Back&quot;, &quot;ADF Duplex&quot;, &quot;Card Front&quot;, &quot;Card Back&quot;, &quot;Card Duplex&quot;.</dl>
+<dd>Selects the source for the scan. Options may include &quot;Flatbed&quot;, &quot;ADF Front&quot;, &quot;ADF Back&quot;, &quot;ADF Duplex&quot;, &quot;Card Front&quot;, &quot;Card Back&quot;, &quot;Card Duplex&quot;.</dd></dl>
 <p> <code>mode m</code></p>
 <dl>
-<dd>Selects the mode for the scan. Options may include &quot;Lineart&quot;, &quot;Halftone&quot;, &quot;Gray&quot;, and &quot;Color&quot;.</dl>
+<dd>Selects the mode for the scan. Options may include &quot;Lineart&quot;, &quot;Halftone&quot;, &quot;Gray&quot;, and &quot;Color&quot;.</dd></dl>
 <p> <code>resolution, y-resolution</code></p>
 <dl>
-<dd>Controls scan resolution. Setting <code>&#8211;resolution</code> also sets <code>&#8211;y-resolution,</code> though this behavior is overridden by some frontends.</dl>
+<dd>Controls scan resolution. Setting <code>&#8211;resolution</code> also sets <code>&#8211;y-resolution,</code> though this behavior is overridden by some frontends.</dd></dl>
 <p> <code>tl-x, tl-y, br-x, br-y</code></p>
 <dl>
-<dd>Sets scan area upper left and lower right coordinates. These are renamed <code>t, l, x, y</code> by some frontends.</dl>
+<dd>Sets scan area upper left and lower right coordinates. These are renamed <code>t, l, x, y</code> by some frontends.</dd></dl>
 <p> <code>page-width, page-height</code></p>
 <dl>
-<dd>Sets paper size. Used by scanner to determine centering of scan coordinates when using the ADF (Automatic Document Feeder) and to detect double feed errors.</dl>
+<dd>Sets paper size. Used by scanner to determine centering of scan coordinates when using the ADF (Automatic Document Feeder) and to detect double feed errors.</dd></dl>
 <p> Other options will be available based on the capabilities of the scanner: machines with IPC or DTC will have additional enhancement options, those with CMP will have compression options, those with a printer will have a group of endorser options. </p>
 <p> Additionally, several &#8216;software&#8217; options are exposed by the backend. These are reimplementations of features provided natively by larger scanners, but running on the host computer. This enables smaller machines to have similar capabilities. Please note that these features are somewhat simplistic, and may not perform as well as the native implementations. Note also that these features all require that the driver cache the entire image in memory. This will almost certainly result in a reduction of scanning speed. </p>
 <p> swcrop</p>
 <dl>
-<dd>Requests the driver to detect the extremities of the paper within the larger image, and crop the empty edges.</dl>
+<dd>Requests the driver to detect the extremities of the paper within the larger image, and crop the empty edges.</dd></dl>
 <p> swdeskew</p>
 <dl>
-<dd>Requests the driver to detect the rotation of the paper within the larger image, and counter the rotation.</dl>
+<dd>Requests the driver to detect the rotation of the paper within the larger image, and counter the rotation.</dd></dl>
 <p> swdespeck X</p>
 <dl>
-<dd>Requests the driver to find and remove dots of X diameter or smaller from the image, and fill the space with the average surrounding color.</dl>
+<dd>Requests the driver to find and remove dots of X diameter or smaller from the image, and fill the space with the average surrounding color.</dd></dl>
 <p> Use <i>&#8216;scanimage &#8211;help&#8217;</i> to get a list, but be aware that some options may be settable only when another option has been set, and that advanced options may be hidden by some frontend programs.</p>
 <h2>Configuration File</h2>
 <p>The configuration file <i>fujitsu.conf</i> is used to tell the backend how to look for scanners, and provide options controlling the operation of the backend. This file is read each time the frontend asks the backend for a list of scanners, generally only when the frontend starts. If the configuration file is missing, the backend will be unable to locate any scanners. </p>
 <p> Scanners can be specified in the configuration file in 4 ways: </p>
 <p> &quot;scsi FUJITSU&quot;</p>
 <dl>
-<dd>Requests backend to search all scsi buses in the system for a device which reports itself to be a scanner made by &#8216;FUJITSU&#8217;.</dl>
+<dd>Requests backend to search all scsi buses in the system for a device which reports itself to be a scanner made by &#8216;FUJITSU&#8217;.</dd></dl>
 <p> &quot;scsi /dev/sg0&quot; (or other scsi device file)</p>
 <dl>
-<dd>Requests backend to open the named scsi device. Only useful if you have multiple compatible scanners connected to your system, and need to specify one. Probably should not be used with the other &quot;scsi&quot; line above.</dl>
+<dd>Requests backend to open the named scsi device. Only useful if you have multiple compatible scanners connected to your system, and need to specify one. Probably should not be used with the other &quot;scsi&quot; line above.</dd></dl>
 <p> &quot;usb 0x04c5 0x1042&quot; (or other vendor/product ids)</p>
 <dl>
-<dd>Requests backend to search all usb buses in the system for a device which uses that vendor and product id. The device will then be queried to determine if it is a Fujitsu scanner.</dl>
+<dd>Requests backend to search all usb buses in the system for a device which uses that vendor and product id. The device will then be queried to determine if it is a Fujitsu scanner.</dd></dl>
 <p> &quot;usb /dev/usb/scanner0&quot; (or other device file)</p>
 <dl>
-<dd>Some systems use a kernel driver to access usb scanners. This method is untested.</dl>
+<dd>Some systems use a kernel driver to access usb scanners. This method is untested.</dd></dl>
 <p> The only configuration option supported is &quot;buffer-size=xxx&quot;, allowing you to set the number of bytes in the data buffer to something other than the compiled-in default, 65536 (64K). Some users report that their scanner will &quot;hang&quot; mid-page, or fail to transmit the image if the buffer is not large enough. </p>
 <p> Note: This option may appear multiple times in the configuration file. It only applies to scanners discovered by &#8216;scsi/usb&#8217; lines that follow this option. </p>
 <p> Note: The backend does not place an upper bound on this value, as some users required it to be quite large. Values above the default are not recommended, and may crash your OS or lockup your scsi card driver. You have been warned.</p>
@@ -85,7 +85,7 @@ SP-600C/620C fi-5015C
  25 SCSI/USB trace<br />
  30 SCSI/USB writes<br />
  31 SCSI/USB reads<br />
- 35 Useless noise</dl>
+ 35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <p>Flatbed units may fail to scan at maximum area, particularly at high resolution. </p>
 <p> Any model that does not support VPD during inquiry will not function until an override is added to the backend. </p>

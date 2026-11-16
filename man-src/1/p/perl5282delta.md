@@ -33,11 +33,11 @@ url: "/docs/linux/man/1-perl5282delta/"
 
 <dl>
 <dt>&bull;
-<dd> Module::CoreList has been upgraded from version 5.20181129_28 to 5.20190419.
-<dt>&bull;
-<dd> PerlIO::scalar has been upgraded from version 0.29 to 0.30.
-<dt>&bull;
-<dd> Storable has been upgraded from version 3.08 to 3.08_01.</dl>
+</dt><dd> Module::CoreList has been upgraded from version 5.20181129_28 to 5.20190419.
+</dd><dt>&bull;
+</dt><dd> PerlIO::scalar has been upgraded from version 0.29 to 0.30.
+</dd><dt>&bull;
+</dt><dd> Storable has been upgraded from version 3.08 to 3.08_01.</dd></dl>
 
 <h2>Platform Support</h2>
 
@@ -45,55 +45,42 @@ url: "/docs/linux/man/1-perl5282delta/"
 
 <dl>
 <dt>Windows
-<dd> The Windows Server 2003 <font SIZE="-1">SP1</font> Platform <font SIZE="-1">SDK</font> build, with its early x64 compiler and tools, was accidentally broken in Perl 5.27.9. This has now been fixed.
-<dt>Mac <font SIZE="-1">OS X</font>
-<dd> Perl's build and testing process on Mac <font SIZE="-1">OS X</font> for <tt>&quot;-Duseshrplib&quot;</tt> builds is now compatible with Mac <font SIZE="-1">OS X</font> System Integrity Protection (<font SIZE="-1">SIP</font>). 
-
+</dt><dd> The Windows Server 2003 <font SIZE="-1">SP1</font> Platform <font SIZE="-1">SDK</font> build, with its early x64 compiler and tools, was accidentally broken in Perl 5.27.9. This has now been fixed.
+</dd><dt>Mac <font SIZE="-1">OS X</font>
+</dt><dd> Perl's build and testing process on Mac <font SIZE="-1">OS X</font> for <tt>&quot;-Duseshrplib&quot;</tt> builds is now compatible with Mac <font SIZE="-1">OS X</font> System Integrity Protection (<font SIZE="-1">SIP</font>). 
  <font SIZE="-1">SIP</font> prevents binaries in <i>/bin</i> (and a few other places) being passed the <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> environment variable. For our purposes this prevents <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> from being passed to the shell, which prevents that variable being passed to the testing or build process, so running <tt>&quot;perl&quot;</tt> couldn't find <i>libperl.dylib</i>. 
-
  To work around that, the initial build of the <i>perl</i> executable expects to find <i>libperl.dylib</i> in the build directory, and the library path is then adjusted during installation to point to the installed library. 
-
- [perl #126706] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=126706">https://rt.perl.org/Ticket/Display.html?id=126706</a>&gt;</dl>
+ [perl #126706] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=126706">https://rt.perl.org/Ticket/Display.html?id=126706</a>&gt;</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> If an in-place edit is still in progress during global destruction and the process exit code (as stored in <tt>$?</tt>) is zero, perl will now treat the in-place edit as successful, replacing the input file with any output produced. 
-
+</dt><dd> If an in-place edit is still in progress during global destruction and the process exit code (as stored in <tt>$?</tt>) is zero, perl will now treat the in-place edit as successful, replacing the input file with any output produced. 
  This allows code like: 
-
  <pre>
   perl -i -ne 'print &quot;Foo&quot;; last'
 </pre> 
-
  to replace the input file, while code like: 
-
  <pre>
   perl -i -ne 'print &quot;Foo&quot;; die'
 </pre> 
-
  will not. Partly resolves [perl #133659]. 
-
  [perl #133659] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133659">https://rt.perl.org/Ticket/Display.html?id=133659</a>&gt;
-<dt>&bull;
-<dd> A regression in Perl 5.28 caused the following code to fail 
-
+</dd><dt>&bull;
+</dt><dd> A regression in Perl 5.28 caused the following code to fail 
  <pre>
  close(STDIN); open(CHILD, &quot;|wc -l&quot;)'
 </pre> 
-
  because the child's stdin would be closed on exec. This has now been fixed.
-<dt>&bull;
-<dd> <tt>&quot;pack &quot;u&quot;, &quot;invalid uuencoding&quot;&quot;</tt> now properly <font SIZE="-1">NUL</font> terminates the zero-length <font SIZE="-1">SV</font> produced. 
-
+</dd><dt>&bull;
+</dt><dd> <tt>&quot;pack &quot;u&quot;, &quot;invalid uuencoding&quot;&quot;</tt> now properly <font SIZE="-1">NUL</font> terminates the zero-length <font SIZE="-1">SV</font> produced. 
  [perl #132655] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=132655">https://rt.perl.org/Ticket/Display.html?id=132655</a>&gt;
-<dt>&bull;
-<dd> Failing to compile a format now aborts compilation. Like other errors in sub-parses this could leave the parser in a strange state, possibly crashing perl if compilation continued. 
-
+</dd><dt>&bull;
+</dt><dd> Failing to compile a format now aborts compilation. Like other errors in sub-parses this could leave the parser in a strange state, possibly crashing perl if compilation continued. 
  [perl #132158] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=132158">https://rt.perl.org/Ticket/Display.html?id=132158</a>&gt;
-<dt>&bull;
-<dd> See ``Any set of digits in the Common script are legal in a script run of another script''.</dl>
+</dd><dt>&bull;
+</dt><dd> See ``Any set of digits in the Common script are legal in a script run of another script''.</dd></dl>
 
 <h2>Acknowledgements</h2>
 

@@ -11,13 +11,9 @@ std::partition_point - std::partition_point
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt, class UnaryPredicate &gt;                                              (since C++11)
-
 ForwardIt partition_point( ForwardIt first, ForwardIt last, UnaryPredicate p );           (1)  (until C++20)
-
 template&lt; class ForwardIt, class UnaryPredicate &gt;                                              (since C++20)
-
 constexpr ForwardIt partition_point( ForwardIt first, ForwardIt last, UnaryPredicate p );</code></pre> 
 Examines the partitioned (as if by std::partition) range [first, last) and locates the end of the first partition, that is, the first element that does not satisfy p or last if all elements satisfy p. 
 
@@ -52,14 +48,10 @@ This algorithm is a more general form of std::lower_bound, which can be expresse
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;array&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::array&lt;int, 9&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     auto is_even = [](int i) { return i % 2 == 0; };

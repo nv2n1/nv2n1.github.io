@@ -13,52 +13,52 @@ description: "drmaa_get_attribute_names, drmaa_get_vector_attribute_names, drmaa
 <p> <code>#include drmaa.h</code> </p>
 <pre>
 <code>int drmaa_get_attribute_names(
-<dl><dt><dd>drmaa_attr_names_t **values,
+<dl><dt></dt><dd>drmaa_attr_names_t **values,
 char *error_diagnosis,
 size_t error_diag_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_get_vector_attribute_names(
-<dl><dt><dd>drmaa_attr_names_t **values,
+<dl><dt></dt><dd>drmaa_attr_names_t **values,
 char *error_diagnosis,
 size_t error_diag_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_get_next_attr_name(
-<dl><dt><dd>drmaa_attr_names_t* values,
+<dl><dt></dt><dd>drmaa_attr_names_t* values,
 char *value,
 int value_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_get_next_attr_value(
-<dl><dt><dd>drmaa_attr_values_t* values,
+<dl><dt></dt><dd>drmaa_attr_values_t* values,
 char *value,
 int value_len
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>int drmaa_get_num_attr_names(
-<dl><dt><dd>drmaa_attr_names_t* values,
+<dl><dt></dt><dd>drmaa_attr_names_t* values,
 int *size
-</dl>
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
 <pre>
 <code>void drmaa_release_attr_names(
-<dl><dt><dd>drmaa_attr_names_t* values
-</dl>
+<dl><dt></dt><dd>drmaa_attr_names_t* values
+</dd></dl>
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
@@ -85,7 +85,7 @@ int *size
 <p> The following DRMAA attributes correspond to the listed options: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>DRMAA Attribute </td>
@@ -178,7 +178,7 @@ int *size
 </td>
 </tr>
 </table>
-<p> * See the individual attribute description below</dl>
+<p> * See the individual attribute description below</dd></dl>
 <h2>DRMAA JOB TEMPLATE ATTRIBUTES</h2>
 <h3>drmaa_remote_command &#8211; <i>remote_command</i></h3>
 <p> Specifies the remote command to execute. The <i>remote_command</i> must be the path of an executable that is available at the job&#8217;s execution host. If the path is relative, it is assumed to be relative to the working directory, usually set through the drmaa_wd attribute. If working directory is not set, the path is assumed to be relative to the user&#8217;s home directory. </p>
@@ -236,25 +236,23 @@ UTC
 <p> Specifies, which of the standard I/O files (stdin, stdout and stderr) are to be transferred to/from the execution host. If not set, defaults to &quot;&quot;. Any combination of &#8216;e&#8217;, &#8216;i&#8217; and &#8216;o&#8217; may be specified. See drmaa_input_path, drmaa_output_path and drmaa_error_path for information about how to specify the standard input file, standard output file and standard error file. The file transfer mechanism itself must be configured by the administrator (see When it is configured, the administrator has to enable drmaa_transfer_files. If it is not configured, &quot;drmaa_transfer_files&quot; is not enabled and can&#8217;t be used. </p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>xxQS_NAME_Sxx_ROOT</code></p>
-<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</p>
-<dt><code>xxQS_NAME_Sxx_CELL</code></p>
-<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </p>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></p>
-<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</p>
-<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>SGE_DRMAA_ALLOW_CWD</code></p>
-<dd> Enables the parsing of the -cwd option from the sge_request file(s), job category, and/or the native specification attribute. This option is disabled by default because the algorithm for parsing the -cwd option is not thread-safe.</dl>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>SGE_DRMAA_ALLOW_CWD</code></dt>
+<dd> Enables the parsing of the -cwd option from the sge_request file(s), job category, and/or the native specification attribute. This option is disabled by default because the algorithm for parsing the -cwd option is not thread-safe.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, drmaa_get_attribute_names(), drmaa_get_vector_attribute_names(), and drmaa_get_next_attr_name() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
 <h2>ERRORS</h2>
@@ -277,11 +275,11 @@ UTC
 <h2>SEE ALSO</h2>
 <p> and </p>
 <h2>Index</h2>
-<dt><a href="#lbBC">ENVIRONMENTAL VARIABLES</a></p>
+<dt><a href="#lbBC">ENVIRONMENTAL VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbBD">RETURN VALUES</a></p>
+</dd><dt><a href="#lbBD">RETURN VALUES</a></dt>
 <dd>
-<dt><a href="#lbBE">ERRORS</a></p>
+</dd><dt><a href="#lbBE">ERRORS</a></dt>
 <dd>
-<dt><a href="#lbBM">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBM">SEE ALSO</a></dt>
+<dd></dd></dl>

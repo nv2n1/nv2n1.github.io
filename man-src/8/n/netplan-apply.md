@@ -15,21 +15,21 @@ description: "netplan-apply – apply configuration from netplan YAML files to a
 <p>netplan apply applies the current netplan configuration to a running system. </p>
 <p> The process works as follows:</p>
 <dl>
-<dt>1.</p>
-<dd>The backend configuration is generated from netplan YAML files.</p>
-<dt>2.</p>
-<dd>The appropriate backends (<a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a>(8) or <a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8)) are invoked to bring up configured interfaces.</p>
-<dt>3.</p>
-<dd>netplan apply iterates through interfaces that are still down, unbinding them from their drivers, and rebinding them. This gives <a href="/docs/linux/man/7-udev/">udev</a>(7) renaming rules the opportunity to run.</p>
-<dt>4.</p>
-<dd>If any devices have been rebound, the appropriate backends are re-invoked in case more matches can be done.</dl>
+<dt>1.</dt>
+<dd>The backend configuration is generated from netplan YAML files.</dd>
+<dt>2.</dt>
+<dd>The appropriate backends (<a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a>(8) or <a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8)) are invoked to bring up configured interfaces.</dd>
+<dt>3.</dt>
+<dd>netplan apply iterates through interfaces that are still down, unbinding them from their drivers, and rebinding them. This gives <a href="/docs/linux/man/7-udev/">udev</a>(7) renaming rules the opportunity to run.</dd>
+<dt>4.</dt>
+<dd>If any devices have been rebound, the appropriate backends are re-invoked in case more matches can be done.</dd></dl>
 <p> For information about the generation step, see <a href="/docs/linux/man/8-netplan-generate/">netplan-generate</a>(8). For details of the configuration file format, see <a href="/docs/linux/man/5-netplan/">netplan</a>(5).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, -help</code></p>
-<dd>Print basic help.</p>
-<dt><code>-debug</code></p>
-<dd>Print debugging output during the process.</dl>
+<dt><code>-h, -help</code></dt>
+<dd>Print basic help.</dd>
+<dt><code>-debug</code></dt>
+<dd>Print debugging output during the process.</dd></dl>
 <h2>Known Issues</h2>
 <p>netplan apply will not remove virtual devices such as bridges and bonds that have been created, even if they are no longer described in the netplan configuration. </p>
 <p> This can be resolved by manually removing the virtual device (for example ip link delete dev bond0) and then running netplan apply, or by rebooting.</p>

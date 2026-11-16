@@ -21,9 +21,9 @@ description: "systemd-fsck [at] .service, systemd-fsck-root.service, systemd-fsc
 <p>systemd-fsck understands one kernel command line parameter: </p>
 <p> <i>fsck.mode=</i></p>
 <dl>
-<dd>One of &quot;auto&quot;, &quot;force&quot;, &quot;skip&quot;. Controls the mode of operation. The default is &quot;auto&quot;, and ensures that file system checks are done when the file system checker deems them necessary. &quot;force&quot; unconditionally results in full file system checks. &quot;skip&quot; skips any file system checks.</dl>
+<dd>One of &quot;auto&quot;, &quot;force&quot;, &quot;skip&quot;. Controls the mode of operation. The default is &quot;auto&quot;, and ensures that file system checks are done when the file system checker deems them necessary. &quot;force&quot; unconditionally results in full file system checks. &quot;skip&quot; skips any file system checks.</dd></dl>
 <p> <i>fsck.repair=</i></p>
 <dl>
-<dd>One of &quot;preen&quot;, &quot;yes&quot;, &quot;no&quot;. Controls the mode of operation. The default is &quot; preen&quot;, and will automatically repair problems that can be safely fixed. &quot;yes &quot; will answer yes to all questions by fsck and &quot;no&quot; will answer no to all questions.</dl>
+<dd>One of &quot;preen&quot;, &quot;yes&quot;, &quot;no&quot;. Controls the mode of operation. The default is &quot; preen&quot;, and will automatically repair problems that can be safely fixed. &quot;yes &quot; will answer yes to all questions by fsck and &quot;no&quot; will answer no to all questions.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-systemd-quotacheck-service/">systemd-quotacheck.service</a></code>(8), <code><a href="/docs/linux/man/8-fsck-btrfs/">fsck.btrfs</a></code>(8), <code><a href="/docs/linux/man/8-fsck-cramfs/">fsck.cramfs</a></code>(8), <code><a href="/docs/linux/man/8-fsck-ext4/">fsck.ext4</a></code>(8), <code><a href="/docs/linux/man/8-fsck-fat/">fsck.fat</a></code>(8), <code><a href="/docs/linux/man/8-fsck-hfsplus/">fsck.hfsplus</a></code>(8), <code><a href="/docs/linux/man/8-fsck-minix/">fsck.minix</a></code>(8), <code>fsck.ntfs</code>(8), <code><a href="/docs/linux/man/8-fsck-xfs/">fsck.xfs</a></code>(8) </p>

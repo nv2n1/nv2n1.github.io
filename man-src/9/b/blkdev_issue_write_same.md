@@ -15,23 +15,23 @@ blkdev_issue_write_same - queue a write same operation
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>target blockdev</dl>
+<dl><dd></dd><dd>target blockdev</dd></dl>
  
 
  <i>sector</i>
-<dl><dd>start sector</dl>
+<dl><dd>start sector</dd></dl>
  
 
  <i>nr_sects</i>
-<dl><dd>number of sectors to write</dl>
+<dl><dd>number of sectors to write</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags (for bio_alloc)</dl>
+<dl><dd>memory allocation flags (for bio_alloc)</dd></dl>
  
 
  <i>page</i>
-<dl><dd>page containing data to write</dl>
+<dl><dd>page containing data to write</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,14 +17,14 @@ description: "git-strip-merge – A git-merge wrapper that deletes files on a \"
 <p> For more information, see &lt;<a rel="nofollow" href="http://stackoverflow.com/questions/3111515">http://stackoverflow.com/questions/3111515</a>&gt;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></p>
-<dd> show help message and exit</p>
-<dt><code>-v</code>,<code>&nbsp;<wbr>&#8211;verbose</code></p>
-<dd> do not use -q to supress normal output of internal steps from git checkout, rm, commit. By default, only git merge output is shown. Errors, however, are never supressed.</p>
-<dt><code>-M&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;msgcommit</code>=&lt;message&gt;</p>
-<dd> message for the removal commit in &lt;branch&gt;. Not to be confused with the message of the merge commit, which is set by -m. Default message is: &quot;remove files from &#8216;&lt;branch&gt;&#8217; before merge&quot;.</p>
-<dt><code>-m&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;message</code>=&lt;message&gt;</p>
-<dd> message for the merge commit. Since we are not merging &lt;branch&gt; directly, but rather a detached commit based on it, we forge a message similar to git&#8217;s default for a branch merge. Otherwise git would use in message the full and ugly SHA1 of our commit. Default message is: &quot;Merge stripped branch &#8216;&lt;branch&gt;&#8217;&quot;.</dl>
+<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> show help message and exit</dd>
+<dt><code>-v</code>,<code>&nbsp;<wbr>&#8211;verbose</code></dt>
+<dd> do not use -q to supress normal output of internal steps from git checkout, rm, commit. By default, only git merge output is shown. Errors, however, are never supressed.</dd>
+<dt><code>-M&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;msgcommit</code>=&lt;message&gt;</dt>
+<dd> message for the removal commit in &lt;branch&gt;. Not to be confused with the message of the merge commit, which is set by -m. Default message is: &quot;remove files from &#8216;&lt;branch&gt;&#8217; before merge&quot;.</dd>
+<dt><code>-m&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;message</code>=&lt;message&gt;</dt>
+<dd> message for the merge commit. Since we are not merging &lt;branch&gt; directly, but rather a detached commit based on it, we forge a message similar to git&#8217;s default for a branch merge. Otherwise git would use in message the full and ugly SHA1 of our commit. Default message is: &quot;Merge stripped branch &#8216;&lt;branch&gt;&#8217;&quot;.</dd></dl>
 <p> For both commit messages, the token &quot;&lt;branch&gt;&quot; is replaced for the actual &lt;branch&gt; name. </p>
 <p> Additional options are passed unchecked to git merge. </p>
 <p> All options must precede &lt;branch&gt; and FILE(s), except -h and &#8211;help that may appear anywhere on the command line.</p>

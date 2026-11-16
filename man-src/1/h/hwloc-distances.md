@@ -13,26 +13,26 @@ description: "hwloc-distances – Displays distance matrices"
 <p> <code>hwloc-distances</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code> <code>&#8211;logical</code></p>
-<dd> Display hwloc logical indexes (default) instead of physical/OS indexes.</p>
-<dt><code>-p</code> <code>&#8211;physical</code></p>
-<dd> Display OS/physical indexes instead of hwloc logical indexes.</p>
-<dt><code>-i</code> &lt;file&gt;, <code>&#8211;input</code> &lt;file&gt;</p>
-<dd> Read topology from XML file &lt;file&gt; (instead of discovering the topology on the local machine). If &lt;file&gt; is &quot;-&quot;, the standard input is used. XML support must have been compiled in to hwloc for this option to be usable.</p>
-<dt><code>-i</code> &lt;directory&gt;, <code>&#8211;input</code> &lt;directory&gt;</p>
-<dd> Read topology from the chroot specified by &lt;directory&gt; (instead of discovering the topology on the local machine). This option is generally only available on Linux. The chroot was usually created by gathering another machine topology with hwloc-gather-topology.</p>
-<dt><code>-i</code> &lt;specification&gt;, <code>&#8211;input</code> &lt;specification&gt;</p>
-<dd> Simulate a fake hierarchy (instead of discovering the topology on the local machine). If &lt;specification&gt; is &quot;node:2 pu:3&quot;, the topology will contain two NUMA nodes with 3 processing units in each of them. The &lt;specification&gt; string must end with a number of PUs.</p>
-<dt><code>&#8211;if</code> &lt;format&gt;, <code>&#8211;input-format</code> &lt;format&gt;</p>
-<dd> Enforce the input in the given format, among <code>xml</code>, <code>fsroot</code> and <code>synthetic</code>.</p>
-<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</p>
-<dd> Restrict the topology to the given cpuset.</p>
-<dt><code>&#8211;whole-system</code></p>
-<dd> Do not consider administration limitations.</p>
-<dt><code>-v</code> <code>&#8211;verbose</code></p>
-<dd> Verbose messages.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Report version and exit.</dl>
+<dt><code>-l</code> <code>&#8211;logical</code></dt>
+<dd> Display hwloc logical indexes (default) instead of physical/OS indexes.</dd>
+<dt><code>-p</code> <code>&#8211;physical</code></dt>
+<dd> Display OS/physical indexes instead of hwloc logical indexes.</dd>
+<dt><code>-i</code> &lt;file&gt;, <code>&#8211;input</code> &lt;file&gt;</dt>
+<dd> Read topology from XML file &lt;file&gt; (instead of discovering the topology on the local machine). If &lt;file&gt; is &quot;-&quot;, the standard input is used. XML support must have been compiled in to hwloc for this option to be usable.</dd>
+<dt><code>-i</code> &lt;directory&gt;, <code>&#8211;input</code> &lt;directory&gt;</dt>
+<dd> Read topology from the chroot specified by &lt;directory&gt; (instead of discovering the topology on the local machine). This option is generally only available on Linux. The chroot was usually created by gathering another machine topology with hwloc-gather-topology.</dd>
+<dt><code>-i</code> &lt;specification&gt;, <code>&#8211;input</code> &lt;specification&gt;</dt>
+<dd> Simulate a fake hierarchy (instead of discovering the topology on the local machine). If &lt;specification&gt; is &quot;node:2 pu:3&quot;, the topology will contain two NUMA nodes with 3 processing units in each of them. The &lt;specification&gt; string must end with a number of PUs.</dd>
+<dt><code>&#8211;if</code> &lt;format&gt;, <code>&#8211;input-format</code> &lt;format&gt;</dt>
+<dd> Enforce the input in the given format, among <code>xml</code>, <code>fsroot</code> and <code>synthetic</code>.</dd>
+<dt><code>&#8211;restrict</code> &lt;cpuset&gt;</dt>
+<dd> Restrict the topology to the given cpuset.</dd>
+<dt><code>&#8211;whole-system</code></dt>
+<dd> Do not consider administration limitations.</dd>
+<dt><code>-v</code> <code>&#8211;verbose</code></dt>
+<dd> Verbose messages.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Report version and exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-distances displays also distance matrices attached to the topology. The value in the i-th row and j-th column is the distance from object #i to object #j. </p>
 <p> Unless defined by the user, matrices currently always contain relative latencies between NUMA nodes (which may or may not be accurate). See the definition of <i>struct hwloc_distances_s</i> in <i>include/hwloc.h</i> or the documentation for details. </p>

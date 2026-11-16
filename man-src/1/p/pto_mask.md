@@ -19,21 +19,21 @@ description: "pto_mask – Apply a mask"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> | &#8211;output=file.pto</p>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_mask.pto</p>
-<dt><code>&#8211;mask=filename [at] imgNr</code></p>
-<dd> Read the mask from the file and assign to given image</p>
-<dt><code>&#8211;rotate=CLOCKWISE|90|COUNTERCLOCKWISE|-90</code></p>
-<dd> Rotates the mask clock- or counterclockwise</p>
-<dt><code>&#8211;process=CLIP|SCALE|PROP_SCALE</code></p>
-<dd> Specify how the mask should be modified if the mask is created for an image with different size </p>
+<dt><code>-o</code> | &#8211;output=file.pto</dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_mask.pto</dd>
+<dt><code>&#8211;mask=filename [at] imgNr</code></dt>
+<dd> Read the mask from the file and assign to given image</dd>
+<dt><code>&#8211;rotate=CLOCKWISE|90|COUNTERCLOCKWISE|-90</code></dt>
+<dd> Rotates the mask clock- or counterclockwise</dd>
+<dt><code>&#8211;process=CLIP|SCALE|PROP_SCALE</code></dt>
+<dd> Specify how the mask should be modified if the mask is created for an image with different size </dd>
 <pre>
    * CLIP: clipping (Default)
    * SCALE: Scaling width and height individually
    * PROP_SCALE: Proportional scale
 </pre>
-<dt><code>-h</code> | &#8211;help</p>
-<dd> Shows this help</dl>
+<dt><code>-h</code> | &#8211;help</dt>
+<dd> Shows this help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

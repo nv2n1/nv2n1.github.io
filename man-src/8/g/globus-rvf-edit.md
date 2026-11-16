@@ -15,16 +15,16 @@ description: "globus-rvf-edit – Edit a GRAM5 RSL validation file"
 <p> The full set of command-line options to <code>globus-rvf-edit</code> consists of: consists of: </p>
 <p> <i>-h</i></p>
 <dl>
-<dd>Print command-line option summary and exit</dl>
+<dd>Print command-line option summary and exit</dd></dl>
 <p> <i>-s</i></p>
 <dl>
-<dd>Edit of the site-specific RVF file, which provides override values applicable to all LRMs installed on the system.</dl>
+<dd>Edit of the site-specific RVF file, which provides override values applicable to all LRMs installed on the system.</dd></dl>
 <p> <code>&#8216;-l &#8216;</code></p>
 <dl>
-<dd>Edit the site-specific LRM overrides for the LRM named by the <i>&#8216;LRM</i>&#8216; parameter to the option.</dl>
+<dd>Edit the site-specific LRM overrides for the LRM named by the <i>&#8216;LRM</i>&#8216; parameter to the option.</dd></dl>
 <p> <code>&#8216;-f &#8216;</code></p>
 <dl>
-<dd>Edit the RVF file located at <i>&#8216;PATH</i>&#8216;</dl>
+<dd>Edit the RVF file located at <i>&#8216;PATH</i>&#8216;</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-globus-rvf-check/">globus-rvf-check</a>(8)</p>
 <h2>Author</h2>

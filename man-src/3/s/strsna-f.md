@@ -26,10 +26,10 @@ description: "strsna.f –"
  block upper triangular with 1-by-1 and 2-by-2 diagonal blocks; each
  2-by-2 diagonal block has its diagonal elements equal and its
  off-diagonal elements of opposite sign.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  Specifies whether condition numbers are required for
  eigenvalues (S) or eigenvectors (SEP):
@@ -130,13 +130,13 @@ description: "strsna.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -164,7 +164,8 @@ description: "strsna.f –"
  An approximate error bound for a computed right eigenvector VR(i)
  is given by
  EPS * norm(T) / SEP(i)</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 264 of file strsna.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

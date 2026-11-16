@@ -30,48 +30,48 @@ description: "QwtPointArrayData –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> Array of x values<br />
- <i>y</i> Array of y values</dl>
+ <i>y</i> Array of y values</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setSamples()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setSamples()</code></dd></dl>
 <h3>QwtPointArrayData::QwtPointArrayData (const double *x, const double *y, size_tsize)</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> Array of x values<br />
  <i>y</i> Array of y values<br />
- <i>size</i> Size of the x and y arrays</dl>
+ <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setSamples()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code>, <code>QwtPlotCurve::setSamples()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtPointArrayData::boundingRect () const [virtual]</h3>
 <p>Calculate the bounding rectangle. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>QPointF QwtPointArrayData::sample (size_tindex) const [virtual]</h3>
 <p>Return the sample at position i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at position i</dl>
+<dd>Sample at position i</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>size_t QwtPointArrayData::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the data set</dl>
+<dd>Size of the data set</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>const QVector&lt; double &gt; &amp; QwtPointArrayData::xData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the x-values</dl>
+<dd>Array of the x-values</dd></dl>
 <h3>const QVector&lt; double &gt; &amp; QwtPointArrayData::yData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the y-values</dl>
+<dd>Array of the y-values</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

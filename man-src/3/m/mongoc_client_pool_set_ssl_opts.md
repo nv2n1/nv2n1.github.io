@@ -19,11 +19,11 @@ mongoc_client_pool_set_ssl_opts (mongoc_client_pool_t *pool,
 <p> Beginning in version 1.2.0, once a pool has any SSL options set, all connections use SSL, even if &quot;ssl=true&quot; is omitted from the MongoDB URI. Before, SSL options were ignored unless &quot;ssl=true&quot; was included in the URI. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>pool</code></p>
-<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dl>
+<dt><code>pool</code></dt>
+<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_ssl_opt_t</code> that will not be modified.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_ssl_opt_t</code> that will not be modified.</dd></dl>
 <h2>Availability</h2>
 <p>This feature requires that the MongoDB C driver was compiled with <code>&#8211;enable-ssl</code> \&amp;. </p>
 <h2>Colophon</h2>

@@ -19,11 +19,11 @@ description: "colrm – remove columns from a file"
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>HISTORY</h2>
 <p> The <code>colrm</code> command appeared in 3.0BSD.</p>
 <h2>SEE ALSO</h2>

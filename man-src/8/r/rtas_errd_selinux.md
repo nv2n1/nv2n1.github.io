@@ -80,14 +80,14 @@ description: "rtas_errd_selinux – Security Enhanced Linux Policy for the rtas_
 <p> <code>rtas_errd_exec_t</code> </p>
 <p> &#8211; Set files with the rtas_errd_exec_t type, if you want to transition an executable to the rtas_errd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/rtas_errd, /usr/libexec/ppc64-diag/rtas_errd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/rtas_errd, /usr/libexec/ppc64-diag/rtas_errd </dd>
 </dl>
 <p> <code>rtas_errd_log_t</code> </p>
 <p> &#8211; Set files with the rtas_errd_log_t type, if you want to treat the data as rtas errd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/platform.*, /var/log/rtas_errd.*, /var/log/epow_status.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/platform.*, /var/log/rtas_errd.*, /var/log/epow_status.* </dd>
 </dl>
 <p> <code>rtas_errd_tmp_t</code> </p>
 <p> &#8211; Set files with the rtas_errd_tmp_t type, if you want to store rtas errd temporary files in the /tmp directories. </p>
@@ -98,8 +98,8 @@ description: "rtas_errd_selinux – Security Enhanced Linux Policy for the rtas_
 <p> <code>rtas_errd_var_lock_t</code> </p>
 <p> &#8211; Set files with the rtas_errd_var_lock_t type, if you want to treat the files as rtas errd var lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/.*librtas, /var/lock/subsys/rtas_errd </p>
+<dt>Paths:</dt>
+<dd>/var/lock/.*librtas, /var/lock/subsys/rtas_errd </dd>
 </dl>
 <p> <code>rtas_errd_var_run_t</code> </p>
 <p> &#8211; Set files with the rtas_errd_var_run_t type, if you want to store the rtas errd files under the /run or /var/run directory. </p>

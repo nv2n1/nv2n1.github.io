@@ -10,14 +10,14 @@ description: "pkcs11-tokens – list PKCS#11 available tokens"
 <p>pkcs11-tokens &#8211; list PKCS#11 available tokens</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pkcs11-tokens</code> [<code>-m&nbsp;<wbr></code><i>module</i>]</dl>
+<dt> <code>pkcs11-tokens</code> [<code>-m&nbsp;<wbr></code><i>module</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>pkcs11-tokens</code></p>
-<dd>lists the PKCS#11 available tokens with defaults from the slot/token scan performed at application initialization.</p>
+<dd>lists the PKCS#11 available tokens with defaults from the slot/token scan performed at application initialization.</dd>
 <h2>Arguments</h2>
 <p>-m <i>module</i></p>
 <dl>
-<dd>Specify the PKCS#11 provider module. This must be the full path to a shared library object implementing the PKCS#11 API for the device.</dl>
+<dd>Specify the PKCS#11 provider module. This must be the full path to a shared library object implementing the PKCS#11 API for the device.</dd></dl>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

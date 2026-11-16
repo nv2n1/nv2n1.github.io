@@ -12,61 +12,19 @@ description: "sc::OneBodyIntIter –"
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::SymmOneBodyIntIter</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OneBodyIntIter (const Ref&lt; OneBodyInt &gt; &amp;)
-
-
-
 virtual void start (int ist=0, int jst=0, int ien=0, int jen=0)
-
-
-
 virtual void next ()
-
-
-
 int ready () const
-
-
-
 int ishell () const
-
-
-
 int jshell () const
-
-
-
 int ijshell () const
-
-
-
 int redundant () const
-
-
-
 void set_redundant (int i)
-
-
-
 virtual double scale () const
-
-
-
 Ref&lt; OneBodyInt &gt; one_body_int ()
-
-
-
 ShellPairIter &amp; current_pair ()
-
-
-
 virtual bool cloneable ()
-
-
-
 virtual Ref&lt; OneBodyIntIter &gt; clone ()
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>obi</code> </p>
 <p> <code>ShellPairIter</code> <code>spi</code> </p>

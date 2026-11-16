@@ -11,14 +11,14 @@ description: "tevent_events – Chapter 2: Tevent events"
 <h2>Tevent events</h2>
 <p>Ok, after reading previous chapter we can start doing something useful. So, the way of creating events is similar for all types &#8211; signals, file descriptors, time or immediate events. At the beginning it is good to know about some typedefs which are set in tevent library and which specify the arguments for each callback. These callbacks are: </p>
 <dl>
-<dt>&bull;</p>
-<dd><code>tevent_timer_handler_t()</code></p>
-<dt>&bull;</p>
-<dd><code>tevent_immediate_handler_t()</code></p>
-<dt>&bull;</p>
-<dd><code>tevent_signal_handler_t()</code></p>
-<dt>&bull;</p>
-<dd><code>tevent_fd_handler_t()</code></dl>
+<dt>&bull;</dt>
+<dd><code>tevent_timer_handler_t()</code></dd>
+<dt>&bull;</dt>
+<dd><code>tevent_immediate_handler_t()</code></dd>
+<dt>&bull;</dt>
+<dd><code>tevent_signal_handler_t()</code></dd>
+<dt>&bull;</dt>
+<dd><code>tevent_fd_handler_t()</code></dd></dl>
 <p> According their names it is obvious that for creating callback for e.g. time event, tevent_timer_handler_t will be used. </p>
 <p> The best way how to introduce registering an event and setting up a callback would be example, so examples describing all the types of events follow.</p>
 <h3>Time event</h3>
@@ -177,14 +177,14 @@ int main (void)
 <p>Support of events on file descriptors is mainly useful for socket communication but it certainly works flawlessly with standard streams (stdin, stdout, stderr) as well. Working asynchronously with file descriptors enables switching within processing I/O operations. This ability may rise with a greater number of I/O operations and such overlapping leads to enhancement of the throughput. </p>
 <p> There are several other functions included in tevent API related to handling file descriptors (there are too many functions defined within tevent therefore just some of them are fully described within this thesis. The declaration of the rest can be easily found on the library’s website or directly from the source code): </p>
 <dl>
-<dt>&bull;</p>
-<dd><code>tevent_fd_set_close_fn()</code> &#8211; can add another function to be called at the moment when a structure tevent fd is freed.</p>
-<dt>&bull;</p>
-<dd><code>tevent_fd_set_auto_close()</code> &#8211; calling this function can simplify the maintenance of file descriptors, because it instructs tevent to close the appropriate file descriptor when the tevent fd structure is about to be freed.</p>
-<dt>&bull;</p>
-<dd><code>tevent_fd_get_flags()</code> &#8211; returns flags which are set on the file descriptor connected with this tevent fd structure.</p>
-<dt>&bull;</p>
-<dd><code>tevent_fd_set_flags()</code> &#8211; sets specified flags on the event’s file descriptor.</dl>
+<dt>&bull;</dt>
+<dd><code>tevent_fd_set_close_fn()</code> &#8211; can add another function to be called at the moment when a structure tevent fd is freed.</dd>
+<dt>&bull;</dt>
+<dd><code>tevent_fd_set_auto_close()</code> &#8211; calling this function can simplify the maintenance of file descriptors, because it instructs tevent to close the appropriate file descriptor when the tevent fd structure is about to be freed.</dd>
+<dt>&bull;</dt>
+<dd><code>tevent_fd_get_flags()</code> &#8211; returns flags which are set on the file descriptor connected with this tevent fd structure.</dd>
+<dt>&bull;</dt>
+<dd><code>tevent_fd_set_flags()</code> &#8211; sets specified flags on the event’s file descriptor.</dd></dl>
 <pre>static void close_fd(struct tevent_context *ev, struct tevent_fd *fd_event,
  int fd, void *private_data)
 {

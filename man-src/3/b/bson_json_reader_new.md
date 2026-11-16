@@ -20,20 +20,20 @@ bson_json_reader_new (void                *data,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>data</code></p>
-<dd> A user-defined pointer.</dl>
+<dt><code>data</code></dt>
+<dd> A user-defined pointer.</dd></dl>
 <dl>
-<dt><code>cb</code></p>
-<dd> A bson_json_reader_cb.</dl>
+<dt><code>cb</code></dt>
+<dd> A bson_json_reader_cb.</dd></dl>
 <dl>
-<dt><code>dcb</code></p>
-<dd> A bson_json_destroy_cb.</dl>
+<dt><code>dcb</code></dt>
+<dd> A bson_json_destroy_cb.</dd></dl>
 <dl>
-<dt><code>allow_multiple</code></p>
-<dd> A bool indicating if more than one document is allowed in the stream.</dl>
+<dt><code>allow_multiple</code></dt>
+<dd> A bool indicating if more than one document is allowed in the stream.</dd></dl>
 <dl>
-<dt><code>buf_size</code></p>
-<dd> A size_t containing the requested internal buffer size.</dl>
+<dt><code>buf_size</code></dt>
+<dd> A size_t containing the requested internal buffer size.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates a new bson_json_reader_t that can read from an arbitrary data source in a streaming fashion. </p>
 <h2>RETURNS</h2>

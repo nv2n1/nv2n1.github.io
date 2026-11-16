@@ -90,11 +90,11 @@ description: "pmieconf – generalized pmie rules and customizations"
 <p>Note that for the above rule to be complete, &quot;threshold&quot; and &quot;pct&quot; would also need to be defined &#8211; for the full expression of this rule, refer to <i>$PCP_VAR_DIR/config/pmieconf/memory/exhausted</i>.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>$PCP_VAR_DIR/config/pmieconf/</i>*/*</p>
-<dd>generalized system resource monitoring rules</p>
-<dt><i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i></p>
-<dd>default super-user settings for system resource monitoring rules</p>
-<dt><i>$HOME/.pcp/pmie/config.pmie</i></p>
-<dd>default user settings for system resource monitoring rules</dl>
+<dt><i>$PCP_VAR_DIR/config/pmieconf/</i>*/*</dt>
+<dd>generalized system resource monitoring rules</dd>
+<dt><i>$PCP_VAR_DIR/config/pmieconf/config.pmie</i></dt>
+<dd>default super-user settings for system resource monitoring rules</dd>
+<dt><i>$HOME/.pcp/pmie/config.pmie</i></dt>
+<dd>default user settings for system resource monitoring rules</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and <code><a href="/docs/linux/man/1-pmieconf/">pmieconf</a></code>(1). </p>

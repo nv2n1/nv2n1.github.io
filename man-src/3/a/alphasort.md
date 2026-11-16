@@ -15,7 +15,6 @@ description: "scandir, scandirat, alphasort, versionsort – scan a directory fo
 int scandir(const char *dirp, struct dirent ***namelist,
             int (*filter)(const struct dirent *),
             int (*compar)(const struct dirent **, const struct dirent **));
-
 int alphasort(const struct dirent **a, const struct dirent **b);
 int versionsort(const struct dirent **a, const struct dirent **b);
 #include &lt;dirent.h&gt;
@@ -29,8 +28,8 @@ int scandirat(int dirfd, const char *dirp,
 <p> <code>scandir</code>(), <code>alphasort</code>(): </p>
 <dl>
 <dt>
-<dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+</dt><dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>versionsort</code>(): _GNU_SOURCE </p>
 <p> <code>scandirat</code>(): _GNU_SOURCE</p>
 <h2>DESCRIPTION</h2>
@@ -47,18 +46,18 @@ int scandirat(int dirfd, const char *dirp,
 <p> The <code>alphasort</code>() and <code>versionsort</code>() functions return an integer less than, equal to, or greater than zero if the first argument is considered to be respectively less than, equal to, or greater than the second.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd> The path in <i>dirp</i> does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to complete the operation.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> The path in <i>dirp</i> is not a directory.</dl>
+<dt><code>ENOENT</code></dt>
+<dd> The path in <i>dirp</i> does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to complete the operation.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> The path in <i>dirp</i> is not a directory.</dd></dl>
 <p> The following additional errors can occur for <code>scandirat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>dirp</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>dirp</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>versionsort</code>() was added to glibc in version 2.1. </p>
 <p> <code>scandirat</code>() was added to glibc in version 2.15.</p>

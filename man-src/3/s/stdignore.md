@@ -20,14 +20,10 @@ An object of unspecified type such that any value can be assigned to it with no 
 
 unpack a pair returned by set.insert(), but only save the boolean. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;set&gt;
-
 #include &lt;tuple&gt;
 int main()
-
 {
     std::set&lt;std::string&gt; set_of_str;
     bool inserted = false;

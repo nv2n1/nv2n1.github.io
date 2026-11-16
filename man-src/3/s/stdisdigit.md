@@ -11,7 +11,6 @@ std::isdigit - std::isdigit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isdigit(int ch);</code></pre> 
 Checks if the given character is one of the 10 decimal digits: 0123456789. 
 The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF. 
@@ -33,7 +32,6 @@ Like all other functions from &lt;cctype&gt;, the behavior of std::isdigit is un
     return std::isdigit(static_cast&lt;unsigned char&gt;(ch));
 } 
 Similarly, they should not be directly used with standard algorithms when the iterator's value type is char or signed char. Instead, convert the value to unsigned char first: <pre><code>int count_digits(const std::string &amp;s)
-
 {
     return std::count_if(s.begin(), s.end(),
                          // static_cast&lt;int(*)(int)&gt;(std::isdigit)         // wrong

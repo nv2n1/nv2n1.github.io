@@ -18,7 +18,7 @@ description: "slabad.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLABAD takes as input the values computed by SLAMCH for underflow and
  overflow, and returns the square root of each of these values if the
@@ -29,11 +29,11 @@ description: "slabad.f –"
  SLAMCH does not compensate for poor arithmetic in the upper half of
  the exponent range, as is found on a Cray.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>SMALL</i> </p>
+</dt><dd> <i>SMALL</i> </dd>
 <pre>
           SMALL is REAL
           On entry, the underflow threshold as computed by SLAMCH.
@@ -51,14 +51,14 @@ description: "slabad.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 75 of file slabad.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

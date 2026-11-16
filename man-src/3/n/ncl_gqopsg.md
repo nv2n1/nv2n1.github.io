@@ -12,9 +12,9 @@ GQOPSG (Inquire name of open segment) - returns the name of the currently open s
 
  void ginq_name_open_seg(Gint *err_ind, Gint *name_open_seg);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the GKS state is SGOP (segment open), then ERRIND is returned as &quot;0&quot;; otherwise ERRIND is returned as &quot;4&quot;.
-<dt>SGNA
-<dd>(Integer, Output) - If the GKS state is SGOP (segment open), then SGNA is returned as the number of the currently open segment; otherwise SGNA is undefined.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Output) - If the GKS state is SGOP (segment open), then ERRIND is returned as &quot;0&quot;; otherwise ERRIND is returned as &quot;4&quot;.
+</dd><dt>SGNA
+</dt><dd>(Integer, Output) - If the GKS state is SGOP (segment open), then SGNA is returned as the number of the currently open segment; otherwise SGNA is undefined.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gevtm, gactm, gclsg, gcrsg, gcsgwk, gdsg, gqsgus, gssgt., ginq_name_open_seg 
 
  Hardcopy: &quot;User's Guide for NCAR GKS-0A Graphics&quot;

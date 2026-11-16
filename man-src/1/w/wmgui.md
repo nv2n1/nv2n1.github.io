@@ -16,10 +16,10 @@ description: "wmgui – GTK gui to the wiimote"
 <p> <code>wmgui</code> is a program that provides a simple GTK gui to the wiimote.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><code>bdaddr</code></p>
-<dd> Specify the wiimote bluetooth address. The bluetooth device address (bdaddr) of the wiimote can be specified on the command-line, or through the WIIMOTE_BDADDR environment variable, in the that order of precedence. If neither is given, the first wiimote found by hci_inquiry will be used.</dl>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>bdaddr</code></dt>
+<dd> Specify the wiimote bluetooth address. The bluetooth device address (bdaddr) of the wiimote can be specified on the command-line, or through the WIIMOTE_BDADDR environment variable, in the that order of precedence. If neither is given, the first wiimote found by hci_inquiry will be used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wminput/">wminput</a></code>(1), </p>
 <h2>AUTHOR</h2>

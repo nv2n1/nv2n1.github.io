@@ -15,58 +15,58 @@ description: "upstart-local-bridge – Bridge between Upstart and a local client
 <p> The local unix domain socket can be either named or abstract.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;any-user</code></p>
-<dd>By default the bridge will only accept connections from clients running under the same user ID as the bridge itself. This option allows connections from any user.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd>Detach and run in the background.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Enable debugging output.</p>
-<dt><code>&#8211;event </code><i>event</i></p>
-<dd>Specify name of event to emit on receipt of a name=value pair.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Show brief usage summary.</p>
-<dt><code>&#8211;path </code><i>path</i></p>
-<dd>Specify path for local/abstract socket to listen on. If the first byte of <i>path</i> is an &#8216;<i>@</i>&#8216;, the socket will be created as an abstract socket.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Enable verbose output.</dl>
+<dt><code>&#8211;any-user</code></dt>
+<dd>By default the bridge will only accept connections from clients running under the same user ID as the bridge itself. This option allows connections from any user.</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Detach and run in the background.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Enable debugging output.</dd>
+<dt><code>&#8211;event </code><i>event</i></dt>
+<dd>Specify name of event to emit on receipt of a name=value pair.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Show brief usage summary.</dd>
+<dt><code>&#8211;path </code><i>path</i></dt>
+<dd>Specify path for local/abstract socket to listen on. If the first byte of <i>path</i> is an &#8216;<i>@</i>&#8216;, the socket will be created as an abstract socket.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Enable verbose output.</dd></dl>
 <h2>Event Details</h2>
 <p>The following environment variables are added automatically to the event to be emitted, with the name=value pair being added as the last variable. </p>
 <dl>
-<dt>&bull;</p>
-<dd>SOCKET_TYPE=unix</p>
-<dt>&bull;</p>
-<dd>SOCKET_VARIANT=[<i>named</i>|<i>abstract</i>] Sub-type of socket.</p>
-<dt>&bull;</p>
-<dd>CLIENT_UID=<i>UID</i> User ID of connected client.</p>
-<dt>&bull;</p>
-<dd>CLIENT_GID=<i>GID</i> Group ID of connected client.</p>
-<dt>&bull;</p>
-<dd>CLIENT_PID=<i>PID</i> Process ID of connected client.</p>
-<dt>&bull;</p>
-<dd>SOCKET_PATH=<i>PATH</i></dl>
+<dt>&bull;</dt>
+<dd>SOCKET_TYPE=unix</dd>
+<dt>&bull;</dt>
+<dd>SOCKET_VARIANT=[<i>named</i>|<i>abstract</i>] Sub-type of socket.</dd>
+<dt>&bull;</dt>
+<dd>CLIENT_UID=<i>UID</i> User ID of connected client.</dd>
+<dt>&bull;</dt>
+<dd>CLIENT_GID=<i>GID</i> Group ID of connected client.</dd>
+<dt>&bull;</dt>
+<dd>CLIENT_PID=<i>PID</i> Process ID of connected client.</dd>
+<dt>&bull;</dt>
+<dd>SOCKET_PATH=<i>PATH</i></dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt>upstart-local-bridge &#8211;event=foo &#8211;path=/var/foo/bar</p>
-<dd>Listen on local socket <i>/var/foo/bar</i> and when a name=value pair is read, emit an event of the form: </p>
+<dt>upstart-local-bridge &#8211;event=foo &#8211;path=/var/foo/bar</dt>
+<dd>Listen on local socket <i>/var/foo/bar</i> and when a name=value pair is read, emit an event of the form: </dd>
 <dl>
 <dd>
 <pre>foo SOCKET_TYPE=unix SOCKET_VARIANT=named SOCKET_PATH=/var/foo/bar name=value</pre>
-</dl>
-<dt>upstart-local-bridge &#8211;event=bar &#8211;path=@/var/foo/bar</p>
-<dd>Listen on abstract socket <i>@/var/foo/bar</i> and when a name=value pair is read, emit an event of the form: </p>
+</dd></dl>
+<dt>upstart-local-bridge &#8211;event=bar &#8211;path=@/var/foo/bar</dt>
+<dd>Listen on abstract socket <i>@/var/foo/bar</i> and when a name=value pair is read, emit an event of the form: </dd>
 <dl>
 <dd>
 <pre>bar SOCKET_TYPE=unix SOCKET_VARIANT=abstract SOCKET_PATH=@/var/foo/bar name=value</pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>Notes</h2>
 <dl>
-<dt>&bull;</p>
-<dd>If a named local socket is specified, all path elements except for the last must already exist before the bridge starts.</dl>
+<dt>&bull;</dt>
+<dd>If a named local socket is specified, all path elements except for the last must already exist before the bridge starts.</dd></dl>
 <h2>Limitations</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Only a single client connection is serviced at any one time.</dl>
+<dt>&bull;</dt>
+<dd>Only a single client connection is serviced at any one time.</dd></dl>
 <h2>Author</h2>
 <p>Written by James Hunt &lt;<code>james.hunt [at] canonical.com</code>&gt;</p>
 <h2>Bugs</h2>

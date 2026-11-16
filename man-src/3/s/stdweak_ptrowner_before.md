@@ -12,22 +12,15 @@ std::weak_ptr&lt;T&gt;::owner_before - std::weak_ptr&lt;T&gt;::owner_before
 
 <pre><code>template &lt;class Y&gt;
 (until C++ 17)
-
     bool owner_before(const weak_ptr&lt;Y&gt; &amp;other) const;
-
 template &lt;class Y&gt;
 (since C++ 17)
-
     bool owner_before(const weak_ptr&lt;Y&gt; &amp;other) const noexcept;
-
 template &lt;class Y&gt;
 (until C++ 17)
-
     bool owner_before(const std::shared_ptr&lt;Y&gt; &amp;other) const;
-
 template &lt;class Y&gt;
 (since C++ 17)
-
     bool owner_before(const std::shared_ptr&lt;Y&gt; &amp;other) const noexcept;</code></pre> 
 Checks whether this weak_ptr precedes other in implementation defined owner-based (as opposed to value-based) order. The order is such that two smart pointers compare equivalent only if they are both empty or if they both own the same object, even if the values of the pointers obtained by get() are different (e.g. because they point at different subobjects within the same object) 
 This ordering is used to make shared and weak pointers usable as keys in associative containers, typically through std::owner_less. 
@@ -47,7 +40,6 @@ LWG_2942 C++17 weak_ptr::owner_before isn't noexcept while its shared_ptr counte
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 struct Foo {
     int n1;
@@ -57,9 +49,7 @@ struct Foo {
     {
     }
 };
-
 int main()
-
 {
     auto p1 = std::make_shared&lt;Foo&gt;(1, 2);
     std::shared_ptr&lt;int&gt; p2(p1, &amp;p1-&gt;n1);
@@ -72,9 +62,7 @@ int main()
     std::weak_ptr&lt;int&gt; w2(p2);
     std::weak_ptr&lt;int&gt; w3(p3);
     std::cout
-
         //              &lt;&lt; &quot;w2 &lt; w3 &quot; &lt;&lt; (w2 &lt; w3) &lt;&lt; '\n'  // won't compile
-
         //              &lt;&lt; &quot;w3 &lt; w2 &quot; &lt;&lt; (w3 &lt; w2) &lt;&lt; '\n'  // won't compile
         &lt;&lt; &quot;w2.owner_before(w3) &quot; &lt;&lt; w2.owner_before(w3) &lt;&lt; '\n'
         &lt;&lt; &quot;w3.owner_before(w2) &quot; &lt;&lt; w3.owner_before(w2) &lt;&lt; '\n';

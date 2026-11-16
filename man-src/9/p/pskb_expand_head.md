@@ -15,19 +15,19 @@ pskb_expand_head - reallocate header of sk_buff
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to reallocate</dl>
+<dl><dd></dd><dd>buffer to reallocate</dd></dl>
  
 
  <i>nhead</i>
-<dl><dd>room to add at head</dl>
+<dl><dd>room to add at head</dd></dl>
  
 
  <i>ntail</i>
-<dl><dd>room to add at tail</dl>
+<dl><dd>room to add at tail</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>allocation priority</dl>
+<dl><dd>allocation priority</dd></dl>
 
 <h2>Description</h2>
 

@@ -13,77 +13,78 @@ description: "nfsiostat – Emulate iostat for NFS mount points using /proc/self
 <h2>Description</h2>
 <p>The <code>nfsiostat</code> command displays NFS client per-mount statisitics.</p>
 <dl>
-<dt>&lt;interval&gt;</p>
-<dd>specifies the amount of time in seconds between each report. The first report contains statistics for the time since each file system was mounted. Each subsequent report contains statistics collected during the interval since the previous report.</p>
-<dt>&lt;count&gt;</p>
-<dd>If the <i>&lt;count&gt;</i> parameter is specified, the value of <i>&lt;count&gt; </i> determines the number of reports generated at <i>&lt;interval&gt; </i> seconds apart. if the interval parameter is specified without the <i>&lt;count&gt; </i> parameter, the command generates reports continuously.</p>
-<dt>&lt;options&gt;</p>
-<dd>Define below</p>
-<dt>&lt;mount_point&gt;</p>
-<dd>If one or more <i>&lt;mount point&gt; </i> names are specified, statistics for only these mount points will be displayed. Otherwise, all NFS mount points on the client are listed.</p>
-<dt>The meaning of each column of <code>nfsiostat</code>&#8216;s output is the following:</p>
+<dt>&lt;interval&gt;</dt>
+<dd>specifies the amount of time in seconds between each report. The first report contains statistics for the time since each file system was mounted. Each subsequent report contains statistics collected during the interval since the previous report.</dd>
+<dt>&lt;count&gt;</dt>
+<dd>If the <i>&lt;count&gt;</i> parameter is specified, the value of <i>&lt;count&gt; </i> determines the number of reports generated at <i>&lt;interval&gt; </i> seconds apart. if the interval parameter is specified without the <i>&lt;count&gt; </i> parameter, the command generates reports continuously.</dd>
+<dt>&lt;options&gt;</dt>
+<dd>Define below</dd>
+<dt>&lt;mount_point&gt;</dt>
+<dd>If one or more <i>&lt;mount point&gt; </i> names are specified, statistics for only these mount points will be displayed. Otherwise, all NFS mount points on the client are listed.</dd>
+<dt>The meaning of each column of <code>nfsiostat</code>&#8216;s output is the following:</dt>
 <dd>
+</dd><dl>
+<dd>&#8211; <code>op/s</code></dd>
 <dl>
-<dd>&#8211; <code>op/s</code></p>
+<dd>This is the number of operations per second.</dd>
 <dl>
-<dd>This is the number of operations per second.</p>
-<dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 </dl>
 <dl>
-<dd>&#8211; <code>rpc bklog</code></p>
+<dd>&#8211; <code>rpc bklog</code></dd>
 <dl>
-<dd>This is the length of the backlog queue.</dl>
+<dd>This is the length of the backlog queue.</dd></dl>
 </dl>
 <dl>
-<dd>&#8211; <code>kB/s</code></p>
+<dd>&#8211; <code>kB/s</code></dd>
 <dl>
-<dd>This is the number of kB written/read per second.</dl>
+<dd>This is the number of kB written/read per second.</dd></dl>
 </dl>
 <dl>
-<dd>&#8211; <code>kB/op</code></p>
+<dd>&#8211; <code>kB/op</code></dd>
 <dl>
-<dd>This is the number of kB written/read per each operation.</dl>
+<dd>This is the number of kB written/read per each operation.</dd></dl>
 </dl>
 <dl>
-<dd>&#8211; <code>retrans</code></p>
+<dd>&#8211; <code>retrans</code></dd>
 <dl>
-<dd>This is the number of retransmissions.</dl>
+<dd>This is the number of retransmissions.</dd></dl>
 </dl>
 <dl>
-<dd>&#8211; <code>avg RTT (ms)</code></p>
+<dd>&#8211; <code>avg RTT (ms)</code></dd>
 <dl>
-<dd>This is the duration from the time that client&#8217;s kernel sends the RPC request until the time it receives the reply.</dl>
+<dd>This is the duration from the time that client&#8217;s kernel sends the RPC request until the time it receives the reply.</dd></dl>
 </dl>
 <dl>
-<dd>&#8211; <code>avg exe (ms)</code></p>
+<dd>&#8211; <code>avg exe (ms)</code></dd>
 <dl>
-<dd>This is the duration from the time that NFS client does the RPC request to its kernel until the RPC request is completed, this includes the RTT time above.</dl>
+<dd>This is the duration from the time that NFS client does the RPC request to its kernel until the RPC request is completed, this includes the RTT time above.</dd></dl>
 </dl>
-<dt>Note that if an interval is used as argument to <code>nfsiostat</code>, then the diffrence from previous interval will be displayed, otherwise the results will be from the time that the share was mounted.</p>
+<dt>Note that if an interval is used as argument to <code>nfsiostat</code>, then the diffrence from previous interval will be displayed, otherwise the results will be from the time that the share was mounted.</dt>
 <dd>
 <h2>Options</h2>
-<dl>
-<dt><code>-a or &#8211;attr</code></p>
-<dd>displays statistics related to the attribute cache</p>
-<dt><code>-d or &#8211;dir </code></p>
-<dd>displays statistics related to directory operations</p>
-<dt><code>-h or &#8211;help </code></p>
-<dd>shows help message and exit</p>
-<dt><code>-l LIST or &#8211;list=LIST </code></p>
-<dd>only print stats for first LIST mount points</p>
-<dt><code>-p or &#8211;page</code></p>
-<dd>displays statistics related to the page cache</p>
-<dt><code>-s or &#8211;sort</code></p>
-<dd>Sort NFS mount points by ops/second</p>
-<dt><code>&#8211;version</code></p>
-<dd>show program&#8217;s version number and exit</dl>
+</dd><dl>
+<dt><code>-a or &#8211;attr</code></dt>
+<dd>displays statistics related to the attribute cache</dd>
+<dt><code>-d or &#8211;dir </code></dt>
+<dd>displays statistics related to directory operations</dd>
+<dt><code>-h or &#8211;help </code></dt>
+<dd>shows help message and exit</dd>
+<dt><code>-l LIST or &#8211;list=LIST </code></dt>
+<dd>only print stats for first LIST mount points</dd>
+<dt><code>-p or &#8211;page</code></dt>
+<dd>displays statistics related to the page cache</dd>
+<dt><code>-s or &#8211;sort</code></dt>
+<dd>Sort NFS mount points by ops/second</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>show program&#8217;s version number and exit</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/proc/self/mountstats</code></p>
-<dd></dl>
+<dt><code>/proc/self/mountstats</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code>iostat</code>(8), <code><a href="/docs/linux/man/8-mountstats/">mountstats</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a>(8)</code></p>
 <h2>Author</h2>
 <p>Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>
+</dl>

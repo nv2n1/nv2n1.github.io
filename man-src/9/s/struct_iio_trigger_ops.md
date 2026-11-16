@@ -18,20 +18,20 @@ description: "struct_iio_trigger_ops – operations structure for an iio_trigger
 <h2>Members</h2>
 <p>owner</p>
 <dl>
-<dd>used to monitor usage count of the trigger.</dl>
+<dd>used to monitor usage count of the trigger.</dd></dl>
 <p> set_trigger_state</p>
 <dl>
-<dd>switch on/off the trigger on demand</dl>
+<dd>switch on/off the trigger on demand</dd></dl>
 <p> try_reenable</p>
 <dl>
-<dd>function to reenable the trigger when the use count is zero (may be NULL)</dl>
+<dd>function to reenable the trigger when the use count is zero (may be NULL)</dd></dl>
 <p> validate_device</p>
 <dl>
-<dd>function to validate the device when the current trigger gets changed.</dl>
+<dd>function to validate the device when the current trigger gets changed.</dd></dl>
 <h2>Description</h2>
 <p>This is typically static const within a driver and shared by instances of a given device.</p>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

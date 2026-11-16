@@ -14,25 +14,25 @@ description: "call_usermodehelper_setup – prepare to call a usermode helper"
 <p><i>path</i></p>
 <dl>
 <dd>
-<dd>path to usermode executable</dl>
+</dd><dd>path to usermode executable</dd></dl>
 <p> <i>argv</i></p>
 <dl>
-<dd>arg vector for process</dl>
+<dd>arg vector for process</dd></dl>
 <p> <i>envp</i></p>
 <dl>
-<dd>environment for process</dl>
+<dd>environment for process</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>gfp mask for memory allocation</dl>
+<dd>gfp mask for memory allocation</dd></dl>
 <p> <i>init</i></p>
 <dl>
-<dd>an init function</dl>
+<dd>an init function</dd></dl>
 <p> <i>cleanup</i></p>
 <dl>
-<dd>a cleanup function</dl>
+<dd>a cleanup function</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>arbitrary context sensitive data</dl>
+<dd>arbitrary context sensitive data</dd></dl>
 <h2>Description</h2>
 <p>Returns either <code>NULL</code> on allocation failure, or a subprocess_info structure. This should be passed to call_usermodehelper_exec to exec the process and free the structure. </p>
 <p> The init function is used to customize the helper process prior to exec. A non-zero return code causes the process to error out, exit, and return the failure to the calling process </p>

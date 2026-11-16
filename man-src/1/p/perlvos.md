@@ -29,31 +29,26 @@ url: "/docs/linux/man/1-perlvos/"
 
 <dl>
 <dt>1.
-<dd> After you have built perl using the Configure script, ensure that you have modify and default write permission to <tt>&quot;&gt;system&gt;ported&quot;</tt> and all subdirectories. Then type 
-
+</dt><dd> After you have built perl using the Configure script, ensure that you have modify and default write permission to <tt>&quot;&gt;system&gt;ported&quot;</tt> and all subdirectories. Then type 
  <pre>
      gmake install
 </pre>
-<dt>2.
-<dd> While there are currently no architecture-specific extensions or modules distributed with perl, the following directories can be used to hold such files (replace the string <font SIZE="-1">VERSION</font> by the appropriate version number): 
-
+</dd><dt>2.
+</dt><dd> While there are currently no architecture-specific extensions or modules distributed with perl, the following directories can be used to hold such files (replace the string <font SIZE="-1">VERSION</font> by the appropriate version number): 
  <pre>
      &gt;system&gt;ported&gt;lib&gt;perl5&gt;VERSION&gt;i786
 </pre>
-<dt>3.
-<dd> Site-specific perl extensions and modules can be installed in one of two places. Put architecture-independent files into: 
-
+</dd><dt>3.
+</dt><dd> Site-specific perl extensions and modules can be installed in one of two places. Put architecture-independent files into: 
  <pre>
      &gt;system&gt;ported&gt;lib&gt;perl5&gt;site_perl&gt;VERSION
 </pre> 
-
  Put site-specific architecture-dependent files into one of the following directories: 
-
  <pre>
      &gt;system&gt;ported&gt;lib&gt;perl5&gt;site_perl&gt;VERSION&gt;i786
 </pre>
-<dt>4.
-<dd> You can examine the <tt>@INC</tt> variable from within a perl program to see the order in which Perl searches these directories.</dl>
+</dd><dt>4.
+</dt><dd> You can examine the <tt>@INC</tt> variable from within a perl program to see the order in which Perl searches these directories.</dd></dl>
 
 <h2>USING PERL IN OPENVOS</h2>
 

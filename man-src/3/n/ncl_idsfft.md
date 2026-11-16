@@ -16,38 +16,37 @@ IDSFFT - Performs smooth surface fitting when the projections of the data points
  float *zd, int mreg, int nreg, int kreg, float *xreg, 
  float *yreg, float *zreg, int *iwk, float *wk)
 <h2>Description</h2><dl COMPACT><dt>MD
-<dd>(Integer, Input/output) - Mode of computation (must be 1, 2, or 3).
-<dl COMPACT><dd><dl COMPACT><dt>1
-<dd>If this is the first call to this subroutine, or if the value of NDP has been changed from the previous call, or if the contents of the XD or YD arrays have been changed from the previous call.
-<dt>2
-<dd>If the values of NDP and the XD, YD arrays are unchanged from the previous call, but new values for XREG, YREG are being used. If MD=2 and NDP has been changed since the previous call to IDSFFT, an error return occurs.
-<dt>3
-<dd>If the values of NDP, MREG, NREG, XD, YD, XREG, YREG are unchanged from the previous call, that is, if the only change on input to IDSFFT is in the ZD array. If MD=3 and NDP, MREG or NREG has been changed since the previous call to IDSFFT, an error return occurs. 
-
- Between the call with MD=2 or MD=3 and the preceding call, the IWK and WK work arrays should not be disturbed.</dl></dl><dt>NDP
-<dd>(Integer, Input) - Number of random data points (must be 4 or greater).
-<dt>XD(NDP)
-<dd>(Real array, Input) - Array of dimension NDP containing the X coordinates of the data points.
-<dt>YD(NDP)
-<dd>(Real array, Input) - Array of dimension NDP containing the Y coordinates of the data points.
-<dt>ZD(NDP)
-<dd>(Real array, Input) - Array of dimension NDP containing the Z coordinates of the data points.
-<dt>MREG
-<dd>(Integer, Input) - Number of output grid points in the X-direction (must be 1 or greater).
-<dt>NREG
-<dd>(Integer, Input) - Number of output grid points in the Y-direction (must be 1 or greater).
-<dt>KREG
-<dd>(Integer, Input) - First dimension of ZREG as declared in the calling program. KREG must be greater than or equal to MREG, else an error return occurs.
-<dt>XREG(MREG)
-<dd>(Real array, Input) - Array of dimension MREG containing the X coordinates of the output grid points.
-<dt>YREG(NREG)
-<dd>(Real array, Input) - Array of dimension NREG containing the Y coordinates of the output grid points.
-<dt>ZREG(KREG,NREG)
-<dd>(Real array, Output) - Real, two-dimensional array of dimension (KREG,NREG), storing the interpolated Z values at the output grid points.
-<dt>IWK(*)
-<dd>(Integer array, Workspace) - Integer work array of dimension at least 31 * NDP + MREG * NREG.
-<dt>WK(*)
-<dd>(Real array, Workspace) - Real work array of dimension at least 6 * NDP.</dl><h2></h2>Inadequate work space IWK and WK may may cause incorrect results. 
+</dt><dd>(Integer, Input/output) - Mode of computation (must be 1, 2, or 3).
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>1
+</dt><dd>If this is the first call to this subroutine, or if the value of NDP has been changed from the previous call, or if the contents of the XD or YD arrays have been changed from the previous call.
+</dd><dt>2
+</dt><dd>If the values of NDP and the XD, YD arrays are unchanged from the previous call, but new values for XREG, YREG are being used. If MD=2 and NDP has been changed since the previous call to IDSFFT, an error return occurs.
+</dd><dt>3
+</dt><dd>If the values of NDP, MREG, NREG, XD, YD, XREG, YREG are unchanged from the previous call, that is, if the only change on input to IDSFFT is in the ZD array. If MD=3 and NDP, MREG or NREG has been changed since the previous call to IDSFFT, an error return occurs. 
+ Between the call with MD=2 or MD=3 and the preceding call, the IWK and WK work arrays should not be disturbed.</dd></dl></dl><dt>NDP
+</dt><dd>(Integer, Input) - Number of random data points (must be 4 or greater).
+</dd><dt>XD(NDP)
+</dt><dd>(Real array, Input) - Array of dimension NDP containing the X coordinates of the data points.
+</dd><dt>YD(NDP)
+</dt><dd>(Real array, Input) - Array of dimension NDP containing the Y coordinates of the data points.
+</dd><dt>ZD(NDP)
+</dt><dd>(Real array, Input) - Array of dimension NDP containing the Z coordinates of the data points.
+</dd><dt>MREG
+</dt><dd>(Integer, Input) - Number of output grid points in the X-direction (must be 1 or greater).
+</dd><dt>NREG
+</dt><dd>(Integer, Input) - Number of output grid points in the Y-direction (must be 1 or greater).
+</dd><dt>KREG
+</dt><dd>(Integer, Input) - First dimension of ZREG as declared in the calling program. KREG must be greater than or equal to MREG, else an error return occurs.
+</dd><dt>XREG(MREG)
+</dt><dd>(Real array, Input) - Array of dimension MREG containing the X coordinates of the output grid points.
+</dd><dt>YREG(NREG)
+</dt><dd>(Real array, Input) - Array of dimension NREG containing the Y coordinates of the output grid points.
+</dd><dt>ZREG(KREG,NREG)
+</dt><dd>(Real array, Output) - Real, two-dimensional array of dimension (KREG,NREG), storing the interpolated Z values at the output grid points.
+</dd><dt>IWK(*)
+</dt><dd>(Integer array, Workspace) - Integer work array of dimension at least 31 * NDP + MREG * NREG.
+</dd><dt>WK(*)
+</dt><dd>(Real array, Workspace) - Real work array of dimension at least 6 * NDP.</dd></dl><h2></h2>Inadequate work space IWK and WK may may cause incorrect results. 
 
  The data points must be distinct and their projections in the X-Y plane must not be collinear; otherwise, an error return occurs.
 <h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN

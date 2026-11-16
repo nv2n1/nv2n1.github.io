@@ -11,16 +11,16 @@ description: "XkbGetCompatMap – Fetch any combination of the current compatibi
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbGetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescRec *</code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of compatibility map components to fetch</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description where results placed</dl>
+</dd><dd>connection to server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of compatibility map components to fetch</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description where results placed</dd></dl>
 <h2>Description</h2>
 <p>When another client modifies the compatibility map, you are notified if you have selected for XkbCompatMapNotify events. <i>XkbGetCompatMap </i> is particularly useful when you receive an event of this type, as it allows you to update your program&#8217;s version of the compatibility map to match the modified version now in the server. If your program is dealing with multiple servers and needs to configure them all in a similar manner, the updated compatibility map may be used to reconfigure other servers. </p>
 <p> <i>XkbGetCompatMap </i> fetches the components of the compatibility map specified in <i>which </i> from the server specified by <i>display </i> and places them in the <i>compat </i> structure of the keyboard description <i>xkb. </i> Valid values for <i>which </i> are an inclusive OR of the values shown in Table 1. </p>
@@ -68,10 +68,10 @@ description: "XkbGetCompatMap – Fetch any combination of the current compatibi
 <p> <i>XkbGetCompatMap </i> fetches compatibility map information for the device specified by the <i>device_spec </i> field of <i>xkb. </i> Unless you have specifically modified this field, it is the default keyboard device. <i>XkbGetCompatMap </i> returns Success if successful, BadAlloc if it is unable to obtain necessary storage for either the return values or work space, BadMatch if the <i>dpy </i> field of the <i>xkb </i> argument is non-NULL and does not match the <i>display </i> argument, and BadLength under certain conditions caused by server or Xkb implementation errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadLength</code></p>
-<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</p>
-<dt><code>BadMatch</code></p>
-<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid </p>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadLength</code></dt>
+<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid </dd>
 </dl>

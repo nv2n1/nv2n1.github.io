@@ -10,19 +10,14 @@ description: "xcb_x_print_print_start_page –"
 <p>xcb_x_print_print_start_page &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xprint.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_x_print_print_start_page(xcb_connection_t *conn, xcb_window_t window);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>window</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>window</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

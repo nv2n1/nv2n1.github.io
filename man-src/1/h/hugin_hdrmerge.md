@@ -15,62 +15,57 @@ description: "hugin_hdrmerge – Merge overlapping images"
 <p> <font SIZE="-1">TODO.</font></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> <i>prefix</i></p>
-<dd> Output file</p>
-<dt><code>-m</code> <i>mode</i></p>
-<dd> Merge mode, can be one of: avg, avg_slow, khan (default), if avg, no <code>-i</code>, <code>-s</code>, or <code>-d</code> options apply</p>
-<dt><code>-i</code> <i>iter</i></p>
-<dd> Number of iterations to execute (default is 1)</p>
-<dt><code>-c</code></p>
-<dd> Only consider pixels that are defined in all images (avg mode only)</p>
-<dt><code>-s</code> <i>file</i></p>
-<dd> Debug files to save each iteration, can be one of:</p>
+<dt><code>-o</code> <i>prefix</i></dt>
+<dd> Output file</dd>
+<dt><code>-m</code> <i>mode</i></dt>
+<dd> Merge mode, can be one of: avg, avg_slow, khan (default), if avg, no <code>-i</code>, <code>-s</code>, or <code>-d</code> options apply</dd>
+<dt><code>-i</code> <i>iter</i></dt>
+<dd> Number of iterations to execute (default is 1)</dd>
+<dt><code>-c</code></dt>
+<dd> Only consider pixels that are defined in all images (avg mode only)</dd>
+<dt><code>-s</code> <i>file</i></dt>
+<dd> Debug files to save each iteration, can be one of:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>a &#8211; all debug files (can only be used alone)</p>
+<dt>a &#8211; all debug files (can only be used alone)</dt>
 <dd>
-<dt>w &#8211; calculated weights from each iteration</p>
+</dd><dt>w &#8211; calculated weights from each iteration</dt>
 <dd>
-<dt>r &#8211; result image from each iteration</p>
+</dd><dt>r &#8211; result image from each iteration</dt>
 <dd>
-<dt>s &#8211; source images before processing</p>
-<dd></dl>
+</dd><dt>s &#8211; source images before processing</dt>
+<dd></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> If verbose &gt;= 3, all debug files are output unless specified</dl>
-<dt><code>-a</code> <i>calcs</i></p>
-<dd> Apply one or more advanced calculations, can be one or more of:</p>
+</dt><dd>
+<p> If verbose &gt;= 3, all debug files are output unless specified</dd></dl>
+<dt><code>-a</code> <i>calcs</i></dt>
+<dd> Apply one or more advanced calculations, can be one or more of:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>b &#8211; biasing weights logarithmically</p>
+<dt>b &#8211; biasing weights logarithmically</dt>
 <dd>
-<dt>c &#8211; choose pixels with highest weight instead of averaging (overrides options <code>-a</code> <i>b</i> and <code>-a</code> <i>d</i>)</p>
+</dd><dt>c &#8211; choose pixels with highest weight instead of averaging (overrides options <code>-a</code> <i>b</i> and <code>-a</code> <i>d</i>)</dt>
 <dd>
-<dt>d &#8211; choose a pixel with the highest weight instead of averaging when all pixel weights are within 10% of each other</p>
+</dd><dt>d &#8211; choose a pixel with the highest weight instead of averaging when all pixel weights are within 10% of each other</dt>
 <dd>
-<dt>h &#8211; favour a high signal to noise ratio</p>
+</dd><dt>h &#8211; favour a high signal to noise ratio</dt>
 <dd>
-<dt>i &#8211; ignore alpha channel</p>
-<dd></dl>
+</dd><dt>i &#8211; ignore alpha channel</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-e</code></p>
-<dd> Export each initial weight to &lt;input_file_paths&gt;_iw.&lt;ext&gt;</p>
-<dt><code>-l</code></p>
-<dd> Load a previously exported initial weight with respect to the input file names </p>
+</dl>
+<dt><code>-e</code></dt>
+<dd> Export each initial weight to &lt;input_file_paths&gt;_iw.&lt;ext&gt;</dd>
+<dt><code>-l</code></dt>
+<dd> Load a previously exported initial weight with respect to the input file names </dd>
 <p> <font SIZE="-1">NOTE:</font> if both <code>-e</code> and <code>-l</code> options are on, the program will calculate and save the initial weights, then wait until user indicates that it can continue by loading the previously saved weights</p>
-<dt><code>-v</code></p>
-<dd> Verbose, print progress messages, repeat for even more verbose output</p>
-<dt><code>-h</code></p>
-<dd> Display help summary.</dl>
+<dt><code>-v</code></dt>
+<dd> Verbose, print progress messages, repeat for even more verbose output</dd>
+<dt><code>-h</code></dt>
+<dd> Display help summary.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Jing Jin. Also contains contributions from Pablo d&#8217;Angelo, Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>

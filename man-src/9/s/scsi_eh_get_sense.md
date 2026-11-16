@@ -14,10 +14,10 @@ description: "scsi_eh_get_sense – Get device sense data."
 <p><i>work_q</i></p>
 <dl>
 <dd>
-<dd>Queue of commands to process.</dl>
+</dd><dd>Queue of commands to process.</dd></dl>
 <p> <i>done_q</i></p>
 <dl>
-<dd>Queue of processed commands.</dl>
+<dd>Queue of processed commands.</dd></dl>
 <h2>Description</h2>
 <p>See if we need to request sense information. if so, then get it now, so we have a better idea of what to do.</p>
 <h2>Notes</h2>
@@ -27,8 +27,8 @@ description: "scsi_eh_get_sense – Get device sense data."
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

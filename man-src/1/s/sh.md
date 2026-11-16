@@ -25,52 +25,52 @@ description: "dash – command interpreter (shell)"
 <h3>Argument List Processing</h3>
 <p> All of the single letter options that have a corresponding name can be used as an argument to the &#8211;<code>o</code> option. The set &#8211;<code>o</code> name is provided next to the single letter option in the description below. Specifying a dash &#8220;-&#8221; turns the option on, while using a plus &#8220;+&#8221; disables the option. The following options can be set from the command line or with the <code>set</code> builtin (described later).</p>
 <dl>
-<dt><code>-a </code><i>allexport</i></p>
-<dd> Export all variables assigned to.</p>
-<dt><code>-c</code></p>
-<dd> Read commands from the <i>command_string</i> operand instead of from the standard input. Special parameter 0 will be set from the <i>command_name</i> operand and the positional parameters ($1, $2, etc.) set from the remaining argument operands.</p>
-<dt><code>-C </code><i>noclobber</i></p>
-<dd> Don&#8217;t overwrite existing files with &#8220;&gt;&#8221;</p>
-<dt><code>-e </code><i>errexit</i></p>
-<dd> If not interactive, exit immediately if any untested command fails. The exit status of a command is considered to be explicitly tested if the command is used to control an <code>if</code> <code>elif</code> <code>while</code> or <code>until</code> or if the command is the left hand operand of an &#8220;&amp;&amp;&#8221; or &#8220;||&#8221; operator.</p>
-<dt><code>-f </code><i>noglob</i></p>
-<dd> Disable pathname expansion.</p>
-<dt><code>-n </code><i>noexec</i></p>
-<dd> If not interactive, read commands but do not execute them. This is useful for checking the syntax of shell scripts.</p>
-<dt><code>-u </code><i>nounset</i></p>
-<dd> Write a message to standard error when attempting to expand a variable that is not set, and if the shell is not interactive, exit immediately.</p>
-<dt><code>-v </code><i>verbose</i></p>
-<dd> The shell writes its input to standard error as it is read. Useful for debugging.</p>
-<dt><code>-x </code><i>xtrace</i></p>
-<dd> Write each command to standard error (preceded by a `+&nbsp;&#8216; before it is executed. Useful for debugging.</p>
-<dt><code>-I </code><i>ignoreeof</i></p>
-<dd> Ignore EOF&#8217;s from input when interactive.</p>
-<dt><code>-i </code><i>interactive</i></p>
-<dd> Force the shell to behave interactively.</p>
-<dt><code>-l</code></p>
-<dd> Make dash act as if it had been invoked as a login shell.</p>
-<dt><code>-m </code><i>monitor</i></p>
-<dd> Turn on job control (set automatically when interactive).</p>
-<dt><code>-s </code><i>stdin</i></p>
-<dd> Read commands from standard input (set automatically if no file arguments are present). This option has no effect when set after the shell has already started running (i.e. with <code>set )</code></p>
-<dt><code>-V </code><i>vi</i></p>
-<dd> Enable the built-in <a href="/docs/linux/man/1-vi/">vi</a>(1) command line editor (disables &#8211;<code>E</code> if it has been set).</p>
-<dt><code>-E </code><i>emacs</i></p>
-<dd> Enable the built-in <a href="/docs/linux/man/1-emacs/">emacs</a>(1) command line editor (disables &#8211;<code>V</code> if it has been set).</p>
-<dt><code>-b </code><i>notify</i></p>
-<dd> Enable asynchronous notification of background job completion. (UNIMPLEMENTED for 4.4alpha)</p>
-<dt><code>-p </code><i>priviliged</i></p>
-<dd> Do not attempt to reset effective uid if it does not match uid. This is not set by default to help avoid incorrect usage by setuid root programs via <a href="/docs/linux/man/3-system/">system</a>(3) or <a href="/docs/linux/man/3-popen/">popen</a>(3).</dl>
+<dt><code>-a </code><i>allexport</i></dt>
+<dd> Export all variables assigned to.</dd>
+<dt><code>-c</code></dt>
+<dd> Read commands from the <i>command_string</i> operand instead of from the standard input. Special parameter 0 will be set from the <i>command_name</i> operand and the positional parameters ($1, $2, etc.) set from the remaining argument operands.</dd>
+<dt><code>-C </code><i>noclobber</i></dt>
+<dd> Don&#8217;t overwrite existing files with &#8220;&gt;&#8221;</dd>
+<dt><code>-e </code><i>errexit</i></dt>
+<dd> If not interactive, exit immediately if any untested command fails. The exit status of a command is considered to be explicitly tested if the command is used to control an <code>if</code> <code>elif</code> <code>while</code> or <code>until</code> or if the command is the left hand operand of an &#8220;&amp;&amp;&#8221; or &#8220;||&#8221; operator.</dd>
+<dt><code>-f </code><i>noglob</i></dt>
+<dd> Disable pathname expansion.</dd>
+<dt><code>-n </code><i>noexec</i></dt>
+<dd> If not interactive, read commands but do not execute them. This is useful for checking the syntax of shell scripts.</dd>
+<dt><code>-u </code><i>nounset</i></dt>
+<dd> Write a message to standard error when attempting to expand a variable that is not set, and if the shell is not interactive, exit immediately.</dd>
+<dt><code>-v </code><i>verbose</i></dt>
+<dd> The shell writes its input to standard error as it is read. Useful for debugging.</dd>
+<dt><code>-x </code><i>xtrace</i></dt>
+<dd> Write each command to standard error (preceded by a `+&nbsp;&#8216; before it is executed. Useful for debugging.</dd>
+<dt><code>-I </code><i>ignoreeof</i></dt>
+<dd> Ignore EOF&#8217;s from input when interactive.</dd>
+<dt><code>-i </code><i>interactive</i></dt>
+<dd> Force the shell to behave interactively.</dd>
+<dt><code>-l</code></dt>
+<dd> Make dash act as if it had been invoked as a login shell.</dd>
+<dt><code>-m </code><i>monitor</i></dt>
+<dd> Turn on job control (set automatically when interactive).</dd>
+<dt><code>-s </code><i>stdin</i></dt>
+<dd> Read commands from standard input (set automatically if no file arguments are present). This option has no effect when set after the shell has already started running (i.e. with <code>set )</code></dd>
+<dt><code>-V </code><i>vi</i></dt>
+<dd> Enable the built-in <a href="/docs/linux/man/1-vi/">vi</a>(1) command line editor (disables &#8211;<code>E</code> if it has been set).</dd>
+<dt><code>-E </code><i>emacs</i></dt>
+<dd> Enable the built-in <a href="/docs/linux/man/1-emacs/">emacs</a>(1) command line editor (disables &#8211;<code>V</code> if it has been set).</dd>
+<dt><code>-b </code><i>notify</i></dt>
+<dd> Enable asynchronous notification of background job completion. (UNIMPLEMENTED for 4.4alpha)</dd>
+<dt><code>-p </code><i>priviliged</i></dt>
+<dd> Do not attempt to reset effective uid if it does not match uid. This is not set by default to help avoid incorrect usage by setuid root programs via <a href="/docs/linux/man/3-system/">system</a>(3) or <a href="/docs/linux/man/3-popen/">popen</a>(3).</dd></dl>
 <h3>Lexical Structure</h3>
 <p> The shell reads input in terms of lines from a file and breaks it up into words at whitespace (blanks and tabs), and at certain sequences of characters that are special to the shell called &#8220;operators&#8221; There are two types of operators: control operators and redirection operators (their meaning is discussed later). Following is a list of operators:</p>
 <dl>
-<dt><code>&quot;Control operators:&quot;</code></p>
+<dt><code>&quot;Control operators:&quot;</code></dt>
 <dd>
 <blockquote><p><tt>&amp; &amp;&amp; ( ) ; ;; | || &lt;newline&gt;</tt></p></blockquote>
-<dt><code>&quot;Redirection operators:&quot;</code></p>
+</dd><dt><code>&quot;Redirection operators:&quot;</code></dt>
 <dd>
 <blockquote><p><tt>&lt; &gt; &gt;| &lt;&lt; &gt;&gt; &lt;&amp; &gt;&amp; &lt;&lt;- &lt;&gt;</tt></p></blockquote>
-</dl>
+</dd></dl>
 <h3>Quoting</h3>
 <p> Quoting is used to remove the special meaning of certain characters or words to the shell, such as operators, whitespace, or keywords. There are three types of quoting: matched single quotes, matched double quotes, and backslash.</p>
 <h3>Backslash</h3>
@@ -84,12 +84,12 @@ description: "dash – command interpreter (shell)"
 <h3>Reserved Words</h3>
 <p> Reserved words are words that have special meaning to the shell and are recognized at the beginning of a line and after a control operator. The following are reserved words:</p>
 <dl>
-<dt><code>! Ta </code>elif Ta fi Ta while Ta case</p>
+<dt><code>! Ta </code>elif Ta fi Ta while Ta case</dt>
 <dd>
-<dt><code>else Ta </code>for Ta then Ta { Ta }</p>
+</dd><dt><code>else Ta </code>for Ta then Ta { Ta }</dt>
 <dd>
-<dt><code>do Ta </code>done Ta until Ta if Ta esac</p>
-<dd></dl>
+</dd><dt><code>do Ta </code>done Ta until Ta if Ta esac</dt>
+<dd></dd></dl>
 <p> Their meaning is discussed later.</p>
 <h3>Aliases</h3>
 <p> An alias is a name and corresponding value set using the <a href="/docs/linux/man/1-alias/">alias</a>(1) builtin command. Whenever a reserved word may occur (see above), and after checking for reserved words, the shell checks the word to see if it matches an alias. If it does, it replaces it in the input stream with its value. For example, if there is an alias called &#8220;lf&#8221; with the value &#8220;ls -F&#8221; then the input: </p>
@@ -110,30 +110,30 @@ description: "dash – command interpreter (shell)"
 <blockquote><p><tt>[n] </tt><i>redir-op file</i> </p></blockquote>
 <p> where <i>redir-op</i> is one of the redirection operators mentioned previously. Following is a list of the possible redirections. The Bq n is an optional number between 0 and 9, as in `3&#8242; (not `Bq 3 ) &#8216; that refers to a file descriptor.</p>
 <dl>
-<dt><code>[n] &gt; file</code></p>
-<dd> Redirect standard output (or n) to file.</p>
-<dt><code>[n] &gt;| file</code></p>
-<dd> Same, but override the &#8211;<code>C</code> option.</p>
-<dt><code>[n] &gt;&gt; file</code></p>
-<dd> Append standard output (or n) to file.</p>
-<dt><code>[n] &lt; file</code></p>
-<dd> Redirect standard input (or n) from file.</p>
-<dt><code>[n1] &lt;&amp; n2</code></p>
-<dd> Copy file descriptor n2 as stdout (or fd n1). fd n2.</p>
-<dt><code>[n] &lt;&amp;-</code></p>
-<dd> Close standard input (or n).</p>
-<dt><code>[n1] &gt;&amp; n2</code></p>
-<dd> Copy file descriptor n2 as stdin (or fd n1). fd n2.</p>
-<dt><code>[n] &gt;&amp;-</code></p>
-<dd> Close standard output (or n).</p>
-<dt><code>[n] &lt;&gt; file</code></p>
-<dd> Open file for reading and writing on standard input (or n).</dl>
+<dt><code>[n] &gt; file</code></dt>
+<dd> Redirect standard output (or n) to file.</dd>
+<dt><code>[n] &gt;| file</code></dt>
+<dd> Same, but override the &#8211;<code>C</code> option.</dd>
+<dt><code>[n] &gt;&gt; file</code></dt>
+<dd> Append standard output (or n) to file.</dd>
+<dt><code>[n] &lt; file</code></dt>
+<dd> Redirect standard input (or n) from file.</dd>
+<dt><code>[n1] &lt;&amp; n2</code></dt>
+<dd> Copy file descriptor n2 as stdout (or fd n1). fd n2.</dd>
+<dt><code>[n] &lt;&amp;-</code></dt>
+<dd> Close standard input (or n).</dd>
+<dt><code>[n1] &gt;&amp; n2</code></dt>
+<dd> Copy file descriptor n2 as stdin (or fd n1). fd n2.</dd>
+<dt><code>[n] &gt;&amp;-</code></dt>
+<dd> Close standard output (or n).</dd>
+<dt><code>[n] &lt;&gt; file</code></dt>
+<dd> Open file for reading and writing on standard input (or n).</dd></dl>
 <p> The following redirection is often called a &#8220;here-document&#8221;</p>
 <dl>
-<dt><code>[n]&lt;&lt; delimiter</code></p>
+<dt><code>[n]&lt;&lt; delimiter</code></dt>
 <dd>
 <blockquote><p><tt>here-doc-text ...</tt></p></blockquote>
-<p> <code>delimiter</code></dl>
+<p> <code>delimiter</code></dd></dl>
 <p> All the text on successive lines up to the delimiter is saved away and made available to the command on standard input, or file descriptor n if it is specified. If the delimiter as specified on the initial line is quoted, then the here-doc-text is treated literally, otherwise the text is subjected to parameter expansion, command substitution, and arithmetic expansion (as described in the section on &#8220;Expansions )&#8221; If the operator is &#8220;&lt;&lt;-&#8221; instead of &#8220;&lt;&lt;&#8221; then leading tabs in the here-doc-text are stripped.</p>
 <h3>Search and Execution</h3>
 <p> There are three types of commands: shell functions, builtin commands, and normal programs &#8211; and the command is searched for (by name) in that order. They each are executed in a different way. </p>
@@ -255,23 +255,23 @@ esac
 <h3>Special Parameters</h3>
 <p> A special parameter is a parameter denoted by one of the following special characters. The value of the parameter is listed next to its character.</p>
 <dl>
-<dt><code>*</code></p>
-<dd> Expands to the positional parameters, starting from one. When the expansion occurs within a double-quoted string it expands to a single field with the value of each parameter separated by the first character of the <code>IFS</code> variable, or by a Aq space if <code>IFS</code> is unset.</p>
-<dt><code>@</code></p>
-<dd> Expands to the positional parameters, starting from one. When the expansion occurs within double-quotes, each positional parameter expands as a separate argument. If there are no positional parameters, the expansion of @ generates zero arguments, even when @ is double-quoted. What this basically means, for example, is if $1 is &#8220;abc&#8221; and $2 is &#8220;def ghi&#8221; then Qq $@ expands to the two arguments: </p>
+<dt><code>*</code></dt>
+<dd> Expands to the positional parameters, starting from one. When the expansion occurs within a double-quoted string it expands to a single field with the value of each parameter separated by the first character of the <code>IFS</code> variable, or by a Aq space if <code>IFS</code> is unset.</dd>
+<dt><code>@</code></dt>
+<dd> Expands to the positional parameters, starting from one. When the expansion occurs within double-quotes, each positional parameter expands as a separate argument. If there are no positional parameters, the expansion of @ generates zero arguments, even when @ is double-quoted. What this basically means, for example, is if $1 is &#8220;abc&#8221; and $2 is &#8220;def ghi&#8221; then Qq $@ expands to the two arguments: </dd>
 <blockquote><p><tt>&quot; abc &quot; &nbsp; &quot; def ghi &quot;</tt></p></blockquote>
-<dt><code>#</code></p>
-<dd> Expands to the number of positional parameters.</p>
-<dt><code>?</code></p>
-<dd> Expands to the exit status of the most recent pipeline.</p>
-<dt><code>&#8211; (Hyphen.)</code></p>
-<dd> Expands to the current option flags (the single-letter option names concatenated into a string) as specified on invocation, by the set builtin command, or implicitly by the shell.</p>
-<dt><code>$</code></p>
-<dd> Expands to the process ID of the invoked shell. A subshell retains the same value of $ as its parent.</p>
-<dt><code>!</code></p>
-<dd> Expands to the process ID of the most recent background command executed from the current shell. For a pipeline, the process ID is that of the last command in the pipeline.</p>
-<dt><code>0 (Zero.)</code></p>
-<dd> Expands to the name of the shell or shell script.</dl>
+<dt><code>#</code></dt>
+<dd> Expands to the number of positional parameters.</dd>
+<dt><code>?</code></dt>
+<dd> Expands to the exit status of the most recent pipeline.</dd>
+<dt><code>&#8211; (Hyphen.)</code></dt>
+<dd> Expands to the current option flags (the single-letter option names concatenated into a string) as specified on invocation, by the set builtin command, or implicitly by the shell.</dd>
+<dt><code>$</code></dt>
+<dd> Expands to the process ID of the invoked shell. A subshell retains the same value of $ as its parent.</dd>
+<dt><code>!</code></dt>
+<dd> Expands to the process ID of the most recent background command executed from the current shell. For a pipeline, the process ID is that of the last command in the pipeline.</dd>
+<dt><code>0 (Zero.)</code></dt>
+<dd> Expands to the name of the shell or shell script.</dd></dl>
 <h3>Word Expansions</h3>
 <p> This clause describes the various expansions that are performed on words. Not all expansions are performed on every word, as explained later. </p>
 <p> Tilde expansions, parameter expansions, command substitutions, arithmetic expansions, and quote removals that occur within a single word expand to a single field. It is only field splitting or pathname expansion that can create multiple fields from a single word. The single exception to this rule is the expansion of the special parameter @ within double-quotes, as was described above. </p>
@@ -297,28 +297,28 @@ esac
 <li> Field splitting is not performed on the results of the expansion, with the exception of @. </ol>
 <p> In addition, a parameter expansion can be modified by using one of the following formats.</p>
 <dl>
-<dt><code>${parameter:-word}</code></p>
-<dd> Use Default Values. If parameter is unset or null, the expansion of word is substituted; otherwise, the value of parameter is substituted.</p>
-<dt><code>${parameter:=word}</code></p>
-<dd> Assign Default Values. If parameter is unset or null, the expansion of word is assigned to parameter. In all cases, the final value of parameter is substituted. Only variables, not positional parameters or special parameters, can be assigned in this way.</p>
-<dt><code>${parameter:?[word]}</code></p>
-<dd> Indicate Error if Null or Unset. If parameter is unset or null, the expansion of word (or a message indicating it is unset if word is omitted) is written to standard error and the shell exits with a nonzero exit status. Otherwise, the value of parameter is substituted. An interactive shell need not exit.</p>
-<dt><code>${parameter:+word}</code></p>
-<dd> Use Alternative Value. If parameter is unset or null, null is substituted; otherwise, the expansion of word is substituted.</dl>
+<dt><code>${parameter:-word}</code></dt>
+<dd> Use Default Values. If parameter is unset or null, the expansion of word is substituted; otherwise, the value of parameter is substituted.</dd>
+<dt><code>${parameter:=word}</code></dt>
+<dd> Assign Default Values. If parameter is unset or null, the expansion of word is assigned to parameter. In all cases, the final value of parameter is substituted. Only variables, not positional parameters or special parameters, can be assigned in this way.</dd>
+<dt><code>${parameter:?[word]}</code></dt>
+<dd> Indicate Error if Null or Unset. If parameter is unset or null, the expansion of word (or a message indicating it is unset if word is omitted) is written to standard error and the shell exits with a nonzero exit status. Otherwise, the value of parameter is substituted. An interactive shell need not exit.</dd>
+<dt><code>${parameter:+word}</code></dt>
+<dd> Use Alternative Value. If parameter is unset or null, null is substituted; otherwise, the expansion of word is substituted.</dd></dl>
 <p> In the parameter expansions shown previously, use of the colon in the format results in a test for a parameter that is unset or null; omission of the colon results in a test for a parameter that is only unset.</p>
 <dl>
-<dt><code>${#parameter}</code></p>
-<dd> String Length. The length in characters of the value of parameter.</dl>
+<dt><code>${#parameter}</code></dt>
+<dd> String Length. The length in characters of the value of parameter.</dd></dl>
 <p> The following four varieties of parameter expansion provide for substring processing. In each case, pattern matching notation (see Sx Shell Patterns ) , rather than regular expression notation, is used to evaluate the patterns. If parameter is * or @, the result of the expansion is unspecified. Enclosing the full parameter expansion string in double-quotes does not cause the following four varieties of pattern characters to be quoted, whereas quoting characters within the braces has this effect.</p>
 <dl>
-<dt><code>${parameter%word}</code></p>
-<dd> Remove Smallest Suffix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the smallest portion of the suffix matched by the pattern deleted.</p>
-<dt><code>${parameter%%word}</code></p>
-<dd> Remove Largest Suffix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the largest portion of the suffix matched by the pattern deleted.</p>
-<dt><code>${parameter#word}</code></p>
-<dd> Remove Smallest Prefix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the smallest portion of the prefix matched by the pattern deleted.</p>
-<dt><code>${parameter##word}</code></p>
-<dd> Remove Largest Prefix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the largest portion of the prefix matched by the pattern deleted.</dl>
+<dt><code>${parameter%word}</code></dt>
+<dd> Remove Smallest Suffix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the smallest portion of the suffix matched by the pattern deleted.</dd>
+<dt><code>${parameter%%word}</code></dt>
+<dd> Remove Largest Suffix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the largest portion of the suffix matched by the pattern deleted.</dd>
+<dt><code>${parameter#word}</code></dt>
+<dd> Remove Smallest Prefix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the smallest portion of the prefix matched by the pattern deleted.</dd>
+<dt><code>${parameter##word}</code></dt>
+<dd> Remove Largest Prefix Pattern. The word is expanded to produce a pattern. The parameter expansion then results in parameter, with the largest portion of the prefix matched by the pattern deleted.</dd></dl>
 <h3>Command Substitution</h3>
 <p> Command substitution allows the output of a command to be substituted in place of the command name itself. Command substitution occurs when the command is enclosed as follows: </p>
 <blockquote><p><tt>$(command)</tt></p></blockquote>
@@ -342,36 +342,38 @@ esac
 <h3>Builtins</h3>
 <p> This section lists the builtin commands which are builtin because they need to perform some operation that can&#8217;t be performed by a separate process. In addition to these, there are several other commands that may be builtin for efficiency (e.g. <a href="/docs/linux/man/1-printf/">printf</a>(1), <a href="/docs/linux/man/1-echo/">echo</a>(1), <a href="/docs/linux/man/1-test/">test</a>(1), etc).</p>
 <dl>
-<dt><code>:</code></p>
+<dt><code>:</code></dt>
 <dd>
-<dt><code>true</code></p>
-<dd> A null command that returns a 0 (true) exit value.</p>
-<dt><code>. file</code></p>
-<dd> The commands in the specified file are read and executed by the shell.</p>
-<dt><code>alias </code>[<i>name </i>[<i>=string &#8230;</i> ] ]</p>
-<dd> If <i>name=string</i> is specified, the shell defines the alias <i>name</i> with value <i>string</i> If just <i>name</i> is specified, the value of the alias <i>name</i> is printed. With no arguments, the <code>alias</code> builtin prints the names and values of all defined aliases (see <code>unalias )</code></p>
-<dt><code>bg [ </code><i>job ] &#8230;</i></p>
-<dd> Continue the specified jobs (or the current job if no jobs are given) in the background.</p>
-<dt><code> command</code> [-<code>p</code> ] [-<code>v</code> ] [-<code>V</code> ] <i>command</i> [<i>arg &#8230;</i> ]</p>
+</dd><dt><code>true</code></dt>
+<dd> A null command that returns a 0 (true) exit value.</dd>
+<dt><code>. file</code></dt>
+<dd> The commands in the specified file are read and executed by the shell.</dd>
+<dt><code>alias </code>[<i>name </i>[<i>=string &#8230;</i> ] ]</dt>
+<dd> If <i>name=string</i> is specified, the shell defines the alias <i>name</i> with value <i>string</i> If just <i>name</i> is specified, the value of the alias <i>name</i> is printed. With no arguments, the <code>alias</code> builtin prints the names and values of all defined aliases (see <code>unalias )</code></dd>
+<dt><code>bg [ </code><i>job ] &#8230;</i></dt>
+<dd> Continue the specified jobs (or the current job if no jobs are given) in the background.</dd>
+<dt><code> command</code> [-<code>p</code> ] [-<code>v</code> ] [-<code>V</code> ] <i>command</i> [<i>arg &#8230;</i> ]</dt>
 <dd>
-<dd>Execute the specified command but ignore shell functions when searching for it. (This is useful when you have a shell function with the same name as a builtin command.)</p>
+</dd><dd>Execute the specified command but ignore shell functions when searching for it. (This is useful when you have a shell function with the same name as a builtin command.)</dd>
 <dl>
-<dt><code>-p</code></p>
-<dd> search for command using a <code>PATH</code> that guarantees to find all the standard utilities.</p>
-<dt><code>-V</code></p>
-<dd> Do not execute the command but search for the command and print the resolution of the command search. This is the same as the type builtin.</p>
-<dt><code>-v</code></p>
-<dd> Do not execute the command but search for the command and print the absolute pathname of utilities, the name for builtins or the expansion of aliases.</dl>
-<dt><code>cd </code><i>file &#8230;</i></p>
+<dt><code>-p</code></dt>
+<dd> search for command using a <code>PATH</code> that guarantees to find all the standard utilities.</dd>
+<dt><code>-V</code></dt>
+<dd> Do not execute the command but search for the command and print the resolution of the command search. This is the same as the type builtin.</dd>
+<dt><code>-v</code></dt>
+<dd> Do not execute the command but search for the command and print the absolute pathname of utilities, the name for builtins or the expansion of aliases.</dd></dl>
+<dt><code>cd </code><i>file &#8230;</i></dt>
 <dd>
-<dt><code> cd </code>[-<code>LP</code> ] [<i>directory</i> ]</p>
+</dd><dt><code> cd </code>[-<code>LP</code> ] [<i>directory</i> ]</dt>
 <dd>
-<dd>Switch to the specified directory (default <code>HOME )</code> If an entry for <code>CDPATH</code> appears in the environment of the <code>cd</code> command or the shell variable <code>CDPATH</code> is set and the directory name does not begin with a slash, then the directories listed in <code>CDPATH</code> will be searched for the specified directory. The format of <code>CDPATH</code> is the same as that of <code>PATH</code> If a single dash is specified as the argument, it will be replaced by the value of <code>OLDPWD</code> The <code>cd</code> command will print out the name of the directory that it actually switched to if this is different from the name that the user gave. These may be different either because the <code>CDPATH</code> mechanism was used or because the argument is a single dash. The &#8211;<code>P</code> option causes the physical directory structure to be used, that is, all symbolic links are resolved to their respective values. The &#8211;<code>L</code> option turns off the effect of any preceding &#8211;<code>P</code> options.</p>
-<dt><code> echo </code>[-<code>n</code> ] <i>args&#8230;</i></p>
+</dd><dd>Switch to the specified directory (default <code>HOME )</code> If an entry for <code>CDPATH</code> appears in the environment of the <code>cd</code> command or the shell variable <code>CDPATH</code> is set and the directory name does not begin with a slash, then the directories listed in <code>CDPATH</code> will be searched for the specified directory. The format of <code>CDPATH</code> is the same as that of <code>PATH</code> If a single dash is specified as the argument, it will be replaced by the value of <code>OLDPWD</code> The <code>cd</code> command will print out the name of the directory that it actually switched to if this is different from the name that the user gave. These may be different either because the <code>CDPATH</code> mechanism was used or because the argument is a single dash. The &#8211;<code>P</code> option causes the physical directory structure to be used, that is, all symbolic links are resolved to their respective values. The &#8211;<code>L</code> option turns off the effect of any preceding &#8211;<code>P</code> options.</dd>
+<dt><code> echo </code>[-<code>n</code> ] <i>args&#8230;</i></dt>
 <dd>
-<dd>Print the arguments on the standard output, separated by spaces. Unless the &#8211;<code>n</code> option is present, a newline is output following the arguments. </p>
+</dd><dd>Print the arguments on the standard output, separated by spaces. Unless the &#8211;<code>n</code> option is present, a newline is output following the arguments. </dd>
 <p> If any of the following sequences of characters is encountered during output, the sequence is not output. Instead, the specified action is performed:</p>
 <dl>
-<dt><code></code></p>
-<dd> A backspace character is output.</p>
+<dt><code></code></dt>
+<dd> A backspace character is output.</dd>
 <dt><code>
+</dt></dl></dl>
+</code>

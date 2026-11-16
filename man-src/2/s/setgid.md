@@ -20,10 +20,10 @@ description: "setgid – set group identity"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The group ID specified in <i>gid</i> is not valid in this user namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process is not privileged (does not have the <code>CAP_SETGID</code> capability in its user namespace), and <i>gid</i> does not match the real group ID or saved set-group-ID of the calling process.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The group ID specified in <i>gid</i> is not valid in this user namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process is not privileged (does not have the <code>CAP_SETGID</code> capability in its user namespace), and <i>gid</i> does not match the real group ID or saved set-group-ID of the calling process.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4.</p>
 <h2>NOTES</h2>

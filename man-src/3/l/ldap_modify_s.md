@@ -21,14 +21,12 @@ int ldap_modify_ext(
     LDAPControl **sctrls,
     LDAPControl **cctrls,
     int *msgidp);
-
 int ldap_modify_ext_s(
     LDAP *ld,
     char *dn,
     LDAPMod *mods[],
     LDAPControl **sctrls,
     LDAPControl **cctrls);
-
 void ldap_mods_free(
     LDAPMod **mods,
     int freemods);

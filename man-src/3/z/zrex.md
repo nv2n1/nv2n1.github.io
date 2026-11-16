@@ -72,8 +72,7 @@ $ Match end of a buffer
 \A Match non-alphabetic character
 \w Match alphanumeric character
 \W Match non-alphanumeric character
- Match carriage return
-
+ Match carriage return
  Match newline
 + Match one or more times (greedy)
 +? Match one or more times (non-greedy)
@@ -82,7 +81,7 @@ $ Match end of a buffer
 ? Match zero or once
 � Match byte with hex value 0xDD
 \meta Match one of the meta character: ^$().[*+?\</pre>
-</dl>
+</dd></dl>
 <p> Please add @discuss section in ../src/zrex.c.</p>
 <h2>Example</h2>
 <p><code>From zrex_test method</code>. </p>
@@ -96,7 +95,6 @@ assert(zrex_hits(rex) == 1);
 assert(streq(zrex_hit(rex, 0), &quot;123-456-789&quot;));
 assert(zrex_hit(rex, 1) == NULL);
 zrex_destroy(&amp;rex);
-
 //  Here we pick out hits using capture groups
 rex = zrex_new(&quot;(\d+)-(\d+)-(\d+)&quot;);
 assert(rex);
@@ -111,7 +109,6 @@ assert(streq(zrex_hit(rex, 1), &quot;123&quot;));
 assert(streq(zrex_hit(rex, 2), &quot;456&quot;));
 assert(streq(zrex_hit(rex, 3), &quot;789&quot;));
 zrex_destroy(&amp;rex);
-
 //  This shows the pattern of matching one line against many
 //  patterns and then handling the case when it hits
 rex = zrex_new(NULL); //  No initial pattern
@@ -138,7 +135,8 @@ zrex_destroy(&amp;rex);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

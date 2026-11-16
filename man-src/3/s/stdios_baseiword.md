@@ -24,7 +24,6 @@ If allocation fails, calls std::basic_ios&lt;&gt;::setstate(badbit) which may th
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
 struct Foo {
     static int foo_xalloc;
@@ -35,12 +34,9 @@ struct Foo {
     }
 };
 // allocates the iword storage for use with Foo objects
-
 int Foo::foo_xalloc = std::ios_base::xalloc();
 // This user-defined operator&lt;&lt; prints the string in reverse if the iword holds 1
-
 std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, Foo &amp;f)
-
 {
     if (os.iword(Foo::foo_xalloc) == 1)
         return os &lt;&lt; std::string(f.data.rbegin(), f.data.rend());
@@ -48,15 +44,12 @@ std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, Foo &amp;f)
         return os &lt;&lt; f.data;
 }
 // This I/O manipulator flips the number stored in iword between 0 and 1
-
 std::ios_base &amp;rev(std::ios_base &amp;os)
-
 {
     os.iword(Foo::foo_xalloc) = !os.iword(Foo::foo_xalloc);
     return os;
 }
 int main()
-
 {
     Foo f(&quot;example&quot;);
     std::cout &lt;&lt; f &lt;&lt; '

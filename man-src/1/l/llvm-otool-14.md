@@ -16,58 +16,58 @@ description: "llvm-otool – Mach-O dumping tool"
 <p> It attempts to be command-line-compatible and output-compatible with macOS’s <code>otool</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-arch &lt;value&gt;</code></p>
-<dd> Select slice of universal Mach-O file.</p>
-<dt><code>-C</code></p>
-<dd> Print linker optimization hints.</p>
-<dt><code>-D</code></p>
-<dd> Print shared library id.</p>
-<dt><code>-d</code></p>
-<dd> Print data section.</p>
-<dt><code>-f</code></p>
-<dd> Print universal headers.</p>
-<dt><code>-G</code></p>
-<dd> Print data-in-code table.</p>
-<dt><code>&#8211;help-hidden</code></p>
-<dd> Print help for hidden flags.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help.</p>
-<dt><code>-h</code></p>
-<dd> Print mach header.</p>
-<dt><code>-I</code></p>
-<dd> Print indirect symbol table.</p>
-<dt><code>-j</code></p>
-<dd> Print opcode bytes.</p>
-<dt><code>-L</code></p>
-<dd> Print used shared libraries.</p>
-<dt><code>-l</code></p>
-<dd> Print load commands.</p>
-<dt><code>-mcpu=&lt;value&gt;</code></p>
-<dd> Select cpu for disassembly.</p>
-<dt><code>-o</code></p>
-<dd> Print Objective-C segment.</p>
-<dt><code>-P</code></p>
-<dd> Print __TEXT,__info_plist section as strings.</p>
-<dt><code>-p &lt;function name&gt;</code></p>
-<dd> Start disassembly at &lt;function name&gt;.</p>
-<dt><code>-r</code></p>
-<dd> Print relocation entries.</p>
-<dt><code>-s &lt;segname&gt; &lt;sectname&gt;</code></p>
-<dd> Print contents of section.</p>
-<dt><code>-t</code></p>
-<dd> Print text section.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version.</p>
-<dt><code>-V</code></p>
-<dd> Symbolize disassembled operands (implies <i>-v</i>).</p>
-<dt><code>-v</code></p>
-<dd> Verbose output / disassemble when printing text sections.</p>
-<dt><code>-X</code></p>
-<dd> Omit leading addresses or headers.</p>
-<dt><code>-x</code></p>
-<dd> Print all text sections.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options and commands from response file <i>&lt;FILE&gt;</i>.</dl>
+<dt><code>-arch &lt;value&gt;</code></dt>
+<dd> Select slice of universal Mach-O file.</dd>
+<dt><code>-C</code></dt>
+<dd> Print linker optimization hints.</dd>
+<dt><code>-D</code></dt>
+<dd> Print shared library id.</dd>
+<dt><code>-d</code></dt>
+<dd> Print data section.</dd>
+<dt><code>-f</code></dt>
+<dd> Print universal headers.</dd>
+<dt><code>-G</code></dt>
+<dd> Print data-in-code table.</dd>
+<dt><code>&#8211;help-hidden</code></dt>
+<dd> Print help for hidden flags.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help.</dd>
+<dt><code>-h</code></dt>
+<dd> Print mach header.</dd>
+<dt><code>-I</code></dt>
+<dd> Print indirect symbol table.</dd>
+<dt><code>-j</code></dt>
+<dd> Print opcode bytes.</dd>
+<dt><code>-L</code></dt>
+<dd> Print used shared libraries.</dd>
+<dt><code>-l</code></dt>
+<dd> Print load commands.</dd>
+<dt><code>-mcpu=&lt;value&gt;</code></dt>
+<dd> Select cpu for disassembly.</dd>
+<dt><code>-o</code></dt>
+<dd> Print Objective-C segment.</dd>
+<dt><code>-P</code></dt>
+<dd> Print __TEXT,__info_plist section as strings.</dd>
+<dt><code>-p &lt;function name&gt;</code></dt>
+<dd> Start disassembly at &lt;function name&gt;.</dd>
+<dt><code>-r</code></dt>
+<dd> Print relocation entries.</dd>
+<dt><code>-s &lt;segname&gt; &lt;sectname&gt;</code></dt>
+<dd> Print contents of section.</dd>
+<dt><code>-t</code></dt>
+<dd> Print text section.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version.</dd>
+<dt><code>-V</code></dt>
+<dd> Symbolize disassembled operands (implies <i>-v</i>).</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose output / disassemble when printing text sections.</dd>
+<dt><code>-X</code></dt>
+<dd> Omit leading addresses or headers.</dd>
+<dt><code>-x</code></dt>
+<dd> Print all text sections.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options and commands from response file <i>&lt;FILE&gt;</i>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-otool</code> exits with a non-zero exit code if there is an error. Otherwise, it exits with code 0.</p>
 <h2>BUGS</h2>

@@ -25,3 +25,4 @@ int readdir(unsigned int fd, struct old_linux_dirent *dirp,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short d_namlen;&nbsp;/*&nbsp;length of this&nbsp;<i>d_name</i>&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;d_name[1];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;filename&nbsp;(null-terminated)&nbsp;*/ } </p>
 <p> <i>d_ino</i> is an inode number. <i>d_offset</i> is the distance from the start of the directory to this <i>old_linux_dirent</i>. <i>d_reclen</i> is the size of <i>d_name</i>, not counting the terminating null byte (&#8216;
+</p>

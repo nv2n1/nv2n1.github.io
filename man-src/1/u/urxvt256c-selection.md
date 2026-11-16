@@ -42,15 +42,12 @@ url: "/docs/linux/man/1-urxvt256c-selection/"
  This extension also offers the following actions:
 <dl>
 <dt>rot13
-<dd> Rot-13 the selection when activated. 
-
+</dt><dd> Rot-13 the selection when activated. 
  Example: 
-
  <pre>
    URxvt.keysym.C-M-r: selection:rot13
 </pre> 
-
-</dl>
+</dd></dl>
 
 <h2>Index</h2>
 

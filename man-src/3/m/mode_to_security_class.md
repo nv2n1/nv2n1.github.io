@@ -29,10 +29,10 @@ description: "security_class_to_string, security_av_perm_to_string, string_to_se
 <p> <code>security_av_string</code>() returns zero on success or -1 on error with <i>errno</i> set appropriately. <code>print_access_vector</code>() does not return a value. All other functions return zero or NULL on error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>EINVAL</code></p>
-<dd> A class or access vector argument is not recognized by the currently loaded policy. </p>
-<dt><code>ENOMEM</code></p>
-<dd> An attempt to allocate memory failed.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> A class or access vector argument is not recognized by the currently loaded policy. </dd>
+<dt><code>ENOMEM</code></dt>
+<dd> An attempt to allocate memory failed.</dd></dl>
 <h2>Author</h2>
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>See Also</h2>

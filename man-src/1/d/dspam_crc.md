@@ -15,15 +15,15 @@ description: "dspam_crc – calculate the DSPAM CRC/hash value for a text token"
 <p> <code>dspam_crc</code> is used to calculate the DSPAM CRC/hash value for a text token. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>[token]</code></p>
-<dd> Data that will be CRC-ized/hashed. </p>
+<dt><code>[token]</code></dt>
+<dd> Data that will be CRC-ized/hashed. </dd>
 </dl>
 <h2>EXIT VALUE</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Operation was successful.</p>
-<dt><code>other</code></p>
-<dd> Operation resulted in an error. </p>
+<dt><code>0</code></dt>
+<dd> Operation was successful.</dd>
+<dt><code>other</code></dt>
+<dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2012 DSPAM Project<br />

@@ -10,11 +10,9 @@ description: "pthread_attr_setstacksize, pthread_attr_getstacksize – set/get s
 <p>pthread_attr_setstacksize, pthread_attr_getstacksize &#8211; set/get stack size attribute in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setstacksize(pthread_attr_t *attr, size_t stacksize);
 int pthread_attr_getstacksize(const pthread_attr_t *attr,
                               size_t *stacksize);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setstacksize</code>() function sets the stack size attribute of the thread attributes object referred to by <i>attr</i> to the value specified in <i>stacksize</i>. </p>
@@ -25,8 +23,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setstacksize</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The stack size is less than <code>PTHREAD_STACK_MIN</code> (16384) bytes.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The stack size is less than <code>PTHREAD_STACK_MIN</code> (16384) bytes.</dd></dl>
 <p> On some systems, <code>pthread_attr_setstacksize</code>() can fail with the error <code>EINVAL</code> if <i>stacksize</i> is not a multiple of the system page size.</p>
 <h2>Versions</h2>
 <p>These functions are provided by glibc since version 2.1.</p>

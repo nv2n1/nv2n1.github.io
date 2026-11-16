@@ -18,47 +18,47 @@ option        &quot;value ending with space   &quot;</code></pre>
 <h2>Spelling</h2>
 <p>Define if you want to use ispell for checking spelling and how to use it.</p>
 <dl>
-<dt><i>check_spelling</i></p>
-<dd>use Aspell for spelling if set to `<code>yes</code>&#8216; [yes]</p>
-<dt><i>dictionary</i></p>
-<dd>Language dictionary to use with Aspell, use default if empty [empty]</p>
-<dt><i>word_letters</i></p>
-<dd>regular expression to define characters allowed to write a word, pattern matches according locale [\w]</p>
-<dt><i>$review_mode</i></p>
-<dd>set to `<code>yes</code>&#8216; if you want review comments to be added in the output file after parsed line, otherwise just fix error [no]</dl>
+<dt><i>check_spelling</i></dt>
+<dd>use Aspell for spelling if set to `<code>yes</code>&#8216; [yes]</dd>
+<dt><i>dictionary</i></dt>
+<dd>Language dictionary to use with Aspell, use default if empty [empty]</dd>
+<dt><i>word_letters</i></dt>
+<dd>regular expression to define characters allowed to write a word, pattern matches according locale [\w]</dd>
+<dt><i>$review_mode</i></dt>
+<dd>set to `<code>yes</code>&#8216; if you want review comments to be added in the output file after parsed line, otherwise just fix error [no]</dd></dl>
 <h2>Colors</h2>
 <p>Set text colors for clear presentation. </p>
 <p> The recognized colors (all of which should be fairly intuitive) are: <code>clear</code>, <code>reset</code>, <code>dark</code>, <code>bold</code>, <code>underline</code>, <code>underscore</code>, <code>blink</code>, <code>reverse</code>, <code>concealed</code>, <code>black</code>, <code>red</code>, <code>green</code>, <code>yellow</code>, <code>blue</code>, <code>magenta</code>, <code>cyan</code>, <code>white</code>, <code>on_black</code>, <code>on_red</code>, <code>on_green</code>, <code>on_yellow</code>, <code>on_blue</code>, <code>on_magenta</code>, <code>on_cyan</code>, and <code>on_white</code>. Case is not significant. Underline and underscore are equivalent, as are clear and reset, so use whichever is the most intuitive to you. The <i>color</i> alone sets the foreground color, and <i>on_color</i> sets the background color. </p>
 <p> Note that not all colors are supported by all terminal types, and some terminals may not support any of these sequences. Dark, blink, and concealed in particular are frequently not implemented.</p>
 <dl>
-<dt><i>error_color</i></p>
-<dd>color used to highlight errors, this should highlight space characters [bold on_red]</p>
-<dt><i>fix_color</i></p>
-<dd>color used to highlight suggestions, this should highlight space characters [bold on_green]</p>
-<dt><i>error_head_color</i></p>
-<dd>color used to display the error line header [bold red]</p>
-<dt><i>error_color</i></p>
-<dd>color used to display the suggestion line header [bold green]</p>
-<dt><i>comment_color</i></p>
-<dd>color used for comments and hints [cyan]</dl>
+<dt><i>error_color</i></dt>
+<dd>color used to highlight errors, this should highlight space characters [bold on_red]</dd>
+<dt><i>fix_color</i></dt>
+<dd>color used to highlight suggestions, this should highlight space characters [bold on_green]</dd>
+<dt><i>error_head_color</i></dt>
+<dd>color used to display the error line header [bold red]</dd>
+<dt><i>error_color</i></dt>
+<dd>color used to display the suggestion line header [bold green]</dd>
+<dt><i>comment_color</i></dt>
+<dd>color used for comments and hints [cyan]</dd></dl>
 <h2>Others</h2>
 <dl>
-<dt><i>bak_ext</i></p>
-<dd>extension for backup files [bak]</p>
-<dt><i>comment</i></p>
-<dd>comment string for review [&gt;&gt; ]</p>
-<dt><i>debug</i></p>
-<dd>verbosity level [0]</dl>
+<dt><i>bak_ext</i></dt>
+<dd>extension for backup files [bak]</dd>
+<dt><i>comment</i></dt>
+<dd>comment string for review [&gt;&gt; ]</dd>
+<dt><i>debug</i></dt>
+<dd>verbosity level [0]</dd></dl>
 <p> Verbosity Levels:</p>
 <dl>
-<dt><i>0</i> quiet, normal</p>
-<dd>only warnings and errors</p>
-<dt><i>1</i> debug</p>
-<dd>names of subroutines</p>
-<dt><i>2</i> debug verbose</p>
-<dd>names and arguments of subroutines</p>
-<dt><i>3</i> .. <i>5</i> debug very verbose</p>
-<dd>output parsing and checking details</dl>
+<dt><i>0</i> quiet, normal</dt>
+<dd>only warnings and errors</dd>
+<dt><i>1</i> debug</dt>
+<dd>names of subroutines</dd>
+<dt><i>2</i> debug verbose</dt>
+<dd>names and arguments of subroutines</dd>
+<dt><i>3</i> .. <i>5</i> debug very verbose</dt>
+<dd>output parsing and checking details</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-acheck/">acheck</a></i>(1), <i><a href="/docs/linux/man/5-acheck-rules/">acheck-rules</a></i>(5)</p>
 <h2>Author</h2>

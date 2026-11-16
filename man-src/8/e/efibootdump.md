@@ -17,12 +17,12 @@ description: "efibootdump – dump a boot entries from a variable or a file"
 <h2>Options</h2>
 <p>The following is a list of options accepted by efibootmgr:</p>
 <dl>
-<dt><code>-g | &#8211;guid</code> <i>{guid}</i></p>
-<dd>Any variables specified by name have the specified GUID.</p>
-<dt><code>-f | &#8211;file</code> <i>&lt;file&gt;</i></p>
-<dd>Read a single boot variable from the specified file.</p>
-<dt><i>&lt;nameN&gt;</i></p>
-<dd>Display the specified variable on the local machine. If no GUID is specified, EFI Global Variable is the default.</dl>
+<dt><code>-g | &#8211;guid</code> <i>{guid}</i></dt>
+<dd>Any variables specified by name have the specified GUID.</dd>
+<dt><code>-f | &#8211;file</code> <i>&lt;file&gt;</i></dt>
+<dd>Read a single boot variable from the specified file.</dd>
+<dt><i>&lt;nameN&gt;</i></dt>
+<dd>Display the specified variable on the local machine. If no GUID is specified, EFI Global Variable is the default.</dd></dl>
 <h2>Bugs</h2>
 <p>Please direct any bugs, features, patches, etc. to the Red Hat bootloader team at <a rel="nofollow" href="https://github.com/rhboot/efibootmgr">https://github.com/rhboot/efibootmgr</a> .</p>
 <h2>See Also</h2>

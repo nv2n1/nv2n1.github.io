@@ -19,7 +19,7 @@ description: "cgbsvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGBSVX uses the LU factorization to compute the solution to a complex
  system of linear equations A * X = B, A**T * X = B, or A**H * X = B,
@@ -28,11 +28,11 @@ description: "cgbsvx.f –"
  Error bounds on the solution and a condition estimate are also
  provided.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  The following steps are performed by this subroutine:
  1. If FACT = 'E', real scaling factors are computed to equilibrate
@@ -65,11 +65,11 @@ description: "cgbsvx.f –"
     diag(C) (if TRANS = 'N') or diag(R) (if TRANS = 'T' or 'C') so
     that it solves the original system before equilibration.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
           Specifies whether or not the factored form of the matrix A is
@@ -299,14 +299,14 @@ if TRANS
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 369 of file cgbsvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

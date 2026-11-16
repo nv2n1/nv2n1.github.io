@@ -11,41 +11,23 @@ std::minmax_element - std::minmax_element
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                        (since C++11)
-
 std::pair&lt;ForwardIt,ForwardIt&gt;                                                                     (until C++17)
-
 minmax_element( ForwardIt first, ForwardIt last );
-
 template&lt; class ForwardIt &gt;
-
 constexpr std::pair&lt;ForwardIt,ForwardIt&gt;                                                           (since C++17)
-
 minmax_element( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;
-
 std::pair&lt;ForwardIt,ForwardIt&gt;                                                                 (2) (since C++17)
-
 minmax_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );               (1)
-
 template&lt; class ForwardIt, class Compare &gt;                                                                        (since C++11)
-
 std::pair&lt;ForwardIt,ForwardIt&gt;                                                                                    (until C++17)
-
 minmax_element( ForwardIt first, ForwardIt last, Compare comp );
-
 template&lt; class ForwardIt, class Compare &gt;
-
 constexpr std::pair&lt;ForwardIt,ForwardIt&gt;                                                       (3)                (since C++17)
-
 minmax_element( ForwardIt first, ForwardIt last, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt, class Compare &gt;
-
 std::pair&lt;ForwardIt,ForwardIt&gt;                                                                     (4)            (since C++17)
-
 minmax_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, Compare comp );</code></pre> 
 Finds the smallest and greatest element in the range [first, last). 
 1) Elements are compared using operator&lt;. 
@@ -143,9 +125,7 @@ This algorithm is different from std::make_pair(std::min_element(), std::max_ele
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
 {

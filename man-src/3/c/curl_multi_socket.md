@@ -38,19 +38,17 @@ int curl_socket_callback(CURL *easy,      /* easy handle */
 <p> The <i>s</i> argument is the actual socket value as you use it within your system. </p>
 <p> The <i>action</i> argument to the callback has one of five values:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>CURL_POLL_NONE (0)</p>
-<dd> register, not interested in readiness (yet)</p>
-<dt>CURL_POLL_IN (1)</p>
-<dd> register, interested in read readiness</p>
-<dt>CURL_POLL_OUT (2)</p>
-<dd> register, interested in write readiness</p>
-<dt>CURL_POLL_INOUT (3)</p>
-<dd> register, interested in both read and write readiness</p>
-<dt>CURL_POLL_REMOVE (4)</p>
-<dd> unregister</dl>
+<dt>CURL_POLL_NONE (0)</dt>
+<dd> register, not interested in readiness (yet)</dd>
+<dt>CURL_POLL_IN (1)</dt>
+<dd> register, interested in read readiness</dd>
+<dt>CURL_POLL_OUT (2)</dt>
+<dd> register, interested in write readiness</dd>
+<dt>CURL_POLL_INOUT (3)</dt>
+<dd> register, interested in both read and write readiness</dd>
+<dt>CURL_POLL_REMOVE (4)</dt>
+<dd> unregister</dd></dl>
 </dl>
 <p> The <i>socketp</i> argument is a private pointer you have previously set with <i><a href="/docs/linux/man/3-curl_multi_assign/">curl_multi_assign</a>(3)</i> to be associated with the <i>s</i> socket. If no pointer has been set, socketp will be NULL. This argument is of course a service to applications that want to keep certain data or structs that are strictly associated to the given socket. </p>
 <p> The <i>userp</i> argument is a private pointer you have previously set with <i><a href="/docs/linux/man/3-curl_multi_setopt/">curl_multi_setopt</a>(3)</i> and the CURLMOPT_SOCKETDATA option.</p>

@@ -15,7 +15,8 @@ description: "SDL_Delay – Wait a specified number of milliseconds before retur
 <p> Wait a specified number of milliseconds before returning. <code>SDL_Delay</code> will wait at <i>least</i> the specified time, but possible longer due to OS scheduling. </p>
 <dl COMPACT>
 <dt>
-<dd> <code>Note: </p>
+</dt><dd> <code>Note: </dd>
 <p> Count on a delay granularity of </code><i>at least</i> 10 ms. Some platforms have shorter clock ticks but this is the most common.</dl>
 <h2>See Also</h2>
 <p> <i></i><code>SDL_AddTimer</code></p>
+</p>

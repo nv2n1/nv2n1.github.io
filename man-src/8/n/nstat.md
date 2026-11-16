@@ -16,26 +16,26 @@ description: "nstat, rtacct – network statistics tools."
 <h2>Options</h2>
 <p><code>-h, &#8211;help</code> Print help</p>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print version</p>
-<dt><code>-z, &#8211;zeros</code></p>
-<dd>Dump zero counters too. By default they are not shown.</p>
-<dt><code>-r, &#8211;reset</code></p>
-<dd>Reset history.</p>
-<dt><code>-n, &#8211;nooutput</code></p>
-<dd>Do not display anything, only update history.</p>
-<dt><code>-a, &#8211;ignore</code></p>
-<dd>Dump absolute values of counters. The default is to calculate increments since the previous use.</p>
-<dt><code>-s, &#8211;noupdate</code></p>
-<dd>Do not update history, so that the next time you will see counters including values accumulated to the moment of this measurement too.</p>
-<dt><code>-j, &#8211;json</code></p>
-<dd>Display results in JSON format.</p>
-<dt><code>-p, &#8211;pretty</code></p>
-<dd>When combined with <code>&#8211;json</code>, pretty print the output.</p>
-<dt><code>-d, &#8211;scan &lt;INTERVAL&gt;</code></p>
-<dd>Run in daemon mode collecting statistics. &lt;INTERVAL&gt; is interval between measurements in seconds.</p>
-<dt><code>-t, &#8211;interval &lt;INTERVAL&gt;</code></p>
-<dd>Time interval to average rates. Default value is 60 seconds. </p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print version</dd>
+<dt><code>-z, &#8211;zeros</code></dt>
+<dd>Dump zero counters too. By default they are not shown.</dd>
+<dt><code>-r, &#8211;reset</code></dt>
+<dd>Reset history.</dd>
+<dt><code>-n, &#8211;nooutput</code></dt>
+<dd>Do not display anything, only update history.</dd>
+<dt><code>-a, &#8211;ignore</code></dt>
+<dd>Dump absolute values of counters. The default is to calculate increments since the previous use.</dd>
+<dt><code>-s, &#8211;noupdate</code></dt>
+<dd>Do not update history, so that the next time you will see counters including values accumulated to the moment of this measurement too.</dd>
+<dt><code>-j, &#8211;json</code></dt>
+<dd>Display results in JSON format.</dd>
+<dt><code>-p, &#8211;pretty</code></dt>
+<dd>When combined with <code>&#8211;json</code>, pretty print the output.</dd>
+<dt><code>-d, &#8211;scan &lt;INTERVAL&gt;</code></dt>
+<dd>Run in daemon mode collecting statistics. &lt;INTERVAL&gt; is interval between measurements in seconds.</dd>
+<dt><code>-t, &#8211;interval &lt;INTERVAL&gt;</code></dt>
+<dd>Time interval to average rates. Default value is 60 seconds. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-lnstat/">lnstat</a>(8) </p>

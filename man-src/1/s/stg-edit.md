@@ -18,34 +18,34 @@ stg edit[options][--][&lt;patch&gt;]
 <p> The editor is invoked with the following contents: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 From: A U Thor &lt;author [at] example.com&gt;
 Date: creation date
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Patch description
 </pre>
-</dl>
+</dd></dl>
 <p> If &#8211;diff was specified, the diff appears at the bottom, after a separator: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ---
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Diff text
 </pre>
-</dl>
+</dd></dl>
 <p> Command-line options can be used to modify specific information without invoking the editor. (With the &#8211;edit option, the editor is invoked even if such command-line options are given.) </p>
 <p> If the patch diff is edited but does not apply, no changes are made to the patch at all. The edited patch is saved to a file which you can feed to &quot;stg edit &#8211;file&quot;, once you have made sure it does apply. </p>
 <p> With &#8211;set-tree you set the git tree of the patch to the specified TREE-ISH without changing the tree of any other patches. When used on the top patch, the index and work tree will be updated to match the tree. This low-level option is primarily meant to be used by tools built on top of StGit, such as the Emacs mode. See also the &#8211;set-tree flag of stg push.</p>
@@ -53,56 +53,56 @@ Diff text
 <p> -d, &#8211;diff</p>
 <dl>
 <dt>
-<dd> Edit the patch diff.</dl>
+</dt><dd> Edit the patch diff.</dd></dl>
 <p> -e, &#8211;edit</p>
 <dl>
 <dt>
-<dd> Invoke interactive editor.</dl>
+</dt><dd> Invoke interactive editor.</dd></dl>
 <p> &#8211;sign</p>
 <dl>
 <dt>
-<dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dl>
+</dt><dd> Add a &quot;Signed-off-by:&quot; to the end of the patch.</dd></dl>
 <p> &#8211;ack</p>
 <dl>
 <dt>
-<dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dl>
+</dt><dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dd></dl>
 <p> -m MESSAGE, &#8211;message MESSAGE</p>
 <dl>
 <dt>
-<dd> Use MESSAGE instead of invoking the editor.</dl>
+</dt><dd> Use MESSAGE instead of invoking the editor.</dd></dl>
 <p> -f FILE, &#8211;file FILE</p>
 <dl>
 <dt>
-<dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dl>
+</dt><dd> Use the contents of FILE instead of invoking the editor. (If FILE is &quot;-&quot;, write to stdout.)</dd></dl>
 <p> &#8211;save-template FILE</p>
 <dl>
 <dt>
-<dd> Instead of running the command, just write the message template to FILE, and exit. (If FILE is &quot;-&quot;, write to stdout.) </p>
+</dt><dd> Instead of running the command, just write the message template to FILE, and exit. (If FILE is &quot;-&quot;, write to stdout.) </dd>
 <p> When driving StGit from another program, it is often useful to first call a command with <i>&#8211;save-template</i>, then let the user edit the message, and then call the same command with <i>&#8211;file</i>.</dl>
 <p> &#8211;author &quot;NAME &lt;EMAIL&gt;&quot;</p>
 <dl>
 <dt>
-<dd> Set the author details.</dl>
+</dt><dd> Set the author details.</dd></dl>
 <p> &#8211;authname NAME</p>
 <dl>
 <dt>
-<dd> Set the author name.</dl>
+</dt><dd> Set the author name.</dd></dl>
 <p> &#8211;authemail EMAIL</p>
 <dl>
 <dt>
-<dd> Set the author email.</dl>
+</dt><dd> Set the author email.</dd></dl>
 <p> &#8211;authdate DATE</p>
 <dl>
 <dt>
-<dd> Set the author date.</dl>
+</dt><dd> Set the author date.</dd></dl>
 <p> -O OPTIONS, &#8211;diff-opts OPTIONS</p>
 <dl>
 <dt>
-<dd> Extra options to pass to &quot;git diff&quot;.</dl>
+</dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <p> -t TREE-ISH, &#8211;set-tree TREE-ISH</p>
 <dl>
 <dt>
-<dd> Set the git tree of the patch to TREE-ISH.</dl>
+</dt><dd> Set the git tree of the patch to TREE-ISH.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

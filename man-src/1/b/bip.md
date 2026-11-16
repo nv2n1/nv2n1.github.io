@@ -15,14 +15,14 @@ description: "bip – BIP IRC Proxy"
 <p> BIP is an IRC Proxy </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t daemonize. Log into stderr. </p>
-<dt><code>-f</code> config_file</p>
-<dd> Use config_file as the configuration file. If no config file is given, bip will try to open ~/.bip/bip.conf. </p>
-<dt><code>-s</code> homedir</p>
-<dd> Set bip home directory to homedir instead of $HOME/.bip. </p>
-<dt><code>-h</code></p>
-<dd> Help. </p>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t daemonize. Log into stderr. </dd>
+<dt><code>-f</code> config_file</dt>
+<dd> Use config_file as the configuration file. If no config file is given, bip will try to open ~/.bip/bip.conf. </dd>
+<dt><code>-s</code> homedir</dt>
+<dd> Set bip home directory to homedir instead of $HOME/.bip. </dd>
+<dt><code>-h</code></dt>
+<dd> Help. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> bip.conf </p>

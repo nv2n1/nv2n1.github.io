@@ -47,9 +47,9 @@ description: "comsat_selinux – Security Enhanced Linux Policy for the comsat p
 <p> Policy governs the access confined processes have to these ports. SELinux comsat policy is very flexible allowing users to setup their comsat processes in as secure a method as possible. </p>
 <p> The following port types are defined for comsat: </p>
 <dl>
-<dt><code>comsat_port_t</code></p>
+<dt><code>comsat_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 512</dl>
+</dd><dd>Default Defined Ports: udp 512</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type comsat_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>comsat_tmp_t</code> </p>

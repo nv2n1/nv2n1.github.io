@@ -19,15 +19,15 @@ description: "cpufreq-aperf – Calculates the average frequency over a time per
 <p> A nice falloff feature beside the average frequency is the time a processor core remained in C0 (working state) or any CX (sleep state) processor sleep state during the measured time period. This information can be determined from the fact that MPERF only increases in C0 state.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <code>&#8211;cpu</code> &lt;<i>CPU</i>&gt;</p>
+<dt><code>-c</code> <code>&#8211;cpu</code> &lt;<i>CPU</i>&gt;</dt>
 <dd>
-&nbsp;<wbr>The&nbsp;<wbr>&lt;<i>CPU</i>&gt;&nbsp;<wbr>core to measure &#8211; default all cores.</p>
-<dt><code>-i</code> <code>&#8211;interval</code> &lt;<i>seconds</i>&gt;</p>
-<dd> Refresh rate &#8211; default 1 second.</p>
-<dt><code>-o</code> <code>&#8211;once</code></p>
-<dd> Exit after one interval.</p>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> Prints the available options.</dl>
+&nbsp;<wbr>The&nbsp;<wbr>&lt;<i>CPU</i>&gt;&nbsp;<wbr>core to measure &#8211; default all cores.</dd>
+<dt><code>-i</code> <code>&#8211;interval</code> &lt;<i>seconds</i>&gt;</dt>
+<dd> Refresh rate &#8211; default 1 second.</dd>
+<dt><code>-o</code> <code>&#8211;once</code></dt>
+<dd> Exit after one interval.</dd>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Prints the available options.</dd></dl>
 <h2>REMARKS</h2>
 <p> The msr driver must be loaded for this command to work.</p>
 <h2>AUTHORS</h2>

@@ -32,20 +32,20 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>width</i> Width.<br />
- <i>height</i> Height.</dl>
+ <i>height</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>parent</i> The parent window to use. If parent is 0, the root window of the default display is used.<br />
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> Referenced by ecore_evas_software_x11_16_new(), and ecore_evas_software_x11_new().</p>
 <h3>EAPI Ecore_X_Window ecore_x_window_input_new (Ecore_X_Window parent, int x, int y, int w, int h)</h3>
 <p>Creates a new input window. </p>
@@ -55,10 +55,10 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window.</dl>
+<dd>The new window.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_manager_argb_new (Ecore_X_Window parent, int x, int y, int w, int h)</h3>
 <p>Creates a new window. </p>
 <p> <code>Parameters:</code></p>
@@ -67,20 +67,20 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>width</i> Width.<br />
- <i>height</i> Height.</dl>
+ <i>height</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>parent</i> The parent window to use. If parent is 0, the root window of the default display is used.<br />
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_new (Ecore_X_Window parent, int x, int y, int w, int h)</h3>
 <p>Creates a new window. </p>
 <p> <code>Parameters:</code></p>
@@ -89,10 +89,10 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> References ecore_x_window_defaults_set(). </p>
 <p> Referenced by ecore_evas_software_x11_16_new(), ecore_evas_software_x11_new(), and ecore_evas_xrender_x11_new().</p>
 <h3>EAPI Ecore_X_Window ecore_x_window_override_argb_new (Ecore_X_Window parent, int x, int y, int w, int h)</h3>
@@ -103,20 +103,20 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>width</i> Width.<br />
- <i>height</i> Height.</dl>
+ <i>height</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>parent</i> The parent window to use. If parent is 0, the root window of the default display is used.<br />
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_override_new (Ecore_X_Window parent, int x, int y, int w, int h)</h3>
 <p>Creates a window with the override redirect attribute set to True. </p>
 <p> <code>Parameters:</code></p>
@@ -125,10 +125,10 @@ description: "X Window Creation Functions – Functions that can be used to crea
  <i>x</i> X position.<br />
  <i>y</i> Y position.<br />
  <i>w</i> Width.<br />
- <i>h</i> Height.</dl>
+ <i>h</i> Height.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new window handle.</dl>
+<dd>The new window handle.</dd></dl>
 <p> Referenced by ecore_x_init().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -17,50 +17,51 @@ description: "arc – pc archive utility"
 <p> Execute <i>arc</i> with no arguments for fairly verbose, usable instructions.</p>
 <h2>COMMAND SWITCHES</h2>
 <dl>
-<dt>a</p>
-<dd> add files to archive. Copies the indicated files to the archive.</p>
-<dt>m</p>
-<dd> move files to archive. Same as &#8216;a&#8217; switch except that the files are deleted from the directory as they are moved to the archive.</p>
-<dt>u</p>
-<dd> update files in archive. This switch will replace archived files when the named file is newer than the archived copy. New files will be added automatically.</p>
-<dt>f</p>
-<dd> freshen files in archive. Same as &#8216;u&#8217; except that new files will not be added.</p>
-<dt>d</p>
-<dd> delete files in archive. The named files are removed from the archive.</p>
-<dt>x,e</p>
-<dd> extract files from archive. The named files are extracted from the archive and created in the current directory in an uncompressed state.</p>
-<dt>r</p>
-<dd> run one file with arguments from archive. Any program may be executed directly from the archive. The parameters given after the program name are passed to the program without modification.</p>
-<dt>p</p>
-<dd> copy files from archive to standard output. Useful with I/O redirection. A form-feed is appended after each file, to ease use with printers.</p>
-<dt>l</p>
-<dd> list files in archive. Limited information listing of files contained in an archive. Displays the filename, original length, and date last modified. If the &#8216;n&#8217; option (see below) is used, only the filename is displayed.</p>
-<dt>v</p>
-<dd> verbose listing of files in archive. Complete information listing of files contained in an archive. Displays the filename, original length, storage method, storage factor (% savings), compressed size, date, time, and CRC.</p>
-<dt>t</p>
-<dd> test archive integrity. Computes CRC values for each member of the archive and compares against the previously saved value.</p>
-<dt>c</p>
-<dd> convert entry to new packing method. Convert files stored with older methods to newer methods that are more efficient. Also useful for files previously archived with the &#8216;s&#8217; option.</dl>
+<dt>a</dt>
+<dd> add files to archive. Copies the indicated files to the archive.</dd>
+<dt>m</dt>
+<dd> move files to archive. Same as &#8216;a&#8217; switch except that the files are deleted from the directory as they are moved to the archive.</dd>
+<dt>u</dt>
+<dd> update files in archive. This switch will replace archived files when the named file is newer than the archived copy. New files will be added automatically.</dd>
+<dt>f</dt>
+<dd> freshen files in archive. Same as &#8216;u&#8217; except that new files will not be added.</dd>
+<dt>d</dt>
+<dd> delete files in archive. The named files are removed from the archive.</dd>
+<dt>x,e</dt>
+<dd> extract files from archive. The named files are extracted from the archive and created in the current directory in an uncompressed state.</dd>
+<dt>r</dt>
+<dd> run one file with arguments from archive. Any program may be executed directly from the archive. The parameters given after the program name are passed to the program without modification.</dd>
+<dt>p</dt>
+<dd> copy files from archive to standard output. Useful with I/O redirection. A form-feed is appended after each file, to ease use with printers.</dd>
+<dt>l</dt>
+<dd> list files in archive. Limited information listing of files contained in an archive. Displays the filename, original length, and date last modified. If the &#8216;n&#8217; option (see below) is used, only the filename is displayed.</dd>
+<dt>v</dt>
+<dd> verbose listing of files in archive. Complete information listing of files contained in an archive. Displays the filename, original length, storage method, storage factor (% savings), compressed size, date, time, and CRC.</dd>
+<dt>t</dt>
+<dd> test archive integrity. Computes CRC values for each member of the archive and compares against the previously saved value.</dd>
+<dt>c</dt>
+<dd> convert entry to new packing method. Convert files stored with older methods to newer methods that are more efficient. Also useful for files previously archived with the &#8216;s&#8217; option.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>b</p>
-<dd> retain backup copy of archive. Keep the original archive file and rename to .BAK. This switch may be used with the following commands: a, m, u, f, d, c.</p>
-<dt>i</p>
+<dt>b</dt>
+<dd> retain backup copy of archive. Keep the original archive file and rename to .BAK. This switch may be used with the following commands: a, m, u, f, d, c.</dd>
+<dt>i</dt>
 <dd> suppress image mode. This switch causes files to be treated as text files, and will translate their end-of-line sequence. (Unix&#8217;s &#8216;
 &#8217; vs. &#8216;
-&#8217; used on many other systems.) The default is to perform no translation when compressing or extracting files. This option makes dealing with text files much nicer, though the &#8216;tr&#8217; command can also be used. (&#8216;&#8217; in makefiles and C source code is such a nuisance&#8230;)</p>
-<dt>s</p>
-<dd> suppress compression. This forces new files to be saved using Method 2 (no compression). This switch may be used with the following commands: a, m, u, f, c.</p>
-<dt>w</p>
-<dd> suppress warning messages. This switch will keep warning messages from being displayed which is the default. Most warnings concern the deletion or existence of files with the same name.</p>
-<dt>n</p>
-<dd> suppress notes and comments. This switch will keep useful notes from being displayed which is the default. Most notes indicate what stage of compression is being run (analyze, compaction, storage).</p>
-<dt>o</p>
-<dd> overwrite existing files when extracting. This switch will make existing files silently get overwritten, instead of asking for confirmation, which is the default.</p>
-<dt>q</p>
-<dd> force Squash compression method. This switch causes the Squash compression method to be used, instead of Crunch, which is the default.</p>
-<dt>g</p>
-<dd> encrypt/decrypt archive entry. This is used to encode files so that others may not read them. BE CAREFUL! This must be the last parameter in the switches because everything following is part of the password.</dl>
+&#8217; used on many other systems.) The default is to perform no translation when compressing or extracting files. This option makes dealing with text files much nicer, though the &#8216;tr&#8217; command can also be used. (&#8216;
+&#8217; in makefiles and C source code is such a nuisance&#8230;)</dd>
+<dt>s</dt>
+<dd> suppress compression. This forces new files to be saved using Method 2 (no compression). This switch may be used with the following commands: a, m, u, f, c.</dd>
+<dt>w</dt>
+<dd> suppress warning messages. This switch will keep warning messages from being displayed which is the default. Most warnings concern the deletion or existence of files with the same name.</dd>
+<dt>n</dt>
+<dd> suppress notes and comments. This switch will keep useful notes from being displayed which is the default. Most notes indicate what stage of compression is being run (analyze, compaction, storage).</dd>
+<dt>o</dt>
+<dd> overwrite existing files when extracting. This switch will make existing files silently get overwritten, instead of asking for confirmation, which is the default.</dd>
+<dt>q</dt>
+<dd> force Squash compression method. This switch causes the Squash compression method to be used, instead of Crunch, which is the default.</dd>
+<dt>g</dt>
+<dd> encrypt/decrypt archive entry. This is used to encode files so that others may not read them. BE CAREFUL! This must be the last parameter in the switches because everything following is part of the password.</dd></dl>
 <h2>PROGRAMMING NOTES</h2>
 <p> <i>Arc</i> Version 2 differs from version 1 in that archive entries are automatically compressed when they are added to the archive, making a separate compression step unecessary. The nature of the compression is indicated by the header version number placed in each archive entry, as follows: </p>
 <pre>

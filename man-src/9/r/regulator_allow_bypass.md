@@ -14,19 +14,19 @@ description: "regulator_allow_bypass – allow the regulator to go into bypass m
 <p><i>regulator</i></p>
 <dl>
 <dd>
-<dd>Regulator to configure</dl>
+</dd><dd>Regulator to configure</dd></dl>
 <p> <i>enable</i></p>
 <dl>
-<dd>enable or disable bypass mode</dl>
+<dd>enable or disable bypass mode</dd></dl>
 <h2>Description</h2>
 <p>Allow the regulator to go into bypass mode if all other consumers for the regulator also enable bypass mode and the machine constraints allow this. Bypass mode means that the regulator is simply passing the input directly to the output with no regulation.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

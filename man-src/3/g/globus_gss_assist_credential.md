@@ -22,23 +22,23 @@ description: "Credential Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>minor_status</i> pointer for return code<br />
+</dt><dd> <i>minor_status</i> pointer for return code<br />
  <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br />
- <i>output_cred_handle</i> Pointer to the returned handle. This needs to be passed to many gss routines.</dl>
+ <i>output_cred_handle</i> Pointer to the returned handle. This needs to be passed to many gss routines.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GSS_S_COMPLETE on success Other GSSAPI return codes</dl>
+</dt><dd> GSS_S_COMPLETE on success Other GSSAPI return codes</dd></dl>
 <h3>OM_uint32 globus_gss_assist_acquire_cred_ext (OM_uint32 *minor_status, char *desired_name_char, OM_uint32time_req, const gss_OID_setdesired_mechs, gss_cred_usage_tcred_usage, gss_cred_id_t *output_cred_handle, gss_OID_set *actual_mechs, OM_uint32 *time_rec)</h3>
 <p> Called once at the start of the process, to obtain the credentials the process is running under. All the parameters of the gss_acquire_cred(), except the desired_name is a string of the form: [type:]name. This will be imported with the type. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GSS_S_COMPLETE on success Other GSSPI return codes</dl>
+</dt><dd> GSS_S_COMPLETE on success Other GSSPI return codes</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> globus_gss_acquire_cred</dl>
+</dt><dd> globus_gss_acquire_cred</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
 <h2>Index</h2>

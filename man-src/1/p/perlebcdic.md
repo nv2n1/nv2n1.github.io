@@ -40,12 +40,12 @@ description: "perlebcdic – Considerations for running Perl on EBCDIC platforms
 <p> The Line Feed (<font SIZE="-1">LF</font>) character is actually a 14th variant character, and Perl checks for that as well. </p>
 <p> <i></i><font SIZE="-1"><i>EBCDIC</i></font><i> code sets recognized by Perl</i></p>
 <dl>
-<dt><code>0037</code></p>
-<dd> Character code set <font SIZE="-1">ID 0037</font> is a mapping of the <font SIZE="-1">ASCII</font> plus Latin-1 characters (i.e. <font SIZE="-1">ISO 8859-1</font>) to an <font SIZE="-1">EBCDIC</font> set. 0037 is used in North American English locales on the <font SIZE="-1">OS/400</font> operating system that runs on <font SIZE="-1">AS/400</font> computers. <font SIZE="-1">CCSID 0037</font> differs from <font SIZE="-1">ISO 8859-1</font> in 236 places; in other words they agree on only 20 code point values.</p>
-<dt><code>1047</code></p>
-<dd> Character code set <font SIZE="-1">ID 1047</font> is also a mapping of the <font SIZE="-1">ASCII</font> plus Latin-1 characters (i.e. <font SIZE="-1">ISO 8859-1</font>) to an <font SIZE="-1">EBCDIC</font> set. 1047 is used under Unix System Services for <font SIZE="-1">OS/390</font> or z/OS, and OpenEdition for <font SIZE="-1">VM/ESA.</font> <font SIZE="-1">CCSID 1047</font> differs from <font SIZE="-1">CCSID 0037</font> in eight places, and from <font SIZE="-1">ISO 8859-1</font> in 236.</p>
-<dt><code>POSIX-BC</code></p>
-<dd> The <font SIZE="-1">EBCDIC</font> code page in use on Siemens&#8217; <font SIZE="-1">BS2000</font> system is distinct from 1047 and 0037. It is identified below as the POSIX-BC set. Like 0037 and 1047, it is the same as <font SIZE="-1">ISO 8859-1</font> in 20 code point values.</dl>
+<dt><code>0037</code></dt>
+<dd> Character code set <font SIZE="-1">ID 0037</font> is a mapping of the <font SIZE="-1">ASCII</font> plus Latin-1 characters (i.e. <font SIZE="-1">ISO 8859-1</font>) to an <font SIZE="-1">EBCDIC</font> set. 0037 is used in North American English locales on the <font SIZE="-1">OS/400</font> operating system that runs on <font SIZE="-1">AS/400</font> computers. <font SIZE="-1">CCSID 0037</font> differs from <font SIZE="-1">ISO 8859-1</font> in 236 places; in other words they agree on only 20 code point values.</dd>
+<dt><code>1047</code></dt>
+<dd> Character code set <font SIZE="-1">ID 1047</font> is also a mapping of the <font SIZE="-1">ASCII</font> plus Latin-1 characters (i.e. <font SIZE="-1">ISO 8859-1</font>) to an <font SIZE="-1">EBCDIC</font> set. 1047 is used under Unix System Services for <font SIZE="-1">OS/390</font> or z/OS, and OpenEdition for <font SIZE="-1">VM/ESA.</font> <font SIZE="-1">CCSID 1047</font> differs from <font SIZE="-1">CCSID 0037</font> in eight places, and from <font SIZE="-1">ISO 8859-1</font> in 236.</dd>
+<dt><code>POSIX-BC</code></dt>
+<dd> The <font SIZE="-1">EBCDIC</font> code page in use on Siemens&#8217; <font SIZE="-1">BS2000</font> system is distinct from 1047 and 0037. It is identified below as the POSIX-BC set. Like 0037 and 1047, it is the same as <font SIZE="-1">ISO 8859-1</font> in 20 code point values.</dd></dl>
 <h3>Unicode code points versus <font SIZE="-1">EBCDIC</font> code points</h3>
 <p> In Unicode terminology a <i>code point</i> is the number assigned to a character: for example, in <font SIZE="-1">EBCDIC</font> the character &#8220;A&#8221; is usually assigned the number 193. In Unicode, the character &#8220;A&#8221; is assigned the number 65. All the code points in <font SIZE="-1">ASCII</font> and Latin-1 (<font SIZE="-1">ISO 8859-1</font>) have the same meaning in Unicode. All three of the recognized <font SIZE="-1">EBCDIC</font> code sets have 256 code points, and in each code set, all 256 code points are mapped to equivalent Latin1 code points. Obviously, &#8220;A&#8221; will map to &#8220;A&#8221;, &#8220;B&#8221; =&gt; &#8220;B&#8221;, &#8220;%&#8221; =&gt; &#8220;%&#8221;, etc., for all printable characters in Latin1 and these code pages. </p>
 <p> It also turns out that <font SIZE="-1">EBCDIC</font> has nearly precise equivalents for the ASCII/Latin1 C0 controls and the <font SIZE="-1">DELETE</font> control. (The C0 controls are those whose <font SIZE="-1">ASCII</font> code points are 0..0x1F; things like <font SIZE="-1">TAB, ACK, BEL,</font> etc.) A mapping is set up between these <font SIZE="-1">ASCII/EBCDIC</font> controls. There isn&#8217;t such a precise mapping between the C1 controls on <font SIZE="-1">ASCII</font> platforms and the remaining <font SIZE="-1">EBCDIC</font> controls. What has been done is to map these controls, mostly arbitrarily, to some otherwise unmatched character in the other character set. Most of these are very very rarely used nowadays in <font SIZE="-1">EBCDIC</font> anyway, and their names have been dropped, without much complaint. For example the <font SIZE="-1">EO</font> (Eight Ones) <font SIZE="-1">EBCDIC</font> control (consisting of eight one bits = 0xFF) is mapped to the C1 <font SIZE="-1">APC</font> control (0x9F), and you can&#8217;t use the name &#8220;<font SIZE="-1">EO&#8221;.</font> </p>
@@ -92,14 +92,14 @@ print $f &#8220;Hello World!
 <h2>SINGLE OCTET TABLES</h2>
 <p> The following tables list the <font SIZE="-1">ASCII</font> and Latin 1 ordered sets including the subsets: C0 controls (0..31), <font SIZE="-1">ASCII</font> graphics (32..7e), delete (7f), C1 controls (80..9f), and Latin-1 (a.k.a. <font SIZE="-1">ISO 8859-1</font>) (a0..ff). In the table names of the Latin 1 extensions to <font SIZE="-1">ASCII</font> have been labelled with character names roughly corresponding to <i>The Unicode Standard, Version 6.1</i> albeit with substitutions such as <tt>&quot;s/LATIN//&quot;</tt> and <tt>&quot;s/VULGAR//&quot;</tt> in all cases; <tt>&quot;s/CAPITAL LETTER//&quot;</tt> in some cases; and <tt>&quot;s/SMALL LETTER ([A-Z])/\l$1/&quot;</tt> in some other cases. Controls are listed using their Unicode 6.2 abbreviations. The differences between the 0037 and 1047 sets are flagged with <tt>&quot;**&quot;</tt>. The differences between the 1047 and POSIX-BC sets are flagged with <tt>&quot;##.&quot;</tt> All <tt>&quot;ord()&quot;</tt> numbers listed are decimal. If you would rather see this table listing octal values, then run the table (that is, the pod source text of this document, since this recipe may not work with a pod2_other_format translation) through:</p>
 <dl>
-<dt>recipe 0</p>
-<dd></dl>
+<dt>recipe 0</dt>
+<dd></dd></dl>
 <p>perl &#8211; ne &#8216;if(/(.{29})(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/)&#8217; &#8211; e &#8216;{printf(&#8220;%s%-5.03o%-5.03o%-5.03o%.03o
 &#8221;,$1,$2,$3,$4,$5)}&#8217; perlebcdic.pod</p>
 <p> If you want to retain the UTF-x code points then in script form you might want to write:</p>
 <dl>
-<dt>recipe 1</p>
-<dd></dl>
+<dt>recipe 1</dt>
+<dd></dd></dl>
 <p>open(FH, &#8220;&lt;perlebcdic.pod&#8221;) or die &#8220;Could not open perlebcdic.pod: $!&#8221;;<br />
 while (&lt;FH&gt;) {<br />
      if (/(.{29})(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\.?(\d*)<br />
@@ -127,14 +127,14 @@ while (&lt;FH&gt;) {<br />
 }</p>
 <p> If you would rather see this table listing hexadecimal values then run the table through:</p>
 <dl>
-<dt>recipe 2</p>
-<dd></dl>
+<dt>recipe 2</dt>
+<dd></dd></dl>
 <p>perl &#8211; ne &#8216;if(/(.{29})(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/)&#8217; &#8211; e &#8216;{printf(&#8220;%s%-5.02X%-5.02X%-5.02X%.02X
 &#8221;,$1,$2,$3,$4,$5)}&#8217; perlebcdic.pod</p>
 <p> Or, in order to retain the UTF-x code points in hexadecimal:</p>
 <dl>
-<dt>recipe 3</p>
-<dd></dl>
+<dt>recipe 3</dt>
+<dd></dd></dl>
 <p>open(FH, &#8220;&lt;perlebcdic.pod&#8221;) or die &#8220;Could not open perlebcdic.pod: $!&#8221;;<br />
 while (&lt;FH&gt;) {<br />
      if (/(.{29})(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\.?(\d*)<br />
@@ -182,18 +182,18 @@ ISO 8859 &#8211; 1 POS &#8211; CCSID CCSID CCSID CCSID IX &#8211; 1047 chr 0819 
 125 208 208 253 125 208##~126 161 161 255 126 161##&lt;DEL&gt; 127 7 7 7 127 7 &lt; PAD &gt; 128 32 32 32 194.128 32 &lt; HOP &gt; 129 33 33 33 194.129 33 &lt; BPH &gt; 130 34 34 34 194.130 34 &lt; NBH &gt; 131 35 35 35 194.131 35 &lt; IND &gt; 132 36 36 36 194.132 36 &lt; NEL &gt; 133 21 37 37 194.133 37 * *&lt;SSA&gt; 134 6 6 6 194.134 6 &lt; ESA &gt; 135 23 23 23 194.135 23 &lt; HTS &gt; 136 40 40 40 194.136 40 &lt; HTJ &gt; 137 41 41 41 194.137 41 &lt; VTS &gt; 138 42 42 42 194.138 42 &lt; PLD &gt; 139 43 43 43 194.139 43 &lt; PLU &gt; 140 44 44 44 194.140 44 &lt; RI &gt; 141 9 9 9 194.141 9 &lt; SS2 &gt; 142 10 10 10 194.142 10 &lt; SS3 &gt; 143 27 27 27 194.143 27 &lt; DCS &gt; 144 48 48 48 194.144 48 &lt; PU1 &gt; 145 49 49 49 194.145 49 &lt; PU2 &gt; 146 26 26 26 194.146 26 &lt; STS &gt; 147 51 51 51 194.147 51 &lt; CCH &gt; 148 52 52 52 194.148 52 &lt; MW &gt; 149 53 53 53 194.149 53 &lt; SPA &gt; 150 54 54 54 194.150 54 &lt; EPA &gt; 151 8 8 8 194.151 8 &lt; SOS &gt; 152 56 56 56 194.152 56 &lt; SGC &gt; 153 57 57 57 194.153 57 &lt; SCI &gt; 154 58 58 58 194.154 58 &lt; CSI &gt; 155 59 59 59 194.155 59 &lt; ST &gt; 156 4 4 4 194.156 4 &lt; OSC &gt; 157 20 20 20 194.157 20 &lt; PM &gt; 158 62 62 62 194.158 62 &lt; APC &gt; 159 255 255 95 194.159 255##&lt;NON &#8211; BREAKING SPACE&gt; 160 65 65 65 194.160 128.65 &lt; INVERTED &#8220;!&#8221; &gt; 161 170 170 170 194.161 128.66 &lt; CENT SIGN &gt; 162 74 74 176 194.162 128.67##&lt;POUND SIGN&gt; 163 177 177 177 194.163 128.68 &lt; CURRENCY SIGN &gt; 164 159 159 159 194.164 128.69 &lt; YEN SIGN &gt; 165 178 178 178 194.165 128.70 &lt; BROKEN BAR &gt; 166 106 106 208 194.166 128.71##&lt;SECTION SIGN&gt; 167 181 181 181 194.167 128.72 &lt; DIAERESIS &gt; 168 189 187 121 194.168 128.73 * *##&lt;COPYRIGHT SIGN&gt; 169 180 180 180 194.169 128.74 &lt; FEMININE ORDINAL &gt; 170 154 154 154 194.170 128.81 &lt; LEFT POINTING GUILLEMET &gt; 171 138 138 138 194.171 128.82 &lt; NOT SIGN &gt; 172 95 176 186 194.172 128.83 * *##&lt;SOFT HYPHEN&gt; 173 202 202 202 194.173 128.84 &lt; REGISTERED TRADE MARK &gt; 174 175 175 175 194.174 128.85 &lt; MACRON &gt; 175 188 188 161 194.175 128.86##&lt;DEGREE SIGN&gt; 176 144 144 144 194.176 128.87 &lt; PLUS &#8211; OR &#8211; MINUS SIGN &gt; 177 143 143 143 194.177 128.88 &lt; SUPERSCRIPT TWO &gt; 178 234 234 234 194.178 128.89 &lt; SUPERSCRIPT THREE &gt; 179 250 250 250 194.179 128.98 &lt; ACUTE ACCENT &gt; 180 190 190 190 194.180 128.99 &lt; MICRO SIGN &gt; 181 160 160 160 194.181 128.100 &lt; PARAGRAPH SIGN &gt; 182 182 182 182 194.182 128.101 &lt; MIDDLE DOT &gt; 183 179 179 179 194.183 128.102 &lt; CEDILLA &gt; 184 157 157 157 194.184 128.103 &lt; SUPERSCRIPT ONE &gt; 185 218 218 218 194.185 128.104 &lt; MASC.ORDINAL INDICATOR &gt; 186 155 155 155 194.186 128.105 &lt; RIGHT POINTING GUILLEMET &gt; 187 139 139 139 194.187 128.106 &lt; FRACTION ONE QUARTER &gt; 188 183 183 183 194.188 128.112 &lt; FRACTION ONE HALF &gt; 189 184 184 184 194.189 128.113 &lt; FRACTION THREE QUARTERS &gt; 190 185 185 185 194.190 128.114 &lt; INVERTED QUESTION MARK &gt; 191 171 171 171 194.191 128.115 &lt; A WITH GRAVE &gt; 192 100 100 100 195.128 138.65 &lt; A WITH ACUTE &gt; 193 101 101 101 195.129 138.66 &lt; A WITH CIRCUMFLEX &gt; 194 98 98 98 195.130 138.67 &lt; A WITH TILDE &gt; 195 102 102 102 195.131 138.68 &lt; A WITH DIAERESIS &gt; 196 99 99 99 195.132 138.69 &lt; A WITH RING ABOVE &gt; 197 103 103 103 195.133 138.70 &lt; CAPITAL LIGATURE AE &gt; 198 158 158 158 195.134 138.71 &lt; C WITH CEDILLA &gt; 199 104 104 104 195.135 138.72 &lt; E WITH GRAVE &gt; 200 116 116 116 195.136 138.73 &lt; E WITH ACUTE &gt; 201 113 113 113 195.137 138.74 &lt; E WITH CIRCUMFLEX &gt; 202 114 114 114 195.138 138.81 &lt; E WITH DIAERESIS &gt; 203 115 115 115 195.139 138.82 &lt; I WITH GRAVE &gt; 204 120 120 120 195.140 138.83 &lt; I WITH ACUTE &gt; 205 117 117 117 195.141 138.84 &lt; I WITH CIRCUMFLEX &gt; 206 118 118 118 195.142 138.85 &lt; I WITH DIAERESIS &gt; 207 119 119 119 195.143 138.86 &lt; CAPITAL LETTER ETH &gt; 208 172 172 172 195.144 138.87 &lt; N WITH TILDE &gt; 209 105 105 105 195.145 138.88 &lt; O WITH GRAVE &gt; 210 237 237 237 195.146 138.89 &lt; O WITH ACUTE &gt; 211 238 238 238 195.147 138.98 &lt; O WITH CIRCUMFLEX &gt; 212 235 235 235 195.148 138.99 &lt; O WITH TILDE &gt; 213 239 239 239 195.149 138.100 &lt; O WITH DIAERESIS &gt; 214 236 236 236 195.150 138.101 &lt; MULTIPLICATION SIGN &gt; 215 191 191 191 195.151 138.102 &lt; O WITH STROKE &gt; 216 128 128 128 195.152 138.103 &lt; U WITH GRAVE &gt; 217 253 253 224 195.153 138.104##&lt;U WITH ACUTE&gt; 218 254 254 254 195.154 138.105 &lt; U WITH CIRCUMFLEX &gt; 219 251 251 221 195.155 138.106##&lt;U WITH DIAERESIS&gt; 220 252 252 252 195.156 138.112 &lt; Y WITH ACUTE &gt; 221 173 186 173 195.157 138.113 * *##&lt;CAPITAL LETTER THORN&gt; 222 174 174 174 195.158 138.114 &lt; SMALL LETTER SHARP S &gt; 223 89 89 89 195.159 138.115 &lt; a WITH GRAVE &gt; 224 68 68 68 195.160 139.65 &lt; a WITH ACUTE &gt; 225 69 69 69 195.161 139.66 &lt; a WITH CIRCUMFLEX &gt; 226 66 66 66 195.162 139.67 &lt; a WITH TILDE &gt; 227 70 70 70 195.163 139.68 &lt; a WITH DIAERESIS &gt; 228 67 67 67 195.164 139.69 &lt; a WITH RING ABOVE &gt; 229 71 71 71 195.165 139.70 &lt; SMALL LIGATURE ae &gt; 230 156 156 156 195.166 139.71 &lt; c WITH CEDILLA &gt; 231 72 72 72 195.167 139.72 &lt; e WITH GRAVE &gt; 232 84 84 84 195.168 139.73 &lt; e WITH ACUTE &gt; 233 81 81 81 195.169 139.74 &lt; e WITH CIRCUMFLEX &gt; 234 82 82 82 195.170 139.81 &lt; e WITH DIAERESIS &gt; 235 83 83 83 195.171 139.82 &lt; i WITH GRAVE &gt; 236 88 88 88 195.172 139.83 &lt; i WITH ACUTE &gt; 237 85 85 85 195.173 139.84 &lt; i WITH CIRCUMFLEX &gt; 238 86 86 86 195.174 139.85 &lt; i WITH DIAERESIS &gt; 239 87 87 87 195.175 139.86 &lt; SMALL LETTER eth &gt; 240 140 140 140 195.176 139.87 &lt; n WITH TILDE &gt; 241 73 73 73 195.177 139.88 &lt; o WITH GRAVE &gt; 242 205 205 205 195.178 139.89 &lt; o WITH ACUTE &gt; 243 206 206 206 195.179 139.98 &lt; o WITH CIRCUMFLEX &gt; 244 203 203 203 195.180 139.99 &lt; o WITH TILDE &gt; 245 207 207 207 195.181 139.100 &lt; o WITH DIAERESIS &gt; 246 204 204 204 195.182 139.101 &lt; DIVISION SIGN &gt; 247 225 225 225 195.183 139.102 &lt; o WITH STROKE &gt; 248 112 112 112 195.184 139.103 &lt; u WITH GRAVE &gt; 249 221 221 192 195.185 139.104##&lt;u WITH ACUTE&gt; 250 222 222 222 195.186 139.105 &lt; u WITH CIRCUMFLEX &gt; 251 219 219 219 195.187 139.106 &lt; u WITH DIAERESIS &gt; 252 220 220 220 195.188 139.112 &lt; y WITH ACUTE &gt; 253 141 141 141 195.189 139.113 &lt; SMALL LETTER thorn &gt; 254 142 142 142 195.190 139.114 &lt; y WITH DIAERESIS &gt; 255 223 223 223 195.191 139.115</p>
 <p> If you would rather see the above table in <font SIZE="-1">CCSID 0037</font> order rather than <font SIZE="-1">ASCII +</font> Latin-1 order then run the table through:</p>
 <dl>
-<dt>recipe 4</p>
-<dd></dl>
+<dt>recipe 4</dt>
+<dd></dd></dl>
 <p>perl &#8211; ne &#8216;if(/.{29}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}/)&#8217; &#8211; e &#8216;{push(@l,$_)}&#8217; &#8211; e &#8216;END{print map{$_-&gt;[0]}&#8217; &#8211; e &#8216;          sort{$a-&gt;[1] &lt;=&gt; $b-&gt;[1]}&#8217; &#8211; e &#8216;          map{[$_,substr($_,34,3)]}@l;}&#8217; perlebcdic.pod</p>
 <p> If you would rather see it in <font SIZE="-1">CCSID 1047</font> order then change the number 34 in the last line to 39, like this:</p>
 <dl>
-<dt>recipe 5</p>
-<dd></dl>
+<dt>recipe 5</dt>
+<dd></dd></dl>
 <p>perl &#8211; ne &#8216;if(/.{29}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}/)&#8217; &#8211; e &#8216;{push(@l,$_)}&#8217; &#8211; e &#8216;END{print map{$_-&gt;[0]}&#8217; &#8211; e &#8216;          sort{$a-&gt;[1] &lt;=&gt; $b-&gt;[1]}&#8217; &#8211; e &#8216;          map{[$_,substr($_,39,3)]}@l;}&#8217; perlebcdic.pod</p>
 <p> If you would rather see it in POSIX-BC order then change the number 34 in the last line to 44, like this:</p>
 <dl>
-<dt>recipe 6</p>
-<dd></dl>
+<dt>recipe 6</dt>
+<dd></dd></dl>
 <p>perl &#8211; ne &#8216;if(/.{29}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}\s{2,4}\d{1,3}/)&#8217; &#8211; e &#8216;{push(@l,$_)}&#8217; &#8211; e &#8216;END{print map{$_-&gt;[0]}&#8217; &#8211; e &#8216;          sort{$a-&gt;[1] &lt;=&gt; $b-&gt;[1]}&#8217; &#8211; e &#8216;          map{[$_,substr($_,44,3)]}@l;}&#8217; perlebcdic.pod</p>
 <h3>Table in hex, sorted in 1047 order</h3>
 <p> Since this document was first written, the convention has become more and more to use hexadecimal notation for code points. To do this with the recipes and to also sort is a multi-step process, so here, for convenience, is the table from above, re-sorted to be in Code Page 1047 order, and using hex notation. </p>
@@ -263,12 +263,15 @@ $is_ebcdic_37 = ord(&#8216;[&#8216;) == 186;<br />
 $is_ebcdic_1047 = ord(&#8216;[&#8216;) == 173;<br />
 $is_ebcdic_POSIX_BC = ord(&#8216;[&#8216;) == 187;</p>
 <p> However, it would be unwise to write tests such as: </p>
-<p>$is_ascii = &#8220;&#8221; ne chr(13);<br />
+<p>$is_ascii = &#8220;
+&#8221; ne chr(13);<br />
 #WRONG $is_ascii = &#8220;
 &#8221; ne chr(10);<br />
 #ILL ADVISED</p>
-<p> Obviously the first of these will fail to distinguish most <font SIZE="-1">ASCII</font> platforms from either a <font SIZE="-1">CCSID 0037,</font> a 1047, or a POSIX-BC <font SIZE="-1">EBCDIC</font> platform since <tt>&quot;&quot;&quot; eq chr(13)&quot;</tt> under all of those coded character sets. But note too that because <tt>&quot;
-&quot;</tt> is <tt>&quot;chr(13)&quot;</tt> and <tt>&quot;&quot;</tt> is <tt>&quot;chr(10)&quot;</tt> on old Macintosh (which is an <font SIZE="-1">ASCII</font> platform) the second <tt>$is_ascii</tt> test will lead to trouble there. </p>
+<p> Obviously the first of these will fail to distinguish most <font SIZE="-1">ASCII</font> platforms from either a <font SIZE="-1">CCSID 0037,</font> a 1047, or a POSIX-BC <font SIZE="-1">EBCDIC</font> platform since <tt>&quot;&quot;
+&quot; eq chr(13)&quot;</tt> under all of those coded character sets. But note too that because <tt>&quot;
+&quot;</tt> is <tt>&quot;chr(13)&quot;</tt> and <tt>&quot;
+&quot;</tt> is <tt>&quot;chr(10)&quot;</tt> on old Macintosh (which is an <font SIZE="-1">ASCII</font> platform) the second <tt>$is_ascii</tt> test will lead to trouble there. </p>
 <p> To determine whether or not perl was built under an <font SIZE="-1">EBCDIC</font> code page you can use the Config module like so: </p>
 <p>use Config;<br />
 $is_ebcdic = $Config{&#8216;ebcdic&#8217;} eq &#8216;define&#8217;;</p>
@@ -282,3 +285,4 @@ $is_ebcdic = $Config{&#8216;ebcdic&#8217;} eq &#8216;define&#8217;;</p>
 <pre>
     $cp_037 =
     '
+</pre>

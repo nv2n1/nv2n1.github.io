@@ -52,49 +52,49 @@ description: "QwtPlotRasterItem –"
 <p> <code>QwtPlotRasterItem</code> is only implemented for images of the following formats: QImage::Format_Indexed8, QImage::Format_ARGB32. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotSpectrogram</code></dl>
+<dd><code>QwtPlotSpectrogram</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotRasterItem::CachePolicy</code></h3>
 <p>Cache policy The default policy is NoCache. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoCache </i></p>
-<dd><code>renderImage()</code> is called each time the item has to be repainted</p>
-<dt><i>PaintCache </i></p>
-<dd><code>renderImage()</code> is called, whenever the image cache is not valid, or the scales, or the size of the canvas has changed.</dl>
+<dt><i>NoCache </i></dt>
+<dd><code>renderImage()</code> is called each time the item has to be repainted</dd>
+<dt><i>PaintCache </i></dt>
+<dd><code>renderImage()</code> is called, whenever the image cache is not valid, or the scales, or the size of the canvas has changed.</dd></dl>
 <p> This type of cache is useful for improving the performance of hide/show operations or manipulations of the alpha value. All other situations are handled by the canvas backing store.</p>
 <h3>enum <code>QwtPlotRasterItem::PaintAttribute</code></h3>
 <p>Attributes to modify the drawing algorithm. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>PaintInDeviceResolution </i></p>
-<dd>When the image is rendered according to the data pixels ( <code>QwtRasterData::pixelHint()</code> ) it can be expanded to paint device resolution before it is passed to QPainter. The expansion algorithm rounds the pixel borders in the same way as the axis ticks, what is usually better than the scaling algorithm implemented in Qt. Disabling this flag might make sense, to reduce the size of a document/file. If this is possible for a document format depends on the implementation of the specific QPaintEngine.</dl>
+<dt><i>PaintInDeviceResolution </i></dt>
+<dd>When the image is rendered according to the data pixels ( <code>QwtRasterData::pixelHint()</code> ) it can be expanded to paint device resolution before it is passed to QPainter. The expansion algorithm rounds the pixel borders in the same way as the axis ticks, what is usually better than the scaling algorithm implemented in Qt. Disabling this flag might make sense, to reduce the size of a document/file. If this is possible for a document format depends on the implementation of the specific QPaintEngine.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtPlotRasterItem::alpha () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Alpha value of the raster item</dl>
+<dd>Alpha value of the raster item</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlpha()</code></dl>
+<dd><code>setAlpha()</code></dd></dl>
 <h3>QRectF QwtPlotRasterItem::boundingRect () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the data</dl>
+<dd>Bounding rectangle of the data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotRasterItem::interval()</code></dl>
+<dd><code>QwtPlotRasterItem::interval()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3><code>QwtPlotRasterItem::CachePolicy</code> QwtPlotRasterItem::cachePolicy () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Cache policy</dl>
+<dd>Cache policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CachePolicy</code>, <code>setCachePolicy()</code></dl>
+<dd><code>CachePolicy</code>, <code>setCachePolicy()</code></dd></dl>
 <h3>void QwtPlotRasterItem::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Draw the raster data. </p>
 <p> <code>Parameters:</code></p>
@@ -102,7 +102,7 @@ description: "QwtPlotRasterItem –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> X-Scale Map<br />
  <i>yMap</i> Y-Scale Map<br />
- <i>canvasRect</i> Contents rectangle of the plot canvas</dl>
+ <i>canvasRect</i> Contents rectangle of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>. </p>
 <p> Reimplemented in <code>QwtPlotSpectrogram</code>.</p>
 <h3><code>QwtScaleMap</code> QwtPlotRasterItem::imageMap (Qt::Orientationorientation, const <code>QwtScaleMap</code> &amp;map, const QRectF &amp;area, const QSize &amp;imageSize, doublepixelSize) const [protected], [virtual]</h3>
@@ -113,24 +113,24 @@ description: "QwtPlotRasterItem –"
  <i>map</i> Scale map for rendering the plot item<br />
  <i>area</i> Area to be painted on the image<br />
  <i>imageSize</i> Image size<br />
- <i>pixelSize</i> Width/Height of a data pixel</dl>
+ <i>pixelSize</i> Width/Height of a data pixel</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated scale map</dl>
+<dd>Calculated scale map</dd></dl>
 <h3><code>QwtInterval</code> QwtPlotRasterItem::interval (Qt::Axisaxis) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding interval for an axis</dl>
+<dd>Bounding interval for an axis</dd></dl>
 <p> This method is intended to be reimplemented by derived classes. The default implementation returns an invalid interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> X, Y, or Z axis</dl>
+<dd><i>axis</i> X, Y, or Z axis</dd></dl>
 <p> Reimplemented in <code>QwtPlotSpectrogram</code>.</p>
 <h3>void QwtPlotRasterItem::invalidateCache ()</h3>
 <p>Invalidate the paint cache </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCachePolicy()</code></dl>
+<dd><code>setCachePolicy()</code></dd></dl>
 <h3>QRectF QwtPlotRasterItem::pixelHint (const QRectF &amp;area) const [virtual]</h3>
 <p>Pixel hint. The geometry of a pixel is used to calculated the resolution and alignment of the rendered image. </p>
 <p> Width and height of the hint need to be the horizontal and vertical distances between 2 neighbored points. The center of the hint has to be the position of any point ( it doesn&#8217;t matter which one ). </p>
@@ -138,13 +138,13 @@ description: "QwtPlotRasterItem –"
 <p> The default implementation returns an empty rectangle (QRectF()), meaning, that the image will be rendered in target device ( f.e screen ) resolution. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dl>
+<dd><i>area</i> In most implementations the resolution of the data doesn&#8217;t depend on the requested area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of a pixel</dl>
+<dd>Bounding rectangle of a pixel</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>render(), <code>renderImage()</code></dl>
+<dd>render(), <code>renderImage()</code></dd></dl>
 <p> Reimplemented in <code>QwtPlotSpectrogram</code>.</p>
 <h3>virtual QImage QwtPlotRasterItem::renderImage (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;area, const QSize &amp;imageSize) const [protected], [pure virtual]</h3>
 <p>Render an image. An implementation of render() might iterate over all pixels of imageRect. Each pixel has to be translated into the corresponding position in scale coordinates using the maps. This position can be used to look up a value in a implementation specific way and to map it into a color. </p>
@@ -153,48 +153,48 @@ description: "QwtPlotRasterItem –"
 <dd><i>xMap</i> X-Scale Map<br />
  <i>yMap</i> Y-Scale Map<br />
  <i>area</i> Requested area for the image in scale coordinates<br />
- <i>imageSize</i> Requested size of the image</dl>
+ <i>imageSize</i> Requested size of the image</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rendered image</dl>
+<dd>Rendered image</dd></dl>
 <p> Implemented in <code>QwtPlotSpectrogram</code>.</p>
 <h3>void QwtPlotRasterItem::setAlpha (intalpha)</h3>
 <p>Set an alpha value for the raster data. Often a plot has several types of raster data organized in layers. ( f.e a geographical map, with weather statistics ). Using <code>setAlpha()</code> raster items can be stacked easily. </p>
 <p> The alpha value is a value [0, 255] to control the transparency of the image. 0 represents a fully transparent color, while 255 represents a fully opaque color. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>alpha</i> Alpha value</dl>
+<dd><i>alpha</i> Alpha value</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>alpha &gt;= 0 </p>
+<dt>&bull;</dt>
+<dd>alpha &gt;= 0 </dd>
 <p>&nbsp;<wbr>All alpha values of the pixels returned by&nbsp;<wbr><code>renderImage()</code>&nbsp;<wbr>will be set to alpha, beside those with an alpha value of 0&nbsp;<wbr>(invalid pixels).</p>
-<dt>&bull;</p>
-<dd>alpha &lt; 0 The alpha values returned by <code>renderImage()</code> are not changed.</dl>
+<dt>&bull;</dt>
+<dd>alpha &lt; 0 The alpha values returned by <code>renderImage()</code> are not changed.</dd></dl>
 <p> The default alpha value is -1. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>alpha()</code></dl>
+<dd><code>alpha()</code></dd></dl>
 <h3>void QwtPlotRasterItem::setCachePolicy (<code>QwtPlotRasterItem::CachePolicy</code>policy)</h3>
 <p>Change the cache policy </p>
 <p> The default policy is NoCache </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>policy</i> Cache policy</dl>
+<dd><i>policy</i> Cache policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CachePolicy</code>, <code>cachePolicy()</code></dl>
+<dd><code>CachePolicy</code>, <code>cachePolicy()</code></dd></dl>
 <h3>void QwtPlotRasterItem::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the raster item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off /sa PaintAttribute, <code>testPaintAttribute()</code></dl>
+ <i>on</i> On/Off /sa PaintAttribute, <code>testPaintAttribute()</code></dd></dl>
 <h3>bool QwtPlotRasterItem::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dl>
+<dd><code>PaintAttribute</code>, <code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

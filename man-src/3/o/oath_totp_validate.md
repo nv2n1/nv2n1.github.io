@@ -13,20 +13,20 @@ description: "oath_totp_validate – API function"
 <p> <code>int oath_totp_validate(const char * </code><i>secret</i><code>, size_t </code><i>secret_length</i><code>, time_t </code><i>now</i><code>, unsigned </code><i>time_step_size</i><code>, time_t </code><i>start_offset</i><code>, size_t </code><i>window</i><code>, const char * </code><i>otp</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>const char * secret</p>
-<dd> the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd> length of <i>secret</i></p>
-<dt>time_t now</p>
-<dd> Unix time value to validate TOTP for</p>
-<dt>unsigned time_step_size</p>
-<dd> time step system parameter (typically 30)</p>
-<dt>time_t start_offset</p>
-<dd> Unix time of when to start counting time steps (typically 0)</p>
-<dt>size_t window</p>
-<dd> how many OTPs after/before start OTP to test</p>
-<dt>const char * otp</p>
-<dd> the OTP to validate.</dl>
+<dt>const char * secret</dt>
+<dd> the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd> length of <i>secret</i></dd>
+<dt>time_t now</dt>
+<dd> Unix time value to validate TOTP for</dd>
+<dt>unsigned time_step_size</dt>
+<dd> time step system parameter (typically 30)</dd>
+<dt>time_t start_offset</dt>
+<dd> Unix time of when to start counting time steps (typically 0)</dd>
+<dt>size_t window</dt>
+<dd> how many OTPs after/before start OTP to test</dd>
+<dt>const char * otp</dt>
+<dd> the OTP to validate.</dd></dl>
 <h2>Description</h2>
 <p> Validate an OTP according to OATH TOTP algorithm per RFC 6238. </p>
 <p> Currently only OTP lengths of 6, 7 or 8 digits are supported. This restrictions may be lifted in future versions, although some limitations are inherent in the protocol.</p>

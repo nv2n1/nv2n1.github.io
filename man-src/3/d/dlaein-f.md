@@ -21,10 +21,10 @@ description: "dlaein.f –"
 <pre> DLAEIN uses inverse iteration to find a right or left eigenvector
  corresponding to the eigenvalue (WR,WI) of a real upper Hessenberg
  matrix H.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>RIGHTV</i> </p>
+<dd><i>RIGHTV</i> </dd>
 <pre> RIGHTV is LOGICAL
  = .TRUE. : compute right eigenvector;
  = .FALSE.: compute left eigenvector.</pre>
@@ -90,13 +90,13 @@ description: "dlaein.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 172 of file dlaein.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

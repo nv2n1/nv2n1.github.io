@@ -37,7 +37,7 @@ description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability 
 <p> Each segment is determined sequentially starting from the earliest period to the latest and is chosen so that the instrument whose maturity marks the end of such segment is correctly repriced on the curve. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dl>
+<dd>The bootstrapping algorithm will raise an exception if any two instruments have the same maturity date.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CDS.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

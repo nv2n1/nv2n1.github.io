@@ -11,15 +11,15 @@ description: "json-glib-validate – JSON-GLib validation tool"
 <p> json-glib-validate &#8211; JSON-GLib validation tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>json-glib-validate</code> [<code>-h</code>,&nbsp;<wbr><code>&#8211;help</code>] URI [URI&#8230;]</dl>
+<dt> <code>json-glib-validate</code> [<code>-h</code>,&nbsp;<wbr><code>&#8211;help</code>] URI [URI&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>json-glib-validate</code></p>
-<dd>offers a simple command line interface to validate JSON data. It lets you list URIs that point to JSON data and checks that the data conforms to the JSON syntax. </p>
+<dd>offers a simple command line interface to validate JSON data. It lets you list URIs that point to JSON data and checks that the data conforms to the JSON syntax. </dd>
 <p> The resources to operate on are specified by the <i>URI</i> argument. </p>
 <p> If the JSON data is valid, <code>json-glib-validate</code> will terminate with an exit code of 0; if the data is invalid, an error will be printed on <i>stderr</i> and <code>json-glib-validate</code> will terminate with a nonzero exit code.</p>
 <h2>COMMANDS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints help and exits.</dl>
+</dt><dd> Prints help and exits.</dd></dl>
 <h2>Index</h2>

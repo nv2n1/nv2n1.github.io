@@ -41,62 +41,62 @@ description: "X Window Change Attributes Functions – Functions that change the
 <dd><i>window</i> The given window.<br />
  <i>red</i> The red component of the color to set to.<br />
  <i>green</i> The green component of the color to set to.<br />
- <i>blue</i> The blue component of the color to set to.</dl>
+ <i>blue</i> The blue component of the color to set to.</dd></dl>
 <h3>EAPI void ecore_x_window_client_manage (Ecore_X_Window window)</h3>
 <p>Todo. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The given window.</dl>
+<dd><i>window</i> The given window.</dd></dl>
 <h3>EAPI void ecore_x_window_client_sniff (Ecore_X_Window window)</h3>
 <p>Todo. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The given window.</dl>
+<dd><i>window</i> The given window.</dd></dl>
 <h3>EAPI void ecore_x_window_container_manage (Ecore_X_Window window)</h3>
 <p>Todo. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The given window.</dl>
+<dd><i>window</i> The given window.</dd></dl>
 <h3>EAPI void ecore_x_window_cursor_set (Ecore_X_Window window, Ecore_X_Cursor cursor)</h3>
 <p>Sets the cursor of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>cursor</i> The given cursor.</dl>
+ <i>cursor</i> The given cursor.</dd></dl>
 <h3>EAPI void ecore_x_window_cursor_show (Ecore_X_Window window, int show)</h3>
 <p>Shows the cursor of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>show</i> If set to 0, hide the cursor. Show it otherwise.</dl>
+ <i>show</i> If set to 0, hide the cursor. Show it otherwise.</dd></dl>
 <h3>EAPI void ecore_x_window_gravity_set (Ecore_X_Window window, Ecore_X_Gravity gravity)</h3>
 <p>Sets the gravity of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>gravity</i> The gravity.</dl>
+ <i>gravity</i> The gravity.</dd></dl>
 <h3>EAPI void ecore_x_window_override_set (Ecore_X_Window window, int override_redirect)</h3>
 <p>Sets the override attribute of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>override_redirect</i> The override_redirect boolean.</dl>
+ <i>override_redirect</i> The override_redirect boolean.</dd></dl>
 <h3>EAPI void ecore_x_window_pixel_gravity_set (Ecore_X_Window window, Ecore_X_Gravity gravity)</h3>
 <p>Sets the bit gravity of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>gravity</i> The gravity.</dl>
+ <i>gravity</i> The gravity.</dd></dl>
 <h3>EAPI void ecore_x_window_pixmap_set (Ecore_X_Window window, Ecore_X_Pixmap pixmap)</h3>
 <p>Sets the background pixmap of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The given window.<br />
- <i>pixmap</i> The pixmap to set to.</dl>
+ <i>pixmap</i> The pixmap to set to.</dd></dl>
 <h3>EAPI void ecore_x_window_sniff (Ecore_X_Window window)</h3>
 <p>Todo. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The given window.</dl>
+<dd><i>window</i> The given window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

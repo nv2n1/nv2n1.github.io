@@ -23,7 +23,7 @@ description: "perlfaq8 – System Interaction"
 <h3>How do I do fancy stuff with the keyboard/screen/mouse?</h3>
 <p> How you access/control keyboards, screens, and pointing devices (&#8220;mice&#8221;) is system-dependent. Try the following modules:</p>
 <dl>
-<dt>Keyboard</p>
+<dt>Keyboard</dt>
 <dd>
 <pre>
     Term::Cap               Standard perl distribution
@@ -32,14 +32,14 @@ description: "perlfaq8 – System Interaction"
     Term::ReadLine::Perl    CPAN
     Term::Screen            CPAN
 </pre>
-<dt>Screen</p>
+</dd><dt>Screen</dt>
 <dd>
 <pre>
     Term::Cap               Standard perl distribution
     Curses                  CPAN
     Term::ANSIColor         CPAN
 </pre>
-<dt>Mouse</p>
+</dd><dt>Mouse</dt>
 <dd>
 <pre>
     Tk                      CPAN
@@ -47,7 +47,7 @@ description: "perlfaq8 – System Interaction"
     Gtk2                    CPAN
     Qt4                     kdebindings4 package
 </pre>
-</dl>
+</dd></dl>
 <p> Some of these specific cases are shown as examples in other answers in this section of the perlfaq.</p>
 <h3>How do I print something out in color?</h3>
 <p> In general, you don&#8217;t, because you don&#8217;t know whether the recipient has a color-aware display device. If you know that they have an <font SIZE="-1">ANSI</font> terminal that understands color, you can use the Term::ANSIColor module from <font SIZE="-1">CPAN:</font> </p>
@@ -185,12 +185,17 @@ my $password = ReadLine(0);</p>
 <h3>How do I read and write the serial port?</h3>
 <p> This depends on which operating system your program is running on. In the case of Unix, the serial ports will be accessible through files in <tt>&quot;/dev&quot;</tt>; on other systems, device names will doubtless differ. Several problem areas common to all device interaction are the following:</p>
 <dl>
-<dt>lockfiles</p>
-<dd> Your system may use lockfiles to control multiple access. Make sure you follow the correct protocol. Unpredictable behavior can result from multiple processes reading from one device.</p>
-<dt>open mode</p>
-<dd> If you expect to use both read and write operations on the device, you&#8217;ll have to open it for update (see &#8220;open&#8221; in perlfunc for details). You may wish to open it without running the risk of blocking by using <tt>&quot;sysopen()&quot;</tt> and <tt>&quot;O_RDWR|O_NDELAY|O_NOCTTY&quot;</tt> from the Fcntl module (part of the standard perl distribution). See &#8220;sysopen&#8221; in perlfunc for more on this approach.</p>
-<dt>end of line</p>
-<dd> Some devices will be expecting a &#8220;&#8221; at the end of each line rather than a &#8220;
-&#8221;. In some ports of perl, &#8220;&#8221; and &#8220;
-&#8221; are different from their usual (Unix) <font SIZE="-1">ASCII</font> values of &#8220;&#8221; and &#8220;
-&#8221;. You may have to give the numeric values you want directly, using octal (&#8220;&#8221;), hex (&#8220;0x0D&#8221;), or as a control-character specification (&#8220;
+<dt>lockfiles</dt>
+<dd> Your system may use lockfiles to control multiple access. Make sure you follow the correct protocol. Unpredictable behavior can result from multiple processes reading from one device.</dd>
+<dt>open mode</dt>
+<dd> If you expect to use both read and write operations on the device, you&#8217;ll have to open it for update (see &#8220;open&#8221; in perlfunc for details). You may wish to open it without running the risk of blocking by using <tt>&quot;sysopen()&quot;</tt> and <tt>&quot;O_RDWR|O_NDELAY|O_NOCTTY&quot;</tt> from the Fcntl module (part of the standard perl distribution). See &#8220;sysopen&#8221; in perlfunc for more on this approach.</dd>
+<dt>end of line</dt>
+<dd> Some devices will be expecting a &#8220;
+&#8221; at the end of each line rather than a &#8220;
+&#8221;. In some ports of perl, &#8220;
+&#8221; and &#8220;
+&#8221; are different from their usual (Unix) <font SIZE="-1">ASCII</font> values of &#8220;
+&#8221; and &#8220;
+&#8221;. You may have to give the numeric values you want directly, using octal (&#8220;
+&#8221;), hex (&#8220;0x0D&#8221;), or as a control-character specification (&#8220;
+</dd></dl>

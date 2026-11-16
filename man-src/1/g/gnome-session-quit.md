@@ -16,16 +16,16 @@ description: "gnome-session-quit – End the current GNOME session"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;logout</i></p>
-<dd> Prompt the user to confirm logout. This is the default behavior.</p>
-<dt><i>&#8211;power-off</i></p>
-<dd> Prompt the user to confirm system power off.</p>
-<dt><i>&#8211;reboot</i></p>
-<dd> Prompt the user to confirm system reboot.</p>
-<dt><i>&#8211;force</i></p>
-<dd> Ignore any inhibitors.</p>
-<dt><i>&#8211;no-prompt</i></p>
-<dd> End the session without user interaction. This only works with <i>&#8211;logout</i>.</dl>
+<dt><i>&#8211;logout</i></dt>
+<dd> Prompt the user to confirm logout. This is the default behavior.</dd>
+<dt><i>&#8211;power-off</i></dt>
+<dd> Prompt the user to confirm system power off.</dd>
+<dt><i>&#8211;reboot</i></dt>
+<dd> Prompt the user to confirm system reboot.</dd>
+<dt><i>&#8211;force</i></dt>
+<dd> Ignore any inhibitors.</dd>
+<dt><i>&#8211;no-prompt</i></dt>
+<dd> End the session without user interaction. This only works with <i>&#8211;logout</i>.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>gnome-session-quit</i> program, please report these on <a rel="nofollow" href="https://bugzilla.gnome.org.">https://bugzilla.gnome.org.</a></p>
 <h2>SEE ALSO</h2>

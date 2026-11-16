@@ -14,16 +14,16 @@ description: "asn1_der_coding – API function"
 <p> <code>int asn1_der_coding(asn1_node </code><i>element</i><code>, const char * </code><i>name</i><code>, void * </code><i>ider</i><code>, int * </code><i>len</i><code>, char * </code><i>ErrorDescription</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_node element</p>
-<dd> pointer to an ASN1 element</p>
-<dt>const char * name</p>
-<dd> the name of the structure you want to encode (it must be inside *POINTER).</p>
-<dt>void * ider</p>
-<dd> vector that will contain the DER encoding. DER must be a pointer to memory cells already allocated.</p>
-<dt>int * len</p>
-<dd> number of bytes of * <i>ider</i> : <i>ider</i> [0].. <i>ider</i> [len-1], Initialy holds the sizeof of der vector.</p>
-<dt>char * ErrorDescription</p>
-<dd> return the error description or an empty string if success.</dl>
+<dt>asn1_node element</dt>
+<dd> pointer to an ASN1 element</dd>
+<dt>const char * name</dt>
+<dd> the name of the structure you want to encode (it must be inside *POINTER).</dd>
+<dt>void * ider</dt>
+<dd> vector that will contain the DER encoding. DER must be a pointer to memory cells already allocated.</dd>
+<dt>int * len</dt>
+<dd> number of bytes of * <i>ider</i> : <i>ider</i> [0].. <i>ider</i> [len-1], Initialy holds the sizeof of der vector.</dd>
+<dt>char * ErrorDescription</dt>
+<dd> return the error description or an empty string if success.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Creates the DER encoding for the NAME structure (inside *POINTER structure).</p>
 <h2>RETURNS</h2>
@@ -35,9 +35,9 @@ description: "asn1_der_coding – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

@@ -14,11 +14,11 @@ description: "gadget_is_otg – return true iff the hardware is OTG-ready"
 <p><i>g</i></p>
 <dl>
 <dd>
-<dd>controller that might have a Mini-AB connector</dl>
+</dd><dd>controller that might have a Mini-AB connector</dd></dl>
 <h2>Description</h2>
 <p>This is a runtime test, since kernels with a USB-OTG stack sometimes run on boards which only have a Mini-B (or Mini-A) connector.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

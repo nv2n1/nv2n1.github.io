@@ -35,6 +35,6 @@ typedef struct {
 <p><code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOCONTEXT</code></p>
-<dd>the current PMAPI context is either invalid, or not associated with a set of archive logs </p>
+<dt><code>PM_ERR_NOCONTEXT</code></dt>
+<dd>the current PMAPI context is either invalid, or not associated with a set of archive logs </dd>
 </dl>

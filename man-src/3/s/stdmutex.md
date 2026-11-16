@@ -14,9 +14,7 @@ Defined in header &lt;mutex&gt;
 class mutex; <i>(since C++11)</i> 
 The mutex class is a synchronization primitive that can be used to protect shared data from being simultaneously accessed by multiple threads. 
 mutex offers exclusive, non-recursive ownership semantics: <pre><code>* A calling thread owns a mutex from the time that it successfully calls either lock or try_lock until it calls unlock.
-
 * When a thread owns a mutex, all other threads will block (for calls to lock) or receive a false return value (for try_lock) if they attempt to claim ownership of the mutex.
-
 * A calling thread must not own the mutex prior to calling lock or try_lock.</code></pre> 
 The behavior of a program is undefined if a mutex is destroyed while still owned by any threads, or a thread terminates while owning a mutex. The mutex class satisfies all requirements of Mutex and StandardLayoutType. 
 std::mutex is neither copyable nor movable. 
@@ -62,21 +60,14 @@ or std::scoped_lock
 
 This example shows how a mutex can be used to protect a std::map shared between two threads. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;map&gt;
-
 #include &lt;string&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;mutex&gt;
 std::map&lt;std::string, std::string&gt; g_pages;
-
 std::mutex g_pages_mutex;
 void save_page(const std::string &amp;url)
-
 {
     // simulate a long page fetch
     std::this_thread::sleep_for(std::chrono::seconds(2));
@@ -85,7 +76,6 @@ void save_page(const std::string &amp;url)
     g_pages[url] = result;
 }
 int main()
-
 {
     std::thread t1(save_page, &quot;http://foo&quot;);
     std::thread t2(save_page, &quot;http://bar&quot;);

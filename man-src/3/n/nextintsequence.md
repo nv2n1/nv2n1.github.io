@@ -24,12 +24,12 @@ description: "QuantLib::FaureRsg – Faure low-discrepancy sequence generator."
 <p>Faure low-discrepancy sequence generator. </p>
 <p> It is based on existing Fortran and C algorithms to calculate pascal matrix and gray transforms.</p>
 <dl>
-<dt>1.</p>
-<dd>E. Thiemard Economic generation of low-discrepancy sequences with a b-ary gray code.</p>
-<dt>2.</p>
-<dd>Algorithms 659, 647. <a rel="nofollow" href="http://www.netlib.org/toms/647,">http://www.netlib.org/toms/647,</a> <a href="http://www.netlib.org/toms/659">http://www.netlib.org/toms/659</a></dl>
+<dt>1.</dt>
+<dd>E. Thiemard Economic generation of low-discrepancy sequences with a b-ary gray code.</dd>
+<dt>2.</dt>
+<dd>Algorithms 659, 647. <a rel="nofollow" href="http://www.netlib.org/toms/647,">http://www.netlib.org/toms/647,</a> <a href="http://www.netlib.org/toms/659">http://www.netlib.org/toms/659</a></dd></dl>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned values is tested by reproducing known good values.</dl>
+<dd>the correctness of the returned values is tested by reproducing known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

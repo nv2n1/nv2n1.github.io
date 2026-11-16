@@ -19,14 +19,14 @@ description: "startlxqt – script to initialize and launch LXQt sessions"
 <p> <i>$XDG_DATA_DIRS/xsessions/lxqt.desktop</i></p>
 <dl>
 <dt>
-<dd> Desktop entry file stating startlxqt as binary needed to start LXQt sessions. Sourced e. g. by display managers.</dl>
+</dt><dd> Desktop entry file stating startlxqt as binary needed to start LXQt sessions. Sourced e. g. by display managers.</dd></dl>
 <h2>BUGS</h2>
 <p> None at the time of this writing. Bugs can be reported on <a rel="nofollow" href="https://github.com/lxde/lxqt/issues.">https://github.com/lxde/lxqt/issues.</a></p>
 <h2>EXAMPLE</h2>
 <p> To start an LXQt session from a virtual terminal (virtual console) add a line </p>
 <dl>
 <dt>
-<dd> exec startlxqt</dl>
+</dt><dd> exec startlxqt</dd></dl>
 <p> to file <i>~/.xinitrc</i>. An LXQt session will then be launched by running <code>startx</code>. </p>
 <p> Display managers are making use of scripts like <code>startlxqt</code> automatically. Information about available desktop environments is provided by files <i>$XDG_DATA_DIRS/xsessions/*.desktop</i>, typically <i>/usr/share/xessions/*.desktop</i>.<br />
  File <i>lxqt.desktop</i> provided by LXQt is stating <code>startlxqt</code> in key <i>Exec</i> while making sure the session manager <code>lxqt-session</code> does exist by stating it in key <i>TryExec</i>.</p>
@@ -35,5 +35,5 @@ description: "startlxqt – script to initialize and launch LXQt sessions"
 <p> <code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/">http://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/</a></code></p>
 <dl>
 <dt>
-<dd> Desktop Entry Specification defining desktop entry files (*.desktop).</dl>
+</dt><dd> Desktop Entry Specification defining desktop entry files (*.desktop).</dd></dl>
 <h2>Index</h2>

@@ -41,10 +41,8 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;atan(1) = &quot; &lt;&lt; atan(1) &lt;&lt; &quot; 4*atan(1) = &quot; &lt;&lt; 4 * atan(1) &lt;&lt; '
 ';

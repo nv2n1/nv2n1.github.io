@@ -14,10 +14,10 @@ description: "gnutls_pkcs12_verify_mac – API function"
 <p> <code>int gnutls_pkcs12_verify_mac(gnutls_pkcs12_t </code><i>pkcs12</i><code>, const char * </code><i>pass</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs12_t pkcs12</p>
-<dd> should contain a gnutls_pkcs12_t structure</p>
-<dt>const char * pass</p>
-<dd> The password for the MAC</dl>
+<dt>gnutls_pkcs12_t pkcs12</dt>
+<dd> should contain a gnutls_pkcs12_t structure</dd>
+<dt>const char * pass</dt>
+<dd> The password for the MAC</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify the MAC for the PKCS12 structure.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs12_verify_mac – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

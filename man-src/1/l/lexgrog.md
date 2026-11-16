@@ -16,32 +16,32 @@ description: "lexgrog – parse header information in man pages"
 <p> If its input is badly formatted, <code>lexgrog</code> will print &#8220;parse failed&#8221;; this may be useful for external programs that need to check man pages for correctness. If one of <code>lexgrog</code>&#8216;s input files is &#8220;-&#8220;, it will read from standard input; if any input file is compressed, a decompressed version will be read automatically.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Print debugging information.</p>
-<dt><code>-m</code>, <code>&#8211;man</code></p>
-<dd> Parse input as man page source files. This is the default if neither <code>&#8211;man</code> nor <code>&#8211;cat</code> is given.</p>
-<dt><code>-c</code>, <code>&#8211;cat</code></p>
-<dd> Parse input as preformatted man pages (&#8220;cat pages&#8221;). <code>&#8211;man</code> and <code>&#8211;cat</code> may not be given simultaneously.</p>
-<dt><code>-w</code>, <code>&#8211;whatis</code></p>
-<dd> Display the name and description from the man page&#8217;s header, as used by <code>apropos</code> and <code>whatis</code>. This is the default if neither <code>&#8211;whatis</code> nor <code>&#8211;filters</code> is given.</p>
-<dt><code>-f</code>, <code>&#8211;filters</code></p>
-<dd> Display the list of filters needed to preprocess the man page before formatting with <code>nroff</code> or <code>troff</code>.</p>
-<dt><code>-E</code> <i>encoding</i>, <code>&#8211;encoding</code> <i>encoding</i></p>
-<dd> Override the guessed character set for the page to <i>encoding</i>.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Print a short usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-m</code>, <code>&#8211;man</code></dt>
+<dd> Parse input as man page source files. This is the default if neither <code>&#8211;man</code> nor <code>&#8211;cat</code> is given.</dd>
+<dt><code>-c</code>, <code>&#8211;cat</code></dt>
+<dd> Parse input as preformatted man pages (&#8220;cat pages&#8221;). <code>&#8211;man</code> and <code>&#8211;cat</code> may not be given simultaneously.</dd>
+<dt><code>-w</code>, <code>&#8211;whatis</code></dt>
+<dd> Display the name and description from the man page&#8217;s header, as used by <code>apropos</code> and <code>whatis</code>. This is the default if neither <code>&#8211;whatis</code> nor <code>&#8211;filters</code> is given.</dd>
+<dt><code>-f</code>, <code>&#8211;filters</code></dt>
+<dd> Display the list of filters needed to preprocess the man page before formatting with <code>nroff</code> or <code>troff</code>.</dd>
+<dt><code>-E</code> <i>encoding</i>, <code>&#8211;encoding</code> <i>encoding</i></dt>
+<dd> Override the guessed character set for the page to <i>encoding</i>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful program execution.</p>
-<dt><code>1</code></p>
-<dd> Usage error.</p>
-<dt><code>2</code></p>
-<dd> <code>lexgrog</code> failed to parse one or more of its input files.</dl>
+<dt><code>0</code></dt>
+<dd> Successful program execution.</dd>
+<dt><code>1</code></dt>
+<dd> Usage error.</dd>
+<dt><code>2</code></dt>
+<dd> <code>lexgrog</code> failed to parse one or more of its input files.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
   $ lexgrog man.1
@@ -58,35 +58,35 @@ description: "lexgrog – parse header information in man pages"
 <p> When using the traditional <i>man</i> macro set, a correct <code>NAME</code> section looks something like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .SH NAME
 foo \- program to do something
 </pre>
-</dl>
+</dd></dl>
 <p> Some manual pagers require the &#8216;\-&#8216; to be exactly as shown; <code>mandb</code> is more tolerant, but for compatibility with other systems it is nevertheless a good idea to retain the backslash. </p>
 <p> On the left-hand side, there may be several names, separated by commas. Names containing whitespace will be ignored to avoid pathological behaviour on certain ill-formed <code>NAME</code> sections. The text on the right-hand side is free-form, and may be spread over multiple lines. If several features with different descriptions are being documented in the same manual page, the following form is therefore used: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .SH NAME
 foo, bar \- programs to do something
 .br
 baz \- program to do nothing
 </pre>
-</dl>
+</dd></dl>
 <p> (A macro which starts a new paragraph, like <tt>.PP</tt>, may be used instead of the break macro <tt>.br</tt>.) </p>
 <p> When using the BSD-derived <i>mdoc</i> macro set, a correct <code>NAME</code> section looks something like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 .Sh NAME
 .Nm foo
 .Nd program to do something
 </pre>
-</dl>
+</dd></dl>
 <p> There are several common reasons why whatis parsing fails. Sometimes authors of manual pages replace &#8216;.SH NAME&#8217; with &#8216;.SH MYPROGRAM&#8217;, and then <code>mandb</code> cannot find the section from which to extract the information it needs. Sometimes authors include a NAME section, but place free-form text there rather than &#8216;name \- description&#8217;. However, any syntax resembling the above should be accepted.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-apropos/">apropos</a></i>(1), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-whatis/">whatis</a></i>(1), <i><a href="/docs/linux/man/8-mandb/">mandb</a></i>(8)</p>

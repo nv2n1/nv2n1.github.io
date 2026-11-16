@@ -15,12 +15,12 @@ description: "nessus-config – displays compiler/linker flags for the Nessus li
 <p> <code>nessus-config</code> script displays the compiler/linker flags other program sources can use to link to the Nessus libraries.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cflags</code></p>
-<dd> Show $(CFLAGS) variable.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Show $(LIBS) variable.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version of the Nessus libraries.</dl>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Show $(CFLAGS) variable.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Show $(LIBS) variable.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version of the Nessus libraries.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nessus/">nessus</a></code>(1), <code><a href="/docs/linux/man/8-nessusd/">nessusd</a></code>(8).</p>
 <h2>AUTHOR</h2>

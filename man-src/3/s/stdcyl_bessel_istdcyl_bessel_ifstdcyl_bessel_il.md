@@ -10,11 +10,8 @@ description: "std::cyl_bessel_i,std::cyl_bessel_if,std::cyl_bessel_il – std::c
 <p>std::cyl_bessel_i,std::cyl_bessel_if,std::cyl_bessel_il &#8211; std::cyl_bessel_i,std::cyl_bessel_if,std::cyl_bessel_il</p>
 <h2>Synopsis</h2>
 <pre><code>double cyl_bessel_i( double ν, double x );
-
 float cyl_bessel_if( float ν, float x );                  (1) (since C++17)
-
 long double cyl_bessel_il( long double ν, long double x );
-
 Promoted cyl_bessel_i( Arithmetic ν, Arithmetic x );      (2) (since C++17)</code></pre>
 <p>1) Computes the regular_modified_cylindrical_Bessel_function of ν and x.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -39,11 +36,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     // spot check for ν == 0
     double x = 1.2345;

@@ -22,16 +22,16 @@ description: "FunImageGet – get an image or image section"
 <p> The third <code>plist</code> (i.e., parameter list) argument is a string containing one or more comma-delimited <code>keyword=value</code> parameters. It can be used to specify the return data type using the <code>bitpix=</code> keyword. If no such keyword is specified in the plist string, the data type of the returned image is the same as the data type of the original input file, or is of type int for <font SIZE="-1">FITS</font> binary tables. </p>
 <p> If the <code>bitpix=</code> keyword is supplied in the plist string, the data type of the returned image will be one of the supported <font SIZE="-1">FITS</font> image data types:</p>
 <dl>
-<dt>*</p>
-<dd> 8 unsigned char</p>
-<dt>*</p>
-<dd> 16 short</p>
-<dt>*</p>
-<dd> 32 int</p>
-<dt>*</p>
-<dd> -32 float</p>
-<dt>*</p>
-<dd> -64 double</dl>
+<dt>*</dt>
+<dd> 8 unsigned char</dd>
+<dt>*</dt>
+<dd> 16 short</dd>
+<dt>*</dt>
+<dd> 32 int</dd>
+<dt>*</dt>
+<dd> -32 float</dd>
+<dt>*</dt>
+<dd> -64 double</dd></dl>
 <p> For example: </p>
 <p>void *buf;<br />
 /* extract data section into an image buffer */<br />

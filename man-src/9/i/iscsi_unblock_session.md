@@ -14,14 +14,14 @@ description: "iscsi_unblock_session – set a session as logged in and start IO.
 <p><i>session</i></p>
 <dl>
 <dd>
-<dd>iscsi session</dl>
+</dd><dd>iscsi session</dd></dl>
 <h2>Description</h2>
 <p>Mark a session as ready to accept IO.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ ida_destroy - release all cached layers within an ida tree
 <h2>Arguments</h2>
 
 <i>ida</i>
-<dl><dd><dd>ida handle</dl>
+<dl><dd></dd><dd>ida handle</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -10,7 +10,6 @@ description: "tanh, tanhf, tanhl – hyperbolic tangent function"
 <p>tanh, tanhf, tanhl &#8211; hyperbolic tangent function</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double tanh(double x);
 float tanhf(float x);
 long double tanhl(long double x);</code></pre>
@@ -18,7 +17,7 @@ long double tanhl(long double x);</code></pre>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions return the hyperbolic tangent of <i>x</i>, which is defined mathematically as: </p>
 <pre> tanh(x) = sinh(x) / cosh(x)</pre>

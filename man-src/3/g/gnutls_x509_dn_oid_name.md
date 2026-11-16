@@ -14,10 +14,10 @@ description: "gnutls_x509_dn_oid_name – API function"
 <p> <code>const char * gnutls_x509_dn_oid_name(const char * </code><i>oid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * oid</p>
-<dd> holds an Object Identifier in a null terminated string</p>
-<dt>unsigned int flags</p>
-<dd> 0 or GNUTLS_X509_DN_OID_*</dl>
+<dt>const char * oid</dt>
+<dd> holds an Object Identifier in a null terminated string</dd>
+<dt>unsigned int flags</dt>
+<dd> 0 or GNUTLS_X509_DN_OID_*</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the name of a known DN OID. If <code>GNUTLS_X509_DN_OID_RETURN_OID</code> is specified this function will return the given OID if no descriptive name has been found.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_dn_oid_name – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

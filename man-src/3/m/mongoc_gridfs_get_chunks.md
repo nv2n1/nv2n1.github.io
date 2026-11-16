@@ -13,8 +13,8 @@ description: "mongoc_gridfs_get_chunks() – Returns a mongoc_collection_t that 
 mongoc_gridfs_get_chunks (mongoc_gridfs_t *gridfs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>gridfs</code></p>
-<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dl>
+<dt><code>gridfs</code></dt>
+<dd>A <code>mongoc_gridfs_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Returns a <code>mongoc_collection_t</code> that contains the chunks for files. This instance is owned by the <code>mongoc_gridfs_t</code> instance and should not be modified or freed. </p>
 <h2>Returns</h2>

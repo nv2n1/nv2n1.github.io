@@ -24,7 +24,7 @@ iface eth1 inet static
 iface eth1 inet6 static
  address fec0:0:0:1::2/64
  gateway fec0:0:0:1::1</pre>
-</dl>
+</dd></dl>
 <h2>File Format</h2>
 <p>Lines starting with `#&#8217; are ignored. Note that end-of-line comments are NOT supported, comments must be on a line of their own. </p>
 <p> A line may be extended across multiple lines by making the last character a backslash. </p>
@@ -42,7 +42,7 @@ iface eth1 inet6 static
 <pre>rename foo=bar
 auto bar
 iface bar ...</pre>
-</dl>
+</dd></dl>
 <p> However, if the interface is not renamed yet, it is possible to use both &quot;ifup foo&quot; and &quot;ifup bar&quot;. The former command will then automatically be converted to the latter. This is mainly useful when ifup is called automatically whenever an interface is hotplugged. </p>
 <p> Interface renaming only works if the operating system supports it, if an interface is not renamed to another existing interface, and may require that the interface that is to be renamed has not been brought up yet. If ifup tries to rename an interface and it fails, it will exit with an error.</p>
 <h2>Including Other Files</h2>
@@ -68,30 +68,30 @@ iface bar ...</pre>
  hwaddress 11:22:33:44:55:66
 iface eth0 inet static inherits ethernet
  address 192.168.1.2/24</pre>
-</dl>
+</dd></dl>
 <p> This may be useful to separate link-level settings shared by multiple interfaces from, for example, IP address settings specific to every interface.</p>
 <h2>Pattern Matching Interfaces</h2>
 <p>It is possible to use patterns to match one or more real interfaces. These patterns can currently appear in lines beginning with &quot;auto&quot;, &quot;allow-&quot;, &quot;rename&quot; and on the command line. A pattern has the following format (see below for exceptions for GNU/Hurd): </p>
 <dl>
 <dd>
 <pre>[VARIABLE]/VALUE[/[OPTIONS]][=LOGICAL]</pre>
-</dl>
+</dd></dl>
 <p> If no VARIABLE is given, this pattern will match interface names against the given VALUE. VALUE can contain wildcard patterns such as ? and *, see the <code><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></code>(3) function. When <code>ifup</code> or <code>ifdown</code> is run, patterns are replaces by all real interfaces that are currently known to the operating system kernel and whose names match the pattern. For example, given the following line: </p>
 <dl>
 <dd>
 <pre>auto /eth*</pre>
-</dl>
+</dd></dl>
 <p> If the kernel knows about the interfaces with names lo, eth0 and eth1, then the above line is then interpreted as: </p>
 <dl>
 <dd>
 <pre>auto eth0 eth1</pre>
-</dl>
+</dd></dl>
 <p> Note that there must still be valid &quot;iface&quot; stanzas for each matching interface. However, it is possible to combine a pattern with a mapping to a logical interface, like so: </p>
 <dl>
 <dd>
 <pre>auto /eth*=eth
 iface eth inet dhcp</pre>
-</dl>
+</dd></dl>
 <p> Valid variable names are &quot;mac&quot;, in which case value is matched against the interface&#8217;s MAC address. On Linux, the variable name can also be any filename in /sys/class/net/&lt;iface&gt;/, in which case the value is matched against the contents of the corresponding file. </p>
 <p> The OPTIONS field currently only supports a number. If given, only the n-th interface that has a matching value will actually be used, where n is the number given, starting at 1. So /eth*/1 will match the first interface whose name starts with eth. </p>
 <p> On GNU/Hurd, interface names start with /dev/, and this obviously clashes with the format for patterns. To ensure an interface name like /dev/eth0 does not get interpreted as a pattern, any pattern that starts with /dev/ is ignored, and instead interpreted as a literal interface name. To make a pattern that matches interface names on GNU/Hurd, use something like: </p>
@@ -99,7 +99,7 @@ iface eth inet dhcp</pre>
 <dd>
 <pre>auto /?dev?eth*=eth
 iface eth inet dhcp</pre>
-</dl>
+</dd></dl>
 <h2>Vlan Interfaces</h2>
 <p>To ease the configuration of VLAN interfaces, interfaces having <code>.</code> (full stop character) in the name are configured as 802.1q tagged virtual LAN interface. For example, interface <code>eth0.1</code> is a virtual interface with VLAN ID 1 having <code>eth0</code> as its parent interface. </p>
 <p> VLAN interfaces are mostly treated as independent interfaces. As such, a VLAN interface is normally not automatically brought up when its parent interface is brought up. The exception is when ifup is called with the &#8211;allow option, in which case all VLAN interfaces that are in the same allow class as the parent interface are brought up together with the parent interface. For example: </p>
@@ -112,7 +112,7 @@ iface eth0.1 inet static
  address ...
 iface eth0.2 inet static
  address ...</pre>
-</dl>
+</dd></dl>
 <p> In the above example, when &quot;ifup &#8211;allow hotplug eth0&quot; is called (either manually or because udev triggers this when a network device is hotplugged), the interface eth0 and the VLAN interface eth0.1 are brought up, but eth0.2 is not. </p>
 <p> Keep in mind that pattern matching will only match interfaces the kernel knows about, so it is not possible to specify &quot;auto /eth0.*&quot; and have all VLAN interfaces for eth0 be brought up at boot time. Another way to ensure that a VLAN interface is brought up automatically when the parent interface is brought up, is to use a recursive call to ifup, like so: </p>
 <dl>
@@ -121,60 +121,60 @@ iface eth0.2 inet static
  up ifup eth0.3
 iface eth0.3 inet static
  address ...</pre>
-</dl>
+</dd></dl>
 <p> Note that there is no need to add an explicit call to ifdown, since VLAN interfaces are automatically brought down whenever their parent interfaces are brought down.</p>
 <h2>Iface Options</h2>
 <p>The following &quot;command&quot; options are available for every family and method. Each of these options can be given multiple times in a single stanza, in which case the commands are executed in the order in which they appear in the stanza. (You can ensure a command never fails by suffixing them with &quot;|| true&quot;.)</p>
 <dl>
-<dt><code>pre-up</code><i> command</i></p>
-<dd>Run <i>command</i> before bringing the interface up. If this command fails then <code>ifup</code> aborts, refraining from marking the interface as configured, prints an error message, and exits with status 0. This behavior may change in the future.</p>
-<dt><code>up</code><i> command</i></p>
+<dt><code>pre-up</code><i> command</i></dt>
+<dd>Run <i>command</i> before bringing the interface up. If this command fails then <code>ifup</code> aborts, refraining from marking the interface as configured, prints an error message, and exits with status 0. This behavior may change in the future.</dd>
+<dt><code>up</code><i> command</i></dt>
 <dd>
-<dt><code>post-up</code><i> command</i></p>
-<dd>Run <i>command</i> after bringing the interface up. If this command fails then <code>ifup</code> aborts, refraining from marking the interface as configured (even though it has really been configured), prints an error message, and exits with status 0. This behavior may change in the future.</p>
-<dt><code>down</code><i> command</i></p>
+</dd><dt><code>post-up</code><i> command</i></dt>
+<dd>Run <i>command</i> after bringing the interface up. If this command fails then <code>ifup</code> aborts, refraining from marking the interface as configured (even though it has really been configured), prints an error message, and exits with status 0. This behavior may change in the future.</dd>
+<dt><code>down</code><i> command</i></dt>
 <dd>
-<dt><code>pre-down</code><i> command</i></p>
-<dd>Run <i>command</i> before taking the interface down. If this command fails then <code>ifdown</code> aborts, marks the interface as deconfigured (even though it has not really been deconfigured), and exits with status 0. This behavior may change in the future.</p>
-<dt><code>post-down</code><i> command</i></p>
-<dd>Run <i>command</i> after taking the interface down. If this command fails then <code>ifdown</code> aborts, marks the interface as deconfigured, and exits with status 0. This behavior may change in the future.</p>
-<dt><code>description</code><i> name</i></p>
-<dd>Alias interface by <i>name</i></dl>
+</dd><dt><code>pre-down</code><i> command</i></dt>
+<dd>Run <i>command</i> before taking the interface down. If this command fails then <code>ifdown</code> aborts, marks the interface as deconfigured (even though it has not really been deconfigured), and exits with status 0. This behavior may change in the future.</dd>
+<dt><code>post-down</code><i> command</i></dt>
+<dd>Run <i>command</i> after taking the interface down. If this command fails then <code>ifdown</code> aborts, marks the interface as deconfigured, and exits with status 0. This behavior may change in the future.</dd>
+<dt><code>description</code><i> name</i></dt>
+<dd>Alias interface by <i>name</i></dd></dl>
 <h2>Hook Scripts</h2>
 <p>There are four directories in which scripts can be placed which will always be run for any interface during certain phases of ifup and ifdown commands. These are:</p>
 <dl>
-<dt><i>/etc/network/if-pre-up.d/</i></p>
-<dd>Scripts in this directory are run before bringing the interface up.</p>
-<dt><i>/etc/network/if-up.d/</i></p>
-<dd>Scripts in this directory are run after bringing the interface up.</p>
-<dt><i>/etc/network/if-down.d/</i></p>
-<dd>Scripts in this directory are run before bringing the interface down.</p>
-<dt><i>/etc/network/if-post-down.d/</i></p>
-<dd>Scripts in this directory are run after bringing the interface down.</dl>
+<dt><i>/etc/network/if-pre-up.d/</i></dt>
+<dd>Scripts in this directory are run before bringing the interface up.</dd>
+<dt><i>/etc/network/if-up.d/</i></dt>
+<dd>Scripts in this directory are run after bringing the interface up.</dd>
+<dt><i>/etc/network/if-down.d/</i></dt>
+<dd>Scripts in this directory are run before bringing the interface down.</dd>
+<dt><i>/etc/network/if-post-down.d/</i></dt>
+<dd>Scripts in this directory are run after bringing the interface down.</dd></dl>
 <p> The scripts in which are run (with no arguments) using <code><a href="/docs/linux/man/8-run-parts/">run-parts</a></code>(8) after the corresponding <code>pre-up</code>, <code>up</code>, <code>down</code> and <code>post-down</code> options in the <i>/etc/network/interfaces</i> file itself have been processed. Please note that as <code>post-up</code> and <code>pre-down</code> are aliases, no files in the corresponding directories are processed. Please use <i>if-up.d</i> and <i>if-down.d</i> directories instead.</p>
 <h2>Environment Variables</h2>
 <p>All hook scripts, and the commands executed by <code>pre-up</code>, <code>up</code>, <code>post-up</code>, <code>pre-down</code>, <code>down</code> and <code>post-down</code> have access to the following environment variables:</p>
 <dl>
-<dt><code>IFACE</code></p>
-<dd>The physical name of the interface being processed, or &quot;&#8211;all&quot; (see below).</p>
-<dt><code>LOGICAL</code></p>
-<dd>The logical name of the interface being processed, or &quot;auto&quot; (see below).</p>
-<dt><code>ADDRFAM</code></p>
-<dd>The address family of the interface, or &quot;meta&quot; (see below).</p>
-<dt><code>METHOD</code></p>
-<dd>The method of the interface (e.g., <i>static</i>), or &quot;none&quot; (see below).</p>
-<dt><code>CLASS</code></p>
-<dd>The class of interfaces being processed. This is a copy of the value given to the <code>&#8211;allow</code> option when running ifup or ifdown, otherwise it is set to &quot;auto&quot; when the <code>&#8211;all</code> option is used.</p>
-<dt><code>CLASS</code></p>
-<dd>The class of interfaces being processed. This is a copy of the value given to the <code>&#8211;allow</code> option when running ifup or ifdown, otherwise it is set to &quot;auto&quot; when the <code>&#8211;all</code> option is used.</p>
-<dt><code>MODE</code></p>
-<dd><i>start</i> if run from ifup, <i>stop</i> if run from ifdown.</p>
-<dt><code>PHASE</code></p>
-<dd>As per MODE, but with finer granularity, distinguishing the <i>pre-up</i>, <i>post-up</i>, <i>pre-down</i> and <i>post-down</i> phases.</p>
-<dt><code>VERBOSITY</code></p>
-<dd>Indicates whether <code>&#8211;verbose</code> was used; set to 1 if so, 0 if not.</p>
-<dt><code>PATH</code></p>
-<dd>The command search path: <i>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</i></dl>
+<dt><code>IFACE</code></dt>
+<dd>The physical name of the interface being processed, or &quot;&#8211;all&quot; (see below).</dd>
+<dt><code>LOGICAL</code></dt>
+<dd>The logical name of the interface being processed, or &quot;auto&quot; (see below).</dd>
+<dt><code>ADDRFAM</code></dt>
+<dd>The address family of the interface, or &quot;meta&quot; (see below).</dd>
+<dt><code>METHOD</code></dt>
+<dd>The method of the interface (e.g., <i>static</i>), or &quot;none&quot; (see below).</dd>
+<dt><code>CLASS</code></dt>
+<dd>The class of interfaces being processed. This is a copy of the value given to the <code>&#8211;allow</code> option when running ifup or ifdown, otherwise it is set to &quot;auto&quot; when the <code>&#8211;all</code> option is used.</dd>
+<dt><code>CLASS</code></dt>
+<dd>The class of interfaces being processed. This is a copy of the value given to the <code>&#8211;allow</code> option when running ifup or ifdown, otherwise it is set to &quot;auto&quot; when the <code>&#8211;all</code> option is used.</dd>
+<dt><code>MODE</code></dt>
+<dd><i>start</i> if run from ifup, <i>stop</i> if run from ifdown.</dd>
+<dt><code>PHASE</code></dt>
+<dd>As per MODE, but with finer granularity, distinguishing the <i>pre-up</i>, <i>post-up</i>, <i>pre-down</i> and <i>post-down</i> phases.</dd>
+<dt><code>VERBOSITY</code></dt>
+<dd>Indicates whether <code>&#8211;verbose</code> was used; set to 1 if so, 0 if not.</dd>
+<dt><code>PATH</code></dt>
+<dd>The command search path: <i>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</i></dd></dl>
 <p> Additionally, all options given in an interface definition stanza are exported to the environment in upper case with &quot;IF_&quot; prepended and with hyphens converted to underscores and non-alphanumeric characters discarded. </p>
 <p> When ifupdown is being called with the <code>&#8211;all</code> option, before doing anything to interfaces, it calls all the hook scripts (<i>pre-up</i> or <i>down</i>) with <code>IFACE</code> set to &quot;&#8211;all&quot;, <code>LOGICAL</code> set to the current value of &#8211;allow parameter (or &quot;auto&quot; if it&#8217;s not set), <code>ADDRFAM</code>=&quot;meta&quot; and <code>METHOD</code>=&quot;none&quot;. After all the interfaces have been brought up or taken down, the appropriate scripts (<i>up</i> or <i>post-down</i>) are executed.</p>
 <h2>Concurrency And Parallel Execution</h2>
@@ -191,135 +191,135 @@ iface eth0.3 inet static
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt>(No options)</p>
-<dd></dl>
+</dd><dl>
+<dt>(No options)</dt>
+<dd></dd></dl>
 </dl>
 <h3>The static Method</h3>
 <p>This method may be used to define Ethernet interfaces with statically allocated IPv4 addresses. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>address</code><i> address </i></p>
-<dd>Address (dotted quad/netmask) <code>required</code></p>
-<dt><code>netmask</code><i> mask </i></p>
-<dd>Netmask (dotted quad or number of bits) <code>deprecated</code></p>
-<dt><code>broadcast</code><i> broadcast_address</i></p>
-<dd>Broadcast address (dotted quad, + or -) <code>deprecated</code>. Default value: &quot;+&quot;</p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Routing metric for default gateway (integer)</p>
-<dt><code>gateway</code><i> address </i></p>
-<dd>Default gateway (dotted quad)</p>
-<dt><code>pointopoint</code><i> address </i></p>
-<dd>Address of other end point (dotted quad). Note the spelling of &quot;point-to&quot;.</p>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Link local address or &quot;random&quot;.</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</p>
-<dt><code>scope</code></p>
-<dd>Address validity scope. Possible values: global, link, host</dl>
+</dd><dl>
+<dt><code>address</code><i> address </i></dt>
+<dd>Address (dotted quad/netmask) <code>required</code></dd>
+<dt><code>netmask</code><i> mask </i></dt>
+<dd>Netmask (dotted quad or number of bits) <code>deprecated</code></dd>
+<dt><code>broadcast</code><i> broadcast_address</i></dt>
+<dd>Broadcast address (dotted quad, + or -) <code>deprecated</code>. Default value: &quot;+&quot;</dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Routing metric for default gateway (integer)</dd>
+<dt><code>gateway</code><i> address </i></dt>
+<dd>Default gateway (dotted quad)</dd>
+<dt><code>pointopoint</code><i> address </i></dt>
+<dd>Address of other end point (dotted quad). Note the spelling of &quot;point-to&quot;.</dd>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Link local address or &quot;random&quot;.</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd>
+<dt><code>scope</code></dt>
+<dd>Address validity scope. Possible values: global, link, host</dd></dl>
 </dl>
 <h3>The manual Method</h3>
 <p>This method may be used to define interfaces for which no configuration is done by default. Such interfaces can be configured manually by means of <code>up</code> and <code>down</code> commands or /etc/network/if-*.d scripts. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Link local address or &quot;random&quot;.</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</dl>
+</dd><dl>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Link local address or &quot;random&quot;.</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd></dl>
 </dl>
 <h3>The dhcp Method</h3>
 <p>This method may be used to obtain an address via DHCP with any of the tools: dhclient, pump, udhcpc, dhcpcd. (They have been listed in their order of precedence.) If you have a complicated DHCP setup you should note that some of these clients use their own configuration files and do not obtain their configuration information via <code>ifup</code>. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>hostname</code><i> hostname </i></p>
-<dd>Hostname to be requested (pump, dhcpcd, udhcpc)</p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Metric for added routes (dhclient)</p>
-<dt><code>leasehours</code><i> leasehours </i></p>
-<dd>Preferred lease time in hours (pump)</p>
-<dt><code>leasetime</code><i> leasetime </i></p>
-<dd>Preferred lease time in seconds (dhcpcd)</p>
-<dt><code>vendor</code><i> vendor </i></p>
-<dd>Vendor class identifier (dhcpcd)</p>
-<dt><code>client</code><i> client </i></p>
-<dd>Client identifier (dhcpcd)</p>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Hardware address.</dl>
+</dd><dl>
+<dt><code>hostname</code><i> hostname </i></dt>
+<dd>Hostname to be requested (pump, dhcpcd, udhcpc)</dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Metric for added routes (dhclient)</dd>
+<dt><code>leasehours</code><i> leasehours </i></dt>
+<dd>Preferred lease time in hours (pump)</dd>
+<dt><code>leasetime</code><i> leasetime </i></dt>
+<dd>Preferred lease time in seconds (dhcpcd)</dd>
+<dt><code>vendor</code><i> vendor </i></dt>
+<dd>Vendor class identifier (dhcpcd)</dd>
+<dt><code>client</code><i> client </i></dt>
+<dd>Client identifier (dhcpcd)</dd>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Hardware address.</dd></dl>
 </dl>
 <h3>The bootp Method</h3>
 <p>This method may be used to obtain an address via bootp. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>bootfile</code><i> file </i></p>
-<dd>Tell the server to use <i>file</i> as the bootfile.</p>
-<dt><code>server</code><i> address</i></p>
-<dd>Use the IP address <i>address</i> to communicate with the server.</p>
-<dt><code>hwaddr</code><i> addr </i></p>
-<dd>Use <i>addr</i> as the hardware address instead of whatever it really is.</dl>
+</dd><dl>
+<dt><code>bootfile</code><i> file </i></dt>
+<dd>Tell the server to use <i>file</i> as the bootfile.</dd>
+<dt><code>server</code><i> address</i></dt>
+<dd>Use the IP address <i>address</i> to communicate with the server.</dd>
+<dt><code>hwaddr</code><i> addr </i></dt>
+<dd>Use <i>addr</i> as the hardware address instead of whatever it really is.</dd></dl>
 </dl>
 <h3>The tunnel Method</h3>
 <p>This method is used to create GRE or IPIP tunnels. You need to have the <code>ip</code> binary from the <code>iproute</code> package. For GRE tunnels, you will need to load the ip_gre module and the ipip module for IPIP tunnels. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>address</code><i> address </i></p>
-<dd>Local address (dotted quad) <code>required</code></p>
-<dt><code>mode</code><i> type </i></p>
-<dd>Tunnel type (either GRE or IPIP) <code>required</code></p>
-<dt><code>endpoint</code><i> address </i></p>
-<dd>Address of other tunnel endpoint <code>required</code></p>
-<dt><code>dstaddr</code><i> address </i></p>
-<dd>Remote address (remote address inside tunnel)</p>
-<dt><code>local</code><i> address </i></p>
-<dd>Address of the local endpoint</p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Routing metric for default gateway (integer)</p>
-<dt><code>gateway</code><i> address </i></p>
-<dd>Default gateway</p>
-<dt><code>ttl</code><i> time </i></p>
-<dd>TTL setting</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</dl>
+</dd><dl>
+<dt><code>address</code><i> address </i></dt>
+<dd>Local address (dotted quad) <code>required</code></dd>
+<dt><code>mode</code><i> type </i></dt>
+<dd>Tunnel type (either GRE or IPIP) <code>required</code></dd>
+<dt><code>endpoint</code><i> address </i></dt>
+<dd>Address of other tunnel endpoint <code>required</code></dd>
+<dt><code>dstaddr</code><i> address </i></dt>
+<dd>Remote address (remote address inside tunnel)</dd>
+<dt><code>local</code><i> address </i></dt>
+<dd>Address of the local endpoint</dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Routing metric for default gateway (integer)</dd>
+<dt><code>gateway</code><i> address </i></dt>
+<dd>Default gateway</dd>
+<dt><code>ttl</code><i> time </i></dt>
+<dd>TTL setting</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd></dl>
 </dl>
 <h3>The ppp Method</h3>
 <p>This method uses pon/poff to configure a PPP interface. See those commands for details. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>provider</code><i> name </i></p>
-<dd>Use <i>name</i> as the provider (from /etc/ppp/peers).</p>
-<dt><code>unit</code><i> number </i></p>
-<dd>Use <i>number</i> as the ppp unit number.</p>
-<dt><code>options</code><i> string</i></p>
-<dd>Pass <i>string</i> as additional options to pon.</dl>
+</dd><dl>
+<dt><code>provider</code><i> name </i></dt>
+<dd>Use <i>name</i> as the provider (from /etc/ppp/peers).</dd>
+<dt><code>unit</code><i> number </i></dt>
+<dd>Use <i>number</i> as the ppp unit number.</dd>
+<dt><code>options</code><i> string</i></dt>
+<dd>Pass <i>string</i> as additional options to pon.</dd></dl>
 </dl>
 <h3>The wvdial Method</h3>
 <p>This method uses wvdial to configure a PPP interface. See that command for more details. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>provider</code><i> name </i></p>
-<dd>Use <i>name</i> as the provider (from /etc/wvdial.conf).</dl>
+</dd><dl>
+<dt><code>provider</code><i> name </i></dt>
+<dd>Use <i>name</i> as the provider (from /etc/wvdial.conf).</dd></dl>
 </dl>
 <h3>The ipv4ll Method</h3>
 <p>This method uses avahi-autoipd to configure an interface with an IPv4 Link-Layer address (169.254.0.0/16 family). This method is also known as APIPA or IPAC, and often colloquially referred to as &quot;Zeroconf address&quot;. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt>(No options)</p>
-<dd></dl>
+</dd><dl>
+<dt>(No options)</dt>
+<dd></dd></dl>
 </dl>
 <h2>Ipx Address Family</h2>
 <p>This section documents the methods available in the ipx address family.</p>
@@ -328,20 +328,20 @@ iface eth0.3 inet static
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>frame</code><i> type </i></p>
-<dd><i>type</i> of Ethernet frames to use (e.g. <code>802.2</code>)</p>
-<dt><code>netnum</code><i> id </i></p>
-<dd>Network number</dl>
+</dd><dl>
+<dt><code>frame</code><i> type </i></dt>
+<dd><i>type</i> of Ethernet frames to use (e.g. <code>802.2</code>)</dd>
+<dt><code>netnum</code><i> id </i></dt>
+<dd>Network number</dd></dl>
 </dl>
 <h3>The dynamic Method</h3>
 <p>This method may be used to setup an IPX interface dynamically. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>frame</code><i> type </i></p>
-<dd><i>type</i> of Ethernet frames to use (e.g. <code>802.2</code>)</dl>
+</dd><dl>
+<dt><code>frame</code><i> type </i></dt>
+<dd><i>type</i> of Ethernet frames to use (e.g. <code>802.2</code>)</dd></dl>
 </dl>
 <h2>Inet6 Address Family</h2>
 <p>This section documents the methods available in the inet6 address family.</p>
@@ -350,135 +350,135 @@ iface eth0.3 inet static
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>privext</code><i> int </i></p>
-<dd>Privacy extensions (RFC4941) (0=off, 1=assign, 2=prefer)</p>
-<dt><code>accept_ra</code><i> int </i></p>
-<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding). Default value: &quot;2&quot;</p>
-<dt><code>dhcp</code><i> int </i></p>
-<dd>Use stateless DHCPv6 (0=off, 1=on)</p>
-<dt><code>request_prefix</code><i> int </i></p>
-<dd>Request a prefix through DHCPv6 Prefix Delegation (0=off, 1=on). Default value: &quot;0&quot;</p>
-<dt><code>ll-attempts</code></p>
-<dd>Number of attempts to wait for a link-local address. Default value: &quot;60&quot;</p>
-<dt><code>ll-interval</code></p>
-<dd>Link-local address polling interval in seconds. Default value: &quot;0.1&quot;</dl>
+</dd><dl>
+<dt><code>privext</code><i> int </i></dt>
+<dd>Privacy extensions (RFC4941) (0=off, 1=assign, 2=prefer)</dd>
+<dt><code>accept_ra</code><i> int </i></dt>
+<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding). Default value: &quot;2&quot;</dd>
+<dt><code>dhcp</code><i> int </i></dt>
+<dd>Use stateless DHCPv6 (0=off, 1=on)</dd>
+<dt><code>request_prefix</code><i> int </i></dt>
+<dd>Request a prefix through DHCPv6 Prefix Delegation (0=off, 1=on). Default value: &quot;0&quot;</dd>
+<dt><code>ll-attempts</code></dt>
+<dd>Number of attempts to wait for a link-local address. Default value: &quot;60&quot;</dd>
+<dt><code>ll-interval</code></dt>
+<dd>Link-local address polling interval in seconds. Default value: &quot;0.1&quot;</dd></dl>
 </dl>
 <h3>The loopback Method</h3>
 <p>This method may be used to define the IPv6 loopback interface. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt>(No options)</p>
-<dd></dl>
+</dd><dl>
+<dt>(No options)</dt>
+<dd></dd></dl>
 </dl>
 <h3>The static Method</h3>
 <p>This method may be used to define interfaces with statically assigned IPv6 addresses. By default, stateless autoconfiguration is disabled for this interface. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>address</code><i> address </i></p>
-<dd>Address (colon delimited/netmask) <code>required</code></p>
-<dt><code>netmask</code><i> mask </i></p>
-<dd>Netmask (number of bits, eg 64) <code>deprecated</code></p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Routing metric for default gateway (integer)</p>
-<dt><code>gateway</code><i> address </i></p>
-<dd>Default gateway (colon delimited)</p>
-<dt><code>media</code><i> type </i></p>
-<dd>Medium type, driver dependent</p>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Hardware address or &quot;random&quot;</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</p>
-<dt><code>accept_ra</code><i> int </i></p>
-<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding)</p>
-<dt><code>autoconf</code><i> int </i></p>
-<dd>Perform stateless autoconfiguration (0=off, 1=on). Default value: &quot;0&quot;</p>
-<dt><code>privext</code><i> int </i></p>
-<dd>Privacy extensions (RFC3041) (0=off, 1=assign, 2=prefer)</p>
-<dt><code>scope</code></p>
-<dd>Address validity scope. Possible values: global, site, link, host</p>
-<dt><code>preferred-lifetime</code><i> int</i></p>
-<dd>Time that address remains preferred</p>
-<dt><code>dad-attempts</code></p>
-<dd>Number of attempts to settle DAD (0 to disable DAD). Default value: &quot;60&quot;</p>
-<dt><code>dad-interval</code></p>
-<dd>DAD state polling interval in seconds. Default value: &quot;0.1&quot;</dl>
+</dd><dl>
+<dt><code>address</code><i> address </i></dt>
+<dd>Address (colon delimited/netmask) <code>required</code></dd>
+<dt><code>netmask</code><i> mask </i></dt>
+<dd>Netmask (number of bits, eg 64) <code>deprecated</code></dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Routing metric for default gateway (integer)</dd>
+<dt><code>gateway</code><i> address </i></dt>
+<dd>Default gateway (colon delimited)</dd>
+<dt><code>media</code><i> type </i></dt>
+<dd>Medium type, driver dependent</dd>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Hardware address or &quot;random&quot;</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd>
+<dt><code>accept_ra</code><i> int </i></dt>
+<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding)</dd>
+<dt><code>autoconf</code><i> int </i></dt>
+<dd>Perform stateless autoconfiguration (0=off, 1=on). Default value: &quot;0&quot;</dd>
+<dt><code>privext</code><i> int </i></dt>
+<dd>Privacy extensions (RFC3041) (0=off, 1=assign, 2=prefer)</dd>
+<dt><code>scope</code></dt>
+<dd>Address validity scope. Possible values: global, site, link, host</dd>
+<dt><code>preferred-lifetime</code><i> int</i></dt>
+<dd>Time that address remains preferred</dd>
+<dt><code>dad-attempts</code></dt>
+<dd>Number of attempts to settle DAD (0 to disable DAD). Default value: &quot;60&quot;</dd>
+<dt><code>dad-interval</code></dt>
+<dd>DAD state polling interval in seconds. Default value: &quot;0.1&quot;</dd></dl>
 </dl>
 <h3>The manual Method</h3>
 <p>This method may be used to define interfaces for which no configuration is done by default. Such interfaces can be configured manually by means of <code>up</code> and <code>down</code> commands or /etc/network/if-*.d scripts. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Hardware address or &quot;random&quot;</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</dl>
+</dd><dl>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Hardware address or &quot;random&quot;</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd></dl>
 </dl>
 <h3>The dhcp Method</h3>
 <p>This method may be used to obtain network interface configuration via stateful DHCPv6 with dhclient. In stateful DHCPv6, the DHCP server is responsible for assigning addresses to clients. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>hwaddress</code><i> address </i></p>
-<dd>Hardware address or &quot;random&quot;</p>
-<dt><code>accept_ra</code><i> int </i></p>
-<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding). Default value: &quot;1&quot;</p>
-<dt><code>autoconf</code><i> int </i></p>
-<dd>Perform stateless autoconfiguration (0=off, 1=on)</p>
-<dt><code>request_prefix</code><i> int </i></p>
-<dd>Request a prefix through DHCPv6 Prefix Delegation (0=off, 1=on). Default value: &quot;0&quot;</p>
-<dt><code>ll-attempts</code></p>
-<dd>Number of attempts to wait for a link-local address. Default value: &quot;60&quot;</p>
-<dt><code>ll-interval</code></p>
-<dd>Link-local address polling interval in seconds. Default value: &quot;0.1&quot;</dl>
+</dd><dl>
+<dt><code>hwaddress</code><i> address </i></dt>
+<dd>Hardware address or &quot;random&quot;</dd>
+<dt><code>accept_ra</code><i> int </i></dt>
+<dd>Accept router advertisements (0=off, 1=on, 2=on+forwarding). Default value: &quot;1&quot;</dd>
+<dt><code>autoconf</code><i> int </i></dt>
+<dd>Perform stateless autoconfiguration (0=off, 1=on)</dd>
+<dt><code>request_prefix</code><i> int </i></dt>
+<dd>Request a prefix through DHCPv6 Prefix Delegation (0=off, 1=on). Default value: &quot;0&quot;</dd>
+<dt><code>ll-attempts</code></dt>
+<dd>Number of attempts to wait for a link-local address. Default value: &quot;60&quot;</dd>
+<dt><code>ll-interval</code></dt>
+<dd>Link-local address polling interval in seconds. Default value: &quot;0.1&quot;</dd></dl>
 </dl>
 <h3>The v4tunnel Method</h3>
 <p>This method may be used to setup an IPv6-over-IPv4 tunnel. It requires the <code>ip</code> command from the <code>iproute</code> package. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>address</code><i> address </i></p>
-<dd>Address (colon delimited/netmask) <code>required</code></p>
-<dt><code>netmask</code><i> mask </i></p>
-<dd>Netmask (number of bits, eg 64) <code>deprecated</code></p>
-<dt><code>endpoint</code><i> address </i></p>
-<dd>Address of other tunnel endpoint (IPv4 dotted quad) <code>required</code></p>
-<dt><code>local</code><i> address </i></p>
-<dd>Address of the local endpoint (IPv4 dotted quad)</p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Routing metric for default gateway (integer)</p>
-<dt><code>gateway</code><i> address </i></p>
-<dd>Default gateway (colon delimited)</p>
-<dt><code>ttl</code><i> time </i></p>
-<dd>TTL setting</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</p>
-<dt><code>preferred-lifetime</code><i> int</i></p>
-<dd>Time that address remains preferred</dl>
+</dd><dl>
+<dt><code>address</code><i> address </i></dt>
+<dd>Address (colon delimited/netmask) <code>required</code></dd>
+<dt><code>netmask</code><i> mask </i></dt>
+<dd>Netmask (number of bits, eg 64) <code>deprecated</code></dd>
+<dt><code>endpoint</code><i> address </i></dt>
+<dd>Address of other tunnel endpoint (IPv4 dotted quad) <code>required</code></dd>
+<dt><code>local</code><i> address </i></dt>
+<dd>Address of the local endpoint (IPv4 dotted quad)</dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Routing metric for default gateway (integer)</dd>
+<dt><code>gateway</code><i> address </i></dt>
+<dd>Default gateway (colon delimited)</dd>
+<dt><code>ttl</code><i> time </i></dt>
+<dd>TTL setting</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd>
+<dt><code>preferred-lifetime</code><i> int</i></dt>
+<dd>Time that address remains preferred</dd></dl>
 </dl>
 <h3>The 6to4 Method</h3>
 <p>This method may be used to setup an 6to4 tunnel. It requires the <code>ip</code> command from the <code>iproute</code> package. </p>
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>local</code><i> address </i></p>
-<dd>Address of the local endpoint (IPv4 dotted quad) <code>required</code></p>
-<dt><code>metric</code><i> metric </i></p>
-<dd>Routing metric for default gateway (integer)</p>
-<dt><code>ttl</code><i> time </i></p>
-<dd>TTL setting</p>
-<dt><code>mtu</code><i> size </i></p>
-<dd>MTU size</p>
-<dt><code>preferred-lifetime</code><i> int</i></p>
-<dd>Time that address remains preferred</dl>
+</dd><dl>
+<dt><code>local</code><i> address </i></dt>
+<dd>Address of the local endpoint (IPv4 dotted quad) <code>required</code></dd>
+<dt><code>metric</code><i> metric </i></dt>
+<dd>Routing metric for default gateway (integer)</dd>
+<dt><code>ttl</code><i> time </i></dt>
+<dd>TTL setting</dd>
+<dt><code>mtu</code><i> size </i></dt>
+<dd>MTU size</dd>
+<dt><code>preferred-lifetime</code><i> int</i></dt>
+<dd>Time that address remains preferred</dd></dl>
 </dl>
 <h2>Can Address Family</h2>
 <p>This section documents the methods available in the can address family.</p>
@@ -487,22 +487,22 @@ iface eth0.3 inet static
 <p> <code>Options</code></p>
 <dl>
 <dd>
-<dl>
-<dt><code>bitrate</code><i> bitrate<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></p>
-<dd>bitrate (1..1000000) <code>required</code></p>
-<dt><code>samplepoint</code><i> samplepoint</i></p>
-<dd>sample point (0.000..0.999)</p>
-<dt><code>loopback</code><i> loopback<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></p>
-<dd>loop back CAN Messages (on|off)</p>
-<dt><code>listenonly</code><i> listenonly</i></p>
-<dd>listen only mode (on|off)</p>
-<dt><code>triple</code><i> triple<tt>&nbsp;<wbr>&nbsp;</tt></i></p>
-<dd>activate triple sampling (on|off)</p>
-<dt><code>oneshot</code><i> oneshot<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></p>
-<dd>one shot mode (on|off)</p>
-<dt><code>berr</code><i> berr<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></p>
+</dd><dl>
+<dt><code>bitrate</code><i> bitrate<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></dt>
+<dd>bitrate (1..1000000) <code>required</code></dd>
+<dt><code>samplepoint</code><i> samplepoint</i></dt>
+<dd>sample point (0.000..0.999)</dd>
+<dt><code>loopback</code><i> loopback<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></dt>
+<dd>loop back CAN Messages (on|off)</dd>
+<dt><code>listenonly</code><i> listenonly</i></dt>
+<dd>listen only mode (on|off)</dd>
+<dt><code>triple</code><i> triple<tt>&nbsp;<wbr>&nbsp;</tt></i></dt>
+<dd>activate triple sampling (on|off)</dd>
+<dt><code>oneshot</code><i> oneshot<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></dt>
+<dd>one shot mode (on|off)</dd>
+<dt><code>berr</code><i> berr<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></i></dt>
 <dd>activate berr reporting (on|off)
-</dl>
+</dd></dl>
 </dl>
 <h2>Known Bugs/Limitations</h2>
 <p>The <code>ifup</code> and <code>ifdown</code> programs work with so-called &quot;physical&quot; interface names. These names are assigned to hardware by the kernel. Unfortunately it can happen that the kernel assigns different physical interface names to the same hardware at different times; for example, what was called &quot;eth0&quot; last time you booted is now called &quot;eth1&quot; and vice versa. This creates a problem if you want to configure the interfaces appropriately. A way to deal with this problem is to use mapping scripts that choose logical interface names according to the properties of the interface hardware. See the <code>get-mac-address.sh</code> script in the examples directory for an example of such a mapping script. See also Debian bug #101728.</p>

@@ -13,24 +13,24 @@ description: "aliases – aliases file for sendmail"
 <h2>Description</h2>
 <p>This file describes user ID aliases used by sendmail. The file resides in /etc and is formatted as a series of lines of the form</p>
 <dl>
-<dd>name: addr_1, addr_2, addr_3, . . .</dl>
+<dd>name: addr_1, addr_2, addr_3, . . .</dd></dl>
 <p> The <i>name</i> is the name to alias, and the <i>addr_n</i> are the aliases for that name. <i>addr_n</i> can be another alias, a local username, a local filename, a command, an include file, or an external address.</p>
 <dl>
-<dt><code>Local Username</code></p>
-<dd>username</p>
-<dd>The username must be available via <a href="/docs/linux/man/3-getpwnam/">getpwnam</a>(3).</p>
-<dt><code>Local Filename</code></p>
-<dd>/path/name</p>
-<dd>Messages are appended to the file specified by the full pathname (starting with a slash (/))</p>
-<dt><code>Command</code></p>
-<dd>|command</p>
-<dd>A command starts with a pipe symbol (|), it receives messages via standard input.</p>
-<dt><code>Include File</code></p>
-<dd>:include: /path/name</p>
-<dd>The aliases in pathname are added to the aliases for <i>name.</i></p>
-<dt><code>E-Mail Address</code></p>
-<dd>user [at] domain</p>
-<dd>An e-mail address in RFC 822 format.</dl>
+<dt><code>Local Username</code></dt>
+<dd>username</dd>
+<dd>The username must be available via <a href="/docs/linux/man/3-getpwnam/">getpwnam</a>(3).</dd>
+<dt><code>Local Filename</code></dt>
+<dd>/path/name</dd>
+<dd>Messages are appended to the file specified by the full pathname (starting with a slash (/))</dd>
+<dt><code>Command</code></dt>
+<dd>|command</dd>
+<dd>A command starts with a pipe symbol (|), it receives messages via standard input.</dd>
+<dt><code>Include File</code></dt>
+<dd>:include: /path/name</dd>
+<dd>The aliases in pathname are added to the aliases for <i>name.</i></dd>
+<dt><code>E-Mail Address</code></dt>
+<dd>user [at] domain</dd>
+<dd>An e-mail address in RFC 822 format.</dd></dl>
 <p> Lines beginning with white space are continuation lines. Another way to continue lines is by placing a backslash directly before a newline. Lines beginning with # are comments. </p>
 <p> Aliasing occurs only on local names. Loops can not occur, since no message will be sent to any person more than once. </p>
 <p> If an alias is found for <i>name</i>, sendmail then checks for an alias for <i>owner-name</i>. If it is found and the result of the lookup expands to a single address, the envelope sender address of the message is rewritten to that address. If it is found and the result expands to more than one address, the envelope sender address is changed to <i>owner-name</i>. </p>

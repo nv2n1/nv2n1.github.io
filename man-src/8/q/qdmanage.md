@@ -14,30 +14,30 @@ description: "qdmanage – dispatch management tool"
 <p>An AMQP management client for use with qdrouterd. Sends AMQP management operations requests and prints the response in JSON format. This is a generic AMQP management tool and can be used with any standard AMQP managed endpoint, not just with qdrouter.</p>
 <h2>Operations</h2>
 <dl>
-<dt><i>query</i> [<i>ATTR</i>&#8230;]</p>
-<dd>Print the attributes named in the ATTR list or all attributes if none are listed. Print attributes for all entities by default, use &#8211;type, &#8211;name and &#8211;identity options to restrict what is printed.</p>
-<dt><i>create</i> [<i>ATTR=VALUE</i>&#8230;]</p>
-<dd>Create a new entity with the specified attributes. With the &#8211;stdin option, read attributes from stdin. This can be a JSON map of attributes to create a single entity, or a JSON list of maps to create multiple entitiees.</p>
-<dt><i>read</i></p>
-<dd>Print the attributes of an entity specified by the &#8211;name or &#8211;identity options. With the &#8211;stdin option, create entities based on data from stdin. This can be a JSON map of attributes to create a single entity, or a JSON list of maps to create multiple entitiees.</p>
-<dt><i>update</i> [<i>ATTR=VALUE</i>&#8230;]</p>
-<dd>Update the attributes of an existing entity. With the &#8211;stdin option, read attributes from stdin. This can be a JSON map of attributes to update a single entity, or a JSON list of maps to update multiple entitiees. If an ATTR name is listed with no =VALUE, that attribute will be deleted from the entity.</p>
-<dt><i>delete</i></p>
-<dd>Delete an entity specified by the &#8211;name or &#8211;identity options.</p>
-<dt><i>get-types</i> [<i>TYPE</i>]</p>
-<dd>List entity types with their base types. With no arguments list all types.</p>
-<dt><i>get-operations</i> [<i>TYPE</i>]</p>
-<dd>List entity types with their operations. With no arguments list all types.</p>
-<dt><i>get-attributes</i> [<i>TYPE</i>]</p>
-<dd>List entity types with their attributes. With no arguments list all types.</p>
-<dt><i>get-annotations</i> [<i>TYPE</i>]</p>
-<dd>List entity types with their annotations. With no arguments list all types.</p>
-<dt><i>get-mgmt-nodes</i></p>
-<dd>List all other known management nodes connected to this one.</p>
-<dt><i>get-json-schema</i> [<i>INDENT</i>]</p>
-<dd>Get the router schema in JSON format. Optional integer indent for formatted output.</p>
-<dt><i>get-log</i> [<i>INDENT</i>]</p>
-<dd>Get recent log entries from the router.</dl>
+<dt><i>query</i> [<i>ATTR</i>&#8230;]</dt>
+<dd>Print the attributes named in the ATTR list or all attributes if none are listed. Print attributes for all entities by default, use &#8211;type, &#8211;name and &#8211;identity options to restrict what is printed.</dd>
+<dt><i>create</i> [<i>ATTR=VALUE</i>&#8230;]</dt>
+<dd>Create a new entity with the specified attributes. With the &#8211;stdin option, read attributes from stdin. This can be a JSON map of attributes to create a single entity, or a JSON list of maps to create multiple entitiees.</dd>
+<dt><i>read</i></dt>
+<dd>Print the attributes of an entity specified by the &#8211;name or &#8211;identity options. With the &#8211;stdin option, create entities based on data from stdin. This can be a JSON map of attributes to create a single entity, or a JSON list of maps to create multiple entitiees.</dd>
+<dt><i>update</i> [<i>ATTR=VALUE</i>&#8230;]</dt>
+<dd>Update the attributes of an existing entity. With the &#8211;stdin option, read attributes from stdin. This can be a JSON map of attributes to update a single entity, or a JSON list of maps to update multiple entitiees. If an ATTR name is listed with no =VALUE, that attribute will be deleted from the entity.</dd>
+<dt><i>delete</i></dt>
+<dd>Delete an entity specified by the &#8211;name or &#8211;identity options.</dd>
+<dt><i>get-types</i> [<i>TYPE</i>]</dt>
+<dd>List entity types with their base types. With no arguments list all types.</dd>
+<dt><i>get-operations</i> [<i>TYPE</i>]</dt>
+<dd>List entity types with their operations. With no arguments list all types.</dd>
+<dt><i>get-attributes</i> [<i>TYPE</i>]</dt>
+<dd>List entity types with their attributes. With no arguments list all types.</dd>
+<dt><i>get-annotations</i> [<i>TYPE</i>]</dt>
+<dd>List entity types with their annotations. With no arguments list all types.</dd>
+<dt><i>get-mgmt-nodes</i></dt>
+<dd>List all other known management nodes connected to this one.</dd>
+<dt><i>get-json-schema</i> [<i>INDENT</i>]</dt>
+<dd>Get the router schema in JSON format. Optional integer indent for formatted output.</dd>
+<dt><i>get-log</i> [<i>INDENT</i>]</dt>
+<dd>Get recent log entries from the router.</dd></dl>
 <h2>Options</h2>
 <p>-h, &#8211;help : show this help message and exit </p>
 <p> &#8211;version : Print version and exit. </p>
@@ -58,10 +58,10 @@ description: "qdmanage – dispatch management tool"
 <p> &#8211;ssl-password=PASSWORD : Certificate password, will be prompted if not specifed.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr//usr/share/doc/qpid-dispatch/qdrouter.json</code></p>
-<dd>Management schema for qdrouterd.</p>
-<dt><code>/usr//usr/share/doc/qpid-dispatch/qdrouter.json.readme.txt</code></p>
-<dd>Explanation of the management schema.</dl>
+<dt><code>/usr//usr/share/doc/qpid-dispatch/qdrouter.json</code></dt>
+<dd>Management schema for qdrouterd.</dd>
+<dt><code>/usr//usr/share/doc/qpid-dispatch/qdrouter.json.readme.txt</code></dt>
+<dd>Explanation of the management schema.</dd></dl>
 <h2>Examples</h2>
 <p>Show the logging configuration </p>
 <pre>qdmanage query --type=log</pre>

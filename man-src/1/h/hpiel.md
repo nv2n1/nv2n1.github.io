@@ -20,36 +20,36 @@ hpiel[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-d][-E entity - path][-c - p - r
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-d</code>, <code>&#8211;del</code></p>
-<dd> Display domain event log entries</p>
-<dt><code>-c</code>, <code>&#8211;clear</code></p>
-<dd> Clear log before reading event log entries</p>
-<dt><code>-p</code>, <code>&#8211;resource</code></p>
-<dd> Pull resource info along with log entry</p>
-<dt><code>-r</code>, <code>&#8211;rdr</code></p>
-<dd> Pull <font SIZE="-1">RDR</font> info along with log entry</p>
-<dt><code>-E</code> <i>&quot;epath&quot;</i>, <code>&#8211;entity-path</code>=<i>&quot;epath&quot;</i></p>
-<dd> Use entity path epath and display resource</p>
-<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id <i>nn</i></p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</p>
-<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-d</code>, <code>&#8211;del</code></dt>
+<dd> Display domain event log entries</dd>
+<dt><code>-c</code>, <code>&#8211;clear</code></dt>
+<dd> Clear log before reading event log entries</dd>
+<dt><code>-p</code>, <code>&#8211;resource</code></dt>
+<dd> Pull resource info along with log entry</dd>
+<dt><code>-r</code>, <code>&#8211;rdr</code></dt>
+<dd> Pull <font SIZE="-1">RDR</font> info along with log entry</dd>
+<dt><code>-E</code> <i>&quot;epath&quot;</i>, <code>&#8211;entity-path</code>=<i>&quot;epath&quot;</i></dt>
+<dd> Use entity path epath and display resource</dd>
+<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id <i>nn</i></dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <p> If neither <code>-d</code> or <code>-E</code> <i>&#8220;epath&#8221;</i> are specified, event log entries will be shown for all supporting resources by default.</p>
 <h2>HPI APIs uniquely used in this application</h2>
 <dl>
 <dt>
-<dd> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiEventLogInfoGet (<br />
+</dt><dd> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiEventLogInfoGet (<br />
 &nbsp;<wbr><font SIZE="-1">SAHPI_IN&nbsp;<wbr></font>&nbsp;<wbr>SaHpiSessionIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SessionId,<br />
 &nbsp;<wbr><font SIZE="-1">SAHPI_IN&nbsp;<wbr></font>&nbsp;<wbr>SaHpiResourceIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ResourceId,<br />
-&nbsp;<wbr><font SIZE="-1">SAHPI_OUT</font>&nbsp;<wbr>SaHpiEventLogInfoT&nbsp;<wbr>&nbsp;<wbr>*Info ); </p>
+&nbsp;<wbr><font SIZE="-1">SAHPI_OUT</font>&nbsp;<wbr>SaHpiEventLogInfoT&nbsp;<wbr>&nbsp;<wbr>*Info ); </dd>
 <p> SaErrorT <font SIZE="-1">SAHPI_API</font> saHpiEventLogEntryGet (<br />
 &nbsp;<wbr><font SIZE="-1">SAHPI_IN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>SaHpiSessionIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SessionId,<br />
 &nbsp;<wbr><font SIZE="-1">SAHPI_IN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>SaHpiResourceIdT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ResourceId,<br />
@@ -79,3 +79,4 @@ Peter D Phan(pdphan[at] users.sourceforge.net)
         Anton Pak(avpak[at] users.sourceforge.net)
 </code></pre>
 <h2>Index</h2>
+</p>

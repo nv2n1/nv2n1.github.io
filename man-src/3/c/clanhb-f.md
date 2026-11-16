@@ -21,10 +21,10 @@ description: "clanhb.f –"
 <pre> CLANHB returns the value of the one norm, or the Frobenius norm, or
  the infinity norm, or the element of largest absolute value of an
  n by n hermitian band matrix A, with k super-diagonals.</pre>
-</dl>
+</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>CLANHB </p>
+<dd>CLANHB </dd>
 <pre> CLANHB = ( max(abs(A(i,j))), NORM = 'M' or 'm'
  (
  ( norm1(A), NORM = '1', 'O' or 'o'
@@ -39,7 +39,7 @@ description: "clanhb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>NORM</i> </p>
+<dd><i>NORM</i> </dd>
 <pre> NORM is CHARACTER*1
  Specifies the value to be returned in CLANHB as described
  above.</pre>
@@ -76,13 +76,13 @@ description: "clanhb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 132 of file clanhb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

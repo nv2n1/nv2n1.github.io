@@ -11,48 +11,29 @@ std::uses_allocator_construction_args - std::uses_allocator_construction_args
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     T is not a specialization of std::pair
-
     template &lt;class T, class Alloc, class... Args&gt;
-
     std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args((1)(since C++ 20)
-
                                                                    const Alloc &amp;alloc,
                                                                Args &amp;&amp;...args);
-
 T is a specialization of std::pair
-
     template &lt;class T, class Alloc, class Tuple1, class Tuple2&gt;
-
     std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args((2)(since C++ 20)
-
                                                                    const Alloc &amp;alloc,
                                                                std::piecewise_construct_t, Tuple1 &amp;&amp;x, Tuple2 &amp;&amp;y);
-
 template &lt;class T, class Alloc&gt;
 (3)(since C++ 20)
-
     std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args(const Alloc &amp;alloc);
-
 template &lt;class T, class Alloc, class U, class V&gt;
-
 std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args((4)(since C++ 20)
-
                                                                const Alloc &amp;alloc,
                                                            U &amp;&amp;u, V &amp;&amp;v);
-
 template &lt;class T, class Alloc, class U, class V&gt;
-
 std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args((5)(since C++ 20)
-
                                                                const Alloc &amp;alloc,
                                                            const std::pair&lt;U, V&gt; &amp;pr);
-
 template &lt;class T, class Alloc, class U, class V&gt;
-
 std::tuple&lt;/*see below*/&gt; uses_allocator_construction_args((6)(since C++ 20)
-
                                                                const Alloc &amp;alloc,
                                                            std::pair&lt;U, V&gt; &amp;&amp;pr);</code></pre> 
 Prepares the argument list needed to create an object of the given type T by means of uses-allocator_construction. 

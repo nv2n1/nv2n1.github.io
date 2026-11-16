@@ -12,7 +12,6 @@ std::negative_binomial_distribution&lt;IntType&gt;::p,k - std::negative_binomial
 
 <pre><code>double p() const;
 (1)(since C++ 11)
-
     IntType k() const;
 (2)(since C++ 11)</code></pre> 
 Returns the parameters the distribution was constructed with. 

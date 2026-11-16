@@ -11,7 +11,6 @@ description: "selinux_raw_context_to_color – Return RGB color string for an SE
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/selinux.h&gt;
 int selinux_raw_context_to_color(char *raw,
-
                                  char **color_str);</code></pre>
 <h2>Description</h2>
 <p><code>selinux_raw_context_to_color</code>() returns a <i>color_str</i> associated to the raw context <i>raw</i> provided that the <code><a href="/docs/linux/man/8-mcstransd/">mcstransd</a></code>(8) daemon is running, the policy is an MLS type policy (MCS or MLS) and there is a color configuration file <code><a href="/docs/linux/man/5-secolor-conf/">secolor.conf</a></code>(5) (see the <code>FILES</code> section). The <i>color_str</i> string is a space separated list of eight hexadecimal RGB triples, each prefixed by a hash character (#). These represent the user:role:type:range components of the foreground and background colors. An example string is shown in the <code>EXAMPLE</code> section. The returned <i>color_str</i> string must be freed with <code><a href="/docs/linux/man/3-free/">free</a></code>(3). If a color has not been configured for a specific user, role, type and/or range component of context <i>raw</i>, then <code>selinux_raw_context_to_color</code>() will select the color returned in <i>color_str</i> in order of precedence as follows:</p>
@@ -20,11 +19,11 @@ int selinux_raw_context_to_color(char *raw,
  user, type, range<br />
  user, role, range<br />
  user, role, type
-</dl>
+</dd></dl>
 <p> If there are no entries in the <code><a href="/docs/linux/man/5-secolor-conf/">secolor.conf</a></code>(5) file for any of the components of context <i>raw</i> (or the file is not present), then the default string returned in <i>color_str</i> is:</p>
 <dl>
 <dd>&#8212;&#8211; user &#8212;- &#8212;- role &#8212;- &#8212;- type &#8212;- &#8212;- range &#8212;-<br />
- #000000 #ffffff #000000 #ffffff #000000 #ffffff #000000 #ffffff </p>
+ #000000 #ffffff #000000 #ffffff #000000 #ffffff #000000 #ffffff </dd>
 <h2>Return Value</h2>
 <p>On success, zero is returned.<br />
  On failure, -1 is returned with <i>errno</i> set appropriately.</p>
@@ -43,3 +42,4 @@ int selinux_raw_context_to_color(char *raw,
 <p>&nbsp;black&nbsp;<wbr>&nbsp;<wbr>&nbsp;white :&nbsp;<wbr>&nbsp;white&nbsp;<wbr>&nbsp;<wbr>&nbsp;black&nbsp;<wbr>&nbsp;: tan&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;orange&nbsp;<wbr>&nbsp;: black&nbsp;<wbr>&nbsp;<wbr>&nbsp;green&nbsp;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-selinux_colors_path/">selinux_colors_path</a></code>(3), <code><a href="/docs/linux/man/8-mcstransd/">mcstransd</a></code>(8), <code><a href="/docs/linux/man/5-secolor-conf/">secolor.conf</a></code>(5), <code>selinux_raw_to_trans_context</code>(3), <code>selinux_trans_to_raw_context</code>(3), <code><a href="/docs/linux/man/3-free/">free</a></code>(3) </p>
+</dl>

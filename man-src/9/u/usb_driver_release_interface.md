@@ -14,10 +14,10 @@ description: "usb_driver_release_interface – unbind a driver from an interface
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>the driver to be unbound</dl>
+</dd><dd>the driver to be unbound</dd></dl>
 <p> <i>iface</i></p>
 <dl>
-<dd>the interface from which it will be unbound</dl>
+<dd>the interface from which it will be unbound</dd></dl>
 <h2>Description</h2>
 <p>This can be used by drivers to release an interface without waiting for their <code>disconnect</code> methods to be called. In typical cases this also causes the driver <code>disconnect</code> method to be called. </p>
 <p> This call is synchronous, and may not be used in an interrupt context. Callers must own the device lock, so driver <code>disconnect</code> entries don&#8217;t need extra locking, but other call contexts may need to explicitly claim that lock.</p>

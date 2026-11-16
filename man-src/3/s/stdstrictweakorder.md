@@ -11,9 +11,7 @@ std::StrictWeakOrder - std::StrictWeakOrder
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;concepts&gt;
-
 template &lt; class R, class T, class U &gt;            (1) (since C++20)
-
 concept StrictWeakOrder = std::Relation&lt;R, T, U&gt;;</code></pre> 
 The concept StrictWeakOrder&lt;R, T, U&gt; specifies that the Relation R imposes a strict weak ordering on its arguments. A relation r is a strict weak ordering if 
 * it is irreflexive: for all x, r(x, x) is false; 

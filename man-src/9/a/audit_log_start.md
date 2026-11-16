@@ -15,15 +15,15 @@ audit_log_start - obtain an audit buffer
 <h2>Arguments</h2>
 
 <i>ctx</i>
-<dl><dd><dd>audit_context (may be NULL)</dl>
+<dl><dd></dd><dd>audit_context (may be NULL)</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>type of allocation</dl>
+<dl><dd>type of allocation</dd></dl>
  
 
  <i>type</i>
-<dl><dd>audit message type</dl>
+<dl><dd>audit message type</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,34 +15,34 @@ description: "monkeysphere-host – Monkeysphere host key administration tool."
 <h2>Subcommands</h2>
 <p><code>monkeysphere-host</code> takes various subcommands:</p>
 <dl>
-<dt><code>import-key FILE SCHEME://HOSTNAME[:PORT]</code></p>
-<dd>Import a PEM-encoded host secret key from file FILE. If FILE is `-&#8216;, then the key will be imported from stdin. Only RSA keys are supported at the moment. SCHEME://HOSTNAME[:PORT] is used to specify the scheme (e.g. ssh or https), fully-qualified hostname (and port) used in the user ID of the new OpenPGP key (e.g. <a href="ssh://example.net">ssh://example.net</a> or <a rel="nofollow" href="https://www.example.net">https://www.example.net</a>). If PORT is not specified, then no port is added to the user ID, which means the default port for that service (e.g. 22 for ssh) is assumed. `i&#8217; may be used in place of `import-key&#8217;.</p>
-<dt><code>show-keys [KEYID &#8230;]</code></p>
-<dd>Output information about the OpenPGP certificate(s) for services offered by the host, including their KEYIDs. If no KEYID is specified (or if the special string `&#8211;all&#8217; is used), output information about all certificates managed by <code>monkeysphere-host</code>. `s&#8217; may be used in place of `show-keys&#8217;.</p>
-<dt><code>set-expire EXPIRE [KEYID]</code></p>
-<dd>Extend the validity of the OpenPGP certificate specified until EXPIRE from the present. Expiration is specified as with GnuPG (measured from today&#8217;s date): </p>
+<dt><code>import-key FILE SCHEME://HOSTNAME[:PORT]</code></dt>
+<dd>Import a PEM-encoded host secret key from file FILE. If FILE is `-&#8216;, then the key will be imported from stdin. Only RSA keys are supported at the moment. SCHEME://HOSTNAME[:PORT] is used to specify the scheme (e.g. ssh or https), fully-qualified hostname (and port) used in the user ID of the new OpenPGP key (e.g. <a href="ssh://example.net">ssh://example.net</a> or <a rel="nofollow" href="https://www.example.net">https://www.example.net</a>). If PORT is not specified, then no port is added to the user ID, which means the default port for that service (e.g. 22 for ssh) is assumed. `i&#8217; may be used in place of `import-key&#8217;.</dd>
+<dt><code>show-keys [KEYID &#8230;]</code></dt>
+<dd>Output information about the OpenPGP certificate(s) for services offered by the host, including their KEYIDs. If no KEYID is specified (or if the special string `&#8211;all&#8217; is used), output information about all certificates managed by <code>monkeysphere-host</code>. `s&#8217; may be used in place of `show-keys&#8217;.</dd>
+<dt><code>set-expire EXPIRE [KEYID]</code></dt>
+<dd>Extend the validity of the OpenPGP certificate specified until EXPIRE from the present. Expiration is specified as with GnuPG (measured from today&#8217;s date): </dd>
 <pre> 0 = key does not expire
  &lt;n&gt; = key expires in n days
  &lt;n&gt;w = key expires in n weeks
  &lt;n&gt;m = key expires in n months
  &lt;n&gt;y = key expires in n years</pre>
 <p>`e&#8217; may be used in place of `set-expire&#8217;.</p>
-<dt><code>add-servicename SCHEME://HOSTNAME[:PORT] [KEYID]</code></p>
-<dd>Add a service-specific user ID to the specified certificate. For example, the operator of `<a rel="nofollow" href="https://example.net'">https://example.net&#8217;</a> may wish to add an additional servicename of `<a rel="nofollow" href="https://www.example.net'">https://www.example.net&#8217;</a> to the certificate corresponding to the secret key used by the TLS-enabled web server. `add-name&#8217; or `n+&#8217; may be used in place of `add-servicename&#8217;.</p>
-<dt><code>revoke-servicename SCHEME://HOSTNAME[:PORT] [KEYID]</code></p>
-<dd>Revoke a service-specific user ID from the specified certificate. `revoke-name&#8217; or `n-&#8216; may be used in place of `revoke-servicename&#8217;.</p>
-<dt><code>add-revoker REVOKER_KEYID|FILE [KEYID]</code></p>
-<dd>Add a revoker to the specified OpenPGP certificate. The revoker can be specified by their own REVOKER_KEYID (in which case it will be loaded from an OpenPGP keyserver), or by specifying a path to a file containing the revoker&#8217;s OpenPGP certificate, or by specifying `-&#8216; to load from stdin. `r+&#8217; may be be used in place of `add-revoker&#8217;.</p>
-<dt><code>revoke-key [KEYID]</code></p>
-<dd>Generate (with the option to publish) a revocation certificate for given OpenPGP certificate. If such a certificate is published, the given key will be permanently revoked, and will no longer be accepted by monkeysphere-enabled clients. This subcommand will ask you a series of questions, and then generate a key revocation certificate, sending it to stdout. You might want to store these certificates safely offline, to publish in case of compromise). If you explicitly tell it to publish the revocation certificate immediately, it will send it to the public keyservers. PUBLISH THESE CERTIFICATES ONLY IF YOU ARE SURE THE CORRESPONDING KEY WILL NEVER BE RE-USED!</p>
-<dt><code>publish-keys [KEYID &#8230;]</code></p>
-<dd>Publish the specified OpenPGP certificates to the public keyservers. If the special string `&#8211;all&#8217; is specified, all of the host&#8217;s OpenPGP certificates will be published. `p&#8217; may be used in place of `publish-keys&#8217;. NOTE: that there is no way to remove a key from the public keyservers once it is published!</p>
-<dt><code>version</code></p>
-<dd>Show the monkeysphere version number. `v&#8217; may be used in place of `version&#8217;.</p>
-<dt><code>help</code></p>
-<dd>Output a brief usage summary. `h&#8217; or `?&#8217; may be used in place of `help&#8217;.</p>
-<dt><code>diagnostics</code></p>
-<dd>Review the state of the monkeysphere server host key and report on suggested changes. Among other checks, this includes making sure there is a valid host key, that the key is not expired, that the sshd configuration points to the right place, etc. `d&#8217; may be used in place of `diagnostics&#8217;. </p>
+<dt><code>add-servicename SCHEME://HOSTNAME[:PORT] [KEYID]</code></dt>
+<dd>Add a service-specific user ID to the specified certificate. For example, the operator of `<a rel="nofollow" href="https://example.net'">https://example.net&#8217;</a> may wish to add an additional servicename of `<a rel="nofollow" href="https://www.example.net'">https://www.example.net&#8217;</a> to the certificate corresponding to the secret key used by the TLS-enabled web server. `add-name&#8217; or `n+&#8217; may be used in place of `add-servicename&#8217;.</dd>
+<dt><code>revoke-servicename SCHEME://HOSTNAME[:PORT] [KEYID]</code></dt>
+<dd>Revoke a service-specific user ID from the specified certificate. `revoke-name&#8217; or `n-&#8216; may be used in place of `revoke-servicename&#8217;.</dd>
+<dt><code>add-revoker REVOKER_KEYID|FILE [KEYID]</code></dt>
+<dd>Add a revoker to the specified OpenPGP certificate. The revoker can be specified by their own REVOKER_KEYID (in which case it will be loaded from an OpenPGP keyserver), or by specifying a path to a file containing the revoker&#8217;s OpenPGP certificate, or by specifying `-&#8216; to load from stdin. `r+&#8217; may be be used in place of `add-revoker&#8217;.</dd>
+<dt><code>revoke-key [KEYID]</code></dt>
+<dd>Generate (with the option to publish) a revocation certificate for given OpenPGP certificate. If such a certificate is published, the given key will be permanently revoked, and will no longer be accepted by monkeysphere-enabled clients. This subcommand will ask you a series of questions, and then generate a key revocation certificate, sending it to stdout. You might want to store these certificates safely offline, to publish in case of compromise). If you explicitly tell it to publish the revocation certificate immediately, it will send it to the public keyservers. PUBLISH THESE CERTIFICATES ONLY IF YOU ARE SURE THE CORRESPONDING KEY WILL NEVER BE RE-USED!</dd>
+<dt><code>publish-keys [KEYID &#8230;]</code></dt>
+<dd>Publish the specified OpenPGP certificates to the public keyservers. If the special string `&#8211;all&#8217; is specified, all of the host&#8217;s OpenPGP certificates will be published. `p&#8217; may be used in place of `publish-keys&#8217;. NOTE: that there is no way to remove a key from the public keyservers once it is published!</dd>
+<dt><code>version</code></dt>
+<dd>Show the monkeysphere version number. `v&#8217; may be used in place of `version&#8217;.</dd>
+<dt><code>help</code></dt>
+<dd>Output a brief usage summary. `h&#8217; or `?&#8217; may be used in place of `help&#8217;.</dd>
+<dt><code>diagnostics</code></dt>
+<dd>Review the state of the monkeysphere server host key and report on suggested changes. Among other checks, this includes making sure there is a valid host key, that the key is not expired, that the sshd configuration points to the right place, etc. `d&#8217; may be used in place of `diagnostics&#8217;. </dd>
 </dl>
 <h2>Setup Ssh Server Certificates</h2>
 <p>To enable users to verify your SSH host&#8217;s key via the monkeysphere, an OpenPGP certificate must be made out of the host&#8217;s RSA ssh key, and the certificate must be published to the Web of Trust. Certificate publication is not done by default. The first step is to import the host&#8217;s ssh key into a monkeysphere-style OpenPGP certificate. This is done with the import-key command. For example: </p>
@@ -65,24 +65,24 @@ description: "monkeysphere-host – Monkeysphere host key administration tool."
 <h2>Environment</h2>
 <p>The following environment variables will override those specified in the config file (defaults in parentheses):</p>
 <dl>
-<dt>MONKEYSPHERE_LOG_LEVEL</p>
-<dd>Set the log level. Can be SILENT, ERROR, INFO, VERBOSE, DEBUG, in increasing order of verbosity. (INFO)</p>
-<dt>MONKEYSPHERE_KEYSERVER</p>
-<dd>OpenPGP keyserver to use. (pool.sks-keyservers.net)</p>
-<dt>MONKEYSPHERE_PROMPT</p>
-<dd>If set to `false&#8217;, never prompt the user for confirmation. (true) </p>
+<dt>MONKEYSPHERE_LOG_LEVEL</dt>
+<dd>Set the log level. Can be SILENT, ERROR, INFO, VERBOSE, DEBUG, in increasing order of verbosity. (INFO)</dd>
+<dt>MONKEYSPHERE_KEYSERVER</dt>
+<dd>OpenPGP keyserver to use. (pool.sks-keyservers.net)</dd>
+<dt>MONKEYSPHERE_PROMPT</dt>
+<dd>If set to `false&#8217;, never prompt the user for confirmation. (true) </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/monkeysphere/monkeysphere-host.conf</p>
-<dd>System monkeysphere-host config file.</p>
-<dt>/var/lib/monkeysphere/host_keys.pub.pgp</p>
-<dd>A world-readable copy of the host&#8217;s OpenPGP certificates in ASCII armored format. This includes the certificates (including the public keys, servicename-based User IDs, and most recent relevant self-signatures) corresponding to every key used by Monkeysphere-enabled services on the host.</p>
-<dt>/var/lib/monkeysphere/host/</p>
-<dd>A locked directory (readable only by the superuser) containing copies of all imported secret keys (this is the host&#8217;s GNUPGHOME directory).</p>
+<dt>/etc/monkeysphere/monkeysphere-host.conf</dt>
+<dd>System monkeysphere-host config file.</dd>
+<dt>/var/lib/monkeysphere/host_keys.pub.pgp</dt>
+<dd>A world-readable copy of the host&#8217;s OpenPGP certificates in ASCII armored format. This includes the certificates (including the public keys, servicename-based User IDs, and most recent relevant self-signatures) corresponding to every key used by Monkeysphere-enabled services on the host.</dd>
+<dt>/var/lib/monkeysphere/host/</dt>
+<dd>A locked directory (readable only by the superuser) containing copies of all imported secret keys (this is the host&#8217;s GNUPGHOME directory).</dd>
 <dt>/etc/monkeysphere/monkeysphere-host-x509-anchors.crt or<br />
- /etc/monkeysphere/monkeysphere-x509-anchors.crt</p>
-<dd>If monkeysphere-host is configured to query an hkps keyserver for publish-keys, it will use the PEM-encoded X.509 Certificate Authority certificates in this file to validate any X.509 certificates used by the keyserver. If the monkeysphere-host-x509 file is present, the monkeysphere-x509 file will be ignored. </p>
+ /etc/monkeysphere/monkeysphere-x509-anchors.crt</dt>
+<dd>If monkeysphere-host is configured to query an hkps keyserver for publish-keys, it will use the PEM-encoded X.509 Certificate Authority certificates in this file to validate any X.509 certificates used by the keyserver. If the monkeysphere-host-x509 file is present, the monkeysphere-x509 file will be ignored. </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by: Jameson Rollins &lt;jrollins [at] finestructure.net&gt;, Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt;, Matthew Goins &lt;mjgoins [at] openflows.com&gt;</p>

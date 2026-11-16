@@ -10,7 +10,6 @@ description: "std::time_base – std::time_base"
 <p>std::time_base &#8211; std::time_base</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 class time_base;</code></pre>
 <p>The class std::time_base provides the date order constants which are inherited by the std::time_get facets. </p>
 <h2>Member types</h2>

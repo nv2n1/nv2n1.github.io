@@ -26,10 +26,10 @@ description: "perlwin32 – Perl under Windows"
 </pre>
 <p> Note that the last two of these are actually competing projects both delivering complete gcc toolchain for <font SIZE="-1">MS</font> Windows:</p>
 <dl>
-<dt>&lt;<a rel="nofollow" href="http://mingw.org">http://mingw.org</a>&gt;</p>
-<dd> Delivers gcc toolchain targeting 32-bit Windows platform.</p>
-<dt>&lt;<a rel="nofollow" href="http://mingw-w64.org">http://mingw-w64.org</a>&gt;</p>
-<dd> Delivers gcc toolchain targeting both 64-bit Windows and 32-bit Windows platforms (despite the project name &#8220;mingw-w64&#8221; they are not only 64-bit oriented). They deliver the native gcc compilers and cross-compilers that are also supported by perl&#8217;s makefile.</dl>
+<dt>&lt;<a rel="nofollow" href="http://mingw.org">http://mingw.org</a>&gt;</dt>
+<dd> Delivers gcc toolchain targeting 32-bit Windows platform.</dd>
+<dt>&lt;<a rel="nofollow" href="http://mingw-w64.org">http://mingw-w64.org</a>&gt;</dt>
+<dd> Delivers gcc toolchain targeting both 64-bit Windows and 32-bit Windows platforms (despite the project name &#8220;mingw-w64&#8221; they are not only 64-bit oriented). They deliver the native gcc compilers and cross-compilers that are also supported by perl&#8217;s makefile.</dd></dl>
 <p> The Microsoft Visual C<font SIZE="-2">++</font> compilers are also now being given away free. They are available as &#8220;Visual C<font SIZE="-2">++</font> Toolkit 2003&#8221; or &#8220;Visual C<font SIZE="-2">++</font> 2005-2019 Express [or Community, from 2017] Edition&#8221; (and also as part of the &#8220;.NET Framework <font SIZE="-1">SDK&#8221;</font>) and are the same compilers that ship with &#8220;Visual C<font SIZE="-2">++</font> .NET 2003 Professional&#8221; or &#8220;Visual C<font SIZE="-2">++</font> 2005-2019 Professional&#8221; respectively. </p>
 <p> This port can also be built on <font SIZE="-1">IA64/AMD64</font> using: </p>
 <pre>
@@ -41,18 +41,18 @@ description: "perlwin32 – Perl under Windows"
 <p> This port fully supports MakeMaker (the set of modules that is used to build extensions to perl). Therefore, you should be able to build and install most extensions found in the <font SIZE="-1">CPAN</font> sites. See &#8220;Usage Hints for Perl on Windows&#8221; below for general hints about this.</p>
 <h3>Setting Up Perl on Windows</h3>
 <dl>
-<dt>Make</p>
-<dd> You need a &#8220;make&#8221; program to build the sources. If you are using Visual C<font SIZE="-2">++</font> or the Windows <font SIZE="-1">SDK</font> tools, you can use nmake supplied with Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK.</font> You may also use, for Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK,</font> dmake or gmake instead of nmake. dmake is open source software, but is not included with Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK.</font> Builds using gcc need dmake or gmake. nmake is not supported for gcc builds. Parallel building is only supported with dmake and gmake, not nmake. When using dmake it is recommended to use dmake 4.13 or newer for parallel building. Older dmakes, in parallel mode, have very high <font SIZE="-1">CPU</font> usage and pound the disk/filing system with duplicate I/O calls in an aggressive polling loop. </p>
+<dt>Make</dt>
+<dd> You need a &#8220;make&#8221; program to build the sources. If you are using Visual C<font SIZE="-2">++</font> or the Windows <font SIZE="-1">SDK</font> tools, you can use nmake supplied with Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK.</font> You may also use, for Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK,</font> dmake or gmake instead of nmake. dmake is open source software, but is not included with Visual C<font SIZE="-2">++</font> or Windows <font SIZE="-1">SDK.</font> Builds using gcc need dmake or gmake. nmake is not supported for gcc builds. Parallel building is only supported with dmake and gmake, not nmake. When using dmake it is recommended to use dmake 4.13 or newer for parallel building. Older dmakes, in parallel mode, have very high <font SIZE="-1">CPU</font> usage and pound the disk/filing system with duplicate I/O calls in an aggressive polling loop. </dd>
 <p> A port of dmake for Windows is available from: </p>
 <p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/dmake/">http://search.cpan.org/dist/dmake/</a>&gt; </p>
 <p> Fetch and install dmake somewhere on your path.</p>
-<dt>Command Shell</p>
-<dd> Use the default &#8220;cmd&#8221; shell that comes with Windows. Some versions of the popular 4DOS/NT shell have incompatibilities that may cause you trouble. If the build fails under that shell, try building again with the cmd shell. </p>
+<dt>Command Shell</dt>
+<dd> Use the default &#8220;cmd&#8221; shell that comes with Windows. Some versions of the popular 4DOS/NT shell have incompatibilities that may cause you trouble. If the build fails under that shell, try building again with the cmd shell. </dd>
 <p> Make sure the path to the build directory does not contain spaces. The build usually works in this circumstance, but some tests will fail.</p>
-<dt>Microsoft Visual C<font SIZE="-2">++</font></p>
-<dd> The nmake that comes with Visual C<font SIZE="-2">++</font> will suffice for building. Visual C requires that certain things be set up in the console before Visual C will sucessfully run. To make a console box be able to run the C compiler, you will need to beforehand, run the <tt>&quot;vcvars32.bat&quot;</tt> file to compile for x86-32 and for x86-64 <tt>&quot;vcvarsall.bat x64&quot;</tt> or <tt>&quot;vcvarsamd64.bat&quot;</tt>. On a typical install of a Microsoft C compiler product, these batch files will already be in your <tt>&quot;PATH&quot;</tt> environment variable so you may just type them without an absolute path into your console. If you need to find the absolute path to the batch file, it is usually found somewhere like C:\Program Files\Microsoft Visual Studio\VC98\Bin. With some newer Micrsoft C products (released after ~2004), the installer will put a shortcut in the start menu to launch a new console window with the console already set up for your target architecture (x86-32 or x86-64 or <font SIZE="-1">IA64</font>). With the newer compilers, you may also use the older batch files if you choose so.</p>
-<dt>Microsoft Visual C<font SIZE="-2">++</font> 2008-2019 Express/Community Edition</p>
-<dd> These free versions of Visual C<font SIZE="-2">++</font> 2008-2019 Professional contain the same compilers and linkers that ship with the full versions, and also contain everything necessary to build Perl, rather than requiring a separate download of the Windows <font SIZE="-1">SDK</font> like previous versions did. </p>
+<dt>Microsoft Visual C<font SIZE="-2">++</font></dt>
+<dd> The nmake that comes with Visual C<font SIZE="-2">++</font> will suffice for building. Visual C requires that certain things be set up in the console before Visual C will sucessfully run. To make a console box be able to run the C compiler, you will need to beforehand, run the <tt>&quot;vcvars32.bat&quot;</tt> file to compile for x86-32 and for x86-64 <tt>&quot;vcvarsall.bat x64&quot;</tt> or <tt>&quot;vcvarsamd64.bat&quot;</tt>. On a typical install of a Microsoft C compiler product, these batch files will already be in your <tt>&quot;PATH&quot;</tt> environment variable so you may just type them without an absolute path into your console. If you need to find the absolute path to the batch file, it is usually found somewhere like C:\Program Files\Microsoft Visual Studio\VC98\Bin. With some newer Micrsoft C products (released after ~2004), the installer will put a shortcut in the start menu to launch a new console window with the console already set up for your target architecture (x86-32 or x86-64 or <font SIZE="-1">IA64</font>). With the newer compilers, you may also use the older batch files if you choose so.</dd>
+<dt>Microsoft Visual C<font SIZE="-2">++</font> 2008-2019 Express/Community Edition</dt>
+<dd> These free versions of Visual C<font SIZE="-2">++</font> 2008-2019 Professional contain the same compilers and linkers that ship with the full versions, and also contain everything necessary to build Perl, rather than requiring a separate download of the Windows <font SIZE="-1">SDK</font> like previous versions did. </dd>
 <p> These packages can be downloaded by searching in the Download Center at &lt;<a rel="nofollow" href="http://www.microsoft.com/downloads/search.aspx?displaylang=en">http://www.microsoft.com/downloads/search.aspx?displaylang=en</a>&gt;. (Providing exact links to these packages has proven a pointless task because the links keep on changing so often.) </p>
 <p> Install Visual C<font SIZE="-2">++</font> 2008-2019 Express/Community, then setup your environment using, e.g. </p>
 <pre>
@@ -60,8 +60,8 @@ description: "perlwin32 – Perl under Windows"
 </pre>
 <p> (assuming the default installation location was chosen). </p>
 <p> Perl should now build using the win32/Makefile. You will need to edit that file to set <font SIZE="-1">CCTYPE</font> to one of <font SIZE="-1">MSVC90-MSVC142</font> first.</p>
-<dt>Microsoft Visual C<font SIZE="-2">++</font> 2005 Express Edition</p>
-<dd> This free version of Visual C<font SIZE="-2">++</font> 2005 Professional contains the same compiler and linker that ship with the full version, but doesn&#8217;t contain everything necessary to build Perl. </p>
+<dt>Microsoft Visual C<font SIZE="-2">++</font> 2005 Express Edition</dt>
+<dd> This free version of Visual C<font SIZE="-2">++</font> 2005 Professional contains the same compiler and linker that ship with the full version, but doesn&#8217;t contain everything necessary to build Perl. </dd>
 <p> You will also need to download the &#8220;Windows <font SIZE="-1">SDK&#8221;</font> (the &#8220;Core <font SIZE="-1">SDK&#8221;</font> and &#8220;<font SIZE="-1">MDAC SDK&#8221;</font> components are required) for more header files and libraries. </p>
 <p> These packages can both be downloaded by searching in the Download Center at &lt;<a rel="nofollow" href="http://www.microsoft.com/downloads/search.aspx?displaylang=en">http://www.microsoft.com/downloads/search.aspx?displaylang=en</a>&gt;. (Providing exact links to these packages has proven a pointless task because the links keep on changing so often.) </p>
 <p> Try to obtain the latest version of the Windows <font SIZE="-1">SDK.</font> Sometimes these packages contain a particular Windows <font SIZE="-1">OS</font> version in their name, but actually work on other <font SIZE="-1">OS</font> versions too. For example, the &#8220;Windows Server 2003 R2 Platform <font SIZE="-1">SDK&#8221;</font> also runs on Windows <font SIZE="-1">XP SP2</font> and Windows 2000. </p>
@@ -90,8 +90,8 @@ C :\Program Files\Microsoft Visual Studio 8\SDK2 .0\lib;
  CCTYPE = MSVC80
 </pre>
 <p> and to set <font SIZE="-1">CCHOME, CCINCDIR</font> and <font SIZE="-1">CCLIBDIR</font> as per the environment setup above.</p>
-<dt>Microsoft Visual C<font SIZE="-2">++</font> Toolkit 2003</p>
-<dd> This free toolkit contains the same compiler and linker that ship with Visual C<font SIZE="-2">++</font> .NET 2003 Professional, but doesn&#8217;t contain everything necessary to build Perl. </p>
+<dt>Microsoft Visual C<font SIZE="-2">++</font> Toolkit 2003</dt>
+<dd> This free toolkit contains the same compiler and linker that ship with Visual C<font SIZE="-2">++</font> .NET 2003 Professional, but doesn&#8217;t contain everything necessary to build Perl. </dd>
 <p> You will also need to download the &#8220;Platform <font SIZE="-1">SDK&#8221;</font> (the &#8220;Core <font SIZE="-1">SDK&#8221;</font> and &#8220;<font SIZE="-1">MDAC SDK&#8221;</font> components are required) for header files, libraries and rc.exe, and &#8220;.NET Framework <font SIZE="-1">SDK&#8221;</font> for more libraries and nmake.exe. Note that the latter (which also includes the free compiler and linker) requires the &#8220;.NET Framework Redistributable&#8221; to be installed first. This can be downloaded and installed separately, but is included in the &#8220;Visual C<font SIZE="-2">++</font> Toolkit 2003&#8221; anyway. </p>
 <p> These packages can all be downloaded by searching in the Download Center at &lt;<a rel="nofollow" href="http://www.microsoft.com/downloads/search.aspx?displaylang=en">http://www.microsoft.com/downloads/search.aspx?displaylang=en</a>&gt;. (Providing exact links to these packages has proven a pointless task because the links keep on changing so often.) </p>
 <p> Try to obtain the latest version of the Windows <font SIZE="-1">SDK.</font> Sometimes these packages contain a particular Windows <font SIZE="-1">OS</font> version in their name, but actually work on other <font SIZE="-1">OS</font> versions too. For example, the &#8220;Windows Server 2003 R2 Platform <font SIZE="-1">SDK&#8221;</font> also runs on Windows <font SIZE="-1">XP SP2</font> and Windows 2000. </p>
@@ -111,17 +111,15 @@ C :\Program Files\Microsoft Visual Studio.NET 2003\Vc7\lib</p>
 <p> (The PlatformSDKDir might need to be set differently depending on which version you are using. Earlier versions installed into &#8220;C:\Program Files\Microsoft <font SIZE="-1">SDK&#8221;,</font> while the latest versions install into version-specific locations such as &#8220;C:\Program Files\Microsoft Platform <font SIZE="-1">SDK</font> for Windows Server 2003 R2&#8221;.) </p>
 <p> Several required files will still be missing:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> cvtres.exe is required by link.exe when using a .res file. It is actually installed by the .NET Framework <font SIZE="-1">SDK,</font> but into a location such as the following: </p>
+<dt>&bull;</dt>
+<dd> cvtres.exe is required by link.exe when using a .res file. It is actually installed by the .NET Framework <font SIZE="-1">SDK,</font> but into a location such as the following: </dd>
 <pre>
  C:\WINDOWS\Microsoft.NET\Framework1.1.4322
 </pre>
 <p> Copy it from there to <tt>%PlatformSDKDir</tt>%\Bin</p>
-<dt>&bull;</p>
-<dd> lib.exe is normally used to build libraries, but link.exe with the /lib option also works, so change win32/config.vc to use it instead: </p>
+<dt>&bull;</dt>
+<dd> lib.exe is normally used to build libraries, but link.exe with the /lib option also works, so change win32/config.vc to use it instead: </dd>
 <p> Change the line reading: </p>
 <pre>
         ar='lib'
@@ -136,5 +134,6 @@ C :\Program Files\Microsoft Visual Studio.NET 2003\Vc7\lib</p>
         link /lib %*
 </pre>
 <p> for the benefit of any naughty C extension modules that you might want to build later which explicitly reference &#8220;lib&#8221; rather than taking their value from <tt>$Config</tt>{ar}.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> setargv.obj is required to build perlglob.exe (and perl.exe if the <font SIZE="-1">USE_SETARGV</font> option is enabled). The Platform <font SIZE="-1">SDK</font> supplies this object file in source form in <tt>%PlatformSDKDir</tt>%\src
+</dd></dl></dl></dl>

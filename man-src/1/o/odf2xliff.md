@@ -15,26 +15,26 @@ description: "odf2xliff – Convert OpenDocument (ODF) files to XLIFF localizati
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/odf2xliff.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/odf2xliff.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h/&#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;manpage</p>
-<dd> output a manpage based on the help</p>
-<dt>&#8211;progress</p>
-<dd> show progress as: dots, none, bar, names, verbose</p>
-<dt>&#8211;errorlevel</p>
-<dd> show errorlevel as: none, message, exception, traceback</p>
-<dt>-i/&#8211;input</p>
-<dd> read from INPUT in oth, oti, ots, odp, ods, odt, otf, otg, odi, odm, sxw, otp, otc, odc, ott, odf, odg formats</p>
-<dt>-x/&#8211;exclude</p>
-<dd> exclude names matching EXCLUDE from input paths</p>
-<dt>-o/&#8211;output</p>
-<dd> write to OUTPUT in xlf format</p>
-<dt>-S/&#8211;timestamp</p>
-<dd> skip conversion if the output file has newer timestamp</p>
-<dt>&#8211;engine</p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h/&#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;manpage</dt>
+<dd> output a manpage based on the help</dd>
+<dt>&#8211;progress</dt>
+<dd> show progress as: dots, none, bar, names, verbose</dd>
+<dt>&#8211;errorlevel</dt>
+<dd> show errorlevel as: none, message, exception, traceback</dd>
+<dt>-i/&#8211;input</dt>
+<dd> read from INPUT in oth, oti, ots, odp, ods, odt, otf, otg, odi, odm, sxw, otp, otc, odc, ott, odf, odg formats</dd>
+<dt>-x/&#8211;exclude</dt>
+<dd> exclude names matching EXCLUDE from input paths</dd>
+<dt>-o/&#8211;output</dt>
+<dd> write to OUTPUT in xlf format</dd>
+<dt>-S/&#8211;timestamp</dt>
+<dd> skip conversion if the output file has newer timestamp</dd>
+<dt>&#8211;engine</dt>
 <dd> Choose whether itools (&#8211;engine=itools) or the translate toolkit (&#8211;engine=toolkit)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>should be used as the engine to convert an ODF file to an XLIFF file. </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>should be used as the engine to convert an ODF file to an XLIFF file. </dd>
 </dl>
 <h2>Index</h2>

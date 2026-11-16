@@ -11,9 +11,9 @@ description: "gpspipe – tool to connect to gpsd and retrieve sentences"
 <p> gpspipe &#8211; tool to connect to gpsd and retrieve sentences </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gpspipe</code> [-h] [-d] [-l] [-o&nbsp;<wbr><i>filename</i>] [-n&nbsp;<wbr><i>count</i>] [-r] [-R] [-s&nbsp;<wbr><i>serial-device</i>] [-t] [-T&nbsp;<wbr><i>timestamp-format</i>] [-u] [-p] [-w] [-S] [-2] [-v] [-D&nbsp;<wbr><i>debug-level</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dl>
+<dt> <code>gpspipe</code> [-h] [-d] [-l] [-o&nbsp;<wbr><i>filename</i>] [-n&nbsp;<wbr><i>count</i>] [-r] [-R] [-s&nbsp;<wbr><i>serial-device</i>] [-t] [-T&nbsp;<wbr><i>timestamp-format</i>] [-u] [-p] [-w] [-S] [-2] [-v] [-D&nbsp;<wbr><i>debug-level</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>gpspipe is a tool to connect to gpsd and output the received sentences to stdout. This makes the program useful as a pipe from gpsd to another program or file. </p>
+<dd>gpspipe is a tool to connect to gpsd and output the received sentences to stdout. This makes the program useful as a pipe from gpsd to another program or file. </dd>
 <p> gpspipe does not require root privileges, and can be run concurrently with other tools connecting to the local gpsd without causing problems. </p>
 <p> The output will consist of one or both of the raw NMEA or native gpsd sentences. Each line can be optionally time stamped. There is also an option to exit gracefully after a given count of packets. </p>
 <p> Optionally a server, TCP/IP port number and remote device can be given. If omitted, gpspipe connects to localhost on the default port (2947) and watches all devices opened by gpsd. </p>

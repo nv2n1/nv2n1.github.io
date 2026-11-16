@@ -15,16 +15,16 @@ description: "isadump – examine ISA registers"
 <p>isadump is a small helper program to examine registers visible through the ISA bus. It is intended to probe any chip that lives on the ISA bus working with an address register and a data register (I2C-like access) or a flat range (of up to 256 bytes). </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Enable flat address space mode.</p>
-<dt><code>-y</code></p>
-<dd>Disable interactive mode. By default, isadump will wait for a confirmation from the user before messing with the ISA bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</p>
-<dt><code>-k V1,V2&#8230;</code></p>
-<dd>Specify a comma-separated list of bytes to send as the key sequence to enter the chip configuration mode. Most Super-I/O chips need this. Known key sequences are: 0x87,0x01,0x55,0x55 for ITE, 0x55 for SMSC, 0x87,0x87 for Winbond and VIA, none needed for National Semiconductor.</p>
-<dt><code>-W</code></p>
-<dd>Perform 16-bit reads.</p>
-<dt><code>-L</code></p>
-<dd>Perform 32-bit reads. </p>
+<dt><code>-f</code></dt>
+<dd>Enable flat address space mode.</dd>
+<dt><code>-y</code></dt>
+<dd>Disable interactive mode. By default, isadump will wait for a confirmation from the user before messing with the ISA bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</dd>
+<dt><code>-k V1,V2&#8230;</code></dt>
+<dd>Specify a comma-separated list of bytes to send as the key sequence to enter the chip configuration mode. Most Super-I/O chips need this. Known key sequences are: 0x87,0x01,0x55,0x55 for ITE, 0x55 for SMSC, 0x87,0x87 for Winbond and VIA, none needed for National Semiconductor.</dd>
+<dt><code>-W</code></dt>
+<dd>Perform 16-bit reads.</dd>
+<dt><code>-L</code></dt>
+<dd>Perform 32-bit reads. </dd>
 </dl>
 <h2>OPTIONS (I2C-like access mode)</h2>
 <p>At least two options must be provided to isadump. <i>addrreg</i> contains the ISA address of the address register for the chip to probe; <i>datareg</i> contains the address of the data register. Both addresses are integers between 0x0000 and 0x3FFF. Usually, if the chip&#8217;s base address is 0x0nn0, the address register is at 0x0nn5 and the data register is at 0x0nn6. The most common base address for hardware monitoring chips is 0x0290. </p>

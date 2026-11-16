@@ -23,18 +23,18 @@ description: "CREATE TEXT SEARCH PARSER – define a new text search parser"
 <p> Refer to in the documentation for further information.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the text search parser to be created. The name can be schema-qualified.</p>
-<dt><i>start_function</i></p>
-<dd>The name of the start function for the parser.</p>
-<dt><i>gettoken_function</i></p>
-<dd>The name of the get-next-token function for the parser.</p>
-<dt><i>end_function</i></p>
-<dd>The name of the end function for the parser.</p>
-<dt><i>lextypes_function</i></p>
-<dd>The name of the lextypes function for the parser (a function that returns information about the set of token types it produces).</p>
-<dt><i>headline_function</i></p>
-<dd>The name of the headline function for the parser (a function that summarizes a set of tokens).</dl>
+<dt><i>name</i></dt>
+<dd>The name of the text search parser to be created. The name can be schema-qualified.</dd>
+<dt><i>start_function</i></dt>
+<dd>The name of the start function for the parser.</dd>
+<dt><i>gettoken_function</i></dt>
+<dd>The name of the get-next-token function for the parser.</dd>
+<dt><i>end_function</i></dt>
+<dd>The name of the end function for the parser.</dd>
+<dt><i>lextypes_function</i></dt>
+<dd>The name of the lextypes function for the parser (a function that returns information about the set of token types it produces).</dd>
+<dt><i>headline_function</i></dt>
+<dd>The name of the headline function for the parser (a function that summarizes a set of tokens).</dd></dl>
 <p> The function names can be schema-qualified if necessary. Argument types are not given, since the argument list for each type of function is predetermined. All except the headline function are required. </p>
 <p> The arguments can appear in any order, not only the one shown above.</p>
 <h2>Compatibility</h2>

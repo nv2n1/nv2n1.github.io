@@ -17,20 +17,20 @@ description: "ppmtoxpm – convert a portable pixmap into an X11 pixmap"
 <p> For example, to convert the file &quot;dot&quot; (found in /usr/include/X11/bitmaps), from xbm to xpm one could specify</p>
 <dl>
 <dt>
-<dd> xbmtopbm dot | ppmtoxpm -name dot</dl>
+</dt><dd> xbmtopbm dot | ppmtoxpm -name dot</dd></dl>
 <p> or, with a rgb text file (in the local directory)</p>
 <dl>
 <dt>
-<dd> xbmtopbm dot | ppmtoxpm -name dot -rgb rgb.txt </p>
+</dt><dd> xbmtopbm dot | ppmtoxpm -name dot -rgb rgb.txt </dd>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-name=</code><i>xpmname</i></p>
-<dd> The <code>-name </code> option allows you to specify the prefix string which is printed in the resulting XPM output. If not specified, will default to the filename (without extension) of the &lt;ppmfile&gt; argument. If you do not specify <code>-name </code> or <i>ppmfile</i>, (i.e. your input is from Standad Input), the prefix string defaults to the string <code>noname</code>.</p>
-<dt><code>rgb=</code><i>rgb-textfile</i></p>
-<dd> The <code>-rgb </code> option allows you to specify an X11 rgb text file for the lookup of color name mnemonics. This rgb text file is typically the /usr/lib/X11/rgb.txt of the MIT X11 distribution, but any file using the same format may be used. When specified and a RGB value from the ppm input matches a RGB value from the &lt;rgb-textfile&gt;, then the corresponding color name mnemonic is printed in the XPM&#8217;s colormap. If you don&#8217;t specify <code>-rgb or if the RGB values don&#8217;t</code> match, then <code>ppmtoxpm produces the color specifications in the #RGB, #RRGGBB,</code> #RRRGGGBBB, or #RRRRGGGGBBBB hexadecimal format. </p>
-<dt><code>-alphamask=</code><i>pgmfile</i></p>
-<dd> This option names a PGM file to use as an alpha (transparency) mask. The file must contain an image the same dimensions as the input image. <code>ppmtoxpm</code> marks as transparent any pixel whose position in the alpha mask image is at most half white. </p>
+<dt><code>-name=</code><i>xpmname</i></dt>
+<dd> The <code>-name </code> option allows you to specify the prefix string which is printed in the resulting XPM output. If not specified, will default to the filename (without extension) of the &lt;ppmfile&gt; argument. If you do not specify <code>-name </code> or <i>ppmfile</i>, (i.e. your input is from Standad Input), the prefix string defaults to the string <code>noname</code>.</dd>
+<dt><code>rgb=</code><i>rgb-textfile</i></dt>
+<dd> The <code>-rgb </code> option allows you to specify an X11 rgb text file for the lookup of color name mnemonics. This rgb text file is typically the /usr/lib/X11/rgb.txt of the MIT X11 distribution, but any file using the same format may be used. When specified and a RGB value from the ppm input matches a RGB value from the &lt;rgb-textfile&gt;, then the corresponding color name mnemonic is printed in the XPM&#8217;s colormap. If you don&#8217;t specify <code>-rgb or if the RGB values don&#8217;t</code> match, then <code>ppmtoxpm produces the color specifications in the #RGB, #RRGGBB,</code> #RRRGGGBBB, or #RRRRGGGGBBBB hexadecimal format. </dd>
+<dt><code>-alphamask=</code><i>pgmfile</i></dt>
+<dd> This option names a PGM file to use as an alpha (transparency) mask. The file must contain an image the same dimensions as the input image. <code>ppmtoxpm</code> marks as transparent any pixel whose position in the alpha mask image is at most half white. </dd>
 <p> If you don&#8217;t specify <code>-alphamask</code>, <code>ppmtoxpm</code> makes all pixels in the output opaque. </p>
 <p> <code>ppmcolormask</code> is one way to generate an alpha mask file. You might also generate it by extracting transparency information from an XPM file with the <code>-alphaout</code> option to <code>xpmtoppm</code>. There are similar options on other Netpbm converters that convert from formats that include transparency information too. </p>
 </dl>

@@ -22,10 +22,10 @@ description: "QuantLib::NeumannBC – Neumann boundary condition (i.e., constant
 <p>Neumann boundary condition (i.e., constant derivative). </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The value passed must not be the value of the derivative. Instead, it must be comprehensive of the grid step between the first two points&#8211;i.e., it must be the difference between f[0] and f[1].</dl>
+<dd>The value passed must not be the value of the derivative. Instead, it must be comprehensive of the grid step between the first two points&#8211;i.e., it must be the difference between f[0] and f[1].</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>generalize to time-dependent conditions.</dl>
+<dd>generalize to time-dependent conditions.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void applyBeforeApplying (<code>TridiagonalOperator</code> &amp;) const [virtual]</h3>
 <p>This method modifies an operator $ L $ before it is applied to an array $ u $ so that $ v = Lu $ will satisfy the given condition. </p>

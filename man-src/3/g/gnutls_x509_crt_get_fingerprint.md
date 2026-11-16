@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_get_fingerprint – API function"
 <p> <code>int gnutls_x509_crt_get_fingerprint(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_digest_algorithm_t </code><i>algo</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>gnutls_digest_algorithm_t algo</p>
-<dd> is a digest algorithm</p>
-<dt>void * buf</p>
-<dd> a pointer to a structure to hold the fingerprint (may be null)</p>
-<dt>size_t * buf_size</p>
-<dd> initially holds the size of <i>buf</i></dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>gnutls_digest_algorithm_t algo</dt>
+<dd> is a digest algorithm</dd>
+<dt>void * buf</dt>
+<dd> a pointer to a structure to hold the fingerprint (may be null)</dd>
+<dt>size_t * buf_size</dt>
+<dd> initially holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will calculate and copy the certificate&#8217;s fingerprint in the provided buffer. The fingerprint is a hash of the DER-encoded data of the certificate. </p>
 <p> If the buffer is null then only the size will be filled.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crt_get_fingerprint – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

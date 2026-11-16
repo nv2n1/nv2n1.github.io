@@ -17,32 +17,32 @@ description: "gajim – a Jabber/XMPP client"
 <p> XMPP is the Extensible Messaging and Presence Protocol, a set of open technologies for instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware, content syndication, and generalized routing of XML data. For more information on the XMPP protocol see &lt;<a rel="nofollow" href="https://xmpp.org/about-xmpp/">https://xmpp.org/about-xmpp/</a>&gt;.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Show only critical errors</p>
-<dt><code>-v &#8211;verbose</code></p>
-<dd> Print xml stanzas and other debug information</p>
-<dt><code>-l &#8211;loglevel </code><i>subsystem=level Bq </i>, <i>subsystem=level Bq </i><i>&#8230;</i></p>
-<dd> Configure logging system. Subsystem can be <i>gajim.interface</i> <i>gajim.c.connection</i> <i>.nbxmpp.client_nb</i> etc. Level can be <i>DEBUG</i> <i>INFO</i> <i>WARNING</i> <i>ERROR</i> or <i>CRITICAL</i></p>
-<dt><code>-p &#8211;profile </code><i>name</i></p>
-<dd> Run using config.name in configuration directory</p>
-<dt><code>-c &#8211;config-path </code><i>directory</i></p>
-<dd> Where to look for configuration files</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Show only critical errors</dd>
+<dt><code>-v &#8211;verbose</code></dt>
+<dd> Print xml stanzas and other debug information</dd>
+<dt><code>-l &#8211;loglevel </code><i>subsystem=level Bq </i>, <i>subsystem=level Bq </i><i>&#8230;</i></dt>
+<dd> Configure logging system. Subsystem can be <i>gajim.interface</i> <i>gajim.c.connection</i> <i>.nbxmpp.client_nb</i> etc. Level can be <i>DEBUG</i> <i>INFO</i> <i>WARNING</i> <i>ERROR</i> or <i>CRITICAL</i></dd>
+<dt><code>-p &#8211;profile </code><i>name</i></dt>
+<dd> Run using config.name in configuration directory</dd>
+<dt><code>-c &#8211;config-path </code><i>directory</i></dt>
+<dd> Where to look for configuration files</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>$XDG_CACHE_DIR/gajim/cache.db</code></p>
-<dd> Cache database file of transports, caps, roster entry, and roster group.</p>
-<dt><code>$XDG_CACHE_DIR/gajim/avatars/</code></p>
-<dd> Cache directory of avatars.</p>
-<dt><code>$XDG_CACHE_DIR/gajim/vcards/</code></p>
-<dd> Cache directory of vCards (virtual cards).</p>
-<dt><code>$XDG_CONFIG_DIR/gajim/</code></p>
-<dd> The config-path used when [-<code>c</code> ] is not specified.</p>
-<dt><code>$XDG_DATA_DIR/gajim/certs/</code></p>
-<dd> Directory where certificates are stored.</p>
-<dt><code>$XDG_DATA_DIR/gajim/logs.db</code></p>
-<dd> The history database log file. For more information on database logs see &lt;<a rel="nofollow" href="https://trac.gajim.org/wiki/LogsDatabase">https://trac.gajim.org/wiki/LogsDatabase</a>&gt;.</dl>
+<dt><code>$XDG_CACHE_DIR/gajim/cache.db</code></dt>
+<dd> Cache database file of transports, caps, roster entry, and roster group.</dd>
+<dt><code>$XDG_CACHE_DIR/gajim/avatars/</code></dt>
+<dd> Cache directory of avatars.</dd>
+<dt><code>$XDG_CACHE_DIR/gajim/vcards/</code></dt>
+<dd> Cache directory of vCards (virtual cards).</dd>
+<dt><code>$XDG_CONFIG_DIR/gajim/</code></dt>
+<dd> The config-path used when [-<code>c</code> ] is not specified.</dd>
+<dt><code>$XDG_DATA_DIR/gajim/certs/</code></dt>
+<dd> Directory where certificates are stored.</dd>
+<dt><code>$XDG_DATA_DIR/gajim/logs.db</code></dt>
+<dd> The history database log file. For more information on database logs see &lt;<a rel="nofollow" href="https://trac.gajim.org/wiki/LogsDatabase">https://trac.gajim.org/wiki/LogsDatabase</a>&gt;.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit is written and maintained by An Yann Leboulanger , and An Denis Fomin , with contributions and patches merged from many individuals around the world. See files AUTHORS and THANKS for a complete list.</p>
 <h2>COPYRIGHT</h2>

@@ -31,8 +31,8 @@ chmod(file, newmode);</pre>
 <h2>Errors</h2>
 <p>The Fn setmode function may fail and set <i>errno</i> for any of the errors specified for the library routines <a href="/docs/linux/man/3-malloc/">malloc</a>(3) or <a href="/docs/linux/man/3-strtol/">strtol</a>(3). In addition, Fn setmode will fail and set <i>errno</i> to:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>The Fa mode argument does not represent a valid mode.</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>The Fa mode argument does not represent a valid mode.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-chmod/">chmod</a>(1), <a href="/docs/linux/man/2-stat/">stat</a>(2), <a href="/docs/linux/man/2-umask/">umask</a>(2), <a href="/docs/linux/man/3-malloc/">malloc</a>(3)</p>
 <h2>History</h2>

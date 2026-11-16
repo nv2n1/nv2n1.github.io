@@ -15,117 +15,117 @@ description: "docker-compose – Define and run multi-container applications wit
 <p> docker-compose allows you to define a multi-container application with all of its dependencies in a single file, then spin the application up in a single command. The application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code>, <code>&#8211;file</code> FILE</p>
-<dd> Specify an alternate compose file (default: docker-compose.yml)</p>
-<dt><code>-p</code>, <code>&#8211;project-name</code> NAME</p>
-<dd> Specify an alternate project name (default: directory name)</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Show more output</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</dl>
+<dt><code>-f</code>, <code>&#8211;file</code> FILE</dt>
+<dd> Specify an alternate compose file (default: docker-compose.yml)</dd>
+<dt><code>-p</code>, <code>&#8211;project-name</code> NAME</dt>
+<dd> Specify an alternate project name (default: directory name)</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Show more output</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd></dl>
 <h2>COMMANDS</h2>
 <h3>build</h3>
 <p> Build or rebuild services</p>
 <dl>
-<dt><code>&#8211;no-cache</code></p>
-<dd> Do not use cache when building the image.</dl>
+<dt><code>&#8211;no-cache</code></dt>
+<dd> Do not use cache when building the image.</dd></dl>
 <h3>help</h3>
 <p> Displays help and usage information on a command.</p>
 <h3>kill</h3>
 <p> Forces running containers to stop by sending a SIGKILL signal.</p>
 <dl>
-<dt><code>-s</code> SIGNAL</p>
-<dd> SIGNAL to send to the container. Default signal is SIGKILL.</dl>
+<dt><code>-s</code> SIGNAL</dt>
+<dd> SIGNAL to send to the container. Default signal is SIGKILL.</dd></dl>
 <h3>logs</h3>
 <p> View output from containers.</p>
 <dl>
-<dt><code>&#8211;no-color</code></p>
-<dd> Produce a monochrome output.</dl>
+<dt><code>&#8211;no-color</code></dt>
+<dd> Produce a monochrome output.</dd></dl>
 <h3>port</h3>
 <p> Print the public port for a port binding</p>
 <dl>
-<dt><code>&#8211;protocol=proto</code></p>
-<dd> Choose the 4th layer protocol, tcp or udp. Default is tcp.</p>
-<dt><code>&#8211;index=index</code></p>
-<dd> Index of the container if there are multiple instances of a service. Default is 1.</dl>
+<dt><code>&#8211;protocol=proto</code></dt>
+<dd> Choose the 4th layer protocol, tcp or udp. Default is tcp.</dd>
+<dt><code>&#8211;index=index</code></dt>
+<dd> Index of the container if there are multiple instances of a service. Default is 1.</dd></dl>
 <h3>ps</h3>
 <p> List containers.</p>
 <dl>
-<dt><code>-q</code></p>
-<dd> Only display IDs.</dl>
+<dt><code>-q</code></dt>
+<dd> Only display IDs.</dd></dl>
 <h3>pull</h3>
 <p> Pulls service images from Docker registry.</p>
 <dl>
-<dt><code>&#8211;allow-insecure-ssl</code></p>
-<dd> Allow insecure connections to the Docker registry.</dl>
+<dt><code>&#8211;allow-insecure-ssl</code></dt>
+<dd> Allow insecure connections to the Docker registry.</dd></dl>
 <h3>restart</h3>
 <p> Restart running containers.</p>
 <dl>
-<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></p>
-<dd> Specify a shutdown timeout in seconds. Default is 10.</dl>
+<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></dt>
+<dd> Specify a shutdown timeout in seconds. Default is 10.</dd></dl>
 <h3>rm</h3>
 <p> Remove stopped service containers</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Do not ask to confirm removal.</p>
-<dt><code>-v</code></p>
-<dd> Remove volumes associated with containers.</dl>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Do not ask to confirm removal.</dd>
+<dt><code>-v</code></dt>
+<dd> Remove volumes associated with containers.</dd></dl>
 <h3>run</h3>
 <p> Run a one-off command on a service. By default linked services will be started, unless they are already running.</p>
 <dl>
-<dt><code>&#8211;allow-insecure-ssl</code></p>
-<dd> Allow insecure connections to the Docker registry.</p>
-<dt><code>-d</code></p>
-<dd> Detached mode. Run container in the background, print new container name.</p>
-<dt><code>&#8211;entrypoint</code> <i>CMD</i></p>
-<dd> Override the entrypoint of the image with <i>CMD</i>.</p>
-<dt><code>-e</code> KEY=VAL</p>
-<dd> Set an environment variable. Can be used multiple times.</p>
-<dt><code>-u</code>, <code>&#8211;user=</code><i>USER</i></p>
-<dd> Run as a specific <i>USER</i>, a username or uid.</p>
-<dt><code>&#8211;no-deps</code></p>
-<dd> Do not start linked services.</p>
-<dt><code>&#8211;rm</code></p>
-<dd> Remove container after run. This option is ignored in the detached mode.</p>
-<dt><code>&#8211;service-ports</code></p>
-<dd> Run command with the service&#8217;s ports enabled and mapped to the host.</p>
-<dt><code>-T</code></p>
-<dd> Disable pseudo tty allocation. By default a tty is allocated.</dl>
+<dt><code>&#8211;allow-insecure-ssl</code></dt>
+<dd> Allow insecure connections to the Docker registry.</dd>
+<dt><code>-d</code></dt>
+<dd> Detached mode. Run container in the background, print new container name.</dd>
+<dt><code>&#8211;entrypoint</code> <i>CMD</i></dt>
+<dd> Override the entrypoint of the image with <i>CMD</i>.</dd>
+<dt><code>-e</code> KEY=VAL</dt>
+<dd> Set an environment variable. Can be used multiple times.</dd>
+<dt><code>-u</code>, <code>&#8211;user=</code><i>USER</i></dt>
+<dd> Run as a specific <i>USER</i>, a username or uid.</dd>
+<dt><code>&#8211;no-deps</code></dt>
+<dd> Do not start linked services.</dd>
+<dt><code>&#8211;rm</code></dt>
+<dd> Remove container after run. This option is ignored in the detached mode.</dd>
+<dt><code>&#8211;service-ports</code></dt>
+<dd> Run command with the service&#8217;s ports enabled and mapped to the host.</dd>
+<dt><code>-T</code></dt>
+<dd> Disable pseudo tty allocation. By default a tty is allocated.</dd></dl>
 <h3>scale</h3>
 <p> Set number of containers to run for a service. Numbers are specified in the form <code>service=num</code> as arguments. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker-compose scale web=2 worker=3
-</dl>
+</dd></dl>
 </pre>
 <h3>start</h3>
 <p> Start existing containers.</p>
 <h3>stop</h3>
 <p> Stop running containers without removing them.</p>
 <dl>
-<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></p>
-<dd> Specify a shutdown timeout in seconds. Default is 10.</dl>
+<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></dt>
+<dd> Specify a shutdown timeout in seconds. Default is 10.</dd></dl>
 <h3>up</h3>
 <p> Build, (re)create, start and attach to containers. If there are existing containers for a service, `docker-compose up` will stop and recreate them (preserving mounted volumes with volumes-from), so that changes in `docker-compose.yml` are picked up. If you do not want existing containers to be recreated, `docker-compose up &#8211;no-recreate` will re-use existing containers.</p>
 <dl>
-<dt><code>&#8211;allow-insecure-ssl</code></p>
-<dd> Allow insecure connections to the Docker registry.</p>
-<dt><code>-d</code></p>
-<dd> Detached mode. Run container in the background, print new container name.</p>
-<dt><code>&#8211;no-color</code></p>
-<dd> Produce a monochrome output.</p>
-<dt><code>&#8211;no-deps</code></p>
-<dd> Do not start linked services.</p>
-<dt><code>&#8211;x-smart-recreate</code></p>
-<dd> Only recreate containers whose configuration or image needs to be updated. This feature is experimental.</p>
-<dt><code>&#8211;no-recreate</code></p>
-<dd> If containers already exist, do not recreate them.</p>
-<dt><code>&#8211;no-build</code></p>
-<dd> Do not build an image even if it is missing.</p>
-<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></p>
-<dd> Specify a shutdown timeout in seconds. Default is 10.</dl>
+<dt><code>&#8211;allow-insecure-ssl</code></dt>
+<dd> Allow insecure connections to the Docker registry.</dd>
+<dt><code>-d</code></dt>
+<dd> Detached mode. Run container in the background, print new container name.</dd>
+<dt><code>&#8211;no-color</code></dt>
+<dd> Produce a monochrome output.</dd>
+<dt><code>&#8211;no-deps</code></dt>
+<dd> Do not start linked services.</dd>
+<dt><code>&#8211;x-smart-recreate</code></dt>
+<dd> Only recreate containers whose configuration or image needs to be updated. This feature is experimental.</dd>
+<dt><code>&#8211;no-recreate</code></dt>
+<dd> If containers already exist, do not recreate them.</dd>
+<dt><code>&#8211;no-build</code></dt>
+<dd> Do not build an image even if it is missing.</dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code> <i>TIMEOUT</i></dt>
+<dd> Specify a shutdown timeout in seconds. Default is 10.</dd></dl>
 <h3>migrate-to-labels</h3>
 <p> Recreate containers to add labels. If docker-compose detects containers that were created without labels, it will refuse to run so that you don&#8217;t end up with two sets of them.</p>
 <h2>ENVIRONMENTAL VARIABLES</h2>

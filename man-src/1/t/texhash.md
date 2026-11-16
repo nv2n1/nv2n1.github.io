@@ -17,10 +17,10 @@ description: "mktexlsr – create ls-R databases"
 <h2>OPTIONS</h2>
 <p> <code>mktexlsr</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to: tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k)">https://lists.tug.org/tex-k)</a><br />
  TeX Live home page: <a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a> </p>

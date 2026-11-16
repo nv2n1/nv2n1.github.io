@@ -16,27 +16,27 @@ description: "bcmxcp_usb – Experimental driver for UPSes supporting the BCM/XC
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5). </p>
 <p> <code>shutdown_delay=</code><i>delay</i></p>
 <dl>
-<dd>The number of seconds that the UPS should wait between receiving the shutdown command and actually shutting off.</dl>
+<dd>The number of seconds that the UPS should wait between receiving the shutdown command and actually shutting off.</dd></dl>
 <h2>Default Values For The Extra Arguments</h2>
 <p><code>shutdown_delay =</code><i>120</i></p>
 <h2>Instant Commands</h2>
 <p>This driver supports the following Instant Commands: </p>
 <p> <code>shutdown.return</code></p>
 <dl>
-<dd>Turn off the load and return when power is back.</dl>
+<dd>Turn off the load and return when power is back.</dd></dl>
 <p> <code>shutdown.stayoff</code></p>
 <dl>
-<dd>Turn off the load and remain off.</dl>
+<dd>Turn off the load and remain off.</dd></dl>
 <p> <code>test.battery.start</code></p>
 <dl>
-<dd>Start a battery test.</dl>
+<dd>Start a battery test.</dd></dl>
 <h2>Todo List</h2>
 <p><code>Report UPS alarm status</code></p>
 <dl>
-<dd>BCM/XCP supports reporting a wide range of UPS alarm conditions.</dl>
+<dd>BCM/XCP supports reporting a wide range of UPS alarm conditions.</dd></dl>
 <p> <code>Report UPS statistics informations</code></p>
 <dl>
-<dd>BCM/XCP supports reporting of UPS statistics data.</dl>
+<dd>BCM/XCP supports reporting of UPS statistics data.</dd></dl>
 <h2>Experimental Driver</h2>
 <p>This driver has been tagged experimental, even if it has been reported to be stable. Thus it is not suitable for production systems and it is not built by default. This is mainly due to the fact that it is a new driver.</p>
 <h2>Installation</h2>
@@ -49,7 +49,7 @@ description: "bcmxcp_usb – Experimental driver for UPSes supporting the BCM/XC
 <pre>[pw3105]
  driver = bcmxcp_usb
  port = auto</pre>
-</dl>
+</dd></dl>
 <h2>Known Issues And Bugs</h2>
 <h3>Got EPERM: Operation not permitted upon driver startup</h3>
 <p>You have forgotten to install the hotplug files, as explained in the INSTALLATION section above. Don&#8217;t forget to restart hotplug so that it applies these changes.</p>

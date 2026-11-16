@@ -12,10 +12,8 @@ description: "sctp_getpaddrs – Returns all peer addresses in an association."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_getpaddrs(int sd, sctp_assoc_t assoc_id,
                    struct sockaddr **addrs);
-
 void sctp_freepaddrs(struct sockaddr *addrs);</code></pre>
 <h2>Description</h2>
 <p><code>sctp_getpaddrs</code> returns all peer addresses in an association. On return, <i>addrs</i> will point to a dynamically allocated packed array of <code>sockaddr</code> structures of the appropriate type for each address. The caller should use <code>sctp_freepaddrs</code> to free the memory. Note that the in/out parameter <i>addrs</i> must not be NULL. </p>

@@ -11,15 +11,10 @@ std::partial_sum - std::partial_sum
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt; class InputIt, class OutputIt &gt;                              (1)
-
 OutputIt partial_sum( InputIt first, InputIt last, OutputIt d_first );
-
 template&lt; class InputIt, class OutputIt, class BinaryOperation &gt;
-
 OutputIt partial_sum( InputIt first, InputIt last, OutputIt d_first,   (2)
-
 BinaryOperation op );</code></pre> 
 Computes the partial sums of the elements in the subranges of the range [first, last) and writes them to the range beginning at d_first. The first version uses operator+ to sum up the elements, the second version uses the given binary function op 
 , both applying std::move to their operands on the left hand side 
@@ -111,16 +106,11 @@ Exactly (last - first) - 1 applications of the binary operation
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;numeric&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2}; // or std::vector&lt;int&gt;v(10, 2);
     std::cout &lt;&lt; &quot;The first 10 even numbers are: &quot;;

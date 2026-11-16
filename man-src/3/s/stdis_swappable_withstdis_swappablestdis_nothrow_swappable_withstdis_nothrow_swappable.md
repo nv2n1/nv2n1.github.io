@@ -10,25 +10,17 @@ description: "std::is_swappable_with,std::is_swappable,std::is_nothrow_swappable
 <p>std::is_swappable_with,std::is_swappable,std::is_nothrow_swappable_with,std::is_nothrow_swappable &#8211; std::is_swappable_with,std::is_swappable,std::is_nothrow_swappable_with,std::is_nothrow_swappable</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, class U&gt;
     (1)(since C++ 17)
-
         struct is_swappable_with;
-
 template &lt;class T&gt;
 (2)(since C++ 17)
-
     struct is_swappable;
-
 template &lt;class T, class U&gt;
 (3)(since C++ 17)
-
     struct is_nothrow_swappable_with;
-
 template &lt;class T&gt;
 (4)(since C++ 17)
-
     struct is_nothrow_swappable;</code></pre>
 <p>1) If the expressions swap(std::declval&lt;T&gt;(), std::declval&lt;U&gt;()) and swap(std::declval&lt;U&gt;(), std::declval&lt;T&gt;()) are both well-formed in unevaluated context after using std::swap; (see Swappable), provides the member constant value equal true. Otherwise, value is false. Access_checks are performed as if from a context unrelated to either type.<br />
 2) If T is not a referenceable type (i.e., possibly cv-qualified void or a function type with a cv-qualifier-seq or a ref-qualifier), provides a member constant value equal to false. Otherwise, provides a member constant value equal to std::is_swappable_with&lt;T&amp;, T&amp;&gt;::value<br />
@@ -38,19 +30,12 @@ T and U shall each be a complete type, (possibly cv-qualified) void, or an array
 If an instantiation of a template above depends, directly or indirectly, on an incomplete type, and that instantiation could yield a different result if that type were hypothetically completed, the behavior is undefined.<br />
 Helper variable templates </p>
 <pre><code>template &lt;class T, class U&gt;                                                                  (since C++17)
-
 inline constexpr bool is_swappable_with_v = is_swappable_with&lt;T, U&gt;::value;
-
 template &lt;class T&gt;                                                                           (since C++17)
-
 inline constexpr bool is_swappable_v = is_swappable&lt;T&gt;::value;
-
 template &lt;class T, class U&gt;                                                                  (since C++17)
-
 inline constexpr bool is_nothrow_swappable_with_v = is_nothrow_swappable_with&lt;T, U&gt;::value;
-
 template &lt;class T&gt;                                                                           (since C++17)
-
 inline constexpr bool is_nothrow_swappable_v = is_nothrow_swappable&lt;T&gt;::value;
 </code></pre>
 <p>Inherited from std::integral_constant </p>

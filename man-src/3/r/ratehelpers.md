@@ -11,13 +11,9 @@ description: "ql/termstructures/yield/ratehelpers.hpp – deposit, FRA, futures,
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/bootstraphelper.hpp&gt;
-
 #include &lt;ql/instruments/vanillaswap.hpp&gt;
-
 #include &lt;ql/instruments/bmaswap.hpp&gt;
-
 #include &lt;ql/time/calendar.hpp&gt;
-
 #include &lt;ql/time/daycounter.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>FuturesRateHelper</code><br />

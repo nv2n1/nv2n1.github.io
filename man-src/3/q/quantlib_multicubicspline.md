@@ -28,18 +28,18 @@ description: "QuantLib::MultiCubicSpline – N-dimensional cubic spline interpol
 <p>N-dimensional cubic spline interpolation between discrete points. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>interpolated values are checked against the original function.</dl>
+<dd>interpolated values are checked against the original function.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>allow extrapolation as for the other interpolations</p>
-<dt>*</p>
-<dd>investigate if and how to implement Hyman filters and different boundary conditions</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>allow extrapolation as for the other interpolations</dd>
+<dt>*</dt>
+<dd>investigate if and how to implement Hyman filters and different boundary conditions</dd></dl>
 </dl>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>cannot interpolate at the grid points on the boundary surface of the N-dimensional region</dl>
+<dd>cannot interpolate at the grid points on the boundary surface of the N-dimensional region</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

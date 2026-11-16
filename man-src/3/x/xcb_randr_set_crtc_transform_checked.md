@@ -10,27 +10,25 @@ description: "xcb_randr_set_crtc_transform –"
 <p>xcb_randr_set_crtc_transform &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/randr.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_randr_set_crtc_transform(xcb_connection_t *conn, xcb_randr_crtc_t crtc, xcb_render_transform_t transform, uint16_t filter_len, const char *filter_name, uint32_t filter_params_len, const xcb_render_fixed_t *filter_params);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>crtc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>transform</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>filter_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>filter_name</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>filter_params_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>filter_params</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>crtc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>transform</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>filter_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>filter_name</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>filter_params_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>filter_params</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

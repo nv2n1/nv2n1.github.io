@@ -14,14 +14,14 @@ description: "nproc – print the number of processing units available"
 <h2>DESCRIPTION</h2>
 <p> Print the number of processing units available to the current process, which may be less than the number of online processors</p>
 <dl>
-<dt><code>&#8211;all</code></p>
-<dd> print the number of installed processors</p>
-<dt><code>&#8211;ignore</code>=<i>,N/</i></p>
-<dd> if possible, exclude N processing units</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;all</code></dt>
+<dd> print the number of installed processors</dd>
+<dt><code>&#8211;ignore</code>=<i>,N/</i></dt>
+<dd> if possible, exclude N processing units</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Giuseppe Scrivano.</p>
 <h2>REPORTING BUGS</h2>

@@ -24,11 +24,10 @@ CALL MAPTRN (RLAT, RLON, UVAL, VVAL)
 <h2>Description</h2>
 
 <dl><dt>RLAT and RLON
-<dd>(input expressions, of type REAL) are the latitude and longitude, respectively, of a point on the globe. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.
-<dt>UVAL and VVAL
-<dd>(output variables, of type REAL) define the point (UVAL,VVAL) that is the projection in the u/v plane of (RLAT,RLON). The units of UVAL and VVAL depend on the projection. 
-
- If the point is not projectable, UVAL is returned equal to 1.E12. If the point is projectable, but outside the boundary of the map (as defined by the last call to MAPSET and by the value of the parameter 'EL'), the routine MAPTRN, unlike MAPTRA, still returns its u and v coordinates.</dl>
+</dt><dd>(input expressions, of type REAL) are the latitude and longitude, respectively, of a point on the globe. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.
+</dd><dt>UVAL and VVAL
+</dt><dd>(output variables, of type REAL) define the point (UVAL,VVAL) that is the projection in the u/v plane of (RLAT,RLON). The units of UVAL and VVAL depend on the projection. 
+ If the point is not projectable, UVAL is returned equal to 1.E12. If the point is projectable, but outside the boundary of the map (as defined by the last call to MAPSET and by the value of the parameter 'EL'), the routine MAPTRN, unlike MAPTRA, still returns its u and v coordinates.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

@@ -18,16 +18,16 @@ description: "slaqsy.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAQSY equilibrates a symmetric matrix A using the scaling factors
  in the vector S.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -85,7 +85,7 @@ description: "slaqsy.f –"
 <p> <code>Internal Parameters: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   THRESH is a threshold value used to decide if scaling should be done
   based on the ratio of the scaling factors.  If SCOND &lt; THRESH,
@@ -94,18 +94,18 @@ description: "slaqsy.f –"
   be done based on the absolute size of the largest matrix element.
   If AMAX &gt; LARGE or AMAX &lt; SMALL, scaling is done.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 134 of file slaqsy.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

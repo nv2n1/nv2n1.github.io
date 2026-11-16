@@ -17,7 +17,7 @@ lpass[--version, -v | --help, -h] lpass&lt;subcommand&gt;[&lt;args&gt;]
 <p> <i>lpass</i> is a simple command line interface to LastPass. It is comprised of several subcommands: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 lpass login[--trust][--plaintext - key[--force, -f]][--color = auto | never | always] USERNAME
         lpass logout[--force, -f][--color = auto | never | always] lpass passwd
@@ -31,7 +31,7 @@ lpass login[--trust][--plaintext - key[--force, -f]][--color = auto | never | al
                             lpass share create SHARE
                                 lpass share rm SHARE
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Synchronization</h3>
 <p> The <i>&#8211;sync</i> options control when the current operation involves a synchronization with the server. If <i>now</i> is set, and the command makes a change, the change is synchronized before the command exits. If <i>now</i> is set, and the command displays a value, the local cache is synchronized before the value is shown. If <i>now</i> is set, and the command is otherwise successful, but synchronization fails, the command will return an error. If <i>auto</i> is set, and the command makes a change, the change is synchronized to the server in the background. If <i>auto</i> is set, and the command displays a value, the local cache is synchronized before the value is shown only if the local cache is more than 5 seconds (or <i>LPASS_AUTO_SYNC_TIME</i> seconds, if set) old. If <i>no</i> is set, the command will not interact with the server, unless there is a current upload queue being processed. Any local changes that are not synchronized with the server will exist in a queue of timestamped requests which will be synchronized on the next occurring synchronization. </p>
 <p> The <i>sync</i> command forces a synchronization of the local cache with the LastPass servers, and does not exit until the local cache is synchronized or until an error occurs. Alternatively, if <i>&#8211;background</i> is specified, the synchronization occurs in a daemonized process.</p>
@@ -42,7 +42,7 @@ lpass login[--trust][--plaintext - key[--force, -f]][--color = auto | never | al
 <p> The program used for inputting passwords may also be configured by setting the <i>LPASS_ASKPASS` environment variable. &#8216;LPASS_ASKPASS</i> is expected to be a binary that produces a prompt using its first command-line argument, and outputs the entered password to standard out. ssh-askpass implements this protocol, as does the following shell script: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #!/bin/bash
 echo -n &quot;$*: &quot; &gt;/dev/stderr
@@ -51,7 +51,7 @@ read answer
 stty echo
 echo $answer
 </pre>
-</dl>
+</dd></dl>
 <h3>Entry Specification</h3>
 <p> Commands that take a <i>UNIQUENAME</i> will fail if the provided name is used multiple times, and return an error. Commands may alternatively take a <i>UNIQUEID</i>, which will be the integer <i>ID</i> provided by LastPass for identifying entries uniquely. Commands that take either a <i>NAME</i> or a <i>UNIQUEID</i> will create a new entry if a <i>NAME</i> is specified and otherwise overwrite an existing entry if <i>UNIQUEID</i> is specified.</p>
 <h3>Logging In</h3>
@@ -75,34 +75,34 @@ echo $answer
 <p> All configuration may be specified via environment variables. Alternatively, a set of environment variable overrides may be specified in <i>~/.lpass/env</i> in the form of: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 VARIABLE1=VALUE1
 VARIABLE2=VALUE2
 ...
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used for configuration as described in the section above: </p>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_HOME</i></dl>
+</dt><dd> &bull; <i>LPASS_HOME</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_AUTO_SYNC_TIME</i></dl>
+</dt><dd> &bull; <i>LPASS_AUTO_SYNC_TIME</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_AGENT_TIMEOUT</i></dl>
+</dt><dd> &bull; <i>LPASS_AGENT_TIMEOUT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_AGENT_DISABLE</i></dl>
+</dt><dd> &bull; <i>LPASS_AGENT_DISABLE</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_DISABLE_PINENTRY</i></dl>
+</dt><dd> &bull; <i>LPASS_DISABLE_PINENTRY</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_ASKPASS</i></dl>
+</dt><dd> &bull; <i>LPASS_ASKPASS</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>LPASS_CLIPBOARD_COMMAND</i></dl>
+</dt><dd> &bull; <i>LPASS_CLIPBOARD_COMMAND</i></dd></dl>
 <h2>Index</h2>

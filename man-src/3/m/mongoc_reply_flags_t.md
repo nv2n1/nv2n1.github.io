@@ -21,19 +21,19 @@ description: "mongoc_reply_flags_t – Flags for deletion operations"
 <p>These flags correspond to the wire protocol. They may be bitwise or&#8217;d together. </p>
 <h2>Flag Values</h2>
 <dl COMPACT>
-<dt><code>MONGOC_REPLY_NONE</code></p>
-<dd>No flags set.</dl>
+<dt><code>MONGOC_REPLY_NONE</code></dt>
+<dd>No flags set.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_REPLY_CURSOR_NOT_FOUND</code></p>
-<dd>No matching cursor was found on the server.</dl>
+<dt><code>MONGOC_REPLY_CURSOR_NOT_FOUND</code></dt>
+<dd>No matching cursor was found on the server.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_REPLY_QUERY_FAILURE</code></p>
-<dd>The query failed or was invalid. Error document has been provided.</dl>
+<dt><code>MONGOC_REPLY_QUERY_FAILURE</code></dt>
+<dd>The query failed or was invalid. Error document has been provided.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_REPLY_SHARD_CONFIG_STALE</code></p>
-<dd>Shard config is stale.</dl>
+<dt><code>MONGOC_REPLY_SHARD_CONFIG_STALE</code></dt>
+<dd>Shard config is stale.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_REPLY_AWAIT_CAPABLE</code></p>
-<dd>If the returned cursor is capable of MONGOC_QUERY_AWAIT_DATA.</dl>
+<dt><code>MONGOC_REPLY_AWAIT_CAPABLE</code></dt>
+<dd>If the returned cursor is capable of MONGOC_QUERY_AWAIT_DATA.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

@@ -13,8 +13,8 @@ description: "gcreate_seg (Create segment) – creates a GKS segment."
 <p> void gcreate_seg(Gint seg_name);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>seg_name</p>
-<dd>(Input) &#8211; Specifies the segment identifier that will be used in calls to subsequent segment functions applying to this segment. There can be a maximum of 100 segments in a given job step. Legal values for seg_name are integers between 0 and 99 inclusive.</dl>
+<dt>seg_name</dt>
+<dd>(Input) &#8211; Specifies the segment identifier that will be used in calls to subsequent segment functions applying to this segment. There can be a maximum of 100 segments in a given job step. Legal values for seg_name are integers between 0 and 99 inclusive.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

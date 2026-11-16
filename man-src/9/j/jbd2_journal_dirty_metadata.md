@@ -14,10 +14,10 @@ description: "jbd2_journal_dirty_metadata – mark a buffer as containing dirty 
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>transaction to add buffer to.</dl>
+</dd><dd>transaction to add buffer to.</dd></dl>
 <p> <i>bh</i></p>
 <dl>
-<dd>buffer to mark</dl>
+<dd>buffer to mark</dd></dl>
 <h2>Description</h2>
 <p>mark dirty metadata which needs to be journaled as part of the current transaction. </p>
 <p> The buffer must have previously had <code>jbd2_journal_get_write_access</code> called so that it has a valid journal_head attached to the buffer head. </p>
@@ -27,8 +27,8 @@ description: "jbd2_journal_dirty_metadata – mark a buffer as containing dirty 
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

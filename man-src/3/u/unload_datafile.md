@@ -10,7 +10,6 @@ description: "unload_datafile – Frees all the objects in a datafile. Allegro g
 <p>unload_datafile &#8211; Frees all the objects in a datafile. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void unload_datafile(DATAFILE *dat);</code></pre>
 <h2>Description</h2>
 <p>Frees all the objects in a datafile. Use this to avoid memory leaks in your program. </p>

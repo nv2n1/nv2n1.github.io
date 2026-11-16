@@ -14,11 +14,11 @@ mongoc_stream_tls_do_handshake (mongoc_stream_t *stream,
  int32_t timeout_msec);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_tls_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_tls_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>timeout_msec</code></p>
-<dd>A timeout, in milliseconds, for the handshake.</dl>
+<dt><code>timeout_msec</code></dt>
+<dd>A timeout, in milliseconds, for the handshake.</dd></dl>
 <p> This function shall perform an SSL handshake on the underlying stream. </p>
 <h2>Returns</h2>
 <p>The <code><a href="/docs/linux/man/3-mongoc_stream_tls_do_handshake/">mongoc_stream_tls_do_handshake</a>(3)</code> function returns true if the handshake was successful. If false, errno or openssl errors may be set. </p>

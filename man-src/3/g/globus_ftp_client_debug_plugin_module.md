@@ -27,19 +27,19 @@ description: "Debugging Plugin –"
 <p> Existing FTP client handles and handle attributes will not be affected by destroying a plugin associated with them, as a local copy of the plugin is made upon handle initialization. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> A pointer to a GridFTP debugging plugin, previously initialized by calling <code>globus_ftp_client_debug_plugin_init()</code></dl>
+<dd><i>plugin</i> A pointer to a GridFTP debugging plugin, previously initialized by calling <code>globus_ftp_client_debug_plugin_init()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns an error if</p>
+<dd>This function returns an error if</dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>plugin is null</p>
-<dt>&bull;</p>
-<dd>plugin is not a debugging plugin</dl>
+<dt>&bull;</dt>
+<dd>plugin is null</dd>
+<dt>&bull;</dt>
+<dd>plugin is not a debugging plugin</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_ftp_client_debug_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+<dd><code>globus_ftp_client_debug_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_debug_plugin_init (<code>globus_ftp_client_plugin_t</code> *plugin, FILE *stream, const char *text)</h3>
 <p>Initialize an instance of the GridFTP debugging plugin </p>
 <p> This function will initialize the debugging plugin-specific instance data for this plugin, and will make the plugin usable for ftp client handle attribute and handle creation. </p>
@@ -47,17 +47,17 @@ description: "Debugging Plugin –"
 <dl COMPACT>
 <dd><i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br />
  <i>stream</i><br />
- <i>text</i></dl>
+ <i>text</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns an error if</p>
+<dd>This function returns an error if</dd>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>plugin is null</dl>
+<dt>&bull;</dt>
+<dd>plugin is null</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_ftp_client_debug_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+<dd><code>globus_ftp_client_debug_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_ftp_client from the source code.</p>

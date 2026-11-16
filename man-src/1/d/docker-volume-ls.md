@@ -15,17 +15,15 @@ description: "docker-volume-ls – List volumes"
 <p> Lists all the volumes Docker manages. You can filter using the -f or &#8211;filter flag. The filtering format is a key=value pair. To specify more than one filter, pass multiple flags (for example, &#8211;filter &quot;foo=bar&quot; &#8211;filter &quot;bif=baz&quot;) </p>
 <p> The currently supported filters are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> dangling (boolean &#8211; true or false, 1 or 0)</p>
-<dt>&bull;</p>
-<dd> driver (a volume driver&#8217;s name)</p>
-<dt>&bull;</p>
-<dd> label (label=&lt;key&gt; or label=&lt;key&gt;=&lt;value&gt;)</p>
-<dt>&bull;</p>
-<dd> name (a volume&#8217;s name) </p>
+<dt>&bull;</dt>
+<dd> dangling (boolean &#8211; true or false, 1 or 0)</dd>
+<dt>&bull;</dt>
+<dd> driver (a volume driver&#8217;s name)</dd>
+<dt>&bull;</dt>
+<dd> label (label=&lt;key&gt; or label=&lt;key&gt;=&lt;value&gt;)</dd>
+<dt>&bull;</dt>
+<dd> name (a volume&#8217;s name) </dd>
 </dl>
 </dl>
 <h2>OPTIONS</h2>

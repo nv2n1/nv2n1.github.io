@@ -22,13 +22,13 @@ description: "Object Callback Functions – Functions that add and remove callba
 <p>Add a callback function to an object. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Move this next code example and most of the documentation for this next function into the group documentation.</dl>
+<dd>Move this next code example and most of the documentation for this next function into the group documentation.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> Object to attach a callback to<br />
  <i>type</i> The type of event that will trigger the callback<br />
  <i>func</i> The function to be called when the event is triggered<br />
- <i>data</i> The data pointer to be passed to func</dl>
+ <i>data</i> The data pointer to be passed to func</dd></dl>
 <p> This function adds a function callback to an object when the event of type type occurs on object obj. The function is func. </p>
 <p> In the event of a memory allocation error during addition of the callback to the object, <code>evas_alloc_error()</code> should be used to determine the nature of the error, if any, and the program should sensibly try and recover. </p>
 <p> The function will be passed the pointer data when it is called. A callback function must look like this: </p>
@@ -89,10 +89,10 @@ description: "Object Callback Functions – Functions that add and remove callba
 <dl COMPACT>
 <dd><i>obj</i> Object to remove a callback from<br />
  <i>type</i> The type of event that was triggering the callback<br />
- <i>func</i> The function that was to be called when the event was triggered</dl>
+ <i>func</i> The function that was to be called when the event was triggered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer that was to be passed to the callback</dl>
+<dd>The data pointer that was to be passed to the callback</dd></dl>
 <p> This function removes the most recently added callback from the object obj which was triggered by the event type type and was calling the function func when triggered. If the removal is successful it will also return the data pointer that was passed to <code>evas_object_event_callback_add()</code> when the callback was added to the object. If not successful NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_Object *object;
@@ -107,10 +107,10 @@ description: "Object Callback Functions – Functions that add and remove callba
 <dd><i>obj</i> Object to remove a callback from<br />
  <i>type</i> The type of event that was triggering the callback<br />
  <i>func</i> The function that was to be called when the event was triggered<br />
- <i>data</i> The data pointer that was to be passed to the callback</dl>
+ <i>data</i> The data pointer that was to be passed to the callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer that was to be passed to the callback</dl>
+<dd>The data pointer that was to be passed to the callback</dd></dl>
 <p> This function removes the most recently added callback from the object obj which was triggered by the event type type and was calling the function func with data data when triggered. If the removal is successful it will also return the data pointer that was passed to <code>evas_object_event_callback_add()</code> (that will be the same as the parameter) when the callback was added to the object. If not successful NULL will be returned. </p>
 <p> Example: </p>
 <pre> extern Evas_Object *object;

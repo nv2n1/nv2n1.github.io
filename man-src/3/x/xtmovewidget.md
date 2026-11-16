@@ -11,24 +11,24 @@ description: "XtConfigureWidget, XtMoveWidget, XtResizeWidget – move and resiz
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtConfigureWidget(Widget <i>w</i>, Position <i>x</i>, Position <i>y</i>, Dimension <i>width</i>, Dimension <i>height</i>, Dimension <i>border_width</i>);</p>
-<dd>void XtMoveWidget(Widget <i>w</i>, Position <i>x</i>, Position <i>y</i>);</p>
-<dd>void XtResizeWidget(Widget <i>w</i>, Dimension <i>width</i>, Dimension <i>height</i>, Dimension <i>border_width</i>);</p>
-<dd>void XtResizeWindow(Widget <i>w</i>);</dl>
+<dd>void XtConfigureWidget(Widget <i>w</i>, Position <i>x</i>, Position <i>y</i>, Dimension <i>width</i>, Dimension <i>height</i>, Dimension <i>border_width</i>);</dd>
+<dd>void XtMoveWidget(Widget <i>w</i>, Position <i>x</i>, Position <i>y</i>);</dd>
+<dd>void XtResizeWidget(Widget <i>w</i>, Dimension <i>width</i>, Dimension <i>height</i>, Dimension <i>border_width</i>);</dd>
+<dd>void XtResizeWindow(Widget <i>w</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>width</i></p>
+<dt><i>width</i></dt>
 <dd>
-<dt><i>height</i></p>
+</dd><dt><i>height</i></dt>
 <dd>
-<dt><i>border_width</i></p>
-<dd>Specify the new widget size.</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</p>
-<dt><i>x</i></p>
+</dd><dt><i>border_width</i></dt>
+<dd>Specify the new widget size.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the new widget x and y coordinates.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the new widget x and y coordinates.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtConfigureWidget</code> function returns immediately if the specified geometry fields are the same as the old values. Otherwise, <code>XtConfigureWidget</code> writes the new x, y, width, height, and border_width values into the widget and, if the widget is realized, makes an Xlib <code>XConfigureWindow</code> call on the widget&#8217;s window. </p>
 <p> If either the new width or height is different from its old value, <code>XtConfigureWidget</code> calls the widget&#8217;s resize procedure to notify it of the size change; otherwise, it simply returns. </p>

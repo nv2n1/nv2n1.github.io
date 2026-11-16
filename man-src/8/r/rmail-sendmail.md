@@ -15,10 +15,10 @@ description: "rmail – handle remote mail received via uucp"
 <p> <code>Rmail</code> is explicitly designed for use with uucp and sendmail.</p>
 <h3>Flags</h3>
 <dl>
-<dt><code>-D</code></p>
-<dd>Use the specified <i>domain</i> instead of the default domain of &#8220;UUCP&#8221;.</p>
-<dt><code>-T</code></p>
-<dd>Turn on debugging.</dl>
+<dt><code>-D</code></dt>
+<dd>Use the specified <i>domain</i> instead of the default domain of &#8220;UUCP&#8221;.</dd>
+<dt><code>-T</code></dt>
+<dd>Turn on debugging.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-uucp/">uucp</a>(1), mail.local(8), sendmail(8)</p>
 <h2>History</h2>

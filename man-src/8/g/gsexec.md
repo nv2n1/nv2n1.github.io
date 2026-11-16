@@ -30,9 +30,9 @@ description: "gsexec – Switch user before executing external programs"
 <h2>Options</h2>
 <p>&nbsp;<wbr></p>
 <dl>
-<dt>-V</p>
+<dt>-V</dt>
 <dd>If you are root, this option displays the compile options of gsexec. For security reasons all configuration options are changeable only at compile time.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <h2>More Information</h2>
 <p>For further information about the concepts and the security model of the original Apache suexec please refer to the suexec documentation: </p>
 <p> <a rel="nofollow" href="http://httpd.apache.org/docs-2.0/suexec.html">http://httpd.apache.org/docs-2.0/suexec.html</a> </p>

@@ -19,7 +19,7 @@ description: "claic1.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CLAIC1 applies one step of incremental condition estimation in
  its simplest version:
@@ -42,11 +42,11 @@ description: "claic1.f –"
                                            [ conjg(gamma) ]
  where  alpha =  x**H*w.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre>
           JOB is INTEGER
           = 1: an estimate for the largest singular value is computed.
@@ -96,14 +96,14 @@ description: "claic1.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 136 of file claic1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

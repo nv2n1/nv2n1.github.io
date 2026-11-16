@@ -15,7 +15,7 @@ snd_pcm_stream_str - Get a string naming the direction of a stream
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the pcm substream instance</dl>
+<dl><dd></dd><dd>the pcm substream instance</dd></dl>
 
 <h2>Return</h2>
 

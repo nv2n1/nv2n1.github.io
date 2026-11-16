@@ -15,8 +15,8 @@ description: "XmRepTypeGetRecord — A representation type manager function that
 <h2>Description</h2>
 <p><code>XmRepTypeGetRecord</code> retrieves information about a particular representation type that is registered with the representation type manager. This routine allocates memory for the returned data. The application must free this memory using <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>rep_type_id</i></p>
-<dd>The identification number of the representation type</dl>
+<dt><i>rep_type_id</i></dt>
+<dd>The identification number of the representation type</dd></dl>
 <p> The representation type entry structure contains the following information: </p>
 <pre>typedef struct
 {
@@ -29,18 +29,18 @@ description: "XmRepTypeGetRecord — A representation type manager function that
 } XmRepTypeEntryRec, *XmRepTypeEntry;
 (<code>void</code>)</pre>
 <dl COMPACT>
-<dt><i>rep_type_name</i></p>
-<dd>The name of the representation type</p>
-<dt><i>value_names</i></p>
-<dd>An array of representation type value names</p>
-<dt><i>values</i></p>
-<dd>An array of representation type numerical values</p>
-<dt><i>num_values</i></p>
-<dd>The number of values associated with the representation type</p>
-<dt><i>reverse_installed</i></p>
-<dd>A flag that indicates whether or not the reverse converter is installed</p>
-<dt><i>rep_type_id</i></p>
-<dd>The identification number of the representation type</dl>
+<dt><i>rep_type_name</i></dt>
+<dd>The name of the representation type</dd>
+<dt><i>value_names</i></dt>
+<dd>An array of representation type value names</dd>
+<dt><i>values</i></dt>
+<dd>An array of representation type numerical values</dd>
+<dt><i>num_values</i></dt>
+<dd>The number of values associated with the representation type</dd>
+<dt><i>reverse_installed</i></dt>
+<dd>A flag that indicates whether or not the reverse converter is installed</dd>
+<dt><i>rep_type_id</i></dt>
+<dd>The identification number of the representation type</dd></dl>
 <h2>Return</h2>
 <p>Returns a pointer to the representation type entry structure that describes the representation type.</p>
 <h2>Related</h2>

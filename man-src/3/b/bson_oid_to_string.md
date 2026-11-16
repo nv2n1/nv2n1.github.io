@@ -16,11 +16,11 @@ void bson_oid_to_string(const bson_oid_t *oid,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>str</code></p>
-<dd> A location for the resulting string.</dl>
+<dt><code>str</code></dt>
+<dd> A location for the resulting string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Converts <code>oid</code> into a hex encoded string. </p>
 <h2>COLOPHON</h2>

@@ -33,7 +33,7 @@ description: "QuantLib::LongstaffSchwartzPathPricer – Longstaff-Schwarz path p
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the correctness of the returned value is tested by reproducing results available in web/literature</dl>
+</dt><dd> the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

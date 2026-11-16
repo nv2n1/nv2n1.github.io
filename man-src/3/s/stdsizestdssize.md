@@ -11,33 +11,21 @@ std::size,std::ssize - std::size,std::ssize
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (1)(since C++ 17)
-
         constexpr auto size(const C &amp;c) -&gt; decltype(c.size());
-
 template &lt;class C&gt;
-
 constexpr auto ssize(const C &amp;c)(2)(since C++ 20)
-
     -&gt; std::common_type_t&lt;std::ptrdiff_t,
-
                           std::make_signed_t&lt;decltype(c.size())&gt;&gt;;
-
 template &lt;class T, std::size_t N&gt;
 (3)(since C++ 17)
-
     constexpr std::size_t size(const T (&amp;array)[N]) noexcept;
-
 template &lt;class T, std::ptrdiff_t N&gt;
 (4)(since C++ 20)
-
     constexpr std::ptrdiff_t ssize(const T (&amp;array)[N]) noexcept;
 Returns the size of the given container c or array array.
-
 1-2) Returns c.size(), converted to the return type if necessary.
-
 3-4) Returns N.
 </code></pre>
 
@@ -100,12 +88,9 @@ Fourth version
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {3, 1, 4};
     std::cout &lt;&lt; std::size(v) &lt;&lt; '\n';

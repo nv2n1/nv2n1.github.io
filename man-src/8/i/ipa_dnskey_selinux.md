@@ -98,8 +98,8 @@ description: "ipa_dnskey_selinux – Security Enhanced Linux Policy for the ipa_
 <p> <code>ipa_dnskey_exec_t</code> </p>
 <p> &#8211; Set files with the ipa_dnskey_exec_t type, if you want to transition an executable to the ipa_dnskey_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/ipa/ipa-dnskeysyncd, /usr/libexec/ipa/ipa-dnskeysync-replica </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/ipa/ipa-dnskeysyncd, /usr/libexec/ipa/ipa-dnskeysync-replica </dd>
 </dl>
 <p> <code>ipa_dnskey_unit_file_t</code> </p>
 <p> &#8211; Set files with the ipa_dnskey_unit_file_t type, if you want to treat the files as ipa dnskey unit content. </p>

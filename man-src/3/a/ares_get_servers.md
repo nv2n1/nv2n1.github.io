@@ -22,12 +22,12 @@ int ares_get_servers(ares_channel channel, struct ares_addr_node **servers)
 <h2>RETURN VALUES</h2>
 <p> <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code> may return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> The name servers configuration was successfuly retrieved</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> The memory was exhausted</p>
-<dt><code>ARES_ENODATA</code></p>
-<dd> The channel data identified by <i>channel</i> was invalid.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The name servers configuration was successfuly retrieved</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> The memory was exhausted</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The channel data identified by <i>channel</i> was invalid.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code></p>
 <h2>AVAILABILITY</h2>

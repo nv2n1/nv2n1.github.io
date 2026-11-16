@@ -19,21 +19,21 @@ description: "waffle_feature_test_macros – Macros to control definitions expos
 <h3>List of feature test macros</h3>
 <p><code>WAFFLE_API_VERSION</code> (since waffle 1.3)</p>
 <dl>
-<dd>This macro controls the API version exposed by Waffle&#8217;s headers. The value ((<i>major</i> &lt;&lt; 8) | <i>minor</i>) exposes the API of Waffle <i>major</i>.<i>minor</i>. For example, the value 0x0103 exposes the API of Waffle 1.3. If this macro is undefined, then the headers expose the API of Waffle 1.2.</dl>
+<dd>This macro controls the API version exposed by Waffle&#8217;s headers. The value ((<i>major</i> &lt;&lt; 8) | <i>minor</i>) exposes the API of Waffle <i>major</i>.<i>minor</i>. For example, the value 0x0103 exposes the API of Waffle 1.3. If this macro is undefined, then the headers expose the API of Waffle 1.2.</dd></dl>
 <p> <code>WAFFLE_API_EXPERIMENTAL</code></p>
 <dl>
-<dd>This macro exposes experimental features in Waffle&#8217;s headers. Experimental features may be altered or removed without notice and do not belong to Waffle&#8217;s stable API.</dl>
+<dd>This macro exposes experimental features in Waffle&#8217;s headers. Experimental features may be altered or removed without notice and do not belong to Waffle&#8217;s stable API.</dd></dl>
 <h2>Issues</h2>
 <p>Please report bugs or and feature requests to m[blue]<code><a rel="nofollow" href="https://github.com/waffle-gl/waffle/issues">https://github.com/waffle-gl/waffle/issues</a></code>m[].</p>
 <h2>See Also</h2>
 <dl>
-<dd><code><a href="/docs/linux/man/7-waffle/">waffle</a></code>(7)</dl>
+<dd><code><a href="/docs/linux/man/7-waffle/">waffle</a></code>(7)</dd></dl>
 <dl>
-<dd><code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)</dl>
+<dd><code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)</dd></dl>
 <h2>Author</h2>
 <p><code>Chad Versace</code> &lt;chad.versace [at] linux.intel.com&gt;</p>
 <dl>
-<dd>Maintainer</dl>
+<dd>Maintainer</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2013 Intel </p>
 <p> This manual page is licensed under the Creative Commons Attribution-ShareAlike 3.0 United States License (CC BY-SA 3.0). To view a copy of this license, visit m[blue]<code><a rel="nofollow" href="http://creativecommons.org.license/by-sa/3.0/us">http://creativecommons.org.license/by-sa/3.0/us</a></code>m[].</p>

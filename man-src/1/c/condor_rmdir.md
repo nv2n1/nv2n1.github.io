@@ -21,75 +21,48 @@ description: "condor_rmdir Windows-only no-fail deletion of directories"
 <p> <code>/HELP</code></p>
 <dl>
 <dt>
-<dd> Print usage information.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print usage information.</dd>
+</dl>
 <p> <code>/?</code></p>
 <dl>
 <dt>
-<dd> Print usage information.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print usage information.</dd>
+</dl>
 <p> <code>/VERBOSE</code></p>
 <dl>
 <dt>
-<dd> Print detailed output.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print detailed output.</dd>
+</dl>
 <p> <code>/DIAGNOSTIC</code></p>
 <dl>
 <dt>
-<dd> Print out the internal flow of control information.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print out the internal flow of control information.</dd>
+</dl>
 <p> <code>/PATH:&lt;path&gt;</code></p>
 <dl>
 <dt>
-<dd> Remove the directory given by <code>&lt;path&gt;</code> .</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Remove the directory given by <code>&lt;path&gt;</code> .</dd>
+</dl>
 <p> <code>/S</code></p>
 <dl>
 <dt>
-<dd> Include subdirectories in those removed.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Include subdirectories in those removed.</dd>
+</dl>
 <p> <code>/C</code></p>
 <dl>
 <dt>
-<dd> Continue even if access is denied.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Continue even if access is denied.</dd>
+</dl>
 <p> <code>/Q</code></p>
 <dl>
 <dt>
-<dd> Print error output only.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Print error output only.</dd>
+</dl>
 <p> <code>/NODEL</code></p>
 <dl>
 <dt>
-<dd> Do not remove directories. ACLs may still be changed.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Do not remove directories. ACLs may still be changed.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_rmdir</i> will exit with a status value of 0 (zero) upon success, and it will exit with the standard HRESULT error code upon failure. </p>
 <h2>Author</h2>

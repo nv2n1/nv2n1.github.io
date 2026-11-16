@@ -32,32 +32,32 @@ description: "QwtArraySeriesData< T > –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Array of samples</dl>
+<dd><i>samples</i> Array of samples</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>template&lt;typename T &gt; T <code>QwtArraySeriesData</code>&lt; T &gt;::sample (size_tindex) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at a specific position</dl>
+<dd>Sample at a specific position</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Sample at position index</dl>
+<dd>Sample at position index</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; T &gt;</code>.</p>
 <h3>template&lt;typename T &gt; const QVector&lt; T &gt; <code>QwtArraySeriesData</code>&lt; T &gt;::samples () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of samples</dl>
+<dd>Array of samples</dd></dl>
 <h3>template&lt;typename T&gt; void <code>QwtArraySeriesData</code>&lt; T &gt;::setSamples (const QVector&lt; T &gt; &amp;samples)</h3>
 <p>Assign an array of samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>samples</i> Array of samples</dl>
+<dd><i>samples</i> Array of samples</dd></dl>
 <h3>template&lt;typename T &gt; size_t <code>QwtArraySeriesData</code>&lt; T &gt;::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of samples</dl>
+<dd>Number of samples</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; T &gt;</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

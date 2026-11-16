@@ -11,71 +11,71 @@ description: "mysql_config – get compile options for compiling clients"
 <p> mysql_config &#8211; get compile options for compiling clients </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysql_config </code><i>options</i></dl>
+<dt> <code>mysql_config </code><i>options</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>mysql_config</code></p>
-<dd>provides you with useful information for compiling your MariaDB client and connecting it to MariaDB. </p>
+<dd>provides you with useful information for compiling your MariaDB client and connecting it to MariaDB. </dd>
 <p> <code>mysql_config</code> supports the following options. </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;cflags</code> </p>
+</dt><dd> &bull; <code>&#8211;cflags</code> </dd>
 <p> Compiler flags to find include files and critical compiler flags and defines used when compiling the libmysqlclient library. The options returned are tied to the specific compiler that was used when the library was created and might clash with the settings for your own compiler. Use <code>&#8211;include</code> for more portable options that contain only include paths.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;include</code> </p>
+</dt><dd> &bull; <code>&#8211;include</code> </dd>
 <p> Compiler options to find MariaDB include files.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;libmysqld-libs</code>, <code>&#8211;embedded</code> </p>
+</dt><dd> &bull; <code>&#8211;libmysqld-libs</code>, <code>&#8211;embedded</code> </dd>
 <p> Libraries and options required to link with the MariaDB embedded server.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;libs</code> </p>
+</dt><dd> &bull; <code>&#8211;libs</code> </dd>
 <p> Libraries and options required to link with the MariaDB client library.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;libs_r</code> </p>
+</dt><dd> &bull; <code>&#8211;libs_r</code> </dd>
 <p> Libraries and options required to link with the thread-safe MariaDB client library.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;plugindir</code> </p>
+</dt><dd> &bull; <code>&#8211;plugindir</code> </dd>
 <p> The default plugin directory path name, defined when configuring MariaDB.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;port</code> </p>
+</dt><dd> &bull; <code>&#8211;port</code> </dd>
 <p> The default TCP/IP port number, defined when configuring MariaDB.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;socket</code> </p>
+</dt><dd> &bull; <code>&#8211;socket</code> </dd>
 <p> The default Unix socket file, defined when configuring MariaDB.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;variable=VAR</code> </p>
+</dt><dd> &bull; <code>&#8211;variable=VAR</code> </dd>
 <p> Path to MariaDB include, library and plugin directories. <code>VAR</code> is one of `pkgincludedir`, `pkglibdir` and `plugindir`, respectively.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;version</code> </p>
+</dt><dd> &bull; <code>&#8211;version</code> </dd>
 <p> Version number for the MariaDB distribution.</dl>
 <p> If you invoke <code>mysql_config</code> with no options, it displays a list of all options that it supports, and their values: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; mysql_config
                     Usage : /
                             usr / local / mysql / bin / mysql_config[options] Options : --cflags[-I / usr / local / mysql / include / mysql - mcpu = pentiumpro]-- include[-I / usr / local / mysql / include / mysql]-- libs[-L / usr / local / mysql / lib / mysql - lmysqlclient - lz - lcrypt - lnsl - lm - L / usr / lib - lssl - lcrypto]-- libs_r[-L / usr / local / mysql / lib / mysql - lmysqlclient_r - lpthread - lz - lcrypt - lnsl - lm - lpthread]-- socket[/ tmp / mysql.sock]-- port[3306]-- version[4.0.16]-- libmysqld -
             libs[-L / usr / local / mysql / lib / mysql - lmysqld - lpthread - lz - lcrypt - lnsl - lm - lpthread - lrt]
 </code></pre>
-</dl>
+</dd></dl>
 <p> You can use <code>mysql_config</code> within a command line to include the value that it displays for a particular option. For example, to compile a MariaDB client program, use <code>mysql_config</code> as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>CFG=/usr/local/mysql/bin/mysql_config</code>
 shell&gt; <code>sh -c &quot;gcc -o progname `$CFG --include` progname.c `$CFG --libs`&quot;</code>
 </pre>
-</dl>
+</dd></dl>
 <p> When you use <code>mysql_config</code> this way, be sure to invoke it within backtick (&#8220;`&#8221;) characters. That tells the shell to execute it and substitute its output into the surrounding command.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2008 MySQL AB, 2008-2010 Sun Microsystems, Inc., 2010-2015 MariaDB Foundation </p>

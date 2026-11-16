@@ -11,18 +11,18 @@ description: "ndb_print_sys_file – print NDB system file contents"
 <p> ndb_print_sys_file &#8211; print NDB system file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ndb_print_sys_file </code><i>file_name</i></dl>
+<dt> <code>ndb_print_sys_file </code><i>file_name</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ndb_print_sys_file</code></p>
-<dd>obtains diagnostic information from a MySQL Cluster system file. </p>
+<dd>obtains diagnostic information from a MySQL Cluster system file. </dd>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ndb_print_sys_file <i>file_name</i>
 </pre>
-</dl>
+</dd></dl>
 <p> <i>file_name</i> is the name of a cluster system file (sysfile). Cluster system files are located in a data node&#8217;s data directory (DataDir); the path under this directory to system files matches the pattern ndb_<i>#</i>_fs/D<i>#</i>/DBDIH/P<i>#</i>.sysfile. In each case, the <i>#</i> represents a number (not necessarily the same number). For more information, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[]<font SIZE="-2">[1]</font>. </p>
 <p> Like <code>ndb_print_backup_file</code> and <code>ndb_print_schema_file</code> (and unlike most of the other NDB utilities that are intended to be run on a management server host or to connect to a management server) <code>ndb_print_backup_file</code> must be run on a cluster data node, since it accesses the data node file system directly. Because it does not make use of the management server, this utility can be used when the management server is not running, and even when the cluster has been completely shut down. </p>
 <p> <code>Additional Options</code>: None.</p>
@@ -33,11 +33,11 @@ ndb_print_sys_file <i>file_name</i>
 <p> You should have received a copy of the GNU General Public License along with the program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA or see <a rel="nofollow" href="http://www.gnu.org/licenses/.">http://www.gnu.org/licenses/.</a> </p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Cluster Data Node FileSystemDir Files</p>
+<dt> 1.</dt>
+<dd> Cluster Data Node FileSystemDir Files</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html">http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html">http://dev.mysql.com/doc/ndbapi/en/ndb-internals-ndbd-filesystemdir-files.html</a></dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Reference Manual, which may already be installed locally and which is also available online at <a rel="nofollow" href="http://dev.mysql.com/doc/.">http://dev.mysql.com/doc/.</a></p>

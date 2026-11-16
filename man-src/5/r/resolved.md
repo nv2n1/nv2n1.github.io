@@ -15,18 +15,19 @@ description: "resolved.conf – Network Name Resolution configuration file"
 <h2>Options</h2>
 <p><i>DNS=</i></p>
 <dl>
-<dd>A space separated list of IPv4 and IPv6 addresses to be used as system DNS servers. DNS requests are sent to one of the listed DNS servers in parallel to any per-interface DNS servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8). For compatibility reasons, if set to the empty list the DNS servers listed in /etc/resolv.conf are used, if any are configured there. This setting defaults to the empty list.</dl>
+<dd>A space separated list of IPv4 and IPv6 addresses to be used as system DNS servers. DNS requests are sent to one of the listed DNS servers in parallel to any per-interface DNS servers acquired from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8). For compatibility reasons, if set to the empty list the DNS servers listed in /etc/resolv.conf are used, if any are configured there. This setting defaults to the empty list.</dd></dl>
 <p> <i>FallbackDNS=</i></p>
 <dl>
-<dd>A space separated list of IPv4 and IPv6 addresses to be used as the fallback DNS servers. Any per-interface DNS servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>DNS=</i> above or /etc/resolv.conf. This setting is hence only used if no other DNS server information is known. If this option is not given, a compiled-in list of DNS servers is used instead.</dl>
+<dd>A space separated list of IPv4 and IPv6 addresses to be used as the fallback DNS servers. Any per-interface DNS servers obtained from <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) take precedence over this setting, as do any servers set via <i>DNS=</i> above or /etc/resolv.conf. This setting is hence only used if no other DNS server information is known. If this option is not given, a compiled-in list of DNS servers is used instead.</dd></dl>
 <p> <i>LLMNR=</i></p>
 <dl>
-<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Link-Local Multicast Name Resolution support (m[blue]<code>RFC 4794</code>m[]<font SIZE="-2">[1]</font>) on the local host. If true enables full LLMNR responder and resolver support. If false disable both. If set to &quot;resolve&quot; only resolving support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-interface LLMNR settings. LLMNR will be enabled on an interface only if the per-interface and the global setting is on.</dl>
+<dd>Takes a boolean argument or &quot;resolve&quot;. Controls Link-Local Multicast Name Resolution support (m[blue]<code>RFC 4794</code>m[]<font SIZE="-2">[1]</font>) on the local host. If true enables full LLMNR responder and resolver support. If false disable both. If set to &quot;resolve&quot; only resolving support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-interface LLMNR settings. LLMNR will be enabled on an interface only if the per-interface and the global setting is on.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code>resolv.conf</code>(4)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>RFC 4794</p>
+<dt> 1.</dt>
+<dd>RFC 4794</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4795">https://tools.ietf.org/html/rfc4795</a></dl>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4795">https://tools.ietf.org/html/rfc4795</a></dd></dl>
+</dl>

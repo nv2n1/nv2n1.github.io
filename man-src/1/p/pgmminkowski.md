@@ -20,13 +20,13 @@ description: "pgmminkowski – compute Minkowski integral"
 <p> For a grayscale image, these numbers are a function of the threshold of what you want to call black or white. <code>pgmminkowski</code> reports these numbers as a function of the threshold for all possible threshold values. Since the total surface area can increase only as a function of the threshold, it is a reparameterization of the threshold. It turns out that if you consider the other two functions, the boundary length and the Euler characteristic, as a function of the first one, the surface, you get two functions that are a fingerprint of the picture. This fingerprint is e.g. sufficient to recognize the difference between pictures of different crystal lattices under a scanning tunnelling electron microscope. </p>
 <p> For more information about Minkowski integrals, see e.g. </p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p>&nbsp;<wbr>K. Michielsen and H. De Raedt,&nbsp;<wbr>&quot;Integral-Geometry Morphological Image Analysis&quot;, Phys. Rep. 347, 461-538&nbsp;<wbr>(2001). </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p>&nbsp;<wbr>J.S. Kole, K. Michielsen, and H. De Raedt,&nbsp;<wbr>&quot;Morphological Image Analysis of Quantum Motion in Billiards&quot;, Phys. Rev. E 63, 016201-1 &#8211; 016201-7&nbsp;<wbr>(2001)&nbsp;<wbr> </p>
-</dl>
+</dd></dl>
 <p> The output is suitable for direct use as a datafile in <code>gnuplot</code>. </p>
 <p> In addition to the three Minkowski integrals, <code>pgmminkowski</code> also lists the horizontal and vertical edge counts. </p>
 <h2>SEE ALSO</h2>

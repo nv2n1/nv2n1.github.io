@@ -10,21 +10,21 @@ description: "XCreateColormap, XCopyColormapAndFree, XFreeColormap, XColor – c
 <p>XCreateColormap, XCopyColormapAndFree, XFreeColormap, XColor &#8211; create, copy, or destroy colormaps and color structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Colormap XCreateColormap(Display *<i>display</i>, Window <i>w</i>, Visual *<i>visual</i>, int <i>alloc</i>);</p>
-<dd>Colormap XCopyColormapAndFree(Display *<i>display</i>, Colormap <i>colormap</i>);</p>
-<dd>int XFreeColormap(Display *<i>display</i>, Colormap <i>colormap</i>);</dl>
+<dd>Colormap XCreateColormap(Display *<i>display</i>, Window <i>w</i>, Visual *<i>visual</i>, int <i>alloc</i>);</dd>
+<dd>Colormap XCopyColormapAndFree(Display *<i>display</i>, Colormap <i>colormap</i>);</dd>
+<dd>int XFreeColormap(Display *<i>display</i>, Colormap <i>colormap</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>alloc</i></p>
-<dd>Specifies the colormap entries to be allocated. You can pass <code>AllocNone</code> or <code>AllocAll</code>.</p>
-<dt><i>colormap</i></p>
-<dd>Specifies the colormap that you want to create, copy, set, or destroy.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>visual</i></p>
-<dd>Specifies a visual type supported on the screen. If the visual type is not one supported by the screen, a <code>BadMatch</code> error results.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window on whose screen you want to create a colormap.</dl>
+<dt><i>alloc</i></dt>
+<dd>Specifies the colormap entries to be allocated. You can pass <code>AllocNone</code> or <code>AllocAll</code>.</dd>
+<dt><i>colormap</i></dt>
+<dd>Specifies the colormap that you want to create, copy, set, or destroy.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>visual</i></dt>
+<dd>Specifies a visual type supported on the screen. If the visual type is not one supported by the screen, a <code>BadMatch</code> error results.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window on whose screen you want to create a colormap.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XCreateColormap</code> function creates a colormap of the specified visual type for the screen on which the specified window resides and returns the colormap ID associated with it. Note that the specified window is only used to determine the screen. </p>
 <p> The initial values of the colormap entries are undefined for the visual classes <code>GrayScale</code>, <code>PseudoColor</code>, and <code>DirectColor</code>. For <code>StaticGray</code>, <code>StaticColor</code>, and <code>TrueColor</code>, the entries have defined values, but those values are specific to the visual and are not defined by X. For <code>StaticGray</code>, <code>StaticColor</code>, and <code>TrueColor</code>, alloc must be <code>AllocNone</code>, or a <code>BadMatch</code> error results. For the other visual classes, if alloc is <code>AllocNone</code>, the colormap initially has no allocated entries, and clients can allocate them. For information about the visual types, see section 3.1. </p>
@@ -44,18 +44,18 @@ description: "XCreateColormap, XCopyColormapAndFree, XFreeColormap, XColor – c
 <p> The red, green, and blue values are always in the range 0 to 65535 inclusive, independent of the number of bits actually used in the display hardware. The server scales these values down to the range used by the hardware. Black is represented by (0,0,0), and white is represented by (65535,65535,65535). In some functions, the flags member controls which of the red, green, and blue members is used and can be the inclusive OR of zero or more of <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code>.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadColor</code></p>
-<dd>A value for a Colormap argument does not name a defined Colormap.</p>
-<dt><code>BadMatch</code></p>
-<dd>An <code>InputOnly</code> window is used as a Drawable.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadColor</code></dt>
+<dd>A value for a Colormap argument does not name a defined Colormap.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>An <code>InputOnly</code> window is used as a Drawable.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xquerycolor/">XQueryColor</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -15,26 +15,26 @@ description: "jack_wait – JACK toolkit client to check and wait for existence/
 <p> <code>jack_wait</code> When invoked with <i>-c</i> it only checks for the existence of a jack server. When invoked with <i>-w</i> the program will wait for a jackd to be available. The <i>-q</i> makes it wait for the jackd to exit. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w</code>, <code>&#8211;wait</code></p>
+<dt><code>-w</code>, <code>&#8211;wait</code></dt>
 <dd>
- Wait for jackd to be available.</p>
-<dt><code>-q</code>, <code>&#8211;quit</code></p>
+ Wait for jackd to be available.</dd>
+<dt><code>-q</code>, <code>&#8211;quit</code></dt>
 <dd>
- Wait for jackd quit.</p>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
+ Wait for jackd quit.</dd>
+<dt><code>-c</code>, <code>&#8211;check</code></dt>
 <dd>
- Only check for existence of jackd, and exit.</p>
-<dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></p>
+ Only check for existence of jackd, and exit.</dd>
+<dt><code>-s</code>, <code>&#8211;server</code> <i>servername</i></dt>
 <dd>
- Connect to the jack server named <i>servername</i></p>
-<dt><code>-t</code>, <code>&#8211;timeout</code> <i>timeout_seconds</i></p>
+ Connect to the jack server named <i>servername</i></dd>
+<dt><code>-t</code>, <code>&#8211;timeout</code> <i>timeout_seconds</i></dt>
 <dd>
- Only wait <i>timeout_seconds</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
+ Only wait <i>timeout_seconds</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
- Display help/usage message</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
+ Display help/usage message</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd>
- Output version information and exit </p>
+ Output version information and exit </dd>
 </dl>
 <h2>Index</h2>

@@ -23,30 +23,30 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <h2>OPTIONS</h2>
 <p> The user needs to supply an input filename and an output filename. All other parameters are optional.</p>
 <dl>
-<dt><code>&lt;input file&gt;</code></p>
-<dd> The name of the input file to export.</p>
-<dt><code>&lt;xmp file&gt;</code></p>
-<dd> The optional name of an <font SIZE="-1">XMP</font> sidecar file containing the history stack data to be applied during export. If this option is not given darktable will search for an <font SIZE="-1">XMP</font> file that belongs to the given input file.</p>
-<dt><code>&lt;output file&gt;</code></p>
-<dd> The name of the output file. darktable derives the export file format from the file extension. You can also use all the variables available in <code>darktable</code>&#8216;s export module in the output filename.</p>
-<dt><code>&#8211;width &lt;max width&gt;</code></p>
-<dd> This optional parameter allows one to limit the width of the exported image to that number of pixels.</p>
-<dt><code>&#8211;height &lt;max height&gt;</code></p>
-<dd> This optional parameter allows one to limit the height of the exported image to that number of pixels.</p>
-<dt><code>&#8211;bpp &lt;bpp&gt;</code></p>
-<dd> An optional parameter to define the bit depth of the exported image; allowed values depend on the file format. Currently this option is not yet functional. If you need to define the bit depth you need to use the following workaround: </p>
+<dt><code>&lt;input file&gt;</code></dt>
+<dd> The name of the input file to export.</dd>
+<dt><code>&lt;xmp file&gt;</code></dt>
+<dd> The optional name of an <font SIZE="-1">XMP</font> sidecar file containing the history stack data to be applied during export. If this option is not given darktable will search for an <font SIZE="-1">XMP</font> file that belongs to the given input file.</dd>
+<dt><code>&lt;output file&gt;</code></dt>
+<dd> The name of the output file. darktable derives the export file format from the file extension. You can also use all the variables available in <code>darktable</code>&#8216;s export module in the output filename.</dd>
+<dt><code>&#8211;width &lt;max width&gt;</code></dt>
+<dd> This optional parameter allows one to limit the width of the exported image to that number of pixels.</dd>
+<dt><code>&#8211;height &lt;max height&gt;</code></dt>
+<dd> This optional parameter allows one to limit the height of the exported image to that number of pixels.</dd>
+<dt><code>&#8211;bpp &lt;bpp&gt;</code></dt>
+<dd> An optional parameter to define the bit depth of the exported image; allowed values depend on the file format. Currently this option is not yet functional. If you need to define the bit depth you need to use the following workaround: </dd>
 <pre>
     --core --conf plugins/imageio/format/&lt;FORMAT&gt;/bpp=&lt;VALUE&gt;
 </pre>
 <p> where <font SIZE="-1"><code>FORMAT</code></font> is the name of the selected output format, for example <code>png</code>.</p>
-<dt><code>&#8211;hq &lt;0|1|true|false&gt;</code></p>
-<dd> A flag that defines whether to use high quality resampling during export. Defaults to true.</p>
-<dt><code>&#8211;upscale &lt;0|1|true|false&gt;</code></p>
-<dd> A flag that defines whether to allow upscaling during export. Defaults to false.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enables verbose output.</p>
-<dt><code>&#8211;core &lt;darktable options&gt;</code></p>
-<dd> All command line parameters following <code>&#8211;core</code> are passed to the darktable core and handled as standard parameters. See <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1) for a detailed description of the options.</dl>
+<dt><code>&#8211;hq &lt;0|1|true|false&gt;</code></dt>
+<dd> A flag that defines whether to use high quality resampling during export. Defaults to true.</dd>
+<dt><code>&#8211;upscale &lt;0|1|true|false&gt;</code></dt>
+<dd> A flag that defines whether to allow upscaling during export. Defaults to false.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Enables verbose output.</dd>
+<dt><code>&#8211;core &lt;darktable options&gt;</code></dt>
+<dd> All command line parameters following <code>&#8211;core</code> are passed to the darktable core and handled as standard parameters. See <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1) for a detailed description of the options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1)</p>
 <h2>AUTHORS</h2>

@@ -16,12 +16,12 @@ description: "update-texmf – shell script to generate /etc/texmf/texmf.cnf"
 <p> A user who wants to customize /etc/texmf/web2c/texmf.cnf should add, for example, 22mymacro.cnf in /etc/texmf/texmf.d/ and run &#8216;update-texmf&#8217;.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Show verbose messages.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd>Show debugging information, and don&#8217;t delete temporary files. Implies &#8211;verbose.</p>
-<dt><code>-o, &#8211;output FILE</code></p>
-<dd>Generate output in FILE instead of /etc/texmf/web2c/texmf.cnf.</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Show verbose messages.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd>Show debugging information, and don&#8217;t delete temporary files. Implies &#8211;verbose.</dd>
+<dt><code>-o, &#8211;output FILE</code></dt>
+<dd>Generate output in FILE instead of /etc/texmf/web2c/texmf.cnf.</dd></dl>
 <h2>See Also</h2>
 <p>Further information can be found in /usr/share/doc/tex-common/README.Debian.{txt,pdf.html} </p>
 <h2>Author</h2>

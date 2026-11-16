@@ -14,12 +14,12 @@ description: "gnutls_privkey_import_x509 – API function"
 <p> <code>int gnutls_privkey_import_x509(gnutls_privkey_t </code><i>pkey</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_privkey_t pkey</p>
-<dd> The private key</p>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> The private key to be imported</p>
-<dt>unsigned int flags</p>
-<dd> Flags for the import</dl>
+<dt>gnutls_privkey_t pkey</dt>
+<dd> The private key</dd>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> The private key to be imported</dd>
+<dt>unsigned int flags</dt>
+<dd> Flags for the import</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will import the given private key to the abstract <code>gnutls_privkey_t</code> structure. </p>
 <p> The <code>gnutls_x509_privkey_t</code> object must not be deallocated during the lifetime of this structure. </p>
@@ -37,6 +37,6 @@ description: "gnutls_privkey_import_x509 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -14,9 +14,9 @@ description: "iio_device_unregister – unregister a device from the IIO subsyst
 <p><i>indio_dev</i></p>
 <dl>
 <dd>
-<dd>Device structure representing the device.</dl>
+</dd><dd>Device structure representing the device.</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

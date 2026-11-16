@@ -14,7 +14,7 @@ description: "freeze_bdev – – lock a filesystem and force it into a consiste
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>blockdevice to lock</dl>
+</dd><dd>blockdevice to lock</dd></dl>
 <h2>Description</h2>
 <p>If a superblock is found on this device, we take the s_umount semaphore on it to make sure nobody unmounts until the snapshot creation is done. The reference counter (bd_fsfreeze_count) guarantees that only the last unfreeze process can unfreeze the frozen filesystem actually when multiple freeze requests arrive simultaneously. It counts up in <code>freeze_bdev</code> and count down in <code>thaw_bdev</code>. When it becomes 0, <code>thaw_bdev</code> will unfreeze actually.</p>
 <h2>Copyright</h2>

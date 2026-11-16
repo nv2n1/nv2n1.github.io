@@ -15,15 +15,15 @@ snd_ctl_rename_id - replace the id of a control on the card
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>src_id</i>
-<dl><dd>the old id</dl>
+<dl><dd>the old id</dd></dl>
  
 
  <i>dst_id</i>
-<dl><dd>the new id</dl>
+<dl><dd>the new id</dd></dl>
 
 <h2>Description</h2>
 

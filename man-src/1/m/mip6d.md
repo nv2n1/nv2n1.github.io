@@ -15,31 +15,31 @@ description: "mip6d – UMIP Mobile IPv6 and NEMO Basic Support protocol impleme
 <p> Mobile IPv6 and NEMO Basic Support implementation </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information and copyright</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Display this help text</p>
-<dt><code>-c &lt;file&gt;</code></p>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information and copyright</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Display this help text</dd>
+<dt><code>-c &lt;file&gt;</code></dt>
 <dd> Read configuration from &lt;file&gt;. If option is not present, default path (/etc/mip6d.conf) is used.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <p> These options override values read from config file:</p>
 <dl>
-<dt><code>-d &lt;number&gt;</code></p>
-<dd> Set debug level (0-10)</p>
-<dt><code>-C, &#8211;correspondent-node</code></p>
-<dd> Node is CN</p>
-<dt><code>-H, &#8211;home-agent</code></p>
-<dd> Node is HA</p>
-<dt><code>-M, &#8211;mobile-node</code></p>
-<dd> Node is MN </p>
+<dt><code>-d &lt;number&gt;</code></dt>
+<dd> Set debug level (0-10)</dd>
+<dt><code>-C, &#8211;correspondent-node</code></dt>
+<dd> Node is CN</dd>
+<dt><code>-H, &#8211;home-agent</code></dt>
+<dd> Node is HA</dd>
+<dt><code>-M, &#8211;mobile-node</code></dt>
+<dd> Node is MN </dd>
 </dl>
 <h2>SIGNALS</h2>
 <p> The following signals can be sent to the daemon:</p>
 <dl>
-<dt><code>&nbsp;<wbr>SIGHUP</code></p>
-<dd> Reload the configuration. See <code><a href="/docs/linux/man/5-mip6d-conf/">mip6d.conf</a></code>(5) for information on supported option reload.</p>
-<dt><code>&nbsp;<wbr>SIGINT, SIGTERM</code></p>
-<dd> Terminates the daemon operation. </p>
+<dt><code>&nbsp;<wbr>SIGHUP</code></dt>
+<dd> Reload the configuration. See <code><a href="/docs/linux/man/5-mip6d-conf/">mip6d.conf</a></code>(5) for information on supported option reload.</dd>
+<dt><code>&nbsp;<wbr>SIGINT, SIGTERM</code></dt>
+<dd> Terminates the daemon operation. </dd>
 </dl>
 <h2>FILES</h2>
 <p> /etc/mip6d.conf </p>

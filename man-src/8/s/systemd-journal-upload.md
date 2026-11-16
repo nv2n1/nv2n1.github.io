@@ -10,53 +10,53 @@ description: "systemd-journal-upload – Send journal messages over the network"
 <p>systemd-journal-upload &#8211; Send journal messages over the network</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>systemd-journal-upload</code> [OPTIONS&#8230;] [-u/&#8211;url=<i>URL</i>] [SOURCES&#8230;]</dl>
+<dt> <code>systemd-journal-upload</code> [OPTIONS&#8230;] [-u/&#8211;url=<i>URL</i>] [SOURCES&#8230;]</dt></dl>
 <h2>Description</h2>
 <p><code>systemd-journal-upload</code></p>
-<dd>will upload journal entries to the URL specified with <code>&#8211;url</code>. Unless limited by one of the options specified below, all journal entries accessible to the user the program is running as will be uploaded, and then the program will wait and send new entries as they become available.</p>
+<dd>will upload journal entries to the URL specified with <code>&#8211;url</code>. Unless limited by one of the options specified below, all journal entries accessible to the user the program is running as will be uploaded, and then the program will wait and send new entries as they become available.</dd>
 <h2>Options</h2>
 <p><code>-u</code>, <code>&#8211;url=</code><code>[<a rel="nofollow" href="https://]">https://]</a></code><i>URL</i>, <code>&#8211;url=</code><code>[<a rel="nofollow" href="http://]">http://]</a></code><i>URL</i></p>
 <dl>
-<dd>Upload to the specified address. <i>URL</i> may specify either just the hostname or both the protocol and hostname. <code>https</code> is the default.</dl>
+<dd>Upload to the specified address. <i>URL</i> may specify either just the hostname or both the protocol and hostname. <code>https</code> is the default.</dd></dl>
 <p> <code>&#8211;system</code>, <code>&#8211;user</code></p>
 <dl>
-<dd>Limit uploaded entries to entries from system services and the kernel, or to entries from services of current user. This has the same meaning as <code>&#8211;system</code> and <code>&#8211;user</code> options for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1). If neither is specified, all accessible entries are uploaded.</dl>
+<dd>Limit uploaded entries to entries from system services and the kernel, or to entries from services of current user. This has the same meaning as <code>&#8211;system</code> and <code>&#8211;user</code> options for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1). If neither is specified, all accessible entries are uploaded.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;merge</code></p>
 <dl>
-<dd>Upload entries interleaved from all available journals, including other machines. This has the same meaning as <code>&#8211;merge</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dl>
+<dd>Upload entries interleaved from all available journals, including other machines. This has the same meaning as <code>&#8211;merge</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dd></dl>
 <p> <code>-D</code>, <code>&#8211;directory=</code><i>DIR</i></p>
 <dl>
-<dd>Takes a directory path as argument. Upload entries from the specified journal directory <i>DIR</i> instead of the default runtime and system journal paths. This has the same meaning as <code>&#8211;directory</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dl>
+<dd>Takes a directory path as argument. Upload entries from the specified journal directory <i>DIR</i> instead of the default runtime and system journal paths. This has the same meaning as <code>&#8211;directory</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dd></dl>
 <p> <code>&#8211;file=</code><i>GLOB</i></p>
 <dl>
-<dd>Takes a file glob as an argument. Upload entries from the specified journal files matching <i>GLOB</i> instead of the default runtime and system journal paths. May be specified multiple times, in which case files will be suitably interleaved. This has the same meaning as <code>&#8211;file</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dl>
+<dd>Takes a file glob as an argument. Upload entries from the specified journal files matching <i>GLOB</i> instead of the default runtime and system journal paths. May be specified multiple times, in which case files will be suitably interleaved. This has the same meaning as <code>&#8211;file</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dd></dl>
 <p> <code>&#8211;cursor=</code></p>
 <dl>
-<dd>Upload entries from the location in the journal specified by the passed cursor. This has the same meaning as <code>&#8211;cursor</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dl>
+<dd>Upload entries from the location in the journal specified by the passed cursor. This has the same meaning as <code>&#8211;cursor</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dd></dl>
 <p> <code>&#8211;after-cursor=</code></p>
 <dl>
-<dd>Upload entries from the location in the journal <i>after</i> the location specified by the this cursor. This has the same meaning as <code>&#8211;after-cursor</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dl>
+<dd>Upload entries from the location in the journal <i>after</i> the location specified by the this cursor. This has the same meaning as <code>&#8211;after-cursor</code> option for <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1).</dd></dl>
 <p> <code>&#8211;save-state</code>[=<i>PATH</i>]</p>
 <dl>
-<dd>Upload entries from the location in the journal <i>after</i> the location specified by the cursor saved in file at <i>PATH</i> (/var/lib/systemd/journal-upload/state by default). After an entry is successfully uploaded, update this file with the cursor of that entry.</dl>
+<dd>Upload entries from the location in the journal <i>after</i> the location specified by the cursor saved in file at <i>PATH</i> (/var/lib/systemd/journal-upload/state by default). After an entry is successfully uploaded, update this file with the cursor of that entry.</dd></dl>
 <p> <code>&#8211;follow</code>[=<i>BOOL</i>]</p>
 <dl>
-<dd>If set to yes, then <code>systemd-journal-upload</code> waits for input.</dl>
+<dd>If set to yes, then <code>systemd-journal-upload</code> waits for input.</dd></dl>
 <p> <code>&#8211;key=</code></p>
 <dl>
-<dd>Takes a path to a SSL key file in PEM format. Defaults to /etc/ssl/private/journal-upload.pem.</dl>
+<dd>Takes a path to a SSL key file in PEM format. Defaults to /etc/ssl/private/journal-upload.pem.</dd></dl>
 <p> <code>&#8211;cert=</code></p>
 <dl>
-<dd>Takes a path to a SSL certificate file in PEM format. Defaults to /etc/ssl/certs/journal-upload.pem.</dl>
+<dd>Takes a path to a SSL certificate file in PEM format. Defaults to /etc/ssl/certs/journal-upload.pem.</dd></dl>
 <p> <code>&#8211;trust=</code></p>
 <dl>
-<dd>Takes a path to a SSL CA certificate file in PEM format, or <code>all</code>. If <code>all</code> is set, then certificate checking will be disabled. Defaults to /etc/ssl/ca/trusted.pem.</dl>
+<dd>Takes a path to a SSL CA certificate file in PEM format, or <code>all</code>. If <code>all</code> is set, then certificate checking will be disabled. Defaults to /etc/ssl/ca/trusted.pem.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print a short version string and exit.</dl>
+<dd>Print a short version string and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p>On success, 0 is returned; otherwise, a non-zero failure code is returned.</p>
 <h2>Examples</h2>
@@ -96,7 +96,7 @@ openssl req -newkey rsa:1024 -nodes -out $SERVER.csr -keyout $SERVER.key -subj &
 openssl ca -batch -config ca.conf -notext -in $SERVER.csr -out $SERVER.pem
 openssl req -newkey rsa:1024 -nodes -out $CLIENT.csr -keyout $CLIENT.key -subj &quot;/CN=$CLIENT/&quot;
 openssl ca -batch -config ca.conf -notext -in $CLIENT.csr -out $CLIENT.pem</pre>
-</dl>
+</dd></dl>
 <p> Generated files ca.pem, server.pem, and server.key should be installed on server, and ca.pem, client.pem, and client.key on the client. The location of those files can be specified using <i>TrustedCertificateFile=</i>, <i>ServerCertificateFile=</i>, <i>ServerKeyFile=</i>, in /etc/systemd/journal-remote.conf and /etc/systemd/journal-upload.conf, respectively. The default locations can be queried by using <code>systemd-journal-remote &#8211;help</code> and <code>systemd-journal-upload &#8211;help</code>.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-systemd-journal-remote/">systemd-journal-remote</a></code>(8), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></code>(8) </p>

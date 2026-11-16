@@ -14,20 +14,20 @@ description: "nand_command – [DEFAULT] Send command to NAND device"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>command</i></p>
 <dl>
-<dd>the command to be sent</dl>
+<dd>the command to be sent</dd></dl>
 <p> <i>column</i></p>
 <dl>
-<dd>the column address for this command, -1 if none</dl>
+<dd>the column address for this command, -1 if none</dd></dl>
 <p> <i>page_addr</i></p>
 <dl>
-<dd>the page address for this command, -1 if none</dl>
+<dd>the page address for this command, -1 if none</dd></dl>
 <h2>Description</h2>
 <p>Send command to NAND device. This function is used for small page devices (512 Bytes per page).</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

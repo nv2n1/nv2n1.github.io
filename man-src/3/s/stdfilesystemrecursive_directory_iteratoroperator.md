@@ -12,7 +12,6 @@ std::filesystem::recursive_directory_iterator::operator= - std::filesystem::recu
 
 <pre><code>recursive_directory_iterator &amp;operator=(const recursive_directory_iterator &amp;other) = default;
 (since C++ 17)
-
     recursive_directory_iterator &amp;
     operator=(recursive_directory_iterator &amp;&amp;other) = default;
 (since C++ 17)</code></pre> 

@@ -53,38 +53,38 @@ description: "task – A command line todo manager."
 <h2>READ SUBCOMMANDS</h2>
 <p> Reports are read subcommands. There are several reports currently predefined in Taskwarrior. The output and sort behavior of these reports can be configured in the configuration file. See also the man page <a href="/docs/linux/man/5-taskrc/">taskrc</a>(5). There are also other read subcommands that are not reports. </p>
 <dl>
-<dt><code>task &#8211;version</code></p>
-<dd> This is the only conventional command line argument that Taskwarrior supports, and is intended for add-on scripts to verify the version number of an installed Taskwarrior without invoking the mechanisms that create default files. </p>
-<dt><code>task &lt;filter&gt;</code></p>
-<dd> With no command specified, the default command is run, and the filter applied. </p>
-<dt><code>task &lt;filter&gt; active</code></p>
-<dd> Shows all tasks matching the filter that are started but not completed. </p>
-<dt><code>task &lt;filter&gt; all</code></p>
-<dd> Shows all tasks matching the filter, including parents of recurring tasks. </p>
-<dt><code>task &lt;filter&gt; blocked</code></p>
-<dd> Shows all tasks matching the filter, that are currently blocked by other tasks. </p>
-<dt><code>task &lt;filter&gt; blocking</code></p>
-<dd> Shows all tasks matching the filter, that block other tasks. </p>
-<dt><code>task &lt;filter&gt; burndown.daily</code></p>
-<dd> Shows a graphical burndown chart, by day. </p>
-<dt><code>task &lt;filter&gt; burndown.weekly</code></p>
-<dd> Shows a graphical burndown chart, by week. Note that &#8216;burndown&#8217; is an alias to the &#8216;burndown.weekly&#8217; report. </p>
-<dt><code>task &lt;filter&gt; burndown.monthly</code></p>
-<dd> Shows a graphical burndown chart, by month. </p>
-<dt><code>task calendar [due|&lt;month&gt; &lt;year&gt;|&lt;year&gt;] [y]</code></p>
-<dd> Shows a monthly calendar with due tasks marked. Shows one horizontal line of months. If the &#8216;y&#8217; argument is provided, will show at least one complete year. If a year is provided, such as &#8216;2015&#8217;, then that full year is shown. If both a month and a year are specified (&#8216;6 2015&#8217;) then the months displayed begin at the specified month and year. If the &#8216;due&#8217; argument is provided, will show the starting month of the earliest due task. </p>
-<dt><code>task colors [sample | legend]</code></p>
-<dd> Displays all possible colors, a named sample, or a legend containing all currently defined colors. </p>
-<dt><code>task columns [substring]</code></p>
-<dd> Displays all supported columns and formatting styles. Useful when creating custom reports. If a substring is provided, only matching column names are shown. </p>
-<dt><code>task commands</code></p>
-<dd> Shows all the supported commands, with some details of each. </p>
-<dt><code>task &lt;filter&gt; completed</code></p>
-<dd> Shows all tasks matching the filter that are completed. </p>
-<dt><code>task &lt;filter&gt; count</code></p>
-<dd> Displays only a count of tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; export</code></p>
-<dd> Exports all tasks in the JSON format. Redirect the output to a file, if you wish to save it, or pipe it to another command or script to convert it to another format. The standard task release comes with a few example scripts, such as: </p>
+<dt><code>task &#8211;version</code></dt>
+<dd> This is the only conventional command line argument that Taskwarrior supports, and is intended for add-on scripts to verify the version number of an installed Taskwarrior without invoking the mechanisms that create default files. </dd>
+<dt><code>task &lt;filter&gt;</code></dt>
+<dd> With no command specified, the default command is run, and the filter applied. </dd>
+<dt><code>task &lt;filter&gt; active</code></dt>
+<dd> Shows all tasks matching the filter that are started but not completed. </dd>
+<dt><code>task &lt;filter&gt; all</code></dt>
+<dd> Shows all tasks matching the filter, including parents of recurring tasks. </dd>
+<dt><code>task &lt;filter&gt; blocked</code></dt>
+<dd> Shows all tasks matching the filter, that are currently blocked by other tasks. </dd>
+<dt><code>task &lt;filter&gt; blocking</code></dt>
+<dd> Shows all tasks matching the filter, that block other tasks. </dd>
+<dt><code>task &lt;filter&gt; burndown.daily</code></dt>
+<dd> Shows a graphical burndown chart, by day. </dd>
+<dt><code>task &lt;filter&gt; burndown.weekly</code></dt>
+<dd> Shows a graphical burndown chart, by week. Note that &#8216;burndown&#8217; is an alias to the &#8216;burndown.weekly&#8217; report. </dd>
+<dt><code>task &lt;filter&gt; burndown.monthly</code></dt>
+<dd> Shows a graphical burndown chart, by month. </dd>
+<dt><code>task calendar [due|&lt;month&gt; &lt;year&gt;|&lt;year&gt;] [y]</code></dt>
+<dd> Shows a monthly calendar with due tasks marked. Shows one horizontal line of months. If the &#8216;y&#8217; argument is provided, will show at least one complete year. If a year is provided, such as &#8216;2015&#8217;, then that full year is shown. If both a month and a year are specified (&#8216;6 2015&#8217;) then the months displayed begin at the specified month and year. If the &#8216;due&#8217; argument is provided, will show the starting month of the earliest due task. </dd>
+<dt><code>task colors [sample | legend]</code></dt>
+<dd> Displays all possible colors, a named sample, or a legend containing all currently defined colors. </dd>
+<dt><code>task columns [substring]</code></dt>
+<dd> Displays all supported columns and formatting styles. Useful when creating custom reports. If a substring is provided, only matching column names are shown. </dd>
+<dt><code>task commands</code></dt>
+<dd> Shows all the supported commands, with some details of each. </dd>
+<dt><code>task &lt;filter&gt; completed</code></dt>
+<dd> Shows all tasks matching the filter that are completed. </dd>
+<dt><code>task &lt;filter&gt; count</code></dt>
+<dd> Displays only a count of tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; export</code></dt>
+<dd> Exports all tasks in the JSON format. Redirect the output to a file, if you wish to save it, or pipe it to another command or script to convert it to another format. The standard task release comes with a few example scripts, such as: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>export-csv.pl<br />
 &nbsp;<wbr>&nbsp;<wbr>export-sql.py<br />
 &nbsp;<wbr>&nbsp;<wbr>export-xml.py<br />
@@ -95,99 +95,99 @@ description: "task – A command line todo manager."
 &nbsp;<wbr>&nbsp;<wbr>export-ical.pl<br />
 &nbsp;<wbr>&nbsp;<wbr>export-xml.pl<br />
 &nbsp;<wbr>&nbsp;<wbr>export-yad.pl </p>
-<dt><code>task &lt;filter&gt; ghistory.annual</code></p>
-<dd> Shows a graphical report of task status by year. </p>
-<dt><code>task &lt;filter&gt; ghistory.monthly</code></p>
-<dd> Shows a graphical report of task status by month. Note that &#8216;ghistory&#8217; is an alias to &#8216;ghistory.monthly&#8217;. </p>
-<dt><code>task help</code></p>
-<dd> Shows the long usage text. </p>
-<dt><code>task &lt;filter&gt; history.annual</code></p>
-<dd> Shows a report of task history by year. </p>
-<dt><code>task &lt;filter&gt; history.monthly</code></p>
-<dd> Shows a report of task history by month. Note that &#8216;history&#8217; is an alias to &#8216;history.monthly&#8217;. </p>
-<dt><code>task &lt;filter&gt; ids</code></p>
-<dd> Applies the filter then extracts only the task IDs and presents them as a space-separated list. This is useful as input to a task command, to achieve this: </p>
+<dt><code>task &lt;filter&gt; ghistory.annual</code></dt>
+<dd> Shows a graphical report of task status by year. </dd>
+<dt><code>task &lt;filter&gt; ghistory.monthly</code></dt>
+<dd> Shows a graphical report of task status by month. Note that &#8216;ghistory&#8217; is an alias to &#8216;ghistory.monthly&#8217;. </dd>
+<dt><code>task help</code></dt>
+<dd> Shows the long usage text. </dd>
+<dt><code>task &lt;filter&gt; history.annual</code></dt>
+<dd> Shows a report of task history by year. </dd>
+<dt><code>task &lt;filter&gt; history.monthly</code></dt>
+<dd> Shows a report of task history by month. Note that &#8216;history&#8217; is an alias to &#8216;history.monthly&#8217;. </dd>
+<dt><code>task &lt;filter&gt; ids</code></dt>
+<dd> Applies the filter then extracts only the task IDs and presents them as a space-separated list. This is useful as input to a task command, to achieve this: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>$(task project:Home ids)&nbsp;<wbr>modify priority:H </p>
 <p> This example first gets the IDs for the project:Home filter, then sets the priority to H for each of those tasks. This can also be achieved directly: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>task project:Home modify priority:H </p>
 <p> This command is mainly of use to external scripts. </p>
-<dt><code>task &lt;filter&gt; uuids</code></p>
-<dd> Applies the filter on all tasks (even deleted and completed tasks) then extracts only the task UUIDs and presents them as a comma-separated list. This is useful as input to a task command, to achieve this: </p>
+<dt><code>task &lt;filter&gt; uuids</code></dt>
+<dd> Applies the filter on all tasks (even deleted and completed tasks) then extracts only the task UUIDs and presents them as a comma-separated list. This is useful as input to a task command, to achieve this: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>$(task project:Home status:completed uuids)&nbsp;<wbr>modify status:pending </p>
 <p> This example first gets the UUIDs for the project:Home and status:completed filters, then makes each of those tasks pending again. </p>
 <p> This command is mainly of use to external scripts. </p>
-<dt><code>task udas</code></p>
-<dd> Shows a list of UDAs that are defined, including their name, type, label and allowed values. Also shows UDA usage and any orphan UDAs. </p>
-<dt><code>task &lt;filter&gt; information</code></p>
-<dd> Shows all data and metadata for the specified tasks. This is the only means of displaying all aspects of a given task, including the change history. </p>
-<dt><code>task &lt;filter&gt; list</code></p>
-<dd> Provides a standard listing of tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; long</code></p>
-<dd> Provides the most detailed listing of tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; ls</code></p>
-<dd> Provides a short listing of tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; minimal</code></p>
-<dd> Provides a minimal listing of tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; newest</code></p>
-<dd> Shows the newest tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; next</code></p>
-<dd> Shows a page of the most urgent tasks, sorted by urgency, which is a calculated value. </p>
-<dt><code>task &lt;filter&gt; ready</code></p>
-<dd> Shows a page of the most urgent ready tasks, sorted by urgency. A ready task is one that is either unscheduled, or has a scheduled date that is past and has no wait date. </p>
-<dt><code>task &lt;filter&gt; oldest</code></p>
-<dd> Shows the oldest tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; overdue</code></p>
-<dd> Shows all incomplete tasks matching the filter that are beyond their due date. </p>
-<dt><code>task &lt;filter&gt; projects</code></p>
-<dd> Lists all project names that are currently used by pending tasks, and the number of tasks for each. </p>
-<dt><code>task &lt;filter&gt; recurring</code></p>
-<dd> Shows all recurring tasks matching the filter. </p>
-<dt><code>task &lt;filter&gt; unblocked</code></p>
-<dd> Shows all tasks that are not currently blocked by other tasks, matching the filter. </p>
-<dt><code>task &lt;filter&gt; waiting</code></p>
-<dd> Shows all waiting tasks matching the filter. </p>
+<dt><code>task udas</code></dt>
+<dd> Shows a list of UDAs that are defined, including their name, type, label and allowed values. Also shows UDA usage and any orphan UDAs. </dd>
+<dt><code>task &lt;filter&gt; information</code></dt>
+<dd> Shows all data and metadata for the specified tasks. This is the only means of displaying all aspects of a given task, including the change history. </dd>
+<dt><code>task &lt;filter&gt; list</code></dt>
+<dd> Provides a standard listing of tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; long</code></dt>
+<dd> Provides the most detailed listing of tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; ls</code></dt>
+<dd> Provides a short listing of tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; minimal</code></dt>
+<dd> Provides a minimal listing of tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; newest</code></dt>
+<dd> Shows the newest tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; next</code></dt>
+<dd> Shows a page of the most urgent tasks, sorted by urgency, which is a calculated value. </dd>
+<dt><code>task &lt;filter&gt; ready</code></dt>
+<dd> Shows a page of the most urgent ready tasks, sorted by urgency. A ready task is one that is either unscheduled, or has a scheduled date that is past and has no wait date. </dd>
+<dt><code>task &lt;filter&gt; oldest</code></dt>
+<dd> Shows the oldest tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; overdue</code></dt>
+<dd> Shows all incomplete tasks matching the filter that are beyond their due date. </dd>
+<dt><code>task &lt;filter&gt; projects</code></dt>
+<dd> Lists all project names that are currently used by pending tasks, and the number of tasks for each. </dd>
+<dt><code>task &lt;filter&gt; recurring</code></dt>
+<dd> Shows all recurring tasks matching the filter. </dd>
+<dt><code>task &lt;filter&gt; unblocked</code></dt>
+<dd> Shows all tasks that are not currently blocked by other tasks, matching the filter. </dd>
+<dt><code>task &lt;filter&gt; waiting</code></dt>
+<dd> Shows all waiting tasks matching the filter. </dd>
 </dl>
 <h2>WRITE SUBCOMMANDS</h2>
 <dl>
-<dt><code>task add &lt;mods&gt;</code></p>
-<dd> Adds a new pending task to the task list. </p>
-<dt><code>task &lt;filter&gt; annotate &lt;mods&gt;</code></p>
-<dd> Adds an annotation to an existing task. </p>
-<dt><code>task &lt;filter&gt; append &lt;mods&gt;</code></p>
-<dd> Appends description text to an existing task. </p>
-<dt><code>task &lt;filter&gt; delete &lt;mods&gt;</code></p>
-<dd> Deletes the specified task from task list. </p>
-<dt><code>task &lt;filter&gt; denotate &lt;mods&gt;</code></p>
-<dd> Deletes an annotation for the specified task. If the provided description matches an annotation exactly, the corresponding annotation is deleted. If the provided description matches annotations partly, the first partly matched annotation is deleted. </p>
-<dt><code>task &lt;filter&gt; done &lt;mods&gt;</code></p>
-<dd> Marks the specified task as done. </p>
-<dt><code>task &lt;filter&gt; duplicate &lt;mods&gt;</code></p>
-<dd> Duplicates the specified task and allows modifications. </p>
-<dt><code>task &lt;filter&gt; edit</code></p>
-<dd> Launches a text editor to let you modify all aspects of a task directly. In general, this is not the recommended method of modifying tasks, but is provided for exceptional circumstances. Use carefully. </p>
-<dt><code>task import [&lt;file&gt; &#8230;]</code></p>
-<dd> Imports tasks in the JSON format. Can be used to add new tasks, or update existing ones. Tasks are identified by their UUID. </p>
+<dt><code>task add &lt;mods&gt;</code></dt>
+<dd> Adds a new pending task to the task list. </dd>
+<dt><code>task &lt;filter&gt; annotate &lt;mods&gt;</code></dt>
+<dd> Adds an annotation to an existing task. </dd>
+<dt><code>task &lt;filter&gt; append &lt;mods&gt;</code></dt>
+<dd> Appends description text to an existing task. </dd>
+<dt><code>task &lt;filter&gt; delete &lt;mods&gt;</code></dt>
+<dd> Deletes the specified task from task list. </dd>
+<dt><code>task &lt;filter&gt; denotate &lt;mods&gt;</code></dt>
+<dd> Deletes an annotation for the specified task. If the provided description matches an annotation exactly, the corresponding annotation is deleted. If the provided description matches annotations partly, the first partly matched annotation is deleted. </dd>
+<dt><code>task &lt;filter&gt; done &lt;mods&gt;</code></dt>
+<dd> Marks the specified task as done. </dd>
+<dt><code>task &lt;filter&gt; duplicate &lt;mods&gt;</code></dt>
+<dd> Duplicates the specified task and allows modifications. </dd>
+<dt><code>task &lt;filter&gt; edit</code></dt>
+<dd> Launches a text editor to let you modify all aspects of a task directly. In general, this is not the recommended method of modifying tasks, but is provided for exceptional circumstances. Use carefully. </dd>
+<dt><code>task import [&lt;file&gt; &#8230;]</code></dt>
+<dd> Imports tasks in the JSON format. Can be used to add new tasks, or update existing ones. Tasks are identified by their UUID. </dd>
 <p> If no file or &quot;-&quot; is specified, import tasks from STDIN. </p>
 <p> Setting rc.recurrence.confirmation to an appropriate level is recommended if import is to be used in automated workflows. See <a href="/docs/linux/man/5-taskrc/">taskrc</a>(5). </p>
 <p> For importing other file formats, the standard task release comes with a few example scripts, such as: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>import-todo.sh.pl<br />
 &nbsp;<wbr>&nbsp;<wbr>import-yaml.pl </p>
-<dt><code>task log &lt;mods&gt;</code></p>
-<dd> Adds a new task that is already completed, to the task list. </p>
-<dt><code>task &lt;filter&gt; modify &lt;mods&gt;</code></p>
-<dd> Modifies the existing task with provided information. </p>
-<dt><code>task &lt;filter&gt; prepend &lt;mods&gt;</code></p>
-<dd> Prepends description text to an existing task. </p>
-<dt><code>task &lt;filter&gt; start &lt;mods&gt;</code></p>
-<dd> Marks the specified tasks as started. </p>
-<dt><code>task &lt;filter&gt; stop &lt;mods&gt;</code></p>
-<dd> Removes the <i>start</i> time from the specified task. </p>
+<dt><code>task log &lt;mods&gt;</code></dt>
+<dd> Adds a new task that is already completed, to the task list. </dd>
+<dt><code>task &lt;filter&gt; modify &lt;mods&gt;</code></dt>
+<dd> Modifies the existing task with provided information. </dd>
+<dt><code>task &lt;filter&gt; prepend &lt;mods&gt;</code></dt>
+<dd> Prepends description text to an existing task. </dd>
+<dt><code>task &lt;filter&gt; start &lt;mods&gt;</code></dt>
+<dd> Marks the specified tasks as started. </dd>
+<dt><code>task &lt;filter&gt; stop &lt;mods&gt;</code></dt>
+<dd> Removes the <i>start</i> time from the specified task. </dd>
 </dl>
 <h2>MISCELLANEOUS SUBCOMMANDS</h2>
 <p> Miscellaneous subcommands either accept no command line arguments, or accept non-standard arguments. </p>
 <dl>
-<dt><code>task calc &lt;expression&gt;</code></p>
-<dd> Evaluates an algebraic expression. Can be used to test how Taskwarrior parses and evaluates the expression given on the command line. </p>
+<dt><code>task calc &lt;expression&gt;</code></dt>
+<dd> Evaluates an algebraic expression. Can be used to test how Taskwarrior parses and evaluates the expression given on the command line. </dd>
 <p> Examples: </p>
 <p>&nbsp;<wbr>task calc 1&nbsp;<wbr>+&nbsp;<wbr>1<br />
 &nbsp;<wbr>2 </p>
@@ -195,97 +195,97 @@ description: "task – A command line todo manager."
 &nbsp;<wbr>2015-03-26T18:06:57 </p>
 <p>&nbsp;<wbr>task calc eom<br />
 &nbsp;<wbr>2015-03-31T23:59:59 </p>
-<dt><code>task config [name [value | &#8221;]]</code></p>
-<dd> Add, modify and remove settings directly in the Taskwarrior configuration. This command either modifies the &#8216;name&#8217; setting with a new value of &#8216;value&#8217;, or adds a new entry that is equivalent to &#8216;name=value&#8217;: </p>
+<dt><code>task config [name [value | &#8221;]]</code></dt>
+<dd> Add, modify and remove settings directly in the Taskwarrior configuration. This command either modifies the &#8216;name&#8217; setting with a new value of &#8216;value&#8217;, or adds a new entry that is equivalent to &#8216;name=value&#8217;: </dd>
 <p>&nbsp;<wbr>task config name value </p>
 <p> This command sets a blank value. This has the effect of suppressing any default value: </p>
 <p>&nbsp;<wbr>task config name&nbsp;<wbr>&#8221; </p>
 <p> Finally, this command removes any &#8216;name=&#8230;&#8217; entry from the .taskrc file: </p>
 <p>&nbsp;<wbr>task config name </p>
-<dt><code>task context &lt;name&gt;</code></p>
-<dd> Sets the currently active context. See the CONTEXT section. </p>
+<dt><code>task context &lt;name&gt;</code></dt>
+<dd> Sets the currently active context. See the CONTEXT section. </dd>
 <p> Example: </p>
 <p>&nbsp;<wbr>task context work </p>
-<dt><code>task context delete &lt;name&gt;</code></p>
-<dd> Deletes the context with the name &lt;name&gt;. If the context being deleted is currently set as active, it will be unset. </p>
+<dt><code>task context delete &lt;name&gt;</code></dt>
+<dd> Deletes the context with the name &lt;name&gt;. If the context being deleted is currently set as active, it will be unset. </dd>
 <p> Example: </p>
 <p>&nbsp;<wbr>task context delete work </p>
-<dt><code>task context define &lt;name&gt; &lt;filter&gt;</code></p>
-<dd> Defines a new context with name &lt;name&gt; and definition &lt;filter&gt;. This command does not affect the currently set context, just adds a new context definition. </p>
+<dt><code>task context define &lt;name&gt; &lt;filter&gt;</code></dt>
+<dd> Defines a new context with name &lt;name&gt; and definition &lt;filter&gt;. This command does not affect the currently set context, just adds a new context definition. </dd>
 <p> Examples: </p>
 <p>&nbsp;<wbr>task context define work project:Work<br />
 &nbsp;<wbr>task context define home project:Home or&nbsp;<wbr>+home<br />
 &nbsp;<wbr>task context define superurgent due:today and&nbsp;<wbr>+urgent </p>
-<dt><code>task context list</code></p>
-<dd> Outputs a list of available contexts along with their definitions. </p>
-<dt><code>task context none</code></p>
-<dd> Clears the currently active context, if any was set. </p>
-<dt><code>task context show</code></p>
-<dd> Shows the currently active context, along with its definition. </p>
-<dt><code>task diagnostics</code></p>
-<dd> Shows diagnostic information, of the kind needed when reporting a problem. When you report a bug, it is likely that the platform, version, and environment are important. Running this command generates a summary of similar information that should accompany a bug report. </p>
+<dt><code>task context list</code></dt>
+<dd> Outputs a list of available contexts along with their definitions. </dd>
+<dt><code>task context none</code></dt>
+<dd> Clears the currently active context, if any was set. </dd>
+<dt><code>task context show</code></dt>
+<dd> Shows the currently active context, along with its definition. </dd>
+<dt><code>task diagnostics</code></dt>
+<dd> Shows diagnostic information, of the kind needed when reporting a problem. When you report a bug, it is likely that the platform, version, and environment are important. Running this command generates a summary of similar information that should accompany a bug report. </dd>
 <p> It includes compiler, library and software information. It does not include any personal information, other than the location and size of your task data files. </p>
 <p> This command also performs a diagnostic scan of your data files looking for common problems, such as duplicate UUIDs. </p>
-<dt><code>task execute &lt;external command&gt;</code></p>
-<dd> Executes the specified command. Not useful by itself, but when used in conjunction with aliases and extensions can provide seamless integration. </p>
-<dt><code>task logo</code></p>
-<dd> Displays the Taskwarrior logo. </p>
-<dt><code>task reports</code></p>
-<dd> Lists all supported reports. This includes the built-in reports, and any custom reports you have defined. </p>
-<dt><code>task show [all | substring]</code></p>
-<dd> Shows all the current settings. If a substring is specified just the settings containing that substring will be displayed. </p>
-<dt><code>task &lt;filter&gt; stats</code></p>
-<dd> Shows statistics of the tasks defined by the filter. </p>
-<dt><code>task &lt;filter&gt; summary</code></p>
-<dd> Shows a report of aggregated task status by project. </p>
-<dt><code>task &lt;filter&gt; tags</code></p>
-<dd> Show a list of all tags used. Any special tags used are highlighted. Note that virtual tags are not listed &#8211; they don&#8217;t really exist, and are just a convenient notation for other task metadata. It is an error to attempt to add or remove a virtual tag. </p>
-<dt><code>task timesheet [weeks]</code></p>
-<dd> Shows a weekly report of tasks completed and started. </p>
-<dt><code>task undo</code></p>
-<dd> Reverts the most recent action. Obeys the confirmation setting. </p>
-<dt><code>task version</code></p>
-<dd> Shows the Taskwarrior version number. </p>
+<dt><code>task execute &lt;external command&gt;</code></dt>
+<dd> Executes the specified command. Not useful by itself, but when used in conjunction with aliases and extensions can provide seamless integration. </dd>
+<dt><code>task logo</code></dt>
+<dd> Displays the Taskwarrior logo. </dd>
+<dt><code>task reports</code></dt>
+<dd> Lists all supported reports. This includes the built-in reports, and any custom reports you have defined. </dd>
+<dt><code>task show [all | substring]</code></dt>
+<dd> Shows all the current settings. If a substring is specified just the settings containing that substring will be displayed. </dd>
+<dt><code>task &lt;filter&gt; stats</code></dt>
+<dd> Shows statistics of the tasks defined by the filter. </dd>
+<dt><code>task &lt;filter&gt; summary</code></dt>
+<dd> Shows a report of aggregated task status by project. </dd>
+<dt><code>task &lt;filter&gt; tags</code></dt>
+<dd> Show a list of all tags used. Any special tags used are highlighted. Note that virtual tags are not listed &#8211; they don&#8217;t really exist, and are just a convenient notation for other task metadata. It is an error to attempt to add or remove a virtual tag. </dd>
+<dt><code>task timesheet [weeks]</code></dt>
+<dd> Shows a weekly report of tasks completed and started. </dd>
+<dt><code>task undo</code></dt>
+<dd> Reverts the most recent action. Obeys the confirmation setting. </dd>
+<dt><code>task version</code></dt>
+<dd> Shows the Taskwarrior version number. </dd>
 </dl>
 <h2>HELPER SUBCOMMANDS</h2>
 <dl>
-<dt><code>task _aliases</code></p>
-<dd> Generates a list of all aliases, for autocompletion purposes. </p>
-<dt><code>task _columns</code></p>
-<dd> Displays only a list of supported columns. </p>
-<dt><code>task _commands</code></p>
-<dd> Generates a list of all commands, for autocompletion purposes. </p>
-<dt><code>task _config</code></p>
-<dd> Lists all supported configuration variables, for completion purposes. </p>
-<dt><code>task _context</code></p>
-<dd> Lists all available context variables, for completion purposes. </p>
-<dt><code>task &lt;filter&gt; _ids</code></p>
-<dd> Shows only the IDs of matching tasks, in the form of a list. Deprecated in favor of _unique. </p>
-<dt><code>task _show</code></p>
-<dd> Shows the combined defaults and overrides of the configuration settings, for use by third-party applications. </p>
-<dt><code>task &lt;filter&gt; _unique &lt;attribute&gt;</code></p>
-<dd> Reports a unique set of attribute values. For example, to see all the active projects: </p>
+<dt><code>task _aliases</code></dt>
+<dd> Generates a list of all aliases, for autocompletion purposes. </dd>
+<dt><code>task _columns</code></dt>
+<dd> Displays only a list of supported columns. </dd>
+<dt><code>task _commands</code></dt>
+<dd> Generates a list of all commands, for autocompletion purposes. </dd>
+<dt><code>task _config</code></dt>
+<dd> Lists all supported configuration variables, for completion purposes. </dd>
+<dt><code>task _context</code></dt>
+<dd> Lists all available context variables, for completion purposes. </dd>
+<dt><code>task &lt;filter&gt; _ids</code></dt>
+<dd> Shows only the IDs of matching tasks, in the form of a list. Deprecated in favor of _unique. </dd>
+<dt><code>task _show</code></dt>
+<dd> Shows the combined defaults and overrides of the configuration settings, for use by third-party applications. </dd>
+<dt><code>task &lt;filter&gt; _unique &lt;attribute&gt;</code></dt>
+<dd> Reports a unique set of attribute values. For example, to see all the active projects: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>+PENDING&nbsp;<wbr>_unique projects </p>
-<dt><code>task &lt;filter&gt; _uuids</code></p>
-<dd> Shows only the UUIDs of matching tasks among all tasks (even deleted and completed tasks), in the form of a list. Deprecated in favor of _unique. </p>
-<dt><code>task _udas</code></p>
-<dd> Shows only defined UDA names, in the form of a list. </p>
-<dt><code>task &lt;filter&gt; _projects</code></p>
-<dd> Shows only a list of all project names used. Deprecated in favor of _unique. </p>
-<dt><code>task &lt;filter&gt; _tags</code></p>
-<dd> Shows only a list of all tags used, for autocompletion purposes. Deprecated in favor of _unique. </p>
-<dt><code>task &lt;filter&gt; _urgency</code></p>
-<dd> Displays the urgency measure of a task. </p>
-<dt><code>task _version</code></p>
-<dd> Shows only the Taskwarrior version number. </p>
-<dt><code>task _zshcommands</code></p>
-<dd> Generates a list of all commands, for zsh autocompletion purposes. </p>
-<dt><code>task &lt;filter&gt; _zshids</code></p>
-<dd> Shows the IDs and descriptions of matching tasks. </p>
-<dt><code>task &lt;filter&gt; _zshuuids</code></p>
-<dd> Shows the UUIDs and descriptions of matching tasks. </p>
-<dt><code>task _get &lt;DOM&gt; [&lt;DOM&gt; &#8230;]</code></p>
-<dd> Accesses and displays the DOM reference(s). Used to extract individual values from tasks, or the system. Supported DOM references are: </p>
+<dt><code>task &lt;filter&gt; _uuids</code></dt>
+<dd> Shows only the UUIDs of matching tasks among all tasks (even deleted and completed tasks), in the form of a list. Deprecated in favor of _unique. </dd>
+<dt><code>task _udas</code></dt>
+<dd> Shows only defined UDA names, in the form of a list. </dd>
+<dt><code>task &lt;filter&gt; _projects</code></dt>
+<dd> Shows only a list of all project names used. Deprecated in favor of _unique. </dd>
+<dt><code>task &lt;filter&gt; _tags</code></dt>
+<dd> Shows only a list of all tags used, for autocompletion purposes. Deprecated in favor of _unique. </dd>
+<dt><code>task &lt;filter&gt; _urgency</code></dt>
+<dd> Displays the urgency measure of a task. </dd>
+<dt><code>task _version</code></dt>
+<dd> Shows only the Taskwarrior version number. </dd>
+<dt><code>task _zshcommands</code></dt>
+<dd> Generates a list of all commands, for zsh autocompletion purposes. </dd>
+<dt><code>task &lt;filter&gt; _zshids</code></dt>
+<dd> Shows the IDs and descriptions of matching tasks. </dd>
+<dt><code>task &lt;filter&gt; _zshuuids</code></dt>
+<dd> Shows the UUIDs and descriptions of matching tasks. </dd>
+<dt><code>task _get &lt;DOM&gt; [&lt;DOM&gt; &#8230;]</code></dt>
+<dd> Accesses and displays the DOM reference(s). Used to extract individual values from tasks, or the system. Supported DOM references are: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>rc.&lt;name&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>context.program<br />
 &nbsp;<wbr>&nbsp;<wbr>context.args<br />
@@ -304,11 +304,11 @@ description: "task – A command line todo manager."
 </dl>
 <h2>ATTRIBUTES AND METADATA</h2>
 <dl>
-<dt><code>ID</code></p>
+<dt><code>ID</code></dt>
 <dd> Tasks can be specified uniquely by IDs, which are simply the indexes of the tasks in the data file. The ID of a task may therefore change, but only when a command is run that displays IDs. When modifying tasks, it is safe to rely on the last displayed ID. Always run a report to check you have the right ID for a task. IDs can be given to task as a sequence, for example,<br />
- <code>task 1,4-10,19 delete</code> </p>
-<dt><code>+tag|-tag</code></p>
-<dd> Tags are arbitrary words associated with a task. Use + to add a tag and &#8211; to remove a tag from a task. A task can have any quantity of tags. </p>
+ <code>task 1,4-10,19 delete</code> </dd>
+<dt><code>+tag|-tag</code></dt>
+<dd> Tags are arbitrary words associated with a task. Use + to add a tag and &#8211; to remove a tag from a task. A task can have any quantity of tags. </dd>
 <p> Certain tags (called &#8216;special tags&#8217;), can be used to affect the way tasks are treated. For example, if a task has the special tag &#8216;nocolor&#8217;, then it is exempt from all color rules. The supported special tags are: </p>
 <p>&nbsp;<wbr>+nocolor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Disable color rules processing for this task<br />
 &nbsp;<wbr>+nonag&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Completion of this task suppresses all nag messages<br />
@@ -345,32 +345,32 @@ description: "task – A command line todo manager."
 &nbsp;<wbr>YEAR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this year<br />
 &nbsp;<wbr>YESTERDAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task was due sometime yesterday </p>
 <p> You can use +BLOCKED to filter blocked tasks, or -BLOCKED for unblocked tasks. Similarly, -BLOCKED is equivalent to +UNBLOCKED. It is an error to attempt to add or remove a virtual tag. </p>
-<dt><code>project:&lt;project-name&gt;</code></p>
-<dd> Specifies the project to which a task is related to. </p>
-<dt><code>priority:H|M|L or priority:</code></p>
-<dd> Specifies High, Medium, Low and no priority for a task. </p>
-<dt><code>due:&lt;due-date&gt;</code></p>
-<dd> Specifies the due-date of a task. </p>
-<dt><code>recur:&lt;frequency&gt;</code></p>
-<dd> Specifies the frequency of a recurrence of a task. </p>
-<dt><code>scheduled:&lt;ready-date&gt;</code></p>
-<dd> Specifies the date after which a task can be accomplished. </p>
-<dt><code>until:&lt;expiration date of task&gt;</code></p>
-<dd> Specifies the expiration date of a task, after which it will be deleted. </p>
-<dt><code>limit:&lt;number-of-rows&gt;</code></p>
-<dd> Specifies the desired number of tasks a report should show, if a positive integer is given. The value &#8216;page&#8217; may also be used, and will limit the report output to as many lines of text as will fit on screen. This defaults to 25 lines. </p>
-<dt><code>wait:&lt;wait-date&gt;</code></p>
-<dd> When a task is given a wait date, it is hidden from most reports by changing its status to &#8216;waiting&#8217;. When that date is passed, the status is changed back to &#8216;pending&#8217;, and the task becomes visible. </p>
-<dt><code>depends:&lt;id1,id2 &#8230;&gt;</code></p>
-<dd> Declares this task to be dependent on id1 and id2. This means that the tasks id1 and id2 should be completed before this task. Consequently, this task will then show up on the &#8216;blocked&#8217; report. It accepts a comma-separated list of ID numbers, UUID numbers and ID ranges. When prefixing any element of this list by &#8216;-&#8216;, the specified tasks are removed from the dependency list. </p>
-<dt><code>entry:&lt;entry-date&gt;</code></p>
-<dd> For report purposes, specifies the date that a task was created. </p>
+<dt><code>project:&lt;project-name&gt;</code></dt>
+<dd> Specifies the project to which a task is related to. </dd>
+<dt><code>priority:H|M|L or priority:</code></dt>
+<dd> Specifies High, Medium, Low and no priority for a task. </dd>
+<dt><code>due:&lt;due-date&gt;</code></dt>
+<dd> Specifies the due-date of a task. </dd>
+<dt><code>recur:&lt;frequency&gt;</code></dt>
+<dd> Specifies the frequency of a recurrence of a task. </dd>
+<dt><code>scheduled:&lt;ready-date&gt;</code></dt>
+<dd> Specifies the date after which a task can be accomplished. </dd>
+<dt><code>until:&lt;expiration date of task&gt;</code></dt>
+<dd> Specifies the expiration date of a task, after which it will be deleted. </dd>
+<dt><code>limit:&lt;number-of-rows&gt;</code></dt>
+<dd> Specifies the desired number of tasks a report should show, if a positive integer is given. The value &#8216;page&#8217; may also be used, and will limit the report output to as many lines of text as will fit on screen. This defaults to 25 lines. </dd>
+<dt><code>wait:&lt;wait-date&gt;</code></dt>
+<dd> When a task is given a wait date, it is hidden from most reports by changing its status to &#8216;waiting&#8217;. When that date is passed, the status is changed back to &#8216;pending&#8217;, and the task becomes visible. </dd>
+<dt><code>depends:&lt;id1,id2 &#8230;&gt;</code></dt>
+<dd> Declares this task to be dependent on id1 and id2. This means that the tasks id1 and id2 should be completed before this task. Consequently, this task will then show up on the &#8216;blocked&#8217; report. It accepts a comma-separated list of ID numbers, UUID numbers and ID ranges. When prefixing any element of this list by &#8216;-&#8216;, the specified tasks are removed from the dependency list. </dd>
+<dt><code>entry:&lt;entry-date&gt;</code></dt>
+<dd> For report purposes, specifies the date that a task was created. </dd>
 </dl>
 <h2>ATTRIBUTE MODIFIERS</h2>
 <p> Attribute modifiers improve filters. Supported modifiers are: </p>
 <dl>
 <dt>
-<dd> <code>before (synonyms under, below)</code><br />
+</dt><dd> <code>before (synonyms under, below)</code><br />
  <code>after (synonyms over, above)</code><br />
  <code>none</code><br />
  <code>any</code><br />
@@ -381,11 +381,11 @@ description: "task – A command line todo manager."
  <code>startswith (synonym left)</code><br />
  <code>endswith (synonym right)</code><br />
  <code>word</code><br />
- <code>noword</code></dl>
+ <code>noword</code></dd></dl>
 <p> For example: </p>
 <dl>
 <dt>
-<dd> task due.before:eom priority.not:L list</dl>
+</dt><dd> task due.before:eom priority.not:L list</dd></dl>
 <p> The <i>before</i> modifier is used to compare values, preserving semantics, so project.before:B list all projects that begin with &#8216;A&#8217;. Priority &#8216;L&#8217; is before &#8216;M&#8217;, and due:2011-01-01 is before due:2011-01-02. The synonyms &#8216;under&#8217; and &#8216;below&#8217; are included to allow filters that read more naturally. </p>
 <p> The <i>after</i> modifier is the inverse of the <i>before</i> modifier. </p>
 <p> The <i>none</i> modifier requires that the attribute does not have a value. For example: </p>
@@ -446,79 +446,75 @@ description: "task – A command line todo manager."
 <h3>DATES</h3>
 <p> Taskwarrior reads dates from the command line and displays dates in the reports. The expected and desired date format is determined by the configuration variable <i>dateformat</i> </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Exact specification</p>
-<dd> task &#8230; due:7/14/2008 </p>
-<dt>ISO-8601</p>
-<dd> task &#8230; due:2013-03-14T22:30:00Z </p>
-<dt>Relative wording</p>
+<dt>Exact specification</dt>
+<dd> task &#8230; due:7/14/2008 </dd>
+<dt>ISO-8601</dt>
+<dd> task &#8230; due:2013-03-14T22:30:00Z </dd>
+<dt>Relative wording</dt>
 <dd> task &#8230; due:now<br />
  task &#8230; due:today<br />
  task &#8230; due:yesterday<br />
- task &#8230; due:tomorrow </p>
-<dt>Day number with ordinal</p>
+ task &#8230; due:tomorrow </dd>
+<dt>Day number with ordinal</dt>
 <dd> task &#8230; due:23rd<br />
  task &#8230; due:3wks<br />
  task &#8230; due:1day<br />
- task &#8230; due:9hrs </p>
-<dt>Start of next (work) week (Monday), calendar week (Sunday or Monday), month, quarter and year</p>
+ task &#8230; due:9hrs </dd>
+<dt>Start of next (work) week (Monday), calendar week (Sunday or Monday), month, quarter and year</dt>
 <dd>
  task &#8230; due:sow<br />
  task &#8230; due:soww<br />
  task &#8230; due:socw<br />
  task &#8230; due:som<br />
  task &#8230; due:soq<br />
- task &#8230; due:soy </p>
-<dt>End of current (work) week (Friday), calendar week (Saturday or Sunday), month, quarter and year</p>
+ task &#8230; due:soy </dd>
+<dt>End of current (work) week (Friday), calendar week (Saturday or Sunday), month, quarter and year</dt>
 <dd>
  task &#8230; due:eow<br />
  task &#8230; due:eoww<br />
  task &#8230; due:eocw<br />
  task &#8230; due:eom<br />
  task &#8230; due:eoq<br />
- task &#8230; due:eoy </p>
-<dt>At some point or later</p>
+ task &#8230; due:eoy </dd>
+<dt>At some point or later</dt>
 <dd>
  task &#8230; wait:later<br />
- task &#8230; wait:someday </p>
+ task &#8230; wait:someday </dd>
 <p> This sets the wait date to 1/18/2038. </p>
-<dt>Next occurring weekday</p>
-<dd> task &#8230; due:fri </p>
-<dt>Predictable holidays</p>
+<dt>Next occurring weekday</dt>
+<dd> task &#8230; due:fri </dd>
+<dt>Predictable holidays</dt>
 <dd> task &#8230; due:goodfriday<br />
  task &#8230; due:easter<br />
  task &#8230; due:eastermonday<br />
  task &#8230; due:ascension<br />
  task &#8230; due:pentecost<br />
  task &#8230; due:midsommar<br />
- task &#8230; due:midsommarafton</dl>
+ task &#8230; due:midsommarafton</dd></dl>
 </dl>
 <h3>FREQUENCIES</h3>
 <p> Recurrence periods. Taskwarrior supports several ways of specifying the <i>frequency</i> of recurring tasks. </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>daily, day, 1da, 2da, &#8230;</p>
-<dd> Every day or a number of days. </p>
-<dt>weekdays</p>
-<dd> Mondays, Tuesdays, Wednesdays, Thursdays, Fridays and skipping weekend days. </p>
-<dt>weekly, 1wk, 2wks, &#8230;</p>
-<dd> Every week or a number of weeks. </p>
-<dt>biweekly, fortnight</p>
-<dd> Every two weeks. </p>
-<dt>monthly, month, 1mo, 2mo, &#8230;</p>
-<dd> Every month. </p>
-<dt>quarterly, 1qtr, 2qtrs, &#8230;</p>
-<dd> Every three months, a quarter, or a number of quarters. </p>
-<dt>semiannual</p>
-<dd> Every six months. </p>
-<dt>annual, yearly, 1yr, 2yrs, &#8230;</p>
-<dd> Every year or a number of years. </p>
-<dt>biannual, biyearly, 2yr</p>
-<dd> Every two years.</dl>
+<dt>daily, day, 1da, 2da, &#8230;</dt>
+<dd> Every day or a number of days. </dd>
+<dt>weekdays</dt>
+<dd> Mondays, Tuesdays, Wednesdays, Thursdays, Fridays and skipping weekend days. </dd>
+<dt>weekly, 1wk, 2wks, &#8230;</dt>
+<dd> Every week or a number of weeks. </dd>
+<dt>biweekly, fortnight</dt>
+<dd> Every two weeks. </dd>
+<dt>monthly, month, 1mo, 2mo, &#8230;</dt>
+<dd> Every month. </dd>
+<dt>quarterly, 1qtr, 2qtrs, &#8230;</dt>
+<dd> Every three months, a quarter, or a number of quarters. </dd>
+<dt>semiannual</dt>
+<dd> Every six months. </dd>
+<dt>annual, yearly, 1yr, 2yrs, &#8230;</dt>
+<dd> Every year or a number of years. </dd>
+<dt>biannual, biyearly, 2yr</dt>
+<dd> Every two years.</dd></dl>
 </dl>
 <h2>CONTEXT</h2>
 <p> Context is a user-defined filter, which is automatically applied to all commands that filter the task list. In particular, any report command will have its result affected by the current active context. </p>
@@ -560,73 +556,73 @@ description: "task – A command line todo manager."
 <p> All Taskwarrior commands may be abbreviated as long as a unique prefix is used, for example: </p>
 <dl>
 <dt>
-<dd> $ task li</dl>
+</dt><dd> $ task li</dd></dl>
 <p> is an unambiguous abbreviation for </p>
 <dl>
 <dt>
-<dd> $ task list</dl>
+</dt><dd> $ task list</dd></dl>
 <p> but </p>
 <dl>
 <dt>
-<dd> $ task l</dl>
+</dt><dd> $ task l</dd></dl>
 <p> could be list, ls or long. </p>
 <p> Note that you can restrict the minimum abbreviation size using the configuration setting: </p>
 <dl>
 <dt>
-<dd> abbreviation.minimum=3</dl>
+</dt><dd> abbreviation.minimum=3</dd></dl>
 <h2>SPECIFYING DESCRIPTIONS</h2>
 <p> Some task descriptions need to be escaped because of the shell and the special meaning of some characters to the shell. This can be done either by adding quotes to the description or escaping the special character: </p>
 <dl>
 <dt>
-<dd> $ task add &quot;quoted &#8216; quote&quot;<br />
- $ task add escaped \&#8217; quote</dl>
+</dt><dd> $ task add &quot;quoted &#8216; quote&quot;<br />
+ $ task add escaped \&#8217; quote</dd></dl>
 <p> The argument &#8212; (a double dash) tells Taskwarrior to treat all other args as description: </p>
 <dl>
 <dt>
-<dd> $ task add &#8212; project:Home needs scheduling</dl>
+</dt><dd> $ task add &#8212; project:Home needs scheduling</dd></dl>
 <p> In other situations, the shell sees spaces and breaks up arguments. For example, this command: </p>
 <dl>
 <dt>
-<dd> $ task 123 modify /from this/to that/</dl>
+</dt><dd> $ task 123 modify /from this/to that/</dd></dl>
 <p> is broken up into several arguments, which is corrected with quotes: </p>
 <dl>
 <dt>
-<dd> $ task 123 modify &quot;/from this/to that/&quot;</dl>
+</dt><dd> $ task 123 modify &quot;/from this/to that/&quot;</dd></dl>
 <p> It is sometimes necessary to force the shell to pass quotes to Taskwarrior intact, so you can use: </p>
 <dl>
 <dt>
-<dd> $ task add project:\&#8217;Three Word Project\&#8217; description</dl>
+</dt><dd> $ task add project:\&#8217;Three Word Project\&#8217; description</dd></dl>
 <p> Taskwarrior supports Unicode using only the UTF8 encoding, with no Byte Order Marks in the data files. </p>
 <h2>CONFIGURATION FILE AND OVERRIDE OPTIONS</h2>
 <p> Taskwarrior stores its configuration in a file in the user&#8217;s home directory: ~/.taskrc. The default configuration file can be overridden with: </p>
 <dl>
-<dt><code>task rc:&lt;path-to-alternate-file&gt; &#8230;</code></p>
-<dd> Specifies an alternate configuration file. </p>
-<dt><code>TASKRC=/tmp/.taskrc task ..</code></p>
-<dd> The environment variable overrides the default and the command line specification of the .taskrc file. </p>
-<dt><code>task rc.&lt;name&gt;:&lt;value&gt; &#8230;</code></p>
-<dd> <code>task rc.&lt;name&gt;=&lt;value&gt; &#8230;</code> Specifies individual configuration file overrides. </p>
-<dt><code>TASKDATA=/tmp/.task task &#8230;</code></p>
-<dd> The environment variable overrides the default, the command line, and the &#8216;data.location&#8217; configuration setting of the task data directory. </p>
+<dt><code>task rc:&lt;path-to-alternate-file&gt; &#8230;</code></dt>
+<dd> Specifies an alternate configuration file. </dd>
+<dt><code>TASKRC=/tmp/.taskrc task ..</code></dt>
+<dd> The environment variable overrides the default and the command line specification of the .taskrc file. </dd>
+<dt><code>task rc.&lt;name&gt;:&lt;value&gt; &#8230;</code></dt>
+<dd> <code>task rc.&lt;name&gt;=&lt;value&gt; &#8230;</code> Specifies individual configuration file overrides. </dd>
+<dt><code>TASKDATA=/tmp/.task task &#8230;</code></dt>
+<dd> The environment variable overrides the default, the command line, and the &#8216;data.location&#8217; configuration setting of the task data directory. </dd>
 </dl>
 <h2>MORE EXAMPLES</h2>
 <p> For examples please see the online documentation starting at </p>
 <dl>
 <dt>
-<dd> &lt;<a rel="nofollow" href="http://taskwarrior.org/docs">http://taskwarrior.org/docs</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" href="http://taskwarrior.org/docs">http://taskwarrior.org/docs</a>&gt;</dd></dl>
 <p> Note that the online documentation can be more detailed and more current than this man page. </p>
 <h2>FILES</h2>
 <dl>
-<dt>~/.taskrc</p>
-<dd> User configuration file &#8211; see also <a href="/docs/linux/man/5-taskrc/">taskrc</a>(5). Note that this can be overridden on the command line or by the TASKRC environment variable. </p>
-<dt>~/.task</p>
-<dd> The default directory where task stores its data files. The location can be configured in the configuration variable &#8216;data.location&#8217;, or overridden with the TASKDATA environment variable.. </p>
-<dt>~/.task/pending.data</p>
-<dd> The file that contains the tasks that are not yet done. </p>
-<dt>~/.task/completed.data</p>
-<dd> The file that contains the completed (&quot;done&quot;) tasks. </p>
-<dt>~/.task/undo.data</p>
-<dd> The file that contains information needed by the &quot;undo&quot; command. </p>
+<dt>~/.taskrc</dt>
+<dd> User configuration file &#8211; see also <a href="/docs/linux/man/5-taskrc/">taskrc</a>(5). Note that this can be overridden on the command line or by the TASKRC environment variable. </dd>
+<dt>~/.task</dt>
+<dd> The default directory where task stores its data files. The location can be configured in the configuration variable &#8216;data.location&#8217;, or overridden with the TASKDATA environment variable.. </dd>
+<dt>~/.task/pending.data</dt>
+<dd> The file that contains the tasks that are not yet done. </dd>
+<dt>~/.task/completed.data</dt>
+<dd> The file that contains the completed (&quot;done&quot;) tasks. </dd>
+<dt>~/.task/undo.data</dt>
+<dd> The file that contains information needed by the &quot;undo&quot; command. </dd>
 </dl>
 <h2>CREDITS &amp; COPYRIGHTS</h2>
 <p> Copyright (C) 2006 &#8211; 2016 P. Beckingham, F. Hernandez. </p>
@@ -635,16 +631,16 @@ description: "task – A command line todo manager."
 <p> <code><a href="/docs/linux/man/5-taskrc/">taskrc</a>(5),</code> <code><a href="/docs/linux/man/5-task-color/">task-color</a>(5),</code> <code><a href="/docs/linux/man/5-task-sync/">task-sync</a>(5)</code> </p>
 <p> For more information regarding Taskwarrior, see the following: </p>
 <dl>
-<dt>The official site at</p>
-<dd> &lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </p>
-<dt>The official code repository at</p>
-<dd> &lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt; </p>
-<dt>You can contact the project by emailing</p>
-<dd> &lt;support [at] taskwarrior.org&gt; </p>
+<dt>The official site at</dt>
+<dd> &lt;<a rel="nofollow" href="http://taskwarrior.org">http://taskwarrior.org</a>&gt; </dd>
+<dt>The official code repository at</dt>
+<dd> &lt;<a rel="nofollow" href="https://git.tasktools.org/scm/tm/task.git">https://git.tasktools.org/scm/tm/task.git</a>&gt; </dd>
+<dt>You can contact the project by emailing</dt>
+<dd> &lt;support [at] taskwarrior.org&gt; </dd>
 </dl>
 <h2>REPORTING BUGS</h2>
 <dl>
-<dt>Bugs in Taskwarrior may be reported to the issue-tracker at</p>
-<dd> &lt;<a rel="nofollow" href="https://bug.tasktools.org/">https://bug.tasktools.org/</a>&gt; </p>
+<dt>Bugs in Taskwarrior may be reported to the issue-tracker at</dt>
+<dd> &lt;<a rel="nofollow" href="https://bug.tasktools.org/">https://bug.tasktools.org/</a>&gt; </dd>
 </dl>
 <h2>Index</h2>

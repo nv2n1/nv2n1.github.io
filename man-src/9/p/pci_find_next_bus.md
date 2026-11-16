@@ -14,7 +14,7 @@ description: "pci_find_next_bus – begin or continue searching for a PCI bus"
 <p><i>from</i></p>
 <dl>
 <dd>
-<dd>Previous PCI bus found, or <code>NULL</code> for new search.</dl>
+</dd><dd>Previous PCI bus found, or <code>NULL</code> for new search.</dd></dl>
 <h2>Description</h2>
 <p>Iterates through the list of known PCI buses. A new search is initiated by passing <code>NULL</code> as the <i>from</i> argument. Otherwise if <i>from</i> is not <code>NULL</code>, searches continue from next device on the global list.</p>
 <h2>Copyright</h2>

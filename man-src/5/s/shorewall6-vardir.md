@@ -10,9 +10,9 @@ description: "vardir – Shorewall6 file"
 <p>vardir &#8211; Shorewall6 file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>/etc/shorewall6/vardir</code></dl>
+<dt> <code>/etc/shorewall6/vardir</code></dt></dl>
 <h2>Description</h2>
-<dd>This file does not exist by default. You may create the file if you want to change the directory used by Shorewall6 to store state information, including compiled firewall scripts. By default, the directory used is /var/lib/shorewall6/. </p>
+<dd>This file does not exist by default. You may create the file if you want to change the directory used by Shorewall6 to store state information, including compiled firewall scripts. By default, the directory used is /var/lib/shorewall6/. </dd>
 <p> The file contains a single variable assignment: </p>
 <p> <code>VARDIR=</code><i>directory</i> </p>
 <p> where <i>directory</i> is the name of a directory. If you add this file, you should copy the files from /var/lib/shorewall6 to the new directory before performing a <code>shorewall6 restart</code>.</p>

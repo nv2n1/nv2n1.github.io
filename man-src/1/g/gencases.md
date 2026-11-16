@@ -17,14 +17,14 @@ description: "gencases – 802.11b weak IV generation tool"
 <p> The generated packet file can be examined with standard packet analysis tools such as tcpdump or ethereal. It can also be loaded into <a href="/docs/linux/man/1-airsnort/">airsnort</a>(1) which, given that a sufficient number of cases were generated for each key byte, will produce a cracked WEP key. Running the generated file through the <a href="/docs/linux/man/1-decrypt/">decrypt</a>(1) utility will produce the decrypted versions of the packets which should reflect the echo request/reply traffic described above, and which can be verified using tcpdump or ethereal.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s </code><i>pw</i></p>
-<dd> Password as an ASCII string. 5 or 13 characters for 40 and 128 bit WEP cases respectively.</p>
-<dt><code>-h </code><i>key </i></p>
-<dd> Password as a colon separated list of 2 digit hex values. 5 or 13 hex values for 40 and 128 bit WEP cases respectively.</p>
-<dt><code>-f </code><i>file </i></p>
-<dd> Output file for generated cases.</p>
-<dt><code>-n </code><i>num</i></p>
-<dd> Number of sample cases to generate for each key byte (1-256). Default is 100.</dl>
+<dt><code>-s </code><i>pw</i></dt>
+<dd> Password as an ASCII string. 5 or 13 characters for 40 and 128 bit WEP cases respectively.</dd>
+<dt><code>-h </code><i>key </i></dt>
+<dd> Password as a colon separated list of 2 digit hex values. 5 or 13 hex values for 40 and 128 bit WEP cases respectively.</dd>
+<dt><code>-f </code><i>file </i></dt>
+<dd> Output file for generated cases.</dd>
+<dt><code>-n </code><i>num</i></dt>
+<dd> Number of sample cases to generate for each key byte (1-256). Default is 100.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Generate 100 cases per key byte with the ASCII password &quot;hello&quot; to file &quot;test&quot; </p>
 <blockquote>

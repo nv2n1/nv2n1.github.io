@@ -11,33 +11,19 @@ std::getline - std::getline
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;string&gt;
-
 template&lt; class CharT, class Traits, class Allocator &gt;
-
 std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp; input,  (1)
-
 std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str,
-
 CharT delim );
-
 template&lt; class CharT, class Traits, class Allocator &gt;
-
 std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp;&amp; input, (1) (since C++11)
-
 std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str,
-
 CharT delim );
-
 template&lt; class CharT, class Traits, class Allocator &gt;
-
 std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp; input,  (2)
-
 std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str );
-
 template&lt; class CharT, class Traits, class Allocator &gt;
-
 std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp;&amp; input, (2) (since C++11)
-
 std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str );</code></pre> 
 getline reads characters from an input stream and places them into a string: 
 1) Behaves as UnformattedInputFunction, except that input.gcount() is not affected. After constructing and checking the sentry object, performs the following: 
@@ -67,12 +53,9 @@ When used immediately after whitespace-delimited input, e.g. after int n; std::c
 
 The following example demonstrates how to use getline function to read user's input and how to process file line by line. 
  // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;sstream&gt;
 int main()
-
 {
     // greet the user
     std::string name;

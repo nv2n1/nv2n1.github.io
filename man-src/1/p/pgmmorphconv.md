@@ -24,25 +24,25 @@ description: "pgmmorphconv – perform morphological convolutions: dilation, ero
 <p> The <code>-open</code> option causes <code>pgmmorphconv</code> to perform first an erode and then a dilate operation. The <code>-close</code> option causes a dilate first and then an erode. If you specify none of these options, it is the same as <code>-dilate</code>. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pgmminkowski/">pgmminkowski</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> <code>pgm</code>(1) </p>
-</dl>
+</dd></dl>
 <p> For more information about morphological convolutions, see e.g. </p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p>&nbsp;<wbr>K. Michielsen and H. De Raedt,&nbsp;<wbr>&quot;Integral-Geometry Morphological Image Analysis&quot;,�&nbsp;<wbr>Phys. Rep. 347, 461-538&nbsp;<wbr>(2001). </p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p>&nbsp;<wbr>J.S. Kole, K. Michielsen, and H. De Raedt,&nbsp;<wbr>&quot;Morphological Image Analysis of Quantum Motion in Billiards&quot;, Phys. Rev. E 63, 016201-1 &#8211; 016201-7&nbsp;<wbr>(2001)&nbsp;<wbr> </p>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> Luuk van Dijk, 2001. </p>
 <p> Based on work which is Copyright (C) 1989, 1991 by Jef Poskanzer. </p>

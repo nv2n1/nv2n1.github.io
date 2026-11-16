@@ -11,7 +11,6 @@ std::fputs - std::fputs
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fputs(const char *str, std::FILE *stream);</code></pre> 
 Writes every character from the null-terminated string str to the output stream stream, as if by repeatedly executing std::fputc. 
 The terminating null character from str is not written. 
@@ -35,7 +34,6 @@ Different implementations return different non-negative numbers: some return the
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
 int main(void)
-
 {
     int rc = std::fputs(&quot;Hello World&quot;, stdout);
     if (rc == EOF)

@@ -11,7 +11,6 @@ description: "sc::BcastStateSend –"
 <p> <code>BcastStateSend</code> does the send part of a broadcast of an object to all nodes.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateSend</code>.</p>
 <h3>Public Member Functions</h3>

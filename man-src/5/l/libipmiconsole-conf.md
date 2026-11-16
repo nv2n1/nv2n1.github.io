@@ -16,46 +16,46 @@ description: "libipmiconsole.conf – specify default values for libipmiconsole"
 <h2>Context Ipmi Config Options</h2>
 <p>Every SOL session is housed within an libipmiconsole context. The following defines IPMI config default values for each context created.</p>
 <dl>
-<dt><code>libipmiconsole-context-username</code> <i>USERNAME</i></p>
-<dd>Specify the default username to use.</p>
-<dt><code>libipmiconsole-context-password</code> <i>PASSWORD</i></p>
-<dd>Specify the default password to use.</p>
-<dt><code>libipmiconsole-context-k_g</code> <i>str</i></p>
-<dd>Specify the default BMC key (K_g) to use. Prefix with &#8216;0x&#8217; to enter the key in hex.</p>
-<dt><code>libipmiconsole-context-privilege-level</code> <i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the default privilege type to use. The following privilege levels are supported: USER, OPERATOR, ADMIN.</p>
-<dt><code>libipmiconsole-context-cipher-suite-id</code> <i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the default cipher suite id to use. The following cipher suite ids are supported: 0, 1, 2, 3, 6, 7, 8, 11, 12.</p>
-<dt><code>libipmiconsole-context-workaround-flags</code> <i>WORKAROUNDS</i></p>
-<dd>Specify default workaround flags to use. Multiple workarounds can be specified separated by whitespace. The following workarounds are supported: authcap, intel20, supermicro20, sun20, opensesspriv, integritycheckvalue, solpayloadsize, solport, solstatus.</dl>
+<dt><code>libipmiconsole-context-username</code> <i>USERNAME</i></dt>
+<dd>Specify the default username to use.</dd>
+<dt><code>libipmiconsole-context-password</code> <i>PASSWORD</i></dt>
+<dd>Specify the default password to use.</dd>
+<dt><code>libipmiconsole-context-k_g</code> <i>str</i></dt>
+<dd>Specify the default BMC key (K_g) to use. Prefix with &#8216;0x&#8217; to enter the key in hex.</dd>
+<dt><code>libipmiconsole-context-privilege-level</code> <i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the default privilege type to use. The following privilege levels are supported: USER, OPERATOR, ADMIN.</dd>
+<dt><code>libipmiconsole-context-cipher-suite-id</code> <i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the default cipher suite id to use. The following cipher suite ids are supported: 0, 1, 2, 3, 6, 7, 8, 11, 12.</dd>
+<dt><code>libipmiconsole-context-workaround-flags</code> <i>WORKAROUNDS</i></dt>
+<dd>Specify default workaround flags to use. Multiple workarounds can be specified separated by whitespace. The following workarounds are supported: authcap, intel20, supermicro20, sun20, opensesspriv, integritycheckvalue, solpayloadsize, solport, solstatus.</dd></dl>
 <h2>Context Protocol Config Options</h2>
 <p>Every SOL session is housed within an libipmiconsole context. The following defines protocol config default values for each context created.</p>
 <dl>
-<dt><code>libipmiconsole-context-session-timeout-len</code> <i>MILLISECONDS</i></p>
-<dd>Specify the default session timeout length to use in milliseconds.</p>
-<dt><code>libipmiconsole-context-retransmission-timeout-len</code> <i>MILLISECONDS</i></p>
-<dd>Specify the default retransmission timeout length to use in milliseconds.</p>
-<dt><code>libipmiconsole-context-retransmission-backoff-count</code> <i>NUM</i></p>
-<dd>Specify the default retransmission backoff count to use.</p>
-<dt><code>libipmiconsole-context-keepalive-timeout-len</code> <i>MILLISECONDS</i></p>
-<dd>Specify the default keepalive timeout length to use in milliseconds.</p>
-<dt><code>libipmiconsole-context-retransmission-keepalive-timeout-len</code> <i>MILLISECONDS</i></p>
-<dd>Specify the default retransmission timeout length to use for keepalive packets in milliseconds.</p>
-<dt><code>libipmiconsole-context-acceptable-packet-errors-count</code> <i>NUM</i></p>
-<dd>Specify the default packet errors count to use.</p>
-<dt><code>libipmiconsole-context-maximum-retransmission-count</code> <i>NUM</i></p>
-<dd>Specify the default maximum retransmission count to use.</dl>
+<dt><code>libipmiconsole-context-session-timeout-len</code> <i>MILLISECONDS</i></dt>
+<dd>Specify the default session timeout length to use in milliseconds.</dd>
+<dt><code>libipmiconsole-context-retransmission-timeout-len</code> <i>MILLISECONDS</i></dt>
+<dd>Specify the default retransmission timeout length to use in milliseconds.</dd>
+<dt><code>libipmiconsole-context-retransmission-backoff-count</code> <i>NUM</i></dt>
+<dd>Specify the default retransmission backoff count to use.</dd>
+<dt><code>libipmiconsole-context-keepalive-timeout-len</code> <i>MILLISECONDS</i></dt>
+<dd>Specify the default keepalive timeout length to use in milliseconds.</dd>
+<dt><code>libipmiconsole-context-retransmission-keepalive-timeout-len</code> <i>MILLISECONDS</i></dt>
+<dd>Specify the default retransmission timeout length to use for keepalive packets in milliseconds.</dd>
+<dt><code>libipmiconsole-context-acceptable-packet-errors-count</code> <i>NUM</i></dt>
+<dd>Specify the default packet errors count to use.</dd>
+<dt><code>libipmiconsole-context-maximum-retransmission-count</code> <i>NUM</i></dt>
+<dd>Specify the default maximum retransmission count to use.</dd></dl>
 <h2>Context Engine Config Options</h2>
 <p>Every SOL session is housed within an libipmiconsole context. The following defines engine config default values for each context created. Knowledge of the libipmiconsole library may be necessary to understand the meaning of these settings. Please see the <code>ipmiconsole.h</code> header file for additional information on the library.</p>
 <dl>
-<dt><code>libipmiconsole-context-engine-flags</code> <i>FLAGS</i></p>
-<dd>Specify default engine flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: closefd, outputonsolestablished, lockmemory, serialkeepalive.</p>
-<dt><code>libipmiconsole-context-behavior-flags</code> <i>FLAGS</i></p>
-<dd>Specify default behavior flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: erroronsolinuse, deactivateonly, deactivateallinstances.</p>
-<dt><code>libipmiconsole-context-debug-flags</code> <i>FLAGS</i></p>
-<dd>Specify default debug flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: stdout, stderr, syslog, file, ipmipackets.</p>
-<dt><code>libipmiconsole-context-sol-payload-instance</code> <i>NUM</i></p>
-<dd>Specify default SOL payload instance. Has range of 1 to 15.</dl>
+<dt><code>libipmiconsole-context-engine-flags</code> <i>FLAGS</i></dt>
+<dd>Specify default engine flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: closefd, outputonsolestablished, lockmemory, serialkeepalive.</dd>
+<dt><code>libipmiconsole-context-behavior-flags</code> <i>FLAGS</i></dt>
+<dd>Specify default behavior flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: erroronsolinuse, deactivateonly, deactivateallinstances.</dd>
+<dt><code>libipmiconsole-context-debug-flags</code> <i>FLAGS</i></dt>
+<dd>Specify default debug flags to use. Multiple flags can be specified separated by whitespace. The following flags are supported: stdout, stderr, syslog, file, ipmipackets.</dd>
+<dt><code>libipmiconsole-context-sol-payload-instance</code> <i>NUM</i></dt>
+<dd>Specify default SOL payload instance. Has range of 1 to 15.</dd></dl>
 <h2>Files</h2>
 <p>/etc/freeipmi//libipmiconsole.conf</p>
 <h2>Reporting Bugs</h2>

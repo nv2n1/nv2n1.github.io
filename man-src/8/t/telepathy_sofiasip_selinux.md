@@ -62,8 +62,8 @@ description: "telepathy_sofiasip_selinux – Security Enhanced Linux Policy for 
 <p> <code>telepathy_sofiasip_exec_t</code> </p>
 <p> &#8211; Set files with the telepathy_sofiasip_exec_t type, if you want to transition an executable to the telepathy_sofiasip_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/telepathy-rakia, /usr/libexec/telepathy-sofiasip </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/telepathy-rakia, /usr/libexec/telepathy-sofiasip </dd>
 </dl>
 <p> <code>telepathy_sofiasip_tmp_t</code> </p>
 <p> &#8211; Set files with the telepathy_sofiasip_tmp_t type, if you want to store telepathy sofiasip temporary files in the /tmp directories. </p>

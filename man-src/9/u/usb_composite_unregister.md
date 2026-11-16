@@ -14,11 +14,11 @@ description: "usb_composite_unregister – unregister a composite driver"
 <p><i>driver</i></p>
 <dl>
 <dd>
-<dd>the driver to unregister</dl>
+</dd><dd>the driver to unregister</dd></dl>
 <h2>Description</h2>
 <p>This function is used to unregister drivers using the composite driver framework.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

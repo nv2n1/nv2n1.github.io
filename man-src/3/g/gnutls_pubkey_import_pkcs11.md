@@ -14,12 +14,12 @@ description: "gnutls_pubkey_import_pkcs11 – API function"
 <p> <code>int gnutls_pubkey_import_pkcs11(gnutls_pubkey_t </code><i>key</i><code>, gnutls_pkcs11_obj_t </code><i>obj</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> The public key</p>
-<dt>gnutls_pkcs11_obj_t obj</p>
-<dd> The parameters to be imported</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> The public key</dd>
+<dt>gnutls_pkcs11_obj_t obj</dt>
+<dd> The parameters to be imported</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Imports a public key from a pkcs11 key. This function will import the given public key to the abstract <code>gnutls_pubkey_t</code> structure.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_pubkey_import_pkcs11 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

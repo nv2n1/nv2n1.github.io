@@ -14,13 +14,13 @@ description: "alloc_contig_range – – tries to allocate given range of pages"
 <p><i>start</i></p>
 <dl>
 <dd>
-<dd>start PFN to allocate</dl>
+</dd><dd>start PFN to allocate</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>one-past-the-last PFN to allocate</dl>
+<dd>one-past-the-last PFN to allocate</dd></dl>
 <p> <i>migratetype</i></p>
 <dl>
-<dd>migratetype of the underlaying pageblocks (either #MIGRATE_MOVABLE or #MIGRATE_CMA). All pageblocks in range must have the same migratetype and it must be either of the two.</dl>
+<dd>migratetype of the underlaying pageblocks (either #MIGRATE_MOVABLE or #MIGRATE_CMA). All pageblocks in range must have the same migratetype and it must be either of the two.</dd></dl>
 <h2>Description</h2>
 <p>The PFN range does not have to be pageblock or MAX_ORDER_NR_PAGES aligned, however it&#8217;s the caller&#8217;s responsibility to guarantee that we are the only thread that changes migrate type of pageblocks the pages fall in. </p>
 <p> The PFN range must belong to a single zone. </p>

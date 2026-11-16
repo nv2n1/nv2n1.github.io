@@ -16,24 +16,24 @@ description: "aa-features-abi – Extract, validate and manipulate AppArmor feat
 <h2>OPTIONS</h2>
 <p> <code>aa-features-abi</code> accepts the following arguments:</p>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display a brief usage guide.</p>
-<dt>-d, &#8211;debug</p>
-<dd> show messages with debugging information</p>
-<dt>-v, &#8211;verbose</p>
-<dd> show messages with stats</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display a brief usage guide.</dd>
+<dt>-d, &#8211;debug</dt>
+<dd> show messages with debugging information</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> show messages with stats</dd></dl>
 <h2>SOURCE</h2>
 <dl>
-<dt>-x, &#8211;extract</p>
-<dd> Extract the features abi for the kernel</p>
-<dt>-f <font SIZE="-1">FILE,</font> &#8211;file=FILE</p>
-<dd> Load the features abi from <font SIZE="-1">FILE</font> and send it to <font SIZE="-1">OUTPUT OPTIONS.</font></dl>
+<dt>-x, &#8211;extract</dt>
+<dd> Extract the features abi for the kernel</dd>
+<dt>-f <font SIZE="-1">FILE,</font> &#8211;file=FILE</dt>
+<dd> Load the features abi from <font SIZE="-1">FILE</font> and send it to <font SIZE="-1">OUTPUT OPTIONS.</font></dd></dl>
 <h2>OUTPUT OPTIONS</h2>
 <dl>
-<dt>&#8211;stdout</p>
-<dd> Write the features abi to <i>stdout</i>, this is the default if no output option is specified.</p>
-<dt>-w <font SIZE="-1">FILE,</font> &#8211;write <font SIZE="-1">FILE</font></p>
-<dd> Write the features abi to <i></i><font SIZE="-1"><i>FILE</i></font><i></i>.</dl>
+<dt>&#8211;stdout</dt>
+<dd> Write the features abi to <i>stdout</i>, this is the default if no output option is specified.</dd>
+<dt>-w <font SIZE="-1">FILE,</font> &#8211;write <font SIZE="-1">FILE</font></dt>
+<dd> Write the features abi to <i></i><font SIZE="-1"><i>FILE</i></font><i></i>.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find any bugs, please report them at &lt;<a rel="nofollow" href="https://gitlab.com/apparmor/apparmor/-/issues">https://gitlab.com/apparmor/apparmor/-/issues</a>&gt;.</p>
 <h2>SEE ALSO</h2>

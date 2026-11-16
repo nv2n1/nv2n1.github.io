@@ -14,8 +14,8 @@ Tk_Window
 <code>Tk_IdToWindow</code>(<i>display, window</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Display <i>*display</i> (in) X display containing the window.</p>
-<dd>Window <i>window</i> (in) X id for window. </p>
+<dd>Display <i>*display</i> (in) X display containing the window.</dd>
+<dd>Window <i>window</i> (in) X id for window. </dd>
 </dl>
 <h2>Description</h2>
 <p>Given an X window identifier and the X display it corresponds to, this procedure returns the corresponding Tk_Window handle. If there is no Tk_Window corresponding to <i>window</i> then NULL is returned. </p>

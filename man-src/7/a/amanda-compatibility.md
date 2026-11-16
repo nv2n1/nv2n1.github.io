@@ -22,27 +22,27 @@ description: "amanda-compatibility – Compatibility between Amanda versions"
 <h3>Amanda 3.2</h3>
 <p>The following configuration configration keywords are deprecated. This is currently a warning, but will become an error soon. </p>
 <dl>
-<dd>&bull; <code>amrecover-do-fsf</code> &#8211; amrecover always seeks to files when recovering</dl>
+<dd>&bull; <code>amrecover-do-fsf</code> &#8211; amrecover always seeks to files when recovering</dd></dl>
 <dl>
-<dd>&bull; <code>amrecover-check-label</code> &#8211; amrecover always checks the volume label when recovering</dl>
+<dd>&bull; <code>amrecover-check-label</code> &#8211; amrecover always checks the volume label when recovering</dd></dl>
 <dl>
-<dd>&bull; Dumptype parameters <code>tape-splitsize</code>, <code>split-diskbuffer</code>, and <code>fallback-splitsize</code> &#8211; see <code>allow-split</code> and tapetype parameters <code>part-size</code>, <code>part-cache-type</code>, <code>part-cache-dir</code>, and <code>part-cache-max-size</code>. See <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) for more information on these new parameters, noting particularly that all but the first are tapetype parameters, not dumptype parameters. </p>
+<dd>&bull; Dumptype parameters <code>tape-splitsize</code>, <code>split-diskbuffer</code>, and <code>fallback-splitsize</code> &#8211; see <code>allow-split</code> and tapetype parameters <code>part-size</code>, <code>part-cache-type</code>, <code>part-cache-dir</code>, and <code>part-cache-max-size</code>. See <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) for more information on these new parameters, noting particularly that all but the first are tapetype parameters, not dumptype parameters. </dd>
 <p> To convert most cases to the new parameters, set <code>part-size</code> to the old value of <code>tape-splitsize</code> and <code>part-cache-dir</code> to the old value of <code>split-diskbuffer</code>, if present. If <code>split-diskbuffer</code> was set, then set <code>part-cache-type</code> to <code>disk</code>, otherwise <code>memory</code>. Finally, if using memory caching, set <code>part-cache-max-size</code> to the previous value of <code>fallback-splitsize</code>. Be sure to remove all of the old keywords from your configuration.</dl>
 <h3>Amanda 3.1</h3>
 <p>Although it is a significant rewrite, there are no incompatible changes in this release. </p>
 <p> Old-style changer scripts are deprecated in this release. While they remain available, they may be removed in a future release. Consider upgrading to one of the new changer scripts. Users of <i>chg-zd-mtx</i> are particularly encouraged to consider the much more intelligent <i>chg-robot</i>. See <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7) for more information. </p>
 <p> The following configuration configration keywords are deprecated. This is currently a warning, but will become an error in a future version. </p>
 <dl>
-<dd>&bull; label_new_tapes &#8211; use autolabel</dl>
+<dd>&bull; label_new_tapes &#8211; use autolabel</dd></dl>
 <h3>Amanda 2.6.1</h3>
 <p>There are no incompatible changes in this release, but consider switching to some of the new applications instead of the old GNUTAR and DUMP programs. </p>
 <p> The following configuration configration keywords are deprecated. This is currently a warning, but will become an error soon. </p>
 <dl>
-<dd>&bull; tapebufs &#8211; use device-output-buffer-size instead</dl>
+<dd>&bull; tapebufs &#8211; use device-output-buffer-size instead</dd></dl>
 <dl>
-<dd>&bull; rawtapedev &#8211; use tapedev instead</dl>
+<dd>&bull; rawtapedev &#8211; use tapedev instead</dd></dl>
 <dl>
-<dd>&bull; file-pad &#8211; this is no longer optional, and all files are padded</dl>
+<dd>&bull; file-pad &#8211; this is no longer optional, and all files are padded</dd></dl>
 <h3>Amanda 2.6.0</h3>
 <p>amverify and amverifyrun are removed and replaced with <code><a href="/docs/linux/man/8-amcheckdump/">amcheckdump</a></code>(8). Both amdd and ammt are removed. </p>
 <p> Some Amanda files are now installed in new amanda/ subdirectories: libraries are now installed in $libdir/amanda and internal programs are now installed in $libexecdir/amanda. </p>
@@ -54,4 +54,4 @@ description: "amanda-compatibility – Compatibility between Amanda versions"
 <h2>Author</h2>
 <p><code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

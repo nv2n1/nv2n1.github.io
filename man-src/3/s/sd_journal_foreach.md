@@ -9,11 +9,11 @@ url: "/docs/linux/man/3-sd_journal_foreach/"
 sd_journal_next, sd_journal_previous, sd_journal_next_skip, sd_journal_previous_skip, SD_JOURNAL_FOREACH, SD_JOURNAL_FOREACH_BACKWARDS - Advance or set back the read pointer in the journal 
 
 <h2>Synopsis</h2><pre>#include &lt;systemd/sd-journal.h&gt;</pre><dl COMPACT><dt> <b>int sd_journal_next(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>int sd_journal_previous(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>int sd_journal_next_skip(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>skip</i><b>);</b>
-<dt> <b>int sd_journal_previous_skip(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>skip</i><b>);</b>
-<dt> <b>SD_JOURNAL_FOREACH(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
-<dt> <b>SD_JOURNAL_FOREACH_BACKWARDS(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b></dl><h2>Description</h2><b>sd_journal_next()</b>
+</dt><dt> <b>int sd_journal_previous(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
+</dt><dt> <b>int sd_journal_next_skip(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>skip</i><b>);</b>
+</dt><dt> <b>int sd_journal_previous_skip(sd_journal&nbsp;<wbr>*</b><i>j</i><b>, uint64_t&nbsp;<wbr></b><i>skip</i><b>);</b>
+</dt><dt> <b>SD_JOURNAL_FOREACH(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b>
+</dt><dt> <b>SD_JOURNAL_FOREACH_BACKWARDS(sd_journal&nbsp;<wbr>*</b><i>j</i><b>);</b></dt></dl><h2>Description</h2><b>sd_journal_next()</b>
 <dd>advances the read pointer into the journal by one entry. The only argument taken is a journal context object as allocated via <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3). After successful invocation the entry may be read with functions such as <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3). 
 
  Similarly, <b>sd_journal_previous()</b> sets the read pointer back one entry. 
@@ -29,7 +29,7 @@ sd_journal_next, sd_journal_previous, sd_journal_next_skip, sd_journal_previous_
 <h2>Notes</h2>The <b>sd_journal_next()</b>, <b>sd_journal_previous()</b>, <b>sd_journal_next_skip()</b> and <b>sd_journal_previous_skip()</b> interfaces are available as a shared library, which can be compiled and linked to with the <b>libsystemd</b>&nbsp;<wbr><b><a HREF="/docs/linux/man/1-pkg-config/">pkg-config</a></b>(1) file.
 <h2>Examples</h2>Iterating through the journal: 
 
-<dl COMPACT><dd><pre>#include &lt;stdio.h&gt;
+</dd><dl COMPACT><dd><pre>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 #include &lt;systemd/sd-journal.h&gt;
 int main(int argc, char *argv[]) {
@@ -52,4 +52,4 @@ int main(int argc, char *argv[]) {
  }
  sd_journal_close(j);
  return 0;
-}</pre></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cursor/">sd_journal_get_cursor</a></b>(3)
+}</pre></dd></dl><h2>See Also</h2><b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cursor/">sd_journal_get_cursor</a></b>(3)

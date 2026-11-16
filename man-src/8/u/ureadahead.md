@@ -17,19 +17,19 @@ description: "ureadahead – Read files in advance during boot"
 <p> Pack files are automatically optimised for Solid-State Disks or rotational Hard Drives, depending on which you have.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;verbose</code></p>
-<dd>May be used to report on <code>ureadahead</code>&#8216;s operation. In particular, this causes information about the size of the pack file to be output when reading and a complete dump of the contents of the pack file after tracing.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd>Places <code>ureadahead</code> into the background once the pack file has been read, or once tracing has been enabled. </p>
+<dt><code>&#8211;verbose</code></dt>
+<dd>May be used to report on <code>ureadahead</code>&#8216;s operation. In particular, this causes information about the size of the pack file to be output when reading and a complete dump of the contents of the pack file after tracing.</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Places <code>ureadahead</code> into the background once the pack file has been read, or once tracing has been enabled. </dd>
 <p> This is ignored when reading on rotational hard drives, since it&#8217;s important for performance reasons not to contend with other processes for I/O.</p>
-<dt><code>&#8211;force-trace</code></p>
-<dd>Discards all pack files and forces re-tracing.</p>
-<dt><code>&#8211;timeout</code>=<i>SECONDS</i></p>
-<dd>Normally when tracing, <code>ureadahead</code> will wait for a <i>TERM</i> or <i>INT</i> signal before concluding and generating the pack file. This option instead sets a timeout after which tracing is terminated.</p>
-<dt><code>&#8211;dump</code></p>
-<dd>Dump the contents of the pack file to standard output in a pretty format, does not trace or read the contents into memory.</p>
-<dt><code>&#8211;sort</code>=<i>SORT</i></p>
-<dd>Used with <code>&#8211;dump</code> to sort the output. </p>
+<dt><code>&#8211;force-trace</code></dt>
+<dd>Discards all pack files and forces re-tracing.</dd>
+<dt><code>&#8211;timeout</code>=<i>SECONDS</i></dt>
+<dd>Normally when tracing, <code>ureadahead</code> will wait for a <i>TERM</i> or <i>INT</i> signal before concluding and generating the pack file. This option instead sets a timeout after which tracing is terminated.</dd>
+<dt><code>&#8211;dump</code></dt>
+<dd>Dump the contents of the pack file to standard output in a pretty format, does not trace or read the contents into memory.</dd>
+<dt><code>&#8211;sort</code>=<i>SORT</i></dt>
+<dd>Used with <code>&#8211;dump</code> to sort the output. </dd>
 <p> The default is <i>open</i>, which is the order that the files will be opened. <i>path</i> sorts by path name, <i>disk</i> sorts by on-disk location, and <i>size</i> sorts by the amount of data that will be read for that file.</dl>
 <h2>Other Mount Points</h2>
 <p><i>PACK</i> need not be the filename of a pack, instead it may be the name of a mount point (or indeed any non-file within the filesystem), in which case the pack for that device is read instead. This allows <code>ureadahead</code> to be called in the style <code>ureadahead</code><i> /usr</i> for filesystems split across multiple devices. </p>
@@ -46,3 +46,4 @@ description: "ureadahead – Read files in advance during boot"
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-readahead/">readahead</a></code>(2) </p>
+</p>

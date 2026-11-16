@@ -14,10 +14,10 @@ description: "snd_soc_dapm_enable_pin – enable pin."
 <p><i>dapm</i></p>
 <dl>
 <dd>
-<dd>DAPM context</dl>
+</dd><dd>DAPM context</dd></dl>
 <p> <i>pin</i></p>
 <dl>
-<dd>pin name</dl>
+<dd>pin name</dd></dl>
 <h2>Description</h2>
 <p>Enables input/output pin and its parents or children widgets iff there is a valid audio route and active audio stream.</p>
 <h2>Note</h2>

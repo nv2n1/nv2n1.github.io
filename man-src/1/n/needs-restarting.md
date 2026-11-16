@@ -15,14 +15,14 @@ description: "needs-restarting – report running processes that have been updat
 <p> <code>needs-restarting</code> is a program that reports a list of process ids that started running before they or some component that they use were updated. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a help message, and then quit.</p>
-<dt><code>-u, &#8211;useronly</code></p>
-<dd> Show processes for my userid only.</p>
-<dt><code>-r, &#8211;reboothint</code></p>
-<dd> Only report whether a full reboot is required (returns 1) or not (returns 0).</p>
-<dt><code>-s, &#8211;services</code></p>
-<dd> List the affected systemd services only. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help message, and then quit.</dd>
+<dt><code>-u, &#8211;useronly</code></dt>
+<dd> Show processes for my userid only.</dd>
+<dt><code>-r, &#8211;reboothint</code></dt>
+<dd> Only report whether a full reboot is required (returns 1) or not (returns 0).</dd>
+<dt><code>-s, &#8211;services</code></dt>
+<dd> List the affected systemd services only. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

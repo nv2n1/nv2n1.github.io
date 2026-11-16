@@ -28,10 +28,10 @@ description: "dtgex2.f –"
  updated.
  Q(in) * A(in) * Z(in)**T = Q(out) * A(out) * Z(out)**T
  Q(in) * B(in) * Z(in)**T = Q(out) * B(out) * Z(out)**T</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>WANTQ</i> </p>
+<dd><i>WANTQ</i> </dd>
 <pre> WANTQ is LOGICAL
  .TRUE. : update the left transformation matrix Q;
  .FALSE.: do not update Q.</pre>
@@ -101,19 +101,19 @@ description: "dtgex2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
-<dd>In the current code both weak and strong stability tests are performed. The user can omit the strong stability test by changing the internal logical parameter WANDS to .FALSE.. See ref. [2] for details.</dl>
+<dd>In the current code both weak and strong stability tests are performed. The user can omit the strong stability test by changing the internal logical parameter WANDS to .FALSE.. See ref. [2] for details.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dd>
@@ -127,7 +127,8 @@ description: "dtgex2.f –"
  Report UMINF - 94.04, Department of Computing Science, Umea
  University, S-901 87 Umea, Sweden, 1994. Also as LAPACK Working
  Note 87. To appear in Numerical Algorithms, 1996.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 221 of file dtgex2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

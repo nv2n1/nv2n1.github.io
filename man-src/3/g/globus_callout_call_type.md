@@ -27,22 +27,22 @@ description: "Callout Invocation –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A configured callout handle<br />
- <i>type</i> The abstract type of the callout that is to be invoked</dl>
+</dt><dd> <i>handle</i> A configured callout handle<br />
+ <i>type</i> The abstract type of the callout that is to be invoked</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dl>
+</dt><dd> This function returns GLOBUS_SUCCESS or a globus_result_t referring to an error object of one of the following types</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED</i> Callout type not registered<br />
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED</i> Callout type not registered<br />
  <i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR</i> Callout function error<br />
  <i>GLOBUS_CALLOUT_ERROR_WITH_DL</i> Error with dlopen or dlsym<br />
  <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Error caching dlopen handle<br />
- <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dl>
+ <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>

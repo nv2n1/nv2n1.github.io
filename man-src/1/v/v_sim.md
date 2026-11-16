@@ -17,68 +17,68 @@ description: "v_sim – a GTK program for 3D visualisation of atomic systems"
 <p> A complete list of options is included below.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</p>
 <dl>
-<dt><code>-e, &#8211;export file (from v3.0.0)</code></p>
-<dd> make an image from the fileToRender argument. The format is specified through the extension of the argument or by the -o fileFormatId=id option (get the id of available file formats with -o list). </p>
-<dt><code>-r, &#8211;resources file (from v3.4.0)</code></p>
-<dd> load the given resources file on startup instead of looking for a valid resources file in the standard locations. </p>
-<dt><code>-h, &#8211;help (from v3.0.0)</code></p>
-<dd> show this little help. </p>
-<dt><code>-g, &#8211;geometry &lt;w&gt;x&lt;h&gt; (from v3.0.0)</code></p>
-<dd> specify the size of the rendering window, the size argument must have the following format: &lt;width&gt;x&lt;height&gt; with positive non null values. (Default value: 600&#215;600) </p>
-<dt><code>-s, &#8211;spin-file file (from v3.1.0)</code></p>
-<dd> use the given argument as a spin indicator. If this option is used, V_Sim switches automatically to spin rendering whatever method is specified in the parameter file. </p>
-<dt><code>-m, &#8211;hiding-mode id (from v3.2.0)</code></p>
-<dd> policy used to show or not null modulus spins possible values are positives. (Default value: 0) </p>
-<dt><code>-a, &#8211;spin-and-atomic (from v3.3.0)</code></p>
-<dd> always draws atomic rendering on node position in addition to spin rendering. </p>
-<dt><code>-c, &#8211;colorize file (from v3.1.0)</code></p>
-<dd> the argument fileToRender must be called, then the given file of the option is used to colorize the elements. </p>
-<dt><code>-u, &#8211;use-column l:m:n (from v3.1.0)</code></p>
-<dd> it specifies the columns to use from the data file for the three colour channels [l;m;n]. Columns are counted from 1. Use -3, -2, -1 and 0 to use the special values, constant 1, coord. x, coord. y, and coord. z, respectively. </p>
-<dt><code>-d, &#8211;color-preset id (from v3.1.0)</code></p>
-<dd> this option can be used with the &#8216;&#8211;colorize&#8217; one or the &#8216;&#8211;build-map&#8217; one. It chooses a preset color scheme. The id argument is an integer that corresponds to a defined color shade (ranging from 0). </p>
-<dt><code>-t, &#8211;translate x:y:z (from v3.3.0)</code></p>
-<dd> a file must be loaded. It applies the given translations to the loaded file. The units are those of the file. This is available for periodic file formats only. </p>
-<dt><code>-x, &#8211;expand x:y:z (from v3.4.0)</code></p>
-<dd> a file must be loaded. It applies the given expansion to the loaded file. The values are given in box coordinates. This is available for periodic file formats only. </p>
-<dt><code>-p, &#8211;planes file (from v3.2.0)</code></p>
-<dd> the argument fileToRender must be called, then the given file of the option is parsed as a list of planes and they are rendered. </p>
-<dt><code>-f, &#8211;scalar-field file (from v3.3.0)</code></p>
-<dd> the argument fileToRender must be called, then the given file of the option is parsed as a scalar field and loaded. </p>
-<dt><code>-v, &#8211;iso-values v[:v] (from v3.3.0)</code></p>
-<dd> must be used with the &#8216;&#8211;scalar-field&#8217; option, then the given surfaces are built and rendered. If a name is appended to a value using &#8216;#&#8217; as a separator, this name is used as the name for the iso-surface (i.e. 0.25#Blue). </p>
-<dt><code>-i, &#8211;iso-surfaces file (from v3.2.0)</code></p>
-<dd> the argument fileToRender must be given, then the given file of the option is parsed and surfaces are rendered. </p>
-<dt><code>-b, &#8211;build-map id[:id] (from v3.4.0)</code></p>
-<dd> the argument fileToRender must be given, as the &#8216;&#8211;planes&#8217;, &#8216;&#8211;color-preset&#8217; and &#8216;&#8211;scalar-field&#8217; options used, then the given plane &#8216;id&#8217; is replaced by a coloured map using given scalar field and shade. &#8216;id&#8217; ranges from 0. If several ids are given, several maps are built. </p>
-<dt><code>&#8211;log-scale id (from v3.4.0)</code></p>
-<dd> select the scaling method to use with gradients (0: linear, 1: log scaled and 2 is zero-centred log scale), default is linear scale. </p>
-<dt><code>-n, &#8211;n-iso-lines val (from v3.4.0)</code></p>
-<dd> when positive, val isolines are plotted on the coloured map. </p>
-<dt><code>&#8211;color-iso-lines [R:G:B] or auto (from v3.5.0)</code></p>
-<dd> when given, generated iso-lines are colourised [R:G:B] or auto with the values. The specific value &#8216;auto&#8217; will produced iso-lines in inversed colours. (Default value: [0:0:0]) </p>
-<dt><code>&#8211;fit-to-box val (from v3.3.0)</code></p>
-<dd> if val is not TRUE, the surfaces use their own bounding box. (Default value: TRUE) </p>
-<dt><code>&#8211;bg-image file (from v3.4.0)</code></p>
-<dd> draw the given image on the background. </p>
-<dt><code>-o, &#8211;option id=value (from v3.3.0)</code></p>
-<dd> this is a generic way to give extended option. to V_Sim. As much as -o can be used. Each one store a key and its value (boolean, integer or float). </p>
-<dt><code>-w, &#8211;window-mode mode (from v3.5.0)</code></p>
-<dd> used to choose the windowing mode. By default the command panel and the rendering window are separated. In the &#8216;oneWindow&#8217; mode they are joined. In the &#8216;renderOnly&#8217; mode, the command panel is not used. (Default value: classic) </p>
-<dt><code>&#8211;i-set i (from v3.5.0)</code></p>
-<dd> this flag is used to choose the id of the loaded file if the format has support for multiple ids in one file (see XYZ format or -posi.d3 ones). (Default value: 0) </p>
-<dt><code>&#8211;value-file file (from v3.5.0)</code></p>
-<dd> specify an XML file with some value information for V_Sim, like a list of planes, highlighted nodes&#8230; It replaces and extend the previous &#8211;planes option. </p>
-<dt><code>&#8211;map-precision prec (from v3.5.0)</code></p>
-<dd> Give the precision in percent to render the coloured map. (Default value: 100) </p>
-<dt><code>&#8211;map-clamp min:max or auto (from v3.6.0)</code></p>
-<dd> Set the minimum and maximum values for the coloured map rendering. (Default value: auto) </p>
-<dt><code>&#8211;introspect-dump fileToDump (from v3.6.0)</code></p>
-<dd> Dump object signals and properties for introspection. </p>
-<dt><code>&#8211;color-clamp col#min:max or auto (from v3.7.0)</code></p>
-<dd> Range to adjust values into for colourisation. col specifiesthe column to apply the range to. Use -2, -1 and 0 for x, yand z directions respectively. (Default value: auto) </p>
-<dt><code>&#8211;scaling-column id (from v3.7.0)</code></p>
-<dd> used with a data file (see -c), it specifies the column id to be used to scale the nodes. </p>
+<dt><code>-e, &#8211;export file (from v3.0.0)</code></dt>
+<dd> make an image from the fileToRender argument. The format is specified through the extension of the argument or by the -o fileFormatId=id option (get the id of available file formats with -o list). </dd>
+<dt><code>-r, &#8211;resources file (from v3.4.0)</code></dt>
+<dd> load the given resources file on startup instead of looking for a valid resources file in the standard locations. </dd>
+<dt><code>-h, &#8211;help (from v3.0.0)</code></dt>
+<dd> show this little help. </dd>
+<dt><code>-g, &#8211;geometry &lt;w&gt;x&lt;h&gt; (from v3.0.0)</code></dt>
+<dd> specify the size of the rendering window, the size argument must have the following format: &lt;width&gt;x&lt;height&gt; with positive non null values. (Default value: 600&#215;600) </dd>
+<dt><code>-s, &#8211;spin-file file (from v3.1.0)</code></dt>
+<dd> use the given argument as a spin indicator. If this option is used, V_Sim switches automatically to spin rendering whatever method is specified in the parameter file. </dd>
+<dt><code>-m, &#8211;hiding-mode id (from v3.2.0)</code></dt>
+<dd> policy used to show or not null modulus spins possible values are positives. (Default value: 0) </dd>
+<dt><code>-a, &#8211;spin-and-atomic (from v3.3.0)</code></dt>
+<dd> always draws atomic rendering on node position in addition to spin rendering. </dd>
+<dt><code>-c, &#8211;colorize file (from v3.1.0)</code></dt>
+<dd> the argument fileToRender must be called, then the given file of the option is used to colorize the elements. </dd>
+<dt><code>-u, &#8211;use-column l:m:n (from v3.1.0)</code></dt>
+<dd> it specifies the columns to use from the data file for the three colour channels [l;m;n]. Columns are counted from 1. Use -3, -2, -1 and 0 to use the special values, constant 1, coord. x, coord. y, and coord. z, respectively. </dd>
+<dt><code>-d, &#8211;color-preset id (from v3.1.0)</code></dt>
+<dd> this option can be used with the &#8216;&#8211;colorize&#8217; one or the &#8216;&#8211;build-map&#8217; one. It chooses a preset color scheme. The id argument is an integer that corresponds to a defined color shade (ranging from 0). </dd>
+<dt><code>-t, &#8211;translate x:y:z (from v3.3.0)</code></dt>
+<dd> a file must be loaded. It applies the given translations to the loaded file. The units are those of the file. This is available for periodic file formats only. </dd>
+<dt><code>-x, &#8211;expand x:y:z (from v3.4.0)</code></dt>
+<dd> a file must be loaded. It applies the given expansion to the loaded file. The values are given in box coordinates. This is available for periodic file formats only. </dd>
+<dt><code>-p, &#8211;planes file (from v3.2.0)</code></dt>
+<dd> the argument fileToRender must be called, then the given file of the option is parsed as a list of planes and they are rendered. </dd>
+<dt><code>-f, &#8211;scalar-field file (from v3.3.0)</code></dt>
+<dd> the argument fileToRender must be called, then the given file of the option is parsed as a scalar field and loaded. </dd>
+<dt><code>-v, &#8211;iso-values v[:v] (from v3.3.0)</code></dt>
+<dd> must be used with the &#8216;&#8211;scalar-field&#8217; option, then the given surfaces are built and rendered. If a name is appended to a value using &#8216;#&#8217; as a separator, this name is used as the name for the iso-surface (i.e. 0.25#Blue). </dd>
+<dt><code>-i, &#8211;iso-surfaces file (from v3.2.0)</code></dt>
+<dd> the argument fileToRender must be given, then the given file of the option is parsed and surfaces are rendered. </dd>
+<dt><code>-b, &#8211;build-map id[:id] (from v3.4.0)</code></dt>
+<dd> the argument fileToRender must be given, as the &#8216;&#8211;planes&#8217;, &#8216;&#8211;color-preset&#8217; and &#8216;&#8211;scalar-field&#8217; options used, then the given plane &#8216;id&#8217; is replaced by a coloured map using given scalar field and shade. &#8216;id&#8217; ranges from 0. If several ids are given, several maps are built. </dd>
+<dt><code>&#8211;log-scale id (from v3.4.0)</code></dt>
+<dd> select the scaling method to use with gradients (0: linear, 1: log scaled and 2 is zero-centred log scale), default is linear scale. </dd>
+<dt><code>-n, &#8211;n-iso-lines val (from v3.4.0)</code></dt>
+<dd> when positive, val isolines are plotted on the coloured map. </dd>
+<dt><code>&#8211;color-iso-lines [R:G:B] or auto (from v3.5.0)</code></dt>
+<dd> when given, generated iso-lines are colourised [R:G:B] or auto with the values. The specific value &#8216;auto&#8217; will produced iso-lines in inversed colours. (Default value: [0:0:0]) </dd>
+<dt><code>&#8211;fit-to-box val (from v3.3.0)</code></dt>
+<dd> if val is not TRUE, the surfaces use their own bounding box. (Default value: TRUE) </dd>
+<dt><code>&#8211;bg-image file (from v3.4.0)</code></dt>
+<dd> draw the given image on the background. </dd>
+<dt><code>-o, &#8211;option id=value (from v3.3.0)</code></dt>
+<dd> this is a generic way to give extended option. to V_Sim. As much as -o can be used. Each one store a key and its value (boolean, integer or float). </dd>
+<dt><code>-w, &#8211;window-mode mode (from v3.5.0)</code></dt>
+<dd> used to choose the windowing mode. By default the command panel and the rendering window are separated. In the &#8216;oneWindow&#8217; mode they are joined. In the &#8216;renderOnly&#8217; mode, the command panel is not used. (Default value: classic) </dd>
+<dt><code>&#8211;i-set i (from v3.5.0)</code></dt>
+<dd> this flag is used to choose the id of the loaded file if the format has support for multiple ids in one file (see XYZ format or -posi.d3 ones). (Default value: 0) </dd>
+<dt><code>&#8211;value-file file (from v3.5.0)</code></dt>
+<dd> specify an XML file with some value information for V_Sim, like a list of planes, highlighted nodes&#8230; It replaces and extend the previous &#8211;planes option. </dd>
+<dt><code>&#8211;map-precision prec (from v3.5.0)</code></dt>
+<dd> Give the precision in percent to render the coloured map. (Default value: 100) </dd>
+<dt><code>&#8211;map-clamp min:max or auto (from v3.6.0)</code></dt>
+<dd> Set the minimum and maximum values for the coloured map rendering. (Default value: auto) </dd>
+<dt><code>&#8211;introspect-dump fileToDump (from v3.6.0)</code></dt>
+<dd> Dump object signals and properties for introspection. </dd>
+<dt><code>&#8211;color-clamp col#min:max or auto (from v3.7.0)</code></dt>
+<dd> Range to adjust values into for colourisation. col specifiesthe column to apply the range to. Use -2, -1 and 0 for x, yand z directions respectively. (Default value: auto) </dd>
+<dt><code>&#8211;scaling-column id (from v3.7.0)</code></dt>
+<dd> used with a data file (see -c), it specifies the column id to be used to scale the nodes. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/usr/share/v_sim/v_sim.res</i> specify all rendering informations from position of the camera to colour of the elements.<br />

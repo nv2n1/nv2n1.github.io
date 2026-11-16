@@ -15,11 +15,11 @@ rpc_clone_client_set_auth - Clone an RPC client structure and set its auth
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client whose parameters are copied</dl>
+<dl><dd></dd><dd>RPC client whose parameters are copied</dd></dl>
  
 
  <i>flavor</i>
-<dl><dd>security flavor for new client</dl>
+<dl><dd>security flavor for new client</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,12 +15,12 @@ description: "thin_rmap – output reverse map of a thin provisioned region of b
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>&#8211;region</code> {block range}</p>
-<dd>Specify range of blocks on the data device.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>&#8211;region</code> {block range}</dt>
+<dd>Specify range of blocks on the data device.</dd></dl>
 <pre> At least one region must be specified. Multiple regions may be specified.
  The range takes the format &lt;begin&gt;..&lt;one past the end&gt;. For example,
  &quot;5..45&quot; specifies data blocks 5 to 44 inclusive, but not 45.</pre>

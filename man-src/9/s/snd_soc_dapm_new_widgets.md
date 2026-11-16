@@ -15,7 +15,7 @@ snd_soc_dapm_new_widgets - add new dapm widgets
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>card to be checked for new dapm widgets</dl>
+<dl><dd></dd><dd>card to be checked for new dapm widgets</dd></dl>
 
 <h2>Description</h2>
 

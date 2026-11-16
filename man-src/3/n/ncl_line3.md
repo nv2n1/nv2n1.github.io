@@ -14,9 +14,9 @@ LINE3 - Draws the straight-line segment joining the projections of two points in
  void c_line3 (float ua, float va, float wa, float ub, 
  float vb, float wb)
 <h2>Description</h2><dl COMPACT><dt>UA,VA,WA
-<dd>(input expressions of type REAL) are the coordinates of the first point in 3-space.
-<dt>UB,VB,WB
-<dd>(input expressions of type REAL) are the coordinates of the second point in 3-space.</dl>
+</dt><dd>(input expressions of type REAL) are the coordinates of the first point in 3-space.
+</dd><dt>UB,VB,WB
+</dt><dd>(input expressions of type REAL) are the coordinates of the second point in 3-space.</dd></dl>
  
 
  The statement &quot;CALL LINE3 (UA,VA,WA,UB,VB,WB)&quot; is equivalent to the three statements &quot;CALL FRST3 (UA,VA,WA)&quot;, &quot;CALL VECT3 (UB,VB,,WB)&quot;, and &quot;CALL PLOTIF (0.,0.,2), but is slightly more efficient. To approximate a curve defined by three or more points, though, it is not efficient to use LINE3, because the first point of each line segment after the first will be a repeat of the second point of the previous line segment and will therefore be repeated in the metafile. Thus, to approximate a curve, you should use FRST3 and VECT3 or CURVE3. 

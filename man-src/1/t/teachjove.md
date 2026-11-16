@@ -15,8 +15,8 @@ description: "teachjove – learn how to use the JOVE editor"
 <p> TEACHJOVE is a simple program that calls up the JOVE editor on a special file that is an interactive tutorial for the JOVE editor. Once in JOVE all you do is follow the instructions and by doing so you will learn all about JOVE! NOTE: TEACHJOVE actually makes a copy of the tutorial in your home directory; if you ever want to start over (if you trash the file by accident) all you need to do is remove the file <i>~/teach-jove</i> and run teachjove again. </p>
 <p> TEACHJOVE recognizes the following switch:</p>
 <dl>
-<dt><code>-s</code><i>&nbsp;<wbr>sharedir</i></p>
-<dd> Allows the user to specify the directory in which the special teach-jove file can be found (default /usr/share/jove).</dl>
+<dt><code>-s</code><i>&nbsp;<wbr>sharedir</i></dt>
+<dd> Allows the user to specify the directory in which the special teach-jove file can be found (default /usr/share/jove).</dd></dl>
 <h2>FILES</h2>
 <p> <i>/usr/share/jove/teach-jove</i> &#8212; THE special file.</p>
 <h2>SEE ALSO</h2>

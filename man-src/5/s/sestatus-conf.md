@@ -12,37 +12,37 @@ description: "sestatus.conf – The"
 <h2>Description</h2>
 <p>The <i>sestatus.conf</i> file is used by the <code><a href="/docs/linux/man/8-sestatus/">sestatus</a></code>(8) command with the <code>-v</code> option to determine what file and process security contexts should be displayed. The fully qualified path name of the configuration file is:</p>
 <dl>
-<dd><i>/etc/sestatus.conf</i></dl>
+<dd><i>/etc/sestatus.conf</i></dd></dl>
 <p> The file consists of two optional sections as described in the <code>FILE FORMAT</code> section. Whether these exist or not, the following will always be displayed:</p>
 <dl>
 <dd>The current process context<br />
  The init process context<br />
- The controlling terminal file context</dl>
+ The controlling terminal file context</dd></dl>
 <h2>File Format</h2>
 <p>The format consists of two optional sections as follows:</p>
 <dl>
 <dd><code>[files]</code><br />
  <i>file_name</i><br />
  <i>[file_name]</i><br />
- <i>&#8230;</i> </p>
+ <i>&#8230;</i> </dd>
 <p> <code>[process]</code><br />
  <i>executable_file_name</i><br />
  <i>[executable_file_name]</i><br />
  <i>&#8230;</i></dl>
 <p> Where:</p>
 <dl>
-<dd><code>[files]</code></p>
+<dd><code>[files]</code></dd>
 <dl>
-<dd>The start of the file list block.</dl>
+<dd>The start of the file list block.</dd></dl>
 <p> <i>file_name</i></p>
 <dl>
-<dd>One or more fully qualified file names, each on a new line will that will have its context displayed. If the file does not exist, then it is ignored. If the file is a symbolic link, then <code>sestatus -v</code> will also display the target file context.</dl>
+<dd>One or more fully qualified file names, each on a new line will that will have its context displayed. If the file does not exist, then it is ignored. If the file is a symbolic link, then <code>sestatus -v</code> will also display the target file context.</dd></dl>
 <p> <code>[process]</code></p>
 <dl>
-<dd>The start of the process list block.</dl>
+<dd>The start of the process list block.</dd></dl>
 <p> <i>executable_file_name</i></p>
 <dl>
-<dd>One or more fully qualified executable file names that should it be an active process, have its context displayed. Each entry is on a new line.</dl>
+<dd>One or more fully qualified executable file names that should it be an active process, have its context displayed. Each entry is on a new line.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># /etc/sestatus.conf<br />

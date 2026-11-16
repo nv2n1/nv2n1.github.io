@@ -10,11 +10,8 @@ description: "std::comp_ellint_3,std::comp_ellint_3f,std::comp_ellint_3l – std
 <p>std::comp_ellint_3,std::comp_ellint_3f,std::comp_ellint_3l &#8211; std::comp_ellint_3,std::comp_ellint_3f,std::comp_ellint_3l</p>
 <h2>Synopsis</h2>
 <pre><code>double comp_ellint_3( double k, double ν );
-
 float comp_ellint_3f( float k, float ν );                  (1) (since C++17)
-
 long double comp_ellint_3l( long double k, long double ν );
-
 Promoted comp_ellint_3( Arithmetic k, Arithmetic ν );      (2) (since C++17)</code></pre>
 <p>1) Computes the complete_elliptic_integral_of_the_third_kind of the arguments k and ν.<br />
 2) A set of overloads or a function template for all combinations of arguments of arithmetic type not covered by <code>(1)</code>. If any argument has integral_type, it is cast to double. If any argument is long double, then the return type Promoted is also long double, otherwise the return type is always double. </p>
@@ -34,11 +31,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     double hpi = std::acos(-1) / 2;
     std::cout &lt;&lt; &quot;Π(0.5,0) = &quot; &lt;&lt; std::comp_ellint_3(0.5, 0) &lt;&lt; '

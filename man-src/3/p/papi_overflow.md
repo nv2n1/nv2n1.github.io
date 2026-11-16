@@ -16,12 +16,12 @@ description: "PAPI_overflow –"
 <p> _papi_overflow_handler() is a placeholder for a user-defined function to process overflow events. A pointer to this function is passed to the <code>PAPI_overflow</code> routine, where it is invoked whenever a software or hardware overflow occurs. This handler receives the EventSet of the overflowing event, the Program Counter address when the interrupt occured, an overflow_vector that can be processed to determined which event(s) caused the overflow, and a pointer to the machine context, which can be used in a platform-specific manor to extract register information about what was happening when the overflow occured. </p>
 <p> <code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_overflow</code>&nbsp;<wbr>(int EventSet, int EventCode, int threshold, int flags, PAPI_overflow_handler_t handler&nbsp;<wbr>);&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>(*PAPI_overflow_handler_t)&nbsp;<wbr>_papi_overflow_handler&nbsp;<wbr>(int EventSet, void&nbsp;<wbr>*address, long_long overflow_vector, void&nbsp;<wbr>*context&nbsp;<wbr>);</dl>
 <p> <code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>Not implemented</dl>
+<dd>Not implemented</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>EventSet</i> &#8212; an integer handle to a PAPI event set as created by <code>PAPI_create_eventset</code><br />
@@ -31,7 +31,7 @@ description: "PAPI_overflow –"
  <i>handler</i> &#8212; pointer to the user supplied handler function to call upon overflow<br />
  <i>address</i> &#8212; the Program Counter address at the time of the overflow<br />
  <i>overflow_vector</i> &#8212; a long long word containing flag bits to indicate which hardware counter(s) caused the overflow<br />
- <i>*context</i> &#8212; pointer to a machine specific structure that defines the register context at the time of overflow. This parameter is often unused and can be ignored in the user function.</dl>
+ <i>*context</i> &#8212; pointer to a machine specific structure that defines the register context at the time of overflow. This parameter is often unused and can be ignored in the user function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_OK</i> On success, <code>PAPI_overflow</code> returns PAPI_OK.<br />
@@ -40,7 +40,7 @@ description: "PAPI_overflow –"
  <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
  <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
  <i>PAPI_ECNFLCT</i> The underlying counter hardware cannot count this event and other events in the EventSet simultaneously. Also can happen if you are trying to overflow both by hardware and by forced software at the same time.<br />
- <i>PAPI_ENOEVNT</i> The PAPI event is not available on the underlying hardware.</dl>
+ <i>PAPI_ENOEVNT</i> The PAPI event is not available on the underlying hardware.</dd></dl>
 <p> <code>Example</code></p>
 <dl COMPACT>
 <dd>
@@ -54,9 +54,9 @@ description: "PAPI_overflow –"
 * // setting the threshold to 100000. Use the handler defined above.
 * retval = PAPI_overflow(EventSet, PAPI_TOT_INS, 100000, 0, handler);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_get_overflow_event_index</code></dl>
+<dd><code>PAPI_get_overflow_event_index</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

@@ -15,11 +15,11 @@ get_option - Parse integer from an option string
 <h2>Arguments</h2>
 
 <i>str</i>
-<dl><dd><dd>option string</dl>
+<dl><dd></dd><dd>option string</dd></dl>
  
 
  <i>pint</i>
-<dl><dd>(output) integer value parsed from <i>str</i></dl>
+<dl><dd>(output) integer value parsed from <i>str</i></dd></dl>
 
 <h2>Description</h2>
 

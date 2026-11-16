@@ -10,19 +10,12 @@ description: "std::condition_variable::wait_until – std::condition_variable::w
 <p>std::condition_variable::wait_until &#8211; std::condition_variable::wait_until</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Clock, class Duration&gt;
-
 std::cv_status(1)(since C++ 11)
-
     wait_until(std::unique_lock&lt;std::mutex&gt; &amp;lock,
-
                const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time);
-
 template &lt;class Clock, class Duration, class Pred&gt;
-
 bool wait_until(std::unique_lock&lt;std::mutex&gt; &amp;lock, (2)(since C++ 11)
-
                                                         const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time,
-
                 Pred pred);</code></pre>
 <p>wait_until causes the current thread to block until the condition variable is notified, a specific time is reached, or a spurious wakeup occurs, optionally looping until some predicate is satisfied.<br />
 1) Atomically releases lock, blocks the current executing thread, and adds it to the list of threads waiting on *this. The thread will be unblocked when notify_all() or notify_one() is executed, or when the absolute time point timeout_time is reached. It may also be unblocked spuriously. When unblocked, regardless of the reason, lock is reacquired and wait_until exits.<br />
@@ -59,23 +52,15 @@ The effects of notify_one()/notify_all() and each of the three atomic parts of w
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
-
 #include &lt;condition_variable&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
-
 using namespace std::chrono_literals;
 std::condition_variable cv;
-
 std::mutex cv_m;
-
 std::atomic&lt;int&gt; i{0};
 void waits(int idx)
-
 {
     std::unique_lock&lt;std::mutex&gt; lk(cv_m);
     auto now = std::chrono::system_clock::now();
@@ -87,7 +72,6 @@ void waits(int idx)
 ';
 }
 void signals()
-
 {
     std::this_thread::sleep_for(120ms);
     std::cerr &lt;&lt; &quot;Notifying...
@@ -100,7 +84,6 @@ void signals()
     cv.notify_all();
 }
 int main()
-
 {
     std::thread t1(waits, 1), t2(waits, 2), t3(waits, 3), t4(signals);
     t1.join();

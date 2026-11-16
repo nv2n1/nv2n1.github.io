@@ -105,10 +105,10 @@ description: "ApplicationShell — The ApplicationShell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNargc</code></p>
-<dd>Specifies the number of arguments given in the <code>XmNargv</code> resource. The function <code>XtInitialize</code> sets this resource on the shell widget instance it creates by using its parameters as the values.</p>
-<dt><code>XmNargv</code></p>
-<dd>Specifies the argument list required by a session manager to restart the application if it is killed. This list should be updated at appropriate points by the application if a new state has been reached that can be directly restarted. The function <code>XtInitialize</code> sets this resource on the shell widget instance it creates by using its parameters as the values. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dl>
+<dt><code>XmNargc</code></dt>
+<dd>Specifies the number of arguments given in the <code>XmNargv</code> resource. The function <code>XtInitialize</code> sets this resource on the shell widget instance it creates by using its parameters as the values.</dd>
+<dt><code>XmNargv</code></dt>
+<dd>Specifies the argument list required by a session manager to restart the application if it is killed. This list should be updated at appropriate points by the application if a new state has been reached that can be directly restarted. The function <code>XtInitialize</code> sets this resource on the shell widget instance it creates by using its parameters as the values. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>ApplicationShell inherits behavior and resources from the following superclasses. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

@@ -18,14 +18,14 @@ description: "XmRenditionCreate — A convenience function that creates a rendit
 <h2>Description</h2>
 <p><code>XmRenditionCreate</code> creates a rendition whose resources are set to the values specified in <i>arglist</i>. Default values are assigned to resources that are not specified.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the widget used for deriving any necessary information for creating the rendition. In particular, the X display of <i>widget</i> will be used for loading fonts.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag for the rendition. (This will become the <code>XmNtag</code> resource for the rendition.)</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list.</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget used for deriving any necessary information for creating the rendition. In particular, the X display of <i>widget</i> will be used for loading fonts.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag for the rendition. (This will become the <code>XmNtag</code> resource for the rendition.)</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list.</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dd></dl>
 <h2>Return</h2>
 <p>Returns the created rendition. The function allocates space to hold the returned rendition. The application is responsible for managing this allocated space. The application can recover this allocated space by calling <code>XmRenditionFree</code>.</p>
 <h2>Related</h2>

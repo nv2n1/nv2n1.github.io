@@ -35,33 +35,33 @@ description: "ppmrough – create PPM image of two colors with a ragged border b
 <p> You could use <code>ppmrough</code> with <code>ppmtopgm</code> to create a PGM alpha mask and use it to roughen up the edges of another image. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-left=</code><i>pixels</i></p>
+<dt><code>-left=</code><i>pixels</i></dt>
 <dd>
-&nbsp;<wbr>Specifies the mean distance of the border from the left margin (default: no border). </p>
-<dt><code>-right=</code><i>pixels</i></p>
-<dd> Specifies the mean distance of the border from the right margin (default: no border). </p>
-<dt><code>-top=</code><i>pixels</i></p>
-<dd> Specifies the mean distance of the border from the top margin (default: no border). </p>
-<dt><code>-bottom=</code><i>pixels</i></p>
-<dd> Specifies the mean distance of the border from the bottom margin (default: no border). </p>
-<dt><code>-width=</code><i>pixels</i></p>
-<dd> Specifies the width of the image (default: 100). </p>
-<dt><code>-height=</code><i>pixels</i></p>
-<dd> Specifies the height of the image (default: 100). </p>
-<dt><code>-bg=</code><i>color</i></p>
+&nbsp;<wbr>Specifies the mean distance of the border from the left margin (default: no border). </dd>
+<dt><code>-right=</code><i>pixels</i></dt>
+<dd> Specifies the mean distance of the border from the right margin (default: no border). </dd>
+<dt><code>-top=</code><i>pixels</i></dt>
+<dd> Specifies the mean distance of the border from the top margin (default: no border). </dd>
+<dt><code>-bottom=</code><i>pixels</i></dt>
+<dd> Specifies the mean distance of the border from the bottom margin (default: no border). </dd>
+<dt><code>-width=</code><i>pixels</i></dt>
+<dd> Specifies the width of the image (default: 100). </dd>
+<dt><code>-height=</code><i>pixels</i></dt>
+<dd> Specifies the height of the image (default: 100). </dd>
+<dt><code>-bg=</code><i>color</i></dt>
 <dd> Background color. Specify this the same way you specify a color with<br />
-&nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is black. </p>
-<dt><code>-fg=</code><i>color</i></p>
+&nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is black. </dd>
+<dt><code>-fg=</code><i>color</i></dt>
 <dd> Foreground color. Specify this the same way you specify a color with<br />
-&nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is white. </p>
-<dt><code>-var=</code><i>pixels</i></p>
+&nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is white. </dd>
+<dt><code>-var=</code><i>pixels</i></dt>
 <dd>
-&nbsp;<wbr>Specifies the variance of the ragged border&nbsp;<wbr>(default: 10). Must be a positive integer. Set <i>pixels</i> to 1 to get a straight border. </p>
-<dt><code>-randomseed=</code><i>seed</i></p>
-<dd> Use this option to initialize the pseudo-random number generator (the Standard C library <code>srand()</code> function) with <i>seed</i>. </p>
+&nbsp;<wbr>Specifies the variance of the ragged border&nbsp;<wbr>(default: 10). Must be a positive integer. Set <i>pixels</i> to 1 to get a straight border. </dd>
+<dt><code>-randomseed=</code><i>seed</i></dt>
+<dd> Use this option to initialize the pseudo-random number generator (the Standard C library <code>srand()</code> function) with <i>seed</i>. </dd>
 <p> Before Netpbm 10.61 (December 2012), this is called <code>-init</code>, and that still works. </p>
-<dt><code>-verbose</code></p>
-<dd> Run <code>ppmrough</code> in verbose mode. It reports all parameters on Standard Error. </p>
+<dt><code>-verbose</code></dt>
+<dd> Run <code>ppmrough</code> in verbose mode. It reports all parameters on Standard Error. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code>ppm</code>(1) , </p>

@@ -23,12 +23,12 @@ description: "OpenDNSSEC – making DNSSEC easy for DNS administrators"
 <h2>Operational Practices</h2>
 <p>The approach used by OpenDNSSEC follows the best current practice of two kinds of key per zone:</p>
 <dl>
-<dt><code>KSK</code> or <code>Key Signing Key</code></p>
-<dd>This key belongs in the apex of a zone, and is referenced in the parent zone (quite possibly a registry) in the form of DS records alongside NS records. These parent references function as trust delegations. </p>
+<dt><code>KSK</code> or <code>Key Signing Key</code></dt>
+<dd>This key belongs in the apex of a zone, and is referenced in the parent zone (quite possibly a registry) in the form of DS records alongside NS records. These parent references function as trust delegations. </dd>
 <p> The KSK is usually a longer key, and it could harm the efficiency of secure resolvers if all individual resource records were signed with it. This is why it is advisable to use the KSK only to sign the ZSK. </p>
 <p> In DNS records, the KSK can usually be recognised by having its SEP (Secure Entry Point) flag set.</p>
-<dt><code>ZSK</code> or <code>Zone Signing Key</code></p>
-<dd>This key also belongs in the apex of a zone, and is actually used to sign the resource records in a zone. It is a shorter key for reasons of efficiency, that is rolled over on a fairly regular basis. To detach these rollovers from the parent, the ZSK is not directly trusted by the parent zone, but instead its trust is established by way of a signature by the KSK on the ZSK.</dl>
+<dt><code>ZSK</code> or <code>Zone Signing Key</code></dt>
+<dd>This key also belongs in the apex of a zone, and is actually used to sign the resource records in a zone. It is a shorter key for reasons of efficiency, that is rolled over on a fairly regular basis. To detach these rollovers from the parent, the ZSK is not directly trusted by the parent zone, but instead its trust is established by way of a signature by the KSK on the ZSK.</dd></dl>
 <p> OpenDNSSEC is mindful about the period of validity of each key, and will rollover in time to keep the domain signed, with new keys, without any downtime for the secure domain. The only thing that is not standardised, and thus cannot be automated at the moment is the interface between a zone and its parent, so this has to be done manually, or scripted around OpenDNSSEC.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ods-control/">ods-control</a>(8), <a href="/docs/linux/man/8-ods-enforcerd/">ods-enforcerd</a>(8), <a href="/docs/linux/man/1-ods-hsmspeed/">ods-hsmspeed</a>(1), <a href="/docs/linux/man/1-ods-hsmutil/">ods-hsmutil</a>(1), <a href="/docs/linux/man/1-ods-kaspcheck/">ods-kaspcheck</a>(1), <a href="/docs/linux/man/1-ods-ksmutil/">ods-ksmutil</a>(1), <a href="/docs/linux/man/8-ods-signer/">ods-signer</a>(8), <a href="/docs/linux/man/8-ods-signerd/">ods-signerd</a>(8), <a href="/docs/linux/man/5-ods-timing/">ods-timing</a>(5), <code><a rel="nofollow" href="http://www.opendnssec.org/">http://www.opendnssec.org/</a></code></p>

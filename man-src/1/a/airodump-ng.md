@@ -15,47 +15,47 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 <p> <code>airodump-ng</code> is used for packet capturing of raw 802.11 frames for the intent of using them with aircrack-ng. If you have a GPS receiver connected to the computer, airodump-ng is capable of logging the coordinates of the found access points. Additionally, airodump-ng writes out a text file containing the details of all access points and clients seen.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-i, &#8211;ivs</i></p>
-<dd> It only saves IVs (only useful for cracking). If this option is specified, you have to give a dump prefix (&#8211;write option)</p>
-<dt><i>-g, &#8211;gpsd</i></p>
-<dd> Indicate that airodump-ng should try to use GPSd to get coordinates.</p>
-<dt><i>-w &lt;prefix&gt;, &#8211;write &lt;prefix&gt;</i></p>
-<dd> Is the dump file prefix to use. If this option is not given, it will only show data on the screen. Beside this file a CSV file with the same filename as the capture will be created.</p>
-<dt><i>-e, &#8211;beacons</i></p>
-<dd> It will record all beacons into the cap file. By default it only records one beacon for each network.</p>
-<dt><i>-u &lt;secs&gt;, &#8211;update &lt;secs&gt;</i></p>
-<dd> Delay &lt;secs&gt; seconds delay between display updates (default: 1 second). Useful for slow CPU.</p>
-<dt><i>&#8211;showack</i></p>
-<dd> Prints ACK/CTS/RTS statistics. Helps in debugging and general injection optimization. It is indication if you inject, inject too fast, reach the AP, the frames are valid encrypted frames. Allows to detect &quot;hidden&quot; stations, which are too far away to capture high bitrate frames, as ACK frames are sent at 1Mbps.</p>
-<dt><i>-h</i></p>
-<dd> Hides known stations for &#8211;showack.</p>
-<dt><i>&#8211;berlin &lt;secs&gt;</i></p>
-<dd> Time before removing the AP/client from the screen when no more packets are received (Default: 120 seconds). See airodump-ng source for the history behind this option ;).</p>
-<dt><i>-c &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]], &#8211;channel &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]]</i></p>
-<dd> Indicate the channel(s) to listen to. By default airodump-ng hop on all 2.4Ghz channels.</p>
-<dt><i>-b &lt;abg&gt;, &#8211;band &lt;abg&gt;</i></p>
-<dd> Indicate the band on which airodump-ng should hop. It can be a combination of &#8216;a&#8217;, &#8216;b&#8217; and &#8216;g&#8217; letters (&#8216;b&#8217; and &#8216;g&#8217; uses 2.4Ghz and &#8216;a&#8217; uses 5Ghz). Incompatible with &#8211;channel option.</p>
-<dt><i>-s &lt;method&gt;, &#8211;cswitch &lt;method&gt;</i></p>
-<dd> Defines the way airodump-ng sets the channels when using more than one card. Valid values: 0, 1 or 2.</p>
-<dt><i>-r &lt;file&gt;</i></p>
-<dd> Reads packet from a file.</p>
-<dt><i>-x &lt;msecs&gt;</i></p>
-<dd> Active Scanning Simulation (send probe requests and parse the probe responses).</p>
-<dt><i>&#8211;output-format &lt;formats&gt;</i></p>
+<dt><i>-H, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-i, &#8211;ivs</i></dt>
+<dd> It only saves IVs (only useful for cracking). If this option is specified, you have to give a dump prefix (&#8211;write option)</dd>
+<dt><i>-g, &#8211;gpsd</i></dt>
+<dd> Indicate that airodump-ng should try to use GPSd to get coordinates.</dd>
+<dt><i>-w &lt;prefix&gt;, &#8211;write &lt;prefix&gt;</i></dt>
+<dd> Is the dump file prefix to use. If this option is not given, it will only show data on the screen. Beside this file a CSV file with the same filename as the capture will be created.</dd>
+<dt><i>-e, &#8211;beacons</i></dt>
+<dd> It will record all beacons into the cap file. By default it only records one beacon for each network.</dd>
+<dt><i>-u &lt;secs&gt;, &#8211;update &lt;secs&gt;</i></dt>
+<dd> Delay &lt;secs&gt; seconds delay between display updates (default: 1 second). Useful for slow CPU.</dd>
+<dt><i>&#8211;showack</i></dt>
+<dd> Prints ACK/CTS/RTS statistics. Helps in debugging and general injection optimization. It is indication if you inject, inject too fast, reach the AP, the frames are valid encrypted frames. Allows to detect &quot;hidden&quot; stations, which are too far away to capture high bitrate frames, as ACK frames are sent at 1Mbps.</dd>
+<dt><i>-h</i></dt>
+<dd> Hides known stations for &#8211;showack.</dd>
+<dt><i>&#8211;berlin &lt;secs&gt;</i></dt>
+<dd> Time before removing the AP/client from the screen when no more packets are received (Default: 120 seconds). See airodump-ng source for the history behind this option ;).</dd>
+<dt><i>-c &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]], &#8211;channel &lt;channel&gt;[,&lt;channel&gt;[,&#8230;]]</i></dt>
+<dd> Indicate the channel(s) to listen to. By default airodump-ng hop on all 2.4Ghz channels.</dd>
+<dt><i>-b &lt;abg&gt;, &#8211;band &lt;abg&gt;</i></dt>
+<dd> Indicate the band on which airodump-ng should hop. It can be a combination of &#8216;a&#8217;, &#8216;b&#8217; and &#8216;g&#8217; letters (&#8216;b&#8217; and &#8216;g&#8217; uses 2.4Ghz and &#8216;a&#8217; uses 5Ghz). Incompatible with &#8211;channel option.</dd>
+<dt><i>-s &lt;method&gt;, &#8211;cswitch &lt;method&gt;</i></dt>
+<dd> Defines the way airodump-ng sets the channels when using more than one card. Valid values: 0, 1 or 2.</dd>
+<dt><i>-r &lt;file&gt;</i></dt>
+<dd> Reads packet from a file.</dd>
+<dt><i>-x &lt;msecs&gt;</i></dt>
+<dd> Active Scanning Simulation (send probe requests and parse the probe responses).</dd>
+<dt><i>&#8211;output-format &lt;formats&gt;</i></dt>
 <dd> Define the formats to use (separated by a comma). Possible values are: pcap, ivs, csv, gps, kismet, netxml. The default values are: pcap, csv, kismet, kismet-newcore.<br />
- Theses values can be combined with the exception of ivs and pcap.</dl>
+ Theses values can be combined with the exception of ivs and pcap.</dd></dl>
 <p> <code>Filter options:</code></p>
 <dl>
-<dt><i>-t &lt;OPN|WEP|WPA|WPA1|WPA2&gt;, &#8211;encrypt &lt;OPN|WEP|WPA|WPA1|WPA2&gt;</i></p>
-<dd> It will only show networks matching the given encryption. May be specified more than once: &#8216;-t OPN -t WPA2&#8217;</p>
-<dt><i>-d &lt;bssid&gt;, &#8211;bssid &lt;bssid&gt;</i></p>
-<dd> It will only show networks, matching the given bssid.</p>
-<dt><i>-m &lt;mask&gt;, &#8211;netmask &lt;mask&gt;</i></p>
-<dd> It will only show networks, matching the given bssid ^ netmask combination. Need &#8211;bssid (or -d) to be specified.</p>
-<dt><i>-a</i></p>
-<dd> It will only show associated clients.</dl>
+<dt><i>-t &lt;OPN|WEP|WPA|WPA1|WPA2&gt;, &#8211;encrypt &lt;OPN|WEP|WPA|WPA1|WPA2&gt;</i></dt>
+<dd> It will only show networks matching the given encryption. May be specified more than once: &#8216;-t OPN -t WPA2&#8217;</dd>
+<dt><i>-d &lt;bssid&gt;, &#8211;bssid &lt;bssid&gt;</i></dt>
+<dd> It will only show networks, matching the given bssid.</dd>
+<dt><i>-m &lt;mask&gt;, &#8211;netmask &lt;mask&gt;</i></dt>
+<dd> It will only show networks, matching the given bssid ^ netmask combination. Need &#8211;bssid (or -d) to be specified.</dd>
+<dt><i>-a</i></dt>
+<dd> It will only show associated clients.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>airodump-ng</code> &#8211;band bg ath0 </p>
 <p> Here is an example screenshot: </p>

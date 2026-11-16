@@ -11,10 +11,8 @@ std::experimental::filesystem::read_symlink - std::experimental::filesystem::rea
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     path read_symlink(const path &amp;p);
 (filesystem TS)
-
     path read_symlink(const path &amp;p, error_code &amp;ec);</code></pre> 
 If the path p refers to a symbolic link, returns a new path object which refers to the target of that symbolic link. 
 It is an error if p does not refer to a symbolic link. 
@@ -38,13 +36,9 @@ noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     // on a typical Linux system, /lib/libc.so.6 is a symlink
     fs::path p = &quot;/lib/libc.so.6&quot;;

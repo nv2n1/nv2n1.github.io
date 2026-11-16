@@ -14,10 +14,10 @@ description: "find_lock_entry – locate, pin and lock a page cache entry"
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the address_space to search</dl>
+</dd><dd>the address_space to search</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>the page cache index</dl>
+<dd>the page cache index</dd></dl>
 <h2>Description</h2>
 <p>Looks up the page cache slot at <i>mapping</i> &amp; <i>offset</i>. If there is a page cache page, it is returned locked and with an increased refcount. </p>
 <p> If the slot holds a shadow entry of a previously evicted page, or a swap entry from shmem/tmpfs, it is returned. </p>

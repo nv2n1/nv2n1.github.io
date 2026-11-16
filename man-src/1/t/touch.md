@@ -17,28 +17,28 @@ description: "touch – change file timestamps"
 <p> A FILE argument string of &#8211; is handled specially and causes touch to change the times of the file associated with standard output. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> change only the access time</p>
-<dt><code>-c</code>, <code>&#8211;no-create</code></p>
-<dd> do not create any files</p>
-<dt><code>-d</code>, <code>&#8211;date</code>=<i>,STRING/</i></p>
-<dd> parse STRING and use it instead of current time</p>
-<dt><code>-f</code></p>
-<dd> (ignored)</p>
-<dt><code>-h</code>, <code>&#8211;no-dereference</code></p>
-<dd> affect each symbolic link instead of any referenced file (useful only on systems that can change the timestamps of a symlink)</p>
-<dt><code>-m</code></p>
-<dd> change only the modification time</p>
-<dt><code>-r</code>, <code>&#8211;reference</code>=<i>,FILE/</i></p>
-<dd> use this file&#8217;s times instead of current time</p>
-<dt><code>-t</code> STAMP</p>
-<dd> use [[CC]YY]MMDDhhmm[.ss] instead of current time</p>
-<dt><code>&#8211;time</code>=<i>,WORD/</i></p>
-<dd> change the specified time: WORD is access, atime, or use: equivalent to <code>-a</code> WORD is modify or mtime: equivalent to <code>-m</code></p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code></dt>
+<dd> change only the access time</dd>
+<dt><code>-c</code>, <code>&#8211;no-create</code></dt>
+<dd> do not create any files</dd>
+<dt><code>-d</code>, <code>&#8211;date</code>=<i>,STRING/</i></dt>
+<dd> parse STRING and use it instead of current time</dd>
+<dt><code>-f</code></dt>
+<dd> (ignored)</dd>
+<dt><code>-h</code>, <code>&#8211;no-dereference</code></dt>
+<dd> affect each symbolic link instead of any referenced file (useful only on systems that can change the timestamps of a symlink)</dd>
+<dt><code>-m</code></dt>
+<dd> change only the modification time</dd>
+<dt><code>-r</code>, <code>&#8211;reference</code>=<i>,FILE/</i></dt>
+<dd> use this file&#8217;s times instead of current time</dd>
+<dt><code>-t</code> STAMP</dt>
+<dd> use [[CC]YY]MMDDhhmm[.ss] instead of current time</dd>
+<dt><code>&#8211;time</code>=<i>,WORD/</i></dt>
+<dd> change the specified time: WORD is access, atime, or use: equivalent to <code>-a</code> WORD is modify or mtime: equivalent to <code>-m</code></dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Note that the <code>-d</code> and <code>-t</code> options accept different time-date formats.</p>
 <h2>DATE STRING</h2>
 <p> The &#8211;date=STRING is a mostly free format human readable date string such as &quot;Sun, 29 Feb 2004 16:21:42 -0800&quot; or &quot;2004-02-29 16:21:42&quot; or even &quot;next Thursday&quot;. A date string may contain items indicating calendar date, time of day, time zone, day of week, relative time, relative date, and numbers. An empty string indicates the beginning of the day. The date string format is more complex than is easily documented here but is fully described in the info documentation.</p>

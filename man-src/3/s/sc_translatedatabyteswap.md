@@ -11,7 +11,6 @@ description: "sc::TranslateDataByteSwap –"
 <p> Data translation to an external representation with bytes swapped.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;translate.h&gt;</code></pre>
 <p> Inherits <code>sc::TranslateData</code>.</p>
 <h3>Public Member Functions</h3>

@@ -14,15 +14,15 @@ description: "irq_set_irq_type – set the irq trigger type for an irq"
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>irq number</dl>
+</dd><dd>irq number</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>IRQ_TYPE_{LEVEL,EDGE}_* value &#8211; see include/linux/irq.h</dl>
+<dd>IRQ_TYPE_{LEVEL,EDGE}_* value &#8211; see include/linux/irq.h</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

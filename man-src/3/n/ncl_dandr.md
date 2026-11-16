@@ -11,35 +11,33 @@ DANDR - Draws an isosurface when used in conjunction with entry INIT3D.
 <h2>Synopsis</h2>CALL DANDR (NV,NW,ST1,LX,NX,NY,IS2,IU,S,IOBJS,MV)
 <h2>Status</h2>This routine is part of the obsolete Isosrfhr utility. Isosrfhr has been replaced by the Isosurface utility. To see the Isosurface utility overview man page, type &quot;man isosurface&quot;.
 <h2>Description</h2><dl COMPACT><dt>NV
-<dd>(an input expression of type INTEGER) defines the range to be used for the V dimension of the 3-D UVW grid.
-<dt>NW
-<dd>(an input expression of type INTEGER) defines the range to be used for the W dimension of the 3-D UVW grid.
-<dt>ST1
-<dd>(an input array of type REAL) used as scratch work space. It must be dimensioned at least of size NV*NW*2 words.
-<dt>LX
-<dd>(an input array of type INTEGER) which is the first dimension of array IS2. It must be of a length to hold NX bits. On a 64 bit machine it would be LX=(NX-1)/64+1.
-<dt>NX
-<dd>(an input expression of type INTEGER) defines the range of cells in the X-direction of the XY pixel model of the image plane. A silhouette of the parts of the picture processed so far is stored in this model. Lines to be drawn are tested for visibility by examining the silhouette. Lines in the silhouette are hidden. Lines out of the silhouette are visible. The solution is approximate because the silhouette is not formed exactly. See IS2.
-<dt>NY
-<dd>(an input expression of type INTEGER) defines the range of cells in the Y-direction of the XY pixel model of the image plane. NY is also the second dimension of array IS2.
-<dt>IS2
-<dd>(an input array of type INTEGER) which holds the XY pixel model of the image plane. It is dimensioned LX by NY. The pixel model contains NX by NY elements. The sizes of NX and NY vary with the choice of options. For example, if hidden lines are drawn, NX and NY (and LX) can be smaller than when hidden lines are not drawn. If some visible lines are not drawn, NX and NY (and LX) must be made larger. As a guide, some examples which have been adequate are: <pre> GIVEN USE
+</dt><dd>(an input expression of type INTEGER) defines the range to be used for the V dimension of the 3-D UVW grid.
+</dd><dt>NW
+</dt><dd>(an input expression of type INTEGER) defines the range to be used for the W dimension of the 3-D UVW grid.
+</dd><dt>ST1
+</dt><dd>(an input array of type REAL) used as scratch work space. It must be dimensioned at least of size NV*NW*2 words.
+</dd><dt>LX
+</dt><dd>(an input array of type INTEGER) which is the first dimension of array IS2. It must be of a length to hold NX bits. On a 64 bit machine it would be LX=(NX-1)/64+1.
+</dd><dt>NX
+</dt><dd>(an input expression of type INTEGER) defines the range of cells in the X-direction of the XY pixel model of the image plane. A silhouette of the parts of the picture processed so far is stored in this model. Lines to be drawn are tested for visibility by examining the silhouette. Lines in the silhouette are hidden. Lines out of the silhouette are visible. The solution is approximate because the silhouette is not formed exactly. See IS2.
+</dd><dt>NY
+</dt><dd>(an input expression of type INTEGER) defines the range of cells in the Y-direction of the XY pixel model of the image plane. NY is also the second dimension of array IS2.
+</dd><dt>IS2
+</dt><dd>(an input array of type INTEGER) which holds the XY pixel model of the image plane. It is dimensioned LX by NY. The pixel model contains NX by NY elements. The sizes of NX and NY vary with the choice of options. For example, if hidden lines are drawn, NX and NY (and LX) can be smaller than when hidden lines are not drawn. If some visible lines are not drawn, NX and NY (and LX) must be made larger. As a guide, some examples which have been adequate are: <pre> GIVEN USE
  NU NV NW NX NY
 --------------------------------
  100 100 60 200 200
  60 60 60 110 110
- 40 40 40 75 75</pre><dt>IU
-<dd>(an input expression of type INTEGER) defines the unit number of a scratch file for the package. ST1 will be written NU times on this file.
-<dt>S
-<dd>(an input array of type REAL, dimensioned 4) contains the world coordinates of the area where the picture is to be drawn. That is, all plotting coordinates generated will be bounded as follows: X coordinates will be between S(1) and S(2), Y coordinates will be between <a HREF="/docs/linux/man/3-s/">S</a>(3) and S(4). To prevent distortion, have S(2)-S(1) = S(4)-S(3). 
-
+ 40 40 40 75 75</pre></dd><dt>IU
+</dt><dd>(an input expression of type INTEGER) defines the unit number of a scratch file for the package. ST1 will be written NU times on this file.
+</dd><dt>S
+</dt><dd>(an input array of type REAL, dimensioned 4) contains the world coordinates of the area where the picture is to be drawn. That is, all plotting coordinates generated will be bounded as follows: X coordinates will be between S(1) and S(2), Y coordinates will be between <a HREF="/docs/linux/man/3-s/">S</a>(3) and S(4). To prevent distortion, have S(2)-S(1) = S(4)-S(3). 
  All coordinates should be in a range between 10. and 1010.
-<dt>IOBJS
-<dd>(an input array of type INTEGER) which describes the objects to be drawn in VW space. It is of size NV by NW. The actual first dimension of IOBJS in the calling program is MV. 
-
+</dd><dt>IOBJS
+</dt><dd>(an input array of type INTEGER) which describes the objects to be drawn in VW space. It is of size NV by NW. The actual first dimension of IOBJS in the calling program is MV. 
  Entry DANDR is called NU times to process any object contours in the VW cross sections defined by IOBJS. Slabs are processed from back to front such that on the I-th call to DANDR, the slab at U = NU+1-I is processed. IOBJS(J,K) = 1 if any object contains the point (NU+1-I,J,K) and IOBJS(J,K) = 0 otherwise.
-<dt>MV
-<dd>(an input expression of type INTEGER) defines the actual first dimension of the array IOBJS in the calling program. When plotting all of IOBJS, NV = MV.</dl><h2>Usage</h2>Entries DANDR and DANDR must be used in tandem to create a plot. First call entry DANDR to create a set of 2-D perspective planes which are output to a scratch file. Then, in the calling program you must loop over the U dimension of UVW space starting at the last slab, NU, and moving forward to slab 1. Initially set all elements of IOBJS to zeros. Then, at all locations (J,K) where the surface of an object would appear, set IOBJS(J,K) = 1. When IOBJS(J,K) has been defined for that VW slab (U = NU - I + 1), call the entry DANDR, which draws any object contours based on the 2-D perspective defined for that slab. 
+</dd><dt>MV
+</dt><dd>(an input expression of type INTEGER) defines the actual first dimension of the array IOBJS in the calling program. When plotting all of IOBJS, NV = MV.</dd></dl><h2>Usage</h2>Entries DANDR and DANDR must be used in tandem to create a plot. First call entry DANDR to create a set of 2-D perspective planes which are output to a scratch file. Then, in the calling program you must loop over the U dimension of UVW space starting at the last slab, NU, and moving forward to slab 1. Initially set all elements of IOBJS to zeros. Then, at all locations (J,K) where the surface of an object would appear, set IOBJS(J,K) = 1. When IOBJS(J,K) has been defined for that VW slab (U = NU - I + 1), call the entry DANDR, which draws any object contours based on the 2-D perspective defined for that slab. 
 
  An Isosrfhr example of the logical structure of a program follows: <pre> C Entry DANDR writes NU 2-D perspective planes, ST1(NV,NW,2),
  C of the UVW grid, viewed from the position EYE, to a scratch file.

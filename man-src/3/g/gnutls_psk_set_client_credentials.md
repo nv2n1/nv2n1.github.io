@@ -14,14 +14,14 @@ description: "gnutls_psk_set_client_credentials – API function"
 <p> <code>int gnutls_psk_set_client_credentials(gnutls_psk_client_credentials_t </code><i>res</i><code>, const char * </code><i>username</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_psk_key_flags </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_psk_client_credentials_t res</p>
-<dd> is a <code>gnutls_psk_client_credentials_t</code> structure.</p>
-<dt>const char * username</p>
-<dd> is the user&#8217;s zero-terminated userid</p>
-<dt>const gnutls_datum_t * key</p>
-<dd> is the user&#8217;s key</p>
-<dt>gnutls_psk_key_flags flags</p>
-<dd> indicate the format of the key, either <code>GNUTLS_PSK_KEY_RAW</code> or <code>GNUTLS_PSK_KEY_HEX</code>.</dl>
+<dt>gnutls_psk_client_credentials_t res</dt>
+<dd> is a <code>gnutls_psk_client_credentials_t</code> structure.</dd>
+<dt>const char * username</dt>
+<dd> is the user&#8217;s zero-terminated userid</dd>
+<dt>const gnutls_datum_t * key</dt>
+<dd> is the user&#8217;s key</dd>
+<dt>gnutls_psk_key_flags flags</dt>
+<dd> indicate the format of the key, either <code>GNUTLS_PSK_KEY_RAW</code> or <code>GNUTLS_PSK_KEY_HEX</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the username and password, in a gnutls_psk_client_credentials_t structure. Those will be used in PSK authentication. <i>username</i> should be an ASCII string or UTF-8 strings prepared using the &quot;SASLprep&quot; profile of &quot;stringprep&quot;. The key can be either in raw byte format or in Hex format (without the 0x prefix).</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_psk_set_client_credentials – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

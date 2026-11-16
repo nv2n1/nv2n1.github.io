@@ -40,8 +40,8 @@ description: "cycle – a calendar for women"
 <p> NOTE: This program is not a reliable contraceptive method. It does neither help to prevent sexual transmision diseases like AIDS. It is just an electronic means of keeping track of some of your medical data and extract some statistical conclusions from them. You cannot consider this program as a substitute for your gynecologist in any way.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.cycle</i></p>
-<dd> This is the directory where cycle stores the data.</dl>
+<dt><i>~/.cycle</i></dt>
+<dd> This is the directory where cycle stores the data.</dd></dl>
 <h2>AUTHOR</h2>
 <p> cycle was written by Oleg S. Gints. </p>
 <p> This manual page was written for Debian by Miriam Ruiz &lt;little_miry [at] yahoo.es&gt;.</p>

@@ -15,14 +15,14 @@ description: "gjots2html – Convert a gjotsfile to HTML (on stdout)"
 <p> <code>gjots2html</code> converts a gjotsfile into HTML with a table of contents. Presently up to 8 levels of table of contents subject tree are supported. <code>gjotsfile</code> uses <code><a href="/docs/linux/man/1-m4/">m4</a></code>(1) and <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd> adds <i>&lt;HR&gt; </i> lines after each section.</p>
-<dt><code>-c</code></p>
-<dd> adds a link to the TABLE OF CONTENTS after each section.</p>
-<dt><code>-t</code><i> title</i></p>
-<dd> adds a title to the page</p>
-<dt><code>-i</code><i> level</i></p>
-<dd> Creates the table of contents down to that level of heading. The default is to include all headings.</dl>
+<dt><code>-l</code></dt>
+<dd> adds <i>&lt;HR&gt; </i> lines after each section.</dd>
+<dt><code>-c</code></dt>
+<dd> adds a link to the TABLE OF CONTENTS after each section.</dd>
+<dt><code>-t</code><i> title</i></dt>
+<dd> adds a title to the page</dd>
+<dt><code>-i</code><i> level</i></dt>
+<dd> Creates the table of contents down to that level of heading. The default is to include all headings.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Bob Hepple &lt;bhepple [at] freeshell.org&gt; <a rel="nofollow" href="http://bhepple.freeshell.org/gjots">http://bhepple.freeshell.org/gjots</a></p>
 <h2>COPYRIGHT</h2>

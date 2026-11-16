@@ -14,7 +14,7 @@ description: "snd_pcm_format_silence_64 – return the silent data in 8 bytes ar
 <p><i>format</i></p>
 <dl>
 <dd>
-<dd>the format to check</dl>
+</dd><dd>the format to check</dd></dl>
 <h2>Return</h2>
 <p>The format pattern to fill or <code>NULL</code> if error.</p>
 <h2>Copyright</h2>

@@ -11,16 +11,16 @@ description: "XkbFreeClientMap – Free memory used by the client map member of 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeClientMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>keyboard description containing client map to free</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask identifying components of map to free</p>
-<dt><i>&#8211; free_all</i></p>
-<dd>True =&gt; free all client components and map itself</dl>
+</dd><dd>keyboard description containing client map to free</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask identifying components of map to free</dd>
+<dt><i>&#8211; free_all</i></dt>
+<dd>True =&gt; free all client components and map itself</dd></dl>
 <h2>Description</h2>
 <p><i>XkbFreeClientMap </i> frees the components of client map specified by <i>which </i> in the XkbDescRec structure specified by the <i>xkb </i> parameter and sets the corresponding structure component values to NULL. The <i>which </i> parameter specifies a combination of the client map masks shown in Table 1. </p>
 <p> If <i>free_all </i> is True, <i>which </i> is ignored; <i>XkbFreeClientMap </i> frees every non-NULL structure component in the client map, frees the XkbClientMapRec structure referenced by the <i>map </i> member of the <i>xkb </i> parameter, and sets the <i>map </i> member to NULL. </p>
@@ -162,7 +162,7 @@ description: "XkbFreeClientMap – Free memory used by the client map member of 
 } XkbClientMapRec, *XkbClientMapPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkballocclientmap/">XkbAllocClientMap</a></code>(3)</p>

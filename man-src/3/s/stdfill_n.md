@@ -10,26 +10,18 @@ description: "std::fill_n – std::fill_n"
 <p>std::fill_n &#8211; std::fill_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class OutputIt, class Size, class T&gt;
     (until C++ 11)
-
         void fill_n(OutputIt first, Size count, const T &amp;value);
-
 template &lt;class OutputIt, class Size, class T&gt;
 (since C++ 11)
-
     OutputIt fill_n(OutputIt first, Size count, const T &amp;value);
 (1)(until C++ 20)
-
     template &lt;class OutputIt, class Size, class T&gt;
     (since C++ 20)
-
         constexpr OutputIt fill_n(OutputIt first, Size count, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class Size, class T&gt;
 (2)(since C++ 17)
-
     ForwardIt fill_n(ExecutionPolicy &amp;&amp;policy, ForwardIt first, Size count, const T &amp;value);</code></pre>
 <p>1) Assigns the given value to the first count elements in the range beginning at first if count &gt; 0. Does nothing otherwise.<br />
 2) Same as <code>(1)</code>, but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true </p>
@@ -65,14 +57,10 @@ Iterator one past the last element assigned if count &gt; 0, first otherwise. <i
 <p>The following code uses fill_n() to assign -1 to the first half of a vector of integers:<br />
  // Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v1{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::fill_n(v1.begin(), 5, -1);

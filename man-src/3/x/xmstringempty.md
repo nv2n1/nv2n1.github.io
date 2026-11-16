@@ -15,8 +15,8 @@ description: "XmStringEmpty — A compound string function that provides informa
 <h2>Description</h2>
 <p><code>XmStringEmpty</code> returns a Boolean value indicating whether any non-zero-length text components exist in the provided compound string. It returns True if there are no text segments in the string. If this routine is passed NULL as the string, it returns True.</p>
 <dl COMPACT>
-<dt><i>s1</i></p>
-<dd>Specifies the compound string</dl>
+<dt><i>s1</i></dt>
+<dd>Specifies the compound string</dd></dl>
 <h2>Return</h2>
 <p>Returns True if there are no text segments in the string. If this routine is passed NULL as the string, it returns True.</p>
 <h2>Related</h2>

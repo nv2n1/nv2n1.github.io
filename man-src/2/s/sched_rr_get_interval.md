@@ -23,14 +23,14 @@ description: "sched_rr_get_interval – get the SCHED_RR interval for the named 
 <p> On success, <code>sched_rr_get_interval</code>() returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Problem with copying information to user space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid pid.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The system call is not yet implemented (only on rather old kernels).</p>
-<dt><code>ESRCH</code></p>
-<dd> Could not find a process with the ID <i>pid</i>.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Problem with copying information to user space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid pid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The system call is not yet implemented (only on rather old kernels).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> Could not find a process with the ID <i>pid</i>.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>

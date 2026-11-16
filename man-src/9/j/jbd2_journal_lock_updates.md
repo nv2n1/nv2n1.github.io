@@ -14,15 +14,15 @@ description: "jbd2_journal_lock_updates – establish a transaction barrier."
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>Journal to establish a barrier on.</dl>
+</dd><dd>Journal to establish a barrier on.</dd></dl>
 <h2>Description</h2>
 <p>This locks out any further updates from being started, and blocks until all existing updates have completed, returning only once the journal is in a quiescent state with no updates running. </p>
 <p> The journal lock should not be held on entry.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

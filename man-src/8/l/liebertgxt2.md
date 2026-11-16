@@ -18,8 +18,8 @@ description: "liebertgxt2 – Driver for Liebert GXT2 UPS, using the ESP2 serial
 <h2>Extra Arguments</h2>
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <dl>
-<dt>modelname=<i>model</i></p>
-<dd>Force the model name of <i>model</i> to be a supported model, giving you the chance to try this driver with your Liebert UPS. </p>
+<dt>modelname=<i>model</i></dt>
+<dd>Force the model name of <i>model</i> to be a supported model, giving you the chance to try this driver with your Liebert UPS. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Action commands are not supported, that includes battery test and shutdown. </p>

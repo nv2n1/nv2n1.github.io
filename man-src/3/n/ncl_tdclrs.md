@@ -41,15 +41,15 @@ This routine is called to do the GKS calls defining the following colors on a sp
 
  The arguments of TDCLRS are as follows:
 <dl><dt>IWID
-<dd>(an input expression of type INTEGER) - the workstation identifier.
-<dt>IBOW
-<dd>(an input expression of type INTEGER) - a flag specifying the basic color scheme (white on black or black on white). If IBOW is 0, the foreground color is white and the background color is black; if IBOW is non-zero, the opposite is true.
-<dt>SHDE and SHDR
-<dd>(input expressions of type REAL) - each of these values is between 0 and 1, inclusive, specifying how color shades are to be generated. Values of SHDE near 0 call for more intense shades to be used, while values near 1 call for more nearly pastel shades to be used. Values of SHDR near 0 say that a narrower range of shades is to be used, while values near 1 say that a broader range of shades is to be used.
-<dt>IOFC and IOLC
-<dd>(input expressions of type INTEGER) - these specify the first and last integers in a block of color indices to be used for NSHD shades of gray ranging from pure white to pure black (where NSHD=IOLC-IOFC+1). The next NSHD indices (in numerical order) will be used for the shades of gray selected by SHDE and SHDR; the next NSHD indices after that for selected shades of red, the next NSHD indices after that for selected shades of green, and so on.
-<dt>ILMT
-<dd>(an input expression of type INTEGER) - Using a value between 1 and 7, inclusive, says that only that many blocks of NSHD indices will be defined. For example, if ILMT has the value 4, only the black-to-white scale and the shades of gray, red, and green will be generated; shades of blue, cyan, magenta, and yellow will not be. (This allows one to have more shades of each color at the expense of using fewer colors.) Using a value of ILMT less than 1 or greater than 7 will result in all 8*NSHD sets of color shades being defined.</dl>
+</dt><dd>(an input expression of type INTEGER) - the workstation identifier.
+</dd><dt>IBOW
+</dt><dd>(an input expression of type INTEGER) - a flag specifying the basic color scheme (white on black or black on white). If IBOW is 0, the foreground color is white and the background color is black; if IBOW is non-zero, the opposite is true.
+</dd><dt>SHDE and SHDR
+</dt><dd>(input expressions of type REAL) - each of these values is between 0 and 1, inclusive, specifying how color shades are to be generated. Values of SHDE near 0 call for more intense shades to be used, while values near 1 call for more nearly pastel shades to be used. Values of SHDR near 0 say that a narrower range of shades is to be used, while values near 1 say that a broader range of shades is to be used.
+</dd><dt>IOFC and IOLC
+</dt><dd>(input expressions of type INTEGER) - these specify the first and last integers in a block of color indices to be used for NSHD shades of gray ranging from pure white to pure black (where NSHD=IOLC-IOFC+1). The next NSHD indices (in numerical order) will be used for the shades of gray selected by SHDE and SHDR; the next NSHD indices after that for selected shades of red, the next NSHD indices after that for selected shades of green, and so on.
+</dd><dt>ILMT
+</dt><dd>(an input expression of type INTEGER) - Using a value between 1 and 7, inclusive, says that only that many blocks of NSHD indices will be defined. For example, if ILMT has the value 4, only the black-to-white scale and the shades of gray, red, and green will be generated; shades of blue, cyan, magenta, and yellow will not be. (This allows one to have more shades of each color at the expense of using fewer colors.) Using a value of ILMT less than 1 or greater than 7 will result in all 8*NSHD sets of color shades being defined.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

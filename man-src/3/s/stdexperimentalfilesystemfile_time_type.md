@@ -11,28 +11,19 @@ std::experimental::filesystem::file_time_type - std::experimental::filesystem::f
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/filesystem&gt;
-
 using file_time_type = chrono::time_point&lt;/*trivial-clock*/&gt;;  (filesystem TS)</code></pre> 
 Represents file time. trivial-clock is an implementation-defined type that satisfies TrivialClock and is sufficient to represent the resolution and range of the file time values offered by the filesystem. 
 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 using namespace std::chrono_literals;
-
 int main()
-
 {
     fs::path p = fs::current_path() / &quot;example.bin&quot;;
     std::ofstream(p.c_str()).put('a'); // create file

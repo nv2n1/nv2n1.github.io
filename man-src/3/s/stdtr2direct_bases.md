@@ -15,8 +15,6 @@ std::tr2::direct_bases&lt; _Tp &gt; -
 <h3>Public Types</h3>
 
 <pre><code>typedef __reflection_typelist
-
-
 &lt; __direct_bases(_Tp)...&gt; type&quot;</code></pre>
 
 <h2>Detailed Description</h2>

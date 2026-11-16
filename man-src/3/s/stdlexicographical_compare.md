@@ -11,47 +11,26 @@ std::lexicographical_compare - std::lexicographical_compare
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 bool lexicographical_compare( InputIt1 first1, InputIt1 last1,                                       (until C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr bool lexicographical_compare( InputIt1 first1, InputIt1 last1,                             (since C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 bool lexicographical_compare( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,     (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2, class Compare &gt;
-
 bool lexicographical_compare( InputIt1 first1, InputIt1 last1,                               (1)                   (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 Compare comp );
-
 template&lt; class InputIt1, class InputIt2, class Compare &gt;
-
 constexpr bool lexicographical_compare( InputIt1 first1, InputIt1 last1,                         (3)               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class Compare &gt;
-
 bool lexicographical_compare( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,         (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 Compare comp );</code></pre> 
 Checks if the first range [first1, last1) is lexicographically less than the second range [first2, last2). 
 1) Elements are compared using operator&lt;. 
@@ -133,14 +112,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::vector&lt;char&gt; v1{'a', 'b', 'c', 'd'};
     std::vector&lt;char&gt; v2{'a', 'b', 'c', 'd'};

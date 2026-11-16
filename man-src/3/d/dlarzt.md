@@ -19,7 +19,7 @@ description: "dlarzt.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLARZT forms the triangular factor T of a real block reflector
  H of order &gt; n, which is defined as a product of k elementary
@@ -34,11 +34,11 @@ description: "dlarzt.f –"
     H  =  I - V**T * T * V
  Currently, only STOREV = 'R' and DIRECT = 'B' are supported.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>DIRECT</i> </p>
+</dt><dd> <i>DIRECT</i> </dd>
 <pre>
           DIRECT is CHARACTER*1
           Specifies the order in which the elementary reflectors are
@@ -102,22 +102,22 @@ if STOREV
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+</dt><dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The shape of the matrix V and the storage of the vectors which define
   the H(i) is best illustrated by the following example with n = 5 and
@@ -147,8 +147,9 @@ if STOREV
          ( v1 v2 v3 )
          ( v1 v2 v3 )
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 186 of file dlarzt.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

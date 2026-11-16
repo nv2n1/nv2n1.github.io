@@ -15,96 +15,96 @@ description: "valac – compiler that translates Vala source code into C source 
 <p> valac, the Vala compiler, is a self-hosting compiler that translates Vala source code into C source and header files. It uses the GObject type system to create classes and interfaces declared in the Vala source code.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>&#8211;help</code></p>
+<dt><code>&#8211;help</code></dt>
 <dd>
-<dt><code>&#8211;vapidir=</code><i>DIRECTORY</i>&#8230;</p>
-<dd>Look for package bindings in <i>DIRECTORY</i></p>
-<dt><code>&#8211;girdir=</code><i>DIRECTORY</i>&#8230;</p>
-<dd>Look for .gir files in <i>DIRECTORY</i></p>
-<dt><code>&#8211;metadatadir=</code><i>DIRECTORY</i>&#8230;</p>
-<dd>Look for GIR .metadata files in <i>DIRECTORY</i></p>
-<dt><code>&#8211;pkg=</code><i>PACKAGE</i>&#8230;</p>
-<dd>Include binding for <i>PACKAGE</i></p>
-<dt><code>&#8211;vapi=</code><i>FILE</i></p>
-<dd>Output VAPI file name</p>
-<dt><code>&#8211;library=</code><i>NAME</i></p>
-<dd>Library name</p>
-<dt><code>&#8211;gir=</code><i>NAME</i>&#8211;<i>VERSION</i>.gir</p>
-<dd>GObject-Introspection repository file name</p>
-<dt><code>&#8211;gresources=</code><i>FILE</i>&#8230;</p>
-<dd>GResources XML file name</p>
-<dt><code>-b, &#8211;basedir=</code><i>DIRECTORY</i></p>
-<dd>Base source directory</p>
-<dt><code>-d, &#8211;directory=</code><i>DIRECTORY</i></p>
-<dd>Output directory</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version number</p>
-<dt><code>&#8211;api-version</code></p>
-<dd>Display API version number</p>
-<dt><code>-C, &#8211;ccode</code></p>
-<dd>Output C code</p>
-<dt><code>-H, &#8211;header=</code><i>FILE</i></p>
-<dd>Output C header file</p>
-<dt><code>&#8211;use-header</code></p>
-<dd>Use C header file</p>
-<dt><code>&#8211;includedir=</code><i>DIRECTORY</i></p>
-<dd>Directory used to include the C header file</p>
-<dt><code>-h, &#8211;internal-header=</code><i>FILE</i></p>
-<dd>Output internal C header file</p>
-<dt><code>&#8211;internal-vapi=</code><i>FILE</i></p>
-<dd>Output vapi with internal api</p>
-<dt><code>&#8211;symbols=</code><i>FILE</i></p>
-<dd>Output symbols file</p>
-<dt><code>-c, &#8211;compile</code></p>
-<dd>Compile but do not link</p>
-<dt><code>-o, &#8211;output=</code><i>FILE</i></p>
-<dd>Place output in file <i>FILE</i></p>
-<dt><code>-g, &#8211;debug</code></p>
-<dd>Produce debug information</p>
-<dt><code>&#8211;thread</code></p>
-<dd>Enable multithreading support</p>
-<dt><code>&#8211;enable-mem-profiler</code></p>
-<dd>Enable GLib memory profiler</p>
-<dt><code>-D, &#8211;define=SYMBOL&#8230;</code></p>
-<dd>Define SYMBOL</p>
-<dt><code>&#8211;main=SYMBOL&#8230;</code></p>
-<dd>Use SYMBOL as entry point</p>
-<dt><code>&#8211;nostdpkg</code></p>
-<dd>Do not include standard packages</p>
-<dt><code>&#8211;disable-assert</code></p>
-<dd>Disable assertions</p>
-<dt><code>&#8211;enable-checking</code></p>
-<dd>Enable additional run-time checks</p>
-<dt><code>&#8211;enable-deprecated</code></p>
-<dd>Enable deprecated features</p>
-<dt><code>&#8211;enable-experimental</code></p>
-<dd>Enable experimental features</p>
-<dt><code>&#8211;disable-warnings</code></p>
-<dd>Disable warnings</p>
-<dt><code>&#8211;fatal-warnings</code></p>
-<dd>Treat warnings as fatal</p>
-<dt><code>&#8211;enable-experimental-non-null</code></p>
-<dd>Enable experimental enhancements for non-null types</p>
-<dt><code>&#8211;cc=</code><i>COMMAND</i></p>
-<dd>Use <i>COMMAND</i> as C compiler command</p>
-<dt><code>-X, &#8211;Xcc=</code><i>OPTION</i>&#8230;</p>
-<dd>Pass <i>OPTION</i>. to the C compiler</p>
-<dt><code>&#8211;dump-tree=</code><i>FILE</i></p>
-<dd>Write code tree to <i>FILE</i></p>
-<dt><code>&#8211;save-temps</code></p>
-<dd>Keep temporary files</p>
-<dt><code>&#8211;profile=</code><i>PROFILE</i></p>
-<dd>Use the given profile instead of the default</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd>Do not print messages to the console</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Print additional messages to the console</p>
-<dt><code>&#8211;target-glib=</code><i>MAJOR</i>.<i>MINOR</i></p>
-<dd>Target version of glib for code generation</p>
-<dt><code>&#8211;enable-version-header</code></p>
-<dd>Write vala build version in generated files</p>
-<dt><code>&#8211;disable-version-header</code></p>
-<dd>Do not write vala build version in generated files</dl>
+</dd><dt><code>&#8211;vapidir=</code><i>DIRECTORY</i>&#8230;</dt>
+<dd>Look for package bindings in <i>DIRECTORY</i></dd>
+<dt><code>&#8211;girdir=</code><i>DIRECTORY</i>&#8230;</dt>
+<dd>Look for .gir files in <i>DIRECTORY</i></dd>
+<dt><code>&#8211;metadatadir=</code><i>DIRECTORY</i>&#8230;</dt>
+<dd>Look for GIR .metadata files in <i>DIRECTORY</i></dd>
+<dt><code>&#8211;pkg=</code><i>PACKAGE</i>&#8230;</dt>
+<dd>Include binding for <i>PACKAGE</i></dd>
+<dt><code>&#8211;vapi=</code><i>FILE</i></dt>
+<dd>Output VAPI file name</dd>
+<dt><code>&#8211;library=</code><i>NAME</i></dt>
+<dd>Library name</dd>
+<dt><code>&#8211;gir=</code><i>NAME</i>&#8211;<i>VERSION</i>.gir</dt>
+<dd>GObject-Introspection repository file name</dd>
+<dt><code>&#8211;gresources=</code><i>FILE</i>&#8230;</dt>
+<dd>GResources XML file name</dd>
+<dt><code>-b, &#8211;basedir=</code><i>DIRECTORY</i></dt>
+<dd>Base source directory</dd>
+<dt><code>-d, &#8211;directory=</code><i>DIRECTORY</i></dt>
+<dd>Output directory</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version number</dd>
+<dt><code>&#8211;api-version</code></dt>
+<dd>Display API version number</dd>
+<dt><code>-C, &#8211;ccode</code></dt>
+<dd>Output C code</dd>
+<dt><code>-H, &#8211;header=</code><i>FILE</i></dt>
+<dd>Output C header file</dd>
+<dt><code>&#8211;use-header</code></dt>
+<dd>Use C header file</dd>
+<dt><code>&#8211;includedir=</code><i>DIRECTORY</i></dt>
+<dd>Directory used to include the C header file</dd>
+<dt><code>-h, &#8211;internal-header=</code><i>FILE</i></dt>
+<dd>Output internal C header file</dd>
+<dt><code>&#8211;internal-vapi=</code><i>FILE</i></dt>
+<dd>Output vapi with internal api</dd>
+<dt><code>&#8211;symbols=</code><i>FILE</i></dt>
+<dd>Output symbols file</dd>
+<dt><code>-c, &#8211;compile</code></dt>
+<dd>Compile but do not link</dd>
+<dt><code>-o, &#8211;output=</code><i>FILE</i></dt>
+<dd>Place output in file <i>FILE</i></dd>
+<dt><code>-g, &#8211;debug</code></dt>
+<dd>Produce debug information</dd>
+<dt><code>&#8211;thread</code></dt>
+<dd>Enable multithreading support</dd>
+<dt><code>&#8211;enable-mem-profiler</code></dt>
+<dd>Enable GLib memory profiler</dd>
+<dt><code>-D, &#8211;define=SYMBOL&#8230;</code></dt>
+<dd>Define SYMBOL</dd>
+<dt><code>&#8211;main=SYMBOL&#8230;</code></dt>
+<dd>Use SYMBOL as entry point</dd>
+<dt><code>&#8211;nostdpkg</code></dt>
+<dd>Do not include standard packages</dd>
+<dt><code>&#8211;disable-assert</code></dt>
+<dd>Disable assertions</dd>
+<dt><code>&#8211;enable-checking</code></dt>
+<dd>Enable additional run-time checks</dd>
+<dt><code>&#8211;enable-deprecated</code></dt>
+<dd>Enable deprecated features</dd>
+<dt><code>&#8211;enable-experimental</code></dt>
+<dd>Enable experimental features</dd>
+<dt><code>&#8211;disable-warnings</code></dt>
+<dd>Disable warnings</dd>
+<dt><code>&#8211;fatal-warnings</code></dt>
+<dd>Treat warnings as fatal</dd>
+<dt><code>&#8211;enable-experimental-non-null</code></dt>
+<dd>Enable experimental enhancements for non-null types</dd>
+<dt><code>&#8211;cc=</code><i>COMMAND</i></dt>
+<dd>Use <i>COMMAND</i> as C compiler command</dd>
+<dt><code>-X, &#8211;Xcc=</code><i>OPTION</i>&#8230;</dt>
+<dd>Pass <i>OPTION</i>. to the C compiler</dd>
+<dt><code>&#8211;dump-tree=</code><i>FILE</i></dt>
+<dd>Write code tree to <i>FILE</i></dd>
+<dt><code>&#8211;save-temps</code></dt>
+<dd>Keep temporary files</dd>
+<dt><code>&#8211;profile=</code><i>PROFILE</i></dt>
+<dd>Use the given profile instead of the default</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Do not print messages to the console</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Print additional messages to the console</dd>
+<dt><code>&#8211;target-glib=</code><i>MAJOR</i>.<i>MINOR</i></dt>
+<dd>Target version of glib for code generation</dd>
+<dt><code>&#8211;enable-version-header</code></dt>
+<dd>Write vala build version in generated files</dd>
+<dt><code>&#8211;disable-version-header</code></dt>
+<dd>Do not write vala build version in generated files</dd></dl>
 <h2>Features</h2>
 <p>Interfaces, properties, signals, foreach, lambda expressions, type inference for local variables, generics, non-null types, assisted memory management, exception handling</p>
 <h2>Homepage And Bug Report</h2>

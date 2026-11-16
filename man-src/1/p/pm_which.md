@@ -126,11 +126,11 @@ $ pm_which - V MyModule MyModule - / path / to / MyModule.pm[1.00] $ pm_which - 
 
 <dl>
 <dt>*
-<dd> 0 - Everything was <font SIZE="-1">OK</font>
-<dt>*
-<dd> 1 - Initialisation failed (bad switches?)
-<dt>*
-<dd> 2 - Some modules were not installed</dl>
+</dt><dd> 0 - Everything was <font SIZE="-1">OK</font>
+</dd><dt>*
+</dt><dd> 1 - Initialisation failed (bad switches?)
+</dd><dt>*
+</dt><dd> 2 - Some modules were not installed</dd></dl>
 
 <h2>SEE ALSO</h2>
 

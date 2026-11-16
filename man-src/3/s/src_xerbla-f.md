@@ -23,10 +23,10 @@ description: "xerbla.f –"
  invalid value. A message is printed and execution stops.
  Installers may consider modifying the STOP statement in order to
  call system-specific exception-handling facilities.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SRNAME</i> </p>
+<dd><i>SRNAME</i> </dd>
 <pre> SRNAME is CHARACTER*(*)
  The name of the routine which called XERBLA.</pre>
 <p><i>INFO</i> </p>
@@ -36,13 +36,13 @@ description: "xerbla.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 71 of file SRC/xerbla.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

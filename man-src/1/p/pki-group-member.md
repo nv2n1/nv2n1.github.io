@@ -19,23 +19,23 @@ pki[CLI options]&lt;subsystem&gt; - group - member pki[CLI options]&lt;subsystem
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-member</code></p>
 <dl>
 <dt>
-<dd> This command is to list available group member commands for the subsystem.</dl>
+</dt><dd> This command is to list available group member commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-member-find</code> &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list group members in the subsystem.</dl>
+</dt><dd> This command is to list group members in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-member-show</code> &lt;group ID&gt; &lt;member ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a group member details in the subsystem.</dl>
+</dt><dd> This command is to view a group member details in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-member-add</code> &lt;group ID&gt; &lt;member ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add a member to a group in the subsystem.</dl>
+</dt><dd> This command is to add a member to a group in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-member-del</code> &lt;group ID&gt; &lt;member ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a member from a group in the subsystem.</dl>
+</dt><dd> This command is to delete a member from a group in the subsystem.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

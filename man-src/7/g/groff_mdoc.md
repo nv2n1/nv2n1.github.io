@@ -18,131 +18,131 @@ description: "‘ macro is mandatory. If not specified, headers, footers and pag
 <ol>
 <li> <code>TROFF IDIOSYNCRASIES</code>
 <dl>
-<dt><code>&quot;Macro Usage&quot;</code></p>
+<dt><code>&quot;Macro Usage&quot;</code></dt>
 <dd>
-<dt><code>&quot;Passing Space Characters in an Argument&quot;</code></p>
+</dd><dt><code>&quot;Passing Space Characters in an Argument&quot;</code></dt>
 <dd>
-<dt><code>&quot;Trailing Blank Space Characters&quot;</code></p>
+</dd><dt><code>&quot;Trailing Blank Space Characters&quot;</code></dt>
 <dd>
-<dt><code>&quot;Escaping Special Characters&quot;</code></p>
+</dd><dt><code>&quot;Escaping Special Characters&quot;</code></dt>
 <dd>
-<dt><code>&quot;Other Possible Pitfalls&quot;</code></p>
-<dd></dl>
+</dd><dt><code>&quot;Other Possible Pitfalls&quot;</code></dt>
+<dd></dd></dl>
 <li> <code>A MANUAL PAGE TEMPLATE</code>
 <li> <code>CONVENTIONS</code>
 <li> <code>TITLE MACROS</code>
 <li> <code>INTRODUCTION OF MANUAL AND GENERAL TEXT DOMAINS</code>
 <dl>
-<dt><code>&quot;What&#8217;s in a Name&quot; &#8230;</code></p>
+<dt><code>&quot;What&#8217;s in a Name&quot; &#8230;</code></dt>
 <dd>
-<dt><code>&quot;General Syntax&quot;</code></p>
-<dd></dl>
+</dd><dt><code>&quot;General Syntax&quot;</code></dt>
+<dd></dd></dl>
 <li> <code>MANUAL DOMAIN</code>
 <dl>
-<dt><code>&quot;Addresses&quot;</code></p>
+<dt><code>&quot;Addresses&quot;</code></dt>
 <dd>
-<dt><code>&quot;Author Name&quot;</code></p>
+</dd><dt><code>&quot;Author Name&quot;</code></dt>
 <dd>
-<dt><code>&quot;Arguments&quot;</code></p>
+</dd><dt><code>&quot;Arguments&quot;</code></dt>
 <dd>
-<dt><code>&quot;Configuration Declarations (Section Four Only)&quot;</code></p>
+</dd><dt><code>&quot;Configuration Declarations (Section Four Only)&quot;</code></dt>
 <dd>
-<dt><code>&quot;Command Modifiers&quot;</code></p>
+</dd><dt><code>&quot;Command Modifiers&quot;</code></dt>
 <dd>
-<dt><code>&quot;Defined Variables&quot;</code></p>
+</dd><dt><code>&quot;Defined Variables&quot;</code></dt>
 <dd>
-<dt><code>&quot;Errno&#8217;s&quot;</code></p>
+</dd><dt><code>&quot;Errno&#8217;s&quot;</code></dt>
 <dd>
-<dt><code>&quot;Environment Variables&quot;</code></p>
+</dd><dt><code>&quot;Environment Variables&quot;</code></dt>
 <dd>
-<dt><code>&quot;Flags&quot;</code></p>
+</dd><dt><code>&quot;Flags&quot;</code></dt>
 <dd>
-<dt><code>&quot;Function Declarations&quot;</code></p>
+</dd><dt><code>&quot;Function Declarations&quot;</code></dt>
 <dd>
-<dt><code>&quot;Function Types&quot;</code></p>
+</dd><dt><code>&quot;Function Types&quot;</code></dt>
 <dd>
-<dt><code>&quot;Functions (Library Routines)&quot;</code></p>
+</dd><dt><code>&quot;Functions (Library Routines)&quot;</code></dt>
 <dd>
-<dt><code>&quot;Function Arguments&quot;</code></p>
+</dd><dt><code>&quot;Function Arguments&quot;</code></dt>
 <dd>
-<dt><code>&quot;Return Values&quot;</code></p>
+</dd><dt><code>&quot;Return Values&quot;</code></dt>
 <dd>
-<dt><code>&quot;Exit Status&quot;</code></p>
+</dd><dt><code>&quot;Exit Status&quot;</code></dt>
 <dd>
-<dt><code>&quot;Interactive Commands&quot;</code></p>
+</dd><dt><code>&quot;Interactive Commands&quot;</code></dt>
 <dd>
-<dt><code>&quot;Library Names&quot;</code></p>
+</dd><dt><code>&quot;Library Names&quot;</code></dt>
 <dd>
-<dt><code>&quot;Literals&quot;</code></p>
+</dd><dt><code>&quot;Literals&quot;</code></dt>
 <dd>
-<dt><code>&quot;Names&quot;</code></p>
+</dd><dt><code>&quot;Names&quot;</code></dt>
 <dd>
-<dt><code>&quot;Options&quot;</code></p>
+</dd><dt><code>&quot;Options&quot;</code></dt>
 <dd>
-<dt><code>&quot;Pathnames&quot;</code></p>
+</dd><dt><code>&quot;Pathnames&quot;</code></dt>
 <dd>
-<dt><code>&quot;Standards&quot;</code></p>
+</dd><dt><code>&quot;Standards&quot;</code></dt>
 <dd>
-<dt><code>&quot;Variable Types&quot;</code></p>
+</dd><dt><code>&quot;Variable Types&quot;</code></dt>
 <dd>
-<dt><code>&quot;Variables&quot;</code></p>
+</dd><dt><code>&quot;Variables&quot;</code></dt>
 <dd>
-<dt><code>&quot;Manual Page Cross References&quot;</code></p>
-<dd></dl>
+</dd><dt><code>&quot;Manual Page Cross References&quot;</code></dt>
+<dd></dd></dl>
 <li> <code>GENERAL TEXT DOMAIN</code>
 <dl>
-<dt><code>&quot;AT&amp;T Macro&quot;</code></p>
+<dt><code>&quot;AT&amp;T Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;BSD Macro&quot;</code></p>
+</dd><dt><code>&quot;BSD Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;NetBSD Macro&quot;</code></p>
+</dd><dt><code>&quot;NetBSD Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;FreeBSD Macro&quot;</code></p>
+</dd><dt><code>&quot;FreeBSD Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;DragonFly Macro&quot;</code></p>
+</dd><dt><code>&quot;DragonFly Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;OpenBSD Macro&quot;</code></p>
+</dd><dt><code>&quot;OpenBSD Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;BSD/OS Macro&quot;</code></p>
+</dd><dt><code>&quot;BSD/OS Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;UNIX Macro&quot;</code></p>
+</dd><dt><code>&quot;UNIX Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;Emphasis Macro&quot;</code></p>
+</dd><dt><code>&quot;Emphasis Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;Font Mode&quot;</code></p>
+</dd><dt><code>&quot;Font Mode&quot;</code></dt>
 <dd>
-<dt><code>&quot;Enclosure and Quoting Macros&quot;</code></p>
+</dd><dt><code>&quot;Enclosure and Quoting Macros&quot;</code></dt>
 <dd>
-<dt><code>&quot;No-</code>[or Normal Text Macro]</p>
+</dd><dt><code>&quot;No-</code>[or Normal Text Macro]</dt>
 <dd>
-<dt><code>&quot;No-Space Macro&quot;</code></p>
+</dd><dt><code>&quot;No-Space Macro&quot;</code></dt>
 <dd>
-<dt><code>&quot;Section Cross References&quot;</code></p>
+</dd><dt><code>&quot;Section Cross References&quot;</code></dt>
 <dd>
-<dt><code>&quot;Symbolics&quot;</code></p>
+</dd><dt><code>&quot;Symbolics&quot;</code></dt>
 <dd>
-<dt><code>&quot;Mathematical Symbols&quot;</code></p>
+</dd><dt><code>&quot;Mathematical Symbols&quot;</code></dt>
 <dd>
-<dt><code>&quot;References and Citations&quot;</code></p>
+</dd><dt><code>&quot;References and Citations&quot;</code></dt>
 <dd>
-<dt><code>&quot;Trade Names (or Acronyms and Type Names)&quot;</code></p>
+</dd><dt><code>&quot;Trade Names (or Acronyms and Type Names)&quot;</code></dt>
 <dd>
-<dt><code>&quot;Extended Arguments&quot;</code></p>
-<dd></dl>
+</dd><dt><code>&quot;Extended Arguments&quot;</code></dt>
+<dd></dd></dl>
 <li> <code>PAGE STRUCTURE DOMAIN</code>
 <dl>
-<dt><code>&quot;Section Headers&quot;</code></p>
+<dt><code>&quot;Section Headers&quot;</code></dt>
 <dd>
-<dt><code>&quot;Subsection Headers&quot;</code></p>
+</dd><dt><code>&quot;Subsection Headers&quot;</code></dt>
 <dd>
-<dt><code>&quot;Paragraphs and Line Spacing&quot;</code></p>
+</dd><dt><code>&quot;Paragraphs and Line Spacing&quot;</code></dt>
 <dd>
-<dt><code>&quot;Keeps&quot;</code></p>
+</dd><dt><code>&quot;Keeps&quot;</code></dt>
 <dd>
-<dt><code>&quot;Examples and Displays&quot;</code></p>
+</dd><dt><code>&quot;Examples and Displays&quot;</code></dt>
 <dd>
-<dt><code>&quot;Lists and Columns&quot;</code></p>
-<dd></dl>
+</dd><dt><code>&quot;Lists and Columns&quot;</code></dt>
+<dd></dd></dl>
 <li> <code>MISCELLANEOUS MACROS</code>
 <li> <code>PREDEFINED STRINGS</code>
 <li> <code>DIAGNOSTICS</code>
@@ -157,12 +157,12 @@ description: "‘ macro is mandatory. If not specified, headers, footers and pag
 <p> In general, <code>GNU</code> <a href="/docs/linux/man/1-troff/">troff</a>(1) macros accept an unlimited number of arguments (contrary to other versions of troff which can&#8217;t handle more than nine arguments). In limited cases, arguments may be continued or extended on the next line (See Sx Extended Arguments below). Almost all macros handle quoted arguments (see Sx Passing Space Characters in an Argument below). </p>
 <p> Most of the <code>-mdoc</code> general text domain and manual domain macros are special in that their argument lists are <i>parsed</i> for callable macro names. This means an argument on the argument list which matches a general text or manual domain macro name (and which is defined to be callable) will be executed or called when it is processed. In this case the argument, although the name of a macro, is not preceded by a `.&#8217; (dot). This makes it possible to nest macros; for example the option macro, `.[,] &#8216; may <i>call</i> the flag and argument macros, `- &#8216; and `<i>file &#8230;</i> &#8216; to specify an optional flag with an argument:</p>
 <dl>
-<dt>[-<code>s </code><i>bytes</i> ]</p>
-<dd>is produced by `.[-<code>s</code> ] &#8216; Ar bytes</dl>
+<dt>[-<code>s </code><i>bytes</i> ]</dt>
+<dd>is produced by `.[-<code>s</code> ] &#8216; Ar bytes</dd></dl>
 <p> To prevent a string from being interpreted as a macro name, precede the string with the escape sequence `\&amp;&#8217; :</p>
 <dl>
-<dt>[-<code>s </code><i>bytes</i> ]</p>
-<dd>is produced by `.[\&amp;-<code>s</code> ] &#8216; \&amp;Ar bytes</dl>
+<dt>[-<code>s </code><i>bytes</i> ]</dt>
+<dd>is produced by `.[\&amp;-<code>s</code> ] &#8216; \&amp;Ar bytes</dd></dl>
 <p> Here the strings `- &#8216; and `<i>file &#8230;</i> &#8216; are not interpreted as macros. Macros whose argument lists are parsed for callable arguments are referred to as <i>parsed</i> and macros which may be called from an argument list are referred to as <i>callable</i> throughout this document. This is a technical <i>faux pas</i> as almost all of the macros in <code>-mdoc</code> are parsed, but as it was cumbersome to constantly refer to macros as being callable and being able to call other macros, the term parsed has been used. </p>
 <p> In the following, we call an <code>-mdoc</code> macro which starts a line (with a leading dot) a <i>command</i> if this distinction is necessary.</p>
 <h3>Passing Space Characters in an Argument</h3>
@@ -171,10 +171,10 @@ description: "‘ macro is mandatory. If not specified, headers, footers and pag
 &nbsp;,&#8217; that is, a blank space preceded by the escape character `\&#8217; This method may be used with any macro but has the side effect of interfering with the adjustment of text over the length of a line. Troff sees the hard space as if it were any other printable character and cannot split the string into blank or newline separated pieces as one would expect. This method is useful for strings which are not expected to overlap a line boundary. An alternative is to use `\~&#8217; , a paddable (i.e. stretchable), unbreakable space (this is a <code>GNU</code> <a href="/docs/linux/man/1-troff/">troff</a>(1) extension). The second method is to enclose the string with double quotes. </p>
 <p> For example:</p>
 <dl>
-<dt><code>Fn </code>fetch char&nbsp;*str</p>
-<dd>is created by `.Fn fetch &#8216; char\ *str</p>
-<dt><code>Fn </code>fetch char *str</p>
-<dd>can also be created by `.Fn fetch &#8216; &quot;char *str&quot;</dl>
+<dt><code>Fn </code>fetch char&nbsp;*str</dt>
+<dd>is created by `.Fn fetch &#8216; char\ *str</dd>
+<dt><code>Fn </code>fetch char *str</dt>
+<dd>can also be created by `.Fn fetch &#8216; &quot;char *str&quot;</dd></dl>
 <p> If the `\&#8217; before the space in the first example or double quotes in the second example were omitted, `.Fn would &#8216; see three arguments, and the result would be: </p>
 <blockquote><p><tt>Fn </tt>fetch char *str </p></blockquote>
 <h3>Trailing Blank Space Characters</h3>
@@ -258,9 +258,9 @@ test</pre>
 <p>In the description of all macros below, optional arguments are put into brackets. An ellipsis ( `&#8230;&#8217; represents zero or more additional arguments. Alternative values for a parameter are separated with `|&#8217; If there are alternative values for a mandatory parameter, braces are used (together with `|&#8217; ) to enclose the value set. Meta-variables are specified within angles. </p>
 <p> Example:</p>
 <dl>
-<dt><code>.Xx </code> Aq foo Br q bar1 | bar2 [-test1 [-test2 | -test3] ] <code>&#8230;</code></p>
-<dd></dl>
-<dd>Except stated explicitly, all macros are parsed and callable. </p>
+<dt><code>.Xx </code> Aq foo Br q bar1 | bar2 [-test1 [-test2 | -test3] ] <code>&#8230;</code></dt>
+<dd></dd></dl>
+<dd>Except stated explicitly, all macros are parsed and callable. </dd>
 <p> Note that a macro takes effect up to the next nested macro. For example, `.<code>foo</code> &#8216; Aq bar doesn&#8217;t produce `<code>foo &lt;bar&gt;</code> &#8216; but `<code>foo Aq </code>bar &#8216; Consequently, a warning message is emitted for most commands if the first argument is a macro itself since it cancels the effect of the calling command completely. Another consequence is that quoting macros never insert literal quotes; `<code>foo &lt;bar&gt;</code> &#8216; has been produced by `.<code>&quot;foo</code> &#8216; &lt;bar&gt;&quot; . </p>
 <p> Most macros have a default width value which can be used to specify a label width ( &#8211;<code>width</code> or offset ( &#8211;<code>offset</code> for the `.</p>
 <dl>
@@ -269,8 +269,8 @@ test</pre>
 <h2>Title Macros</h2>
 <p>The title macros are part of the page structure domain but are presented first and separately for someone who wishes to start writing a man page yesterday. Three header macros designate the document title or manual page title, the operating system, and the date of authorship. These macros are called once at the very beginning of the document and are used to construct headers and footers only.</p>
 <dl>
-<dt><code>. </code></p>
-<dd>[Aq document title ] [Aq section number ] [Aq volume ] The document title is the subject of the man page and must be in <code>CAPITALS</code> due to troff limitations. If omitted, `<code>UNTITLED</code> &#8216; is used. The section number may be a number in the range <code>1,~ &#8230; ,~9</code> or `unass&#8217; , `draft&#8217; , or `paper&#8217; If it is specified, and no volume name is given, a default volume name is used. </p>
+<dt><code>. </code></dt>
+<dd>[Aq document title ] [Aq section number ] [Aq volume ] The document title is the subject of the man page and must be in <code>CAPITALS</code> due to troff limitations. If omitted, `<code>UNTITLED</code> &#8216; is used. The section number may be a number in the range <code>1,~ &#8230; ,~9</code> or `unass&#8217; , `draft&#8217; , or `paper&#8217; If it is specified, and no volume name is given, a default volume name is used. </dd>
 <p> Under the following sections are defined: </p>
 <table>
 <tr VALIGN=top>
@@ -386,36 +386,36 @@ test</pre>
 <p> If the section number is neither a numeric expression in the range 1 to~9 nor one of the above described keywords, the third parameter is used verbatim as the volume name. </p>
 <p> In the following examples, the left (which is identical to the right) and the middle part of the manual page header strings are shown. Note how `\&amp;&#8217; prevents the digit~7 from being a valid numeric expression.</p>
 <dl>
-<dt><code>. </code></p>
-<dd>`FOO(7)&#8217; `&#8217;</p>
-<dt><code>. </code></p>
-<dd>`FOO(7)&#8217; `&#8217;</p>
-<dt><code>. </code></p>
-<dd>`FOO(7)&#8217; `bar&#8217;</p>
-<dt><code>. </code></p>
-<dd>`FOO(2)&#8217; `/&#8217;</p>
-<dt><code>. </code></p>
-<dd>`FOO&#8217; `bar&#8217;</dl>
+<dt><code>. </code></dt>
+<dd>`FOO(7)&#8217; `&#8217;</dd>
+<dt><code>. </code></dt>
+<dd>`FOO(7)&#8217; `&#8217;</dd>
+<dt><code>. </code></dt>
+<dd>`FOO(7)&#8217; `bar&#8217;</dd>
+<dt><code>. </code></dt>
+<dd>`FOO(2)&#8217; `/&#8217;</dd>
+<dt><code>. </code></dt>
+<dd>`FOO&#8217; `bar&#8217;</dd></dl>
 <p> Local, OS-specific additions might be found in the file mdoc.local look for strings named `volume-ds-XXX&#8217; (for the former type) and `volume-as-XXX&#8217; (for the latter type); `XXX&#8217; then denotes the keyword to be used with the `. &#8216; macro. </p>
 <p> This macro is neither callable nor parsed.</p>
-<dt><code>. </code> [Aq operating system ] [Aq release ]</p>
+<dt><code>. </code> [Aq operating system ] [Aq release ]</dt>
 <dd>
-<dd>If the first parameter is empty, the default ` &#8216; is used. This may be overridden in the local configuration file, mdoc.local In general, the name of the operating system should be the common acronym, e.g. <code>BSD</code> or <code>ATT</code> The release should be the standard release nomenclature for the system specified. In the following table, the possible second arguments for some predefined operating systems are listed. Similar to `. &#8216; local additions might be defined in mdoc.local look for strings named `operating-system-XXX-YYY&#8217; , where `XXX&#8217; is the acronym for the operating system and `YYY&#8217; the release ID.</p>
+</dd><dd>If the first parameter is empty, the default ` &#8216; is used. This may be overridden in the local configuration file, mdoc.local In general, the name of the operating system should be the common acronym, e.g. <code>BSD</code> or <code>ATT</code> The release should be the standard release nomenclature for the system specified. In the following table, the possible second arguments for some predefined operating systems are listed. Similar to `. &#8216; local additions might be defined in mdoc.local look for strings named `operating-system-XXX-YYY&#8217; , where `XXX&#8217; is the acronym for the operating system and `YYY&#8217; the release ID.</dd>
 <dl>
-<dt><code>ATT</code></p>
-<dd>7th, 7, III, 3, V, V.2, V.3, V.4</p>
-<dt><code>BSD</code></p>
-<dd>3, 4, 4.1, 4.2, 4.3, 4.3t, 4.3T, 4.3r, 4.3R, 4.4</p>
-<dt><code>NetBSD</code></p>
-<dd>0.8, 0.8a, 0.9, 0.9a, 1.0, 1.0a, 1.1, 1.2, 1.2a, 1.2b, 1.2c, 1.2d, 1.2e, 1.3, 1.3a, 1.4, 1.4.1, 1.4.2, 1.4.3, 1.5, 1.5.1, 1.5.2, 1.5.3, 1.6, 1.6.1, 1.6.2, 1.6.3, 2.0, 2.0.1, 2.0.2, 2.0.3, 2.1, 3.0, 3.0.1, 3.0.2, 3.0.3, 3.1, 3.1.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.2, 5.1.3, 5.1.4, 5.2, 5.2.1, 5.2.2, 6.0, 6.0.1, 6.0.2, 6.0.3, 6.0.4, 6.0.5, 6.0.6, 6.1, 6.1.1, 6.1.2, 6.1.3, 6.1.4, 6.1.5, 7.0, 7.0.1, 7.0.2, 7.1, 7.1.1, 7.1.2, 7.2, 8.0, 8.1</p>
-<dt><code>FreeBSD</code></p>
-<dd>1.0, 1.1, 1.1.5, 1.1.5.1, 2.0, 2.0.5, 2.1, 2.1.5, 2.1.6, 2.1.7, 2.2, 2.2.1, 2.2.2, 2.2.5, 2.2.6, 2.2.7, 2.2.8, 2.2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0, 4.1, 4.1.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.6.2, 4.7, 4.8, 4.9, 4.10, 4.11, 5.0, 5.1, 5.2, 5.2.1, 5.3, 5.4, 5.5, 6.0, 6.1, 6.2, 6.3, 6.4, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 9.0, 9.1, 9.2, 9.3, 10.0, 10.1, 10.2, 10.3, 10.4, 11.0, 11.1, 11.2, 11.3, 12.0, 12.1</p>
-<dt><code>OpenBSD</code></p>
-<dd>2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6</p>
-<dt><code>DragonFly</code></p>
-<dd>1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.8.1, 1.9, 1.10, 1.11, 1.12, 1.12.2, 1.13, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.9.1, 2.10, 2.10.1, 2.11, 2.12, 2.13, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.2.1, 3.2.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.5, 3.6, 3.6.1, 3.6.2, 3.7, 3.8, 3.8.1, 3.8.2, 4.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.0.6, 4.1, 4.2, 4.2.1, 4.2.2, 4.2.3, 4.2.4, 4.3, 4.4, 4.4.1, 4.4.2, 4.4.3, 4.5, 4.6, 4.6.1, 4.6.2, 4.7, 4.8, 4.8.1, 4.9, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.2.1, 5.2.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.4.3, 5.5, 5.6, 5.6.1, 5.6.2</p>
-<dt><code>Darwin</code></p>
-<dd>8.0.0, 8.1.0, 8.2.0, 8.3.0, 8.4.0, 8.5.0, 8.6.0, 8.7.0, 8.8.0, 8.9.0, 8.10.0, 8.11.0, 9.0.0, 9.1.0, 9.2.0, 9.3.0, 9.4.0, 9.5.0, 9.6.0, 9.7.0, 9.8.0, 10.0.0, 10.1.0, 10.2.0, 10.3.0, 10.4.0, 10.5.0, 10.6.0, 10.7.0, 10.8.0, 11.0.0, 11.1.0, 11.2.0, 11.3.0, 11.4.0, 11.5.0, 12.0.0, 12.1.0, 12.2.0, 13.0.0, 13.1.0, 13.2.0, 13.3.0, 13.4.0, 14.0.0, 14.1.0, 14.2.0, 14.3.0, 14.4.0, 14.5.0, 15.0.0, 15.1.0, 15.2.0, 15.3.0, 15.4.0, 15.5.0, 15.6.0, 16.0.0, 16.1.0, 16.2.0, 16.3.0, 16.4.0, 16.5.0, 16.6.0, 17.0.0, 17.1.0, 17.2.0, 17.3.0, 17.4.0, 17.5.0, 17.6.0, 17.7.0, 18.0.0, 18.1.0, 18.2.0, 18.3.0, 18.4.0, 18.5.0, 18.6.0, 18.7.0, 19.0.0, 19.1.0, 19.2.0</dl>
+<dt><code>ATT</code></dt>
+<dd>7th, 7, III, 3, V, V.2, V.3, V.4</dd>
+<dt><code>BSD</code></dt>
+<dd>3, 4, 4.1, 4.2, 4.3, 4.3t, 4.3T, 4.3r, 4.3R, 4.4</dd>
+<dt><code>NetBSD</code></dt>
+<dd>0.8, 0.8a, 0.9, 0.9a, 1.0, 1.0a, 1.1, 1.2, 1.2a, 1.2b, 1.2c, 1.2d, 1.2e, 1.3, 1.3a, 1.4, 1.4.1, 1.4.2, 1.4.3, 1.5, 1.5.1, 1.5.2, 1.5.3, 1.6, 1.6.1, 1.6.2, 1.6.3, 2.0, 2.0.1, 2.0.2, 2.0.3, 2.1, 3.0, 3.0.1, 3.0.2, 3.0.3, 3.1, 3.1.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.2, 5.1.3, 5.1.4, 5.2, 5.2.1, 5.2.2, 6.0, 6.0.1, 6.0.2, 6.0.3, 6.0.4, 6.0.5, 6.0.6, 6.1, 6.1.1, 6.1.2, 6.1.3, 6.1.4, 6.1.5, 7.0, 7.0.1, 7.0.2, 7.1, 7.1.1, 7.1.2, 7.2, 8.0, 8.1</dd>
+<dt><code>FreeBSD</code></dt>
+<dd>1.0, 1.1, 1.1.5, 1.1.5.1, 2.0, 2.0.5, 2.1, 2.1.5, 2.1.6, 2.1.7, 2.2, 2.2.1, 2.2.2, 2.2.5, 2.2.6, 2.2.7, 2.2.8, 2.2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0, 4.1, 4.1.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.6.2, 4.7, 4.8, 4.9, 4.10, 4.11, 5.0, 5.1, 5.2, 5.2.1, 5.3, 5.4, 5.5, 6.0, 6.1, 6.2, 6.3, 6.4, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 9.0, 9.1, 9.2, 9.3, 10.0, 10.1, 10.2, 10.3, 10.4, 11.0, 11.1, 11.2, 11.3, 12.0, 12.1</dd>
+<dt><code>OpenBSD</code></dt>
+<dd>2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6</dd>
+<dt><code>DragonFly</code></dt>
+<dd>1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.8.1, 1.9, 1.10, 1.11, 1.12, 1.12.2, 1.13, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.9.1, 2.10, 2.10.1, 2.11, 2.12, 2.13, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.2.1, 3.2.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.5, 3.6, 3.6.1, 3.6.2, 3.7, 3.8, 3.8.1, 3.8.2, 4.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.0.6, 4.1, 4.2, 4.2.1, 4.2.2, 4.2.3, 4.2.4, 4.3, 4.4, 4.4.1, 4.4.2, 4.4.3, 4.5, 4.6, 4.6.1, 4.6.2, 4.7, 4.8, 4.8.1, 4.9, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.2.1, 5.2.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.4.3, 5.5, 5.6, 5.6.1, 5.6.2</dd>
+<dt><code>Darwin</code></dt>
+<dd>8.0.0, 8.1.0, 8.2.0, 8.3.0, 8.4.0, 8.5.0, 8.6.0, 8.7.0, 8.8.0, 8.9.0, 8.10.0, 8.11.0, 9.0.0, 9.1.0, 9.2.0, 9.3.0, 9.4.0, 9.5.0, 9.6.0, 9.7.0, 9.8.0, 10.0.0, 10.1.0, 10.2.0, 10.3.0, 10.4.0, 10.5.0, 10.6.0, 10.7.0, 10.8.0, 11.0.0, 11.1.0, 11.2.0, 11.3.0, 11.4.0, 11.5.0, 12.0.0, 12.1.0, 12.2.0, 13.0.0, 13.1.0, 13.2.0, 13.3.0, 13.4.0, 14.0.0, 14.1.0, 14.2.0, 14.3.0, 14.4.0, 14.5.0, 15.0.0, 15.1.0, 15.2.0, 15.3.0, 15.4.0, 15.5.0, 15.6.0, 16.0.0, 16.1.0, 16.2.0, 16.3.0, 16.4.0, 16.5.0, 16.6.0, 17.0.0, 17.1.0, 17.2.0, 17.3.0, 17.4.0, 17.5.0, 17.6.0, 17.7.0, 18.0.0, 18.1.0, 18.2.0, 18.3.0, 18.4.0, 18.5.0, 18.6.0, 18.7.0, 19.0.0, 19.1.0, 19.2.0</dd></dl>
 <p> For <code>ATT</code> an unknown second parameter will be replaced with the string <code>UNIX</code> for the other predefined acronyms it will be ignored and a warning message emitted. Unrecognized arguments are displayed as given in the page footer. For instance, a typical footer might be: </p>
 <blockquote><p><tt>.BSD 4.3 </tt></p></blockquote>
 <p> giving `4.3~Berkeley&#8217; Distribution , or for a locally produced set </p>
@@ -423,8 +423,8 @@ test</pre>
 <p> which will produce `CS~Department&#8217; </p>
 <p> If the `.macro &#8216; is not present, the bottom left corner of the manual page will be ugly. </p>
 <p> This macro is neither callable nor parsed.</p>
-<dt><code>.</code>[Aq month</p>
-<dd>Aq day , Aq year ] If `has &#8216; no arguments, `Epoch&#8217; is used for the date string. If it has exactly three arguments, they are concatenated, separated with unbreakable space: </p>
+<dt><code>.</code>[Aq month</dt>
+<dd>Aq day , Aq year ] If `has &#8216; no arguments, `Epoch&#8217; is used for the date string. If it has exactly three arguments, they are concatenated, separated with unbreakable space: </dd>
 <blockquote><p><tt>.January 25, 2001 </tt></p></blockquote>
 <p> The month&#8217;s name shall not be abbreviated. </p>
 <p> With any other number of arguments, the current date is used, ignoring the parameters. </p>
@@ -447,8 +447,8 @@ test</pre>
 </blockquote>
 <p> In the third case, discussion of commands and command syntax includes both examples above, but may add more detail. The arguments Ao Ar infile Ac and Ao Ar outfile Ac from the example above might be referred to as <i>operands</i> or <i>file arguments</i> Some command-line argument lists are quite long:</p>
 <dl>
-<dt><code>make</code></p>
-<dd>[-<code>eiknqrstv</code> ] [-<code>D </code><i>variable</i> ] [-<code>d </code><i>flags</i> ] [-<code>f </code><i>makefile</i> ] [-<code>I </code><i>directory</i> ] [-<code>j </code><i>max_jobs</i> ] [<i>variable </i><code>= </code><i>value</i> ] [<i>target &#8230;</i> ]</dl>
+<dt><code>make</code></dt>
+<dd>[-<code>eiknqrstv</code> ] [-<code>D </code><i>variable</i> ] [-<code>d </code><i>flags</i> ] [-<code>f </code><i>makefile</i> ] [-<code>I </code><i>directory</i> ] [-<code>j </code><i>max_jobs</i> ] [<i>variable </i><code>= </code><i>value</i> ] [<i>target &#8230;</i> ]</dd></dl>
 <p> Here one might talk about the command <code>make</code> and qualify the argument, <i>makefile</i> as an argument to the flag, &#8211;<code>f</code> or discuss the optional file operand <i>target</i> In the verbal context, such detail can prevent confusion, however the <code>-mdoc</code> package does not have a macro for an argument <i>to</i> a flag. Instead the `<i>file &#8230;</i> &#8216; argument macro is used for an operand or file argument like <i>target</i> as well as an argument to a flag like <i>variable</i> The make command line was produced from: </p>
 <blockquote>
 <pre>.Nm make
@@ -476,10 +476,10 @@ test</pre>
 <p> The punctuation is now recognized and output in the default font distinguishing it from the argument strings. To remove the special meaning from a punctuation character escape it with `\&amp;&#8217; </p>
 <p> The following punctuation characters are recognized by <code>-mdoc</code></p>
 <dl>
-<dt><code>. Ta </code><code>, Ta </code><code>: Ta </code><code>; Ta </code><code>(</code></p>
+<dt><code>. Ta </code><code>, Ta </code><code>: Ta </code><code>; Ta </code><code>(</code></dt>
 <dd>
-<dt><code>) Ta </code><code>[ Ta </code><code>] Ta </code><code>? Ta </code><code>!</code></p>
-<dd></dl>
+</dd><dt><code>) Ta </code><code>[ Ta </code><code>] Ta </code><code>? Ta </code><code>!</code></dt>
+<dd></dd></dl>
 <p> Troff is limited as a macro language, and has difficulty when presented with a string containing a member of the mathematical, logical or quotation set: </p>
 <blockquote>
 <pre>{+,-,/,*,%,&lt;,&gt;,&lt;=,&gt;=,=,==,&amp;,`,',&quot;}</pre>
@@ -490,29 +490,29 @@ test</pre>
 <p>The address macro identifies an address construct. </p>
 <blockquote><p><tt>Usage: .</tt><i>Ao </i>address Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.</code><i>addr1</i></p>
-<dd><i>addr1</i></p>
-<dt><code>.</code><i>addr1 .</i></p>
-<dd><i>addr1</i></p>
-<dt><code>.</code><i>addr1 , file2</i></p>
-<dd><i>addr1 , file2</i></p>
-<dt><code>.</code><i>f1 , f2 , f3 :</i></p>
-<dd><i>f1 , f2 , f3</i></p>
-<dt><code>.</code><i>addr ) ) ,</i></p>
-<dd><i>addr ) )</i></dl>
+<dt><code>.</code><i>addr1</i></dt>
+<dd><i>addr1</i></dd>
+<dt><code>.</code><i>addr1 .</i></dt>
+<dd><i>addr1</i></dd>
+<dt><code>.</code><i>addr1 , file2</i></dt>
+<dd><i>addr1 , file2</i></dd>
+<dt><code>.</code><i>f1 , f2 , f3 :</i></dt>
+<dd><i>f1 , f2 , f3</i></dd>
+<dt><code>.</code><i>addr ) ) ,</i></dt>
+<dd><i>addr ) )</i></dd></dl>
 <p> The default width is 12n.</p>
 <h3>Author Name</h3>
 <p>The `.An macro &#8216; is used to specify the name of the author of the item being documented, or the name of the author of the actual manual page. </p>
 <blockquote><p><tt>Usage: .An </tt>Ao author name Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.An </code>&quot;Joe Author&quot;</p>
-<dd>An Joe Author</p>
-<dt><code>.An </code>&quot;Joe Author&quot; ,</p>
-<dd>An Joe Author ,</p>
-<dt><code>.An </code>&quot;Joe Author&quot; Aq nobody [at] FreeBSD.org</p>
-<dd>An Joe Author Aq nobody [at] FreeBSD.org</p>
-<dt><code>.An </code>&quot;Joe Author&quot; ) ) ,</p>
-<dd>An Joe Author ) ) ,</dl>
+<dt><code>.An </code>&quot;Joe Author&quot;</dt>
+<dd>An Joe Author</dd>
+<dt><code>.An </code>&quot;Joe Author&quot; ,</dt>
+<dd>An Joe Author ,</dd>
+<dt><code>.An </code>&quot;Joe Author&quot; Aq nobody [at] FreeBSD.org</dt>
+<dd>An Joe Author Aq nobody [at] FreeBSD.org</dd>
+<dt><code>.An </code>&quot;Joe Author&quot; ) ) ,</dt>
+<dd>An Joe Author ) ) ,</dd></dl>
 <p> The default width is 12n. </p>
 <p> In the <i>AUTHORS</i> section, the `.An command &#8216; causes a line break allowing each new name to appear on its own line. If this is not desirable, </p>
 <blockquote>
@@ -526,25 +526,25 @@ test</pre>
 <p>The <code>.</code><i>file &#8230;</i> argument macro may be used whenever an argument is referenced. If called without arguments, the `<i>file &#8230;</i> &#8216; string is output. </p>
 <blockquote><p><tt>Usage: .</tt><i></i>[Ao argument Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.</code><i>file &#8230;</i></p>
-<dd><i>file &#8230;</i></p>
-<dt><code>.</code><i>file1</i></p>
-<dd><i>file1</i></p>
-<dt><code>.</code><i>file1 .</i></p>
-<dd><i>file1</i></p>
-<dt><code>.</code><i>file1 file2</i></p>
-<dd><i>file1 file2</i></p>
-<dt><code>.</code><i>f1 f2 f3 :</i></p>
-<dd><i>f1 f2 f3</i></p>
-<dt><code>.</code><i>file ) ) ,</i></p>
-<dd><i>file ) )</i></dl>
+<dt><code>.</code><i>file &#8230;</i></dt>
+<dd><i>file &#8230;</i></dd>
+<dt><code>.</code><i>file1</i></dt>
+<dd><i>file1</i></dd>
+<dt><code>.</code><i>file1 .</i></dt>
+<dd><i>file1</i></dd>
+<dt><code>.</code><i>file1 file2</i></dt>
+<dd><i>file1 file2</i></dd>
+<dt><code>.</code><i>f1 f2 f3 :</i></dt>
+<dd><i>f1 f2 f3</i></dd>
+<dt><code>.</code><i>file ) ) ,</i></dt>
+<dd><i>file ) )</i></dd></dl>
 <p> The default width is 12n.</p>
 <h3>Configuration Declaration (Section Four Only)</h3>
 <p>The `.<code>macro</code> &#8216; is used to demonstrate a config(8) declaration for a device interface in a section four manual. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.&quot;device le0 at scode?&quot;</code></p>
-<dd><code>device le0 at scode?</code></dl>
+<dt><code>.&quot;device le0 at scode?&quot;</code></dt>
+<dd><code>device le0 at scode?</code></dd></dl>
 <p> In the Sx SYNOPSIS section a `.<code>command</code> &#8216; causes a line break before and after its arguments are printed. </p>
 <p> The default width is 12n.</p>
 <h3>Command Modifiers</h3>
@@ -554,87 +554,87 @@ test</pre>
 <p>A variable (or constant) which is defined in an include file is specified by the macro `. &#8216; </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>defined variable Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.MAXHOSTNAMELEN</code></p>
-<dd><code>MAXHOSTNAMELEN</code></p>
-<dt><code>.TIOCGPGRP )</code></p>
-<dd><code>TIOCGPGRP</code></dl>
+<dt><code>.MAXHOSTNAMELEN</code></dt>
+<dd><code>MAXHOSTNAMELEN</code></dd>
+<dt><code>.TIOCGPGRP )</code></dt>
+<dd><code>TIOCGPGRP</code></dd></dl>
 <p> The default width is 12n.</p>
 <h3>Errno&#8217;s</h3>
 <p>The `.Er errno &#8216; macro specifies the error return value for section 2, 3, and~9 library routines. The second example below shows `.Er used &#8216; with the `.Bq general &#8216; text domain macro, as it would be used in a section two manual page. </p>
 <blockquote><p><tt>Usage: .Er </tt>Ao errno type Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Er </code>ENOENT</p>
-<dd>Er ENOENT</p>
-<dt><code>.Er </code>ENOENT ) ;</p>
-<dd>Er ENOENT ) ;</p>
-<dt><code>.Bq </code>Er ENOTDIR</p>
-<dd>Bq Er ENOTDIR</dl>
+<dt><code>.Er </code>ENOENT</dt>
+<dd>Er ENOENT</dd>
+<dt><code>.Er </code>ENOENT ) ;</dt>
+<dd>Er ENOENT ) ;</dd>
+<dt><code>.Bq </code>Er ENOTDIR</dt>
+<dd>Bq Er ENOTDIR</dd></dl>
 <p> The default width is 17n.</p>
 <h3>Environment Variables</h3>
 <p>The `.<code>macro</code> &#8216; specifies an environment variable. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.DISPLAY</code></p>
-<dd><code>DISPLAY</code></p>
-<dt><code>.PATH .</code></p>
-<dd><code>PATH</code></p>
-<dt><code>.PRINTER ) ) ,</code></p>
-<dd><code>PRINTER ) )</code></dl>
+<dt><code>.DISPLAY</code></dt>
+<dd><code>DISPLAY</code></dd>
+<dt><code>.PATH .</code></dt>
+<dd><code>PATH</code></dd>
+<dt><code>.PRINTER ) ) ,</code></dt>
+<dd><code>PRINTER ) )</code></dd></dl>
 <p> The default width is 15n.</p>
 <h3>Flags</h3>
 <p>The `.- &#8216; macro handles command-line flags. It prepends a dash, `-&#8216; , to the flag. For interactive command flags, which are not prepended with a dash, the `.<code>(command</code> &#8216; modifier) macro is identical, but without the dash. </p>
 <blockquote><p><tt>Usage: .-</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.- </code></p>
-<dd>&#8211;</p>
-<dt><code>.-cfv</code></p>
-<dd>&#8211;<code>cfv</code></p>
-<dt><code>.-cfv .</code></p>
-<dd>&#8211;<code>cfv</code></p>
-<dt><code>.cfv .</code></p>
-<dd><code>cfv</code></p>
-<dt><code>.-s v t</code></p>
-<dd>&#8211;<code>s v t</code></p>
-<dt><code>.&#8211; ,</code></p>
-<dd>&#8211;<code>&#8211;</code></p>
-<dt><code>.-xyz ) ,</code></p>
-<dd>&#8211;<code>xyz )</code></p>
-<dt><code>.-|</code></p>
-<dd>&#8211;<code>|</code></dl>
+<dt><code>.- </code></dt>
+<dd>&#8211;</dd>
+<dt><code>.-cfv</code></dt>
+<dd>&#8211;<code>cfv</code></dd>
+<dt><code>.-cfv .</code></dt>
+<dd>&#8211;<code>cfv</code></dd>
+<dt><code>.cfv .</code></dt>
+<dd><code>cfv</code></dd>
+<dt><code>.-s v t</code></dt>
+<dd>&#8211;<code>s v t</code></dd>
+<dt><code>.&#8211; ,</code></dt>
+<dd>&#8211;<code>&#8211;</code></dd>
+<dt><code>.-xyz ) ,</code></dt>
+<dd>&#8211;<code>xyz )</code></dd>
+<dt><code>.-|</code></dt>
+<dd>&#8211;<code>|</code></dd></dl>
 <p> The `.- &#8216; macro without any arguments results in a dash representing stdin/stdout. Note that giving `.- &#8216; a single dash will result in two dashes. </p>
 <p> The default width is 12n.</p>
 <h3>Function Declarations</h3>
 <p>The `.Fd macro &#8216; is used in the Sx SYNOPSIS section with section two or three functions. It is neither callable nor parsed. </p>
 <blockquote><p><tt>Usage: .Fd </tt>Ao argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Fd </code>&quot;#include &lt;sys/types.h&gt;&quot;</p>
-<dd>Fd #include &lt;sys/types.h&gt;</dl>
+<dt><code>.Fd </code>&quot;#include &lt;sys/types.h&gt;&quot;</dt>
+<dd>Fd #include &lt;sys/types.h&gt;</dd></dl>
 <p> In the Sx SYNOPSIS section a `.Fd command &#8216; causes a line break if a function has already been presented and a break has not occurred. This leaves a nice vertical space in between the previous function call and the declaration for the next function. </p>
 <p> The `.In macro, &#8216; while in the Sx SYNOPSIS section, represents the <code>#include</code> statement, and is the short form of the above example. It specifies the C~header file as being included in a C~program. It also causes a line break. </p>
 <p> While not in the Sx SYNOPSIS section, it represents the header file enclosed in angle brackets. </p>
 <blockquote><p><tt>Usage: .In </tt>Ao header file Ac </p>
 </blockquote>
 <dl>
-<dt><code>.In </code>stdio.h</p>
-<dd>In stdio.h</p>
-<dt><code>.In </code>stdio.h</p>
-<dd>In stdio.h</dl>
+<dt><code>.In </code>stdio.h</dt>
+<dd>In stdio.h</dd>
+<dt><code>.In </code>stdio.h</dt>
+<dd>In stdio.h</dd></dl>
 <h3>Function Types</h3>
 <p>This macro is intended for the Sx SYNOPSIS section. It may be used anywhere else in the man page without problems, but its main purpose is to present the function type in kernel normal form for the Sx SYNOPSIS of sections two and three (it causes a line break, allowing the function name to appear on the next line). </p>
 <blockquote><p><tt>Usage: .Ft </tt>Ao type Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Ft </code>struct stat</p>
-<dd>Ft struct stat</dl>
+<dt><code>.Ft </code>struct stat</dt>
+<dd>Ft struct stat</dd></dl>
 <h3>Functions (Library Routines)</h3>
 <p>The `.Fn macro &#8216; is modeled on <code>ANSI~C</code> conventions. </p>
 <blockquote><p><tt>Usage: .Fn </tt>Ao function Ac [Ao parameter Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Fn </code>getchar</p>
-<dd>Fn getchar</p>
-<dt><code>.Fn </code>strlen ) ,</p>
-<dd>Fn strlen ) ,</p>
-<dt><code>.Fn </code>align &quot;char *ptr&quot; ,</p>
-<dd>Fn align char *ptr ,</dl>
+<dt><code>.Fn </code>getchar</dt>
+<dd>Fn getchar</dd>
+<dt><code>.Fn </code>strlen ) ,</dt>
+<dd>Fn strlen ) ,</dd>
+<dt><code>.Fn </code>align &quot;char *ptr&quot; ,</dt>
+<dd>Fn align char *ptr ,</dd></dl>
 <p> Note that any call to another macro signals the end of the `.Fn call &#8216; (it will insert a closing parenthesis at that point). </p>
 <p> For functions with many parameters (which is rare), the macros `.Fo (function &#8216; open) and `.Fc (function &#8216; close) may be used with `.Fa (function &#8216; argument). </p>
 <p> Example: </p>
@@ -660,10 +660,10 @@ test</pre>
 <p>The `.Fa macro &#8216; is used to refer to function arguments (parameters) outside of the Sx SYNOPSIS section of the manual or inside the Sx SYNOPSIS section if the enclosure macros `.Fo and &#8216; `.Fc instead &#8216; of `.Fn are &#8216; used. `.Fa may &#8216; also be used to refer to structure members. </p>
 <blockquote><p><tt>Usage: .Fa </tt>Ao function argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Fa </code>d_namlen ) ) ,</p>
-<dd>Fa d_namlen ) ) ,</p>
-<dt><code>.Fa </code>iov_len</p>
-<dd>Fa iov_len</dl>
+<dt><code>.Fa </code>d_namlen ) ) ,</dt>
+<dd>Fa d_namlen ) ) ,</dd>
+<dt><code>.Fa </code>iov_len</dt>
+<dd>Fa iov_len</dd></dl>
 <p> The default width is 12n.</p>
 <h3>Return Values</h3>
 <p>The `.Rv macro &#8216; generates text for use in the Sx RETURN VALUES section. </p>
@@ -681,210 +681,210 @@ test</pre>
 <p>The `.<code>macro</code> &#8216; designates an interactive or internal command. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.:wq</code></p>
-<dd><code>:wq</code></p>
-<dt><code>.&quot;do while {&#8230;}&quot;</code></p>
-<dd><code>do while {&#8230;}</code></p>
-<dt><code>.setenv , unsetenv</code></p>
-<dd><code>setenv , unsetenv</code></dl>
+<dt><code>.:wq</code></dt>
+<dd><code>:wq</code></dd>
+<dt><code>.&quot;do while {&#8230;}&quot;</code></dt>
+<dd><code>do while {&#8230;}</code></dd>
+<dt><code>.setenv , unsetenv</code></dt>
+<dd><code>setenv , unsetenv</code></dd></dl>
 <p> The default width is 12n.</p>
 <h3>Library Names</h3>
 <p>The `.Lb macro &#8216; is used to specify the library where a particular function is compiled in. </p>
 <blockquote><p><tt>Usage: .Lb </tt>Ao argument Ac &#8230; </p></blockquote>
 <p> Available arguments to `.Lb and &#8216; their results are: </p>
 <dl>
-<dt><code>libarchive</code></p>
-<dd>Lb libarchive</p>
-<dt><code>libarm</code></p>
-<dd>Lb libarm</p>
-<dt><code>libarm32</code></p>
-<dd>Lb libarm32</p>
-<dt><code>libbluetooth</code></p>
-<dd>Lb libbluetooth</p>
-<dt><code>libbsm</code></p>
-<dd>Lb libbsm</p>
-<dt><code>libc</code></p>
-<dd>Lb libc</p>
-<dt><code>libc_r</code></p>
-<dd>Lb libc_r</p>
-<dt><code>libcalendar</code></p>
-<dd>Lb libcalendar</p>
-<dt><code>libcam</code></p>
-<dd>Lb libcam</p>
-<dt><code>libcdk</code></p>
-<dd>Lb libcdk</p>
-<dt><code>libcipher</code></p>
-<dd>Lb libcipher</p>
-<dt><code>libcompat</code></p>
-<dd>Lb libcompat</p>
-<dt><code>libcrypt</code></p>
-<dd>Lb libcrypt</p>
-<dt><code>libcurses</code></p>
-<dd>Lb libcurses</p>
-<dt><code>libdevinfo</code></p>
-<dd>Lb libdevinfo</p>
-<dt><code>libdevstat</code></p>
-<dd>Lb libdevstat</p>
-<dt><code>libdisk</code></p>
-<dd>Lb libdisk</p>
-<dt><code>libdwarf</code></p>
-<dd>Lb libdwarf</p>
-<dt><code>libedit</code></p>
-<dd>Lb libedit</p>
-<dt><code>libelf</code></p>
-<dd>Lb libelf</p>
-<dt><code>libevent</code></p>
-<dd>Lb libevent</p>
-<dt><code>libfetch</code></p>
-<dd>Lb libfetch</p>
-<dt><code>libform</code></p>
-<dd>Lb libform</p>
-<dt><code>libgeom</code></p>
-<dd>Lb libgeom</p>
-<dt><code>libgpib</code></p>
-<dd>Lb libgpib</p>
-<dt><code>libi386</code></p>
-<dd>Lb libi386</p>
-<dt><code>libintl</code></p>
-<dd>Lb libintl</p>
-<dt><code>libipsec</code></p>
-<dd>Lb libipsec</p>
-<dt><code>libipx</code></p>
-<dd>Lb libipx</p>
-<dt><code>libiscsi</code></p>
-<dd>Lb libiscsi</p>
-<dt><code>libjail</code></p>
-<dd>Lb libjail</p>
-<dt><code>libkiconv</code></p>
-<dd>Lb libkiconv</p>
-<dt><code>libkse</code></p>
-<dd>Lb libkse</p>
-<dt><code>libkvm</code></p>
-<dd>Lb libkvm</p>
-<dt><code>libm</code></p>
-<dd>Lb libm</p>
-<dt><code>libm68k</code></p>
-<dd>Lb libm68k</p>
-<dt><code>libmagic</code></p>
-<dd>Lb libmagic</p>
-<dt><code>libmd</code></p>
-<dd>Lb libmd</p>
-<dt><code>libmemstat</code></p>
-<dd>Lb libmemstat</p>
-<dt><code>libmenu</code></p>
-<dd>Lb libmenu</p>
-<dt><code>libnetgraph</code></p>
-<dd>Lb libnetgraph</p>
-<dt><code>libnetpgp</code></p>
-<dd>Lb libnetpgp</p>
-<dt><code>libossaudio</code></p>
-<dd>Lb libossaudio</p>
-<dt><code>libpam</code></p>
-<dd>Lb libpam</p>
-<dt><code>libpcap</code></p>
-<dd>Lb libpcap</p>
-<dt><code>libpci</code></p>
-<dd>Lb libpci</p>
-<dt><code>libpmc</code></p>
-<dd>Lb libpmc</p>
-<dt><code>libposix</code></p>
-<dd>Lb libposix</p>
-<dt><code>libprop</code></p>
-<dd>Lb libprop</p>
-<dt><code>libpthread</code></p>
-<dd>Lb libpthread</p>
-<dt><code>libpuffs</code></p>
-<dd>Lb libpuffs</p>
-<dt><code>librefuse</code></p>
-<dd>Lb librefuse</p>
-<dt><code>libresolv</code></p>
-<dd>Lb libresolv</p>
-<dt><code>librpcsec_gss</code></p>
-<dd>Lb librpcsec_gss</p>
-<dt><code>librpcsvc</code></p>
-<dd>Lb librpcsvc</p>
-<dt><code>librt</code></p>
-<dd>Lb librt</p>
-<dt><code>libsdp</code></p>
-<dd>Lb libsdp</p>
-<dt><code>libssp</code></p>
-<dd>Lb libssp</p>
-<dt><code>libSystem</code></p>
-<dd>Lb libSystem</p>
-<dt><code>libtermcap</code></p>
-<dd>Lb libtermcap</p>
-<dt><code>libterminfo</code></p>
-<dd>Lb libterminfo</p>
-<dt><code>libthr</code></p>
-<dd>Lb libthr</p>
-<dt><code>libufs</code></p>
-<dd>Lb libufs</p>
-<dt><code>libugidfw</code></p>
-<dd>Lb libugidfw</p>
-<dt><code>libulog</code></p>
-<dd>Lb libulog</p>
-<dt><code>libusbhid</code></p>
-<dd>Lb libusbhid</p>
-<dt><code>libutil</code></p>
-<dd>Lb libutil</p>
-<dt><code>libvgl</code></p>
-<dd>Lb libvgl</p>
-<dt><code>libx86_64</code></p>
-<dd>Lb libx86_64</p>
-<dt><code>libz</code></p>
-<dd>Lb libz</dl>
+<dt><code>libarchive</code></dt>
+<dd>Lb libarchive</dd>
+<dt><code>libarm</code></dt>
+<dd>Lb libarm</dd>
+<dt><code>libarm32</code></dt>
+<dd>Lb libarm32</dd>
+<dt><code>libbluetooth</code></dt>
+<dd>Lb libbluetooth</dd>
+<dt><code>libbsm</code></dt>
+<dd>Lb libbsm</dd>
+<dt><code>libc</code></dt>
+<dd>Lb libc</dd>
+<dt><code>libc_r</code></dt>
+<dd>Lb libc_r</dd>
+<dt><code>libcalendar</code></dt>
+<dd>Lb libcalendar</dd>
+<dt><code>libcam</code></dt>
+<dd>Lb libcam</dd>
+<dt><code>libcdk</code></dt>
+<dd>Lb libcdk</dd>
+<dt><code>libcipher</code></dt>
+<dd>Lb libcipher</dd>
+<dt><code>libcompat</code></dt>
+<dd>Lb libcompat</dd>
+<dt><code>libcrypt</code></dt>
+<dd>Lb libcrypt</dd>
+<dt><code>libcurses</code></dt>
+<dd>Lb libcurses</dd>
+<dt><code>libdevinfo</code></dt>
+<dd>Lb libdevinfo</dd>
+<dt><code>libdevstat</code></dt>
+<dd>Lb libdevstat</dd>
+<dt><code>libdisk</code></dt>
+<dd>Lb libdisk</dd>
+<dt><code>libdwarf</code></dt>
+<dd>Lb libdwarf</dd>
+<dt><code>libedit</code></dt>
+<dd>Lb libedit</dd>
+<dt><code>libelf</code></dt>
+<dd>Lb libelf</dd>
+<dt><code>libevent</code></dt>
+<dd>Lb libevent</dd>
+<dt><code>libfetch</code></dt>
+<dd>Lb libfetch</dd>
+<dt><code>libform</code></dt>
+<dd>Lb libform</dd>
+<dt><code>libgeom</code></dt>
+<dd>Lb libgeom</dd>
+<dt><code>libgpib</code></dt>
+<dd>Lb libgpib</dd>
+<dt><code>libi386</code></dt>
+<dd>Lb libi386</dd>
+<dt><code>libintl</code></dt>
+<dd>Lb libintl</dd>
+<dt><code>libipsec</code></dt>
+<dd>Lb libipsec</dd>
+<dt><code>libipx</code></dt>
+<dd>Lb libipx</dd>
+<dt><code>libiscsi</code></dt>
+<dd>Lb libiscsi</dd>
+<dt><code>libjail</code></dt>
+<dd>Lb libjail</dd>
+<dt><code>libkiconv</code></dt>
+<dd>Lb libkiconv</dd>
+<dt><code>libkse</code></dt>
+<dd>Lb libkse</dd>
+<dt><code>libkvm</code></dt>
+<dd>Lb libkvm</dd>
+<dt><code>libm</code></dt>
+<dd>Lb libm</dd>
+<dt><code>libm68k</code></dt>
+<dd>Lb libm68k</dd>
+<dt><code>libmagic</code></dt>
+<dd>Lb libmagic</dd>
+<dt><code>libmd</code></dt>
+<dd>Lb libmd</dd>
+<dt><code>libmemstat</code></dt>
+<dd>Lb libmemstat</dd>
+<dt><code>libmenu</code></dt>
+<dd>Lb libmenu</dd>
+<dt><code>libnetgraph</code></dt>
+<dd>Lb libnetgraph</dd>
+<dt><code>libnetpgp</code></dt>
+<dd>Lb libnetpgp</dd>
+<dt><code>libossaudio</code></dt>
+<dd>Lb libossaudio</dd>
+<dt><code>libpam</code></dt>
+<dd>Lb libpam</dd>
+<dt><code>libpcap</code></dt>
+<dd>Lb libpcap</dd>
+<dt><code>libpci</code></dt>
+<dd>Lb libpci</dd>
+<dt><code>libpmc</code></dt>
+<dd>Lb libpmc</dd>
+<dt><code>libposix</code></dt>
+<dd>Lb libposix</dd>
+<dt><code>libprop</code></dt>
+<dd>Lb libprop</dd>
+<dt><code>libpthread</code></dt>
+<dd>Lb libpthread</dd>
+<dt><code>libpuffs</code></dt>
+<dd>Lb libpuffs</dd>
+<dt><code>librefuse</code></dt>
+<dd>Lb librefuse</dd>
+<dt><code>libresolv</code></dt>
+<dd>Lb libresolv</dd>
+<dt><code>librpcsec_gss</code></dt>
+<dd>Lb librpcsec_gss</dd>
+<dt><code>librpcsvc</code></dt>
+<dd>Lb librpcsvc</dd>
+<dt><code>librt</code></dt>
+<dd>Lb librt</dd>
+<dt><code>libsdp</code></dt>
+<dd>Lb libsdp</dd>
+<dt><code>libssp</code></dt>
+<dd>Lb libssp</dd>
+<dt><code>libSystem</code></dt>
+<dd>Lb libSystem</dd>
+<dt><code>libtermcap</code></dt>
+<dd>Lb libtermcap</dd>
+<dt><code>libterminfo</code></dt>
+<dd>Lb libterminfo</dd>
+<dt><code>libthr</code></dt>
+<dd>Lb libthr</dd>
+<dt><code>libufs</code></dt>
+<dd>Lb libufs</dd>
+<dt><code>libugidfw</code></dt>
+<dd>Lb libugidfw</dd>
+<dt><code>libulog</code></dt>
+<dd>Lb libulog</dd>
+<dt><code>libusbhid</code></dt>
+<dd>Lb libusbhid</dd>
+<dt><code>libutil</code></dt>
+<dd>Lb libutil</dd>
+<dt><code>libvgl</code></dt>
+<dd>Lb libvgl</dd>
+<dt><code>libx86_64</code></dt>
+<dd>Lb libx86_64</dd>
+<dt><code>libz</code></dt>
+<dd>Lb libz</dd></dl>
 <p> Local, OS-specific additions might be found in the file mdoc.local look for strings named `str-Lb-XXX&#8217; `XXX&#8217; then denotes the keyword to be used with the `.Lb macro. &#8216; </p>
 <p> In the <i>LIBRARY</i> section an `.Lb command &#8216; causes a line break before and after its arguments are printed.</p>
 <h3>Literals</h3>
 <p>The `.<code>literal</code> &#8216; macro may be used for special characters, variable constants, etc. &#8211; anything which should be displayed as it would be typed. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.n</code></p>
+<dt><code>.n</code></dt>
 <dd><code>
-</code></p>
-<dt><code>.M1 M2 M3 ;</code></p>
-<dd><code>M1 M2 M3</code></p>
-<dt><code>.cntrl-D ) ,</code></p>
-<dd><code>cntrl-D )</code></p>
-<dt><code>.1024 &#8230;</code></p>
-<dd><code>1024 &#8230;</code></dl>
+</code></dd>
+<dt><code>.M1 M2 M3 ;</code></dt>
+<dd><code>M1 M2 M3</code></dd>
+<dt><code>.cntrl-D ) ,</code></dt>
+<dd><code>cntrl-D )</code></dd>
+<dt><code>.1024 &#8230;</code></dt>
+<dd><code>1024 &#8230;</code></dd></dl>
 <p> The default width is 16n.</p>
 <h3>Names</h3>
 <p>The `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; macro is used for the document title or subject name. It has the peculiarity of remembering the first argument it was called with, which should always be the subject name of the page. When called without arguments, `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; regurgitates this initial name for the sole purpose of making less work for the author. `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; causes a line break within the Sx SYNOPSIS section. </p>
 <p> Note: A section two or three document function name is addressed with the `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; in the <i>NAME</i> section, and with `.Fn in &#8216; the Sx SYNOPSIS and remaining sections. For interactive commands, such as the `while&#8217; command keyword in <a href="/docs/linux/man/1-csh/">csh</a>(1), the `.<code>macro</code> &#8216; should be used. While `.<code>is</code> &#8216; nearly identical to `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; it can not recall the first argument it was invoked with. </p>
 <blockquote><p><tt>Usage: .</tt>[Ao argument Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.groff_mdoc</code></p>
-<dd><code>groff_mdoc</code></p>
-<dt><code>.\-mdoc</code></p>
-<dd><code>-mdoc</code></p>
-<dt><code>.foo ) ) ,</code></p>
-<dd><code>foo ) )</code></p>
-<dt><code>.:</code></p>
-<dd><code>:</code></dl>
+<dt><code>.groff_mdoc</code></dt>
+<dd><code>groff_mdoc</code></dd>
+<dt><code>.\-mdoc</code></dt>
+<dd><code>-mdoc</code></dd>
+<dt><code>.foo ) ) ,</code></dt>
+<dd><code>foo ) )</code></dd>
+<dt><code>.:</code></dt>
+<dd><code>:</code></dd></dl>
 <p> The default width is 10n.</p>
 <h3>Options</h3>
 <p>The `.[macro] &#8216; places option brackets around any remaining arguments on the command line, and places any trailing punctuation outside the brackets. The macros `.[and &#8216; `.] &#8216; (which produce an opening and a closing option bracket respectively) may be used across one or more lines or to specify the exact position of the closing parenthesis. </p>
 <blockquote><p><tt>Usage: .</tt>[[Ao option Ac &#8230;] ] </p></blockquote>
 <dl>
-<dt><code>.</code>[[</p>
-<dt><code>.</code>[-<code>k</code> ]</p>
-<dd>] ]</p>
-<dd>[-<code>k</code> ]</p>
-<dt><code>.</code>[-<code>k ) .</code> ]</p>
-<dd>[-<code>k</code> ]</p>
-<dt><code>.</code>[-<code>k </code><i>kookfile</i> ]</p>
-<dd>[-<code>k </code><i>kookfile</i> ]</p>
-<dt><code>.</code>[-<code>k </code><i>kookfile ,</i> ]</p>
-<dd>[-<code>k </code><i>kookfile</i> ]</p>
-<dt><code>.</code>[<i>objfil </i>[<i>corfil</i> ] ]</p>
-<dd>[<i>objfil </i>[<i>corfil</i> ] ]</p>
-<dt><code>.</code>[-<code>c </code><i>objfil </i>[<i>corfil ,</i> ] ]</p>
-<dd>[-<code>c </code><i>objfil </i>[<i>corfil</i> ] ]</p>
-<dt><code>.</code>[word1 word2]</p>
-<dd>[word1 word2]</p>
-<dt><code>..</code>[[Ao option Ac &#8230;] ]</p>
-<dd><code>.</code>[[Ao option Ac &#8230;] ]</dl>
+<dt><code>.</code>[[</dt>
+<dt><code>.</code>[-<code>k</code> ]</dt>
+<dd>] ]</dd>
+<dd>[-<code>k</code> ]</dd>
+<dt><code>.</code>[-<code>k ) .</code> ]</dt>
+<dd>[-<code>k</code> ]</dd>
+<dt><code>.</code>[-<code>k </code><i>kookfile</i> ]</dt>
+<dd>[-<code>k </code><i>kookfile</i> ]</dd>
+<dt><code>.</code>[-<code>k </code><i>kookfile ,</i> ]</dt>
+<dd>[-<code>k </code><i>kookfile</i> ]</dd>
+<dt><code>.</code>[<i>objfil </i>[<i>corfil</i> ] ]</dt>
+<dd>[<i>objfil </i>[<i>corfil</i> ] ]</dd>
+<dt><code>.</code>[-<code>c </code><i>objfil </i>[<i>corfil ,</i> ] ]</dt>
+<dd>[-<code>c </code><i>objfil </i>[<i>corfil</i> ] ]</dd>
+<dt><code>.</code>[word1 word2]</dt>
+<dd>[word1 word2]</dd>
+<dt><code>..</code>[[Ao option Ac &#8230;] ]</dt>
+<dd><code>.</code>[[Ao option Ac &#8230;] ]</dd></dl>
 <p> Here a typical example of the `.[and &#8216; `.] &#8216; macros: </p>
 <blockquote>
 <pre>.Oo
@@ -900,12 +900,12 @@ test</pre>
 <p>The `.macro &#8216; formats path or file names. If called without arguments, the `string is output, which represents the current user&#8217;s home directory. &#8216; </p>
 <blockquote><p><tt>Usage: .</tt>[Ao pathname Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.</p>
-<dt>./usr/share </code></p>
+<dt><code>.</dt>
+<dt>./usr/share </code></dt>
 <dd>
-<dd>/usr/share</p>
-<dt><code>./tmp/fooXXXXX ) . </code></p>
-<dd>/tmp/fooXXXXX )</dl>
+</dd><dd>/usr/share</dd>
+<dt><code>./tmp/fooXXXXX ) . </code></dt>
+<dd>/tmp/fooXXXXX )</dd></dl>
 <p> The default width is 32n.</p>
 <h3>Standards</h3>
 <p>The `.St macro &#8216; replaces standard abbreviations with their formal names. </p>
@@ -913,195 +913,195 @@ test</pre>
 <p> Available pairs for &#8220;Abbreviation/Formal Name&#8221; are: </p>
 <p> <code>ANSI/ISO C</code> </p>
 <dl>
-<dt><code>-ansiC</code></p>
-<dd>St -ansiC</p>
-<dt><code>-ansiC-89</code></p>
-<dd>St -ansiC-89</p>
-<dt><code>-isoC</code></p>
-<dd>St -isoC</p>
-<dt><code>-isoC-90</code></p>
-<dd>St -isoC-90</p>
-<dt><code>-isoC-99</code></p>
-<dd>St -isoC-99</p>
-<dt><code>-isoC-2011</code></p>
-<dd>St -isoC-2011</dl>
+<dt><code>-ansiC</code></dt>
+<dd>St -ansiC</dd>
+<dt><code>-ansiC-89</code></dt>
+<dd>St -ansiC-89</dd>
+<dt><code>-isoC</code></dt>
+<dd>St -isoC</dd>
+<dt><code>-isoC-90</code></dt>
+<dd>St -isoC-90</dd>
+<dt><code>-isoC-99</code></dt>
+<dd>St -isoC-99</dd>
+<dt><code>-isoC-2011</code></dt>
+<dd>St -isoC-2011</dd></dl>
 <p> <code>POSIX</code> Part 1: System API </p>
 <dl>
-<dt><code>-iso9945-1-90</code></p>
-<dd>St -iso9945-1-90</p>
-<dt><code>-iso9945-1-96</code></p>
-<dd>St -iso9945-1-96</p>
-<dt><code>-p1003.1</code></p>
-<dd>St -p1003.1</p>
-<dt><code>-p1003.1-88</code></p>
-<dd>St -p1003.1-88</p>
-<dt><code>-p1003.1-90</code></p>
-<dd>St -p1003.1-90</p>
-<dt><code>-p1003.1-96</code></p>
-<dd>St -p1003.1-96</p>
-<dt><code>-p1003.1b-93</code></p>
-<dd>St -p1003.1b-93</p>
-<dt><code>-p1003.1c-95</code></p>
-<dd>St -p1003.1c-95</p>
-<dt><code>-p1003.1g-2000</code></p>
-<dd>St -p1003.1g-2000</p>
-<dt><code>-p1003.1i-95</code></p>
-<dd>St -p1003.1i-95</p>
-<dt><code>-p1003.1-2001</code></p>
-<dd>St -p1003.1-2001</p>
-<dt><code>-p1003.1-2004</code></p>
-<dd>St -p1003.1-2004</p>
-<dt><code>-p1003.1-2008</code></p>
-<dd>St -p1003.1-2008</dl>
+<dt><code>-iso9945-1-90</code></dt>
+<dd>St -iso9945-1-90</dd>
+<dt><code>-iso9945-1-96</code></dt>
+<dd>St -iso9945-1-96</dd>
+<dt><code>-p1003.1</code></dt>
+<dd>St -p1003.1</dd>
+<dt><code>-p1003.1-88</code></dt>
+<dd>St -p1003.1-88</dd>
+<dt><code>-p1003.1-90</code></dt>
+<dd>St -p1003.1-90</dd>
+<dt><code>-p1003.1-96</code></dt>
+<dd>St -p1003.1-96</dd>
+<dt><code>-p1003.1b-93</code></dt>
+<dd>St -p1003.1b-93</dd>
+<dt><code>-p1003.1c-95</code></dt>
+<dd>St -p1003.1c-95</dd>
+<dt><code>-p1003.1g-2000</code></dt>
+<dd>St -p1003.1g-2000</dd>
+<dt><code>-p1003.1i-95</code></dt>
+<dd>St -p1003.1i-95</dd>
+<dt><code>-p1003.1-2001</code></dt>
+<dd>St -p1003.1-2001</dd>
+<dt><code>-p1003.1-2004</code></dt>
+<dd>St -p1003.1-2004</dd>
+<dt><code>-p1003.1-2008</code></dt>
+<dd>St -p1003.1-2008</dd></dl>
 <p> <code>POSIX</code> Part 2: Shell and Utilities </p>
 <dl>
-<dt><code>-iso9945-2-93</code></p>
-<dd>St -iso9945-2-93</p>
-<dt><code>-p1003.2</code></p>
-<dd>St -p1003.2</p>
-<dt><code>-p1003.2-92</code></p>
-<dd>St -p1003.2-92</p>
-<dt><code>-p1003.2a-92</code></p>
-<dd>St -p1003.2a-92</dl>
+<dt><code>-iso9945-2-93</code></dt>
+<dd>St -iso9945-2-93</dd>
+<dt><code>-p1003.2</code></dt>
+<dd>St -p1003.2</dd>
+<dt><code>-p1003.2-92</code></dt>
+<dd>St -p1003.2-92</dd>
+<dt><code>-p1003.2a-92</code></dt>
+<dd>St -p1003.2a-92</dd></dl>
 <p> X/Open </p>
 <dl>
-<dt><code>-susv2</code></p>
-<dd>St -susv2</p>
-<dt><code>-susv3</code></p>
-<dd>St -susv3</p>
-<dt><code>-svid4</code></p>
-<dd>St -svid4</p>
-<dt><code>-xbd5</code></p>
-<dd>St -xbd5</p>
-<dt><code>-xcu5</code></p>
-<dd>St -xcu5</p>
-<dt><code>-xcurses4.2</code></p>
-<dd>St -xcurses4.2</p>
-<dt><code>-xns5</code></p>
-<dd>St -xns5</p>
-<dt><code>-xns5.2</code></p>
-<dd>St -xns5.2</p>
-<dt><code>-xpg3</code></p>
-<dd>St -xpg3</p>
-<dt><code>-xpg4</code></p>
-<dd>St -xpg4</p>
-<dt><code>-xpg4.2</code></p>
-<dd>St -xpg4.2</p>
-<dt><code>-xsh5</code></p>
-<dd>St -xsh5</dl>
+<dt><code>-susv2</code></dt>
+<dd>St -susv2</dd>
+<dt><code>-susv3</code></dt>
+<dd>St -susv3</dd>
+<dt><code>-svid4</code></dt>
+<dd>St -svid4</dd>
+<dt><code>-xbd5</code></dt>
+<dd>St -xbd5</dd>
+<dt><code>-xcu5</code></dt>
+<dd>St -xcu5</dd>
+<dt><code>-xcurses4.2</code></dt>
+<dd>St -xcurses4.2</dd>
+<dt><code>-xns5</code></dt>
+<dd>St -xns5</dd>
+<dt><code>-xns5.2</code></dt>
+<dd>St -xns5.2</dd>
+<dt><code>-xpg3</code></dt>
+<dd>St -xpg3</dd>
+<dt><code>-xpg4</code></dt>
+<dd>St -xpg4</dd>
+<dt><code>-xpg4.2</code></dt>
+<dd>St -xpg4.2</dd>
+<dt><code>-xsh5</code></dt>
+<dd>St -xsh5</dd></dl>
 <p> Miscellaneous </p>
 <dl>
-<dt><code>-ieee754</code></p>
-<dd>St -ieee754</p>
-<dt><code>-iso8601</code></p>
-<dd>St -iso8601</p>
-<dt><code>-iso8802-3</code></p>
-<dd>St -iso8802-3</dl>
+<dt><code>-ieee754</code></dt>
+<dd>St -ieee754</dd>
+<dt><code>-iso8601</code></dt>
+<dd>St -iso8601</dd>
+<dt><code>-iso8802-3</code></dt>
+<dd>St -iso8802-3</dd></dl>
 <h3>Variable Types</h3>
 <p>The `.Vt macro &#8216; may be used whenever a type is referenced. In the Sx SYNOPSIS section, it causes a line break (useful for old style variable declarations). </p>
 <blockquote><p><tt>Usage: .Vt </tt>Ao type Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Vt </code>extern char *optarg ;</p>
-<dd>Vt extern char *optarg ;</p>
-<dt><code>.Vt </code>FILE *</p>
-<dd>Vt FILE *</dl>
+<dt><code>.Vt </code>extern char *optarg ;</dt>
+<dd>Vt extern char *optarg ;</dd>
+<dt><code>.Vt </code>FILE *</dt>
+<dd>Vt FILE *</dd></dl>
 <h3>Variables</h3>
 <p>Generic variable reference. </p>
 <blockquote><p><tt>Usage: .</tt><i>Ao </i>variable Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.</code><i>count</i></p>
-<dd><i>count</i></p>
-<dt><code>.</code><i>settimer ,</i></p>
-<dd><i>settimer</i></p>
-<dt><code>.</code><i>&quot;int *prt&quot; ) :</i></p>
-<dd><i>int *prt )</i></p>
-<dt><code>.</code><i>&quot;char s&quot; ] ) ) ,</i></p>
-<dd><i>char s ] ) )</i></dl>
+<dt><code>.</code><i>count</i></dt>
+<dd><i>count</i></dd>
+<dt><code>.</code><i>settimer ,</i></dt>
+<dd><i>settimer</i></dd>
+<dt><code>.</code><i>&quot;int *prt&quot; ) :</i></dt>
+<dd><i>int *prt )</i></dd>
+<dt><code>.</code><i>&quot;char s&quot; ] ) ) ,</i></dt>
+<dd><i>char s ] ) )</i></dd></dl>
 <p> The default width is 12n.</p>
 <h3>Manual Page Cross References</h3>
 <p>The `.macro &#8216; expects the first argument to be a manual page name. The optional second argument, if a string (defining the manual section), is put into parentheses. </p>
 <blockquote><p><tt>Usage: .AomanpagenameAcOoAosectionAcOc... </tt></p></blockquote>
 <dl>
-<dt><code>.mdoc </code></p>
-<dd>mdoc</p>
-<dt><code>.mdoc, </code></p>
-<dd>mdoc,</p>
-<dt><code>.mdoc(7) </code></p>
-<dd><a href="/docs/linux/man/7-mdoc/">mdoc</a>(7)</p>
-<dt><code>.xinit(1x); </code></p>
-<dd>xinit(1x);</dl>
+<dt><code>.mdoc </code></dt>
+<dd>mdoc</dd>
+<dt><code>.mdoc, </code></dt>
+<dd>mdoc,</dd>
+<dt><code>.mdoc(7) </code></dt>
+<dd><a href="/docs/linux/man/7-mdoc/">mdoc</a>(7)</dd>
+<dt><code>.xinit(1x); </code></dt>
+<dd>xinit(1x);</dd></dl>
 <p> The default width is 10n.</p>
 <h2>General Text Domain</h2>
 <h3>AT&amp;T Macro</h3>
 <blockquote><p><tt>Usage: .AT&amp;T System </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.AT&amp;T System </code></p>
-<dd>AT&amp;T System</p>
-<dt><code>.AT&amp;T System v6 .</code></p>
-<dd>AT&amp;T System v6 .</dl>
+<dt><code>.AT&amp;T System </code></dt>
+<dd>AT&amp;T System</dd>
+<dt><code>.AT&amp;T System v6 .</code></dt>
+<dd>AT&amp;T System v6 .</dd></dl>
 <p> The following values for Ao version Ac are possible: </p>
 <blockquote><p><tt>32v, v1, v2, v3, v4, v5, v6, v7, III, V, V.1, V.2, V.3, V.4</tt></p></blockquote>
 <h3>BSD Macro</h3>
 <blockquote><p><tt>&quot;Usage: .Bx&quot; Bro -alpha | -beta | -devel Brc ...</tt></p></blockquote>
 <blockquote><p><tt>&quot; .Bx&quot; </tt>[Ao version Ac [Ao release Ac &#8230;] ] </p></blockquote>
 <dl>
-<dt><code>.BSD BSD</p>
-<dt>.BSD 4.3 . </code></p>
+<dt><code>.BSD BSD</dt>
+<dt>.BSD 4.3 . </code></dt>
 <dd>
-<dd>BSD 4.3</p>
-<dt><code>.BSD -devel </code></p>
-<dd>BSD -devel</dl>
+</dd><dd>BSD 4.3</dd>
+<dt><code>.BSD -devel </code></dt>
+<dd>BSD -devel</dd></dl>
 <p> Ao version Ac will be prepended to the string `BSD &#8216; The following values for Ao release Ac are possible: </p>
 <blockquote><p><tt>Reno, reno, Tahoe, tahoe, Lite, lite, Lite2, lite2</tt></p></blockquote>
 <h3>NetBSD Macro</h3>
 <blockquote><p><tt>Usage: .Nx </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Nx </code>Nx</p>
-<dt><code>.Nx </code>1.4 .</p>
+<dt><code>.Nx </code>Nx</dt>
+<dt><code>.Nx </code>1.4 .</dt>
 <dd>
-<dd>Nx 1.4 .</dl>
+</dd><dd>Nx 1.4 .</dd></dl>
 <p> For possible values of Ao version Ac see the description of the `.command &#8216; above in section Sx TITLE MACROS .</p>
 <h3>FreeBSD Macro</h3>
 <blockquote><p><tt>Usage: .Fx </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Fx </code>Fx</p>
-<dt><code>.Fx </code>2.2 .</p>
+<dt><code>.Fx </code>Fx</dt>
+<dt><code>.Fx </code>2.2 .</dt>
 <dd>
-<dd>Fx 2.2 .</dl>
+</dd><dd>Fx 2.2 .</dd></dl>
 <p> For possible values of Ao version Ac see the description of the `.command &#8216; above in section Sx TITLE MACROS .</p>
 <h3>DragonFly Macro</h3>
 <blockquote><p><tt>Usage: .Dx </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Dx </code>Dx</p>
-<dt><code>.Dx </code>1.4 .</p>
+<dt><code>.Dx </code>Dx</dt>
+<dt><code>.Dx </code>1.4 .</dt>
 <dd>
-<dd>Dx 1.4 .</dl>
+</dd><dd>Dx 1.4 .</dd></dl>
 <p> For possible values of Ao version Ac see the description of the `.command &#8216; above in section Sx TITLE MACROS .</p>
 <h3>OpenBSD Macro</h3>
 <blockquote><p><tt>Usage: .Ox </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Ox </code>1.0</p>
-<dd>Ox 1.0</dl>
+<dt><code>.Ox </code>1.0</dt>
+<dd>Ox 1.0</dd></dl>
 <h3>BSD/OS Macro</h3>
 <blockquote><p><tt>Usage: .Bsx </tt>[Ao version Ac &#8230;] </p></blockquote>
 <dl>
-<dt><code>.Bsx 1.0</code></p>
-<dd>Bs x 1.0</dl>
+<dt><code>.Bsx 1.0</code></dt>
+<dd>Bs x 1.0</dd></dl>
 <h3>UNIX Macro</h3>
 <blockquote><p><tt>Usage: .UNIX </tt></p></blockquote>
 <dl>
-<dt><code>.UNIX </code></p>
-<dd>UNIX</dl>
+<dt><code>.UNIX </code></dt>
+<dd>UNIX</dd></dl>
 <h3>Emphasis Macro</h3>
 <p>Text may be stressed or emphasized with the `.<i>macro.</i> &#8216; The usual font for emphasis is italic. </p>
 <blockquote><p><tt>Usage: .</tt><i>Ao </i>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.</code><i>does not</i></p>
-<dd><i>does not</i></p>
-<dt><code>.</code><i>exceed 1024 .</i></p>
-<dd><i>exceed 1024</i></p>
-<dt><code>.</code><i>vide infra ) ) ,</i></p>
-<dd><i>vide infra ) )</i></dl>
+<dt><code>.</code><i>does not</i></dt>
+<dd><i>does not</i></dd>
+<dt><code>.</code><i>exceed 1024 .</i></dt>
+<dd><i>exceed 1024</i></dd>
+<dt><code>.</code><i>vide infra ) ) ,</i></dt>
+<dd><i>vide infra ) )</i></dd></dl>
 <p> The default width is 10n.</p>
 <h3>Font Mode</h3>
 <p>The `.Bf font &#8216; mode must be ended with the `.Ef macro &#8216; (the latter takes no arguments). Font modes may be nested within other font modes. </p>
@@ -1110,12 +1110,12 @@ test</pre>
 </blockquote>
 <p> Ao font mode Ac must be one of the following three types: </p>
 <dl>
-<dt><i>| &#8211;</i><code>emphasis</code></p>
-<dd>Same as if the `.<i>macro</i> &#8216; was used for the entire block of text.</p>
-<dt><code>| -literal</code></p>
-<dd>Same as if the `.<code>macro</code> &#8216; was used for the entire block of text.</p>
-<dt><code>| -symbolic</code></p>
-<dd>Same as if the `.<code>macro</code> &#8216; was used for the entire block of text.</dl>
+<dt><i>| &#8211;</i><code>emphasis</code></dt>
+<dd>Same as if the `.<i>macro</i> &#8216; was used for the entire block of text.</dd>
+<dt><code>| -literal</code></dt>
+<dd>Same as if the `.<code>macro</code> &#8216; was used for the entire block of text.</dd>
+<dt><code>| -symbolic</code></dt>
+<dd>Same as if the `.<code>macro</code> &#8216; was used for the entire block of text.</dd></dl>
 <p> Both macros are neither callable nor parsed.</p>
 <h3>Enclosure and Quoting Macros</h3>
 <p>The concept of enclosure is similar to quoting. The object being to enclose one or more strings between a pair of characters like quotes or parentheses. The terms quoting and enclosure are used interchangeably throughout this document. Most of the one-line enclosure macros end in small letter `q&#8217; to give a hint of quoting, but there are a few irregularities. For each enclosure macro there is also a pair of open and close macros which end in small letters `o&#8217; and `c&#8217; respectively. </p>
@@ -1204,98 +1204,98 @@ test</pre>
 </table>
 <p> All macros ending with `q&#8217; and `o&#8217; have a default width value of 12n.</p>
 <dl>
-<dt><code>.Eo </code>, .Ec These macros expect the first argument to be the opening and closing strings</p>
-<dd>respectively.</p>
-<dt><code>.Es </code>, .En Due to the nine-argument limit in the original troff program two other</p>
-<dd>macros have been implemented which are now rather obsolete: `.Es takes &#8216; the first and second parameter as the left and right enclosure string, which are then used to enclose the arguments of `.En &#8216; The default width value is 12n for both macros.</p>
-<dt><code>.Eq </code>The first and second arguments of this macro are the opening and</p>
-<dd>closing strings respectively, followed by the arguments to be enclosed.</p>
-<dt><code>.`The&#8217; </code></p>
-<dd>quoted literal macro behaves differently in troff and nroff mode. If formatted with nroff, a quoted literal is always quoted. If formatted with troff, an item is only quoted if the width of the item is less than three constant width characters. This is to make short strings more visible where the font change to literal (constant width) is less noticeable. </p>
+<dt><code>.Eo </code>, .Ec These macros expect the first argument to be the opening and closing strings</dt>
+<dd>respectively.</dd>
+<dt><code>.Es </code>, .En Due to the nine-argument limit in the original troff program two other</dt>
+<dd>macros have been implemented which are now rather obsolete: `.Es takes &#8216; the first and second parameter as the left and right enclosure string, which are then used to enclose the arguments of `.En &#8216; The default width value is 12n for both macros.</dd>
+<dt><code>.Eq </code>The first and second arguments of this macro are the opening and</dt>
+<dd>closing strings respectively, followed by the arguments to be enclosed.</dd>
+<dt><code>.`The&#8217; </code></dt>
+<dd>quoted literal macro behaves differently in troff and nroff mode. If formatted with nroff, a quoted literal is always quoted. If formatted with troff, an item is only quoted if the width of the item is less than three constant width characters. This is to make short strings more visible where the font change to literal (constant width) is less noticeable. </dd>
 <p> The default width is 16n.</p>
-<dt><code>.The prefix macro suppresses the whitespace between its first and second </code></p>
-<dd>argument:</p>
+<dt><code>.The prefix macro suppresses the whitespace between its first and second </code></dt>
+<dd>argument:</dd>
 <dl>
-<dt><code>.( Fa </code>name2</p>
-<dd>( Fa name2</dl>
+<dt><code>.( Fa </code>name2</dt>
+<dd>( Fa name2</dd></dl>
 <p> The default width is 12n. </p>
 <p> The `.<code>macro</code> &#8216; (see below) performs the analogous suffix function.</p>
-<dt><code>.Ap </code>The</p>
-<dd>`.Ap macro &#8216; inserts an apostrophe and exits any special text modes, continuing in `.<code>mode.</code> &#8216;</dl>
+<dt><code>.Ap </code>The</dt>
+<dd>`.Ap macro &#8216; inserts an apostrophe and exits any special text modes, continuing in `.<code>mode.</code> &#8216;</dd></dl>
 <p> Examples of quoting: </p>
 <dl>
-<dt><code>.Aq </code>Aq</p>
-<dt><code>.Aq </code>ctype.h ) ,</p>
+<dt><code>.Aq </code>Aq</dt>
+<dt><code>.Aq </code>ctype.h ) ,</dt>
 <dd>
-<dd>Aq Pa ctype.h ) ,</p>
-<dt><code>.Bq </code>Bq</p>
-<dt><code>.Bq </code><i>Greek , French .</i></p>
+</dd><dd>Aq Pa ctype.h ) ,</dd>
+<dt><code>.Bq </code>Bq</dt>
+<dt><code>.Bq </code><i>Greek , French .</i></dt>
 <dd>
-<dd>Bq Em Greek , French .</p>
-<dt><code>.&#8220;&#8220;</p>
-<dt>.&#8220;string abc .&#8221; </code></p>
-<dd>&#8221; &#8221;</p>
-<dd>&#8220;string abc&#8221;</p>
-<dt><code>.&#8220;&#8217;^[A-Z]&#8221;&#8217; </code></p>
-<dd>&#8220;&#8217;^[A-Z]&#8221;&#8217;</p>
-<dt><code>.`man&#8217; </code></p>
-<dd>mdoc `man&#8217; mdoc</p>
-<dt><code>.Qq </code>Qq</p>
-<dt><code>.Qq </code>string ) ,</p>
+</dd><dd>Bq Em Greek , French .</dd>
+<dt><code>.&#8220;&#8220;</dt>
+<dt>.&#8220;string abc .&#8221; </code></dt>
+<dd>&#8221; &#8221;</dd>
+<dd>&#8220;string abc&#8221;</dd>
+<dt><code>.&#8220;&#8217;^[A-Z]&#8221;&#8217; </code></dt>
+<dd>&#8220;&#8217;^[A-Z]&#8221;&#8217;</dd>
+<dt><code>.`man&#8217; </code></dt>
+<dd>mdoc `man&#8217; mdoc</dd>
+<dt><code>.Qq </code>Qq</dt>
+<dt><code>.Qq </code>string ) ,</dt>
 <dd>
-<dd>Qq string ) ,</p>
-<dt><code>.Qq </code>string <code>),</code></p>
-<dd>Qq string Ns ),</p>
-<dt><code>.&#8220;</p>
-<dt>.`string&#8217; </code></p>
-<dd>&#8216; &#8216;</p>
-<dd>`string&#8217;</p>
-<dt><code>.</code><i>or Ap </i>ing</p>
-<dd><i>or Ap </i>ing</dl>
+</dd><dd>Qq string ) ,</dd>
+<dt><code>.Qq </code>string <code>),</code></dt>
+<dd>Qq string Ns ),</dd>
+<dt><code>.&#8220;</dt>
+<dt>.`string&#8217; </code></dt>
+<dd>&#8216; &#8216;</dd>
+<dd>`string&#8217;</dd>
+<dt><code>.</code><i>or Ap </i>ing</dt>
+<dd><i>or Ap </i>ing</dd></dl>
 <p> For a good example of nested enclosure macros, see the `.[option] &#8216; macro. It was created from the same underlying enclosure macros as those presented in the list above. The `. &#8216; and `. &#8216; extended argument list macros are discussed below.</p>
 <h3>No-[or Normal Text Macro]</h3>
 <p>The `.<code>macro</code> &#8216; can be used in a macro command line for parameters which should <i>not</i> be formatted. Be careful to add `\&amp;&#8217; to the word `<code>if</code> &#8216; you really want that English word (and not the macro) as a parameter. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.test Ta </code>with Ta tabs</p>
-<dd><code>test Ta </code>with Ta tabs</dl>
+<dt><code>.test Ta </code>with Ta tabs</dt>
+<dd><code>test Ta </code>with Ta tabs</dd></dl>
 <p> The default width is 12n.</p>
 <h3>No-Space Macro</h3>
 <p>The `.<code>macro</code> &#8216; suppresses insertion of a space between the current position and its first parameter. For example, it is useful for old style argument lists where there is no space between the flag and argument: </p>
 <blockquote><p><tt>&quot;Usage:&quot; ... Ao </tt>argument Ac [Ao argument Ac &#8230;] </p></blockquote>
 <blockquote><p><tt>&quot; &quot; .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.</code>[-<code>I </code><i>directory</i> ]</p>
-<dd>[-<code>I </code><i>directory</i> ]</dl>
+<dt><code>.</code>[-<code>I </code><i>directory</i> ]</dt>
+<dd>[-<code>I </code><i>directory</i> ]</dd></dl>
 <p> Note: The `.<code>macro</code> &#8216; always invokes the `.<code>macro</code> &#8216; after eliminating the space unless another macro name follows it. If used as a command (i.e., the second form above in the `Usage&#8217; line), `.<code>is</code> &#8216; identical to `. &#8216;</p>
 <h3>Section Cross References</h3>
 <p>The `.Sx macro &#8216; designates a reference to a section header within the same document. </p>
 <blockquote><p><tt>Usage: .Sx </tt>Ao section reference Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Sx </code>FILES</p>
-<dd>Sx FILES</dl>
+<dt><code>.Sx </code>FILES</dt>
+<dd>Sx FILES</dd></dl>
 <p> The default width is 16n.</p>
 <h3>Symbolics</h3>
 <p>The symbolic emphasis macro is generally a boldface macro in either the symbolic sense or the traditional English usage. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>symbol Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.Important Notice</code></p>
-<dd><code>Important Notice</code></dl>
+<dt><code>.Important Notice</code></dt>
+<dd><code>Important Notice</code></dd></dl>
 <p> The default width is 6n.</p>
 <h3>Mathematical Symbols</h3>
 <p>Use this macro for mathematical symbols and similar things. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>math symbol Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.sigma</code></p>
-<dd><code>sigma</code></dl>
+<dt><code>.sigma</code></dt>
+<dd><code>sigma</code></dd></dl>
 <p> The default width is 6n.</p>
 <h3>References and Citations</h3>
 <p>The following macros make a modest attempt to handle references. At best, the macros make it convenient to manually drop in a subset of <a href="/docs/linux/man/1-refer/">refer</a>(1) style references. </p>
 <dl>
-<dt><code>.</p>
+<dt><code>.</dt>
 <dl>
-<dd></code></p>
-<dd>Reference start (does not take arguments). Causes a line break in the Sx SEE ALSO section and begins collection of reference information until the reference end macro is read. Li .Re Reference end (does not take arguments). The reference is printed. Li .%A Reference author name; one name per invocation. Li .%B Book title. Li .%C City/place. Li .%D Date. Li .%I Issuer/publisher name. Li .%J Journal name. Li .%N Issue number. Li .%O Optional information. Li .%P Page number. Li .%Q Corporate or foreign author. Li .%R Report name. Li .%T Title of article. Li .%U Optional hypertext reference. Li .%V Volume. </p>
+<dd></code></dd>
+<dd>Reference start (does not take arguments). Causes a line break in the Sx SEE ALSO section and begins collection of reference information until the reference end macro is read. Li .Re Reference end (does not take arguments). The reference is printed. Li .%A Reference author name; one name per invocation. Li .%B Book title. Li .%C City/place. Li .%D Date. Li .%I Issuer/publisher name. Li .%J Journal name. Li .%N Issue number. Li .%O Optional information. Li .%P Page number. Li .%Q Corporate or foreign author. Li .%R Report name. Li .%T Title of article. Li .%U Optional hypertext reference. Li .%V Volume. </dd>
 <p> Macros beginning with `%&#8217; are not callable but accept multiple arguments in the usual way. Only the `.<code>macro</code> &#8216; is handled properly as a parameter; other macros will cause strange output. `.%B&#8217; and `.%T&#8217; can be used outside of the `.Rs/.</dl>
 </dl>
 <p> &#8216; environment. </p>
@@ -1314,16 +1314,16 @@ test</pre>
 <p> produces </p>
 <blockquote>
 <dl>
-<dd>&quot;Matthew Bar&quot; &quot;John Foo&quot; <i>&quot;Implementation Notes on foobar(1)&quot;</i> <i>&quot;Technical Report ABC-DE-12-345&quot;</i> &quot;Drofnats College&quot; &quot;April 1991&quot;</dl>
+<dd>&quot;Matthew Bar&quot; &quot;John Foo&quot; <i>&quot;Implementation Notes on foobar(1)&quot;</i> <i>&quot;Technical Report ABC-DE-12-345&quot;</i> &quot;Drofnats College&quot; &quot;April 1991&quot;</dd></dl>
 </blockquote>
 <h3>Trade Names (or Acronyms and Type Names)</h3>
 <p>The trade name macro prints its arguments in a smaller font. Its intended use is to imitate a small caps fonts for uppercase acronyms. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>symbol Ac &#8230; </p></blockquote>
 <dl>
-<dt><code>.DEC</code></p>
-<dd><code>DEC</code></p>
-<dt><code>.ASCII</code></p>
-<dd><code>ASCII</code></dl>
+<dt><code>.DEC</code></dt>
+<dd><code>DEC</code></dd>
+<dt><code>.ASCII</code></dt>
+<dd><code>ASCII</code></dd></dl>
 <p> The default width is 10n.</p>
 <h3>Extended Arguments</h3>
 <p>The <code>. </code> and <code>. </code> macros allow one to extend an argument list on a macro boundary for the `. &#8216; macro (see below). Note that <code>. </code> and <code>. </code> are implemented similarly to all other macros opening and closing an enclosure (without inserting characters, of course). This means that the following is true for those macros also. </p>
@@ -1340,10 +1340,10 @@ test</pre>
 <dl>
 <dt><code> I </code><i>operation</i> <code>
  </code><i>count </i><code>
-</code></p>
-<dd></dl>
+</code></dt>
+<dd></dd></dl>
 </blockquote>
-<dd>Another one: </p>
+<dd>Another one: </dd>
 <blockquote>
 <pre>.Sm off
 .It Cm S No / Ar old_pattern Xo
@@ -1355,10 +1355,10 @@ test</pre>
 <p> produces </p>
 <blockquote>
 <dl>
-<dt><code>S / </code><i>old_pattern </i> <code>/ </code><i>new_pattern</i> <code>/ </code>[<code>g</code> ]</p>
-<dd></dl>
+<dt><code>S / </code><i>old_pattern </i> <code>/ </code><i>new_pattern</i> <code>/ </code>[<code>g</code> ]</dt>
+<dd></dd></dl>
 </blockquote>
-<dd>Another example of `. &#8216; and enclosure macros: Test the value of a variable. </p>
+<dd>Another example of `. &#8216; and enclosure macros: Test the value of a variable. </dd>
 <blockquote>
 <pre>.It Xo
 .Ic .ifndef
@@ -1369,12 +1369,12 @@ test</pre>
 <p> produces </p>
 <blockquote>
 <dl>
-<dt> <code>.ifndef</code> [! <i>variable </i>[<i>operator variable &#8230;</i> ]</p>
-<dd>]</dl>
+<dt> <code>.ifndef</code> [! <i>variable </i>[<i>operator variable &#8230;</i> ]</dt>
+<dd>]</dd></dl>
 </blockquote>
 <h2>Page Structure Domain</h2>
 <h3>Section Headers</h3>
-<dd>The following `.</p>
+<dd>The following `.</dd>
 <h2>section</h2>
 <p>&#8216; header macros are required in every man page. The remaining section headers are recommended at the discretion of the author writing the manual page. The `.</p>
 <h2>macro</h2>
@@ -1385,11 +1385,11 @@ test</pre>
 <p>&#8216; </p>
 <p> The default width is 8n.</p>
 <dl>
-<dt><code>.</dl>
+<dt><code>.</dt></dl>
 </dl>
 <p> </code></p>
 <h2>Name</h2>
-<dd>The `.</p>
+<dd>The `.</dd>
 <h2>Name</h2>
 <p>&#8216; macro is mandatory. If not specified, headers, footers and page layout defaults will not be set and things will be rather unpleasant. The <i>NAME</i> section consists of at least three items. The first is the `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; name macro naming the subject of the man page. The second is the name description macro, `. &#8211; , &#8216; which separates the subject name from the third item, which is the description. The description should be the most terse and lucid possible, as the space available is small. </p>
 <p> `. &#8211; first &#8216; prints `-&#8216; , then all its arguments. Li &quot;.Sh LIBRARY&quot; This section is for section two and three function calls. It should consist of a single `.Lb macro &#8216; call; see Sx Library Names . Li &quot;.Sh SYNOPSIS&quot; The Sx SYNOPSIS section describes the typical usage of the subject of a man page. The macros required are either `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; `.<code>,</code> &#8216; or `.Fn (and &#8216; possibly `.Fo , &#8216; `.Fc , &#8216; `.Fd , &#8216; and `.Ft ) &#8216; The function name macro `.Fn is &#8216; required for manual page sections~2 and~3; the command and general name macro `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; is required for sections 1, 5, 6, 7, and~8. Section~4 manuals require a `.<code>groff Fl m Ns Cm doc Ar</code> &#8216; `.Fd or &#8216; a `.<code>configuration</code> &#8216; device usage macro. Several other macros may be necessary to produce the synopsis line as shown below: </p>
@@ -1402,18 +1402,18 @@ test</pre>
 <p> Li &quot;.Sh DESCRIPTION&quot; In most cases the first text in the Sx DESCRIPTION section is a brief paragraph on the command, function or file, followed by a lexical list of options and respective explanations. To create such a list, the `.</p>
 <dl>
 <p> &#8216; (begin list), `.</p>
-<dt><code>(list</code></p>
-<dd>&#8216; item) and `.</dl>
+<dt><code>(list</code></dt>
+<dd>&#8216; item) and `.</dd></dl>
 <p> &#8216; (end list) macros are used (see Sx Lists and Columns below). Li &quot;.Sh IMPLEMENTATION NOTES&quot; Implementation specific information should be placed here. Li &quot;.Sh RETURN VALUES&quot; Sections 2, 3 and~9 function return values should go here. The `.Rv macro &#8216; may be used to generate text for use in the Sx RETURN VALUES section for most section 2 and 3 library functions; see Sx Return Values . </p>
 <p> The following `.</p>
 <h2>section</h2>
 <p>&#8216; headers are part of the preferred manual page layout and must be used appropriately to maintain consistency. They are listed in the order in which they would be used.</p>
 <dl>
-<dt><code>.</dl>
+<dt><code>.</dt></dl>
 </dl>
 <p> </code></p>
 <h2>Environment</h2>
-<dd>The <i>ENVIRONMENT</i> section should reveal any related environment variables and clues to their behavior and/or usage. Li &quot;.Sh FILES&quot; Files which are used or created by the man page subject should be listed via the `.macro &#8216; in the Sx FILES section. Li &quot;.Sh EXAMPLES&quot; There are several ways to create examples. See the Sx Examples and Displays section below for details. Li &quot;.Sh DIAGNOSTICS&quot; Diagnostic messages from a command should be placed in this section. The `.Ex macro &#8216; may be used to generate text for use in the Sx DIAGNOSTICS section for most section 1, 6 and~8 commands; see Sx Exit Status . Li &quot;.Sh COMPATIBILITY&quot; Known compatibility issues (e.g. deprecated options or parameters) should be listed here. Li &quot;.Sh ERRORS&quot; Specific error handling, especially from library functions (man page sections 2, 3, and~9) should go here. The `.Er macro &#8216; is used to specify an error (errno). Li &quot;.Sh SEE ALSO&quot; References to other material on the man page topic and cross references to other relevant man pages should be placed in the Sx SEE ALSO section. Cross references are specified using the `.macro. &#8216; Currently <a href="/docs/linux/man/1-refer/">refer</a>(1) style references are not accommodated. </p>
+<dd>The <i>ENVIRONMENT</i> section should reveal any related environment variables and clues to their behavior and/or usage. Li &quot;.Sh FILES&quot; Files which are used or created by the man page subject should be listed via the `.macro &#8216; in the Sx FILES section. Li &quot;.Sh EXAMPLES&quot; There are several ways to create examples. See the Sx Examples and Displays section below for details. Li &quot;.Sh DIAGNOSTICS&quot; Diagnostic messages from a command should be placed in this section. The `.Ex macro &#8216; may be used to generate text for use in the Sx DIAGNOSTICS section for most section 1, 6 and~8 commands; see Sx Exit Status . Li &quot;.Sh COMPATIBILITY&quot; Known compatibility issues (e.g. deprecated options or parameters) should be listed here. Li &quot;.Sh ERRORS&quot; Specific error handling, especially from library functions (man page sections 2, 3, and~9) should go here. The `.Er macro &#8216; is used to specify an error (errno). Li &quot;.Sh SEE ALSO&quot; References to other material on the man page topic and cross references to other relevant man pages should be placed in the Sx SEE ALSO section. Cross references are specified using the `.macro. &#8216; Currently <a href="/docs/linux/man/1-refer/">refer</a>(1) style references are not accommodated. </dd>
 <p> It is recommended that the cross references are sorted on the section number, then alphabetically on the names within a section, and placed in that order and comma separated. Example: </p>
 <p> <a href="/docs/linux/man/1-ls/">ls</a>(1), <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/5-group/">group</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5) Li &quot;.Sh STANDARDS&quot; If the command, library function or file adheres to a specific implementation such as St -p1003.2 or St -ansiC this should be noted here. If the command does not adhere to any standard, its history should be noted in the <i>HISTORY</i> section. Li &quot;.Sh HISTORY&quot; Any command which does not adhere to any specific standards should be outlined historically in this section. Li &quot;.Sh AUTHORS&quot; Credits should be placed here. Use the `.An macro &#8216; for names and the `.Aq macro &#8216; for e-mail addresses within optional contact information. Explicitly indicate whether the person authored the initial manual page or the software or whatever the person is being credited for. Li &quot;.Sh BUGS&quot; Blatant problems with the topic go here. </p>
 <p> User-specified `.</p>
@@ -1431,9 +1431,9 @@ test</pre>
 <p> The default width is 8n.</p>
 <h3>Paragraphs and Line Spacing</h3>
 <dl>
-<dt><code>.</p>
+<dt><code>.</dt>
 <p> </code></p>
-<dd>The `.</p>
+<dd>The `.</dd>
 <p> &#8216; paragraph command may be used to specify a line space where necessary. The macro is not necessary after a `.</dl>
 </dl>
 <h2>or</h2>
@@ -1450,12 +1450,12 @@ test</pre>
 <h3>Examples and Displays</h3>
 <p>There are seven types of displays. </p>
 <dl>
-<dt><code>.D1</code></p>
-<dd>(This is D-one.) Display one line of indented text. This macro is parsed but not callable. </p>
+<dt><code>.D1</code></dt>
+<dd>(This is D-one.) Display one line of indented text. This macro is parsed but not callable. </dd>
 <p> The above was produced by: <code>.D1 -ldghfstru</code></p>
-<dt><code>. </p>
+<dt><code>. </dt>
 <blockquote><p></code><tt>(This is D-ell.)</tt></p></blockquote>
-<dd>Display one line of indented <i>literal</i> text. The `. </p>
+<dd>Display one line of indented <i>literal</i> text. The `. </dd>
 <blockquote><p><tt>example</tt></p></blockquote>
 <p> &#8216; macro has been used throughout this file. It allows the indentation (display) of one line of text. Its default font is set to constant width (literal). `. </p>
 <blockquote><p><tt>is</tt></p></blockquote>
@@ -1463,70 +1463,70 @@ test</pre>
 <blockquote><p><tt>% ls -ldg /usr/local/bin</tt></p></blockquote>
 <p> The above was produced by: <code>. </p>
 <blockquote><p></code><tt>% ls \-ldg /usr/local/bin</tt></p></blockquote>
-<dt><code>. </code></p>
-<dd>Begin display. The `. &#8216; display must be ended with the `. &#8216; macro. It has the following syntax: </p>
+<dt><code>. </code></dt>
+<dd>Begin display. The `. &#8216; display must be ended with the `. &#8216; macro. It has the following syntax: </dd>
 <dl>
-<dt><code>. </code></p>
-<dd>Br o -literal | -filled | -unfilled | -ragged | -centered Brc [-offset Ao string Ac [-file Ao file name Ac [-compact ] ] ]</dl>
+<dt><code>. </code></dt>
+<dd>Br o -literal | -filled | -unfilled | -ragged | -centered Brc [-offset Ao string Ac [-file Ao file name Ac [-compact ] ] ]</dd></dl>
 <dl>
-<dt><code>-ragged</code></p>
-<dd>Fill, but do not adjust the right margin (only left-justify).</p>
-<dt><code>-centered</code></p>
-<dd>Center lines between the current left and right margin. Note that each single line is centered.</p>
-<dt><code>-unfilled</code></p>
-<dd>Do not fill; display a block of text as typed, using line breaks as specified by the user. This can produce overlong lines without warning messages.</p>
-<dt><code>-filled</code></p>
-<dd>Display a filled block. The block of text is formatted (i.e., the text is justified on both the left and right side).</p>
-<dt><code>-literal</code></p>
-<dd>Display block with literal font (usually fixed-width). Useful for source code or simple tabbed or spaced text.</p>
-<dt><code>-file Ao </code><i>file name Ac </i>The file whose name follows the</p>
-<dd>&#8211;<code>file</code> flag is read and displayed before any data enclosed with `. &#8216; and `. &#8216; using the selected display type. Any troff/NsNm-mdoc commands in the file will be processed.</p>
-<dt><code>-offset Ao </code><i>string Ac </i>If &#8211;<code>offset</code></p>
-<dd>is specified with one of the following strings, the string is interpreted to indicate the level of indentation for the forthcoming block of text: </p>
+<dt><code>-ragged</code></dt>
+<dd>Fill, but do not adjust the right margin (only left-justify).</dd>
+<dt><code>-centered</code></dt>
+<dd>Center lines between the current left and right margin. Note that each single line is centered.</dd>
+<dt><code>-unfilled</code></dt>
+<dd>Do not fill; display a block of text as typed, using line breaks as specified by the user. This can produce overlong lines without warning messages.</dd>
+<dt><code>-filled</code></dt>
+<dd>Display a filled block. The block of text is formatted (i.e., the text is justified on both the left and right side).</dd>
+<dt><code>-literal</code></dt>
+<dd>Display block with literal font (usually fixed-width). Useful for source code or simple tabbed or spaced text.</dd>
+<dt><code>-file Ao </code><i>file name Ac </i>The file whose name follows the</dt>
+<dd>&#8211;<code>file</code> flag is read and displayed before any data enclosed with `. &#8216; and `. &#8216; using the selected display type. Any troff/NsNm-mdoc commands in the file will be processed.</dd>
+<dt><code>-offset Ao </code><i>string Ac </i>If &#8211;<code>offset</code></dt>
+<dd>is specified with one of the following strings, the string is interpreted to indicate the level of indentation for the forthcoming block of text: </dd>
 <dl>
-<dt><i>left</i></p>
-<dd>Align block on the current left margin; this is the default mode of `. &#8216;</p>
-<dt><i>center</i></p>
-<dd>Supposedly center the block. At this time unfortunately, the block merely gets left aligned about an imaginary center margin.</p>
-<dt><i>indent</i></p>
-<dd>Indent by one default indent value or tab. The default indent value is also used for the `.D1&#8242; and `. </p>
+<dt><i>left</i></dt>
+<dd>Align block on the current left margin; this is the default mode of `. &#8216;</dd>
+<dt><i>center</i></dt>
+<dd>Supposedly center the block. At this time unfortunately, the block merely gets left aligned about an imaginary center margin.</dd>
+<dt><i>indent</i></dt>
+<dd>Indent by one default indent value or tab. The default indent value is also used for the `.D1&#8242; and `. </dd>
 <blockquote><p><tt>macros,</tt></p></blockquote>
 <p> &#8216; so one is guaranteed the two types of displays will line up. The indentation value is normally set to~6n or about two thirds of an inch (six constant width characters).</p>
-<dt><i>indent-two</i></p>
-<dd>Indent two times the default indent value.</p>
-<dt><i>right</i></p>
-<dd>This <i>left</i> aligns the block about two inches from the right side of the page. This macro needs work and perhaps may never do the right thing within troff.</dl>
+<dt><i>indent-two</i></dt>
+<dd>Indent two times the default indent value.</dd>
+<dt><i>right</i></dt>
+<dd>This <i>left</i> aligns the block about two inches from the right side of the page. This macro needs work and perhaps may never do the right thing within troff.</dd></dl>
 <p> If Ao string Ac is a valid numeric expression instead ( <i>with a scale indicator other than</i> `<i>u</i> &#8216; use that value for indentation. The most useful scale indicators are `m&#8217; and `n&#8217; specifying the so-called <i>and</i> <i>En </i>square This is approximately the width of the letters `m&#8217; and `n&#8217; respectively of the current font (for nroff output, both scale indicators give the same values). If Ao string Ac isn&#8217;t a numeric expression, it is tested whether it is an <code>-mdoc</code> macro name, and the default offset value associated with this macro is used. Finally, if all tests fail, the width of Ao string Ac (typeset with a fixed-width font) is taken as the offset.</p>
-<dt><code>-compact</code></p>
-<dd>Suppress insertion of vertical space before begin of display.</dl>
-<dt><code>. </code></p>
-<dd>End display (takes no arguments).</dl>
+<dt><code>-compact</code></dt>
+<dd>Suppress insertion of vertical space before begin of display.</dd></dl>
+<dt><code>. </code></dt>
+<dd>End display (takes no arguments).</dd></dl>
 <h3>Lists and Columns</h3>
 <p>There are several types of lists which may be initiated with the `.</p>
 <dl>
 <p> &#8216; begin-list macro. Items within the list are specified with the `.</p>
-<dt><code>item</code></p>
-<dd>&#8216; macro, and each list must end with the `.</dl>
+<dt><code>item</code></dt>
+<dd>&#8216; macro, and each list must end with the `.</dd></dl>
 <p> &#8216; macro. Lists may be nested within themselves and within displays. The use of columns inside of lists or lists inside of columns is unproven. </p>
 <p> In addition, several list attributes may be specified such as the width of a tag, the list offset, and compactness (blank lines between items allowed or disallowed). Most of this document has been formatted with a tag style list ( &#8211;<code>tag</code> </p>
 <p> It has the following syntax forms: </p>
 <dl>
-<dt><code>.</p>
+<dt><code>.</dt>
 <dl>
 <p> </code></p>
-<dd>Br o -hang | -ohang | -tag | -diag | -inset Brc [-width Ao string Ac ] [-offset Ao string Ac [-compact ] ]</p>
-<dt><code>.</p>
+<dd>Br o -hang | -ohang | -tag | -diag | -inset Brc [-width Ao string Ac ] [-offset Ao string Ac [-compact ] ]</dd>
+<dt><code>.</dt>
 <dl>
 <p> </code></p>
-<dd><code>-column </code>[-offset Ao string Ac ] Ao string1 Ac Ao string2 Ac &#8230; Xc</p>
-<dt><code>.</p>
+<dd><code>-column </code>[-offset Ao string Ac ] Ao string1 Ac Ao string2 Ac &#8230; Xc</dd>
+<dt><code>.</dt>
 <dl>
 <p> </code></p>
-<dd>Br o -item | -enum Oo -nested Oc | -bullet | -hyphen | -dash Brc [-offset Ao string Ac [-compact ] ]</dl>
+<dd>Br o -item | -enum Oo -nested Oc | -bullet | -hyphen | -dash Brc [-offset Ao string Ac [-compact ] ]</dd></dl>
 <p> And now a detailed description of the list types. </p>
 <dl>
-<dt><code>-bullet</code></p>
-<dd>A bullet list. </p>
+<dt><code>-bullet</code></dt>
+<dd>A bullet list. </dd>
 <blockquote>
 <pre>.Bl -bullet -offset indent -compact
 .It
@@ -1539,8 +1539,8 @@ Bullet two here.
 <ul>
 <li> Bullet one goes here.
 <li> Bullet two here. </ul>
-<dt><code>-dash ( or -hyphen</code></p>
-<dd>A dash list. </p>
+<dt><code>-dash ( or -hyphen</code></dt>
+<dd>A dash list. </dd>
 <blockquote>
 <pre>.Bl -dash -offset indent -compact
 .It
@@ -1551,12 +1551,12 @@ Dash two here.
 </blockquote>
 <p> Produces: </p>
 <dl>
-<dt><code>Dash one goes here.</code></p>
+<dt><code>Dash one goes here.</code></dt>
 <dd>
-<dt><code>Dash two here.</code></p>
-<dd></dl>
-<dt><code>-enum</code></p>
-<dd>An enumerated list. </p>
+</dd><dt><code>Dash two here.</code></dt>
+<dd></dd></dl>
+<dt><code>-enum</code></dt>
+<dd>An enumerated list. </dd>
 <blockquote>
 <pre>.Bl -enum -offset indent -compact
 .It
@@ -1591,8 +1591,8 @@ And item four here.
 <li> Item two goes here.
 <li> And item three here. </ol>
 <li> And item four here. </ol>
-<dt><code>-item</code></p>
-<dd>A list of type &#8211;<code>item</code> without list markers. </p>
+<dt><code>-item</code></dt>
+<dd>A list of type &#8211;<code>item</code> without list markers. </dd>
 <blockquote>
 <pre>.Bl -item -offset indent
 .It
@@ -1607,21 +1607,21 @@ Item two here.
 </blockquote>
 <p> Produces: </p>
 <dl>
-<dt><code>Item one goes here.</code></p>
-<dd>Item one goes here. Item one goes here.</p>
-<dt><code>Item two here.</code></p>
-<dd>Item two here. Item two here.</dl>
-<dt><code>-tag</code></p>
-<dd>A list with tags. Use &#8211;<code>width</code> to specify the tag width. </p>
+<dt><code>Item one goes here.</code></dt>
+<dd>Item one goes here. Item one goes here.</dd>
+<dt><code>Item two here.</code></dt>
+<dd>Item two here. Item two here.</dd></dl>
+<dt><code>-tag</code></dt>
+<dd>A list with tags. Use &#8211;<code>width</code> to specify the tag width. </dd>
 <dl>
-<dt><code>SL</code></p>
-<dd>sleep time of the process (seconds blocked)</p>
-<dt><code>PAGEIN</code></p>
-<dd>number of disk <code>I/O &#8216;s</code> resulting from references by the process to pages not loaded in core.</p>
-<dt><code>UID</code></p>
-<dd>numerical user-id of process owner</p>
-<dt><code>PPID</code></p>
-<dd>numerical id of parent of process priority (non-positive when in non-interruptible wait)</dl>
+<dt><code>SL</code></dt>
+<dd>sleep time of the process (seconds blocked)</dd>
+<dt><code>PAGEIN</code></dt>
+<dd>number of disk <code>I/O &#8216;s</code> resulting from references by the process to pages not loaded in core.</dd>
+<dt><code>UID</code></dt>
+<dd>numerical user-id of process owner</dd>
+<dt><code>PPID</code></dt>
+<dd>numerical id of parent of process priority (non-positive when in non-interruptible wait)</dd></dl>
 <p> The raw text: </p>
 <blockquote>
 <pre>.Bl -tag -width &quot;PPID&quot; -compact -offset indent
@@ -1639,8 +1639,8 @@ numerical id of parent of process priority
 (non-positive when in non-interruptible wait)
 .El</pre>
 </blockquote>
-<dt><code>-diag</code></p>
-<dd>Diag lists create section four diagnostic lists and are similar to inset lists except callable macros are ignored. The &#8211;<code>width</code> flag is not meaningful in this context. </p>
+<dt><code>-diag</code></dt>
+<dd>Diag lists create section four diagnostic lists and are similar to inset lists except callable macros are ignored. The &#8211;<code>width</code> flag is not meaningful in this context. </dd>
 <p> Example: </p>
 <blockquote>
 <pre>.Bl -diag
@@ -1650,15 +1650,15 @@ The message says all.
 </blockquote>
 <p> produces</p>
 <dl>
-<dt><code>You can&#8217;t use here.</code></p>
-<dd>The message says all.</dl>
-<dt><code>-hang</code></p>
-<dd>A list with hanging tags.</p>
+<dt><code>You can&#8217;t use here.</code></dt>
+<dd>The message says all.</dd></dl>
+<dt><code>-hang</code></dt>
+<dd>A list with hanging tags.</dd>
 <dl>
-<dt><i>Hanged</i></p>
-<dd>labels appear similar to tagged lists when the label is smaller than the label width.</p>
-<dt><i>Longer hanged list labels</i></p>
-<dd>blend into the paragraph unlike tagged paragraph labels.</dl>
+<dt><i>Hanged</i></dt>
+<dd>labels appear similar to tagged lists when the label is smaller than the label width.</dd>
+<dt><i>Longer hanged list labels</i></dt>
+<dd>blend into the paragraph unlike tagged paragraph labels.</dd></dl>
 <p> And the unformatted text which created it: </p>
 <blockquote>
 <pre>.Bl -hang -offset indent
@@ -1670,17 +1670,17 @@ blend into the paragraph unlike
 tagged paragraph labels.
 .El</pre>
 </blockquote>
-<dt><code>-ohang</code></p>
-<dd>Lists with overhanging tags do not use indentation for the items; tags are written to a separate line. </p>
+<dt><code>-ohang</code></dt>
+<dd>Lists with overhanging tags do not use indentation for the items; tags are written to a separate line. </dd>
 <dl>
-<dt><code>SL</code></p>
-<dd>sleep time of the process (seconds blocked)</p>
-<dt><code>PAGEIN</code></p>
-<dd>number of disk <code>I/O &#8216;s</code> resulting from references by the process to pages not loaded in core.</p>
-<dt><code>UID</code></p>
-<dd>numerical user-id of process owner</p>
-<dt><code>PPID</code></p>
-<dd>numerical id of parent of process priority (non-positive when in non-interruptible wait)</dl>
+<dt><code>SL</code></dt>
+<dd>sleep time of the process (seconds blocked)</dd>
+<dt><code>PAGEIN</code></dt>
+<dd>number of disk <code>I/O &#8216;s</code> resulting from references by the process to pages not loaded in core.</dd>
+<dt><code>UID</code></dt>
+<dd>numerical user-id of process owner</dd>
+<dt><code>PPID</code></dt>
+<dd>numerical id of parent of process priority (non-positive when in non-interruptible wait)</dd></dl>
 <p> The raw text: </p>
 <blockquote>
 <pre>.Bl -ohang -offset indent
@@ -1698,19 +1698,19 @@ numerical id of parent of process priority
 (non-positive when in non-interruptible wait)
 .El</pre>
 </blockquote>
-<dt><code>-inset</code></p>
-<dd>Here is an example of inset labels:</p>
+<dt><code>-inset</code></dt>
+<dd>Here is an example of inset labels:</dd>
 <dl>
-<dt><i>Tag</i></p>
-<dd>The tagged list (also called a tagged paragraph) is the most common type of list used in the Berkeley manuals. Use a &#8211;<code>width</code> attribute as described below.</p>
-<dt><i>Diag</i></p>
-<dd>Diag lists create section four diagnostic lists and are similar to inset lists except callable macros are ignored.</p>
-<dt><i>Hang</i></p>
-<dd>Hanged labels are a matter of taste.</p>
-<dt><i>Ohang</i></p>
-<dd>Overhanging labels are nice when space is constrained.</p>
-<dt><i>Inset</i></p>
-<dd>Inset labels are useful for controlling blocks of paragraphs and are valuable for converting <code>-mdoc</code> manuals to other formats.</dl>
+<dt><i>Tag</i></dt>
+<dd>The tagged list (also called a tagged paragraph) is the most common type of list used in the Berkeley manuals. Use a &#8211;<code>width</code> attribute as described below.</dd>
+<dt><i>Diag</i></dt>
+<dd>Diag lists create section four diagnostic lists and are similar to inset lists except callable macros are ignored.</dd>
+<dt><i>Hang</i></dt>
+<dd>Hanged labels are a matter of taste.</dd>
+<dt><i>Ohang</i></dt>
+<dd>Overhanging labels are nice when space is constrained.</dd>
+<dt><i>Inset</i></dt>
+<dd>Inset labels are useful for controlling blocks of paragraphs and are valuable for converting <code>-mdoc</code> manuals to other formats.</dd></dl>
 <p> Here is the source text which produced the above example: </p>
 <blockquote>
 <pre>.Bl -inset -offset indent
@@ -1733,19 +1733,19 @@ paragraphs and are valuable for converting
 manuals to other formats.
 .El</pre>
 </blockquote>
-<dt><code>-column</code></p>
-<dd>This list type generates multiple columns. The number of columns and the width of each column is determined by the arguments to the &#8211;<code>column</code> list, Aq Ar string1 , Aq Ar string2 , etc. If Aq Ar stringN starts with a `.&#8217; (dot) immediately followed by a valid <code>-mdoc</code> macro name, interpret Aq Ar stringN and use the width of the result. Otherwise, the width of Aq Ar stringN (typeset with a fixed-width font) is taken as the <i>N </i><code>th</code> column width. </p>
+<dt><code>-column</code></dt>
+<dd>This list type generates multiple columns. The number of columns and the width of each column is determined by the arguments to the &#8211;<code>column</code> list, Aq Ar string1 , Aq Ar string2 , etc. If Aq Ar stringN starts with a `.&#8217; (dot) immediately followed by a valid <code>-mdoc</code> macro name, interpret Aq Ar stringN and use the width of the result. Otherwise, the width of Aq Ar stringN (typeset with a fixed-width font) is taken as the <i>N </i><code>th</code> column width. </dd>
 <p> Each `.</p>
-<dt><code>argument</code></p>
-<dd>&#8216; is parsed to make a row, each column within the row is a separate argument separated by a tab or the `.Ta macro. &#8216; </p>
+<dt><code>argument</code></dt>
+<dd>&#8216; is parsed to make a row, each column within the row is a separate argument separated by a tab or the `.Ta macro. &#8216; </dd>
 <p> The table:</p>
 <dl>
-<dt><code>String Ta </code><code>Nroff Ta </code><code>Troff</code></p>
+<dt><code>String Ta </code><code>Nroff Ta </code><code>Troff</code></dt>
 <dd>
-<dt><code>&lt;= Ta </code>&lt;= Ta &lt;=</p>
+</dd><dt><code>&lt;= Ta </code>&lt;= Ta &lt;=</dt>
 <dd>
-<dt><code>&gt;= Ta </code>&gt;= Ta &#038;gt=;</p>
-<dd></dl>
+</dd><dt><code>&gt;= Ta </code>&gt;= Ta &#038;gt=;</dt>
+<dd></dd></dl>
 <p> was produced by: </p>
 <pre>.Bl -column -offset indent &quot;.Sy String&quot; &quot;.Sy Nroff&quot; &quot;.Sy Troff&quot;
 .It Sy String Ta Sy Nroff Ta Sy Troff
@@ -1755,8 +1755,8 @@ manuals to other formats.
 <p>Don&#8217;t abuse this list type! For more complicated cases it might be far better and easier to use <a href="/docs/linux/man/1-tbl/">tbl</a>(1), the table preprocessor.</dl>
 <p> Other keywords:</p>
 <dl>
-<dt><code>-width Ao </code><i>string Ac </i>If Aq <i>string</i></p>
-<dd>starts with a `.&#8217; (dot) immediately followed by a valid <code>-mdoc</code> macro name, interpret Aq Ar string and use the width of the result. Almost all lists in this document use this option. </p>
+<dt><code>-width Ao </code><i>string Ac </i>If Aq <i>string</i></dt>
+<dd>starts with a `.&#8217; (dot) immediately followed by a valid <code>-mdoc</code> macro name, interpret Aq Ar string and use the width of the result. Almost all lists in this document use this option. </dd>
 <p> Example: </p>
 <blockquote>
 <pre>.Bl -tag -width &quot;.Fl test Ao Ar string Ac&quot;
@@ -1768,17 +1768,17 @@ flag works in combination with a tag list.
 </blockquote>
 <p> gives:</p>
 <dl>
-<dt><code>-test Ao </code><i>string Ac </i>This is a longer sentence to show how the</p>
-<dd>&#8211;<code>width</code> flag works in combination with a tag list.</dl>
+<dt><code>-test Ao </code><i>string Ac </i>This is a longer sentence to show how the</dt>
+<dd>&#8211;<code>width</code> flag works in combination with a tag list.</dd></dl>
 <p> (Note that the current state of <code>-mdoc</code> is saved before Aq Ar string is interpreted; afterwards, all variables are restored again. However, boxes (used for enclosures) can&#8217;t be saved in <code>GNU</code> <a href="/docs/linux/man/1-troff/">troff</a>(1); as a consequence, arguments must always be <i>balanced</i> to avoid nasty errors. For example, do not write `.Ao <i>string</i> &#8216; but `.Ao <i>string</i> &#8216; Xc instead if you really need only an opening angle bracket.) </p>
 <p> Otherwise, if Aq Ar string is a valid numeric expression <i>( with a scale indicator other than</i> `<i>u</i> &#8216; use that value for indentation. The most useful scale indicators are `m&#8217; and `n&#8217; specifying the so-called <i>and</i> <i>En </i>square This is approximately the width of the letters `m&#8217; and `n&#8217; respectively of the current font (for nroff output, both scale indicators give the same values). If Aq Ar string isn&#8217;t a numeric expression, it is tested whether it is an <code>-mdoc</code> macro name, and the default width value associated with this macro is used. Finally, if all tests fail, the width of Aq Ar string (typeset with a fixed-width font) is taken as the width. </p>
 <p> If a width is not specified for the tag list type, `6n&#8217; is used.</p>
-<dt><code>-offset Ao </code><i>string Ac </i>If Aq <i>string</i></p>
-<dd>is <i>indent</i> a default indent value (normally set to~6n, similar to the value used in `. </p>
+<dt><code>-offset Ao </code><i>string Ac </i>If Aq <i>string</i></dt>
+<dd>is <i>indent</i> a default indent value (normally set to~6n, similar to the value used in `. </dd>
 <blockquote><p><tt>or</tt></p></blockquote>
 <p> &#8216; `. &#8216; is used. If Aq Ar string is a valid numeric expression instead ( <i>with a scale indicator other than</i> `<i>u</i> &#8216; use that value for indentation. The most useful scale indicators are `m&#8217; and `n&#8217; specifying the so-called <i>and</i> <i>En </i>square This is approximately the width of the letters `m&#8217; and `n&#8217; respectively of the current font (for nroff output, both scale indicators give the same values). If Aq Ar string isn&#8217;t a numeric expression, it is tested whether it is an <code>-mdoc</code> macro name, and the default offset value associated with this macro is used. Finally, if all tests fail, the width of Aq Ar string (typeset with a fixed-width font) is taken as the offset.</p>
-<dt><code>-compact</code></p>
-<dd>Suppress insertion of vertical space before the list and between list items.</dl>
+<dt><code>-compact</code></dt>
+<dd>Suppress insertion of vertical space before the list and between list items.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -1788,37 +1788,37 @@ flag works in combination with a tag list.
 <h2>Miscellaneous Macros</h2>
 <p>Here a list of the remaining macros which do not fit well into one of the above sections. We couldn&#8217;t find real examples for the following macros: `.Me and &#8216; `.Ot &#8216; They are documented here for completeness &#8211; if you know how to use them properly please send a mail to Mt groff [at] gnu.org (including an example).</p>
 <dl>
-<dt><code>. is currently in beta test. </code></p>
-<dd>prints </p>
+<dt><code>. is currently in beta test. </code></dt>
+<dd>prints </dd>
 <blockquote><p> is currently in beta test. </p></blockquote>
 <p> It is neither callable nor parsed and takes no arguments.</p>
-<dt><code>.</p>
+<dt><code>.</dt>
 <p> </code></p>
 <dd>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>function return value Ac &#8230; </p></blockquote>
 <p> Don&#8217;t use this macro. It allows a break right before the return value (usually a single digit) which is bad typographical behaviour. Use `\~&#8217; to tie the return value to the previous word.</p>
-<dt><code>.Hf </code>Use this macro to include a (header) file literally.</p>
-<dd>It first prints `File:&#8217; followed by the file name, then the contents of Ao file Ac . </p>
+</dd><dt><code>.Hf </code>Use this macro to include a (header) file literally.</dt>
+<dd>It first prints `File:&#8217; followed by the file name, then the contents of Ao file Ac . </dd>
 <blockquote><p><tt>Usage: .Hf </tt>Ao file Ac </p>
 </blockquote>
 <p> It is neither callable nor parsed.</p>
-<dt><code>.Lk </code>To be written.</p>
+<dt><code>.Lk </code>To be written.</dt>
 <dd>
-<dt><code>.Me </code>Exact usage unknown.</p>
-<dd>The documentation in the <code>-mdoc</code> source file describes it as a macro for &#8220;menu entries&#8221; </p>
+</dd><dt><code>.Me </code>Exact usage unknown.</dt>
+<dd>The documentation in the <code>-mdoc</code> source file describes it as a macro for &#8220;menu entries&#8221; </dd>
 <p> Its default width is 6n.</p>
-<dt><code>.Mt </code>To be written.</p>
+<dt><code>.Mt </code>To be written.</dt>
 <dd>
-<dt><code>.Ot </code>Exact usage unknown.</p>
-<dd>The documentation in the <code>-mdoc</code> source file describes it as &#8220;old function type (fortran)&#8221;</p>
-<dt><code>. </code></p>
-<dd>Activate (toggle) space mode. </p>
+</dd><dt><code>.Ot </code>Exact usage unknown.</dt>
+<dd>The documentation in the <code>-mdoc</code> source file describes it as &#8220;old function type (fortran)&#8221;</dd>
+<dt><code>. </code></dt>
+<dd>Activate (toggle) space mode. </dd>
 <blockquote><p><tt>Usage: . </tt></p></blockquote>
 <p> If space mode is off, no spaces between macro arguments are inserted. If called without a parameter (or if the next parameter is neither `on&#8217; nor `off&#8217; , `. &#8216; toggles space mode.</p>
-<dt><code>.Ud </code>prints</p>
+<dt><code>.Ud </code>prints</dt>
 <dd>
 <blockquote><p> Ud </p></blockquote>
-<p> It is neither callable nor parsed and takes no arguments.</dl>
+<p> It is neither callable nor parsed and takes no arguments.</dd></dl>
 <h2>Predefined Strings</h2>
 <p>The following strings are predefined: </p>
 <table>
@@ -1981,20 +1981,20 @@ flag works in combination with a tag list.
 <p> If not set, both registers default to 78n for TTY devices and 6.5i otherwise.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>doc.tmac </code></p>
-<dd>The main manual macro package.</p>
-<dt><code>mdoc.tmac </code></p>
-<dd>A wrapper file to call doc.tmac</p>
-<dt><code>mdoc/doc-common </code></p>
-<dd>Common strings, definitions, stuff related typographic output.</p>
-<dt><code>mdoc/doc-nroff </code></p>
-<dd>Definitions used for a <code>TTY</code> output device.</p>
-<dt><code>mdoc/doc-ditroff </code></p>
-<dd>Definitions used for all other devices.</p>
-<dt><code>mdoc.local </code></p>
-<dd>Local additions and customizations.</p>
-<dt><code>andoc.tmac </code></p>
-<dd>Use this file if you don&#8217;t know whether the <code>-mdoc</code> or the <code>-man</code> package should be used. Multiple man pages (in either format) can be handled.</dl>
+<dt><code>doc.tmac </code></dt>
+<dd>The main manual macro package.</dd>
+<dt><code>mdoc.tmac </code></dt>
+<dd>A wrapper file to call doc.tmac</dd>
+<dt><code>mdoc/doc-common </code></dt>
+<dd>Common strings, definitions, stuff related typographic output.</dd>
+<dt><code>mdoc/doc-nroff </code></dt>
+<dd>Definitions used for a <code>TTY</code> output device.</dd>
+<dt><code>mdoc/doc-ditroff </code></dt>
+<dd>Definitions used for all other devices.</dd>
+<dt><code>mdoc.local </code></dt>
+<dd>Local additions and customizations.</dd>
+<dt><code>andoc.tmac </code></dt>
+<dd>Use this file if you don&#8217;t know whether the <code>-mdoc</code> or the <code>-man</code> package should be used. Multiple man pages (in either format) can be handled.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-groff/">groff</a>(1), <a href="/docs/linux/man/1-man/">man</a>(1), <a href="/docs/linux/man/1-troff/">troff</a>(1), groff_man7</p>
 <h2>Bugs</h2>

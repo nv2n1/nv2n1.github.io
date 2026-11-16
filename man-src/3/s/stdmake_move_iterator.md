@@ -11,22 +11,16 @@ std::make_move_iterator - std::make_move_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class Iter&gt;
     (since C++ 11)
-
         std::move_iterator&lt;Iter&gt; make_move_iterator(const Iter &amp;i);
 (until C++ 14)
-
     template &lt;class Iter&gt;
     (since C++ 14)
-
         std::move_iterator&lt;Iter&gt; make_move_iterator(Iter i);
 (until C++ 17)
-
     template &lt;class Iter&gt;
     (since C++ 17)
-
         constexpr std::move_iterator&lt;Iter&gt; make_move_iterator(Iter i);</code></pre> 
 make_move_iterator is a convenience function template that constructs a std::move_iterator for the given iterator i with the type deduced from the type of the argument. 
 
@@ -49,16 +43,11 @@ A std::move_iterator which can be used to move from the elements accessed throug
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;list&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::list&lt;std::string&gt; s{&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};
     std::vector&lt;std::string&gt; v1(s.begin(), s.end()); // copy

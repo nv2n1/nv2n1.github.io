@@ -20,23 +20,23 @@ description: "socket – event signalling that a socket connection has been made
 <dl>
 <dd>
 <pre>start on socket PROTO=inet PORT=80 ADDR=127.0.0.1</pre>
-</dl>
+</dd></dl>
 <h3>Internet (IPv6) socket</h3>
 <p>Start job when a client connects from localhost:</p>
 <dl>
 <dd>
 <pre>start on socket PROTO=inet6 PORT=80 ADDR=::1</pre>
-</dl>
+</dd></dl>
 <h3>Local socket</h3>
 <dl>
 <dd>
 <pre>start on socket PROTO=unix SOCKET_PATH=/var/run/.s.pgsql.1234</pre>
-</dl>
+</dd></dl>
 <h3>Abstract socket</h3>
 <dl>
 <dd>
 <pre>start on socket PROTO=unix SOCKET_PATH=@/at/upstart/example</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Written by Scott James Remnant &lt;<code>scott [at] netsplit.com</code>&gt; </p>
 <p> Manual page written by James Hunt &lt;<code>james.hunt [at] ubuntu.com</code>&gt;</p>

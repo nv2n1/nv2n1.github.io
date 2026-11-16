@@ -15,12 +15,12 @@ description: "dnssort – sort DNS hostnames"
 <p> Write sorted concatenation of all specified files to standard output. If none are specified, the standard input is used. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display some help and exit. </p>
-<dt><code>-r</code></p>
-<dd> Reverse the sorting comparisons. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Display program version and license and exit. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display some help and exit. </dd>
+<dt><code>-r</code></dt>
+<dd> Reverse the sorting comparisons. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display program version and license and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sort/">sort</a>(1) </p>

@@ -14,38 +14,38 @@ description: "stdair-library – C++ Standard Airline IT Object Library"
 <h2>Description</h2>
 <p>The Standard Airline IT (StdAir) library is a collection of routines for travel market simulation. The routines are written from scratch by the StdAir team in C++, and present a modern Applications Programming Interface (API) for C/C++ programmers, allowing wrappers to be written for very high level languages. The library covers the following areas:</p>
 <dl>
-<dt>&bull;</p>
-<dd>(Airline) Network-related classes:</p>
-<dt> &bull;</p>
-<dd>Network, ReachableUniverse</dl>
+<dt>&bull;</dt>
+<dd>(Airline) Network-related classes:</dd>
+<dt> &bull;</dt>
+<dd>Network, ReachableUniverse</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>(Air) Travel-related classes:</p>
-<dt> &bull;</p>
-<dd>TravelSolution, OriginDestination,</dl>
+<dt>&bull;</dt>
+<dd>(Air) Travel-related classes:</dd>
+<dt> &bull;</dt>
+<dd>TravelSolution, OriginDestination,</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>(Airline) Inventory-related classes:</p>
-<dt> &bull;</p>
-<dd>Inventory, FlightDate, SegmentDate, SegmentCabin, BookingClass, LegDate, LegCabin, Bucket</dl>
+<dt>&bull;</dt>
+<dd>(Airline) Inventory-related classes:</dd>
+<dt> &bull;</dt>
+<dd>Inventory, FlightDate, SegmentDate, SegmentCabin, BookingClass, LegDate, LegCabin, Bucket</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>(Airline) Schedule-related classes:</p>
-<dt> &bull;</p>
-<dd>FlightPeriod, SegmentPeriod, LegPeriod</dl>
+<dt>&bull;</dt>
+<dd>(Airline) Schedule-related classes:</dd>
+<dt> &bull;</dt>
+<dd>FlightPeriod, SegmentPeriod, LegPeriod</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>(Simulated) Passenger-related demand classes:</p>
-<dt> &bull;</p>
-<dd>DemandStream, BookingRequest</dl>
+<dt>&bull;</dt>
+<dd>(Simulated) Passenger-related demand classes:</dd>
+<dt> &bull;</dt>
+<dd>DemandStream, BookingRequest</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>(Air) Price-related classes:</p>
-<dt> &bull;</p>
-<dd>YieldStore</dl>
+<dt>&bull;</dt>
+<dd>(Air) Price-related classes:</dd>
+<dt> &bull;</dt>
+<dd>YieldStore</dd></dl>
 <dl>
-<dt>&bull;</p>
-<dd>Architecture</dl>
+<dt>&bull;</dt>
+<dd>Architecture</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-stdair/">stdair</a>(1)</code>, <code><a href="/docs/linux/man/1-stdair-config/">stdair-config</a></code>(1)</p>
 <h2>Support</h2>

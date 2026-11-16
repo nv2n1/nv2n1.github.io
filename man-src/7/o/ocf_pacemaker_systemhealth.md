@@ -16,4 +16,4 @@ description: "ocf_pacemaker_SystemHealth – SystemHealth resource agent"
 <h2>Author</h2>
 <p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

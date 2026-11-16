@@ -16,54 +16,54 @@ description: "grdmath – Reverse Polish Notation (RPN) calculator for grids (el
 <p> <code>grdmath</code> will perform operations like add, subtract, multiply, and divide on one or more grid files or constants using Reverse Polish Notation (RPN) syntax (e.g., Hewlett-Packard calculator-style). Arbitrarily complicated expressions may therefore be evaluated; the final result is written to an output grid file. Grid operations are element-by-element, not matrix manipulations. Some operators only require one operand (see below). If no grid files are used in the expression then options <code>-R</code>, <code>-I</code> must be set (and optionally <code>-r</code>). The expression <code>=</code> <i>outgrdfile</i> can occur as many times as the depth of the stack allows in order to save intermediate results. Complicated or frequently occurring expressions may be coded as a macro for future use or stored and recalled via named memory locations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>operand</i></p>
-<dd> If <i>operand</i> can be opened as a file it will be read as a grid file. If not a file, it is interpreted as a numerical constant or a special symbol (see below).</p>
-<dt><i>outgrdfile</i></p>
-<dd> The name of a 2-D grid file that will hold the final result. (See GRID FILE FORMATS below).</dl>
+<dt><i>operand</i></dt>
+<dd> If <i>operand</i> can be opened as a file it will be read as a grid file. If not a file, it is interpreted as a numerical constant or a special symbol (see below).</dd>
+<dt><i>outgrdfile</i></dt>
+<dd> The name of a 2-D grid file that will hold the final result. (See GRID FILE FORMATS below).</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code><i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>+p</code><i>percent</i>]</p>
-<dd> Features with an area smaller than <i>min_area</i> in km^2 or of hierarchical level that is lower than <i>min_level</i> or higher than <i>max_level</i> will not be plotted [Default is 0/0/4 (all features)]. Level 2 (lakes) contains regular lakes and wide river bodies which we normally include as lakes; append <code>+r</code> to just get river-lakes or <code>+l</code> to just get regular lakes. By default (<code>+ai</code>) we select the ice shelf boundary as the coastline for Antarctica; append <code>+ag</code> to instead select the ice grounding line as coastline. For expert users who wish to print their own Antarctica coastline and islands via <i>psxy</i> you can use <code>+as</code> to skip all GSHHG features below 60S or <code>+aS</code> to instead skip all features north of 60S. Finally, append <code>+p</code><i>percent</i> to exclude polygons whose percentage area of the corresponding full-resolution feature is less than <i>percent</i>. See GSHHG INFORMATION below for more details. (<code>-A</code> is only relevant to the <code>LDISTG</code> operator)</p>
-<dt><code>-D</code><i>resolution</i>[<code>+</code>]</p>
-<dd> Selects the resolution of the data set to use with the operator LDISTG ((<code>f</code>)ull, (<code>h</code>)igh, (<code>i</code>)ntermediate, (<code>l</code>)ow, and (<code>c</code>)rude). The resolution drops off by 80% between data sets [Default is <code>l</code>]. Append <code>+</code> to automatically select a lower resolution should the one requested not be available [abort if not found].</p>
-<dt><code>-I</code><i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]]</p>
-<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] is the grid spacing. Optionally, append a suffix modifier. <code>Geographical (degrees) coordinates</code>: Append <code>m</code> to indicate arc minutes or <code>s</code> to indicate arc seconds. If one of the units <code>e</code>, <code>f</code>, <code>k</code>, <code>M</code>, <code>n</code> or <code>u</code> is appended instead, the increment is assumed to be given in meter, foot, km, Mile, nautical mile or US survey foot, respectively, and will be converted to the equivalent degrees longitude at the middle latitude of the region (the conversion depends on <i>PROJ_ELLIPSOID</i>). If /<i>y_inc</i> is given but set to 0 it will be reset equal to <i>x_inc</i>; otherwise it will be converted to degrees latitude. <code>All coordinates</code>: If <code>=</code> is appended then the corresponding max <i>x</i> (<i>east</i>) or <i>y</i> (<i>north</i>) may be slightly adjusted to fit exactly the given increment [by default the increment may be adjusted slightly to fit the given domain]. Finally, instead of giving an increment you may specify the <i>number of nodes</i> desired by appending <code>+</code> to the supplied integer argument; the increment is then recalculated from the number of nodes and the domain. The resulting increment value depends on whether you have selected a gridline-registered or pixel-registered grid; see <i>App-file-formats</i> for details. Note: if <code>-R</code><i>grdfile</i> is used then the grid spacing has already been initialized; use <code>-I</code> to override the values.</p>
-<dt><code>-M</code></p>
-<dd> By default any derivatives calculated are in z_units/ x(or y)_units. However, the user may choose this option to convert dx,dy in degrees of longitude,latitude into meters using a flat Earth approximation, so that gradients are in z_units/meter.</p>
-<dt><code>-N</code></p>
-<dd> Turn off strict domain match checking when multiple grids are manipulated [Default will insist that each grid domain is within 1e-4 * grid_spacing of the domain of the first grid listed].</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. The binary input option only applies to the data files needed by operators <code>LDIST</code>, <code>PDIST</code>, and <code>INSIDE</code>.</p>
-<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></p>
-<dd> Select interpolation mode for grids.</p>
-<dt><code>-r</code> <i>(more &#8230;)</i></p>
-<dd> Set pixel node registration [gridline]. Only used with <code>-R</code> <code>-I</code>.</p>
-<dt><code>-x</code>[[-]<i>n</i>] <i>(more &#8230;)</i></p>
-<dd> Limit number of cores used in multi-threaded algorithms (OpenMP required).</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-A</code><i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>+p</code><i>percent</i>]</dt>
+<dd> Features with an area smaller than <i>min_area</i> in km^2 or of hierarchical level that is lower than <i>min_level</i> or higher than <i>max_level</i> will not be plotted [Default is 0/0/4 (all features)]. Level 2 (lakes) contains regular lakes and wide river bodies which we normally include as lakes; append <code>+r</code> to just get river-lakes or <code>+l</code> to just get regular lakes. By default (<code>+ai</code>) we select the ice shelf boundary as the coastline for Antarctica; append <code>+ag</code> to instead select the ice grounding line as coastline. For expert users who wish to print their own Antarctica coastline and islands via <i>psxy</i> you can use <code>+as</code> to skip all GSHHG features below 60S or <code>+aS</code> to instead skip all features north of 60S. Finally, append <code>+p</code><i>percent</i> to exclude polygons whose percentage area of the corresponding full-resolution feature is less than <i>percent</i>. See GSHHG INFORMATION below for more details. (<code>-A</code> is only relevant to the <code>LDISTG</code> operator)</dd>
+<dt><code>-D</code><i>resolution</i>[<code>+</code>]</dt>
+<dd> Selects the resolution of the data set to use with the operator LDISTG ((<code>f</code>)ull, (<code>h</code>)igh, (<code>i</code>)ntermediate, (<code>l</code>)ow, and (<code>c</code>)rude). The resolution drops off by 80% between data sets [Default is <code>l</code>]. Append <code>+</code> to automatically select a lower resolution should the one requested not be available [abort if not found].</dd>
+<dt><code>-I</code><i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]]</dt>
+<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] is the grid spacing. Optionally, append a suffix modifier. <code>Geographical (degrees) coordinates</code>: Append <code>m</code> to indicate arc minutes or <code>s</code> to indicate arc seconds. If one of the units <code>e</code>, <code>f</code>, <code>k</code>, <code>M</code>, <code>n</code> or <code>u</code> is appended instead, the increment is assumed to be given in meter, foot, km, Mile, nautical mile or US survey foot, respectively, and will be converted to the equivalent degrees longitude at the middle latitude of the region (the conversion depends on <i>PROJ_ELLIPSOID</i>). If /<i>y_inc</i> is given but set to 0 it will be reset equal to <i>x_inc</i>; otherwise it will be converted to degrees latitude. <code>All coordinates</code>: If <code>=</code> is appended then the corresponding max <i>x</i> (<i>east</i>) or <i>y</i> (<i>north</i>) may be slightly adjusted to fit exactly the given increment [by default the increment may be adjusted slightly to fit the given domain]. Finally, instead of giving an increment you may specify the <i>number of nodes</i> desired by appending <code>+</code> to the supplied integer argument; the increment is then recalculated from the number of nodes and the domain. The resulting increment value depends on whether you have selected a gridline-registered or pixel-registered grid; see <i>App-file-formats</i> for details. Note: if <code>-R</code><i>grdfile</i> is used then the grid spacing has already been initialized; use <code>-I</code> to override the values.</dd>
+<dt><code>-M</code></dt>
+<dd> By default any derivatives calculated are in z_units/ x(or y)_units. However, the user may choose this option to convert dx,dy in degrees of longitude,latitude into meters using a flat Earth approximation, so that gradients are in z_units/meter.</dd>
+<dt><code>-N</code></dt>
+<dd> Turn off strict domain match checking when multiple grids are manipulated [Default will insist that each grid domain is within 1e-4 * grid_spacing of the domain of the first grid listed].</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. The binary input option only applies to the data files needed by operators <code>LDIST</code>, <code>PDIST</code>, and <code>INSIDE</code>.</dd>
+<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></dt>
+<dd> Select interpolation mode for grids.</dd>
+<dt><code>-r</code> <i>(more &#8230;)</i></dt>
+<dd> Set pixel node registration [gridline]. Only used with <code>-R</code> <code>-I</code>.</dd>
+<dt><code>-x</code>[[-]<i>n</i>] <i>(more &#8230;)</i></dt>
+<dd> Limit number of cores used in multi-threaded algorithms (OpenMP required).</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>OPERATORS</h2>
 <p> Choose among the following 169 operators. &quot;args&quot; are the number of input and output arguments. <center></p>
 <table>
@@ -2387,28 +2387,28 @@ description: "grdmath – Reverse Polish Notation (RPN) calculator for grids (el
 <p></center></p>
 <h2>NOTES ON OPERATORS</h2>
 <dl>
-<dt>1.</p>
-<dd> The operator <code>SDIST</code> calculates spherical distances in km between the (lon, lat) point on the stack and all node positions in the grid. The grid domain and the (lon, lat) point are expected to be in degrees. Similarly, the <code>SAZ</code> and <code>SBAZ</code> operators calculate spherical azimuth and back-azimuths in degrees, respectively. The operators <code>LDIST</code> and <code>PDIST</code> compute spherical distances in km if <code>-fg</code> is set or implied, else they return Cartesian distances. Note: If the current <i>PROJ_ELLIPSOID</i> is ellipsoidal then geodesics are used in calculations of distances, which can be slow. You can trade speed with accuracy by changing the algorithm used to compute the geodesic (see <i>PROJ_GEODESIC</i>). </p>
+<dt>1.</dt>
+<dd> The operator <code>SDIST</code> calculates spherical distances in km between the (lon, lat) point on the stack and all node positions in the grid. The grid domain and the (lon, lat) point are expected to be in degrees. Similarly, the <code>SAZ</code> and <code>SBAZ</code> operators calculate spherical azimuth and back-azimuths in degrees, respectively. The operators <code>LDIST</code> and <code>PDIST</code> compute spherical distances in km if <code>-fg</code> is set or implied, else they return Cartesian distances. Note: If the current <i>PROJ_ELLIPSOID</i> is ellipsoidal then geodesics are used in calculations of distances, which can be slow. You can trade speed with accuracy by changing the algorithm used to compute the geodesic (see <i>PROJ_GEODESIC</i>). </dd>
 <p> The operator <code>LDISTG</code> is a version of <code>LDIST</code> that operates on the GSHHG data. Instead of reading an ASCII file, it directly accesses one of the GSHHG data sets as determined by the <code>-D</code> and <code>-A</code> options.</p>
-<dt>2.</p>
-<dd> The operator <code>POINT</code> reads a ASCII table, computes the mean x and mean y values and places these on the stack. If geographic data then we use the mean 3-D vector to determine the mean location.</p>
-<dt>3.</p>
-<dd> The operator <code>PLM</code> calculates the associated Legendre polynomial of degree L and order M (0 &lt;= M &lt;= L), and its argument is the sine of the latitude. <code>PLM</code> is not normalized and includes the Condon-Shortley phase (-1)^M. <code>PLMg</code> is normalized in the way that is most commonly used in geophysics. The C-S phase can be added by using -M as argument. <code>PLM</code> will overflow at higher degrees, whereas <code>PLMg</code> is stable until ultra high degrees (at least 3000).</p>
-<dt>4.</p>
-<dd> The operators <code>YLM</code> and <code>YLMg</code> calculate normalized spherical harmonics for degree L and order M (0 &lt;= M &lt;= L) for all positions in the grid, which is assumed to be in degrees. <code>YLM</code> and <code>YLMg</code> return two grids, the real (cosine) and imaginary (sine) component of the complex spherical harmonic. Use the <code>POP</code> operator (and <code>EXCH</code>) to get rid of one of them, or save both by giving two consecutive = file.nc calls. </p>
+<dt>2.</dt>
+<dd> The operator <code>POINT</code> reads a ASCII table, computes the mean x and mean y values and places these on the stack. If geographic data then we use the mean 3-D vector to determine the mean location.</dd>
+<dt>3.</dt>
+<dd> The operator <code>PLM</code> calculates the associated Legendre polynomial of degree L and order M (0 &lt;= M &lt;= L), and its argument is the sine of the latitude. <code>PLM</code> is not normalized and includes the Condon-Shortley phase (-1)^M. <code>PLMg</code> is normalized in the way that is most commonly used in geophysics. The C-S phase can be added by using -M as argument. <code>PLM</code> will overflow at higher degrees, whereas <code>PLMg</code> is stable until ultra high degrees (at least 3000).</dd>
+<dt>4.</dt>
+<dd> The operators <code>YLM</code> and <code>YLMg</code> calculate normalized spherical harmonics for degree L and order M (0 &lt;= M &lt;= L) for all positions in the grid, which is assumed to be in degrees. <code>YLM</code> and <code>YLMg</code> return two grids, the real (cosine) and imaginary (sine) component of the complex spherical harmonic. Use the <code>POP</code> operator (and <code>EXCH</code>) to get rid of one of them, or save both by giving two consecutive = file.nc calls. </dd>
 <p> The orthonormalized complex harmonics <code>YLM</code> are most commonly used in physics and seismology. The square of <code>YLM</code> integrates to 1 over a sphere. In geophysics, <code>YLMg</code> is normalized to produce unit power when averaging the cosine and sine terms (separately!) over a sphere (i.e., their squares each integrate to 4 pi). The Condon-Shortley phase (-1)^M is not included in <code>YLM</code> or <code>YLMg</code>, but it can be added by using -M as argument.</p>
-<dt>5.</p>
-<dd> All the derivatives are based on central finite differences, with natural boundary conditions.</p>
-<dt>6.</p>
-<dd> Files that have the same names as some operators, e.g., <code>ADD</code>, <code>SIGN</code>, <code>=</code>, etc. should be identified by prepending the current directory (i.e., ./LOG).</p>
-<dt>7.</p>
-<dd> Piping of files is not allowed.</p>
-<dt>8.</p>
-<dd> The stack depth limit is hard-wired to 100.</p>
-<dt>9.</p>
-<dd> All functions expecting a positive radius (e.g., <code>LOG</code>, <code>KEI</code>, etc.) are passed the absolute value of their argument. (9) The bitwise operators (<code>BITAND</code>, <code>BITLEFT</code>, <code>BITNOT</code>, <code>BITOR</code>, <code>BITRIGHT</code>, <code>BITTEST</code>, and <code>BITXOR</code>) convert a grid&#8217;s single precision values to unsigned 32-bit ints to perform the bitwise operations. Consequently, the largest whole integer value that can be stored in a float grid is 2^24 or 16,777,216. Any higher result will be masked to fit in the lower 24 bits. Thus, bit operations are effectively limited to 24 bit. All bitwise operators return NaN if given NaN arguments or bit-settings &lt;= 0.</p>
-<dt>10.</p>
-<dd> When OpenMP support is compiled in, a few operators will take advantage of the ability to spread the load onto several cores. At present, the list of such operators is: <code>LDIST</code>.</dl>
+<dt>5.</dt>
+<dd> All the derivatives are based on central finite differences, with natural boundary conditions.</dd>
+<dt>6.</dt>
+<dd> Files that have the same names as some operators, e.g., <code>ADD</code>, <code>SIGN</code>, <code>=</code>, etc. should be identified by prepending the current directory (i.e., ./LOG).</dd>
+<dt>7.</dt>
+<dd> Piping of files is not allowed.</dd>
+<dt>8.</dt>
+<dd> The stack depth limit is hard-wired to 100.</dd>
+<dt>9.</dt>
+<dd> All functions expecting a positive radius (e.g., <code>LOG</code>, <code>KEI</code>, etc.) are passed the absolute value of their argument. (9) The bitwise operators (<code>BITAND</code>, <code>BITLEFT</code>, <code>BITNOT</code>, <code>BITOR</code>, <code>BITRIGHT</code>, <code>BITTEST</code>, and <code>BITXOR</code>) convert a grid&#8217;s single precision values to unsigned 32-bit ints to perform the bitwise operations. Consequently, the largest whole integer value that can be stored in a float grid is 2^24 or 16,777,216. Any higher result will be masked to fit in the lower 24 bits. Thus, bit operations are effectively limited to 24 bit. All bitwise operators return NaN if given NaN arguments or bit-settings &lt;= 0.</dd>
+<dt>10.</dt>
+<dd> When OpenMP support is compiled in, a few operators will take advantage of the ability to spread the load onto several cores. At present, the list of such operators is: <code>LDIST</code>.</dd></dl>
 <h2>GRID VALUES PRECISION</h2>
 <p> Regardless of the precision of the input data, GMT programs that create grid files will internally hold the grids in 4-byte floating point arrays. This is done to conserve memory and furthermore most if not all real data can be stored using 4-byte floating point values. Data with higher precision (i.e., double precision values) will lose that precision once GMT operates on the grid or writes out new grids. To limit loss of precision when processing data you should always consider normalizing the data prior to processing.</p>
 <h2>GRID FILE FORMATS</h2>

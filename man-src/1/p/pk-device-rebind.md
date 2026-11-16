@@ -11,41 +11,41 @@ description: "pk-device-rebind – Device software reloader"
 <p> pk-device-rebind &#8211; Device software reloader </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>pk-device-rebind</code> [<code>&#8211;help</code>]</dl>
+<dt> <code>pk-device-rebind</code> [<code>&#8211;help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This manual page documents briefly the <code>pk-device-rebind</code> command. </p>
+<dd>This manual page documents briefly the <code>pk-device-rebind</code> command. </dd>
 <p> <code>pk-device-rebind</code> is the command line client for reloading devices after firmware has been installed.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. </p>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show summary of options.</dl>
+</dt><dd> Show summary of options.</dd></dl>
 <p> <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Show extra debugging information.</dl>
+</dt><dd> Show extra debugging information.</dd></dl>
 <p> <code>&#8211;simulate</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t actually poke the hardware, only simulate what would be done.</dl>
+</dt><dd> Don&#8217;t actually poke the hardware, only simulate what would be done.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Success, the device was reloaded</dl>
+</dt><dd> Success, the device was reloaded</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Failed with miscellaneous internal error.</dl>
+</dt><dd> Failed with miscellaneous internal error.</dd></dl>
 <p> <code>3</code></p>
 <dl>
 <dt>
-<dd> Arguments incorrect.</dl>
+</dt><dd> Arguments incorrect.</dd></dl>
 <p> <code>4</code></p>
 <dl>
 <dt>
-<dd> Failed to write to device.</dl>
+</dt><dd> Failed to write to device.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>packagekitd</code> (1). <code>udev</code>(1).</p>
 <h2>AUTHOR</h2>

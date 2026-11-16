@@ -41,9 +41,10 @@ or similar routines.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_add_event</code> </p>
+<dd><code>PAPI_add_event</code> </dd>
 <p>&nbsp;<wbr><code>PAPI_assign_eventset_component</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_destroy_eventset</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_cleanup_eventset</code>&nbsp;<wbr></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -11,10 +11,8 @@ std::common_type - std::common_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class... T&gt;
     (since C++ 11)
-
         struct common_type;</code></pre> 
 Determines the common type among all types T..., that is the type all T... can be implicitly converted to. If such a type exists (as determined according to the rules below), the member type names that type. Otherwise, there is no member type. 
 * If sizeof...(T) is zero, there is no member type. 
@@ -135,23 +133,18 @@ LWG_2460 C++11 common_type specializations are nearly impossible to write reduce
 
 Demonstrates mixed-mode arithmetic on a user-defined class 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 template &lt;class T&gt;
-
 struct Number {
     T n;
 };
 template &lt;class T, class U&gt;
-
 Number&lt;typename std::common_type&lt;T, U&gt;::type&gt; operator+(const Number&lt;T&gt; &amp;lhs,
                                                         const Number&lt;U&gt; &amp;rhs)
-
 {
     return {lhs.n + rhs.n};
 }
 int main()
-
 {
     Number&lt;int&gt; i1 = {1}, i2 = {2};
     Number&lt;double&gt; d1 = {2.3}, d2 = {3.5};

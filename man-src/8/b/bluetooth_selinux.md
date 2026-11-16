@@ -107,8 +107,8 @@ description: "bluetooth_selinux – Security Enhanced Linux Policy for the bluet
 <p> <code>bluetooth_exec_t</code> </p>
 <p> &#8211; Set files with the bluetooth_exec_t type, if you want to transition an executable to the bluetooth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/dund, /usr/bin/hidd, /usr/bin/pand, /usr/sbin/hcid, /usr/sbin/sdpd, /usr/bin/rfcomm, /usr/sbin/hid2hci, /usr/sbin/hciattach, /usr/sbin/bluetoothd, /usr/libexec/bluetooth/bluetoothd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/dund, /usr/bin/hidd, /usr/bin/pand, /usr/sbin/hcid, /usr/sbin/sdpd, /usr/bin/rfcomm, /usr/sbin/hid2hci, /usr/sbin/hciattach, /usr/sbin/bluetoothd, /usr/libexec/bluetooth/bluetoothd </dd>
 </dl>
 <p> <code>bluetooth_helper_exec_t</code> </p>
 <p> &#8211; Set files with the bluetooth_helper_exec_t type, if you want to transition an executable to the bluetooth_helper_t domain. </p>
@@ -119,8 +119,8 @@ description: "bluetooth_selinux – Security Enhanced Linux Policy for the bluet
 <p> <code>bluetooth_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the bluetooth_initrc_exec_t type, if you want to transition an executable to the bluetooth_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/dund, /etc/rc.d/init.d/pand, /etc/rc.d/init.d/bluetooth </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/dund, /etc/rc.d/init.d/pand, /etc/rc.d/init.d/bluetooth </dd>
 </dl>
 <p> <code>bluetooth_lock_t</code> </p>
 <p> &#8211; Set files with the bluetooth_lock_t type, if you want to treat the files as bluetooth lock data, stored under the /var/lock directory </p>
@@ -133,8 +133,8 @@ description: "bluetooth_selinux – Security Enhanced Linux Policy for the bluet
 <p> <code>bluetooth_var_run_t</code> </p>
 <p> &#8211; Set files with the bluetooth_var_run_t type, if you want to store the bluetooth files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/sdp, /var/run/bluetoothd_address </p>
+<dt>Paths:</dt>
+<dd>/var/run/sdp, /var/run/bluetoothd_address </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

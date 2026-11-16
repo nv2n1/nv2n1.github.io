@@ -16,10 +16,10 @@ description: "XmInstallImage — A pixmap caching function that adds an image to
 <h2>Description</h2>
 <p><code>XmInstallImage</code> stores an image in an image cache that can later be used to generate a pixmap. Part of the installation process is to extend the resource converter used to reference these images. The resource converter is given the image name so that the image can be referenced in a <code>.Xdefaults</code> file. Since an image can be referenced by a widget through its pixmap resources, it is up to the application to ensure that the image is installed before the widget is created.</p>
 <dl COMPACT>
-<dt><i>image</i></p>
-<dd>Points to the image structure to be installed. The installation process does not make a local copy of the image. Therefore, the application should not destroy the image until it is uninstalled from the caching functions.</p>
-<dt><i>image_name</i></p>
-<dd>Specifies a string that the application uses to name the image. After installation, this name can be used in <code>.Xdefaults</code> for referencing the image. A local copy of the name is created by the image caching functions.</dl>
+<dt><i>image</i></dt>
+<dd>Points to the image structure to be installed. The installation process does not make a local copy of the image. Therefore, the application should not destroy the image until it is uninstalled from the caching functions.</dd>
+<dt><i>image_name</i></dt>
+<dd>Specifies a string that the application uses to name the image. After installation, this name can be used in <code>.Xdefaults</code> for referencing the image. A local copy of the name is created by the image caching functions.</dd></dl>
 <p> The image caching functions provide a set of eight preinstalled images. These names can be used within a <code>.Xdefaults</code> file for generating pixmaps for the resource for which they are provided. </p>
 <table BORDER>
 <tr>

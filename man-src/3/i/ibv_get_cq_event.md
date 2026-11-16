@@ -124,7 +124,7 @@ ibv_ack_cq_events(ev_cq, 1);
 <p> <code>ibv_create_comp_channel</code>(3), <code>ibv_create_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_poll_cq</code>(3) </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak</p>
-<dd> &lt;<i>dotanba [at] gmail.com</i>&gt; </p>
+<dt>Dotan Barak</dt>
+<dd> &lt;<i>dotanba [at] gmail.com</i>&gt; </dd>
 </dl>
 <h2>Index</h2>

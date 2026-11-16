@@ -10,14 +10,14 @@ description: "pathmask_to_pos – find the position of the left-most bit in a pa
 <p>pathmask_to_pos &#8211; find the position of the left-most bit in a pathmask</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u8 pathmask_to_pos(u8&nbsp;<wbr></code><i>mask</i><code>);</code></dl>
+<dt> <code>u8 pathmask_to_pos(u8&nbsp;<wbr></code><i>mask</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>mask</i></p>
 <dl>
 <dd>
-<dd>pathmask with at least one bit set</dl>
+</dd><dd>pathmask with at least one bit set</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

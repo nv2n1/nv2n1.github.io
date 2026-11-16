@@ -16,19 +16,19 @@ bson_iter_as_int64(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_as_int64/">bson_iter_as_int64</a>(3)</code> function shall return the contents of the current element as if it were a BSON_TYPE_INT64 element. The currently supported casts include: </p>
 <dl>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_BOOL</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_DOUBLE</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_INT32</p>
-<dt>\[bu]</p>
-<dd> BSON_TYPE_INT64 </p>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_BOOL</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_DOUBLE</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_INT32</dd>
+<dt>\[bu]</dt>
+<dd> BSON_TYPE_INT64 </dd>
 </dl>
 <h2>RETURNS</h2>
 <p> A 64-bit signed integer. </p>

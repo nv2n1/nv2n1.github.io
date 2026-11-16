@@ -16,8 +16,8 @@ description: "network-admin – Network Administration Tool"
 <p> <code>network-admin</code> allows you to specify the way your system connects to other computers and to the Internet.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use</dl>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use</dd></dl>
 <p> <code>network-admin</code> also accepts the standard GNOME and GTK options.</p>
 <h2>AUTHORS</h2>
 <p> <code>network-admin</code> was written by Carlos Garnacho Parro &lt;garnacho [at] tuxerver.net&gt; and others. </p>

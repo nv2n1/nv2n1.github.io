@@ -12,11 +12,11 @@ shgrid_params - This document briefly describes all the internal parameters of S
 
 Each entry below includes the name of a parameter, its Fortran type (use the obvious equivalents for C), its default value, and a short description of the parameter.
 <dl><dt>'NCL' - Integer - (N/3)**(1/3)
-<dd>Granularity of 3-D cell grid
-<dt>'NFL' - Integer - 32
-<dd>Number of input data values within the sphere of influence.
-<dt>'NLS' - Integer - 17
-<dd>Nouber of data values used in the least squares fit.</dl>
+</dt><dd>Granularity of 3-D cell grid
+</dd><dt>'NFL' - Integer - 32
+</dt><dd>Number of input data values within the sphere of influence.
+</dd><dt>'NLS' - Integer - 17
+</dt><dd>Nouber of data values used in the least squares fit.</dd></dl>
 
 <h2>See Also</h2>
 

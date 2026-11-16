@@ -15,7 +15,7 @@ vmalloc_user - allocate zeroed virtually contiguous memory for userspace
 <h2>Arguments</h2>
 
 <i>size</i>
-<dl><dd><dd>allocation size</dl>
+<dl><dd></dd><dd>allocation size</dd></dl>
 
 <h2>Description</h2>
 

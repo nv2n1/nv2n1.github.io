@@ -11,7 +11,6 @@ std::toupper - std::toupper
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int toupper(int ch);</code></pre> 
 Converts the given character to uppercase according to the character conversion rules defined by the currently installed C locale. 
 In the default &quot;C&quot; locale, the following lowercase letters abcdefghijklmnopqrstuvwxyz are replaced with respective uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ. 
@@ -46,12 +45,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xb8'; // the character ž in ISO-8859-15
                               // but ¸ (cedilla) in ISO-8859-1

@@ -15,7 +15,7 @@ idr_init - initialize idr handle
 <h2>Arguments</h2>
 
 <i>idp</i>
-<dl><dd><dd>idr handle</dl>
+<dl><dd></dd><dd>idr handle</dd></dl>
 
 <h2>Description</h2>
 

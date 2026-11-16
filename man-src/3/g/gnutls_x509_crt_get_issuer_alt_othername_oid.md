@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_get_issuer_alt_othername_oid – API function"
 <p> <code>int gnutls_x509_crt_get_issuer_alt_othername_oid(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>ret</i><code>, size_t * </code><i>ret_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>unsigned int seq</p>
-<dd> specifies the sequence number of the alt name (0 for the first one, 1 for the second etc.)</p>
-<dt>void * ret</p>
-<dd> is the place where the otherName OID will be copied to</p>
-<dt>size_t * ret_size</p>
-<dd> holds the size of ret.</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>unsigned int seq</dt>
+<dd> specifies the sequence number of the alt name (0 for the first one, 1 for the second etc.)</dd>
+<dt>void * ret</dt>
+<dd> is the place where the otherName OID will be copied to</dd>
+<dt>size_t * ret_size</dt>
+<dd> holds the size of ret.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the type OID of an otherName Subject Alternative Name, contained in the given certificate, and return the type as an enumerated element. </p>
 <p> If <i>oid</i> is null then only the size will be filled. The <i>oid</i> returned will be null terminated, although <i>oid_size</i> will not account for the trailing null. </p>
@@ -41,6 +41,6 @@ description: "gnutls_x509_crt_get_issuer_alt_othername_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

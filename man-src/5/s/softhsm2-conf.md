@@ -17,49 +17,49 @@ description: "softhsm2.conf – SoftHSM configuration file"
 <dl>
 <dd>
 <pre>&lt;name&gt; = &lt;value&gt;</pre>
-</dl>
+</dd></dl>
 <p> It is also possible to add comments in the file by using the hash sign. Anything after the hash sign will be ignored. </p>
 <dl>
 <dd>
 <pre># A comment
-</dl>
+</dd></dl>
 Any empty lines or lines that does not have the correct format will be ignored.</pre>
 <h2>Directories.Tokendir</h2>
 <p>The location where SoftHSM can store the tokens. </p>
 <dl>
 <dd>
 <pre>directories.tokendir = /var/lib/softhsm/tokens/</pre>
-</dl>
+</dd></dl>
 <h2>Objectstore.Backend</h2>
 <p>The backend to use by SoftHSM to store token objects. Either &quot;file&quot; or &quot;db&quot; is supported. In order to use the &quot;db&quot; backend, the SoftHSM build needs to be configured with &quot;configure &#8211;with-objectstore-backend-db&quot; </p>
 <dl>
 <dd>
 <pre>objectstore.backend = file</pre>
-</dl>
+</dd></dl>
 <h2>Log.Level</h2>
 <p>The log level which can be set to ERROR, WARNING, INFO or DEBUG. </p>
 <dl>
 <dd>
 <pre>log.level = INFO</pre>
-</dl>
+</dd></dl>
 <h2>Slots.Removable</h2>
 <p>If set to true CKF_REMOVABLE_DEVICE is set in the flags returned by C_GetSlotInfo. Default is false. </p>
 <dl>
 <dd>
 <pre>slots.removable = true</pre>
-</dl>
+</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt>SOFTHSM2_CONF</p>
-<dd>When defined, the value will be used as path to the configuration file.</dl>
+<dt>SOFTHSM2_CONF</dt>
+<dd>When defined, the value will be used as path to the configuration file.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>~/.config/softhsm2/softhsm2.conf</i></p>
-<dd>default user-specific location of the SoftHSM configuration file; if it exists it will override the system wide configuration</p>
-<dt><i>/etc/softhsm2.conf</i></p>
-<dd>default system-wide location of the SoftHSM configuration file</p>
-<dt><i>/etc/softhsm2.conf.sample</i></p>
-<dd>an example of a SoftHSM configuration file</dl>
+<dt><i>~/.config/softhsm2/softhsm2.conf</i></dt>
+<dd>default user-specific location of the SoftHSM configuration file; if it exists it will override the system wide configuration</dd>
+<dt><i>/etc/softhsm2.conf</i></dt>
+<dd>default system-wide location of the SoftHSM configuration file</dd>
+<dt><i>/etc/softhsm2.conf.sample</i></dt>
+<dd>an example of a SoftHSM configuration file</dd></dl>
 <h2>Author</h2>
 <p>Written by Rickard Bellgrim, Francis Dupont, René Post, and Roland van Rijswijk.</p>
 <h2>See Also</h2>

@@ -11,9 +11,7 @@ std::experimental::lcm - std::experimental::lcm
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/numeric&gt;
-
 template&lt; class M, class N&gt;                        (library fundamentals TS v2)
-
 constexpr std::common_type_t&lt;M, N&gt; lcm(M m, N n);</code></pre> 
 Computes the least common multiple of the integers m and n. 
 

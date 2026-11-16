@@ -33,50 +33,48 @@ int ppoll(struct pollfd *fds, nfds_t nfds,
 <p> If none of the events requested (and no error) has occurred for any of the file descriptors, then <code>poll</code>() blocks until one of the events occurs. </p>
 <p> The <i>timeout</i> argument specifies the number of milliseconds that <code>poll</code>() should block waiting for a file descriptor to become ready. The call will block until either:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a file descriptor becomes ready;</p>
-<dt>&bull;</p>
-<dd> the call is interrupted by a signal handler; or</p>
-<dt>&bull;</p>
-<dd> the timeout expires.</dl>
+<dt>&bull;</dt>
+<dd> a file descriptor becomes ready;</dd>
+<dt>&bull;</dt>
+<dd> the call is interrupted by a signal handler; or</dd>
+<dt>&bull;</dt>
+<dd> the timeout expires.</dd></dl>
 <p> Note that the <i>timeout</i> interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount. Specifying a negative value in <i>timeout</i> means an infinite timeout. Specifying a <i>timeout</i> of zero causes <code>poll</code>() to return immediately, even if no file descriptors are ready. </p>
 <p> The bits that may be set/returned in <i>events</i> and <i>revents</i> are defined in <i>&lt;poll.h&gt;</i>:</p>
 <dl>
-<dt><code>POLLIN</code></p>
-<dd> There is data to read.</p>
-<dt><code>POLLPRI</code></p>
-<dd> There is some exceptional condition on the file descriptor. Possibilities include:</p>
+<dt><code>POLLIN</code></dt>
+<dd> There is data to read.</dd>
+<dt><code>POLLPRI</code></dt>
+<dd> There is some exceptional condition on the file descriptor. Possibilities include:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> There is out-of-band data on a TCP socket (see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7)).</p>
-<dt>&bull;</p>
-<dd> A pseudoterminal master in packet mode has seen a state change on the slave (see <code><a href="/docs/linux/man/2-ioctl_tty/">ioctl_tty</a></code>(2)).</p>
-<dt>&bull;</p>
-<dd> A <i>cgroup.events</i> file has been modified (see <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7)).</dl>
+<dt>&bull;</dt>
+<dd> There is out-of-band data on a TCP socket (see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7)).</dd>
+<dt>&bull;</dt>
+<dd> A pseudoterminal master in packet mode has seen a state change on the slave (see <code><a href="/docs/linux/man/2-ioctl_tty/">ioctl_tty</a></code>(2)).</dd>
+<dt>&bull;</dt>
+<dd> A <i>cgroup.events</i> file has been modified (see <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7)).</dd></dl>
 </dl>
-<dt><code>POLLOUT</code></p>
-<dd> Writing is now possible, though a write larger than the available space in a socket or pipe will still block (unless <code>O_NONBLOCK</code> is set).</p>
-<dt><code>POLLRDHUP</code> (since Linux 2.6.17)</p>
-<dd> Stream socket peer closed connection, or shut down writing half of connection. The <code>_GNU_SOURCE</code> feature test macro must be defined (before including <i>any</i> header files) in order to obtain this definition.</p>
-<dt><code>POLLERR</code></p>
-<dd> Error condition (only returned in <i>revents</i>; ignored in <i>events</i>). This bit is also set for a file descriptor referring to the write end of a pipe when the read end has been closed.</p>
-<dt><code>POLLHUP</code></p>
-<dd> Hang up (only returned in <i>revents</i>; ignored in <i>events</i>). Note that when reading from a channel such as a pipe or a stream socket, this event merely indicates that the peer closed its end of the channel. Subsequent reads from the channel will return 0 (end of file) only after all outstanding data in the channel has been consumed.</p>
-<dt><code>POLLNVAL</code></p>
-<dd> Invalid request: <i>fd</i> not open (only returned in <i>revents</i>; ignored in <i>events</i>).</dl>
+<dt><code>POLLOUT</code></dt>
+<dd> Writing is now possible, though a write larger than the available space in a socket or pipe will still block (unless <code>O_NONBLOCK</code> is set).</dd>
+<dt><code>POLLRDHUP</code> (since Linux 2.6.17)</dt>
+<dd> Stream socket peer closed connection, or shut down writing half of connection. The <code>_GNU_SOURCE</code> feature test macro must be defined (before including <i>any</i> header files) in order to obtain this definition.</dd>
+<dt><code>POLLERR</code></dt>
+<dd> Error condition (only returned in <i>revents</i>; ignored in <i>events</i>). This bit is also set for a file descriptor referring to the write end of a pipe when the read end has been closed.</dd>
+<dt><code>POLLHUP</code></dt>
+<dd> Hang up (only returned in <i>revents</i>; ignored in <i>events</i>). Note that when reading from a channel such as a pipe or a stream socket, this event merely indicates that the peer closed its end of the channel. Subsequent reads from the channel will return 0 (end of file) only after all outstanding data in the channel has been consumed.</dd>
+<dt><code>POLLNVAL</code></dt>
+<dd> Invalid request: <i>fd</i> not open (only returned in <i>revents</i>; ignored in <i>events</i>).</dd></dl>
 <p> When compiling with <code>_XOPEN_SOURCE</code> defined, one also has the following, which convey no further information beyond the bits listed above:</p>
 <dl>
-<dt><code>POLLRDNORM</code></p>
-<dd> Equivalent to <code>POLLIN</code>.</p>
-<dt><code>POLLRDBAND</code></p>
-<dd> Priority band data can be read (generally unused on Linux).</p>
-<dt><code>POLLWRNORM</code></p>
-<dd> Equivalent to <code>POLLOUT</code>.</p>
-<dt><code>POLLWRBAND</code></p>
-<dd> Priority data may be written.</dl>
+<dt><code>POLLRDNORM</code></dt>
+<dd> Equivalent to <code>POLLIN</code>.</dd>
+<dt><code>POLLRDBAND</code></dt>
+<dd> Priority band data can be read (generally unused on Linux).</dd>
+<dt><code>POLLWRNORM</code></dt>
+<dd> Equivalent to <code>POLLOUT</code>.</dd>
+<dt><code>POLLWRBAND</code></dt>
+<dd> Priority data may be written.</dd></dl>
 <p> Linux also knows about, but does not use <code>POLLMSG</code>.</p>
 <h3>ppoll()</h3>
 <p> The relationship between <code>poll</code>() and <code>ppoll</code>() is analogous to the relationship between <code><a href="/docs/linux/man/2-select/">select</a></code>(2) and <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2): like <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), <code>ppoll</code>() allows an application to safely wait until either a file descriptor becomes ready or until a signal is caught. </p>
@@ -99,16 +97,16 @@ int ppoll(struct pollfd *fds, nfds_t nfds,
 <p> On error, -1 is returned, and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>fds</i> points outside the process&#8217;s accessible address space. The array given as argument was not contained in the calling program&#8217;s address space.</p>
-<dt><code>EINTR</code></p>
-<dd> A signal occurred before any requested event; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>nfds</i> value exceeds the <code>RLIMIT_NOFILE</code> value.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>ppoll</code>()) The timeout value expressed in <i>*ip</i> is invalid (negative).</p>
-<dt><code>ENOMEM</code></p>
-<dd> Unable to allocate memory for kernel data structures.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>fds</i> points outside the process&#8217;s accessible address space. The array given as argument was not contained in the calling program&#8217;s address space.</dd>
+<dt><code>EINTR</code></dt>
+<dd> A signal occurred before any requested event; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>nfds</i> value exceeds the <code>RLIMIT_NOFILE</code> value.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>ppoll</code>()) The timeout value expressed in <i>*ip</i> is invalid (negative).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Unable to allocate memory for kernel data structures.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>poll</code>() system call was introduced in Linux 2.1.23. On older kernels that lack this system call, the glibc <code>poll</code>() wrapper function provides emulation using <code><a href="/docs/linux/man/2-select/">select</a></code>(2). </p>
 <p> The <code>ppoll</code>() system call was added to Linux in kernel 2.6.16. The <code>ppoll</code>() library call was added in glibc 2.4.</p>
@@ -127,12 +125,12 @@ int ppoll(struct pollfd *fds, nfds_t nfds,
 <h2>EXAMPLES</h2>
 <p> The program below opens each of the files named in its command-line arguments and monitors the resulting file descriptors for readiness to read (<code>POLLIN</code>). The program loops, repeatedly using <code>poll</code>() to monitor the file descriptors, printing the number of ready file descriptors on return. For each ready file descriptor, the program:</p>
 <dl>
-<dt>&bull;</p>
-<dd> displays the returned <i>revents</i> field in a human-readable form;</p>
-<dt>&bull;</p>
-<dd> if the file descriptor is readable, reads some data from it, and displays that data on standard output; and</p>
-<dt>&bull;</p>
-<dd> if the file descriptors was not readable, but some other event occurred (presumably <code>POLLHUP</code>), closes the file descriptor.</dl>
+<dt>&bull;</dt>
+<dd> displays the returned <i>revents</i> field in a human-readable form;</dd>
+<dt>&bull;</dt>
+<dd> if the file descriptor is readable, reads some data from it, and displays that data on standard output; and</dd>
+<dt>&bull;</dt>
+<dd> if the file descriptors was not readable, but some other event occurred (presumably <code>POLLHUP</code>), closes the file descriptor.</dd></dl>
 <p> Suppose we run the program in one terminal, asking it to open a FIFO: </p>
 <p> $ <code>mkfifo myfifo</code> $ <code>./poll_input myfifo</code> </p>
 <p> In a second terminal window, we then open the FIFO for writing, write some data to it, and close the FIFO: </p>
@@ -148,12 +146,12 @@ int ppoll(struct pollfd *fds, nfds_t nfds,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;closing fd 3 All file descriptors closed; bye </p>
 <p> In the above output, we see that <code>poll</code>() returned three times:</p>
 <dl>
-<dt>&bull;</p>
-<dd> On the first return, the bits returned in the <i>revents</i> field were <code>POLLIN</code>, indicating that the file descriptor is readable, and <code>POLLHUP</code>, indicating that the other end of the FIFO has been closed. The program then consumed some of the available input.</p>
-<dt>&bull;</p>
-<dd> The second return from <code>poll</code>() also indicated <code>POLLIN</code> and <code>POLLHUP</code>; the program then consumed the last of the available input.</p>
-<dt>&bull;</p>
-<dd> On the final return, <code>poll</code>() indicated only <code>POLLHUP</code> on the FIFO, at which point the file descriptor was closed and the program terminated.</dl>
+<dt>&bull;</dt>
+<dd> On the first return, the bits returned in the <i>revents</i> field were <code>POLLIN</code>, indicating that the file descriptor is readable, and <code>POLLHUP</code>, indicating that the other end of the FIFO has been closed. The program then consumed some of the available input.</dd>
+<dt>&bull;</dt>
+<dd> The second return from <code>poll</code>() also indicated <code>POLLIN</code> and <code>POLLHUP</code>; the program then consumed the last of the available input.</dd>
+<dt>&bull;</dt>
+<dd> On the final return, <code>poll</code>() indicated only <code>POLLHUP</code> on the FIFO, at which point the file descriptor was closed and the program terminated.</dd></dl>
 <h3>Program source</h3>
 <p> /* poll_input.c </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Licensed under GNU General Public License v2 or later. */ #include &lt;poll.h&gt; #include &lt;fcntl.h&gt; #include &lt;sys/types.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; </p>

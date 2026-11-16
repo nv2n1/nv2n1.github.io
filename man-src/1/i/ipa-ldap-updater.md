@@ -53,12 +53,12 @@ description: "ipa-ldap-updater – Update the IPA LDAP configuration"
 <p> Additionally, ipa-ldap-updater can update the schema based on LDIF files. Any missing object classes and attribute types are added, and differing ones are updated to match the LDIF file. To enable this behavior, use the &#8211;schema-file options. Schema files should be in LDIF format, and may only specify attributeTypes and objectClasses attributes of cn=schema. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Enable debug logging when more verbose output is needed</p>
-<dt><code>-u</code>, <code>&#8211;upgrade</code></p>
-<dd> Upgrade an installed server in offline mode (implies &#8211;schema)</p>
-<dt><code>-S</code>, <code>&#8211;schema-file</code></p>
-<dd> Specify a schema file. May be used multiple times. Implies &#8211;schema.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Enable debug logging when more verbose output is needed</dd>
+<dt><code>-u</code>, <code>&#8211;upgrade</code></dt>
+<dd> Upgrade an installed server in offline mode (implies &#8211;schema)</dd>
+<dt><code>-S</code>, <code>&#8211;schema-file</code></dt>
+<dd> Specify a schema file. May be used multiple times. Implies &#8211;schema.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

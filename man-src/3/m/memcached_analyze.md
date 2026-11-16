@@ -13,11 +13,11 @@ description: "memcached_analyze – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>memcached_analysis_st</code></p>
+<dt><code>memcached_analysis_st</code></dt>
 <dd>
-<dt><i>memcached_analysis_st</i> * memcached_analyze(memcached_st<i>&nbsp;<wbr>*ptr</i>, memcached_stat_st<i>&nbsp;<wbr>*stat</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</p>
+</dd><dt><i>memcached_analysis_st</i> * memcached_analyze(memcached_st<i>&nbsp;<wbr>*ptr</i>, memcached_stat_st<i>&nbsp;<wbr>*stat</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>libmemcached</code> has the ability to query a memcached server (or collection of servers) for their current state. Queries to find state return a <i>memcached_analysis_st</i> structure. You are responsible for freeing this structure. </p>
 <p> <i>memcached_analyze()</i> analyzes useful information based on the provided servers and sets the result to the <i>memcached_analysis_st</i> structure. The return value must be freed by the calling application. </p>
@@ -34,3 +34,4 @@ description: "memcached_analyze – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

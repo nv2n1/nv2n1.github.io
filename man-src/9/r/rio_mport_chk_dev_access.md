@@ -14,15 +14,15 @@ description: "rio_mport_chk_dev_access – Validate access to the specified devi
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port to send transactions</dl>
+</dd><dd>Master port to send transactions</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>Device destination ID in network</dl>
+<dd>Device destination ID in network</dd></dl>
 <p> <i>hopcount</i></p>
 <dl>
-<dd>Number of hops into the network</dl>
+<dd>Number of hops into the network</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

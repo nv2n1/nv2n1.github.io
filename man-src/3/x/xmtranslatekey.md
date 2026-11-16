@@ -20,15 +20,15 @@ description: "XmTranslateKey — The default keycode-to-keysym translator"
 <p><code>XmTranslateKey</code> is the default <code>XtKeyProc</code> translation procedure for Motif applications. The function takes a keycode and modifiers and returns the corresponding keysym. </p>
 <p> <code>XmTranslateKey</code> serves two main purposes: to enable new translators with expanded functionality to get the default Motif keycode-to-keysym translation in addition to whatever they add, and to reinstall the default translator. This function enables keysyms defined by the Motif virtual bindings to be used when an application requires its own XtKeyProc to be installed.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the display that the keycode is from</p>
-<dt><i>keycode</i></p>
-<dd>Specifies the keycode to translate</p>
-<dt><i>modifiers</i></p>
-<dd>Specifies the modifier keys to be applied to the keycode</p>
-<dt><i>modifiers_return</i></p>
-<dd>Specifies a mask of the modifier keys actually used to generate the keysym (an AND of <i>modifiers</i> and any default modifiers applied by the currently registered translator)</p>
-<dt><i>keysym_return</i></p>
-<dd>Specifies a pointer to the resulting keysym</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the display that the keycode is from</dd>
+<dt><i>keycode</i></dt>
+<dd>Specifies the keycode to translate</dd>
+<dt><i>modifiers</i></dt>
+<dd>Specifies the modifier keys to be applied to the keycode</dd>
+<dt><i>modifiers_return</i></dt>
+<dd>Specifies a mask of the modifier keys actually used to generate the keysym (an AND of <i>modifiers</i> and any default modifiers applied by the currently registered translator)</dd>
+<dt><i>keysym_return</i></dt>
+<dd>Specifies a pointer to the resulting keysym</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>

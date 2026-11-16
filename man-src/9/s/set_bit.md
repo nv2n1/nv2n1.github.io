@@ -14,10 +14,10 @@ description: "set_bit – Atomically set a bit in memory"
 <p><i>nr</i></p>
 <dl>
 <dd>
-<dd>the bit to set</dl>
+</dd><dd>the bit to set</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>the address to start counting from</dl>
+<dd>the address to start counting from</dd></dl>
 <h2>Description</h2>
 <p>This function is atomic and may not be reordered. See <code>__set_bit</code> if you do not require the atomic guarantees.</p>
 <h2>Note</h2>

@@ -15,7 +15,7 @@ The <i>abrt-action-analyze-xorg</i> tool processes Xorg crash problem data and g
  The configuration file consists of items in the format &quot;Option = Value&quot;. Currently, only one item exists: 
 
  BlacklistedXorgModules = <i>moduleName</i>, <i>moduleName</i> ...
-<dl><dd>Xorg crash will be ignored if any of the listed Xorg modules were loaded at the time of the crash. Module names should be without &quot;_drv.so&quot; suffix: use <i>buggymodule</i>, not <i>buggymodule_drv</i> or <i>buggymodule_drv.so</i>.</dl>
+<dl><dd>Xorg crash will be ignored if any of the listed Xorg modules were loaded at the time of the crash. Module names should be without &quot;_drv.so&quot; suffix: use <i>buggymodule</i>, not <i>buggymodule_drv</i> or <i>buggymodule_drv.so</i>.</dd></dl>
 
 <h2>See Also</h2>
 
@@ -23,4 +23,4 @@ The <i>abrt-action-analyze-xorg</i> tool processes Xorg crash problem data and g
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

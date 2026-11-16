@@ -15,19 +15,19 @@ description: "drm-kms – Kernel Mode-Setting"
 <p>Each DRM device provides access to manage which monitors and displays are currently used and what frames to be displayed. This task is called <i>Kernel Mode-Setting</i> (KMS). Historically, this was done in user-space and called <i>User-space Mode-Setting</i> (UMS). Almost all open-source drivers now provide the KMS kernel API to do this in the kernel, however, many non-open-source binary drivers from different vendors still do not support this. You can use <code>drmModeSettingSupported</code>(3) to check whether your driver supports this. To understand how KMS works, we need to introduce 5 objects: <i>CRTCs</i>, <i>Planes</i>, <i>Encoders</i>, <i>Connectors</i> and <i>Framebuffers</i>. </p>
 <p> CRTCs</p>
 <dl>
-<dd>A <i>CRTC</i> short for <i>CRT Controller</i> is an abstraction representing a part of the chip that contains a pointer to a scanout buffer. Therefore, the number of CRTCs available determines how many independent scanout buffers can be active at any given time. The CRTC structure contains several fields to support this: a pointer to some video memory (abstracted as a frame-buffer object), a list of driven connectors, a display mode and an (x, y) offset into the video memory to support panning or configurations where one piece of video memory spans multiple CRTCs. A CRTC is the central point where configuration of displays happens. You select which objects to use, which modes and which parameters and then configure each CRTC via <code>drmModeCrtcSet</code>(3) to drive the display devices.</dl>
+<dd>A <i>CRTC</i> short for <i>CRT Controller</i> is an abstraction representing a part of the chip that contains a pointer to a scanout buffer. Therefore, the number of CRTCs available determines how many independent scanout buffers can be active at any given time. The CRTC structure contains several fields to support this: a pointer to some video memory (abstracted as a frame-buffer object), a list of driven connectors, a display mode and an (x, y) offset into the video memory to support panning or configurations where one piece of video memory spans multiple CRTCs. A CRTC is the central point where configuration of displays happens. You select which objects to use, which modes and which parameters and then configure each CRTC via <code>drmModeCrtcSet</code>(3) to drive the display devices.</dd></dl>
 <p> Planes</p>
 <dl>
-<dd>A <i>plane</i> respresents an image source that can be blended with or overlayed on top of a CRTC during the scanout process. Planes are associated with a frame-buffer to crop a portion of the image memory (source) and optionally scale it to a destination size. The result is then blended with or overlayed on top of a CRTC. Planes are not provided by all hardware and the number of available planes is limited. If planes are not available or if not enough planes are available, the user should fall back to normal software blending (via GPU or CPU).</dl>
+<dd>A <i>plane</i> respresents an image source that can be blended with or overlayed on top of a CRTC during the scanout process. Planes are associated with a frame-buffer to crop a portion of the image memory (source) and optionally scale it to a destination size. The result is then blended with or overlayed on top of a CRTC. Planes are not provided by all hardware and the number of available planes is limited. If planes are not available or if not enough planes are available, the user should fall back to normal software blending (via GPU or CPU).</dd></dl>
 <p> Encoders</p>
 <dl>
-<dd>An <i>encoder</i> takes pixel data from a CRTC and converts it to a format suitable for any attached connectors. On some devices, it may be possible to have a CRTC send data to more than one encoder. In that case, both encoders would receive data from the same scanout buffer, resulting in a <i>cloned</i> display configuration across the connectors attached to each encoder.</dl>
+<dd>An <i>encoder</i> takes pixel data from a CRTC and converts it to a format suitable for any attached connectors. On some devices, it may be possible to have a CRTC send data to more than one encoder. In that case, both encoders would receive data from the same scanout buffer, resulting in a <i>cloned</i> display configuration across the connectors attached to each encoder.</dd></dl>
 <p> Connectors</p>
 <dl>
-<dd>A <i>connector</i> is the final destination of pixel-data on a device, and usually connects directly to an external display device like a monitor or laptop panel. A connector can only be attached to one encoder at a time. The connector is also the structure where information about the attached display is kept, so it contains fields for display data, <i>EDID</i> data, <i>DPMS</i> and <i>connection status</i>, and information about modes supported on the attached displays.</dl>
+<dd>A <i>connector</i> is the final destination of pixel-data on a device, and usually connects directly to an external display device like a monitor or laptop panel. A connector can only be attached to one encoder at a time. The connector is also the structure where information about the attached display is kept, so it contains fields for display data, <i>EDID</i> data, <i>DPMS</i> and <i>connection status</i>, and information about modes supported on the attached displays.</dd></dl>
 <p> Framebuffers</p>
 <dl>
-<dd><i>Framebuffers</i> are abstract memory objects that provide a source of pixel data to scanout to a CRTC. Applications explicitly request the creation of framebuffers and can control their behavior. Framebuffers rely on the underneath memory manager for low-level memory operations. When creating a framebuffer, applications pass a memory handle through the API which is used as backing storage. The framebuffer itself is only an abstract object with no data. It just refers to memory buffers that must be created with the <code><a href="/docs/linux/man/7-drm-memory/">drm-memory</a></code>(7) API.</dl>
+<dd><i>Framebuffers</i> are abstract memory objects that provide a source of pixel data to scanout to a CRTC. Applications explicitly request the creation of framebuffers and can control their behavior. Framebuffers rely on the underneath memory manager for low-level memory operations. When creating a framebuffer, applications pass a memory handle through the API which is used as backing storage. The framebuffer itself is only an abstract object with no data. It just refers to memory buffers that must be created with the <code><a href="/docs/linux/man/7-drm-memory/">drm-memory</a></code>(7) API.</dd></dl>
 <h3>Mode-Setting</h3>
 <p>Before mode-setting can be performed, an application needs to call <code>drmSetMaster</code>(3) to become <i>DRM-Master</i>. It then has exclusive access to the KMS API. A call to <code><a href="/docs/linux/man/3-drmmodegetresources/">drmModeGetResources</a></code>(3) returns a list of <i>CRTCs</i>, <i>Connectors</i>, <i>Encoders</i> and <i>Planes</i>. </p>
 <p> Normal procedure now includes: First, you select which connectors you want to use. Users are mostly interested in which monitor or display-panel is active so you need to make sure to arrange them in the correct logical order and select the correct ones to use. For each connector, you need to find a CRTC to drive this connector. If you want to clone output to two or more connectors, you may use a single CRTC for all cloned connectors (if the hardware supports this). To find a suitable CRTC, you need to iterate over the list of encoders that are available for each connector. Each encoder contains a list of CRTCs that it can work with and you simply select one of these CRTCs. If you later program the CRTC to control a connector, it automatically selects the best encoder. However, this procedure is needed so your CRTC has at least one working encoder for the selected connector. See the <i>Examples</i> section below for more information. </p>
@@ -48,7 +48,6 @@ description: "drm-kms – Kernel Mode-Setting"
 {
     drmModeEncoder *enc;
     unsigned int i, j;
-
     /* iterate all encoders of this connector */
     for (i = 0; i &lt; conn-&gt;count_encoders; ++i) {
         enc = drmModeGetEncoder(fd, conn-&gt;encoders[i]);
@@ -56,13 +55,11 @@ description: "drm-kms – Kernel Mode-Setting"
             /* cannot retrieve encoder, ignoring... */
             continue;
         }
-
         /* iterate all global CRTCs */
         for (j = 0; j &lt; res-&gt;count_crtcs; ++j) {
             /* check whether this CRTC works with the encoder */
             if (!(enc-&gt;possible_crtcs &amp; (1 &lt;&lt; j)))
                 continue;
-
             /* Here you need to check that no other connector
              * currently uses the CRTC with id &quot;crtc&quot;. If you intend
              * to drive one connector only, then you can skip this
@@ -74,10 +71,8 @@ description: "drm-kms – Kernel Mode-Setting"
                 return res-&gt;crtcs[j];
             }
         }
-
         drmModeFreeEncoder(enc);
     }
-
     /* cannot find a suitable CRTC */
     return -ENOENT;
 }</code></pre>

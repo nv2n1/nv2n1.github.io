@@ -11,34 +11,20 @@ std::experimental::ranges::EqualityComparable,std::experimental::ranges::Equalit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T&gt;
     (1)(ranges TS)
-
         concept bool EqualityComparable = WeaklyEqualityComparableWith&lt;T, T&gt;;
-
 template &lt;class T, class U&gt;
-
 concept bool EqualityComparableWith =
-
     EqualityComparable&lt;T&gt; &amp;&amp;
-
         EqualityComparable&lt;U&gt; &amp;&amp;
-
             CommonReference&lt;
-
                 const std::remove_reference_t&lt;T&gt; &amp;, (2)(ranges TS)
-
                                                         const std::remove_reference_t&lt;U&gt; &amp;&gt; &amp;&amp;
-
                 EqualityComparable&lt;
-
                     ranges::common_reference_t&lt;
-
                         const std::remove_reference_t&lt;T&gt; &amp;,
-
                         const std::remove_reference_t&lt;U&gt; &amp;&gt;&gt; &amp;&amp;
-
                     WeaklyEqualityComparableWith&lt;T, U&gt;;</code></pre> 
 1) The concept EqualityComparable&lt;T&gt; specifies that the comparison operators == and != on T reflects equality: == yields true if and only if the operands are equal. 
 EqualityComparable&lt;T&gt; is satisfied only if, given objects a and b of type T, bool(a == b) is true if and only if a and b are equal. Together with the requirement that a == b is equality preserving, this implies that == is symmetric and transitive, and further that == is reflexive for all objects a that are equal to at least one other object. 

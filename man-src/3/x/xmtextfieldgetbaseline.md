@@ -15,8 +15,8 @@ description: "XmTextFieldGetBaseline — A TextField function that accesses the 
 <h2>Description</h2>
 <p><code>XmTextFieldGetBaseline</code> accesses the <i>y</i> position of the baseline in the TextField widget, relative to the <i>y</i> position of the top of the widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the TextField widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the TextField widget ID</dd></dl>
 <p> For a complete definition of TextField and its associated resources, see <code><a href="/docs/linux/man/3-xmtextfield/">XmTextField</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns an integer value that indicates the <i>y</i> position of the baseline in the TextField widget. The calculation takes into account the margin height, shadow thickness, highlight thickness, and font ascent of the first font (set) in the fontlist used for drawing text. In this calculation, the <i>y</i> position of the top of the widget is 0 (zero).</p>

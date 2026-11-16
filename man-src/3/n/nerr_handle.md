@@ -10,7 +10,6 @@ description: "nerr_handle"
 <p>nerr_handle</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;util/neo_err.h&gt;
-
 int nerr_handle(NEOERR **err, NERR_TYPE type);
 </code></pre>
 <h2>Arguments</h2>

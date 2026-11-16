@@ -15,15 +15,15 @@ check_conflicting_open - see if the given dentry points to a file that has an ex
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>dentry to check</dl>
+<dl><dd></dd><dd>dentry to check</dd></dl>
  
 
  <i>arg</i>
-<dl><dd>type of lease that we're trying to acquire</dl>
+<dl><dd>type of lease that we're trying to acquire</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>current lock flags</dl>
+<dl><dd>current lock flags</dd></dl>
 
 <h2>Description</h2>
 

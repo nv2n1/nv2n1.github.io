@@ -23,12 +23,12 @@ description: "XmVaCreateCascadeButton, XmVaCreateManagedCascadeButton — A Casc
 <p> The <code>XmVaCreateCascadeButton</code> function is a convenience routine that calls <code>XtCreateWidget</code>. </p>
 <p> The <code>XmVaCreateManagedCascadeButton</code> function is a convenience routine that calls <code>XtCreateManagedWidget</code>. </p>
 <dl>
-<dt><i>parent</i></p>
-<dd>Specifies the parent widget ID.</p>
-<dt><i>name</i></p>
-<dd>Specifies the name of the created widget.</p>
-<dt><i>&#8230;</i></p>
-<dd>Specifies the variable argument list to override the resource defaults.</dl>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget.</dd>
+<dt><i>&#8230;</i></dt>
+<dd>Specifies the variable argument list to override the resource defaults.</dd></dl>
 <p> For a complete definition of CascadeButton and its associated resources, see <code><a href="/docs/linux/man/3-xmcascadebutton/">XmCascadeButton</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the CascadeButton widget ID.</p>

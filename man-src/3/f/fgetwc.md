@@ -25,8 +25,8 @@ wint_t getwc(FILE *stream);
 <h2>ERRORS</h2>
 <p> Apart from the usual ones, there is</p>
 <dl>
-<dt><code>EILSEQ</code></p>
-<dd> The data obtained from the input stream does not form a valid character.</dl>
+<dt><code>EILSEQ</code></dt>
+<dd> The data obtained from the input stream does not form a valid character.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

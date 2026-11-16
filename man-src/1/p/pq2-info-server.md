@@ -17,22 +17,22 @@ description: "pq2-info-server – Display info about the datasets on a given ser
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>server</i></p>
-<dd> Server for which the information is wanted.</dl>
+<dt><i>server</i></dt>
+<dd> Server for which the information is wanted.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>-k</code>, <code>&#8211;keep</code></p>
-<dd> Keep the temporary files created during the analysis under $TMPDIR</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode</p>
-<dt><code>&#8211;server</code>=&lt;<i>server</i>&gt;</p>
-<dd> Alternative way to define the server.</p>
-<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</p>
-<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep the temporary files created during the analysis under $TMPDIR</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>&#8211;server</code>=&lt;<i>server</i>&gt;</dt>
+<dd> Alternative way to define the server.</dd>
+<dt><code>-u</code> &lt;<i>serverurl</i>&gt;, <code>&#8211;url</code>=&lt;<i>serverurl</i>&gt;</dt>
+<dd> URL of the PROOF master or data server providing the information; for data servers, it must include the directory. Can also be specified via the environment variables PQ2PROOFURL or PQ2DSSRVURL (see ENVIRONMENT VARIABLES).&quot;</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; defualt is /tmp/&lt;username&gt;.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> See <i>setup-pq2</i>(1).</p>
 <h2>SEE ALSO</h2>

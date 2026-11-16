@@ -10,146 +10,42 @@ description: "vomsdata –"
 <p>vomsdata &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;voms_api.h&gt;
-
 Public Member Functions
 vomsdata (std::string voms_dir='', std::string cert_dir='')
-
-
-
 bool LoadSystemContacts (std::string dir='')
-
-
-
 bool LoadUserContacts (std::string dir='')
-
-
-
 std::vector&lt; contactdata &gt; FindByAlias (std::string alias)
-
-
-
 std::vector&lt; contactdata &gt; FindByVO (std::string vo)
-
-
-
 void Order (std::string att)
-
-
-
 void ResetOrder (void)
-
-
-
 void AddTarget (std::string target)
-
-
-
 std::vector&lt; std::string &gt; ListTargets (void)
-
-
-
 void ResetTargets (void)
-
-
-
 std::string ServerErrors (void)
-
-
-
 bool Retrieve (X509 *cert, STACK_OF(X509)*chain, recurse_type how=RECURSE_CHAIN)
-
-
-
 bool Contact (std::string hostname, int port, std::string servsubject, std::string command)
-
-
-
 bool Contact (std::string hostname, int port, std::string servsubject, std::string command, int timeout)
-
-
-
 bool ContactRaw (std::string hostname, int port, std::string servsubject, std::string command, std::string &amp;raw, int &amp;version)
-
-
-
 bool ContactRaw (std::string hostname, int port, std::string servsubject, std::string command, std::string &amp;raw, int &amp;version, int timeout)
-
-
-
 void SetVerificationType (verify_type how)
-
-
-
 void SetLifetime (int lifetime)
-
-
-
 bool Import (std::string buffer)
-
-
-
 bool Export (std::string &amp;data)
-
-
-
 bool DefaultData (voms &amp;)
-
-
-
 std::string ErrorMessage (void)
-
-
-
 bool RetrieveFromCtx (gss_ctx_id_t context, recurse_type how)
-
-
-
 bool RetrieveFromCred (gss_cred_id_t credential, recurse_type how)
-
-
-
 bool Retrieve (X509_EXTENSION *ext)
-
-
-
 bool RetrieveFromProxy (recurse_type how)
-
-
-
 bool Retrieve (FILE *file, recurse_type how)
-
-
-
 bool Retrieve (AC *ac)
-
-
-
 ~vomsdata ()
-
-
-
 vomsdata (const vomsdata &amp;)
-
-
-
 void SetRetryCount (int retryCount)
-
-
-
 void SetVerificationTime (time_t)
-
-
-
 bool LoadCredentials (X509 *, EVP_PKEY *, STACK_OF(X509)*)
-
-
-
 bool ContactRESTRaw (const std::string &amp;, int, const std::string &amp;, std::string &amp;, int, int)
-
-
-
 Data Fields</code></pre>
 <p> <code>verror_type</code> <code>error</code> </p>
 <p> std::vector&lt; <code>voms</code> &gt; <code>data</code> </p>
@@ -162,7 +58,7 @@ Data Fields</code></pre>
 <p><code>Parameters:</code></p>
 <dl>
 <dd><i>voms_dir</i> The directory which contains the certificate of the VOMS server<br />
- <i>cert_dir</i> The directory which contains the certificate of the CA</dl>
+ <i>cert_dir</i> The directory which contains the certificate of the CA</dd></dl>
 <p> If voms_dir is empty, the value of the environment variable X509_VOMS_DIR is taken. </p>
 <p> If cert_dir is empty, the value of the environment variable X509_CERT_DIR is taken.</p>
 <h3>vomsdata::~vomsdata ()</h3>
@@ -212,10 +108,10 @@ aram timeout Timeout for server connections in seconds
  <i>servsubject</i> the subject of the server&#8217;s certificate<br />
  <i>command</i> the command sent to the server<br />
  <i>raw</i> OUTPUT PARAMETER the answer from the server<br />
- <i>version</i> OUTPUT PARAMETER the version of the answer</dl>
+ <i>version</i> OUTPUT PARAMETER the version of the answer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::ContactRaw (std::stringhostname, intport, std::stringservsubject, std::stringcommand, std::string &amp;raw, int &amp;version, inttimeout)</h3>
 <p>Same as Contact, however it does not start the verification process, and the message receviedfrom the server is not parsed. </p>
 <p> <code>Parameters:</code></p>
@@ -226,10 +122,10 @@ aram timeout Timeout for server connections in seconds
  <i>command</i> the command sent to the server<br />
  <i>raw</i> OUTPUT PARAMETER the answer from the server<br />
  <i>version</i> OUTPUT PARAMETER the version of the answer<br />
- <i>timeout</i> Timeout for server connections in seconds</dl>
+ <i>timeout</i> Timeout for server connections in seconds</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::ContactRESTRaw (const std::string &amp;, int, const std::string &amp;, std::string &amp;, int, int)</h3>
 <h3>bool vomsdata::DefaultData (<code>voms</code> &amp;)</h3>
 <p>Get the default data extension from those present in the pseudo certificate</p>
@@ -238,41 +134,41 @@ aram timeout Timeout for server connections in seconds
 <p>&nbsp;<wbr> </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A string containg the error message.</dl>
+<dd>A string containg the error message.</dd></dl>
 <h3>bool vomsdata::Export (std::string &amp;data)</h3>
 <p>Exports data from <code>vomsdata::data</code> to the format used for inclusion into a certificate. </p>
 <p> The function doesn&#8217;t verify the data </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>data</i> The certificate extension</dl>
+<dd><i>data</i> The certificate extension</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Failure (F) or Success (T)</dl>
+<dd>Failure (F) or Success (T)</dd></dl>
 <h3>std::vector&lt;<code>contactdata</code>&gt; vomsdata::FindByAlias (std::stringalias)</h3>
 <p>Finds servers which share a common alias. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>alias</i> The alias to look for.</dl>
+<dd><i>alias</i> The alias to look for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The servers found. The order in which they are returned is unspecified.</dl>
+<dd>The servers found. The order in which they are returned is unspecified.</dd></dl>
 <h3>std::vector&lt;<code>contactdata</code>&gt; vomsdata::FindByVO (std::stringvo)</h3>
 <p>Finds servers which serve a common VO </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vo</i> The VO name to look for.</dl>
+<dd><i>vo</i> The VO name to look for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The servers found. The order in which they are returned is unspecified.</dl>
+<dd>The servers found. The order in which they are returned is unspecified.</dd></dl>
 <h3>bool vomsdata::Import (std::stringbuffer)</h3>
 <p>Converts data from the format used for inclusion into a certificate to the internal format </p>
 <p> The function does verify the data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buffer</i> contains the data to be converted</dl>
+<dd><i>buffer</i> contains the data to be converted</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Failure (F) or Success (T)</dl>
+<dd>Failure (F) or Success (T)</dd></dl>
 <h3>std::vector&lt;std::string&gt; vomsdata::ListTargets (void)</h3>
 <p>Returns the list of targets.</p>
 <h3>bool vomsdata::LoadCredentials (X509 *, EVP_PKEY *, STACK_OF(X509)*)</h3>
@@ -280,20 +176,20 @@ aram timeout Timeout for server connections in seconds
 <p>Loads the system wide configuration files. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>dir</i> The directory in which the files are stored.</dl>
+<dd><i>dir</i> The directory in which the files are stored.</dd></dl>
 <p> If dir is empty, defaults to /opt/edg/etc/vomses. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if all went OK, false otherwise.</dl>
+<dd>True if all went OK, false otherwise.</dd></dl>
 <h3>bool vomsdata::LoadUserContacts (std::stringdir = &#8221;)</h3>
 <p>Loads the user-specific configuration files. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>dir</i> The directory in which the files are stored.</dl>
+<dd><i>dir</i> The directory in which the files are stored.</dd></dl>
 <p> If dir is empty, defaults to $VOMS_USERCONF. If this is empty too, defaults to $HOME/.edg/vomses, or to ~/.edg/vomses as a last resort. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if all went OK, false otherwise.</dl>
+<dd>True if all went OK, false otherwise.</dd></dl>
 <h3>void vomsdata::Order (std::stringatt)</h3>
 <p>Sets up the ordering of the results. </p>
 <pre> Defines the ordering of the data returned by Contact(). Results are
@@ -311,81 +207,81 @@ aram att The attribute to be ordered.</pre>
 <dl>
 <dd><i>cert</i> The certificate with the VOMS extensions<br />
  <i>chain</i> The chain of the validation certificates (only the intermediate ones)<br />
- <i>how</i> Recursion type</dl>
+ <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::Retrieve (X509_EXTENSION *ext)</h3>
 <pre> Gets VOMS information from the given extension</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ext</i> The extension to parse.</dl>
+<dd><i>ext</i> The extension to parse.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::Retrieve (FILE *file, <code>recurse_type</code>how)</h3>
 <p>Gets VOMS information from a proxy saved as a file. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>file</i> the file name<br />
- <i>how</i> Recursion type</dl>
+ <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <p> Note: Does NOT verify that the proxy is valid. Such verification must be obtained through other means.</p>
 <h3>bool vomsdata::Retrieve (AC *ac)</h3>
 <pre> Gets VOMS information from the AC</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ac</i> The extension to parse.</dl>
+<dd><i>ac</i> The extension to parse.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::RetrieveFromCred (<code>gss_cred_id_t</code>credential, <code>recurse_type</code>how)</h3>
 <pre> Gets VOMS information from the given globus credential</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>credential</i> The credential from which to retrieve the certificate.<br />
- <i>how</i> Recursion type</dl>
+ <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::RetrieveFromCtx (<code>gss_ctx_id_t</code>context, <code>recurse_type</code>how)</h3>
 <pre> Gets VOMS information from the given globus context</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>context</i> The context from which to retrieve the certificate.<br />
- <i>how</i> Recursion type</dl>
+ <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>bool vomsdata::RetrieveFromProxy (<code>recurse_type</code>how)</h3>
 <pre> Gets VOMS information from an existing globus proxy</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>how</i> Recursion type</dl>
+<dd><i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>failure (F) or success (T)</dl>
+<dd>failure (F) or success (T)</dd></dl>
 <h3>std::string vomsdata::ServerErrors (void)</h3>
 <p>Gets the error message returned by the server</p>
 <h3>void vomsdata::SetLifetime (intlifetime)</h3>
 <p>Set requested lifetime for the <code>Contact()</code> call. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>lifetime</i> Requested lifetime, in seconds</dl>
+<dd><i>lifetime</i> Requested lifetime, in seconds</dd></dl>
 <h3>void vomsdata::SetRetryCount (intretryCount)</h3>
 <h3>void vomsdata::SetVerificationTime (time_t)</h3>
 <h3>void vomsdata::SetVerificationType (<code>verify_type</code>how)</h3>
 <p>Sets the type of verification done on the data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>how</i> The type of verification.</dl>
+<dd><i>how</i> The type of verification.</dd></dl>
 <h2>Field Documentation</h2>
 <h3>std::vector&lt;<code>voms</code>&gt; vomsdata::data</h3>
 <p>User&#8217;s info, as in the certificate extension. It may contain data gathered from more than one VOMS server, </p>

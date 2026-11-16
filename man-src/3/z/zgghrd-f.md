@@ -41,10 +41,10 @@ description: "zgghrd.f –"
  If Q1 is the unitary matrix from the QR factorization of B in the
  original equation A*x = lambda*B*x, then ZGGHRD reduces the original
  problem to generalized Hessenberg form.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>COMPQ</i> </p>
+<dd><i>COMPQ</i> </dd>
 <pre> COMPQ is CHARACTER*1
  = 'N': do not compute Q;
  = 'I': Q is initialized to the unit matrix, and the
@@ -116,20 +116,21 @@ description: "zgghrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
 <pre> This routine reduces A to Hessenberg and B to triangular form by
  an unblocked reduction, as described in &lt;em&gt;Matrix_Computations&lt;/em&gt;,
  by Golub and van Loan (Johns Hopkins Press).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 204 of file zgghrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

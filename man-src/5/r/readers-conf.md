@@ -72,24 +72,24 @@ description: "readers.conf – Access control and configuration for nnrpd"
 <h2>Auth Group Parameters</h2>
 <p>An auth group without at least one of the res:, auth:, perl_auth:, python_auth:, or default: parameters makes no sense (and in practice will just be ignored).</p>
 <dl>
-<dt><code>hosts:</code></p>
-<dd>A comma-separated list of remote hosts, wildmat patterns matching either hostnames or <font SIZE="-1">IP</font> addresses, or <font SIZE="-1">IP</font> netblocks specified in <font SIZE="-1">CIDR</font> notation. If a user connects from a host that doesn&#8217;t match this parameter, this auth group will not match the connection and is ignored. </p>
+<dt><code>hosts:</code></dt>
+<dd>A comma-separated list of remote hosts, wildmat patterns matching either hostnames or <font SIZE="-1">IP</font> addresses, or <font SIZE="-1">IP</font> netblocks specified in <font SIZE="-1">CIDR</font> notation. If a user connects from a host that doesn&#8217;t match this parameter, this auth group will not match the connection and is ignored. </dd>
 <p> Note that if you have a large number of patterns that can&#8217;t be merged into broader patterns (such as a large number of individual systems scattered around the net that should have access), the hosts: parameter may exceed the maximum line length of 8,192 characters. In that case, you&#8217;ll need to break that auth group into multiple auth groups, each with a portion of the hosts listed in its hosts: parameter, and each assigning the same user identity. </p>
 <p> All hosts match if this parameter is not given.</p>
-<dt><code>localaddress:</code></p>
-<dd>A comma-separated list of local host or address patterns with the same syntax as the same as with the hosts: parameter. If this parameter is specified, its auth group will only match connections made to a matching local interface. (Obviously, this is only useful for servers with multiple interfaces.) </p>
+<dt><code>localaddress:</code></dt>
+<dd>A comma-separated list of local host or address patterns with the same syntax as the same as with the hosts: parameter. If this parameter is specified, its auth group will only match connections made to a matching local interface. (Obviously, this is only useful for servers with multiple interfaces.) </dd>
 <p> All local addresses match if this parameter is not given.</p>
-<dt><code>res:</code></p>
-<dd>A simple command line for a user resolver (shell metacharacters are not supported). If a full path is not given, the program executed must be in the <i>pathbin</i>/auth/resolv directory. A resolver is an authentication program which attempts to figure out the identity of the connecting user using nothing but the connection information (in other words, the user has not provided a username and password). An examples of a resolver would be a program that assigns an identity from an ident callback or from the user&#8217;s hostname. </p>
+<dt><code>res:</code></dt>
+<dd>A simple command line for a user resolver (shell metacharacters are not supported). If a full path is not given, the program executed must be in the <i>pathbin</i>/auth/resolv directory. A resolver is an authentication program which attempts to figure out the identity of the connecting user using nothing but the connection information (in other words, the user has not provided a username and password). An examples of a resolver would be a program that assigns an identity from an ident callback or from the user&#8217;s hostname. </dd>
 <p> One auth group can have multiple res: parameters, and they will be tried in the order they&#8217;re listed. The results of the first successful one will be used. </p>
 <p> Alternatively, a res block can be used instead of a res: paramater. The recognized parameters in such res blocks are:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>log:</code></p>
-<dd>A string to log in <i>pathlog</i>/news.notice (with <tt>&quot;res also-log:&quot;</tt> prepended) before the resolver is tried. One res group can have multiple log: parameters, and they will be logged in the order they&#8217;re listed.</p>
-<dt><code>program:</code></p>
-<dd>This parameter is mandatory in a res block. Its meaning is the same as the res: parameter used directly in an auth block. </p>
+</dd><dl>
+<dt><code>log:</code></dt>
+<dd>A string to log in <i>pathlog</i>/news.notice (with <tt>&quot;res also-log:&quot;</tt> prepended) before the resolver is tried. One res group can have multiple log: parameters, and they will be logged in the order they&#8217;re listed.</dd>
+<dt><code>program:</code></dt>
+<dd>This parameter is mandatory in a res block. Its meaning is the same as the res: parameter used directly in an auth block. </dd>
 <pre> auth &lt;auth-name&gt; {
  res: &lt;res-program&gt;
  }</pre>
@@ -102,77 +102,77 @@ description: "readers.conf – Access control and configuration for nnrpd"
 </dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><code>auth:</code></p>
-<dd>A simple command line for a user authenticator (shell metacharacters are not supported). If a full path is not given, the program executed must be located in the <i>pathbin</i>/auth/passwd directory. An authenticator is a program used to handle a user-supplied username and password, via a mechanism such as <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">USER/PASS</font>. Like with res:, one auth group can have multiple auth: parameters; they will be tried in order and the results of the first successful one will be used. See also perl_auth: below. </p>
+<dd></dd></dl>
+<dt><code>auth:</code></dt>
+<dd>A simple command line for a user authenticator (shell metacharacters are not supported). If a full path is not given, the program executed must be located in the <i>pathbin</i>/auth/passwd directory. An authenticator is a program used to handle a user-supplied username and password, via a mechanism such as <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">USER/PASS</font>. Like with res:, one auth group can have multiple auth: parameters; they will be tried in order and the results of the first successful one will be used. See also perl_auth: below. </dd>
 <p> The most common authenticator to use is <i><a href="/docs/linux/man/8-ckpasswd/">ckpasswd</a></i>(8); see its man page for more information.</p>
-<dt><code>perl_auth:</code></p>
-<dd>A path to a perl script for authentication. The perl_auth: parameter works exactly like auth:, except that it calls the named script using the perl hook rather then an external program. Multiple/mixed use of the auth, perl_auth, and python_auth parameters is permitted within any auth group; each line is tried in the order it appears. perl_auth: has more power than auth: in that it provides the authentication program with additional information about the client and the ability to return an error string and a username. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Perl support (<code>&#8211;with-perl</code> passed to configure). More information may be found in <i>doc/hook-perl</i>.</p>
-<dt><code>python_auth:</code></p>
-<dd>A Python script for authentication. The <i>python_auth</i> parameter works exactly like <i>auth</i>, except that it calls the named script (without its <tt>&quot;.py&quot;</tt> extension) using the Python hook rather then an external program. Multiple/mixed use of the <i>auth</i>, <i>perl_auth</i>, and <i>python_auth</i> parameters is permitted within any auth group; each line is tried in the order it appears. <i>python_auth</i> has more power than <i>auth</i> in that it provides the authentication program with additional information about the client and the ability to return an error string and a username. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in <i>doc/hook-python</i>.</p>
-<dt><code>default:</code></p>
-<dd>The default username for connections matching this auth group. This is the username assigned to the user at connection time if all resolvers fail or if there are no res: parameters. Note that it can be either a bare username, in which case default-domain: (if present) is appended after an <tt>&quot;@&quot;</tt>, or a full identity string containing an <tt>&quot;@&quot;</tt>, in which case it will be used verbatim.</p>
-<dt><code>default-domain:</code></p>
-<dd>The default domain string for this auth group. If a user resolver or authenticator doesn&#8217;t provide a domain, or if the default username is used and it doesn&#8217;t contain a <tt>&quot;@&quot;</tt>, this domain is used to form the user identity. (Note that for a lot of setups, it&#8217;s not really necessary for user identities to be qualified with a domain name, in which case there&#8217;s no need to use this parameter.)</p>
-<dt><code>key:</code></p>
-<dd>If this parameter is present, any connection matching this auth group will have its privileges determined only by the subset of access groups containing a matching key parameter.</p>
-<dt><code>require_ssl:</code></p>
-<dd>If set to true, an incoming connection only matches this auth group if it is encrypted using <font SIZE="-1">TLS/SSL</font>, either from the beginning if the <code>-S</code> flag was passed to <code>nnrpd</code> or after a successful use of <font SIZE="-1">STARTTLS</font>. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with <font SIZE="-1">TLS/SSL</font> support (<code>&#8211;with-openssl</code> passed to configure).</p>
-<dt><code>perl_access:</code></p>
-<dd>A path to a perl script for dynamically generating an access group. If an auth group matches successfully and contains a perl_access parameter, then the argument perl script will be used to create an access group. This group will then determine the access rights of the client, overriding any access groups in <i>readers.conf</i>. If and only if a sucessful auth group contains the perl_access parameter, <i>readers.conf</i> access groups are ignored and the client&#8217;s rights are instead determined dynamically. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Perl support (<code>&#8211;with-perl</code> passed to configure). More information may be found in the file <i>doc/hook-perl</i>.</p>
-<dt><code>python_access:</code></p>
-<dd>A Python script for dynamically generating an access group. If an auth group matches successfully and contains a <i>python_access</i> parameter, then the argument script (without its <tt>&quot;.py&quot;</tt> extension) will be used to create an access group. This group will then determine the access rights of the client, overriding any access groups in <i>readers.conf</i>. If and only if a successful auth group contains the <i>python_access</i> parameter, <i>readers.conf</i> access groups are ignored and the client&#8217;s rights are instead determined dynamically. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in the file <i>doc/hook-python</i>.</p>
-<dt><code>python_dynamic:</code></p>
-<dd>A Python script for applying access control dynamically on a per newsgroup basis. If an auth group matches successfully and contains a <i>python_dynamic</i> parameter, then the argument script (without its <tt>&quot;.py&quot;</tt> extension) will be used to determine the clients rights each time the user attempts to view a newsgroup, or read or post an article. Access rights as determined by <i>python_dynamic</i> override the values of access group parameters such as <i>newsgroups</i>, <i>read</i> and <i>post</i>. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in the file <i>doc/hook-python</i>.</dl>
+<dt><code>perl_auth:</code></dt>
+<dd>A path to a perl script for authentication. The perl_auth: parameter works exactly like auth:, except that it calls the named script using the perl hook rather then an external program. Multiple/mixed use of the auth, perl_auth, and python_auth parameters is permitted within any auth group; each line is tried in the order it appears. perl_auth: has more power than auth: in that it provides the authentication program with additional information about the client and the ability to return an error string and a username. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Perl support (<code>&#8211;with-perl</code> passed to configure). More information may be found in <i>doc/hook-perl</i>.</dd>
+<dt><code>python_auth:</code></dt>
+<dd>A Python script for authentication. The <i>python_auth</i> parameter works exactly like <i>auth</i>, except that it calls the named script (without its <tt>&quot;.py&quot;</tt> extension) using the Python hook rather then an external program. Multiple/mixed use of the <i>auth</i>, <i>perl_auth</i>, and <i>python_auth</i> parameters is permitted within any auth group; each line is tried in the order it appears. <i>python_auth</i> has more power than <i>auth</i> in that it provides the authentication program with additional information about the client and the ability to return an error string and a username. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in <i>doc/hook-python</i>.</dd>
+<dt><code>default:</code></dt>
+<dd>The default username for connections matching this auth group. This is the username assigned to the user at connection time if all resolvers fail or if there are no res: parameters. Note that it can be either a bare username, in which case default-domain: (if present) is appended after an <tt>&quot;@&quot;</tt>, or a full identity string containing an <tt>&quot;@&quot;</tt>, in which case it will be used verbatim.</dd>
+<dt><code>default-domain:</code></dt>
+<dd>The default domain string for this auth group. If a user resolver or authenticator doesn&#8217;t provide a domain, or if the default username is used and it doesn&#8217;t contain a <tt>&quot;@&quot;</tt>, this domain is used to form the user identity. (Note that for a lot of setups, it&#8217;s not really necessary for user identities to be qualified with a domain name, in which case there&#8217;s no need to use this parameter.)</dd>
+<dt><code>key:</code></dt>
+<dd>If this parameter is present, any connection matching this auth group will have its privileges determined only by the subset of access groups containing a matching key parameter.</dd>
+<dt><code>require_ssl:</code></dt>
+<dd>If set to true, an incoming connection only matches this auth group if it is encrypted using <font SIZE="-1">TLS/SSL</font>, either from the beginning if the <code>-S</code> flag was passed to <code>nnrpd</code> or after a successful use of <font SIZE="-1">STARTTLS</font>. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with <font SIZE="-1">TLS/SSL</font> support (<code>&#8211;with-openssl</code> passed to configure).</dd>
+<dt><code>perl_access:</code></dt>
+<dd>A path to a perl script for dynamically generating an access group. If an auth group matches successfully and contains a perl_access parameter, then the argument perl script will be used to create an access group. This group will then determine the access rights of the client, overriding any access groups in <i>readers.conf</i>. If and only if a sucessful auth group contains the perl_access parameter, <i>readers.conf</i> access groups are ignored and the client&#8217;s rights are instead determined dynamically. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Perl support (<code>&#8211;with-perl</code> passed to configure). More information may be found in the file <i>doc/hook-perl</i>.</dd>
+<dt><code>python_access:</code></dt>
+<dd>A Python script for dynamically generating an access group. If an auth group matches successfully and contains a <i>python_access</i> parameter, then the argument script (without its <tt>&quot;.py&quot;</tt> extension) will be used to create an access group. This group will then determine the access rights of the client, overriding any access groups in <i>readers.conf</i>. If and only if a successful auth group contains the <i>python_access</i> parameter, <i>readers.conf</i> access groups are ignored and the client&#8217;s rights are instead determined dynamically. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in the file <i>doc/hook-python</i>.</dd>
+<dt><code>python_dynamic:</code></dt>
+<dd>A Python script for applying access control dynamically on a per newsgroup basis. If an auth group matches successfully and contains a <i>python_dynamic</i> parameter, then the argument script (without its <tt>&quot;.py&quot;</tt> extension) will be used to determine the clients rights each time the user attempts to view a newsgroup, or read or post an article. Access rights as determined by <i>python_dynamic</i> override the values of access group parameters such as <i>newsgroups</i>, <i>read</i> and <i>post</i>. This parameter is only valid if <font SIZE="-1">INN</font> is compiled with Python support (<code>&#8211;with-python</code> passed to <code>configure</code>). More information may be found in the file <i>doc/hook-python</i>.</dd></dl>
 <h2>Access Group Parameters</h2>
 <dl>
-<dt><code>users:</code></p>
-<dd>The privileges given by this access group apply to any user identity which matches this comma-separated list of wildmat patterns. If this parameter isn&#8217;t given, the access group applies to all users (and is essentially equivalent to <tt>&quot;users: *&quot;</tt>).</p>
-<dt><code>newsgroups:</code></p>
-<dd>Users that match this access group are allowed to read and post to all newsgroups matching this comma-separated list of wildmat patterns. The empty string is equivalent to <tt>&quot;newsgroups: *&quot;</tt>; if this parameter is missing, the connection will be rejected (unless read: and/or post: are used instead, see below).</p>
-<dt><code>read:</code></p>
-<dd>Like the newsgroups: parameter, but the client is only given permission to read the matching newsgroups. This parameter is often used with post: (below) to specify some read-only groups; it cannot be used in the same access group with a newsgroups: parameter. (If read: is used and post: is missing, the client will have only read-only access.)</p>
-<dt><code>post:</code></p>
-<dd>Like the newsgroups: parameter, but the client is only given permission to post to the matching newsgroups. This parameter is often used with read: (above) to define the patterns for reading and posting separately (usually to give the user permission to read more newsgroups than they&#8217;re permitted to post to). It cannot be used in the same access group with a newsgroups: parameter.</p>
-<dt><code>access:</code></p>
-<dd>A set of letters specifying the permissions granted to the client. The letters are chosen from the following set:</p>
+<dt><code>users:</code></dt>
+<dd>The privileges given by this access group apply to any user identity which matches this comma-separated list of wildmat patterns. If this parameter isn&#8217;t given, the access group applies to all users (and is essentially equivalent to <tt>&quot;users: *&quot;</tt>).</dd>
+<dt><code>newsgroups:</code></dt>
+<dd>Users that match this access group are allowed to read and post to all newsgroups matching this comma-separated list of wildmat patterns. The empty string is equivalent to <tt>&quot;newsgroups: *&quot;</tt>; if this parameter is missing, the connection will be rejected (unless read: and/or post: are used instead, see below).</dd>
+<dt><code>read:</code></dt>
+<dd>Like the newsgroups: parameter, but the client is only given permission to read the matching newsgroups. This parameter is often used with post: (below) to specify some read-only groups; it cannot be used in the same access group with a newsgroups: parameter. (If read: is used and post: is missing, the client will have only read-only access.)</dd>
+<dt><code>post:</code></dt>
+<dd>Like the newsgroups: parameter, but the client is only given permission to post to the matching newsgroups. This parameter is often used with read: (above) to define the patterns for reading and posting separately (usually to give the user permission to read more newsgroups than they&#8217;re permitted to post to). It cannot be used in the same access group with a newsgroups: parameter.</dd>
+<dt><code>access:</code></dt>
+<dd>A set of letters specifying the permissions granted to the client. The letters are chosen from the following set:</dd>
 <dl>
 <dd>
-<dl>
-<dt>R</p>
-<dd>The client may read articles.</p>
-<dt>P</p>
-<dd>The client may post articles.</p>
-<dt>I</p>
-<dd>The client may inject articles with <font SIZE="-1">IHAVE</font>. Note that in order to inject articles with the <font SIZE="-1">IHAVE</font> the user must also have <font SIZE="-1">POST</font> permission (the <tt>&quot;P&quot;</tt> option).</p>
-<dt>A</p>
-<dd>The client may post articles with Approved: headers (in other words, may approve articles for moderated newsgroups). By default, this is not allowed.</p>
-<dt>N</p>
-<dd>The client may use the <font SIZE="-1">NEWNEWS</font> command, overriding the global setting.</p>
-<dt>L</p>
-<dd>The client may post to newsgroups that are set to disallow local posting (status fields <tt>&quot;j&quot;</tt>, <tt>&quot;n&quot;</tt> and <tt>&quot;x&quot;</tt> in the <i><a href="/docs/linux/man/5-active/">active</a></i>(5) file).</dl>
+</dd><dl>
+<dt>R</dt>
+<dd>The client may read articles.</dd>
+<dt>P</dt>
+<dd>The client may post articles.</dd>
+<dt>I</dt>
+<dd>The client may inject articles with <font SIZE="-1">IHAVE</font>. Note that in order to inject articles with the <font SIZE="-1">IHAVE</font> the user must also have <font SIZE="-1">POST</font> permission (the <tt>&quot;P&quot;</tt> option).</dd>
+<dt>A</dt>
+<dd>The client may post articles with Approved: headers (in other words, may approve articles for moderated newsgroups). By default, this is not allowed.</dd>
+<dt>N</dt>
+<dd>The client may use the <font SIZE="-1">NEWNEWS</font> command, overriding the global setting.</dd>
+<dt>L</dt>
+<dd>The client may post to newsgroups that are set to disallow local posting (status fields <tt>&quot;j&quot;</tt>, <tt>&quot;n&quot;</tt> and <tt>&quot;x&quot;</tt> in the <i><a href="/docs/linux/man/5-active/">active</a></i>(5) file).</dd></dl>
 </dl>
 <dl>
-<dd>Note that if this parameter is given, <i>allownewnews</i> in <i>inn.conf</i> is ignored for connections matching this access group and the ability of the client to use <font SIZE="-1">NEWNEWS</font> is entirely determined by the presence of <tt>&quot;N&quot;</tt> in the access string. If you want to support <font SIZE="-1">NEWNEWS</font>, make sure to include <tt>&quot;N&quot;</tt> in the access string when you use this parameter. </p>
+<dd>Note that if this parameter is given, <i>allownewnews</i> in <i>inn.conf</i> is ignored for connections matching this access group and the ability of the client to use <font SIZE="-1">NEWNEWS</font> is entirely determined by the presence of <tt>&quot;N&quot;</tt> in the access string. If you want to support <font SIZE="-1">NEWNEWS</font>, make sure to include <tt>&quot;N&quot;</tt> in the access string when you use this parameter. </dd>
 <p> Note that if this parameter is given and <tt>&quot;R&quot;</tt> isn&#8217;t present in the access string, the client cannot read regardless of newsgroups: or read: parameters. Similarly, if this parameter is given and <tt>&quot;P&quot;</tt> isn&#8217;t present, the client cannot post. This use of access: is deprecated and confusing; it&#8217;s strongly recommended that if the access: parameter is used, <tt>&quot;R&quot;</tt> and <tt>&quot;P&quot;</tt> always be included in the access string and newsgroups:, read:, and post: be used to control access. (To grant read access but no posting access, one can have just a read: parameter and no post: parameter.)</dl>
-<dt><code>key:</code></p>
-<dd>If this parameter is present, this access group is only considered when finding privileges for users matching auth groups with this same key: parameter.</p>
-<dt><code>reject_with:</code></p>
-<dd>If this parameter is present, a client matching this block will be disconnected with a &#8220;Permission denied&#8221; message containing the contents (a &#8220;reason&#8221; string) of this parameter. Some newsreaders will then display the reason to the user.</p>
-<dt><code>max_rate:</code></p>
-<dd>If this parameter is present (and nonzero), it is used for <code>nnrpd</code>&#8216;s rate-limiting code. The client will only be able to download at this speed (in bytes/second). Note that if <font SIZE="-1">TLS/SSL</font> is being used, limiting is applied to the pre-encryption datastream.</p>
-<dt><code>localtime:</code></p>
-<dd>If a Date: header is not included in a posted article, <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) normally adds a new Date: header in <font SIZE="-1">UTC</font>. If this is set to true, the Date: header will be formatted in local time instead. This is a boolean value and the default is false.</p>
-<dt><code>newsmaster:</code></p>
-<dd>Used as the contact address in the help message returned by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), if the virtualhost: parameter is set to true.</p>
-<dt><code>strippath:</code></p>
-<dd>If set to true, any Path: header provided by a user in a post is stripped rather than used as the beginning of the Path: header of the article. This is a boolean value and the default is false.</p>
-<dt><code>perlfilter:</code></p>
-<dd>If set to false, posts made by these users do not pass through the Perl filter even if it is otherwise enabled. This is a boolean value and the default is true.</p>
-<dt><code>pythonfilter:</code></p>
-<dd>If set to false, posts made by these users do not pass through the Python filter even if it is otherwise enabled. This is a boolean value and the default is true.</p>
-<dt><code>virtualhost:</code></p>
-<dd>Set this parameter to true in order to make <code>nnrpd</code> behave as if it is running on a server with a different name than it actually is. If you set this parameter to true, you must also set either pathhost: or domain: in the relevant access group in <i>readers.conf</i> to something different than is set in <i>inn.conf</i>. All articles displayed to clients will then have their Path: and Xref: headers altered to appear to be from the server named in pathhost: or domain: (whichever is set), and posted articles will use that server name in the Path:, Message-ID:, and X-Trace: headers. </p>
+<dt><code>key:</code></dt>
+<dd>If this parameter is present, this access group is only considered when finding privileges for users matching auth groups with this same key: parameter.</dd>
+<dt><code>reject_with:</code></dt>
+<dd>If this parameter is present, a client matching this block will be disconnected with a &#8220;Permission denied&#8221; message containing the contents (a &#8220;reason&#8221; string) of this parameter. Some newsreaders will then display the reason to the user.</dd>
+<dt><code>max_rate:</code></dt>
+<dd>If this parameter is present (and nonzero), it is used for <code>nnrpd</code>&#8216;s rate-limiting code. The client will only be able to download at this speed (in bytes/second). Note that if <font SIZE="-1">TLS/SSL</font> is being used, limiting is applied to the pre-encryption datastream.</dd>
+<dt><code>localtime:</code></dt>
+<dd>If a Date: header is not included in a posted article, <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) normally adds a new Date: header in <font SIZE="-1">UTC</font>. If this is set to true, the Date: header will be formatted in local time instead. This is a boolean value and the default is false.</dd>
+<dt><code>newsmaster:</code></dt>
+<dd>Used as the contact address in the help message returned by <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), if the virtualhost: parameter is set to true.</dd>
+<dt><code>strippath:</code></dt>
+<dd>If set to true, any Path: header provided by a user in a post is stripped rather than used as the beginning of the Path: header of the article. This is a boolean value and the default is false.</dd>
+<dt><code>perlfilter:</code></dt>
+<dd>If set to false, posts made by these users do not pass through the Perl filter even if it is otherwise enabled. This is a boolean value and the default is true.</dd>
+<dt><code>pythonfilter:</code></dt>
+<dd>If set to false, posts made by these users do not pass through the Python filter even if it is otherwise enabled. This is a boolean value and the default is true.</dd>
+<dt><code>virtualhost:</code></dt>
+<dd>Set this parameter to true in order to make <code>nnrpd</code> behave as if it is running on a server with a different name than it actually is. If you set this parameter to true, you must also set either pathhost: or domain: in the relevant access group in <i>readers.conf</i> to something different than is set in <i>inn.conf</i>. All articles displayed to clients will then have their Path: and Xref: headers altered to appear to be from the server named in pathhost: or domain: (whichever is set), and posted articles will use that server name in the Path:, Message-ID:, and X-Trace: headers. </dd>
 <p> Note that setting this parameter requires the server modify all posts before presenting them to the client and therefore may decrease performance slightly.</dl>
 <p> In addition, all of the following parameters are valid in access groups and override the global setting in <i>inn.conf</i>. See <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) for the descriptions of these parameters: </p>
 <pre> addnntppostingdate, addnntppostinghost, backoff_auth, backoff_db,
@@ -184,18 +184,18 @@ description: "readers.conf – Access control and configuration for nnrpd"
 <h2>Summary</h2>
 <p>Here&#8217;s a basic summary of what happens when a client connects:</p>
 <dl>
-<dt>&bull;</p>
-<dd>All auth groups are scanned and the ones that don&#8217;t match the client (due to <i>hosts</i>, <i>localaddress</i>, <i>require_ssl</i>, etc.) are eliminated.</p>
-<dt>&bull;</p>
-<dd>The remaining auth groups are scanned from the last to the first, and an attempt is made to apply it to the current connection. This means running res: programs, if any, and otherwise applying default:. The first auth group (starting from the bottom) to return a valid user is kept as the active auth group.</p>
-<dt>&bull;</p>
-<dd>If no auth groups yield a valid user (none have default: parameters or successful res: programs) but some of the auth groups have auth: lines (indicating a possibility that the user can authenticate and then obtain permissions), the connection is considered to have no valid auth group (which means that the access groups are ignored completely) but the connection isn&#8217;t closed. Instead, 480 is returned for everything until the user authenticates.</p>
-<dt>&bull;</p>
-<dd>When the user authenticates, the auth groups are rescanned, and only the matching ones which contain at least one auth, perl_auth, or python_auth line are considered. These auth groups are scanned from the last to the first, running auth: programs and perl_auth: or python_auth: scripts. The first auth group (starting from the bottom) to return a valid user is kept as the active auth group.</p>
-<dt>&bull;</p>
-<dd>Regardless of how an auth group is established, as soon as one is, that auth group is used to assign a user identity by taking the result of the successful res, auth, perl_auth, or python_auth line (or the default: if necessary), and appending the default-domain if necessary. (If the perl_access: or python_access: parameter is present, see below.)</p>
-<dt>&bull;</p>
-<dd>Finally, an access group is selected by scanning the access groups from bottom up and finding the first match. (If the established auth group contained a perl_access: or python_access line, the dynamically generated access group returned by the script is used instead.) User permissions are granted based on the established access group.</dl>
+<dt>&bull;</dt>
+<dd>All auth groups are scanned and the ones that don&#8217;t match the client (due to <i>hosts</i>, <i>localaddress</i>, <i>require_ssl</i>, etc.) are eliminated.</dd>
+<dt>&bull;</dt>
+<dd>The remaining auth groups are scanned from the last to the first, and an attempt is made to apply it to the current connection. This means running res: programs, if any, and otherwise applying default:. The first auth group (starting from the bottom) to return a valid user is kept as the active auth group.</dd>
+<dt>&bull;</dt>
+<dd>If no auth groups yield a valid user (none have default: parameters or successful res: programs) but some of the auth groups have auth: lines (indicating a possibility that the user can authenticate and then obtain permissions), the connection is considered to have no valid auth group (which means that the access groups are ignored completely) but the connection isn&#8217;t closed. Instead, 480 is returned for everything until the user authenticates.</dd>
+<dt>&bull;</dt>
+<dd>When the user authenticates, the auth groups are rescanned, and only the matching ones which contain at least one auth, perl_auth, or python_auth line are considered. These auth groups are scanned from the last to the first, running auth: programs and perl_auth: or python_auth: scripts. The first auth group (starting from the bottom) to return a valid user is kept as the active auth group.</dd>
+<dt>&bull;</dt>
+<dd>Regardless of how an auth group is established, as soon as one is, that auth group is used to assign a user identity by taking the result of the successful res, auth, perl_auth, or python_auth line (or the default: if necessary), and appending the default-domain if necessary. (If the perl_access: or python_access: parameter is present, see below.)</dd>
+<dt>&bull;</dt>
+<dd>Finally, an access group is selected by scanning the access groups from bottom up and finding the first match. (If the established auth group contained a perl_access: or python_access line, the dynamically generated access group returned by the script is used instead.) User permissions are granted based on the established access group.</dd></dl>
 <h2>Examples</h2>
 <p>Probably the simplest useful example of a complete <i>readers.conf</i>, this gives permissions to read and post to all groups to any connections from the &#8220;example.com&#8221; domain, and no privileges for anyone connecting elsewhere: </p>
 <pre> auth example.com {
@@ -305,14 +305,14 @@ description: "readers.conf – Access control and configuration for nnrpd"
 <p>In general, separate passwords should be used for <font SIZE="-1">NNTP</font> wherever possible; the <font SIZE="-1">NNTP</font> protocol itself does not protect passwords from casual interception, and many implementations (including this one) do not &#8220;lock out&#8221; accounts or otherwise discourage password-guessing attacks. So it is best to ensure that a compromised password has minimal effects. </p>
 <p> Authentication using the <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">USER/PASS</font> commands passes unencrypted over the network. Extreme caution should therefore be used especially with system passwords (e.g. <tt>&quot;auth: ckpasswd -s&quot;</tt>). Passwords can be protected by using <font SIZE="-1">NNTP</font> over <font SIZE="-1">TLS/SSL</font> or through ssh tunnels, and this usage can be enforced by a well-considered server configuration that only permits certain auth groups to be applied in certain cases. Here are some ideas:</p>
 <dl>
-<dt>&bull;</p>
-<dd>To restrict connections on the standard <font SIZE="-1">NNTP</font> port (119) to use <font SIZE="-1">TLS</font> for some (or all) of the auth groups to match, use the <i>require_ssl</i> parameter. Note that a client can use <font SIZE="-1">STARTTLS</font> to negotiate an encrypted connection. A secure layer can also be negotiated during authentication via <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">SASL</font>.</p>
-<dt>&bull;</p>
-<dd>If you consider your local network (but not the internet) secure, have some auth groups with a restrictive hosts: parameter; they would go above, with ones having global applicability below.</p>
-<dt>&bull;</p>
-<dd>Consider running <code>nnrpd</code> with the <code>-S</code> flag (either also with <code>-D</code>, or out of &#8220;super-server&#8221; like <code>inetd</code>) on the <font SIZE="-1">NNTPS</font> port (563) for clients that support <font SIZE="-1">TLS/SSL</font>. See <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) for more details about how to configure that. You can use the <i>require_ssl</i> parameter or the <code>-c</code> flag to specify an alternate <i>readers.conf</i> file if you want a substantially different configuration for this case.</p>
-<dt>&bull;</p>
-<dd>If you want to restrict an auth group to only match loopback connections (for users running newsreaders on localhost or connecting via an ssh tunnel), use the localaddress: parameter.</dl>
+<dt>&bull;</dt>
+<dd>To restrict connections on the standard <font SIZE="-1">NNTP</font> port (119) to use <font SIZE="-1">TLS</font> for some (or all) of the auth groups to match, use the <i>require_ssl</i> parameter. Note that a client can use <font SIZE="-1">STARTTLS</font> to negotiate an encrypted connection. A secure layer can also be negotiated during authentication via <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">SASL</font>.</dd>
+<dt>&bull;</dt>
+<dd>If you consider your local network (but not the internet) secure, have some auth groups with a restrictive hosts: parameter; they would go above, with ones having global applicability below.</dd>
+<dt>&bull;</dt>
+<dd>Consider running <code>nnrpd</code> with the <code>-S</code> flag (either also with <code>-D</code>, or out of &#8220;super-server&#8221; like <code>inetd</code>) on the <font SIZE="-1">NNTPS</font> port (563) for clients that support <font SIZE="-1">TLS/SSL</font>. See <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8) for more details about how to configure that. You can use the <i>require_ssl</i> parameter or the <code>-c</code> flag to specify an alternate <i>readers.conf</i> file if you want a substantially different configuration for this case.</dd>
+<dt>&bull;</dt>
+<dd>If you want to restrict an auth group to only match loopback connections (for users running newsreaders on localhost or connecting via an ssh tunnel), use the localaddress: parameter.</dd></dl>
 <h2>History</h2>
 <p>Written by Aidan Cully &lt;aidan [at] panix.com&gt; for InterNetNews. Substantially expanded by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> readers.conf.pod 9799 2015-03-21 13:31:06Z iulius $</p>

@@ -15,11 +15,11 @@ pskb_trim_rcsum - trim received skb and update checksum
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to trim</dl>
+<dl><dd></dd><dd>buffer to trim</dd></dl>
  
 
  <i>len</i>
-<dl><dd>new length</dl>
+<dl><dd>new length</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,7 +10,6 @@ description: "set_allegro_resource_path – Sets a specific resource search path
 <p>set_allegro_resource_path &#8211; Sets a specific resource search path. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int set_allegro_resource_path(int priority, const char *path);</code></pre>
 <h2>Description</h2>
 <p>Sometimes Allegro doesn&#8217;t look in enough places to find a resource. For those special cases, you can call this function before loading your resource with additional paths to search for. You set up the priorities, higher numbers are searched for first. To modify an already setup path, call this function with the same priority and the new path. To remove an already setup path, call this function with the priority of the path and NULL as the path parameter. Example: </p>

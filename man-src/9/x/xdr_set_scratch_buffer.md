@@ -14,13 +14,13 @@ description: "xdr_set_scratch_buffer – Attach a scratch buffer for decoding da
 <p><i>xdr</i></p>
 <dl>
 <dd>
-<dd>pointer to xdr_stream struct</dl>
+</dd><dd>pointer to xdr_stream struct</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>pointer to an empty buffer</dl>
+<dd>pointer to an empty buffer</dd></dl>
 <p> <i>buflen</i></p>
 <dl>
-<dd>size of &#8216;buf&#8217;</dl>
+<dd>size of &#8216;buf&#8217;</dd></dl>
 <h2>Description</h2>
 <p>The scratch buffer is used when decoding from an array of pages. If an <code>xdr_inline_decode</code> call spans across page boundaries, then we copy the data into the scratch buffer in order to allow linear access.</p>
 <h2>Copyright</h2>

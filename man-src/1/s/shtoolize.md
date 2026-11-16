@@ -41,14 +41,14 @@ description: "shtoolize – Build individual GNU shtool scripts"
 <h2>OPTIONS</h2>
 <p> The following command line options exist:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Displays a short help page describing the usage of <code>shtoolize</code>.</p>
-<dt><code>-v</code></p>
-<dd> Displays the version number of <code>shtoolize</code>/<code>shtool</code>.</p>
-<dt><code>-q</code></p>
-<dd> Displays no processing information.</p>
-<dt><code>-o</code> <i>script</i></p>
-<dd> Writes the output to file <i>script</i> instead to file &#8220;<tt>&quot;shtool&quot;</tt>&#8221;.</dl>
+<dt><code>-h</code></dt>
+<dd> Displays a short help page describing the usage of <code>shtoolize</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Displays the version number of <code>shtoolize</code>/<code>shtool</code>.</dd>
+<dt><code>-q</code></dt>
+<dd> Displays no processing information.</dd>
+<dt><code>-o</code> <i>script</i></dt>
+<dd> Writes the output to file <i>script</i> instead to file &#8220;<tt>&quot;shtool&quot;</tt>&#8221;.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The typical free software package which is based on <font SIZE="-1">GNU </font><code>libtool</code> and <font SIZE="-1">GNU </font><code>shtool</code> one uses a <tt>&quot;Makefile&quot;</tt> entry like the following: </p>
 <pre>

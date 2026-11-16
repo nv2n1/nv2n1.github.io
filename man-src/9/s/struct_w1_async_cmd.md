@@ -16,14 +16,14 @@ description: "struct_w1_async_cmd – execute callback from the w1_process kthre
 <h2>Members</h2>
 <p>async_entry</p>
 <dl>
-<dd>link entry</dl>
+<dd>link entry</dd></dl>
 <p> cb</p>
 <dl>
-<dd>callback function, must list_del and destroy this list before returning</dl>
+<dd>callback function, must list_del and destroy this list before returning</dd></dl>
 <h2>Description</h2>
 <p>When inserted into the w1_master async_list, w1_process will execute the callback. Embed this into the structure with the command details.</p>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,18 +15,18 @@ description: "file65 – print information for o65 object files"
 <p> <code>file65</code> prints file information for files in the o65 object format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Print undefined and global labels.</p>
-<dt><code>-P</code></p>
-<dd> Print the segment end addresses (suitable for the <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) command line parameter <code>-b</code>).</p>
-<dt><code>-a offset</code></p>
-<dd> Print <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) &quot;ROMmable&quot; parameter for another file behind this one in the same ROM, located at the specified offset.</p>
-<dt><code>-A offset</code></p>
-<dd> Does the same thing as <code>-a</code> but only prints the starting address of the next file in the ROM.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program. </p>
+<dt><code>-V</code></dt>
+<dd> Print undefined and global labels.</dd>
+<dt><code>-P</code></dt>
+<dd> Print the segment end addresses (suitable for the <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) command line parameter <code>-b</code>).</dd>
+<dt><code>-a offset</code></dt>
+<dd> Print <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) &quot;ROMmable&quot; parameter for another file behind this one in the same ROM, located at the specified offset.</dd>
+<dt><code>-A offset</code></dt>
+<dd> Does the same thing as <code>-a</code> but only prints the starting address of the next file in the ROM.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ldo65/">ldo65</a></code>(1), <code><a href="/docs/linux/man/1-printcbm/">printcbm</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1), <code>dxa</code>(1) </p>

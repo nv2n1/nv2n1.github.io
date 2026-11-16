@@ -15,15 +15,15 @@ seq_write - write arbitrary data to buffer
 <h2>Arguments</h2>
 
 <i>seq</i>
-<dl><dd><dd>seq_file identifying the buffer to which data should be written</dl>
+<dl><dd></dd><dd>seq_file identifying the buffer to which data should be written</dd></dl>
  
 
  <i>data</i>
-<dl><dd>data address</dl>
+<dl><dd>data address</dd></dl>
  
 
  <i>len</i>
-<dl><dd>number of bytes</dl>
+<dl><dd>number of bytes</dd></dl>
 
 <h2>Description</h2>
 

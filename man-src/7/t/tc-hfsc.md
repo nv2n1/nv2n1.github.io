@@ -13,60 +13,60 @@ description: "tc-hfcs – Hierarchical Fair Service Curve"
 <p> In short HFSC aims to:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>1)</code></p>
-<dd>guarantee precise bandwidth and delay allocation for all leaf classes (realtime criterion)</p>
-<dt><code>2)</code></p>
-<dd>allocate excess bandwidth fairly as specified by class hierarchy (linkshare &amp; upperlimit criterion)</p>
-<dt><code>3)</code></p>
-<dd>minimize any discrepancy between the service curve and the actual amount of service provided during linksharing</dl>
+</dd><dl>
+<dt><code>1)</code></dt>
+<dd>guarantee precise bandwidth and delay allocation for all leaf classes (realtime criterion)</dd>
+<dt><code>2)</code></dt>
+<dd>allocate excess bandwidth fairly as specified by class hierarchy (linkshare &amp; upperlimit criterion)</dd>
+<dt><code>3)</code></dt>
+<dd>minimize any discrepancy between the service curve and the actual amount of service provided during linksharing</dd></dl>
 </dl>
 <p> The main &quot;selling&quot; point of HFSC is feature <code>(1)</code>, which is achieved by using nonlinear service curves (more about what it actually is later). This is particularly useful in VoIP or games, where not only a guarantee of consistent bandwidth is important, but also limiting the initial delay of a data stream. Note that it matters only for leaf classes (where the actual queues are) &#8211; thus class hierarchy is ignored in the realtime case. </p>
 <p> Feature <code>(2)</code> is well, obvious &#8211; any algorithm featuring class hierarchy (such as HTB or CBQ) strives to achieve that. HFSC does that well, although you might end with unusual situations, if you define service curves carelessly &#8211; see section CORNER CASES for examples. </p>
 <p> Feature <code>(3)</code> is mentioned due to the nature of the problem. There may be situations where it&#8217;s either not possible to guarantee service of all curves at the same time, and/or it&#8217;s impossible to do so fairly. Both will be explained later. Note that this is mainly related to interior (aka aggregate) classes, as the leafs are already handled by <code>(1)</code>. Still, it&#8217;s perfectly possible to create a leaf class without realtime service, and in such a case the caveats will naturally extend to leaf classes as well.</p>
 <h2>Abbreviations</h2>
 <p>For the remaining part of the document, we&#8217;ll use following shortcuts: </p>
-<pre><dl><dt><dd>RT - realtime
+<pre><dl><dt></dt><dd>RT - realtime
 LS - linkshare
 UL - upperlimit
 SC - service curve
-</dl></pre>
+</dd></dl></pre>
 <h2>Basics Of Hfsc</h2>
 <p>To understand how HFSC works, we must first introduce a service curve. Overall, it&#8217;s a nondecreasing function of some time unit, returning the amount of service (an allowed or allocated amount of bandwidth) at some specific point in time. The purpose of it should be subconsciously obvious: if a class was allowed to transfer not less than the amount specified by its service curve, then the service curve is not violated. </p>
 <p> Still, we need more elaborate criterion than just the above (although in the most generic case it can be reduced to it). The criterion has to take two things into account:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>idling periods</p>
-<dt>&bull;</p>
-<dd>the ability to &quot;look back&quot;, so if during current active period the service curve is violated, maybe it isn&#8217;t if we count excess bandwidth received during earlier active period(s)</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>idling periods</dd>
+<dt>&bull;</dt>
+<dd>the ability to &quot;look back&quot;, so if during current active period the service curve is violated, maybe it isn&#8217;t if we count excess bandwidth received during earlier active period(s)</dd></dl>
 </dl>
 <p> Let&#8217;s define the criterion as follows:</p>
 <dl>
 <dd>
-<pre><dl><dt><code>(1)</code><dd>For each t1, there must exist t0 in set B, so S(t1-t0)~&lt;=~w(t0,t1)</pre>
-</dl>
+<pre></dd><dl><dt><code>(1)</code></dt><dd>For each t1, there must exist t0 in set B, so S(t1-t0)~&lt;=~w(t0,t1)</pre>
+</dd></dl>
 </dl>
 <p> Here &#8216;w&#8217; denotes the amount of service received during some time period between t0 and t1. B is a set of all times, where a session becomes active after idling period (further denoted as &#8216;becoming backlogged&#8217;). For a clearer picture, imagine two situations:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>a)</code></p>
-<dd>our session was active during two periods, with a small time gap between them</p>
-<dt><code>b)</code></p>
-<dd>as in (a), but with a larger gap</dl>
+</dd><dl>
+<dt><code>a)</code></dt>
+<dd>our session was active during two periods, with a small time gap between them</dd>
+<dt><code>b)</code></dt>
+<dd>as in (a), but with a larger gap</dd></dl>
 </dl>
 <p> Consider <code>(a)</code>: if the service received during both periods meets <code>(1)</code>, then all is well. But what if it doesn&#8217;t do so during the 2nd period? If the amount of service received during the 1st period is larger than the service curve, then it might compensate for smaller service during the 2nd period <i>and</i> the gap &#8211; if the gap is small enough. </p>
 <p> If the gap is larger <code>(b)</code> &#8211; then it&#8217;s less likely to happen (unless the excess bandwidth allocated during the 1st part was really large). Still, the larger the gap &#8211; the less interesting is what happened in the past (e.g. 10 minutes ago) &#8211; what matters is the current traffic that just started. </p>
 <p> From HFSC&#8217;s perspective, more interesting is answering the following question: when should we start transferring packets, so a service curve of a class is not violated. Or rephrasing it: How much X() amount of service should a session receive by time t, so the service curve is not violated. Function X() defined as below is the basic building block of HFSC, used in: eligible, deadline, virtual-time and fit-time curves. Of course, X() is based on equation <code>(1)</code> and is defined recursively: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>At the 1st backlogged period beginning function X is initialized to generic service curve assigned to a class</p>
-<dt>&bull;</p>
-<dd>At any subsequent backlogged period, X() is: </p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>At the 1st backlogged period beginning function X is initialized to generic service curve assigned to a class</dd>
+<dt>&bull;</dt>
+<dd>At any subsequent backlogged period, X() is: </dd>
 <pre><code>min(X() from previous period ; w(t0)+S(t-t0) for t&gt;=t0),</code></pre>
 <p>&#8230; where t0 denotes the beginning of the current backlogged period.</dl>
 </dl>
@@ -74,15 +74,15 @@ SC - service curve
 <p> The above generic X() can be one of the following:</p>
 <dl>
 <dd>
-<dl>
-<dt>E()</p>
-<dd>In realtime criterion, selects packets eligible for sending. If none are eligible, HFSC will use linkshare criterion. Eligible time &#8216;et&#8217; is calculated with reference to packets&#8217; heads ( et~=~E^(-1)(w) ). It&#8217;s based on RT service curve, <i>but in case of a convex curve, uses its 2nd slope only.</i></p>
-<dt>D()</p>
-<dd>In realtime criterion, selects the most suitable packet from the ones chosen by E(). Deadline time &#8216;dt&#8217; corresponds to packets&#8217; tails (dt~=~D^(-1)(w+l), where &#8216;l&#8217; is packet&#8217;s length). Based on RT service curve.</p>
-<dt>V()</p>
-<dd>In linkshare criterion, arbitrates which packet to send next. Note that V() is function of a virtual time &#8211; see <code>LINKSHARE CRITERION</code> section for details. Virtual time &#8216;vt&#8217; corresponds to packets&#8217; heads (vt~=~V^(-1)(w)). Based on LS service curve.</p>
-<dt>F()</p>
-<dd>An extension to linkshare criterion, used to limit at which speed linkshare criterion is allowed to dequeue. Fit-time &#8216;ft&#8217; corresponds to packets&#8217; heads as well (ft~=~F^(-1)(w)). Based on UL service curve.</dl>
+</dd><dl>
+<dt>E()</dt>
+<dd>In realtime criterion, selects packets eligible for sending. If none are eligible, HFSC will use linkshare criterion. Eligible time &#8216;et&#8217; is calculated with reference to packets&#8217; heads ( et~=~E^(-1)(w) ). It&#8217;s based on RT service curve, <i>but in case of a convex curve, uses its 2nd slope only.</i></dd>
+<dt>D()</dt>
+<dd>In realtime criterion, selects the most suitable packet from the ones chosen by E(). Deadline time &#8216;dt&#8217; corresponds to packets&#8217; tails (dt~=~D^(-1)(w+l), where &#8216;l&#8217; is packet&#8217;s length). Based on RT service curve.</dd>
+<dt>V()</dt>
+<dd>In linkshare criterion, arbitrates which packet to send next. Note that V() is function of a virtual time &#8211; see <code>LINKSHARE CRITERION</code> section for details. Virtual time &#8216;vt&#8217; corresponds to packets&#8217; heads (vt~=~V^(-1)(w)). Based on LS service curve.</dd>
+<dt>F()</dt>
+<dd>An extension to linkshare criterion, used to limit at which speed linkshare criterion is allowed to dequeue. Fit-time &#8216;ft&#8217; corresponds to packets&#8217; heads as well (ft~=~F^(-1)(w)). Based on UL service curve.</dd></dl>
 </dl>
 <p> Be sure to make clean distinction between session&#8217;s RT, LS and UL service curves and the above &quot;utility&quot; functions.</p>
 <h2>Realtime Criterion</h2>
@@ -90,11 +90,11 @@ SC - service curve
 <p> Interface 10Mbit, two classes, both with two-piece linear service curves:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>1st class &#8211; 2Mbit for 100ms, then 7Mbit (convex &#8211; 1st slope &lt; 2nd slope)</p>
-<dt>&bull;</p>
-<dd>2nd class &#8211; 7Mbit for 100ms, then 2Mbit (concave &#8211; 1st slope &gt; 2nd slope)</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>1st class &#8211; 2Mbit for 100ms, then 7Mbit (convex &#8211; 1st slope &lt; 2nd slope)</dd>
+<dt>&bull;</dt>
+<dd>2nd class &#8211; 7Mbit for 100ms, then 2Mbit (concave &#8211; 1st slope &gt; 2nd slope)</dd></dl>
 </dl>
 <p> Assume for a moment, that we only use D() for both finding eligible packets, and choosing the most fitting one, thus eligible time would be computed as D^(-1)(w) and deadline time would be computed as D^(-1)(w+l). If the 2nd class starts sending packets 1 second after the 1st class, it&#8217;s of course impossible to guarantee 14Mbit, as the interface capability is only 10Mbit. The only workaround in this scenario is to allow the 1st class to send the packets earlier that would normally be allowed. That&#8217;s where separate E() comes to help. Putting all the math aside (see HFSC paper for details), E() for RT concave service curve is just like D(), but for the RT convex service curve &#8211; it&#8217;s constructed using <i>only</i> RT service curve&#8217;s 2nd slope (in our example<br />
 &nbsp;7Mbit). </p>
@@ -108,21 +108,21 @@ SC - service curve
 <p> Imagine an example: class A with two children &#8211; A1 and A2, both with let&#8217;s say 10Mbit SCs. If A2 is idle, A1 receives all the bandwidth of A (and update its V() in the process). When A2 becomes active, A1&#8217;s virtual time is already <i>far</i> later than A2&#8217;s one. Considering the type of decision made by LS criterion, A1 would become idle for a long time. We can workaround this situation by adjusting virtual time of the class becoming active &#8211; we do that by getting such time &quot;up to date&quot;. HFSC uses a mean of the smallest and the biggest virtual time of currently active children fit for sending. As it&#8217;s not real time anymore (excluding trivial case of situation where all classes become active at the same time, and never become idle), it&#8217;s called virtual time. </p>
 <p> Such approach has its price though. The problem is analogous to what was presented in previous section and is caused by non-linearity of service curves:</p>
 <dl>
-<dt>1)</p>
-<dd>either it&#8217;s impossible to guarantee service curves and satisfy fairness during certain time periods: </p>
+<dt>1)</dt>
+<dd>either it&#8217;s impossible to guarantee service curves and satisfy fairness during certain time periods: </dd>
 <dl>
-<dd>Recall the example from RT section, slightly modified (with 3Mbit slopes instead of 2Mbit ones): </p>
+<dd>Recall the example from RT section, slightly modified (with 3Mbit slopes instead of 2Mbit ones): </dd>
 <dl>
-<dt>&bull;</p>
-<dd>1st class &#8211; 3Mbit for 100ms, then 7Mbit (convex &#8211; 1st slope &lt; 2nd slope)</p>
-<dt>&bull;</p>
-<dd>2nd class &#8211; 7Mbit for 100ms, then 3Mbit (concave &#8211; 1st slope &gt; 2nd slope) </p>
+<dt>&bull;</dt>
+<dd>1st class &#8211; 3Mbit for 100ms, then 7Mbit (convex &#8211; 1st slope &lt; 2nd slope)</dd>
+<dt>&bull;</dt>
+<dd>2nd class &#8211; 7Mbit for 100ms, then 3Mbit (concave &#8211; 1st slope &gt; 2nd slope) </dd>
 </dl>
 <p> They sum up nicely to 10Mbit &#8211; the interface&#8217;s capacity. But if we wanted to only use LS for guarantees and fairness &#8211; it simply won&#8217;t work. In LS context, only V() is used for making decision which class to schedule. If the 2nd class becomes active when the 1st one is in its second slope, the fairness will be preserved &#8211; ratio will be 1:1 (7Mbit:7Mbit), but LS itself is of course unable to guarantee the absolute values themselves &#8211; as it would have to go beyond of what the interface is capable of.</dl>
-<dt>2)</p>
-<dd>and/or it&#8217;s impossible to guarantee service curves of all classes at the same time [fairly or not]: </p>
+<dt>2)</dt>
+<dd>and/or it&#8217;s impossible to guarantee service curves of all classes at the same time [fairly or not]: </dd>
 <dl>
-<dd>This is similar to the above case, but a bit more subtle. We will consider two subtrees, arbitrated by their common (root here) parent: </p>
+<dd>This is similar to the above case, but a bit more subtle. We will consider two subtrees, arbitrated by their common (root here) parent: </dd>
 <pre>R (root) - 10Mbit
 A - 7Mbit, then 3Mbit
 A1 - 5Mbit, then 2Mbit
@@ -201,3 +201,4 @@ tc class add dev eth0 parent 1:0 classid 1:1 hfsc ls m2 2Mbit ul m2 2Mbit</pre>
 <p> Please direct bugreports and patches to: &lt;netdev [at] vger.kernel.org&gt;</p>
 <h2>Author</h2>
 <p>Manpage created by Michal Soltys (soltys [at] ziu.info)</p>
+</p>

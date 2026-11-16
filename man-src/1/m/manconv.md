@@ -16,33 +16,33 @@ description: "manconv – convert manual page from one encoding to another"
 <p> If an encoding declaration is found on the first line of the manual page, that declaration overrides any input encodings specified on <code>manconv</code>&#8216;s command line. Encoding declarations have the following form: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 '\&quot; -*- coding: UTF-8 -*-
 </pre>
-</dl>
+</dd></dl>
 <p> or (if manual page preprocessors are also to be declared): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 '\&quot; t -*- coding: ISO-8859-1 -*-
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> <i>encodings</i>, <code>&#8211;from-code</code> <i>encodings</i></p>
-<dd> Try each of <i>encodings</i> (a colon-separated list) in sequence as the input encoding. The default is to guess likely input encodings based on the file name.</p>
-<dt><code>-t</code> <i>encoding</i>, <code>&#8211;to-code</code> <i>encoding</i></p>
-<dd> Convert the manual page to <i>encoding</i>.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Do not issue error messages when the page cannot be converted.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Print debugging information.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information.</dl>
+<dt><code>-f</code> <i>encodings</i>, <code>&#8211;from-code</code> <i>encodings</i></dt>
+<dd> Try each of <i>encodings</i> (a colon-separated list) in sequence as the input encoding. The default is to guess likely input encodings based on the file name.</dd>
+<dt><code>-t</code> <i>encoding</i>, <code>&#8211;to-code</code> <i>encoding</i></dt>
+<dd> Convert the manual page to <i>encoding</i>.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not issue error messages when the page cannot be converted.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-man-recode/">man-recode</a></i>(1)</p>
 <h2>AUTHOR</h2>

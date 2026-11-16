@@ -11,32 +11,15 @@ description: "sc::RadialIntegrator –"
 <p> An abstract base class for radial integrators.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::EulerMaclaurinRadialIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>RadialIntegrator (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 RadialIntegrator (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual int nr () const =0
-
-
-
 virtual double radial_value (int ir, int nr, double radii, double &amp;multiplier)=0
-
-
-
 Protected Attributes
 int nr_</code></pre>
 <h2>Detailed Description</h2>

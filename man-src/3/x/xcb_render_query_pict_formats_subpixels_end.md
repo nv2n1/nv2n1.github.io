@@ -10,12 +10,7 @@ description: "xcb_render_query_pict_formats –"
 <p>xcb_render_query_pict_formats &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/render.h&gt;
-
-
 Request function
-
-
-
 xcb_render_query_pict_formats_cookie_t xcb_render_query_pict_formats(xcb_connection_t *conn,</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_render_query_pict_formats_reply_t {
@@ -32,40 +27,40 @@ xcb_render_query_pict_formats_cookie_t xcb_render_query_pict_formats(xcb_connect
 } <code>xcb_render_query_pict_formats_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_render_query_pict_formats_reply_t *<code>xcb_render_query_pict_formats_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_render_query_pict_formats_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_render_query_pict_formats_reply_t *<code>xcb_render_query_pict_formats_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_render_query_pict_formats_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>xcb_render_pictforminfo_t *<code>xcb_render_query_pict_formats_formats</code>(const xcb_render_query_pict_formats_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_render_query_pict_formats_formats_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</p>
-<dd>xcb_render_pictforminfo_iterator_t <code>xcb_render_query_pict_formats_formats_iterator</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</p>
-<dd>int <code>xcb_render_query_pict_formats_screens_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</p>
-<dd>xcb_render_pictscreen_iterator_t <code>xcb_render_query_pict_formats_screens_iterator</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</p>
-<dd>uint32_t *<code>xcb_render_query_pict_formats_subpixels</code>(const xcb_render_query_pict_formats_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_render_query_pict_formats_subpixels_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</p>
+<dd>xcb_render_pictforminfo_t *<code>xcb_render_query_pict_formats_formats</code>(const xcb_render_query_pict_formats_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_render_query_pict_formats_formats_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</dd>
+<dd>xcb_render_pictforminfo_iterator_t <code>xcb_render_query_pict_formats_formats_iterator</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_render_query_pict_formats_screens_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</dd>
+<dd>xcb_render_pictscreen_iterator_t <code>xcb_render_query_pict_formats_screens_iterator</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</dd>
+<dd>uint32_t *<code>xcb_render_query_pict_formats_subpixels</code>(const xcb_render_query_pict_formats_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_render_query_pict_formats_subpixels_length</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_render_query_pict_formats_subpixels_end</code>(const xcb_render_query_pict_formats_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_RENDER_QUERY_PICT_FORMATS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>num_formats</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_screens</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_depths</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_visuals</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>num_subpixel</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_RENDER_QUERY_PICT_FORMATS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>num_formats</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_screens</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_depths</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_visuals</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>num_subpixel</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_render_query_pict_formats_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_render_query_pict_formats_reply</i>. </p>

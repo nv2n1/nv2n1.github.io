@@ -56,6 +56,6 @@ description: "QuantLib::SwaptionVolatilityCube – swaption-volatility cube"
 <p>swaption-volatility cube </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>this class is not finalized and its interface might change in subsequent releases.</dl>
+<dd>this class is not finalized and its interface might change in subsequent releases.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

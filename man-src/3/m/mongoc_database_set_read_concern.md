@@ -16,10 +16,10 @@ mongoc_database_set_read_concern (mongoc_database_t *database,
 <p> The default read concern is empty: No readConcern is sent to the server unless explicitly configured. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>read_concern</code></p>
-<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dl>
+<dt><code>read_concern</code></dt>
+<dd>A <code>mongoc_read_concern_t</code> \&amp;.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

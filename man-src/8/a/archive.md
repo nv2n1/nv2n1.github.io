@@ -18,23 +18,23 @@ description: "archive – Usenet article archiver"
 <p>in the archive area. This can be modified with the <code>-c</code> and <code>-f</code> options.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code> <i>archive</i></p>
-<dd>If the <code>-a</code> flag is given, its argument specifies the root of the archive area, instead of <i>patharchive</i> in <i>inn.conf</i>.</p>
-<dt><code>-c</code></p>
-<dd>If the <code>-c</code> flag is given, directory names will be flattened as described under the <code>-f</code> option. Then, additionally, all posts will be concatenated into a single file, appending to that file if it already exists. The file name will be <tt>&quot;YYYYMM&quot;</tt>, formed from the current time when <code>archive</code> is run. In other words, if given an article in comp.sources.unix on December 14th, 1998, the article would be appended to the file: </p>
+<dt><code>-a</code> <i>archive</i></dt>
+<dd>If the <code>-a</code> flag is given, its argument specifies the root of the archive area, instead of <i>patharchive</i> in <i>inn.conf</i>.</dd>
+<dt><code>-c</code></dt>
+<dd>If the <code>-c</code> flag is given, directory names will be flattened as described under the <code>-f</code> option. Then, additionally, all posts will be concatenated into a single file, appending to that file if it already exists. The file name will be <tt>&quot;YYYYMM&quot;</tt>, formed from the current time when <code>archive</code> is run. In other words, if given an article in comp.sources.unix on December 14th, 1998, the article would be appended to the file: </dd>
 <pre> comp.sources.unix/199812</pre>
 <p>in the archive area. </p>
 <p> Articles will be separated by a line containing only <tt>&quot;-----------&quot;</tt>.</p>
-<dt><code>-f</code></p>
-<dd>If the <code>-f</code> flag is used, directory names will be flattened, replacing the slashes with the periods. In other words, article 2211 in comp.sources.unix will be written to: </p>
+<dt><code>-f</code></dt>
+<dd>If the <code>-f</code> flag is used, directory names will be flattened, replacing the slashes with the periods. In other words, article 2211 in comp.sources.unix will be written to: </dd>
 <pre> comp.sources.unix/2211</pre>
 <p>in the archive area.</p>
-<dt><code>-i</code> <i>index</i></p>
-<dd>If the <code>-i</code> flag is used, <code>archive</code> will append one line to the file <i>index</i> for each article that it archives. This line will contain the destination file name, the Message-ID: header, and the Subject: header of the message, separated by spaces. If either header is missing (normally not possible if the article was accepted by <code>innd</code>), it will be replaced by <tt>&quot;&lt;none&gt;&quot;</tt>. The headers will be transformed using the same rules as are used to generate overview data (unfolded and then with tabs, <font SIZE="-1">CR</font>, and <font SIZE="-1">LF</font> replaced by spaces).</p>
-<dt><code>-p</code> <i>pattern</i></p>
-<dd>Limits the targets taken from the Xref: header to the groups specified in <i>pattern</i>. <i>pattern</i> is a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) pattern matching newsgroups that you wish to have <code>archive</code> handle.</p>
-<dt><code>-r</code></p>
-<dd>By default, <code>archive</code> sets its standard error to <i>pathlog</i>/errlog. To suppress this redirection, use the <code>-r</code> flag.</dl>
+<dt><code>-i</code> <i>index</i></dt>
+<dd>If the <code>-i</code> flag is used, <code>archive</code> will append one line to the file <i>index</i> for each article that it archives. This line will contain the destination file name, the Message-ID: header, and the Subject: header of the message, separated by spaces. If either header is missing (normally not possible if the article was accepted by <code>innd</code>), it will be replaced by <tt>&quot;&lt;none&gt;&quot;</tt>. The headers will be transformed using the same rules as are used to generate overview data (unfolded and then with tabs, <font SIZE="-1">CR</font>, and <font SIZE="-1">LF</font> replaced by spaces).</dd>
+<dt><code>-p</code> <i>pattern</i></dt>
+<dd>Limits the targets taken from the Xref: header to the groups specified in <i>pattern</i>. <i>pattern</i> is a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) pattern matching newsgroups that you wish to have <code>archive</code> handle.</dd>
+<dt><code>-r</code></dt>
+<dd>By default, <code>archive</code> sets its standard error to <i>pathlog</i>/errlog. To suppress this redirection, use the <code>-r</code> flag.</dd></dl>
 <h2>Return Value</h2>
 <p>If the input is exhausted, <code>archive</code> will exit with a zero status. If an I/O error occurs, it will try to spool its input, copying it to a file. If there was no input filename, the standard input will be copied to <i>pathoutgoing</i>/archive and the program will exit. If an input filename was given, a temporary file named <i>input</i>.bch (if <i>input</i> is an absolute pathname) or <i>pathoutgoing</i>/<i>input</i>.bch (if the filename does not begin with a slash) is created. Once the input is copied, <code>archive</code> will try to rename this temporary file to be the name of the input file, and then exit.</p>
 <h2>Examples</h2>

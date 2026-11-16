@@ -19,7 +19,8 @@ description: "systemd-hibernate-resume [at] .service, systemd-hibernate-resume â
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-hibernate-resume-generator/">systemd-hibernate-resume-generator</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>swsusp</p>
+<dt> 1.</dt>
+<dd>swsusp</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/power/swsusp.txt">https://www.kernel.org/doc/Documentation/power/swsusp.txt</a></dl>
+<dd><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/power/swsusp.txt">https://www.kernel.org/doc/Documentation/power/swsusp.txt</a></dd></dl>
+</dl>

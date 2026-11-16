@@ -11,15 +11,10 @@ operator==,!=(std::geometric_distribution) - operator==,!=(std::geometric_distri
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class ResultType&gt;
-
 bool operator==(const geometric_distribution&lt;ResultType&gt; &amp;lhs, (1)
-
                                                                    const geometric_distribution&lt;ResultType&gt; &amp;rhs);
-
 template &lt;class ResultType&gt;
-
 bool operator!=(const geometric_distribution&lt;ResultType&gt; &amp;lhs, (2)
-
                                                                    const geometric_distribution&lt;ResultType&gt; &amp;rhs);</code></pre> 
 Compares two distribution objects. Two distribution objects are equal when parameter values and internal state is the same. 
 1) Compares two distribution objects for equality. 

@@ -13,16 +13,16 @@ description: "sordi – Load and re-serialise RDF data"
 <p> sordi [OPTION]&#8230; INPUT BASE_URI </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print the command line options. </p>
-<dt><code>-i SYNTAX</code></p>
-<dd> Read input in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </p>
-<dt><code>-o SYNTAX</code></p>
-<dd> Write output in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </p>
-<dt><code>-s INPUT</code></p>
-<dd> Parse INPUT as a string (terminates options). </p>
-<dt><code>-v</code></p>
-<dd> Display version information and exit. </p>
+<dt><code>-h</code></dt>
+<dd> Print the command line options. </dd>
+<dt><code>-i SYNTAX</code></dt>
+<dd> Read input in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </dd>
+<dt><code>-o SYNTAX</code></dt>
+<dd> Write output in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </dd>
+<dt><code>-s INPUT</code></dt>
+<dd> Parse INPUT as a string (terminates options). </dd>
+<dt><code>-v</code></dt>
+<dd> Display version information and exit. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Sordi was written by David Robillard &lt;d@drobilla.net&gt; </p>

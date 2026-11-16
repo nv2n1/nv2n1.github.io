@@ -15,27 +15,27 @@ snd_card_new - create and initialize a soundcard structure
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>the parent device object</dl>
+<dl><dd></dd><dd>the parent device object</dd></dl>
  
 
  <i>idx</i>
-<dl><dd>card index (address) [0 ... (SNDRV_CARDS-1)]</dl>
+<dl><dd>card index (address) [0 ... (SNDRV_CARDS-1)]</dd></dl>
  
 
  <i>xid</i>
-<dl><dd>card identification (ASCII string)</dl>
+<dl><dd>card identification (ASCII string)</dd></dl>
  
 
  <i>module</i>
-<dl><dd>top level module for locking</dl>
+<dl><dd>top level module for locking</dd></dl>
  
 
  <i>extra_size</i>
-<dl><dd>allocate this extra size after the main soundcard structure</dl>
+<dl><dd>allocate this extra size after the main soundcard structure</dd></dl>
  
 
  <i>card_ret</i>
-<dl><dd>the pointer to store the created card instance</dl>
+<dl><dd>the pointer to store the created card instance</dd></dl>
 
 <h2>Description</h2>
 

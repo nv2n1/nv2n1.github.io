@@ -21,18 +21,18 @@ description: "tcp_table – Postfix client/server table lookup protocol"
 <h2>Request Format</h2>
 <p>The tcp_table protocol supports only the lookup request. The request has the following form:</p>
 <dl>
-<dt><code>get</code> SPACE <i>key</i> NEWLINE</p>
-<dd>Look up data under the specified key.</dl>
+<dt><code>get</code> SPACE <i>key</i> NEWLINE</dt>
+<dd>Look up data under the specified key.</dd></dl>
 <p> Postfix will not generate partial search keys such as domain names without one or more subdomains, network addresses without one or more least-significant octets, or email addresses without the localpart, address extension or domain portion. This behavior is also found with cidr:, pcre:, and regexp: tables.</p>
 <h2>Reply Format</h2>
 <p>Each reply specifies a status code and text. Replies must be no longer than 4096 characters including the newline terminator.</p>
 <dl>
-<dt><code>500</code> SPACE <i>text</i> NEWLINE</p>
-<dd>In case of a lookup request, the requested data does not exist. The text describes the nature of the problem.</p>
-<dt><code>400</code> SPACE <i>text</i> NEWLINE</p>
-<dd>This indicates an error condition. The text describes the nature of the problem. The client should retry the request later.</p>
-<dt><code>200</code> SPACE <i>text</i> NEWLINE</p>
-<dd>The request was successful. In the case of a lookup request, the text contains an encoded version of the requested data.</dl>
+<dt><code>500</code> SPACE <i>text</i> NEWLINE</dt>
+<dd>In case of a lookup request, the requested data does not exist. The text describes the nature of the problem.</dd>
+<dt><code>400</code> SPACE <i>text</i> NEWLINE</dt>
+<dd>This indicates an error condition. The text describes the nature of the problem. The client should retry the request later.</dd>
+<dt><code>200</code> SPACE <i>text</i> NEWLINE</dt>
+<dd>The request was successful. In the case of a lookup request, the text contains an encoded version of the requested data.</dd></dl>
 <h2>Encoding</h2>
 <p>In request and reply parameters, the character %, each non-printing character, and each whitespace character must be replaced by %XX, where XX is the corresponding ASCII hexadecimal character value. The hexadecimal codes can be specified in any case (upper, lower, mixed). </p>
 <p> The Postfix client always encodes a request. The server may omit the encoding as long as the reply is guaranteed to not contain the % or NEWLINE character.</p>

@@ -51,20 +51,20 @@ description: "cpuid – Dump CPUID information for each CPU"
 <h2>OPTIONS</h2>
 <p> <i>cpuid</i> accepts the following command line arguments:</p>
 <dl>
-<dt><i>-1, &#8211;one-cpu</i></p>
-<dd> Display information only for the first CPU. This cuts down on the output on a multiprocessor system, and is useful when certain that all CPUs are identical.</p>
-<dt><i>-f FILE</i>, &#8211;file=<i>FILE</i></p>
-<dd> Read raw hex information from FILE instead of from executions of the cpuid instruction.</p>
-<dt><i>-h, -H, &#8211;help</i></p>
-<dd> Display help information.</p>
-<dt><i>-i, &#8211;inst</i></p>
-<dd> Use the CPUID instruction. The information it provides is reliable. It is not necessary to be root to use this option. (This option is the default.)</p>
-<dt><i>-k, &#8211;kernel</i></p>
-<dd> Use the CPUID kernel module. The information does not seem to be reliable on all combinations of CPU type and kernel version. Typically, it is necessary to be root to use this option.</p>
-<dt><i>-r, &#8211;raw</i></p>
-<dd> Display only raw hex information with no decoding.</p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Display cpuid version.</dl>
+<dt><i>-1, &#8211;one-cpu</i></dt>
+<dd> Display information only for the first CPU. This cuts down on the output on a multiprocessor system, and is useful when certain that all CPUs are identical.</dd>
+<dt><i>-f FILE</i>, &#8211;file=<i>FILE</i></dt>
+<dd> Read raw hex information from FILE instead of from executions of the cpuid instruction.</dd>
+<dt><i>-h, -H, &#8211;help</i></dt>
+<dd> Display help information.</dd>
+<dt><i>-i, &#8211;inst</i></dt>
+<dd> Use the CPUID instruction. The information it provides is reliable. It is not necessary to be root to use this option. (This option is the default.)</dd>
+<dt><i>-k, &#8211;kernel</i></dt>
+<dd> Use the CPUID kernel module. The information does not seem to be reliable on all combinations of CPU type and kernel version. Typically, it is necessary to be root to use this option.</dd>
+<dt><i>-r, &#8211;raw</i></dt>
+<dd> Display only raw hex information with no decoding.</dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Display cpuid version.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> There are numerous cases where there is no way to distinguish between various CPUs in the (synth) information. In some cases, the sizes of caches, number of cores, brand strings, etc., can be used to distinguish multiple CPUs with the same family and model. But there are cases where that information is insufficient. Whenever <i>cpuid</i> is unable to distinguish between multiple CPUs, it will list all known possibilities. </p>
 <p> If you believe that a certain processor should be distinguishable from another and it isn&#8217;t, please inform the author of this tool. </p>
@@ -73,7 +73,7 @@ description: "cpuid – Dump CPUID information for each CPU"
 <p> Information on the CPUID instruction and on specific CPUs is available from the following documents from Intel Corporation &lt;<a rel="nofollow" href="http://www.intel.com/support/processors/index.htm">http://www.intel.com/support/processors/index.htm</a>&gt;, with the specified Document Numbers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  241618: Intel Processor Identification and the CPUID Instruction, Application Note 485<br />
  242480: Pentium Processor Specification Update<br />
  242689: Pentium Pro Processor Specification Update<br />
@@ -189,11 +189,11 @@ description: "cpuid – Dump CPUID information for each CPU"
  332067: Intel Atom Z8000 Processor Series Specification Update<br />
  332095: Intel N-Series Intel Pentium Processors and Intel Celeron Processors Specification Update<br />
  332317: Intel Xeon Processor E7 v3 Product Family Specification Update<br />
- 332381: Mobile/Desktop 5th Generation Intel Core Processor Family Specification Update</dl>
+ 332381: Mobile/Desktop 5th Generation Intel Core Processor Family Specification Update</dd></dl>
 <p> Information on the CPUID instruction and on specific CPUs is available from the following documents from Advanced Micro Devices, Inc. &lt;<a rel="nofollow" href="http://www.amd.com/us-en/Processors/TechnicalResources">http://www.amd.com/us-en/Processors/TechnicalResources</a>&gt;, with the specified Publication Numbers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  20734: AMD Processor Recognition Application Note<br />
  21266: AMD-K6 Processor Revision Guide Model 6<br />
  21641: AMD-K6-2 Processor Revision Guide Model 8<br />
@@ -217,22 +217,22 @@ description: "cpuid – Dump CPUID information for each CPU"
  47534: Revision Guide for AMD Family 14h Models 00h-0Fh Processors<br />
  48063: Revision Guide for AMD Family 15h Models 00h-0Fh Processors<br />
  48931: Revision Guide for AMD Family 15h Models 10h-1Fh Processors<br />
- 51810: Revision Guide for AMD Family 16h Models 00h-0Fh Processors</dl>
+ 51810: Revision Guide for AMD Family 16h Models 00h-0Fh Processors</dd></dl>
 <p> Information on the CPUID instruction and on specific CPUs is available from the following documents from Transmeta Corporation &lt;<a rel="nofollow" href="http://www.transmeta.com/crusoe_docs/Crusoe_CPUID_5-7-02.pdf">http://www.transmeta.com/crusoe_docs/Crusoe_CPUID_5-7-02.pdf</a>&gt;: </p>
 <dl>
 <dt>
-<dd>
- Processor Recognition, 2002/05/07</dl>
+</dt><dd>
+ Processor Recognition, 2002/05/07</dd></dl>
 <p> Information on generic hypervisor CPUID levels is available from this proposal: &lt;<a rel="nofollow" href="http://lwn.net/Articles/301888/">http://lwn.net/Articles/301888/</a>&gt;. </p>
 <p> Information on KVM hypervisor CPUID levels is available from the Linux kernel under Documentation/kvm/cpuid.txt. </p>
 <p> Information on Microsoft hypervisor CPUID levels is available from the following document from Microsoft: &lt;<a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/windows/hardware/ff542428%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/windows/hardware/ff542428%28v=vs.85%29.aspx</a>&gt;. </p>
 <p> Also, information is available from the following web sites: </p>
 <dl>
 <dt>
-<dd> &lt;<a rel="nofollow" href="http://www.sandpile.org/ia32/cpuid.htm">http://www.sandpile.org/ia32/cpuid.htm</a>&gt;<br />
+</dt><dd> &lt;<a rel="nofollow" href="http://www.sandpile.org/ia32/cpuid.htm">http://www.sandpile.org/ia32/cpuid.htm</a>&gt;<br />
  &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_Intel_microprocessors">http://en.wikipedia.org/wiki/List_of_Intel_microprocessors</a>&gt;<br />
  &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_AMD_microprocessors">http://en.wikipedia.org/wiki/List_of_AMD_microprocessors</a>&gt;<br />
- &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/Category:X86_microprocessors">http://en.wikipedia.org/wiki/Category:X86_microprocessors</a>&gt;</dl>
+ &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/Category:X86_microprocessors">http://en.wikipedia.org/wiki/Category:X86_microprocessors</a>&gt;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Todd Allen &lt;cpuid [at] etallen.com&gt; </p>
 <h2>Index</h2>

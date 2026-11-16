@@ -14,8 +14,8 @@ description: "gnutls_pkcs11_privkey_status – API function"
 <p> <code>int gnutls_pkcs11_privkey_status(gnutls_pkcs11_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_privkey_t key</p>
-<dd> Holds the key</dl>
+<dt>gnutls_pkcs11_privkey_t key</dt>
+<dd> Holds the key</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Checks the status of the private key token.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pkcs11_privkey_status – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

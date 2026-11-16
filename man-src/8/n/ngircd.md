@@ -19,48 +19,48 @@ description: "ngIRCd – the \"next generation\" IRC daemon"
 <p>The default behavior of <code>ngircd</code> is to read its standard configuration file (see below), to detach from the controlling terminal and to wait for clients. </p>
 <p> You can use these options to modify this default:</p>
 <dl>
-<dt><code>-f</code> <i>file</i>, <code>&#8211;config</code> <i>file</i></p>
-<dd>Use <i>file</i> as configuration file.</p>
-<dt><code>-n</code>, <code>&#8211;nodaemon</code></p>
-<dd>Don&#8217;t fork a child and don&#8217;t detach from controlling terminal. All log messages go to the console and you can use CTRL-C to terminate the server.</p>
-<dt><code>-p</code>, <code>&#8211;passive</code></p>
-<dd>Disable automatic connections to other servers. You can use the IRC command CONNECT later on as IRC Operator to link this ngIRCd to other servers.</p>
-<dt><code>-t</code>, <code>&#8211;configtest</code></p>
-<dd>Read, validate and display the configuration; then exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output version information and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display a brief help text and exit.</dl>
+<dt><code>-f</code> <i>file</i>, <code>&#8211;config</code> <i>file</i></dt>
+<dd>Use <i>file</i> as configuration file.</dd>
+<dt><code>-n</code>, <code>&#8211;nodaemon</code></dt>
+<dd>Don&#8217;t fork a child and don&#8217;t detach from controlling terminal. All log messages go to the console and you can use CTRL-C to terminate the server.</dd>
+<dt><code>-p</code>, <code>&#8211;passive</code></dt>
+<dd>Disable automatic connections to other servers. You can use the IRC command CONNECT later on as IRC Operator to link this ngIRCd to other servers.</dd>
+<dt><code>-t</code>, <code>&#8211;configtest</code></dt>
+<dd>Read, validate and display the configuration; then exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output version information and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display a brief help text and exit.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/ngircd.conf</i></p>
 <dl>
-<dd>The system wide default configuration file.</dl>
+<dd>The system wide default configuration file.</dd></dl>
 <p> <i>/etc/ngircd.motd</i></p>
 <dl>
-<dd>Default &quot;message of the day&quot; (MOTD).</dl>
+<dd>Default &quot;message of the day&quot; (MOTD).</dd></dl>
 <h2>Signals</h2>
 <p>The daemon understands the following signals:</p>
 <dl>
-<dt><code>TERM</code></p>
-<dd>Shut down all connections and terminate the daemon.</p>
-<dt><code>HUP</code></p>
-<dd>Shut down all listening sockets, re-read the configuration file and re-initialize the daemon.</dl>
+<dt><code>TERM</code></dt>
+<dd>Shut down all connections and terminate the daemon.</dd>
+<dt><code>HUP</code></dt>
+<dd>Shut down all listening sockets, re-read the configuration file and re-initialize the daemon.</dd></dl>
 <h2>Hints</h2>
 <p>It&#8217;s wise to use &quot;ngircd &#8211;configtest&quot; to validate the configuration file after changing it.</p>
 <h2>Debugging</h2>
 <p>When ngIRCd is compiled with debug code, that is, its source code has been ./configure&#8217;d with &quot;&#8211;enable-debug&quot; and/or &quot;&#8211;enable-sniffer&quot; (witch enables debug mode automatically as well), you can use two more command line options and two more signals to debug problems with the daemon itself or IRC clients: </p>
 <p> <code>Options:</code></p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Enable debug mode and log extra messages.</p>
-<dt><code>-s</code>, <code>&#8211;sniffer</code></p>
-<dd>Enable IRC protocol sniffer, which logs all sent and received IRC commands to the console/syslog. This option requires that ngIRCd has been ./configure&#8217;d with &quot;&#8211;enable-sniffer&quot; and enables debug mode automatically, too.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Enable debug mode and log extra messages.</dd>
+<dt><code>-s</code>, <code>&#8211;sniffer</code></dt>
+<dd>Enable IRC protocol sniffer, which logs all sent and received IRC commands to the console/syslog. This option requires that ngIRCd has been ./configure&#8217;d with &quot;&#8211;enable-sniffer&quot; and enables debug mode automatically, too.</dd></dl>
 <p> <code>Signals:</code></p>
 <dl>
-<dt><code>USR1</code></p>
-<dd>Toggle debug mode on and off during runtime.</p>
-<dt><code>USR2</code></p>
-<dd>Dump internal server state to the console/syslog when debug mode is on (use command line option &#8211;debug or signal USR1).</dl>
+<dt><code>USR1</code></dt>
+<dd>Toggle debug mode on and off during runtime.</dd>
+<dt><code>USR2</code></dt>
+<dd>Dump internal server state to the console/syslog when debug mode is on (use command line option &#8211;debug or signal USR1).</dd></dl>
 <h2>Authors</h2>
 <p>Alexander Barton, &lt;alex [at] barton.de&gt;<br />
  Florian Westphal, &lt;fw [at] strlen.de&gt; </p>

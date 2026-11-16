@@ -21,57 +21,57 @@ description: "oggz-info — Display information about one or more Ogg files and 
 &nbsp;<wbr></p>
 <h3>Display options</h3>
 <dl>
-<dt>-l, &#8211;length</p>
-<dd> Display content lengths.</p>
-<dt>-b, &#8211;bitrate</p>
-<dd> Display bitrate information.</p>
-<dt>-g, &#8211;page-stats</p>
-<dd> Display Ogg page statistics.</p>
-<dt>-p, &#8211;packet-stats</p>
-<dd> Display Ogg packet statistics.</p>
-<dt>-k, &#8211;skeleton</p>
-<dd> Display Extra data from OggSkeleton bitstream.</p>
-<dt>-a, &#8211;all</p>
-<dd> Display all information.</dl>
+<dt>-l, &#8211;length</dt>
+<dd> Display content lengths.</dd>
+<dt>-b, &#8211;bitrate</dt>
+<dd> Display bitrate information.</dd>
+<dt>-g, &#8211;page-stats</dt>
+<dd> Display Ogg page statistics.</dd>
+<dt>-p, &#8211;packet-stats</dt>
+<dd> Display Ogg packet statistics.</dd>
+<dt>-k, &#8211;skeleton</dt>
+<dd> Display Extra data from OggSkeleton bitstream.</dd>
+<dt>-a, &#8211;all</dt>
+<dd> Display all information.</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>Units of measurement</h2>
 <p> <code>oggz-info</code> displays information using the following units:<br />
 &nbsp;<wbr></p>
 <h3>Byte lengths</h3>
 <dl>
-<dt>bytes</p>
-<dd> (8 bits)</p>
-<dt>kB</p>
-<dd> kilobytes (1024 bytes)</p>
-<dt>MB</p>
-<dd> megabytes (1024*1024 bytes)</p>
-<dt>GB</p>
-<dd> gigabytes (1024*1024*1024 bytes)</dl>
+<dt>bytes</dt>
+<dd> (8 bits)</dd>
+<dt>kB</dt>
+<dd> kilobytes (1024 bytes)</dd>
+<dt>MB</dt>
+<dd> megabytes (1024*1024 bytes)</dd>
+<dt>GB</dt>
+<dd> gigabytes (1024*1024*1024 bytes)</dd></dl>
 <h3>Bitrates</h3>
 <dl>
-<dt>bps</p>
-<dd> bits per second (bit/s)</p>
-<dt>kbps</p>
-<dd> kilobits per second (1000 bit/s)</p>
-<dt>Mbps</p>
-<dd> megabits per second (1000000 bit/s)</p>
-<dt>Gbps</p>
-<dd> gigabits per second (1000000000 bit/s) </p>
+<dt>bps</dt>
+<dd> bits per second (bit/s)</dd>
+<dt>kbps</dt>
+<dd> kilobits per second (1000 bit/s)</dd>
+<dt>Mbps</dt>
+<dd> megabits per second (1000000 bit/s)</dd>
+<dt>Gbps</dt>
+<dd> gigabits per second (1000000000 bit/s) </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Describe all bitstreams in file.ogg: </p>
 <dl>
 <dt>
-<dd> <tt>oggz info file.ogg</tt></dl>
+</dt><dd> <tt>oggz info file.ogg</tt></dd></dl>
 <p> Describe only the Theora bitstream in file.ogv: </p>
 <dl>
 <dt>
-<dd> <tt>oggz info -c theora file.ogv</tt></dl>
+</dt><dd> <tt>oggz info -c theora file.ogv</tt></dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker March 10, 2005;</p>
 <h2>COPYRIGHT</h2>

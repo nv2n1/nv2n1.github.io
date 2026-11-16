@@ -15,15 +15,15 @@ snd_rawmidi_set_ops - set the rawmidi operators
 <h2>Arguments</h2>
 
 <i>rmidi</i>
-<dl><dd><dd>the rawmidi instance</dl>
+<dl><dd></dd><dd>the rawmidi instance</dd></dl>
  
 
  <i>stream</i>
-<dl><dd>the stream direction, SNDRV_RAWMIDI_STREAM_XXX</dl>
+<dl><dd>the stream direction, SNDRV_RAWMIDI_STREAM_XXX</dd></dl>
  
 
  <i>ops</i>
-<dl><dd>the operator table</dl>
+<dl><dd>the operator table</dd></dl>
 
 <h2>Description</h2>
 

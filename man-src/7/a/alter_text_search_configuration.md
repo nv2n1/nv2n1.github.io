@@ -26,20 +26,20 @@ ALTER TEXT SEARCH CONFIGURATION <i>name</i> OWNER TO <i>newowner</i></pre>
 <p> You must be the owner of the configuration to use <code>ALTER TEXT SEARCH CONFIGURATION</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing text search configuration.</p>
-<dt><i>token_type</i></p>
-<dd>The name of a token type that is emitted by the configuration&#8217;s parser.</p>
-<dt><i>dictionary_name</i></p>
-<dd>The name of a text search dictionary to be consulted for the specified token type(s). If multiple dictionaries are listed, they are consulted in the specified order.</p>
-<dt><i>old_dictionary</i></p>
-<dd>The name of a text search dictionary to be replaced in the mapping.</p>
-<dt><i>new_dictionary</i></p>
-<dd>The name of a text search dictionary to be substituted for <i>old_dictionary</i>.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the text search configuration.</p>
-<dt><i>newowner</i></p>
-<dd>The new owner of the text search configuration.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing text search configuration.</dd>
+<dt><i>token_type</i></dt>
+<dd>The name of a token type that is emitted by the configuration&#8217;s parser.</dd>
+<dt><i>dictionary_name</i></dt>
+<dd>The name of a text search dictionary to be consulted for the specified token type(s). If multiple dictionaries are listed, they are consulted in the specified order.</dd>
+<dt><i>old_dictionary</i></dt>
+<dd>The name of a text search dictionary to be replaced in the mapping.</dd>
+<dt><i>new_dictionary</i></dt>
+<dd>The name of a text search dictionary to be substituted for <i>old_dictionary</i>.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the text search configuration.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the text search configuration.</dd></dl>
 <p> The ADD MAPPING FOR form installs a list of dictionaries to be consulted for the specified token type(s); it is an error if there is already a mapping for any of the token types. The ALTER MAPPING FOR form does the same, but first removing any existing mapping for those token types. The ALTER MAPPING REPLACE forms substitute <i>new_dictionary</i> for <i>old_dictionary</i> anywhere the latter appears. This is done for only the specified token types when FOR appears, or for all mappings of the configuration when it doesn&#8217;t. The DROP MAPPING form removes all dictionaries for the specified token type(s), causing tokens of those types to be ignored by the text search configuration. It is an error if there is no mapping for the token types, unless IF EXISTS appears.</p>
 <h2>Examples</h2>
 <p>The following example replaces the english dictionary with the swedish dictionary anywhere that english is used within my_config. </p>

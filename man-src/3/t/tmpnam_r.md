@@ -10,17 +10,16 @@ description: "tmpnam, tmpnam_r – create a name for a temporary file"
 <p>tmpnam, tmpnam_r &#8211; create a name for a temporary file</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 char *tmpnam(char *s);
 char *tmpnam_r(char *s);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>tmpnam_r</code>()</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.19:</p>
-<dd>_DEFAULT_SOURCE</p>
-<dt>Up to and including glibc 2.19:</p>
-<dd>_BSD_SOURCE || _SVID_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.19:</dt>
+<dd>_DEFAULT_SOURCE</dd>
+<dt>Up to and including glibc 2.19:</dt>
+<dd>_BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p><code>Note:</code> avoid using these functions; use <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3) or <code><a href="/docs/linux/man/3-tmpfile/">tmpfile</a></code>(3) instead. </p>

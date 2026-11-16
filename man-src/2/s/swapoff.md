@@ -29,24 +29,24 @@ description: "swapon, swapoff – start/stop swapping to file/device"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> (for <code>swapon</code>()) The specified <i>path</i> is already being used as a swap area.</p>
-<dt><code>EINVAL</code></p>
-<dd> The file <i>path</i> exists, but refers neither to a regular file nor to a block device;</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>swapon</code>()) The indicated path does not contain a valid swap signature or resides on an in-memory filesystem such as <code>tmpfs</code>(5).</p>
-<dt><code>EINVAL</code> (since Linux 3.4)</p>
-<dd> (<code>swapon</code>()) An invalid flag value was specified in <i>swapflags</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>swapoff</code>()) <i>path</i> is not currently a swap area.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENOENT</code></p>
-<dd> The file <i>path</i> does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The system has insufficient memory to start swapping.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have the <code>CAP_SYS_ADMIN</code> capability. Alternatively, the maximum number of swap files are already in use; see NOTES below.</dl>
+<dt><code>EBUSY</code></dt>
+<dd> (for <code>swapon</code>()) The specified <i>path</i> is already being used as a swap area.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The file <i>path</i> exists, but refers neither to a regular file nor to a block device;</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>swapon</code>()) The indicated path does not contain a valid swap signature or resides on an in-memory filesystem such as <code>tmpfs</code>(5).</dd>
+<dt><code>EINVAL</code> (since Linux 3.4)</dt>
+<dd> (<code>swapon</code>()) An invalid flag value was specified in <i>swapflags</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>swapoff</code>()) <i>path</i> is not currently a swap area.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The file <i>path</i> does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The system has insufficient memory to start swapping.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have the <code>CAP_SYS_ADMIN</code> capability. Alternatively, the maximum number of swap files are already in use; see NOTES below.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> These functions are Linux-specific and should not be used in programs intended to be portable. The second <i>swapflags</i> argument was introduced in Linux 1.3.2.</p>
 <h2>NOTES</h2>

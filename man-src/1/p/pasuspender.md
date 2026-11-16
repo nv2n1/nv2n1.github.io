@@ -18,12 +18,12 @@ description: "pasuspender – Temporarily suspend PulseAudio"
 <p> Make sure to include <code>&#8212;</code> in your <i>pasuspender</i> command line before passing the subprocess command line (as shown above). Otherwise <i>pasuspender</i> itself might end up interpreting the command line switches and options you intended to pass to the subprocess.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information.</p>
-<dt><code>-s | &#8211;server=</code><i>SERVER</i></p>
-<dd> Specify the sound server to connect to.</dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-s | &#8211;server=</code><i>SERVER</i></dt>
+<dd> Specify the sound server to connect to.</dd></dl>
 <h2>AUTHORS</h2>
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>

@@ -15,7 +15,7 @@ release_resource - release a previously reserved resource
 <h2>Arguments</h2>
 
 <i>old</i>
-<dl><dd><dd>resource pointer</dl>
+<dl><dd></dd><dd>resource pointer</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -10,103 +10,32 @@ description: "voms –"
 <p>voms &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;voms_api.h&gt;
-
 Public Member Functions
 voms (const voms &amp;)
-
-
-
 voms ()
-
-
-
 voms &amp; operator= (const voms &amp;)
-
-
-
 ~voms ()
-
-
-
 AC * GetAC ()
-
-
-
 std::vector&lt; attributelist &gt; &amp; GetAttributes ()
-
-
-
 std::vector&lt; std::string &gt; GetTargets ()
-
-
-
 Data Fields
 int version
-
-
-
 int siglen
-
-
-
 std::string signature
-
-
-
 std::string user
-
-
-
 std::string userca
-
-
-
 std::string server
-
-
-
 std::string serverca
-
-
-
 std::string voname
-
-
-
 std::string uri
-
-
-
 std::string date1
-
-
-
 std::string date2
-
-
-
 data_type type
-
-
-
 std::vector&lt; data &gt; std
-
-
-
 std::string custom
-
-
-
 std::vector&lt; std::string &gt; fqan
-
-
-
 std::string serial
-
-
-
 Friends</code></pre>
 <p> class <code>vomsdata</code> </p>
 <p> int <code>TranslateVOMS</code> (struct vomsdatar *vd, std::vector&lt; <code>voms</code> &gt; &amp;v, int *error)</p>

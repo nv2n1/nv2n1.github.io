@@ -24,35 +24,35 @@ description: "ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32
 <p> time_t ldns_rdf2native_time_t(const ldns_rdf *rd); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_native2rdf_int8</i>()</p>
-<dd>returns the rdf containing the native uint8_t repr. .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint8_t to use .br Returns ldns_rdf* with the converted value</dl>
+<dt> <i>ldns_native2rdf_int8</i>()</dt>
+<dd>returns the rdf containing the native uint8_t repr. .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint8_t to use .br Returns ldns_rdf* with the converted value</dd></dl>
 <dl>
-<dt> <i>ldns_native2rdf_int16</i>()</p>
-<dd>returns the rdf containing the native uint16_t representation. .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint16_t to use .br Returns ldns_rdf* with the converted value</dl>
+<dt> <i>ldns_native2rdf_int16</i>()</dt>
+<dd>returns the rdf containing the native uint16_t representation. .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint16_t to use .br Returns ldns_rdf* with the converted value</dd></dl>
 <dl>
-<dt> <i>ldns_native2rdf_int32</i>()</p>
-<dd>returns an rdf that contains the given int32 value. </p>
+<dt> <i>ldns_native2rdf_int32</i>()</dt>
+<dd>returns an rdf that contains the given int32 value. </dd>
 <p> Because multiple rdf types can contain an int32, the type must be specified .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint32_t to use .br Returns ldns_rdf* with the converted value</dl>
 <dl>
-<dt> <i>ldns_native2rdf_int16_data</i>()</p>
-<dd>returns an int16_data rdf that contains the data in the given array, preceded by an int16 specifying the length. </p>
+<dt> <i>ldns_native2rdf_int16_data</i>()</dt>
+<dd>returns an int16_data rdf that contains the data in the given array, preceded by an int16 specifying the length. </dd>
 <p> The memory is copied, and an LDNS_RDF_TYPE_INT16DATA is returned .br <code>size</code>: the size of the data .br <code>*data</code>: pointer to the actual data </p>
 <p> .br Returns ldns_rd* the rdf with the data</dl>
 <dl>
-<dt> <i>ldns_rdf2native_int8</i>()</p>
-<dd>returns the native uint8_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint8_t the value extracted</dl>
+<dt> <i>ldns_rdf2native_int8</i>()</dt>
+<dd>returns the native uint8_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint8_t the value extracted</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2native_int16</i>()</p>
-<dd>returns the native uint16_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint16_t the value extracted</dl>
+<dt> <i>ldns_rdf2native_int16</i>()</dt>
+<dd>returns the native uint16_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint16_t the value extracted</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2native_int32</i>()</p>
-<dd>returns the native uint32_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint32_t the value extracted</dl>
+<dt> <i>ldns_rdf2native_int32</i>()</dt>
+<dd>returns the native uint32_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns uint32_t the value extracted</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2native_sockaddr_storage</i>()</p>
-<dd>returns the native sockaddr representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br <code>port</code>: what port to use. 0 means; use default (53) .br <code>size</code>: what is the size of the sockaddr_storage .br Returns struct sockaddr* the address in the format so other functions can use it (sendto)</dl>
+<dt> <i>ldns_rdf2native_sockaddr_storage</i>()</dt>
+<dd>returns the native sockaddr representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br <code>port</code>: what port to use. 0 means; use default (53) .br <code>size</code>: what is the size of the sockaddr_storage .br Returns struct sockaddr* the address in the format so other functions can use it (sendto)</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2native_time_t</i>()</p>
-<dd>returns the native time_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns time_t the value extracted (32 bits currently)</dl>
+<dt> <i>ldns_rdf2native_time_t</i>()</dt>
+<dd>returns the native time_t representation from the rdf. .br <code>rd</code>: the ldns_rdf to operate on .br Returns time_t the value extracted (32 bits currently)</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

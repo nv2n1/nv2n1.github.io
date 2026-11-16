@@ -11,7 +11,6 @@ description: "ql/math/matrixutilities/tqreigendecomposition.hpp – tridiag. QR 
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/array.hpp&gt;
-
 #include &lt;ql/math/matrix.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>TqrEigenDecomposition</code><br />

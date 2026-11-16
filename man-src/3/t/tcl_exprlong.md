@@ -20,11 +20,11 @@ int
 <code>Tcl_ExprString</code>(<i>interp, expr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in whose context to evaluate <i>expr</i>.</p>
-<dd>const char <i>*expr</i> (in) Expression to be evaluated.</p>
-<dd>long <i>*longPtr</i> (out) Pointer to location in which to store the integer value of the expression.</p>
-<dd>int <i>*doublePtr</i> (out) Pointer to location in which to store the floating-point value of the expression.</p>
-<dd>int <i>*booleanPtr</i> (out) Pointer to location in which to store the 0/1 boolean value of the expression. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in whose context to evaluate <i>expr</i>.</dd>
+<dd>const char <i>*expr</i> (in) Expression to be evaluated.</dd>
+<dd>long <i>*longPtr</i> (out) Pointer to location in which to store the integer value of the expression.</dd>
+<dd>int <i>*doublePtr</i> (out) Pointer to location in which to store the floating-point value of the expression.</dd>
+<dd>int <i>*booleanPtr</i> (out) Pointer to location in which to store the 0/1 boolean value of the expression. </dd>
 </dl>
 <h2>Description</h2>
 <p>These four procedures all evaluate the expression given by the <i>expr</i> argument and return the result in one of four different forms. The expression can have any of the forms accepted by the <code>expr</code> command. Note that these procedures have been largely replaced by the object-based procedures <code>Tcl_ExprLongObj</code>, <code>Tcl_ExprDoubleObj</code>, <code>Tcl_ExprBooleanObj</code>, and <code>Tcl_ExprObj</code>. Those object-based procedures evaluate an expression held in a Tcl object instead of a string. The object argument can retain an internal representation that is more efficient to execute. </p>

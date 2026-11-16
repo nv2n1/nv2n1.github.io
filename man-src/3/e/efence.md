@@ -47,16 +47,16 @@ void *valloc(size_t size);
 <h2>GLOBAL AND ENVIRONMENT VARIABLES</h2>
 <p> Electric Fence has four configuration switches that can be enabled via the shell environment, or by setting the value of global integer variables using a debugger. These switches change what bugs Electric Fence will detect, so it&#8217;s important that you know how to use them.</p>
 <dl>
-<dt>EF_ALIGNMENT</p>
-<dd> This is an integer that specifies the alignment for any memory allocations that will be returned by malloc(), calloc(), and realloc(). The value is specified in bytes, thus a value of 4 will cause memory to be aligned to 32-bit boundaries unless your system doesn&#8217;t have a 8-bit characters. EF_ALIGNMENT is set to sizeof(int) by default, since that is generally the word-size of your CPU. If your program requires that allocations be aligned to 64-bit boundaries and you have a 32-bit <code>int</code> you&#8217;ll have to set this value to 8. This is the case when compiling with the <code>-mips2</code> flag on MIPS-based systems such as those from SGI. The memory allocation that is returned by Electric Fence malloc() is aligned using the value in EF_ALIGNMENT, and <i>its size the multiple of</i> <i>that value</i> that is greater than or equal to the requested size. For this reason, you will sometimes want to set EF_ALIGNMENT to 0 (no alignment), so that you can detect overruns of less than your CPU&#8217;s word size. Be sure to read the section <i>WORD-ALIGNMENT AND OVERRUN DETECTION</i> in this manual page before you try this. To change this value, set EF_ALIGNMENT in the shell environment to an integer value, or assign to the global integer variable EF_ALIGNMENT using a debugger.</p>
-<dt>EF_PROTECT_BELOW</p>
-<dd> Electric Fence usually places an inaccessible page immediately after each memory allocation, so that software that runs past the end of the allocation will be detected. Setting EF_PROTECT_BELOW to 1 causes Electric Fence to place the inaccessible page <i>before</i> the allocation in the address space, so that under-runs will be detected instead of over-runs. When EF_PROTECT_BELOW is set, the EF_ALIGNMENT parameter is ignored. All allocations will be aligned to virtual-memory-page boundaries, and their size will be the exact size that was requested. To change this value, set EF_PROTECT_BELOW in the shell environment to an integer value, or assign to the global integer variable EF_PROTECT_BELOW using a debugger.</p>
-<dt>EF_PROTECT_FREE</p>
-<dd> Electric Fence usually returns free memory to a pool from which it may be re-allocated. If you suspect that a program may be touching free memory, set EF_PROTECT_FREE to 1. This will cause Electric Fence to never re-allocate memory once it has been freed, so that any access to free memory will be detected. Some programs will use tremendous amounts of memory when this parameter is set. To change this value, set EF_PROTECT_FREE in the shell environment to an integer value, or assign to the global integer variable EF_PROTECT_FREE using a debugger.</p>
-<dt>EF_ALLOW_MALLOC_0</p>
-<dd> By default, Electric Fence traps calls to malloc() with a size of zero, because they are often the result of a software bug. If EF_ALLOW_MALLOC_0 is non-zero, the software will not trap calls to malloc() with a size of zero. To change this value, set EF_ALLOC_MALLOC_0 in the shell environment to an integer value, or assign to the global integer variable EF_ALLOC_MALLOC_0 using a debugger.</p>
-<dt>EF_FILL</p>
-<dd> When set to a value between 0 and 255, every byte of allocated memory is initialized to that value. This can help detect reads of uninitialized memory. When set to -1, some memory is filled with zeroes (the operating system default on most systems) and some memory will retain the values written to it during its last use.</dl>
+<dt>EF_ALIGNMENT</dt>
+<dd> This is an integer that specifies the alignment for any memory allocations that will be returned by malloc(), calloc(), and realloc(). The value is specified in bytes, thus a value of 4 will cause memory to be aligned to 32-bit boundaries unless your system doesn&#8217;t have a 8-bit characters. EF_ALIGNMENT is set to sizeof(int) by default, since that is generally the word-size of your CPU. If your program requires that allocations be aligned to 64-bit boundaries and you have a 32-bit <code>int</code> you&#8217;ll have to set this value to 8. This is the case when compiling with the <code>-mips2</code> flag on MIPS-based systems such as those from SGI. The memory allocation that is returned by Electric Fence malloc() is aligned using the value in EF_ALIGNMENT, and <i>its size the multiple of</i> <i>that value</i> that is greater than or equal to the requested size. For this reason, you will sometimes want to set EF_ALIGNMENT to 0 (no alignment), so that you can detect overruns of less than your CPU&#8217;s word size. Be sure to read the section <i>WORD-ALIGNMENT AND OVERRUN DETECTION</i> in this manual page before you try this. To change this value, set EF_ALIGNMENT in the shell environment to an integer value, or assign to the global integer variable EF_ALIGNMENT using a debugger.</dd>
+<dt>EF_PROTECT_BELOW</dt>
+<dd> Electric Fence usually places an inaccessible page immediately after each memory allocation, so that software that runs past the end of the allocation will be detected. Setting EF_PROTECT_BELOW to 1 causes Electric Fence to place the inaccessible page <i>before</i> the allocation in the address space, so that under-runs will be detected instead of over-runs. When EF_PROTECT_BELOW is set, the EF_ALIGNMENT parameter is ignored. All allocations will be aligned to virtual-memory-page boundaries, and their size will be the exact size that was requested. To change this value, set EF_PROTECT_BELOW in the shell environment to an integer value, or assign to the global integer variable EF_PROTECT_BELOW using a debugger.</dd>
+<dt>EF_PROTECT_FREE</dt>
+<dd> Electric Fence usually returns free memory to a pool from which it may be re-allocated. If you suspect that a program may be touching free memory, set EF_PROTECT_FREE to 1. This will cause Electric Fence to never re-allocate memory once it has been freed, so that any access to free memory will be detected. Some programs will use tremendous amounts of memory when this parameter is set. To change this value, set EF_PROTECT_FREE in the shell environment to an integer value, or assign to the global integer variable EF_PROTECT_FREE using a debugger.</dd>
+<dt>EF_ALLOW_MALLOC_0</dt>
+<dd> By default, Electric Fence traps calls to malloc() with a size of zero, because they are often the result of a software bug. If EF_ALLOW_MALLOC_0 is non-zero, the software will not trap calls to malloc() with a size of zero. To change this value, set EF_ALLOC_MALLOC_0 in the shell environment to an integer value, or assign to the global integer variable EF_ALLOC_MALLOC_0 using a debugger.</dd>
+<dt>EF_FILL</dt>
+<dd> When set to a value between 0 and 255, every byte of allocated memory is initialized to that value. This can help detect reads of uninitialized memory. When set to -1, some memory is filled with zeroes (the operating system default on most systems) and some memory will retain the values written to it during its last use.</dd></dl>
 <h2>WORD-ALIGNMENT AND OVERRUN DETECTION</h2>
 <p> There is a conflict between the alignment restrictions that malloc() operates under and the debugging strategy used by Electric Fence. When detecting overruns, Electric Fence malloc() allocates two or more virtual memory pages for each allocation. The last page is made inaccessible in such a way that any read, write, or execute access will cause a segmentation fault. Then, Electric Fence malloc() will return an address such that the first byte after the end of the allocation is on the inaccessible page. Thus, any overrun of the allocation will cause a segmentation fault. </p>
 <p> It follows that the address returned by malloc() is the address of the inaccessible page minus the size of the memory allocation. Unfortunately, malloc() is required to return <i>word-aligned</i> allocations, since many CPUs can only access a word when its address is aligned. The conflict happens when software makes a memory allocation using a size that is not a multiple of the word size, and expects to do word accesses to that allocation. The location of the inaccessible page is fixed by hardware at a word-aligned address. If Electric Fence malloc() is to return an aligned address, it must increase the size of the allocation to a multiple of the word size. In addition, the functions memalign() and valloc() must honor explicit specifications on the alignment of the memory allocation, and this, as well can only be implemented by increasing the size of the allocation. Thus, there will be situations in which the end of a memory allocation contains some padding space, and accesses of that padding space will not be detected, even if they are overruns. </p>
@@ -64,20 +64,20 @@ void *valloc(size_t size);
 <p> Another example of software incompatible with EF_ALIGNMENT &lt; word-size is the strcmp() function and other string functions on SunOS (and probably Solaris), which make word-sized accesses to character strings, and may attempt to access up to three bytes beyond the end of a string. These result in a segmentation fault (SIGSEGV). The only way around this is to use versions of the string functions that perform byte references instead of word references.</p>
 <h2>INSTRUCTIONS FOR DEBUGGING YOUR PROGRAM</h2>
 <dl>
-<dt>1.</p>
-<dd> Link with libefence.a as explained above.</p>
-<dt>2.</p>
-<dd> Run your program in a debugger and fix any overruns or accesses to free memory.</p>
-<dt>3.</p>
-<dd> Quit the debugger.</p>
-<dt>4.</p>
-<dd> Set EF_PROTECT_BELOW = 1 in the shell environment.</p>
-<dt>5.</p>
-<dd> Repeat step 2, this time repairing underruns if they occur.</p>
-<dt>6.</p>
-<dd> Quit the debugger.</p>
-<dt>7.</p>
-<dd> Read the restrictions in the section on <i>WORD-ALIGNMENT AND OVERRUN DETECTION.</i> See if you can set EF_ALIGNMENT to 0 and repeat step 2. Sometimes this will be too much work, or there will be problems with library routines for which you don&#8217;t have the source, that will prevent you from doing this.</dl>
+<dt>1.</dt>
+<dd> Link with libefence.a as explained above.</dd>
+<dt>2.</dt>
+<dd> Run your program in a debugger and fix any overruns or accesses to free memory.</dd>
+<dt>3.</dt>
+<dd> Quit the debugger.</dd>
+<dt>4.</dt>
+<dd> Set EF_PROTECT_BELOW = 1 in the shell environment.</dd>
+<dt>5.</dt>
+<dd> Repeat step 2, this time repairing underruns if they occur.</dd>
+<dt>6.</dt>
+<dd> Quit the debugger.</dd>
+<dt>7.</dt>
+<dd> Read the restrictions in the section on <i>WORD-ALIGNMENT AND OVERRUN DETECTION.</i> See if you can set EF_ALIGNMENT to 0 and repeat step 2. Sometimes this will be too much work, or there will be problems with library routines for which you don&#8217;t have the source, that will prevent you from doing this.</dd></dl>
 <h2>MEMORY USAGE AND EXECUTION SPEED</h2>
 <p> Since Electric Fence uses at least two virtual memory pages for each of its allocations, it&#8217;s a terrible memory hog. I&#8217;ve sometimes found it necessary to add a swap file using <a href="/docs/linux/man/8-swapon/">swapon</a>(8) so that the system would have enough virtual memory to debug my program. Also, the way we manipulate memory results in various cache and translation buffer entries being flushed with each call to malloc or free. The end result is that your program will be much slower and use more resources while you are debugging it with Electric Fence. </p>
 <p> Don&#8217;t leave libefence.a linked into production software! Use it only for debugging.</p>

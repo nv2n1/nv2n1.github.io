@@ -15,18 +15,18 @@ description: "htstat – returns statistics on the document and word databases, 
 <p> Htdig retrieves HTML documents using the HTTP protocol and gathers information from these documents which can later be used to search these documents. This program can be referred to as the search robot.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Use alternate work files. Tells htstat to append <i>.work</i> to database files, causing a second copy of the database to be built. This allows the original files to be used by htsearch during the run.</p>
-<dt><code>-c </code><i>configfile</i></p>
-<dd> Use the specified <i>configfile</i> instead of the default.</p>
-<dt><code>-u</code></p>
-<dd> Give a list of URLs in the document database.</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. This increases the verbosity of the program. Using more than 2 is probably only useful for debugging purposes. The default verbose mode (using only one <i>-v</i>) gives a nice progress report while digging.</dl>
+<dt><code>-a</code></dt>
+<dd> Use alternate work files. Tells htstat to append <i>.work</i> to database files, causing a second copy of the database to be built. This allows the original files to be used by htsearch during the run.</dd>
+<dt><code>-c </code><i>configfile</i></dt>
+<dd> Use the specified <i>configfile</i> instead of the default.</dd>
+<dt><code>-u</code></dt>
+<dd> Give a list of URLs in the document database.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. This increases the verbosity of the program. Using more than 2 is probably only useful for debugging purposes. The default verbose mode (using only one <i>-v</i>) gives a nice progress report while digging.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/htdig/htdig.conf</code></p>
-<dd> The default configuration file.</dl>
+<dt><code>/etc/htdig/htdig.conf</code></dt>
+<dd> The default configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i>htdigconfig(8)</i> , <i><a href="/docs/linux/man/1-htdig/">htdig</a>(1)</i> and <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> for a detailed description of ht://Dig and its commands. </p>
 <h2>AUTHOR</h2>

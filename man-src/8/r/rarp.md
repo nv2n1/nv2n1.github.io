@@ -19,24 +19,24 @@ description: "rarp – manipulate the system RARP table"
 <p><code>Rarp</code> manipulates the kernel&#8217;s RARP table in various ways. The primary options are clearing an address mapping entry and manually setting up one. For debugging purposes, the <code>rarp</code> program also allows a complete dump of the RARP table.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd>Display the version of RARP in use.</p>
-<dt><code>-v</code></p>
-<dd>Tell the user what is going on by being verbose.</p>
-<dt><code>-t type</code></p>
-<dd>When setting or reading the RARP table, this optional parameter tells <code>rarp</code> which class of entries it should check for. The default value of this parameter is <code>ether</code> (i.e. hardware code <code>0x01</code> for <code>IEEE 802.3 10Mbps Ethernet.</code> Other values might include network technologies such as <code>AX.25 (ax25)</code> and <code>NET/ROM (netrom).</code></p>
-<dt><code>-a</code></p>
+<dt><code>-V</code></dt>
+<dd>Display the version of RARP in use.</dd>
+<dt><code>-v</code></dt>
+<dd>Tell the user what is going on by being verbose.</dd>
+<dt><code>-t type</code></dt>
+<dd>When setting or reading the RARP table, this optional parameter tells <code>rarp</code> which class of entries it should check for. The default value of this parameter is <code>ether</code> (i.e. hardware code <code>0x01</code> for <code>IEEE 802.3 10Mbps Ethernet.</code> Other values might include network technologies such as <code>AX.25 (ax25)</code> and <code>NET/ROM (netrom).</code></dd>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;list</code></p>
-<dd>Lists the entries in the RARP table.</p>
-<dt><code>-d hostname</code></p>
+</dd><dt><code>&#8211;list</code></dt>
+<dd>Lists the entries in the RARP table.</dd>
+<dt><code>-d hostname</code></dt>
 <dd>
-<dt><code>&#8211;delete hostname</code></p>
-<dd>Remove all RARP entries for the specified host.</p>
-<dt><code>-s hostname hw_addr</code></p>
+</dd><dt><code>&#8211;delete hostname</code></dt>
+<dd>Remove all RARP entries for the specified host.</dd>
+<dt><code>-s hostname hw_addr</code></dt>
 <dd>
-<dt><code>&#8211;set hostname hw_addr</code></p>
-<dd>Create a RARP address mapping entry for host <code>hostname</code> with hardware address set to <code>hw_addr</code>. The format of the hardware address is dependent on the hardware class, but for most classes one can assume that the usual presentation can be used. For the Ethernet class, this is 6 bytes in hexadecimal, separated by colons.</dl>
+</dd><dt><code>&#8211;set hostname hw_addr</code></dt>
+<dd>Create a RARP address mapping entry for host <code>hostname</code> with hardware address set to <code>hw_addr</code>. The format of the hardware address is dependent on the hardware class, but for most classes one can assume that the usual presentation can be used. For the Ethernet class, this is 6 bytes in hexadecimal, separated by colons.</dd></dl>
 <h2>Warning</h2>
 <p>Some systems (notably older Suns) assume that the host replying to a RARP query can also provide other remote boot services. Therefore never gratuitously add rarp entries unless you wish to meet the wrath of the network administrator.</p>
 <h2>Files</h2>

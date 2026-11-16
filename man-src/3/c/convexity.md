@@ -43,7 +43,7 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dt>
-<dd> add tests</dl>
+</dt><dd> add tests</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>static <code>Real</code> npv (const Leg &amp; leg, const <code>YieldTermStructure</code> &amp; discountCurve, <code>Date</code> settlementDate = <code>Date</code>(), const <code>Date</code> &amp; npvDate = <code>Date</code>(), <code>Natural</code> exDividendDays = 0) [static]</h3>
 <p> NPV of the cash flows. </p>
@@ -86,5 +86,5 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAQ">Author</a></dt>
+<dd></dd></dl>

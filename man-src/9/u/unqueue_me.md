@@ -14,7 +14,7 @@ description: "unqueue_me – Remove the futex_q from its futex_hash_bucket"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>The futex_q to unqueue</dl>
+</dd><dd>The futex_q to unqueue</dd></dl>
 <h2>Description</h2>
 <p>The q-&gt;lock_ptr must not be held by the caller. A call to <code>unqueue_me</code> must be paired with exactly one earlier call to <code>queue_me</code>.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "unqueue_me – Remove the futex_q from its futex_hash_bucket"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

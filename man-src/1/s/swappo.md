@@ -11,10 +11,10 @@ description: "swappo – swap msgid and msgstr fields in a PO file"
 <p> swappo &#8211; swap msgid and msgstr fields in a PO file </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>swappo</code> [<i>filename.po</i>]</dl>
+<dt> <code>swappo</code> [<i>filename.po</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>swappo</code></p>
-<dd>reads the given PO-file and swaps the msgid and msgstr fields for every message. The result is a new PO-file that translates in the opposite direction. For example, if PO-file translates from English to French, the new PO-file will translate from French to English. </p>
+<dd>reads the given PO-file and swaps the msgid and msgstr fields for every message. The result is a new PO-file that translates in the opposite direction. For example, if PO-file translates from English to French, the new PO-file will translate from French to English. </dd>
 <p> The new PO-file will be written to standard output. The old PO-file will remain untouched. </p>
 <p> This utility is part of the KDE Software Development Kit</p>
 <h2>SEE ALSO</h2>
@@ -26,5 +26,5 @@ description: "swappo – swap msgid and msgstr fields in a PO file"
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

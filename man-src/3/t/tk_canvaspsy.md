@@ -23,18 +23,18 @@ int
 <code>Tk_CanvasPsStipple</code>(<i>interp, canvas, bitmap</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Canvas <i>canvas</i> (in) A token that identifies a canvas widget for which Postscript is being generated.</p>
-<dd>double <i>canvasY</i> (in) Y-coordinate in the space of the canvas.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) A Tcl interpreter; Postscript is appended to its result, or the result may be replaced with an error message.</p>
-<dd>Pixmap <i>bitmap</i> (in) Bitmap to use for generating Postscript.</p>
-<dd>int <i>x</i> (in) X-coordinate within <i>bitmap</i> of left edge of region to output.</p>
-<dd>int <i>y</i> (in) Y-coordinate within <i>bitmap</i> of top edge of region to output.</p>
-<dd>int <i>width</i> (in) Width of region of bitmap to output, in pixels.</p>
-<dd>int <i>height</i> (in) Height of region of bitmap to output, in pixels.</p>
-<dd>XColor <i>*colorPtr</i> (in) Information about color value to set in Postscript.</p>
-<dd>Tk_Font <i>tkFont</i> (in) Font for which Postscript is to be generated.</p>
-<dd>double <i>*coordPtr</i> (in) Pointer to an array of coordinates for one or more points specified in canvas coordinates. The order of values in <i>coordPtr</i> is x1, y1, x2, y2, x3, y3, and so on.</p>
-<dd>int <i>numPoints</i> (in) Number of points at <i>coordPtr</i>. </p>
+<dd>Tk_Canvas <i>canvas</i> (in) A token that identifies a canvas widget for which Postscript is being generated.</dd>
+<dd>double <i>canvasY</i> (in) Y-coordinate in the space of the canvas.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) A Tcl interpreter; Postscript is appended to its result, or the result may be replaced with an error message.</dd>
+<dd>Pixmap <i>bitmap</i> (in) Bitmap to use for generating Postscript.</dd>
+<dd>int <i>x</i> (in) X-coordinate within <i>bitmap</i> of left edge of region to output.</dd>
+<dd>int <i>y</i> (in) Y-coordinate within <i>bitmap</i> of top edge of region to output.</dd>
+<dd>int <i>width</i> (in) Width of region of bitmap to output, in pixels.</dd>
+<dd>int <i>height</i> (in) Height of region of bitmap to output, in pixels.</dd>
+<dd>XColor <i>*colorPtr</i> (in) Information about color value to set in Postscript.</dd>
+<dd>Tk_Font <i>tkFont</i> (in) Font for which Postscript is to be generated.</dd>
+<dd>double <i>*coordPtr</i> (in) Pointer to an array of coordinates for one or more points specified in canvas coordinates. The order of values in <i>coordPtr</i> is x1, y1, x2, y2, x3, y3, and so on.</dd>
+<dd>int <i>numPoints</i> (in) Number of points at <i>coordPtr</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are called by canvas type managers to carry out common functions related to generating Postscript. Most of the procedures take a <i>canvas</i> argument, which refers to a canvas widget for which Postscript is being generated. </p>

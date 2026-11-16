@@ -10,17 +10,17 @@ description: "rio_destid_next – return next destID in use"
 <p>rio_destid_next &#8211; return next destID in use</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u16 rio_destid_next(struct rio_net&nbsp;<wbr>*&nbsp;<wbr></code><i>net</i><code>, u16&nbsp;<wbr></code><i>from</i><code>);</code></dl>
+<dt> <code>u16 rio_destid_next(struct rio_net&nbsp;<wbr>*&nbsp;<wbr></code><i>net</i><code>, u16&nbsp;<wbr></code><i>from</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network</dl>
+</dd><dd>RIO network</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>destination ID from which search shall continue</dl>
+<dd>destination ID from which search shall continue</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

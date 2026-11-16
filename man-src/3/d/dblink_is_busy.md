@@ -19,15 +19,15 @@ dblink_is_busy(text connname) returns int
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> Name of the connection to check.</dl>
+</dt><dd> Name of the connection to check.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns 1 if connection is busy, 0 if it is not busy. If this function returns 0, it is guaranteed that <code>dblink_get_result</code> will not block.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SELECT dblink_is_busy('dtest1');
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

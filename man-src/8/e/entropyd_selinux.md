@@ -93,16 +93,16 @@ description: "entropyd_selinux – Security Enhanced Linux Policy for the entrop
 <p> <code>entropyd_exec_t</code> </p>
 <p> &#8211; Set files with the entropyd_exec_t type, if you want to transition an executable to the entropyd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/haveged, /usr/sbin/audio-entropyd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/haveged, /usr/sbin/audio-entropyd </dd>
 </dl>
 <p> <code>entropyd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the entropyd_initrc_exec_t type, if you want to transition an executable to the entropyd_initrc_t domain. </p>
 <p> <code>entropyd_var_run_t</code> </p>
 <p> &#8211; Set files with the entropyd_var_run_t type, if you want to store the entropyd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/haveged.pid, /var/run/audio-entropyd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/haveged.pid, /var/run/audio-entropyd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -40,9 +40,9 @@ description: "QuantLib::BarrierOption – Barrier option on a single asset."
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> see <code>VanillaOption</code> for notes on implied-volatility calculation.</dl>
+</dt><dd> see <code>VanillaOption</code> for notes on implied-volatility calculation.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

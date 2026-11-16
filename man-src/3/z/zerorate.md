@@ -10,19 +10,10 @@ description: "QuantLib::ZeroInflationTermStructure – Interface for zero inflat
 <p>QuantLib::ZeroInflationTermStructure &#8211; Interface for zero inflation term structures. </p>
 <h2>Synopsis</h2>
 <pre><code>Rate zeroRate (const Date &amp;d, bool extrapolate=false) const
-
-
 zero-coupon inflation rate
-
-
 Rate zeroRate (Time t, bool extrapolate=false) const
-
-
-
 Protected Member Functions
 virtual Rate zeroRateImpl (Time t) const =0
-
-
 to be defined in derived classes</code></pre>
 <p> Inherits <code>QuantLib::InflationTermStructure</code>. Inherited by <code>InterpolatedZeroInflationCurve&lt; Interpolator &gt;</code>, and <code>InterpolatedZeroInflationCurve&lt; Interpolator &gt;</code>.</p>
 <h3>Public Member Functions</h3>
@@ -32,19 +23,10 @@ to be defined in derived classes</code></pre>
 <p> <code>ZeroInflationTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseZeroRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yTS)<br />
  <code>Inspectors</code> </p>
 <pre><code>Rate zeroRate (const Date &amp;d, bool extrapolate=false) const
-
-
 zero-coupon inflation rate
-
-
 Rate zeroRate (Time t, bool extrapolate=false) const
-
-
-
 Protected Member Functions
 virtual Rate zeroRateImpl (Time t) const =0
-
-
 to be defined in derived classes</code></pre>
 <h2>Detailed Description</h2>
 <p>Interface for zero inflation term structures.</p>

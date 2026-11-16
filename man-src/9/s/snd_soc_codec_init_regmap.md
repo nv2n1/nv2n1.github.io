@@ -15,11 +15,11 @@ snd_soc_codec_init_regmap - Initialize regmap instance for the CODEC
 <h2>Arguments</h2>
 
 <i>codec</i>
-<dl><dd><dd>The CODEC for which to initialize the regmap instance</dl>
+<dl><dd></dd><dd>The CODEC for which to initialize the regmap instance</dd></dl>
  
 
  <i>regmap</i>
-<dl><dd>The regmap instance that should be used by the CODEC</dl>
+<dl><dd>The regmap instance that should be used by the CODEC</dd></dl>
 
 <h2>Description</h2>
 

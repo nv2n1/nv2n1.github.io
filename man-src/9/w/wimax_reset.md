@@ -14,7 +14,7 @@ description: "wimax_reset – Reset a WiMAX device"
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <h2>Return</h2>
 <p><code>0</code> if ok and a warm reset was done (the device still exists in the system). </p>
 <p> &#8211;<code>ENODEV</code> if a cold/bus reset had to be done (device has disconnected and reconnected, so current handle is not valid any more). </p>

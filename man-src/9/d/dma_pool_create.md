@@ -14,19 +14,19 @@ description: "dma_pool_create – Creates a pool of consistent memory blocks, fo
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>name of pool, for diagnostics</dl>
+</dd><dd>name of pool, for diagnostics</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>device that will be doing the DMA</dl>
+<dd>device that will be doing the DMA</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the blocks in this pool.</dl>
+<dd>size of the blocks in this pool.</dd></dl>
 <p> <i>align</i></p>
 <dl>
-<dd>alignment requirement for blocks; must be a power of two</dl>
+<dd>alignment requirement for blocks; must be a power of two</dd></dl>
 <p> <i>boundary</i></p>
 <dl>
-<dd>returned blocks won&#8217;t cross this power of two boundary</dl>
+<dd>returned blocks won&#8217;t cross this power of two boundary</dd></dl>
 <h2>Context</h2>
 <p>!<code>in_interrupt</code></p>
 <h2>Description</h2>

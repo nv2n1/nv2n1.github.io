@@ -11,198 +11,68 @@ description: "sc::OneBodyWavefunction –"
 <p> A <code>OneBodyWavefunction</code> is a <code>MolecularEnergy</code> that solves an effective one-body problem.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obwfn.h&gt;</code></pre>
 <p> Inherits <code>sc::Wavefunction</code>. Inherited by <code>sc::ExtendedHuckelWfn</code>, <code>sc::HCoreWfn</code>, and <code>sc::SCF</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OneBodyWavefunction (StateIn &amp;)
-
-
-
 OneBodyWavefunction (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The KeyVal constructor.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 int nelectron ()
-
-
 Returns the number of electrons.
-
-
 void set_desired_value_accuracy (double eps)
-
-
 Overload of Function::set_desired_value_accuracy().
-
-
 RefSCMatrix so_to_mo ()
-
-
 These members give metrics and basis transformations using the covariant/contravariant tensor notation.
-
-
 RefSCMatrix orthog_so_to_mo ()
-
-
 Returns the orthogonal-SO to MO transformation matrix.
-
-
 RefSCMatrix mo_to_so ()
-
-
 Returns the MO to SO transformation matrix.
-
-
 RefSCMatrix mo_to_orthog_so ()
-
-
 Returns the MO to orthogonal-SO transformation matrix.
-
-
 RefSCMatrix eigenvectors ()
-
-
 Deprecated.
-
-
 virtual RefSCMatrix oso_eigenvectors ()=0
-
-
 Returns the orthogonal MO (columns) to orthogonal-SO (rows) transformation matrix.
-
-
 virtual RefDiagSCMatrix eigenvalues ()=0
-
-
 Returns the MO basis eigenvalues.
-
-
 virtual double occupation (int irrep, int vectornum)=0
-
-
 Returns the occupation.
-
-
 double occupation (int vectornum)
-
-
 Returns the occupation.
-
-
 virtual int spin_unrestricted ()=0
-
-
 Return 1 if the alpha orbitals are not equal to the beta orbitals.
-
-
 virtual double alpha_occupation (int irrep, int vectornum)
-
-
 Returns the alpha occupation.
-
-
 virtual double beta_occupation (int irrep, int vectornum)
-
-
 Returns the beta occupation.
-
-
 double alpha_occupation (int vectornum)
-
-
 Returns the alpha occupation.
-
-
 double beta_occupation (int vectornum)
-
-
 Returns the beta occupation.
-
-
 virtual RefSCMatrix oso_alpha_eigenvectors ()
-
-
-
 virtual RefSCMatrix oso_beta_eigenvectors ()
-
-
-
 virtual RefSCMatrix alpha_eigenvectors ()
-
-
-
 virtual RefSCMatrix beta_eigenvectors ()
-
-
-
 virtual RefDiagSCMatrix alpha_eigenvalues ()
-
-
-
 virtual RefDiagSCMatrix beta_eigenvalues ()
-
-
-
 virtual RefDiagSCMatrix projected_eigenvalues (const Ref&lt; OneBodyWavefunction &gt; &amp;, int alp=1)
-
-
-
 virtual RefSCMatrix projected_eigenvectors (const Ref&lt; OneBodyWavefunction &gt; &amp;, int alp=1)
-
-
 Projects the density into the current basis set.
-
-
 virtual RefSCMatrix hcore_guess ()
-
-
 Return a guess vector.
-
-
 virtual RefSCMatrix hcore_guess (RefDiagSCMatrix &amp;val)
-
-
 Return a guess vector and the eigenvalues.
-
-
 void symmetry_changed ()
-
-
 Call this if you have changed the molecular symmetry of the molecule contained by this MolecularEnergy.
-
-
 double orbital (const SCVector3 &amp;r, int iorb)
-
-
-
 double orbital_density (const SCVector3 &amp;r, int iorb, double *orbval=0)
-
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
-
 Protected Member Functions
 void init_sym_info ()
-
-
-
 int form_occupations (int *&amp;newocc, const int *oldocc)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>ResultRefSymmSCMatrix</code> <code>density_</code> </p>
 <p> <code>AccResultRefSCMatrix</code> <code>oso_eigenvectors_</code> </p>

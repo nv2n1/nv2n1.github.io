@@ -16,14 +16,14 @@ description: "prune – Prune directed graphs"
 <p> Both options can appear multiple times on the command line. All subgraphs rooted at the respective nodes given will then be processed. If a node does not exist, <code>prune</code> will skip it and print a warning message to stderr. If multiple attributes are given, they will be applied to all nodes that have been processed. <code>prune</code> writes the result to the stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code><i> name</i></p>
-<dd> Specifies name of node to prune.</p>
-<dt><code>-N</code><i> attrspec</i></p>
-<dd> Specifies attribute that will be set (or changed if it exists) for any pruned node. <i>attrspec</i> is a string of the form <i>attr</i>=<i>value.</i></p>
-<dt><code>-v</code></p>
-<dd> Verbose output.</p>
-<dt><code>-h</code> -?</p>
-<dd> Prints the usage and exits.</dl>
+<dt><code>-n</code><i> name</i></dt>
+<dd> Specifies name of node to prune.</dd>
+<dt><code>-N</code><i> attrspec</i></dt>
+<dd> Specifies attribute that will be set (or changed if it exists) for any pruned node. <i>attrspec</i> is a string of the form <i>attr</i>=<i>value.</i></dd>
+<dt><code>-v</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>-h</code> -?</dt>
+<dd> Prints the usage and exits.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> An input graph <i>test.gv</i> of the form </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>digraph DG {</p>

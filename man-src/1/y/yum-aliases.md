@@ -24,8 +24,9 @@ description: "yum aliases plugin"
 <p> To create a new alias command called &quot;rm&quot; which does the same thing as the command &quot;remove&quot; use:</p>
 <dl>
 <dt>
-<dd> yum <code>alias</code> rm remove</dl>
+</dt><dd> yum <code>alias</code> rm remove</dd></dl>
 <p> To always add the &#8211;skip-broken &#8211;disableexcludes=all &#8211;obsoletes options to the update command (but leaving the upgrade option alone), you could use:</p>
 <dl>
 <dt>
-<dd> yum <code>alias</code> update 
+</dt><dd> yum <code>alias</code> update 
+</dd></dl>

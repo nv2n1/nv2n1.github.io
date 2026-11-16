@@ -15,11 +15,11 @@ ilookup - search for an inode in the inode cache
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>super block of file system to search</dl>
+<dl><dd></dd><dd>super block of file system to search</dd></dl>
  
 
  <i>ino</i>
-<dl><dd>inode number to search for</dl>
+<dl><dd>inode number to search for</dd></dl>
 
 <h2>Description</h2>
 

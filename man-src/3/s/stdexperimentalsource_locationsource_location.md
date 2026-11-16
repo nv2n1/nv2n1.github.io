@@ -11,10 +11,8 @@ description: "std::experimental::source_location::source_location – std::exper
 <h2>Synopsis</h2>
 <pre><code>constexpr source_location() noexcept;
 (1)(library fundamentals TS v2)
-
     source_location(const source_location &amp;other) = default;
 (2)(library fundamentals TS v2)(implicitly declared)
-
     source_location(source_location &amp;&amp;other) = default;
 (3)(library fundamentals TS v2)(implicitly declared)</code></pre>
 <p>1) Constructs an source_location object whose values are implementation defined.<br />

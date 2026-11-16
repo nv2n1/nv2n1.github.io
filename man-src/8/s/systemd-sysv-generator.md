@@ -20,11 +20,12 @@ description: "systemd-sysv-generator – Unit generator for SysV init scripts"
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-target/">systemd.target</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>SysV init</p>
+<dt> 1.</dt>
+<dd>SysV init</dd>
 <dl>
-<dd><a rel="nofollow" href="https://savannah.nongnu.org/projects/sysvinit">https://savannah.nongnu.org/projects/sysvinit</a></dl>
-<dt> 2.</p>
-<dd>LSB headers</p>
+<dd><a rel="nofollow" href="https://savannah.nongnu.org/projects/sysvinit">https://savannah.nongnu.org/projects/sysvinit</a></dd></dl>
+<dt> 2.</dt>
+<dd>LSB headers</dd>
 <dl>
-<dd><a rel="nofollow" href="http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/iniscrptact.html">http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/iniscrptact.html</a></dl>
+<dd><a rel="nofollow" href="http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/iniscrptact.html">http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/iniscrptact.html</a></dd></dl>
+</dl>

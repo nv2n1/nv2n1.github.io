@@ -14,7 +14,7 @@ description: "audit_set_loginuid – set current task’s audit_context loginuid
 <p><i>loginuid</i></p>
 <dl>
 <dd>
-<dd>loginuid value</dl>
+</dd><dd>loginuid value</dd></dl>
 <h2>Description</h2>
 <p>Returns 0. </p>
 <p> Called (set) from fs/proc/base.c::<code>proc_loginuid_write</code>.</p>

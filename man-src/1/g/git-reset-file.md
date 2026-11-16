@@ -22,21 +22,19 @@ description: "git-reset-file – Reset one file"
 <p> Reset one file to HEAD</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git reset-file .htaccess
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> or reset one file to certain commit</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git reset-file .htaccess dc82b19
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Sasha Khamkov &lt;<i>sanusart [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

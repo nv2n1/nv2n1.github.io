@@ -15,12 +15,12 @@ description: "tiffcmp – compare two TIFF files"
 <p> <i>Tiffcmp</i> compares the tags and data in two files created according to the Tagged Image File Format, Revision 6.0. The schemes used for compressing data in each file are immaterial when data are compared-data are compared on a scanline-by-scanline basis after decompression. Most directory tags are checked; notable exceptions are: <i>GrayResponseCurve</i>, <i>ColorResponseCurve</i>, and <i>ColorMap</i> tags. Data will not be compared if any of the <i>BitsPerSample</i>, <i>SamplesPerPixel</i>, or <i>ImageWidth</i> values are not equal. By default, <i>tiffcmp</i> will terminate if it encounters any difference.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd> List each byte of image data that differs between the files.</p>
-<dt><code>-z</code><i> number</i></p>
-<dd> List specified number of image data bytes that differs between the files.</p>
-<dt><code>-t</code></p>
-<dd> Ignore any differences in directory tags.</dl>
+<dt><code>-l</code></dt>
+<dd> List each byte of image data that differs between the files.</dd>
+<dt><code>-z</code><i> number</i></dt>
+<dd> List specified number of image data bytes that differs between the files.</dd>
+<dt><code>-t</code></dt>
+<dd> Ignore any differences in directory tags.</dd></dl>
 <h2>BUGS</h2>
 <p> Tags that are not recognized by the library are not compared; they may also generate spurious diagnostics. </p>
 <p> The image data of tiled files is not compared, since the <i>TIFFReadScanline()</i> function is used. An error will be reported for tiled files. </p>

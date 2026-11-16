@@ -62,61 +62,61 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <h3>Commands to support third party cards</h3>
 <p>I had to learn that those cards seem to use not only non standard clocks for the Mach32, but also for the included SVGA. However, since people often like to use proprietary, non standard VGA (read 80&#215;25) text modes, the Mach32 driver has to set the included SVGA to a VGA compatible clock frequency. Otherwise svgalib has problems using plain VGA modes. This screws VGA modes up if these clocks have different values on third party Mach32 cards. </p>
 <dl>
-<dt><code>svgaclocks </code><i>n</i></p>
-<dd>with <i>n</i> a number between <code>0</code> and <code>31</code> to select the svga clocks to be used in vga modes. The bits of <i>n</i> refer to specific ATI register bits to complicated to explain here. Even if I would, I can&#8217;t tell which clocks they would select on your third party card (which is the actual problem) </p>
+<dt><code>svgaclocks </code><i>n</i></dt>
+<dd>with <i>n</i> a number between <code>0</code> and <code>31</code> to select the svga clocks to be used in vga modes. The bits of <i>n</i> refer to specific ATI register bits to complicated to explain here. Even if I would, I can&#8217;t tell which clocks they would select on your third party card (which is the actual problem) </dd>
 <p> <code>svgaclocks 9</code> is the default setting and correct for original ATI cards. </p>
 <p> Often <code>svgaclocks 0</code> (Dell cards) works.</p>
-<dt><code>svgaclocks keep</code></p>
-<dd>is special in that the driver will not touch any SVGA timings. This requires the Mach32 SVGA part to be in a VGA compatible mode when the svgalib application is started, that is, you must use 80&#215;25 (maybe 80&#215;50) console text modes.</dl>
+<dt><code>svgaclocks keep</code></dt>
+<dd>is special in that the driver will not touch any SVGA timings. This requires the Mach32 SVGA part to be in a VGA compatible mode when the svgalib application is started, that is, you must use 80&#215;25 (maybe 80&#215;50) console text modes.</dd></dl>
 <p> As I mentioned already, Vernon C. Hoxie &lt;vern [at] zebra.alphacdc.com&gt; really seems to have located the reason for the Mach32 AST problems. Any access to <code>MISC_CTL</code> locks up the card &amp; system. Fortunately <code>MISC_CTL</code> is only used for some DAC fine tuning (actually the setting you can fine tune with the <code>blank</code> command) which is only of barely noticeable effect to the screen. </p>
 <p> The following configuration commands exist to support AST cards: </p>
 <dl>
-<dt><code>misc_ctl keep-off</code></p>
-<dd>Do not dare to touch MISC_CTL.</p>
-<dt><code>misc_ctl use</code></p>
-<dd>Use it for fine tuning of the Ramdac setup (default).</dl>
+<dt><code>misc_ctl keep-off</code></dt>
+<dd>Do not dare to touch MISC_CTL.</dd>
+<dt><code>misc_ctl use</code></dt>
+<dd>Use it for fine tuning of the Ramdac setup (default).</dd></dl>
 <p> Finally, for your convenience there exist: </p>
 <dl>
-<dt><code>vendor ati</code></p>
+<dt><code>vendor ati</code></dt>
 <dd>
-<dt><code>vendor dell</code></p>
+</dd><dt><code>vendor dell</code></dt>
 <dd>
-<dt><code>vendor ast</code></p>
-<dd>These are macros that expand to settings for <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> that are usually correct for ATI, Dell, AST cards. Be aware that they really work like macros. That is, they override any setting of <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> made before them and individual aspects will be changed by a following <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> command. </p>
+</dd><dt><code>vendor ast</code></dt>
+<dd>These are macros that expand to settings for <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> that are usually correct for ATI, Dell, AST cards. Be aware that they really work like macros. That is, they override any setting of <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> made before them and individual aspects will be changed by a following <code>svgaclocks</code>, <code>ramdac</code>, <code>misc_ctl</code>, and <code>mach32eeprom</code> command. </dd>
 <p> Note that the <code>mach32eeprom ignore</code> required for some Dell cards requires you to include explicit timings for Mach32 modes other than 640x480x256. The <i>mach32/mach32.std-modes</i> file in the svgalib distribution contains recommendations for modes from ATI. </p>
 <p> I heard about a bug in some ATI chipsets returning wrong memory amounts configs. (But cannot confirm that) </p>
 <p> You can enforce correct chipset identification from the configuration file: </p>
-<dt><code>chipset Mach32 </code><i>chiptype memory</i></p>
-<dd>where <i>chiptype</i> is the sum of at exactly one value from each of the following two groups </p>
+<dt><code>chipset Mach32 </code><i>chiptype memory</i></dt>
+<dd>where <i>chiptype</i> is the sum of at exactly one value from each of the following two groups </dd>
 <dl>
 <dd>
-<dl>
-<dt><code>128</code></p>
-<dd>use no memory aperture.</p>
-<dt><code>160</code></p>
-<dd>use a 1MB memory aperture.</p>
-<dt><code>192</code></p>
-<dd>use a 4MB memory aperture.</p>
-<dt><code>0</code></p>
-<dd>choose size for the memory aperture automatically.</dl>
+</dd><dl>
+<dt><code>128</code></dt>
+<dd>use no memory aperture.</dd>
+<dt><code>160</code></dt>
+<dd>use a 1MB memory aperture.</dd>
+<dt><code>192</code></dt>
+<dd>use a 4MB memory aperture.</dd>
+<dt><code>0</code></dt>
+<dd>choose size for the memory aperture automatically.</dd></dl>
 <p> and </p>
 <dl>
-<dt><code>16</code></p>
-<dd>Ramdac is of type 0 (ATI68830)</p>
-<dt><code>17</code></p>
-<dd>Ramdac is of type 1 (IMS-G173, SC11486)</p>
-<dt><code>18</code></p>
-<dd>Ramdac is of type 2 (ATI68875, TLC34075)</p>
-<dt><code>19</code></p>
-<dd>Ramdac is of type 3 (INMOS176, INMOS178)</p>
-<dt><code>20</code></p>
-<dd>Ramdac is of type 4 (Bt481, Bt482)</p>
-<dt><code>21</code></p>
-<dd>Ramdac is of type 5 (ATI68860)</p>
-<dt><code>0</code></p>
-<dd>Ramdac type is queried from Mach32 chip.</dl>
+<dt><code>16</code></dt>
+<dd>Ramdac is of type 0 (ATI68830)</dd>
+<dt><code>17</code></dt>
+<dd>Ramdac is of type 1 (IMS-G173, SC11486)</dd>
+<dt><code>18</code></dt>
+<dd>Ramdac is of type 2 (ATI68875, TLC34075)</dd>
+<dt><code>19</code></dt>
+<dd>Ramdac is of type 3 (INMOS176, INMOS178)</dd>
+<dt><code>20</code></dt>
+<dd>Ramdac is of type 4 (Bt481, Bt482)</dd>
+<dt><code>21</code></dt>
+<dd>Ramdac is of type 5 (ATI68860)</dd>
+<dt><code>0</code></dt>
+<dd>Ramdac type is queried from Mach32 chip.</dd></dl>
 </dl>
-<dd><i>memory</i> is the amount of video memory in KB.</dl>
+<dd><i>memory</i> is the amount of video memory in KB.</dd></dl>
 <p> Note that the type of the ramdac can be set more conveniently with the <code>ramdac</code> command.</p>
 <h2>5. Logical Linewidth</h2>
 <p>At least my VRAM card seems to be very peculiar about logical line widths. From my experience a multiple of 64 pels is needed. Your mileage may vary. Use the config file options to adjust it and tell me if your card needs a different value. Include the name and model number of the card and what the correct numbers should be. This is so that I can correct the auto configuration of the driver. </p>
@@ -127,31 +127,31 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <p>First you should think about the <code>maxclock*</code> configuration commands to reduce pixel clocks used for each color depth. </p>
 <p> Especially important for DRAM cards is the video FIFO depth used to queue memory values for writing to the screen. Here is a command to set this value for the 8bpp modes: </p>
 <dl>
-<dt><code>vfifo8 </code><i>number</i></p>
-<dd>where <i>number is in range</i> <code>0</code> &#8211; <code>15</code>. The default is now 6. </p>
+<dt><code>vfifo8 </code><i>number</i></dt>
+<dd>where <i>number is in range</i> <code>0</code> &#8211; <code>15</code>. The default is now 6. </dd>
 <p> Since vfifo is of some impact to the speed of the card, tell me the lowest setting that satisfies your card. </p>
 <p> For 16/24/32 modes, there are non-zero values preset from internal tables and the EEPROM, however you can enforce minimal vfifo values with:</dl>
 <p> <code>vfifo16 </code><i>number</i><br />
  <code>vfifo24 </code><i>number</i><br />
  <code>vfifo32 </code><i>number</i> </p>
 <dl>
-<dt><code>blank </code><i>number</i></p>
-<dd>where <i>number</i> is <code>4 * </code><i>pixel_delay</i><code> + </code><i>blank_adjust</i> where <i>pixel_delay</i> and <i>blank_adjust</i> are in range <code>0</code> .. <code>3</code>. <i>pixel_delay</i> delays pixels before they are sent to the DAC and <i>blank_adjust</i> adjusts the blank pulse for type 2 DAC&#8217;s. <code>blank</code> should be set correctly for each DAC type automatically. So use it only as a last resort. </p>
-<dt><code>latch </code><i>number</i></p>
-<dd>where <i>number</i> is the sum of zero or more of the following numbers:</p>
+<dt><code>blank </code><i>number</i></dt>
+<dd>where <i>number</i> is <code>4 * </code><i>pixel_delay</i><code> + </code><i>blank_adjust</i> where <i>pixel_delay</i> and <i>blank_adjust</i> are in range <code>0</code> .. <code>3</code>. <i>pixel_delay</i> delays pixels before they are sent to the DAC and <i>blank_adjust</i> adjusts the blank pulse for type 2 DAC&#8217;s. <code>blank</code> should be set correctly for each DAC type automatically. So use it only as a last resort. </dd>
+<dt><code>latch </code><i>number</i></dt>
+<dd>where <i>number</i> is the sum of zero or more of the following numbers:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>128</code></p>
-<dd>VRAM serial delay latch enable, DRAM latch bits 63 &#8211; 0 enable.</p>
-<dt><code>4096</code></p>
-<dd>Latch video memory data.</p>
-<dt><code>8192</code></p>
-<dd>Memory data delay latch enable for data bits 63 &#8211; 0.</p>
-<dt><code>16384</code></p>
-<dd>Memory full clock pulse enable.</dl>
+</dd><dl>
+<dt><code>128</code></dt>
+<dd>VRAM serial delay latch enable, DRAM latch bits 63 &#8211; 0 enable.</dd>
+<dt><code>4096</code></dt>
+<dd>Latch video memory data.</dd>
+<dt><code>8192</code></dt>
+<dd>Memory data delay latch enable for data bits 63 &#8211; 0.</dd>
+<dt><code>16384</code></dt>
+<dd>Memory full clock pulse enable.</dd></dl>
 </dl>
-<dd>Default is to switch all settings on (they are on on my card by default anyway).</dl>
+<dd>Default is to switch all settings on (they are on on my card by default anyway).</dd></dl>
 <p> Note that these commands may vanish again once they are no longer needed for debugging purposes. </p>
 <p> There is no 320&#215;200 mode in the EEPROM of the Mach32 at all, however I defined one in the default configuration file for you. This is the best thing I could get up on my card/screen. Note that it will probably have big borders on your screen, and black lines in between the pixel lines. This is because of the lack of low clocks &lt; 16MHz on the Mach32 and the lack of a line doubling mode as VGA has. The Mach32 is not intended for such low resolutions. If you find a better mode or have an idea, please let me know. You can also just remove my timings from the default configuration file.</p>
 <h2>7. The Configuration Eeprom</h2>
@@ -176,8 +176,8 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <h2>9. The Mach32Eeprom Command</h2>
 <p>The <code>mach32eeprom</code> allows to work around these problems. Here is the complete description for this configuration command. </p>
 <dl>
-<dt><code>mach32eeprom </code><i>filename</i></p>
-<dd>The <i>filename</i> has to begin with a &quot;/&quot;. </p>
+<dt><code>mach32eeprom </code><i>filename</i></dt>
+<dd>The <i>filename</i> has to begin with a &quot;/&quot;. </dd>
 <p> Unfortunately reading the EEPROM causes annoying screen flickering and is slow. To avoid this, specify a <i>filename</i> from which to read the contents of the EEPROM. </p>
 <p> If the file cannot be read, the EEPROM is read out and the file is created. There is a very simple checksum put into this file. Although it can easily be fooled, don&#8217;t change the file except you know <code>very, very</code> well what you are doing. </p>
 <p> Also, as long as the file exists, changes in the Mach32&#8217;s EEPROM are ignored. Delete the file to recreate an updated version on next use of svgalib. You should ensure that the permissions of the file don&#8217;t allow normal users to change it. (This may happen if umask has a bad value when svgalib creates the file). </p>
@@ -186,29 +186,29 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 </dl>
 <p> Due to problems with some boards this command got heavily expanded: </p>
 <dl>
-<dt><code>mach32eeprom </code><i>subcommand1</i><code> [</code><i>subcommand2</i><code>&#8230;]</code></p>
-<dd>At least one <i>subcommand</i> is needed. Valid <i>subcommands</i> are: </p>
+<dt><code>mach32eeprom </code><i>subcommand1</i><code> [</code><i>subcommand2</i><code>&#8230;]</code></dt>
+<dd>At least one <i>subcommand</i> is needed. Valid <i>subcommands</i> are: </dd>
 <dl>
 <dd>
-<dl>
-<dt><code>ignore</code></p>
-<dd>Don&#8217;t complain about checksum and don&#8217;t use any EEPROM contents.</p>
-<dt><code>useaperture</code></p>
-<dd>Use the configuration for the memory aperture given in the EEPROM.</p>
-<dt><code>usetimings</code></p>
-<dd>Use video modes found in the EEPROM of the board.</p>
-<dt><code>nofile</code></p>
-<dd>Forget about any filename that maybe was already configured. Don&#8217;t read a file, don&#8217;t create one.</p>
-<dt><code>file </code><i>filename</i></p>
-<dd>New style form to specify the <i>filename</i>; On contrary to the <code>mach32eeprom </code><i>filename</i> form it can be mixed with any other mach32eeprom subcommand.</p>
-<dt><code>updatefile</code></p>
-<dd>Don&#8217;t read the file, always read the EEPROM (except when <code>ignore</code> is given) and create an uptodate image of the EEPROM.</p>
-<dt><code>keepfile</code></p>
-<dd>Disable all previous updatefile commands.</p>
-<dt><code>compatible</code></p>
-<dd>Fall back to default behavior: If checksum on the EEPROM data is not ok, use nothing of the configuration data. If it is ok, configure everything as specified in the EEPROM.</dl>
+</dd><dl>
+<dt><code>ignore</code></dt>
+<dd>Don&#8217;t complain about checksum and don&#8217;t use any EEPROM contents.</dd>
+<dt><code>useaperture</code></dt>
+<dd>Use the configuration for the memory aperture given in the EEPROM.</dd>
+<dt><code>usetimings</code></dt>
+<dd>Use video modes found in the EEPROM of the board.</dd>
+<dt><code>nofile</code></dt>
+<dd>Forget about any filename that maybe was already configured. Don&#8217;t read a file, don&#8217;t create one.</dd>
+<dt><code>file </code><i>filename</i></dt>
+<dd>New style form to specify the <i>filename</i>; On contrary to the <code>mach32eeprom </code><i>filename</i> form it can be mixed with any other mach32eeprom subcommand.</dd>
+<dt><code>updatefile</code></dt>
+<dd>Don&#8217;t read the file, always read the EEPROM (except when <code>ignore</code> is given) and create an uptodate image of the EEPROM.</dd>
+<dt><code>keepfile</code></dt>
+<dd>Disable all previous updatefile commands.</dd>
+<dt><code>compatible</code></dt>
+<dd>Fall back to default behavior: If checksum on the EEPROM data is not ok, use nothing of the configuration data. If it is ok, configure everything as specified in the EEPROM.</dd></dl>
 </dl>
-<dd>The subcommands are intended to be used together and are performed in the order specified. For example: </p>
+<dd>The subcommands are intended to be used together and are performed in the order specified. For example: </dd>
 <p> <code>mach32eeprom ignore useaperture usetimings</code> </p>
 <p> will ignore the checksum of your EEPROM, but use its contents. Order is vital! So: </p>
 <p> <code>mach32eeprom useaperture usetimings ignore</code> </p>
@@ -232,29 +232,29 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <p> Recently I hear often about type 6 ramdacs in non ATI Mach32 cards. There exists no info about these dacs, thus I cannot support them. The driver assumes unknown DACs can stand up to 80MHz in 256 color clut modes and does not touch the ramdac (that is, assumes it is in the 256 color mode already) </p>
 <p> To get rid of the warning message you can use the </p>
 <dl>
-<dt><code>ramdac </code><i>n</i></p>
-<dd>configuration command. It allows to explicitly set the type of the dac to <i>n</i> (in range <code>0</code> to <code>5).</code> <code>Ramdac 3</code> is the most dumbest ramdac possible, s.t. you can use it without any fear for your hardware.</p>
-<dt><code>ramdac dumb</code></p>
-<dd>is equivalent to <code>ramdac 3</code>.</p>
-<dt><code>ramdac auto</code></p>
-<dd>switches back to the default autodetection.</dl>
+<dt><code>ramdac </code><i>n</i></dt>
+<dd>configuration command. It allows to explicitly set the type of the dac to <i>n</i> (in range <code>0</code> to <code>5).</code> <code>Ramdac 3</code> is the most dumbest ramdac possible, s.t. you can use it without any fear for your hardware.</dd>
+<dt><code>ramdac dumb</code></dt>
+<dd>is equivalent to <code>ramdac 3</code>.</dd>
+<dt><code>ramdac auto</code></dt>
+<dd>switches back to the default autodetection.</dd></dl>
 <h2>13. Meaning Of The Detection Message From Svgalib</h2>
 <p>Some programs (which do not switch it off) will show a </p>
 <p> <code>Using Mach32 </code><i>version</i><code> (</code><i>size</i><code>M at </code><i>adr</i><code>M (</code><i>how</i><code>), </code><i>mem</i><code>K mem, DAC </code><i>dactype</i><code>)</code> </p>
 <p> line. This will show up in <code>testlinear</code>(6) etc but will probably scroll away when you use <code>vgatest</code>(6). In this line: </p>
 <dl>
-<dt><i>version</i></p>
-<dd>is the version of the driver (as of my counting, not the svgalib version).</p>
-<dt><i>size</i></p>
-<dd>is the size of the memory aperture. It can be <code>1</code> or <code>4</code> (<code>1</code> will lead to not using the linear aperture if your card has more than 1MB memory, however applications can still use the 1MB aperture and page the video memory through it in 1MB steps). <i>size</i> can also be <code>no</code> if no aperture is setup at all.</p>
-<dt><i>adr</i></p>
-<dd>is the base address of the aperture in MB.</p>
-<dt><i>how</i></p>
-<dd>is <code>autodetect</code> if the aperture was setup this way already when the program started. It is <code>setup</code> when the the setting was enforced with a <code>setuplinear</code> configuration command. It is <code>EEPROM</code> when no aperture was detected, but parameters to set it up were found in the EEPROM.</p>
-<dt><i>mem</i></p>
-<dd>is the amount of memory the card reported to have.</p>
-<dt><i>dactype</i></p>
-<dd>is the type of the DAC that was detected. </p>
+<dt><i>version</i></dt>
+<dd>is the version of the driver (as of my counting, not the svgalib version).</dd>
+<dt><i>size</i></dt>
+<dd>is the size of the memory aperture. It can be <code>1</code> or <code>4</code> (<code>1</code> will lead to not using the linear aperture if your card has more than 1MB memory, however applications can still use the 1MB aperture and page the video memory through it in 1MB steps). <i>size</i> can also be <code>no</code> if no aperture is setup at all.</dd>
+<dt><i>adr</i></dt>
+<dd>is the base address of the aperture in MB.</dd>
+<dt><i>how</i></dt>
+<dd>is <code>autodetect</code> if the aperture was setup this way already when the program started. It is <code>setup</code> when the the setting was enforced with a <code>setuplinear</code> configuration command. It is <code>EEPROM</code> when no aperture was detected, but parameters to set it up were found in the EEPROM.</dd>
+<dt><i>mem</i></dt>
+<dd>is the amount of memory the card reported to have.</dd>
+<dt><i>dactype</i></dt>
+<dd>is the type of the DAC that was detected. </dd>
 <p> If a special ramdac type was set with the <code>ramdac</code> command a <code>(set)</code> will be displayed after <i>dactype</i>.</dl>
 <p> If <i>mem</i>, <i>dactype</i> and/or the chipset were enforced with <code>chipset from the configuration file</code> or <code>vga_setchipsetandfeatures</code>(3) a <code>forced</code> will be appended to the line.</p>
 <h2>14. Conclusions</h2>
@@ -270,3 +270,4 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code>libvga.config</code>(5), <code>mach32info</code>(6). </p>
 <h2>Author</h2>
 <p>The Mach32 driver and this documentation was written by Michael Weller &lt;eowmob [at] exp-math.uni-essen.de&gt;.</p>
+</p>

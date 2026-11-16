@@ -19,7 +19,7 @@ description: "git-check-mailmap – Show canonical names and email addresses of 
 <p> &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Read contacts, one per line, from the standard input after exhausting contacts provided on the command-line.</dl>
+</dt><dd> Read contacts, one per line, from the standard input after exhausting contacts provided on the command-line.</dd></dl>
 <h2>OUTPUT</h2>
 <p> For each contact, a single line is output, terminated by a newline. If the name is provided or known to the <i>mailmap</i>, &#8220;Name &lt;user [at] host&gt;&#8221; is printed; otherwise only &#8220;&lt;user [at] host&gt;&#8221; is printed.</p>
 <h2>CONFIGURATION</h2>

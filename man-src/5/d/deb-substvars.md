@@ -29,47 +29,47 @@ description: "deb-substvars – Debian source substitution variables"
 <p>Variables can be set using the <code>-V</code> common option. They can be also specified in the file <code>debian/substvars</code> (or whatever other file is specified using the <code>-T</code> option). This file consists of lines of the form <i>name</i><code>=</code><i>value</i>. Trailing whitespace on each line, blank lines, and lines starting with a <code>#</code> symbol (comments) are ignored. </p>
 <p> Additionally, the following standard variables are available:</p>
 <dl>
-<dt><code>Arch</code></p>
-<dd>The current host architecture (i.e. the architecture the package is being built for, the equivalent of <font SIZE="-1"><code>DEB_HOST_ARCH</code></font>).</p>
-<dt><code>vendor:Name</code></p>
-<dd>The current vendor name (since dpkg 1.20.0). This value comes from the <code>Vendor</code> field for the current vendor&#8217;s origin file, as <code><a href="/docs/linux/man/1-dpkg-vendor/">dpkg-vendor</a></code>(1) would retrieve it.</p>
-<dt><code>vendor:Id</code></p>
-<dd>The current vendor <font SIZE="-1">ID</font> (since dpkg 1.20.0). This is just the lowercase variant of <code>vendor:Name</code>.</p>
-<dt><code>source:Version</code></p>
-<dd>The source package version (since dpkg 1.13.19).</p>
-<dt><code>source:Upstream-Version</code></p>
-<dd>The upstream source package version, including the Debian version epoch if any (since dpkg 1.13.19).</p>
-<dt><code>binary:Version</code></p>
-<dd>The binary package version (which may differ from <code>source:Version</code> in a binNMU for example; since dpkg 1.13.19).</p>
-<dt><code>Source-Version</code></p>
-<dd>The source package version (from the changelog file). This variable is now <code>obsolete</code> and emits an error when used as its meaning is different from its function, please use the <code>source:Version</code> or <code>binary:Version</code> as appropriate.</p>
-<dt><code>source:Synopsis</code></p>
-<dd>The source package synopsis, extracted from the source stanza <code>Description</code> field, if it exists (since dpkg 1.19.0).</p>
-<dt><code>source:Extended-Description</code></p>
-<dd>The source package extended description, extracted from the source stanza <code>Description</code> field, if it exists (since dpkg 1.19.0).</p>
-<dt><code>Installed-Size</code></p>
-<dd>The approximate total size of the package&#8217;s installed files. This value is copied into the corresponding control file field; setting it will modify the value of that field. If this variable is not set <code>dpkg-gencontrol</code> will compute the default value by accumulating the size of each regular file and symlink rounded to 1 KiB used units, and a baseline of 1 KiB for any other filesystem object type. With hardlinks only being counted once as a regular file. </p>
+<dt><code>Arch</code></dt>
+<dd>The current host architecture (i.e. the architecture the package is being built for, the equivalent of <font SIZE="-1"><code>DEB_HOST_ARCH</code></font>).</dd>
+<dt><code>vendor:Name</code></dt>
+<dd>The current vendor name (since dpkg 1.20.0). This value comes from the <code>Vendor</code> field for the current vendor&#8217;s origin file, as <code><a href="/docs/linux/man/1-dpkg-vendor/">dpkg-vendor</a></code>(1) would retrieve it.</dd>
+<dt><code>vendor:Id</code></dt>
+<dd>The current vendor <font SIZE="-1">ID</font> (since dpkg 1.20.0). This is just the lowercase variant of <code>vendor:Name</code>.</dd>
+<dt><code>source:Version</code></dt>
+<dd>The source package version (since dpkg 1.13.19).</dd>
+<dt><code>source:Upstream-Version</code></dt>
+<dd>The upstream source package version, including the Debian version epoch if any (since dpkg 1.13.19).</dd>
+<dt><code>binary:Version</code></dt>
+<dd>The binary package version (which may differ from <code>source:Version</code> in a binNMU for example; since dpkg 1.13.19).</dd>
+<dt><code>Source-Version</code></dt>
+<dd>The source package version (from the changelog file). This variable is now <code>obsolete</code> and emits an error when used as its meaning is different from its function, please use the <code>source:Version</code> or <code>binary:Version</code> as appropriate.</dd>
+<dt><code>source:Synopsis</code></dt>
+<dd>The source package synopsis, extracted from the source stanza <code>Description</code> field, if it exists (since dpkg 1.19.0).</dd>
+<dt><code>source:Extended-Description</code></dt>
+<dd>The source package extended description, extracted from the source stanza <code>Description</code> field, if it exists (since dpkg 1.19.0).</dd>
+<dt><code>Installed-Size</code></dt>
+<dd>The approximate total size of the package&#8217;s installed files. This value is copied into the corresponding control file field; setting it will modify the value of that field. If this variable is not set <code>dpkg-gencontrol</code> will compute the default value by accumulating the size of each regular file and symlink rounded to 1 KiB used units, and a baseline of 1 KiB for any other filesystem object type. With hardlinks only being counted once as a regular file. </dd>
 <p> <code>Note:</code> Take into account that this can only ever be an approximation, as the actual size used on the installed system will depend greatly on the filesystem used and its parameters, which might end up using either more or less space than the specified in this field.</p>
-<dt><code>Extra-Size</code></p>
-<dd>Additional disk space used when the package is installed. If this variable is set its value is added to that of the <code>Installed-Size</code> variable (whether set explicitly or using the default value) before it is copied into the <code>Installed-Size</code> control file field.</p>
-<dt><code>S:</code><i>fieldname</i></p>
-<dd>The value of the source stanza field <i>fieldname</i> (which must be given in the canonical capitalisation; since dpkg 1.18.11). Setting these variables has no effect other than on places where they are expanded explicitly. These variables are only available when generating binary control files.</p>
-<dt><code>F:</code><i>fieldname</i></p>
-<dd>The value of the output field <i>fieldname</i> (which must be given in the canonical capitalisation). Setting these variables has no effect other than on places where they are expanded explicitly.</p>
-<dt><code>Format</code></p>
-<dd>The <code>.changes</code> file format version generated by this version of the source packaging scripts. If you set this variable the contents of the <code>Format</code> field in the <code>.changes</code> file will change too.</p>
-<dt><code>Newline</code>, <code>Space</code>, <code>Tab</code></p>
-<dd>These variables each hold the corresponding character.</p>
-<dt><code>shlibs:</code><i>dependencyfield</i></p>
-<dd>Variable settings with names of this form are generated by <code>dpkg-shlibdeps</code>.</p>
-<dt><code>dpkg:Upstream-Version</code></p>
-<dd>The upstream version of dpkg (since dpkg 1.13.19).</p>
-<dt><code>dpkg:Version</code></p>
-<dd>The full version of dpkg (since dpkg 1.13.19).</dl>
+<dt><code>Extra-Size</code></dt>
+<dd>Additional disk space used when the package is installed. If this variable is set its value is added to that of the <code>Installed-Size</code> variable (whether set explicitly or using the default value) before it is copied into the <code>Installed-Size</code> control file field.</dd>
+<dt><code>S:</code><i>fieldname</i></dt>
+<dd>The value of the source stanza field <i>fieldname</i> (which must be given in the canonical capitalisation; since dpkg 1.18.11). Setting these variables has no effect other than on places where they are expanded explicitly. These variables are only available when generating binary control files.</dd>
+<dt><code>F:</code><i>fieldname</i></dt>
+<dd>The value of the output field <i>fieldname</i> (which must be given in the canonical capitalisation). Setting these variables has no effect other than on places where they are expanded explicitly.</dd>
+<dt><code>Format</code></dt>
+<dd>The <code>.changes</code> file format version generated by this version of the source packaging scripts. If you set this variable the contents of the <code>Format</code> field in the <code>.changes</code> file will change too.</dd>
+<dt><code>Newline</code>, <code>Space</code>, <code>Tab</code></dt>
+<dd>These variables each hold the corresponding character.</dd>
+<dt><code>shlibs:</code><i>dependencyfield</i></dt>
+<dd>Variable settings with names of this form are generated by <code>dpkg-shlibdeps</code>.</dd>
+<dt><code>dpkg:Upstream-Version</code></dt>
+<dd>The upstream version of dpkg (since dpkg 1.13.19).</dd>
+<dt><code>dpkg:Version</code></dt>
+<dd>The full version of dpkg (since dpkg 1.13.19).</dd></dl>
 <p> If a variable is referred to but not defined it generates a warning and an empty value is assumed.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>debian/substvars</code></p>
-<dd>List of substitution variables and values.</dl>
+<dt><code>debian/substvars</code></dt>
+<dd>List of substitution variables and values.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-vendor/">dpkg-vendor</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-genchanges/">dpkg-genchanges</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-gencontrol/">dpkg-gencontrol</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-source/">dpkg-source</a></code>(1). </p>

@@ -19,28 +19,28 @@ description: "wordview – displays text contained in MS-Word file in X window"
 <h2>X RESOURCES</h2>
 <p> Following X resources can be used to customize <code>wordview</code>look: </p>
 <dl>
-<dt><code>Wordview.Text.Background</code></p>
-<dd> background color for main window</p>
-<dt><code>Wordview.Text.Foreground</code></p>
-<dd> Foreground color for main window</p>
-<dt><code>Wordview.Text.selectBackground</code></p>
-<dd> Background color of selected text</p>
-<dt><code>Wordview.Text.selectForeground</code></p>
-<dd> Foreground color of selected text</p>
-<dt><code>Wordview.Text.Font</code></p>
-<dd> Font to display text. We recommend to use fixed-width font, such as Courier, becouse <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1) is intended to convert Word into text. Either XLFD font names or Tk-style font specifications like <code>{Courier 12pt} </code> can be used for specifying font. If you use XLFD font names, usage of unicode (iso10646-1) fonts is recommended.</p>
-<dt><code>Wordview.Text.findMode</code></p>
-<dd> How to search text. This option can have value either <code>exact</code> or <code>regexp</code> and specifis whether text is searched for exact match or for regular expression by default. This behavoir can be toggled interactively via checkbox in the search dialog.</p>
-<dt><code>Wordview.Text.findCase</code></p>
-<dd> This boolean option controls whether search is case-sensitive. Default is no.</p>
-<dt><code>Wordview.Menu.highlightBackground</code></p>
-<dd> Background color for highlighted menu item</p>
-<dt><code>Wordview.Menu.highlightThickness</code></p>
+<dt><code>Wordview.Text.Background</code></dt>
+<dd> background color for main window</dd>
+<dt><code>Wordview.Text.Foreground</code></dt>
+<dd> Foreground color for main window</dd>
+<dt><code>Wordview.Text.selectBackground</code></dt>
+<dd> Background color of selected text</dd>
+<dt><code>Wordview.Text.selectForeground</code></dt>
+<dd> Foreground color of selected text</dd>
+<dt><code>Wordview.Text.Font</code></dt>
+<dd> Font to display text. We recommend to use fixed-width font, such as Courier, becouse <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1) is intended to convert Word into text. Either XLFD font names or Tk-style font specifications like <code>{Courier 12pt} </code> can be used for specifying font. If you use XLFD font names, usage of unicode (iso10646-1) fonts is recommended.</dd>
+<dt><code>Wordview.Text.findMode</code></dt>
+<dd> How to search text. This option can have value either <code>exact</code> or <code>regexp</code> and specifis whether text is searched for exact match or for regular expression by default. This behavoir can be toggled interactively via checkbox in the search dialog.</dd>
+<dt><code>Wordview.Text.findCase</code></dt>
+<dd> This boolean option controls whether search is case-sensitive. Default is no.</dd>
+<dt><code>Wordview.Menu.highlightBackground</code></dt>
+<dd> Background color for highlighted menu item</dd>
+<dt><code>Wordview.Menu.highlightThickness</code></dt>
 <dd>
-<dt><code>Wordview.Menu.activeBackground</code></p>
-<dd> Background color of active menu item.</p>
-<dt><code>Wordview.Menu.activeBorderWidth</code></p>
-<dd> Width (in pixels) of border around highlighted menu item. Default is 0, which differs from Tk global default. See <code>options</code>(n) for more details.</dl>
+</dd><dt><code>Wordview.Menu.activeBackground</code></dt>
+<dd> Background color of active menu item.</dd>
+<dt><code>Wordview.Menu.activeBorderWidth</code></dt>
+<dd> Width (in pixels) of border around highlighted menu item. Default is 0, which differs from Tk global default. See <code>options</code>(n) for more details.</dd></dl>
 <p> A lot of other resource options which affect behavoir of standard Tk widgets can affect wordview. See Tcl/Tk manual pages for more information. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1),<code><a href="/docs/linux/man/1-wish/">wish</a></code>(1),<code>options</code>(n) </p>

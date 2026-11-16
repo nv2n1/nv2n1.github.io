@@ -17,12 +17,12 @@ url: "/docs/linux/man/3-mlx5dv_alloc_dm/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct ibv_dm *mlx5dv_alloc_dm(struct ibv_context *context,
                                struct ibv_alloc_dm_attr *dm_attr,
                                struct mlx5dv_alloc_dm_attr *mlx5_dm_attr)
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -40,26 +40,23 @@ struct ibv_dm *mlx5dv_alloc_dm(struct ibv_context *context,
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_alloc_dm_attr {
     enum mlx5dv_alloc_dm_type type;
     uint64_t comp_mask;
 };
 </code></pre>
-<dt>type
-<dd> The device memory type user wishes to allocate:
-<dl>
+</dd><dt>type
+</dt><dd> The device memory type user wishes to allocate:
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  MLX5DV_DM_TYPE_MEMIC Device memory of type MEMIC - On-Chip memory that can be allocated and used as memory region for transmitting/receiving packet directly from/to the memory on the chip. 
-
  MLX5DV_DM_TYPE_STEERING_SW_ICM Device memory of type STEERING SW ICM - This memory is used by the device to store the packet steering tables and rules. Can be used for direct table and steering rules creation when allocated by a privileged user. 
-
- MLX5DV_DM_TYPE_HEADER_MODIFY_SW_ICM Device memory of type HEADER MODIFY SW ICM - This memory is used by the device to store the packet header modification tables and rules. Can be used for direct table and header modification rules creation when allocated by a privileged user.</dl>
+ MLX5DV_DM_TYPE_HEADER_MODIFY_SW_ICM Device memory of type HEADER MODIFY SW ICM - This memory is used by the device to store the packet header modification tables and rules. Can be used for direct table and header modification rules creation when allocated by a privileged user.</dd></dl>
 
 <dt>comp_mask
-<dd> Bitmask specifying what fields in the structure are valid: Currently reserved and should be set to 0.</dl>
+</dt><dd> Bitmask specifying what fields in the structure are valid: Currently reserved and should be set to 0.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

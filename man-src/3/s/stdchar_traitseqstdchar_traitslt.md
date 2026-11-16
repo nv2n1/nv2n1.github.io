@@ -11,11 +11,8 @@ std::char_traits&lt;CharT&gt;::eq,std::char_traits&lt;CharT&gt;::lt - std::char_
 <h2>Synopsis</h2>
 
 <pre><code>static bool eq( char_type a, char_type b );                            (until C++11)
-
 static constexpr bool eq( char_type a, char_type b ) noexcept; (1)     (since C++11)
-
 static bool lt( char_type a, char_type b );                        (2)               (until C++11)
-
 static constexpr bool lt( char_type a, char_type b ) noexcept;                       (since C++11)</code></pre> 
 Compares two characters. 
 1) Compares a and b for equality. 

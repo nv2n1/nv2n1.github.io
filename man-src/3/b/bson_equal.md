@@ -16,11 +16,11 @@ bool bson_equal(const bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>other</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>other</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_equal/">bson_equal</a>(3)</code> function shall return true if both documents are equal. </p>
 <h2>RETURNS</h2>

@@ -10,66 +10,24 @@ description: "QuantLib::LossDist – Probability formulas and algorithms."
 <p>QuantLib::LossDist &#8211; Probability formulas and algorithms. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Distribution operator() (const std::vector&lt; Real &gt; &amp;volumes, const std::vector&lt; Real &gt; &amp;probabilities) const =0
-
-
-
 virtual Size buckets () const =0
-
-
-
 virtual Real maximum () const =0
-
-
-
 Static Public Member Functions
 static Real binomialProbabilityOfNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real binomialProbabilityOfAtLeastNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static std::vector&lt; Real &gt; probabilityOfNEvents (std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real probabilityOfNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real probabilityOfAtLeastNEvents (int n, std::vector&lt; Real &gt; &amp;p)</code></pre>
 <p> Inherited by <code>LossDistBinomial</code>, <code>LossDistBucketing</code>, <code>LossDistHomogeneous</code>, and <code>LossDistMonteCarlo</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual Distribution operator() (const std::vector&lt; Real &gt; &amp;volumes, const std::vector&lt; Real &gt; &amp;probabilities) const =0
-
-
-
 virtual Size buckets () const =0
-
-
-
 virtual Real maximum () const =0
-
-
-
 Static Public Member Functions
 static Real binomialProbabilityOfNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real binomialProbabilityOfAtLeastNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static std::vector&lt; Real &gt; probabilityOfNEvents (std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real probabilityOfNEvents (int n, std::vector&lt; Real &gt; &amp;p)
-
-
-
 static Real probabilityOfAtLeastNEvents (int n, std::vector&lt; Real &gt; &amp;p)</code></pre>
 <h2>Detailed Description</h2>
 <p>Probability formulas and algorithms.</p>

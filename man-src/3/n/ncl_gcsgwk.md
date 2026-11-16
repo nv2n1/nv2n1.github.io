@@ -12,9 +12,9 @@ GCSGWK (Copy segment to workstation) - copies a GKS segment to a GKS workstation
 
  void gcopy_seg_ws(Gint ws_id, Gint seg_name);
 <h2>Description</h2><dl COMPACT><dt>WKID
-<dd>(Integer, Input) - Specifies the workstation identifier (as defined in a GOPWK call) that is to receive the segment copy.
-<dt>SGNA
-<dd>(Integer, Input) - Identifies the segment that is to be copied to the specified workstation. SGNA must have been used in a previous call to GCRSG.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Input) - Specifies the workstation identifier (as defined in a GOPWK call) that is to receive the segment copy.
+</dd><dt>SGNA
+</dt><dd>(Integer, Input) - Identifies the segment that is to be copied to the specified workstation. SGNA must have been used in a previous call to GCRSG.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gevtm, gactm, gclsg, gcrsg, gdsg, gqopsg, gqsgus, gssgt., gcopy_seg_ws 
 
  Hardcopy: &quot;User's Guide for NCAR GKS-0A Graphics&quot;

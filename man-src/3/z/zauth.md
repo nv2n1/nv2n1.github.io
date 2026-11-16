@@ -10,7 +10,6 @@ description: "zauth – authentication for ZeroMQ security mechanisms"
 <p>zauth &#8211; authentication for ZeroMQ security mechanisms</p>
 <h2>Synopsis</h2>
 <pre><code>#define CURVE_ALLOW_ANY &quot;*&quot;
-
 //  CZMQ v3 API (for use with zsock, not zsocket, which is deprecated).
 //
 //  Create new zauth actor instance. This installs authentication on all
@@ -77,7 +76,6 @@ description: "zauth – authentication for ZeroMQ security mechanisms"
 //  This is the zauth constructor as a zactor_fn:
 CZMQ_EXPORT void
 zauth(zsock_t *pipe, void *unused);
-
 //  Selftest
 CZMQ_EXPORT void
 zauth_test(bool verbose);</code></pre>
@@ -89,7 +87,6 @@ zauth_test(bool verbose);</code></pre>
 <pre><code>//  Create temporary directory for test files
 #define TESTDIR &quot;.test_zauth&quot;
 zsys_dir_create(TESTDIR);
-
 //  Check there's no authentication
 zsock_t *server = zsock_new(ZMQ_PUSH);
 assert(server);
@@ -97,7 +94,6 @@ zsock_t *client = zsock_new(ZMQ_PULL);
 assert(client);
 bool success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 //  Install the authenticator
 zactor_t *auth = zactor_new(zauth, NULL);
 assert(auth);
@@ -108,35 +104,30 @@ if (verbose) {
 //  Check there's no authentication on a default NULL server
 success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 //  When we set a domain on the server, we switch on authentication
 //  for NULL sockets, but with no policies, the client connection
 //  will be allowed.
 zsock_set_zap_domain(server, &quot;global&quot;);
 success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 //  Blacklist 127.0.0.1, connection should fail
 zsock_set_zap_domain(server, &quot;global&quot;);
 zstr_sendx(auth, &quot;DENY&quot;, &quot;127.0.0.1&quot;, NULL);
 zsock_wait(auth);
 success = s_can_connect(&amp;server, &amp;client);
 assert(!success);
-
 //  Whitelist our address, which overrides the blacklist
 zsock_set_zap_domain(server, &quot;global&quot;);
 zstr_sendx(auth, &quot;ALLOW&quot;, &quot;127.0.0.1&quot;, NULL);
 zsock_wait(auth);
 success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 //  Try PLAIN authentication
 zsock_set_plain_server(server, 1);
 zsock_set_plain_username(client, &quot;admin&quot;);
 zsock_set_plain_password(client, &quot;Password&quot;);
 success = s_can_connect(&amp;server, &amp;client);
 assert(!success);
-
 FILE *password = fopen(TESTDIR &quot;/password-file&quot;, &quot;w&quot;);
 assert(password);
 fprintf(password, &quot;admin=Password
@@ -149,13 +140,11 @@ zstr_sendx(auth, &quot;PLAIN&quot;, TESTDIR &quot;/password-file&quot;, NULL);
 zsock_wait(auth);
 success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 zsock_set_plain_server(server, 1);
 zsock_set_plain_username(client, &quot;admin&quot;);
 zsock_set_plain_password(client, &quot;Bogus&quot;);
 success = s_can_connect(&amp;server, &amp;client);
 assert(!success);
-
 if (zsys_has_curve()) {
     //  Try CURVE authentication
     //  We'll create two new certificates and save the client public
@@ -166,7 +155,6 @@ if (zsys_has_curve()) {
     zcert_t *client_cert = zcert_new();
     assert(client_cert);
     char *server_key = zcert_public_txt(server_cert);
-
     //  Test without setting-up any authentication
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -174,7 +162,6 @@ if (zsys_has_curve()) {
     zsock_set_curve_serverkey(client, server_key);
     success = s_can_connect(&amp;server, &amp;client);
     assert(!success);
-
     //  Test CURVE_ALLOW_ANY
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -184,7 +171,6 @@ if (zsys_has_curve()) {
     zsock_wait(auth);
     success = s_can_connect(&amp;server, &amp;client);
     assert(success);
-
     //  Test full client authentication using certificates
     zcert_apply(server_cert, server);
     zcert_apply(client_cert, client);
@@ -195,7 +181,6 @@ if (zsys_has_curve()) {
     zsock_wait(auth);
     success = s_can_connect(&amp;server, &amp;client);
     assert(success);
-
     zcert_destroy(&amp;server_cert);
     zcert_destroy(&amp;client_cert);
 }
@@ -203,10 +188,8 @@ if (zsys_has_curve()) {
 zactor_destroy(&amp;auth);
 success = s_can_connect(&amp;server, &amp;client);
 assert(success);
-
 zsock_destroy(&amp;client);
 zsock_destroy(&amp;server);
-
 //  Delete all test files
 zdir_t *dir = zdir_new(TESTDIR, NULL);
 assert(dir);
@@ -222,7 +205,8 @@ zdir_destroy(&amp;dir);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

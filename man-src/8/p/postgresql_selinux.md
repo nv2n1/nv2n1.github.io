@@ -69,9 +69,9 @@ description: "postgresql_selinux – Security Enhanced Linux Policy for the post
 <p> Policy governs the access confined processes have to these ports. SELinux postgresql policy is very flexible allowing users to setup their postgresql processes in as secure a method as possible. </p>
 <p> The following port types are defined for postgresql: </p>
 <dl>
-<dt><code>postgresql_port_t</code></p>
+<dt><code>postgresql_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5432,9898</dl>
+</dd><dd>Default Defined Ports: tcp 5432,9898</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type postgresql_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -161,20 +161,20 @@ description: "postgresql_selinux – Security Enhanced Linux Policy for the post
 <p> <code>postgresql_db_t</code> </p>
 <p> &#8211; Set files with the postgresql_db_t type, if you want to treat the files as postgresql database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pgsql(/.*)?, /var/lib/sepgsql(/.*)?, /var/lib/postgres(ql)?(/.*)?, /usr/share/jonas/pgsql(/.*)?, /usr/lib/pgsql/test/regress(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pgsql(/.*)?, /var/lib/sepgsql(/.*)?, /var/lib/postgres(ql)?(/.*)?, /usr/share/jonas/pgsql(/.*)?, /usr/lib/pgsql/test/regress(/.*)? </dd>
 </dl>
 <p> <code>postgresql_etc_t</code> </p>
 <p> &#8211; Set files with the postgresql_etc_t type, if you want to store postgresql files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/postgresql(/.*)?, /etc/sysconfig/pgsql(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/postgresql(/.*)?, /etc/sysconfig/pgsql(/.*)? </dd>
 </dl>
 <p> <code>postgresql_exec_t</code> </p>
 <p> &#8211; Set files with the postgresql_exec_t type, if you want to transition an executable to the postgresql_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/(se)?postgres, /usr/bin/initdb(.sepgsql)?, /usr/lib/postgresql/bin/.*, /usr/bin/pg_ctl, /usr/libexec/postgresql-ctl, /usr/lib/pgsql/test/regress/pg_regress </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/(se)?postgres, /usr/bin/initdb(.sepgsql)?, /usr/lib/postgresql/bin/.*, /usr/bin/pg_ctl, /usr/libexec/postgresql-ctl, /usr/lib/pgsql/test/regress/pg_regress </dd>
 </dl>
 <p> <code>postgresql_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the postgresql_initrc_exec_t type, if you want to transition an executable to the postgresql_initrc_t domain. </p>
@@ -183,8 +183,8 @@ description: "postgresql_selinux – Security Enhanced Linux Policy for the post
 <p> <code>postgresql_log_t</code> </p>
 <p> &#8211; Set files with the postgresql_log_t type, if you want to treat the data as postgresql log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pgsql/.*.log, /var/log/rhdb/rhdb(/.*)?, /var/log/postgresql(/.*)?, /var/log/postgres.log.*, /var/lib/pgsql/logfile(/.*)?, /var/log/sepostgresql.log.*, /var/lib/pgsql/data/pg_log(/.*)?, /var/lib/sepgsql/pgstartup.log </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pgsql/.*.log, /var/log/rhdb/rhdb(/.*)?, /var/log/postgresql(/.*)?, /var/log/postgres.log.*, /var/lib/pgsql/logfile(/.*)?, /var/log/sepostgresql.log.*, /var/lib/pgsql/data/pg_log(/.*)?, /var/lib/sepgsql/pgstartup.log </dd>
 </dl>
 <p> <code>postgresql_tmp_t</code> </p>
 <p> &#8211; Set files with the postgresql_tmp_t type, if you want to store postgresql temporary files in the /tmp directories. </p>

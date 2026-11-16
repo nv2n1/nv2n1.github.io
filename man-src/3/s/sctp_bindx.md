@@ -12,7 +12,6 @@ description: "sctp_bindx – Add or remove bind addresses on a socket."
 <pre><code>#include &lt;netinet/sctp.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
-
 int sctp_bindx(int sd, struct sockaddr *addrs, int addrcnt,
                int flags);</code></pre>
 <h2>Description</h2>
@@ -24,15 +23,15 @@ int sctp_bindx(int sd, struct sockaddr *addrs, int addrcnt,
 <p>On success, 0 is returned. On failure, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd><i>sd</i> is not a valid descriptor.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd><i>sd</i> is a descriptor for a file, not a socket.</p>
-<dt><code>EFAULT</code></p>
-<dd>Error while copying in or out from the user address space.</p>
-<dt><code>EINVAL</code></p>
-<dd>Invalid port or address or trying to remove all addresses from an association.</p>
-<dt><code>EACCES</code></p>
-<dd>The address is protected, and the user is not the super-user.</dl>
+<dt><code>EBADF</code></dt>
+<dd><i>sd</i> is not a valid descriptor.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd><i>sd</i> is a descriptor for a file, not a socket.</dd>
+<dt><code>EFAULT</code></dt>
+<dd>Error while copying in or out from the user address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid port or address or trying to remove all addresses from an association.</dd>
+<dt><code>EACCES</code></dt>
+<dd>The address is protected, and the user is not the super-user.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sctp/">sctp</a></code>(7) <code><a href="/docs/linux/man/3-sctp_sendmsg/">sctp_sendmsg</a></code>(3), <code><a href="/docs/linux/man/3-sctp_send/">sctp_send</a></code>(3), <code><a href="/docs/linux/man/3-sctp_recvmsg/">sctp_recvmsg</a></code>(3), <code><a href="/docs/linux/man/3-sctp_peeloff/">sctp_peeloff</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getpaddrs/">sctp_getpaddrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getladdrs/">sctp_getladdrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_opt_info/">sctp_opt_info</a></code>(3), <code><a href="/docs/linux/man/3-sctp_connectx/">sctp_connectx</a></code>(3) </p>

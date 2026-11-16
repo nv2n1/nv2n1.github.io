@@ -25,7 +25,7 @@ description: "QuantLib::DerivedQuote – market quote whose value depends on ano
 <p>market quote whose value depends on another quote </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dl>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

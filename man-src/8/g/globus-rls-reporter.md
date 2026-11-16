@@ -14,13 +14,13 @@ description: "globus-rls-reporter – Globus Replica Location Service MDS Report
 <p><code>globus-rls-reporter</code> retrieves statistics from <i>rls-server</i> and reports them in LDAP LDIF format, suitable for parsing by MDS. <i>rls-server</i> defaults to <a href="rls://localhost">rls://localhost</a> if not specified. <i>Distinguished-name</i> defaults to &quot;RLS=stats, Mds-Vo-name=local, o=grid&quot;.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c certfile</code></p>
-<dd>X509 certificate file to use for authentication to RLS server. By default it&#8217;s the host certificate in /etc/grid-security/hostcert.pem.</p>
-<dt><code>-d distinguished-name</code></p>
-<dd>Distinguished name to use when reporting to MDS. By default it is &quot;RLS=stats, Mds-Vo-name=local, o=grid&quot;.</p>
-<dt><code>-k keyfile</code></p>
-<dd>X509 key file to use for authentication to RLS server. By default it&#8217;s the host key file in /etc/grid-security/hostkey.pem.</p>
-<dt><code>-v</code></p>
-<dd>Show version and exit.</dl>
+<dt><code>-c certfile</code></dt>
+<dd>X509 certificate file to use for authentication to RLS server. By default it&#8217;s the host certificate in /etc/grid-security/hostcert.pem.</dd>
+<dt><code>-d distinguished-name</code></dt>
+<dd>Distinguished name to use when reporting to MDS. By default it is &quot;RLS=stats, Mds-Vo-name=local, o=grid&quot;.</dd>
+<dt><code>-k keyfile</code></dt>
+<dd>X509 key file to use for authentication to RLS server. By default it&#8217;s the host key file in /etc/grid-security/hostkey.pem.</dd>
+<dt><code>-v</code></dt>
+<dd>Show version and exit.</dd></dl>
 <h2>Seel Also</h2>
 <p><a href="/docs/linux/man/8-globus-rls-server/">globus-rls-server</a>(8), globus_rls_client man pages</p>

@@ -21,7 +21,7 @@ long double log2l(long double x);
 <p> <code>log2</code>(), <code>log2f</code>(), <code>log2l</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return the base 2 logarithm of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>

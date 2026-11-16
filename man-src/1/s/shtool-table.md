@@ -16,14 +16,14 @@ description: "shtool table – GNU shtool pretty-print a field-separated list"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-F</code>, <code>&#8211;field-sep</code> <i>sep</i></p>
-<dd> Separate columns using <i>sep</i>. Default is <tt>&quot;:&quot;</tt>.</p>
-<dt><code>-w</code>, <code>&#8211;width</code> <i>width</i></p>
-<dd> Width of each column. Default is 15 characters.</p>
-<dt><code>-c</code>, <code>&#8211;columns</code> <i>cols</i></p>
-<dd> Number of columns. Default is <tt>3</tt>.</p>
-<dt><code>-s</code>, <code>&#8211;strip</code> <i>strip</i></p>
-<dd> Strip off any characters past <i>strip</i>. Default is <tt>79</tt>.</dl>
+<dt><code>-F</code>, <code>&#8211;field-sep</code> <i>sep</i></dt>
+<dd> Separate columns using <i>sep</i>. Default is <tt>&quot;:&quot;</tt>.</dd>
+<dt><code>-w</code>, <code>&#8211;width</code> <i>width</i></dt>
+<dd> Width of each column. Default is 15 characters.</dd>
+<dt><code>-c</code>, <code>&#8211;columns</code> <i>cols</i></dt>
+<dd> Number of columns. Default is <tt>3</tt>.</dd>
+<dt><code>-s</code>, <code>&#8211;strip</code> <i>strip</i></dt>
+<dd> Strip off any characters past <i>strip</i>. Default is <tt>79</tt>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

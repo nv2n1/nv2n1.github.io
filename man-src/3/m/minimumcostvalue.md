@@ -47,10 +47,10 @@ description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting 
 <p> This base class provides the specific methodology/strategy used to construct a <code>FittedBondDiscountCurve</code>. Derived classes need only define the virtual function <code>discountFunction()</code> based on the particular fitting method to be implemented, as well as <code>size()</code>, the number of variables to be solved for/optimized. The generic fitting methodology implemented here can be termed nonlinear, in contrast to (typically faster, computationally) linear fitting method. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>derive the special-case class LinearFittingMethods from <code>FittingMethod</code>. A linear fitting to a set of basis functions $ b_i(t) $ is any fitting of the form [ d(t) = um_{i=0} c_i b_i(t) ] i.e., linear in the unknown coefficients $ c_i $. Such a fitting can be reduced to a linear algebra problem $ Ax = b $, and for large numbers of bonds, would typically be much faster computationally than the generic non-linear fitting method.</dl>
+<dd>derive the special-case class LinearFittingMethods from <code>FittingMethod</code>. A linear fitting to a set of basis functions $ b_i(t) $ is any fitting of the form [ d(t) = um_{i=0} c_i b_i(t) ] i.e., linear in the unknown coefficients $ c_i $. Such a fitting can be reduced to a linear algebra problem $ Ax = b $, and for large numbers of bonds, would typically be much faster computationally than the generic non-linear fitting method.</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>some parameters to the <code>Simplex</code> optimization method may need to be tweaked internally to the class, depending on the fitting method used, in order to get proper/reasonable/faster convergence.</dl>
+<dd>some parameters to the <code>Simplex</code> optimization method may need to be tweaked internally to the class, depending on the fitting method used, in order to get proper/reasonable/faster convergence.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual <code>DiscountFactor</code> discountFunction (const <code>Array</code> &amp; x, Time t) const [protected, pure virtual]</h3>
 <p>derived classes must set this </p>

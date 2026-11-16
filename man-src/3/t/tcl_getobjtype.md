@@ -19,10 +19,10 @@ int
 <code>Tcl_ConvertToType</code>(<i>interp, objPtr, typePtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_ObjType <i>*typePtr</i> (in) Points to the structure containing information about the Tcl object type. This storage must live forever, typically by being statically allocated.</p>
-<dd>const char <i>*typeName</i> (in) The name of a Tcl object type that <code>Tcl_GetObjType</code> should look up.</p>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) For <code>Tcl_AppendAllObjTypes</code>, this points to the object onto which it appends the name of each object type as a list element. For <code>Tcl_ConvertToType</code>, this points to an object that must have been the result of a previous call to <code>Tcl_NewObj</code>. </p>
+<dd>Tcl_ObjType <i>*typePtr</i> (in) Points to the structure containing information about the Tcl object type. This storage must live forever, typically by being statically allocated.</dd>
+<dd>const char <i>*typeName</i> (in) The name of a Tcl object type that <code>Tcl_GetObjType</code> should look up.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) For <code>Tcl_AppendAllObjTypes</code>, this points to the object onto which it appends the name of each object type as a list element. For <code>Tcl_ConvertToType</code>, this points to an object that must have been the result of a previous call to <code>Tcl_NewObj</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p>The procedures in this man page manage Tcl object types. They are used to register new object types, look up types, and force conversions from one type to another. </p>
@@ -42,7 +42,7 @@ int
  Tcl_UpdateStringProc *<i>updateStringProc</i>;
  Tcl_SetFromAnyProc *<i>setFromAnyProc</i>;
 } Tcl_ObjType;</pre>
-</dl>
+</dd></dl>
 <h3>The Name Field</h3>
 <p>The <i>name</i> member describes the name of the type, e.g. <code>int</code>. When a type is registered, this is the name used by callers of <code>Tcl_GetObjType</code> to lookup the type. For unregistered types, the <i>name</i> field is primarily of value for debugging. The remaining four members are pointers to procedures called by the generic Tcl object code:</p>
 <h3>The Setfromanyproc Field</h3>
@@ -51,7 +51,7 @@ int
 <dd>
 <pre>typedef int (Tcl_SetFromAnyProc) (Tcl_Interp *<i>interp</i>,
  Tcl_Obj *<i>objPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> If an internal representation cannot be created from the string, it returns <code>TCL_ERROR</code> and puts a message describing the error in the result object for <i>interp</i> unless <i>interp</i> is NULL. If <i>setFromAnyProc</i> is successful, it stores the new internal representation, sets <i>objPtr</i>&#8216;s <i>typePtr</i> member to point to the <code>Tcl_ObjType</code> struct corresponding to the new internal representation, and returns <code>TCL_OK</code>. Before setting the new internal representation, the <i>setFromAnyProc</i> must free any internal representation of <i>objPtr</i>&#8216;s old type; it does this by calling the old type&#8217;s <i>freeIntRepProc</i> if it is not NULL. </p>
 <p> As an example, the <i>setFromAnyProc</i> for the built-in Tcl list type gets an up-to-date string representation for <i>objPtr</i> by calling <code>Tcl_GetStringFromObj</code>. It parses the string to verify it is in a valid list format and to obtain each element value in the list, and, if this succeeds, stores the list elements in <i>objPtr</i>&#8216;s internal representation and sets <i>objPtr</i>&#8216;s <i>typePtr</i> member to point to the list type&#8217;s Tcl_ObjType structure. </p>
 <p> Do not release <i>objPtr</i>&#8216;s old internal representation unless you replace it with a new one or reset the <i>typePtr</i> member to NULL. </p>
@@ -61,7 +61,7 @@ int
 <dl COMPACT>
 <dd>
 <pre>typedef void (Tcl_UpdateStringProc) (Tcl_Obj *<i>objPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>objPtr</i>&#8216;s <i>bytes</i> member is always NULL when it is called. It must always set <i>bytes</i> non-NULL before returning. We require the string representation&#8217;s byte array to have a null after the last byte, at offset <i>length</i>, and to have no null bytes before that; this allows string representations to be treated as conventional null character-terminated C strings. These restrictions are easily met by using Tcl&#8217;s internal UTF encoding for the string representation, same as one would do for other Tcl routines accepting string values as arguments. Storage for the byte array must be allocated in the heap by <code>Tcl_Alloc</code> or <code>ckalloc</code>. Note that <i>updateStringProc</i>s must allocate enough storage for the string&#8217;s bytes and the terminating null byte. </p>
 <p> The <i>updateStringProc</i> for Tcl&#8217;s built-in double type, for example, calls Tcl_PrintDouble to write to a buffer of size TCL_DOUBLE_SPACE, then allocates and copies the string representation to just enough space to hold it. A pointer to the allocated space is stored in the <i>bytes</i> member. </p>
 <p> The <i>updateStringProc</i> member may be set to NULL, if the routines making use of the internal representation are written so that the string representation is never invalidated. Failure to meet this obligation will lead to panics or crashes when <code>Tcl_GetStringFromObj</code> or other similar routines ask for the string representation.</p>
@@ -71,7 +71,7 @@ int
 <dd>
 <pre>typedef void (Tcl_DupInternalRepProc) (Tcl_Obj *<i>srcPtr</i>,
  Tcl_Obj *<i>dupPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>dupPtr</i>&#8216;s internal representation is made a copy of <i>srcPtr</i>&#8216;s internal representation. Before the call, <i>srcPtr</i>&#8216;s internal representation is valid and <i>dupPtr</i>&#8216;s is not. <i>srcPtr</i>&#8216;s object type determines what copying its internal representation means. </p>
 <p> For example, the <i>dupIntRepProc</i> for the Tcl integer type simply copies an integer. The built-in list type&#8217;s <i>dupIntRepProc</i> uses a far more sophisticated scheme to continue sharing storage as much as it reasonably can.</p>
 <h3>The Freeintrepproc Field</h3>
@@ -79,7 +79,7 @@ int
 <dl COMPACT>
 <dd>
 <pre>typedef void (Tcl_FreeInternalRepProc) (Tcl_Obj *<i>objPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>freeIntRepProc</i> function can deallocate the storage for the object&#8217;s internal representation and do other type-specific processing necessary when an object is freed. </p>
 <p> For example, the list type&#8217;s <i>freeIntRepProc</i> respects the storage sharing scheme established by the <i>dupIntRepProc</i> so that it only frees storage when the last object sharing it is being freed. </p>
 <p> The <i>freeIntRepProc</i> member can be set to NULL to indicate that the internal representation does not require freeing. The <i>freeIntRepProc</i> implementation must not access the <i>bytes</i> member of the object, since Tcl makes its own internal uses of that field during object deletion. The defined tasks for the <i>freeIntRepProc</i> have no need to consult the <i>bytes</i> member.</p>

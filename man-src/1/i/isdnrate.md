@@ -18,19 +18,19 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 <p> A telephone number may be</p>
 <dl>
 <dt>
-<dd> <code>1234</code> a local area number</p>
+</dt><dd> <code>1234</code> a local area number</dd>
 <dt>
-<dd> <code>01234</code> a different area in your country</p>
+</dt><dd> <code>01234</code> a different area in your country</dd>
 <dt>
-<dd> <code>+12345</code> a foreign country</p>
+</dt><dd> <code>+12345</code> a foreign country</dd>
 <dt>
-<dd> <code>China</code> text for a foreign country</p>
+</dt><dd> <code>China</code> text for a foreign country</dd>
 <dt>
-<dd> <code>Paris</code> a town</p>
+</dt><dd> <code>Paris</code> a town</dd>
 <dt>
-<dd> <code>US</code> a code as defined in <i>country.dat</i>.</p>
+</dt><dd> <code>US</code> a code as defined in <i>country.dat</i>.</dd>
 <dt>
-<dd> <code>Internet</code> a Service name (if option <code>-s</code> is also given).</dl>
+</dt><dd> <code>Internet</code> a Service name (if option <code>-s</code> is also given).</dd></dl>
 <p> Note that currently only city names in AT, DE and NL are supported plus some international capitals.<br />
  Note also, spaces in country- or service names may be given as underscores.</p>
 <h3><code>OPTIONS</code></h3>
@@ -40,12 +40,12 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 <p> <code>-d</code><i>day</i> Calc rates for <i>day</i>. <i>day</i> can be one of</p>
 <dl>
 <dt>
-<dd> <i>dd</i> day of current month<br />
+</dt><dd> <i>dd</i> day of current month<br />
  <i>dd.mm</i> day month<br />
  <i>dd.mm.yy</i>[<i>yy</i>] day, month, year<br />
  <i>W</i> Weekday<br />
  <i>N</i> Weekday &#8211; night<br />
- <i>E</i> Weekend</dl>
+ <i>E</i> Weekend</dd></dl>
 <p> Default is now. </p>
 <p> <code>-f</code><i>from</i> Callers location. Default is from <i>isdn.conf</i>. </p>
 <p> <code>-h</code><i>hour</i> Time <i>hh</i>[<i>:mm</i>[<i>:ss</i>]] of call. Default is now. </p>
@@ -68,25 +68,25 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 <p> <code>-L</code> Print a semicolon separated list of</p>
 <dl>
 <dt>
-<dd> vbn ; providername ; zone ; day ; time ; currency ; charge ; basicprice ; price ; duration ; charge/min ; takt ; minimum price</dl>
+</dt><dd> vbn ; providername ; zone ; day ; time ; currency ; charge ; basicprice ; price ; duration ; charge/min ; takt ; minimum price</dd></dl>
 <p> <code>-N</code> Show info about following numbers. If no provider is given, the preselected provider is used. </p>
 <p> <code>-O</code><i>socketfile</i> Write socket to given filename on start of daemon. Default is <i>tmp/isdnrate</i>. </p>
 <p> <code>-P</code><i>piddir</i> Write own PID to <i>piddir/isdnrate.pid</i> on start of daemon. </p>
 <p> <code>-S</code><i>sort</i> Sort output by <i>sort</i>, which may be</p>
 <dl>
 <dt>
-<dd> <code>v</code> vbn or <code>n</code> provider name. Default is by charge.</dl>
+</dt><dd> <code>v</code> vbn or <code>n</code> provider name. Default is by charge.</dd></dl>
 <p> <code>-T</code> Print a table of charges for daytimes weekday/weekend. </p>
 <p> <code>-V</code> Print version info and exit. </p>
 <p> <code>-X</code><i>explain</i> Print additional information for charge or from rate-file. <i>explain</i> may be</p>
 <dl>
 <dt>
-<dd> <code>1</code> (zone)<br />
+</dt><dd> <code>1</code> (zone)<br />
  <code>2</code> (charge/min, zone, day, time)<br />
  <code>50</code> International areas<br />
  <code>51</code> National zones<br />
  <code>52</code> Services<br />
- <code>COMMENT</code> Print C:COMMENT: info from rate files.</dl>
+ <code>COMMENT</code> Print C:COMMENT: info from rate files.</dd></dl>
 <p> If <i>-s</i> is given, the number of the service is also listed with <i>-X1</i> or <i>-X2</i>. </p>
 <p> <code>-Z</code> Print info for LCR<br />
  e.g. isdnrate -p1 -ZX 19430<br />
@@ -127,15 +127,15 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 <h2>AUTHORS</h2>
 <p> Andreas Kool &lt;akool [at] isdn4linux.de&gt; started this program. Leopold Toetsch &lt;lt [at] toetsch.at&gt; continued the work and brought this man page to you. Michael Reinelt &lt;reinelt [at] eunet.at&gt; did the calculation engine and various tools for it. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">FILES</a></p>
+<dt><a href="#lbAH">FILES</a></dt>
 <dd>
-<dt><a href="#lbAI">EXAMPLES</a></p>
+</dd><dt><a href="#lbAI">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAJ">SIGNALS</a></p>
+</dd><dt><a href="#lbAJ">SIGNALS</a></dt>
 <dd>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">BUGS</a></p>
+</dd><dt><a href="#lbAL">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAM">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">AUTHORS</a></dt>
+<dd></dd></dl>

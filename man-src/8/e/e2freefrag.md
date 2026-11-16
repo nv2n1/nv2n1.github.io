@@ -14,10 +14,10 @@ description: "e2freefrag – report free space fragmentation information"
 <p><code>e2freefrag</code> is used to report free space fragmentation on ext2/3/4 file systems. <i>filesys</i> is the file system device name (e.g. <i>/dev/hdc1</i>, <i>/dev/md0</i>). The <code>e2freefrag</code> program will scan the block bitmap information to check how many free blocks are present as contiguous and aligned free space. The percentage of contiguous free blocks of size and of alignment <i>chunk_kb</i> is reported. It also displays the minimum/maximum/average free chunk size in the file system, along with a histogram of all free chunks. This information can be used to gauge the level of free space fragmentation in the file system.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code><i> chunk_kb</i></p>
-<dd>If a chunk size is specified, then <code>e2freefrag</code> will print how many free chunks of size <i>chunk_kb</i> are available in units of kilobytes (Kb). The chunk size must be a power of two and be larger than file system block size.</p>
-<dt><code>-h</code></p>
-<dd>Print the usage of the program.</dl>
+<dt><code>-c</code><i> chunk_kb</i></dt>
+<dd>If a chunk size is specified, then <code>e2freefrag</code> will print how many free chunks of size <i>chunk_kb</i> are available in units of kilobytes (Kb). The chunk size must be a power of two and be larger than file system block size.</dd>
+<dt><code>-h</code></dt>
+<dd>Print the usage of the program.</dd></dl>
 <h2>Example</h2>
 <p># e2freefrag /dev/vgroot/lvhome<br />
  Device: /dev/vgroot/lvhome<br />

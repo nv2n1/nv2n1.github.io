@@ -14,16 +14,16 @@ description: "gnutls_x509_crt_set_extension_by_oid – API function"
 <p> <code>int gnutls_x509_crt_set_extension_by_oid(gnutls_x509_crt_t </code><i>crt</i><code>, const char * </code><i>oid</i><code>, const void * </code><i>buf</i><code>, size_t </code><i>sizeof_buf</i><code>, unsigned int </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>const char * oid</p>
-<dd> holds an Object Identified in null terminated string</p>
-<dt>const void * buf</p>
-<dd> a pointer to a DER encoded data</p>
-<dt>size_t sizeof_buf</p>
-<dd> holds the size of <i>buf</i></p>
-<dt>unsigned int critical</p>
-<dd> should be non-zero if the extension is to be marked as critical</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>const char * oid</dt>
+<dd> holds an Object Identified in null terminated string</dd>
+<dt>const void * buf</dt>
+<dd> a pointer to a DER encoded data</dd>
+<dt>size_t sizeof_buf</dt>
+<dd> holds the size of <i>buf</i></dd>
+<dt>unsigned int critical</dt>
+<dd> should be non-zero if the extension is to be marked as critical</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set an the extension, by the specified OID, in the certificate. The extension data should be binary data DER encoded.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crt_set_extension_by_oid – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

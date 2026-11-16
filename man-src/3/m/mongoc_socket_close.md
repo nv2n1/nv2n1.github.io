@@ -13,8 +13,8 @@ description: "mongoc_socket_close() – This function is a wrapper around the BS
 mongoc_socket_close (mongoc_socket_t *socket);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>socket</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>socket</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function is a wrapper around the BSD socket <code>shutdown(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
 <h2>Returns</h2>

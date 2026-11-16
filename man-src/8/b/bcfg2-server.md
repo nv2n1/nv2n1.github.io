@@ -15,34 +15,34 @@ description: "bcfg2-server – Server for client configuration specifications"
 <h2>Options</h2>
 <p><code>-d </code></p>
 <dl>
-<dd>Run bcfg2 in debug mode.</dl>
+<dd>Run bcfg2 in debug mode.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>Run bcfg2 in verbose mode.</dl>
+<dd>Run bcfg2 in verbose mode.</dd></dl>
 <p> <code>-C &lt;ConfigFile Path&gt; </code></p>
 <dl>
-<dd>Use an alternative path for bcfg2.conf. The default is /etc/bcfg2.conf</dl>
+<dd>Use an alternative path for bcfg2.conf. The default is /etc/bcfg2.conf</dd></dl>
 <p> <code>-D </code></p>
 <dl>
-<dd>Daemonize, placing the program pid in the specified pidfile.</dl>
+<dd>Daemonize, placing the program pid in the specified pidfile.</dd></dl>
 <p> <code>-o &lt;LogFile Path&gt;</code></p>
 <dl>
-<dd>Writes a log to the specified path.</dl>
+<dd>Writes a log to the specified path.</dd></dl>
 <p> <code>-E &lt;encoding&gt;</code></p>
 <dl>
-<dd>Unicode encoding of config files</dl>
+<dd>Unicode encoding of config files</dd></dl>
 <p> <code>-x &lt;password&gt;</code></p>
 <dl>
-<dd>Set server password</dl>
+<dd>Set server password</dd></dl>
 <p> <code>-S &lt;server url&gt;</code></p>
 <dl>
-<dd>Set server address</dl>
+<dd>Set server address</dd></dl>
 <p> <code>-Q &lt;repo path&gt;</code></p>
 <dl>
-<dd>Set repository path</dl>
+<dd>Set repository path</dd></dl>
 <p> <code>-K &lt;key path&gt;</code></p>
 <dl>
-<dd>Set path to ssl key</dl>
+<dd>Set path to ssl key</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-bcfg2/">bcfg2</a>(1),</code> <code><a href="/docs/linux/man/8-bcfg2-repo-validate/">bcfg2-repo-validate</a>(8)</code></p>
 <h2>Bugs</h2>

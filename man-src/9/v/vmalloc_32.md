@@ -15,7 +15,7 @@ vmalloc_32 - allocate virtually contiguous memory (32bit addressable)
 <h2>Arguments</h2>
 
 <i>size</i>
-<dl><dd><dd>allocation size</dl>
+<dl><dd></dd><dd>allocation size</dd></dl>
 
 <h2>Description</h2>
 

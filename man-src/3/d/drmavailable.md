@@ -11,10 +11,10 @@ description: "drmAvailable – determine whether a DRM kernel driver has been lo
 <h2>Synopsis</h2>
 <pre>#include &lt;xf86drm.h&gt;</pre>
 <dl COMPACT>
-<dt> <code>int drmAvailable(void);</code></dl>
+<dt> <code>int drmAvailable(void);</code></dt></dl>
 <h2>Description</h2>
 <p><code>drmAvailable</code></p>
-<dd>allows the caller to determine whether a kernel DRM driver is loaded.</p>
+<dd>allows the caller to determine whether a kernel DRM driver is loaded.</dd>
 <h2>Return Value</h2>
 <p><code>drmAvailable</code> returns 1 if a DRM driver is currently loaded. Otherwise 0 is returned.</p>
 <h2>Reporting Bugs</h2>

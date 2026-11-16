@@ -13,21 +13,21 @@ description: "string2key – map a password into a key"
 <h2>Description</h2>
 <p>performs the string-to-key function. This is useful when you want to handle the raw key instead of the password. Supported options:</p>
 <dl>
-<dt><code>-5 , &#8211;version5</code></p>
-<dd>Output Kerberos v5 string-to-key</p>
-<dt><code>-4 , &#8211;version4</code></p>
-<dd>Output Kerberos v4 string-to-key</p>
-<dt><code>-a , &#8211;afs</code></p>
-<dd>Output AFS string-to-key</p>
-<dt><code>-c </code><i>cell , &#8211;</i><code>-cell= </code><i>cell</i></p>
-<dd>AFS cell to use</p>
-<dt><code>-w </code><i>password , &#8211;</i><code>-password= </code><i>password</i></p>
-<dd>Password to use</p>
-<dt><code>-p </code><i>principal , &#8211;</i><code>-principal= </code><i>principal</i></p>
-<dd>Kerberos v5 principal to use</p>
-<dt><code>-k </code><i>string , &#8211;</i><code>-keytype= </code><i>string</i></p>
-<dd>Keytype</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version</p>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+<dt><code>-5 , &#8211;version5</code></dt>
+<dd>Output Kerberos v5 string-to-key</dd>
+<dt><code>-4 , &#8211;version4</code></dt>
+<dd>Output Kerberos v4 string-to-key</dd>
+<dt><code>-a , &#8211;afs</code></dt>
+<dd>Output AFS string-to-key</dd>
+<dt><code>-c </code><i>cell , &#8211;</i><code>-cell= </code><i>cell</i></dt>
+<dd>AFS cell to use</dd>
+<dt><code>-w </code><i>password , &#8211;</i><code>-password= </code><i>password</i></dt>
+<dd>Password to use</dd>
+<dt><code>-p </code><i>principal , &#8211;</i><code>-principal= </code><i>principal</i></dt>
+<dd>Kerberos v5 principal to use</dd>
+<dt><code>-k </code><i>string , &#8211;</i><code>-keytype= </code><i>string</i></dt>
+<dd>Keytype</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version</dd>
+<dt><code>&#8211;help</code></dt>
+<dd></dd></dl>

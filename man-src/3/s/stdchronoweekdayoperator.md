@@ -19,12 +19,9 @@ constexpr std::chrono::weekday_last operator[](std::chrono::last_spec) const noe
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;chrono&gt;
-
 #include &lt;iostream&gt;
-
 using namespace std::chrono;
 int main()
-
 {
     // second tuesday in October 2019
     std::cout &lt;&lt; year_month_day{Tuesday[2] / October / 2019y} &lt;&lt; '

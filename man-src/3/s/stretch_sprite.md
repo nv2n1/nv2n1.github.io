@@ -10,7 +10,6 @@ description: "stretch_sprite – Stretches a sprite to the destination bitmap. A
 <p>stretch_sprite &#8211; Stretches a sprite to the destination bitmap. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void stretch_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y, int w, int h);</code></pre>
 <h2>Description</h2>
 <p>Like draw_sprite(), except it can stretch the sprite image to the specified width and height and requires the sprite image and destination bitmap to be of the same color depth. Moreover, the sprite image must be a memory bitmap. Example: </p>

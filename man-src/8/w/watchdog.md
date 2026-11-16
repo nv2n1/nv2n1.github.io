@@ -17,48 +17,48 @@ description: "watchdog – a software watchdog daemon"
 <h2>Tests</h2>
 <p>The watchdog daemon does several tests to check the system status:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Is the process table full?</p>
-<dt>&bull;</p>
-<dd>Is there enough free memory?</p>
-<dt>&bull;</p>
-<dd>Are some files accessible?</p>
-<dt>&bull;</p>
-<dd>Have some files changed within a given interval?</p>
-<dt>&bull;</p>
-<dd>Is the average work load too high?</p>
-<dt>&bull;</p>
-<dd>Has a file table overflow occurred?</p>
-<dt>&bull;</p>
-<dd>Is a process still running? The process is specified by a pid file.</p>
-<dt>&bull;</p>
-<dd>Do some IP addresses answer to ping?</p>
-<dt>&bull;</p>
-<dd>Do network interfaces receive traffic?</p>
-<dt>&bull;</p>
-<dd>Is the temperature too high? (Temperature data not always available.)</p>
-<dt>&bull;</p>
-<dd>Execute a user defined command to do arbitrary tests.</p>
-<dt>&bull;</p>
-<dd>Execute one or more test/repair commands found in /etc/watchdog.d. These commands are called with the argument <code>test</code> or <code>repair</code>.</dl>
+<dt>&bull;</dt>
+<dd>Is the process table full?</dd>
+<dt>&bull;</dt>
+<dd>Is there enough free memory?</dd>
+<dt>&bull;</dt>
+<dd>Are some files accessible?</dd>
+<dt>&bull;</dt>
+<dd>Have some files changed within a given interval?</dd>
+<dt>&bull;</dt>
+<dd>Is the average work load too high?</dd>
+<dt>&bull;</dt>
+<dd>Has a file table overflow occurred?</dd>
+<dt>&bull;</dt>
+<dd>Is a process still running? The process is specified by a pid file.</dd>
+<dt>&bull;</dt>
+<dd>Do some IP addresses answer to ping?</dd>
+<dt>&bull;</dt>
+<dd>Do network interfaces receive traffic?</dd>
+<dt>&bull;</dt>
+<dd>Is the temperature too high? (Temperature data not always available.)</dd>
+<dt>&bull;</dt>
+<dd>Execute a user defined command to do arbitrary tests.</dd>
+<dt>&bull;</dt>
+<dd>Execute one or more test/repair commands found in /etc/watchdog.d. These commands are called with the argument <code>test</code> or <code>repair</code>.</dd></dl>
 <p> If any of these checks fail watchdog will cause a shutdown. Should any of these tests except the user defined binary last longer than one minute the machine will be rebooted, too.</p>
 <h2>Options</h2>
 <p>Available command line options are the following:</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Set verbose mode. Only implemented if compiled with <i>SYSLOG </i> feature. This mode will log each several infos in <i>LOG_DAEMON </i> with priority <i>LOG_INFO.</i> This is useful if you want to see exactly what happened until the watchdog rebooted the system. Currently it logs the temperature (if available), the load average, the change date of the files it checks and how often it went to sleep.</p>
-<dt><code>-s</code>, <code>&#8211;sync</code></p>
-<dd>Try to synchronize the filesystem every time the process is awake. Note that the system is rebooted if for any reason the synchronizing lasts longer than a minute.</p>
-<dt><code>-b</code>, <code>&#8211;softboot</code></p>
-<dd>Soft-boot the system if an error occurs during the main loop, e.g. if a given file is not accessible via the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) call. Note that this does not apply to the opening of <i>/dev/watchdog </i> and <i>/proc/loadavg</i>, which are opened before the main loop starts.</p>
-<dt><code>-F</code>, <code>&#8211;foreground</code></p>
-<dd>Run in foreground mode, useful for running under systemd (for example).</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>Force the usage of the interval given or the maximal load average given in the config file.</p>
-<dt><code>-c</code> <i>config-file</i>, <code>&#8211;config-file</code> <i>config-file</i></p>
-<dd>Use <i>config-file</i> as the configuration file instead of the default <i>/etc/watchdog.conf</i>.</p>
-<dt><code>-q</code>, <code>&#8211;no-action</code></p>
-<dd>Do not reboot or halt the machine. This is for testing purposes. All checks are executed and the results are logged as usual, but no action is taken. Also your hardware card or the kernel software watchdog driver is not enabled. Temperature checking is also disabled since this triggers the hardware watchdog on some cards.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Set verbose mode. Only implemented if compiled with <i>SYSLOG </i> feature. This mode will log each several infos in <i>LOG_DAEMON </i> with priority <i>LOG_INFO.</i> This is useful if you want to see exactly what happened until the watchdog rebooted the system. Currently it logs the temperature (if available), the load average, the change date of the files it checks and how often it went to sleep.</dd>
+<dt><code>-s</code>, <code>&#8211;sync</code></dt>
+<dd>Try to synchronize the filesystem every time the process is awake. Note that the system is rebooted if for any reason the synchronizing lasts longer than a minute.</dd>
+<dt><code>-b</code>, <code>&#8211;softboot</code></dt>
+<dd>Soft-boot the system if an error occurs during the main loop, e.g. if a given file is not accessible via the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) call. Note that this does not apply to the opening of <i>/dev/watchdog </i> and <i>/proc/loadavg</i>, which are opened before the main loop starts.</dd>
+<dt><code>-F</code>, <code>&#8211;foreground</code></dt>
+<dd>Run in foreground mode, useful for running under systemd (for example).</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>Force the usage of the interval given or the maximal load average given in the config file.</dd>
+<dt><code>-c</code> <i>config-file</i>, <code>&#8211;config-file</code> <i>config-file</i></dt>
+<dd>Use <i>config-file</i> as the configuration file instead of the default <i>/etc/watchdog.conf</i>.</dd>
+<dt><code>-q</code>, <code>&#8211;no-action</code></dt>
+<dd>Do not reboot or halt the machine. This is for testing purposes. All checks are executed and the results are logged as usual, but no action is taken. Also your hardware card or the kernel software watchdog driver is not enabled. Temperature checking is also disabled since this triggers the hardware watchdog on some cards.</dd></dl>
 <h2>Function</h2>
 <p>After <code>watchdog </code> starts, it puts itself into the background and then tries all checks specified in its configuration file in turn. Between each two tests it will write to the kernel device to prevent a reset. After finishing all tests watchdog goes to sleep for some time. The kernel drivers expects a write to the watchdog device every minute. Otherwise the system will be reset. As a default <code>watchdog </code> will sleep for only 1 second so it triggers the device early enough. </p>
 <p> Under high system load <code>watchdog </code> might be swapped out of memory and may fail to make it back in in time. Under these circumstances the Linux kernel will reset the machine. To make sure you won&#8217;t get unnecessary reboots make sure you have the variable <i>realtime</i> set to <i>yes </i> in the configuration file <i>watchdog.conf</i>. This adds real time support to <code>watchdog</code>: it will lock itself into memory and there should be no problem even under the highest of loads. </p>
@@ -80,49 +80,49 @@ description: "watchdog – a software watchdog daemon"
 <h2>Soft Reboot</h2>
 <p>A soft reboot (i.e. controlled shutdown and reboot) is initiated for every error that is found. Since there might be no more processes available, watchdog does it all by himself. That means:</p>
 <dl>
-<dt>1.</p>
-<dd>Kill all processes with SIGTERM.</p>
-<dt>2.</p>
-<dd>After a short pause kill all remaining processes with SIGKILL.</p>
-<dt>3.</p>
-<dd>Record a shutdown entry in wtmp.</p>
-<dt>4.</p>
-<dd>Save the random seed from <i>/dev/urandom</i>. If the device is non-existant or there is no filename for saving this step is skipped.</p>
-<dt>5.</p>
-<dd>Turn off accounting.</p>
-<dt>6.</p>
-<dd>Turn off quota and swap.</p>
-<dt>7.</p>
-<dd>Unmount all partitions except the root partition.</p>
-<dt>8.</p>
-<dd>Remount the root partition read-only.</p>
-<dt>9.</p>
-<dd>Shut down all network interfaces.</p>
-<dt>10.</p>
-<dd>Finally reboot.</dl>
+<dt>1.</dt>
+<dd>Kill all processes with SIGTERM.</dd>
+<dt>2.</dt>
+<dd>After a short pause kill all remaining processes with SIGKILL.</dd>
+<dt>3.</dt>
+<dd>Record a shutdown entry in wtmp.</dd>
+<dt>4.</dt>
+<dd>Save the random seed from <i>/dev/urandom</i>. If the device is non-existant or there is no filename for saving this step is skipped.</dd>
+<dt>5.</dt>
+<dd>Turn off accounting.</dd>
+<dt>6.</dt>
+<dd>Turn off quota and swap.</dd>
+<dt>7.</dt>
+<dd>Unmount all partitions except the root partition.</dd>
+<dt>8.</dt>
+<dd>Remount the root partition read-only.</dd>
+<dt>9.</dt>
+<dd>Shut down all network interfaces.</dd>
+<dt>10.</dt>
+<dd>Finally reboot.</dd></dl>
 <h2>Check Binary</h2>
 <p>If the return code of the check binary is not zero <code>watchdog </code> will assume an error and reboot the system. Be careful with this if you are using the real-time properties of watchdog since <code>watchdog </code> will wait for the return of this binary before proceeding. An positive exit code is interpreted as an system error code (see <i>errno.h </i> for details). Negative values are special to <code>watchdog</code>:</p>
 <dl>
-<dt>-1</p>
-<dd>Reboot the system. This is not exactly an error message but a command to <code>watchdog</code>. If the return code is -1 <code>watchdog </code> will not try to run a shutdown script instead.</p>
-<dt>-2</p>
-<dd>Reset the system. This is not exactly an error message but a command to <code>watchdog</code>. If the return code is -2 <code>watchdog will simply refuse to write the</code> kernel device again.</p>
-<dt>-3</p>
-<dd>Maximum load average exceeded.</p>
-<dt>-4</p>
-<dd>The temperature inside is too high.</p>
-<dt>-5</p>
-<dd><i>/proc/loadavg </i> contains no (or not enough) data.</p>
-<dt>-6</p>
-<dd>The given file was not changed in the given interval.</p>
-<dt>-7</p>
-<dd><i>/proc/meminfo </i> contains invalid data.</p>
-<dt>-8</p>
-<dd>Child process was killed by a signal.</p>
-<dt>-9</p>
-<dd>Child process did not return in time.</p>
-<dt>-10</p>
-<dd>Free for personal use.</dl>
+<dt>-1</dt>
+<dd>Reboot the system. This is not exactly an error message but a command to <code>watchdog</code>. If the return code is -1 <code>watchdog </code> will not try to run a shutdown script instead.</dd>
+<dt>-2</dt>
+<dd>Reset the system. This is not exactly an error message but a command to <code>watchdog</code>. If the return code is -2 <code>watchdog will simply refuse to write the</code> kernel device again.</dd>
+<dt>-3</dt>
+<dd>Maximum load average exceeded.</dd>
+<dt>-4</dt>
+<dd>The temperature inside is too high.</dd>
+<dt>-5</dt>
+<dd><i>/proc/loadavg </i> contains no (or not enough) data.</dd>
+<dt>-6</dt>
+<dd>The given file was not changed in the given interval.</dd>
+<dt>-7</dt>
+<dd><i>/proc/meminfo </i> contains invalid data.</dd>
+<dt>-8</dt>
+<dd>Child process was killed by a signal.</dd>
+<dt>-9</dt>
+<dd>Child process did not return in time.</dd>
+<dt>-10</dt>
+<dd>Free for personal use.</dd></dl>
 <p> With enforcing SELinux policy please use the /usr/libexec/watchdog/scripts/ for your test-binary configuration.</p>
 <h2>Repair Binary</h2>
 <p>The repair binary is started with one parameter: the error number that caused <code>watchdog </code> to initiate the boot process. After trying to repair the system the binary should exit with 0 if the system was successfully repaired and thus there is no need to boot anymore. A return value not equal 0 tells <code>watchdog </code> to reboot. The return code of the repair binary should be the error number of the error causing <code>watchdog </code> to reboot. Be careful with this if you are using the real-time properties since <code>watchdog </code> will wait for the return of this binary before proceeding. </p>
@@ -152,9 +152,9 @@ description: "watchdog – a software watchdog daemon"
 <p>The original code is an example written by Alan Cox &lt;alan [at] lxorguk.ukuu.org.uk&gt;, the author of the kernel driver. All additions were written by Michael Meskes &lt;meskes [at] debian.org&gt;. Johnie Ingram &lt;johnie [at] netgod.net&gt; had the idea of testing the load average. He also took over the Debian specific work. Dave Cinege &lt;dcinege [at] psychosis.com&gt; brought up some hardware watchdog issues and helped testing this stuff.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/dev/watchdog </i></p>
-<dd>The watchdog device.</p>
-<dt><i>/var/run/watchdog.pid </i></p>
-<dd>The pid file of the running <code>watchdog</code>.</dl>
+<dt><i>/dev/watchdog </i></dt>
+<dd>The watchdog device.</dd>
+<dt><i>/var/run/watchdog.pid </i></dt>
+<dd>The pid file of the running <code>watchdog</code>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-watchdog-conf/">watchdog.conf</a></code>(5),<code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5) </p>

@@ -18,14 +18,14 @@ bson_destroy_with_steal (bson_t   *bson,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>steal</code></p>
-<dd> A bool indicating if the underlying buffer should be stolen.</dl>
+<dt><code>steal</code></dt>
+<dd> A bool indicating if the underlying buffer should be stolen.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> A location for storing the resulting buffer length.</dl>
+<dt><code>length</code></dt>
+<dd> A location for storing the resulting buffer length.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_destroy_with_steal/">bson_destroy_with_steal</a>(3)</code> function shall destroy a <code>bson_t</code> structure but return the underlying buffer instead of freeing it. If steal is false, this is equivalent to calling bson_destroy(). It is a programming error to call this function on a <code>bson_t</code> that is not a top-level <code>bson_t</code> , shuch as those initialized with <code><a href="/docs/linux/man/3-bson_append_document_begin/">bson_append_document_begin</a>(3)</code> , <code><a href="/docs/linux/man/3-bson_append_array_begin/">bson_append_array_begin</a>(3)</code> , and <code><a href="/docs/linux/man/3-bson_writer_begin/">bson_writer_begin</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>

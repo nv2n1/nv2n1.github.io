@@ -13,12 +13,12 @@ description: "ptaskset (python-schedutils) – set or get the affinity of a proc
 <p> ptaskset [options] [mask | cpu-list] [pid | cmd [args&#8230;]]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p, &#8211;pid</code></p>
-<dd> operate on existing given pid</p>
-<dt><code>-c, &#8211;cpu-list</code></p>
-<dd> display and specify cpus in list format</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> display help</dl>
+<dt><code>-p, &#8211;pid</code></dt>
+<dd> operate on existing given pid</dd>
+<dt><code>-c, &#8211;cpu-list</code></dt>
+<dd> display and specify cpus in list format</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> display help</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-taskset/">taskset</a></code>(1)</p>
 <h2>AUTHOR</h2>

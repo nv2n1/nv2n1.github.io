@@ -11,13 +11,9 @@ std::DerivedFrom - std::DerivedFrom
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class Derived, class Base&gt;
-
     concept DerivedFrom = (since C++ 20)
-
                               std::is_base_of_v&lt;Base, Derived&gt; &amp;&amp;
-
                           std::is_convertible_v&lt;const volatile Derived *, const volatile Base *&gt;;</code></pre> 
 The concept DerivedFrom&lt;Derived, Base&gt; is satisfied if and only if Base is a class type that is either Derived or a public and unambiguous base of Derived, ignoring cv-qualifiers. 
 Note that this behaviour is different to std::is_base_of when Base is a private or protected base of Derived. 

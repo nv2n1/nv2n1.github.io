@@ -11,9 +11,7 @@ std::wmemchr - std::wmemchr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     const wchar_t *wmemchr(const wchar_t *ptr, wchar_t ch, std::size_t count);
-
 wchar_t *wmemchr(wchar_t *ptr, wchar_t ch, std::size_t count);</code></pre> 
 Locates the first occurrence of wide character ch in the initial count wide characters of the wide character array pointed to by ptr. 
 If count is zero, the function returns a null pointer. 
@@ -31,14 +29,10 @@ Pointer to the location of the wide character, or a null pointer if no such char
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     const wchar_t str[] = L&quot;诺不轻信，故人不负我\0诺不轻许，故我不负人。&quot;;
     wchar_t target = L'许';

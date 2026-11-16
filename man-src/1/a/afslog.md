@@ -15,30 +15,30 @@ description: "afslog – obtain AFS tokens"
 <p> obtains AFS tokens for a number of cells. What cells to get tokens for can either be specified as an explicit list, as file paths to get tokens for, or be left unspecified, in which case will use whatever magic krb_afslog3 decides upon. </p>
 <p> Supported options:</p>
 <dl>
-<dt><code>&#8211;no-v4</code></p>
-<dd> This makes not try using Kerberos 4.</p>
-<dt><code>&#8211;no-v5</code></p>
-<dd> This makes not try using Kerberos 5.</p>
-<dt> &#8211;<code>P </code><i>principal</i> &#8211;<code>-principal </code><i>principal</i></p>
+<dt><code>&#8211;no-v4</code></dt>
+<dd> This makes not try using Kerberos 4.</dd>
+<dt><code>&#8211;no-v5</code></dt>
+<dd> This makes not try using Kerberos 5.</dd>
+<dt> &#8211;<code>P </code><i>principal</i> &#8211;<code>-principal </code><i>principal</i></dt>
 <dd>
-<dd>select what Kerberos 5 principal to use.</p>
-<dt><code>&#8211;cache </code><i>cache</i></p>
-<dd> select what Kerberos 5 credential cache to use. &#8211;<code>-principal</code> overrides this option.</p>
-<dt> &#8211;<code>u</code> &#8211;<code>-unlog</code></p>
+</dd><dd>select what Kerberos 5 principal to use.</dd>
+<dt><code>&#8211;cache </code><i>cache</i></dt>
+<dd> select what Kerberos 5 credential cache to use. &#8211;<code>-principal</code> overrides this option.</dd>
+<dt> &#8211;<code>u</code> &#8211;<code>-unlog</code></dt>
 <dd>
-<dd>Destroy tokens instead of obtaining new. If this is specified, all other options are ignored (except for &#8211;<code>-help</code> and &#8211;<code>-version</code></p>
-<dt> &#8211;<code>v</code> &#8211;<code>-verbose</code></p>
+</dd><dd>Destroy tokens instead of obtaining new. If this is specified, all other options are ignored (except for &#8211;<code>-help</code> and &#8211;<code>-version</code></dd>
+<dt> &#8211;<code>v</code> &#8211;<code>-verbose</code></dt>
 <dd>
-<dd>Adds more verbosity for what is actually going on.</p>
-<dt> &#8211;<code>c </code><i>cell,</i> &#8211;<code>-cell= </code><i>cell</i></p>
+</dd><dd>Adds more verbosity for what is actually going on.</dd>
+<dt> &#8211;<code>c </code><i>cell,</i> &#8211;<code>-cell= </code><i>cell</i></dt>
 <dd>
-<dd>This specified one or more cell names to get tokens for.</p>
-<dt> &#8211;<code>k </code><i>realm</i> &#8211;<code>-realm= </code><i>realm</i></p>
+</dd><dd>This specified one or more cell names to get tokens for.</dd>
+<dt> &#8211;<code>k </code><i>realm</i> &#8211;<code>-realm= </code><i>realm</i></dt>
 <dd>
-<dd>This is the Kerberos realm the AFS servers live in, this should normally not be specified.</p>
-<dt> &#8211;<code>p </code><i>path</i> &#8211;<code>-file= </code><i>path</i></p>
+</dd><dd>This is the Kerberos realm the AFS servers live in, this should normally not be specified.</dd>
+<dt> &#8211;<code>p </code><i>path</i> &#8211;<code>-file= </code><i>path</i></dt>
 <dd>
-<dd>This specified one or more file paths for which tokens should be obtained.</dl>
+</dd><dd>This specified one or more file paths for which tokens should be obtained.</dd></dl>
 <p> Instead of using &#8211;<code>c</code> and &#8211;<code>p</code> you may also pass a list of cells and file paths after any other options. These arguments are considered files if they are either the strings Do . Dc or &#8220;..&#8221; or they contain a slash, or if there exists a file by that name.</p>
 <h2>EXAMPLES</h2>
 <p> Assuming that there is no file called &#8220;openafs.org&#8221; in the current directory, and that /afs/openafs.org points to that cell, the follwing should be identical: </p>

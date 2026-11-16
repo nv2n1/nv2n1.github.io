@@ -15,16 +15,16 @@ description: "flow-expire – Manage storage of flow file archives by expiring o
 <p> The <code>flow-expire</code> utility will remove the oldest flow files in a directory based on either a count of files or space utilization. The directory is recursively searched for flow files. Files that do not have a flow-tools signature will be ignored. The internal timestamp is used so backups or copies of the flow files that do not retain the original timestamp will not impact the operation of <code>flow-expire</code>. <code>flow-expire</code> is typically used to manage storage in a distributed environment where flows are collected on a different server than they are archived.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-e</code><i> expire_count</i></p>
-<dd> Retain the maximum number of files so that the total file count is less than <i>expire_count</i>.</p>
-<dt><code>-E</code><i> expire_size</i></p>
-<dd> Retain the maximum number of files so that the total storage is less than <i>expire_size</i>. The letters b,K,M,G can be used as multipliers, ie 16 Megabytes is 16M.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-w</code><i> workdir</i></p>
-<dd> Work in <i>workdir</i>.</dl>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-e</code><i> expire_count</i></dt>
+<dd> Retain the maximum number of files so that the total file count is less than <i>expire_count</i>.</dd>
+<dt><code>-E</code><i> expire_size</i></dt>
+<dd> Retain the maximum number of files so that the total storage is less than <i>expire_size</i>. The letters b,K,M,G can be used as multipliers, ie 16 Megabytes is 16M.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-w</code><i> workdir</i></dt>
+<dd> Work in <i>workdir</i>.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Remove the oldest flow files in <i>/flows/krc4</i> until the total storage is less then 2 Gigabytes. </p>
 <p> <code>flow-expire -E2Gig -w /flows/krc4</code> </p>

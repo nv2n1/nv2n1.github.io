@@ -10,7 +10,6 @@ description: "set_color_depth – Sets the global pixel color depth. Allegro gam
 <p>set_color_depth &#8211; Sets the global pixel color depth. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_color_depth(int depth);</code></pre>
 <h2>Description</h2>
 <p>Sets the pixel format to be used by subsequent calls to set_gfx_mode() and create_bitmap(). Valid depths are 8 (the default), 15, 16, 24, and 32 bits. Example: </p>

@@ -33,55 +33,55 @@ description: "deluser, delgroup – remove a user or group from the system"
 <p>If called with two non-option arguments, <code>deluser</code> will remove a user from a specific group.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;conf FILE</code></p>
-<dd>Use FILE instead of the default files <i>/etc/deluser.conf</i> and <i>/etc/adduser.conf</i></p>
-<dt><code>&#8211;group</code></p>
-<dd>Remove a group. This is the default action if the program is invoked as <i>delgroup</i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display brief instructions.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Suppress progress messages.</p>
-<dt><code>&#8211;system</code></p>
-<dd>Only delete if user/group is a system user/group. This avoids accidentally deleting non-system users/groups. Additionally, if the user does not exist, no error value is returned. This option is mainly for use in Debian package maintainer scripts.</p>
-<dt><code>&#8211;only-if-empty </code></p>
-<dd>Only remove if no members are left.</p>
-<dt><code>&#8211;backup</code></p>
-<dd>Backup all files contained in the userhome and the mailspool-file to a file named /$user.tar.bz2 or /$user.tar.gz.</p>
-<dt><code>&#8211;backup-to</code></p>
-<dd>Place the backup files not in / but in the directory specified by this parameter. This implicitly sets &#8211;backup also.</p>
-<dt><code>&#8211;remove-home</code></p>
-<dd>Remove the home directory of the user and its mailspool. If &#8211;backup is specified, the files are deleted after having performed the backup.</p>
-<dt><code>&#8211;remove-all-files</code></p>
-<dd>Remove all files from the system owned by this user. Note: &#8211;remove-home does not have an effect any more. If &#8211;backup is specified, the files are deleted after having performed the backup.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version and copyright information.</dl>
+<dt><code>&#8211;conf FILE</code></dt>
+<dd>Use FILE instead of the default files <i>/etc/deluser.conf</i> and <i>/etc/adduser.conf</i></dd>
+<dt><code>&#8211;group</code></dt>
+<dd>Remove a group. This is the default action if the program is invoked as <i>delgroup</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display brief instructions.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Suppress progress messages.</dd>
+<dt><code>&#8211;system</code></dt>
+<dd>Only delete if user/group is a system user/group. This avoids accidentally deleting non-system users/groups. Additionally, if the user does not exist, no error value is returned. This option is mainly for use in Debian package maintainer scripts.</dd>
+<dt><code>&#8211;only-if-empty </code></dt>
+<dd>Only remove if no members are left.</dd>
+<dt><code>&#8211;backup</code></dt>
+<dd>Backup all files contained in the userhome and the mailspool-file to a file named /$user.tar.bz2 or /$user.tar.gz.</dd>
+<dt><code>&#8211;backup-to</code></dt>
+<dd>Place the backup files not in / but in the directory specified by this parameter. This implicitly sets &#8211;backup also.</dd>
+<dt><code>&#8211;remove-home</code></dt>
+<dd>Remove the home directory of the user and its mailspool. If &#8211;backup is specified, the files are deleted after having performed the backup.</dd>
+<dt><code>&#8211;remove-all-files</code></dt>
+<dd>Remove all files from the system owned by this user. Note: &#8211;remove-home does not have an effect any more. If &#8211;backup is specified, the files are deleted after having performed the backup.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version and copyright information.</dd></dl>
 <h2>Return Value</h2>
 <dl>
-<dt><code>0</code></p>
-<dd>The action was successfully executed.</p>
-<dt><code>1</code></p>
-<dd>The user to delete was not a system account. No action was performed.</p>
-<dt><code>2</code></p>
-<dd>There is no such user. No action was performed.</p>
-<dt><code>3</code></p>
-<dd>There is no such group. No action was performed.</p>
-<dt><code>4</code></p>
-<dd>Internal error. No action was performed.</p>
-<dt><code>5</code></p>
-<dd>The group to delete is not empty. No action was performed.</p>
-<dt><code>6</code></p>
-<dd>The user does not belong to the specified group. No action was performed.</p>
-<dt><code>7</code></p>
-<dd>You cannot remove a user from its primary group. No action was performed.</p>
-<dt><code>8</code></p>
-<dd>The required perl-package &#8216;perl modules&#8217; is not installed. This package is required to perform the requested actions. No action was performed.</p>
-<dt><code>9</code></p>
-<dd>For removing the root account the parameter &quot;&#8211;force&quot; is required. No action was performed. </p>
+<dt><code>0</code></dt>
+<dd>The action was successfully executed.</dd>
+<dt><code>1</code></dt>
+<dd>The user to delete was not a system account. No action was performed.</dd>
+<dt><code>2</code></dt>
+<dd>There is no such user. No action was performed.</dd>
+<dt><code>3</code></dt>
+<dd>There is no such group. No action was performed.</dd>
+<dt><code>4</code></dt>
+<dd>Internal error. No action was performed.</dd>
+<dt><code>5</code></dt>
+<dd>The group to delete is not empty. No action was performed.</dd>
+<dt><code>6</code></dt>
+<dd>The user does not belong to the specified group. No action was performed.</dd>
+<dt><code>7</code></dt>
+<dd>You cannot remove a user from its primary group. No action was performed.</dd>
+<dt><code>8</code></dt>
+<dd>The required perl-package &#8216;perl modules&#8217; is not installed. This package is required to perform the requested actions. No action was performed.</dd>
+<dt><code>9</code></dt>
+<dd>For removing the root account the parameter &quot;&#8211;force&quot; is required. No action was performed. </dd>
 <h2>Files</h2>
 <p><i>/etc/deluser.conf</i> Default configuration file for deluser and delgroup</p>
 <dl>
-<dt><i>/usr/local/sbin/deluser.local</i></p>
-<dd>Optional custom add-ons. </p>
+<dt><i>/usr/local/sbin/deluser.local</i></dt>
+<dd>Optional custom add-ons. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-adduser/">adduser</a></code>(8), <code><a href="/docs/linux/man/5-deluser-conf/">deluser.conf</a></code>(5), <code><a href="/docs/linux/man/8-groupdel/">groupdel</a></code>(8), <code><a href="/docs/linux/man/8-userdel/">userdel</a></code>(8) </p>
@@ -90,3 +90,4 @@ description: "deluser, delgroup – remove a user or group from the system"
  Copyright (C) 1997, 1998, 1999 Guy Maor.<br />
  Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original Debian <code>adduser</code><br />
  Copyright (C) 1994 Ian Murdock. <code>deluser</code> is free software; see the GNU General Public Licence version 2 or later for copying conditions. There is <i>no</i> warranty.</p>
+</dl>

@@ -35,31 +35,31 @@ description: "prelude-admin – Manage agents accounts"
 <p> <code>&lt;manager address&gt;</code> is the address of the prelude-manager you wish to register. this can either be its IP address or its hostname. If you made a local installation, you can write localhost to connect via unix socket. </p>
 <p> Remember to use the correct uid/gid when registering your agent. For instance, if you want to register snort (running with snort euid / egid), use &#8211;uid snort &#8211;gid snort. </p>
 <dl>
-<dt><code>add &lt;analyzer profile&gt;</code></p>
-<dd> Setup a new agent user. </p>
+<dt><code>add &lt;analyzer profile&gt;</code></dt>
+<dd> Setup a new agent user. </dd>
 <p> <code>&#8211;uid=UID</code> UID or user to use to setup agent files. </p>
 <p> <code>&#8211;gid=GID</code> GID or group to use to setup agent files.</p>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>chown &lt;analyzer profile&gt;</code> Change analyzer owner. </p>
 <p> <code>&#8211;uid=UID</code> UID or user to use to setup agent files. </p>
 <p> <code>&#8211;gid=GID</code> GID or group to use to setup agent files.</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>del &lt;analyzer profile&gt;</code> The delete command will remove the agent files created through &quot;add&quot; command. Once this is done, the analyzer can&#8217;t be used unless &quot;register&quot; or &quot;add&quot; is called again.</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>rename &lt;analyzer profile&gt; &lt;analyzer profile&gt;</code> Rename an existing analyzer.</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>register &lt;profile name&gt; &lt;wanted permission&gt; &lt;registration-server address&gt;</code> Register an analyzer. </p>
 <p> Register and create the analyzer basic setup if needed. It will also configure communication of this analyzer with a receiving analyzer (like a Manager) through the specified registration-server. </p>
 <p> <code>&#8211;uid=UID</code> UID or user to use to setup analyzer files. </p>
 <p> <code>&#8211;gid=GID</code> GID or group to use to setup analyzer files. </p>
 <p> <code>&#8211;passwd=PASSWD</code> Use provided password instead of prompting it. </p>
 <p> <code>&#8211;passwd-file=-|FILE</code> Read password from file instead of prompting it (- for stdin).</p>
-<dt>
-<dd>
+</dd><dt>
+</dt><dd>
 <p> <code>registration-server &lt;profile name&gt;</code> Start a registration server to register agents. This is used in order to register &#8216;sending&#8217; analyzer to &#8216;receiving&#8217; analyzer. &lt;profile name&gt; should be set to the profile name of the &#8216;receiving&#8217; analyzer, the one where &#8216;sending&#8217; analyzer will register to. </p>
 <p> <code>&#8211;uid=UID</code> UID or user to use to setup &#8216;receiving&#8217; analyzer files. </p>
 <p> <code>&#8211;gid=GID</code> GID or group to use to setup &#8216;receiving&#8217; analyzer files. </p>
@@ -69,12 +69,12 @@ description: "prelude-admin – Manage agents accounts"
 <p> <code>&#8211;keepalive</code> Register analyzer in an infinite loop. </p>
 <p> <code>&#8211;no-confirm</code> Do not ask for confirmation on agent registration. </p>
 <p> <code>&#8211;listen</code> Address to listen on for registration request (default is any:5553).</p>
-<dt>
-<dd> <code>revoke &lt;profile name&gt;</code> Revoke access to &lt;profile&gt; for the given analyzerID. </p>
+</dd><dt>
+</dt><dd> <code>revoke &lt;profile name&gt;</code> Revoke access to &lt;profile&gt; for the given analyzerID. </dd>
 <p> <code>&#8211;uid=UID</code> UID or user to use to setup analyzer files. </p>
 <p> <code>&#8211;gid=GID</code> GID to group to use to setup analyzer files.</p>
 <dt>
-<dd> <code>&#8211;help</code> Print help </p>
+</dt><dd> <code>&#8211;help</code> Print help </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This man page has been written by Frederic Motte </p>

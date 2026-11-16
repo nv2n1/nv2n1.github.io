@@ -18,20 +18,20 @@ description: "dar_slave – disk archive slave for remote access to a dar archiv
 <p> Source is the basename of the archive to read. By default, <code>dar_slave</code> uses standard input and output to communicate with a <code>dar</code> process, which may be running on the local host or on a remote host. It is possible to change the behavior of <code>dar_slave</code> to use named pipe instead of standard input and output </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Displays help usage.</p>
-<dt>-V</p>
-<dd> Displays version information.</p>
-<dt>-i &lt;filename&gt;</p>
-<dd> reads the orders from the named file instead of standard input. In most cases the filename will be a named pipe.</p>
-<dt>-o &lt;filename&gt;</p>
-<dd> sends the data to the named file &lt;filename&gt; instead of standard output. In most cases the filename will be a named pipe.</p>
-<dt>-E &lt;string&gt;</p>
-<dd> string is a command to be launched between slices. See <a href="/docs/linux/man/1-dar/">dar</a>(1) man page (same option) for more information.</p>
-<dt>-Q</p>
-<dd> Do not display any message on stderr when not launched from a terminal (for example when launched from an at job or crontab). Remains that any question to the user will be assumed a &#8216;no&#8217; answer, which most of the time will abort the program.</p>
-<dt>-9 &lt;num&gt;</p>
-<dd> Defines the minimum number of digits to use for archive slice numbers. See the same option in dar man page for more details.</dl>
+<dt>-h</dt>
+<dd> Displays help usage.</dd>
+<dt>-V</dt>
+<dd> Displays version information.</dd>
+<dt>-i &lt;filename&gt;</dt>
+<dd> reads the orders from the named file instead of standard input. In most cases the filename will be a named pipe.</dd>
+<dt>-o &lt;filename&gt;</dt>
+<dd> sends the data to the named file &lt;filename&gt; instead of standard output. In most cases the filename will be a named pipe.</dd>
+<dt>-E &lt;string&gt;</dt>
+<dd> string is a command to be launched between slices. See <a href="/docs/linux/man/1-dar/">dar</a>(1) man page (same option) for more information.</dd>
+<dt>-Q</dt>
+<dd> Do not display any message on stderr when not launched from a terminal (for example when launched from an at job or crontab). Remains that any question to the user will be assumed a &#8216;no&#8217; answer, which most of the time will abort the program.</dd>
+<dt>-9 &lt;num&gt;</dt>
+<dd> Defines the minimum number of digits to use for archive slice numbers. See the same option in dar man page for more details.</dd></dl>
 <h2>EXIT CODES</h2>
 <p> <code>dar_slaves</code> exists with the same codes as dar does, see <a href="/docs/linux/man/1-dar/">dar</a>(1) man page. </p>
 <h2>SIGNALS</h2>

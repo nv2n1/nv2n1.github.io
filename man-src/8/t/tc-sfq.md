@@ -19,12 +19,12 @@ description: "sfq – Stochastic Fairness Queueing"
 <p>On enqueueing, each packet is assigned to a hash bucket, based on the packets hash value. This hash value is either obtained from an external flow classifier (use <code>tc filter</code> to set them), or a default internal classifier if no external classifier has been configured. </p>
 <p> When the internal classifier is used, sfq uses</p>
 <dl>
-<dt>(i)</p>
-<dd>Source address</p>
-<dt>(ii)</p>
-<dd>Destination address</p>
-<dt>(iii)</p>
-<dd>Source and Destination port</dl>
+<dt>(i)</dt>
+<dd>Source address</dd>
+<dt>(ii)</dt>
+<dd>Destination address</dd>
+<dt>(iii)</dt>
+<dd>Source and Destination port</dd></dl>
 <p> If these are available. SFQ knows about ipv4 and ipv6 and also UDP, TCP and ESP. Packets with other protocols are hashed based on the 32bits representation of their destination and source. A flow corresponds mostly to a TCP/IP connection. </p>
 <p> Each of these buckets should represent a unique flow. Because multiple flows may get hashed to the same bucket, sfqs internal hashing algorithm may be perturbed at configurable intervals so that the unfairness lasts only for a short while. Perturbation may however cause some inadvertent packet reordering to occur. After linux-3.3, there is no packet reordering problem, but possible packet drops if rehashing hits one limit (number of flows or packets per flow) </p>
 <p> When dequeuing, each hashbucket with data is queried in a round robin fashion. </p>
@@ -32,39 +32,39 @@ description: "sfq – Stochastic Fairness Queueing"
 <p> After linux-3.3, maximum length of SFQ is 65535 packets, and divisor limit is 65536. In case of overflow, tail-drop is performed on the fullest bucket, unless headdrop was requested.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>divisor</p>
-<dd>Can be used to set a different hash table size, available from kernel 2.6.39 onwards. The specified divisor must be a power of two and cannot be larger than 65536. Default value: 1024.</p>
-<dt>limit</p>
-<dd>Upper limit of the SFQ. Can be used to reduce the default length of 127 packets. After linux-3.3, it can be raised.</p>
-<dt>depth</p>
-<dd>Limit of packets per flow (after linux-3.3). Default to 127 and can be lowered.</p>
-<dt>perturb</p>
-<dd>Interval in seconds for queue algorithm perturbation. Defaults to 0, which means that no perturbation occurs. Do not set too low for each perturbation may cause some packet reordering or losses. Advised value: 60 This value has no effect when external flow classification is used. Its better to increase divisor value to lower risk of hash collisions.</p>
-<dt>quantum</p>
-<dd>Amount of bytes a flow is allowed to dequeue during a round of the round robin process. Defaults to the MTU of the interface which is also the advised value and the minimum value.</p>
-<dt>flows</p>
-<dd>After linux-3.3, it is possible to change the default limit of flows. Default value is 127</p>
-<dt>headdrop</p>
-<dd>Default SFQ behavior is to perform tail-drop of packets from a flow. You can ask a headdrop instead, as this is known to provide a better feedback for TCP flows.</p>
-<dt>redflowlimit</p>
-<dd>Configure the optional RED module on top of each SFQ flow. Random Early Detection principle is to perform packet marks or drops in a probabilistic way. (man tc-red for details about RED) </p>
+<dt>divisor</dt>
+<dd>Can be used to set a different hash table size, available from kernel 2.6.39 onwards. The specified divisor must be a power of two and cannot be larger than 65536. Default value: 1024.</dd>
+<dt>limit</dt>
+<dd>Upper limit of the SFQ. Can be used to reduce the default length of 127 packets. After linux-3.3, it can be raised.</dd>
+<dt>depth</dt>
+<dd>Limit of packets per flow (after linux-3.3). Default to 127 and can be lowered.</dd>
+<dt>perturb</dt>
+<dd>Interval in seconds for queue algorithm perturbation. Defaults to 0, which means that no perturbation occurs. Do not set too low for each perturbation may cause some packet reordering or losses. Advised value: 60 This value has no effect when external flow classification is used. Its better to increase divisor value to lower risk of hash collisions.</dd>
+<dt>quantum</dt>
+<dd>Amount of bytes a flow is allowed to dequeue during a round of the round robin process. Defaults to the MTU of the interface which is also the advised value and the minimum value.</dd>
+<dt>flows</dt>
+<dd>After linux-3.3, it is possible to change the default limit of flows. Default value is 127</dd>
+<dt>headdrop</dt>
+<dd>Default SFQ behavior is to perform tail-drop of packets from a flow. You can ask a headdrop instead, as this is known to provide a better feedback for TCP flows.</dd>
+<dt>redflowlimit</dt>
+<dd>Configure the optional RED module on top of each SFQ flow. Random Early Detection principle is to perform packet marks or drops in a probabilistic way. (man tc-red for details about RED) </dd>
 <pre>redflowlimit configures the hard limit on the real (not average) queue size per SFQ flow in bytes.</pre>
-<dt>min</p>
-<dd>Average queue size at which marking becomes a possibility. Defaults to <code>max</code> /3</p>
-<dt>max</p>
-<dd>At this average queue size, the marking probability is maximal. Defaults to <code>redflowlimit</code> /4</p>
-<dt>probability</p>
-<dd>Maximum probability for marking, specified as a floating point number from 0.0 to 1.0. Default value is 0.02</p>
-<dt>avpkt</p>
-<dd>Specified in bytes. Used with burst to determine the time constant for average queue size calculations. Default value is 1000</p>
-<dt>burst</p>
-<dd>Used for determining how fast the average queue size is influenced by the real queue size. </p>
+<dt>min</dt>
+<dd>Average queue size at which marking becomes a possibility. Defaults to <code>max</code> /3</dd>
+<dt>max</dt>
+<dd>At this average queue size, the marking probability is maximal. Defaults to <code>redflowlimit</code> /4</dd>
+<dt>probability</dt>
+<dd>Maximum probability for marking, specified as a floating point number from 0.0 to 1.0. Default value is 0.02</dd>
+<dt>avpkt</dt>
+<dd>Specified in bytes. Used with burst to determine the time constant for average queue size calculations. Default value is 1000</dd>
+<dt>burst</dt>
+<dd>Used for determining how fast the average queue size is influenced by the real queue size. </dd>
 <pre>Default value is :
 <code>(2 * min + max) / (3 * avpkt)</code></pre>
-<dt>ecn</p>
-<dd>RED can either &#8216;mark&#8217; or &#8216;drop&#8217;. Explicit Congestion Notification allows RED to notify remote hosts that their rate exceeds the amount of bandwidth available. Non-ECN capable hosts can only be notified by dropping a packet. If this parameter is specified, packets which indicate that their hosts honor ECN will only be marked and not dropped, unless the queue size hits <code>depth</code> packets.</p>
-<dt>harddrop</p>
-<dd>If average flow queue size is above <code>max</code> bytes, this parameter forces a drop instead of ecn marking.</dl>
+<dt>ecn</dt>
+<dd>RED can either &#8216;mark&#8217; or &#8216;drop&#8217;. Explicit Congestion Notification allows RED to notify remote hosts that their rate exceeds the amount of bandwidth available. Non-ECN capable hosts can only be notified by dropping a packet. If this parameter is specified, packets which indicate that their hosts honor ECN will only be marked and not dropped, unless the queue size hits <code>depth</code> packets.</dd>
+<dt>harddrop</dt>
+<dd>If average flow queue size is above <code>max</code> bytes, this parameter forces a drop instead of ecn marking.</dd></dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>To attach to device ppp0: </p>
 <p> # tc qdisc add dev ppp0 root sfq </p>
@@ -80,12 +80,12 @@ description: "sfq – Stochastic Fairness Queueing"
 &nbsp;<wbr>&nbsp;redflowlimit 100000 min 8000 max 60000 probability 0.20 ecn headdrop</p>
 <h2>Source</h2>
 <dl>
-<dt>o</p>
-<dd>Paul E. McKenney &quot;Stochastic Fairness Queuing&quot;, IEEE INFOCOMM&#8217;90 Proceedings, San Francisco, 1990. </p>
-<dt>o</p>
-<dd>Paul E. McKenney &quot;Stochastic Fairness Queuing&quot;, &quot;Interworking: Research and Experience&quot;, v.2, 1991, p.113-131. </p>
-<dt>o</p>
-<dd>See also: M. Shreedhar and George Varghese &quot;Efficient Fair Queuing using Deficit Round Robin&quot;, Proc. SIGCOMM 95. </p>
+<dt>o</dt>
+<dd>Paul E. McKenney &quot;Stochastic Fairness Queuing&quot;, IEEE INFOCOMM&#8217;90 Proceedings, San Francisco, 1990. </dd>
+<dt>o</dt>
+<dd>Paul E. McKenney &quot;Stochastic Fairness Queuing&quot;, &quot;Interworking: Research and Experience&quot;, v.2, 1991, p.113-131. </dd>
+<dt>o</dt>
+<dd>See also: M. Shreedhar and George Varghese &quot;Efficient Fair Queuing using Deficit Round Robin&quot;, Proc. SIGCOMM 95. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) </p>

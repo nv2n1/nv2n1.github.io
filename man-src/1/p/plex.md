@@ -26,11 +26,10 @@ url: "/docs/linux/man/1-plex/"
 
 <dl>
 <dt><b>-v</b>
-<dd> <i>Verbose:</i> Lex generates a readable description of the generated lexical analyzer, written to lex-file with new extension <i>.lst</i>
-<dt><b>-o </b>
-<dd> <i>Optimize:</i> Lex optimizes DFA tables to produce a minimal DFA. 
-
-</dl>
+</dt><dd> <i>Verbose:</i> Lex generates a readable description of the generated lexical analyzer, written to lex-file with new extension <i>.lst</i>
+</dd><dt><b>-o </b>
+</dt><dd> <i>Optimize:</i> Lex optimizes DFA tables to produce a minimal DFA. 
+</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -44,8 +43,8 @@ url: "/docs/linux/man/1-plex/"
 
 <dl>
 <dt>
-<dd> 
-&nbsp;<wbr>&nbsp;<wbr>function yylex : Integer;</dl>
+</dt><dd> 
+&nbsp;<wbr>&nbsp;<wbr>function yylex : Integer;</dd></dl>
  
 
  This routine has to be called by your main program to execute the lexical analyzer. The return value of the yylex routine usually denotes the number of a token recognized by the lexical analyzer (see the return routine in the LexLib unit). At end-of-file the yylex routine normally returns 0. 

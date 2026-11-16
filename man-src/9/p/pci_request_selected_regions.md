@@ -15,15 +15,15 @@ pci_request_selected_regions - Reserve selected PCI I/O and memory resources
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>PCI device whose resources are to be reserved</dl>
+<dl><dd></dd><dd>PCI device whose resources are to be reserved</dd></dl>
  
 
  <i>bars</i>
-<dl><dd>Bitmask of BARs to be requested</dl>
+<dl><dd>Bitmask of BARs to be requested</dd></dl>
  
 
  <i>res_name</i>
-<dl><dd>Name to be associated with resource</dl>
+<dl><dd>Name to be associated with resource</dd></dl>
 
 <h2>Copyright</h2>
 

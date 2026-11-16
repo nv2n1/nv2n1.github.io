@@ -15,40 +15,40 @@ description: "thin_dump – dump thin provisioning metadata from device or file 
 <p> This tool cannot be run on live metadata unless the <code>&#8211;metadata-snap</code> option is used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-f</code>, <code>&#8211;format</code> {xml|human_readable|custom}</p>
-<dd>Choose output format.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-f</code>, <code>&#8211;format</code> {xml|human_readable|custom}</dt>
+<dd>Choose output format.</dd></dl>
 <pre> Custom formats are supported via shared library plugins. They should be
  specified as in this example:
  $ thin_dump --format custom=mylib.so /dev/sda</pre>
 <dl>
-<dt><code>-r</code>, <code>&#8211;repair</code></p>
-<dd>Repair the metadata whilst dumping it.</p>
-<dt><code>-m</code>, <code>&#8211;metadata-snap</code>{=&lt;block nr&gt;}</p>
-<dd>Dump metadata snapshot.</dl>
+<dt><code>-r</code>, <code>&#8211;repair</code></dt>
+<dd>Repair the metadata whilst dumping it.</dd>
+<dt><code>-m</code>, <code>&#8211;metadata-snap</code>{=&lt;block nr&gt;}</dt>
+<dd>Dump metadata snapshot.</dd></dl>
 <pre> If block is not provided, access the default metadata snapshot created by
  the thin provisioning device-mapper target, else try the one at block nr.
  See the thin provisioning target documentation on how to create or release
  a metadata snapshot and retrieve the block number from the kernel.</pre>
 <dl>
-<dt><code>&#8211;dev-id</code> {natural}</p>
-<dd>Dump the specified device.</dl>
+<dt><code>&#8211;dev-id</code> {natural}</dt>
+<dd>Dump the specified device.</dd></dl>
 <pre> This option may be specified multiple times to select more than one thin
  device.</pre>
 <dl>
-<dt><code>&#8211;transaction-id</code> {natural}</p>
-<dd>Override the transaction id given in the input xml.</p>
-<dt><code>&#8211;data-block-size</code> {natural}</p>
-<dd>Override the data block size given in the input xml.</p>
-<dt><code>&#8211;nr-data-blocks</code> {natural}</p>
-<dd>Override the nr data blocks given in the input xml.</p>
-<dt><code>&#8211;skip-mappings</code></p>
-<dd>Do not dump the mappings.</p>
-<dt><code>-o</code> {xml file}</p>
-<dd>Specify a file for the output rather than writing to stdout.</dl>
+<dt><code>&#8211;transaction-id</code> {natural}</dt>
+<dd>Override the transaction id given in the input xml.</dd>
+<dt><code>&#8211;data-block-size</code> {natural}</dt>
+<dd>Override the data block size given in the input xml.</dd>
+<dt><code>&#8211;nr-data-blocks</code> {natural}</dt>
+<dd>Override the nr data blocks given in the input xml.</dd>
+<dt><code>&#8211;skip-mappings</code></dt>
+<dd>Do not dump the mappings.</dd>
+<dt><code>-o</code> {xml file}</dt>
+<dd>Specify a file for the output rather than writing to stdout.</dd></dl>
 <h2>Examples</h2>
 <p>Dumps the thin provisioning metadata on logical volume /dev/vg/metadata to standard output in human readable format: </p>
 <pre> $ thin_dump -f human_readable /dev/vg/metadata</pre>

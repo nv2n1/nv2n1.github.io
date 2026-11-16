@@ -19,11 +19,11 @@ description: "ndctl-enable-region – enable the given region(s) and all descend
 <p> &lt;region&gt;</p>
 <dl>
 <dt>
-<dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dl>
+</dt><dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dd></dl>
 <p> -b, &#8211;bus=</p>
 <dl>
 <dt>
-<dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dl>
+</dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-disable-region/">ndctl-disable-region</a></code>(1) </p>
 <h2>Index</h2>

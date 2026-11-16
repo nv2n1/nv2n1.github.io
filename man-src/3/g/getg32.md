@@ -30,7 +30,6 @@ description: "getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb1
 <p> Given a color in a display dependent format, these functions extract one of the red, green, or blue components (ranging 0-255). Example: </p>
 <pre><code>
 int r, g, b, color_value;
-
 color_value = _getpixel15(screen, 100, 100);
 r = getr15(color_value);
 g = getg15(color_value);

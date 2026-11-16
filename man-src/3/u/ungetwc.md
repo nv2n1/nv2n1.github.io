@@ -10,7 +10,6 @@ description: "ungetwc – push back a wide character onto a FILE stream"
 <p>ungetwc &#8211; push back a wide character onto a FILE stream</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 wint_t ungetwc(wint_t wc, FILE *stream);</code></pre>
 <h2>Description</h2>
 <p>The <code>ungetwc</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-ungetc/">ungetc</a></code>(3) function. It pushes back a wide character onto <i>stream</i> and returns it. </p>

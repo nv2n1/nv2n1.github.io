@@ -38,7 +38,7 @@ url: "/docs/linux/man/1-qslog/"
 
 <dl>
 <dt>-f &lt;format_string&gt;
-<dd> Defines the log data format and the positions of data elements processed by this utility. See to the 'LogFormat' directive of the httpd.conf file to see the format defintions of the servers access log data. 
+</dt><dd> Defines the log data format and the positions of data elements processed by this utility. See to the 'LogFormat' directive of the httpd.conf file to see the format defintions of the servers access log data. 
 &nbsp;<wbr>&nbsp;<wbr>qslog knows the following elements: 
 &nbsp;<wbr>&nbsp;<wbr>I defines the client ip address&nbsp;<wbr>(%h) 
 &nbsp;<wbr>&nbsp;<wbr>R defines the request line&nbsp;<wbr>(%r) 
@@ -59,21 +59,20 @@ url: "/docs/linux/man/1-qslog/"
 &nbsp;<wbr>&nbsp;<wbr>c content type&nbsp;<wbr>(%{content-type}o), available in -pc mode only 
 &nbsp;<wbr>&nbsp;<wbr>m request method&nbsp;<wbr>(GET/POST)&nbsp;<wbr>(%m), available in -pc mode only 
 &nbsp;<wbr>&nbsp;<wbr>. defines an element to ignore&nbsp;<wbr>(unknown string) 
-
-<dt>-o &lt;out_file&gt;
-<dd> Specifies the file to store the output to. stdout is used if this option is not defined.
-<dt>-p
-<dd> Used for post processing when reading the log data from a file (cat/pipe). qslog is started using it's offline mode (extracting the time stamps from the log lines) in order to process existing log files. The option &quot;-pc&quot; may be used alternatively if you want to gather request information per client (identified by IP address (I) or user tracking id (U) showing how many request each client has performed within the captured period of time). &quot;-pc&quot; supports the format characters IURSBTtDkEcm. The option &quot;-pu&quot; collects statistics on a per URL level (supports format characters RSTtD). &quot;-puc&quot; is very similar to &quot;-pu&quot; but cuts the end (handler) of each URL.
-<dt>-v
-<dd> Verbose mode.
-<dt>-x [&lt;num&gt;]
-<dd> Rotates the output file once a day (move). You may specify the number of rotated files to keep. Default are 14.
-<dt>-u &lt;name&gt;
-<dd> Becomes another user, e.g. www-data.
-<dt>-m
-<dd> Calculates free system memory every minute.
-<dt>-c &lt;path&gt;
-<dd> Enables the collection of log statitics for different request types. 'path' specifies the necessary rule file. Each rule consists of a rule identifier and a regular expression to identify a request seprarated by a colon, e.g., 01:^(/a)|(/c). The regular expressions are matched against the log data element which has been identified by the 'C' format character.</dl>
+</dd><dt>-o &lt;out_file&gt;
+</dt><dd> Specifies the file to store the output to. stdout is used if this option is not defined.
+</dd><dt>-p
+</dt><dd> Used for post processing when reading the log data from a file (cat/pipe). qslog is started using it's offline mode (extracting the time stamps from the log lines) in order to process existing log files. The option &quot;-pc&quot; may be used alternatively if you want to gather request information per client (identified by IP address (I) or user tracking id (U) showing how many request each client has performed within the captured period of time). &quot;-pc&quot; supports the format characters IURSBTtDkEcm. The option &quot;-pu&quot; collects statistics on a per URL level (supports format characters RSTtD). &quot;-puc&quot; is very similar to &quot;-pu&quot; but cuts the end (handler) of each URL.
+</dd><dt>-v
+</dt><dd> Verbose mode.
+</dd><dt>-x [&lt;num&gt;]
+</dt><dd> Rotates the output file once a day (move). You may specify the number of rotated files to keep. Default are 14.
+</dd><dt>-u &lt;name&gt;
+</dt><dd> Becomes another user, e.g. www-data.
+</dd><dt>-m
+</dt><dd> Calculates free system memory every minute.
+</dd><dt>-c &lt;path&gt;
+</dt><dd> Enables the collection of log statitics for different request types. 'path' specifies the necessary rule file. Each rule consists of a rule identifier and a regular expression to identify a request seprarated by a colon, e.g., 01:^(/a)|(/c). The regular expressions are matched against the log data element which has been identified by the 'C' format character.</dd></dl>
 
 <h2>EXAMPLE</h2>
 

@@ -20,22 +20,22 @@ description: "mzip – change protection mode and eject disk on Zip/Jaz drive"
 <p>&nbsp; </p>
 <p> <tt>Mzip</tt> allows the following command line options:</p>
 <dl>
-<dt><tt>e</tt>&nbsp;</p>
-<dd> Ejects the disk.</p>
-<dt><tt>f</tt>&nbsp;</p>
-<dd> Force eject even if the disk is mounted (must be given in addition to <tt>-e</tt>).</p>
-<dt><tt>r</tt>&nbsp;</p>
-<dd> Write protect the disk.</p>
-<dt><tt>w</tt>&nbsp;</p>
-<dd> Remove write protection.</p>
-<dt><tt>p</tt>&nbsp;</p>
-<dd> Password write protect.</p>
-<dt><tt>x</tt>&nbsp;</p>
-<dd> Password protect</p>
-<dt><tt>u</tt>&nbsp;</p>
-<dd> Temporarily unprotect the disk until it is ejected. The disk becomes writable, and reverts back to its old state when ejected.</p>
-<dt><tt>q</tt>&nbsp;</p>
-<dd> Queries the status</dl>
+<dt><tt>e</tt>&nbsp;</dt>
+<dd> Ejects the disk.</dd>
+<dt><tt>f</tt>&nbsp;</dt>
+<dd> Force eject even if the disk is mounted (must be given in addition to <tt>-e</tt>).</dd>
+<dt><tt>r</tt>&nbsp;</dt>
+<dd> Write protect the disk.</dd>
+<dt><tt>w</tt>&nbsp;</dt>
+<dd> Remove write protection.</dd>
+<dt><tt>p</tt>&nbsp;</dt>
+<dd> Password write protect.</dd>
+<dt><tt>x</tt>&nbsp;</dt>
+<dd> Password protect</dd>
+<dt><tt>u</tt>&nbsp;</dt>
+<dd> Temporarily unprotect the disk until it is ejected. The disk becomes writable, and reverts back to its old state when ejected.</dd>
+<dt><tt>q</tt>&nbsp;</dt>
+<dd> Queries the status</dd></dl>
 <p> To remove the password, set it to one of the password-less modes <tt>-r</tt> or <tt>-w</tt>: mzip will then ask you for the password, and unlock the disk. If you have forgotten the password, you can get rid of it by low-level formatting the disk (using your SCSI adapter&#8217;s BIOS setup). </p>
 <p> The ZipTools disk shipped with the drive is also password protected. On MS-DOS or on a Mac, this password is automatically removed once the ZipTools have been installed. From various articles posted to Usenet, I learned that the password for the tools disk is <tt>APlaceForYourStuff</tt>. Mzip knows about this password, and tries it first, before prompting you for a password. Thus <tt>mzip -w z:</tt> unlocks the tools disk. The tools disk is formatted in a special way so as to be usable both in a PC and in a Mac. On a PC, the Mac file system appears as a hidden file named <tt>&infin;partishn.macIntegral</tt>. You may erase it to reclaim the 50 Megs of space taken up by the Mac file system. </p>
 <h2>Bugs</h2>
@@ -45,27 +45,27 @@ description: "mzip – change protection mode and eject disk on Zip/Jaz drive"
 <h2>Viewing the texi doc</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
 </code></pre>
 </dl>
 <p>&nbsp;</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a html copy, run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make html
 </code></pre>
 </dl>
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make info
 </code></pre>

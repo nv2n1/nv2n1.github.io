@@ -16,28 +16,28 @@ description: "gshhg – Extract data tables from binary GSHHG or WDBII data file
 <p> <code>gshhg</code> reads the binary coastline (GSHHG) or political boundary or river (WDBII) files and extracts an ASCII listing. It automatically handles byte-swabbing between different architectures. Optionally, only segment header info can be displayed. The header info has the format <i>ID npoints hierarchical-level source area f_area west east south north container ancestor</i>, where hierarchical levels for coastline polygons go from 1 (shoreline) to 4 (lake inside island inside lake inside land). Source is either W (World Vector Shoreline) or C (CIA World Data Bank II); lower case is used if a lake is a river-lake. The <i>west east south north</i> is the enclosing rectangle, <i>area</i> is the polygon area in km^2 while <i>f_area</i> is the actual area of the ancestor polygon, <i>container</i> is the ID of the polygon that contains this polygon (-1 if none), and <i>ancestor</i> is the ID of the polygon in the full resolution set that was reduced to yield this polygon (-1 if full resolution since there is no ancestor). For line data the header is simply <i>ID npoints hierarchical-level source west east south north</i>. For more information about the file formats, see TECHNICAL INFORMATION below.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>binaryfile.b</i></p>
-<dd> GSHHG or WDBII binary data file as distributed with the GSHHG data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used.</dl>
+<dt><i>binaryfile.b</i></dt>
+<dd> GSHHG or WDBII binary data file as distributed with the GSHHG data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code><i>min</i></p>
-<dd> Only output information for the polygon if its area equals or exceeds <i>min</i> [Default outputs all polygons].</p>
-<dt><code>-G</code></p>
-<dd> Write output that can be imported into GNU Octave or Matlab by ending segments with a NaN-record.</p>
-<dt><code>-I</code><i>id</i></p>
-<dd> Only output information for the polygon that matches <i>id</i>. Use <code>-Ic</code> to get all the continents only [Default outputs all polygons].</p>
-<dt><code>-L</code></p>
-<dd> Only output a listing of polygon or line segment headers [Default outputs headers and data records].</p>
-<dt><code>-N</code></p>
-<dd> Only output features whose level matches the given <i>level</i> [Default will output all levels].</p>
-<dt><code>-Qe</code>|<code>i</code></p>
-<dd> Control what to do with river-lakes (river sections large enough to be stored as closed polygons). Use <code>-Qe</code> to exclude them and <code>-Qi</code> to exclude everything else instead [Default outputs all polygons].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output.</p>
-<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace output columns that equal NaN with <i>nodata</i>.</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</dl>
+<dt><code>-A</code><i>min</i></dt>
+<dd> Only output information for the polygon if its area equals or exceeds <i>min</i> [Default outputs all polygons].</dd>
+<dt><code>-G</code></dt>
+<dd> Write output that can be imported into GNU Octave or Matlab by ending segments with a NaN-record.</dd>
+<dt><code>-I</code><i>id</i></dt>
+<dd> Only output information for the polygon that matches <i>id</i>. Use <code>-Ic</code> to get all the continents only [Default outputs all polygons].</dd>
+<dt><code>-L</code></dt>
+<dd> Only output a listing of polygon or line segment headers [Default outputs headers and data records].</dd>
+<dt><code>-N</code></dt>
+<dd> Only output features whose level matches the given <i>level</i> [Default will output all levels].</dd>
+<dt><code>-Qe</code>|<code>i</code></dt>
+<dd> Control what to do with river-lakes (river sections large enough to be stored as closed polygons). Use <code>-Qe</code> to exclude them and <code>-Qi</code> to exclude everything else instead [Default outputs all polygons].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output.</dd>
+<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace output columns that equal NaN with <i>nodata</i>.</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert the entire intermediate GSHHG binary data to ASCII files for Octave/Matlab, run </p>
 <pre>

@@ -633,46 +633,46 @@ undersized...]}</pre>
 <pre>ceph version</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-i infile</code></p>
-<dd>will specify an input file to be passed along as a payload with the command to the monitor cluster. This is only used for specific monitor commands.</p>
-<dt><code>-o outfile</code></p>
-<dd>will write any payload returned by the monitor cluster with its reply to outfile. Only specific monitor commands (e.g. osd getmap) return a payload.</p>
-<dt><code>-c ceph.conf, &#8211;conf=ceph.conf</code></p>
-<dd>Use ceph.conf configuration file instead of the default <code>/etc/ceph/ceph.conf</code> to determine monitor addresses during startup.</p>
-<dt><code>&#8211;id CLIENT_ID, &#8211;user CLIENT_ID</code></p>
-<dd>Client id for authentication.</p>
-<dt><code>&#8211;name CLIENT_NAME, -n CLIENT_NAME</code></p>
-<dd>Client name for authentication.</p>
-<dt><code>&#8211;cluster CLUSTER</code></p>
-<dd>Name of the Ceph cluster.</p>
-<dt><code>&#8211;admin-daemon ADMIN_SOCKET</code></p>
-<dd>Submit admin-socket commands.</p>
-<dt><code>&#8211;admin-socket ADMIN_SOCKET_NOPE</code></p>
-<dd>You probably mean &#8211;admin-daemon</p>
-<dt><code>-s, &#8211;status</code></p>
-<dd>Show cluster status.</p>
-<dt><code>-w, &#8211;watch</code></p>
-<dd>Watch live cluster changes.</p>
-<dt><code>&#8211;watch-debug</code></p>
-<dd>Watch debug events.</p>
-<dt><code>&#8211;watch-info</code></p>
-<dd>Watch info events.</p>
-<dt><code>&#8211;watch-sec</code></p>
-<dd>Watch security events.</p>
-<dt><code>&#8211;watch-warn</code></p>
-<dd>Watch warning events.</p>
-<dt><code>&#8211;watch-error</code></p>
-<dd>Watch error events.</p>
-<dt><code>&#8211;version, -v</code></p>
-<dd>Display version.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Make verbose.</p>
-<dt><code>&#8211;concise</code></p>
-<dd>Make less verbose.</p>
-<dt><code>-f {json,json-pretty,xml,xml-pretty,plain}, &#8211;format</code></p>
-<dd>Format of output.</p>
-<dt><code>&#8211;connect-timeout CLUSTER_TIMEOUT</code></p>
-<dd>Set a timeout for connecting to the cluster.</dl>
+<dt><code>-i infile</code></dt>
+<dd>will specify an input file to be passed along as a payload with the command to the monitor cluster. This is only used for specific monitor commands.</dd>
+<dt><code>-o outfile</code></dt>
+<dd>will write any payload returned by the monitor cluster with its reply to outfile. Only specific monitor commands (e.g. osd getmap) return a payload.</dd>
+<dt><code>-c ceph.conf, &#8211;conf=ceph.conf</code></dt>
+<dd>Use ceph.conf configuration file instead of the default <code>/etc/ceph/ceph.conf</code> to determine monitor addresses during startup.</dd>
+<dt><code>&#8211;id CLIENT_ID, &#8211;user CLIENT_ID</code></dt>
+<dd>Client id for authentication.</dd>
+<dt><code>&#8211;name CLIENT_NAME, -n CLIENT_NAME</code></dt>
+<dd>Client name for authentication.</dd>
+<dt><code>&#8211;cluster CLUSTER</code></dt>
+<dd>Name of the Ceph cluster.</dd>
+<dt><code>&#8211;admin-daemon ADMIN_SOCKET</code></dt>
+<dd>Submit admin-socket commands.</dd>
+<dt><code>&#8211;admin-socket ADMIN_SOCKET_NOPE</code></dt>
+<dd>You probably mean &#8211;admin-daemon</dd>
+<dt><code>-s, &#8211;status</code></dt>
+<dd>Show cluster status.</dd>
+<dt><code>-w, &#8211;watch</code></dt>
+<dd>Watch live cluster changes.</dd>
+<dt><code>&#8211;watch-debug</code></dt>
+<dd>Watch debug events.</dd>
+<dt><code>&#8211;watch-info</code></dt>
+<dd>Watch info events.</dd>
+<dt><code>&#8211;watch-sec</code></dt>
+<dd>Watch security events.</dd>
+<dt><code>&#8211;watch-warn</code></dt>
+<dd>Watch warning events.</dd>
+<dt><code>&#8211;watch-error</code></dt>
+<dd>Watch error events.</dd>
+<dt><code>&#8211;version, -v</code></dt>
+<dd>Display version.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Make verbose.</dd>
+<dt><code>&#8211;concise</code></dt>
+<dd>Make less verbose.</dd>
+<dt><code>-f {json,json-pretty,xml,xml-pretty,plain}, &#8211;format</code></dt>
+<dd>Format of output.</dd>
+<dt><code>&#8211;connect-timeout CLUSTER_TIMEOUT</code></dt>
+<dd>Set a timeout for connecting to the cluster.</dd></dl>
 <h2>Availability</h2>
 <p><code>ceph</code> is part of Ceph, a massively scalable, open-source, distributed storage system. Please refer to the Ceph documentation at <i><a rel="nofollow" href="http://ceph.com/docs">http://ceph.com/docs</a></i> for more information.</p>
 <h2>See Also</h2>

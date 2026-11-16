@@ -18,11 +18,11 @@ ifdown <i>interface-name</i></pre>
 <p>and <code>ifup</code> and <code>ifdown</code> will call usernetctl automatically to allow the interface status change.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>interface-name</i></p>
-<dd>The name of the network interface to check; for example, &quot;ppp0&quot;. For backwards compatibility, &quot;ifcfg-ppp0&quot; and &quot;/etc/sysconfig/network-scripts/ifcfg-ppp0&quot; are also supported.</p>
-<dt>up<i>|</i>down</p>
-<dd>Attempt to bring the interface up or down.</p>
-<dt>report</p>
-<dd>Report on whether users can bring the interface up or down.</dl>
+<dt><i>interface-name</i></dt>
+<dd>The name of the network interface to check; for example, &quot;ppp0&quot;. For backwards compatibility, &quot;ifcfg-ppp0&quot; and &quot;/etc/sysconfig/network-scripts/ifcfg-ppp0&quot; are also supported.</dd>
+<dt>up<i>|</i>down</dt>
+<dd>Attempt to bring the interface up or down.</dd>
+<dt>report</dt>
+<dd>Report on whether users can bring the interface up or down.</dd></dl>
 <h2>Notes</h2>
 <p>Alternate device configurations may inherit the default configuration&#8217;s permissions. </p>

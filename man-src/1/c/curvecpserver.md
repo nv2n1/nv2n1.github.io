@@ -27,26 +27,26 @@ description: "CurveCP — Message-handling programs"
 <h2>OPTIONS</h2>
 <p> How to use <code>curvecpserver</code>:</p>
 <dl>
-<dt><code>-q</code> <code>optional</code></p>
-<dd> no error messages</p>
-<dt><code>-Q</code> <code>optional</code></p>
-<dd> print error messages (default)</p>
-<dt><code>-v</code> <code>optional</code></p>
-<dd> print extra information</p>
-<dt><code>-c n</code> <code>optional</code></p>
-<dd> allow at most n clients at once (default 100)</p>
-<dt><code>sname</code></p>
-<dd> server&#8217;s name</p>
-<dt><code>keydir</code></p>
-<dd> use this public-key directory</p>
-<dt><code>ip</code></p>
-<dd> server&#8217;s IP address</p>
-<dt><code>port</code></p>
-<dd> server&#8217;s UDP port</p>
-<dt><code>ext</code></p>
-<dd> server&#8217;s extension</p>
-<dt><code>prog</code></p>
-<dd> run this server</dl>
+<dt><code>-q</code> <code>optional</code></dt>
+<dd> no error messages</dd>
+<dt><code>-Q</code> <code>optional</code></dt>
+<dd> print error messages (default)</dd>
+<dt><code>-v</code> <code>optional</code></dt>
+<dd> print extra information</dd>
+<dt><code>-c n</code> <code>optional</code></dt>
+<dd> allow at most n clients at once (default 100)</dd>
+<dt><code>sname</code></dt>
+<dd> server&#8217;s name</dd>
+<dt><code>keydir</code></dt>
+<dd> use this public-key directory</dd>
+<dt><code>ip</code></dt>
+<dd> server&#8217;s IP address</dd>
+<dt><code>port</code></dt>
+<dd> server&#8217;s UDP port</dd>
+<dt><code>ext</code></dt>
+<dd> server&#8217;s extension</dd>
+<dt><code>prog</code></dt>
+<dd> run this server</dd></dl>
 <h2>SEE ALSO</h2>
 <p> curvecpmessage (1), curvecpclient (1), inetd (8), tcpserver (1).</p>
 <h2>AUTHOR</h2>

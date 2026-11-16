@@ -14,14 +14,14 @@ description: "z8530_sync_dma_open – Open a Z8530 for DMA I/O"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>The network device to attach</dl>
+</dd><dd>The network device to attach</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>The Z8530 channel to configure in sync DMA mode.</dl>
+<dd>The Z8530 channel to configure in sync DMA mode.</dd></dl>
 <h2>Description</h2>
 <p>Set up a Z85x30 device for synchronous DMA in both directions. Two ISA DMA channels must be available for this to work. We assume ISA DMA driven I/O and PC limits on access.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

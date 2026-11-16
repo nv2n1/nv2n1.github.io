@@ -14,14 +14,14 @@ description: "iscsi_destroy_all_flashnode – destroy all flashnode session entr
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>pointer to host data</dl>
+</dd><dd>pointer to host data</dd></dl>
 <h2>Description</h2>
 <p>Destroys all the flashnode session entries and all corresponding children flashnode connection entries from sysfs</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

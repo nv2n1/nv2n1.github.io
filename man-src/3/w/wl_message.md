@@ -15,13 +15,7 @@ wl_message -
 <h3>Public Attributes</h3>
 
 <pre><code>const char * name
-
-
-
 const char * signature
-
-
-
 struct wl_interface ** types
 </code></pre>
 

@@ -18,44 +18,43 @@ description: "kdenlive_render – Render program for Kdenlive."
 <h3>Options:</h3>
 </h3>
 <dl>
-<dt><code>-erase</code></p>
-<dd> If present, src file will be erased after rendering</p>
-<dt><code>in=pos</code></p>
-<dd> Start rendering at frame pos</p>
-<dt><code>out=pos</code></p>
-<dd> End rendering at frame pos</p>
-<dt><code>render</code></p>
-<dd> Path to MLT melt render program</p>
-<dt><code>profile</code></p>
-<dd> The MLT video profile</p>
-<dt><code>rendermodule</code></p>
-<dd> The MLT consumer used for rendering, usually it is avformat</p>
-<dt><code>player</code></p>
-<dd> Path to video player to play when rendering is over, use &#8216;-&#8216; to disable playing</p>
-<dt><code>src</code></p>
-<dd> Source file &#8211; usually MLT playlist</p>
-<dt><code>dest</code></p>
-<dd> Destination file</p>
-<dt><code>args</code></p>
-<dd> Space separated libavformat arguments</dl>
+<dt><code>-erase</code></dt>
+<dd> If present, src file will be erased after rendering</dd>
+<dt><code>in=pos</code></dt>
+<dd> Start rendering at frame pos</dd>
+<dt><code>out=pos</code></dt>
+<dd> End rendering at frame pos</dd>
+<dt><code>render</code></dt>
+<dd> Path to MLT melt render program</dd>
+<dt><code>profile</code></dt>
+<dd> The MLT video profile</dd>
+<dt><code>rendermodule</code></dt>
+<dd> The MLT consumer used for rendering, usually it is avformat</dd>
+<dt><code>player</code></dt>
+<dd> Path to video player to play when rendering is over, use &#8216;-&#8216; to disable playing</dd>
+<dt><code>src</code></dt>
+<dd> Source file &#8211; usually MLT playlist</dd>
+<dt><code>dest</code></dt>
+<dd> Destination file</dd>
+<dt><code>args</code></dt>
+<dd> Space separated libavformat arguments</dd></dl>
 <h3></h3>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>KDENLIVE_RENDER_LOG</code></p>
-<dd> If $<code>KDENLIVE_RENDER_LOG</code> is set, a log will be written to /tmp/kdenlive_render.log.XXXXXXXX, that contains information about the result of calling melt, ffmpeg, etc. This can be used for debugging. </p>
+<dt><code>KDENLIVE_RENDER_LOG</code></dt>
+<dd> If $<code>KDENLIVE_RENDER_LOG</code> is set, a log will be written to /tmp/kdenlive_render.log.XXXXXXXX, that contains information about the result of calling melt, ffmpeg, etc. This can be used for debugging. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Please see the homepage at <code><a rel="nofollow" href="http://www.kdenlive.org/">http://www.kdenlive.org/</a></code> </p>
 <h2>AUTHORS</h2>
 <pre><code>
 Jean - Baptiste Mardelle&lt;jb[at] kdenlive.org&gt;
-
            Marco Gittler&lt;g.marco[at] freenet.de&gt;
 </code></pre>
 <h2>Index</h2>
-<dt><a href="#lbAJ">ENVIRONMENT</a></p>
+<dt><a href="#lbAJ">ENVIRONMENT</a></dt>
 <dd>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">AUTHORS</a></dt>
+<dd></dd></dl>

@@ -11,9 +11,7 @@ std::abs(std::complex) - std::abs(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     T abs(const complex&lt;T&gt; &amp;z);</code></pre> 
 Returns the magnitude of the complex number z. 
 
@@ -29,10 +27,8 @@ Errors and special cases are handled as if the function is implemented as std::h
 <h2>Examples</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::complex&lt;double&gt; z(1, 1);
     std::cout &lt;&lt; z &lt;&lt; &quot; cartesian is rho = &quot; &lt;&lt; std::abs(z)

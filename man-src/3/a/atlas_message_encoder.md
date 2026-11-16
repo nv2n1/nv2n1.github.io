@@ -28,11 +28,11 @@ description: "Atlas::Message::Encoder – Encoder that transmits Atlas::Message:
 <p> This encoder can be used to send <code>Atlas::Message::Element</code> objects representing full atlas messages. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Element</code> </p>
+<dd><code>Element</code> </dd>
 <p> <code>Atlas::Bridge</code> </p>
 <p> <code>Atlas::EncoderBase</code></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dl>
+<dd>Stefanus Du Toit &lt;sdt [at] gmx.net&gt;</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

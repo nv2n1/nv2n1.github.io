@@ -18,14 +18,14 @@ description: "XmScrolledWindowSetAreas — A ScrolledWindow function that adds o
 <h2>Description</h2>
 <p><code>XmScrolledWindowSetAreas</code> adds or changes a window work region and a horizontal or vertical ScrollBar widget to the ScrolledWindow widget for the application. Each widget is optional and may be passed as NULL. This function is obsolete and exists for compatibility with other releases. Use the <code>XmNscrolledWindowChildType</code> resource of <code>XmScrolledWindow</code> instead.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ScrolledWindow widget ID.</p>
-<dt><i>horizontal_scrollbar</i></p>
-<dd>Specifies the ScrollBar widget ID for the horizontal ScrollBar to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The resource name associated with this argument is <code>XmNhorizontalScrollBar</code>.</p>
-<dt><i>vertical_scrollbar</i></p>
-<dd>Specifies the ScrollBar widget ID for the vertical ScrollBar to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The resource name associated with this argument is <code>XmNverticalScrollBar</code>.</p>
-<dt><i>work_region</i></p>
-<dd>Specifies the widget ID for the work window to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The attribute name associated with this argument is <code>XmNworkWindow</code>.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ScrolledWindow widget ID.</dd>
+<dt><i>horizontal_scrollbar</i></dt>
+<dd>Specifies the ScrollBar widget ID for the horizontal ScrollBar to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The resource name associated with this argument is <code>XmNhorizontalScrollBar</code>.</dd>
+<dt><i>vertical_scrollbar</i></dt>
+<dd>Specifies the ScrollBar widget ID for the vertical ScrollBar to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The resource name associated with this argument is <code>XmNverticalScrollBar</code>.</dd>
+<dt><i>work_region</i></dt>
+<dd>Specifies the widget ID for the work window to be associated with the ScrolledWindow widget. Set this ID only after creating an instance of the ScrolledWindow widget. The attribute name associated with this argument is <code>XmNworkWindow</code>.</dd></dl>
 <p> For a complete definition of ScrolledWindow and its associated resources, see <code><a href="/docs/linux/man/3-xmscrolledwindow/">XmScrolledWindow</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmscrolledwindow/">XmScrolledWindow</a></code>(3).</p>

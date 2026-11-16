@@ -11,19 +11,12 @@ std::iterator - std::iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;
-
         class Category,
-
         class T,
-
         class Distance = std::ptrdiff_t, (deprecated in C++ 17)
-
                                              class Pointer = T *,
-
         class Reference = T &amp;
-
         &gt;
     struct iterator;</code></pre> 
 std::iterator is the base class provided to simplify definitions of the required types for iterators. 
@@ -49,13 +42,10 @@ reference Reference
 
 The following example shows how to implement a input_iterator by inheriting from std::iterator 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
 template &lt;long FROM, long TO&gt;
-
 class Range
 {
-
   public:
     // member typedefs provided through inheriting from std::iterator
     class iterator : public std::iterator&lt;
@@ -67,7 +57,6 @@ class Range
                          &gt;
     {
         long num = FROM;
-
       public:
         explicit iterator(long _num = 0)
             : num(_num)

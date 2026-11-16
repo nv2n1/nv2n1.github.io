@@ -38,19 +38,19 @@ nvme fw - download&lt;device&gt;[--fw = &lt;firmware - file&gt; | -f&lt;firmware
  -f &lt;firmware-file&gt;, --fw=&lt;firmeware-file&gt;
 <dl>
 <dt>
-<dd> Required argument. This specifies the path to the device's firmware file on your system that will be read by the program and sent to the device.</dl>
+</dt><dd> Required argument. This specifies the path to the device's firmware file on your system that will be read by the program and sent to the device.</dd></dl>
  
 
  -x &lt;transfer-size&gt;, --xfer=&lt;transfer-size&gt;
 <dl>
 <dt>
-<dd> This specifies the size to split each transfer. This is useful if the device has a max transfer size requirement for firmware. It defaults to 4k.</dl>
+</dt><dd> This specifies the size to split each transfer. This is useful if the device has a max transfer size requirement for firmware. It defaults to 4k.</dd></dl>
  
 
  -o &lt;offset&gt;, --offset=&lt;offset&gt;
 <dl>
 <dt>
-<dd> This specifies the starting offset in dwords. This is really only useful if your firmware is split in multiple files; otherwise the offset starts at zero and automatically adjusts based on the <i>xfer</i> size given.</dl>
+</dt><dd> This specifies the starting offset in dwords. This is really only useful if your firmware is split in multiple files; otherwise the offset starts at zero and automatically adjusts based on the <i>xfer</i> size given.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -58,13 +58,12 @@ nvme fw - download&lt;device&gt;[--fw = &lt;firmware - file&gt; | -f&lt;firmware
 
 <dl>
 <dt>
-<dd> &bull; Transfer a firmware size 128KiB at a time: 
-
-<dl>
+</dt><dd> &bull; Transfer a firmware size 128KiB at a time: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme fw-download /dev/nvme0 --fw=/path/to/nvme.fw --xfer=0x20000
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

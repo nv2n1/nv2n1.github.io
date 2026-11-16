@@ -17,15 +17,15 @@ description: "struct_nand_hw_control – Control structure for hardware controll
 <h2>Members</h2>
 <p>lock</p>
 <dl>
-<dd>protection lock</dl>
+<dd>protection lock</dd></dl>
 <p> active</p>
 <dl>
-<dd>the mtd device which holds the controller currently</dl>
+<dd>the mtd device which holds the controller currently</dd></dl>
 <p> wq</p>
 <dl>
-<dd>wait queue to sleep on if a NAND operation is in progress used instead of the per chip wait queue when a hw controller is available.</dl>
+<dd>wait queue to sleep on if a NAND operation is in progress used instead of the per chip wait queue when a hw controller is available.</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

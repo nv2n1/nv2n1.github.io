@@ -11,15 +11,15 @@ description: "kmouth – A type-and-say front end for speech synthesizers"
 <p> kmouth &#8211; A type-and-say front end for speech synthesizers</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kmouth</code> [<i>filename</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </p>
+<dt> <code>kmouth</code> [<i>filename</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>KMouth is an application that enables persons that cannot speak to let their computers speak.It includes a history of spoken sentences from which the user can select sentences to be re-spoken. </p>
+<dd>KMouth is an application that enables persons that cannot speak to let their computers speak.It includes a history of spoken sentences from which the user can select sentences to be re-spoken. </dd>
 <p> Note that KMouth does not include speech synthesizer. Instead it requires a speech synthesizer installed in the system. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>filename</i></p>
-<dd> The history file to open. </p>
+<dt><i>filename</i></dt>
+<dd> The history file to open. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> kttsd(1), <a href="/docs/linux/man/1-festival/">festival</a>(1), mbrola(1), freetts(1) </p>

@@ -16,15 +16,15 @@ description: "ipx_configure – query/configure IPX behavior"
 <p><code>&#8211;auto_interface=</code><i>on|off</i><br />
  <code>-i</code> <i>on|off</i></p>
 <dl>
-<dd>This argument either turns on or off the behavior of automatically creating interfaces.</dl>
+<dd>This argument either turns on or off the behavior of automatically creating interfaces.</dd></dl>
 <p> <code>&#8211;auto_primary=</code><i>on|off</i><br />
  <code>-p</code> <i>on|off</i></p>
 <dl>
-<dd>This argument either turns on or off the behavior of automatically selecting a primary interface.</dl>
+<dd>This argument either turns on or off the behavior of automatically selecting a primary interface.</dd></dl>
 <p> <code>&#8211;help</code><br />
  <code>-h</code></p>
 <dl>
-<dd>Print out information about utility.</dl>
+<dd>Print out information about utility.</dd></dl>
 <h2>Files</h2>
 <p><i>/proc/net/ipx_interface</i></p>
 <h2>Bugs</h2>

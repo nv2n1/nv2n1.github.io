@@ -19,13 +19,13 @@ description: "hx509 misc functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>list</i> list to be freed.</dl>
+</dt><dd> <i>list</i> list to be freed.</dd></dl>
 <h3>void hx509_xfree (void *ptr)</h3>
 <p> Free a data element allocated in the library. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ptr</i> data to be freed.</dl>
+</dt><dd> <i>ptr</i> data to be freed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
 <h2>Index</h2>

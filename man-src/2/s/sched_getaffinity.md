@@ -28,16 +28,16 @@ int sched_getaffinity(pid_t pid, size_t cpusetsize,
 <p> On success, <code>sched_setaffinity</code>() and <code>sched_getaffinity</code>() return 0 (but see &quot;C library/kernel differences&quot; below, which notes that the underlying <code>sched_getaffinity</code>() differs in its return value). On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> A supplied memory address was invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> The affinity bit mask <i>mask</i> contains no processors that are currently physically on the system and permitted to the thread according to any restrictions that may be imposed by <i>cpuset</i> cgroups or the &quot;cpuset&quot; mechanism described in <code><a href="/docs/linux/man/7-cpuset/">cpuset</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> (<code>sched_getaffinity</code>() and, in kernels before 2.6.9, <code>sched_setaffinity</code>()) <i>cpusetsize</i> is smaller than the size of the affinity mask used by the kernel.</p>
-<dt><code>EPERM</code></p>
-<dd> (<code>sched_setaffinity</code>()) The calling thread does not have appropriate privileges. The caller needs an effective user ID equal to the real user ID or effective user ID of the thread identified by <i>pid</i>, or it must possess the <code>CAP_SYS_NICE</code> capability in the user namespace of the thread <i>pid</i>.</p>
-<dt><code>ESRCH</code></p>
-<dd> The thread whose ID is <i>pid</i> could not be found.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> A supplied memory address was invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The affinity bit mask <i>mask</i> contains no processors that are currently physically on the system and permitted to the thread according to any restrictions that may be imposed by <i>cpuset</i> cgroups or the &quot;cpuset&quot; mechanism described in <code><a href="/docs/linux/man/7-cpuset/">cpuset</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (<code>sched_getaffinity</code>() and, in kernels before 2.6.9, <code>sched_setaffinity</code>()) <i>cpusetsize</i> is smaller than the size of the affinity mask used by the kernel.</dd>
+<dt><code>EPERM</code></dt>
+<dd> (<code>sched_setaffinity</code>()) The calling thread does not have appropriate privileges. The caller needs an effective user ID equal to the real user ID or effective user ID of the thread identified by <i>pid</i>, or it must possess the <code>CAP_SYS_NICE</code> capability in the user namespace of the thread <i>pid</i>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The thread whose ID is <i>pid</i> could not be found.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The CPU affinity system calls were introduced in Linux kernel 2.5.8. The system call wrappers were introduced in glibc 2.3. Initially, the glibc interfaces included a <i>cpusetsize</i> argument, typed as <i>unsigned int</i>. In glibc 2.3.3, the <i>cpusetsize</i> argument was removed, but was then restored in glibc 2.3.4, with type <i>size_t</i>.</p>
 <h2>CONFORMING TO</h2>

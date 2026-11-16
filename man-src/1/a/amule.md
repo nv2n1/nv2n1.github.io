@@ -15,41 +15,39 @@ description: "amule – the all-platform eMule p2p client"
 <p> _untranslated<code>[</code>-h<code>]</code> </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></p>
-<dd> Read config from <i>&lt;path&gt;</i> instead of home</p>
-<dt><code>[ -geometry </code><i>&lt;geom&gt;</i> <code>]</code></p>
-<dd> Sets the geometry of the app. <i>&lt;geom&gt;</i> uses the same format as standard X11 apps:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>=</code>][<i>&lt;width&gt;</i>{<code>xX</code>}<i>&lt;height&gt;</i>][{<code>+-</code>}<i>&lt;xoffset&gt;</i>{<code>+-</code>}<i>&lt;yoffset&gt;</i>]</p>
+<dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
+<dd> Read config from <i>&lt;path&gt;</i> instead of home</dd>
+<dt><code>[ -geometry </code><i>&lt;geom&gt;</i> <code>]</code></dt>
+<dd> Sets the geometry of the app. <i>&lt;geom&gt;</i> uses the same format as standard X11 apps:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>=</code>][<i>&lt;width&gt;</i>{<code>xX</code>}<i>&lt;height&gt;</i>][{<code>+-</code>}<i>&lt;xoffset&gt;</i>{<code>+-</code>}<i>&lt;yoffset&gt;</i>]</dd>
 <dt>
-<dd> Prints log messages to stdout.</p>
+</dt><dd> Prints log messages to stdout.</dd>
 <dt>
-<dd> Resets config to default values.</p>
-<dt><code>[ -w</code> <i>&lt;path&gt;</i>, <code>&#8211;use-amuleweb</code>=<i>&lt;path&gt;</i> <code>]</code></p>
-<dd> Specify location of amuleweb binary to <i>&lt;path&gt;</i>.</p>
+</dt><dd> Resets config to default values.</dd>
+<dt><code>[ -w</code> <i>&lt;path&gt;</i>, <code>&#8211;use-amuleweb</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
+<dd> Specify location of amuleweb binary to <i>&lt;path&gt;</i>.</dd>
 <dt>
-<dd> Does not handle fatal exception.</p>
+</dt><dd> Does not handle fatal exception.</dd>
 <dt>
-<dd> Does not disable stdin.</p>
-<dt><code>[ -t</code>, <code>&#8211;category</code>=<i>&lt;num&gt;</i> <code>]</code></p>
-<dd> Set category for passed eD2k links to <i>&lt;num&gt;</i></p>
+</dt><dd> Does not disable stdin.</dd>
+<dt><code>[ -t</code>, <code>&#8211;category</code>=<i>&lt;num&gt;</i> <code>]</code></dt>
+<dd> Set category for passed eD2k links to <i>&lt;num&gt;</i></dd>
 <dt>
-<dd> Displays the current version number.</p>
+</dt><dd> Displays the current version number.</dd>
 <dt>
-<dd> Prints a short usage description.</p>
-<dt><code>[ eD2k-link ]</code></p>
-<dd> Adds an eD2k-link to the core.</dl>
+</dt><dd> Prints a short usage description.</dd>
+<dt><code>[ eD2k-link ]</code></dt>
+<dd> Adds an eD2k-link to the core.</dd></dl>
 <p> The eD2k link to be added can be:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> a file link (ed2k://|file|&#8230;), it will be added to the download queue;</p>
-<dt>&bull;</p>
-<dd> a server link (ed2k://|server|&#8230;), it will be added to the server list;</p>
-<dt>&bull;</p>
-<dd> a serverlist link, in which case all servers in the list will be added to the server list;</p>
-<dt>&bull;</p>
-<dd> a magnet link.</dl>
+<dt>&bull;</dt>
+<dd> a file link (ed2k://|file|&#8230;), it will be added to the download queue;</dd>
+<dt>&bull;</dt>
+<dd> a server link (ed2k://|server|&#8230;), it will be added to the server list;</dd>
+<dt>&bull;</dt>
+<dd> a serverlist link, in which case all servers in the list will be added to the server list;</dd>
+<dt>&bull;</dt>
+<dd> a magnet link.</dd></dl>
 </dl>
 <h2>NOTES</h2>
 <h3>Paths</h3>

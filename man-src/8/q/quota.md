@@ -18,13 +18,13 @@ description: "quota – report and optionally fix quota usage"
 <p> <i>Quota</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-d</code><i> domain</i></p>
-<dd>List/fix quotas in <i>domain</i>.</p>
-<dt><code>-f</code></p>
-<dd>Fix any inconsistencies in the quota subsystem before generating a report.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-d</code><i> domain</i></dt>
+<dd>List/fix quotas in <i>domain</i>.</dd>
+<dt><code>-f</code></dt>
+<dd>Fix any inconsistencies in the quota subsystem before generating a report.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>

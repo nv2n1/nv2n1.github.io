@@ -10,7 +10,6 @@ description: "usprintf – Writes formatted data into a buffer. Allegro game pro
 <p>usprintf &#8211; Writes formatted data into a buffer. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int usprintf(char *buf, const char *format, ...);</code></pre>
 <h2>Description</h2>
 <p>This function writes formatted data into the output buffer. A NULL character is written to mark the end of the string. You should try to avoid this function because it is very easy to overflow the destination buffer. Use uszprintf instead.</p>

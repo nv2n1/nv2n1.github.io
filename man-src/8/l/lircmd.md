@@ -13,16 +13,16 @@ description: "lircmd – LIRC mouse daemon translates infrared signals into mous
 <h2>Description</h2>
 <p>This daemon can simulate a MouseSystems, IntelliMouse or IMPS/2 type mouse. It gets the received buttons from lircd and converts them to mouse events. To make this possible, lircmd needs a config file located in /etc/lircmd.conf. In this file you have to determine which button from which remote causes a mouse move or a mouse button click. You can also specify a special button which activates or deactivates the mouse mode.</p>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd>display this message</p>
-<dt><code>-v</code> <code>&#8211;version</code></p>
-<dd>display version</p>
-<dt><code>-n</code> <code>&#8211;nodaemon</code></p>
-<dd>don&#8217;t fork to background</p>
-<dt> <code>-O</code> <code>&#8211;options-file</code>=<i>file</i> alternative default options file</p>
-<dt><code>-u</code> <code>&#8211;uinput</code></p>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd>display this message</dd>
+<dt><code>-v</code> <code>&#8211;version</code></dt>
+<dd>display version</dd>
+<dt><code>-n</code> <code>&#8211;nodaemon</code></dt>
+<dd>don&#8217;t fork to background</dd>
+<dt> <code>-O</code> <code>&#8211;options-file</code>=<i>file</i> alternative default options file</dt>
+<dt><code>-u</code> <code>&#8211;uinput</code></dt>
 <dd>
-<dd>generate Linux input events</dl>
+</dd><dd>generate Linux input events</dd></dl>
 <h2>Options</h2>
 <p>If you provide the &#8211;nodaemon option lircmd won&#8217;t fork to background. </p>
 <p> On Linux systems the &#8211;uinput option will enable automatic generation of Linux input events. lircmd will open /dev/input/uinput and inject the simulated mouse events into the Linux kernel rather than creating the /dev/lircm device.</p>

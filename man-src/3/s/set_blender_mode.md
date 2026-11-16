@@ -10,7 +10,6 @@ description: "set_blender_mode – Specifies a custom set of truecolor blender r
 <p>set_blender_mode &#8211; Specifies a custom set of truecolor blender routines. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_blender_mode(BLENDER_FUNC b15, b16, b24, int r, g, b, a);</code></pre>
 <h2>Description</h2>
 <p>Specifies a custom set of truecolor blender routines, which can be used to implement whatever special interpolation modes you need. This function shares a single blender between the 24 and 32-bit modes. </p>

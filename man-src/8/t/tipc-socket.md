@@ -13,19 +13,19 @@ description: "tipc-socket – show TIPC socket (port) information"
 <h2>Options</h2>
 <p>Options (flags) that can be passed anywhere in the command chain.</p>
 <dl>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd>Show help about last valid command. For example <code>tipc socket &#8211;help</code> will show socket help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant. </p>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Show help about last valid command. For example <code>tipc socket &#8211;help</code> will show socket help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant. </dd>
 </dl>
 <h2>Description</h2>
 <p>A TIPC socket is represented by an unsigned integer.</p>
 <dl>
-<dt></dl>
+<dt></dt></dl>
 <h3>Bound state</h3>
-<dd>A bound socket has a logical TIPC port name associated with it.</p>
+<dd>A bound socket has a logical TIPC port name associated with it.</dd>
 <dl>
-<dt></dl>
+<dt></dt></dl>
 <h3>Connected state</h3>
-<dd>A connected socket is directly connected to another socket creating a point to point connection between TIPC sockets. If the connection to X was made using a logical port name Y that name will show up as <code>connected to </code>X <code>via </code>Y </p>
+<dd>A connected socket is directly connected to another socket creating a point to point connection between TIPC sockets. If the connection to X was made using a logical port name Y that name will show up as <code>connected to </code>X <code>via </code>Y </dd>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>
 <h2>See Also</h2>

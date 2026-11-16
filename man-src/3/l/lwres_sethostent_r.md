@@ -14,22 +14,22 @@ description: "lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lw
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
-<dt> <code>struct hostent * lwres_gethostbyname(const char&nbsp;<wbr>*</code><i>name</i><code>);</code></p>
-<dt> <code>struct hostent * lwres_gethostbyname2(const char&nbsp;<wbr>*</code><i>name</i><code>, int&nbsp;<wbr></code><i>af</i><code>);</code></p>
-<dt> <code>struct hostent * lwres_gethostbyaddr(const char&nbsp;<wbr>*</code><i>addr</i><code>, int&nbsp;<wbr></code><i>len</i><code>, int&nbsp;<wbr></code><i>type</i><code>);</code></p>
-<dt> <code>struct hostent * lwres_gethostent(void);</code></p>
-<dt> <code>void lwres_sethostent(int&nbsp;<wbr></code><i>stayopen</i><code>);</code></p>
-<dt> <code>void lwres_endhostent(void);</code></p>
-<dt> <code>struct hostent * lwres_gethostbyname_r(const char&nbsp;<wbr>*</code><i>name</i><code>, struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></p>
-<dt> <code>struct hostent * lwres_gethostbyaddr_r(const char&nbsp;<wbr>*</code><i>addr</i><code>, int&nbsp;<wbr></code><i>len</i><code>, int&nbsp;<wbr></code><i>type</i><code>, struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></p>
-<dt> <code>struct hostent * lwres_gethostent_r(struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></p>
-<dt> <code>void lwres_sethostent_r(int&nbsp;<wbr></code><i>stayopen</i><code>);</code></p>
-<dt> <code>void lwres_endhostent_r(void);</code></dl>
+<dt> <code>struct hostent * lwres_gethostbyname(const char&nbsp;<wbr>*</code><i>name</i><code>);</code></dt>
+<dt> <code>struct hostent * lwres_gethostbyname2(const char&nbsp;<wbr>*</code><i>name</i><code>, int&nbsp;<wbr></code><i>af</i><code>);</code></dt>
+<dt> <code>struct hostent * lwres_gethostbyaddr(const char&nbsp;<wbr>*</code><i>addr</i><code>, int&nbsp;<wbr></code><i>len</i><code>, int&nbsp;<wbr></code><i>type</i><code>);</code></dt>
+<dt> <code>struct hostent * lwres_gethostent(void);</code></dt>
+<dt> <code>void lwres_sethostent(int&nbsp;<wbr></code><i>stayopen</i><code>);</code></dt>
+<dt> <code>void lwres_endhostent(void);</code></dt>
+<dt> <code>struct hostent * lwres_gethostbyname_r(const char&nbsp;<wbr>*</code><i>name</i><code>, struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
+<dt> <code>struct hostent * lwres_gethostbyaddr_r(const char&nbsp;<wbr>*</code><i>addr</i><code>, int&nbsp;<wbr></code><i>len</i><code>, int&nbsp;<wbr></code><i>type</i><code>, struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
+<dt> <code>struct hostent * lwres_gethostent_r(struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
+<dt> <code>void lwres_sethostent_r(int&nbsp;<wbr></code><i>stayopen</i><code>);</code></dt>
+<dt> <code>void lwres_endhostent_r(void);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>These functions provide hostname-to-address and address-to-hostname lookups by means of the lightweight resolver. They are similar to the standard <code><a href="/docs/linux/man/3-gethostent/">gethostent</a></code>(3) functions provided by most operating systems. They use a <code>struct hostent</code> which is usually defined in <i>&lt;namedb.h&gt;</i>. </p>
+<dd>These functions provide hostname-to-address and address-to-hostname lookups by means of the lightweight resolver. They are similar to the standard <code><a href="/docs/linux/man/3-gethostent/">gethostent</a></code>(3) functions provided by most operating systems. They use a <code>struct hostent</code> which is usually defined in <i>&lt;namedb.h&gt;</i>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct hostent {
     char *h_name;       /* official name of host */
@@ -40,28 +40,28 @@ struct hostent {
 };
 #define h_addr h_addr_list[0] /* address, for backward compatibility */
 </code></pre>
-</dl>
+</dd></dl>
 <p> The members of this structure are: </p>
 <p> <code>h_name</code></p>
 <dl>
 <dt>
-<dd> The official (canonical) name of the host.</dl>
+</dt><dd> The official (canonical) name of the host.</dd></dl>
 <p> <code>h_aliases</code></p>
 <dl>
 <dt>
-<dd> A NULL-terminated array of alternate names (nicknames) for the host.</dl>
+</dt><dd> A NULL-terminated array of alternate names (nicknames) for the host.</dd></dl>
 <p> <code>h_addrtype</code></p>
 <dl>
 <dt>
-<dd> The type of address being returned &#8212; <code>PF_INET</code> or <code>PF_INET6</code>.</dl>
+</dt><dd> The type of address being returned &#8212; <code>PF_INET</code> or <code>PF_INET6</code>.</dd></dl>
 <p> <code>h_length</code></p>
 <dl>
 <dt>
-<dd> The length of the address in bytes.</dl>
+</dt><dd> The length of the address in bytes.</dd></dl>
 <p> <code>h_addr_list</code></p>
 <dl>
 <dt>
-<dd> A <code>NULL</code> terminated array of network addresses for the host. Host addresses are returned in network byte order.</dl>
+</dt><dd> A <code>NULL</code> terminated array of network addresses for the host. Host addresses are returned in network byte order.</dd></dl>
 <p> For backward compatibility with very old software, <code>h_addr</code> is the first address in <code>h_addr_list.</code> </p>
 <p> <code>lwres_gethostent()</code>, <code>lwres_sethostent()</code>, <code>lwres_endhostent()</code>, <code>lwres_gethostent_r()</code>, <code>lwres_sethostent_r()</code> and <code>lwres_endhostent_r()</code> provide iteration over the known host entries on systems that provide such functionality through facilities like <i>/etc/hosts</i> or NIS. The lightweight resolver does not currently implement these functions; it only provides them as stub functions that always return failure. </p>
 <p> <code>lwres_gethostbyname()</code> and <code>lwres_gethostbyname2()</code> look up the hostname <i>name</i>. <code>lwres_gethostbyname()</code> always looks for an IPv4 address while <code>lwres_gethostbyname2()</code> looks for an address of protocol family <i>af</i>: either <code>PF_INET</code> or <code>PF_INET6</code> &#8212; IPv4 or IPV6 addresses respectively. Successful calls of the functions return a <code>struct hostent</code>for the name that was looked up. <code>NULL</code> is returned if the lookups by <code>lwres_gethostbyname()</code> or <code>lwres_gethostbyname2()</code> fail. </p>
@@ -72,19 +72,19 @@ struct hostent {
 <p> <code>HOST_NOT_FOUND</code></p>
 <dl>
 <dt>
-<dd> The host or address was not found.</dl>
+</dt><dd> The host or address was not found.</dd></dl>
 <p> <code>TRY_AGAIN</code></p>
 <dl>
 <dt>
-<dd> A recoverable error occurred, e.g., a timeout. Retrying the lookup may succeed.</dl>
+</dt><dd> A recoverable error occurred, e.g., a timeout. Retrying the lookup may succeed.</dd></dl>
 <p> <code>NO_RECOVERY</code></p>
 <dl>
 <dt>
-<dd> A non-recoverable error occurred.</dl>
+</dt><dd> A non-recoverable error occurred.</dd></dl>
 <p> <code>NO_DATA</code></p>
 <dl>
 <dt>
-<dd> The name exists, but has no address information associated with it (or vice versa in the case of a reverse lookup). The code NO_ADDRESS is accepted as a synonym for NO_DATA for backwards compatibility.</dl>
+</dt><dd> The name exists, but has no address information associated with it (or vice versa in the case of a reverse lookup). The code NO_ADDRESS is accepted as a synonym for NO_DATA for backwards compatibility.</dd></dl>
 <p> <code><a href="/docs/linux/man/3-lwres_hstrerror/">lwres_hstrerror</a></code>(3) translates these error codes to suitable error messages. </p>
 <p> <code>lwres_gethostent()</code> and <code>lwres_gethostent_r()</code> always return <code>NULL</code>. </p>
 <p> Successful calls to <code>lwres_gethostbyname_r()</code> and <code>lwres_gethostbyaddr_r()</code> return <i>resbuf</i>, a pointer to the <code>struct hostent</code> that was initialised by these functions. They return <code>NULL</code> if the lookups fail or if <i>buf</i> was too small to hold the list of addresses and names referenced by the <code>h_name</code>, <code>h_aliases</code>, and <code>h_addr_list</code> elements of the <code>struct hostent</code>. If <i>buf</i> was too small, both <code>lwres_gethostbyname_r()</code> and <code>lwres_gethostbyaddr_r()</code> set the global variable <code>errno</code> to <code>ERANGE</code>.</p>

@@ -36,7 +36,7 @@ description: "QuantLib::LazyObject – Framework for calculation on demand and r
 <p>This method force the recalculation of any results which would otherwise be cached. It is not declared as const since it needs to call the non-const <i></i><code>notifyObservers</code> method. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Explicit invocation of this method is <code>not</code> necessary if the object registered itself as observer with the structures on which such results depend. It is strongly advised to follow this policy when possible.</dl>
+<dd>Explicit invocation of this method is <code>not</code> necessary if the object registered itself as observer with the structures on which such results depend. It is strongly advised to follow this policy when possible.</dd></dl>
 <h3>void freeze ()</h3>
 <p>This method constrains the object to return the presently cached results on successive invocations, even if arguments upon which they depend should change.</p>
 <h3>void unfreeze ()</h3>
@@ -45,10 +45,10 @@ description: "QuantLib::LazyObject – Framework for calculation on demand and r
 <p>This method performs all needed calculations by calling the <i></i><code>performCalculations</code> method. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><code>calculate</code>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dl>
+<dd>Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><code>calculate</code>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Should this method be redefined in derived classes, <code>LazyObject::calculate()</code> should be called in the overriding method.</dl>
+<dd>Should this method be redefined in derived classes, <code>LazyObject::calculate()</code> should be called in the overriding method.</dd></dl>
 <p> Reimplemented in <code>Instrument</code>.</p>
 <h3>virtual void performCalculations () const [protected, pure virtual]</h3>
 <p>This method must implement any calculations which must be (re)done in order to calculate the desired results. </p>

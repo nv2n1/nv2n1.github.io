@@ -18,22 +18,22 @@ description: "rpcbind – universal addresses to RPC program number mapper"
 <p> The utility can only be started by the super-user.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>When debugging (-<code>d</code> ) do an abort on errors.</p>
-<dt><code>-d</code></p>
-<dd>Run in debug mode. In this mode, will log additional information during operation, and will abort on certain errors if &#8211;<code>a</code> is also specified. With this option, the name-to-address translation consistency checks are shown in detail.</p>
-<dt><code>-f</code></p>
-<dd>Do not fork and become a background process.</p>
-<dt><code>-h</code></p>
-<dd>Specify specific IP addresses to bind to for UDP requests. This option may be specified multiple times and is typically necessary when running on a multi-homed host. If no &#8211;<code>h</code> option is specified, will bind to <code>INADDR_ANY</code> which could lead to problems on a multi-homed host due to returning a UDP packet from a different IP address than it was sent to. Note that when specifying IP addresses with &#8211;<code>h</code> will automatically add <code>127.0.0.1</code> and if IPv6 is enabled, <code>::1</code> to the list.</p>
-<dt><code>-i</code></p>
-<dd>&#8220;Insecure&#8221; mode. Allow calls to SET and UNSET from any host. Normally accepts these requests only from the loopback interface for security reasons. This change is necessary for programs that were compiled with earlier versions of the rpc library and do not make those requests using the loopback interface.</p>
-<dt><code>-l</code></p>
-<dd>Turn on libwrap connection logging.</p>
-<dt><code>-s</code></p>
-<dd>Cause to change to the user daemon as soon as possible. This causes to use non-privileged ports for outgoing connections, preventing non-privileged clients from using to connect to services from a privileged port.</p>
-<dt><code>-w</code></p>
-<dd>Cause to do a &quot;warm start&quot; by read a state file when starts up. The state file is created when terminates.</dl>
+<dt><code>-a</code></dt>
+<dd>When debugging (-<code>d</code> ) do an abort on errors.</dd>
+<dt><code>-d</code></dt>
+<dd>Run in debug mode. In this mode, will log additional information during operation, and will abort on certain errors if &#8211;<code>a</code> is also specified. With this option, the name-to-address translation consistency checks are shown in detail.</dd>
+<dt><code>-f</code></dt>
+<dd>Do not fork and become a background process.</dd>
+<dt><code>-h</code></dt>
+<dd>Specify specific IP addresses to bind to for UDP requests. This option may be specified multiple times and is typically necessary when running on a multi-homed host. If no &#8211;<code>h</code> option is specified, will bind to <code>INADDR_ANY</code> which could lead to problems on a multi-homed host due to returning a UDP packet from a different IP address than it was sent to. Note that when specifying IP addresses with &#8211;<code>h</code> will automatically add <code>127.0.0.1</code> and if IPv6 is enabled, <code>::1</code> to the list.</dd>
+<dt><code>-i</code></dt>
+<dd>&#8220;Insecure&#8221; mode. Allow calls to SET and UNSET from any host. Normally accepts these requests only from the loopback interface for security reasons. This change is necessary for programs that were compiled with earlier versions of the rpc library and do not make those requests using the loopback interface.</dd>
+<dt><code>-l</code></dt>
+<dd>Turn on libwrap connection logging.</dd>
+<dt><code>-s</code></dt>
+<dd>Cause to change to the user daemon as soon as possible. This causes to use non-privileged ports for outgoing connections, preventing non-privileged clients from using to connect to services from a privileged port.</dd>
+<dt><code>-w</code></dt>
+<dd>Cause to do a &quot;warm start&quot; by read a state file when starts up. The state file is created when terminates.</dd></dl>
 <h2>Notes</h2>
 <p>All RPC servers must be restarted if is restarted.</p>
 <h2>See Also</h2>

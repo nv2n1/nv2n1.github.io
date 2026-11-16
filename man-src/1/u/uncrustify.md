@@ -21,82 +21,82 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <h2>OPTIONS</h2>
 <h3>Basic Options:</h3>
 <dl>
-<dt><code>-c</code><i> CFG</p>
+<dt><code>-c</code><i> CFG</dt>
 <dd> Use the config file CFG</i>.<br />
- If not specified, uncrustify will use <code>$UNCRUSTIFY_CONFIG</code> or <code>$HOME/.uncrustify.cfg</code>.</p>
-<dt><code>-f</code><i> FILE</p>
-<dd> Process the single file FILE</i>, sending output to stdout or the file specified with <code>-o</code>.</p>
-<dt><code>-o</code><i> FILE</p>
+ If not specified, uncrustify will use <code>$UNCRUSTIFY_CONFIG</code> or <code>$HOME/.uncrustify.cfg</code>.</dd>
+<dt><code>-f</code><i> FILE</dt>
+<dd> Process the single file FILE</i>, sending output to stdout or the file specified with <code>-o</code>.</dd>
+<dt><code>-o</code><i> FILE</dt>
 <dd> Redirect output to FILE</i>.<br />
- Use with <code>-f</code>, <code>&#8211;update-config</code>, <code>&#8211;update-config-with-doc</code>, <code>&#8211;universalindent</code>.</p>
-<dt><code>&#8211;check</code></p>
-<dd> Do not output the new text, instead verify that nothing changes when the file(s) are processed. The status of every file is printed to stderr. The exit code is EXIT_SUCCESS if there were no changes, EXIT_FAILURE otherwise.</p>
-<dt><code>-F</code><i> FILE</p>
+ Use with <code>-f</code>, <code>&#8211;update-config</code>, <code>&#8211;update-config-with-doc</code>, <code>&#8211;universalindent</code>.</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> Do not output the new text, instead verify that nothing changes when the file(s) are processed. The status of every file is printed to stderr. The exit code is EXIT_SUCCESS if there were no changes, EXIT_FAILURE otherwise.</dd>
+<dt><code>-F</code><i> FILE</dt>
 <dd> Read files to process from FILE</i>, one filename per line. If <i>FILE</i> is &#8216;-&#8216; then read filenames from standard input instead of a file.<br />
  You can create this file using something like &#8216;<code>find . -name &quot;*.c&quot; &gt; list.txt</code>&#8216;.<br />
- This cannot be combined with <code>-f</code>.</p>
-<dt><code>&#8211;prefix</code><i> PFX</p>
+ This cannot be combined with <code>-f</code>.</dd>
+<dt><code>&#8211;prefix</code><i> PFX</dt>
 <dd> Prepend PFX</i> to the output filename path.<br />
- This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</p>
-<dt><code>&#8211;suffix</code><i> SFX</p>
+ This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</dd>
+<dt><code>&#8211;suffix</code><i> SFX</dt>
 <dd> Append SFX</i> to the output filename.<br />
  The default is &#8216;.uncrustify&#8217; if neither <i>SFX</i> or <i>PFX</i> are specified.<br />
- This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</p>
-<dt><code>&#8211;frag</code><i></p>
-<dd> Assume the input is a code fragment and the first line is properly indented.</p>
-<dt></i><code>&#8211;replace</code></p>
+ This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</dd>
+<dt><code>&#8211;frag</code><i></dt>
+<dd> Assume the input is a code fragment and the first line is properly indented.</dd>
+<dt></i><code>&#8211;replace</code></dt>
 <dd> Replace source files (creates a backup).<br />
- This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</p>
-<dt><code>&#8211;no-backup</code></p>
+ This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</dd>
+<dt><code>&#8211;no-backup</code></dt>
 <dd> Replace files, no backup. Useful if files are under source control<br />
- This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</p>
-<dt><code>&#8211;mtime</code></p>
-<dd> Preserve mtime on replaced files.</p>
-<dt><code>-l</code></p>
-<dd> Language override: C, CPP, D, CS, JAVA, PAWN, VALA, OC, OC+</p>
-<dt><code>-t</code></p>
-<dd> Load a file with types (usually not needed)</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode &#8211; no output on stderr (<code>-L</code> will override)</dl>
+ This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</dd>
+<dt><code>&#8211;mtime</code></dt>
+<dd> Preserve mtime on replaced files.</dd>
+<dt><code>-l</code></dt>
+<dd> Language override: C, CPP, D, CS, JAVA, PAWN, VALA, OC, OC+</dd>
+<dt><code>-t</code></dt>
+<dd> Load a file with types (usually not needed)</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode &#8211; no output on stderr (<code>-L</code> will override)</dd></dl>
 <h3>Config/Help Options:</h3>
 <dl>
-<dt><code>-h</code> -? <code>&#8211;help</code> <code>&#8211;usage</code></p>
-<dd> Print this message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version and exit</p>
-<dt><code>&#8211;show-config</code></p>
-<dd> Print out option documentation and exit</p>
-<dt><code>&#8211;update-config</code></p>
-<dd> Output a new config file.</p>
-<dt><code>&#8211;update-config-with-doc</code></p>
-<dd> Output a new config file with embedded usage comments.</p>
-<dt><code>&#8211;universalindent</code></p>
-<dd> Output a config file for Universal Indent GUI.</p>
-<dt><code>&#8211;detect</code></p>
-<dd> Detects the config from a source file. Use with &#8216;-f FILE&#8217;. Detection is currently fairly limited. </p>
+<dt><code>-h</code> -? <code>&#8211;help</code> <code>&#8211;usage</code></dt>
+<dd> Print this message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version and exit</dd>
+<dt><code>&#8211;show-config</code></dt>
+<dd> Print out option documentation and exit</dd>
+<dt><code>&#8211;update-config</code></dt>
+<dd> Output a new config file.</dd>
+<dt><code>&#8211;update-config-with-doc</code></dt>
+<dd> Output a new config file with embedded usage comments.</dd>
+<dt><code>&#8211;universalindent</code></dt>
+<dd> Output a config file for Universal Indent GUI.</dd>
+<dt><code>&#8211;detect</code></dt>
+<dd> Detects the config from a source file. Use with &#8216;-f FILE&#8217;. Detection is currently fairly limited. </dd>
 </dl>
 <h3>Debug Options:</h3>
 <dl>
-<dt><code>-p</code><i> FILE</p>
-<dd> Dump debug info to a file</p>
-<dt></i><code>-L</code><i> SEV</p>
-<dd> Set the log severity (see log_levels.h)</p>
-<dt></i><code>-s</code></p>
-<dd> Show the log severity in the logs</p>
-<dt><code>&#8211;decode</code><i> FLAG</p>
-<dd> Print FLAG</i> as text and exit </p>
+<dt><code>-p</code><i> FILE</dt>
+<dd> Dump debug info to a file</dd>
+<dt></i><code>-L</code><i> SEV</dt>
+<dd> Set the log severity (see log_levels.h)</dd>
+<dt></i><code>-s</code></dt>
+<dd> Show the log severity in the logs</dd>
+<dt><code>&#8211;decode</code><i> FLAG</dt>
+<dd> Print FLAG</i> as text and exit </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Read a D file from stdin, output to stdout.</p>
-<dd> cat foo.d | uncrustify -q -c my.cfg -l d</p>
-<dt>Process a file, output to stdout.</p>
-<dd> uncrustify -c my.cfg -d foo.d</p>
-<dt>Process a source tree, output to a different tree.</p>
+<dt>Read a D file from stdin, output to stdout.</dt>
+<dd> cat foo.d | uncrustify -q -c my.cfg -l d</dd>
+<dt>Process a file, output to stdout.</dt>
+<dd> uncrustify -c my.cfg -d foo.d</dd>
+<dt>Process a source tree, output to a different tree.</dt>
 <dd> find src -name &quot;*.[ch]&quot; &gt; files.txt<br />
- uncrustify -c my.cfg -F files.txt &#8211;prefix out</p>
-<dt>Process a source tree in-place.</p>
-<dd> uncrustify -c my.cfg &#8211;no-backup $(find src -name &quot;*.[ch]&quot;) </p>
+ uncrustify -c my.cfg -F files.txt &#8211;prefix out</dd>
+<dt>Process a source tree in-place.</dt>
+<dd> uncrustify -c my.cfg &#8211;no-backup $(find src -name &quot;*.[ch]&quot;) </dd>
 </dl>
 <h2>NOTES</h2>
 <p> Use comments containing &#8216; *INDENT-OFF*&#8217; and &#8216; *INDENT-ON*&#8217; to disable processing of parts of the source file. </p>

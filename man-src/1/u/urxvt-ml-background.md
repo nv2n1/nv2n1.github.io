@@ -222,337 +222,265 @@ scale keep
 
 <dl>
 <dt>--background-expr perl-expression
-<dd> Specifies the Perl expression to evaluate.
-<dt>--background-border
-<dd> By default, the expression creates an image that fills the full window, overwriting borders and any other areas, such as the scrollbar. 
-
+</dt><dd> Specifies the Perl expression to evaluate.
+</dd><dt>--background-border
+</dt><dd> By default, the expression creates an image that fills the full window, overwriting borders and any other areas, such as the scrollbar. 
  Specifying this flag changes the behaviour, so that the image only replaces the background of the character area.
-<dt>--background-interval seconds
-<dd> Since some operations in the underlying XRender extension can effectively freeze your X-server for prolonged time, this extension enforces a minimum time between updates, which is normally about 0.1 seconds. 
-
- If you want to do updates more often, you can decrease this safety interval with this switch.</dl>
+</dd><dt>--background-interval seconds
+</dt><dd> Since some operations in the underlying XRender extension can effectively freeze your X-server for prolonged time, this extension enforces a minimum time between updates, which is normally about 0.1 seconds. 
+ If you want to do updates more often, you can decrease this safety interval with this switch.</dd></dl>
 
 <h3><font SIZE="-1">PROVIDERS/GENERATORS</font></h3>
 
  These functions provide an image, by loading it from disk, grabbing it from the root screen or by simply generating it. They are used as starting points to get an image you can play with.
 <dl>
 <dt>load $path
-<dd> Loads the image at the given <tt>$path</tt>. The image is set to plane tiling mode. 
-
+</dt><dd> Loads the image at the given <tt>$path</tt>. The image is set to plane tiling mode. 
  If the image is already in memory (e.g. because another terminal instance uses it), then the in-memory copy is returned instead.
-<dt>load_uc $path
-<dd> Load uncached - same as load, but does not cache the image, which means it is <i>always</i> loaded from the filesystem again, even if another copy of it is in memory at the time.
-<dt>root
-<dd> Returns the root window pixmap, that is, hopefully, the background image of your screen. 
-
+</dd><dt>load_uc $path
+</dt><dd> Load uncached - same as load, but does not cache the image, which means it is <i>always</i> loaded from the filesystem again, even if another copy of it is in memory at the time.
+</dd><dt>root
+</dt><dd> Returns the root window pixmap, that is, hopefully, the background image of your screen. 
  This function makes your expression root sensitive, that means it will be reevaluated when the bg image changes.
-<dt>solid $colour
-<dd>
-<dt>solid $width, $height, $colour
-<dd> Creates a new image and completely fills it with the given colour. The image is set to tiling mode. 
-
+</dd><dt>solid $colour
+</dt><dd>
+</dd><dt>solid $width, $height, $colour
+</dt><dd> Creates a new image and completely fills it with the given colour. The image is set to tiling mode. 
  If <tt>$width</tt> and <tt>$height</tt> are omitted, it creates a 1x1 image, which is useful for solid backgrounds or for use in filtering effects.
-<dt>clone $img
-<dd> Returns an exact copy of the image. This is useful if you want to have multiple copies of the same image to apply different effects to.
-<dt>merge $img ...
-<dd> Takes any number of images and merges them together, creating a single image containing them all. The tiling mode of the first image is used as the tiling mode of the resulting image. 
-
- This function is called automatically when an expression returns multiple images.</dl>
+</dd><dt>clone $img
+</dt><dd> Returns an exact copy of the image. This is useful if you want to have multiple copies of the same image to apply different effects to.
+</dd><dt>merge $img ...
+</dt><dd> Takes any number of images and merges them together, creating a single image containing them all. The tiling mode of the first image is used as the tiling mode of the resulting image. 
+ This function is called automatically when an expression returns multiple images.</dd></dl>
 
 <h3><font SIZE="-1">TILING MODES</font></h3>
 
  The following operators modify the tiling mode of an image, that is, the way that pixels outside the image area are painted when the image is used.
 <dl>
 <dt>tile $img
-<dd> Tiles the whole plane with the image and returns this new image - or in other words, it returns a copy of the image in plane tiling mode. 
-
+</dt><dd> Tiles the whole plane with the image and returns this new image - or in other words, it returns a copy of the image in plane tiling mode. 
  Example: load an image and tile it over the background, without resizing. The <tt>&quot;tile&quot;</tt> call is superfluous because <tt>&quot;load&quot;</tt> already defaults to tiling mode. 
-
  <pre>
    tile load &quot;mybg.png&quot;
 </pre>
-<dt>mirror $img
-<dd> Similar to tile, but reflects the image each time it uses a new copy, so that top edges always touch top edges, right edges always touch right edges and so on (with normal tiling, left edges always touch right edges and top always touch bottom edges). 
-
+</dd><dt>mirror $img
+</dt><dd> Similar to tile, but reflects the image each time it uses a new copy, so that top edges always touch top edges, right edges always touch right edges and so on (with normal tiling, left edges always touch right edges and top always touch bottom edges). 
  Example: load an image and mirror it over the background, avoiding sharp edges at the image borders at the expense of mirroring the image itself 
-
  <pre>
    mirror load &quot;mybg.png&quot;
 </pre>
-<dt>pad $img
-<dd> Takes an image and modifies it so that all pixels outside the image area become transparent. This mode is most useful when you want to place an image over another image or the background colour while leaving all background pixels outside the image unchanged. 
-
+</dd><dt>pad $img
+</dt><dd> Takes an image and modifies it so that all pixels outside the image area become transparent. This mode is most useful when you want to place an image over another image or the background colour while leaving all background pixels outside the image unchanged. 
  Example: load an image and display it in the upper left corner. The rest of the space is left ``empty'' (transparent or whatever your compositor does in alpha mode, else background colour). 
-
  <pre>
    pad load &quot;mybg.png&quot;
 </pre>
-<dt>extend $img
-<dd> Extends the image over the whole plane, using the closest pixel in the area outside the image. This mode is mostly useful when you use more complex filtering operations and want the pixels outside the image to have the same values as the pixels near the edge. 
-
+</dd><dt>extend $img
+</dt><dd> Extends the image over the whole plane, using the closest pixel in the area outside the image. This mode is mostly useful when you use more complex filtering operations and want the pixels outside the image to have the same values as the pixels near the edge. 
  Example: just for curiosity, how does this pixel extension stuff work? 
-
  <pre>
    extend move 50, 50, load &quot;mybg.png&quot;
-</pre></dl>
+</pre></dd></dl>
 
 <h3><font SIZE="-1">VARIABLE VALUES</font></h3>
 
  The following functions provide variable data such as the terminal window dimensions. They are not (Perl-) variables, they just return stuff that varies. Most of them make your expression sensitive to some events, for example using <tt>&quot;TW&quot;</tt> (terminal width) means your expression is evaluated again when the terminal is resized.
 <dl>
 <dt><font SIZE="-1">TX</font>
-<dd>
-<dt><font SIZE="-1">TY</font>
-<dd> Return the X and Y coordinates of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
-
+</dt><dd>
+</dd><dt><font SIZE="-1">TY</font>
+</dt><dd> Return the X and Y coordinates of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
  Using these functions makes your expression sensitive to window moves. 
-
  These functions are mainly useful to align images to the root window. 
-
  Example: load an image and align it so it looks as if anchored to the background (that's exactly what <tt>&quot;rootalign&quot;</tt> does btw.): 
-
  <pre>
    move -TX, -TY, keep { load &quot;mybg.png&quot; }
 </pre>
-<dt><font SIZE="-1">TW</font>
-<dd>
-<dt><font SIZE="-1">TH</font>
-<dd> Return the width (<tt>&quot;TW&quot;</tt>) and height (<tt>&quot;TH&quot;</tt>) of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
-
+</dd><dt><font SIZE="-1">TW</font>
+</dt><dd>
+</dd><dt><font SIZE="-1">TH</font>
+</dt><dd> Return the width (<tt>&quot;TW&quot;</tt>) and height (<tt>&quot;TH&quot;</tt>) of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
  Using these functions makes your expression sensitive to window resizes. 
-
  These functions are mainly useful to scale images, or to clip images to the window size to conserve memory. 
-
  Example: take the screen background, clip it to the window size, blur it a bit, align it to the window position and use it as background. 
-
  <pre>
    clip move -TX, -TY, keep { blur 5, root }
 </pre>
-<dt><font SIZE="-1">FOCUS</font>
-<dd> Returns a boolean indicating whether the terminal window has keyboard focus, in which case it returns true. 
-
+</dd><dt><font SIZE="-1">FOCUS</font>
+</dt><dd> Returns a boolean indicating whether the terminal window has keyboard focus, in which case it returns true. 
  Using this function makes your expression sensitive to focus changes. 
-
  A common use case is to fade the background image when the terminal loses focus, often together with the <tt>&quot;-fade&quot;</tt> command line option. In fact, there is a special function for just that use case: <tt>&quot;focus_fade&quot;</tt>. 
-
  Example: use two entirely different background images, depending on whether the window has focus. 
-
  <pre><code>
 FOCUS ? keep{load "has_focus.jpg"} : keep
 {
     load "no_focus.jpg"
 }
 </code></pre>
-<dt>now
-<dd> Returns the current time as (fractional) seconds since the epoch. 
-
+</dd><dt>now
+</dt><dd> Returns the current time as (fractional) seconds since the epoch. 
  Using this expression does <i>not</i> make your expression sensitive to time, but the next two functions do.
-<dt>again $seconds
-<dd> When this function is used the expression will be reevaluated again in <tt>$seconds</tt> seconds. 
-
+</dd><dt>again $seconds
+</dt><dd> When this function is used the expression will be reevaluated again in <tt>$seconds</tt> seconds. 
  Example: load some image and rotate it according to the time of day (as if it were the hour pointer of a clock). Update this image every minute. 
-
  <pre>
    again 60;
    rotate 50, 50, (now % 86400) * -72 / 8640, scale keep { load &quot;myclock.png&quot; }
 </pre>
-<dt>counter $seconds
-<dd> Like <tt>&quot;again&quot;</tt>, but also returns an increasing counter value, starting at 0, which might be useful for some simple animation effects.</dl>
+</dd><dt>counter $seconds
+</dt><dd> Like <tt>&quot;again&quot;</tt>, but also returns an increasing counter value, starting at 0, which might be useful for some simple animation effects.</dd></dl>
 
 <h3><font SIZE="-1">SHAPE CHANGING OPERATORS</font></h3>
 
  The following operators modify the shape, size or position of the image.
 <dl>
 <dt>clip $img
-<dd>
-<dt>clip $width, $height, $img
-<dd>
-<dt>clip $x, $y, $width, $height, $img
-<dd> Clips an image to the given rectangle. If the rectangle is outside the image area (e.g. when <tt>$x</tt> or <tt>$y</tt> are negative) or the rectangle is larger than the image, then the tiling mode defines how the extra pixels will be filled. 
-
+</dt><dd>
+</dd><dt>clip $width, $height, $img
+</dt><dd>
+</dd><dt>clip $x, $y, $width, $height, $img
+</dt><dd> Clips an image to the given rectangle. If the rectangle is outside the image area (e.g. when <tt>$x</tt> or <tt>$y</tt> are negative) or the rectangle is larger than the image, then the tiling mode defines how the extra pixels will be filled. 
  If <tt>$x</tt> and <tt>$y</tt> are missing, then <tt>0</tt> is assumed for both. 
-
  If <tt>$width</tt> and <tt>$height</tt> are missing, then the window size will be assumed. 
-
  Example: load an image, blur it, and clip it to the window size to save memory. 
-
  <pre>
    clip keep { blur 10, load &quot;mybg.png&quot; }
 </pre>
-<dt>scale $img
-<dd>
-<dt>scale $size_factor, $img
-<dd>
-<dt>scale $width_factor, $height_factor, $img
-<dd> Scales the image by the given factors in horizontal (<tt>$width</tt>) and vertical (<tt>$height</tt>) direction. 
-
+</dd><dt>scale $img
+</dt><dd>
+</dd><dt>scale $size_factor, $img
+</dt><dd>
+</dd><dt>scale $width_factor, $height_factor, $img
+</dt><dd> Scales the image by the given factors in horizontal (<tt>$width</tt>) and vertical (<tt>$height</tt>) direction. 
  If only one factor is given, it is used for both directions. 
-
  If no factors are given, scales the image to the window size without keeping aspect.
-<dt>resize $width, $height, $img
-<dd> Resizes the image to exactly <tt>$width</tt> times <tt>$height</tt> pixels.
-<dt>fit $img
-<dd>
-<dt>fit $width, $height, $img
-<dd> Fits the image into the given <tt>$width</tt> and <tt>$height</tt> without changing aspect, or the terminal size. That means it will be shrunk or grown until the whole image fits into the given area, possibly leaving borders.
-<dt>cover $img
-<dd>
-<dt>cover $width, $height, $img
-<dd> Similar to <tt>&quot;fit&quot;</tt>, but shrinks or grows until all of the area is covered by the image, so instead of potentially leaving borders, it will cut off image data that doesn't fit.
-<dt>move $dx, $dy, $img
-<dd> Moves the image by <tt>$dx</tt> pixels in the horizontal, and <tt>$dy</tt> pixels in the vertical. 
-
+</dd><dt>resize $width, $height, $img
+</dt><dd> Resizes the image to exactly <tt>$width</tt> times <tt>$height</tt> pixels.
+</dd><dt>fit $img
+</dt><dd>
+</dd><dt>fit $width, $height, $img
+</dt><dd> Fits the image into the given <tt>$width</tt> and <tt>$height</tt> without changing aspect, or the terminal size. That means it will be shrunk or grown until the whole image fits into the given area, possibly leaving borders.
+</dd><dt>cover $img
+</dt><dd>
+</dd><dt>cover $width, $height, $img
+</dt><dd> Similar to <tt>&quot;fit&quot;</tt>, but shrinks or grows until all of the area is covered by the image, so instead of potentially leaving borders, it will cut off image data that doesn't fit.
+</dd><dt>move $dx, $dy, $img
+</dt><dd> Moves the image by <tt>$dx</tt> pixels in the horizontal, and <tt>$dy</tt> pixels in the vertical. 
  Example: move the image right by 20 pixels and down by 30. 
-
  <pre>
    move 20, 30, ...
 </pre>
-<dt>align $xalign, $yalign, $img
-<dd> Aligns the image according to a factor - <tt>0</tt> means the image is moved to the left or top edge (for <tt>$xalign</tt> or <tt>$yalign</tt>), <tt>0.5</tt> means it is exactly centered and <tt>1</tt> means it touches the right or bottom edge. 
-
+</dd><dt>align $xalign, $yalign, $img
+</dt><dd> Aligns the image according to a factor - <tt>0</tt> means the image is moved to the left or top edge (for <tt>$xalign</tt> or <tt>$yalign</tt>), <tt>0.5</tt> means it is exactly centered and <tt>1</tt> means it touches the right or bottom edge. 
  Example: remove any visible border around an image, center it vertically but move it to the right hand side. 
-
  <pre>
    align 1, 0.5, pad $img
 </pre>
-<dt>center $img
-<dd>
-<dt>center $width, $height, $img
-<dd> Centers the image, i.e. the center of the image is moved to the center of the terminal window (or the box specified by <tt>$width</tt> and <tt>$height</tt> if given). 
-
+</dd><dt>center $img
+</dt><dd>
+</dd><dt>center $width, $height, $img
+</dt><dd> Centers the image, i.e. the center of the image is moved to the center of the terminal window (or the box specified by <tt>$width</tt> and <tt>$height</tt> if given). 
  Example: load an image and center it. 
-
  <pre>
   center keep { pad load &quot;mybg.png&quot; }
 </pre>
-<dt>rootalign $img
-<dd> Moves the image so that it appears glued to the screen as opposed to the window. This gives the illusion of a larger area behind the window. It is exactly equivalent to <tt>&quot;move -TX, -TY&quot;</tt>, that is, it moves the image to the top left of the screen. 
-
+</dd><dt>rootalign $img
+</dt><dd> Moves the image so that it appears glued to the screen as opposed to the window. This gives the illusion of a larger area behind the window. It is exactly equivalent to <tt>&quot;move -TX, -TY&quot;</tt>, that is, it moves the image to the top left of the screen. 
  Example: load a background image, put it in mirror mode and root align it. 
-
  <pre>
    rootalign keep { mirror load &quot;mybg.png&quot; }
 </pre> 
-
  Example: take the screen background and align it, giving the illusion of transparency as long as the window isn't in front of other windows. 
-
  <pre>
    rootalign root
 </pre>
-<dt>rotate $center_x, $center_y, $degrees, $img
-<dd> Rotates the image clockwise by <tt>$degrees</tt> degrees, around the point at <tt>$center_x</tt> and <tt>$center_y</tt> (specified as factor of image width/height). 
-
+</dd><dt>rotate $center_x, $center_y, $degrees, $img
+</dt><dd> Rotates the image clockwise by <tt>$degrees</tt> degrees, around the point at <tt>$center_x</tt> and <tt>$center_y</tt> (specified as factor of image width/height). 
  Example: rotate the image by 90 degrees around its center. 
-
  <pre>
    rotate 0.5, 0.5, 90, keep { load &quot;$HOME/mybg.png&quot; }
-</pre></dl>
+</pre></dd></dl>
 
 <h3><font SIZE="-1">COLOUR MODIFICATIONS</font></h3>
 
  The following operators change the pixels of the image.
 <dl>
 <dt>tint $color, $img
-<dd> Tints the image in the given colour. 
-
+</dt><dd> Tints the image in the given colour. 
  Example: tint the image red. 
-
  <pre>
    tint &quot;red&quot;, load &quot;rgb.png&quot;
 </pre> 
-
  Example: the same, but specify the colour by component. 
-
  <pre>
    tint [1, 0, 0], load &quot;rgb.png&quot;
 </pre>
-<dt>shade $factor, $img
-<dd> Shade the image by the given factor.
-<dt>contrast $factor, $img
-<dd>
-<dt>contrast $r, $g, $b, $img
-<dd>
-<dt>contrast $r, $g, $b, $a, $img
-<dd> Adjusts the <i>contrast</i> of an image. 
-
+</dd><dt>shade $factor, $img
+</dt><dd> Shade the image by the given factor.
+</dd><dt>contrast $factor, $img
+</dt><dd>
+</dd><dt>contrast $r, $g, $b, $img
+</dt><dd>
+</dd><dt>contrast $r, $g, $b, $a, $img
+</dt><dd> Adjusts the <i>contrast</i> of an image. 
  The first form applies a single <tt>$factor</tt> to red, green and blue, the second form applies separate factors to each colour channel, and the last form includes the alpha channel. 
-
  Values from 0 to 1 lower the contrast, values higher than 1 increase the contrast. 
-
  Due to limitations in the underlying XRender extension, lowering contrast also reduces brightness, while increasing contrast currently also increases brightness.
-<dt>brightness $bias, $img
-<dd>
-<dt>brightness $r, $g, $b, $img
-<dd>
-<dt>brightness $r, $g, $b, $a, $img
-<dd> Adjusts the brightness of an image. 
-
+</dd><dt>brightness $bias, $img
+</dt><dd>
+</dd><dt>brightness $r, $g, $b, $img
+</dt><dd>
+</dd><dt>brightness $r, $g, $b, $a, $img
+</dt><dd> Adjusts the brightness of an image. 
  The first form applies a single <tt>$bias</tt> to red, green and blue, the second form applies separate biases to each colour channel, and the last form includes the alpha channel. 
-
  Values less than 0 reduce brightness, while values larger than 0 increase it. Useful range is from -1 to 1 - the former results in a black, the latter in a white picture. 
-
  Due to idiosyncrasies in the underlying XRender extension, biases less than zero can be <i>very</i> slow. 
-
  You can also try the experimental(!) <tt>&quot;muladd&quot;</tt> operator.
-<dt>muladd $mul, $add, $img # <font SIZE="-1">EXPERIMENTAL</font>
-<dd> First multiplies the pixels by <tt>$mul</tt>, then adds <tt>$add</tt>. This can be used to implement brightness and contrast at the same time, with a wider value range than contrast and brightness operators. 
-
+</dd><dt>muladd $mul, $add, $img # <font SIZE="-1">EXPERIMENTAL</font>
+</dt><dd> First multiplies the pixels by <tt>$mul</tt>, then adds <tt>$add</tt>. This can be used to implement brightness and contrast at the same time, with a wider value range than contrast and brightness operators. 
  Due to numerous bugs in XRender implementations, it can also introduce a number of visual artifacts. 
-
  Example: increase contrast by a factor of <tt>$c</tt> without changing image brightness too much. 
-
  <pre>
    muladd $c, (1 - $c) * 0.5, $img
 </pre>
-<dt>blur $radius, $img
-<dd>
-<dt>blur $radius_horz, $radius_vert, $img
-<dd> Gaussian-blurs the image with (roughly) <tt>$radius</tt> pixel radius. The radii can also be specified separately. 
-
+</dd><dt>blur $radius, $img
+</dt><dd>
+</dd><dt>blur $radius_horz, $radius_vert, $img
+</dt><dd> Gaussian-blurs the image with (roughly) <tt>$radius</tt> pixel radius. The radii can also be specified separately. 
  Blurring is often <i>very</i> slow, at least compared or other operators. Larger blur radii are slower than smaller ones, too, so if you don't want to freeze your screen for long times, start experimenting with low values for radius (&lt;5).
-<dt>focus_fade $img
-<dd>
-<dt>focus_fade $factor, $img
-<dd>
-<dt>focus_fade $factor, $color, $img
-<dd> Fades the image by the given factor (and colour) when focus is lost (the same as the <tt>&quot;-fade&quot;</tt>/<tt>&quot;-fadecolor&quot;</tt> command line options, which also supply the default values for <tt>&quot;factor&quot;</tt> and <tt>$color</tt>. Unlike with <tt>&quot;-fade&quot;</tt>, the <tt>$factor</tt> is a real value, not a percentage value (that is, 0..1, not 0..100). 
-
+</dd><dt>focus_fade $img
+</dt><dd>
+</dd><dt>focus_fade $factor, $img
+</dt><dd>
+</dd><dt>focus_fade $factor, $color, $img
+</dt><dd> Fades the image by the given factor (and colour) when focus is lost (the same as the <tt>&quot;-fade&quot;</tt>/<tt>&quot;-fadecolor&quot;</tt> command line options, which also supply the default values for <tt>&quot;factor&quot;</tt> and <tt>$color</tt>. Unlike with <tt>&quot;-fade&quot;</tt>, the <tt>$factor</tt> is a real value, not a percentage value (that is, 0..1, not 0..100). 
  Example: do the right thing when focus fading is requested. 
-
  <pre>
    focus_fade load &quot;mybg.jpg&quot;;
-</pre></dl>
+</pre></dd></dl>
 
 <h3><font SIZE="-1">OTHER STUFF</font></h3>
 
  Anything that didn't fit any of the other categories, even after applying force and closing our eyes.
 <dl>
 <dt>keep { ... }
-<dd> This operator takes a code block as argument, that is, one or more statements enclosed by braces. 
-
+</dt><dd> This operator takes a code block as argument, that is, one or more statements enclosed by braces. 
  The trick is that this code block is only evaluated when the outcome changes - on other calls the <tt>&quot;keep&quot;</tt> simply returns the image it computed previously (yes, it should only be used with images). Or in other words, <tt>&quot;keep&quot;</tt> <i>caches</i> the result of the code block so it doesn't need to be computed again. 
-
  This can be extremely useful to avoid redoing slow operations - for example, if your background expression takes the root background, blurs it and then root-aligns it it would have to blur the root background on every window move or resize. 
-
  Another example is <tt>&quot;load&quot;</tt>, which can be quite slow. 
-
  In fact, urxvt itself encloses the whole expression in some kind of <tt>&quot;keep&quot;</tt> block so it only is reevaluated as required. 
-
  Putting the blur into a <tt>&quot;keep&quot;</tt> block will make sure the blur is only done once, while the <tt>&quot;rootalign&quot;</tt> is still done each time the window moves. 
-
  <pre>
    rootalign keep { blur 10, root }
 </pre> 
-
  This leaves the question of how to force reevaluation of the block, in case the root background changes: If expression inside the block is sensitive to some event (root background changes, window geometry changes), then it will be reevaluated automatically as needed. 
-
-</dl>
+</dd></dl>
 
 <h2>Index</h2>
 
 
 
 <dt><a HREF="#lbAJ">REFERENCE</a>
-<dd>
+</dt><dd>
 
-</dl>
+</dd></dl>

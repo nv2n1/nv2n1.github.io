@@ -14,12 +14,12 @@ description: "ata_dev_init – Initialize an ata_device structure"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device structure to initialize</dl>
+</dd><dd>Device structure to initialize</dd></dl>
 <h2>Description</h2>
 <p>Initialize <i>dev</i> in preparation for probing. </p>
 <p> LOCKING: Inherited from caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

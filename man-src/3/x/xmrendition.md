@@ -304,25 +304,25 @@ XmRendition</pre>
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNrenditionBackground</code></p>
-<dd>Specifies the background drawing color. A value of <code>XmUNSPECIFIED_PIXEL</code> indicates that the background is not specified for this rendition.</p>
-<dt><code>XmNfont</code></p>
-<dd>Specifies the actual font or fontset to be used by this rendition. The value of this resource, if set to other than <code>XmAS_IS</code>, will be used regardless of the settings of the other font resources. Setting this resource will force <code>XmNloadModel</code> to be <code>XmLOAD_IMMEDIATE</code>. If this resource is not initially set, then it will be set subsequently by the rendition whenever the font or fontset specified by <code>XmNfontName</code> is loaded. If both <code>XmNfontName</code> and <code>XmNfont</code> are specified in a resource file, the <code>XmNfont</code> specification will take precedence.</p>
-<dt><code>XmNfontName</code></p>
-<dd>Specifies an X Logical Font Description (XLFD) string, which is interpreted either as a font name or as a base font name list. A base font name list is a comma-separated and NULL-terminated string. A value of <code>XmAS_IS</code> indicates that the font is not specified for this rendition. If both <code>XmNfontName</code> and <code>XmNfont</code> are specified in a resource file, the <code>XmNfont</code> specification will take precedence.</p>
-<dt><code>XmNfontType</code></p>
-<dd>Specifies whether the <code>XmNfontName</code> resource refers to a font name or to a base font name list. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</p>
-<dt><code>XmNrenditionForeground</code></p>
-<dd>Specifies the foreground drawing color. A value of <code>XmUNSPECIFIED_PIXEL</code> indicates that the foreground is not specified for this rendition.</p>
-<dt><code>XmNloadModel</code></p>
-<dd>Specifies whether the font or fontset specified by <code>XmNfontName</code> is to be loaded when the rendition is created (<code>XmLOAD_IMMEDIATE</code>) or only when the font is required to render an <code>XmString</code> segment (<code>XmLOAD_DEFERRED</code>). Note that specifying <code>XmLOAD_IMMEDIATE</code> for <code>XmNloadModel</code> is valid only if <code>XmNfontName</code> is specified, in which case the specified font will be loaded on creation, or if <code>XmNfont</code> is specified, in which case the font is already loaded. <code>XmLOAD_DEFERRED</code> is only valid when <code>XmNfontName</code> is specified.</p>
-<dt><code>XmNstrikethruType</code></p>
-<dd>Specifies the type of line to be used to strike through a text segment. Valid values are <code>XmNO_LINE</code>, <code>XmSINGLE_LINE</code>, <code>XmDOUBLE_LINE</code>, <code>XmSINGLE_DASHED_LINE</code>, and <code>XmDOUBLE_DASHED_LINE</code>. A value of <code>XmAS_IS</code> indicates that the strike-through type is not specified for this rendition.</p>
-<dt><code>XmNtabList</code></p>
-<dd>Specifies the tab list to be used in rendering compound strings containing tab components.</p>
-<dt><code>XmNtag</code></p>
-<dd>Specifies the tag string to be used in matching the renditions with other renditions or with <code>XmStringTag</code> components in <code>XmStrings</code>. This resource must always be specified. That is, NULL is not a legal value but the empty string is. This resource is automatically set to the value of the <i>tag</i> parameter in the <code>XmRenditionCreate</code> call.</p>
-<dt><code>XmNunderlineType</code></p>
-<dd>Specifies the type of line to be used to underline a text segment. Valid values are <code>XmNO_LINE</code>, <code>XmSINGLE_LINE</code>, <code>XmDOUBLE_LINE</code>, <code>XmSINGLE_DASHED_LINE</code>, and <code>XmDOUBLE_DASHED_LINE</code>. A value of <code>XmAS_IS</code> indicates that the underline type is not specified for this rendition.</dl>
+<dt><code>XmNrenditionBackground</code></dt>
+<dd>Specifies the background drawing color. A value of <code>XmUNSPECIFIED_PIXEL</code> indicates that the background is not specified for this rendition.</dd>
+<dt><code>XmNfont</code></dt>
+<dd>Specifies the actual font or fontset to be used by this rendition. The value of this resource, if set to other than <code>XmAS_IS</code>, will be used regardless of the settings of the other font resources. Setting this resource will force <code>XmNloadModel</code> to be <code>XmLOAD_IMMEDIATE</code>. If this resource is not initially set, then it will be set subsequently by the rendition whenever the font or fontset specified by <code>XmNfontName</code> is loaded. If both <code>XmNfontName</code> and <code>XmNfont</code> are specified in a resource file, the <code>XmNfont</code> specification will take precedence.</dd>
+<dt><code>XmNfontName</code></dt>
+<dd>Specifies an X Logical Font Description (XLFD) string, which is interpreted either as a font name or as a base font name list. A base font name list is a comma-separated and NULL-terminated string. A value of <code>XmAS_IS</code> indicates that the font is not specified for this rendition. If both <code>XmNfontName</code> and <code>XmNfont</code> are specified in a resource file, the <code>XmNfont</code> specification will take precedence.</dd>
+<dt><code>XmNfontType</code></dt>
+<dd>Specifies whether the <code>XmNfontName</code> resource refers to a font name or to a base font name list. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</dd>
+<dt><code>XmNrenditionForeground</code></dt>
+<dd>Specifies the foreground drawing color. A value of <code>XmUNSPECIFIED_PIXEL</code> indicates that the foreground is not specified for this rendition.</dd>
+<dt><code>XmNloadModel</code></dt>
+<dd>Specifies whether the font or fontset specified by <code>XmNfontName</code> is to be loaded when the rendition is created (<code>XmLOAD_IMMEDIATE</code>) or only when the font is required to render an <code>XmString</code> segment (<code>XmLOAD_DEFERRED</code>). Note that specifying <code>XmLOAD_IMMEDIATE</code> for <code>XmNloadModel</code> is valid only if <code>XmNfontName</code> is specified, in which case the specified font will be loaded on creation, or if <code>XmNfont</code> is specified, in which case the font is already loaded. <code>XmLOAD_DEFERRED</code> is only valid when <code>XmNfontName</code> is specified.</dd>
+<dt><code>XmNstrikethruType</code></dt>
+<dd>Specifies the type of line to be used to strike through a text segment. Valid values are <code>XmNO_LINE</code>, <code>XmSINGLE_LINE</code>, <code>XmDOUBLE_LINE</code>, <code>XmSINGLE_DASHED_LINE</code>, and <code>XmDOUBLE_DASHED_LINE</code>. A value of <code>XmAS_IS</code> indicates that the strike-through type is not specified for this rendition.</dd>
+<dt><code>XmNtabList</code></dt>
+<dd>Specifies the tab list to be used in rendering compound strings containing tab components.</dd>
+<dt><code>XmNtag</code></dt>
+<dd>Specifies the tag string to be used in matching the renditions with other renditions or with <code>XmStringTag</code> components in <code>XmStrings</code>. This resource must always be specified. That is, NULL is not a legal value but the empty string is. This resource is automatically set to the value of the <i>tag</i> parameter in the <code>XmRenditionCreate</code> call.</dd>
+<dt><code>XmNunderlineType</code></dt>
+<dd>Specifies the type of line to be used to underline a text segment. Valid values are <code>XmNO_LINE</code>, <code>XmSINGLE_LINE</code>, <code>XmDOUBLE_LINE</code>, <code>XmSINGLE_DASHED_LINE</code>, and <code>XmDOUBLE_DASHED_LINE</code>. A value of <code>XmAS_IS</code> indicates that the underline type is not specified for this rendition.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmrenditioncreate/">XmRenditionCreate</a></code>(3), <code><a href="/docs/linux/man/3-xmrenditionfree/">XmRenditionFree</a></code>(3), <code><a href="/docs/linux/man/3-xmrenditionretrieve/">XmRenditionRetrieve</a></code>(3), <code><a href="/docs/linux/man/3-xmrenditionupdate/">XmRenditionUpdate</a></code>(3), and <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3).</p>

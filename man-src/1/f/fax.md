@@ -19,12 +19,12 @@ description: "fax – make, send, receive, view or print a fax"
 <p> <code>fax</code> <code>answer</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd> use low (96 line per inch) resolution</p>
-<dt><code>-v</code></p>
-<dd> display verbose messages for debugging</p>
-<dt><code>-m</code></p>
-<dd> the phone call has already been dialed manually </p>
+<dt><code>-l</code></dt>
+<dd> use low (96 line per inch) resolution</dd>
+<dt><code>-v</code></dt>
+<dd> display verbose messages for debugging</dd>
+<dt><code>-m</code></dt>
+<dd> the phone call has already been dialed manually </dd>
 </dl>
 <p> The commands make, send, receive, view and queue may be abbreviated to their first characters (e.g. &#8220;fax q&#8221;). </p>
 <p> Assignments of the form <i>VARIABLE</i><code>=</code><i>value</i> may appear before the command name to temporarily change the values of most fax script variables (e.g. &#8220;fax PAGE=A4 print letter.001&#8221;) </p>
@@ -39,12 +39,12 @@ description: "fax – make, send, receive, view or print a fax"
 <p> The <code>-v</code> option displays verbose messages. </p>
 <p> Other features of the fax script are documented within the script: </p>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> a directory that lets you specify recipients by name instead of number </p>
-<dt><code>&#8211;</code></p>
-<dd> the <code>fax new</code> command to create a simple cover page and start up a text editor </p>
-<dt><code>&#8211;</code></p>
-<dd> the <code>fax makefont</code> command converts a Postscript font to a bit-mapped font for use in headers or text </p>
+<dt><code>&#8211;</code></dt>
+<dd> a directory that lets you specify recipients by name instead of number </dd>
+<dt><code>&#8211;</code></dt>
+<dd> the <code>fax new</code> command to create a simple cover page and start up a text editor </dd>
+<dt><code>&#8211;</code></dt>
+<dd> the <code>fax makefont</code> command converts a Postscript font to a bit-mapped font for use in headers or text </dd>
 </dl>
 <h2>RESOLUTION</h2>
 <p> Faxes can be created at low (98 lines per inch) or high (196 lpi) resolution. Almost all fax machines will operate at either resolution. By default files are created at high resolution but you can use the optional <code>-l</code> argument to create files at low resolution. </p>
@@ -54,12 +54,12 @@ description: "fax – make, send, receive, view or print a fax"
 <p> The fax script will `source&#8217; the optional shell scripts <code>/etc/efax.rc</code>, <code>~/.efaxrc</code> and/or <code>./.efaxrc</code> before processing command-line arguments. These files can be used to set script variables to custom values for a particular system, user and/or directory. </p>
 <p> The following files are created in the FAXDIR spool directory when automatic fax reception is enabled (see the fax script). DEV represents the name of the fax modem device file in /dev (e.g. cua1 for /dev/cua1). </p>
 <dl>
-<dt>DEV.<i>n</i></p>
-<dd> the log file created by the fax answer daemon with process id <i>n</i></p>
-<dt>DEV.log</p>
-<dd> contains collected log files for device DEV. Log files showing a termination status of 1 (device busy) or 4 (no response from modem) are not added to this file.</p>
-<dt>DEV.stop</p>
-<dd> created by the fax stop command to prevent the fax daemon from starting up. </p>
+<dt>DEV.<i>n</i></dt>
+<dd> the log file created by the fax answer daemon with process id <i>n</i></dd>
+<dt>DEV.log</dt>
+<dd> contains collected log files for device DEV. Log files showing a termination status of 1 (device busy) or 4 (no response from modem) are not added to this file.</dd>
+<dt>DEV.stop</dt>
+<dd> created by the fax stop command to prevent the fax daemon from starting up. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Fax was written by Ed Casas. Please send comments or bug reports to edc [at] cce.com. Please describe the type of modem used and include a copy of the log file. </p>

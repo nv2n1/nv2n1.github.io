@@ -11,30 +11,30 @@ description: "XtSetValues, XtVaSetValues, XtSetSubvalues, XtVaSetSubvalues, XtGe
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtSetValues(Widget <i>w</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</p>
-<dd>void XtVaSetValues(Widget <i>w</i>, &#8230;);</p>
-<dd>void XtSetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</p>
-<dd>void XtVaSetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, &#8230;);</p>
-<dd>void XtGetValues(Widget <i>w</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</p>
-<dd>void XtVaGetValues(Widget <i>w</i>, &#8230;);</p>
-<dd>void XtGetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</p>
-<dd>void XtVaGetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, &#8230;);</dl>
+<dd>void XtSetValues(Widget <i>w</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd>
+<dd>void XtVaSetValues(Widget <i>w</i>, &#8230;);</dd>
+<dd>void XtSetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd>
+<dd>void XtVaSetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, &#8230;);</dd>
+<dd>void XtGetValues(Widget <i>w</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd>
+<dd>void XtVaGetValues(Widget <i>w</i>, &#8230;);</dd>
+<dd>void XtGetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd>
+<dd>void XtVaGetSubvalues(XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, &#8230;);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>args</i></p>
-<dd>Specifies the argument list of name/address pairs that contain the resource name and either the address into which the resource value is to be stored or their new values.</p>
-<dt><i>base</i></p>
-<dd>Specifies the base address of the subpart data structure where the resources should be retrieved or written.</p>
-<dt><i>num_args</i></p>
-<dd>Specifies the number of arguments in the argument list.</p>
-<dt><i>resources</i></p>
-<dd>Specifies the nonwidget resource list or values.</p>
-<dt><i>num_resources</i></p>
-<dd>Specifies the number of resources in the resource list.</p>
-<dt><i>w</i></p>
-<dd>Specifies the widget.</p>
-<dt><i>&#8230;</i></p>
-<dd>Specifies the variable argument list of name/address pairs that contain the resource name and either the address into which the resource value is to be stored or their new values.</dl>
+<dt><i>args</i></dt>
+<dd>Specifies the argument list of name/address pairs that contain the resource name and either the address into which the resource value is to be stored or their new values.</dd>
+<dt><i>base</i></dt>
+<dd>Specifies the base address of the subpart data structure where the resources should be retrieved or written.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of arguments in the argument list.</dd>
+<dt><i>resources</i></dt>
+<dd>Specifies the nonwidget resource list or values.</dd>
+<dt><i>num_resources</i></dt>
+<dd>Specifies the number of resources in the resource list.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd>
+<dt><i>&#8230;</i></dt>
+<dd>Specifies the variable argument list of name/address pairs that contain the resource name and either the address into which the resource value is to be stored or their new values.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtSetValues</code> function starts with the resources specified for the <code>Core</code> widget fields and proceeds down the subclass chain to the widget. At each stage, it writes the new value (if specified by one of the arguments) or the existing value (if no new value is specified) to a new widget data record. <code>XtSetValues</code> then calls the set_values procedures for the widget in superclass-to-subclass order. If the widget has any non-NULL set_values_hook fields, these are called immediately after the corresponding set_values procedure. This procedure permits subclasses to set nonwidget data for <code>XtSetValues</code>. </p>
 <p> If the widget&#8217;s parent is a subclass of <code>constraintWidgetClass</code>, <code>XtSetValues</code> also updates the widget&#8217;s constraints. It starts with the constraint resources specified for <code>constraintWidgetClass</code> and proceeds down the subclass chain to the parent&#8217;s class. At each stage, it writes the new value or the existing value to a new constraint record. It then calls the constraint set_values procedures from <code>constraintWidgetClass</code> down to the parent&#8217;s class. The constraint set_values procedures are called with widget arguments, as for all set_values procedures, not just the constraint record arguments, so that they can make adjustments to the desired values based on full information about the widget. </p>

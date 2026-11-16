@@ -19,60 +19,51 @@ url: "/docs/linux/man/8-iptstate/"
 <h2>Command-Line Options</h2>
 
 <dl><dt><b>-c, --no-color</b>
-<dd>Toggle color-code by protocol
-<dt><b>-C, --counters</b>
-<dd>Toggle display of bytes/packets counters
-<dt><b>-d, --dst-filter </b><i>IP</i>
-<dd>Only show states with a destination of <i>IP</i> Note, that this must be an IP, hostname matching is not yet supported.
-<dt><b>-D --dstpt-filter </b><i>port</i>
-<dd>Only show states with a destination port of <i>port</i>
-<dt><b>-h, --help</b>
-<dd>Show help message
-<dt><b>-l, --lookup</b>
-<dd>Show hostnames instead of IP addresses
-<dt><b>-m, --mark-truncated</b>
-<dd>Mark truncated hostnames with a '+'
-<dt><b>-o, --no-dynamic</b>
-<dd>Toggle dynamic formatting
-<dt><b>-L, --no-dns</b>
-<dd>Skip outgoing DNS lookup states
-<dt><b>-f, --no-loopback</b>
-<dd>Filter states on loopback
-<dt><b>-p, --no-scroll</b>
-<dd>No scrolling (don't use a &quot;pad&quot;). See <b>SCROLLING AND PADS</b> for more information.
-<dt><b>-r, --reverse</b>
-<dd>Reverse sort order
-<dt><b>-R, --rate </b><i>seconds</i>
-<dd>Refresh rate, followed by rate in <i>seconds</i>. Note that this is for statetop mode, and not applicable for single-run mode (--single).
-<dt><b>-1, --single</b>
-<dd>Single run (no curses)
-<dt><b>-b, --sort </b><i>column</i>
-<dd>This determines what column to sort by. Options: 
+</dt><dd>Toggle color-code by protocol
+</dd><dt><b>-C, --counters</b>
+</dt><dd>Toggle display of bytes/packets counters
+</dd><dt><b>-d, --dst-filter </b><i>IP</i>
+</dt><dd>Only show states with a destination of <i>IP</i> Note, that this must be an IP, hostname matching is not yet supported.
+</dd><dt><b>-D --dstpt-filter </b><i>port</i>
+</dt><dd>Only show states with a destination port of <i>port</i>
+</dd><dt><b>-h, --help</b>
+</dt><dd>Show help message
+</dd><dt><b>-l, --lookup</b>
+</dt><dd>Show hostnames instead of IP addresses
+</dd><dt><b>-m, --mark-truncated</b>
+</dt><dd>Mark truncated hostnames with a '+'
+</dd><dt><b>-o, --no-dynamic</b>
+</dt><dd>Toggle dynamic formatting
+</dd><dt><b>-L, --no-dns</b>
+</dt><dd>Skip outgoing DNS lookup states
+</dd><dt><b>-f, --no-loopback</b>
+</dt><dd>Filter states on loopback
+</dd><dt><b>-p, --no-scroll</b>
+</dt><dd>No scrolling (don't use a &quot;pad&quot;). See <b>SCROLLING AND PADS</b> for more information.
+</dd><dt><b>-r, --reverse</b>
+</dt><dd>Reverse sort order
+</dd><dt><b>-R, --rate </b><i>seconds</i>
+</dt><dd>Refresh rate, followed by rate in <i>seconds</i>. Note that this is for statetop mode, and not applicable for single-run mode (--single).
+</dd><dt><b>-1, --single</b>
+</dt><dd>Single run (no curses)
+</dd><dt><b>-b, --sort </b><i>column</i>
+</dt><dd>This determines what column to sort by. Options: 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>S</b> Source Port
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>d</b> Destination IP (or Name)
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>D</b> Destination Port
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>p</b> Protocol
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>s</b> State
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>t</b> TTL
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>b</b> Bytes
- 
  <b><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>P</b> Packets
- 
  To sort by Source IP (or Name), don't use -b. Sorting by bytes/packets is only available for kernels that support it, and only when compiled against libnetfilter_conntrack (the default).
-<dt><b>-s, --src-filter </b><i>IP</i>
-<dd>Only show states with a source of <i>IP</i>. Note, that this must be an IP, hostname matching is not yet supported.
-<dt><b>-S, --srcpt-filter </b><i>port</i>
-<dd>Only show states with a source port of <i>port</i>
-<dt><b>-t, --totals</b>
-<dd>Toggle display of totals 
-
-</dl>
+</dd><dt><b>-s, --src-filter </b><i>IP</i>
+</dt><dd>Only show states with a source of <i>IP</i>. Note, that this must be an IP, hostname matching is not yet supported.
+</dd><dt><b>-S, --srcpt-filter </b><i>port</i>
+</dt><dd>Only show states with a source port of <i>port</i>
+</dd><dt><b>-t, --totals</b>
+</dt><dd>Toggle display of totals 
+</dd></dl>
 
 <h2>Interactive Options</h2>
 
@@ -82,14 +73,14 @@ As of version 2.0, all command-line options are now available interactively usin
 
  Additionally, the following keys are used to navigate within <b>iptstate</b>:
 <dl><dt><b>Up</b> or <b>j</b> - Move up one line
-<dd><dt><b>Down</b> or <b>k</b> - Move down one line
-<dd><dt><b>Left</b> or <b>h</b> - Move left one column
-<dd><dt><b>Right</b> or <b>l</b> - Move right one column
-<dd><dt><b>PageUp</b> or <b>^u</b> - Move up one page
-<dd><dt><b>PageDown</b> or <b>^d</b> - Move down one page
-<dd><dt><b>Home</b> - Go to the top
-<dd><dt><b>End</b> - Go to the end
-<dd></dl>
+</dt><dd></dd><dt><b>Down</b> or <b>k</b> - Move down one line
+</dt><dd></dd><dt><b>Left</b> or <b>h</b> - Move left one column
+</dt><dd></dd><dt><b>Right</b> or <b>l</b> - Move right one column
+</dt><dd></dd><dt><b>PageUp</b> or <b>^u</b> - Move up one page
+</dt><dd></dd><dt><b>PageDown</b> or <b>^d</b> - Move down one page
+</dt><dd></dd><dt><b>Home</b> - Go to the top
+</dt><dd></dd><dt><b>End</b> - Go to the end
+</dt><dd></dd></dl>
  
 
  In many cases, <b>iptstate</b> needs to prompt you in order to change something. For example, if you want to set or change the source-ip filter, when you hit <b>s</b>, <b>iptstate</b> will pop up a prompt at the top of the window to ask you what you want to set it to. 
@@ -106,23 +97,22 @@ As of version 2.0, all command-line options are now available interactively usin
 
 For almost any user, there is no reason to turn off scrolling. The ability to turn this off - and especially the ability to toggle this interactively - is done more for theoretical completeness than anything else.
 <dl><dt>But, nonetheless, here are the details. Typically in a curses application you create a &quot;window.&quot; Windows don't scroll, however. They are, at most, the size of your terminal. Windows provide double-buffering to make refreshing as fast and seemless as possible. However, to enable scrolling, one has to use &quot;pads&quot; instead of windows. Pads can be bigger than the current terminal. Then all necessary data is written to the pad, and &quot;scrolling&quot; becomes a function of just showing the right part of that pad on the screen.
-<dd><dt>However, pads do not have the double-buffering feature that windows have. Thus, there _might_ be some case where for some user using some very strange machine, having scrolling enabled could cause poor refreshing. Given the nature of the way <b>iptstate</b> uses the screen though, I find this highly unlikely. In addition, the scrolling method uses a little more memory. However, <b>iptstate</b> is not a memory intensive application, so this shouldn't be a problem even on low-memory systems.
-<dd><dt>Nonetheless, if this does negatively affect you, the option to turn it off is there.
-<dd></dl>
+</dt><dd></dd><dt>However, pads do not have the double-buffering feature that windows have. Thus, there _might_ be some case where for some user using some very strange machine, having scrolling enabled could cause poor refreshing. Given the nature of the way <b>iptstate</b> uses the screen though, I find this highly unlikely. In addition, the scrolling method uses a little more memory. However, <b>iptstate</b> is not a memory intensive application, so this shouldn't be a problem even on low-memory systems.
+</dt><dd></dd><dt>Nonetheless, if this does negatively affect you, the option to turn it off is there.
+</dt><dd></dd></dl>
 
 <h2>Exit Status</h2>
 
 Anything other than 0 indicates and error. A list of current exit statuses are below:
 <dl><dt><b>0</b>
-<dd>Success
-<dt><b>1</b>
-<dd>Bad command-line arguments
-<dt><b>2</b>
-<dd>Error communicating with the netfilter subsystem.
-<dt><b>3</b>
-<dd>Terminal too narrow 
-
-</dl>
+</dt><dd>Success
+</dd><dt><b>1</b>
+</dt><dd>Bad command-line arguments
+</dd><dt><b>2</b>
+</dt><dd>Error communicating with the netfilter subsystem.
+</dd><dt><b>3</b>
+</dt><dd>Terminal too narrow 
+</dd></dl>
 
 <h2>Bugs</h2>
 

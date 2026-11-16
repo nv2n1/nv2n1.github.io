@@ -11,20 +11,20 @@ description: "gpsfake – test harness for gpsd, simulating a GPS"
 <p> gpsfake &#8211; test harness for gpsd, simulating a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gpsfake</code> [-1] [-h] [-b] [-f] [-c&nbsp;<wbr><i>interval</i>] [-i] [-D&nbsp;<wbr><i>debuglevel</i>] [-l] [-m&nbsp;<wbr><i>monitor</i>] [-g] [-n] [-o&nbsp;<wbr><i>options</i>] [-p] [-P&nbsp;<wbr><i>port</i>] [-r&nbsp;<wbr><i>initcmd</i>] [-s&nbsp;<wbr><i>speed</i>] [-u] [-t] [-v] [<i>logfile</i>&#8230;]</dl>
+<dt> <code>gpsfake</code> [-1] [-h] [-b] [-f] [-c&nbsp;<wbr><i>interval</i>] [-i] [-D&nbsp;<wbr><i>debuglevel</i>] [-l] [-m&nbsp;<wbr><i>monitor</i>] [-g] [-n] [-o&nbsp;<wbr><i>options</i>] [-p] [-P&nbsp;<wbr><i>port</i>] [-r&nbsp;<wbr><i>initcmd</i>] [-s&nbsp;<wbr><i>speed</i>] [-u] [-t] [-v] [<i>logfile</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>gpsfake is a test harness for gpsd and its clients. It opens a pty (pseudo-TTY), launches a gpsd instance that thinks the slave side of the pty is its GPS device, and repeatedly feeds the contents of one or more test logfiles through the master side to the GPS. If there are multiple logfiles, sentences from them are interleaved in the order the files are specified. </p>
+<dd>gpsfake is a test harness for gpsd and its clients. It opens a pty (pseudo-TTY), launches a gpsd instance that thinks the slave side of the pty is its GPS device, and repeatedly feeds the contents of one or more test logfiles through the master side to the GPS. If there are multiple logfiles, sentences from them are interleaved in the order the files are specified. </dd>
 <p> gpsfake does not require root privileges, and can be run concurrently with a production gpsd instance without causing problems. </p>
 <p> The logfiles may contain packets in any supported format, including in particular NMEA, SiRF, TSIP, or Zodiac. Leading lines beginning with # will be treated as comments and ignored, except in the following special cases: </p>
 <dl>
 <dt>
-<dd> &bull; a comment of the form #Date: yyyy-mm-dd (ISO8601 date format) may be used to set the initial date for the log.</dl>
+</dt><dd> &bull; a comment of the form #Date: yyyy-mm-dd (ISO8601 date format) may be used to set the initial date for the log.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; a comment of the form #Serial: [0-9]* [78][NOE][12] may be used to set serial parameters for the log &#8211; baud rate, word length, stop bits.</dl>
+</dt><dd> &bull; a comment of the form #Serial: [0-9]* [78][NOE][12] may be used to set serial parameters for the log &#8211; baud rate, word length, stop bits.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; a comment of the form #Transport: UDP may be used to fake a UDP source rather than the normal pty.</dl>
+</dt><dd> &bull; a comment of the form #Transport: UDP may be used to fake a UDP source rather than the normal pty.</dd></dl>
 <p> The gpsd instance is run in foreground. The thread sending fake GPS data to the daemon is run in background.</p>
 <h2>OPTIONS</h2>
 <p> With the -1 option, the logfile is interpreted once only rather than repeatedly. This option is intended to facilitate regression testing. </p>
@@ -52,15 +52,15 @@ description: "gpsfake – test harness for gpsd, simulating a GPS"
 <p> Serial:</p>
 <dl>
 <dt>
-<dd> May contain a serial-port setting such as 4800 7N2 &#8211; baud rate followed by 7 or 8 for byte length, N or O or E for parity and 1 or 2 for stop bits. The test is run with those settings on the slave port that the daemon sees.</dl>
+</dt><dd> May contain a serial-port setting such as 4800 7N2 &#8211; baud rate followed by 7 or 8 for byte length, N or O or E for parity and 1 or 2 for stop bits. The test is run with those settings on the slave port that the daemon sees.</dd></dl>
 <p> Transport:</p>
 <dl>
 <dt>
-<dd> Values &#8216;TCP&#8217; and &#8216;UDP&#8217; force the use of TCP and UDP feeds respectively (the default is a pty).</dl>
+</dt><dd> Values &#8216;TCP&#8217; and &#8216;UDP&#8217; force the use of TCP and UDP feeds respectively (the default is a pty).</dd></dl>
 <p> Delay-Cookie:</p>
 <dl>
 <dt>
-<dd> Must be followed by two whitespace-separated fields, a delimiter character and a numeric delay in seconds. Instead of being broken up by packet boundaries, the test load is split on the delimiters. The delay is performed after each feed. Can be useful for imposing write boundaries in the middle of packets.</dl>
+</dt><dd> Must be followed by two whitespace-separated fields, a delimiter character and a numeric delay in seconds. Instead of being broken up by packet boundaries, the test load is split on the delimiters. The delay is performed after each feed. Can be useful for imposing write boundaries in the middle of packets.</dd></dl>
 <h2>CUSTOM TESTS</h2>
 <p> gpsfake is a trivial wrapper around a Python module, also named gpsfake, that can be used to fully script sessions involving a gpsd instance, any number of client sessions, and any number of fake GPSes feeding the daemon instance with data from specified sentence logs. </p>
 <p> Source and embedded documentation for this module is shipped with the gpsd development tools. You can use it to torture-test either gpsd itself or any gpsd-aware client application. </p>

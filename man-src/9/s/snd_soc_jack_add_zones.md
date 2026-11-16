@@ -15,15 +15,15 @@ snd_soc_jack_add_zones - Associate voltage zones with jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>ASoC jack</dl>
+<dl><dd></dd><dd>ASoC jack</dd></dl>
  
 
  <i>count</i>
-<dl><dd>Number of zones</dl>
+<dl><dd>Number of zones</dd></dl>
  
 
  <i>zones</i>
-<dl><dd>Array of zones</dl>
+<dl><dd>Array of zones</dd></dl>
 
 <h2>Description</h2>
 

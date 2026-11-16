@@ -10,28 +10,14 @@ description: "QuantLib::ZeroInflationIndex – Base class for zero inflation ind
 <p>QuantLib::ZeroInflationIndex &#8211; Base class for zero inflation indices. </p>
 <h2>Synopsis</h2>
 <pre><code>ZeroInflationIndex (const std::string &amp;familyName, const Region &amp;region, bool revised, bool interpolated, Frequency frequency, const Period &amp;availabilityLag, const Currency &amp;currency, const Handle&lt; ZeroInflationTermStructure &gt; &amp;ts=Handle&lt; ZeroInflationTermStructure &gt;())
-
-
 Always use the evaluation date as the reference date.
-
-
 Rate fixing (const Date &amp;fixingDate, bool forecastTodaysFixing=false) const
-
-
-
 Handle&lt; ZeroInflationTermStructure &gt; zeroInflationTermStructure () const</code></pre>
 <p> Inherits <code>QuantLib::InflationIndex</code>. Inherited by <code>EUHICP</code>, and <code>UKRPI</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>ZeroInflationIndex (const std::string &amp;familyName, const Region &amp;region, bool revised, bool interpolated, Frequency frequency, const Period &amp;availabilityLag, const Currency &amp;currency, const Handle&lt; ZeroInflationTermStructure &gt; &amp;ts=Handle&lt; ZeroInflationTermStructure &gt;())
-
-
 Always use the evaluation date as the reference date.
-
-
 Rate fixing (const Date &amp;fixingDate, bool forecastTodaysFixing=false) const
-
-
-
 Handle&lt; ZeroInflationTermStructure &gt; zeroInflationTermStructure () const</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class for zero inflation indices.</p>

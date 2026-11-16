@@ -16,10 +16,10 @@ description: "ppdi – import ppd files (deprecated)"
 <h2>OPTIONS</h2>
 <p> <code>ppdi</code> supports the following options:</p>
 <dl>
-<dt><code>-I </code><i>include-directory</i></p>
-<dd> Specifies an alternate include directory. Multiple <i>-I</i> options can be supplied to add additional directories.</p>
-<dt><code>-o </code><i>source-file</i></p>
-<dd> Specifies the PPD source file to update. If the source file does not exist, a new source file is created. Otherwise the existing file is merged with the new PPD file(s) on the command-line. If no source file is specified, the filename <i>ppdi.drv</i> is used.</dl>
+<dt><code>-I </code><i>include-directory</i></dt>
+<dd> Specifies an alternate include directory. Multiple <i>-I</i> options can be supplied to add additional directories.</dd>
+<dt><code>-o </code><i>source-file</i></dt>
+<dd> Specifies the PPD source file to update. If the source file does not exist, a new source file is created. Otherwise the existing file is merged with the new PPD file(s) on the command-line. If no source file is specified, the filename <i>ppdi.drv</i> is used.</dd></dl>
 <h2>NOTES</h2>
 <p> PPD files are deprecated and will no longer be supported in a future feature release of CUPS. Printers that do not support IPP can be supported using applications such as <code><a href="/docs/linux/man/1-ippeveprinter/">ippeveprinter</a></code>(1).</p>
 <h2>SEE ALSO</h2>

@@ -19,65 +19,67 @@ description: "uconv – convert data from one encoding to another"
 <p> For transcoding purposes, <code>uconv</code> options are compatible with those of <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), making it easy to replace it in scripts. It is not necessarily the case, however, that the encoding names used by <code>uconv</code> and ICU are the same as the ones used by <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1). Also, options that provide informational data, such as the <code>-l</code>, <code>&#8211;list</code> one offered by some <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) variants such as GNU&#8217;s, produce data in a slightly different and easier to parse format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version of <code>uconv</code> and exit.</p>
-<dt><code>-s</code>, <code>&#8211;silent</code></p>
-<dd> Suppress messages during execution.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display extra informative messages during execution.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> List all the available encodings and exit.</p>
-<dt><code>-l</code>, <code>&#8211;list-code</code><i> code</i></p>
-<dd> List only the <i>code</i> encoding and exit. If <i>code</i> is not a proper encoding, exit with an error.</p>
-<dt><code>&#8211;default-code</code></p>
-<dd> List only the name of the default encoding and exit.</p>
-<dt><code>-L</code>, <code>&#8211;list-transliterators</code></p>
-<dd> List all the available transliterators and exit.</p>
-<dt><code>&#8211;canon</code></p>
-<dd> If used with <code>-l</code>, <code>&#8211;list</code> or <code>&#8211;default-code</code>, the list of encodings is produced in a format compatible with <code>convrtrs.txt</code>(5). If used with <code>-L</code>, <code>&#8211;list-transliterators</code>, print only one transliterator name per line.</p>
-<dt><code>-x</code><i> transliteration</i></p>
-<dd> Run the given <i>transliteration</i> on the transcoded Unicode data, and use the transliterated data as input for the transcoding to the destination encoding.</p>
-<dt><code>&#8211;to-callback</code><i> callback</i></p>
-<dd> Use <i>callback</i> to handle characters that cannot be transcoded to the destination encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</p>
-<dt><code>-c</code></p>
-<dd> Omit invalid characters from the output. Same as <code>&#8211;to-callback skip</code>.</p>
-<dt><code>&#8211;from-callback</code><i> callback</i></p>
-<dd> Use <i>callback</i> to handle characters that cannot be transcoded from the original encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</p>
-<dt><code>-i</code></p>
-<dd> Ignore invalid sequences in the input. Same as <code>&#8211;from-callback skip</code>.</p>
-<dt><code>&#8211;callback</code><i> callback</i></p>
-<dd> Use <i>callback</i> to handle both characters that cannot be transcoded from the original encoding and characters that cannot be transcoded to the destination encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</p>
-<dt><code>&#8211;fallback</code></p>
-<dd> Use the fallback mapping when transcoding from Unicode to the destination encoding.</p>
-<dt><code>&#8211;no-fallback</code></p>
-<dd> Do not use the fallback mapping when transcoding from Unicode to the destination encoding. This is the default.</p>
-<dt><code>-b</code>, <code>&#8211;block-size</code><i> size</i></p>
-<dd> Read input in blocks of <i>size</i> bytes at a time. The default block size is 4096.</p>
-<dt><code>-f</code>, <code>&#8211;from-code</code><i> encoding</i></p>
-<dd> Set the original encoding of the data to <i>encoding</i>.</p>
-<dt><code>-t</code>, <code>&#8211;to-code</code><i> encoding</i></p>
-<dd> Transcode the data to <i>encoding</i>.</p>
-<dt><code>&#8211;add-signature</code></p>
-<dd> Add a U+FEFF Unicode signature character (BOM) if the output charset supports it and does not add one anyway.</p>
-<dt><code>&#8211;remove-signature</code></p>
-<dd> Remove a U+FEFF Unicode signature character (BOM).</p>
-<dt><code>-o</code>, <code>&#8211;output</code><i> file</i></p>
-<dd> Write the transcoded data to <i>file</i>.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version of <code>uconv</code> and exit.</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code></dt>
+<dd> Suppress messages during execution.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display extra informative messages during execution.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> List all the available encodings and exit.</dd>
+<dt><code>-l</code>, <code>&#8211;list-code</code><i> code</i></dt>
+<dd> List only the <i>code</i> encoding and exit. If <i>code</i> is not a proper encoding, exit with an error.</dd>
+<dt><code>&#8211;default-code</code></dt>
+<dd> List only the name of the default encoding and exit.</dd>
+<dt><code>-L</code>, <code>&#8211;list-transliterators</code></dt>
+<dd> List all the available transliterators and exit.</dd>
+<dt><code>&#8211;canon</code></dt>
+<dd> If used with <code>-l</code>, <code>&#8211;list</code> or <code>&#8211;default-code</code>, the list of encodings is produced in a format compatible with <code>convrtrs.txt</code>(5). If used with <code>-L</code>, <code>&#8211;list-transliterators</code>, print only one transliterator name per line.</dd>
+<dt><code>-x</code><i> transliteration</i></dt>
+<dd> Run the given <i>transliteration</i> on the transcoded Unicode data, and use the transliterated data as input for the transcoding to the destination encoding.</dd>
+<dt><code>&#8211;to-callback</code><i> callback</i></dt>
+<dd> Use <i>callback</i> to handle characters that cannot be transcoded to the destination encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</dd>
+<dt><code>-c</code></dt>
+<dd> Omit invalid characters from the output. Same as <code>&#8211;to-callback skip</code>.</dd>
+<dt><code>&#8211;from-callback</code><i> callback</i></dt>
+<dd> Use <i>callback</i> to handle characters that cannot be transcoded from the original encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</dd>
+<dt><code>-i</code></dt>
+<dd> Ignore invalid sequences in the input. Same as <code>&#8211;from-callback skip</code>.</dd>
+<dt><code>&#8211;callback</code><i> callback</i></dt>
+<dd> Use <i>callback</i> to handle both characters that cannot be transcoded from the original encoding and characters that cannot be transcoded to the destination encoding. See section <code>CALLBACKS</code> for details on valid callbacks.</dd>
+<dt><code>&#8211;fallback</code></dt>
+<dd> Use the fallback mapping when transcoding from Unicode to the destination encoding.</dd>
+<dt><code>&#8211;no-fallback</code></dt>
+<dd> Do not use the fallback mapping when transcoding from Unicode to the destination encoding. This is the default.</dd>
+<dt><code>-b</code>, <code>&#8211;block-size</code><i> size</i></dt>
+<dd> Read input in blocks of <i>size</i> bytes at a time. The default block size is 4096.</dd>
+<dt><code>-f</code>, <code>&#8211;from-code</code><i> encoding</i></dt>
+<dd> Set the original encoding of the data to <i>encoding</i>.</dd>
+<dt><code>-t</code>, <code>&#8211;to-code</code><i> encoding</i></dt>
+<dd> Transcode the data to <i>encoding</i>.</dd>
+<dt><code>&#8211;add-signature</code></dt>
+<dd> Add a U+FEFF Unicode signature character (BOM) if the output charset supports it and does not add one anyway.</dd>
+<dt><code>&#8211;remove-signature</code></dt>
+<dd> Remove a U+FEFF Unicode signature character (BOM).</dd>
+<dt><code>-o</code>, <code>&#8211;output</code><i> file</i></dt>
+<dd> Write the transcoded data to <i>file</i>.</dd></dl>
 <h2>CALLBACKS</h2>
 <p> <code>uconv</code> supports specifying callbacks to handle invalid data. Callbacks can be set for both directions of transcoding: from the original encoding to Unicode, with the <code>&#8211;from-callback</code> option, and from Unicode to the destination encoding, with the <code>&#8211;to-callback</code> option. </p>
 <p> The following is a list of valid <i>callback</i> names, along with a description of their behavior. The list of callbacks actually supported by <code>uconv</code> is displayed when it is called with <code>-h</code>, <code>&#8211;help</code>. </p>
 <dl>
-<dt><code>substitute</code></p>
-<dd> Write the encoding&#8217;s substitute sequence, or the Unicode replacement character <code>U+FFFD</code> when transcoding to Unicode.</p>
-<dt><code>skip</code></p>
-<dd> Ignore the invalid data.</p>
-<dt><code>stop</code></p>
-<dd> Stop with an error when encountering invalid data. This is the default callback.</p>
-<dt><code>escape</code></p>
-<dd> Same as <code>escape-icu</code>.</p>
-<dt><code>escape-icu</code></p>
-<dd> Replace the missing characters with a string of the format <code>%U</code><i>hhhh</i> for plane 0 characters, and <code>%U</code><i>hhhh</i>%U<i>hhhh</i> for planes 1 and above characters, where <i>hhhh</i> is the hexadecimal value of one of the UTF-16 code units representing the character. Characters from planes 1 and above are written as a pair of UTF-16 surrogate code units.</p>
-<dt><code>escape-java</code></p>
+<dt><code>substitute</code></dt>
+<dd> Write the encoding&#8217;s substitute sequence, or the Unicode replacement character <code>U+FFFD</code> when transcoding to Unicode.</dd>
+<dt><code>skip</code></dt>
+<dd> Ignore the invalid data.</dd>
+<dt><code>stop</code></dt>
+<dd> Stop with an error when encountering invalid data. This is the default callback.</dd>
+<dt><code>escape</code></dt>
+<dd> Same as <code>escape-icu</code>.</dd>
+<dt><code>escape-icu</code></dt>
+<dd> Replace the missing characters with a string of the format <code>%U</code><i>hhhh</i> for plane 0 characters, and <code>%U</code><i>hhhh</i>%U<i>hhhh</i> for planes 1 and above characters, where <i>hhhh</i> is the hexadecimal value of one of the UTF-16 code units representing the character. Characters from planes 1 and above are written as a pair of UTF-16 surrogate code units.</dd>
+<dt><code>escape-java</code></dt>
 <dd> Replace the missing characters with a string of the format <code>
+</dd></dl>
+</code>

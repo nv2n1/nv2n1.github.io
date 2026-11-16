@@ -17,10 +17,10 @@ url: "/docs/linux/man/3-ibv_get_srq_num/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_get_srq_num(struct ibv_srq *srq, uint32_t *srq_num);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

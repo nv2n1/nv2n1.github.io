@@ -12,13 +12,12 @@ rdma_create_event_channel - Open a channel used to report communication events.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 struct rdma_event_channel *rdma_create_event_channel
-
     (void);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>void
-<dd>no arguments</dl>
+</dt><dd>no arguments</dd></dl>
 
 <h2>Description</h2>
 

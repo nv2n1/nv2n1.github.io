@@ -109,12 +109,12 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> <code>admin_acl</code> </p>
 <p> This is a list of ip/netmask pairs that are allowed to get certain administrative information about MaraDNS, including:</p>
 <dl>
-<dt>*</p>
-<dd>The version number of MaraDNS running</p>
-<dt>*</p>
-<dd>The number of threads MaraDNS has</p>
-<dt>*</p>
-<dd>MaraDNSaq internal timestamp value</dl>
+<dt>*</dt>
+<dd>The version number of MaraDNS running</dd>
+<dt>*</dt>
+<dd>The number of threads MaraDNS has</dd>
+<dt>*</dt>
+<dd>MaraDNSaq internal timestamp value</dd></dl>
 <p> Note that this information is not available unless the mararc variable debug_msg_level is sufficiently high. See the information on debug_msg_level below for details on this and on the TXT queries sent to get the above information. </p>
 <p> <code>bind_address</code> </p>
 <p> bind_address: The IP address to give the MaraDNS server. </p>
@@ -122,32 +122,32 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> <code>bind_star_handling</code> </p>
 <p> In the case where there is both a star record for a given name and recordtype, a non-star record with the same name but a different recordtype, and no record for the given name and recordtype, MaraDNS will usually return the star record. BIND, on the other hand, will return a &quot;not there&quot; reply. In other words:</p>
 <dl>
-<dt>*</p>
-<dd>If a non-A record for foo.example.com exists</p>
-<dt>*</p>
-<dd>An A record for *.example.com exists</p>
-<dt>*</p>
-<dd>No A record for foo.example.com exists</p>
-<dt>*</p>
-<dd>And the user asks for the A record for foo.example.com</p>
-<dt>*</p>
-<dd>MaraDNS will usually return the A record attached to *.example.com</p>
-<dt>*</p>
-<dd>BIND, on the other hand, returns a &quot;not there&quot; for foo.example.com</dl>
+<dt>*</dt>
+<dd>If a non-A record for foo.example.com exists</dd>
+<dt>*</dt>
+<dd>An A record for *.example.com exists</dd>
+<dt>*</dt>
+<dd>No A record for foo.example.com exists</dd>
+<dt>*</dt>
+<dd>And the user asks for the A record for foo.example.com</dd>
+<dt>*</dt>
+<dd>MaraDNS will usually return the A record attached to *.example.com</dd>
+<dt>*</dt>
+<dd>BIND, on the other hand, returns a &quot;not there&quot; for foo.example.com</dd></dl>
 <p> If the BIND behavior is desired, set bind_star_handling to 1. Otherwise, set this to 0. In MaraDNS 1.3, this has a default value of 1. </p>
 <p> In addition, if there is a star record that could match any given record type, when bind_star_handling is 1, it makes sure that MaraDNS does not incorrectly return a NXDOMAIN (RFC 4074 section 4.2). </p>
 <p> Also, if bind_star_handling has a value of 2, MaraDNS will handle the following case exactly as per section 4.3.3 of RFC1034:</p>
 <dl>
-<dt>*</p>
-<dd>If a record for foo.example.com exists</p>
-<dt>*</p>
-<dd>An A record for *.example.com exists</p>
-<dt>*</p>
-<dd>And the user asks for the A record for bar.foo.example.com</p>
-<dt>*</p>
-<dd>MaraDNS will usually return the A record attached to *.example.com</p>
-<dt>*</p>
-<dd>RFC1034 section 4.3.3 says one should return a NXDOMAIN.</dl>
+<dt>*</dt>
+<dd>If a record for foo.example.com exists</dd>
+<dt>*</dt>
+<dd>An A record for *.example.com exists</dd>
+<dt>*</dt>
+<dd>And the user asks for the A record for bar.foo.example.com</dd>
+<dt>*</dt>
+<dd>MaraDNS will usually return the A record attached to *.example.com</dd>
+<dt>*</dt>
+<dd>RFC1034 section 4.3.3 says one should return a NXDOMAIN.</dd></dl>
 <p> MaraDNS will exit with a fatal error if bind_star_handling has any value besides 0, 1, or 2. </p>
 <p> <code>chroot_dir</code> </p>
 <p> chroot_dir: The directory MaraDNS chroots to </p>
@@ -156,34 +156,34 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> <code>csv2_default_zonefile</code> </p>
 <p> This is a special zone file that allows there to be stars at the <i>end</i> of hostnames. This file is similar to a normal csv2 zone file, but has the following features and limitations:</p>
 <dl>
-<dt>*</p>
-<dd>Stars are allowed at the end of hostnames</p>
-<dt>*</p>
-<dd>A SOA record is mandatory</p>
-<dt>*</p>
-<dd>NS records are mandatory</p>
-<dt>*</p>
-<dd>Neither CNAME nor FQDN4 records are permitted in the zone file</p>
-<dt>*</p>
-<dd>Delegation NS records are not permitted in the zone file</p>
-<dt>*</p>
-<dd>Default zonefiles may not be transferred via zone transfer</p>
-<dt>*</p>
-<dd>Both recursion and default zonefiles may not be enabled at the same time.</dl>
+<dt>*</dt>
+<dd>Stars are allowed at the end of hostnames</dd>
+<dt>*</dt>
+<dd>A SOA record is mandatory</dd>
+<dt>*</dt>
+<dd>NS records are mandatory</dd>
+<dt>*</dt>
+<dd>Neither CNAME nor FQDN4 records are permitted in the zone file</dd>
+<dt>*</dt>
+<dd>Delegation NS records are not permitted in the zone file</dd>
+<dt>*</dt>
+<dd>Default zonefiles may not be transferred via zone transfer</dd>
+<dt>*</dt>
+<dd>Both recursion and default zonefiles may not be enabled at the same time.</dd></dl>
 <p> <code>csv2_synthip_list</code> </p>
 <p> Sometimes the IP list of nameservers will be different than the nameservers one is bound to. This allows the synthetic nameserver list to have different IPs. </p>
 <p> Note that this may act in an unexpected manner if routable and non-routable (localhost and RFC1918) addresses are combined; in particular, a list with both routable and non-routable addresses will discard the non-routable IP addresses, and a list with rfc1918 and localhost addresses will discard the localhost addresses. </p>
 <p> <code>csv2_tilde_handling</code> </p>
 <p> How the csv2 zone file parser handles tildes (the ~ character) in csv2 zone files. This is a numeric record, with a possible value between 0 and 3 (four possible values). The way the csv2 parser acts at different csv2_tilde_handling levels:</p>
 <dl>
-<dt>*</p>
-<dd>0) The csv2 parser behaves the same as it does in MaraDNS 1.2: The tilde has no special significance to the parser.</p>
-<dt>*</p>
-<dd>1) A tilde is not allowed anywhere in a csv2 zone file.</p>
-<dt>*</p>
-<dd>2) A tilde is only allowed between records in a csv2 zone file. If a tilde is between the first record and the second record, a tilde is required to be between all records. Otherwise, a tilde is not allowed anywhere in a csv2 zone file. The first record can not be a TXT, WKS, or LOC record.</p>
-<dt>*</p>
-<dd>3) A tilde is required to be between all records in a csv2 zone file.</dl>
+<dt>*</dt>
+<dd>0) The csv2 parser behaves the same as it does in MaraDNS 1.2: The tilde has no special significance to the parser.</dd>
+<dt>*</dt>
+<dd>1) A tilde is not allowed anywhere in a csv2 zone file.</dd>
+<dt>*</dt>
+<dd>2) A tilde is only allowed between records in a csv2 zone file. If a tilde is between the first record and the second record, a tilde is required to be between all records. Otherwise, a tilde is not allowed anywhere in a csv2 zone file. The first record can not be a TXT, WKS, or LOC record.</dd>
+<dt>*</dt>
+<dd>3) A tilde is required to be between all records in a csv2 zone file.</dd></dl>
 <p> The default value for csv2_tilde_handling is 2; this allows compatibility with all 1.2 zone files without tildes while allowing zone files to be updated to use the tilde to separate resource records. </p>
 <p> <code>debug_msg_level</code> </p>
 <p> This is a number indicating what level of information about a running MaraDNS process should be made public. When set to 0, no information will be made public. </p>
@@ -199,18 +199,18 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> If this is set to a non-zero value, certain features of MaraDNS will be disabled in order to speed up MaraDNSaq response time. This is designed for situtations when a MaraDNS server is receiving a large number of queries, such as during a denial of service attack. </p>
 <p> This is a numeric variable; its default value is zero, indicating that all of MaraDNSaq normal features are enabled. Higher numeric values disable more features:</p>
 <dl>
-<dt>*</p>
-<dd>A dos_protection_level between 1 and 78 (inclusive) disables getting MaraDNS status information remotely.</p>
-<dt>*</p>
-<dd>A dos_protection_level of 8 or above disables CNAME lookups.</p>
-<dt>*</p>
-<dd>A dos_protection_level or 12 or above diables delegation NS records.</p>
-<dt>*</p>
-<dd>A dos_protection_level of 14 or above disables ANY record processing.</p>
-<dt>*</p>
-<dd>A dos_protection_level of 18 or above disables star record processing at the beginning of hostnames (default zonefiles still work, however).</p>
-<dt>*</p>
-<dd>A dos_protection_level of 78 disables all authoritative processing, including default zonefiles; recursive lookups still work.</dl>
+<dt>*</dt>
+<dd>A dos_protection_level between 1 and 78 (inclusive) disables getting MaraDNS status information remotely.</dd>
+<dt>*</dt>
+<dd>A dos_protection_level of 8 or above disables CNAME lookups.</dd>
+<dt>*</dt>
+<dd>A dos_protection_level or 12 or above diables delegation NS records.</dd>
+<dt>*</dt>
+<dd>A dos_protection_level of 14 or above disables ANY record processing.</dd>
+<dt>*</dt>
+<dd>A dos_protection_level of 18 or above disables star record processing at the beginning of hostnames (default zonefiles still work, however).</dd>
+<dt>*</dt>
+<dd>A dos_protection_level of 78 disables all authoritative processing, including default zonefiles; recursive lookups still work.</dd></dl>
 <p> The default level of dos_protection_level is 0 when there are one or more zonefiles; 78 when there are no zone files. </p>
 <p> <code>ipv6_bind_address</code> </p>
 <p> If MaraDNS is compiled with as an authoritative server, then this variable will tell MaraDNS which ipv6 address for the UDP server to; for this variable to be set, MaraDNS must be bound to at least one ipv4 address. </p>
@@ -328,22 +328,22 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> This option also allows people who do not use the duende tool to view human-readable timestamps. This option only allows timestamps in GMT, due to issues with showing local times in a chroot() environment. </p>
 <p> This can have the following values:</p>
 <dl>
-<dt>0</p>
-<dd>The string &quot;Timestamp&quot; followed by a UNIX timestamp</p>
-<dt>1</p>
-<dd>Just the bare UNIX timestamp</p>
-<dt>2</p>
-<dd>A GMT timestamp in the Spanish language</p>
-<dt>3</p>
-<dd>A (hopefully) local timestamp in the Spanish language</p>
-<dt>4</p>
-<dd>A timestamp using asctime(gmtime()); usually in the English language</p>
-<dt>5</p>
-<dd>No timestamp whatsoever is shown (this is the best option when maradns is invoked with the duende tool).</p>
-<dt>6</p>
-<dd>ISO GMT timestamp is shown</p>
-<dt>7</p>
-<dd>ISO local timestamp is shown</dl>
+<dt>0</dt>
+<dd>The string &quot;Timestamp&quot; followed by a UNIX timestamp</dd>
+<dt>1</dt>
+<dd>Just the bare UNIX timestamp</dd>
+<dt>2</dt>
+<dd>A GMT timestamp in the Spanish language</dd>
+<dt>3</dt>
+<dd>A (hopefully) local timestamp in the Spanish language</dd>
+<dt>4</dt>
+<dd>A timestamp using asctime(gmtime()); usually in the English language</dd>
+<dt>5</dt>
+<dd>No timestamp whatsoever is shown (this is the best option when maradns is invoked with the duende tool).</dd>
+<dt>6</dt>
+<dd>ISO GMT timestamp is shown</dd>
+<dt>7</dt>
+<dd>ISO local timestamp is shown</dd></dl>
 <p> The default value for this variable is 5. </p>
 <p> <code>upstream_port</code> </p>
 <p> This is the port that MaraDNSaq recursive resolver uses to contact other DNS servers. This is usually 53 (the default value), but certain unusual MaraDNS setups (such as when resolving dangling CNAME records on but a single IP) may need to have a different valur for this. </p>
@@ -351,16 +351,16 @@ upstream_servers[&quot;cl.&quot;] = &quot;10.2.19.83&quot;</pre>
 <p> verbose_level: The number of messages we log to stdout </p>
 <p> This can have five values:</p>
 <dl>
-<dt>0</p>
-<dd>No messages except for the legal disclaimer and fatal parsing errors</p>
-<dt>1</p>
-<dd>Only startup messages logged (Default level)</p>
-<dt>2</p>
-<dd>Error queries logged</p>
-<dt>3</p>
-<dd>All queries logged</p>
-<dt>4</p>
-<dd>All actions adding and removing records from the cache logged</dl>
+<dt>0</dt>
+<dd>No messages except for the legal disclaimer and fatal parsing errors</dd>
+<dt>1</dt>
+<dd>Only startup messages logged (Default level)</dd>
+<dt>2</dt>
+<dd>Error queries logged</dd>
+<dt>3</dt>
+<dd>All queries logged</dd>
+<dt>4</dt>
+<dd>All actions adding and removing records from the cache logged</dd></dl>
 <p> The default value for this variable is 1. </p>
 <p> <code>verbose_query</code> </p>
 <p> verbose_query: Whether to verbosely output all DNS queries that the recursive DNS server receives. If this is set to 1, then all recursive queries sent to MaraDNS will be logged. </p>

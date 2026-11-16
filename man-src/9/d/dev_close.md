@@ -14,7 +14,7 @@ description: "dev_close – shutdown an interface."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to shutdown</dl>
+</dd><dd>device to shutdown</dd></dl>
 <h2>Description</h2>
 <p>This function moves an active device into down state. A <code>NETDEV_GOING_DOWN</code> is sent to the netdev notifier chain. The device is then deactivated and finally a <code>NETDEV_DOWN</code> is sent to the notifier chain.</p>
 <h2>Copyright</h2>

@@ -31,18 +31,18 @@ david
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> Several environment variables affect the operation of Kerberos-enabled programs. These include:</p>
 <dl>
-<dt><code>KRB5CCNAME</code></p>
-<dd> Specifies the location of the credential cache, in the form <i>TYPE</i>:<i>residual</i>. If no type prefix is present, the <code>FILE</code> type is assumed and <i>residual</i> is the pathname of the cache file. A collection of multiple caches may be used by specifying the <code>DIR</code> type and the pathname of a private directory (which must already exist). The default cache file is /tmp/krb5cc_<i>uid</i> where <i>uid</i> is the decimal user ID of the user.</p>
-<dt><code>KRB5_KTNAME</code></p>
-<dd> Specifies the location of the keytab file, in the form <i>TYPE</i>:<i>residual</i>. If no type is present, the <code>FILE</code> type is assumed and <i>residual</i> is the pathname of the keytab file. The default keytab file is /etc/krb5.keytab.</p>
-<dt><code>KRB5_CONFIG</code></p>
-<dd> Specifies the location of the Kerberos configuration file. The default is /etc/krb5.conf.</p>
-<dt><code>KRB5_KDC_PROFILE</code></p>
-<dd> Specifies the location of the KDC configuration file, which contains additional configuration directives for the Key Distribution Center daemon and associated programs. The default is /var/kerberos/krb5kdc/kdc.conf.</p>
-<dt><code>KRB5RCACHETYPE</code></p>
-<dd> Specifies the default type of replay cache to use for servers. Valid types include &quot;dfl&quot; for the normal file type and &quot;none&quot; for no replay cache. <code>KRB5RCACHEDIR</code> Specifies the default directory for replay caches used by servers. The default is the value of the <code>TMPDIR</code> environment variable, or /var/tmp if <code>TMPDIR</code> is not set.</p>
-<dt><code>KRB5_TRACE</code></p>
-<dd> Specifies a filename to write trace log output to. Trace logs can help illuminate decisions made internally by the Kerberos libraries. The default is not to write trace log output anywhere.</dl>
+<dt><code>KRB5CCNAME</code></dt>
+<dd> Specifies the location of the credential cache, in the form <i>TYPE</i>:<i>residual</i>. If no type prefix is present, the <code>FILE</code> type is assumed and <i>residual</i> is the pathname of the cache file. A collection of multiple caches may be used by specifying the <code>DIR</code> type and the pathname of a private directory (which must already exist). The default cache file is /tmp/krb5cc_<i>uid</i> where <i>uid</i> is the decimal user ID of the user.</dd>
+<dt><code>KRB5_KTNAME</code></dt>
+<dd> Specifies the location of the keytab file, in the form <i>TYPE</i>:<i>residual</i>. If no type is present, the <code>FILE</code> type is assumed and <i>residual</i> is the pathname of the keytab file. The default keytab file is /etc/krb5.keytab.</dd>
+<dt><code>KRB5_CONFIG</code></dt>
+<dd> Specifies the location of the Kerberos configuration file. The default is /etc/krb5.conf.</dd>
+<dt><code>KRB5_KDC_PROFILE</code></dt>
+<dd> Specifies the location of the KDC configuration file, which contains additional configuration directives for the Key Distribution Center daemon and associated programs. The default is /var/kerberos/krb5kdc/kdc.conf.</dd>
+<dt><code>KRB5RCACHETYPE</code></dt>
+<dd> Specifies the default type of replay cache to use for servers. Valid types include &quot;dfl&quot; for the normal file type and &quot;none&quot; for no replay cache. <code>KRB5RCACHEDIR</code> Specifies the default directory for replay caches used by servers. The default is the value of the <code>TMPDIR</code> environment variable, or /var/tmp if <code>TMPDIR</code> is not set.</dd>
+<dt><code>KRB5_TRACE</code></dt>
+<dd> Specifies a filename to write trace log output to. Trace logs can help illuminate decisions made internally by the Kerberos libraries. The default is not to write trace log output anywhere.</dd></dl>
 <p> Most environment variables are disabled for certain programs, such as login system programs and setuid programs, which are designed to be secure when run within an untrusted process environment.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kdestroy/">kdestroy</a>(1), <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1), <a href="/docs/linux/man/1-kswitch/">kswitch</a>(1), <a href="/docs/linux/man/1-kpasswd/">kpasswd</a>(1), <a href="/docs/linux/man/1-ksu/">ksu</a>(1), <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5), <a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5), <a href="/docs/linux/man/1-kadmin/">kadmin</a>(1), <a href="/docs/linux/man/8-kadmind/">kadmind</a>(8), <a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8), <a href="/docs/linux/man/8-krb5kdc/">krb5kdc</a>(8)</p>

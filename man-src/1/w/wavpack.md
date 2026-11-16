@@ -11,143 +11,143 @@ description: "wavpack – encode wav files to wavpack"
 <p> wavpack &#8211; encode wav files to wavpack </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>wavpack</code> [<i>-options</i>] <i>INFILE</i>&#8230; [<code>-o&nbsp;<wbr></code><i>OUTFILE</i>]</dl>
+<dt> <code>wavpack</code> [<i>-options</i>] <i>INFILE</i>&#8230; [<code>-o&nbsp;<wbr></code><i>OUTFILE</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>wavpack</code></p>
-<dd>encodes wav files containing uncompressed audio (or raw PCM data) into WavPack files using the options provided. The resulting filename will be <i>source-name.wv</i> unless overridden with the <code>-o</code> switch. Multiple input files may be specified resulting in multiple WavPack files, and in that case <code>-o</code> may be used to specify an alternate target directory. <i>Stdin</i> and <i>stdout</i> may be specified with &#8220;-&#8220;. To decode WavPack files back to wav or raw PCM use the <code>wvunpack</code> program.</p>
+<dd>encodes wav files containing uncompressed audio (or raw PCM data) into WavPack files using the options provided. The resulting filename will be <i>source-name.wv</i> unless overridden with the <code>-o</code> switch. Multiple input files may be specified resulting in multiple WavPack files, and in that case <code>-o</code> may be used to specify an alternate target directory. <i>Stdin</i> and <i>stdout</i> may be specified with &#8220;-&#8220;. To decode WavPack files back to wav or raw PCM use the <code>wvunpack</code> program.</dd>
 <h2>OPTIONS</h2>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> Adobe Audition (CoolEdit) mode for 32-bit floats</dl>
+</dt><dd> Adobe Audition (CoolEdit) mode for 32-bit floats</dd></dl>
 <p> <code>-b</code><i>n</i></p>
 <dl>
 <dt>
-<dd> enable hybrid compression, <i>n</i> = 2.0 to 23.9 bits/sample, or <i>n</i> = 24-9600 kbits/second (kbps)</dl>
+</dt><dd> enable hybrid compression, <i>n</i> = 2.0 to 23.9 bits/sample, or <i>n</i> = 24-9600 kbits/second (kbps)</dd></dl>
 <p> <code>&#8211;blocksize=</code><i>n</i></p>
 <dl>
 <dt>
-<dd> specify block size in samples (max = 131072 and min = 16 with <code>&#8211;merge-blocks</code>, otherwise 128)</dl>
+</dt><dd> specify block size in samples (max = 131072 and min = 16 with <code>&#8211;merge-blocks</code>, otherwise 128)</dd></dl>
 <p> <code>-c</code></p>
 <dl>
 <dt>
-<dd> create correction file (.wvc) for hybrid mode (results in 2-file lossless compression)</dl>
+</dt><dd> create correction file (.wvc) for hybrid mode (results in 2-file lossless compression)</dd></dl>
 <p> <code>-cc</code></p>
 <dl>
 <dt>
-<dd> maximum hybrid compression (hurts lossy quality &amp; decode speed)</dl>
+</dt><dd> maximum hybrid compression (hurts lossy quality &amp; decode speed)</dd></dl>
 <p> <code>&#8211;channel-order=</code><i>list</i></p>
 <dl>
 <dt>
-<dd> specify (comma separated) channel order if not Microsoft standard (which is FL,FR,FC,LFE,BL,BR,LC,FRC,BC,SL,SR,TC,TFL,TFC,TFR,TBL,TBC,TBR); specify &#8220;&#8230;&#8221; to indicate that channels are not assigned to specific speakers, or terminate list with &#8220;&#8230;&#8221; to indicate that any channels beyond those specified are unassigned</dl>
+</dt><dd> specify (comma separated) channel order if not Microsoft standard (which is FL,FR,FC,LFE,BL,BR,LC,FRC,BC,SL,SR,TC,TFL,TFC,TFR,TBL,TBC,TBR); specify &#8220;&#8230;&#8221; to indicate that channels are not assigned to specific speakers, or terminate list with &#8220;&#8230;&#8221; to indicate that any channels beyond those specified are unassigned</dd></dl>
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> delete source file if successful (use with caution!)</dl>
+</dt><dd> delete source file if successful (use with caution!)</dd></dl>
 <p> <code>-f</code></p>
 <dl>
 <dt>
-<dd> fast mode (fast, but some compromise in compression ratio)</dl>
+</dt><dd> fast mode (fast, but some compromise in compression ratio)</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> high quality (better compression ratio, but slower encode and decode than default mode)</dl>
+</dt><dd> high quality (better compression ratio, but slower encode and decode than default mode)</dd></dl>
 <p> <code>-hh</code></p>
 <dl>
 <dt>
-<dd> very high quality (best compression, but slowest and NOT recommended for use on portable playback devices)</dl>
+</dt><dd> very high quality (best compression, but slowest and NOT recommended for use on portable playback devices)</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> display extended help</dl>
+</dt><dd> display extended help</dd></dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> ignore length in wav header (no pipe output allowed)</dl>
+</dt><dd> ignore length in wav header (no pipe output allowed)</dd></dl>
 <p> <code>-j</code><i>n</i></p>
 <dl>
 <dt>
-<dd> joint-stereo override (0 = left/right, 1 = mid/side)</dl>
+</dt><dd> joint-stereo override (0 = left/right, 1 = mid/side)</dd></dl>
 <p> <code>-m</code></p>
 <dl>
 <dt>
-<dd> compute &amp; store MD5 signature of raw audio data</dl>
+</dt><dd> compute &amp; store MD5 signature of raw audio data</dd></dl>
 <p> <code>&#8211;merge-blocks</code></p>
 <dl>
 <dt>
-<dd> merge consecutive blocks with equal redundancy (used with <code>&#8211;blocksize</code> option and is useful for files generated by the lossyWAV program or decoded HDCD files)</dl>
+</dt><dd> merge consecutive blocks with equal redundancy (used with <code>&#8211;blocksize</code> option and is useful for files generated by the lossyWAV program or decoded HDCD files)</dd></dl>
 <p> <code>-n</code></p>
 <dl>
 <dt>
-<dd> calculate average and peak quantization noise (hybrid only, reference fullscale sine)</dl>
+</dt><dd> calculate average and peak quantization noise (hybrid only, reference fullscale sine)</dd></dl>
 <p> <code>&#8211;no-utf8-convert</code></p>
 <dl>
 <dt>
-<dd> don&#8217;t recode passed tags from local encoding to UTF-8, assume they are in UTF-8 already</dl>
+</dt><dd> don&#8217;t recode passed tags from local encoding to UTF-8, assume they are in UTF-8 already</dd></dl>
 <p> <code>-o </code><i>OUTFILE</i></p>
 <dl>
 <dt>
-<dd> specify output filename (only if single source file) or target directory (must exist)</dl>
+</dt><dd> specify output filename (only if single source file) or target directory (must exist)</dd></dl>
 <p> <code>&#8211;optimize-mono</code></p>
 <dl>
 <dt>
-<dd> optimization for stereo files that are really mono (result may be incompatible with very old decoders)</dl>
+</dt><dd> optimization for stereo files that are really mono (result may be incompatible with very old decoders)</dd></dl>
 <p> <code>&#8211;pair-unassigned-chans</code></p>
 <dl>
 <dt>
-<dd> encode unassigned channels into stereo pairs</dl>
+</dt><dd> encode unassigned channels into stereo pairs</dd></dl>
 <p> <code>-p</code></p>
 <dl>
 <dt>
-<dd> practical float storage (also 32-bit ints, not lossless)</dl>
+</dt><dd> practical float storage (also 32-bit ints, not lossless)</dd></dl>
 <p> <code>-q</code></p>
 <dl>
 <dt>
-<dd> quiet (keep console output to a minimum)</dl>
+</dt><dd> quiet (keep console output to a minimum)</dd></dl>
 <p> <code>-r</code></p>
 <dl>
 <dt>
-<dd> generate a new RIFF WAV header (any extra RIFF info in original file will be discarded)</dl>
+</dt><dd> generate a new RIFF WAV header (any extra RIFF info in original file will be discarded)</dd></dl>
 <p> <code>&#8211;raw-pcm</code></p>
 <dl>
 <dt>
-<dd> intput data is raw pcm (44,100 Hz, 16-bit, 2-channels)</dl>
+</dt><dd> intput data is raw pcm (44,100 Hz, 16-bit, 2-channels)</dd></dl>
 <p> <code>&#8211;raw-pcm=</code><i>sr</i><code>,</code><i>bits</i><code>,</code><i>chans</i></p>
 <dl>
 <dt>
-<dd> intput data is raw pcm with specified sample-rate, bit-depth, and number of channels (specify 32f for 32-bit floating point data)</dl>
+</dt><dd> intput data is raw pcm with specified sample-rate, bit-depth, and number of channels (specify 32f for 32-bit floating point data)</dd></dl>
 <p> <code>-s</code><i>n</i></p>
 <dl>
 <dt>
-<dd> override default hybrid mode noise shaping where n is a float value between -1.0 and 1.0; negative values move noise lower in freq, positive values move noise higher in freq, use 0 for no shaping (white noise)</dl>
+</dt><dd> override default hybrid mode noise shaping where n is a float value between -1.0 and 1.0; negative values move noise lower in freq, positive values move noise higher in freq, use 0 for no shaping (white noise)</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> copy input file&#8217;s time stamp to output file(s)</dl>
+</dt><dd> copy input file&#8217;s time stamp to output file(s)</dd></dl>
 <p> <code>&#8211;use-dns</code></p>
 <dl>
 <dt>
-<dd> force use of dynamic noise shaping (hybrid mode only)</dl>
+</dt><dd> force use of dynamic noise shaping (hybrid mode only)</dd></dl>
 <p> <code>-w </code><code>&#8220;</code><i>Field</i>=<i>Value</i>&#8221;</p>
 <dl>
 <dt>
-<dd> write specified text metadata to APEv2 tag</dl>
+</dt><dd> write specified text metadata to APEv2 tag</dd></dl>
 <p> <code>-w </code><code>&#8220;</code><i>Field</i>=@<i>file.ext</i>&#8221;</p>
 <dl>
 <dt>
-<dd> write specified text metadata from file to APEv2 tag, normally used for embedded cuesheets and logs (field names &#8220;Cuesheet&#8221; and &#8220;Log&#8221;)</dl>
+</dt><dd> write specified text metadata from file to APEv2 tag, normally used for embedded cuesheets and logs (field names &#8220;Cuesheet&#8221; and &#8220;Log&#8221;)</dd></dl>
 <p> <code>&#8211;write-binary-tag </code><code>&#8220;</code><i>Field</i>=@<i>file.ext</i>&#8221;</p>
 <dl>
 <dt>
-<dd> write the specified binary metadata file to APEv2 tag, normally used for cover art with the specified field name &#8220;Cover Art (Front)&#8221;</dl>
+</dt><dd> write the specified binary metadata file to APEv2 tag, normally used for cover art with the specified field name &#8220;Cover Art (Front)&#8221;</dd></dl>
 <p> <code>-x[</code><i>n</i><code>]</code></p>
 <dl>
 <dt>
-<dd> extra encode processing (optional n = 1 to 6, 1=default), -x1 to -x3 to choose best of predefined filters, -x4 to -x6 to generate custom filters (very slow!)</dl>
+</dt><dd> extra encode processing (optional n = 1 to 6, 1=default), -x1 to -x3 to choose best of predefined filters, -x4 to -x6 to generate custom filters (very slow!)</dd></dl>
 <p> <code>-y</code></p>
 <dl>
 <dt>
-<dd> yes to all warnings (use with caution!)</dl>
+</dt><dd> yes to all warnings (use with caution!)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wvunpack/">wvunpack</a></code>(1), <code><a href="/docs/linux/man/1-wvgain/">wvgain</a></code>(1) </p>
 <p> Please visit <a rel="nofollow" href="http://www.wavpack.com">www.wavpack.com</a> for more information</p>
@@ -157,11 +157,11 @@ description: "wavpack – encode wav files to wavpack"
 <p> <code>Sebastian Dröge</code> &lt;slomo [at] debian.org&gt; </p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <p> <code>David Bryant</code> &lt;david [at] wavpack.com&gt; </p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005 Sebastian Dröge<br />
  Copyright &#169; 2009 David Bryant </p>

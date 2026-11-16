@@ -23,13 +23,13 @@ ALTER TYPE <i>name</i> SET SCHEMA <i>new_schema</i></pre>
 <h2>Parameters</h2>
 
 <dl><dt><i>name</i>
-<dd>The name (possibly schema-qualified) of an existing type to alter.
-<dt><i>new_name</i>
-<dd>The new name for the type.
-<dt><i>new_owner</i>
-<dd>The user name of the new owner of the type.
-<dt><i>new_schema</i>
-<dd>The new schema for the type.</dl>
+</dt><dd>The name (possibly schema-qualified) of an existing type to alter.
+</dd><dt><i>new_name</i>
+</dt><dd>The new name for the type.
+</dd><dt><i>new_owner</i>
+</dt><dd>The user name of the new owner of the type.
+</dd><dt><i>new_schema</i>
+</dt><dd>The new schema for the type.</dd></dl>
 
 <h2>Examples</h2>
 

@@ -19,7 +19,7 @@ description: "dtgsyl.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DTGSYL solves the generalized Sylvester equation : A *R - L *B = scale * C(1)
                                                                              D *R -
@@ -50,11 +50,11 @@ DTGSYL solves the generalized Sylvester equation : A *R - L *B = scale * C(1)
  information.
  This is a level 3 BLAS algorithm.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER*1
           = 'N', solve the generalized Sylvester equation (1).
@@ -193,22 +193,22 @@ DTGSYL solves the generalized Sylvester equation : A *R - L *B = scale * C(1)
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   [1] B. Kagstrom and P. Poromaa, LAPACK-Style Algorithms and Software
       for Solving the Generalized Sylvester Equation and Estimating the
@@ -225,8 +225,9 @@ DTGSYL solves the generalized Sylvester equation : A *R - L *B = scale * C(1)
       Equation, IEEE Transactions on Automatic Control, Vol. 34, No. 7,
       July 1989, pp 745-751.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 298 of file dtgsyl.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

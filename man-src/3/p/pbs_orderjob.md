@@ -10,7 +10,6 @@ description: "pbs_orderjob – reorder pbs batch jobs in a queue"
 <p>pbs_orderjob &#8211; reorder pbs batch jobs in a queue</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_orderjob(int connect, char&nbsp;<wbr>*job_id1, char&nbsp;<wbr>*job_id2, 
 char&nbsp;<wbr>*extend)

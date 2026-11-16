@@ -20,10 +20,10 @@ int isatty(int fd);
 <p> <code>isatty</code>() returns 1 if <i>fd</i> is an open file descriptor referring to a terminal; otherwise 0 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTTY</code></p>
-<dd> <i>fd</i> refers to a file other than a terminal. On some older kernels, some types of files resulted in the error <code>EINVAL</code> in this case (which is a violation of POSIX, which specifies the error <code>ENOTTY</code>).</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> <i>fd</i> refers to a file other than a terminal. On some older kernels, some types of files resulted in the error <code>EINVAL</code> in this case (which is a violation of POSIX, which specifies the error <code>ENOTTY</code>).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

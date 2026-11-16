@@ -16,17 +16,17 @@ description: "perlce – Perl for WinCE"
 <p> This file gives the instructions for building Perl5.8 and above for WinCE. Please read and understand the terms under which this software is distributed.</p>
 <h3>General explanations on cross-compiling WinCE</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <i>miniperl</i> is built. This is a single executable (without <font SIZE="-1">DLL</font>), intended to run on Win32, and it will facilitate remaining build process; all binaries built after it are foreign and should not run locally. </p>
+<dt>&bull;</dt>
+<dd> <i>miniperl</i> is built. This is a single executable (without <font SIZE="-1">DLL</font>), intended to run on Win32, and it will facilitate remaining build process; all binaries built after it are foreign and should not run locally. </dd>
 <p> <i>miniperl</i> is built using <i>./win32/Makefile</i>; this is part of normal build process invoked as dependency from wince/Makefile.ce</p>
-<dt>&bull;</p>
-<dd> After <i>miniperl</i> is built, <i>configpm</i> is invoked to create right <i>Config.pm</i> in right place and its corresponding Cross.pm. </p>
+<dt>&bull;</dt>
+<dd> After <i>miniperl</i> is built, <i>configpm</i> is invoked to create right <i>Config.pm</i> in right place and its corresponding Cross.pm. </dd>
 <p> Unlike Win32 build, miniperl will not have <i>Config.pm</i> of host within reach; it rather will use <i>Config.pm</i> from within cross-compilation directories. </p>
 <p> File <i>Cross.pm</i> is dead simple: for given cross-architecture places in <tt>@INC</tt> a path where perl modules are, and right <i>Config.pm</i> in that place. </p>
 <p> That said, <tt>&quot;miniperl -Ilib -MConfig -we 1&quot;</tt> should report an error, because it can not find <i>Config.pm</i>. If it does not give an error &#8212; wrong <i>Config.pm</i> is substituted, and resulting binaries will be a mess. </p>
 <p> <tt>&quot;miniperl -MCross -MConfig -we 1&quot;</tt> should run okay, and it will provide right <i>Config.pm</i> for further compilations.</p>
-<dt>&bull;</p>
-<dd> During extensions build phase, a script <i>./win32/buildext.pl</i> is invoked, which in turn steps in <i>./ext</i> subdirectories and performs a build of each extension in turn. </p>
+<dt>&bull;</dt>
+<dd> During extensions build phase, a script <i>./win32/buildext.pl</i> is invoked, which in turn steps in <i>./ext</i> subdirectories and performs a build of each extension in turn. </dd>
 <p> All invokes of <i>Makefile.PL</i> are provided with <tt>&quot;-MCross&quot;</tt> so to enable cross- compile.</dl>
 <h3><font SIZE="-1">CURRENT BUILD INSTRUCTIONS</font></h3>
 <p> (These instructions assume the host is 32-bit Windows. If you&#8217;re on 64-bit Windows then change &#8220;C:\Program Files&#8221; to &#8220;C:\Program Files (x86)&#8221; throughout.) </p>
@@ -53,3 +53,5 @@ description: "perlce – Perl for WinCE"
 <p> 5. Open win32/Makefile.ce in a text editor and do something similar to the following patch. </p>
 <pre>
     -CELIBDLLDIR  = h:\src\wince
+</p>
+</pre>

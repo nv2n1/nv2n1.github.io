@@ -19,7 +19,7 @@ description: "ctgsja.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CTGSJA computes the generalized singular value decomposition(GSVD)
 of two complex upper triangular(or trapezoidal) matrices A and B.On entry, it is assumed that matrices A and B have the following forms, which may be obtained by the preprocessing subroutine CGGSVP from a general M - by - N matrix A and P - by - N matrix B : N - K - L K L A = K(0 A12 A13) if M - K - L &gt;= 0;
@@ -68,11 +68,11 @@ A23 is L - by - L upper triangular if M - K - L &gt;= 0,
                  may be postmultiplied into input matrices U1,
              V1, or Q1.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU</i> </p>
+</dt><dd> <i>JOBU</i> </dd>
 <pre>
           JOBU is CHARACTER*1
           = 'U':  U must contain a unitary matrix U1 on entry, and
@@ -239,29 +239,29 @@ LDQ &gt;= 1 otherwise.
 <p> <code>Internal Parameters: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   MAXIT   INTEGER
           MAXIT specifies the total loops that the iterative procedure
           may take. If after MAXIT cycles, the routine fails to
           converge, we return INFO = 1.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   CTGSJA essentially uses a variant of Kogbetliantz algorithm to reduce
   min(L,M-K)-by-L triangular (or trapezoidal) matrix A23 and L-by-L
@@ -272,8 +272,9 @@ LDQ &gt;= 1 otherwise.
                 C1**2 + S1**2 = I,
   and R1 is an L-by-L nonsingular upper triangular matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 378 of file ctgsja.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

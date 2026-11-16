@@ -16,11 +16,11 @@ description: "WildMidi_FastSeek – Move to a position in a midi file"
 <h2>Description</h2>
 <p>Resets all note specific midi states and active notes before scanning to <i>sample_pos</i> samples from the beginning taking note of any changes to midi channel states. The next call to <i><a href="/docs/linux/man/3-wildmidi_getoutput/">WildMidi_GetOutput</a></i>(3) will behave as if you started to play the midi from that position. </p>
 <dl COMPACT>
-<dt><i>handle</i></p>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dl>
+<dt><i>handle</i></dt>
+<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
 <dl COMPACT>
-<dt><i>sample_pos</i></p>
-<dd>The number of samples from the beginning you want libWildMidi to seek to.</dl>
+<dt><i>sample_pos</i></dt>
+<dd>The number of samples from the beginning you want libWildMidi to seek to.</dd></dl>
 <p> NOTE: significant delay can occur when using this function. You can expect even more delay if you select a position that&#8217;s already been passed forcing the library to start from the beginning. </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-wildmidi_getstring/">WildMidi_GetString</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_init/">WildMidi_Init</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_mastervolume/">WildMidi_MasterVolume</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_setoption/">WildMidi_SetOption</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_getoutput/">WildMidi_GetOutput</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_getinfo/">WildMidi_GetInfo</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_close/">WildMidi_Close</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-wildmidi_shutdown/">WildMidi_Shutdown</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/5-wildmidi-cfg/">wildmidi.cfg</a></code>(5) </p>

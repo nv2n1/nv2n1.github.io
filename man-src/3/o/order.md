@@ -22,6 +22,6 @@ description: "QuantLib::GaussianQuadrature – Integral of a 1-dimensional funct
 <p> G.H. Gloub and J.H. Welsch: Calculation of Gauss quadrature rule. Math. Comput. 23 (1986), 221-230 </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the result is tested by checking it against known good values.</dl>
+<dd>the correctness of the result is tested by checking it against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

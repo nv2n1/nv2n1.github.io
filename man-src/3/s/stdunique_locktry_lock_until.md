@@ -12,7 +12,6 @@ std::unique_lock&lt;Mutex&gt;::try_lock_until - std::unique_lock&lt;Mutex&gt;::t
 
 <pre><code>template &lt;class Clock, class Duration&gt;
 (since C++ 11)
-
     bool try_lock_until(const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time);</code></pre> 
 Tries to lock the associated mutex. Blocks until specified timeout_time has been reached or the lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false. May block for longer than until timeout_time has been reached. 
 Effectively calls mutex()-&gt;try_lock_until(timeout_time) 

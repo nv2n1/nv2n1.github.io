@@ -31,104 +31,104 @@ description: "latexmk – generate LaTeX document"
 <p> Run <i>latexmk</i> with the <code>-showextraoptions</code> to get a list of the options that <i>latexmk</i> accepts and that are simply passed through to <i>*latex</i>. See also the explanation of the <code>-showextraoptions</code> option for more information. </p>
 <p> <code>Definitions of options and arguments</code> </p>
 <dl>
-<dt><code>file</code></p>
-<dd> One or more files can be specified. If no files are specified, <i>latexmk</i> will, by default, run on all files in the current working directory with a &quot;.tex&quot; extension. This behavior can be changed: see the description concerning the <i>@default_files</i> variable in the section &quot;List of configuration variables usable in initialization files&quot;. </p>
+<dt><code>file</code></dt>
+<dd> One or more files can be specified. If no files are specified, <i>latexmk</i> will, by default, run on all files in the current working directory with a &quot;.tex&quot; extension. This behavior can be changed: see the description concerning the <i>@default_files</i> variable in the section &quot;List of configuration variables usable in initialization files&quot;. </dd>
 <p> If a file is specified without an extension, then the &quot;.tex&quot; extension is automatically added, just as LaTeX does. Thus, if you specify: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk foo</p>
 <p> then <i>latexmk</i> will operate on the file &quot;foo.tex&quot;. </p>
 <p> There are certain restrictions on what characters can be in a filename; certain characters are either prohibited or problematic for the <i>latex</i> etc programs. These characters are: &quot;$&quot;, &quot;%&quot;, &quot;\&quot;, &quot;~&quot;, the double quote character, and the control characters null, tab, form feed, carriage return, line feed, and delete. In addition &quot;&amp;&quot; is prohibited when it is the first character of a filename. </p>
 <p> <i>Latexmk</i> gives a fatal error when it detects any of the above characters in the TeX filename(s) specified on the command line. <i>However</i> before testing for illegal characters, <i>latexmk</i> removes matching pairs of double quotes from a filename. This matches the behavior of <i>latex</i> etc, and deals with problems that occasionally result from filenames that have been incorrectly quoted on the command line. <i>In addition</i>, under Microsoft Windows, the forward slash character &quot;\&quot; is a directory separator, so <i>latexmk</i> replaces it by a backward slash &quot;/&quot;, which is also a legal directory separator in Windows, and is accepted by <i>latex</i> etc. </p>
-<dt><code>-auxdir=FOO </code>or<code> -aux-directory=FOO</code></p>
-<dd> Sets the directory for auxiliary output files of *latex (.aux, .log etc). This achieves its effect by the <code>-aux-directory</code> option of *latex, which currently is only implemented on the MiKTeX version of *latex. </p>
+<dt><code>-auxdir=FOO </code>or<code> -aux-directory=FOO</code></dt>
+<dd> Sets the directory for auxiliary output files of *latex (.aux, .log etc). This achieves its effect by the <code>-aux-directory</code> option of *latex, which currently is only implemented on the MiKTeX version of *latex. </dd>
 <p> See also the <code>-outdir</code>/<code>-output-directory</code> options, and the <i>$aux_dir</i>, <i>$out_dir</i>, and <i>$search_path_separator</i> configuration variables of <i>latexmk</i>. In particular, see the documentation of <i>$out_dir</i> for some complications on what directory names are suitable. </p>
 <p> If you also use the <code>-cd</code> option, and the specified auxiliary output directory is a relative path, then the path is interpreted relative to the document directory. </p>
-<dt><code>-bibtex </code></p>
-<dd> When the source file uses bbl files for bibliography, run bibtex or biber as needed to regenerate the bbl files. </p>
+<dt><code>-bibtex </code></dt>
+<dd> When the source file uses bbl files for bibliography, run bibtex or biber as needed to regenerate the bbl files. </dd>
 <p> This property can also be configured by setting the <i>$bibtex_use</i> variable to 2 in a configuration file. </p>
-<dt><code>-bibtex-</code></p>
-<dd> Never run bibtex or biber. Also, always treat .bbl files as precious, i.e., do not delete them in a cleanup operation. </p>
+<dt><code>-bibtex-</code></dt>
+<dd> Never run bibtex or biber. Also, always treat .bbl files as precious, i.e., do not delete them in a cleanup operation. </dd>
 <p> A common use for this option is when a document comes from an external source, complete with its bbl file(s), and the user does not have the corresponding bib files available. In this situation use of the <code>-bibtex-</code> option will prevent <i>latexmk</i> from trying to run <i>bibtex</i> or <i>biber</i>, which would result in overwriting of the bbl files. </p>
 <p> This property can also be configured by setting the <i>$bibtex_use</i> variable to 0 in a configuration file. </p>
-<dt><code>-bibtex-cond</code></p>
-<dd> When the source file uses bbl file(s) for the bibliography, run <i>bibtex</i> or <i>biber</i> as needed to regenerate the bbl files, but only if the relevant bib file(s) exist. Thus when the bib files are not available, <i>bibtex</i> or <i>biber</i> is not run, thereby avoiding overwriting of the bbl file(s). Also, always treat .bbl files as precious, i.e., do not delete them in a cleanup operation. </p>
+<dt><code>-bibtex-cond</code></dt>
+<dd> When the source file uses bbl file(s) for the bibliography, run <i>bibtex</i> or <i>biber</i> as needed to regenerate the bbl files, but only if the relevant bib file(s) exist. Thus when the bib files are not available, <i>bibtex</i> or <i>biber</i> is not run, thereby avoiding overwriting of the bbl file(s). Also, always treat .bbl files as precious, i.e., do not delete them in a cleanup operation. </dd>
 <p> This is the default setting. It can also be configured by setting the <i>$bibtex_use</i> variable to 1 in a configuration file. </p>
 <p> The reason for using this setting is that sometimes a .bbl file is available containing the bibliography for a document, but the .bib file is not available. An example would be for a scientific journal where authors submit .tex and .bbl files, but not the original .bib file. In that case, running <i>bibtex</i> or <i>biber</i> would not work, and the .bbl file should be treated as a user source file, and not as a file that can be regenerated on demand. </p>
 <p> (Note that it is possible for <i>latexmk</i> to decide that the bib file does not exist, even though the bib file does exist and <i>bibtex</i> or <i>biber</i> finds it. The problem is that the bib file may not be in the current directory but in some search path; the places <i>latexmk</i> and <i>bibtex</i> or <i>biber</i> cause to be searched need not be identical. On modern installations of TeX and related programs this problem should not arise, since <i>latexmk</i> uses the <i>kpsewhich</i> program to do the search, and <i>kpsewhich</i> should use the same search path as <i>bibtex</i> and <i>biber</i>. If this problem arises, use the <code>-bibtex</code> option when invoking <i>latexmk</i>.) </p>
 <p> Note that this value does <i>not</i> work properly if the document uses <i>biber</i> instead of <i>bibtex</i>. (There&#8217;s a long story why not.) </p>
-<dt><code>-bibtex-cond1</code></p>
-<dd> The same as <code>-bibtex-cond</code> except that .bbl files are only treated as precious if one or more bibfiles fails to exist. </p>
+<dt><code>-bibtex-cond1</code></dt>
+<dd> The same as <code>-bibtex-cond</code> except that .bbl files are only treated as precious if one or more bibfiles fails to exist. </dd>
 <p> Thus if all the bib files exist, <i>bibtex</i> or <i>biber</i> is run to generate .bbl files as needed, and then it is appropriate to delete the bbl files in a cleanup operation since they can be re-generated. </p>
 <p> This property can also be configured by setting the <i>$bibtex_use</i> variable to 1.5 in a configuration file. </p>
-<dt><code>-bibtexfudge</code> or<code> -bibfudge</code></p>
-<dd> Turn on the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </p>
-<dt><code>-bibtexfudge-</code> or<code> -bibfudge-</code></p>
-<dd> Turn off the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </p>
-<dt><code>-bm &lt;message&gt;</code></p>
-<dd> A banner message to print diagonally across each page when converting the dvi file to postscript. The message must be a single argument on the command line so be careful with quoting spaces and such. </p>
+<dt><code>-bibtexfudge</code> or<code> -bibfudge</code></dt>
+<dd> Turn on the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </dd>
+<dt><code>-bibtexfudge-</code> or<code> -bibfudge-</code></dt>
+<dd> Turn off the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </dd>
+<dt><code>-bm &lt;message&gt;</code></dt>
+<dd> A banner message to print diagonally across each page when converting the dvi file to postscript. The message must be a single argument on the command line so be careful with quoting spaces and such. </dd>
 <p> Note that if the <code>-bm</code> option is specified, the <code>-ps</code> option is assumed. </p>
-<dt><code>-bi &lt;intensity&gt;</code></p>
-<dd> How dark to print the banner message. A decimal number between 0 and 1. 0 is black and 1 is white. The default is 0.95, which is OK unless your toner cartridge is getting low. </p>
-<dt><code>-bs &lt;scale&gt;</code></p>
-<dd> A decimal number that specifies how large the banner message will be printed. Experimentation is necessary to get the right scale for your message, as a rule of thumb the scale should be about equal to 1100 divided by the number of characters in the message. The default is 220.0 which is just right for 5 character messages. </p>
-<dt><code>-commands</code></p>
-<dd> List the commands used by <i>latexmk</i> for processing files, and then exit. </p>
-<dt><code>-c</code></p>
-<dd> Clean up (remove) all regeneratable files generated by <i>latex</i> and <i>bibtex</i> or <i>biber</i> except dvi, postscript and pdf. These files are a combination of log files, aux files, <i>latexmk</i>&#8216;s database file of source file information, and those with extensions specified in the <i>@generated_exts</i> configuration variable. In addition, files specified by the <i>$clean_ext</i> and <i>@generated_exts</i> configuration variables are removed. </p>
+<dt><code>-bi &lt;intensity&gt;</code></dt>
+<dd> How dark to print the banner message. A decimal number between 0 and 1. 0 is black and 1 is white. The default is 0.95, which is OK unless your toner cartridge is getting low. </dd>
+<dt><code>-bs &lt;scale&gt;</code></dt>
+<dd> A decimal number that specifies how large the banner message will be printed. Experimentation is necessary to get the right scale for your message, as a rule of thumb the scale should be about equal to 1100 divided by the number of characters in the message. The default is 220.0 which is just right for 5 character messages. </dd>
+<dt><code>-commands</code></dt>
+<dd> List the commands used by <i>latexmk</i> for processing files, and then exit. </dd>
+<dt><code>-c</code></dt>
+<dd> Clean up (remove) all regeneratable files generated by <i>latex</i> and <i>bibtex</i> or <i>biber</i> except dvi, postscript and pdf. These files are a combination of log files, aux files, <i>latexmk</i>&#8216;s database file of source file information, and those with extensions specified in the <i>@generated_exts</i> configuration variable. In addition, files specified by the <i>$clean_ext</i> and <i>@generated_exts</i> configuration variables are removed. </dd>
 <p> This cleanup is instead of a regular make. See the <code>-gg</code> option if you want to do a cleanup followed by a make. </p>
 <p> <i>Treatment of .bbl files: </i> If <i>$bibtex_use</i> is set to 0 or 1, bbl files are always treated as non-regeneratable. If <i>$bibtex_use</i> is set to 1.5, bbl files are counted as non-regeneratable conditionally: If the bib file exists, then bbl files are regeneratable, and are deleted in a clean up. But if <i>$bibtex_use</i> is 1.5 and a bib file doesn&#8217;t exist, then the bbl files are treated as non-regeneratable and hence are not deleted. </p>
 <p> In contrast, if <i>$bibtex_use</i> is set to 2, bbl files are always treated as regeneratable, and are deleted in a cleanup. </p>
 <p> <i>Treatment of files generated by custom dependencies:</i> If <i>$cleanup_includes_cusdep_generated</i> is nonzero, regeneratable files are considered as including those generated by custom dependencies and are also deleted. Otherwise these files are not deleted. </p>
-<dt><code>-C</code></p>
-<dd> Clean up (remove) all regeneratable files generated by <i>latex</i> and <i>bibtex</i> or <i>biber</i>. This is the same as the <code>-c</code> option with the addition of dvi, postscript and pdf files, and those specified in the <i>$clean_full_ext</i> configuration variable. </p>
+<dt><code>-C</code></dt>
+<dd> Clean up (remove) all regeneratable files generated by <i>latex</i> and <i>bibtex</i> or <i>biber</i>. This is the same as the <code>-c</code> option with the addition of dvi, postscript and pdf files, and those specified in the <i>$clean_full_ext</i> configuration variable. </dd>
 <p> This cleanup is instead of a regular make. See the <code>-gg</code> option if you want to do a cleanup followed by a make. </p>
 <p> See the <code>-c</code> option for the specification of whether or not .bbl files are treated as non-regeneratable or regeneratable. </p>
 <p> If <i>$cleanup_includes_cusdep_generated</i> is nonzero, regeneratable files are considered as including those generated by custom dependencies and are also deleted. Otherwise these files are not deleted. </p>
-<dt><code>-CA</code></p>
-<dd> (Obsolete). Now equivalent to the <code>-C</code> option. See that option for details. </p>
-<dt><code>-cd</code></p>
-<dd> Change to the directory containing the main source file before processing it. Then all the generated files (.aux, .log, .dvi, .pdf, etc) will be relative to the source file. </p>
+<dt><code>-CA</code></dt>
+<dd> (Obsolete). Now equivalent to the <code>-C</code> option. See that option for details. </dd>
+<dt><code>-cd</code></dt>
+<dd> Change to the directory containing the main source file before processing it. Then all the generated files (.aux, .log, .dvi, .pdf, etc) will be relative to the source file. </dd>
 <p> This option is particularly useful when <i>latexmk</i> is invoked from a GUI configured to invoke <i>latexmk</i> with a full pathname for the source file. </p>
 <p> This option works by setting the <code>$do_cd</code> configuration variable to one; you can set that variable if you want to configure <i>latexmk</i> to have the effect of the <code>-cd</code> option without specifying it on the command line. See the documentation for that variable. </p>
-<dt><code>-cd-</code></p>
-<dd> Do NOT change to the directory containing the main source file before processing it. Then all the generated files (.aux, .log, .dvi, .pdf, etc) will be relative to the current directory rather than the source file. </p>
+<dt><code>-cd-</code></dt>
+<dd> Do NOT change to the directory containing the main source file before processing it. Then all the generated files (.aux, .log, .dvi, .pdf, etc) will be relative to the current directory rather than the source file. </dd>
 <p> This is the default behavior and corresponds to the behavior of the <i>*latex</i> programs. However, it is not desirable behavior when <i>latexmk</i> is invoked by a GUI configured to invoke <i>latexmk</i> with a full pathname for the source file. See the <code>-cd</code> option. </p>
 <p> This option works by setting the <code>$do_cd</code> configuration variable to zero. See the documentation for that variable for more information. </p>
-<dt><code>-CF</code></p>
-<dd> Remove the file containing the database of source file information, before doing the other actions requested. </p>
-<dt><code>-d</code></p>
-<dd> Set draft mode. This prints the banner message &quot;DRAFT&quot; across your page when converting the dvi file to postscript. Size and intensity can be modified with the <code>-bs</code> and <code>-bi</code> options. The <code>-bm</code> option will override this option as this is really just a short way of specifying: </p>
+<dt><code>-CF</code></dt>
+<dd> Remove the file containing the database of source file information, before doing the other actions requested. </dd>
+<dt><code>-d</code></dt>
+<dd> Set draft mode. This prints the banner message &quot;DRAFT&quot; across your page when converting the dvi file to postscript. Size and intensity can be modified with the <code>-bs</code> and <code>-bi</code> options. The <code>-bm</code> option will override this option as this is really just a short way of specifying: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -bm DRAFT</p>
 <p> Note that if the <code>-d</code> option is specified, the <code>-ps</code> option is assumed. </p>
-<dt><code>-deps </code></p>
-<dd> Show a list of dependent files after processing. This is in the form of a dependency list of the form used by the <i>make</i> program, and it is therefore suitable for use in a Makefile. It gives an overall view of the files without listing intermediate files, as well as <i>latexmk</i> can determine them. </p>
+<dt><code>-deps </code></dt>
+<dd> Show a list of dependent files after processing. This is in the form of a dependency list of the form used by the <i>make</i> program, and it is therefore suitable for use in a Makefile. It gives an overall view of the files without listing intermediate files, as well as <i>latexmk</i> can determine them. </dd>
 <p> By default the list of dependent files is sent to stdout (i.e., normally to the screen unless you&#8217;ve redirected <i>latexmk</i>&#8216;s output). But you can set the filename where the list is sent by the <code>-deps-out=</code> option. </p>
 <p> See the section &quot;USING <i>latexmk</i> WITH <i>make</i>&quot; for an example of how to use a dependency list with <i>make</i>. </p>
 <p> Users familiar with GNU <i>automake</i> and <i>gcc</i> will find that the <code>-deps</code> option is very similar in its purpose and results to the <code>-M</code> option to <i>gcc</i>. (In fact, <i>latexmk</i> also has options <code>-M</code>, <code>-MF</code>, and <code>-MP</code> options that behave like those of <i>gcc</i>.) </p>
-<dt><code>-dependents</code></p>
-<dd> Equivalent to <code>-deps</code>. </p>
-<dt><code>-deps- </code></p>
-<dd> Do not show a list of dependent files after processing. (This is the default.) </p>
-<dt><code>-dependents-</code></p>
-<dd> Equivalent to <code>-deps-</code>. </p>
-<dt><code>-deps-out=FILENAME </code></p>
-<dd> Set the filename to which the list of dependent files is written. If the FILENAME argument is omitted or set to &quot;-&quot;, then the output is sent to stdout. </p>
+<dt><code>-dependents</code></dt>
+<dd> Equivalent to <code>-deps</code>. </dd>
+<dt><code>-deps- </code></dt>
+<dd> Do not show a list of dependent files after processing. (This is the default.) </dd>
+<dt><code>-dependents-</code></dt>
+<dd> Equivalent to <code>-deps-</code>. </dd>
+<dt><code>-deps-out=FILENAME </code></dt>
+<dd> Set the filename to which the list of dependent files is written. If the FILENAME argument is omitted or set to &quot;-&quot;, then the output is sent to stdout. </dd>
 <p> Use of this option also turns on the output of the list of dependent files after processing. </p>
-<dt><code>-dF</code></p>
-<dd> Dvi file filtering. The argument to this option is a filter which will generate a filtered dvi file with the extension &quot;.dviF&quot;. All extra processing (e.g. conversion to postscript, preview, printing) will then be performed on this filtered dvi file. </p>
+<dt><code>-dF</code></dt>
+<dd> Dvi file filtering. The argument to this option is a filter which will generate a filtered dvi file with the extension &quot;.dviF&quot;. All extra processing (e.g. conversion to postscript, preview, printing) will then be performed on this filtered dvi file. </dd>
 <p> Example usage: To use dviselect to select only the even pages of the dvi file: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -dF &quot;dviselect even&quot; foo.tex</p>
-<dt><code>-diagnostics</code></p>
-<dd> Print detailed diagnostics during a run. This may help for debugging problems or to understand <i>latexmk</i>&#8216;s behavior in difficult situations. </p>
-<dt><code>-dir-report</code></p>
-<dd> For each .tex file processed, list the settings for aux and out directories, after they have been normalized from the settings specified during initialization. See the description of the variable <code>$aux_out_dir_report</code> for more details. </p>
-<dt><code>-dir-report-</code></p>
-<dd> Do not report the settings for aux and out directories. (Default) </p>
-<dt><code>-dvi</code></p>
-<dd> Generate dvi version of document. </p>
-<dt><code>-dvi-</code></p>
-<dd> Turn off generation of dvi version of document. (This may get overridden, if some other file is made (e.g., a .ps file) that is generated from the dvi file, or if no generated file at all is requested.) </p>
-<dt><code>-e &lt;code&gt;</code></p>
-<dd> Execute the specified initialization code before processing. The code is <i>Perl</i> code of the same form as is used in <i>latexmk</i>&#8216;s initialization files. For more details, see the information on the <code>-r</code> option, and the section about &quot;Configuration/initialization (RC) files&quot;. The code is typically a sequence of assignment statements separated by semicolons. </p>
+<dt><code>-diagnostics</code></dt>
+<dd> Print detailed diagnostics during a run. This may help for debugging problems or to understand <i>latexmk</i>&#8216;s behavior in difficult situations. </dd>
+<dt><code>-dir-report</code></dt>
+<dd> For each .tex file processed, list the settings for aux and out directories, after they have been normalized from the settings specified during initialization. See the description of the variable <code>$aux_out_dir_report</code> for more details. </dd>
+<dt><code>-dir-report-</code></dt>
+<dd> Do not report the settings for aux and out directories. (Default) </dd>
+<dt><code>-dvi</code></dt>
+<dd> Generate dvi version of document. </dd>
+<dt><code>-dvi-</code></dt>
+<dd> Turn off generation of dvi version of document. (This may get overridden, if some other file is made (e.g., a .ps file) that is generated from the dvi file, or if no generated file at all is requested.) </dd>
+<dt><code>-e &lt;code&gt;</code></dt>
+<dd> Execute the specified initialization code before processing. The code is <i>Perl</i> code of the same form as is used in <i>latexmk</i>&#8216;s initialization files. For more details, see the information on the <code>-r</code> option, and the section about &quot;Configuration/initialization (RC) files&quot;. The code is typically a sequence of assignment statements separated by semicolons. </dd>
 <p> The code is executed when the <code>-e</code> option is encountered during <i>latexmk</i>&#8216;s parsing of its command line. See the <code>-r</code> option for a way of executing initialization code from a file. An error results in <i>latexmk</i> stopping. Multiple instances of the <code>-r</code> and <code>-e</code> options can be used, and they are executed in the order they appear on the command line. </p>
 <p> Some care is needed to deal with proper quoting of special characters in the code on the command line. For example, suppose you want to set the latex command to use its -shell-escape option, then under UNIX/Linux you could use the line </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -e &#8216;$latex=q/latex %O -shell-escape %S/&#8217; file.tex</p>
@@ -139,26 +139,26 @@ description: "latexmk – generate LaTeX document"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -e &quot;$latex=&#8217;latex %O -shell-escape %S&#8217;&quot; file.tex</p>
 <p> The last two examples will NOT work with UNIX/Linux command shells. </p>
 <p> (<i>Note</i>: the above examples show are to show how to use the <code>-e</code> to specify initialization code to be executed. But the particular effect can be achieved also by the use of the <code>-latex</code> option with less problems in dealing with quoting.) </p>
-<dt><code>-emulate-aux-dir</code></p>
-<dd> Emulate -aux-directory instead of leaving it to the *latex programs to do it. (MiKTeX supports -aux-directory, but TeXLive doesn&#8217;t.) </p>
+<dt><code>-emulate-aux-dir</code></dt>
+<dd> Emulate -aux-directory instead of leaving it to the *latex programs to do it. (MiKTeX supports -aux-directory, but TeXLive doesn&#8217;t.) </dd>
 <p> For more details see the explanation for the configuration variable <i>$emulate_aux</i>. </p>
-<dt><code>-emulate-aux-dir-</code></p>
-<dd> Turn off emulatation -aux-directory and leave it to the *latex program to handle the case that aux_dir is not equal to out_dir. Note that if you use TeXLive, which doesn&#8217;t support -aux-directory, latexmk will automatically switch aux_dir emulation on after the first run of *latex, because it will find the .log file in the wrong place. </p>
-<dt><code>-f</code></p>
-<dd> Force <i>latexmk</i> to continue document processing despite errors. Normally, when <i>latexmk</i> detects that LaTeX or another program has found an error which will not be resolved by further processing, no further processing is carried out. </p>
+<dt><code>-emulate-aux-dir-</code></dt>
+<dd> Turn off emulatation -aux-directory and leave it to the *latex program to handle the case that aux_dir is not equal to out_dir. Note that if you use TeXLive, which doesn&#8217;t support -aux-directory, latexmk will automatically switch aux_dir emulation on after the first run of *latex, because it will find the .log file in the wrong place. </dd>
+<dt><code>-f</code></dt>
+<dd> Force <i>latexmk</i> to continue document processing despite errors. Normally, when <i>latexmk</i> detects that LaTeX or another program has found an error which will not be resolved by further processing, no further processing is carried out. </dd>
 <p> Note: &quot;Further processing&quot; means the running of other programs or the rerunning of <i>latex</i> (etc) that would be done if no errors had occurred. If instead, or additionally, you want the <i>latex</i> (etc) program not to pause for user input after an error, you should arrange this by an option that is passed to the program, e.g., by <i>latexmk</i>&#8216;s option <code>-interaction=nonstopmode</code> (which <i>latexmk</i> passes to <i>*latex</i>). </p>
-<dt><code>-f-</code></p>
-<dd> Turn off the forced processing-past-errors such as is set by the <code>-f</code> option. This could be used to override a setting in a configuration file. </p>
-<dt><code>-g</code></p>
-<dd> Force <i>latexmk</i> to process document fully, even under situations where <i>latexmk</i> would normally decide that no changes in the source files have occurred since the previous run. This option is useful, for example, if you change some options and wish to reprocess the files. </p>
-<dt><code>-g-</code></p>
-<dd> Turn off <code>-g</code>. </p>
-<dt><code>-gg</code></p>
-<dd> &quot;Super go mode&quot; or &quot;clean make&quot;: clean out generated files as if <code>-C</code> had been given, and then do a regular make. </p>
-<dt><code>-h </code>or<code>-non-help</code></p>
-<dd> Print help information. </p>
-<dt><code>-jobname=STRING</code></p>
-<dd> Set the basename of output files(s) to STRING, instead of the default, which is the basename of the specified TeX file. (At present, STRING should not contain spaces.) </p>
+<dt><code>-f-</code></dt>
+<dd> Turn off the forced processing-past-errors such as is set by the <code>-f</code> option. This could be used to override a setting in a configuration file. </dd>
+<dt><code>-g</code></dt>
+<dd> Force <i>latexmk</i> to process document fully, even under situations where <i>latexmk</i> would normally decide that no changes in the source files have occurred since the previous run. This option is useful, for example, if you change some options and wish to reprocess the files. </dd>
+<dt><code>-g-</code></dt>
+<dd> Turn off <code>-g</code>. </dd>
+<dt><code>-gg</code></dt>
+<dd> &quot;Super go mode&quot; or &quot;clean make&quot;: clean out generated files as if <code>-C</code> had been given, and then do a regular make. </dd>
+<dt><code>-h </code>or<code>-non-help</code></dt>
+<dd> Print help information. </dd>
+<dt><code>-jobname=STRING</code></dt>
+<dd> Set the basename of output files(s) to STRING, instead of the default, which is the basename of the specified TeX file. (At present, STRING should not contain spaces.) </dd>
 <p> This is like the same option for current implementations of the <i>*latex</i>, and the passing of this option to these programs is part of <i>latexmk</i>&#8216;s implementation of <code>-jobname</code>. </p>
 <p> There is one enhancement, that the STRING may contain the placeholder &#8216;%A&#8217;. This will be substituted by the basename of the TeX file. The primary purpose is when multiple files are specified on the command line to <i>latexmk</i>, and you wish to use a jobname with a different file-dependent value for each file. For example, suppose you had .tex files test1.tex and test2.tex, and you wished to compare the results of compilation by <i>*latex</i> and those with <i>xelatex</i>. Then under a unix-type operating system you could use the command line </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%A-pdflatex&nbsp;*.tex<br />
@@ -167,106 +167,106 @@ description: "latexmk – generate LaTeX document"
 <p> Under MS-Windows with cmd.exe, you would need to double the percent sign, so that the percent character is passed to latexmk rather than being used to substitute an environment variable: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%%A-pdflatex&nbsp;*.tex<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdfxe -jobname=%%A-xelatex&nbsp;*.tex </p>
-<dt><code>-l</code></p>
-<dd> Run in landscape mode, using the landscape mode for the previewers and the dvi to postscript converters. This option is not normally needed nowadays, since current previewers normally determine this information automatically. </p>
-<dt><code>-l-</code></p>
-<dd> Turn off <code>-l</code>. </p>
-<dt><code>-latex</code></p>
-<dd> This sets the generation of dvi files by <i>latex</i>, and turns off the generation of pdf and ps files. </p>
+<dt><code>-l</code></dt>
+<dd> Run in landscape mode, using the landscape mode for the previewers and the dvi to postscript converters. This option is not normally needed nowadays, since current previewers normally determine this information automatically. </dd>
+<dt><code>-l-</code></dt>
+<dd> Turn off <code>-l</code>. </dd>
+<dt><code>-latex</code></dt>
+<dd> This sets the generation of dvi files by <i>latex</i>, and turns off the generation of pdf and ps files. </dd>
 <p> <i>Note: to set the </i>command<i> used when latex is specified, see the </i><code>-latex=&quot;COMMAND&quot;</code><i> option.</i> </p>
-<dt><code>-latex=COMMAND</code></p>
-<dd> This sets the string specifying the command to run latex, and is typically used to add desired options. Since the string normally contains spaces, it should be quoted, e.g., </p>
+<dt><code>-latex=COMMAND</code></dt>
+<dd> This sets the string specifying the command to run latex, and is typically used to add desired options. Since the string normally contains spaces, it should be quoted, e.g., </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -latex=&quot;latex &#8211;shell-escape&nbsp;%O&nbsp;%S&quot;&nbsp;<wbr>&nbsp;foo.tex </p>
 <p> The specification of the contents of the string are the same as for the <i>$latex</i> configuration variable. Depending on your operating system and the command-line shell you are using, you may need to change the single quotes to double quotes (or something else). </p>
 <p> <i>Note: This option when provided with the COMMAND argument only sets the command for invoking latex; it does not turn on the use of latex. That is done by other options or in an initialization file.</i> </p>
 <p> To set the command for running <i>pdflatex</i> (rather than the command for <i>latex</i>) see the <code>-pdflatex</code> option. </p>
-<dt><code>-logfilewarninglist</code></p>
-<dd> <code>-logfilewarnings</code> After a run of <i>*latex</i>, give a list of warnings about undefined citations and references (unless silent mode is on). </p>
+<dt><code>-logfilewarninglist</code></dt>
+<dd> <code>-logfilewarnings</code> After a run of <i>*latex</i>, give a list of warnings about undefined citations and references (unless silent mode is on). </dd>
 <p> See also the <i>$silence_logfile_warnings</i> configuration variable. </p>
-<dt><code>-logfilewarninglist-</code></p>
-<dd> <code>-logfilewarnings-</code> After a run of <i>*latex</i>, do not give a list of warnings about undefined citations and references. (Default) </p>
+<dt><code>-logfilewarninglist-</code></dt>
+<dd> <code>-logfilewarnings-</code> After a run of <i>*latex</i>, do not give a list of warnings about undefined citations and references. (Default) </dd>
 <p> See also the <i>$silence_logfile_warnings</i> configuration variable. </p>
-<dt><code>-lualatex</code></p>
-<dd> Use <i>lualatex</i>. That is, use <i>lualatex</i> to process the source file(s) to pdf. The generation of dvi and postscript files is turned off. </p>
+<dt><code>-lualatex</code></dt>
+<dd> Use <i>lualatex</i>. That is, use <i>lualatex</i> to process the source file(s) to pdf. The generation of dvi and postscript files is turned off. </dd>
 <p> This option is equivalent to using the following set of options </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-pdflua -dvi- -ps- </p>
 <p> (<i>Note</i>: Note that the method of implementation of this option, but not its intended effect, differ from some earlier versions of <i>latexmk</i>.) </p>
-<dt><code>-lualatex=COMMAND</code></p>
-<dd> This sets the string specifying the command to run <i>lualatex</i>. It behaves like the <code>-pdflatex</code> option, but sets the variable <i>$lualatex</i>. </p>
+<dt><code>-lualatex=COMMAND</code></dt>
+<dd> This sets the string specifying the command to run <i>lualatex</i>. It behaves like the <code>-pdflatex</code> option, but sets the variable <i>$lualatex</i>. </dd>
 <p> <i>Note: This option when provided with the COMMAND argument only sets the command for invoking lualatex; it does not turn on the use of lualatex. That is done by other options or in an initialization file.</i> </p>
-<dt><code>-M</code></p>
-<dd> Show list of dependent files after processing. This is equivalent to the <code>-deps</code> option. </p>
-<dt><code>-MF file</code></p>
-<dd> If a list of dependents is made, the <code>-MF</code> specifies the file to write it to. </p>
-<dt><code>-MP</code></p>
-<dd> If a list of dependents is made, include a phony target for each source file. If you use the dependents list in a Makefile, the dummy rules work around errors the program <i>make</i> gives if you remove header files without updating the Makefile to match. </p>
-<dt><code>-makeindexfudge</code></p>
-<dd> Turn on the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </p>
-<dt><code>-makeindexfudge-</code></p>
-<dd> Turn off the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </p>
-<dt><code>-MSWinBackSlash</code></p>
-<dd> This option only has an effect when <i>latexmk</i> is running under MS-Windows. This is that when <i>latexmk</i> runs a command under MS-Windows, the Windows standard directory separator &quot;\&quot; is used to separate directory components in a file name. Internally, <i>latexmk</i> uses &quot;/&quot; for the directory separator character, which is the character used by Unix-like systems. </p>
+<dt><code>-M</code></dt>
+<dd> Show list of dependent files after processing. This is equivalent to the <code>-deps</code> option. </dd>
+<dt><code>-MF file</code></dt>
+<dd> If a list of dependents is made, the <code>-MF</code> specifies the file to write it to. </dd>
+<dt><code>-MP</code></dt>
+<dd> If a list of dependents is made, include a phony target for each source file. If you use the dependents list in a Makefile, the dummy rules work around errors the program <i>make</i> gives if you remove header files without updating the Makefile to match. </dd>
+<dt><code>-makeindexfudge</code></dt>
+<dd> Turn on the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </dd>
+<dt><code>-makeindexfudge-</code></dt>
+<dd> Turn off the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </dd>
+<dt><code>-MSWinBackSlash</code></dt>
+<dd> This option only has an effect when <i>latexmk</i> is running under MS-Windows. This is that when <i>latexmk</i> runs a command under MS-Windows, the Windows standard directory separator &quot;\&quot; is used to separate directory components in a file name. Internally, <i>latexmk</i> uses &quot;/&quot; for the directory separator character, which is the character used by Unix-like systems. </dd>
 <p> This is the default behavior. However the default may have been overridden by a configuration file (latexmkrc file) which sets <i>$MSWin_back_slash=0</i>. </p>
-<dt><code>-MSWinBackSlash-</code></p>
-<dd> This option only has an effect when <i>latexmk</i> is running under MS-Windows. This is that when <i>latexmk</i> runs a command under MS-Windows, the substitution of &quot;\&quot; for the separator character between directory components of a file name is <i>not</i> done. Instead the forward slash &quot;/&quot; is used, the same as on Unix-like systems. This is acceptable in most situations under MS-Windows, provided that filenames are properly quoted, as <i>latexmk</i> does by default. </p>
+<dt><code>-MSWinBackSlash-</code></dt>
+<dd> This option only has an effect when <i>latexmk</i> is running under MS-Windows. This is that when <i>latexmk</i> runs a command under MS-Windows, the substitution of &quot;\&quot; for the separator character between directory components of a file name is <i>not</i> done. Instead the forward slash &quot;/&quot; is used, the same as on Unix-like systems. This is acceptable in most situations under MS-Windows, provided that filenames are properly quoted, as <i>latexmk</i> does by default. </dd>
 <p> See the documentation for the configuration variable <i>$MSWin_back_slash</i> for more details. </p>
-<dt><code>-new-viewer</code></p>
-<dd> When in continuous-preview mode, always start a new viewer to view the generated file. By default, <i>latexmk</i> will, in continuous-preview mode, test for a previously running previewer for the same file and not start a new one if a previous previewer is running. However, its test sometimes fails (notably if there is an already-running previewer that is viewing a file of the same name as the current file, but in a different directory). This option turns off the default behavior. </p>
-<dt><code>-new-viewer-</code></p>
-<dd> The inverse of the <code>-new-viewer</code> option. It puts <i>latexmk</i> in its normal behavior that in preview-continuous mode it checks for an already-running previewer. </p>
-<dt><code>-nobibtex</code></p>
-<dd> Never run bibtex or biber. Equivalent to the <code>-bibtex-</code> option. </p>
-<dt><code>-nobibtexfudge </code>or<code> -nobibfudge</code></p>
-<dd> Turn off the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </p>
-<dt><code>-noemulate-aux-dir</code></p>
-<dd> Turn aux_dir emulation off. Same as <i>-emulate-aux-dir-</i>. </p>
-<dt><code>-nomakeindexfudge</code></p>
-<dd> Turn off the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </p>
-<dt><code>-norc</code></p>
-<dd> Turn off the automatic reading of initialization (rc) files. </p>
+<dt><code>-new-viewer</code></dt>
+<dd> When in continuous-preview mode, always start a new viewer to view the generated file. By default, <i>latexmk</i> will, in continuous-preview mode, test for a previously running previewer for the same file and not start a new one if a previous previewer is running. However, its test sometimes fails (notably if there is an already-running previewer that is viewing a file of the same name as the current file, but in a different directory). This option turns off the default behavior. </dd>
+<dt><code>-new-viewer-</code></dt>
+<dd> The inverse of the <code>-new-viewer</code> option. It puts <i>latexmk</i> in its normal behavior that in preview-continuous mode it checks for an already-running previewer. </dd>
+<dt><code>-nobibtex</code></dt>
+<dd> Never run bibtex or biber. Equivalent to the <code>-bibtex-</code> option. </dd>
+<dt><code>-nobibtexfudge </code>or<code> -nobibfudge</code></dt>
+<dd> Turn off the change-directory fudge for bibtex. See documentation of <i>$bibtex_fudge</i> for details. </dd>
+<dt><code>-noemulate-aux-dir</code></dt>
+<dd> Turn aux_dir emulation off. Same as <i>-emulate-aux-dir-</i>. </dd>
+<dt><code>-nomakeindexfudge</code></dt>
+<dd> Turn off the change-directory fudge for makeindex. See documentation of <i>$makeindex_fudge</i> for details. </dd>
+<dt><code>-norc</code></dt>
+<dd> Turn off the automatic reading of initialization (rc) files. </dd>
 <p> N.B. Normally the initialization files are read and obeyed, and then command line options are obeyed in the order they are encountered. But <code>-norc</code> is an exception to this rule: it is acted on first, no matter where it occurs on the command line. </p>
-<dt><code>-outdir=FOO </code>or<code> -output-directory=FOO</code></p>
+<dt><code>-outdir=FOO </code>or<code> -output-directory=FOO</code></dt>
 <dd>
 <p> Sets the directory for the output files of *latex. This achieves its effect by the <code>-output-directory</code> option of *latex, which currently (Dec. 2011 and later) is implemented on the common versions of *latex, i.e., MiKTeX and TeXLive. It may not be present in other versions. </p>
 <p> See also the <code>-auxdir</code>/<code>-aux-directory</code> options, and the <i>$aux_dir</i>, <i>$out_dir</i>, and <i>$search_path_separator</i> configuration variables of <i>latexmk</i>. In particular, see the documentation of <i>$out_dir</i> for some complications on what directory names are suitable. </p>
 <p> If you also use the <code>-cd</code> option, and the specified output directory is a relative path, then the path is interpreted relative to the document directory. </p>
-<dt><code>-output-format=FORMAT</code></p>
-<dd> This option is one that is allowed for <i>latex</i>, <i>lualatex</i>, and <i>pdflatex</i>. But it is not passed to these programs. Instead <i>latexmk</i> emulates it in a way suitable for the context of <i>latexmk</i> and its workflows. </p>
+</dd><dt><code>-output-format=FORMAT</code></dt>
+<dd> This option is one that is allowed for <i>latex</i>, <i>lualatex</i>, and <i>pdflatex</i>. But it is not passed to these programs. Instead <i>latexmk</i> emulates it in a way suitable for the context of <i>latexmk</i> and its workflows. </dd>
 <p> If FORMAT is dvi, then dvi output is turned on, and postscript and pdf output are turned off. This is equivalent to using the options <code>-dvi -ps- -pdf-</code>. </p>
 <p> If FORMAT is pdf, then pdf output is turned on, and dvi and postscript output are turned off. This is equivalent to using the options <code>-pdf -ps- -dvi-</code>. </p>
 <p> If FORMAT is anything else, <i>latexmk</i> gives an error. </p>
-<dt><code>-p</code></p>
-<dd> Print out the document. By default the file to be printed is the first in the list postscript, pdf, dvi that is being made. But you can use the <code>-print=&#8230;</code> option to change the type of file to be printed, and you can configure this in a start up file (by setting the <i>$print_type</i> variable). </p>
+<dt><code>-p</code></dt>
+<dd> Print out the document. By default the file to be printed is the first in the list postscript, pdf, dvi that is being made. But you can use the <code>-print=&#8230;</code> option to change the type of file to be printed, and you can configure this in a start up file (by setting the <i>$print_type</i> variable). </dd>
 <p> However, printing is enabled by default only under UNIX/Linux systems, where the default is to use the lpr command and only on postscript files. In general, the correct behavior for printing very much depends on your system&#8217;s software. In particular, under MS-Windows you must have suitable program(s) available, and you must have configured the print commands used by <i>latexmk</i>. This can be non-trivial. See the documentation on the <i>$lpr</i>, <i>$lpr_dvi</i>, and <i>$lpr_pdf</i> configuration variables to see how to set the commands for printing. </p>
 <p> This option is incompatible with the <code>-pv</code> and <code>-pvc</code> options, so it turns them off. </p>
-<dt><code>-pdf</code></p>
-<dd> Generate pdf version of document using <i>pdflatex</i>. (If you wish to use <i>lualatex</i> or <i>xelatex</i>, you can use whichever of the options <code>-pdflua</code>, <code>-pdfxe</code>, <code>-lualatex</code> or <code>-xelatex</code> applies.) To configure <i>latexmk</i> to have such behavior by default, see the section on &quot;Configuration/initialization (rc) files&quot;. </p>
-<dt><code>-pdfdvi</code></p>
-<dd> Generate pdf version of document from the dvi file, by default using dvipdf. </p>
-<dt><code>-pdflua</code></p>
-<dd> Generate pdf version of document using <i>lualatex</i>. </p>
-<dt><code>-pdfps</code></p>
-<dd> Generate pdf version of document from the .ps file, by default using <i>ps2pdf</i>. </p>
-<dt><code>-pdfxe</code></p>
-<dd> Generate pdf version of document using <i>xelatex</i>. Note that to optimize processing time, <i>latexmk</i> uses <i>xelatex</i> to generate an .xdv file rather than a pdf file directly. Only after possibly multiple runs to generate a fully up-to-date .xdv file does <i>latexmk</i> then call <i>xdvipdfmx</i> to generate the final .pdf file. </p>
+<dt><code>-pdf</code></dt>
+<dd> Generate pdf version of document using <i>pdflatex</i>. (If you wish to use <i>lualatex</i> or <i>xelatex</i>, you can use whichever of the options <code>-pdflua</code>, <code>-pdfxe</code>, <code>-lualatex</code> or <code>-xelatex</code> applies.) To configure <i>latexmk</i> to have such behavior by default, see the section on &quot;Configuration/initialization (rc) files&quot;. </dd>
+<dt><code>-pdfdvi</code></dt>
+<dd> Generate pdf version of document from the dvi file, by default using dvipdf. </dd>
+<dt><code>-pdflua</code></dt>
+<dd> Generate pdf version of document using <i>lualatex</i>. </dd>
+<dt><code>-pdfps</code></dt>
+<dd> Generate pdf version of document from the .ps file, by default using <i>ps2pdf</i>. </dd>
+<dt><code>-pdfxe</code></dt>
+<dd> Generate pdf version of document using <i>xelatex</i>. Note that to optimize processing time, <i>latexmk</i> uses <i>xelatex</i> to generate an .xdv file rather than a pdf file directly. Only after possibly multiple runs to generate a fully up-to-date .xdv file does <i>latexmk</i> then call <i>xdvipdfmx</i> to generate the final .pdf file. </dd>
 <p> (<i>Note:</i> The reason why <i>latexmk</i> arranges for <i>xelatex</i> to make an .xdv file instead of the <i>xelatex</i>&#8216;s default of a .pdf file is as follows: When the document includes large graphics files, especially .png files, the production of a .pdf file can be quite time consuming, even when the creation of the .xdv file by <i>xelatex</i> is fast. So the use of the intermediate .xdv file can result in substantial gains in procesing time, since the .pdf file is produced once rather than on every run of <i>xelatex</i>.) </p>
-<dt><code>-pdf-</code></p>
-<dd> Turn off generation of pdf version of document. (This can be used to override a setting in a configuration file. It may get overridden if some other option requires the generation of a pdf file.) </p>
+<dt><code>-pdf-</code></dt>
+<dd> Turn off generation of pdf version of document. (This can be used to override a setting in a configuration file. It may get overridden if some other option requires the generation of a pdf file.) </dd>
 <p> If after all options have been processed, pdf generation is still turned off, then generation of a dvi file will be turned on, and then the program used to compiled a document will be <i>latex</i> (or, more precisely, whatever program is configured to be used in the <i>$latex</i> configuration variable). </p>
-<dt><code>-pdflatex</code></p>
-<dd> This sets the generation of pdf files by <i>pdflatex</i>, and turns off the generation of dvi and ps files. </p>
+<dt><code>-pdflatex</code></dt>
+<dd> This sets the generation of pdf files by <i>pdflatex</i>, and turns off the generation of dvi and ps files. </dd>
 <p> <i>Note: to set the </i>command<i> used when pdflatex is specified, see the </i><code>-pdflatex=&quot;COMMAND&quot;</code><i> option.</i> </p>
-<dt><code>-pdflatex=COMMAND</code></p>
-<dd> This sets the string specifying the command to run <i>pdflatex</i>, and is typically used to add desired options. Since the string normally contains spaces, it should be quoted, e.g., </p>
+<dt><code>-pdflatex=COMMAND</code></dt>
+<dd> This sets the string specifying the command to run <i>pdflatex</i>, and is typically used to add desired options. Since the string normally contains spaces, it should be quoted, e.g., </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -pdflatex=&quot;pdflatex &#8211;shell-escape&nbsp;%O&nbsp;%S&quot;&nbsp;<wbr>&nbsp;foo.tex </p>
 <p> The specification of the contents of the string are the same as for the <i>$pdflatex</i> configuration variable. (The option <code>-pdflatex</code> in fact sets the variable <i>$pdflatex</i>.) Depending on your operating system and the command-line shell you are using, you may need to change the single quotes to double quotes (or something else). </p>
 <p> <i>Note: This option when provided with the COMMAND argument only sets the command for invoking pdflatex; it does not turn on the use of pdflatex. That is done by other options or in an initialization file.</i> </p>
 <p> To set the command for running <i>latex</i> (rather than the command for <i>pdflatex</i>) see the <code>-latex</code> option. </p>
-<dt><code>-pdflualatex=COMMAND</code></p>
-<dd> Equivalent to <code>-lualatex=&quot;COMMAND&quot;</code>. </p>
-<dt><code>-pdfxelatex=COMMAND</code></p>
-<dd> Equivalent to <code>-xelatex=&quot;COMMAND&quot;</code>. </p>
-<dt><code>-pretex=CODE</code></p>
+<dt><code>-pdflualatex=COMMAND</code></dt>
+<dd> Equivalent to <code>-lualatex=&quot;COMMAND&quot;</code>. </dd>
+<dt><code>-pdfxelatex=COMMAND</code></dt>
+<dd> Equivalent to <code>-xelatex=&quot;COMMAND&quot;</code>. </dd>
+<dt><code>-pretex=CODE</code></dt>
 <dd>
 <p> Given that CODE is some TeX code, this options sets that code to be executed before inputting source file. This only works if the command for invoking the relevant <i>*latex</i> is suitably configured. See the documentation of the variable <i>$pre_tex_code</i>, and the substitution strings %P and %U for more details. This option works by setting the variable <i>$pre_tex_code</i>. </p>
 <p> See also the <code>-usepretex</code> option. </p>
@@ -276,103 +276,103 @@ description: "latexmk – generate LaTeX document"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -usepretex=&#8217;\AtBeginDocument{Message\par}&#8217;&nbsp;foo.tex </p>
 <p> If you already have a suitable command configured, you only need </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pretex=&#8217;\AtBeginDocument{Message\par}&#8217;&nbsp;foo.tex </p>
-<dt><code>-print=dvi</code>,<code> -print=ps</code>,<code> -print=pdf</code>,<code> -print=auto,</code></p>
-<dd> Define which kind of file is printed. This option also ensures that the requisite file is made, and turns on printing. </p>
+</dd><dt><code>-print=dvi</code>,<code> -print=ps</code>,<code> -print=pdf</code>,<code> -print=auto,</code></dt>
+<dd> Define which kind of file is printed. This option also ensures that the requisite file is made, and turns on printing. </dd>
 <p> The (default) case <code>-print=auto</code> determines the kind of print file automatically from the set of files that is being made. The first in the list postscript, pdf, dvi that is among the files to be made is the one used for print out. </p>
-<dt><code>-ps</code></p>
-<dd> Generate postscript version of document. </p>
-<dt><code>-ps-</code></p>
-<dd> Turn off generation of postscript version of document. This can be used to override a setting in a configuration file. (It may get overridden by some other option that requires a postscript file, for example a request for printing.) </p>
-<dt><code>-pF</code></p>
-<dd> Postscript file filtering. The argument to this option is a filter which will generate a filtered postscript file with the extension &quot;.psF&quot;. All extra processing (e.g. preview, printing) will then be performed on this filtered postscript file. </p>
+<dt><code>-ps</code></dt>
+<dd> Generate postscript version of document. </dd>
+<dt><code>-ps-</code></dt>
+<dd> Turn off generation of postscript version of document. This can be used to override a setting in a configuration file. (It may get overridden by some other option that requires a postscript file, for example a request for printing.) </dd>
+<dt><code>-pF</code></dt>
+<dd> Postscript file filtering. The argument to this option is a filter which will generate a filtered postscript file with the extension &quot;.psF&quot;. All extra processing (e.g. preview, printing) will then be performed on this filtered postscript file. </dd>
 <p> Example of usage: Use psnup to print two pages on the one page: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -ps -pF &#8216;psnup -2&#8217; foo.tex</p>
 <p> or </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>latexmk -ps -pF &quot;psnup -2&quot; foo.tex</p>
 <p> Whether to use single or double quotes round the &quot;psnup -2&quot; will depend on your command interpreter, as used by the particular version of perl and the operating system on your computer. </p>
-<dt><code>-pv</code></p>
-<dd> Run file previewer. If the <code>-view</code> option is used, this will select the kind of file to be previewed (.dvi, .ps or .pdf). Otherwise the viewer views the &quot;highest&quot; kind of file selected, by the <code>-dvi</code>, <code>-ps</code>, <code>-pdf</code>, <code>-pdfps</code> options, in the order .dvi, .ps, .pdf (low to high). If no file type has been selected, the dvi previewer will be used. This option is incompatible with the <code>-p</code> and <code>-pvc</code> options, so it turns them off. </p>
-<dt><code>-pv-</code></p>
-<dd> Turn off <code>-pv</code>. </p>
-<dt><code>-pvc</code></p>
-<dd> Run a file previewer and continually update the .dvi, .ps, and/or .pdf files whenever changes are made to source files (see the Description above). Which of these files is generated and which is viewed is governed by the other options, and is the same as for the <code>-pv</code> option. The preview-continuous option <code>-pvc</code> can only work with one file. So in this case you will normally only specify one filename on the command line. It is also incompatible with the <code>-p</code> and <code>-pv</code> options, so it turns these options off. </p>
+<dt><code>-pv</code></dt>
+<dd> Run file previewer. If the <code>-view</code> option is used, this will select the kind of file to be previewed (.dvi, .ps or .pdf). Otherwise the viewer views the &quot;highest&quot; kind of file selected, by the <code>-dvi</code>, <code>-ps</code>, <code>-pdf</code>, <code>-pdfps</code> options, in the order .dvi, .ps, .pdf (low to high). If no file type has been selected, the dvi previewer will be used. This option is incompatible with the <code>-p</code> and <code>-pvc</code> options, so it turns them off. </dd>
+<dt><code>-pv-</code></dt>
+<dd> Turn off <code>-pv</code>. </dd>
+<dt><code>-pvc</code></dt>
+<dd> Run a file previewer and continually update the .dvi, .ps, and/or .pdf files whenever changes are made to source files (see the Description above). Which of these files is generated and which is viewed is governed by the other options, and is the same as for the <code>-pv</code> option. The preview-continuous option <code>-pvc</code> can only work with one file. So in this case you will normally only specify one filename on the command line. It is also incompatible with the <code>-p</code> and <code>-pv</code> options, so it turns these options off. </dd>
 <p> The <code>-pvc</code> option also turns off force mode (<code>-f</code>), as is normally best for continuous preview mode. If you really want force mode, use the options in the order <code>-pvc -f</code>. </p>
 <p> With a good previewer the display will be automatically updated. (Under <i>some but not all</i> versions of UNIX/Linux &quot;gv -watch&quot; does this for postscript files; this can be set by a configuration variable. This would also work for pdf files except for an apparent bug in gv that causes an error when the newly updated pdf file is read.) Many other previewers will need a manual update. </p>
 <p> <code>Important note</code>: the acroread program on MS-Windows locks the pdf file, and prevents new versions being written, so it is a bad idea to use acroread to view pdf files in preview-continuous mode. It is better to use a different viewer: <i>SumatraPDF</i> and <i>gsview</i> are good possibilities. </p>
 <p> There are some other methods for arranging an update, notably useful for many versions of <i>xdvi</i> and <i>xpdf</i>. These are best set in <i>latexmk</i>&#8216;s configuration; see below. </p>
 <p> Note that if <i>latexmk</i> dies or is stopped by the user, the &quot;forked&quot; previewer will continue to run. Successive invocations with the <code>-pvc</code> option will not fork new previewers, but <i>latexmk</i> will normally use the existing previewer. (At least this will happen when <i>latexmk</i> is running under an operating system where it knows how to determine whether an existing previewer is running.) </p>
-<dt><code>-pvc-</code></p>
-<dd> Turn off <code>-pvc</code>. </p>
-<dt><code>-pvctimeout</code></p>
-<dd> Do timeout in pvc mode after period of inactivity, which is 30 min. by default. Inactivity means a period when <i>latexmk</i> has detected no file changes and hence has not taken any actions like compiling the document. </p>
-<dt><code>-pvctimeout-</code></p>
-<dd> Don&#8217;t do timeout in pvc mode after inactivity. </p>
-<dt><code>-pvctimeoutmins=&lt;time&gt;</code></p>
-<dd> Set period of inactivity in <i>minutes</i> for pvc timeout. </p>
-<dt><code>-quiet</code></p>
-<dd> Same as -silent </p>
-<dt><code>-r &lt;rcfile&gt;</code></p>
-<dd> Read the specified initialization file (&quot;RC file&quot;) before processing. </p>
+<dt><code>-pvc-</code></dt>
+<dd> Turn off <code>-pvc</code>. </dd>
+<dt><code>-pvctimeout</code></dt>
+<dd> Do timeout in pvc mode after period of inactivity, which is 30 min. by default. Inactivity means a period when <i>latexmk</i> has detected no file changes and hence has not taken any actions like compiling the document. </dd>
+<dt><code>-pvctimeout-</code></dt>
+<dd> Don&#8217;t do timeout in pvc mode after inactivity. </dd>
+<dt><code>-pvctimeoutmins=&lt;time&gt;</code></dt>
+<dd> Set period of inactivity in <i>minutes</i> for pvc timeout. </dd>
+<dt><code>-quiet</code></dt>
+<dd> Same as -silent </dd>
+<dt><code>-r &lt;rcfile&gt;</code></dt>
+<dd> Read the specified initialization file (&quot;RC file&quot;) before processing. </dd>
 <p> Be careful about the ordering: (1) Standard initialization files &#8212; see the section below on &quot;Configuration/initialization (RC) files&quot; &#8212; are read first. (2) Then the options on the command line are acted on in the order they are given. Therefore if an initialization file is specified by the <code>-r</code> option, it is read during this second step. Thus an initialization file specified with the <code>-r</code> option can override both the standard initialization files and <i>previously</i> specified options. But all of these can be overridden by <i>later</i> options. </p>
 <p> The contents of the RC file just comprise a piece of code in the <i>Perl</i> programming language (typically a sequence of assignment statements); they are executed when the <code>-r</code> option is encountered during <i>latexmk</i>&#8216;s parsing of its command line. See the <code>-e</code> option for a way of giving initialization code directly on <i>latexmk</i>&#8216;s command line. An error results in <i>latexmk</i> stopping. Multiple instances of the <code>-r</code> and <code>-e</code> options can be used, and they are executed in the order they appear on the command line. </p>
-<dt><code>-rc-report</code></p>
-<dd> After initialization, give a list of the RC files read. (Default) </p>
-<dt><code>-rc-report-</code></p>
-<dd> After initialization, do not give a list of the RC files read. </p>
-<dt><code>-recorder</code></p>
-<dd> Give the -recorder option with <i>*latex</i>. In (most) modern versions of these programs, this results in a file of extension <i>.fls</i> containing a list of the files that these programs have read and written. <i>Latexmk</i> will then use this file to improve its detection of source files and generated files after a run of <i>*latex</i>. This is the default setting of <i>latexmk</i>, unless overridden in an initialization file. </p>
+<dt><code>-rc-report</code></dt>
+<dd> After initialization, give a list of the RC files read. (Default) </dd>
+<dt><code>-rc-report-</code></dt>
+<dd> After initialization, do not give a list of the RC files read. </dd>
+<dt><code>-recorder</code></dt>
+<dd> Give the -recorder option with <i>*latex</i>. In (most) modern versions of these programs, this results in a file of extension <i>.fls</i> containing a list of the files that these programs have read and written. <i>Latexmk</i> will then use this file to improve its detection of source files and generated files after a run of <i>*latex</i>. This is the default setting of <i>latexmk</i>, unless overridden in an initialization file. </dd>
 <p> For further information, see the documentation for the <i>$recorder</i> configuration variable. </p>
-<dt><code>-recorder-</code></p>
-<dd> Do not supply the -recorder option with <i>*latex</i>. </p>
-<dt><code>-rules </code></p>
-<dd> Show a list of <i>latemk</i>&#8216;s rules and dependencies after processing. </p>
-<dt><code>-rules- </code></p>
-<dd> Do not show a list of <i>latexmk</i>&#8216;s rules and dependencies after processing. (This is the default.) </p>
-<dt><code>-showextraoptions</code></p>
-<dd> Show the list of extra <i>*latex</i> options that <i>latexmk</i> recognizes, but that it simply passes through to the programs <i>*latex</i> when they are run. These options are (currently) a combination of those allowed by the TeXLive and MiKTeX implementations. (If a particular option is given to <i>latexmk</i> but is not handled by the particular implementation of <i>*latex</i> that is being used, that program will probably give a warning or an error.) These options are very numerous, but are not listed in this documentation because they have no effect on <i>latexmk</i>&#8216;s actions. </p>
+<dt><code>-recorder-</code></dt>
+<dd> Do not supply the -recorder option with <i>*latex</i>. </dd>
+<dt><code>-rules </code></dt>
+<dd> Show a list of <i>latemk</i>&#8216;s rules and dependencies after processing. </dd>
+<dt><code>-rules- </code></dt>
+<dd> Do not show a list of <i>latexmk</i>&#8216;s rules and dependencies after processing. (This is the default.) </dd>
+<dt><code>-showextraoptions</code></dt>
+<dd> Show the list of extra <i>*latex</i> options that <i>latexmk</i> recognizes, but that it simply passes through to the programs <i>*latex</i> when they are run. These options are (currently) a combination of those allowed by the TeXLive and MiKTeX implementations. (If a particular option is given to <i>latexmk</i> but is not handled by the particular implementation of <i>*latex</i> that is being used, that program will probably give a warning or an error.) These options are very numerous, but are not listed in this documentation because they have no effect on <i>latexmk</i>&#8216;s actions. </dd>
 <p> There are a few options (e.g., <code>-includedirectory=dir</code>, <code>-initialize</code>, <code>-ini</code>) that are not recognized, either because they don&#8217;t fit with <i>latexmk</i>&#8216;s intended operations, or because they need special processing by <i>latexmk</i> that isn&#8217;t implemented (at least, not yet). </p>
 <p> There are certain options for <i>*latex</i> (e.g., <code>-recorder</code>) that trigger special actions or behavior by <i>latexmk</i> itself. Depending on the action, they may also be passed in some form to the called <i>*latex</i> program, and/or may affect other programs as well. These options do have entries in this documentation. Among these options are: <code>-jobname=STRING</code>, <code>-aux-directory=dir</code>, <code>-output-directory=DIR</code>, <code>-quiet</code>, and <code>-recorder</code>. </p>
 <p> There are also options that are accepted by <i>*latex</i>, but instead trigger actions purely by <i>latexmk</i>: <code>-help</code>, <code>-version</code>. </p>
-<dt><code>-silent</code></p>
-<dd> Run commands silently, i.e., with options that reduce the amount of diagnostics generated. For example, with the default settings, the command &quot;latex -interaction=batchmode&quot; is used for <i>latex</i>, and similarly for its friends. </p>
+<dt><code>-silent</code></dt>
+<dd> Run commands silently, i.e., with options that reduce the amount of diagnostics generated. For example, with the default settings, the command &quot;latex -interaction=batchmode&quot; is used for <i>latex</i>, and similarly for its friends. </dd>
 <p> See also the <code>-logfilewarninglist</code> and <code>-logfilewarninglist-</code> options. </p>
 <p> Also reduce the number of informational messages that <i>latexmk</i> itself generates. </p>
 <p> To change the options used to make the commands run silently, you need to configure <i>latexmk</i> with changed values of its configuration variables, the relevant ones being <i>$bibtex_silent_switch</i>, <i>$biber_silent_switch</i>, <i>$dvipdf_silent_switch</i>, <i>$dvips_silent_switch</i>, <i>$latex_silent_switch</i>, <i>$lualatex_silent_switch</i> <i>$makeindex_silent_switch</i>, <i>$pdflatex_silent_switch</i>, and <i>$xelatex_silent_switch</i> </p>
-<dt><code>-stdtexcmds</code></p>
-<dd> Sets the commands for <i>latex</i>, etc, so that they are the standard ones. This is useful to override special configurations. </p>
+<dt><code>-stdtexcmds</code></dt>
+<dd> Sets the commands for <i>latex</i>, etc, so that they are the standard ones. This is useful to override special configurations. </dd>
 <p> The result is that <i>$latex = &#8216;latex %O %S&#8217;</i>, and similarly for <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>. (The option <code>-no-pdf</code> needed for <i>$xelatex</i> is provided automatically, given that %O appears in the definition.) </p>
-<dt><code>-time</code></p>
-<dd> Show CPU time used. See also the configuration variable <i>$show_time</i>. </p>
-<dt><code>-time-</code></p>
-<dd> Do not show CPU time used. See also the configuration variable <i>$show_time</i>. </p>
-<dt><code>-use-make</code></p>
-<dd> When after a run of <i>*latex</i>, there are warnings about missing files (e.g., as requested by the LaTeX \input, \include, and \includgraphics commands), <i>latexmk</i> tries to make them by a custom dependency. If no relevant custom dependency with an appropriate source file is found, and if the <code>-use-make</code> option is set, then as a last resort <i>latexmk</i> will try to use the <i>make</i> program to try to make the missing files. </p>
+<dt><code>-time</code></dt>
+<dd> Show CPU time used. See also the configuration variable <i>$show_time</i>. </dd>
+<dt><code>-time-</code></dt>
+<dd> Do not show CPU time used. See also the configuration variable <i>$show_time</i>. </dd>
+<dt><code>-use-make</code></dt>
+<dd> When after a run of <i>*latex</i>, there are warnings about missing files (e.g., as requested by the LaTeX \input, \include, and \includgraphics commands), <i>latexmk</i> tries to make them by a custom dependency. If no relevant custom dependency with an appropriate source file is found, and if the <code>-use-make</code> option is set, then as a last resort <i>latexmk</i> will try to use the <i>make</i> program to try to make the missing files. </dd>
 <p> Note that the filename may be specified without an extension, e.g., by \includegraphics{drawing} in a LaTeX file. In that case, <i>latexmk</i> will try making drawing.ext with ext set in turn to the possible extensions that are relevant for <i>latex</i> (or as appropriate <i>pdflatex</i>, <i>lualatex</i>, <i>xelatex</i>). </p>
 <p> See also the documentation for the <i>$use_make_for_missing_files</i> configuration variable. </p>
-<dt><code>-use-make-</code></p>
-<dd> Do not use the make program to try to make missing files. (Default.) </p>
-<dt><code>-usepretex</code></p>
-<dd> Sets the command lines for <i>latex</i>, etc, so that they use the code that is defined by the variable <i>$pre_tex_code</i> or that is set by the option <code>-pretex=CODE</code> to execute the specified TeX code before the source file is read. This option overrides any previous definition of the command lines. </p>
+<dt><code>-use-make-</code></dt>
+<dd> Do not use the make program to try to make missing files. (Default.) </dd>
+<dt><code>-usepretex</code></dt>
+<dd> Sets the command lines for <i>latex</i>, etc, so that they use the code that is defined by the variable <i>$pre_tex_code</i> or that is set by the option <code>-pretex=CODE</code> to execute the specified TeX code before the source file is read. This option overrides any previous definition of the command lines. </dd>
 <p> The result is that <i>$latex = &#8216;latex %O %P&#8217;</i>, and similarly for <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>. (The option <code>-no-pdf</code> needed for <i>$xelatex</i> is provided automatically, given that %O appears in the definition.) </p>
-<dt><code>-usepretex=CODE</code></p>
-<dd> Equivalent to <code>-pretex=CODE -usepretex</code>. Example </p>
+<dt><code>-usepretex=CODE</code></dt>
+<dd> Equivalent to <code>-pretex=CODE -usepretex</code>. Example </dd>
 <p>&nbsp;<wbr>&nbsp;latexmk -usepretex=&#8217;\AtBeginDocument{Message\par}&#8217;&nbsp;foo.tex </p>
-<dt><code>-v </code>or<code> -version</code></p>
-<dd> Print version number of <i>latexmk</i>. </p>
-<dt><code>-verbose</code></p>
-<dd> Opposite of <code>-silent</code>. This is the default setting. </p>
-<dt><code>-view=default</code>,<code> -view=dvi</code>,<code> -view=ps</code>,<code> -view=pdf</code>,<code> -view=none</code></p>
-<dd> Set the kind of file used when previewing is requested (e.g., by the <code>-pv</code> or <code>-pvc</code> switches). The default is to view the &quot;highest&quot; kind of requested file (in the low-to-high order .dvi, .ps, .pdf). </p>
+<dt><code>-v </code>or<code> -version</code></dt>
+<dd> Print version number of <i>latexmk</i>. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Opposite of <code>-silent</code>. This is the default setting. </dd>
+<dt><code>-view=default</code>,<code> -view=dvi</code>,<code> -view=ps</code>,<code> -view=pdf</code>,<code> -view=none</code></dt>
+<dd> Set the kind of file used when previewing is requested (e.g., by the <code>-pv</code> or <code>-pvc</code> switches). The default is to view the &quot;highest&quot; kind of requested file (in the low-to-high order .dvi, .ps, .pdf). </dd>
 <p> Note the possibility <code>-view=none</code> where no viewer is opened at all. One example of is use is in conjunction with the <code>-pvc</code> option, when you want <i>latexmk</i> to do a compilation automatically whenever source file(s) change, but do not want a previewer to be opened. </p>
-<dt><code>-Werror</code></p>
-<dd> This causes <i>latexmk</i> to return a non-zero status code if any of the files processed gives a warning about problems with citations or references (i.e., undefined citations or references or about multiply defined references). This is <code>after</code> <i>latexmk</i> has completed all the runs it needs to try and resolve references and citations. Thus <code>-Werror</code> causes <i>latexmk</i> to treat such warnings as errors, but only when they occur on the last run of *latex and only after processing is complete. Also can be set by the configuration variable <i>$warnings_as_errors</i>. </p>
-<dt><code>-xelatex</code></p>
-<dd> Use <i>xelatex</i>. That is, use <i>xelatex</i> to process the source file(s) to pdf. The generation of dvi and postscript files is turned off. </p>
+<dt><code>-Werror</code></dt>
+<dd> This causes <i>latexmk</i> to return a non-zero status code if any of the files processed gives a warning about problems with citations or references (i.e., undefined citations or references or about multiply defined references). This is <code>after</code> <i>latexmk</i> has completed all the runs it needs to try and resolve references and citations. Thus <code>-Werror</code> causes <i>latexmk</i> to treat such warnings as errors, but only when they occur on the last run of *latex and only after processing is complete. Also can be set by the configuration variable <i>$warnings_as_errors</i>. </dd>
+<dt><code>-xelatex</code></dt>
+<dd> Use <i>xelatex</i>. That is, use <i>xelatex</i> to process the source file(s) to pdf. The generation of dvi and postscript files is turned off. </dd>
 <p> This option is equivalent to using the following set of options </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-pdfxe -dvi- -ps- </p>
 <p> [<i>Note</i>: Note that the method of implementation of this option, but not its intended primary effect, differ from some earlier versions of <i>latexmk</i>. <i>Latexmk</i> first uses <i>xelatex</i> to make an .xdv file, and does all the extra runs needed (including those of <i>bibtex</i>, etc). Only after that does it make the pdf file from the .xdv file, using <i>xdvipdfmx</i>. See the documentation for the <code>-pdfxe</code> for why this is done.] </p>
-<dt><code>-xelatex=COMMAND</code></p>
-<dd> This sets the string specifying the command to run <i>xelatex</i>. It sets the variable <i>$xelatex</i>. </p>
+<dt><code>-xelatex=COMMAND</code></dt>
+<dd> This sets the string specifying the command to run <i>xelatex</i>. It sets the variable <i>$xelatex</i>. </dd>
 <p> <i>Warning</i>: It is important to ensure that the <code>-no-pdf</code> is used when <i>xelatex</i> is invoked, since <i>latexmk</i> expects <i>xelatex</i> to produce an .xdv file, not a .pdf file. If you provide %O in the command specification, this will be done automatically. See the documentation for the <code>-pdfxe</code> option for why <i>latexmk</i> makes a .xdv file rather than a .pdf file when <i>xelatex</i> is used. </p>
 <p> An example of the use of the <code>-pdfxelatex</code> option: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdfxe -pdfxelatex=&quot;xelatex &#8211;shell-escape&nbsp;%O&nbsp;%S&quot;&nbsp;<wbr>&nbsp;foo.tex </p>
@@ -471,30 +471,30 @@ description: "latexmk – generate LaTeX document"
 <p> The two items starting with the % character are placeholders. These are substituted by appropriate values before the command is run. Thus %S will be replaced by the source file that elatex will be applied to, and %O will be replaced by any options that <i>latexmk</i> has decided to use for this command. (E.g., if you used the <code>-silent</code> option in the invocation of <i>latexmk</i>, it results in the replacement of %O by &quot;-interaction=batchmode&quot;.) </p>
 <p> The available placeholders are:</p>
 <dl>
-<dt><code>%A</code></p>
-<dd> basename of the main tex file. Unlike %R, this is unaffected by the setting of a jobname by the <i>-jobname</i> option or the <i>$jobname</i> configuration value.</p>
-<dt><code>%B</code></p>
-<dd> base of filename for current command. E.g., if a postscript file document.ps is being made from the dvi file document.dvi, then the basename is document.</p>
-<dt><code>%D</code></p>
-<dd> destination file (e.g., the name of the postscript file when converting a dvi file to postscript).</p>
-<dt><code>%O</code></p>
-<dd> options</p>
-<dt><code>%P</code></p>
-<dd> If the variable <i>$pre_tex_code</i> is non-empty, then %P is substituted by the contents of <i>$pre_tex_code</i> followed by <i>\input{SOURCE}</i>, where SOURCE stands for the name of the source file. Appropriate quoting is done. This enables TeX code to be passed to one of the <i>*latex</i> engines to be executed before the source file is read. </p>
+<dt><code>%A</code></dt>
+<dd> basename of the main tex file. Unlike %R, this is unaffected by the setting of a jobname by the <i>-jobname</i> option or the <i>$jobname</i> configuration value.</dd>
+<dt><code>%B</code></dt>
+<dd> base of filename for current command. E.g., if a postscript file document.ps is being made from the dvi file document.dvi, then the basename is document.</dd>
+<dt><code>%D</code></dt>
+<dd> destination file (e.g., the name of the postscript file when converting a dvi file to postscript).</dd>
+<dt><code>%O</code></dt>
+<dd> options</dd>
+<dt><code>%P</code></dt>
+<dd> If the variable <i>$pre_tex_code</i> is non-empty, then %P is substituted by the contents of <i>$pre_tex_code</i> followed by <i>\input{SOURCE}</i>, where SOURCE stands for the name of the source file. Appropriate quoting is done. This enables TeX code to be passed to one of the <i>*latex</i> engines to be executed before the source file is read. </dd>
 <p> If the variable <i>$pre_tex_code</i> is the empty string, then %P is equivalent to %S.</p>
-<dt><code>%R</code></p>
-<dd> root filename. This is the base name for the main tex file. </p>
+<dt><code>%R</code></dt>
+<dd> root filename. This is the base name for the main tex file. </dd>
 <p> By default this is the basename of the main tex file. However the value can be changed by the use of the <i>-jobname</i> option or the <i>$jobname</i> configuration variable.</p>
-<dt><code>%S</code></p>
-<dd> source file (e.g., the name of the dvi file when converting a .dvi file to ps).</p>
-<dt><code>%T</code></p>
-<dd> The name of the primary tex file.</p>
-<dt><code>%U</code></p>
-<dd> If the variable <i>$pre_tex_code</i> is non-empty, then its value is substituted for %U (appropriately quoted). Otherwise it is replaced by a null string.</p>
-<dt><code>%Y</code></p>
-<dd> Name of directory for auxiliary output files (see the configuration variable <i>$aux_dir</i>). A directory separation character (&#8216;/&#8217;) is appended if <i>$aux_dir</i> is non-empty and does not end in a suitable character, with suitable characters being those appropriate to UNIX and MS-Windows, i.e., &#8216;:&#8217;, &#8216;/&#8217; and &#8216;\&#8217;. Note that if after initialization, <i>$out_dir</i> is set, but <i>$aux_dir</i> is not set (i.e., it is blank), then <i>latexmk</i> sets <i>$aux_dir</i> to the same value <i>$out_dir</i>.</p>
-<dt><code>%Z</code></p>
-<dd> Name of directory for output files (see the configuration variable <i>$out_dir</i>). A directory separation character (&#8216;/&#8217;) is appended if <i>$out_dir</i> is non-empty and does not end in a suitable character, with suitable characters being those appropriate to UNIX and MS-Windows, i.e., &#8216;:&#8217;, &#8216;/&#8217; and &#8216;\&#8217;</dl>
+<dt><code>%S</code></dt>
+<dd> source file (e.g., the name of the dvi file when converting a .dvi file to ps).</dd>
+<dt><code>%T</code></dt>
+<dd> The name of the primary tex file.</dd>
+<dt><code>%U</code></dt>
+<dd> If the variable <i>$pre_tex_code</i> is non-empty, then its value is substituted for %U (appropriately quoted). Otherwise it is replaced by a null string.</dd>
+<dt><code>%Y</code></dt>
+<dd> Name of directory for auxiliary output files (see the configuration variable <i>$aux_dir</i>). A directory separation character (&#8216;/&#8217;) is appended if <i>$aux_dir</i> is non-empty and does not end in a suitable character, with suitable characters being those appropriate to UNIX and MS-Windows, i.e., &#8216;:&#8217;, &#8216;/&#8217; and &#8216;\&#8217;. Note that if after initialization, <i>$out_dir</i> is set, but <i>$aux_dir</i> is not set (i.e., it is blank), then <i>latexmk</i> sets <i>$aux_dir</i> to the same value <i>$out_dir</i>.</dd>
+<dt><code>%Z</code></dt>
+<dd> Name of directory for output files (see the configuration variable <i>$out_dir</i>). A directory separation character (&#8216;/&#8217;) is appended if <i>$out_dir</i> is non-empty and does not end in a suitable character, with suitable characters being those appropriate to UNIX and MS-Windows, i.e., &#8216;:&#8217;, &#8216;/&#8217; and &#8216;\&#8217;</dd></dl>
 <p> If for some reason you need a literal % character in your string not subject to the above rules, use &quot;%%&quot;. </p>
 <p> Appropriate quoting will be applied to the filename substitutions, so you mustn&#8217;t supply them yourself even if the names of your files have spaces in them. (But if your TeX filenames have spaces in them, beware that some older versions of the TeX program cannot correctly handle filenames containing spaces.) In case <i>latexmk</i>&#8216;s quoting does not work correctly on your system, you can turn it off &#8212; see the documentation for the variable <i>$quote_filenames</i>. </p>
 <p> See the default values in the section &quot;List of configuration variables usable in initialization files&quot; for what is normally the most appropriate usage. </p>
@@ -538,43 +538,43 @@ description: "latexmk – generate LaTeX document"
 <p> In this section are specified the variables whose values can be adjusted to configure <i>latexmk</i>. (See the earlier section &quot;Configuration/Initialization (rc) Files&quot; for the files where the configurations are done.) </p>
 <p> Default values are indicated in brackets. Note that for variables that are boolean in character, concerning whether <i>latexmk</i> does or does not behave in a certain way, a non-zero value, normally 1, indicates true, i.e., the behavior occurs, while a zero value indicates a false value, i.e., the behavior does not occur. </p>
 <dl>
-<dt><code>$allow_switch [1]</code></p>
+<dt><code>$allow_switch [1]</code></dt>
 <dd>
 <p> This controls what happens when the output extension of latex, pdflatex, lualatex or xelatex differs from what is expected. (The possible extensions are .dvi, .pdf, .xdv.) This can happen with the use of the \pdfoutput macro in a document compiled under <i>latex</i> or <i>pdflatex</i>, or with the use of the \outputmode macro under <i>lualatex</i>. It can also happen with certain kinds of incorrect configuration. </p>
 <p> In such a case, <i>latexmk</i> can appropriately adjust its network of rules. The adjustment is made if <i>$allow_switch</i> is on, and if no request for a dvi or ps file has been made. </p>
 <p> See the section ALLOWING FOR CHANGE OF OUTPUT EXTENSION. </p>
-<dt><code>$always_view_file_via_temporary [0]</code></p>
-<dd> Whether .ps and .pdf files are initially to be made in a temporary directory and then moved to the final location. (This applies to <i>dvips</i>, <i>dvipdf</i>, and <i>ps2pdf</i> operations, and the filtering operators on .dvi and .ps files. It does not apply to <i>pdflatex</i>, unfortunately, since <i>pdflatex</i> provides no way of specifying a chosen name for the output file.) </p>
+</dd><dt><code>$always_view_file_via_temporary [0]</code></dt>
+<dd> Whether .ps and .pdf files are initially to be made in a temporary directory and then moved to the final location. (This applies to <i>dvips</i>, <i>dvipdf</i>, and <i>ps2pdf</i> operations, and the filtering operators on .dvi and .ps files. It does not apply to <i>pdflatex</i>, unfortunately, since <i>pdflatex</i> provides no way of specifying a chosen name for the output file.) </dd>
 <p> This use of a temporary file solves a problem that the making of these files can occupy a substantial time. If a viewer (notably <i>gv</i>) sees that the file has changed, it may read the new file before the program writing the file has not yet finished its work, which can cause havoc. </p>
 <p> See the <i>$pvc_view_file_via_temporary</i> variable for a setting that applies only if preview-continuous mode (-pvc option) is used. See <i>$tmpdir</i> for the setting of the directory where the temporary file is created. </p>
-<dt><code>$analyze_input_log_always [1]</code></p>
+<dt><code>$analyze_input_log_always [1]</code></dt>
 <dd>
 <p> After a run of latex (etc), always analyze .log for input files in the &lt;&#8230;&gt; and (&#8230;) constructions. Otherwise, only do the analysis when fls file doesn&#8217;t exist or is out of date. </p>
 <p> Under normal circumstances, the data in the fls file is reliable, and the test of the log file gets lots of false positives; usually $analyze_input_log_always is best set to zero. But the test of the log file is needed at least in the following situation: When a user needs to persuade latexmk that a certain file is a source file, and latexmk doesn&#8217;t otherwise find it. Then the user can write code that causes a line with (&#8230;) to be written to log file. One important case is for lualatex, which doesn&#8217;t always generate lines in the .fls file for input lua files. (The situation with lualatex is HIGHLY version dependent, e.g., there was a big change between TeXLive 2016 and TeXLive 2017.) </p>
 <p> To keep backward compatibility with older versions of latexmk, the default is to set $analyze_input_log_always to 1. </p>
-<dt><code>$auto_rc_use [1]</code></p>
-<dd> Whether to automatically read the standard initialization (rc) files, which are the system RC file, the user&#8217;s RC file, and the RC file in the current directory. The command line option <code>-norc</code> can be used to turn this setting off. Each RC file could also turn this setting off, i.e., it could set <i>$auto_rc_use</i> to zero to prevent automatic reading of the later RC files. </p>
+</dd><dt><code>$auto_rc_use [1]</code></dt>
+<dd> Whether to automatically read the standard initialization (rc) files, which are the system RC file, the user&#8217;s RC file, and the RC file in the current directory. The command line option <code>-norc</code> can be used to turn this setting off. Each RC file could also turn this setting off, i.e., it could set <i>$auto_rc_use</i> to zero to prevent automatic reading of the later RC files. </dd>
 <p> This variable does not affect the reading of RC files specified on the command line by the <code>-r</code> option.</p>
-<dt><code>$aux_dir []</code></p>
-<dd> The directory in which auxiliary files (aux, log, etc) are to be written by a run of *latex. If this variable is not set, but <i>$out_dir</i> is set, then <i>$aux_dir</i> is set to <i>$out_dir</i>, which is the directory to which general output files are to be written. </p>
+<dt><code>$aux_dir []</code></dt>
+<dd> The directory in which auxiliary files (aux, log, etc) are to be written by a run of *latex. If this variable is not set, but <i>$out_dir</i> is set, then <i>$aux_dir</i> is set to <i>$out_dir</i>, which is the directory to which general output files are to be written. </dd>
 <p> <code>Important note</code>: The effect of <i>$aux_dir</i>, if different from <i>$out_dir</i>, is achieved by giving <i>*latex</i> the <code>-aux-directory</code>. Currently (Dec. 2011 and later) this only works on the MiKTeX version of <i>*latex</i>. </p>
 <p> See also the documentation of <i>$out_dir</i> for some complications on what directory names are suitable. </p>
 <p> If you also use the <code>-cd</code> option, and <i>$out_dir</i> (or <i>$aux_dir</i>) contains a relative path, then the path is interpreted relative to the document directory. </p>
-<dt><code>$aux_out_dir_report [0]</code></p>
-<dd> For each .tex file processed, list the settings for aux and out directories, after they have been normalized from the settings specified during initialization. </p>
+<dt><code>$aux_out_dir_report [0]</code></dt>
+<dd> For each .tex file processed, list the settings for aux and out directories, after they have been normalized from the settings specified during initialization. </dd>
 <p> This report gives a reminder of where to look for output. </p>
 <p> The report has to be done per file, because of possible directory changes for each file. In the simplest cases, the result is the same as originally specified. In general, e.g., with an absolute directory specified, the normalization helps performance and cleans up output to the screen. It also avoids situations where a file in the current directory is referred to by different names, e.g., &quot;file.aux&quot; and &quot;./file.aux&quot;, which can be annoying. </p>
-<dt><code>$banner [0]</code></p>
-<dd> If nonzero, the banner message is printed across each page when converting the dvi file to postscript. Without modifying the variable <i>$banner_message</i>, this is equivalent to specifying the <code>-d</code> option. </p>
+<dt><code>$banner [0]</code></dt>
+<dd> If nonzero, the banner message is printed across each page when converting the dvi file to postscript. Without modifying the variable <i>$banner_message</i>, this is equivalent to specifying the <code>-d</code> option. </dd>
 <p> Note that if <i>$banner</i> is nonzero, the <i>$postscript_mode</i> is assumed and the postscript file is always generated, even if it is newer than the dvi file.</p>
-<dt><code>$banner_intensity [0.95]</code></p>
-<dd> Equivalent to the <code>-bi</code> option, this is a decimal number between 0 and 1 that specifies how dark to print the banner message. 0 is black, 1 is white. The default is just right if your toner cartridge isn&#8217;t running too low.</p>
-<dt><code>$banner_message [DRAFT]</code></p>
-<dd> The banner message to print across each page when converting the dvi file to postscript. This is equivalent to the <code>-bm</code> option.</p>
-<dt><code>$banner_scale [220.0]</code></p>
-<dd> A decimal number that specifies how large the banner message will be printed. Experimentation is necessary to get the right scale for your message, as a rule of thumb the scale should be about equal to 1100 divided by the number of characters in the message. The Default is just right for 5 character messages. This is equivalent to the <code>-bs</code> option.</p>
-<dt><code>@BIBINPUTS</code></p>
-<dd> This is an array variable, now mostly obsolete, that specifies directories where <i>latexmk</i> should look for .bib files. By default it is set from the BIBINPUTS environment variable of the operating system. If that environment variable is not set, a single element list consisting of the current directory is set. The format of the directory names depends on your operating system, of course. Examples for setting this variable are: </p>
+<dt><code>$banner_intensity [0.95]</code></dt>
+<dd> Equivalent to the <code>-bi</code> option, this is a decimal number between 0 and 1 that specifies how dark to print the banner message. 0 is black, 1 is white. The default is just right if your toner cartridge isn&#8217;t running too low.</dd>
+<dt><code>$banner_message [DRAFT]</code></dt>
+<dd> The banner message to print across each page when converting the dvi file to postscript. This is equivalent to the <code>-bm</code> option.</dd>
+<dt><code>$banner_scale [220.0]</code></dt>
+<dd> A decimal number that specifies how large the banner message will be printed. Experimentation is necessary to get the right scale for your message, as a rule of thumb the scale should be about equal to 1100 divided by the number of characters in the message. The Default is just right for 5 character messages. This is equivalent to the <code>-bs</code> option.</dd>
+<dt><code>@BIBINPUTS</code></dt>
+<dd> This is an array variable, now mostly obsolete, that specifies directories where <i>latexmk</i> should look for .bib files. By default it is set from the BIBINPUTS environment variable of the operating system. If that environment variable is not set, a single element list consisting of the current directory is set. The format of the directory names depends on your operating system, of course. Examples for setting this variable are: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:\bibfiles&quot;&nbsp;);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;\serveribfiles&quot;&nbsp;);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:/bibfiles&quot;&nbsp;);<br />
@@ -582,38 +582,38 @@ description: "latexmk – generate LaTeX document"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;/usr/local/texmf/bibtex/bib&quot;&nbsp;); </p>
 <p> Note that under MS Windows, either a forward slash &quot;/&quot; or a backward slash &quot;\&quot; can be used to separate pathname components, so the first two and the second two examples are equivalent. Each backward slash should be doubled to avoid running afoul of <i>Perl</i>&#8216;s rules for writing strings. </p>
 <p> <i>Important note:</i> This variable is now mostly obsolete in the current version of <i>latexmk</i>, since it has a better method of searching for files using the kpsewhich command. However, if your system is an unusual one without the kpsewhich command, you may need to set the variable <i>@BIBINPUTS</i>.</p>
-<dt><code>$biber [biber %O %S]</code></p>
-<dd> The biber processing program.</p>
-<dt><code>$biber_silent_switch [&#8211;onlylog]</code></p>
-<dd> Switch(es) for the biber processing program when silent mode is on.</p>
-<dt><code>$bibtex [bibtex %O %S]</code></p>
-<dd> The BibTeX processing program.</p>
-<dt><code>$bibtex_fudge [1]</code></p>
-<dd> When using bibtex, whether to change directory to $aux_dir before running bibtex. </p>
+<dt><code>$biber [biber %O %S]</code></dt>
+<dd> The biber processing program.</dd>
+<dt><code>$biber_silent_switch [&#8211;onlylog]</code></dt>
+<dd> Switch(es) for the biber processing program when silent mode is on.</dd>
+<dt><code>$bibtex [bibtex %O %S]</code></dt>
+<dd> The BibTeX processing program.</dd>
+<dt><code>$bibtex_fudge [1]</code></dt>
+<dd> When using bibtex, whether to change directory to $aux_dir before running bibtex. </dd>
 <p> The need arises as follows: </p>
 <p> a. With bibtex before about 2019, if the filename given to it contains a path component, there was a bug that bibtex would not find extra aux files, as produced by the \include command in TeX. </p>
 <p> b. With all moderately recent versions of bibtex, bibtex may refuse to write its bbl and blg files, for security reasons, for certain cases of the path component of the filename given to it. </p>
 <p> However, there are also rare cases where the change-directory method prevents bibtex from finding certain bib or bst files. Then <i>$bibtex_fudge</i> needs to be set to 0. </p>
-<dt><code>$bibtex_silent_switch [-terse]</code></p>
-<dd> Switch(es) for the BibTeX processing program when silent mode is on.</p>
-<dt><code>$bibtex_use [1]</code></p>
-<dd> Under what conditions to run <i>bibtex</i> or <i>biber</i>. When <i>latexmk</i> discovers from the log file that one (or more) <i>bibtex</i>/<i>biber</i>-generated bibliographies are used, it can run <i>bibtex</i> or <i>biber</i> whenever it appears necessary to regenerate the bbl file(s) from their source bib database file(s). But sometimes, the bib file(s) are not available (e.g., for a document obtained from an external archive), but the bbl files are provided. In that case use of <i>bibtex</i> or <i>biber</i> will result in incorrect overwriting of the precious bbl files. The variable <i>$bibtex_use</i> controls whether this happens, and also controls whether or not .bbl files are deleted in a cleanup operation. </p>
+<dt><code>$bibtex_silent_switch [-terse]</code></dt>
+<dd> Switch(es) for the BibTeX processing program when silent mode is on.</dd>
+<dt><code>$bibtex_use [1]</code></dt>
+<dd> Under what conditions to run <i>bibtex</i> or <i>biber</i>. When <i>latexmk</i> discovers from the log file that one (or more) <i>bibtex</i>/<i>biber</i>-generated bibliographies are used, it can run <i>bibtex</i> or <i>biber</i> whenever it appears necessary to regenerate the bbl file(s) from their source bib database file(s). But sometimes, the bib file(s) are not available (e.g., for a document obtained from an external archive), but the bbl files are provided. In that case use of <i>bibtex</i> or <i>biber</i> will result in incorrect overwriting of the precious bbl files. The variable <i>$bibtex_use</i> controls whether this happens, and also controls whether or not .bbl files are deleted in a cleanup operation. </dd>
 <p> The possible values of <i>$bibtex_use</i> are:<br />
 &nbsp;<wbr>&nbsp;0: never use BibTeX or biber;&nbsp; never delete .bbl files in a cleanup.<br />
 &nbsp;<wbr>&nbsp;1: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; never delete .bbl files in a cleanup.<br />
 &nbsp;<wbr>&nbsp;1.5: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; conditionally delete .bbl files in a cleanup (i.e., delete them only when the bib files all exist).<br />
 &nbsp;<wbr>&nbsp;2: run&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;whenever it appears necessary to update the bbl files, without testing for the existence of the bib files; always delete .bbl files in a cleanup. </p>
 <p> Note that the value 1.5 does <i>not</i> work properly if the document uses <i>biber</i> instead of <i>bibtex</i>. (There&#8217;s a long story why not.) </p>
-<dt><code>$cleanup_includes_cusdep_generated [0]</code></p>
-<dd> If nonzero, specifies that cleanup also deletes files that are generated by custom dependencies. (When doing a clean up, e.g., by use of the <code>-C</code> option, custom dependencies are those listed in the <i>.fdb_latexmk</i> file from a previous run.)</p>
-<dt><code>$cleanup_includes_generated [0]</code></p>
-<dd> If nonzero, specifies that cleanup also deletes files that are detected in the fls file (or failing that, in log file) as being generated. It will also include files made from these first generation generated files. </p>
+<dt><code>$cleanup_includes_cusdep_generated [0]</code></dt>
+<dd> If nonzero, specifies that cleanup also deletes files that are generated by custom dependencies. (When doing a clean up, e.g., by use of the <code>-C</code> option, custom dependencies are those listed in the <i>.fdb_latexmk</i> file from a previous run.)</dd>
+<dt><code>$cleanup_includes_generated [0]</code></dt>
+<dd> If nonzero, specifies that cleanup also deletes files that are detected in the fls file (or failing that, in log file) as being generated. It will also include files made from these first generation generated files. </dd>
 <p> This operation is somewhat dangerous, and can have unintended consequences, since the files to be deleted are determined from a file created by *latex, which can contain erroneous information. Therefore this variable is turned off by default, and then files to be deleted are restricted to those explicitly specified by patterns configured in the variables <i>clean_ext</i>, <i>clean_full_ext</i>, and <i>@generated_exts</i>, together with those very standard cases that are hardwired into <i>latexmk</i> (e.g., .log files).</p>
-<dt><code>$cleanup_mode [0]</code></p>
-<dd> If nonzero, specifies cleanup mode: 1 for full cleanup, 2 for cleanup except for .dvi, .ps and .pdf files, 3 for cleanup except for dep and aux files. (There is also extra cleaning as specified by the <i>$clean_ext</i>, <i>$clean_full_ext</i> and <i>@generated_exts</i> variables.) </p>
+<dt><code>$cleanup_mode [0]</code></dt>
+<dd> If nonzero, specifies cleanup mode: 1 for full cleanup, 2 for cleanup except for .dvi, .ps and .pdf files, 3 for cleanup except for dep and aux files. (There is also extra cleaning as specified by the <i>$clean_ext</i>, <i>$clean_full_ext</i> and <i>@generated_exts</i> variables.) </dd>
 <p> This variable is equivalent to specifying one of the <code>-c</code> or <code>-C</code> options. But there should be no need to set this variable from an RC file.</p>
-<dt><code>$clean_ext []</code></p>
-<dd> Extra extensions of files for <i>latexmk</i> to remove when any of the clean-up options (<code>-c</code> or <code>-C</code>) is selected. The value of this variable is a string containing the extensions separated by spaces. </p>
+<dt><code>$clean_ext []</code></dt>
+<dd> Extra extensions of files for <i>latexmk</i> to remove when any of the clean-up options (<code>-c</code> or <code>-C</code>) is selected. The value of this variable is a string containing the extensions separated by spaces. </dd>
 <p> It is also possible to specify a more general pattern of file to be deleted, by using the place holder %R, as in commands, and it is also possible to use wildcards. Thus setting </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$clean_ext&nbsp;=&nbsp;&quot;out&nbsp;%R-blx.bib&nbsp;%R-figures*.log pythontex-files-%R/*&quot;; </p>
 <p> in an initialization file will imply that when a clean-up operation is specified, not only is the standard set of files deleted, but also files of the form FOO.out, FOO-blx.bib, FOO-figures*.log, and pythontex-files-FOO/*, where FOO stands for the basename of the file being processed (as in FOO.tex). </p>
@@ -621,11 +621,11 @@ description: "latexmk – generate LaTeX document"
 <p> The filenames specified for a clean-up operation can refer not only to regular files but also to directories. Directories are only deleted if they are empty. An example of an application is to pythontex, which creates files in a particular directory. You can arrange to remove both the files and the directory by setting </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$clean_ext&nbsp;=&nbsp;&quot;pythontex-files-%R pythontex-files-%R&quot;; </p>
 <p> See also the variable <i>@generated_exts</i>.</p>
-<dt><code>$clean_full_ext []</code></p>
-<dd> Extra extensions of files for <i>latexmk</i> to remove when the <code>-C</code> option is selected, i.e., extensions of files to remove when the .dvi, etc files are to be cleaned-up. </p>
+<dt><code>$clean_full_ext []</code></dt>
+<dd> Extra extensions of files for <i>latexmk</i> to remove when the <code>-C</code> option is selected, i.e., extensions of files to remove when the .dvi, etc files are to be cleaned-up. </dd>
 <p> More general patterns are allowed, as for <i>$clean_ext</i>. </p>
 <p> The files specified by <i>$clean_full_ext</i> to be deleted are relative to the directory specified by <i>$out_dir</i>. </p>
-<dt><code>$compiling_cmd [], $failure_cmd [], $warning_cmd [], $success_cmd []</code></p>
+<dt><code>$compiling_cmd [], $failure_cmd [], $warning_cmd [], $success_cmd []</code></dt>
 <dd>
 <p> These variables specify commands that are executed at certain points of compilations. One motivation for their existence is to allow very useful convenient visual indications of compilation status even when the window receiving the screen output of the compilation is hidden. This is particularly useful in preview-continuous mode. </p>
 <p> The commands are executed at the following points: <i>$compiling_cmd</i> at the start of compilation, <i>$success_cmd</i> at the end of a completely successful compilation, <i>$failure_cmd</i> at the end of an unsuccessful compilation, <i>$warning_cmd</i> at the of an otherwise successful compilation that gives warnings about undefined citations or references or about multiply defined references. If any of above variables is undefined or blank (the default situation), then the corresponding command is not executed. </p>
@@ -640,17 +640,17 @@ description: "latexmk – generate LaTeX document"
 <p> Other placeholders that can be used are %S, %T, and %R, with %S and %T normally being identical. These can be useful for a command changing the title of the edit window. The visual indication in a window title can useful, since the user does not have to keep shifting attention to the (possibly hidden) compilation window to know the status of the compilation. </p>
 <p> More complicated situations can best be handled by defining a Perl subroutine to invoke the necessary commands, and using the &quot;internal&quot; keyword in the definitions to get the subroutine to be invoked. (See the section &quot;Format of Command Specifications&quot; for how to do this.) </p>
 <p> Naturally, the above settings that invoke the <i>xdotool</i> program are only applicable when the X-Window system is used for the relevant window(s). For other cases, you will have to find what software solutions are available. </p>
-<dt><code>@cus_dep_list [()]</code></p>
-<dd> Custom dependency list &#8212; see section on &quot;Custom Dependencies&quot;.</p>
-<dt><code>@default_excluded_files [()]</code></p>
-<dd> When <i>latexmk</i> is invoked with no files specified on the command line, then, by default, it will process all files in the current directory with the extension .tex. (In general, it will process the files specified in the <i>@default_files</i> variable.) </p>
+</dd><dt><code>@cus_dep_list [()]</code></dt>
+<dd> Custom dependency list &#8212; see section on &quot;Custom Dependencies&quot;.</dd>
+<dt><code>@default_excluded_files [()]</code></dt>
+<dd> When <i>latexmk</i> is invoked with no files specified on the command line, then, by default, it will process all files in the current directory with the extension .tex. (In general, it will process the files specified in the <i>@default_files</i> variable.) </dd>
 <p> But sometimes you want to exclude particular files from this default list. In that case you can specify the excluded files in the array <i>@default_excluded_files</i>. For example if you wanted to process all .tex files with the exception of common.tex, which is a not a standard alone LaTeX file but a file input by some or all of the others, you could do </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@default_files&nbsp;=&nbsp;(&quot;*.tex&quot;); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@default_excluded_files&nbsp;=&nbsp;(&quot;common.tex&quot;); </p>
 <p> If you have a variable or large number of files to be processed, this method saves you from having to list them in detail in <i>@default_files</i> and having to update the list every time you change the set of files to be processed. </p>
 <p> Notes: 1. This variable has no effect except when no files are specified on the <i>latexmk</i> command line. 2. Wildcards are allowed in <i>@default_excluded_files</i>.</p>
-<dt><code>@default_files [(*.tex)]</code></p>
-<dd> Default list of files to be processed. </p>
+<dt><code>@default_files [(*.tex)]</code></dt>
+<dd> Default list of files to be processed. </dd>
 <p> If no filenames are specified on the command line, <i>latexmk</i> processes all tex files specified in the <i>@default_files</i> variable, which by default is set to all tex files (&quot;*.tex&quot;) in the current directory. This is a convenience: just run <i>latexmk</i> and it will process an appropriate set of files. But sometimes you want only some of these files to be processed. In this case you can list the files to be processed by setting <i>@default_files</i> in an initialization file (e.g., the file &quot;latexmkrc&quot; in the current directory). Then if no files are specified on the command line then the files you specify by setting <i>@default_files</i> are processed. </p>
 <p> Three examples: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@default_files&nbsp;=&nbsp;(&quot;paper_current&quot;); </p>
@@ -658,79 +658,79 @@ description: "latexmk – generate LaTeX document"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@default_files&nbsp;=&nbsp;(&quot;*.tex&quot;,&nbsp;&quot;*.dtx&quot;); </p>
 <p> Note that more than file may be given, and that the default extension is &quot;.tex&quot;. Wild cards are allowed. The parentheses are because <i>@default_files</i> is an array variable, i.e., a sequence of filename specifications is possible. </p>
 <p> If you want <i>latexmk</i> to process all .tex files with a few exceptions, see the <i>@default_excluded_files</i> array variable.</p>
-<dt><code>$dependents_phony [0]</code></p>
-<dd> If a list of dependencies is output, this variable determines whether to include a phony target for each source file. If you use the dependents list in a Makefile, the dummy rules work around errors make gives if you remove header files without updating the Makefile to match.</p>
-<dt><code>$dependents_list [0]</code></p>
-<dd> Whether to display a list(s) of dependencies at the end of a run.</p>
-<dt><code>$deps_file [-]</code></p>
-<dd> Name of file to receive list(s) of dependencies at the end of a run, to be used if <i>$dependesnt_list</i> is set. If the filename is &quot;-&quot;, then the dependency list is set to stdout (i.e., normally the screen). </p>
-<dt><code>$do_cd [0]</code></p>
-<dd> Whether to change working directory to the directory specified for the main source file before processing it. The default behavior is not to do this, which is the same as the behavior of <i>*latex</i> programs. This variable is set by the <code>-cd</code> and <code>-cd-</code> options on <i>latexmk</i>&#8216;s command line.</p>
-<dt><code>$dvi_filter [empty]</code></p>
-<dd> The dvi file filter to be run on the newly produced dvi file before other processing. Equivalent to specifying the <code>-dF</code> option.</p>
-<dt><code>$dvi_mode [See below for default]</code></p>
-<dd> If nonzero, generate a dvi version of the document. Equivalent to the <code>-dvi</code> option. </p>
+<dt><code>$dependents_phony [0]</code></dt>
+<dd> If a list of dependencies is output, this variable determines whether to include a phony target for each source file. If you use the dependents list in a Makefile, the dummy rules work around errors make gives if you remove header files without updating the Makefile to match.</dd>
+<dt><code>$dependents_list [0]</code></dt>
+<dd> Whether to display a list(s) of dependencies at the end of a run.</dd>
+<dt><code>$deps_file [-]</code></dt>
+<dd> Name of file to receive list(s) of dependencies at the end of a run, to be used if <i>$dependesnt_list</i> is set. If the filename is &quot;-&quot;, then the dependency list is set to stdout (i.e., normally the screen). </dd>
+<dt><code>$do_cd [0]</code></dt>
+<dd> Whether to change working directory to the directory specified for the main source file before processing it. The default behavior is not to do this, which is the same as the behavior of <i>*latex</i> programs. This variable is set by the <code>-cd</code> and <code>-cd-</code> options on <i>latexmk</i>&#8216;s command line.</dd>
+<dt><code>$dvi_filter [empty]</code></dt>
+<dd> The dvi file filter to be run on the newly produced dvi file before other processing. Equivalent to specifying the <code>-dF</code> option.</dd>
+<dt><code>$dvi_mode [See below for default]</code></dt>
+<dd> If nonzero, generate a dvi version of the document. Equivalent to the <code>-dvi</code> option. </dd>
 <p> The variable $dvi_mode defaults to 0, but if no explicit requests are made for other types of file (postscript, pdf), then $dvi_mode will be set to 1. In addition, if a request for a file for which a .dvi file is a prerequisite, then $dvi_mode will be set to 1.</p>
-<dt><code>$dvi_previewer [start xdvi %O %S under UNIX]</code></p>
-<dd> The command to invoke a dvi-previewer. [Under MS-Windows the default is &quot;start&quot;; then <i>latexmk</i> arranges to use the MS-Windows <i>start</i> program, which will cause to be run whatever command the system has associated with .dvi files.] </p>
+<dt><code>$dvi_previewer [start xdvi %O %S under UNIX]</code></dt>
+<dd> The command to invoke a dvi-previewer. [Under MS-Windows the default is &quot;start&quot;; then <i>latexmk</i> arranges to use the MS-Windows <i>start</i> program, which will cause to be run whatever command the system has associated with .dvi files.] </dd>
 <p> <code>Important note</code>: Normally you will want to have a previewer run detached, so that <i>latexmk</i> doesn&#8217;t wait for the previewer to terminate before continuing its work. So normally you should prefix the command by &quot;start &quot;, which flags to <i>latexmk</i> that it should do the detaching of the previewer itself (by whatever method is appropriate to the operating system). But sometimes letting <i>latexmk</i> do the detaching is not appropriate (for a variety of non-trivial reasons), so you should put the &quot;start &quot; bit in yourself, whenever it is needed.</p>
-<dt><code>$dvi_previewer_landscape [start xdvi %O %S]</code></p>
-<dd> The command to invoke a dvi-previewer in landscape mode. [Under MS-Windows the default is &quot;start&quot;; then <i>latexmk</i> arranges to use the MS-Windows <i>start</i> program, which will cause to be run whatever command the system has associated with .dvi files.]</p>
-<dt><code>$dvipdf [dvipdf -dALLOWPSTRANSPARENCY %O %S %D]</code></p>
-<dd> Command to convert .dvi to .pdf file. A common reconfiguration is to use the dvipdfm command, which needs its arguments in a different order: </p>
+<dt><code>$dvi_previewer_landscape [start xdvi %O %S]</code></dt>
+<dd> The command to invoke a dvi-previewer in landscape mode. [Under MS-Windows the default is &quot;start&quot;; then <i>latexmk</i> arranges to use the MS-Windows <i>start</i> program, which will cause to be run whatever command the system has associated with .dvi files.]</dd>
+<dt><code>$dvipdf [dvipdf -dALLOWPSTRANSPARENCY %O %S %D]</code></dt>
+<dd> Command to convert .dvi to .pdf file. A common reconfiguration is to use the dvipdfm command, which needs its arguments in a different order: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$dvipdf&nbsp;=&nbsp;&quot;dvipdfm&nbsp;%O -o&nbsp;%D&nbsp;%S&quot;; </p>
 <p> WARNING: The default dvipdf script generates pdf files with bitmapped fonts, which do not look good when viewed by acroread. That script should be modified to give dvips the options &quot;-P pdf&quot; to ensure that type 1 fonts are used in the pdf file.</p>
-<dt><code>$dvipdf_silent_switch [-q]</code></p>
-<dd> Switch(es) for dvipdf program when silent mode is on. </p>
+<dt><code>$dvipdf_silent_switch [-q]</code></dt>
+<dd> Switch(es) for dvipdf program when silent mode is on. </dd>
 <p> N.B. The standard dvipdf program runs silently, so adding the silent switch has no effect, but is actually innocuous. But if an alternative program is used, e.g., dvipdfmx, then the silent switch has an effect. The default setting is correct for <i>dvipdfm</i> and <i>dvipdfmx</i>.</p>
-<dt><code>$dvips [dvips %O -o %D %S]</code></p>
-<dd> The program to used as a filter to convert a .dvi file to a .ps file. If pdf is going to be generated from pdf, then the value of the <i>$dvips_pdf_switch</i> variable &#8212; see below &#8212; will be included in the options substituted for &quot;%O&quot;.</p>
-<dt><code>$dvips_landscape [dvips -tlandscape %O -o %D %S]</code></p>
-<dd> The program to used as a filter to convert a .dvi file to a .ps file in landscape mode.</p>
-<dt><code>$dvips_pdf_switch [-P pdf]</code></p>
-<dd> Switch(es) for <i>dvips</i> program when pdf file is to be generated from .ps file.</p>
-<dt><code>$dvips_silent_switch [-q]</code></p>
-<dd> Switch(es) for <i>dvips</i> program when silent mode is on.</p>
-<dt><code>$dvi_update_command []</code></p>
-<dd> When the dvi previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$dvi_update_method</i> for further information, and see information on the variable <i>$pdf_update_method</i> for an example for the analogous case of a pdf previewer.</p>
-<dt><code>$dvi_update_method [2 under UNIX, 1 under MS-Windows]</code></p>
+<dt><code>$dvips [dvips %O -o %D %S]</code></dt>
+<dd> The program to used as a filter to convert a .dvi file to a .ps file. If pdf is going to be generated from pdf, then the value of the <i>$dvips_pdf_switch</i> variable &#8212; see below &#8212; will be included in the options substituted for &quot;%O&quot;.</dd>
+<dt><code>$dvips_landscape [dvips -tlandscape %O -o %D %S]</code></dt>
+<dd> The program to used as a filter to convert a .dvi file to a .ps file in landscape mode.</dd>
+<dt><code>$dvips_pdf_switch [-P pdf]</code></dt>
+<dd> Switch(es) for <i>dvips</i> program when pdf file is to be generated from .ps file.</dd>
+<dt><code>$dvips_silent_switch [-q]</code></dt>
+<dd> Switch(es) for <i>dvips</i> program when silent mode is on.</dd>
+<dt><code>$dvi_update_command []</code></dt>
+<dd> When the dvi previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$dvi_update_method</i> for further information, and see information on the variable <i>$pdf_update_method</i> for an example for the analogous case of a pdf previewer.</dd>
+<dt><code>$dvi_update_method [2 under UNIX, 1 under MS-Windows]</code></dt>
 <dd> How the dvi viewer updates its display when the dvi file has changed. The values here apply equally to the <i>$pdf_update_method</i> and to the <i>$ps_update_method</i> variables.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;=&gt;&nbsp;update is automatic,&nbsp;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1=&gt;&nbsp;manual update by user, which may only mean a mouse click on the viewer&#8217;s window or may mean a more serious action.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2&nbsp;=&gt;&nbsp;Send the signal, whose number is in the variable <i>$dvi_update_signal</i>. The default value under UNIX is suitable for <i>xdvi</i>.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3&nbsp;=&gt;&nbsp;Viewer cannot do an update, because it locks the file.&nbsp;(As with <i>acroread</i> under MS-Windows.)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4&nbsp;=&gt;&nbsp;run a command to do the update.&nbsp;<wbr>&nbsp;The command is specified by the variable <i>$dvi_update_command</i>. </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4&nbsp;=&gt;&nbsp;run a command to do the update.&nbsp;<wbr>&nbsp;The command is specified by the variable <i>$dvi_update_command</i>. </dd>
 <p> See information on the variable <i>$pdf_update_method</i> for an example of updating by command.</p>
-<dt><code>$dvi_update_signal [Under UNIX: SIGUSR1, which is a system-dependent value]</code></p>
-<dd> The number of the signal that is sent to the dvi viewer when it is updated by sending a signal &#8212; see the information on the variable <i>$dvi_update_method</i>. The default value is the one appropriate for <i>xdvi</i> on a UNIX system.</p>
-<dt><code>$emulate_aux [0]</code></p>
-<dd> Whether to emulate the use of aux_dir when $aux_dir and $out_dir are different, rather than using the -aux-directory option for the *latex programs. (MiKTeX supports -aux-directory, but TeXLive doesn&#8217;t.) </p>
+<dt><code>$dvi_update_signal [Under UNIX: SIGUSR1, which is a system-dependent value]</code></dt>
+<dd> The number of the signal that is sent to the dvi viewer when it is updated by sending a signal &#8212; see the information on the variable <i>$dvi_update_method</i>. The default value is the one appropriate for <i>xdvi</i> on a UNIX system.</dd>
+<dt><code>$emulate_aux [0]</code></dt>
+<dd> Whether to emulate the use of aux_dir when $aux_dir and $out_dir are different, rather than using the -aux-directory option for the *latex programs. (MiKTeX supports -aux-directory, but TeXLive doesn&#8217;t.) </dd>
 <p> If you use a version of *latex that doesn&#8217;t support -aux-directory, e.g., TeXLive, latexmk will automatically switch aux_dir emulation on after the first run of *latex, because it will find the .log file in the wrong place. </p>
 <p> Aux_directory emulation means that when *latex is invoked, the <i>output</i> directory provided to *latex is set to be the aux_dir. After that, any files that need to be in the output directory will be moved there. (These are the files with extensions .dvi, .ps, .pdf, .fls, .synctex, .synctex.gz.) </p>
-<dt><code>$failure_cmd [undefined]</code></p>
-<dd> See the documentation for <i>$compiling_cmd</i>.</p>
-<dt><code>$fdb_ext [fdb_latexmk]</code></p>
-<dd> The extension of the file which <i>latexmk</i> generates to contain a database of information on source files. You will not normally need to change this.</p>
-<dt><code>$filetime_causality_threshold [5]; $filetime_offset_report_threshold [30]. </code>(Units of seconds.)</p>
+<dt><code>$failure_cmd [undefined]</code></dt>
+<dd> See the documentation for <i>$compiling_cmd</i>.</dd>
+<dt><code>$fdb_ext [fdb_latexmk]</code></dt>
+<dd> The extension of the file which <i>latexmk</i> generates to contain a database of information on source files. You will not normally need to change this.</dd>
+<dt><code>$filetime_causality_threshold [5]; $filetime_offset_report_threshold [30]. </code>(Units of seconds.)</dt>
 <dd>
 <p> These variables control how <i>latexmk</i> deals with the following issue, which can affect the use of files that are on a remote filesystem (network share) instead of being on a file system local to the computer running <i>latexmk</i>. Almost users will not have to worry about these settings, and can ignore the following explanation. </p>
 <p> In almost all situations, <i>latexmk</i> does not need to use the time stamps of the files it works with. However, there are a couple of situations when it needs to know whether a certain file was created in the current run of a program (e.g., <i>*latex</i>) or is a leftover file from a previous run. It does this by comparing the modification time of the file with the system time just before the program was started. If the modification time is earlier than when the program was started, the file is a leftover file, which <i>latexmk</i> treats as if it were not created. If the filetime is at least the program start time, then it can be assumed that the file was created in the current run. </p>
 <p> Unfortunately, this test can fail if the file is on a remote system, since its system time is not necessarily synchronized with that of the local system; the timestamps on the remote files are set by the remote system, not the local system. Generally, modern operating systems regularly synchronize their time with a server, so the non-synchronization is mostly small (a second or so, or a few seconds). But even a small difference can mess up <i>latexmk</i>&#8216;s test. </p>
 <p> <i>Latexmk</i> measures the time difference between the time on the two systems and compensates for this. But the measurement (in a system-independent way) is only accurate to a second or two. So <i>latexmk</i> allows for a threshold on the difference between file and system time before it concludes that a file is a leftover file from a previous run. The configuration variable <i>$filetime_causality_theshhold</i>, which in units of seconds, specifies this threshold. Luckily high precision is not needed. The previous run is normally the previous run in a human run-edit-run cycle, and is at least many seconds back. A few seconds is therefore appropriate for the threshold, <i>$filetime_causality_theshhold</i>; it should be non-negative always, and should be bigger than 2 if a remote filesystem or network share is used. </p>
 <p> If the difference in system times on the two systems is large, it normally indicates that at least one of the systems is misconfigured. The variable <i>$filetime_offset_report_threshold</i> specifies the smallest size of the difference (or offset) in seconds between the times of the local and remote system beyond which the offset is reported. This is reported at the point in the <i>latexmk</i>&#8216;s progress that it measures the offset. The report is made if silent mode is used and diagnostic mode is not on. </p>
-<dt><code>$force_mode [0]</code></p>
-<dd> If nonzero, continue processing past minor <i>latex</i> errors including unrecognized cross references. Equivalent to specifying the <code>-f</code> option.</p>
-<dt><code>@generated_exts [( aux, bbl, idx, ind, lof, lot, out, toc, $fdb_ext )]</code></p>
-<dd> This contains a list of extensions for files that are generated during a LaTeX run and that are read in by LaTeX in later runs, either directly or indirectly. </p>
+</dd><dt><code>$force_mode [0]</code></dt>
+<dd> If nonzero, continue processing past minor <i>latex</i> errors including unrecognized cross references. Equivalent to specifying the <code>-f</code> option.</dd>
+<dt><code>@generated_exts [( aux, bbl, idx, ind, lof, lot, out, toc, $fdb_ext )]</code></dt>
+<dd> This contains a list of extensions for files that are generated during a LaTeX run and that are read in by LaTeX in later runs, either directly or indirectly. </dd>
 <p> This list specifies files known to be generated by <i>*latex</i>. It is used in two ways: (a) The specified files are deleted in a cleanup operation (with the <code>-c</code>, <code>-C</code>, <code>-CA</code>, <code>-g</code> and <code>-gg</code> options), and (b) It affects the determination of whether a rerun of *latex is needed after a run that gives an error. </p>
 <p> (Concerning item (b): Normally, a change of a source file during a run should provoke a rerun. This includes a file generated by LaTeX, e.g., an aux file, that is read in on subsequent runs. But after a run that results in an error, a new run should not occur until the user has made a change in the files. But the user may have corrected an error in a source .tex file during the run. So <i>latexmk</i> needs to distinguish user-generated and automatically generated files; it determines the automatically generated files as those with extensions in the list in @generated_exts.) </p>
 <p> A convenient way to add an extra extension to the list, without losing the already defined ones is to use a push command in the line in an RC file. E.g., </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@generated_exts,&nbsp;&quot;end&quot;; </p>
 <p> adds the extension &quot;end&quot; to the list of predefined generated extensions. (This extension is used by the RevTeX package, for example.)</p>
-<dt><code>$go_mode [0]</code></p>
-<dd> If nonzero, process files regardless of timestamps, and is then equivalent to the <code>-g</code> option.</p>
-<dt><code>%hash_calc_ignore_pattern</code></p>
-<dd> <code>!!!This variable is for experts only!!!</code> </p>
+<dt><code>$go_mode [0]</code></dt>
+<dd> If nonzero, process files regardless of timestamps, and is then equivalent to the <code>-g</code> option.</dd>
+<dt><code>%hash_calc_ignore_pattern</code></dt>
+<dd> <code>!!!This variable is for experts only!!!</code> </dd>
 <p> The general rule <i>latexmk</i> uses for determining when an extra run of some program is needed is that one of the source files has changed. But consider for example a latex package that causes an encapsulated postscript file (an &quot;eps&quot; file) to be made that is to be read in on the next run. The file contains a comment line giving its creation date and time. On the next run the time changes, <i>latex</i> sees that the eps file has changed, and therefore reruns latex. This causes an infinite loop, that is only terminated because <i>latexmk</i> has a limit on the number of runs to guard against pathological situations. </p>
 <p> But the changing line has no real effect, since it is a comment. You can instruct <i>latex</i> to ignore the offending line as follows: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$hash_calc_ignore_pattern{&#8216;eps&#8217;}&nbsp;=&nbsp;&#8216;^%%CreationDate:&nbsp;&#8216;; </p>
@@ -740,7 +740,7 @@ description: "latexmk – generate LaTeX document"
 <p> causes lines starting with either &quot;^%%CreationDate: &quot; or &quot;^%%Title: &quot; to be ignored. </p>
 <p> It may happen that a pattern to be ignored is specified in, for example, in a system or user initialization file, and you wish to remove this in a file that is read later. To do this, you use Perl&#8217;s delete function, e.g., </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;delete&nbsp;$hash_calc_ignore_pattern{&#8216;eps&#8217;}; </p>
-<dt><code>$jobname []</code></p>
+<dt><code>$jobname []</code></dt>
 <dd>
 <p> This specifies the jobname, i.e., the basename that is used for generated files (.aux, .log, .dvi, .ps, .pdf, etc). If this variable is a null string, then the basename is the basename of the main tex file. (At present, the string in <i>$jobname</i> should not contain spaces.) </p>
 <p> The placeholder &#8216;%A&#8217; is permitted. This will be substituted by the basename of the TeX file. The primary purpose is when a variety of tex files are to be processed, and you want to use a different jobname for each but one that is distinct for each. Thus if you wanted to compare compilations of a set of files on different operating systems, with distinct filenames for all the cases, you could set </p>
@@ -749,115 +749,115 @@ description: "latexmk – generate LaTeX document"
 <p> Suppose you had .tex files test1.tex and test2.tex. Then when you run </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf&nbsp;*.tex </p>
 <p> both files will be compiled. The .aux, .log, and .pdf files will have basenames test1-MSWin32 ante test2-MSWin32 on a MS-Windows system, test1-darwin and test2-darwin on an OS-X system, and a variety of similar cases on linux systems. </p>
-<dt><code>$kpsewhich [kpsewhich %S]</code></p>
-<dd> The program called to locate a source file when the name alone is not sufficient. Most filenames used by <i>latexmk</i> have sufficient path information to be found directly. But sometimes, notably when a .bib or a .bst file is found from the log file of a <i>bibtex</i> or <i>biber</i> run, only the base name of the file is known, but not its path. The program specified by <i>$kpsewhich</i> is used to find it. </p>
+</dd><dt><code>$kpsewhich [kpsewhich %S]</code></dt>
+<dd> The program called to locate a source file when the name alone is not sufficient. Most filenames used by <i>latexmk</i> have sufficient path information to be found directly. But sometimes, notably when a .bib or a .bst file is found from the log file of a <i>bibtex</i> or <i>biber</i> run, only the base name of the file is known, but not its path. The program specified by <i>$kpsewhich</i> is used to find it. </dd>
 <p> (<i>For advanced users:</i> Because of the different way in which <i>latexmk</i> uses the command specified in <i>$kpsewhich</i>, some of the possibilities listed in the FORMAT OF COMMAND SPECIFICATIONS do not apply. The <i>internal</i> and <i>start</i> keywords are not available. A simple command specification with possible options and then &quot;%S&quot; is all that is guaranteed to work. Note that for other commands, &quot;%S&quot; is substituted by a single source file. In contrast, for <i>$kpsewhich</i>, &quot;%S&quot; may be substituted by a long list of space-separated filenames, each of which is quoted. The result on STDOUT of running the command is then piped to <i>latexmk</i>.) </p>
 <p> See also the <i>@BIBINPUTS</i> variable for another way that <i>latexmk</i> also uses to try to locate files; it applies only in the case of .bib files.</p>
-<dt><code>$kpsewhich_show [0]</code></p>
-<dd> Whether to show diagnostics about invocations of <i>kpsewhich</i>: the command line use to invoke it and the results. These diagnostics are shown if <i>$kpsewhich_show</i> is non-zero or if diagnostics mode is on. (But in the second case, lots of other diagnostics are also shown.) Without these diagnostics there is nothing visible in <i>latexmk</i>&#8216;s screen output about invocations of <i>kpsewhich</i>.</p>
-<dt><code>$landscape_mode [0]</code></p>
-<dd> If nonzero, run in landscape mode, using the landscape mode previewers and dvi to postscript converters. Equivalent to the <code>-l</code> option. Normally not needed with current previewers.</p>
-<dt><code>$latex [latex %O %S]</code></p>
-<dd> Specifies the command line for the LaTeX processing program. Note that as with other programs, you can use this variable not just to change the name of the program used, but also specify options to the program. E.g., </p>
+<dt><code>$kpsewhich_show [0]</code></dt>
+<dd> Whether to show diagnostics about invocations of <i>kpsewhich</i>: the command line use to invoke it and the results. These diagnostics are shown if <i>$kpsewhich_show</i> is non-zero or if diagnostics mode is on. (But in the second case, lots of other diagnostics are also shown.) Without these diagnostics there is nothing visible in <i>latexmk</i>&#8216;s screen output about invocations of <i>kpsewhich</i>.</dd>
+<dt><code>$landscape_mode [0]</code></dt>
+<dd> If nonzero, run in landscape mode, using the landscape mode previewers and dvi to postscript converters. Equivalent to the <code>-l</code> option. Normally not needed with current previewers.</dd>
+<dt><code>$latex [latex %O %S]</code></dt>
+<dd> Specifies the command line for the LaTeX processing program. Note that as with other programs, you can use this variable not just to change the name of the program used, but also specify options to the program. E.g., </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>$latex = &quot;latex &#8211;src-specials %O %S&quot;;</p>
 <p> To do a coordinated setting of all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>, see the section &quot;Advanced Configuration&quot;. </p>
-<dt><code>%latex_input_extensions</code></p>
-<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a LaTeX run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </p>
+<dt><code>%latex_input_extensions</code></dt>
+<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a LaTeX run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </dd>
 <p> In this situation, <i>latexmk</i> searches for custom dependencies to make the missing file(s), but restricts it to the extensions specified by the variable %latex_input_extensions. The default extensions are &#8216;tex&#8217; and &#8216;eps&#8217;. </p>
 <p> (For Perl experts: %latex_input_extensions is a hash whose keys are the extensions. The values are irrelevant.) Two subroutines are provided for manipulating this and the related variable %pdflatex_input_extensions, add_input_ext and remove_input_ext. They are used as in the following examples are possible lines in an initialization file: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remove_input_ext(&nbsp;&#8216;latex&#8217;,&nbsp;&#8216;tex&#8217;&nbsp;); </p>
 <p> removes the extension &#8216;tex&#8217; from latex_input_extensions </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_input_ext(&nbsp;&#8216;latex&#8217;,&nbsp;&#8216;asdf&#8217;&nbsp;); </p>
 <p> add the extension &#8216;asdf to latex_input_extensions. (Naturally with such an extension, you should have made an appropriate custom dependency for <i>latexmk</i>, and should also have done the appropriate programming in the LaTeX source file to enable the file to be read. The standard extensions are handled by LaTeX and its graphics/graphicx packages.)</p>
-<dt><code>$latex_silent_switch [-interaction=batchmode]</code></p>
-<dd> Switch(es) for the LaTeX processing program when silent mode is on. </p>
+<dt><code>$latex_silent_switch [-interaction=batchmode]</code></dt>
+<dd> Switch(es) for the LaTeX processing program when silent mode is on. </dd>
 <p> If you use MikTeX, you may prefer the results if you configure the options to include -c-style-errors, e.g., by the following line in an initialization file </p>
 <p>&nbsp;<wbr>&nbsp;$latex_silent_switch&nbsp;=&nbsp;&quot;-interaction=batchmode -c-style-errors&quot;; </p>
-<dt><code>$lpr [lpr %O %S under UNIX/Linux, &quot;NONE lpr&quot; under MS-Windows]</code></p>
-<dd> The command to print postscript files. </p>
+<dt><code>$lpr [lpr %O %S under UNIX/Linux, &quot;NONE lpr&quot; under MS-Windows]</code></dt>
+<dd> The command to print postscript files. </dd>
 <p> Under MS-Windows (unlike UNIX/Linux), there is no standard program for printing files. But there are ways you can do it. For example, if you have <i>gsview</i> installed, you could use it with the option &quot;/p&quot;: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$lpr&nbsp;=&nbsp;&#8216;&quot;c:/Program Files/Ghostgum/gsview/gsview32.exe&quot;&nbsp;/p&#8217;; </p>
 <p> If <i>gsview</i> is installed in a different directory, you will need to make the appropriate change. Note the combination of single and double quotes around the name. The single quotes specify that this is a string to be assigned to the configuration variable <i>$lpr</i>. The double quotes are part of the string passed to the operating system to get the command obeyed; this is necessary because one part of the command name (&quot;Program Files&quot;) contains a space which would otherwise be misinterpreted.</p>
-<dt><code>$lpr_dvi [NONE lpr_dvi]</code></p>
-<dd> The printing program to print dvi files.</p>
-<dt><code>$lpr_pdf [NONE lpr_pdf]</code></p>
-<dd> The printing program to print pdf files. </p>
+<dt><code>$lpr_dvi [NONE lpr_dvi]</code></dt>
+<dd> The printing program to print dvi files.</dd>
+<dt><code>$lpr_pdf [NONE lpr_pdf]</code></dt>
+<dd> The printing program to print pdf files. </dd>
 <p> Under MS-Windows you could set this to use <i>gsview</i>, if it is installed, e.g., </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$lpr&nbsp;=&nbsp;&#8216;&quot;c:/Program Files/Ghostgum/gsview/gsview32.exe&quot;&nbsp;/p&#8217;; </p>
 <p> If <i>gsview</i> is installed in a different directory, you will need to make the appropriate change. Note the double quotes around the name: this is necessary because one part of the command name (&quot;Program Files&quot;) contains a space which would otherwise be misinterpreted.</p>
-<dt><code>$lualatex [lualatex %O %S]</code></p>
-<dd> Specifies the command line for the LaTeX processing program that is to be used when the <i>lualatex</i> program is called for (e.g., by the option <code>-lualatex</code>. </p>
+<dt><code>$lualatex [lualatex %O %S]</code></dt>
+<dd> Specifies the command line for the LaTeX processing program that is to be used when the <i>lualatex</i> program is called for (e.g., by the option <code>-lualatex</code>. </dd>
 <p> To do a coordinated setting of all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>, see the section &quot;Advanced Configuration&quot;. </p>
-<dt><code>%lualatex_input_extensions</code></p>
-<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a <i>lualatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </p>
+<dt><code>%lualatex_input_extensions</code></dt>
+<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a <i>lualatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </dd>
 <p> In this situation, <i>latexmk</i> searches for custom dependencies to make the missing file(s), but restricts it to the extensions specified by the variable %pdflatex_input_extensions. The default extensions are &#8216;tex&#8217;, &#8216;pdf&#8217;, &#8216;jpg, and &#8216;png&#8217;. </p>
 <p> See details of the <i>%latex_input_extensions</i> for other information that equally applies to <i>%lualatex_input_extensions</i>.</p>
-<dt><code>$lualatex_silent_switch [-interaction=batchmode]</code></p>
-<dd> Switch(es) for the <i>lualatex</i> program (specified in the variable <i>$lualatex</i>) when silent mode is on. </p>
+<dt><code>$lualatex_silent_switch [-interaction=batchmode]</code></dt>
+<dd> Switch(es) for the <i>lualatex</i> program (specified in the variable <i>$lualatex</i>) when silent mode is on. </dd>
 <p> See details of the <i>$latex_silent_switch</i> for other information that equally applies to <i>$lualatex_silent_switch</i>.</p>
-<dt><code>$make [make]</code></p>
-<dd> The make processing program.</p>
-<dt><code>$makeindex [makeindex %O -o %D %S]</code></p>
-<dd> The index processing program.</p>
-<dt><code>$makeindex_fudge [0]</code></p>
-<dd> When using makeindex, whether to change directory to $aux_dir before running makeindex. Set to 1 if $aux_dir is not an explicit subdirectory of current directory, otherwise makeindex will refuse to write its output and log files, for security reasons.</p>
-<dt><code>$makeindex_silent_switch [-q]</code></p>
-<dd> <code>Switch(es)</code> for the index processing program when silent mode is on.</p>
-<dt><code>$max_repeat [5]</code></p>
-<dd> The maximum number of times <i>latexmk</i> will run <i>*latex</i> before deciding that there may be an infinite loop and that it needs to bail out, rather than rerunning <i>*latex</i> again to resolve cross-references, etc. The default value covers all normal cases. </p>
+<dt><code>$make [make]</code></dt>
+<dd> The make processing program.</dd>
+<dt><code>$makeindex [makeindex %O -o %D %S]</code></dt>
+<dd> The index processing program.</dd>
+<dt><code>$makeindex_fudge [0]</code></dt>
+<dd> When using makeindex, whether to change directory to $aux_dir before running makeindex. Set to 1 if $aux_dir is not an explicit subdirectory of current directory, otherwise makeindex will refuse to write its output and log files, for security reasons.</dd>
+<dt><code>$makeindex_silent_switch [-q]</code></dt>
+<dd> <code>Switch(es)</code> for the index processing program when silent mode is on.</dd>
+<dt><code>$max_repeat [5]</code></dt>
+<dd> The maximum number of times <i>latexmk</i> will run <i>*latex</i> before deciding that there may be an infinite loop and that it needs to bail out, rather than rerunning <i>*latex</i> again to resolve cross-references, etc. The default value covers all normal cases. </dd>
 <p> (Note that the &quot;etc&quot; covers a lot of cases where one run of <i>*latex</i> generates files to be read in on a later run.)</p>
-<dt><code>$MSWin_back_slash [1]</code></p>
-<dd> This configuration variable only has an effect when <i>latexmk</i> is running under MS-Windows. With the default value of 1 for this variable, when a command is executed under MS-Windows, <i>latexmk</i> substitutes &quot;\&quot; for the separator character between components of a directory name. Internally, <i>latexmk</i> uses &quot;/&quot; for the directory separator character, which is the character used by Unix-like systems. </p>
+<dt><code>$MSWin_back_slash [1]</code></dt>
+<dd> This configuration variable only has an effect when <i>latexmk</i> is running under MS-Windows. With the default value of 1 for this variable, when a command is executed under MS-Windows, <i>latexmk</i> substitutes &quot;\&quot; for the separator character between components of a directory name. Internally, <i>latexmk</i> uses &quot;/&quot; for the directory separator character, which is the character used by Unix-like systems. </dd>
 <p> For almost all programs and for almost all filenames under MS-Windows, both &quot;\&quot; and &quot;/&quot; are acceptable as the directory separator character, provided at least that filenames are properly quoted. But it is possible that programs exist that only accept &quot;\&quot; on the command line, since that is the standard directory separator for MS-Windows. So for safety <i>latexmk</i> makes the substitution from &quot;/&quot; to &quot;\&quot;, by default. </p>
 <p> However there are also programs on MS-Windows for which a back slash &quot;\&quot; is interpreted differently than as a directory separator; for these the directory separator should be &quot;/&quot;. Programs with this behavior include all the *latex programs in the TeXLive implementation (but not the MiKTeX implementation). Hence if you use TeXLive on MS-Windows, then <i>$MSWin_back_slash</i> should be set to zero. </p>
-<dt><code>$new_viewer_always [0]</code></p>
-<dd> This variable applies to <i>latexmk</i> <code>only</code> in continuous-preview mode. If <i>$new_viewer_always</i> is 0, <i>latexmk</i> will check for a previously running previewer on the same file, and if one is running will not start a new one. If <i>$new_viewer_always</i> is non-zero, this check will be skipped, and <i>latexmk</i> will behave as if no viewer is running.</p>
-<dt><code>$out_dir []</code></p>
-<dd> If non-blank, this variable specifies the directory in which output files are to be written by a run of *latex. See also the variable <i>$aux_dir</i>. </p>
+<dt><code>$new_viewer_always [0]</code></dt>
+<dd> This variable applies to <i>latexmk</i> <code>only</code> in continuous-preview mode. If <i>$new_viewer_always</i> is 0, <i>latexmk</i> will check for a previously running previewer on the same file, and if one is running will not start a new one. If <i>$new_viewer_always</i> is non-zero, this check will be skipped, and <i>latexmk</i> will behave as if no viewer is running.</dd>
+<dt><code>$out_dir []</code></dt>
+<dd> If non-blank, this variable specifies the directory in which output files are to be written by a run of *latex. See also the variable <i>$aux_dir</i>. </dd>
 <p> The effect of this variable (when non-blank) is achieved by using the <code>-output-directory</code> option of *latex. This exists in the usual current (Dec. 2011 and later) implementations of TeX, i.e., MiKTeX and TeXLive. But it may not be present in other versions. </p>
 <p> If you also use the <code>-cd</code> option, and <i>$out_dir</i> (or <i>$aux_dir</i>) contains a relative path, then the path is interpreted relative to the document directory. </p>
 <p> Commonly, the directory specified for output files is a subdirectory of the current working directory. However, if you specify some other directory, e.g., &quot;/tmp/foo&quot; or &quot;../output&quot;, be aware that this could cause problems, e.g., with <i>makeindex</i> or <i>bibtex</i>. This is because modern versions of these programs, by default, will refuse to work when they find that they are asked to write to a file in a directory that appears not to be the current working directory or one of its subdirectories. This is part of security measures by the whole TeX system that try to prevent malicious or errant TeX documents from incorrectly messing with a user&#8217;s files. If for <i>$out_dir</i> or <i>$aux_dir</i> you really do need to specify an absolute pathname (e.g., &quot;/tmp/foo&quot;) or a path (e.g., &quot;../output&quot;) that includes a higher-level directory, and you need to use <i>makeindex</i> or <i>bibtex</i>, then you need to disable the security measures (and assume any risks). One way of doing this is to temporarily set an operating system environment variable openout_any to &quot;a&quot; (as in &quot;all&quot;), to override the default &quot;paranoid&quot; setting.</p>
-<dt><code>$pdf_mode [0]</code></p>
-<dd> If zero, do NOT generate a pdf version of the document. If equal to 1, generate a pdf version of the document using <i>pdflatex</i>, using the command specified by the <i>$pdflatex</i> variable. If equal to 2, generate a pdf version of the document from the ps file, by using the command specified by the <i>$ps2pdf</i> variable. If equal to 3, generate a pdf version of the document from the dvi file, by using the command specified by the <i>$dvipdf</i> variable. If equal to 4, generate a pdf version of the document using <i>lualatex</i>, using the command specified by the <i>$lualatex</i> variable. If equal to 5, generate a pdf version (and an xdv version) of the document using <i>xelatex</i>, using the commands specified by the <i>$xelatex</i> and <i>xdvipdfmx</i> variables. </p>
+<dt><code>$pdf_mode [0]</code></dt>
+<dd> If zero, do NOT generate a pdf version of the document. If equal to 1, generate a pdf version of the document using <i>pdflatex</i>, using the command specified by the <i>$pdflatex</i> variable. If equal to 2, generate a pdf version of the document from the ps file, by using the command specified by the <i>$ps2pdf</i> variable. If equal to 3, generate a pdf version of the document from the dvi file, by using the command specified by the <i>$dvipdf</i> variable. If equal to 4, generate a pdf version of the document using <i>lualatex</i>, using the command specified by the <i>$lualatex</i> variable. If equal to 5, generate a pdf version (and an xdv version) of the document using <i>xelatex</i>, using the commands specified by the <i>$xelatex</i> and <i>xdvipdfmx</i> variables. </dd>
 <p> In <i>$pdf_mode</i>=2, it is ensured that .dvi and .ps files are also made. In <i>$pdf_mode</i>=3, it is ensured that a .dvi file is also made. But this may be overridden by the document.</p>
-<dt><code>$pdflatex [pdflatex %O %S]</code></p>
-<dd> Specifies the command line for the LaTeX processing program in a version that makes a pdf file instead of a dvi file. </p>
+<dt><code>$pdflatex [pdflatex %O %S]</code></dt>
+<dd> Specifies the command line for the LaTeX processing program in a version that makes a pdf file instead of a dvi file. </dd>
 <p> An example use of this variable is to add certain options to the command line for the program, e.g., </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdflatex&nbsp;=&nbsp;&quot;pdflatex &#8211;shell-escape&nbsp;%O&nbsp;%S&quot;; </p>
 <p> (In some earlier versions of <i>latexmk</i>, you needed to use an assignment to <i>$pdflatex</i> to allow the use of <i>lualatex</i> or <i>xelatex</i> instead of <i>pdflatex</i>. There are now separate configuration variables for the use of <i>lualatex</i> or <i>xelatex</i>. See <i>$lualatex</i> and <i>$xelatex</i>.) </p>
 <p> To do a coordinated setting of all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>, see the section &quot;Advanced Configuration&quot;.</p>
-<dt><code>%pdflatex_input_extensions</code></p>
-<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a <i>pdflatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </p>
+<dt><code>%pdflatex_input_extensions</code></dt>
+<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that a <i>pdflatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </dd>
 <p> In this situation, <i>latexmk</i> searches for custom dependencies to make the missing file(s), but restricts it to the extensions specified by the variable %pdflatex_input_extensions. The default extensions are &#8216;tex&#8217;, &#8216;pdf&#8217;, &#8216;jpg, and &#8216;png&#8217;. </p>
 <p> See details of the <i>%latex_input_extensions</i> for other information that equally applies to <i>%pdflatex_input_extensions</i>.</p>
-<dt><code>$pdflatex_silent_switch [-interaction=batchmode]</code></p>
-<dd> Switch(es) for the <i>pdflatex</i> program (specified in the variable <i>$pdflatex</i>) when silent mode is on. </p>
+<dt><code>$pdflatex_silent_switch [-interaction=batchmode]</code></dt>
+<dd> Switch(es) for the <i>pdflatex</i> program (specified in the variable <i>$pdflatex</i>) when silent mode is on. </dd>
 <p> See details of the <i>$latex_silent_switch</i> for other information that equally applies to <i>$pdflatex_silent_switch</i>.</p>
-<dt><code>$pdf_previewer [start acroread %O %S]</code></p>
-<dd> The command to invoke a pdf-previewer. </p>
+<dt><code>$pdf_previewer [start acroread %O %S]</code></dt>
+<dd> The command to invoke a pdf-previewer. </dd>
 <p> On MS-Windows, the default is changed to &quot;cmd /c start &quot;&quot;&quot;; under more recent versions of Windows, this will cause to be run whatever command the system has associated with .pdf files. But this may be undesirable if this association is to <i>acroread</i> &#8212; see the notes in the explanation of the <code>-pvc</code> option.] </p>
 <p> On OS-X the default is changed to &quot;open %S&quot;, which results in OS-X starting up (and detaching) the viewer associated with the file. By default, for pdf files this association is to OS-X&#8217;s preview, which is quite satisfactory. </p>
 <p> <code>WARNING</code>: Problem under MS-Windows: if acroread is used as the pdf previewer, and it is actually viewing a pdf file, the pdf file cannot be updated. Thus makes acroread a bad choice of previewer if you use <i>latexmk</i>&#8216;s previous-continuous mode (option <code>-pvc</code>) under MS-windows. This problem does not occur if, for example, <i>SumatraPDF</i> or <i>gsview</i> is used to view pdf files. </p>
 <p> <code>Important note</code>: Normally you will want to have a previewer run detached, so that <i>latexmk</i> doesn&#8217;t wait for the previewer to terminate before continuing its work. So normally you should prefix the command by &quot;start &quot;, which flags to <i>latexmk</i> that it should do the detaching of the previewer itself (by whatever method is appropriate to the operating system). But sometimes letting <i>latexmk</i> do the detaching is not appropriate (for a variety of non-trivial reasons), so you should put the &quot;start &quot; bit in yourself, whenever it is needed.</p>
-<dt><code>$pdf_update_command []</code></p>
-<dd> When the pdf previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$pdf_update_method</i>.</p>
-<dt><code>$pdf_update_method [1 under UNIX, 3 under MS-Windows]</code></p>
-<dd> How the pdf viewer updates its display when the pdf file has changed. See the information on the variable <i>$dvi_update_method</i> for the codes. (Note that information needs be changed slightly so that for the value 4, to run a command to do the update, the command is specified by the variable <i>$pdf_update_command</i>, and for the value 2, to specify update by signal, the signal is specified by <i>$pdf_update_signal</i>.) </p>
+<dt><code>$pdf_update_command []</code></dt>
+<dd> When the pdf previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$pdf_update_method</i>.</dd>
+<dt><code>$pdf_update_method [1 under UNIX, 3 under MS-Windows]</code></dt>
+<dd> How the pdf viewer updates its display when the pdf file has changed. See the information on the variable <i>$dvi_update_method</i> for the codes. (Note that information needs be changed slightly so that for the value 4, to run a command to do the update, the command is specified by the variable <i>$pdf_update_command</i>, and for the value 2, to specify update by signal, the signal is specified by <i>$pdf_update_signal</i>.) </dd>
 <p> Note that acroread under MS-Windows (but not UNIX) locks the pdf file, so the default value is then 3. </p>
 <p> Arranging to use a command to get a previewer explicitly updated requires three variables to be set. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&quot;start xpdf -remote&nbsp;%R&nbsp;%O&nbsp;%S&quot;;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_update_method&nbsp;=&nbsp;4;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_update_command&nbsp;=&nbsp;&quot;xpdf -remote&nbsp;%R -reload&quot;; </p>
 <p> The first setting arranges for the xpdf program to be used in its &quot;remote server mode&quot;, with the server name specified as the rootname of the TeX file. The second setting arranges for updating to be done in response to a command, and the third setting sets the update command.</p>
-<dt><code>$pdf_update_signal [Under UNIX: SIGHUP, which is a system-dependent value]</code></p>
-<dd> The number of the signal that is sent to the pdf viewer when it is updated by sending a signal &#8212; see the information on the variable <i>$pdf_update_method</i>. The default value is the one appropriate for <i>gv</i> on a UNIX system.</p>
-<dt><code>$pid_position[1 under UNIX, -1 under MS-Windows] </code></p>
-<dd> The variable <i>$pid_position</i> is used to specify which word in lines of the output from <i>$pscmd</i> corresponds to the process ID. The first word in the line is numbered 0. The default value of 1 (2nd word in line) is correct for Solaris 2.6, Linux, and OS-X with their default settings of <i>$pscmd</i>. </p>
+<dt><code>$pdf_update_signal [Under UNIX: SIGHUP, which is a system-dependent value]</code></dt>
+<dd> The number of the signal that is sent to the pdf viewer when it is updated by sending a signal &#8212; see the information on the variable <i>$pdf_update_method</i>. The default value is the one appropriate for <i>gv</i> on a UNIX system.</dd>
+<dt><code>$pid_position[1 under UNIX, -1 under MS-Windows] </code></dt>
+<dd> The variable <i>$pid_position</i> is used to specify which word in lines of the output from <i>$pscmd</i> corresponds to the process ID. The first word in the line is numbered 0. The default value of 1 (2nd word in line) is correct for Solaris 2.6, Linux, and OS-X with their default settings of <i>$pscmd</i>. </dd>
 <p> Setting the variable to -1 is used to indicate that <i>$pscmd</i> is not to be used.</p>
-<dt><code>$postscript_mode [0]</code></p>
-<dd> If nonzero, generate a postscript version of the document. Equivalent to the <code>-ps</code> option. </p>
+<dt><code>$postscript_mode [0]</code></dt>
+<dd> If nonzero, generate a postscript version of the document. Equivalent to the <code>-ps</code> option. </dd>
 <p> If some other request is made for which a postscript file is needed, then $postscript_mode will be set to 1.</p>
-<dt><code>$pre_tex_code [&#8221;]</code></p>
+<dt><code>$pre_tex_code [&#8221;]</code></dt>
 <dd>
 <p> Sets TeX code to be executed before inputting the source file. This works if the relevant one of <i>$latex</i>, etc contains a suitable command line with a %P or %U substitution. For example you could do </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;latex&nbsp;%O&nbsp;%P&#8217;;<br />
@@ -865,97 +865,97 @@ description: "latexmk – generate LaTeX document"
 <p> To set all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i> you could use the subroutine <i>alt_tex_cmds</i>: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;alt_tex_cmds;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pre_tex_code&nbsp;=&nbsp;&#8216;\AtBeginDocument{An initial message\par}&#8217;; </p>
-<dt><code>$preview_continuous_mode [0]</code></p>
-<dd> If nonzero, run a previewer to view the document, and continue running <i>latexmk</i> to keep .dvi up-to-date. Equivalent to the <code>-pvc</code> option. Which previewer is run depends on the other settings, see the command line options <code>-view=</code>, and the variable <i>$view</i>.</p>
-<dt><code>$preview_mode [0]</code></p>
-<dd> If nonzero, run a previewer to preview the document. Equivalent to the <code>-pv</code> option. Which previewer is run depends on the other settings, see the command line options <code>-view=</code>, and the variable <i>$view</i>.</p>
-<dt><code>$printout_mode [0]</code></p>
-<dd> If nonzero, print the document using the command specified in the <i>$lpr</i> variable. Equivalent to the <code>-p</code> option. This is recommended <code>not</code> to be set from an RC file, otherwise you could waste lots of paper.</p>
-<dt><code>$print_type = [auto]</code></p>
-<dd> Type of file to printout: possibilities are &quot;auto&quot;, &quot;dvi&quot;, &quot;none&quot;, &quot;pdf&quot;, or &quot;ps&quot;. See the option <code>-print=</code> for the meaning of the &quot;auto&quot; value.</p>
-<dt><code>$pscmd</code></p>
-<dd> Command used to get all the processes currently run by the user. The -pvc option uses the command specified by the variable <i>$pscmd</i> to determine if there is an already running previewer, and to find the process ID (needed if <i>latexmk</i> needs to signal the previewer about file changes). </p>
+</dd><dt><code>$preview_continuous_mode [0]</code></dt>
+<dd> If nonzero, run a previewer to view the document, and continue running <i>latexmk</i> to keep .dvi up-to-date. Equivalent to the <code>-pvc</code> option. Which previewer is run depends on the other settings, see the command line options <code>-view=</code>, and the variable <i>$view</i>.</dd>
+<dt><code>$preview_mode [0]</code></dt>
+<dd> If nonzero, run a previewer to preview the document. Equivalent to the <code>-pv</code> option. Which previewer is run depends on the other settings, see the command line options <code>-view=</code>, and the variable <i>$view</i>.</dd>
+<dt><code>$printout_mode [0]</code></dt>
+<dd> If nonzero, print the document using the command specified in the <i>$lpr</i> variable. Equivalent to the <code>-p</code> option. This is recommended <code>not</code> to be set from an RC file, otherwise you could waste lots of paper.</dd>
+<dt><code>$print_type = [auto]</code></dt>
+<dd> Type of file to printout: possibilities are &quot;auto&quot;, &quot;dvi&quot;, &quot;none&quot;, &quot;pdf&quot;, or &quot;ps&quot;. See the option <code>-print=</code> for the meaning of the &quot;auto&quot; value.</dd>
+<dt><code>$pscmd</code></dt>
+<dd> Command used to get all the processes currently run by the user. The -pvc option uses the command specified by the variable <i>$pscmd</i> to determine if there is an already running previewer, and to find the process ID (needed if <i>latexmk</i> needs to signal the previewer about file changes). </dd>
 <p> Each line of the output of this command is assumed to correspond to one process. See the <i>$pid_position</i> variable for how the process number is determined. </p>
 <p> The default for <i>pscmd</i> is &quot;NONE&quot; under MS-Windows and cygwin (i.e., the command is not used), &quot;ps -ww -u $ENV{USER}&quot; under OS-X, and &quot;ps -f -u $ENV{USER}&quot; under other operating systems (including Linux). In these specifications &quot;$ENV{USER}&quot; is substituted by the username.</p>
-<dt><code>$ps2pdf [ps2pdf -dALLOWPSTRANSPARENCY %O %S %D]</code></p>
-<dd> Command to convert .ps to .pdf file.</p>
-<dt><code>$ps_filter [empty]</code></p>
-<dd> The postscript file filter to be run on the newly produced postscript file before other processing. Equivalent to specifying the <code>-pF</code> option.</p>
-<dt><code>$ps_previewer [start gv %O %S, but start %O %S under MS-Windows]</code></p>
-<dd> The command to invoke a ps-previewer. (The default under MS-Windows will cause to be run whatever command the system has associated with .ps files.) </p>
+<dt><code>$ps2pdf [ps2pdf -dALLOWPSTRANSPARENCY %O %S %D]</code></dt>
+<dd> Command to convert .ps to .pdf file.</dd>
+<dt><code>$ps_filter [empty]</code></dt>
+<dd> The postscript file filter to be run on the newly produced postscript file before other processing. Equivalent to specifying the <code>-pF</code> option.</dd>
+<dt><code>$ps_previewer [start gv %O %S, but start %O %S under MS-Windows]</code></dt>
+<dd> The command to invoke a ps-previewer. (The default under MS-Windows will cause to be run whatever command the system has associated with .ps files.) </dd>
 <p> Note that <i>gv</i> could be used with the -watch option updates its display whenever the postscript file changes, whereas ghostview does not. However, different versions of <i>gv</i> have slightly different ways of writing this option. You can configure this variable appropriately. </p>
 <p> <code>WARNING</code>: Linux systems may have installed one (or more) versions of <i>gv</i> under different names, e.g., <i>ggv</i>, <i>kghostview</i>, etc, but perhaps not one actually called <i>gv</i>. </p>
 <p> <code>Important note</code>: Normally you will want to have a previewer run detached, so that <i>latexmk</i> doesn&#8217;t wait for the previewer to terminate before continuing its work. So normally you should prefix the command by &quot;start &quot;, which flags to <i>latexmk</i> that it should do the detaching of the previewer itself (by whatever method is appropriate to the operating system). But sometimes letting <i>latexmk</i> do the detaching is not appropriate (for a variety of non-trivial reasons), so you should put the &quot;start &quot; bit in yourself, whenever it is needed. </p>
-<dt><code>$ps_previewer_landscape [start gv -swap %O %S, but start %O %S under MS-Windows]</code></p>
-<dd> The command to invoke a ps-previewer in landscape mode.</p>
-<dt><code>$ps_update_command []</code></p>
-<dd> When the postscript previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$ps_update_method</i>.</p>
-<dt><code>$ps_update_method [0 under UNIX, 1 under MS-Windows]</code></p>
-<dd> How the postscript viewer updates its display when the .ps file has changed. See the information on the variable <i>$dvi_update_method</i> for the codes. (Note that information needs be changed slightly so that for the value 4, to run a command to do the update, the command is specified by the variable <i>$ps_update_command</i>, and for the value 2, to specify update by signal, the signal is specified by <i>$ps_update_signal</i>.)</p>
-<dt><code>$ps_update_signal [Under UNIX: SIGHUP, which is a system-dependent value]</code></p>
-<dd> The number of the signal that is sent to the pdf viewer when it is updated by sending a signal &#8212; see <i>$ps_update_method</i>. The default value is the one appropriate for gv on a UNIX system.</p>
-<dt><code>$pvc_timeout [0]</code></p>
-<dd> If this variable is nonzero, there will be a timeout in pvc mode after a period of inactivity. Inactivity means a period when <i>latexmk</i> has detected no file changes and hence has not taken any actions like compiling the document. The period of inactivity is in the variable $pvc_timeout_mins. </p>
-<dt><code>$pvc_timeout_mins [30]</code></p>
-<dd> The period of inactivity, in minutes, after which pvc mode times out. This is used if <i>$pvc_timeout</i> is nonzero.</p>
-<dt><code>$pvc_view_file_via_temporary [1]</code></p>
-<dd> The same as <i>$always_view_file_via_temporary</i>, except that it only applies in preview-continuous mode (-pvc option).</p>
-<dt><code>$quote_filenames [1]</code></p>
-<dd> This specifies whether substitutions for placeholders in command specifications (as in <i>$pdflatex</i>) are surrounded by double quotes. If this variable is 1 (or any other value Perl regards as true), then quoting is done. Otherwise quoting is omitted. </p>
+<dt><code>$ps_previewer_landscape [start gv -swap %O %S, but start %O %S under MS-Windows]</code></dt>
+<dd> The command to invoke a ps-previewer in landscape mode.</dd>
+<dt><code>$ps_update_command []</code></dt>
+<dd> When the postscript previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$ps_update_method</i>.</dd>
+<dt><code>$ps_update_method [0 under UNIX, 1 under MS-Windows]</code></dt>
+<dd> How the postscript viewer updates its display when the .ps file has changed. See the information on the variable <i>$dvi_update_method</i> for the codes. (Note that information needs be changed slightly so that for the value 4, to run a command to do the update, the command is specified by the variable <i>$ps_update_command</i>, and for the value 2, to specify update by signal, the signal is specified by <i>$ps_update_signal</i>.)</dd>
+<dt><code>$ps_update_signal [Under UNIX: SIGHUP, which is a system-dependent value]</code></dt>
+<dd> The number of the signal that is sent to the pdf viewer when it is updated by sending a signal &#8212; see <i>$ps_update_method</i>. The default value is the one appropriate for gv on a UNIX system.</dd>
+<dt><code>$pvc_timeout [0]</code></dt>
+<dd> If this variable is nonzero, there will be a timeout in pvc mode after a period of inactivity. Inactivity means a period when <i>latexmk</i> has detected no file changes and hence has not taken any actions like compiling the document. The period of inactivity is in the variable $pvc_timeout_mins. </dd>
+<dt><code>$pvc_timeout_mins [30]</code></dt>
+<dd> The period of inactivity, in minutes, after which pvc mode times out. This is used if <i>$pvc_timeout</i> is nonzero.</dd>
+<dt><code>$pvc_view_file_via_temporary [1]</code></dt>
+<dd> The same as <i>$always_view_file_via_temporary</i>, except that it only applies in preview-continuous mode (-pvc option).</dd>
+<dt><code>$quote_filenames [1]</code></dt>
+<dd> This specifies whether substitutions for placeholders in command specifications (as in <i>$pdflatex</i>) are surrounded by double quotes. If this variable is 1 (or any other value Perl regards as true), then quoting is done. Otherwise quoting is omitted. </dd>
 <p> The quoting method used by <i>latexmk</i> is tested to work correctly under UNIX systems (including Linux and Mac OS-X) and under MS-Windows. It allows the use of filenames containing special characters, notably spaces. (But note that many versions of <i>*latex</i> cannot correctly deal with TeX files whose names contain spaces. <i>Latexmk</i>&#8216;s quoting only ensures that such filenames are correctly treated by the operating system in passing arguments to programs.)</p>
-<dt><code>$rc_report [1]</code></p>
-<dd> After initialization, whether to give a list of the RC files read.</p>
-<dt><code>$recorder [1]</code></p>
-<dd> Whether to use the <code>-recorder</code> option to <i>(latex</i> Use of this option results in a file of extension <i>.fls</i> containing a list of the files that these programs have read and written. <i>Latexmk</i> will then use this file to improve its detection of source files and generated files after a run of <i>*latex</i>. </p>
+<dt><code>$rc_report [1]</code></dt>
+<dd> After initialization, whether to give a list of the RC files read.</dd>
+<dt><code>$recorder [1]</code></dt>
+<dd> Whether to use the <code>-recorder</code> option to <i>(latex</i> Use of this option results in a file of extension <i>.fls</i> containing a list of the files that these programs have read and written. <i>Latexmk</i> will then use this file to improve its detection of source files and generated files after a run of <i>*latex</i>. </dd>
 <p> It is generally recommended to use this option (or to configure the <i>$recorder</i> variable to be on.) But it only works if <i>*latex</i> supports the -recorder option, which is true for most current implementations </p>
 <p> <i>Note about the name of the .fls file:</i> Most implementations of <i>*latex</i> produce an .fls file with the same basename as the main document&#8217;s LaTeX, e.g., for Document.tex, the .fls file is Document.fls. However, some implementations instead produce files named for the program, i.e., latex.fls or pdflatex.fls. In this second case, <i>latexmk</i> copies the latex.fls or pdflatex.fls to a file with the basename of the main LaTeX document, e.g., Document.fls.</p>
-<dt><code>$search_path_separator [See below for default]</code></p>
-<dd> The character separating paths in the environment variables TEXINPUTS, BIBINPUTS, and BSTINPUTS. This variable is mainly used by <i>latexmk</i> when the <code>-outdir</code>, <code>-output-directory</code>, <code>-auxdir</code>, and/or <code>-aux-directory</code> options are used. In that case <i>latexmk</i> needs to communicate appropriately modified search paths to <i>bibtex</i>, <i>dvipdf</i>, <i>dvips</i>, and <i>*latex</i>. </p>
+<dt><code>$search_path_separator [See below for default]</code></dt>
+<dd> The character separating paths in the environment variables TEXINPUTS, BIBINPUTS, and BSTINPUTS. This variable is mainly used by <i>latexmk</i> when the <code>-outdir</code>, <code>-output-directory</code>, <code>-auxdir</code>, and/or <code>-aux-directory</code> options are used. In that case <i>latexmk</i> needs to communicate appropriately modified search paths to <i>bibtex</i>, <i>dvipdf</i>, <i>dvips</i>, and <i>*latex</i>. </dd>
 <p> [Comment to technically savvy readers: <i>*latex</i> doesn&#8217;t actually need the modified search path. But, surprisingly, <i>dvipdf</i> and <i>dvips</i> do, because sometimes graphics files get generated in the output or aux directories.] </p>
 <p> The default under MSWin and Cygwin is &#8216;;&#8217; and under UNIX-like operating systems (including Linux and OS-X) is &#8216;:&#8217;. Normally the defaults give correct behavior. But there can be difficulties if your operating system is of one kind, but some of your software is running under an emulator for the other kind of operating system; in that case you&#8217;ll need to find out what is needed, and set <i>$search_path_separator</i> explicitly. (The same goes, of course, for unusual operating systems that are not in the MSWin, Linux, OS-X, Unix collection.)</p>
-<dt><code>$show_time [0]</code></p>
-<dd> Whether to show CPU time used.</p>
-<dt><code>$silence_logfile_warnings [0]</code></p>
-<dd> Whether after a run of *latex to summarize warnings in the log file about undefined citations and references. Setting $silence_logfile_warnings=0 gives the summary of warnings (provided silent mode isn&#8217;t also set), and this is useful to locate undefined citations and references without searching through the much more verbose log file or the screen output of *latex. But the summary can also be excessively annoying. The default is not to give these warnings. The command line options <code>-silence_logfile_warning_list</code> and <code>-silence_logfile_warning_list-</code> also set this variable. </p>
+<dt><code>$show_time [0]</code></dt>
+<dd> Whether to show CPU time used.</dd>
+<dt><code>$silence_logfile_warnings [0]</code></dt>
+<dd> Whether after a run of *latex to summarize warnings in the log file about undefined citations and references. Setting $silence_logfile_warnings=0 gives the summary of warnings (provided silent mode isn&#8217;t also set), and this is useful to locate undefined citations and references without searching through the much more verbose log file or the screen output of *latex. But the summary can also be excessively annoying. The default is not to give these warnings. The command line options <code>-silence_logfile_warning_list</code> and <code>-silence_logfile_warning_list-</code> also set this variable. </dd>
 <p> Note that multiple occurrences for the same undefined object on the same page and same line will be compressed to a single warning.</p>
-<dt><code>$silent [0]</code></p>
-<dd> Whether to run silently. Setting $silent to 1 has the same effect as the <code>-quiet</code> of <code>-silent</code> options on the command line.</p>
-<dt><code>$sleep_time [2]</code></p>
-<dd> The time to sleep (in seconds) between checking for source file changes when running with the <code>-pvc</code> option. This is subject to a minimum of one second delay, except that zero delay is also allowed. </p>
+<dt><code>$silent [0]</code></dt>
+<dd> Whether to run silently. Setting $silent to 1 has the same effect as the <code>-quiet</code> of <code>-silent</code> options on the command line.</dd>
+<dt><code>$sleep_time [2]</code></dt>
+<dd> The time to sleep (in seconds) between checking for source file changes when running with the <code>-pvc</code> option. This is subject to a minimum of one second delay, except that zero delay is also allowed. </dd>
 <p> A value of exactly 0 gives no delay, and typically results in 100% CPU usage, which may not be desirable.</p>
-<dt><code>$texfile_search []</code></p>
-<dd> This is an obsolete variable, replaced by the <i>@default_files</i> variable. </p>
+<dt><code>$texfile_search []</code></dt>
+<dd> This is an obsolete variable, replaced by the <i>@default_files</i> variable. </dd>
 <p> For backward compatibility, if you choose to set <i>$texfile_search</i>, it is a string of space-separated filenames, and then <i>latexmk</i> replaces <i>@default_files</i> with the filenames in <i>$texfile_search</i> to which is added &quot;*.tex&quot;.</p>
-<dt><code>$success_cmd [undefined]</code></p>
-<dd> See the documentation for $compiling_cmd.</p>
-<dt><code>$tmpdir [See below for default]</code></p>
-<dd> Directory to store temporary files that <i>latexmk</i> may generate while running. </p>
+<dt><code>$success_cmd [undefined]</code></dt>
+<dd> See the documentation for $compiling_cmd.</dd>
+<dt><code>$tmpdir [See below for default]</code></dt>
+<dd> Directory to store temporary files that <i>latexmk</i> may generate while running. </dd>
 <p> The default under MSWindows (including cygwin), is to set <i>$tmpdir</i> to the value of the first of whichever of the system environment variables TMPDIR or TEMP exists, otherwise to the current directory. Under other operating systems (expected to be UNIX/Linux, including OS-X), the default is the value of the system environment variable TMPDIR if it exists, otherwise &quot;/tmp&quot;.</p>
-<dt><code>$use_make_for_missing_files [0]</code></p>
-<dd> Whether to use <i>make</i> to try and make files that are missing after a run of <i>*latex</i>, and for which a custom dependency has not been found. This is generally useful only when <i>latexmk</i> is used as part of a bigger project which is built by using the <i>make</i> program. </p>
+<dt><code>$use_make_for_missing_files [0]</code></dt>
+<dd> Whether to use <i>make</i> to try and make files that are missing after a run of <i>*latex</i>, and for which a custom dependency has not been found. This is generally useful only when <i>latexmk</i> is used as part of a bigger project which is built by using the <i>make</i> program. </dd>
 <p> Note that once a missing file has been made, no further calls to <i>make</i> will be made on a subsequent run of <i>latexmk</i> to update the file. Handling this problem is the job of a suitably defined Makefile. See the section &quot;USING <i>latexmk</i> WITH <i>make</i>&quot; for how to do this. The intent of calling <i>make</i> from <i>latexmk</i> is merely to detect dependencies.</p>
-<dt><code>$view [default]</code></p>
-<dd> Which kind of file is to be previewed if a previewer is used. The possible values are &quot;default&quot;, &quot;dvi&quot;, &quot;ps&quot;, &quot;pdf&quot;. The value of &quot;default&quot; means that the &quot;highest&quot; of the kinds of file generated is to be used (among .dvi, .ps and .pdf). </p>
-<dt><code>$warnings_as_errors [0]</code></p>
-<dd> Normally <i>latexmk</i> copies the behavior of <i>latex</i> in treating undefined references and citations and multiply defined references as conditions that give a warning but not an error. The variable <i>$warnings_as_errors</i> controls whether this behavior is modified. </p>
+<dt><code>$view [default]</code></dt>
+<dd> Which kind of file is to be previewed if a previewer is used. The possible values are &quot;default&quot;, &quot;dvi&quot;, &quot;ps&quot;, &quot;pdf&quot;. The value of &quot;default&quot; means that the &quot;highest&quot; of the kinds of file generated is to be used (among .dvi, .ps and .pdf). </dd>
+<dt><code>$warnings_as_errors [0]</code></dt>
+<dd> Normally <i>latexmk</i> copies the behavior of <i>latex</i> in treating undefined references and citations and multiply defined references as conditions that give a warning but not an error. The variable <i>$warnings_as_errors</i> controls whether this behavior is modified. </dd>
 <p> When the variable is non-zero, <i>latexmk</i> at the end of its run will return a non-zero status code to the operating system if any of the files processed gives a warning about problems with citations or references (i.e., undefined citations or references or multiply defined references). This is <code>after</code> <i>latexmk</i> has completed all the runs it needs to try and resolve references and citations. Thus <i>$warnings_as_errors</i> being nonzero causes <i>latexmk</i> to treat such warnings as errors, but only when they occur on the last run of *latex and only after processing is complete. A non-zero value <i>$warnings_as_errors</i> can be set by the command-line option <code>-Werror</code>. </p>
 <p> The default behavior is normally satisfactory in the usual edit-compile-edit cycle. But, for example, <i>latexmk</i> can also be used as part of a build process for some bigger project, e.g., for creating documentation in the build of a software application. Then it is often sensible to treat citation and reference warnings as errors that require the overall build process to be aborted. Of course, since multiple runs of *latex are generally needed to resolve references and citations, what matters is <i>not</i> the warnings on the first run, but the warnings on the <i>last</i> run; <i>latexmk</i> takes this into account appropriately. </p>
 <p> In addition, when preview-continuous mode is used, a non-zero value for <i>$warnings_as_errors</i> changes the use of the commands <i>$failure_cmd</i>, <i>$warning_cmd</i>, and <i>$success_cmd</i> after a compliation. If there are citation or reference warnings, but no other errors, the behavior is as follows. If <i>$warning_cmd</i> is set, it is used. If it is not set, then then if <i>$warnings_as_errors</i> is non-zero and <i>$failure_cmd</i> is set, then <i>$failure_cmd</i>. Otherwise <i>$success_cmd</i> is used, if it is set. (The foregoing explanation is rather complicated, because <i>latexmk</i> has to deal with the case that one or more of the commands isn&#8217;t set.) </p>
-<dt><code>$xdvipdfmx [xdvipdfmx -E -o %D %O %S]</code></p>
+<dt><code>$xdvipdfmx [xdvipdfmx -E -o %D %O %S]</code></dt>
 <dd>
 <p> The program to make a pdf file from an xdv file (used in conjunction with <i>xelatex</i> when <i>$pdf_mode</i>=5).</p>
-<dt><code>$xdvipdfmx_silent_switch [-q]</code></p>
-<dd> Switch(es) for the <i>xdvipdfmx</i> program when silent mode is on.</p>
-<dt><code>$xelatex [xelatex %O %S]</code></p>
-<dd> Specifies the command line for the LaTeX processing program of when the <i>xelatex</i> program is called for. See the documentation of the <code>-xelatex</code> option for some special properties of <i>latexmk</i>&#8216;s use of <i>xelatex</i>. </p>
+</dd><dt><code>$xdvipdfmx_silent_switch [-q]</code></dt>
+<dd> Switch(es) for the <i>xdvipdfmx</i> program when silent mode is on.</dd>
+<dt><code>$xelatex [xelatex %O %S]</code></dt>
+<dd> Specifies the command line for the LaTeX processing program of when the <i>xelatex</i> program is called for. See the documentation of the <code>-xelatex</code> option for some special properties of <i>latexmk</i>&#8216;s use of <i>xelatex</i>. </dd>
 <p> <i>Note about xelatex</i>: <i>latexmk</i> uses <i>xelatex</i> to make an .xdv rather than .pdf file, with the .pdf file being created in a separate step. This is enforced by the use of the <code>-no-pdf</code> option. If %O is part of the command for invoking <i>xelatex</i>, then <i>latexmk</i> will insert the <code>-no-pdf</code> option automatically, otherwise you must provide the option yourself. See the documentation for the <code>-pdfxe</code> option for why <i>latexmk</i> makes a .xdv file rather than a .pdf file when <i>xelatex</i> is used. </p>
 <p> To do a coordinated setting of all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i>, see the section &quot;Advanced Configuration&quot;. </p>
-<dt><code>%xelatex_input_extensions</code></p>
-<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that an <i>xelatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </p>
+<dt><code>%xelatex_input_extensions</code></dt>
+<dd> This variable specifies the extensions tried by <i>latexmk</i> when it finds that an <i>xelatex</i> run resulted in an error that a file has not been found, and the file is given without an extension. This typically happens when LaTeX commands of the form \input{file} or \includegraphics{figure}, when the relevant source file does not exist. </dd>
 <p> In this situation, <i>latexmk</i> searches for custom dependencies to make the missing file(s), but restricts it to the extensions specified by the variable %xelatex_input_extensions. The default extensions are &#8216;tex&#8217;, &#8216;pdf&#8217;, &#8216;jpg, and &#8216;png&#8217;. </p>
 <p> See details of the <i>%latex_input_extensions</i> for other information that equally applies to <i>%xelatex_input_extensions</i>.</p>
-<dt><code>$xelatex_silent_switch [-interaction=batchmode]</code></p>
-<dd> Switch(es) for the <i>xelatex</i> program (specified in the variable <i>$xelatex</i>) when silent mode is on. </p>
+<dt><code>$xelatex_silent_switch [-interaction=batchmode]</code></dt>
+<dd> Switch(es) for the <i>xelatex</i> program (specified in the variable <i>$xelatex</i>) when silent mode is on. </dd>
 <p> See details of the <i>$latex_silent_switch</i> for other information that equally applies to <i>$xelatex_silent_switch</i>. </p>
 </dl>
 <h2>CUSTOM DEPENDENCIES</h2>
@@ -968,14 +968,14 @@ description: "latexmk – generate LaTeX document"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show_cus_dep() </p>
 <p> The arguments are as follows:</p>
 <dl>
-<dt><code>from extension:</code></p>
-<dd> The extension of the file we are converting from (e.g. &quot;fig&quot;). It is specified without a period.</p>
-<dt><code>to extension:</code></p>
-<dd> The extension of the file we are converting to (e.g. &quot;eps&quot;). It is specified without a period.</p>
-<dt><code>must:</code></p>
-<dd> If non-zero, the file from which we are converting <code>must</code> exist, if it doesn&#8217;t exist <i>latexmk</i> will give an error message and exit unless the <code>-f</code> option is specified. If <i>must</i> is zero and the file we are converting from doesn&#8217;t exist, then no action is taken. Generally, the appropriate value of <i>must</i> is zero.</p>
-<dt><code>function:</code></p>
-<dd> The name of the subroutine that <i>latexmk</i> should call to perform the file conversion. The first argument to the subroutine is the base name of the file to be converted without any extension. The subroutines are declared in the syntax of <i>Perl</i>. The function should return 0 if it was successful and a nonzero number if it failed. </p>
+<dt><code>from extension:</code></dt>
+<dd> The extension of the file we are converting from (e.g. &quot;fig&quot;). It is specified without a period.</dd>
+<dt><code>to extension:</code></dt>
+<dd> The extension of the file we are converting to (e.g. &quot;eps&quot;). It is specified without a period.</dd>
+<dt><code>must:</code></dt>
+<dd> If non-zero, the file from which we are converting <code>must</code> exist, if it doesn&#8217;t exist <i>latexmk</i> will give an error message and exit unless the <code>-f</code> option is specified. If <i>must</i> is zero and the file we are converting from doesn&#8217;t exist, then no action is taken. Generally, the appropriate value of <i>must</i> is zero.</dd>
+<dt><code>function:</code></dt>
+<dd> The name of the subroutine that <i>latexmk</i> should call to perform the file conversion. The first argument to the subroutine is the base name of the file to be converted without any extension. The subroutines are declared in the syntax of <i>Perl</i>. The function should return 0 if it was successful and a nonzero number if it failed. </dd>
 </dl>
 <p> Naturally <i>add_cus_dep</i> adds a custom dependency with the specified from and to extensions. If a custom dependency has been previously defined (e.g., in an rcfile that was read earlier), then it is replaced by the new one. </p>
 <p> The subroutine <i>remove_cus_dep</i> removes the specified custom dependency. The subroutine <i>show_cus_dep</i> causes a list of the currently defined custom dependencies to be sent to the screen output. </p>
@@ -1052,37 +1052,37 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
 <p> See also the section DEALING WITH ERRORS, PROBLEMS, ETC. See also the examples in the directory <i>example_rcfiles</i> in the <i>latexmk</i> distributions. Even if none of the examples apply to your case, they may give you useful ideas </p>
 <h3>Utility subroutines</h3>
 <dl>
-<dt><code>ensure_path( var, values &#8230;)</code></p>
+<dt><code>ensure_path( var, values &#8230;)</code></dt>
 <dd>
 <p> The first parameter is the name of one of the system&#8217;s environment variables for search paths. The remaining parameters are values that should be in the variable. For each of the value parameters, if it isn&#8217;t already in the variable, then it is prepended to the variable; in that case the environment variable is created if it doesn&#8217;t already exist. For separating values, the character appropriate the the operating system is used &#8212; see the configuration variable <i>$search_path_separator</i>. </p>
 <p> Example: </p>
 <p>&nbsp;<wbr>&nbsp;ensure_path(&nbsp;&#8216;TEXINPUTS&#8217;,&nbsp;&#8216;./custom_cls_sty_files//&#8217;&nbsp;); </p>
 <p> (In this example, the trailing &#8216;//&#8217; is documented by TeX systems to mean that <i>*latex</i> search for files in the specified directory and in all subdirectories.) </p>
 <p> Technically <i>ensure_path</i> works by setting Perl&#8217;s variable <i>$ENV{var}</i>, where <i>var</i> is the name of the target variable. The changed value is then passed as an environment variable to any invoked programs. </p>
-</dl>
+</dd></dl>
 <h3>Variables and subroutines for processing a rule</h3>
 <p> A step in the processing is called a rule. One possibility to implement the processing of a rule is by a Perl subroutine. This is always the case for custom dependencies. Also, for any other rule, you can use a subroutine by prefixing the command specification by the word &quot;internal&quot; &#8212; see the section FORMAT OF COMMAND SPECIFICATIONS. </p>
 <p> When you use a subroutine for processing a rule, all the possibilities of Perl programming are available, of course. In addition, some of <i>latexmk</i>&#8216;s internal variables and subroutines are available. The ones listed below are intended to be available to (advanced) users, and their specifications will generally have stability under upgrades. Generally, the variables should be treated as read-only: Changing their values can have bad consequences, since it is liable to mess up the consistency of what <i>latexmk</i> is doing.</p>
 <dl>
-<dt><code>$rule</code></p>
-<dd> This variable has the name of the rule, as known to <i>latexmk</i>. Note that the exact contents of this variable for a given rule may be dependent on the version of <i>latexmk</i></p>
-<dt><code>$$Psource</code></p>
-<dd> This gives the name of the primary source file. Note the double dollar signs.</p>
-<dt><code>$$Pdest</code></p>
-<dd> This gives the name of the main output file if any. Note the double dollar signs.</p>
-<dt><code>rdb_ensure_file( $rule, file )</code></p>
-<dd> This a subroutine that ensures that the given file is among the source files for the specified rule. It is typically used when, during the processing of a rule, it is known that a particular extra file is among the dependencies that <i>latexmk</i> should know, but its default methods don&#8217;t find the dependency. Almost always the first argument is the name of the rule currently being processed, so it is then appropriate to specify it by <i>$rule</i>. </p>
+<dt><code>$rule</code></dt>
+<dd> This variable has the name of the rule, as known to <i>latexmk</i>. Note that the exact contents of this variable for a given rule may be dependent on the version of <i>latexmk</i></dd>
+<dt><code>$$Psource</code></dt>
+<dd> This gives the name of the primary source file. Note the double dollar signs.</dd>
+<dt><code>$$Pdest</code></dt>
+<dd> This gives the name of the main output file if any. Note the double dollar signs.</dd>
+<dt><code>rdb_ensure_file( $rule, file )</code></dt>
+<dd> This a subroutine that ensures that the given file is among the source files for the specified rule. It is typically used when, during the processing of a rule, it is known that a particular extra file is among the dependencies that <i>latexmk</i> should know, but its default methods don&#8217;t find the dependency. Almost always the first argument is the name of the rule currently being processed, so it is then appropriate to specify it by <i>$rule</i>. </dd>
 <p> For examples of its use, see some of the files in the directory <i>example_rcfiles</i> of <i>latexmk</i>&#8216;s distribution. Currently the cases that use this subroutine are <i>bib2gls-latexmkrc</i>, <i>exceltex_latexmkrc</i> and <i>texinfo-latexmkrc</i>. These illustrate typical cases where <i>latexmk</i>&#8216;s normal processing fails to detect certain extra source files.</p>
-<dt><code>rdb_remove_files( $rule, file, &#8230; )</code></p>
-<dd> This subroutine removes one or more files from the dependency list for the given rule.</p>
-<dt><code>rdb_list_source( $rule )</code></p>
-<dd> This subroutine returns the list of source files (i.e., the dependency list) for the given rule.</p>
-<dt><code>rdb_set_source( $rule, file, &#8230; )</code></p>
+<dt><code>rdb_remove_files( $rule, file, &#8230; )</code></dt>
+<dd> This subroutine removes one or more files from the dependency list for the given rule.</dd>
+<dt><code>rdb_list_source( $rule )</code></dt>
+<dd> This subroutine returns the list of source files (i.e., the dependency list) for the given rule.</dd>
+<dt><code>rdb_set_source( $rule, file, &#8230; )</code></dt>
 <dd>
-<dt><code>rdb_set_source( $rule, @files )</code></p>
-<dd> This subroutine sets the dependency list for the given rule to be the specified files. Files that are already in the list have unchanged information. Files that were not in the list are added to it. Files in the previous dependency list that are not in the newly specified list of files are removed from the dependency list.</p>
-<dt><code>Run_subst( command_spec )</code></p>
-<dd> This subroutine runs the command specified by <i>command_spec</i>. The specification is a string in the format listed in the section &quot;Format of Command Specifications&quot;. An important action of the <i>Run_subst</i> is to make substitutions of placeholders, e.g., %S and %D for source and destination files; these get substituted before the command is run. In addition, the command after substitution is printed to the screen unless <i>latexmk</i> is running in silent mode. </p>
+</dd><dt><code>rdb_set_source( $rule, @files )</code></dt>
+<dd> This subroutine sets the dependency list for the given rule to be the specified files. Files that are already in the list have unchanged information. Files that were not in the list are added to it. Files in the previous dependency list that are not in the newly specified list of files are removed from the dependency list.</dd>
+<dt><code>Run_subst( command_spec )</code></dt>
+<dd> This subroutine runs the command specified by <i>command_spec</i>. The specification is a string in the format listed in the section &quot;Format of Command Specifications&quot;. An important action of the <i>Run_subst</i> is to make substitutions of placeholders, e.g., %S and %D for source and destination files; these get substituted before the command is run. In addition, the command after substitution is printed to the screen unless <i>latexmk</i> is running in silent mode. </dd>
 </dl>
 <h3>Coordinated Setting of Commands for *latex</h3>
 <p> To set all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i> to a common pattern, you can use one of the following subroutines, std_tex_cmds, alt_tex_cmds, and set_tex_cmds. </p>
@@ -1142,11 +1142,11 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
  Modifications and enhancements by Evan McLean (Version 2.0)<br />
  Original script called &quot;go&quot; by David J. Musliner (RCS Version 3.2) </p>
 <h2>Index</h2>
-<dt><a href="#lbAY">SEE ALSO</a></p>
+<dt><a href="#lbAY">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAZ">BUGS</a></p>
+</dd><dt><a href="#lbAZ">BUGS</a></dt>
 <dd>
-<dt><a href="#lbBA">THANKS TO</a></p>
+</dd><dt><a href="#lbBA">THANKS TO</a></dt>
 <dd>
-<dt><a href="#lbBB">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBB">AUTHOR</a></dt>
+<dd></dd></dl>

@@ -19,7 +19,7 @@ description: "fmin, fminf, fminl – determine minimum of two floating-point num
 <p> <code>fmin</code>(), <code>fminf</code>(), <code>fminl</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return the lesser value of <i>x</i> and <i>y</i>.</p>
 <h2>RETURN VALUE</h2>

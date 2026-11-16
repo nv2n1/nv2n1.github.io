@@ -14,17 +14,17 @@ description: "rio_clr_err_stopped – Clears port Error-stopped states."
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>Pointer to RIO device control structure</dl>
+</dd><dd>Pointer to RIO device control structure</dd></dl>
 <p> <i>pnum</i></p>
 <dl>
-<dd>Switch port number to clear errors</dl>
+<dd>Switch port number to clear errors</dd></dl>
 <p> <i>err_status</i></p>
 <dl>
-<dd>port error status (if 0 reads register from device)</dl>
+<dd>port error status (if 0 reads register from device)</dd></dl>
 <h2>Description</h2>
 <p>TODO: Currently this routine is not compatible with recovery process specified for idt_gen3 RapidIO switch devices. It has to be reviewed to implement universal recovery process that is compatible full range off available devices. IDT gen3 switch driver now implements HW-specific error handler that issues soft port reset to the port to reset ERR_STOP bits and ackIDs.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -12,17 +12,8 @@ description: "std::__detail::_Before_begin< _NodeAlloc > –"
 <p> Inherits _NodeAlloc.</p>
 <h3>Public Member Functions</h3>
 <pre><code>_Before_begin (const _Before_begin &amp;)=default
-
-
-
 _Before_begin (_Before_begin &amp;&amp;)=default
-
-
-
 template&lt;typename _Alloc &gt; _Before_begin (_Alloc &amp;&amp;__a)
-
-
-
 Public Attributes</code></pre>
 <p> <code>_Hash_node_base</code> <code>_M_node</code></p>
 <h2>Detailed Description</h2>

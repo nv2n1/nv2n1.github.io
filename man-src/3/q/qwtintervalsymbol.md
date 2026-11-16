@@ -41,37 +41,37 @@ description: "QwtIntervalSymbol –"
 <p>A drawing primitive for displaying an interval like an error bar. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotIntervalCurve</code></dl>
+<dd><code>QwtPlotIntervalCurve</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtIntervalSymbol::Style</code></h3>
 <p>Symbol style. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoSymbol </i></p>
-<dd>No Style. The symbol cannot be drawn.</p>
-<dt><i>Bar </i></p>
-<dd>The symbol displays a line with caps at the beginning/end. The size of the caps depends on the symbol <code>width()</code>.</p>
-<dt><i>Box </i></p>
-<dd>The symbol displays a plain rectangle using <code>pen()</code> and <code>brush()</code>. The size of the rectangle depends on the translated interval and the <code>width()</code>,</p>
-<dt><i>UserSymbol </i></p>
-<dd>Styles &gt;= UserSymbol are reserved for derived classes of <code>QwtIntervalSymbol</code> that overload <code>draw()</code> with additional application specific symbol types.</dl>
+<dt><i>NoSymbol </i></dt>
+<dd>No Style. The symbol cannot be drawn.</dd>
+<dt><i>Bar </i></dt>
+<dd>The symbol displays a line with caps at the beginning/end. The size of the caps depends on the symbol <code>width()</code>.</dd>
+<dt><i>Box </i></dt>
+<dd>The symbol displays a plain rectangle using <code>pen()</code> and <code>brush()</code>. The size of the rectangle depends on the translated interval and the <code>width()</code>,</dd>
+<dt><i>UserSymbol </i></dt>
+<dd>Styles &gt;= UserSymbol are reserved for derived classes of <code>QwtIntervalSymbol</code> that overload <code>draw()</code> with additional application specific symbol types.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtIntervalSymbol::QwtIntervalSymbol (<code>Style</code>style = <code>NoSymbol</code>)</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Style of the symbol</dl>
+<dd><i>style</i> Style of the symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code>, <code>style()</code>, <code>Style</code></dl>
+<dd><code>setStyle()</code>, <code>style()</code>, <code>Style</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const QBrush &amp; QwtIntervalSymbol::brush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush</dl>
+<dd>Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code></dl>
+<dd><code>setBrush()</code></dd></dl>
 <h3>void QwtIntervalSymbol::draw (QPainter *painter, Qt::Orientationorientation, const QPointF &amp;from, const QPointF &amp;to) const [virtual]</h3>
 <p>Draw a symbol depending on its style </p>
 <p> <code>Parameters:</code></p>
@@ -79,25 +79,25 @@ description: "QwtIntervalSymbol –"
 <dd><i>painter</i> Painter<br />
  <i>orientation</i> Orientation<br />
  <i>from</i> Start point of the interval in target device coordinates<br />
- <i>to</i> End point of the interval in target device coordinates</dl>
+ <i>to</i> End point of the interval in target device coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code></dl>
+<dd><code>setStyle()</code></dd></dl>
 <h3>const QPen &amp; QwtIntervalSymbol::pen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen</dl>
+<dd>Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPen()</code>, <code>brush()</code></dl>
+<dd><code>setPen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtIntervalSymbol::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. The brush is used for the Box style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Brush</dl>
+<dd><i>brush</i> Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brush()</code></dl>
+<dd><code>brush()</code></dd></dl>
 <h3>void QwtIntervalSymbol::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -105,47 +105,47 @@ description: "QwtIntervalSymbol –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtIntervalSymbol::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>setBrush()</code></dl>
+<dd><code>pen()</code>, <code>setBrush()</code></dd></dl>
 <h3>void QwtIntervalSymbol::setStyle (<code>Style</code>style)</h3>
 <p>Specify the symbol style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Style</dl>
+<dd><i>style</i> Style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>style()</code>, <code>Style</code></dl>
+<dd><code>style()</code>, <code>Style</code></dd></dl>
 <h3>void QwtIntervalSymbol::setWidth (intwidth)</h3>
 <p>Specify the width of the symbol It is used depending on the style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width</dl>
+<dd><i>width</i> Width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>width()</code>, <code>setStyle()</code></dl>
+<dd><code>width()</code>, <code>setStyle()</code></dd></dl>
 <h3><code>QwtIntervalSymbol::Style</code> QwtIntervalSymbol::style () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current symbol style</dl>
+<dd>Current symbol style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code></dl>
+<dd><code>setStyle()</code></dd></dl>
 <h3>int QwtIntervalSymbol::width () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Width of the symbol.</dl>
+<dd>Width of the symbol.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWidth()</code>, <code>setStyle()</code></dl>
+<dd><code>setWidth()</code>, <code>setStyle()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

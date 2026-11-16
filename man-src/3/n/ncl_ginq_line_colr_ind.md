@@ -13,10 +13,10 @@ description: "ginq_line_colr_ind (Inquire polyline color index) – gets the pol
 <p> void ginq_line_colr_ind(Gint *err_ind, Gint *line_colr_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>line_colr_ind</p>
-<dd>(Output) &#8211; Returns the polyline color index as set by default of by a call to gset_line_colr_ind.</dl>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>line_colr_ind</dt>
+<dd>(Output) &#8211; Returns the polyline color index as set by default of by a call to gset_line_colr_ind.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

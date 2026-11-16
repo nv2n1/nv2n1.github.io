@@ -11,7 +11,6 @@ PMIx_Put - Push a value into the client's namespace
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pmix.h&gt;
-
 pmix_status_t PMIx_Init(pmix_scope_t scope, const char key[], pmix_value_t *val);</code></pre>
 
 <h2>Arguments</h2>
@@ -24,7 +23,7 @@ scope : Defines a scope for data &quot;put&quot; by PMI per the following:
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remote nodes. Data marked in this way will not be shared with
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>other processes on the same node
 *&nbsp;<wbr>PMI_GLOBAL - the data is to be shared with all other requesting processes,
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>regardless of location</pre></dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>regardless of location</pre></dd></dl>
  
 
  key String key identifying the information. This can be either one of the PMIx defined attributes, or a user-defined value 

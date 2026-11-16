@@ -345,25 +345,25 @@ data set trailing padding:
 <p> The <code>dcmcjpeg</code> utility compresses DICOM images of all SOP classes. Special handling has been implemented for CT images (where the modality transformation is required to create Hounsfield units) and the XA/RF/Biplane SOP classes (where the modality transformation has &#8216;inversed&#8217; semantics). However, <code>dcmcjpeg</code> does not attempt to ensure that the compressed image still complies with all restrictions of the object&#8217;s IOD. </p>
 <p> A few examples: </p>
 <dl>
-<dt>&bull;</p>
-<dd> MR images are required to have BitsAllocated=16.</p>
-<dt>&bull;</p>
-<dd> NM Images can only be encoded with MONOCHROME2 or PALETTE COLOR photometric interpretation but not with RGB or YBR_FULL (which effectively prevents compression).</p>
-<dt>&bull;</p>
-<dd> Hardcopy Color images must have RGB color model which is a problem if lossy compression is to be performed.</dl>
+<dt>&bull;</dt>
+<dd> MR images are required to have BitsAllocated=16.</dd>
+<dt>&bull;</dt>
+<dd> NM Images can only be encoded with MONOCHROME2 or PALETTE COLOR photometric interpretation but not with RGB or YBR_FULL (which effectively prevents compression).</dd>
+<dt>&bull;</dt>
+<dd> Hardcopy Color images must have RGB color model which is a problem if lossy compression is to be performed.</dd></dl>
 <p> The user is responsible for making sure that the compressed images he creates are compliant with the DICOM standard. If in question, the <code>dcmcjpeg</code> utility allows to convert an image to secondary capture &#8211; this SOP class does not pose restrictions as the ones mentioned above. </p>
 <p> With version DCMTK 3.5.4 a new encoder for truely lossless JPEG compression was added (<i>&#8211;true-lossless</i>). Compared to the old (<i>&#8211;pseudo-lossless</i>) encoder, that creates slightly lossy images caused from internal color space conversions, windowing etc., there are a some issues to consider: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Only source images with Bits Allocated 8 or 16 are supported</p>
-<dt>&bull;</p>
-<dd> Options for color space conversions, windowing or pixel scaling are ignored or overriden</p>
-<dt>&bull;</p>
-<dd> Photometric Interpretations YBR_FULL_422, YBR_PARTIAL_422, YBR_PARTIAL_420, YBR_ICT, YBR_RCT are not supported</p>
-<dt>&bull;</p>
-<dd> The encoder changes automatically Planar Configuration from 1 to 0 if necessary</p>
-<dt>&bull;</p>
-<dd> The compression ratio can be lower than in <i>&#8211;pseudo-lossless</i> mode</dl>
+<dt>&bull;</dt>
+<dd> Only source images with Bits Allocated 8 or 16 are supported</dd>
+<dt>&bull;</dt>
+<dd> Options for color space conversions, windowing or pixel scaling are ignored or overriden</dd>
+<dt>&bull;</dt>
+<dd> Photometric Interpretations YBR_FULL_422, YBR_PARTIAL_422, YBR_PARTIAL_420, YBR_ICT, YBR_RCT are not supported</dd>
+<dt>&bull;</dt>
+<dd> The encoder changes automatically Planar Configuration from 1 to 0 if necessary</dd>
+<dt>&bull;</dt>
+<dd> The compression ratio can be lower than in <i>&#8211;pseudo-lossless</i> mode</dd></dl>
 <p> However, when using the new encoder (default), you can be sure, that compression does not affect image quality. </p>
 <p> In order to be on the safe side, the Lossy Compression Flag is always set to &#8217;01&#8217; and a new SOP instance UID is assigned (by default) for the old pseudo-lossless encoder. The output of the old and new lossless encoder can also be distinguished by the Derivation Description in the resulting DICOM image, which contains the term &#8216;Lossless JPEG compression&#8217; for the new and &#8216;Pseudo-Lossless JPEG compression&#8217; for the old encoder.</p>
 <h2>TRANSFER SYNTAXES</h2>

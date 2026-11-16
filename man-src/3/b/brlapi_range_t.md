@@ -25,5 +25,5 @@ description: "brlapi_range_t –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

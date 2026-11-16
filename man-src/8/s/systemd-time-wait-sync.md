@@ -17,6 +17,6 @@ description: "systemd-time-wait-sync.service, systemd-time-wait-sync – Wait un
 <h2>Files</h2>
 <p>/run/systemd/timesync/synchronized</p>
 <dl>
-<dd>The presence of this file indicates to this service that the system clock has been synchronized.</dl>
+<dd>The presence of this file indicates to this service that the system clock has been synchronized.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/8-systemd-timesyncd-service/">systemd-timesyncd.service</a></code>(8), </p>

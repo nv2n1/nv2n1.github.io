@@ -21,46 +21,46 @@ description: "munilist – Making listing from CCD photomtetry files"
 <p> The list of input files is usualy entered directly on the command line. If you are going to process a large set of files, you can use the question marks (for a single chars) or the asterisk (for a strings of chars). </p>
 <p> The alternate way, how to process a large set of files, is the batch mode. In this mode, the list of input files is read from a given file or from the standard input. The directory file, for example named <i>dirfile</i>, must have the text format and the names of the input files are written on the separate lines. If the files are placed not in the current working directory, you have to specify the proper path in full or shortened form. </p>
 <dl>
-<dt><code>@</code><i>dirfile</i></p>
-<dd> The program will read the list of source files from specified file.</p>
-<dt><code>@</code></p>
-<dd> The program will read the list of source files from stdin.</p>
-<dt><code>src=</code><i>file</i></p>
-<dd> Optional source file name in read-all format.</p>
-<dt><code>par=</code><i>file</i> <code>-p</code><i>file</i></p>
-<dd> Optional parameter file. Default is <i>munilist.ini</i>.</p>
-<dt><code>out=</code><i>file</i>, <code>-o</code><i>file</i></p>
-<dd> Name of the output file. Default is <i>data.dat</i>.</p>
-<dt><code>ap=</code><i>n</i></p>
-<dd> Aperture index. Default is 1.</p>
-<dt><i>var comp chk1 chk2 &#8230;</i></p>
-<dd> Indices of variable star, comparison stars and check stars.</p>
-<dt><i>s1 s2 &#8230;</i></p>
-<dd> Indices of selected stars.</p>
-<dt><code>-os</code></p>
-<dd> Use the &#8216;differential magnitudes&#8217; output format. This is the default behavior.</p>
-<dt><code>-of</code></p>
-<dd> Use the &#8216;instrumental magnitudes&#8217; output format.</p>
-<dt><code>-oa</code></p>
-<dd> Use the &#8216;read-all&#8217; output format.</p>
-<dt><code>-ot</code></p>
-<dd> Use the &#8216;track-list&#8217; output format.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints short help.</p>
-<dt><code>&#8211;license</code></p>
-<dd> Prints the license.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the program name and its version.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode &#8212; inhibits the screen printouts.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Debug mode &#8212; extends the screen printouts. </p>
+<dt><code>@</code><i>dirfile</i></dt>
+<dd> The program will read the list of source files from specified file.</dd>
+<dt><code>@</code></dt>
+<dd> The program will read the list of source files from stdin.</dd>
+<dt><code>src=</code><i>file</i></dt>
+<dd> Optional source file name in read-all format.</dd>
+<dt><code>par=</code><i>file</i> <code>-p</code><i>file</i></dt>
+<dd> Optional parameter file. Default is <i>munilist.ini</i>.</dd>
+<dt><code>out=</code><i>file</i>, <code>-o</code><i>file</i></dt>
+<dd> Name of the output file. Default is <i>data.dat</i>.</dd>
+<dt><code>ap=</code><i>n</i></dt>
+<dd> Aperture index. Default is 1.</dd>
+<dt><i>var comp chk1 chk2 &#8230;</i></dt>
+<dd> Indices of variable star, comparison stars and check stars.</dd>
+<dt><i>s1 s2 &#8230;</i></dt>
+<dd> Indices of selected stars.</dd>
+<dt><code>-os</code></dt>
+<dd> Use the &#8216;differential magnitudes&#8217; output format. This is the default behavior.</dd>
+<dt><code>-of</code></dt>
+<dd> Use the &#8216;instrumental magnitudes&#8217; output format.</dd>
+<dt><code>-oa</code></dt>
+<dd> Use the &#8216;read-all&#8217; output format.</dd>
+<dt><code>-ot</code></dt>
+<dd> Use the &#8216;track-list&#8217; output format.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints short help.</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Prints the license.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the program name and its version.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode &#8212; inhibits the screen printouts.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Debug mode &#8212; extends the screen printouts. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The following command creates table of brightness of the star #2 (stored on second position in photometry files) relative to the star #3. The output in short format is required; the magnitudes will be differential instrumental magnitues (V-C).</p>
 <dl>
 <dt>
-<dd> <code>munilist 2 3 test1.mat test2.mat test3.mat</code> </p>
+</dt><dd> <code>munilist 2 3 test1.mat test2.mat test3.mat</code> </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> munilist returns a zero exist status if it succeeds to convert all specified file. Otherwise, it will stop immediately when the error occurs and returns nonzero code. </p>

@@ -30,111 +30,107 @@ description: "sudo, sudoedit – execute a command as another user"
 <h2>OPTIONS</h2>
 <p> <code>sudo</code> accepts the following command line options:</p>
 <dl>
-<dt>-A</p>
+<dt>-A</dt>
 <dd> Normally, if <code>sudo</code> requires a password, it will read it from the current terminal. If the <code>-A</code> (<i>askpass</i>) option is specified, a (possibly graphical) helper program is executed to read the user&#8217;s password and output the password to the standard output. If the <tt> SUDO_ASKPASS<br />
- </tt> environment variable is set, it specifies the path to the helper program. Otherwise, the value specified by the <i>askpass</i> option in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5) is used.</p>
-<dt>-b</p>
-<dd> The <code>-b</code> (<i>background</i>) option tells <code>sudo</code> to run the given command in the background. Note that if you use the <code>-b</code> option you cannot use shell job control to manipulate the process.</p>
-<dt>-C <i>fd</i></p>
-<dd> Normally, <code>sudo</code> will close all open file descriptors other than standard input, standard output and standard error. The <code>-C</code> (<i>close from</i>) option allows the user to specify a starting point above the standard error (file descriptor three). Values less than three are not permitted. This option is only available if the administrator has enabled the <i>closefrom_override</i> option in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5).</p>
-<dt>-E</p>
+ </tt> environment variable is set, it specifies the path to the helper program. Otherwise, the value specified by the <i>askpass</i> option in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5) is used.</dd>
+<dt>-b</dt>
+<dd> The <code>-b</code> (<i>background</i>) option tells <code>sudo</code> to run the given command in the background. Note that if you use the <code>-b</code> option you cannot use shell job control to manipulate the process.</dd>
+<dt>-C <i>fd</i></dt>
+<dd> Normally, <code>sudo</code> will close all open file descriptors other than standard input, standard output and standard error. The <code>-C</code> (<i>close from</i>) option allows the user to specify a starting point above the standard error (file descriptor three). Values less than three are not permitted. This option is only available if the administrator has enabled the <i>closefrom_override</i> option in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5).</dd>
+<dt>-E</dt>
 <dd> The <code>-E</code> (<i>preserve</i> <i>environment</i>) option will override the <i>env_reset</i> option in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5)). It is only available when either the matching command has the <tt> SETENV<br />
- </tt> tag or the <i>setenv</i> option is set in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5).</p>
-<dt>-e</p>
-<dd> The <code>-e</code> (<i>edit</i>) option indicates that, instead of running a command, the user wishes to edit one or more files. In lieu of a command, the string &#8220;sudoedit&#8221; is used when consulting the <i>sudoers</i> file. If the user is authorized by <i>sudoers</i> the following steps are taken:</p>
+ </tt> tag or the <i>setenv</i> option is set in <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5).</dd>
+<dt>-e</dt>
+<dd> The <code>-e</code> (<i>edit</i>) option indicates that, instead of running a command, the user wishes to edit one or more files. In lieu of a command, the string &#8220;sudoedit&#8221; is used when consulting the <i>sudoers</i> file. If the user is authorized by <i>sudoers</i> the following steps are taken:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
-<dd> Temporary copies are made of the files to be edited with the owner set to the invoking user.</p>
-<dt>2.</p>
+<dt>1.</dt>
+<dd> Temporary copies are made of the files to be edited with the owner set to the invoking user.</dd>
+<dt>2.</dt>
 <dd> The editor specified by the <tt> SUDO_EDITOR<br />
  </tt>, <tt> VISUAL<br />
  </tt> or <tt> EDITOR<br />
  </tt> environment variables is run to edit the temporary files. If none of <tt> SUDO_EDITOR<br />
  </tt>, <tt> VISUAL<br />
  </tt> or <tt> EDITOR<br />
- </tt> are set, the first program listed in the <i>editor</i> <i>sudoers</i> variable is used.</p>
-<dt>3.</p>
-<dd> If they have been modified, the temporary files are copied back to their original location and the temporary versions are removed.</dl>
+ </tt> are set, the first program listed in the <i>editor</i> <i>sudoers</i> variable is used.</dd>
+<dt>3.</dt>
+<dd> If they have been modified, the temporary files are copied back to their original location and the temporary versions are removed.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> If the specified file does not exist, it will be created. Note that unlike most commands run by <code>sudo</code>, the editor is run with the invoking user&#8217;s environment unmodified. If, for some reason, <code>sudo</code> is unable to update a file with its edited version, the user will receive a warning and the edited copy will remain in a temporary file.</dl>
-<dt>-g <i>group</i></p>
-<dd> Normally, <code>sudo</code> sets the primary group to the one specified by the passwd database for the user the command is being run as (by default, root). The <code>-g</code> (<i>group</i>) option causes <code>sudo</code> to run the specified command with the primary group set to <i>group</i>. To specify a <i>gid</i> instead of a <i>group name</i>, use <i>#gid</i>. When running commands as a <i>gid</i>, many shells require that the &#8216;#&#8217; be escaped with a backslash (&#8216;\&#8217;). If no <code>-u</code> option is specified, the command will be run as the invoking user (not root). In either case, the primary group will be set to <i>group</i>.</p>
-<dt>-H</p>
+</dt><dd>
+<p> If the specified file does not exist, it will be created. Note that unlike most commands run by <code>sudo</code>, the editor is run with the invoking user&#8217;s environment unmodified. If, for some reason, <code>sudo</code> is unable to update a file with its edited version, the user will receive a warning and the edited copy will remain in a temporary file.</dd></dl>
+<dt>-g <i>group</i></dt>
+<dd> Normally, <code>sudo</code> sets the primary group to the one specified by the passwd database for the user the command is being run as (by default, root). The <code>-g</code> (<i>group</i>) option causes <code>sudo</code> to run the specified command with the primary group set to <i>group</i>. To specify a <i>gid</i> instead of a <i>group name</i>, use <i>#gid</i>. When running commands as a <i>gid</i>, many shells require that the &#8216;#&#8217; be escaped with a backslash (&#8216;\&#8217;). If no <code>-u</code> option is specified, the command will be run as the invoking user (not root). In either case, the primary group will be set to <i>group</i>.</dd>
+<dt>-H</dt>
 <dd> The <code>-H</code> (<i></i><font SIZE="-1"><i>HOME</i></font><i></i>) option sets the <tt> HOME<br />
  </tt> environment variable to the homedir of the target user (root by default) as specified in <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5). The default handling of the <tt> HOME<br />
  </tt> environment variable depends on <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5) settings. By default, <code>sudo</code> will set <tt> HOME<br />
- </tt> if <i>env_reset</i> or <i>always_set_home</i> are set, or if <i>set_home</i> is set and the <code>-s</code> option is specified on the command line.</p>
-<dt>-h</p>
-<dd> The <code>-h</code> (<i>help</i>) option causes <code>sudo</code> to print a usage message and exit.</p>
-<dt>-i [command]</p>
+ </tt> if <i>env_reset</i> or <i>always_set_home</i> are set, or if <i>set_home</i> is set and the <code>-s</code> option is specified on the command line.</dd>
+<dt>-h</dt>
+<dd> The <code>-h</code> (<i>help</i>) option causes <code>sudo</code> to print a usage message and exit.</dd>
+<dt>-i [command]</dt>
 <dd> The <code>-i</code> (<i>simulate initial login</i>) option runs the shell specified in the <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5) entry of the target user as a login shell. This means that login-specific resource files such as <tt> .profile<br />
  </tt> or <tt> .login<br />
- </tt> will be read by the shell. If a command is specified, it is passed to the shell for execution. Otherwise, an interactive shell is executed. <code>sudo</code> attempts to change to that user&#8217;s home directory before running the shell. It also initializes the environment, leaving <i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i> and <i></i><font SIZE="-1"><i>TERM</i></font><i></i> unchanged, setting <i></i><font SIZE="-1"><i>HOME</i></font><i></i>, <i></i><font SIZE="-1"><i>MAIL</i></font><i></i>, <i></i><font SIZE="-1"><i>SHELL</i></font><i></i>, <i></i><font SIZE="-1"><i>USER</i></font><i></i>, <i></i><font SIZE="-1"><i>LOGNAME</i></font><i></i>, and <i></i><font SIZE="-1"><i>PATH</i></font><i></i>, as well as the contents of <i>/etc/environment</i> on Linux and <font SIZE="-1">AIX</font> systems. All other environment variables are removed.</p>
-<dt>-K</p>
-<dd> The <code>-K</code> (sure <i>kill</i>) option is like <code>-k</code> except that it removes the user&#8217;s time stamp entirely and may not be used in conjunction with a command or other option. This option does not require a password.</p>
-<dt>-k</p>
-<dd> When used by itself, the <code>-k</code> (<i>kill</i>) option to <code>sudo</code> invalidates the user&#8217;s time stamp by setting the time on it to the Epoch. The next time <code>sudo</code> is run a password will be required. This option does not require a password and was added to allow a user to revoke <code>sudo</code> permissions from a .logout file. </p>
+ </tt> will be read by the shell. If a command is specified, it is passed to the shell for execution. Otherwise, an interactive shell is executed. <code>sudo</code> attempts to change to that user&#8217;s home directory before running the shell. It also initializes the environment, leaving <i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i> and <i></i><font SIZE="-1"><i>TERM</i></font><i></i> unchanged, setting <i></i><font SIZE="-1"><i>HOME</i></font><i></i>, <i></i><font SIZE="-1"><i>MAIL</i></font><i></i>, <i></i><font SIZE="-1"><i>SHELL</i></font><i></i>, <i></i><font SIZE="-1"><i>USER</i></font><i></i>, <i></i><font SIZE="-1"><i>LOGNAME</i></font><i></i>, and <i></i><font SIZE="-1"><i>PATH</i></font><i></i>, as well as the contents of <i>/etc/environment</i> on Linux and <font SIZE="-1">AIX</font> systems. All other environment variables are removed.</dd>
+<dt>-K</dt>
+<dd> The <code>-K</code> (sure <i>kill</i>) option is like <code>-k</code> except that it removes the user&#8217;s time stamp entirely and may not be used in conjunction with a command or other option. This option does not require a password.</dd>
+<dt>-k</dt>
+<dd> When used by itself, the <code>-k</code> (<i>kill</i>) option to <code>sudo</code> invalidates the user&#8217;s time stamp by setting the time on it to the Epoch. The next time <code>sudo</code> is run a password will be required. This option does not require a password and was added to allow a user to revoke <code>sudo</code> permissions from a .logout file. </dd>
 <p> When used in conjunction with a command or an option that may require a password, the <code>-k</code> option will cause <code>sudo</code> to ignore the user&#8217;s time stamp file. As a result, <code>sudo</code> will prompt for a password (if one is required by <i>sudoers</i>) and will not update the user&#8217;s time stamp file.</p>
-<dt>-L</p>
-<dd> The <code>-L</code> (<i>list</i> defaults) option will list the parameters that may be set in a <i>Defaults</i> line along with a short description for each. This option will be removed from a future version of <code>sudo</code>.</p>
-<dt>-l[l] [<i>command</i>]</p>
-<dd> If no <i>command</i> is specified, the <code>-l</code> (<i>list</i>) option will list the allowed (and forbidden) commands for the invoking user (or the user specified by the <code>-U</code> option) on the current host. If a <i>command</i> is specified and is permitted by <i>sudoers</i>, the fully-qualified path to the command is displayed along with any command line arguments. If <i>command</i> is specified but not allowed, <code>sudo</code> will exit with a status value of 1. If the <code>-l</code> option is specified with an <code>l</code> argument (i.e. <code>-ll</code>), or if <code>-l</code> is specified multiple times, a longer list format is used.</p>
-<dt>-n</p>
-<dd> The <code>-n</code> (<i>non-interactive</i>) option prevents <code>sudo</code> from prompting the user for a password. If a password is required for the command to run, <code>sudo</code> will display an error messages and exit.</p>
-<dt>-P</p>
-<dd> The <code>-P</code> (<i>preserve</i> <i>group vector</i>) option causes <code>sudo</code> to preserve the invoking user&#8217;s group vector unaltered. By default, <code>sudo</code> will initialize the group vector to the list of groups the target user is in. The real and effective group IDs, however, are still set to match the target user.</p>
-<dt>-p <i>prompt</i></p>
+<dt>-L</dt>
+<dd> The <code>-L</code> (<i>list</i> defaults) option will list the parameters that may be set in a <i>Defaults</i> line along with a short description for each. This option will be removed from a future version of <code>sudo</code>.</dd>
+<dt>-l[l] [<i>command</i>]</dt>
+<dd> If no <i>command</i> is specified, the <code>-l</code> (<i>list</i>) option will list the allowed (and forbidden) commands for the invoking user (or the user specified by the <code>-U</code> option) on the current host. If a <i>command</i> is specified and is permitted by <i>sudoers</i>, the fully-qualified path to the command is displayed along with any command line arguments. If <i>command</i> is specified but not allowed, <code>sudo</code> will exit with a status value of 1. If the <code>-l</code> option is specified with an <code>l</code> argument (i.e. <code>-ll</code>), or if <code>-l</code> is specified multiple times, a longer list format is used.</dd>
+<dt>-n</dt>
+<dd> The <code>-n</code> (<i>non-interactive</i>) option prevents <code>sudo</code> from prompting the user for a password. If a password is required for the command to run, <code>sudo</code> will display an error messages and exit.</dd>
+<dt>-P</dt>
+<dd> The <code>-P</code> (<i>preserve</i> <i>group vector</i>) option causes <code>sudo</code> to preserve the invoking user&#8217;s group vector unaltered. By default, <code>sudo</code> will initialize the group vector to the list of groups the target user is in. The real and effective group IDs, however, are still set to match the target user.</dd>
+<dt>-p <i>prompt</i></dt>
 <dd> The <code>-p</code> (<i>prompt</i>) option allows you to override the default password prompt and use a custom one. The following percent (`<tt> %<br />
- </tt>&#8216;) escapes are supported:</p>
+ </tt>&#8216;) escapes are supported:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>%H</p>
-<dd> expanded to the local host name including the domain name (on if the machine&#8217;s host name is fully qualified or the <i>fqdn</i> <i>sudoers</i> option is set)</p>
-<dt>%h</p>
-<dd> expanded to the local host name without the domain name</p>
-<dt>%p</p>
-<dd> expanded to the user whose password is being asked for (respects the <i>rootpw</i>, <i>targetpw</i> and <i>runaspw</i> flags in <i>sudoers</i>)</p>
-<dt>%U</p>
-<dd> expanded to the login name of the user the command will be run as (defaults to root)</p>
-<dt>%u</p>
-<dd> expanded to the invoking user&#8217;s login name</p>
-<dt> %%</p>
+<dt>%H</dt>
+<dd> expanded to the local host name including the domain name (on if the machine&#8217;s host name is fully qualified or the <i>fqdn</i> <i>sudoers</i> option is set)</dd>
+<dt>%h</dt>
+<dd> expanded to the local host name without the domain name</dd>
+<dt>%p</dt>
+<dd> expanded to the user whose password is being asked for (respects the <i>rootpw</i>, <i>targetpw</i> and <i>runaspw</i> flags in <i>sudoers</i>)</dd>
+<dt>%U</dt>
+<dd> expanded to the login name of the user the command will be run as (defaults to root)</dd>
+<dt>%u</dt>
+<dd> expanded to the invoking user&#8217;s login name</dd>
+<dt> %%</dt>
 <dd> two consecutive <tt> %<br />
  </tt> characters are collapsed into a single <tt> %<br />
- </tt> character</dl>
+ </tt> character</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> The prompt specified by the <code>-p</code> option will override the system password prompt on systems that support <font SIZE="-1">PAM</font> unless the <i>passprompt_override</i> flag is disabled in <i>sudoers</i>.</dl>
-<dt>-r <i>role</i></p>
-<dd> The <code>-r</code> (<i>role</i>) option causes the new (SELinux) security context to have the role specified by <i>role</i>.</p>
-<dt>-S</p>
-<dd> The <code>-S</code> (<i>stdin</i>) option causes <code>sudo</code> to read the password from the standard input instead of the terminal device. The password must be followed by a newline character.</p>
-<dt>-s [command]</p>
-<dd> The <code>-s</code> (<i>shell</i>) option runs the shell specified by the <i></i><font SIZE="-1"><i>SHELL</i></font><i></i> environment variable if it is set or the shell as specified in <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5). If a command is specified, it is passed to the shell for execution. Otherwise, an interactive shell is executed.</p>
-<dt>-t <i>type</i></p>
-<dd> The <code>-t</code> (<i>type</i>) option causes the new (SELinux) security context to have the type specified by <i>type</i>. If no type is specified, the default type is derived from the specified role.</p>
-<dt>-U <i>user</i></p>
+</dt><dd>
+<p> The prompt specified by the <code>-p</code> option will override the system password prompt on systems that support <font SIZE="-1">PAM</font> unless the <i>passprompt_override</i> flag is disabled in <i>sudoers</i>.</dd></dl>
+<dt>-r <i>role</i></dt>
+<dd> The <code>-r</code> (<i>role</i>) option causes the new (SELinux) security context to have the role specified by <i>role</i>.</dd>
+<dt>-S</dt>
+<dd> The <code>-S</code> (<i>stdin</i>) option causes <code>sudo</code> to read the password from the standard input instead of the terminal device. The password must be followed by a newline character.</dd>
+<dt>-s [command]</dt>
+<dd> The <code>-s</code> (<i>shell</i>) option runs the shell specified by the <i></i><font SIZE="-1"><i>SHELL</i></font><i></i> environment variable if it is set or the shell as specified in <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5). If a command is specified, it is passed to the shell for execution. Otherwise, an interactive shell is executed.</dd>
+<dt>-t <i>type</i></dt>
+<dd> The <code>-t</code> (<i>type</i>) option causes the new (SELinux) security context to have the type specified by <i>type</i>. If no type is specified, the default type is derived from the specified role.</dd>
+<dt>-U <i>user</i></dt>
 <dd> The <code>-U</code> (<i>other user</i>) option is used in conjunction with the <code>-l</code> option to specify the user whose privileges should be listed. Only root or a user with <code>sudo</code> <tt> ALL<br />
- </tt> on the current host may use this option.</p>
-<dt>-u <i>user</i></p>
-<dd> The <code>-u</code> (<i>user</i>) option causes <code>sudo</code> to run the specified command as a user other than <i>root</i>. To specify a <i>uid</i> instead of a <i>user name</i>, use <i>#uid</i>. When running commands as a <i>uid</i>, many shells require that the &#8216;#&#8217; be escaped with a backslash (&#8216;\&#8217;). Note that if the <i>targetpw</i> Defaults option is set (see <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5)) it is not possible to run commands with a uid not listed in the password database.</p>
-<dt>-V</p>
-<dd> The <code>-V</code> (<i>version</i>) option causes <code>sudo</code> to print the version number and exit. If the invoking user is already root the <code>-V</code> option will print out a list of the defaults <code>sudo</code> was compiled with as well as the machine&#8217;s local network addresses.</p>
-<dt>-v</p>
+ </tt> on the current host may use this option.</dd>
+<dt>-u <i>user</i></dt>
+<dd> The <code>-u</code> (<i>user</i>) option causes <code>sudo</code> to run the specified command as a user other than <i>root</i>. To specify a <i>uid</i> instead of a <i>user name</i>, use <i>#uid</i>. When running commands as a <i>uid</i>, many shells require that the &#8216;#&#8217; be escaped with a backslash (&#8216;\&#8217;). Note that if the <i>targetpw</i> Defaults option is set (see <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5)) it is not possible to run commands with a uid not listed in the password database.</dd>
+<dt>-V</dt>
+<dd> The <code>-V</code> (<i>version</i>) option causes <code>sudo</code> to print the version number and exit. If the invoking user is already root the <code>-V</code> option will print out a list of the defaults <code>sudo</code> was compiled with as well as the machine&#8217;s local network addresses.</dd>
+<dt>-v</dt>
 <dd> If given the <code>-v</code> (<i>validate</i>) option, <code>sudo</code> will update the user&#8217;s time stamp, prompting for the user&#8217;s password if necessary. This extends the <code>sudo</code> timeout for another <tt> 5<br />
- </tt> minutes (or whatever the timeout is set to in <i>sudoers</i>) but does not run a command.</p>
-<dt>&#8212;</p>
-<dd> The <code>&#8212;</code> option indicates that <code>sudo</code> should stop processing command line arguments.</dl>
+ </tt> minutes (or whatever the timeout is set to in <i>sudoers</i>) but does not run a command.</dd>
+<dt>&#8212;</dt>
+<dd> The <code>&#8212;</code> option indicates that <code>sudo</code> should stop processing command line arguments.</dd></dl>
 <p> Environment variables to be set for the command may also be passed on the command line in the form of <font SIZE="-1"><code>VAR</code></font>=<i>value</i>, e.g. <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>=<i>/usr/local/pkg/lib</i>. Variables passed on the command line are subject to the same restrictions as normal environment variables with one important exception. If the <i>setenv</i> option is set in <i>sudoers</i>, the command to be run has the <tt> SETENV<br />
  </tt> tag set or the command matched is <tt> ALL<br />
  </tt>, the user may set variables that would overwise be forbidden. See <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5) for more information.</p>
@@ -179,50 +175,50 @@ description: "sudo, sudoedit – execute a command as another user"
 <h2>ENVIRONMENT</h2>
 <p> <code>sudo</code> utilizes the following environment variables:</p>
 <dl>
-<dt> EDITOR</p>
+<dt> EDITOR</dt>
 <dd> Default editor to use in <code>-e</code> (sudoedit) mode if neither <tt> SUDO_EDITOR<br />
  </tt> nor <tt> VISUAL<br />
- </tt> is set</p>
-<dt> MAIL</p>
-<dd> In <code>-i</code> mode or when <i>env_reset</i> is enabled in <i>sudoers</i>, set to the mail spool of the target user</p>
-<dt> HOME</p>
-<dd> Set to the home directory of the target user if <code>-i</code> or <code>-H</code> are specified, <i>env_reset</i> or <i>always_set_home</i> are set in <i>sudoers</i>, or when the <code>-s</code> option is specified and <i>set_home</i> is set in <i>sudoers</i></p>
-<dt> PATH</p>
-<dd> Set to a sane value if the <i>secure_path</i> sudoers option is set.</p>
-<dt> SHELL</p>
+ </tt> is set</dd>
+<dt> MAIL</dt>
+<dd> In <code>-i</code> mode or when <i>env_reset</i> is enabled in <i>sudoers</i>, set to the mail spool of the target user</dd>
+<dt> HOME</dt>
+<dd> Set to the home directory of the target user if <code>-i</code> or <code>-H</code> are specified, <i>env_reset</i> or <i>always_set_home</i> are set in <i>sudoers</i>, or when the <code>-s</code> option is specified and <i>set_home</i> is set in <i>sudoers</i></dd>
+<dt> PATH</dt>
+<dd> Set to a sane value if the <i>secure_path</i> sudoers option is set.</dd>
+<dt> SHELL</dt>
 <dd> Used to determine shell to run with <tt> -s<br />
- </tt> option</p>
-<dt> SUDO_ASKPASS</p>
+ </tt> option</dd>
+<dt> SUDO_ASKPASS</dt>
 <dd> Specifies the path to a helper program used to read the password if no terminal is available or if the <tt> -A<br />
- </tt> option is specified.</p>
-<dt> SUDO_COMMAND</p>
-<dd> Set to the command run by sudo</p>
-<dt> SUDO_EDITOR</p>
-<dd> Default editor to use in <code>-e</code> (sudoedit) mode</p>
-<dt> SUDO_GID</p>
-<dd> Set to the group <font SIZE="-1">ID</font> of the user who invoked sudo</p>
-<dt> SUDO_PROMPT</p>
-<dd> Used as the default password prompt</p>
-<dt> SUDO_PS1</p>
+ </tt> option is specified.</dd>
+<dt> SUDO_COMMAND</dt>
+<dd> Set to the command run by sudo</dd>
+<dt> SUDO_EDITOR</dt>
+<dd> Default editor to use in <code>-e</code> (sudoedit) mode</dd>
+<dt> SUDO_GID</dt>
+<dd> Set to the group <font SIZE="-1">ID</font> of the user who invoked sudo</dd>
+<dt> SUDO_PROMPT</dt>
+<dd> Used as the default password prompt</dd>
+<dt> SUDO_PS1</dt>
 <dd> If set, <tt> PS1<br />
- </tt> will be set to its value for the program being run</p>
-<dt> SUDO_UID</p>
-<dd> Set to the user <font SIZE="-1">ID</font> of the user who invoked sudo</p>
-<dt> SUDO_USER</p>
-<dd> Set to the login of the user who invoked sudo</p>
-<dt> USER</p>
-<dd> Set to the target user (root unless the <code>-u</code> option is specified)</p>
-<dt> VISUAL</p>
+ </tt> will be set to its value for the program being run</dd>
+<dt> SUDO_UID</dt>
+<dd> Set to the user <font SIZE="-1">ID</font> of the user who invoked sudo</dd>
+<dt> SUDO_USER</dt>
+<dd> Set to the login of the user who invoked sudo</dd>
+<dt> USER</dt>
+<dd> Set to the target user (root unless the <code>-u</code> option is specified)</dd>
+<dt> VISUAL</dt>
 <dd> Default editor to use in <code>-e</code> (sudoedit) mode if <tt> SUDO_EDITOR<br />
- </tt> is not set</dl>
+ </tt> is not set</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/sudoers</i></p>
-<dd> List of who can run what</p>
-<dt><i>/var/db/sudo</i></p>
-<dd> Directory containing time stamps</p>
-<dt><i>/etc/environment</i></p>
-<dd> Initial environment for <code>-i</code> mode on Linux and <font SIZE="-1">AIX</font></dl>
+<dt><i>/etc/sudoers</i></dt>
+<dd> List of who can run what</dd>
+<dt><i>/var/db/sudo</i></dt>
+<dd> Directory containing time stamps</dd>
+<dt><i>/etc/environment</i></dt>
+<dd> Initial environment for <code>-i</code> mode on Linux and <font SIZE="-1">AIX</font></dd></dl>
 <h2>EXAMPLES</h2>
 <p> Note: the following examples assume suitable <i><a href="/docs/linux/man/5-sudoers/">sudoers</a></i>(5) entries. </p>
 <p> To get a file listing of an unreadable directory: </p>

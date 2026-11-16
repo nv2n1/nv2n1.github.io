@@ -15,38 +15,38 @@ description: "sane-canon_lide70 – SANE backend for the Canon LiDE 70 and 600(F
 <h2>Backend Specific Options</h2>
 <p><code>Scan Mode:</code> </p>
 <dl>
-<dt><code>&#8211;resolution 75|150|300|600|1200 [default 600]</code></p>
-<dd>Sets the resolution of the scanned image in dots per inch. Scanning at 1200 dpi is not available on the LiDE 600(F) and it is very slow on the LiDE 70. </p>
-<dt><code>&#8211;mode Color|Gray|Lineart [default: Color]</code></p>
-<dd>Selects the scan mode. Lineart means fully black and fully white pixels only. </p>
-<dt><code>&#8211;threshold 0..100 (in steps of 1) [default 75]</code></p>
-<dd>Select minimum-brightness percentage to get a white point, relevant only for Lineart </p>
-<dt><code>&#8211;non-blocking[=(yes|no)] [inactive]</code></p>
-<dd>This option has not yet been implemented. Scans are captured in a temporary file with a typical size of 100MB. </p>
+<dt><code>&#8211;resolution 75|150|300|600|1200 [default 600]</code></dt>
+<dd>Sets the resolution of the scanned image in dots per inch. Scanning at 1200 dpi is not available on the LiDE 600(F) and it is very slow on the LiDE 70. </dd>
+<dt><code>&#8211;mode Color|Gray|Lineart [default: Color]</code></dt>
+<dd>Selects the scan mode. Lineart means fully black and fully white pixels only. </dd>
+<dt><code>&#8211;threshold 0..100 (in steps of 1) [default 75]</code></dt>
+<dd>Select minimum-brightness percentage to get a white point, relevant only for Lineart </dd>
+<dt><code>&#8211;non-blocking[=(yes|no)] [inactive]</code></dt>
+<dd>This option has not yet been implemented. Scans are captured in a temporary file with a typical size of 100MB. </dd>
 </dl>
 <p> <code>Geometry:</code></p>
 <dl>
-<dt><code>-l 0..216.069 [default 0]</code></p>
-<dd>Top-left x position of scan area in millimeters.</p>
-<dt><code>-t 0..297 [default 0]</code></p>
-<dd>Top-left y position of scan area in millimeters.</p>
-<dt><code>-x 0..216.069 [default 80]</code></p>
-<dd>Width of scan-area in millimeters.</p>
-<dt><code>-y 0..297 [default 100]</code></p>
-<dd>Height of scan-area in millimeters. </p>
+<dt><code>-l 0..216.069 [default 0]</code></dt>
+<dd>Top-left x position of scan area in millimeters.</dd>
+<dt><code>-t 0..297 [default 0]</code></dt>
+<dd>Top-left y position of scan area in millimeters.</dd>
+<dt><code>-x 0..216.069 [default 80]</code></dt>
+<dd>Width of scan-area in millimeters.</dd>
+<dt><code>-y 0..297 [default 100]</code></dt>
+<dd>Height of scan-area in millimeters. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/canon_lide70.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon_lide70.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon_lide70.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/canon_lide70.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon_lide70.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-canon_lide70.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_CANON_LIDE70</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_CANON_LIDE70</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example:<br />
  SANE_DEBUG_CANON_LIDE70=128 scanimage &gt; /dev/null</dl>
 <h2>Known Problems</h2>
@@ -56,3 +56,4 @@ description: "sane-canon_lide70 – SANE backend for the Canon LiDE 70 and 600(F
  <a rel="nofollow" href="http://www.juergen-ernst.de/info_sane.html">http://www.juergen-ernst.de/info_sane.html</a> </p>
 <h2>Author</h2>
 <p>pimvantend, building upon pioneering work by Juergen Ernst.</p>
+</p>

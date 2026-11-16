@@ -55,9 +55,9 @@ description: "pki_ra_selinux – Security Enhanced Linux Policy for the pki_ra p
 <p> Policy governs the access confined processes have to these ports. SELinux pki_ra policy is very flexible allowing users to setup their pki_ra processes in as secure a method as possible. </p>
 <p> The following port types are defined for pki_ra: </p>
 <dl>
-<dt><code>pki_ra_port_t</code></p>
+<dt><code>pki_ra_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 12888-12889</dl>
+</dd><dd>Default Defined Ports: tcp 12888-12889</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pki_ra_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -123,8 +123,8 @@ description: "pki_ra_selinux – Security Enhanced Linux Policy for the pki_ra p
 <p> <code>pki_ra_etc_rw_t</code> </p>
 <p> &#8211; Set files with the pki_ra_etc_rw_t type, if you want to treat the files as pki ra etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-ra(/.*)?, /etc/sysconfig/pki/ra(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-ra(/.*)?, /etc/sysconfig/pki/ra(/.*)? </dd>
 </dl>
 <p> <code>pki_ra_exec_t</code> </p>
 <p> &#8211; Set files with the pki_ra_exec_t type, if you want to transition an executable to the pki_ra_t domain. </p>

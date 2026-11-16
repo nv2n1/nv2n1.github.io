@@ -11,9 +11,7 @@ std::experimental::pmr::polymorphic_allocator - std::experimental::pmr::polymorp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/memory_resource&gt;
-
 template&lt; class T &gt;                               (library fundamentals TS)
-
 class polymorphic_allocator;</code></pre> 
 The class template std::experimental::pmr::polymorphic_allocator is an Allocator whose allocation behavior depends on the memory resource it is constructed with. Thus, different instances of polymorphic_allocator can exhibit entirely different allocation behavior. This runtime polymorphism allows objects using polymorphic_allocator to behave as if they used different allocator types at run time despite the identical static allocator type. 
 

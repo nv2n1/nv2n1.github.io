@@ -16,10 +16,10 @@ description: "usleep – sleep some number of microseconds"
 <h2>OPTIONS</h2>
 <p> <i>&#8211;usage</i> Show short usage message.</p>
 <dl>
-<dt><i>&#8211;help, -?</i></p>
-<dd> Print help information.</p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Print version information.</dl>
+<dt><i>&#8211;help, -?</i></dt>
+<dd> Print help information.</dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Print version information.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably not accurate on many machines down to the microsecond. Count on precision only to -4 or maybe -5.</p>
 <h2>AUTHOR</h2>

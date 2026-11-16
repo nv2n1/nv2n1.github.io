@@ -26,6 +26,6 @@ description: "Source-highlight-settings – utility that can be used to write a 
 <p> The full documentation for <code>source-highlight</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>source-highlight</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info source-highlight</code></dl>
+</dt><dd> <code>info source-highlight</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

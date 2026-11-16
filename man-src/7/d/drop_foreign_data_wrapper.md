@@ -14,14 +14,14 @@ description: "DROP FOREIGN DATA WRAPPER – remove a foreign-data wrapper"
 <p><code>DROP FOREIGN DATA WRAPPER</code> removes an existing foreign-data wrapper. To execute this command, the current user must be the owner of the foreign-data wrapper.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the foreign-data wrapper does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name of an existing foreign-data wrapper.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the foreign-data wrapper (such as servers).</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the foreign-data wrappers if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the foreign-data wrapper does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of an existing foreign-data wrapper.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the foreign-data wrapper (such as servers).</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the foreign-data wrappers if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Drop the foreign-data wrapper dbi: </p>
 <pre>DROP FOREIGN DATA WRAPPER dbi;</pre>

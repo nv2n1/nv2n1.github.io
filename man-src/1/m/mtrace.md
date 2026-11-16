@@ -16,10 +16,10 @@ description: "mtrace – interpret the malloc trace log"
 <p> For more information about the <code><a href="/docs/linux/man/3-mtrace/">mtrace</a></code>(3) function and <code>mtrace</code> script usage, see <code><a href="/docs/linux/man/3-mtrace/">mtrace</a></code>(3).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> For bug reporting instructions, please see:</p>
 <h2>SEE ALSO</h2>

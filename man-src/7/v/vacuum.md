@@ -18,18 +18,18 @@ VACUUM [ FULL ] [ FREEZE ] [ VERBOSE ] ANALYZE [ <i>table</i> [ (<i>column</i> [
 <p> Plain <code>VACUUM</code> (without FULL) simply reclaims space and makes it available for re-use. This form of the command can operate in parallel with normal reading and writing of the table, as an exclusive lock is not obtained. <code>VACUUM FULL</code> does more extensive processing, including moving of tuples across blocks to try to compact the table to the minimum number of disk blocks. This form is much slower and requires an exclusive lock on each table while it is being processed.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>FULL</code></p>
-<dd>Selects &#8220;full&#8221; vacuum, which can reclaim more space, but takes much longer and exclusively locks the table.</p>
-<dt><code>FREEZE</code></p>
-<dd>Selects aggressive &#8220;freezing&#8221; of tuples. Specifying FREEZE is equivalent to performing <code>VACUUM</code> with the vacuum_freeze_min_age parameter set to zero. The FREEZE option is deprecated and will be removed in a future release; set the parameter instead.</p>
-<dt><code>VERBOSE</code></p>
-<dd>Prints a detailed vacuum activity report for each table.</p>
-<dt><code>ANALYZE</code></p>
-<dd>Updates statistics used by the planner to determine the most efficient way to execute a query.</p>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of a specific table to vacuum. Defaults to all tables in the current database.</p>
-<dt><i>column</i></p>
-<dd>The name of a specific column to analyze. Defaults to all columns.</dl>
+<dt><code>FULL</code></dt>
+<dd>Selects &#8220;full&#8221; vacuum, which can reclaim more space, but takes much longer and exclusively locks the table.</dd>
+<dt><code>FREEZE</code></dt>
+<dd>Selects aggressive &#8220;freezing&#8221; of tuples. Specifying FREEZE is equivalent to performing <code>VACUUM</code> with the vacuum_freeze_min_age parameter set to zero. The FREEZE option is deprecated and will be removed in a future release; set the parameter instead.</dd>
+<dt><code>VERBOSE</code></dt>
+<dd>Prints a detailed vacuum activity report for each table.</dd>
+<dt><code>ANALYZE</code></dt>
+<dd>Updates statistics used by the planner to determine the most efficient way to execute a query.</dd>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of a specific table to vacuum. Defaults to all tables in the current database.</dd>
+<dt><i>column</i></dt>
+<dd>The name of a specific column to analyze. Defaults to all columns.</dd></dl>
 <h2>Outputs</h2>
 <p>When VERBOSE is specified, <code>VACUUM</code> emits progress messages to indicate which table is currently being processed. Various statistics about the tables are printed as well.</p>
 <h2>Notes</h2>

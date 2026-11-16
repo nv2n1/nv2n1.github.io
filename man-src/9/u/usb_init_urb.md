@@ -14,7 +14,7 @@ description: "usb_init_urb – initializes a urb so that it can be used by a USB
 <p><i>urb</i></p>
 <dl>
 <dd>
-<dd>pointer to the urb to initialize</dl>
+</dd><dd>pointer to the urb to initialize</dd></dl>
 <h2>Description</h2>
 <p>Initializes a urb so that the USB subsystem can use it properly. </p>
 <p> If a urb is created with a call to <code>usb_alloc_urb</code> it is not necessary to call this function. Only use this if you allocate the space for a struct urb on your own. If you call this function, be careful when freeing the memory for your urb that it is no longer in use by the USB core. </p>

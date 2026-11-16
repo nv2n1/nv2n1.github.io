@@ -19,19 +19,19 @@ description: "perf-evlist – List the event names in a perf.data file"
 <p> -i, &#8211;input=</p>
 <dl>
 <dt>
-<dd> Input file name. (default: perf.data unless stdin is a fifo)</dl>
+</dt><dd> Input file name. (default: perf.data unless stdin is a fifo)</dd></dl>
 <p> -F, &#8211;freq=</p>
 <dl>
 <dt>
-<dd> Show just the sample frequency used for each event.</dl>
+</dt><dd> Show just the sample frequency used for each event.</dd></dl>
 <p> -v, &#8211;verbose=</p>
 <dl>
 <dt>
-<dd> Show all fields.</dl>
+</dt><dd> Show all fields.</dd></dl>
 <p> -g, &#8211;group</p>
 <dl>
 <dt>
-<dd> Show event group information.</dl>
+</dt><dd> Show event group information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-list/">perf-list</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
 <h2>Index</h2>

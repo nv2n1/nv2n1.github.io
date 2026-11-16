@@ -25,163 +25,163 @@ description: "intel – Intel integrated graphics chipsets"
 <p> For the 830M and later, the driver will automatically size its memory allocation according to the features it will support. Therefore, the <code>VideoRam</code> option, which in the past had been necessary to allow more than some small amount of memory to be allocated, is now ignored. </p>
 <p> The following driver <code>Options</code> are supported</p>
 <dl>
-<dt><code>Option &#34;ColorKey&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This sets the default pixel value for the YUV video overlay key.</p>
-<dd>Default: undefined.</p>
-<dt><code>Option &#34;DRI&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Disable or enable DRI support. A driver name to use can be provided instead of simple boolean value, which will be passed to the GL implementation for it to load the appropriate backend. Alternatively the maximum level of DRI to enable (e.g. &quot;1&quot;, &quot;2&quot; or &quot;3&quot;) can be specified.</p>
-<dd>Default: All levels of DRI are enabled for configurations where it is supported. </p>
+<dt><code>Option &#34;ColorKey&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This sets the default pixel value for the YUV video overlay key.</dd>
+<dd>Default: undefined.</dd>
+<dt><code>Option &#34;DRI&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Disable or enable DRI support. A driver name to use can be provided instead of simple boolean value, which will be passed to the GL implementation for it to load the appropriate backend. Alternatively the maximum level of DRI to enable (e.g. &quot;1&quot;, &quot;2&quot; or &quot;3&quot;) can be specified.</dd>
+<dd>Default: All levels of DRI are enabled for configurations where it is supported. </dd>
 </dl>
 <p> The following driver <code>Options</code> are supported for the i810 and i815 chipsets:</p>
 <dl>
-<dt><code>Option &#34;CacheLines&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This allows the user to change the amount of graphics memory used for 2D acceleration and video when XAA acceleration is enabled. Decreasing this amount leaves more for 3D textures. Increasing it can improve 2D performance at the expense of 3D performance.</p>
-<dd>Default: depends on the resolution, depth, and available video memory. The driver attempts to allocate space for at 3 screenfuls of pixmaps plus an HD-sized XV video. The default used for a specific configuration can be found by examining the Xorg log file.</p>
-<dt><code>Option &#34;DDC&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable DDC support.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;Dac6Bit&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable 6-bits per RGB for 8-bit modes.</p>
-<dd>Default: 8-bits per RGB for 8-bit modes.</p>
-<dt><code>Option &#34;XvMCSurfaces&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option enables XvMC. The integer parameter specifies the number of surfaces to use. Valid values are 6 and 7.</p>
-<dd>Default: XvMC is disabled.</p>
-<dt><code>VideoRam </code><i>integer</i></p>
-<dd>This option specifies the amount of system memory to use for graphics, in KB.</p>
-<dd>The default is 8192 if AGP allocable memory is &lt; 128 MB, 16384 if &lt; 192 MB, 24576 if higher. DRI require at least a value of 16384. Higher values may give better 3D performance, at expense of available system memory.</p>
-<dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable acceleration.</p>
-<dd>Default: acceleration is enabled. </p>
+<dt><code>Option &#34;CacheLines&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This allows the user to change the amount of graphics memory used for 2D acceleration and video when XAA acceleration is enabled. Decreasing this amount leaves more for 3D textures. Increasing it can improve 2D performance at the expense of 3D performance.</dd>
+<dd>Default: depends on the resolution, depth, and available video memory. The driver attempts to allocate space for at 3 screenfuls of pixmaps plus an HD-sized XV video. The default used for a specific configuration can be found by examining the Xorg log file.</dd>
+<dt><code>Option &#34;DDC&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable DDC support.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;Dac6Bit&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable 6-bits per RGB for 8-bit modes.</dd>
+<dd>Default: 8-bits per RGB for 8-bit modes.</dd>
+<dt><code>Option &#34;XvMCSurfaces&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option enables XvMC. The integer parameter specifies the number of surfaces to use. Valid values are 6 and 7.</dd>
+<dd>Default: XvMC is disabled.</dd>
+<dt><code>VideoRam </code><i>integer</i></dt>
+<dd>This option specifies the amount of system memory to use for graphics, in KB.</dd>
+<dd>The default is 8192 if AGP allocable memory is &lt; 128 MB, 16384 if &lt; 192 MB, 24576 if higher. DRI require at least a value of 16384. Higher values may give better 3D performance, at expense of available system memory.</dd>
+<dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable acceleration.</dd>
+<dd>Default: acceleration is enabled. </dd>
 </dl>
 <p> The following driver <code>Options</code> are supported for the 830M and later chipsets:</p>
 <dl>
-<dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable acceleration.</p>
-<dd>Default: acceleration is enabled.</p>
-<dt><code>Option &#34;Present&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable use of hardware counters and flow control for the Present extension.</p>
-<dd>Default: Enabled</p>
-<dt><code>Option &#34;AccelMethod&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Select acceleration method. There are a couple of backends available for accelerating the DDX. &#34;UXA&#34; (Unified Acceleration Architecture) is the mature backend that was introduced to support the GEM driver model. It is in the process of being superseded by &#34;SNA&#34; (Sandybridge&#8217;s New Acceleration). Until that process is complete, the ability to choose which backend to use remains for backwards compatibility. In addition, there are a pair of sub-options to limit the acceleration for debugging use. Specify &#34;off&#34; or &#34;none&#34; to disable all acceleration, or &#34;blt&#34; to disable render acceleration and only use the BLT engine.</p>
-<dd>Default: use SNA (render acceleration)</p>
-<dt><code>Option &#34;TearFree&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable TearFree updates. This option forces X to perform all rendering to a backbuffer prior to updating the actual display. It requires an extra memory allocation the same size as a framebuffer, the occasional extra copy, and requires Damage tracking. Thus enabling TearFree requires more memory and is slower (reduced throughput) and introduces a small amount of output latency, but it should not impact input latency. However, the update to the screen is then performed synchronously with the vertical refresh of the display so that the entire update is completed before the display starts its refresh. That is only one frame is ever visible, preventing an unsightly tear between two visible and differing frames. Note that this replicates what the compositing manager should be doing, however TearFree will redirect the compositor updates (and those of fullscreen games) directly on to the scanout thus incurring no additional overhead in the composited case. Also note that not all compositing managers prevent tearing, and if the outputs are rotated, there will still be tearing without TearFree enabled.</p>
-<dd>Default: TearFree is disabled.</p>
-<dt><code>Option &#34;ReprobeOutputs&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable rediscovery of connected displays during server startup. As the kernel driver loads it scans for connected displays and configures a console spanning those outputs. When the X server starts, we then take the list of connected displays and framebuffer layout and use that for the initial configuration. Sometimes, not all displays are correctly detected by the kernel and so it is useful in a few circumstances for X to force the kernel to reprobe all displays when it starts. To make the X server recheck the status of connected displays, set the &#34;ReprobeOutputs&#34; option to true. Please do file a bug for any circumstances which require this workaround.</p>
-<dd>Default: reprobing is disabled for a faster startup.</p>
-<dt><code>Option &#34;VideoKey&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This is the same as the <code>&#34;ColorKey&#34;</code> option described above. It is provided for compatibility with most other drivers.</p>
-<dt><code>Option &#34;XvPreferOverlay&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Make hardware overlay be the first XV adaptor. The overlay behaves incorrectly in the presence of compositing, but some prefer it due to it syncing to vblank in the absence of compositing. While most XV-using applications have options to select which XV adaptor to use, this option can be used to place the overlay first for applications which don&#8217;t have options for selecting adaptors.</p>
-<dd>Default: Textured video adaptor is preferred.</p>
-<dt><code>Option &#34;Backlight&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Override the probed backlight control interface. Sometimes the automatically selected backlight interface may not correspond to the correct, or simply most useful, interface available on the system. This allows you to override that choice by specifying the entry under /sys/class/backlight to use.</p>
-<dd>Default: Automatic selection.</p>
-<dt><code>Option &#34;CustomEDID&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Override the probed EDID on particular outputs. Sometimes the manufacturer supplied EDID is corrupt or lacking a few usable modes and supplying a corrected EDID may be easier than specifying every modeline. This option allows to pass the path to load an EDID from per output. The format is a comma separated string of output:path pairs, e.g. DP1:/path/to/dp1.edid,DP2:/path/to/dp2.edid</p>
-<dd>Default: No override, use manufacturer supplied EDIDs.</p>
-<dt><code>Option &#34;FallbackDebug&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable printing of debugging information on acceleration fallbacks to the server log.</p>
-<dd>Default: Disabled</p>
-<dt><code>Option &#34;DebugFlushBatches&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Flush the batch buffer after every single operation.</p>
-<dd>Default: Disabled</p>
-<dt><code>Option &#34;DebugFlushCaches&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Include an MI_FLUSH at the end of every batch buffer to force data to be flushed out of cache and into memory before the completion of the batch.</p>
-<dd>Default: Disabled</p>
-<dt><code>Option &#34;DebugWait&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Wait for the completion of every batch buffer before continuing, i.e. perform synchronous rendering.</p>
-<dd>Default: Disabled</p>
-<dt><code>Option &#34;HWRotation&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Override the use of native hardware rotation and force the use of software, but GPU accelerated where possible, rotation. On some platforms the hardware can scanout directly into a rotated output bypassing the intermediate rendering and extra allocations required for software implemented rotation (i.e. native rotation uses less resources, is quicker and uses less power). This allows you to disable the native rotation in case of errors.</p>
-<dd>Default: Enabled (use hardware rotation)</p>
-<dt><code>Option &#34;VSync&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls the use of commands to synchronise rendering with the vertical refresh of the display. Some rendering commands have the option to be performed in a &quot;tear-free&quot; fashion by stalling the GPU to wait for the display to be outside of the region to be updated. This slows down all rendering, and historically has been the source of many GPU hangs.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;PageFlip&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls the use of commands to flip the scanout address on a VBlank. This is used by glXSwapBuffers to efficiently perform the back-to-front exchange at the end of a frame without incurring the penalty of a copy, or stalling the render pipeline (the flip is performed asynchronrously to the render command stream by the display engine). However, it has historically been the source of many GPU hangs.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;SwapbuffersWait&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls the behavior of glXSwapBuffers and glXCopySubBufferMESA calls by GL applications. If enabled, the calls will avoid tearing by making sure the display scanline is outside of the area to be copied before the copy occurs. If disabled, no scanline synchronization is performed, meaning tearing will likely occur.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;TripleBuffer&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option enables the use of a third buffer for page-flipping. The third buffer allows applications to run at vrefresh rates even if they occasionally fail to swapbuffers on time. The effect of such missed swaps is the output jitters between 60fps and 30fps, and in the worst case appears frame-locked to 30fps. The disadvantage of triple buffering is that there is an extra frame of latency, due to the pre-rendered frame sitting in the swap queue, between input and any display update.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;Tiling&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls whether memory buffers for Pixmaps are allocated in tiled mode. In most cases (especially for complex rendering), tiling dramatically improves performance.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;LinearFramebuffer&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls whether the memory for the scanout (also known as the front or frame buffer) is allocated in linear memory. A tiled framebuffer is required for power conservation features, but for certain system configurations you may wish to override this and force a linear layout.</p>
-<dd>Default: disabled</p>
-<dt><code>Option &#34;RelaxedFencing&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls whether we attempt to allocate the minimal amount of memory required for the buffers. The reduction in working set has a substantial improvement on system performance. However, this has been demonstrate to be buggy on older hardware (845-865 and 915-945, but ok on PineView and later) so on those chipsets defaults to off.</p>
-<dd>Default: Enabled for G33 (includes PineView), and later, class machines.</p>
-<dt><code>Option &#34;XvMC&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable XvMC driver. Current support MPEG2 MC on 915/945 and G33 series. User should provide absolute path to libIntelXvMC.so in XvMCConfig file.</p>
-<dd>Default: Disabled.</p>
-<dt><code>Option &#34;Throttle&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls whether the driver periodically waits for pending drawing operations to complete. Throttling ensures that the GPU does not lag too far behind the CPU and thus noticeable delays in user responsible at the cost of throughput performance.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;HotPlug&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This option controls whether the driver automatically notifies applications when monitors are connected or disconnected.</p>
-<dd>Default: enabled.</p>
-<dt><code>Option &#34;Virtualheads&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This option controls specifies the number of fake outputs to create in addition to the normal outputs detected on your hardware. These outputs cannot be assigned to the regular displays attached to the GPU, but do otherwise act as any other xrandr output and share a portion of the regular framebuffer. One use case for these extra heads is for extending your desktop onto a discrete GPU using the Bumblebee project. However, the recommendation here is to use PRIME instead to create a single Xserver that can addresses and coordinate between multiple GPUs.</p>
-<dd>Default: 0</p>
-<dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></p>
+<dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable acceleration.</dd>
+<dd>Default: acceleration is enabled.</dd>
+<dt><code>Option &#34;Present&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable use of hardware counters and flow control for the Present extension.</dd>
+<dd>Default: Enabled</dd>
+<dt><code>Option &#34;AccelMethod&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Select acceleration method. There are a couple of backends available for accelerating the DDX. &#34;UXA&#34; (Unified Acceleration Architecture) is the mature backend that was introduced to support the GEM driver model. It is in the process of being superseded by &#34;SNA&#34; (Sandybridge&#8217;s New Acceleration). Until that process is complete, the ability to choose which backend to use remains for backwards compatibility. In addition, there are a pair of sub-options to limit the acceleration for debugging use. Specify &#34;off&#34; or &#34;none&#34; to disable all acceleration, or &#34;blt&#34; to disable render acceleration and only use the BLT engine.</dd>
+<dd>Default: use SNA (render acceleration)</dd>
+<dt><code>Option &#34;TearFree&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable TearFree updates. This option forces X to perform all rendering to a backbuffer prior to updating the actual display. It requires an extra memory allocation the same size as a framebuffer, the occasional extra copy, and requires Damage tracking. Thus enabling TearFree requires more memory and is slower (reduced throughput) and introduces a small amount of output latency, but it should not impact input latency. However, the update to the screen is then performed synchronously with the vertical refresh of the display so that the entire update is completed before the display starts its refresh. That is only one frame is ever visible, preventing an unsightly tear between two visible and differing frames. Note that this replicates what the compositing manager should be doing, however TearFree will redirect the compositor updates (and those of fullscreen games) directly on to the scanout thus incurring no additional overhead in the composited case. Also note that not all compositing managers prevent tearing, and if the outputs are rotated, there will still be tearing without TearFree enabled.</dd>
+<dd>Default: TearFree is disabled.</dd>
+<dt><code>Option &#34;ReprobeOutputs&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable rediscovery of connected displays during server startup. As the kernel driver loads it scans for connected displays and configures a console spanning those outputs. When the X server starts, we then take the list of connected displays and framebuffer layout and use that for the initial configuration. Sometimes, not all displays are correctly detected by the kernel and so it is useful in a few circumstances for X to force the kernel to reprobe all displays when it starts. To make the X server recheck the status of connected displays, set the &#34;ReprobeOutputs&#34; option to true. Please do file a bug for any circumstances which require this workaround.</dd>
+<dd>Default: reprobing is disabled for a faster startup.</dd>
+<dt><code>Option &#34;VideoKey&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This is the same as the <code>&#34;ColorKey&#34;</code> option described above. It is provided for compatibility with most other drivers.</dd>
+<dt><code>Option &#34;XvPreferOverlay&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Make hardware overlay be the first XV adaptor. The overlay behaves incorrectly in the presence of compositing, but some prefer it due to it syncing to vblank in the absence of compositing. While most XV-using applications have options to select which XV adaptor to use, this option can be used to place the overlay first for applications which don&#8217;t have options for selecting adaptors.</dd>
+<dd>Default: Textured video adaptor is preferred.</dd>
+<dt><code>Option &#34;Backlight&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Override the probed backlight control interface. Sometimes the automatically selected backlight interface may not correspond to the correct, or simply most useful, interface available on the system. This allows you to override that choice by specifying the entry under /sys/class/backlight to use.</dd>
+<dd>Default: Automatic selection.</dd>
+<dt><code>Option &#34;CustomEDID&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Override the probed EDID on particular outputs. Sometimes the manufacturer supplied EDID is corrupt or lacking a few usable modes and supplying a corrected EDID may be easier than specifying every modeline. This option allows to pass the path to load an EDID from per output. The format is a comma separated string of output:path pairs, e.g. DP1:/path/to/dp1.edid,DP2:/path/to/dp2.edid</dd>
+<dd>Default: No override, use manufacturer supplied EDIDs.</dd>
+<dt><code>Option &#34;FallbackDebug&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable printing of debugging information on acceleration fallbacks to the server log.</dd>
+<dd>Default: Disabled</dd>
+<dt><code>Option &#34;DebugFlushBatches&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Flush the batch buffer after every single operation.</dd>
+<dd>Default: Disabled</dd>
+<dt><code>Option &#34;DebugFlushCaches&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Include an MI_FLUSH at the end of every batch buffer to force data to be flushed out of cache and into memory before the completion of the batch.</dd>
+<dd>Default: Disabled</dd>
+<dt><code>Option &#34;DebugWait&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Wait for the completion of every batch buffer before continuing, i.e. perform synchronous rendering.</dd>
+<dd>Default: Disabled</dd>
+<dt><code>Option &#34;HWRotation&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Override the use of native hardware rotation and force the use of software, but GPU accelerated where possible, rotation. On some platforms the hardware can scanout directly into a rotated output bypassing the intermediate rendering and extra allocations required for software implemented rotation (i.e. native rotation uses less resources, is quicker and uses less power). This allows you to disable the native rotation in case of errors.</dd>
+<dd>Default: Enabled (use hardware rotation)</dd>
+<dt><code>Option &#34;VSync&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls the use of commands to synchronise rendering with the vertical refresh of the display. Some rendering commands have the option to be performed in a &quot;tear-free&quot; fashion by stalling the GPU to wait for the display to be outside of the region to be updated. This slows down all rendering, and historically has been the source of many GPU hangs.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;PageFlip&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls the use of commands to flip the scanout address on a VBlank. This is used by glXSwapBuffers to efficiently perform the back-to-front exchange at the end of a frame without incurring the penalty of a copy, or stalling the render pipeline (the flip is performed asynchronrously to the render command stream by the display engine). However, it has historically been the source of many GPU hangs.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;SwapbuffersWait&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls the behavior of glXSwapBuffers and glXCopySubBufferMESA calls by GL applications. If enabled, the calls will avoid tearing by making sure the display scanline is outside of the area to be copied before the copy occurs. If disabled, no scanline synchronization is performed, meaning tearing will likely occur.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;TripleBuffer&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option enables the use of a third buffer for page-flipping. The third buffer allows applications to run at vrefresh rates even if they occasionally fail to swapbuffers on time. The effect of such missed swaps is the output jitters between 60fps and 30fps, and in the worst case appears frame-locked to 30fps. The disadvantage of triple buffering is that there is an extra frame of latency, due to the pre-rendered frame sitting in the swap queue, between input and any display update.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;Tiling&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls whether memory buffers for Pixmaps are allocated in tiled mode. In most cases (especially for complex rendering), tiling dramatically improves performance.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;LinearFramebuffer&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls whether the memory for the scanout (also known as the front or frame buffer) is allocated in linear memory. A tiled framebuffer is required for power conservation features, but for certain system configurations you may wish to override this and force a linear layout.</dd>
+<dd>Default: disabled</dd>
+<dt><code>Option &#34;RelaxedFencing&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls whether we attempt to allocate the minimal amount of memory required for the buffers. The reduction in working set has a substantial improvement on system performance. However, this has been demonstrate to be buggy on older hardware (845-865 and 915-945, but ok on PineView and later) so on those chipsets defaults to off.</dd>
+<dd>Default: Enabled for G33 (includes PineView), and later, class machines.</dd>
+<dt><code>Option &#34;XvMC&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable XvMC driver. Current support MPEG2 MC on 915/945 and G33 series. User should provide absolute path to libIntelXvMC.so in XvMCConfig file.</dd>
+<dd>Default: Disabled.</dd>
+<dt><code>Option &#34;Throttle&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls whether the driver periodically waits for pending drawing operations to complete. Throttling ensures that the GPU does not lag too far behind the CPU and thus noticeable delays in user responsible at the cost of throughput performance.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;HotPlug&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This option controls whether the driver automatically notifies applications when monitors are connected or disconnected.</dd>
+<dd>Default: enabled.</dd>
+<dt><code>Option &#34;Virtualheads&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This option controls specifies the number of fake outputs to create in addition to the normal outputs detected on your hardware. These outputs cannot be assigned to the regular displays attached to the GPU, but do otherwise act as any other xrandr output and share a portion of the regular framebuffer. One use case for these extra heads is for extending your desktop onto a discrete GPU using the Bumblebee project. However, the recommendation here is to use PRIME instead to create a single Xserver that can addresses and coordinate between multiple GPUs.</dd>
+<dd>Default: 0</dd>
+<dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
 <dd>
-<dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you set this option you must use it with all instances of the driver. By default, each head is assigned only one CRTC (which limits using multiple outputs with that head to cloned mode). CRTC can be manually assigned to individual heads by preceding the output names with a comma delimited list of pipe numbers followed by a colon. Note that different pipes may be limited in their functionality and some outputs may only work with different pipes.<br />
- For example: </p>
+</dd><dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you set this option you must use it with all instances of the driver. By default, each head is assigned only one CRTC (which limits using multiple outputs with that head to cloned mode). CRTC can be manually assigned to individual heads by preceding the output names with a comma delimited list of pipe numbers followed by a colon. Note that different pipes may be limited in their functionality and some outputs may only work with different pipes.<br />
+ For example: </dd>
 <dl>
-<dd><code>Option &#34;ZaphodHeads&#34; &#34;LVDS1,VGA1&#34;</code> </p>
+<dd><code>Option &#34;ZaphodHeads&#34; &#34;LVDS1,VGA1&#34;</code> </dd>
 <p> will assign xrandr outputs LVDS1 and VGA1 to this instance of the driver.</dl>
 <dl>
-<dd><code>Option &#34;ZaphodHeads&#34; &#34;0,2:HDMI1,DP2&#34;</code> </p>
+<dd><code>Option &#34;ZaphodHeads&#34; &#34;0,2:HDMI1,DP2&#34;</code> </dd>
 <p> will assign xrandr outputs HDMI1 and DP2 and CRTCs 0 and 2 to this instance of the driver.</dl>
 </dl>
 <h2>Output Configuration</h2>
 <p>On 830M and better chipsets, the driver supports runtime configuration of detected outputs. You can use the <code>xrandr</code> tool to control outputs on the command line as follows: </p>
 <dl>
-<dd><code>xrandr &#8211;output</code> <i>output</i> <code>&#8211;set</code> <i>property value</i></dl>
+<dd><code>xrandr &#8211;output</code> <i>output</i> <code>&#8211;set</code> <i>property value</i></dd></dl>
 <p> Note that you may need to quote property and value arguments that contain spaces. Each output listed below may have one or more properties associated with it (like a binary EDID block if one is found). Some outputs have unique properties which are described below. See the &quot;MULTIHEAD CONFIGURATIONS&quot; section below for additional information.</p>
 <h3>Vga</h3>
 <p>VGA output port (typically exposed via an HD15 connector).</p>
 <h3>Lvds</h3>
 <p>Low Voltage Differential Signalling output (typically a laptop LCD panel). Available properties: </p>
 <dl>
-<dt><code>BACKLIGHT &#8211; current backlight level (adjustable)</p>
-<dd>By adjusting the BACKLIGHT property, the brightness on the LVDS output can be adjusted. In some cases, this property may be unavailable (for example if your platform uses an external microcontroller to control the backlight).</p>
-<dt>scaling mode</code> &#8211; control LCD panel scaling mode</p>
-<dd>When the currently selected display mode differs from the native panel resolution, various scaling options are available. These include</p>
+<dt><code>BACKLIGHT &#8211; current backlight level (adjustable)</dt>
+<dd>By adjusting the BACKLIGHT property, the brightness on the LVDS output can be adjusted. In some cases, this property may be unavailable (for example if your platform uses an external microcontroller to control the backlight).</dd>
+<dt>scaling mode</code> &#8211; control LCD panel scaling mode</dt>
+<dd>When the currently selected display mode differs from the native panel resolution, various scaling options are available. These include</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>Center</code></p>
-<dd>Simply center the image on-screen without scaling. This is the only scaling mode that guarantees a one-to-one correspondence between native and displayed pixels, but some portions of the panel may be unused (so-called &quot;letterboxing&quot;).</p>
-<dt><code>Full aspect</code></p>
-<dd>Scale the image as much as possible while preserving aspect ratio. Pixels may not be displayed one-to-one (there may be some blurriness). Some portions of the panel may be unused if the aspect ratio of the selected mode does not match that of the panel.</p>
-<dt><code>Full</code></p>
-<dd>Scale the image to the panel size without regard to aspect ratio. This is the only mode which guarantees that every pixel of the panel will be used. But the displayed image may be distorted by stretching either horizontally or vertically, and pixels may not be displayed one-to-one (there may be some blurriness).</dl>
+</dd><dl>
+<dt><code>Center</code></dt>
+<dd>Simply center the image on-screen without scaling. This is the only scaling mode that guarantees a one-to-one correspondence between native and displayed pixels, but some portions of the panel may be unused (so-called &quot;letterboxing&quot;).</dd>
+<dt><code>Full aspect</code></dt>
+<dd>Scale the image as much as possible while preserving aspect ratio. Pixels may not be displayed one-to-one (there may be some blurriness). Some portions of the panel may be unused if the aspect ratio of the selected mode does not match that of the panel.</dd>
+<dt><code>Full</code></dt>
+<dd>Scale the image to the panel size without regard to aspect ratio. This is the only mode which guarantees that every pixel of the panel will be used. But the displayed image may be distorted by stretching either horizontally or vertically, and pixels may not be displayed one-to-one (there may be some blurriness).</dd></dl>
 </dl>
 <p> The precise names of these options may differ depending on the kernel video driver, (but the functionality should be similar). See the output of <code>xrandr &#8211;prop</code> for a list of currently available scaling modes.</dl>
 <h3>Tv</h3>
 <p>Integrated TV output. Available properties include:</p>
 <dl>
-<dt><code>BOTTOM, RIGHT, TOP, LEFT</code> &#8211; margins</p>
-<dd>Adjusting these properties allows you to control the placement of your TV output buffer on the screen. The options with the same name can also be set in xorg.conf with integer value.</p>
-<dt><code>BRIGHTNESS</code> &#8211; TV brightness, range 0-255</p>
-<dd>Adjust TV brightness, default value is 128.</p>
-<dt><code>CONTRAST</code> &#8211; TV contrast, range 0-255</p>
-<dd>Adjust TV contrast, default value is 1.0 in chipset specific format.</p>
-<dt><code>SATURATION</code> &#8211; TV saturation, range 0-255</p>
-<dd>Adjust TV saturation, default value is 1.0 in chipset specific format.</p>
-<dt><code>HUE</code> &#8211; TV hue, range 0-255</p>
-<dd>Adjust TV hue, default value is 0.</p>
-<dt><code>TV_FORMAT</code> &#8211; output standard</p>
-<dd>This property allows you to control the output standard used on your TV output port. You can select between NTSC-M, NTSC-443, NTSC-J, PAL-M, PAL-N, and PAL.</p>
-<dt><code>TV_Connector</code> &#8211; connector type</p>
-<dd>This config option should be added to xorg.conf TV monitor&#8217;s section, it allows you to force the TV output connector type, which bypass load detect and TV will always be taken as connected. You can select between S-Video, Composite and Component. </p>
+<dt><code>BOTTOM, RIGHT, TOP, LEFT</code> &#8211; margins</dt>
+<dd>Adjusting these properties allows you to control the placement of your TV output buffer on the screen. The options with the same name can also be set in xorg.conf with integer value.</dd>
+<dt><code>BRIGHTNESS</code> &#8211; TV brightness, range 0-255</dt>
+<dd>Adjust TV brightness, default value is 128.</dd>
+<dt><code>CONTRAST</code> &#8211; TV contrast, range 0-255</dt>
+<dd>Adjust TV contrast, default value is 1.0 in chipset specific format.</dd>
+<dt><code>SATURATION</code> &#8211; TV saturation, range 0-255</dt>
+<dd>Adjust TV saturation, default value is 1.0 in chipset specific format.</dd>
+<dt><code>HUE</code> &#8211; TV hue, range 0-255</dt>
+<dd>Adjust TV hue, default value is 0.</dd>
+<dt><code>TV_FORMAT</code> &#8211; output standard</dt>
+<dd>This property allows you to control the output standard used on your TV output port. You can select between NTSC-M, NTSC-443, NTSC-J, PAL-M, PAL-N, and PAL.</dd>
+<dt><code>TV_Connector</code> &#8211; connector type</dt>
+<dd>This config option should be added to xorg.conf TV monitor&#8217;s section, it allows you to force the TV output connector type, which bypass load detect and TV will always be taken as connected. You can select between S-Video, Composite and Component. </dd>
 </dl>
 <h3>Tmds-1</h3>
 <p>First DVI SDVO output</p>
@@ -190,8 +190,8 @@ description: "intel – Intel integrated graphics chipsets"
 <h3>Tmds-1, Tmds-2, Hdmi-1, Hdmi-2</h3>
 <p>DVI/HDMI outputs. Available common properties include:</p>
 <dl>
-<dt><code>BROADCAST_RGB</code> &#8211; method used to set RGB color range</p>
-<dd>Adjusting this property allows you to set RGB color range on each channel in order to match HDTV requirement(default 0 for full range). Setting 1 means RGB color range is 16-235, 0 means RGB color range is 0-255 on each channel. (Full range is 0-255, not 16-235) </p>
+<dt><code>BROADCAST_RGB</code> &#8211; method used to set RGB color range</dt>
+<dd>Adjusting this property allows you to set RGB color range on each channel in order to match HDTV requirement(default 0 for full range). Setting 1 means RGB color range is 16-235, 0 means RGB color range is 0-255 on each channel. (Full range is 0-255, not 16-235) </dd>
 </dl>
 <p> SDVO and DVO TV outputs are not supported by the driver at this time. </p>
 <p> See <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for information on associating Monitor sections with these outputs for configuration. Associating Monitor sections with each output can be helpful if you need to ignore a specific output, for example, or statically configure an extended desktop monitor layout.</p>

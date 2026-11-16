@@ -11,40 +11,20 @@ description: "sc::DistShellPair –"
 <p> Distributes shell pairs either statically or dynamically.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;distshpair.h&gt;
-
 Classes</code></pre>
 <p> class <code>SharedData</code><br />
  <i>This is used to store data that must be shared between all cooperating shell pairs. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>DistShellPair (const Ref&lt; MessageGrp &gt; &amp;, int nthread, int mythread, const Ref&lt; ThreadLock &gt; &amp;lock, const Ref&lt; GaussianBasisSet &gt; &amp;bs1, const Ref&lt; GaussianBasisSet &gt; &amp;bs2, bool dynamic, SharedData *shared=0)
-
-
 The DistShellPair class is used to distribute shell pair indices among tasks.
-
-
 void init ()
-
-
 Resets to the first shell pair.
-
-
 void set_debug (int d)
-
-
 How much stuff to print out.
-
-
 void set_print_percent (double p)
-
-
 How often to print status from node 0.
-
-
 int get_task (int &amp;P, int &amp;Q)
-
-
 Puts the current PQ shell pair into P and Q and returns 1.</code></pre>
 <h2>Detailed Description</h2>
 <p>Distributes shell pairs either statically or dynamically.</p>

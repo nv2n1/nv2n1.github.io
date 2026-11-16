@@ -15,22 +15,22 @@ description: "calfjackhost – JACK wrapper for Calf plugins"
 <p> Calf JACK host application provides a way to use Calf plugins directly, without need for any external host application. It also offers best GUI functionality (using GTK+ 2 widget set), as there is no restrictive plugin standard getting in a way between GUI and audio processing code. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;client</code> <i>name</i></p>
-<dd> sets JACK client name (the name calfjackhost uses when registering in JACK)</p>
-<dt><code>&#8211;input</code> <i>name</i></p>
-<dd> name prefix for audio inputs</p>
-<dt><code>&#8211;output</code> <i>name</i></p>
-<dd> name prefix for audio outputs</p>
-<dt><code>&#8211;midi</code> <i>name</i></p>
-<dd> name prefix for MIDI inputs</p>
-<dt><code>&#8211;connect-midi</code> <i>client:port</i></p>
-<dd> automatically connect all MIDI ports to <i>client:port</i></p>
-<dt><code>&#8211;connect-midi</code> <code>!</code><i>n</i></p>
-<dd> automatically connect all MIDI ports to <code>system:midi_capture_</code><i>n</i></p>
-<dt><code>&#8211;version</code></p>
-<dd> prints a version string (calf some.version.number)</p>
-<dt><code>&#8211;help</code></p>
-<dd> prints a help text</dl>
+<dt><code>&#8211;client</code> <i>name</i></dt>
+<dd> sets JACK client name (the name calfjackhost uses when registering in JACK)</dd>
+<dt><code>&#8211;input</code> <i>name</i></dt>
+<dd> name prefix for audio inputs</dd>
+<dt><code>&#8211;output</code> <i>name</i></dt>
+<dd> name prefix for audio outputs</dd>
+<dt><code>&#8211;midi</code> <i>name</i></dt>
+<dd> name prefix for MIDI inputs</dd>
+<dt><code>&#8211;connect-midi</code> <i>client:port</i></dt>
+<dd> automatically connect all MIDI ports to <i>client:port</i></dd>
+<dt><code>&#8211;connect-midi</code> <code>!</code><i>n</i></dt>
+<dd> automatically connect all MIDI ports to <code>system:midi_capture_</code><i>n</i></dd>
+<dt><code>&#8211;version</code></dt>
+<dd> prints a version string (calf some.version.number)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> prints a help text</dd></dl>
 <p> An exclamation mark (!) in place of plugin name means automatic connection. If &quot;!&quot; is placed before the first plugin name, the first plugin has its inputs connected to <code>system:capture_1</code> and <code>system:capture_2</code>. If it&#8217;s placed between plugin names, those plugins are connected together (first plugin&#8217;s output is connected to second plugin&#8217;s input). If it&#8217;s placed after last plugin name, that plugin&#8217;s audio outputs are connected to <code>system:playback_1</code> and <code>system:playback_2</code> (first output pair). </p>
 <p> Plugin names (should be self-explanatory):<br />
 &nbsp;<wbr>*&nbsp;<wbr>flanger<br />

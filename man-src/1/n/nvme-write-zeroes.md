@@ -32,7 +32,7 @@ nvme - write - zeroes&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&
  --start-block=&lt;slba&gt;, -s &lt;slba&gt;
 <dl>
 <dt>
-<dd> Start block.</dl>
+</dt><dd> Start block.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

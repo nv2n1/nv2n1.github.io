@@ -17,28 +17,28 @@ description: "usbhid-dump – dump USB HID device report descriptors and streams
 <p> The default stream dumping timeout is 60 seconds and could be changed with the -t option.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Output a help message and exit.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Output version information and exit.</p>
-<dt><code>-s, -a, &#8211;address=bus[:dev]</code></p>
-<dd>Limit interfaces by bus number and device address. Both 1-255, decimal. Zeroes match any bus or device.</p>
-<dt><code>-d, -m, &#8211;model=vid[:pid]</code></p>
-<dd>Limit interfaces by device vendor and product IDs. Both 1-FFFF, hexadecimal. Zeroes match any vendor or product.</p>
-<dt><code>-i, &#8211;interface=NUMBER</code></p>
-<dd>Limit interfaces by number (0-254), decimal. 255 matches any interface.</p>
-<dt><code>-e, &#8211;entity=STRING</code></p>
-<dd>The entity to dump: either &quot;descriptor&quot;, &quot;stream&quot; or &quot;all&quot;. The value can be abbreviated down to one letter. The default is &quot;descriptor&quot;.</p>
-<dt><code>-t, &#8211;stream-timeout=NUMBER</code></p>
-<dd>Stream interrupt transfer timeout, ms. Zero means infinity. The default is 60000 (60 seconds).</p>
-<dt><code>-p, &#8211;stream-paused</code></p>
-<dd>Start with the stream dump output paused.</p>
-<dt><code>-f, &#8211;stream-feedback</code></p>
-<dd>Enable stream dumping feedback: print a dot to stderr for every transfer dumped.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Output a help message and exit.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Output version information and exit.</dd>
+<dt><code>-s, -a, &#8211;address=bus[:dev]</code></dt>
+<dd>Limit interfaces by bus number and device address. Both 1-255, decimal. Zeroes match any bus or device.</dd>
+<dt><code>-d, -m, &#8211;model=vid[:pid]</code></dt>
+<dd>Limit interfaces by device vendor and product IDs. Both 1-FFFF, hexadecimal. Zeroes match any vendor or product.</dd>
+<dt><code>-i, &#8211;interface=NUMBER</code></dt>
+<dd>Limit interfaces by number (0-254), decimal. 255 matches any interface.</dd>
+<dt><code>-e, &#8211;entity=STRING</code></dt>
+<dd>The entity to dump: either &quot;descriptor&quot;, &quot;stream&quot; or &quot;all&quot;. The value can be abbreviated down to one letter. The default is &quot;descriptor&quot;.</dd>
+<dt><code>-t, &#8211;stream-timeout=NUMBER</code></dt>
+<dd>Stream interrupt transfer timeout, ms. Zero means infinity. The default is 60000 (60 seconds).</dd>
+<dt><code>-p, &#8211;stream-paused</code></dt>
+<dd>Start with the stream dump output paused.</dd>
+<dt><code>-f, &#8211;stream-feedback</code></dt>
+<dd>Enable stream dumping feedback: print a dot to stderr for every transfer dumped.</dd></dl>
 <h2>Signals</h2>
 <dl>
-<dt><code>USR1/USR2</code></p>
-<dd>Pause/resume stream dump output.</dl>
+<dt><code>USR1/USR2</code></dt>
+<dd>Pause/resume stream dump output.</dd></dl>
 <h2>Output Format</h2>
 <p><code>usbhid-dump</code> outputs dumps in chunks. Each chunk is separated by an empty line and starts with the following header line: </p>
 <p> BUS:DEVICE:INTERFACE:ENTITY TIMESTAMP </p>
@@ -46,13 +46,14 @@ description: "usbhid-dump – dump USB HID device report descriptors and streams
 <p> After the header the actual dump data follows as hex bytes. A descriptor chunk includes the whole report descriptor. Every stream chunk includes a whole report, usually, but if a report is bigger than endpoint&#8217;s wMaxPacketSize, it will span several chunks.</p>
 <h2>Examples</h2>
 <dl>
-<dt>Dump report descriptor for a device with address 3 on bus number 2:</p>
-<dd><code>usbhid-dump -a 2:3</code></p>
-<dt>Dump report stream for a device with vendor ID 0x5543 and product ID 0x0005:</p>
-<dd><code>usbhid-dump -m 5543:0005 -es</code></p>
-<dt>Dump report descriptor from interface 1 of a device with vendor ID 0x5543:</p>
-<dd><code>usbhid-dump -m 5543 -i 1 -ed</code></p>
-<dt>Dump report streams from all HID interfaces of all USB devices (caution: you will lose control over the terminal if you use USB keyboard):</p>
-<dd><code>usbhid-dump -es</code> </p>
+<dt>Dump report descriptor for a device with address 3 on bus number 2:</dt>
+<dd><code>usbhid-dump -a 2:3</code></dd>
+<dt>Dump report stream for a device with vendor ID 0x5543 and product ID 0x0005:</dt>
+<dd><code>usbhid-dump -m 5543:0005 -es</code></dd>
+<dt>Dump report descriptor from interface 1 of a device with vendor ID 0x5543:</dt>
+<dd><code>usbhid-dump -m 5543 -i 1 -ed</code></dd>
+<dt>Dump report streams from all HID interfaces of all USB devices (caution: you will lose control over the terminal if you use USB keyboard):</dt>
+<dd><code>usbhid-dump -es</code> </dd>
 <h2>Author</h2>
 <p>Nikolai Kondrashov &lt;spbnick [at] gmail.com&gt;</p>
+</dl>

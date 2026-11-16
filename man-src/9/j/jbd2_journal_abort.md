@@ -14,10 +14,10 @@ description: "jbd2_journal_abort – Shutdown the journal immediately."
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>the journal to shutdown.</dl>
+</dd><dd>the journal to shutdown.</dd></dl>
 <p> <i>errno</i></p>
 <dl>
-<dd>an error number to record in the journal indicating the reason for the shutdown.</dl>
+<dd>an error number to record in the journal indicating the reason for the shutdown.</dd></dl>
 <h2>Description</h2>
 <p>Perform a complete, immediate shutdown of the ENTIRE journal (not of a single transaction). This operation cannot be undone without closing and reopening the journal. </p>
 <p> The jbd2_journal_abort function is intended to support higher level error recovery mechanisms such as the ext2/ext3 remount-readonly error mode. </p>
@@ -30,8 +30,8 @@ description: "jbd2_journal_abort – Shutdown the journal immediately."
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

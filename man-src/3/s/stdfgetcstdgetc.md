@@ -11,9 +11,7 @@ std::fgetc,std::getc - std::fgetc,std::getc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fgetc(std::FILE *stream);
-
 int getc(std::FILE *stream);</code></pre> 
 Reads the next character from the given input stream. 
 
@@ -29,10 +27,8 @@ If the failure has been caused by end of file condition, additionally sets the e
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
     if (!fp) {

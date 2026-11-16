@@ -18,20 +18,20 @@ description: "pic2graph – convert a PIC diagram into a cropped image"
 <p> The output image is clipped using <i>convert</i>&#8216;s <code>-trim</code> option to the smallest possible bounding box that contains all the black pixels.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-eqn </code><i>delimiters</i></p>
-<dd> Use <i>delimiters</i> as the opening and closing characters that delimit <i>eqn</i> directives; the default is &#8220;$$&#8221;. The option argument <i>delimiters</i> should be a two-character string, but an empty string (&quot;&quot;) is accepted as a directive to disable <i>eqn</i> processing.</p>
-<dt><code>-format </code><i>output-format</i></p>
-<dd> Write the image in <i>output-format</i>, which must be understood by <i>convert</i>; the default is PNG.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display a usage message and exit.</p>
-<dt><code>-unsafe</code></p>
-<dd> Run <i>groff</i> in <i>unsafe</i> mode, enabling the PIC command <code>sh</code> to execute arbitrary Unix shell commands. The <i>groff</i> default is to forbid this.</p>
-<dt><code>-v</code></p>
-<dd> <code>&#8211;version</code> Display version information and exit.</dl>
+<dt><code>-eqn </code><i>delimiters</i></dt>
+<dd> Use <i>delimiters</i> as the opening and closing characters that delimit <i>eqn</i> directives; the default is &#8220;$$&#8221;. The option argument <i>delimiters</i> should be a two-character string, but an empty string (&quot;&quot;) is accepted as a directive to disable <i>eqn</i> processing.</dd>
+<dt><code>-format </code><i>output-format</i></dt>
+<dd> Write the image in <i>output-format</i>, which must be understood by <i>convert</i>; the default is PNG.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a usage message and exit.</dd>
+<dt><code>-unsafe</code></dt>
+<dd> Run <i>groff</i> in <i>unsafe</i> mode, enabling the PIC command <code>sh</code> to execute arbitrary Unix shell commands. The <i>groff</i> default is to forbid this.</dd>
+<dt><code>-v</code></dt>
+<dd> <code>&#8211;version</code> Display version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>GROFF_TMPDIR</i></p>
-<dd> <i>TMPDIR</i> <i>TMP</i> <i>TEMP</i> These environment variables are searched in the given order to determine the directory where temporary files will be created. If none are set, <i>/tmp</i> is used.</dl>
+<dt><i>GROFF_TMPDIR</i></dt>
+<dd> <i>TMPDIR</i> <i>TMP</i> <i>TEMP</i> These environment variables are searched in the given order to determine the directory where temporary files will be created. If none are set, <i>/tmp</i> is used.</dd></dl>
 <h2>AUTHORS</h2>
 <p> <i>pic2graph</i> was written by Eric S. Raymond based on a recipe by W. Richard Stevens.</p>
 <h2>SEE ALSO</h2>

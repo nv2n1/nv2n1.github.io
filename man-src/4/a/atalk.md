@@ -24,7 +24,7 @@ description: "atalk – AppleTalk protocol family"
  struct at_addr sat_addr;
  char sat_zero[ 8 ];
 };</pre>
-</dl>
+</dd></dl>
 <p> The port of a socket may be set with <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2). The node for <code>bind</code> must always be <code>ATADDR_ANYNODE</code>: &#8220;this node.&#8221; The net may be <code>ATADDR_ANYNET</code> or <code>ATADDR_LATENET</code>. <code>ATADDR_ANYNET</code> coresponds to the machine&#8217;s &#8220;primary&#8221; address (the first configured). <code>ATADDR_LATENET</code> causes the address in outgoing packets to be determined when a packet is sent, i.e. determined late. <code>ATADDR_LATENET</code> is equivalent to opening one socket for each network interface. The port of a socket and either the primary address or <code>ATADDR_LATENET</code> are returned with <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>

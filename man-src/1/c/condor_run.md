@@ -20,21 +20,18 @@ description: "condor_run Submit a shell command-line as an HTCondor job"
 <p> <code>CONDOR_ARCH</code></p>
 <dl>
 <dt>
-<dd> Specifies the architecture of the required platform. Values will be the same as the Arch machine ClassAd attribute.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specifies the architecture of the required platform. Values will be the same as the Arch machine ClassAd attribute.</dd>
+</dl>
 <p> <code>CONDOR_OPSYS</code></p>
 <dl>
 <dt>
-<dd> Specifies the operating system of the required platform. Values will be the same as the OpSys machine ClassAd attribute.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specifies the operating system of the required platform. Values will be the same as the OpSys machine ClassAd attribute.</dd>
+</dl>
 <p> <code>CONDOR_REQUIREMENTS</code></p>
 <dl>
 <dt>
-<dd> Specifies any additional requirements for the HTCondor job. It is recommended that the value defined for CONDOR_REQUIREMENTS be enclosed in parenthesis.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specifies any additional requirements for the HTCondor job. It is recommended that the value defined for CONDOR_REQUIREMENTS be enclosed in parenthesis.</dd>
+</dl>
 <p> When one or more of these environment variables is specified, the job is submitted with: </p>
 <p> Requirements = $CONDOR_REQUIREMENTS &amp;&amp; Arch == $CONDOR_ARCH &amp;&amp; \ </p>
 <p>OpSys&nbsp;<wbr>==&nbsp;<wbr>$CONDOR_OPSYS </p>
@@ -45,17 +42,13 @@ description: "condor_run Submit a shell command-line as an HTCondor job"
 <p> <code>-u </code> <i>universe</i></p>
 <dl>
 <dt>
-<dd> Submit the job under the specified universe. The default is vanilla. While any universe may be specified, only the vanilla, standard, scheduler, and local universes result in a submit description file that may work properly.</p>
-<dt>
-<dd></dl>
+</dt><dd> Submit the job under the specified universe. The default is vanilla. While any universe may be specified, only the vanilla, standard, scheduler, and local universes result in a submit description file that may work properly.</dd>
+</dl>
 <p> <code>-a </code> <i>submitcmd</i></p>
 <dl>
 <dt>
-<dd> Add the specified submit command to the implied submit description file for the job. To include spaces within <i>submitcmd</i> , enclose the submit command in double quote marks. And, to include double quote marks within <i>submitcmd</i> , enclose the submit command in single quote marks.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Add the specified submit command to the implied submit description file for the job. To include spaces within <i>submitcmd</i> , enclose the submit command in double quote marks. And, to include double quote marks within <i>submitcmd</i> , enclose the submit command in single quote marks.</dd>
+</dl>
 <h2>Examples</h2>
 <p> <i>condor_run</i> may be used to compile an executable on a different platform. As an example, first set the environment variables for the required platform: </p>
 <p> % setenv CONDOR_ARCH &quot;SUN4u&quot;<br />
@@ -71,33 +64,29 @@ description: "condor_run Submit a shell command-line as an HTCondor job"
 <p> <code>.condor_run.&lt;pid&gt; </code></p>
 <dl>
 <dt>
-<dd> A shell script containing the shell command line.</p>
-<dt>
-<dd></dl>
+</dt><dd> A shell script containing the shell command line.</dd>
+</dl>
 <p> <code>.condor_submit.&lt;pid&gt; </code></p>
 <dl>
 <dt>
-<dd> The submit description file for the job.</p>
-<dt>
-<dd></dl>
+</dt><dd> The submit description file for the job.</dd>
+</dl>
 <p> <code>.condor_log.&lt;pid&gt; </code></p>
 <dl>
 <dt>
-<dd> The HTCondor job&#8217;s log file; it is monitored by <i>condor_run</i> , to determine when the job exits.</p>
-<dt>
-<dd></dl>
+</dt><dd> The HTCondor job&#8217;s log file; it is monitored by <i>condor_run</i> , to determine when the job exits.</dd>
+</dl>
 <p> <code>.condor_out.&lt;pid&gt; </code></p>
 <dl>
 <dt>
-<dd> The output of the HTCondor job before it is output to the terminal.</p>
-<dt>
-<dd></dl>
+</dt><dd> The output of the HTCondor job before it is output to the terminal.</dd>
+</dl>
 <p> <code>.condor_error.&lt;pid&gt; </code></p>
 <dl>
 <dt>
-<dd> Any error messages for the HTCondor job before they are output to the terminal.</p>
+</dt><dd> Any error messages for the HTCondor job before they are output to the terminal.</dd>
 <dt>
-<dd> <i>condor_run</i> removes these files when the job completes. However, if <i>condor_run</i> fails, it is possible that these files will remain in the user&#8217;s working directory, and the HTCondor job may remain in the queue.</dl>
+</dt><dd> <i>condor_run</i> removes these files when the job completes. However, if <i>condor_run</i> fails, it is possible that these files will remain in the user&#8217;s working directory, and the HTCondor job may remain in the queue.</dd></dl>
 <h2>General Remarks</h2>
 <p> <i>condor_run</i> is intended for submitting simple shell command lines to HTCondor. It does not provide the full functionality of <i>condor_submit</i> . Therefore, some <i>condor_submit</i> errors and system failures may not be handled correctly. </p>
 <p> All processes specified within the single shell command line will be executed on the single machine matched with the job. HTCondor will not distribute multiple processes of a command line pipe across multiple machines. </p>

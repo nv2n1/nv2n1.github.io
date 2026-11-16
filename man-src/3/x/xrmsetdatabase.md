@@ -10,28 +10,28 @@ description: "XrmGetFileDatabase, XrmPutFileDatabase, XrmGetStringDatabase, XrmL
 <p>XrmGetFileDatabase, XrmPutFileDatabase, XrmGetStringDatabase, XrmLocaleOfDatabase, XrmGetDatabase, XrmSetDatabase, XrmDestroyDatabase &#8211; retrieve and store resource databases </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dt> #include &lt;X11/Xresource.h&gt;</p>
-<dd>XrmDatabase XrmGetFileDatabase(char *<i>filename</i>);</p>
-<dd>void XrmPutFileDatabase(XrmDatabase <i>database</i>, char *<i>stored_db</i>);</p>
-<dd>XrmDatabase XrmGetStringDatabase(char *<i>data</i>);</p>
-<dd>char *XrmLocaleOfDatabase(XrmDatabase <i>database</i>);</p>
-<dd>XrmDatabase XrmGetDatabase(Display *<i>display</i>);</p>
-<dd>void XrmSetDatabase(Display *<i>display</i>, XrmDatabase <i>database</i>);</p>
-<dd>void XrmDestroyDatabase(XrmDatabase <i>database</i>);</dl>
+<dt> #include &lt;X11/Xresource.h&gt;</dt>
+<dd>XrmDatabase XrmGetFileDatabase(char *<i>filename</i>);</dd>
+<dd>void XrmPutFileDatabase(XrmDatabase <i>database</i>, char *<i>stored_db</i>);</dd>
+<dd>XrmDatabase XrmGetStringDatabase(char *<i>data</i>);</dd>
+<dd>char *XrmLocaleOfDatabase(XrmDatabase <i>database</i>);</dd>
+<dd>XrmDatabase XrmGetDatabase(Display *<i>display</i>);</dd>
+<dd>void XrmSetDatabase(Display *<i>display</i>, XrmDatabase <i>database</i>);</dd>
+<dd>void XrmDestroyDatabase(XrmDatabase <i>database</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>filename</i></p>
-<dd>Specifies the resource database file name.</p>
-<dt><i>database</i></p>
-<dd>Specifies the database that is to be used.</p>
-<dt><i>stored_db</i></p>
-<dd>Specifies the file name for the stored database.</p>
-<dt><i>data</i></p>
-<dd>Specifies the database contents using a string.</p>
-<dt><i>database</i></p>
-<dd>Specifies the resource database.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</dl>
+<dt><i>filename</i></dt>
+<dd>Specifies the resource database file name.</dd>
+<dt><i>database</i></dt>
+<dd>Specifies the database that is to be used.</dd>
+<dt><i>stored_db</i></dt>
+<dd>Specifies the file name for the stored database.</dd>
+<dt><i>data</i></dt>
+<dd>Specifies the database contents using a string.</dd>
+<dt><i>database</i></dt>
+<dd>Specifies the resource database.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XrmGetFileDatabase</code> function opens the specified file, creates a new resource database, and loads it with the specifications read in from the specified file. The specified file should contain a sequence of entries in valid ResourceLine format (see section 15.1); the database that results from reading a file with incorrect syntax is implementation-dependent. The file is parsed in the current locale, and the database is created in the current locale. If it cannot open the specified file, <code>XrmGetFileDatabase</code> returns NULL. </p>
 <p> The <code>XrmPutFileDatabase</code> function stores a copy of the specified database in the specified file. Text is written to the file as a sequence of entries in valid ResourceLine format (see section 15.1). The file is written in the locale of the database. Entries containing resource names that are not in the Host Portable Character Encoding or containing values that are not in the encoding of the database locale, are written in an implementation-dependent manner. The order in which entries are written is implementation-dependent. Entries with representation types other than &#8220;String&#8221; are ignored. </p>

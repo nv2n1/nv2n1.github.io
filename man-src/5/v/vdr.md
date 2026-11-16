@@ -31,16 +31,16 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> The line number of a channel definition (not counting group separators, and based on a possible previous &#8216;@&#8230;&#8217; parameter) defines the channel&#8217;s number in OSD menus and the <i>timers.conf</i> file. </p>
 <p> The fields in a channel definition have the following meaning (from left to right):</p>
 <dl>
-<dt><code>Name</code></p>
-<dd>The channel&#8217;s name (if the name originally contains a &#8216;:&#8217; character it has to be replaced by &#8216;|&#8217;). Some TV stations provide a way of deriving a &quot;short name&quot; from the channel name, which can be used in situations where there is not much space for displaying a long name. If a short name is available for this channel, it follows the full name and is delimited by a comma, as in </p>
+<dt><code>Name</code></dt>
+<dd>The channel&#8217;s name (if the name originally contains a &#8216;:&#8217; character it has to be replaced by &#8216;|&#8217;). Some TV stations provide a way of deriving a &quot;short name&quot; from the channel name, which can be used in situations where there is not much space for displaying a long name. If a short name is available for this channel, it follows the full name and is delimited by a comma, as in </dd>
 <p> <code>RTL Television,RTL:&#8230;</code> </p>
 <p> If the short name itself would contain a comma, it is replaced with a &#8216;.&#8217;. Note that some long channel names may contain a comma, so the delimiting comma is always the rightmost one. </p>
 <p> If present, the name of the service provider or &quot;bouquet&quot; is appended to the channel name, separated by a semicolon, as in </p>
 <p> <code>RTL Television,RTL;RTL World:&#8230;</code></p>
-<dt><code>Frequency</code></p>
-<dd>The transponder frequency (as an integer). For DVB-S this value is in MHz. For DVB-C and DVB-T it can be given either in MHz, kHz or Hz (the actual value given will be multiplied by 1000 until it is larger than 1000000).</p>
-<dt><code>Parameters</code></p>
-<dd>Various parameters, depending on whether this is a DVB-S, DVB-C or DVB-T channel. Each parameter consist of a key character, followed by an integer number that represents the actual setting of that parameter. The valid key characters, their meaning (and allowed values) are </p>
+<dt><code>Frequency</code></dt>
+<dd>The transponder frequency (as an integer). For DVB-S this value is in MHz. For DVB-C and DVB-T it can be given either in MHz, kHz or Hz (the actual value given will be multiplied by 1000 until it is larger than 1000000).</dd>
+<dt><code>Parameters</code></dt>
+<dd>Various parameters, depending on whether this is a DVB-S, DVB-C or DVB-T channel. Each parameter consist of a key character, followed by an integer number that represents the actual setting of that parameter. The valid key characters, their meaning (and allowed values) are </dd>
 <table>
 <tr VALIGN=top>
 <td><code>B</code></td>
@@ -200,17 +200,17 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> An example of a parameter field for a DVB-S channel might look like this: <code>HC56M2O35S0</code> </p>
 <p> An example of a parameter field for a DVB-S2 channel might look like this: <code>HC910M2O35S1</code> </p>
 <p> Plugins that implement devices that need their own set of parameters may store those in the parameters string in arbitrary format (not necessarily the &quot;character/number&quot; format listed above). The only condition is that the string may not contain colons (&#8216;:&#8217;) or newline characters.</p>
-<dt><code>Source</code></p>
-<dd>The signal source of this channel, as defined in the file <i>sources.conf</i>.</p>
-<dt><code>Srate</code></p>
-<dd>The symbol rate of this channel (DVB-S and DVB-C only).</p>
-<dt><code>VPID</code></p>
-<dd>The video PID (set to &#8216;0&#8217; for radio channels). If this channel uses a separate PCR PID, it follows the VPID, separated by a plus sign, as in </p>
+<dt><code>Source</code></dt>
+<dd>The signal source of this channel, as defined in the file <i>sources.conf</i>.</dd>
+<dt><code>Srate</code></dt>
+<dd>The symbol rate of this channel (DVB-S and DVB-C only).</dd>
+<dt><code>VPID</code></dt>
+<dd>The video PID (set to &#8216;0&#8217; for radio channels). If this channel uses a separate PCR PID, it follows the VPID, separated by a plus sign, as in </dd>
 <p> <code>&#8230;:164+17:&#8230;</code> </p>
 <p> If this channel has a video mode other than 0, the mode follows the pids, separated by an &#8216;=&#8217; sign, as in </p>
 <p> <code>&#8230;:164+17=27:&#8230;</code></p>
-<dt><code>APID</code></p>
-<dd>The audio PID (either one number, or several, separated by commas). If this channel also carries Dolby Digital sound, the Dolby PIDs follow the audio PIDs, separated by a semicolon, as in </p>
+<dt><code>APID</code></dt>
+<dd>The audio PID (either one number, or several, separated by commas). If this channel also carries Dolby Digital sound, the Dolby PIDs follow the audio PIDs, separated by a semicolon, as in </dd>
 <p> <code>&#8230;:101,102;103,104:&#8230;</code> </p>
 <p> If certain audio PIDs broadcast in specific languages, the language codes for these can be appended to the individual audio or Dolby PID, separated by an &#8216;=&#8217; sign, as in </p>
 <p> <code>&#8230;:101=deu,102=eng;103=deu,104=eng:&#8230;</code> </p>
@@ -219,15 +219,15 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> The audio type is appended with a separating &#8216;@&#8217; character, as in </p>
 <p> <code>&#8230;:101=deu@4,102=eng+spa@4,105=@4:&#8230;</code> </p>
 <p> Note that if there is no language code, there still is the separating &#8216;=&#8217; if there is an audio type. </p>
-<dt><code>TPID</code></p>
-<dd>The teletext PID. If this channel also carries DVB subtitles, the DVB subtitling PIDs follow the teletext PID, separated by a semicolon, as in </p>
+<dt><code>TPID</code></dt>
+<dd>The teletext PID. If this channel also carries DVB subtitles, the DVB subtitling PIDs follow the teletext PID, separated by a semicolon, as in </dd>
 <p> <code>&#8230;:201;2001,2002:&#8230;</code> </p>
 <p> If certain subtitling PIDs broadcast in specific languages, the language codes for these can be appended to the individual subtitling PID, separated by an &#8216;=&#8217; sign, as in </p>
 <p> <code>&#8230;:201;2001=deu,2002=eng:&#8230;</code> </p>
 <p> Manual teletext subtitling pages can be defined separated by a &#8216;+&#8217; sign. The pages (separated by commas) can contain language codes, delimited by a &#8216;=&#8217; sign, as in </p>
 <p> <code>&#8230;:201+150=deu,151=fin;2001,2002:&#8230;</code> </p>
-<dt><code>Conditional access</code></p>
-<dd>A hexadecimal integer defining how this channel can be accessed: </p>
+<dt><code>Conditional access</code></dt>
+<dd>A hexadecimal integer defining how this channel can be accessed: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>0000</code></td>
@@ -253,14 +253,14 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> Values in the range 0001&#8230;00FF will not be overwritten, all other values will be automatically replaced by the actual CA system identifiers received from the data stream. If there is more than one CA system id broadcast, they will be separated by commas, as in </p>
 <p> <code>&#8230;:1702,1722,1801:&#8230;</code> </p>
 <p> The values are in hex because that&#8217;s the way they are defined in the &quot;ETR 162&quot; document. Leading zeros may be omitted.</p>
-<dt><code>SID</code></p>
-<dd>The Service ID of this channel.</p>
-<dt><code>NID</code></p>
-<dd>The Network ID of this channel.</p>
-<dt><code>TID</code></p>
-<dd>The Transport stream ID of this channel.</p>
-<dt><code>RID</code></p>
-<dd>The Radio ID of this channel (typically 0, may be used to distinguish channels where NID, TID and SID are all equal).</dl>
+<dt><code>SID</code></dt>
+<dd>The Service ID of this channel.</dd>
+<dt><code>NID</code></dt>
+<dd>The Network ID of this channel.</dd>
+<dt><code>TID</code></dt>
+<dd>The Transport stream ID of this channel.</dd>
+<dt><code>RID</code></dt>
+<dd>The Radio ID of this channel (typically 0, may be used to distinguish channels where NID, TID and SID are all equal).</dd></dl>
 <p> A particular channel can be uniquely identified by its <code>channel ID</code>, which is a string that looks like this: </p>
 <p> <code>S19.2E-1-1089-12003-0</code> </p>
 <p> The components of this string are the <code>Source</code> (S19.2E), <code>NID</code> (1), <code>TID</code> (1089), <code>SID</code> (12003) and <code>RID</code> (0) as defined above. The last part can be omitted if it is <code>0</code>, so the above example could also be written as S19.2E-1-1089-12003).<br />
@@ -271,8 +271,8 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> <code>1:10:-T&#8212;&#8211;:2058:2150:50:5:Quarks &amp; Co:</code> </p>
 <p> The fields in a timer definition have the following meaning (from left to right):</p>
 <dl>
-<dt><code>Flags</code></p>
-<dd>The individual bits in this field have the following meaning: </p>
+<dt><code>Flags</code></dt>
+<dd>The individual bits in this field have the following meaning: </dd>
 <table>
 <tr VALIGN=top>
 <td><code>1</code></td>
@@ -296,10 +296,10 @@ description: "vdr_files – the Video Disk Recorder Files"
 </tr>
 </table>
 <p> All other bits are reserved for future use.</p>
-<dt><code>Channel</code></p>
-<dd>The channel to record from. This is either the channel number as shown in the on-screen menus, or a complete channel ID. When reading <i>timers.conf</i> any channel numbers will be mapped to the respective channel ids and when the file is written again, there will only be channel ids. Channel numbers are accepted as input in order to allow easier creation of timers when manually editing <i>timers.conf</i>. Also, when timers are listed via SVDRP commands, the channels are given as numbers.</p>
-<dt><code>Day</code></p>
-<dd>The day when this timer shall record. </p>
+<dt><code>Channel</code></dt>
+<dd>The channel to record from. This is either the channel number as shown in the on-screen menus, or a complete channel ID. When reading <i>timers.conf</i> any channel numbers will be mapped to the respective channel ids and when the file is written again, there will only be channel ids. Channel numbers are accepted as input in order to allow easier creation of timers when manually editing <i>timers.conf</i>. Also, when timers are listed via SVDRP commands, the channels are given as numbers.</dd>
+<dt><code>Day</code></dt>
+<dd>The day when this timer shall record. </dd>
 <p> If this is a `single-shot&#8217; timer, this is the date on which this timer shall record, given in ISO notation (<code>YYYY-MM-DD</code>), as in: </p>
 <p> <code>2005-03-19</code> </p>
 <p> For compatibility with earlier versions of VDR this may also be just the day of month on which this timer shall record (must be in the range <code>1&#8230;31</code>). </p>
@@ -309,21 +309,21 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> The day definition of a `repeating&#8217; timer may be followed by the date when that timer shall hit for the first time. The format for this is <code>@YYYY-MM-DD</code>, so a complete definition could look like this: </p>
 <p> <code>MTWTF&#8211; [at] 2002-02-18</code> </p>
 <p> which would implement a timer that records Monday through Friday, and will hit for the first time on or after February 18, 2002. This <code>first day</code> feature can be used to disable a repeating timer for a couple of days, or for instance to define a new Mon&#8230;Fri timer on Wednesday, which actually starts &quot;Monday next week&quot;. The <code>first day</code> date given need not be that of a day when the timer would actually hit.</p>
-<dt><code>Start</code></p>
-<dd>A four digit integer defining when this timer shall <code>start</code> recording. The format is <code>hhmm</code>, so <code>1430</code> would mean &quot;half past two&quot; in the afternoon.</p>
-<dt><code>Stop</code></p>
-<dd>A four digit integer defining when this timer shall <code>stop</code> recording. The format is the same as for the <code>start</code> time.</p>
-<dt><code>Priority</code></p>
-<dd>An integer in the range <code>0&#8230;99</code>, defining the <code>priority</code> of this timer and of recordings created by this timer. <code>0</code> represents the lowest value, <code>99</code> the highest. The priority is used to decide which timer shall be started in case there are two or more timers with the exact same <code>start</code> time. The first timer in the list with the highest priority will be used. </p>
+<dt><code>Start</code></dt>
+<dd>A four digit integer defining when this timer shall <code>start</code> recording. The format is <code>hhmm</code>, so <code>1430</code> would mean &quot;half past two&quot; in the afternoon.</dd>
+<dt><code>Stop</code></dt>
+<dd>A four digit integer defining when this timer shall <code>stop</code> recording. The format is the same as for the <code>start</code> time.</dd>
+<dt><code>Priority</code></dt>
+<dd>An integer in the range <code>0&#8230;99</code>, defining the <code>priority</code> of this timer and of recordings created by this timer. <code>0</code> represents the lowest value, <code>99</code> the highest. The priority is used to decide which timer shall be started in case there are two or more timers with the exact same <code>start</code> time. The first timer in the list with the highest priority will be used. </dd>
 <p> This value is also stored with the recording and is later used to decide which recording to remove from disk in order to free space for a new recording. If the disk runs full and a new recording needs more space, an existing recording with the lowest priority (and which has exceeded its guaranteed <code>lifetime</code>) will be removed. </p>
 <p> If all available DVB cards are currently occupied, a timer with a higher priority will interrupt the timer with the lowest priority in order to start recording.</p>
-<dt><code>Lifetime</code></p>
-<dd>The <code>guaranteed lifetime</code> (in days) of a recording created by this timer. <code>0</code> means that this recording may be automatically deleted at any time by a new recording with higher priority. <code>99</code> means that this recording will never be automatically deleted. Any number in the range <code>1&#8230;98</code> means that this recording may not be automatically deleted in favour of a new recording, until the given number of days since the <code>start</code> time of the recording has passed by.</p>
-<dt><code>File</code></p>
-<dd>The <code>file name</code> this timer will give to a recording. If the name contains any &#8216;:&#8217; characters, these have to be replaced by &#8216;|&#8217;. If the name shall contain subdirectories, these have to be delimited by &#8216;~&#8217; (since the &#8216;/&#8217; character may be part of a regular programme name). </p>
+<dt><code>Lifetime</code></dt>
+<dd>The <code>guaranteed lifetime</code> (in days) of a recording created by this timer. <code>0</code> means that this recording may be automatically deleted at any time by a new recording with higher priority. <code>99</code> means that this recording will never be automatically deleted. Any number in the range <code>1&#8230;98</code> means that this recording may not be automatically deleted in favour of a new recording, until the given number of days since the <code>start</code> time of the recording has passed by.</dd>
+<dt><code>File</code></dt>
+<dd>The <code>file name</code> this timer will give to a recording. If the name contains any &#8216;:&#8217; characters, these have to be replaced by &#8216;|&#8217;. If the name shall contain subdirectories, these have to be delimited by &#8216;~&#8217; (since the &#8216;/&#8217; character may be part of a regular programme name). </dd>
 <p> The special keywords <code>TITLE</code> and <code>EPISODE</code>, if present, will be replaced by the title and episode information from the EPG data at the time of recording (if that data is available). If at the time of recording either of these cannot be determined, <code>TITLE</code> will default to the channel name, and <code>EPISODE</code> will default to a blank.</p>
-<dt><code>Auxiliary data</code></p>
-<dd>An arbitrary string that can be used by external applications to store any kind of data related to this timer. The string must not contain any newline characters. If this field is not empty, its contents will be written into the <i>info</i> file of the recording with the &#8216;@&#8217; tag.</dl>
+<dt><code>Auxiliary data</code></dt>
+<dd>An arbitrary string that can be used by external applications to store any kind of data related to this timer. The string must not contain any newline characters. If this field is not empty, its contents will be written into the <i>info</i> file of the recording with the &#8216;@&#8217; tag.</dd></dl>
 <h3>Sources</h3>
 <p>The file <i>sources.conf</i> defines the codes to be used in the <code>Source</code> field of channels in <i>channels.conf</i> and assigns descriptive texts to them. Example: </p>
 <p> <code>S19.2E Astra 1</code> </p>

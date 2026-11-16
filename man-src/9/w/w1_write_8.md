@@ -14,12 +14,12 @@ description: "w1_write_8 – Writes 8 bits."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <p> <i>byte</i></p>
 <dl>
-<dd>the byte to write</dl>
+<dd>the byte to write</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

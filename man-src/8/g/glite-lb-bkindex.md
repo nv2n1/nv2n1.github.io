@@ -20,7 +20,7 @@ description: "glite-lb-bkindex – dump or rebuild bookkeeping server indices"
  <i>column-description </i> ::= <code>[&nbsp;<wbr></code><i>column-type</i><code>;&nbsp;<wbr></code><i>column-name</i><code>;&nbsp;<wbr></code><i>prefix-len&nbsp;<wbr></i>?&nbsp;<wbr>]<br />
  <i>column-type </i> ::= <code>type = user </code>| type = system | type = time<br />
  <i>column-name </i> ::= <code>name = </code><i>actual_column_name</i><br />
- <i>prefix-len </i> ::= <code>prefixlen&nbsp;<wbr>=&nbsp;<wbr></code><i>integer</i>  The only top-level attribute <code>JobIndices</code> is a list (possibly empty) of index descriptions. Each index description is either a single column or a list of columns (where the order is important). The column is described by mandatory attributes <code>type </code> and <code>name</code>, and an optional attribute <code>prefixlen</code>. Possible values of type are <code>system</code> (L&amp;B internal attributes) <code>time</code> (&quot;state entered&quot; timestamps), and <code>user</code> (user tags). Currently supported system column names are <i>owner</i>, destination and location. and valid timestamps are the job states, i.e. <i>submitted, waiting, ready, scheduled, running, done, cleared, cancelled, aborted</i>. Names of user tags are arbitrary as long as their length is less than 60 characters and they contain only ASCII printable characters excluding backtick (`). The <code>prefixlen</code> value may be used to restrict indexing of columns, which may grow rather long, to a fixed size. This becomes necessary with compound indices as MySQL limits the total size of index to 250 bytes only. In the following example the index file contains two indices, the first one on a single system attribute &#8212; &lt;job owner&gt;, the second one composed from system attribute (job) &lt;destination&gt; and user tag called &lt;experiment number&gt;:</p>
+ <i>prefix-len </i> ::= <code>prefixlen&nbsp;<wbr>=&nbsp;<wbr></code><i>integer</i>  The only top-level attribute <code>JobIndices</code> is a list (possibly empty) of index descriptions. Each index description is either a single column or a list of columns (where the order is important). The column is described by mandatory attributes <code>type </code> and <code>name</code>, and an optional attribute <code>prefixlen</code>. Possible values of type are <code>system</code> (L&amp;B internal attributes) <code>time</code> (&quot;state entered&quot; timestamps), and <code>user</code> (user tags). Currently supported system column names are <i>owner</i>, destination and location. and valid timestamps are the job states, i.e. <i>submitted, waiting, ready, scheduled, running, done, cleared, cancelled, aborted</i>. Names of user tags are arbitrary as long as their length is less than 60 characters and they contain only ASCII printable characters excluding backtick (`). The <code>prefixlen</code> value may be used to restrict indexing of columns, which may grow rather long, to a fixed size. This becomes necessary with compound indices as MySQL limits the total size of index to 250 bytes only. In the following example the index file contains two indices, the first one on a single system attribute &#8212; &lt;job owner&gt;, the second one composed from system attribute (job) &lt;destination&gt; and user tag called &lt;experiment number&gt;:</dd>
 <dl>
 <dd>[<br />
  &nbsp;<wbr>&nbsp;<wbr>JobIndices = {<br />
@@ -32,21 +32,21 @@ description: "glite-lb-bkindex – dump or rebuild bookkeeping server indices"
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>prefixlen = 100 ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>}<br />
  &nbsp;<wbr>&nbsp;<wbr>}<br />
- ] </p>
+ ] </dd>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, &#8211;dump</p>
-<dd>Print current setup on <i>stdout</i>. </p>
-<dt><code>-m</code><i> STRING</i>, &#8211;mysql <i>STRING</i></p>
-<dd><i>STRING</i> is the database connect string in the form </p>
+<dt><code>-d</code>, &#8211;dump</dt>
+<dd>Print current setup on <i>stdout</i>. </dd>
+<dt><code>-m</code><i> STRING</i>, &#8211;mysql <i>STRING</i></dt>
+<dd><i>STRING</i> is the database connect string in the form </dd>
 <p> USER_NAME/PASSWORD [at] DB_HOSTNAME:DB_NAME </p>
 <p> It defaults to lbserver/@localhost:lbserver20 (common with <code>glite-lb-bkserverd</code>). </p>
-<dt><code>-r, &#8211;really</code></p>
-<dd>Really perform reindexing. </p>
-<dt><code>-R, &#8211;remove</code></p>
-<dd>Remove all indexes from server. </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Increase verbosity. </p>
+<dt><code>-r, &#8211;really</code></dt>
+<dd>Really perform reindexing. </dd>
+<dt><code>-R, &#8211;remove</code></dt>
+<dd>Remove all indexes from server. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Increase verbosity. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Please report all bugs to CESNET gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i> </p>
@@ -54,3 +54,4 @@ description: "glite-lb-bkindex – dump or rebuild bookkeeping server indices"
 <p><code><a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a></code>(1), <a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a>(8) </p>
 <h2>Author</h2>
 <p>EU EGEE, JRA1.</p>
+</dl></dl>

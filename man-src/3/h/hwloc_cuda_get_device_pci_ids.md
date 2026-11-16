@@ -29,14 +29,14 @@ description: "hwlocality_cuda – Interoperability with the CUDA Driver API"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding hwloc PCI device may be found by looking at the result parent pointer.</dl>
+</dt><dd> The corresponding hwloc PCI device may be found by looking at the result parent pointer.</dd></dl>
 <h3>static <code>hwloc_obj_t</code> hwloc_cuda_get_device_osdev_by_index (<code>hwloc_topology_t</code> topology, unsigned idx) [inline], [static]</h3>
 <p> Get the hwloc OS device object corresponding to the CUDA device whose index is idx. Return the OS device object describing the CUDA device whose index is idx. Return NULL if there is none. </p>
 <p> The topology topology does not necessarily have to match the current machine. For instance the topology may be an XML import of a remote host. I/O devices detection and the CUDA component must be enabled in the topology. </p>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The corresponding PCI device object can be obtained by looking at the OS device parent object. </p>
+</dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object. </dd>
 <p> This function is identical to <code>hwloc_cudart_get_device_osdev_by_index()</code>.</dl>
 <h3>static int hwloc_cuda_get_device_pci_ids (<code>hwloc_topology_t</code> topology, CUdevice cudevice, int * domain, int * bus, int * dev) [inline], [static]</h3>
 <p> Return the domain, bus and device IDs of the CUDA device cudevice. Device cudevice must match the local machine.</p>
@@ -46,5 +46,5 @@ description: "hwlocality_cuda – Interoperability with the CUDA Driver API"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

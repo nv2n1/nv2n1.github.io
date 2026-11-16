@@ -93,14 +93,14 @@ description: "globus_gram_protocol.h – GRAM Protocol API."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attribute</i> Name of the extension attribute<br />
- <i>format</i> Printf-style format string used along with the varargs to construct the extension&#8217;s value string.</dl>
+</dt><dd> <i>attribute</i> Name of the extension attribute<br />
+ <i>format</i> Printf-style format string used along with the varargs to construct the extension&#8217;s value string.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>A</i> new GRAM5 extension structure, or NULL if a malloc error occurred.</dl>
+</dt><dd> <i>A</i> new GRAM5 extension structure, or NULL if a malloc error occurred.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>

@@ -28,7 +28,7 @@ description: "QwtCompassScaleDraw –"
 <p> The default map consists of the labels N, NE, E, SE, S, SW, W, NW. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtCompass</code></dl>
+<dd><code>QwtCompass</code></dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtCompassScaleDraw::QwtCompassScaleDraw () [explicit]</h3>
 <p>Constructor. Initializes a label map for multiples of 45 degrees</p>
@@ -36,39 +36,39 @@ description: "QwtCompassScaleDraw –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>map</i> Value to label map</dl>
+<dd><i>map</i> Value to label map</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtText</code> QwtCompassScaleDraw::label (doublevalue) const [virtual]</h3>
 <p>Map a value to a corresponding label </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value that will be mapped</dl>
+<dd><i>value</i> Value that will be mapped</dd></dl>
 <p> <code>label()</code> looks in the <code>labelMap()</code> for a corresponding label for value or returns an null text. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Label, or QString::null</dl>
+<dd>Label, or QString::null</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>labelMap()</code>, <code>setLabelMap()</code></dl>
+<dd><code>labelMap()</code>, <code>setLabelMap()</code></dd></dl>
 <p> Reimplemented from <code>QwtAbstractScaleDraw</code>.</p>
 <h3>QMap&lt; double, QString &gt; QwtCompassScaleDraw::labelMap () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>map, mapping values to labels</dl>
+<dd>map, mapping values to labels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLabelMap()</code></dl>
+<dd><code>setLabelMap()</code></dd></dl>
 <h3>void QwtCompassScaleDraw::setLabelMap (const QMap&lt; double, QString &gt; &amp;map)</h3>
 <p>Set a map, mapping values to labels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>map</i> Value to label map</dl>
+<dd><i>map</i> Value to label map</dd></dl>
 <p> The values of the major ticks are found by looking into this map. The default map consists of the labels N, NE, E, SE, S, SW, W, NW. </p>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The map will have no effect for values that are no major tick values. Major ticks can be changed by QwtScaleDraw::setScale</dl>
+<dd>The map will have no effect for values that are no major tick values. Major ticks can be changed by QwtScaleDraw::setScale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>labelMap()</code>, scaleDraw(), setScale()</dl>
+<dd><code>labelMap()</code>, scaleDraw(), setScale()</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

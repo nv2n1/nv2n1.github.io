@@ -10,31 +10,29 @@ description: "xcb_xkb_set_compat_map –"
 <p>xcb_xkb_set_compat_map &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_xkb_set_compat_map(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint8_t recomputeActions, uint8_t truncateSI, uint8_t groups, uint16_t firstSI, uint16_t nSI, const xcb_xkb_sym_interpret_t *si, const xcb_xkb_mod_def_t *groupMaps);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>recomputeActions</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>truncateSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groups</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nSI</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>si</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupMaps</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>recomputeActions</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>truncateSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groups</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nSI</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>si</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupMaps</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

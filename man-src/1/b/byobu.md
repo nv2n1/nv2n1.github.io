@@ -127,11 +127,11 @@ description: "byobu – wrapper script for seeding a user’s byobu configuratio
 <p> Byobu requires a suitable <code><a href="/docs/linux/man/3-ulimit/">ulimit</a></code>(3) values to run. If you get an error at startup saying, &#8216;pipe: too many open files&#8217;, then check your ulimit -a values, as your &quot;open files&quot; or &quot;max user processes&quot; are too low. In this case, you will probably need to run simple <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-screen/">screen</a></code>(1), <code><a href="/docs/linux/man/1-byobu-config/">byobu-config</a></code>(1), <code><a href="/docs/linux/man/1-byobu-export/">byobu-export</a></code>(1), <code><a href="/docs/linux/man/1-byobu-status/">byobu-status</a></code>(1), <code><a href="/docs/linux/man/1-byobu-status-detail/">byobu-status-detail</a>(1), <a href="/docs/linux/man/1-byobu-enable/">byobu-enable</a>(1), <a href="/docs/linux/man/1-byobu-launch/">byobu-launch</a>(1), <a href="/docs/linux/man/1-byobu-select-backend/">byobu-select-backend</a></code>(1), <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/1-screen/">screen</a></code>(1), <code><a href="/docs/linux/man/1-byobu-config/">byobu-config</a></code>(1), <code><a href="/docs/linux/man/1-byobu-export/">byobu-export</a></code>(1), <code><a href="/docs/linux/man/1-byobu-status/">byobu-status</a></code>(1), <code><a href="/docs/linux/man/1-byobu-status-detail/">byobu-status-detail</a>(1), <a href="/docs/linux/man/1-byobu-enable/">byobu-enable</a>(1), <a href="/docs/linux/man/1-byobu-launch/">byobu-launch</a>(1), <a href="/docs/linux/man/1-byobu-select-backend/">byobu-select-backend</a></code>(1), <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1)</dt>
 <dd>
-<dt><i><a rel="nofollow" href="http://byobu.co">http://byobu.co</a></i></p>
+</dd><dt><i><a rel="nofollow" href="http://byobu.co">http://byobu.co</a></i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage and the utility were written by Dustin Kirkland &lt;kirkland [at] byobu.co&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>
 <p> The complete text of the GNU General Public License can be found in <i>/usr/share/common-licenses/GPL</i> on Debian/Ubuntu systems, or in <i>/usr/share/doc/fedora-release-*/GPL</i> on Fedora systems, or on the web at <i><a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i>. </p>

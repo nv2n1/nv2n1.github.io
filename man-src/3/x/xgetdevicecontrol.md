@@ -22,41 +22,41 @@ XGetDeviceControl, XChangeDeviceControl - query and change input device controls
  Specifies the address of an XDeviceControl structure
  that contains the new values for the Device.</pre><h2>Description</h2><dl COMPACT><dd><pre>These requests are provided to manipulate those input devices
 that support device control. A BadMatch error will be generated
-if the requested device does not support any device controls.</pre></dl><dl COMPACT><dd><pre>Valid device control types that can be used with these requests
-include the following:</pre></dl><dl COMPACT><dd><pre>DEVICE_RESOLUTION: Queries or changes the resolution of
-valuators on input devices.</pre></dl><dl COMPACT><dd><pre>The XGetDeviceControl request returns a pointer to an
-XDeviceControl structure.</pre></dl><dl COMPACT><dd><pre>XGetDeviceControl can generate a BadDevice or BadMatch error.</pre></dl><dl COMPACT><dd><pre>The XChangeDeviceControl request modifies the values of one
+if the requested device does not support any device controls.</pre></dd></dl><dl COMPACT><dd><pre>Valid device control types that can be used with these requests
+include the following:</pre></dd></dl><dl COMPACT><dd><pre>DEVICE_RESOLUTION: Queries or changes the resolution of
+valuators on input devices.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceControl request returns a pointer to an
+XDeviceControl structure.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceControl can generate a BadDevice or BadMatch error.</pre></dd></dl><dl COMPACT><dd><pre>The XChangeDeviceControl request modifies the values of one
 control on the specified device. The control is identified by
 the id field of the XDeviceControl structure that is passed
-with the request.</pre></dl><dl COMPACT><dd><pre>XChangeDeviceControl can generate a BadDevice, BadMatch, or
-BadValue error.</pre></dl><h2>Structures</h2><dl COMPACT><dd><pre>Each control is described by a structure specific to that control.
-These structures are defined in the file XInput.h.</pre></dl><dl COMPACT><dd><pre>XDeviceControl is a generic structure that contains two fields
-that are at the beginning of each class of control:</pre></dl><dl COMPACT><dd><pre>typedef struct {
+with the request.</pre></dd></dl><dl COMPACT><dd><pre>XChangeDeviceControl can generate a BadDevice, BadMatch, or
+BadValue error.</pre></dd></dl><h2>Structures</h2><dl COMPACT><dd><pre>Each control is described by a structure specific to that control.
+These structures are defined in the file XInput.h.</pre></dd></dl><dl COMPACT><dd><pre>XDeviceControl is a generic structure that contains two fields
+that are at the beginning of each class of control:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  XID class;
  int length;
-} XDeviceControl;</pre></dl><dl COMPACT><dd><pre>The XDeviceResolutionState structure defines the information
+} XDeviceControl;</pre></dd></dl><dl COMPACT><dd><pre>The XDeviceResolutionState structure defines the information
 that is returned for device resolution for devices with
-valuators.</pre></dl><dl COMPACT><dd><pre>typedef struct {
+valuators.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  XID control;
  int length;
  int num_valuators;
  int* resolutions;
  int* min_resolutions;
  int* max_resolutions;
-} XDeviceResolutionState;</pre></dl><dl COMPACT><dd><pre>The XDeviceResolutionControl structure defines the attributes
-that can be controlled for keyboard Devices.</pre></dl><dl COMPACT><dd><pre>typedef struct {
+} XDeviceResolutionState;</pre></dd></dl><dl COMPACT><dd><pre>The XDeviceResolutionControl structure defines the attributes
+that can be controlled for keyboard Devices.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
  XID control;
  int length;
  int first_valuator;
  int num_valuators;
  int* resolutions;
-} XDeviceResolutionControl;</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+} XDeviceResolutionControl;</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if some
  other client has caused the specified device to become
  the X keyboard or X pointer device via the
- XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGetDeviceControl request was
  made specifying a device that has no controls or an
  XChangeDeviceControl request was made with an
@@ -64,10 +64,10 @@ that can be controlled for keyboard Devices.</pre></dl><dl COMPACT><dd><pre>type
  type. It may also occur if an invalid combination of
  mask bits is specified ( DvKey but no DvAutoRepeatMode
  for keyboard Devices), or if an invalid KeySym is
- specified for a string Device.</pre></dl><dl COMPACT><dd><pre>BadValue
+ specified for a string Device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the XChangeDeviceControl request. Unless a
  specific range is specified for an argument, the full
  range defined by the argument's type is accepted. Any
  argument defined as a set of alternatives can generate
- this error.</pre></dl>
+ this error.</pre></dd></dl>

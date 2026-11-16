@@ -11,7 +11,6 @@ download-entities - download and parse XML Entity definitions
 <h2>Synopsis</h2><pre> $ perl download-entities.pl -i # interactive
  $ perl download-entities.pl &gt; output-file.pm
  $ perl download-entities.pl output-file.pm
- 
  # instead of <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a>
  $ perl download-entities.pl <a rel="nofollow" HREF="http://my.server.com/entities.html">http://my.server.com/entities.html</a></pre><h2>Description</h2>This script downloads the definitions of <font SIZE="-1">XML</font> entities from <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a> or from whatever address you give it as an argument. The argument should be an <font SIZE="-1">URL </font>(that LWP::UserAgent::get can access) pointing to a document with (absolute or relative) references to files ending with the <tt>&quot;.ent&quot;</tt> suffix. These files are expected to be <font SIZE="-1">DTD</font>'s with lines like 
 

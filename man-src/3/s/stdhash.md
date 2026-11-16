@@ -11,10 +11,8 @@ std::hash&lt;std::variant&gt; - std::hash&lt;std::variant&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;variant&gt;
-
     template &lt;class... Types&gt;
     (since C++ 17)
-
         struct hash&lt;std::variant&lt;Types...&gt;&gt;;</code></pre> 
 The template specialization of std::hash for the std::variant template allows users to obtain hashes of variant objects. 
 The specialization std::hash&lt;std::variant&lt;Types...&gt;&gt; is enabled (see std::hash) if every specialization in std::hash&lt;std::remove_const_t&lt;Types&gt;&gt;... is enabled, and is disabled otherwise. 

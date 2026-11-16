@@ -23,13 +23,13 @@ url: "/docs/linux/man/3-mlx5dv_dump_dr_matcher/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 int mlx5dv_dump_dr_domain(FILE *fout, struct mlx5dv_dr_domain *domain);
 int mlx5dv_dump_dr_table(FILE *fout, struct mlx5dv_dr_table *table);
 int mlx5dv_dump_dr_matcher(FILE *fout, struct mlx5dv_dr_matcher *matcher);
 int mlx5dv_dump_dr_rule(FILE *fout, struct mlx5dv_dr_rule *rule);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

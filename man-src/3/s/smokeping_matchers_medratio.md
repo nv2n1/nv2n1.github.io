@@ -15,13 +15,13 @@ Smokeping::matchers::Medratio - detect changes in the latency median
 
  <pre> type = matcher
  pattern = Medratio(historic=&gt;a,current=&gt;b,comparator=&gt;o,percentage=&gt;p)</pre><dl COMPACT><dt>historic
-<dd>The number of values to use for building the 'historic' median.
-<dt>current
-<dd>The number of values to use for building the 'current' median.
-<dt>comparator
-<dd>Which comparison operator should be used to compare current/historic with percentage.
-<dt>percentage
-<dd>Right hand side of the comparison.</dl>
+</dt><dd>The number of values to use for building the 'historic' median.
+</dd><dt>current
+</dt><dd>The number of values to use for building the 'current' median.
+</dd><dt>comparator
+</dt><dd>Which comparison operator should be used to compare current/historic with percentage.
+</dd><dt>percentage
+</dt><dd>Right hand side of the comparison.</dd></dl>
  
 
  <pre> old &lt;--- historic ---&gt;&lt;--- current ---&gt; now</pre><h2>Example</h2>Take the 12 last median values. Build the median out of the first 10 and the median from the other 2 values. Divide the results and decide if it is bigger than 150 percent. 

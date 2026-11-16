@@ -22,19 +22,19 @@ tracker3 status
 <p> <code>&#8211;stat[=</code><i>expression</i><code>]</code></p>
 <dl>
 <dt>
-<dd> By default, only common and useful classes are shown, e.g. &quot;nfo:Document&quot; or &quot;nfo:Folder&quot;, for a full set of statistics, see the <code>&#8211;all</code> option.</dl>
+</dt><dd> By default, only common and useful classes are shown, e.g. &quot;nfo:Document&quot; or &quot;nfo:Folder&quot;, for a full set of statistics, see the <code>&#8211;all</code> option.</dd></dl>
 <p> If one or more <i>expression</i> arguments is given, the statistics returned are filtered to only show information those RDF types matching <i>expression</i> (case folded and matching accented variants). The RDF classes are detailed by the Nepomuk otology specification. A list of possible classes matching <i>expression</i>, see <code>tracker3 sparql -c</code>. </p>
 <p> <code>-a, &#8211;all</code></p>
 <dl>
 <dt>
-<dd> Display statistics about ALL RDF classes that exist in the database. Without this option only the common RDF classes will be shown, for example &quot;nfo:Document&quot; and &quot;nfo:FileDataObject&quot;.</dl>
+</dt><dd> Display statistics about ALL RDF classes that exist in the database. Without this option only the common RDF classes will be shown, for example &quot;nfo:Document&quot; and &quot;nfo:FileDataObject&quot;.</dd></dl>
 <p> This option is implied if search terms are provided to filter ALL possible statistics.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-daemon/">tracker3-daemon</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
 <dl>
 <dt>
-<dd> &bull; <code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code></dl>
+</dt><dd> &bull; <code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></dl>
+</dt><dd> &bull; <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></dd></dl>
 <h2>Index</h2>

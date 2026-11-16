@@ -26,19 +26,17 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <p> <code>lstat</code>():</p>
 <dl>
 <dt>
-<dd> /* glibc 2.19 and earlier */ _BSD_SOURCE<br />
+</dt><dd> /* glibc 2.19 and earlier */ _BSD_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.20&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.10:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.10:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <p> <code>fstatat</code>():</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Since glibc 2.10:</p>
-<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd> _ATFILE_SOURCE</dl>
+<dt>Since glibc 2.10:</dt>
+<dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd> _ATFILE_SOURCE</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return information about a file, in the buffer pointed to by <i>statbuf</i>. No permissions are required on the file itself, but&#8212;in the case of <code>stat</code>(), <code>fstatat</code>(), and <code>lstat</code>()&#8212;execute (search) permission is required on all of the directories in <i>pathname</i> that lead to the file. </p>
@@ -69,32 +67,32 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <p> <i>Note</i>: for performance and simplicity reasons, different fields in the <i>stat</i> structure may contain state information from different moments during the execution of the system call. For example, if <i>st_mode</i> or <i>st_uid</i> is changed by another process by calling <code><a href="/docs/linux/man/2-chmod/">chmod</a></code>(2) or <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code>stat</code>() might return the old <i>st_mode</i> together with the new <i>st_uid</i>, or the old <i>st_uid</i> together with the new <i>st_mode</i>. </p>
 <p> The fields in the <i>stat</i> structure are as follows:</p>
 <dl>
-<dt><i>st_dev</i></p>
-<dd> This field describes the device on which this file resides. (The <code><a href="/docs/linux/man/3-major/">major</a></code>(3) and <code><a href="/docs/linux/man/3-minor/">minor</a></code>(3) macros may be useful to decompose the device ID in this field.)</p>
-<dt><i>st_ino</i></p>
-<dd> This field contains the file&#8217;s inode number.</p>
-<dt><i>st_mode</i></p>
-<dd> This field contains the file type and mode. See <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7) for further information.</p>
-<dt><i>st_nlink</i></p>
-<dd> This field contains the number of hard links to the file.</p>
-<dt><i>st_uid</i></p>
-<dd> This field contains the user ID of the owner of the file.</p>
-<dt><i>st_gid</i></p>
-<dd> This field contains the ID of the group owner of the file.</p>
-<dt><i>st_rdev</i></p>
-<dd> This field describes the device that this file (inode) represents.</p>
-<dt><i>st_size</i></p>
-<dd> This field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</p>
-<dt><i>st_blksize</i></p>
-<dd> This field gives the &quot;preferred&quot; block size for efficient filesystem I/O.</p>
-<dt><i>st_blocks</i></p>
-<dd> This field indicates the number of blocks allocated to the file, in 512-byte units. (This may be smaller than <i>st_size</i>/512 when the file has holes.)</p>
-<dt><i>st_atime</i></p>
-<dd> This is the time of the last access of file data.</p>
-<dt><i>st_mtime</i></p>
-<dd> This is the time of last modification of file data.</p>
-<dt><i>st_ctime</i></p>
-<dd> This is the file&#8217;s last status change timestamp (time of last change to the inode).</dl>
+<dt><i>st_dev</i></dt>
+<dd> This field describes the device on which this file resides. (The <code><a href="/docs/linux/man/3-major/">major</a></code>(3) and <code><a href="/docs/linux/man/3-minor/">minor</a></code>(3) macros may be useful to decompose the device ID in this field.)</dd>
+<dt><i>st_ino</i></dt>
+<dd> This field contains the file&#8217;s inode number.</dd>
+<dt><i>st_mode</i></dt>
+<dd> This field contains the file type and mode. See <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7) for further information.</dd>
+<dt><i>st_nlink</i></dt>
+<dd> This field contains the number of hard links to the file.</dd>
+<dt><i>st_uid</i></dt>
+<dd> This field contains the user ID of the owner of the file.</dd>
+<dt><i>st_gid</i></dt>
+<dd> This field contains the ID of the group owner of the file.</dd>
+<dt><i>st_rdev</i></dt>
+<dd> This field describes the device that this file (inode) represents.</dd>
+<dt><i>st_size</i></dt>
+<dd> This field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</dd>
+<dt><i>st_blksize</i></dt>
+<dd> This field gives the &quot;preferred&quot; block size for efficient filesystem I/O.</dd>
+<dt><i>st_blocks</i></dt>
+<dd> This field indicates the number of blocks allocated to the file, in 512-byte units. (This may be smaller than <i>st_size</i>/512 when the file has holes.)</dd>
+<dt><i>st_atime</i></dt>
+<dd> This is the time of the last access of file data.</dd>
+<dt><i>st_mtime</i></dt>
+<dd> This is the time of last modification of file data.</dd>
+<dt><i>st_ctime</i></dt>
+<dd> This is the file&#8217;s last status change timestamp (time of last change to the inode).</dd></dl>
 <p> For further information on the above fields, see <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7).</p>
 <h3>fstatat()</h3>
 <p> The <code>fstatat</code>() system call is a more general interface for accessing file information which can still provide exactly the behavior of each of <code>stat</code>(), <code>lstat</code>(), and <code>fstat</code>(). </p>
@@ -103,51 +101,51 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <p> If <i>pathname</i> is absolute, then <i>dirfd</i> is ignored. </p>
 <p> <i>flags</i> can either be 0, or include one or more of the following flags ORed:</p>
 <dl>
-<dt><code>AT_EMPTY_PATH</code> (since Linux 2.6.39)</p>
-<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory, and the behavior of <code>fstatat</code>() is similar to that of <code>fstat</code>(). If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</p>
-<dt><code>AT_NO_AUTOMOUNT</code> (since Linux 2.6.38)</p>
-<dd> Don&#8217;t automount the terminal (&quot;basename&quot;) component of <i>pathname</i> if it is a directory that is an automount point. This allows the caller to gather attributes of an automount point (rather than the location it would mount). Since Linux 4.14, also don&#8217;t instantiate a nonexistent name in an on-demand directory such as used for automounter indirect maps. This flag has no effect if the mount point has already been mounted over.</p>
+<dt><code>AT_EMPTY_PATH</code> (since Linux 2.6.39)</dt>
+<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory, and the behavior of <code>fstatat</code>() is similar to that of <code>fstat</code>(). If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</dd>
+<dt><code>AT_NO_AUTOMOUNT</code> (since Linux 2.6.38)</dt>
+<dd> Don&#8217;t automount the terminal (&quot;basename&quot;) component of <i>pathname</i> if it is a directory that is an automount point. This allows the caller to gather attributes of an automount point (rather than the location it would mount). Since Linux 4.14, also don&#8217;t instantiate a nonexistent name in an on-demand directory such as used for automounter indirect maps. This flag has no effect if the mount point has already been mounted over.</dd>
 <dt>
-<dd> Both <code>stat</code>() and <code>lstat</code>() act as though <code>AT_NO_AUTOMOUNT</code> was set.</p>
+</dt><dd> Both <code>stat</code>() and <code>lstat</code>() act as though <code>AT_NO_AUTOMOUNT</code> was set.</dd>
 <dt>
-<dd> The <code>AT_NO_AUTOMOUNT</code> can be used in tools that scan directories to prevent mass-automounting of a directory of automount points.</p>
+</dt><dd> The <code>AT_NO_AUTOMOUNT</code> can be used in tools that scan directories to prevent mass-automounting of a directory of automount points.</dd>
 <dt>
-<dd> This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</p>
-<dt><code>AT_SYMLINK_NOFOLLOW</code></p>
-<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself, like <code>lstat</code>(). (By default, <code>fstatat</code>() dereferences symbolic links, like <code>stat</code>().)</dl>
+</dt><dd> This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</dd>
+<dt><code>AT_SYMLINK_NOFOLLOW</code></dt>
+<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself, like <code>lstat</code>(). (By default, <code>fstatat</code>() dereferences symbolic links, like <code>stat</code>().)</dd></dl>
 <p> See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of the need for <code>fstatat</code>().</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> Bad address.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links encountered while traversing the path.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A component of <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOENT</code></p>
-<dd> <i>pathname</i> is an empty string and <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory (i.e., kernel memory).</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix of <i>pathname</i> is not a directory.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> <i>pathname</i> or <i>fd</i> refers to a file whose size, inode number, or number of blocks cannot be represented in, respectively, the types <i>off_t</i>, <i>ino_t</i>, or <i>blkcnt_t</i>. This error can occur when, for example, an application compiled on a 32-bit platform without <i>-D_FILE_OFFSET_BITS=64</i> calls <code>stat</code>() on a file whose size exceeds <i>(1&lt;&lt;31)-1</i> bytes.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Bad address.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links encountered while traversing the path.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A component of <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> <i>pathname</i> is an empty string and <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory (i.e., kernel memory).</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix of <i>pathname</i> is not a directory.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> <i>pathname</i> or <i>fd</i> refers to a file whose size, inode number, or number of blocks cannot be represented in, respectively, the types <i>off_t</i>, <i>ino_t</i>, or <i>blkcnt_t</i>. This error can occur when, for example, an application compiled on a 32-bit platform without <i>-D_FILE_OFFSET_BITS=64</i> calls <code>stat</code>() on a file whose size exceeds <i>(1&lt;&lt;31)-1</i> bytes.</dd></dl>
 <p> The following additional errors can occur for <code>fstatat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flag specified in <i>flags</i>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flag specified in <i>flags</i>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>fstatat</code>() was added to Linux in kernel 2.6.16; library support was added to glibc in version 2.4.</p>
 <h2>CONFORMING TO</h2>
@@ -163,12 +161,12 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <p> Over time, increases in the size of the <i>stat</i> structure have led to three successive versions of <code>stat</code>(): <i>sys_stat</i>() (slot <i>__NR_oldstat</i>), <i>sys_newstat</i>() (slot <i>__NR_stat</i>), and <i>sys_stat64()</i> (slot <i>__NR_stat64</i>) on 32-bit platforms such as i386. The first two versions were already present in Linux 1.0 (albeit with different names); the last was added in Linux 2.4. Similar remarks apply for <code>fstat</code>() and <code>lstat</code>(). </p>
 <p> The kernel-internal versions of the <i>stat</i> structure dealt with by the different versions are, respectively:</p>
 <dl>
-<dt><i>__old_kernel_stat</i></p>
-<dd> The original structure, with rather narrow fields, and no padding.</p>
-<dt><i>stat</i></p>
-<dd> Larger <i>st_ino</i> field and padding added to various parts of the structure to allow for future expansion.</p>
-<dt><i>stat64</i></p>
-<dd> Even larger <i>st_ino</i> field, larger <i>st_uid</i> and <i>st_gid</i> fields to accommodate the Linux-2.4 expansion of UIDs and GIDs to 32 bits, and various other enlarged fields and further padding in the structure. (Various padding bytes were eventually consumed in Linux 2.6, with the advent of 32-bit device IDs and nanosecond components for the timestamp fields.)</dl>
+<dt><i>__old_kernel_stat</i></dt>
+<dd> The original structure, with rather narrow fields, and no padding.</dd>
+<dt><i>stat</i></dt>
+<dd> Larger <i>st_ino</i> field and padding added to various parts of the structure to allow for future expansion.</dd>
+<dt><i>stat64</i></dt>
+<dd> Even larger <i>st_ino</i> field, larger <i>st_uid</i> and <i>st_gid</i> fields to accommodate the Linux-2.4 expansion of UIDs and GIDs to 32 bits, and various other enlarged fields and further padding in the structure. (Various padding bytes were eventually consumed in Linux 2.6, with the advent of 32-bit device IDs and nanosecond components for the timestamp fields.)</dd></dl>
 <p> The glibc <code>stat</code>() wrapper function hides these details from applications, invoking the most recent version of the system call provided by the kernel, and repacking the returned information if required for old binaries. </p>
 <p> On modern 64-bit systems, life is simpler: there is a single <code>stat</code>() system call and the kernel deals with a <i>stat</i> structure that contains fields of a sufficient size. </p>
 <p> The underlying system call employed by the glibc <code>fstatat</code>() wrapper function is actually called <code>fstatat64</code>() or, on some architectures, <code>newfstatat</code>().</p>
@@ -237,19 +235,19 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">RETURN VALUE</a></p>
+<dt><a href="#lbAG">RETURN VALUE</a></dt>
 <dd>
-<dt><a href="#lbAH">ERRORS</a></p>
+</dd><dt><a href="#lbAH">ERRORS</a></dt>
 <dd>
-<dt><a href="#lbAI">VERSIONS</a></p>
+</dd><dt><a href="#lbAI">VERSIONS</a></dt>
 <dd>
-<dt><a href="#lbAJ">CONFORMING TO</a></p>
+</dd><dt><a href="#lbAJ">CONFORMING TO</a></dt>
 <dd>
-<dt><a href="#lbAK">NOTES</a></p>
+</dd><dt><a href="#lbAK">NOTES</a></dt>
 <dd>
-<dt><a href="#lbAN">EXAMPLES</a></p>
+</dd><dt><a href="#lbAN">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbAO">SEE ALSO</a></p>
+</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAP">COLOPHON</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">COLOPHON</a></dt>
+<dd></dd></dl>

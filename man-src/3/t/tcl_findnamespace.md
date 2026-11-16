@@ -35,18 +35,18 @@ int
 <code>Tcl_SetNamespaceUnknownHandler(</code><i>interp, nsPtr, handlerPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in/out) The interpreter in which the namespace exists and where name lookups are performed. Also where error result messages are written.</p>
-<dd>const char <i>*name</i> (in) The name of the namespace or command to be created or accessed.</p>
-<dd>ClientData <i>clientData</i> (in) A context pointer by the creator of the namespace. Not interpreted by Tcl at all.</p>
-<dd>Tcl_NamespaceDeleteProc <i>*deleteProc</i> (in) A pointer to function to call when the namespace is deleted, or NULL if no such callback is to be performed.</p>
-<dd>Tcl_Namespace <i>*nsPtr</i> (in) The namespace to be manipulated, or NULL (for other than <code>Tcl_DeleteNamespace</code>) to manipulate the current namespace.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (out) A reference to an unshared object to which the function output will be written.</p>
-<dd>const char <i>*pattern</i> (in) The glob-style pattern (see <code>Tcl_StringMatch</code>) that describes the commands to be imported or exported.</p>
-<dd>int <i>resetListFirst</i> (in) Whether the list of export patterns should be reset before adding the current pattern to it.</p>
-<dd>int <i>allowOverwrite</i> (in) Whether new commands created by this import action can overwrite existing commands.</p>
-<dd>Tcl_Namespace <i>*contextNsPtr</i> (in) The location in the namespace hierarchy where the search for a namespace or command should be conducted relative to when the search term is not rooted at the global namespace. NULL indicates the current namespace.</p>
-<dd>int <i>flags</i> (in) OR-ed combination of bits controlling how the search is to be performed. The following flags are supported: <code>TCL_GLOBAL_ONLY</code> (indicates that the search is always to be conducted relative to the global namespace), <code>TCL_NAMESPACE_ONLY</code> (just for <code>Tcl_FindCommand</code>; indicates that the search is always to be conducted relative to the context namespace), and <code>TCL_LEAVE_ERR_MSG</code> (indicates that an error message should be left in the interpreter if the search fails.)</p>
-<dd>Tcl_Obj <i>*handlerPtr</i> (in) A script fragment to be installed as the unknown command handler for the namespace, or NULL to reset the handler to its default. </p>
+<dd>Tcl_Interp <i>*interp</i> (in/out) The interpreter in which the namespace exists and where name lookups are performed. Also where error result messages are written.</dd>
+<dd>const char <i>*name</i> (in) The name of the namespace or command to be created or accessed.</dd>
+<dd>ClientData <i>clientData</i> (in) A context pointer by the creator of the namespace. Not interpreted by Tcl at all.</dd>
+<dd>Tcl_NamespaceDeleteProc <i>*deleteProc</i> (in) A pointer to function to call when the namespace is deleted, or NULL if no such callback is to be performed.</dd>
+<dd>Tcl_Namespace <i>*nsPtr</i> (in) The namespace to be manipulated, or NULL (for other than <code>Tcl_DeleteNamespace</code>) to manipulate the current namespace.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (out) A reference to an unshared object to which the function output will be written.</dd>
+<dd>const char <i>*pattern</i> (in) The glob-style pattern (see <code>Tcl_StringMatch</code>) that describes the commands to be imported or exported.</dd>
+<dd>int <i>resetListFirst</i> (in) Whether the list of export patterns should be reset before adding the current pattern to it.</dd>
+<dd>int <i>allowOverwrite</i> (in) Whether new commands created by this import action can overwrite existing commands.</dd>
+<dd>Tcl_Namespace <i>*contextNsPtr</i> (in) The location in the namespace hierarchy where the search for a namespace or command should be conducted relative to when the search term is not rooted at the global namespace. NULL indicates the current namespace.</dd>
+<dd>int <i>flags</i> (in) OR-ed combination of bits controlling how the search is to be performed. The following flags are supported: <code>TCL_GLOBAL_ONLY</code> (indicates that the search is always to be conducted relative to the global namespace), <code>TCL_NAMESPACE_ONLY</code> (just for <code>Tcl_FindCommand</code>; indicates that the search is always to be conducted relative to the context namespace), and <code>TCL_LEAVE_ERR_MSG</code> (indicates that an error message should be left in the interpreter if the search fails.)</dd>
+<dd>Tcl_Obj <i>*handlerPtr</i> (in) A script fragment to be installed as the unknown command handler for the namespace, or NULL to reset the handler to its default. </dd>
 </dl>
 <h2>Description</h2>
 <p>Namespaces are hierarchic naming contexts that can contain commands and variables. They also maintain a list of patterns that describes what commands are exported, and can import commands that have been exported by other namespaces. Namespaces can also be manipulated through the Tcl command <code>namespace</code>. </p>
@@ -55,7 +55,7 @@ int
 <dl COMPACT>
 <dd>
 <pre>typedef void (Tcl_NamespaceDeleteProc) (ClientData clientData);</pre>
-</dl>
+</dd></dl>
 <p> <code>Tcl_DeleteNamespace</code> deletes a namespace. </p>
 <p> <code>Tcl_AppendExportList</code> retrieves the export patterns for a namespace given namespace and appends them (as list items) to <i>objPtr</i>. </p>
 <p> <code>Tcl_Export</code> sets and appends to the export patterns for a namespace. Patterns are appended unless the <i>resetListFirst</i> flag is true. </p>

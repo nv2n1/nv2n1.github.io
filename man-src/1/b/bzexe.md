@@ -22,8 +22,8 @@ description: "bzexe – compress executable files in place"
 <p> This utility is most useful on systems with very small disks.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Decompress the given executables instead of compressing them.</dl>
+<dt><code>-d</code></dt>
+<dd> Decompress the given executables instead of compressing them.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zcmp/">zcmp</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1)</p>
 <h2>CAVEATS</h2>

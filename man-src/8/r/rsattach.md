@@ -15,10 +15,10 @@ description: "rsattach – Start a Rose interface"
 <p> <code>Rsattach</code> tries to find the free Rose device in the system. The device name checked is rose0. If no free Rose device is available an error is generated and the program terminates.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i inetaddr</code></p>
-<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-i inetaddr</code></dt>
+<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code>rsparms</code>(4), <code><a href="/docs/linux/man/5-rsports/">rsports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
 <h2>Bugs</h2>

@@ -17,11 +17,11 @@ mongoc_bulk_operation_remove (mongoc_bulk_operation_t *bulk,
 <p> This function queues a delete operation as part of <code>bulk</code> that will delete all documents matching <code>selector</code> \&amp;. To delete a single document, see <code><a href="/docs/linux/man/3-mongoc_bulk_operation_remove_one/">mongoc_bulk_operation_remove_one</a>(3)</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>selector</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>selector</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via <code><a href="/docs/linux/man/3-mongoc_bulk_operation_execute/">mongoc_bulk_operation_execute</a>(3)</code> \&amp;. </p>
 <h2>Colophon</h2>

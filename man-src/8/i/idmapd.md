@@ -13,20 +13,20 @@ description: "rpc.idmapd – NFSv4 ID <-> Name Mapper"
 <h2>Description</h2>
 <p><code>rpc.idmapd</code> is the NFSv4 ID &lt;-&gt; name mapping daemon. It provides functionality to the NFSv4 kernel client and server, to which it communicates via upcalls, by translating user and group IDs to names, and vice versa. Note that on more recent kernels only the NFSv4 server uses <code>.</code> The NFSv4 client instead uses <a href="/docs/linux/man/8-nfsidmap/">nfsidmap</a>(8), and only falls back to <code>rpc.idmapd</code> if there was a problem running the <a href="/docs/linux/man/8-nfsidmap/">nfsidmap</a>(8) program. The options are as follows:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display usage message.</p>
-<dt><code>-v</code></p>
-<dd>Increases the verbosity level (can be specified multiple times).</p>
-<dt><code>-f</code></p>
-<dd>Runs <code>rpc.idmapd</code> in the foreground and prints all output to the terminal.</p>
-<dt><code>-p </code><i>path</i></p>
-<dd>Specifies the location of the RPC pipefs to be <i>path</i> The default value is &quot;/var/lib/nfs/rpc_pipefs&quot;.</p>
-<dt><code>-c </code><i>path</i></p>
-<dd>Use configuration file <i>path</i></p>
-<dt><code>-C</code></p>
-<dd>Client-only: perform no idmapping for any NFS server, even if one is detected.</p>
-<dt><code>-S</code></p>
-<dd>Server-only: perform no idmapping for any NFS client, even if one is detected.</dl>
+<dt><code>-h</code></dt>
+<dd>Display usage message.</dd>
+<dt><code>-v</code></dt>
+<dd>Increases the verbosity level (can be specified multiple times).</dd>
+<dt><code>-f</code></dt>
+<dd>Runs <code>rpc.idmapd</code> in the foreground and prints all output to the terminal.</dd>
+<dt><code>-p </code><i>path</i></dt>
+<dd>Specifies the location of the RPC pipefs to be <i>path</i> The default value is &quot;/var/lib/nfs/rpc_pipefs&quot;.</dd>
+<dt><code>-c </code><i>path</i></dt>
+<dd>Use configuration file <i>path</i></dd>
+<dt><code>-C</code></dt>
+<dd>Client-only: perform no idmapping for any NFS server, even if one is detected.</dd>
+<dt><code>-S</code></dt>
+<dd>Server-only: perform no idmapping for any NFS client, even if one is detected.</dd></dl>
 <h2>Examples</h2>
 <p><code>rpc.idmapd -f -vvv</code> </p>
 <p> Runs <code>rpc.idmapd</code> printing all messages to console, and with a verbosity level of 3.</p>

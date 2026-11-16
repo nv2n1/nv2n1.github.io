@@ -10,8 +10,6 @@ description: "sysv_signal – signal handling with System V semantics"
 <p>sysv_signal &#8211; signal handling with System V semantics</p>
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE         /* See feature_test_macros(7) */
-
-
 #include &lt;signal.h&gt;</code></pre>
 <p> <code>typedef void (*sighandler_t)(int);</code> <code>sighandler_t sysv_signal(int </code><i>signum</i><code>, sighandler_t </code><i>handler</i><code>);</code></p>
 <h2>Description</h2>

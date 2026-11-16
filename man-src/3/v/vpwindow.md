@@ -13,37 +13,37 @@ description: "vpWindow – multiply the projection matrix by a perspective or or
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpWindow(</code><i>vpc, type, left, right, bottom, top, near, far</i><code>)</code></p>
+<dt> <code>vpWindow(</code><i>vpc, type, left, right, bottom, top, near, far</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></p>
-<dd>int <i>type;</i></p>
-<dd>double <i>left, right;</i></p>
-<dd>double <i>bottom, top;</i></p>
-<dd>double <i>near, far;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>type;</i></dd>
+<dd>double <i>left, right;</i></dd>
+<dd>double <i>bottom, top;</i></dd>
+<dd>double <i>near, far;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>type</i></p>
-<dd>Projection type code. Currently, must be VP_PARALLEL.</p>
-<dt><i>left</i></p>
-<dd>Coordinate of the left vertical clipping plane.</p>
-<dt><i>right</i></p>
-<dd>Coordinate of the right vertical clipping plane.</p>
-<dt><i>bottom</i></p>
-<dd>Coordinate of the bottom horizontal clipping plane.</p>
-<dt><i>top</i></p>
-<dd>Coordinate of the top horizontal clipping plane.</p>
-<dt><i>near</i></p>
-<dd>Coordinate of the near depth clipping plane.</p>
-<dt><i>far</i></p>
-<dd>Coordinate of the far depth clipping plane.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>type</i></dt>
+<dd>Projection type code. Currently, must be VP_PARALLEL.</dd>
+<dt><i>left</i></dt>
+<dd>Coordinate of the left vertical clipping plane.</dd>
+<dt><i>right</i></dt>
+<dd>Coordinate of the right vertical clipping plane.</dd>
+<dt><i>bottom</i></dt>
+<dd>Coordinate of the bottom horizontal clipping plane.</dd>
+<dt><i>top</i></dt>
+<dd>Coordinate of the top horizontal clipping plane.</dd>
+<dt><i>near</i></dt>
+<dd>Coordinate of the near depth clipping plane.</dd>
+<dt><i>far</i></dt>
+<dd>Coordinate of the far depth clipping plane.</dd></dl>
 <h2>Description</h2>
 <p><code>vpWindow</code> is used to multiply the current projection matrix by a perspective or orthographic projection matrix. The new projection matrix is defined by the coordinates of six clipping planes in the eye coordinate system (see <a href="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3)). The matrix maps the points <i>(left, bottom, near)</i> and <i>(right, top, near)</i> to the lower left and upper right corners of the clipping window. For an alternative means of specifying the projection matrix, see <a href="/docs/linux/man/3-vpwindowphigs/">vpWindowPHIGS</a>(3). </p>
 <p> Currently, only orthographic projections are supported. Perspective projections will be added in a future release. </p>
 <p> The matrix for parallel projections is:</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>A<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>D</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>A<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>D</dd>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>B<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>E</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>C<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>F</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1</p>
@@ -59,9 +59,9 @@ description: "vpWindow – multiply the projection matrix by a perspective or or
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return values are possible:</p>
 <dl>
-<dt>VPERROR_BAD_VALUE</p>
-<dd>The clipping plane coordinates are invalid (<i>left &gt;= right</i>, etc.).</p>
-<dt>VPERROR_BAD_OPTION</p>
-<dd>The <i>type</i> argument is invalid.</dl>
+<dt>VPERROR_BAD_VALUE</dt>
+<dd>The clipping plane coordinates are invalid (<i>left &gt;= right</i>, etc.).</dd>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>type</i> argument is invalid.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3), <a href="/docs/linux/man/3-vpwindowphigs/">vpWindowPHIGS</a>(3) </p>

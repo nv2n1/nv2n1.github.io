@@ -16,32 +16,32 @@ description: "lav2mpeg – easy conversion of lav files to mpeg"
 <p> The input files may be any combination of AVI (.avi), Quicktime (.qt) or editlist files so long as they are all lavtools- readable (e.g. MJPEG-encoded AVI/Quicktime or DV type 2 AVI).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-s/S</p>
-<dd> Turn stereo off/on (default auto)</p>
-<dt>-k/K</p>
-<dd> Turn keeping of raw files off/on (default off)</p>
-<dt>-f/F</p>
-<dd> Turn use of fifos off/on (default off)</p>
-<dt>-l/L</p>
-<dd> Turn logging of entire process off/on (default off)</p>
-<dt>-n/N</p>
-<dd> Turn &quot;noisy logging&quot; off/on (default off)</p>
-<dt>-y/Y</p>
-<dd> Turn use of yuvdenoise off/on (default off)</p>
-<dt>-m</p>
-<dd> one of MODES (see below) (default vcd)</p>
-<dt>-e</p>
-<dd> encoding quality : 0, 1, or 2 (default 2)</p>
-<dt>-o</p>
-<dd> output file ( defaults to firstInputFileName.mpg )</p>
-<dt>-b</p>
-<dd> video bitrate in kbps ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; )</p>
-<dt>-a</p>
-<dd> audio bitrate in kpbs ( only used when -o is not &quot;vcd*&quot; )</p>
-<dt>-q</p>
-<dd> quality for mpeg2enc ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; )</p>
-<dt>-d</p>
-<dd> dimensions XxY ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; ) defaults to same as input</dl>
+<dt>-s/S</dt>
+<dd> Turn stereo off/on (default auto)</dd>
+<dt>-k/K</dt>
+<dd> Turn keeping of raw files off/on (default off)</dd>
+<dt>-f/F</dt>
+<dd> Turn use of fifos off/on (default off)</dd>
+<dt>-l/L</dt>
+<dd> Turn logging of entire process off/on (default off)</dd>
+<dt>-n/N</dt>
+<dd> Turn &quot;noisy logging&quot; off/on (default off)</dd>
+<dt>-y/Y</dt>
+<dd> Turn use of yuvdenoise off/on (default off)</dd>
+<dt>-m</dt>
+<dd> one of MODES (see below) (default vcd)</dd>
+<dt>-e</dt>
+<dd> encoding quality : 0, 1, or 2 (default 2)</dd>
+<dt>-o</dt>
+<dd> output file ( defaults to firstInputFileName.mpg )</dd>
+<dt>-b</dt>
+<dd> video bitrate in kbps ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; )</dd>
+<dt>-a</dt>
+<dd> audio bitrate in kpbs ( only used when -o is not &quot;vcd*&quot; )</dd>
+<dt>-q</dt>
+<dd> quality for mpeg2enc ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; )</dd>
+<dt>-d</dt>
+<dd> dimensions XxY ( only used when -o is &quot;mpeg1&quot; or &quot;mpeg2&quot; ) defaults to same as input</dd></dl>
 <h2>MODES</h2>
 <p> <code>vcd</code> &#8212; standard VCD (352&#215;240 or 352&#215;288) </p>
 <p> <code>vcd_medium</code> &#8212; 1550kbps video VCD (352&#215;240 or 352&#215;288) </p>
@@ -54,61 +54,61 @@ description: "lav2mpeg – easy conversion of lav files to mpeg"
 <p> <i>~/.lav2mpegrc</i></p>
 <dl>
 <dt>
-<dd> user configuration file. It is bash sourceable, and can modify any of the environment variables mentioned in the ENVIRONMENT section, or set the LAV2MPEG_OPTIONS variable to add default options.</dl>
+</dt><dd> user configuration file. It is bash sourceable, and can modify any of the environment variables mentioned in the ENVIRONMENT section, or set the LAV2MPEG_OPTIONS variable to add default options.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>NICEVAL</p>
-<dd> the nice value of each command, set using &#8216;nice -n command&#8217;</p>
-<dt>YUVSCALER</p>
-<dd> modify which command is called for yuvscaler</p>
-<dt>LAV2WAV</p>
-<dd> modify which command is called for lav2wav</p>
-<dt>MPLEX</p>
-<dd> modify which command is called for mplex</p>
-<dt>YUVDENOISE</p>
-<dd> modify which command is called for yuvdenoise</p>
-<dt>MPEG2ENC</p>
-<dd> modify which command is called for mpeg2enC</p>
-<dt>AUDIOENC</p>
-<dd> audioenc is similar to those above, however, if it is set to &#8216;mp2enc&#8217; it will use mp2enc rather than toolame, and set flags appropriotely.</p>
-<dt>NOISYLOGFILE</p>
-<dd> set the file used for noisy logging (-N) defaults to outputfile.log</p>
-<dt>QUIETLOG</p>
-<dd> set the file used for quiet logging. defaults to lav2mpeg.log if set to &quot;&quot; it will log only to screen</p>
-<dt>LOGDATE</p>
-<dd> defaults to 1, set to 0 to not have the date logged in log or output (see man date for more info)</p>
-<dt>LOGDATESTR</p>
-<dd> will pass this on to &#8216;date&#8217; to describe what time format to use. Only used if LOGDATE is not 0</p>
-<dt>LOGCOMMANDS</p>
-<dd> if set to non-zero, will log to the quite log the commands used. Commands are always logged to NOISYLOGFILE if used</p>
-<dt>LOGONLY</p>
-<dd> if set to non-zero, will only log the commands it would use but not actually run any commands</p>
-<dt>LAV2MPEGRC</p>
-<dd> the lav2mpegrc file. Only beneficial if set from environment variable.</p>
-<dt>VCD_MEDIUM_BR</p>
-<dd> video bitrate for mode=vcd_medium</p>
-<dt>VCD_HIGH_BR</p>
-<dd> video bitrate for mode=vcd_high</p>
-<dt>SVCD_HIGH_BR</p>
-<dd> video bitrate for mode=svcd_high</p>
-<dt>SVCD_HIGH_QUAL</p>
-<dd> quality used (-q 0-30 to mpeg2enc) for SVCD_HIGH</p>
-<dt>SVCD_HIGH_BUFFSIZE</p>
-<dd> buffsize (-V to mpeg2enc) used for svcd_high defaults to 100</p>
-<dt>EXTRA_LAV2YUV</p>
-<dd> set extra command line arguments to lav2yuv, which will be added on the end</p>
-<dt>EXTRA_YUVSCALER</p>
-<dd> set extra command line arguments to yuvscaler, which will be added on the end</p>
-<dt>EXTRA_MPEG2ENC</p>
-<dd> set extra command line arguments to mpeg2enc, which will be added on the end</p>
-<dt>EXTRA_LAV2WAV</p>
-<dd> set extra command line arguments to lav2wav, which will be added on the end</p>
-<dt>EXTRA_AUDIOENC</p>
-<dd> set extra command line arguments to mp2enc or toolame (depending on AUDIOENC), which will be added on the end</p>
-<dt>EXTRA_MPLEX</p>
-<dd> set extra command line arguments to mplex, which will be added on the end</p>
-<dt>EXTRA_YUVDENOISE</p>
-<dd> set extra command line arguments to yuvdenoise, which will be added on the end</dl>
+<dt>NICEVAL</dt>
+<dd> the nice value of each command, set using &#8216;nice -n command&#8217;</dd>
+<dt>YUVSCALER</dt>
+<dd> modify which command is called for yuvscaler</dd>
+<dt>LAV2WAV</dt>
+<dd> modify which command is called for lav2wav</dd>
+<dt>MPLEX</dt>
+<dd> modify which command is called for mplex</dd>
+<dt>YUVDENOISE</dt>
+<dd> modify which command is called for yuvdenoise</dd>
+<dt>MPEG2ENC</dt>
+<dd> modify which command is called for mpeg2enC</dd>
+<dt>AUDIOENC</dt>
+<dd> audioenc is similar to those above, however, if it is set to &#8216;mp2enc&#8217; it will use mp2enc rather than toolame, and set flags appropriotely.</dd>
+<dt>NOISYLOGFILE</dt>
+<dd> set the file used for noisy logging (-N) defaults to outputfile.log</dd>
+<dt>QUIETLOG</dt>
+<dd> set the file used for quiet logging. defaults to lav2mpeg.log if set to &quot;&quot; it will log only to screen</dd>
+<dt>LOGDATE</dt>
+<dd> defaults to 1, set to 0 to not have the date logged in log or output (see man date for more info)</dd>
+<dt>LOGDATESTR</dt>
+<dd> will pass this on to &#8216;date&#8217; to describe what time format to use. Only used if LOGDATE is not 0</dd>
+<dt>LOGCOMMANDS</dt>
+<dd> if set to non-zero, will log to the quite log the commands used. Commands are always logged to NOISYLOGFILE if used</dd>
+<dt>LOGONLY</dt>
+<dd> if set to non-zero, will only log the commands it would use but not actually run any commands</dd>
+<dt>LAV2MPEGRC</dt>
+<dd> the lav2mpegrc file. Only beneficial if set from environment variable.</dd>
+<dt>VCD_MEDIUM_BR</dt>
+<dd> video bitrate for mode=vcd_medium</dd>
+<dt>VCD_HIGH_BR</dt>
+<dd> video bitrate for mode=vcd_high</dd>
+<dt>SVCD_HIGH_BR</dt>
+<dd> video bitrate for mode=svcd_high</dd>
+<dt>SVCD_HIGH_QUAL</dt>
+<dd> quality used (-q 0-30 to mpeg2enc) for SVCD_HIGH</dd>
+<dt>SVCD_HIGH_BUFFSIZE</dt>
+<dd> buffsize (-V to mpeg2enc) used for svcd_high defaults to 100</dd>
+<dt>EXTRA_LAV2YUV</dt>
+<dd> set extra command line arguments to lav2yuv, which will be added on the end</dd>
+<dt>EXTRA_YUVSCALER</dt>
+<dd> set extra command line arguments to yuvscaler, which will be added on the end</dd>
+<dt>EXTRA_MPEG2ENC</dt>
+<dd> set extra command line arguments to mpeg2enc, which will be added on the end</dd>
+<dt>EXTRA_LAV2WAV</dt>
+<dd> set extra command line arguments to lav2wav, which will be added on the end</dd>
+<dt>EXTRA_AUDIOENC</dt>
+<dd> set extra command line arguments to mp2enc or toolame (depending on AUDIOENC), which will be added on the end</dd>
+<dt>EXTRA_MPLEX</dt>
+<dd> set extra command line arguments to mplex, which will be added on the end</dd>
+<dt>EXTRA_YUVDENOISE</dt>
+<dd> set extra command line arguments to yuvdenoise, which will be added on the end</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> To simply see the commands that lav2mpeg would have called, run &#8216;LOGONLY=1 lav2mpeg &#8230;&#8217;</p>
 <h2>BUGS</h2>

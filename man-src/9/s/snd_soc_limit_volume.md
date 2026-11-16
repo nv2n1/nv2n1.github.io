@@ -15,15 +15,15 @@ snd_soc_limit_volume - Set new limit to an existing volume control.
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>where to look for the control</dl>
+<dl><dd></dd><dd>where to look for the control</dd></dl>
  
 
  <i>name</i>
-<dl><dd>Name of the control</dl>
+<dl><dd>Name of the control</dd></dl>
  
 
  <i>max</i>
-<dl><dd>new maximum limit</dl>
+<dl><dd>new maximum limit</dd></dl>
 
 <h2>Description</h2>
 

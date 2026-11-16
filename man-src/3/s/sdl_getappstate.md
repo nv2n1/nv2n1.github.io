@@ -14,11 +14,11 @@ description: "SDL_GetAppState – Get the state of the application"
 <h2>Description</h2>
 <p>This function returns the current state of the application. The value returned is a bitwise combination of:</p>
 <dl COMPACT>
-<dt><code>SDL_APPMOUSEFOCUS</code></p>
-<dd>The application has mouse focus.</p>
-<dt><code>SDL_APPINPUTFOCUS</code></p>
-<dd>The application has keyboard focus</p>
-<dt><code>SDL_APPACTIVE</code></p>
-<dd>The application is visible</dl>
+<dt><code>SDL_APPMOUSEFOCUS</code></dt>
+<dd>The application has mouse focus.</dd>
+<dt><code>SDL_APPINPUTFOCUS</code></dt>
+<dd>The application has keyboard focus</dd>
+<dt><code>SDL_APPACTIVE</code></dt>
+<dd>The application is visible</dd></dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_ActiveEvent</code></p>

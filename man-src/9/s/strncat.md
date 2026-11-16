@@ -14,13 +14,13 @@ description: "strncat – Append a length-limited, C-string to another"
 <p><i>dest</i></p>
 <dl>
 <dd>
-<dd>The string to be appended to</dl>
+</dd><dd>The string to be appended to</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>The string to append to it</dl>
+<dd>The string to append to it</dd></dl>
 <p> <i>count</i></p>
 <dl>
-<dd>The maximum numbers of bytes to copy</dl>
+<dd>The maximum numbers of bytes to copy</dd></dl>
 <h2>Description</h2>
 <p>Note that in contrast to <code>strncpy</code>, <code>strncat</code> ensures the result is terminated.</p>
 <h2>Copyright</h2>

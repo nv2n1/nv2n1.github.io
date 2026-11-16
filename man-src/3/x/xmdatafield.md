@@ -180,46 +180,46 @@ description: "XmDataField — The DataField widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNalignment</code></p>
-<dd>When set to XmALIGNMENT_END, the widget aligns all its text with the right hand side of the input area.</p>
-<dt><code>XmNautoFill</code></p>
-<dd>When set to True, the widget &quot;auto-fills&quot; its contents when it can determine that the next character in the string must be a particular literal. For instance, the picture &quot;###-####&quot; automatically inserts a &#8216;-&#8216; character after receiving three numeric digits as input.</p>
-<dt><code>XmNpicture</code></p>
-<dd>Specifies a picture for data entry in the widget. A picture acts as a template that formats the value you enter in a field. An example would be the US Phone Number picture: (###)###-####. The picture is used to convert characters entered into the field to a formatted value.</p>
+<dt><code>XmNalignment</code></dt>
+<dd>When set to XmALIGNMENT_END, the widget aligns all its text with the right hand side of the input area.</dd>
+<dt><code>XmNautoFill</code></dt>
+<dd>When set to True, the widget &quot;auto-fills&quot; its contents when it can determine that the next character in the string must be a particular literal. For instance, the picture &quot;###-####&quot; automatically inserts a &#8216;-&#8216; character after receiving three numeric digits as input.</dd>
+<dt><code>XmNpicture</code></dt>
+<dd>Specifies a picture for data entry in the widget. A picture acts as a template that formats the value you enter in a field. An example would be the US Phone Number picture: (###)###-####. The picture is used to convert characters entered into the field to a formatted value.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>Character interpretations</code></p>
-<dd></dl>
+</dd><dl COMPACT>
+<dt><code>Character interpretations</code></dt>
+<dd></dd></dl>
 <p> The following lists and defines the characters you can use in a picture, and how the DataField widget interprets them.</p>
 <dl COMPACT>
-<dt><i>#</i></p>
-<dd>Any numeric digit</p>
-<dt><i>?</i></p>
-<dd>Case insensitive letter</p>
-<dt><i>&amp;</i></p>
-<dd>Uppercase letter (forces lowercase to uppercase)</p>
-<dt><i>@</i></p>
-<dd>Case insensitive character</p>
-<dt><i>!</i></p>
-<dd>Uppercase character</p>
-<dt><i>;</i></p>
-<dd>Interpret the following character literally</p>
-<dt><i>*</i></p>
-<dd>Repeat the following character some number of times</p>
-<dt><i>[]</i></p>
-<dd>Characters within brackets are optional</p>
-<dt><i>{}</i></p>
-<dd>Characters within braces are grouped</p>
-<dt><i>,</i></p>
-<dd>Alternative values</p>
-<dd>Other characters are interpreted literally.</p>
-<dd>Set XmNpicture to NULL to disable regular expression processing. The DataField widget is cleared whenever the XmNpicture resource is changed.</dl>
+<dt><i>#</i></dt>
+<dd>Any numeric digit</dd>
+<dt><i>?</i></dt>
+<dd>Case insensitive letter</dd>
+<dt><i>&amp;</i></dt>
+<dd>Uppercase letter (forces lowercase to uppercase)</dd>
+<dt><i>@</i></dt>
+<dd>Case insensitive character</dd>
+<dt><i>!</i></dt>
+<dd>Uppercase character</dd>
+<dt><i>;</i></dt>
+<dd>Interpret the following character literally</dd>
+<dt><i>*</i></dt>
+<dd>Repeat the following character some number of times</dd>
+<dt><i>[]</i></dt>
+<dd>Characters within brackets are optional</dd>
+<dt><i>{}</i></dt>
+<dd>Characters within braces are grouped</dd>
+<dt><i>,</i></dt>
+<dd>Alternative values</dd>
+<dd>Other characters are interpreted literally.</dd>
+<dd>Set XmNpicture to NULL to disable regular expression processing. The DataField widget is cleared whenever the XmNpicture resource is changed.</dd></dl>
 </dl>
-<dt><code>XmNpictureErrorCallback</code></p>
-<dd>Specifies a list of callbacks to be called when the XmDataField widget determines that data is being entered that does not match the format specified by the XmNpicture resource.</p>
-<dt><code>XmNvalidateCallback</code></p>
-<dd>Specifies a list of callbacks to be called when data has been entered in the XmDataField widget and the user has moved out of the XmDataField widget (usually by pressing the Tab key). The callbacks can reject the movement of focus.</dl>
+<dt><code>XmNpictureErrorCallback</code></dt>
+<dd>Specifies a list of callbacks to be called when the XmDataField widget determines that data is being entered that does not match the format specified by the XmNpicture resource.</dd>
+<dt><code>XmNvalidateCallback</code></dt>
+<dd>Specifies a list of callbacks to be called when data has been entered in the XmDataField widget and the user has moved out of the XmDataField widget (usually by pressing the Tab key). The callbacks can reject the movement of focus.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>DataField inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

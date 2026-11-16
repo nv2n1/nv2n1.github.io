@@ -11,16 +11,16 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbSetMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask selecting subcomponents to update</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>description from which new values are taken</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask selecting subcomponents to update</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>description from which new values are taken</dd></dl>
 <h2>Description</h2>
 <p>There are two ways to make changes to map components: either change a local copy of the keyboard map and call <i>XkbSetMap </i> to send the modified map to the server, or, to reduce network traffic, use an XkbMapChangesRec structure and call <i>XkbChangeMap.</i> </p>
 <p> Use <i>XkbSetMap </i> to send a complete new set of values for entire components (for example, all symbols, all actions, and so on) to the server. The <i>which </i> parameter specifies the components to be sent to the server, and is a bitwise inclusive OR of the masks listed in Table 1. The <i>xkb </i> parameter is a pointer to an XkbDescRec structure and contains the information to be copied to the server. For each bit set in the <i>which </i> parameter, <i>XkbSetMap </i> takes the corresponding structure values from the <i>xkb </i> parameter and sends it to the server specified by <i>dpy. </i> </p>
@@ -327,10 +327,10 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 </table>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbSetMap </i> function returns True all components specified by <i>which </i> are present in the <i>xkb </i> parameter.</p>
-<dt>False</p>
-<dd>The <i>XkbSetMap </i> function returns False if any component specified by <i>which </i> is not present in the <i>xkb </i> parameter.</dl>
+<dt>True</dt>
+<dd>The <i>XkbSetMap </i> function returns True all components specified by <i>which </i> are present in the <i>xkb </i> parameter.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetMap </i> function returns False if any component specified by <i>which </i> is not present in the <i>xkb </i> parameter.</dd></dl>
 <h2>Structures</h2>
 <p>Use the XkbMapChangesRec structure to identify and track partial modifications to the mapping components and to reduce the amount of traffic between the server and clients. </p>
 <pre>typedef struct _XkbMapChanges {
@@ -443,11 +443,11 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 </table>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadLength</code></p>
-<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadLength</code></dt>
+<dd>The length of a request is shorter or longer than that required to minimally contain the arguments</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbchangemap/">XkbChangeMap</a></code>(3), <code><a href="/docs/linux/man/3-xkbchangetypesofkey/">XkbChangeTypesOfKey</a></code>(3), <code><a href="/docs/linux/man/3-xkbcopykeytype/">XkbCopyKeyType</a></code>(3), <code><a href="/docs/linux/man/3-xkbcopykeytypes/">XkbCopyKeyTypes</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeyactions/">XkbGetKeyActions</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeybehaviors/">XkbGetKeyBehaviors</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeyexplicitcomponents/">XkbGetKeyExplicitComponents</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeymodifiermap/">XkbGetKeyModifierMap</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeysyms/">XkbGetKeySyms</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetkeytypes/">XkbGetKeyTypes</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeyactions/">XkbResizeKeyActions</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeysyms/">XkbResizeKeySyms</a></code>(3), <code><a href="/docs/linux/man/3-xkbresizekeytype/">XkbResizeKeyType</a></code>(3), <code>XkbGetVirtualModMap</code>(3), <code><a href="/docs/linux/man/3-xkbgetvirtualmods/">XkbGetVirtualMods</a></code>(3)</p>

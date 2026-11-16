@@ -11,49 +11,27 @@ std::transform_reduce - std::transform_reduce
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt;class InputIt1, class InputIt2, class T&gt;                                    (1) (since C++17)
-
 T transform_reduce(InputIt1 first1, InputIt1 last1, InputIt2 first2, T init);
-
 template &lt;class InputIt1, class InputIt2, class T, class BinaryOp1, class BinaryOp2&gt;
-
 T transform_reduce(InputIt1 first1, InputIt1 last1, InputIt2 first2,                 (2) (since C++17)
-
 T init, BinaryOp1 binary_op1, BinaryOp2 binary_op2);
-
 template&lt;class InputIt, class T, class BinaryOp, class UnaryOp&gt;
-
 T transform_reduce(InputIt first, InputIt last,                                      (3) (since C++17)
-
 T init, BinaryOp binop, UnaryOp unary_op);
-
 template&lt;class ExecutionPolicy,
-
 class ForwardIt1, class ForwardIt2, class T&gt;                                         (4) (since C++17)
-
 T transform_reduce(ExecutionPolicy&amp;&amp; policy,
-
 ForwardIt1 first1, ForwardIt1 last1, ForwardIt2 first2, T init);
-
 template&lt;class ExecutionPolicy,
-
 class ForwardIt1, class ForwardIt2, class T, class BinaryOp1, class BinaryOp2&gt;
-
 T transform_reduce(ExecutionPolicy&amp;&amp; policy,                                         (5) (since C++17)
-
 ForwardIt1 first1, ForwardIt1 last1, ForwardIt2 first2,
-
 T init, BinaryOp1 binary_op1, BinaryOp2 binary_op2);
-
 template&lt;class ExecutionPolicy,
-
 class ForwardIt, class T, class BinaryOp, class UnaryOp&gt;
-
 T transform_reduce(ExecutionPolicy&amp;&amp; policy,                                         (6) (since C++17)
-
 ForwardIt first, ForwardIt last,
-
 T init, BinaryOp binary_op, UnaryOp unary_op);</code></pre> 
 1) Equivalent to transform_reduce(first1, last1, first2, init, std::plus&lt;&gt;(), std::multiplies&lt;&gt;());, effectively parallelized version of the default std::inner_product 
 2) Applies binary_op2 to each pair of elements from the ranges [first; last) and the range starting at first2 and reduces the results (possibly permuted and aggregated in unspecified manner) along with the initial value init over binary_op1 
@@ -131,16 +109,11 @@ If first == last or first1 == last1, init is returned, unmodified
 
 transform_reduce can be used to parallelize std::inner_product: 
  // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;execution&gt;
 int main()
-
 {
     std::vector&lt;double&gt; xvalues(10007, 1.0), yvalues(10007, 1.0);
     double result = std::transform_reduce(

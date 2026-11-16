@@ -20,6 +20,6 @@ description: "QuantLib::AnalyticGJRGARCHEngine – GJR-GARCH(1,1) engine."
 <p> Jin-Chuan Duan, Genevieve Gauthier, Jean-Guy Simonato, Caroline Sasseville, 2006. Approximating the GJR-GARCH and EGARCH option pricing models analytically Journal of Computational Finance, Volume 9, Number 3, Spring 2006 </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in the Duan et al&#8217;s 2006 paper.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in the Duan et al&#8217;s 2006 paper.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

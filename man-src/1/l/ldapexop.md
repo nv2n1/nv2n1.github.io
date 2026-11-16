@@ -34,34 +34,34 @@ description: "ldapexop – issue LDAP extended operations"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code><i>[</i><code>V</code><i>]</i></p>
-<dd> Print version info. If<code>-VV</code> is given, only the version information is printed.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></p>
-<dd> Set the LDAP debugging level to <i>debuglevel</i>.</p>
-<dt><code>-n</code></p>
-<dd> Show what would be done but don&#8217;t actually do it. Useful for debugging in conjunction with <code>-v</code>.</p>
-<dt><code>-v</code></p>
-<dd> Run in verbose mode, with many diagnostics written to standard output.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>file</i></p>
-<dd> Read operations from <i>file</i>.</p>
-<dt><code>-x</code></p>
-<dd> Use simple authentication instead of SASL.</p>
-<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></p>
-<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory.</p>
-<dt><code>-W</code></p>
-<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</p>
-<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></p>
-<dd> Use <i>passwd</i> as the password for simple authentication.</p>
-<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></p>
-<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</p>
-<dt><code>-H</code><i>&nbsp;<wbr>URI</i></p>
-<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></p>
-<dd> Specify the host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></p>
-<dd> Specify the TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
-<dd> Specify general extensions. &#8216;!&#8217; indicates criticality. </p>
+<dt><code>-V</code><i>[</i><code>V</code><i>]</i></dt>
+<dd> Print version info. If<code>-VV</code> is given, only the version information is printed.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></dt>
+<dd> Set the LDAP debugging level to <i>debuglevel</i>.</dd>
+<dt><code>-n</code></dt>
+<dd> Show what would be done but don&#8217;t actually do it. Useful for debugging in conjunction with <code>-v</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Run in verbose mode, with many diagnostics written to standard output.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Read operations from <i>file</i>.</dd>
+<dt><code>-x</code></dt>
+<dd> Use simple authentication instead of SASL.</dd>
+<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></dt>
+<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory.</dd>
+<dt><code>-W</code></dt>
+<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></dt>
+<dd> Use <i>passwd</i> as the password for simple authentication.</dd>
+<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></dt>
+<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</dd>
+<dt><code>-H</code><i>&nbsp;<wbr>URI</i></dt>
+<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></dt>
+<dd> Specify the host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></dt>
+<dd> Specify the TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
+<dd> Specify general extensions. &#8216;!&#8217; indicates criticality. </dd>
 <pre><code>
 [!] assert = &lt;filter&gt;(an RFC 4515 Filter) !authzid = &lt;authzid&gt;("dn:&lt;dn&gt;" or "u:&lt;user&gt;")
     [!] bauthzid(RFC 3829 authzid control)
@@ -76,7 +76,7 @@ description: "ldapexop – issue LDAP extended operations"
                                                 abandon,
     cancel, ignore(SIGINT sends abandon / cancel, or ignores response; if critical, doesn't wait for SIGINT. not really controls)
 </code></pre>
-<dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</p>
+<dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</dt>
 <dd>
 <p> Specify general options. </p>
 <p> General options: </p>
@@ -84,24 +84,24 @@ description: "ldapexop – issue LDAP extended operations"
   nettimeout=&lt;timeout&gt;  (in seconds, or &quot;none&quot; or &quot;max&quot;)
   ldif-wrap=&lt;width&gt;     (in columns, or &quot;no&quot; for no wrapping)
 </pre>
-<dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></p>
-<dd> Specify SASL security properties.</p>
-<dt><code>-I</code></p>
-<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</p>
-<dt><code>-Q</code></p>
-<dd> Enable SASL Quiet mode. Never prompt.</p>
-<dt><code>-N</code></p>
-<dd> Do not use reverse DNS to canonicalize SASL host name.</p>
-<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></p>
-<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</p>
-<dt><code>-R</code><i>&nbsp;<wbr>realm</i></p>
-<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</p>
-<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></p>
-<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></p>
-<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></p>
-<dd> Specify the SASL mechanism to be used for authentication. Without this option, the program will choose the best mechanism the server knows.</p>
-<dt><code>-Z</code>[<code>Z</code>]</p>
-<dd> Issue StartTLS (Transport Layer Security) extended operation. Giving it twice (<code>-ZZ</code>) will require the operation to be successful. </p>
+</dd><dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></dt>
+<dd> Specify SASL security properties.</dd>
+<dt><code>-I</code></dt>
+<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</dd>
+<dt><code>-Q</code></dt>
+<dd> Enable SASL Quiet mode. Never prompt.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not use reverse DNS to canonicalize SASL host name.</dd>
+<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></dt>
+<dd> Specify the authentication ID for SASL bind. The form of the ID depends on the actual SASL mechanism used.</dd>
+<dt><code>-R</code><i>&nbsp;<wbr>realm</i></dt>
+<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</dd>
+<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></dt>
+<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></dd>
+<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></dt>
+<dd> Specify the SASL mechanism to be used for authentication. Without this option, the program will choose the best mechanism the server knows.</dd>
+<dt><code>-Z</code>[<code>Z</code>]</dt>
+<dd> Issue StartTLS (Transport Layer Security) extended operation. Giving it twice (<code>-ZZ</code>) will require the operation to be successful. </dd>
 </dl>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error. </p>

@@ -26,12 +26,12 @@ void endrpcent(void);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_number;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;RPC program number&nbsp;*/ }; </p>
 <p> The members of this structure are:</p>
 <dl>
-<dt><i>r_name</i></p>
-<dd> The name of the server for this RPC program.</p>
-<dt><i>r_aliases</i></p>
-<dd> A NULL-terminated list of alternate names for the RPC program.</p>
-<dt><i>r_number</i></p>
-<dd> The RPC program number for this service.</dl>
+<dt><i>r_name</i></dt>
+<dd> The name of the server for this RPC program.</dd>
+<dt><i>r_aliases</i></dt>
+<dd> A NULL-terminated list of alternate names for the RPC program.</dd>
+<dt><i>r_number</i></dt>
+<dd> The RPC program number for this service.</dd></dl>
 <p> The <code>getrpcent</code>() function reads the next entry from the database. A connection is opened to the database if necessary. </p>
 <p> The <code>setrpcent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getrpc*</code>() functions. </p>
 <p> The <code>endrpcent</code>() function closes the connection to the database. </p>
@@ -40,8 +40,8 @@ void endrpcent(void);
 <p> On success, <code>getrpcent</code>(), <code>getrpcbyname</code>(), and <code>getrpcbynumber</code>() return a pointer to a statically allocated <i>rpcent</i> structure. NULL is returned on EOF or error.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/rpc</i></p>
-<dd> RPC program number database.</dl>
+<dt><i>/etc/rpc</i></dt>
+<dd> RPC program number database.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

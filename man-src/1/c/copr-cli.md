@@ -32,19 +32,19 @@ url: "/docs/linux/man/1-copr-cli/"
  -h, --help
 <dl>
 <dt>
-<dd> show this help message and exit</dl>
+</dt><dd> show this help message and exit</dd></dl>
  
 
  --version
 <dl>
 <dt>
-<dd> show the program's version number and exit</dl>
+</dt><dd> show the program's version number and exit</dd></dl>
  
 
  --config
 <dl>
 <dt>
-<dd> path to an alternative configuration file (default is ~/.config/copr).</dl>
+</dt><dd> path to an alternative configuration file (default is ~/.config/copr).</dd></dl>
 
 <h2>ACTION LIST</h2>
 
@@ -53,103 +53,103 @@ url: "/docs/linux/man/1-copr-cli/"
  list [username|@groupname]
 <dl>
 <dt>
-<dd> List all the projects of the provided username. If no username is provided, then your projects are listed.</dl>
+</dt><dd> List all the projects of the provided username. If no username is provided, then your projects are listed.</dd></dl>
  
 
  create
 <dl>
 <dt>
-<dd> Create a new project.</dl>
+</dt><dd> Create a new project.</dd></dl>
  
 
  delete
 <dl>
 <dt>
-<dd> Delete an entire project.</dl>
+</dt><dd> Delete an entire project.</dd></dl>
  
 
  build
 <dl>
 <dt>
-<dd> Build packages for a specified project.</dl>
+</dt><dd> Build packages for a specified project.</dd></dl>
  
 
  status
 <dl>
 <dt>
-<dd> Get the status of the build.</dl>
+</dt><dd> Get the status of the build.</dd></dl>
  
 
  cancel
 <dl>
 <dt>
-<dd> Cancel a build of given id.</dl>
+</dt><dd> Cancel a build of given id.</dd></dl>
  
 
  download-build
 <dl>
 <dt>
-<dd> Download a build to local directory.</dl>
+</dt><dd> Download a build to local directory.</dd></dl>
  
 
  modify
 <dl>
 <dt>
-<dd> Modify existing copr</dl>
+</dt><dd> Modify existing copr</dd></dl>
  
 
  add-package-*
 <dl>
 <dt>
-<dd> Add a new package of the specified source type (e.g. add-package-tito)</dl>
+</dt><dd> Add a new package of the specified source type (e.g. add-package-tito)</dd></dl>
  
 
  edit-package-*
 <dl>
 <dt>
-<dd> Edit source definition and type of an existing package (e.g. edit-package-tito)</dl>
+</dt><dd> Edit source definition and type of an existing package (e.g. edit-package-tito)</dd></dl>
  
 
  list-packages
 <dl>
 <dt>
-<dd> List all packages from a copr in json format</dl>
+</dt><dd> List all packages from a copr in json format</dd></dl>
  
 
  list-package-names
 <dl>
 <dt>
-<dd> Output just the package names from the given copr</dl>
+</dt><dd> Output just the package names from the given copr</dd></dl>
  
 
  get-package
 <dl>
 <dt>
-<dd> Display details of a single package in json format</dl>
+</dt><dd> Display details of a single package in json format</dd></dl>
  
 
  delete-package
 <dl>
 <dt>
-<dd> Remove package from a copr and all its builds as well</dl>
+</dt><dd> Remove package from a copr and all its builds as well</dd></dl>
  
 
  reset-package
 <dl>
 <dt>
-<dd> Clear source definition of a package and its source type</dl>
+</dt><dd> Clear source definition of a package and its source type</dd></dl>
  
 
  build-package
 <dl>
 <dt>
-<dd> Build package from its source definition</dl>
+</dt><dd> Build package from its source definition</dd></dl>
  
 
  mock-config
 <dl>
 <dt>
-<dd> Get the mock profile (similar to koji mock-config)</dl>
+</dt><dd> Get the mock profile (similar to koji mock-config)</dd></dl>
 
 <h2>PROJECT ACTIONS</h2>
 
@@ -162,67 +162,67 @@ url: "/docs/linux/man/1-copr-cli/"
  --chroot
 <dl>
 <dt>
-<dd> Chroot to use for this project. Can be specified multiple times, but at least one must be present.</dl>
+</dt><dd> Chroot to use for this project. Can be specified multiple times, but at least one must be present.</dd></dl>
  
 
  --repo
 <dl>
 <dt>
-<dd> Repository to add to this project. Can be specified multiple times.</dl>
+</dt><dd> Repository to add to this project. Can be specified multiple times.</dd></dl>
  
 
  --initial-pkgs
 <dl>
 <dt>
-<dd> List of packages to build in this new project. Can be specified multiple times.</dl>
+</dt><dd> List of packages to build in this new project. Can be specified multiple times.</dd></dl>
  
 
  --description
 <dl>
 <dt>
-<dd> Description of the project.</dl>
+</dt><dd> Description of the project.</dd></dl>
  
 
  --instructions
 <dl>
 <dt>
-<dd> Instructions for the project.</dl>
+</dt><dd> Instructions for the project.</dd></dl>
  
 
  --disable_createrepo
 <dl>
 <dt>
-<dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dl>
+</dt><dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dd></dl>
  
 
  --enable-net
 <dl>
 <dt>
-<dd> If net should be enabled for builds in this project.</dl>
+</dt><dd> If net should be enabled for builds in this project.</dd></dl>
  
 
  --unlisted-on-hp
 <dl>
 <dt>
-<dd> This project will not be listed on COPR home page.</dl>
+</dt><dd> This project will not be listed on COPR home page.</dd></dl>
  
 
  --persistent
 <dl>
 <dt>
-<dd> Project and its builds will be undeletable. This option can only be specified by a COPR admin.</dl>
+</dt><dd> Project and its builds will be undeletable. This option can only be specified by a COPR admin.</dd></dl>
  
 
  --auto-prune
 <dl>
 <dt>
-<dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dl>
+</dt><dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dd></dl>
  
 
  name
 <dl>
 <dt>
-<dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dl>
+</dt><dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dd></dl>
 
 <h3>copr-cli modify [options]</h3>
 
@@ -235,49 +235,49 @@ url: "/docs/linux/man/1-copr-cli/"
  --repo
 <dl>
 <dt>
-<dd> Repository to add to this project. Can be specified multiple times.</dl>
+</dt><dd> Repository to add to this project. Can be specified multiple times.</dd></dl>
  
 
  --description
 <dl>
 <dt>
-<dd> Description of the project.</dl>
+</dt><dd> Description of the project.</dd></dl>
  
 
  --instructions
 <dl>
 <dt>
-<dd> Instructions for the project.</dl>
+</dt><dd> Instructions for the project.</dd></dl>
  
 
  --disable_createrepo
 <dl>
 <dt>
-<dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dl>
+</dt><dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dd></dl>
  
 
  --enable-net
 <dl>
 <dt>
-<dd> If net should be enabled for builds in this project.</dl>
+</dt><dd> If net should be enabled for builds in this project.</dd></dl>
  
 
  --unlisted-on-hp
 <dl>
 <dt>
-<dd> This project will not be listed on COPR home page.</dl>
+</dt><dd> This project will not be listed on COPR home page.</dd></dl>
  
 
  --auto-prune
 <dl>
 <dt>
-<dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dl>
+</dt><dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dd></dl>
  
 
  name
 <dl>
 <dt>
-<dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dl>
+</dt><dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dd></dl>
 
 <h2>BUILD ACTIONS</h2>
 
@@ -290,43 +290,43 @@ url: "/docs/linux/man/1-copr-cli/"
  -r, --chroot
 <dl>
 <dt>
-<dd> If you don't need this build for all the project's chroots. You can use it several times for each chroot you need.</dl>
+</dt><dd> If you don't need this build for all the project's chroots. You can use it several times for each chroot you need.</dd></dl>
  
 
  --memory
 <dl>
 <dt>
-<dd> Override memory for this build. This is actually not used and it have no effect.</dl>
+</dt><dd> Override memory for this build. This is actually not used and it have no effect.</dd></dl>
  
 
  --timeout
 <dl>
 <dt>
-<dd> Override timeout for this build. This is actually not used and it have no effect.</dl>
+</dt><dd> Override timeout for this build. This is actually not used and it have no effect.</dd></dl>
  
 
  --nowait
 <dl>
 <dt>
-<dd> Don't wait for build completion.</dl>
+</dt><dd> Don't wait for build completion.</dd></dl>
  
 
  --background
 <dl>
 <dt>
-<dd> Run the build at a lower priority.</dl>
+</dt><dd> Run the build at a lower priority.</dd></dl>
  
 
  project
 <dl>
 <dt>
-<dd> The project build the package in. This can be a simple name of some of your projects. Alternatively, you can specify it as username/project or @groupname/project. This way you can build into the project of another user or group, provided you have the permissions to do so.</dl>
+</dt><dd> The project build the package in. This can be a simple name of some of your projects. Alternatively, you can specify it as username/project or @groupname/project. This way you can build into the project of another user or group, provided you have the permissions to do so.</dd></dl>
  
 
  PKG
 <dl>
 <dt>
-<dd> This can be either file on your local workstation or URL of the package to build. When URL is used, then the package must be placed on a public web or ftp server. Note that you cannot combine local file paths and URLs in one command line and local-file builds are limited to the first specified PKG. This limitation comes from the COPR API.</dl>
+</dt><dd> This can be either file on your local workstation or URL of the package to build. When URL is used, then the package must be placed on a public web or ftp server. Note that you cannot combine local file paths and URLs in one command line and local-file builds are limited to the first specified PKG. This limitation comes from the COPR API.</dd></dl>
 
 <h3>copr-cli buildpypi [options]</h3>
 
@@ -337,19 +337,19 @@ url: "/docs/linux/man/1-copr-cli/"
  --pythonversions [VERSION [VERSION ...]]
 <dl>
 <dt>
-<dd> For what Python versions to build (by default: 3 2)</dl>
+</dt><dd> For what Python versions to build (by default: 3 2)</dd></dl>
  
 
  --packageversion PYPIVERSION
 <dl>
 <dt>
-<dd> Version of the PyPI package to be built (by default latest)</dl>
+</dt><dd> Version of the PyPI package to be built (by default latest)</dd></dl>
  
 
  --packagename PYPINAME
 <dl>
 <dt>
-<dd> Name of the PyPI package to be built, required.</dl>
+</dt><dd> Name of the PyPI package to be built, required.</dd></dl>
  
 
  For the rest of the arguments, see copr-cli build command above.
@@ -363,25 +363,25 @@ url: "/docs/linux/man/1-copr-cli/"
  --git-url URL
 <dl>
 <dt>
-<dd> Url to a project managed by Tito, required.</dl>
+</dt><dd> Url to a project managed by Tito, required.</dd></dl>
  
 
  --git-dir DIRECTORY
 <dl>
 <dt>
-<dd> Relative path from Git root to directory containing .spec file.</dl>
+</dt><dd> Relative path from Git root to directory containing .spec file.</dd></dl>
  
 
  --git-branch BRANCH
 <dl>
 <dt>
-<dd> Checokut specific branch on the repository.</dl>
+</dt><dd> Checokut specific branch on the repository.</dd></dl>
  
 
  --test
 <dl>
 <dt>
-<dd> To build from the last commit instead of the last release tag.</dl>
+</dt><dd> To build from the last commit instead of the last release tag.</dd></dl>
  
 
  For the rest of the arguments, see copr-cli build command above.
@@ -395,25 +395,25 @@ url: "/docs/linux/man/1-copr-cli/"
  --scm-type TYPE
 <dl>
 <dt>
-<dd> Specify versioning tool, default is <i>git</i>.</dl>
+</dt><dd> Specify versioning tool, default is <i>git</i>.</dd></dl>
  
 
  --scm-url URL
 <dl>
 <dt>
-<dd> Url to a project versioned by Git or SVN, required.</dl>
+</dt><dd> Url to a project versioned by Git or SVN, required.</dd></dl>
  
 
  --scm-branch BRANCH
 <dl>
 <dt>
-<dd> Checokut specific branch on the repository.</dl>
+</dt><dd> Checokut specific branch on the repository.</dd></dl>
  
 
  --spec FILE
 <dl>
 <dt>
-<dd> Relative path from SCM root to .spec file, required.</dl>
+</dt><dd> Relative path from SCM root to .spec file, required.</dd></dl>
  
 
  For the rest of the arguments, see copr-cli build command above.
@@ -427,13 +427,13 @@ url: "/docs/linux/man/1-copr-cli/"
  --clone-url URL
 <dl>
 <dt>
-<dd> Specify clone url to the dist-git project on pkgs.fedoraproject.org.</dl>
+</dt><dd> Specify clone url to the dist-git project on pkgs.fedoraproject.org.</dd></dl>
  
 
  --branch BRANCH
 <dl>
 <dt>
-<dd> Specify branch in the dist-git project to be be built from.</dl>
+</dt><dd> Specify branch in the dist-git project to be be built from.</dd></dl>
  
 
  For the rest of the arguments, see copr-cli build command above.
@@ -447,13 +447,13 @@ url: "/docs/linux/man/1-copr-cli/"
  build_id
 <dl>
 <dt>
-<dd> Download built packages for build identified by build_id.</dl>
+</dt><dd> Download built packages for build identified by build_id.</dd></dl>
  
 
  -d, --dest, -r, --chroot
 <dl>
 <dt>
-<dd> Fetch only selected chroots. Can be specified multiple times.\</dl>
+</dt><dd> Fetch only selected chroots. Can be specified multiple times.\</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -461,11 +461,11 @@ url: "/docs/linux/man/1-copr-cli/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli build myproject some.src.rpm
 copr-cli build someone_else/project some.src.rpm
 copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&quot; some.src.rpm
-</pre></dl>
+</pre></dd></dl>
 
 <h2>CHROOT ACTIONS</h2>
 
@@ -480,31 +480,31 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  coprchroot
 <dl>
 <dt>
-<dd> Path to a project chroot as owner/project/chroot or project/chroot</dl>
+</dt><dd> Path to a project chroot as owner/project/chroot or project/chroot</dd></dl>
  
 
  --upload-comps FILEPATH
 <dl>
 <dt>
-<dd> Filepath to the comps.xml file to be uploaded</dl>
+</dt><dd> Filepath to the comps.xml file to be uploaded</dd></dl>
  
 
  --delete-comps
 <dl>
 <dt>
-<dd> Deletes already existing comps.xml for the chroot</dl>
+</dt><dd> Deletes already existing comps.xml for the chroot</dd></dl>
  
 
  --packages PACKAGES
 <dl>
 <dt>
-<dd> space separated string of package names to be added to buildroot (e.g. &quot;gcc ghc&quot;)</dl>
+</dt><dd> space separated string of package names to be added to buildroot (e.g. &quot;gcc ghc&quot;)</dd></dl>
  
 
  --repos REPOS
 <dl>
 <dt>
-<dd> space separated string of additional repo urls for chroot (e.g. &quot;<a rel="nofollow" HREF="http://foo">http://foo</a> <a rel="nofollow" HREF="http://bar">http://bar</a>&quot;)</dl>
+</dt><dd> space separated string of additional repo urls for chroot (e.g. &quot;<a rel="nofollow" HREF="http://foo">http://foo</a> <a rel="nofollow" HREF="http://bar">http://bar</a>&quot;)</dd></dl>
 
 <h3>copr-cli get-chroot coprchroot</h3>
 
@@ -517,7 +517,7 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  coprchroot
 <dl>
 <dt>
-<dd> Path to a project chroot as owner/project/chroot or project/chroot</dl>
+</dt><dd> Path to a project chroot as owner/project/chroot or project/chroot</dd></dl>
 
 <h2>PACKAGE ACTIONS</h2>
 
@@ -532,37 +532,37 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --git-url URL
 <dl>
 <dt>
-<dd> URL to a project managed by Tito</dl>
+</dt><dd> URL to a project managed by Tito</dd></dl>
  
 
  --git-dir DIRECTORY
 <dl>
 <dt>
-<dd> Relative path from Git root to directory containing .spec file</dl>
+</dt><dd> Relative path from Git root to directory containing .spec file</dd></dl>
  
 
  --git-branch BRANCH
 <dl>
 <dt>
-<dd> Git branch that you want to build from</dl>
+</dt><dd> Git branch that you want to build from</dd></dl>
  
 
  --test {on,off}
 <dl>
 <dt>
-<dd> Build the last commit instead of the last release tag</dl>
+</dt><dd> Build the last commit instead of the last release tag</dd></dl>
  
 
  --name PKGNAME
 <dl>
 <dt>
-<dd> Name of the package to be edited or created</dl>
+</dt><dd> Name of the package to be edited or created</dd></dl>
  
 
  --webhook-rebuild {on,off}
 <dl>
 <dt>
-<dd> Enable auto-rebuilding.</dl>
+</dt><dd> Enable auto-rebuilding.</dd></dl>
 
 <h3>copr-cli edit-package-tito [options]</h3>
 
@@ -583,31 +583,31 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --pythonversions [VERSION [VERSION ...]]
 <dl>
 <dt>
-<dd> For what Python versions to build (by default: 3 2)</dl>
+</dt><dd> For what Python versions to build (by default: 3 2)</dd></dl>
  
 
  --packageversion PYPIVERSION
 <dl>
 <dt>
-<dd> Version of the PyPI package to be built (by default latest)</dl>
+</dt><dd> Version of the PyPI package to be built (by default latest)</dd></dl>
  
 
  --packagename PYPINAME
 <dl>
 <dt>
-<dd> Name of the PyPI package to be built, required</dl>
+</dt><dd> Name of the PyPI package to be built, required</dd></dl>
  
 
  --name PKGNAME
 <dl>
 <dt>
-<dd> Name of the package to be edited or created</dl>
+</dt><dd> Name of the package to be edited or created</dd></dl>
  
 
  --webhook-rebuild {on,off}
 <dl>
 <dt>
-<dd> Enable auto-rebuilding</dl>
+</dt><dd> Enable auto-rebuilding</dd></dl>
 
 <h3>copr-cli edit-package-pypi [options]</h3>
 
@@ -628,37 +628,37 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --scm-type TYPE
 <dl>
 <dt>
-<dd> Specify versioning tool, default is <i>git</i></dl>
+</dt><dd> Specify versioning tool, default is <i>git</i></dd></dl>
  
 
  --scm-url URL
 <dl>
 <dt>
-<dd> Url to a project versioned by Git or SVN, required</dl>
+</dt><dd> Url to a project versioned by Git or SVN, required</dd></dl>
  
 
  --scm-branch BRANCH
 <dl>
 <dt>
-<dd> Branch in the target repository to build from</dl>
+</dt><dd> Branch in the target repository to build from</dd></dl>
  
 
  --spec FILE
 <dl>
 <dt>
-<dd> Relative path from SCM root to .spec file, required</dl>
+</dt><dd> Relative path from SCM root to .spec file, required</dd></dl>
  
 
  --name PKGNAME
 <dl>
 <dt>
-<dd> Name of the package to be edited or created</dl>
+</dt><dd> Name of the package to be edited or created</dd></dl>
  
 
  --webhook-rebuild {on,off}
 <dl>
 <dt>
-<dd> Enable auto-rebuilding</dl>
+</dt><dd> Enable auto-rebuilding</dd></dl>
 
 <h3>copr-cli edit-package-mockscm [options]</h3>
 
@@ -679,19 +679,19 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --gem GEM
 <dl>
 <dt>
-<dd> Specify gem name</dl>
+</dt><dd> Specify gem name</dd></dl>
  
 
  --name PKGNAME
 <dl>
 <dt>
-<dd> Name of the package to be edited or created</dl>
+</dt><dd> Name of the package to be edited or created</dd></dl>
  
 
  --webhook-rebuild {on,off}
 <dl>
 <dt>
-<dd> Enable auto-rebuilding</dl>
+</dt><dd> Enable auto-rebuilding</dd></dl>
 
 <h3>copr-cli edit-package-rubygems [options]</h3>
 
@@ -712,19 +712,19 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --with-latest-build
 <dl>
 <dt>
-<dd> Also display data related to the latest build for each package.</dl>
+</dt><dd> Also display data related to the latest build for each package.</dd></dl>
  
 
  --with-latest-succeeded-build
 <dl>
 <dt>
-<dd> Also display data related to the latest succeeded build for each package.</dl>
+</dt><dd> Also display data related to the latest succeeded build for each package.</dd></dl>
  
 
  --with-all-builds
 <dl>
 <dt>
-<dd> Also display data related to the builds for each package.</dl>
+</dt><dd> Also display data related to the builds for each package.</dd></dl>
 
 <h3>copr-cli list-package-names [options]</h3>
 
@@ -769,7 +769,7 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
  --name PKGNAME
 <dl>
 <dt>
-<dd> Name of a package to be built</dl>
+</dt><dd> Name of a package to be built</dd></dl>
  
 
  For the rest of the arguments, see copr-cli build command above.
@@ -788,37 +788,37 @@ copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&qu
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli add-package-tito myproject --name pkgname --git-url <a rel="nofollow" HREF="http://github.com/clime/example.git">http://github.com/clime/example.git</a> --test on
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli get-package myproject --name pkgname
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli build-package myproject --name pkgname --nowait --timeout 10000 -r fedora-23-x86_64
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli delete-package myproject --name pkgname
-</pre></dl>
+</pre></dd></dl>
  
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 copr-cli mock-config myproject fedora-rawhide-x86_64
-</pre></dl>
+</pre></dd></dl>
 
 <h2>EXIT STATUS</h2>
 
@@ -834,13 +834,13 @@ copr-cli mock-config myproject fedora-rawhide-x86_64
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 [copr-cli]
 username = msuchy
 login = Y57wcg==##fkfaxbkjhuoiebfafadl
 token = vbfseelqdebzedukgombekmuvbkqwo
 copr_url = <a rel="nofollow" HREF="https://copr.fedoraproject.org">https://copr.fedoraproject.org</a>
-</pre></dl>
+</pre></dd></dl>
  
 
  Be aware that API tokens have an expiration date. The expiration date for your token is listed on the /api page.
@@ -853,9 +853,9 @@ copr_url = <a rel="nofollow" HREF="https://copr.fedoraproject.org">https://copr.
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 alias your_copr='copr --config ~/.config/your-copr'
-</pre></dl>
+</pre></dd></dl>
  
 
  inserted into your profile.

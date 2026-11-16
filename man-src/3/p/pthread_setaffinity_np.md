@@ -11,12 +11,10 @@ description: "pthread_setaffinity_np, pthread_getaffinity_np – set/get CPU aff
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pthread.h&gt;
-
 int pthread_setaffinity_np(pthread_t thread, size_t cpusetsize,
                            const cpu_set_t *cpuset);
 int pthread_getaffinity_np(pthread_t thread, size_t cpusetsize,
                            cpu_set_t *cpuset);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setaffinity_np</code>() function sets the CPU affinity mask of the thread <i>thread</i> to the CPU set pointed to by <i>cpuset</i>. If the call is successful, and the thread is not currently running on one of the CPUs in <i>cpuset</i>, then it is migrated to one of those CPUs. </p>
@@ -27,16 +25,16 @@ Compile and link with - pthread.</code></pre>
 <p>On success, these functions return 0; on error, they return a nonzero error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd>A supplied memory address was invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd>(<code>pthread_setaffinity_np</code>()) The affinity bit mask <i>mask</i> contains no processors that are currently physically on the system and permitted to the thread according to any restrictions that may be imposed by the &quot;cpuset&quot; mechanism described in <code><a href="/docs/linux/man/7-cpuset/">cpuset</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd>(<code>pthread_setaffinity_np</code>()) <i>cpuset</i> specified a CPU that was outside the set supported by the kernel. (The kernel configuration option <code>CONFIG_NR_CPUS</code> defines the range of the set supported by the kernel data type used to represent CPU sets.)</p>
-<dt><code>EINVAL</code></p>
-<dd>(<code>pthread_getaffinity_np</code>()) <i>cpusetsize</i> is smaller than the size of the affinity mask used by the kernel.</p>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>EFAULT</code></dt>
+<dd>A supplied memory address was invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>(<code>pthread_setaffinity_np</code>()) The affinity bit mask <i>mask</i> contains no processors that are currently physically on the system and permitted to the thread according to any restrictions that may be imposed by the &quot;cpuset&quot; mechanism described in <code><a href="/docs/linux/man/7-cpuset/">cpuset</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd>(<code>pthread_setaffinity_np</code>()) <i>cpuset</i> specified a CPU that was outside the set supported by the kernel. (The kernel configuration option <code>CONFIG_NR_CPUS</code> defines the range of the set supported by the kernel data type used to represent CPU sets.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd>(<code>pthread_getaffinity_np</code>()) <i>cpusetsize</i> is smaller than the size of the affinity mask used by the kernel.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <h2>Versions</h2>
 <p>These functions are provided by glibc since version 2.3.4.</p>
 <h2>Attributes</h2>

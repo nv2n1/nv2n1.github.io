@@ -10,32 +10,20 @@ description: "std::quoted – std::quoted"
 <p>std::quoted &#8211; std::quoted</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;iomanip&gt;
-
     template &lt;class CharT&gt;
-
     /*unspecified*/ quoted(const CharT *s, (1)(since C++ 14)
-
                                                CharT delim = CharT('&quot;'),
                            CharT escape = CharT('\'));
-
 template &lt;class CharT, class Traits, class Allocator&gt;
-
 /*unspecified*/ quoted(const std::basic_string&lt;CharT, Traits, Allocator&gt; &amp;s, (2)(since C++ 14)
-
                                                                                  CharT delim = CharT('&quot;'),
                        CharT escape = CharT('\'));
-
 template &lt;class CharT, class Traits&gt;
-
 /*unspecified*/ quoted(std::basic_string_view&lt;CharT, Traits&gt; s, (3)(since C++ 17)
-
                                                                     CharT delim = CharT('&quot;'),
                        CharT escape = CharT('\'));
-
 template &lt;class CharT, class Traits, class Allocator&gt;
-
 /*unspecified*/ quoted(std::basic_string&lt;CharT, Traits, Allocator&gt; &amp;s, (4)(since C++ 14)
-
                                                                            CharT delim = CharT('&quot;'),
                        CharT escape = CharT('\'));</code></pre>
 <p>Allows insertion and extraction of quoted strings, such as the ones found in CSV or XML.<br />
@@ -64,12 +52,9 @@ escape &#8211; the character to use as the escape character, defaults to \</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;sstream&gt;
 int main()
-
 {
     std::stringstream ss;
     std::string in = &quot;String with spaces, and embedded \&quot;quotes\&quot; too&quot;;

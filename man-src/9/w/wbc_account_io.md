@@ -14,13 +14,13 @@ description: "wbc_account_io – account IO issued during writeback"
 <p><i>wbc</i></p>
 <dl>
 <dd>
-<dd>writeback_control of the writeback in progress</dl>
+</dd><dd>writeback_control of the writeback in progress</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>page being written out</dl>
+<dd>page being written out</dd></dl>
 <p> <i>bytes</i></p>
 <dl>
-<dd>number of bytes being written out</dl>
+<dd>number of bytes being written out</dd></dl>
 <h2>Description</h2>
 <p><i>bytes</i> from <i>page</i> are about to written out during the writeback controlled by <i>wbc</i>. Keep the book for foreign inode detection. See <code>wbc_detach_inode</code>.</p>
 <h2>Copyright</h2>

@@ -15,14 +15,14 @@ mongoc_socket_new (int domain,
  int protocol);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>domain</code></p>
-<dd>An int containing the address family such as AF_INET.</dl>
+<dt><code>domain</code></dt>
+<dd>An int containing the address family such as AF_INET.</dd></dl>
 <dl COMPACT>
-<dt><code>type</code></p>
-<dd>An int containing the socket type such as SOCK_STREAM.</dl>
+<dt><code>type</code></dt>
+<dd>An int containing the socket type such as SOCK_STREAM.</dd></dl>
 <dl COMPACT>
-<dt><code>protocol</code></p>
-<dd>A protocol subset, typically 0.</dl>
+<dt><code>protocol</code></dt>
+<dd>A protocol subset, typically 0.</dd></dl>
 <h2>Description</h2>
 <p>Creates a new <code>mongoc_socket_t</code> structure. This calls <code>socket(3)</code> underneath to create a network socket. </p>
 <h2>Returns</h2>

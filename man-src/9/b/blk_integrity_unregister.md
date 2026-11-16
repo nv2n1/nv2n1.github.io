@@ -15,7 +15,7 @@ blk_integrity_unregister - Unregister block integrity profile
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk whose integrity profile to unregister</dl>
+<dl><dd></dd><dd>disk whose integrity profile to unregister</dd></dl>
 
 <h2>Description</h2>
 

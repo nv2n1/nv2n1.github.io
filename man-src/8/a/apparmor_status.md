@@ -24,43 +24,43 @@ description: "aa-status – display various information about the current AppArm
 <h2>Options</h2>
 <p><code>aa-status</code> accepts only one argument at a time out of:</p>
 <dl>
-<dt>&#8211;enabled</p>
-<dd>returns error code if AppArmor is not enabled.</p>
-<dt>&#8211;profiled</p>
-<dd>displays the number of loaded AppArmor policies.</p>
-<dt>&#8211;enforced</p>
-<dd>displays the number of loaded enforcing AppArmor policies.</p>
-<dt>&#8211;complaining</p>
-<dd>displays the number of loaded non-enforcing AppArmor policies.</p>
-<dt>&#8211;kill</p>
-<dd>displays the number of loaded enforcing AppArmor policies that will kill tasks on policy violations.</p>
-<dt>&#8211;special-unconfined</p>
-<dd>displays the number of loaded non-enforcing AppArmor policies that are in the special unconfined mode.</p>
-<dt>&#8211;process-mixed displays the number of processes confined by profile stacks with profiles in different modes.</p>
+<dt>&#8211;enabled</dt>
+<dd>returns error code if AppArmor is not enabled.</dd>
+<dt>&#8211;profiled</dt>
+<dd>displays the number of loaded AppArmor policies.</dd>
+<dt>&#8211;enforced</dt>
+<dd>displays the number of loaded enforcing AppArmor policies.</dd>
+<dt>&#8211;complaining</dt>
+<dd>displays the number of loaded non-enforcing AppArmor policies.</dd>
+<dt>&#8211;kill</dt>
+<dd>displays the number of loaded enforcing AppArmor policies that will kill tasks on policy violations.</dd>
+<dt>&#8211;special-unconfined</dt>
+<dd>displays the number of loaded non-enforcing AppArmor policies that are in the special unconfined mode.</dd>
+<dt>&#8211;process-mixed displays the number of processes confined by profile stacks with profiles in different modes.</dt>
 <dd>
-<dt>&#8211;verbose</p>
-<dd>displays multiple data points about loaded AppArmor policy set (the default action if no arguments are given).</p>
-<dt>&#8211;json</p>
-<dd>displays multiple data points about loaded AppArmor policy set in a <font SIZE="-1">JSON</font> format, fit for machine consumption.</p>
-<dt>&#8211;pretty-json</p>
-<dd>same as &#8211;json, formatted to be readable by humans as well as by machines.</p>
-<dt>&#8211;help</p>
-<dd>displays a short usage statement.</dl>
+</dd><dt>&#8211;verbose</dt>
+<dd>displays multiple data points about loaded AppArmor policy set (the default action if no arguments are given).</dd>
+<dt>&#8211;json</dt>
+<dd>displays multiple data points about loaded AppArmor policy set in a <font SIZE="-1">JSON</font> format, fit for machine consumption.</dd>
+<dt>&#8211;pretty-json</dt>
+<dd>same as &#8211;json, formatted to be readable by humans as well as by machines.</dd>
+<dt>&#8211;help</dt>
+<dd>displays a short usage statement.</dd></dl>
 <h2>Exit Status</h2>
 <p>Upon exiting, <code>aa-status</code> will set its exit status to the following values:</p>
 <dl>
-<dt><code>0</code></p>
-<dd>if apparmor is enabled and policy is loaded.</p>
-<dt><code>1</code></p>
-<dd>if apparmor is not enabled/loaded.</p>
-<dt><code>2</code></p>
-<dd>if apparmor is enabled but no policy is loaded.</p>
-<dt><code>3</code></p>
-<dd>if the apparmor control files aren&#8217;t available under /sys/kernel/security/.</p>
-<dt><code>4</code></p>
-<dd>if the user running the script doesn&#8217;t have enough privileges to read the apparmor control files.</p>
-<dt><code>42</code></p>
-<dd>if an internal error occurred.</dl>
+<dt><code>0</code></dt>
+<dd>if apparmor is enabled and policy is loaded.</dd>
+<dt><code>1</code></dt>
+<dd>if apparmor is not enabled/loaded.</dd>
+<dt><code>2</code></dt>
+<dd>if apparmor is enabled but no policy is loaded.</dd>
+<dt><code>3</code></dt>
+<dd>if the apparmor control files aren&#8217;t available under /sys/kernel/security/.</dd>
+<dt><code>4</code></dt>
+<dd>if the user running the script doesn&#8217;t have enough privileges to read the apparmor control files.</dd>
+<dt><code>42</code></dt>
+<dd>if an internal error occurred.</dd></dl>
 <h2>Bugs</h2>
 <p><code>aa-status</code> must be run as root to read the state of the loaded policy from the apparmor module. It uses the /proc filesystem to determine which processes are confined and so is susceptible to race conditions. </p>
 <p> If you find any additional bugs, please report them at &lt;<a rel="nofollow" href="https://gitlab.com/apparmor/apparmor/-/issues">https://gitlab.com/apparmor/apparmor/-/issues</a>&gt;.</p>

@@ -23,14 +23,14 @@ Look here for documentation beyond this mini howto:
 <h3>Very short AMT enabling instructions.</h3>
 
 <dl><dt>Enter BIOS Setup.
-<dd>* Enable AMT
-<dt>Enter ME (Management Extention) Setup. Ctrl-P hotkey works for me.
-<dd>* Login, factory default password is &quot;admin&quot;. 
+</dt><dd>* Enable AMT
+</dd><dt>Enter ME (Management Extention) Setup. Ctrl-P hotkey works for me.
+</dt><dd>* Login, factory default password is &quot;admin&quot;. 
  * Change password. Trivial ones don't work, must include upper- and lowercase letters, digits, special characters. 
  * Enable AMT Managment.
-<dt>Reboot, Enter ME Setup again with AMT enabled.
-<dd>* Configure AMT (hostname, network config, ...) 
- * Use SMB (Small Business) management mode. The other one (Enterprise) requires Active Directory Service Infrastructure, you don't want that, at least not for your first steps ...</dl>
+</dd><dt>Reboot, Enter ME Setup again with AMT enabled.
+</dt><dd>* Configure AMT (hostname, network config, ...) 
+ * Use SMB (Small Business) management mode. The other one (Enterprise) requires Active Directory Service Infrastructure, you don't want that, at least not for your first steps ...</dd></dl>
 
 <h3>Testing AMT</h3>
 

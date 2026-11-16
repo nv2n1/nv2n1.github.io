@@ -24,10 +24,8 @@ Manages the associated distribution parameter set.<br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

@@ -10,60 +10,24 @@ description: "QuantLib::AnalyticHestonEngine – analytic Heston-model engine ba
 <p>QuantLib::AnalyticHestonEngine &#8211; analytic Heston-model engine based on Fourier transform </p>
 <h2>Synopsis</h2>
 <pre><code>AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, Real relTolerance, Size maxEvaluations)
-
-
-
 AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, Size integrationOrder=144)
-
-
-
 AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, ComplexLogFormula cpxLog, const Integration &amp;itg)
-
-
-
 void calculate () const
-
-
-
 Size numberOfEvaluations () const
-
-
-
 Static Public Member Functions
 static void doCalculation (Real riskFreeDiscount, Real dividendDiscount, Real spotPrice, Real strikePrice, Real term, Real kappa, Real theta, Real sigma, Real v0, Real rho, const TypePayoff &amp;type, const Integration &amp;integration, const ComplexLogFormula cpxLog, const AnalyticHestonEngine *const enginePtr, Real &amp;value, Size &amp;evaluations)
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>GenericModelEngine&lt; HestonModel, VanillaOption::arguments, VanillaOption::results &gt;</code>. Inherited by <code>AnalyticHestonHullWhiteEngine</code>, BatesDoubleExpEngine, and <code>BatesEngine</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>ComplexLogFormula</code> { <code>Gatheral</code>, <code>BranchCorrection</code> }</p>
 <h3>Public Member Functions</h3>
 <pre><code>AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, Real relTolerance, Size maxEvaluations)
-
-
-
 AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, Size integrationOrder=144)
-
-
-
 AnalyticHestonEngine (const boost::shared_ptr&lt; HestonModel &gt; &amp;model, ComplexLogFormula cpxLog, const Integration &amp;itg)
-
-
-
 void calculate () const
-
-
-
 Size numberOfEvaluations () const
-
-
-
 Static Public Member Functions
 static void doCalculation (Real riskFreeDiscount, Real dividendDiscount, Real spotPrice, Real strikePrice, Real term, Real kappa, Real theta, Real sigma, Real v0, Real rho, const TypePayoff &amp;type, const Integration &amp;integration, const ComplexLogFormula cpxLog, const AnalyticHestonEngine *const enginePtr, Real &amp;value, Size &amp;evaluations)
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual std::complex&lt; Real &gt; <code>addOnTerm</code> (Real phi, Time t, Size j) const</p>
 <h2>Detailed Description</h2>
@@ -77,6 +41,6 @@ Protected Member Functions</code></pre>
 <p> J. Gatheral, The Volatility <code>Surface</code>: A Practitioner&#8217;s Guide, Wiley Finance </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

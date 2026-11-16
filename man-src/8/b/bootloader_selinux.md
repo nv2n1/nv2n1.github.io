@@ -74,14 +74,14 @@ description: "bootloader_selinux – Security Enhanced Linux Policy for the boot
 <p> <code>bootloader_etc_t</code> </p>
 <p> &#8211; Set files with the bootloader_etc_t type, if you want to store bootloader files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/lilo.conf.*, /etc/zipl.conf.*, /etc/yaboot.conf.*, /etc/default/grub </p>
+<dt>Paths:</dt>
+<dd>/etc/lilo.conf.*, /etc/zipl.conf.*, /etc/yaboot.conf.*, /etc/default/grub </dd>
 </dl>
 <p> <code>bootloader_exec_t</code> </p>
 <p> &#8211; Set files with the bootloader_exec_t type, if you want to transition an executable to the bootloader_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/grub.*, /sbin/lilo.*, /sbin/ybin.*, /usr/sbin/grub.*, /usr/sbin/lilo.*, /usr/sbin/ybin.*, /sbin/zipl, /usr/sbin/zipl </p>
+<dt>Paths:</dt>
+<dd>/sbin/grub.*, /sbin/lilo.*, /sbin/ybin.*, /usr/sbin/grub.*, /usr/sbin/lilo.*, /usr/sbin/ybin.*, /sbin/zipl, /usr/sbin/zipl </dd>
 </dl>
 <p> <code>bootloader_tmp_t</code> </p>
 <p> &#8211; Set files with the bootloader_tmp_t type, if you want to store bootloader temporary files in the /tmp directories. </p>

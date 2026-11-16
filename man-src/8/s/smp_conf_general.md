@@ -15,34 +15,34 @@ description: "smp_conf_general – invoke CONFIGURE GENERAL SMP function"
 <h2>Options</h2>
 <p>Mandatory arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;connect</code>=<i>CO</i></p>
-<dd>sets the &quot;update STP maximum connect time limit&quot; flag and the corresponding &quot;STP maximum connect time limit&quot; field to <i>CO</i>. Unit of <i>CO</i> is 100 microseconds. A <i>CO</i> of zero is taken to mean no maximum connection time limit.</p>
-<dt><code>-E</code>, <code>&#8211;expected</code>=<i>EX</i></p>
-<dd>set the &#8216;expected expander change count&#8217; field in the SMP request. The value <i>EX</i> is from 0 to 65535 inclusive with 0 being the default value. When <i>EX</i> is greater than zero then if the value doesn&#8217;t match the expander change count of the SMP target (i.e. the expander) when the request arrives then the target ignores the request and sets a function result of &quot;invalid expander change count&quot; in the response.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;hex</code></p>
-<dd>output the response (less the CRC field) in hexadecimal.</p>
-<dt><code>-i</code>, <code>&#8211;inactivity</code>=<i>IN</i></p>
-<dd>sets the &quot;update STP bus inactivity time limit&quot; flag and the corresponding &quot;STP bus inactivity time limit&quot; field to <i>IN</i>. Unit of <i>IN</i> is 100 microseconds. A <i>IN</i> of zero is taken to mean no bus inactivity time limit.</p>
-<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></p>
-<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</p>
-<dt><code>-n</code>, <code>&#8211;nexus</code>=<i>NE</i></p>
-<dd>sets the &quot;update STP SMP I_T nexus loss time&quot; flag and the corresponding &quot;STP SMP I_T nexus loss time&quot; field to <i>NE</i>. Unit of <i>NE</i> is one millisecond. A <i>NE</i> of zero is taken to mean a vendor specific amount of time; a <i>NE</i> of 65535 means the port shall never recognize an I_T nexus loss.</p>
-<dt><code>-o</code>, <code>&#8211;open</code>=<i>OP</i></p>
-<dd>sets the &quot;update STP reject to open limit&quot; flag and the corresponding &quot;STP reject to open limit&quot; field to <i>OP</i>. Unit of <i>OP</i> is 10 microseconds.</p>
-<dt><code>-p</code>, <code>&#8211;power</code>=<i>PD</i></p>
-<dd>sets the &quot;update power done timeout&quot; flag and the corresponding &quot;power doen timeout&quot; field to <i>PD</i>. Unit of <i>PD</i> is 1 second. A <i>PD</i> value of 0 is interpreted as don&#8217;t change the current value. The maximum value of <i>PD</i> is 255 and means the time limit is vendor specific.</p>
-<dt><code>-r</code>, <code>&#8211;raw</code></p>
-<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</p>
-<dt><code>-R</code>, <code>&#8211;reduced</code>=<i>RE</i></p>
-<dd>sets the &quot;update Initial time to reduced functionality&quot; flag and the corresponding &quot;Initial time to reduced functionality&quot; field to <i>RE</i>. Unit of <i>RE</i> is 100 milliseconds. The maximum permitted <i>RE</i> value is 255 which corresponds to 25.5 seconds.</p>
-<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></p>
-<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the verbosity of the output. Can be used multiple times</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-c</code>, <code>&#8211;connect</code>=<i>CO</i></dt>
+<dd>sets the &quot;update STP maximum connect time limit&quot; flag and the corresponding &quot;STP maximum connect time limit&quot; field to <i>CO</i>. Unit of <i>CO</i> is 100 microseconds. A <i>CO</i> of zero is taken to mean no maximum connection time limit.</dd>
+<dt><code>-E</code>, <code>&#8211;expected</code>=<i>EX</i></dt>
+<dd>set the &#8216;expected expander change count&#8217; field in the SMP request. The value <i>EX</i> is from 0 to 65535 inclusive with 0 being the default value. When <i>EX</i> is greater than zero then if the value doesn&#8217;t match the expander change count of the SMP target (i.e. the expander) when the request arrives then the target ignores the request and sets a function result of &quot;invalid expander change count&quot; in the response.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output the response (less the CRC field) in hexadecimal.</dd>
+<dt><code>-i</code>, <code>&#8211;inactivity</code>=<i>IN</i></dt>
+<dd>sets the &quot;update STP bus inactivity time limit&quot; flag and the corresponding &quot;STP bus inactivity time limit&quot; field to <i>IN</i>. Unit of <i>IN</i> is 100 microseconds. A <i>IN</i> of zero is taken to mean no bus inactivity time limit.</dd>
+<dt><code>-I</code>, <code>&#8211;interface</code>=<i>PARAMS</i></dt>
+<dd>interface specific parameters. In this case &quot;interface&quot; refers to the path through the operating system to the SMP initiator. See the smp_utils man page for more information.</dd>
+<dt><code>-n</code>, <code>&#8211;nexus</code>=<i>NE</i></dt>
+<dd>sets the &quot;update STP SMP I_T nexus loss time&quot; flag and the corresponding &quot;STP SMP I_T nexus loss time&quot; field to <i>NE</i>. Unit of <i>NE</i> is one millisecond. A <i>NE</i> of zero is taken to mean a vendor specific amount of time; a <i>NE</i> of 65535 means the port shall never recognize an I_T nexus loss.</dd>
+<dt><code>-o</code>, <code>&#8211;open</code>=<i>OP</i></dt>
+<dd>sets the &quot;update STP reject to open limit&quot; flag and the corresponding &quot;STP reject to open limit&quot; field to <i>OP</i>. Unit of <i>OP</i> is 10 microseconds.</dd>
+<dt><code>-p</code>, <code>&#8211;power</code>=<i>PD</i></dt>
+<dd>sets the &quot;update power done timeout&quot; flag and the corresponding &quot;power doen timeout&quot; field to <i>PD</i>. Unit of <i>PD</i> is 1 second. A <i>PD</i> value of 0 is interpreted as don&#8217;t change the current value. The maximum value of <i>PD</i> is 255 and means the time limit is vendor specific.</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>send the response (less the CRC field) to stdout in binary. All error messages are sent to stderr.</dd>
+<dt><code>-R</code>, <code>&#8211;reduced</code>=<i>RE</i></dt>
+<dd>sets the &quot;update Initial time to reduced functionality&quot; flag and the corresponding &quot;Initial time to reduced functionality&quot; field to <i>RE</i>. Unit of <i>RE</i> is 100 milliseconds. The maximum permitted <i>RE</i> value is 255 which corresponds to 25.5 seconds.</dd>
+<dt><code>-s</code>, <code>&#8211;sa</code>=<i>SAS_ADDR</i></dt>
+<dd>specifies the SAS address of the SMP target device. Typically this is an expander. This option may not be needed if the <i>SMP_DEVICE</i> has the target&#8217;s SAS address within it. The <i>SAS_ADDR</i> is in decimal but most SAS addresses are shown in hexadecimal. To give a number in hexadecimal either prefix it with &#8216;0x&#8217; or put a trailing &#8216;h&#8217; on it.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the verbosity of the output. Can be used multiple times</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Conforming To</h2>
 <p>The SMP CONFIGURE GENERAL function was introduced in SAS-2 .</p>
 <h2>Authors</h2>

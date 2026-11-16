@@ -10,7 +10,6 @@ description: "umad_open_port – open InfiniBand device port for umad access"
 <p>umad_open_port &#8211; open InfiniBand device port for umad access</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_open_port(char *ca_name, int portnum);</code></pre>
 <h2>Description</h2>
 <p><code>umad_open_port()</code> opens the port <i>portnum</i> of the IB device <i>ca_name</i> for umad access. The port is selected by the library if not all parameters are provided (see <code>umad_get_port()</code> for details).</p>
@@ -23,5 +22,5 @@ int umad_open_port(char *ca_name, int portnum);</code></pre>
 <p><code><a href="/docs/linux/man/3-umad_close_port/">umad_close_port</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_cas_names/">umad_get_cas_names</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_port/">umad_get_port</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

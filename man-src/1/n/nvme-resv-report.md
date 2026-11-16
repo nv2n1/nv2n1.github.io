@@ -36,19 +36,19 @@ nvme resv - report&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Retrieve the reservation report structure for the given nsid. This is required for the character devices, or overrides the block nsid if given.</dl>
+</dt><dd> Retrieve the reservation report structure for the given nsid. This is required for the character devices, or overrides the block nsid if given.</dd></dl>
  
 
  -d &lt;num-dwords&gt;, --numd=&lt;num-dwords&gt;
 <dl>
 <dt>
-<dd> Specify the number of Dwords of the Reservation Status structure to transfer. Defaults to 4k.</dl>
+</dt><dd> Specify the number of Dwords of the Reservation Status structure to transfer. Defaults to 4k.</dd></dl>
  
 
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw buffer to stdout. Structure is not parsed by program.</dl>
+</dt><dd> Print the raw buffer to stdout. Structure is not parsed by program.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

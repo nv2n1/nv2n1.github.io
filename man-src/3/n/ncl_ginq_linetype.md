@@ -13,21 +13,21 @@ description: "ginq_linetype (Inquire line type) – retrieves the current settin
 <p> void ginq_linetype(Gint *err_ind, Gint *linetype);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>linetype</p>
-<dd>(Output) &#8211; Returns the current value for the line type as set by default or by a call to gset_linetype.</p>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired value cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>linetype</dt>
+<dd>(Output) &#8211; Returns the current value for the line type as set by default or by a call to gset_linetype.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>1</p>
-<dd>Solid</p>
-<dt>2</p>
-<dd>Dashed</p>
-<dt>3</p>
-<dd>Dotted</p>
-<dt>4</p>
-<dd>Dot-dash</dl>
+</dd><dl COMPACT>
+<dt>1</dt>
+<dd>Solid</dd>
+<dt>2</dt>
+<dd>Dashed</dd>
+<dt>3</dt>
+<dd>Dotted</dd>
+<dt>4</dt>
+<dd>Dot-dash</dd></dl>
 </dl>
 </dl>
 <h2>Access</h2>

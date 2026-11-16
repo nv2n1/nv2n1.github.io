@@ -22,22 +22,22 @@ description: "ds-logpipe.py – Create and read from a named pipe instead of a l
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>/full/path/to/namedpipe</code></p>
-<dd> Required &#8211; full path and file name of the named pipe. If this does not exist, it will be created. If it exists and is a named pipe, the script will use it. If it exists and is not a pipe, the script will abort. The ownership will be the same as the user running the script (or see the -u option below).</p>
-<dt><code>-m|&#8211;maxlines=N</code></p>
-<dd> Number of lines to buffer &#8211; default is 1000</p>
-<dt><code>-u|&#8211;userid=user</code></p>
-<dd> The pipe and any other files created by the script will be chown()&#8217;d to this userid. This may be a string userid name or a numeric userid value.</p>
-<dt><code>-s|&#8211;serverpidfile=/path/to/servername.pid</code></p>
-<dd> If you want the script to exit when a particular directory server exists, specify the full path to the file containing the server pid. The default is usually something like /var/run/dirsrv/slapd-&lt;instancename&gt;.pid where &lt;instancename&gt; is usually the hostname</p>
-<dt><code>-t|&#8211;servertimeout=N</code></p>
-<dd> Since the serverpidfile may not exist yet when the script is run, the script will wait by default 60 seconds for the pid file to exist and the server to be started. Use this option to specify a different timeout.</p>
-<dt><code>&#8211;serverpid=P</code></p>
-<dd> IF the server you want to track is already running, you can specify it using this argument. If the specified pid is not valid, the script will abort.</p>
-<dt><code>-p|&#8211;plugin=/full/path/to/pluginname.py</code></p>
-<dd> Specify a plugin to use. The plugin must be a python file and must end in <i>.py</i>. It must specify a function called <i>plugin</i> and may specify functions called <i>pre</i> and <i>post</i>.</p>
-<dt><code>pluginname.arg1=value &#8230; pluginname.argN=value</code></p>
-<dd> You can specify arguments to plugins on the command line. If there is a plugin specified as &#8211;plugin=/full/path/to/pluginname.py, the arguments for that plugin are specified as <i>pluginname.argname=value</i>. The script parses these arguments and passes them to the plugin <i>pre</i> function as a python dict. IF there is more than one argument named <i>pluginname.argname</i> the values are passed as a python list.</dl>
+<dt><code>/full/path/to/namedpipe</code></dt>
+<dd> Required &#8211; full path and file name of the named pipe. If this does not exist, it will be created. If it exists and is a named pipe, the script will use it. If it exists and is not a pipe, the script will abort. The ownership will be the same as the user running the script (or see the -u option below).</dd>
+<dt><code>-m|&#8211;maxlines=N</code></dt>
+<dd> Number of lines to buffer &#8211; default is 1000</dd>
+<dt><code>-u|&#8211;userid=user</code></dt>
+<dd> The pipe and any other files created by the script will be chown()&#8217;d to this userid. This may be a string userid name or a numeric userid value.</dd>
+<dt><code>-s|&#8211;serverpidfile=/path/to/servername.pid</code></dt>
+<dd> If you want the script to exit when a particular directory server exists, specify the full path to the file containing the server pid. The default is usually something like /var/run/dirsrv/slapd-&lt;instancename&gt;.pid where &lt;instancename&gt; is usually the hostname</dd>
+<dt><code>-t|&#8211;servertimeout=N</code></dt>
+<dd> Since the serverpidfile may not exist yet when the script is run, the script will wait by default 60 seconds for the pid file to exist and the server to be started. Use this option to specify a different timeout.</dd>
+<dt><code>&#8211;serverpid=P</code></dt>
+<dd> IF the server you want to track is already running, you can specify it using this argument. If the specified pid is not valid, the script will abort.</dd>
+<dt><code>-p|&#8211;plugin=/full/path/to/pluginname.py</code></dt>
+<dd> Specify a plugin to use. The plugin must be a python file and must end in <i>.py</i>. It must specify a function called <i>plugin</i> and may specify functions called <i>pre</i> and <i>post</i>.</dd>
+<dt><code>pluginname.arg1=value &#8230; pluginname.argN=value</code></dt>
+<dd> You can specify arguments to plugins on the command line. If there is a plugin specified as &#8211;plugin=/full/path/to/pluginname.py, the arguments for that plugin are specified as <i>pluginname.argname=value</i>. The script parses these arguments and passes them to the plugin <i>pre</i> function as a python dict. IF there is more than one argument named <i>pluginname.argname</i> the values are passed as a python list.</dd></dl>
 <h2>DIRECTORY SERVER NOTES</h2>
 <p> The directory server will usually need to be configured to log to the named pipe instead of the usual log file. For example, use the following LDIF to tell the server to use the file <i>access.pipe</i> for the access log:<br />
 &nbsp;<wbr>dn: cn=config<br />

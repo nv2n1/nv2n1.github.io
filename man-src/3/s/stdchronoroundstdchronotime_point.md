@@ -11,10 +11,8 @@ std::chrono::round(std::chrono::time_point) - std::chrono::round(std::chrono::ti
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Clock, class Duration&gt;
     (since C++ 17)
-
         constexpr time_point&lt;Clock, ToDuration&gt; round(const time_point&lt;Clock, Duration&gt; &amp;tp);</code></pre> 
 Returns the nearest time point to tp representable in ToDuration, rounding to even in halfway cases. 
 The function does not participate in the overload resolution unless ToDuration is an specialization of std::chrono::duration and std::chrono::treat_as_floating_point&lt;typename ToDuration::rep&gt;::value is false. 

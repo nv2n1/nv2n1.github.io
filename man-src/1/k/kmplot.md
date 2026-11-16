@@ -11,17 +11,17 @@ description: "kmplot – mathematical function plotter"
 <p> kmplot &#8211; mathematical function plotter</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kmplot</code> [<i>file</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </p>
+<dt> <code>kmplot</code> [<i>file</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>KmPlot is a mathematical function plotter for KDE. It has a powerful built-in parser. You can plot different functions simultaneously and combine them to build new functions. </p>
+<dd>KmPlot is a mathematical function plotter for KDE. It has a powerful built-in parser. You can plot different functions simultaneously and combine them to build new functions. </dd>
 <p> KmPlot supports parametric functions and functions in polar coordinates. Several grid modes are supported. Plots may be printed with high precision in the correct scale. </p>
 <p> KmPlot also provides some numerical and visual features, like filling and calculating the area between the plot and the first axis, finding maximum and minimum values, changing function parameters dynamically and plotting derivatives and integral functions. </p>
 <p> KmPlot is part of the KDE edutainment module. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>file</i></p>
-<dd> File to open </p>
+<dt><i>file</i></dt>
+<dd> File to open </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from <i>help:/kmplot</i> (either enter this URL into Konqueror, or run <code>khelpcenter</code> <i>help:/kmplot</i>). </p>

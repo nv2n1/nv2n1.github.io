@@ -14,8 +14,8 @@ const char *
 <code>Tcl_Concat</code>(<i>argc, argv</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>argc</i> (in) Number of strings.</p>
-<dd>const char *const <i>argv[]</i> (in) Array of strings to concatenate. Must have <i>argc</i> entries. </p>
+<dd>int <i>argc</i> (in) Number of strings.</dd>
+<dd>const char *const <i>argv[]</i> (in) Array of strings to concatenate. Must have <i>argc</i> entries. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_Concat</code> is a utility procedure used by several of the Tcl commands. Given a collection of strings, it concatenates them together into a single string, with the original strings separated by spaces. This procedure behaves differently than <code>Tcl_Merge</code>, in that the arguments are simply concatenated: no effort is made to ensure proper list structure. However, in most common usage the arguments will all be proper lists themselves; if this is true, then the result will also have proper list structure. </p>

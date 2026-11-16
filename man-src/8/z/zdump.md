@@ -14,26 +14,27 @@ description: "zdump – timezone dumper"
 <p>ds &#8211; &#8211; The <code>zdump</code> program prints the current time in each <i>timezone</i> named on the command line.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>version</code></p>
-<dd>Output version information and exit.</p>
-<dt><code>help</code></p>
-<dd>Output short usage message and exit.</p>
-<dt><code>i</code></p>
-<dd>Output a description of time intervals. For each <i>timezone</i> on the command line, output an interval-format description of the timezone. See below.</p>
-<dt><code>v</code></p>
-<dd>Output a verbose description of time intervals. For each <i>timezone</i> on the command line, print the time at the lowest possible time value, the time one day after the lowest possible time value, the times both one second before and exactly at each detected time discontinuity, the time at one day less than the highest possible time value, and the time at the highest possible time value. Each line is followed by <code>isdst=</code><i>D</i> where <i>D</i> is positive, zero, or negative depending on whether the given time is daylight saving time, standard time, or an unknown time type, respectively. Each line is also followed by <code>gmtoff=</code><i>N</i> if the given local time is known to be <i>N</i> seconds east of Greenwich.</p>
-<dt><code>V</code></p>
-<dd>Like <code>v</code>, except omit the times relative to the extreme time values. This generates output that is easier to compare to that of implementations with different time representations.</p>
-<dt><code>c </code><i></i>[<i>loyear</i><code>,</code><i></i>]<i>hiyear</i></p>
-<dd>Cut off interval output at the given year(s). Cutoff times are computed using the proleptic Gregorian calendar with year 0 and with Universal Time (UT) ignoring leap seconds. Cutoffs are at the start of each year, where the lower-bound timestamp is exclusive and the upper is inclusive; for example, <code>c 1970,2070</code> selects transitions after 1970-01-01 00:00:00 UTC and on or before 2070-01-01 00:00:00 UTC. The default cutoff is <code>500,2500</code>.</p>
-<dt><code>t </code><i></i>[<i>lotime</i><code>,</code><i></i>]<i>hitime</i></p>
-<dd>Cut off interval output at the given time(s), given in decimal seconds since 1970-01-01 00:00:00 Coordinated Universal Time (UTC). The <i>timezone</i> determines whether the count includes leap seconds. As with <code>c</code>, the cutoff&#8217;s lower bound is exclusive and its upper bound is inclusive.</dl>
+<dt><code>version</code></dt>
+<dd>Output version information and exit.</dd>
+<dt><code>help</code></dt>
+<dd>Output short usage message and exit.</dd>
+<dt><code>i</code></dt>
+<dd>Output a description of time intervals. For each <i>timezone</i> on the command line, output an interval-format description of the timezone. See below.</dd>
+<dt><code>v</code></dt>
+<dd>Output a verbose description of time intervals. For each <i>timezone</i> on the command line, print the time at the lowest possible time value, the time one day after the lowest possible time value, the times both one second before and exactly at each detected time discontinuity, the time at one day less than the highest possible time value, and the time at the highest possible time value. Each line is followed by <code>isdst=</code><i>D</i> where <i>D</i> is positive, zero, or negative depending on whether the given time is daylight saving time, standard time, or an unknown time type, respectively. Each line is also followed by <code>gmtoff=</code><i>N</i> if the given local time is known to be <i>N</i> seconds east of Greenwich.</dd>
+<dt><code>V</code></dt>
+<dd>Like <code>v</code>, except omit the times relative to the extreme time values. This generates output that is easier to compare to that of implementations with different time representations.</dd>
+<dt><code>c </code><i></i>[<i>loyear</i><code>,</code><i></i>]<i>hiyear</i></dt>
+<dd>Cut off interval output at the given year(s). Cutoff times are computed using the proleptic Gregorian calendar with year 0 and with Universal Time (UT) ignoring leap seconds. Cutoffs are at the start of each year, where the lower-bound timestamp is exclusive and the upper is inclusive; for example, <code>c 1970,2070</code> selects transitions after 1970-01-01 00:00:00 UTC and on or before 2070-01-01 00:00:00 UTC. The default cutoff is <code>500,2500</code>.</dd>
+<dt><code>t </code><i></i>[<i>lotime</i><code>,</code><i></i>]<i>hitime</i></dt>
+<dd>Cut off interval output at the given time(s), given in decimal seconds since 1970-01-01 00:00:00 Coordinated Universal Time (UTC). The <i>timezone</i> determines whether the count includes leap seconds. As with <code>c</code>, the cutoff&#8217;s lower bound is exclusive and its upper bound is inclusive.</dd></dl>
 <h2>Interval Format</h2>
 <p>The interval format is a compact text representation that is intended to be both human- and machine-readable. It consists of an empty line, then a line where <i>string</i> is a double-quoted string giving the timezone, a second line describing the time interval before the first transition if any, and zero or more following lines one line for each transition time and following interval. Fields are separated by single tabs. </p>
 <p> Dates are in <i>yyyy</i>&#8211;<i>mm</i>&#8211;<i>dd</i> format and times are in 24-hour <i>hh</i>:<i>mm</i>:<i>ss</i> format where <i>hh</i>&lt;24. Times are in local time immediately after the transition. A time interval description consists of a UT offset in signed &plusmn;<i>hhmmss</i> format, a time zone abbreviation, and an isdst flag. An abbreviation that equals the UT offset is omitted; other abbreviations are double-quoted strings unless they consist of one or more alphabetic characters. An isdst flag is omitted for standard time, and otherwise is a decimal integer that is unsigned and positive (typically 1) for daylight saving time and negative for unknown. </p>
 <p> In times and in UT offsets with absolute value less than 100 hours, the seconds are omitted if they are zero, and the minutes are also omitted if they are also zero. Positive UT offsets are east of Greenwich. The UT offset 00 denotes a UT placeholder in areas where the actual offset is unspecified; by convention, this occurs when the UT offset is zero and the time zone abbreviation begins with or is </p>
 <p> In double-quoted strings, escape sequences represent unusual characters. The escape sequences are \s for space, and \&quot;, \, , 
-, , 	, and  with their usual meaning in the C programming language. E.g., the double-quoted string &#8221; &quot;CET\s\&quot;\&quot;&#8221; represents the character sequence &#8221; CET &quot;\&#8221; .</p>
+, 
+, 	, and  with their usual meaning in the C programming language. E.g., the double-quoted string &#8221; &quot;CET\s\&quot;\&quot;&#8221; represents the character sequence &#8221; CET &quot;\&#8221; .</p>
 <p> Here is an example of the output, with the leading empty line omitted. (This example is shown with tab stops set far enough apart so that the tabbed columns line up.) </p>
 <pre>TZ=&quot;Pacific/Honolulu&quot;
 - - -103126 LMT

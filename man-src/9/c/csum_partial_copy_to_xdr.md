@@ -15,11 +15,11 @@ csum_partial_copy_to_xdr - checksum and copy data
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>target XDR buffer</dl>
+<dl><dd></dd><dd>target XDR buffer</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>source skb</dl>
+<dl><dd>source skb</dd></dl>
 
 <h2>Description</h2>
 

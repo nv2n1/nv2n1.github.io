@@ -16,18 +16,18 @@ description: "t1mac – translate a PFA or PFB PostScript Type 1 font into Macin
 <p> WARNING: The output of <code>t1mac</code> is not sufficient to use the font, since Macintoshes can&#8217;t read raw Type 1 fonts. You will need to create a font suitcase containing bitmap fonts if you do not have such a suitcase for the font already. <code>t1mac</code> cannot help you do this.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;raw</code>, <code>-r</code></p>
-<dd> Indicates that output should be a raw resource fork.</p>
-<dt><code>&#8211;macbinary</code></p>
-<dd> Indicates that output should be in MacBinary I or II format. This is the default.</p>
-<dt><code>&#8211;applesingle</code></p>
-<dd> Indicates that output should be in AppleSingle format.</p>
-<dt><code>&#8211;appledouble</code></p>
-<dd> Indicates that output should be in AppleDouble format.</p>
-<dt><code>&#8211;binhex</code></p>
-<dd> Indicates that output should be in BinHex 4.0 format.</p>
-<dt><code>&#8211;filename</code>=<i>name</i>, <code>-n</code> <i>name</i></p>
-<dd> Sets the Macintosh filename of the output font to <i>name</i>. The default is to construct the filename from the font&#8217;s name using established Macintosh conventions. This option is not useful when output is a raw resource fork.</dl>
+<dt><code>&#8211;raw</code>, <code>-r</code></dt>
+<dd> Indicates that output should be a raw resource fork.</dd>
+<dt><code>&#8211;macbinary</code></dt>
+<dd> Indicates that output should be in MacBinary I or II format. This is the default.</dd>
+<dt><code>&#8211;applesingle</code></dt>
+<dd> Indicates that output should be in AppleSingle format.</dd>
+<dt><code>&#8211;appledouble</code></dt>
+<dd> Indicates that output should be in AppleDouble format.</dd>
+<dt><code>&#8211;binhex</code></dt>
+<dd> Indicates that output should be in BinHex 4.0 format.</dd>
+<dt><code>&#8211;filename</code>=<i>name</i>, <code>-n</code> <i>name</i></dt>
+<dd> Sets the Macintosh filename of the output font to <i>name</i>. The default is to construct the filename from the font&#8217;s name using established Macintosh conventions. This option is not useful when output is a raw resource fork.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>AUTHORS</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>

@@ -27,10 +27,10 @@ description: "parport – representation of a parallel port"
  * if that has any meaning, or NULL. */
  const char *filename;
 };</pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p><code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2001-2003 Tim Waugh</p>

@@ -10,15 +10,9 @@ description: "ql/time/weekday.hpp – Weekday enumeration."
 <p>ql/time/weekday.hpp &#8211; Weekday enumeration. </p>
 <h2>Synopsis</h2>
 <pre><code>enum Weekday { Sunday =  1, Monday =  2, Tuesday =  3, Wednesday =  4, Thursday =  5, Friday =  6, Saturday =  7, Sun =  1, Mon =  2, Tue =  3, Wed =  4, Thu =  5, Fri =  6, Sat =  7 }
-
-
-
 Functions</code></pre>
 <h3>Enumerations</h3>
 <pre><code>enum Weekday { Sunday =  1, Monday =  2, Tuesday =  3, Wednesday =  4, Thursday =  5, Friday =  6, Saturday =  7, Sun =  1, Mon =  2, Tue =  3, Wed =  4, Thu =  5, Fri =  6, Sat =  7 }
-
-
-
 Functions</code></pre>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const long_weekday_holder &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const short_weekday_holder &amp;) </p>

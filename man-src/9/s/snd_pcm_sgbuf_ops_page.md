@@ -14,10 +14,10 @@ description: "snd_pcm_sgbuf_ops_page – get the page struct at the given offset
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the pcm substream instance</dl>
+</dd><dd>the pcm substream instance</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>the buffer offset</dl>
+<dd>the buffer offset</dd></dl>
 <h2>Description</h2>
 <p>Used as the page callback of PCM ops.</p>
 <h2>Return</h2>

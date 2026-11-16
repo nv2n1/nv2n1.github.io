@@ -19,21 +19,21 @@ description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 <p> ldns_status ldns_wire2dname(ldns_rdf **dname, const uint8_t *wire, size_t max, size_t *pos); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_wire2rr</i>()</p>
-<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS resource record. This function will initialize and allocate memory space for the rr structure. The length of the wiredata of this rr is added to the *pos value. </p>
+<dt> <i>ldns_wire2rr</i>()</dt>
+<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS resource record. This function will initialize and allocate memory space for the rr structure. The length of the wiredata of this rr is added to the *pos value. </dd>
 <p> .br <code>rr</code>: pointer to the structure to hold the rdata value .br <code>wire</code>: pointer to the buffer with the data .br <code>max</code>: the length of the data buffer (in bytes) .br <code>pos</code>: the position of the rr in the buffer (ie. the number of bytes from the start of the buffer) .br <code>section</code>: the section in the packet the rr is meant for .br Returns LDNS_STATUS_OK if everything succeeds, error otherwise</dl>
 <dl>
-<dt> <i>ldns_wire2pkt</i>()</p>
-<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS packet. This function will initialize and allocate memory space for the packet structure. </p>
+<dt> <i>ldns_wire2pkt</i>()</dt>
+<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS packet. This function will initialize and allocate memory space for the packet structure. </dd>
 <p> .br <code>packet</code>: pointer to the structure to hold the packet .br <code>data</code>: pointer to the buffer with the data .br <code>len</code>: the length of the data buffer (in bytes) .br Returns LDNS_STATUS_OK if everything succeeds, error otherwise</dl>
 <dl>
-<dt> <i>ldns_wire2rdf</i>()</p>
-<dd>converts the data on the uint8_t bytearray (in wire format) to DNS rdata fields, and adds them to the list of rdfs of the given rr. This function will initialize and allocate memory space for the dname structures. The length of the wiredata of these rdfs is added to the *pos value. </p>
+<dt> <i>ldns_wire2rdf</i>()</dt>
+<dd>converts the data on the uint8_t bytearray (in wire format) to DNS rdata fields, and adds them to the list of rdfs of the given rr. This function will initialize and allocate memory space for the dname structures. The length of the wiredata of these rdfs is added to the *pos value. </dd>
 <p> All rdfs belonging to the RR are read; the rr should have no rdfs yet. An error is returned if the format cannot be parsed. </p>
 <p> .br <code>rr</code>: pointer to the ldns_rr structure to hold the rdata value .br <code>wire</code>: pointer to the buffer with the data .br <code>max</code>: the length of the data buffer (in bytes) .br <code>pos</code>: the position of the rdf in the buffer (ie. the number of bytes from the start of the buffer) .br Returns LDNS_STATUS_OK if everything succeeds, error otherwise</dl>
 <dl>
-<dt> <i>ldns_wire2dname</i>()</p>
-<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS dname rdata field. This function will initialize and allocate memory space for the dname structure. The length of the wiredata of this rdf is added to the *pos value. </p>
+<dt> <i>ldns_wire2dname</i>()</dt>
+<dd>converts the data on the uint8_t bytearray (in wire format) to a DNS dname rdata field. This function will initialize and allocate memory space for the dname structure. The length of the wiredata of this rdf is added to the *pos value. </dd>
 <p> .br <code>dname</code>: pointer to the structure to hold the rdata value .br <code>wire</code>: pointer to the buffer with the data .br <code>max</code>: the length of the data buffer (in bytes) .br <code>pos</code>: the position of the rdf in the buffer (ie. the number of bytes from the start of the buffer) .br Returns LDNS_STATUS_OK if everything succeeds, error otherwise</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -47,3 +47,4 @@ description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

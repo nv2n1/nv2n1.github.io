@@ -17,8 +17,8 @@ description: "newaliases – rebuild the data base for the mail aliases file"
 <p> Notice: do <code>not</code> use <code>makemap</code> to create the aliases data base, because <code>newaliases</code> puts a special token into the data base that is required by <code>sendmail.</code></p>
 <h2>Files</h2>
 <dl COMPACT>
-<dt>/etc/aliases</p>
-<dd>The mail aliases file</dl>
+<dt>/etc/aliases</dt>
+<dd>The mail aliases file</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-aliases/">aliases</a>(5), sendmail(8)</p>
 <h2>History</h2>

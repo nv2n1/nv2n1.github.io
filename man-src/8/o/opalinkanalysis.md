@@ -14,143 +14,143 @@ description: "opalinkanalysis"
 <p>opalinkanalysis [-U] [-t <i>portsfile</i>] [-p <i>ports</i>] [-T <i>topology_input</i>] [-X <i>snapshot_input</i>] [-x <i>snapshot_suffix</i>] [-c <i>file</i>] reports &#8230;</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-U</p>
-<dd>Omits unexpected devices and links in punchlist file from verify reports. </p>
-<dt>-t <i>portsfile</i></p>
-<dd>File with list of local HFI ports used to access fabric(s) for analysis, default is /etc/sysconfig/opa/ports. </p>
-<dt>-p <i>ports</i></p>
-<dd>List of local HFI ports used to access fabric(s) for analysis. The default is the first active port. The first HFI in the system is 1. The first port on an HFI is 1. </p>
-<dd>Uses the format hfi:port, for example:</p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-U</dt>
+<dd>Omits unexpected devices and links in punchlist file from verify reports. </dd>
+<dt>-t <i>portsfile</i></dt>
+<dd>File with list of local HFI ports used to access fabric(s) for analysis, default is /etc/sysconfig/opa/ports. </dd>
+<dt>-p <i>ports</i></dt>
+<dd>List of local HFI ports used to access fabric(s) for analysis. The default is the first active port. The first HFI in the system is 1. The first port on an HFI is 1. </dd>
+<dd>Uses the format hfi:port, for example:</dd>
 <dl>
 <dd>
-<dl>
-<dd>0:0 First active port in system. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>0:y Port <i>y</i> within system. </p>
+</dd><dl>
+<dd>0:0 First active port in system. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>x:0 First active port on HFI <i>x</i>. </p>
+</dd><dl>
+<dd>0:y Port <i>y</i> within system. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>x:0 First active port on HFI <i>x</i>. </dd>
+</dl>
+</dl>
 <dl>
-<dd>x:y HFI <i>x</i>, port <i>y</i>. </p>
+<dd>
+</dd><dl>
+<dd>x:y HFI <i>x</i>, port <i>y</i>. </dd>
 </dl>
 </dl>
-<dt>-T <i>topology_input</i></p>
-<dd>Name of a topology input file to use. Any #8217#160; %P markers in this filename are replaced with the hfi:port being operated on (such as 0:0 or 1:2). Default is /etc/sysconfig/opa/topology.%P.xml. If NONE is specified, does not use any topology_input files. See <i>opareport</i> for more information on topology_input files. </p>
-<dt>-X <i>snapshot_input</i></p>
-<dd>Performs analysis using data in <i>snapshot_input</i>. <i>snapshot_input</i> must have been generated via a previous opareport -o snapshot run. If an errors report is specified, snapshot must have been generated with the opareport -s option. When this option is used, only one port may be specified to select a topology_input file (unless -T specified). When this option is used, clearerrors and clearhwerrors reports are not permitted. </p>
-<dt>-x <i>snapshot_suffix</i></p>
-<dd>Creates a snapshot file per selected port. The files are created in FF_RESULT_DIR with names of the form: snapshotSUFFIX. <i>HFI:PORT</i>.xml. </p>
-<dt>-c <i>file</i></p>
-<dd>Error thresholds configuration file. The default is /etc/sysconfig/opa/opamon.si.conf. </p>
+<dt>-T <i>topology_input</i></dt>
+<dd>Name of a topology input file to use. Any #8217#160; %P markers in this filename are replaced with the hfi:port being operated on (such as 0:0 or 1:2). Default is /etc/sysconfig/opa/topology.%P.xml. If NONE is specified, does not use any topology_input files. See <i>opareport</i> for more information on topology_input files. </dd>
+<dt>-X <i>snapshot_input</i></dt>
+<dd>Performs analysis using data in <i>snapshot_input</i>. <i>snapshot_input</i> must have been generated via a previous opareport -o snapshot run. If an errors report is specified, snapshot must have been generated with the opareport -s option. When this option is used, only one port may be specified to select a topology_input file (unless -T specified). When this option is used, clearerrors and clearhwerrors reports are not permitted. </dd>
+<dt>-x <i>snapshot_suffix</i></dt>
+<dd>Creates a snapshot file per selected port. The files are created in FF_RESULT_DIR with names of the form: snapshotSUFFIX. <i>HFI:PORT</i>.xml. </dd>
+<dt>-c <i>file</i></dt>
+<dd>Error thresholds configuration file. The default is /etc/sysconfig/opa/opamon.si.conf. </dd>
 <dt>
-&nbsp;<wbr><i>reports</i>&nbsp;<wbr></p>
-<dd>The following reports are supported:</p>
+&nbsp;<wbr><i>reports</i>&nbsp;<wbr></dt>
+<dd>The following reports are supported:</dd>
 <dl>
 <dd>
-<dl>
-<dd>errors Link error analysis. </p>
-</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>slowlinks Links running slower than expected. </p>
+</dd><dl>
+<dd>errors Link error analysis. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>misconfiglinks Links configured to run slower than supported. </p>
+</dd><dl>
+<dd>slowlinks Links running slower than expected. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>misconnlinks Links connected with mismatched speed potential. </p>
+</dd><dl>
+<dd>misconfiglinks Links configured to run slower than supported. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>all Includes all reports above. (errors, slowlinks, misconfiglinks, and misconnlinks) </p>
+</dd><dl>
+<dd>misconnlinks Links connected with mismatched speed potential. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifylinks Verifies links against topology input. </p>
+</dd><dl>
+<dd>all Includes all reports above. (errors, slowlinks, misconfiglinks, and misconnlinks) </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifyextlinks Verifies links against topology input. Limit analysis to links external to systems. </p>
+</dd><dl>
+<dd>verifylinks Verifies links against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifyfis Verifies FIs against topology input. </p>
+</dd><dl>
+<dd>verifyextlinks Verifies links against topology input. Limit analysis to links external to systems. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifysws Verifies switches against topology input.</dl>
-</dl>
-<dl>
-<dd>
-<dl>
-<dd>verifyrtrs Verifies routers against topology input. </p>
+</dd><dl>
+<dd>verifyfis Verifies FIs against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>verifysws Verifies switches against topology input.</dd></dl>
+</dl>
 <dl>
-<dd>verifynodes Verifies FIs, switches, and routers against topology input. </p>
+<dd>
+</dd><dl>
+<dd>verifyrtrs Verifies routers against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifysms Verifies SMs against topology input. </p>
+</dd><dl>
+<dd>verifynodes Verifies FIs, switches, and routers against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>verifyall Verifies links, FIs, switches, routers, and SMs against topology input. </p>
+</dd><dl>
+<dd>verifysms Verifies SMs against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>clearerrors Clears error counters, uses PM if available. </p>
+</dd><dl>
+<dd>verifyall Verifies links, FIs, switches, routers, and SMs against topology input. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dd>clearhwerrors Clears hardware error counters, bypasses PM. </p>
+</dd><dl>
+<dd>clearerrors Clears error counters, uses PM if available. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
+</dd><dl>
+<dd>clearhwerrors Clears hardware error counters, bypasses PM. </dd>
+</dl>
+</dl>
 <dl>
-<dd>clear Includes clearerrors and clearhwerrors. </p>
+<dd>
+</dd><dl>
+<dd>clear Includes clearerrors and clearhwerrors. </dd>
 </dl>
 </dl>
 </dl>
@@ -162,10 +162,10 @@ description: "opalinkanalysis"
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>PORTS</code></p>
-<dd>List of ports, used in absence of -t and -p. </p>
-<dt><code>PORTS_FILE</code></p>
-<dd>File containing list of ports, used in absence of -t and -p. </p>
-<dt><code>FF_TOPOLOGY_FILE</code></p>
-<dd>File containing <i>topology_input</i>, used in absence of -T. </p>
+<dt><code>PORTS</code></dt>
+<dd>List of ports, used in absence of -t and -p. </dd>
+<dt><code>PORTS_FILE</code></dt>
+<dd>File containing list of ports, used in absence of -t and -p. </dd>
+<dt><code>FF_TOPOLOGY_FILE</code></dt>
+<dd>File containing <i>topology_input</i>, used in absence of -T. </dd>
 </dl>

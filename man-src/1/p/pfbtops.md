@@ -16,10 +16,10 @@ description: "pfbtops – translate Printer Font Binary files to PostScript ASCI
 <p> The resulting ASCII format PostScript font can be used with groff, if it is first listed in <i>/usr/:share/:groff/:1.22.4/:font/:devps/:download</i> and <i>/usr/:share/:groff/:1.22.4/:font/:devpdf/:download</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display a usage message and exit.</p>
-<dt><code>-v</code></p>
-<dd> <code>&#8211;version</code> Display version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a usage message and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> <code>&#8211;version</code> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-grops/">grops</a></i>(1), <i><a href="/docs/linux/man/1-gropdf/">gropdf</a></i>(1) </p>
 <h2>Index</h2>

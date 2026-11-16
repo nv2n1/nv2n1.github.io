@@ -15,7 +15,7 @@ tcpcryptd [options]
 <h2>Options</h2>
 
 A list of all options is produced by:
-<dl><dd>tcpcryptd -h</dl>
+<dl><dd>tcpcryptd -h</dd></dl>
  
 
  Configuration of packet-diversion rules allows the system administrator to control which TCP connections are protected by tcpcryptd. The daemon receives packets for transformation via a &quot;divert port&quot;, configurable with -p port. 

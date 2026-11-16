@@ -11,11 +11,8 @@ description: "ql/pricingengines/forward/replicatingvarianceswapengine.hpp – Re
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instruments/varianceswap.hpp&gt;
-
 #include &lt;ql/instruments/europeanoption.hpp&gt;
-
 #include &lt;ql/pricingengines/vanilla/analyticeuropeanengine.hpp&gt;
-
 #include &lt;ql/exercise.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>ReplicatingVarianceSwapEngine</code><br />

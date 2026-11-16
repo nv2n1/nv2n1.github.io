@@ -11,51 +11,22 @@ description: "sc::UHF –"
 <p> This provides an unrestricted Hartree-Fock implementation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;uhf.h&gt;</code></pre>
 <p> Inherits <code>sc::UnrestrictedSCF</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>UHF (StateIn &amp;)
-
-
-
 UHF (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The UHF KeyVal constructor reads no keywords.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 void two_body_energy (double &amp;ec, double &amp;ex)
-
-
-
 int value_implemented () const
-
-
 Information about the availability of values, gradients, and hessians.
-
-
 int gradient_implemented () const
-
-
-
 Protected Member Functions
 void ao_fock (double accuracy)
-
-
-
 void two_body_deriv (double *)</code></pre>
 <h2>Detailed Description</h2>
 <p>This provides an unrestricted Hartree-Fock implementation.</p>

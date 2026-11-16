@@ -20,72 +20,72 @@ description: "pnmtopclxl – convert a PNM image to an HP LaserJet PCL XL printe
 <p> The output goes to Standard Output. All of the pages go to one file, concatenated in the same order as the input images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-dpi=</code><i>N</i></p>
-<dd> This option selects the resolution of the image (not the printer!). <i>N</i> is the resolution in dots per inch, from 1 to 65535. The default is 300. </p>
-<dt><code>-xoffs=</code><i>N</i></p>
-<dd> This option and <code>-yoffs</code> determine the location on the page of the upper left corner of each image. Note that the image may have built in borders too, which would make the main image within more left and down that what you specify here. </p>
+<dt><code>-dpi=</code><i>N</i></dt>
+<dd> This option selects the resolution of the image (not the printer!). <i>N</i> is the resolution in dots per inch, from 1 to 65535. The default is 300. </dd>
+<dt><code>-xoffs=</code><i>N</i></dt>
+<dd> This option and <code>-yoffs</code> determine the location on the page of the upper left corner of each image. Note that the image may have built in borders too, which would make the main image within more left and down that what you specify here. </dd>
 <p> <code>-xoffs</code> and <code>-yoffs</code> specify the distance from the left of the page and from the top of the page, respectively, in inches, of the upper left corner of the image. The default for each is zero. </p>
 <p> These options are meaningless if you specify <code>-center</code>. </p>
-<dt><code>-yoffs</code> <i>N</i></p>
-<dd> See <code>-xoffs</code>. </p>
-<dt><code>-center</code></p>
-<dd> This option tells <code>pnmtopclxl</code> to center each image on the page. If you don&#8217;t specify this option, the position of an image on the page is determined by <code>-xoffs</code> and <code>-yoffs</code> (or their defaults). </p>
-<dt><code>-duplex=</code>{<code>vertical</code>|<code>horizontal</code>}</p>
-<dd> This option causes <code>pnmtopclxl</code> to create a printer stream that prints pages on both sides of the sheet of paper. <code>vertical</code> means to print them so that the left edge of both pages is on the same edge of the sheet, while <code>horizontal</code> means the more usual duplexing where the top of both pages is on the same edge of the sheet. </p>
-<dt><code>-format=</code><i>paperformat</i></p>
-<dd> This option selects the media (e.g. paper size) that the printer control stream specifies. <i>paperformat</i> is one of the following self-explanatory keywords: </p>
-<dt>&bull;</p>
-<dd> letter</p>
-<dt>&bull;</p>
-<dd> legal</p>
-<dt>&bull;</p>
-<dd> a3</p>
-<dt>&bull;</p>
-<dd> a4</p>
-<dt>&bull;</p>
-<dd> a5</p>
-<dt>&bull;</p>
-<dd> a6</p>
-<dt>&bull;</p>
-<dd> jb4</p>
-<dt>&bull;</p>
-<dd> jb5</p>
-<dt>&bull;</p>
-<dd> jb6</p>
-<dt>&bull;</p>
-<dd> exec</p>
-<dt>&bull;</p>
-<dd> ledger</p>
-<dt>&bull;</p>
-<dd> b5envelope</p>
-<dt>&bull;</p>
-<dd> c5envelope</p>
-<dt>&bull;</p>
-<dd> com10envelope</p>
-<dt>&bull;</p>
-<dd> monarchenvelope</p>
-<dt>&bull;</p>
-<dd> dlenvelope</p>
-<dt>&bull;</p>
-<dd> jpostcard</p>
-<dt>&bull;</p>
-<dd> jdoublepostcard </p>
+<dt><code>-yoffs</code> <i>N</i></dt>
+<dd> See <code>-xoffs</code>. </dd>
+<dt><code>-center</code></dt>
+<dd> This option tells <code>pnmtopclxl</code> to center each image on the page. If you don&#8217;t specify this option, the position of an image on the page is determined by <code>-xoffs</code> and <code>-yoffs</code> (or their defaults). </dd>
+<dt><code>-duplex=</code>{<code>vertical</code>|<code>horizontal</code>}</dt>
+<dd> This option causes <code>pnmtopclxl</code> to create a printer stream that prints pages on both sides of the sheet of paper. <code>vertical</code> means to print them so that the left edge of both pages is on the same edge of the sheet, while <code>horizontal</code> means the more usual duplexing where the top of both pages is on the same edge of the sheet. </dd>
+<dt><code>-format=</code><i>paperformat</i></dt>
+<dd> This option selects the media (e.g. paper size) that the printer control stream specifies. <i>paperformat</i> is one of the following self-explanatory keywords: </dd>
+<dt>&bull;</dt>
+<dd> letter</dd>
+<dt>&bull;</dt>
+<dd> legal</dd>
+<dt>&bull;</dt>
+<dd> a3</dd>
+<dt>&bull;</dt>
+<dd> a4</dd>
+<dt>&bull;</dt>
+<dd> a5</dd>
+<dt>&bull;</dt>
+<dd> a6</dd>
+<dt>&bull;</dt>
+<dd> jb4</dd>
+<dt>&bull;</dt>
+<dd> jb5</dd>
+<dt>&bull;</dt>
+<dd> jb6</dd>
+<dt>&bull;</dt>
+<dd> exec</dd>
+<dt>&bull;</dt>
+<dd> ledger</dd>
+<dt>&bull;</dt>
+<dd> b5envelope</dd>
+<dt>&bull;</dt>
+<dd> c5envelope</dd>
+<dt>&bull;</dt>
+<dd> com10envelope</dd>
+<dt>&bull;</dt>
+<dd> monarchenvelope</dd>
+<dt>&bull;</dt>
+<dd> dlenvelope</dd>
+<dt>&bull;</dt>
+<dd> jpostcard</dd>
+<dt>&bull;</dt>
+<dd> jdoublepostcard </dd>
 <p> The default is <code>letter</code>. </p>
-<dt><code>-feeder=</code><i>N</i></p>
-<dd> This options selects the media source (e.g. paper tray) that the printer control stream specifies. </p>
-<dt><code>-copies=</code><i>N</i></p>
-<dd> This option specifies the number of copies that the printer control stream tells the printer to print. </p>
-<dt><code>-rendergray</code></p>
-<dd> This option causes <code>pnmtopclxl</code> to include in the output stream a command to set the RENDERMODE environment variable to GRAYSCALE, which typically causes the printer to print in grayscale regardless of the colors in the input, and may cause it to run much faster even if the image is grayscale anyway. </p>
+<dt><code>-feeder=</code><i>N</i></dt>
+<dd> This options selects the media source (e.g. paper tray) that the printer control stream specifies. </dd>
+<dt><code>-copies=</code><i>N</i></dt>
+<dd> This option specifies the number of copies that the printer control stream tells the printer to print. </dd>
+<dt><code>-rendergray</code></dt>
+<dd> This option causes <code>pnmtopclxl</code> to include in the output stream a command to set the RENDERMODE environment variable to GRAYSCALE, which typically causes the printer to print in grayscale regardless of the colors in the input, and may cause it to run much faster even if the image is grayscale anyway. </dd>
 <p> This option was new in Netpbm 10.29 (August 2005). </p>
-<dt><code>-jobsetup=</code><i>filename</i></p>
-<dd> This option causes <code>pnmtopclxl</code> to include arbitrary job setup PJL commands at the beginning of the output stream. It reads them from the named file. </p>
+<dt><code>-jobsetup=</code><i>filename</i></dt>
+<dd> This option causes <code>pnmtopclxl</code> to include arbitrary job setup PJL commands at the beginning of the output stream. It reads them from the named file. </dd>
 <p> <code>pnmtopclxl</code> does not inspect these commands in any way, but it does expect them to be job setup commands. If you have garbage in your file, you will hear from the printer. </p>
 <p> This option was new in Netpbm 10.29 (August 2005). </p>
-<dt><code>-colorok</code></p>
-<dd> This option simply tells <code>pnmtopclxl</code> not to warn you if you supply a color input and therefore get color output. By default, <code>pnmtopclxl</code> issues a warning any time it produces a color printer stream because it is usually a mistake. It&#8217;s a mistake because PCL XL is mainly used for laser printers, and laser printers are mainly black and white. If you send a color print stream to a black and white printer, it typically refuses to print anything, and even if it manages to convert it to black and white and print it, it takes 3 times as long to transmit a color stream to the printer than to transmit the grayscale image that gives the same result. </p>
-<dt><code>-embedded</code></p>
-<dd> Without this option, <code>pnmtopclxl</code> generates an entire printer control stream that sets up the printer, ejects pages, and places a lone image on each page. With the option, <code>pnmtopclxl</code> generates only the instructions to generate the image itself. This is not useful all by itself, but you can embed it in a suitable PCL-XL stream in order to add an image to it. </p>
+<dt><code>-colorok</code></dt>
+<dd> This option simply tells <code>pnmtopclxl</code> not to warn you if you supply a color input and therefore get color output. By default, <code>pnmtopclxl</code> issues a warning any time it produces a color printer stream because it is usually a mistake. It&#8217;s a mistake because PCL XL is mainly used for laser printers, and laser printers are mainly black and white. If you send a color print stream to a black and white printer, it typically refuses to print anything, and even if it manages to convert it to black and white and print it, it takes 3 times as long to transmit a color stream to the printer than to transmit the grayscale image that gives the same result. </dd>
+<dt><code>-embedded</code></dt>
+<dd> Without this option, <code>pnmtopclxl</code> generates an entire printer control stream that sets up the printer, ejects pages, and places a lone image on each page. With the option, <code>pnmtopclxl</code> generates only the instructions to generate the image itself. This is not useful all by itself, but you can embed it in a suitable PCL-XL stream in order to add an image to it. </dd>
 <p> This makes sense only for a single image, so you cannot specify multiple input files and if an input file has multiple images in it, <code>pnmtopclxl</code> ignores any after the first (it won&#8217;t even read them). </p>
 <p> All the options that control the printer control stream outside the image itself, such as <code>-xoffs</code> and <code>-feeder</code> are invalid with <code>-embedded</code>. </p>
 <p> This option was new in Netpbm 10.54 (March 2011). </p>

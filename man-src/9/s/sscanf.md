@@ -15,15 +15,15 @@ sscanf - Unformat a buffer into a list of arguments
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>input buffer</dl>
+<dl><dd></dd><dd>input buffer</dd></dl>
  
 
  <i>fmt</i>
-<dl><dd>formatting of buffer</dl>
+<dl><dd>formatting of buffer</dd></dl>
  
 
  <i>...</i>
-<dl><dd>resulting arguments</dl>
+<dl><dd>resulting arguments</dd></dl>
 
 <h2>Copyright</h2>
 

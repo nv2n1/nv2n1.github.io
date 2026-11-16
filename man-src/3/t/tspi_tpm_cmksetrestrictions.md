@@ -23,24 +23,24 @@ description: "Tspi_TPM_CMKSetRestrictions – set restrictions on use of delegat
 <p>The <i>CmkDelegate</i> parameter is a bitmask describing the kinds of CMKs that can be used in a delegated auth session. Each bit represents a type of key. If the bit of a key type is set, then the CMK can be used in a delegated authorization session, otherwise use of that key will result in a TPM_E_INVALID_KEYUSAGE return code from the TPM. </p>
 <p> The possible values of <i>CmkDelegate</i> are any combination of the following flags logically OR&#8217;d together: </p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_CMK_DELEGATE_SIGNING</font></p>
-<dd>Allow use of signing keys. </p>
-<dt><font SIZE="-1">TSS_CMK_DELEGATE_STORAGE</font></p>
-<dd>Allow use of storage keys. </p>
-<dt><font SIZE="-1">TSS_CMK_DELEGATE_BIND</font></p>
-<dd>Allow use of binding keys. </p>
-<dt><font SIZE="-1">TSS_CMK_DELEGATE_LEGACY</font></p>
-<dd>Allow use of legacy keys. </p>
-<dt><font SIZE="-1">TSS_CMK_DELEGATE_MIGRATE</font></p>
-<dd>Allow use of migratable keys. </p>
+<dt><font SIZE="-1">TSS_CMK_DELEGATE_SIGNING</font></dt>
+<dd>Allow use of signing keys. </dd>
+<dt><font SIZE="-1">TSS_CMK_DELEGATE_STORAGE</font></dt>
+<dd>Allow use of storage keys. </dd>
+<dt><font SIZE="-1">TSS_CMK_DELEGATE_BIND</font></dt>
+<dd>Allow use of binding keys. </dd>
+<dt><font SIZE="-1">TSS_CMK_DELEGATE_LEGACY</font></dt>
+<dd>Allow use of legacy keys. </dd>
+<dt><font SIZE="-1">TSS_CMK_DELEGATE_MIGRATE</font></dt>
+<dd>Allow use of migratable keys. </dd>
 </dl>
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_CMKSetRestrictions</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hTPM</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hTPM</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_CMKSetRestrictions</code> conforms to the Trusted Computing Group Software Specification version 1.2 Errata A </p>

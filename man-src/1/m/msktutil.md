@@ -35,69 +35,69 @@ description: "msktutil – fetches and manages kerberos keytabs in an Active Dir
 <p> Active Directory includes authorization data (e.g. information about group memberships) in Kerberos tickets. This information is called PAC and may lead to very large ticket sizes. Especially HTTP services are known to produce failures if that size exceeds the HTTP header size. If your service does not make use of that PAC information (which is true for most Unix/Linux-services) you may just disable it with the &#8211;no-pac option.</p>
 <h2>MODES</h2>
 <dl>
-<dt>-v, &#8211;version</p>
-<dd> Displays version information</p>
-<dt>&#8211;help</p>
-<dd> Displays a help message</p>
-<dt>-c, &#8211;create</p>
-<dd> Creates a keytab for the current host or a given service account. Equivalent to &#8211;update &#8211;service host.</p>
-<dt>-f, &#8211;flush</p>
-<dd> Flushes out all principals for the current accountname from the keytab, and makes corresponding changes to the machine or service account.</p>
-<dt>-u, &#8211;update</p>
-<dd> Forces a password change and updates all related service principal entries from the servicePrincipalName and userPrincipalName attributes. Updates dNSDomainName for machine accounts and always updates msDS-supportedEncryptionTypes attributes with current values, and applies other changes as specified.</p>
-<dt>&#8211;auto-update</p>
-<dd> Checks if the password is at least 30 days old (from pwdLastSet attribute), and that the account does not have password expiry disabled. If those conditions are met, acts just like &#8211;update. Will also update if the keytab failed to authenticate but the default password did work (e.g. after resetting the account in AD). Otherwise, exits without doing anything (even if attribute modifying options are given). This option is intended for use from a daily crontab to ensure that the password is rotated regularly.</p>
-<dt>&#8211;precreate</p>
-<dd> Pre-create (or update) an account for the given host with default password. Does not use or update local keytab. Requires -h or &#8211;computer-name argument. Implies &#8211;user-creds-only. Generally requires administrator credentials.</dl>
+<dt>-v, &#8211;version</dt>
+<dd> Displays version information</dd>
+<dt>&#8211;help</dt>
+<dd> Displays a help message</dd>
+<dt>-c, &#8211;create</dt>
+<dd> Creates a keytab for the current host or a given service account. Equivalent to &#8211;update &#8211;service host.</dd>
+<dt>-f, &#8211;flush</dt>
+<dd> Flushes out all principals for the current accountname from the keytab, and makes corresponding changes to the machine or service account.</dd>
+<dt>-u, &#8211;update</dt>
+<dd> Forces a password change and updates all related service principal entries from the servicePrincipalName and userPrincipalName attributes. Updates dNSDomainName for machine accounts and always updates msDS-supportedEncryptionTypes attributes with current values, and applies other changes as specified.</dd>
+<dt>&#8211;auto-update</dt>
+<dd> Checks if the password is at least 30 days old (from pwdLastSet attribute), and that the account does not have password expiry disabled. If those conditions are met, acts just like &#8211;update. Will also update if the keytab failed to authenticate but the default password did work (e.g. after resetting the account in AD). Otherwise, exits without doing anything (even if attribute modifying options are given). This option is intended for use from a daily crontab to ensure that the password is rotated regularly.</dd>
+<dt>&#8211;precreate</dt>
+<dd> Pre-create (or update) an account for the given host with default password. Does not use or update local keytab. Requires -h or &#8211;computer-name argument. Implies &#8211;user-creds-only. Generally requires administrator credentials.</dd></dl>
 <h2>CONNECTION/SETUP OPTIONS</h2>
 <dl>
-<dt>-b, &#8211;base &lt;base&gt;</p>
-<dd> Specifies a relative LDAP base when creating a new account. For example, specifying &#8216;-b OU=Unix&#8217; for a computer named SERVER in an Active Directory domain example.com would create a computer account in the LDAP path: CN=SERVER,OU=Unix,DC=EXAMPLE,DC=COM. This option can also be specified by setting the MSKTUTIL_LDAP_BASE environment variable to the desired value. </p>
+<dt>-b, &#8211;base &lt;base&gt;</dt>
+<dd> Specifies a relative LDAP base when creating a new account. For example, specifying &#8216;-b OU=Unix&#8217; for a computer named SERVER in an Active Directory domain example.com would create a computer account in the LDAP path: CN=SERVER,OU=Unix,DC=EXAMPLE,DC=COM. This option can also be specified by setting the MSKTUTIL_LDAP_BASE environment variable to the desired value. </dd>
 <p> If not specified, the default value is read from AD (and the default there, unless modified by an admin, is CN=Computers for machine accounts and CN=Users for service accounts).</p>
-<dt>&#8211;computer-name &lt;name&gt;</p>
-<dd> Specifies that the new account should use &lt;name&gt; for the computer account name and the SAM Account Name. Note that a &#8216;$&#8217; will be automatically appended to the SAM Account Name. Defaults to the machine&#8217;s hostname, excluding the realm, with dots replaced with dashes. </p>
+<dt>&#8211;computer-name &lt;name&gt;</dt>
+<dd> Specifies that the new account should use &lt;name&gt; for the computer account name and the SAM Account Name. Note that a &#8216;$&#8217; will be automatically appended to the SAM Account Name. Defaults to the machine&#8217;s hostname, excluding the realm, with dots replaced with dashes. </dd>
 <p> That is: if the realm is EXAMPLE.COM, and the hostname is FOO.EXAMPLE.COM, the default computer name is FOO. If the hostname is FOO.BAR.EXAMPLE.COM, the default computer name is FOO-BAR.</p>
-<dt>&#8211;account-name &lt;name&gt;</p>
-<dd> An alias for &#8211;computer-name that can be used when operating on service accounts. Note that a &#8216;$&#8217; will not be automatically appended to the SAM Account Name when using service accounts.</p>
-<dt>&#8211;old-account-password &lt;password&gt;</p>
-<dd> Use supplied account password for authentication. This is useful if the keytab does not yet exist but the password of the computer account is known. This password will be changed by msktutil in order to create or update the keytab</p>
-<dt>-h, &#8211;hostname &lt;name&gt;</p>
-<dd> Overrides the current hostname to be used to be &lt;name&gt;. If this is not specified, the local host name will be used. Note that the local name lookup service will be to qualify and resolve names into fully-qualified names, including a domain extension. This affects the default hostname for other arguments, and the default computer-name. The hostname is also used to set the dNSDomainName attribute.</p>
-<dt>-k, &#8211;keytab &lt;file&gt;</p>
-<dd> Specifies to use &lt;file&gt; for the keytab. This option can also be specified by setting the MSKTUTIL_KEYTAB environment variable to the name of the desired keytab file. This keytab is both read from, in order to authenticate as the given account, and written to, after updating the account password. Default: /etc/krb5.keytab &#8211;keytab-auth-as &lt;name&gt; Specifies which principal name we should try to use, when we authenticate from a keytab. Normally, msktutil will try to use the account name or the host principal for the current host. If this option is specified, instead msktutil will try to use the given principal name first, and only fall back to the default behavior if we fail to authenticate with the given name. This option can be useful if you do not know the current password for the relevant account, do not have a keytab with the account principal, but you do have a keytab with a service principal associated with that account.</p>
-<dt>&#8211;server &lt;server&gt;</p>
-<dd> Specifies to use &lt;server&gt; as the domain controller. This affects both kerberos and ldap operations. The server can also be specified by setting the MSKTUTIL_SERVER environment variable. Default: looked up in DNS from the realm name.</p>
-<dt>&#8211;server-behind-nat</p>
-<dd> When the server is behind a firewall that performs Network Address Translation, KRB-PRIV messages fail validation. This is because the IP adddress in the encrypted part of the message cannot be rewritten in the NAT process. This option ignores the resulting error for the password change process, allowing systems outside the NAT firewall to join the domain managed by servers inside the NAT firewall.</p>
-<dt>&#8211;realm &lt;realm&gt;</p>
-<dd> Specifies to use &lt;realm&gt; as kerberos realm. Default: use the default_realm from [libdefaults] section of krb5.conf.</p>
-<dt>&#8211;site &lt;site&gt;</p>
-<dd> Find and use domain controller in specific AD site. This option is ignored if option &#8211;server is used.</p>
-<dt>-N, &#8211;no-reverse-lookup</p>
-<dd> Do not attempt to canonicalize the name of the domain controller via DNS reverse lookups. You may need to do this if your client cannot resolve the PTR records for a domain controller or your DNS servers store incorrect PTR records. Default: Use DNS reverse lookups to canonicalize DC names.</p>
-<dt>&#8211;user-creds-only</p>
-<dd> Don&#8217;t attempt to authenticate with a keytab: only use user&#8217;s credentials (from e.g. kinit). You may need to do this to modify certain attributes that require Administrator credentials (description, userAccountControl, userPrincipalName, in a default AD setup).</p>
-<dt>&#8211;verbose</p>
-<dd> Enables verbose status messages. May be specified more then once to get LDAP debugging. </p>
+<dt>&#8211;account-name &lt;name&gt;</dt>
+<dd> An alias for &#8211;computer-name that can be used when operating on service accounts. Note that a &#8216;$&#8217; will not be automatically appended to the SAM Account Name when using service accounts.</dd>
+<dt>&#8211;old-account-password &lt;password&gt;</dt>
+<dd> Use supplied account password for authentication. This is useful if the keytab does not yet exist but the password of the computer account is known. This password will be changed by msktutil in order to create or update the keytab</dd>
+<dt>-h, &#8211;hostname &lt;name&gt;</dt>
+<dd> Overrides the current hostname to be used to be &lt;name&gt;. If this is not specified, the local host name will be used. Note that the local name lookup service will be to qualify and resolve names into fully-qualified names, including a domain extension. This affects the default hostname for other arguments, and the default computer-name. The hostname is also used to set the dNSDomainName attribute.</dd>
+<dt>-k, &#8211;keytab &lt;file&gt;</dt>
+<dd> Specifies to use &lt;file&gt; for the keytab. This option can also be specified by setting the MSKTUTIL_KEYTAB environment variable to the name of the desired keytab file. This keytab is both read from, in order to authenticate as the given account, and written to, after updating the account password. Default: /etc/krb5.keytab &#8211;keytab-auth-as &lt;name&gt; Specifies which principal name we should try to use, when we authenticate from a keytab. Normally, msktutil will try to use the account name or the host principal for the current host. If this option is specified, instead msktutil will try to use the given principal name first, and only fall back to the default behavior if we fail to authenticate with the given name. This option can be useful if you do not know the current password for the relevant account, do not have a keytab with the account principal, but you do have a keytab with a service principal associated with that account.</dd>
+<dt>&#8211;server &lt;server&gt;</dt>
+<dd> Specifies to use &lt;server&gt; as the domain controller. This affects both kerberos and ldap operations. The server can also be specified by setting the MSKTUTIL_SERVER environment variable. Default: looked up in DNS from the realm name.</dd>
+<dt>&#8211;server-behind-nat</dt>
+<dd> When the server is behind a firewall that performs Network Address Translation, KRB-PRIV messages fail validation. This is because the IP adddress in the encrypted part of the message cannot be rewritten in the NAT process. This option ignores the resulting error for the password change process, allowing systems outside the NAT firewall to join the domain managed by servers inside the NAT firewall.</dd>
+<dt>&#8211;realm &lt;realm&gt;</dt>
+<dd> Specifies to use &lt;realm&gt; as kerberos realm. Default: use the default_realm from [libdefaults] section of krb5.conf.</dd>
+<dt>&#8211;site &lt;site&gt;</dt>
+<dd> Find and use domain controller in specific AD site. This option is ignored if option &#8211;server is used.</dd>
+<dt>-N, &#8211;no-reverse-lookup</dt>
+<dd> Do not attempt to canonicalize the name of the domain controller via DNS reverse lookups. You may need to do this if your client cannot resolve the PTR records for a domain controller or your DNS servers store incorrect PTR records. Default: Use DNS reverse lookups to canonicalize DC names.</dd>
+<dt>&#8211;user-creds-only</dt>
+<dd> Don&#8217;t attempt to authenticate with a keytab: only use user&#8217;s credentials (from e.g. kinit). You may need to do this to modify certain attributes that require Administrator credentials (description, userAccountControl, userPrincipalName, in a default AD setup).</dd>
+<dt>&#8211;verbose</dt>
+<dd> Enables verbose status messages. May be specified more then once to get LDAP debugging. </dd>
 </dl>
 <h2>OBJECT TYPE/ATTRIBUTE-SETTING OPTIONS</h2>
 <dl>
-<dt>&#8211;use-service-account</p>
-<dd> Create and maintain service accounts instead of machine accounts.</p>
-<dt>&#8211;delegation</p>
-<dd> Enables the account to be trusted for delegation. This option can also be enabled by setting the MSKTUTIL_DELEGATION environment variable. This modifies the userAccountControl attribute. Generally requires administrator credentials.</p>
-<dt>&#8211;description &lt;text&gt;</p>
-<dd> Sets the account&#8217;s description attribute to the given text (or removes if text is &#8221;). Generally requires administrator credentials.</p>
-<dt>&#8211;disable-delegation</p>
-<dd> Disables the account from being trusted for delegation. This modifies the userAccountControl attribute. Generally requires administrator credentials.</p>
-<dt>&#8211;disable-no-pac</p>
-<dd> Unsets the flag that disables the KDC&#8217;s including of a PAC in the machine&#8217;s service tickets. This modifies the userAccountControl attribute. Generally requires administrator credentials.</p>
-<dt>&#8211;dont-expire-password</p>
-<dd> Sets the DONT_EXPIRE_PASSSWORD bit in the userAccountControl attribute, which disables password expiry for this account. If you don&#8217;t run a cron job to periodically rotate the keytab, you will want to set this flag. Generally requires administrator credentials.</p>
-<dt>&#8211;do-expire-password</p>
-<dd> Unsets the DONT_EXPIRE_PASSWORD flag in the userAccountControl attribute. Generally requires administrator credentials.</p>
-<dt>&#8211;enctypes &lt;integer&gt;</p>
-<dd> Sets the supported encryption types in the msDs-supportedEncryptionTypes field. </p>
+<dt>&#8211;use-service-account</dt>
+<dd> Create and maintain service accounts instead of machine accounts.</dd>
+<dt>&#8211;delegation</dt>
+<dd> Enables the account to be trusted for delegation. This option can also be enabled by setting the MSKTUTIL_DELEGATION environment variable. This modifies the userAccountControl attribute. Generally requires administrator credentials.</dd>
+<dt>&#8211;description &lt;text&gt;</dt>
+<dd> Sets the account&#8217;s description attribute to the given text (or removes if text is &#8221;). Generally requires administrator credentials.</dd>
+<dt>&#8211;disable-delegation</dt>
+<dd> Disables the account from being trusted for delegation. This modifies the userAccountControl attribute. Generally requires administrator credentials.</dd>
+<dt>&#8211;disable-no-pac</dt>
+<dd> Unsets the flag that disables the KDC&#8217;s including of a PAC in the machine&#8217;s service tickets. This modifies the userAccountControl attribute. Generally requires administrator credentials.</dd>
+<dt>&#8211;dont-expire-password</dt>
+<dd> Sets the DONT_EXPIRE_PASSSWORD bit in the userAccountControl attribute, which disables password expiry for this account. If you don&#8217;t run a cron job to periodically rotate the keytab, you will want to set this flag. Generally requires administrator credentials.</dd>
+<dt>&#8211;do-expire-password</dt>
+<dd> Unsets the DONT_EXPIRE_PASSWORD flag in the userAccountControl attribute. Generally requires administrator credentials.</dd>
+<dt>&#8211;enctypes &lt;integer&gt;</dt>
+<dd> Sets the supported encryption types in the msDs-supportedEncryptionTypes field. </dd>
 <p> You may OR together the following values:<br />
 &nbsp;<wbr>&nbsp;<wbr>0x1=des-cbc-crc<br />
 &nbsp;<wbr>&nbsp;<wbr>0x2=des-cbc-md5<br />
@@ -108,18 +108,18 @@ description: "msktutil – fetches and manages kerberos keytabs in an Active Dir
 <p> If the value is set to 0x3 (that is: only the two DES types), it also attempts to set the DES-only flag in userAccountControl. </p>
 <p> Note: Windows 2008R2 refuses to use DES by default; you thus cannot use DES-only keys unless you have enabled DES encryption for your domain first. Recent versions of MIT kerberos clients similarly refuse to use DES by default. </p>
 <p> Default: sets the value to 0x1C: that is, use anything but DES.</p>
-<dt>&#8211;allow-weak-crypto</p>
-<dd> Enables the usage of DES keys for authentication. This is equivalent to MIT&#8217;s krb5.conf parameter allow_weak_crypto.</p>
-<dt>&#8211;no-pac</p>
-<dd> Specifies that service tickets for this account should not contain a PAC. This modifies the userAccountControl attribute. See Microsoft Knowledge Base article #832575 for details. This option can also be specified by setting the MSKTUTIL_NO_PAC environment variable. Generally requires administrator credentials.</p>
-<dt>-s, &#8211;service &lt;principal&gt;</p>
-<dd> Specifies a service principal to add to the account (and thus keytab, if appropriate). The service is of the form &lt;service&gt;/&lt;hostname&gt;. If the hostname is omitted, assumes current hostname. May be specified multiple times.</p>
-<dt>&#8211;remove-service &lt;principal&gt;</p>
-<dd> Specifies a service principal to remove from the account (and keytab if appropriate).</p>
-<dt>&#8211;upn &lt;principal&gt;</p>
-<dd> Sets the userPrincipalName on the computer account or service account to be &lt;principal&gt;. Note that the realm will automatically be appended to the value given. The userPrincipalName is an additional name which can be used to kinit. This is generally unnecessary, since you can always authenticate as the name given by &#8211;accountname (i.e. computername$ for computer accounts) whether or not userPrincipalName is set. Generally requires administrator credentials.</p>
-<dt>&#8211;set-samba-secret</p>
-<dd> Use Samba&#8217;s net changesecretpw command to locally set the machine account password in Samba&#8217;s secrets.tdb. $PATH need to include Samba&#8217;s net command. Samba needs to be configured appropriately.</dl>
+<dt>&#8211;allow-weak-crypto</dt>
+<dd> Enables the usage of DES keys for authentication. This is equivalent to MIT&#8217;s krb5.conf parameter allow_weak_crypto.</dd>
+<dt>&#8211;no-pac</dt>
+<dd> Specifies that service tickets for this account should not contain a PAC. This modifies the userAccountControl attribute. See Microsoft Knowledge Base article #832575 for details. This option can also be specified by setting the MSKTUTIL_NO_PAC environment variable. Generally requires administrator credentials.</dd>
+<dt>-s, &#8211;service &lt;principal&gt;</dt>
+<dd> Specifies a service principal to add to the account (and thus keytab, if appropriate). The service is of the form &lt;service&gt;/&lt;hostname&gt;. If the hostname is omitted, assumes current hostname. May be specified multiple times.</dd>
+<dt>&#8211;remove-service &lt;principal&gt;</dt>
+<dd> Specifies a service principal to remove from the account (and keytab if appropriate).</dd>
+<dt>&#8211;upn &lt;principal&gt;</dt>
+<dd> Sets the userPrincipalName on the computer account or service account to be &lt;principal&gt;. Note that the realm will automatically be appended to the value given. The userPrincipalName is an additional name which can be used to kinit. This is generally unnecessary, since you can always authenticate as the name given by &#8211;accountname (i.e. computername$ for computer accounts) whether or not userPrincipalName is set. Generally requires administrator credentials.</dd>
+<dt>&#8211;set-samba-secret</dt>
+<dd> Use Samba&#8217;s net changesecretpw command to locally set the machine account password in Samba&#8217;s secrets.tdb. $PATH need to include Samba&#8217;s net command. Samba needs to be configured appropriately.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For unprivileged users the most common invocations are: </p>
 <pre>

@@ -11,7 +11,6 @@ zzip_file_read - ...
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;zzip/lib.h&gt;
-
 zzip_ssize_t zzip_file_read((ZZIP_FILE * fp, void *buf, zzip_size_t len));</code></pre>
 
 <h2>Description</h2>
@@ -21,7 +20,7 @@ zzip_ssize_t zzip_file_read((ZZIP_FILE * fp, void *buf, zzip_size_t len));</code
 <h2>Author</h2>
 
 <dl><dd>&bull;
-<dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dl>
+</dd><dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dd></dl>
 
 <h2>Copyright</h2>
 

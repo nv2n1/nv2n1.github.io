@@ -11,13 +11,9 @@ std::visit - std::visit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;variant&gt;
-
 template &lt;class Visitor, class... Variants&gt;                       (1) (since C++17)
-
 constexpr /*see below*/ visit(Visitor&amp;&amp; vis, Variants&amp;&amp;... vars);
-
 template &lt;class R, class Visitor, class... Variants&gt;              (2) (since C++20)
-
 constexpr R visit(Visitor&amp;&amp;, Variants&amp;&amp;...);</code></pre> 
 Applies the visitor vis to the variants vars 
 Effectively returns 
@@ -48,31 +44,22 @@ If the number of variants is larger than 1, the invocation of the callable objec
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iomanip&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;variant&gt;
-
 #include &lt;vector&gt;
 // the variant to visit
-
 using var_t = std::variant&lt;int, long, double, std::string&gt;;
 // helper type for the visitor #3
-
 template &lt;class T&gt;
 struct always_false : std::false_type {
 };
 // helper type for the visitor #4
-
 template &lt;class... Ts&gt;
 struct overloaded : Ts... {
     using Ts::operator()...;
 };
-
 template &lt;class... Ts&gt;
 overloaded(Ts...) -&gt; overloaded&lt;Ts...&gt;;
 int main()

@@ -23,69 +23,69 @@ description: "dieharder – A testing and benchmarking tool for random number ge
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-x xvalue]&nbsp;<wbr>[-y yvalue]&nbsp;<wbr>[-z zvalue] </p>
 <h2>dieharder OPTIONS</h2>
 <dl>
-<dt>-a runs all the tests with standard/default options to create a</p>
-<dd> user-controllable report. To control the formatting of the report, see -D below. To control the power of the test (which uses default values for tsamples that cannot generally be varied and psamples which generally can) see -m below as a &quot;multiplier&quot; of the default number of psamples (used only in a -a run).</p>
-<dt>-d test number &#8211; selects specific diehard test.</p>
+<dt>-a runs all the tests with standard/default options to create a</dt>
+<dd> user-controllable report. To control the formatting of the report, see -D below. To control the power of the test (which uses default values for tsamples that cannot generally be varied and psamples which generally can) see -m below as a &quot;multiplier&quot; of the default number of psamples (used only in a -a run).</dd>
+<dt>-d test number &#8211; selects specific diehard test.</dt>
 <dd>
-<dt>-f filename &#8211; generators 201 or 202 permit either raw binary or</p>
-<dd> formatted ASCII numbers to be read in from a file for testing. generator 200 reads in raw binary numbers from stdin. Note well: many tests with default parameters require a lot of rands! To see a sample of the (required) header for ASCII formatted input, run </p>
+</dd><dt>-f filename &#8211; generators 201 or 202 permit either raw binary or</dt>
+<dd> formatted ASCII numbers to be read in from a file for testing. generator 200 reads in raw binary numbers from stdin. Note well: many tests with default parameters require a lot of rands! To see a sample of the (required) header for ASCII formatted input, run </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dieharder -o -f example.input -t 10 </p>
 <p> and then examine the contents of example.input. Raw binary input reads 32 bit increments of the specified data stream. stdin_input_raw accepts a pipe from a raw binary stream.</p>
-<dt>-B binary mode (used with -o below) causes output rands to be written in raw binary, not formatted ascii.</p>
+<dt>-B binary mode (used with -o below) causes output rands to be written in raw binary, not formatted ascii.</dt>
 <dd>
-<dt>-D output flag &#8211; permits fields to be selected for inclusion in</p>
-<dd> dieharder output. Each flag can be entered as a binary number that turns on a specific output field or header or by flag name; flags are aggregated. To see all currently known flags use the -F command.</p>
-<dt>-F &#8211; lists all known flags by name and number.</p>
+</dd><dt>-D output flag &#8211; permits fields to be selected for inclusion in</dt>
+<dd> dieharder output. Each flag can be entered as a binary number that turns on a specific output field or header or by flag name; flags are aggregated. To see all currently known flags use the -F command.</dd>
+<dt>-F &#8211; lists all known flags by name and number.</dt>
 <dd>
-<dt>-c table separator &#8211; where separator is e.g. &#8216;,&#8217; (CSV) or &#8216; &#8216; (whitespace).</p>
+</dd><dt>-c table separator &#8211; where separator is e.g. &#8216;,&#8217; (CSV) or &#8216; &#8216; (whitespace).</dt>
 <dd>
-<dt>-g generator number &#8211; selects a specific generator for testing. Using</p>
-<dd> -g -1 causes all known generators to be printed out to the display.</p>
-<dt>-h prints context-sensitive help &#8212; usually Usage (this message) or a</p>
-<dd> test synopsis if entered as e.g. dieharder -d 3 -h.</p>
-<dt>-k ks_flag &#8211; ks_flag</p>
+</dd><dt>-g generator number &#8211; selects a specific generator for testing. Using</dt>
+<dd> -g -1 causes all known generators to be printed out to the display.</dd>
+<dt>-h prints context-sensitive help &#8212; usually Usage (this message) or a</dt>
+<dd> test synopsis if entered as e.g. dieharder -d 3 -h.</dd>
+<dt>-k ks_flag &#8211; ks_flag</dt>
 <dd>
 <p> 0 is fast but slightly sloppy for psamples &gt; 4999 (default). </p>
 <p> 1 is MUCH slower but more accurate for larger numbers of psamples. </p>
 <p> 2 is slower still, but (we hope) accurate to machine precision for any number of psamples up to some as yet unknown numerical upper limit (it has been tested out to at least hundreds of thousands). </p>
 <p> 3 is kuiper ks, fast, quite inaccurate for small samples, deprecated.</p>
-<dt>-l list all known tests.</p>
+</dd><dt>-l list all known tests.</dt>
 <dd>
-<dt>-L overlap</p>
+</dd><dt>-L overlap</dt>
 <dd>
 <p> 1 (use overlap, default) </p>
 <p> 0 (don&#8217;t use overlap) </p>
 <p> in operm5 or other tests that support overlapping and non-overlapping sample modes.</p>
-<dt>-m multiply_p &#8211; multiply default # of psamples in -a(ll) runs to crank</p>
-<dd> up the resolution of failure. -n ntuple &#8211; set ntuple length for tests on short bit strings that permit the length to be varied (e.g. rgb bitdist).</p>
-<dt>-o filename &#8211; output -t count random numbers from current generator to file.</p>
+</dd><dt>-m multiply_p &#8211; multiply default # of psamples in -a(ll) runs to crank</dt>
+<dd> up the resolution of failure. -n ntuple &#8211; set ntuple length for tests on short bit strings that permit the length to be varied (e.g. rgb bitdist).</dd>
+<dt>-o filename &#8211; output -t count random numbers from current generator to file.</dt>
 <dd>
-<dt>-p count &#8211; sets the number of p-value samples per test (default 100).</p>
+</dd><dt>-p count &#8211; sets the number of p-value samples per test (default 100).</dt>
 <dd>
-<dt>-P Xoff &#8211; sets the number of psamples that will cumulate before deciding</p>
-<dd> that a generator is &quot;good&quot; and really, truly passes even a -Y 2 T2D run. Currently the default is 100000; eventually it will be set from AES-derived T2D test failure thresholds for fully automated reliable operation, but for now it is more a &quot;boredom&quot; threshold set by how long one might reasonably want to wait on any given test run.</p>
-<dt>-S seed &#8211; where seed is a uint. Overrides the default random seed</p>
-<dd> selection. Ignored for file or stdin input.</p>
-<dt>-s strategy &#8211; if strategy is the (default) 0, dieharder reseeds (or</p>
-<dd> rewinds) once at the beginning when the random number generator is selected and then never again. If strategy is nonzero, the generator is reseeded or rewound at the beginning of EACH TEST. If -S seed was specified, or a file is used, this means every test is applied to the same sequence (which is useful for validation and testing of dieharder, but not a good way to test rngs). Otherwise a new random seed is selected for each test.</p>
-<dt>-t count &#8211; sets the number of random entities used in each test, where</p>
-<dd> possible. Be warned &#8212; some tests have fixed sample sizes; others are variable but have practical minimum sizes. It is suggested you begin with the values used in -a and experiment carefully on a test by test basis.</p>
-<dt>-W weak &#8211; sets the &quot;weak&quot; threshold to make the test(s) more or less</p>
-<dd> forgiving during e.g. a test-to-destruction run. Default is currently 0.005.</p>
-<dt>-X fail &#8211; sets the &quot;fail&quot; threshold to make the test(s) more or less</p>
-<dd> forgiving during e.g. a test-to-destruction run. Default is currently 0.000001, which is basically &quot;certain failure of the null hypothesis&quot;, the desired mode of reproducible generator failure.</p>
-<dt>-Y Xtrategy &#8211; the Xtrategy flag controls the new &quot;test to failure&quot; (T2F)</p>
-<dd> modes. These flags and their modes act as follows: </p>
+</dd><dt>-P Xoff &#8211; sets the number of psamples that will cumulate before deciding</dt>
+<dd> that a generator is &quot;good&quot; and really, truly passes even a -Y 2 T2D run. Currently the default is 100000; eventually it will be set from AES-derived T2D test failure thresholds for fully automated reliable operation, but for now it is more a &quot;boredom&quot; threshold set by how long one might reasonably want to wait on any given test run.</dd>
+<dt>-S seed &#8211; where seed is a uint. Overrides the default random seed</dt>
+<dd> selection. Ignored for file or stdin input.</dd>
+<dt>-s strategy &#8211; if strategy is the (default) 0, dieharder reseeds (or</dt>
+<dd> rewinds) once at the beginning when the random number generator is selected and then never again. If strategy is nonzero, the generator is reseeded or rewound at the beginning of EACH TEST. If -S seed was specified, or a file is used, this means every test is applied to the same sequence (which is useful for validation and testing of dieharder, but not a good way to test rngs). Otherwise a new random seed is selected for each test.</dd>
+<dt>-t count &#8211; sets the number of random entities used in each test, where</dt>
+<dd> possible. Be warned &#8212; some tests have fixed sample sizes; others are variable but have practical minimum sizes. It is suggested you begin with the values used in -a and experiment carefully on a test by test basis.</dd>
+<dt>-W weak &#8211; sets the &quot;weak&quot; threshold to make the test(s) more or less</dt>
+<dd> forgiving during e.g. a test-to-destruction run. Default is currently 0.005.</dd>
+<dt>-X fail &#8211; sets the &quot;fail&quot; threshold to make the test(s) more or less</dt>
+<dd> forgiving during e.g. a test-to-destruction run. Default is currently 0.000001, which is basically &quot;certain failure of the null hypothesis&quot;, the desired mode of reproducible generator failure.</dd>
+<dt>-Y Xtrategy &#8211; the Xtrategy flag controls the new &quot;test to failure&quot; (T2F)</dt>
+<dd> modes. These flags and their modes act as follows: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>0 &#8211; just run dieharder with the specified number of tsamples and psamples, do not dynamically modify a run based on results. This is the way it has always run, and is the default. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>1 &#8211;&nbsp;<wbr>&quot;resolve ambiguity&quot;&nbsp;<wbr>(RA)&nbsp;<wbr>mode.&nbsp;<wbr>&nbsp;<wbr>If a test returns&nbsp;<wbr>&quot;weak&quot;, this is an undesired result. What does that mean, after all? If you run a long test series, you will see occasional weak returns for a perfect generators because p is uniformly distributed and will appear in any finite interval from time to time. Even if a test run returns more than one weak result, you cannot be certain that the generator is failing. RA mode adds psamples (usually in blocks of 100) until the test result ends up solidly not weak or proceeds to unambiguous failure. This is morally equivalent to running the test several times to see if a weak result is reproducible, but eliminates the bias of personal judgement in the process since the default failure threshold is very small and very unlikely to be reached by random chance even in many runs. </p>
 <p> <code>This option should only be used with -k 2.</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>2 &#8211;&nbsp;<wbr>&quot;test to destruction&quot;&nbsp;<wbr>mode.&nbsp;<wbr>&nbsp;<wbr>Sometimes you just want to know where or if a generator will .I ever fail a test (or test series). -Y 2 causes psamples to be added 100 at a time until a test returns an overall pvalue lower than the failure threshold or a specified maximum number of psamples (see -P) is reached. </p>
 <p> Note well! In this mode one may well fail due to the <i>alternate</i> null hypothesis &#8212; the test itself is a bad test and fails! Many dieharder tests, despite our best efforts, are numerically unstable or have only approximately known target statistics or are straight up asymptotic results, and will eventually return a failing result even for a gold-standard generator (such as AES), or for the hypercautious the XOR generator with AES, threefish, kiss, all loaded at once and xor&#8217;d together. It is therefore safest to use this mode .I comparatively, executing a T2D run on AES to get an idea of the test failure threshold(s) (something I will eventually do and publish on the web so everybody doesn&#8217;t have to do it independently) and then running it on your target generator. Failure with numbers of psamples within an order of magnitude of the AES thresholds should probably be considered possible test failures, not generator failures. Failures at levels significantly less than the known gold standard generator failure thresholds are, of course, probably failures of the generator. </p>
 <p> <code>This option should only be used with -k 2.</code></p>
-<dt>-v verbose flag &#8212; controls the verbosity of the output for debugging</p>
-<dd> only. Probably of little use to non-developers, and developers can read the enum(s) in dieharder.h and the test sources to see which flag values turn on output on which routines. 1 is result in a highly detailed trace of program activity.</p>
-<dt>-x,-y,-z number &#8211; Some tests have parameters that can safely be varied</p>
-<dd> from their default value. For example, in the diehard birthdays test, one can vary the number of length, which can also be varied. -x 2048 -y 30 alters these two values but should still run fine. These parameters should be documented internally (where they exist) in the e.g. -d 0 -h visible notes. </p>
+<dt>-v verbose flag &#8212; controls the verbosity of the output for debugging</dt>
+<dd> only. Probably of little use to non-developers, and developers can read the enum(s) in dieharder.h and the test sources to see which flag values turn on output on which routines. 1 is result in a highly detailed trace of program activity.</dd>
+<dt>-x,-y,-z number &#8211; Some tests have parameters that can safely be varied</dt>
+<dd> from their default value. For example, in the diehard birthdays test, one can vary the number of length, which can also be varied. -x 2048 -y 30 alters these two values but should still run fine. These parameters should be documented internally (where they exist) in the e.g. -d 0 -h visible notes. </dd>
 <p> <code>NOTE WELL: </code> The assessment(s) for the rngs may, in fact, be completely incorrect or misleading. There are still &quot;bad tests&quot; in dieharder, although we are working to fix and improve them (and try to document them in the test descriptions visible with -g testnumber -h). In particular, &#8216;Weak&#8217; pvalues should occur one test in two hundred, and &#8216;Failed&#8217; pvalues should occur one test in a million with the default thresholds &#8211; that&#8217;s what p MEANS. Use them at your Own Risk! Be Warned! </p>
 <p> Or better yet, use the new -Y 1 and -Y 2 resolve ambiguity or test to destruction modes above, comparing to similar runs on one of the as-good-as-it-gets cryptographic generators, AES or threefish. </p>
 </dl>

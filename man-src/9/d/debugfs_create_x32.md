@@ -14,14 +14,14 @@ description: "debugfs_create_x32 – create a debugfs file that is used to read 
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>a pointer to a string containing the name of the file to create.</dl>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>the permission that the file should have</dl>
+<dd>the permission that the file should have</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the debugfs filesystem.</dd></dl>
 <p> <i>value</i></p>
 <dl>
-<dd>a pointer to the variable that the file should read to and write from.</dl>
+<dd>a pointer to the variable that the file should read to and write from.</dd></dl>
 <h2>Copyright</h2>

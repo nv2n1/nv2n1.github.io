@@ -19,21 +19,21 @@ description: "struct_ccwgroup_device – ccw group device"
 <h2>Members</h2>
 <p>state</p>
 <dl>
-<dd>online/offline state</dl>
+<dd>online/offline state</dd></dl>
 <p> count</p>
 <dl>
-<dd>number of attached slave devices</dl>
+<dd>number of attached slave devices</dd></dl>
 <p> dev</p>
 <dl>
-<dd>embedded device structure</dl>
+<dd>embedded device structure</dd></dl>
 <p> ungroup_work</p>
 <dl>
-<dd>work to be done when a ccwgroup notifier has action type <code>BUS_NOTIFY_UNBIND_DRIVER</code></dl>
+<dd>work to be done when a ccwgroup notifier has action type <code>BUS_NOTIFY_UNBIND_DRIVER</code></dd></dl>
 <p> cdev[0]</p>
 <dl>
-<dd>variable number of slave devices, allocated as needed</dl>
+<dd>variable number of slave devices, allocated as needed</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

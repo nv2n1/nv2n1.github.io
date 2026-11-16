@@ -34,20 +34,20 @@ struct ibv_mw_bind_info {
 <p> The QP Transport Service Type must be either UC, RC or XRC_SEND for bind operations. </p>
 <p> The attribute send_flags describes the properties of the <font SIZE="-1">WR</font>. It is either 0 or the bitwise <font SIZE="-1">OR</font> of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_SEND_FENCE </code> Set the fence indicator.</p>
+<dt><code>IBV_SEND_FENCE </code> Set the fence indicator.</dt>
 <dd>
-<dt><code>IBV_SEND_SIGNALED </code> Set the completion notification indicator. Relevant only if QP was created with sq_sig_all=0</p>
-<dd></dl>
+</dd><dt><code>IBV_SEND_SIGNALED </code> Set the completion notification indicator. Relevant only if QP was created with sq_sig_all=0</dt>
+<dd></dd></dl>
 <p> The mw_access_flags define the allowed access to the MW after the bind completes successfully. It is either 0 or the bitwise <font SIZE="-1">OR</font> of one or more of the following flags:</p>
 <dl>
-<dt><code>IBV_ACCESS_REMOTE_WRITE </code> Enable Remote Write Access. Requires local write access to the MR.</p>
+<dt><code>IBV_ACCESS_REMOTE_WRITE </code> Enable Remote Write Access. Requires local write access to the MR.</dt>
 <dd>
-<dt><code>IBV_ACCESS_REMOTE_READ</code> Enable Remote Read Access</p>
+</dd><dt><code>IBV_ACCESS_REMOTE_READ</code> Enable Remote Read Access</dt>
 <dd>
-<dt><code>IBV_ACCESS_REMOTE_ATOMIC</code> Enable Remote Atomic Operation Access (if supported). Requires local write access to the MR.</p>
+</dd><dt><code>IBV_ACCESS_REMOTE_ATOMIC</code> Enable Remote Atomic Operation Access (if supported). Requires local write access to the MR.</dt>
 <dd>
-<dt><code>IBV_ACCESS_ZERO_BASED</code> If set, the address set on the &#8216;remote_addr&#8217; field on the WR will be an offset from the MW&#8217;s start address.</p>
-<dd></dl>
+</dd><dt><code>IBV_ACCESS_ZERO_BASED</code> If set, the address set on the &#8216;remote_addr&#8217; field on the WR will be an offset from the MW&#8217;s start address.</dt>
+<dd></dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_bind_mw()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason). In case of a success, the R_key of the memory window after the bind is returned in the mw_bind-&gt;mw-&gt;rkey field.</p>
 <h2>NOTES</h2>
@@ -57,9 +57,9 @@ struct ibv_mw_bind_info {
 <p> <code>ibv_alloc_mw</code>(3), <code>ibv_post_send</code>(3), <code>ibv_poll_cq</code>(3) <code>ibv_reg_mr</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>
+<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

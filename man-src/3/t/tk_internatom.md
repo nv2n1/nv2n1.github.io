@@ -16,9 +16,9 @@ const char *
 <code>Tk_GetAtomName(</code><i>tkwin, atom</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window. Used to map atom or name relative to a particular display.</p>
-<dd>const char <i>*name</i> (in) String name for which atom is desired.</p>
-<dd>Atom <i>atom</i> (in) Atom for which corresponding string name is desired. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window. Used to map atom or name relative to a particular display.</dd>
+<dd>const char <i>*name</i> (in) String name for which atom is desired.</dd>
+<dd>Atom <i>atom</i> (in) Atom for which corresponding string name is desired. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are similar to the Xlib procedures <code>XInternAtom</code> and <code>XGetAtomName</code>. <code>Tk_InternAtom</code> returns the atom identifier associated with string given by <i>name</i>; the atom identifier is only valid for the display associated with <i>tkwin</i>. <code>Tk_GetAtomName</code> returns the string associated with <i>atom</i> on <i>tkwin</i>&#8216;s display. The string returned by <code>Tk_GetAtomName</code> is in Tk&#8217;s storage: the caller need not free this space when finished with the string, and the caller should not modify the contents of the returned string. If there is no atom <i>atom</i> on <i>tkwin</i>&#8216;s display, then <code>Tk_GetAtomName</code> returns the string &#8220;?bad atom?&#8221;. </p>

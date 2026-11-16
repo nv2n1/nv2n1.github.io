@@ -14,12 +14,12 @@ description: "ata_dump_id – IDENTIFY DEVICE info debugging output"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>IDENTIFY DEVICE page to dump</dl>
+</dd><dd>IDENTIFY DEVICE page to dump</dd></dl>
 <h2>Description</h2>
 <p>Dump selected 16-bit words from the given IDENTIFY DEVICE page. </p>
 <p> LOCKING: caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

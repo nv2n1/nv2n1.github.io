@@ -24,14 +24,14 @@ description: "lockfile – conditional semaphore-file creator"
 <h2>EXAMPLES</h2>
 <p> Suppose you want to make sure that access to the file &quot;important&quot; is serialised, i.e., no more than one program or shell script should be allowed to access it. For simplicity&#8217;s sake, let&#8217;s suppose that it is a shell script. In this case you could solve it like this: </p>
 <pre>
-<dl><dt><dd>...
+<dl><dt></dt><dd>...
 lockfile important.lock
 ...
 access_&quot;important&quot;_to_your_hearts_content
 ...
 rm -f important.lock
 ...
-</dl>
+</dd></dl>
 </pre>
 <p> Now if all the scripts that access &quot;important&quot; follow this guideline, you will be assured that at most one script will be executing between the `lockfile&#8217; and the `rm&#8217; commands. </p>
 <h2>ENVIRONMENT</h2>
@@ -67,31 +67,31 @@ rm -f important.lock
 <h2>MAILINGLIST</h2>
 <p> There exists a mailinglist for questions relating to any program in the procmail package: </p>
 <pre>
-<dl><dt><dd>&lt;procmail-users [at] procmail.org&gt;
-<dl><dt><dd>for submitting questions/answers.
-</dl>
+<dl><dt></dt><dd>&lt;procmail-users [at] procmail.org&gt;
+</dd><dl><dt></dt><dd>for submitting questions/answers.
+</dd></dl>
 </pre>
 <p> &lt;procmail-users-request [at] procmail.org&gt; </p>
 <pre>
-<dl><dt><dd>for subscription requests.
-</dl>
+<dl><dt></dt><dd>for subscription requests.
+</dd></dl>
 </pre>
 </dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to </p>
 <pre>
-<dl><dt><dd>procmail-announce-request [at] procmail.org
-</dl>
+<dl><dt></dt><dd>procmail-announce-request [at] procmail.org
+</dd></dl>
 </pre>
 <p> (this is a readonly list). </p>
 <h2>AUTHORS</h2>
 <p> Stephen R. van den Berg </p>
 <pre>
-<dl><dt><dd>&lt;srb [at] cuci.nl&gt;
-</dl>
+<dl><dt></dt><dd>&lt;srb [at] cuci.nl&gt;
+</dd></dl>
 </pre>
 <p> Philip A. Guenther </p>
 <pre>
-<dl><dt><dd>&lt;guenther [at] sendmail.com&gt;
-</dl>
+<dl><dt></dt><dd>&lt;guenther [at] sendmail.com&gt;
+</dd></dl>
 </pre>
 <h2>Index</h2>

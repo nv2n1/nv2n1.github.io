@@ -10,8 +10,6 @@ description: "sasl_auxprop_getctx – Acquire an auxiliary property context"
 <p>sasl_auxprop_getctx &#8211; Acquire an auxiliary property context </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_auxprop_getctx(sasl_conn_t *conn)</code></pre>
 <h2>Description</h2>
 <p><code>sasl_auxprop_getctx</code> will return an auxiliary property context for the given sasl_conn_t on which the functions described in <a href="/docs/linux/man/3-sasl_auxprop/">sasl_auxprop</a>(3) can operate. <i>conn</i> the sasl_conn_t for which the request is being made. </p>

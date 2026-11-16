@@ -15,11 +15,11 @@ blk_integrity_register - Register a gendisk as being integrity-capable
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>struct gendisk pointer to make integrity-aware</dl>
+<dl><dd></dd><dd>struct gendisk pointer to make integrity-aware</dd></dl>
  
 
  <i>template</i>
-<dl><dd>block integrity profile to register</dl>
+<dl><dd>block integrity profile to register</dd></dl>
 
 <h2>Description</h2>
 

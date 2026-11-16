@@ -14,30 +14,30 @@ description: "ckeygen – manipulate public/private keys"
 <h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;bits</code> &lt;bits&gt;</p>
-<dd> Number of bits in the key to create (default: 1024)</p>
-<dt><code>-f</code>, <code>&#8211;filename</code> &lt;file name&gt;</p>
-<dd> Filename of the key file.</p>
-<dt><code>-t</code>, <code>&#8211;type</code> &lt;type&gt;</p>
-<dd> Type of key (rsa or dsa).</p>
-<dt><code>-C</code>, <code>&#8211;comment</code> &lt;comment&gt;</p>
-<dd> Provide a new comment.</p>
-<dt><code>-N</code>, <code>&#8211;newpass</code> &lt;pass phrase&gt;</p>
-<dd> Provide new passphrase.</p>
-<dt><code>-P</code>, <code>&#8211;pass</code> &lt;pass phrase&gt;</p>
-<dd> Provide old passphrase.</p>
-<dt><code>-l</code>, <code>&#8211;fingerprint</code></p>
-<dd> Show fingerprint of key file.</p>
-<dt><code>-p</code>, <code>&#8211;changepass</code></p>
-<dd> Change passphrase of private key file.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Be quiet.</p>
-<dt><code>&#8211;no-passphrase</code></p>
-<dd> Create the key with no passphrase.</p>
-<dt><code>-y</code>, <code>&#8211;showpub</code></p>
-<dd> Read private key file and print public key.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number only.</dl>
+<dt><code>-b</code>, <code>&#8211;bits</code> &lt;bits&gt;</dt>
+<dd> Number of bits in the key to create (default: 1024)</dd>
+<dt><code>-f</code>, <code>&#8211;filename</code> &lt;file name&gt;</dt>
+<dd> Filename of the key file.</dd>
+<dt><code>-t</code>, <code>&#8211;type</code> &lt;type&gt;</dt>
+<dd> Type of key (rsa or dsa).</dd>
+<dt><code>-C</code>, <code>&#8211;comment</code> &lt;comment&gt;</dt>
+<dd> Provide a new comment.</dd>
+<dt><code>-N</code>, <code>&#8211;newpass</code> &lt;pass phrase&gt;</dt>
+<dd> Provide new passphrase.</dd>
+<dt><code>-P</code>, <code>&#8211;pass</code> &lt;pass phrase&gt;</dt>
+<dd> Provide old passphrase.</dd>
+<dt><code>-l</code>, <code>&#8211;fingerprint</code></dt>
+<dd> Show fingerprint of key file.</dd>
+<dt><code>-p</code>, <code>&#8211;changepass</code></dt>
+<dd> Change passphrase of private key file.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Be quiet.</dd>
+<dt><code>&#8211;no-passphrase</code></dt>
+<dd> Create the key with no passphrase.</dd>
+<dt><code>-y</code>, <code>&#8211;showpub</code></dt>
+<dd> Read private key file and print public key.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version number only.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Manipulate public/private keys in various ways. If no filename is given, a file name will be requested interactively.</p>
 <h2>AUTHOR</h2>

@@ -14,16 +14,16 @@ description: "ida_simple_get – get a new id."
 <p><i>ida</i></p>
 <dl>
 <dd>
-<dd>the (initialized) ida.</dl>
+</dd><dd>the (initialized) ida.</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>the minimum id (inclusive, &lt; 0x8000000)</dl>
+<dd>the minimum id (inclusive, &lt; 0x8000000)</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>the maximum id (exclusive, &lt; 0x8000000 or 0)</dl>
+<dd>the maximum id (exclusive, &lt; 0x8000000 or 0)</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>memory allocation flags</dl>
+<dd>memory allocation flags</dd></dl>
 <h2>Description</h2>
 <p>Allocates an id in the range start &lt;= id &lt; end, or returns -ENOSPC. On memory allocation failure, returns -ENOMEM. </p>
 <p> Use <code>ida_simple_remove</code> to get rid of an id.</p>

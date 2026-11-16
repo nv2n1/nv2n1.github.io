@@ -11,8 +11,6 @@ description: "sptsvx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine sptsvx (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, INFO)
-
-
 SPTSVX computes the solution to system of linear equations A * X = B for PT matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sptsvx (characterFACT, integerN, integerNRHS, real, dimension( * )D, real, dimension( * )E, real, dimension( * )DF, real, dimension( * )EF, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integerINFO)</h3>
@@ -26,7 +24,7 @@ SPTSVX computes the solution to system of linear equations A * X = B for PT matr
  N-by-NRHS matrices.
  Error bounds on the solution and a condition estimate are also
  provided.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -47,10 +45,10 @@ SPTSVX computes the solution to system of linear equations A * X = B for PT matr
  4. Iterative refinement is applied to improve the computed solution
  matrix and calculate error bounds and backward error estimates
  for it.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of A has been
  supplied on entry.
@@ -139,13 +137,13 @@ SPTSVX computes the solution to system of linear equations A * X = B for PT matr
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 228 of file sptsvx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

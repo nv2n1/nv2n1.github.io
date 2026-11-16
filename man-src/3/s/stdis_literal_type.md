@@ -41,7 +41,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int m;
@@ -50,7 +49,6 @@ struct B {
     virtual ~B();
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_literal_type&lt;A&gt;::value &lt;&lt; '

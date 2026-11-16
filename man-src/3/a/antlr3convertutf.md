@@ -50,23 +50,23 @@ description: "include/antlr3convertutf.h –"
 <h3>enum <code>ConversionFlags</code></h3>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>strictConversion </i></p>
+<dt><i>strictConversion </i></dt>
 <dd>
-<dt><i>lenientConversion </i></p>
+</dd><dt><i>lenientConversion </i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h3>enum <code>ConversionResult</code></h3>
 <p> <code>Enumerator: </code></p>
 <dl>
-<dt><i>conversionOK </i></p>
+<dt><i>conversionOK </i></dt>
 <dd>
-<dt><i>sourceExhausted </i></p>
+</dd><dt><i>sourceExhausted </i></dt>
 <dd>
-<dt><i>targetExhausted </i></p>
+</dd><dt><i>targetExhausted </i></dt>
 <dd>
-<dt><i>sourceIllegal </i></p>
+</dd><dt><i>sourceIllegal </i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>ConversionResult</code> ConvertUTF16toUTF32 (const <code>UTF16</code> ** sourceStart, const <code>UTF16</code> * sourceEnd, <code>UTF32</code> ** targetStart, <code>UTF32</code> * targetEnd, <code>ConversionFlags</code> flags)</h3>
 <p> References ANTLR3_FPRINTF, conversionOK, halfBase, halfShift, sourceExhausted, sourceIllegal, strictConversion, targetExhausted, UNI_SUR_HIGH_END, UNI_SUR_HIGH_START, UNI_SUR_LOW_END, and UNI_SUR_LOW_START.</p>
@@ -86,11 +86,11 @@ description: "include/antlr3convertutf.h –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Typedef Documentation</a></p>
+<dt><a href="#lbAN">Typedef Documentation</a></dt>
 <dd>
-<dt><a href="#lbAR">Enumeration Type Documentation</a></p>
+</dd><dt><a href="#lbAR">Enumeration Type Documentation</a></dt>
 <dd>
-<dt><a href="#lbAU">Function Documentation</a></p>
+</dd><dt><a href="#lbAU">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbBC">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBC">Author</a></dt>
+<dd></dd></dl>

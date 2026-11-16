@@ -14,15 +14,15 @@ description: "iscsi_session_event – send session destr. completion event"
 <p><i>session</i></p>
 <dl>
 <dd>
-<dd>iscsi class session</dl>
+</dd><dd>iscsi class session</dd></dl>
 <p> <i>event</i></p>
 <dl>
-<dd>type of event</dl>
+<dd>type of event</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

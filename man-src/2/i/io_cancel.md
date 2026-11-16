@@ -23,14 +23,14 @@ int io_cancel(aio_context_t ctx_id, struct iocb *iocb,
 <p> On success, <code>io_cancel</code>() returns 0. For the failure return, see NOTES.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The <i>iocb</i> specified was not canceled.</p>
-<dt><code>EFAULT</code></p>
-<dd> One of the data structures points to invalid data.</p>
-<dt><code>EINVAL</code></p>
-<dd> The AIO context specified by <i>ctx_id</i> is invalid.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>io_cancel</code>() is not implemented on this architecture.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The <i>iocb</i> specified was not canceled.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> One of the data structures points to invalid data.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The AIO context specified by <i>ctx_id</i> is invalid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>io_cancel</code>() is not implemented on this architecture.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The asynchronous I/O system calls first appeared in Linux 2.5.</p>
 <h2>CONFORMING TO</h2>

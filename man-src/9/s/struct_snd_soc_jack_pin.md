@@ -20,19 +20,19 @@ struct_snd_soc_jack_pin - Describes a pin to update based on jack detection
 <h2>Members</h2>
 
 list
-<dl><dd>internal list entry</dl>
+<dl><dd>internal list entry</dd></dl>
  
 
  pin
-<dl><dd>name of the pin to update</dl>
+<dl><dd>name of the pin to update</dd></dl>
  
 
  mask
-<dl><dd>bits to check for in reported jack status</dl>
+<dl><dd>bits to check for in reported jack status</dd></dl>
  
 
  invert
-<dl><dd>if non-zero then pin is enabled when status is not reported</dl>
+<dl><dd>if non-zero then pin is enabled when status is not reported</dd></dl>
 
 <h2>Copyright</h2>
 

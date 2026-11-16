@@ -33,10 +33,8 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main(void)
-
 {
     std::cout &lt;&lt; &quot;copysign(1.0,+2.0) = &quot; &lt;&lt; std::copysign(1.0, +2.0) &lt;&lt; '
 '

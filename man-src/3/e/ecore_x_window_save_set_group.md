@@ -20,11 +20,11 @@ description: "X Window Change Save Set Functions – Functions that either inser
 <p>Inserts the window in the client&#8217;s save-set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window to insert in the client&#8217;s save-set.</dl>
+<dd><i>window</i> The window to insert in the client&#8217;s save-set.</dd></dl>
 <h3>EAPI void ecore_x_window_save_set_del (Ecore_X_Window window)</h3>
 <p>Deletes the window from the client&#8217;s save-set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window to delete from the client&#8217;s save-set.</dl>
+<dd><i>window</i> The window to delete from the client&#8217;s save-set.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

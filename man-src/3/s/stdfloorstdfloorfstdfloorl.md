@@ -38,11 +38,8 @@ The largest representable floating-point values are exact integers in all standa
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::fixed
               &lt;&lt; &quot;floor(+2.7) = &quot; &lt;&lt; std::floor(+2.7) &lt;&lt; '

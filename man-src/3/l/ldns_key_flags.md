@@ -21,23 +21,23 @@ description: "ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_ke
 <p> uint16_t ldns_key_flags(const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_origttl</i>()</p>
-<dd>return the original ttl of the key .br <code>k</code>: the key .br Returns the original ttl</dl>
+<dt> <i>ldns_key_origttl</i>()</dt>
+<dd>return the original ttl of the key .br <code>k</code>: the key .br Returns the original ttl</dd></dl>
 <dl>
-<dt> <i>ldns_key_inception</i>()</p>
-<dd>return the key&#8217;s inception date .br <code>k</code>: the key .br Returns the inception date</dl>
+<dt> <i>ldns_key_inception</i>()</dt>
+<dd>return the key&#8217;s inception date .br <code>k</code>: the key .br Returns the inception date</dd></dl>
 <dl>
-<dt> <i>ldns_key_expiration</i>()</p>
-<dd>return the key&#8217;s expiration date .br <code>k</code>: the key .br Returns the experiration date</dl>
+<dt> <i>ldns_key_expiration</i>()</dt>
+<dd>return the key&#8217;s expiration date .br <code>k</code>: the key .br Returns the experiration date</dd></dl>
 <dl>
-<dt> <i>ldns_key_keytag</i>()</p>
-<dd>return the keytag .br <code>k</code>: the key .br Returns the keytag</dl>
+<dt> <i>ldns_key_keytag</i>()</dt>
+<dd>return the keytag .br <code>k</code>: the key .br Returns the keytag</dd></dl>
 <dl>
-<dt> <i>ldns_key_pubkey_owner</i>()</p>
-<dd>return the public key&#8217;s owner .br <code>k</code>: the key .br Returns the owner</dl>
+<dt> <i>ldns_key_pubkey_owner</i>()</dt>
+<dd>return the public key&#8217;s owner .br <code>k</code>: the key .br Returns the owner</dd></dl>
 <dl>
-<dt> <i>ldns_key_flags</i>()</p>
-<dd>return the flag of the key .br <code>k</code>: the key .br Returns the flag</dl>
+<dt> <i>ldns_key_flags</i>()</dt>
+<dd>return the flag of the key .br <code>k</code>: the key .br Returns the flag</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

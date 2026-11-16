@@ -22,8 +22,8 @@ description: "usermount – A graphical tool to mount, unmount and format filesy
 <p> This program has no command line options of it&#8217;s own, but it does take the standard X program options like <code>-display</code> and such. See the <i>X</i>(1) man page for some of the common options.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/fstab</i></p>
-<dd> The system file describing the mountable filesystems.</dl>
+<dt><i>/etc/fstab</i></dt>
+<dd> The system file describing the mountable filesystems.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8), <i><a href="/docs/linux/man/8-fdformat/">fdformat</a></i>(8), <i><a href="/docs/linux/man/8-mkfs/">mkfs</a></i>(8), <i><a href="/docs/linux/man/5-fstab/">fstab</a></i>(5) <i>X</i>(1)</p>
 <h2>BUGS</h2>

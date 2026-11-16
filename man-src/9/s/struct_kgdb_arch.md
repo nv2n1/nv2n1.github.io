@@ -24,36 +24,36 @@ description: "struct_kgdb_arch – Describe architecture specific values."
 <h2>Members</h2>
 <p>gdb_bpt_instr[BREAK_INSTR_SIZE]</p>
 <dl>
-<dd>The instruction to trigger a breakpoint.</dl>
+<dd>The instruction to trigger a breakpoint.</dd></dl>
 <p> flags</p>
 <dl>
-<dd>Flags for the breakpoint, currently just <code>KGDB_HW_BREAKPOINT</code>.</dl>
+<dd>Flags for the breakpoint, currently just <code>KGDB_HW_BREAKPOINT</code>.</dd></dl>
 <p> set_breakpoint</p>
 <dl>
-<dd>Allow an architecture to specify how to set a software breakpoint.</dl>
+<dd>Allow an architecture to specify how to set a software breakpoint.</dd></dl>
 <p> remove_breakpoint</p>
 <dl>
-<dd>Allow an architecture to specify how to remove a software breakpoint.</dl>
+<dd>Allow an architecture to specify how to remove a software breakpoint.</dd></dl>
 <p> set_hw_breakpoint</p>
 <dl>
-<dd>Allow an architecture to specify how to set a hardware breakpoint.</dl>
+<dd>Allow an architecture to specify how to set a hardware breakpoint.</dd></dl>
 <p> remove_hw_breakpoint</p>
 <dl>
-<dd>Allow an architecture to specify how to remove a hardware breakpoint.</dl>
+<dd>Allow an architecture to specify how to remove a hardware breakpoint.</dd></dl>
 <p> disable_hw_break</p>
 <dl>
-<dd>Allow an architecture to specify how to disable hardware breakpoints for a single cpu.</dl>
+<dd>Allow an architecture to specify how to disable hardware breakpoints for a single cpu.</dd></dl>
 <p> remove_all_hw_break</p>
 <dl>
-<dd>Allow an architecture to specify how to remove all hardware breakpoints.</dl>
+<dd>Allow an architecture to specify how to remove all hardware breakpoints.</dd></dl>
 <p> correct_hw_break</p>
 <dl>
-<dd>Allow an architecture to specify how to correct the hardware debug registers.</dl>
+<dd>Allow an architecture to specify how to correct the hardware debug registers.</dd></dl>
 <p> enable_nmi</p>
 <dl>
-<dd>Manage NMI-triggered entry to KGDB</dl>
+<dd>Manage NMI-triggered entry to KGDB</dd></dl>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

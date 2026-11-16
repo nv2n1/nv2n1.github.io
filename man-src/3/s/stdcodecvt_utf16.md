@@ -10,14 +10,10 @@ description: "std::codecvt_utf16 – std::codecvt_utf16"
 <p>std::codecvt_utf16 &#8211; std::codecvt_utf16</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;codecvt&gt;
-
     template &lt;class Elem,
-
               unsigned long Maxcode = 0x10ffff, (since C++ 11)
-
                                                     std::codecvt_mode Mode = (std::codecvt_mode)0&gt;
     (deprecated in C++ 17)
-
         class codecvt_utf16 : public std::codecvt&lt;Elem, char, std::mbstate_t&gt;;</code></pre>
 <p>std::codecvt_utf16 is a std::codecvt facet which encapsulates conversion between a UTF-16 encoded byte string and UCS2 or UTF-32 character string (depending on the type of Elem). This codecvt facet can be used to read and write UTF-16 files in binary mode. </p>
 <h2>Template Parameters</h2>
@@ -97,16 +93,11 @@ noconv no conversion required, input and output types are the same</p>
 <p>The following example demonstrates decoding of UTF-16le file on a system with 32-bit wchar_t. On a system with 16-bit wchar_t, decoding of the third character will fail because std::codecvt_utf16&lt;char16_t&gt; produces UCS2, not UTF-16.<br />
  // Run this code </p>
 <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;codecvt&gt;
 void prepare_file()
-
 {
     // UTF-16le data (if host system is little-endian)
     char16_t utf16le[4] = {0x007a,          // latin small letter 'z' U+007a
@@ -117,7 +108,6 @@ void prepare_file()
     fout.write(reinterpret_cast&lt;char *&gt;(utf16le), sizeof utf16le);
 }
 int main()
-
 {
     prepare_file();
     // open as a byte stream

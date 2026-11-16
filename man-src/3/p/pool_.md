@@ -10,24 +10,12 @@ description: "QuantLib::RandomDefaultModel – Base class for random default mod
 <p>QuantLib::RandomDefaultModel &#8211; Base class for random default models. </p>
 <h2>Synopsis</h2>
 <pre><code>RandomDefaultModel (boost::shared_ptr&lt; Pool &gt; pool)
-
-
-
 virtual void nextSequence (Real tmax=QL_MAX_REAL)=0
-
-
-
 Protected Attributes</code></pre>
 <p> Inherited by <code>GaussianRandomDefaultModel</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>RandomDefaultModel (boost::shared_ptr&lt; Pool &gt; pool)
-
-
-
 virtual void nextSequence (Real tmax=QL_MAX_REAL)=0
-
-
-
 Protected Attributes</code></pre>
 <p> boost::shared_ptr&lt; Pool &gt; <code>pool_</code></p>
 <h2>Detailed Description</h2>

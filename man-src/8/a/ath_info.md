@@ -14,18 +14,18 @@ description: "ath_info – print module version info, write some eeprom fields"
 <p><code>ath_info</code> prints some version information of Atheros WLAN modules. It furthermore allows to change regulatory domain and PCI ID fields in the EEPROM. You must first retrieve the PCI memory address of the module by <code>lspci -v</code> and maybe activate the module by <code>setpci</code> (see example below). <code>DISCLAIMER:</code> Use the write function only if you know what you are doing! There is the chance to brick your module. The authors aren&#8217;t responsible for any damage caused by using this program. <code> Transmitting on illegal frequencies may violate state laws. Obey the local regulations!</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-w</code></p>
-<dd>Write to the EEPROM. You need to specify at least one <code>field value</code> pair (see below).</p>
-<dt><code>-g N:M</code></p>
-<dd>Set the GPIO pin N to level M (N=0..5, M=0,1). Only useful with <code>-w</code>. <code>ath_info</code> sets GPIO 4 to 0 (low) for chipsets newer or equal to 5213 to enable writing to the EEPROM. If your module has a different layout, you may need to overwrite this.</p>
-<dt><code>-v</code></p>
-<dd>verbose printouts</p>
-<dt><code>-f</code></p>
-<dd>force, don&#8217;t ask before writing to EEPROM (with <code>-w).</p>
-<dt>&lt;pci_address&gt;</code></p>
-<dd>The PCI address of the module. You must retrieve it with <code>lspci</code>.</p>
-<dt><code>&lt;field&gt; &lt;value&gt;</code></p>
-<dd>Field and value names for EEPROM writing. Possible fields are: <code>pci_dev_id, pci_vendor_id, pci_class, pci_rev_id, pci_subsys_dev_id, pci_subsys_vendor_id, regdomain</code> </p>
+<dt><code>-w</code></dt>
+<dd>Write to the EEPROM. You need to specify at least one <code>field value</code> pair (see below).</dd>
+<dt><code>-g N:M</code></dt>
+<dd>Set the GPIO pin N to level M (N=0..5, M=0,1). Only useful with <code>-w</code>. <code>ath_info</code> sets GPIO 4 to 0 (low) for chipsets newer or equal to 5213 to enable writing to the EEPROM. If your module has a different layout, you may need to overwrite this.</dd>
+<dt><code>-v</code></dt>
+<dd>verbose printouts</dd>
+<dt><code>-f</code></dt>
+<dd>force, don&#8217;t ask before writing to EEPROM (with <code>-w).</dd>
+<dt>&lt;pci_address&gt;</code></dt>
+<dd>The PCI address of the module. You must retrieve it with <code>lspci</code>.</dd>
+<dt><code>&lt;field&gt; &lt;value&gt;</code></dt>
+<dd>Field and value names for EEPROM writing. Possible fields are: <code>pci_dev_id, pci_vendor_id, pci_class, pci_rev_id, pci_subsys_dev_id, pci_subsys_vendor_id, regdomain</code> </dd>
 </dl>
 <h2>Example</h2>
 <p>Execute the commands below from a root account. Retrieve the module&#8217;s PCI memory address with <code>lspci</code>: </p>

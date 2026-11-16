@@ -31,25 +31,25 @@ description: "fftwf-wisdom – create wisdom (pre-optimized FFTs)"
 <p> For example, &#8216;cif12x13x14&#8217; is a three-dimensional 12 by 13 x 14 complex DFT operating in-place. &#8216;rob65536&#8217; is a one-dimensional size-65536 out-of-place complex-to-real (backwards) transform operating on Hermitian-symmetry input. &#8216;ki10hx20e01&#8217; is a two-dimensional 10 by 20 r2r transform where the first dimension is a DHT and the second dimension is an REDFT01 (DCT-III). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help on the command-line options and usage.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print the version number and copyright information.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose output. (You can specify this multiple times, or supply a numeric argument greater than 1, to increase the verbosity level.) Note that the verbose output will be mixed with the wisdom output (making it impossible to import), unless you write the wisdom to a file via the <code>-o</code> option.</p>
-<dt><code>-c</code>, <code>&#8211;canonical</code></p>
-<dd> Optimize/pre-plan a canonical set of sizes: all powers of two and ten up to 2^20 (1048576), including both real and complex, forward and backwards, in-place and out-of-place transforms. Also includes two- and three-dimensional transforms of equal-size dimensions (e.g. 16x16x16).</p>
-<dt><code>-t</code> <i>hours</i>, <code>&#8211;time-limit</code>=<i>hours</i></p>
-<dd> Stop after a time of <i>hours</i> (hours) has elapsed, outputting accumulated wisdom. (The problems are planned in increasing order of size.) Defaults to 0, indicating no time limit.</p>
-<dt><code>-o</code> <i>file</i>, <code>&#8211;output-file</code>=<i>file</i></p>
-<dd> Send wisdom output to <i>file</i> rather than to standard output (the default).</p>
-<dt><code>-m</code>, <code>&#8211;measure</code>; <code>-e</code>, <code>&#8211;estimate</code>; <code>-x</code>, <code>&#8211;exhaustive</code></p>
-<dd> Normally, <i>fftwf-wisdom</i> creates plans in FFTW_PATIENT mode, but with these options you can instead use FFTW_MEASURE, FFTW_ESTIMATE, or FFTW_EXHAUSTIVE modes, respectively, as described in more detail by the FFTW manual. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help on the command-line options and usage.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print the version number and copyright information.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose output. (You can specify this multiple times, or supply a numeric argument greater than 1, to increase the verbosity level.) Note that the verbose output will be mixed with the wisdom output (making it impossible to import), unless you write the wisdom to a file via the <code>-o</code> option.</dd>
+<dt><code>-c</code>, <code>&#8211;canonical</code></dt>
+<dd> Optimize/pre-plan a canonical set of sizes: all powers of two and ten up to 2^20 (1048576), including both real and complex, forward and backwards, in-place and out-of-place transforms. Also includes two- and three-dimensional transforms of equal-size dimensions (e.g. 16x16x16).</dd>
+<dt><code>-t</code> <i>hours</i>, <code>&#8211;time-limit</code>=<i>hours</i></dt>
+<dd> Stop after a time of <i>hours</i> (hours) has elapsed, outputting accumulated wisdom. (The problems are planned in increasing order of size.) Defaults to 0, indicating no time limit.</dd>
+<dt><code>-o</code> <i>file</i>, <code>&#8211;output-file</code>=<i>file</i></dt>
+<dd> Send wisdom output to <i>file</i> rather than to standard output (the default).</dd>
+<dt><code>-m</code>, <code>&#8211;measure</code>; <code>-e</code>, <code>&#8211;estimate</code>; <code>-x</code>, <code>&#8211;exhaustive</code></dt>
+<dd> Normally, <i>fftwf-wisdom</i> creates plans in FFTW_PATIENT mode, but with these options you can instead use FFTW_MEASURE, FFTW_ESTIMATE, or FFTW_EXHAUSTIVE modes, respectively, as described in more detail by the FFTW manual. </dd>
 <p> Note that wisdom is tagged with the planning patience level, and a single file can mix different levels of wisdom (e.g. you can mostly use the patient default, but plan a few sizes that you especially care about in <code>&#8211;exhaustive</code> mode).</p>
-<dt><code>-n</code>, <code>&#8211;no-system-wisdom</code></p>
-<dd> Do not import the system wisdom from <i>/etc/fftw/wisdomf</i> (which is normally read by default).</p>
-<dt><code>-w</code> <i>file</i>, <code>&#8211;wisdom-file</code>=<i>file</i></p>
-<dd> Import wisdom from <i>file</i> (in addition to the system wisdom, unless <code>-n</code> is specified). Multiple wisdom files can be read via multiple <code>-w</code> options. If <i>file</i> is &quot;-&quot;, then read wisdom from standard input.</dl>
+<dt><code>-n</code>, <code>&#8211;no-system-wisdom</code></dt>
+<dd> Do not import the system wisdom from <i>/etc/fftw/wisdomf</i> (which is normally read by default).</dd>
+<dt><code>-w</code> <i>file</i>, <code>&#8211;wisdom-file</code>=<i>file</i></dt>
+<dd> Import wisdom from <i>file</i> (in addition to the system wisdom, unless <code>-n</code> is specified). Multiple wisdom files can be read via multiple <code>-w</code> options. If <i>file</i> is &quot;-&quot;, then read wisdom from standard input.</dd></dl>
 <h2>BUGS</h2>
 <p> Send bug reports to fftw [at] fftw.org.</p>
 <h2>AUTHORS</h2>

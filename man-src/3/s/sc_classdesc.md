@@ -11,85 +11,33 @@ description: "sc::ClassDesc –"
 <p> This class is used to contain information about classes.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;class.h&gt;</code></pre>
 <p> Inherits <code>sc::Identity</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>ClassDesc (const std::type_info &amp;, const char *, int=1, const char *p=0, DescribedClass *(*ctor)()=0, DescribedClass *(*keyvalctor)(const Ref&lt; KeyVal &gt; &amp;)=0, DescribedClass *(*stateinctor)(StateIn &amp;)=0)
-
-
-
 const ParentClasses &amp; parents () const
-
-
-
 const char * name () const
-
-
 Returns the name of the class.
-
-
 int version () const
-
-
 Returns the version number of the class.
-
-
 DescribedClass * create_described_class () const
-
-
 This member has been replaced by create().
-
-
 virtual DescribedClass * create () const
-
-
 Create an instance of DescribedClass with exact type equal to the class to which this class descriptor belongs.
-
-
 virtual DescribedClass * create (const Ref&lt; KeyVal &gt; &amp;) const
-
-
 Create an instance of DescribedClass with exact type equal to the class to which this class descriptor belongs.
-
-
 virtual DescribedClass * create (StateIn &amp;) const
-
-
 Create an instance of DescribedClass with exact type equal to the class to which this class descriptor belongs.
-
-
-
 Static Public Member Functions
 static std::map&lt; std::string, ClassDescP &gt; &amp; all ()
-
-
-
 static void list_all_classes ()
-
-
 Writes a list of all of the classes to ExEnv::out0().
-
-
 static ClassDesc * name_to_class_desc (const char *)
-
-
 Given the name of the class, return a pointer to the class descriptor.
-
-
 static ClassDesc * class_desc (const std::type_info &amp;)
-
-
 Given a type_info object return a pointer to the ClassDesc.
-
-
 static int load_class (const char *classname)
-
-
 Attempt to dynamically load the shared object file for classname.
-
-
-
 Friends</code></pre>
 <p> class <code>ParentClasses</code></p>
 <h2>Detailed Description</h2>

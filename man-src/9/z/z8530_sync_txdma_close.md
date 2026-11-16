@@ -14,14 +14,14 @@ description: "z8530_sync_txdma_close – Close down a TX driven DMA channel"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Network device to detach</dl>
+</dd><dd>Network device to detach</dd></dl>
 <p> <i>c</i></p>
 <dl>
-<dd>Z8530 channel to move into discard mode</dl>
+<dd>Z8530 channel to move into discard mode</dd></dl>
 <h2>Description</h2>
 <p>Shut down a DMA/PIO split mode synchronous interface. Halt the DMA, and free the buffers.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

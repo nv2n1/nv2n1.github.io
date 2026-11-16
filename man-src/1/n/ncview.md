@@ -46,14 +46,14 @@ description: "ncview – graphically display netCDF files under X windows"
 <p> It is necessary to install the applications default file, &quot;Ncview&quot;, in your $XAPPLRESDIR directory for the program to function properly. If the screen appears out of alignment, make sure that this installation has been performed. </p>
 <p> The application resources file recognizes the following resources, in addition to the standard ones: </p>
 <dl>
-<dt><code>labelWidth</code></p>
-<dd> The width, in pixels, of the information labels at the top of the main window. If you generally use long titles and variable longnames, you might want to increase this. Default = 400.</p>
-<dt><code>buttonWidth</code></p>
-<dd> The width, in pixels, of the &quot;variable&quot; and &quot;dimension&quot; buttons. If you use long names for these, you might want to increase this value. Default = 50.</p>
-<dt><code>nVarsPerRow</code></p>
-<dd> The number of variable buttons in a row before a new one is started. Set to be aesthetically pleasing to you. Default = 5.</p>
-<dt><code>deltaStep</code></p>
-<dd> The amount to step forward and backwards by when the control key is held down while pushing the button. If this value is less than 0, in indicates an absolute number of steps to take; if this value is greater than zero, it indicates the percent (in integer form, from 1 to 100) of the total file size to step. Default = 10 (ten percent). </p>
+<dt><code>labelWidth</code></dt>
+<dd> The width, in pixels, of the information labels at the top of the main window. If you generally use long titles and variable longnames, you might want to increase this. Default = 400.</dd>
+<dt><code>buttonWidth</code></dt>
+<dd> The width, in pixels, of the &quot;variable&quot; and &quot;dimension&quot; buttons. If you use long names for these, you might want to increase this value. Default = 50.</dd>
+<dt><code>nVarsPerRow</code></dt>
+<dd> The number of variable buttons in a row before a new one is started. Set to be aesthetically pleasing to you. Default = 5.</dd>
+<dt><code>deltaStep</code></dt>
+<dd> The amount to step forward and backwards by when the control key is held down while pushing the button. If this value is less than 0, in indicates an absolute number of steps to take; if this value is greater than zero, it indicates the percent (in integer form, from 1 to 100) of the total file size to step. Default = 10 (ten percent). </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Occasional bugs surface, especially when mixing variables in different files. </p>

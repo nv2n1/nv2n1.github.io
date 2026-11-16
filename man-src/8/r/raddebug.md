@@ -26,23 +26,23 @@ description: "raddebug – Display debugging output from a running server."
 <p> Debug output from a live server can be redirected to only one location. If a second instance of <i>raddebug</i> is started while the first one is still running, the later one will over-ride the first one, and the first will stop producing output.</p>
 <h2>Options</h2>
 <dl>
-<dt>-c&nbsp;<wbr><i>condition</i></p>
-<dd>Set a specific debug condition. The format of the condition is as specified in the CONDITIONS section of the <i>unlang</i> manual page.</p>
-<dt>-f&nbsp;<wbr><i>socket_file</i></p>
-<dd>The path to the control socket. See the <i>radmin</i> manual page for more description of this option.</p>
-<dt>-i&nbsp;<wbr><i>ipv4-address</i></p>
+<dt>-c&nbsp;<wbr><i>condition</i></dt>
+<dd>Set a specific debug condition. The format of the condition is as specified in the CONDITIONS section of the <i>unlang</i> manual page.</dd>
+<dt>-f&nbsp;<wbr><i>socket_file</i></dt>
+<dd>The path to the control socket. See the <i>radmin</i> manual page for more description of this option.</dd>
+<dt>-i&nbsp;<wbr><i>ipv4-address</i></dt>
 <dd>Show debug output for the client having the given IPv4 address. This option is equivalent to using:<br />
- -c &#8216;(Packet-Src-IP-Address == ipv4-address)&#8217;</p>
-<dt>-d <i>config directory</i></p>
-<dd>The radius configuration directory, usually /etc/raddb. See the <i>radmin</i> manual page for more description of this option.</p>
-<dt>-I&nbsp;<wbr><i>ipv6-address</i></p>
+ -c &#8216;(Packet-Src-IP-Address == ipv4-address)&#8217;</dd>
+<dt>-d <i>config directory</i></dt>
+<dd>The radius configuration directory, usually /etc/raddb. See the <i>radmin</i> manual page for more description of this option.</dd>
+<dt>-I&nbsp;<wbr><i>ipv6-address</i></dt>
 <dd>Show debug output for the client having the given IPv6 address. This option is equivalent to using:<br />
- -c &#8216;(Packet-Src-IPv6-Address == ipv6-address)&#8217;</p>
-<dt>-t&nbsp;<wbr><i>timeout</i></p>
-<dd>Stop printing debug output after &quot;timeout&quot; seconds. The default timeout is sixty (60) seconds. Use &quot;-t 0&quot; to print debugging output forever, or until the script exits.</p>
-<dt>-u&nbsp;<wbr><i>name</i></p>
+ -c &#8216;(Packet-Src-IPv6-Address == ipv6-address)&#8217;</dd>
+<dt>-t&nbsp;<wbr><i>timeout</i></dt>
+<dd>Stop printing debug output after &quot;timeout&quot; seconds. The default timeout is sixty (60) seconds. Use &quot;-t 0&quot; to print debugging output forever, or until the script exits.</dd>
+<dt>-u&nbsp;<wbr><i>name</i></dt>
 <dd>Show debug output for users having the given name. This option is equivalent to using:<br />
- -c &#8216;(User-Name == name)&#8217; </p>
+ -c &#8216;(User-Name == name)&#8217; </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-radmin/">radmin</a>(8), raddb/sites-available/control-socket, <a href="/docs/linux/man/5-unlang/">unlang</a>(5), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5)</p>

@@ -41,137 +41,137 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential handle containing the certificate<br />
- <i>type</i> The returned X509 certificate type</dl>
+</dt><dd> <i>handle</i> The credential handle containing the certificate<br />
+ <i>type</i> The returned X509 certificate type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error captured in a globus_result_t</dl>
+</dt><dd> GLOBUS_SUCCESS or an error captured in a globus_result_t</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read (<code>globus_gsi_cred_handle_t</code>handle, X509_NAME *desired_subject)</h3>
 <p> Read a credential. Read a credential from a filesystem location. The credential to read will be determined by the search order specified in the handle attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential handle to set. This credential handle should already be initialized using globus_gsi_cred_handle_init.<br />
- <i>desired_subject</i> The subject to check for when reading in a credential. The desired_subject should be either a exact match of the read cert&#8217;s subject or should just contain the /CN entry. If null, the credential read in is the first match based on the system configuration (paths and environment variables)</dl>
+</dt><dd> <i>handle</i> The credential handle to set. This credential handle should already be initialized using globus_gsi_cred_handle_init.<br />
+ <i>desired_subject</i> The subject to check for when reading in a credential. The desired_subject should be either a exact match of the read cert&#8217;s subject or should just contain the /CN entry. If null, the credential read in is the first match based on the system configuration (paths and environment variables)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if no errors occured, otherwise, an error object identifier is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS if no errors occured, otherwise, an error object identifier is returned.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_cred_read_proxy()</code> </p>
+</dt><dd> <code>globus_gsi_cred_read_proxy()</code> </dd>
 <p> globus_gsi_cred_read_cert_and_key()</dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> This function always searches for the desired credential. If you don&#8217;t want to perform a search, then don&#8217;t use this function. The search goes in the order of the handle attributes&#8217; search order.</dl>
+</dt><dd> This function always searches for the desired credential. If you don&#8217;t want to perform a search, then don&#8217;t use this function. The search goes in the order of the handle attributes&#8217; search order.</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_cert (<code>globus_gsi_cred_handle_t</code>handle, const char *cert_filename)</h3>
 <p> Read a certificate chain from a file. Read a cert from a file. Cert should be in PEM format. Will also read additional certificates as chain if present. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the handle to set based on the certificate that is read<br />
- <i>cert_filename</i> the filename of the certificate to read</dl>
+</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br />
+ <i>cert_filename</i> the filename of the certificate to read</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_cert_bio (<code>globus_gsi_cred_handle_t</code>handle, BIO *bio)</h3>
 <p> Read a certificate chain from a BIO. Read a cert from a BIO. Cert should be in PEM format. Will also read additional certificates as chain if present. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the handle to set based on the certificate that is read<br />
- <i>bio</i> the bio to read the certificate from</dl>
+</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br />
+ <i>bio</i> the bio to read the certificate from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_cert_buffer (const char *pem_buf, <code>globus_gsi_cred_handle_t</code> *out_handle, X509 **out_cert, STACK_OF(X509)**out_cert_chain, char **out_subject)</h3>
 <p> Read certificate chain from a buffer. Read a cert from a buffer. Cert should be in PEM format. Will also read additional certificates as chain if present. Any parameter besides pem_buf may be NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>pem_buf</i> The buffer containing the PEM formatted cert and chain.<br />
+</dt><dd> <i>pem_buf</i> The buffer containing the PEM formatted cert and chain.<br />
  <i>out_handle</i> The handle to initialize and set cert on.<br />
  <i>out_cert</i> The X509 certificate. This should be freed with X509_free().<br />
  <i>out_cert_chain</i> The X509 certificate chain. This should be freed with sk_X509_free().<br />
- <i>out_subject</i> The identity name of the cert. This should be freed with OPENSSL_free().</dl>
+ <i>out_subject</i> The identity name of the cert. This should be freed with OPENSSL_free().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_key (<code>globus_gsi_cred_handle_t</code>handle, const char *key_filename, int(*)()pw_cb)</h3>
 <p> Read a private key. Read a key from a PEM file. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the handle to set based on the key that is read<br />
+</dt><dd> <i>handle</i> the handle to set based on the key that is read<br />
  <i>key_filename</i> the filename of the key to read<br />
- <i>pw_cb</i> the callback for obtaining a password for decrypting the key.</dl>
+ <i>pw_cb</i> the callback for obtaining a password for decrypting the key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_pkcs12 (<code>globus_gsi_cred_handle_t</code>handle, const char *pkcs12_filename)</h3>
 <p> Read certificate and key from a PKCS12 file. Read a cert and key from a file. The file should be in PKCS12 format. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the handle to populate with the read credential<br />
- <i>pkcs12_filename</i> the filename containing the credential to read</dl>
+</dt><dd> <i>handle</i> the handle to populate with the read credential<br />
+ <i>pkcs12_filename</i> the filename containing the credential to read</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_proxy (<code>globus_gsi_cred_handle_t</code>handle, const char *proxy_filename)</h3>
 <p> Read proxy credential. Read a proxy from a PEM file. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential handle to set based on the proxy credential read from the file<br />
- <i>proxy_filename</i> The file containing the proxy credential</dl>
+</dt><dd> <i>handle</i> The credential handle to set based on the proxy credential read from the file<br />
+ <i>proxy_filename</i> The file containing the proxy credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_cred_read_proxy_bio (<code>globus_gsi_cred_handle_t</code>handle, BIO *bio)</h3>
 <p> Read proxy credential from a BIO. Read a Proxy Credential from a BIO stream and set the credential handle to represent the read credential. The values read from the stream, in order, will be the signed certificate, the private key, and the certificate chain. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential handle to set. The credential should handle be initialized (i.e. not NULL).<br />
- <i>bio</i> The stream to read the credential from</dl>
+</dt><dd> <i>handle</i> The credential handle to set. The credential should handle be initialized (i.e. not NULL).<br />
+ <i>bio</i> The stream to read the credential from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object is returned</dd></dl>
 <h3>globus_result_t globus_gsi_cred_write (<code>globus_gsi_cred_handle_t</code>handle, BIO *bio)</h3>
 <p> Write Credential. Write out a credential to a BIO. The credential parameters written, in order, are the signed certificate, the RSA private key, and the certificate chain (a set of X509 certificates). the credential is written out in PEM format. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential to write out<br />
- <i>bio</i> The BIO stream to write out to</dl>
+</dt><dd> <i>handle</i> The credential to write out<br />
+ <i>bio</i> The BIO stream to write out to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object ID is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object ID is returned.</dd></dl>
 <h3>globus_result_t globus_gsi_cred_write_proxy (<code>globus_gsi_cred_handle_t</code>handle, const char *proxy_filename)</h3>
 <p> Write a proxy credential. Write out a credential to a file. The credential parameters written, in order, are the signed certificate, the RSA private key, and the certificate chain (a set of X509 certificates). the credential is written out in PEM format. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The credential to write out<br />
- <i>proxy_filename</i> The file to write out to</dl>
+</dt><dd> <i>handle</i> The credential to write out<br />
+ <i>proxy_filename</i> The file to write out to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object ID is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object ID is returned.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_credential from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAQ">Author</a></dt>
+<dd></dd></dl>

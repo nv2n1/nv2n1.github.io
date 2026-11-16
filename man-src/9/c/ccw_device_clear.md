@@ -14,10 +14,10 @@ description: "ccw_device_clear – terminate I/O request processing"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>target ccw device</dl>
+</dd><dd>target ccw device</dd></dl>
 <p> <i>intparm</i></p>
 <dl>
-<dd>interruption parameter; value is only used if no I/O is outstanding, otherwise the intparm associated with the I/O request is returned</dl>
+<dd>interruption parameter; value is only used if no I/O is outstanding, otherwise the intparm associated with the I/O request is returned</dd></dl>
 <h2>Description</h2>
 <p><code>ccw_device_clear</code> calls csch on <i>cdev</i>&#8216;s subchannel.</p>
 <h2>Return</h2>
@@ -27,5 +27,5 @@ description: "ccw_device_clear – terminate I/O request processing"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

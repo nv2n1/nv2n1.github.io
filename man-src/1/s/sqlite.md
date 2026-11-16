@@ -84,24 +84,24 @@ sqlite &gt;.help
 <h2>OPTIONS</h2>
 <p> The program has the following options:</p>
 <dl>
-<dt><code>-init file</code></p>
-<dd> Read in and process &#8216;file&#8217;, which contains &quot;dot commands&quot;. You can use this file to initialize display settings.</p>
-<dt><code>-html</code></p>
-<dd> Set output mode to HTML.</p>
-<dt><code>-list</code></p>
-<dd> Set output mode to &#8216;list&#8217;.</p>
-<dt><code>-line</code></p>
-<dd> Set output mode to &#8216;line&#8217;.</p>
-<dt><code>-column</code></p>
-<dd> Set output mode to &#8216;column&#8217;.</p>
-<dt><code>-separator&nbsp;<wbr></code><i>separator</i></p>
-<dd> Specify which output field separator for &#8216;list&#8217; mode to use. Default is &#8216;|&#8217;.</p>
-<dt><code>-nullvalue&nbsp;<wbr></code><i>string</i></p>
-<dd> When a null is encountered, print &#8216;string&#8217;. Default is no string.</p>
-<dt><code>-[no]header</code></p>
-<dd> Turn headers on or off. Default is off.</p>
-<dt><code>-echo</code></p>
-<dd> Print commands before execution. </p>
+<dt><code>-init file</code></dt>
+<dd> Read in and process &#8216;file&#8217;, which contains &quot;dot commands&quot;. You can use this file to initialize display settings.</dd>
+<dt><code>-html</code></dt>
+<dd> Set output mode to HTML.</dd>
+<dt><code>-list</code></dt>
+<dd> Set output mode to &#8216;list&#8217;.</dd>
+<dt><code>-line</code></dt>
+<dd> Set output mode to &#8216;line&#8217;.</dd>
+<dt><code>-column</code></dt>
+<dd> Set output mode to &#8216;column&#8217;.</dd>
+<dt><code>-separator&nbsp;<wbr></code><i>separator</i></dt>
+<dd> Specify which output field separator for &#8216;list&#8217; mode to use. Default is &#8216;|&#8217;.</dd>
+<dt><code>-nullvalue&nbsp;<wbr></code><i>string</i></dt>
+<dd> When a null is encountered, print &#8216;string&#8217;. Default is no string.</dd>
+<dt><code>-[no]header</code></dt>
+<dd> Turn headers on or off. Default is off.</dd>
+<dt><code>-echo</code></dt>
+<dd> Print commands before execution. </dd>
 </dl>
 <h2>OUTPUT MODE</h2>
 <p> The SQLite program has different output modes, which define the way the output (from queries) is formatted. </p>

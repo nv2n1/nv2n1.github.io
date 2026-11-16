@@ -11,9 +11,7 @@ std::notify_all_at_thread_exit - std::notify_all_at_thread_exit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;condition_variable&gt;
-
     void notify_all_at_thread_exit(std::condition_variable &amp;cond, (since C++ 11)
-
                                                                       std::unique_lock&lt;std::mutex&gt;
                                                                           lk);</code></pre> 
 notify_all_at_thread_exit provides a mechanism to notify other threads that a given thread has completely finished, including destroying all thread_local objects. It operates as follows: 
@@ -44,21 +42,15 @@ lk - the lock associated with the condition variable cond
 
 This partial code fragment illustrates how notify_all_at_thread_exit can be used to avoid accessing data that depends on thread locals while those thread locals are in the process of being destructed: 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;cassert&gt;
 #include &lt;condition_variable&gt;
-
 #include &lt;string&gt;
 std::mutex m;
-
 std::condition_variable cv;
 bool ready = false;
-
 std::string result; // some arbitrary type
 void thread_func()
-
 {
     thread_local std::string thread_local_data = &quot;42&quot;;
     std::unique_lock&lt;std::mutex&gt; lk(m);
@@ -70,7 +62,6 @@ void thread_func()
   // 2. unlock mutex;
   // 3. notify cv.
 int main()
-
 {
     std::thread t(thread_func);
     t.detach();

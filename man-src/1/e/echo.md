@@ -15,22 +15,23 @@ description: "echo – display a line of text"
 <h2>DESCRIPTION</h2>
 <p> Echo the STRING(s) to standard output.</p>
 <dl>
-<dt><code>-n</code></p>
-<dd> do not output the trailing newline</p>
-<dt><code>-e</code></p>
-<dd> enable interpretation of backslash escapes</p>
-<dt><code>-E</code></p>
-<dd> disable interpretation of backslash escapes (default)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-n</code></dt>
+<dd> do not output the trailing newline</dd>
+<dt><code>-e</code></dt>
+<dd> enable interpretation of backslash escapes</dd>
+<dt><code>-E</code></dt>
+<dd> disable interpretation of backslash escapes (default)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If <code>-e</code> is in effect, the following sequences are recognized:</p>
 <dl>
-<dt>\</p>
-<dd> backslash</p>
-<dt></p>
-<dd> alert (BEL)</p>
-<dt></p>
-<dd> backspace</p>
+<dt>\</dt>
+<dd> backslash</dd>
+<dt></dt>
+<dd> alert (BEL)</dd>
+<dt></dt>
+<dd> backspace</dd>
 <dt>
+</dt></dl>

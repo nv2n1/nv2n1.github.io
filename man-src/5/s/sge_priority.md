@@ -13,18 +13,18 @@ description: "sge_priority – xxQS_NAMExx job priorities"
 <h3>Jobs Dispatch Priority</h3>
 <p>A job&#8217;s dispatch priority (display in the &quot;reduced&quot; output format of is affected by a number of factors:</p>
 <dl>
-<dt>&bull;</p>
-<dd>the identity of the submitting user;</p>
-<dt>&bull;</p>
-<dd>the project under which the job is submitted (or alternatively, the default project of the submitting user);</p>
-<dt>&bull;</p>
-<dd>any resources requested by the job;</p>
-<dt>&bull;</p>
-<dd>the job&#8217;s submit time;</p>
-<dt>&bull;</p>
-<dd>the job&#8217;s initiation deadline time (if specified);</p>
-<dt>&bull;</p>
-<dd>the <code>-p</code> priority specified for the job (also known as the POSIX priority &quot;<i>pprio</i>&quot;).</dl>
+<dt>&bull;</dt>
+<dd>the identity of the submitting user;</dd>
+<dt>&bull;</dt>
+<dd>the project under which the job is submitted (or alternatively, the default project of the submitting user);</dd>
+<dt>&bull;</dt>
+<dd>any resources requested by the job;</dd>
+<dt>&bull;</dt>
+<dd>the job&#8217;s submit time;</dd>
+<dt>&bull;</dt>
+<dd>the job&#8217;s initiation deadline time (if specified);</dd>
+<dt>&bull;</dt>
+<dd>the <code>-p</code> priority specified for the job (also known as the POSIX priority &quot;<i>pprio</i>&quot;).</dd></dl>
 <p> The effect of each of these is governed by the overall policy setup, which is split into three top-level contributions. Each of these is configured through the parameters <code>weight_priority</code>, <code>weight_ticket</code> and <code>weight_urgency</code>. These three parameters control to what degree POSIX priority, ticket policy, and urgency policy are in effect. To facilitate interpretation, the raw priorities (&quot;<i>tckts</i>&quot;/&quot;<i>urg</i>&quot;/&quot;<i>ppri</i>&quot;) are normalized (&quot;<i>ntckts</i>&quot;/&quot;<i>nurg</i>&quot;/&quot;<i>npprior</i>&quot;) before they are used to calculate job priorities (&quot;<i>prio</i>&quot;). Normalization maps each raw urgency/ticket/priority value into a range between 0 and 1. </p>
 <pre> <i>npprior</i> = normalized(<i>ppri</i>)
  <i>nurg</i> = normalized(<i>urg</i>)

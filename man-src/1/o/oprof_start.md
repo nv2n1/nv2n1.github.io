@@ -17,16 +17,16 @@ description: "oprof_start – A GUI interface for OProfile"
 <p> No special environment variables are recognised by oprof_start. </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/root/.oprofile/daemonrc</i></p>
-<dd> Configuration file for opcontrol</p>
-<dt><i>/var/lib/oprofile/samples/</i></p>
-<dd> The location of the generated sample files. </p>
+<dt><i>/root/.oprofile/daemonrc</i></dt>
+<dd> Configuration file for opcontrol</dd>
+<dt><i>/var/lib/oprofile/samples/</i></dt>
+<dd> The location of the generated sample files. </dd>
 </dl>
 <h2>VERSION</h2>
 <dl>
-<dt>This man page is current for oprofile-0.9.9.</p>
+<dt>This man page is current for oprofile-0.9.9.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>/usr/share/doc/oprofile/,</code> <code><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1)</code> </p>
 <h2>Index</h2>

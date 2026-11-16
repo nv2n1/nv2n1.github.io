@@ -11,8 +11,8 @@ description: "tnameserv – Interface Definition Language (IDL)."
 <h2>Synopsis</h2>
 <pre><code>tnameserve</code> <code>-ORBInitialPort</code> [ <i>nameserverport</i> ]</pre>
 <dl COMPACT>
-<dt>-ORBInitialPort <i>nameserverport</i></p>
-<dd>The initial port where the naming service listens for the bootstrap protocol used to implement the ORB <code>resolve_initial_references</code> and <code>list_initial_references</code> methods.</dl>
+<dt>-ORBInitialPort <i>nameserverport</i></dt>
+<dd>The initial port where the naming service listens for the bootstrap protocol used to implement the ORB <code>resolve_initial_references</code> and <code>list_initial_references</code> methods.</dd></dl>
 <h2>Description</h2>
 <p>Java IDL includes the Object Request Broker Daemon (ORBD). ORBD is a daemon process that contains a Bootstrap Service, a Transient Naming Service, a Persistent Naming Service, and a Server Manager. The Java IDL tutorials all use ORBD, but you can substitute the <code>tnameserv</code> command for the <code>orbd</code> command in any of the examples that use a Transient Naming Service. </p>
 <p> See orbd(1) or Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </p>
@@ -43,8 +43,8 @@ description: "tnameserv – Interface Definition Language (IDL)."
 <p>To stop the Java IDL naming service, use the relevant operating system command, such as <code>kill</code> for a Unix process or <code>Ctrl+C</code> for a Windows process. The naming service continues to wait for invocations until it is explicitly shut down. Note that names registered with the Java IDL naming service disappear when the service is terminated.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-J<i>option</i></p>
-<dd>Passes <code>option</code> to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+<dt>-J<i>option</i></dt>
+<dd>Passes <code>option</code> to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dd></dl>
 <h2>Examples</h2>
 <h3>Add Objects To The Name Space</h3>
 <p>The following example shows how to add names to the name space. It is a self-contained Transient Naming Service client that creates the following simple tree. </p>
@@ -138,6 +138,6 @@ description: "tnameserv – Interface Definition Language (IDL)."
 <pre><code>}</code></pre>
 <h2>See Also</h2>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>orbd(1) </p>
+<dt>&bull;</dt>
+<dd>orbd(1) </dd>
 </dl>

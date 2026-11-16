@@ -17,22 +17,22 @@ description: "QLandkarteGT – GPS mapping (GeoTiff and vector) and GPSr managem
 <h2>OPTIONS</h2>
 <p> <i>QLandkarteGT</i> currently understands the following options. Note that long options must be specified in full (by now).</p>
 <dl>
-<dt><code>-d</code></p>
+<dt><code>-d</code></dt>
 <dd>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable additional debugging messages to standard output.</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;debug</code></dt>
+<dd> Enable additional debugging messages to standard output.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd> Print a short option summary, and exit.</p>
-<dt><code>-m</code><i>&nbsp;<wbr>FD</i></p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Print a short option summary, and exit.</dd>
+<dt><code>-m</code><i>&nbsp;<wbr>FD</i></dt>
 <dd>
-<dt><code>&#8211;monitor=</code><i>FD</i></p>
-<dd> Monitor the file descriptor <i>FD</i> for activity. If any new data arrives on the descriptor, a single byte is read from it, all currently active data are discarded, and the geo data files that have been specified at the end of the command-line when starting <i>QLandkarteGT</i> are read and evaluated again.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;monitor=</code><i>FD</i></dt>
+<dd> Monitor the file descriptor <i>FD</i> for activity. If any new data arrives on the descriptor, a single byte is read from it, all currently active data are discarded, and the geo data files that have been specified at the end of the command-line when starting <i>QLandkarteGT</i> are read and evaluated again.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-splash</code></p>
-<dd> Do not display the splash screen on startup.</dl>
+</dd><dt><code>&#8211;no-splash</code></dt>
+<dd> Do not display the splash screen on startup.</dd></dl>
 <p> All remaining positional arguments are considered names of geo data files to be read and evaluated upon startup.</p>
 <h2>SEE ALSO</h2>
 <p> <i>QLandkarteGT</i> Homepage: <code><a rel="nofollow" href="http://www.qlandkarte.org">http://www.qlandkarte.org</a></code></p>

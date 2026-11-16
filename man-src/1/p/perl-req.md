@@ -16,23 +16,23 @@ description: "perl.req – list requirements for Perl scripts and libraries"
 <p> <code>perl.req</code> is basically a wrapper for B::PerlReq Perl compiler backend.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-m</code>, <code>&#8211;method</code>=<i>method</i></p>
-<dd>Use particular <i>method</i> for dependency tracking. Alternatively, <font SIZE="-1">RPM_PERL_REQ_METHOD</font> environement variable can be used to set the method. </p>
+<dt><code>-m</code>, <code>&#8211;method</code>=<i>method</i></dt>
+<dd>Use particular <i>method</i> for dependency tracking. Alternatively, <font SIZE="-1">RPM_PERL_REQ_METHOD</font> environement variable can be used to set the method. </dd>
 <p> The following methods are available:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>strict</code></p>
-<dd>Search thoroughly and list all requirements. In particular, list platform-specific (non-UNIX) requirements and requirements found inside <tt>&quot;eval&quot;</tt> blocks.</p>
-<dt><code>normal</code> (default)</p>
-<dd>Enable moderate search most acceptable for <font SIZE="-1">RPM</font> packaging. That is, skip files known to be platform-specific; skip platform-specific requirements and those found inside <tt>&quot;eval&quot;</tt> blocks; skip most common requirements (e.g. <tt>&quot;strict.pm&quot;</tt>).</p>
-<dt><code>relaxed</code></p>
-<dd>Enable relaxed mode. That is, tolerate B::PerlReq failures; in addition to normal method, skip conditional requirements (e.g. <tt>&quot;require&quot;</tt> statements inside subroutines); skip <tt>&quot;do FILE&quot;</tt> statements; list only essential dependencies.</dl>
+</dd><dl COMPACT>
+<dt><code>strict</code></dt>
+<dd>Search thoroughly and list all requirements. In particular, list platform-specific (non-UNIX) requirements and requirements found inside <tt>&quot;eval&quot;</tt> blocks.</dd>
+<dt><code>normal</code> (default)</dt>
+<dd>Enable moderate search most acceptable for <font SIZE="-1">RPM</font> packaging. That is, skip files known to be platform-specific; skip platform-specific requirements and those found inside <tt>&quot;eval&quot;</tt> blocks; skip most common requirements (e.g. <tt>&quot;strict.pm&quot;</tt>).</dd>
+<dt><code>relaxed</code></dt>
+<dd>Enable relaxed mode. That is, tolerate B::PerlReq failures; in addition to normal method, skip conditional requirements (e.g. <tt>&quot;require&quot;</tt> statements inside subroutines); skip <tt>&quot;do FILE&quot;</tt> statements; list only essential dependencies.</dd></dl>
 </dl>
 <dl COMPACT>
-<dd></dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Increase verbosity.</dl>
+<dd></dd></dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase verbosity.</dd></dl>
 <h2>Author</h2>
 <p>Written by Alexey Tourbin &lt;at [at] altlinux.org&gt;, based on an earlier version by Ken Estes &lt;kestes [at] staff.mail.com&gt;, with contributions from Mikhail Zabaluev &lt;mhz [at] altlinux.org&gt;.</p>
 <h2>History</h2>

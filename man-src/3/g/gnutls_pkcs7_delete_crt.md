@@ -20,9 +20,9 @@ url: "/docs/linux/man/3-gnutls_pkcs7_delete_crt/"
 
 <dl>
 <dt>gnutls_pkcs7_t pkcs7
-<dd> should contain a gnutls_pkcs7_t structure
-<dt>int indx
-<dd> the index of the certificate to delete</dl>
+</dt><dd> should contain a gnutls_pkcs7_t structure
+</dd><dt>int indx
+</dt><dd> the index of the certificate to delete</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -47,7 +47,7 @@ url: "/docs/linux/man/3-gnutls_pkcs7_delete_crt/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

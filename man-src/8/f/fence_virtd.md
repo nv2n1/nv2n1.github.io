@@ -15,16 +15,16 @@ description: "fence_virtd – Fencing host for virtual machines"
 &nbsp;<wbr>&#8211; libvirt-qpid for multi-node, non-cluster operation For compatibility, fence_xvm from linux-cluster release 2 may talk to fence_virtd. fence_virtd accepts a few options on the command line, but most options are read from fence_virt.conf. </p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Specify debug level, e.g. &quot;-d99&quot; </p>
-<dt><code>-c</code></p>
-<dd>Interactively prompt user for configuration information </p>
-<dt><code>-f</code></p>
-<dd>Specify an alternate configuration file instead of /etc/fence_virt.conf </p>
-<dt><code>-F</code></p>
-<dd>Do not fork into background after starting (overrides any setting in fence_virt.conf) </p>
-<dt><code>-w</code></p>
-<dd>Wait for backend to be available (overrides any setting in fence_virt.conf) </p>
+<dt><code>-d</code></dt>
+<dd>Specify debug level, e.g. &quot;-d99&quot; </dd>
+<dt><code>-c</code></dt>
+<dd>Interactively prompt user for configuration information </dd>
+<dt><code>-f</code></dt>
+<dd>Specify an alternate configuration file instead of /etc/fence_virt.conf </dd>
+<dt><code>-F</code></dt>
+<dd>Do not fork into background after starting (overrides any setting in fence_virt.conf) </dd>
+<dt><code>-w</code></dt>
+<dd>Wait for backend to be available (overrides any setting in fence_virt.conf) </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-fence_virt/">fence_virt</a>(8), <a href="/docs/linux/man/8-fence_xvm/">fence_xvm</a>(8), fence(8), <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) </p>

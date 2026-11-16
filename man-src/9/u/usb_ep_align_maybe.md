@@ -14,17 +14,17 @@ description: "usb_ep_align_maybe – returns len aligned to ep’s maxpacketsize
 <p><i>g</i></p>
 <dl>
 <dd>
-<dd>controller to check for quirk</dl>
+</dd><dd>controller to check for quirk</dd></dl>
 <p> <i>ep</i></p>
 <dl>
-<dd>the endpoint whose maxpacketsize is used to align <i>len</i></dl>
+<dd>the endpoint whose maxpacketsize is used to align <i>len</i></dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>buffer size&#8217;s length to align to <i>ep</i>&#8216;s maxpacketsize</dl>
+<dd>buffer size&#8217;s length to align to <i>ep</i>&#8216;s maxpacketsize</dd></dl>
 <h2>Description</h2>
 <p>This helper is used in case it&#8217;s required for any reason to check and maybe align buffer&#8217;s size to an ep&#8217;s maxpacketsize.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

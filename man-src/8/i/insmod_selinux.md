@@ -74,8 +74,8 @@ description: "insmod_selinux – Security Enhanced Linux Policy for the insmod p
 <p> <code>insmod_exec_t</code> </p>
 <p> &#8211; Set files with the insmod_exec_t type, if you want to transition an executable to the insmod_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/rmmod.*, /sbin/insmod.*, /sbin/modprobe.*, /usr/sbin/rmmod.*, /usr/sbin/insmod.*, /usr/sbin/modprobe.*, /bin/kmod, /usr/bin/kmod </p>
+<dt>Paths:</dt>
+<dd>/sbin/rmmod.*, /sbin/insmod.*, /sbin/modprobe.*, /usr/sbin/rmmod.*, /usr/sbin/insmod.*, /usr/sbin/modprobe.*, /bin/kmod, /usr/bin/kmod </dd>
 </dl>
 <p> <code>insmod_tmpfs_t</code> </p>
 <p> &#8211; Set files with the insmod_tmpfs_t type, if you want to store insmod files on a tmpfs file system. </p>

@@ -24,14 +24,10 @@ the locale object associated with the stream.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;codecvt&gt;
 int main()
-
 {
     std::wbuffer_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; conv(std::cout.rdbuf());
     std::wostream out(&amp;conv);

@@ -24,11 +24,11 @@ description: "yum-versionlock – Version lock rpm packages"
 <p> <i>/etc/yum/pluginconf.d/versionlock.conf</i></p>
 <dl>
 <dt>
-<dd> The system wide configuration file. See <code><a href="/docs/linux/man/5-yum-versionlock-conf/">yum-versionlock.conf</a>(5)</code> for more information.</dl>
+</dt><dd> The system wide configuration file. See <code><a href="/docs/linux/man/5-yum-versionlock-conf/">yum-versionlock.conf</a>(5)</code> for more information.</dd></dl>
 <p> <i>/etc/yum/pluginconf.d/versionlock.list</i></p>
 <dl>
 <dt>
-<dd> The default place to put package version lock information (one package and version per. line). The file takes entries in the following format <code>EPOCH:NAME-VERSION-RELEASE.ARCH</code> See <code><a href="/docs/linux/man/8-rpm/">rpm</a>(8)</code> for more information on custom query formats. If the package does not have an EPOCH the number will default to 0.</dl>
+</dt><dd> The default place to put package version lock information (one package and version per. line). The file takes entries in the following format <code>EPOCH:NAME-VERSION-RELEASE.ARCH</code> See <code><a href="/docs/linux/man/8-rpm/">rpm</a>(8)</code> for more information on custom query formats. If the package does not have an EPOCH the number will default to 0.</dd></dl>
 <h2>BUGS</h2>
 <p> There are of course no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
 <h2>AVAILABILITY</h2>

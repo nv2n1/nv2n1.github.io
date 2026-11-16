@@ -14,17 +14,17 @@ description: "wsimport – JAX-WS 2.0 Beta"
 <p>The <i>wsimport</i> tool generates JAX-WS portable artifacts, such as: </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>Service Endpoint Interface (SEI)</p>
-<dt>o</p>
-<dd>Service</p>
-<dt>o</p>
-<dd>Exception class mapped from wsdl:fault (if any)</p>
-<dt>o</p>
-<dd>Async Reponse Bean derived from response wsdl:message (if any)</p>
-<dt>o</p>
-<dd>JAXB generated value types (mapped java classes from schema types)</dl>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>Service Endpoint Interface (SEI)</dd>
+<dt>o</dt>
+<dd>Service</dd>
+<dt>o</dt>
+<dd>Exception class mapped from wsdl:fault (if any)</dd>
+<dt>o</dt>
+<dd>Async Reponse Bean derived from response wsdl:message (if any)</dd>
+<dt>o</dt>
+<dd>JAXB generated value types (mapped java classes from schema types)</dd></dl>
 </dl>
 <p> These artifacts can be packaged in a WAR file with the WSDL and schema documents along with the endpoint implementation to be deployed. </p>
 <p> wsimport tool can be launched using the command line script wsimport.sh (Unix) or wsimport.bat(windows). There is also and ant task to import and compile the wsdl, see the details below. </p>

@@ -31,7 +31,6 @@ description: "pack_fopen_chunk – Opens a sub-chunk of a file. Allegro game pro
 ... input = pack_fopen_chunk(input, 1);
 /* Read data from the sub-chunk and close it. */
 ... input = pack_fclose_chunk(input);
-
 This sequence will read the length counts created when the chunk was
     written,
     and automatically decompress the contents of the chunk if it

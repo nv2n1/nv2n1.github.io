@@ -10,13 +10,13 @@ description: "XmbResetIC, XwcResetIC, Xutf8ResetIC – reset the state of an inp
 <p>XmbResetIC, XwcResetIC, Xutf8ResetIC &#8211; reset the state of an input context </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>char *XmbResetIC(XIC <i>ic</i>);</p>
-<dd>wchar_t *XwcResetIC(XIC <i>ic</i>);</p>
-<dd>char *Xutf8ResetIC(XIC <i>ic</i>);</dl>
+<dd>char *XmbResetIC(XIC <i>ic</i>);</dd>
+<dd>wchar_t *XwcResetIC(XIC <i>ic</i>);</dd>
+<dd>char *Xutf8ResetIC(XIC <i>ic</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>ic</i></p>
-<dd>Specifies the input context.</dl>
+<dt><i>ic</i></dt>
+<dd>Specifies the input context.</dd></dl>
 <h2>Description</h2>
 <p>When <code>XNResetState</code> is set to <code>XIMInitialState</code>, <code>XmbResetIC</code>, <code>XwcResetIC</code> and <code>Xutf8ResetIC</code> reset an input context to its initial state; when <code>XNResetState</code> is set to <code>XIMPreserveState</code>, the current input context state is preserved. In both cases, any input pending on that context is deleted. The input method is required to clear the preedit area, if any, and update the status accordingly. Calling <code>XmbResetIC</code>, <code>XwcResetIC</code> or <code>Xutf8ResetIC</code> does not change the focus. </p>
 <p> The return value of <code>XmbResetIC</code> is its current preedit string as a multibyte string. The return value of <code>XwcResetIC</code> is its current preedit string as a wide character string. The return value of <code>Xutf8ResetIC</code> is its current preedit string as an UTF-8 string. If there is any preedit text drawn or visible to the user, then these procedures must return a non-NULL string. If there is no visible preedit text, then it is input method implementation-dependent whether these procedures return a non-NULL string or NULL. </p>

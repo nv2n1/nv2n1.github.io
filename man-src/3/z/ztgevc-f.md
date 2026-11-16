@@ -22,30 +22,24 @@ description: "ztgevc.f –"
  a pair of complex matrices (S,P), where S and P are upper triangular.
  Matrix pairs of this type are produced by the generalized Schur
  factorization of a complex matrix pair (A,B):
- 
  A = Q*S*Z**H, B = Q*P*Z**H
- 
  as computed by ZGGHRD + ZHGEQZ.
- 
  The right eigenvector x and the left eigenvector y of (S,P)
  corresponding to an eigenvalue w are defined by:
- 
  S*x = w*P*x, (y**H)*S = w*(y**H)*P,
- 
  where y**H denotes the conjugate tranpose of y.
  The eigenvalues are not input to this routine, but are computed
  directly from the diagonal elements of S and P.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of (S,P), or the products Z*X and/or Q*Y,
  where Z and Q are input matrices.
  If Q and Z are the unitary factors from the generalized Schur
  factorization of a matrix pair (A,B), then Z*X and Q*Y
  are the matrices of right and left eigenvectors of (A,B).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'R': compute right eigenvectors only;
  = 'L': compute left eigenvectors only;
@@ -132,13 +126,13 @@ description: "ztgevc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 219 of file ztgevc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

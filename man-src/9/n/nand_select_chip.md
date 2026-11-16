@@ -14,14 +14,14 @@ description: "nand_select_chip – [DEFAULT] control CE line"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>chipnr</i></p>
 <dl>
-<dd>chipnumber to select, -1 for deselect</dl>
+<dd>chipnumber to select, -1 for deselect</dd></dl>
 <h2>Description</h2>
 <p>Default select function for 1 chip devices.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

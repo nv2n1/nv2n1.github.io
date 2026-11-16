@@ -11,9 +11,7 @@ description: "ql/instruments/vanillaswap.hpp – Simple fixed-rate vs Libor swap
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instruments/swap.hpp&gt;
-
 #include &lt;ql/time/daycounter.hpp&gt;
-
 #include &lt;ql/time/schedule.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>VanillaSwap</code><br />

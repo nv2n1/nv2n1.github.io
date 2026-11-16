@@ -18,16 +18,16 @@ description: "bestups – Driver for Best Power / SOLA (Phoenixtec protocol) UPS
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
 <p> <code>nombattvolt=</code><i>num</i></p>
 <dl>
-<dd>Override the battery float voltage which is normally determined by asking the hardware. This is useful if your UPS constantly reports battery.charge values just below 100% even when it&#8217;s completely charged. </p>
+<dd>Override the battery float voltage which is normally determined by asking the hardware. This is useful if your UPS constantly reports battery.charge values just below 100% even when it&#8217;s completely charged. </dd>
 <p> If you have this problem, set this to whatever battery.voltage reports when the UPS is known to be completely charged with a good battery. </p>
 <p> The author&#8217;s Best Fortress 750 uses nombattvolt=27.4.</dl>
 <p> <code>battvoltmult=</code><i>num</i></p>
 <dl>
-<dd>Multiply the reported battery voltage by this number. Some devices report only a fraction of the total battery voltage. </p>
+<dd>Multiply the reported battery voltage by this number. Some devices report only a fraction of the total battery voltage. </dd>
 <p> For example, the SOLA 610 700VA UPS (with a 24V battery) reports the single cell voltage (about 2.27V when fully charged). In this particular case you can set battvoltmult = 12 in <code>ups.conf</code>(8) to fix this.</dl>
 <p> <code>ID=</code><i>string</i></p>
 <dl>
-<dd>Set the Identification response string. This should only be used with hardware that supports the Phoenixtec protocol status inquiry commands, but not the &quot;ID&quot; command, such as the Best/SOLA 610. Format of the ID string is: AAA,BBBB,CCC,DDD,EE.E,FF.F </p>
+<dd>Set the Identification response string. This should only be used with hardware that supports the Phoenixtec protocol status inquiry commands, but not the &quot;ID&quot; command, such as the Best/SOLA 610. Format of the ID string is: AAA,BBBB,CCC,DDD,EE.E,FF.F </dd>
 <p> AAA is the three-character identification for the UPS model. </p>
 <p> BBBB is the output power in VA (volt amperes). B is an integer number ranging from 0 to 9. </p>
 <p> CCC is the Nominal Input Voltage. C is an integer number ranging from 0 to 9. The unit is Volts AC. </p>
@@ -46,3 +46,4 @@ description: "bestups – Driver for Best Power / SOLA (Phoenixtec protocol) UPS
 <p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>
+</p>

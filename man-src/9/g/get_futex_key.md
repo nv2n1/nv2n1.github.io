@@ -14,16 +14,16 @@ description: "get_futex_key – Get parameters which are the keys for a futex"
 <p><i>uaddr</i></p>
 <dl>
 <dd>
-<dd>virtual address of the futex</dl>
+</dd><dd>virtual address of the futex</dd></dl>
 <p> <i>fshared</i></p>
 <dl>
-<dd>0 for a PROCESS_PRIVATE futex, 1 for PROCESS_SHARED</dl>
+<dd>0 for a PROCESS_PRIVATE futex, 1 for PROCESS_SHARED</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>address where result is stored.</dl>
+<dd>address where result is stored.</dd></dl>
 <p> <i>rw</i></p>
 <dl>
-<dd>mapping needs to be read/write (values: VERIFY_READ, VERIFY_WRITE)</dl>
+<dd>mapping needs to be read/write (values: VERIFY_READ, VERIFY_WRITE)</dd></dl>
 <h2>Return</h2>
 <p>a negative error code or 0 </p>
 <p> The key words are stored in *key on success. </p>
@@ -32,5 +32,5 @@ description: "get_futex_key – Get parameters which are the keys for a futex"
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,11 +15,11 @@ disk_replace_part_tbl - replace disk-&gt;part_tbl in RCU-safe way
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk to replace part_tbl for</dl>
+<dl><dd></dd><dd>disk to replace part_tbl for</dd></dl>
  
 
  <i>new_ptbl</i>
-<dl><dd>new part_tbl to install</dl>
+<dl><dd>new part_tbl to install</dd></dl>
 
 <h2>Description</h2>
 

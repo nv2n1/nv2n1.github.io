@@ -19,45 +19,45 @@ description: "pdftopng – Portable Document Format (PDF) to Portable Network Gr
 <h2>OPTIONS</h2>
 <p> Many of the following options can be set with configuration file commands. These are listed in square brackets with the description of the corresponding command line option.</p>
 <dl>
-<dt><code>-f</code><i> number</i></p>
-<dd> Specifies the first page to convert.</p>
-<dt><code>-l</code><i> number</i></p>
-<dd> Specifies the last page to convert.</p>
-<dt><code>-r</code><i> number</i></p>
-<dd> Specifies the resolution, in DPI. The default is 150 DPI.</p>
-<dt><code>-mono</code></p>
-<dd> Generate a monochrome image (instead of a color image).</p>
-<dt><code>-gray</code></p>
-<dd> Generate a grayscale image (instead of a color image).</p>
-<dt><code>-freetype</code><i> yes | no</i></p>
-<dd> Enable or disable FreeType (a TrueType / Type 1 font rasterizer). This defaults to &quot;yes&quot;. [config file: <code>enableFreeType</code>]</p>
-<dt><code>-aa</code><i> yes | no</i></p>
-<dd> Enable or disable font anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>antialias</code>]</p>
-<dt><code>-aaVector</code><i> yes | no</i></p>
-<dd> Enable or disable vector anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>vectorAntialias</code>]</p>
-<dt><code>-opw</code><i> password</i></p>
-<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</p>
-<dt><code>-upw</code><i> password</i></p>
-<dd> Specify the user password for the PDF file.</p>
-<dt><code>-q</code></p>
-<dd> Don&#8217;t print any messages or errors. [config file: <code>errQuiet</code>]</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-f</code><i> number</i></dt>
+<dd> Specifies the first page to convert.</dd>
+<dt><code>-l</code><i> number</i></dt>
+<dd> Specifies the last page to convert.</dd>
+<dt><code>-r</code><i> number</i></dt>
+<dd> Specifies the resolution, in DPI. The default is 150 DPI.</dd>
+<dt><code>-mono</code></dt>
+<dd> Generate a monochrome image (instead of a color image).</dd>
+<dt><code>-gray</code></dt>
+<dd> Generate a grayscale image (instead of a color image).</dd>
+<dt><code>-freetype</code><i> yes | no</i></dt>
+<dd> Enable or disable FreeType (a TrueType / Type 1 font rasterizer). This defaults to &quot;yes&quot;. [config file: <code>enableFreeType</code>]</dd>
+<dt><code>-aa</code><i> yes | no</i></dt>
+<dd> Enable or disable font anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>antialias</code>]</dd>
+<dt><code>-aaVector</code><i> yes | no</i></dt>
+<dd> Enable or disable vector anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>vectorAntialias</code>]</dd>
+<dt><code>-opw</code><i> password</i></dt>
+<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</dd>
+<dt><code>-upw</code><i> password</i></dt>
+<dd> Specify the user password for the PDF file.</dd>
+<dt><code>-q</code></dt>
+<dd> Don&#8217;t print any messages or errors. [config file: <code>errQuiet</code>]</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <h2>EXIT CODES</h2>
 <p> The Xpdf tools use the following exit codes:</p>
 <dl>
-<dt>0</p>
-<dd> No error.</p>
-<dt>1</p>
-<dd> Error opening a PDF file.</p>
-<dt>2</p>
-<dd> Error opening an output file.</p>
-<dt>3</p>
-<dd> Error related to PDF permissions.</p>
-<dt>99</p>
-<dd> Other error.</dl>
+<dt>0</dt>
+<dd> No error.</dd>
+<dt>1</dt>
+<dd> Error opening a PDF file.</dd>
+<dt>2</dt>
+<dd> Error opening an output file.</dd>
+<dt>3</dt>
+<dd> Error related to PDF permissions.</dd>
+<dt>99</dt>
+<dd> Other error.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The pdftopng software and documentation are copyright 1996-2014 Glyph &amp; Cog, LLC.</p>
 <h2>SEE ALSO</h2>

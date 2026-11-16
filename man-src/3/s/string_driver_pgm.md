@@ -26,16 +26,16 @@ description: "Driver Programming: String options –"
 <p> this would set the port to 50668, keepalive to true and nodelay to false. The particular string definition is defined by the tcp driver by properly creating a globus_i_xio_attr_parse_table_t array. Each element of the array is 1 options. There are 3 members of each array entry: key, cmd, and parse function. The key is a string that defines what option is to be set. In the above example string &#8216;port&#8217; would be 1 key. cmd tells the driver what cntl is associated with the key. In otherwords, once the string is parsed out what driver specific control must be called to set the requested option. For more information on controls see <code>globus_xio_attr_cntl</code>. The final value in the array entry is the parsing function. The pasing function takes the value of the &lt;key&gt;= </p>
 <p> portion of the string and parses it into data types. once parsed globus_xio_attr_cntl is called and thus the option is set. There are many available parsing functions but the developer is free to right their own if the provided ones are not sufficient. Sample parsing functions follow: </p>
 <dl>
-<dt>*</p>
-<dd><code>globus_xio_string_cntl_bool</code></p>
-<dt>*</p>
-<dd><code>globus_xio_string_cntl_float</code></p>
-<dt>*</p>
-<dd><code>globus_xio_string_cntl_int</code></p>
-<dt>*</p>
-<dd><code>globus_xio_string_cntl_string</code></p>
-<dt>*</p>
-<dd><code>globus_xio_string_cntl_int_int</code></dl>
+<dt>*</dt>
+<dd><code>globus_xio_string_cntl_bool</code></dd>
+<dt>*</dt>
+<dd><code>globus_xio_string_cntl_float</code></dd>
+<dt>*</dt>
+<dd><code>globus_xio_string_cntl_int</code></dd>
+<dt>*</dt>
+<dd><code>globus_xio_string_cntl_string</code></dd>
+<dt>*</dt>
+<dd><code>globus_xio_string_cntl_int_int</code></dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_xio_string_cntl_bouncer (<code>globus_xio_driver_attr_cntl_t</code> cntl_func, void * attr, int cmd, &#8230;)</h3>
 <p>New type functions call this one.</p>

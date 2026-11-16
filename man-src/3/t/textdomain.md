@@ -10,7 +10,6 @@ description: "textdomain – set domain for future gettext() calls"
 <p>textdomain &#8211; set domain for future gettext() calls</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;libintl.h&gt;
-
 char *textdomain(const char *domainname);</code></pre>
 <h2>Description</h2>
 <p>The <code>textdomain</code> function sets or retrieves the current message domain. </p>
@@ -23,8 +22,8 @@ char *textdomain(const char *domainname);</code></pre>
 <h2>Errors</h2>
 <p>The following error can occur, among others:</p>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Not enough memory available.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Not enough memory available.</dd></dl>
 <h2>Bugs</h2>
 <p>The return type ought to be <code>const char *</code>, but is <code>char *</code> to avoid warnings in C code predating ANSI C.</p>
 <h2>See Also</h2>

@@ -12,92 +12,49 @@ std::regex_token_iterator&lt;BidirIt,CharT,Traits&gt;::regex_token_iterator - st
 
 <pre><code>regex_token_iterator();
 (1)(since C++ 11)
-
     regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                          const regex_type &amp;re,
-
                          int submatch = 0, (2)(since C++ 11)
-
                                                std::regex_constants::match_flag_type m =
-
                                                    std::regex_constants::match_default);
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;re,
-
                      const std::vector&lt;int&gt; &amp;submatches, (3)(since C++ 11)
-
                                                              std::regex_constants::match_flag_type m =
-
                                                                  std::regex_constants::match_default);
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;re,
-
                      std::initializer_list&lt;int&gt; submatches, (4)(since C++ 11)
-
                                                                 std::regex_constants::match_flag_type m =
-
                                                                     std::regex_constants::match_default);
-
 template &lt;std::size_t N&gt;
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;re, (5)(since C++ 11)
-
                                                const int (&amp;submatches)[N],
-
                      std::regex_constants::match_flag_type m =
-
                          std::regex_constants::match_default);
-
 regex_token_iterator(const regex_token_iterator &amp;other);
 (6)(since C++ 11)
-
     regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                          const regex_type &amp;&amp;re,
-
                          int submatch = 0, (7)(since C++ 14)
-
                                                std::regex_constants::match_flag_type m =
-
                                                    std::regex_constants::match_default) = delete;
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;&amp;re,
-
                      const std::vector&lt;int&gt; &amp;submatches, (8)(since C++ 14)
-
                                                              std::regex_constants::match_flag_type m =
-
                                                                  std::regex_constants::match_default) = delete;
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;&amp;re,
-
                      std::initializer_list&lt;int&gt; submatches, (9)(since C++ 14)
-
                                                                 std::regex_constants::match_flag_type m =
-
                                                                     std::regex_constants::match_default) = delete;
-
 template &lt;std::size_t N&gt;
-
 regex_token_iterator(BidirectionalIterator a, BidirectionalIterator b,
-
                      const regex_type &amp;&amp;re, (10)(since C++ 14)
-
                                                 const int (&amp;submatches)[N],
-
                      std::regex_constants::match_flag_type m =
-
                          std::regex_constants::match_default) = delete;</code></pre> 
 Constructs a new regex_token_iterator: 
 1) Default constructor. Constructs the end-of-sequence iterator. 

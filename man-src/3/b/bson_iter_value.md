@@ -16,8 +16,8 @@ bson_iter_value(bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the value for the currently observed type as a boxed type. This allows passing around the value without knowing the type at runtime. </p>
 <h2>RETURNS</h2>

@@ -19,12 +19,12 @@ description: "gpt-deps – Reports on an installation’s package dependencies"
 <p>If you are confused by the dependency types, simply run &#8216;gpt-deps Runtime Setup Build&#8217; and view ./deptree.html with your favorite browser. Be sure to set <tt>$GLOBUS_LOCATION</tt>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>Bugs</h2>
 <p>Future versions will provide more flexibility in inputs, and output formats.</p>
 <h2>See Also</h2>

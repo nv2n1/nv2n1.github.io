@@ -16,11 +16,11 @@ bool bson_oid_equal(const bson_oid_t *oid1,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid1</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid1</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>oid2</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid2</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Checks if two bson_oid_t contain the same bytes. </p>
 <h2>RETURNS</h2>

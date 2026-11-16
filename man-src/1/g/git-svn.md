@@ -21,575 +21,571 @@ git svn&lt;command&gt;[options][arguments]
 <p> <i>init</i></p>
 <dl>
 <dt>
-<dd> Initializes an empty Git repository with additional metadata directories for <i>git svn</i>. The Subversion URL may be specified as a command-line argument, or as full URL arguments to -T/-t/-b. Optionally, the target directory to operate on can be specified as a second argument. Normally this command initializes the current directory. </p>
+</dt><dd> Initializes an empty Git repository with additional metadata directories for <i>git svn</i>. The Subversion URL may be specified as a command-line argument, or as full URL arguments to -T/-t/-b. Optionally, the target directory to operate on can be specified as a second argument. Normally this command initializes the current directory. </dd>
 <p> -T&lt;trunk_subdir&gt;, &#8211;trunk=&lt;trunk_subdir&gt;, -t&lt;tags_subdir&gt;, &#8211;tags=&lt;tags_subdir&gt;, -b&lt;branches_subdir&gt;, &#8211;branches=&lt;branches_subdir&gt;, -s, &#8211;stdlayout</p>
 <dl>
 <dt>
-<dd> These are optional command-line options for init. Each of these flags can point to a relative repository path (&#8211;tags=project/tags) or a full url (&#8211;tags=<a rel="nofollow" href="https://foo.org/project/tags">https://foo.org/project/tags</a>). You can specify more than one &#8211;tags and/or &#8211;branches options, in case your Subversion repository places tags or branches under multiple paths. The option &#8211;stdlayout is a shorthand way of setting trunk,tags,branches as the relative paths, which is the Subversion default. If any of the other options are given as well, they take precedence.</dl>
+</dt><dd> These are optional command-line options for init. Each of these flags can point to a relative repository path (&#8211;tags=project/tags) or a full url (&#8211;tags=<a rel="nofollow" href="https://foo.org/project/tags">https://foo.org/project/tags</a>). You can specify more than one &#8211;tags and/or &#8211;branches options, in case your Subversion repository places tags or branches under multiple paths. The option &#8211;stdlayout is a shorthand way of setting trunk,tags,branches as the relative paths, which is the Subversion default. If any of the other options are given as well, they take precedence.</dd></dl>
 <p> &#8211;no-metadata</p>
 <dl>
 <dt>
-<dd> Set the <i>noMetadata</i> option in the [svn-remote] config. This option is not recommended, please read the <i>svn.noMetadata</i> section of this manpage before using this option.</dl>
+</dt><dd> Set the <i>noMetadata</i> option in the [svn-remote] config. This option is not recommended, please read the <i>svn.noMetadata</i> section of this manpage before using this option.</dd></dl>
 <p> &#8211;use-svm-props</p>
 <dl>
 <dt>
-<dd> Set the <i>useSvmProps</i> option in the [svn-remote] config.</dl>
+</dt><dd> Set the <i>useSvmProps</i> option in the [svn-remote] config.</dd></dl>
 <p> &#8211;use-svnsync-props</p>
 <dl>
 <dt>
-<dd> Set the <i>useSvnsyncProps</i> option in the [svn-remote] config.</dl>
+</dt><dd> Set the <i>useSvnsyncProps</i> option in the [svn-remote] config.</dd></dl>
 <p> &#8211;rewrite-root=&lt;URL&gt;</p>
 <dl>
 <dt>
-<dd> Set the <i>rewriteRoot</i> option in the [svn-remote] config.</dl>
+</dt><dd> Set the <i>rewriteRoot</i> option in the [svn-remote] config.</dd></dl>
 <p> &#8211;rewrite-uuid=&lt;UUID&gt;</p>
 <dl>
 <dt>
-<dd> Set the <i>rewriteUUID</i> option in the [svn-remote] config.</dl>
+</dt><dd> Set the <i>rewriteUUID</i> option in the [svn-remote] config.</dd></dl>
 <p> &#8211;username=&lt;user&gt;</p>
 <dl>
 <dt>
-<dd> For transports that SVN handles authentication for (http, https, and plain svn), specify the username. For other transports (eg svn+<a href="ssh://">ssh://</a>), you must include the username in the URL, eg svn+<a href="ssh://foo@svn.bar.com/project">ssh://foo@svn.bar.com/project</a></dl>
+</dt><dd> For transports that SVN handles authentication for (http, https, and plain svn), specify the username. For other transports (eg svn+<a href="ssh://">ssh://</a>), you must include the username in the URL, eg svn+<a href="ssh://foo@svn.bar.com/project">ssh://foo@svn.bar.com/project</a></dd></dl>
 <p> &#8211;prefix=&lt;prefix&gt;</p>
 <dl>
 <dt>
-<dd> This allows one to specify a prefix which is prepended to the names of remotes if trunk/branches/tags are specified. The prefix does not automatically include a trailing slash, so be sure you include one in the argument if that is what you want. If &#8211;branches/-b is specified, the prefix must include a trailing slash. Setting a prefix is useful if you wish to track multiple projects that share a common repository.</dl>
+</dt><dd> This allows one to specify a prefix which is prepended to the names of remotes if trunk/branches/tags are specified. The prefix does not automatically include a trailing slash, so be sure you include one in the argument if that is what you want. If &#8211;branches/-b is specified, the prefix must include a trailing slash. Setting a prefix is useful if you wish to track multiple projects that share a common repository.</dd></dl>
 <p> &#8211;ignore-paths=&lt;regex&gt;</p>
 <dl>
 <dt>
-<dd> When passed to <i>init</i> or <i>clone</i> this regular expression will be preserved as a config key. See <i>fetch</i> for a description of <i>&#8211;ignore-paths</i>.</dl>
+</dt><dd> When passed to <i>init</i> or <i>clone</i> this regular expression will be preserved as a config key. See <i>fetch</i> for a description of <i>&#8211;ignore-paths</i>.</dd></dl>
 <p> &#8211;include-paths=&lt;regex&gt;</p>
 <dl>
 <dt>
-<dd> When passed to <i>init</i> or <i>clone</i> this regular expression will be preserved as a config key. See <i>fetch</i> for a description of <i>&#8211;include-paths</i>.</dl>
+</dt><dd> When passed to <i>init</i> or <i>clone</i> this regular expression will be preserved as a config key. See <i>fetch</i> for a description of <i>&#8211;include-paths</i>.</dd></dl>
 <p> &#8211;no-minimize-url</p>
 <dl>
 <dt>
-<dd> When tracking multiple directories (using &#8211;stdlayout, &#8211;branches, or &#8211;tags options), git svn will attempt to connect to the root (or highest allowed level) of the Subversion repository. This default allows better tracking of history if entire projects are moved within a repository, but may cause issues on repositories where read access restrictions are in place. Passing <i>&#8211;no-minimize-url</i> will allow git svn to accept URLs as-is without attempting to connect to a higher level directory. This option is off by default when only one URL/branch is tracked (it would do little good).</dl>
+</dt><dd> When tracking multiple directories (using &#8211;stdlayout, &#8211;branches, or &#8211;tags options), git svn will attempt to connect to the root (or highest allowed level) of the Subversion repository. This default allows better tracking of history if entire projects are moved within a repository, but may cause issues on repositories where read access restrictions are in place. Passing <i>&#8211;no-minimize-url</i> will allow git svn to accept URLs as-is without attempting to connect to a higher level directory. This option is off by default when only one URL/branch is tracked (it would do little good).</dd></dl>
 </dl>
 <p> <i>fetch</i></p>
 <dl>
 <dt>
-<dd> Fetch unfetched revisions from the Subversion remote we are tracking. The name of the [svn-remote &quot;&#8230;&quot;] section in the .git/config file may be specified as an optional command-line argument. </p>
+</dt><dd> Fetch unfetched revisions from the Subversion remote we are tracking. The name of the [svn-remote &quot;&#8230;&quot;] section in the .git/config file may be specified as an optional command-line argument. </dd>
 <p> &#8211;localtime</p>
 <dl>
 <dt>
-<dd> Store Git commit times in the local timezone instead of UTC. This makes <i>git log</i> (even without &#8211;date=local) show the same times that svn log would in the local timezone. </p>
+</dt><dd> Store Git commit times in the local timezone instead of UTC. This makes <i>git log</i> (even without &#8211;date=local) show the same times that svn log would in the local timezone. </dd>
 <p> This doesn&#8217;t interfere with interoperating with the Subversion repository you cloned from, but if you wish for your local Git repository to be able to interoperate with someone else&#8217;s local Git repository, either don&#8217;t use this option or you should both use it in the same local timezone.</dl>
 <p> &#8211;parent</p>
 <dl>
 <dt>
-<dd> Fetch only from the SVN parent of the current HEAD.</dl>
+</dt><dd> Fetch only from the SVN parent of the current HEAD.</dd></dl>
 <p> &#8211;ignore-paths=&lt;regex&gt;</p>
 <dl>
 <dt>
-<dd> This allows one to specify a Perl regular expression that will cause skipping of all matching paths from checkout from SVN. The <i>&#8211;ignore-paths</i> option should match for every <i>fetch</i> (including automatic fetches due to <i>clone</i>, <i>dcommit</i>, <i>rebase</i>, etc) on a given repository. </p>
+</dt><dd> This allows one to specify a Perl regular expression that will cause skipping of all matching paths from checkout from SVN. The <i>&#8211;ignore-paths</i> option should match for every <i>fetch</i> (including automatic fetches due to <i>clone</i>, <i>dcommit</i>, <i>rebase</i>, etc) on a given repository. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn-remote.&lt;name&gt;.ignore-paths
 </pre>
-</dl>
+</dd></dl>
 <p> If the ignore-paths config key is set and the command line option is also given, both regular expressions will be used. </p>
 <p> Examples: </p>
 <p> Skip &quot;doc*&quot; directory for every fetch</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 --ignore-paths=&quot;^doc&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Skip &quot;branches&quot; and &quot;tags&quot; of first level directories</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 --ignore-paths=&quot;^[^/]+/(?:branches|tags)&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <p> &#8211;include-paths=&lt;regex&gt;</p>
 <dl>
 <dt>
-<dd> This allows one to specify a Perl regular expression that will cause the inclusion of only matching paths from checkout from SVN. The <i>&#8211;include-paths</i> option should match for every <i>fetch</i> (including automatic fetches due to <i>clone</i>, <i>dcommit</i>, <i>rebase</i>, etc) on a given repository. <i>&#8211;ignore-paths</i> takes precedence over <i>&#8211;include-paths</i>.</dl>
+</dt><dd> This allows one to specify a Perl regular expression that will cause the inclusion of only matching paths from checkout from SVN. The <i>&#8211;include-paths</i> option should match for every <i>fetch</i> (including automatic fetches due to <i>clone</i>, <i>dcommit</i>, <i>rebase</i>, etc) on a given repository. <i>&#8211;ignore-paths</i> takes precedence over <i>&#8211;include-paths</i>.</dd></dl>
 <p> &#8211;log-window-size=&lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Fetch &lt;n&gt; log entries per request when scanning Subversion history. The default is 100. For very large Subversion repositories, larger values may be needed for <i>clone</i>/<i>fetch</i> to complete in reasonable time. But overly large values may lead to higher memory usage and request timeouts.</dl>
+</dt><dd> Fetch &lt;n&gt; log entries per request when scanning Subversion history. The default is 100. For very large Subversion repositories, larger values may be needed for <i>clone</i>/<i>fetch</i> to complete in reasonable time. But overly large values may lead to higher memory usage and request timeouts.</dd></dl>
 </dl>
 <p> <i>clone</i></p>
 <dl>
 <dt>
-<dd> Runs <i>init</i> and <i>fetch</i>. It will automatically create a directory based on the basename of the URL passed to it; or if a second argument is passed; it will create a directory and work within that. It accepts all arguments that the <i>init</i> and <i>fetch</i> commands accept; with the exception of <i>&#8211;fetch-all</i> and <i>&#8211;parent</i>. After a repository is cloned, the <i>fetch</i> command will be able to update revisions without affecting the working tree; and the <i>rebase</i> command will be able to update the working tree with the latest changes. </p>
+</dt><dd> Runs <i>init</i> and <i>fetch</i>. It will automatically create a directory based on the basename of the URL passed to it; or if a second argument is passed; it will create a directory and work within that. It accepts all arguments that the <i>init</i> and <i>fetch</i> commands accept; with the exception of <i>&#8211;fetch-all</i> and <i>&#8211;parent</i>. After a repository is cloned, the <i>fetch</i> command will be able to update revisions without affecting the working tree; and the <i>rebase</i> command will be able to update the working tree with the latest changes. </dd>
 <p> &#8211;preserve-empty-dirs</p>
 <dl>
 <dt>
-<dd> Create a placeholder file in the local Git repository for each empty directory fetched from Subversion. This includes directories that become empty by removing all entries in the Subversion repository (but not the directory itself). The placeholder files are also tracked and removed when no longer necessary.</dl>
+</dt><dd> Create a placeholder file in the local Git repository for each empty directory fetched from Subversion. This includes directories that become empty by removing all entries in the Subversion repository (but not the directory itself). The placeholder files are also tracked and removed when no longer necessary.</dd></dl>
 <p> &#8211;placeholder-filename=&lt;filename&gt;</p>
 <dl>
 <dt>
-<dd> Set the name of placeholder files created by &#8211;preserve-empty-dirs. Default: &quot;.gitignore&quot;</dl>
+</dt><dd> Set the name of placeholder files created by &#8211;preserve-empty-dirs. Default: &quot;.gitignore&quot;</dd></dl>
 </dl>
 <p> <i>rebase</i></p>
 <dl>
 <dt>
-<dd> This fetches revisions from the SVN parent of the current HEAD and rebases the current (uncommitted to SVN) work against it. </p>
+</dt><dd> This fetches revisions from the SVN parent of the current HEAD and rebases the current (uncommitted to SVN) work against it. </dd>
 <p> This works similarly to svn update or <i>git pull</i> except that it preserves linear history with <i>git rebase</i> instead of <i>git merge</i> for ease of dcommitting with <i>git svn</i>. </p>
 <p> This accepts all options that <i>git svn fetch</i> and <i>git rebase</i> accept. However, <i>&#8211;fetch-all</i> only fetches from the current [svn-remote], and not all [svn-remote] definitions. </p>
 <p> Like <i>git rebase</i>; this requires that the working tree be clean and have no uncommitted changes. </p>
 <p> -l, &#8211;local</p>
 <dl>
 <dt>
-<dd> Do not fetch remotely; only run <i>git rebase</i> against the last fetched commit from the upstream SVN.</dl>
+</dt><dd> Do not fetch remotely; only run <i>git rebase</i> against the last fetched commit from the upstream SVN.</dd></dl>
 </dl>
 <p> <i>dcommit</i></p>
 <dl>
 <dt>
-<dd> Commit each diff from the current branch directly to the SVN repository, and then rebase or reset (depending on whether or not there is a diff between SVN and head). This will create a revision in SVN for each commit in Git. </p>
+</dt><dd> Commit each diff from the current branch directly to the SVN repository, and then rebase or reset (depending on whether or not there is a diff between SVN and head). This will create a revision in SVN for each commit in Git. </dd>
 <p> When an optional Git branch name (or a Git commit object name) is specified as an argument, the subcommand works on the specified branch, not on the current branch. </p>
 <p> Use of <i>dcommit</i> is preferred to <i>set-tree</i> (below). </p>
 <p> &#8211;no-rebase</p>
 <dl>
 <dt>
-<dd> After committing, do not rebase or reset.</dl>
+</dt><dd> After committing, do not rebase or reset.</dd></dl>
 <p> &#8211;commit-url &lt;URL&gt;</p>
 <dl>
 <dt>
-<dd> Commit to this SVN URL (the full path). This is intended to allow existing <i>git svn</i> repositories created with one transport method (e.g. svn:// or http:// for anonymous read) to be reused if a user is later given access to an alternate transport method (e.g. svn+ssh:// or <a rel="nofollow" href="https://)">https://)</a> for commit. </p>
+</dt><dd> Commit to this SVN URL (the full path). This is intended to allow existing <i>git svn</i> repositories created with one transport method (e.g. svn:// or http:// for anonymous read) to be reused if a user is later given access to an alternate transport method (e.g. svn+ssh:// or <a rel="nofollow" href="https://)">https://)</a> for commit. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn-remote.&lt;name&gt;.commiturl
 config key: svn.commiturl (overwrites all svn-remote.&lt;name&gt;.commiturl options)
 </pre>
-</dl>
+</dd></dl>
 <p> Using this option for any other purpose (don&#8217;t ask) is very strongly discouraged.</dl>
 <p> &#8211;mergeinfo=&lt;mergeinfo&gt;</p>
 <dl>
 <dt>
-<dd> Add the given merge information during the dcommit (e.g. &#8211;mergeinfo=&quot;/branches/foo:1-10&quot;). All svn server versions can store this information (as a property), and svn clients starting from version 1.5 can make use of it. To specify merge information from multiple branches, use a single space character between the branches (&#8211;mergeinfo=&quot;/branches/foo:1-10 /branches/bar:3,5-6,8&quot;) </p>
+</dt><dd> Add the given merge information during the dcommit (e.g. &#8211;mergeinfo=&quot;/branches/foo:1-10&quot;). All svn server versions can store this information (as a property), and svn clients starting from version 1.5 can make use of it. To specify merge information from multiple branches, use a single space character between the branches (&#8211;mergeinfo=&quot;/branches/foo:1-10 /branches/bar:3,5-6,8&quot;) </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.pushmergeinfo
 </pre>
-</dl>
+</dd></dl>
 <p> This option will cause git-svn to attempt to automatically populate the svn:mergeinfo property in the SVN repository when possible. Currently, this can only be done when dcommitting non-fast-forward merges where all parents but the first have already been pushed into SVN.</dl>
 <p> &#8211;interactive</p>
 <dl>
 <dt>
-<dd> Ask the user to confirm that a patch set should actually be sent to SVN. For each patch, one may answer &quot;yes&quot; (accept this patch), &quot;no&quot; (discard this patch), &quot;all&quot; (accept all patches), or &quot;quit&quot;. <i>git svn dcommit</i> returns immediately if answer if &quot;no&quot; or &quot;quit&quot;, without committing anything to SVN.</dl>
+</dt><dd> Ask the user to confirm that a patch set should actually be sent to SVN. For each patch, one may answer &quot;yes&quot; (accept this patch), &quot;no&quot; (discard this patch), &quot;all&quot; (accept all patches), or &quot;quit&quot;. <i>git svn dcommit</i> returns immediately if answer if &quot;no&quot; or &quot;quit&quot;, without committing anything to SVN.</dd></dl>
 </dl>
 <p> <i>branch</i></p>
 <dl>
 <dt>
-<dd> Create a branch in the SVN repository. </p>
+</dt><dd> Create a branch in the SVN repository. </dd>
 <p> -m, &#8211;message</p>
 <dl>
 <dt>
-<dd> Allows to specify the commit message.</dl>
+</dt><dd> Allows to specify the commit message.</dd></dl>
 <p> -t, &#8211;tag</p>
 <dl>
 <dt>
-<dd> Create a tag by using the tags_subdir instead of the branches_subdir specified during git svn init.</dl>
+</dt><dd> Create a tag by using the tags_subdir instead of the branches_subdir specified during git svn init.</dd></dl>
 <p> -d&lt;path&gt;, &#8211;destination=&lt;path&gt;</p>
 <dl>
 <dt>
-<dd> If more than one &#8211;branches (or &#8211;tags) option was given to the <i>init</i> or <i>clone</i> command, you must provide the location of the branch (or tag) you wish to create in the SVN repository. &lt;path&gt; specifies which path to use to create the branch or tag and should match the pattern on the left-hand side of one of the configured branches or tags refspecs. You can see these refspecs with the commands </p>
+</dt><dd> If more than one &#8211;branches (or &#8211;tags) option was given to the <i>init</i> or <i>clone</i> command, you must provide the location of the branch (or tag) you wish to create in the SVN repository. &lt;path&gt; specifies which path to use to create the branch or tag and should match the pattern on the left-hand side of one of the configured branches or tags refspecs. You can see these refspecs with the commands </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git config --get-all svn-remote.&lt;name&gt;.branches
 git config --get-all svn-remote.&lt;name&gt;.tags
 </pre>
-</dl>
+</dd></dl>
 <p> where &lt;name&gt; is the name of the SVN repository as specified by the -R option to <i>init</i> (or &quot;svn&quot; by default).</dl>
 <p> &#8211;username</p>
 <dl>
 <dt>
-<dd> Specify the SVN username to perform the commit as. This option overrides the <i>username</i> configuration property.</dl>
+</dt><dd> Specify the SVN username to perform the commit as. This option overrides the <i>username</i> configuration property.</dd></dl>
 <p> &#8211;commit-url</p>
 <dl>
 <dt>
-<dd> Use the specified URL to connect to the destination Subversion repository. This is useful in cases where the source SVN repository is read-only. This option overrides configuration property <i>commiturl</i>. </p>
+</dt><dd> Use the specified URL to connect to the destination Subversion repository. This is useful in cases where the source SVN repository is read-only. This option overrides configuration property <i>commiturl</i>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git config --get-all svn-remote.&lt;name&gt;.commiturl
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;parents</p>
 <dl>
 <dt>
-<dd> Create parent folders. This parameter is equivalent to the parameter &#8211;parents on svn cp commands and is useful for non-standard repository layouts.</dl>
+</dt><dd> Create parent folders. This parameter is equivalent to the parameter &#8211;parents on svn cp commands and is useful for non-standard repository layouts.</dd></dl>
 </dl>
 <p> <i>tag</i></p>
 <dl>
 <dt>
-<dd> Create a tag in the SVN repository. This is a shorthand for <i>branch -t</i>.</dl>
+</dt><dd> Create a tag in the SVN repository. This is a shorthand for <i>branch -t</i>.</dd></dl>
 <p> <i>log</i></p>
 <dl>
 <dt>
-<dd> This should make it easy to look up svn log messages when svn users refer to -r/&#8211;revision numbers. </p>
+</dt><dd> This should make it easy to look up svn log messages when svn users refer to -r/&#8211;revision numbers. </dd>
 <p> The following features from &#8216;svn log&#8217; are supported: </p>
 <p> -r &lt;n&gt;[:&lt;n&gt;], &#8211;revision=&lt;n&gt;[:&lt;n&gt;]</p>
 <dl>
 <dt>
-<dd> is supported, non-numeric args are not: HEAD, NEXT, BASE, PREV, etc &#8230;</dl>
+</dt><dd> is supported, non-numeric args are not: HEAD, NEXT, BASE, PREV, etc &#8230;</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> it&#8217;s not completely compatible with the &#8211;verbose output in svn log, but reasonably close.</dl>
+</dt><dd> it&#8217;s not completely compatible with the &#8211;verbose output in svn log, but reasonably close.</dd></dl>
 <p> &#8211;limit=&lt;n&gt;</p>
 <dl>
 <dt>
-<dd> is NOT the same as &#8211;max-count, doesn&#8217;t count merged/excluded commits</dl>
+</dt><dd> is NOT the same as &#8211;max-count, doesn&#8217;t count merged/excluded commits</dd></dl>
 <p> &#8211;incremental</p>
 <dl>
 <dt>
-<dd> supported</dl>
+</dt><dd> supported</dd></dl>
 <p> New features: </p>
 <p> &#8211;show-commit</p>
 <dl>
 <dt>
-<dd> shows the Git commit sha1, as well</dl>
+</dt><dd> shows the Git commit sha1, as well</dd></dl>
 <p> &#8211;oneline</p>
 <dl>
 <dt>
-<dd> our version of &#8211;pretty=oneline</dl>
+</dt><dd> our version of &#8211;pretty=oneline</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <font SIZE="+1"> <code>Note</code> </font><br />
- SVN itself only stores times in UTC and nothing else. The regular svn client converts the UTC time to the local time (or based on the TZ= environment). This command has the same behaviour. </p>
+ SVN itself only stores times in UTC and nothing else. The regular svn client converts the UTC time to the local time (or based on the TZ= environment). This command has the same behaviour. </dd>
 </dl>
 <p> Any other arguments are passed directly to <i>git log</i></dl>
 <p> <i>blame</i></p>
 <dl>
 <dt>
-<dd> Show what revision and author last modified each line of a file. The output of this mode is format-compatible with the output of &#8216;svn blame&#8217; by default. Like the SVN blame command, local uncommitted changes in the working tree are ignored; the version of the file in the HEAD revision is annotated. Unknown arguments are passed directly to <i>git blame</i>. </p>
+</dt><dd> Show what revision and author last modified each line of a file. The output of this mode is format-compatible with the output of &#8216;svn blame&#8217; by default. Like the SVN blame command, local uncommitted changes in the working tree are ignored; the version of the file in the HEAD revision is annotated. Unknown arguments are passed directly to <i>git blame</i>. </dd>
 <p> &#8211;git-format</p>
 <dl>
 <dt>
-<dd> Produce output in the same format as <i>git blame</i>, but with SVN revision numbers instead of Git commit hashes. In this mode, changes that haven&#8217;t been committed to SVN (including local working-copy edits) are shown as revision 0.</dl>
+</dt><dd> Produce output in the same format as <i>git blame</i>, but with SVN revision numbers instead of Git commit hashes. In this mode, changes that haven&#8217;t been committed to SVN (including local working-copy edits) are shown as revision 0.</dd></dl>
 </dl>
 <p> <i>find-rev</i></p>
 <dl>
 <dt>
-<dd> When given an SVN revision number of the form <i>rN</i>, returns the corresponding Git commit hash (this can optionally be followed by a tree-ish to specify which branch should be searched). When given a tree-ish, returns the corresponding SVN revision number. </p>
+</dt><dd> When given an SVN revision number of the form <i>rN</i>, returns the corresponding Git commit hash (this can optionally be followed by a tree-ish to specify which branch should be searched). When given a tree-ish, returns the corresponding SVN revision number. </dd>
 <p> &#8211;before</p>
 <dl>
 <dt>
-<dd> Don&#8217;t require an exact match if given an SVN revision, instead find the commit corresponding to the state of the SVN repository (on the current branch) at the specified revision.</dl>
+</dt><dd> Don&#8217;t require an exact match if given an SVN revision, instead find the commit corresponding to the state of the SVN repository (on the current branch) at the specified revision.</dd></dl>
 <p> &#8211;after</p>
 <dl>
 <dt>
-<dd> Don&#8217;t require an exact match if given an SVN revision; if there is not an exact match return the closest match searching forward in the history.</dl>
+</dt><dd> Don&#8217;t require an exact match if given an SVN revision; if there is not an exact match return the closest match searching forward in the history.</dd></dl>
 </dl>
 <p> <i>set-tree</i></p>
 <dl>
 <dt>
-<dd> You should consider using <i>dcommit</i> instead of this command. Commit specified commit or tree objects to SVN. This relies on your imported fetch data being up-to-date. This makes absolutely no attempts to do patching when committing to SVN, it simply overwrites files with those specified in the tree or commit. All merging is assumed to have taken place independently of <i>git svn</i> functions.</dl>
+</dt><dd> You should consider using <i>dcommit</i> instead of this command. Commit specified commit or tree objects to SVN. This relies on your imported fetch data being up-to-date. This makes absolutely no attempts to do patching when committing to SVN, it simply overwrites files with those specified in the tree or commit. All merging is assumed to have taken place independently of <i>git svn</i> functions.</dd></dl>
 <p> <i>create-ignore</i></p>
 <dl>
 <dt>
-<dd> Recursively finds the svn:ignore property on directories and creates matching .gitignore files. The resulting files are staged to be committed, but are not committed. Use -r/&#8211;revision to refer to a specific revision.</dl>
+</dt><dd> Recursively finds the svn:ignore property on directories and creates matching .gitignore files. The resulting files are staged to be committed, but are not committed. Use -r/&#8211;revision to refer to a specific revision.</dd></dl>
 <p> <i>show-ignore</i></p>
 <dl>
 <dt>
-<dd> Recursively finds and lists the svn:ignore property on directories. The output is suitable for appending to the $GIT_DIR/info/exclude file.</dl>
+</dt><dd> Recursively finds and lists the svn:ignore property on directories. The output is suitable for appending to the $GIT_DIR/info/exclude file.</dd></dl>
 <p> <i>mkdirs</i></p>
 <dl>
 <dt>
-<dd> Attempts to recreate empty directories that core Git cannot track based on information in $GIT_DIR/svn/&lt;refname&gt;/unhandled.log files. Empty directories are automatically recreated when using &quot;git svn clone&quot; and &quot;git svn rebase&quot;, so &quot;mkdirs&quot; is intended for use after commands like &quot;git checkout&quot; or &quot;git reset&quot;. (See the svn-remote.&lt;name&gt;.automkdirs config file option for more information.)</dl>
+</dt><dd> Attempts to recreate empty directories that core Git cannot track based on information in $GIT_DIR/svn/&lt;refname&gt;/unhandled.log files. Empty directories are automatically recreated when using &quot;git svn clone&quot; and &quot;git svn rebase&quot;, so &quot;mkdirs&quot; is intended for use after commands like &quot;git checkout&quot; or &quot;git reset&quot;. (See the svn-remote.&lt;name&gt;.automkdirs config file option for more information.)</dd></dl>
 <p> <i>commit-diff</i></p>
 <dl>
 <dt>
-<dd> Commits the diff of two tree-ish arguments from the command-line. This command does not rely on being inside an git svn init-ed repository. This command takes three arguments, (a) the original tree to diff against, (b) the new tree result, (c) the URL of the target Subversion repository. The final argument (URL) may be omitted if you are working from a <i>git svn</i>-aware repository (that has been init-ed with <i>git svn</i>). The -r&lt;revision&gt; option is required for this.</dl>
+</dt><dd> Commits the diff of two tree-ish arguments from the command-line. This command does not rely on being inside an git svn init-ed repository. This command takes three arguments, (a) the original tree to diff against, (b) the new tree result, (c) the URL of the target Subversion repository. The final argument (URL) may be omitted if you are working from a <i>git svn</i>-aware repository (that has been init-ed with <i>git svn</i>). The -r&lt;revision&gt; option is required for this.</dd></dl>
 <p> <i>info</i></p>
 <dl>
 <dt>
-<dd> Shows information about a file or directory similar to what &#8216;svn info&#8217; provides. Does not currently support a -r/&#8211;revision argument. Use the &#8211;url option to output only the value of the <i>URL:</i> field.</dl>
+</dt><dd> Shows information about a file or directory similar to what &#8216;svn info&#8217; provides. Does not currently support a -r/&#8211;revision argument. Use the &#8211;url option to output only the value of the <i>URL:</i> field.</dd></dl>
 <p> <i>proplist</i></p>
 <dl>
 <dt>
-<dd> Lists the properties stored in the Subversion repository about a given file or directory. Use -r/&#8211;revision to refer to a specific Subversion revision.</dl>
+</dt><dd> Lists the properties stored in the Subversion repository about a given file or directory. Use -r/&#8211;revision to refer to a specific Subversion revision.</dd></dl>
 <p> <i>propget</i></p>
 <dl>
 <dt>
-<dd> Gets the Subversion property given as the first argument, for a file. A specific revision can be specified with -r/&#8211;revision.</dl>
+</dt><dd> Gets the Subversion property given as the first argument, for a file. A specific revision can be specified with -r/&#8211;revision.</dd></dl>
 <p> <i>show-externals</i></p>
 <dl>
 <dt>
-<dd> Shows the Subversion externals. Use -r/&#8211;revision to specify a specific revision.</dl>
+</dt><dd> Shows the Subversion externals. Use -r/&#8211;revision to specify a specific revision.</dd></dl>
 <p> <i>gc</i></p>
 <dl>
 <dt>
-<dd> Compress $GIT_DIR/svn/&lt;refname&gt;/unhandled.log files in .git/svn and remove $GIT_DIR/svn/&lt;refname&gt;index files in .git/svn.</dl>
+</dt><dd> Compress $GIT_DIR/svn/&lt;refname&gt;/unhandled.log files in .git/svn and remove $GIT_DIR/svn/&lt;refname&gt;index files in .git/svn.</dd></dl>
 <p> <i>reset</i></p>
 <dl>
 <dt>
-<dd> Undoes the effects of <i>fetch</i> back to the specified revision. This allows you to re-<i>fetch</i> an SVN revision. Normally the contents of an SVN revision should never change and <i>reset</i> should not be necessary. However, if SVN permissions change, or if you alter your &#8211;ignore-paths option, a <i>fetch</i> may fail with &quot;not found in commit&quot; (file not previously visible) or &quot;checksum mismatch&quot; (missed a modification). If the problem file cannot be ignored forever (with &#8211;ignore-paths) the only way to repair the repo is to use <i>reset</i>. </p>
+</dt><dd> Undoes the effects of <i>fetch</i> back to the specified revision. This allows you to re-<i>fetch</i> an SVN revision. Normally the contents of an SVN revision should never change and <i>reset</i> should not be necessary. However, if SVN permissions change, or if you alter your &#8211;ignore-paths option, a <i>fetch</i> may fail with &quot;not found in commit&quot; (file not previously visible) or &quot;checksum mismatch&quot; (missed a modification). If the problem file cannot be ignored forever (with &#8211;ignore-paths) the only way to repair the repo is to use <i>reset</i>. </dd>
 <p> Only the rev_map and refs/remotes/git-svn are changed. Follow <i>reset</i> with a <i>fetch</i> and then <i>git reset</i> or <i>git rebase</i> to move local branches onto the new tree. </p>
 <p> -r &lt;n&gt;, &#8211;revision=&lt;n&gt;</p>
 <dl>
 <dt>
-<dd> Specify the most recent revision to keep. All later revisions are discarded.</dl>
+</dt><dd> Specify the most recent revision to keep. All later revisions are discarded.</dd></dl>
 <p> -p, &#8211;parent</p>
 <dl>
 <dt>
-<dd> Discard the specified revision as well, keeping the nearest parent instead.</dl>
+</dt><dd> Discard the specified revision as well, keeping the nearest parent instead.</dd></dl>
 <p> Example:</p>
 <dl>
 <dt>
-<dd> Assume you have local changes in &quot;master&quot;, but you need to refetch &quot;r2&quot;. </p>
+</dt><dd> Assume you have local changes in &quot;master&quot;, but you need to refetch &quot;r2&quot;. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     r1---r2---r3 remotes/git-svn
                 \
                  A---B master
 </pre>
-</dl>
+</dd></dl>
 <p> Fix the ignore-paths or SVN permissions problem that caused &quot;r2&quot; to be incomplete in the first place. Then: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git svn reset -r2 -p
 git svn fetch
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
-r1&#8211; &#8211; r2 &#8216;&#8211;r3&#8217; remotes / git &#8211; svn</p>
+</dt><dd>
+r1&#8211; &#8211; r2 &#8216;&#8211;r3&#8217; remotes / git &#8211; svn</dd>
 <p>                                     r2&#8211; &#8211;<br />
     r3&#8211; &#8211; A&#8211; &#8211; B master
 </dl>
 <p> Then fixup &quot;master&quot; with <i>git rebase</i>. Do NOT use <i>git merge</i> or your history will not be compatible with a future <i>dcommit</i>! </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git rebase --onto remotes/git-svn A^ master
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     r1---r2'--r3' remotes/git-svn
                 \
                  A'--B' master
 </pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>OPTIONS</h2>
 <p> &#8211;shared[=(false|true|umask|group|all|world|everybody)], &#8211;template=&lt;template_directory&gt;</p>
 <dl>
 <dt>
-<dd> Only used with the <i>init</i> command. These are passed directly to <i>git init</i>.</dl>
+</dt><dd> Only used with the <i>init</i> command. These are passed directly to <i>git init</i>.</dd></dl>
 <p> -r &lt;arg&gt;, &#8211;revision &lt;arg&gt;</p>
 <dl>
 <dt>
-<dd> Used with the <i>fetch</i> command. </p>
+</dt><dd> Used with the <i>fetch</i> command. </dd>
 <p> This allows revision ranges for partial/cauterized history to be supported. $NUMBER, $NUMBER1:$NUMBER2 (numeric ranges), $NUMBER:HEAD, and BASE:$NUMBER are all supported. </p>
 <p> This can allow you to make partial mirrors when running fetch; but is generally not recommended because history will be skipped and lost.</dl>
 <p> -, &#8211;stdin</p>
 <dl>
 <dt>
-<dd> Only used with the <i>set-tree</i> command. </p>
+</dt><dd> Only used with the <i>set-tree</i> command. </dd>
 <p> Read a list of commits from stdin and commit them in reverse order. Only the leading sha1 is read from each line, so <i>git rev-list &#8211;pretty=oneline</i> output can be used.</dl>
 <p> &#8211;rmdir</p>
 <dl>
 <dt>
-<dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </p>
+</dt><dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </dd>
 <p> Remove directories from the SVN tree if there are no files left behind. SVN can version empty directories, and they are not removed by default if there are no files left in them. Git cannot version empty directories. Enabling this flag will make the commit to SVN act like Git. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.rmdir
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -e, &#8211;edit</p>
 <dl>
 <dt>
-<dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </p>
+</dt><dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </dd>
 <p> Edit the commit message before committing to SVN. This is off by default for objects that are commits, and forced on when committing tree objects. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.edit
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -l&lt;num&gt;, &#8211;find-copies-harder</p>
 <dl>
 <dt>
-<dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </p>
+</dt><dd> Only used with the <i>dcommit</i>, <i>set-tree</i> and <i>commit-diff</i> commands. </dd>
 <p> They are both passed directly to <i>git diff-tree</i>; see <code><a href="/docs/linux/man/1-git-diff-tree/">git-diff-tree</a></code>(1) for more information. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.l
 config key: svn.findcopiesharder
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -A&lt;filename&gt;, &#8211;authors-file=&lt;filename&gt;</p>
 <dl>
 <dt>
-<dd> Syntax is compatible with the file used by <i>git cvsimport</i>: </p>
+</dt><dd> Syntax is compatible with the file used by <i>git cvsimport</i>: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         loginname = Joe User &lt;user [at] example.com&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> If this option is specified and <i>git svn</i> encounters an SVN committer name that does not exist in the authors-file, <i>git svn</i> will abort operation. The user will then have to add the appropriate entry. Re-running the previous <i>git svn</i> command after the authors-file is modified should continue operation. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.authorsfile
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> &#8211;authors-prog=&lt;filename&gt;</p>
 <dl>
 <dt>
-<dd> If this option is specified, for each SVN committer name that does not exist in the authors file, the given file is executed with the committer name as the first argument. The program is expected to return a single line of the form &quot;Name &lt;email&gt;&quot;, which will be treated as if included in the authors file.</dl>
+</dt><dd> If this option is specified, for each SVN committer name that does not exist in the authors file, the given file is executed with the committer name as the first argument. The program is expected to return a single line of the form &quot;Name &lt;email&gt;&quot;, which will be treated as if included in the authors file.</dd></dl>
 <p> -q, &#8211;quiet</p>
 <dl>
 <dt>
-<dd> Make <i>git svn</i> less verbose. Specify a second time to make it even less verbose.</dl>
+</dt><dd> Make <i>git svn</i> less verbose. Specify a second time to make it even less verbose.</dd></dl>
 <p> &#8211;repack[=&lt;n&gt;], &#8211;repack-flags=&lt;flags&gt;</p>
 <dl>
 <dt>
-<dd> These should help keep disk usage sane for large fetches with many revisions. </p>
+</dt><dd> These should help keep disk usage sane for large fetches with many revisions. </dd>
 <p> &#8211;repack takes an optional argument for the number of revisions to fetch before repacking. This defaults to repacking every 1000 commits fetched if no argument is specified. </p>
 <p> &#8211;repack-flags are passed directly to <i>git repack</i>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.repack
 config key: svn.repackflags
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> -m, &#8211;merge, -s&lt;strategy&gt;, &#8211;strategy=&lt;strategy&gt;, -p, &#8211;preserve-merges</p>
 <dl>
 <dt>
-<dd> These are only used with the <i>dcommit</i> and <i>rebase</i> commands. </p>
+</dt><dd> These are only used with the <i>dcommit</i> and <i>rebase</i> commands. </dd>
 <p> Passed directly to <i>git rebase</i> when using <i>dcommit</i> if a <i>git reset</i> cannot be used (see <i>dcommit</i>).</dl>
 <p> -n, &#8211;dry-run</p>
 <dl>
 <dt>
-<dd> This can be used with the <i>dcommit</i>, <i>rebase</i>, <i>branch</i> and <i>tag</i> commands. </p>
+</dt><dd> This can be used with the <i>dcommit</i>, <i>rebase</i>, <i>branch</i> and <i>tag</i> commands. </dd>
 <p> For <i>dcommit</i>, print out the series of Git arguments that would show which diffs would be committed to SVN. </p>
 <p> For <i>rebase</i>, display the local branch associated with the upstream svn repository associated with the current branch and the URL of svn repository that will be fetched from. </p>
 <p> For <i>branch</i> and <i>tag</i>, display the urls that will be used for copying when creating the branch or tag.</dl>
 <p> &#8211;use-log-author</p>
 <dl>
 <dt>
-<dd> When retrieving svn commits into Git (as part of <i>fetch</i>, <i>rebase</i>, or <i>dcommit</i> operations), look for the first From: or Signed-off-by: line in the log message and use that as the author string.</dl>
+</dt><dd> When retrieving svn commits into Git (as part of <i>fetch</i>, <i>rebase</i>, or <i>dcommit</i> operations), look for the first From: or Signed-off-by: line in the log message and use that as the author string.</dd></dl>
 <p> &#8211;add-author-from</p>
 <dl>
 <dt>
-<dd> When committing to svn from Git (as part of <i>commit-diff</i>, <i>set-tree</i> or <i>dcommit</i> operations), if the existing log message doesn&#8217;t already have a From: or Signed-off-by: line, append a From: line based on the Git commit&#8217;s author string. If you use this, then &#8211;use-log-author will retrieve a valid author string for all commits.</dl>
+</dt><dd> When committing to svn from Git (as part of <i>commit-diff</i>, <i>set-tree</i> or <i>dcommit</i> operations), if the existing log message doesn&#8217;t already have a From: or Signed-off-by: line, append a From: line based on the Git commit&#8217;s author string. If you use this, then &#8211;use-log-author will retrieve a valid author string for all commits.</dd></dl>
 <h2>ADVANCED OPTIONS</h2>
 <p> -i&lt;GIT_SVN_ID&gt;, &#8211;id &lt;GIT_SVN_ID&gt;</p>
 <dl>
 <dt>
-<dd> This sets GIT_SVN_ID (instead of using the environment). This allows the user to override the default refname to fetch from when tracking a single URL. The <i>log</i> and <i>dcommit</i> commands no longer require this switch as an argument.</dl>
+</dt><dd> This sets GIT_SVN_ID (instead of using the environment). This allows the user to override the default refname to fetch from when tracking a single URL. The <i>log</i> and <i>dcommit</i> commands no longer require this switch as an argument.</dd></dl>
 <p> -R&lt;remote name&gt;, &#8211;svn-remote &lt;remote name&gt;</p>
 <dl>
 <dt>
-<dd> Specify the [svn-remote &quot;&lt;remote name&gt;&quot;] section to use, this allows SVN multiple repositories to be tracked. Default: &quot;svn&quot;</dl>
+</dt><dd> Specify the [svn-remote &quot;&lt;remote name&gt;&quot;] section to use, this allows SVN multiple repositories to be tracked. Default: &quot;svn&quot;</dd></dl>
 <p> &#8211;follow-parent</p>
 <dl>
 <dt>
-<dd> This option is only relevant if we are tracking branches (using one of the repository layout options &#8211;trunk, &#8211;tags, &#8211;branches, &#8211;stdlayout). For each tracked branch, try to find out where its revision was copied from, and set a suitable parent in the first Git commit for the branch. This is especially helpful when we&#8217;re tracking a directory that has been moved around within the repository. If this feature is disabled, the branches created by <i>git svn</i> will all be linear and not share any history, meaning that there will be no information on where branches were branched off or merged. However, following long/convoluted histories can take a long time, so disabling this feature may speed up the cloning process. This feature is enabled by default, use &#8211;no-follow-parent to disable it. </p>
+</dt><dd> This option is only relevant if we are tracking branches (using one of the repository layout options &#8211;trunk, &#8211;tags, &#8211;branches, &#8211;stdlayout). For each tracked branch, try to find out where its revision was copied from, and set a suitable parent in the first Git commit for the branch. This is especially helpful when we&#8217;re tracking a directory that has been moved around within the repository. If this feature is disabled, the branches created by <i>git svn</i> will all be linear and not share any history, meaning that there will be no information on where branches were branched off or merged. However, following long/convoluted histories can take a long time, so disabling this feature may speed up the cloning process. This feature is enabled by default, use &#8211;no-follow-parent to disable it. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 config key: svn.followparent
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>CONFIG FILE-ONLY OPTIONS</h2>
 <p> svn.noMetadata, svn-remote.&lt;name&gt;.noMetadata</p>
 <dl>
 <dt>
-<dd> This gets rid of the <i>git-svn-id:</i> lines at the end of every commit. </p>
+</dt><dd> This gets rid of the <i>git-svn-id:</i> lines at the end of every commit. </dd>
 <p> This option can only be used for one-shot imports as <i>git svn</i> will not be able to fetch again without metadata. Additionally, if you lose your .git/svn/<code>*/.rev_map.</code> files, <i>git svn</i> will not be able to rebuild them. </p>
 <p> The <i>git svn log</i> command will not work on repositories using this, either. Using this conflicts with the <i>useSvmProps</i> option for (hopefully) obvious reasons. </p>
 <p> This option is NOT recommended as it makes it difficult to track down old references to SVN revision numbers in existing documentation, bug reports and archives. If you plan to eventually migrate from SVN to Git and are certain about dropping SVN history, consider <code><a href="/docs/linux/man/1-git-filter-branch/">git-filter-branch</a></code>(1) instead. filter-branch also allows reformatting of metadata for ease-of-reading and rewriting authorship info for non-&quot;svn.authorsFile&quot; users.</dl>
 <p> svn.useSvmProps, svn-remote.&lt;name&gt;.useSvmProps</p>
 <dl>
 <dt>
-<dd> This allows <i>git svn</i> to re-map repository URLs and UUIDs from mirrors created using SVN::Mirror (or svk) for metadata. </p>
+</dt><dd> This allows <i>git svn</i> to re-map repository URLs and UUIDs from mirrors created using SVN::Mirror (or svk) for metadata. </dd>
 <p> If an SVN revision has a property, &quot;svm:headrev&quot;, it is likely that the revision was created by SVN::Mirror (also used by SVK). The property contains a repository UUID and a revision. We want to make it look like we are mirroring the original URL, so introduce a helper function that returns the original identity URL and UUID, and use it when generating metadata in commit messages.</dl>
 <p> svn.useSvnsyncProps, svn-remote.&lt;name&gt;.useSvnsyncprops</p>
 <dl>
 <dt>
-<dd> Similar to the useSvmProps option; this is for users of the <a href="/docs/linux/man/1-svnsync/">svnsync</a>(1) command distributed with SVN 1.4.x and later.</dl>
+</dt><dd> Similar to the useSvmProps option; this is for users of the <a href="/docs/linux/man/1-svnsync/">svnsync</a>(1) command distributed with SVN 1.4.x and later.</dd></dl>
 <p> svn-remote.&lt;name&gt;.rewriteRoot</p>
 <dl>
 <dt>
-<dd> This allows users to create repositories from alternate URLs. For example, an administrator could run <i>git svn</i> on the server locally (accessing via file://) but wish to distribute the repository with a public http:// or svn:// URL in the metadata so users of it will see the public URL.</dl>
+</dt><dd> This allows users to create repositories from alternate URLs. For example, an administrator could run <i>git svn</i> on the server locally (accessing via file://) but wish to distribute the repository with a public http:// or svn:// URL in the metadata so users of it will see the public URL.</dd></dl>
 <p> svn-remote.&lt;name&gt;.rewriteUUID</p>
 <dl>
 <dt>
-<dd> Similar to the useSvmProps option; this is for users who need to remap the UUID manually. This may be useful in situations where the original UUID is not available via either useSvmProps or useSvnsyncProps.</dl>
+</dt><dd> Similar to the useSvmProps option; this is for users who need to remap the UUID manually. This may be useful in situations where the original UUID is not available via either useSvmProps or useSvnsyncProps.</dd></dl>
 <p> svn-remote.&lt;name&gt;.pushurl</p>
 <dl>
 <dt>
-<dd> Similar to Git&#8217;s <i>remote.&lt;name&gt;.pushurl</i>, this key is designed to be used in cases where <i>url</i> points to an SVN repository via a read-only transport, to provide an alternate read/write transport. It is assumed that both keys point to the same repository. Unlike <i>commiturl</i>, <i>pushurl</i> is a base path. If either <i>commiturl</i> or <i>pushurl</i> could be used, <i>commiturl</i> takes precedence.</dl>
+</dt><dd> Similar to Git&#8217;s <i>remote.&lt;name&gt;.pushurl</i>, this key is designed to be used in cases where <i>url</i> points to an SVN repository via a read-only transport, to provide an alternate read/write transport. It is assumed that both keys point to the same repository. Unlike <i>commiturl</i>, <i>pushurl</i> is a base path. If either <i>commiturl</i> or <i>pushurl</i> could be used, <i>commiturl</i> takes precedence.</dd></dl>
 <p> svn.brokenSymlinkWorkaround</p>
 <dl>
 <dt>
-<dd> This disables potentially expensive checks to workaround broken symlinks checked into SVN by broken clients. Set this option to &quot;false&quot; if you track a SVN repository with many empty blobs that are not symlinks. This option may be changed while <i>git svn</i> is running and take effect on the next revision fetched. If unset, <i>git svn</i> assumes this option to be &quot;true&quot;.</dl>
+</dt><dd> This disables potentially expensive checks to workaround broken symlinks checked into SVN by broken clients. Set this option to &quot;false&quot; if you track a SVN repository with many empty blobs that are not symlinks. This option may be changed while <i>git svn</i> is running and take effect on the next revision fetched. If unset, <i>git svn</i> assumes this option to be &quot;true&quot;.</dd></dl>
 <p> svn.pathnameencoding</p>
 <dl>
 <dt>
-<dd> This instructs git svn to recode pathnames to a given encoding. It can be used by windows users and by those who work in non-utf8 locales to avoid corrupted file names with non-ASCII characters. Valid encodings are the ones supported by Perl&#8217;s Encode module.</dl>
+</dt><dd> This instructs git svn to recode pathnames to a given encoding. It can be used by windows users and by those who work in non-utf8 locales to avoid corrupted file names with non-ASCII characters. Valid encodings are the ones supported by Perl&#8217;s Encode module.</dd></dl>
 <p> svn-remote.&lt;name&gt;.automkdirs</p>
 <dl>
 <dt>
-<dd> Normally, the &quot;git svn clone&quot; and &quot;git svn rebase&quot; commands attempt to recreate empty directories that are in the Subversion repository. If this option is set to &quot;false&quot;, then empty directories will only be created if the &quot;git svn mkdirs&quot; command is run explicitly. If unset, <i>git svn</i> assumes this option to be &quot;true&quot;.</dl>
+</dt><dd> Normally, the &quot;git svn clone&quot; and &quot;git svn rebase&quot; commands attempt to recreate empty directories that are in the Subversion repository. If this option is set to &quot;false&quot;, then empty directories will only be created if the &quot;git svn mkdirs&quot; command is run explicitly. If unset, <i>git svn</i> assumes this option to be &quot;true&quot;.</dd></dl>
 <p> Since the noMetadata, rewriteRoot, rewriteUUID, useSvnsyncProps and useSvmProps options all affect the metadata generated and used by <i>git svn</i>; they <code>must</code> be set in the configuration file before any history is imported and these settings should never be changed once they are set. </p>
 <p> Additionally, only one of these options can be used per svn-remote section because they affect the <i>git-svn-id:</i> metadata line, except for rewriteRoot and rewriteUUID which can be used together.</p>
 <h2>BASIC EXAMPLES</h2>
 <p> Tracking and contributing to the trunk of a Subversion-managed project (ignoring tags and branches): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # Clone a repo (like git clone):
         git svn clone <a rel="nofollow" href="http://svn.example.com/project/trunk">http://svn.example.com/project/trunk</a>
@@ -608,11 +604,11 @@ config key: svn.followparent
 # Append svn:ignore settings to the default Git exclude file:
         git svn show-ignore &gt;&gt; .git/info/exclude
 </pre>
-</dl>
+</dd></dl>
 <p> Tracking and contributing to an entire Subversion-managed project (complete with a trunk, tags and branches): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # Clone a repo with standard SVN directory layout (like git clone):
         git svn clone <a rel="nofollow" href="http://svn.example.com/project">http://svn.example.com/project</a> --stdlayout
@@ -628,11 +624,11 @@ config key: svn.followparent
 # You may only dcommit to one branch/tag/trunk at a time.  The usage
 # of dcommit/rebase/show-ignore should be the same as above.
 </pre>
-</dl>
+</dd></dl>
 <p> The initial <i>git svn clone</i> can be quite time-consuming (especially for large Subversion repositories). If multiple people (or one person with multiple machines) want to use <i>git svn</i> to interact with the same Subversion repository, you can do the initial <i>git svn clone</i> to a repository on a server and have each person clone that repository with <i>git clone</i>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 #Do the initial import on a server<br />
 ssh server &#8220;cd /pub &amp;&amp; git svn clone http://svn.example.com/project<br />
 #Clone locally &#8211; make sure the refs / remotes / space matches the server<br />
@@ -653,7 +649,7 @@ ssh server &#8220;cd /pub &amp;&amp; git svn clone http://svn.example.com/projec
         git svn init http : // svn.example.com/project<br />
 #Pull the latest changes from Subversion<br />
                             git svn rebase
-</dl>
+</dd></dl>
 <h2>REBASE VS. PULL/MERGE</h2>
 <p> Prefer to use <i>git svn rebase</i> or <i>git rebase</i>, rather than <i>git pull</i> or <i>git merge</i> to synchronize unintegrated commits with a <i>git svn</i> branch. Doing so will keep the history of unintegrated commits linear with respect to the upstream SVN repository and allow the use of the preferred <i>git svn dcommit</i> subcommand to push unintegrated commits back into SVN. </p>
 <p> Originally, <i>git svn</i> recommended that developers pulled or merged from the <i>git svn</i> branch. This was because the author favored git svn set-tree B to commit a single head rather than the git svn set-tree A..B notation to commit multiple commits. Use of <i>git pull</i> or <i>git merge</i> with git svn set-tree A..B will cause non-linear history to be flattened when committing into SVN and this can lead to merge commits unexpectedly reversing previous commits in SVN.</p>
@@ -671,11 +667,11 @@ ssh server &#8220;cd /pub &amp;&amp; git svn clone http://svn.example.com/projec
 <p> If you do merge, note the following rule: <i>git svn dcommit</i> will attempt to commit on top of the SVN commit named in </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 git log --grep=^git-svn-id: --first-parent -1
 </pre>
-</dl>
+</dd></dl>
 <p> You <i>must</i> therefore ensure that the most recent commit of the branch you want to dcommit to is the <i>first</i> parent of the merge. Chaos will ensue otherwise, especially if the first parent is an older commit on the same SVN branch. </p>
 <p> <i>git clone</i> does not clone branches under the refs/remotes/ hierarchy or any <i>git svn</i> metadata, or config. So repositories created and managed with using <i>git svn</i> should use <i>rsync</i> for cloning, if cloning is to be done at all. </p>
 <p> Since <i>dcommit</i> uses rebase internally, any Git branches you <i>git push</i> to before <i>dcommit</i> on will require forcing an overwrite of the existing ref on the remote repository. This is generally considered bad practice, see the <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) documentation for details. </p>
@@ -684,12 +680,12 @@ git log --grep=^git-svn-id: --first-parent -1
 <p> When using multiple &#8211;branches or &#8211;tags, <i>git svn</i> does not automatically handle name collisions (for example, if two branches from different paths have the same name, or if a branch and a tag have the same name). In these cases, use <i>init</i> to set up your Git repository then, before your first <i>fetch</i>, edit the .git/config file so that the branches and tags are associated with different name spaces. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 branches = stable/*:refs/remotes/svn/stable/*
 branches = debug/*:refs/remotes/svn/debug/*
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> We ignore all SVN properties except svn:executable. Any unhandled properties are logged to $GIT_DIR/svn/&lt;refname&gt;/unhandled.log </p>
 <p> Renamed and copied directories are not detected by Git and hence not tracked when committing to SVN. I do not plan on adding support for this as it&#8217;s quite difficult and time-consuming to get working for all the possible corner cases (Git doesn&#8217;t do it, either). Committing renamed and copied files is fully supported if they&#8217;re similar enough for Git to detect them. </p>
@@ -698,7 +694,7 @@ branches = debug/*:refs/remotes/svn/debug/*
 <p> <i>git svn</i> stores [svn-remote] configuration information in the repository .git/config file. It is similar the core Git [remote] sections except <i>fetch</i> keys do not accept glob arguments; but they are instead handled by the <i>branches</i> and <i>tags</i> keys. Since some SVN repositories are oddly configured with multiple projects glob expansions such those listed below are allowed: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [svn-remote &quot;project-a&quot;]
         url = <a rel="nofollow" href="http://server.org/svn">http://server.org/svn</a>
@@ -706,22 +702,22 @@ branches = debug/*:refs/remotes/svn/debug/*
         branches = branches/*/project-a:refs/remotes/project-a/branches/*
         tags = tags/*/project-a:refs/remotes/project-a/tags/*
 </pre>
-</dl>
+</dd></dl>
 <p> Keep in mind that the <i>*</i> (asterisk) wildcard of the local ref (right of the <i>:</i>) <code>must</code> be the farthest right path component; however the remote wildcard may be anywhere as long as it&#8217;s an independent path component (surrounded by <i>/</i> or EOL). This type of configuration is not automatically created by <i>init</i> and should be manually entered with a text-editor or using <i>git config</i>. </p>
 <p> It is also possible to fetch a subset of branches or tags by using a comma-separated list of names within braces. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [svn - remote "huge-project"] url = http : // server.org/svn
                                            fetch = trunk / src : refs / remotes / trunk branches = branches / {red, green} / src : refs / remotes / branches/*
         tags = tags/{1.0,2.0}/src:refs/remotes/tags/*
 </code></pre>
-</dl>
+</dd></dl>
 <p> Multiple fetch, branches, and tags keys are supported: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [svn-remote &quot;messy-repo&quot;]
         url = <a rel="nofollow" href="http://server.org/svn">http://server.org/svn</a>
@@ -731,15 +727,15 @@ branches = debug/*:refs/remotes/svn/debug/*
         branches = branches/demos/2011/*:refs/remotes/project-a/2011-demos/*
         tags = tags/server/*:refs/remotes/project-a/tags/*
 </pre>
-</dl>
+</dd></dl>
 <p> Creating a branch in such a configuration requires disambiguating which location to use using the -d or &#8211;destination flag: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git svn branch -d branches/server release-2-3-0
 </pre>
-</dl>
+</dd></dl>
 <p> Note that git-svn keeps track of the highest revision in which a branch or tag has appeared. If the subset of branches or tags is changed after fetching, then .git/svn/.metadata must be manually edited to remove (or reset) branches-maxRev and/or tags-maxRev as appropriate.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1)</p>

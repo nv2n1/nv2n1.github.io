@@ -13,10 +13,10 @@ description: "PAPIF_epc –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_epc(&nbsp;<wbr>C_STRING EventName, C_FLOAT real_time, C_FLOAT proc_time, C_LONG_LONG ref, C_LONG_LONG core, C_LONG_LONG evt, C_FLOAT epc, C_INT check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_epc</code></dl>
+<dd><code>PAPI_epc</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

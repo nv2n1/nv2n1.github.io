@@ -12,18 +12,18 @@ description: "default_type – The SELinux default type configuration file"
 <p>The <i>default_type</i> file contains entries that allow SELinux-aware applications such as <code><a href="/docs/linux/man/1-newrole/">newrole</a></code>(1) to select a default type for a role if one is not supplied. </p>
 <p> <code><a href="/docs/linux/man/3-selinux_default_type_path/">selinux_default_type_path</a></code>(3) will return the active policy path to this file. The default, default type file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/default_type</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/default_type</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> <code><a href="/docs/linux/man/3-get_default_type/">get_default_type</a></code>(3) reads this file to determine a type for the active policy.</p>
 <h2>File Format</h2>
 <p>Each line within the <i>default_type</i> file is formatted with <i>role</i><code>:</code><i>type</i> entries where:</p>
 <dl>
-<dd><i>role</i></p>
+<dd><i>role</i></dd>
 <dl>
-<dd>The SELinux role.</dl>
+<dd>The SELinux role.</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>The domain type that is returned for this role.</dl>
+<dd>The domain type that is returned for this role.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># ./contexts/default_type<br />

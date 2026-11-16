@@ -30,8 +30,8 @@ description: "slapd.access – access configuration for slapd, the stand-alone L
 <h2>The Access Directive</h2>
 <p>The structure of the access control directives is</p>
 <dl>
-<dt><code>access to &lt;what&gt; [ by &lt;who&gt; [ &lt;access&gt; ] [ &lt;control&gt; ] ]+</code></p>
-<dd>Grant access (specified by <code>&lt;access&gt;</code>) to a set of entries and/or attributes (specified by <code>&lt;what&gt;</code>) by one or more requestors (specified by <code>&lt;who&gt;</code>). </p>
+<dt><code>access to &lt;what&gt; [ by &lt;who&gt; [ &lt;access&gt; ] [ &lt;control&gt; ] ]+</code></dt>
+<dd>Grant access (specified by <code>&lt;access&gt;</code>) to a set of entries and/or attributes (specified by <code>&lt;what&gt;</code>) by one or more requestors (specified by <code>&lt;who&gt;</code>). </dd>
 </dl>
 <p> Lists of access directives are evaluated in the order they appear in <i>slapd.conf</i>. When a <code>&lt;what&gt;</code> clause matches the datum whose access is being evaluated, its <code>&lt;who&gt;</code> clause list is checked. When a <code>&lt;who&gt;</code> clause matches the accessor&#8217;s properties, its <code>&lt;access&gt;</code> and <code>&lt;control&gt;</code> clauses are evaluated. Access control checking stops at the first match of the <code>&lt;what&gt;</code> and <code>&lt;who&gt;</code> clause, unless otherwise dictated by the <code>&lt;control&gt;</code> clause. Each <code>&lt;who&gt;</code> clause list is implicitly terminated by a </p>
 <pre> by * none stop</pre>
@@ -189,8 +189,8 @@ description: "slapd.access – access configuration for slapd, the stand-alone L
 <p>In fact, while a <code>&lt;dnstyle&gt;</code> of <code>regex</code> implies substring expansion, <code>exact</code>, as well as all the other DN specific <code>&lt;dnstyle&gt;</code> values, does not, so it must be explicitly requested.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code>slapd-*</code>(5), <code><a href="/docs/linux/man/8-slapacl/">slapacl</a></code>(8), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/7-re_format/">re_format</a></code>(7) </p>
 <p> &quot;OpenLDAP Administrator&#8217;s Guide&quot; (<a rel="nofollow" href="http://www.OpenLDAP.org/doc/admin/)">http://www.OpenLDAP.org/doc/admin/)</a></p>

@@ -22,61 +22,61 @@ description: "rear – bare metal disaster recovery and system migration tool"
 <h3>Global Options</h3>
 <p>-d</p>
 <dl>
-<dd><code>debug mode</code> (log debug messages to log file)</dl>
+<dd><code>debug mode</code> (log debug messages to log file)</dd></dl>
 <p> -D</p>
 <dl>
-<dd><code>debugscript mode</code> (log every function call)</dl>
+<dd><code>debugscript mode</code> (log every function call)</dd></dl>
 <p> -r KERNEL</p>
 <dl>
-<dd>kernel version to use (by default use running kernel)</dl>
+<dd>kernel version to use (by default use running kernel)</dd></dl>
 <p> -s</p>
 <dl>
-<dd><code>simulation mode</code> (show what scripts rear would include)</dl>
+<dd><code>simulation mode</code> (show what scripts rear would include)</dd></dl>
 <p> -S</p>
 <dl>
-<dd><code>step-by-step mode</code> (acknowledge each script individually)</dl>
+<dd><code>step-by-step mode</code> (acknowledge each script individually)</dd></dl>
 <p> -v</p>
 <dl>
-<dd><code>verbose mode</code> (show progress output)</dl>
+<dd><code>verbose mode</code> (show progress output)</dd></dl>
 <p> -V</p>
 <dl>
-<dd>version information</dl>
+<dd>version information</dd></dl>
 <h3>Commands</h3>
 <p><code>checklayout</code></p>
 <dl>
-<dd>check if the disk layout has changed since the last run of mkbackup/mkrescue</dl>
+<dd>check if the disk layout has changed since the last run of mkbackup/mkrescue</dd></dl>
 <p> <code>dump</code></p>
 <dl>
-<dd>dump configuration and system information; please run this to verify your setup</dl>
+<dd>dump configuration and system information; please run this to verify your setup</dd></dl>
 <p> <code>format</code></p>
 <dl>
-<dd>format and label USB or tape media to be used with rear; </p>
+<dd>format and label USB or tape media to be used with rear; </dd>
 <p> first argument is the USB or tape device to use, eg. <i>/dev/sdX</i> or <i>/dev/stX</i></dl>
 <p> <code>help</code></p>
 <dl>
-<dd>print full list of commands and options</dl>
+<dd>print full list of commands and options</dd></dl>
 <p> <code>mkbackup</code></p>
 <dl>
-<dd>create rescue media and backup the system (only for internal backup methods)</dl>
+<dd>create rescue media and backup the system (only for internal backup methods)</dd></dl>
 <p> <code>mkbackuponly</code></p>
 <dl>
-<dd>backup the system (only for internal backup methods) without creating rescue media</dl>
+<dd>backup the system (only for internal backup methods) without creating rescue media</dd></dl>
 <p> <code>mkrescue</code></p>
 <dl>
-<dd>create rescue media only</dl>
+<dd>create rescue media only</dd></dl>
 <p> <code>recover</code></p>
 <dl>
-<dd>recover the system; can be used only when running from the rescue media</dl>
+<dd>recover the system; can be used only when running from the rescue media</dd></dl>
 <p> <code>validate</code></p>
 <dl>
-<dd>submit validation information</dl>
+<dd>submit validation information</dd></dl>
 <p> Use <i>rear -v help</i> for more advanced commands.</p>
 <h2>Background Information</h2>
 <p>The process of bare metal disaster recovery consists of two parts: </p>
 <dl>
-<dd>&bull; Recreate the system layout</dl>
+<dd>&bull; Recreate the system layout</dd></dl>
 <dl>
-<dd>&bull; Restore the data to the system</dl>
+<dd>&bull; Restore the data to the system</dd></dl>
 <p> Most backup software solutions are very good at restoring data but do not support recreating the system layout. Relax-and-Recover is very good at recreating the system layout but works best when used together with supported backup software. </p>
 <p> In this combination Relax-and-Recover recreates the system layout and calls the backup software to restore the actual data. Thus there is no unnessecary duplicate data storage and the Relax-and-Recover rescue media can be very small. </p>
 <p> For demonstration and special use purposes Relax-and-Recover also includes an internal backup method, NETFS, which can be used to create a simple tar.gz archive of the system. For all permanent setups we recommend using something more professional for backup, either a traditional backup software (open source or commercial) or rsync with hardlink based solutions, e.g. RSYNC BACKUP MADE EASY.</p>
@@ -84,53 +84,53 @@ description: "rear – bare metal disaster recovery and system migration tool"
 <p>The OUTPUT variable defines how from where our rescue image will be booted and the OUTPUT_URL variable defines where the rescue image should be send to. Possible OUTPUT setting are: </p>
 <p> OUTPUT=<code>RAMDISK</code></p>
 <dl>
-<dd>Create only the Relax-and-Recover initramfs.</dl>
+<dd>Create only the Relax-and-Recover initramfs.</dd></dl>
 <p> OUTPUT=<code>ISO</code></p>
 <dl>
-<dd><code>(Default)</code> Create a bootable ISO9660 image on disk as <i>rear-$(hostname).iso</i></dl>
+<dd><code>(Default)</code> Create a bootable ISO9660 image on disk as <i>rear-$(hostname).iso</i></dd></dl>
 <p> OUTPUT=<code>PXE</code></p>
 <dl>
-<dd>Create on a remote PXE/NFS server the required files (such as configuration file, kernel and initrd image</dl>
+<dd>Create on a remote PXE/NFS server the required files (such as configuration file, kernel and initrd image</dd></dl>
 <p> OUTPUT=<code>OBDR</code></p>
 <dl>
-<dd>Create a bootable OBDR tape (optionally including the backup archive). Specify the OBDR tape device by using TAPE_DEVICE.</dl>
+<dd>Create a bootable OBDR tape (optionally including the backup archive). Specify the OBDR tape device by using TAPE_DEVICE.</dd></dl>
 <p> OUTPUT=<code>USB</code></p>
 <dl>
-<dd>Create a bootable USB disk (using extlinux). Specify the USB storage device by using USB_DEVICE.</dl>
+<dd>Create a bootable USB disk (using extlinux). Specify the USB storage device by using USB_DEVICE.</dd></dl>
 <p> When using OUTPUT=ISO, RAMDISK, OBDR or USB you should provide the backup target location through the OUTPUT_URL variable. Possible OUTPUT_URL settings are: </p>
 <p> OUTPUT_URL=<code>file://</code></p>
 <dl>
-<dd>Write the image to disk. The default is in <i>/var/lib/rear/output/</i>.</dl>
+<dd>Write the image to disk. The default is in <i>/var/lib/rear/output/</i>.</dd></dl>
 <p> OUTPUT_URL=<code>fish://</code></p>
 <dl>
-<dd>Write the image using lftp and the FISH protocol.</dl>
+<dd>Write the image using lftp and the FISH protocol.</dd></dl>
 <p> OUTPUT_URL=<code>ftp://</code></p>
 <dl>
-<dd>Write the image using lftp and the FTP protocol.</dl>
+<dd>Write the image using lftp and the FTP protocol.</dd></dl>
 <p> OUTPUT_URL=<code>ftps://</code></p>
 <dl>
-<dd>Write the image using lftp and the FTPS protocol.</dl>
+<dd>Write the image using lftp and the FTPS protocol.</dd></dl>
 <p> OUTPUT_URL=<code>hftp://</code></p>
 <dl>
-<dd>Write the image using lftp and the HFTP protocol.</dl>
+<dd>Write the image using lftp and the HFTP protocol.</dd></dl>
 <p> OUTPUT_URL=<code>http://</code></p>
 <dl>
-<dd>Write the image using lftp and the HTTP (PUT) procotol.</dl>
+<dd>Write the image using lftp and the HTTP (PUT) procotol.</dd></dl>
 <p> OUTPUT_URL=<code>https://</code></p>
 <dl>
-<dd>Write the image using lftp and the HTTPS (PUT) protocol.</dl>
+<dd>Write the image using lftp and the HTTPS (PUT) protocol.</dd></dl>
 <p> OUTPUT_URL=<code>sftp://</code></p>
 <dl>
-<dd>Write the image using lftp and the secure FTP (SFTP) protocol.</dl>
+<dd>Write the image using lftp and the secure FTP (SFTP) protocol.</dd></dl>
 <p> OUTPUT_URL=<code>rsync://</code></p>
 <dl>
-<dd>Write the image using rsync and the RSYNC protocol (SSH only).</dl>
+<dd>Write the image using rsync and the RSYNC protocol (SSH only).</dd></dl>
 <p> OUTPUT_URL=<code>sshfs://</code></p>
 <dl>
-<dd>Write the image using sshfs and the SSH protocol.</dl>
+<dd>Write the image using sshfs and the SSH protocol.</dd></dl>
 <p> OUTPUT_URL=<code>null</code></p>
 <dl>
-<dd>Do not copy the ISO image from <i>/var/lib/rear/output/</i> to an external destination. Useful in combination with an <i>external</i> backup program, or when BACKUP_URL=<a href="iso://backup">iso://backup</a></dl>
+<dd>Do not copy the ISO image from <i>/var/lib/rear/output/</i> to an external destination. Useful in combination with an <i>external</i> backup program, or when BACKUP_URL=<a href="iso://backup">iso://backup</a></dd></dl>
 <h2>Backup Software Integration</h2>
 <p>Currently Relax-and-Recover supports the following backup methods. Please distinguish carefully between Relax-and-Recover support for 3rd party backup software and Relax-and-Recover internal backup methods. The latter also creates a backup of your data while the former will only integrate Relax-and-Recover with the backup software to restore the data with the help of the backup software without actually creating backups. This means that for all non-internal backup software you <code>must</code> take care of creating backups yourself. </p>
 <p> Especially the rear mkbackup command can be confusing as it is only useful for the internal backup methods and has no function at all with the other (external) backup methods. </p>
@@ -138,90 +138,90 @@ description: "rear – bare metal disaster recovery and system migration tool"
 <p> The following BACKUP methods are <i>external</i> of Relax-and-Recover meaning that you are responsible of backups being made: </p>
 <p> BACKUP=<code>REQUESTRESTORE</code></p>
 <dl>
-<dd><code>(default)</code> Not really a backup method at all, Relax-and-Recover simply halts the recovery and requests that somebody will restore the data to the appropriate location (e.g. via SSH). This method works especially well with an rsync bases backup that is pushed back to the backup client.</dl>
+<dd><code>(default)</code> Not really a backup method at all, Relax-and-Recover simply halts the recovery and requests that somebody will restore the data to the appropriate location (e.g. via SSH). This method works especially well with an rsync bases backup that is pushed back to the backup client.</dd></dl>
 <p> BACKUP=<code>EXTERNAL</code></p>
 <dl>
-<dd>Internal backup method that uses an arbitrary external command to create a backup and restore the data.</dl>
+<dd>Internal backup method that uses an arbitrary external command to create a backup and restore the data.</dd></dl>
 <p> BACKUP=<code>DP</code></p>
 <dl>
-<dd>Use HP Data Protector to restore the data.</dl>
+<dd>Use HP Data Protector to restore the data.</dd></dl>
 <p> BACKUP=<code>GALAXY</code></p>
 <dl>
-<dd>Use CommVault Galaxy 5 to restore the data.</dl>
+<dd>Use CommVault Galaxy 5 to restore the data.</dd></dl>
 <p> BACKUP=<code>GALAXY7</code></p>
 <dl>
-<dd>Use CommVault Galaxy 7 to restore the data.</dl>
+<dd>Use CommVault Galaxy 7 to restore the data.</dd></dl>
 <p> BACKUP=<code>GALAXY10</code></p>
 <dl>
-<dd>Use CommVault Galaxy 10 (or Simpana 10) to restore the data.</dl>
+<dd>Use CommVault Galaxy 10 (or Simpana 10) to restore the data.</dd></dl>
 <p> BACKUP=<code>NBU</code></p>
 <dl>
-<dd>Use Symantec NetBackup to restore the data.</dl>
+<dd>Use Symantec NetBackup to restore the data.</dd></dl>
 <p> BACKUP=<code>TSM</code></p>
 <dl>
-<dd>Use IBM Tivoli Storage Manager to restore the data. The Relax-and-Recover result files (e.g. ISO image) are also saved into TSM.</dl>
+<dd>Use IBM Tivoli Storage Manager to restore the data. The Relax-and-Recover result files (e.g. ISO image) are also saved into TSM.</dd></dl>
 <p> BACKUP=<code>NSR</code></p>
 <dl>
-<dd>Using EMC NetWorker (Legato) to restore the data.</dl>
+<dd>Using EMC NetWorker (Legato) to restore the data.</dd></dl>
 <p> BACKUP=<code>SESAM</code></p>
 <dl>
-<dd>Using SEP Sesam to restore the data.</dl>
+<dd>Using SEP Sesam to restore the data.</dd></dl>
 <p> BACKUP=<code>RBME</code></p>
 <dl>
-<dd>Use Rsync Backup Made Easy (rbme) to restore the data.</dl>
+<dd>Use Rsync Backup Made Easy (rbme) to restore the data.</dd></dl>
 <p> BACKUP=<code>BAREOS</code></p>
 <dl>
-<dd>Use Open Source backup solution BAREOS (a fork a BUCULA) to restore the data.</dl>
+<dd>Use Open Source backup solution BAREOS (a fork a BUCULA) to restore the data.</dd></dl>
 <p> BACKUP=<code>BACULA</code></p>
 <dl>
-<dd>Use Open Source backup solution BACULA to restore the data.</dl>
+<dd>Use Open Source backup solution BACULA to restore the data.</dd></dl>
 <p> BACKUP=<code>DUPLICITY</code></p>
 <dl>
-<dd>Use encrypted bandwidth-efficient backup solution using the rsync algorithm to restore the data.</dl>
+<dd>Use encrypted bandwidth-efficient backup solution using the rsync algorithm to restore the data.</dd></dl>
 <p> The following BACKUP methods are <i>internal</i> of Relax-and-Recover: </p>
 <p> BACKUP=<code>NETFS</code></p>
 <dl>
-<dd>Internal backup method which can be used to create a simple backup (tar archive).</dl>
+<dd>Internal backup method which can be used to create a simple backup (tar archive).</dd></dl>
 <p> BACKUP=<code>RSYNC</code></p>
 <dl>
-<dd>Use rsync to restore data.</dl>
+<dd>Use rsync to restore data.</dd></dl>
 <p> If your favourite backup software is missing from this list, please submit a patch or ask us to implement it for you. </p>
 <p> When using BACKUP=NETFS you should provide the backup target location through the BACKUP_URL variable. Possible BACKUP_URL settings are: </p>
 <p> BACKUP_URL=<code>file://</code></p>
 <dl>
-<dd>To backup to local disk, use BACKUP_URL=file:///directory/path/</dl>
+<dd>To backup to local disk, use BACKUP_URL=file:///directory/path/</dd></dl>
 <p> BACKUP_URL=<code>nfs://</code></p>
 <dl>
-<dd>To backup to NFS disk, use BACKUP_URL=<a href="nfs://nfs-server-name/share/path">nfs://nfs-server-name/share/path</a></dl>
+<dd>To backup to NFS disk, use BACKUP_URL=<a href="nfs://nfs-server-name/share/path">nfs://nfs-server-name/share/path</a></dd></dl>
 <p> BACKUP_URL=<code>tape://</code></p>
 <dl>
-<dd>To backup to tape device, use BACKUP_URL=<a href="tape:///dev/nst0">tape:///dev/nst0</a> or alternatively, simply define TAPE_DEVICE=/dev/nst0</dl>
+<dd>To backup to tape device, use BACKUP_URL=<a href="tape:///dev/nst0">tape:///dev/nst0</a> or alternatively, simply define TAPE_DEVICE=/dev/nst0</dd></dl>
 <p> BACKUP_URL=<code>cifs://</code></p>
 <dl>
-<dd>To backup to a Samba share (CIFS), use BACKUP_URL=<a href="cifs://cifs-server-name/share/path.">cifs://cifs-server-name/share/path.</a> To provide credentials for CIFS mounting use a <i>/etc/rear/.cifs</i> credentials file and define BACKUP_OPTIONS=&quot;cred=/etc/rear/.cifs&quot; and pass along: </p>
+<dd>To backup to a Samba share (CIFS), use BACKUP_URL=<a href="cifs://cifs-server-name/share/path.">cifs://cifs-server-name/share/path.</a> To provide credentials for CIFS mounting use a <i>/etc/rear/.cifs</i> credentials file and define BACKUP_OPTIONS=&quot;cred=/etc/rear/.cifs&quot; and pass along: </dd>
 <dl>
 <dd>
 <pre>username=_username_
 password=_secret password_
 domain=_domain_</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> BACKUP_URL=<code>usb://</code></p>
 <dl>
-<dd>To backup to USB storage device, use BACKUP_URL=<a href="usb:///dev/disk/by-path/REAR-000">usb:///dev/disk/by-path/REAR-000</a> or use a real device node or a specific filesystem label. Alternatively, you can specify the device using USB_DEVICE=/dev/disk/by-path/REAR-000. </p>
+<dd>To backup to USB storage device, use BACKUP_URL=<a href="usb:///dev/disk/by-path/REAR-000">usb:///dev/disk/by-path/REAR-000</a> or use a real device node or a specific filesystem label. Alternatively, you can specify the device using USB_DEVICE=/dev/disk/by-path/REAR-000. </dd>
 <p> If you combine this with OUTPUT=USB you will end up with a bootable USB device.</dl>
 <p> BACKUP_URL=<code>sshfs://</code></p>
 <dl>
-<dd>To backup to a remote server via sshfs (SSH protocol), use BACKUP_URL=<a href="sshfs://user@remote-system.domain.org/home/user/backup-dir/">sshfs://user@remote-system.domain.org/home/user/backup-dir/</a> </p>
+<dd>To backup to a remote server via sshfs (SSH protocol), use BACKUP_URL=<a href="sshfs://user@remote-system.domain.org/home/user/backup-dir/">sshfs://user@remote-system.domain.org/home/user/backup-dir/</a> </dd>
 <p> It is advisable to add <code>ServerAliveInterval 15</code> in the /root/.ssh/config file for the remote system (remote-system.domain.org).</dl>
 <p> BACKUP_URL=<code>iso://</code></p>
 <dl>
-<dd>To include the backup within the ISO image. It is important that the BACKUP_URL and OUTPUT_URL variables are different. E.g. </p>
+<dd>To include the backup within the ISO image. It is important that the BACKUP_URL and OUTPUT_URL variables are different. E.g. </dd>
 <dl>
 <dd>
 <pre>BACKUP_URL=<a href="iso:///backup/">iso:///backup/</a>
 OUTPUT_URL=<a href="nfs://server/path/">nfs://server/path/</a></pre>
-</dl>
+</dd></dl>
 </dl>
 <p> When using BACKUP=NETFS there is an option to select a BACKUP_TYPE=incremental to have rear make incrementals until the next FULLBACKUPDAY=&quot;Mon&quot; has reached.</p>
 <h2>Configuration</h2>
@@ -236,59 +236,59 @@ OUTPUT_URL=<a href="nfs://server/path/">nfs://server/path/</a></pre>
 <dd>
 <pre>BACKUP=TSM
 OUTPUT=ISO</pre>
-</dl>
+</dd></dl>
 <p> And if all your systems use NTP for time synchronisation, you can also add these lines to <i>/etc/rear/site.conf</i> </p>
 <dl>
 <dd>
 <pre>TIMESYNC=NTP</pre>
-</dl>
+</dd></dl>
 <p> Do not forget to distribute the <i>site.conf</i> to all your systems. </p>
 <p> The resulting ISO image will be created in <i>/var/lib/rear/output/</i>. You can now modify the behaviour by copying the appropriate configuration variables from <i>default.conf</i> to <i>local.conf</i> and changing them to suit your environment.</p>
 <h2>Exit Status</h2>
 <p>0</p>
 <dl>
-<dd>Successful program execution.</dl>
+<dd>Successful program execution.</dd></dl>
 <p> &gt;0</p>
 <dl>
-<dd>Usage, syntax or execution errors. Check the log file in <i>/var/log/rear/</i> for more information.</dl>
+<dd>Usage, syntax or execution errors. Check the log file in <i>/var/log/rear/</i> for more information.</dd></dl>
 <h2>Examples</h2>
 <p>To print out the current settings for BACKUP and OUTPUT methods and some system information. This command can be used to see the supported features for the given release and platform. </p>
 <dl>
 <dd>
 <pre># rear dump</pre>
-</dl>
+</dd></dl>
 <p> To create a new rescue environment. Do not forget to copy the resulting rescue system away so that you can use it in the case of a system failure. </p>
 <dl>
 <dd>
 <pre># rear -v mkrescue</pre>
-</dl>
+</dd></dl>
 <p> To create a new rescue image together with a complete archive of your local system run the command: </p>
 <dl>
 <dd>
 <pre># rear -v mkbackup</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <p>/usr/sbin/rear</p>
 <dl>
-<dd>The program itself.</dl>
+<dd>The program itself.</dd></dl>
 <p> /etc/rear/local.conf</p>
 <dl>
-<dd>System specific configuration can be set here.</dl>
+<dd>System specific configuration can be set here.</dd></dl>
 <p> /etc/rear/site.conf</p>
 <dl>
-<dd>Site specific configuration can be set here (not created by default).</dl>
+<dd>Site specific configuration can be set here (not created by default).</dd></dl>
 <p> /var/log/rear/</p>
 <dl>
-<dd>Directory holding the log files.</dl>
+<dd>Directory holding the log files.</dd></dl>
 <p> /tmp/rear.####</p>
 <dl>
-<dd>Relax-and-Recover working directory. If Relax-and-Recover exits with an error, you must remove this directory manually.</dl>
+<dd>Relax-and-Recover working directory. If Relax-and-Recover exits with an error, you must remove this directory manually.</dd></dl>
 <p> /usr/share/rear</p>
 <dl>
-<dd>Relax-and-Recover script components.</dl>
+<dd>Relax-and-Recover script components.</dd></dl>
 <p> /usr/share/rear/conf/default.conf</p>
 <dl>
-<dd>Relax-and-Recover default values. Contains a complete set of parameters and its explanation. Please do not edit or modify. Copy values to <i>local.conf</i> or <i>site.conf</i> instead.</dl>
+<dd>Relax-and-Recover default values. Contains a complete set of parameters and its explanation. Please do not edit or modify. Copy values to <i>local.conf</i> or <i>site.conf</i> instead.</dd></dl>
 <h2>Bugs</h2>
 <p>Feedback is welcome, please report any issues or improvements to our issue-tracker at: m[blue]<code><a rel="nofollow" href="http://github.com/rear/issues/">http://github.com/rear/issues/</a></code>m[] </p>
 <p> Furthermore, we welcome pull requests via GitHub.</p>

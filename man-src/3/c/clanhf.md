@@ -19,17 +19,17 @@ description: "clanhf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLANHF  returns the value of the one norm,  or the Frobenius norm, or
  the  infinity norm,  or the  element of  largest absolute value  of a
  complex Hermitian matrix A in RFP format.
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> CLANHF </p>
+</dt><dd> CLANHF </dd>
 <pre>
     CLANHF = ( max(abs(A(i,j))), NORM = 'M' or 'm'
              (
@@ -47,7 +47,7 @@ description: "clanhf.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>NORM</i> </p>
+</dt><dd> <i>NORM</i> </dd>
 <pre>
           NORM is CHARACTER
             Specifies the value to be returned in CLANHF as described
@@ -108,18 +108,18 @@ K = N / 2. RFP A is(0
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 We first consider Standard Packed Format when N is even.We give an example where N = 6. AP is Upper AP is Lower 00 01 02 03 04 05 00 11 12 13 14 15 10 11 22 23 24 25 20 21 22 33 34 35 30 31 32 33 44 45 40 41 42 43 44 55 50 51 52 53 54 55 Let TRANSR = 'N'.RFP holds AP as follows : For UPLO = 'U' the upper trapezoid A(0 : 5, 0 : 2) consists of the last
                                                                                                                                                                                                                                                                                                         three columns of AP upper.The lower triangle A(4 : 6, 0 : 2) consists of
@@ -137,8 +137,9 @@ We first consider Standard Packed Format when N is even.We give an example where
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             transpose of the last two columns of AP lower.To denote conjugate we place-- above the element.This covers the case N odd and TRANSR = 'N'.RFP A RFP A-- --02 03 04 00 33 43 --12 13 14 10 11 44 22 23 24 20 21 22 --00 33 34 30 31 32 -- --01 11 44 40 41 42 Now let TRANSR = 'C'.RFP A in both UPLO cases is just the conjugate -
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transpose of RFP A above.One therefore gets : RFP A RFP A-- -- -- -- -- -- -- -- --02 12 22 00 01 00 10 20 30 40 50 -- -- -- -- -- -- -- -- --03 13 23 33 11 33 11 21 31 41 51 -- -- -- -- -- -- -- -- --04 14 24 34 44 43 44 22 32 42 52
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 247 of file clanhf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

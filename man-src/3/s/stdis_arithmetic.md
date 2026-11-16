@@ -10,10 +10,8 @@ description: "std::is_arithmetic – std::is_arithmetic"
 <p>std::is_arithmetic &#8211; std::is_arithmetic</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_arithmetic;</code></pre>
 <p>If T is an arithmetic type (that is, an integral type or a floating-point type) or a cv-qualified version thereof, provides the member constant value equal true. For any other type, value is false. </p>
 <h2>Template parameters</h2>
@@ -47,13 +45,11 @@ Specializations of std::numeric_limits are provided for all arithmetic types. </
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; &quot;A:           &quot; &lt;&lt; std::is_arithmetic&lt;A&gt;::value &lt;&lt; '

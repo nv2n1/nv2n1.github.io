@@ -15,16 +15,16 @@ description: "actsync, actsyncd – Synchronize newsgroups"
 <p><code>actsync</code> permits one to synchronize, compare, or merge two <i>active</i> files. With this utility one may add, change, or remove newsgroups on the local news server to make it similar to the list of the newsgroups found on another system or file. The synchronization need not be exact. Local differences in newsgroup lists may be maintained and preserved. Certain newsgroup errors may be detected and optionally corrected. </p>
 <p> There are several reasons to run <code>actsync</code> (or <code>actsyncd</code>) on a periodic basis. Among the reasons are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A control message to add, change or remove a newsgroup may fail to reach your site.</p>
-<dt>&bull;</p>
-<dd>Your <i>control.ctl</i> may be out of date or incomplete.</p>
-<dt>&bull;</p>
-<dd>News articles for a new newsgroup may arrive ahead (sometimes days ahead) of the control message.</p>
-<dt>&bull;</p>
-<dd>Control messages may be forged, thus bypassing the restrictions found in <i>control.ctl</i> unless you set up <font SIZE="-1">PGP</font> authentication (and even then, not all hierarchies use <font SIZE="-1">PGP</font> authentication).</p>
-<dt>&bull;</p>
-<dd>Your <i>active</i> file may have been trashed.</dl>
+<dt>&bull;</dt>
+<dd>A control message to add, change or remove a newsgroup may fail to reach your site.</dd>
+<dt>&bull;</dt>
+<dd>Your <i>control.ctl</i> may be out of date or incomplete.</dd>
+<dt>&bull;</dt>
+<dd>News articles for a new newsgroup may arrive ahead (sometimes days ahead) of the control message.</dd>
+<dt>&bull;</dt>
+<dd>Control messages may be forged, thus bypassing the restrictions found in <i>control.ctl</i> unless you set up <font SIZE="-1">PGP</font> authentication (and even then, not all hierarchies use <font SIZE="-1">PGP</font> authentication).</dd>
+<dt>&bull;</dt>
+<dd>Your <i>active</i> file may have been trashed.</dd></dl>
 <p> If either <i>host</i> argument begins with <tt>&quot;.&quot;</tt> or <tt>&quot;/&quot;</tt>, it is assumed to be the name of a file containing information in the <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format. The <i><a href="/docs/linux/man/1-getlist/">getlist</a></i>(1) utility may be used to obtain a copy of a remote system&#8217;s <i>active</i> file via its <font SIZE="-1">NNTP</font> server, or an <font SIZE="-1">FTP</font> client program can retrieve such a file from an <font SIZE="-1">FTP</font> archive (such as &lt;<a href="ftp://ftp.isc.org/pub/usenet/CONFIG/active">ftp://ftp.isc.org/pub/usenet/CONFIG/active</a>&gt;; see more about this below). Newsgroup information from a file may be treated as if it was obtained from a host. In this man page, the <i>host</i> arguments on the command line are called hosts, even though they may be file names. </p>
 <p> If a host argument does not begin with <tt>&quot;.&quot;</tt> or <tt>&quot;/&quot;</tt>, it is assumed to be a hostname or Internet address. In this case, <code>actsync</code> will attempt to use the <font SIZE="-1">NNTP</font> protocol to obtain a copy of the specified system&#8217;s <i>active</i> file. If the host argument contains <tt>&quot;:&quot;</tt>, the right side will be considered the port to connect to on the remote system. If no port number is specified, <code>actsync</code> will connect to port <tt>119</tt>. </p>
 <p> Regardless how the <i>active</i> file information is obtained, the actions of <code>actsync</code> remain the same. </p>
@@ -55,16 +55,16 @@ description: "actsync, actsyncd – Synchronize newsgroups"
  21 both servers</pre>
 <p>In other words, <tt>1</tt> refers to the local host (the first <i>host</i> argument on the <code>actsync</code> command line) and <tt>2</tt> refers to the remote host (the second <i>host</i> argument, or the only one if only one is given).</p>
 <dl>
-<dt><code>-A</code></p>
-<dd><code>actsync</code> tries to authenticate before issuing the <font SIZE="-1">LIST</font> command.</p>
-<dt><code>-b</code> <i>hostid</i></p>
-<dd>This flag causes <code>actsync</code> to ignore for synchronization purposes newsgroups with <tt>&quot;bork.bork.bork&quot;</tt>-style names (newsgroups whose last 3 components are identical). For example, the following newsgroups have bork-style names: </p>
+<dt><code>-A</code></dt>
+<dd><code>actsync</code> tries to authenticate before issuing the <font SIZE="-1">LIST</font> command.</dd>
+<dt><code>-b</code> <i>hostid</i></dt>
+<dd>This flag causes <code>actsync</code> to ignore for synchronization purposes newsgroups with <tt>&quot;bork.bork.bork&quot;</tt>-style names (newsgroups whose last 3 components are identical). For example, the following newsgroups have bork-style names: </dd>
 <pre> alt.helms.dork.dork.dork
  alt.auto.accident.sue.sue.sue
  alt.election.vote.vote.vote</pre>
 <p>The default is <tt>&quot;-b 0&quot;</tt>; no newsgroups are ignored because of bork-style names.</p>
-<dt><code>-d</code> <i>hostid</i></p>
-<dd>This flag causes <code>actsync</code> to ignore newsgroups that have all numeric path components. For example, the following newsgroups have numeric path components: </p>
+<dt><code>-d</code> <i>hostid</i></dt>
+<dd>This flag causes <code>actsync</code> to ignore newsgroups that have all numeric path components. For example, the following newsgroups have numeric path components: </dd>
 <pre> alt.prime.chongo.23209
  391581.times.2.to_the.216193.power.-1
  99.bottles.of.treacle.on.the.wall
@@ -72,8 +72,8 @@ description: "actsync, actsyncd – Synchronize newsgroups"
 <p>The newsgroups directory of a newsgroup with a all numeric component could conflict with an article from another group if stored using the tradspool storage method; see <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). For example, the directory for the first newsgroup listed above is the same path as article number 23209 from the newsgroup: </p>
 <pre> alt.prime.chongo</pre>
 <p>The default is <tt>&quot;-d 0&quot;</tt>; all numeric newsgroups from both hosts will be processed.</p>
-<dt><code>-g</code> <i>max</i></p>
-<dd>Ignore any newsgroup with more than <i>max</i> levels. For example, <tt>&quot;-g 6&quot;</tt> would ignore: </p>
+<dt><code>-g</code> <i>max</i></dt>
+<dd>Ignore any newsgroup with more than <i>max</i> levels. For example, <tt>&quot;-g 6&quot;</tt> would ignore: </dd>
 <pre> alt.feinstien.votes.to.trash.freedom.of.speech
  alt.senator.exon.enemy.of.the.internet
  alt.crypto.export.laws.dumb.dumb.dumb</pre>
@@ -83,8 +83,8 @@ description: "actsync, actsyncd – Synchronize newsgroups"
  alt.crypto.export.laws</pre>
 <p>If <i>max</i> is <tt>0</tt>, then the max level feature is disabled. </p>
 <p> By default, the max level feature is disabled.</p>
-<dt><code>-i</code> <i>ignore-file</i></p>
-<dd>The <i>ignore-file</i>, usually <i>actsync.ign</i> in <i>pathetc</i>, allows one to have a fine degree of control over which newsgroups are ignored. It contains a set of rules that specifies which newsgroups will be checked and which will be ignored. </p>
+<dt><code>-i</code> <i>ignore-file</i></dt>
+<dd>The <i>ignore-file</i>, usually <i>actsync.ign</i> in <i>pathetc</i>, allows one to have a fine degree of control over which newsgroups are ignored. It contains a set of rules that specifies which newsgroups will be checked and which will be ignored. </dd>
 <p> By default, these rules apply to both hosts. This can be modified by using the <code>-I</code> flag. </p>
 <p> Blank lines and text after a <tt>&quot;#&quot;</tt> are considered comments and are ignored. </p>
 <p> Rule lines consist of tokens separated by whitespace. Rule lines may be one of two forms: </p>
@@ -106,85 +106,85 @@ description: "actsync, actsyncd – Synchronize newsgroups"
  c *.general m
  i nsa.general</pre>
 <p>The newsgroups ba.general and mod.general would be synchronized if moderated and ignored if not moderated. The newsgroup nsa.general would be ignored regardless of moderation status. All newsgroups not matching *.general would be synchronized by default.</p>
-<dt><code>-I</code> <i>hostid</i></p>
-<dd>This flag restricts which hosts are affected by the ignore file. This flag may be useful in conjunction with the <code>-m</code> flag. For example: </p>
+<dt><code>-I</code> <i>hostid</i></dt>
+<dd>This flag restricts which hosts are affected by the ignore file. This flag may be useful in conjunction with the <code>-m</code> flag. For example: </dd>
 <pre> actsync -i actsync.ign -I 2 -m host1 host2</pre>
 <p>will keep all newsgroups currently on host1. It will also only compare host1 groups with non-ignored newsgroups from host2. </p>
 <p> The default is <tt>&quot;-I 12&quot;</tt>; newsgroups from both hosts are ignored per the file specified with <code>-i</code>.</p>
-<dt><code>-k</code></p>
-<dd>By default, any newsgroup on the local host that has an invalid name will be considered for removal. This causes <code>actsync</code> simply ignore such newsgroups. This flag, used in combination with <code>-m</code>, will prevent any newsgroup from being scheduled for removal.</p>
-<dt><code>-l</code> <i>hostid</i></p>
-<dd>This flag causes problem newsgroups of type <tt>&quot;=&quot;</tt> to be considered as errors. Newsgroups of type <tt>&quot;=&quot;</tt> are newsgroups <i>active</i> entries that have a fourth field that begins with <tt>&quot;=&quot;</tt>; i.e., newsgroups that are aliased to other newsgroups. A problem newsgroup is one for which one of the following is true:</p>
+<dt><code>-k</code></dt>
+<dd>By default, any newsgroup on the local host that has an invalid name will be considered for removal. This causes <code>actsync</code> simply ignore such newsgroups. This flag, used in combination with <code>-m</code>, will prevent any newsgroup from being scheduled for removal.</dd>
+<dt><code>-l</code> <i>hostid</i></dt>
+<dd>This flag causes problem newsgroups of type <tt>&quot;=&quot;</tt> to be considered as errors. Newsgroups of type <tt>&quot;=&quot;</tt> are newsgroups <i>active</i> entries that have a fourth field that begins with <tt>&quot;=&quot;</tt>; i.e., newsgroups that are aliased to other newsgroups. A problem newsgroup is one for which one of the following is true:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Aliased to itself.</p>
-<dt>&bull;</p>
-<dd>In an alias chain that loops around to itself.</p>
-<dt>&bull;</p>
-<dd>In an alias chain longer than 16 groups.</p>
-<dt>&bull;</p>
-<dd>Aliased to a non-existant newsgroup.</p>
-<dt>&bull;</p>
-<dd>Aliased to a newsgroup that has an error of some kind.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Aliased to itself.</dd>
+<dt>&bull;</dt>
+<dd>In an alias chain that loops around to itself.</dd>
+<dt>&bull;</dt>
+<dd>In an alias chain longer than 16 groups.</dd>
+<dt>&bull;</dt>
+<dd>Aliased to a non-existant newsgroup.</dd>
+<dt>&bull;</dt>
+<dd>Aliased to a newsgroup that has an error of some kind.</dd></dl>
 </dl>
 <dl>
-<dd>However, a newsgroup that is equivalent to an ignored newsgroup is not a problem. </p>
+<dd>However, a newsgroup that is equivalent to an ignored newsgroup is not a problem. </dd>
 <p> The default is <tt>&quot;-l 12&quot;</tt>: problem newsgroups from both hosts are marked as errors.</dl>
-<dt><code>-m</code></p>
-<dd>Merge newsgroups instead of sync. By default, if a newsgroup exists on the local host but not the remote, it will be scheduled to be removed. This flag disables this process, permitting newsgroups unique to the local host to be kept.</p>
-<dt><code>-n</code> <i>name</i></p>
-<dd>Depending on <code>-o</code>, the <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) command may be used to create newsgroups as necessary. When this is done, the default creator name used is <tt>&quot;actsync&quot;</tt>. This flag changes the creator name to <i>name</i>.</p>
-<dt><code>-o</code> <i>format</i></p>
-<dd>Determine the output or action format of this utility. <i>format</i> may be one of:</p>
+<dt><code>-m</code></dt>
+<dd>Merge newsgroups instead of sync. By default, if a newsgroup exists on the local host but not the remote, it will be scheduled to be removed. This flag disables this process, permitting newsgroups unique to the local host to be kept.</dd>
+<dt><code>-n</code> <i>name</i></dt>
+<dd>Depending on <code>-o</code>, the <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) command may be used to create newsgroups as necessary. When this is done, the default creator name used is <tt>&quot;actsync&quot;</tt>. This flag changes the creator name to <i>name</i>.</dd>
+<dt><code>-o</code> <i>format</i></dt>
+<dd>Determine the output or action format of this utility. <i>format</i> may be one of:</dd>
 <dl>
 <dd>
-<dl>
-<dt>a</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format.</p>
-<dt>a1</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format and output non-error ignored groups from the local host.</p>
-<dt>ak</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for any newsgroup being created.</p>
-<dt>aK</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for all newsgroups found on that host.</p>
-<dt>a1k</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for any newsgroup being created and output non-error ignored groups from the local host.</p>
-<dt>a1K</p>
-<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for all newsgroups found on that host and output non-error ignored groups from the local host.</p>
-<dt>ak1</p>
-<dd>Same as <tt>&quot;a1k&quot;</tt>.</p>
-<dt>aK1</p>
-<dd>Same as <tt>&quot;a1K&quot;</tt>.</p>
-<dt>c</p>
-<dd>Output as commands to <code>ctlinnd</code>.</p>
-<dt>x</p>
-<dd>No output. Instead, directly run <code>ctlinnd</code> commands.</p>
-<dt>xi</p>
-<dd>No output. Instead, directly run <code>ctlinnd</code> commands in an interactive mode.</dl>
+</dd><dl>
+<dt>a</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format.</dd>
+<dt>a1</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format and output non-error ignored groups from the local host.</dd>
+<dt>ak</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for any newsgroup being created.</dd>
+<dt>aK</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for all newsgroups found on that host.</dd>
+<dt>a1k</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for any newsgroup being created and output non-error ignored groups from the local host.</dd>
+<dt>a1K</dt>
+<dd>Output in <i><a href="/docs/linux/man/5-active/">active</a></i>(5) format, but use the high and low (2nd and 3rd active fields) values from the remote host for all newsgroups found on that host and output non-error ignored groups from the local host.</dd>
+<dt>ak1</dt>
+<dd>Same as <tt>&quot;a1k&quot;</tt>.</dd>
+<dt>aK1</dt>
+<dd>Same as <tt>&quot;a1K&quot;</tt>.</dd>
+<dt>c</dt>
+<dd>Output as commands to <code>ctlinnd</code>.</dd>
+<dt>x</dt>
+<dd>No output. Instead, directly run <code>ctlinnd</code> commands.</dd>
+<dt>xi</dt>
+<dd>No output. Instead, directly run <code>ctlinnd</code> commands in an interactive mode.</dd></dl>
 </dl>
 <dl>
-<dd>The <tt>&quot;a&quot;</tt>, <tt>&quot;a1&quot;</tt>, <tt>&quot;ak&quot;</tt>, <tt>&quot;aK&quot;</tt>, <tt>&quot;a1k&quot;</tt>, <tt>&quot;a1K&quot;</tt>, <tt>&quot;ak1&quot;</tt>, and <tt>&quot;aK1&quot;</tt> style formats allow one to format new <i>active</i> file instead of producing <code>ctlinnd</code> commands. They use high and low values of <tt>0000000000</tt> and <tt>0000000001</tt> respectively for newsgroups that are created unless otherwise specified. The <tt>&quot;ak&quot;</tt> and <tt>&quot;aK&quot;</tt> variants change the high and low values (2nd and 3rd <i>active</i> fields). In the case of <tt>&quot;ak&quot;</tt>, newsgroups created take their high and low values from the remote host. In the case of <tt>&quot;aK&quot;</tt>, all newsgroups found on the remote host take their high and low values from it. </p>
+<dd>The <tt>&quot;a&quot;</tt>, <tt>&quot;a1&quot;</tt>, <tt>&quot;ak&quot;</tt>, <tt>&quot;aK&quot;</tt>, <tt>&quot;a1k&quot;</tt>, <tt>&quot;a1K&quot;</tt>, <tt>&quot;ak1&quot;</tt>, and <tt>&quot;aK1&quot;</tt> style formats allow one to format new <i>active</i> file instead of producing <code>ctlinnd</code> commands. They use high and low values of <tt>0000000000</tt> and <tt>0000000001</tt> respectively for newsgroups that are created unless otherwise specified. The <tt>&quot;ak&quot;</tt> and <tt>&quot;aK&quot;</tt> variants change the high and low values (2nd and 3rd <i>active</i> fields). In the case of <tt>&quot;ak&quot;</tt>, newsgroups created take their high and low values from the remote host. In the case of <tt>&quot;aK&quot;</tt>, all newsgroups found on the remote host take their high and low values from it. </dd>
 <p> The <tt>&quot;c&quot;</tt> format produces <code>ctlinnd</code> commands. No actions are taken because <code>actsync</code> simply prints <code>ctlinnd</code> commands on standard output. This output format is useful to let you see how the local host will be affected by the sync (or merge) with the remote host. </p>
 <p> The sync (or merge) may be accomplished directly by use of the <tt>&quot;x&quot;</tt> or <tt>&quot;xi&quot;</tt> format. With this format, <code>actsync</code> uses the <i>execl</i>(2) system call to directly execute <code>ctlinnd</code> commands. The output of such exec calls may be seen if the verbosity level is at least <tt>2</tt>. </p>
 <p> The <code>actsync</code> utility will pause for 4 seconds before each command is executed if <tt>&quot;-o x&quot;</tt> is selected. See the <code>-z</code> flag below for discussion of this delay and how to customize it. </p>
 <p> The <tt>&quot;xi&quot;</tt> format interactively prompts on standard output and reads directives on standard input. One may pick and choose changes using this format. </p>
 <p> Care should be taken when producing <i><a href="/docs/linux/man/5-active/">active</a></i>(5) formatted output. One should check to be sure that <code>actsync</code> exited with a zero status prior to using such output. Also one should realize that such output will not contain lines ignored due to <code>-i</code> even if <tt>&quot;-p 100&quot;</tt> is used. </p>
 <p> By default, <tt>&quot;-o c&quot;</tt> is assumed.</dl>
-<dt><code>-p</code> <i>min-unchanged</i></p>
-<dd>By default, the <code>actsync</code> utility has safeguards against performing massive changes. If fewer than <i>min-unchanged</i> percent of the non-ignored lines from the local host remain unchanged, no actions (output, execution, etc.) are performed and <code>actsync</code> exits with a non-zero exit status. The <i>min-unchanged</i> value may be a floating point value such as <tt>66.667</tt>. </p>
+<dt><code>-p</code> <i>min-unchanged</i></dt>
+<dd>By default, the <code>actsync</code> utility has safeguards against performing massive changes. If fewer than <i>min-unchanged</i> percent of the non-ignored lines from the local host remain unchanged, no actions (output, execution, etc.) are performed and <code>actsync</code> exits with a non-zero exit status. The <i>min-unchanged</i> value may be a floating point value such as <tt>66.667</tt>. </dd>
 <p> A change is a local newsgroup line that was removed, added, changed, or found to be in error. Changing the 2nd or 3rd <i>active</i> fields via <tt>&quot;-o ak&quot;</tt> or <tt>&quot;-o aK&quot;</tt> are not considered changes by <code>-p</code>. </p>
 <p> To force <code>actsync</code> to accept any amount of change, use the <tt>&quot;-p 0&quot;</tt> option. To force <code>actsync</code> to reject any changes, use the <tt>&quot;-p 100&quot;</tt> option. </p>
 <p> Care should be taken when producing <i><a href="/docs/linux/man/5-active/">active</a></i>(5) formatted output. One should check to be sure that <code>actsync</code> exited with a zero status prior to using such output. Also one should realize that such output will not contain lines ignored due to <code>-i</code> even if <tt>&quot;-p 100&quot;</tt> is used. </p>
 <p> By default, 96% of the lines not ignored in the first <i>host</i> argument on the <code>actsync</code> command line must be unchanged. That is, by default, <tt>&quot;-p 96&quot;</tt> is assumed.</p>
-<dt><code>-q</code> <i>hostid</i></p>
-<dd>By default, all newsgroup errors are reported on standard error. This flag quiets errors from the specified <i>hostid</i>.</p>
-<dt><code>-s</code> <i>size</i></p>
-<dd>If <i>size</i> is greater than 0, then ignore newsgroups with names longer than <i>size</i> and ignore newsgroups aliased (by following <tt>&quot;=&quot;</tt> chains) to names longer than <i>size</i>. Length checking is performed on both the local and remote hosts. </p>
+<dt><code>-q</code> <i>hostid</i></dt>
+<dd>By default, all newsgroup errors are reported on standard error. This flag quiets errors from the specified <i>hostid</i>.</dd>
+<dt><code>-s</code> <i>size</i></dt>
+<dd>If <i>size</i> is greater than 0, then ignore newsgroups with names longer than <i>size</i> and ignore newsgroups aliased (by following <tt>&quot;=&quot;</tt> chains) to names longer than <i>size</i>. Length checking is performed on both the local and remote hosts. </dd>
 <p> By default, <i>size</i> is <tt>0</tt> and thus no length checking is performed.</p>
-<dt><code>-t</code> <i>hostid</i></p>
-<dd>Ignore improper newsgroups consisting of only a top component from the specified <i>hostid</i>. The following newsgroups are considered proper newsgroups despite top only names and therefore are exempt from this flag: </p>
+<dt><code>-t</code> <i>hostid</i></dt>
+<dd>Ignore improper newsgroups consisting of only a top component from the specified <i>hostid</i>. The following newsgroups are considered proper newsgroups despite top only names and therefore are exempt from this flag: </dd>
 <pre> control
  general
  junk
@@ -196,30 +196,30 @@ description: "actsync, actsyncd – Synchronize newsgroups"
  microsoft
  windows95</pre>
 <p>The default is <tt>&quot;-t 2&quot;</tt>; that is, all improper top-level-only newsgroups from the remote host are ignored.</p>
-<dt><code>-T</code></p>
-<dd>This flag causes newsgroups on the remote host in new hierarchies to be ignored. Normally a newsgroup which only exists on the remote host, chongo.was.here for example, is created on the local host. However, if this flag is given and the local host does not have any other newsgroups in the same hierarchy (chongo.* in this case), the newsgroup in question will be ignored and will not be created on the local host.</p>
-<dt><code>-v</code> <i>verbosity</i></p>
-<dd>By default, <code>actsync</code> is not verbose. This flag controls the verbosity level as follows:</p>
+<dt><code>-T</code></dt>
+<dd>This flag causes newsgroups on the remote host in new hierarchies to be ignored. Normally a newsgroup which only exists on the remote host, chongo.was.here for example, is created on the local host. However, if this flag is given and the local host does not have any other newsgroups in the same hierarchy (chongo.* in this case), the newsgroup in question will be ignored and will not be created on the local host.</dd>
+<dt><code>-v</code> <i>verbosity</i></dt>
+<dd>By default, <code>actsync</code> is not verbose. This flag controls the verbosity level as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt>0</p>
-<dd>No debug or status reports (default).</p>
-<dt>1</p>
-<dd>Print summary, but only if work was needed or done.</p>
-<dt>2</p>
-<dd>Print actions, exec output, and summary, but only if work was needed or done.</p>
-<dt>3</p>
-<dd>Print actions, exec output, and summary.</p>
-<dt>4</p>
-<dd>Full debug output.</dl>
+</dd><dl>
+<dt>0</dt>
+<dd>No debug or status reports (default).</dd>
+<dt>1</dt>
+<dd>Print summary, but only if work was needed or done.</dd>
+<dt>2</dt>
+<dd>Print actions, exec output, and summary, but only if work was needed or done.</dd>
+<dt>3</dt>
+<dd>Print actions, exec output, and summary.</dd>
+<dt>4</dt>
+<dd>Full debug output.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><code>-w</code> <i>seconds</i></p>
-<dd>If <tt>&quot;-o x&quot;</tt> or <tt>&quot;-o xi&quot;</tt> is selected, <code>ctlinnd</code> will wait <i>seconds</i> seconds before timing out. The default value is <tt>&quot;-w 30&quot;</tt>.</p>
-<dt><code>-z</code> <i>seconds</i></p>
-<dd>If <tt>&quot;-o x&quot;</tt> is selected, <code>actsync</code> will pause for <i>seconds</i> seconds before each command is executed. This helps prevent <code>innd</code> from being busied-out if a large number of <code>ctlinnd</code> commands are needed. One can entirely disable this sleeping by using <tt>&quot;-z 0&quot;</tt>. </p>
+<dd></dd></dl>
+<dt><code>-w</code> <i>seconds</i></dt>
+<dd>If <tt>&quot;-o x&quot;</tt> or <tt>&quot;-o xi&quot;</tt> is selected, <code>ctlinnd</code> will wait <i>seconds</i> seconds before timing out. The default value is <tt>&quot;-w 30&quot;</tt>.</dd>
+<dt><code>-z</code> <i>seconds</i></dt>
+<dd>If <tt>&quot;-o x&quot;</tt> is selected, <code>actsync</code> will pause for <i>seconds</i> seconds before each command is executed. This helps prevent <code>innd</code> from being busied-out if a large number of <code>ctlinnd</code> commands are needed. One can entirely disable this sleeping by using <tt>&quot;-z 0&quot;</tt>. </dd>
 <p> By default, <code>actsync</code> will pause for <tt>4</tt> seconds before each command is executed if <tt>&quot;-o x&quot;</tt> is selected.</dl>
 <h2>Examples</h2>
 <p>Determine the difference (but don&#8217;t change anything) between your newsgroup set and uunet&#8217;s set: </p>
@@ -330,14 +330,14 @@ description: "actsync, actsyncd – Synchronize newsgroups"
 <p>It should be noted that the final method above, pausing the server and simply replacing the <i>active</i> file, may be faster if you are making lots of changes.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>pathbin</i>/actsync</p>
-<dd>The C program itself used to synchronize, compare, or merge two <i>active</i> files.</p>
-<dt><i>pathbin</i>/actsyncd</p>
-<dd>The Shell daemon which provides a convenient interface to configure and run <code>actsync</code>.</p>
-<dt><i>pathetc</i>/actsync.cfg</p>
-<dd>The configuration file which specifies the settings to use.</p>
-<dt><i>pathetc</i>/actsync.ign</p>
-<dd>The ignore file which contains a set of synchronization rules that specifies which newsgroups will be checked and which will be ignored.</dl>
+<dt><i>pathbin</i>/actsync</dt>
+<dd>The C program itself used to synchronize, compare, or merge two <i>active</i> files.</dd>
+<dt><i>pathbin</i>/actsyncd</dt>
+<dd>The Shell daemon which provides a convenient interface to configure and run <code>actsync</code>.</dd>
+<dt><i>pathetc</i>/actsync.cfg</dt>
+<dd>The configuration file which specifies the settings to use.</dd>
+<dt><i>pathetc</i>/actsync.ign</dt>
+<dd>The ignore file which contains a set of synchronization rules that specifies which newsgroups will be checked and which will be ignored.</dd></dl>
 <h2>Caution</h2>
 <p>Careless use of this tool may result in the unintended addition, change, or removal of newsgroups. You should avoid using the <tt>&quot;x&quot;</tt> output format until you are sure it will do what you want.</p>
 <h2>Bugs</h2>

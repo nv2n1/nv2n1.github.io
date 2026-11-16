@@ -15,9 +15,9 @@ description: "vcut – cuts Ogg Vorbis files"
 <p> <code>vcut</code> reads an Ogg Vorbis audio file and splits it at the given cutpoint, which is a sample number. If the cutpoint is prefixed with &#8216;+&#8217;, the cutpoint is an integer number of seconds. </p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Program Author:</p>
-<dd> Michael Smith &lt;msmith [at] xiph.org&gt; </p>
-<dt>Manpage Author:</p>
-<dd> Christoper L Cheney &lt;ccheney [at] debian.org&gt; </p>
+<dt>Program Author:</dt>
+<dd> Michael Smith &lt;msmith [at] xiph.org&gt; </dd>
+<dt>Manpage Author:</dt>
+<dd> Christoper L Cheney &lt;ccheney [at] debian.org&gt; </dd>
 </dl>
 <h2>Index</h2>

@@ -38,7 +38,7 @@ description: "QuantLib::VarianceOption – Variance option."
 <p>Variance option. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class does not manage seasoned variance options.</dl>
+<dd>This class does not manage seasoned variance options.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing <code>engine</code> is used. </p>

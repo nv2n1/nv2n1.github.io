@@ -20,68 +20,68 @@ description: "locate – find files by name"
 <p> Errors encountered while reading a database are not fatal, search continues in other specified databases, if any. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-A</code>, <code>&#8211;all</code></p>
-<dd> Print only entries that match all <i>PATTERN</i>s instead of requiring only one of them to match. </p>
-<dt><code>-b</code>, <code>&#8211;basename</code></p>
-<dd> Match only the base name against the specified patterns. This is the opposite of <code>&#8211;wholename</code>. </p>
-<dt><code>-c</code>, <code>&#8211;count</code></p>
-<dd> Instead of writing file names on standard output, write the number of matching entries only. </p>
-<dt><code>-d, &#8211;database</code> <i>DBPATH</i></p>
-<dd> Replace the default database with <i>DBPATH</i>. <i>DBPATH</i> is a <code>:</code>-separated list of database file names. If more than one <code>&#8211;database</code> option is specified, the resulting path is a concatenation of the separate paths. </p>
+<dt><code>-A</code>, <code>&#8211;all</code></dt>
+<dd> Print only entries that match all <i>PATTERN</i>s instead of requiring only one of them to match. </dd>
+<dt><code>-b</code>, <code>&#8211;basename</code></dt>
+<dd> Match only the base name against the specified patterns. This is the opposite of <code>&#8211;wholename</code>. </dd>
+<dt><code>-c</code>, <code>&#8211;count</code></dt>
+<dd> Instead of writing file names on standard output, write the number of matching entries only. </dd>
+<dt><code>-d, &#8211;database</code> <i>DBPATH</i></dt>
+<dd> Replace the default database with <i>DBPATH</i>. <i>DBPATH</i> is a <code>:</code>-separated list of database file names. If more than one <code>&#8211;database</code> option is specified, the resulting path is a concatenation of the separate paths. </dd>
 <p> An empty database file name is replaced by the default database. A database file name <code>&#8211;</code> refers to the standard input. Note that a database can be read from the standard input only once. </p>
-<dt><code>-e</code>, <code>&#8211;existing</code></p>
-<dd> Print only entries that refer to files existing at the time <code>locate</code> is run. </p>
-<dt><code>-L</code>, <code>&#8211;follow</code></p>
-<dd> When checking whether files exist (if the <code>&#8211;existing</code> option is specified), follow trailing symbolic links. This causes broken symbolic links to be omitted from the output. </p>
+<dt><code>-e</code>, <code>&#8211;existing</code></dt>
+<dd> Print only entries that refer to files existing at the time <code>locate</code> is run. </dd>
+<dt><code>-L</code>, <code>&#8211;follow</code></dt>
+<dd> When checking whether files exist (if the <code>&#8211;existing</code> option is specified), follow trailing symbolic links. This causes broken symbolic links to be omitted from the output. </dd>
 <p> This is the default behavior. The opposite can be specified using <code>&#8211;nofollow</code>. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Write a summary of the available options to standard output and exit successfully. </p>
-<dt><code>-i</code>, <code>&#8211;ignore-case</code></p>
-<dd> Ignore case distinctions when matching patterns. </p>
-<dt><code>-p</code>, <code>&#8211;ignore-spaces</code></p>
-<dd> Ignore punctuation and spaces when matching patterns. </p>
-<dt><code>-t</code>, <code>&#8211;transliterate</code></p>
-<dd> Ignore accents using iconv transliteration when matching patterns. </p>
-<dt><code>-l</code>, <code>&#8211;limit</code>, <code>-n</code> <i>LIMIT</i></p>
-<dd> Exit successfully after finding <i>LIMIT</i> entries. If the <code>&#8211;count</code> option is specified, the resulting count is also limited to <i>LIMIT</i>. </p>
-<dt><code>-m</code>, <code>&#8211;mmap</code></p>
-<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </p>
-<dt><code>-P</code>, <code>&#8211;nofollow</code>, <code>-H</code></p>
-<dd> When checking whether files exist (if the <code>&#8211;existing</code> option is specified), do not follow trailing symbolic links. This causes broken symbolic links to be reported like other files. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Write a summary of the available options to standard output and exit successfully. </dd>
+<dt><code>-i</code>, <code>&#8211;ignore-case</code></dt>
+<dd> Ignore case distinctions when matching patterns. </dd>
+<dt><code>-p</code>, <code>&#8211;ignore-spaces</code></dt>
+<dd> Ignore punctuation and spaces when matching patterns. </dd>
+<dt><code>-t</code>, <code>&#8211;transliterate</code></dt>
+<dd> Ignore accents using iconv transliteration when matching patterns. </dd>
+<dt><code>-l</code>, <code>&#8211;limit</code>, <code>-n</code> <i>LIMIT</i></dt>
+<dd> Exit successfully after finding <i>LIMIT</i> entries. If the <code>&#8211;count</code> option is specified, the resulting count is also limited to <i>LIMIT</i>. </dd>
+<dt><code>-m</code>, <code>&#8211;mmap</code></dt>
+<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </dd>
+<dt><code>-P</code>, <code>&#8211;nofollow</code>, <code>-H</code></dt>
+<dd> When checking whether files exist (if the <code>&#8211;existing</code> option is specified), do not follow trailing symbolic links. This causes broken symbolic links to be reported like other files. </dd>
 <p> This is the opposite of <code>&#8211;follow</code>. </p>
-<dt><code>-0</code>, <code>&#8211;null</code></p>
-<dd> Separate the entries on output using the <font SIZE="-1">ASCII NUL</font> character instead of writing each entry on a separate line. This option is designed for interoperability with the <code>&#8211;null</code> option of <font SIZE="-1">GNU</font> <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1). </p>
-<dt><code>-S</code>, <code>&#8211;statistics</code></p>
-<dd> Write statistics about each read database to standard output instead of searching for files and exit successfully. </p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Write no messages about errors encountered while reading and processing databases. </p>
-<dt><code>-r</code>, <code>&#8211;regexp</code> <i>REGEXP</i></p>
-<dd> Search for a basic regexp <i>REGEXP</i>. No <i>PATTERN</i>s are allowed if this option is used, but this option can be specified multiple times. </p>
-<dt><code>&#8211;regex</code></p>
-<dd> Interpret all <i>PATTERN</i>s as extended regexps. </p>
-<dt><code>-s</code>, <code>&#8211;stdio</code></p>
-<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Write information about the version and license of <code>locate</code> on standard output and exit successfully. </p>
-<dt><code>-w</code>, <code>&#8211;wholename</code></p>
-<dd> Match only the whole path name against the specified patterns. </p>
+<dt><code>-0</code>, <code>&#8211;null</code></dt>
+<dd> Separate the entries on output using the <font SIZE="-1">ASCII NUL</font> character instead of writing each entry on a separate line. This option is designed for interoperability with the <code>&#8211;null</code> option of <font SIZE="-1">GNU</font> <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1). </dd>
+<dt><code>-S</code>, <code>&#8211;statistics</code></dt>
+<dd> Write statistics about each read database to standard output instead of searching for files and exit successfully. </dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Write no messages about errors encountered while reading and processing databases. </dd>
+<dt><code>-r</code>, <code>&#8211;regexp</code> <i>REGEXP</i></dt>
+<dd> Search for a basic regexp <i>REGEXP</i>. No <i>PATTERN</i>s are allowed if this option is used, but this option can be specified multiple times. </dd>
+<dt><code>&#8211;regex</code></dt>
+<dd> Interpret all <i>PATTERN</i>s as extended regexps. </dd>
+<dt><code>-s</code>, <code>&#8211;stdio</code></dt>
+<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Write information about the version and license of <code>locate</code> on standard output and exit successfully. </dd>
+<dt><code>-w</code>, <code>&#8211;wholename</code></dt>
+<dd> Match only the whole path name against the specified patterns. </dd>
 <p> This is the default behavior. The opposite can be specified using <code>&#8211;basename</code>. </p>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To search for a file named exactly <i>NAME</i> (not <code>*</code><i>NAME</i><code>*</code>), use</p>
 <dl>
 <dt>
-<dd> <code>locate -b</code> <code>&#8216;\</code><i>NAME</i><code>&#8216;</code></dl>
+</dt><dd> <code>locate -b</code> <code>&#8216;\</code><i>NAME</i><code>&#8216;</code></dd></dl>
 <p> Because <code>\</code> is a globbing character, this disables the implicit replacement of <i>NAME</i> by <code>*</code><i>NAME</i><code>*</code>. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/lib/mlocate/mlocate.db</code></p>
-<dd> The database searched by default. </p>
+<dt><code>/var/lib/mlocate/mlocate.db</code></dt>
+<dd> The database searched by default. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>LOCATE_PATH</code></p>
-<dd> Path to additional databases, added after the default database or the databases specified using the <code>&#8211;database</code> option. </p>
+<dt><code>LOCATE_PATH</code></dt>
+<dd> Path to additional databases, added after the default database or the databases specified using the <code>&#8211;database</code> option. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> The order in which the requested databases are processed is unspecified, which allows <code>locate</code> to reorder the database path for security reasons. </p>

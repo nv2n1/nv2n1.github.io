@@ -11,11 +11,8 @@ std::experimental::ranges::Constructible - std::experimental::ranges::Constructi
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T, class... Args &gt;
-
 concept bool Constructible =                                  (ranges TS)
-
 Destructible&lt;T&gt; &amp;&amp; std::is_constructible&lt;T, Args...&gt;::value;</code></pre> 
 The Constructible concept specifies that a variable of type T can be initialized with the given set of argument types Args.... 
 There need not be any subsumption relationship between Constructible&lt;T, Args...&gt; and std::is_constructible&lt;T, Args...&gt;::value. 

@@ -14,10 +14,10 @@ description: "pom_change_dep – change dependency in Maven POM file or Ivy modu
 <h2>Options</h2>
 <p><code>-r</code></p>
 <dl>
-<dd>Work in recursive mode. That means that given dependency is also changed in all enabled submodules of given POM file(s). Has no effect if the file is not Maven POM.</dl>
+<dd>Work in recursive mode. That means that given dependency is also changed in all enabled submodules of given POM file(s). Has no effect if the file is not Maven POM.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
-<dd>Do not throw an error when one of the specified files doesn&#8217;t contain given dependency.</dl>
+<dd>Do not throw an error when one of the specified files doesn&#8217;t contain given dependency.</dd></dl>
 <h2>Description</h2>
 <p>These macros patch specified POM or Ivy file changing a dependency on given Maven artifact specified by artifact coordinates to artifact specified by second set of Maven coordinates. The artifact specification has same format as <code>%pom_add_dep</code>. The omitted or empty parts in second artifact specification cause the original value to be left unmodified. Supplying a special value of <code>&#8211;</code> for given part causes that part of artifact specification to be deleted. </p>
 <p> POM location can be either a full path to the POM or Ivy file, or a path to the directory containing <code>pom.xml</code> or <code>ivy.xml</code>. If POM location is not given then <code>pom.xml</code> or <code>ivy.xml</code> from current working directory is used. When both <code>pom.xml</code> and <code>ivy.xml</code> are present, <code>pom.xml</code> is processed. You can specify more file locations which will be processed. </p>

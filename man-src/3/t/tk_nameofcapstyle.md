@@ -16,10 +16,10 @@ const char *
 <code>Tk_NameOfCapStyle(</code><i>cap</i><code>)</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</p>
-<dd>const char <i>*string</i> (in) String containing name of cap style: one of &#8220;butt&#8221;, &#8220;projecting&#8221;, or &#8220;round&#8221;.</p>
-<dd>int <i>*capPtr</i> (out) Pointer to location in which to store X cap style corresponding to <i>string</i>.</p>
-<dd>int <i>cap</i> (in) Cap style: one of <code>CapButt</code>, <code>CapProjecting</code>, or <code>CapRound</code>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</dd>
+<dd>const char <i>*string</i> (in) String containing name of cap style: one of &#8220;butt&#8221;, &#8220;projecting&#8221;, or &#8220;round&#8221;.</dd>
+<dd>int <i>*capPtr</i> (out) Pointer to location in which to store X cap style corresponding to <i>string</i>.</dd>
+<dd>int <i>cap</i> (in) Cap style: one of <code>CapButt</code>, <code>CapProjecting</code>, or <code>CapRound</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_GetCapStyle</code> places in <i>*capPtr</i> the X cap style corresponding to <i>string</i>. This will be one of the values <code>CapButt</code>, <code>CapProjecting</code>, or <code>CapRound</code>. Cap styles are typically used in X graphics contexts to indicate how the end-points of lines should be capped. See the X documentation for information on what each style implies. </p>

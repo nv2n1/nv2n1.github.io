@@ -11,7 +11,6 @@ std::valarray&lt;T&gt;::apply - std::valarray&lt;T&gt;::apply
 <h2>Synopsis</h2>
 
 <pre><code>valarray&lt;T&gt; apply(T func(T)) const;
-
 valarray&lt;T&gt; apply(T func(const T &amp;)) const;</code></pre> 
 Returns a new valarray of the same size with values which are acquired by applying function func to the previous values of the elements. 
 
@@ -38,12 +37,9 @@ The function can be implemented with the return type different from std::valarra
 
 calculates and prints the first 10 factorials 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;valarray&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::valarray&lt;int&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     v = v.apply([](int n) -&gt; int {

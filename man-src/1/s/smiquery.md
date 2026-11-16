@@ -15,14 +15,14 @@ description: "smiquery – query single information from SMI MIB modules"
 <p> The <code>smiquery</code> program is used to query information on a single item from an MIB module, e.g. module meta information or a single type definition.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show the smiquery version and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show a help text and exit. The help text lists all available <code>command</code>s.</p>
-<dt><code>-p </code><i>module</i><code>, &#8211;preload </code><i>module</i></p>
-<dd> Preload the module <i>module</i> before reading the main module. This may be helpful if an incomplete main module misses to import some definitions.</p>
-<dt><i>command name</i></p>
-<dd> This specifies the kind of information to retrieve (module, imports, revisions, node, parent, compliance, index, members, children, type, or macro) and the item to retrieve.</dl>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show the smiquery version and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show a help text and exit. The help text lists all available <code>command</code>s.</dd>
+<dt><code>-p </code><i>module</i><code>, &#8211;preload </code><i>module</i></dt>
+<dd> Preload the module <i>module</i> before reading the main module. This may be helpful if an incomplete main module misses to import some definitions.</dd>
+<dt><i>command name</i></dt>
+<dd> This specifies the kind of information to retrieve (module, imports, revisions, node, parent, compliance, index, members, children, type, or macro) and the item to retrieve.</dd></dl>
 <p> The module in question is searched along a path, which is initialized by the <code>SMIPATH</code> environment variable or by /usr/share/mibs if <code>SMIPATH</code> is not set. Files with a <code>.sming</code> extension are expected to be (old-style!) SMIng module files. Files with a <code>.my</code> or without any extension are expected to be SMIv1/v2 module files.</p>
 <h2>EXAMPLE</h2>
 <p> This example queries for information on the node ifNumber defined in the module IF-MIB. </p>

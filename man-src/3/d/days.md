@@ -47,7 +47,7 @@ description: "QuantLib::Period –"
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> self-consistency of algebra is checked.</dl>
+</dt><dd> self-consistency of algebra is checked.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h2>Friends And Related Function Documentation</h2>
@@ -73,5 +73,5 @@ description: "QuantLib::Period –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBA">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBA">Author</a></dt>
+<dd></dd></dl>

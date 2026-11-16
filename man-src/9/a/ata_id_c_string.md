@@ -14,21 +14,21 @@ description: "ata_id_c_string – Convert IDENTIFY DEVICE page into C string"
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>IDENTIFY DEVICE results we will examine</dl>
+</dd><dd>IDENTIFY DEVICE results we will examine</dd></dl>
 <p> <i>s</i></p>
 <dl>
-<dd>string into which data is output</dl>
+<dd>string into which data is output</dd></dl>
 <p> <i>ofs</i></p>
 <dl>
-<dd>offset into identify device page</dl>
+<dd>offset into identify device page</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of string to return. must be an odd number.</dl>
+<dd>length of string to return. must be an odd number.</dd></dl>
 <h2>Description</h2>
 <p>This function is identical to ata_id_string except that it trims trailing spaces and terminates the resulting string with null. <i>len</i> must be actual maximum length (even number) + 1. </p>
 <p> LOCKING: caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

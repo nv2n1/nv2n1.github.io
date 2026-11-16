@@ -18,54 +18,54 @@ description: "look – display lines beginning with a given string"
 <p> <code>-a</code>, <code>&#8211;alternative</code></p>
 <dl>
 <dt>
-<dd> Use the alternative dictionary file.</dl>
+</dt><dd> Use the alternative dictionary file.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;alphanum</code></p>
 <dl>
 <dt>
-<dd> Use normal dictionary character set and order, i.e., only blanks and alphanumeric characters are compared. This is on by default if no file is specified. </p>
+</dt><dd> Use normal dictionary character set and order, i.e., only blanks and alphanumeric characters are compared. This is on by default if no file is specified. </dd>
 <p> Note that blanks have been added to dictionary character set for compatibility with <code>sort -d</code> command since version 2.28.</dl>
 <p> <code>-f</code>, <code>&#8211;ignore-case</code></p>
 <dl>
 <dt>
-<dd> Ignore the case of alphabetic characters. This is on by default if no file is specified.</dl>
+</dt><dd> Ignore the case of alphabetic characters. This is on by default if no file is specified.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;terminate</code> <i>character</i></p>
 <dl>
 <dt>
-<dd> Specify a string termination character, i.e., only the characters in <i>string</i> up to and including the first occurrence of <i>character</i> are compared.</dl>
+</dt><dd> Specify a string termination character, i.e., only the characters in <i>string</i> up to and including the first occurrence of <i>character</i> are compared.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> The <code>look</code> utility exits 0 if one or more lines were found and displayed, 1 if no lines were found, and &gt;1 if an error occurred.</p>
 <h2>ENVIRONMENT</h2>
 <p> <code>WORDLIST</code></p>
 <dl>
 <dt>
-<dd> Path to a dictionary file. The environment variable has greater priority than the dictionary path defined in FILES segment.</dl>
+</dt><dd> Path to a dictionary file. The environment variable has greater priority than the dictionary path defined in FILES segment.</dd></dl>
 <h2>FILES</h2>
 <p> <i>/usr/share/dict/words</i></p>
 <dl>
 <dt>
-<dd> the dictionary</dl>
+</dt><dd> the dictionary</dd></dl>
 <p> <i>/usr/share/dict/web2</i></p>
 <dl>
 <dt>
-<dd> the alternative dictionary</dl>
+</dt><dd> the alternative dictionary</dd></dl>
 <h2>HISTORY</h2>
 <p> The <code>look</code> utility appeared in Version 7 AT&amp;T Unix.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 sort -d /etc/passwd -o /tmp/look.dict
 look -t: root:foobar /tmp/look.dict
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-sort/">sort</a></code>(1)</p>
 <h2>REPORTING BUGS</h2>

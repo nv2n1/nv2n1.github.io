@@ -26,10 +26,10 @@ description: "dlatdf.f –"
  The factorization of Z returned by DGETC2 has the form Z = P*L*U*Q,
  where P and Q are permutation matrices. L is lower triangular with
  unit diagonal elements and U is upper triangular.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>IJOB</i> </p>
+<dd><i>IJOB</i> </dd>
 <pre> IJOB is INTEGER
  IJOB = 2: First compute an approximative null-vector e
  of Z using DGECON, e is normalized and solve for
@@ -80,19 +80,19 @@ description: "dlatdf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
-<dd>This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dl>
+<dd>This routine is a further developed implementation of algorithm BSOLVE in [1] using complete pivoting in the LU factorization.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dd>
@@ -105,7 +105,8 @@ description: "dlatdf.f –"
  between two Regular Matrix Pairs with Applications in
  Condition Estimation. Report IMINF-95.05, Departement of
  Computing Science, Umea University, S-901 87 Umea, Sweden, 1995.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 171 of file dlatdf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

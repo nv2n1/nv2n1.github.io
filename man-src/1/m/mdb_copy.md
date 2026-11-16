@@ -16,12 +16,12 @@ description: "mdb_copy – LMDB environment copy tool"
 <p> If <i>dstpath</i> is specified it must be the path of an empty directory for storing the backup. Otherwise, the backup will be written to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code></p>
-<dd> Write the library version number to the standard output, and exit.</p>
-<dt><code>-c</code></p>
-<dd> Compact while copying. Only current data pages will be copied; freed or unused pages will be omitted from the copy. This option will slow down the backup process as it is more CPU-intensive.</p>
-<dt><code>-n</code></p>
-<dd> Open LDMB environment(s) which do not use subdirectories. </p>
+<dt><code>-V</code></dt>
+<dd> Write the library version number to the standard output, and exit.</dd>
+<dt><code>-c</code></dt>
+<dd> Compact while copying. Only current data pages will be copied; freed or unused pages will be omitted from the copy. This option will slow down the backup process as it is more CPU-intensive.</dd>
+<dt><code>-n</code></dt>
+<dd> Open LDMB environment(s) which do not use subdirectories. </dd>
 </dl>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>

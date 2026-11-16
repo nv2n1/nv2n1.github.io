@@ -15,18 +15,18 @@ description: "psicc – little cms PostScript converter."
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>psicc </code> is little cms PostScript converter.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b </code></p>
-<dd> Black point compensation (CRD only).</p>
-<dt><code>-i&nbsp;</code><i>profile</i></p>
-<dd> Input profile: Generates Color Space Array (CSA).</p>
-<dt><code>-o&nbsp;</code><i>profile</i></p>
+<dt><code>-b </code></dt>
+<dd> Black point compensation (CRD only).</dd>
+<dt><code>-i&nbsp;</code><i>profile</i></dt>
+<dd> Input profile: Generates Color Space Array (CSA).</dd>
+<dt><code>-o&nbsp;</code><i>profile</i></dt>
 <dd>
-<dt>Output profile: Generates Color Rendering Dictionary(CRD).</p>
+</dd><dt>Output profile: Generates Color Rendering Dictionary(CRD).</dt>
 <dd>
-<dt><code>-t &lt;0,1,2,3&gt;</code></p>
-<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</p>
-<dt><code>-u </code></p>
-<dd> Do NOT generate resource name on CRD.</dl>
+</dd><dt><code>-t &lt;0,1,2,3&gt;</code></dt>
+<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</dd>
+<dt><code>-u </code></dt>
+<dd> Do NOT generate resource name on CRD.</dd></dl>
 <h2>NOTES</h2>
 <p> For suggestions, comments, bug reports etc. send mail to info [at] littlecms.com.</p>
 <h2>SEE ALSO</h2>

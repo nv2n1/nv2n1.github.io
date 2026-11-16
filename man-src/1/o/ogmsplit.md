@@ -14,33 +14,34 @@ description: "ogmsplit – Split OGG/OGM files into sevaral smaller OGG/OGM file
 <h2>DESCRIPTION</h2>
 <p> <code>ogmsplit</code> can be used to easily split an OGM file after a given size. Several OGM files will be created that each start with a keyframe.</p>
 <dl>
-<dt>inname</p>
-<dd> Use &#8216;<i>inname</i>&#8216; as the source.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>out</i></p>
+<dt>inname</dt>
+<dd> Use &#8216;<i>inname</i>&#8216; as the source.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>out</i></dt>
 <dd> Use &#8216;<i>out</i>&#8216; as the base name. Ascending part numbers will be appended to it. Default is &#8216;<i>inname</i>&#8216;. Examples:<br />
  1) If <code>-o</code> <i>output.ogg</i> is given on the command line then <code>ogmsplit</code> will create <i>output-000001.ogg</i>, <i>output-000002.ogg</i> and so on.<br />
- 2) If no <code>-o</code> option is given and the input&#8217;s name is <i>movie.ogm</i> then <code>ogmsplit</code> will create <i>movie-000001.ogm</i> and so on.</dl>
+ 2) If no <code>-o</code> option is given and the input&#8217;s name is <i>movie.ogm</i> then <code>ogmsplit</code> will create <i>movie-000001.ogm</i> and so on.</dd></dl>
 <p> The operation mode can be set with exactly one of <code>-s</code>, <code>-t,</code> <code>-c</code> or <code>-p</code>. The default mode is to split by size (<code>-s</code>).</p>
 <dl>
-<dt><code>-s</code>, <code>&#8211;size</code> <i>size</i></p>
-<dd> Size in MiB ( = 1024 * 1024 bytes) after which a new file will be opened (approximately). Default is 700MiB. Size can end in &#8216;B&#8217; to indicate &#8216;bytes&#8217; instead of &#8216;MiB&#8217;.</p>
-<dt><code>-t</code>, <code>&#8211;time</code> <i>time</i></p>
-<dd> Split after the given elapsed time (approximately). &#8216;<i>time</i>&#8216; takes the form <i>HH:MM:SS.sss</i> or simply <i>SS</i>(.<i>sss</i>), e.g. 00:05:00.000 or 300.000 or simply 300.</p>
-<dt><code>-c</code>, <code>&#8211;cuts</code> <i>cuts</i></p>
-<dd> Produce output files as specified by <i>cuts</i>, a list of slices of the form &quot;<i>start</i>&#8211;<i>end</i>&quot; or &quot;<i>start</i>+<i>length</i>&quot;, separated by commas. If <i>start</i> is omitted, it defaults to the end of the previous cut. <i>start</i> and <i>end</i> take the same format as the arguments to <code>-t</code>.</p>
-<dt><code>-n</code>, <code>&#8211;num</code> <i>num</i></p>
-<dd> Don&#8217;t create more than <i>num</i> separate files. The last one may be bigger than the desired size. Default is an unlimited number of files. Can only be used with <code>-s</code> or <code>-t</code>.</p>
-<dt><code>&#8211;frontend</code></p>
+<dt><code>-s</code>, <code>&#8211;size</code> <i>size</i></dt>
+<dd> Size in MiB ( = 1024 * 1024 bytes) after which a new file will be opened (approximately). Default is 700MiB. Size can end in &#8216;B&#8217; to indicate &#8216;bytes&#8217; instead of &#8216;MiB&#8217;.</dd>
+<dt><code>-t</code>, <code>&#8211;time</code> <i>time</i></dt>
+<dd> Split after the given elapsed time (approximately). &#8216;<i>time</i>&#8216; takes the form <i>HH:MM:SS.sss</i> or simply <i>SS</i>(.<i>sss</i>), e.g. 00:05:00.000 or 300.000 or simply 300.</dd>
+<dt><code>-c</code>, <code>&#8211;cuts</code> <i>cuts</i></dt>
+<dd> Produce output files as specified by <i>cuts</i>, a list of slices of the form &quot;<i>start</i>&#8211;<i>end</i>&quot; or &quot;<i>start</i>+<i>length</i>&quot;, separated by commas. If <i>start</i> is omitted, it defaults to the end of the previous cut. <i>start</i> and <i>end</i> take the same format as the arguments to <code>-t</code>.</dd>
+<dt><code>-n</code>, <code>&#8211;num</code> <i>num</i></dt>
+<dd> Don&#8217;t create more than <i>num</i> separate files. The last one may be bigger than the desired size. Default is an unlimited number of files. Can only be used with <code>-s</code> or <code>-t</code>.</dd>
+<dt><code>&#8211;frontend</code></dt>
 <dd> Frontend mode. Progress output will be terminated by 
- instead of .</p>
-<dt><code>-p</code>, <code>&#8211;print-splitpoints</code></p>
-<dd> Only print the key frames and the number of bytes encountered before each. Useful to find the exact splitting point.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Be verbose and show each OGG packet. Can be used twice to increase verbosity.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show this help.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Show version information.</dl>
+ instead of 
+.</dd>
+<dt><code>-p</code>, <code>&#8211;print-splitpoints</code></dt>
+<dd> Only print the key frames and the number of bytes encountered before each. Useful to find the exact splitting point.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Be verbose and show each OGG packet. Can be used twice to increase verbosity.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show this help.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Show version information.</dd></dl>
 <h2>CHAPTER INFORMATION</h2>
 <p> <code>ogmsplit</code> correctly handles chapter information. During the first pass the chapter information, if any is present, will be adjusted to match the output files generated. Chapters that are not contained in the current output file are removed entirely. The other chapters are renumbered to start at 1, and their timestamps will be recalculated.<br />
  Example: If your source file contains these four chapters: </p>

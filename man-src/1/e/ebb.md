@@ -16,16 +16,16 @@ description: "extractbb, ebb – extract bounding box information from graphics 
 <p> If called as <code>ebb</code>, the output is written in the &#8220;bb&#8221; format (and with extension <code>.bb</code>) as used by <code>dvipdfm</code>. <code>Xbb</code> may be defined as a synomym for <code>extractbb</code> on your system. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Be verbose.</p>
-<dt><code>-q</code></p>
-<dd> Be quiet.</p>
-<dt><code>-O</code></p>
-<dd> Write output to standard output.</p>
-<dt><code>-m</code></p>
-<dd> Write output in dvipdfm&#8217;s &#8220;bb&#8221; format.</p>
-<dt><code>-x</code></p>
-<dd> Write output in dvipdfmx&#8217;s &#8220;xbb&#8221; format (default), which is the same as that used by pdfTeX.</dl>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-q</code></dt>
+<dd> Be quiet.</dd>
+<dt><code>-O</code></dt>
+<dd> Write output to standard output.</dd>
+<dt><code>-m</code></dt>
+<dd> Write output in dvipdfm&#8217;s &#8220;bb&#8221; format.</dd>
+<dt><code>-x</code></dt>
+<dd> Write output in dvipdfmx&#8217;s &#8220;xbb&#8221; format (default), which is the same as that used by pdfTeX.</dd></dl>
 <h2>OUTPUT FORMATS</h2>
 <p> Here are more details about the bb and xbb formats: </p>
 <p> The original ebb (from dvipdfm) ignored density information in bitmap images, and generated bounding boxes with 100px = 72bp = 1in. Unfortunately, screenshots (especially) tend to look bad with this approach. </p>

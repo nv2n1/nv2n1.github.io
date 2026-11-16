@@ -57,29 +57,11 @@ description: "sc::DistSymmSCMatrix –"
  <code>Ref</code>&lt; <code>DistSCMatrixKit</code> &gt; <code>skit</code> ()</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_blocklist ()
-
-
-
 double * find_element (int i, int j) const
-
-
-
 int element_to_node (int i, int j) const
-
-
-
 int block_to_node (int, int) const
-
-
-
 Ref&lt; SCMatrixBlock &gt; block_to_block (int, int) const
-
-
-
 void error (const char *msg)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>SCMatrixBlockList</code> &gt; <code>blocklist</code></p>
 <h3>Friends</h3>

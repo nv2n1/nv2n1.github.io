@@ -10,9 +10,7 @@ description: "std::numpunct – std::numpunct"
 <p>std::numpunct &#8211; std::numpunct</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class numpunct;</code></pre>
 <p>The facet std::numpunct encapsulates numeric punctuation preferences. Stream I/O operations use std::numpunct through std::num_get and std::num_put for parsing numeric input and formatting numeric output.<br />
 The numbers that are supported by std::numpunct have the format described below. Here digit represents the radix set specified by the fmtflags argument value, thousands-sep and decimal-point are the results of thousands_sep() and decimal_point() functions respectively. The format of integer values is as follows: integer     ::= [sign] units</p>
@@ -69,7 +67,6 @@ static std::locale::id id <i>(public member object)</i></p>
 <p>The following example changes the string representations of true and false<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 struct french_bool : std::numpunct&lt;char&gt; {
     string_type do_truename() const
@@ -82,7 +79,6 @@ struct french_bool : std::numpunct&lt;char&gt; {
     }
 };
 int main()
-
 {
     std::cout &lt;&lt; &quot;default locale: &quot;
               &lt;&lt; std::boolalpha &lt;&lt; true &lt;&lt; &quot;, &quot; &lt;&lt; false &lt;&lt; '

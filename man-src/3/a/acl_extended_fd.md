@@ -22,10 +22,10 @@ description: "acl_extended_fd – test for information in the ACL by file descri
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_extended_fd function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EBADF</p>
-<dd> The <i>fd</i> argument is not a valid file descriptor.</p>
-<dt><code>Bq </code>Er ENOTSUP</p>
-<dd> The file system on which the file identified by <i>fd</i> is located does not support ACLs, or ACLs are disabled.</dl>
+<dt><code>Bq </code>Er EBADF</dt>
+<dd> The <i>fd</i> argument is not a valid file descriptor.</dd>
+<dt><code>Bq </code>Er ENOTSUP</dt>
+<dd> The file system on which the file identified by <i>fd</i> is located does not support ACLs, or ACLs are disabled.</dd></dl>
 <h2>STANDARDS</h2>
 <p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
 <h2>SEE ALSO</h2>

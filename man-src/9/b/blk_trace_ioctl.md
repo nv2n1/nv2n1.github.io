@@ -15,15 +15,15 @@ blk_trace_ioctl - handle the ioctls associated with tracing
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>the block device</dl>
+<dl><dd></dd><dd>the block device</dd></dl>
  
 
  <i>cmd</i>
-<dl><dd>the ioctl cmd</dl>
+<dl><dd>the ioctl cmd</dd></dl>
  
 
  <i>arg</i>
-<dl><dd>the argument data, if any</dl>
+<dl><dd>the argument data, if any</dd></dl>
 
 <h2>Copyright</h2>
 

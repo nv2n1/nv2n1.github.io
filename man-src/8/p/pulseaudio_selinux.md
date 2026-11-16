@@ -59,9 +59,9 @@ description: "pulseaudio_selinux – Security Enhanced Linux Policy for the puls
 <p> Policy governs the access confined processes have to these ports. SELinux pulseaudio policy is very flexible allowing users to setup their pulseaudio processes in as secure a method as possible. </p>
 <p> The following port types are defined for pulseaudio: </p>
 <dl>
-<dt><code>pulseaudio_port_t</code></p>
+<dt><code>pulseaudio_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 4713 udp 4713</dl>
+</dd><dd>Default Defined Ports: tcp 4713 udp 4713</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pulseaudio_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>anon_inodefs_t</code> </p>
@@ -128,8 +128,8 @@ description: "pulseaudio_selinux – Security Enhanced Linux Policy for the puls
 <p> <code>pulseaudio_home_t</code> </p>
 <p> &#8211; Set files with the pulseaudio_home_t type, if you want to store pulseaudio files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.pulse(/.*)?, /root/.config/pulse(/.*)?, /root/.esd_auth, /root/.pulse-cookie, /home/[^/]+/.pulse(/.*)?, /home/[^/]+/.config/pulse(/.*)?, /home/[^/]+/.esd_auth, /home/[^/]+/.pulse-cookie </p>
+<dt>Paths:</dt>
+<dd>/root/.pulse(/.*)?, /root/.config/pulse(/.*)?, /root/.esd_auth, /root/.pulse-cookie, /home/[^/]+/.pulse(/.*)?, /home/[^/]+/.config/pulse(/.*)?, /home/[^/]+/.esd_auth, /home/[^/]+/.pulse-cookie </dd>
 </dl>
 <p> <code>pulseaudio_tmpfs_t</code> </p>
 <p> &#8211; Set files with the pulseaudio_tmpfs_t type, if you want to store pulseaudio files on a tmpfs file system. </p>

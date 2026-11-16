@@ -10,7 +10,6 @@ description: "stdin, stdout, stderr – standard I/O streams"
 <p>stdin, stdout, stderr &#8211; standard I/O streams</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
-
 extern FILE *stdin;
 extern FILE *stdout;
 extern FILE *stderr;</code></pre>

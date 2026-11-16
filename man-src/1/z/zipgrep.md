@@ -16,26 +16,24 @@ description: "zipgrep – search files in a ZIP archive for lines matching a pat
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>
-<dt><i>pattern</i></p>
+</dt><dt><i>pattern</i></dt>
 <dd>
-<dd> The pattern to be located within a ZIP archive. Any string or regular expression accepted by <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) may be used. <i>file</i>[<i>.zip</i>] Path of the ZIP archive. (Wildcard expressions for the ZIP archive name are not supported.) If the literal filename is not found, the suffix .zip is appended. Note that self-extracting ZIP files are supported, as with any other ZIP archive; just specify the .exe suffix (if any) explicitly.</p>
-<dt>[<i>file(s)</i>]</p>
-<dd> An optional list of archive members to be processed, separated by spaces. If no member files are specified, all members of the ZIP archive are searched. Regular expressions (wildcards) may be used to match multiple members:</p>
+</dd><dd> The pattern to be located within a ZIP archive. Any string or regular expression accepted by <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) may be used. <i>file</i>[<i>.zip</i>] Path of the ZIP archive. (Wildcard expressions for the ZIP archive name are not supported.) If the literal filename is not found, the suffix .zip is appended. Note that self-extracting ZIP files are supported, as with any other ZIP archive; just specify the .exe suffix (if any) explicitly.</dd>
+<dt>[<i>file(s)</i>]</dt>
+<dd> An optional list of archive members to be processed, separated by spaces. If no member files are specified, all members of the ZIP archive are searched. Regular expressions (wildcards) may be used to match multiple members:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> matches a sequence of 0 or more characters</p>
-<dt>?</p>
-<dd> matches exactly 1 character</p>
-<dt>[&#8230;]</p>
-<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match).</dl>
+<dt>*</dt>
+<dd> matches a sequence of 0 or more characters</dd>
+<dt>?</dt>
+<dd> matches exactly 1 character</dd>
+<dt>[&#8230;]</dt>
+<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match).</dd></dl>
 </dl>
 <dt>
-<dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system.)</p>
-<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</p>
-<dd> An optional list of archive members to be excluded from processing. Since wildcard characters match directory separators (`/&#8217;), this option may be used to exclude any files that are in subdirectories. For example, &#8220;zipgrep grumpy foo *.[ch] -x */*&#8221; would search for the string &#8220;grumpy&#8221; in all C source files in the main directory of the &#8220;foo&#8221; archive, but none in any subdirectories. Without the <code>-x</code> option, all C source files in all directories within the zipfile would be searched.</dl>
+</dt><dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system.)</dd>
+<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</dt>
+<dd> An optional list of archive members to be excluded from processing. Since wildcard characters match directory separators (`/&#8217;), this option may be used to exclude any files that are in subdirectories. For example, &#8220;zipgrep grumpy foo *.[ch] -x */*&#8221; would search for the string &#8220;grumpy&#8221; in all C source files in the main directory of the &#8220;foo&#8221; archive, but none in any subdirectories. Without the <code>-x</code> option, all C source files in all directories within the zipfile would be searched.</dd></dl>
 <h2>OPTIONS</h2>
 <p> All options prior to the ZIP archive filename are passed to <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1).</p>
 <h2>SEE ALSO</h2>

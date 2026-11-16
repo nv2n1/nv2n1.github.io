@@ -11,9 +11,9 @@ description: "repodiffer – report differences between repository histories"
 <p> repodiffer &#8211; report differences between repository histories </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>repodiffer</code> [&#8211;ignore&nbsp;<wbr><i>parts</i>] [&#8211;quiet] [&#8211;verbose&nbsp;<wbr><i>level</i>] [&#8211;show-equal] [&#8211;changes-only] [&#8211;full-hash] [&#8211;tree-diff] [&#8211;legacy-map&nbsp;<wbr><i>mapfile</i>] [&#8211;single&nbsp;<wbr><i>id1=id2</i>] <i>repo-or-stream1</i> <i>repo-or-stream2</i></dl>
+<dt> <code>repodiffer</code> [&#8211;ignore&nbsp;<wbr><i>parts</i>] [&#8211;quiet] [&#8211;verbose&nbsp;<wbr><i>level</i>] [&#8211;show-equal] [&#8211;changes-only] [&#8211;full-hash] [&#8211;tree-diff] [&#8211;legacy-map&nbsp;<wbr><i>mapfile</i>] [&#8211;single&nbsp;<wbr><i>id1=id2</i>] <i>repo-or-stream1</i> <i>repo-or-stream2</i></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This tool reports differences between two repository histories. The histories may be presented as git repository directories or as fast-import streams, or as one of each. </p>
+<dd>This tool reports differences between two repository histories. The histories may be presented as git repository directories or as fast-import streams, or as one of each. </dd>
 <p> Revisions are first paired into correspondence by committer and commit date. Any revision in the left-hand (L) history that cannot be paired with a revision in the right-hand (R) history is interpreted as having been deleted; any revision in the R history that cannot be paired with a revision in the L history is interpreted as having been inserted. </p>
 <p> For each changed, inserted, or deleted revision, a summary line is emitted identifying it by commit ID (for a repo) or mark (for a stream file) in the first history. In change reports, the corresponding revision in the second history is similarly identified and the report indicates the nature of the changes. </p>
 <p> A trailing statistics line summarizes the operation counts. </p>
@@ -27,39 +27,39 @@ description: "repodiffer – report differences between repository histories"
 <p> author</p>
 <dl>
 <dt>
-<dd> Ignore differences in the (name part of the) author field.</dl>
+</dt><dd> Ignore differences in the (name part of the) author field.</dd></dl>
 <p> authordate</p>
 <dl>
 <dt>
-<dd> Ignore differences in the author date part.</dl>
+</dt><dd> Ignore differences in the author date part.</dd></dl>
 <p> committer</p>
 <dl>
 <dt>
-<dd> Ignore differences in the (name part of the) committer field.</dl>
+</dt><dd> Ignore differences in the (name part of the) committer field.</dd></dl>
 <p> committerdate</p>
 <dl>
 <dt>
-<dd> Ignore differences in the commit date part</dl>
+</dt><dd> Ignore differences in the commit date part</dd></dl>
 <p> parents</p>
 <dl>
 <dt>
-<dd> Ignore differences in parent links.</dl>
+</dt><dd> Ignore differences in parent links.</dd></dl>
 <p> timezone</p>
 <dl>
 <dt>
-<dd> Apply a modulo 360 operation to timestamps before comparison, so as to ignore time-zone skew.</dl>
+</dt><dd> Apply a modulo 360 operation to timestamps before comparison, so as to ignore time-zone skew.</dd></dl>
 <p> tree</p>
 <dl>
 <dt>
-<dd> Ignore tree-content differences. (It is not expected that this option will be useful; it is provided for completeness&#8217;s sake.)</dl>
+</dt><dd> Ignore tree-content differences. (It is not expected that this option will be useful; it is provided for completeness&#8217;s sake.)</dd></dl>
 <p> gitignore</p>
 <dl>
 <dt>
-<dd> Ignore .gitignore and .cvsignore files when comparing tree content. Useful if you are comparing translations done by pairs of lifting tools only one of which lifts these; a notable case of this is reposurgeon vs. git-svn.</dl>
+</dt><dd> Ignore .gitignore and .cvsignore files when comparing tree content. Useful if you are comparing translations done by pairs of lifting tools only one of which lifts these; a notable case of this is reposurgeon vs. git-svn.</dd></dl>
 <p> email</p>
 <dl>
 <dt>
-<dd> Ignore email addresses when comparing names. This can be useful when comparing two repositories translated from Subversion; typically they&#8217;ll have the Subversion Unix user ID as the name part of the address, but whether and how a host part is generated for the address varies.</dl>
+</dt><dd> Ignore email addresses when comparing names. This can be useful when comparing two repositories translated from Subversion; typically they&#8217;ll have the Subversion Unix user ID as the name part of the address, but whether and how a host part is generated for the address varies.</dd></dl>
 <p> One of these or a comma-separated list of several can be specified. </p>
 <p> The &#8211;fullhash or -f option forces reporting of full 40-digit hash IDs, rather than the normal short hash. </p>
 <p> Normally only the names of differing files are listed. With the &#8211;tree-diff option, context diffs of the files are listed. </p>

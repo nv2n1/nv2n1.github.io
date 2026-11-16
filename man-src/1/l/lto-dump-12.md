@@ -30,38 +30,38 @@ description: "lto-dump – Tool for dumping LTO object files"
 <p> <code>lto-dump</code> is a tool you can use in conjunction with <font SIZE="-1">GCC</font> to dump link time optimization object files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-list</code></p>
-<dd> Dumps list of details of functions and variables.</p>
-<dt><code>-demangle</code></p>
-<dd> Dump the demangled output.</p>
-<dt><code>-defined-only</code></p>
-<dd> Dump only the defined symbols.</p>
-<dt><code>-print-value</code></p>
-<dd> Dump initial values of the variables.</p>
-<dt><code>-name-sort</code></p>
-<dd> Sort the symbols alphabetically.</p>
-<dt><code>-size-sort</code></p>
-<dd> Sort the symbols according to size.</p>
-<dt><code>-reverse-sort</code></p>
-<dd> Dump the symbols in reverse order.</p>
-<dt><code>-no-sort</code></p>
-<dd> Dump the symbols in order of occurrence.</p>
-<dt><code>-symbol=</code></p>
-<dd> Dump the details of specific symbol.</p>
-<dt><code>-objects</code></p>
-<dd> Dump the details of <font SIZE="-1">LTO</font> objects.</p>
-<dt><code>-type-stats</code></p>
-<dd> Dump the statistics of tree types.</p>
-<dt><code>-tree-stats</code></p>
-<dd> Dump the statistics of trees.</p>
-<dt><code>-gimple-stats</code></p>
-<dd> Dump the statistics of gimple statements.</p>
-<dt><code>-dump-level=</code></p>
-<dd> For deciding the optimization level of body.</p>
-<dt><code>-dump-body=</code></p>
-<dd> Dump the specific gimple body.</p>
-<dt><code>-help</code></p>
-<dd> Display the dump tool help.</dl>
+<dt><code>-list</code></dt>
+<dd> Dumps list of details of functions and variables.</dd>
+<dt><code>-demangle</code></dt>
+<dd> Dump the demangled output.</dd>
+<dt><code>-defined-only</code></dt>
+<dd> Dump only the defined symbols.</dd>
+<dt><code>-print-value</code></dt>
+<dd> Dump initial values of the variables.</dd>
+<dt><code>-name-sort</code></dt>
+<dd> Sort the symbols alphabetically.</dd>
+<dt><code>-size-sort</code></dt>
+<dd> Sort the symbols according to size.</dd>
+<dt><code>-reverse-sort</code></dt>
+<dd> Dump the symbols in reverse order.</dd>
+<dt><code>-no-sort</code></dt>
+<dd> Dump the symbols in order of occurrence.</dd>
+<dt><code>-symbol=</code></dt>
+<dd> Dump the details of specific symbol.</dd>
+<dt><code>-objects</code></dt>
+<dd> Dump the details of <font SIZE="-1">LTO</font> objects.</dd>
+<dt><code>-type-stats</code></dt>
+<dd> Dump the statistics of tree types.</dd>
+<dt><code>-tree-stats</code></dt>
+<dd> Dump the statistics of trees.</dd>
+<dt><code>-gimple-stats</code></dt>
+<dd> Dump the statistics of gimple statements.</dd>
+<dt><code>-dump-level=</code></dt>
+<dd> For deciding the optimization level of body.</dd>
+<dt><code>-dump-body=</code></dt>
+<dd> Dump the specific gimple body.</dd>
+<dt><code>-help</code></dt>
+<dd> Display the dump tool help.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2017-2022 Free Software Foundation, Inc. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <code>gfdl</code>(7) man page. </p>

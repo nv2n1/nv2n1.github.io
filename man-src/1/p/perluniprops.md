@@ -23,51 +23,43 @@ description: "perluniprops – Index of Unicode Version 12.1.0 character propert
 <p> In parsing these constructs, Perl always ignores Upper/lower case differences everywhere within the {braces}. Thus <tt>&quot;\p{Greek}&quot;</tt> means the same thing as <tt>&quot;\p{greek}&quot;</tt>. But note that changing the case of the <tt>&quot;p&quot;</tt> or <tt>&quot;P&quot;</tt> before the left brace completely changes the meaning of the construct, from &#8220;match&#8221; (for <tt>&quot;\p{}&quot;</tt>) to &#8220;doesn&#8217;t match&#8221; (for <tt>&quot;\P{}&quot;</tt>). Casing in this document is for improved legibility. </p>
 <p> Also, white space, hyphens, and underscores are normally ignored everywhere between the {braces}, and hence can be freely added or removed even if the <tt>&quot;/x&quot;</tt> modifier hasn&#8217;t been specified on the regular expression. But in the table below a &#8216;<code>T</code>&#8216; at the beginning of an entry means that tighter (stricter) rules are used for that entry:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Single form (&quot;\p{name}&quot;) tighter rules:</p>
-<dd> White space, hyphens, and underscores <font SIZE="-1">ARE</font> significant except for:</p>
+<dt>Single form (&quot;\p{name}&quot;) tighter rules:</dt>
+<dd> White space, hyphens, and underscores <font SIZE="-1">ARE</font> significant except for:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> white space adjacent to a non-word character</p>
-<dt>&bull;</p>
-<dd> underscores separating digits in numbers</dl>
+<dt>&bull;</dt>
+<dd> white space adjacent to a non-word character</dd>
+<dt>&bull;</dt>
+<dd> underscores separating digits in numbers</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
-<p> That means, for example, that you can freely add or remove white space adjacent to (but within) the braces without affecting the meaning.</dl>
-<dt>Compound form (&quot;\p{name=value}&quot; or &quot;\p{name:value}&quot;) tighter rules:</p>
-<dd> The tighter rules given above for the single form apply to everything to the right of the colon or equals; the looser rules still apply to everything to the left. </p>
+</dt><dd>
+<p> That means, for example, that you can freely add or remove white space adjacent to (but within) the braces without affecting the meaning.</dd></dl>
+<dt>Compound form (&quot;\p{name=value}&quot; or &quot;\p{name:value}&quot;) tighter rules:</dt>
+<dd> The tighter rules given above for the single form apply to everything to the right of the colon or equals; the looser rules still apply to everything to the left. </dd>
 <p> That means, for example, that you can freely add or remove white space adjacent to (but within) the braces and the colon or equal sign.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> Some properties are considered obsolete by Unicode, but still available. There are several varieties of obsolescence:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Stabilized</p>
-<dd> A property may be stabilized. Such a determination does not indicate that the property should or should not be used; instead it is a declaration that the property will not be maintained nor extended for newly encoded characters. Such properties are marked with an &#8216;<code>S</code>&#8216; in the table.</p>
-<dt>Deprecated</p>
-<dd> A property may be deprecated, perhaps because its original intent has been replaced by another property, or because its specification was somehow defective. This means that its use is strongly discouraged, so much so that a warning will be issued if used, unless the regular expression is in the scope of a <tt>&quot;no warnings 'deprecated'&quot;</tt> statement. A &#8216;<code>D</code>&#8216; flags each such entry in the table, and the entry there for the longest, most descriptive version of the property will give the reason it is deprecated, and perhaps advice. Perl may issue such a warning, even for properties that aren&#8217;t officially deprecated by Unicode, when there used to be characters or code points that were matched by them, but no longer. This is to warn you that your program may not work like it did on earlier Unicode releases. </p>
+<dt>Stabilized</dt>
+<dd> A property may be stabilized. Such a determination does not indicate that the property should or should not be used; instead it is a declaration that the property will not be maintained nor extended for newly encoded characters. Such properties are marked with an &#8216;<code>S</code>&#8216; in the table.</dd>
+<dt>Deprecated</dt>
+<dd> A property may be deprecated, perhaps because its original intent has been replaced by another property, or because its specification was somehow defective. This means that its use is strongly discouraged, so much so that a warning will be issued if used, unless the regular expression is in the scope of a <tt>&quot;no warnings 'deprecated'&quot;</tt> statement. A &#8216;<code>D</code>&#8216; flags each such entry in the table, and the entry there for the longest, most descriptive version of the property will give the reason it is deprecated, and perhaps advice. Perl may issue such a warning, even for properties that aren&#8217;t officially deprecated by Unicode, when there used to be characters or code points that were matched by them, but no longer. This is to warn you that your program may not work like it did on earlier Unicode releases. </dd>
 <p> A deprecated property may be made unavailable in a future Perl version, so it is best to move away from them. </p>
 <p> A deprecated property may also be stabilized, but this fact is not shown.</p>
-<dt>Obsolete</p>
-<dd> Properties marked with an &#8216;<code>O</code>&#8216; in the table are considered (plain) obsolete. Generally this designation is given to properties that Unicode once used for internal purposes (but not any longer).</p>
-<dt>Discouraged</p>
-<dd> This is not actually a Unicode-specified obsolescence, but applies to certain Perl extensions that are present for backwards compatibility, but are discouraged from being used. These are not obsolete, but their meanings are not stable. Future Unicode versions could force any of these extensions to be removed without warning, replaced by another property with the same name that means something different. An &#8216;<code>X</code>&#8216; flags each such entry in the table. Use the equivalent shown instead. </p>
+<dt>Obsolete</dt>
+<dd> Properties marked with an &#8216;<code>O</code>&#8216; in the table are considered (plain) obsolete. Generally this designation is given to properties that Unicode once used for internal purposes (but not any longer).</dd>
+<dt>Discouraged</dt>
+<dd> This is not actually a Unicode-specified obsolescence, but applies to certain Perl extensions that are present for backwards compatibility, but are discouraged from being used. These are not obsolete, but their meanings are not stable. Future Unicode versions could force any of these extensions to be removed without warning, replaced by another property with the same name that means something different. An &#8216;<code>X</code>&#8216; flags each such entry in the table. Use the equivalent shown instead. </dd>
 <p> In particular, matches in the Block property have single forms defined by Perl that begin with <tt>&quot;In_&quot;</tt>, <tt>&quot;&quot;Is_&quot;</tt>, or even with no prefix at all, Like all <font SIZE="-1"><code>DISCOURAGED</code></font> forms, these are not stable. For example, <tt>&quot;\p{Block=Deseret}&quot;</tt> can currently be written as <tt>&quot;\p{In_Deseret}&quot;</tt>, <tt>&quot;\p{Is_Deseret}&quot;</tt>, or <tt>&quot;\p{Deseret}&quot;</tt>. But, a new Unicode version may come along that would force Perl to change the meaning of one or more of these, and your program would no longer be correct. Currently there are no such conflicts with the form that begins <tt>&quot;In_&quot;</tt>, but there are many with the other two shortcuts, and Unicode continues to define new properties that begin with <tt>&quot;In&quot;</tt>, so it&#8217;s quite possible that a conflict will occur in the future. The compound form is guaranteed to not become obsolete, and its meaning is clearer anyway. See &#8220;Blocks&#8221; in perlunicode for more information about this.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 <p> The table below has two columns. The left column contains the <tt>&quot;\p{}&quot;</tt> constructs to look up, possibly preceded by the flags mentioned above; and the right column contains information about them, like a description, or synonyms. The table shows both the single and compound forms for each property that has them. If the left column is a short name for a property, the right column will give its longer, more descriptive name; and if the left column is the longest name, the right column will show any equivalent shortest name, in both single and compound forms if applicable. </p>
 <p> If braces are not needed to specify a property (e.g., <tt>&quot;\pL&quot;</tt>), the left column contains both forms, with and without braces. </p>
 <p> The right column will also caution you if a property means something different than what might normally be expected. </p>
@@ -103,20 +95,20 @@ General_Category:
 <p> Note that all non-essential underscores are removed in the display of the short names below. </p>
 <p> <code>Legend summary:</code></p>
 <dl>
-<dt><code>*</code> is a wild-card</p>
+<dt><code>*</code> is a wild-card</dt>
 <dd>
-<dt><code>(\d+)</code> in the info column gives the number of Unicode code points matched by this property.</p>
+</dd><dt><code>(\d+)</code> in the info column gives the number of Unicode code points matched by this property.</dt>
 <dd>
-<dt><code>D</code> means this is deprecated.</p>
+</dd><dt><code>D</code> means this is deprecated.</dt>
 <dd>
-<dt><code>O</code> means this is obsolete.</p>
+</dd><dt><code>O</code> means this is obsolete.</dt>
 <dd>
-<dt><code>S</code> means this is stabilized.</p>
+</dd><dt><code>S</code> means this is stabilized.</dt>
 <dd>
-<dt><code>T</code> means tighter (stricter) name matching applies.</p>
+</dd><dt><code>T</code> means tighter (stricter) name matching applies.</dt>
 <dd>
-<dt><code>X</code> means use of this form is discouraged, and may not be stable.</p>
-<dd></dl>
+</dd><dt><code>X</code> means use of this form is discouraged, and may not be stable.</dt>
+<dd></dd></dl>
 <p>NAME INFO<br />
    \p<br />
 {<br />
@@ -457,3 +449,4 @@ Alphabetic:<br />
    \p{Alphabetic: N*}      (Short: \p{Alpha=N}, \P{Alpha}) (986_856<br />
                              plus all above-Unicode code points:<br />
                              [
+</p>

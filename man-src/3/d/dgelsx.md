@@ -19,7 +19,7 @@ description: "dgelsx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 This routine is deprecated and has been replaced by routine DGELSY.DGELSX computes the minimum - norm solution to a real linear least
                                                                                                      squares problem : minimize ||
@@ -31,11 +31,11 @@ they are stored as the columns of the
                                                                                                                                                       RANK,
                                                                                                                                                       is the effective rank of A.Then, R22 is considered to be negligible, and R12 is annihilated by orthogonal transformations from the right, arriving at the complete orthogonal factorization : A *P = Q * [T11 0] * Z[0 0] The minimum - norm solution is then X = P * Z * *T[inv(T11) * Q1 * *T * B][0] where Q1 consists of the first RANK columns of Q.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -119,14 +119,14 @@ they are stored as the columns of the
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 178 of file dgelsx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

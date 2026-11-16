@@ -30,20 +30,20 @@ description: "QwtArrayData – Data class containing two QwtArray<double> object
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> Array of x values<br />
- <i>y</i> Array of y values</dl>
+ <i>y</i> Array of y values</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code></dd></dl>
 <h3>QwtArrayData::QwtArrayData (const double * x, const double * y, size_t size)</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>x</i> Array of x values<br />
  <i>y</i> Array of y values<br />
- <i>size</i> Size of the x and y arrays</dl>
+ <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotCurve::setData()</code></dl>
+<dd><code>QwtPlotCurve::setData()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QwtDoubleRect QwtArrayData::boundingRect () const [virtual]</h3>
 <p>Returns the bounding rectangle of the data. If there is no bounding rect, like for empty data the rectangle is invalid: QwtDoubleRect::isValid() == false </p>
@@ -51,40 +51,40 @@ description: "QwtArrayData – Data class containing two QwtArray<double> object
 <h3><code>QwtData</code> * QwtArrayData::copy () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pointer to a copy (virtual copy constructor)</dl>
+<dd>Pointer to a copy (virtual copy constructor)</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3><code>QwtArrayData</code> &amp; QwtArrayData::operator= (const <code>QwtArrayData</code> &amp; data)</h3>
 <p>Assignment. </p>
 <h3>size_t QwtArrayData::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size of the data set</dl>
+<dd>Size of the data set</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>double QwtArrayData::x (size_t i) const [virtual]</h3>
 <p>Return the x value of data point i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Index</dl>
+<dd><i>i</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>x X value of data point i</dl>
+<dd>x X value of data point i</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>const QwtArray&lt; double &gt; &amp; QwtArrayData::xData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the x-values</dl>
+<dd>Array of the x-values</dd></dl>
 <h3>double QwtArrayData::y (size_t i) const [virtual]</h3>
 <p>Return the y value of data point i </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>i</i> Index</dl>
+<dd><i>i</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>y Y value of data point i</dl>
+<dd>y Y value of data point i</dd></dl>
 <p> Implements <code>QwtData</code>.</p>
 <h3>const QwtArray&lt; double &gt; &amp; QwtArrayData::yData () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Array of the y-values</dl>
+<dd>Array of the y-values</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

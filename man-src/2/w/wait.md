@@ -21,12 +21,12 @@ description: "wait, waitpid, waitid – wait for process to change state"
 <p> <code>waitid</code>():</p>
 <dl>
 <dt>
-<dd> Since glibc 2.26: _XOPEN_SOURCE &gt;= 500 ||<br />
+</dt><dd> Since glibc 2.26: _XOPEN_SOURCE &gt;= 500 ||<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
  Glibc 2.25 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> All of these system calls are used to wait for state changes in a child of the calling process, and obtain information about the child whose state has changed. A state change is considered to be: the child terminated; the child was stopped by a signal; or the child was resumed by a signal. In the case of a terminated child, performing a wait allows the system to release the resources associated with the child; if a wait is not performed, then the terminated child remains in a &quot;zombie&quot; state (see NOTES below). </p>
 <p> If a child has already changed state, then these calls return immediately. Otherwise, they block until either a child changes state or a signal handler interrupts the call (assuming that system calls are not automatically restarted using the <code>SA_RESTART</code> flag of <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)). In the remainder of this page, a child whose state has changed and which has not yet been waited upon by one of these system calls is termed <i>waitable</i>.</p>
@@ -36,81 +36,81 @@ description: "wait, waitpid, waitid – wait for process to change state"
 <p> The <code>waitpid</code>() system call suspends execution of the calling thread until a child specified by <i>pid</i> argument has changed state. By default, <code>waitpid</code>() waits only for terminated children, but this behavior is modifiable via the <i>options</i> argument, as described below. </p>
 <p> The value of <i>pid</i> can be:</p>
 <dl>
-<dt>&lt; -1</p>
-<dd> meaning wait for any child process whose process group ID is equal to the absolute value of <i>pid</i>.</p>
-<dt>-1</p>
-<dd> meaning wait for any child process.</p>
-<dt>0</p>
-<dd> meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to <code>waitpid</code>().</p>
-<dt>&gt; 0</p>
-<dd> meaning wait for the child whose process ID is equal to the value of <i>pid</i>.</dl>
+<dt>&lt; -1</dt>
+<dd> meaning wait for any child process whose process group ID is equal to the absolute value of <i>pid</i>.</dd>
+<dt>-1</dt>
+<dd> meaning wait for any child process.</dd>
+<dt>0</dt>
+<dd> meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to <code>waitpid</code>().</dd>
+<dt>&gt; 0</dt>
+<dd> meaning wait for the child whose process ID is equal to the value of <i>pid</i>.</dd></dl>
 <p> The value of <i>options</i> is an OR of zero or more of the following constants:</p>
 <dl>
-<dt><code>WNOHANG</code></p>
-<dd> return immediately if no child has exited.</p>
-<dt><code>WUNTRACED</code></p>
-<dd> also return if a child has stopped (but not traced via <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)). Status for <i>traced</i> children which have stopped is provided even if this option is not specified.</p>
-<dt><code>WCONTINUED</code> (since Linux 2.6.10)</p>
-<dd> also return if a stopped child has been resumed by delivery of <code>SIGCONT</code>.</dl>
+<dt><code>WNOHANG</code></dt>
+<dd> return immediately if no child has exited.</dd>
+<dt><code>WUNTRACED</code></dt>
+<dd> also return if a child has stopped (but not traced via <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)). Status for <i>traced</i> children which have stopped is provided even if this option is not specified.</dd>
+<dt><code>WCONTINUED</code> (since Linux 2.6.10)</dt>
+<dd> also return if a stopped child has been resumed by delivery of <code>SIGCONT</code>.</dd></dl>
 <p> (For Linux-only options, see below.) </p>
 <p> If <i>wstatus</i> is not NULL, <code>wait</code>() and <code>waitpid</code>() store status information in the <i>int</i> to which it points. This integer can be inspected with the following macros (which take the integer itself as an argument, not a pointer to it, as is done in <code>wait</code>() and <code>waitpid</code>()!):</p>
 <dl>
-<dt><code>WIFEXITED(</code><i>wstatus</i><code>)</code></p>
-<dd> returns true if the child terminated normally, that is, by calling <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) or <code>_exit</code>(2), or by returning from main().</p>
-<dt><code>WEXITSTATUS(</code><i>wstatus</i><code>)</code></p>
-<dd> returns the exit status of the child. This consists of the least significant 8 bits of the <i>status</i> argument that the child specified in a call to <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) or <code>_exit</code>(2) or as the argument for a return statement in main(). This macro should be employed only if <code>WIFEXITED</code> returned true.</p>
-<dt><code>WIFSIGNALED(</code><i>wstatus</i><code>)</code></p>
-<dd> returns true if the child process was terminated by a signal.</p>
-<dt><code>WTERMSIG(</code><i>wstatus</i><code>)</code></p>
-<dd> returns the number of the signal that caused the child process to terminate. This macro should be employed only if <code>WIFSIGNALED</code> returned true.</p>
-<dt><code>WCOREDUMP(</code><i>wstatus</i><code>)</code></p>
-<dd> returns true if the child produced a core dump (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)). This macro should be employed only if <code>WIFSIGNALED</code> returned true.</p>
+<dt><code>WIFEXITED(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns true if the child terminated normally, that is, by calling <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) or <code>_exit</code>(2), or by returning from main().</dd>
+<dt><code>WEXITSTATUS(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns the exit status of the child. This consists of the least significant 8 bits of the <i>status</i> argument that the child specified in a call to <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) or <code>_exit</code>(2) or as the argument for a return statement in main(). This macro should be employed only if <code>WIFEXITED</code> returned true.</dd>
+<dt><code>WIFSIGNALED(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns true if the child process was terminated by a signal.</dd>
+<dt><code>WTERMSIG(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns the number of the signal that caused the child process to terminate. This macro should be employed only if <code>WIFSIGNALED</code> returned true.</dd>
+<dt><code>WCOREDUMP(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns true if the child produced a core dump (see <code><a href="/docs/linux/man/5-core/">core</a></code>(5)). This macro should be employed only if <code>WIFSIGNALED</code> returned true.</dd>
 <dt>
-<dd> This macro is not specified in POSIX.1-2001 and is not available on some UNIX implementations (e.g., AIX, SunOS). Therefore, enclose its use inside <i>#ifdef WCOREDUMP &#8230; #endif</i>.</p>
-<dt><code>WIFSTOPPED(</code><i>wstatus</i><code>)</code></p>
-<dd> returns true if the child process was stopped by delivery of a signal; this is possible only if the call was done using <code>WUNTRACED</code> or when the child is being traced (see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)).</p>
-<dt><code>WSTOPSIG(</code><i>wstatus</i><code>)</code></p>
-<dd> returns the number of the signal which caused the child to stop. This macro should be employed only if <code>WIFSTOPPED</code> returned true.</p>
-<dt><code>WIFCONTINUED(</code><i>wstatus</i><code>)</code></p>
-<dd> (since Linux 2.6.10) returns true if the child process was resumed by delivery of <code>SIGCONT</code>.</dl>
+</dt><dd> This macro is not specified in POSIX.1-2001 and is not available on some UNIX implementations (e.g., AIX, SunOS). Therefore, enclose its use inside <i>#ifdef WCOREDUMP &#8230; #endif</i>.</dd>
+<dt><code>WIFSTOPPED(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns true if the child process was stopped by delivery of a signal; this is possible only if the call was done using <code>WUNTRACED</code> or when the child is being traced (see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2)).</dd>
+<dt><code>WSTOPSIG(</code><i>wstatus</i><code>)</code></dt>
+<dd> returns the number of the signal which caused the child to stop. This macro should be employed only if <code>WIFSTOPPED</code> returned true.</dd>
+<dt><code>WIFCONTINUED(</code><i>wstatus</i><code>)</code></dt>
+<dd> (since Linux 2.6.10) returns true if the child process was resumed by delivery of <code>SIGCONT</code>.</dd></dl>
 <h3>waitid()</h3>
 <p> The <code>waitid</code>() system call (available since Linux 2.6.9) provides more precise control over which child state changes to wait for. </p>
 <p> The <i>idtype</i> and <i>id</i> arguments select the child(ren) to wait for, as follows:</p>
 <dl>
-<dt><i>idtype</i> == <code>P_PID</code></p>
-<dd> Wait for the child whose process ID matches <i>id</i>.</p>
-<dt><i>idtype</i> == <code>P_PIDFD</code> (since Linux 5.4)</p>
-<dd> Wait for the child referred to by the PID file descriptor specified in <i>id</i>. (See <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2) for further information on PID file descriptors.)</p>
-<dt><i>idtype</i> == <code>P_PGID</code></p>
-<dd> Wait for any child whose process group ID matches <i>id</i>. Since Linux 5.4, if <i>id</i> is zero, then wait for any child that is in the same process group as the caller&#8217;s process group at the time of the call.</p>
-<dt><i>idtype</i> == <code>P_ALL</code></p>
-<dd> Wait for any child; <i>id</i> is ignored.</dl>
+<dt><i>idtype</i> == <code>P_PID</code></dt>
+<dd> Wait for the child whose process ID matches <i>id</i>.</dd>
+<dt><i>idtype</i> == <code>P_PIDFD</code> (since Linux 5.4)</dt>
+<dd> Wait for the child referred to by the PID file descriptor specified in <i>id</i>. (See <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2) for further information on PID file descriptors.)</dd>
+<dt><i>idtype</i> == <code>P_PGID</code></dt>
+<dd> Wait for any child whose process group ID matches <i>id</i>. Since Linux 5.4, if <i>id</i> is zero, then wait for any child that is in the same process group as the caller&#8217;s process group at the time of the call.</dd>
+<dt><i>idtype</i> == <code>P_ALL</code></dt>
+<dd> Wait for any child; <i>id</i> is ignored.</dd></dl>
 <p> The child state changes to wait for are specified by ORing one or more of the following flags in <i>options</i>:</p>
 <dl>
-<dt><code>WEXITED</code></p>
-<dd> Wait for children that have terminated.</p>
-<dt><code>WSTOPPED</code></p>
-<dd> Wait for children that have been stopped by delivery of a signal.</p>
-<dt><code>WCONTINUED</code></p>
-<dd> Wait for (previously stopped) children that have been resumed by delivery of <code>SIGCONT</code>.</dl>
+<dt><code>WEXITED</code></dt>
+<dd> Wait for children that have terminated.</dd>
+<dt><code>WSTOPPED</code></dt>
+<dd> Wait for children that have been stopped by delivery of a signal.</dd>
+<dt><code>WCONTINUED</code></dt>
+<dd> Wait for (previously stopped) children that have been resumed by delivery of <code>SIGCONT</code>.</dd></dl>
 <p> The following flags may additionally be ORed in <i>options</i>:</p>
 <dl>
-<dt><code>WNOHANG</code></p>
-<dd> As for <code>waitpid</code>().</p>
-<dt><code>WNOWAIT</code></p>
-<dd> Leave the child in a waitable state; a later wait call can be used to again retrieve the child status information.</dl>
+<dt><code>WNOHANG</code></dt>
+<dd> As for <code>waitpid</code>().</dd>
+<dt><code>WNOWAIT</code></dt>
+<dd> Leave the child in a waitable state; a later wait call can be used to again retrieve the child status information.</dd></dl>
 <p> Upon successful return, <code>waitid</code>() fills in the following fields of the <i>siginfo_t</i> structure pointed to by <i>infop</i>:</p>
 <dl>
-<dt><i>si_pid</i></p>
-<dd> The process ID of the child.</p>
-<dt><i>si_uid</i></p>
-<dd> The real user ID of the child. (This field is not set on most other implementations.)</p>
-<dt><i>si_signo</i></p>
-<dd> Always set to <code>SIGCHLD</code>.</p>
-<dt><i>si_status</i></p>
-<dd> Either the exit status of the child, as given to <code>_exit</code>(2) (or <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3)), or the signal that caused the child to terminate, stop, or continue. The <i>si_code</i> field can be used to determine how to interpret this field.</p>
-<dt><i>si_code</i></p>
-<dd> Set to one of: <code>CLD_EXITED</code> (child called <code>_exit</code>(2)); <code>CLD_KILLED</code> (child killed by signal); <code>CLD_DUMPED</code> (child killed by signal, and dumped core); <code>CLD_STOPPED</code> (child stopped by signal); <code>CLD_TRAPPED</code> (traced child has trapped); or <code>CLD_CONTINUED</code> (child continued by <code>SIGCONT</code>).</dl>
+<dt><i>si_pid</i></dt>
+<dd> The process ID of the child.</dd>
+<dt><i>si_uid</i></dt>
+<dd> The real user ID of the child. (This field is not set on most other implementations.)</dd>
+<dt><i>si_signo</i></dt>
+<dd> Always set to <code>SIGCHLD</code>.</dd>
+<dt><i>si_status</i></dt>
+<dd> Either the exit status of the child, as given to <code>_exit</code>(2) (or <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3)), or the signal that caused the child to terminate, stop, or continue. The <i>si_code</i> field can be used to determine how to interpret this field.</dd>
+<dt><i>si_code</i></dt>
+<dd> Set to one of: <code>CLD_EXITED</code> (child called <code>_exit</code>(2)); <code>CLD_KILLED</code> (child killed by signal); <code>CLD_DUMPED</code> (child killed by signal, and dumped core); <code>CLD_STOPPED</code> (child stopped by signal); <code>CLD_TRAPPED</code> (traced child has trapped); or <code>CLD_CONTINUED</code> (child continued by <code>SIGCONT</code>).</dd></dl>
 <p> If <code>WNOHANG</code> was specified in <i>options</i> and there were no children in a waitable state, then <code>waitid</code>() returns 0 immediately and the state of the <i>siginfo_t</i> structure pointed to by <i>infop</i> depends on the implementation. To (portably) distinguish this case from that where a child was in a waitable state, zero out the <i>si_pid</i> field before the call and check for a nonzero value in this field after the call returns. </p>
 <p> POSIX.1-2008 Technical Corrigendum 1 (2013) adds the requirement that when <code>WNOHANG</code> is specified in <i>options</i> and there were no children in a waitable state, then <code>waitid</code>() should zero out the <i>si_pid</i> and <i>si_signo</i> fields of the structure. On Linux and other implementations that adhere to this requirement, it is not necessary to zero out the <i>si_pid</i> field before calling <code>waitid</code>(). However, not all implementations follow the POSIX.1 specification on this point.</p>
 <h2>RETURN VALUE</h2>
@@ -120,14 +120,14 @@ description: "wait, waitpid, waitid – wait for process to change state"
 <p> Each of these calls sets <i>errno</i> to an appropriate value in the case of an error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ECHILD</code></p>
-<dd> (for <code>wait</code>()) The calling process does not have any unwaited-for children.</p>
-<dt><code>ECHILD</code></p>
-<dd> (for <code>waitpid</code>() or <code>waitid</code>()) The process specified by <i>pid</i> (<code>waitpid</code>()) or <i>idtype</i> and <i>id</i> (<code>waitid</code>()) does not exist or is not a child of the calling process. (This can happen for one&#8217;s own child if the action for <code>SIGCHLD</code> is set to <code>SIG_IGN</code>. See also the <i>Linux Notes</i> section about threads.)</p>
-<dt><code>EINTR</code></p>
-<dd> <code>WNOHANG</code> was not set and an unblocked signal or a <code>SIGCHLD</code> was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>options</i> argument was invalid.</dl>
+<dt><code>ECHILD</code></dt>
+<dd> (for <code>wait</code>()) The calling process does not have any unwaited-for children.</dd>
+<dt><code>ECHILD</code></dt>
+<dd> (for <code>waitpid</code>() or <code>waitid</code>()) The process specified by <i>pid</i> (<code>waitpid</code>()) or <i>idtype</i> and <i>id</i> (<code>waitid</code>()) does not exist or is not a child of the calling process. (This can happen for one&#8217;s own child if the action for <code>SIGCHLD</code> is set to <code>SIG_IGN</code>. See also the <i>Linux Notes</i> section about threads.)</dd>
+<dt><code>EINTR</code></dt>
+<dd> <code>WNOHANG</code> was not set and an unblocked signal or a <code>SIGCHLD</code> was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>options</i> argument was invalid.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.3BSD, POSIX.1-2001.</p>
 <h2>NOTES</h2>
@@ -138,12 +138,12 @@ description: "wait, waitpid, waitid – wait for process to change state"
 <p> In the Linux kernel, a kernel-scheduled thread is not a distinct construct from a process. Instead, a thread is simply a process that is created using the Linux-unique <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) system call; other routines such as the portable <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) call are implemented using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2). Before Linux 2.4, a thread was just a special case of a process, and as a consequence one thread could not wait on the children of another thread, even when the latter belongs to the same thread group. However, POSIX prescribes such functionality, and since Linux 2.4 a thread can, and by default will, wait on children of other threads in the same thread group. </p>
 <p> The following Linux-specific <i>options</i> are for use with children created using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2); they can also, since Linux 4.7, be used with <code>waitid</code>():</p>
 <dl>
-<dt><code>__WCLONE</code></p>
-<dd> Wait for &quot;clone&quot; children only. If omitted, then wait for &quot;non-clone&quot; children only. (A &quot;clone&quot; child is one which delivers no signal, or a signal other than <code>SIGCHLD</code> to its parent upon termination.) This option is ignored if <code>__WALL</code> is also specified.</p>
-<dt><code>__WALL</code> (since Linux 2.4)</p>
-<dd> Wait for all children, regardless of type (&quot;clone&quot; or &quot;non-clone&quot;).</p>
-<dt><code>__WNOTHREAD</code> (since Linux 2.4)</p>
-<dd> Do not wait for children of other threads in the same thread group. This was the default before Linux 2.4.</dl>
+<dt><code>__WCLONE</code></dt>
+<dd> Wait for &quot;clone&quot; children only. If omitted, then wait for &quot;non-clone&quot; children only. (A &quot;clone&quot; child is one which delivers no signal, or a signal other than <code>SIGCHLD</code> to its parent upon termination.) This option is ignored if <code>__WALL</code> is also specified.</dd>
+<dt><code>__WALL</code> (since Linux 2.4)</dt>
+<dd> Wait for all children, regardless of type (&quot;clone&quot; or &quot;non-clone&quot;).</dd>
+<dt><code>__WNOTHREAD</code> (since Linux 2.4)</dt>
+<dd> Do not wait for children of other threads in the same thread group. This was the default before Linux 2.4.</dd></dl>
 <p> Since Linux 4.7, the <code>__WALL</code> flag is automatically implied if the child is being ptraced.</p>
 <h3>C library/kernel differences</h3>
 <p> <code>wait</code>() is actually a library function that (in glibc) is implemented as a call to <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2). </p>

@@ -114,9 +114,9 @@ print $f "Hello World!
 <p> This document was originally written by Thomas Dorner for the 5.005 release of Perl. </p>
 <p> This document was podified for the 5.6 release of perl 11 July 2000. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">AUTHORS</a></p>
+<dt><a href="#lbAO">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAP">SEE ALSO</a></p>
+</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAR">HISTORY</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAR">HISTORY</a></dt>
+<dd></dd></dl>

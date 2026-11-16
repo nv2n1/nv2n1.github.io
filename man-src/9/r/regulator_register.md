@@ -14,19 +14,19 @@ description: "regulator_register – register regulator"
 <p><i>regulator_desc</i></p>
 <dl>
 <dd>
-<dd>regulator to register</dl>
+</dd><dd>regulator to register</dd></dl>
 <p> <i>cfg</i></p>
 <dl>
-<dd>runtime configuration for regulator</dl>
+<dd>runtime configuration for regulator</dd></dl>
 <h2>Description</h2>
 <p>Called by regulator drivers to register a regulator. Returns a valid pointer to struct regulator_dev on success or an <code>ERR_PTR</code> on error.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

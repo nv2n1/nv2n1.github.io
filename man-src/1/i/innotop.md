@@ -53,7 +53,6 @@ url: "/docs/linux/man/1-innotop/"
 
  <pre>
  [RO] Query List (? for help) localhost, 01:11:19, 449.44 QPS, 14/7/163 con/run
- 
  CXN        When   Load  QPS    Slow  QCacheHit  KCacheHit  BpsIn    BpsOut 
  localhost  Total  0.00  1.07k   697      0.00%     98.17%  476.83k  242.83k
  CXN        Cmd    ID         User  Host      DB   Time   Query
@@ -75,48 +74,48 @@ url: "/docs/linux/man/1-innotop/"
  You can negate some options by prefixing the option name with --no. For example, --noinc (or --no-inc) negates ``--inc''.
 <dl>
 <dt>--color
-<dd> Enable or disable terminal coloring. Corresponds to the ``color'' config file setting.
-<dt>--config
-<dd> Specifies a configuration file to read. This option is non-sticky, that is to say it does not persist to the configuration file itself.
-<dt>--count
-<dd> Refresh only the specified number of times (ticks) before exiting. Each refresh is a pause for ``interval'' seconds, followed by requesting data from MySQL connections and printing it to the terminal.
-<dt>--delay
-<dd> Specifies the amount of time to pause between ticks (refreshes). Corresponds to the configuration option ``interval''.
-<dt>--help
-<dd> Print a summary of command-line usage and exit.
-<dt>--host
-<dd> Host to connect to.
-<dt>--inc
-<dd> Specifies whether innotop should display absolute numbers or relative numbers (offsets from their previous values). Corresponds to the configuration option ``status_inc''.
-<dt>--mode
-<dd> Specifies the mode in which innotop should start. Corresponds to the configuration option ``mode''.
-<dt>--nonint
-<dd> Enable non-interactive operation. See ``NON-INTERACTIVE <font SIZE="-1">OPERATION''</font> for more.
-<dt>--password
-<dd> Password to use for connection.
-<dt>--port
-<dd> Port to use for connection.
-<dt>--skipcentral
-<dd> Don't read the central configuration file.
-<dt>--timestamp
-<dd> In -n mode, write a timestamp either before every screenful of output, or if the option is given twice, at the start of every line. The format is controlled by the timeformat config variable.
-<dt>--user
-<dd> User to use for connection.
-<dt>--version
-<dd> Output version information and exit.
-<dt>--write
-<dd> Sets the configuration option ``readonly'' to 0, making innotop write the running configuration to ~/.innotop/innotop.conf on exit, if no configuration file was loaded at start-up.</dl>
+</dt><dd> Enable or disable terminal coloring. Corresponds to the ``color'' config file setting.
+</dd><dt>--config
+</dt><dd> Specifies a configuration file to read. This option is non-sticky, that is to say it does not persist to the configuration file itself.
+</dd><dt>--count
+</dt><dd> Refresh only the specified number of times (ticks) before exiting. Each refresh is a pause for ``interval'' seconds, followed by requesting data from MySQL connections and printing it to the terminal.
+</dd><dt>--delay
+</dt><dd> Specifies the amount of time to pause between ticks (refreshes). Corresponds to the configuration option ``interval''.
+</dd><dt>--help
+</dt><dd> Print a summary of command-line usage and exit.
+</dd><dt>--host
+</dt><dd> Host to connect to.
+</dd><dt>--inc
+</dt><dd> Specifies whether innotop should display absolute numbers or relative numbers (offsets from their previous values). Corresponds to the configuration option ``status_inc''.
+</dd><dt>--mode
+</dt><dd> Specifies the mode in which innotop should start. Corresponds to the configuration option ``mode''.
+</dd><dt>--nonint
+</dt><dd> Enable non-interactive operation. See ``NON-INTERACTIVE <font SIZE="-1">OPERATION''</font> for more.
+</dd><dt>--password
+</dt><dd> Password to use for connection.
+</dd><dt>--port
+</dt><dd> Port to use for connection.
+</dd><dt>--skipcentral
+</dt><dd> Don't read the central configuration file.
+</dd><dt>--timestamp
+</dt><dd> In -n mode, write a timestamp either before every screenful of output, or if the option is given twice, at the start of every line. The format is controlled by the timeformat config variable.
+</dd><dt>--user
+</dt><dd> User to use for connection.
+</dd><dt>--version
+</dt><dd> Output version information and exit.
+</dd><dt>--write
+</dt><dd> Sets the configuration option ``readonly'' to 0, making innotop write the running configuration to ~/.innotop/innotop.conf on exit, if no configuration file was loaded at start-up.</dd></dl>
 
 <h2>HOTKEYS</h2>
 
  innotop is interactive, and you control it with key-presses.
 <dl>
 <dt>&bull;
-<dd> Uppercase keys switch between modes.
-<dt>&bull;
-<dd> Lowercase keys initiate some action within the current mode.
-<dt>&bull;
-<dd> Other keys do something special like change configuration or show the innotop license.</dl>
+</dt><dd> Uppercase keys switch between modes.
+</dd><dt>&bull;
+</dt><dd> Lowercase keys initiate some action within the current mode.
+</dd><dt>&bull;
+</dt><dd> Other keys do something special like change configuration or show the innotop license.</dd></dl>
  
 
  Press '?' at any time to see the currently active keys and what they do.
@@ -126,14 +125,12 @@ url: "/docs/linux/man/1-innotop/"
  Each of innotop's modes retrieves and displays a particular type of data from the servers you're monitoring. You switch between modes with uppercase keys. The following is a brief description of each mode, in alphabetical order. To switch to the mode, press the key listed in front of its heading in the following list:
 <dl>
 <dt>A: Health Dashboard
-<dd> This mode displays a single table with one row per monitored server. The columns show essential overview information about the server's health, and coloration rules show whether replication is running or if there are any very long-running queries or excessive replication delay.
-<dt>B: InnoDB Buffers
-<dd> This mode displays information about the InnoDB buffer pool, page statistics, insert buffer, and adaptive hash index. The data comes from <font SIZE="-1">SHOW INNODB STATUS.</font> 
-
+</dt><dd> This mode displays a single table with one row per monitored server. The columns show essential overview information about the server's health, and coloration rules show whether replication is running or if there are any very long-running queries or excessive replication delay.
+</dd><dt>B: InnoDB Buffers
+</dt><dd> This mode displays information about the InnoDB buffer pool, page statistics, insert buffer, and adaptive hash index. The data comes from <font SIZE="-1">SHOW INNODB STATUS.</font> 
  This mode contains the ``buffer_pool'', ``page_statistics'', ``insert_buffers'', and ``adaptive_hash_index'' tables by default.
-<dt>C: Command Summary
-<dd> This mode is similar to mytop's Command Summary mode. It shows the ``cmd_summary'' table, which looks something like the following: 
-
+</dd><dt>C: Command Summary
+</dt><dd> This mode is similar to mytop's Command Summary mode. It shows the ``cmd_summary'' table, which looks something like the following: 
  <pre>
  Command Summary (? for help) localhost, 25+07:16:43, 2.45 QPS, 3 thd, 5.0.40
  _____________________ Command Summary _____________________
@@ -144,49 +141,33 @@ url: "/docs/linux/man/1-innotop/"
  Select_full_range_join     4097   0.09%          0    0.00%
  Select_range_check            0   0.00%          0    0.00%
 </pre> 
-
  The command summary table is built by extracting variables from ``<font SIZE="-1">STATUS_VARIABLES''</font>. The variables must be numeric and must match the prefix given by the ``cmd_filter'' configuration variable. The variables are then sorted by value descending and compared to the last variable, as shown above. The percentage columns are percentage of the total of all variables in the table, so you can see the relative weight of the variables. 
-
  The example shows what you see if the prefix is ``Select_''. The default prefix is ``Com_''. You can choose a prefix with the 's' key. 
-
  It's rather like running <font SIZE="-1">SHOW VARIABLES LIKE </font>``prefix%'' with memory and nice formatting. 
-
  Values are aggregated across all servers. The Pct columns are not correctly aggregated across multiple servers. This is a known limitation of the grouping algorithm that may be fixed in the future.
-<dt>D: InnoDB Deadlocks
-<dd> This mode shows the transactions involved in the last InnoDB deadlock. A second table shows the locks each transaction held and waited for. A deadlock is caused by a cycle in the waits-for graph, so there should be two locks held and one waited for unless the deadlock information is truncated. 
-
+</dd><dt>D: InnoDB Deadlocks
+</dt><dd> This mode shows the transactions involved in the last InnoDB deadlock. A second table shows the locks each transaction held and waited for. A deadlock is caused by a cycle in the waits-for graph, so there should be two locks held and one waited for unless the deadlock information is truncated. 
  InnoDB puts deadlock information before some other information in the <font SIZE="-1">SHOW INNODB STATUS</font> output. If there are a lot of locks, the deadlock information can grow very large, and there is a limit on the size of the <font SIZE="-1">SHOW INNODB STATUS</font> output. A large deadlock can fill the entire output, or even be truncated, and prevent you from seeing other information at all. If you are running innotop in another mode, for example T mode, and suddenly you don't see anything, you might want to check and see if a deadlock has wiped out the data you need. 
-
  If it has, you can create a small deadlock to replace the large one. Use the 'w' key to 'wipe' the large deadlock with a small one. This will not work unless you have defined a deadlock table for the connection (see ``<font SIZE="-1">SERVER CONNECTIONS''</font>). 
-
  You can also configure innotop to automatically detect when a large deadlock needs to be replaced with a small one (see ``auto_wipe_dl''). 
-
  This mode displays the ``deadlock_transactions'' and ``deadlock_locks'' tables by default.
-<dt>F: InnoDB Foreign Key Errors
-<dd> This mode shows the last InnoDB foreign key error information, such as the table where it happened, when and who and what query caused it, and so on. 
-
+</dd><dt>F: InnoDB Foreign Key Errors
+</dt><dd> This mode shows the last InnoDB foreign key error information, such as the table where it happened, when and who and what query caused it, and so on. 
  InnoDB has a huge variety of foreign key error messages, and many of them are just hard to parse. innotop doesn't always do the best job here, but there's so much code devoted to parsing this messy, unparseable output that innotop is likely never to be perfect in this regard. If innotop doesn't show you what you need to see, just look at the status text directly. 
-
  This mode displays the ``fk_error'' table by default.
-<dt>I: InnoDB I/O Info
-<dd> This mode shows InnoDB's I/O statistics, including the I/O threads, pending I/O, file I/O miscellaneous, and log statistics. It displays the ``io_threads'', ``pending_io'', ``file_io_misc'', and ``log_statistics'' tables by default.
-<dt>K: InnoDB Lock Waits
-<dd> This mode shows information from InnoDB plugin's transaction and locking tables. You can use it to find when a transaction is waiting for another, and kill the blocking transaction. It displays the &quot;innodb_blocked_blocker&quot; table.
-<dt>L: Locks
-<dd> This mode shows information about current locks. At the moment only InnoDB locks are supported, and by default you'll only see locks for which transactions are waiting. This information comes from the <font SIZE="-1">TRANSACTIONS</font> section of the InnoDB status text. If you have a very busy server, you may have frequent lock waits; it helps to be able to see which tables and indexes are the ``hot spot'' for locks. If your server is running pretty well, this mode should show nothing. 
-
+</dd><dt>I: InnoDB I/O Info
+</dt><dd> This mode shows InnoDB's I/O statistics, including the I/O threads, pending I/O, file I/O miscellaneous, and log statistics. It displays the ``io_threads'', ``pending_io'', ``file_io_misc'', and ``log_statistics'' tables by default.
+</dd><dt>K: InnoDB Lock Waits
+</dt><dd> This mode shows information from InnoDB plugin's transaction and locking tables. You can use it to find when a transaction is waiting for another, and kill the blocking transaction. It displays the &quot;innodb_blocked_blocker&quot; table.
+</dd><dt>L: Locks
+</dt><dd> This mode shows information about current locks. At the moment only InnoDB locks are supported, and by default you'll only see locks for which transactions are waiting. This information comes from the <font SIZE="-1">TRANSACTIONS</font> section of the InnoDB status text. If you have a very busy server, you may have frequent lock waits; it helps to be able to see which tables and indexes are the ``hot spot'' for locks. If your server is running pretty well, this mode should show nothing. 
  You can configure MySQL and innotop to monitor not only locks for which a transaction is waiting, but those currently held, too. You can do this with the InnoDB Lock Monitor (&lt;<a rel="nofollow" HREF="http://dev.mysql.com/doc/en/innodb-monitor.html">http://dev.mysql.com/doc/en/innodb-monitor.html</a>&gt;). It's not documented in the MySQL manual, but creating the lock monitor with the following statement also affects the output of <font SIZE="-1">SHOW INNODB STATUS,</font> which innotop uses: 
-
  <pre>
   CREATE TABLE innodb_lock_monitor(a int) ENGINE=INNODB;
 </pre> 
-
  This causes InnoDB to print its output to the MySQL file every 16 seconds or so, as stated in the manual, but it also makes the normal <font SIZE="-1">SHOW INNODB STATUS</font> output include lock information, which innotop can parse and display (that's the undocumented feature). 
-
  This means you can do what may have seemed impossible: to a limited extent (InnoDB truncates some information in the output), you can see which transaction holds the locks something else is waiting for. You can also enable and disable the InnoDB Lock Monitor with the key mappings in this mode. 
-
  This mode displays the ``innodb_locks'' table by default. Here's a sample of the screen when one connection is waiting for locks another connection holds: 
-
  <pre>
  _________________________________ InnoDB Locks __________________________
  CXN        ID  Type    Waiting  Wait   Active  Mode  DB    Table  Index
@@ -196,48 +177,34 @@ url: "/docs/linux/man/1-innotop/"
  localhost  11  TABLE         0  00:00   00:25  IX    test  t1
  localhost  11  RECORD        0  00:00   00:25  X     test  t1     PRIMARY
 </pre> 
-
  You can see the first connection, <font SIZE="-1">ID 12,</font> is waiting for a lock on the <font SIZE="-1">PRIMARY</font> key on test.t1, and has been waiting for 10 seconds. The second connection isn't waiting, because the Waiting column is 0, but it holds locks on the same index. That tells you connection 11 is blocking connection 12.
-<dt>M: Master/Slave Replication Status
-<dd> This mode shows the output of <font SIZE="-1">SHOW SLAVE STATUS</font> and <font SIZE="-1">SHOW MASTER STATUS</font> in three tables. The first two divide the slave's status into <font SIZE="-1">SQL</font> and I/O thread status, and the last shows master status. Filters are applied to eliminate non-slave servers from the slave tables, and non-master servers from the master table. 
-
+</dd><dt>M: Master/Slave Replication Status
+</dt><dd> This mode shows the output of <font SIZE="-1">SHOW SLAVE STATUS</font> and <font SIZE="-1">SHOW MASTER STATUS</font> in three tables. The first two divide the slave's status into <font SIZE="-1">SQL</font> and I/O thread status, and the last shows master status. Filters are applied to eliminate non-slave servers from the slave tables, and non-master servers from the master table. 
  This mode displays the ``slave_sql_status'', ``slave_io_status'', and ``master_status'' tables by default.
-<dt>O: Open Tables
-<dd> This section comes from MySQL's <font SIZE="-1">SHOW OPEN TABLES</font> command. By default it is filtered to show tables which are in use by one or more queries, so you can get a quick look at which tables are 'hot'. You can use this to guess which tables might be locked implicitly. 
-
+</dd><dt>O: Open Tables
+</dt><dd> This section comes from MySQL's <font SIZE="-1">SHOW OPEN TABLES</font> command. By default it is filtered to show tables which are in use by one or more queries, so you can get a quick look at which tables are 'hot'. You can use this to guess which tables might be locked implicitly. 
  This mode displays the ``open_tables'' mode by default.
-<dt>U: User Statistics
-<dd> This mode displays data that's available in Percona's enhanced version of MySQL (also known as Percona Server with XtraDB). Specifically, it makes it easy to enable and disable the so-called ``user statistics.'' This feature gathers stats on clients, threads, users, tables, and indexes and makes them available as <font SIZE="-1">INFORMATION_SCHEMA</font> tables. These are invaluable for understanding what your server is doing. They are also available in MariaDB. 
-
+</dd><dt>U: User Statistics
+</dt><dd> This mode displays data that's available in Percona's enhanced version of MySQL (also known as Percona Server with XtraDB). Specifically, it makes it easy to enable and disable the so-called ``user statistics.'' This feature gathers stats on clients, threads, users, tables, and indexes and makes them available as <font SIZE="-1">INFORMATION_SCHEMA</font> tables. These are invaluable for understanding what your server is doing. They are also available in MariaDB. 
  The statistics supported so far are only from the <font SIZE="-1">TABLE_STATISTICS</font> and <font SIZE="-1">INDEX_STATISTICS</font> tables added by Percona. There are three views: one of table stats, one of index stats (which can be aggregated with the = key), and one of both. 
-
  The server doesn't gather these stats by default. You have to set the variable userstat_running to turn it on. You can do this easily with innotop from U mode, with the 's' key.
-<dt>Q: Query List
-<dd> This mode displays the output from <font SIZE="-1">SHOW FULL PROCESSLIST,</font> much like <b>mytop</b>'s query list mode. This mode does <b>not</b> show InnoDB-related information. This is probably one of the most useful modes for general usage. 
-
+</dd><dt>Q: Query List
+</dt><dd> This mode displays the output from <font SIZE="-1">SHOW FULL PROCESSLIST,</font> much like <b>mytop</b>'s query list mode. This mode does <b>not</b> show InnoDB-related information. This is probably one of the most useful modes for general usage. 
  There is an informative header that shows general status information about your server. You can toggle it on and off with the 'h' key. By default, innotop hides inactive processes and its own process. You can toggle these on and off with the 'i' and 'a' keys. 
-
  You can <font SIZE="-1">EXPLAIN</font> a query from this mode with the 'e' key. This displays the query's full text, the results of <font SIZE="-1">EXPLAIN,</font> and in newer MySQL versions, even the optimized query resulting from <font SIZE="-1">EXPLAIN EXTENDED. </font> innotop also tries to rewrite certain queries to make them EXPLAIN-able. For example, <font SIZE="-1">INSERT/SELECT</font> statements are rewritable. 
-
  This mode displays the ``q_header'' and ``processlist'' tables by default.
-<dt>R: InnoDB Row Operations and Semaphores
-<dd> This mode shows InnoDB row operations, row operation miscellaneous, semaphores, and information from the wait array. It displays the ``row_operations'', ``row_operation_misc'', ``semaphores'', and ``wait_array'' tables by default.
-<dt>S: Variables &amp; Status
-<dd> This mode calculates statistics, such as queries per second, and prints them out in several different styles. You can show absolute values, or incremental values between ticks. 
-
+</dd><dt>R: InnoDB Row Operations and Semaphores
+</dt><dd> This mode shows InnoDB row operations, row operation miscellaneous, semaphores, and information from the wait array. It displays the ``row_operations'', ``row_operation_misc'', ``semaphores'', and ``wait_array'' tables by default.
+</dd><dt>S: Variables &amp; Status
+</dt><dd> This mode calculates statistics, such as queries per second, and prints them out in several different styles. You can show absolute values, or incremental values between ticks. 
  You can switch between the views by pressing a key. The 's' key prints a single line each time the screen updates, in the style of <b>vmstat</b>. The 'g' key changes the view to a graph of the same numbers, sort of like <b>tload</b>. The 'v' key changes the view to a pivoted table of variable names on the left, with successive updates scrolling across the screen from left to right. You can choose how many updates to put on the screen with the ``num_status_sets'' configuration variable. 
-
  Headers may be abbreviated to fit on the screen in interactive operation. You choose which variables to display with the 'c' key, which selects from predefined sets, or lets you create your own sets. You can edit the current set with the 'e' key. 
-
  This mode doesn't really display any tables like other modes. Instead, it uses a table definition to extract and format the data, but it then transforms the result in special ways before outputting it. It uses the ``var_status'' table definition for this.
-<dt>T: InnoDB Transactions
-<dd> This mode shows transactions from the InnoDB monitor's output, in <b>top</b>-like format. This mode is the reason I wrote innotop. 
-
+</dd><dt>T: InnoDB Transactions
+</dt><dd> This mode shows transactions from the InnoDB monitor's output, in <b>top</b>-like format. This mode is the reason I wrote innotop. 
  You can kill queries or processes with the 'k' and 'x' keys, and <font SIZE="-1">EXPLAIN</font> a query with the 'e' or 'f' keys. InnoDB doesn't print the full query in transactions, so explaining may not work right if the query is truncated. 
-
  The informational header can be toggled on and off with the 'h' key. By default, innotop hides inactive transactions and its own transaction. You can toggle this on and off with the 'i' and 'a' keys. 
-
- This mode displays the ``t_header'' and ``innodb_transactions'' tables by default.</dl>
+ This mode displays the ``t_header'' and ``innodb_transactions'' tables by default.</dd></dl>
 
 <h2>INNOTOP STATUS</h2>
 
@@ -280,23 +247,19 @@ url: "/docs/linux/man/1-innotop/"
  When you create a server connection using '@', innotop asks you for a series of inputs, as follows:
 <dl>
 <dt><font SIZE="-1">DSN</font>
-<dd> A <font SIZE="-1">DSN</font> is a Data Source Name, which is the initial argument passed to the <font SIZE="-1">DBI</font> module for connecting to a server. It is usually of the form 
-
+</dt><dd> A <font SIZE="-1">DSN</font> is a Data Source Name, which is the initial argument passed to the <font SIZE="-1">DBI</font> module for connecting to a server. It is usually of the form 
  <pre>
  DBI:mysql:;mysql_read_default_group=mysql;host=HOSTNAME
 </pre> 
-
  Since this <font SIZE="-1">DSN</font> is passed to the DBD::mysql driver, you should read the driver's documentation at ``/search.cpan.org/dist/DBD-mysql/lib/DBD/mysql.pm''`` in ''http: for the exact details on all the options you can pass the driver in the <font SIZE="-1">DSN. </font> You can read more about <font SIZE="-1">DBI</font> at &lt;<a rel="nofollow" HREF="http://dbi.perl.org/docs/">http://dbi.perl.org/docs/</a>&gt;, and especially at &lt;<a rel="nofollow" HREF="http://search.cpan.org/~timb/DBI/DBI.pm">http://search.cpan.org/~timb/DBI/DBI.pm</a>&gt;. 
-
  The mysql_read_default_group=mysql option lets the <font SIZE="-1">DBD</font> driver read your MySQL options files, such as ~/.my.cnf on UNIX-ish systems. You can use this to avoid specifying a username or password for the connection.
-<dt>InnoDB Deadlock Table
-<dd> This optional item tells innotop a table name it can use to deliberately create a small deadlock (see ``D: InnoDB Deadlocks''). If you specify this option, you just need to be sure the table doesn't exist, and that innotop can create and drop the table with the InnoDB storage engine. You can safely omit or just accept the default if you don't intend to use this.
-<dt>Username
-<dd> innotop will ask you if you want to specify a username. If you say 'y', it will then prompt you for a user name. If you have a MySQL option file that specifies your username, you don't have to specify a username. 
-
+</dd><dt>InnoDB Deadlock Table
+</dt><dd> This optional item tells innotop a table name it can use to deliberately create a small deadlock (see ``D: InnoDB Deadlocks''). If you specify this option, you just need to be sure the table doesn't exist, and that innotop can create and drop the table with the InnoDB storage engine. You can safely omit or just accept the default if you don't intend to use this.
+</dd><dt>Username
+</dt><dd> innotop will ask you if you want to specify a username. If you say 'y', it will then prompt you for a user name. If you have a MySQL option file that specifies your username, you don't have to specify a username. 
  The username defaults to your login name on the system you're running innotop on.
-<dt>Password
-<dd> innotop will ask you if you want to specify a password. Like the username, the password is optional, but there's an additional prompt that asks if you want to save the password in the innotop configuration file. If you don't save it in the configuration file, innotop will prompt you for a password each time it starts. Passwords in the innotop configuration file are saved in plain text, not encrypted in any way.</dl>
+</dd><dt>Password
+</dt><dd> innotop will ask you if you want to specify a password. Like the username, the password is optional, but there's an additional prompt that asks if you want to save the password in the innotop configuration file. If you don't save it in the configuration file, innotop will prompt you for a password each time it starts. Passwords in the innotop configuration file are saved in plain text, not encrypted in any way.</dd></dl>
  
 
  Once you finish answering these questions, you should be connected to a server. But innotop isn't limited to monitoring a single server; you can define many server connections and switch between them by pressing the '@' key. See ``<font SIZE="-1">SWITCHING BETWEEN CONNECTIONS''</font>.
@@ -338,23 +301,23 @@ url: "/docs/linux/man/1-innotop/"
  You can run innotop in non-interactive mode, in which case it is entirely controlled from the configuration file and command-line options. To start innotop in non-interactive mode, give the L``&lt;--nonint''&gt; command-line option. This changes innotop's behavior in the following ways:
 <dl>
 <dt>&bull;
-<dd> Certain Perl modules are not loaded. Term::Readline is not loaded, since innotop doesn't prompt interactively. Term::ANSIColor and Win32::Console::ANSI modules are not loaded. Term::ReadKey is still used, since innotop may have to prompt for connection passwords when starting up.
-<dt>&bull;
-<dd> innotop does not clear the screen after each tick.
-<dt>&bull;
-<dd> innotop does not persist any changes to the configuration file.
-<dt>&bull;
-<dd> If ``--count'' is given and innotop is in incremental mode (see ``status_inc'' and ``--inc''), innotop actually refreshes one more time than specified so it can print incremental statistics. This suppresses output during the first tick, so innotop may appear to hang.
-<dt>&bull;
-<dd> innotop only displays the first table in each mode. This is so the output can be easily processed with other command-line utilities such as awk and sed. To change which tables display in each mode, see ``<font SIZE="-1">TABLES''</font>. Since ``Q: Query List'' mode is so important, innotop automatically disables the ``q_header'' table. This ensures you'll see the ``processlist'' table, even if you have innotop configured to show the q_header table during interactive operation. Similarly, in ``T: InnoDB Transactions'' mode, the ``t_header'' table is suppressed so you see only the ``innodb_transactions'' table.
-<dt>&bull;
-<dd> All output is tab-separated instead of being column-aligned with whitespace, and innotop prints the full contents of each table instead of only printing one screenful at a time.
-<dt>&bull;
-<dd> innotop only prints column headers once instead of every tick (see ``hide_hdr''). innotop does not print table captions (see ``display_table_captions''). innotop ensures there are no empty lines in the output.
-<dt>&bull;
-<dd> innotop does not honor the ``shorten'' transformation, which normally shortens some numbers to human-readable formats.
-<dt>&bull;
-<dd> innotop does not print a status line (see ``<font SIZE="-1">INNOTOP STATUS''</font>).</dl>
+</dt><dd> Certain Perl modules are not loaded. Term::Readline is not loaded, since innotop doesn't prompt interactively. Term::ANSIColor and Win32::Console::ANSI modules are not loaded. Term::ReadKey is still used, since innotop may have to prompt for connection passwords when starting up.
+</dd><dt>&bull;
+</dt><dd> innotop does not clear the screen after each tick.
+</dd><dt>&bull;
+</dt><dd> innotop does not persist any changes to the configuration file.
+</dd><dt>&bull;
+</dt><dd> If ``--count'' is given and innotop is in incremental mode (see ``status_inc'' and ``--inc''), innotop actually refreshes one more time than specified so it can print incremental statistics. This suppresses output during the first tick, so innotop may appear to hang.
+</dd><dt>&bull;
+</dt><dd> innotop only displays the first table in each mode. This is so the output can be easily processed with other command-line utilities such as awk and sed. To change which tables display in each mode, see ``<font SIZE="-1">TABLES''</font>. Since ``Q: Query List'' mode is so important, innotop automatically disables the ``q_header'' table. This ensures you'll see the ``processlist'' table, even if you have innotop configured to show the q_header table during interactive operation. Similarly, in ``T: InnoDB Transactions'' mode, the ``t_header'' table is suppressed so you see only the ``innodb_transactions'' table.
+</dd><dt>&bull;
+</dt><dd> All output is tab-separated instead of being column-aligned with whitespace, and innotop prints the full contents of each table instead of only printing one screenful at a time.
+</dd><dt>&bull;
+</dt><dd> innotop only prints column headers once instead of every tick (see ``hide_hdr''). innotop does not print table captions (see ``display_table_captions''). innotop ensures there are no empty lines in the output.
+</dd><dt>&bull;
+</dt><dd> innotop does not honor the ``shorten'' transformation, which normally shortens some numbers to human-readable formats.
+</dd><dt>&bull;
+</dt><dd> innotop does not print a status line (see ``<font SIZE="-1">INNOTOP STATUS''</font>).</dd></dl>
 
 <h2>CONFIGURING</h2>
 
@@ -363,23 +326,21 @@ url: "/docs/linux/man/1-innotop/"
  While running innotop, press the '$' key to bring up the configuration editing dialog. Press another key to select the type of data you want to edit:
 <dl>
 <dt>S: Statement Sleep Times
-<dd> Edits <font SIZE="-1">SQL</font> statement sleep delays, which make innotop pause for the specified amount of time after executing a statement. See ``<font SIZE="-1">SQL STATEMENTS''</font> for a definition of each statement and what it does. By default innotop does not delay after any statements. 
-
+</dt><dd> Edits <font SIZE="-1">SQL</font> statement sleep delays, which make innotop pause for the specified amount of time after executing a statement. See ``<font SIZE="-1">SQL STATEMENTS''</font> for a definition of each statement and what it does. By default innotop does not delay after any statements. 
  This feature is included so you can customize the side-effects caused by monitoring your server. You may not see any effects, but some innotop users have noticed that certain MySQL versions under very high load with InnoDB enabled take longer than usual to execute <font SIZE="-1">SHOW GLOBAL STATUS. </font> If innotop calls <font SIZE="-1">SHOW FULL PROCESSLIST</font> immediately afterward, the processlist contains more queries than the machine actually averages at any given moment. Configuring innotop to pause briefly after calling <font SIZE="-1">SHOW GLOBAL STATUS</font> alleviates this effect. 
-
  Sleep times are stored in the ``stmt_sleep_times'' section of the configuration file. Fractional-second sleeps are supported, subject to your hardware's limitations.
-<dt>c: Edit Columns
-<dd> Starts the table editor on one of the displayed tables. See ``<font SIZE="-1">TABLE EDITOR''</font>. An alternative way to start the table editor without entering the configuration dialog is with the '^' key.
-<dt>g: General Configuration
-<dd> Starts the configuration editor to edit global and mode-specific configuration variables (see ``<font SIZE="-1">MODES''</font>). innotop prompts you to choose a variable from among the global and mode-specific ones depending on the current mode.
-<dt>k: Row-Coloring Rules
-<dd> Starts the row-coloring rules editor on one of the displayed table(s). See ``<font SIZE="-1">COLORS''</font> for details.
-<dt>p: Manage Plugins
-<dd> Starts the plugin configuration editor. See ``<font SIZE="-1">PLUGINS''</font> for details.
-<dt>s: Server Groups
-<dd> Lets you create and edit server groups. See ``<font SIZE="-1">SERVER GROUPS''</font>.
-<dt>t: Choose Displayed Tables
-<dd> Lets you choose which tables to display in this mode. See ``<font SIZE="-1">MODES''</font> and ``<font SIZE="-1">TABLES''</font>.</dl>
+</dd><dt>c: Edit Columns
+</dt><dd> Starts the table editor on one of the displayed tables. See ``<font SIZE="-1">TABLE EDITOR''</font>. An alternative way to start the table editor without entering the configuration dialog is with the '^' key.
+</dd><dt>g: General Configuration
+</dt><dd> Starts the configuration editor to edit global and mode-specific configuration variables (see ``<font SIZE="-1">MODES''</font>). innotop prompts you to choose a variable from among the global and mode-specific ones depending on the current mode.
+</dd><dt>k: Row-Coloring Rules
+</dt><dd> Starts the row-coloring rules editor on one of the displayed table(s). See ``<font SIZE="-1">COLORS''</font> for details.
+</dd><dt>p: Manage Plugins
+</dt><dd> Starts the plugin configuration editor. See ``<font SIZE="-1">PLUGINS''</font> for details.
+</dd><dt>s: Server Groups
+</dt><dd> Lets you create and edit server groups. See ``<font SIZE="-1">SERVER GROUPS''</font>.
+</dd><dt>t: Choose Displayed Tables
+</dt><dd> Lets you choose which tables to display in this mode. See ``<font SIZE="-1">MODES''</font> and ``<font SIZE="-1">TABLES''</font>.</dd></dl>
 
 <h2>CONFIGURATION FILE</h2>
 
@@ -396,132 +357,126 @@ url: "/docs/linux/man/1-innotop/"
  The following list describes each section of the configuration file and the data it contains:
 <dl>
 <dt>general
-<dd> The 'general' section contains global configuration variables and variables that may be mode-specific, but don't belong in any other section. The syntax is a simple key=value list. innotop writes a comment above each value to help you edit the file by hand.
-<dl>
-<dt>
-<dd>
+</dt><dd> The 'general' section contains global configuration variables and variables that may be mode-specific, but don't belong in any other section. The syntax is a simple key=value list. innotop writes a comment above each value to help you edit the file by hand.
+</dd><dl>
 <dl>
 <dt>S_func
-<dd> Controls S mode presentation (see ``S: Variables &amp; Status''). If g, values are graphed; if s, values are like vmstat; if p, values are in a pivoted table.
-<dt>S_set
-<dd> Specifies which set of variables to display in ``S: Variables &amp; Status'' mode. See ``<font SIZE="-1">VARIABLE SETS''</font>.
-<dt>auto_wipe_dl
-<dd> Instructs innotop to automatically wipe large deadlocks when it notices them. When this happens you may notice a slight delay. At the next tick, you will usually see the information that was being truncated by the large deadlock.
-<dt>charset
-<dd> Specifies what kind of characters to allow through the ``no_ctrl_char'' transformation. This keeps non-printable characters from confusing a terminal when you monitor queries that contain binary data, such as images. 
-
+</dt><dd> Controls S mode presentation (see ``S: Variables &amp; Status''). If g, values are graphed; if s, values are like vmstat; if p, values are in a pivoted table.
+</dd><dt>S_set
+</dt><dd> Specifies which set of variables to display in ``S: Variables &amp; Status'' mode. See ``<font SIZE="-1">VARIABLE SETS''</font>.
+</dd><dt>auto_wipe_dl
+</dt><dd> Instructs innotop to automatically wipe large deadlocks when it notices them. When this happens you may notice a slight delay. At the next tick, you will usually see the information that was being truncated by the large deadlock.
+</dd><dt>charset
+</dt><dd> Specifies what kind of characters to allow through the ``no_ctrl_char'' transformation. This keeps non-printable characters from confusing a terminal when you monitor queries that contain binary data, such as images. 
  The default is 'ascii', which considers anything outside normal <font SIZE="-1">ASCII</font> to be a control character. The other allowable values are 'unicode' and 'none'. 'none' considers every character a control character, which can be useful for collapsing <font SIZE="-1">ALL</font> text fields in queries.
-<dt>cmd_filter
-<dd> This is the prefix that filters variables in ``C: Command Summary'' mode.
-<dt>color
-<dd> Whether terminal coloring is permitted.
-<dt>cxn_timeout
-<dd> On MySQL versions 4.0.3 and newer, this variable is used to set the connection's timeout, so MySQL doesn't close the connection if it is not used for a while. This might happen because a connection isn't monitored in a particular mode, for example.
-<dt>debug
-<dd> This option enables more verbose errors and makes innotop more strict in some places. It can help in debugging filters and other user-defined code. It also makes innotop write a lot of information to ``debugfile'' when there is a crash.
-<dt>debugfile
-<dd> A file to which innotop will write information when there is a crash. See ``<font SIZE="-1">FILES''</font>.
-<dt>display_table_captions
-<dd> innotop displays a table caption above most tables. This variable suppresses or shows captions on all tables globally. Some tables are configured with the hide_caption property, which overrides this.
-<dt>global
-<dd> Whether to show <font SIZE="-1">GLOBAL</font> variables and status. innotop only tries to do this on servers which support the <font SIZE="-1">GLOBAL</font> option to <font SIZE="-1">SHOW VARIABLES</font> and <font SIZE="-1">SHOW STATUS. </font> In some MySQL versions, you need certain privileges to do this; if you don't have them, innotop will not be able to fetch any variable and status data. This configuration variable lets you run innotop and fetch what data you can even without the elevated privileges. 
-
+</dd><dt>cmd_filter
+</dt><dd> This is the prefix that filters variables in ``C: Command Summary'' mode.
+</dd><dt>color
+</dt><dd> Whether terminal coloring is permitted.
+</dd><dt>cxn_timeout
+</dt><dd> On MySQL versions 4.0.3 and newer, this variable is used to set the connection's timeout, so MySQL doesn't close the connection if it is not used for a while. This might happen because a connection isn't monitored in a particular mode, for example.
+</dd><dt>debug
+</dt><dd> This option enables more verbose errors and makes innotop more strict in some places. It can help in debugging filters and other user-defined code. It also makes innotop write a lot of information to ``debugfile'' when there is a crash.
+</dd><dt>debugfile
+</dt><dd> A file to which innotop will write information when there is a crash. See ``<font SIZE="-1">FILES''</font>.
+</dd><dt>display_table_captions
+</dt><dd> innotop displays a table caption above most tables. This variable suppresses or shows captions on all tables globally. Some tables are configured with the hide_caption property, which overrides this.
+</dd><dt>global
+</dt><dd> Whether to show <font SIZE="-1">GLOBAL</font> variables and status. innotop only tries to do this on servers which support the <font SIZE="-1">GLOBAL</font> option to <font SIZE="-1">SHOW VARIABLES</font> and <font SIZE="-1">SHOW STATUS. </font> In some MySQL versions, you need certain privileges to do this; if you don't have them, innotop will not be able to fetch any variable and status data. This configuration variable lets you run innotop and fetch what data you can even without the elevated privileges. 
  I can no longer find or reproduce the situation where <font SIZE="-1">GLOBAL</font> wasn't allowed, but I know there was one.
-<dt>graph_char
-<dd> Defines the character to use when drawing graphs in ``S: Variables &amp; Status'' mode.
-<dt>header_highlight
-<dd> Defines how to highlight column headers. This only works if Term::ANSIColor is available. Valid values are 'bold' and 'underline'.
-<dt>hide_hdr
-<dd> Hides column headers globally.
-<dt>interval
-<dd> The interval at which innotop will refresh its data (ticks). The interval is implemented as a sleep time between ticks, so the true interval will vary depending on how long it takes innotop to fetch and render data. 
-
+</dd><dt>graph_char
+</dt><dd> Defines the character to use when drawing graphs in ``S: Variables &amp; Status'' mode.
+</dd><dt>header_highlight
+</dt><dd> Defines how to highlight column headers. This only works if Term::ANSIColor is available. Valid values are 'bold' and 'underline'.
+</dd><dt>hide_hdr
+</dt><dd> Hides column headers globally.
+</dd><dt>interval
+</dt><dd> The interval at which innotop will refresh its data (ticks). The interval is implemented as a sleep time between ticks, so the true interval will vary depending on how long it takes innotop to fetch and render data. 
  This variable accepts fractions of a second.
-<dt>mode
-<dd> The mode in which innotop should start. Allowable arguments are the same as the key presses that select a mode interactively. See ``<font SIZE="-1">MODES''</font>.
-<dt>num_digits
-<dd> How many digits to show in fractional numbers and percents. This variable's range is between 0 and 9 and can be set directly from ``S: Variables &amp; Status'' mode with the '+' and '-' keys. It is used in the ``set_precision'', ``shorten'', and ``percent'' transformations.
-<dt>num_status_sets
-<dd> Controls how many sets of status variables to display in pivoted ``S: Variables &amp; Status'' mode. It also controls the number of old sets of variables innotop keeps in its memory, so the larger this variable is, the more memory innotop uses.
-<dt>plugin_dir
-<dd> Specifies where plugins can be found. By default, innotop stores plugins in the 'plugins' subdirectory of your innotop configuration directory.
-<dt>readonly
-<dd> Whether the configuration file is readonly. This cannot be set interactively.
-<dt>show_cxn_errors
-<dd> Makes innotop print connection errors to <font SIZE="-1">STDOUT. </font> See ``<font SIZE="-1">ERROR HANDLING''</font>.
-<dt>show_cxn_errors_in_tbl
-<dd> Makes innotop display connection errors as rows in the first table on screen. See ``<font SIZE="-1">ERROR HANDLING''</font>.
-<dt>show_percent
-<dd> Adds a '%' character after the value returned by the ``percent'' transformation.
-<dt>show_statusbar
-<dd> Controls whether to show the status bar in the display. See ``<font SIZE="-1">INNOTOP STATUS''</font>.
-<dt>skip_innodb
-<dd> Disables fetching <font SIZE="-1">SHOW INNODB STATUS,</font> in case your server(s) do not have InnoDB enabled and you don't want innotop to try to fetch it. This can also be useful when you don't have the <font SIZE="-1">SUPER</font> privilege, required to run <font SIZE="-1">SHOW INNODB STATUS.</font>
-<dt>spark
-<dd> Specifies how wide a spark chart is. There are two <font SIZE="-1">ASCII</font> spark charts in A mode, showing <font SIZE="-1">QPS</font> and User_threads_running.
-<dt>status_inc
-<dd> Whether to show absolute or incremental values for status variables. Incremental values are calculated as an offset from the last value innotop saw for that variable. This is a global setting, but will probably become mode-specific at some point. Right now it is honored a bit inconsistently; some modes don't pay attention to it.
-<dt>timeformat
-<dd> The C-style <i>strftime()</i>-compatible format for the timestamp line to be printed in -n mode when -t is set.</dl>
+</dd><dt>mode
+</dt><dd> The mode in which innotop should start. Allowable arguments are the same as the key presses that select a mode interactively. See ``<font SIZE="-1">MODES''</font>.
+</dd><dt>num_digits
+</dt><dd> How many digits to show in fractional numbers and percents. This variable's range is between 0 and 9 and can be set directly from ``S: Variables &amp; Status'' mode with the '+' and '-' keys. It is used in the ``set_precision'', ``shorten'', and ``percent'' transformations.
+</dd><dt>num_status_sets
+</dt><dd> Controls how many sets of status variables to display in pivoted ``S: Variables &amp; Status'' mode. It also controls the number of old sets of variables innotop keeps in its memory, so the larger this variable is, the more memory innotop uses.
+</dd><dt>plugin_dir
+</dt><dd> Specifies where plugins can be found. By default, innotop stores plugins in the 'plugins' subdirectory of your innotop configuration directory.
+</dd><dt>readonly
+</dt><dd> Whether the configuration file is readonly. This cannot be set interactively.
+</dd><dt>show_cxn_errors
+</dt><dd> Makes innotop print connection errors to <font SIZE="-1">STDOUT. </font> See ``<font SIZE="-1">ERROR HANDLING''</font>.
+</dd><dt>show_cxn_errors_in_tbl
+</dt><dd> Makes innotop display connection errors as rows in the first table on screen. See ``<font SIZE="-1">ERROR HANDLING''</font>.
+</dd><dt>show_percent
+</dt><dd> Adds a '%' character after the value returned by the ``percent'' transformation.
+</dd><dt>show_statusbar
+</dt><dd> Controls whether to show the status bar in the display. See ``<font SIZE="-1">INNOTOP STATUS''</font>.
+</dd><dt>skip_innodb
+</dt><dd> Disables fetching <font SIZE="-1">SHOW INNODB STATUS,</font> in case your server(s) do not have InnoDB enabled and you don't want innotop to try to fetch it. This can also be useful when you don't have the <font SIZE="-1">SUPER</font> privilege, required to run <font SIZE="-1">SHOW INNODB STATUS.</font>
+</dd><dt>spark
+</dt><dd> Specifies how wide a spark chart is. There are two <font SIZE="-1">ASCII</font> spark charts in A mode, showing <font SIZE="-1">QPS</font> and User_threads_running.
+</dd><dt>status_inc
+</dt><dd> Whether to show absolute or incremental values for status variables. Incremental values are calculated as an offset from the last value innotop saw for that variable. This is a global setting, but will probably become mode-specific at some point. Right now it is honored a bit inconsistently; some modes don't pay attention to it.
+</dd><dt>timeformat
+</dt><dd> The C-style <i>strftime()</i>-compatible format for the timestamp line to be printed in -n mode when -t is set.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 
 <dt>plugins
-<dd> This section holds a list of package names of active plugins. If the plugin exists, innotop will activate it. See ``<font SIZE="-1">PLUGINS''</font> for more information.
-<dt>filters
-<dd> This section holds user-defined filters (see ``<font SIZE="-1">FILTERS''</font>). Each line is in the format filter_name=text='filter text' tbls='table list'. 
+</dt><dd> This section holds a list of package names of active plugins. If the plugin exists, innotop will activate it. See ``<font SIZE="-1">PLUGINS''</font> for more information.
+</dd><dt>filters
+</dt><dd> This section holds user-defined filters (see ``<font SIZE="-1">FILTERS''</font>). Each line is in the format filter_name=text='filter text' tbls='table list'. 
 
  The filter text is the text of the subroutine's code. The table list is a list of tables to which the filter can apply. By default, user-defined filters apply to the table for which they were created, but you can manually override that by editing the definition in the configuration file.
-<dt>active_filters
-<dd> This section stores which filters are active on each table. Each line is in the format table_name=filter_list.
-<dt>tbl_meta
-<dd> This section stores user-defined or user-customized columns (see ``<font SIZE="-1">COLUMNS''</font>). Each line is in the format col_name=properties, where the properties are a name=quoted-value list.
-<dt>connections
-<dd> This section holds the server connections you have defined. Each line is in the format name=properties, where the properties are a name=value list. The properties are self-explanatory, and the only one that is treated specially is 'pass' which is only present if 'savepass' is set. This section of the configuration file will be skipped if any <font SIZE="-1">DSN,</font> username, or password command-line options are used. See ``<font SIZE="-1">SERVER CONNECTIONS''</font>.
-<dt>active_connections
-<dd> This section holds a list of which connections are active in each mode. Each line is in the format mode_name=connection_list.
-<dt>server_groups
-<dd> This section holds server groups. Each line is in the format name=connection_list. See ``<font SIZE="-1">SERVER GROUPS''</font>.
-<dt>active_server_groups
-<dd> This section holds a list of which server group is active in each mode. Each line is in the format mode_name=server_group.
-<dt>max_values_seen
-<dd> This section holds the maximum values seen for variables. This is used to scale the graphs in ``S: Variables &amp; Status'' mode. Each line is in the format name=value.
-<dt>active_columns
-<dd> This section holds table column lists. Each line is in the format tbl_name=column_list. See ``<font SIZE="-1">COLUMNS''</font>.
-<dt>sort_cols
-<dd> This section holds the sort definition. Each line is in the format tbl_name=column_list. If a column is prefixed with '-', that column sorts descending. See ``<font SIZE="-1">SORTING''</font>.
-<dt>visible_tables
-<dd> This section defines which tables are visible in each mode. Each line is in the format mode_name=table_list. See ``<font SIZE="-1">TABLES''</font>.
-<dt>varsets
-<dd> This section defines variable sets for use in ``S: Status &amp; Variables'' mode. Each line is in the format name=variable_list. See ``<font SIZE="-1">VARIABLE SETS''</font>.
-<dt>colors
-<dd> This section defines colorization rules. Each line is in the format tbl_name=property_list. See ``<font SIZE="-1">COLORS''</font>.
-<dt>stmt_sleep_times
-<dd> This section contains statement sleep times. Each line is in the format statement_name=sleep_time. See ``S: Statement Sleep Times''.
-<dt>group_by
-<dd> This section contains column lists for table group_by expressions. Each line is in the format tbl_name=column_list. See ``<font SIZE="-1">GROUPING''</font>.</dl>
+</dd><dt>active_filters
+</dt><dd> This section stores which filters are active on each table. Each line is in the format table_name=filter_list.
+</dd><dt>tbl_meta
+</dt><dd> This section stores user-defined or user-customized columns (see ``<font SIZE="-1">COLUMNS''</font>). Each line is in the format col_name=properties, where the properties are a name=quoted-value list.
+</dd><dt>connections
+</dt><dd> This section holds the server connections you have defined. Each line is in the format name=properties, where the properties are a name=value list. The properties are self-explanatory, and the only one that is treated specially is 'pass' which is only present if 'savepass' is set. This section of the configuration file will be skipped if any <font SIZE="-1">DSN,</font> username, or password command-line options are used. See ``<font SIZE="-1">SERVER CONNECTIONS''</font>.
+</dd><dt>active_connections
+</dt><dd> This section holds a list of which connections are active in each mode. Each line is in the format mode_name=connection_list.
+</dd><dt>server_groups
+</dt><dd> This section holds server groups. Each line is in the format name=connection_list. See ``<font SIZE="-1">SERVER GROUPS''</font>.
+</dd><dt>active_server_groups
+</dt><dd> This section holds a list of which server group is active in each mode. Each line is in the format mode_name=server_group.
+</dd><dt>max_values_seen
+</dt><dd> This section holds the maximum values seen for variables. This is used to scale the graphs in ``S: Variables &amp; Status'' mode. Each line is in the format name=value.
+</dd><dt>active_columns
+</dt><dd> This section holds table column lists. Each line is in the format tbl_name=column_list. See ``<font SIZE="-1">COLUMNS''</font>.
+</dd><dt>sort_cols
+</dt><dd> This section holds the sort definition. Each line is in the format tbl_name=column_list. If a column is prefixed with '-', that column sorts descending. See ``<font SIZE="-1">SORTING''</font>.
+</dd><dt>visible_tables
+</dt><dd> This section defines which tables are visible in each mode. Each line is in the format mode_name=table_list. See ``<font SIZE="-1">TABLES''</font>.
+</dd><dt>varsets
+</dt><dd> This section defines variable sets for use in ``S: Status &amp; Variables'' mode. Each line is in the format name=variable_list. See ``<font SIZE="-1">VARIABLE SETS''</font>.
+</dd><dt>colors
+</dt><dd> This section defines colorization rules. Each line is in the format tbl_name=property_list. See ``<font SIZE="-1">COLORS''</font>.
+</dd><dt>stmt_sleep_times
+</dt><dd> This section contains statement sleep times. Each line is in the format statement_name=sleep_time. See ``S: Statement Sleep Times''.
+</dd><dt>group_by
+</dt><dd> This section contains column lists for table group_by expressions. Each line is in the format tbl_name=column_list. See ``<font SIZE="-1">GROUPING''</font>.</dd></dl>
 
 <h2>CUSTOMIZING</h2>
 
  You can customize innotop a great deal. For example, you can:
 <dl>
 <dt>&bull;
-<dd> Choose which tables to display, and in what order.
-<dt>&bull;
-<dd> Choose which columns are in those tables, and create new columns.
-<dt>&bull;
-<dd> Filter which rows display with built-in filters, user-defined filters, and quick-filters.
-<dt>&bull;
-<dd> Sort the rows to put important data first or group together related rows.
-<dt>&bull;
-<dd> Highlight rows with color.
-<dt>&bull;
-<dd> Customize the alignment, width, and formatting of columns, and apply transformations to columns to extract parts of their values or format the values as you wish (for example, shortening large numbers to familiar units).
-<dt>&bull;
-<dd> Design your own expressions to extract and combine data as you need. This gives you unlimited flexibility.</dl>
+</dt><dd> Choose which tables to display, and in what order.
+</dd><dt>&bull;
+</dt><dd> Choose which columns are in those tables, and create new columns.
+</dd><dt>&bull;
+</dt><dd> Filter which rows display with built-in filters, user-defined filters, and quick-filters.
+</dd><dt>&bull;
+</dt><dd> Sort the rows to put important data first or group together related rows.
+</dd><dt>&bull;
+</dt><dd> Highlight rows with color.
+</dd><dt>&bull;
+</dt><dd> Customize the alignment, width, and formatting of columns, and apply transformations to columns to extract parts of their values or format the values as you wish (for example, shortening large numbers to familiar units).
+</dd><dt>&bull;
+</dt><dd> Design your own expressions to extract and combine data as you need. This gives you unlimited flexibility.</dd></dl>
  
 
  All these and more are explained in the following sections.
@@ -537,25 +492,25 @@ url: "/docs/linux/man/1-innotop/"
  The table life-cycle is as follows:
 <dl>
 <dt>&bull;
-<dd> Each table begins with a data source, which is an array of hashes. See below for details on data sources.
-<dt>&bull;
-<dd> Each element of the data source becomes a row in the final table.
-<dt>&bull;
-<dd> For each element in the data source, innotop extracts values from the source and creates a row. This row is another hash, which later steps will refer to as <tt>$set</tt>. The values innotop extracts are determined by the table's columns. Each column has an extraction subroutine, compiled from an expression (see ``<font SIZE="-1">EXPRESSIONS''</font>). The resulting row is a hash whose keys are named the same as the column name.
-<dt>&bull;
-<dd> innotop filters the rows, removing those that don't need to be displayed. See ``<font SIZE="-1">FILTERS''</font>.
-<dt>&bull;
-<dd> innotop sorts the rows. See ``<font SIZE="-1">SORTING''</font>.
-<dt>&bull;
-<dd> innotop groups the rows together, if specified. See ``<font SIZE="-1">GROUPING''</font>.
-<dt>&bull;
-<dd> innotop colorizes the rows. See ``<font SIZE="-1">COLORS''</font>.
-<dt>&bull;
-<dd> innotop transforms the column values in each row. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
-<dt>&bull;
-<dd> innotop optionally pivots the rows (see ``<font SIZE="-1">PIVOTING''</font>), then filters and sorts them.
-<dt>&bull;
-<dd> innotop formats and justifies the rows as a table. During this step, innotop applies further formatting to the column values, including alignment, maximum and minimum widths. innotop also does final error checking to ensure there are no crashes due to undefined values. innotop then adds a caption if specified, and the table is ready to print.</dl>
+</dt><dd> Each table begins with a data source, which is an array of hashes. See below for details on data sources.
+</dd><dt>&bull;
+</dt><dd> Each element of the data source becomes a row in the final table.
+</dd><dt>&bull;
+</dt><dd> For each element in the data source, innotop extracts values from the source and creates a row. This row is another hash, which later steps will refer to as <tt>$set</tt>. The values innotop extracts are determined by the table's columns. Each column has an extraction subroutine, compiled from an expression (see ``<font SIZE="-1">EXPRESSIONS''</font>). The resulting row is a hash whose keys are named the same as the column name.
+</dd><dt>&bull;
+</dt><dd> innotop filters the rows, removing those that don't need to be displayed. See ``<font SIZE="-1">FILTERS''</font>.
+</dd><dt>&bull;
+</dt><dd> innotop sorts the rows. See ``<font SIZE="-1">SORTING''</font>.
+</dd><dt>&bull;
+</dt><dd> innotop groups the rows together, if specified. See ``<font SIZE="-1">GROUPING''</font>.
+</dd><dt>&bull;
+</dt><dd> innotop colorizes the rows. See ``<font SIZE="-1">COLORS''</font>.
+</dd><dt>&bull;
+</dt><dd> innotop transforms the column values in each row. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
+</dd><dt>&bull;
+</dt><dd> innotop optionally pivots the rows (see ``<font SIZE="-1">PIVOTING''</font>), then filters and sorts them.
+</dd><dt>&bull;
+</dt><dd> innotop formats and justifies the rows as a table. During this step, innotop applies further formatting to the column values, including alignment, maximum and minimum widths. innotop also does final error checking to ensure there are no crashes due to undefined values. innotop then adds a caption if specified, and the table is ready to print.</dd></dl>
  
 
  The lifecycle is slightly different if the table is pivoted, as noted above. To clarify, if the table is pivoted, the process is extract, group, transform, pivot, filter, sort, create. If it's not pivoted, the process is extract, filter, sort, group, color, transform, create. This slightly convoluted process doesn't map all that well to <font SIZE="-1">SQL,</font> but pivoting complicates things pretty thoroughly. Roughly speaking, filtering and sorting happen as late as needed to effect the final result as you might expect, but as early as possible for efficiency. 
@@ -563,98 +518,98 @@ url: "/docs/linux/man/1-innotop/"
  Each built-in table is described below:
 <dl>
 <dt>adaptive_hash_index
-<dd> Displays data about InnoDB's adaptive hash index. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>buffer_pool
-<dd> Displays data about InnoDB's buffer pool. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>cmd_summary
-<dd> Displays weighted status variables. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>deadlock_locks
-<dd> Shows which locks were held and waited for by the last detected deadlock. Data source: ``<font SIZE="-1">DEADLOCK_LOCKS''</font>.
-<dt>deadlock_transactions
-<dd> Shows transactions involved in the last detected deadlock. Data source: ``<font SIZE="-1">DEADLOCK_TRANSACTIONS''</font>.
-<dt>explain
-<dd> Shows the output of <font SIZE="-1">EXPLAIN. </font> Data source: ``<font SIZE="-1">EXPLAIN''</font>.
-<dt>file_io_misc
-<dd> Displays data about InnoDB's file and I/O operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>fk_error
-<dd> Displays various data about InnoDB's last foreign key error. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>health_dashboard
-<dd> Displays an overall summary of servers, one server per line, for monitoring. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>, ``<font SIZE="-1">MASTER_SLAVE''</font>, ``<font SIZE="-1">PROCESSLIST_STATS''</font>.
-<dt>index_statistics
-<dd> Displays data from the <font SIZE="-1">INDEX_STATISTICS</font> table in Percona-enhanced servers.
-<dt>index_table_statistics
-<dd> Displays data from the <font SIZE="-1">INDEX_STATISTICS</font> and <font SIZE="-1">TABLE_STATISTICS</font> tables in Percona-enhanced servers. It joins the two together, grouped by the database and table name. It is the default view in ``U: User Statistics'' mode, and makes it easy to see what tables are hot, how many rows are read from indexes, how many changes are made, and how many changes are made to indexes.
-<dt>innodb_blocked_blocker
-<dd> Displays InnoDB locks and lock waits. Data source: ``<font SIZE="-1">INNODB_BLOCKED_BLOCKER''</font>.
-<dt>innodb_locks
-<dd> Displays InnoDB locks. Data source: ``<font SIZE="-1">INNODB_LOCKS''</font>.
-<dt>innodb_transactions
-<dd> Displays data about InnoDB's current transactions. Data source: ``<font SIZE="-1">INNODB_TRANSACTIONS''</font>.
-<dt>insert_buffers
-<dd> Displays data about InnoDB's insert buffer. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>io_threads
-<dd> Displays data about InnoDB's I/O threads. Data source: ``<font SIZE="-1">IO_THREADS''</font>.
-<dt>log_statistics
-<dd> Displays data about InnoDB's logging system. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>master_status
-<dd> Displays replication master status. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>open_tables
-<dd> Displays open tables. Data source: ``<font SIZE="-1">OPEN_TABLES''</font>.
-<dt>page_statistics
-<dd> Displays InnoDB page statistics. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>pending_io
-<dd> Displays InnoDB pending I/O operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>processlist
-<dd> Displays current MySQL processes (threads/connections). Data source: ``<font SIZE="-1">PROCESSLIST''</font>.
-<dt>q_header
-<dd> Displays various status values. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>row_operation_misc
-<dd> Displays data about InnoDB's row operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>row_operations
-<dd> Displays data about InnoDB's row operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>semaphores
-<dd> Displays data about InnoDB's semaphores and mutexes. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>slave_io_status
-<dd> Displays data about the slave I/O thread. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>slave_sql_status
-<dd> Displays data about the slave <font SIZE="-1">SQL</font> thread. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>table_statistics
-<dd> Displays data from the <font SIZE="-1">TABLE_STATISTICS</font> table in Percona-enhanced servers.
-<dt>t_header
-<dd> Displays various InnoDB status values. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>var_status
-<dd> Displays user-configurable data. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
-<dt>wait_array
-<dd> Displays data about InnoDB's <font SIZE="-1">OS</font> wait array. Data source: ``<font SIZE="-1">OS_WAIT_ARRAY''</font>.</dl>
+</dt><dd> Displays data about InnoDB's adaptive hash index. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>buffer_pool
+</dt><dd> Displays data about InnoDB's buffer pool. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>cmd_summary
+</dt><dd> Displays weighted status variables. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>deadlock_locks
+</dt><dd> Shows which locks were held and waited for by the last detected deadlock. Data source: ``<font SIZE="-1">DEADLOCK_LOCKS''</font>.
+</dd><dt>deadlock_transactions
+</dt><dd> Shows transactions involved in the last detected deadlock. Data source: ``<font SIZE="-1">DEADLOCK_TRANSACTIONS''</font>.
+</dd><dt>explain
+</dt><dd> Shows the output of <font SIZE="-1">EXPLAIN. </font> Data source: ``<font SIZE="-1">EXPLAIN''</font>.
+</dd><dt>file_io_misc
+</dt><dd> Displays data about InnoDB's file and I/O operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>fk_error
+</dt><dd> Displays various data about InnoDB's last foreign key error. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>health_dashboard
+</dt><dd> Displays an overall summary of servers, one server per line, for monitoring. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>, ``<font SIZE="-1">MASTER_SLAVE''</font>, ``<font SIZE="-1">PROCESSLIST_STATS''</font>.
+</dd><dt>index_statistics
+</dt><dd> Displays data from the <font SIZE="-1">INDEX_STATISTICS</font> table in Percona-enhanced servers.
+</dd><dt>index_table_statistics
+</dt><dd> Displays data from the <font SIZE="-1">INDEX_STATISTICS</font> and <font SIZE="-1">TABLE_STATISTICS</font> tables in Percona-enhanced servers. It joins the two together, grouped by the database and table name. It is the default view in ``U: User Statistics'' mode, and makes it easy to see what tables are hot, how many rows are read from indexes, how many changes are made, and how many changes are made to indexes.
+</dd><dt>innodb_blocked_blocker
+</dt><dd> Displays InnoDB locks and lock waits. Data source: ``<font SIZE="-1">INNODB_BLOCKED_BLOCKER''</font>.
+</dd><dt>innodb_locks
+</dt><dd> Displays InnoDB locks. Data source: ``<font SIZE="-1">INNODB_LOCKS''</font>.
+</dd><dt>innodb_transactions
+</dt><dd> Displays data about InnoDB's current transactions. Data source: ``<font SIZE="-1">INNODB_TRANSACTIONS''</font>.
+</dd><dt>insert_buffers
+</dt><dd> Displays data about InnoDB's insert buffer. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>io_threads
+</dt><dd> Displays data about InnoDB's I/O threads. Data source: ``<font SIZE="-1">IO_THREADS''</font>.
+</dd><dt>log_statistics
+</dt><dd> Displays data about InnoDB's logging system. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>master_status
+</dt><dd> Displays replication master status. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>open_tables
+</dt><dd> Displays open tables. Data source: ``<font SIZE="-1">OPEN_TABLES''</font>.
+</dd><dt>page_statistics
+</dt><dd> Displays InnoDB page statistics. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>pending_io
+</dt><dd> Displays InnoDB pending I/O operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>processlist
+</dt><dd> Displays current MySQL processes (threads/connections). Data source: ``<font SIZE="-1">PROCESSLIST''</font>.
+</dd><dt>q_header
+</dt><dd> Displays various status values. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>row_operation_misc
+</dt><dd> Displays data about InnoDB's row operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>row_operations
+</dt><dd> Displays data about InnoDB's row operations. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>semaphores
+</dt><dd> Displays data about InnoDB's semaphores and mutexes. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>slave_io_status
+</dt><dd> Displays data about the slave I/O thread. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>slave_sql_status
+</dt><dd> Displays data about the slave <font SIZE="-1">SQL</font> thread. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>table_statistics
+</dt><dd> Displays data from the <font SIZE="-1">TABLE_STATISTICS</font> table in Percona-enhanced servers.
+</dd><dt>t_header
+</dt><dd> Displays various InnoDB status values. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>var_status
+</dt><dd> Displays user-configurable data. Data source: ``<font SIZE="-1">STATUS_VARIABLES''</font>.
+</dd><dt>wait_array
+</dt><dd> Displays data about InnoDB's <font SIZE="-1">OS</font> wait array. Data source: ``<font SIZE="-1">OS_WAIT_ARRAY''</font>.</dd></dl>
 
 <h3><font SIZE="-1">COLUMNS</font></h3>
 
  Columns belong to tables. You can choose a table's columns by pressing the '^' key, which starts the ``<font SIZE="-1">TABLE EDITOR''</font> and lets you choose and edit columns. Pressing 'e' from within the table editor lets you edit the column's properties:
 <dl>
 <dt>&bull;
-<dd> hdr: a column header. This appears in the first row of the table.
-<dt>&bull;
-<dd> just: justification. '-' means left-justified and '' means right-justified, just as with printf formatting codes (not a coincidence).
-<dt>&bull;
-<dd> dec: whether to further align the column on the decimal point.
-<dt>&bull;
-<dd> num: whether the column is numeric. This affects how values are sorted (lexically or numerically).
-<dt>&bull;
-<dd> label: a small note about the column, which appears in dialogs that help the user choose columns.
-<dt>&bull;
-<dd> src: an expression that innotop uses to extract the column's data from its source (see ``<font SIZE="-1">DATA SOURCES''</font>). See ``<font SIZE="-1">EXPRESSIONS''</font> for more on expressions.
-<dt>&bull;
-<dd> minw: specifies a minimum display width. This helps stabilize the display, which makes it easier to read if the data is changing frequently.
-<dt>&bull;
-<dd> maxw: similar to minw.
-<dt>&bull;
-<dd> trans: a list of column transformations. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
-<dt>&bull;
-<dd> agg: an aggregate function. See ``<font SIZE="-1">GROUPING''</font>. The default is ``first''.
-<dt>&bull;
-<dd> aggonly: controls whether the column only shows when grouping is enabled on the table (see ``<font SIZE="-1">GROUPING''</font>). By default, this is disabled. This means columns will always be shown by default, whether grouping is enabled or not. If a column's aggonly is set true, the column will appear when you toggle grouping on the table. Several columns are set this way, such as the count column on ``processlist'' and ``innodb_transactions'', so you don't see a count when the grouping isn't enabled, but you do when it is.
-<dt>&bull;
-<dd> agghide: the reverse of aggonly. The column is hidden when grouping is enabled.</dl>
+</dt><dd> hdr: a column header. This appears in the first row of the table.
+</dd><dt>&bull;
+</dt><dd> just: justification. '-' means left-justified and '' means right-justified, just as with printf formatting codes (not a coincidence).
+</dd><dt>&bull;
+</dt><dd> dec: whether to further align the column on the decimal point.
+</dd><dt>&bull;
+</dt><dd> num: whether the column is numeric. This affects how values are sorted (lexically or numerically).
+</dd><dt>&bull;
+</dt><dd> label: a small note about the column, which appears in dialogs that help the user choose columns.
+</dd><dt>&bull;
+</dt><dd> src: an expression that innotop uses to extract the column's data from its source (see ``<font SIZE="-1">DATA SOURCES''</font>). See ``<font SIZE="-1">EXPRESSIONS''</font> for more on expressions.
+</dd><dt>&bull;
+</dt><dd> minw: specifies a minimum display width. This helps stabilize the display, which makes it easier to read if the data is changing frequently.
+</dd><dt>&bull;
+</dt><dd> maxw: similar to minw.
+</dd><dt>&bull;
+</dt><dd> trans: a list of column transformations. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
+</dd><dt>&bull;
+</dt><dd> agg: an aggregate function. See ``<font SIZE="-1">GROUPING''</font>. The default is ``first''.
+</dd><dt>&bull;
+</dt><dd> aggonly: controls whether the column only shows when grouping is enabled on the table (see ``<font SIZE="-1">GROUPING''</font>). By default, this is disabled. This means columns will always be shown by default, whether grouping is enabled or not. If a column's aggonly is set true, the column will appear when you toggle grouping on the table. Several columns are set this way, such as the count column on ``processlist'' and ``innodb_transactions'', so you don't see a count when the grouping isn't enabled, but you do when it is.
+</dd><dt>&bull;
+</dt><dd> agghide: the reverse of aggonly. The column is hidden when grouping is enabled.</dd></dl>
 
 <h3><font SIZE="-1">FILTERS</font></h3>
 
@@ -728,13 +683,13 @@ sub filter
  Valid grouping functions are defined in the <tt>%agg_funcs</tt> hash. They include
 <dl>
 <dt>first
-<dd> Returns the first element in the group.
-<dt>count
-<dd> Returns the number of elements in the group, including undefined elements, much like <font SIZE="-1">SQL</font>'s <font SIZE="-1">COUNT</font>(*).
-<dt>avg
-<dd> Returns the average of defined elements in the group.
-<dt>sum
-<dd> Returns the sum of elements in the group.</dl>
+</dt><dd> Returns the first element in the group.
+</dd><dt>count
+</dt><dd> Returns the number of elements in the group, including undefined elements, much like <font SIZE="-1">SQL</font>'s <font SIZE="-1">COUNT</font>(*).
+</dd><dt>avg
+</dt><dd> Returns the average of defined elements in the group.
+</dd><dt>sum
+</dt><dd> Returns the sum of elements in the group.</dd></dl>
  
 
  Here's an example of grouping at work. Suppose you have a very busy server with hundreds of open connections, and you want to see how many connections are in what status. Using the built-in grouping rules, you can press 'Q' to enter ``Q: Query List'' mode. Press '=' to toggle grouping (if necessary, select the ``processlist'' table when prompted). 
@@ -743,7 +698,6 @@ sub filter
 
  <pre>
  Query List (? for help) localhost, 32:33, 0.11 QPS, 1 thd, 5.0.38-log
- 
  CXN        Cmd        Cnt  ID      User   Host           Time   Query       
  localhost  Query      49    12933  webusr localhost      19:38  SELECT * FROM
  localhost  Sending Da 23     2383  webusr localhost      12:43  SELECT col1,
@@ -843,25 +797,24 @@ $set-&gt;{Questions} / $set-&gt;
  Transformations change how a value is rendered. For example, they can take a number of seconds and display it in H:M:S format. The following transformations are defined:
 <dl>
 <dt>commify
-<dd> Adds commas to large numbers every three decimal places.
-<dt>distill
-<dd> Distills <font SIZE="-1">SQL</font> into verb-noun-noun format for quick comprehension.
-<dt>dulint_to_int
-<dd> Accepts two unsigned integers and converts them into a single longlong. This is useful for certain operations with InnoDB, which uses two integers as transaction identifiers, for example.
-<dt>fuzzy_time
-<dd> Converts a number of seconds into a friendly, readable value like ``1h35m''.
-<dt>no_ctrl_char
-<dd> Removes quoted control characters from the value. This is affected by the ``charset'' configuration variable. 
-
+</dt><dd> Adds commas to large numbers every three decimal places.
+</dd><dt>distill
+</dt><dd> Distills <font SIZE="-1">SQL</font> into verb-noun-noun format for quick comprehension.
+</dd><dt>dulint_to_int
+</dt><dd> Accepts two unsigned integers and converts them into a single longlong. This is useful for certain operations with InnoDB, which uses two integers as transaction identifiers, for example.
+</dd><dt>fuzzy_time
+</dt><dd> Converts a number of seconds into a friendly, readable value like ``1h35m''.
+</dd><dt>no_ctrl_char
+</dt><dd> Removes quoted control characters from the value. This is affected by the ``charset'' configuration variable. 
  This transformation only operates within quoted strings, for example, values to a <font SIZE="-1">SET</font> clause in an <font SIZE="-1">UPDATE</font> statement. It will not alter the <font SIZE="-1">UPDATE</font> statement, but will collapse the quoted string to [<font SIZE="-1">BINARY</font>] or [<font SIZE="-1">TEXT</font>], depending on the charset.
-<dt>percent
-<dd> Converts a number to a percentage by multiplying it by two, formatting it with ``num_digits'' digits after the decimal point, and optionally adding a percent sign (see ``show_percent'').
-<dt>secs_to_time
-<dd> Formats a number of seconds as time in days+hours:minutes:seconds format.
-<dt>set_precision
-<dd> Formats numbers with ``num_digits'' number of digits after the decimal point.
-<dt>shorten
-<dd> Formats a number as a unit of 1024 (k/M/G/T) and with ``num_digits'' number of digits after the decimal point.</dl>
+</dd><dt>percent
+</dt><dd> Converts a number to a percentage by multiplying it by two, formatting it with ``num_digits'' digits after the decimal point, and optionally adding a percent sign (see ``show_percent'').
+</dd><dt>secs_to_time
+</dt><dd> Formats a number of seconds as time in days+hours:minutes:seconds format.
+</dd><dt>set_precision
+</dt><dd> Formats numbers with ``num_digits'' number of digits after the decimal point.
+</dd><dt>shorten
+</dt><dd> Formats a number as a unit of 1024 (k/M/G/T) and with ``num_digits'' number of digits after the decimal point.</dd></dl>
 
 <h3><font SIZE="-1">TABLE EDITOR</font></h3>
 
@@ -869,7 +822,6 @@ $set-&gt;{Questions} / $set-&gt;
 
  <pre>
  Editing table definition for Buffer Pool.  Press ? for help, q to quit.
- 
  name               hdr          label                  src          
  cxn                CXN          Connection from which  cxn          
  buf_pool_size      Size         Buffer pool size       IB_bp_buf_poo
@@ -892,11 +844,11 @@ $set-&gt;{Questions} / $set-&gt;
  If you want to really customize and create your own column, as opposed to just activating a built-in one that's not currently displayed, press the (n)ew key, and innotop will prompt you for the information it needs:
 <dl>
 <dt>&bull;
-<dd> The column name: this needs to be a word without any funny characters, e.g. just letters, numbers and underscores.
-<dt>&bull;
-<dd> The column header: this is the label that appears at the top of the column, in the table header. This can have spaces and funny characters, but be careful not to make it too wide and waste space on-screen.
-<dt>&bull;
-<dd> The column's data source: this is an expression that determines what data from the source (see ``<font SIZE="-1">TABLES''</font>) innotop will put into the column. This can just be the name of an item in the source, or it can be a more complex expression, as described in ``<font SIZE="-1">EXPRESSIONS''</font>.</dl>
+</dt><dd> The column name: this needs to be a word without any funny characters, e.g. just letters, numbers and underscores.
+</dd><dt>&bull;
+</dt><dd> The column header: this is the label that appears at the top of the column, in the table header. This can have spaces and funny characters, but be careful not to make it too wide and waste space on-screen.
+</dd><dt>&bull;
+</dt><dd> The column's data source: this is an expression that determines what data from the source (see ``<font SIZE="-1">TABLES''</font>) innotop will put into the column. This can just be the name of an item in the source, or it can be a more complex expression, as described in ``<font SIZE="-1">EXPRESSIONS''</font>.</dd></dl>
  
 
  Once you've entered the required data, your table has a new column. There is no difference between this column and the built-in ones; it can have all the same properties and behaviors. innotop will write the column's definition to the configuration file, so it will persist across sessions. 
@@ -952,53 +904,51 @@ $set-&gt;{Questions} / $set-&gt;
  The innotop plugin interface is quite simple: innotop expects the plugin to be an object-oriented module it can call certain methods on. The methods are
 <dl>
 <dt>new(%variables)
-<dd> This is the plugin's constructor. It is passed a hash of innotop's variables, which it can manipulate (see ``Plugin Variables''). It must return a reference to the newly created plugin object. 
-
+</dt><dd> This is the plugin's constructor. It is passed a hash of innotop's variables, which it can manipulate (see ``Plugin Variables''). It must return a reference to the newly created plugin object. 
  At construction time, innotop has only loaded the general configuration and created the default built-in variables with their default contents (which is quite a lot). Therefore, the state of the program is exactly as in the innotop source code, plus the configuration variables from the ``general'' section in the config file. 
-
  If your plugin manipulates the variables, it is changing global data, which is shared by innotop and all plugins. Plugins are loaded in the order they're listed in the config file. Your plugin may load before or after another plugin, so there is a potential for conflict or interaction between plugins if they modify data other plugins use or modify.
-<dt><i>register_for_events()</i>
-<dd> This method must return a list of events in which the plugin is interested, if any. See ``Plugin Events'' for the defined events. If the plugin returns an event that's not defined, the event is ignored.
-<dt>event handlers
-<dd> The plugin must implement a method named the same as each event for which it has registered. In other words, if the plugin returns qw(foo bar) from <i>register_for_events()</i>, it must have <i>foo()</i> and <i>bar()</i> methods. These methods are callbacks for the events. See ``Plugin Events'' for more details about each event.</dl>
+</dd><dt><i>register_for_events()</i>
+</dt><dd> This method must return a list of events in which the plugin is interested, if any. See ``Plugin Events'' for the defined events. If the plugin returns an event that's not defined, the event is ignored.
+</dd><dt>event handlers
+</dt><dd> The plugin must implement a method named the same as each event for which it has registered. In other words, if the plugin returns qw(foo bar) from <i>register_for_events()</i>, it must have <i>foo()</i> and <i>bar()</i> methods. These methods are callbacks for the events. See ``Plugin Events'' for more details about each event.</dd></dl>
 
 <h3>Plugin Variables</h3>
 
  The plugin's constructor is passed a hash of innotop's variables, which it can manipulate. It is probably a good idea if the plugin object saves a copy of it for later use. The variables are defined in the innotop variable <tt>%pluggable_vars</tt>, and are as follows:
 <dl>
 <dt>action_for
-<dd> A hashref of key mappings. These are innotop's global hot-keys.
-<dt>agg_funcs
-<dd> A hashref of functions that can be used for grouping. See ``<font SIZE="-1">GROUPING''</font>.
-<dt>config
-<dd> The global configuration hash.
-<dt>connections
-<dd> A hashref of connection specifications. These are just specifications of how to connect to a server.
-<dt>dbhs
-<dd> A hashref of innotop's database connections. These are actual <font SIZE="-1">DBI</font> connection objects.
-<dt>filters
-<dd> A hashref of filters applied to table rows. See ``<font SIZE="-1">FILTERS''</font> for more.
-<dt>modes
-<dd> A hashref of modes. See ``<font SIZE="-1">MODES''</font> for more.
-<dt>server_groups
-<dd> A hashref of server groups. See ``<font SIZE="-1">SERVER GROUPS''</font>.
-<dt>tbl_meta
-<dd> A hashref of innotop's table meta-data, with one entry per table (see ``<font SIZE="-1">TABLES''</font> for more information).
-<dt>trans_funcs
-<dd> A hashref of transformation functions. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
-<dt>var_sets
-<dd> A hashref of variable sets. See ``<font SIZE="-1">VARIABLE SETS''</font>.</dl>
+</dt><dd> A hashref of key mappings. These are innotop's global hot-keys.
+</dd><dt>agg_funcs
+</dt><dd> A hashref of functions that can be used for grouping. See ``<font SIZE="-1">GROUPING''</font>.
+</dd><dt>config
+</dt><dd> The global configuration hash.
+</dd><dt>connections
+</dt><dd> A hashref of connection specifications. These are just specifications of how to connect to a server.
+</dd><dt>dbhs
+</dt><dd> A hashref of innotop's database connections. These are actual <font SIZE="-1">DBI</font> connection objects.
+</dd><dt>filters
+</dt><dd> A hashref of filters applied to table rows. See ``<font SIZE="-1">FILTERS''</font> for more.
+</dd><dt>modes
+</dt><dd> A hashref of modes. See ``<font SIZE="-1">MODES''</font> for more.
+</dd><dt>server_groups
+</dt><dd> A hashref of server groups. See ``<font SIZE="-1">SERVER GROUPS''</font>.
+</dd><dt>tbl_meta
+</dt><dd> A hashref of innotop's table meta-data, with one entry per table (see ``<font SIZE="-1">TABLES''</font> for more information).
+</dd><dt>trans_funcs
+</dt><dd> A hashref of transformation functions. See ``<font SIZE="-1">TRANSFORMATIONS''</font>.
+</dd><dt>var_sets
+</dt><dd> A hashref of variable sets. See ``<font SIZE="-1">VARIABLE SETS''</font>.</dd></dl>
 
 <h3>Plugin Events</h3>
 
  Each event is defined somewhere in the innotop source code. When innotop runs that code, it executes the callback function for each plugin that expressed its interest in the event. innotop passes some data for each event. The events are defined in the <tt>%event_listener_for</tt> variable, and are as follows:
 <dl>
 <dt>extract_values($set, $cur, $pre, $tbl)
-<dd> This event occurs inside the function that extracts values from a data source. The arguments are the set of values, the current values, the previous values, and the table name.
-<dt>set_to_tbl
-<dd> Events are defined at many places in this subroutine, which is responsible for turning an arrayref of hashrefs into an arrayref of lines that can be printed to the screen. The events all pass the same data: an arrayref of rows and the name of the table being created. The events are set_to_tbl_pre_filter, set_to_tbl_pre_sort,set_to_tbl_pre_group, set_to_tbl_pre_colorize, set_to_tbl_pre_transform, set_to_tbl_pre_pivot, set_to_tbl_pre_create, set_to_tbl_post_create.
-<dt>draw_screen($lines)
-<dd> This event occurs inside the subroutine that prints the lines to the screen. <tt>$lines</tt> is an arrayref of strings.</dl>
+</dt><dd> This event occurs inside the function that extracts values from a data source. The arguments are the set of values, the current values, the previous values, and the table name.
+</dd><dt>set_to_tbl
+</dt><dd> Events are defined at many places in this subroutine, which is responsible for turning an arrayref of hashrefs into an arrayref of lines that can be printed to the screen. The events all pass the same data: an arrayref of rows and the name of the table being created. The events are set_to_tbl_pre_filter, set_to_tbl_pre_sort,set_to_tbl_pre_group, set_to_tbl_pre_colorize, set_to_tbl_pre_transform, set_to_tbl_pre_pivot, set_to_tbl_pre_create, set_to_tbl_post_create.
+</dd><dt>draw_screen($lines)
+</dt><dd> This event occurs inside the subroutine that prints the lines to the screen. <tt>$lines</tt> is an arrayref of strings.</dd></dl>
 
 <h3>Simple Plugin Example</h3>
 
@@ -1092,49 +1042,48 @@ Statement SQL executed == == == == == == == == == = == == == == == == == == == =
  Here are the kinds of data sources from which data is extracted:
 <dl>
 <dt><font SIZE="-1">STATUS_VARIABLES</font>
-<dd> This is the broadest category, into which the most kinds of data fall. It begins with the combination of <font SIZE="-1">SHOW STATUS</font> and <font SIZE="-1">SHOW VARIABLES,</font> but other sources may be included as needed, for example, <font SIZE="-1">SHOW MASTER STATUS</font> and <font SIZE="-1">SHOW SLAVE STATUS,</font> as well as many of the non-repeated values from <font SIZE="-1">SHOW INNODB STATUS.</font>
-<dt><font SIZE="-1">DEADLOCK_LOCKS</font>
-<dd> This data is extracted from the transaction list in the <font SIZE="-1">LATEST DETECTED DEADLOCK</font> section of <font SIZE="-1">SHOW INNODB STATUS. </font> It is nested two levels deep: transactions, then locks.
-<dt><font SIZE="-1">DEADLOCK_TRANSACTIONS</font>
-<dd> This data is from the transaction list in the <font SIZE="-1">LATEST DETECTED DEADLOCK</font> section of <font SIZE="-1">SHOW INNODB STATUS. </font> It is nested one level deep.
-<dt><font SIZE="-1">EXPLAIN</font>
-<dd> This data is from the result set returned by <font SIZE="-1">EXPLAIN.</font>
-<dt><font SIZE="-1">INNODB_BLOCKED_BLOCKER</font>
-<dd> This data is from the <font SIZE="-1">INFORMATION_SCHEMA</font> tables related to InnoDB locks and the processlist.
-<dt><font SIZE="-1">INNODB_TRANSACTIONS</font>
-<dd> This data is from the <font SIZE="-1">TRANSACTIONS</font> section of <font SIZE="-1">SHOW INNODB STATUS.</font>
-<dt><font SIZE="-1">IO_THREADS</font>
-<dd> This data is from the list of threads in the the <font SIZE="-1">FILE I/O</font> section of <font SIZE="-1">SHOW INNODB STATUS.</font>
-<dt><font SIZE="-1">INNODB_LOCKS</font>
-<dd> This data is from the <font SIZE="-1">TRANSACTIONS</font> section of <font SIZE="-1">SHOW INNODB STATUS</font> and is nested two levels deep.
-<dt><font SIZE="-1">MASTER_SLAVE</font>
-<dd> This data is from the combination of <font SIZE="-1">SHOW MASTER STATUS</font> and <font SIZE="-1">SHOW SLAVE STATUS.</font>
-<dt><font SIZE="-1">OPEN_TABLES</font>
-<dd> This data is from <font SIZE="-1">SHOW OPEN TABLES.</font>
-<dt><font SIZE="-1">PROCESSLIST</font>
-<dd> This data is from <font SIZE="-1">SHOW FULL PROCESSLIST.</font>
-<dt><font SIZE="-1">PROCESSLIST_STATS</font>
-<dd> This data is from <font SIZE="-1">SHOW FULL PROCESSLIST</font> and computes stats such as the maximum time a user query has been running, and how many user queries are running. A ``user query'' excludes replication threads.
-<dt><font SIZE="-1">OS_WAIT_ARRAY</font>
-<dd> This data is from the <font SIZE="-1">SEMAPHORES</font> section of <font SIZE="-1">SHOW INNODB STATUS</font> and is nested one level deep. It comes from the lines that look like this: 
-
+</dt><dd> This is the broadest category, into which the most kinds of data fall. It begins with the combination of <font SIZE="-1">SHOW STATUS</font> and <font SIZE="-1">SHOW VARIABLES,</font> but other sources may be included as needed, for example, <font SIZE="-1">SHOW MASTER STATUS</font> and <font SIZE="-1">SHOW SLAVE STATUS,</font> as well as many of the non-repeated values from <font SIZE="-1">SHOW INNODB STATUS.</font>
+</dd><dt><font SIZE="-1">DEADLOCK_LOCKS</font>
+</dt><dd> This data is extracted from the transaction list in the <font SIZE="-1">LATEST DETECTED DEADLOCK</font> section of <font SIZE="-1">SHOW INNODB STATUS. </font> It is nested two levels deep: transactions, then locks.
+</dd><dt><font SIZE="-1">DEADLOCK_TRANSACTIONS</font>
+</dt><dd> This data is from the transaction list in the <font SIZE="-1">LATEST DETECTED DEADLOCK</font> section of <font SIZE="-1">SHOW INNODB STATUS. </font> It is nested one level deep.
+</dd><dt><font SIZE="-1">EXPLAIN</font>
+</dt><dd> This data is from the result set returned by <font SIZE="-1">EXPLAIN.</font>
+</dd><dt><font SIZE="-1">INNODB_BLOCKED_BLOCKER</font>
+</dt><dd> This data is from the <font SIZE="-1">INFORMATION_SCHEMA</font> tables related to InnoDB locks and the processlist.
+</dd><dt><font SIZE="-1">INNODB_TRANSACTIONS</font>
+</dt><dd> This data is from the <font SIZE="-1">TRANSACTIONS</font> section of <font SIZE="-1">SHOW INNODB STATUS.</font>
+</dd><dt><font SIZE="-1">IO_THREADS</font>
+</dt><dd> This data is from the list of threads in the the <font SIZE="-1">FILE I/O</font> section of <font SIZE="-1">SHOW INNODB STATUS.</font>
+</dd><dt><font SIZE="-1">INNODB_LOCKS</font>
+</dt><dd> This data is from the <font SIZE="-1">TRANSACTIONS</font> section of <font SIZE="-1">SHOW INNODB STATUS</font> and is nested two levels deep.
+</dd><dt><font SIZE="-1">MASTER_SLAVE</font>
+</dt><dd> This data is from the combination of <font SIZE="-1">SHOW MASTER STATUS</font> and <font SIZE="-1">SHOW SLAVE STATUS.</font>
+</dd><dt><font SIZE="-1">OPEN_TABLES</font>
+</dt><dd> This data is from <font SIZE="-1">SHOW OPEN TABLES.</font>
+</dd><dt><font SIZE="-1">PROCESSLIST</font>
+</dt><dd> This data is from <font SIZE="-1">SHOW FULL PROCESSLIST.</font>
+</dd><dt><font SIZE="-1">PROCESSLIST_STATS</font>
+</dt><dd> This data is from <font SIZE="-1">SHOW FULL PROCESSLIST</font> and computes stats such as the maximum time a user query has been running, and how many user queries are running. A ``user query'' excludes replication threads.
+</dd><dt><font SIZE="-1">OS_WAIT_ARRAY</font>
+</dt><dd> This data is from the <font SIZE="-1">SEMAPHORES</font> section of <font SIZE="-1">SHOW INNODB STATUS</font> and is nested one level deep. It comes from the lines that look like this: 
  <pre>
  --Thread 1568861104 has waited at btr0cur.c line 424 ....
-</pre></dl>
+</pre></dd></dl>
 
 <h2>MYSQL PRIVILEGES</h2>
 
 <dl>
 <dt>&bull;
-<dd> You must connect to MySQL as a user who has the <font SIZE="-1">SUPER</font> privilege for many of the functions.
-<dt>&bull;
-<dd> If you don't have the <font SIZE="-1">SUPER</font> privilege, you can still run some functions, but you won't necessarily see all the same data.
-<dt>&bull;
-<dd> You need the <font SIZE="-1">PROCESS</font> privilege to see the list of currently running queries in Q mode.
-<dt>&bull;
-<dd> You need special privileges to start and stop slave servers.
-<dt>&bull;
-<dd> You need appropriate privileges to create and drop the deadlock tables if needed (see ``<font SIZE="-1">SERVER CONNECTIONS''</font>).</dl>
+</dt><dd> You must connect to MySQL as a user who has the <font SIZE="-1">SUPER</font> privilege for many of the functions.
+</dd><dt>&bull;
+</dt><dd> If you don't have the <font SIZE="-1">SUPER</font> privilege, you can still run some functions, but you won't necessarily see all the same data.
+</dd><dt>&bull;
+</dt><dd> You need the <font SIZE="-1">PROCESS</font> privilege to see the list of currently running queries in Q mode.
+</dd><dt>&bull;
+</dt><dd> You need special privileges to start and stop slave servers.
+</dd><dt>&bull;
+</dt><dd> You need appropriate privileges to create and drop the deadlock tables if needed (see ``<font SIZE="-1">SERVER CONNECTIONS''</font>).</dd></dl>
 
 <h2>SYSTEM REQUIREMENTS</h2>
 
@@ -1154,7 +1103,7 @@ Statement SQL executed == == == == == == == == == = == == == == == == == == == =
 
 <dl>
 <dt>tick
-<dd> A tick is a refresh event, when innotop re-fetches data from connections and displays it.</dl>
+</dt><dd> A tick is a refresh event, when innotop re-fetches data from connections and displays it.</dd></dl>
 
 <h2>ACKNOWLEDGEMENTS</h2>
 
@@ -1189,48 +1138,48 @@ Statement SQL executed == == == == == == == == == = == == == == == == == == == =
 
 
 <dt><a HREF="#lbAM">SERVER ADMINISTRATION</a>
-<dd>
-<dt><a HREF="#lbAN">SERVER CONNECTIONS</a>
-<dd>
-<dt><a HREF="#lbAO">SERVER GROUPS</a>
-<dd>
-<dt><a HREF="#lbAP">SWITCHING BETWEEN CONNECTIONS</a>
-<dd>
-<dt><a HREF="#lbAQ">ERROR HANDLING</a>
-<dd>
-<dt><a HREF="#lbAR">NON-INTERACTIVE OPERATION</a>
-<dd>
-<dt><a HREF="#lbAS">CONFIGURING</a>
-<dd>
-<dt><a HREF="#lbAT">CONFIGURATION FILE</a>
-<dd>
-<dt><a HREF="#lbAU">CUSTOMIZING</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">SERVER CONNECTIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">SERVER GROUPS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAP">SWITCHING BETWEEN CONNECTIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAQ">ERROR HANDLING</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAR">NON-INTERACTIVE OPERATION</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">CONFIGURING</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAT">CONFIGURATION FILE</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAU">CUSTOMIZING</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBF">VARIABLE SETS</a>
-<dd>
-<dt><a HREF="#lbBG">PLUGINS</a>
-<dd>
+</dd><dt><a HREF="#lbBF">VARIABLE SETS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBG">PLUGINS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBN">SQL STATEMENTS</a>
-<dd>
-<dt><a HREF="#lbBO">DATA SOURCES</a>
-<dd>
-<dt><a HREF="#lbBP">MYSQL PRIVILEGES</a>
-<dd>
-<dt><a HREF="#lbBQ">SYSTEM REQUIREMENTS</a>
-<dd>
-<dt><a HREF="#lbBR">FILES</a>
-<dd>
-<dt><a HREF="#lbBS">GLOSSARY OF TERMS</a>
-<dd>
-<dt><a HREF="#lbBT">ACKNOWLEDGEMENTS</a>
-<dd>
-<dt><a HREF="#lbBU">COPYRIGHT, LICENSE AND WARRANTY</a>
-<dd>
-<dt><a HREF="#lbBV">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbBW">BUGS</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBN">SQL STATEMENTS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBO">DATA SOURCES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBP">MYSQL PRIVILEGES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBQ">SYSTEM REQUIREMENTS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBR">FILES</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBS">GLOSSARY OF TERMS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBT">ACKNOWLEDGEMENTS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBU">COPYRIGHT, LICENSE AND WARRANTY</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBV">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBW">BUGS</a>
+</dt><dd></dd></dl>

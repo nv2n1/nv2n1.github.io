@@ -16,12 +16,12 @@ description: "rdf2bin, rdf2com – convert an RDOFF object file to flat binary"
  <code>rdf2srec</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-o <i>relocation-origin</i></p>
-<dd> Relocate at origin <i>relocation-origin</i>. If invoked as <code>rdf2com</code>, the default relocation origin will be 0x100. Else, the default origin is 0.</p>
-<dt>-p <i>segment-alignment</i></p>
-<dd> Pad segments until their size is a multiple of <i>segment-alignment</i>. By default, 16 is used.</p>
-<dt>-f <i>format</i></p>
-<dd> Specify the output format. The currently supported formats are binary (<i>bin</i>), DOS COM (binary with origin 0x100) (<i>com</i>) Intel hex (<i>ith</i> or <i>ihx</i>), and Motorola S-Records (<i>srec</i>). If not specified, the format is set by the command name.</dl>
+<dt>-o <i>relocation-origin</i></dt>
+<dd> Relocate at origin <i>relocation-origin</i>. If invoked as <code>rdf2com</code>, the default relocation origin will be 0x100. Else, the default origin is 0.</dd>
+<dt>-p <i>segment-alignment</i></dt>
+<dd> Pad segments until their size is a multiple of <i>segment-alignment</i>. By default, 16 is used.</dd>
+<dt>-f <i>format</i></dt>
+<dd> Specify the output format. The currently supported formats are binary (<i>bin</i>), DOS COM (binary with origin 0x100) (<i>com</i>) Intel hex (<i>ith</i> or <i>ihx</i>), and Motorola S-Records (<i>srec</i>). If not specified, the format is set by the command name.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Julian Hall &lt;jules [at] earthcorp.com&gt;, H. Peter Anvin &lt;hpa [at] zytor.com&gt;. </p>
 <p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;.</p>

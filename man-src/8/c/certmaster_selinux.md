@@ -55,9 +55,9 @@ description: "certmaster_selinux – Security Enhanced Linux Policy for the cert
 <p> Policy governs the access confined processes have to these ports. SELinux certmaster policy is very flexible allowing users to setup their certmaster processes in as secure a method as possible. </p>
 <p> The following port types are defined for certmaster: </p>
 <dl>
-<dt><code>certmaster_port_t</code></p>
+<dt><code>certmaster_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 51235</dl>
+</dd><dd>Default Defined Ports: tcp 51235</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type certmaster_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cert_t</code> </p>

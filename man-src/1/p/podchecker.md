@@ -13,14 +13,14 @@ description: "podchecker – check the syntax of POD format documentation files"
 <p> <code>podchecker</code> [<code>-help</code>] [<code>-man</code>] [<code>-(no)warnings</code>] [<i>file</i> &#8230;]</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a brief help message and exit.</p>
-<dt><code>-man</code></p>
-<dd> Print the manual page and exit.</p>
-<dt><code>-warnings</code> <code>-nowarnings</code></p>
-<dd> Turn on/off printing of warnings. Repeating <code>-warnings</code> increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped &#8220;&lt;,&gt;&#8221; characters.</p>
-<dt><i>file</i></p>
-<dd> The pathname of a <font SIZE="-1">POD</font> file to syntax-check (defaults to standard input).</dl>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exit.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the manual page and exit.</dd>
+<dt><code>-warnings</code> <code>-nowarnings</code></dt>
+<dd> Turn on/off printing of warnings. Repeating <code>-warnings</code> increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped &#8220;&lt;,&gt;&#8221; characters.</dd>
+<dt><i>file</i></dt>
+<dd> The pathname of a <font SIZE="-1">POD</font> file to syntax-check (defaults to standard input).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>podchecker</code> will read the given input files looking for <font SIZE="-1">POD</font> syntax errors in the <font SIZE="-1">POD</font> documentation and will print any errors it find to <font SIZE="-1">STDERR.</font> At the end, it will print a status message indicating the number of errors found. </p>
 <p> Directories are ignored, an appropriate warning message is printed. </p>

@@ -15,35 +15,35 @@ description: "arcecho – ARC echo client"
 <p> <code>arcecho [options] service message</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></p>
-<dd> configuration file (default ~/.arc/client.conf)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version information</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> print help</dl>
+<dt><code>-z</code>, <code>&#8211;conffile</code>=<i>filename</i></dt>
+<dd> configuration file (default ~/.arc/client.conf)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version information</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> print help</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>service</code></p>
-<dd> A URL to an ARC echo service</p>
-<dt><code>message</code></p>
-<dd> The message the service should return</dl>
+<dt><code>service</code></dt>
+<dd> A URL to an ARC echo service</dd>
+<dt><code>message</code></dt>
+<dd> The message the service should return</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> <code>arcecho</code> is a simple test tool: we can send a message to the echo service and it will respond with the same message. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.arc/client.conf</code></p>
-<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </p>
+<dt><code>~/.arc/client.conf</code></dt>
+<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>X509_USER_PROXY</code></p>
-<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </p>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
-<dt><code>ARC_PLUGIN_PATH</code></p>
-<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </p>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd> The location of the user&#8217;s Grid proxy file. Shouldn&#8217;t be set unless the proxy is in a non-standard location. </dd>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
+<dt><code>ARC_PLUGIN_PATH</code></dt>
+<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>

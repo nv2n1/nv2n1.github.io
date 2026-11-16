@@ -20,32 +20,32 @@ description: "keystone – Client for OpenStack Identity API"
 <p> While bootstrapping Keystone the authentication is accomplished with a shared secret token and the location of the Identity API endpoint. The shared secret token is configured in keystone.conf as &quot;admin_token&quot;. </p>
 <p> You can specify those values on the command line with <i>&#8211;os-token</i> and <i>&#8211;os-endpoint</i>, or set them in environment variables:</p>
 <dl>
-<dt><code>OS_SERVICE_TOKEN</code></p>
-<dd> Your Keystone administrative token</p>
-<dt><code>OS_SERVICE_ENDPOINT</code></p>
-<dd> Your Identity API endpoint </p>
+<dt><code>OS_SERVICE_TOKEN</code></dt>
+<dd> Your Keystone administrative token</dd>
+<dt><code>OS_SERVICE_ENDPOINT</code></dt>
+<dd> Your Identity API endpoint </dd>
 <p> The command line options will override any environment variables set. </p>
 <p> If you already have accounts, you can use your OpenStack username and password. You can do this with the <i>&#8211;os-username</i>, <i>&#8211;os-password</i>. </p>
 <p> Keystone allows a user to be associated with one or more projects which are historically called tenants. To specify the project for which you want to authorize against, you may optionally specify a <i>&#8211;os-tenant-id</i> or <i>&#8211;os-tenant-name</i>. </p>
 <p> Instead of using options, it is easier to just set them as environment variables:</p>
-<dt><code>OS_USERNAME</code></p>
-<dd> Your Keystone username.</p>
-<dt><code>OS_PASSWORD</code></p>
-<dd> Your Keystone password.</p>
-<dt><code>OS_TENANT_NAME</code></p>
-<dd> Name of Keystone project.</p>
-<dt><code>OS_TENANT_ID</code></p>
-<dd> ID of Keystone Tenant.</p>
-<dt><code>OS_AUTH_URL</code></p>
-<dd> The OpenStack API server URL.</p>
-<dt><code>OS_IDENTITY_API_VERSION</code></p>
-<dd> The OpenStack Identity API version.</p>
-<dt><code>OS_CACERT</code></p>
-<dd> The location for the CA truststore (PEM formatted) for this client.</p>
-<dt><code>OS_CERT</code></p>
-<dd> The location for the keystore (PEM formatted) containing the public key of this client. This keystore can also optionally contain the private key of this client.</p>
-<dt><code>OS_KEY</code></p>
-<dd> The location for the keystore (PEM formatted) containing the private key of this client. This value can be empty if the private key is included in the OS_CERT file. </p>
+<dt><code>OS_USERNAME</code></dt>
+<dd> Your Keystone username.</dd>
+<dt><code>OS_PASSWORD</code></dt>
+<dd> Your Keystone password.</dd>
+<dt><code>OS_TENANT_NAME</code></dt>
+<dd> Name of Keystone project.</dd>
+<dt><code>OS_TENANT_ID</code></dt>
+<dd> ID of Keystone Tenant.</dd>
+<dt><code>OS_AUTH_URL</code></dt>
+<dd> The OpenStack API server URL.</dd>
+<dt><code>OS_IDENTITY_API_VERSION</code></dt>
+<dd> The OpenStack Identity API version.</dd>
+<dt><code>OS_CACERT</code></dt>
+<dd> The location for the CA truststore (PEM formatted) for this client.</dd>
+<dt><code>OS_CERT</code></dt>
+<dd> The location for the keystore (PEM formatted) containing the public key of this client. This keystore can also optionally contain the private key of this client.</dd>
+<dt><code>OS_KEY</code></dt>
+<dd> The location for the keystore (PEM formatted) containing the private key of this client. This value can be empty if the private key is included in the OS_CERT file. </dd>
 <p> For example, in Bash you&#8217;d use: </p>
 <pre>
 export OS_USERNAME=yourname

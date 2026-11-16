@@ -10,15 +10,10 @@ description: "std::expint,std::expintf,std::expintl – std::expint,std::expintf
 <p>std::expint,std::expintf,std::expintl &#8211; std::expint,std::expintf,std::expintl</p>
 <h2>Synopsis</h2>
 <pre><code>double expint( double arg );
-
 float expint( float arg );
-
 long double expint( long double arg );  (1) (since C++17)
-
 float expintf( float arg );
-
 long double expintl( long double arg );
-
 double expint( IntegralType arg );      (2) (since C++17)</code></pre>
 <p>1) Computes the exponential_integral of arg.<br />
 2) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(1)</code> after casting the argument to double. </p>
@@ -41,11 +36,8 @@ An implementation of this function is also available_in_boost.math </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;Ei(0) = &quot; &lt;&lt; std::expint(0) &lt;&lt; '
 '

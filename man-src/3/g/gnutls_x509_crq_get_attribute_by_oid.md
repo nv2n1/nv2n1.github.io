@@ -20,15 +20,15 @@ url: "/docs/linux/man/3-gnutls_x509_crq_get_attribute_by_oid/"
 
 <dl>
 <dt>gnutls_x509_crq_t crq
-<dd> should contain a <b>gnutls_x509_crq_t</b> structure
-<dt>const char * oid
-<dd> holds an Object Identifier in null-terminated string
-<dt>int indx
-<dd> In case multiple same OIDs exist in the attribute list, this specifies which to get, use (0) to get the first one
-<dt>void * buf
-<dd> a pointer to a structure to hold the attribute data (may be <b>NULL</b>)
-<dt>size_t * buf_size
-<dd> initially holds the size of <i>buf</i></dl>
+</dt><dd> should contain a <b>gnutls_x509_crq_t</b> structure
+</dd><dt>const char * oid
+</dt><dd> holds an Object Identifier in null-terminated string
+</dd><dt>int indx
+</dt><dd> In case multiple same OIDs exist in the attribute list, this specifies which to get, use (0) to get the first one
+</dd><dt>void * buf
+</dt><dd> a pointer to a structure to hold the attribute data (may be <b>NULL</b>)
+</dd><dt>size_t * buf_size
+</dt><dd> initially holds the size of <i>buf</i></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -55,7 +55,7 @@ url: "/docs/linux/man/3-gnutls_x509_crq_get_attribute_by_oid/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

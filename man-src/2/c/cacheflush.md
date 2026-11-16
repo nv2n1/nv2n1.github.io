@@ -18,20 +18,20 @@ int cacheflush(char *addr, int nbytes, int cache);
 <h2>DESCRIPTION</h2>
 <p> <code>cacheflush</code>() flushes the contents of the indicated cache(s) for the user addresses in the range <i>addr</i> to <i>(addr+nbytes-1)</i>. <i>cache</i> may be one of:</p>
 <dl>
-<dt><code>ICACHE</code></p>
-<dd> Flush the instruction cache.</p>
-<dt><code>DCACHE</code></p>
-<dd> Write back to memory and invalidate the affected valid cache lines.</p>
-<dt><code>BCACHE</code></p>
-<dd> Same as <code>(ICACHE|DCACHE)</code>.</dl>
+<dt><code>ICACHE</code></dt>
+<dd> Flush the instruction cache.</dd>
+<dt><code>DCACHE</code></dt>
+<dd> Write back to memory and invalidate the affected valid cache lines.</dd>
+<dt><code>BCACHE</code></dt>
+<dd> Same as <code>(ICACHE|DCACHE)</code>.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>cacheflush</code>() returns 0 on success or -1 on error. If errors are detected, <i>errno</i> will indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Some or all of the address range <i>addr</i> to <i>(addr+nbytes-1)</i> is not accessible.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>cache</i> is not one of <code>ICACHE</code>, <code>DCACHE</code>, or <code>BCACHE</code> (but see BUGS).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Some or all of the address range <i>addr</i> to <i>(addr+nbytes-1)</i> is not accessible.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>cache</i> is not one of <code>ICACHE</code>, <code>DCACHE</code>, or <code>BCACHE</code> (but see BUGS).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> Historically, this system call was available on all MIPS UNIX variants including RISC/os, IRIX, Ultrix, NetBSD, OpenBSD, and FreeBSD (and also on some non-UNIX MIPS operating systems), so that the existence of this call in MIPS operating systems is a de-facto standard.</p>
 <h3>Caveat</h3>
@@ -41,19 +41,19 @@ int cacheflush(char *addr, int nbytes, int cache);
 <p> Glibc provides a wrapper for this system call, with the prototype shown in SYNOPSIS, for the following architectures: ARC, CSKY, MIPS, and NIOS2. </p>
 <p> On some other architectures, Linux provides this system call, with different arguments:</p>
 <dl>
-<dt>M68K:</p>
+<dt>M68K:</dt>
 <dd>
 int cacheflush(unsigned long addr, int scope, int cache,<br />
-               unsigned long len);</p>
-<dt>SH:</p>
+               unsigned long len);</dd>
+<dt>SH:</dt>
 <dd>
-int cacheflush(unsigned long addr, unsigned long len, int op);</p>
-<dt>NDS32:</p>
+int cacheflush(unsigned long addr, unsigned long len, int op);</dd>
+<dt>NDS32:</dt>
 <dd>
 <pre><code>
 int cacheflush(unsigned int start, unsigned int end, int cache);
 </code></pre>
-</dl>
+</dd></dl>
 <p> On the above architectures, glibc does not provide a wrapper for this system call; call it using <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2).</p>
 <h3>GCC alternative</h3>
 <p> Unless you need the finer grained control that this system call provides, you probably want to use the GCC built-in function <code>__builtin___clear_cache</code>(), which provides a portable interface across platforms supported by GCC and compatible compilers: </p>

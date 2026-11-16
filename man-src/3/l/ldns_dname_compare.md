@@ -17,11 +17,11 @@ description: "ldns_dname_compare, ldns_dname_interval"
 <p> int ldns_dname_interval(const ldns_rdf *prev, const ldns_rdf *middle, const ldns_rdf *next); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname_compare</i>()</p>
-<dd>Compares the two dname rdf&#8217;s according to the algorithm for ordering in RFC4034 Section 6. .br <code>dname1</code>: First dname rdf to compare .br <code>dname2</code>: Second dname rdf to compare .br Returns -1 if dname1 comes before dname2, 1 if dname1 comes after dname2, and 0 if they are equal.</dl>
+<dt> <i>ldns_dname_compare</i>()</dt>
+<dd>Compares the two dname rdf&#8217;s according to the algorithm for ordering in RFC4034 Section 6. .br <code>dname1</code>: First dname rdf to compare .br <code>dname2</code>: Second dname rdf to compare .br Returns -1 if dname1 comes before dname2, 1 if dname1 comes after dname2, and 0 if they are equal.</dd></dl>
 <dl>
-<dt> <i>ldns_dname_interval</i>()</p>
-<dd>check if middle lays in the interval defined by prev and next prev &lt;= middle &lt; next. This is usefull for nsec checking .br <code>prev</code>: the previous dname .br <code>middle</code>: the dname to check .br <code>next</code>: the next dname return 0 on error or unknown, -1 when middle is in the interval, +1 when not</dl>
+<dt> <i>ldns_dname_interval</i>()</dt>
+<dd>check if middle lays in the interval defined by prev and next prev &lt;= middle &lt; next. This is usefull for nsec checking .br <code>prev</code>: the previous dname .br <code>middle</code>: the dname to check .br <code>next</code>: the next dname return 0 on error or unknown, -1 when middle is in the interval, +1 when not</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

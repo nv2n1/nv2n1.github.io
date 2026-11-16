@@ -10,9 +10,9 @@ description: "ntdbrestore – tool for creating a NTDB file out of a ntdbdump ou
 <p>ntdbrestore &#8211; tool for creating a NTDB file out of a ntdbdump output</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ntdbrestore</code> {ntdbfilename}</dl>
+<dt> <code>ntdbrestore</code> {ntdbfilename}</dt></dl>
 <h2>Description</h2>
-<dd>This tool is part of the <code>samba</code>(1) suite. </p>
+<dd>This tool is part of the <code>samba</code>(1) suite. </dd>
 <p> <code>ntdbrestore</code> is a very simple utility that &#8216;restores&#8217; the contents of dump file into NTDB (New Trivial DataBase) file. The dump file is obtained from the ntdbdump or tdbdump commands. </p>
 <p> This tool wait on the standard input for the content of the dump and will write the ntdb in the ntdbfilename parameter. </p>
 <p> This tool can be used to translate between ntdb and tdb files by dumping and restoring.</p>

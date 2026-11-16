@@ -11,18 +11,12 @@ std::bsearch - std::bsearch
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void *bsearch(const void *key, const void *ptr, std::size_t count,
-
                   std::size_t size, /*compare-pred*/ *comp);
 (1)
-
     void *bsearch(const void *key, const void *ptr, std::size_t count,
-
                   std::size_t size, /*c-compare-pred*/ *comp);
-
 extern &quot;C++&quot; using /*compare-pred*/ = int(const void *, const void *); // exposition-only (2)
-
 extern &quot;C&quot; using /*c-compare-pred*/ = int(const void *, const void *); // exposition-only</code></pre> 
 Finds an element equal to element pointed to by key in an array pointed to by ptr. The array contains count elements of size bytes each and must be partitioned with respect to the object pointed to by key, that is, all the elements that compare less than must appear before all the elements that compare equal to, and those must appear before all the elements that compare greater than the key object. A fully sorted array satisfies these requirements. The elements are compared using function pointed to by comp. 
 The behavior is undefined if the array is not already partitioned in ascending order with respect to key, according to the same criterion that comp uses. 
@@ -53,10 +47,8 @@ The two overloads provided by the C++ standard library are distinct because the 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdlib&gt;
-
 #include &lt;iostream&gt;
 int compare(const void *ap, const void *bp)
-
 {
     const int *a = (int *)ap;
     const int *b = (int *)bp;
@@ -68,7 +60,6 @@ int compare(const void *ap, const void *bp)
         return 0;
 }
 int main(int argc, char **argv)
-
 {
     const int ARR_SIZE = 8;
     int arr[ARR_SIZE] = {1, 2, 3, 4, 5, 6, 7, 8};

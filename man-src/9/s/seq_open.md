@@ -14,10 +14,10 @@ description: "seq_open – initialize sequential file"
 <p><i>file</i></p>
 <dl>
 <dd>
-<dd>file we initialize</dl>
+</dd><dd>file we initialize</dd></dl>
 <p> <i>op</i></p>
 <dl>
-<dd>method table describing the sequence</dl>
+<dd>method table describing the sequence</dd></dl>
 <h2>Description</h2>
 <p><code>seq_open</code> sets <i>file</i>, associating it with a sequence described by <i>op</i>. <i>op</i>-&gt;<code>start</code> sets the iterator up and returns the first element of sequence. <i>op</i>-&gt;<code>stop</code> shuts it down. <i>op</i>-&gt;<code>next</code> returns the next element of sequence. <i>op</i>-&gt;<code>show</code> prints element into the buffer. In case of error -&gt;<code>start</code> and -&gt;<code>next</code> return ERR_PTR(error). In the end of sequence they return <code>NULL</code>. -&gt;<code>show</code> returns 0 in case of success and negative number in case of error. Returning SEQ_SKIP means &#8220;discard this element and move on&#8221;.</p>
 <h2>Note</h2>

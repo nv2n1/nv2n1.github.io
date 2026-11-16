@@ -17,67 +17,67 @@ description: "hardlink – link multiple copies of a file"
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> print quick usage details to the screen.</dl>
+</dt><dd> print quick usage details to the screen.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> More verbose output. If specified once, every hardlinked file is displayed, if specified twice, it also shows every comparison.</dl>
+</dt><dd> More verbose output. If specified once, every hardlinked file is displayed, if specified twice, it also shows every comparison.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Quiet mode, don&#8217;t print anything.</dl>
+</dt><dd> Quiet mode, don&#8217;t print anything.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;dry-run</code></p>
 <dl>
 <dt>
-<dd> Do not act, just print what would happen.</dl>
+</dt><dd> Do not act, just print what would happen.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;respect-name</code></p>
 <dl>
 <dt>
-<dd> Only try to link files with the same (base)name. It&#8217;s strongly recommended to use long options rather than <code>-f</code> which is interpreted in a different way by other <code>hardlink</code> implementations.</dl>
+</dt><dd> Only try to link files with the same (base)name. It&#8217;s strongly recommended to use long options rather than <code>-f</code> which is interpreted in a different way by other <code>hardlink</code> implementations.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;ignore-mode</code></p>
 <dl>
 <dt>
-<dd> Link and compare files even if their mode is different. Results may be slightly unpredictable.</dl>
+</dt><dd> Link and compare files even if their mode is different. Results may be slightly unpredictable.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;ignore-owner</code></p>
 <dl>
 <dt>
-<dd> Link and compare files even if their owner information (user and group) differs. Results may be unpredictable.</dl>
+</dt><dd> Link and compare files even if their owner information (user and group) differs. Results may be unpredictable.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;ignore-time</code></p>
 <dl>
 <dt>
-<dd> Link and compare files even if their time of modification is different. This is usually a good choice.</dl>
+</dt><dd> Link and compare files even if their time of modification is different. This is usually a good choice.</dd></dl>
 <p> <code>-X</code>, <code>&#8211;respect-xattrs</code></p>
 <dl>
 <dt>
-<dd> Only try to link files with the same extended attributes.</dl>
+</dt><dd> Only try to link files with the same extended attributes.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;maximize</code></p>
 <dl>
 <dt>
-<dd> Among equal files, keep the file with the highest link count.</dl>
+</dt><dd> Among equal files, keep the file with the highest link count.</dd></dl>
 <p> <code>-M</code>, <code>&#8211;minimize</code></p>
 <dl>
 <dt>
-<dd> Among equal files, keep the file with the lowest link count.</dl>
+</dt><dd> Among equal files, keep the file with the lowest link count.</dd></dl>
 <p> <code>-O</code>, <code>&#8211;keep-oldest</code></p>
 <dl>
 <dt>
-<dd> Among equal files, keep the oldest file (least recent modification time). By default, the newest file is kept. If <code>&#8211;maximize</code> or <code>&#8211;minimize</code> is specified, the link count has a higher precedence than the time of modification.</dl>
+</dt><dd> Among equal files, keep the oldest file (least recent modification time). By default, the newest file is kept. If <code>&#8211;maximize</code> or <code>&#8211;minimize</code> is specified, the link count has a higher precedence than the time of modification.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;exclude</code> <i>regex</i></p>
 <dl>
 <dt>
-<dd> A regular expression which excludes files from being compared and linked.</dl>
+</dt><dd> A regular expression which excludes files from being compared and linked.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;include</code> <i>regex</i></p>
 <dl>
 <dt>
-<dd> A regular expression to include files. If the option <code>&#8211;exclude</code> has been given, this option re-includes files which would otherwise be excluded. If the option is used without <code>&#8211;exclude</code>, only files matched by the pattern are included.</dl>
+</dt><dd> A regular expression to include files. If the option <code>&#8211;exclude</code> has been given, this option re-includes files which would otherwise be excluded. If the option is used without <code>&#8211;exclude</code>, only files matched by the pattern are included.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;minimum-size</code> <i>size</i></p>
 <dl>
 <dt>
-<dd> The minimum size to consider. By default this is 1, so empty files will not be linked. The <i>size</i> argument may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;).</dl>
+</dt><dd> The minimum size to consider. By default this is 1, so empty files will not be linked. The <i>size</i> argument may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;).</dd></dl>
 <p> <code>-S</code>, <code>&#8211;buffer-size</code> <i>size</i></p>
 <dl>
 <dt>
-<dd> The size of read buffer used when comparing file contents (default: 8KiB). This costs some additional memory but potentially reduces the amount of seek operations and therefore improve performance, especially with mechanic disk drives. Optional factor suffixes are supported, like with the <code>-s</code> option. This is mostly efficient with other filters (i.e. with <code>-f</code> or <code>-X</code>) and can be less efficient with <code>-top</code> options.</dl>
+</dt><dd> The size of read buffer used when comparing file contents (default: 8KiB). This costs some additional memory but potentially reduces the amount of seek operations and therefore improve performance, especially with mechanic disk drives. Optional factor suffixes are supported, like with the <code>-s</code> option. This is mostly efficient with other filters (i.e. with <code>-f</code> or <code>-X</code>) and can be less efficient with <code>-top</code> options.</dd></dl>
 <h2>ARGUMENTS</h2>
 <p> <code>hardlink</code> takes one or more directories which will be searched for files to be linked.</p>
 <h2>BUGS</h2>

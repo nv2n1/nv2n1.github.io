@@ -11,9 +11,7 @@ zzip_fclose, zzip_close - ...
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;zzip/lib.h&gt;
-
 int zzip_fclose((ZZIP_FILE * fp));
-
 int zzip_close((ZZIP_FILE * fp));</code></pre>
 
 <h2>Description</h2>
@@ -23,7 +21,7 @@ int zzip_close((ZZIP_FILE * fp));</code></pre>
 <h2>Author</h2>
 
 <dl><dd>&bull;
-<dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dl>
+</dd><dd>Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dd></dl>
 
 <h2>Copyright</h2>
 

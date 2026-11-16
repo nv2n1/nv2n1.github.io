@@ -24,13 +24,9 @@ An object of type std::vector&lt;double&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;random&gt;
-
 int main()
-
 {
     std::discrete_distribution&lt;&gt; d({40, 10, 10, 40});
     std::vector&lt;double&gt; p = d.probabilities();

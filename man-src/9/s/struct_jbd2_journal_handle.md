@@ -23,30 +23,30 @@ description: "struct_jbd2_journal_handle – The handle_s type is the concrete t
 <h2>Members</h2>
 <p>{unnamed_union}</p>
 <dl>
-<dd>anonymous</dl>
+<dd>anonymous</dd></dl>
 <p> h_buffer_credits</p>
 <dl>
-<dd>Number of remaining buffers we are allowed to dirty.</dl>
+<dd>Number of remaining buffers we are allowed to dirty.</dd></dl>
 <p> h_ref</p>
 <dl>
-<dd>Reference count on this handle</dl>
+<dd>Reference count on this handle</dd></dl>
 <p> h_err</p>
 <dl>
-<dd>Field for caller&#8217;s use to track errors through large fs operations</dl>
+<dd>Field for caller&#8217;s use to track errors through large fs operations</dd></dl>
 <p> h_sync</p>
 <dl>
-<dd>flag for sync-on-close</dl>
+<dd>flag for sync-on-close</dd></dl>
 <p> h_jdata</p>
 <dl>
-<dd>flag to force data journaling</dl>
+<dd>flag to force data journaling</dd></dl>
 <p> h_aborted</p>
 <dl>
-<dd>flag indicating fatal error on handle</dl>
+<dd>flag indicating fatal error on handle</dd></dl>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

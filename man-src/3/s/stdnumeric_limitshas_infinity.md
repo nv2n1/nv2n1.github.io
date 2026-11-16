@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::has_infinity – std::numeric_limits<T>::h
 <h2>Synopsis</h2>
 <pre><code>static const bool has_infinity;
 (until C++ 11)
-
     static constexpr bool has_infinity;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::has_infinity is true for all types T capable of representing the positive infinity as a distinct special value. This constant is meaningful for all floating-point types and is guaranteed to be true if std::numeric_limits&lt;T&gt;::is_iec559 == true. </p>

@@ -86,7 +86,7 @@ description: "QuantLib::GeneralStatistics – Statistics tool."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> weights must be positive or null</dl>
+</dt><dd> weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

@@ -95,14 +95,14 @@ description: "rhev_agentd_selinux – Security Enhanced Linux Policy for the rhe
 <p> <code>rhev_agentd_exec_t</code> </p>
 <p> &#8211; Set files with the rhev_agentd_exec_t type, if you want to transition an executable to the rhev_agentd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/ovirt-guest-agent, /usr/share/rhev-agent/rhev-agentd.py, /usr/share/rhev-agent/LockActiveSession.py, /usr/share/ovirt-guest-agent/LockActiveSession.py </p>
+<dt>Paths:</dt>
+<dd>/usr/share/ovirt-guest-agent, /usr/share/rhev-agent/rhev-agentd.py, /usr/share/rhev-agent/LockActiveSession.py, /usr/share/ovirt-guest-agent/LockActiveSession.py </dd>
 </dl>
 <p> <code>rhev_agentd_log_t</code> </p>
 <p> &#8211; Set files with the rhev_agentd_log_t type, if you want to treat the data as rhev agentd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/rhev-agent(/.*)?, /var/log/ovirt-guest-agent(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/rhev-agent(/.*)?, /var/log/ovirt-guest-agent(/.*)? </dd>
 </dl>
 <p> <code>rhev_agentd_tmp_t</code> </p>
 <p> &#8211; Set files with the rhev_agentd_tmp_t type, if you want to store rhev agentd temporary files in the /tmp directories. </p>
@@ -111,8 +111,8 @@ description: "rhev_agentd_selinux – Security Enhanced Linux Policy for the rhe
 <p> <code>rhev_agentd_var_run_t</code> </p>
 <p> &#8211; Set files with the rhev_agentd_var_run_t type, if you want to store the rhev agentd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/rhev-agentd.pid, /var/run/ovirt-guest-agent.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/rhev-agentd.pid, /var/run/ovirt-guest-agent.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -17,51 +17,50 @@ description: "ipv6logstats – Takes http log data from stdin and print a statis
 <h2>Options</h2>
 <p>General options:</p>
 <dl>
-<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></p>
-<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</p>
-<dt><code>[-v|&#8211;version [-v [-v]]]</code></p>
-<dd>version information (2 optional detail levels)</p>
-<dt><code>[-v|&#8211;version -h]</code></p>
-<dd>explanation of feature tokens</p>
-<dt><code>[-V|&#8211;verbose]</code></p>
-<dd>be more verbose</p>
-<dt><code>[-h|&#8211;help|-?]</code></p>
-<dd>this online help</p>
-<dt><code>[-q|&#8211;quiet]</code></p>
-<dd>be more quiet</dl>
+<dt><code>[-d|&#8211;debug </code><i>DEBUGVALUE</i><code>]</code></dt>
+<dd>debug value (bitwise like) can also be set by IPV6CALC_DEBUG environment value</dd>
+<dt><code>[-v|&#8211;version [-v [-v]]]</code></dt>
+<dd>version information (2 optional detail levels)</dd>
+<dt><code>[-v|&#8211;version -h]</code></dt>
+<dd>explanation of feature tokens</dd>
+<dt><code>[-V|&#8211;verbose]</code></dt>
+<dd>be more verbose</dd>
+<dt><code>[-h|&#8211;help|-?]</code></dt>
+<dd>this online help</dd>
+<dt><code>[-q|&#8211;quiet]</code></dt>
+<dd>be more quiet</dd></dl>
 <p> External database options (depending on compiled-in suppport):</p>
 <dl>
-<dt><code>[&#8211;db-ip2location-disable]</code></p>
-<dd>IP2Location support disabled</p>
-<dt><code>[&#8211;db-ip2location-dir</code> <i>DIRECTORY</i><code>]</code></p>
-<dd>IP2Location database directory (default: /usr/share/IP2Location)</p>
-<dt><code>[&#8211;db-geoip-disable]</code></p>
-<dd>GeoIP support disabled</p>
-<dt><code>[&#8211;db-geoip-dir</code> <i>DIRECTORY</i><code>]</code></p>
-<dd>GeoIP database directory (default: /usr/share/GeoIP)</dl>
+<dt><code>[&#8211;db-ip2location-disable]</code></dt>
+<dd>IP2Location support disabled</dd>
+<dt><code>[&#8211;db-ip2location-dir</code> <i>DIRECTORY</i><code>]</code></dt>
+<dd>IP2Location database directory (default: /usr/share/IP2Location)</dd>
+<dt><code>[&#8211;db-geoip-disable]</code></dt>
+<dd>GeoIP support disabled</dd>
+<dt><code>[&#8211;db-geoip-dir</code> <i>DIRECTORY</i><code>]</code></dt>
+<dd>GeoIP database directory (default: /usr/share/GeoIP)</dd></dl>
 <p> Special options:</p>
 <dl>
-<dt><code>[-u|&#8211;unknown]</code></p>
-<dd>print unknown IP addresses to stderr</p>
-<dt><code>[-c|&#8211;columns]</code></p>
-<dd>print statistics in columns (1)</p>
-<dt><code>[-N|&#8211;column-numbers]</code></p>
-<dd>print column numbers</p>
-<dt><code>[-n|&#8211;noheader]</code></p>
-<dd>don&#8217;t print header in columns mode (1)</p>
-<dt><code>[-o|&#8211;onlyheader]</code></p>
-<dd>print only header in columns mode (1)</p>
-<dt><code>[-p|&#8211;prefix</code> <i>TOKEN</i><code>]</code></p>
-<dd>print token as prefix (1)</p>
-<dt><code>[-s|&#8211;simple]</code></p>
+<dt><code>[-u|&#8211;unknown]</code></dt>
+<dd>print unknown IP addresses to stderr</dd>
+<dt><code>[-c|&#8211;columns]</code></dt>
+<dd>print statistics in columns (1)</dd>
+<dt><code>[-N|&#8211;column-numbers]</code></dt>
+<dd>print column numbers</dd>
+<dt><code>[-n|&#8211;noheader]</code></dt>
+<dd>don&#8217;t print header in columns mode (1)</dd>
+<dt><code>[-o|&#8211;onlyheader]</code></dt>
+<dd>print only header in columns mode (1)</dd>
+<dt><code>[-p|&#8211;prefix</code> <i>TOKEN</i><code>]</code></dt>
+<dd>print token as prefix (1)</dd>
+<dt><code>[-s|&#8211;simple]</code></dt>
 <dd>disable extended statistic (CountryCode/ASN)<br />
-&nbsp;<wbr>(1)&nbsp;<wbr>unsupported for CountryCode&nbsp;<wbr>&amp;&nbsp;<wbr>ASN statistics </p>
+&nbsp;<wbr>(1)&nbsp;<wbr>unsupported for CountryCode&nbsp;<wbr>&amp;&nbsp;<wbr>ASN statistics </dd>
 </dl>
 <h2>Examples</h2>
 <p>Column mode: </p>
 <p> echo &quot;2001:a60:1400:1201:221:70ff:fe01:2345&quot; | ./ipv6logstats -c -q </p>
 <pre>ALL IPv4 IPv6 UNKNOWN IPv4/APNIC IPv4/ARIN IPv4/RIPE IPv4/LACNIC IPv4/AFRINIC IPv4/UNKNOWN IPv6/6bone IPv6/IANA IPv6/APNIC IPv6/ARIN IPv6/RIPE IPv6/LACNIC IPv6/AFRINIC IPv6/RESERVED IPv6/UNKNOWN IPv6/6to4/IANA IPv6/6to4/APNIC IPv6/6to4/ARIN IPv6/6to4/RIPE IPv6/6to4/LACNIC IPv6/6to4/AFRINIC IPv6/6to4/RESERVED IPv6/6to4/UNKNOWN IPv6/Teredo/IANA IPv6/Teredo/APNIC IPv6/Teredo/ARIN IPv6/Teredo/RIPE IPv6/Teredo/LACNIC IPv6/Teredo/AFRINIC IPv6/Teredo/RESERVED IPv6/Teredo/UNKNOWN IPv6/NAT64/IANA IPv6/NAT64/APNIC IPv6/NAT64/ARIN IPv6/NAT64/RIPE IPv6/NAT64/LACNIC IPv6/NAT64/AFRINIC IPv6/NAT64/RESERVED IPv6/NAT64/UNKNOWN IPv6/IID/Global IPv6/IID/Random IPv6/IID/Manual IPv6/IID/ISATAP IPv6/IID/Unknown #Version(4.0)
- 
 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 #4.0
 Row mode:
 echo &quot;2001:a60:1400:1201:221:70ff:fe01:2345&quot; | ./ipv6logstats -q 

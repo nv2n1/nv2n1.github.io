@@ -15,11 +15,11 @@ dev_set_allmulti - update allmulti count on a device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>inc</i>
-<dl><dd>modifier</dl>
+<dl><dd>modifier</dd></dl>
 
 <h2>Description</h2>
 

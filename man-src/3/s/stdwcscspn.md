@@ -11,7 +11,6 @@ std::wcscspn - std::wcscspn
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     std::size_t wcscspn(const wchar_t *dest, const wchar_t *src);</code></pre> 
 Returns the length of the maximum initial segment of the wide string pointed to by dest, that consists of only the characters not found in wide string pointed to by src. 
 

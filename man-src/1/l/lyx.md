@@ -18,41 +18,41 @@ description: "LyX – A Document Processor"
 <h2>OPTIONS</h2>
 <p> <code>LyX</code> supports the following command-line switches.</p>
 <dl>
-<dt><code>-help</code></p>
-<dd> summarizes LyX usage</p>
-<dt><code>-version</code></p>
-<dd> provides version information on the build of LyX.</p>
-<dt><code>-sysdir</code><i> directory</i></p>
-<dd> sets system directory. Normally not needed.</p>
-<dt><code>-userdir</code><i> directory</i></p>
-<dd> sets user directory. Needed if you want to use LyX with different lyxrc settings.</p>
-<dt><code>-geometry</code><i> WxH+X+Y</i></p>
-<dd> set geometry of the main window.</p>
-<dt><code>-dbg</code><i> feature[,feature&#8230;]</i></p>
-<dd> where feature is a name or number. Use &quot;<code>lyx -dbg</code>&quot; to see the list of available debug features.</p>
-<dt><code> -x [&#8211;execute]</code> <i>command</p>
-<dd> where command is a lyx command.</p>
-<dt></i><code> -e [&#8211;export]</code> <i>fmt</p>
-<dd> where fmt is the export format of choice (latex, pdflatex, luatex, xetex, xhtml, text, lyx, ps, pdf, &#8230;). Note that the order of -e and -x switches matters.</p>
-<dt></i><code> -E [&#8211;export-to]</code> <i>fmt filename</p>
-<dd> where fmt is the export format of choice (see &#8211;export), and filename is the destination filename. Note that any additional external file needed by filename (such as image files) will be exported as well to the folder containing filename (preserving the relative path embedded within the original LyX document, if any).</p>
-<dt></i><code> -i [&#8211;import]</code> <i>fmt file.xxx</p>
-<dd> where fmt is the import format of choice and file.xxx is the file to be imported.</p>
-<dt></i><code> -f [&#8211;force-overwrite]</code> <i>what</p>
-<dd> where what is is either &quot;</i><code>all</code>&quot;, &quot;<code>main</code>&quot; or &quot;<code>none</code>&quot;. Specify &quot;<code>all</code>&quot; to allow overwriting all files during a batch export, &quot;<code>main</code>&quot; to allow overwriting the main file only, or &quot;<code>none</code>&quot; to disallow overwriting any file. When this switch is followed by anything else other than &quot;<code>all</code>&quot;, &quot;<code>main</code>&quot; or &quot;<code>none</code>&quot;, the behavior is as if &quot;<code>all</code>&quot; was specified, but what follows is left on the command line for further processing.</p>
-<dt><code> -n [&#8211;no-remote]</code></p>
-<dd> open documents passed as arguments in a new instance, even if another instance of LyX is already running.</p>
-<dt><code> -r [&#8211;remote]</code></p>
-<dd> by using the lyxpipe, ask an already running instance of LyX to open the documents passed as arguments and then exit. If the lyxpipe is not set up or is not working, a new instance is created and execution continues normally.</p>
-<dt><code>-batch</code></p>
-<dd> causes LyX to run the given commands without opening a GUI window. Thus, something like: </p>
+<dt><code>-help</code></dt>
+<dd> summarizes LyX usage</dd>
+<dt><code>-version</code></dt>
+<dd> provides version information on the build of LyX.</dd>
+<dt><code>-sysdir</code><i> directory</i></dt>
+<dd> sets system directory. Normally not needed.</dd>
+<dt><code>-userdir</code><i> directory</i></dt>
+<dd> sets user directory. Needed if you want to use LyX with different lyxrc settings.</dd>
+<dt><code>-geometry</code><i> WxH+X+Y</i></dt>
+<dd> set geometry of the main window.</dd>
+<dt><code>-dbg</code><i> feature[,feature&#8230;]</i></dt>
+<dd> where feature is a name or number. Use &quot;<code>lyx -dbg</code>&quot; to see the list of available debug features.</dd>
+<dt><code> -x [&#8211;execute]</code> <i>command</dt>
+<dd> where command is a lyx command.</dd>
+<dt></i><code> -e [&#8211;export]</code> <i>fmt</dt>
+<dd> where fmt is the export format of choice (latex, pdflatex, luatex, xetex, xhtml, text, lyx, ps, pdf, &#8230;). Note that the order of -e and -x switches matters.</dd>
+<dt></i><code> -E [&#8211;export-to]</code> <i>fmt filename</dt>
+<dd> where fmt is the export format of choice (see &#8211;export), and filename is the destination filename. Note that any additional external file needed by filename (such as image files) will be exported as well to the folder containing filename (preserving the relative path embedded within the original LyX document, if any).</dd>
+<dt></i><code> -i [&#8211;import]</code> <i>fmt file.xxx</dt>
+<dd> where fmt is the import format of choice and file.xxx is the file to be imported.</dd>
+<dt></i><code> -f [&#8211;force-overwrite]</code> <i>what</dt>
+<dd> where what is is either &quot;</i><code>all</code>&quot;, &quot;<code>main</code>&quot; or &quot;<code>none</code>&quot;. Specify &quot;<code>all</code>&quot; to allow overwriting all files during a batch export, &quot;<code>main</code>&quot; to allow overwriting the main file only, or &quot;<code>none</code>&quot; to disallow overwriting any file. When this switch is followed by anything else other than &quot;<code>all</code>&quot;, &quot;<code>main</code>&quot; or &quot;<code>none</code>&quot;, the behavior is as if &quot;<code>all</code>&quot; was specified, but what follows is left on the command line for further processing.</dd>
+<dt><code> -n [&#8211;no-remote]</code></dt>
+<dd> open documents passed as arguments in a new instance, even if another instance of LyX is already running.</dd>
+<dt><code> -r [&#8211;remote]</code></dt>
+<dd> by using the lyxpipe, ask an already running instance of LyX to open the documents passed as arguments and then exit. If the lyxpipe is not set up or is not working, a new instance is created and execution continues normally.</dd>
+<dt><code>-batch</code></dt>
+<dd> causes LyX to run the given commands without opening a GUI window. Thus, something like: </dd>
 <p>&nbsp;<wbr>lyx -batch -x&nbsp;<wbr>&quot;buffer-print printer default dvips&quot;&nbsp;<wbr>myfile.lyx<br />
  will cause LyX to print myfile.lyx to the default printer, using dvips and the default print settings (which, of course, have to have been configured already). </p>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>LYX_DIR_21x</code></p>
-<dd> can be used to specify which system directory to use.</dl>
+<dt><code>LYX_DIR_21x</code></dt>
+<dd> can be used to specify which system directory to use.</dd></dl>
 <p> The system directory is determined by searching for the file &quot;chkconfig.ltx&quot;. Directories are searched in this order:<br />
  1) -sysdir command line parameter<br />
  2) LYX_DIR_21x environment variable<br />
@@ -60,17 +60,17 @@ description: "LyX – A Document Processor"
  4) &lt;path of binary&gt;/../share/&lt;name of binary&gt;/<br />
  5) hardcoded lyx_dir (at build time: /usr/share/lyx)</p>
 <dl>
-<dt><code>LYX_USERDIR_21x</code></p>
-<dd> can be used to specify which user directory to use.</dl>
+<dt><code>LYX_USERDIR_21x</code></dt>
+<dd> can be used to specify which user directory to use.</dd></dl>
 <p> The user directory is, in order of precedence:<br />
  1) -userdir command line parameter<br />
  2) LYX_USERDIR_21x environment variable<br />
  3) $HOME/.&lt;name of binary&gt; if no explicit setting is made </p>
 <dl>
-<dt><code>LYX_LOCALEDIR</code></p>
-<dd> can be used to tell LyX where to look for the translations of its GUI strings in other languages. </p>
-<dt><code>LYX_FORCE_OVERWRITE</code></p>
-<dd> can be used to change the default behavior when exporting from command line.</dl>
+<dt><code>LYX_LOCALEDIR</code></dt>
+<dd> can be used to tell LyX where to look for the translations of its GUI strings in other languages. </dd>
+<dt><code>LYX_FORCE_OVERWRITE</code></dt>
+<dd> can be used to change the default behavior when exporting from command line.</dd></dl>
 <p> By default, LyX overwrites the main file when exporting from command line but not the ancillary files. This behavior can be changed by setting this environment variable, which relieves the need of using the -f switch. Allowed values are either &quot;<code>all</code>&quot;, &quot;<code>main</code>&quot; or &quot;<code>none</code>&quot;, with same meaning as for the -f switch.</p>
 <h2>FILES</h2>
 <pre>

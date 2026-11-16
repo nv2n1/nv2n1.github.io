@@ -16,14 +16,14 @@ description: "mate-session-properties – Configure applications to start on log
 <p> It also proposes an interface to save a snapshot of the currently running applications so that they can automatically be restored to their current state on your next MATE session.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-session/issues">http://github.com/mate-desktop/mate-session/issues</a></p>

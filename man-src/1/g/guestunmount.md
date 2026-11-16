@@ -45,38 +45,38 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;fd=FD</code></p>
-<dd> Specify the pipe file descriptor to monitor, and delay cleanup until that pipe is closed.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help and exit.</p>
-<dt><code>-q</code></p>
+<dt><code>&#8211;fd=FD</code></dt>
+<dd> Specify the pipe file descriptor to monitor, and delay cleanup until that pipe is closed.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help and exit.</dd>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Don&#8217;t display error messages from fusermount. The return status is still set (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</p>
-<dt><code>&#8211;no-retry</code></p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t display error messages from fusermount. The return status is still set (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</dd>
+<dt><code>&#8211;no-retry</code></dt>
 <dd>
-<dt><code>&#8211;retry=N</code></p>
-<dd> By default, guestunmount will retry the fusermount operation up to 5 times (that is, it will run it up to 6 times = 1 try + 5 retries). </p>
+</dd><dt><code>&#8211;retry=N</code></dt>
+<dd> By default, guestunmount will retry the fusermount operation up to 5 times (that is, it will run it up to 6 times = 1 try + 5 retries). </dd>
 <p> Use <i>&#8211;no-retry</i> to make guestunmount run fusermount only once. </p>
 <p> Use <i>&#8211;retry=N</i> to make guestunmount retry <tt>&quot;N&quot;</tt> times instead of 5. </p>
 <p> guestunmount performs an exponential back-off between retries, waiting 1 second, 2 seconds, 4 seconds, etc before each retry.</p>
-<dt><code>-V</code></p>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the program version and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the program version and exit.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>&quot;PATH&quot;</p>
-<dd> The <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program (supplied by <font SIZE="-1">FUSE</font>) must be available on the current <tt>&quot;PATH&quot;</tt>.</dl>
+<dt>&quot;PATH&quot;</dt>
+<dd> The <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program (supplied by <font SIZE="-1">FUSE</font>) must be available on the current <tt>&quot;PATH&quot;</tt>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or one of the following error codes:</p>
 <dl>
-<dt>1</p>
-<dd> Program error, eg. could not allocate memory, could not run fusermount. See the error message printed for more information.</p>
-<dt>2</p>
-<dd> The mount point could not be unmounted even after retrying. See the error message printed for the underlying fusermount error.</p>
-<dt>3</p>
-<dd> The mount point is not mounted.</dl>
+<dt>1</dt>
+<dd> Program error, eg. could not allocate memory, could not run fusermount. See the error message printed for more information.</dd>
+<dt>2</dt>
+<dd> The mount point could not be unmounted even after retrying. See the error message printed for the underlying fusermount error.</dd>
+<dt>3</dt>
+<dd> The mount point is not mounted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2), &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
 <h2>AUTHORS</h2>
@@ -92,29 +92,29 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAG">OPTIONS</a></p>
+<dt><a href="#lbAG">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAI">EXIT STATUS</a></p>
+</dd><dt><a href="#lbAI">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAJ">SEE ALSO</a></p>
+</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHORS</a></p>
+</dd><dt><a href="#lbAK">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAL">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAM">LICENSE</a></p>
+</dd><dt><a href="#lbAM">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAN">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAN">BUGS</a></dt>
+<dd></dd></dl>

@@ -14,11 +14,11 @@ description: "ata_dev_pair – return other device on cable"
 <p><i>adev</i></p>
 <dl>
 <dd>
-<dd>device</dl>
+</dd><dd>device</dd></dl>
 <h2>Description</h2>
 <p>Obtain the other device on the same cable, or if none is present NULL is returned</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

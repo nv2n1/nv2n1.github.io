@@ -12,7 +12,7 @@ description: "getcifsacl – Userspace helper to display an ACL in a security de
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>getcifsacl [-v|-r] {file system object}</dl>
+</dt><dd>getcifsacl [-v|-r] {file system object}</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This tool is part of the cifs-utils suite. </p>
 <p> getcifsacl is a userspace helper program for the Linux CIFS client file system. It is intended to display a security descriptor including ACL for a file system object. </p>
@@ -22,11 +22,11 @@ description: "getcifsacl – Userspace helper to display an ACL in a security de
 <p> -v</p>
 <dl>
 <dt>
-<dd> Print version number and exit.</dl>
+</dt><dd> Print version number and exit.</dd></dl>
 <p> -r</p>
 <dl>
 <dt>
-<dd> Display a security descriptor in raw mode. Values such as type and flags are displayed in hexadecimal format, a SID is not mapped to a name.</dl>
+</dt><dd> Display a security descriptor in raw mode. Values such as type and flags are displayed in hexadecimal format, a SID is not mapped to a name.</dd></dl>
 <h2>NOTES</h2>
 <p> Kernel support for getcifsacl/setcifsacl utilities was initially introduced in the 2.6.37 kernel.</p>
 <h2>SEE ALSO</h2>

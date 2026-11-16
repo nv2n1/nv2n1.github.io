@@ -21,10 +21,10 @@ description: "stg-clone – Make a local clone of a remote repository"
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> 1</p>
+<dt> 1.</dt>
+<dd> 1</dd>
 <dl>
 <dt>
-<dd> [set $man.base.url.for.relative.links]/stg</dl>
+</dt><dd> [set $man.base.url.for.relative.links]/stg</dd></dl>
 </dl>
 <h2>Index</h2>

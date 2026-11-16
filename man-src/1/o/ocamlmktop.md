@@ -16,20 +16,20 @@ description: "ocamlmktop – Building custom toplevel systems"
 <h2>OPTIONS</h2>
 <p> The following command-line options are recognized by <code><a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a></code>(1).</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print the version string of the compiler and exit.</p>
-<dt><code>-vnum</code>&nbsp;<wbr>or&nbsp;<wbr><code>-version</code></p>
-<dd> Print the version number of the compiler in short form and exit.</p>
-<dt><code>-cclib -l</code><i>libname</i></p>
-<dd> Pass the <code>-l</code><i>libname</i> option to the C linker when linking in &#8220;custom runtime&#8221; mode (see the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</p>
-<dt><code>-ccopt</code></p>
-<dd> Pass the given option to the C compiler and linker, when linking in &#8220;custom runtime&#8221; mode. See the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</p>
-<dt><code>-custom</code></p>
-<dd> Link in &#8220;custom runtime&#8221; mode. See the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</p>
-<dt><code>-I</code><i>&nbsp;<wbr>directory</i></p>
-<dd> Add the given directory to the list of directories searched for compiled interface files (.cmo and .cma).</p>
-<dt><code>-o</code><i>&nbsp;<wbr>exec-file</i></p>
-<dd> Specify the name of the toplevel file produced by the linker. The default is is <code>a.out</code>. </p>
+<dt><code>-v</code></dt>
+<dd> Print the version string of the compiler and exit.</dd>
+<dt><code>-vnum</code>&nbsp;<wbr>or&nbsp;<wbr><code>-version</code></dt>
+<dd> Print the version number of the compiler in short form and exit.</dd>
+<dt><code>-cclib -l</code><i>libname</i></dt>
+<dd> Pass the <code>-l</code><i>libname</i> option to the C linker when linking in &#8220;custom runtime&#8221; mode (see the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</dd>
+<dt><code>-ccopt</code></dt>
+<dd> Pass the given option to the C compiler and linker, when linking in &#8220;custom runtime&#8221; mode. See the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</dd>
+<dt><code>-custom</code></dt>
+<dd> Link in &#8220;custom runtime&#8221; mode. See the corresponding option for <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</dd>
+<dt><code>-I</code><i>&nbsp;<wbr>directory</i></dt>
+<dd> Add the given directory to the list of directories searched for compiled interface files (.cmo and .cma).</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>exec-file</i></dt>
+<dd> Specify the name of the toplevel file produced by the linker. The default is is <code>a.out</code>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1). </p>

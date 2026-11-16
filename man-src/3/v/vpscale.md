@@ -13,27 +13,27 @@ description: "vpScale – multiply the current transformation matrix by a scalin
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpScale(</code><i>vpc, sx, sy, sz</i><code>)</code></p>
+<dt> <code>vpScale(</code><i>vpc, sx, sy, sz</i><code>)</code></dt>
 <dd>
-<dd>vpContext <i>*vpc;</i></p>
-<dd>double <i>sxR;</p>
-<dd>double syR;</p>
-<dd>double szR;</dl>
+</dd><dd>vpContext <i>*vpc;</i></dd>
+<dd>double <i>sxR;</dd>
+<dd>double syR;</dd>
+<dd>double szR;</dd></dl>
 <p> </i></p>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></p>
-<dt><i>sx</i></p>
-<dd>Scale factor for the X dimension.</p>
-<dt><i>sy</i></p>
-<dd>Scale factor for the Y dimension.</p>
-<dt><i>sz</i></p>
-<dd>Scale factor for the Z dimension.</dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>sx</i></dt>
+<dd>Scale factor for the X dimension.</dd>
+<dt><i>sy</i></dt>
+<dd>Scale factor for the Y dimension.</dd>
+<dt><i>sz</i></dt>
+<dd>Scale factor for the Z dimension.</dd></dl>
 <h2>Description</h2>
 <p><code>vpScale</code> is used to multiply the current transformation matrix by a 4-by-4 scaling matrix. The arguments specify independent scale factors for each of the three cartesian axes. The scaling matrix is:</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>sx<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>sx<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0</dd>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sy<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sz<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1
@@ -45,3 +45,4 @@ description: "vpScale – multiply the current transformation matrix by a scalin
 <p>The return value is always VP_OK.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3) </p>
+</p>

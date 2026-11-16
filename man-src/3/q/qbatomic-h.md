@@ -12,40 +12,17 @@ description: "qbatomic.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;stdint.h&gt;
-
 #include &lt;qb/qbdefs.h&gt;
-
 #include &lt;qb/qbconfig.h&gt;</code></pre>
 <h3>Macros</h3>
 <pre><code>#define qb_atomic_int_get(atomic)
-
-
-
 #define qb_atomic_int_set(atomic, newval)
-
-
-
 #define qb_atomic_pointer_get(atomic)
-
-
-
 #define qb_atomic_pointer_set(atomic, newval)
-
-
-
 #define qb_atomic_int_inc(atomic)   (qb_atomic_int_add ((atomic), 1))
-
-
 Atomically increments the integer pointed to by atomic by 1.
-
-
 #define qb_atomic_int_dec_and_test(atomic)   (qb_atomic_int_exchange_and_add ((atomic), -1) == 1)
-
-
 Atomically decrements the integer pointed to by atomic by 1.
-
-
-
 Functions</code></pre>
 <p> void <code>qb_atomic_init</code> (void) </p>
 <p> int32_t <code>qb_atomic_int_exchange_and_add</code> (volatile int32_t <code>QB_GNUC_MAY_ALIAS</code> *atomic, int32_t val)<br />
@@ -76,10 +53,10 @@ Functions</code></pre>
 <p>Atomically decrements the integer pointed to by atomic by 1. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>atomic</i> a pointer to an integer</dl>
+<dd><i>atomic</i> a pointer to an integer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>QB_TRUE if the integer pointed to by atomic is 0 after decrementing it</dl>
+<dd>QB_TRUE if the integer pointed to by atomic is 0 after decrementing it</dd></dl>
 <h3>#define qb_atomic_int_get(atomic)</h3>
 <p><code>Value:</code> </p>
 <pre>((void) sizeof (char* [sizeof (*(atomic)) == sizeof (int32_t) ? 1 : -1]), (qb_atomic_int_get) ((volatile int32_t QB_GNUC_MAY_ALIAS *) (volatile void *) (atomic)))</pre>
@@ -87,7 +64,7 @@ Functions</code></pre>
 <p>Atomically increments the integer pointed to by atomic by 1. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>atomic</i> a pointer to an integer.</dl>
+<dd><i>atomic</i> a pointer to an integer.</dd></dl>
 <h3>#define qb_atomic_int_set(atomic, newval)</h3>
 <p><code>Value:</code> </p>
 <pre>((void) sizeof (char* [sizeof (*(atomic)) == sizeof (int32_t) ? 1 : -1]), (qb_atomic_int_set) ((volatile int32_t QB_GNUC_MAY_ALIAS *) (volatile void *) (atomic), (newval)))</pre>
@@ -104,63 +81,63 @@ Functions</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to an integer<br />
- <i>val</i> the value to add to *atomic</dl>
+ <i>val</i> the value to add to *atomic</dd></dl>
 <h3>int32_t qb_atomic_int_compare_and_exchange (volatile int32_t <code>QB_GNUC_MAY_ALIAS</code> *atomic, int32_toldval, int32_tnewval)</h3>
 <p>Compares oldval with the integer pointed to by atomic and if they are equal, atomically exchanges *atomic with newval. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to an integer<br />
  <i>oldval</i> the assumed old value of *atomic<br />
- <i>newval</i> the new value of *atomic</dl>
+ <i>newval</i> the new value of *atomic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>QB_TRUE, if *atomic was equal oldval. QB_FALSE otherwise.</dl>
+<dd>QB_TRUE, if *atomic was equal oldval. QB_FALSE otherwise.</dd></dl>
 <h3>int32_t qb_atomic_int_exchange_and_add (volatile int32_t <code>QB_GNUC_MAY_ALIAS</code> *atomic, int32_tval)</h3>
 <p>Atomically adds val to the integer pointed to by atomic. It returns the value of *atomic just before the addition took place. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to an integer<br />
- <i>val</i> the value to add to *atomic</dl>
+ <i>val</i> the value to add to *atomic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the value of *atomic before the addition.</dl>
+<dd>the value of *atomic before the addition.</dd></dl>
 <h3>int32_t qb_atomic_int_get (volatile int32_t <code>QB_GNUC_MAY_ALIAS</code> *atomic)</h3>
 <p>Reads the value of the integer pointed to by atomic. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>atomic</i> a pointer to an integer</dl>
+<dd><i>atomic</i> a pointer to an integer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the value of atomic</dl>
+<dd>the value of atomic</dd></dl>
 <h3>void qb_atomic_int_set (volatile int32_t <code>QB_GNUC_MAY_ALIAS</code> *atomic, int32_tnewval)</h3>
 <p>Sets the value of the integer pointed to by atomic. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to an integer<br />
- <i>newval</i> the new value</dl>
+ <i>newval</i> the new value</dd></dl>
 <h3>int32_t qb_atomic_pointer_compare_and_exchange (volatile void *<code>QB_GNUC_MAY_ALIAS</code> *atomic, void *oldval, void *newval)</h3>
 <p>Compares oldval with the pointer pointed to by atomic and if they are equal, atomically exchanges *atomic with newval. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to a void*<br />
  <i>oldval</i> the assumed old value of *atomic<br />
- <i>newval</i> the new value of *atomic</dl>
+ <i>newval</i> the new value of *atomic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>QB_TRUE if atomic was equal oldval, else QB_FALSE.</dl>
+<dd>QB_TRUE if atomic was equal oldval, else QB_FALSE.</dd></dl>
 <h3>void* qb_atomic_pointer_get (volatile void *<code>QB_GNUC_MAY_ALIAS</code> *atomic)</h3>
 <p>Reads the value of the pointer pointed to by atomic. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>atomic</i> a pointer to a void*.</dl>
+<dd><i>atomic</i> a pointer to a void*.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the value to add to atomic.</dl>
+<dd>the value to add to atomic.</dd></dl>
 <h3>void qb_atomic_pointer_set (volatile void *<code>QB_GNUC_MAY_ALIAS</code> *atomic, void *newval)</h3>
 <p>Sets the value of the pointer pointed to by atomic. Also acts as a memory barrier. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>atomic</i> a pointer to a void*<br />
- <i>newval</i> the new value</dl>
+ <i>newval</i> the new value</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for libqb from the source code.</p>

@@ -15,11 +15,11 @@ splice_from_pipe_next - wait for some data to splice from
 <h2>Arguments</h2>
 
 <i>pipe</i>
-<dl><dd><dd>pipe to splice from</dl>
+<dl><dd></dd><dd>pipe to splice from</dd></dl>
  
 
  <i>sd</i>
-<dl><dd>information about the splice operation</dl>
+<dl><dd>information about the splice operation</dd></dl>
 
 <h2>Description</h2>
 

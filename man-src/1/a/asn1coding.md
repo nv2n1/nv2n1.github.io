@@ -14,14 +14,14 @@ description: "asn1Coding – ASN.1 DER encoder"
 <p>Generates a DER encoding of ASN.1 DEFINITIONS file and ASSIGNMENTS file with value assignments. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
-<dd>checks the syntax only</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd>output file</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;check</code></dt>
+<dd>checks the syntax only</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd>output file</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <h2>Author</h2>
 <p>Written by Fabio Fiorina.</p>
 <h2>Reporting Bugs</h2>
@@ -34,5 +34,5 @@ description: "asn1Coding – ASN.1 DER encoder"
 <h2>See Also</h2>
 <p>The full documentation for <code>asn1Coding</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>asn1Coding</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libtasn1</code></dl>
+<dd><code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual.</p>

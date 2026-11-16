@@ -15,19 +15,19 @@ blk_queue_init_tags - initialize the queue tag info
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>depth</i>
-<dl><dd>the maximum queue depth supported</dl>
+<dl><dd>the maximum queue depth supported</dd></dl>
  
 
  <i>tags</i>
-<dl><dd>the tag to use</dl>
+<dl><dd>the tag to use</dd></dl>
  
 
  <i>alloc_policy</i>
-<dl><dd>tag allocation policy</dl>
+<dl><dd>tag allocation policy</dd></dl>
 
 <h2>Description</h2>
 

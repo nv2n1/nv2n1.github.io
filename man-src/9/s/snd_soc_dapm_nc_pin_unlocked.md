@@ -14,10 +14,10 @@ description: "snd_soc_dapm_nc_pin_unlocked – permanently disable pin."
 <p><i>dapm</i></p>
 <dl>
 <dd>
-<dd>DAPM context</dl>
+</dd><dd>DAPM context</dd></dl>
 <p> <i>pin</i></p>
 <dl>
-<dd>pin name</dl>
+<dd>pin name</dd></dl>
 <h2>Description</h2>
 <p>Marks the specified pin as being not connected, disabling it along any parent or child widgets. At present this is identical to <code>snd_soc_dapm_disable_pin</code> but in future it will be extended to do additional things such as disabling controls which only affect paths through the pin. </p>
 <p> Requires external locking.</p>

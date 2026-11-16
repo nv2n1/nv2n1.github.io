@@ -17,7 +17,7 @@ description: "git-line-summary – Show repository summary by line"
 <p> Outputs a repo summary by line.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git line-summary
 project  : git-extras
@@ -108,8 +108,7 @@ authors  :
    1 Brandon Zylstra           0.0%
    1 Aurélien Scoubeau         0.0%
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Newell Zhu &lt;<i>zlx.star [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

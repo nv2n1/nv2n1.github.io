@@ -14,12 +14,12 @@ description: "IPMI – IPMI probing utility"
 <p><code>Ipmi-locate</code> probes and displays information about a BMC device, such as device addresses or IPMI version support. <code>Ipmi-locate</code> is sometimes used to determine if IPMI can be found on your system. Users are cautioned though, the failure to discover IPMI via <code>Ipmi-locate</code> is not sufficient to disprove that IPMI exists on your system. Your system may not publish such information or may expect clients to communicate at default locations.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>

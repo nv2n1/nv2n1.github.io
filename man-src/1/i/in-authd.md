@@ -11,51 +11,51 @@ description: "in.authd – manual page for in.authd authd-1.4.3:"
 <h2>Description</h2>
 <p>in.authd [options]&#8230; [request]&#8230;</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Output debug messages</p>
-<dt><code>-E[cipher]</code></p>
-<dd>Encrypt username using [AES-128-CBC]</p>
-<dt><code>-e</code></p>
-<dd>Send UNKNOWN-ERROR for common error messages</p>
-<dt><code>-l[mask]</code></p>
-<dd>Log to syslog, [mask] for priority levels</p>
-<dt><code>-m[reps]</code></p>
-<dd>Allow at most [unlimited] requests/connection</p>
-<dt><code>-N[basename]</code></p>
-<dd>Hide users with ~/[.noident] file</p>
-<dt><code>-n</code></p>
-<dd>Send uid number instead of username</p>
-<dt><code>-o</code></p>
-<dd>Send OTHER instead of the operating system</p>
-<dt><code>-t[secs]</code></p>
-<dd>Timeout request after [60] seconds</p>
-<dt><code>-V</code></p>
-<dd>Print program and version information</p>
-<dt><code>&#8211;abrupt</code></p>
-<dd>Disconnect without displaying error msgs</p>
-<dt><code>&#8211;codeset</code>=<i>rfc1340</i></p>
-<dd>Send [charset] if reply is not ASCII</p>
-<dt><code>&#8211;fn</code>[=<i>fields</i>]</p>
-<dd>Use [all] gecos fields instead of username</p>
-<dt><code>&#8211;hybrid</code></p>
-<dd>Use hybrid notation (ex. ::127.0.0.1) for IPv6</p>
-<dt><code>&#8211;ident</code>[=<i>basename</i>]</p>
-<dd>Hide users with no ~/[.ident]</p>
-<dt><code>&#8211;lang</code>=<i>lc</i></p>
-<dd>Localize messages, charsets, &amp; time to [locale]</p>
-<dt><code>&#8211;mapped</code>=<i>ipv6</i></p>
-<dd>Map addresses with same top 96 bits to IPv4</p>
-<dt><code>&#8211;os</code>[=<i>rfc1340</i>]</p>
-<dd>Use [uname], not UNIX, as OS name</p>
-<dt><code>&#8211;passwd</code>=<i>pathname</i></p>
-<dd>Use line 1 of [/etc/ident.key] for crypto</p>
-<dt><code>&#8211;resolve</code></p>
-<dd>Use host and service names if available</p>
-<dt><code>&#8211;username</code>[=<i>login</i>]</p>
-<dd>Use [nobody] as username</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Add real uid, addresses/ports, &amp; timestamps</p>
-<dt><code>&#8211;xerror</code></p>
-<dd>Send more helpful error messages for rare errors</p>
-<dd>$Revision: 1.18 $ $Date: 2004/07/28 16:04:05 $ <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a> </p>
+<dt><code>-d</code></dt>
+<dd>Output debug messages</dd>
+<dt><code>-E[cipher]</code></dt>
+<dd>Encrypt username using [AES-128-CBC]</dd>
+<dt><code>-e</code></dt>
+<dd>Send UNKNOWN-ERROR for common error messages</dd>
+<dt><code>-l[mask]</code></dt>
+<dd>Log to syslog, [mask] for priority levels</dd>
+<dt><code>-m[reps]</code></dt>
+<dd>Allow at most [unlimited] requests/connection</dd>
+<dt><code>-N[basename]</code></dt>
+<dd>Hide users with ~/[.noident] file</dd>
+<dt><code>-n</code></dt>
+<dd>Send uid number instead of username</dd>
+<dt><code>-o</code></dt>
+<dd>Send OTHER instead of the operating system</dd>
+<dt><code>-t[secs]</code></dt>
+<dd>Timeout request after [60] seconds</dd>
+<dt><code>-V</code></dt>
+<dd>Print program and version information</dd>
+<dt><code>&#8211;abrupt</code></dt>
+<dd>Disconnect without displaying error msgs</dd>
+<dt><code>&#8211;codeset</code>=<i>rfc1340</i></dt>
+<dd>Send [charset] if reply is not ASCII</dd>
+<dt><code>&#8211;fn</code>[=<i>fields</i>]</dt>
+<dd>Use [all] gecos fields instead of username</dd>
+<dt><code>&#8211;hybrid</code></dt>
+<dd>Use hybrid notation (ex. ::127.0.0.1) for IPv6</dd>
+<dt><code>&#8211;ident</code>[=<i>basename</i>]</dt>
+<dd>Hide users with no ~/[.ident]</dd>
+<dt><code>&#8211;lang</code>=<i>lc</i></dt>
+<dd>Localize messages, charsets, &amp; time to [locale]</dd>
+<dt><code>&#8211;mapped</code>=<i>ipv6</i></dt>
+<dd>Map addresses with same top 96 bits to IPv4</dd>
+<dt><code>&#8211;os</code>[=<i>rfc1340</i>]</dt>
+<dd>Use [uname], not UNIX, as OS name</dd>
+<dt><code>&#8211;passwd</code>=<i>pathname</i></dt>
+<dd>Use line 1 of [/etc/ident.key] for crypto</dd>
+<dt><code>&#8211;resolve</code></dt>
+<dd>Use host and service names if available</dd>
+<dt><code>&#8211;username</code>[=<i>login</i>]</dt>
+<dd>Use [nobody] as username</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Add real uid, addresses/ports, &amp; timestamps</dd>
+<dt><code>&#8211;xerror</code></dt>
+<dd>Send more helpful error messages for rare errors</dd>
+<dd>$Revision: 1.18 $ $Date: 2004/07/28 16:04:05 $ <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a> </dd>
 </dl>

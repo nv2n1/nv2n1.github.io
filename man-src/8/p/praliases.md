@@ -14,15 +14,15 @@ description: "praliases – display system mail aliases"
 <p>The <code>praliases</code> utility displays the current system aliases, one per line, in no particular order. The special internal @:@ alias will be displayed if present. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-C </code><i>file</i></p>
-<dd>Read the specified sendmail configuration file instead of the default <code>sendmail</code> configuration file.</p>
-<dt><code>-f </code><i>file</i></p>
-<dd>Read the specified file instead of the configured <code>sendmail</code> system aliases file(s).</dl>
+<dt><code>-C </code><i>file</i></dt>
+<dd>Read the specified sendmail configuration file instead of the default <code>sendmail</code> configuration file.</dd>
+<dt><code>-f </code><i>file</i></dt>
+<dd>Read the specified file instead of the configured <code>sendmail</code> system aliases file(s).</dd></dl>
 <p> If one or more keys are specified on the command line, only entries which match those keys are displayed. </p>
 <p> The <code>praliases</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>Files</h2>
 <dl>
-<dt>/etc/mail/sendmail.cf</p>
-<dd>The default <code>sendmail</code> configuration file.</dl>
+<dt>/etc/mail/sendmail.cf</dt>
+<dd>The default <code>sendmail</code> configuration file.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-mailq/">mailq</a>(1), sendmail(8) </p>

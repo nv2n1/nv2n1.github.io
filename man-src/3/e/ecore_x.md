@@ -733,88 +733,88 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Ecore functions for dealing with the X Windows System. </p>
 <p> Ecore_X provides a wrapper and convenience functions for using the X Windows System. Function groups for this part of the library include the following: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd><code>X Library Init and Shutdown Functions</code></p>
-<dt>*</p>
-<dd><code>X Display Attributes</code></p>
-<dt>*</p>
-<dd><code>X Synchronization Functions</code></dl>
+<dt>*</dt>
+<dd><code>X Library Init and Shutdown Functions</code></dd>
+<dt>*</dt>
+<dd><code>X Display Attributes</code></dd>
+<dt>*</dt>
+<dd><code>X Synchronization Functions</code></dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>_Ecore_X_Window_Input_Mode</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_INPUT_MODE_NONE </i></p>
-<dd>The window can never be focused.</p>
-<dt><i>ECORE_X_WINDOW_INPUT_MODE_PASSIVE </i></p>
-<dd>The window can be focused by the WM but doesn&#8217;t focus itself.</p>
-<dt><i>ECORE_X_WINDOW_INPUT_MODE_ACTIVE_LOCAL </i></p>
-<dd>The window sets the focus itself if one of its sub-windows already is focused.</p>
-<dt><i>ECORE_X_WINDOW_INPUT_MODE_ACTIVE_GLOBAL </i></p>
-<dd>The window sets the focus itself even if another window is currently focused.</dl>
+<dt><i>ECORE_X_WINDOW_INPUT_MODE_NONE </i></dt>
+<dd>The window can never be focused.</dd>
+<dt><i>ECORE_X_WINDOW_INPUT_MODE_PASSIVE </i></dt>
+<dd>The window can be focused by the WM but doesn&#8217;t focus itself.</dd>
+<dt><i>ECORE_X_WINDOW_INPUT_MODE_ACTIVE_LOCAL </i></dt>
+<dd>The window sets the focus itself if one of its sub-windows already is focused.</dd>
+<dt><i>ECORE_X_WINDOW_INPUT_MODE_ACTIVE_GLOBAL </i></dt>
+<dd>The window sets the focus itself even if another window is currently focused.</dd></dl>
 <h3>enum <code>_Ecore_X_Window_State</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_ICONIFIED </i></p>
-<dd>The window is iconified.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_ICONIFIED </i></dt>
+<dd>The window is iconified.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_MODAL </i></p>
-<dd>The window is a modal dialog box.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_MODAL </i></dt>
+<dd>The window is a modal dialog box.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_STICKY </i></p>
-<dd>The window manager should keep the window&#8217;s position fixed even if the virtual desktop scrolls.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_STICKY </i></dt>
+<dd>The window manager should keep the window&#8217;s position fixed even if the virtual desktop scrolls.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_MAXIMIZED_VERT </i></p>
-<dd>The window has the maximum vertical size.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_MAXIMIZED_VERT </i></dt>
+<dd>The window has the maximum vertical size.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_MAXIMIZED_HORZ </i></p>
-<dd>The window has the maximum horizontal size.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_MAXIMIZED_HORZ </i></dt>
+<dd>The window has the maximum horizontal size.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_SHADED </i></p>
-<dd>The window is shaded.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_SHADED </i></dt>
+<dd>The window is shaded.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_SKIP_TASKBAR </i></p>
-<dd>The window should not be included in the taskbar.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_SKIP_TASKBAR </i></dt>
+<dd>The window should not be included in the taskbar.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_SKIP_PAGER </i></p>
-<dd>The window should not be included in the pager.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_SKIP_PAGER </i></dt>
+<dd>The window should not be included in the pager.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_HIDDEN </i></p>
-<dd>The window is invisible (i.e.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_HIDDEN </i></dt>
+<dd>The window is invisible (i.e.</dd></dl>
 <p> minimized/iconified)</p>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_FULLSCREEN </i></p>
-<dd>The window should fill the entire screen and have no window border/decorations.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_FULLSCREEN </i></dt>
+<dd>The window should fill the entire screen and have no window border/decorations.</dd></dl>
 <h3>enum <code>_Ecore_X_Window_State_Hint</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_X_WINDOW_STATE_HINT_NONE </i></p>
-<dd>Do not provide any state hint to the window manager.</p>
-<dt><i>ECORE_X_WINDOW_STATE_HINT_WITHDRAWN </i></p>
-<dd>The window wants to remain hidden and NOT iconified.</p>
-<dt><i>ECORE_X_WINDOW_STATE_HINT_NORMAL </i></p>
-<dd>The window wants to be mapped normally.</p>
-<dt><i>ECORE_X_WINDOW_STATE_HINT_ICONIC </i></p>
-<dd>The window wants to start in an iconified state.</dl>
+<dt><i>ECORE_X_WINDOW_STATE_HINT_NONE </i></dt>
+<dd>Do not provide any state hint to the window manager.</dd>
+<dt><i>ECORE_X_WINDOW_STATE_HINT_WITHDRAWN </i></dt>
+<dd>The window wants to remain hidden and NOT iconified.</dd>
+<dt><i>ECORE_X_WINDOW_STATE_HINT_NORMAL </i></dt>
+<dd>The window wants to be mapped normally.</dd>
+<dt><i>ECORE_X_WINDOW_STATE_HINT_ICONIC </i></dt>
+<dd>The window wants to start in an iconified state.</dd></dl>
 <h3>enum <code>_Ecore_X_WM_Protocol</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_X_WM_PROTOCOL_DELETE_REQUEST </i></p>
-<dd>If enabled the window manager will be asked to send a delete message instead of just closing (destroying) the window.</p>
-<dt><i>ECORE_X_WM_PROTOCOL_TAKE_FOCUS </i></p>
-<dd>If enabled the window manager will be told that the window explicitly sets input focus.</p>
-<dt><i>ECORE_X_NET_WM_PROTOCOL_PING </i></p>
-<dd>If enabled the window manager can ping the window to check if it is alive.</p>
-<dt><i>ECORE_X_NET_WM_PROTOCOL_SYNC_REQUEST </i></p>
-<dd>If enabled the window manager can sync updating with the window (?).</dl>
+<dt><i>ECORE_X_WM_PROTOCOL_DELETE_REQUEST </i></dt>
+<dd>If enabled the window manager will be asked to send a delete message instead of just closing (destroying) the window.</dd>
+<dt><i>ECORE_X_WM_PROTOCOL_TAKE_FOCUS </i></dt>
+<dd>If enabled the window manager will be told that the window explicitly sets input focus.</dd>
+<dt><i>ECORE_X_NET_WM_PROTOCOL_PING </i></dt>
+<dd>If enabled the window manager can ping the window to check if it is alive.</dd>
+<dt><i>ECORE_X_NET_WM_PROTOCOL_SYNC_REQUEST </i></dt>
+<dd>If enabled the window manager can sync updating with the window (?).</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI Ecore_X_Atom ecore_x_atom_get (const char * name)</h3>
 <p>Retrieves the atom value associated with the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The given name.</dl>
+<dd><i>name</i> The given name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Associated atom value.</dl>
+<dd>Associated atom value.</dd></dl>
 <p> References ecore_x_atom_get(). </p>
 <p> Referenced by ecore_x_atom_get(), and ecore_x_dnd_type_set().</p>
 <h3>EAPI int ecore_x_client_message32_send (Ecore_X_Window win, Ecore_X_Atom type, Ecore_X_Event_Mask mask, long d0, long d1, long d2, long d3, long d4)</h3>
@@ -828,10 +828,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
  <i>d1</i> The client message data item 2<br />
  <i>d2</i> The client message data item 3<br />
  <i>d3</i> The client message data item 4<br />
- <i>d4</i> The client message data item 5</dl>
+ <i>d4</i> The client message data item 5</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>!0 on success.</dl>
+<dd>!0 on success.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The window the message is sent to.<br />
@@ -840,10 +840,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
  <i>d1</i> The client message data item 2<br />
  <i>d2</i> The client message data item 3<br />
  <i>d3</i> The client message data item 4<br />
- <i>d4</i> The client message data item 5</dl>
+ <i>d4</i> The client message data item 5</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>!0 on success.</dl>
+<dd>!0 on success.</dd></dl>
 <p> References ecore_x_client_message32_send(). </p>
 <p> Referenced by ecore_x_client_message32_send(), ecore_x_icccm_delete_window_send(), ecore_x_icccm_save_yourself_send(), and ecore_x_icccm_take_focus_send().</p>
 <h3>EAPI int ecore_x_client_message8_send (Ecore_X_Window win, Ecore_X_Atom type, const void * data, int len)</h3>
@@ -853,19 +853,19 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dd><i>window</i> The window the message is sent to.<br />
  <i>type</i> The client message type.<br />
  <i>data</i> Data to be sent.<br />
- <i>len</i> Number of data bytes, max 20.</dl>
+ <i>len</i> Number of data bytes, max 20.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>!0 on success.</dl>
+<dd>!0 on success.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The window the message is sent to.<br />
  <i>type</i> The client message type.<br />
  <i>data</i> Data to be sent.<br />
- <i>len</i> Number of data bytes, max 20.</dl>
+ <i>len</i> Number of data bytes, max 20.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>!0 on success.</dl>
+<dd>!0 on success.</dd></dl>
 <p> References ecore_x_client_message8_send(). </p>
 <p> Referenced by ecore_x_client_message8_send().</p>
 <h3>EAPI int ecore_x_dnd_begin (Ecore_X_Window source, unsigned char * data, int size)</h3>
@@ -874,10 +874,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>source</i> Unused.<br />
  <i>data</i> The data.<br />
- <i>size</i> The size of the data.</dl>
+ <i>size</i> The size of the data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on failure, 1 otherwise.</dl>
+<dd>0 on failure, 1 otherwise.</dd></dl>
 <p> Begins the DnD. Returns 0 on failure, 1 otherwise. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_dnd_begin_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_dnd_begin_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_dnd_begin(), ecore_x_dnd_version_get(), ecore_x_selection_xdnd_fetch(), ecore_x_selection_xdnd_prefetch(), ecore_x_selection_xdnd_set(), and ecore_x_window_ignore_set(). </p>
@@ -886,14 +886,14 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Sends the GetProperty request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>source</i> Window whose properties are requested.</dl>
+<dd><i>source</i> Window whose properties are requested.</dd></dl>
 <p> References ecore_x_dnd_begin_prefetch(). </p>
 <p> Referenced by ecore_x_dnd_begin_prefetch().</p>
 <h3>EAPI void ecore_x_dnd_type_get_prefetch (Ecore_X_Window window)</h3>
 <p>Sends the GetProperty request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Window whose properties are requested.</dl>
+<dd><i>window</i> Window whose properties are requested.</dd></dl>
 <p> References ecore_x_dnd_type_get_prefetch(). </p>
 <p> Referenced by ecore_x_dnd_type_get_prefetch().</p>
 <h3>EAPI int ecore_x_dnd_type_isset (Ecore_X_Window window, const char * type)</h3>
@@ -901,10 +901,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
- <i>type</i> The type to check</dl>
+ <i>type</i> The type to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on failure, 1 otherwise.</dl>
+<dd>0 on failure, 1 otherwise.</dd></dl>
 <p> Check if the type is set. 0 on failure, 1 otherwise. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_dnd_type_get_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_dnd_type_get_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_dnd_type_isset(), and ecore_x_window_prop_property_get(). </p>
@@ -915,7 +915,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
  <i>type</i> The type to set<br />
- <i>on</i> 0 or non 0&#8230;</dl>
+ <i>on</i> 0 or non 0&#8230;</dd></dl>
 <p> Set the type. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_dnd_type_get_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_dnd_type_get_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_atom_get(), ecore_x_dnd_type_isset(), ecore_x_dnd_type_set(), ecore_x_window_prop_property_get(), and ecore_x_window_prop_property_set(). </p>
@@ -926,7 +926,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
  <i>types</i> The types to set<br />
- <i>num_types</i> The number of types</dl>
+ <i>num_types</i> The number of types</dd></dl>
 <p> Set the types. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_dnd_type_get_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_dnd_type_get_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_dnd_types_set(), and ecore_x_window_prop_property_set(). </p>
@@ -935,10 +935,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Get the DnD version. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Unused.</dl>
+<dd><i>window</i> Unused.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>0 on failure, the version otherwise.</dl>
+<dd>0 on failure, the version otherwise.</dd></dl>
 <p> Get the DnD version. Returns 0 on failure, the version otherwise. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_dnd_version_get_prefetch()</code>, which sends the GetProperty request, then <code>ecore_x_dnd_version_get_fetch()</code>, which gets the reply. </p>
 <p> References ecore_x_dnd_version_get(), and ecore_x_window_prop_property_get(). </p>
@@ -947,7 +947,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Sends the GetProperty request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Window whose properties are requested.</dl>
+<dd><i>window</i> Window whose properties are requested.</dd></dl>
 <p> References ecore_x_dnd_version_get_prefetch(). </p>
 <p> Referenced by ecore_x_dnd_version_get_prefetch().</p>
 <h3>EAPI int ecore_x_dpi_get (void)</h3>
@@ -955,14 +955,14 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> This is a simplistic call to get DPI. It does not account for differing DPI in the x amd y axes nor does it accoutn for multihead or xinerama and xrander where different parts of the screen may have differen DPI etc. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the general screen DPI (dots/pixels per inch).</dl>
+<dd>the general screen DPI (dots/pixels per inch).</dd></dl>
 <p> References ecore_x_dpi_get(). </p>
 <p> Referenced by ecore_x_dpi_get().</p>
 <h3>EAPI int ecore_x_error_code_get (void)</h3>
 <p>Get the error code from the error. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The error code from the X error</dl>
+<dd>The error code from the X error</dd></dl>
 <p> Return the error code from the last X error </p>
 <p> References ecore_x_error_code_get(). </p>
 <p> Referenced by ecore_x_error_code_get().</p>
@@ -971,7 +971,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The error handler function<br />
- <i>data</i> The data to be passed to the handler function</dl>
+ <i>data</i> The data to be passed to the handler function</dd></dl>
 <p> Set the X error handler function </p>
 <p> References ecore_x_error_handler_set(). </p>
 <p> Referenced by ecore_x_error_handler_set().</p>
@@ -979,7 +979,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Get the request code that caused the error. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The request code causing the X error</dl>
+<dd>The request code causing the X error</dd></dl>
 <p> Return the X request code that caused the last X error </p>
 <p> References ecore_x_error_request_get(). </p>
 <p> Referenced by ecore_x_error_request_get().</p>
@@ -987,28 +987,28 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Deletes and frees the given graphics context. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>gc</i> The given graphics context.</dl>
+<dd><i>gc</i> The given graphics context.</dd></dl>
 <p> Destroyes the graphic context gc as well as the associated storage. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>gc</i> The given graphics context.</dl>
+<dd><i>gc</i> The given graphics context.</dd></dl>
 <p> References ecore_x_gc_del(). </p>
 <p> Referenced by ecore_x_gc_del().</p>
 <h3>EAPI Ecore_X_GC ecore_x_gc_new (Ecore_X_Drawable draw)</h3>
 <p>Creates a new default graphics context associated with the given drawable. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>drawable</i> Drawable to create graphics context with. If 0 is given instead, the default root window is used.</dl>
+<dd><i>drawable</i> Drawable to create graphics context with. If 0 is given instead, the default root window is used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new default graphics context.</dl>
+<dd>The new default graphics context.</dd></dl>
 <p> Creates a new default graphics context associated with drawable. The graphic context can be used with any destination drawable having the same root and depth as drawable. Use with other drawables results in a BadMatch error. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>draw</i> Drawable to create graphics context with. If 0 is given instead, the default root window is used.</dl>
+<dd><i>draw</i> Drawable to create graphics context with. If 0 is given instead, the default root window is used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The new default graphics context.</dl>
+<dd>The new default graphics context.</dd></dl>
 <p> References ecore_x_gc_new(). </p>
 <p> Referenced by ecore_x_gc_new().</p>
 <h3>EAPI void ecore_x_icccm_command_get (Ecore_X_Window win, int * argc, char *** argv)</h3>
@@ -1018,17 +1018,17 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>win</i> The window.<br />
  <i>argc</i> Number of arguments.<br />
- <i>argv</i> Arguments.</dl>
+ <i>argv</i> Arguments.</dd></dl>
 <p> References ecore_x_icccm_command_get(). </p>
 <p> Referenced by ecore_x_icccm_command_get().</p>
 <h3>EAPI char* ecore_x_icccm_icon_name_get (Ecore_X_Window win)</h3>
 <p>Get a window icon name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The window</dl>
+<dd><i>win</i> The window</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The windows icon name string</dl>
+<dd>The windows icon name string</dd></dl>
 <p> Return the icon name of a window. String must be free&#8217;d when done with. </p>
 <p> References ecore_x_icccm_icon_name_get(). </p>
 <p> Referenced by ecore_x_icccm_icon_name_get().</p>
@@ -1038,7 +1038,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>win</i> The window<br />
  <i>n</i> The name string<br />
- <i>c</i> The class string</dl>
+ <i>c</i> The class string</dd></dl>
 <p> Get a window name * class </p>
 <p> References ecore_x_icccm_name_class_get(). </p>
 <p> Referenced by ecore_x_icccm_name_class_get().</p>
@@ -1047,20 +1047,20 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The Window<br />
- <i>protocol</i> The protocol to query</dl>
+ <i>protocol</i> The protocol to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if the protocol is set, else 0.</dl>
+<dd>1 if the protocol is set, else 0.</dd></dl>
 <p> References ecore_x_icccm_protocol_isset(). </p>
 <p> Referenced by ecore_x_icccm_protocol_isset().</p>
 <h3>EAPI Ecore_X_Window ecore_x_icccm_transient_for_get (Ecore_X_Window win)</h3>
 <p>Get the window this window is transient for, if any. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The window to check</dl>
+<dd><i>win</i> The window to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The window ID of the top-level window, or 0 if the property does not exist.</dl>
+<dd>The window ID of the top-level window, or 0 if the property does not exist.</dd></dl>
 <p> References ecore_x_icccm_transient_for_get(). </p>
 <p> Referenced by ecore_x_icccm_transient_for_get().</p>
 <h3>EAPI void ecore_x_io_error_handler_set (void(*)(void *data) func, const void * data)</h3>
@@ -1068,7 +1068,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The I/O error handler function<br />
- <i>data</i> The data to be passed to the handler function</dl>
+ <i>data</i> The data to be passed to the handler function</dd></dl>
 <p> Set the X I/O error handler function </p>
 <p> References ecore_x_io_error_handler_set(). </p>
 <p> Referenced by ecore_x_io_error_handler_set().</p>
@@ -1077,11 +1077,11 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> You can kill a specific client woning window window </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Window of the client to be killed</dl>
+<dd><i>window</i> Window of the client to be killed</dd></dl>
 <p> You can kill a specific client owning window win </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> Window of the client to be killed</dl>
+<dd><i>win</i> Window of the client to be killed</dd></dl>
 <p> References ecore_x_kill(). </p>
 <p> Referenced by ecore_x_kill().</p>
 <h3>EAPI void ecore_x_killall (Ecore_X_Window root)</h3>
@@ -1089,18 +1089,18 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> You can kill all clients connected to the X server by using <code>ecore_x_window_root_list</code> to get a list of root windows, and then passing each root window to this function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The window whose children will be killed.</dl>
+<dd><i>root</i> The window whose children will be killed.</dd></dl>
 <p> References ecore_x_killall(). </p>
 <p> Referenced by ecore_x_killall().</p>
 <h3>EAPI int ecore_x_selection_clipboard_clear (void)</h3>
 <p>Release ownership of the clipboard selection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_clipboard_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_clipboard_fetch()</code>, which gets the reply. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_clipboard_clear(). </p>
 <p> Referenced by ecore_x_selection_clipboard_clear().</p>
 <h3>EAPI int ecore_x_selection_clipboard_set (Ecore_X_Window w, const void * data, int size)</h3>
@@ -1109,20 +1109,20 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> Get the converted data from a previous CLIPBOARD selection request. The buffer must be freed when done with. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_clipboard_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_clipboard_fetch()</code>, which gets the reply. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>w</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> Get the converted data from a previous CLIPBOARD selection request. The buffer must be freed when done with. </p>
 <p> References ecore_x_selection_clipboard_set(). </p>
 <p> Referenced by ecore_x_selection_clipboard_set().</p>
@@ -1130,11 +1130,11 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p>Release ownership of the primary selection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_primary_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_primary_fetch()</code>, which gets the reply. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_primary_clear(). </p>
 <p> Referenced by ecore_x_selection_primary_clear().</p>
 <h3>EAPI int ecore_x_selection_primary_set (Ecore_X_Window w, const void * data, int size)</h3>
@@ -1143,30 +1143,30 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_primary_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_primary_fetch()</code>, which gets the reply. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>w</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_primary_set(). </p>
 <p> Referenced by ecore_x_selection_primary_set().</p>
 <h3>EAPI int ecore_x_selection_secondary_clear (void)</h3>
 <p>Release ownership of the secondary selection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_secondary_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_secondary_fetch()</code>, which gets the reply. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_secondary_clear(). </p>
 <p> Referenced by ecore_x_selection_secondary_clear().</p>
 <h3>EAPI int ecore_x_selection_secondary_set (Ecore_X_Window w, const void * data, int size)</h3>
@@ -1175,30 +1175,30 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_secondary_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_secondary_fetch()</code>, which gets the reply. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>w</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_secondary_set(). </p>
 <p> Referenced by ecore_x_selection_secondary_set().</p>
 <h3>EAPI int ecore_x_selection_xdnd_clear (void)</h3>
 <p>Release ownership of the XDND selection. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_xdnd_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_xdnd_fetch()</code>, which gets the reply. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the selection was successfully cleared, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_xdnd_clear(). </p>
 <p> Referenced by ecore_x_selection_xdnd_clear().</p>
 <h3>EAPI int ecore_x_selection_xdnd_set (Ecore_X_Window w, const void * data, int size)</h3>
@@ -1207,19 +1207,19 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_selection_xdnd_prefetch()</code>, which sends the GetSelectionOwner request, then <code>ecore_x_selection_xdnd_fetch()</code>, which gets the reply. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>w</i> The window to which this selection belongs<br />
  <i>data</i> The data associated with the selection<br />
- <i>size</i> The size of the data buffer in bytes</dl>
+ <i>size</i> The size of the data buffer in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dl>
+<dd>Returns 1 if the ownership of the selection was successfully claimed, or 0 if unsuccessful.</dd></dl>
 <p> References ecore_x_selection_xdnd_set(). </p>
 <p> Referenced by ecore_x_dnd_begin(), and ecore_x_selection_xdnd_set().</p>
 <h3>EAPI void ecore_x_window_area_clear (Ecore_X_Window window, int x, int y, int width, int height)</h3>
@@ -1230,7 +1230,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
  <i>x</i> The X coordinate of the area.<br />
  <i>y</i> The Y coordinate of the area.<br />
  <i>width</i> The width of the area.<br />
- <i>height</i> The height of the area.</dl>
+ <i>height</i> The height of the area.</dd></dl>
 <p> References ecore_x_window_area_clear(). </p>
 <p> Referenced by ecore_x_window_area_clear().</p>
 <h3>EAPI void ecore_x_window_area_expose (Ecore_X_Window window, int x, int y, int width, int height)</h3>
@@ -1241,7 +1241,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
  <i>x</i> The X coordinate of the area.<br />
  <i>y</i> The Y coordinate of the area.<br />
  <i>width</i> The width of the area.<br />
- <i>height</i> The height of the area.</dl>
+ <i>height</i> The height of the area.</dd></dl>
 <p> References ecore_x_window_area_expose(). </p>
 <p> Referenced by ecore_x_window_area_expose().</p>
 <h3>EAPI void ecore_x_window_defaults_set (Ecore_X_Window win)</h3>
@@ -1249,31 +1249,31 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> The default properties set for the window are WM_CLIENT_MACHINE and _NET_WM_PID. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The given window.</dl>
+<dd><i>window</i> The given window.</dd></dl>
 <p> The default properties set for the window are WM_CLIENT_MACHINE and _NET_WM_PID. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <p> References ecore_app_args_get(), ecore_x_icccm_command_set(), ecore_x_netwm_pid_set(), ecore_x_netwm_window_type_set(), and ecore_x_window_defaults_set(). </p>
 <p> Referenced by ecore_x_window_defaults_set(), and ecore_x_window_new().</p>
 <h3>EAPI int ecore_x_window_depth_get (Ecore_X_Window win)</h3>
 <p>Retrieves the depth of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Depth of the window.</dl>
+<dd>Depth of the window.</dd></dl>
 <p> References ecore_x_drawable_depth_get(), and ecore_x_window_depth_get(). </p>
 <p> Referenced by ecore_x_window_depth_get().</p>
 <h3>EAPI Ecore_X_Window* ecore_x_window_ignore_list (int * num)</h3>
 <p>Get the ignore list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>num</i> number of windows in the list</dl>
+<dd><i>num</i> number of windows in the list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>list of windows to ignore</dl>
+<dd>list of windows to ignore</dd></dl>
 <p> References ecore_x_window_ignore_list(). </p>
 <p> Referenced by ecore_x_window_ignore_list().</p>
 <h3>EAPI void ecore_x_window_ignore_set (Ecore_X_Window win, int ignore)</h3>
@@ -1283,7 +1283,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dd><i>window</i> The given window.<br />
  <i>ignore</i> if to ignore<br />
  <i>win</i> The given window.<br />
- <i>ignore</i> if to ignore</dl>
+ <i>ignore</i> if to ignore</dd></dl>
 <p> References ecore_x_window_ignore_set(). </p>
 <p> Referenced by ecore_x_dnd_begin(), and ecore_x_window_ignore_set().</p>
 <h3>EAPI Ecore_X_Atom ecore_x_window_prop_any_type (void)</h3>
@@ -1296,7 +1296,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
- <i>atom</i> Property atom.</dl>
+ <i>atom</i> Property atom.</dd></dl>
 <p> References ecore_x_window_prop_atom_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_atom_get_prefetch().</p>
 <h3>EAPI void ecore_x_window_prop_card32_get_prefetch (Ecore_X_Window window, Ecore_X_Atom atom)</h3>
@@ -1304,14 +1304,14 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
- <i>atom</i> The atom.</dl>
+ <i>atom</i> The atom.</dd></dl>
 <p> References ecore_x_window_prop_card32_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_card32_get_prefetch().</p>
 <h3>EAPI void ecore_x_window_prop_list_prefetch (Ecore_X_Window window)</h3>
 <p>Sends the ListProperties request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Window whose properties are requested.</dl>
+<dd><i>window</i> Window whose properties are requested.</dd></dl>
 <p> References ecore_x_window_prop_list_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_list_prefetch().</p>
 <h3>EAPI int ecore_x_window_prop_property_get (Ecore_X_Window win, Ecore_X_Atom property, Ecore_X_Atom type, int size __UNUSED__, unsigned char ** data, int * num)</h3>
@@ -1325,7 +1325,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
  <i>property</i> Property atom.<br />
- <i>type</i> Type atom.</dl>
+ <i>type</i> Type atom.</dd></dl>
 <p> References ecore_x_window_prop_property_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_property_get_prefetch().</p>
 <h3>EAPI void ecore_x_window_prop_property_set (Ecore_X_Window win, Ecore_X_Atom property, Ecore_X_Atom type, int size, void * data, int number)</h3>
@@ -1337,7 +1337,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
  <i>type</i> The type atom.<br />
  <i>size</i> The size.<br />
  <i>data</i> The data.<br />
- <i>number</i> The size of the data.</dl>
+ <i>number</i> The size of the data.</dd></dl>
 <p> FIXME: To be fixed. </p>
 <p> FIXME: To be fixed. </p>
 <p> References ecore_x_window_prop_property_set(). </p>
@@ -1347,10 +1347,10 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> The window.<br />
- <i>num_ret</i> The number of WM protocols.</dl>
+ <i>num_ret</i> The number of WM protocols.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The returned WM protocols.</dl>
+<dd>The returned WM protocols.</dd></dl>
 <p> FIXME: To be fixed. </p>
 <p> FIXME: To be fixed. </p>
 <p> References ecore_x_window_prop_protocol_list_get(). </p>
@@ -1360,7 +1360,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The window<br />
- <i>type</i> The property</dl>
+ <i>type</i> The property</dd></dl>
 <p> Return window string property of a window. String must be free&#8217;d when done. </p>
 <p> References ecore_x_window_prop_string_get(). </p>
 <p> Referenced by ecore_x_icccm_client_machine_get(), ecore_x_icccm_window_role_get(), and ecore_x_window_prop_string_get().</p>
@@ -1369,7 +1369,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
- <i>type</i> The atom.</dl>
+ <i>type</i> The atom.</dd></dl>
 <p> References ecore_x_window_prop_string_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_string_get_prefetch().</p>
 <h3>EAPI void ecore_x_window_prop_string_set (Ecore_X_Window win, Ecore_X_Atom type, const char * str)</h3>
@@ -1378,7 +1378,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>win</i> The window<br />
  <i>type</i> The property<br />
- <i>str</i> The string</dl>
+ <i>str</i> The string</dd></dl>
 <p> Set a window string property </p>
 <p> References ecore_x_window_prop_string_set(). </p>
 <p> Referenced by ecore_x_icccm_window_role_set(), and ecore_x_window_prop_string_set().</p>
@@ -1387,7 +1387,7 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
- <i>atom</i> The atom.</dl>
+ <i>atom</i> The atom.</dd></dl>
 <p> References ecore_x_window_prop_window_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_window_get_prefetch().</p>
 <h3>EAPI void ecore_x_window_prop_xid_get_prefetch (Ecore_X_Window window, Ecore_X_Atom atom, Ecore_X_Atom type)</h3>
@@ -1396,20 +1396,20 @@ description: "Ecore_X.h – Ecore functions for dealing with the X Windows Syste
 <dl COMPACT>
 <dd><i>window</i> Window whose properties are requested.<br />
  <i>atom</i> The atom.<br />
- <i>type</i> The atom type.</dl>
+ <i>type</i> The atom type.</dd></dl>
 <p> References ecore_x_window_prop_xid_get_prefetch(). </p>
 <p> Referenced by ecore_x_window_prop_xid_get_prefetch().</p>
 <h3>EAPI Ecore_X_Window* ecore_x_window_root_list (int * num_ret)</h3>
 <p>Get a list of all the root windows on the server. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The returned array will need to be freed after use.</dl>
+<dd>The returned array will need to be freed after use.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>num_ret</i> Pointer to integer to put number of windows returned in.</dl>
+<dd><i>num_ret</i> Pointer to integer to put number of windows returned in.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>An array of all the root windows. NULL is returned if memory could not be allocated for the list, or if num_ret is NULL.</dl>
+<dd>An array of all the root windows. NULL is returned if memory could not be allocated for the list, or if num_ret is NULL.</dd></dl>
 <p> References ecore_x_window_root_list(). </p>
 <p> Referenced by ecore_evas_software_x11_16_new(), ecore_evas_software_x11_new(), ecore_evas_xrender_x11_new(), and ecore_x_window_root_list().</p>
 <h2>Author</h2>

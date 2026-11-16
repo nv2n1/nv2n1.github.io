@@ -14,23 +14,23 @@ description: "fsl_local_config_write – Generate a MPC85xx local config space w
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RapidIO master port info</dl>
+</dd><dd>RapidIO master port info</dd></dl>
 <p> <i>index</i></p>
 <dl>
-<dd>ID of RapdiIO interface</dl>
+<dd>ID of RapdiIO interface</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>Offset into configuration space</dl>
+<dd>Offset into configuration space</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>Length (in bytes) of the maintenance transaction</dl>
+<dd>Length (in bytes) of the maintenance transaction</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>Value to be written</dl>
+<dd>Value to be written</dd></dl>
 <h2>Description</h2>
 <p>Generates a MPC85xx local configuration space write. Returns <code>0</code> on success or <code>-EINVAL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,11 +15,11 @@ skb_morph - morph one skb into another
 <h2>Arguments</h2>
 
 <i>dst</i>
-<dl><dd><dd>the skb to receive the contents</dl>
+<dl><dd></dd><dd>the skb to receive the contents</dd></dl>
  
 
  <i>src</i>
-<dl><dd>the skb to supply the contents</dl>
+<dl><dd>the skb to supply the contents</dd></dl>
 
 <h2>Description</h2>
 

@@ -19,7 +19,7 @@ description: "clasyf_rook.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CLASYF_ROOK computes a partial factorization of a complex symmetric
         matrix A using the bounded Bunch -
@@ -31,11 +31,11 @@ CLASYF_ROOK computes a partial factorization of a complex symmetric
                                                                                                                     the argument KB,
                                                              and is either NB or NB - 1, or N if N &lt;= NB.CLASYF_ROOK is an auxiliary routine called by CSYTRF_ROOK.It uses blocked code(calling Level 3 BLAS) to update the submatrix A11(if UPLO = 'U') or A22(if UPLO = 'L').
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -120,18 +120,18 @@ CLASYF_ROOK computes a partial factorization of a complex symmetric
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2013</dl>
+</dt><dd> November 2013</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   November 2013,     Igor Kozachenko,
                   Computer Science Division,
@@ -140,8 +140,9 @@ CLASYF_ROOK computes a partial factorization of a complex symmetric
                   School of Mathematics,
                   University of Manchester
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 184 of file clasyf_rook.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

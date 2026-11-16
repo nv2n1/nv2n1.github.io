@@ -20,11 +20,11 @@ description: "X Window Z Order Functions – Functions that change the Z order o
 <p>Lowers the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The window to lower.</dl>
+<dd><i>win</i> The window to lower.</dd></dl>
 <h3>EAPI void ecore_x_window_raise (Ecore_X_Window win)</h3>
 <p>Raises the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The window to raise.</dl>
+<dd><i>win</i> The window to raise.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

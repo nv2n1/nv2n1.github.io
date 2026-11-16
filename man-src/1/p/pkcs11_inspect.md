@@ -17,10 +17,10 @@ description: "pkcs11_inspect – print certificate contents"
 <p> When a mapper module finds a proper entry in the certificate, it converts to UTF-8 and print it to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>debug</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>config_file=</code><i>&lt;filename&gt;</i></p>
-<dd> Sets the configuration file to use. Default value is <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dl>
+<dt><code>debug</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>config_file=</code><i>&lt;filename&gt;</i></dt>
+<dd> Sets the configuration file to use. Default value is <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dd></dl>
 <p> As it uses the same configuration file as pam_pkcs11, all pam_pkcs11 options are also available. Note that some of them have no sense in a non-PAM environment, so they will be ignored. Some mapper options (mapfile, ignorecase) have no effect on certificate contents, so they will be ignored too.</p>
 <h2>RETURN VALUE</h2>
 <p> On success <code>pkcs11_inspect</code> prints on stdout all certificate contents that are found for mappers and returns 0. </p>

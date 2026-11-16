@@ -11,7 +11,6 @@ std::fgetws - std::fgetws
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *fgetws(wchar_t *str, int count, std::FILE *stream);</code></pre> 
 Reads at most count - 1 wide characters from the given file stream and stores them in str. The produced wide string is always null-terminated. Parsing stops if end-of-file occurs or a newline wide character is found, in which case str will contain that wide newline character. 
 

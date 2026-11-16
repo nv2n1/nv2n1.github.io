@@ -11,31 +11,21 @@ std::owner_less - std::owner_less
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct owner_less; /* undefined */
 (until C++ 17)
-
     template &lt;class T = void&gt;
     (since C++ 17)
-
         struct owner_less; /* undefined */
-
 template &lt;class T&gt;
 (1)(2)(since C++ 11)
-
     struct owner_less&lt;std::shared_ptr&lt;T&gt;&gt;;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct owner_less&lt;std::weak_ptr&lt;T&gt;&gt;;
-
 template &lt;&gt;
 (4)(since C++ 17)
-
     struct owner_less&lt;void&gt;;</code></pre> 
 This function object provides owner-based (as opposed to value-based) mixed-type ordering of both std::weak_ptr and std::shared_ptr. The order is such that two smart pointers compare equivalent only if they are both empty or if they share ownership, even if the values of the raw pointers obtained by get() are different (e.g. because they point at different subobjects within the same object) 
 This class template is the preferred comparison predicate when building associative containers with std::shared_ptr or std::weak_ptr as keys, that is, 

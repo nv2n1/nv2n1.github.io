@@ -19,7 +19,7 @@ description: "ncap – netCDF Arithmetic Processor"
 <p> Compute the square of variable <code>T</code></p>
 <dl>
 <dt>
-<dd> ncap -s &quot;T2=T*T&quot; in.nc out.nc</dl>
+</dt><dd> ncap -s &quot;T2=T*T&quot; in.nc out.nc</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
 <h2>REPORTING BUGS</h2>
@@ -32,7 +32,7 @@ description: "ncap – netCDF Arithmetic Processor"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <h2>HOMEPAGE</h2>
 <p> The <code>NCO</code> homepage at &lt;<a rel="nofollow" href="http://nco.sf.net">http://nco.sf.net</a>&gt; contains more information. </p>

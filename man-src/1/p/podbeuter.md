@@ -26,25 +26,25 @@ url: "/docs/linux/man/1-podbeuter/"
  -h
 <dl>
 <dt>
-<dd> Display help</dl>
+</dt><dd> Display help</dd></dl>
  
 
  -C configfile
 <dl>
 <dt>
-<dd> Use an alternative configuration file</dl>
+</dt><dd> Use an alternative configuration file</dd></dl>
  
 
  -q queuefile
 <dl>
 <dt>
-<dd> Use an alternative queue file</dl>
+</dt><dd> Use an alternative queue file</dd></dl>
  
 
  -a
 <dl>
 <dt>
-<dd> Start automatic download of all queued files on startup</dl>
+</dt><dd> Start automatic download of all queued files on startup</dd></dl>
 
 <h2>PODCAST SUPPORT</h2>
 
@@ -63,19 +63,19 @@ url: "/docs/linux/man/1-podbeuter/"
  <i>download-path</i> (parameters: &lt;path&gt;; default value: <i>~/</i>)
 <dl>
 <dt>
-<dd> Specifies the directory where podbeuter shall download the files to. Optionally, the placeholders &quot;%n&quot; (for the podcast feed's name) and &quot;%h&quot; (for the podcast feed's hostname) can be used to place downloads in a directory structure. (example: download-path &quot;~/Downloads/%h/%n&quot;)</dl>
+</dt><dd> Specifies the directory where podbeuter shall download the files to. Optionally, the placeholders &quot;%n&quot; (for the podcast feed's name) and &quot;%h&quot; (for the podcast feed's hostname) can be used to place downloads in a directory structure. (example: download-path &quot;~/Downloads/%h/%n&quot;)</dd></dl>
  
 
  <i>max-downloads</i> (parameters: &lt;number&gt;; default value: <i>1</i>)
 <dl>
 <dt>
-<dd> Specifies the maximum number of parallel downloads when automatic download is enabled. (example: max-downloads 3)</dl>
+</dt><dd> Specifies the maximum number of parallel downloads when automatic download is enabled. (example: max-downloads 3)</dd></dl>
  
 
  <i>player</i> (parameters: &lt;player command&gt;; default value: <i>&quot;&quot;</i>)
 <dl>
 <dt>
-<dd> Specifies the player that shall be used for playback of downloaded files. (example: player &quot;mp3blaster&quot;)</dl>
+</dt><dd> Specifies the player that shall be used for playback of downloaded files. (example: player &quot;mp3blaster&quot;)</dd></dl>
 
 <h2>FILES</h2>
 
@@ -95,10 +95,10 @@ url: "/docs/linux/man/1-podbeuter/"
 
 <dl>
 <dt> 1.
-<dd> ak [at] newsbeuter.org
-<dl>
+</dt><dd> ak [at] newsbeuter.org
+</dd><dl>
 <dt>
-<dd> mailto:ak [at] newsbeuter.org</dl>
+</dt><dd> mailto:ak [at] newsbeuter.org</dd></dl>
  
 
 </dl>

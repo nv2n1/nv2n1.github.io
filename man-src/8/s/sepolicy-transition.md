@@ -15,12 +15,12 @@ description: "sepolicy-transition – Examine the SELinux Policy and generate a 
 <p>sepolicy transition will show all domains that a give SELinux source domain can transition to, including the entrypoint. If a target domain is given, sepolicy transition will examine policy for all transition paths from the source domain to the target domain, and will list the paths. If a transition is possible, this tool will print out all transition paths from the source domain to the target domain </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message</p>
-<dt><i>-s, &#8211;source</i></p>
-<dd>Specify the source SELinux domain type.</p>
-<dt><i>-t, &#8211;target</i></p>
-<dd>Specify the target SELinux domain type. </p>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-s, &#8211;source</i></dt>
+<dd>Specify the source SELinux domain type.</dd>
+<dt><i>-t, &#8211;target</i></dt>
+<dd>Specify the target SELinux domain type. </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

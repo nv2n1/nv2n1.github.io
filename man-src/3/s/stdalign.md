@@ -11,13 +11,9 @@ std::align - std::align
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     void *align(std::size_t alignment,
-
                 std::size_t size, (since C++ 11)
-
                                       void *&amp;ptr,
-
                 std::size_t &amp;space);</code></pre> 
 Given a pointer ptr to a buffer of size space, returns a pointer aligned by the specified alignment for size number of bytes and decreases space argument by the number of bytes used for alignment. The first aligned address is returned. 
 The function modifies the pointer only if it would be possible to fit the wanted number of bytes aligned by the given alignment into the buffer. If the buffer is too small, the function does nothing and returns nullptr. 
@@ -38,12 +34,9 @@ The adjusted value of ptr, or null pointer value if the space provided is too sm
 
 demonstrates the use of std::align to place objects of different type in memory 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 template &lt;std::size_t N&gt;
-
 struct MyAllocator
-
 {
     char data[N];
     void *p;
@@ -65,7 +58,6 @@ struct MyAllocator
     }
 };
 int main()
-
 {
     MyAllocator&lt;64&gt; a;
     // allocate a char

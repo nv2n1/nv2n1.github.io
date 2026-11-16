@@ -141,8 +141,8 @@ description: "local_login_selinux – Security Enhanced Linux Policy for the loc
 <p> <code>local_login_home_t</code> </p>
 <p> &#8211; Set files with the local_login_home_t type, if you want to store local login files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.hushlogin, /home/[^/]+/.hushlogin </p>
+<dt>Paths:</dt>
+<dd>/root/.hushlogin, /home/[^/]+/.hushlogin </dd>
 </dl>
 <p> <code>local_login_lock_t</code> </p>
 <p> &#8211; Set files with the local_login_lock_t type, if you want to treat the files as local login lock data, stored under the /var/lock directory </p>

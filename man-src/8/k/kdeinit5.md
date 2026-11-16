@@ -10,9 +10,9 @@ description: "kdeinit5 – Launcher for applications built with kdeinit support,
 <p>kdeinit5 &#8211; Launcher for applications built with kdeinit support, and for KIO slaves.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kdeinit5</code> [&#8211;help] [[&#8211;no-fork] | [&#8211;no-kded] | [&#8211;suicide]] [[+programs] | [programs]]</dl>
+<dt> <code>kdeinit5</code> [&#8211;help] [[&#8211;no-fork] | [&#8211;no-kded] | [&#8211;suicide]] [[+programs] | [programs]]</dt></dl>
 <h2>Description</h2>
-<dd>kdeinit5 is a process launcher somewhat similar to the famous <code>init</code> used for booting UNIX. It executes KDE programs and kdeinit loadable modules (KLMs) starting them more efficiently. </p>
+<dd>kdeinit5 is a process launcher somewhat similar to the famous <code>init</code> used for booting UNIX. It executes KDE programs and kdeinit loadable modules (KLMs) starting them more efficiently. </dd>
 <p> Using kdeinit5 to launch KDE applications makes starting a typical KDE application a couple times faster and reduces memory consumption by a substantial amount. </p>
 <p> kdeinit5 is linked against all libraries a standard KDE application needs. With this technique, starting an application becomes much faster because now only the application itself needs to be linked whereas otherwise both the application as well as all the libraries it uses need to be linked.</p>
 <h2>Disadvantages</h2>
@@ -20,42 +20,42 @@ description: "kdeinit5 – Launcher for applications built with kdeinit support,
 <h2>Options</h2>
 <p><code>&#8211;help</code></p>
 <dl>
-<dd>Show help about options</dl>
+<dd>Show help about options</dd></dl>
 <p> <code>&#8211;no-fork</code></p>
 <dl>
-<dd>Do not fork, i.e. do not exit until all the executed programs ends</dl>
+<dd>Do not fork, i.e. do not exit until all the executed programs ends</dd></dl>
 <p> <code>&#8211;no-kded</code></p>
 <dl>
-<dd>Do not start kded</dl>
+<dd>Do not start kded</dd></dl>
 <p> <code>&#8211;suicide</code></p>
 <dl>
-<dd>Terminate when no KDE applications are left running</dl>
+<dd>Terminate when no KDE applications are left running</dd></dl>
 <p> <code>+programs</code></p>
 <dl>
-<dd>runs the programs handling requests</dl>
+<dd>runs the programs handling requests</dd></dl>
 <p> <code>programs</code></p>
 <dl>
-<dd>runs the programs without handling requests</dl>
+<dd>runs the programs without handling requests</dd></dl>
 <h2>Usage</h2>
 <p>A standard way to run this program is by simply specifying the following command at the prompt <code>kdeinit5</code><code> program</code> or <code>kdeinit5</code><code> +program </code></p>
 <h2>Files</h2>
 <p>/tmp/kde-$USER/kdeinit5_$INSTANCE</p>
 <dl>
-<dd>&#8230;</dl>
+<dd>&#8230;</dd></dl>
 <h2>Environment Variables</h2>
 <p>$<code>HOME</code></p>
 <dl>
-<dd>Specifies the home directory of the current user</dl>
+<dd>Specifies the home directory of the current user</dd></dl>
 <p> $<code>KDE_HOME_READONLY</code></p>
 <dl>
-<dd>Specifies if the home directory of the current user is read only</dl>
+<dd>Specifies if the home directory of the current user is read only</dd></dl>
 <p> $<code>KDE_IS_PRELINKED</code></p>
 <dl>
-<dd>If set, tells kdeinit5 that the KDE programs are pre-linked. </p>
+<dd>If set, tells kdeinit5 that the KDE programs are pre-linked. </dd>
 <p> (Prelinking is a process that allows you to speed up the process of dynamic linking.)</dl>
 <p> $<code>KDE_DISPLAY</code></p>
 <dl>
-<dd>If set, tells kdeinit5 that it is running on a KDE desktop.</dl>
+<dd>If set, tells kdeinit5 that it is running on a KDE desktop.</dd></dl>
 <h2>See Also</h2>
 <p>kded5, kdekillall</p>
 <h2>Bugs</h2>
@@ -63,16 +63,17 @@ description: "kdeinit5 – Launcher for applications built with kdeinit support,
 <h2>Authors</h2>
 <p><code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mario Weilguni</code> &lt;mweilguni [at] sime.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Lubos Lunak</code> &lt;l.lunak [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>KDE&#8217;s bugtracker</p>
+<dt> 1.</dt>
+<dd>KDE&#8217;s bugtracker</dd>
 <dl>
-<dd><a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dl>
+<dd><a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
+</dl>

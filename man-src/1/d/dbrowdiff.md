@@ -16,26 +16,26 @@ description: "dbrowdiff – compute row-by-row differences of some column"
 <p> Differences are either relative to the previous column (<i>incremental</i> mode), or relative to the first row (<i>baseline</i> mode), the default.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-B</code> or <code>&#8211;baseline</code></p>
-<dd> Select baseline mode (the default), where differences are relative to the first row.</p>
-<dt><code>-I</code> or <code>&#8211;incremental</code></p>
-<dd> Select incremental mode, where differences are relative to the previous row.</p>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></p>
-<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dl>
+<dt><code>-B</code> or <code>&#8211;baseline</code></dt>
+<dd> Select baseline mode (the default), where differences are relative to the first row.</dd>
+<dt><code>-I</code> or <code>&#8211;incremental</code></dt>
+<dd> Select incremental mode, where differences are relative to the previous row.</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

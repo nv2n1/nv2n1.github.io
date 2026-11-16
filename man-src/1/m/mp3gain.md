@@ -21,54 +21,54 @@ description: "mp3gain — lossless mp3 normalizer"
 <p> The method mp3gain uses to determine the desired volume is described at <i><a rel="nofollow" href="http://www.replaygain.org">www.replaygain.org</a> (link to URL <a href="http://www.replaygain.org/)">http://www.replaygain.org/)</a> </i>. See also <code>/usr/share/doc/mp3gain-1.4.6/README.method</code> .</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code> <code>-h</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-g </code><i>i</i></p>
-<dd> apply gain <i>i</i> to mp3 without doing any analysis</p>
-<dt><code>-l 0 </code><i>i</i></p>
-<dd> apply gain <i>i</i> to channel 0 (left channel) of mp3 without doing any analysis (ONLY works for STEREO mp3s, not Joint Stereo mp3s)</p>
-<dt><code>-l 1 </code><i>i</i></p>
-<dd> apply gain <i>i</i> to channel 1 (right channel) of mp3 without doing any analysis (ONLY works for STEREO mp3s, not Joint Stereo mp3s)</p>
-<dt><code>-r</code></p>
-<dd> apply Track gain automatically (all files set to equal loudness)</p>
-<dt><code>-k</code></p>
-<dd> automatically lower Track gain to not clip audio</p>
-<dt><code>-a</code></p>
-<dd> apply Album gain automatically (files are all from the same album: a single gain change is applied to all files, so their loudness relative to each other remains unchanged, but the average album loudness is normalized)</p>
-<dt><code>-m </code><i>i</i></p>
-<dd> modify suggested MP3 gain by integer <i>i</i></p>
-<dt><code>-d </code><i>n</i></p>
-<dd> modify suggested dB gain by floating-point <i>n</i></p>
-<dt><code>-c</code></p>
-<dd> ignore clipping warning when applying gain</p>
-<dt><code>-o</code></p>
-<dd> output is a database-friendly tab-delimited list</p>
-<dt><code>-t</code></p>
-<dd> mp3gain writes modified mp3 to temp file, then deletes original instead of modifying bytes in original file (This is the default in Debian)</p>
-<dt><code>-T</code></p>
-<dd> mp3gain modifys bytes in original file instead of writing to temp file.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode: no status messages</p>
-<dt><code>-p</code></p>
-<dd> Preserve original file timestamp</p>
-<dt><code>-x</code></p>
-<dd> Only find max. amplitude of mp3</p>
-<dt><code>-f</code></p>
-<dd> Force <code>mp3gain</code> to assume input file is an MPEG 2 Layer III file (i.e. don&#8217;t check for mis-named Layer I or Layer II files)</p>
-<dt><code>-s c</code></p>
-<dd> only check stored tag info (no other processing)</p>
-<dt><code>-s d</code></p>
-<dd> delete stored tag info (no other processing)</p>
-<dt><code>-s s</code></p>
-<dd> skip (ignore) stored tag info (do not read or write tags)</p>
-<dt><code>-s r</code></p>
-<dd> force re-calculation (do not read tag info)</p>
-<dt><code>-u</code></p>
-<dd> undo changes made by mp3gain (based on stored tag info)</p>
-<dt><code>-w</code></p>
-<dd> &quot;wrap&quot; gain change if gain+change &gt; 255 or gain+change &lt; 0 (see below or use <code>-? wrap</code> switch for a complete explanation)</p>
-<dt><code>-v</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-?</code> <code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-g </code><i>i</i></dt>
+<dd> apply gain <i>i</i> to mp3 without doing any analysis</dd>
+<dt><code>-l 0 </code><i>i</i></dt>
+<dd> apply gain <i>i</i> to channel 0 (left channel) of mp3 without doing any analysis (ONLY works for STEREO mp3s, not Joint Stereo mp3s)</dd>
+<dt><code>-l 1 </code><i>i</i></dt>
+<dd> apply gain <i>i</i> to channel 1 (right channel) of mp3 without doing any analysis (ONLY works for STEREO mp3s, not Joint Stereo mp3s)</dd>
+<dt><code>-r</code></dt>
+<dd> apply Track gain automatically (all files set to equal loudness)</dd>
+<dt><code>-k</code></dt>
+<dd> automatically lower Track gain to not clip audio</dd>
+<dt><code>-a</code></dt>
+<dd> apply Album gain automatically (files are all from the same album: a single gain change is applied to all files, so their loudness relative to each other remains unchanged, but the average album loudness is normalized)</dd>
+<dt><code>-m </code><i>i</i></dt>
+<dd> modify suggested MP3 gain by integer <i>i</i></dd>
+<dt><code>-d </code><i>n</i></dt>
+<dd> modify suggested dB gain by floating-point <i>n</i></dd>
+<dt><code>-c</code></dt>
+<dd> ignore clipping warning when applying gain</dd>
+<dt><code>-o</code></dt>
+<dd> output is a database-friendly tab-delimited list</dd>
+<dt><code>-t</code></dt>
+<dd> mp3gain writes modified mp3 to temp file, then deletes original instead of modifying bytes in original file (This is the default in Debian)</dd>
+<dt><code>-T</code></dt>
+<dd> mp3gain modifys bytes in original file instead of writing to temp file.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode: no status messages</dd>
+<dt><code>-p</code></dt>
+<dd> Preserve original file timestamp</dd>
+<dt><code>-x</code></dt>
+<dd> Only find max. amplitude of mp3</dd>
+<dt><code>-f</code></dt>
+<dd> Force <code>mp3gain</code> to assume input file is an MPEG 2 Layer III file (i.e. don&#8217;t check for mis-named Layer I or Layer II files)</dd>
+<dt><code>-s c</code></dt>
+<dd> only check stored tag info (no other processing)</dd>
+<dt><code>-s d</code></dt>
+<dd> delete stored tag info (no other processing)</dd>
+<dt><code>-s s</code></dt>
+<dd> skip (ignore) stored tag info (do not read or write tags)</dd>
+<dt><code>-s r</code></dt>
+<dd> force re-calculation (do not read tag info)</dd>
+<dt><code>-u</code></dt>
+<dd> undo changes made by mp3gain (based on stored tag info)</dd>
+<dt><code>-w</code></dt>
+<dd> &quot;wrap&quot; gain change if gain+change &gt; 255 or gain+change &lt; 0 (see below or use <code>-? wrap</code> switch for a complete explanation)</dd>
+<dt><code>-v</code></dt>
+<dd> Show version of program.</dd></dl>
 <p> If you specify <code>-r</code> and <code>-a</code>, only the second one will work. </p>
 <p> If you do not specify <code>-c</code>, the program will stop and ask before applying gain change to a file that might clip</p>
 <h3>The WRAP option</h3>
@@ -83,16 +83,16 @@ description: "mp3gain — lossless mp3 normalizer"
 <p> So now the default behavior of mp3gain is to _not_ wrap gain changes. In other words,<br />
 &nbsp;<wbr></p>
 <dl>
-<dt> 1.</p>
+<dt> 1.</dt>
 <dd> If the gain change would make a frame&#8217;s global gain drop below 0, then the global gain is set to 0.<br />
-&nbsp;<wbr></p>
-<dt> 2.</p>
+&nbsp;<wbr></dd>
+<dt> 2.</dt>
 <dd> If the gain change would make a frame&#8217;s global gain grow above 255, then the global gain is set to 255.<br />
-&nbsp;<wbr></p>
-<dt> 3.</p>
+&nbsp;<wbr></dd>
+<dt> 3.</dt>
 <dd>
 &nbsp;<wbr> If a frame&#8217;s global gain field is already 0, it is not changed, even if the gain change is a positive number.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <p> To use the original &quot;wrapping&quot; behavior, use the <code>-w</code> switch.<br />
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>

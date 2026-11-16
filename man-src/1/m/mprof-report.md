@@ -17,19 +17,19 @@ url: "/docs/linux/man/1-mprof-report/"
  The events collected include (among others):
 <dl>
 <dt>&bull;
-<dd> method enter and leave
-<dt>&bull;
-<dd> object allocation
-<dt>&bull;
-<dd> garbage collection
-<dt>&bull;
-<dd> JIT compilation
-<dt>&bull;
-<dd> metadata loading
-<dt>&bull;
-<dd> lock contention
-<dt>&bull;
-<dd> exceptions</dl>
+</dt><dd> method enter and leave
+</dd><dt>&bull;
+</dt><dd> object allocation
+</dd><dt>&bull;
+</dt><dd> garbage collection
+</dd><dt>&bull;
+</dt><dd> JIT compilation
+</dd><dt>&bull;
+</dt><dd> metadata loading
+</dd><dt>&bull;
+</dt><dd> lock contention
+</dd><dt>&bull;
+</dt><dd> exceptions</dd></dl>
  
 
  In addition, the profiler can periodically collect info about all the objects present in the heap at the end of a garbage collection (this is called heap shot and currently implemented only for the sgen garbage collector). Another available profiler mode is the sampling or statistical mode: periodically the program is sampled and the information about what the program was busy with is saved. This allows to get information about the program behaviour without degrading its performance too much (usually less than 10%).
@@ -79,93 +79,83 @@ url: "/docs/linux/man/1-mprof-report/"
  The following options can be used to modify this default behaviour. Each option is separated from the next by a , character, with no spaces and all the options are included after the log: profile module specifier.
 <dl>
 <dt>&bull;
-<dd> help: display concise help info about each available option
-<dt>&bull;
-<dd> [no]alloc: noalloc disables collecting object allocation info, alloc enables it if it was disabled by another option like heapshot.
-<dt>&bull;
-<dd> [no]calls: nocalls disables collecting method enter and leave events. When this option is used at each object allocation and at some other events (like lock contentions and exception throws) a stack trace is collected by default. See the maxframes option to control this behaviour. calls enables method enter/leave events if they were disabled by another option like heapshot.
-<dt>&bull;
-<dd> heapshot[=MODE]: collect heap shot data at each major collection. The frequency of the heap shots can be changed with the MODE parameter. When this option is used allocation events and method enter/leave events are not recorded by default: if they are needed, they need to be enabled explicitly. The optional parameter MODE can modify the default heap shot frequency. heapshot can be used multiple times with different modes: in that case a heap shot is taken if either of the conditions are met. MODE can be one of:
-<dl>
-<dt>
-<dd>
+</dt><dd> help: display concise help info about each available option
+</dd><dt>&bull;
+</dt><dd> [no]alloc: noalloc disables collecting object allocation info, alloc enables it if it was disabled by another option like heapshot.
+</dd><dt>&bull;
+</dt><dd> [no]calls: nocalls disables collecting method enter and leave events. When this option is used at each object allocation and at some other events (like lock contentions and exception throws) a stack trace is collected by default. See the maxframes option to control this behaviour. calls enables method enter/leave events if they were disabled by another option like heapshot.
+</dd><dt>&bull;
+</dt><dd> heapshot[=MODE]: collect heap shot data at each major collection. The frequency of the heap shots can be changed with the MODE parameter. When this option is used allocation events and method enter/leave events are not recorded by default: if they are needed, they need to be enabled explicitly. The optional parameter MODE can modify the default heap shot frequency. heapshot can be used multiple times with different modes: in that case a heap shot is taken if either of the conditions are met. MODE can be one of:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> NUMms: perform a heap shot if at least NUM milliseconds passed since the last one.
-<dt>&bull;
-<dd> NUMgc: perform a heap shot every NUM major garbage collections
-<dt>&bull;
-<dd> ondemand: perform a heap shot when such a command is sent to the control port</dl>
+</dt><dd> NUMms: perform a heap shot if at least NUM milliseconds passed since the last one.
+</dd><dt>&bull;
+</dt><dd> NUMgc: perform a heap shot every NUM major garbage collections
+</dd><dt>&bull;
+</dt><dd> ondemand: perform a heap shot when such a command is sent to the control port</dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> sample[=TYPE[/FREQ]]: collect statistical samples of the program behaviour. The default is to collect a 100 times per second (100 Hz) the instruction pointer. This is equivalent to the value "cycles/100" for TYPE. On some systems, like with recent Linux kernels, it is possible to cause the sampling to happen for other events provided by the performance counters of the cpu. In this case, TYPE can be one of:
-<dl>
-<dt>
-<dd>
+</dt><dd> sample[=TYPE[/FREQ]]: collect statistical samples of the program behaviour. The default is to collect a 100 times per second (100 Hz) the instruction pointer. This is equivalent to the value "cycles/100" for TYPE. On some systems, like with recent Linux kernels, it is possible to cause the sampling to happen for other events provided by the performance counters of the cpu. In this case, TYPE can be one of:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> cycles: processor cycles
-<dt>&bull;
-<dd> instr: executed instructions
-<dt>&bull;
-<dd> cacherefs: cache references
-<dt>&bull;
-<dd> cachemiss: cache misses
-<dt>&bull;
-<dd> branches: executed branches
-<dt>&bull;
-<dd> branchmiss: mispredicted branches</dl>
+</dt><dd> cycles: processor cycles
+</dd><dt>&bull;
+</dt><dd> instr: executed instructions
+</dd><dt>&bull;
+</dt><dd> cacherefs: cache references
+</dd><dt>&bull;
+</dt><dd> cachemiss: cache misses
+</dd><dt>&bull;
+</dt><dd> branches: executed branches
+</dd><dt>&bull;
+</dt><dd> branchmiss: mispredicted branches</dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> time=TIMER: use the TIMER timestamp mode. TIMER can have the following values:
-<dl>
-<dt>
-<dd>
+</dt><dd> time=TIMER: use the TIMER timestamp mode. TIMER can have the following values:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> fast: a usually faster but possibly more inaccurate timer</dl>
+</dt><dd> fast: a usually faster but possibly more inaccurate timer</dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> maxframes=NUM: when a stack trace needs to be performed, collect NUM frames at the most. The default is 8.
-<dt>&bull;
-<dd> maxsamples=NUM: stop allocating reusable sample events once NUM events have been allocated (a value of zero for all intents and purposes means unlimited). By default, the value of this setting is the number of CPU cores multiplied by 1000. This is usually a good enough value for typical desktop and mobile apps. If you're losing too many samples due to this default (which is possible in apps with an unusually high amount of threads), you may want to tinker with this value to find a good balance between sample hit rate and performance impact on the app. The way it works is that sample events are enqueued for reuse after they're flushed to the output file; if a thread gets a sampling signal but there are no sample events in the reuse queue and the profiler has reached the maximum number of sample allocations, the sample gets dropped. So a higher number for this setting will increase the chance that a thread is able to collect a sample, but also necessarily means that there will be more work done by the profiler. You can run Mono with the --stats option to see statistics about sample events.
-<dt>&bull;
-<dd> calldepth=NUM: ignore method enter/leave events when the call chain depth is bigger than NUM.
-<dt>&bull;
-<dd> zip: automatically compress the output data in gzip format.
-<dt>&bull;
-<dd> output=OUTSPEC: instead of writing the profiling data to the output.mlpd file, substitute %p in OUTSPEC with the current process id and %t with the current date and time, then do according to OUTSPEC:
-<dl>
-<dt>
-<dd>
+</dt><dd> maxframes=NUM: when a stack trace needs to be performed, collect NUM frames at the most. The default is 8.
+</dd><dt>&bull;
+</dt><dd> maxsamples=NUM: stop allocating reusable sample events once NUM events have been allocated (a value of zero for all intents and purposes means unlimited). By default, the value of this setting is the number of CPU cores multiplied by 1000. This is usually a good enough value for typical desktop and mobile apps. If you're losing too many samples due to this default (which is possible in apps with an unusually high amount of threads), you may want to tinker with this value to find a good balance between sample hit rate and performance impact on the app. The way it works is that sample events are enqueued for reuse after they're flushed to the output file; if a thread gets a sampling signal but there are no sample events in the reuse queue and the profiler has reached the maximum number of sample allocations, the sample gets dropped. So a higher number for this setting will increase the chance that a thread is able to collect a sample, but also necessarily means that there will be more work done by the profiler. You can run Mono with the --stats option to see statistics about sample events.
+</dd><dt>&bull;
+</dt><dd> calldepth=NUM: ignore method enter/leave events when the call chain depth is bigger than NUM.
+</dd><dt>&bull;
+</dt><dd> zip: automatically compress the output data in gzip format.
+</dd><dt>&bull;
+</dt><dd> output=OUTSPEC: instead of writing the profiling data to the output.mlpd file, substitute %p in OUTSPEC with the current process id and %t with the current date and time, then do according to OUTSPEC:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> if OUTSPEC begins with a | character, execute the rest as a program and feed the data to its standard input
-<dt>&bull;
-<dd> if OUTSPEC begins with a - character, use the rest of OUTSPEC as the filename, but force overwrite any existing file by that name
-<dt>&bull;
-<dd> otherwise write the data the the named file: note that is a file by that name already exists, a warning is issued and profiling is disabled.</dl>
+</dt><dd> if OUTSPEC begins with a | character, execute the rest as a program and feed the data to its standard input
+</dd><dt>&bull;
+</dt><dd> if OUTSPEC begins with a - character, use the rest of OUTSPEC as the filename, but force overwrite any existing file by that name
+</dd><dt>&bull;
+</dt><dd> otherwise write the data the the named file: note that is a file by that name already exists, a warning is issued and profiling is disabled.</dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> report: the profiling data is sent to mprof-report, which will print a summary report. This is equivalent to the option: output=mprof-report -. If the output option is specified as well, the report will be written to the output file instead of the console.
-<dt>&bull;
-<dd> port=PORT: specify the tcp/ip port to use for the listening command server. Currently not available for windows. This server is started for example when heapshot=ondemand is used: it will read commands line by line. The following commands are available:
-<dl>
-<dt>
-<dd>
+</dt><dd> report: the profiling data is sent to mprof-report, which will print a summary report. This is equivalent to the option: output=mprof-report -. If the output option is specified as well, the report will be written to the output file instead of the console.
+</dd><dt>&bull;
+</dt><dd> port=PORT: specify the tcp/ip port to use for the listening command server. Currently not available for windows. This server is started for example when heapshot=ondemand is used: it will read commands line by line. The following commands are available:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> heapshot: perform a heapshot as soon as possible</dl>
+</dt><dd> heapshot: perform a heapshot as soon as possible</dd></dl>
 </dl>
 
 <dt>&bull;
-<dd> counters: sample counters values every 1 second. This allow a really lightweight way to have insight in some of the runtime key metrics. Counters displayed in non verbose mode are : Methods from AOT, Methods JITted using mono JIT, Methods JITted using LLVM, Total time spent JITting (sec), User Time, System Time, Total Time, Working Set, Private Bytes, Virtual Bytes, Page Faults and CPU Load Average (1min, 5min and 15min).
-<dt>&bull;
-<dd> coverage: collect code coverage data. This implies enabling the calls option.</dl>
+</dt><dd> counters: sample counters values every 1 second. This allow a really lightweight way to have insight in some of the runtime key metrics. Counters displayed in non verbose mode are : Methods from AOT, Methods JITted using mono JIT, Methods JITted using LLVM, Total time spent JITting (sec), User Time, System Time, Total Time, Working Set, Private Bytes, Virtual Bytes, Page Faults and CPU Load Average (1min, 5min and 15min).
+</dd><dt>&bull;
+</dt><dd> coverage: collect code coverage data. This implies enabling the calls option.</dd></dl>
 
 <h3>Analyzing the profile data</h3>
 
@@ -206,11 +196,11 @@ url: "/docs/linux/man/1-mprof-report/"
  where MODE can be:
 <dl>
 <dt>&bull;
-<dd> self: amount of time spent in the method itself and not in its callees
-<dt>&bull;
-<dd> calls: the number of method invocations
-<dt>&bull;
-<dd> total: the total time spent in the method.</dl>
+</dt><dd> self: amount of time spent in the method itself and not in its callees
+</dd><dt>&bull;
+</dt><dd> calls: the number of method invocations
+</dd><dt>&bull;
+</dt><dd> total: the total time spent in the method.</dd></dl>
  
 
  Object allocation lists are sorted by default depending on the total amount of bytes used by each type. 
@@ -222,9 +212,9 @@ url: "/docs/linux/man/1-mprof-report/"
  where MODE can be:
 <dl>
 <dt>&bull;
-<dd> count: the number of allocated objects of the given type
-<dt>&bull;
-<dd> bytes: the total number of bytes used by objects of the given type</dl>
+</dt><dd> count: the number of allocated objects of the given type
+</dd><dt>&bull;
+</dt><dd> bytes: the total number of bytes used by objects of the given type</dd></dl>
  
 
  To change the sort order of counters, use the option: 
@@ -234,9 +224,9 @@ url: "/docs/linux/man/1-mprof-report/"
  where MODE can be:
 <dl>
 <dt>&bull;
-<dd> time: sort values by time then category
-<dt>&bull;
-<dd> category: sort values by category then time</dl>
+</dt><dd> time: sort values by time then category
+</dd><dt>&bull;
+</dt><dd> category: sort values by category then time</dd></dl>
 
 <h3>Selecting what data to report</h3>
 
@@ -249,37 +239,37 @@ url: "/docs/linux/man/1-mprof-report/"
  where the report names R1, R2 etc. can be:
 <dl>
 <dt>&bull;
-<dd> header: information about program startup and profiler version
-<dt>&bull;
-<dd> jit: JIT compiler information
-<dt>&bull;
-<dd> sample: statistical sampling information
-<dt>&bull;
-<dd> gc: garbage collection information
-<dt>&bull;
-<dd> alloc: object allocation information
-<dt>&bull;
-<dd> call: method profiling information
-<dt>&bull;
-<dd> metadata: metadata events like image loads
-<dt>&bull;
-<dd> exception: exception throw and handling information
-<dt>&bull;
-<dd> monitor: lock contention information
-<dt>&bull;
-<dd> thread: thread information
-<dt>&bull;
-<dd> domain: app domain information
-<dt>&bull;
-<dd> context: remoting context information
-<dt>&bull;
-<dd> heapshot: live heap usage at heap shots
-<dt>&bull;
-<dd> counters: counters samples
-<dt>&bull;
-<dd> coverage: code coverage data
-<dt>&bull;
-<dd> stats: event statistics</dl>
+</dt><dd> header: information about program startup and profiler version
+</dd><dt>&bull;
+</dt><dd> jit: JIT compiler information
+</dd><dt>&bull;
+</dt><dd> sample: statistical sampling information
+</dd><dt>&bull;
+</dt><dd> gc: garbage collection information
+</dd><dt>&bull;
+</dt><dd> alloc: object allocation information
+</dd><dt>&bull;
+</dt><dd> call: method profiling information
+</dd><dt>&bull;
+</dt><dd> metadata: metadata events like image loads
+</dd><dt>&bull;
+</dt><dd> exception: exception throw and handling information
+</dd><dt>&bull;
+</dt><dd> monitor: lock contention information
+</dd><dt>&bull;
+</dt><dd> thread: thread information
+</dd><dt>&bull;
+</dt><dd> domain: app domain information
+</dd><dt>&bull;
+</dt><dd> context: remoting context information
+</dd><dt>&bull;
+</dt><dd> heapshot: live heap usage at heap shots
+</dd><dt>&bull;
+</dt><dd> counters: counters samples
+</dd><dt>&bull;
+</dt><dd> coverage: code coverage data
+</dd><dt>&bull;
+</dt><dd> stats: event statistics</dd></dl>
  
 
  It is possible to limit some of the data displayed to a timeframe of the program execution with the option: 
@@ -311,9 +301,9 @@ url: "/docs/linux/man/1-mprof-report/"
  The object addresses can be gathered either from the profiler report in some cases (like in the monitor lock report), from the live application or they can be selected with the --find=FINDSPEC option. FINDSPEC can be one of the following:
 <dl>
 <dt>&bull;
-<dd> S:SIZE: where the object is selected if its size is at least SIZE
-<dt>&bull;
-<dd> T:NAME: where the object is selected if NAME partially matches its class name</dl>
+</dt><dd> S:SIZE: where the object is selected if its size is at least SIZE
+</dd><dt>&bull;
+</dt><dd> T:NAME: where the object is selected if NAME partially matches its class name</dd></dl>
  
 
  This option can be specified multiple times with one of the different kinds of FINDSPEC. For example, the following: 
@@ -347,21 +337,16 @@ url: "/docs/linux/man/1-mprof-report/"
  If the profiler needs to collect lots of data, the execution of the program will slow down significantly, usually 10 to 20 times slower. There are several ways to reduce the impact of the profiler on the program execution.
 <dl>
 <dt>Use the statistical sampling mode
-<dd> 
-
+</dt><dd> 
  Statistical sampling allows executing a program under the profiler with minimal performance overhead (usually less than 10%). This mode allows checking where the program is spending most of its execution time without significantly perturbing its behaviour.
-<dt>Collect less data
-<dd> 
-
+</dd><dt>Collect less data
+</dt><dd> 
  Collecting method enter/leave events can be very expensive, especially in programs that perform many millions of tiny calls. The profiler option nocalls can be used to avoid collecting this data or it can be limited to only a few call levels with the calldepth option. 
-
  Object allocation information is expensive as well, though much less than method enter/leave events. If it's not needed, it can be skipped with the noalloc profiler option. Note that when method enter/leave events are discarded, by default stack traces are collected at each allocation and this can be expensive as well. The impact of stack trace information can be reduced by setting a low value with the maxframes option or by eliminating them completely, by setting it to 0. 
-
  The other major source of data is the heapshot profiler option: especially if the managed heap is big, since every object needs to be inspected. The MODE parameter of the heapshot option can be used to reduce the frequency of the heap shots.
-<dt>Reduce the timestamp overhead
-<dd> 
-
- On many operating systems or architectures what actually slows down profiling is the function provided by the system to get timestamp information. The time=fast profiler option can be usually used to speed up this operation, but, depending on the system, time accounting may have some level of approximation (though statistically the data should be still fairly valuable).</dl>
+</dd><dt>Reduce the timestamp overhead
+</dt><dd> 
+ On many operating systems or architectures what actually slows down profiling is the function provided by the system to get timestamp information. The time=fast profiler option can be usually used to speed up this operation, but, depending on the system, time accounting may have some level of approximation (though statistically the data should be still fairly valuable).</dd></dl>
 
 <h3>Dealing with the size of the data files</h3>
 
@@ -370,45 +355,28 @@ url: "/docs/linux/man/1-mprof-report/"
  When collecting a lot of information about a profiled program, huge data files can be generated. There are a few ways to minimize the amount of data, for example by not collecting some of the more space-consuming information or by compressing the information on the fly or by just generating a summary report.
 <dl>
 <dt>Reducing the amount of data
-<dd> 
-
+</dt><dd> 
  Method enter/leave events can be excluded completely with the nocalls option or they can be limited to just a few levels of calls with the calldepth option. For example, the option: 
-
  calldepth=10 
-
  will ignore the method events when there are more than 10 managed stack frames. This is very useful for programs that have deep recursion or for programs that perform many millions of tiny calls deep enough in the call stack. The optimal number for the calldepth option depends on the program and it needs to be balanced between providing enough profiling information and allowing fast execution speed. 
-
  Note that by default, if method events are not recorded at all, the profiler will collect stack trace information at events like allocations. To avoid gathering this data, use the maxframes=0 profiler option. 
-
  Allocation events can be eliminated with the noalloc option. 
-
  Heap shot data can also be huge: by default it is collected at each major collection. To reduce the frequency, you can specify a heapshot mode: for example to collect every 5 collections (including major and minor): 
-
  heapshot=5gc 
-
  or when at least 5 seconds passed since the last heap shot: 
-
  heapshot=5000ms
-<dt>Compressing the data
-<dd> 
-
+</dd><dt>Compressing the data
+</dt><dd> 
  To reduce the amout of disk space used by the data, the data can be compressed either after it has been generated with the gzip command: 
-
  gzip -9 output.mlpd 
-
  or it can be compressed automatically by using the zip profiler option. Note that in this case there could be a significant slowdown of the profiled program. 
-
  The mprof-report program will tranparently deal with either compressed or uncompressed data files.
-<dt>Generating only a summary report
-<dd> 
-
+</dd><dt>Generating only a summary report
+</dt><dd> 
  Often it's enough to look at the profiler summary report to diagnose an issue and in this case it's possible to avoid saving the profiler data file to disk. This can be accomplished with the report profiler option, which will basically send the data to the mprof-report program for display. 
-
  To have more control of what summary information is reported (or to use a completely different program to decode the profiler data), the output profiler option can be used, with | as the first character: the rest of the output name will be executed as a program with the data fed in on the standard input. 
-
  For example, to print only the Monitor summary with stack trace information, you could use it like this: 
-
- output=|mprof-report --reports=monitor --traces -</dl>
+ output=|mprof-report --reports=monitor --traces -</dd></dl>
 
 <h2>WEB SITE</h2>
 

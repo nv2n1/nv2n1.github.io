@@ -15,12 +15,12 @@ description: "wsdl2hed – ARC skeleton generator"
 <p> <code>wsdl2hed [-s] WSDL_file service_name</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&nbsp;<wbr>-s </code></p>
-<dd> If specified then schema inside WSDL is parsed and corresponding wrapper C++ classes are generated for every declared type. Otherwise C++ skeleton for HED service is generated.</p>
-<dt><code>&nbsp;<wbr>WSDL_file </code></p>
-<dd> The WSDL file describe a webservice interface by standard way.</p>
-<dt><code>&nbsp;<wbr>service_name</code></p>
-<dd> ARC1 service name (C++ class and header name come from this)</dl>
+<dt><code>&nbsp;<wbr>-s </code></dt>
+<dd> If specified then schema inside WSDL is parsed and corresponding wrapper C++ classes are generated for every declared type. Otherwise C++ skeleton for HED service is generated.</dd>
+<dt><code>&nbsp;<wbr>WSDL_file </code></dt>
+<dd> The WSDL file describe a webservice interface by standard way.</dd>
+<dt><code>&nbsp;<wbr>service_name</code></dt>
+<dd> ARC1 service name (C++ class and header name come from this)</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="http://bugzilla.nordugrid.org">http://bugzilla.nordugrid.org</a> </p>
 <h2>COPYRIGHT</h2>

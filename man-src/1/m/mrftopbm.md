@@ -18,8 +18,8 @@ description: "mrftopbm – convert an MRF image to PBM format"
 <p> For more information about mrf, see <code>the</code>MRF specification (1) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> causes <code>mrftopbm</code> to include the edges, if any, in the output PBM. This may help when debugging a compressor&#8217;s edge optimization. </p>
+<dt><code>-a</code></dt>
+<dd> causes <code>mrftopbm</code> to include the edges, if any, in the output PBM. This may help when debugging a compressor&#8217;s edge optimization. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Russell Marks. </p>

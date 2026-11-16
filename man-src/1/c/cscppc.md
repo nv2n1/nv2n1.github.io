@@ -16,107 +16,107 @@ description: "cscppc – a compiler wrapper that runs cppcheck in background"
 <p> The following parameters are given to cppcheck by default: </p>
 <dl>
 <dt>
-<dd> &bull; -D__GNUC__</dl>
+</dt><dd> &bull; -D__GNUC__</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -D__STDC__</dl>
+</dt><dd> &bull; -D__STDC__</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -D__i386__ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [32bit architecture only]</dl>
+</dt><dd> &bull; -D__i386__ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [32bit architecture only]</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -D__WORDSIZE=32&nbsp;<wbr> [32bit architecture only]</dl>
+</dt><dd> &bull; -D__WORDSIZE=32&nbsp;<wbr> [32bit architecture only]</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -D__x86_64__ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [64bit architecture only]</dl>
+</dt><dd> &bull; -D__x86_64__ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [64bit architecture only]</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -D__WORDSIZE=64&nbsp;<wbr> [64bit architecture only]</dl>
+</dt><dd> &bull; -D__WORDSIZE=64&nbsp;<wbr> [64bit architecture only]</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;inline-suppr</dl>
+</dt><dd> &bull; &#8211;inline-suppr</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;quiet</dl>
+</dt><dd> &bull; &#8211;quiet</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;template=&quot;{file}:{line}: {severity}: {id}: {message}&quot;</dl>
+</dt><dd> &bull; &#8211;template=&quot;{file}:{line}: {severity}: {id}: {message}&quot;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;suppressions-list=/usr/share/cscppc/default.supp</dl>
+</dt><dd> &bull; &#8211;suppressions-list=/usr/share/cscppc/default.supp</dd></dl>
 <p> The following parameters are passed to cppcheck from compiler&#8217;s command line: </p>
 <dl>
 <dt>
-<dd> &bull; -D&#8230;</dl>
+</dt><dd> &bull; -D&#8230;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; -I&#8230;</dl>
+</dt><dd> &bull; -I&#8230;</dd></dl>
 <p> The following file extensions are recognized as C/C++ source files: </p>
 <dl>
 <dt>
-<dd> &bull; c</dl>
+</dt><dd> &bull; c</dd></dl>
 <dl>
 <dt>
-<dd> &bull; C</dl>
+</dt><dd> &bull; C</dd></dl>
 <dl>
 <dt>
-<dd> &bull; cc</dl>
+</dt><dd> &bull; cc</dd></dl>
 <dl>
 <dt>
-<dd> &bull; cpp</dl>
+</dt><dd> &bull; cpp</dd></dl>
 <dl>
 <dt>
-<dd> &bull; cxx</dl>
+</dt><dd> &bull; cxx</dd></dl>
 <p> The following path substrings are black-listed from being scanned by cppcheck: </p>
 <dl>
 <dt>
-<dd> &bull; conftest.c</dl>
+</dt><dd> &bull; conftest.c</dd></dl>
 <dl>
 <dt>
-<dd> &bull; _configtest.c</dl>
+</dt><dd> &bull; _configtest.c</dd></dl>
 <dl>
 <dt>
-<dd> &bull; /CMakeTmp/</dl>
+</dt><dd> &bull; /CMakeTmp/</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ../test.c</dl>
+</dt><dd> &bull; ../test.c</dd></dl>
 <p> If cscppc is installed on system, the following command activates the wrapper: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 export PATH=&quot;`cscppc --print-path-to-wrap`:$PATH&quot;
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Prints basic usage information.</dl>
+</dt><dd> Prints basic usage information.</dd></dl>
 <p> <code>&#8211;print-path-to-wrap</code></p>
 <dl>
 <dt>
-<dd> Prints path to the directory with symlinks to the cscppc executable.</dl>
+</dt><dd> Prints path to the directory with symlinks to the cscppc executable.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> cscppc propagates the exit status returned by the compiler (in case cscppc succeeds to run the compiler). The exit status returned by cppcheck does not affect the resulting exit status.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>DEBUG_CSCPPC</code></p>
 <dl>
 <dt>
-<dd> If set to a non-empty string, cscppc outputs the list of parameters given to cppcheck to the standard output.</dl>
+</dt><dd> If set to a non-empty string, cscppc outputs the list of parameters given to cppcheck to the standard output.</dd></dl>
 <p> <code>CSCPPC_ADD_OPTS</code></p>
 <dl>
 <dt>
-<dd> cscppc expects a colon-separated list of Cppcheck options that should be appended to command line prior to invoking Cppcheck. The options are appended even if they already appear in the command line and they are always appended at the end of the command line.</dl>
+</dt><dd> cscppc expects a colon-separated list of Cppcheck options that should be appended to command line prior to invoking Cppcheck. The options are appended even if they already appear in the command line and they are always appended at the end of the command line.</dd></dl>
 <h2>BUGS</h2>
 <p> Please report bugs and feature requests to the following mailing-list: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <a rel="nofollow" href="https://fedorahosted.org/mailman/listinfo/cscppc-devel">https://fedorahosted.org/mailman/listinfo/cscppc-devel</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Kamil Dudka.</p>
 <h2>COPYING</h2>

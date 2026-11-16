@@ -15,26 +15,26 @@ description: "jpilot-dump – A command line tool for dumping jpilot databases."
 <p> Dump jpilot databases.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>+B +M +A +T</code></p>
-<dd> format like date +format.</p>
-<dt><code>-v</code></p>
-<dd> displays version and exits.</p>
-<dt><code>-h</code></p>
-<dd> displays help and exits.</p>
-<dt><code>-f</code></p>
-<dd> displays help for format codes.</p>
-<dt><code>-D</code></p>
-<dd> dump DateBook.</p>
-<dt><code>-N</code></p>
-<dd> dump appts for today in DateBook.</p>
-<dt><code>-N</code><i>YYYY/MM/DD</i></p>
-<dd> dump appts on YYYY/MM/DD in DateBook.</p>
-<dt><code>-A</code></p>
-<dd> dump Address book.</p>
-<dt><code>-T</code></p>
-<dd> dump Todo list as CSV.</p>
-<dt><code>-M</code></p>
-<dd> dump Memos.</dl>
+<dt><code>+B +M +A +T</code></dt>
+<dd> format like date +format.</dd>
+<dt><code>-v</code></dt>
+<dd> displays version and exits.</dd>
+<dt><code>-h</code></dt>
+<dd> displays help and exits.</dd>
+<dt><code>-f</code></dt>
+<dd> displays help for format codes.</dd>
+<dt><code>-D</code></dt>
+<dd> dump DateBook.</dd>
+<dt><code>-N</code></dt>
+<dd> dump appts for today in DateBook.</dd>
+<dt><code>-N</code><i>YYYY/MM/DD</i></dt>
+<dd> dump appts on YYYY/MM/DD in DateBook.</dd>
+<dt><code>-A</code></dt>
+<dd> dump Address book.</dd>
+<dt><code>-T</code></dt>
+<dd> dump Todo list as CSV.</dd>
+<dt><code>-M</code></dt>
+<dd> dump Memos.</dd></dl>
 <h2>BUGS</h2>
 <p> See /usr/share/doc/jpilot/BUGS</p>
 <h2>SEE ALSO</h2>

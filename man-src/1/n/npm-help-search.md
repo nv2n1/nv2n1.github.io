@@ -12,11 +12,11 @@ description: "npm-help-search – Search npm help documentation"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm help-search &lt;text&gt;
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This command will search the npm markdown documentation files for the terms provided, and then list the results, sorted by relevance. </p>
 <p> If only one result is found, then it will show that help topic. </p>
@@ -24,26 +24,22 @@ npm help-search &lt;text&gt;
 <h3>Configuration</h3>
 <h3>long</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Type: Boolean</p>
-<dt>&bull;</p>
-<dd> Default: false </p>
+<dt>&bull;</dt>
+<dd> Type: Boolean</dd>
+<dt>&bull;</dt>
+<dd> Default: false </dd>
 </dl>
 </dl>
 <p> If true, the &quot;long&quot; flag will cause help-search to output context around where the terms were found in the documentation. </p>
 <p> If false, then help-search will just list out the help topics found.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help npm</p>
-<dt>&bull;</p>
-<dd> npm help help </p>
+<dt>&bull;</dt>
+<dd> npm help npm</dd>
+<dt>&bull;</dt>
+<dd> npm help help </dd>
 </dl>
 </dl>
 <h2>Index</h2>

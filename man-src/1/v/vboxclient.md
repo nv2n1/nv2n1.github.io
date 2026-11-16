@@ -14,16 +14,16 @@ description: "VBoxClient – x86 virtualization solution"
 <p>Start the VirtualBox X Window System guest services.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;clipboard</code></p>
-<dd>start the shared clipboard service</p>
-<dt><code>&#8211;draganddrop</code></p>
-<dd>start the drag and drop service</p>
-<dt><code>&#8211;display</code></p>
-<dd>start the display management service</p>
-<dt> <code>&#8211;checkhostversion</code> start the host version notifier service</p>
-<dt><code>&#8211;seamless</code></p>
+<dt><code>&#8211;clipboard</code></dt>
+<dd>start the shared clipboard service</dd>
+<dt><code>&#8211;draganddrop</code></dt>
+<dd>start the drag and drop service</dd>
+<dt><code>&#8211;display</code></dt>
+<dd>start the display management service</dd>
+<dt> <code>&#8211;checkhostversion</code> start the host version notifier service</dt>
+<dt><code>&#8211;seamless</code></dt>
 <dd>
-<dd>start the seamless windows service</p>
-<dt><code>-d</code>, <code>&#8211;nodaemon</code></p>
-<dd>continue running as a system service </p>
+</dd><dd>start the seamless windows service</dd>
+<dt><code>-d</code>, <code>&#8211;nodaemon</code></dt>
+<dd>continue running as a system service </dd>
 </dl>

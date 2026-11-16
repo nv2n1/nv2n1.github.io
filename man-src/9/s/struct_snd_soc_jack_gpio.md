@@ -25,39 +25,39 @@ struct_snd_soc_jack_gpio - Describes a gpio pin for jack detection
 <h2>Members</h2>
 
 gpio
-<dl><dd>legacy gpio number</dl>
+<dl><dd>legacy gpio number</dd></dl>
  
 
  idx
-<dl><dd>gpio descriptor index within the function of the GPIO consumer device</dl>
+<dl><dd>gpio descriptor index within the function of the GPIO consumer device</dd></dl>
  
 
  gpiod_dev
-<dl><dd>GPIO consumer device</dl>
+<dl><dd>GPIO consumer device</dd></dl>
  
 
  name
-<dl><dd>gpio name. Also as connection ID for the GPIO consumer device function name lookup</dl>
+<dl><dd>gpio name. Also as connection ID for the GPIO consumer device function name lookup</dd></dl>
  
 
  report
-<dl><dd>value to report when jack detected</dl>
+<dl><dd>value to report when jack detected</dd></dl>
  
 
  invert
-<dl><dd>report presence in low state</dl>
+<dl><dd>report presence in low state</dd></dl>
  
 
  debounce_time
-<dl><dd>debounce time in ms</dl>
+<dl><dd>debounce time in ms</dd></dl>
  
 
  wake
-<dl><dd>enable as wake source</dl>
+<dl><dd>enable as wake source</dd></dl>
  
 
  jack_status_check
-<dl><dd>callback function which overrides the detection to provide more complex checks (eg, reading an ADC).</dl>
+<dl><dd>callback function which overrides the detection to provide more complex checks (eg, reading an ADC).</dd></dl>
 
 <h2>Copyright</h2>
 

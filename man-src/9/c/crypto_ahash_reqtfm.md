@@ -14,7 +14,7 @@ description: "crypto_ahash_reqtfm – obtain cipher handle from request"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>asynchronous request handle that contains the reference to the ahash cipher handle</dl>
+</dd><dd>asynchronous request handle that contains the reference to the ahash cipher handle</dd></dl>
 <h2>Description</h2>
 <p>Return the ahash cipher handle that is registered with the asynchronous request handle ahash_request.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_ahash_reqtfm – obtain cipher handle from request"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

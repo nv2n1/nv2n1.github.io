@@ -19,24 +19,24 @@ description: "sfinfo – display information about audio files"
 <p> &#8211;short, -s</p>
 <dl>
 <dt>
-<dd> Print short single-line summary of each recognized audio file.</dl>
+</dt><dd> Print short single-line summary of each recognized audio file.</dd></dl>
 <p> &#8211;reporterror, -r</p>
 <dl>
 <dt>
-<dd> Print an error message if any of the specified files are not recognized as valid audio files.</dl>
+</dt><dd> Print an error message if any of the specified files are not recognized as valid audio files.</dd></dl>
 <p> &#8211;help, -h</p>
 <dl>
 <dt>
-<dd> Print help message.</dl>
+</dt><dd> Print help message.</dd></dl>
 <p> &#8211;version, -v</p>
 <dl>
 <dt>
-<dd> Print version information.</dl>
+</dt><dd> Print version information.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Display summary of an audio file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % sfinfo drum.aiff
 File Name      drum.aiff
@@ -47,17 +47,17 @@ Audio Data     1569972 bytes begins at offset 54 (36 hex)
 Sampling Rate  44100.00 Hz
 Duration       8.900 seconds
 </pre>
-</dl>
+</dd></dl>
 <p> List all recognized audio files in the current directory using the short output format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % sfinfo -s *
     9.60s 44100.00 aiff  1ch 16b -- bass.aiff
     8.90s 44100.00 aiff  2ch 16b -- drum.aiff
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sfconvert/">sfconvert</a></code>(1)</p>
 <h2>AUTHOR</h2>

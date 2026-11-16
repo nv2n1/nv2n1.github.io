@@ -11,10 +11,10 @@ description: "extcheck – Detects version conflicts between a target Java Archi
 <h2>Synopsis</h2>
 <pre><code>extcheck</code> [<i>options</i>] <i>targetfile.jar</i></pre>
 <dl>
-<dt><i>options</i></p>
-<dd>The command-line options. See Options.</p>
-<dt><i>targetfile.jar</i></p>
-<dd>The target JAR file against which the currently installed extension JAR files are compared to detect version conflicts.</dl>
+<dt><i>options</i></dt>
+<dd>The command-line options. See Options.</dd>
+<dt><i>targetfile.jar</i></dt>
+<dd>The target JAR file against which the currently installed extension JAR files are compared to detect version conflicts.</dd></dl>
 <h2>Description</h2>
 <p>The <code>extcheck</code> command checks a specified JAR file for title and version conflicts with any extensions installed in the Java SE SDK. Before installing an extension, you can use this utility to see whether the same or a more recent version of the extension is already installed. </p>
 <p> The <code>extcheck</code> command compares the Specification-title and Specification-version headers in the manifest of the <code>targetfile.jar</code> file against the corresponding headers in all JAR files currently installed in the extension directory. By default, the extension directory is <code>jre/lib/ext</code> on Oracle Solaris and <code>\jre\libxt</code> on Windows. The <code>extcheck</code> command compares version numbers in the same way as the <code>java.lang.Package.isCompatibleWith</code> method. </p>
@@ -22,12 +22,12 @@ description: "extcheck – Detects version conflicts between a target Java Archi
 <p> If the manifest of any JAR file in the extensions directory has the same <code>Specification-title</code> and the same or a newer <code>Specification-version</code> number, then a non-zero error code is returned. A non-zero error code is also returned when <code>targetfile.jar</code> does not have the <code>Specification-title</code> or <code>Specification-version</code> attributes in its manifest file.</p>
 <h2>Options</h2>
 <dl>
-<dt>-verbose</p>
-<dd>Lists JAR files in the extension directory as they are checked. Additionally, manifest attributes of the target JAR file and any conflicting JAR files are also reported.</p>
-<dt>-J<i>option</i></p>
-<dd>Passes <i>option</i> to the Java Virtual Machine (JVM), where option is one of the options described on the reference page for the Java launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+<dt>-verbose</dt>
+<dd>Lists JAR files in the extension directory as they are checked. Additionally, manifest attributes of the target JAR file and any conflicting JAR files are also reported.</dd>
+<dt>-J<i>option</i></dt>
+<dd>Passes <i>option</i> to the Java Virtual Machine (JVM), where option is one of the options described on the reference page for the Java launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dd></dl>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-jar/">jar</a>(1) </p>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-jar/">jar</a>(1) </dd>
 </dl>

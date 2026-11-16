@@ -14,13 +14,13 @@ description: "vm_insert_page – insert single page into user vma"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>user vma to map to</dl>
+</dd><dd>user vma to map to</dd></dl>
 <p> <i>addr</i></p>
 <dl>
-<dd>target user address of this page</dl>
+<dd>target user address of this page</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>source kernel page</dl>
+<dd>source kernel page</dd></dl>
 <h2>Description</h2>
 <p>This allows drivers to insert individual pages they&#8217;ve allocated into a user vma. </p>
 <p> The page has to be a nice clean _individual_ kernel allocation. If you allocate a compound page, you need to have marked it as such (__GFP_COMP), or manually just split the page up yourself (see <code>split_page</code>). </p>

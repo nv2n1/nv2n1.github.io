@@ -53,8 +53,8 @@ description: "disk_munin_plugin_selinux – Security Enhanced Linux Policy for t
 <p> <code>disk_munin_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the disk_munin_plugin_exec_t type, if you want to transition an executable to the disk_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/df.*, /usr/share/munin/plugins/smart_.*, /usr/share/munin/plugins/hddtemp.*, /usr/share/munin/plugins/diskstat.* </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/df.*, /usr/share/munin/plugins/smart_.*, /usr/share/munin/plugins/hddtemp.*, /usr/share/munin/plugins/diskstat.* </dd>
 </dl>
 <p> <code>disk_munin_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the disk_munin_plugin_tmp_t type, if you want to store disk munin plugin temporary files in the /tmp directories. </p>

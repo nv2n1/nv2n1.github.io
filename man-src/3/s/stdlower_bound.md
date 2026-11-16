@@ -11,27 +11,19 @@ std::lower_bound - std::lower_bound
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (until C++ 20)
-
         ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ForwardIt, class T&gt;
 (since C++ 20)
-
     constexpr ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T &amp;value);
 (1)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
     (until C++ 20)
-
         ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T &amp;value, Compare comp);
 (2)
-
     template &lt;class ForwardIt, class T, class Compare&gt;
     (since C++ 20)
-
         constexpr ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T &amp;value, Compare comp);</code></pre> 
 Returns an iterator pointing to the first element in the range [first, last) that is not less than (i.e. greater or equal to) value, or last if no such element is found. 
 The range [first, last) must be partitioned with respect to the expression element &lt; value or comp(element, value), i.e., all elements for which the expression is true must precede all elements for which the expression is false. A fully-sorted range meets this criterion. 
@@ -118,16 +110,11 @@ The number of comparisons performed is logarithmic in the distance between first
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
 template &lt;class ForwardIt, class T, class Compare = std::less&lt;&gt;&gt;
-
 ForwardIt binary_find(ForwardIt first, ForwardIt last, const T &amp;value, Compare comp = {})
-
 {
     // Note: BOTH type T and the type after ForwardIt is dereferenced
     // must be implicitly convertible to BOTH Type1 and Type2, used in Compare.
@@ -136,7 +123,6 @@ ForwardIt binary_find(ForwardIt first, ForwardIt last, const T &amp;value, Compa
     return first != last &amp;&amp; !comp(value, *first) ? first : last;
 }
 int main()
-
 {
     std::vector&lt;int&gt; data = {1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6};
     auto lower = std::lower_bound(data.begin(), data.end(), 4);

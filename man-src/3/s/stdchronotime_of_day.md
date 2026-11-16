@@ -10,25 +10,15 @@ description: "std::chrono::time_of_day – std::chrono::time_of_day"
 <p>std::chrono::time_of_day &#8211; std::chrono::time_of_day</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;chrono&gt;
-
 template&lt; class Duration &gt;                             (1) (since C++20)
-
 class time_of_day; // not defined
-
 template&lt;&gt;                                             (2) (since C++20)
-
 class time_of_day&lt;std::chrono::hours&gt;;
-
 template&lt;&gt;                                             (3) (since C++20)
-
 class time_of_day&lt;std::chrono::minutes&gt;;
-
 template&lt;&gt;                                             (4) (since C++20)
-
 class time_of_day&lt;std::chrono::seconds&gt;;
-
 template&lt; class Rep, class Period &gt;                    (5) (since C++20)
-
 class time_of_day&lt;std::chrono::duration&lt;Rep, Period&gt;&gt;;</code></pre>
 <p>The class template time_of_day splits a std::chrono::duration representing time since midnight into a &quot;broken down&quot; time such as hours:minutes:seconds, with the precision of the split determined by the Duration template parameter. It also tracks whether it should be output in a 12-hour time format or a 24-hour time format. It is primarily a formatting tool.<br />
 The primary template <code>(1)</code> is not defined; four specializations are provided to handle four different levels of precision.<br />

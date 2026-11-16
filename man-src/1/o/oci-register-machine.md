@@ -18,23 +18,23 @@ description: "oci-register-machine – Register OCI containers with systemd-mach
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -it busybox /bin/sh
 (In different terminal):
 $ machinectl
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #
 MACHINE                          CLASS     SERVICE
 5556287c7fa1c2312243f5ca2d75c90b container docker 
 1 machines listed.
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-docker-run/">docker-run</a>(1), <a href="/docs/linux/man/1-machinectl/">machinectl</a>(1), <a href="/docs/linux/man/8-systemd-machined/">systemd-machined</a>(8) </p>
 <h2>HISTORY</h2>

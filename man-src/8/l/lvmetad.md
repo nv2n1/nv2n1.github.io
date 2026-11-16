@@ -19,26 +19,26 @@ description: "lvmetad — LVM metadata cache daemon"
 <h2>Options</h2>
 <p>To run the daemon in a test environment both the pidfile_path and the socket_path should be changed from the defaults.</p>
 <dl>
-<dt><code>-f</code></p>
-<dd>Don&#8217;t fork, but run in the foreground.</p>
-<dt><code>-h</code>, <code>-?</code></p>
-<dd>Show help information.</p>
-<dt><code>-l </code><i>levels</i></p>
-<dd>Specify the levels of log messages to generate as a comma separated list. Messages are logged by syslog. Additionally, when -f is given they are also sent to standard error. Possible levels are: all, fatal, error, warn, info, wire, debug.</p>
-<dt><code>-p </code><i>pidfile_path</i></p>
-<dd>Path to the pidfile. This overrides both the built-in default (/run/lvmetad.pid) and the environment variable <code>LVM_LVMETAD_PIDFILE</code>. This file is used to prevent more than one instance of the daemon running simultaneously.</p>
-<dt><code>-s </code><i>socket_path</i></p>
-<dd>Path to the socket file. This overrides both the built-in default (/run/lvm/lvmetad.socket) and the environment variable <code>LVM_LVMETAD_SOCKET</code>. To communicate successfully with lvmetad, all LVM2 processes should use the same socket path.</p>
-<dt><code>-t </code><i>timeout_value</i></p>
-<dd>The daemon may shutdown after being idle for the given time (in seconds). When the option is omitted or the value given is zero the daemon never shutdowns on idle.</p>
-<dt><code>-V</code></p>
-<dd>Display the version of lvmetad daemon.</dl>
+<dt><code>-f</code></dt>
+<dd>Don&#8217;t fork, but run in the foreground.</dd>
+<dt><code>-h</code>, <code>-?</code></dt>
+<dd>Show help information.</dd>
+<dt><code>-l </code><i>levels</i></dt>
+<dd>Specify the levels of log messages to generate as a comma separated list. Messages are logged by syslog. Additionally, when -f is given they are also sent to standard error. Possible levels are: all, fatal, error, warn, info, wire, debug.</dd>
+<dt><code>-p </code><i>pidfile_path</i></dt>
+<dd>Path to the pidfile. This overrides both the built-in default (/run/lvmetad.pid) and the environment variable <code>LVM_LVMETAD_PIDFILE</code>. This file is used to prevent more than one instance of the daemon running simultaneously.</dd>
+<dt><code>-s </code><i>socket_path</i></dt>
+<dd>Path to the socket file. This overrides both the built-in default (/run/lvm/lvmetad.socket) and the environment variable <code>LVM_LVMETAD_SOCKET</code>. To communicate successfully with lvmetad, all LVM2 processes should use the same socket path.</dd>
+<dt><code>-t </code><i>timeout_value</i></dt>
+<dd>The daemon may shutdown after being idle for the given time (in seconds). When the option is omitted or the value given is zero the daemon never shutdowns on idle.</dd>
+<dt><code>-V</code></dt>
+<dd>Display the version of lvmetad daemon.</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>LVM_LVMETAD_PIDFILE</code></p>
-<dd>Path for the pid file.</p>
-<dt><code>LVM_LVMETAD_SOCKET </code></p>
-<dd>Path for the socket file. </p>
+<dt><code>LVM_LVMETAD_PIDFILE</code></dt>
+<dd>Path for the pid file.</dd>
+<dt><code>LVM_LVMETAD_SOCKET </code></dt>
+<dd>Path for the socket file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8), <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5), <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) </p>

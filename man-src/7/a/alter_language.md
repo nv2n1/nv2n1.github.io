@@ -15,12 +15,12 @@ ALTER [ PROCEDURAL ] LANGUAGE <i>name</i> OWNER TO <i>new_owner</i></pre>
 <p><code>ALTER LANGUAGE</code> changes the definition of a procedural language. The only functionality is to rename the language or assign a new owner. You must be superuser or owner of the language to use <code>ALTER LANGUAGE</code>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>Name of a language</p>
-<dt><i>newname</i></p>
-<dd>The new name of the language</p>
-<dt><i>new_owner</i></p>
-<dd>The new owner of the language</dl>
+<dt><i>name</i></dt>
+<dd>Name of a language</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the language</dd>
+<dt><i>new_owner</i></dt>
+<dd>The new owner of the language</dd></dl>
 <h2>Compatibility</h2>
 <p>There is no <code>ALTER LANGUAGE</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

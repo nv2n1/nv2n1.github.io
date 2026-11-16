@@ -39,6 +39,6 @@ description: "Atlas::EncoderBase – Base class forwarding to Atlas::Bridge as s
 <p> Of course your encoder does not have to inherit from <code>EncoderBase</code> &#8211; you could offer a completely different interface from that of bridge. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Bridge</code></dl>
+<dd><code>Bridge</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

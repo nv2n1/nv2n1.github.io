@@ -10,7 +10,6 @@ description: "ustrerror – Returns a string describing errno. Allegro game prog
 <p>ustrerror &#8211; Returns a string describing errno. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 const char *ustrerror(int err);</code></pre>
 <h2>Description</h2>
 <p>This function returns a string that describes the error code `err&#8217;, which normally comes from the variable `errno&#8217;. Example: </p>

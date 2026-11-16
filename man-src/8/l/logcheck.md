@@ -20,42 +20,42 @@ description: "logcheck – program to scan system logs for interesting lines"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-c CFG</code></p>
-<dd>Overrule default configuration file.</p>
-<dt><code>-d</code></p>
-<dd>Debug mode.</p>
-<dt><code>-h</code></p>
-<dd>Show usage information.</p>
-<dt><code>-H</code></p>
-<dd>Use this hostname string in the subject of logcheck mail.</p>
-<dt><code>-l LOG</code></p>
-<dd>Run logfile through logcheck.</p>
-<dt><code>-L CFG</code></p>
-<dd>Overrule default logfiles list.</p>
-<dt><code>-m</code></p>
-<dd>Mail report to recipient.</p>
-<dt><code>-o</code></p>
-<dd>STDOUT mode, not sending mail.</p>
-<dt><code>-p</code></p>
-<dd>Set the report level to &quot;paranoid&quot;.</p>
-<dt><code>-r DIR</code></p>
-<dd>Overrule default rules directory.</p>
-<dt><code>-R</code></p>
-<dd>Adds &quot;Reboot:&quot; to the email subject line.</p>
-<dt><code>-s</code></p>
-<dd>Set the report level to &quot;server&quot;.</p>
-<dt><code>-S DIR</code></p>
-<dd>Overrule default state directory.</p>
-<dt><code>-t</code></p>
-<dd>Testing mode does not update offset.</p>
-<dt><code>-T</code></p>
-<dd>Do not remove the TMPDIR.</p>
-<dt><code>-u</code></p>
-<dd>Enable syslog-summary.</p>
-<dt><code>-v</code></p>
-<dd>Print current version.</p>
-<dt><code>-w</code></p>
-<dd>Set the report level to &quot;workstation&quot;.</dl>
+<dt><code>-c CFG</code></dt>
+<dd>Overrule default configuration file.</dd>
+<dt><code>-d</code></dt>
+<dd>Debug mode.</dd>
+<dt><code>-h</code></dt>
+<dd>Show usage information.</dd>
+<dt><code>-H</code></dt>
+<dd>Use this hostname string in the subject of logcheck mail.</dd>
+<dt><code>-l LOG</code></dt>
+<dd>Run logfile through logcheck.</dd>
+<dt><code>-L CFG</code></dt>
+<dd>Overrule default logfiles list.</dd>
+<dt><code>-m</code></dt>
+<dd>Mail report to recipient.</dd>
+<dt><code>-o</code></dt>
+<dd>STDOUT mode, not sending mail.</dd>
+<dt><code>-p</code></dt>
+<dd>Set the report level to &quot;paranoid&quot;.</dd>
+<dt><code>-r DIR</code></dt>
+<dd>Overrule default rules directory.</dd>
+<dt><code>-R</code></dt>
+<dd>Adds &quot;Reboot:&quot; to the email subject line.</dd>
+<dt><code>-s</code></dt>
+<dd>Set the report level to &quot;server&quot;.</dd>
+<dt><code>-S DIR</code></dt>
+<dd>Overrule default state directory.</dd>
+<dt><code>-t</code></dt>
+<dd>Testing mode does not update offset.</dd>
+<dt><code>-T</code></dt>
+<dd>Do not remove the TMPDIR.</dd>
+<dt><code>-u</code></dt>
+<dd>Enable syslog-summary.</dd>
+<dt><code>-v</code></dt>
+<dd>Print current version.</dd>
+<dt><code>-w</code></dt>
+<dd>Set the report level to &quot;workstation&quot;.</dd></dl>
 <h2>Files</h2>
 <p>/etc/logcheck/logcheck.conf is the main configuration file. </p>
 <p> /etc/logcheck/logcheck.logfiles is the list of files to monitor. </p>

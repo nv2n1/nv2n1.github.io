@@ -18,39 +18,39 @@ description: "sshfp – Generate SSHFP DNS records from knownhosts files or ssh-
 <p> <code>-s / &#8211;scan</code> &lt;<i>hostname1</i>&gt; [hostname2 &#8230;]</p>
 <dl>
 <dt>
-<dd> Scan hosts or domain for public SSH keys using ssh-keyscan</dl>
+</dt><dd> Scan hosts or domain for public SSH keys using ssh-keyscan</dd></dl>
 <p> <code>-k / &#8211;knownhosts &lt;</code><i>knownhosts_file</i><i>&gt; &lt;</i><i>hostname1</i><i>&gt; [hostname2 &#8230;]</i></p>
 <dl>
 <dt>
-<dd> Obtain public SSH keys from a known_hosts file. Defaults to using ~/.ssh/known_hosts</dl>
+</dt><dd> Obtain public SSH keys from a known_hosts file. Defaults to using ~/.ssh/known_hosts</dd></dl>
 <p> <code>-a / &#8211;all</code></p>
 <dl>
 <dt>
-<dd> Scan all hosts in the known_hosts file when used with -k. When used with -s, it will attempt an zone transfer (AXFR) to obtain all A records in the domain specified.</dl>
+</dt><dd> Scan all hosts in the known_hosts file when used with -k. When used with -s, it will attempt an zone transfer (AXFR) to obtain all A records in the domain specified.</dd></dl>
 <p> <code>-d / &#8211;trailing-dot</code></p>
 <dl>
 <dt>
-<dd> Add a trailing dot to the hostname in the SSHFP records. It is not possible to determine whether a known_hosts or dns query is for a FQDN (eg <a rel="nofollow" href="http://www.redhat.com">www.redhat.com</a>) or not (eg www) or not (unless -d domainname -a is used, in which case a trailing dot is always appended). Non-FQDN get their domainname appended through /etc/resolv.conf These non-FQDN will happen when using a non-FQDN (eg sshfp -k www) or known_hosts entries obtained by running ssh <a href="http://www.sub">www.sub</a> where .domain.com is implied. When -d is used, all hostnames not ending with a dot, that at least contain two parts in their hostname (eg <a href="http://www.sub">www.sub</a> but not www get a trailing dot. Note that the output of sshfp can also just be manually editted for trailing dots.</dl>
+</dt><dd> Add a trailing dot to the hostname in the SSHFP records. It is not possible to determine whether a known_hosts or dns query is for a FQDN (eg <a rel="nofollow" href="http://www.redhat.com">www.redhat.com</a>) or not (eg www) or not (unless -d domainname -a is used, in which case a trailing dot is always appended). Non-FQDN get their domainname appended through /etc/resolv.conf These non-FQDN will happen when using a non-FQDN (eg sshfp -k www) or known_hosts entries obtained by running ssh <a href="http://www.sub">www.sub</a> where .domain.com is implied. When -d is used, all hostnames not ending with a dot, that at least contain two parts in their hostname (eg <a href="http://www.sub">www.sub</a> but not www get a trailing dot. Note that the output of sshfp can also just be manually editted for trailing dots.</dd></dl>
 <p> <code>-o / &#8211;output</code> &lt;<i>filename</i>&gt;</p>
 <dl>
 <dt>
-<dd> Write to filename instead of stdout</dl>
+</dt><dd> Write to filename instead of stdout</dd></dl>
 <p> <code>-p / &#8211;port</code> &lt;<i>portnumber</i>&gt;</p>
 <dl>
 <dt>
-<dd> Use portnumber for scanning. Note that portnumbers do NOT appear in SSHFP records.</dl>
+</dt><dd> Use portnumber for scanning. Note that portnumbers do NOT appear in SSHFP records.</dd></dl>
 <p> <code>-h / &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Output help information and exit.</dl>
+</dt><dd> Output help information and exit.</dd></dl>
 <p> <code>-v / &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Output version information and exit.</dl>
+</dt><dd> Output version information and exit.</dd></dl>
 <p> <code>-q / &#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Output less miscellany to stderr</dl>
+</dt><dd> Output less miscellany to stderr</dd></dl>
 <h2>FILES</h2>
 <p> ~/.ssh/known_hosts</p>
 <h2>REQUIREMENTS</h2>

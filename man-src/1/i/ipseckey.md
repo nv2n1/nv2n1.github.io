@@ -18,11 +18,11 @@ description: "ipseckey – Generate IPSECKEY records on libreswan IPsec servers"
 <p> <code>-h / &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Output help information and exit.</dl>
+</dt><dd> Output help information and exit.</dd></dl>
 <p> <code>-v / &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Output version information and exit.</dl>
+</dt><dd> Output version information and exit.</dd></dl>
 <h2>FILES</h2>
 <p> The NSS IPsec database in /etc/ipsec.d/*.db or for older openswan without NSS /etc/ipsec.secrets</p>
 <h2>REQUIREMENTS</h2>

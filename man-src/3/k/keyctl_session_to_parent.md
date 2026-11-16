@@ -22,12 +22,12 @@ long keyctl_session_to_parent();
 <p> On success <code>keyctl_session_to_parent</code>() returns 0. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to create a key.</p>
-<dt><code>EPERM</code></p>
-<dd> The credentials of the parent don&#8217;t match those of the caller.</p>
-<dt><code>EACCES</code></p>
-<dd> The named keyring exists, but is not <code>linkable</code> by the calling process.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to create a key.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The credentials of the parent don&#8217;t match those of the caller.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The named keyring exists, but is not <code>linkable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

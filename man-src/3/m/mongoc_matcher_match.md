@@ -16,14 +16,14 @@ mongoc_matcher_match (const mongoc_matcher_t *matcher,
 <h2>Deprecated</h2>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dl>
+<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>matcher</code></p>
-<dd>A <code>mongoc_matcher_t</code> \&amp;.</dl>
+<dt><code>matcher</code></dt>
+<dd>A <code>mongoc_matcher_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>query</code></p>
-<dd>A <code>bson_t</code> that contains the query.</dl>
+<dt><code>query</code></dt>
+<dd>A <code>bson_t</code> that contains the query.</dd></dl>
 <h2>Returns</h2>
 <p><code>true</code> if <code>document</code> matches the query specification provided to <code><a href="/docs/linux/man/3-mongoc_matcher_new/">mongoc_matcher_new</a>(3)</code> \&amp;. Otherwise, <code>false</code> \&amp;. </p>
 <h2>Colophon</h2>

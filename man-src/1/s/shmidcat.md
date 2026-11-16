@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-shmidcat/"
  To run this program the standard way type:
 <dl>
 <dt>cat whatever.vcd | shmidcat
-<dd> The shared memory ID is emitted to stdout.
-<dt>shmidcat whatever.vcd | gtkwave -v -I whatever.sav
-<dd> GTKWave directly grabs the ID from stdin.</dl>
+</dt><dd> The shared memory ID is emitted to stdout.
+</dd><dt>shmidcat whatever.vcd | gtkwave -v -I whatever.sav
+</dt><dd> GTKWave directly grabs the ID from stdin.</dd></dl>
 
 <h2>LIMITATIONS</h2>
 

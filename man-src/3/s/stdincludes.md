@@ -11,41 +11,23 @@ std::includes - std::includes
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 bool includes( InputIt1 first1, InputIt1 last1,                                              (until C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr bool includes( InputIt1 first1, InputIt1 last1,                                    (since C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 bool includes( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,            (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2 );                                               (1)
-
 template&lt; class InputIt1, class InputIt2, class Compare &gt;
-
 bool includes( InputIt1 first1, InputIt1 last1,                                                            (until C++20)
-
 InputIt2 first2, InputIt2 last2, Compare comp );
-
 template&lt; class InputIt1, class InputIt2, class Compare &gt;
-
 constexpr bool includes( InputIt1 first1, InputIt1 last1,                                (3)               (since C++20)
-
 InputIt2 first2, InputIt2 last2, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class Compare &gt;
-
 bool includes( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2, Compare comp );</code></pre> 
 Returns true if the sorted range [first2, last2) is a subsequence of the sorted range [first1, last1). (A subsequence need not be contiguous.) 
 1) Both ranges must be sorted with operator&lt;. 
@@ -125,14 +107,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;char&gt; v1{'a', 'b', 'c', 'f', 'h', 'x'};
     std::vector&lt;char&gt; v2{'a', 'b', 'c'};

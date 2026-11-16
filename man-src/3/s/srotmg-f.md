@@ -30,10 +30,10 @@ description: "srotmg.f –"
  THE VALUES OF GAMSQ AND RGAMSQ SET IN THE DATA STATEMENT MAY BE
  INEXACT. THIS IS OK AS THEY ARE ONLY USED FOR TESTING THE SIZE
  OF SD1 AND SD2. ALL ACTUAL SCALING OF DATA IS DONE USING GAM.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SD1</i> </p>
+<dd><i>SD1</i> </dd>
 <pre> SD1 is REAL</pre>
 <p><i>SD2</i> </p>
 <pre> SD2 is REAL</pre>
@@ -51,13 +51,13 @@ description: "srotmg.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 91 of file srotmg.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

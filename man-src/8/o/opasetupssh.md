@@ -13,32 +13,32 @@ description: "opasetupssh"
 <p>opasetupssh [-C|p|U] [-f <i>hostfile</i>] [-F <i>chassisfile</i>] [-h &#8216;<i>hosts</i>&#8216;] [-H &#8216;<i>chassis</i>&#8216;] [-i <i>ipoib_suffix</i>] [-u <i>user</i>] [-S] [-R|P]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-C</p>
-<dd>Performs operation against chassis. Default is hosts. </p>
-<dt>-p</p>
-<dd>Performs operation against all chassis or hosts in parallel. </p>
-<dt>-U</p>
-<dd>Performs connect only (to enter in local hosts, known hosts). When run in this mode, the -S option is ignored. </p>
-<dt>-f <i>hostfile</i></p>
-<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts file. </p>
-<dt>-F <i>chassisfile</i></p>
-<dd>File with chassis in cluster. Default is /etc/sysconfig/opa/chassis file. </p>
-<dt>-h <i>hosts</i></p>
-<dd>List of hosts to set up. </p>
-<dt>-H <i>chassis</i></p>
-<dd>List of chassis to set up. </p>
-<dt>-i <i>ipoib_suffix</i></p>
-<dd>Suffix to apply to host names to create IPoIB host names. Default is -ib. </p>
-<dt>-u <i>user</i></p>
-<dd>User on remote system to allow this user to SSH to. Default is current user code for host(s) and admin for chassis. </p>
-<dt>-S</p>
-<dd>Securely prompts for password for user on remote system. </p>
-<dt>-R</p>
-<dd>Skips setup of SSH to local host. </p>
-<dt>-P</p>
-<dd>Skips ping of host (for SSH to devices on Internet with ping firewalled). </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-C</dt>
+<dd>Performs operation against chassis. Default is hosts. </dd>
+<dt>-p</dt>
+<dd>Performs operation against all chassis or hosts in parallel. </dd>
+<dt>-U</dt>
+<dd>Performs connect only (to enter in local hosts, known hosts). When run in this mode, the -S option is ignored. </dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts file. </dd>
+<dt>-F <i>chassisfile</i></dt>
+<dd>File with chassis in cluster. Default is /etc/sysconfig/opa/chassis file. </dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts to set up. </dd>
+<dt>-H <i>chassis</i></dt>
+<dd>List of chassis to set up. </dd>
+<dt>-i <i>ipoib_suffix</i></dt>
+<dd>Suffix to apply to host names to create IPoIB host names. Default is -ib. </dd>
+<dt>-u <i>user</i></dt>
+<dd>User on remote system to allow this user to SSH to. Default is current user code for host(s) and admin for chassis. </dd>
+<dt>-S</dt>
+<dd>Securely prompts for password for user on remote system. </dd>
+<dt>-R</dt>
+<dd>Skips setup of SSH to local host. </dd>
+<dt>-P</dt>
+<dd>Skips ping of host (for SSH to devices on Internet with ping firewalled). </dd>
 </dl>
 <h2>Examples</h2>
 <h2>Operations on Hosts</h2>
@@ -53,22 +53,22 @@ description: "opasetupssh"
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>HOSTS_FILE</code></p>
-<dd>File containing list of hosts, used in absence of -f and -h. </p>
-<dt><code>CHASSIS_FILE</code></p>
-<dd>File containing list of chassis, used in absence of -F and -H. </p>
-<dt><code>HOSTS</code></p>
-<dd>List of hosts, used if -h option not supplied. </p>
-<dt><code>CHASSIS</code></p>
-<dd>List of chassis, used if -C is used and -H and -F options not supplied. </p>
-<dt><code>FF_MAX_PARALLEL</code></p>
-<dd>When -p option is used, maximum concurrent operations. </p>
-<dt><code>FF_IPOIB_SUFFIX</code></p>
-<dd>Suffix to append to hostname to create IPoIB hostname. Used in absence of -i. </p>
-<dt><code>FF_CHASSIS_LOGIN_METHOD</code></p>
-<dd>How to log into chassis. Can be Telnet or SSH. </p>
-<dt><code>FF_CHASSIS_ADMIN_PASSWORD</code></p>
-<dd>Password for admin on all chassis. Used in absence of -S option. </p>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>CHASSIS_FILE</code></dt>
+<dd>File containing list of chassis, used in absence of -F and -H. </dd>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>CHASSIS</code></dt>
+<dd>List of chassis, used if -C is used and -H and -F options not supplied. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>When -p option is used, maximum concurrent operations. </dd>
+<dt><code>FF_IPOIB_SUFFIX</code></dt>
+<dd>Suffix to append to hostname to create IPoIB hostname. Used in absence of -i. </dd>
+<dt><code>FF_CHASSIS_LOGIN_METHOD</code></dt>
+<dd>How to log into chassis. Can be Telnet or SSH. </dd>
+<dt><code>FF_CHASSIS_ADMIN_PASSWORD</code></dt>
+<dd>Password for admin on all chassis. Used in absence of -S option. </dd>
 </dl>
 <h2>Description</h2>
 <p>The Intel(R) Omni-Path Fabric Suite FastFabric Toolset provides additional flexibility in the translation between IPoIB and management network hostnames. Refer to &quot;Configuration of IPoIB Name Mapping&quot; section in the <i>Intel(R) Omni-Path Fabric Suite FastFabric User Guide</i> </p>

@@ -182,75 +182,75 @@ description: "XmSimpleSpinBox — a simple SpinBox widget class"
 </tr>
 </table>
 <dl COMPACT>
-<dt><code>XmNarrowLayout</code></p>
-<dd>Specifies the style and position of the SpinBox arrows. The following values are supported:</p>
+<dt><code>XmNarrowLayout</code></dt>
+<dd>Specifies the style and position of the SpinBox arrows. The following values are supported:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>XmARROWS_FLAT_BEGINNING</p>
-<dd>The arrows are placed side by side to the right of the TextField.</p>
-<dt>XmARROWS_FLAT_END</p>
-<dd>The arrows are placed side by side to the left of the TextField.</p>
-<dt>XmARROWS_SPLIT</p>
-<dd>The down arrow is on the left and the up arrow is on the right of the TextField.</p>
-<dt>XmARROWS_BEGINNING</p>
-<dd>The arrows are stacked and placed on the left of the TextField.</p>
-<dt>XmARROWS_END</p>
-<dd>The arrows are stacked and placed on the right of the TextField.</dl>
+</dd><dl COMPACT>
+<dt>XmARROWS_FLAT_BEGINNING</dt>
+<dd>The arrows are placed side by side to the right of the TextField.</dd>
+<dt>XmARROWS_FLAT_END</dt>
+<dd>The arrows are placed side by side to the left of the TextField.</dd>
+<dt>XmARROWS_SPLIT</dt>
+<dd>The down arrow is on the left and the up arrow is on the right of the TextField.</dd>
+<dt>XmARROWS_BEGINNING</dt>
+<dd>The arrows are stacked and placed on the left of the TextField.</dd>
+<dt>XmARROWS_END</dt>
+<dd>The arrows are stacked and placed on the right of the TextField.</dd></dl>
 </dl>
-<dt><code>XmNarrowSensitivity</code></p>
-<dd>Specifies the sensitivity of the arrows in the XmSimpleSpinBox. The following values are supported:</p>
+<dt><code>XmNarrowSensitivity</code></dt>
+<dd>Specifies the sensitivity of the arrows in the XmSimpleSpinBox. The following values are supported:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>XmARROWS_SENSITIVE</p>
-<dd>Both arrows are active to user selection.</p>
-<dt>XmARROWS_DECREMENT_SENSITIVE</p>
-<dd>The down arrow is active and the up arrow is inactive to user selection.</p>
-<dt>XmARROWS_INCREMENT_SENSITIVE</p>
-<dd>The up arrow is active and the down arrow is inactive to user selection.</p>
-<dt>XmARROWS_INSENSITIVE</p>
-<dd>Both arrows are inactive to user selection.</dl>
+</dd><dl COMPACT>
+<dt>XmARROWS_SENSITIVE</dt>
+<dd>Both arrows are active to user selection.</dd>
+<dt>XmARROWS_DECREMENT_SENSITIVE</dt>
+<dd>The down arrow is active and the up arrow is inactive to user selection.</dd>
+<dt>XmARROWS_INCREMENT_SENSITIVE</dt>
+<dd>The up arrow is active and the down arrow is inactive to user selection.</dd>
+<dt>XmARROWS_INSENSITIVE</dt>
+<dd>Both arrows are inactive to user selection.</dd></dl>
 </dl>
-<dt><code>XmNcolumns</code></p>
-<dd>Specifies the number of columns of the text field.</p>
-<dt><code>XmNdecimalPoints</code></p>
-<dd>Specifies the position of the radix character within the numeric value when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>. This resource is used to allow for floating point values in the XmSimpleSpinBox widget.</p>
-<dt><code>XmNeditable</code></p>
-<dd>Specifies whether the text field can take input.</p>
-<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</p>
-<dt><code>XmNincrementValue</code></p>
-<dd>Specifies the amount to increment or decrement the <code>XmNposition</code> when the <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>. When the Up action is activated, the <code>XmNincrementValue</code> is added to the <code>XmNposition</code> value; when the Down action is activated, the <code>XmNincrementValue</code> is subtracted from the <code>XmNposition</code> value. When <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>, this resource is ignored.</p>
-<dt><code>XmNinitialDelay</code></p>
-<dd>Specifies the amount of time in milliseconds before the Arrow buttons will begin to spin continuously.</p>
-<dt><code>XmNnumValues</code></p>
-<dd>Specifies the number of items in the <code>XmNvalues</code> list when the <code>XmNspinBoxChildType</code> resource is <code>XmSTRING</code>. The value of this resource must be a positive integer. The <code>XmNnumValues</code> is maintained by the XmSimpleSpinBox widget when items are added or deleted from the <code>XmNvalues</code> list. When <code>XmNspinBoxChildType</code> is not <code>XmSTRING</code>, this resource is ignored.</p>
-<dt><code>XmNvalues</code></p>
-<dd>Supplies the list of strings to cycle through when the <code>XmNspinButtonChildType</code> resource is <code>XmSTRING</code>. When <code>XmNspinBoxChildType</code> is not <code>XmSTRING</code>, this resource is ignored.</p>
-<dt><code>XmNmaximumValue</code></p>
-<dd>Specifies the upper bound on the XmSimpleSpinBox&#8217;s range when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNminimumValue</code></p>
-<dd>Specifies the lower bound on the XmSimpleSpinBox&#8217;s range when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</p>
-<dt><code>XmNmodifyVerifyCallback</code></p>
-<dd>Specifies the callback to be invoked just before the XmSimpleSpinBox position changes. The application can use this callback to implement new application-related logic (including setting new position spinning to, or canceling the impending action). For example, this callback can be used to stop the spinning just before wrapping at the upper and lower position boundaries. If the application sets the <i>doit</i> member of the <code>XmSimpleSpinBoxCallbackStruct</code> to False, nothing happens. Otherwise, the position changes. Reasons sent by the callback are <code>XmCR_SPIN_NEXT</code>, or <code>XmCR_SPIN_PRIOR</code>.</p>
-<dt><code>XmNposition</code></p>
-<dd>The <code>XmNposition</code> resource has a different value based on the <code>XmNspinBoxChildType</code> resource. When <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>, the <code>XmNposition</code> is the index into the <code>XmNvalues</code> list for the current item. When the <code>XmNspinBoxChildType</code> resource is <code>XmNUMERIC</code>, the <code>XmNposition</code> is the integer value of the XmSimpleSpinBox that falls within the range of <code>XmNmaximumValue</code> and <code>XmNminimumValue</code>.</p>
-<dt><code>XmNrepeatDelay</code></p>
-<dd>Specifies the number of milliseconds between repeated calls to the <code>XmNvalueChangedCallback</code> while the user is spinning the XmSimpleSpinBox.</p>
-<dt><code>XmNspinBoxChildType</code></p>
-<dd>Specifies the style of the XmSimpleSpinBox. The following values are supported:</p>
+<dt><code>XmNcolumns</code></dt>
+<dd>Specifies the number of columns of the text field.</dd>
+<dt><code>XmNdecimalPoints</code></dt>
+<dd>Specifies the position of the radix character within the numeric value when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>. This resource is used to allow for floating point values in the XmSimpleSpinBox widget.</dd>
+<dt><code>XmNeditable</code></dt>
+<dd>Specifies whether the text field can take input.</dd>
+<dd>When <code>XmNeditable</code> is used on a widget it sets the dropsite to <code>XmDROP_SITE_ACTIVE</code>.</dd>
+<dt><code>XmNincrementValue</code></dt>
+<dd>Specifies the amount to increment or decrement the <code>XmNposition</code> when the <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>. When the Up action is activated, the <code>XmNincrementValue</code> is added to the <code>XmNposition</code> value; when the Down action is activated, the <code>XmNincrementValue</code> is subtracted from the <code>XmNposition</code> value. When <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>, this resource is ignored.</dd>
+<dt><code>XmNinitialDelay</code></dt>
+<dd>Specifies the amount of time in milliseconds before the Arrow buttons will begin to spin continuously.</dd>
+<dt><code>XmNnumValues</code></dt>
+<dd>Specifies the number of items in the <code>XmNvalues</code> list when the <code>XmNspinBoxChildType</code> resource is <code>XmSTRING</code>. The value of this resource must be a positive integer. The <code>XmNnumValues</code> is maintained by the XmSimpleSpinBox widget when items are added or deleted from the <code>XmNvalues</code> list. When <code>XmNspinBoxChildType</code> is not <code>XmSTRING</code>, this resource is ignored.</dd>
+<dt><code>XmNvalues</code></dt>
+<dd>Supplies the list of strings to cycle through when the <code>XmNspinButtonChildType</code> resource is <code>XmSTRING</code>. When <code>XmNspinBoxChildType</code> is not <code>XmSTRING</code>, this resource is ignored.</dd>
+<dt><code>XmNmaximumValue</code></dt>
+<dd>Specifies the upper bound on the XmSimpleSpinBox&#8217;s range when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNminimumValue</code></dt>
+<dd>Specifies the lower bound on the XmSimpleSpinBox&#8217;s range when <code>XmNspinBoxChildType</code> is <code>XmNUMERIC</code>.</dd>
+<dt><code>XmNmodifyVerifyCallback</code></dt>
+<dd>Specifies the callback to be invoked just before the XmSimpleSpinBox position changes. The application can use this callback to implement new application-related logic (including setting new position spinning to, or canceling the impending action). For example, this callback can be used to stop the spinning just before wrapping at the upper and lower position boundaries. If the application sets the <i>doit</i> member of the <code>XmSimpleSpinBoxCallbackStruct</code> to False, nothing happens. Otherwise, the position changes. Reasons sent by the callback are <code>XmCR_SPIN_NEXT</code>, or <code>XmCR_SPIN_PRIOR</code>.</dd>
+<dt><code>XmNposition</code></dt>
+<dd>The <code>XmNposition</code> resource has a different value based on the <code>XmNspinBoxChildType</code> resource. When <code>XmNspinBoxChildType</code> is <code>XmSTRING</code>, the <code>XmNposition</code> is the index into the <code>XmNvalues</code> list for the current item. When the <code>XmNspinBoxChildType</code> resource is <code>XmNUMERIC</code>, the <code>XmNposition</code> is the integer value of the XmSimpleSpinBox that falls within the range of <code>XmNmaximumValue</code> and <code>XmNminimumValue</code>.</dd>
+<dt><code>XmNrepeatDelay</code></dt>
+<dd>Specifies the number of milliseconds between repeated calls to the <code>XmNvalueChangedCallback</code> while the user is spinning the XmSimpleSpinBox.</dd>
+<dt><code>XmNspinBoxChildType</code></dt>
+<dd>Specifies the style of the XmSimpleSpinBox. The following values are supported:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>XmSTRING</p>
-<dd>The child is a string value that is specified through the <code>XmNvalues</code> resource and incremented and decremented by changing the <code>XmNposition</code> resource.</p>
-<dt>XmNUMERIC</p>
-<dd>The child is a numeric value that is specified through the <code>XmNposition</code> resource and incremented according to the <code>XmNincrementValue</code> resource.</dl>
+</dd><dl COMPACT>
+<dt>XmSTRING</dt>
+<dd>The child is a string value that is specified through the <code>XmNvalues</code> resource and incremented and decremented by changing the <code>XmNposition</code> resource.</dd>
+<dt>XmNUMERIC</dt>
+<dd>The child is a numeric value that is specified through the <code>XmNposition</code> resource and incremented according to the <code>XmNincrementValue</code> resource.</dd></dl>
 </dl>
-<dt><code>XmtextField</code></p>
-<dd>Specifies the textfield widget.</p>
-<dt><code>XmNvalueChangedCallback</code></p>
-<dd>Specifies the callback to be invoked whenever the value of the <code>XmNposition</code> resource is changed through the use of the spinner arrows. The <code>XmNvalueChangedCallback</code> passes the <code>XmSimpleSpinBoxCallbackStruct</code> <i>call_data</i> structure.</dl>
+<dt><code>XmtextField</code></dt>
+<dd>Specifies the textfield widget.</dd>
+<dt><code>XmNvalueChangedCallback</code></dt>
+<dd>Specifies the callback to be invoked whenever the value of the <code>XmNposition</code> resource is changed through the use of the spinner arrows. The <code>XmNvalueChangedCallback</code> passes the <code>XmSimpleSpinBoxCallbackStruct</code> <i>call_data</i> structure.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>The XmSimpleSpinBox widget inherits behavior and resources from the following named superclasses. For a complete description of each resource, see the man page for that superclass. </p>
 <table>

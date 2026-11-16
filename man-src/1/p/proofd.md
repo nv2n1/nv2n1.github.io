@@ -19,26 +19,26 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
 <p> In other words:</p>
 <dl>
 <dt>
-<dd> <i>Be very VERY carefull when installing </i><code>proofd</code></dl>
+</dt><dd> <i>Be very VERY carefull when installing </i><code>proofd</code></dd></dl>
 <p> There, I said it. And ofcourse, no warrenties what so ever.</p>
 <dl>
-<dt>1</p>
-<dd> Make sure every node has <code>ROOT</code> installed. We&#8217;ll assume you installed the <code>ROOT</code> applications in &lt;<i>bindir</i>&gt; (e.g. <i>/usr/bin</i>) and the <code>PROOF</code> configuration files in files in <i>&lt;proofdir&gt;/etc</i><code> (e.g. </code><i>/usr/share/root/etc</i><code>). </p>
-<dt>2</p>
-<dd> The TCP port 1094 was allocated by IANA</code>, ( <i><a rel="nofollow" href="http://www.iana.org">www.iana.org</a></i> ), to <code>rootd</code>, so add to <i>/etc/services</i> the lines: </p>
+<dt>1</dt>
+<dd> Make sure every node has <code>ROOT</code> installed. We&#8217;ll assume you installed the <code>ROOT</code> applications in &lt;<i>bindir</i>&gt; (e.g. <i>/usr/bin</i>) and the <code>PROOF</code> configuration files in files in <i>&lt;proofdir&gt;/etc</i><code> (e.g. </code><i>/usr/share/root/etc</i><code>). </dd>
+<dt>2</dt>
+<dd> The TCP port 1094 was allocated by IANA</code>, ( <i><a rel="nofollow" href="http://www.iana.org">www.iana.org</a></i> ), to <code>rootd</code>, so add to <i>/etc/services</i> the lines: </dd>
 <pre>
   proofd  1093/tcp
   rootd   1094/tcp
 </pre>
-<dt>3</p>
-<dd> On each node, add to <i>/etc/inetd.conf</i> the lines: </p>
+<dt>3</dt>
+<dd> On each node, add to <i>/etc/inetd.conf</i> the lines: </dd>
 <pre>
   proofd stream tcp nowait root &lt;<i>bindir</i>&gt;/proofd proofd &lt;<i>proofdir</i>&gt;/proof
   rootd stream tcp nowait root &lt;<i>bindir</i>&gt;/rootd rootd -i
 </pre>
 <p> You can substitute the &lt;<i>proofdir</i>&gt; with any directory that holds your <code>PROOF</code> configuration, for example <i>/etc/root/proof</i>. However, it should be shared among all nodes in the cluster. </p>
-<dt>4</p>
-<dd> Restart <code>inetd</code> or force it to re-read the config file: </p>
+<dt>4</dt>
+<dd> Restart <code>inetd</code> or force it to re-read the config file: </dd>
 <pre>
   kill -1 &lt;<i>inetd pid</i>&gt;
 </pre>
@@ -47,8 +47,8 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
   /etc/init.d/inetd restart
 </pre>
 <p> or whatever is appropriate for your system. </p>
-<dt>5</p>
-<dd> On the master node, add to <i>/etc/syslog.conf</i> the line: </p>
+<dt>5</dt>
+<dd> On the master node, add to <i>/etc/syslog.conf</i> the line: </dd>
 <pre>
     local5,local6.debug     &lt;<i>proofdir</i>&gt;/log/proof.log
 </pre>
@@ -57,8 +57,8 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
     local5,local6.debug     @&lt;<i>master hostname</i>&gt;
 </pre>
 <p> where &lt;<i>master hostname</i>&gt; is domain name of the master node. All PROOF syslog messages will be collected on the master node. Just make one node in the cluster the master, all others are slaves. </p>
-<dt>6</p>
-<dd> On all nodes, change the below lines in <i>/etc/syslog.conf</i>, </p>
+<dt>6</dt>
+<dd> On all nodes, change the below lines in <i>/etc/syslog.conf</i>, </dd>
 <pre>
     *.info;mail.none;news.none;authpriv.none  /var/log/messages
 </pre>
@@ -66,13 +66,13 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
 <pre>
     *.info;local5,local6,mail.none;news.none;authpriv.none  /var/log/messages
 </pre>
-<dt>7</p>
-<dd> Create an empty &lt;<i>proofdir</i>&gt;/log/proof.log: </p>
+<dt>7</dt>
+<dd> Create an empty &lt;<i>proofdir</i>&gt;/log/proof.log: </dd>
 <pre>
     echo &quot;&quot; &gt; &lt;<i>proofdir</i>&gt;/log/proof.log
 </pre>
-<dt>8</p>
-<dd> Restart syslogd or force it to re-read the config file: </p>
+<dt>8</dt>
+<dd> Restart syslogd or force it to re-read the config file: </dd>
 <pre>
   kill -1 &lt;<i>syslogd pid</i>&gt;.
 </pre>
@@ -81,8 +81,8 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
   /etc/init.d/sysklogd restart
 </pre>
 <p> or whatever is appropriate for your system. </p>
-<dt>9</p>
-<dd> Edit &lt;<i>proofdir</i>&gt;<i>/etc/proof.conf</i> to reflect your cluster configuration. See the example <i>proof.conf</i> file for more information.</dl>
+<dt>9</dt>
+<dd> Edit &lt;<i>proofdir</i>&gt;<i>/etc/proof.conf</i> to reflect your cluster configuration. See the example <i>proof.conf</i> file for more information.</dd></dl>
 <p> If you installed <code>ROOT</code> using some precompiled package (for example a <code>Redhat Linux</code> or a <code>Debian GNU/Linux</code> package), steps 2 to 4 may already be done for you. </p>
 <p> If you&#8217;re running <code>Linux</code>, Steps 5 to 7 can be somewhat automated using the script <i>proof-facility</i> in &lt;<i>proofdir</i>&gt; of your distribution. This script uses <i>syslog-facility</i>(1), from the <code>Linux</code> <i>syslog</i>(1) distribution, and may run on other platforms as well &#8211; but no warrenties mind you! </p>
 <p> Step 9 is completely up to the user.</p>
@@ -95,22 +95,22 @@ root[1] gROOT-&gt;Proof("&lt;master hostname&gt;")
 </code></pre>
 <h2>FILES</h2>
 <dl>
-<dt>&lt;<i>proofdir</i><code>&gt;</p>
-<dd> The location of your PROOF</code><i> data. In binary packages, like for </i><code>Redhat Linux</code><i>I or </i><code>Debian GNU/Linux</code>, this will probably be <i>/usr/share/root/proof</i><code>. If you got a binary </code><i><a href="/docs/linux/man/1-tar/">tar</a></i>(1)-ball from the <code>ROOT</code> website, or a build it yourself without the static paths option, then this directory could be ROOTSYS/proof. However, you may set it to something else when starting your server.</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/etc</code></p>
-<dd> This directory holds all the configuration files for your cluster(s).</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/etc/&lt;cluster&gt;.conf</code></p>
-<dd> This is the cluster named &lt;<i>cluster</i>&gt; configuration file. See &lt;<i>proofdir</i><code>&gt;/etc/&lt;cluster&gt;.conf.sample</code> for an example.</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/etc/motd</code></p>
-<dd> This is Message-Of-The-Day file. See &lt;<i>proofdir</i><code>&gt;/etc/motd.sample</code> for an example.</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/etc/noproof</code></p>
-<dd> If this file is present, all <code>PROOF</code> services will be diabled. See &lt;<i>proofdir</i><code>&gt;/etc/noproof.sample</code> for an example.</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/etc/proof.conf</code></p>
-<dd> This is the <code>PROOF</code> configuration file. See &lt;<i>proofdir</i><code>&gt;/etc/proof.conf.sample</code> for an example.</p>
-<dt><code>~/.rootnetrc.conf</code></p>
-<dd> Configuration file for network access. Here you specify login names and pass word, so it <code>MUST</code><i> be read/write-able only by the user. See &lt;proofdir</i><code>&gt;/etc/rootnetrc.conf.sample</code> for an example.</p>
-<dt>&lt;<i>proofdir</i><code>&gt;/log</code></p>
-<dd> This directory holds the log files from the master and slaves. &lt;<i>proofdir</i><code>&gt;/log/proof.log</code> <i>Syslog</i>(1) log file for <code>PROOF</code>.</dl>
+<dt>&lt;<i>proofdir</i><code>&gt;</dt>
+<dd> The location of your PROOF</code><i> data. In binary packages, like for </i><code>Redhat Linux</code><i>I or </i><code>Debian GNU/Linux</code>, this will probably be <i>/usr/share/root/proof</i><code>. If you got a binary </code><i><a href="/docs/linux/man/1-tar/">tar</a></i>(1)-ball from the <code>ROOT</code> website, or a build it yourself without the static paths option, then this directory could be ROOTSYS/proof. However, you may set it to something else when starting your server.</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/etc</code></dt>
+<dd> This directory holds all the configuration files for your cluster(s).</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/etc/&lt;cluster&gt;.conf</code></dt>
+<dd> This is the cluster named &lt;<i>cluster</i>&gt; configuration file. See &lt;<i>proofdir</i><code>&gt;/etc/&lt;cluster&gt;.conf.sample</code> for an example.</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/etc/motd</code></dt>
+<dd> This is Message-Of-The-Day file. See &lt;<i>proofdir</i><code>&gt;/etc/motd.sample</code> for an example.</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/etc/noproof</code></dt>
+<dd> If this file is present, all <code>PROOF</code> services will be diabled. See &lt;<i>proofdir</i><code>&gt;/etc/noproof.sample</code> for an example.</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/etc/proof.conf</code></dt>
+<dd> This is the <code>PROOF</code> configuration file. See &lt;<i>proofdir</i><code>&gt;/etc/proof.conf.sample</code> for an example.</dd>
+<dt><code>~/.rootnetrc.conf</code></dt>
+<dd> Configuration file for network access. Here you specify login names and pass word, so it <code>MUST</code><i> be read/write-able only by the user. See &lt;proofdir</i><code>&gt;/etc/rootnetrc.conf.sample</code> for an example.</dd>
+<dt>&lt;<i>proofdir</i><code>&gt;/log</code></dt>
+<dd> This directory holds the log files from the master and slaves. &lt;<i>proofdir</i><code>&gt;/log/proof.log</code> <i>Syslog</i>(1) log file for <code>PROOF</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-proofserv/">proofserv</a></i>(1) , <i><a href="/docs/linux/man/1-root/">root</a></i>(1) , <i><a href="/docs/linux/man/1-rootd/">rootd</a></i>(1) </p>
 <p> More information can be found at the <code>ROOT</code> website: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>
@@ -118,7 +118,7 @@ root[1] gROOT-&gt;Proof("&lt;master hostname&gt;")
 <p> The ROOT team (see web page above):</p>
 <dl>
 <dt>
-<dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dl>
+</dt><dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dd></dl>
 <h2>COPYRIGHT</h2>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. </p>
 <p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>

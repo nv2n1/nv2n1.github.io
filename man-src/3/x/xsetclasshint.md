@@ -10,19 +10,19 @@ description: "XAllocClassHint, XSetClassHint, XGetClassHint, XClassHint – allo
 <p>XAllocClassHint, XSetClassHint, XGetClassHint, XClassHint &#8211; allocate class hints structure and set or read a window&#8217;s WM_CLASS property </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XClassHint *XAllocClassHint(void);</p>
-<dd>XSetClassHint(Display *<i>display</i>, Window <i>w</i>, XClassHint *<i>class_hints</i>);</p>
-<dd>Status XGetClassHint(Display *<i>display</i>, Window <i>w</i>, XClassHint *<i>class_hints_return</i>);</dl>
+<dd>XClassHint *XAllocClassHint(void);</dd>
+<dd>XSetClassHint(Display *<i>display</i>, Window <i>w</i>, XClassHint *<i>class_hints</i>);</dd>
+<dd>Status XGetClassHint(Display *<i>display</i>, Window <i>w</i>, XClassHint *<i>class_hints_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>class_hints</i></p>
-<dd>Specifies the <code>XClassHint</code> structure that is to be used.</p>
-<dt><i>class_hints_return</i></p>
-<dd>Returns the <code>XClassHint</code> structure.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>class_hints</i></dt>
+<dd>Specifies the <code>XClassHint</code> structure that is to be used.</dd>
+<dt><i>class_hints_return</i></dt>
+<dd>Returns the <code>XClassHint</code> structure.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocClassHint</code> function allocates and returns a pointer to a <code>XClassHint</code> structure. Note that the pointer fields in the <code>XClassHint</code> structure are initially set to NULL. If insufficient memory is available, <code>XAllocClassHint</code> returns NULL. To free the memory allocated to this structure, use <code>XFree</code>. </p>
 <p> The <code>XSetClassHint</code> function sets the class hint for the specified window. If the strings are not in the Host Portable Character Encoding, the result is implementation-dependent. </p>
@@ -31,8 +31,8 @@ description: "XAllocClassHint, XSetClassHint, XGetClassHint, XClassHint – allo
 <p> <code>XGetClassHint</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_CLASS</font></p>
-<dd>Set by application programs to allow window and session managers to obtain the application&#8217;s resources from the resource database.</dl>
+<dt><font SIZE="-1">WM_CLASS</font></dt>
+<dd>Set by application programs to allow window and session managers to obtain the application&#8217;s resources from the resource database.</dd></dl>
 <h2>Structures</h2>
 <p>The <code>XClassHint</code> structure contains: </p>
 <p> typedef struct {<br />
@@ -41,10 +41,10 @@ description: "XAllocClassHint, XSetClassHint, XGetClassHint, XClassHint – allo
 <p> The res_name member contains the application name, and the res_class member contains the application class. Note that the name set in this property may differ from the name set as WM_NAME. That is, WM_NAME specifies what should be displayed in the title bar and, therefore, can contain temporal information (for example, the name of a file currently in an editor&#8217;s buffer). On the other hand, the name specified as part of WM_CLASS is the formal name of the application that should be used when retrieving the application&#8217;s resources from the resource database.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

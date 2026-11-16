@@ -16,7 +16,7 @@ description: "audit_request_status – Request status of the audit system"
 <p> audit_request_status requests that the kernel send status structure describing various settings. The audit_status structure is as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct audit_status {
     __u32 mask;          /* Bit mask for valid entries */
@@ -29,7 +29,7 @@ struct audit_status {
     __u32 backlog;       /* messages waiting in queue */
 };
 </code></pre>
-</dl>
+</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The return value is &lt;= 0 on error, otherwise it is the netlink sequence id number. This function can have any error that sendto would encounter. </p>
 <h2>SEE ALSO</h2>

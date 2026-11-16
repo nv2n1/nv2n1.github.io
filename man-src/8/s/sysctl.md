@@ -15,54 +15,54 @@ description: "sysctl – configure kernel parameters at runtime"
 <p><code>sysctl</code> is used to modify kernel parameters at runtime. The parameters available are those listed under /proc/sys/. Procfs is required for <code>sysctl</code> support in Linux. You can use <code>sysctl</code> to both read and write sysctl data.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>variable</i></p>
-<dd>The name of a key to read from. An example is kernel.ostype. The &#8216;/&#8217; separator is also accepted in place of a &#8216;.&#8217;.</p>
-<dt><i>variable</i>=<i>value</i></p>
-<dd>To set a key, use the form <i>variable</i>=<i>value</i> where <i>variable</i> is the key and <i>value</i> is the value to set it to. If the value contains quotes or characters which are parsed by the shell, you may need to enclose the value in double quotes.</p>
-<dt><code>-n</code>, <code>&#8211;values</code></p>
-<dd>Use this option to disable printing of the key name when printing values.</p>
-<dt><code>-e</code>, <code>&#8211;ignore</code></p>
-<dd>Use this option to ignore errors about unknown keys.</p>
-<dt><code>-N</code>, <code>&#8211;names</code></p>
-<dd>Use this option to only print the names. It may be useful with shells that have programmable completion.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Use this option to not display the values set to stdout.</p>
-<dt><code>-w</code>, <code>&#8211;write</code></p>
-<dd>Use this option when all arguments prescribe a key to be set.</p>
-<dt><code>-p</code>[<i>FILE</i>], <code>&#8211;load</code>[=<i>FILE</i>]</p>
-<dd>Load in sysctl settings from the file specified or /etc/sysctl.conf if none given. Specifying &#8211; as filename means reading data from standard input. Using this option will mean arguments to <code>sysctl</code> are files, which are read in the order they are specified. The file argument may be specified as regular expression.</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd>Display all values currently available.</p>
-<dt><code>&#8211;deprecated</code></p>
-<dd>Include deprecated parameters to <code>&#8211;all</code> values listing.</p>
-<dt><code>-b</code>, <code>&#8211;binary</code></p>
-<dd>Print value without new line.</p>
-<dt><code>&#8211;system</code></p>
+<dt><i>variable</i></dt>
+<dd>The name of a key to read from. An example is kernel.ostype. The &#8216;/&#8217; separator is also accepted in place of a &#8216;.&#8217;.</dd>
+<dt><i>variable</i>=<i>value</i></dt>
+<dd>To set a key, use the form <i>variable</i>=<i>value</i> where <i>variable</i> is the key and <i>value</i> is the value to set it to. If the value contains quotes or characters which are parsed by the shell, you may need to enclose the value in double quotes.</dd>
+<dt><code>-n</code>, <code>&#8211;values</code></dt>
+<dd>Use this option to disable printing of the key name when printing values.</dd>
+<dt><code>-e</code>, <code>&#8211;ignore</code></dt>
+<dd>Use this option to ignore errors about unknown keys.</dd>
+<dt><code>-N</code>, <code>&#8211;names</code></dt>
+<dd>Use this option to only print the names. It may be useful with shells that have programmable completion.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Use this option to not display the values set to stdout.</dd>
+<dt><code>-w</code>, <code>&#8211;write</code></dt>
+<dd>Use this option when all arguments prescribe a key to be set.</dd>
+<dt><code>-p</code>[<i>FILE</i>], <code>&#8211;load</code>[=<i>FILE</i>]</dt>
+<dd>Load in sysctl settings from the file specified or /etc/sysctl.conf if none given. Specifying &#8211; as filename means reading data from standard input. Using this option will mean arguments to <code>sysctl</code> are files, which are read in the order they are specified. The file argument may be specified as regular expression.</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd>Display all values currently available.</dd>
+<dt><code>&#8211;deprecated</code></dt>
+<dd>Include deprecated parameters to <code>&#8211;all</code> values listing.</dd>
+<dt><code>-b</code>, <code>&#8211;binary</code></dt>
+<dd>Print value without new line.</dd>
+<dt><code>&#8211;system</code></dt>
 <dd>Load settings from all system configuration files. Files are read from directories in the following list in given order from top to bottom. Once a file of a given filename is loaded, any file of the same name in subsequent directories is ignored.<br />
  /etc/sysctl.d/*.conf<br />
  /run/sysctl.d/*.conf<br />
  /usr/local/lib/sysctl.d/*.conf<br />
  /usr/lib/sysctl.d/*.conf<br />
  /lib/sysctl.d/*.conf<br />
- /etc/sysctl.conf</p>
-<dt><code>-r</code>, <code>&#8211;pattern</code> <i>pattern</i></p>
-<dd>Only apply settings that match <i>pattern</i>. The <i>pattern</i> uses extended regular expression syntax.</p>
-<dt><code>-A</code></p>
-<dd>Alias of <code>-a</code></p>
-<dt><code>-d</code></p>
-<dd>Alias of <code>-h</code></p>
-<dt><code>-f</code></p>
-<dd>Alias of <code>-p</code></p>
-<dt><code>-X</code></p>
-<dd>Alias of <code>-a</code></p>
-<dt><code>-o</code></p>
-<dd>Does nothing, exists for BSD compatibility.</p>
-<dt><code>-x</code></p>
-<dd>Does nothing, exists for BSD compatibility.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display help text and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information and exit.</dl>
+ /etc/sysctl.conf</dd>
+<dt><code>-r</code>, <code>&#8211;pattern</code> <i>pattern</i></dt>
+<dd>Only apply settings that match <i>pattern</i>. The <i>pattern</i> uses extended regular expression syntax.</dd>
+<dt><code>-A</code></dt>
+<dd>Alias of <code>-a</code></dd>
+<dt><code>-d</code></dt>
+<dd>Alias of <code>-h</code></dd>
+<dt><code>-f</code></dt>
+<dd>Alias of <code>-p</code></dd>
+<dt><code>-X</code></dt>
+<dd>Alias of <code>-a</code></dd>
+<dt><code>-o</code></dt>
+<dd>Does nothing, exists for BSD compatibility.</dd>
+<dt><code>-x</code></dt>
+<dd>Does nothing, exists for BSD compatibility.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help text and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information and exit.</dd></dl>
 <h2>Examples</h2>
 <p>/sbin/sysctl -a<br />
  /sbin/sysctl -n kernel.hostname<br />

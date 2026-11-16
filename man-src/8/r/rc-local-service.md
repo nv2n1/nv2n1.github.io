@@ -21,7 +21,7 @@ description: "systemd-rc-local-generator, rc-local.service – Compatibility gen
 [Unit]
 Wants=network-online.target
 After=network-online.target</pre>
-</dl>
+</dd></dl>
 <p> Support for /etc/rc.local is provided for compatibility with specific System V systems only. However, it is strongly recommended to avoid making use of this script today, and instead provide proper unit files with appropriate dependencies for any scripts to run during the boot process. Note that the path to the script is set at compile time and varies between distributions. </p>
 <p> systemd-rc-local-generator implements <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7).</p>
 <h2>See Also</h2>

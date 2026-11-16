@@ -15,12 +15,12 @@ description: "tape2wav – Sinclair ZX Spectrum tape to wav audio file converter
 <p> tape2wav converts audio files to ZX Spectrum tape images.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-r <i>sample rate</i></p>
-<dd> causes <i>sample rate</i> to be used as the sample rate for the target wav file.</p>
-<dt><i>infile</i></p>
-<dd> specifies the tape file to be converted. This file can be in any of the tape formats supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3).</p>
-<dt><i>outfile</i></p>
-<dd> specifies the output wav file.</dl>
+<dt>-r <i>sample rate</i></dt>
+<dd> causes <i>sample rate</i> to be used as the sample rate for the target wav file.</dd>
+<dt><i>infile</i></dt>
+<dd> specifies the tape file to be converted. This file can be in any of the tape formats supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3).</dd>
+<dt><i>outfile</i></dt>
+<dd> specifies the output wav file.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

@@ -14,14 +14,14 @@ description: "iscsi_destroy_conn – destroy iscsi class connection"
 <p><i>conn</i></p>
 <dl>
 <dd>
-<dd>iscsi cls session</dl>
+</dd><dd>iscsi cls session</dd></dl>
 <h2>Description</h2>
 <p>This can be called from a LLD or iscsi_transport.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

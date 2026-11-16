@@ -10,7 +10,6 @@ description: "uuid_generate, uuid_generate_random, uuid_generate_time, uuid_gene
 <p>uuid_generate, uuid_generate_random, uuid_generate_time, uuid_generate_time_safe &#8211; create a new unique UUID value</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 void uuid_generate(uuid_t out);
 void uuid_generate_random(uuid_t out);
 void uuid_generate_time(uuid_t out);

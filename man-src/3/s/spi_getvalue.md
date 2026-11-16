@@ -16,12 +16,12 @@ description: "SPI_getvalue – return the string value of the specified column"
 <h2>Arguments</h2>
 <p>HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>input row to be examined</dl>
+<dd>input row to be examined</dd></dl>
 <p> TupleDesc <i>rowdesc</i></p>
 <dl COMPACT>
-<dd>input row description</dl>
+<dd>input row description</dd></dl>
 <p> int <i>colnumber</i></p>
 <dl COMPACT>
-<dd>column number (count starts at 1)</dl>
+<dd>column number (count starts at 1)</dd></dl>
 <h2>Return Value</h2>
 <p>Column value, or NULL if the column is null, <i>colnumber</i> is out of range (<i>SPI_result</i> is set to SPI_ERROR_NOATTRIBUTE), or no output function is available (<i>SPI_result</i> is set to SPI_ERROR_NOOUTFUNC).</p>

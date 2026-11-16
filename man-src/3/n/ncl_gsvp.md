@@ -12,20 +12,20 @@ GSVP (Set viewport) - establishes a rectangular subspace of normalized device co
 
  void gset_vp(Gint tran_num, const Glimit *vp_limits);
 <h2>Description</h2><dl COMPACT><dt>TRNUM
-<dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call GSVP with TRNUM = 0.
-<dt>1
-<dd>A normalization transformation in which the viewport is defined by XMIN to XMAX and YMIN to YMAX.</dl></dl><dt>XMIN
-<dd>(Real, Input) - The left horizontal coordinate of the viewport.
-<dt>XMAX
-<dd>(Real, Input) - The right horizontal coordinate of the viewport. 0. &le; XMIN &lt; XMAX &le; 1.
-<dt>YMIN
-<dd>(Real, Input) - The bottom vertical coordinate of the viewport.
-<dt>YMAX
-<dd>(Real, Input) - The top vertical coordinate of the viewport. 0. &le; YMIN &lt; YMAX &le; 1.
-<dt>Defaults:
-<dd>TRNUM = 0, XMIN = 0.0, XMAX = 1.0, YMIN = 0.0, YMAX = 1.0</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default normalization transformation for GKS. It is also fixed within GKS; that is, it is illegal to call GSVP with TRNUM = 0.
+</dd><dt>1
+</dt><dd>A normalization transformation in which the viewport is defined by XMIN to XMAX and YMIN to YMAX.</dd></dl></dl><dt>XMIN
+</dt><dd>(Real, Input) - The left horizontal coordinate of the viewport.
+</dd><dt>XMAX
+</dt><dd>(Real, Input) - The right horizontal coordinate of the viewport. 0. &le; XMIN &lt; XMAX &le; 1.
+</dd><dt>YMIN
+</dt><dd>(Real, Input) - The bottom vertical coordinate of the viewport.
+</dd><dt>YMAX
+</dt><dd>(Real, Input) - The top vertical coordinate of the viewport. 0. &le; YMIN &lt; YMAX &le; 1.
+</dd><dt>Defaults:
+</dt><dd>TRNUM = 0, XMIN = 0.0, XMAX = 1.0, YMIN = 0.0, YMAX = 1.0</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: set, gswn, gselnt, gqclip, gset_vp 
 
  Hardcopy: NCAR Graphics Fundamentals, UNIX Version; User's Guide for NCAR GKS-0A Graphics

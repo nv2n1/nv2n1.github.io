@@ -19,15 +19,15 @@ struct_snd_compr_codec_caps - query capability of codec
 <h2>Members</h2>
 
 codec
-<dl><dd>codec for which capability is queried</dl>
+<dl><dd>codec for which capability is queried</dd></dl>
  
 
  num_descriptors
-<dl><dd>number of codec descriptors</dl>
+<dl><dd>number of codec descriptors</dd></dl>
  
 
  descriptor[MAX_NUM_CODEC_DESCRIPTORS]
-<dl><dd>array of codec capability descriptor</dl>
+<dl><dd>array of codec capability descriptor</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -14,13 +14,13 @@ description: "ieee1284_read_status, ieee1284_wait_status – analyse status line
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
-<dt> <code>int ieee1284_read_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></p>
-<dt> <code>int ieee1284_wait_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>mask</i><code>, unsigned char&nbsp;<wbr></code><i>val</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dl>
+<dt> <code>int ieee1284_read_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
+<dt> <code>int ieee1284_wait_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>mask</i><code>, unsigned char&nbsp;<wbr></code><i>val</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>There are five status lines, one of which is usually inverted on PC-style ports. Where they differ, libieee1284 operates on the IEEE 1284 values, not the PC-style inverted values. The status lines are represented by the following enumeration: </p>
+<dd>There are five status lines, one of which is usually inverted on PC-style ports. Where they differ, libieee1284 operates on the IEEE 1284 values, not the PC-style inverted values. The status lines are represented by the following enumeration: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 enum ieee1284_status_bits {
     S1284_NFAULT = 0x08,
@@ -32,7 +32,7 @@ enum ieee1284_status_bits {
     S1284_INVERTED = S1284_BUSY,
 };
 </code></pre>
-</dl>
+</dd></dl>
 <p> These functions all act on the parallel port associated with <i>port</i>, which must be claimed. </p>
 <p> The purpose of <code>ieee1284_wait_status</code> is to wait until particular status lines have specified values. Its <i>timeout</i> parameter may be modified on return.</p>
 <h2>RETURN VALUE</h2>
@@ -42,19 +42,19 @@ enum ieee1284_status_bits {
 <p> <code>E1284_NOTIMPL</code></p>
 <dl>
 <dt>
-<dd> The <i>port</i> lacks the required capability. This could be due to a limitation of this version of libieee1284, or a hardware limitation.</dl>
+</dt><dd> The <i>port</i> lacks the required capability. This could be due to a limitation of this version of libieee1284, or a hardware limitation.</dd></dl>
 <p> <code>E1284_NOTAVAIL</code></p>
 <dl>
 <dt>
-<dd> Access to the status lines is not available on this port type.</dl>
+</dt><dd> Access to the status lines is not available on this port type.</dd></dl>
 <p> <code>E1284_TIMEDOUT</code></p>
 <dl>
 <dt>
-<dd> The <i>timeout</i> has elapsed.</dl>
+</dt><dd> The <i>timeout</i> has elapsed.</dd></dl>
 <p> <code>E1284_INVALIDPORT</code></p>
 <dl>
 <dt>
-<dd> The <i>port</i> parameter is invalid (for instance, perhaps the <i>port</i> is not claimed).</dl>
+</dt><dd> The <i>port</i> parameter is invalid (for instance, perhaps the <i>port</i> is not claimed).</dd></dl>
 <h2>NOTES</h2>
 <p> The nAck pin is often able to trigger interrupts on the host machine. With operating system help these interrupts may be visible to the application via the file descriptor returned by <code>ieee1284_get_irq_fd</code>. </p>
 <p> Under Linux, the conditions are that the parallel port driver knows which interrupt line to use and is using it, and that the relevant /dev/parport device node is accessible and backed by a device driver.</p>
@@ -62,7 +62,7 @@ enum ieee1284_status_bits {
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
 <h2>Index</h2>

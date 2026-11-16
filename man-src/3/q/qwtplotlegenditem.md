@@ -74,63 +74,63 @@ description: "QwtPlotLegendItem –"
 <p> The legend item is aligned to plot canvas according to its <code>alignment()</code> flags. It might have a background for the complete legend ( usually semi transparent ) or for each legend item. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>An external <code>QwtLegend</code> with a transparent background on top the plot canvas might be another option with a similar effect.</dl>
+<dd>An external <code>QwtLegend</code> with a transparent background on top the plot canvas might be another option with a similar effect.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotLegendItem::BackgroundMode</code></h3>
 <p>Background mode. Depending on the mode the complete legend or each item might have an background. </p>
 <p> The default setting is LegendBackground. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBackgroundMode()</code>, <code>setBackgroundBrush()</code>, <code>drawBackground()</code></dl>
+<dd><code>setBackgroundMode()</code>, <code>setBackgroundBrush()</code>, <code>drawBackground()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>LegendBackground </i></p>
-<dd>The legend has a background.</p>
-<dt><i>ItemBackground </i></p>
-<dd>Each item has a background.</dl>
+<dt><i>LegendBackground </i></dt>
+<dd>The legend has a background.</dd>
+<dt><i>ItemBackground </i></dt>
+<dd>Each item has a background.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Qt::Alignment QwtPlotLegendItem::alignment () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Alignment flags</dl>
+<dd>Alignment flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlignment()</code></dl>
+<dd><code>setAlignment()</code></dd></dl>
 <h3>QBrush QwtPlotLegendItem::backgroundBrush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush is used to fill the background</dl>
+<dd>Brush is used to fill the background</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBackgroundBrush()</code>, <code>backgroundMode()</code>, <code>drawBackground()</code></dl>
+<dd><code>setBackgroundBrush()</code>, <code>backgroundMode()</code>, <code>drawBackground()</code></dd></dl>
 <h3><code>QwtPlotLegendItem::BackgroundMode</code> QwtPlotLegendItem::backgroundMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>backgroundMode</dl>
+<dd>backgroundMode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBackgroundMode()</code>, <code>backgroundBrush()</code>, <code>drawBackground()</code></dl>
+<dd><code>setBackgroundMode()</code>, <code>backgroundBrush()</code>, <code>drawBackground()</code></dd></dl>
 <h3>int QwtPlotLegendItem::borderDistance () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin between the legend and the canvas border</dl>
+<dd>Margin between the legend and the canvas border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>margin()</code></dl>
+<dd><code>margin()</code></dd></dl>
 <h3>QPen QwtPlotLegendItem::borderPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen for drawing the border</dl>
+<dd>Pen for drawing the border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderPen()</code>, <code>backgroundBrush()</code></dl>
+<dd><code>setBorderPen()</code>, <code>backgroundBrush()</code></dd></dl>
 <h3>double QwtPlotLegendItem::borderRadius () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Radius of the border</dl>
+<dd>Radius of the border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderRadius()</code>, <code>setBorderPen()</code></dl>
+<dd><code>setBorderRadius()</code>, <code>setBorderPen()</code></dd></dl>
 <h3>void QwtPlotLegendItem::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Draw the legend </p>
 <p> <code>Parameters:</code></p>
@@ -138,17 +138,17 @@ description: "QwtPlotLegendItem –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> x Scale Map<br />
  <i>yMap</i> y Scale Map<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dl>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotLegendItem::drawBackground (QPainter *painter, const QRectF &amp;rect) const [protected], [virtual]</h3>
 <p>Draw a rounded rect </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>rect</i> Bounding rectangle</dl>
+ <i>rect</i> Bounding rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderRadius()</code>, <code>setBorderPen()</code>, <code>setBackgroundBrush()</code>, <code>setBackgroundMode()</code></dl>
+<dd><code>setBorderRadius()</code>, <code>setBorderPen()</code>, <code>setBackgroundBrush()</code>, <code>setBackgroundMode()</code></dd></dl>
 <h3>void QwtPlotLegendItem::drawLegendData (QPainter *painter, const <code>QwtPlotItem</code> *plotItem, const <code>QwtLegendData</code> &amp;data, const QRectF &amp;rect) const [protected], [virtual]</h3>
 <p>Draw an entry on the legend </p>
 <p> <code>Parameters:</code></p>
@@ -156,210 +156,210 @@ description: "QwtPlotLegendItem –"
 <dd><i>painter</i> Qt Painter<br />
  <i>plotItem</i> Plot item, represented by the entry<br />
  <i>data</i> Attributes of the legend entry<br />
- <i>rect</i> Bounding rectangle for the entry</dl>
+ <i>rect</i> Bounding rectangle for the entry</dd></dl>
 <h3>QFont QwtPlotLegendItem::font () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Font used for drawing the text label</dl>
+<dd>Font used for drawing the text label</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFont()</code></dl>
+<dd><code>setFont()</code></dd></dl>
 <h3>QRect QwtPlotLegendItem::geometry (const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Calculate the geometry of the legend on the canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvasRect</i> Geometry of the canvas</dl>
+<dd><i>canvasRect</i> Geometry of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometry of the legend</dl>
+<dd>Geometry of the legend</dd></dl>
 <h3>int QwtPlotLegendItem::heightForWidth (const <code>QwtLegendData</code> &amp;data, intwidth) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The preferred height, for a width.</dl>
+<dd>The preferred height, for a width.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> Attributes of the legend entry<br />
- <i>width</i> Width</dl>
+ <i>width</i> Width</dd></dl>
 <h3>int QwtPlotLegendItem::itemMargin () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin around each item</dl>
+<dd>Margin around each item</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setItemMargin()</code>, <code>itemSpacing()</code>, <code>margin()</code>, <code>spacing()</code></dl>
+<dd><code>setItemMargin()</code>, <code>itemSpacing()</code>, <code>margin()</code>, <code>spacing()</code></dd></dl>
 <h3>int QwtPlotLegendItem::itemSpacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spacing inside of each item</dl>
+<dd>Spacing inside of each item</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setItemSpacing()</code>, <code>itemMargin()</code>, <code>margin()</code>, <code>spacing()</code></dl>
+<dd><code>setItemSpacing()</code>, <code>itemMargin()</code>, <code>margin()</code>, <code>spacing()</code></dd></dl>
 <h3>QList&lt; QRect &gt; QwtPlotLegendItem::legendGeometries (const <code>QwtPlotItem</code> *plotItem) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Geometries of the items of a plot item</dl>
+<dd>Geometries of the items of a plot item</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Usually a plot item has only one entry on the legend</dl>
+<dd>Usually a plot item has only one entry on the legend</dd></dl>
 <h3>int QwtPlotLegendItem::margin () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Margin around the legend items</dl>
+<dd>Margin around the legend items</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMargin()</code>, <code>spacing()</code>, <code>itemMargin()</code>, <code>itemSpacing()</code></dl>
+<dd><code>setMargin()</code>, <code>spacing()</code>, <code>itemMargin()</code>, <code>itemSpacing()</code></dd></dl>
 <h3>uint QwtPlotLegendItem::maxColumns () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Maximum number of columns</dl>
+<dd>Maximum number of columns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxColumns()</code>, <code>QwtDynGridLayout::maxColumns()</code></dl>
+<dd><code>maxColumns()</code>, <code>QwtDynGridLayout::maxColumns()</code></dd></dl>
 <h3>QSize QwtPlotLegendItem::minimumSize (const <code>QwtLegendData</code> &amp;data) const [virtual]</h3>
 <p>Minimum size hint needed to display an entry </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Attributes of the legend entry</dl>
+<dd><i>data</i> Attributes of the legend entry</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size</dl>
+<dd>Minimum size</dd></dl>
 <h3>QList&lt; const <code>QwtPlotItem</code> * &gt; QwtPlotLegendItem::plotItems () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>All plot items with an entry on the legend</dl>
+<dd>All plot items with an entry on the legend</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>A plot item might have more than one entry on the legend</dl>
+<dd>A plot item might have more than one entry on the legend</dd></dl>
 <h3>int QwtPlotLegendItem::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotLegend</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotLegend</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotLegendItem::setAlignment (Qt::Alignmentalignment)</h3>
 <p>Set the alignmnet. Alignment means the position of the legend relative to the geometry of the plot canvas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>alignment</i> Alignment flags</dl>
+<dd><i>alignment</i> Alignment flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>alignment()</code>, <code>setMaxColumns()</code></dl>
+<dd><code>alignment()</code>, <code>setMaxColumns()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>To align a legend with many items horizontally the number of columns need to be limited</dl>
+<dd>To align a legend with many items horizontally the number of columns need to be limited</dd></dl>
 <h3>void QwtPlotLegendItem::setBackgroundBrush (const QBrush &amp;brush)</h3>
 <p>Set the background brush. The brush is used to fill the background </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Brush</dl>
+<dd><i>brush</i> Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>backgroundBrush()</code>, <code>setBackgroundMode()</code>, <code>drawBackground()</code></dl>
+<dd><code>backgroundBrush()</code>, <code>setBackgroundMode()</code>, <code>drawBackground()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setBackgroundMode (<code>BackgroundMode</code>mode)</h3>
 <p>Set the background mode. Depending on the mode the complete legend or each item might have an background. </p>
 <p> The default setting is LegendBackground. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>backgroundMode()</code>, <code>setBackgroundBrush()</code>, <code>drawBackground()</code></dl>
+<dd><code>backgroundMode()</code>, <code>setBackgroundBrush()</code>, <code>drawBackground()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setBorderDistance (intdistance)</h3>
 <p>Set the margin between the legend and the canvas border. The default setting for the margin is 10 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>distance</i> Margin in pixels</dl>
+<dd><i>distance</i> Margin in pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMargin()</code></dl>
+<dd><code>setMargin()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setBorderPen (const QPen &amp;pen)</h3>
 <p>Set the pen for drawing the border </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Border pen</dl>
+<dd><i>pen</i> Border pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>borderPen()</code>, <code>setBackgroundBrush()</code></dl>
+<dd><code>borderPen()</code>, <code>setBackgroundBrush()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setBorderRadius (doubleradius)</h3>
 <p>Set the radius for the border </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>radius</i> A value &lt;= 0 defines a rectangular border</dl>
+<dd><i>radius</i> A value &lt;= 0 defines a rectangular border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>borderRadius()</code>, <code>setBorderPen()</code></dl>
+<dd><code>borderRadius()</code>, <code>setBorderPen()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setFont (const QFont &amp;font)</h3>
 <p>Change the font used for drawing the text label </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Legend font</dl>
+<dd><i>font</i> Legend font</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>font()</code></dl>
+<dd><code>font()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setItemMargin (intmargin)</h3>
 <p>Set the margin around each item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> Margin</dl>
+<dd><i>margin</i> Margin</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>itemMargin()</code>, <code>setItemSpacing()</code>, <code>setMargin()</code>, <code>setSpacing()</code></dl>
+<dd><code>itemMargin()</code>, <code>setItemSpacing()</code>, <code>setMargin()</code>, <code>setSpacing()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setItemSpacing (intspacing)</h3>
 <p>Set the spacing inside of each item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Spacing</dl>
+<dd><i>spacing</i> Spacing</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>itemSpacing()</code>, <code>setItemMargin()</code>, <code>setMargin()</code>, <code>setSpacing()</code></dl>
+<dd><code>itemSpacing()</code>, <code>setItemMargin()</code>, <code>setMargin()</code>, <code>setSpacing()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setMargin (intmargin)</h3>
 <p>Set the margin around legend items. The default setting for the margin is 0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> Margin in pixels</dl>
+<dd><i>margin</i> Margin in pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>margin()</code>, <code>setSpacing()</code>, <code>setItemMargin()</code>, <code>setItemSpacing</code></dl>
+<dd><code>margin()</code>, <code>setSpacing()</code>, <code>setItemMargin()</code>, <code>setItemSpacing</code></dd></dl>
 <h3>void QwtPlotLegendItem::setMaxColumns (uintmaxColumns)</h3>
 <p>Limit the number of columns. When aligning the legend horizontally ( Qt::AlignLeft, Qt::AlignRight ) the number of columns needs to be limited to avoid, that the width of the legend grows with an increasing number of entries. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxColumns</i> Maximum number of columns. 0 means unlimited.</dl>
+<dd><i>maxColumns</i> Maximum number of columns. 0 means unlimited.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>maxColumns()</code>, <code>QwtDynGridLayout::setMaxColumns()</code></dl>
+<dd><code>maxColumns()</code>, <code>QwtDynGridLayout::setMaxColumns()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setSpacing (intspacing)</h3>
 <p>Set the spacing between the legend items. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Spacing in pixels</dl>
+<dd><i>spacing</i> Spacing in pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>, <code>setMargin()</code></dl>
+<dd><code>spacing()</code>, <code>setMargin()</code></dd></dl>
 <h3>void QwtPlotLegendItem::setTextPen (const QPen &amp;pen)</h3>
 <p>Set the pen for drawing text labels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Text pen</dl>
+<dd><i>pen</i> Text pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>textPen()</code>, <code>setFont()</code></dl>
+<dd><code>textPen()</code>, <code>setFont()</code></dd></dl>
 <h3>int QwtPlotLegendItem::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Spacing between the legend items</dl>
+<dd>Spacing between the legend items</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code>, <code>margin()</code>, <code>itemSpacing()</code>, <code>itemMargin()</code></dl>
+<dd><code>setSpacing()</code>, <code>margin()</code>, <code>itemSpacing()</code>, <code>itemMargin()</code></dd></dl>
 <h3>QPen QwtPlotLegendItem::textPen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen for drawing text labels</dl>
+<dd>Pen for drawing text labels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTextPen()</code>, <code>font()</code></dl>
+<dd><code>setTextPen()</code>, <code>font()</code></dd></dl>
 <h3>void QwtPlotLegendItem::updateLegend (const <code>QwtPlotItem</code> *plotItem, const QList&lt; <code>QwtLegendData</code> &gt; &amp;data) [virtual]</h3>
 <p>Update the legend items according to modifications of a plot item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>plotItem</i> Plot item<br />
- <i>data</i> Attributes of the legend entries</dl>
+ <i>data</i> Attributes of the legend entries</dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

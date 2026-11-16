@@ -36,17 +36,17 @@ url: "/docs/linux/man/1-papi_native_avail/"
 
 <dl>
 <dt>&bull;
-<dd> --help, -h print this help message
-<dt>&bull;
-<dd> -d display detailed information about native events
-<dt>&bull;
-<dd> -e EVENTNAME display detailed information about named native event
-<dt>&bull;
-<dd> -i EVENTSTR include only event names that contain EVENTSTR
-<dt>&bull;
-<dd> -x EVENTSTR exclude any event names that contain EVENTSTR
-<dt>&bull;
-<dd> --noumasks suppress display of Unit Mask information</dl>
+</dt><dd> --help, -h print this help message
+</dd><dt>&bull;
+</dt><dd> -d display detailed information about native events
+</dd><dt>&bull;
+</dt><dd> -e EVENTNAME display detailed information about named native event
+</dd><dt>&bull;
+</dt><dd> -i EVENTSTR include only event names that contain EVENTSTR
+</dd><dt>&bull;
+</dt><dd> -x EVENTSTR exclude any event names that contain EVENTSTR
+</dd><dt>&bull;
+</dt><dd> --noumasks suppress display of Unit Mask information</dd></dl>
  
 
  
@@ -55,17 +55,17 @@ url: "/docs/linux/man/1-papi_native_avail/"
 
 <dl>
 <dt>&bull;
-<dd> --darr display events supporting Data Address Range Restriction
-<dt>&bull;
-<dd> --dear display Data Event Address Register events only
-<dt>&bull;
-<dd> --iarr display events supporting Instruction Address Range Restriction
-<dt>&bull;
-<dd> --iear display Instruction Event Address Register events only
-<dt>&bull;
-<dd> --opcm display events supporting OpCode Matching
-<dt>&bull;
-<dd> --nogroups suppress display of Event grouping information</dl>
+</dt><dd> --darr display events supporting Data Address Range Restriction
+</dd><dt>&bull;
+</dt><dd> --dear display Data Event Address Register events only
+</dd><dt>&bull;
+</dt><dd> --iarr display events supporting Instruction Address Range Restriction
+</dd><dt>&bull;
+</dt><dd> --iear display Instruction Event Address Register events only
+</dd><dt>&bull;
+</dt><dd> --opcm display events supporting OpCode Matching
+</dd><dt>&bull;
+</dt><dd> --nogroups suppress display of Event grouping information</dd></dl>
  
 
 <h2>Bugs</h2>

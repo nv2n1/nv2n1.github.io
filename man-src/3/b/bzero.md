@@ -18,3 +18,4 @@ void explicit_bzero(void *s, size_t n);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> The <code>bzero</code>() function erases the data in the <i>n</i> bytes of the memory starting at the location pointed to by <i>s</i>, by writing zeros (bytes containing &#8216;
+</p>

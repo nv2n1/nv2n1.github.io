@@ -14,20 +14,20 @@ description: "autoscan – Generate a preliminary configure.ac"
 <h2>DESCRIPTION</h2>
 <p> Examine source files in the directory tree rooted at SRCDIR, or the current directory if none is given. Search the source files for common portability problems, check for incompleteness of &#8216;configure.ac&#8217;, and create a file &#8216;configure.scan&#8217; which is a preliminary &#8216;configure.ac&#8217; for that package.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help, then exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print version number, then exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> verbosely report processing</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> don&#8217;t remove temporary files</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help, then exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print version number, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> verbosely report processing</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> don&#8217;t remove temporary files</dd></dl>
 <h3>Library directories:</h3>
 <dl>
-<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></p>
-<dd> prepend directory DIR to search path</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></p>
-<dd> append directory DIR to search path</dl>
+<dt><code>-B</code>, <code>&#8211;prepend-include</code>=<i>,DIR/</i></dt>
+<dd> prepend directory DIR to search path</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>,DIR/</i></dt>
+<dd> append directory DIR to search path</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David J. MacKenzie and Akim Demaille.</p>
 <h2>REPORTING BUGS</h2>
@@ -42,6 +42,6 @@ description: "autoscan – Generate a preliminary configure.ac"
 <p> The full documentation for <code>autoscan</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>autoscan</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info autoscan</code></dl>
+</dt><dd> <code>info autoscan</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -13,7 +13,6 @@ description: "cdk_util – Cdk utility functions"
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
-
 int CDKgetDirectoryContents(
     const char *directory,
     char ***list);
@@ -107,75 +106,71 @@ int viewInfo(
 <p> These are utility functions that one may use to initialize, build or customize widgets.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>
-<dt><code>CDKgetDirectoryContents</code></p>
-<dd> opens and reads the contents of the given directory, filling the array <code>list</code> with the sorted contents of the directory. If the directory cannot be opened then it returns a value of -1.</p>
-<dt><code>CDKreadFile</code></p>
-<dd> Read the file <i>filename</i>, load the contents into a dynamically allocated array, storing its address via <i>info</i>. It returns the number of lines read if the file could be opened, -1 otherwise.</p>
-<dt><code>alignxy</code></p>
-<dd> Aligns a box on the given <i>window</i> with the height and width given. See cdk_position (3) for the interpretation of the <i>xpos</i>, <i>ypos</i>, <i>boxWidth</i> and <i>boxHeight</i>, parameters.</p>
-<dt><code>char2Chtype</code></p>
-<dd> Translate a character <i>string</i> with embedded format markers (e.g., &quot;&lt;/X/Y&gt;Blah Blah&quot;) to a null-terminated array of chtype&#8217;s. The length of the array is stored via the <i>length</i> parameter. The <code>align</code> parameter contains justification information (LEFT, CENTER, RIGHT). The caller is responsible for freeing the result.</p>
-<dt><code>char2DisplayType</code></p>
-<dd> Lookup the given name in <i>string</i> and return the equivalent display type. See also cdk_display (3).</p>
-<dt><code>checkForLink</code></p>
-<dd> Check if the given <i>line</i> is of the form</p>
+<dt><code>CDKgetDirectoryContents</code></dt>
+<dd> opens and reads the contents of the given directory, filling the array <code>list</code> with the sorted contents of the directory. If the directory cannot be opened then it returns a value of -1.</dd>
+<dt><code>CDKreadFile</code></dt>
+<dd> Read the file <i>filename</i>, load the contents into a dynamically allocated array, storing its address via <i>info</i>. It returns the number of lines read if the file could be opened, -1 otherwise.</dd>
+<dt><code>alignxy</code></dt>
+<dd> Aligns a box on the given <i>window</i> with the height and width given. See cdk_position (3) for the interpretation of the <i>xpos</i>, <i>ypos</i>, <i>boxWidth</i> and <i>boxHeight</i>, parameters.</dd>
+<dt><code>char2Chtype</code></dt>
+<dd> Translate a character <i>string</i> with embedded format markers (e.g., &quot;&lt;/X/Y&gt;Blah Blah&quot;) to a null-terminated array of chtype&#8217;s. The length of the array is stored via the <i>length</i> parameter. The <code>align</code> parameter contains justification information (LEFT, CENTER, RIGHT). The caller is responsible for freeing the result.</dd>
+<dt><code>char2DisplayType</code></dt>
+<dd> Lookup the given name in <i>string</i> and return the equivalent display type. See also cdk_display (3).</dd>
+<dt><code>checkForLink</code></dt>
+<dd> Check if the given <i>line</i> is of the form</dd>
 <dl>
 <dt>
-<dd> &lt;F=<i>filename</i>&gt;</dl>
+</dt><dd> &lt;F=<i>filename</i>&gt;</dd></dl>
 <dt>
-<dd> If so, extract the filename from the line, storing it in the <i>filename</i> buffer (which must hold at least CDK_PATHMAX characters). Return nonzero if a filename is extracted.</p>
-<dt><code>chtype2String</code></p>
-<dd> Extract the characters and formatting information from a null-terminated array of chtype&#8217;s <i>string</i>. A dynamically allocated string is returned.</p>
-<dt><code>deleteCursesWindow</code></p>
-<dd> Safely delete a given window, i.e., first check if the <i>window</i> parameter is nonnull.</p>
-<dt><code>eraseCursesWindow</code></p>
-<dd> Safely erase a given window, i.e., first check if the <i>window</i> parameter is nonnull.</p>
-<dt><code>getListIndex</code></p>
-<dd> Display a scrollable list of strings in a dialog, allow the user to select one. Return the index in the list of the value selected. The <i>list</i> parameter contains the strings to display; there are <i>listSize</i> strings in the list. If <i>numbers</i> is true, the displayed list items will be numbered.</p>
-<dt><code>getString</code></p>
-<dd> pops up an entry widget with a title supplied by the value of the <code>title</code> parameter, a label supplied by the <code>label</code> parameter, and an initial value supplied by the <code>initialValue</code> parameter. It returns a pointer to the value typed in or NULL if the widget was exited early.</p>
-<dt><code>justifyString</code></p>
-<dd> Given a string length <i>mesglen</i>, the available field width <i>fieldWidth</i> and a justification type <i>justify</i>, return the number of characters by which to shift the string.</p>
-<dt><code>mode2Filetype</code></p>
-<dd> Given a file protection mode <i>fileMode</i>, return ignoring the file-type bits, i.e., ignoring the corresponding permissions data.</p>
-<dt><code>moveCursesWindow</code></p>
-<dd> Move a given <i>window</i> by the amounts in <i>xdiff</i> and <i>ydiff</i>.</p>
-<dt><code>popupDialog</code></p>
-<dd> creates a quick pop-up dialog box. Pass in the message in the <code>mesg</code> parameter, the size of the message in the <code>mesgCount</code> parameter, the button labels in the <code>buttons</code> parameter and the number of buttons in the <code>buttonCount</code> parameter. The dialog box will be centered on the screen.</p>
-<dt><code>popupLabel</code></p>
-<dd> creates a quick pop-up label widget. The message and the size of the message are passed in via the <code>mesg</code> and <code>count</code> parameters respectively. The label widget waits until the user hits a character and is centered on the screen.</p>
-<dt><code>popupLabelAttrib</code></p>
-<dd> Display a simple dialog with a list of <i>count</i> message strings <i>mesg</i>. Use the given <i>attribute</i> for the background of the dialog.</p>
-<dt><code>selectFile</code></p>
-<dd> Display a file-selection dialog. Return the selected filename, or null if none is selected. The caller should free the return-value.</p>
-<dt><code>setWidgetDimension</code></p>
-<dd> This is a helper function used to set the height/width of a widget:</p>
+</dt><dd> If so, extract the filename from the line, storing it in the <i>filename</i> buffer (which must hold at least CDK_PATHMAX characters). Return nonzero if a filename is extracted.</dd>
+<dt><code>chtype2String</code></dt>
+<dd> Extract the characters and formatting information from a null-terminated array of chtype&#8217;s <i>string</i>. A dynamically allocated string is returned.</dd>
+<dt><code>deleteCursesWindow</code></dt>
+<dd> Safely delete a given window, i.e., first check if the <i>window</i> parameter is nonnull.</dd>
+<dt><code>eraseCursesWindow</code></dt>
+<dd> Safely erase a given window, i.e., first check if the <i>window</i> parameter is nonnull.</dd>
+<dt><code>getListIndex</code></dt>
+<dd> Display a scrollable list of strings in a dialog, allow the user to select one. Return the index in the list of the value selected. The <i>list</i> parameter contains the strings to display; there are <i>listSize</i> strings in the list. If <i>numbers</i> is true, the displayed list items will be numbered.</dd>
+<dt><code>getString</code></dt>
+<dd> pops up an entry widget with a title supplied by the value of the <code>title</code> parameter, a label supplied by the <code>label</code> parameter, and an initial value supplied by the <code>initialValue</code> parameter. It returns a pointer to the value typed in or NULL if the widget was exited early.</dd>
+<dt><code>justifyString</code></dt>
+<dd> Given a string length <i>mesglen</i>, the available field width <i>fieldWidth</i> and a justification type <i>justify</i>, return the number of characters by which to shift the string.</dd>
+<dt><code>mode2Filetype</code></dt>
+<dd> Given a file protection mode <i>fileMode</i>, return ignoring the file-type bits, i.e., ignoring the corresponding permissions data.</dd>
+<dt><code>moveCursesWindow</code></dt>
+<dd> Move a given <i>window</i> by the amounts in <i>xdiff</i> and <i>ydiff</i>.</dd>
+<dt><code>popupDialog</code></dt>
+<dd> creates a quick pop-up dialog box. Pass in the message in the <code>mesg</code> parameter, the size of the message in the <code>mesgCount</code> parameter, the button labels in the <code>buttons</code> parameter and the number of buttons in the <code>buttonCount</code> parameter. The dialog box will be centered on the screen.</dd>
+<dt><code>popupLabel</code></dt>
+<dd> creates a quick pop-up label widget. The message and the size of the message are passed in via the <code>mesg</code> and <code>count</code> parameters respectively. The label widget waits until the user hits a character and is centered on the screen.</dd>
+<dt><code>popupLabelAttrib</code></dt>
+<dd> Display a simple dialog with a list of <i>count</i> message strings <i>mesg</i>. Use the given <i>attribute</i> for the background of the dialog.</dd>
+<dt><code>selectFile</code></dt>
+<dd> Display a file-selection dialog. Return the selected filename, or null if none is selected. The caller should free the return-value.</dd>
+<dt><code>setWidgetDimension</code></dt>
+<dd> This is a helper function used to set the height/width of a widget:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> If the proposed dimension <i>proposedDim</i> is FULL or zero, the return value will be <i>parentDim</i>.</p>
-<dt>&#8211;</p>
-<dd> If the proposed dimension <i>proposedDim</i> is positive,</p>
+<dt>&#8211;</dt>
+<dd> If the proposed dimension <i>proposedDim</i> is FULL or zero, the return value will be <i>parentDim</i>.</dd>
+<dt>&#8211;</dt>
+<dd> If the proposed dimension <i>proposedDim</i> is positive,</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&#8211;</p>
-<dd> and it is larger than <i>parentDim</i>, return <i>proposedDim</i>,</p>
-<dt>&#8211;</p>
-<dd> otherwise return <i>proposedDim</i> plus <i>adjustment</i>.</dl>
+<dt>&#8211;</dt>
+<dd> and it is larger than <i>parentDim</i>, return <i>proposedDim</i>,</dd>
+<dt>&#8211;</dt>
+<dd> otherwise return <i>proposedDim</i> plus <i>adjustment</i>.</dd></dl>
 </dl>
-<dt>&#8211;</p>
-<dd> If the proposed dimension <i>proposedDim</i> is negative, the return value will be <i>parentDim</i> plus <i>proposedDim</i>.</p>
-<dt>&#8211;</p>
-<dd> Otherwise, the return value will be <i>proposedDim</i>.</dl>
+<dt>&#8211;</dt>
+<dd> If the proposed dimension <i>proposedDim</i> is negative, the return value will be <i>parentDim</i> plus <i>proposedDim</i>.</dd>
+<dt>&#8211;</dt>
+<dd> Otherwise, the return value will be <i>proposedDim</i>.</dd></dl>
 </dl>
-<dt><code>stripWhiteSpace</code></p>
-<dd> Strip whitespace from the front and/or back of the given <i>string</i>. The <i>stripType</i> parameter controls the type of stripping done: vFRONT, vBACK or vBOTH.</p>
-<dt><code>viewFile</code></p>
-<dd> Read the file specified by <i>filename</i> and display it in a CDKVIEWER window. The <i>title</i>, <i>buttons</i> and <i>buttonCount</i> are applied to the CDKVIEWER window. The viewer shows the contents of the file supplied by the <code>filename</code> value. The buttons on the file viewer are supplied by the <code>buttons</code> parameter. It returns the index of the button selected, or -1 if the file does not exist or if the widget was exited early.</dl>
+<dt><code>stripWhiteSpace</code></dt>
+<dd> Strip whitespace from the front and/or back of the given <i>string</i>. The <i>stripType</i> parameter controls the type of stripping done: vFRONT, vBACK or vBOTH.</dd>
+<dt><code>viewFile</code></dt>
+<dd> Read the file specified by <i>filename</i> and display it in a CDKVIEWER window. The <i>title</i>, <i>buttons</i> and <i>buttonCount</i> are applied to the CDKVIEWER window. The viewer shows the contents of the file supplied by the <code>filename</code> value. The buttons on the file viewer are supplied by the <code>buttons</code> parameter. It returns the index of the button selected, or -1 if the file does not exist or if the widget was exited early.</dd></dl>
 <p> <center></p>
 <table BORDER>
 <tr VALIGN=top>
@@ -207,8 +202,8 @@ int viewInfo(
 </table>
 <p></center></p>
 <dl>
-<dt><code>viewInfo</code></p>
-<dd> Display the list of strings in <i>info</i> in a CDKVIEWER window. The number of strings is given by <i>size</i>. The <i>title</i>, <i>buttons</i> and <i>buttonCount</i> are applied to the CDKVIEWER window.</dl>
+<dt><code>viewInfo</code></dt>
+<dd> Display the list of strings in <i>info</i> in a CDKVIEWER window. The number of strings is given by <i>size</i>. The <i>title</i>, <i>buttons</i> and <i>buttonCount</i> are applied to the CDKVIEWER window.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cdk_dialog (3), cdk_display (3), cdk_position (3), cdk_misc (3). </p>
 <h2>Index</h2>

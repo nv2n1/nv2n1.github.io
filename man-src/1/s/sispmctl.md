@@ -20,46 +20,46 @@ description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 <p> It is coded in C and uses the usb specific library (LibUSB). This allows you a portable and fast solution. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> print usage information</p>
-<dt>-s</p>
-<dd> scan for supported GEMBIRD devices</p>
-<dt>-l</p>
-<dd> daemonize and start to listening as a simple http webserver (default port: 2638)</p>
-<dt>-p</p>
-<dd> IP network port (default: 2638) for listener. There is no authentication implemented yet.</p>
-<dt>-u</p>
-<dd> give the directory path where pages lay, that are served (default: /usr/local/httpd/sispmctl). The Web path component is completely ignored for security reasons.</p>
-<dt>-b</p>
-<dd> switch the buzzer on and off</p>
-<dt>-o</p>
-<dd> switch the given outlet(s) to &quot;ON&quot;</p>
-<dt>-f</p>
-<dd> switch the given outlet(s) to &quot;OFF&quot;</p>
-<dt>-t</p>
-<dd> toggle the state of the given outlet(s)</p>
-<dt>-g</p>
-<dd> show the status of the given outlet(s)</p>
-<dt>-m</p>
-<dd> get power supply status for the given outlet(s)</p>
-<dt>-d</p>
-<dd> Use not the first but the given device in the sequence of detected devices, starting with &quot;0&quot; for the first device (see scan option)</p>
-<dt>-D</p>
-<dd> Same as -d, but choose by serial number (see scan option)</p>
-<dt>-n</p>
-<dd> do not print &quot;ON&quot; and &quot;OFF&quot;, but &quot;1&quot; and &quot;0&quot; instead</p>
-<dt>-q</p>
-<dd> do neither print explanations nor disclaimers except it is requested</p>
-<dt>-a</p>
-<dd> get plannification for given outlet</p>
-<dt>-A</p>
+<dt>-h</dt>
+<dd> print usage information</dd>
+<dt>-s</dt>
+<dd> scan for supported GEMBIRD devices</dd>
+<dt>-l</dt>
+<dd> daemonize and start to listening as a simple http webserver (default port: 2638)</dd>
+<dt>-p</dt>
+<dd> IP network port (default: 2638) for listener. There is no authentication implemented yet.</dd>
+<dt>-u</dt>
+<dd> give the directory path where pages lay, that are served (default: /usr/local/httpd/sispmctl). The Web path component is completely ignored for security reasons.</dd>
+<dt>-b</dt>
+<dd> switch the buzzer on and off</dd>
+<dt>-o</dt>
+<dd> switch the given outlet(s) to &quot;ON&quot;</dd>
+<dt>-f</dt>
+<dd> switch the given outlet(s) to &quot;OFF&quot;</dd>
+<dt>-t</dt>
+<dd> toggle the state of the given outlet(s)</dd>
+<dt>-g</dt>
+<dd> show the status of the given outlet(s)</dd>
+<dt>-m</dt>
+<dd> get power supply status for the given outlet(s)</dd>
+<dt>-d</dt>
+<dd> Use not the first but the given device in the sequence of detected devices, starting with &quot;0&quot; for the first device (see scan option)</dd>
+<dt>-D</dt>
+<dd> Same as -d, but choose by serial number (see scan option)</dd>
+<dt>-n</dt>
+<dd> do not print &quot;ON&quot; and &quot;OFF&quot;, but &quot;1&quot; and &quot;0&quot; instead</dd>
+<dt>-q</dt>
+<dd> do neither print explanations nor disclaimers except it is requested</dd>
+<dt>-a</dt>
+<dd> get plannification for given outlet</dd>
+<dt>-A</dt>
 <dd> set plannification for given outlet<br />
 &nbsp;<wbr>&#8211;Aat&nbsp;<wbr>&quot;date&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as a date&nbsp;<wbr>&#8216;%Y-%m-%d&nbsp;<wbr>%H:%M&#8217;<br />
 &nbsp;<wbr>&#8211;Aafter N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as N minutes after the previous one<br />
 &nbsp;<wbr>&#8211;Ado&nbsp;<wbr>&lt;on|off&gt;&nbsp;<wbr>&#8211; sets the current event&#8217;s action<br />
-&nbsp;<wbr>&#8211;Aloop N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; loops to 1st event&#8217;s action after N minutes</p>
-<dt>-v</p>
-<dd> print version &amp; copyright </p>
+&nbsp;<wbr>&#8211;Aloop N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; loops to 1st event&#8217;s action after N minutes</dd>
+<dt>-v</dt>
+<dd> print version &amp; copyright </dd>
 </dl>
 <h2>WEB INTERFACE</h2>
 <p> The sispmctl program provides a web interface when started with the <i>-l</i> option. No additional http server is needed. Each selected usb device is blocked by sispmctl while running. </p>

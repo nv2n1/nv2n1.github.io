@@ -208,18 +208,18 @@ description: "XmIconBox — The IconBox widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNhorizontalMargin</code></p>
+<dt><code>XmNhorizontalMargin</code></dt>
 <dd>
-<dt><code>XmNverticalMargin</code></p>
-<dd>The amount of space between each cell and its neighbor or the edge of the Icon Box.</p>
-<dt><code>XmNminimumHorizontalCells</code></p>
+</dd><dt><code>XmNverticalMargin</code></dt>
+<dd>The amount of space between each cell and its neighbor or the edge of the Icon Box.</dd>
+<dt><code>XmNminimumHorizontalCells</code></dt>
 <dd>
-<dt><code>XmNminimumVerticalCells</code></p>
-<dd>The minimum number of cells to display in the horizontal and vertical directions. This number of cells will always be displayed.</p>
-<dt><code>XmNminimumCellWidth</code></p>
+</dd><dt><code>XmNminimumVerticalCells</code></dt>
+<dd>The minimum number of cells to display in the horizontal and vertical directions. This number of cells will always be displayed.</dd>
+<dt><code>XmNminimumCellWidth</code></dt>
 <dd>
-<dt><code>XmNminimumCellHeight</code></p>
-<dd>The smallest size the cells are allowed to be in the direction specified.</dl>
+</dd><dt><code>XmNminimumCellHeight</code></dt>
+<dd>The smallest size the cells are allowed to be in the direction specified.</dd></dl>
 <h3>Constraint Resources</h3>
 <table BORDER>
 <tr>
@@ -307,10 +307,10 @@ description: "XmIconBox — The IconBox widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNcellX</code></p>
+<dt><code>XmNcellX</code></dt>
 <dd>
-<dt><code>XmNcellY</code></p>
-<dd>The location of this cell in cell space. These coordinates may be any positive integer. They determine where this widget will be placed relative to its neighbors. Having two children at the same cell X and cell Y location will result in undefined behavior. To place a cell at any empty cell, set cell X and cell Y to the value XmIconBoxAnyCell.</dl>
+</dd><dt><code>XmNcellY</code></dt>
+<dd>The location of this cell in cell space. These coordinates may be any positive integer. They determine where this widget will be placed relative to its neighbors. Having two children at the same cell X and cell Y location will result in undefined behavior. To place a cell at any empty cell, set cell X and cell Y to the value XmIconBoxAnyCell.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Icon Box inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

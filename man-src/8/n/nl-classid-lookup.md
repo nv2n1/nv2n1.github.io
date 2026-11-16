@@ -14,22 +14,22 @@ description: "nl-classid-lookup – Lookup classid definitions"
 <p>nl-classid-lookup searches the classid database for a matching entry. It is used to resolve qdisc/class names to classid values and vice versa. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Print help text to console and exit.</p>
-<dt><code>-v</code> or <code>&#8211;version</code></p>
-<dd>Print versioning information to console and exit.</p>
-<dt><code>-r</code> or <code>&#8211;reverse</code></p>
-<dd>Do a reverse lookup. Lookup a classid and print its name.</p>
-<dt><code>&#8211;raw</code></p>
-<dd>Print the raw classid in hexadecimal format, do not pretty print it. </p>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Print help text to console and exit.</dd>
+<dt><code>-v</code> or <code>&#8211;version</code></dt>
+<dd>Print versioning information to console and exit.</dd>
+<dt><code>-r</code> or <code>&#8211;reverse</code></dt>
+<dd>Do a reverse lookup. Lookup a classid and print its name.</dd>
+<dt><code>&#8211;raw</code></dt>
+<dd>Print the raw classid in hexadecimal format, do not pretty print it. </dd>
 </dl>
 <h2>Usage</h2>
 <p>Resolve the qdisc/class name &quot;interactive&quot;: </p>
 <dl>
-<dd># nl-classid-lookup interactive</dl>
+<dd># nl-classid-lookup interactive</dd></dl>
 <p> Lookup the name of classid 1:2: </p>
 <dl>
-<dd># nl-classid-lookup -r 1:2</dl>
+<dd># nl-classid-lookup -r 1:2</dd></dl>
 <h2>Files</h2>
 <p>/etc/libnl/classid</p>
 <h2>Author</h2>

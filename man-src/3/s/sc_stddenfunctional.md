@@ -11,38 +11,18 @@ description: "sc::StdDenFunctional –"
 <p> The <code>StdDenFunctional</code> class is used to construct the standard density functionals.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::SumDenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>StdDenFunctional (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The name keyword is read from the input and is used to initialize the functional.
-
-
 StdDenFunctional (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the object.
-
-
-
 Protected Member Functions
 void init_arrays (int n)
-
-
-
 Protected Attributes
 char * name_</code></pre>
 <h2>Detailed Description</h2>

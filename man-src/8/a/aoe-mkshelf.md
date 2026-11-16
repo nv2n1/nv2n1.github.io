@@ -18,10 +18,10 @@ env n_partitions=1 aoe-mkshelf {device-dir} {shelf-address}</code></pre>
 <p> If you are using static minor device numbers and your aoe driver supports only one partition per device (whole-disk partitions), then the device files must match, and you should use the <i>n_partitions</i> environment variable described below.</p>
 <h3>Arguments</h3>
 <dl>
-<dt><code>device-dir</code></p>
-<dd>This should be the name of the directory where the block device files will be created.</p>
-<dt><code>shelf-address</code></p>
-<dd>This is the AoE major address, or shelf address, for which to create device nodes. For example, specifying a shelf address of 1 means that the e1.* device nodes will be created in <code>device-dir</code>.</dl>
+<dt><code>device-dir</code></dt>
+<dd>This should be the name of the directory where the block device files will be created.</dd>
+<dt><code>shelf-address</code></dt>
+<dd>This is the AoE major address, or shelf address, for which to create device nodes. For example, specifying a shelf address of 1 means that the e1.* device nodes will be created in <code>device-dir</code>.</dd></dl>
 <h2>Environment Variables</h2>
 <p>If the <i>n_partitions</i> variable is set in the environment, it will override the default number of partitions per aoe disk, namely 16.</p>
 <h2>Example</h2>
@@ -36,7 +36,7 @@ nai:~# n_partitions=1 aoe-mkshelf /dev/etherd 7
 nai:~# ls /dev/etherd/e7.* | wc -l
 10
 nai:~# </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-interfaces/">aoe-interfaces</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkdevs/">aoe-mkdevs</a></i>(8), <i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8), <i>aoetools</i>(8), <i><a href="/docs/linux/man/7-udev/">udev</a></i>(7).</p>
 <h2>Author</h2>

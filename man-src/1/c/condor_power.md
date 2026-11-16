@@ -20,35 +20,28 @@ description: "condor_power send packet intended to wake a machine from a low pow
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Print usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Print usage information and exit.</dd>
+</dl>
 <p> <code>-d</code></p>
 <dl>
 <dt>
-<dd> Enable debugging messages.</p>
-<dt>
-<dd></dl>
+</dt><dd> Enable debugging messages.</dd>
+</dl>
 <p> <code>-i</code></p>
 <dl>
 <dt>
-<dd> Read a ClassAd that is piped in through standard input.</p>
-<dt>
-<dd></dl>
+</dt><dd> Read a ClassAd that is piped in through standard input.</dd>
+</dl>
 <p> <code>-m </code> <i>MACaddress</i></p>
 <dl>
 <dt>
-<dd> Specify the MAC address in the standard format of six groups of two hexadecimal digits separated by colons.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify the MAC address in the standard format of six groups of two hexadecimal digits separated by colons.</dd>
+</dl>
 <p> <code>-s </code> <i>subnet</i></p>
 <dl>
 <dt>
-<dd> Specify the subnet in the standard form of a mask for an IPv4 address. Without this option, a global broadcast will be sent.</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Specify the subnet in the standard form of a mask for an IPv4 address. Without this option, a global broadcast will be sent.</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_power</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Author</h2>

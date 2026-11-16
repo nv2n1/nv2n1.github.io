@@ -14,43 +14,35 @@ description: "wsimport – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 <h2>Overview</h2>
 <p> The <i>wsimport</i> tool generates JAX-WS portable artifacts, such as:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> Service Endpoint Interface (SEI)</p>
-<dt>o</p>
-<dd> Service</p>
-<dt>o</p>
-<dd> Exception class mapped from wsdl:fault (if any)</p>
-<dt>o</p>
-<dd> Async Reponse Bean derived from response wsdl:message (if any)</p>
-<dt>o</p>
-<dd> JAXB generated value types (mapped java classes from schema types)</dl>
+<dt>o</dt>
+<dd> Service Endpoint Interface (SEI)</dd>
+<dt>o</dt>
+<dd> Service</dd>
+<dt>o</dt>
+<dd> Exception class mapped from wsdl:fault (if any)</dd>
+<dt>o</dt>
+<dd> Async Reponse Bean derived from response wsdl:message (if any)</dd>
+<dt>o</dt>
+<dd> JAXB generated value types (mapped java classes from schema types)</dd></dl>
 </dl>
 <p> These artifacts can be packaged in a WAR file with the WSDL and schema documents along with the endpoint implementation to be deployed. also provides wsimport ant task, see <i>Wsimport ant task</i> @ <a rel="nofollow" href="https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsimportant.html.">https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsimportant.html.</a> </p>
 <h2>Launching wsimport</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> <code>Solaris/Linux</code></p>
+<dt>o</dt>
+<dd> <code>Solaris/Linux</code></dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <i>/bin/wsimport.sh -help</i></dl>
+<dt>*</dt>
+<dd> <i>/bin/wsimport.sh -help</i></dd></dl>
 </dl>
-<dt>o</p>
-<dd> <code>Windows</code></p>
+<dt>o</dt>
+<dd> <code>Windows</code></dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> <i>in\wsimport.bat -help</i></dl>
+<dt>*</dt>
+<dd> <i>in\wsimport.bat -help</i></dd></dl>
 </dl>
 </dl>
 </dl>
@@ -122,6 +114,7 @@ Multiple JAX-WS and JAXB binding files can be specified using <i>-b</i> option a
 <code>-Xdebug</code>
 <code>-Xnocompile</code>
 </pre>
+</pre></pre>
 <h2>Example</h2>
 <pre>
 <code>wsimport -p stockquote <a rel="nofollow" href="http://stockquote.example.com/quote?wsdl">http://stockquote.example.com/quote?wsdl</a></code>

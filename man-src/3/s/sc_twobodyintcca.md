@@ -11,7 +11,6 @@ description: "sc::TwoBodyIntCCA –"
 <p> This implements two body integrals through the CCA interface.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;tbintcca.h&gt;</code></pre>
 <p> Inherits <code>sc::TwoBodyInt</code>.</p>
 <h3>Public Member Functions</h3>

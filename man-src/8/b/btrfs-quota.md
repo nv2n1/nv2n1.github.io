@@ -13,7 +13,7 @@ description: "btrfs-quota – control the global quota status of a btrfs filesys
 <h2>Description</h2>
 <p>The commands under <code>btrfs quota</code> are used to affect the global status of quotas of a btrfs filesystem. The quota groups (qgroups) are managed by the subcommand <code>btrfs qgroup</code>(8). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> Qgroups are different than the traditional user quotas and designed to track shared and exclusive data per-subvolume. Please refer to the section <i>HIERARCHICAL QUOTA GROUP CONCEPTS</i> for a detailed description. </p>
 </dl>
 <h3>Performance Implications</h3>
@@ -29,10 +29,10 @@ description: "btrfs-quota – control the global quota status of a btrfs filesys
 <p> Each qgroup primarily tracks two numbers, the amount of total referenced space and the amount of exclusively referenced space. </p>
 <p> referenced</p>
 <dl>
-<dd>space is the amount of data that can be reached from any of the subvolumes contained in the qgroup, while</dl>
+<dd>space is the amount of data that can be reached from any of the subvolumes contained in the qgroup, while</dd></dl>
 <p> exclusive</p>
 <dl>
-<dd>is the amount of data where all references to this data can be reached from within this qgroup.</dl>
+<dd>is the amount of data where all references to this data can be reached from within this qgroup.</dd></dl>
 <h3>Subvolume Quota Groups</h3>
 <p>The basic notion of the Subvolume Quota feature is the quota group, short qgroup. Qgroups are notated as <i>level/id</i>, eg. the qgroup 3/2 is a qgroup of level 3. For level 0, the leading <i>0/</i> can be omitted. Qgroups of level 0 get created automatically when a subvolume/snapshot gets created. The ID of the qgroup corresponds to the ID of the subvolume, so 0/5 is the qgroup for the root subvolume. For the <code>btrfs qgroup</code> command, the path to the subvolume can also be used instead of <i>0/ID</i>. For all higher levels, the ID can be chosen freely. </p>
 <p> Each qgroup can contain a set of lower level qgroups, thus creating a hierarchy of qgroups. Figure 1 shows an example qgroup tree. </p>
@@ -53,7 +53,7 @@ qgroups |0/1| |0/2| |0/3|
  | / \ / \
  | / \ / \
 extents 1 2 3 4</pre>
-</dl>
+</dd></dl>
 <p> Figure1: Sample qgroup hierarchy </p>
 <p> At the bottom, some extents are depicted showing which qgroups reference which extents. It is important to understand the notion of <i>referenced</i> vs <i>exclusive</i>. In the example, qgroup 0/2 references extents 2 and 3, while 1/2 references extents 2-4, 2/1 references all extents. </p>
 <p> On the other hand, extent 1 is exclusive to 0/1, extent 2 is exclusive to 0/2, while extent 3 is neither exclusive to 0/2 nor to 0/3. But because both references can be reached from 1/2, extent 3 is exclusive to 1/2. All extents are exclusive to 2/1. </p>
@@ -70,13 +70,13 @@ extents 1 2 3 4</pre>
 <p>Below are some usecases that do not mean to be extensive. You can find your own way how to integrate qgroups. </p>
 <p> <font SIZE="+1"> <code>SINGLE-USER MACHINE</code></p>
 <dl>
-<dd><code>Replacement for partitions</code> </p>
+<dd><code>Replacement for partitions</code> </dd>
 <p> The simplest use case is to use qgroups as simple replacement for partitions. Btrfs takes the disk as a whole, and /, /usr, /var, etc. are created as subvolumes. As each subvolume gets it own qgroup automatically, they can simply be restricted. No hierarchy is needed for that. </p>
 <p> <code>Track usage of snapshots</code> </p>
 <p> When a snapshot is taken, a qgroup for it will automatically be created with the correct values. <i>Referenced</i> will show how much is in it, possibly shared with other subvolumes. <i>Exclusive</i> will be the amount of space that gets freed when the subvolume is deleted.</dl>
 <p> </font><font SIZE="+2"> <code>MULTI-USER MACHINE</code></p>
 <dl>
-<dd><code>Restricting homes</code> </p>
+<dd><code>Restricting homes</code> </dd>
 <p> When you have several users on a machine, with home directories probably under /home, you might want to restrict /home as a whole, while restricting every user to an individual limit as well. This is easily accomplished by creating a qgroup for /home , eg. 1/1, and assigning all user subvolumes to it. Restricting this qgroup will limit /home, while every user subvolume can get its own (lower) limit. </p>
 <p> <code>Accounting snapshots to the user</code> </p>
 <p> Let&#8217;s say the user is allowed to create snapshots via some mechanism. It would only be fair to account space used by the snapshots to the user. This does not mean the user doubles his usage as soon as he takes a snapshot. Of course, files that are present in his home and the snapshot should only be accounted once. This can be accomplished by creating a qgroup for each user, say <i>1/UID</i>. The user home and all snapshots are assigned to this qgroup. Limiting it will extend the limit to all snapshots, counting files only once. To limit /home as a whole, a higher level group 2/1 replacing 1/1 from the previous example is needed, with all user qgroups assigned to it. </p>
@@ -88,20 +88,20 @@ extents 1 2 3 4</pre>
 <h2>Subcommand</h2>
 <p><code>disable</code> <i>&lt;path&gt;</i></p>
 <dl>
-<dd>Disable subvolume quota support for a filesystem.</dl>
+<dd>Disable subvolume quota support for a filesystem.</dd></dl>
 <p> <code>enable</code> <i>&lt;path&gt;</i></p>
 <dl>
-<dd>Enable subvolume quota support for a filesystem.</dl>
+<dd>Enable subvolume quota support for a filesystem.</dd></dl>
 <p> <code>rescan</code> [-s] <i>&lt;path&gt;</i></p>
 <dl>
-<dd>Trash all qgroup numbers and scan the metadata again with the current config. </p>
+<dd>Trash all qgroup numbers and scan the metadata again with the current config. </dd>
 <p> <code>Options</code> </p>
 <p> -s</p>
 <dl>
-<dd>show status of a running rescan operation.</dl>
+<dd>show status of a running rescan operation.</dd></dl>
 <p> -w</p>
 <dl>
-<dd>wait for rescan operation to finish(can be already in progress).</dl>
+<dd>wait for rescan operation to finish(can be already in progress).</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p><code>btrfs quota</code> returns a zero exit status if it succeeds. Non zero is returned in case of failure.</p>

@@ -51,14 +51,14 @@ description: "crack_selinux – Security Enhanced Linux Policy for the crack pro
 <p> <code>crack_db_t</code> </p>
 <p> &#8211; Set files with the crack_db_t type, if you want to treat the files as crack database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/cracklib(/.*)?, /var/cache/cracklib(/.*)?, /usr/lib/cracklib_dict.* </p>
+<dt>Paths:</dt>
+<dd>/usr/share/cracklib(/.*)?, /var/cache/cracklib(/.*)?, /usr/lib/cracklib_dict.* </dd>
 </dl>
 <p> <code>crack_exec_t</code> </p>
 <p> &#8211; Set files with the crack_exec_t type, if you want to transition an executable to the crack_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/crack_[a-z]*, /usr/sbin/cracklib-[a-z]* </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/crack_[a-z]*, /usr/sbin/cracklib-[a-z]* </dd>
 </dl>
 <p> <code>crack_tmp_t</code> </p>
 <p> &#8211; Set files with the crack_tmp_t type, if you want to store crack temporary files in the /tmp directories. </p>

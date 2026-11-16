@@ -30,32 +30,32 @@ description: "xcb_xkb_controls_notify_event_t –"
 } <code>xcb_xkb_controls_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_XKB_CONTROLS_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>xkbType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>time</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>deviceID</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>numGroups</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>changedControls</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>enabledControls</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>enabledControlChanges</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>keycode</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>eventType</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>requestMajor</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>requestMinor</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_XKB_CONTROLS_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>xkbType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>deviceID</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>numGroups</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>changedControls</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>enabledControls</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>enabledControlChanges</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>keycode</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>eventType</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>requestMajor</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>requestMinor</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

@@ -15,14 +15,14 @@ description: "setreg – Change settings for public key cryptography"
 <p> Allow to configure some optional settings for public key cryptography parameters used in Mono.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-q</i></p>
-<dd> Quiet mode. Limited display on console.</p>
-<dt><i>-help, -h, -?, /?</i></p>
-<dd> Display help about this tool.</dl>
+<dt><i>-q</i></dt>
+<dd> Quiet mode. Limited display on console.</dd>
+<dt><i>-help, -h, -?, /?</i></dt>
+<dd> Display help about this tool.</dd></dl>
 <h2>FEATURES</h2>
 <dl>
-<dt><i>1</i></p>
-<dd> Trust the test root certificates (both Microsoft and Mono). Depending on the value this will add (TRUE) or remove (FALSE) the two self-signed certificates from the current user Trust store.</dl>
+<dt><i>1</i></dt>
+<dd> Trust the test root certificates (both Microsoft and Mono). Depending on the value this will add (TRUE) or remove (FALSE) the two self-signed certificates from the current user Trust store.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Sebastien Pouliot</p>
 <h2>COPYRIGHT</h2>

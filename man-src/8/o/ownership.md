@@ -14,12 +14,12 @@ description: "ownership – Compaq ownership tag retriever"
 <p><code>ownership</code> retrieves and prints the &quot;ownership tag&quot; that can be set on Compaq computers. Contrary to all other programs of the <code>dmidecode</code> package, <code>ownership</code> doesn&#8217;t print any version information, nor labels, but only the raw ownership tag. This should help its integration in scripts.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></p>
-<dd>Read memory from device <code>FILE</code> (default: <code>/dev/mem</code>)</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display usage information and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display the version and exit</dl>
+<dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></dt>
+<dd>Read memory from device <code>FILE</code> (default: <code>/dev/mem</code>)</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display usage information and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display the version and exit</dd></dl>
 <h2>Files</h2>
 <p><i>/dev/mem</i></p>
 <h2>Author</h2>

@@ -37,7 +37,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dd><i>obj</i> The given evas object.<br />
  <i>aspect</i> Returns the hint on how size should be calculated.<br />
  <i>w</i> Pointer to an integer in which to store the aspect width.<br />
- <i>h</i> Pointer to an integer in which to store the aspect height.</dl>
+ <i>h</i> Pointer to an integer in which to store the aspect height.</dd></dl>
 <h3>EAPI void evas_object_size_hint_aspect_set (<code>Evas_Object</code> * obj, Evas_Aspect_Control aspect, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the size aspect control hint. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -46,7 +46,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dd><i>obj</i> The given evas object.<br />
  <i>aspect</i> Hint on how to calculate size.<br />
  <i>w</i> Integer to use as aspect width hint.<br />
- <i>h</i> Integer to use as aspect height hint.</dl>
+ <i>h</i> Integer to use as aspect height hint.</dd></dl>
 <h3>EAPI void evas_object_size_hint_max_get (const <code>Evas_Object</code> * obj, Evas_Coord * w, Evas_Coord * h)</h3>
 <p>Retrieves the size hint for the maximum size. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -55,7 +55,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Pointer to an integer in which to store the maximum width.<br />
- <i>h</i> Pointer to an integer in which to store the maximum height.</dl>
+ <i>h</i> Pointer to an integer in which to store the maximum height.</dd></dl>
 <h3>EAPI void evas_object_size_hint_max_set (<code>Evas_Object</code> * obj, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the size hint for the maximum size. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -63,7 +63,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Integer to use as the maximum width hint.<br />
- <i>h</i> Integer to use as the maximum height hint.</dl>
+ <i>h</i> Integer to use as the maximum height hint.</dd></dl>
 <h3>EAPI void evas_object_size_hint_min_get (const <code>Evas_Object</code> * obj, Evas_Coord * w, Evas_Coord * h)</h3>
 <p>Retrieves the size hint for the minimum size. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -72,7 +72,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Pointer to an integer in which to store the minimum width.<br />
- <i>h</i> Pointer to an integer in which to store the minimum height.</dl>
+ <i>h</i> Pointer to an integer in which to store the minimum height.</dd></dl>
 <h3>EAPI void evas_object_size_hint_min_set (<code>Evas_Object</code> * obj, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the size hint for the minimum size. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -80,7 +80,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Integer to use as the minimum width hint.<br />
- <i>h</i> Integer to use as the minimum height hint.</dl>
+ <i>h</i> Integer to use as the minimum height hint.</dd></dl>
 <h3>EAPI void evas_object_size_hint_request_get (const <code>Evas_Object</code> * obj, Evas_Coord * w, Evas_Coord * h)</h3>
 <p>Retrieves the size request hint. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -89,7 +89,7 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Pointer to an integer in which to store the requested width.<br />
- <i>h</i> Pointer to an integer in which to store the requested height.</dl>
+ <i>h</i> Pointer to an integer in which to store the requested height.</dd></dl>
 <h3>EAPI void evas_object_size_hint_request_set (<code>Evas_Object</code> * obj, Evas_Coord w, Evas_Coord h)</h3>
 <p>Sets the requested size hint. </p>
 <p> This is not a size enforcement in any way, it&#8217;s just a hint that should be used whenever appropriate. </p>
@@ -97,6 +97,6 @@ description: "Generic Object Size Hints Functions – Functions that deals with 
 <dl COMPACT>
 <dd><i>obj</i> The given evas object.<br />
  <i>w</i> Integer to use as the preferred width hint.<br />
- <i>h</i> Integer to use as the preferred height hint.</dl>
+ <i>h</i> Integer to use as the preferred height hint.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

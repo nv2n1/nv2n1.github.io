@@ -19,23 +19,23 @@ abrtd - automated bug reporting tool's daemon.
 <h2>Options</h2>
 
 -v
-<dl><dd>Log more detailed debugging information.</dl>
+<dl><dd>Log more detailed debugging information.</dd></dl>
  
 
  -d
-<dl><dd>Stay in the foreground and log to standard error.</dl>
+<dl><dd>Stay in the foreground and log to standard error.</dd></dl>
  
 
  -s
-<dl><dd>Log to system log even with option -d.</dl>
+<dl><dd>Log to system log even with option -d.</dd></dl>
  
 
  -t NUM
-<dl><dd>Exit after NUM seconds of inactivity.</dl>
+<dl><dd>Exit after NUM seconds of inactivity.</dd></dl>
  
 
  -p
-<dl><dd>Add program names to log.</dl>
+<dl><dd>Add program names to log.</dd></dl>
 
 <h2>Caveats</h2>
 
@@ -43,7 +43,7 @@ When you use some other crash-catching tool specific for an application or an ap
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>
 
 <h2>See Also</h2>
 

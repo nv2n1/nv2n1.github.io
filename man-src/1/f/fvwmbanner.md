@@ -23,12 +23,9 @@ FvwmBanner - the Fvwm Banner module
  <pre>AddToFunc InitFunction &quot;I&quot; Module FvwmBanner</pre>You can also give it an optional file parameter, like 'FvwmBanner doomface.xpm' or specify an alternate default pixmap via configuration options (see &quot;*FvwmBanner: Pixmap&quot; below). Fvwm will search the ImagePath to find the image, or you can use the full path to the image. 
 
 <h2>Configuration Options</h2><dl><dt>*FvwmBanner: NoDecor
-<dd>Tells FvwmBanner to create a window that Fvwm will not manage and not decorate. 
-
-<dt>*FvwmBanner: Pixmap <i>file</i>
-<dd>Tells FvwmBanner to display <i>file</i> instead of the built in pixmap. 
-
-<dt>*FvwmBanner: Timeout <i>sec</i>
-<dd>Tells FvwmBanner to display for <i>sec</i> seconds instead of default of 3 seconds. 
-
-</dl><h2>Author</h2>Robert Nation
+</dt><dd>Tells FvwmBanner to create a window that Fvwm will not manage and not decorate. 
+</dd><dt>*FvwmBanner: Pixmap <i>file</i>
+</dt><dd>Tells FvwmBanner to display <i>file</i> instead of the built in pixmap. 
+</dd><dt>*FvwmBanner: Timeout <i>sec</i>
+</dt><dd>Tells FvwmBanner to display for <i>sec</i> seconds instead of default of 3 seconds. 
+</dd></dl><h2>Author</h2>Robert Nation

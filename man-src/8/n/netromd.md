@@ -18,22 +18,22 @@ description: "netromd – Send and receive NET/ROM routing messages"
 <p> Between each transmission <code>netromd</code> pauses for five seconds (default) in order to avoid flooding the channels that it must broadcast on. The value of this delay is settable with the -p option.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Forces strict compliance to Software 2000 specifications. At present this only determines how node mnemonics with lower case characters will be handled. With compliance enabled mixed case node mnemonics will be ignored. The default is to accept node mnemonics of mixed case.</p>
-<dt><code>-d</code></p>
-<dd>Switches on debugging messages, the default is off. Logging must be enabled for them to be output.</p>
-<dt><code>-i</code></p>
-<dd>Transmit a routing broadcast immediately, the default is to wait for the time interval to elapse before transmitting the first routing broadcast.</p>
-<dt><code>-l</code></p>
-<dd>Enables logging of errors and debug messages to the system log. The default is off.</p>
-<dt><code>-p pause</code></p>
-<dd>Sets the delay between transmissions of individual routing broadcast packets. The default is five seconds.</p>
-<dt><code>-q quality</code></p>
-<dd>Sets the quality of the subsidiary nodes relative to the main node. The default is 255.</p>
-<dt><code>-t interval</code></p>
-<dd>The time interval between routing broadcasts, in minutes. The default is 60 minutes.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-c</code></dt>
+<dd>Forces strict compliance to Software 2000 specifications. At present this only determines how node mnemonics with lower case characters will be handled. With compliance enabled mixed case node mnemonics will be ignored. The default is to accept node mnemonics of mixed case.</dd>
+<dt><code>-d</code></dt>
+<dd>Switches on debugging messages, the default is off. Logging must be enabled for them to be output.</dd>
+<dt><code>-i</code></dt>
+<dd>Transmit a routing broadcast immediately, the default is to wait for the time interval to elapse before transmitting the first routing broadcast.</dd>
+<dt><code>-l</code></dt>
+<dd>Enables logging of errors and debug messages to the system log. The default is off.</dd>
+<dt><code>-p pause</code></dt>
+<dd>Sets the delay between transmissions of individual routing broadcast packets. The default is five seconds.</dd>
+<dt><code>-q quality</code></dt>
+<dd>Sets the quality of the subsidiary nodes relative to the main node. The default is 255.</dd>
+<dt><code>-t interval</code></dt>
+<dd>The time interval between routing broadcasts, in minutes. The default is 60 minutes.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Files</h2>
 <pre>/proc/net/nr_neigh
 <br>

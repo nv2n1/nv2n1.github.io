@@ -23,6 +23,6 @@ description: "Linear_Gradient Object Fill Functions – Functions that deal with
  <i>x0</i> The X coordinate of the start point.<br />
  <i>y0</i> The Y coordinate of the start point.<br />
  <i>x1</i> The X coordinate of the end point.<br />
- <i>y1</i> The Y coordinate of the end point</dl>
+ <i>y1</i> The Y coordinate of the end point</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

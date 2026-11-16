@@ -10,7 +10,6 @@ description: "set_zbuffer – Makes the given Z-buffer the active one. Allegro g
 <p>set_zbuffer &#8211; Makes the given Z-buffer the active one. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_zbuffer(ZBUFFER *zbuf);</code></pre>
 <h2>Description</h2>
 <p>Makes the given Z-buffer be the active one. This should have been previously created with create_zbuffer(). </p>

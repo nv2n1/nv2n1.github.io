@@ -13,31 +13,31 @@ description: "terminal-colors.d – Configure output colorization for various ut
 <h2>Description</h2>
 <p>Files in this directory determine the default behavior for utilities when coloring output. The <i>name</i> is a utility name. The name is optional and when none is specified then the file is used for all unspecified utilities. The <i>term</i> is a terminal identifier (the TERM environment variable). The terminal identifier is optional and when none is specified then the file is used for all unspecified terminals. The <i>type</i> is a file type. Supported file types are:</p>
 <dl>
-<dt><code>disable</code></p>
-<dd>Turns off output colorization for all compatible utilities.</p>
-<dt><code>enable</code></p>
-<dd>Turns on output colorization; any matching <code>disable</code> files are ignored.</p>
-<dt><code>scheme</code></p>
-<dd>Specifies colors used for output. The file format may be specific to the utility, the default format is described below.</dl>
+<dt><code>disable</code></dt>
+<dd>Turns off output colorization for all compatible utilities.</dd>
+<dt><code>enable</code></dt>
+<dd>Turns on output colorization; any matching <code>disable</code> files are ignored.</dd>
+<dt><code>scheme</code></dt>
+<dd>Specifies colors used for output. The file format may be specific to the utility, the default format is described below.</dd></dl>
 <p> If there are more files that match for a utility, then the file with the more specific filename wins. For example, the filename &quot;@xterm.scheme&quot; has less priority than &quot;dmesg [at] xterm.scheme&quot;. The lowest priority are those files without a utility name and terminal identifier (e.g. &quot;disable&quot;). The user-specific <i>$XDG_CONFIG_HOME/terminal-colors.d</i> or <i>$HOME/.config/terminal-colors.d</i> overrides the global setting. </p>
 <h2>Examples</h2>
 <p>Disable colors for all compatible utilities:</p>
 <dl>
 <dd><code>touch /etc/terminal-colors.d/disable</code>
-</dl>
+</dd></dl>
 <p> Disable colors for all compatible utils on a vt100 terminal:</p>
 <dl>
 <dd><code>touch /etc/terminal-colors.d/@vt100.disable</code>
-</dl>
+</dd></dl>
 <p> Disable colors for all compatible utils except <a href="/docs/linux/man/1-dmesg/">dmesg</a>(1):</p>
 <dl>
 <dd><code>touch /etc/terminal-colors.d/disable</code> <code>touch /etc/terminal-colors.d/dmesg.enable</code>
-</dl>
+</dd></dl>
 <h2>Default Scheme Files Format</h2>
 <p>The following statement is recognized: </p>
 <dl>
 <dd><code>name color-sequence</code>
-</dl>
+</dd></dl>
 <p> The <code>name</code> is a logical name of color sequence (for example &quot;error&quot;). The names are specific to the utilities. For more details always see the COLORS section in the man page for the utility. </p>
 <p> The <code>color-sequence</code> is a color name, ASCII color sequences or escape sequences.</p>
 <h3>Color names</h3>
@@ -152,7 +152,7 @@ description: "terminal-colors.d – Configure output colorization for various ut
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h3>Escape sequences</h3>
 <p>To specify control or blank characters in the color sequences, C-style \-escaped notation can be used: </p>
 <dl>
@@ -185,7 +185,8 @@ description: "terminal-colors.d – Configure output colorization for various ut
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code></code></td>
+<td><code>
+</code></td>
 <td>Carriage Return (ASCII 13)
 </td>
 </tr>
@@ -225,12 +226,12 @@ description: "terminal-colors.d – Configure output colorization for various ut
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Please note that escapes are necessary to enter a space, backslash, caret, or any control character anywhere in the string, as well as a hash mark as the first character. </p>
 <p> For example, to use a red background for alert messages in the output of <code><a href="/docs/linux/man/1-dmesg/">dmesg</a></code>(1), use: </p>
 <dl>
 <dd><code>echo &#8216;alert 37;41&#8217; &gt;&gt; /etc/terminal-colors.d/dmesg.scheme</code>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <p><code>$XDG_CONFIG_HOME/terminal-colors.d</code><br />
  <code>$HOME/.config/terminal-colors.d</code><br />

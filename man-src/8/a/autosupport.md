@@ -15,7 +15,7 @@ description: "autosupport — interactive script to provide Digium[tm]’s suppo
 <h2>Files</h2>
 <p><code>/root/digiuminfo.txt</code></p>
 <dl>
-<dd>The output of the script goes there</dl>
+<dd>The output of the script goes there</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-asterisk/">asterisk</a>(8) </p>
 <h2>Author</h2>

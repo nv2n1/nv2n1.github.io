@@ -54,75 +54,75 @@ description: "cmake-generators – CMake Generators Reference"
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 8 2005 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 8 2005 &lt;WinCE-SDK&gt;</code></p>
-<dd>Specify target platform matching a Windows CE SDK name.</dl>
+<dt><code>Visual Studio 8 2005 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 8 2005 &lt;WinCE-SDK&gt;</code></dt>
+<dd>Specify target platform matching a Windows CE SDK name.</dd></dl>
 <h3>Visual Studio 9 2008</h3>
 <p>Generates Visual Studio 9 2008 project files. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 9 2008 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 9 2008 IA64</code></p>
-<dd>Specify target platform <code>Itanium</code>.</p>
-<dt><code>Visual Studio 9 2008 &lt;WinCE-SDK&gt;</code></p>
-<dd>Specify target platform matching a Windows CE SDK name.</dl>
+<dt><code>Visual Studio 9 2008 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 9 2008 IA64</code></dt>
+<dd>Specify target platform <code>Itanium</code>.</dd>
+<dt><code>Visual Studio 9 2008 &lt;WinCE-SDK&gt;</code></dt>
+<dd>Specify target platform matching a Windows CE SDK name.</dd></dl>
 <h3>Visual Studio 10 2010</h3>
 <p>Generates Visual Studio 10 (VS 2010) project files. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 10 2010 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 10 2010 IA64</code></p>
-<dd>Specify target platform <code>Itanium</code>. </p>
+<dt><code>Visual Studio 10 2010 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 10 2010 IA64</code></dt>
+<dd>Specify target platform <code>Itanium</code>. </dd>
 <p> For compatibility with CMake versions prior to 3.0, one may specify this generator using the name <code>Visual Studio 10</code> without the year component.</dl>
 <h3>Visual Studio 11 2012</h3>
 <p>Generates Visual Studio 11 (VS 2012) project files. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 11 2012 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 11 2012 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</p>
-<dt><code>Visual Studio 11 2012 &lt;WinCE-SDK&gt;</code></p>
-<dd>Specify target platform matching a Windows CE SDK name. </p>
+<dt><code>Visual Studio 11 2012 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 11 2012 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd>
+<dt><code>Visual Studio 11 2012 &lt;WinCE-SDK&gt;</code></dt>
+<dd>Specify target platform matching a Windows CE SDK name. </dd>
 <p> For compatibility with CMake versions prior to 3.0, one may specify this generator using the name &quot;Visual Studio 11&quot; without the year component.</dl>
 <h3>Visual Studio 12 2013</h3>
 <p>Generates Visual Studio 12 (VS 2013) project files. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 12 2013 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 12 2013 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>. </p>
+<dt><code>Visual Studio 12 2013 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 12 2013 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>. </dd>
 <p> For compatibility with CMake versions prior to 3.0, one may specify this generator using the name &quot;Visual Studio 12&quot; without the year component.</dl>
 <h3>Visual Studio 14 2015</h3>
 <p>Generates Visual Studio 14 (VS 2015) project files. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set to specify a target platform name. </p>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of this generator name:</p>
 <dl>
-<dt><code>Visual Studio 14 2015 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 14 2015 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</dl>
+<dt><code>Visual Studio 14 2015 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 14 2015 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd></dl>
 <h3>Other Generators</h3>
 <h3>Green Hills MULTI</h3>
 <p>Generates Green Hills MULTI project files (experimental, work-in-progress). </p>
 <p> Customizations are available through the following cache variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>GHS_BSP_NAME</code></p>
-<dt>&bull;</p>
-<dd><code>GHS_CUSTOMIZATION</code></p>
-<dt>&bull;</p>
-<dd><code>GHS_GPJ_MACROS</code></p>
-<dt>&bull;</p>
-<dd><code>GHS_OS_DIR</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_BSP_NAME</code></dd>
+<dt>&bull;</dt>
+<dd><code>GHS_CUSTOMIZATION</code></dd>
+<dt>&bull;</dt>
+<dd><code>GHS_GPJ_MACROS</code></dd>
+<dt>&bull;</dt>
+<dd><code>GHS_OS_DIR</code> </dd>
 <p> <code>NOTE:</code> This generator is deemed experimental as of CMake 3.6.3 and is still a work in progress. Future versions of CMake may make breaking changes as the generator matures.</dl>
 <h3>Xcode</h3>
 <p>Generate Xcode project files.</p>
@@ -133,75 +133,75 @@ description: "cmake-generators – CMake Generators Reference"
 <p> Project files for CodeBlocks will be created in the top directory and in every subdirectory which features a CMakeLists.txt file containing a PROJECT() call. Additionally a hierarchy of makefiles is generated into the build tree. The appropriate make program can build the project through the default make target. A &quot;make install&quot; target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>CodeBlocks &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>CodeBlocks &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>CodeBlocks &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>CodeBlocks &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>CodeBlocks &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>CodeBlocks &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>CodeBlocks &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>CodeBlocks &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>CodeLite</h3>
 <p>Generates CodeLite project files. </p>
 <p> Project files for CodeLite will be created in the top directory and in every subdirectory which features a CMakeLists.txt file containing a PROJECT() call. The appropriate make program can build the project through the default make target. A &quot;make install&quot; target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>CodeLite &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>CodeLite &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>CodeLite &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>CodeLite &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>CodeLite &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>CodeLite &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>CodeLite &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>CodeLite &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>Eclipse CDT4</h3>
 <p>Generates Eclipse CDT 4.0 project files. </p>
 <p> Project files for Eclipse will be created in the top directory. In out of source builds, a linked resource to the top level source directory will be created. Additionally a hierarchy of makefiles is generated into the build tree. The appropriate make program can build the project through the default make target. A &quot;make install&quot; target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Eclipse CDT4 &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Eclipse CDT4 &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>KDevelop3</h3>
 <p>Generates KDevelop 3 project files. </p>
 <p> Project files for KDevelop 3 will be created in the top directory and in every subdirectory which features a CMakeLists.txt file containing a PROJECT() call. If you change the settings using KDevelop cmake will try its best to keep your changes when regenerating the project files. Additionally a hierarchy of UNIX makefiles is generated into the build tree. Any standard UNIX-style make program can build the project through the default make target. A &quot;make install&quot; target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>KDevelop3 &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</p>
-<dt><code>KDevelop3</code></p>
-<dd>Generate with <code>Unix Makefiles</code>. </p>
+<dt><code>KDevelop3 &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd>
+<dt><code>KDevelop3</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>. </dd>
 <p> For historical reasons this extra generator may be specified directly as the main generator and it will be used as the extra generator with <code>Unix Makefiles</code> automatically.</dl>
 <h3>Kate</h3>
 <p>Generates Kate project files. </p>
 <p> A project file for Kate will be created in the top directory in the top level build directory. To use it in kate, the Project plugin must be enabled. The project file is loaded in kate simply by opening the ProjectName.kateproject file in the editor. If the kate Build-plugin is enabled, all targets generated by CMake are available for building. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Kate &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Kate &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Kate &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Kate &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Kate &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Kate &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Kate &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Kate &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>Sublime Text 2</h3>
 <p>Generates Sublime Text 2 project files. </p>
 <p> Project files for Sublime Text 2 will be created in the top directory and in every subdirectory which features a CMakeLists.txt file containing a PROJECT() call. Additionally Makefiles (or build.ninja files) are generated into the build tree. The appropriate make program can build the project through the default make target. A &quot;make install&quot; target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Sublime Text 2 &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Sublime Text 2 &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Sublime Text 2 &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Sublime Text 2 &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Sublime Text 2 &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>

@@ -22,3 +22,4 @@ description: "perl592delta – what is new for perl v5.9.2"
 <p> For consistency, <tt>&quot;A&quot;</tt> in <i>unpack()</i> format now trims all Unicode whitespace from the end of the string. Before perl 5.9.2, it used to strip only the classical <font SIZE="-1">ASCII</font> space characters.</p>
 <h3>Miscellaneous</h3>
 <p> The internal dump output has been improved, so that non-printable characters such as newline and backspace are output in <tt>&quot;
+</p>

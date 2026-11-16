@@ -16,8 +16,8 @@ description: "yuvsplittoppm – convert a Y- and a U- and a V-file into a portab
 <p> Since the YUV files are raw files, the dimensions <i>width</i> and <i>height</i> must be specified on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-ccir601</code></p>
-<dd> Assumes that the YUV triplets are scaled into the smaller range of the CCIR 601 (MPEG) standard. Else, the JFIF (JPEG) standard is assumed.</dl>
+<dt><code>-ccir601</code></dt>
+<dd> Assumes that the YUV triplets are scaled into the smaller range of the CCIR 601 (MPEG) standard. Else, the JFIF (JPEG) standard is assumed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ppmtoyuvsplit/">ppmtoyuvsplit</a>(1), <a href="/docs/linux/man/1-yuvtoppm/">yuvtoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>

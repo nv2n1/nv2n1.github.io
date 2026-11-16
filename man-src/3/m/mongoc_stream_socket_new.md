@@ -13,12 +13,12 @@ description: "mongoc_stream_socket_new() – Creates a new mongoc_stream_socket_
 mongoc_stream_socket_new (mongoc_socket_t *socket);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>socket</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>socket</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <p> Creates a new <code>mongoc_stream_socket_t</code> using the <code>mongoc_socket_t</code> provided. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>This function transfers ownership of <code>socket</code> to the newly allocated stream.</dl>
+<dd>This function transfers ownership of <code>socket</code> to the newly allocated stream.</dd></dl>
 <h2>Returns</h2>
 <p>A newly allocated <code>mongoc_stream_socket_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_stream_destroy/">mongoc_stream_destroy</a>(3)</code> when no longer in use. </p>
 <h2>Colophon</h2>

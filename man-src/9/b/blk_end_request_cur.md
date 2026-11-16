@@ -10,15 +10,15 @@ description: "blk_end_request_cur – Helper function to finish the current requ
 <p>blk_end_request_cur &#8211; Helper function to finish the current request chunk.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool blk_end_request_cur(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>);</code></dl>
+<dt> <code>bool blk_end_request_cur(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>rq</i></p>
 <dl>
 <dd>
-<dd>the request to finish the current chunk for</dl>
+</dd><dd>the request to finish the current chunk for</dd></dl>
 <p> <i>error</i></p>
 <dl>
-<dd><code>0</code> for success, &lt; <code>0</code> for error</dl>
+<dd><code>0</code> for success, &lt; <code>0</code> for error</dd></dl>
 <h2>Description</h2>
 <p>Complete the current consecutively mapped chunk from <i>rq</i>.</p>
 <h2>Return</h2>

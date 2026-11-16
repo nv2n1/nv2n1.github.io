@@ -137,12 +137,12 @@ description: "BrlAPI’s protocol –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> packet&#8217;s size, -2 if EOF occurred, -1 on error or signal interruption.</dl>
+</dt><dd> packet&#8217;s size, -2 if EOF occurred, -1 on error or signal interruption.</dd></dl>
 <p> If the packet is larger than the supplied buffer, the buffer will be filled with the beginning of the packet, the rest of the packet being discarded. This follows the semantics of the recv system call when the MSG_TRUNC option is given. </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>brlapi_writePacket()</code></dl>
+</dt><dd> <code>brlapi_writePacket()</code></dd></dl>
 <h3>ssize_t brlapi_readPacketContent (<code>brlapi_fileDescriptor</code>fd, size_tpacketSize, void *buf, size_tbufSize)</h3>
 <p> Read the content of a packet from <i>BrlAPI</i> server </p>
 <p> This function is for internal use, but one might use it if one really knows what one is doing&#8230; </p>
@@ -151,12 +151,12 @@ description: "BrlAPI’s protocol –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> packetSize, -2 if EOF occurred, -1 on error.</dl>
+</dt><dd> packetSize, -2 if EOF occurred, -1 on error.</dd></dl>
 <p> If the packet is larger than the supplied buffer, the buffer will be filled with the beginning of the packet, the rest of the packet being discarded. This follows the semantics of the recv system call when the MSG_TRUNC option is given. </p>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>brlapi_writePacket()</code> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacket()</code></dl>
+</dt><dd> <code>brlapi_writePacket()</code> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacket()</code></dd></dl>
 <h3>ssize_t brlapi_readPacketHeader (<code>brlapi_fileDescriptor</code>fd, <code>brlapi_packetType_t</code> *packetType)</h3>
 <p> Read the header (type+size) of a packet from <i>BrlAPI</i> server </p>
 <p> This function is for internal use, but one might use it if one really knows what one is doing&#8230; </p>
@@ -164,11 +164,11 @@ description: "BrlAPI’s protocol –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> packet&#8217;s size, -2 if EOF occurred, -1 on error or signal interruption.</dl>
+</dt><dd> packet&#8217;s size, -2 if EOF occurred, -1 on error or signal interruption.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>brlapi_writePacket()</code> <code>brlapi_readPacketContent</code> <code>brlapi_readPacket</code></dl>
+</dt><dd> <code>brlapi_writePacket()</code> <code>brlapi_readPacketContent</code> <code>brlapi_readPacket</code></dd></dl>
 <h3>ssize_t brlapi_writePacket (<code>brlapi_fileDescriptor</code>fd, <code>brlapi_packetType_t</code>type, const void *buf, size_tsize)</h3>
 <p> Send a packet to <i>BrlAPI</i> server </p>
 <p> This function is for internal use, but one might use it if one really knows what one is doing&#8230; </p>
@@ -177,53 +177,53 @@ description: "BrlAPI’s protocol –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> 0 on success, -1 on failure.</dl>
+</dt><dd> 0 on success, -1 on failure.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacketContent()</code> <code>brlapi_readPacket()</code></dl>
+</dt><dd> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacketContent()</code> <code>brlapi_readPacket()</code></dd></dl>
 <h2>Variable Documentation</h2>
 <h3>pthread_mutex_t brlapi_fd_mutex</h3>
 <p> Mutex for protecting concurrent fd access </p>
 <p> In order to regulate concurrent access to the library&#8217;s file descriptor and requests to / answers from <i>BrlAPI</i> server, every function of the library locks this mutex, namely </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>brlapi_openConnection()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_closeConnection()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_enterRawMode()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_leaveRawMode()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_sendRaw()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_recvRaw()</code></p>
-<dt>&bull;</p>
-<dd> brlapi_getDriverId()</p>
-<dt>&bull;</p>
-<dd> <code>brlapi_getDriverName()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_getDisplaySize()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_enterTtyMode()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_enterTtyModeWithPath()</code></p>
-<dt>&bull;</p>
-<dd> <code>brlapi_leaveTtyMode()</code></p>
-<dt>&bull;</p>
-<dd> brlapi_*write*()</p>
-<dt>&bull;</p>
-<dd> brlapi_(un)?ignorekey(Range|Set)()</p>
-<dt>&bull;</p>
-<dd> <code>brlapi_readKey()</code></dl>
+<dt>&bull;</dt>
+<dd> <code>brlapi_openConnection()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_closeConnection()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_enterRawMode()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_leaveRawMode()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_sendRaw()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_recvRaw()</code></dd>
+<dt>&bull;</dt>
+<dd> brlapi_getDriverId()</dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_getDriverName()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_getDisplaySize()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_enterTtyMode()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_enterTtyModeWithPath()</code></dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_leaveTtyMode()</code></dd>
+<dt>&bull;</dt>
+<dd> brlapi_*write*()</dd>
+<dt>&bull;</dt>
+<dd> brlapi_(un)?ignorekey(Range|Set)()</dd>
+<dt>&bull;</dt>
+<dd> <code>brlapi_readKey()</code></dd></dl>
 <p> If both these functions and <code>brlapi_writePacket()</code> or <code>brlapi_readPacket()</code> are used in a multithreaded application, this mutex must be locked before calling <code>brlapi_writePacket()</code> or <code>brlapi_readPacket()</code>, and unlocked afterwards.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBP">Function Documentation</a></p>
+<dt><a href="#lbBP">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbBU">Variable Documentation</a></p>
+</dd><dt><a href="#lbBU">Variable Documentation</a></dt>
 <dd>
-<dt><a href="#lbBW">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBW">Author</a></dt>
+<dd></dd></dl>

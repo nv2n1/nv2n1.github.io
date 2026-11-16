@@ -30,10 +30,8 @@ description: "simplevisor-control – run simplevisor as a service"
     #
     # init script that can be symlinked from /etc/init.d
     #
-    
     # chkconfig: - 90 15
     # description: my simplevisor instance
-    
     . &quot;/var/lib/myinstance/etc/simplevisor.profile&quot;
     exec &quot;/usr/bin/simplevisor-control&quot; ${1+&quot;$@&quot;}
 </pre>

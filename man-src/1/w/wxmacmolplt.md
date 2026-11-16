@@ -22,10 +22,10 @@ More information may be found at
 <h2>OPTIONS</h2>
 <p> wxMacMolPlt accepts the following options:</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> displays help on the command line parameters</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> displays help on the command line parameters</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version</dd></dl>
 <h2>FILES</h2>
 <p> Insert list of important files.</p>
 <h2>BUGS</h2>

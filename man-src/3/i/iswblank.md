@@ -18,7 +18,7 @@ int iswblank(wint_t wc);
 <p> <code>iswblank</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>iswblank</code>() function is the wide-character equivalent of the <code>isblank</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;blank&quot;. </p>
 <p> The wide-character class &quot;blank&quot; is a subclass of the wide-character class &quot;space&quot;. </p>

@@ -15,11 +15,11 @@ pci_select_bars - Make BAR mask from the type of resource
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the PCI device for which BAR mask is made</dl>
+<dl><dd></dd><dd>the PCI device for which BAR mask is made</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>resource type mask to be selected</dl>
+<dl><dd>resource type mask to be selected</dd></dl>
 
 <h2>Description</h2>
 

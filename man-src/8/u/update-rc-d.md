@@ -30,8 +30,8 @@ description: "update-rc.d – install and remove System-V style init script link
 <p> When run with the <code>enable</code> [ <i>S|2|3|4|5</i> ] options, <code>update-rc.d</code> modifies existing runlevel links for the script <code>/etc/init.d/</code><i>name</i> by renaming stop links to start links with a sequence number equal to the positive difference of current sequence number minus 100, thus returning to the original sequence number that the script had been installed with before disabling it. .P Both of these options only operate on start runlevel links of S, 2, 3, 4 or 5. If no start runlevel is specified after the disable or enable keywords, the script will attempt to modify links in all start runlevels.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Force removal of symlinks even if <code>/etc/init.d/</code><i>name</i> still exists.</dl>
+<dt><code>-f</code></dt>
+<dd>Force removal of symlinks even if <code>/etc/init.d/</code><i>name</i> still exists.</dd></dl>
 <h2>Examples</h2>
 <p>Insert links using the defaults: <code>update-rc.d foobar defaults</code> </p>
 <p> The equivalent dependency header would have start and stop dependencies on $remote_fs and $syslog, and start in runlevels 2-5 and stop in runlevels 0, 1 and 6. </p>
@@ -43,12 +43,12 @@ description: "update-rc.d – install and remove System-V style init script link
 <p>See <i><a rel="nofollow" href="http://bugs.debian.org/sysv-rc">http://bugs.debian.org/sysv-rc</a></i> and <i><a rel="nofollow" href="http://bugs.debian.org/init-system-helpers">http://bugs.debian.org/init-system-helpers</a></i>.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/init.d/</code></p>
-<dd>The directory containing the actual init scripts.</p>
-<dt><code>/etc/rc?.d/</code></p>
-<dd>The directories containing the links used by <code>init</code> and managed by <code>update-rc.d .</code></p>
-<dt><code>/etc/init.d/skeleton</code></p>
-<dd>Model for use by writers of <code>init.d</code> scripts.</dl>
+<dt><code>/etc/init.d/</code></dt>
+<dd>The directory containing the actual init scripts.</dd>
+<dt><code>/etc/rc?.d/</code></dt>
+<dd>The directories containing the links used by <code>init</code> and managed by <code>update-rc.d .</code></dd>
+<dt><code>/etc/init.d/skeleton</code></dt>
+<dd>Model for use by writers of <code>init.d</code> scripts.</dd></dl>
 <h2>See Also</h2>
 <pre><i>Debian Policy Manual</i>,
 <code>/etc/init.d/skeleton</code>,

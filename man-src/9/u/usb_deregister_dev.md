@@ -14,10 +14,10 @@ description: "usb_deregister_dev – deregister a USB device’s dynamic minor."
 <p><i>intf</i></p>
 <dl>
 <dd>
-<dd>pointer to the usb_interface that is being deregistered</dl>
+</dd><dd>pointer to the usb_interface that is being deregistered</dd></dl>
 <p> <i>class_driver</i></p>
 <dl>
-<dd>pointer to the usb_class_driver for this device</dl>
+<dd>pointer to the usb_class_driver for this device</dd></dl>
 <h2>Description</h2>
 <p>Used in conjunction with <code>usb_register_dev</code>. This function is called when the USB driver is finished with the minor numbers gotten from a call to <code>usb_register_dev</code> (usually when the device is disconnected from the system.) </p>
 <p> This function also removes the usb class device from the sysfs tree. </p>

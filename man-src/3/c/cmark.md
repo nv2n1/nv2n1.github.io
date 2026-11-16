@@ -34,7 +34,7 @@ description: "cmark – CommonMark parsing, manipulating, and rendering"
 <p> An iterator will walk through a tree of nodes, starting from a root node, returning one node at a time, together with information about whether the node is being entered or exited. The iterator will first descend to a child node, if there is one. When there is no child, the iterator will go to the next sibling. When there is no next sibling, the iterator will return to the parent (but with a cmark_event_type of CMARK_EVENT_EXIT). The iterator will return CMARK_EVENT_DONE when it reaches the root node again. One natural application is an HTML renderer, where an ENTER event outputs an open tag and an EXIT event outputs a close tag. An iterator might also be used to transform an AST in some systematic way, for example, turning all level-3 headings into regular paragraphs.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 void usage_example(cmark_node *root)
 {
@@ -47,25 +47,25 @@ void usage_example(cmark_node *root)
     cmark_iter_free(iter);
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> Iterators will never return EXIT events for leaf nodes, which are nodes of type:</p>
 <dl>
-<dt>&bull;</p>
-<dd> CMARK_NODE_HTML_BLOCK</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_THEMATIC_BREAK</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_CODE_BLOCK</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_TEXT</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_SOFTBREAK</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_LINEBREAK</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_CODE</p>
-<dt>&bull;</p>
-<dd> CMARK_NODE_HTML_INLINE</dl>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_HTML_BLOCK</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_THEMATIC_BREAK</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_CODE_BLOCK</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_TEXT</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_SOFTBREAK</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_LINEBREAK</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_CODE</dd>
+<dt>&bull;</dt>
+<dd> CMARK_NODE_HTML_INLINE</dd></dl>
 <p> Nodes must only be modified after an EXIT event, or an ENTER event for leaf nodes. </p>
 <p> <i>cmark_iter *</i> <code>cmark_iter_new</code>(<i>cmark_node *root</i>) </p>
 <p> Creates a new iterator starting at root. The current node and event type are undefined until cmark_iter_next is called for the first time. </p>
@@ -159,16 +159,16 @@ void usage_example(cmark_node *root)
 <p> Simple interface:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 cmark_node *document = cmark_parse_document(&quot;Hello *world*&quot;, 13,
                                             CMARK_OPT_DEFAULT);
 </pre>
-</dl>
+</dd></dl>
 <p> Streaming interface:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 cmark_parser *parser = cmark_parser_new(CMARK_OPT_DEFAULT);<br />
 FILE *fp = fopen(&#8220;myfile.md&#8221;, &#8220;r&#8221;);<br />
 while ((bytes = fread(buffer, 1, sizeof(buffer), fp)) &gt; 0) {<br />
@@ -178,7 +178,7 @@ while ((bytes = fread(buffer, 1, sizeof(buffer), fp)) &gt; 0) {<br />
     }<br />
 }<br />
 document = cmark_parser_finish(parser);<br />
-cmark_parser_free(parser);</p>
+cmark_parser_free(parser);</dd>
 </dl>
 <p> <i>cmark_parser *</i> <code>cmark_parser_new</code>(<i>int options</i>) </p>
 <p> Creates a new parser object. </p>
@@ -226,12 +226,12 @@ cmark_parser_free(parser);</p>
 <p> <i>int</i> <code>cmark_version</code>(<i></i>) </p>
 <p> The library version as integer for runtime checks. Also available as macro CMARK_VERSION for compile time checks.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Bits 16-23 contain the major version.</p>
-<dt>&bull;</p>
-<dd> Bits 8-15 contain the minor version.</p>
-<dt>&bull;</p>
-<dd> Bits 0-7 contain the patchlevel.</dl>
+<dt>&bull;</dt>
+<dd> Bits 16-23 contain the major version.</dd>
+<dt>&bull;</dt>
+<dd> Bits 8-15 contain the minor version.</dd>
+<dt>&bull;</dt>
+<dd> Bits 0-7 contain the patchlevel.</dd></dl>
 <p> In hexadecimal format, the number 0x010203 represents version 1.2.3. </p>
 <p> <i>const char *</i> <code>cmark_version_string</code>(<i></i>) </p>
 <p> The library version string for runtime checks. Also available as macro CMARK_VERSION_STRING for compile time checks. </p>

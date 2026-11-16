@@ -45,20 +45,20 @@ description: "QwtRoundScaleDraw –"
 <p>Draws the baseline of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawTick()</code>, <code>drawLabel()</code></dl>
+<dd><code>drawTick()</code>, <code>drawLabel()</code></dd></dl>
 <p> Implements <code>QwtAbstractScaleDraw</code>.</p>
 <h3>void QwtRoundScaleDraw::drawLabel (QPainter *painter, doublevalue) const [protected], [virtual]</h3>
 <p>Draws the label for a major scale tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>value</i> Value</dl>
+ <i>value</i> Value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawTick()</code>, <code>drawBackbone()</code></dl>
+<dd><code>drawTick()</code>, <code>drawBackbone()</code></dd></dl>
 <p> Implements <code>QwtAbstractScaleDraw</code>.</p>
 <h3>void QwtRoundScaleDraw::drawTick (QPainter *painter, doublevalue, doublelen) const [protected], [virtual]</h3>
 <p>Draw a tick </p>
@@ -66,69 +66,69 @@ description: "QwtRoundScaleDraw –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>value</i> Value of the tick<br />
- <i>len</i> Lenght of the tick</dl>
+ <i>len</i> Lenght of the tick</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>drawBackbone()</code>, <code>drawLabel()</code></dl>
+<dd><code>drawBackbone()</code>, <code>drawLabel()</code></dd></dl>
 <p> Implements <code>QwtAbstractScaleDraw</code>.</p>
 <h3>double QwtRoundScaleDraw::extent (const QFont &amp;font) const [virtual]</h3>
 <p>Calculate the extent of the scale </p>
 <p> The extent is the distance between the baseline to the outermost pixel of the scale draw. <code>radius()</code> + <code>extent()</code> is an upper limit for the radius of the bounding circle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font used for painting the labels</dl>
+<dd><i>font</i> Font used for painting the labels</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated extent</dl>
+<dd>Calculated extent</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMinimumExtent()</code>, <code>minimumExtent()</code></dl>
+<dd><code>setMinimumExtent()</code>, <code>minimumExtent()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The implemented algorithm is not too smart and calculates only an upper limit, that might be a few pixels too large</dl>
+<dd>The implemented algorithm is not too smart and calculates only an upper limit, that might be a few pixels too large</dd></dl>
 <p> Implements <code>QwtAbstractScaleDraw</code>.</p>
 <h3>void QwtRoundScaleDraw::moveCenter (const QPointF &amp;center)</h3>
 <p>Move the center of the scale draw, leaving the radius unchanged </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>center</i> New center</dl>
+<dd><i>center</i> New center</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRadius()</code></dl>
+<dd><code>setRadius()</code></dd></dl>
 <h3>double QwtRoundScaleDraw::radius () const</h3>
 <p>Get the radius </p>
 <p> Radius is the radius of the backbone without ticks and labels. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Radius of the scale</dl>
+<dd>Radius of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRadius()</code>, <code>extent()</code></dl>
+<dd><code>setRadius()</code>, <code>extent()</code></dd></dl>
 <h3>void QwtRoundScaleDraw::setAngleRange (doubleangle1, doubleangle2)</h3>
 <p>Adjust the baseline circle segment for round scales. The baseline will be drawn from min(angle1,angle2) to max(angle1, angle2). The default setting is [ -135, 135 ]. An angle of 0 degrees corresponds to the 12 o&#8217;clock position, and positive angles count in a clockwise direction. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>angle1</i><br />
- <i>angle2</i> boundaries of the angle interval in degrees.</dl>
+ <i>angle2</i> boundaries of the angle interval in degrees.</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>The angle range is limited to [-360, 360] degrees. Angles exceeding this range will be clipped.</p>
-<dt>&bull;</p>
-<dd>For angles more or equal than 360 degrees above or below min(angle1, angle2), scale marks will not be drawn.</p>
-<dt>&bull;</p>
-<dd>If you need a counterclockwise scale, use <code>QwtScaleDiv::setInterval()</code></dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>The angle range is limited to [-360, 360] degrees. Angles exceeding this range will be clipped.</dd>
+<dt>&bull;</dt>
+<dd>For angles more or equal than 360 degrees above or below min(angle1, angle2), scale marks will not be drawn.</dd>
+<dt>&bull;</dt>
+<dd>If you need a counterclockwise scale, use <code>QwtScaleDiv::setInterval()</code></dd></dl>
 </dl>
 <h3>void QwtRoundScaleDraw::setRadius (doubleradius)</h3>
 <p>Change of radius the scale </p>
 <p> Radius is the radius of the backbone without ticks and labels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>radius</i> New Radius</dl>
+<dd><i>radius</i> New Radius</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>moveCenter()</code></dl>
+<dd><code>moveCenter()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -19,12 +19,12 @@ description: "irattach – binds the Linux-IrDA stack to a IrDA port"
 <h2>Options</h2>
 <p><code>&lt;dev&gt;</code> : this is the name of a TTY, an IrDA interface or IrDA driver. <code>irattach</code> decides to use the <code>irtty</code> driver or one of the FIR drivers based on this argument.</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>TTY name</code> : this is the serial port to be configured using the <code>irtty</code> driver, such as <code>/dev/ttyS0</code>. <code>irattach</code> will use the <code>irtty</code> driver, so only SIR will be available. You need to check your serial configuration or BIOS to know which serial port is the IrDA port that need to be passed to <code>irattach</code>.</p>
-<dt>&bull;</p>
-<dd><code>interface name</code> : this is the device name of an IrDA interface, such as <code>irda0</code>. <code>irattach</code> will use one of the FIR drivers (including USB dongle drivers). The selected FIR driver must be loaded prior to the call to <code>irattach</code>, or the proper alias for the device name must be set in <i>/etc/modules.conf</i>.</p>
-<dt>&bull;</p>
-<dd><code>module name</code> : this is the name of an FIR driver module, such as <code>nsc-ircc</code> (see list below). All new IrDA interfaces created after loading the module will be configured, so this won&#8217;t work if the module is already loaded. This feature is still experimental.</dl>
+<dt>&bull;</dt>
+<dd><code>TTY name</code> : this is the serial port to be configured using the <code>irtty</code> driver, such as <code>/dev/ttyS0</code>. <code>irattach</code> will use the <code>irtty</code> driver, so only SIR will be available. You need to check your serial configuration or BIOS to know which serial port is the IrDA port that need to be passed to <code>irattach</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>interface name</code> : this is the device name of an IrDA interface, such as <code>irda0</code>. <code>irattach</code> will use one of the FIR drivers (including USB dongle drivers). The selected FIR driver must be loaded prior to the call to <code>irattach</code>, or the proper alias for the device name must be set in <i>/etc/modules.conf</i>.</dd>
+<dt>&bull;</dt>
+<dd><code>module name</code> : this is the name of an FIR driver module, such as <code>nsc-ircc</code> (see list below). All new IrDA interfaces created after loading the module will be configured, so this won&#8217;t work if the module is already loaded. This feature is still experimental.</dd></dl>
 <p> <code>-s</code> : starts discovery of remote IrDA devices (note that the form &quot;-s 1&quot; is no longer supported) </p>
 <p> <code>-v</code> : shows version information (this happens, when no option is given, too) </p>
 <p> <code>-h</code> : shows help information. </p>
@@ -32,32 +32,32 @@ description: "irattach – binds the Linux-IrDA stack to a IrDA port"
 <p> You need a dongle driver if you have an infrared device that connects to your computer&#8217;s serial port (normal 9-pin serial port connector). These devices are called dongles, and can currently be used by any SIR driver (IrTTY or irport). This option is not compatible with FIR drivers, and only works with the irtty and irport drivers. </p>
 <p> The currently known (serial) dongles are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>esi</code> Extended Systems JetEye PC ESI-9680</p>
-<dt>&bull;</p>
-<dd><code>tekram</code> Tekram IrMate IR-210B dongle</p>
-<dt>&bull;</p>
-<dd><code>actisys</code> ACTiSYS IR-220L dongle</p>
-<dt>&bull;</p>
-<dd><code>actisys+</code> ACTiSYS IR-220L+ dongle</p>
-<dt>&bull;</p>
-<dd><code>girbil</code> Greenwich GIrBIL dongle</p>
-<dt>&bull;</p>
-<dd><code>litelink </code> Parallax LiteLink dongle &amp; Extended Systems JetEye PC ESI-9680B</p>
-<dt>&bull;</p>
-<dd><code>airport</code> N.N.</p>
-<dt>&bull;</p>
-<dd><code>old_belkin</code> Belkin (old) SmartBeam dongle or any dongle only capable of 9600 bauds</p>
-<dt>&bull;</p>
-<dd><code>ep7211</code> IR port driver for the Cirrus Logic EP7211 processor (ARM based)</p>
-<dt>&bull;</p>
-<dd><code>mcp2120</code> Dongles based on the MCP2120 (Microchip)</p>
-<dt>&bull;</p>
-<dd><code>act200l</code> ACTiSYS Ir-200L dongles</p>
-<dt>&bull;</p>
-<dd><code>ma600</code> Mobile Action ma600 dongles</p>
-<dt>&bull;</p>
-<dd><code>toim3232</code> Vishay/Temic TOIM3232 and TOIM4232 based dongles</dl>
+<dt>&bull;</dt>
+<dd><code>esi</code> Extended Systems JetEye PC ESI-9680</dd>
+<dt>&bull;</dt>
+<dd><code>tekram</code> Tekram IrMate IR-210B dongle</dd>
+<dt>&bull;</dt>
+<dd><code>actisys</code> ACTiSYS IR-220L dongle</dd>
+<dt>&bull;</dt>
+<dd><code>actisys+</code> ACTiSYS IR-220L+ dongle</dd>
+<dt>&bull;</dt>
+<dd><code>girbil</code> Greenwich GIrBIL dongle</dd>
+<dt>&bull;</dt>
+<dd><code>litelink </code> Parallax LiteLink dongle &amp; Extended Systems JetEye PC ESI-9680B</dd>
+<dt>&bull;</dt>
+<dd><code>airport</code> N.N.</dd>
+<dt>&bull;</dt>
+<dd><code>old_belkin</code> Belkin (old) SmartBeam dongle or any dongle only capable of 9600 bauds</dd>
+<dt>&bull;</dt>
+<dd><code>ep7211</code> IR port driver for the Cirrus Logic EP7211 processor (ARM based)</dd>
+<dt>&bull;</dt>
+<dd><code>mcp2120</code> Dongles based on the MCP2120 (Microchip)</dd>
+<dt>&bull;</dt>
+<dd><code>act200l</code> ACTiSYS Ir-200L dongles</dd>
+<dt>&bull;</dt>
+<dd><code>ma600</code> Mobile Action ma600 dongles</dd>
+<dt>&bull;</dt>
+<dd><code>toim3232</code> Vishay/Temic TOIM3232 and TOIM4232 based dongles</dd></dl>
 <h2>Fir Driver Modules</h2>
 <p>If you are one of the lucky people which have a FIR chipset or USB dongle that is supported by one of the Linux-IrDA drivers, you can use <code>irattach</code> with the interface name of the IrDA port to configure. You will need to configure <i>/etc/conf.modules</i> appropriately, with at least an alias of <code>irda0</code> to the driver name, or load the driver manually beforehand. </p>
 <p> You don&#8217;t strictly need to use <code>irattach</code> with FIR drivers, you can use <code>modprobe</code> to load the driver, <code>ifconfig</code> to bring up the interface and set the various sysctl by hand, but <code>irattach</code> offer a convenient way to do it. </p>
@@ -65,73 +65,73 @@ description: "irattach – binds the Linux-IrDA stack to a IrDA port"
 <p> Also, you often need to configure the <code>Linux-serial driver</code> to ignore the IrDA port, otherwise both drivers will conflict. This can usually be done with <code>setserial /dev/ttySx uart none</code>. </p>
 <p> The currently known FIR drivers are:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>ali-ircc</code> ALi FIR Controller Driver for ALi M5123 (options: io, irq, dma). This driver supports SIR, MIR and FIR (4Mbps) speeds. This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>ali-ircc</code> ALi FIR Controller Driver for ALi M5123 (options: io, irq, dma). This driver supports SIR, MIR and FIR (4Mbps) speeds. This chipset is used by e.g.: </dd>
 <p> The ALi M5123 FIR Controller is embedded in ALi M1543C, M1535, M1535D, M1535+, M1535D South Bridge.</p>
-<dt>&bull;</p>
-<dd><code>irda-usb</code> IrDA-USB device driver, for USB devices/dongles that comply with the official IrDA-USB class specification. Note: USB 2.0 is not yet tested. (options: qos_mtt_bits int, description &quot;Minimum Turn Time&quot;). This is used, for e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>irda-usb</code> IrDA-USB device driver, for USB devices/dongles that comply with the official IrDA-USB class specification. Note: USB 2.0 is not yet tested. (options: qos_mtt_bits int, description &quot;Minimum Turn Time&quot;). This is used, for e.g.: </dd>
 <p> ACTiSYS ACT-IR2000U </p>
 <p> KC Technology KC-180 </p>
 <p> Extended Systems XTNDAccess ESI-9685 </p>
 <p> Note that there is another USB driver for those devices called <code>ir-usb</code> which is NOT compatible with the IrDA stack and conflict with <code>irda-usb</code>. Because it always loads first, you have to remove <code>ir-usb</code> completely. </p>
 <p> Devices based on the SigmaTel chip are not not compliant with the IrDA-USB class specification and therfore not supported by this driver.</p>
-<dt>&bull;</p>
-<dd><code>nsc-ircc</code> NSC IrDA device driver (options: io, irq, dma, dongle_id, qos_mtt_bits). This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>nsc-ircc</code> NSC IrDA device driver (options: io, irq, dma, dongle_id, qos_mtt_bits). This chipset is used by e.g.: </dd>
 <p> IBM ThinkPad dongle_id=0x09 </p>
 <p> HP OmniBook 6000 dongle_id=0x08</p>
-<dt>&bull;</p>
-<dd><code>sa1100_ir</code> Infrared driver for devices based on the StrongARM SA1100 embedded microprocessor (options: power_level, tx_lpm). This driver may support FIR on devices that can do it. This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>sa1100_ir</code> Infrared driver for devices based on the StrongARM SA1100 embedded microprocessor (options: power_level, tx_lpm). This driver may support FIR on devices that can do it. This chipset is used by e.g.: </dd>
 <p> Samsung YOPY, COMPAQ iPAQ, SHARP Zaurus SL5000/5500</p>
-<dt>&bull;</p>
-<dd><code>smc-ircc</code> SMC IrCC controller driver (options: ircc_dma, ircc_irq). This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>smc-ircc</code> SMC IrCC controller driver (options: ircc_dma, ircc_irq). This chipset is used by e.g.: </dd>
 <p> Fujitsu-Siemens Lifebook 635t Sony PCG-505TX</p>
-<dt>&bull;</p>
-<dd><code>w83977af_ir</code> Winbond W83977AF IrDA device driver (options: io, irq, qos_mtt_bits). This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>w83977af_ir</code> Winbond W83977AF IrDA device driver (options: io, irq, qos_mtt_bits). This chipset is used by e.g.: </dd>
 <p> Corel NetWinder</p>
-<dt>&bull;</p>
-<dd><code>toshoboe</code> Toshiba OBOE IrDA device driver, supports Toshiba Type-O IR chipset. (options: max_baud). This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>toshoboe</code> Toshiba OBOE IrDA device driver, supports Toshiba Type-O IR chipset. (options: max_baud). This chipset is used by e.g.: </dd>
 <p> Toshiba Libretto 100CT., and many more old Toshiba laptops.</p>
-<dt>&bull;</p>
-<dd><code>donauboe</code> is a new version of <code>toshoboe</code> and has better FIR support and compability with the Donauoboe chip <a rel="nofollow" href="http://libxg.free.fr/lib-irda.html">http://libxg.free.fr/lib-irda.html</a> (options: ..). This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>donauboe</code> is a new version of <code>toshoboe</code> and has better FIR support and compability with the Donauoboe chip <a rel="nofollow" href="http://libxg.free.fr/lib-irda.html">http://libxg.free.fr/lib-irda.html</a> (options: ..). This chipset is used by e.g.: </dd>
 <p> Toshiba Libretto 100CT., Tecra 8100, Portege 7020 and many more Toshiba laptops.</p>
-<dt>&bull;</p>
-<dd><code>vlsi_ir</code> VLSI 82C147 SIR/MIR/FIR device driver This chipset is used by e.g.: </p>
+<dt>&bull;</dt>
+<dd><code>vlsi_ir</code> VLSI 82C147 SIR/MIR/FIR device driver This chipset is used by e.g.: </dd>
 <p> HP Omnibook 800 </p>
 <p> (options: ..).</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>clksrc int, description &quot;clock input source selection&quot;</p>
-<dt>&bull;</p>
-<dd>ringsize int array (min = 1, max = 2), description &quot;tx, rx ring descriptor size&quot;</p>
-<dt>&bull;</p>
-<dd>sirpulse int, description &quot;sir pulse width tuning&quot;</p>
-<dt>&bull;</p>
-<dd>mtt_bits int, description &quot;IrLAP bitfield representing min-turn-time&quot;</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>clksrc int, description &quot;clock input source selection&quot;</dd>
+<dt>&bull;</dt>
+<dd>ringsize int array (min = 1, max = 2), description &quot;tx, rx ring descriptor size&quot;</dd>
+<dt>&bull;</dt>
+<dd>sirpulse int, description &quot;sir pulse width tuning&quot;</dd>
+<dt>&bull;</dt>
+<dd>mtt_bits int, description &quot;IrLAP bitfield representing min-turn-time&quot;</dd></dl>
 </dl>
 </dl>
 <h2>Examples</h2>
 <p>Attach the IrDA stack to the second serial port (integrated IrDA port using serial emulation) and start discovery:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>irattach /dev/ttyS1 -s</code></dl>
+<dt>&bull;</dt>
+<dd><code>irattach /dev/ttyS1 -s</code></dd></dl>
 <p> Attach the IrDA stack to the first serial port where you have an external ACTiSYS serial dongle and start discovery:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>irattach /dev/ttyS0 -d actisys+ -s</code></dl>
+<dt>&bull;</dt>
+<dd><code>irattach /dev/ttyS0 -d actisys+ -s</code></dd></dl>
 <p> Attach the IrDA stack to the first IrDA-USB dongle and start discovery:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>modprobe irda-usb ; irattach irda0 -s</code></dl>
+<dt>&bull;</dt>
+<dd><code>modprobe irda-usb ; irattach irda0 -s</code></dd></dl>
 <p> Attach the IrDA stack to the NSC FIR (4Mbps) device driver on a Thinkpad laptop:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>modprobe nsc-ircc dongle_id=0x9 ; irattach irda0 -s</code>.</dl>
+<dt>&bull;</dt>
+<dd><code>modprobe nsc-ircc dongle_id=0x9 ; irattach irda0 -s</code>.</dd></dl>
 <p> Attach the IrDA stack to the NSC FIR (4Mbps) device driver on a Thinkpad laptop:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>irattach irda0 -s</code>. </p>
+<dt>&bull;</dt>
+<dd><code>irattach irda0 -s</code>. </dd>
 <p> This assume that you have added the following entries to <i>/etc/conf.modules</i>: </p>
 <p> options nsc-ircc dongle_id=0x09 </p>
 <p> alias irda0 nsc-ircc</dl>
@@ -160,3 +160,4 @@ description: "irattach – binds the Linux-IrDA stack to a IrDA port"
 <h2>Copyright</h2>
 <p>Copyright (c) 2001 Werner Heuser Copyright (c) 2002 Jean Tourrilhes </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.</p>
+</p>

@@ -11,10 +11,8 @@ std::type_identity - std::type_identity
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 20)
-
         struct type_identity;</code></pre> 
 Provides the member typedef type that names T (i.e., the identity transformation). 
 
@@ -38,10 +36,8 @@ using type_identity_t = typename type_identity&lt;T&gt;::type;
 <h2>Notes</h2>
 
 type_identity can be used to block template_argument_deduction: <pre><code>template &lt;class T&gt;
-
 void f(T, T);
 template &lt;class T&gt;
-
 void g(T, std::type_identity_t&lt;T&gt;);</code></pre> 
 &nbsp;<wbr>&nbsp;f(4.2, 0); // error, deduced conflicting types for 'T' 
 &nbsp;<wbr>&nbsp;g(4.2, 0); // OK, calls g&lt;double&gt; 

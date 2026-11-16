@@ -14,16 +14,16 @@ description: "ipc_check_perms – check security and permissions for an ipc obje
 <p><i>ns</i></p>
 <dl>
 <dd>
-<dd>ipc namespace</dl>
+</dd><dd>ipc namespace</dd></dl>
 <p> <i>ipcp</i></p>
 <dl>
-<dd>ipc permission set</dl>
+<dd>ipc permission set</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>the actual security routine to call</dl>
+<dd>the actual security routine to call</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>its parameters</dl>
+<dd>its parameters</dd></dl>
 <h2>Description</h2>
 <p>This routine is called by <code>sys_msgget</code>, <code>sys_semget</code> and <code>sys_shmget</code> when the key is not IPC_PRIVATE and that key already exists in the ds IDR. </p>
 <p> On success, the ipc id is returned. </p>

@@ -14,10 +14,10 @@ description: "cmf_readall – read the current channel measurement block"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>the channel to be read</dl>
+</dd><dd>the channel to be read</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>a pointer to a data block that will be filled</dl>
+<dd>a pointer to a data block that will be filled</dd></dl>
 <h2>Description</h2>
 <p>Returns <code>0</code> on success, a negative error value otherwise.</p>
 <h2>Context</h2>
@@ -25,5 +25,5 @@ description: "cmf_readall – read the current channel measurement block"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

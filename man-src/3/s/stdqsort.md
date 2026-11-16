@@ -11,14 +11,10 @@ std::qsort - std::qsort
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     void qsort(void *ptr, std::size_t count, std::size_t size, /*compare-pred*/ *comp);
 (1)
-
     void qsort(void *ptr, std::size_t count, std::size_t size, /*c-compare-pred*/ *comp);
-
 extern &quot;C++&quot; using /*compare-pred*/ = int(const void *, const void *); // exposition-only (2)
-
 extern &quot;C&quot; using /*c-compare-pred*/ = int(const void *, const void *); // exposition-only</code></pre> 
 Sorts the given array pointed to by ptr in ascending order. The array contains count elements of size bytes. Function pointed to by comp is used for object comparison. 
 If comp indicates two elements as equivalent, their order is unspecified. 
@@ -49,12 +45,9 @@ The two overloads provided by the C++ standard library are distinct because the 
 
 The following code sorts an array of integers using qsort(). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdlib&gt;
-
 #include &lt;climits&gt;
 int main()
-
 {
     int a[] = {-2, 99, 0, -743, 2, INT_MIN, 4};
     constexpr std::size_t size = sizeof a / sizeof *a;

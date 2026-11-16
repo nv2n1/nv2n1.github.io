@@ -11,7 +11,6 @@ std::chrono::year_month_day_last::year_month_day_last - std::chrono::year_month_
 <h2>Synopsis</h2>
 
 <pre><code>constexpr year_month_day_last(const std::chrono::year &amp;y, (since C++ 20)
-
                                                               const std::chrono::month_day_last &amp;mdl) noexcept;</code></pre> 
 Constructs a year_month_day_last object storing the year y and the month mdl.month(). The constructed object represents the last day of that year and month. 
 

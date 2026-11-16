@@ -15,15 +15,15 @@ get_phy_device - reads the specified PHY device and returns its <i>phy_device</i
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the target MII bus</dl>
+<dl><dd></dd><dd>the target MII bus</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>PHY address on the MII bus</dl>
+<dl><dd>PHY address on the MII bus</dd></dl>
  
 
  <i>is_c45</i>
-<dl><dd>If true the PHY uses the 802.3 clause 45 protocol</dl>
+<dl><dd>If true the PHY uses the 802.3 clause 45 protocol</dd></dl>
 
 <h2>Description</h2>
 

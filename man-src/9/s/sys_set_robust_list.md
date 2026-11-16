@@ -14,12 +14,12 @@ description: "sys_set_robust_list – Set the robust-futex list head of a task"
 <p><i>head</i></p>
 <dl>
 <dd>
-<dd>pointer to the list-head</dl>
+</dd><dd>pointer to the list-head</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length of the list-head, as userspace expects</dl>
+<dd>length of the list-head, as userspace expects</dd></dl>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

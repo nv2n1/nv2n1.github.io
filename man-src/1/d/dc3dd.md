@@ -21,6 +21,6 @@ description: "dc3dd – convert and copy a file"
 <p> The full documentation for <code>dc3dd</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>dc3dd</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info dc3dd</code></dl>
+</dt><dd> <code>info dc3dd</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

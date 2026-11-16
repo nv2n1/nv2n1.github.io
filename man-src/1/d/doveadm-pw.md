@@ -19,31 +19,31 @@ description: "doveadm-pw – Dovecot’s password hash generator"
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-l</code></p>
+<dt><code>-l</code></dt>
 <dd> List all supported password <i>scheme</i>s and exit successfully.<br />
- There are up to three optional password <i>scheme</i>s: <code>BLF-CRYPT</code> (Blowfish crypt), <code>SHA256-CRYPT&nbsp;<wbr></code>and <code>SHA512-CRYPT</code>. Their availability depends on the system&#8217;s currently used libc.</p>
-<dt><code>-p&nbsp;<wbr></code><i>password</i></p>
-<dd> The plain text <i>password</i> for which the hash should be generated. If no <i>password</i> was given <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will prompt interactively for one.</p>
-<dt><code>-r&nbsp;<wbr></code><i>rounds</i></p>
-<dd> The password <i>scheme</i>s <code>BLF-CRYPT</code>, <code>SHA256-CRYPT&nbsp;<wbr></code>and <code>SHA512-CRYPT</code> supports a variable number of encryption <i>rounds</i>. The following table shows the minimum/maximum number of encryption <i>rounds</i> per scheme. When the <code>-r</code> option was omitted the default number of encryption rounds will be applied. </p>
+ There are up to three optional password <i>scheme</i>s: <code>BLF-CRYPT</code> (Blowfish crypt), <code>SHA256-CRYPT&nbsp;<wbr></code>and <code>SHA512-CRYPT</code>. Their availability depends on the system&#8217;s currently used libc.</dd>
+<dt><code>-p&nbsp;<wbr></code><i>password</i></dt>
+<dd> The plain text <i>password</i> for which the hash should be generated. If no <i>password</i> was given <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will prompt interactively for one.</dd>
+<dt><code>-r&nbsp;<wbr></code><i>rounds</i></dt>
+<dd> The password <i>scheme</i>s <code>BLF-CRYPT</code>, <code>SHA256-CRYPT&nbsp;<wbr></code>and <code>SHA512-CRYPT</code> supports a variable number of encryption <i>rounds</i>. The following table shows the minimum/maximum number of encryption <i>rounds</i> per scheme. When the <code>-r</code> option was omitted the default number of encryption rounds will be applied. </dd>
 <pre><code>
 Scheme | Minimum | Maximum | Default-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --BLF - CRYPT | 4 | 31 | 5 SHA256 - CRYPT | 1000 | 999999999 | 5000 SHA512 - CRYPT | 1000 | 999999999 | 5000
 </code></pre>
-<dt><code>-s&nbsp;<wbr></code><i>scheme</i></p>
+<dt><code>-s&nbsp;<wbr></code><i>scheme</i></dt>
 <dd> The password <i>scheme</i> which should be used to generate the hashed password. By default the <code>CRAM-MD5&nbsp;<wbr></code><i>scheme</i> will be used. It is also possible to append an encoding suffix to the <i>scheme</i>. Supported encoding suffixes are: <code>.b64</code>, <code>.base64&nbsp;<wbr></code>and <code>.hex</code>.<br />
- See also <a rel="nofollow" href="http://wiki2.dovecot.org/Authentication/PasswordSchemes">http://wiki2.dovecot.org/Authentication/PasswordSchemes</a> for more details about password schemes.</p>
-<dt><code>-t&nbsp;<wbr></code><i>hash</i></p>
-<dd> Test if the given password <i>hash</i> matches a given plain text password. The plain text password may be passed using the <code>-p</code> option. When no password was specified, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will prompt interactively for one.</p>
-<dt><code>-u&nbsp;<wbr></code><i>user</i></p>
-<dd> When the <code>DIGEST-MD5&nbsp;<wbr></code><i>scheme</i> is used, also the <i>user</i> name must be given, because the user name is a part of the generated hash. For more information about Digest-MD5 please read also: <a rel="nofollow" href="http://wiki2.dovecot.org/Authentication/Mechanisms/DigestMD5">http://wiki2.dovecot.org/Authentication/Mechanisms/DigestMD5</a></p>
-<dt><code>-V</code></p>
-<dd> When this option is given, the hashed password will be internally verified. The result of the verification will be shown after the hashed password, enclosed in parenthesis.</dl>
+ See also <a rel="nofollow" href="http://wiki2.dovecot.org/Authentication/PasswordSchemes">http://wiki2.dovecot.org/Authentication/PasswordSchemes</a> for more details about password schemes.</dd>
+<dt><code>-t&nbsp;<wbr></code><i>hash</i></dt>
+<dd> Test if the given password <i>hash</i> matches a given plain text password. The plain text password may be passed using the <code>-p</code> option. When no password was specified, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will prompt interactively for one.</dd>
+<dt><code>-u&nbsp;<wbr></code><i>user</i></dt>
+<dd> When the <code>DIGEST-MD5&nbsp;<wbr></code><i>scheme</i> is used, also the <i>user</i> name must be given, because the user name is a part of the generated hash. For more information about Digest-MD5 please read also: <a rel="nofollow" href="http://wiki2.dovecot.org/Authentication/Mechanisms/DigestMD5">http://wiki2.dovecot.org/Authentication/Mechanisms/DigestMD5</a></dd>
+<dt><code>-V</code></dt>
+<dd> When this option is given, the hashed password will be internally verified. The result of the verification will be shown after the hashed password, enclosed in parenthesis.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The first password hash is a DIGEST-MD5 hash for jane.roe [at] example.com. The second password hash is a CRAM-MD5 hash for john.doe [at] example.com. </p>
 <pre><code>

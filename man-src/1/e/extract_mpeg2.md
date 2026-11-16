@@ -14,12 +14,12 @@ description: "extract_mpeg2 – extract MPEG video streams from a multiplexed st
 <h2>DESCRIPTION</h2>
 <p> `extract_mpeg2&#8242; extracts MPEG video streams from a multiplexed stream. Input is from stdin if no file is given.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> display help</p>
-<dt><code>-s track</code></p>
-<dd> set track number (0-0xf or 0xe0-0xef)</p>
-<dt><code>-t pid</code></p>
-<dd> use transport stream demultiplexer, pid 0x10-0x1ffe</dl>
+<dt><code>-h</code></dt>
+<dd> display help</dd>
+<dt><code>-s track</code></dt>
+<dd> set track number (0-0xf or 0xe0-0xef)</dd>
+<dt><code>-t pid</code></dt>
+<dd> use transport stream demultiplexer, pid 0x10-0x1ffe</dd></dl>
 <h2>AUTHORS</h2>
 <p> Michel Lespinasse &lt;walken [at] zoy.org&gt;<br />
  Aaron Holtzman &lt;aholtzma [at] ess.engr.uvic.ca&gt;<br />

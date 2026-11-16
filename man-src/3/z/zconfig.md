@@ -132,7 +132,7 @@ main
  bind = '<a href="ipc://addr2'">ipc://addr2'</a>
  backend
  bind = <a href="inproc://addr3">inproc://addr3</a></pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>root Down = child
@@ -152,17 +152,15 @@ context--&gt;main
 | hwm=1000--&gt;swap=25000000
 v
 iothreads=1--&gt;verbose=false</pre>
-</dl>
+</dd></dl>
 <h2>Example</h2>
 <p><code>From zconfig_test method</code>. </p>
 <pre><code>//  Create temporary directory for test files
 #define TESTDIR &quot;.test_zconfig&quot;
 zsys_dir_create(TESTDIR);
-
 zconfig_t *root = zconfig_new(&quot;root&quot;, NULL);
 assert(root);
 zconfig_t *section, *item;
-
 section = zconfig_new(&quot;headers&quot;, root);
 assert(section);
 item = zconfig_new(&quot;email&quot;, section);
@@ -181,21 +179,18 @@ root = zconfig_load(TESTDIR &quot;/test.cfg&quot;);
 if (verbose)
     zconfig_save(root, &quot;-&quot;);
 assert(streq(zconfig_filename(root), TESTDIR &quot;/test.cfg&quot;));
-
 char *email = zconfig_get(root, &quot;/headers/email&quot;, NULL);
 assert(email);
 assert(streq(email, &quot;some [at] random.com&quot;));
 char *passwd = zconfig_get(root, &quot;/curve/secret-key&quot;, NULL);
 assert(passwd);
 assert(streq(passwd, &quot;Top Secret&quot;));
-
 zconfig_savef(root, &quot;%s/%s&quot;, TESTDIR, &quot;test.cfg&quot;);
 assert(!zconfig_has_changed(root));
 int rc = zconfig_reload(&amp;root);
 assert(rc == 0);
 assert(!zconfig_has_changed(root));
 zconfig_destroy(&amp;root);
-
 //  Test chunk load/save
 root = zconfig_new(&quot;root&quot;, NULL);
 assert(root);
@@ -214,21 +209,17 @@ assert(streq(string, (char *)zchunk_data(chunk)));
 free(string);
 assert(chunk);
 zconfig_destroy(&amp;root);
-
 root = zconfig_chunk_load(chunk);
 assert(root);
 char *value = zconfig_get(root, &quot;/section/value&quot;, NULL);
 assert(value);
 assert(streq(value, &quot;somevalue&quot;));
-
 //  Test config can't be saved to a file in a path that doesn't
 //  exist or isn't writable
 rc = zconfig_savef(root, &quot;%s/path/that/doesnt/exist/%s&quot;, TESTDIR, &quot;test.cfg&quot;);
 assert(rc == -1);
-
 zconfig_destroy(&amp;root);
 zchunk_destroy(&amp;chunk);
-
 //  Delete all test files
 zdir_t *dir = zdir_new(TESTDIR, NULL);
 assert(dir);
@@ -244,7 +235,8 @@ zdir_destroy(&amp;dir);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

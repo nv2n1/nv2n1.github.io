@@ -32,16 +32,11 @@ Current depth of the directory hierarchy.
 
 this example uses iteration depth to calculate the indentation of a directory tree printout 
  // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/a/b/c&quot;);
     fs::create_directories(&quot;sandbox/a/b/d/e&quot;);

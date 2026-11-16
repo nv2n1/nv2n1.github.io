@@ -20,10 +20,10 @@ description: "ssytd2.f –"
 <dd>
 <pre> SSYTD2 reduces a real symmetric matrix A to symmetric tridiagonal
  form T by an orthogonal similarity transformation: Q**T * A * Q = T.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  Specifies whether the upper or lower triangular part of the
  symmetric matrix A is stored:
@@ -73,13 +73,13 @@ description: "ssytd2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -109,7 +109,8 @@ description: "ssytd2.f –"
  ( d ) ( v1 v2 v3 e d )
  where d and e denote diagonal and off-diagonal elements of T, and vi
  denotes an element of the vector defining H(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 174 of file ssytd2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

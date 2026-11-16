@@ -10,20 +10,9 @@ description: "QuantLib::CapFloor – Base class for cap-like instruments."
 <p>QuantLib::CapFloor &#8211; Base class for cap-like instruments. </p>
 <h2>Synopsis</h2>
 <pre><code>CapFloor (Type type, const Leg &amp;floatingLeg, const std::vector&lt; Rate &gt; &amp;capRates, const std::vector&lt; Rate &gt; &amp;floorRates)
-
-
-
 CapFloor (Type type, const Leg &amp;floatingLeg, const std::vector&lt; Rate &gt; &amp;strikes)
-
-
-
 Rate atmRate (const YieldTermStructure &amp;discountCurve) const
-
-
-
 Volatility impliedVolatility (Real price, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve, Volatility guess, Real accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const
-
-
 implied term volatility</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>. Inherited by <code>Cap</code>, <code>Collar</code>, and <code>Floor</code>.</p>
 <h3>Classes</h3>
@@ -35,20 +24,9 @@ implied term volatility</code></pre>
 <p>enum <code>Type</code> { <code>Cap</code>, <code>Floor</code>, <code>Collar</code> }</p>
 <h3>Public Member Functions</h3>
 <pre><code>CapFloor (Type type, const Leg &amp;floatingLeg, const std::vector&lt; Rate &gt; &amp;capRates, const std::vector&lt; Rate &gt; &amp;floorRates)
-
-
-
 CapFloor (Type type, const Leg &amp;floatingLeg, const std::vector&lt; Rate &gt; &amp;strikes)
-
-
-
 Rate atmRate (const YieldTermStructure &amp;discountCurve) const
-
-
-
 Volatility impliedVolatility (Real price, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve, Volatility guess, Real accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const
-
-
 implied term volatility</code></pre>
 <p> <code>Instrument interface</code> </p>
 <p> bool <code>isExpired</code> () const<br />
@@ -69,17 +47,17 @@ implied term volatility</code></pre>
 <p> <code>Tests</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking that the price of a cap (resp. floor) decreases (resp. increases) with the strike rate.</p>
-<dt>*</p>
-<dd>the relationship between the values of caps, floors and the resulting collars is checked.</p>
-<dt>*</p>
-<dd>the put-call parity between the values of caps, floors and swaps is checked.</p>
-<dt>*</p>
-<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</p>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by checking it against a known good value.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking that the price of a cap (resp. floor) decreases (resp. increases) with the strike rate.</dd>
+<dt>*</dt>
+<dd>the relationship between the values of caps, floors and the resulting collars is checked.</dd>
+<dt>*</dt>
+<dd>the put-call parity between the values of caps, floors and swaps is checked.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned implied volatility is tested by using it for reproducing the target value.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by checking it against a known good value.</dd></dl>
 </dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>

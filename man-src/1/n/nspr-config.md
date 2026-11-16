@@ -11,49 +11,48 @@ description: "nspr-config – Return meta information about nspr libraries"
 <p> nspr-config &#8211; Return meta information about nspr libraries </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>nspr-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dl>
+<dt> <code>nspr-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>nspr-config</code></p>
-<dd>is a shell script which can be used to obtain gcc options for building client pacakges of nspr.</p>
+<dd>is a shell script which can be used to obtain gcc options for building client pacakges of nspr.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;prefix</code></p>
 <dl>
 <dt>
-<dd> Returns the top level system directory under which the nspr libraries are installed.</dl>
+</dt><dd> Returns the top level system directory under which the nspr libraries are installed.</dd></dl>
 <p> <code>&#8211;exec-prefix</code></p>
 <dl>
 <dt>
-<dd> Returns the top level system directory under which any nspr binaries would be installed.</dl>
+</dt><dd> Returns the top level system directory under which any nspr binaries would be installed.</dd></dl>
 <p> <code>&#8211;includedir</code> <i>count</i></p>
 <dl>
 <dt>
-<dd> Returns the path to the directory were the nspr headers are installed.</dl>
+</dt><dd> Returns the path to the directory were the nspr headers are installed.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Returns the upstream version of nspr in the form major_version-minor_version-patch_version.</dl>
+</dt><dd> Returns the upstream version of nspr in the form major_version-minor_version-patch_version.</dd></dl>
 <p> <code>&#8211;libs</code></p>
 <dl>
 <dt>
-<dd> Returns the compiler linking flags.</dl>
+</dt><dd> Returns the compiler linking flags.</dd></dl>
 <p> <code>&#8211;cflags</code></p>
 <dl>
 <dt>
-<dd> Returns the compiler include flags.</dl>
+</dt><dd> Returns the compiler include flags.</dd></dl>
 <p> <code>&#8211;libdir</code></p>
 <dl>
 <dt>
-<dd> Returns the path to the directory were the nspr libraries are installed.</dl>
+</dt><dd> Returns the path to the directory were the nspr libraries are installed.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following example will query for both include path and linkage flags: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         /usr/bin/nspr-config --cflags --libs
-      
 </pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> /usr/bin/nspr-config</p>
 <h2>SEE ALSO</h2>

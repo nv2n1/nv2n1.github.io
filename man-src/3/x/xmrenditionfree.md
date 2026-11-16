@@ -15,7 +15,7 @@ description: "XmRenditionFree — A convenience function that frees a rendition"
 <h2>Description</h2>
 <p><code>XmRenditionFree</code> recovers memory used by <i>rendition</i>.</p>
 <dl COMPACT>
-<dt><i>rendition</i></p>
-<dd>Specifies the rendition to be freed.</dl>
+<dt><i>rendition</i></dt>
+<dd>Specifies the rendition to be freed.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmrendition/">XmRendition</a></code>(3).</p>

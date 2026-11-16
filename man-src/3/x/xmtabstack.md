@@ -362,88 +362,88 @@ description: "XmTabStack – The TabStack widget class"
 </table>
 <p></center></p>
 <dl COMPACT>
-<dt><code>XmNfontList</code></p>
-<dd>Specifies the XmFontList to use when drawing the label strings for the tabs.</p>
-<dt><code>XmNhighlightThickness</code></p>
-<dd>Specifies the thickness of the rectangle drawn around the label string and label pixmap of the tab with keyboard traversal.</p>
-<dt><code>XmNstackedEffect</code></p>
-<dd>Specifies if the visuals should depict a stack of folders, True, or if the XmTabStack should use all available space for its children, False.</p>
-<dt><code>XmNtabAutoSelect</code></p>
-<dd>Specifies if a tab is automatically selected when it receives keyboard traversal.</p>
-<dt><code>XmNtabCornerPercent</code></p>
-<dd>Specifies the percent of the font height that should be used for the corner visual.</p>
-<dt><code>XmNtabLabelSpacing</code></p>
-<dd>Specifies the amount of space to leave between a text label and a pixmap in the tab area.</p>
-<dt><code>XmNtabMarginHeight</code></p>
-<dd>Specifies the vertical border that is placed around the label area of a tab.</p>
-<dt><code>XmNtabMarginWidth</code></p>
-<dd>Specifies the horizontal border that is placed around the label area of a tab.</p>
-<dt><code>XmNtabMode</code></p>
-<dd>Specifies the mode in which the XmTabStack distributes the tabs. Valid values for this resource include:</p>
+<dt><code>XmNfontList</code></dt>
+<dd>Specifies the XmFontList to use when drawing the label strings for the tabs.</dd>
+<dt><code>XmNhighlightThickness</code></dt>
+<dd>Specifies the thickness of the rectangle drawn around the label string and label pixmap of the tab with keyboard traversal.</dd>
+<dt><code>XmNstackedEffect</code></dt>
+<dd>Specifies if the visuals should depict a stack of folders, True, or if the XmTabStack should use all available space for its children, False.</dd>
+<dt><code>XmNtabAutoSelect</code></dt>
+<dd>Specifies if a tab is automatically selected when it receives keyboard traversal.</dd>
+<dt><code>XmNtabCornerPercent</code></dt>
+<dd>Specifies the percent of the font height that should be used for the corner visual.</dd>
+<dt><code>XmNtabLabelSpacing</code></dt>
+<dd>Specifies the amount of space to leave between a text label and a pixmap in the tab area.</dd>
+<dt><code>XmNtabMarginHeight</code></dt>
+<dd>Specifies the vertical border that is placed around the label area of a tab.</dd>
+<dt><code>XmNtabMarginWidth</code></dt>
+<dd>Specifies the horizontal border that is placed around the label area of a tab.</dd>
+<dt><code>XmNtabMode</code></dt>
+<dd>Specifies the mode in which the XmTabStack distributes the tabs. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTABS_BASIC</code></p>
-<dd>Distributes the tabs in either a vertical or horizontal row and clips the tabs if there is not enough room to display all the tabs.</p>
-<dt><code>XmTABS_STACKED</code></p>
-<dd>Distributes the tabs in either a vertical or horizontal row. If there is not enough room to display all the tabs additional rows are added. When a tab is selected, its row is moved next to the children in the stack.</p>
-<dt><code>XmTABS_STACKED_STATIC</code></p>
-<dd>Distributes the tabs in either a vertical or horizontal row. If there is not enough room to display all the tabs additional rows are added. The positions of rows are not changed when tabs are selected.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTABS_BASIC</code></dt>
+<dd>Distributes the tabs in either a vertical or horizontal row and clips the tabs if there is not enough room to display all the tabs.</dd>
+<dt><code>XmTABS_STACKED</code></dt>
+<dd>Distributes the tabs in either a vertical or horizontal row. If there is not enough room to display all the tabs additional rows are added. When a tab is selected, its row is moved next to the children in the stack.</dd>
+<dt><code>XmTABS_STACKED_STATIC</code></dt>
+<dd>Distributes the tabs in either a vertical or horizontal row. If there is not enough room to display all the tabs additional rows are added. The positions of rows are not changed when tabs are selected.</dd></dl>
 </dl>
-<dt><code>XmNtabOffset</code></p>
-<dd>Specifies the amount of indentation used to stagger the tab rows when displaying tabs in either the <code>XmTABS_STACKED</code> or <code>XmTABS_STACKED_STATIC</code> mode.</p>
-<dt><code>XmNtabOrientation</code></p>
-<dd>Specifies the orientation of the tab, and the rotation factor of the tab label. Valid values for this resource include:</p>
+<dt><code>XmNtabOffset</code></dt>
+<dd>Specifies the amount of indentation used to stagger the tab rows when displaying tabs in either the <code>XmTABS_STACKED</code> or <code>XmTABS_STACKED_STATIC</code> mode.</dd>
+<dt><code>XmNtabOrientation</code></dt>
+<dd>Specifies the orientation of the tab, and the rotation factor of the tab label. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTAB_ORIENTATION_DYNAMIC</code></p>
-<dd>Specifies that the orientation of the tabs should be calculated dynamically based on the <code>XmNtabSide</code> resource.</p>
-<dt><code>XmTABS_LEFT_TO_RIGHT</code></p>
-<dd>Specifies that the text appears at the default rotation.</p>
-<dt><code>XmTABS_RIGHT_TO_LEFT</code></p>
-<dd>Specifies that the text appears upside down.</p>
-<dt><code>XmTABS_TOP_TO_BOTTOM</code></p>
-<dd>Specifies that the text should be rotated to the vertical position with the first character drawn at the lowest y position and the bottom of the text faces the lowest x position.</p>
-<dt><code>XmTABS_BOTTOM_TO_TOP</code></p>
-<dd>Specifies that the text should be rotated to the vertical, position with the first character drawn at the highest y position and the bottom of the text faces the highest x position.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTAB_ORIENTATION_DYNAMIC</code></dt>
+<dd>Specifies that the orientation of the tabs should be calculated dynamically based on the <code>XmNtabSide</code> resource.</dd>
+<dt><code>XmTABS_LEFT_TO_RIGHT</code></dt>
+<dd>Specifies that the text appears at the default rotation.</dd>
+<dt><code>XmTABS_RIGHT_TO_LEFT</code></dt>
+<dd>Specifies that the text appears upside down.</dd>
+<dt><code>XmTABS_TOP_TO_BOTTOM</code></dt>
+<dd>Specifies that the text should be rotated to the vertical position with the first character drawn at the lowest y position and the bottom of the text faces the lowest x position.</dd>
+<dt><code>XmTABS_BOTTOM_TO_TOP</code></dt>
+<dd>Specifies that the text should be rotated to the vertical, position with the first character drawn at the highest y position and the bottom of the text faces the highest x position.</dd></dl>
 </dl>
-<dt><code>XmNtabSelectColor</code></p>
-<dd>Specifies the color of the selected tab.</p>
-<dt><code>XmNtabSelectedCallback</code></p>
-<dd>Specifies the list of callbacks to call when a child becomes the selected tab.</p>
-<dt><code>XmNtabSelectPixmap</code></p>
-<dd>Specifies the pixmap of the selected tab.</p>
-<dt><code>XmNtabSide</code></p>
-<dd>Specifies the location of the tab with respect to the children of the XmTabStack. Valid values for this resource include:</p>
+<dt><code>XmNtabSelectColor</code></dt>
+<dd>Specifies the color of the selected tab.</dd>
+<dt><code>XmNtabSelectedCallback</code></dt>
+<dd>Specifies the list of callbacks to call when a child becomes the selected tab.</dd>
+<dt><code>XmNtabSelectPixmap</code></dt>
+<dd>Specifies the pixmap of the selected tab.</dd>
+<dt><code>XmNtabSide</code></dt>
+<dd>Specifies the location of the tab with respect to the children of the XmTabStack. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTABS_ON_TOP</code></p>
-<dd>Specifies that the tabs should be placed above the children.</p>
-<dt><code>XmTABS_ON_BOTTOM</code></p>
-<dd>Specifies that the tabs should be placed below the children.</p>
-<dt><code>XmTABS_ON_RIGHT</code></p>
-<dd>Specifies that the tabs should be placed to the right of the children.</p>
-<dt><code>XmTABS_ON_LEFT</code></p>
-<dd>Specifies that the tabs should be placed to the left of the children.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTABS_ON_TOP</code></dt>
+<dd>Specifies that the tabs should be placed above the children.</dd>
+<dt><code>XmTABS_ON_BOTTOM</code></dt>
+<dd>Specifies that the tabs should be placed below the children.</dd>
+<dt><code>XmTABS_ON_RIGHT</code></dt>
+<dd>Specifies that the tabs should be placed to the right of the children.</dd>
+<dt><code>XmTABS_ON_LEFT</code></dt>
+<dd>Specifies that the tabs should be placed to the left of the children.</dd></dl>
 </dl>
-<dt><code>XmNtabStyle</code></p>
-<dd>Specifies the appearance of the tabs associated with the children of the XmTabStack. Valid values for this resource include:</p>
+<dt><code>XmNtabStyle</code></dt>
+<dd>Specifies the appearance of the tabs associated with the children of the XmTabStack. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmTABS_BEVELED</code></p>
-<dd>Draws the corners of the tabs as an angled line.</p>
-<dt><code>XmTABS_ROUNDED</code></p>
-<dd>Draws the corners of the tabs as a quarter of a circle.</p>
-<dt><code>XmTABS_SQUARED</code></p>
-<dd>Draws the tabs as rectangles.</dl>
+</dd><dl COMPACT>
+<dt><code>XmTABS_BEVELED</code></dt>
+<dd>Draws the corners of the tabs as an angled line.</dd>
+<dt><code>XmTABS_ROUNDED</code></dt>
+<dd>Draws the corners of the tabs as a quarter of a circle.</dd>
+<dt><code>XmTABS_SQUARED</code></dt>
+<dd>Draws the tabs as rectangles.</dd></dl>
 </dl>
-<dt><code>XmNuniformTabSize</code></p>
-<dd>Determines if all tabs should have a uniform major dimension, where the major dimension is width if the tab orientation is <code>XmTABS_LEFT_TO_RIGHT</code> or <code>XmTABS_RIGHT_TO_LEFT</code> or height if the tab orientation is <code>XmTABS_TOP_TO_BOTTOM</code> or <code>XmTABS_BOTTOM_TO_TOP</code>. When <code>XmNtabMode</code> is either <code>XmTABS_STACKED</code> or <code>XmTABS_STACKED_STATIC</code>, this resource is forced to True.</p>
-<dt><code>XmNuseImageCache</code></p>
-<dd>Destermines if the Xmmages used for rotating text and pixmaps should be cached. This increases performance but uses up more memory. </p>
+<dt><code>XmNuniformTabSize</code></dt>
+<dd>Determines if all tabs should have a uniform major dimension, where the major dimension is width if the tab orientation is <code>XmTABS_LEFT_TO_RIGHT</code> or <code>XmTABS_RIGHT_TO_LEFT</code> or height if the tab orientation is <code>XmTABS_TOP_TO_BOTTOM</code> or <code>XmTABS_BOTTOM_TO_TOP</code>. When <code>XmNtabMode</code> is either <code>XmTABS_STACKED</code> or <code>XmTABS_STACKED_STATIC</code>, this resource is forced to True.</dd>
+<dt><code>XmNuseImageCache</code></dt>
+<dd>Destermines if the Xmmages used for rotating text and pixmaps should be cached. This increases performance but uses up more memory. </dd>
 <p> <center></p>
 <table>
 <tr VALIGN=top>
@@ -632,57 +632,57 @@ description: "XmTabStack – The TabStack widget class"
 </tr>
 </table>
 <p></center></p>
-<dt><code>XmNfreeTabPixmap</code></p>
-<dd>Specifies that the pixmaps assigned to the <code>XmNlabelPixmap</code> resources should be freed when the widget is destroyed.</p>
-<dt><code>XmNtabAlignment</code></p>
-<dd>Specifies the alignment of the tab label. Valid values for this resource include:</p>
+<dt><code>XmNfreeTabPixmap</code></dt>
+<dd>Specifies that the pixmaps assigned to the <code>XmNlabelPixmap</code> resources should be freed when the widget is destroyed.</dd>
+<dt><code>XmNtabAlignment</code></dt>
+<dd>Specifies the alignment of the tab label. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmALIGNMENT_BEGINNING</code></p>
-<dd>Aligns the label to the left side of the available space.</p>
-<dt><code>XmALIGNMENT_CENTER</code></p>
-<dd>Aligns the label centered in the available space.</p>
-<dt><code>XmALIGNMENT_END</code></p>
-<dd>Aligns the label to the right side of the available space.</dl>
+</dd><dl COMPACT>
+<dt><code>XmALIGNMENT_BEGINNING</code></dt>
+<dd>Aligns the label to the left side of the available space.</dd>
+<dt><code>XmALIGNMENT_CENTER</code></dt>
+<dd>Aligns the label centered in the available space.</dd>
+<dt><code>XmALIGNMENT_END</code></dt>
+<dd>Aligns the label to the right side of the available space.</dd></dl>
 </dl>
-<dt><code>XmNtabBackground</code></p>
-<dd>Specifies the background pixel for the tab.</p>
-<dt><code>XmNtabBackgroundPixmap</code></p>
-<dd>Specifies the background pixmap for the tab.</p>
-<dt><code>XmNtabForeground</code></p>
-<dd>Specifies the foreground pixel for the tab.</p>
-<dt><code>XmNtabLabelPixmap</code></p>
-<dd>Specifies the pixmap to display in the tab label.</p>
-<dt><code>XmNtabLabelString</code></p>
-<dd>Specifies the XmString to display as the textual portion of the tab label. This is copied when set on the widget. The value fetched via XtGetValues should not be freed as it returns a pointer to the widgets value. If you wish to use the value returned from XtGetValues use XmStringCopy the returned value.</p>
-<dt><code>XmNtabPixmapPlacement</code></p>
-<dd>Specifies the location of the pixmap with respect to the text in the tab label. Valid values for this resource include:</p>
+<dt><code>XmNtabBackground</code></dt>
+<dd>Specifies the background pixel for the tab.</dd>
+<dt><code>XmNtabBackgroundPixmap</code></dt>
+<dd>Specifies the background pixmap for the tab.</dd>
+<dt><code>XmNtabForeground</code></dt>
+<dd>Specifies the foreground pixel for the tab.</dd>
+<dt><code>XmNtabLabelPixmap</code></dt>
+<dd>Specifies the pixmap to display in the tab label.</dd>
+<dt><code>XmNtabLabelString</code></dt>
+<dd>Specifies the XmString to display as the textual portion of the tab label. This is copied when set on the widget. The value fetched via XtGetValues should not be freed as it returns a pointer to the widgets value. If you wish to use the value returned from XtGetValues use XmStringCopy the returned value.</dd>
+<dt><code>XmNtabPixmapPlacement</code></dt>
+<dd>Specifies the location of the pixmap with respect to the text in the tab label. Valid values for this resource include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPIXMAP_TOP</code></p>
-<dd>Specifies that the pixmap should be above the XmString.</p>
-<dt><code>XmPIXMAP_BOTTOM</code></p>
-<dd>Specifies that the pixmap should be below the XmString.</p>
-<dt><code>XmPIXMAP_RIGHT</code></p>
-<dd>Specifies that the pixmap should be to the right of the XmString.</p>
-<dt><code>XmPIXMAP_LEFT</code></p>
-<dd>Specifies that the pixmap should be to the left of the XmString.</p>
-<dt><code>XmPIXMAP_ONLY</code></p>
-<dd>Specifies that only the pixmap portion of the tab label should be displayed.</p>
-<dt><code>XmPIXMAP_NONE</code></p>
-<dd>Specifies that only the XmString portion of the tab label should be displayed.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPIXMAP_TOP</code></dt>
+<dd>Specifies that the pixmap should be above the XmString.</dd>
+<dt><code>XmPIXMAP_BOTTOM</code></dt>
+<dd>Specifies that the pixmap should be below the XmString.</dd>
+<dt><code>XmPIXMAP_RIGHT</code></dt>
+<dd>Specifies that the pixmap should be to the right of the XmString.</dd>
+<dt><code>XmPIXMAP_LEFT</code></dt>
+<dd>Specifies that the pixmap should be to the left of the XmString.</dd>
+<dt><code>XmPIXMAP_ONLY</code></dt>
+<dd>Specifies that only the pixmap portion of the tab label should be displayed.</dd>
+<dt><code>XmPIXMAP_NONE</code></dt>
+<dd>Specifies that only the XmString portion of the tab label should be displayed.</dd></dl>
 </dl>
-<dt><code>XmNtabStringDirection</code></p>
-<dd>Specifies the string direction for the XmString portion of the tab label. Valid values for this resouce include:</p>
+<dt><code>XmNtabStringDirection</code></dt>
+<dd>Specifies the string direction for the XmString portion of the tab label. Valid values for this resouce include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSTRING_DIRECTION_L_TO_R</code></p>
-<dd>Left to right</p>
-<dt><code>XmSTRING_DIRECTION_R_TO_L</code></p>
-<dd>Right to left</dl>
+</dd><dl COMPACT>
+<dt><code>XmSTRING_DIRECTION_L_TO_R</code></dt>
+<dd>Left to right</dd>
+<dt><code>XmSTRING_DIRECTION_R_TO_L</code></dt>
+<dd>Right to left</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>
@@ -1699,18 +1699,18 @@ description: "XmTabStack – The TabStack widget class"
 } XmTabStackCallbackStruct;
 </code><font SIZE="+1"></font></pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked. Valid callbacks reasons include:</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked. Valid callbacks reasons include:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmCR_TAB_SELECTED</code></p>
-<dd>Indicates that a child has been made the selected widget.</dl>
+</dd><dl COMPACT>
+<dt><code>XmCR_TAB_SELECTED</code></dt>
+<dd>Indicates that a child has been made the selected widget.</dd></dl>
 </dl>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><i>selected_child</i></p>
-<dd>Contains the widget ID of the selected child.</dl>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><i>selected_child</i></dt>
+<dd>Contains the widget ID of the selected child.</dd></dl>
 <h3>Translations</h3>
 <p>XmTabStack includes the translations from the XmManager. </p>
 <h3>Additional Behavior</h3>

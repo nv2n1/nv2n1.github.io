@@ -13,38 +13,38 @@ description: "XmString — Data type for a compound string"
 <h2>Description</h2>
 <p><code>XmString</code> is the data type for a compound string. Compound strings consist of a sequence of components, including, but not limited to, the following:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_SEPARATOR</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_TAB</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_LAYOUT_POP</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_DIRECTION</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_LAYOUT_PUSH</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_CHARSET</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_FONTLIST_ELEMENT_TAG</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_LOCALE</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_LOCALE_TEXT</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_TAG</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_TEXT</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_END</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_RENDITION_BEGIN</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_RENDITION_END</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_UNKNOWN</code></p>
-<dt> &bull;</p>
-<dd><code>XmSTRING_COMPONENT_WIDECHAR_TEXT</code></dl>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_SEPARATOR</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_TAB</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_LAYOUT_POP</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_DIRECTION</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_LAYOUT_PUSH</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_CHARSET</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_FONTLIST_ELEMENT_TAG</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_LOCALE</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_LOCALE_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_TAG</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_END</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_RENDITION_BEGIN</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_RENDITION_END</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_UNKNOWN</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmSTRING_COMPONENT_WIDECHAR_TEXT</code></dd></dl>
 <p> and also a rendition tags table, text, and text component. When a compound string is displayed, the rendition tags and the direction are used to determine how to display the text. </p>
 <p> Calling <code>XtGetValues</code> for a resource whose type is <code>XmString</code> yields a copy of the compound string resource value. The application is responsible for using <code>XmStringFree</code> to free the memory allocated for the copy. </p>
 <p> Please see the <code>XmStringComponentType</code> reference page for more detail about compound string components, and for a description of the order in which the components should appear in a compound string. Refer to the <code>XmRenderTable</code> reference page for a description of the algorithm that associates the rendition tags used for displaying a compound string text component with a rendition in a render table.</p>

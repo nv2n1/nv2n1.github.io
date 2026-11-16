@@ -10,9 +10,7 @@ description: "textprintf_right_ex – Formatted right aligned output of a string
 <p>textprintf_right_ex &#8211; Formatted right aligned output of a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void textprintf_right_ex(BITMAP *bmp, const FONT *f, int x, y, color, bg,
-
                          const char *fmt, ...);</code></pre>
 <h2>Description</h2>
 <p>Like textprintf_ex(), but interprets the x coordinate as the right rather than the left edge of the string. This function shares the text length limitation of textprintf_ex(). Example: </p>

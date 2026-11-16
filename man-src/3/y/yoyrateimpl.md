@@ -10,21 +10,9 @@ description: "QuantLib::InterpolatedYoYInflationCurve – Inflation term structu
 <p>QuantLib::InterpolatedYoYInflationCurve &#8211; Inflation term structure based on interpolated year-on-year rates. </p>
 <h2>Synopsis</h2>
 <pre><code>const std::vector&lt; Date &gt; &amp; dates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; times () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; rates () const
-
-
-
 std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const
-
-
-
 Protected Member Functions
 InterpolatedYoYInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseYoYRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator())</code></pre>
 <p> Inherits <code>QuantLib::YoYInflationTermStructure</code>, and boost::noncopyable.</p>
@@ -42,21 +30,9 @@ InterpolatedYoYInflationCurve (const Date &amp;referenceDate, const Calendar &am
 <p>Protected Member Functions<br />
 InterpolatedYoYInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseYoYRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) <code>Inspectors</code> </p>
 <pre><code>const std::vector&lt; Date &gt; &amp; dates () const
-
-
-
 const std::vector&lt; Time &gt; &amp; times () const
-
-
-
 const std::vector&lt; Rate &gt; &amp; rates () const
-
-
-
 std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const
-
-
-
 Protected Member Functions
 InterpolatedYoYInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseYoYRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator())</code></pre>
 <p> <code>YoYInflationTermStructure interface</code> </p>
@@ -73,7 +49,7 @@ InterpolatedYoYInflationCurve (const Date &amp;referenceDate, const Calendar &am
 <p>Inflation term structure based on interpolated year-on-year rates. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The provided rates are not YY inflation-swap quotes.</dl>
+<dd>The provided rates are not YY inflation-swap quotes.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>InterpolatedYoYInflationCurve</code> (const <code>Date</code> &amp; referenceDate, const <code>Calendar</code> &amp; calendar, const <code>DayCounter</code> &amp; dayCounter, const <code>Period</code> &amp; lag, <code>Frequency</code> frequency, Rate baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; yTS, const Interpolator &amp; interpolator = Interpolator()) [protected]</h3>
 <p>Protected version for use when descendents don&#8217;t want to (or can&#8217;t) provide the points for interpolation on construction.</p>

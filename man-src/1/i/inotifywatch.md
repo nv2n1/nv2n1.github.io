@@ -18,73 +18,73 @@ description: "inotifywatch – gather filesystem access statistics using inotify
 <p> Some diagnostic information will be output on standard error. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Output some helpful usage information. </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Output some extra information on standard error during execution.</p>
-<dt><code>@&lt;file&gt;</code></p>
-<dd> When watching a directory tree recursively, exclude the specified file from being watched. The file must be specified with a relative or absolute path according to whether a relative or absolute path is given for watched directories. If a specific path is explicitly both included and excluded, it will always be watched. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Output some helpful usage information. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Output some extra information on standard error during execution.</dd>
+<dt><code>@&lt;file&gt;</code></dt>
+<dd> When watching a directory tree recursively, exclude the specified file from being watched. The file must be specified with a relative or absolute path according to whether a relative or absolute path is given for watched directories. If a specific path is explicitly both included and excluded, it will always be watched. </dd>
 <p> <code>Note:</code> If you need to watch a directory or file whose name starts with @, give the absolute path.</p>
-<dt><code>&#8211;fromfile &lt;file&gt;</code></p>
-<dd> Read filenames to watch or exclude from a file, one filename per line. If filenames begin with @ they are excluded as described above. If &lt;file&gt; is `-&#8216;, filenames are read from standard input. Use this option if you need to watch too many files to pass in as command line arguments.</p>
-<dt><code>-z, &#8211;zero</code></p>
-<dd> Output table rows and columns even if all elements are zero. By default, rows and columns are only output if they contain non-zero elements. Using this option when watching for every event on a lot of files can result in a <i>lot</i> of output! </p>
-<dt><code>&#8211;exclude &lt;pattern&gt;</code></p>
-<dd> Do not process any events whose filename matches the specified POSIX extended regular expression, case sensitive. </p>
-<dt><code>&#8211;excludei &lt;pattern&gt;</code></p>
-<dd> Do not process any events whose filename matches the specified POSIX extended regular expression, case insensitive. </p>
-<dt><code>-r, &#8211;recursive</code></p>
-<dd> Watch all subdirectories of any directories passed as arguments. Watches will be set up recursively to an unlimited depth. Symbolic links are not traversed. If new directories are created within watched directories they will automatically be watched. </p>
+<dt><code>&#8211;fromfile &lt;file&gt;</code></dt>
+<dd> Read filenames to watch or exclude from a file, one filename per line. If filenames begin with @ they are excluded as described above. If &lt;file&gt; is `-&#8216;, filenames are read from standard input. Use this option if you need to watch too many files to pass in as command line arguments.</dd>
+<dt><code>-z, &#8211;zero</code></dt>
+<dd> Output table rows and columns even if all elements are zero. By default, rows and columns are only output if they contain non-zero elements. Using this option when watching for every event on a lot of files can result in a <i>lot</i> of output! </dd>
+<dt><code>&#8211;exclude &lt;pattern&gt;</code></dt>
+<dd> Do not process any events whose filename matches the specified POSIX extended regular expression, case sensitive. </dd>
+<dt><code>&#8211;excludei &lt;pattern&gt;</code></dt>
+<dd> Do not process any events whose filename matches the specified POSIX extended regular expression, case insensitive. </dd>
+<dt><code>-r, &#8211;recursive</code></dt>
+<dd> Watch all subdirectories of any directories passed as arguments. Watches will be set up recursively to an unlimited depth. Symbolic links are not traversed. If new directories are created within watched directories they will automatically be watched. </dd>
 <p> <code>Warning:</code> If you use this option while watching the root directory of a large tree, it may take quite a while until all inotify watches are established, and events will not be received in this time. Also, since one inotify watch will be established per subdirectory, it is possible that the maximum amount of inotify watches per user will be reached. The default maximum is 8192; it can be increased by writing to <code>/proc/sys/fs/inotify/max_user_watches</code>. </p>
-<dt><code>-t &lt;seconds&gt;, &#8211;timeout &lt;seconds&gt;</code></p>
-<dd> Listen only for the specified amount of seconds. If not specified, inotifywatch will gather statistics until receiving an interrupt signal by (for example) pressing CONTROL-C at the console. </p>
-<dt><code>-e &lt;event&gt;, &#8211;event &lt;event&gt;</code></p>
-<dd> Listen for specific event(s) only. The events which can be listened for are listed in the <code>EVENTS</code> section. This option can be specified more than once. If omitted, all events are listened for. </p>
-<dt><code>-a &lt;event&gt;, &#8211;ascending &lt;event&gt;</code></p>
-<dd> Sort output ascending by event counts for the specified event. Sortable events include `total&#8217; and all the events listed in the <code>EVENTS</code> section except `move&#8217; and `close&#8217; (you must use `moved_to&#8217;, `moved_from&#8217;, `close_write&#8217; or `close_nowrite&#8217; instead). The default is to sort descending by `total&#8217;. </p>
-<dt><code>-d &lt;event&gt;, &#8211;descending &lt;event&gt;</code></p>
-<dd> Sort output descending by event counts for the specified event. Sortable events include `total&#8217; and all the events listed in the <code>EVENTS</code> section except `move&#8217; and `close&#8217; (you must use `moved_to&#8217;, `moved_from&#8217;, `close_write&#8217; or `close_nowrite&#8217; instead). The default is to sort descending by `total&#8217;. </p>
+<dt><code>-t &lt;seconds&gt;, &#8211;timeout &lt;seconds&gt;</code></dt>
+<dd> Listen only for the specified amount of seconds. If not specified, inotifywatch will gather statistics until receiving an interrupt signal by (for example) pressing CONTROL-C at the console. </dd>
+<dt><code>-e &lt;event&gt;, &#8211;event &lt;event&gt;</code></dt>
+<dd> Listen for specific event(s) only. The events which can be listened for are listed in the <code>EVENTS</code> section. This option can be specified more than once. If omitted, all events are listened for. </dd>
+<dt><code>-a &lt;event&gt;, &#8211;ascending &lt;event&gt;</code></dt>
+<dd> Sort output ascending by event counts for the specified event. Sortable events include `total&#8217; and all the events listed in the <code>EVENTS</code> section except `move&#8217; and `close&#8217; (you must use `moved_to&#8217;, `moved_from&#8217;, `close_write&#8217; or `close_nowrite&#8217; instead). The default is to sort descending by `total&#8217;. </dd>
+<dt><code>-d &lt;event&gt;, &#8211;descending &lt;event&gt;</code></dt>
+<dd> Sort output descending by event counts for the specified event. Sortable events include `total&#8217; and all the events listed in the <code>EVENTS</code> section except `move&#8217; and `close&#8217; (you must use `moved_to&#8217;, `moved_from&#8217;, `close_write&#8217; or `close_nowrite&#8217; instead). The default is to sort descending by `total&#8217;. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> The program executed successfully.</p>
-<dt><code>1</code></p>
-<dd> An error occurred in execution of the program. </p>
+<dt><code>0</code></dt>
+<dd> The program executed successfully.</dd>
+<dt><code>1</code></dt>
+<dd> An error occurred in execution of the program. </dd>
 </dl>
 <h2>EVENTS</h2>
 <p> The following events are valid for use with the <code>-e</code> option: </p>
 <dl>
-<dt><code>access</code></p>
-<dd> A watched file or a file within a watched directory was read from. </p>
-<dt><code>modify</code></p>
-<dd> A watched file or a file within a watched directory was written to. </p>
-<dt><code>attrib</code></p>
-<dd> The metadata of a watched file or a file within a watched directory was modified. This includes timestamps, file permissions, extended attributes etc. </p>
-<dt><code>close_write</code></p>
-<dd> A watched file or a file within a watched directory was closed, after being opened in writeable mode. This does not necessarily imply the file was written to. </p>
-<dt><code>close_nowrite</code></p>
-<dd> A watched file or a file within a watched directory was closed, after being opened in read-only mode. </p>
-<dt><code>close</code></p>
-<dd> A watched file or a file within a watched directory was closed, regardless of how it was opened. Note that this is actually implemented simply by listening for both <code>close_write</code> and <code>close_nowrite,</code> hence all close events received will be output as one of these, not <code>CLOSE.</code> </p>
-<dt><code>open</code></p>
-<dd> A watched file or a file within a watched directory was opened. </p>
-<dt><code>moved_to</code></p>
-<dd> A file or directory was moved into a watched directory. This event occurs even if the file is simply moved from and to the same directory. </p>
-<dt><code>moved_from</code></p>
-<dd> A file or directory was moved from a watched directory. This event occurs even if the file is simply moved from and to the same directory. </p>
-<dt><code>move</code></p>
-<dd> A file or directory was moved from or to a watched directory. Note that this is actually implemented simply by listening for both <code>moved_to</code> and <code>moved_from,</code> hence all close events received will be output as one or both of these, not <code>MOVE.</code> </p>
-<dt><code>move_self</code></p>
-<dd> A watched file or directory was moved. After this event, the file or directory is no longer being watched. </p>
-<dt><code>create</code></p>
-<dd> A file or directory was created within a watched directory. </p>
-<dt><code>delete</code></p>
-<dd> A file or directory within a watched directory was deleted. </p>
-<dt><code>delete_self</code></p>
-<dd> A watched file or directory was deleted. After this event the file or directory is no longer being watched. Note that this event can occur even if it is not explicitly being listened for. </p>
-<dt><code>unmount</code></p>
-<dd> The filesystem on which a watched file or directory resides was unmounted. After this event the file or directory is no longer being watched. Note that this event can occur even if it is not explicitly being listened to. </p>
+<dt><code>access</code></dt>
+<dd> A watched file or a file within a watched directory was read from. </dd>
+<dt><code>modify</code></dt>
+<dd> A watched file or a file within a watched directory was written to. </dd>
+<dt><code>attrib</code></dt>
+<dd> The metadata of a watched file or a file within a watched directory was modified. This includes timestamps, file permissions, extended attributes etc. </dd>
+<dt><code>close_write</code></dt>
+<dd> A watched file or a file within a watched directory was closed, after being opened in writeable mode. This does not necessarily imply the file was written to. </dd>
+<dt><code>close_nowrite</code></dt>
+<dd> A watched file or a file within a watched directory was closed, after being opened in read-only mode. </dd>
+<dt><code>close</code></dt>
+<dd> A watched file or a file within a watched directory was closed, regardless of how it was opened. Note that this is actually implemented simply by listening for both <code>close_write</code> and <code>close_nowrite,</code> hence all close events received will be output as one of these, not <code>CLOSE.</code> </dd>
+<dt><code>open</code></dt>
+<dd> A watched file or a file within a watched directory was opened. </dd>
+<dt><code>moved_to</code></dt>
+<dd> A file or directory was moved into a watched directory. This event occurs even if the file is simply moved from and to the same directory. </dd>
+<dt><code>moved_from</code></dt>
+<dd> A file or directory was moved from a watched directory. This event occurs even if the file is simply moved from and to the same directory. </dd>
+<dt><code>move</code></dt>
+<dd> A file or directory was moved from or to a watched directory. Note that this is actually implemented simply by listening for both <code>moved_to</code> and <code>moved_from,</code> hence all close events received will be output as one or both of these, not <code>MOVE.</code> </dd>
+<dt><code>move_self</code></dt>
+<dd> A watched file or directory was moved. After this event, the file or directory is no longer being watched. </dd>
+<dt><code>create</code></dt>
+<dd> A file or directory was created within a watched directory. </dd>
+<dt><code>delete</code></dt>
+<dd> A file or directory within a watched directory was deleted. </dd>
+<dt><code>delete_self</code></dt>
+<dd> A watched file or directory was deleted. After this event the file or directory is no longer being watched. Note that this event can occur even if it is not explicitly being listened for. </dd>
+<dt><code>unmount</code></dt>
+<dd> The filesystem on which a watched file or directory resides was unmounted. After this event the file or directory is no longer being watched. Note that this event can occur even if it is not explicitly being listened to. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Watching the `~/.beagle&#8217; directory for 60 seconds: </p>

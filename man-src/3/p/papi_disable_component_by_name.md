@@ -31,7 +31,8 @@ ar Example:</pre>
 <p> <code>PAPI_disable_component_by_name()</code> must be called before <code>PAPI_library_init()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_library_init</code> </p>
+<dd><code>PAPI_library_init</code> </dd>
 <p> <code>PAPI_disable_component</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -27,17 +27,17 @@ description: "perl5005delta – what’s new for perl5.005"
 <h3>C Source Compatibility</h3>
 <p> There have been a large number of changes in the internals to support the new features in this release.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Core sources now require <font SIZE="-1">ANSI C</font> compiler </p>
+<dt>&bull;</dt>
+<dd> Core sources now require <font SIZE="-1">ANSI C</font> compiler </dd>
 <p> An <font SIZE="-1">ANSI C</font> compiler is now <code>required</code> to build perl. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>.</p>
-<dt>&bull;</p>
-<dd> All Perl global variables must now be referenced with an explicit prefix </p>
+<dt>&bull;</dt>
+<dd> All Perl global variables must now be referenced with an explicit prefix </dd>
 <p> All Perl global variables that are visible for use by extensions now have a <tt>&quot;PL_&quot;</tt> prefix. New extensions should <tt>&quot;not&quot;</tt> refer to perl globals by their unqualified names. To preserve sanity, we provide limited backward compatibility for globals that are being widely used like <tt>&quot;sv_undef&quot;</tt> and <tt>&quot;na&quot;</tt> (which should now be written as <tt>&quot;PL_sv_undef&quot;</tt>, <tt>&quot;PL_na&quot;</tt> etc.) </p>
 <p> If you find that your <font SIZE="-1">XS</font> extension does not compile anymore because a perl global is not visible, try adding a <tt>&quot;PL_&quot;</tt> prefix to the global and rebuild. </p>
 <p> It is strongly recommended that all functions in the Perl <font SIZE="-1">API</font> that don&#8217;t begin with <tt>&quot;perl&quot;</tt> be referenced with a <tt>&quot;Perl_&quot;</tt> prefix. The bare function names without the <tt>&quot;Perl_&quot;</tt> prefix are supported with macros, but this support may cease in a future release. </p>
 <p> See perlapi.</p>
-<dt>&bull;</p>
-<dd> Enabling threads has source compatibility issues </p>
+<dt>&bull;</dt>
+<dd> Enabling threads has source compatibility issues </dd>
 <p> Perl built with threading enabled requires extensions to use the new <tt>&quot;dTHR&quot;</tt> macro to initialize the handle to access per-thread data. If you see a compiler error that talks about the variable <tt>&quot;thr&quot;</tt> not being declared (when building a module that has <font SIZE="-1">XS</font> code), you need to add <tt>&quot;dTHR;&quot;</tt> at the beginning of the block that elicited the error. </p>
 <p> The <font SIZE="-1">API</font> function <tt>&quot;perl_get_sv(&quot;@&quot;,GV_ADD)&quot;</tt> should be used instead of directly accessing perl globals as <tt>&quot;GvSV(errgv)&quot;</tt>. The <font SIZE="-1">API</font> call is backward compatible with existing perls and provides source compatibility with threading is enabled. </p>
 <p> See &#8220;C Source Compatibility&#8221; for more information.</dl>
@@ -69,8 +69,8 @@ description: "perl5005delta – what’s new for perl5.005"
 <p> Perl&#8217;s regular expression engine has been seriously overhauled, and many new constructs are supported. Several bugs have been fixed. </p>
 <p> Here is an itemized summary:</p>
 <dl>
-<dt>Many new and improved optimizations</p>
-<dd> Changes in the <font SIZE="-1">RE</font> engine: </p>
+<dt>Many new and improved optimizations</dt>
+<dd> Changes in the <font SIZE="-1">RE</font> engine: </dd>
 <pre><code>
 Unneeded nodes removed;
 Substrings merged together;
@@ -86,8 +86,8 @@ New types of nodes to process(SUBEXPR) * and similar expressions
 study() was not working;<br />
 / blah / may be optimized to an analogue of index() if $ &amp;$` $&#8217; not seen; Unneeded copying of matched &#8211; against string removed;<br />
 Only matched part of the string is copying if $` $&#8217; were not seen;</p>
-<dt>Many bug fixes</p>
-<dd> Note that only the major bug fixes are listed here. See <i>Changes</i> for others. </p>
+<dt>Many bug fixes</dt>
+<dd> Note that only the major bug fixes are listed here. See <i>Changes</i> for others. </dd>
 <p>        Backtracking might not restore start of $3.<br />
         No feedback if max count for * or + on &#8220;complex&#8221; subexpression<br />
             was reached, similarly (but at compile time) for {3,34567}<br />
@@ -97,8 +97,8 @@ Only matched part of the string is copying if $` $&#8217; were not seen;</p>
         (ZERO &#8211; LENGTH) * was prohibited;<br />
         Long REs were not allowed;<br />
         / RE / g could skip matches at the same position after a zero &#8211; length match;</p>
-<dt>New regular expression constructs</p>
-<dd> The following new syntax elements are supported: </p>
+<dt>New regular expression constructs</dt>
+<dd> The following new syntax elements are supported: </dd>
 <pre>
         (?&lt;=RE)
         (?&lt;!RE)
@@ -109,9 +109,9 @@ Only matched part of the string is copying if $` $&#8217; were not seen;</p>
         (?&gt;RE)
         \z
 </pre>
-<dt>New operator for precompiled regular expressions</p>
-<dd> See &quot;New <tt>&quot;qr//&quot;</tt> operator&quot;.</p>
-<dt>Other improvements</p>
+<dt>New operator for precompiled regular expressions</dt>
+<dd> See &quot;New <tt>&quot;qr//&quot;</tt> operator&quot;.</dd>
+<dt>Other improvements</dt>
 <dd>
 Better debugging output(possibly with colors),<br />
     even from non &#8211; debugging Perl;<br />
@@ -119,8 +119,8 @@ RE engine code now looks like C, not like assembler;<br />
 Behaviour of RE modifiable by `use re&#8217; directive; Improved documentation;<br />
 Test suite significantly extended;<br />
 Syntax<br />
-    [:^upper:] etc., reserved inside character classes;</p>
-<dt>Incompatible changes</p>
+    [:^upper:] etc., reserved inside character classes;</dd>
+<dt>Incompatible changes</dt>
 <dd>
 <pre>
         (?i) localized inside enclosing group;
@@ -128,7 +128,7 @@ Syntax<br />
         /RE/g may match at the same position (with non-zero length)
             after a zero-length match (bug fix).
 </pre>
-</dl>
+</dd></dl>
 <p> See perlre and perlop.</p>
 <h3>Improved <code>malloc()</code></h3>
 <p> See banner at the beginning of <tt>&quot;malloc.c&quot;</tt> for details.</p>
@@ -224,64 +224,64 @@ printit(substr($x, 0, 5));</p>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules</h3>
 <dl>
-<dt>B</p>
-<dd> Perl compiler and tools. See B.</p>
-<dt>Data::Dumper</p>
-<dd> A module to pretty print Perl data. See Data::Dumper.</p>
-<dt>Dumpvalue</p>
-<dd> A module to dump perl values to the screen. See Dumpvalue.</p>
-<dt>Errno</p>
-<dd> A module to look up errors more conveniently. See Errno.</p>
-<dt>File::Spec</p>
-<dd> A portable <font SIZE="-1">API</font> for file operations.</p>
-<dt>ExtUtils::Installed</p>
-<dd> Query and manage installed modules.</p>
-<dt>ExtUtils::Packlist</p>
-<dd> Manipulate .packlist files.</p>
-<dt>Fatal</p>
-<dd> Make functions/builtins succeed or die.</p>
-<dt>IPC::SysV</p>
-<dd> Constants and other support infrastructure for System V <font SIZE="-1">IPC</font> operations in perl.</p>
-<dt>Test</p>
-<dd> A framework for writing test suites.</p>
-<dt>Tie::Array</p>
-<dd> Base class for tied arrays.</p>
-<dt>Tie::Handle</p>
-<dd> Base class for tied handles.</p>
-<dt>Thread</p>
-<dd> Perl thread creation, manipulation, and support.</p>
-<dt>attrs</p>
-<dd> Set subroutine attributes.</p>
-<dt>fields</p>
-<dd> Compile-time class fields.</p>
-<dt>re</p>
-<dd> Various pragmata to control behavior of regular expressions.</dl>
+<dt>B</dt>
+<dd> Perl compiler and tools. See B.</dd>
+<dt>Data::Dumper</dt>
+<dd> A module to pretty print Perl data. See Data::Dumper.</dd>
+<dt>Dumpvalue</dt>
+<dd> A module to dump perl values to the screen. See Dumpvalue.</dd>
+<dt>Errno</dt>
+<dd> A module to look up errors more conveniently. See Errno.</dd>
+<dt>File::Spec</dt>
+<dd> A portable <font SIZE="-1">API</font> for file operations.</dd>
+<dt>ExtUtils::Installed</dt>
+<dd> Query and manage installed modules.</dd>
+<dt>ExtUtils::Packlist</dt>
+<dd> Manipulate .packlist files.</dd>
+<dt>Fatal</dt>
+<dd> Make functions/builtins succeed or die.</dd>
+<dt>IPC::SysV</dt>
+<dd> Constants and other support infrastructure for System V <font SIZE="-1">IPC</font> operations in perl.</dd>
+<dt>Test</dt>
+<dd> A framework for writing test suites.</dd>
+<dt>Tie::Array</dt>
+<dd> Base class for tied arrays.</dd>
+<dt>Tie::Handle</dt>
+<dd> Base class for tied handles.</dd>
+<dt>Thread</dt>
+<dd> Perl thread creation, manipulation, and support.</dd>
+<dt>attrs</dt>
+<dd> Set subroutine attributes.</dd>
+<dt>fields</dt>
+<dd> Compile-time class fields.</dd>
+<dt>re</dt>
+<dd> Various pragmata to control behavior of regular expressions.</dd></dl>
 <h3>Changes in existing modules</h3>
 <dl>
-<dt>Benchmark</p>
-<dd> You can now run tests for <i>x</i> seconds instead of guessing the right number of tests to run. </p>
+<dt>Benchmark</dt>
+<dd> You can now run tests for <i>x</i> seconds instead of guessing the right number of tests to run. </dd>
 <p> Keeps better time.</p>
-<dt>Carp</p>
-<dd> Carp has a new function <code>cluck()</code>. <code>cluck()</code> warns, like <code>carp()</code>, but also adds a stack backtrace to the error message, like <code>confess()</code>.</p>
-<dt><font SIZE="-1">CGI</font></p>
-<dd> <font SIZE="-1">CGI</font> has been updated to version 2.42.</p>
-<dt>Fcntl</p>
-<dd> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large (more than 4G) file access (the 64-bit support is not yet working, though, so no need to get overly excited), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the mask of O_RDONLY, O_WRONLY, and O_RDWR.</p>
-<dt>Math::Complex</p>
-<dd> The accessors methods Re, Im, arg, abs, rho, theta, methods can ($z-&gt;<code>Re()</code>) now also act as mutators ($z-&gt;<code>Re</code>(3)).</p>
-<dt>Math::Trig</p>
-<dd> A little bit of radial trigonometry (cylindrical and spherical) added, for example the great circle distance.</p>
-<dt><font SIZE="-1">POSIX</font></p>
-<dd> <font SIZE="-1">POSIX</font> now has its own platform-specific hints files.</p>
-<dt>DB_File</p>
-<dd> DB_File supports version 2.x of Berkeley <font SIZE="-1">DB.</font> See <tt>&quot;ext/DB_File/Changes&quot;</tt>.</p>
-<dt>MakeMaker</p>
-<dd> MakeMaker now supports writing empty makefiles, provides a way to specify that site <code>umask()</code> policy should be honored. There is also better support for manipulation of .packlist files, and getting information about installed modules. </p>
+<dt>Carp</dt>
+<dd> Carp has a new function <code>cluck()</code>. <code>cluck()</code> warns, like <code>carp()</code>, but also adds a stack backtrace to the error message, like <code>confess()</code>.</dd>
+<dt><font SIZE="-1">CGI</font></dt>
+<dd> <font SIZE="-1">CGI</font> has been updated to version 2.42.</dd>
+<dt>Fcntl</dt>
+<dd> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large (more than 4G) file access (the 64-bit support is not yet working, though, so no need to get overly excited), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the mask of O_RDONLY, O_WRONLY, and O_RDWR.</dd>
+<dt>Math::Complex</dt>
+<dd> The accessors methods Re, Im, arg, abs, rho, theta, methods can ($z-&gt;<code>Re()</code>) now also act as mutators ($z-&gt;<code>Re</code>(3)).</dd>
+<dt>Math::Trig</dt>
+<dd> A little bit of radial trigonometry (cylindrical and spherical) added, for example the great circle distance.</dd>
+<dt><font SIZE="-1">POSIX</font></dt>
+<dd> <font SIZE="-1">POSIX</font> now has its own platform-specific hints files.</dd>
+<dt>DB_File</dt>
+<dd> DB_File supports version 2.x of Berkeley <font SIZE="-1">DB.</font> See <tt>&quot;ext/DB_File/Changes&quot;</tt>.</dd>
+<dt>MakeMaker</dt>
+<dd> MakeMaker now supports writing empty makefiles, provides a way to specify that site <code>umask()</code> policy should be honored. There is also better support for manipulation of .packlist files, and getting information about installed modules. </dd>
 <p> Extensions that have both architecture-dependent and architecture-independent files are now always installed completely in the architecture-dependent locations. Previously, the shareable parts were shared both across architectures and across perl versions and were therefore liable to be overwritten with newer versions that might have subtle incompatibilities.</p>
-<dt><font SIZE="-1">CPAN</font></p>
-<dd> See perlmodinstall and <font SIZE="-1">CPAN</font>.</p>
-<dt>Cwd</p>
-<dd> Cwd::cwd is faster on most platforms.</dl>
+<dt><font SIZE="-1">CPAN</font></dt>
+<dd> See perlmodinstall and <font SIZE="-1">CPAN</font>.</dd>
+<dt>Cwd</dt>
+<dd> Cwd::cwd is faster on most platforms.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <tt>&quot;h2ph&quot;</tt> and related utilities have been vastly overhauled. </p>
 <p> <tt>&quot;perlcc&quot;</tt>, a new experimental front end for the compiler is available. </p>
@@ -298,59 +298,59 @@ printit(substr($x, 0, 5));</p>
 <p> perlthrtut gives a tutorial on threads.</p>
 <h2>New Diagnostics</h2>
 <dl>
-<dt>Ambiguous call resolved as CORE::%s(), qualify as such or use &amp;</p>
-<dd> (W) A subroutine you have declared has the same name as a Perl keyword, and you have used the name without qualification for calling one or the other. Perl decided to call the builtin because the subroutine is not imported. </p>
+<dt>Ambiguous call resolved as CORE::%s(), qualify as such or use &amp;</dt>
+<dd> (W) A subroutine you have declared has the same name as a Perl keyword, and you have used the name without qualification for calling one or the other. Perl decided to call the builtin because the subroutine is not imported. </dd>
 <p> To force interpretation as a subroutine call, either put an ampersand before the subroutine name, or qualify the name with its package. Alternatively, you can import the subroutine (or pretend that it&#8217;s imported with the <tt>&quot;use subs&quot;</tt> pragma). </p>
 <p> To silently interpret it as the Perl operator, use the <tt>&quot;CORE::&quot;</tt> prefix on the operator (e.g. <tt>&quot;CORE::log($x)&quot;</tt>) or by declaring the subroutine to be an object method (see &#8220;attrs&#8221;).</p>
-<dt>Bad index while coercing array into hash</p>
-<dd> (F) The index looked up in the hash found as the 0&#8217;th element of a pseudo-hash is not legal. Index values must be at 1 or greater. See perlref.</p>
-<dt>Bareword &quot;%s&quot; refers to nonexistent package</p>
-<dd> (W) You used a qualified bareword of the form <tt>&quot;Foo::&quot;</tt>, but the compiler saw no other uses of that namespace before that point. Perhaps you need to predeclare a package?</p>
-<dt>Can&#8217;t call method &quot;%s&quot; on an undefined value</p>
-<dd> (F) You used the syntax of a method call, but the slot filled by the object reference or package name contains an undefined value. Something like this will reproduce the error: </p>
+<dt>Bad index while coercing array into hash</dt>
+<dd> (F) The index looked up in the hash found as the 0&#8217;th element of a pseudo-hash is not legal. Index values must be at 1 or greater. See perlref.</dd>
+<dt>Bareword &quot;%s&quot; refers to nonexistent package</dt>
+<dd> (W) You used a qualified bareword of the form <tt>&quot;Foo::&quot;</tt>, but the compiler saw no other uses of that namespace before that point. Perhaps you need to predeclare a package?</dd>
+<dt>Can&#8217;t call method &quot;%s&quot; on an undefined value</dt>
+<dd> (F) You used the syntax of a method call, but the slot filled by the object reference or package name contains an undefined value. Something like this will reproduce the error: </dd>
 <p>$BADREF = 42;<br />
 process $BADREF 1, 2, 3;<br />
 $BADREF-&gt;process(1, 2, 3);</p>
-<dt>Can&#8217;t check filesystem of script &quot;%s&quot; for nosuid</p>
-<dd> (P) For some reason you can&#8217;t check the filesystem of the script for nosuid.</p>
-<dt>Can&#8217;t coerce array into hash</p>
-<dd> (F) You used an array where a hash was expected, but the array has no information on how to map from keys to array indices. You can do that only with arrays that have a hash reference at index 0.</p>
-<dt>Can&#8217;t goto subroutine from an eval-string</p>
-<dd> (F) The &#8220;goto subroutine&#8221; call can&#8217;t be used to jump out of an eval &#8220;string&#8221;. (You can use it to jump out of an eval {<font SIZE="-1">BLOCK</font>}, but you probably don&#8217;t want to.)</p>
-<dt>Can&#8217;t localize pseudo-hash element</p>
-<dd> (F) You said something like <tt>&quot;local $ar-&gt;{'key'}&quot;</tt>, where <tt>$ar</tt> is a reference to a pseudo-hash. That hasn&#8217;t been implemented yet, but you can get a similar effect by localizing the corresponding array element directly: <tt>&quot;local $ar-&gt;[$ar-&gt;[0]{'key'}]&quot;</tt>.</p>
-<dt>Can&#8217;t use %%! because Errno.pm is not available</p>
-<dd> (F) The first time the %! hash is used, perl automatically loads the Errno.pm module. The Errno module is expected to tie the %! hash to provide symbolic names for <tt>$!</tt> errno values.</p>
-<dt>Cannot find an opnumber for &quot;%s&quot;</p>
-<dd> (F) A string of a form <tt>&quot;CORE::word&quot;</tt> was given to <code>prototype()</code>, but there is no builtin with the name <tt>&quot;word&quot;</tt>.</p>
-<dt>Character class syntax [. .] is reserved for future extensions</p>
-<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[.&#8221; and ending with &#8220;.]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[.&#8221; and &#8220;.\]&#8221;.</p>
-<dt>Character class syntax [: :] is reserved for future extensions</p>
-<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[:&#8221; and ending with &#8220;:]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[:&#8221; and &#8220;:\]&#8221;.</p>
-<dt>Character class syntax [= =] is reserved for future extensions</p>
-<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[=&#8221; and ending with &#8220;=]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[=&#8221; and &#8220;=\]&#8221;.</p>
-<dt>%s: Eval-group in insecure regular expression</p>
-<dd> (F) Perl detected tainted data when trying to compile a regular expression that contains the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion, which is unsafe. See &#8220;(?{ code })&#8221; in perlre, and perlsec.</p>
-<dt>%s: Eval-group not allowed, use re &#8216;eval&#8217;</p>
-<dd> (F) A regular expression contained the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion, but that construct is only allowed when the <tt>&quot;use re 'eval'&quot;</tt> pragma is in effect. See &#8220;(?{ code })&#8221; in perlre.</p>
-<dt>%s: Eval-group not allowed at run time</p>
-<dd> (F) Perl tried to compile a regular expression containing the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion at run time, as it would when the pattern contains interpolated values. Since that is a security risk, it is not allowed. If you insist, you may still do this by explicitly building the pattern from an interpolated string at run time and using that in an <code>eval()</code>. See &#8220;(?{ code })&#8221; in perlre.</p>
-<dt>Explicit blessing to &#8221; (assuming package main)</p>
-<dd> (W) You are blessing a reference to a zero length string. This has the effect of blessing the reference into the package main. This is usually not what you want. Consider providing a default target package, e.g. bless($ref, <tt>$p</tt> || &#8216;MyPackage&#8217;);</p>
-<dt>Illegal hex digit ignored</p>
-<dd> (W) You may have tried to use a character other than 0 &#8211; 9 or A &#8211; F in a hexadecimal number. Interpretation of the hexadecimal number stopped before the illegal character.</p>
-<dt>No such array field</p>
-<dd> (F) You tried to access an array as a hash, but the field name used is not defined. The hash at index 0 should map all valid field names to array indices for that to work.</p>
-<dt>No such field &quot;%s&quot; in variable %s of type %s</p>
-<dd> (F) You tried to access a field of a typed variable where the type does not know about the field name. The field names are looked up in the <tt>%FIELDS</tt> hash in the type package at compile time. The <tt>%FIELDS</tt> hash is usually set up with the &#8216;fields&#8217; pragma.</p>
-<dt>Out of memory during ridiculously large request</p>
-<dd> (F) You can&#8217;t allocate more than 2^31+&#8220;small amount&#8221; bytes. This error is most likely to be caused by a typo in the Perl program. e.g., <tt>$arr[time]</tt> instead of <tt>$arr[$time]</tt>.</p>
-<dt>Range iterator outside integer range</p>
-<dd> (F) One (or both) of the numeric arguments to the range operator &#8220;..&#8221; are outside the range which can be represented by integers internally. One possible workaround is to force Perl to use magical string increment by prepending &#8220;0&#8221; to your numbers.</p>
-<dt>Recursive inheritance detected while looking for method &#8216;%s&#8217; %s</p>
-<dd> (F) More than 100 levels of inheritance were encountered while invoking a method. Probably indicates an unintended loop in your inheritance hierarchy.</p>
-<dt>Reference found where even-sized list expected</p>
-<dd> (W) You gave a single reference where Perl was expecting a list with an even number of elements (for assignment to a hash). This usually means that you used the anon hash constructor when you meant to use parens. In any case, a hash requires key/value <code>pairs</code>. </p>
+<dt>Can&#8217;t check filesystem of script &quot;%s&quot; for nosuid</dt>
+<dd> (P) For some reason you can&#8217;t check the filesystem of the script for nosuid.</dd>
+<dt>Can&#8217;t coerce array into hash</dt>
+<dd> (F) You used an array where a hash was expected, but the array has no information on how to map from keys to array indices. You can do that only with arrays that have a hash reference at index 0.</dd>
+<dt>Can&#8217;t goto subroutine from an eval-string</dt>
+<dd> (F) The &#8220;goto subroutine&#8221; call can&#8217;t be used to jump out of an eval &#8220;string&#8221;. (You can use it to jump out of an eval {<font SIZE="-1">BLOCK</font>}, but you probably don&#8217;t want to.)</dd>
+<dt>Can&#8217;t localize pseudo-hash element</dt>
+<dd> (F) You said something like <tt>&quot;local $ar-&gt;{'key'}&quot;</tt>, where <tt>$ar</tt> is a reference to a pseudo-hash. That hasn&#8217;t been implemented yet, but you can get a similar effect by localizing the corresponding array element directly: <tt>&quot;local $ar-&gt;[$ar-&gt;[0]{'key'}]&quot;</tt>.</dd>
+<dt>Can&#8217;t use %%! because Errno.pm is not available</dt>
+<dd> (F) The first time the %! hash is used, perl automatically loads the Errno.pm module. The Errno module is expected to tie the %! hash to provide symbolic names for <tt>$!</tt> errno values.</dd>
+<dt>Cannot find an opnumber for &quot;%s&quot;</dt>
+<dd> (F) A string of a form <tt>&quot;CORE::word&quot;</tt> was given to <code>prototype()</code>, but there is no builtin with the name <tt>&quot;word&quot;</tt>.</dd>
+<dt>Character class syntax [. .] is reserved for future extensions</dt>
+<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[.&#8221; and ending with &#8220;.]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[.&#8221; and &#8220;.\]&#8221;.</dd>
+<dt>Character class syntax [: :] is reserved for future extensions</dt>
+<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[:&#8221; and ending with &#8220;:]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[:&#8221; and &#8220;:\]&#8221;.</dd>
+<dt>Character class syntax [= =] is reserved for future extensions</dt>
+<dd> (W) Within regular expression character classes ([]) the syntax beginning with &#8220;[=&#8221; and ending with &#8220;=]&#8221; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: &#8220;\[=&#8221; and &#8220;=\]&#8221;.</dd>
+<dt>%s: Eval-group in insecure regular expression</dt>
+<dd> (F) Perl detected tainted data when trying to compile a regular expression that contains the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion, which is unsafe. See &#8220;(?{ code })&#8221; in perlre, and perlsec.</dd>
+<dt>%s: Eval-group not allowed, use re &#8216;eval&#8217;</dt>
+<dd> (F) A regular expression contained the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion, but that construct is only allowed when the <tt>&quot;use re 'eval'&quot;</tt> pragma is in effect. See &#8220;(?{ code })&#8221; in perlre.</dd>
+<dt>%s: Eval-group not allowed at run time</dt>
+<dd> (F) Perl tried to compile a regular expression containing the <tt>&quot;(?{ ... })&quot;</tt> zero-width assertion at run time, as it would when the pattern contains interpolated values. Since that is a security risk, it is not allowed. If you insist, you may still do this by explicitly building the pattern from an interpolated string at run time and using that in an <code>eval()</code>. See &#8220;(?{ code })&#8221; in perlre.</dd>
+<dt>Explicit blessing to &#8221; (assuming package main)</dt>
+<dd> (W) You are blessing a reference to a zero length string. This has the effect of blessing the reference into the package main. This is usually not what you want. Consider providing a default target package, e.g. bless($ref, <tt>$p</tt> || &#8216;MyPackage&#8217;);</dd>
+<dt>Illegal hex digit ignored</dt>
+<dd> (W) You may have tried to use a character other than 0 &#8211; 9 or A &#8211; F in a hexadecimal number. Interpretation of the hexadecimal number stopped before the illegal character.</dd>
+<dt>No such array field</dt>
+<dd> (F) You tried to access an array as a hash, but the field name used is not defined. The hash at index 0 should map all valid field names to array indices for that to work.</dd>
+<dt>No such field &quot;%s&quot; in variable %s of type %s</dt>
+<dd> (F) You tried to access a field of a typed variable where the type does not know about the field name. The field names are looked up in the <tt>%FIELDS</tt> hash in the type package at compile time. The <tt>%FIELDS</tt> hash is usually set up with the &#8216;fields&#8217; pragma.</dd>
+<dt>Out of memory during ridiculously large request</dt>
+<dd> (F) You can&#8217;t allocate more than 2^31+&#8220;small amount&#8221; bytes. This error is most likely to be caused by a typo in the Perl program. e.g., <tt>$arr[time]</tt> instead of <tt>$arr[$time]</tt>.</dd>
+<dt>Range iterator outside integer range</dt>
+<dd> (F) One (or both) of the numeric arguments to the range operator &#8220;..&#8221; are outside the range which can be represented by integers internally. One possible workaround is to force Perl to use magical string increment by prepending &#8220;0&#8221; to your numbers.</dd>
+<dt>Recursive inheritance detected while looking for method &#8216;%s&#8217; %s</dt>
+<dd> (F) More than 100 levels of inheritance were encountered while invoking a method. Probably indicates an unintended loop in your inheritance hierarchy.</dd>
+<dt>Reference found where even-sized list expected</dt>
+<dd> (W) You gave a single reference where Perl was expecting a list with an even number of elements (for assignment to a hash). This usually means that you used the anon hash constructor when you meant to use parens. In any case, a hash requires key/value <code>pairs</code>. </dd>
 <pre><code>
 % hash = {
     one = &gt; 1,
@@ -361,12 +361,12 @@ $BADREF-&gt;process(1, 2, 3);</p>
 #right % hash = qw(one 1 two 2);
 #also fine
 </code></pre>
-<dt>Undefined value assigned to typeglob</p>
-<dd> (W) An undefined value was assigned to a typeglob, a la <tt>&quot;*foo = undef&quot;</tt>. This does nothing. It&#8217;s possible that you really mean <tt>&quot;undef *foo&quot;</tt>.</p>
-<dt>Use of reserved word &quot;%s&quot; is deprecated</p>
-<dd> (D) The indicated bareword is a reserved word. Future versions of perl may use it as a keyword, so you&#8217;re better off either explicitly quoting the word in a manner appropriate for its context of use, or using a different name altogether. The warning can be suppressed for subroutine names by either adding a <tt>&quot;&amp;&quot;</tt> prefix, or using a package qualifier, e.g. <tt>&quot;&amp;our()&quot;</tt>, or <tt>&quot;Foo::our()&quot;</tt>.</p>
-<dt>perl: warning: Setting locale failed.</p>
-<dd> (S) The whole warning message will look something like: </p>
+<dt>Undefined value assigned to typeglob</dt>
+<dd> (W) An undefined value was assigned to a typeglob, a la <tt>&quot;*foo = undef&quot;</tt>. This does nothing. It&#8217;s possible that you really mean <tt>&quot;undef *foo&quot;</tt>.</dd>
+<dt>Use of reserved word &quot;%s&quot; is deprecated</dt>
+<dd> (D) The indicated bareword is a reserved word. Future versions of perl may use it as a keyword, so you&#8217;re better off either explicitly quoting the word in a manner appropriate for its context of use, or using a different name altogether. The warning can be suppressed for subroutine names by either adding a <tt>&quot;&amp;&quot;</tt> prefix, or using a package qualifier, e.g. <tt>&quot;&amp;our()&quot;</tt>, or <tt>&quot;Foo::our()&quot;</tt>.</dd>
+<dt>perl: warning: Setting locale failed.</dt>
+<dd> (S) The whole warning message will look something like: </dd>
 <pre>
        perl: warning: Setting locale failed.
        perl: warning: Please check that your locale settings:
@@ -378,17 +378,17 @@ $BADREF-&gt;process(1, 2, 3);</p>
 <p> Exactly what were the failed locale settings varies. In the above the settings were that the <font SIZE="-1">LC_ALL</font> was &#8220;En_US&#8221; and the <font SIZE="-1">LANG</font> had no value. This error means that Perl detected that you and/or your system administrator have set up the so-called variable system but Perl could not use those settings. This was not dead serious, fortunately: there is a &#8220;default locale&#8221; called &#8220;C&#8221; that Perl can and will use, the script will be run. Before you really fix the problem, however, you will get the same error message each time you run Perl. How to really fix the problem can be found in &#8220;<font SIZE="-1">LOCALE PROBLEMS&#8221;</font> in perllocale.</dl>
 <h2>Obsolete Diagnostics</h2>
 <dl>
-<dt>Can&#8217;t <code>mktemp()</code></p>
-<dd> (F) The <code>mktemp()</code> routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </p>
+<dt>Can&#8217;t <code>mktemp()</code></dt>
+<dd> (F) The <code>mktemp()</code> routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </dd>
 <p> Removed because <code>-e</code> doesn&#8217;t use temporary files any more.</p>
-<dt>Can&#8217;t write to temp file for <code>-e</code>: %s</p>
-<dd> (F) The write routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </p>
+<dt>Can&#8217;t write to temp file for <code>-e</code>: %s</dt>
+<dd> (F) The write routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </dd>
 <p> Removed because <code>-e</code> doesn&#8217;t use temporary files any more.</p>
-<dt>Cannot open temporary file</p>
-<dd> (F) The create routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </p>
+<dt>Cannot open temporary file</dt>
+<dd> (F) The create routine failed for some reason while trying to process a <code>-e</code> switch. Maybe your /tmp partition is full, or clobbered. </dd>
 <p> Removed because <code>-e</code> doesn&#8217;t use temporary files any more.</p>
-<dt>regexp too big</p>
-<dd> (F) The current implementation of regular expressions uses shorts as address offsets within a string. Unfortunately this means that if the regular expression compiles to longer than 32767, it&#8217;ll blow up. Usually when you want a regular expression this big, there is a better way to do it with multiple statements. See perlre.</dl>
+<dt>regexp too big</dt>
+<dd> (F) The current implementation of regular expressions uses shorts as address offsets within a string. Unfortunately this means that if the regular expression compiles to longer than 32767, it&#8217;ll blow up. Usually when you want a regular expression this big, there is a better way to do it with multiple statements. See perlre.</dd></dl>
 <h2>Configuration Changes</h2>
 <p> You can use &#8220;Configure -Uinstallusrbinperl&#8221; which causes installperl to skip installing perl also as /usr/bin/perl. This is useful if you prefer not to modify /usr/bin for some reason or another but harmful because many scripts assume to find Perl in /usr/bin/perl.</p>
 <h2>BUGS</h2>
@@ -403,25 +403,25 @@ $BADREF-&gt;process(1, 2, 3);</p>
 <p> Written by Gurusamy Sarathy &lt;<i>gsar [at] activestate.com</i>&gt;, with many contributions from The Perl Porters. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.com</i>&gt;. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Core Changes</a></p>
+<dt><a href="#lbAN">Core Changes</a></dt>
 <dd>
-<dt><a href="#lbBX">Supported Platforms</a></p>
+</dd><dt><a href="#lbBX">Supported Platforms</a></dt>
 <dd>
-<dt><a href="#lbCA">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbCA">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbCD">Utility Changes</a></p>
+</dd><dt><a href="#lbCD">Utility Changes</a></dt>
 <dd>
-<dt><a href="#lbCE">Documentation Changes</a></p>
+</dd><dt><a href="#lbCE">Documentation Changes</a></dt>
 <dd>
-<dt><a href="#lbCF">New Diagnostics</a></p>
+</dd><dt><a href="#lbCF">New Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbCG">Obsolete Diagnostics</a></p>
+</dd><dt><a href="#lbCG">Obsolete Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbCH">Configuration Changes</a></p>
+</dd><dt><a href="#lbCH">Configuration Changes</a></dt>
 <dd>
-<dt><a href="#lbCI">BUGS</a></p>
+</dd><dt><a href="#lbCI">BUGS</a></dt>
 <dd>
-<dt><a href="#lbCJ">SEE ALSO</a></p>
+</dd><dt><a href="#lbCJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbCK">HISTORY</a></p>
-<dd></dl>
+</dd><dt><a href="#lbCK">HISTORY</a></dt>
+<dd></dd></dl>

@@ -17,10 +17,10 @@ description: "tilestache-render – render tiles from tilestache"
  Each coordinate in the argument list should look like &quot;12/656/1582.png&quot;, similar to URL paths in web server usage. Coordinates are processed in order, each one rendered to an image file in a temporary location and output to stdout.</p>
 <h2>REQUIRED OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></p>
-<dd> Path to configuration file.</p>
-<dt><code>-l</code>, <code>&#8211;layer</code> <i>layer</i></p>
-<dd> Layer name from configuration.</dl>
+<dt><code>-c</code>, <code>&#8211;config</code> <i>file</i></dt>
+<dd> Path to configuration file.</dd>
+<dt><code>-l</code>, <code>&#8211;layer</code> <i>layer</i></dt>
+<dd> Layer name from configuration.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code> Show summary of options.</p>
 <h2>SEE ALSO</h2>

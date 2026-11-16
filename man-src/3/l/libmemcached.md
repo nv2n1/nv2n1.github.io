@@ -17,20 +17,20 @@ description: "libmemcached – Introducing the C Client Library for memcached"
 <p> libMemcached is an open source C/C++ client library and tools for the memcached server (<i><a rel="nofollow" href="http://memcached.org/">http://memcached.org/</a></i>). It has been designed to be light on memory usage, thread safe, and provide full access to server side methods. </p>
 <p> libMemcached was designed to provide the greatest number of options to use Memcached. Some of the features provided:</p>
 <dl>
-<dt>1.</p>
-<dd> Asynchronous and Synchronous Transport Support.</p>
-<dt>2.</p>
-<dd> Consistent Hashing and Distribution.</p>
-<dt>3.</p>
-<dd> Tunable Hashing algorithm to match keys.</p>
-<dt>4.</p>
-<dd> Access to large object support.</p>
-<dt>5.</p>
-<dd> Local replication.</p>
-<dt>6.</p>
-<dd> A complete reference guide and documentation to the API.</p>
-<dt>7.</p>
-<dd> Tools to Manage your Memcached networks.</dl>
+<dt>1.</dt>
+<dd> Asynchronous and Synchronous Transport Support.</dd>
+<dt>2.</dt>
+<dd> Consistent Hashing and Distribution.</dd>
+<dt>3.</dt>
+<dd> Tunable Hashing algorithm to match keys.</dd>
+<dt>4.</dt>
+<dd> Access to large object support.</dd>
+<dt>5.</dt>
+<dd> Local replication.</dd>
+<dt>6.</dt>
+<dd> A complete reference guide and documentation to the API.</dd>
+<dt>7.</dt>
+<dd> Tools to Manage your Memcached networks.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> &quot;Memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.&quot; <i><a rel="nofollow" href="http://memcached.org/">http://memcached.org/</a></i> </p>
 <p> <code>libmemcached</code> is a small, thread-safe client library for the memcached protocol. The code has all been written to allow for both web and embedded usage. It handles the work behind routing individual keys to specific servers specified by the developer (and values are matched based on server order as supplied by the user). It implements a modular and consistent method of object distribution. </p>
@@ -48,22 +48,22 @@ description: "libmemcached – Introducing the C Client Library for memcached"
 <h2>CONSTANTS</h2>
 <p> A number of constants have been provided for in the library.</p>
 <dl>
-<dt><code>MEMCACHED_DEFAULT_PORT</code></p>
-<dd> The default port used by <a href="/docs/linux/man/3-memcached/">memcached</a>(3).</p>
-<dt><code>MEMCACHED_MAX_KEY</code></p>
-<dd> Default maximum size of a key (which includes the null pointer). Master keys have no limit, this only applies to keys used for storage.</p>
-<dt><code>MEMCACHED_MAX_KEY</code></p>
-<dd> Default size of key (which includes the null pointer).</p>
-<dt><code>MEMCACHED_STRIDE</code></p>
-<dd> This is the &quot;stride&quot; used in the consistent hash used between replicas.</p>
-<dt><code>MEMCACHED_MAX_HOST_LENGTH</code></p>
-<dd> Maximum allowed size of the hostname.</p>
-<dt><code>LIBMEMCACHED_VERSION_STRING</code></p>
-<dd> String value of libmemcached version such as &quot;1.23.4&quot;</p>
-<dt><code>LIBMEMCACHED_VERSION_HEX</code></p>
-<dd> Hex value of the version number. &quot;0x00048000&quot; This can be used for comparing versions based on number.</p>
-<dt><code>MEMCACHED_PREFIX_KEY_MAX_SIZE</code></p>
-<dd> Maximum length allowed for namespacing of a key.</dl>
+<dt><code>MEMCACHED_DEFAULT_PORT</code></dt>
+<dd> The default port used by <a href="/docs/linux/man/3-memcached/">memcached</a>(3).</dd>
+<dt><code>MEMCACHED_MAX_KEY</code></dt>
+<dd> Default maximum size of a key (which includes the null pointer). Master keys have no limit, this only applies to keys used for storage.</dd>
+<dt><code>MEMCACHED_MAX_KEY</code></dt>
+<dd> Default size of key (which includes the null pointer).</dd>
+<dt><code>MEMCACHED_STRIDE</code></dt>
+<dd> This is the &quot;stride&quot; used in the consistent hash used between replicas.</dd>
+<dt><code>MEMCACHED_MAX_HOST_LENGTH</code></dt>
+<dd> Maximum allowed size of the hostname.</dd>
+<dt><code>LIBMEMCACHED_VERSION_STRING</code></dt>
+<dd> String value of libmemcached version such as &quot;1.23.4&quot;</dd>
+<dt><code>LIBMEMCACHED_VERSION_HEX</code></dt>
+<dd> Hex value of the version number. &quot;0x00048000&quot; This can be used for comparing versions based on number.</dd>
+<dt><code>MEMCACHED_PREFIX_KEY_MAX_SIZE</code></dt>
+<dd> Maximum length allowed for namespacing of a key.</dd></dl>
 <h2>THREADS AND PROCESSES</h2>
 <p> When using threads or forked processes it is important to keep one instance of <code>memcached_st</code> per process or thread. Without creating your own locking structures you can not share a single <code>memcached_st</code>. However, you can call <code>memcached_quit()</code> on a <code>memcached_st</code> and then use the resulting cloned structure.</p>
 <h2>HOME</h2>

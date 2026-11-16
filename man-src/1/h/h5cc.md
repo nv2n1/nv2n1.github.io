@@ -18,31 +18,31 @@ description: "h5cc – Helper script to compile HDF5 applications."
 <p> An example of how to use h5cc to compile the program hdf_prog, which consists of modules prog1.c and prog2.c and uses the HDF5 shared library, would be as follows:</p>
 <dl>
 <dt>
-<dd> # h5cc -c prog1.c # h5cc -c prog2.c # h5cc -shlib -o hdf_prog prog1.o prog2.o</dl>
+</dt><dd> # h5cc -c prog1.c # h5cc -c prog2.c # h5cc -shlib -o hdf_prog prog1.o prog2.o</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Prints a help message.</p>
-<dt><code>-echo</code></p>
-<dd> Show all the shell commands executed.</p>
-<dt><code>-prefix=DIR</code></p>
-<dd> Use the directory DIR to find the HDF5 lib/ and include/ subdirectories. Default: prefix specified when configuring HDF5.</p>
-<dt><code>-show</code></p>
-<dd> Show the commands without executing them.</p>
-<dt><code>-shlib</code></p>
-<dd> Compile using shared HDF5 libraries.</p>
-<dt><code>-noshlib</code></p>
-<dd> Compile using static HDF5 libraries [default].</p>
-<dt>&lt;compile line&gt;</p>
-<dd> The normal compile line options for your compiler. h5cc uses the same compiler you used to compile HDF5. Check your compiler&#8217;s manual for more information on which options are needed.</dl>
+<dt><code>-help</code></dt>
+<dd> Prints a help message.</dd>
+<dt><code>-echo</code></dt>
+<dd> Show all the shell commands executed.</dd>
+<dt><code>-prefix=DIR</code></dt>
+<dd> Use the directory DIR to find the HDF5 lib/ and include/ subdirectories. Default: prefix specified when configuring HDF5.</dd>
+<dt><code>-show</code></dt>
+<dd> Show the commands without executing them.</dd>
+<dt><code>-shlib</code></dt>
+<dd> Compile using shared HDF5 libraries.</dd>
+<dt><code>-noshlib</code></dt>
+<dd> Compile using static HDF5 libraries [default].</dd>
+<dt>&lt;compile line&gt;</dt>
+<dd> The normal compile line options for your compiler. h5cc uses the same compiler you used to compile HDF5. Check your compiler&#8217;s manual for more information on which options are needed.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>HDF5_CC</code></p>
-<dd> Use a different C compiler.</p>
-<dt><code>HDF5_CLINKER</code></p>
-<dd> Use a different linker.</p>
-<dt><code>HDF5_USE_SHLIB=[yes|no]</code></p>
-<dd> Use shared version of the HDF5 library [default: no].</dl>
+<dt><code>HDF5_CC</code></dt>
+<dd> Use a different C compiler.</dd>
+<dt><code>HDF5_CLINKER</code></dt>
+<dd> Use a different linker.</dd>
+<dt><code>HDF5_USE_SHLIB=[yes|no]</code></dt>
+<dd> Use shared version of the HDF5 library [default: no].</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5fc/">h5fc</a></i>(1), <i>h5c++</i>(1) </p>
 <h2>Index</h2>

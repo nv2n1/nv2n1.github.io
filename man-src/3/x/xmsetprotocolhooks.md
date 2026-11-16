@@ -23,20 +23,20 @@ description: "XmSetProtocolHooks — A VendorShell function that allows preactio
 <p><code>XmSetProtocolHooks</code> is used by shells that want to have preactions and postactions executed when a protocol message is received from MWM. Since there is no guaranteed ordering in execution of event handlers or callback lists, this allows the shell to control the flow while leaving the protocol manager structures opaque. </p>
 <p> <code>XmSetWMProtocolHooks</code> is a convenience interface. It calls <code>XmSetProtocolHooks</code> with the property value set to the atom returned by interning <code>WM_PROTOCOLS</code>.</p>
 <dl COMPACT>
-<dt><i>shell</i></p>
-<dd>Specifies the widget with which the protocol property is associated</p>
-<dt><i>property</i></p>
-<dd>Specifies the protocol property</p>
-<dt><i>protocol</i></p>
-<dd>Specifies the protocol atom</p>
-<dt><i>prehook</i></p>
-<dd>Specifies the procedure to call before calling entries on the client callback list</p>
-<dt><i>pre_closure</i></p>
-<dd>Specifies the client data to be passed to the prehook when it is invoked</p>
-<dt><i>posthook</i></p>
-<dd>Specifies the procedure to call after calling entries on the client callback list</p>
-<dt><i>post_closure</i></p>
-<dd>Specifies the client data to be passed to the posthook when it is invoked</dl>
+<dt><i>shell</i></dt>
+<dd>Specifies the widget with which the protocol property is associated</dd>
+<dt><i>property</i></dt>
+<dd>Specifies the protocol property</dd>
+<dt><i>protocol</i></dt>
+<dd>Specifies the protocol atom</dd>
+<dt><i>prehook</i></dt>
+<dd>Specifies the procedure to call before calling entries on the client callback list</dd>
+<dt><i>pre_closure</i></dt>
+<dd>Specifies the client data to be passed to the prehook when it is invoked</dd>
+<dt><i>posthook</i></dt>
+<dd>Specifies the procedure to call after calling entries on the client callback list</dd>
+<dt><i>post_closure</i></dt>
+<dd>Specifies the client data to be passed to the posthook when it is invoked</dd></dl>
 <p> For a complete definition of VendorShell and its associated resources, see <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-xminternatom/">XmInternAtom</a></code>(3), and <code><a href="/docs/linux/man/3-xmsetwmprotocolhooks/">XmSetWMProtocolHooks</a></code>(3).</p>

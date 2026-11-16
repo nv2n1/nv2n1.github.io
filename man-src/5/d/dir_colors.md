@@ -12,76 +12,76 @@ description: "dir_colors – configuration file for"
 <h2>Description</h2>
 <p>The program <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1) uses the environment variable <code>LS_COLORS</code> to determine the colors in which the filenames are to be displayed. This environment variable is usually set by a command like </p>
 <dl>
-<dd>eval `dircolors some_path/dir_colors`</dl>
+<dd>eval `dircolors some_path/dir_colors`</dd></dl>
 <p> found in a system default shell initialization file, like <i>/etc/profile</i> or <i>/etc/csh.cshrc</i>. (See also <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Usually, the file used here is <i>/etc/DIR_COLORS</i> and can be overridden by a <i>.dir_colors</i> file in one&#8217;s home directory. </p>
 <p> This configuration file consists of several statements, one per line. Anything right of a hash mark (#) is treated as a comment, if the hash mark is at the beginning of a line or is preceded by at least one whitespace. Blank lines are ignored. </p>
 <p> The <i>global</i> section of the file consists of any statement before the first <code>TERM</code> statement. Any statement in the global section of the file is considered valid for all terminal types. Following the global section is one or more <i>terminal-specific</i> sections, preceded by one or more <code>TERM</code> statements which specify the terminal types (as given by the <code>TERM</code> environment variable) the following declarations apply to. It is always possible to override a global declaration by a subsequent terminal-specific one. </p>
 <p> The following statements are recognized; case is insignificant:</p>
 <dl>
-<dt><code>TERM </code><i>terminal-type</i></p>
-<dd>Starts a terminal-specific section and specifies which terminal it applies to. Multiple <code>TERM</code> statements can be used to create a section which applies for several terminal types.</p>
-<dt><code>COLOR yes|all|no|none|tty</code></p>
-<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Specifies that colorization should always be enabled (<i>yes</i> or <i>all</i>), never enabled (<i>no</i> or <i>none</i>), or enabled only if the output is a terminal (<i>tty</i>). The default is <i>no</i>.</p>
-<dt><code>EIGHTBIT yes|no</code></p>
-<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Specifies that eight-bit ISO 8859 characters should be enabled by default. For compatibility reasons, this can also be specified as 1 for <i>yes</i> or 0 for <i>no</i>. The default is <i>no</i>.</p>
-<dt><code>OPTIONS </code><i>options</i></p>
-<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Adds command-line options to the default <code>ls</code> command line. The options can be any valid <code>ls</code> command-line options, and should include the leading minus sign. Note that <code>dircolors</code> does not verify the validity of these options.</p>
-<dt><code>NORMAL </code><i>color-sequence</i></p>
-<dd>Specifies the color used for normal (nonfilename) text.</p>
-<dd>Synonym: <code>NORM</code>.</p>
-<dt><code>FILE </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a regular file.</p>
-<dt><code>DIR </code><i>color-sequence</i></p>
-<dd>Specifies the color used for directories.</p>
-<dt><code>LINK </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a symbolic link.</p>
-<dd>Synonyms: <code>LNK</code>, <code>SYMLINK</code>.</p>
-<dt><code>ORPHAN </code><i>color-sequence</i></p>
-<dd>Specifies the color used for an orphaned symbolic link (one which points to a nonexistent file). If this is unspecified, <code>ls</code> will use the <code>LINK</code> color instead.</p>
-<dt><code>MISSING </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a missing file (a nonexistent file which nevertheless has a symbolic link pointing to it). If this is unspecified, <code>ls</code> will use the <code>FILE</code> color instead.</p>
-<dt><code>FIFO </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a FIFO (named pipe).</p>
-<dd>Synonym: <code>PIPE</code>.</p>
-<dt><code>SOCK </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a socket.</p>
-<dt><code>DOOR </code><i>color-sequence</i></p>
-<dd>(Supported since fileutils 4.1) Specifies the color used for a door (Solaris 2.5 and later).</p>
-<dt><code>BLK </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a block device special file.</p>
-<dd>Synonym: <code>BLOCK</code>.</p>
-<dt><code>CHR </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a character device special file.</p>
-<dd>Synonym: <code>CHAR</code>.</p>
-<dt><code>EXEC </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a file with the executable attribute set.</p>
-<dt><code>SUID </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a file with the set-user-ID attribute set.</p>
-<dd>Synonym: <code>SETUID</code>.</p>
-<dt><code>SGID </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a file with the set-group-ID attribute set.</p>
-<dd>Synonym: <code>SETGID</code>.</p>
-<dt><code>STICKY </code><i>color-sequence</i></p>
-<dd>Specifies the color used for a directory with the sticky attribute set.</p>
-<dt><code>STICKY_OTHER_WRITABLE </code><i>color-sequence</i></p>
-<dd>Specifies the color used for an other-writable directory with the executable attribute set.</p>
-<dd>Synonym: <code>OWT</code>.</p>
-<dt><code>OTHER_WRITABLE </code><i>color-sequence</i></p>
-<dd>Specifies the color used for an other-writable directory without the executable attribute set.</p>
-<dd>Synonym: <code>OWR</code>.</p>
-<dt><code>LEFTCODE </code><i>color-sequence</i></p>
-<dd>Specifies the <i>left code</i> for non-ISO 6429 terminals (see below).</p>
-<dd>Synonym: <code>LEFT</code>.</p>
-<dt><code>RIGHTCODE </code><i>color-sequence</i></p>
-<dd>Specifies the <i>right code</i> for non-ISO 6429 terminals (see below).</p>
-<dd>Synonym: <code>RIGHT</code>.</p>
-<dt><code>ENDCODE </code><i>color-sequence</i></p>
-<dd>Specifies the <i>end code</i> for non-ISO 6429 terminals (see below).</p>
-<dd>Synonym: <code>END</code>.</p>
-<dt><code>*</code><i>extension</i> <i>color-sequence</i></p>
-<dd>Specifies the color used for any file that ends in <i>extension</i>.</p>
-<dt><code> .</code><i>extension</i> <i>color-sequence</i></p>
-<dd>Same as <code>*</code>.<i>extension</i>. Specifies the color used for any file that ends in .<i>extension</i>. Note that the period is included in the extension, which makes it impossible to specify an extension not starting with a period, such as <code>~</code> for <code>emacs</code> backup files. This form should be considered obsolete.</dl>
+<dt><code>TERM </code><i>terminal-type</i></dt>
+<dd>Starts a terminal-specific section and specifies which terminal it applies to. Multiple <code>TERM</code> statements can be used to create a section which applies for several terminal types.</dd>
+<dt><code>COLOR yes|all|no|none|tty</code></dt>
+<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Specifies that colorization should always be enabled (<i>yes</i> or <i>all</i>), never enabled (<i>no</i> or <i>none</i>), or enabled only if the output is a terminal (<i>tty</i>). The default is <i>no</i>.</dd>
+<dt><code>EIGHTBIT yes|no</code></dt>
+<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Specifies that eight-bit ISO 8859 characters should be enabled by default. For compatibility reasons, this can also be specified as 1 for <i>yes</i> or 0 for <i>no</i>. The default is <i>no</i>.</dd>
+<dt><code>OPTIONS </code><i>options</i></dt>
+<dd>(Slackware only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1).) Adds command-line options to the default <code>ls</code> command line. The options can be any valid <code>ls</code> command-line options, and should include the leading minus sign. Note that <code>dircolors</code> does not verify the validity of these options.</dd>
+<dt><code>NORMAL </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for normal (nonfilename) text.</dd>
+<dd>Synonym: <code>NORM</code>.</dd>
+<dt><code>FILE </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a regular file.</dd>
+<dt><code>DIR </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for directories.</dd>
+<dt><code>LINK </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a symbolic link.</dd>
+<dd>Synonyms: <code>LNK</code>, <code>SYMLINK</code>.</dd>
+<dt><code>ORPHAN </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for an orphaned symbolic link (one which points to a nonexistent file). If this is unspecified, <code>ls</code> will use the <code>LINK</code> color instead.</dd>
+<dt><code>MISSING </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a missing file (a nonexistent file which nevertheless has a symbolic link pointing to it). If this is unspecified, <code>ls</code> will use the <code>FILE</code> color instead.</dd>
+<dt><code>FIFO </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a FIFO (named pipe).</dd>
+<dd>Synonym: <code>PIPE</code>.</dd>
+<dt><code>SOCK </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a socket.</dd>
+<dt><code>DOOR </code><i>color-sequence</i></dt>
+<dd>(Supported since fileutils 4.1) Specifies the color used for a door (Solaris 2.5 and later).</dd>
+<dt><code>BLK </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a block device special file.</dd>
+<dd>Synonym: <code>BLOCK</code>.</dd>
+<dt><code>CHR </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a character device special file.</dd>
+<dd>Synonym: <code>CHAR</code>.</dd>
+<dt><code>EXEC </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a file with the executable attribute set.</dd>
+<dt><code>SUID </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a file with the set-user-ID attribute set.</dd>
+<dd>Synonym: <code>SETUID</code>.</dd>
+<dt><code>SGID </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a file with the set-group-ID attribute set.</dd>
+<dd>Synonym: <code>SETGID</code>.</dd>
+<dt><code>STICKY </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for a directory with the sticky attribute set.</dd>
+<dt><code>STICKY_OTHER_WRITABLE </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for an other-writable directory with the executable attribute set.</dd>
+<dd>Synonym: <code>OWT</code>.</dd>
+<dt><code>OTHER_WRITABLE </code><i>color-sequence</i></dt>
+<dd>Specifies the color used for an other-writable directory without the executable attribute set.</dd>
+<dd>Synonym: <code>OWR</code>.</dd>
+<dt><code>LEFTCODE </code><i>color-sequence</i></dt>
+<dd>Specifies the <i>left code</i> for non-ISO 6429 terminals (see below).</dd>
+<dd>Synonym: <code>LEFT</code>.</dd>
+<dt><code>RIGHTCODE </code><i>color-sequence</i></dt>
+<dd>Specifies the <i>right code</i> for non-ISO 6429 terminals (see below).</dd>
+<dd>Synonym: <code>RIGHT</code>.</dd>
+<dt><code>ENDCODE </code><i>color-sequence</i></dt>
+<dd>Specifies the <i>end code</i> for non-ISO 6429 terminals (see below).</dd>
+<dd>Synonym: <code>END</code>.</dd>
+<dt><code>*</code><i>extension</i> <i>color-sequence</i></dt>
+<dd>Specifies the color used for any file that ends in <i>extension</i>.</dd>
+<dt><code> .</code><i>extension</i> <i>color-sequence</i></dt>
+<dd>Same as <code>*</code>.<i>extension</i>. Specifies the color used for any file that ends in .<i>extension</i>. Note that the period is included in the extension, which makes it impossible to specify an extension not starting with a period, such as <code>~</code> for <code>emacs</code> backup files. This form should be considered obsolete.</dd></dl>
 <h3>ISO 6429 (ANSI) color sequences</h3>
 <p>Most color-capable ASCII terminals today use ISO 6429 (ANSI) color sequences, and many common terminals without color capability, including <code>xterm</code> and the widely used and cloned DEC VT100, will recognize ISO 6429 color codes and harmlessly eliminate them from the output or emulate them. <code>ls</code> uses ISO 6429 codes by default, assuming colorization is enabled. </p>
 <p> ISO 6429 color sequences are composed of sequences of numbers separated by semicolons. The most common codes are:</p>
@@ -193,7 +193,7 @@ description: "dir_colors – configuration file for"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Not all commands will work on all systems or display devices. </p>
 <p> <code>ls</code> uses the following defaults: </p>
 <table>
@@ -301,7 +301,8 @@ description: "dir_colors – configuration file for"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code></code></td>
+<td><code>
+</code></td>
 <td>Carriage Return (ASCII 13)
 </td>
 </tr>
@@ -327,3 +328,5 @@ description: "dir_colors – configuration file for"
 </tr>
 <tr VALIGN=top>
 <td><code>
+</dd></dl>
+</code></table>

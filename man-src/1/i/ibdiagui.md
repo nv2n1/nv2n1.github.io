@@ -20,15 +20,15 @@ description: "ibdiagui – IB Diagnostic GUI"
   Its main features:
 </pre>
 <dl>
-<dt>1. Display a graph of the discovered fabric (with optional names annotattion)</p>
+<dt>1. Display a graph of the discovered fabric (with optional names annotattion)</dt>
 <dd>
-<dt>2. Hyperlink the ibdiagnet log to the graph objects</p>
+</dd><dt>2. Hyperlink the ibdiagnet log to the graph objects</dt>
 <dd>
-<dt>3. Show each object properties and object type specific actions on a properties pannel.</p>
-<dd></dl>
+</dd><dt>3. Show each object properties and object type specific actions on a properties pannel.</dt>
+<dd></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>ibdiagui simply passes its options to ibdiagnet. Please see ibdiagnet man page for the complete list.</p>
+<dt>ibdiagui simply passes its options to ibdiagnet. Please see ibdiagnet man page for the complete list.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

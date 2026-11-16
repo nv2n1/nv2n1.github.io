@@ -23,9 +23,7 @@ int fpclassify( IntegralType arg ); <code>(4)</code> <i>(since C++11)</i><br />
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfloat&gt;
 const char *show_classification(double x)
 {
@@ -44,9 +42,7 @@ const char *show_classification(double x)
         return &quot;unknown&quot;;
     }
 }
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;1.0/0.0 is &quot; &lt;&lt; show_classification(1 / 0.0) &lt;&lt; '
 '

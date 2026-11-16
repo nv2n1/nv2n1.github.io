@@ -14,17 +14,17 @@ description: "spi_populate_tag_msg – place a tag message in a buffer"
 <p><i>msg</i></p>
 <dl>
 <dd>
-<dd>pointer to the area to place the tag</dl>
+</dd><dd>pointer to the area to place the tag</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>pointer to the scsi command for the tag</dl>
+<dd>pointer to the scsi command for the tag</dd></dl>
 <h2>Notes</h2>
 <p>designed to create the correct type of tag message for the particular request. Returns the size of the tag message. May return 0 if TCQ is disabled for this device.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

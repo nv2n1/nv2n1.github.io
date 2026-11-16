@@ -15,20 +15,20 @@ description: "audit_add_rule_data – Add new audit rule"
 <h2>DESCRIPTION</h2>
 <p> audit_add_rule adds an audit rule previously constructed with audit_rule_fieldpair_data(3) to one of several kernel event filters. The filter is specified by the flags argument. Possible values for flags are: </p>
 <dl>
-<dt>&bull;</p>
-<dd> AUDIT_FILTER_USER &#8211; Apply rule to userspace generated messages.</p>
-<dt>&bull;</p>
-<dd> AUDIT_FILTER_TASK &#8211; Apply rule at task creation (not syscall).</p>
-<dt>&bull;</p>
-<dd> AUDIT_FILTER_EXIT &#8211; Apply rule at syscall exit.</p>
-<dt>&bull;</p>
-<dd> AUDIT_FILTER_TYPE &#8211; Apply rule at audit_log_start.</dl>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_USER &#8211; Apply rule to userspace generated messages.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_TASK &#8211; Apply rule at task creation (not syscall).</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_EXIT &#8211; Apply rule at syscall exit.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_TYPE &#8211; Apply rule at audit_log_start.</dd></dl>
 <p> The rule&#8217;s action has two possible values: </p>
 <dl>
-<dt>&bull;</p>
-<dd> AUDIT_NEVER &#8211; Do not build context if rule matches.</p>
-<dt>&bull;</p>
-<dd> AUDIT_ALWAYS &#8211; Generate audit record if rule matches.</dl>
+<dt>&bull;</dt>
+<dd> AUDIT_NEVER &#8211; Do not build context if rule matches.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_ALWAYS &#8211; Generate audit record if rule matches.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The return value is &lt;= 0 on error, otherwise it is the netlink sequence id number. This function can have any error that sendto would encounter. </p>
 <h2>SEE ALSO</h2>

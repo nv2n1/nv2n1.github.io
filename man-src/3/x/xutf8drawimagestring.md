@@ -10,29 +10,29 @@ description: "XmbDrawImageString, XwcDrawImageString, Xutf8DrawImageString – d
 <p>XmbDrawImageString, XwcDrawImageString, Xutf8DrawImageString &#8211; draw image text using a single font set </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>void XmbDrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, char *<i>string</i>, int <i>num_bytes</i>);</p>
-<dd>void XwcDrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, wchar_t *<i>string</i>, int <i>num_wchars</i>);</p>
-<dd>void Xutf8DrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, char *<i>string</i>, int <i>num_bytes</i>);</dl>
+<dd>void XmbDrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, char *<i>string</i>, int <i>num_bytes</i>);</dd>
+<dd>void XwcDrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, wchar_t *<i>string</i>, int <i>num_wchars</i>);</dd>
+<dd>void Xutf8DrawImageString(Display *<i>display</i>, Drawable <i>d</i>, XFontSet <i>font_set</i>, GC <i>gc</i>, int <i>x</i>, int <i>y</i>, char *<i>string</i>, int <i>num_bytes</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>d</i></p>
-<dd>Specifies the drawable.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>font_set</i></p>
-<dd>Specifies the font set.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>num_bytes</i></p>
-<dd>Specifies the number of bytes in the string argument.</p>
-<dt><i>num_wchars</i></p>
-<dd>Specifies the number of characters in the string argument.</p>
-<dt><i>string</i></p>
-<dd>Specifies the character string.</p>
-<dt><i>x</i></p>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>font_set</i></dt>
+<dd>Specifies the font set.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>num_bytes</i></dt>
+<dd>Specifies the number of bytes in the string argument.</dd>
+<dt><i>num_wchars</i></dt>
+<dd>Specifies the number of characters in the string argument.</dd>
+<dt><i>string</i></dt>
+<dd>Specifies the character string.</dd>
+<dt><i>x</i></dt>
 <dd>
-<dt><i>y</i></p>
-<dd>Specify the x and y coordinates.</dl>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XmbDrawImageString</code>, <code>XwcDrawImageString</code> and <code>Xutf8DrawImageString</code> functions fill a destination rectangle with the background pixel defined in the GC and then paint the text with the foreground pixel. The filled rectangle is the rectangle returned to overall_logical_return by <code>XmbTextExtents</code>, <code>XwcTextExtents</code> or <code>Xutf8TextExtents</code> for the same text and <code>XFontSet</code>. </p>
 <p> When the <code>XFontSet</code> has missing charsets, each unavailable character is drawn with the default string returned by <code>XCreateFontSet</code>. The behavior for an invalid codepoint is undefined. </p>

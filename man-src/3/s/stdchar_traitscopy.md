@@ -11,7 +11,6 @@ description: "std::char_traits<CharT>::copy – std::char_traits<CharT>::copy"
 <h2>Synopsis</h2>
 <pre><code>static char_type *copy(char_type *dest, const char_type *src, std::size_t count);
 (until C++ 20)
-
     static constexpr char_type *copy(char_type *dest, const char_type *src, std::size_t count);
 (since C++ 20)</code></pre>
 <p>Copies count character from character string pointed to by src to character string pointed to by dest.<br />

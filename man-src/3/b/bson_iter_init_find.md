@@ -17,14 +17,14 @@ bool bson_iter_init_find(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> A key to locate after initializing the iter.</dl>
+<dt><code>key</code></dt>
+<dd> A key to locate after initializing the iter.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is identical to <code>(<a href="/docs/linux/man/3-bson_iter_init/">bson_iter_init</a>(3) &amp;&amp; <a href="/docs/linux/man/3-bson_iter_find/">bson_iter_find</a>(3))</code> \&amp;. </p>
 <h2>COLOPHON</h2>

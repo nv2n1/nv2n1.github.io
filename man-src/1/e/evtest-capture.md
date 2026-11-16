@@ -20,13 +20,13 @@ evtest-capture &quot;/dev/input/eventX&quot; [evtest-capture.xml]
 <p> To convert evtest-capture.xml into such a uinput device, run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xsltproc evtest-create-device.xls evtest-capture.xml &gt; mydevice.c
 gcc -o mydevice mydevice.c
 ./mydevice
 </pre>
-</dl>
+</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> If evtest-capture does not see any events even though the device is being used, the device may be grabbed by a process (EVIOCGRAB). This is usually the case when debugging a synaptics device from within X. VT switching to a TTY or shutting down the X server terminates this grab and synaptics devices can be debugged.</p>
 <h2>SEE ALSO</h2>
@@ -35,10 +35,10 @@ gcc -o mydevice mydevice.c
 <p> evtest-capture was written by Peter Hutterer &lt;m[blue]<code>peter.hutterer [at] redhat.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> peter.hutterer [at] redhat.com</p>
+<dt> 1.</dt>
+<dd> peter.hutterer [at] redhat.com</dd>
 <dl>
 <dt>
-<dd> mailto:peter.hutterer [at] redhat.com</dl>
+</dt><dd> mailto:peter.hutterer [at] redhat.com</dd></dl>
 </dl>
 <h2>Index</h2>

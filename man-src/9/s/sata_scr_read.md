@@ -14,13 +14,13 @@ description: "sata_scr_read – read SCR register of the specified port"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to read SCR for</dl>
+</dd><dd>ATA link to read SCR for</dd></dl>
 <p> <i>reg</i></p>
 <dl>
-<dd>SCR to read</dl>
+<dd>SCR to read</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>Place to store read value</dl>
+<dd>Place to store read value</dd></dl>
 <h2>Description</h2>
 <p>Read SCR register <i>reg</i> of <i>link</i> into *<i>val</i>. This function is guaranteed to succeed if <i>link</i> is ap-&gt;link, the cable type of the port is SATA and the port implements -&gt;scr_read. </p>
 <p> LOCKING: None if <i>link</i> is ap-&gt;link. Kernel thread context otherwise.</p>
@@ -29,5 +29,5 @@ description: "sata_scr_read – read SCR register of the specified port"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

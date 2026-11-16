@@ -35,7 +35,6 @@ There is no Fortran equivalent function.
 HighLevelInfo *state = NULL;
 ret = PAPI_thread_init(pthread_self);
 if (ret != PAPI_OK) handle_error(ret);
- 
 // Do we have the thread specific data setup yet?
 ret = PAPI_get_thr_specific(PAPI_USR1_TLS, (void *) &amp;state);
 if (ret != PAPI_OK || state == NULL) {
@@ -52,6 +51,6 @@ if (ret != PAPI_OK || state == NULL) {
 <p>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_register_thread</code> <code>PAPI_thread_init</code> <code>PAPI_thread_id</code> <code>PAPI_get_thr_specific</code></dl>
+<dd><code>PAPI_register_thread</code> <code>PAPI_thread_init</code> <code>PAPI_thread_id</code> <code>PAPI_get_thr_specific</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

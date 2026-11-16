@@ -104,8 +104,8 @@ description: "nrpe_selinux – Security Enhanced Linux Policy for the nrpe proce
 <p> <code>nrpe_exec_t</code> </p>
 <p> &#8211; Set files with the nrpe_exec_t type, if you want to transition an executable to the nrpe_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/nrpe, /usr/sbin/nrpe </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/nrpe, /usr/sbin/nrpe </dd>
 </dl>
 <p> <code>nrpe_var_run_t</code> </p>
 <p> &#8211; Set files with the nrpe_var_run_t type, if you want to store the nrpe files under the /run or /var/run directory. </p>

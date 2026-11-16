@@ -22,12 +22,12 @@ description: "hdparm.conf – Debian configuration file for hdparm"
 <p> /sbin/hdparm is not run unless a block of the form: </p>
 <p> <code>DEV {</code></p>
 <dl>
-<dt>option</p>
+<dt>option</dt>
 <dd>
-<dt>option</p>
+</dd><dt>option</dt>
 <dd>
-<dt>}</p>
-<dd></dl>
+</dd><dt>}</dt>
+<dd></dd></dl>
 <p> exists. This blocks will cause /sbin/hdparm OPTIONS DEV to be run. Where OPTIONS is the concatenation of all options previously defined outside of a block and all options defined with in the block.</p>
 <h2>Options</h2>
 <p>See <code>man 8 hdparm</code></p>

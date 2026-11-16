@@ -44,62 +44,62 @@ description: "ncid – Network Caller ID Client"
 <p> Whenever the server connection is broken, <i>ncid</i> will normally try to reconnect once a minute. It provides a visual record of the countdown and number of tries. If the delay between attempts is set to zero seconds, <i>ncid</i> will not attempt a reconnect. </p>
 <p> The file menu provides three menu items in the GUI mode:</p>
 <dl>
-<dt><code>reconnect</code></p>
-<dd> provides an immediate reconnect and a reload of the call log file. This provides a way to synchronize <i>ncid</i> with the server call log in the event of a network problem.</p>
-<dt><code>clear</code></p>
-<dd> clears the call log</p>
-<dt><code>quit</code></p>
-<dd> terminates <i>ncid</i>.</dl>
+<dt><code>reconnect</code></dt>
+<dd> provides an immediate reconnect and a reload of the call log file. This provides a way to synchronize <i>ncid</i> with the server call log in the event of a network problem.</dd>
+<dt><code>clear</code></dt>
+<dd> clears the call log</dd>
+<dt><code>quit</code></dt>
+<dd> terminates <i>ncid</i>.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;no-gui</code></p>
+<dt><code>&#8211;no-gui</code></dt>
 <dd> Do not display CID information using a GUI<br />
- Default: display CID using a GUI, except if called tivocid</p>
-<dt><code>&#8211;call-prog | -C</code></p>
+ Default: display CID using a GUI, except if called tivocid</dd>
+<dt><code>&#8211;call-prog | -C</code></dt>
 <dd> Output the Caller ID information to a external program or output module.<br />
- Default: does not call a external program unless name is tivocid or tivoncid</p>
-<dt><code>&#8211;delay SECONDS | -D SECONDS</code></p>
+ Default: does not call a external program unless name is tivocid or tivoncid</dd>
+<dt><code>&#8211;delay SECONDS | -D SECONDS</code></dt>
 <dd> Delay SECONDS between server connection attempts if SECONDS &gt; 0.<br />
  Only one attempt to connect to server if SECONDS = 0.<br />
- Default: 60 seconds</p>
-<dt><code>&#8211;message | -M</code></p>
-<dd> Send messages to the output modules</p>
-<dt><code>&#8211;nocid | -N</code></p>
-<dd> Configure ncid to indicate <i>Phone Call</i> on the first ring received from the modem. It requires a modem that indicates ring, but does not require a modem that supports caller id.</p>
-<dt><code>&#8211;pidfile | -p</code></p>
-<dd> Name of PID file to create. Set to <i>/var/run/ncid.pid</i><code> in a rc or init script when used as a service. Set to </code><i>/var/run/OUTPUTMODULE.pid</i><code> in a rc or init script when used as a service and when using a output module. There is no default. If pidfile is not set, no pid file will be used.</p>
-<dt>&#8211;program PROGRAM | -P PROGRAM</code></p>
+ Default: 60 seconds</dd>
+<dt><code>&#8211;message | -M</code></dt>
+<dd> Send messages to the output modules</dd>
+<dt><code>&#8211;nocid | -N</code></dt>
+<dd> Configure ncid to indicate <i>Phone Call</i> on the first ring received from the modem. It requires a modem that indicates ring, but does not require a modem that supports caller id.</dd>
+<dt><code>&#8211;pidfile | -p</code></dt>
+<dd> Name of PID file to create. Set to <i>/var/run/ncid.pid</i><code> in a rc or init script when used as a service. Set to </code><i>/var/run/OUTPUTMODULE.pid</i><code> in a rc or init script when used as a service and when using a output module. There is no default. If pidfile is not set, no pid file will be used.</dd>
+<dt>&#8211;program PROGRAM | -P PROGRAM</code></dt>
 <dd> Name of the output module (program) to use. Some output modules are ncid-kpopup, ncid-page, and ncid-speak.<br />
  Default PATH: /usr/share/ncid<br />
- Default PROGRAM: ncid-speak</p>
-<dt><code>&#8211;raw | -R</code></p>
+ Default PROGRAM: ncid-speak</dd>
+<dt><code>&#8211;raw | -R</code></dt>
 <dd> display data received from the CID Server<br />
- Default: raw data not displayed</p>
-<dt><code>&#8211;ring count | -r count</code></p>
+ Default: raw data not displayed</dd>
+<dt><code>&#8211;ring count | -r count</code></dt>
 <dd> Call output module on specific ring count.<br />
  For modems that indicate RING, count can be: 0 2 3 4 5 6 7 8 9<br />
  For VoIP, using a SIP gateway, count can be: -2 -1<br />
  A count of -1 incdicates a hangup before answer.<br />
  A count of -2 incdicates a hangup after answer.<br />
- Default: output module called as soon as CID received</p>
-<dt><code>&#8211;Tivo | -T</code></p>
+ Default: output module called as soon as CID received</dd>
+<dt><code>&#8211;Tivo | -T</code></dt>
 <dd> This option is for a TiVo using out2osd or text2osd<br />
  Changes output to 2 lines: name number line<br />
- Default output is 5 lines: date time number name line</p>
-<dt><code>&#8211;PopupTime seconds | -t seconds</code></p>
+ Default output is 5 lines: date time number name line</dd>
+<dt><code>&#8211;PopupTime seconds | -t seconds</code></dt>
 <dd> Time for the popup to stay on top of all windows. Range is 1 second to 99 seconds<br />
- Default popup time os 5 seconds</p>
-<dt><code>&#8211;verbose | -V</code></p>
+ Default popup time os 5 seconds</dd>
+<dt><code>&#8211;verbose | -V</code></dt>
 <dd> display formatted CID information, including CID log file<br />
- Default: silent</dl>
+ Default: silent</dd></dl>
 <h3>Arguments</h3>
 <dl>
-<dt><code>IP_ADDRESS | HOSTNAME</code></p>
+<dt><code>IP_ADDRESS | HOSTNAME</code></dt>
 <dd> set the IP Address<br />
- Default: 127.0.0.1 (localhost)</p>
-<dt><code>PORT_NUMBER</code></p>
+ Default: 127.0.0.1 (localhost)</dd>
+<dt><code>PORT_NUMBER</code></dt>
 <dd> set the port number<br />
- Default: 3333</dl>
+ Default: 3333</dd></dl>
 <h2>FILES</h2>
 <p> /etc/ncid/*<br />
  /usr/share/ncid/*</p>

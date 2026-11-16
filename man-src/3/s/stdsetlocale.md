@@ -11,7 +11,6 @@ std::setlocale - std::setlocale
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;clocale&gt;
-
     char *setlocale(int category, const char *locale);</code></pre> 
 The setlocale function installs the specified system locale or its portion as the new C locale. The modifications remain in effect and influences the execution of all locale-sensitive C library functions until the next call to setlocale. If locale is a null pointer, setlocale queries the current C locale without modifying it. 
 
@@ -36,14 +35,10 @@ POSIX also specifies that the returned pointer, not just the contents of the poi
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     // the C locale will be UTF-8 enabled English;
     // decimal dot will be German

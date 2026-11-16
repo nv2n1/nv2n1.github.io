@@ -14,7 +14,7 @@ description: "ata_bus_probe – Reset and probe ATA bus"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Bus to probe</dl>
+</dd><dd>Bus to probe</dd></dl>
 <h2>Description</h2>
 <p>Master ATA bus probing function. Initiates a hardware-dependent bus reset, then attempts to identify any devices found on the bus. </p>
 <p> LOCKING: PCI/etc. bus probe sem.</p>
@@ -23,5 +23,5 @@ description: "ata_bus_probe – Reset and probe ATA bus"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

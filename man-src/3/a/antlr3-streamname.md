@@ -119,18 +119,18 @@ description: "ANTLR3_EXCEPTION_struct –"
 <h3><code>ANTLR3_UINT32</code> <code>ANTLR3_EXCEPTION_struct::type</code></h3>
 <p>Set to one of the exception type defines:. .IP &quot;*&quot; 2 <code>ANTLR3_RECOGNITION_EXCEPTION</code></p>
 <dl COMPACT>
-<dt>*</p>
-<dd><code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_MISMATCHED_SET_EXCEPTION</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_EARLY_EXIT_EXCEPTION</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_FAILED_PREDICATE_EXCEPTION</code></p>
-<dt>*</p>
-<dd><code>ANTLR3_EARLY_EXIT_EXCEPTION</code></dl>
+<dt>*</dt>
+<dd><code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_MISMATCHED_SET_EXCEPTION</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_EARLY_EXIT_EXCEPTION</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_FAILED_PREDICATE_EXCEPTION</code></dd>
+<dt>*</dt>
+<dd><code>ANTLR3_EARLY_EXIT_EXCEPTION</code></dd></dl>
 <p> Referenced by antlr3ExceptionNew(), antlr3ExceptionPrint(), antlr3MTExceptionNew(), antlr3MTNExceptionNew(), displayRecognitionError(), mismatch(), noViableAlt(), recoverFromMismatchedSet(), and recoverFromMismatchedToken(). </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>

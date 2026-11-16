@@ -11,7 +11,6 @@ description: "sc::ShmMemoryGrp –"
 <p> The <code>ShmMemoryGrp</code> concrete class provides an implementation of <code>MsgMemoryGrp</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memshm.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgMemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>

@@ -23,7 +23,7 @@ description: "QuantLib::OneFactorStudentGaussianCopula – One-factor Student t 
 <p> The variance of the Student t-distribution with $ $ degrees of freedom is $ / ( &#8211; 2) $. Since the copula approach requires zero mean and unit variance distributions, $ M $ is scaled by $ qrt{(N_m &#8211; 2) / N_m}. $ </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Improve performance/accuracy of the calculation of inverse cumulative Y. Tabulate and store it for selected correlations?</dl>
+<dd>Improve performance/accuracy of the calculation of inverse cumulative Y. Tabulate and store it for selected correlations?</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Real density (Real m) const [virtual]</h3>
 <p>Density function of M. </p>

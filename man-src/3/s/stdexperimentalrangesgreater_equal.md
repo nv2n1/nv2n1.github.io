@@ -10,23 +10,15 @@ description: "std::experimental::ranges::greater_equal – std::experimental::ra
 <p>std::experimental::ranges::greater_equal &#8211; std::experimental::ranges::greater_equal</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / ranges / functional&gt;
-
     template &lt;class T = void&gt;
-
 requires StrictTotallyOrdered&lt;T&gt; ||
-
     Same&lt;T, void&gt; ||(ranges TS)
-
     /* &lt; on two const T lvalues invokes a built-in operator comparing pointers */
-
     struct greater_equal;
-
 template &lt;&gt;
 (ranges TS)
-
     struct greater_equal&lt;void&gt;;
 Function object for performing comparisons. The primary template invokes operator&lt; on const lvalues of type T and negates the result. The specialization greater_equal&lt;void&gt; deduces the parameter types of the function call operator from the arguments (but not the return type).
-
 All specializations of greater_equal are Semiregular.
 </code></pre>
 <h2>Member types</h2>

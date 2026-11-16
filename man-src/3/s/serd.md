@@ -106,7 +106,7 @@ description: "Serd –"
 <p>A syntactic RDF node. </p>
 <p> <code>Data Fields:</code></p>
 <dl>
-<dd>const uint8_t * <i>buf</i> Value string. </p>
+<dd>const uint8_t * <i>buf</i> Value string. </dd>
 <p> size_t <i>n_bytes</i> Size in bytes (not including null) </p>
 <p> size_t <i>n_chars</i> Length in characters (not including null) </p>
 <p> <code>SerdNodeFlags</code> <i>flags</i> Node flags (e.g. string properties) </p>
@@ -116,14 +116,14 @@ description: "Serd –"
 <p>An unterminated string fragment. </p>
 <p> <code>Data Fields:</code></p>
 <dl>
-<dd>const uint8_t * <i>buf</i> Start of chunk. </p>
+<dd>const uint8_t * <i>buf</i> Start of chunk. </dd>
 <p> size_t <i>len</i> Length of chunk in bytes. </p>
 </dl>
 <h2>struct SerdError</h2>
 <p>An error description. </p>
 <p> <code>Data Fields:</code></p>
 <dl>
-<dd><code>SerdStatus</code> <i>status</i> Error code. </p>
+<dd><code>SerdStatus</code> <i>status</i> Error code. </dd>
 <p> const uint8_t * <i>filename</i> File where error was encountered, or NULL. </p>
 <p> unsigned <i>line</i> Line where error was encountered, or 0. </p>
 <p> unsigned <i>col</i> Column where error was encountered. </p>
@@ -135,7 +135,7 @@ description: "Serd –"
 <p> This struct directly refers to chunks in other strings, it does not own any memory itself. Thus, URIs can be parsed and/or resolved against a base URI in-place without allocating memory. </p>
 <p> <code>Data Fields:</code></p>
 <dl>
-<dd><code>SerdChunk</code> <i>scheme</i> Scheme. </p>
+<dd><code>SerdChunk</code> <i>scheme</i> Scheme. </dd>
 <p> <code>SerdChunk</code> <i>authority</i> Authority. </p>
 <p> <code>SerdChunk</code> <i>path_base</i> Path prefix if relative. </p>
 <p> <code>SerdChunk</code> <i>path</i> Path suffix. </p>
@@ -160,7 +160,7 @@ description: "Serd –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>handle</i> Handle for user data.<br />
- <i>error</i> Error description.</dl>
+ <i>error</i> Error description.</dd></dl>
 <h3>typedef <code>SerdStatus</code>(* SerdBaseSink)(void *handle, const <code>SerdNode</code> *uri)</h3>
 <p>Sink (callback) for base URI changes. Called whenever the base URI of the serialisation changes.</p>
 <h3>typedef <code>SerdStatus</code>(* SerdPrefixSink)(void *handle, const <code>SerdNode</code> *name, const <code>SerdNode</code> *uri)</h3>
@@ -174,107 +174,108 @@ description: "Serd –"
 <p>Return status code. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_SUCCESS </i></p>
-<dd>No error.</p>
-<dt><i>SERD_FAILURE </i></p>
-<dd>Non-fatal failure.</p>
-<dt><i>SERD_ERR_UNKNOWN </i></p>
-<dd>Unknown error.</p>
-<dt><i>SERD_ERR_BAD_SYNTAX </i></p>
-<dd>Invalid syntax.</p>
-<dt><i>SERD_ERR_BAD_ARG </i></p>
-<dd>Invalid argument.</p>
-<dt><i>SERD_ERR_NOT_FOUND </i></p>
-<dd>Not found.</p>
-<dt><i>SERD_ERR_ID_CLASH </i></p>
-<dd>Encountered clashing blank node IDs.</p>
-<dt><i>SERD_ERR_BAD_CURIE </i></p>
-<dd>Invalid CURIE (e.g. prefix does not exist)</p>
-<dt><i>SERD_ERR_INTERNAL </i></p>
-<dd>Unexpected internal error (should not happen)</dl>
+<dt><i>SERD_SUCCESS </i></dt>
+<dd>No error.</dd>
+<dt><i>SERD_FAILURE </i></dt>
+<dd>Non-fatal failure.</dd>
+<dt><i>SERD_ERR_UNKNOWN </i></dt>
+<dd>Unknown error.</dd>
+<dt><i>SERD_ERR_BAD_SYNTAX </i></dt>
+<dd>Invalid syntax.</dd>
+<dt><i>SERD_ERR_BAD_ARG </i></dt>
+<dd>Invalid argument.</dd>
+<dt><i>SERD_ERR_NOT_FOUND </i></dt>
+<dd>Not found.</dd>
+<dt><i>SERD_ERR_ID_CLASH </i></dt>
+<dd>Encountered clashing blank node IDs.</dd>
+<dt><i>SERD_ERR_BAD_CURIE </i></dt>
+<dd>Invalid CURIE (e.g. prefix does not exist)</dd>
+<dt><i>SERD_ERR_INTERNAL </i></dt>
+<dd>Unexpected internal error (should not happen)</dd></dl>
 <h3>enum <code>SerdSyntax</code></h3>
 <p>RDF syntax type. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_TURTLE </i></p>
-<dd>Turtle &#8211; Terse RDF Triple Language (UTF-8).</dl>
+<dt><i>SERD_TURTLE </i></dt>
+<dd>Turtle &#8211; Terse RDF Triple Language (UTF-8).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>Turtle</dl>
+<dd>Turtle</dd></dl>
 <dl>
-<dt><i>SERD_NTRIPLES </i></p>
-<dd>NTriples &#8211; Line-based RDF triples (ASCII).</dl>
+<dt><i>SERD_NTRIPLES </i></dt>
+<dd>NTriples &#8211; Line-based RDF triples (ASCII).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>NTriples</dl>
+<dd>NTriples</dd></dl>
 <h3>enum <code>SerdStatementFlag</code></h3>
 <p>Flags indication inline abbreviation information for a statement. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_EMPTY_S </i></p>
-<dd>Empty blank node subject.</p>
-<dt><i>SERD_EMPTY_O </i></p>
-<dd>Empty blank node object.</p>
-<dt><i>SERD_ANON_S_BEGIN </i></p>
-<dd>Start of anonymous subject.</p>
-<dt><i>SERD_ANON_O_BEGIN </i></p>
-<dd>Start of anonymous object.</p>
-<dt><i>SERD_ANON_CONT </i></p>
-<dd>Continuation of anonymous node.</p>
-<dt><i>SERD_LIST_S_BEGIN </i></p>
-<dd>Start of list subject.</p>
-<dt><i>SERD_LIST_O_BEGIN </i></p>
-<dd>Start of list object.</p>
-<dt><i>SERD_LIST_CONT </i></p>
-<dd>Continuation of list.</dl>
+<dt><i>SERD_EMPTY_S </i></dt>
+<dd>Empty blank node subject.</dd>
+<dt><i>SERD_EMPTY_O </i></dt>
+<dd>Empty blank node object.</dd>
+<dt><i>SERD_ANON_S_BEGIN </i></dt>
+<dd>Start of anonymous subject.</dd>
+<dt><i>SERD_ANON_O_BEGIN </i></dt>
+<dd>Start of anonymous object.</dd>
+<dt><i>SERD_ANON_CONT </i></dt>
+<dd>Continuation of anonymous node.</dd>
+<dt><i>SERD_LIST_S_BEGIN </i></dt>
+<dd>Start of list subject.</dd>
+<dt><i>SERD_LIST_O_BEGIN </i></dt>
+<dd>Start of list object.</dd>
+<dt><i>SERD_LIST_CONT </i></dt>
+<dd>Continuation of list.</dd></dl>
 <h3>enum <code>SerdType</code></h3>
 <p>Type of a syntactic RDF node. This is more precise than the type of an abstract RDF node. An abstract node is either a resource, literal, or blank. In syntax there are two ways to refer to a resource (by URI or CURIE) and two ways to refer to a blank (by ID or anonymously). Anonymous (inline) blank nodes are expressed using SerdStatementFlags rather than this type. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_NOTHING </i></p>
-<dd>The type of a nonexistent node. This type is useful as a sentinel, but is never emitted by the reader.</p>
-<dt><i>SERD_LITERAL </i></p>
-<dd>Literal value. A literal optionally has either a language, or a datatype (not both).</p>
-<dt><i>SERD_URI </i></p>
-<dd>URI (absolute or relative). Value is an unquoted URI string, which is either a relative reference with respect to the current base URI (e.g. &#8216;foo/bar&#8217;), or an absolute URI (e.g. &#8216;<a rel="nofollow" href="http://example.org/foo'">http://example.org/foo&#8217;</a>).</dl>
+<dt><i>SERD_NOTHING </i></dt>
+<dd>The type of a nonexistent node. This type is useful as a sentinel, but is never emitted by the reader.</dd>
+<dt><i>SERD_LITERAL </i></dt>
+<dd>Literal value. A literal optionally has either a language, or a datatype (not both).</dd>
+<dt><i>SERD_URI </i></dt>
+<dd>URI (absolute or relative). Value is an unquoted URI string, which is either a relative reference with respect to the current base URI (e.g. &#8216;foo/bar&#8217;), or an absolute URI (e.g. &#8216;<a rel="nofollow" href="http://example.org/foo'">http://example.org/foo&#8217;</a>).</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>RFC3986.</dl>
+<dd>RFC3986.</dd></dl>
 <dl>
-<dt><i>SERD_CURIE </i></p>
-<dd>CURIE, a shortened URI. Value is an unquoted CURIE string relative to the current environment, e.g. &#8216;rdf:type&#8217;.</dl>
+<dt><i>SERD_CURIE </i></dt>
+<dd>CURIE, a shortened URI. Value is an unquoted CURIE string relative to the current environment, e.g. &#8216;rdf:type&#8217;.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>CURIE Syntax 1.0</dl>
+<dd>CURIE Syntax 1.0</dd></dl>
 <dl>
-<dt><i>SERD_BLANK </i></p>
-<dd>A blank node. Value is a blank node ID, e.g. &#8216;id3&#8217;, which is meaningful only within this serialisation.</dl>
+<dt><i>SERD_BLANK </i></dt>
+<dd>A blank node. Value is a blank node ID, e.g. &#8216;id3&#8217;, which is meaningful only within this serialisation.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd>Turtle nodeID</dl>
+<dd>Turtle nodeID</dd></dl>
 <h3>enum <code>SerdNodeFlag</code></h3>
 <p>Flags indicating certain string properties relevant to serialisation. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_HAS_NEWLINE </i></p>
+<dt><i>SERD_HAS_NEWLINE </i></dt>
 <dd>Contains line breaks (&#8216;
-&#8217; or &#8216;&#8217;)</p>
-<dt><i>SERD_HAS_QUOTE </i></p>
-<dd>Contains quotes (&#8221;&#8217;)</dl>
+&#8217; or &#8216;
+&#8217;)</dd>
+<dt><i>SERD_HAS_QUOTE </i></dt>
+<dd>Contains quotes (&#8221;&#8217;)</dd></dl>
 <h3>enum <code>SerdStyle</code></h3>
 <p>Syntax style options. The style of the writer output can be controlled by ORing together values from this enumeration. Note that some options are only supported for some syntaxes (e.g. NTriples does not support abbreviation and is always ASCII). </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SERD_STYLE_ABBREVIATED </i></p>
-<dd>Abbreviate triples when possible.</p>
-<dt><i>SERD_STYLE_ASCII </i></p>
-<dd>Escape all non-ASCII characters.</p>
-<dt><i>SERD_STYLE_RESOLVED </i></p>
-<dd>Resolve URIs against base URI.</p>
-<dt><i>SERD_STYLE_CURIED </i></p>
-<dd>Shorten URIs into CURIEs.</p>
-<dt><i>SERD_STYLE_BULK </i></p>
-<dd>Write output in pages.</dl>
+<dt><i>SERD_STYLE_ABBREVIATED </i></dt>
+<dd>Abbreviate triples when possible.</dd>
+<dt><i>SERD_STYLE_ASCII </i></dt>
+<dd>Escape all non-ASCII characters.</dd>
+<dt><i>SERD_STYLE_RESOLVED </i></dt>
+<dd>Resolve URIs against base URI.</dd>
+<dt><i>SERD_STYLE_CURIED </i></dt>
+<dd>Shorten URIs into CURIEs.</dd>
+<dt><i>SERD_STYLE_BULK </i></dt>
+<dd>Write output in pages.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>const uint8_t* serd_strerror (<code>SerdStatus</code>status)</h3>
 <p>Return a string describing a status code.</p>
@@ -282,12 +283,12 @@ description: "Serd –"
 <p>Measure a UTF-8 string. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Length of str in characters (except NULL).</dl>
+<dd>Length of str in characters (except NULL).</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>str</i> A null-terminated UTF-8 string.<br />
  <i>n_bytes</i> (Output) Set to the size of str in bytes (except NULL).<br />
- <i>flags</i> (Output) Set to the applicable flags.</dl>
+ <i>flags</i> (Output) Set to the applicable flags.</dd></dl>
 <h3>double serd_strtod (const char *str, char **endptr)</h3>
 <p>Parse a string to a double. The API of this function is identical to the standard C strtod function, except this function is locale-independent and always matches the lexical format used in the Turtle grammar (the decimal point is always &#8216;.&#8217;).</p>
 <h3>void* serd_base64_decode (const uint8_t *str, size_tlen, size_t *size)</h3>
@@ -296,10 +297,10 @@ description: "Serd –"
 <dl>
 <dd><i>str</i> Base64 string to decode.<br />
  <i>len</i> The length of str.<br />
- <i>size</i> Set to the size of the returned blob in bytes.</dl>
+ <i>size</i> Set to the size of the returned blob in bytes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A newly allocated blob which must be freed with free().</dl>
+<dd>A newly allocated blob which must be freed with free().</dd></dl>
 <h3>const uint8_t* serd_uri_to_path (const uint8_t *uri)</h3>
 <p>Return the local path for uri, or NULL if uri is not a file URI. Note this (inappropriately named) function only removes the file scheme if necessary, and returns uri unmodified if it is an absolute path. Percent encoding and other issues are not handled, to properly convert a file URI to a path, use <code>serd_file_uri_parse()</code>.</p>
 <h3>uint8_t* serd_file_uri_parse (const uint8_t *uri, uint8_t **hostname)</h3>
@@ -307,10 +308,10 @@ description: "Serd –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>uri</i> A file URI.<br />
- <i>hostname</i> If non-NULL, set to the hostname, if present.</dl>
+ <i>hostname</i> If non-NULL, set to the hostname, if present.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The path component of the URI.</dl>
+<dd>The path component of the URI.</dd></dl>
 <p> Both the returned path and hostname (if applicable) are owned by the caller and must be freed with free().</p>
 <h3>bool serd_uri_string_has_scheme (const uint8_t *utf8)</h3>
 <p>Return true iff utf8 starts with a valid URI scheme.</p>
@@ -328,7 +329,7 @@ description: "Serd –"
 <p>Make a deep copy of node. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>a node that the caller must free with <code>serd_node_free()</code>.</dl>
+<dd>a node that the caller must free with <code>serd_node_free()</code>.</dd></dl>
 <h3>bool serd_node_equals (const <code>SerdNode</code> *a, const <code>SerdNode</code> *b)</h3>
 <p>Return true iff a is equal to b.</p>
 <h3><code>SerdNode</code> serd_node_new_uri_from_node (const <code>SerdNode</code> *uri_node, const <code>SerdURI</code> *base, <code>SerdURI</code> *out)</h3>
@@ -344,14 +345,14 @@ description: "Serd –"
 <dl>
 <dd><i>uri</i> The URI to parse and serialise.<br />
  <i>base</i> Base URI to resolve uri against (or NULL for no resolution).<br />
- <i>out</i> Set to the parsing of the new URI (i.e. points only to memory owned by the new returned node).</dl>
+ <i>out</i> Set to the parsing of the new URI (i.e. points only to memory owned by the new returned node).</dd></dl>
 <h3><code>SerdNode</code> serd_node_new_decimal (doubled, unsignedfrac_digits)</h3>
 <p>Create a new node by serialising d into an xsd:decimal string. The resulting node will always contain a `.&#8217;, start with a digit, and end with a digit (i.e. will have a leading and/or trailing `0&#8242; if necessary). It will never be in scientific notation. A maximum of frac_digits digits will be written after the decimal point, but trailing zeros will automatically be omitted (except one if d is a round integer). </p>
 <p> Note that about 16 and 8 fractional digits are required to precisely represent a double and float, respectively. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>d</i> The value for the new node.<br />
- <i>frac_digits</i> The maximum number of digits after the decimal place.</dl>
+ <i>frac_digits</i> The maximum number of digits after the decimal place.</dd></dl>
 <h3><code>SerdNode</code> serd_node_new_integer (int64_ti)</h3>
 <p>Create a new node by serialising i into an xsd:integer string.</p>
 <h3><code>SerdNode</code> serd_node_new_blob (const void *buf, size_tsize, boolwrap_lines)</h3>
@@ -360,7 +361,7 @@ description: "Serd –"
 <dl>
 <dd><i>buf</i> Raw binary input data.<br />
  <i>size</i> Size of buf.<br />
- <i>wrap_lines</i> Wrap lines at 76 characters to conform to RFC 2045.</dl>
+ <i>wrap_lines</i> Wrap lines at 76 characters to conform to RFC 2045.</dd></dl>
 <h3>void serd_node_free (<code>SerdNode</code> *node)</h3>
 <p>Free any data owned by node. Note that if node is itself dynamically allocated (which is not the case for nodes created internally by serd), it will not be freed.</p>
 <h3><code>SerdEnv</code>* serd_env_new (const <code>SerdNode</code> *base_uri)</h3>

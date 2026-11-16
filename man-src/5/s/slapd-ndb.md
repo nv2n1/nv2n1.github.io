@@ -19,39 +19,39 @@ description: "slapd-ndb – MySQL NDB backend to slapd"
 <p>These <code>slapd.conf</code> options apply to the <code>ndb</code> backend database. That is, they must follow a &quot;database ndb&quot; line and come before any subsequent &quot;backend&quot; or &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page.</p>
 <h2>Data Source Configuration</h2>
 <dl>
-<dt><code>dbhost &lt;hostname&gt;</code></p>
-<dd>The name or IP address of the host running the MySQL server. The default is &quot;localhost&quot;. On Unix systems, the connection to a local server is made using a Unix Domain socket, whose path is specified using the <code>dbsocket</code> directive.</p>
-<dt><code>dbuser &lt;username&gt;</code></p>
-<dd>The MySQL login ID to use when connecting to the MySQL server. The chosen user must have sufficient privileges to manipulate the SQL tables in the target database.</p>
-<dt><code>dbpasswd &lt;password&gt;</code></p>
-<dd>The password for the <code>dbuser</code>.</p>
-<dt><code>dbname &lt;database name&gt;</code></p>
-<dd>The name of the MySQL database to use.</p>
-<dt><code>dbport &lt;port&gt;</code></p>
-<dd>The port number to use for the TCP connection to the MySQL server.</p>
-<dt><code>dbsocket &lt;path&gt;</code></p>
-<dd>The socket to be used for connecting to a local MySQL server.</p>
-<dt><code>dbflag &lt;integer&gt;</code></p>
-<dd>Client flags for the MySQL session. See the MySQL documentation for details.</p>
-<dt><code>dbconnect &lt;connectstring&gt;</code></p>
-<dd>The name or IP address of the host running the cluster manager. The default is &quot;localhost&quot;.</p>
-<dt><code>dbconnections &lt;integer&gt;</code></p>
-<dd>The number of cluster connections to establish. Using up to 4 may improve performance under heavier load. The default is 1. </p>
+<dt><code>dbhost &lt;hostname&gt;</code></dt>
+<dd>The name or IP address of the host running the MySQL server. The default is &quot;localhost&quot;. On Unix systems, the connection to a local server is made using a Unix Domain socket, whose path is specified using the <code>dbsocket</code> directive.</dd>
+<dt><code>dbuser &lt;username&gt;</code></dt>
+<dd>The MySQL login ID to use when connecting to the MySQL server. The chosen user must have sufficient privileges to manipulate the SQL tables in the target database.</dd>
+<dt><code>dbpasswd &lt;password&gt;</code></dt>
+<dd>The password for the <code>dbuser</code>.</dd>
+<dt><code>dbname &lt;database name&gt;</code></dt>
+<dd>The name of the MySQL database to use.</dd>
+<dt><code>dbport &lt;port&gt;</code></dt>
+<dd>The port number to use for the TCP connection to the MySQL server.</dd>
+<dt><code>dbsocket &lt;path&gt;</code></dt>
+<dd>The socket to be used for connecting to a local MySQL server.</dd>
+<dt><code>dbflag &lt;integer&gt;</code></dt>
+<dd>Client flags for the MySQL session. See the MySQL documentation for details.</dd>
+<dt><code>dbconnect &lt;connectstring&gt;</code></dt>
+<dd>The name or IP address of the host running the cluster manager. The default is &quot;localhost&quot;.</dd>
+<dt><code>dbconnections &lt;integer&gt;</code></dt>
+<dd>The number of cluster connections to establish. Using up to 4 may improve performance under heavier load. The default is 1. </dd>
 </dl>
 <h2>Schema Configuration</h2>
 <dl>
-<dt><code>attrlen &lt;attribute&gt; &lt;length&gt;</code></p>
-<dd>Specify the column length to use for a particular attribute. LDAP attributes are stored in individual columns of the SQL tables. The maximum column lengths for each column must be specified when creating these tables. If a length constraint was specified in the attribute&#8217;s LDAP schema definition, that value will be used by default. If the schema didn&#8217;t specify a constraint, the default is 128 bytes. Currently the maximum is 1024.</p>
-<dt><code>index &lt;attr[,attr&#8230;]&gt;</code></p>
-<dd>Specify a list of attributes for which indexing should be maintained. Currently there is no support for substring indexing; a single index structure provides presence, equality, and inequality indexing for the specified attributes.</p>
-<dt><code>attrset &lt;set&gt; &lt;attrs&gt;</code></p>
-<dd>Specify a list of attributes to be treated as an attribute set. This directive creates a table named <i>set</i> which will contain all of the listed attributes. Ordinarily an attribute resides in a table named by an object class that uses the attribute. However, attributes are only allowed to appear in a single table. For attributes that are derived from an inherited object class definition, the attribute will only be stored in the superior class&#8217;s table. Attribute sets should be defined for any attributes that are used in multiple unrelated object classes, i.e., classes that are not connected by a simple inheritance chain.</dl>
+<dt><code>attrlen &lt;attribute&gt; &lt;length&gt;</code></dt>
+<dd>Specify the column length to use for a particular attribute. LDAP attributes are stored in individual columns of the SQL tables. The maximum column lengths for each column must be specified when creating these tables. If a length constraint was specified in the attribute&#8217;s LDAP schema definition, that value will be used by default. If the schema didn&#8217;t specify a constraint, the default is 128 bytes. Currently the maximum is 1024.</dd>
+<dt><code>index &lt;attr[,attr&#8230;]&gt;</code></dt>
+<dd>Specify a list of attributes for which indexing should be maintained. Currently there is no support for substring indexing; a single index structure provides presence, equality, and inequality indexing for the specified attributes.</dd>
+<dt><code>attrset &lt;set&gt; &lt;attrs&gt;</code></dt>
+<dd>Specify a list of attributes to be treated as an attribute set. This directive creates a table named <i>set</i> which will contain all of the listed attributes. Ordinarily an attribute resides in a table named by an object class that uses the attribute. However, attributes are only allowed to appear in a single table. For attributes that are derived from an inherited object class definition, the attribute will only be stored in the superior class&#8217;s table. Attribute sets should be defined for any attributes that are used in multiple unrelated object classes, i.e., classes that are not connected by a simple inheritance chain.</dd></dl>
 <h2>Access Control</h2>
 <p>The <code>ndb</code> backend honors most access control semantics as indicated in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5).</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/openldap/slapd.conf</code></p>
-<dd>default <code>slapd </code> configuration file</dl>
+<dt><code>/etc/openldap/slapd.conf</code></dt>
+<dd>default <code>slapd </code> configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8), <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8), <code><a href="/docs/linux/man/8-slapindex/">slapindex</a></code>(8), MySQL Cluster documentation.</p>
 <h2>Author</h2>

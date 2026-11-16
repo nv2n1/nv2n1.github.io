@@ -10,13 +10,9 @@ description: "std::basic_streambuf – std::basic_streambuf"
 <p>std::basic_streambuf &#8211; std::basic_streambuf</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;streambuf&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_streambuf;</code></pre>
 <p>The class basic_streambuf controls input and output to a character sequence. It includes and provides access to<br />
 1) The controlled character sequence, also called the buffer, which may contain input sequence (also called get area) for buffering the input operations and/or output sequence (also called put area) for buffering the output operations.<br />

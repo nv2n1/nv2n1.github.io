@@ -15,7 +15,7 @@ description: "intel_reg_write – Set an Intel GPU register to a value"
 <p> <code>intel_reg_write</code> is a tool to set Intel GPU registers to values, for use in speeding up debugging. The <i>register</i> and <i>value</i> arguments are given as hexadecimal.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>intel_reg_write 0x61230 0x0</p>
-<dd> Disables the first internal panel fitter. </p>
+<dt>intel_reg_write 0x61230 0x0</dt>
+<dd> Disables the first internal panel fitter. </dd>
 </dl>
 <h2>Index</h2>

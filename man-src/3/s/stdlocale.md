@@ -10,7 +10,6 @@ description: "std::locale – std::locale"
 <p>std::locale &#8211; std::locale</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 class locale;</code></pre>
 <p>An object of class std::locale is an immutable indexed set of immutable facets. Each stream object of the C++ input/output library is associated with an std::locale object and uses its facets for parsing and formatting of all data. In addition, a locale object is associated with each std::basic_regex object. Locale objects can also be used as predicates that perform string collation with the standard containers and algorithms and can be accessed directly to obtain or modify the facets they hold.<br />
 Each locale constructed in a C++ program holds at least the following standard facets, but a program may define additional specializations or completely new facets and add them to any existing locale object.<br />
@@ -88,10 +87,8 @@ operator() <i>(public member function)</i> </p>
 <p>Demonstrates the typical prologue of a locale-sensitive program (cross-platform)<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::wcout &lt;&lt; &quot;User-preferred locale setting is &quot; &lt;&lt; std::locale(&quot;&quot;).name().c_str() &lt;&lt; '
 ';

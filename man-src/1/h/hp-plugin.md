@@ -15,26 +15,26 @@ description: "hp-plugin – Plugin Download and Install Utility"
 <p> <code>hp-plugin [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>
-<dt>Run in graphical UI mode:</p>
-<dd> -u or &#8211;gui (Default)</p>
-<dt>Run in interactive mode:</p>
-<dd> -i or &#8211;interactive</p>
-<dt>Installation for required printer mode:</p>
-<dd> &#8211;required (Qt4 only)</p>
-<dt>Installation for optional printer mode:</p>
-<dd> &#8211;optional (Qt4 only)</p>
-<dt>Set the language:</p>
-<dd> &#8211;loc=&lt;lang&gt; or &#8211;lang=&lt;lang&gt;. Use &#8211;loc=? or &#8211;lang=? to see a list of available language codes.</dl>
+<dt>Run in graphical UI mode:</dt>
+<dd> -u or &#8211;gui (Default)</dd>
+<dt>Run in interactive mode:</dt>
+<dd> -i or &#8211;interactive</dd>
+<dt>Installation for required printer mode:</dt>
+<dd> &#8211;required (Qt4 only)</dd>
+<dt>Installation for optional printer mode:</dt>
+<dd> &#8211;optional (Qt4 only)</dd>
+<dt>Set the language:</dt>
+<dd> &#8211;loc=&lt;lang&gt; or &#8211;lang=&lt;lang&gt;. Use &#8211;loc=? or &#8211;lang=? to see a list of available language codes.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Specify the path to the plugin file:</p>
-<dd> -p &lt;path&gt; or &#8211;path=&lt;path&gt; or &#8211;plugin=&lt;path&gt;</p>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</dl>
+<dt>Specify the path to the plugin file:</dt>
+<dd> -p &lt;path&gt; or &#8211;path=&lt;path&gt; or &#8211;plugin=&lt;path&gt;</dd>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-setup hp-firmware</p>
 <h2>AUTHOR</h2>

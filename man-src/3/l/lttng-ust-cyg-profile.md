@@ -12,25 +12,25 @@ description: "lttng-ust-cyg-profile — LTTng UST 2.x Function Tracing"
 <h2>SYNOPSIS</h2>
 <p> Compile the application source code with option <code>-finstrument-functions</code> and launch your application either with:</p>
 <dl>
-<dt><code>LD_PRELOAD=liblttng-ust-cyg-profile-fast.so</code> appname</p>
-<dd></dl>
+<dt><code>LD_PRELOAD=liblttng-ust-cyg-profile-fast.so</code> appname</dt>
+<dd></dd></dl>
 <p> or (to use verbose function tracing)</p>
 <dl>
-<dt><code>LD_PRELOAD=liblttng-ust-cyg-profile.so</code> appname</p>
-<dd></dl>
+<dt><code>LD_PRELOAD=liblttng-ust-cyg-profile.so</code> appname</dt>
+<dd></dd></dl>
 <p> All events emitted for function tracing are provided on loglevel TRACE_DEBUG_FUNCTION. The following command can be used to add function tracing events in your trace session:</p>
 <dl>
-<dt><code>lttng enable-event -u -a &#8211;loglevel-only TRACE_DEBUG_FUNCTION</code></p>
-<dd></dl>
+<dt><code>lttng enable-event -u -a &#8211;loglevel-only TRACE_DEBUG_FUNCTION</code></dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> For compilers that provide code generation option <code>-finstrument-functions</code> (e.g. GCC and LLVM/Clang) LTTng-UST provides shared libraries that allow users to trace the function flow of their applications. </p>
 <p> Function tracing comes in two flavors (each providing different trade-offs):</p>
 <dl>
-<dt>liblttng-ust-cyg-profile-fast.so</p>
-<dd> This is a lightweight variant that should only be used where it can be guaranteed that the complete event stream is recorded without any missing events. Any kind of duplicate information is left out. </p>
+<dt>liblttng-ust-cyg-profile-fast.so</dt>
+<dd> This is a lightweight variant that should only be used where it can be guaranteed that the complete event stream is recorded without any missing events. Any kind of duplicate information is left out. </dd>
 <p> At each function entry the address of the called function is recored as lttng_ust_cyg_profile_fast:func_entry. Function exit is recorded as lttng_ust_cyg_profile_fast:func_exit (without any field data). </p>
-<dt>liblttng-ust-cyg-profile.so</p>
-<dd> This is a more robust variant which also works for use-cases where events might get discarded or not recorded from application startup. In these cases the trace analyzer needs extra information to be able to reconstruct the program flow. </p>
+<dt>liblttng-ust-cyg-profile.so</dt>
+<dd> This is a more robust variant which also works for use-cases where events might get discarded or not recorded from application startup. In these cases the trace analyzer needs extra information to be able to reconstruct the program flow. </dd>
 <p> For each function entry and exit the address of the called function and the call site address are recorded as lttng_ust_cyg_profile:func_entry and lttng_ust_cyg_profile:func_exit.</dl>
 <h2>USAGE</h2>
 <p> To use function tracing you need to make sure the sources of your application are compiled with -finstrument-functions. It might be necessary to limit the number of source files where this option is used to prevent excessive amount of trace data to be generated during run time. Usually there are additional compiler flags that allow you to specify more fine grained selection of function instrumentation. </p>
@@ -49,3 +49,4 @@ description: "lttng-ust-cyg-profile — LTTng UST 2.x Function Tracing"
 <h2>AUTHORS</h2>
 <p> liblttng-ust was originally written by Mathieu Desnoyers, with additional contributions from various other people. It is currently maintained by Mathieu Desnoyers &lt;mathieu.desnoyers [at] efficios.com&gt;. </p>
 <h2>Index</h2>
+</p>

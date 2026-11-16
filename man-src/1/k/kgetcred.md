@@ -17,24 +17,24 @@ description: "kgetcred – get a ticket for a particular service"
 <p> The second form applies hostname canonicalization using local name canonicalization rules just as applications normally would, possibly enabling canonicalization via referrals. </p>
 <p> Supported options:</p>
 <dl>
-<dt><code>&#8211;canonicalize</code></p>
-<dd> requests that the KDC canonicalize the principal.</p>
-<dt><code>&#8211;name-type= </code><i>name-type</i></p>
-<dd> the name-type to use when parsing the principal name.</p>
-<dt><code>-c </code><i>cache , &#8211;</i><code>-cache= </code><i>cache</i></p>
-<dd> the credential cache to use.</p>
-<dt><code>&#8211;delegation-credential-cache= </code><i>cache</i></p>
-<dd> the credential cache to use for delegation.</p>
-<dt><code>-e </code><i>enctype , &#8211;</i><code>-enctype= </code><i>enctype</i></p>
-<dd> encryption type to use.</p>
-<dt><code>&#8211;no-transit-check</code></p>
-<dd> requests that the KDC doesn&#8217;t do transit checking.</p>
-<dt><code>&#8211;forwardable</code></p>
+<dt><code>&#8211;canonicalize</code></dt>
+<dd> requests that the KDC canonicalize the principal.</dd>
+<dt><code>&#8211;name-type= </code><i>name-type</i></dt>
+<dd> the name-type to use when parsing the principal name.</dd>
+<dt><code>-c </code><i>cache , &#8211;</i><code>-cache= </code><i>cache</i></dt>
+<dd> the credential cache to use.</dd>
+<dt><code>&#8211;delegation-credential-cache= </code><i>cache</i></dt>
+<dd> the credential cache to use for delegation.</dd>
+<dt><code>-e </code><i>enctype , &#8211;</i><code>-enctype= </code><i>enctype</i></dt>
+<dd> encryption type to use.</dd>
+<dt><code>&#8211;no-transit-check</code></dt>
+<dd> requests that the KDC doesn&#8217;t do transit checking.</dd>
+<dt><code>&#8211;forwardable</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
+</dd><dt><code>&#8211;version</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1) </p>
 <h2>Index</h2>

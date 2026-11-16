@@ -63,8 +63,8 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>A <i>ClientHello</i> message consists of client information that may be sent to the server when the client first connects.</p>
 <dl>
-<dt><code>client_id</code></p>
-<dd>A free-form client description. This usually includes the name and version of the client implementation.</dl>
+<dt><code>client_id</code></dt>
+<dd>A free-form client description. This usually includes the name and version of the client implementation.</dd></dl>
 <h3>AcceptMessage accept_msg</h3>
 <pre>message AcceptMessage {
  TimeSpec submit_time = 1;
@@ -73,12 +73,12 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>An <i>AcceptMessage</i> is sent by the client when a command is allowed by the security policy. It contains the following members:</p>
 <dl>
-<dt><code>submit_time</code></p>
-<dd>The wall clock time when the command was submitted to the security policy.</p>
-<dt><code>info_msgs</code></p>
-<dd>An array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry and may also be used by server to determine where and how the I/O log is stored.</p>
-<dt><code>expect_iobufs</code></p>
-<dd>Set to true if the server should expect <i>IoBuffer</i> messages to follow (for I/O logging) or false if the server should only store the event log.</dl>
+<dt><code>submit_time</code></dt>
+<dd>The wall clock time when the command was submitted to the security policy.</dd>
+<dt><code>info_msgs</code></dt>
+<dd>An array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry and may also be used by server to determine where and how the I/O log is stored.</dd>
+<dt><code>expect_iobufs</code></dt>
+<dd>Set to true if the server should expect <i>IoBuffer</i> messages to follow (for I/O logging) or false if the server should only store the event log.</dd></dl>
 <p> If an <i>AcceptMessage</i> is sent, the client must not send a <i>RejectMessage</i> or <i>RestartMessage</i></p>
 <h3>RejectMessage reject_msg</h3>
 <pre>message RejectMessage {
@@ -88,12 +88,12 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>A <i>RejectMessage</i> is sent by the client when a command is denied by the security policy. It contains the following members:</p>
 <dl>
-<dt><code>submit_time</code></p>
-<dd>The wall clock time when the command was submitted to the security policy.</p>
-<dt><code>reason</code></p>
-<dd>The reason the security policy gave for denying the command.</p>
-<dt><code>info_msgs</code></p>
-<dd>An array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry.</dl>
+<dt><code>submit_time</code></dt>
+<dd>The wall clock time when the command was submitted to the security policy.</dd>
+<dt><code>reason</code></dt>
+<dd>The reason the security policy gave for denying the command.</dd>
+<dt><code>info_msgs</code></dt>
+<dd>An array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry.</dd></dl>
 <p> If a <i>RejectMessage</i> is sent, the client must not send an <i>AcceptMessage</i> or <i>RestartMessage</i></p>
 <h3>ExitMessage exit_msg</h3>
 <pre>message ExitMessage {
@@ -105,16 +105,16 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>An <i>ExitMessage</i> is sent by the client after the command has exited or has been terminated by a signal. It contains the following members:</p>
 <dl>
-<dt><code>run_time</code></p>
-<dd>The total amount of elapsed time since the command started, calculated using a monotonic clock where possible. This is not the wall clock time.</p>
-<dt><code>exit_value</code></p>
-<dd>The command&#8217;s exit value in the range 0-255.</p>
-<dt><code>dumped_core</code></p>
-<dd>True if the command was terminated by a signal and dumped core.</p>
-<dt><code>signal</code></p>
-<dd>If the command was terminated by a signal, this is set to the name of the signal without the leading &#8220;SIG&#8221; For example, <code>INT</code> <code>TERM</code> <code>KILL</code> <code>SEGV</code></p>
-<dt><code>error</code></p>
-<dd>A message from the client indicating that the command was terminated unexpectedly due to an error.</dl>
+<dt><code>run_time</code></dt>
+<dd>The total amount of elapsed time since the command started, calculated using a monotonic clock where possible. This is not the wall clock time.</dd>
+<dt><code>exit_value</code></dt>
+<dd>The command&#8217;s exit value in the range 0-255.</dd>
+<dt><code>dumped_core</code></dt>
+<dd>True if the command was terminated by a signal and dumped core.</dd>
+<dt><code>signal</code></dt>
+<dd>If the command was terminated by a signal, this is set to the name of the signal without the leading &#8220;SIG&#8221; For example, <code>INT</code> <code>TERM</code> <code>KILL</code> <code>SEGV</code></dd>
+<dt><code>error</code></dt>
+<dd>A message from the client indicating that the command was terminated unexpectedly due to an error.</dd></dl>
 <p> When performing I/O logging, the client should wait for a <i>commit_point</i> corresponding to the final <i>IoBuffer</i> before closing the connection unless the final <i>commit_point</i> has already been received.</p>
 <h3>RestartMessage restart_msg</h3>
 <pre>message RestartMessage {
@@ -123,10 +123,10 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>A <i>RestartMessage</i> is sent by the client to resume sending an existing I/O log that was previously interrupted. It contains the following members:</p>
 <dl>
-<dt><code>log_id</code></p>
-<dd>The the server-side name for an I/O log that was previously sent to the client by the server. This may be a path name on the server or some other kind of server-side identifier.</p>
-<dt><code>resume_point</code></p>
-<dd>The point in time after which to resume the I/O log. This is in the form of a <i>TimeSpec</i> representing the amount of time since the command started, not the wall clock time. The <i>resume_point</i> should correspond to a <i>commit_point</i> previously sent to the client by the server. If the server receives a <i>RestartMessage</i> containing a <i>resume_point</i> it has not previously seen, an error will be returned to the client and the connection will be dropped.</dl>
+<dt><code>log_id</code></dt>
+<dd>The the server-side name for an I/O log that was previously sent to the client by the server. This may be a path name on the server or some other kind of server-side identifier.</dd>
+<dt><code>resume_point</code></dt>
+<dd>The point in time after which to resume the I/O log. This is in the form of a <i>TimeSpec</i> representing the amount of time since the command started, not the wall clock time. The <i>resume_point</i> should correspond to a <i>commit_point</i> previously sent to the client by the server. If the server receives a <i>RestartMessage</i> containing a <i>resume_point</i> it has not previously seen, an error will be returned to the client and the connection will be dropped.</dd></dl>
 <p> If a <i>RestartMessage</i> is sent, the client must not send an <i>AcceptMessage</i> or <i>RejectMessage</i></p>
 <h3>AlertMessage alert_msg</h3>
 <pre>message AlertMessage {
@@ -136,12 +136,12 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>An <i>AlertMessage</i> is sent by the client to indicate a problem detected by the security policy while the command is running that should be stored in the event log. It contains the following members:</p>
 <dl>
-<dt><code>alert_time</code></p>
-<dd>The wall clock time when the alert occurred.</p>
-<dt><code>reason</code></p>
-<dd>The reason for the alert.</p>
-<dt><code>info_msgs</code></p>
-<dd>An optional array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry.</dl>
+<dt><code>alert_time</code></dt>
+<dd>The wall clock time when the alert occurred.</dd>
+<dt><code>reason</code></dt>
+<dd>The reason for the alert.</dd>
+<dt><code>info_msgs</code></dt>
+<dd>An optional array of <i>InfoMessage</i> describing the user who submitted the command as well as the execution environment of the command. This information is used to generate an event log entry.</dd></dl>
 <h3>IoBuffer ttyin_buf | ttyout_buf | stdin_buf | stdout_buf | stderr_buf</h3>
 <pre>message IoBuffer {
  TimeSpec delay = 1;
@@ -149,10 +149,10 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>An <i>IoBuffer</i> is used to represent data from terminal input, terminal output, standard input, standard output, or standard error. It contains the following members:</p>
 <dl>
-<dt><code>delay</code></p>
-<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</p>
-<dt><code>data</code></p>
-<dd>The binary I/O log data from terminal input, terminal output, standard input, standard output, or standard error.</dl>
+<dt><code>delay</code></dt>
+<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</dd>
+<dt><code>data</code></dt>
+<dd>The binary I/O log data from terminal input, terminal output, standard input, standard output, or standard error.</dd></dl>
 <h3>ChangeWindowSize winsize_event</h3>
 <pre>message ChangeWindowSize {
  TimeSpec delay = 1;
@@ -161,12 +161,12 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>A <i>ChangeWindowSize</i> message is sent by the client when the terminal running the command changes size. It contains the following members:</p>
 <dl>
-<dt><code>delay</code></p>
-<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</p>
-<dt><code>rows</code></p>
-<dd>The new number of terminal rows.</p>
-<dt><code>cols</code></p>
-<dd>The new number of terminal columns.</dl>
+<dt><code>delay</code></dt>
+<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</dd>
+<dt><code>rows</code></dt>
+<dd>The new number of terminal rows.</dd>
+<dt><code>cols</code></dt>
+<dd>The new number of terminal columns.</dd></dl>
 <h3>CommandSuspend suspend_event</h3>
 <pre>message CommandSuspend {
  TimeSpec delay = 1;
@@ -174,10 +174,10 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>A <i>CommandSuspend</i> message is sent by the client when the command is either suspended or resumed. It contains the following members:</p>
 <dl>
-<dt><code>delay</code></p>
-<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</p>
-<dt><code>signal</code></p>
-<dd>The signal name without the leading &#8220;SIG&#8221; For example, <code>STOP</code> <code>TSTP</code> <code>CONT</code></dl>
+<dt><code>delay</code></dt>
+<dd>The elapsed time since the last record in the form of a <i>TimeSpec</i> The <i>delay</i> should be calculated using a monotonic clock where possible.</dd>
+<dt><code>signal</code></dt>
+<dd>The signal name without the leading &#8220;SIG&#8221; For example, <code>STOP</code> <code>TSTP</code> <code>CONT</code></dd></dl>
 <h2>Server Messages</h2>
 <p>A <i>ServerMessage</i> is a container used to encapsulate all the possible message types the server may send to a client. </p>
 <pre>message ServerMessage {
@@ -199,14 +199,14 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 }</pre>
 <p>The <i>ServerHello</i> message consists of server information sent when the client first connects. It contains the following members:</p>
 <dl>
-<dt><code>server_id</code></p>
-<dd>A free-form server description. Usually this includes the name and version of the implementation running on the log server. This member is always present.</p>
-<dt><code>redirect</code></p>
-<dd>A host and port separated by a colon (`:&#8217; ) that the client should connect to instead. The host may be a host name, an IPv4 address, or an IPv6 address in square brackets. This may be used for server load balancing. The server will disconnect after sending the <i>ServerHello</i> when it includes a <code>redirect</code></p>
-<dt><code>servers</code></p>
-<dd>A list of other known log servers. This can be used to implement log server redundancy and allows the client to discover all other log servers simply by connecting to one known server. This member may be omitted when there is only a single log server.</p>
-<dt><code>subcommands</code></p>
-<dd>If set, the server supports logging additional commands during a session. The client may send an <i>AcceptMessage</i> or <i>RejectMessage</i> when <code>sudo</code> is running in <i>intercept</i> mode. In this mode, commands spawned from the initial command authorized by <code>sudo</code> are subject to policy restrictions and/or are logged. If <i>subcommands</i> is false, the client must not attempt to log additional commands.</dl>
+<dt><code>server_id</code></dt>
+<dd>A free-form server description. Usually this includes the name and version of the implementation running on the log server. This member is always present.</dd>
+<dt><code>redirect</code></dt>
+<dd>A host and port separated by a colon (`:&#8217; ) that the client should connect to instead. The host may be a host name, an IPv4 address, or an IPv6 address in square brackets. This may be used for server load balancing. The server will disconnect after sending the <i>ServerHello</i> when it includes a <code>redirect</code></dd>
+<dt><code>servers</code></dt>
+<dd>A list of other known log servers. This can be used to implement log server redundancy and allows the client to discover all other log servers simply by connecting to one known server. This member may be omitted when there is only a single log server.</dd>
+<dt><code>subcommands</code></dt>
+<dd>If set, the server supports logging additional commands during a session. The client may send an <i>AcceptMessage</i> or <i>RejectMessage</i> when <code>sudo</code> is running in <i>intercept</i> mode. In this mode, commands spawned from the initial command authorized by <code>sudo</code> are subject to policy restrictions and/or are logged. If <i>subcommands</i> is false, the client must not attempt to log additional commands.</dd></dl>
 <h3>TimeSpec commit_point</h3>
 <p>A periodic time stamp sent by the server to indicate when I/O log buffers have been committed to storage. This message is not sent after every <i>IoBuffer</i> but rather at a server-configurable interval. When the server receives an <i>ExitMessage</i> it will respond with a <i>commit_point</i> corresponding to the last received <i>IoBuffer</i> before closing the connection.</p>
 <h3>string log_id</h3>
@@ -235,66 +235,66 @@ description: "sudo_logsrv.proto – Sudo log server protocol"
 <p> Some variables have a <i>client</i> <i>run</i> or <i>submit</i> prefix. These prefixes are used to eliminate ambiguity for variables that could apply to the client program, the user submitting the command, or the command being run. Variables with a <i>client</i> prefix pertain to the program performing the connection to the log server, for example <code>sudo</code> Variables with a <i>run</i> prefix pertain to the command that the user requested be run. Variables with a <i>submit</i> prefix pertain to the user submitting the request (the user running <code>sudo</code> ) </p>
 <p> The following <i>InfoMessage</i> entries are required:</p>
 <dl>
-<dt><code>Key Ta </code><code>Type Ta </code><code>Description</code></p>
+<dt><code>Key Ta </code><code>Type Ta </code><code>Description</code></dt>
 <dd>
-<dt><code>command Ta </code>string Ta command that was submitted</p>
+</dd><dt><code>command Ta </code>string Ta command that was submitted</dt>
 <dd>
-<dt><code>runuser Ta </code>string Ta name of user the command was run as</p>
+</dd><dt><code>runuser Ta </code>string Ta name of user the command was run as</dt>
 <dd>
-<dt><code>submithost Ta </code>string Ta name of host the command was submitted on</p>
+</dd><dt><code>submithost Ta </code>string Ta name of host the command was submitted on</dt>
 <dd>
-<dt><code>submituser Ta </code>string Ta name of user submitting the command</p>
-<dd></dl>
+</dd><dt><code>submituser Ta </code>string Ta name of user submitting the command</dt>
+<dd></dd></dl>
 <p> The following <i>InfoMessage</i> entries are recognized, but not required:</p>
 <dl>
-<dt><code>Key Ta </code><code>Type Ta </code><code>Description</code></p>
+<dt><code>Key Ta </code><code>Type Ta </code><code>Description</code></dt>
 <dd>
-<dt><code>clientargv Ta </code>StringList Ta client&#8217;s original argument vector</p>
+</dd><dt><code>clientargv Ta </code>StringList Ta client&#8217;s original argument vector</dt>
 <dd>
-<dt><code>clientpid Ta </code>int64 Ta client&#8217;s process ID</p>
+</dd><dt><code>clientpid Ta </code>int64 Ta client&#8217;s process ID</dt>
 <dd>
-<dt><code>clientppid Ta </code>int64 Ta client&#8217;s parent process ID</p>
+</dd><dt><code>clientppid Ta </code>int64 Ta client&#8217;s parent process ID</dt>
 <dd>
-<dt><code>clientsid Ta </code>int64 Ta client&#8217;s terminal session ID</p>
+</dd><dt><code>clientsid Ta </code>int64 Ta client&#8217;s terminal session ID</dt>
 <dd>
-<dt><code>columns Ta </code>int64 Ta number of columns in the terminal</p>
+</dd><dt><code>columns Ta </code>int64 Ta number of columns in the terminal</dt>
 <dd>
-<dt><code>lines Ta </code>int64 Ta number of lines in the terminal</p>
+</dd><dt><code>lines Ta </code>int64 Ta number of lines in the terminal</dt>
 <dd>
-<dt><code>runargv Ta </code>StringList Ta argument vector of command to run</p>
+</dd><dt><code>runargv Ta </code>StringList Ta argument vector of command to run</dt>
 <dd>
-<dt><code>runchroot Ta </code>string Ta root directory of command to run</p>
+</dd><dt><code>runchroot Ta </code>string Ta root directory of command to run</dt>
 <dd>
-<dt><code>runcwd Ta </code>string Ta running command&#8217;s working directory</p>
+</dd><dt><code>runcwd Ta </code>string Ta running command&#8217;s working directory</dt>
 <dd>
-<dt><code>runenv Ta </code>StringList Ta the running command&#8217;s environment</p>
+</dd><dt><code>runenv Ta </code>StringList Ta the running command&#8217;s environment</dt>
 <dd>
-<dt><code>rungid Ta </code>int64 Ta primary group-ID of the command</p>
+</dd><dt><code>rungid Ta </code>int64 Ta primary group-ID of the command</dt>
 <dd>
-<dt><code>rungids Ta </code>NumberList Ta supplementary group-IDs for the command</p>
+</dd><dt><code>rungids Ta </code>NumberList Ta supplementary group-IDs for the command</dt>
 <dd>
-<dt><code>rungroup Ta </code>string Ta primary group name of the command</p>
+</dd><dt><code>rungroup Ta </code>string Ta primary group name of the command</dt>
 <dd>
-<dt><code>rungroups Ta </code>StringList Ta supplementary group names for the command</p>
+</dd><dt><code>rungroups Ta </code>StringList Ta supplementary group names for the command</dt>
 <dd>
-<dt><code>runuid Ta </code>int64 Ta run user&#8217;s user-ID</p>
+</dd><dt><code>runuid Ta </code>int64 Ta run user&#8217;s user-ID</dt>
 <dd>
-<dt><code>submitcwd Ta </code>string Ta submit user&#8217;s current working directory</p>
+</dd><dt><code>submitcwd Ta </code>string Ta submit user&#8217;s current working directory</dt>
 <dd>
-<dt><code>submitenv Ta </code>StringList Ta the submit user&#8217;s environment</p>
+</dd><dt><code>submitenv Ta </code>StringList Ta the submit user&#8217;s environment</dt>
 <dd>
-<dt><code>submitgid Ta </code>int64 Ta submit user&#8217;s primary group-ID</p>
+</dd><dt><code>submitgid Ta </code>int64 Ta submit user&#8217;s primary group-ID</dt>
 <dd>
-<dt><code>submitgids Ta </code>NumberList Ta submit user&#8217;s supplementary group-IDs</p>
-<dt><code>submitgroup Ta </code>string Ta submitting user&#8217;s primary group name</p>
+</dd><dt><code>submitgids Ta </code>NumberList Ta submit user&#8217;s supplementary group-IDs</dt>
+<dt><code>submitgroup Ta </code>string Ta submitting user&#8217;s primary group name</dt>
 <dd>
+</dd><dd>
+</dd><dt><code>submitgroups Ta </code>StringList Ta submit user&#8217;s supplementary group names</dt>
 <dd>
-<dt><code>submitgroups Ta </code>StringList Ta submit user&#8217;s supplementary group names</p>
+</dd><dt><code>submituid Ta </code>int64 Ta submit user&#8217;s user-ID</dt>
 <dd>
-<dt><code>submituid Ta </code>int64 Ta submit user&#8217;s user-ID</p>
-<dd>
-<dt><code>ttyname Ta </code>string Ta the terminal the command was submitted from</p>
-<dd></dl>
+</dd><dt><code>ttyname Ta </code>string Ta the terminal the command was submitted from</dt>
+<dd></dd></dl>
 <p> The server must accept other variables not listed above but may ignore them.</p>
 <h2>Examples</h2>
 <p>The Protocol Buffers description of the log server protocol is included in full below. Note that this uses the newer &#8220;proto3&#8221; syntax. </p>
@@ -417,7 +417,7 @@ message ServerHello {
 <h2>See Also</h2>
 <p>sudo_logsrvd.conf5, <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5), <a href="/docs/linux/man/8-sudo/">sudo</a>(8), sudo_logsrvd8</p>
 <dl>
-<dd><i>Protocol Buffers</i></dl>
+<dd><i>Protocol Buffers</i></dd></dl>
 <h2>History</h2>
 <p>See the HISTORY file in the <code>sudo</code> distribution (<a rel="nofollow" href="https://www.sudo.ws/history.html)">https://www.sudo.ws/history.html)</a> for a brief history of sudo.</p>
 <h2>Authors</h2>

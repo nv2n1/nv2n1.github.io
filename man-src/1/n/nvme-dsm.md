@@ -43,49 +43,49 @@ nvme dsm&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Sends the command with the requested nsid. This is required for the character devices, or overrides the block nsid if given.</dl>
+</dt><dd> Sends the command with the requested nsid. This is required for the character devices, or overrides the block nsid if given.</dd></dl>
  
 
  -a &lt;attribute-list,&gt;, --ctx-attrs=&lt;attribute-list&gt;
 <dl>
 <dt>
-<dd> Comma separated list of the context attributes in each range</dl>
+</dt><dd> Comma separated list of the context attributes in each range</dd></dl>
  
 
  -b &lt;nlb-list,&gt;, --blocks=&lt;nlb-list,&gt;
 <dl>
 <dt>
-<dd> Comma separated list of the number of blocks in each range</dl>
+</dt><dd> Comma separated list of the number of blocks in each range</dd></dl>
  
 
  -s &lt;slba-list,&gt;, --slbs=&lt;slba-list,&gt;
 <dl>
 <dt>
-<dd> Comma separated list of the starting block in each range</dl>
+</dt><dd> Comma separated list of the starting block in each range</dd></dl>
  
 
  -d &lt;deallocate&gt;, --ad=&lt;deallocate&gt;
 <dl>
 <dt>
-<dd> Attribute Deallocate.</dl>
+</dt><dd> Attribute Deallocate.</dd></dl>
  
 
  -w &lt;write&gt;, --idw=&lt;write&gt;
 <dl>
 <dt>
-<dd> Attribute Integral Dataset for Write.</dl>
+</dt><dd> Attribute Integral Dataset for Write.</dd></dl>
  
 
  -r &lt;read&gt;, --idr=&lt;read&gt;
 <dl>
 <dt>
-<dd> Attribute Integral Dataset for Read.</dl>
+</dt><dd> Attribute Integral Dataset for Read.</dd></dl>
  
 
  -c &lt;cdw11&gt;, --cdw11=&lt;cdw11&gt;
 <dl>
 <dt>
-<dd> All the command command dword 11 attributes. Use exclusive from specifying individual attributes</dl>
+</dt><dd> All the command command dword 11 attributes. Use exclusive from specifying individual attributes</dd></dl>
 
 <h2>EXAMPLES</h2>
 

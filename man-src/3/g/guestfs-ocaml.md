@@ -148,7 +148,6 @@ g #mkdir &#8220;/foo&#8221;;</p>
 (*Example showing how to enable debugging, and capture it into any
                                                    *custom logging system.
                                                        *)
-
     (*Events we are interested in.This bitmask covers all trace and
           *debug messages.
               *)
@@ -156,10 +155,8 @@ g #mkdir &#8220;/foo&#8221;;</p>
                              Guestfs.EVENT_WARNING;
                              Guestfs.EVENT_APPLIANCE;
                              Guestfs.EVENT_TRACE]
-
     let rec main() =
         let g = new Guestfs.guestfs() in
-
                 (*By default, debugging information is printed on stderr.To
                                   *capture it somewhere else you have to set up an event handler
                                       *which will be called back as debug messages are generated.To do
@@ -169,7 +166,6 @@ g #mkdir &#8220;/foo&#8221;;</p>
                                                       .
                                                           *)
                     ignore(g #set_event_callback message_callback event_bitmask);
-
 (*This is how debugging is enabled
  : **Setting the 'trace' flag in the handle means that each libguestfs
          *call is logged(name, parameters, return )
@@ -192,14 +188,12 @@ g #mkdir &#8220;/foo&#8221;;</p>
                                                                      *)
     g #set_trace true;
 g #set_verbose true;
-
 (*Do some operations which will generate plenty of trace and debug
       *messages.
           *)
     g #add_drive "/dev/null";
 g #launch();
 g #close()
-
     (*This function is called back by libguestfs whenever a trace or
          *debug message is generated.*
              *For the classes of events we have registered above,
@@ -215,7 +209,6 @@ g #close()
                                        let event_name = Guestfs.event_to_string[event] in
                                                             Printf.printf "[%s] %S
 %!" event_name buf)
-
                                        let() = main()
 </code></pre>
 <h2>SEE ALSO</h2>
@@ -231,29 +224,29 @@ g #close()
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAH">EXAMPLE: CREATE A DISK IMAGE</a></p>
+<dt><a href="#lbAH">EXAMPLE: CREATE A DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAI">EXAMPLE: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></p>
+</dd><dt><a href="#lbAI">EXAMPLE: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAJ">EXAMPLE: ENABLE DEBUGGING AND LOGGING</a></p>
+</dd><dt><a href="#lbAJ">EXAMPLE: ENABLE DEBUGGING AND LOGGING</a></dt>
 <dd>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHORS</a></p>
+</dd><dt><a href="#lbAL">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAM">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAM">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAN">LICENSE</a></p>
+</dd><dt><a href="#lbAN">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAO">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAO">BUGS</a></dt>
+<dd></dd></dl>

@@ -13,13 +13,13 @@ SDL_keysym - Keysym structure
  SDLMod mod;
  Uint16 unicode;
 } SDL_keysym;</tt></pre><h2>Structure Data</h2><dl COMPACT><dt><b>scancode</b>
-<dd>Hardware specific scancode
-<dt><b>sym</b>
-<dd>SDL virtual keysym
-<dt><b>mod</b>
-<dd>Current key modifiers
-<dt><b>unicode</b>
-<dd>Translated character</dl><h2>Description</h2>The <b>SDL_keysym</b> structure is used by reporting key presses and releases since it is a part of the <i></i><b>SDL_KeyboardEvent</b>. 
+</dt><dd>Hardware specific scancode
+</dd><dt><b>sym</b>
+</dt><dd>SDL virtual keysym
+</dd><dt><b>mod</b>
+</dt><dd>Current key modifiers
+</dd><dt><b>unicode</b>
+</dt><dd>Translated character</dd></dl><h2>Description</h2>The <b>SDL_keysym</b> structure is used by reporting key presses and releases since it is a part of the <i></i><b>SDL_KeyboardEvent</b>. 
 
  The <b>scancode</b> field should generally be left alone, it is the hardware dependent scancode returned by the keyboard. The <b>sym</b> field is extremely useful. It is the SDL-defined value of the key (see <i>SDL Key Syms</i>. This field is very useful when you are checking for certain key presses, like so: 
 

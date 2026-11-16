@@ -18,14 +18,14 @@ description: "cmap_dispatch – Dispatches callbacks from the CMAP service"
 <p> The <i>dispatch_types</i> argument is used to identify the type of dispatch to execute. The possible types are CS_DISPATCH_ONE, CS_DISPATCH_ALL and CS_DISPATCH_BLOCKING. </p>
 <p> The dispatch values have the following meanings:</p>
 <dl>
-<dt><code>CS_DISPATCH_ONE</code></p>
-<dd> Dispatch at least one callback, blocking until the callback is dispatched.</p>
-<dt><code>CS_DISPATCH_ALL</code></p>
-<dd> Dispatch all waiting callbacks without blocking to wait for any callbacks.</p>
-<dt><code>CS_DISPATCH_BLOCKING</code></p>
-<dd> Dispatch all callbacks blocking indefinitely. This is used in a threaded program where a thread is created, and then cs_dispatch() is called immediately from the created thread to execute callbacks.</p>
-<dt><code>CS_DISPATCH_ONE_NONBLOCKING</code></p>
-<dd> Dispatch at most one callback. If there is no pending callback, CS_ERR_TRY_AGAIN is returned.</dl>
+<dt><code>CS_DISPATCH_ONE</code></dt>
+<dd> Dispatch at least one callback, blocking until the callback is dispatched.</dd>
+<dt><code>CS_DISPATCH_ALL</code></dt>
+<dd> Dispatch all waiting callbacks without blocking to wait for any callbacks.</dd>
+<dt><code>CS_DISPATCH_BLOCKING</code></dt>
+<dd> Dispatch all callbacks blocking indefinitely. This is used in a threaded program where a thread is created, and then cs_dispatch() is called immediately from the created thread to execute callbacks.</dd>
+<dt><code>CS_DISPATCH_ONE_NONBLOCKING</code></dt>
+<dd> Dispatch at most one callback. If there is no pending callback, CS_ERR_TRY_AGAIN is returned.</dd></dl>
 <p> It&#8217;s needed to call <code><a href="/docs/linux/man/3-cmap_track_add/">cmap_track_add</a>(3)</code> to add tracked items and receive callbacks. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

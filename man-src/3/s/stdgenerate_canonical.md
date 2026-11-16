@@ -11,19 +11,13 @@ std::generate_canonical - std::generate_canonical
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType, size_t bits, class Generator &gt;  (since C++11)
-
 RealType generate_canonical( Generator&amp; g );
 Generates a random floating point number in range [0, 1).
-
 To generate enough entropy, generate_canonical() will call g() exactly k times, where \(k = max(1, \lceil \frac{b}{log_2 R} \rceil)\)k = max(1, ⌈ b / log
-
 2 R ⌉) and
 * b = std::min&lt;std::size_t&gt;(bits, std::numeric_limits&lt;RealType&gt;::digits)
-
 * R = g.max() - g.min() + 1.
-
 </code></pre>
 
 <h2>Parameters</h2>
@@ -46,10 +40,8 @@ Some existing implementations have a bug where they may occasionally return 1.0 
 
 produce random numbers with 10 bits of randomness: this may produce only k*R distinct values 
  // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

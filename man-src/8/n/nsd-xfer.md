@@ -14,26 +14,26 @@ description: "nsd-xfer – AXFR client to transfer zones from a name server"
 <p><code>Nsd-xfer </code> is program to transfer zones from a name server using AXFR. <code>NSD </code> is a complete implementation of an authoritative DNS nameserver.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd>Only send to IPv4 addresses.</p>
-<dt><code>-6</code></p>
-<dd>Only send to IPv6 addresses.</p>
-<dt><code>-a</code><i> address[@port]</i></p>
-<dd>Specify the source address (and port) to send from.</p>
-<dt><code>-f</code><i> file</i></p>
-<dd>The file to store the zone in.</p>
-<dt><code>-p</code><i> port</i></p>
-<dd>Specify the port to send to.</p>
-<dt><code>-s</code><i> serial</i></p>
-<dd>Specify the serial of the current zone. The zone is only transferred if the master server has a zone with a greater serial number.</p>
-<dt><code>-T</code><i> tsiginfo</i></p>
-<dd>Use TSIG to verify the zone transfer. The <i>tsiginfo</i> file must contain the TSIG key information. The file is removed upon successful reading of the key.</p>
-<dt><code>-v</code></p>
-<dd>Be more verbose.</p>
-<dt><code>-z</code><i> zone</i></p>
-<dd>Specify the zone to receive.</p>
-<dt><i>servers</i></p>
-<dd>List of nameservers to try.</dl>
+<dt><code>-4</code></dt>
+<dd>Only send to IPv4 addresses.</dd>
+<dt><code>-6</code></dt>
+<dd>Only send to IPv6 addresses.</dd>
+<dt><code>-a</code><i> address[@port]</i></dt>
+<dd>Specify the source address (and port) to send from.</dd>
+<dt><code>-f</code><i> file</i></dt>
+<dd>The file to store the zone in.</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd>Specify the port to send to.</dd>
+<dt><code>-s</code><i> serial</i></dt>
+<dd>Specify the serial of the current zone. The zone is only transferred if the master server has a zone with a greater serial number.</dd>
+<dt><code>-T</code><i> tsiginfo</i></dt>
+<dd>Use TSIG to verify the zone transfer. The <i>tsiginfo</i> file must contain the TSIG key information. The file is removed upon successful reading of the key.</dd>
+<dt><code>-v</code></dt>
+<dd>Be more verbose.</dd>
+<dt><code>-z</code><i> zone</i></dt>
+<dd>Specify the zone to receive.</dd>
+<dt><i>servers</i></dt>
+<dd>List of nameservers to try.</dd></dl>
 <h2>Examples</h2>
 <p>To run this program the standard way type: </p>
 <p> # nsd-xfer -z foobar.cz -f foobar.cz.zone 1.2.3.4</p>

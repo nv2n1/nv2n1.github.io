@@ -25,27 +25,27 @@ description: "QwtCompassMagnetNeedle –"
 <p> A magnet needle points to two opposite directions indicating north and south. </p>
 <p> The following colors are used:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>QPalette::Light </p>
+<dt>&bull;</dt>
+<dd>QPalette::Light </dd>
 <p>&nbsp;<wbr>Used for pointing south</p>
-<dt>&bull;</p>
-<dd>QPalette::Dark </p>
+<dt>&bull;</dt>
+<dd>QPalette::Dark </dd>
 <p>&nbsp;<wbr>Used for pointing north</p>
-<dt>&bull;</p>
-<dd>QPalette::Base </p>
+<dt>&bull;</dt>
+<dd>QPalette::Base </dd>
 <p>&nbsp;<wbr>Knob&nbsp;<wbr>(ThinStyle only)</dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtDial</code>, <code>QwtCompass</code></dl>
+<dd><code>QwtDial</code>, <code>QwtCompass</code></dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtCompassMagnetNeedle::Style</code></h3>
 <p>Style of the needle. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>TriangleStyle </i></p>
-<dd>A needle with a triangular shape.</p>
-<dt><i>ThinStyle </i></p>
-<dd>A thin needle.</dl>
+<dt><i>TriangleStyle </i></dt>
+<dd>A needle with a triangular shape.</dd>
+<dt><i>ThinStyle </i></dt>
+<dd>A thin needle.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtCompassMagnetNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
@@ -53,7 +53,7 @@ description: "QwtCompassMagnetNeedle –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>length</i> Length of the needle<br />
- <i>colorGroup</i> Color group, used for painting</dl>
+ <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

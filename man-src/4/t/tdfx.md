@@ -22,22 +22,22 @@ description: "tdfx – 3Dfx video driver"
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details. This section only covers configuration details specific to this driver. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;NoAccel&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable acceleration. Default: acceleration is enabled.</p>
-<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable software cursor. Default: software cursor is disable and a hardware cursor is used for configurations where the hardware cursor is available.</p>
-<dt><code>Option &#34;DRI&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Disable or enable DRI support. By default, DRI is on.</p>
-<dt><code>Option &#34;TexturedVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>This has XvImage support use the texture engine rather than the video overlay.</p>
-<dt><code>Option &#34;VideoKey&#34; &#34;</code><i>integer</i><code>&#34;</code></p>
-<dd>This sets the default pixel value for the YUV video overlay key. Default: undefined.</p>
-<dt><code>Option &#34;UsePIO&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Force the use of Programmed IO instead of Memory Mapped IO. Default: off.</dl>
+<dt><code>Option &#34;NoAccel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable acceleration. Default: acceleration is enabled.</dd>
+<dt><code>Option &#34;SWCursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable software cursor. Default: software cursor is disable and a hardware cursor is used for configurations where the hardware cursor is available.</dd>
+<dt><code>Option &#34;DRI&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Disable or enable DRI support. By default, DRI is on.</dd>
+<dt><code>Option &#34;TexturedVideo&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>This has XvImage support use the texture engine rather than the video overlay.</dd>
+<dt><code>Option &#34;VideoKey&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
+<dd>This sets the default pixel value for the YUV video overlay key. Default: undefined.</dd>
+<dt><code>Option &#34;UsePIO&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Force the use of Programmed IO instead of Memory Mapped IO. Default: off.</dd></dl>
 <p> The following additional <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;ShowCache&#34; &#34;</code><i>boolean</i><code>&#34;</code></p>
-<dd>Enable or disable viewing offscreen cache memory. A development debug option. Default: off.</dl>
+<dt><code>Option &#34;ShowCache&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
+<dd>Enable or disable viewing offscreen cache memory. A development debug option. Default: off.</dd></dl>
 <h2>Files</h2>
 <p>tdfx_drv.o</p>
 <h2>See Also</h2>

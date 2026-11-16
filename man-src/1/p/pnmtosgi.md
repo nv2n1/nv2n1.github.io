@@ -15,12 +15,12 @@ description: "pnmtosgi – convert a portable anymap to a SGI image file"
 <p> Reads a portable anymap as input. Produces an SGI image file as output. The SGI image will be 2-dimensional (1 channel) for PBM and PGM input, and 3-dimensional (3 channels) for PPM.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbatim</code></p>
-<dd> Write an uncompressed file.</p>
-<dt><code>-rle (default)</code></p>
-<dd> Write a compressed (run length encoded) file.</p>
-<dt><code>-imagename name</code></p>
-<dd> Write the string &quot;name&quot; into the imagename field of the header. The name string is limited to 79 characters. If no name is given, pnmtosgi writes &quot;no name&quot; into this field.</dl>
+<dt><code>-verbatim</code></dt>
+<dd> Write an uncompressed file.</dd>
+<dt><code>-rle (default)</code></dt>
+<dd> Write a compressed (run length encoded) file.</dd>
+<dt><code>-imagename name</code></dt>
+<dd> Write the string &quot;name&quot; into the imagename field of the header. The name string is limited to 79 characters. If no name is given, pnmtosgi writes &quot;no name&quot; into this field.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably.</p>
 <h2>REFERENCES</h2>

@@ -12,41 +12,33 @@ rdma_post_write - post an RDMA write work request.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_post_write
-
     (struct rdma_cm_id *id,
-
      void *context,
-
      void *addr,
-
      size_t length,
-
      struct ibv_mr *mr,
-
      int flags,
-
      uint64_t remote_addr,
-
      uint32_t rkey);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the request will be posted.
-<dt>context
-<dd>User-defined context associated with the request.
-<dt>addr
-<dd>The local address of the source of the write request.
-<dt>length
-<dd>The length of the write operation.
-<dt>mr
-<dd>Optional memory region associated with the local buffer.
-<dt>flags
-<dd>Optional flags used to control the write operation.
-<dt>remote_addr
-<dd>The address of the remote registered memory to write into.
-<dt>rkey
-<dd>The registered memory key associated with the remote address.</dl>
+</dt><dd>A reference to a communication identifier where the request will be posted.
+</dd><dt>context
+</dt><dd>User-defined context associated with the request.
+</dd><dt>addr
+</dt><dd>The local address of the source of the write request.
+</dd><dt>length
+</dt><dd>The length of the write operation.
+</dd><dt>mr
+</dt><dd>Optional memory region associated with the local buffer.
+</dd><dt>flags
+</dt><dd>Optional flags used to control the write operation.
+</dd><dt>remote_addr
+</dt><dd>The address of the remote registered memory to write into.
+</dd><dt>rkey
+</dt><dd>The registered memory key associated with the remote address.</dd></dl>
 
 <h2>Description</h2>
 

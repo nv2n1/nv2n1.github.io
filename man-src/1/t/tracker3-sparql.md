@@ -23,68 +23,68 @@ tracker3 sparql - q&lt;sparql&gt;[-u] | -f&lt;file&gt;
 <p> <code>-f, &#8211;file=&lt;</code><i>file</i><code>&gt;</code></p>
 <dl>
 <dt>
-<dd> Use a <i>file</i> with SPARQL content to query or update.</dl>
+</dt><dd> Use a <i>file</i> with SPARQL content to query or update.</dd></dl>
 <p> <code>-q, &#8211;query=&lt;</code><i>sparql</i><code>&gt;</code></p>
 <dl>
 <dt>
-<dd> Use a <i>sparql</i> string to query the database with.</dl>
+</dt><dd> Use a <i>sparql</i> string to query the database with.</dd></dl>
 <p> <code>-u, &#8211;update</code></p>
 <dl>
 <dt>
-<dd> This has to be used with <code>&#8211;query</code>. This tells &quot;tracker3 sparql&quot; to use the SPARQL update extensions so it knows it isn&#8217;t a regular data lookup request. So if your query is intended to change data in the database, this option is needed.</dl>
+</dt><dd> This has to be used with <code>&#8211;query</code>. This tells &quot;tracker3 sparql&quot; to use the SPARQL update extensions so it knows it isn&#8217;t a regular data lookup request. So if your query is intended to change data in the database, this option is needed.</dd></dl>
 <p> <code>-c, &#8211;list-classes</code></p>
 <dl>
 <dt>
-<dd> Returns a list of classes which describe the ontology used for storing data. These classes are also used in queries. For example, <i><a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a></i> is one of many classes which should be returned here.</dl>
+</dt><dd> Returns a list of classes which describe the ontology used for storing data. These classes are also used in queries. For example, <i><a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a></i> is one of many classes which should be returned here.</dd></dl>
 <p> <code>-x, &#8211;list-class-prefixes</code></p>
 <dl>
 <dt>
-<dd> Returns a list of classes and their related prefixes. Prefixes are used to make querying a lot simpler and are much like an alias. For example, <i><a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a></i> has the prefix <i>rdfs</i> so queries can be cut down to:</dl>
+</dt><dd> Returns a list of classes and their related prefixes. Prefixes are used to make querying a lot simpler and are much like an alias. For example, <i><a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a></i> has the prefix <i>rdfs</i> so queries can be cut down to:</dd></dl>
 <p> &quot;SELECT ?u WHERE \{ ?u a rdfs:Resource }&quot; </p>
 <p> <code>-p, &#8211;list-properties=[</code><i>class</i><code>]</code></p>
 <dl>
 <dt>
-<dd> Returns a list of properties which pertain to a <i>class</i>. You can use both formats here for the <i>class</i>, either the full name <i><a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nfo#Video">http://tracker.api.gnome.org/ontology/v3/nfo#Video</a></i> or the shortened prefix name <i>nfo:Video</i>.</dl>
+</dt><dd> Returns a list of properties which pertain to a <i>class</i>. You can use both formats here for the <i>class</i>, either the full name <i><a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nfo#Video">http://tracker.api.gnome.org/ontology/v3/nfo#Video</a></i> or the shortened prefix name <i>nfo:Video</i>.</dd></dl>
 <p> This gives the following result: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -p nfo:Video
 Properties: 2
   <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nfo#frameRate">http://tracker.api.gnome.org/ontology/v3/nfo#frameRate</a>
   <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nfo#frameCount">http://tracker.api.gnome.org/ontology/v3/nfo#frameCount</a>
 </pre>
-</dl>
+</dd></dl>
 <p> These properties <i>nfo:frameRate</i> and <i>nfo:frameCount</i> can then be used in queries. </p>
 <p> See also <code>&#8211;tree</code> and <code>&#8211;query</code>. </p>
 <p> <code>-n, &#8211;list-notifies=[</code><i>class</i><code>]</code></p>
 <dl>
 <dt>
-<dd> Returns a list of classes which are notified over D-Bus about any changes that occur in the database. The <i>class</i> does not have to be supplied here. This is optional and filters the results according to any argument supplied. With no <i>class</i>, all classes are listed.</dl>
+</dt><dd> Returns a list of classes which are notified over D-Bus about any changes that occur in the database. The <i>class</i> does not have to be supplied here. This is optional and filters the results according to any argument supplied. With no <i>class</i>, all classes are listed.</dd></dl>
 <p> <code>-i, &#8211;list-indexes=[</code><i>property</i><code>]</code></p>
 <dl>
 <dt>
-<dd> Returns a list of properties which are indexed in the database. Indexes improves query speed but also add an indexing penalty. The <i>property</i> does not have to be supplied here. This is optional and filters the results according to any argument supplied. With no <i>property</i>, all properties are listed. </p>
+</dt><dd> Returns a list of properties which are indexed in the database. Indexes improves query speed but also add an indexing penalty. The <i>property</i> does not have to be supplied here. This is optional and filters the results according to any argument supplied. With no <i>property</i>, all properties are listed. </dd>
 <dl>
 <dt>
-<dd> &bull; -g, &#8211;list-graphs:: List all the named graphs in the database. These are used by the filesystem miner to separate metadata so that apps can only see the information relevant to them.</dl>
+</dt><dd> &bull; -g, &#8211;list-graphs:: List all the named graphs in the database. These are used by the filesystem miner to separate metadata so that apps can only see the information relevant to them.</dd></dl>
 </dl>
 <p> <code>-t, &#8211;tree=[</code><i>class</i><code>]</code></p>
 <dl>
 <dt>
-<dd> Prints a tree showing all parent classes of <i>class</i> in the ontology. The <i>class</i> can be provided in shorthand or longhand (see <code>&#8211;get-shorthand</code> and <code>&#8211;get-longhand</code> for details). For example:</dl>
+</dt><dd> Prints a tree showing all parent classes of <i>class</i> in the ontology. The <i>class</i> can be provided in shorthand or longhand (see <code>&#8211;get-shorthand</code> and <code>&#8211;get-longhand</code> for details). For example:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql &#8211; t nmo : MMSMessage ROOT + &#8211;rdfs : Resource(C) | +&#8211;nie : InformationElement(C) | | +&#8211;nfo : Document(C) | | | +&#8211;nfo : TextDocument(C) | | | |  `&#8211;nmo : Message(C) | | | | | +&#8211;nmo : PhoneMessage(C) | | | | | |  `&#8211;nmo : MMSMessage(C)
-</dl>
+</dd></dl>
 <p> If no <i>class</i> is given, the entire tree is shown. </p>
 <p> The <code>&#8211;search</code> command line option can be used to highlight parts of the tree you&#8217;re looking for. The search is case insensitive. </p>
 <p> The <code>&#8211;properties</code> command line option can be used to show properties for each class displayed, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql &#8211; t nfo : FileDataObject &#8211; p ROOT + &#8211;rdfs : Resource(C) | &#8212; &gt; http :                                                                                                                                                                                                     // purl.org/dc/elements/1.1/contributor (P)<br />
                                                                                          | &#8212; &gt; http :                                                                                                                                                                                       // purl.org/dc/elements/1.1/coverage (P)<br />
                                                                                                        | &#8212; &gt; http :                                                                                                                                                                         // purl.org/dc/elements/1.1/creator (P)<br />
@@ -101,14 +101,14 @@ $ tracker3 sparql &#8211; t nfo : FileDataObject &#8211; p ROOT + &#8211;rdfs : 
                                                                                                                                                                                                                                                                  | &#8212; &gt; http :               // purl.org/dc/elements/1.1/title (P)<br />
                                                                                                                                                                                                                                                                                | &#8212; &gt; http : // purl.org/dc/elements/1.1/type (P)<br />
                                                                                                                                                                                                                                                                                              | &#8212; &gt; nao : deprecated(P) | &#8212; &gt; nao : hasTag(P) | &#8212; &gt; nao : identifier(P) | &#8212; &gt; nao : isRelated(P) | &#8212; &gt; nao : lastModified(P) | &#8212; &gt; nao : numericRating(P) | &#8212; &gt; rdf : type(P) | &#8212; &gt; rdfs : comment(P) | &#8212; &gt; rdfs : label(P) | &#8212; &gt; nrl : added(P) | &#8212; &gt; nrl : damaged(P) | &#8212; &gt; nrl : modified(P) | +&#8211;nie : DataObject(C) | | &#8212; &gt; nfo : belongsToContainer(P) | | &#8212; &gt; nie : byteSize(P) | | &#8212; &gt; nie : created(P) | | &#8212; &gt; nie : dataSource(P) | | &#8212; &gt; nie : interpretedAs(P) | | &#8212; &gt; nie : isPartOf(P) | | &#8212; &gt; nie : lastRefreshed(P) | | &#8212; &gt; nie : url(P) | | &#8212; &gt; tracker : available(P) | | +&#8211;nfo : FileDataObject(C) | | | &#8212; &gt; nfo : fileCreated(P) | | | &#8212; &gt; nfo : fileLastAccessed(P) | | | &#8212; &gt; nfo : fileLastModified(P) | | | &#8212; &gt; nfo : fileName(P) | | | &#8212; &gt; nfo : fileOwner(P) | | | &#8212; &gt; nfo : fileSize(P) | | | &#8212; &gt; nfo : hasHash(P) | | | &#8212; &gt; nfo : permissions(P)
-</dl>
+</dd></dl>
 <p> <code>-s, &#8211;search=&lt;</code><i>needle</i><code>&gt;</code></p>
 <dl>
 <dt>
-<dd> Returns a list of classes and properties which partially match <i>needle</i> in the ontology. This is a case insensitive match, for example:</dl>
+</dt><dd> Returns a list of classes and properties which partially match <i>needle</i> in the ontology. This is a case insensitive match, for example:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -s text
 Classes: 4
@@ -122,94 +122,84 @@ Properties: 4
   <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nmo#plainTextMessageContent">http://tracker.api.gnome.org/ontology/v3/nmo#plainTextMessageContent</a>
   <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/scal#textLocation">http://tracker.api.gnome.org/ontology/v3/scal#textLocation</a>
 </pre>
-</dl>
+</dd></dl>
 <p> See also <code>&#8211;tree</code>. </p>
 <p> <code>&#8211;get-shorthand=&lt;</code><i>class</i><code>&gt;</code></p>
 <dl>
 <dt>
-<dd> Returns the shorthand for a class given by a URL. For example:</dl>
+</dt><dd> Returns the shorthand for a class given by a URL. For example:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql --get-shorthand <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nmo#plainTextMessageContent">http://tracker.api.gnome.org/ontology/v3/nmo#plainTextMessageContent</a>
 nmo:plainTextMessageContent
 </pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;get-longhand=&lt;</code><i>class</i><code>&gt;</code></p>
 <dl>
 <dt>
-<dd> Returns the longhand for a class given in the form of CLASS:PROPERTY. For example:</dl>
+</dt><dd> Returns the longhand for a class given in the form of CLASS:PROPERTY. For example:</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql --get-longhand nmm:MusicPiece
 <a rel="nofollow" href="http://tracker.api.gnome.org/ontology/v3/nmm#MusicPiece">http://tracker.api.gnome.org/ontology/v3/nmm#MusicPiece</a>
 </pre>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> List all classes</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -q &quot;SELECT ?cl WHERE { ?cl a rdfs:Class }&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> List all properties for the Resources class (see &#8211;list-properties)</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -q &quot;SELECT ?prop WHERE {
     ?prop a rdf:Property ;
     rdfs:domain &lt;<a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a>&gt;
 }&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> List all class namespace prefixes</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -q &quot;SELECT ?prefix ?ns WHERE {
     ?ns a nrl:Namespace ;
     nrl:prefix ?prefix
 }&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> List all music files</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -q &quot;SELECT ?song WHERE { ?song a nmm:MusicPiece }&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> List all music albums, showing title, track count, and length in seconds.</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql -q &#8220;SELECT ?title COUNT(?song)<br />
                       AS songs<br />
                       SUM(?length) AS totallength<br />
@@ -225,30 +215,26 @@ nfo:<br />
     duration ? length<br />
 }<br />
 GROUP BY ? album &#8221;
-</dl>
+</dd></dl>
 </dl>
 <p> List all music from a particular artist</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql &#8211; q &#8220;SELECT ?song ?title WHERE {<br />
     ? song nmm<br />
     : performer [nmm:artistName &#8216;Artist Name&#8217;];<br />
 nie : title ? title<br />
 }<br />
 &#8221;
-</dl>
+</dd></dl>
 </dl>
 <p> Set the played count for a song</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql &#8211; u &#8211; q &#8220;DELETE {<br />
     &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter ?count<br />
 }<br />
@@ -259,42 +245,36 @@ WHERE{<br />
     &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter 42<br />
 }<br />
 &#8221;
-</dl>
+</dd></dl>
 </dl>
 <p> List all image files</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 sparql -q &quot;SELECT ?image WHERE { ?image a nfo:Image }&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> List all image files with a specific tag</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 $ tracker3 sparql &#8211; q &#8220;SELECT ?image WHERE {<br />
     ? image a nfo<br />
     : Image;<br />
 nao : hasTag [nao:prefLabel &#8216;tag&#8217;]<br />
 }<br />
 &#8221;
-</dl>
+</dd></dl>
 </dl>
 <p> List all image files created on a specific month and order by date</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ tracker3 sparql - q "SELECT ?image ?date WHERE {
     ? image a nfo
@@ -304,7 +284,7 @@ nie : contentCreated ? date.FILTER(? date &gt;= '2008-07-01T00:00:00' &amp;&amp;
 }
 ORDER BY ? date "
 </code></pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sql/">tracker3-sql</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>

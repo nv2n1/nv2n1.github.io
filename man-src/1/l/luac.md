@@ -24,20 +24,20 @@ description: "luac – Lua compiler"
 <h2>OPTIONS</h2>
 <p> Options must be separate.</p>
 <dl>
-<dt><code>-l</code></p>
-<dd> produce a listing of the compiled bytecode for Lua&#8217;s virtual machine. Listing bytecodes is useful to learn about Lua&#8217;s virtual machine. If no files are given, then <code>luac</code> loads <code>luac.out</code> and lists its contents.</p>
-<dt><code>-o</code><i> file</i></p>
-<dd> output to <i>file</i>, instead of the default <code>luac.out</code>. (You can use <code>&#8216;-&#8216;</code> for standard output, but not on platforms that open standard output in text mode.) The output file may be a source file because all files are loaded before the output file is written. Be careful not to overwrite precious files.</p>
-<dt><code>-p</code></p>
-<dd> load files but do not generate any output file. Used mainly for syntax checking and for testing precompiled chunks: corrupted files will probably generate errors when loaded. Lua always performs a thorough integrity test on precompiled chunks. Bytecode that passes this test is completely safe, in the sense that it will not break the interpreter. However, there is no guarantee that such code does anything sensible. (None can be given, because the halting problem is unsolvable.) If no files are given, then <code>luac</code> loads <code>luac.out</code> and tests its contents. No messages are displayed if the file passes the integrity test.</p>
-<dt><code>-s</code></p>
-<dd> strip debug information before writing the output file. This saves some space in very large chunks, but if errors occur when running a stripped chunk, then the error messages may not contain the full information they usually do. For instance, line numbers and names of local variables are lost.</p>
-<dt><code>-v</code></p>
-<dd> show version information.</dl>
+<dt><code>-l</code></dt>
+<dd> produce a listing of the compiled bytecode for Lua&#8217;s virtual machine. Listing bytecodes is useful to learn about Lua&#8217;s virtual machine. If no files are given, then <code>luac</code> loads <code>luac.out</code> and lists its contents.</dd>
+<dt><code>-o</code><i> file</i></dt>
+<dd> output to <i>file</i>, instead of the default <code>luac.out</code>. (You can use <code>&#8216;-&#8216;</code> for standard output, but not on platforms that open standard output in text mode.) The output file may be a source file because all files are loaded before the output file is written. Be careful not to overwrite precious files.</dd>
+<dt><code>-p</code></dt>
+<dd> load files but do not generate any output file. Used mainly for syntax checking and for testing precompiled chunks: corrupted files will probably generate errors when loaded. Lua always performs a thorough integrity test on precompiled chunks. Bytecode that passes this test is completely safe, in the sense that it will not break the interpreter. However, there is no guarantee that such code does anything sensible. (None can be given, because the halting problem is unsolvable.) If no files are given, then <code>luac</code> loads <code>luac.out</code> and tests its contents. No messages are displayed if the file passes the integrity test.</dd>
+<dt><code>-s</code></dt>
+<dd> strip debug information before writing the output file. This saves some space in very large chunks, but if errors occur when running a stripped chunk, then the error messages may not contain the full information they usually do. For instance, line numbers and names of local variables are lost.</dd>
+<dt><code>-v</code></dt>
+<dd> show version information.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>luac.out</code></p>
-<dd> default output file</dl>
+<dt><code>luac.out</code></dt>
+<dd> default output file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lua/">lua</a></code>(1)<br />
  <a rel="nofollow" href="http://www.lua.org/">http://www.lua.org/</a></p>

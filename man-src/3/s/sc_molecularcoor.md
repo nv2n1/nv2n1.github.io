@@ -11,126 +11,46 @@ description: "sc::MolecularCoor –"
 <p> The <code>MolecularCoor</code> abstract class describes the coordinate system used to describe a molecule.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;coor.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::CartMolecularCoor</code>, and <code>sc::IntMolecularCoor</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>MolecularCoor (Ref&lt; Molecule &gt; &amp;)
-
-
-
 MolecularCoor (StateIn &amp;)
-
-
-
 MolecularCoor (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The KeyVal constructor.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 RefSCDimension dim_natom3 ()
-
-
 Returns a smart reference to an SCDimension equal to the number of atoms in the molecule times 3.
-
-
 Ref&lt; Molecule &gt; molecule () const
-
-
 Returns the molecule.
-
-
 virtual void print (std::ostream &amp;=ExEnv::out0()) const =0
-
-
 Print the coordinate.
-
-
 virtual void print_simples (std::ostream &amp;=ExEnv::out0()) const =0
-
-
-
 virtual RefSCDimension dim ()=0
-
-
 Returns a smart reference to an SCDimension equal to the number of coordinates (be they Cartesian, internal, or whatever) that are being optimized.
-
-
 int to_cartesian (const RefSCVector &amp;internal)
-
-
 Given a set of displaced internal coordinates, update the cartesian coordinates of the Molecule contained herein.
-
-
 virtual int to_cartesian (const Ref&lt; Molecule &gt; &amp;mol, const RefSCVector &amp;internal)=0
-
-
-
 virtual int to_internal (RefSCVector &amp;internal)=0
-
-
 Fill in the vector ``internal'' with the current internal coordinates.
-
-
 virtual int to_cartesian (RefSCVector &amp;cartesian, RefSCVector &amp;internal)=0
-
-
 Convert the internal coordinate gradients in ``internal'' to Cartesian coordinates and copy these Cartesian coordinate gradients to ``cartesian''.
-
-
 virtual int to_internal (RefSCVector &amp;internal, RefSCVector &amp;cartesian)=0
-
-
 Convert the Cartesian coordinate gradients in ``cartesian'' to internal coordinates and copy these internal coordinate gradients to ``internal''.
-
-
 virtual int to_cartesian (RefSymmSCMatrix &amp;cartesian, RefSymmSCMatrix &amp;internal)=0
-
-
 Convert the internal coordinate Hessian ``internal'' to Cartesian coordinates and copy the result to ``cartesian''.
-
-
 virtual int to_internal (RefSymmSCMatrix &amp;internal, RefSymmSCMatrix &amp;cartesian)=0
-
-
 Convert the Cartesian coordinate Hessian ``cartesian'' to internal coordinates and copy the result to ``internal''.
-
-
 virtual void guess_hessian (RefSymmSCMatrix &amp;hessian)=0
-
-
 Calculate an approximate hessian and place the result in ``hessian''.
-
-
 virtual RefSymmSCMatrix inverse_hessian (RefSymmSCMatrix &amp;)=0
-
-
 Given an Hessian, return the inverse of that hessian.
-
-
 virtual int nconstrained ()
-
-
 Returns the number of constrained coordinates.
-
-
 virtual Ref&lt; NonlinearTransform &gt; change_coordinates ()
-
-
 When this is called, MoleculeCoor may select a new internal coordinate system and return a transform to it.
-
-
 Ref&lt; SCMatrixKit &gt; matrixkit () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>Molecule</code> &gt; <code>molecule_</code> </p>
 <p> <code>RefSCDimension</code> <code>dnatom3_</code> </p>
@@ -143,14 +63,14 @@ Protected Attributes</code></pre>
 <h3>sc::MolecularCoor::MolecularCoor (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. .IP &quot;molecule&quot; 1c A <code>Molecule</code> object. There is no default. </p>
 <dl>
-<dt>debug</p>
-<dd>An integer which, if nonzero, will cause extra output.</dl>
+<dt>debug</dt>
+<dd>An integer which, if nonzero, will cause extra output.</dd></dl>
 <dl>
-<dt>matrixkit</p>
-<dd>A <code>SCMatrixKit</code> object. It is usually unnecessary to give this keyword.</dl>
+<dt>matrixkit</dt>
+<dd>A <code>SCMatrixKit</code> object. It is usually unnecessary to give this keyword.</dd></dl>
 <dl>
-<dt>natom3</p>
-<dd>An <code>SCDimension</code> object for the dimension of the vector of cartesian coordinates. It is usually unnecessary to give this keyword.</dl>
+<dt>natom3</dt>
+<dd>An <code>SCDimension</code> object for the dimension of the vector of cartesian coordinates. It is usually unnecessary to give this keyword.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual <code>Ref</code>&lt;<code>NonlinearTransform</code>&gt; sc::MolecularCoor::change_coordinates () [virtual]</h3>
 <p>When this is called, MoleculeCoor may select a new internal coordinate system and return a transform to it. The default action is to not change anything and return an <code>IdentityTransform</code>. </p>

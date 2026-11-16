@@ -19,15 +19,15 @@ description: "dh – debhelper command sequencer"
 <p> Override targets can also be defined to run only when building architecture dependent or architecture independent packages. Use targets with names like <code>override_</code><i>dh_command</i><code>-arch</code> and <code>override_</code><i>dh_command</i><code>-indep</code>. (Note that to use this feature, you should Build-Depend on debhelper 8.9.7 or above.)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;with</code> <i>addon</i>[<code>,</code><i>addon</i> &#8230;]</p>
-<dd> Add the debhelper commands specified by the given addon to appropriate places in the sequence of commands that is run. This option can be repeated more than once, or multiple addons can be listed, separated by commas. This is used when there is a third-party package that provides debhelper commands. See the <i></i><font SIZE="-1"><i>PROGRAMMING</i></font><i></i> file for documentation about the sequence addon interface.</p>
-<dt><code>&#8211;without</code> <i>addon</i></p>
-<dd> The inverse of <code>&#8211;with</code>, disables using the given addon. This option can be repeated more than once, or multiple addons to disable can be listed, separated by commas.</p>
-<dt><code>&#8211;list</code>, <code>-l</code></p>
-<dd> List all available addons. </p>
+<dt><code>&#8211;with</code> <i>addon</i>[<code>,</code><i>addon</i> &#8230;]</dt>
+<dd> Add the debhelper commands specified by the given addon to appropriate places in the sequence of commands that is run. This option can be repeated more than once, or multiple addons can be listed, separated by commas. This is used when there is a third-party package that provides debhelper commands. See the <i></i><font SIZE="-1"><i>PROGRAMMING</i></font><i></i> file for documentation about the sequence addon interface.</dd>
+<dt><code>&#8211;without</code> <i>addon</i></dt>
+<dd> The inverse of <code>&#8211;with</code>, disables using the given addon. This option can be repeated more than once, or multiple addons to disable can be listed, separated by commas.</dd>
+<dt><code>&#8211;list</code>, <code>-l</code></dt>
+<dd> List all available addons. </dd>
 <p> When called only with this option, <code>dh</code> can be called from any directory (i.e. it does not need access to files from a source package).</p>
-<dt><code>&#8211;no-act</code></p>
-<dd> Prints commands that would run for a given sequence, but does not run them. </p>
+<dt><code>&#8211;no-act</code></dt>
+<dd> Prints commands that would run for a given sequence, but does not run them. </dd>
 <p> Note that dh normally skips running commands that it knows will do nothing. With &#8211;no-act, the full list of commands in a sequence is printed.</dl>
 <p> Other options passed to <code>dh</code> are passed on to each command it runs. This can be used to set an option like <code>-v</code> or <code>-X</code> or <code>-N</code>, as well as for more specialised options.</p>
 <h2>EXAMPLES</h2>
@@ -46,10 +46,8 @@ description: "dh – debhelper command sequencer"
         #!/usr/bin/make -f
         %:
                 dh $@
-        
         override_dh_strip:
                 dh_strip -Xfoo
-        
         override_dh_auto_configure:
                 dh_auto_configure -- --with-foo --disable-bar
 </pre>
@@ -113,7 +111,6 @@ description: "dh – debhelper command sequencer"
         #!/usr/bin/make -f
         %:
                 dh $@
-        
         # Commands not to run:
         override_dh_auto_test override_dh_compress override_dh_fixperms:
 </pre>
@@ -122,7 +119,6 @@ description: "dh – debhelper command sequencer"
         #!/usr/bin/make -f
         %:
                 dh $@
-        
         override_dh_auto_build-indep:
                 $(MAKE) -C docs
         # No tests needed for docs
@@ -148,14 +144,14 @@ description: "dh – debhelper command sequencer"
 <h2>DEPRECATED OPTIONS</h2>
 <p> The following options are deprecated. It&#8217;s much better to use override targets instead. They are <code>not</code> available in compat 10.</p>
 <dl>
-<dt><code>&#8211;until</code> <i>cmd</i></p>
-<dd> Run commands in the sequence until and including <i>cmd</i>, then stop.</p>
-<dt><code>&#8211;before</code> <i>cmd</i></p>
-<dd> Run commands in the sequence before <i>cmd</i>, then stop.</p>
-<dt><code>&#8211;after</code> <i>cmd</i></p>
-<dd> Run commands in the sequence that come after <i>cmd</i>.</p>
-<dt><code>&#8211;remaining</code></p>
-<dd> Run all commands in the sequence that have yet to be run.</dl>
+<dt><code>&#8211;until</code> <i>cmd</i></dt>
+<dd> Run commands in the sequence until and including <i>cmd</i>, then stop.</dd>
+<dt><code>&#8211;before</code> <i>cmd</i></dt>
+<dd> Run commands in the sequence before <i>cmd</i>, then stop.</dd>
+<dt><code>&#8211;after</code> <i>cmd</i></dt>
+<dd> Run commands in the sequence that come after <i>cmd</i>.</dd>
+<dt><code>&#8211;remaining</code></dt>
+<dd> Run all commands in the sequence that have yet to be run.</dd></dl>
 <p> In the above options, <i>cmd</i> can be a full name of a debhelper command, or a substring. It&#8217;ll first search for a command in the sequence exactly matching the name, to avoid any ambiguity. If there are multiple substring matches, the last one in the sequence will be used.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>

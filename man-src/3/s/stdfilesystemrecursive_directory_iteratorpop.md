@@ -12,7 +12,6 @@ std::filesystem::recursive_directory_iterator::pop - std::filesystem::recursive_
 
 <pre><code>void pop();
 (1)(since C++ 17)
-
     void pop(std::error_code &amp;ec);
 (2)(since C++ 17)</code></pre> 
 Moves the iterator one level up in the directory hierarchy. Invalidates all copies of the previous value of *this. 

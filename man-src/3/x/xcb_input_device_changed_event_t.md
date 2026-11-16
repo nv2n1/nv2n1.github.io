@@ -27,28 +27,28 @@ description: "xcb_input_device_changed_event_t –"
 } <code>xcb_input_device_changed_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_INPUT_DEVICE_CHANGED</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>extension</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>length</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>event_type</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>deviceid</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>time</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>num_classes</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>sourceid</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>reason</i></p>
-<dd>NOT YET DOCUMENTED.</p>
-<dt><i>full_sequence</i></p>
-<dd>NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_INPUT_DEVICE_CHANGED</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>extension</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>length</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>event_type</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>deviceid</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>num_classes</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>sourceid</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>reason</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>full_sequence</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <h2>Author</h2>

@@ -11,61 +11,42 @@ std::mem_fun_t,std::mem_fun1_t,std::const_mem_fun_t,std::const_mem_fun1_t - std:
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class S, class T&gt;
-
 class mem_fun_t : public unary_function&lt;T *, S&gt;
 {
-
   public:
     (1)(deprecated in C++ 11)
-
         explicit mem_fun_t(S (T::*p)());
     (removed in C++ 17)
-
         S
         operator()(T *p) const;
 };
-
 template &lt;class S, class T&gt;
-
 class const_mem_fun_t : public unary_function&lt;const T *, S&gt;
 {
-
   public:
     (2)(deprecated in C++ 11)
-
         explicit const_mem_fun_t(S (T::*p)() const);
     (removed in C++ 17)
-
         S
         operator()(const T *p) const;
 };
-
 template &lt;class S, class T, class Arg&gt;
-
 class mem_fun1_t : public binary_function&lt;T *, A, S&gt;
 {
-
   public:
     (3)(deprecated in C++ 11)
-
         explicit mem_fun1_t(S (T::*p)(A));
     (removed in C++ 17)
-
         S
         operator()(T *p, A x) const;
 };
-
 template &lt;class S, class T, class A&gt;
-
 class const_mem_fun1_t : public binary_function&lt;const T *, A, S&gt;
 {
-
   public:
     (4)(deprecated in C++ 11)
-
         explicit const_mem_fun1_t(S (T::*p)(A) const);
     (removed in C++ 17)
-
         S
         operator()(const T *p, A x) const;
 };</code></pre> 

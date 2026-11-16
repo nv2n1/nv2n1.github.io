@@ -29,11 +29,11 @@ url: "/docs/linux/man/1-geoipupdate/"
 
 <dl>
 <dt>-v
-<dd> Verbose mode, prints out the steps that geoipupdate takes.
-<dt>-d
-<dd> Specify a custom directory target to install the GeoIP datafile(s). By default geoipupdate installs to /usr/share/GeoIP
-<dt>-f
-<dd> Specifies the configuration file that contains the license key. Defaults to /etc/GeoIP.conf</dl>
+</dt><dd> Verbose mode, prints out the steps that geoipupdate takes.
+</dd><dt>-d
+</dt><dd> Specify a custom directory target to install the GeoIP datafile(s). By default geoipupdate installs to /usr/share/GeoIP
+</dd><dt>-f
+</dt><dd> Specifies the configuration file that contains the license key. Defaults to /etc/GeoIP.conf</dd></dl>
 
 <h2>USAGE</h2>
 
@@ -41,17 +41,14 @@ url: "/docs/linux/man/1-geoipupdate/"
 
 <dl>
 <dt>
-<dd> # top of crontab 
-
+</dt><dd> # top of crontab 
  MAILTO=your [at] email.com 
-
  0 12 * * 3 BIN_DIR/geoipupdate 
-
- # end of crontab</dl>
+ # end of crontab</dd></dl>
  To use with a proxy server, set the http_proxy environment variable. E.g.
 <dl>
 <dt>
-<dd> export http_proxy=&quot;<a rel="nofollow" HREF="http://proxy-hostname:port">http://proxy-hostname:port</a>&quot;</dl>
+</dt><dd> export http_proxy=&quot;<a rel="nofollow" HREF="http://proxy-hostname:port">http://proxy-hostname:port</a>&quot;</dd></dl>
 
 <h2>RETURN CODES</h2>
 

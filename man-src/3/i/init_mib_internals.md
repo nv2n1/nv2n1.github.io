@@ -49,7 +49,7 @@ description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, 
 <p> <code>add_module_replacement</code> can be used to allow new MIB modules to obsolete older ones, without needing to amend the imports clauses of other modules. It takes the names of the old and new modules, together with an indication of which portions of the old module are affected.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td><code>tag </code></td>
@@ -76,7 +76,7 @@ description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, 
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> It can also be used to handle errors in the module identifiers used in MIB import clauses (such as referring to <i>RFC1213</i> instead of <i>RFC1213-MIB</i>). </p>
 <p> <code>read_module</code> locates and parses the module specified, together with any modules that it imports from, and adds the contents of these modules to the active MIB tree. Note that <code>add_mibdir</code> must first be called to add the directory containing the file with the module definition, if this is not in the standard path.<br />
  By default, the following MIB modules will be loaded: IP-MIB, IF-MIB, TCP-MIB, UDP-MIB, SNMPv2-MIB, RFC1213-MIB, UCD-SNMP-MIB. This can be overridden by setting the environment variable <i>MIBS</i> to a (colon-separated) list of modules to load. If this variable starts with a plus character, then the specified modules are added to the default list. Otherwise only those modules listed are loaded (together with any others they import from). If <i>MIBS</i> is set to <i>ALL</i>, <code>read_all_mibs</code> is called to load all the MIB files found in all the specified <i>MIBDIRS</i>. </p>
@@ -98,12 +98,12 @@ description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, 
 <p> In general the parser is silent about what strangenesses it sees in the MIB files. To get warnings reported, call <code>snmp_set_mib_warnings</code> with a <i>level</i> of 1 (or 2 for even more warnings).</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>MIBDIRS</p>
-<dd> A colon separated list of directories to search for MIB modules. Default: /usr/share/snmp/mibs</p>
-<dt>MIBFILES</p>
-<dd> A colon separated list of files to load. Default: (none)</p>
-<dt>MIBS</p>
-<dd> A colon separated list of MIB modules to load. Default: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB:UCD-SNMP-MIB.</dl>
+<dt>MIBDIRS</dt>
+<dd> A colon separated list of directories to search for MIB modules. Default: /usr/share/snmp/mibs</dd>
+<dt>MIBFILES</dt>
+<dd> A colon separated list of files to load. Default: (none)</dd>
+<dt>MIBS</dt>
+<dd> A colon separated list of MIB modules to load. Default: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB:UCD-SNMP-MIB.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3) </p>
 <h2>Index</h2>

@@ -32,15 +32,15 @@ description: "QuantLib::FiniteDifferenceModel – Generic finite difference mode
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> being this a rollback, from must be a later time than to.</dl>
+</dt><dd> being this a rollback, from must be a later time than to.</dd></dl>
 <h3>void rollback (array_type &amp; a, <code>Time</code> from, <code>Time</code> to, Size steps, const condition_type &amp; condition)</h3>
 <p> solves the problem between the given times, applying a condition at every step. </p>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> being this a rollback, from must be a later time than to.</dl>
+</dt><dd> being this a rollback, from must be a later time than to.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

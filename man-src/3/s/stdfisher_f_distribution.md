@@ -11,9 +11,7 @@ std::fisher_f_distribution - std::fisher_f_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class fisher_f_distribution;</code></pre> 
 Produces random numbers according to the f-distribution: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p(x;m,n) = 

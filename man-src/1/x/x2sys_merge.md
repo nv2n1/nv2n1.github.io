@@ -16,10 +16,10 @@ description: "x2sys_merge – Merge an updated COEs table (smaller) into the mai
 <p> <code>x2sys_merge</code> will read two crossovers data base and output the contents of the main one updated with the COEs in the second one. The second file should only contain updated COEs relatively to the first one. That is, it MUST NOT contain any new two tracks intersections (This point is NOT checked in the code). This program is useful when, for any good reason like file editing NAV correction or whatever, one had to recompute only the COEs between the edited files and the rest of the database.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code><i>main_COElist.d</i></p>
-<dd> Specify the file <i>main_COElist.d</i> with the main crossover error data base.</p>
-<dt><code>-M</code><i>new_COElist.d</i></p>
-<dd> Specify the file <i>new_COElist.d</i> with the newly computed crossover error data base.</dl>
+<dt><code>-A</code><i>main_COElist.d</i></dt>
+<dd> Specify the file <i>main_COElist.d</i> with the main crossover error data base.</dd>
+<dt><code>-M</code><i>new_COElist.d</i></dt>
+<dd> Specify the file <i>new_COElist.d</i> with the newly computed crossover error data base.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <h2>EXAMPLES</h2>
 <p> To update the main COE_data.txt with the new COEs estimations saved in the smaller COE_fresh.txt, try </p>

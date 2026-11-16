@@ -11,13 +11,10 @@ std::assume_aligned - std::assume_aligned
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;std::size_t N, class T&gt;
     (since C++ 20)
-
         [[nodiscard]] constexpr T *assume_aligned(T *ptr);
 Informs the implementation that the object ptr points to is aligned to at least N.The implementation may use this information to generate more efficient code, but it might only make this assumption if the object is accessed via the return value of assume_aligned.
-
                                                                                                                                                                    The program is ill -
                                                                                                                                                                    formed if N is not a power of 2. The behavior is undefined if ptr does not point to an object of type T(ignoring cv - qualification at every level),
     or if the object's alignment is not at least N.

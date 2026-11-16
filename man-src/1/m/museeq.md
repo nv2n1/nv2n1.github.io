@@ -17,12 +17,12 @@ description: "Museeq – QT GUI for the Museek Daemon"
 <h2>OPTIONS</h2>
 <p> Museeq accepts the following options:</p>
 <dl>
-<dt><code>&#8211;no-tray</code></p>
-<dd> Start without Tray Icon.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display Version and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display Help and exit. </p>
+<dt><code>&#8211;no-tray</code></dt>
+<dd> Start without Tray Icon.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display Version and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help and exit. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> To run this program the standard way type: </p>
@@ -32,8 +32,8 @@ description: "Museeq – QT GUI for the Museek Daemon"
 <h2>FILES</h2>
 <dl>
 <dt>
-&nbsp;<wbr><i>~/.qt/thegraveyard.orgrc</i></p>
-<dd> The <code>museeq</code> config file.</dl>
+&nbsp;<wbr><i>~/.qt/thegraveyard.orgrc</i></dt>
+<dd> The <code>museeq</code> config file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
 <p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>

@@ -14,12 +14,12 @@ description: "sata_print_link_status – Print SATA link status"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>SATA link to printk link status about</dl>
+</dd><dd>SATA link to printk link status about</dd></dl>
 <h2>Description</h2>
 <p>This function prints link speed and status of a SATA link. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

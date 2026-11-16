@@ -20,21 +20,21 @@ description: "rawtopgm – convert raw grayscale bytes into a portable graymap"
 <p> The PGM output is to Standard Output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-maxval </code><i>N</i></p>
-<dd> <i>N</i> is the maxval for the gray values in the input, and is also the maxval of the PGM output image. The default is the maximum value that can be represented in the number of bytes used for each sample (i.e. 255 or 65535).</p>
-<dt><code>-bpp </code>[<code>1</code>|<code>2</code>]</p>
-<dd> tells the number of bytes that represent each sample in the input. If the value is <code>2</code>, The most significant byte is first in the stream. </p>
+<dt><code>-maxval </code><i>N</i></dt>
+<dd> <i>N</i> is the maxval for the gray values in the input, and is also the maxval of the PGM output image. The default is the maximum value that can be represented in the number of bytes used for each sample (i.e. 255 or 65535).</dd>
+<dt><code>-bpp </code>[<code>1</code>|<code>2</code>]</dt>
+<dd> tells the number of bytes that represent each sample in the input. If the value is <code>2</code>, The most significant byte is first in the stream. </dd>
 <p> The default is 1 byte per sample. </p>
-<dt><code>-littleendian</code></p>
-<dd> says that the bytes of each input sample are ordered with the least significant byte first. Without this option, <code>rawtopgm</code> assumes MSB first. This obviously has no effect when there is only one byte per sample. </p>
-<dt><code>-headerskip </code><i>N</i></p>
-<dd> <code>rawtopgm</code> skips over <i>N</i> bytes at the beginning of the stream and reads the image immediately after. The default is 0. </p>
+<dt><code>-littleendian</code></dt>
+<dd> says that the bytes of each input sample are ordered with the least significant byte first. Without this option, <code>rawtopgm</code> assumes MSB first. This obviously has no effect when there is only one byte per sample. </dd>
+<dt><code>-headerskip </code><i>N</i></dt>
+<dd> <code>rawtopgm</code> skips over <i>N</i> bytes at the beginning of the stream and reads the image immediately after. The default is 0. </dd>
 <p> This is useful when the input is actually some graphics format that has a descriptive header followed by an ordinary raster, and you don&#8217;t have a program that understands the header or you want to ignore the header. </p>
-<dt><code>-rowskip </code><i>N</i></p>
-<dd> If there is padding at the ends of the rows, you can skip it with this option. Note that rowskip need not be an integer. Amazingly, I once had an image with 0.376 bytes of padding per row. This turned out to be due to a file-transfer problem, but I was still able to read the image. </p>
+<dt><code>-rowskip </code><i>N</i></dt>
+<dd> If there is padding at the ends of the rows, you can skip it with this option. Note that rowskip need not be an integer. Amazingly, I once had an image with 0.376 bytes of padding per row. This turned out to be due to a file-transfer problem, but I was still able to read the image. </dd>
 <p> Skipping a fractional byte per row means skipping one byte per multiple rows.</p>
-<dt><code>-bt -bottomfirst</code></p>
-<dd> By default, <code>rawtopgm</code> assumes the pixels in the input go top to bottom, left to right. If you specify <code>-bt</code> or <code>-bottomfirst</code>, <code>rawtopgm</code> assumes the pixels go bottom to top, left to right. The Molecular Dynamics and Leica confocal format, for example, use the latter arrangement. </p>
+<dt><code>-bt -bottomfirst</code></dt>
+<dd> By default, <code>rawtopgm</code> assumes the pixels in the input go top to bottom, left to right. If you specify <code>-bt</code> or <code>-bottomfirst</code>, <code>rawtopgm</code> assumes the pixels go bottom to top, left to right. The Molecular Dynamics and Leica confocal format, for example, use the latter arrangement. </dd>
 <p> If you don&#8217;t specify <code>-bt</code> when you should or vice versa, the resulting image is upside down, which you can correct with <code>pnmflip .</code> </p>
 <p> This option causes <code>rawtopgm</code> to read the entire input stream into storage at once, which may take a lot of storage. Ordinarly, <code>rawtopgm</code> stores only one row at a time. </p>
 <p> For backwards compatibility, <code>rawtopgm</code> also accepts <code>-tb </code> and <code>-topbottom</code> to mean exactly the same thing. The reasons these are named backwards is that the original author thought of it as specifying that the wrong results of assuming the data is top to bottom should be corrected by flipping the result top for bottom. Today, we think of it as simply specifying the format of the input data so that there are no wrong results. </p>

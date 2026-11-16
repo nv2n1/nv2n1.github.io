@@ -11,12 +11,9 @@ description: "mempcpy, wmempcpy – copy memory area"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
-
 void *mempcpy(void *dest, const void *src, size_t n);
-
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;wchar.h&gt;
-
 wchar_t *wmempcpy(wchar_t *dest, const wchar_t *src, size_t n);</code></pre>
 <h2>Description</h2>
 <p>The <code>mempcpy</code>() function is nearly identical to the <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3) function. It copies <i>n</i> bytes from the object beginning at <i>src</i> into the object pointed to by <i>dest</i>. But instead of returning the value of <i>dest</i> it returns a pointer to the byte following the last written byte. </p>

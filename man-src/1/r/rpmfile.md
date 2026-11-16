@@ -15,12 +15,12 @@ description: "rpmfile – list file modes and types in RPM packages"
 <p> <code>rpmfile</code> produces three-column output: file name, file mode (octal), and file type, as determined by <i><a href="/docs/linux/man/1-file/">file</a></i>(1). When processing a directory, an additional column is prepended to the output, which is typically <font SIZE="-1">RPM</font> file basename.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Process all Sisyphus packages.</p>
-<dt><code>-p</code></p>
-<dd> When processing a directory, list package names, not file names; furthermore, enable special treatment of packages with the same name; that is, process only the one with the latest version.</p>
-<dt><code>-h</code></p>
-<dd> Display this help and exit.</dl>
+<dt><code>-a</code></dt>
+<dd> Process all Sisyphus packages.</dd>
+<dt><code>-p</code></dt>
+<dd> When processing a directory, list package names, not file names; furthermore, enable special treatment of packages with the same name; that is, process only the one with the latest version.</dd>
+<dt><code>-h</code></dt>
+<dd> Display this help and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Alexey Tourbin &lt;at [at] altlinux.org&gt;.</p>
 <h2>COPYING</h2>

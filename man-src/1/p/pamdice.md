@@ -19,14 +19,14 @@ description: "pamdice – slice a Netpbm image into many horizontally and/or ver
 <p> <code>pnmcat</code> can rejoin the images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-outstem=</code>filenamestem</p>
-<dd> This option determines the names of the output files. Each output file is named <i>filenamestem</i><code>_</code><i>y</i><code>_</code><i>x</i><code>.</code><i>type</i> where <i>filenamestem</i> is the value of the <code>-outstem</code> option, <i>x</i> and y are the horizontal and vertical locations, respectively, in the input image of the output image, zero being the leftmost and top, and <i>type</i> is <code>.pbm</code>, <code>.pgm</code>, <code>.ppm</code>, or <code>.pam</code>, depending on the type of image. </p>
-<dt><code>-width=</code><i>width</i></p>
-<dd> gives the width in pixels of the output images. The rightmost pieces are smaller than this if the input image is not a multiple of <i>width </i> pixels wide. </p>
-<dt><code>-height=</code><i>height</i></p>
-<dd> gives the height in pixels of the output images. The bottom pieces are smaller than this if the input image is not a multiple of <i>height </i> pixels high. </p>
-<dt><code>-verbose</code></p>
-<dd> Print information about the processing to Standard Error. </p>
+<dt><code>-outstem=</code>filenamestem</dt>
+<dd> This option determines the names of the output files. Each output file is named <i>filenamestem</i><code>_</code><i>y</i><code>_</code><i>x</i><code>.</code><i>type</i> where <i>filenamestem</i> is the value of the <code>-outstem</code> option, <i>x</i> and y are the horizontal and vertical locations, respectively, in the input image of the output image, zero being the leftmost and top, and <i>type</i> is <code>.pbm</code>, <code>.pgm</code>, <code>.ppm</code>, or <code>.pam</code>, depending on the type of image. </dd>
+<dt><code>-width=</code><i>width</i></dt>
+<dd> gives the width in pixels of the output images. The rightmost pieces are smaller than this if the input image is not a multiple of <i>width </i> pixels wide. </dd>
+<dt><code>-height=</code><i>height</i></dt>
+<dd> gives the height in pixels of the output images. The bottom pieces are smaller than this if the input image is not a multiple of <i>height </i> pixels high. </dd>
+<dt><code>-verbose</code></dt>
+<dd> Print information about the processing to Standard Error. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1), <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pgmslice/">pgmslice</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>

@@ -38,10 +38,11 @@ as bad as 1/Hz as defined by the operating system.
 <p>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>PAPIF </p>
+<dd>PAPIF </dd>
 <p> PAPI </p>
 <p> PAPI </p>
 <p> <code>PAPI_get_real_cyc</code> </p>
 <p> <code>PAPI_get_virt_cyc</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

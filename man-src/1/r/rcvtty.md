@@ -11,9 +11,9 @@ description: "rcvtty – report new mail"
 <p> rcvtty &#8211; report new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>/usr/libexec/nmh/rcvtty</code> [<i>command</i>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-width</code> <i>columns</i>] [<code>-bell</code> | <code>-nobell</code>] [<code>-newline</code> | <code>-nonewline</code>] [<code>-biff</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>/usr/libexec/nmh/rcvtty</code> [<i>command</i>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-width</code> <i>columns</i>] [<code>-bell</code> | <code>-nobell</code>] [<code>-newline</code> | <code>-nonewline</code>] [<code>-biff</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>rcvtty</code> can be used to report new mail. It is used primarily in conjunction with mail filtering agents such as <code>slocal</code> or <code>procmail</code>. </p>
+<dd>The <code>rcvtty</code> can be used to report new mail. It is used primarily in conjunction with mail filtering agents such as <code>slocal</code> or <code>procmail</code>. </dd>
 <p> The <code>rcvtty</code> program executes the named command with the message as its standard input, and writes the resulting output on your terminal. </p>
 <p> Alternately, if no command is specified (or is bogus), then <code>rcvtty</code> will instead write a one-line scan listing. The default output format of this scan listing may be overridden by using either the <code>-form</code> <i>formatfile</i> or <code>-format</code> <i>string</i> option, similar to the equivalent options for <code>scan</code> and <code>inc</code>. See <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) for details. </p>
 <p> A newline is output before the message output, and the terminal bell is rung after the output. The <code>-nonewline</code> and <code>-nobell</code> options will inhibit these functions. </p>
@@ -21,14 +21,14 @@ description: "rcvtty – report new mail"
 <p> In addition to the standard format escapes described in <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5), <code>rcvtty</code> also recognizes the following additional <i>component</i> escapes: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Escape    Returns  Description
 body      string   the (compressed) first part of the body
 dtimenow  date     the current date
 folder    string   the name of the current folder
 </pre>
-</dl>
+</dd></dl>
 <p> By default, <code>rcvtty</code> will send its output to every terminal on the local machine that is owned by current user, and that has given write permission as granted by the command <i><a href="/docs/linux/man/1-mesg/">mesg</a></i>(1). If the option <code>-biff</code> is given, then <code>rcvtty</code> will obey the notification status set by the command <i>biff</i>(1) instead.</p>
 <h2>FILES</h2>
 <pre>

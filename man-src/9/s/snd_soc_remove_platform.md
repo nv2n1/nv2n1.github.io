@@ -15,7 +15,7 @@ snd_soc_remove_platform - Remove a platform from the ASoC core
 <h2>Arguments</h2>
 
 <i>platform</i>
-<dl><dd><dd>the platform to remove</dl>
+<dl><dd></dd><dd>the platform to remove</dd></dl>
 
 <h2>Copyright</h2>
 

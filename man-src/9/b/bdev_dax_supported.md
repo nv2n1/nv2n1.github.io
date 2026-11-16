@@ -15,11 +15,11 @@ bdev_dax_supported - Check if the device supports dax for filesystem
 <h2>Arguments</h2>
 
 <i>sb</i>
-<dl><dd><dd>The superblock of the device</dl>
+<dl><dd></dd><dd>The superblock of the device</dd></dl>
  
 
  <i>blocksize</i>
-<dl><dd>The block size of the device</dl>
+<dl><dd>The block size of the device</dd></dl>
 
 <h2>Description</h2>
 

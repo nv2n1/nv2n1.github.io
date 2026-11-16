@@ -10,13 +10,10 @@ description: "std::experimental::filesystem::canonical – std::experimental::fi
 <p>std::experimental::filesystem::canonical &#8211; std::experimental::filesystem::canonical</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     path canonical(const path &amp;p, const path &amp;base = current_path());
 (1)(filesystem TS)
-
     path canonical(const path &amp;p, error_code &amp;ec);
 (2)(filesystem TS)
-
     path canonical(const path &amp;p, const path &amp;base, error_code &amp;ec);
 (3)(filesystem TS)</code></pre>
 <p>Converts path p to a canonical absolute path, i.e. an absolute path that has no dot, dot-dot elements or symbolic links.<br />
@@ -36,13 +33,9 @@ This function is modeled after the POSIX realpath.</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
-
 int main()
-
 {
     fs::path p = fs::path(&quot;..&quot;) / &quot;..&quot; / &quot;AppData&quot;;
     std::cout &lt;&lt; &quot;Current path is &quot; &lt;&lt; fs::current_path() &lt;&lt; '
@@ -53,3 +46,4 @@ int main()
 </code></pre>
 <h2>Possible output:</h2>
 <p>&nbsp;<wbr>&nbsp;Current path is &quot;C:
+</p>

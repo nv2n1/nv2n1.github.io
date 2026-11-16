@@ -55,9 +55,9 @@ description: "pki_tps_selinux – Security Enhanced Linux Policy for the pki_tps
 <p> Policy governs the access confined processes have to these ports. SELinux pki_tps policy is very flexible allowing users to setup their pki_tps processes in as secure a method as possible. </p>
 <p> The following port types are defined for pki_tps: </p>
 <dl>
-<dt><code>pki_tps_port_t</code></p>
+<dt><code>pki_tps_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 7888-7889</dl>
+</dd><dd>Default Defined Ports: tcp 7888-7889</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type pki_tps_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -115,8 +115,8 @@ description: "pki_tps_selinux – Security Enhanced Linux Policy for the pki_tps
 <p> <code>pki_tps_etc_rw_t</code> </p>
 <p> &#8211; Set files with the pki_tps_etc_rw_t type, if you want to treat the files as pki tps etc read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pki-tps(/.*)?, /etc/sysconfig/pki/tps(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pki-tps(/.*)?, /etc/sysconfig/pki/tps(/.*)? </dd>
 </dl>
 <p> <code>pki_tps_exec_t</code> </p>
 <p> &#8211; Set files with the pki_tps_exec_t type, if you want to transition an executable to the pki_tps_t domain. </p>

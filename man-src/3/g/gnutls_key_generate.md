@@ -14,10 +14,10 @@ description: "gnutls_key_generate – API function"
 <p> <code>int gnutls_key_generate(gnutls_datum_t * </code><i>key</i><code>, unsigned int </code><i>key_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_datum_t * key</p>
-<dd> is a pointer to a <code>gnutls_datum_t</code> which will contain a newly created key.</p>
-<dt>unsigned int key_size</p>
-<dd> The number of bytes of the key.</dl>
+<dt>gnutls_datum_t * key</dt>
+<dd> is a pointer to a <code>gnutls_datum_t</code> which will contain a newly created key.</dd>
+<dt>unsigned int key_size</dt>
+<dd> The number of bytes of the key.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Generates a random key of <i>key_size</i> bytes.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_key_generate – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

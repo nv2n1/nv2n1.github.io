@@ -29,10 +29,10 @@ description: "sgesvd.f –"
  are returned in descending order. The first min(m,n) columns of
  U and V are the left and right singular vectors of A.
  Note that the routine returns V**T, not V.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBU</i> </p>
+<dd><i>JOBU</i> </dd>
 <pre> JOBU is CHARACTER*1
  Specifies options for computing all or part of the matrix U:
  = 'A': all M columns of U are returned in array U:
@@ -131,13 +131,13 @@ description: "sgesvd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 211 of file sgesvd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

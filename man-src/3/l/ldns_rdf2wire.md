@@ -18,16 +18,16 @@ description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 <p> ldns_status ldns_rdf2wire(uint8_t **dest, const ldns_rdf *rdf, size_t *size); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr2wire</i>()</p>
-<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given rr in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL) </p>
+<dt> <i>ldns_rr2wire</i>()</dt>
+<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given rr in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL) </dd>
 <p> If the section argument is LDNS_SECTION_QUESTION, data like ttl and rdata are not put into the result </p>
 <p> .br <code>dest</code>: pointer to the array of bytes to be created .br <code>rr</code>: the rr to convert .br <code>size</code>: the size of the converted result</dl>
 <dl>
-<dt> <i>ldns_pkt2wire</i>()</p>
-<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given packet in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL)</dl>
+<dt> <i>ldns_pkt2wire</i>()</dt>
+<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given packet in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL)</dd></dl>
 <dl>
-<dt> <i>ldns_rdf2wire</i>()</p>
-<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given rdf in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL) </p>
+<dt> <i>ldns_rdf2wire</i>()</dt>
+<dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given rdf in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL) </dd>
 <p> .br <code>dest</code>: pointer to the array of bytes to be created .br <code>rdf</code>: the rdata field to convert .br <code>size</code>: the size of the converted result</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -41,3 +41,4 @@ description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -17,82 +17,82 @@ description: "rancid – Cisco configuration filter"
 <p> <code>rancid</code> is also a <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) script that operates much like <code>rancid,</code> but is generic and will eventually obsolete the <code>rancid</code> script. It uses the device_type specified with the -t option to look-up a device description that defines what it does to collect and process device information. </p>
 <p> There are scripts complementary to <code>rancid</code> for other platforms and/or manufacturers that are supported by <code><a href="/docs/linux/man/1-rancid/">rancid</a></code>(1). Briefly, these are: </p>
 <dl>
-<dt><code>agmrancid</code></p>
-<dd> Cisco Anomaly Guard Module (AGM)</p>
-<dt><code>arancid</code></p>
-<dd> Alteon WebOS switches</p>
-<dt><code>arrancid</code></p>
-<dd> Arista Networks devices</p>
-<dt><code>brancid</code></p>
-<dd> Bay Networks (nortel)</p>
-<dt><code>cat5rancid</code></p>
-<dd> Cisco catalyst switches</p>
-<dt><code>cssrancid</code></p>
-<dd> Cisco content services switches</p>
-<dt><code>erancid</code></p>
-<dd> ADC-kentrox EZ-T3 mux</p>
-<dt><code>f10rancid</code></p>
-<dd> Force10</p>
-<dt><code>f5rancid</code></p>
-<dd> F5 BigIPs</p>
-<dt><code>fnrancid</code></p>
-<dd> Fortinet Firewalls</p>
-<dt><code>rancid</code></p>
-<dd> The generic rancid script; supporting Allied Telesis AW+ devices, Arbor Networks Appliances, Cisco IOS, Cisco IOS-XR, Cisco WLC, Dell switches, Compass EOS, and Juniper JUNOS. It uses the device O/S modules for parsing routines. See <code><a href="/docs/linux/man/3-rancid/">rancid</a></code>(3) for details.</p>
-<dt><code>hrancid</code></p>
-<dd> HP Procurve Switches</p>
-<dt><code>htranicd</code></p>
-<dd> Hitachi Routers</p>
-<dt><code>jerancid</code></p>
-<dd> Juniper Networks E-series</p>
-<dt><code>jrancid</code></p>
-<dd> Juniper Networks</p>
-<dt><code>mrancid</code></p>
-<dd> MRTd</p>
-<dt><code>mtrancid</code></p>
-<dd> Mikrotik routesrs</p>
-<dt><code>nrancid</code></p>
-<dd> Netscreen firewalls</p>
-<dt><code>nsrancid</code></p>
-<dd> Netscaler</p>
-<dt><code>nxrancid</code></p>
-<dd> Cisco Nexus boxes</p>
-<dt><code>prancid</code></p>
-<dd> Procket Networks</p>
-<dt><code>rivrancid</code></p>
-<dd> Riverstone</p>
-<dt><code>rrancid</code></p>
-<dd> Redback</p>
-<dt><code>srancid</code></p>
-<dd> SMC switch (some Dell OEMs)</p>
-<dt><code>trancid</code></p>
-<dd> Netopia sDSL/T1 routers</p>
-<dt><code>tntrancid</code></p>
-<dd> Lucent TNT</p>
-<dt><code>xirancid</code></p>
-<dd> Xirrus arrays</p>
-<dt><code>xrancid</code></p>
-<dd> Extreme switches</p>
-<dt><code>xrrancid</code></p>
-<dd> Cisco IOS-XR boxes</p>
-<dt><code>zrancid</code></p>
-<dd> Zebra routing software</dl>
+<dt><code>agmrancid</code></dt>
+<dd> Cisco Anomaly Guard Module (AGM)</dd>
+<dt><code>arancid</code></dt>
+<dd> Alteon WebOS switches</dd>
+<dt><code>arrancid</code></dt>
+<dd> Arista Networks devices</dd>
+<dt><code>brancid</code></dt>
+<dd> Bay Networks (nortel)</dd>
+<dt><code>cat5rancid</code></dt>
+<dd> Cisco catalyst switches</dd>
+<dt><code>cssrancid</code></dt>
+<dd> Cisco content services switches</dd>
+<dt><code>erancid</code></dt>
+<dd> ADC-kentrox EZ-T3 mux</dd>
+<dt><code>f10rancid</code></dt>
+<dd> Force10</dd>
+<dt><code>f5rancid</code></dt>
+<dd> F5 BigIPs</dd>
+<dt><code>fnrancid</code></dt>
+<dd> Fortinet Firewalls</dd>
+<dt><code>rancid</code></dt>
+<dd> The generic rancid script; supporting Allied Telesis AW+ devices, Arbor Networks Appliances, Cisco IOS, Cisco IOS-XR, Cisco WLC, Dell switches, Compass EOS, and Juniper JUNOS. It uses the device O/S modules for parsing routines. See <code><a href="/docs/linux/man/3-rancid/">rancid</a></code>(3) for details.</dd>
+<dt><code>hrancid</code></dt>
+<dd> HP Procurve Switches</dd>
+<dt><code>htranicd</code></dt>
+<dd> Hitachi Routers</dd>
+<dt><code>jerancid</code></dt>
+<dd> Juniper Networks E-series</dd>
+<dt><code>jrancid</code></dt>
+<dd> Juniper Networks</dd>
+<dt><code>mrancid</code></dt>
+<dd> MRTd</dd>
+<dt><code>mtrancid</code></dt>
+<dd> Mikrotik routesrs</dd>
+<dt><code>nrancid</code></dt>
+<dd> Netscreen firewalls</dd>
+<dt><code>nsrancid</code></dt>
+<dd> Netscaler</dd>
+<dt><code>nxrancid</code></dt>
+<dd> Cisco Nexus boxes</dd>
+<dt><code>prancid</code></dt>
+<dd> Procket Networks</dd>
+<dt><code>rivrancid</code></dt>
+<dd> Riverstone</dd>
+<dt><code>rrancid</code></dt>
+<dd> Redback</dd>
+<dt><code>srancid</code></dt>
+<dd> SMC switch (some Dell OEMs)</dd>
+<dt><code>trancid</code></dt>
+<dd> Netopia sDSL/T1 routers</dd>
+<dt><code>tntrancid</code></dt>
+<dd> Lucent TNT</dd>
+<dt><code>xirancid</code></dt>
+<dd> Xirrus arrays</dd>
+<dt><code>xrancid</code></dt>
+<dd> Extreme switches</dd>
+<dt><code>xrrancid</code></dt>
+<dd> Cisco IOS-XR boxes</dd>
+<dt><code>zrancid</code></dt>
+<dd> Zebra routing software</dd></dl>
 <p> The command-line options are as follows:</p>
 <dl>
-<dt><code>-C</code></p>
-<dd> Prints the login command that would be used to collect data from the device.</p>
-<dt><code>-V</code></p>
-<dd> Prints package name and version strings.</p>
-<dt><code>-d</code></p>
-<dd> Display debugging information.</p>
-<dt><code>-h</code></p>
-<dd> Display a usage line and exit.</p>
-<dt><code>-l</code></p>
-<dd> Display somewhat less debugging information.</p>
-<dt><code>-t</code></p>
-<dd> Device type, of the given host or file, that is defined in <code>rancid.types.base</code> or <code>rancid.types.conf .</code></p>
-<dt><code>-f</code></p>
-<dd> <code>rancid</code> should interpret the next argument as a filename which contains the output it would normally collect from the device ( <i>hostname</i>) with <i><a href="/docs/linux/man/1-clogin/">clogin</a></i>(1).</dl>
+<dt><code>-C</code></dt>
+<dd> Prints the login command that would be used to collect data from the device.</dd>
+<dt><code>-V</code></dt>
+<dd> Prints package name and version strings.</dd>
+<dt><code>-d</code></dt>
+<dd> Display debugging information.</dd>
+<dt><code>-h</code></dt>
+<dd> Display a usage line and exit.</dd>
+<dt><code>-l</code></dt>
+<dd> Display somewhat less debugging information.</dd>
+<dt><code>-t</code></dt>
+<dd> Device type, of the given host or file, that is defined in <code>rancid.types.base</code> or <code>rancid.types.conf .</code></dd>
+<dt><code>-f</code></dt>
+<dd> <code>rancid</code> should interpret the next argument as a filename which contains the output it would normally collect from the device ( <i>hostname</i>) with <i><a href="/docs/linux/man/1-clogin/">clogin</a></i>(1).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1), <code><a href="/docs/linux/man/1-clogin/">clogin</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-rancid-types-conf/">rancid.types.conf</a></code>(5), <code><a href="/docs/linux/man/3-rancid/">rancid</a></code>(3)</p>
 <h2>CAVEATS</h2>

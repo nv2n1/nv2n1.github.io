@@ -17,12 +17,12 @@ url: "/docs/linux/man/3-mlx5dv_create_cq/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/mlx5dv.h&gt;
 struct ibv_cq_ex *mlx5dv_create_cq(struct ibv_context *context,
                                    struct ibv_cq_init_attr_ex *cq_attr,
                                    struct mlx5dv_cq_init_attr *mlx5_cq_attr);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -40,7 +40,7 @@ struct ibv_cq_ex *mlx5dv_create_cq(struct ibv_context *context,
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct mlx5dv_cq_init_attr {
     uint64_t comp_mask;
     uint8_t cqe_comp_res_format;
@@ -48,40 +48,33 @@ struct mlx5dv_cq_init_attr {
     uint16_t cqe_size;
 };
 </code></pre>
-<dt>comp_mask
-<dd> Bitmask specifying what fields in the structure are valid:
-<dl>
+</dd><dt>comp_mask
+</dt><dd> Bitmask specifying what fields in the structure are valid:
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  MLX5DV_CQ_INIT_ATTR_MASK_COMPRESSED_CQE enables creating a CQ in a mode that few CQEs may be compressed into a single CQE, valid values in cqe_comp_res_format 
-
  MLX5DV_CQ_INIT_ATTR_MASK_FLAGS valid values in flags 
-
- MLX5DV_CQ_INIT_ATTR_MASK_CQE_SIZE valid values in cqe_size</dl>
+ MLX5DV_CQ_INIT_ATTR_MASK_CQE_SIZE valid values in cqe_size</dd></dl>
 
 <dt>cqe_comp_res_format
-<dd> A bitwise OR of the various CQE response formats of the responder side:
-<dl>
+</dt><dd> A bitwise OR of the various CQE response formats of the responder side:
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  MLX5DV_CQE_RES_FORMAT_HASH CQE compression with hash 
-
  MLX5DV_CQE_RES_FORMAT_CSUM CQE compression with RX checksum 
-
- MLX5DV_CQE_RES_FORMAT_CSUM_STRIDX CQE compression with stride index</dl>
+ MLX5DV_CQE_RES_FORMAT_CSUM_STRIDX CQE compression with stride index</dd></dl>
 
 <dt>flags
-<dd> A bitwise OR of the various values described below:
-<dl>
+</dt><dd> A bitwise OR of the various values described below:
+</dd><dl>
 <dt>
-<dd> 
-
- MLX5DV_CQ_INIT_ATTR_FLAGS_CQE_PAD create a padded 128B CQE</dl>
+</dt><dd> 
+ MLX5DV_CQ_INIT_ATTR_FLAGS_CQE_PAD create a padded 128B CQE</dd></dl>
 
 <dt>cqe_size
-<dd> configure the CQE size to be 64 or 128 bytes other values will fail mlx5dv_create_cq.</dl>
+</dt><dd> configure the CQE size to be 64 or 128 bytes other values will fail mlx5dv_create_cq.</dd></dl>
 
 <h2>RETURN VALUE</h2>
 

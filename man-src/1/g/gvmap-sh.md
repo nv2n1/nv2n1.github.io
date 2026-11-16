@@ -15,32 +15,32 @@ description: "gvmap.sh – pipeline for running gvmap"
 <h2>Options</h2>
 <p>The following options are supported:</p>
 <dl>
-<dt><code>-a</code><i> k</i></p>
-<dd>The integer k specifies the average number of artificial points added along the bounding box of the labels. Such artificial points are added to avoid a country boundary cutting through the boundary box of the labels. Computing time is proportional to k; hence, for large graphs, a small value of k is suggested. If k = -1, a suitable value of k is automatically selected based on the graph size. By default k = -1.</p>
-<dt><code>-K</code><i> layout</i></p>
-<dd>specifies which program should be use for the initial layout. By default, sfdp is run. Also by default, the layout is passed the flag -Goverlap=prism. This can be overridden using a -g flag.</p>
-<dt><code>-T</code><i> format</i></p>
-<dd>specifies the final output format. This works the same way as the -T flag for any Graphviz layout program.</p>
-<dt><code>-N</code><i> attr=val</i></p>
-<dd>specifies the setting of a default node attribute during the rendering phase. This works the same way as the -N flag for any Graphviz layout program.</p>
-<dt><code>-G</code><i> attr=val</i></p>
-<dd>specifies the setting of a graph attribute during the rendering phase. This works the same way as the -G flag for any Graphviz layout program.</p>
-<dt><code>-E</code><i> attr=val</i></p>
-<dd>specifies the setting of a default edge attribute during the rendering phase. This works the same way as the -E flag for any Graphviz layout program.</p>
-<dt><code>-n</code><i> attr=val</i></p>
-<dd>specifies the setting of a default node attribute during the layout phase. This works the same way as the -N flag for any Graphviz layout program.</p>
-<dt><code>-g</code><i> attr=val</i></p>
-<dd>specifies the setting of a graph attribute during the layout phase. This works the same way as the -G flag for any Graphviz layout program.</p>
-<dt><code>-e</code><i> attr=val</i></p>
-<dd>specifies the setting of a default edge attribute during the layout phase. This works the same way as the -E flag for any Graphviz layout program.</p>
-<dt><code>-A</code><i> flag</i></p>
-<dd>specifies a flag to be passed to gvmap. For example, gvmap.sh -Ae -As3 causes gvmap -e -s3 to be run.</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-?</code></p>
-<dd>Print usage information and exit. </p>
+<dt><code>-a</code><i> k</i></dt>
+<dd>The integer k specifies the average number of artificial points added along the bounding box of the labels. Such artificial points are added to avoid a country boundary cutting through the boundary box of the labels. Computing time is proportional to k; hence, for large graphs, a small value of k is suggested. If k = -1, a suitable value of k is automatically selected based on the graph size. By default k = -1.</dd>
+<dt><code>-K</code><i> layout</i></dt>
+<dd>specifies which program should be use for the initial layout. By default, sfdp is run. Also by default, the layout is passed the flag -Goverlap=prism. This can be overridden using a -g flag.</dd>
+<dt><code>-T</code><i> format</i></dt>
+<dd>specifies the final output format. This works the same way as the -T flag for any Graphviz layout program.</dd>
+<dt><code>-N</code><i> attr=val</i></dt>
+<dd>specifies the setting of a default node attribute during the rendering phase. This works the same way as the -N flag for any Graphviz layout program.</dd>
+<dt><code>-G</code><i> attr=val</i></dt>
+<dd>specifies the setting of a graph attribute during the rendering phase. This works the same way as the -G flag for any Graphviz layout program.</dd>
+<dt><code>-E</code><i> attr=val</i></dt>
+<dd>specifies the setting of a default edge attribute during the rendering phase. This works the same way as the -E flag for any Graphviz layout program.</dd>
+<dt><code>-n</code><i> attr=val</i></dt>
+<dd>specifies the setting of a default node attribute during the layout phase. This works the same way as the -N flag for any Graphviz layout program.</dd>
+<dt><code>-g</code><i> attr=val</i></dt>
+<dd>specifies the setting of a graph attribute during the layout phase. This works the same way as the -G flag for any Graphviz layout program.</dd>
+<dt><code>-e</code><i> attr=val</i></dt>
+<dd>specifies the setting of a default edge attribute during the layout phase. This works the same way as the -E flag for any Graphviz layout program.</dd>
+<dt><code>-A</code><i> flag</i></dt>
+<dd>specifies a flag to be passed to gvmap. For example, gvmap.sh -Ae -As3 causes gvmap -e -s3 to be run.</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-?</code></dt>
+<dd>Print usage information and exit. </dd>
 </dl>
 <h2>Examples</h2>
 <p>The following invocation creates a map with edges in semi-transparent light gray and nodes laid out using sfdp: </p>

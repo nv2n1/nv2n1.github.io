@@ -14,38 +14,38 @@ description: "gfls – manual page for gfls (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> list directory contents</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> do not ignore entries starting with .</p>
-<dt><code>-h</code>, <code>&#8211;human-readable</code></p>
-<dd> with <code>-l</code>, print sizes in human readable format (e.g., 1K 234M 2G)</p>
-<dt><code>-l</code></p>
-<dd> use a long listing format</p>
-<dt><code>-R</code>, <code>&#8211;recursive</code></p>
-<dd> list subdirectories recursively</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> do not ignore entries starting with .</dd>
+<dt><code>-h</code>, <code>&#8211;human-readable</code></dt>
+<dd> with <code>-l</code>, print sizes in human readable format (e.g., 1K 234M 2G)</dd>
+<dt><code>-l</code></dt>
+<dd> use a long listing format</dd>
+<dt><code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd> list subdirectories recursively</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfls <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></p>
+</dt><dd> gfls <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
 <dt>
-<dd> List the contents of /directory on the Gluster volume root on host localhost.</p>
+</dt><dd> List the contents of /directory on the Gluster volume root on host localhost.</dd>
 <dt>
-<dd> gfls -l <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></p>
+</dt><dd> gfls -l <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
 <dt>
-<dd> List the contents of /directory on the Gluster volume root on host localhost using the long listing format.</p>
+</dt><dd> List the contents of /directory on the Gluster volume root on host localhost using the long listing format.</dd>
 <dt>
-<dd> gfls -Rl <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></p>
+</dt><dd> gfls -Rl <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
 <dt>
-<dd> Recursively list the contents of /directory on the Gluster volume groot on host localhost using the long listing format.</p>
+</dt><dd> Recursively list the contents of /directory on the Gluster volume groot on host localhost using the long listing format.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; ls /</p>
+</dt><dd> gfcli (localhost/groot)&gt; ls /</dd>
 <dt>
-<dd> List the contents of the root of the connected Gluster volume.</dl>
+</dt><dd> List the contents of the root of the connected Gluster volume.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

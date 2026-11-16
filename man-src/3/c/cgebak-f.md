@@ -21,10 +21,10 @@ description: "cgebak.f –"
 <pre> CGEBAK forms the right or left eigenvectors of a complex general
  matrix by backward transformation on the computed eigenvectors of the
  balanced matrix output by CGEBAL.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  Specifies the type of backward transformation required:
  = 'N', do nothing, return immediately;
@@ -68,13 +68,13 @@ description: "cgebak.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 131 of file cgebak.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

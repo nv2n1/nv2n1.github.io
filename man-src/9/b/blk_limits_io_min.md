@@ -15,11 +15,11 @@ blk_limits_io_min - set minimum request size for a device
 <h2>Arguments</h2>
 
 <i>limits</i>
-<dl><dd><dd>the queue limits</dl>
+<dl><dd></dd><dd>the queue limits</dd></dl>
  
 
  <i>min</i>
-<dl><dd>smallest I/O size in bytes</dl>
+<dl><dd>smallest I/O size in bytes</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,6 +17,6 @@ description: "Utility functions –"
 <p> Return value is shared and must not be deleted by caller. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd><i>uri</i> converted to a path, or NULL on failure (URI is not local).</dl>
+<dd><i>uri</i> converted to a path, or NULL on failure (URI is not local).</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for SLV2 from the source code.</p>

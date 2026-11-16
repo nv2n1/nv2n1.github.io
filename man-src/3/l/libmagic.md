@@ -17,52 +17,52 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <p> These functions operate on the magic database file which is described in <a href="/docs/linux/man/5-magic/">magic</a>(5). </p>
 <p> The function Fn magic_open creates a magic cookie pointer and returns it. It returns <code>NULL</code> if there was an error allocating the magic cookie. The <i>flags</i> argument specifies how the other magic functions should behave:</p>
 <dl>
-<dt><code>MAGIC_NONE</code></p>
-<dd> No special handling.</p>
-<dt><code>MAGIC_DEBUG</code></p>
-<dd> Print debugging messages to stderr.</p>
-<dt><code>MAGIC_SYMLINK</code></p>
-<dd> If the file queried is a symlink, follow it.</p>
-<dt><code>MAGIC_COMPRESS</code></p>
-<dd> If the file is compressed, unpack it and look at the contents.</p>
-<dt><code>MAGIC_DEVICES</code></p>
-<dd> If the file is a block or character special device, then open the device and try to look in its contents.</p>
-<dt><code>MAGIC_MIME_TYPE</code></p>
-<dd> Return a MIME type string, instead of a textual description.</p>
-<dt><code>MAGIC_MIME_ENCODING</code></p>
-<dd> Return a MIME encoding, instead of a textual description.</p>
-<dt><code>MAGIC_MIME</code></p>
-<dd> A shorthand for MAGIC_MIME_TYPE | MAGIC_MIME_ENCODING.</p>
-<dt><code>MAGIC_CONTINUE</code></p>
-<dd> Return all matches, not just the first.</p>
-<dt><code>MAGIC_CHECK</code></p>
-<dd> Check the magic database for consistency and print warnings to stderr.</p>
-<dt><code>MAGIC_PRESERVE_ATIME</code></p>
-<dd> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analysed.</p>
-<dt><code>MAGIC_RAW</code></p>
-<dd> Don&#8217;t translate unprintable characters to a \ooo octal representation.</p>
-<dt><code>MAGIC_ERROR</code></p>
-<dd> Treat operating system errors while trying to open files and follow symlinks as real errors, instead of printing them in the magic buffer.</p>
-<dt><code>MAGIC_APPLE</code></p>
-<dd> Return the Apple creator and type.</p>
-<dt><code>MAGIC_NO_CHECK_APPTYPE</code></p>
-<dd> Don&#8217;t check for <code>EMX</code> application type (only on EMX).</p>
-<dt><code>MAGIC_NO_CHECK_CDF</code></p>
-<dd> Don&#8217;t get extra information on MS Composite Document Files.</p>
-<dt><code>MAGIC_NO_CHECK_COMPRESS</code></p>
-<dd> Don&#8217;t look inside compressed files.</p>
-<dt><code>MAGIC_NO_CHECK_ELF</code></p>
-<dd> Don&#8217;t print ELF details.</p>
-<dt><code>MAGIC_NO_CHECK_ENCODING</code></p>
-<dd> Don&#8217;t check text encodings.</p>
-<dt><code>MAGIC_NO_CHECK_SOFT</code></p>
-<dd> Don&#8217;t consult magic files.</p>
-<dt><code>MAGIC_NO_CHECK_TAR</code></p>
-<dd> Don&#8217;t examine tar files.</p>
-<dt><code>MAGIC_NO_CHECK_TEXT</code></p>
-<dd> Don&#8217;t check for various types of text files.</p>
-<dt><code>MAGIC_NO_CHECK_TOKENS</code></p>
-<dd> Don&#8217;t look for known tokens inside ascii files.</dl>
+<dt><code>MAGIC_NONE</code></dt>
+<dd> No special handling.</dd>
+<dt><code>MAGIC_DEBUG</code></dt>
+<dd> Print debugging messages to stderr.</dd>
+<dt><code>MAGIC_SYMLINK</code></dt>
+<dd> If the file queried is a symlink, follow it.</dd>
+<dt><code>MAGIC_COMPRESS</code></dt>
+<dd> If the file is compressed, unpack it and look at the contents.</dd>
+<dt><code>MAGIC_DEVICES</code></dt>
+<dd> If the file is a block or character special device, then open the device and try to look in its contents.</dd>
+<dt><code>MAGIC_MIME_TYPE</code></dt>
+<dd> Return a MIME type string, instead of a textual description.</dd>
+<dt><code>MAGIC_MIME_ENCODING</code></dt>
+<dd> Return a MIME encoding, instead of a textual description.</dd>
+<dt><code>MAGIC_MIME</code></dt>
+<dd> A shorthand for MAGIC_MIME_TYPE | MAGIC_MIME_ENCODING.</dd>
+<dt><code>MAGIC_CONTINUE</code></dt>
+<dd> Return all matches, not just the first.</dd>
+<dt><code>MAGIC_CHECK</code></dt>
+<dd> Check the magic database for consistency and print warnings to stderr.</dd>
+<dt><code>MAGIC_PRESERVE_ATIME</code></dt>
+<dd> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analysed.</dd>
+<dt><code>MAGIC_RAW</code></dt>
+<dd> Don&#8217;t translate unprintable characters to a \ooo octal representation.</dd>
+<dt><code>MAGIC_ERROR</code></dt>
+<dd> Treat operating system errors while trying to open files and follow symlinks as real errors, instead of printing them in the magic buffer.</dd>
+<dt><code>MAGIC_APPLE</code></dt>
+<dd> Return the Apple creator and type.</dd>
+<dt><code>MAGIC_NO_CHECK_APPTYPE</code></dt>
+<dd> Don&#8217;t check for <code>EMX</code> application type (only on EMX).</dd>
+<dt><code>MAGIC_NO_CHECK_CDF</code></dt>
+<dd> Don&#8217;t get extra information on MS Composite Document Files.</dd>
+<dt><code>MAGIC_NO_CHECK_COMPRESS</code></dt>
+<dd> Don&#8217;t look inside compressed files.</dd>
+<dt><code>MAGIC_NO_CHECK_ELF</code></dt>
+<dd> Don&#8217;t print ELF details.</dd>
+<dt><code>MAGIC_NO_CHECK_ENCODING</code></dt>
+<dd> Don&#8217;t check text encodings.</dd>
+<dt><code>MAGIC_NO_CHECK_SOFT</code></dt>
+<dd> Don&#8217;t consult magic files.</dd>
+<dt><code>MAGIC_NO_CHECK_TAR</code></dt>
+<dd> Don&#8217;t examine tar files.</dd>
+<dt><code>MAGIC_NO_CHECK_TEXT</code></dt>
+<dd> Don&#8217;t check for various types of text files.</dd>
+<dt><code>MAGIC_NO_CHECK_TOKENS</code></dt>
+<dd> Don&#8217;t look for known tokens inside ascii files.</dd></dl>
 <p> The Fn magic_close function closes the <a href="/docs/linux/man/5-magic/">magic</a>(5) database and deallocates any resources used. </p>
 <p> The Fn magic_error function returns a textual explanation of the last error, or <code>NULL</code> if there was no error. </p>
 <p> The Fn magic_errno function returns the last operating system error number (errno(2) ) that was encountered by a system call. </p>
@@ -79,10 +79,10 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <p> The function Fn magic_open returns a magic cookie on success and <code>NULL</code> on failure setting errno to an appropriate value. It will set errno to Er EINVAL if an unsupported value for flags was given. The Fn magic_list , Fn magic_load , Fn magic_compile , and Fn magic_check functions return 0 on success and -1 on failure. The Fn magic_buffer , Fn magic_getpath , and Fn magic_file , functions return a string on success and <code>NULL</code> on failure. The Fn magic_error function returns a textual description of the errors of the above functions, or <code>NULL</code> if there was no error. Finally, Fn magic_setflags returns -1 on systems that don&#8217;t support utime(3), or <a href="/docs/linux/man/2-utimes/">utimes</a>(2) when <code>MAGIC_PRESERVE_ATIME</code> is set.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/share/misc/magic </code></p>
-<dd> The non-compiled default magic database.</p>
-<dt><code>/usr/share/misc/magic.mgc </code></p>
-<dd> The compiled default magic database.</dl>
+<dt><code>/usr/share/misc/magic </code></dt>
+<dd> The non-compiled default magic database.</dd>
+<dt><code>/usr/share/misc/magic.mgc </code></dt>
+<dd> The compiled default magic database.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-file/">file</a>(1), <a href="/docs/linux/man/5-magic/">magic</a>(5)</p>
 <h2>AUTHORS</h2>

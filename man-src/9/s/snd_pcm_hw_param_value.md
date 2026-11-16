@@ -14,13 +14,13 @@ description: "snd_pcm_hw_param_value – return params field var value"
 <p><i>params</i></p>
 <dl>
 <dd>
-<dd>the hw_params instance</dl>
+</dd><dd>the hw_params instance</dd></dl>
 <p> <i>var</i></p>
 <dl>
-<dd>parameter to retrieve</dl>
+<dd>parameter to retrieve</dd></dl>
 <p> <i>dir</i></p>
 <dl>
-<dd>pointer to the direction (-1,0,1) or <code>NULL</code></dl>
+<dd>pointer to the direction (-1,0,1) or <code>NULL</code></dd></dl>
 <h2>Return</h2>
 <p>The value for field <i>var</i> if it&#8217;s fixed in configuration space defined by <i>params</i>. &#8211;<code>EINVAL</code> otherwise.</p>
 <h2>Copyright</h2>

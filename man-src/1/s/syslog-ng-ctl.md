@@ -11,63 +11,63 @@ description: "syslog-ng-ctl – Display message statistics and enable verbose, d
 <p> syslog-ng-ctl &#8211; Display message statistics and enable verbose, debug and trace modes in syslog-ng Open Source Edition </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>syslog-ng-ctl</code> [command] [options]</dl>
+<dt> <code>syslog-ng-ctl</code> [command] [options]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>NOTE: The syslog-ng-ctl application is distributed with the syslog-ng Open Source Edition system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[1]</font>. </p>
+<dd>NOTE: The syslog-ng-ctl application is distributed with the syslog-ng Open Source Edition system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[1]</font>. </dd>
 <p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[]<font SIZE="-2">[2]</font>. </p>
 <p> The <code>syslog-ng-ctl</code> application is a utility that can be used to: </p>
 <dl>
 <dt>
-<dd> &bull; enable/disable various syslog-ng messages for troubleshooting;</dl>
+</dt><dd> &bull; enable/disable various syslog-ng messages for troubleshooting;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; display statistics about the processed messages.</dl>
+</dt><dd> &bull; display statistics about the processed messages.</dd></dl>
 <h2>ENABLING TROUBLESHOOTING MESSAGES</h2>
 <dl>
-<dt> <code>command</code> [options]</dl>
-<dd>Use the <code>syslog-ng-ctl &lt;command&gt; &#8211;set=on</code> command to display verbose, trace, or debug messages. If you are trying to solve configuration problems, the debug (and occassionally trace) messages are usually sufficient; debug messages are needed mostly for finding software errors. After solving the problem, do not forget to turn these messages off using the <code>syslog-ng-ctl &lt;command&gt; &#8211;set=off</code>. Note that enabling debug messages does not enable verbose and trace messages. </p>
+<dt> <code>command</code> [options]</dt></dl>
+<dd>Use the <code>syslog-ng-ctl &lt;command&gt; &#8211;set=on</code> command to display verbose, trace, or debug messages. If you are trying to solve configuration problems, the debug (and occassionally trace) messages are usually sufficient; debug messages are needed mostly for finding software errors. After solving the problem, do not forget to turn these messages off using the <code>syslog-ng-ctl &lt;command&gt; &#8211;set=off</code>. Note that enabling debug messages does not enable verbose and trace messages. </dd>
 <p> Use <code>syslog-ng-ctl &lt;command&gt;</code> without any parameters to display whether the particular type of messages are enabled or not. </p>
 <p> If you need to use a non-standard control socket to access syslog-ng, use the <code>syslog-ng-ctl &lt;command&gt; &#8211;set=on &#8211;control=&lt;socket&gt;</code> command to specify the socket to use. </p>
 <p> <code>verbose</code></p>
 <dl>
 <dt>
-<dd> Print verbose messages. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dl>
+</dt><dd> Print verbose messages. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dd></dl>
 <p> <code>trace</code></p>
 <dl>
 <dt>
-<dd> Print trace messages of how messages are processed. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dl>
+</dt><dd> Print trace messages of how messages are processed. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dd></dl>
 <p> <code>debug</code></p>
 <dl>
 <dt>
-<dd> Print debug messages. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dl>
+</dt><dd> Print debug messages. If syslog-ng was started with the <i>&#8211;stderr</i> or <i>-e</i> option, the messages will be sent to stderr. If not specified, syslog-ng will log such messages to its internal source.</dd></dl>
 <p> Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 syslog-ng-ctl verbose --set=on
 </pre>
-</dl>
+</dd></dl>
 <h2>THE STATS COMMAND</h2>
 <dl>
-<dt> <code>stats</code> [options]</dl>
-<dd>Use the <code>stats</code> command to display statistics about the processed messages. The <code>stats</code> command has the following options: </p>
+<dt> <code>stats</code> [options]</dt></dl>
+<dd>Use the <code>stats</code> command to display statistics about the processed messages. The <code>stats</code> command has the following options: </dd>
 <p> <code>&#8211;control=&lt;socket&gt;</code> or <code>-c</code></p>
 <dl>
 <dt>
-<dd> Specify the socket to use to access syslog-ng. Only needed when using a non-standard socket.</dl>
+</dt><dd> Specify the socket to use to access syslog-ng. Only needed when using a non-standard socket.</dd></dl>
 <p> Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 syslog-ng-ctl stats
 </pre>
-</dl>
+</dd></dl>
 <p> An example output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 src.internal;
 s_all #0;
@@ -206,7 +206,7 @@ a;
 processed;
 0
 </code></pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> /home/algernon/install/syslog-ng/3.5/sbin/syslog-ng-ctl</p>
 <h2>SEE ALSO</h2>
@@ -223,34 +223,34 @@ processed;
 <p> The authors grant permission to copy, distribute and/or modify this manual page under the terms of the GNU General Public License Version 2 or newer (GPL v2+).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> the official syslog-ng website</p>
+<dt> 1.</dt>
+<dd> the official syslog-ng website</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.balabit.com/network-security/syslog-ng/">http://www.balabit.com/network-security/syslog-ng/</a></dl>
-<dt> 2.</p>
+</dt><dd> <a rel="nofollow" href="http://www.balabit.com/network-security/syslog-ng/">http://www.balabit.com/network-security/syslog-ng/</a></dd></dl>
+<dt> 2.</dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>The syslog-ng Open Source Edition Administrator Guide</code><br />
 &nbsp;<wbr>&nbsp;<wbr></p>
+</dd><dl>
+<dt>
+</dt><dd> <a rel="nofollow" href="http://www.balabit.com/support/documentation/">http://www.balabit.com/support/documentation/</a></dd></dl>
+<dt> 3.</dt>
+<dd> visit the syslog-ng wiki</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.balabit.com/support/documentation/">http://www.balabit.com/support/documentation/</a></dl>
-<dt> 3.</p>
-<dd> visit the syslog-ng wiki</p>
+</dt><dd> <a rel="nofollow" href="http://www.balabit.com/wiki/syslog-ng-faq">http://www.balabit.com/wiki/syslog-ng-faq</a></dd></dl>
+<dt> 4.</dt>
+<dd> <code>syslog-ng mailing list</code></dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.balabit.com/wiki/syslog-ng-faq">http://www.balabit.com/wiki/syslog-ng-faq</a></dl>
-<dt> 4.</p>
-<dd> <code>syslog-ng mailing list</code></p>
+</dt><dd> <a rel="nofollow" href="https://lists.balabit.hu/mailman/listinfo/syslog-ng">https://lists.balabit.hu/mailman/listinfo/syslog-ng</a></dd></dl>
+<dt> 5.</dt>
+<dd> <code>syslog-ng Insider Blog</code></dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://lists.balabit.hu/mailman/listinfo/syslog-ng">https://lists.balabit.hu/mailman/listinfo/syslog-ng</a></dl>
-<dt> 5.</p>
-<dd> <code>syslog-ng Insider Blog</code></p>
-<dl>
-<dt>
-<dd> <a rel="nofollow" href="http://insider.blogs.balabit.com">http://insider.blogs.balabit.com</a></dl>
+</dt><dd> <a rel="nofollow" href="http://insider.blogs.balabit.com">http://insider.blogs.balabit.com</a></dd></dl>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAL">NOTES</a></p>
-<dd></dl>
+<dt><a href="#lbAL">NOTES</a></dt>
+<dd></dd></dl>

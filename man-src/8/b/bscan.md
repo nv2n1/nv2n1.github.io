@@ -16,44 +16,44 @@ description: "bscan – Bacula’s ‘Scan tape’"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</p>
-<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></p>
-<dd>Specify a bootstrap file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>Specify configuration file.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output.</p>
-<dt><code>-m</code></p>
-<dd>Update media info in database.</p>
-<dt><code>-D</code></p>
-<dd>Specify the driver database name (default: <i>NULL</i>)</p>
-<dt><code>-n&nbsp;<wbr></code><i>name</i></p>
-<dd>Specify the database name (default: <i>bacula</i>)</p>
-<dt><code>-u&nbsp;<wbr></code><i>username</i></p>
-<dd>Specify database username (default: <i>bacula</i>)</p>
-<dt><code>-P&nbsp;<wbr></code><i>password</i></p>
-<dd>Specify database password (default: <i>none</i>)</p>
-<dt><code>-h&nbsp;<wbr></code><i>host</i></p>
-<dd>Specify database host (default: <i>NULL</i>)</p>
-<dt><code>-t&nbsp;<wbr></code><i>port</i></p>
-<dd>Specify database port (default: 0)</p>
-<dt><code>-p</code></p>
-<dd>Proceed in spite of I/O errors.</p>
-<dt><code>-r</code></p>
-<dd>List records.</p>
-<dt><code>-s</code></p>
-<dd>Synchronize or store in Database.</p>
-<dt><code>-S</code></p>
-<dd>Show scan progress periodically.</p>
-<dt><code>-v</code></p>
-<dd>Verbose output mode.</p>
-<dt><code>-V&nbsp;<wbr></code><i>volume</i></p>
-<dd>Specify volume names (separated by &#8216;|&#8217;)</p>
-<dt><code>-w&nbsp;<wbr></code><i>dir</i></p>
-<dd>Specify working directory (default from conf file)</dl>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></dt>
+<dd>Specify a bootstrap file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output.</dd>
+<dt><code>-m</code></dt>
+<dd>Update media info in database.</dd>
+<dt><code>-D</code></dt>
+<dd>Specify the driver database name (default: <i>NULL</i>)</dd>
+<dt><code>-n&nbsp;<wbr></code><i>name</i></dt>
+<dd>Specify the database name (default: <i>bacula</i>)</dd>
+<dt><code>-u&nbsp;<wbr></code><i>username</i></dt>
+<dd>Specify database username (default: <i>bacula</i>)</dd>
+<dt><code>-P&nbsp;<wbr></code><i>password</i></dt>
+<dd>Specify database password (default: <i>none</i>)</dd>
+<dt><code>-h&nbsp;<wbr></code><i>host</i></dt>
+<dd>Specify database host (default: <i>NULL</i>)</dd>
+<dt><code>-t&nbsp;<wbr></code><i>port</i></dt>
+<dd>Specify database port (default: 0)</dd>
+<dt><code>-p</code></dt>
+<dd>Proceed in spite of I/O errors.</dd>
+<dt><code>-r</code></dt>
+<dd>List records.</dd>
+<dt><code>-s</code></dt>
+<dd>Synchronize or store in Database.</dd>
+<dt><code>-S</code></dt>
+<dd>Show scan progress periodically.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output mode.</dd>
+<dt><code>-V&nbsp;<wbr></code><i>volume</i></dt>
+<dd>Specify volume names (separated by &#8216;|&#8217;)</dd>
+<dt><code>-w&nbsp;<wbr></code><i>dir</i></dt>
+<dd>Specify working directory (default from conf file)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-bls/">bls</a></code>(8), <code><a href="/docs/linux/man/8-bextract/">bextract</a></code>(8).</p>
 <h2>Author</h2>

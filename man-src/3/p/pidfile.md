@@ -61,25 +61,25 @@ exit(EXIT_SUCCESS);</pre>
 <h2>Errors</h2>
 <p>The Fn pidfile_open function will fail if:</p>
 <dl>
-<dt><code>Bq </code>Er EEXIST</p>
-<dd>Some process already holds the lock on the given pidfile, meaning that a daemon is already running.</p>
-<dt><code>Bq </code>Er ENAMETOOLONG</p>
-<dd>Specified pidfile&#8217;s name is too long.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>Some process already holds the lock on the given pidfile, but PID read from there is invalid.</p>
-<dt><code>Bq </code>Er EAGAIN</p>
-<dd>Some process already holds the lock on the given pidfile, but the file is truncated. Most likely, the existing daemon is writing new PID into the file.</dl>
+<dt><code>Bq </code>Er EEXIST</dt>
+<dd>Some process already holds the lock on the given pidfile, meaning that a daemon is already running.</dd>
+<dt><code>Bq </code>Er ENAMETOOLONG</dt>
+<dd>Specified pidfile&#8217;s name is too long.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>Some process already holds the lock on the given pidfile, but PID read from there is invalid.</dd>
+<dt><code>Bq </code>Er EAGAIN</dt>
+<dd>Some process already holds the lock on the given pidfile, but the file is truncated. Most likely, the existing daemon is writing new PID into the file.</dd></dl>
 <p> The Fn pidfile_open function may also fail and set <i>errno</i> for any errors specified for the <a href="/docs/linux/man/2-fstat/">fstat</a>(2), <a href="/docs/linux/man/2-open/">open</a>(2), and <a href="/docs/linux/man/2-read/">read</a>(2) calls. </p>
 <p> The Fn pidfile_write function will fail if:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>Improper function use. Probably called before Fn pidfile_open .</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>Improper function use. Probably called before Fn pidfile_open .</dd></dl>
 <p> The Fn pidfile_write function may also fail and set <i>errno</i> for any errors specified for the <a href="/docs/linux/man/2-fstat/">fstat</a>(2), <a href="/docs/linux/man/2-ftruncate/">ftruncate</a>(2), and <a href="/docs/linux/man/2-write/">write</a>(2) calls. </p>
 <p> The Fn pidfile_close function may fail and set <i>errno</i> for any errors specified for the <a href="/docs/linux/man/2-close/">close</a>(2) and <a href="/docs/linux/man/2-fstat/">fstat</a>(2) calls. </p>
 <p> The Fn pidfile_remove function will fail if:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>Improper function use. Probably called not from the process which made Fn pidfile_write .</dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>Improper function use. Probably called not from the process which made Fn pidfile_write .</dd></dl>
 <p> The Fn pidfile_remove function may also fail and set <i>errno</i> for any errors specified for the <a href="/docs/linux/man/2-close/">close</a>(2), <a href="/docs/linux/man/2-fstat/">fstat</a>(2), <a href="/docs/linux/man/2-write/">write</a>(2), and <a href="/docs/linux/man/2-unlink/">unlink</a>(2) system calls and the <a href="/docs/linux/man/3-flopen/">flopen</a>(3) library function.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/2-open/">open</a>(2), <a href="/docs/linux/man/3-daemon/">daemon</a>(3), <a href="/docs/linux/man/3-flopen/">flopen</a>(3)</p>

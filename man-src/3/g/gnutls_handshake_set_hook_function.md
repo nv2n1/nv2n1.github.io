@@ -14,14 +14,14 @@ description: "gnutls_handshake_set_hook_function – API function"
 <p> <code>void gnutls_handshake_set_hook_function(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>htype</i><code>, int </code><i>post</i><code>, gnutls_handshake_hook_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure</p>
-<dt>unsigned int htype</p>
-<dd> the <code>gnutls_handshake_description_t</code> of the message to hook at</p>
-<dt>int post</p>
-<dd> <code>GNUTLS_HOOK_</code>* depending on when the hook function should be called</p>
-<dt>gnutls_handshake_hook_func func</p>
-<dd> is the function to be called</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure</dd>
+<dt>unsigned int htype</dt>
+<dd> the <code>gnutls_handshake_description_t</code> of the message to hook at</dd>
+<dt>int post</dt>
+<dd> <code>GNUTLS_HOOK_</code>* depending on when the hook function should be called</dd>
+<dt>gnutls_handshake_hook_func func</dt>
+<dd> is the function to be called</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set a callback to be called after or before the specified handshake message has been received or generated. This is a generalization of <code>gnutls_handshake_set_post_client_hello_function()</code>. </p>
 <p> To call the hook function prior to the message being sent/generated use <code>GNUTLS_HOOK_PRE</code> as <i>post</i> parameter, <code>GNUTLS_HOOK_POST</code> to call after, and <code>GNUTLS_HOOK_BOTH</code> for both cases. </p>
@@ -38,6 +38,6 @@ description: "gnutls_handshake_set_hook_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -23,6 +23,6 @@ description: "pmLookupInDomText – return text describing a performance metrics
 <p><code><a href="/docs/linux/man/1-chkhelp/">chkhelp</a></code>(1), <code><a href="/docs/linux/man/1-newhelp/">newhelp</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookuptext/">pmLookupText</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOTHOST</code></p>
-<dd>if the current PMAPI context is an archive log (help and one-line text is not maintained in the archive logs) </p>
+<dt><code>PM_ERR_NOTHOST</code></dt>
+<dd>if the current PMAPI context is an archive log (help and one-line text is not maintained in the archive logs) </dd>
 </dl>

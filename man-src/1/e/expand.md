@@ -16,16 +16,16 @@ description: "expand – convert tabs to spaces"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-i</code>, <code>&#8211;initial</code></p>
-<dd> do not convert tabs after non blanks</p>
-<dt><code>-t</code>, <code>&#8211;tabs</code>=<i>,N/</i></p>
-<dd> have tabs N characters apart, not 8</p>
-<dt><code>-t</code>, <code>&#8211;tabs</code>=<i>,LIST/</i></p>
-<dd> use comma separated list of tab positions The last specified position can be prefixed with &#8216;/&#8217; to specify a tab size to use after the last explicitly specified tab stop. Also a prefix of &#8216;+&#8217; can be used to align remaining tab stops relative to the last specified tab stop instead of the first column</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-i</code>, <code>&#8211;initial</code></dt>
+<dd> do not convert tabs after non blanks</dd>
+<dt><code>-t</code>, <code>&#8211;tabs</code>=<i>,N/</i></dt>
+<dd> have tabs N characters apart, not 8</dd>
+<dt><code>-t</code>, <code>&#8211;tabs</code>=<i>,LIST/</i></dt>
+<dd> use comma separated list of tab positions The last specified position can be prefixed with &#8216;/&#8217; to specify a tab size to use after the last explicitly specified tab stop. Also a prefix of &#8216;+&#8217; can be used to align remaining tab stops relative to the last specified tab stop instead of the first column</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

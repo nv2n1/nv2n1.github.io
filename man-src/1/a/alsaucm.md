@@ -22,93 +22,93 @@ description: "alsaucm – ALSA Use Case Manager"
 <h2>OPTIONS</h2>
 <p> Available options:</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> this help</p>
-<dt><code>-c</code>, <code>&#8211;card</code> <i>NAME</i></p>
-<dd> open card NAME</p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> interactive mode</p>
-<dt><code>-b</code>, <code>&#8211;batch</code> <i>FILE</i></p>
-<dd> batch mode (use <code>&#8216;-&#8216;</code> for the stdin input)</p>
-<dt><code>-n</code>, <code>&#8211;no-open</code></p>
-<dd> do not open first card found </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> this help</dd>
+<dt><code>-c</code>, <code>&#8211;card</code> <i>NAME</i></dt>
+<dd> open card NAME</dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> interactive mode</dd>
+<dt><code>-b</code>, <code>&#8211;batch</code> <i>FILE</i></dt>
+<dd> batch mode (use <code>&#8216;-&#8216;</code> for the stdin input)</dd>
+<dt><code>-n</code>, <code>&#8211;no-open</code></dt>
+<dd> do not open first card found </dd>
 <p> Available commands:</p>
-<dt><code>open</code> <i>NAME</i></p>
-<dd> open card NAME. </p>
+<dt><code>open</code> <i>NAME</i></dt>
+<dd> open card NAME. </dd>
 <p> valid names are sound card names as listed in <code>/usr/share/alsa/ucm</code>.</p>
-<dt><code>reset</code></p>
-<dd> reset sound card to default state.</p>
-<dt><code>reload</code></p>
-<dd> reload configuration.</p>
-<dt><code>listcards</code></p>
-<dd> list available cards.</p>
-<dt><code>list</code> <i>IDENTIFIER</i></p>
-<dd> list command, for items returning two entries (value+comment). </p>
+<dt><code>reset</code></dt>
+<dd> reset sound card to default state.</dd>
+<dt><code>reload</code></dt>
+<dd> reload configuration.</dd>
+<dt><code>listcards</code></dt>
+<dd> list available cards.</dd>
+<dt><code>list</code> <i>IDENTIFIER</i></dt>
+<dd> list command, for items returning two entries (value+comment). </dd>
 <p> the value of the <i>IDENTIFIER</i> argument can can be:</p>
-<dt>&bull;</p>
-<dd> <code>_verbs</code> &#8211; get verb list (in pair verb+comment)</p>
-<dt>&bull;</p>
-<dd> <code>_devices[/{verb}]</code> &#8211; get list of supported devices (in pair device+comment)</p>
-<dt>&bull;</p>
-<dd> <code>_modifiers[/{verb}]</code> &#8211; get list of supported modifiers (in pair modifier+comment) </p>
+<dt>&bull;</dt>
+<dd> <code>_verbs</code> &#8211; get verb list (in pair verb+comment)</dd>
+<dt>&bull;</dt>
+<dd> <code>_devices[/{verb}]</code> &#8211; get list of supported devices (in pair device+comment)</dd>
+<dt>&bull;</dt>
+<dd> <code>_modifiers[/{verb}]</code> &#8211; get list of supported modifiers (in pair modifier+comment) </dd>
 <p> The forms without the trailing <code>/{verb}</code> are valid only after a specific verb has been set.</p>
-<dt><code>list1</code> <i>IDENTIFIER</i></p>
-<dd> list command, for lists returning one item per entry. </p>
+<dt><code>list1</code> <i>IDENTIFIER</i></dt>
+<dd> list command, for lists returning one item per entry. </dd>
 <p> the value of the <i>IDENTIFIER</i> argument can vary depending on the context, it can be:</p>
-<dt>&bull;</p>
-<dd> <code>TQ[/{verb}]</code> &#8211; get list of Tone Quality identifiers</p>
-<dt>&bull;</p>
-<dd> <code>_enadevs</code> &#8211; get list of enabled devices</p>
-<dt>&bull;</p>
-<dd> <code>_enamods</code> &#8211; get list of enabled modifiers</p>
-<dt>&bull;</p>
-<dd> <code>_supporteddevs/{modifier}|{device}[/{verb}]</code> &#8211; list of supported devices</p>
-<dt>&bull;</p>
-<dd> <code>_conflictingdevs/{modifier}|{device}[/{verb}]</code> &#8211; list of conflicting devices</p>
-<dt><code>get</code> <i>IDENTIFIER</i></p>
-<dd> get string value. </p>
+<dt>&bull;</dt>
+<dd> <code>TQ[/{verb}]</code> &#8211; get list of Tone Quality identifiers</dd>
+<dt>&bull;</dt>
+<dd> <code>_enadevs</code> &#8211; get list of enabled devices</dd>
+<dt>&bull;</dt>
+<dd> <code>_enamods</code> &#8211; get list of enabled modifiers</dd>
+<dt>&bull;</dt>
+<dd> <code>_supporteddevs/{modifier}|{device}[/{verb}]</code> &#8211; list of supported devices</dd>
+<dt>&bull;</dt>
+<dd> <code>_conflictingdevs/{modifier}|{device}[/{verb}]</code> &#8211; list of conflicting devices</dd>
+<dt><code>get</code> <i>IDENTIFIER</i></dt>
+<dd> get string value. </dd>
 <p> the value of the <i>IDENTIFIER</i> argument can can be:</p>
-<dt>&bull;</p>
-<dd> <code>_verb</code> &#8211; return current verb</p>
-<dt>&bull;</p>
-<dd> <code>[=]{NAME}[/[{modifier}|{/device}][/{verb}]]</code> (For valid NAMEs look at the ALSA <i>Use Case Interface</i>)</p>
-<dt><code>geti</code> <i>IDENTIFIER</i></p>
-<dd> get integer value. </p>
+<dt>&bull;</dt>
+<dd> <code>_verb</code> &#8211; return current verb</dd>
+<dt>&bull;</dt>
+<dd> <code>[=]{NAME}[/[{modifier}|{/device}][/{verb}]]</code> (For valid NAMEs look at the ALSA <i>Use Case Interface</i>)</dd>
+<dt><code>geti</code> <i>IDENTIFIER</i></dt>
+<dd> get integer value. </dd>
 <p> the value of the <i>IDENTIFIER</i> argument can can be:</p>
-<dt>&bull;</p>
-<dd> <code>_devstatus/{device}</code></p>
-<dt>&bull;</p>
-<dd> <code>_modstatus/{device}</code></p>
-<dt><code>set</code> <i>IDENTIFIER</i> <i>VALUE</i></p>
-<dd> set string value </p>
+<dt>&bull;</dt>
+<dd> <code>_devstatus/{device}</code></dd>
+<dt>&bull;</dt>
+<dd> <code>_modstatus/{device}</code></dd>
+<dt><code>set</code> <i>IDENTIFIER</i> <i>VALUE</i></dt>
+<dd> set string value </dd>
 <p> The value of the <i>IDENTIFIER</i> argument can can be:</p>
-<dt>&bull;</p>
-<dd> <code>_verb</code> &#8211; set the verb to <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> <code>_enadev</code> &#8211; enable the device specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> <code>_disdev</code> &#8211; disable the device specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> <code>_swdev/{old_device}</code> &#8211; switche device:</p>
-<dt>&bull;</p>
-<dd> disable <i>old_device</i> and then enable the device specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> if no device was enabled just return</p>
-<dt>&bull;</p>
-<dd> <code>_enamod</code> &#8211; enable the modifier specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> <code>_dismod</code> &#8211; disable the modifier specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> <code>_swmod/{old_modifier}</code> &#8211; switch modifier:</p>
-<dt>&bull;</p>
-<dd> disable <i>old_modifier</i> and then enable the modifier specified by <i>VALUE</i></p>
-<dt>&bull;</p>
-<dd> if no modifier was enabled just return </p>
+<dt>&bull;</dt>
+<dd> <code>_verb</code> &#8211; set the verb to <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> <code>_enadev</code> &#8211; enable the device specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> <code>_disdev</code> &#8211; disable the device specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> <code>_swdev/{old_device}</code> &#8211; switche device:</dd>
+<dt>&bull;</dt>
+<dd> disable <i>old_device</i> and then enable the device specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> if no device was enabled just return</dd>
+<dt>&bull;</dt>
+<dd> <code>_enamod</code> &#8211; enable the modifier specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> <code>_dismod</code> &#8211; disable the modifier specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> <code>_swmod/{old_modifier}</code> &#8211; switch modifier:</dd>
+<dt>&bull;</dt>
+<dd> disable <i>old_modifier</i> and then enable the modifier specified by <i>VALUE</i></dd>
+<dt>&bull;</dt>
+<dd> if no modifier was enabled just return </dd>
 <p> Note that the identifiers referring to devices and modifiers are valid only after setting a verb.</p>
-<dt><code>h</code>, <code>help</code></p>
-<dd> help</p>
-<dt><code>q</code>, <code>quit</code></p>
-<dd> quit</dl>
+<dt><code>h</code>, <code>help</code></dt>
+<dd> help</dd>
+<dt><code>q</code>, <code>quit</code></dt>
+<dd> quit</dd></dl>
 <h2>FILES</h2>
 <p> The master use case files for each supported sound card are in <code>/usr/share/alsa/ucm</code>. </p>
 <p> For example, the master use case file for the <i>Pandaboard</i> card is in <code>/usr/share/alsa/ucm/PandaBoard/PandaBoard.conf</code>, this file lists all the supported use cases, e.g. </p>
@@ -147,8 +147,8 @@ EOM
 </pre>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Use Case Interface: <i><a rel="nofollow" href="http://www.alsa-project.org/alsa-doc/alsa-lib/group__ucm.html">http://www.alsa-project.org/alsa-doc/alsa-lib/group__ucm.html</a></i></dl>
+<dt>&bull;</dt>
+<dd> Use Case Interface: <i><a rel="nofollow" href="http://www.alsa-project.org/alsa-doc/alsa-lib/group__ucm.html">http://www.alsa-project.org/alsa-doc/alsa-lib/group__ucm.html</a></i></dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>AUTHOR</h2>

@@ -12,10 +12,10 @@ description: "random – overview of interfaces for obtaining randomness"
 <p>The kernel random-number generator relies on entropy gathered from device drivers and other sources of environmental noise to seed a cryptographically secure pseudorandom number generator (CSPRNG). It is designed for security, rather than speed. </p>
 <p> The following interfaces provide access to output from the kernel CSPRNG:</p>
 <dl>
-<dt>*</p>
-<dd>The <i>/dev/urandom</i> and <i>/dev/random</i> devices, both described in <code><a href="/docs/linux/man/4-random/">random</a></code>(4). These devices have been present on Linux since early times, and are also available on many other systems.</p>
-<dt>*</p>
-<dd>The Linux-specific <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2) system call, available since Linux 3.17. This system call provides access either to the same source as <i>/dev/urandom</i> (called the <i>urandom</i> source in this page) or to the same source as <i>/dev/random</i> (called the <i>random</i> source in this page). The default is the <i>urandom</i> source; the <i>random</i> source is selected by specifying the <code>GRND_RANDOM</code> flag to the system call. (The <code><a href="/docs/linux/man/3-getentropy/">getentropy</a></code>(3) function provides a slightly more portable interface on top of <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2).)</dl>
+<dt>*</dt>
+<dd>The <i>/dev/urandom</i> and <i>/dev/random</i> devices, both described in <code><a href="/docs/linux/man/4-random/">random</a></code>(4). These devices have been present on Linux since early times, and are also available on many other systems.</dd>
+<dt>*</dt>
+<dd>The Linux-specific <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2) system call, available since Linux 3.17. This system call provides access either to the same source as <i>/dev/urandom</i> (called the <i>urandom</i> source in this page) or to the same source as <i>/dev/random</i> (called the <i>random</i> source in this page). The default is the <i>urandom</i> source; the <i>random</i> source is selected by specifying the <code>GRND_RANDOM</code> flag to the system call. (The <code><a href="/docs/linux/man/3-getentropy/">getentropy</a></code>(3) function provides a slightly more portable interface on top of <code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2).)</dd></dl>
 <h3>Initialization of the entropy pool</h3>
 <p>The kernel collects bits of entropy from the environment. When a sufficient number of random bits has been collected, the entropy pool is considered to be initialized.</p>
 <h3>Choice of random source</h3>

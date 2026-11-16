@@ -14,13 +14,13 @@ description: "intltool-extract – generate header files which can be read by ge
 <p><code>intltool-extract</code> extracts strings in the specified XML/INI type <i>SOURCE_FILE</i> and writes them into a C header file. Then <code><a href="/docs/linux/man/1-xgettext/">xgettext</a></code>(1) can merge these strings inside header file into po template. <code>intltool-extract</code> is usually not executed manually, but called from <code><a href="/docs/linux/man/8-intltool-update/">intltool-update</a></code>(8) instead. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-l</code></p>
+<dt><code>-l</code></dt>
 <dd>
-<dt><code>&#8211;local</code></p>
-<dd>Creates a subdirectory under current working directory (named &quot;<code>tmp/</code>&quot;) and writes files there. This option can&#8217;t be used with <code>&#8211;update</code> option.</p>
-<dt><code>&#8211;update</code></p>
-<dd>Writes header file into the same directory the source file is in. New file name is the source file name appending &quot;.h&quot; extension. This option can&#8217;t be used with <code>-l</code>/<code>&#8211;local</code> option. Besides, this option is the default option if neither <code>&#8211;local</code> nor <code>&#8211;update</code> is specified.</p>
-<dt><code>&#8211;type</code>=<i>TYPE</i></p>
+</dd><dt><code>&#8211;local</code></dt>
+<dd>Creates a subdirectory under current working directory (named &quot;<code>tmp/</code>&quot;) and writes files there. This option can&#8217;t be used with <code>&#8211;update</code> option.</dd>
+<dt><code>&#8211;update</code></dt>
+<dd>Writes header file into the same directory the source file is in. New file name is the source file name appending &quot;.h&quot; extension. This option can&#8217;t be used with <code>-l</code>/<code>&#8211;local</code> option. Besides, this option is the default option if neither <code>&#8211;local</code> nor <code>&#8211;update</code> is specified.</dd>
+<dt><code>&#8211;type</code>=<i>TYPE</i></dt>
 <dd>Specify the type of source file. Currently supported types are:<br />
  &quot;gettext/glade&quot; (.glade, .glade2)<br />
  &quot;gettext/gsettings&quot; (.gschema.xml)<br />
@@ -31,19 +31,19 @@ description: "intltool-extract – generate header files which can be read by ge
  &quot;gettext/schemas&quot; (.schemas)<br />
  &quot;gettext/scheme&quot; (.scm)<br />
  &quot;gettext/xml&quot; (Generic XML file)<br />
- &quot;gettext/qtdesigner&quot; (Qt Designer .ui files)</p>
-<dt><code>-v</code></p>
+ &quot;gettext/qtdesigner&quot; (Qt Designer .ui files)</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd>Show version information.</p>
-<dt><code>-h</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd>Show version information.</dd>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd>Show usage and basic help information.</p>
-<dt><code>-q</code></p>
+</dd><dt><code>&#8211;help</code></dt>
+<dd>Show usage and basic help information.</dd>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd>Be quiet while running. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd>Be quiet while running. </dd>
 </dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>

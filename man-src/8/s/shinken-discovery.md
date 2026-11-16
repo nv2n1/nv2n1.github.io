@@ -16,34 +16,34 @@ description: "shinken-discovery – Shinken discovery command"
 <p> It is best to do the whole discovery in one pass because one module can use data from the other.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8212; version</code></p>
-<dd>Show the version and exit</p>
+<dt><code>&#8212; version</code></dt>
+<dd>Show the version and exit</dd>
 <dl>
-<dd></dl>
-<dt><code>-c </code>CONFIGFILE, &#8211;cfg-input CONFIGGILE</p>
-<dd>Discovery configuration file</p>
+<dd></dd></dl>
+<dt><code>-c </code>CONFIGFILE, &#8211;cfg-input CONFIGGILE</dt>
+<dd>Discovery configuration file</dd>
 <dl>
-<dd></dl>
-<dt><code>-o </code>OUTPUT_PATH, &#8211;dir-output OUTPUT_PATH</p>
-<dd>Directory output for results</p>
+<dd></dd></dl>
+<dt><code>-o </code>OUTPUT_PATH, &#8211;dir-output OUTPUT_PATH</dt>
+<dd>Directory output for results</dd>
 <dl>
-<dd></dl>
-<dt><code>-w, &#8211;overright</code></p>
-<dd>Allow overwriting existing files (disabled by default)</p>
+<dd></dd></dl>
+<dt><code>-w, &#8211;overright</code></dt>
+<dd>Allow overwriting existing files (disabled by default)</dd>
 <dl>
-<dd></dl>
-<dt><code>-r </code>RUNNERS</p>
-<dd>Comma-separated list of discovery runner modules to use</p>
+<dd></dd></dl>
+<dt><code>-r </code>RUNNERS</dt>
+<dd>Comma-separated list of discovery runner modules to use</dd>
 <dl>
-<dd></dl>
-<dt><code>-m </code>MACROS</p>
-<dd>List of macros to pass to discovery runner modules. Must be the last argument. Ex: NMAPTARGETS=192.168.0.0/24</p>
+<dd></dd></dl>
+<dt><code>-m </code>MACROS</dt>
+<dd>List of macros to pass to discovery runner modules. Must be the last argument. Ex: NMAPTARGETS=192.168.0.0/24</dd>
 <dl>
-<dd></dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print detailed help screen.</p>
+<dd></dd></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print detailed help screen.</dd>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>Authors</h2>
 <p>David Hannequin. Arthur Gautier. Michael Leinartas.</p>

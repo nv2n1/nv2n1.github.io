@@ -13,13 +13,12 @@ MAPFST - Draws lines on a map - used in conjunction with MAPVEC.
 
  void c_mapfst (float rlat, float rlon)
 <h2>Description</h2><dl COMPACT><dt>RLAT and RLON
-<dd>(input expressions, of type REAL) specify the latitude and longitude of a point to which the &quot;pen&quot; is to be moved. Both are given in degrees. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(input expressions, of type REAL) specify the latitude and longitude of a point to which the &quot;pen&quot; is to be moved. Both are given in degrees. RLAT must be between -90. and +90., inclusive; RLON must be between -540. and +540., inclusive.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>The statement:
 <dl COMPACT><dd>CALL MAPFST (RLAT, RLON) 
-
-</dl>
+</dd></dl>
  is equivalent to
-<dl COMPACT><dd>CALL MAPIT (RLAT, RLON, 0)</dl>
+<dl COMPACT><dd>CALL MAPIT (RLAT, RLON, 0)</dd></dl>
  
 
  It moves the &quot;pen&quot; (in the &quot;up&quot; position) to the first point in a series of points. See the man page for MAPIT.

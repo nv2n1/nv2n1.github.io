@@ -19,26 +19,26 @@ description: "Callout Constants –"
 <p> Globus Callout Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_CALLOUT_ERROR_SUCCESS </i></p>
-<dd> Success &#8211; never used</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE </i></p>
-<dd> Hash table operation failed</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE </i></p>
-<dd> Failed to open configuration file</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_PARSING_CONF_FILE </i></p>
-<dd> Failed to parse configuration file</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_WITH_DL </i></p>
-<dd> Dynamic library operation failed</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY </i></p>
-<dd> Out of memory</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED </i></p>
-<dd> The abstract type could not be found</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR </i></p>
-<dd> The callout itself returned a error</p>
-<dt><i>GLOBUS_CALLOUT_ERROR_LAST </i></p>
-<dd> Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_CALLOUT_ERROR_SUCCESS </i></dt>
+<dd> Success &#8211; never used</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE </i></dt>
+<dd> Hash table operation failed</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE </i></dt>
+<dd> Failed to open configuration file</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_PARSING_CONF_FILE </i></dt>
+<dd> Failed to parse configuration file</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_WITH_DL </i></dt>
+<dd> Dynamic library operation failed</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY </i></dt>
+<dd> Out of memory</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED </i></dt>
+<dd> The abstract type could not be found</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR </i></dt>
+<dd> The callout itself returned a error</dd>
+<dt><i>GLOBUS_CALLOUT_ERROR_LAST </i></dt>
+<dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

@@ -10,7 +10,6 @@ description: "std::numeric_limits – std::numeric_limits"
 <p>std::numeric_limits &#8211; std::numeric_limits</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;limits&gt;
-
 template&lt; class T &gt; class numeric_limits;</code></pre>
 <p>The numeric_limits class template provides a standardized way to query various properties of arithmetic types (e.g. the largest possible value for type int is std::numeric_limits&lt;int&gt;::max()).<br />
 This information is provided via specializations of the numeric_limits template. The standard library makes available specializations for all arithmetic types: Defined in header&lt;limits&gt;</p>
@@ -191,13 +190,10 @@ numeric_limits&lt;long double&gt; LDBL_MIN -LDBL_MAX LDBL_MAX LDBL_EPSILON LDBL_
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;limits&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;type	lowest()	min()		max()
-
 &quot;;
     std::cout &lt;&lt; &quot;uchar	&quot;
               &lt;&lt; +std::numeric_limits&lt;unsigned char&gt;::lowest() &lt;&lt; '	' &lt;&lt; '	'

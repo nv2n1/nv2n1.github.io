@@ -14,20 +14,20 @@ description: "scsi_get_device_flags – get device specific flags from the dynam
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi_device to get flags for</dl>
+</dd><dd>scsi_device to get flags for</dd></dl>
 <p> <i>vendor</i></p>
 <dl>
-<dd>vendor name</dl>
+<dd>vendor name</dd></dl>
 <p> <i>model</i></p>
 <dl>
-<dd>model name</dl>
+<dd>model name</dd></dl>
 <h2>Description</h2>
 <p>Search the global scsi_dev_info_list (specified by list zero) for an entry matching <i>vendor</i> and <i>model</i>, if found, return the matching flags value, else return the host or global default settings. Called during scan time.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

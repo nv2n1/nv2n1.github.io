@@ -23,9 +23,6 @@ description: "sc::IntegralKey –"
 <p> int <code>p13p24</code> () const</p>
 <h3>Public Attributes</h3>
 <pre><code>unsigned int sh0_sh1_p12_p34
-
-
-
 unsigned int sh2_sh3_p13p24
 </code></pre>
 <h2>Author</h2>

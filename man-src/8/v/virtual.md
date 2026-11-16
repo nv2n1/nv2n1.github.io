@@ -35,13 +35,13 @@ description: "virtual – Postfix virtual domain mail delivery agent"
 <p>Normally, a lookup table is specified as a text file that serves as input to the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command. The result, an indexed file in <code>dbm</code> or <code>db</code> format, is used for fast searching by the mail system. </p>
 <p> The search order is as follows. The search stops upon the first successful lookup.</p>
 <dl>
-<dt>&bull;</p>
-<dd>When the recipient has an optional address extension the <i>user+extension [at] domain.tld</i> address is looked up first. </p>
+<dt>&bull;</dt>
+<dd>When the recipient has an optional address extension the <i>user+extension [at] domain.tld</i> address is looked up first. </dd>
 <p> With Postfix versions before 2.1, the optional address extension is always ignored.</p>
-<dt>&bull;</p>
-<dd>The <i>user [at] domain.tld</i> address, without address extension, is looked up next.</p>
-<dt>&bull;</p>
-<dd>Finally, the recipient <i>@domain</i> is looked up.</dl>
+<dt>&bull;</dt>
+<dd>The <i>user [at] domain.tld</i> address, without address extension, is looked up next.</dd>
+<dt>&bull;</dt>
+<dd>Finally, the recipient <i>@domain</i> is looked up.</dd></dl>
 <p> When the table is provided via other means such as NIS, LDAP or SQL, the same lookups are done as for ordinary indexed files. </p>
 <p> Alternatively, a table can be provided as a regular-expression map where patterns are given as regular expressions. In that case, only the full recipient address is given to the regular-expression map.</p>
 <h2>Security</h2>
@@ -62,68 +62,68 @@ description: "virtual – Postfix virtual domain mail delivery agent"
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Mailbox Delivery Controls</h2>
 <dl>
-<dt><code>virtual_mailbox_base (empty)</code></p>
-<dd>A prefix that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent prepends to all pathname results from $virtual_mailbox_maps table lookups.</p>
-<dt><code>virtual_mailbox_maps (empty)</code></p>
-<dd>Optional lookup tables with all valid addresses in the domains that match $virtual_mailbox_domains.</p>
-<dt><code>virtual_minimum_uid (100)</code></p>
-<dd>The minimum user ID value that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent accepts as a result from $virtual_uid_maps table lookup.</p>
-<dt><code>virtual_uid_maps (empty)</code></p>
-<dd>Lookup tables with the per-recipient user ID that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent uses while writing to the recipient&#8217;s mailbox.</p>
-<dt><code>virtual_gid_maps (empty)</code></p>
-<dd>Lookup tables with the per-recipient group ID for <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox delivery.</dl>
+<dt><code>virtual_mailbox_base (empty)</code></dt>
+<dd>A prefix that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent prepends to all pathname results from $virtual_mailbox_maps table lookups.</dd>
+<dt><code>virtual_mailbox_maps (empty)</code></dt>
+<dd>Optional lookup tables with all valid addresses in the domains that match $virtual_mailbox_domains.</dd>
+<dt><code>virtual_minimum_uid (100)</code></dt>
+<dd>The minimum user ID value that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent accepts as a result from $virtual_uid_maps table lookup.</dd>
+<dt><code>virtual_uid_maps (empty)</code></dt>
+<dd>Lookup tables with the per-recipient user ID that the <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) delivery agent uses while writing to the recipient&#8217;s mailbox.</dd>
+<dt><code>virtual_gid_maps (empty)</code></dt>
+<dd>Lookup tables with the per-recipient group ID for <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox delivery.</dd></dl>
 <p> Available in Postfix version 2.0 and later:</p>
 <dl>
-<dt><code>virtual_mailbox_domains ($virtual_mailbox_maps)</code></p>
-<dd>Postfix is final destination for the specified list of domains; mail is delivered via the $virtual_transport mail delivery transport.</p>
-<dt><code>virtual_transport (virtual)</code></p>
-<dd>The default mail delivery transport and next-hop destination for final delivery to domains listed with $virtual_mailbox_domains.</dl>
+<dt><code>virtual_mailbox_domains ($virtual_mailbox_maps)</code></dt>
+<dd>Postfix is final destination for the specified list of domains; mail is delivered via the $virtual_transport mail delivery transport.</dd>
+<dt><code>virtual_transport (virtual)</code></dt>
+<dd>The default mail delivery transport and next-hop destination for final delivery to domains listed with $virtual_mailbox_domains.</dd></dl>
 <p> Available in Postfix version 2.5.3 and later:</p>
 <dl>
-<dt><code>strict_mailbox_ownership (yes)</code></p>
-<dd>Defer delivery when a mailbox file is not owned by its recipient.</dl>
+<dt><code>strict_mailbox_ownership (yes)</code></dt>
+<dd>Defer delivery when a mailbox file is not owned by its recipient.</dd></dl>
 <h2>Locking Controls</h2>
 <dl>
-<dt><code>virtual_mailbox_lock (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>How to lock a UNIX-style <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox before attempting delivery.</p>
-<dt><code>deliver_lock_attempts (20)</code></p>
-<dd>The maximal number of attempts to acquire an exclusive lock on a mailbox file or <code><a href="/docs/linux/man/8-bounce/">bounce</a></code>(8) logfile.</p>
-<dt><code>deliver_lock_delay (1s)</code></p>
-<dd>The time between attempts to acquire an exclusive lock on a mailbox file or <code><a href="/docs/linux/man/8-bounce/">bounce</a></code>(8) logfile.</p>
-<dt><code>stale_lock_time (500s)</code></p>
-<dd>The time after which a stale exclusive mailbox lockfile is removed.</dl>
+<dt><code>virtual_mailbox_lock (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>How to lock a UNIX-style <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox before attempting delivery.</dd>
+<dt><code>deliver_lock_attempts (20)</code></dt>
+<dd>The maximal number of attempts to acquire an exclusive lock on a mailbox file or <code><a href="/docs/linux/man/8-bounce/">bounce</a></code>(8) logfile.</dd>
+<dt><code>deliver_lock_delay (1s)</code></dt>
+<dd>The time between attempts to acquire an exclusive lock on a mailbox file or <code><a href="/docs/linux/man/8-bounce/">bounce</a></code>(8) logfile.</dd>
+<dt><code>stale_lock_time (500s)</code></dt>
+<dd>The time after which a stale exclusive mailbox lockfile is removed.</dd></dl>
 <h2>Resource And Rate Controls</h2>
 <dl>
-<dt><code>virtual_destination_concurrency_limit ($default_destination_concurrency_limit)</code></p>
-<dd>The maximal number of parallel deliveries to the same destination via the virtual message delivery transport.</p>
-<dt><code>virtual_destination_recipient_limit ($default_destination_recipient_limit)</code></p>
-<dd>The maximal number of recipients per message for the virtual message delivery transport.</p>
-<dt><code>virtual_mailbox_limit (51200000)</code></p>
-<dd>The maximal size in bytes of an individual <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox or maildir file, or zero (no limit).</dl>
+<dt><code>virtual_destination_concurrency_limit ($default_destination_concurrency_limit)</code></dt>
+<dd>The maximal number of parallel deliveries to the same destination via the virtual message delivery transport.</dd>
+<dt><code>virtual_destination_recipient_limit ($default_destination_recipient_limit)</code></dt>
+<dd>The maximal number of recipients per message for the virtual message delivery transport.</dd>
+<dt><code>virtual_mailbox_limit (51200000)</code></dt>
+<dd>The maximal size in bytes of an individual <code><a href="/docs/linux/man/8-virtual/">virtual</a></code>(8) mailbox or maildir file, or zero (no limit).</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>delay_logging_resolution_limit (2)</code></p>
-<dd>The maximal number of digits after the decimal point when logging sub-second delay values.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>delay_logging_resolution_limit (2)</code></dt>
+<dd>The maximal number of digits after the decimal point when logging sub-second delay values.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-qmgr/">qmgr</a>(8), queue manager
 <a href="//www.systutorials.com/docs/linux/man/8-bounce/">bounce</a>(8), delivery status reports

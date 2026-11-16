@@ -12,7 +12,6 @@ std::experimental::future&lt;T&gt;::operator= - std::experimental::future&lt;T&g
 
 <pre><code>std::experimental::future&lt;T&gt; &amp;operator=(std::experimental::future&lt;T&gt; &amp;&amp;other) noexcept;
 (1)
-
     std::experimental::future&lt;T&gt; &amp;
     operator=(const std::experimental::future&lt;T&gt; &amp;other) = delete;
 (2)</code></pre> 

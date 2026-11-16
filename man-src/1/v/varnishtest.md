@@ -17,26 +17,26 @@ description: "varnishtest – Test program for Varnish"
 <p> The following options are available: </p>
 <p> -D name=val Define macro for use in scripts</p>
 <dl>
-<dt><code>-i</code></p>
-<dd> Find varnishd in build tree</p>
-<dt><code>-j</code><i>&nbsp;<wbr>jobs</i></p>
-<dd> Run this many tests in parallel</p>
-<dt><code>-k</code></p>
-<dd> Continue on test failure</p>
-<dt><code>-l</code></p>
-<dd> Leave temporary vtc.* if test fails</p>
-<dt><code>-L</code></p>
-<dd> Always leave temporary vtc.*</p>
-<dt><code>-n</code><i>&nbsp;<wbr>iterations</i></p>
-<dd> Run tests this many times</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode: report only failures</p>
-<dt><code>-t</code><i>&nbsp;<wbr>duration</i></p>
-<dd> Time tests out after this long</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode: always report test log</p>
-<dt><code>-h</code></p>
-<dd> Show help </p>
+<dt><code>-i</code></dt>
+<dd> Find varnishd in build tree</dd>
+<dt><code>-j</code><i>&nbsp;<wbr>jobs</i></dt>
+<dd> Run this many tests in parallel</dd>
+<dt><code>-k</code></dt>
+<dd> Continue on test failure</dd>
+<dt><code>-l</code></dt>
+<dd> Leave temporary vtc.* if test fails</dd>
+<dt><code>-L</code></dt>
+<dd> Always leave temporary vtc.*</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>iterations</i></dt>
+<dd> Run tests this many times</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode: report only failures</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>duration</i></dt>
+<dd> Time tests out after this long</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode: always report test log</dd>
+<dt><code>-h</code></dt>
+<dd> Show help </dd>
 <p> file File to use as a script </p>
 <p> Macro definitions that can be overridden. </p>
 <p> varnishd Path to varnishd to use [varnishd] </p>
@@ -67,26 +67,26 @@ if (bereq.url == "/foo") {
 <p> When run, the above script will simulate a server (s1) that expects two different requests. It will start a Varnish server (v1) and add the backend definition to the VCL specified (-vcl+backend). Finally it starts the c1-client, which is a single client sending two requests.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> varnishtest source code repository with tests</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishhist/">varnishhist</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishlog/">varnishlog</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishncsa/">varnishncsa</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishstat/">varnishstat</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-varnishtop/">varnishtop</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/7-vcl/">vcl</a>(7)</dl>
+<dt>&bull;</dt>
+<dd> varnishtest source code repository with tests</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishhist/">varnishhist</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishlog/">varnishlog</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishncsa/">varnishncsa</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishstat/">varnishstat</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishtop/">varnishtop</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/7-vcl/">vcl</a>(7)</dd></dl>
 <h2>HISTORY</h2>
 <p> The varnishtest program was developed by Poul-Henning Kamp &lt;<i>phk [at] phk.freebsd.dk</i>&gt; in cooperation with Varnish Software AS. This manual page was originally written by Stig Sandbeck Mathisen &lt;<i>ssm [at] linpro.no</i>&gt; and updated by Kristian Lyngstøl &lt;<i>kristian [at] varnish-cache.org</i>&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> This document is licensed under the same licence as Varnish itself. See LICENCE for details.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Copyright (c) 2007-2014 Varnish Software AS </p>
+<dt>&bull;</dt>
+<dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
 </dl>
 <h2>Index</h2>

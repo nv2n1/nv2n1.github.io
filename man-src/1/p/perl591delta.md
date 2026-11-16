@@ -38,18 +38,18 @@ description: "perl591delta – what is new for perl v5.9.1"
 <p> As a new form of syntactic sugar, it&#8217;s now possible to stack up filetest operators. You can now write <tt>&quot;-f -w -x $file&quot;</tt> in a row to mean <tt>&quot;-x $file &amp;&amp; -w _ &amp;&amp; -f _&quot;</tt>. See &#8220;-X&#8221; in perlfunc.</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt>Benchmark</p>
-<dd> In <tt>&quot;Benchmark&quot;</tt>, <i>cmpthese()</i> and <i>timestr()</i> now use the time statistics of children instead of parent when the selected style is &#8216;nop&#8217;.</p>
-<dt>Carp</p>
-<dd> The error messages produced by <tt>&quot;Carp&quot;</tt> now include spaces between the arguments in function argument lists: this makes long error messages appear more nicely in browsers and other tools.</p>
-<dt>Exporter</p>
-<dd> <tt>&quot;Exporter&quot;</tt> will now recognize grouping tags (such as <tt>&quot;:name&quot;</tt>) anywhere in the import list, not only at the beginning.</p>
-<dt>FindBin</p>
-<dd> A function <tt>&quot;again&quot;</tt> is provided to resolve problems where modules in different directories wish to use FindBin.</p>
-<dt>List::Util</p>
-<dd> You can now weaken references to read only values.</p>
-<dt>threads::shared</p>
-<dd> <tt>&quot;cond_wait&quot;</tt> has a new two argument form. <tt>&quot;cond_timedwait&quot;</tt> has been added.</dl>
+<dt>Benchmark</dt>
+<dd> In <tt>&quot;Benchmark&quot;</tt>, <i>cmpthese()</i> and <i>timestr()</i> now use the time statistics of children instead of parent when the selected style is &#8216;nop&#8217;.</dd>
+<dt>Carp</dt>
+<dd> The error messages produced by <tt>&quot;Carp&quot;</tt> now include spaces between the arguments in function argument lists: this makes long error messages appear more nicely in browsers and other tools.</dd>
+<dt>Exporter</dt>
+<dd> <tt>&quot;Exporter&quot;</tt> will now recognize grouping tags (such as <tt>&quot;:name&quot;</tt>) anywhere in the import list, not only at the beginning.</dd>
+<dt>FindBin</dt>
+<dd> A function <tt>&quot;again&quot;</tt> is provided to resolve problems where modules in different directories wish to use FindBin.</dd>
+<dt>List::Util</dt>
+<dd> You can now weaken references to read only values.</dd>
+<dt>threads::shared</dt>
+<dd> <tt>&quot;cond_wait&quot;</tt> has a new two argument form. <tt>&quot;cond_timedwait&quot;</tt> has been added.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <tt>&quot;find2perl&quot;</tt> now assumes <tt>&quot;-print&quot;</tt> as a default action. Previously, it needed to be specified explicitly. </p>
 <p> A new utility, <tt>&quot;prove&quot;</tt>, makes it easy to run an individual regression test at the command line. <tt>&quot;prove&quot;</tt> is part of Test::Harness, which users of earlier Perl versions can install from <font SIZE="-1">CPAN</font>. </p>
@@ -125,29 +125,29 @@ description: "perl591delta – what is new for perl v5.9.1"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Core Enhancements</a></p>
+<dt><a href="#lbAG">Core Enhancements</a></dt>
 <dd>
-<dt><a href="#lbAL">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAL">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAM">Utility Changes</a></p>
+</dd><dt><a href="#lbAM">Utility Changes</a></dt>
 <dd>
-<dt><a href="#lbAN">Documentation</a></p>
+</dd><dt><a href="#lbAN">Documentation</a></dt>
 <dd>
-<dt><a href="#lbAO">Performance Enhancements</a></p>
+</dd><dt><a href="#lbAO">Performance Enhancements</a></dt>
 <dd>
-<dt><a href="#lbAP">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbAP">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbAT">New or Changed Diagnostics</a></p>
+</dd><dt><a href="#lbAT">New or Changed Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbAU">Changed Internals</a></p>
+</dd><dt><a href="#lbAU">Changed Internals</a></dt>
 <dd>
-<dt><a href="#lbAZ">Configuration and Building</a></p>
+</dd><dt><a href="#lbAZ">Configuration and Building</a></dt>
 <dd>
-<dt><a href="#lbBA">Known Problems</a></p>
+</dd><dt><a href="#lbBA">Known Problems</a></dt>
 <dd>
-<dt><a href="#lbBC">To-do for perl 5.10.0</a></p>
+</dd><dt><a href="#lbBC">To-do for perl 5.10.0</a></dt>
 <dd>
-<dt><a href="#lbBD">Reporting Bugs</a></p>
+</dd><dt><a href="#lbBD">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbBE">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBE">SEE ALSO</a></dt>
+<dd></dd></dl>

@@ -19,7 +19,7 @@ description: "zmq_ctx_shutdown – shutdown a 0MQ context"
 <h2>Errors</h2>
 <p><code>EFAULT</code></p>
 <dl>
-<dd>The provided <i>context</i> was invalid.</dl>
+<dd>The provided <i>context</i> was invalid.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code>zmq_init</code>(3) <code><a href="/docs/linux/man/3-zmq_ctx_term/">zmq_ctx_term</a></code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
 <h2>Authors</h2>

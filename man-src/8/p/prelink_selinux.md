@@ -76,8 +76,8 @@ description: "prelink_selinux – Security Enhanced Linux Policy for the prelink
 <p> <code>prelink_log_t</code> </p>
 <p> &#8211; Set files with the prelink_log_t type, if you want to treat the data as prelink log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/prelink(/.*)?, /var/log/prelink.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/prelink(/.*)?, /var/log/prelink.log.* </dd>
 </dl>
 <p> <code>prelink_tmp_t</code> </p>
 <p> &#8211; Set files with the prelink_tmp_t type, if you want to store prelink temporary files in the /tmp directories. </p>
@@ -86,8 +86,8 @@ description: "prelink_selinux – Security Enhanced Linux Policy for the prelink
 <p> <code>prelink_var_lib_t</code> </p>
 <p> &#8211; Set files with the prelink_var_lib_t type, if you want to store the prelink files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/prelink(/.*)?, /var/lib/misc/prelink.* </p>
+<dt>Paths:</dt>
+<dd>/var/lib/prelink(/.*)?, /var/lib/misc/prelink.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -64,24 +64,24 @@ description: "twprint – Tripwire database and report printer"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m r</code>, <code>&#8211;print-report</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-h</code>, <code>&#8211;hexadecimal</code></p>
-<dd>Display hash values as hexadecimal.</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></p>
-<dd>Print the specified report file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to perform verification with reports which are signed.</p>
-<dt><code>-t</code><i> level</i>, <code>&#8211;report-level</code><i> level</i></p>
-<dd>Specifies the detail level of the printed report, overriding the <tt>REPORTLEVEL</tt> variable in the configuration file. <i>level</i> must be a number from 0 to 4.</dl>
+<dt><code>-m r</code>, <code>&#8211;print-report</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-h</code>, <code>&#8211;hexadecimal</code></dt>
+<dd>Display hash values as hexadecimal.</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-r</code><i> report</i>, <code>&#8211;twrfile</code><i> report</i></dt>
+<dd>Print the specified report file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to perform verification with reports which are signed.</dd>
+<dt><code>-t</code><i> level</i>, <code>&#8211;report-level</code><i> level</i></dt>
+<dd>Specifies the detail level of the printed report, overriding the <tt>REPORTLEVEL</tt> variable in the configuration file. <i>level</i> must be a number from 0 to 4.</dd></dl>
 <h3>Database printing mode:</h3>
 <dl>
 <dd>
@@ -122,24 +122,24 @@ description: "twprint – Tripwire database and report printer"
 </td>
 </tr>
 </table>
-<p> [ <i>object1</i> [ <i>object2&#8230;</i> ]]</dl>
+<p> [ <i>object1</i> [ <i>object2&#8230;</i> ]]</dd></dl>
 <dl>
-<dt><code>-m d</code>, <code>&#8211;print-dbfile</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-h</code>, <code>&#8211;hexadecimal</code></p>
-<dd>Display hash values as hexadecimal.</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></p>
-<dd>Print the specified database file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Use the specified local key file to read the database.</p>
-<dt>[ <i>object1</i> [ <i>object2&#8230;</i> ]]</p>
-<dd>List of filesystem objects in the database to print. If no objects are specified, every object in the database will be printed. The format for a list of objects is: <i>section: objname objname&#8230; section: objname&#8230;</i></dl>
+<dt><code>-m d</code>, <code>&#8211;print-dbfile</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-h</code>, <code>&#8211;hexadecimal</code></dt>
+<dd>Display hash values as hexadecimal.</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-d</code><i> database</i>, <code>&#8211;dbfile</code><i> database</i></dt>
+<dd>Print the specified database file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Use the specified local key file to read the database.</dd>
+<dt>[ <i>object1</i> [ <i>object2&#8230;</i> ]]</dt>
+<dd>List of filesystem objects in the database to print. If no objects are specified, every object in the database will be printed. The format for a list of objects is: <i>section: objname objname&#8230; section: objname&#8230;</i></dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <code>twprint</code> version 2.4.</p>
 <h2>Authors</h2>

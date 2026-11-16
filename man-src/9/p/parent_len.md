@@ -15,7 +15,7 @@ parent_len - find the length of the parent portion of a pathname
 <h2>Arguments</h2>
 
 <i>path</i>
-<dl><dd><dd>pathname of which to determine length</dl>
+<dl><dd></dd><dd>pathname of which to determine length</dd></dl>
 
 <h2>Copyright</h2>
 

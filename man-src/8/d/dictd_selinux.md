@@ -55,9 +55,9 @@ description: "dictd_selinux – Security Enhanced Linux Policy for the dictd pro
 <p> Policy governs the access confined processes have to these ports. SELinux dictd policy is very flexible allowing users to setup their dictd processes in as secure a method as possible. </p>
 <p> The following port types are defined for dictd: </p>
 <dl>
-<dt><code>dict_port_t</code></p>
+<dt><code>dict_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 2628</dl>
+</dd><dd>Default Defined Ports: tcp 2628</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dictd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

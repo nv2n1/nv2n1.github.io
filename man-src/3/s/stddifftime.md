@@ -11,7 +11,6 @@ std::difftime - std::difftime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 double difftime( std::time_t time_end, std::time_t time_beg );</code></pre> 
 Computes difference between two calendar times as std::time_t objects (time_end - time_beg) in seconds. If time_end refers to time point before time_beg then the result is negative. 
 
@@ -30,10 +29,8 @@ On POSIX systems, std::time_t is measured in seconds, and difftime is equivalent
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     std::time_t start = std::time(nullptr);
     volatile double d;

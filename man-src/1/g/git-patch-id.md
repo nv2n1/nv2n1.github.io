@@ -22,33 +22,33 @@ git patch - id[--stable | --unstable]
 <p> &#8211;stable</p>
 <dl>
 <dt>
-<dd> Use a &quot;stable&quot; sum of hashes as the patch ID. With this option: </p>
+</dt><dd> Use a &quot;stable&quot; sum of hashes as the patch ID. With this option: </dd>
 <dl>
 <dt>
-<dd> &bull; Reordering file diffs that make up a patch does not affect the ID. In particular, two patches produced by comparing the same two trees with two different settings for &quot;-O&lt;orderfile&gt;&quot; result in the same patch ID signature, thereby allowing the computed result to be used as a key to index some meta-information about the change between the two trees;</dl>
+</dt><dd> &bull; Reordering file diffs that make up a patch does not affect the ID. In particular, two patches produced by comparing the same two trees with two different settings for &quot;-O&lt;orderfile&gt;&quot; result in the same patch ID signature, thereby allowing the computed result to be used as a key to index some meta-information about the change between the two trees;</dd></dl>
 <dl>
 <dt>
-<dd> &bull; Result is different from the value produced by git 1.9 and older or produced when an &quot;unstable&quot; hash (see &#8211;unstable below) is configured &#8211; even when used on a diff output taken without any use of &quot;-O&lt;orderfile&gt;&quot;, thereby making existing databases storing such &quot;unstable&quot; or historical patch-ids unusable. </p>
+</dt><dd> &bull; Result is different from the value produced by git 1.9 and older or produced when an &quot;unstable&quot; hash (see &#8211;unstable below) is configured &#8211; even when used on a diff output taken without any use of &quot;-O&lt;orderfile&gt;&quot;, thereby making existing databases storing such &quot;unstable&quot; or historical patch-ids unusable. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This is the default if patchid.stable is set to true.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <p> &#8211;unstable</p>
 <dl>
 <dt>
-<dd> Use an &quot;unstable&quot; hash as the patch ID. With this option, the result produced is compatible with the patch-id value produced by git 1.9 and older. Users with pre-existing databases storing patch-ids produced by git 1.9 and older (who do not deal with reordered patches) may want to use this option. </p>
+</dt><dd> Use an &quot;unstable&quot; hash as the patch ID. With this option, the result produced is compatible with the patch-id value produced by git 1.9 and older. Users with pre-existing databases storing patch-ids produced by git 1.9 and older (who do not deal with reordered patches) may want to use this option. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 This is the default.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>

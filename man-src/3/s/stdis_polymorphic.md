@@ -10,10 +10,8 @@ description: "std::is_polymorphic – std::is_polymorphic"
 <p>std::is_polymorphic &#8211; std::is_polymorphic</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_polymorphic;</code></pre>
 <p>If T is a polymorphic_class (that is, a non-union class that declares or inherits at least one virtual function), provides the member constant value equal true. For any other type, value is false.<br />
 If T is a non-union class type, T shall be a complete type; otherwise, the behavior is undefined. </p>
@@ -40,7 +38,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int m;
@@ -51,7 +48,6 @@ struct B {
 struct C : B {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_polymorphic&lt;A&gt;::value &lt;&lt; '

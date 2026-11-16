@@ -14,11 +14,11 @@ description: "rio_enum_host – Set host lock and initialize host destination ID
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>Master port to issue transaction</dl>
+</dd><dd>Master port to issue transaction</dd></dl>
 <h2>Description</h2>
 <p>Sets the local host master port lock and destination ID register with the host device ID value. The host device ID value is provided by the platform. Returns <code>0</code> on success or <code>-1</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>
